@@ -10,7 +10,7 @@ description: "slansp.f –"
 <p>slansp.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>REAL function <code>slansp</code> (NORM, UPLO, N, AP, WORK)<br />
+<p>REAL function <code>slansp</code> (NORM, UPLO, N, AP, WORK)<br/>
  <i></i><code>SLANSP</code> returns the value of the 1-norm, or the Frobenius norm, or the infinity norm, or the element of largest absolute value of a symmetric matrix supplied in packed form.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>REAL function slansp (characterNORM, characterUPLO, integerN, real, dimension( * )AP, real, dimension( * )WORK)</h3>

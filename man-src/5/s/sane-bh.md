@@ -11,11 +11,11 @@ description: "sane-bh – SANE backend for Bell+Howell Copiscan II series docume
 <h2>Description</h2>
 <p>The <code>sane-bh</code> library implements a SANE (Scanner Access Now Easy) backend that provides access to Bell+Howell Copiscan II series document scanners. The Copiscan II 6338 has been the primary scanner model used during development and testing, but since the programming interface for the entire series is consistent the backend should work for the following scanner models: </p>
 <dl>
-<dd>COPISCAN II 6338 Duplex Scanner with ACE<br />
- COPISCAN II 2135 Simplex Scanner<br />
- COPISCAN II 2137(A) Simplex Scanner (with ACE)<br />
- COPISCAN II 2138A Simplex Scanner with ACE<br />
- COPISCAN II 3238 Simplex Scanner<br />
+<dd>COPISCAN II 6338 Duplex Scanner with ACE<br/>
+ COPISCAN II 2135 Simplex Scanner<br/>
+ COPISCAN II 2137(A) Simplex Scanner (with ACE)<br/>
+ COPISCAN II 2138A Simplex Scanner with ACE<br/>
+ COPISCAN II 3238 Simplex Scanner<br/>
  COPISCAN II 3338(A) Simplex Scanner (with ACE)
 </dd></dl>
 <p> If you have a Bell+Howell scanner and are able to test it with this backend, please contact <i>sane-devel [at] alioth-lists.debian.net</i> with the model number and testing results. Have a look at <i><a rel="nofollow" href="http://www.sane-project.org/mailing-lists.html">http://www.sane-project.org/mailing-lists.html</a></i> concerning subscription to sane-devel. Additionally, the author is curious as to the likelihood of using this backend with the newer 4000 and 8000 series scanners. If you have such a beast, please let me know. </p>
@@ -42,9 +42,9 @@ description: "sane-bh – SANE backend for Bell+Howell Copiscan II series docume
 <dt><code>&#8211;compression none|g31d|g32d|g42d [none]</code></dt>
 <dd>Sets the compression mode of the scanner. Determines the type of data returned from the scanner. Values are: </dd>
 <dl>
-<dd><code>none</code> &#8211; uncompressed data &#8211; delivered in a SANE_FRAME_GRAY frame<br />
- <code>g31d</code> &#8211; CCITT G3 1 dimension (MH) &#8211; delivered in a SANE_FRAME_G31D frame<br />
- <code>g32d</code> &#8211; CCITT G3 2 dimensions (MR, K=4) &#8211; delivered in a SANE_FRAME_G32D frame<br />
+<dd><code>none</code> &#8211; uncompressed data &#8211; delivered in a SANE_FRAME_GRAY frame<br/>
+ <code>g31d</code> &#8211; CCITT G3 1 dimension (MH) &#8211; delivered in a SANE_FRAME_G31D frame<br/>
+ <code>g32d</code> &#8211; CCITT G3 2 dimensions (MR, K=4) &#8211; delivered in a SANE_FRAME_G32D frame<br/>
  <code>g42d</code> &#8211; CCITT G4 (MMR) &#8211; delivered in a SANE_FRAME_G42D frame </dd>
 <p> <code>NOTE</code>: The use of g31d, g32d, and g42d compression values causes the backend to generate optional frame formats which may not be supported by all SANE frontends.</dl>
 <dt><code>Geometry Options:</code></dt>
@@ -102,20 +102,20 @@ description: "sane-bh – SANE backend for Bell+Howell Copiscan II series docume
 </dd><dt><code>&#8211;barcode-search-bar &lt;see list&gt; [none]</code></dt>
 <dd>Specifies the barcode type to search for. If this option is not specified, or specified with a value of none, then the barcode decoding feature is completely disabled. The valid barcode type are: </dd>
 <dl>
-<dd><code>none</code><br />
- <code>ean-8</code><br />
- <code>ean-13</code><br />
- <code>reserved-ean-add</code><br />
- <code>code39</code><br />
- <code>code2-5-interleaved</code><br />
- <code>code2-5-3lines-matrix</code><br />
- <code>code2-5-3lines-datalogic</code><br />
- <code>code2-5-5lines-industrial</code><br />
- <code>patchcode</code><br />
- <code>codabar</code><br />
- <code>codabar-with-start-stop</code><br />
- <code>code39ascii</code><br />
- <code>code128</code><br />
+<dd><code>none</code><br/>
+ <code>ean-8</code><br/>
+ <code>ean-13</code><br/>
+ <code>reserved-ean-add</code><br/>
+ <code>code39</code><br/>
+ <code>code2-5-interleaved</code><br/>
+ <code>code2-5-3lines-matrix</code><br/>
+ <code>code2-5-3lines-datalogic</code><br/>
+ <code>code2-5-5lines-industrial</code><br/>
+ <code>patchcode</code><br/>
+ <code>codabar</code><br/>
+ <code>codabar-with-start-stop</code><br/>
+ <code>code39ascii</code><br/>
+ <code>code128</code><br/>
  <code>code2-5-5lines-iata</code>
 </dd></dl>
 <dt><code>&#8211;barcode-search-count 1..7 [3]</code></dt>
@@ -123,9 +123,9 @@ description: "sane-bh – SANE backend for Bell+Howell Copiscan II series docume
 <dt><code>&#8211;barcode-search-mode &lt;see list&gt; [horiz-vert]</code></dt>
 <dd>Chooses the orientation of barcodes to be searched. The valid orientations are: </dd>
 <dl>
-<dd><code>horiz-vert</code><br />
- <code>horizontal</code><br />
- <code>vertical</code><br />
+<dd><code>horiz-vert</code><br/>
+ <code>horizontal</code><br/>
+ <code>vertical</code><br/>
  <code>vert-horiz</code></dd></dl>
 <dt><code>&#8211;barcode-hmin 0..1660mm [5]</code></dt>
 <dd>Sets the barcode minimum height in millimeters (larger values increase recognition speed). Of course the actual barcodes in the document must be of sufficient size.</dd>
@@ -140,15 +140,15 @@ description: "sane-bh – SANE backend for Bell+Howell Copiscan II series docume
 <p> Ordinarily barcodes are searched in the entire image. However, when you specify sections all barcode searching is done within the specific sections identified. This can significantly speed up the decoding process. </p>
 <p> The following function codes are available: </p>
 <dl>
-<dd><code>front</code> &#8211; generate an image for the front page section<br />
- <code>back</code> &#8211; generate an image for the back page section<br />
- <code>frontbar</code> &#8211; perform barcode search in front page section<br />
- <code>backbar</code> &#8211; perform barcode search in back page section<br />
- <code>frontpatch</code> &#8211; perform patchcode search in front page section<br />
- <code>backpatch</code> &#8211; perform patchcode search in back page section<br />
- <code>none</code> &#8211; use no image compression<br />
- <code>g31d</code> &#8211; use Group 3 1 dimension image compression<br />
- <code>g32d</code> &#8211; use Group 3 2 dimensions image compression<br />
+<dd><code>front</code> &#8211; generate an image for the front page section<br/>
+ <code>back</code> &#8211; generate an image for the back page section<br/>
+ <code>frontbar</code> &#8211; perform barcode search in front page section<br/>
+ <code>backbar</code> &#8211; perform barcode search in back page section<br/>
+ <code>frontpatch</code> &#8211; perform patchcode search in front page section<br/>
+ <code>backpatch</code> &#8211; perform patchcode search in back page section<br/>
+ <code>none</code> &#8211; use no image compression<br/>
+ <code>g31d</code> &#8211; use Group 3 1 dimension image compression<br/>
+ <code>g32d</code> &#8211; use Group 3 2 dimensions image compression<br/>
  <code>g42d</code> &#8211; use Group 4 2 dimensions image compression
 </dd></dl>
 <p> If you omit a compression functioncode, the full page compression setting is used. If you specify multiple compression functioncodes, only the last one is used. </p>

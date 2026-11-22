@@ -9,51 +9,51 @@ description: "SDL_sound.h –"
 
 <p>SDL_sound.h &#8211; </p>
 <h2>Synopsis</h2>
-<p>#include &#8216;SDL.h&#8217;<br />
+<p>#include &#8216;SDL.h&#8217;<br/>
  #include &#8216;SDL_endian.h&#8217; </p>
 <h3>Data Structures</h3>
-<p>struct <code>Sound_AudioInfo</code><br />
- <i>Information about an existing sample&#8217;s format. </i><br />
- struct <code>Sound_DecoderInfo</code><br />
- <i>Information about available soudn decoders. </i><br />
- struct <code>Sound_Sample</code><br />
- <i>Represents sound data in the process of being decoded. </i><br />
- struct <code>Sound_Version</code><br />
+<p>struct <code>Sound_AudioInfo</code><br/>
+ <i>Information about an existing sample&#8217;s format. </i><br/>
+ struct <code>Sound_DecoderInfo</code><br/>
+ <i>Information about available soudn decoders. </i><br/>
+ struct <code>Sound_Sample</code><br/>
+ <i>Represents sound data in the process of being decoded. </i><br/>
+ struct <code>Sound_Version</code><br/>
  <i>Information the version of SDL_sound in use. </i></p>
 <h3>Defines</h3>
-<p>#define <code>SOUND_VERSION</code>(x)<br />
+<p>#define <code>SOUND_VERSION</code>(x)<br/>
  <i>Macro to determine SDL_sound version program was compiled against. </i></p>
 <h3>Enumerations</h3>
-<p>enum <code>Sound_SampleFlags</code> { <code>SOUND_SAMPLEFLAG_NONE</code> = 0, <code>SOUND_SAMPLEFLAG_CANSEEK</code> = 1, <code>SOUND_SAMPLEFLAG_EOF</code> = 1 &lt;&lt; 29, <code>SOUND_SAMPLEFLAG_ERROR</code> = 1 &lt;&lt; 30, <code>SOUND_SAMPLEFLAG_EAGAIN</code> = 1 &lt;&lt; 31 }<br />
+<p>enum <code>Sound_SampleFlags</code> { <code>SOUND_SAMPLEFLAG_NONE</code> = 0, <code>SOUND_SAMPLEFLAG_CANSEEK</code> = 1, <code>SOUND_SAMPLEFLAG_EOF</code> = 1 &lt;&lt; 29, <code>SOUND_SAMPLEFLAG_ERROR</code> = 1 &lt;&lt; 30, <code>SOUND_SAMPLEFLAG_EAGAIN</code> = 1 &lt;&lt; 31 }<br/>
  <i>Flags that are used in a </i><code>Sound_Sample</code> to show various states.</p>
 <h3>Functions</h3>
-<p>void <code>Sound_GetLinkedVersion</code> (<code>Sound_Version</code> *ver)<br />
- <i>Get the version of SDL_sound that is linked against your program. </i><br />
- int <code>Sound_Init</code> (void)<br />
- <i>Initialize SDL_sound. </i><br />
- int <code>Sound_Quit</code> (void)<br />
- <i>Shutdown SDL_sound. </i><br />
- const <code>Sound_DecoderInfo</code> ** <code>Sound_AvailableDecoders</code> (void)<br />
- <i>Get a list of sound formats supported by this version of SDL_sound. </i><br />
- const char * <code>Sound_GetError</code> (void)<br />
- <i>Get the last SDL_sound error message as a null-terminated string. </i><br />
- void <code>Sound_ClearError</code> (void)<br />
- <i>Clear the current error message. </i><br />
- <code>Sound_Sample</code> * <code>Sound_NewSample</code> (SDL_RWops *rw, const char *ext, <code>Sound_AudioInfo</code> *desired, Uint32 bufferSize)<br />
- <i>Start decoding a new sound sample. </i><br />
- <code>Sound_Sample</code> * <code>Sound_NewSampleFromFile</code> (const char *fname, <code>Sound_AudioInfo</code> *desired, Uint32 bufferSize)<br />
- <i>Start decoding a new sound sample from a file on disk. </i><br />
- void <code>Sound_FreeSample</code> (<code>Sound_Sample</code> *sample)<br />
- <i>Dispose of a </i><code>Sound_Sample</code>.<br />
- int <code>Sound_SetBufferSize</code> (<code>Sound_Sample</code> *sample, Uint32 new_size)<br />
- <i>Change the current buffer size for a sample. </i><br />
- Uint32 <code>Sound_Decode</code> (<code>Sound_Sample</code> *sample)<br />
- <i>Decode more of the sound data in a </i><code>Sound_Sample</code>.<br />
- Uint32 <code>Sound_DecodeAll</code> (<code>Sound_Sample</code> *sample)<br />
- <i>Decode the remainder of the sound data in a </i><code>Sound_Sample</code>.<br />
- int <code>Sound_Rewind</code> (<code>Sound_Sample</code> *sample)<br />
- <i>Rewind a sample to the start. </i><br />
- int <code>Sound_Seek</code> (<code>Sound_Sample</code> *sample, Uint32 ms)<br />
+<p>void <code>Sound_GetLinkedVersion</code> (<code>Sound_Version</code> *ver)<br/>
+ <i>Get the version of SDL_sound that is linked against your program. </i><br/>
+ int <code>Sound_Init</code> (void)<br/>
+ <i>Initialize SDL_sound. </i><br/>
+ int <code>Sound_Quit</code> (void)<br/>
+ <i>Shutdown SDL_sound. </i><br/>
+ const <code>Sound_DecoderInfo</code> ** <code>Sound_AvailableDecoders</code> (void)<br/>
+ <i>Get a list of sound formats supported by this version of SDL_sound. </i><br/>
+ const char * <code>Sound_GetError</code> (void)<br/>
+ <i>Get the last SDL_sound error message as a null-terminated string. </i><br/>
+ void <code>Sound_ClearError</code> (void)<br/>
+ <i>Clear the current error message. </i><br/>
+ <code>Sound_Sample</code> * <code>Sound_NewSample</code> (SDL_RWops *rw, const char *ext, <code>Sound_AudioInfo</code> *desired, Uint32 bufferSize)<br/>
+ <i>Start decoding a new sound sample. </i><br/>
+ <code>Sound_Sample</code> * <code>Sound_NewSampleFromFile</code> (const char *fname, <code>Sound_AudioInfo</code> *desired, Uint32 bufferSize)<br/>
+ <i>Start decoding a new sound sample from a file on disk. </i><br/>
+ void <code>Sound_FreeSample</code> (<code>Sound_Sample</code> *sample)<br/>
+ <i>Dispose of a </i><code>Sound_Sample</code>.<br/>
+ int <code>Sound_SetBufferSize</code> (<code>Sound_Sample</code> *sample, Uint32 new_size)<br/>
+ <i>Change the current buffer size for a sample. </i><br/>
+ Uint32 <code>Sound_Decode</code> (<code>Sound_Sample</code> *sample)<br/>
+ <i>Decode more of the sound data in a </i><code>Sound_Sample</code>.<br/>
+ Uint32 <code>Sound_DecodeAll</code> (<code>Sound_Sample</code> *sample)<br/>
+ <i>Decode the remainder of the sound data in a </i><code>Sound_Sample</code>.<br/>
+ int <code>Sound_Rewind</code> (<code>Sound_Sample</code> *sample)<br/>
+ <i>Rewind a sample to the start. </i><br/>
+ int <code>Sound_Seek</code> (<code>Sound_Sample</code> *sample, Uint32 ms)<br/>
  <i>Seek to a different point in a sample. </i></p>
 <h2>Detailed Description</h2>
 <h2>Define Documentation</h2>
@@ -208,9 +208,9 @@ description: "SDL_sound.h –"
 <p> You do not have to keep a reference to (rw) around. If this function suceeds, it stores (rw) internally (and disposes of it during the call to <code>Sound_FreeSample()</code>). If this function fails, it will dispose of the SDL_RWops for you. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>rw</i> SDL_RWops with sound data.<br />
- <i>ext</i> File extension normally associated with a data format. Can usually be NULL.<br />
- <i>desired</i> Format to convert sound data into. Can usually be NULL, if you don&#8217;t need conversion.<br />
+<dd><i>rw</i> SDL_RWops with sound data.<br/>
+ <i>ext</i> File extension normally associated with a data format. Can usually be NULL.<br/>
+ <i>desired</i> Format to convert sound data into. Can usually be NULL, if you don&#8217;t need conversion.<br/>
  <i>bufferSize</i> Size, in bytes, to allocate for the decoding buffer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -229,8 +229,8 @@ description: "SDL_sound.h –"
 <p> This is identical to <code>Sound_NewSample()</code>, but it creates an SDL_RWops for you from the file located in (filename). Note that (filename) is specified in platform-dependent notation. (&#8216;C:\music\mysong.mp3&#8217; on windows, and &#8216;/home/icculus/music/mysong.mp3&#8217; or whatever on Unix, etc.) <code>Sound_NewSample()</code>&#8216;s &#8216;ext&#8217; parameter is gleaned from the contents of (filename). </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>filename</i> file containing sound data.<br />
- <i>desired</i> Format to convert sound data into. Can usually be NULL, if you don&#8217;t need conversion.<br />
+<dd><i>filename</i> file containing sound data.<br/>
+ <i>desired</i> Format to convert sound data into. Can usually be NULL, if you don&#8217;t need conversion.<br/>
  <i>bufferSize</i> size, in bytes, of initial read buffer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -283,7 +283,7 @@ description: "SDL_sound.h –"
 <p> On success, ERROR, EOF, and EAGAIN are cleared from sample-&gt;flags. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>sample</i> The <code>Sound_Sample</code> to seek.<br />
+<dd><i>sample</i> The <code>Sound_Sample</code> to seek.<br/>
  <i>ms</i> The new position, in milliseconds from start of sample.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -297,7 +297,7 @@ description: "SDL_sound.h –"
 <p> The buffer size specified must be a multiple of the size of a single sample point. So, if you want 16-bit, stereo samples, then your sample point size is (2 channels * 16 bits), or 32 bits per sample, which is four bytes. In such a case, you could specify 128 or 132 bytes for a buffer, but not 129, 130, or 131 (although in reality, you&#8217;ll want to specify a MUCH larger buffer). </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>sample</i> The <code>Sound_Sample</code> whose buffer to modify.<br />
+<dd><i>sample</i> The <code>Sound_Sample</code> whose buffer to modify.<br/>
  <i>new_size</i> The desired size, in bytes, of the new buffer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

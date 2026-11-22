@@ -13,50 +13,50 @@ description: "QwtCounter –"
 <p>#include &lt;qwt_counter.h&gt; </p>
 <p> Inherits QWidget.</p>
 <h3>Public Types</h3>
-<p>enum <code>Button</code> { <code>Button1</code>, <code>Button2</code>, <code>Button3</code>, <code>ButtonCnt</code> }<br />
+<p>enum <code>Button</code> { <code>Button1</code>, <code>Button2</code>, <code>Button3</code>, <code>ButtonCnt</code> }<br/>
  <i>Button index. </i></p>
 <h3>Public Slots</h3>
-<p>void <code>setValue</code> (double)<br />
+<p>void <code>setValue</code> (double)<br/>
  <i>Set a new value without adjusting to the step raster. </i></p>
 <h3>Signals</h3>
 <p>void <code>buttonReleased</code> (double <code>value</code>) </p>
 <p> void <code>valueChanged</code> (double <code>value</code>) </p>
 <h3>Public Member Functions</h3>
 <p><code>QwtCounter</code> (QWidget *parent=NULL) </p>
-<p> virtual <code>~QwtCounter</code> ()<br />
- <i>Destructor. </i><br />
+<p> virtual <code>~QwtCounter</code> ()<br/>
+ <i>Destructor. </i><br/>
  void <code>setValid</code> (bool) </p>
 <p> bool <code>isValid</code> () const </p>
-<p> void <code>setWrapping</code> (bool)<br />
- <i>En/Disable wrapping. </i><br />
+<p> void <code>setWrapping</code> (bool)<br/>
+ <i>En/Disable wrapping. </i><br/>
  bool <code>wrapping</code> () const </p>
 <p> bool <code>isReadOnly</code> () const </p>
-<p> void <code>setReadOnly</code> (bool)<br />
- <i>Allow/disallow the user to manually edit the value. </i><br />
+<p> void <code>setReadOnly</code> (bool)<br/>
+ <i>Allow/disallow the user to manually edit the value. </i><br/>
  void <code>setNumButtons</code> (int n) </p>
 <p> int <code>numButtons</code> () const </p>
 <p> void <code>setIncSteps</code> (<code>QwtCounter::Button</code> btn, int nSteps) </p>
 <p> int <code>incSteps</code> (<code>QwtCounter::Button</code> btn) const </p>
-<p> virtual QSize <code>sizeHint</code> () const<br />
- <i>A size hint. </i><br />
+<p> virtual QSize <code>sizeHint</code> () const<br/>
+ <i>A size hint. </i><br/>
  double <code>singleStep</code> () const </p>
-<p> void <code>setSingleStep</code> (double s)<br />
- <i>Set the step size of the counter. </i><br />
- void <code>setRange</code> (double min, double max)<br />
- <i>Set the minimum and maximum values. </i><br />
+<p> void <code>setSingleStep</code> (double s)<br/>
+ <i>Set the step size of the counter. </i><br/>
+ void <code>setRange</code> (double min, double max)<br/>
+ <i>Set the minimum and maximum values. </i><br/>
  double <code>minimum</code> () const </p>
 <p> void <code>setMinimum</code> (double min) </p>
 <p> double <code>maximum</code> () const </p>
 <p> void <code>setMaximum</code> (double max) </p>
 <p> void <code>setStepButton1</code> (int nSteps) </p>
-<p> int <code>stepButton1</code> () const<br />
- <i>returns the number of increment steps for button 1 </i><br />
+<p> int <code>stepButton1</code> () const<br/>
+ <i>returns the number of increment steps for button 1 </i><br/>
  void <code>setStepButton2</code> (int nSteps) </p>
-<p> int <code>stepButton2</code> () const<br />
- <i>returns the number of increment steps for button 2 </i><br />
+<p> int <code>stepButton2</code> () const<br/>
+ <i>returns the number of increment steps for button 2 </i><br/>
  void <code>setStepButton3</code> (int nSteps) </p>
-<p> int <code>stepButton3</code> () const<br />
- <i>returns the number of increment steps for button 3 </i><br />
+<p> int <code>stepButton3</code> () const<br/>
+ <i>returns the number of increment steps for button 3 </i><br/>
  double <code>value</code> () const </p>
 <h3>Protected Member Functions</h3>
 <p>virtual bool <code>event</code> (QEvent *) </p>
@@ -197,7 +197,7 @@ connect(counter, SIGNAL(valueChanged(double)), myClass, SLOT(newValue(double)));
 <p>Specify the number of steps by which the value is incremented or decremented when a specified button is pushed. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>button</i> Button index<br />
+<dd><i>button</i> Button index<br/>
  <i>numSteps</i> Number of steps</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -233,7 +233,7 @@ connect(counter, SIGNAL(valueChanged(double)), myClass, SLOT(newValue(double)));
 <p>Set the minimum and maximum values. The maximum is adjusted if necessary to ensure that the range remains valid. The value might be modified to be inside of the range. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>min</i> Minimum value<br />
+<dd><i>min</i> Minimum value<br/>
  <i>max</i> Maximum value</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>

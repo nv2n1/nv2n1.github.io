@@ -38,12 +38,12 @@ bool operator&gt;= (const Date &amp;, const Date &amp;)
 std::ostream &amp; operator&lt;&lt; (std::ostream &amp;, const Date &amp;)</code></pre>
 <h3>Public Member Functions</h3>
 <p><code>constructors</code> </p>
-<p> <code>Date</code> ()<br />
- <i>Default constructor returning a null date. </i><br />
- <code>Date</code> (<code>BigInteger</code> serialNumber)<br />
- <i>Constructor taking a serial number as given by Applix or Excel. </i><br />
- <code>Date</code> (Day d, <code>Month</code> m, Year y)<br />
- <i>More traditional constructor. </i> <code>inspectors</code><br />
+<p> <code>Date</code> ()<br/>
+ <i>Default constructor returning a null date. </i><br/>
+ <code>Date</code> (<code>BigInteger</code> serialNumber)<br/>
+ <i>Constructor taking a serial number as given by Applix or Excel. </i><br/>
+ <code>Date</code> (Day d, <code>Month</code> m, Year y)<br/>
+ <i>More traditional constructor. </i> <code>inspectors</code><br/>
  static Date todaysDate ()</p>
 <p>today&#8217;s date.</p>
 <p>static Date minDate ()</p>
@@ -70,7 +70,7 @@ std::ostream &amp; operator&lt;&lt; (std::ostream &amp;, const Date &amp;)</code
 <p>bool operator&lt;= (const Date &amp;, const Date &amp;)</p>
 <p>bool operator&gt; (const Date &amp;, const Date &amp;)</p>
 <p>bool operator&gt;= (const Date &amp;, const Date &amp;)</p>
-<p>std::ostream &amp; operator&lt;&lt; (std::ostream &amp;, const Date &amp;) <code>date algebra</code><br />
+<p>std::ostream &amp; operator&lt;&lt; (std::ostream &amp;, const Date &amp;) <code>date algebra</code><br/>
  static Date todaysDate ()</p>
 <p>today&#8217;s date.</p>
 <p>static Date minDate ()</p>

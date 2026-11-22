@@ -64,18 +64,18 @@ description: "Totem – GNOME desktop movie player based on GStreamer"
 <p> t<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>zoom out the video</p>
 <p> d<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>start and stop the telestrator (drawing) mode</p>
 <p> e<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>erase the drawing</p>
-<p> Left-arrow skip back 15 seconds<br />
- Right-arrow skip forward 60 seconds<br />
- Shift+Left-arrow skip back 5 seconds<br />
- Shift+Right-arrow skip forward 15 seconds<br />
- Ctrl+Left-arrow skip back 3 minutes<br />
- Ctrl+Right arrow skip forward 10 minutes<br />
+<p> Left-arrow skip back 15 seconds<br/>
+ Right-arrow skip forward 60 seconds<br/>
+ Shift+Left-arrow skip back 5 seconds<br/>
+ Shift+Right-arrow skip forward 15 seconds<br/>
+ Ctrl+Left-arrow skip back 3 minutes<br/>
+ Ctrl+Right arrow skip forward 10 minutes<br/>
  Up-arrow<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>increase volume by 8%</p>
 <p> Down-arrow<tt>&nbsp;<wbr>&nbsp;</tt>decrease volume by 8%</p>
 <p> b<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>jump back to previous chapter/movie in playlist</p>
 <p> n<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>jump to next chapter/movie in playlist</p>
 <p> q<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>quit</p>
-<p> Ctrl+E eject the playing optical media<br />
+<p> Ctrl+E eject the playing optical media<br/>
  Ctrl+O<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>open a new file</p>
 <p> Ctrl+L<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>open a new URI</p>
 <p> F9<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>toggle display of the playlist</p>

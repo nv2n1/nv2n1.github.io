@@ -264,7 +264,7 @@ hg bisect --reset
 </pre>
 <dt>&bull;</dt>
 <dd> use &#8216;make &amp;&amp; make tests&#8217; to automatically find the first broken revision: </dd>
-<p>hg bisect&#8211; reset<br />
+<p>hg bisect&#8211; reset<br/>
     hg bisect&#8211; bad 34 hg bisect&#8211; good 12 hg bisect&#8211; command &#8216;make &amp;&amp; make tests&#8217;</p>
 <dt>&bull;</dt>
 <dd> see all changesets whose states are already known in the current bisection: </dd>
@@ -2750,7 +2750,7 @@ rs($1, $2) = reverse(sort($1, $2))
 </pre>
 <p> defines three aliases, <code>h</code>, <code>d</code>, and <code>rs</code>. <code>rs(0:tip, author)</code> is exactly equivalent to <code>reverse(sort(0:tip, author))</code>. </p>
 <p> Command line equivalents for <code>hg log</code>:: </p>
-<p>&#8211; f-&gt;::.- d x-&gt;date(x) &#8211; k x-&gt;keyword(x) &#8211; m-&gt;merge() &#8211; u x-&gt;user(x) &#8211; b x-&gt;branch(x) &#8211; P x-&gt;!::x<br />
+<p>&#8211; f-&gt;::.- d x-&gt;date(x) &#8211; k x-&gt;keyword(x) &#8211; m-&gt;merge() &#8211; u x-&gt;user(x) &#8211; b x-&gt;branch(x) &#8211; P x-&gt;!::x<br/>
     &#8211; l x-&gt;limit(expr, x)</p>
 <p> Some sample queries:</p>
 </dd><dt>&bull;</dt>
@@ -2797,8 +2797,8 @@ hg log -r &quot;(keyword(bug) or keyword(issue)) and not ancestors(tag())&quot;
 path/to/nested = <a rel="nofollow" href="https://example.com/nested/repo/path">https://example.com/nested/repo/path</a>
 </pre>
 <p> Git and Subversion subrepos are also supported: </p>
-<p>path / to / nested = [git] git : // example.com/nested/repo/path<br />
-                                 path /<br />
+<p>path / to / nested = [git] git : // example.com/nested/repo/path<br/>
+                                 path /<br/>
                                  to / nested = [svn] https: // example.com/nested/trunk/path</p>
 <p> where <code>path/to/nested</code> is the checkout location relatively to the parent Mercurial root, and <code><a rel="nofollow" href="https://example.com/nested/repo/path">https://example.com/nested/repo/path</a></code> is the source repository path. The source can also reference a filesystem path. </p>
 <p> Note that <code>.hgsub</code> does not exist by default in Mercurial repositories, you have to create and add it to the parent repository before using subrepositories.</p>
@@ -3023,9 +3023,9 @@ $ hg log -r 0 --template &quot;{fill(desc, '30')}&quot;
 </pre>
 <dt>&bull;</dt>
 <dd> Use a conditional to test for the default branch: </dd>
-<p>$ hg log -r 0 &#8211;template &#8220;{ifeq(branch, &#8216;default&#8217;, &#8216;on the main branch&#8217;,<br />
-&#8216;on branch {branch}&#8217;)<br />
-}<br />
+<p>$ hg log -r 0 &#8211;template &#8220;{ifeq(branch, &#8216;default&#8217;, &#8216;on the main branch&#8217;,<br/>
+&#8216;on branch {branch}&#8217;)<br/>
+}<br/>
  &#8221;</p>
 <dt>&bull;</dt>
 <dd> Append a newline if not empty: </dd>
@@ -3046,9 +3046,9 @@ $ hg log -r 0 --template &quot;{sub(r'^.*
 </dl>
 <h2>URL PATHS</h2>
 <p> Valid URLs are of the form: </p>
-<p>local / filesystem / path[#revision] file :                     // local/filesystem/path[#revision]<br />
-                                            http :              //[user[:pass]@]host[:port]/[path][#revision]<br />
-                                                   https :      //[user[:pass]@]host[:port]/[path][#revision]<br />
+<p>local / filesystem / path[#revision] file :                     // local/filesystem/path[#revision]<br/>
+                                            http :              //[user[:pass]@]host[:port]/[path][#revision]<br/>
+                                                   https :      //[user[:pass]@]host[:port]/[path][#revision]<br/>
                                                            ssh: //[user@]host[:port]/[path][#revision]</p>
 <p> Paths in the local filesystem can either point to Mercurial repositories or to bundle files (as created by <code>hg bundle</code>: or <code>hg incoming &#8211;bundle</code>:). See also <code>hg help paths</code>:. </p>
 <p> An optional identifier after # indicates a particular branch, tag, or changeset to use from the remote repository. See also <code>hg help revisions</code>:. </p>
@@ -3122,87 +3122,87 @@ alias2 = URL2
 <p> Group names must be prefixed with an <code>@</code> symbol. Specifying a group name has the same effect as specifying all the users in that group. </p>
 <p> You can define group members in the <code>acl.groups</code> section. If a group name is not defined there, and Mercurial is running under a Unix-like system, the list of users will be taken from the OS. Otherwise, an exception will be raised.</p>
 <h3>Example Configuration</h3>
-<p>[hooks]<br />
-#Use this if you want to check access restrictions at commit time<br />
-pretxncommit.acl = python:hgext.acl.hook<br />
-#Use this if you want to check access restrictions for pull, push,<br />
-#bundle and serve.<br />
-pretxnchangegroup.acl = python:hgext.acl.hook<br />
-[acl]<br />
-#Allow or deny access for incoming changes only if their source is<br />
-#listed here, let them pass otherwise.Source is &#8220;serve&#8221; for all<br />
-#remote access(http or ssh), &#8220;push&#8221;, &#8220;pull&#8221; or &#8220;bundle&#8221; when the<br />
-#related commands are run locally.<br />
-#Default : serve<br />
-sources = serve<br />
-[acl.deny.branches]<br />
-#Everyone is denied to the frozen branch:<br />
-frozen-branch = *<br />
-#A bad user is denied on all branches:<br />
-* = bad-user<br />
-[acl.allow.branches]<br />
-#A few users are allowed on branch &#8211; a:<br />
-branch-a = user-1, user-2, user-3<br />
-#Only one user is allowed on branch &#8211; b:<br />
-branch-b = user-1<br />
-#The super user is allowed on any branch:<br />
-* = super-user<br />
-#Everyone is allowed on branch &#8211; for &#8211; tests:<br />
-branch-for-tests = *<br />
-[acl.deny]<br />
-#This list is checked first.If a match is found, acl.allow is not<br />
-#checked.All users are granted access if acl.deny is not present.<br />
-#Format for both lists : glob pattern = user, &#8230;, @group, &#8230;<br />
-#To match everyone, use an asterisk for the user:<br />
-#my / glob / pattern = *<br />
-#user6 will not have write access to any file:<br />
-** = user6<br />
-#Group &#8220;hg-denied&#8221; will not have write access to any file:<br />
-** = @hg-denied<br />
-#Nobody will be able to change &#8220;DONT-TOUCH-THIS.txt&#8221;, despite<br />
-#everyone being able to change all other files.See below.<br />
-src/main/resources/DONT-TOUCH-THIS.txt = *<br />
-[acl.allow]<br />
-#if acl.allow is not present, all users are allowed by default<br />
-#empty acl.allow = no users allowed<br />
-#User &#8220;doc_writer&#8221; has write access to any file under the &#8220;docs&#8221;<br />
-#folder:<br />
-docs/** = doc_writer<br />
-# User &#8220;jack&#8221; and group &#8220;designers&#8221; have write access to any file<br />
-# under the &#8220;images&#8221; folder:<br />
-images/** = jack, @designers<br />
-# Everyone (except for &#8220;user6&#8221; and &#8220;@hg-denied&#8221; &#8211; see acl.deny above)<br />
-# will have write access to any file under the &#8220;resources&#8221; folder<br />
-# (except for 1 file. See acl.deny):<br />
-src/main/resources/** = *<br />
+<p>[hooks]<br/>
+#Use this if you want to check access restrictions at commit time<br/>
+pretxncommit.acl = python:hgext.acl.hook<br/>
+#Use this if you want to check access restrictions for pull, push,<br/>
+#bundle and serve.<br/>
+pretxnchangegroup.acl = python:hgext.acl.hook<br/>
+[acl]<br/>
+#Allow or deny access for incoming changes only if their source is<br/>
+#listed here, let them pass otherwise.Source is &#8220;serve&#8221; for all<br/>
+#remote access(http or ssh), &#8220;push&#8221;, &#8220;pull&#8221; or &#8220;bundle&#8221; when the<br/>
+#related commands are run locally.<br/>
+#Default : serve<br/>
+sources = serve<br/>
+[acl.deny.branches]<br/>
+#Everyone is denied to the frozen branch:<br/>
+frozen-branch = *<br/>
+#A bad user is denied on all branches:<br/>
+* = bad-user<br/>
+[acl.allow.branches]<br/>
+#A few users are allowed on branch &#8211; a:<br/>
+branch-a = user-1, user-2, user-3<br/>
+#Only one user is allowed on branch &#8211; b:<br/>
+branch-b = user-1<br/>
+#The super user is allowed on any branch:<br/>
+* = super-user<br/>
+#Everyone is allowed on branch &#8211; for &#8211; tests:<br/>
+branch-for-tests = *<br/>
+[acl.deny]<br/>
+#This list is checked first.If a match is found, acl.allow is not<br/>
+#checked.All users are granted access if acl.deny is not present.<br/>
+#Format for both lists : glob pattern = user, &#8230;, @group, &#8230;<br/>
+#To match everyone, use an asterisk for the user:<br/>
+#my / glob / pattern = *<br/>
+#user6 will not have write access to any file:<br/>
+** = user6<br/>
+#Group &#8220;hg-denied&#8221; will not have write access to any file:<br/>
+** = @hg-denied<br/>
+#Nobody will be able to change &#8220;DONT-TOUCH-THIS.txt&#8221;, despite<br/>
+#everyone being able to change all other files.See below.<br/>
+src/main/resources/DONT-TOUCH-THIS.txt = *<br/>
+[acl.allow]<br/>
+#if acl.allow is not present, all users are allowed by default<br/>
+#empty acl.allow = no users allowed<br/>
+#User &#8220;doc_writer&#8221; has write access to any file under the &#8220;docs&#8221;<br/>
+#folder:<br/>
+docs/** = doc_writer<br/>
+# User &#8220;jack&#8221; and group &#8220;designers&#8221; have write access to any file<br/>
+# under the &#8220;images&#8221; folder:<br/>
+images/** = jack, @designers<br/>
+# Everyone (except for &#8220;user6&#8221; and &#8220;@hg-denied&#8221; &#8211; see acl.deny above)<br/>
+# will have write access to any file under the &#8220;resources&#8221; folder<br/>
+# (except for 1 file. See acl.deny):<br/>
+src/main/resources/** = *<br/>
 .hgtags = release_engineer</p>
 <h3>Examples using the ! prefix</h3>
 <p> Suppose there&#8217;s a branch that only a given user (or group) should be able to push to, and you don&#8217;t want to restrict access to any other branch that may be created. </p>
 <p> The &quot;!&quot; prefix allows you to prevent anyone except a given user or group to push changesets in a given branch or path. </p>
 <p> In the examples below, we will: 1) Deny access to branch &quot;ring&quot; to anyone but user &quot;gollum&quot; 2) Deny access to branch &quot;lake&quot; to anyone but members of the group &quot;hobbit&quot; 3) Deny access to a file to anyone but user &quot;gollum&quot; </p>
-<p>[acl.allow.branches]<br />
-#Empty<br />
-    [acl.deny.branches]<br />
-# 1) only &#8216;gollum&#8217; can commit to branch &#8216;ring&#8217;;<br />
-#&#8217;gollum&#8217; and anyone else can still commit to any other branch.<br />
-    ring = !gollum<br />
-# 2) only members of the group &#8216;hobbit&#8217; can commit to branch &#8216;lake&#8217;;<br />
-#&#8217;hobbit&#8217; members and anyone else can still commit to any other branch.<br />
-               lake = !@hobbit<br />
-#You can also deny access based on file paths:<br />
-                          [acl.allow]<br />
-#Empty<br />
-                          [acl.deny]<br />
-# 3) only &#8216;gollum&#8217; can change the file below;<br />
-#&#8217;gollum&#8217; and anyone else can still change any other file.<br />
+<p>[acl.allow.branches]<br/>
+#Empty<br/>
+    [acl.deny.branches]<br/>
+# 1) only &#8216;gollum&#8217; can commit to branch &#8216;ring&#8217;;<br/>
+#&#8217;gollum&#8217; and anyone else can still commit to any other branch.<br/>
+    ring = !gollum<br/>
+# 2) only members of the group &#8216;hobbit&#8217; can commit to branch &#8216;lake&#8217;;<br/>
+#&#8217;hobbit&#8217; members and anyone else can still commit to any other branch.<br/>
+               lake = !@hobbit<br/>
+#You can also deny access based on file paths:<br/>
+                          [acl.allow]<br/>
+#Empty<br/>
+                          [acl.deny]<br/>
+# 3) only &#8216;gollum&#8217; can change the file below;<br/>
+#&#8217;gollum&#8217; and anyone else can still change any other file.<br/>
                       / misty / mountains / cave / ring = !gollum</p>
 <h3>blackbox</h3>
 <p> log repository events to a blackbox for debugging </p>
 <p> Logs event information to .hg/blackbox.log to help debug and diagnose problems. The events that get logged can be configured via the blackbox.track config key. Examples: </p>
-<p>[blackbox] track = *[blackbox] track = command, commandfinish, commandexception, exthook, pythonhook[blackbox] track = incoming[blackbox]<br />
-#limit the size of a log file<br />
-                                                                                          maxsize = 1.5 MB<br />
-#rotate up to N log files when the current one gets too big<br />
+<p>[blackbox] track = *[blackbox] track = command, commandfinish, commandexception, exthook, pythonhook[blackbox] track = incoming[blackbox]<br/>
+#limit the size of a log file<br/>
+                                                                                          maxsize = 1.5 MB<br/>
+#rotate up to N log files when the current one gets too big<br/>
                                                                                               maxfiles = 3</p>
 <h3>Commands</h3>
 <h3>blackbox</h3>
@@ -3315,58 +3315,58 @@ committer = Bugzilla user
 <dt><code>bugzilla.notify</code></dt>
 <dd> The command to run to get Bugzilla to send bug change notification emails. Substitutes from a map with 3 keys, <code>bzdir</code>, <code>id</code> (bug id) and <code>user</code> (committer bugzilla email). Default depends on version; from 2.18 it is &quot;cd %(bzdir)s &amp;&amp; perl -T contrib/sendbugmail.pl %(id)s %(user)s&quot;. </dd>
 <p> Activating the extension: </p>
-<p>[extensions] bugzilla =<br />
-    [hooks]<br />
-#run bugzilla hook on every change pulled or pushed in here<br />
+<p>[extensions] bugzilla =<br/>
+    [hooks]<br/>
+#run bugzilla hook on every change pulled or pushed in here<br/>
     incoming.bugzilla = python : hgext.bugzilla.hook</p>
 <p> Example configurations: </p>
 <p> XMLRPC example configuration. This uses the Bugzilla at <code><a rel="nofollow" href="http://my-project.org/bugzilla">http://my-project.org/bugzilla</a></code>, logging in as user <code>bugmail [at] my-project.org</code> with password <code>plugh</code>. It is used with a collection of Mercurial repositories in <code>/var/local/hg/repos/</code>, with a web interface at <code><a rel="nofollow" href="http://my-project.org/hg">http://my-project.org/hg</a></code>. </p>
-<p>[bugzilla] bzurl = http : // my-project.org/bugzilla<br />
-                          user = bugmail[at] my &#8211; project.org<br />
-                                                      password = plugh<br />
-                                     version = xmlrpc template = Changeset{node | short} in{root | basename}.{hgweb} / {webroot} / rev /<br />
-{<br />
-    node | short<br />
-}<br />
-<br />
-{<br />
-    desc<br />
-}<br />
-<br />
-    strip = 5<br />
+<p>[bugzilla] bzurl = http : // my-project.org/bugzilla<br/>
+                          user = bugmail[at] my &#8211; project.org<br/>
+                                                      password = plugh<br/>
+                                     version = xmlrpc template = Changeset{node | short} in{root | basename}.{hgweb} / {webroot} / rev /<br/>
+{<br/>
+    node | short<br/>
+}<br/>
+<br/>
+{<br/>
+    desc<br/>
+}<br/>
+<br/>
+    strip = 5<br/>
         [web] baseurl = http: // my-project.org/hg</p>
 <p> XMLRPC+email example configuration. This uses the Bugzilla at <code><a rel="nofollow" href="http://my-project.org/bugzilla">http://my-project.org/bugzilla</a></code>, logging in as user <code>bugmail [at] my-project.org</code> with password <code>plugh</code>. It is used with a collection of Mercurial repositories in <code>/var/local/hg/repos/</code>, with a web interface at <code><a rel="nofollow" href="http://my-project.org/hg">http://my-project.org/hg</a></code>. Bug comments are sent to the Bugzilla email address <code>bugzilla [at] my-project.org</code>. </p>
-<p>[bugzilla] bzurl = http : // my-project.org/bugzilla<br />
-                          user = bugmail[at] my &#8211; project.org<br />
-                                                      password = plugh<br />
-                                     version = xmlrpc<br />
-                                         bzemail = bugzilla[at] my &#8211; project.org template = Changeset{node | short} in{root | basename}.{hgweb} / {webroot} / rev /<br />
-{<br />
-    node | short<br />
-}<br />
-<br />
-{<br />
-    desc<br />
-}<br />
-<br />
-    strip = 5<br />
-        [web] baseurl = http : // my-project.org/hg<br />
+<p>[bugzilla] bzurl = http : // my-project.org/bugzilla<br/>
+                          user = bugmail[at] my &#8211; project.org<br/>
+                                                      password = plugh<br/>
+                                     version = xmlrpc<br/>
+                                         bzemail = bugzilla[at] my &#8211; project.org template = Changeset{node | short} in{root | basename}.{hgweb} / {webroot} / rev /<br/>
+{<br/>
+    node | short<br/>
+}<br/>
+<br/>
+{<br/>
+    desc<br/>
+}<br/>
+<br/>
+    strip = 5<br/>
+        [web] baseurl = http : // my-project.org/hg<br/>
                                [usermap] user[at] emaildomain.com = user.name[at] bugzilladomain.com</p>
 <p> MySQL example configuration. This has a local Bugzilla 3.2 installation in <code>/opt/bugzilla-3.2</code>. The MySQL database is on <code>localhost</code>, the Bugzilla database name is <code>bugs</code> and MySQL is accessed with MySQL username <code>bugs</code> password <code>XYZZY</code>. It is used with a collection of Mercurial repositories in <code>/var/local/hg/repos/</code>, with a web interface at <code><a rel="nofollow" href="http://my-project.org/hg">http://my-project.org/hg</a></code>. </p>
-<p>[bugzilla] host = localhost<br />
-    password = XYZZY<br />
-        version = 3.0 bzuser = unknown[at] domain.com<br />
-                                   bzdir = / opt / bugzilla &#8211; 3.2 template = Changeset{node | short} in{root | basename}.{hgweb} / {webroot} / rev /<br />
-{<br />
-    node | short<br />
-}<br />
-<br />
-{<br />
-    desc<br />
-}<br />
-<br />
-    strip = 5<br />
-        [web] baseurl = http : // my-project.org/hg<br />
+<p>[bugzilla] host = localhost<br/>
+    password = XYZZY<br/>
+        version = 3.0 bzuser = unknown[at] domain.com<br/>
+                                   bzdir = / opt / bugzilla &#8211; 3.2 template = Changeset{node | short} in{root | basename}.{hgweb} / {webroot} / rev /<br/>
+{<br/>
+    node | short<br/>
+}<br/>
+<br/>
+{<br/>
+    desc<br/>
+}<br/>
+<br/>
+    strip = 5<br/>
+        [web] baseurl = http : // my-project.org/hg<br/>
                                [usermap] user[at] emaildomain.com = user.name[at] bugzilladomain.com</p>
 <p> All the above add a comment to the Bugzilla bug record of the form: </p>
 <pre>
@@ -3648,12 +3648,12 @@ original_branch_name new_branch_name
 <p> Files with the declared format of <code>CRLF</code> or <code>LF</code> are always checked out and stored in the repository in that format and files declared to be binary (<code>BIN</code>) are left unchanged. Additionally, <code>native</code> is an alias for checking out in the platform&#8217;s default line ending: <code>LF</code> on Unix (including Mac OS X) and <code>CRLF</code> on Windows. Note that <code>BIN</code> (do nothing to line endings) is Mercurial&#8217;s default behaviour; it is only needed if you need to override a later, more general pattern. </p>
 <p> The optional <code>[repository]</code> section specifies the line endings to use for files stored in the repository. It has a single setting, <code>native</code>, which determines the storage line endings for files declared as <code>native</code> in the <code>[patterns]</code> section. It can be set to <code>LF</code> or <code>CRLF</code>. The default is <code>LF</code>. For example, this means that on Windows, files configured as <code>native</code> (<code>CRLF</code> by default) will be converted to <code>LF</code> when stored in the repository. Files declared as <code>LF</code>, <code>CRLF</code>, or <code>BIN</code> in the <code>[patterns]</code> section are always stored as-is in the repository. </p>
 <p> Example versioned <code>.hgeol</code> file: </p>
-<p>[patterns]<br />
-    **.py = native<br />
-                **.vcproj = CRLF<br />
-                                **.txt = native<br />
-    Makefile = LF<br />
-                   **.jpg = BIN<br />
+<p>[patterns]<br/>
+    **.py = native<br/>
+                **.vcproj = CRLF<br/>
+                                **.txt = native<br/>
+    Makefile = LF<br/>
+                   **.jpg = BIN<br/>
         [repository] native = LF</p>
 <dl>
 <dt>Note</dt>
@@ -3701,8 +3701,8 @@ $root              - repository root
 $parent is an alias for $parent1.
 </pre>
 <p> The extdiff extension will look in your [diff-tools] and [merge-tools] sections for diff tool arguments, when none are specified in [extdiff]. </p>
-<p>[extdiff] kdiff3 =<br />
-    [diff &#8211;<br />
+<p>[extdiff] kdiff3 =<br/>
+    [diff &#8211;<br/>
         tools] kdiff3.diffargs = &#8211;L1 &#8216;$plabel1&#8217; &#8211;L2 &#8216;$clabel&#8217; $parent $child</p>
 <p> You can use -I/-X and list of file or directory names like normal <code>hg diff</code>: command. The extdiff extension makes snapshots of only needed files, so running the external diff program will actually be pretty fast (at least faster than having to compare the entire tree).</p>
 <h3>Commands</h3>
@@ -3867,35 +3867,35 @@ hg sigs
 <h3>hgcia</h3>
 <p> hooks for integrating with the CIA.vc notification service </p>
 <p> This is meant to be run as a changegroup or incoming hook. To configure it, set the following options in your hgrc: </p>
-<p>[cia]<br />
-#your registered CIA user name<br />
-    user = foo<br />
-#the name of the project in CIA<br />
-        project = foo<br />
-#the module(subproject)(optional)<br />
-#module = foo<br />
-#Append a diffstat to the log message(optional)<br />
-#diffstat = False<br />
-#Template to use for log messages(optional)<br />
+<p>[cia]<br/>
+#your registered CIA user name<br/>
+    user = foo<br/>
+#the name of the project in CIA<br/>
+        project = foo<br/>
+#the module(subproject)(optional)<br/>
+#module = foo<br/>
+#Append a diffstat to the log message(optional)<br/>
+#diffstat = False<br/>
+#Template to use for log messages(optional)<br/>
 #template = {desc }
-{baseurl } {webroot } / rev / {node } &#8211;{diffstat }<br />
-#Style to use(optional)<br />
-#style = foo<br />
-#The URL of the CIA notification service(optional)<br />
-#You can use mailto : URLs to send by email, e.g.<br />
-#mailto : cia[at] cia.vc<br />
-#Make sure to set email.from if you do this.<br />
-#url = http: // cia.vc/<br />
-#print message instead of sending it(optional)<br />
-#test = False<br />
-#number of slashes to strip for url paths<br />
-#strip = 0<br />
-                      [hooks]<br />
-#one of these:<br />
-                  changegroup.cia = python : hgcia.hook<br />
-#incoming.cia = python : hgcia.hook<br />
-                                                 [web]<br />
-#If you want hyperlinks(optional)<br />
+{baseurl } {webroot } / rev / {node } &#8211;{diffstat }<br/>
+#Style to use(optional)<br/>
+#style = foo<br/>
+#The URL of the CIA notification service(optional)<br/>
+#You can use mailto : URLs to send by email, e.g.<br/>
+#mailto : cia[at] cia.vc<br/>
+#Make sure to set email.from if you do this.<br/>
+#url = http: // cia.vc/<br/>
+#print message instead of sending it(optional)<br/>
+#test = False<br/>
+#number of slashes to strip for url paths<br/>
+#strip = 0<br/>
+                      [hooks]<br/>
+#one of these:<br/>
+                  changegroup.cia = python : hgcia.hook<br/>
+#incoming.cia = python : hgcia.hook<br/>
+                                                 [web]<br/>
+#If you want hyperlinks(optional)<br/>
                                              baseurl = http: // server/path/to/repo</p>
 <h3>hgk</h3>
 <p> browse the repository in a graphical way </p>
@@ -4069,12 +4069,12 @@ hg inserve [OPTION]...
 <p> Keywords expand to the changeset data pertaining to the latest change relative to the working directory parent of each file. </p>
 <p> Configuration is done in the [keyword], [keywordset] and [keywordmaps] sections of hgrc files. </p>
 <p> Example: </p>
-<p>[keyword]<br />
-#expand keywords in every python file except those matching &#8220;x*&#8221;<br />
-    **.py =<br />
-    x * = ignore<br />
-        [keywordset]<br />
-#prefer svn &#8211; over cvs &#8211; like default keywordmaps<br />
+<p>[keyword]<br/>
+#expand keywords in every python file except those matching &#8220;x*&#8221;<br/>
+    **.py =<br/>
+    x * = ignore<br/>
+        [keywordset]<br/>
+#prefer svn &#8211; over cvs &#8211; like default keywordmaps<br/>
     svn = True</p>
 <dl>
 <dt>Note</dt>
@@ -4714,19 +4714,19 @@ hg qtop [-s]
 <p> hooks for sending email push notifications </p>
 <p> This extension implements hooks to send email notifications when changesets are sent from or received by the local repository. </p>
 <p> First, enable the extension as explained in <code>hg help extensions</code>:, and register the hook you want to run. <code>incoming</code> and <code>changegroup</code> hooks are run when changesets are received, while <code>outgoing</code> hooks are for changesets sent to another repository: </p>
-<p>[hooks]<br />
-#one email for each incoming changeset<br />
-    incoming.notify = python : hgext.notify.hook<br />
-#one email for all incoming changesets<br />
-                                   changegroup.notify = python : hgext.notify.hook<br />
-#one email for all outgoing changesets<br />
+<p>[hooks]<br/>
+#one email for each incoming changeset<br/>
+    incoming.notify = python : hgext.notify.hook<br/>
+#one email for all incoming changesets<br/>
+                                   changegroup.notify = python : hgext.notify.hook<br/>
+#one email for all outgoing changesets<br/>
                                                                      outgoing.notify = python : hgext.notify.hook</p>
 <p> This registers the hooks. To enable notification, subscribers must be assigned to repositories. The <code>[usersubs]</code> section maps multiple repositories to a given recipient. The <code>[reposubs]</code> section maps multiple recipients to a single repository: </p>
-<p>[usersubs]<br />
-#key is subscriber email, value is a comma &#8211; separated list of repo patterns<br />
-    user[at] host = pattern<br />
-        [reposubs]<br />
-#key is repo pattern, value is a comma &#8211; separated list of subscriber emails<br />
+<p>[usersubs]<br/>
+#key is subscriber email, value is a comma &#8211; separated list of repo patterns<br/>
+    user[at] host = pattern<br/>
+        [reposubs]<br/>
+#key is repo pattern, value is a comma &#8211; separated list of subscriber emails<br/>
     pattern = user[at] host</p>
 <p> A <code>pattern</code> is a <code>glob</code> matching the absolute path to a repository, optionally combined with a revset expression. A revset expression, if present, is separated from the glob by a hash. Example: </p>
 <p>[reposubs] * / widgets #branch(release) = qa &#8211; team[at] example.com</p>
@@ -4825,8 +4825,8 @@ attend = annotate, cat, diff, export, glog, log, qdiff
 <dd> The patch itself, as generated by <code>hg export</code>:. </dd>
 <p> Each message refers to the first in the series using the In-Reply-To and References headers, so they will show up as a sequence in threaded mail and news readers, and in mail archives. </p>
 <p> To configure other defaults, add a section like this to your configuration file: </p>
-<p>[email] from = My Name&lt;my[at] email&gt;<br />
-    to = recipient1,<br />
+<p>[email] from = My Name&lt;my[at] email&gt;<br/>
+    to = recipient1,<br/>
         recipient2, &#8230; cc = cc1, cc2, &#8230; bcc = bcc1, bcc2, &#8230; reply &#8211; to = address1, address2, &#8230;</p>
 <p> Use <code>[patchbomb]</code> as configuration section name if you need to override global <code>[email]</code> address settings. </p>
 <p> Then you can use the <code>hg email</code>: command to mail a series of changesets as a patchbomb. </p>
@@ -4930,18 +4930,18 @@ hg email -o -m mbox &amp;&amp;    # generate an mbox file ...
 <p> show progress bars for some actions </p>
 <p> This extension uses the progress information logged by hg commands to draw progress bars that are as informative as possible. Some progress bars only offer indeterminate information, while others have a definite end point. </p>
 <p> The following settings are available: </p>
-<p>[progress] delay = 3 #number of seconds(float) before showing the progress bar<br />
-    changedelay = 1 #changedelay : minimum delay before showing a new topic.<br />
-#If set to less than 3 * refresh, that value will<br />
-#be used instead.<br />
-                                   refresh = 0.1 #time in seconds between refreshes of the progress bar<br />
-        format = topic bar number estimate #format of the progress bar<br />
-            width = &lt;none&gt; #if set,<br />
-           the maximum width of the progress information<br />
-#(that is, min(width, term width) will be used)<br />
-                   clear &#8211;<br />
-               complete = True #clear the progress bar after it&#8217;s done disable = False #if true,<br />
-           don&#8217;t show a progress bar assume &#8211; tty = False #if true, ALWAYS show a progress bar, unless<br />
+<p>[progress] delay = 3 #number of seconds(float) before showing the progress bar<br/>
+    changedelay = 1 #changedelay : minimum delay before showing a new topic.<br/>
+#If set to less than 3 * refresh, that value will<br/>
+#be used instead.<br/>
+                                   refresh = 0.1 #time in seconds between refreshes of the progress bar<br/>
+        format = topic bar number estimate #format of the progress bar<br/>
+            width = &lt;none&gt; #if set,<br/>
+           the maximum width of the progress information<br/>
+#(that is, min(width, term width) will be used)<br/>
+                   clear &#8211;<br/>
+               complete = True #clear the progress bar after it&#8217;s done disable = False #if true,<br/>
+           don&#8217;t show a progress bar assume &#8211; tty = False #if true, ALWAYS show a progress bar, unless<br/>
 #disable is given</p>
 <p> Valid entries for the format field are topic, bar, number, unit, estimate, speed, and item. item defaults to the last 20 characters of the item, but this can be changed by adding either <code>-&lt;num&gt;</code> which would take the last num characters, or <code>+&lt;num&gt;</code> for the first num characters.</p>
 <h3>purge</h3>
@@ -5109,11 +5109,11 @@ hg clone py://trunk/
 <p>[schemes] gcode = http: //{1}.googlecode.com/hg/</p>
 <p> The syntax is taken from Mercurial templates, and you have unlimited number of variables, starting with <code>{1}</code> and continuing with <code>{2}</code>, <code>{3}</code> and so on. This variables will receive parts of URL supplied, split by <code>/</code>. Anything not specified as <code>{part}</code> will be just appended to an URL. </p>
 <p> For convenience, the extension adds these schemes by default: </p>
-<p>[schemes] py = http :              // hg.python.org/<br />
-                      bb = https : // bitbucket.org/<br />
-                                   bb +<br />
-                                   ssh = ssh :                               // hg@bitbucket.org/<br />
-                                               gcode = https :               //{1}.googlecode.com/hg/<br />
+<p>[schemes] py = http :              // hg.python.org/<br/>
+                      bb = https : // bitbucket.org/<br/>
+                                   bb +<br/>
+                                   ssh = ssh :                               // hg@bitbucket.org/<br/>
+                                               gcode = https :               //{1}.googlecode.com/hg/<br/>
                                                                kiln = https: //{1}.kilnhg.com/Repo/</p>
 <p> You can override a predefined scheme by defining a new scheme with the same name.</p>
 <h3>share</h3>

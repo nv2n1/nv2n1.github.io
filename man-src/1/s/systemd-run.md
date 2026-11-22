@@ -187,15 +187,15 @@ Running as unit : run - 19945.service
 <dl>
 <dt>
 </dt><dd>
-#date; systemd &#8211; run&#8211; on &#8211; active = 30 &#8211;timer &#8211; property = AccuracySec = 100ms / bin / touch / tmp / foo<br />
-Mon Dec 8 20 : 44 : 24 KST 2014 Running as unit : run &#8211; 71.timer Will run service as unit : run &#8211; 71.service<br />
-#journalctl &#8211; b &#8211; u run &#8211; 71.timer<br />
-                                                                                            &#8211;Journal begins at Fri 2014 &#8211;<br />
-                                                                                            12 &#8211; 05 19 : 09 : 21 KST,<br />
-    ends at Mon 2014 &#8211; 12 &#8211; 08 20 : 44 : 54 KST.&#8211;Dec 08 20 : 44 : 38 container systemd[1] : Starting / bin / touch / tmp / foo.Dec 08 20 : 44 : 38 container systemd[1] : Started / bin / touch / tmp / foo.<br />
-#journalctl &#8211; b &#8211; u run &#8211; 71.service<br />
-                                                                                                                                                                                                         &#8211;Journal begins at Fri 2014 &#8211;<br />
-        12 &#8211; 05 19 : 09 : 21 KST,<br />
+#date; systemd &#8211; run&#8211; on &#8211; active = 30 &#8211;timer &#8211; property = AccuracySec = 100ms / bin / touch / tmp / foo<br/>
+Mon Dec 8 20 : 44 : 24 KST 2014 Running as unit : run &#8211; 71.timer Will run service as unit : run &#8211; 71.service<br/>
+#journalctl &#8211; b &#8211; u run &#8211; 71.timer<br/>
+                                                                                            &#8211;Journal begins at Fri 2014 &#8211;<br/>
+                                                                                            12 &#8211; 05 19 : 09 : 21 KST,<br/>
+    ends at Mon 2014 &#8211; 12 &#8211; 08 20 : 44 : 54 KST.&#8211;Dec 08 20 : 44 : 38 container systemd[1] : Starting / bin / touch / tmp / foo.Dec 08 20 : 44 : 38 container systemd[1] : Started / bin / touch / tmp / foo.<br/>
+#journalctl &#8211; b &#8211; u run &#8211; 71.service<br/>
+                                                                                                                                                                                                         &#8211;Journal begins at Fri 2014 &#8211;<br/>
+        12 &#8211; 05 19 : 09 : 21 KST,<br/>
     ends at Mon 2014 &#8211; 12 &#8211; 08 20 : 44 : 54 KST.&#8211;Dec 08 20 : 44 : 48 container systemd[1] : Starting / bin / touch / tmp / foo&#8230; Dec 08 20 : 44 : 48 container systemd[1] : Started / bin / touch / tmp / foo.
 </dd></dl>
 <p> <code>Example 4. Allowing access to the tty</code> </p>

@@ -15,14 +15,14 @@ perlplan9 - Plan 9-specific documentation for Perl
 
 <h3>Invoking Perl</h3>
 
- Perl is invoked from the command line as described in perl. Most perl scripts, however, do have a first line such as ``#!/usr/local/bin/perl''. This is known as a shebang (shell-bang) statement and tells the <font SIZE="-1">OS</font> shell where to find the perl interpreter. In Plan 9 Perl this statement should be ``#!/bin/perl'' if you wish to be able to directly invoke the script by its name. 
+ Perl is invoked from the command line as described in perl. Most perl scripts, however, do have a first line such as ``#!/usr/local/bin/perl''. This is known as a shebang (shell-bang) statement and tells the OS shell where to find the perl interpreter. In Plan 9 Perl this statement should be ``#!/bin/perl'' if you wish to be able to directly invoke the script by its name. 
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Alternatively, you may invoke perl with the command&nbsp;``Perl'' instead of ``perl''. This will produce Acme-friendly error messages of the form ``filename:18''. 
 
  Some scripts, usually identified with a *.PL extension, are self-configuring and are able to correctly create their own shebang path from config information located in Plan 9 Perl. These you won't need to be worried about.
 
 <h3>What's in Plan 9 Perl</h3>
 
- Although Plan 9 Perl currently only provides static loading, it is built with a number of useful extensions. These include Opcode, FileHandle, Fcntl, and <font SIZE="-1">POSIX.</font> Expect to see others (and DynaLoading!) in the future.
+ Although Plan 9 Perl currently only provides static loading, it is built with a number of useful extensions. These include Opcode, FileHandle, Fcntl, and POSIX. Expect to see others (and DynaLoading!) in the future.
 
 <h3>What's not in Plan 9 Perl</h3>
 
@@ -46,7 +46,7 @@ perlplan9 - Plan 9-specific documentation for Perl
 
 <h3>Signals in Plan 9 Perl</h3>
 
- For compatibility with perl scripts written for the Unix environment, Plan 9 Perl uses the <font SIZE="-1">POSIX</font> signal emulation provided in Plan 9's <font SIZE="-1">ANSI POSIX</font> Environment (<font SIZE="-1">APE</font>). Signal stacking isn't supported. The signals provided are: 
+ For compatibility with perl scripts written for the Unix environment, Plan 9 Perl uses the POSIX signal emulation provided in Plan 9's ANSI POSIX Environment (APE). Signal stacking isn't supported. The signals provided are: 
 
  <pre>
     SIGHUP, SIGINT, SIGQUIT, SIGILL, SIGABRT,
@@ -57,7 +57,7 @@ perlplan9 - Plan 9-specific documentation for Perl
 
 <h2>COMPILING AND INSTALLING PERL ON PLAN 9</h2>
 
- <font SIZE="-1">WELCOME</font> to Plan 9 Perl, brave soul! 
+ WELCOME to Plan 9 Perl, brave soul! 
 
  <pre>
    This is a preliminary alpha version of Plan 9 Perl. Still to be
@@ -81,7 +81,7 @@ future.To install this software:
         mk installall
 </pre> 
 
- 3. Wait. The build process will take a *long* time because perl bootstraps itself. A 75MHz Pentium, 16MB <font SIZE="-1">RAM</font> machine takes roughly 30 minutes to build the distribution from scratch.
+ 3. Wait. The build process will take a *long* time because perl bootstraps itself. A 75MHz Pentium, 16MB RAM machine takes roughly 30 minutes to build the distribution from scratch.
 
 <h3>Installing Perl Documentation on Plan 9</h3>
 

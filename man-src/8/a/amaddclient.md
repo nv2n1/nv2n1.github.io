@@ -10,8 +10,8 @@ description: "amaddclient – program to add client to an existing Amanda config
 <p>amaddclient &#8211; program to add client to an existing Amanda configuration</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>amaddclient</code> &#8211;config <i>config</i> ||<br />
-&nbsp;<wbr>&#8211;client&nbsp;<wbr><i>client name</i>&nbsp;<wbr>||<br />
+<dt> <code>amaddclient</code> &#8211;config <i>config</i> ||<br/>
+&nbsp;<wbr>&#8211;client&nbsp;<wbr><i>client name</i>&nbsp;<wbr>||<br/>
 &nbsp;<wbr>&#8211;diskdev&nbsp;<wbr><i>directory to backup</i>&nbsp;<wbr>[&#8211;m]&nbsp;<wbr>[&#8211;dumptype&nbsp;<wbr><i>string</i>]&nbsp;<wbr>[&#8211;includefile&nbsp;<wbr><i>string</i>]&nbsp;<wbr>[&#8211;includelist&nbsp;<wbr><i>string</i>]&nbsp;<wbr>[&#8211;excludefile&nbsp;<wbr><i>string</i>]&nbsp;<wbr>[&#8211;excludelist&nbsp;<wbr><i>string</i>]&nbsp;<wbr>[&#8211;user&nbsp;<wbr><i>string</i>]&nbsp;<wbr>[&#8211;auth&nbsp;<wbr><i>string</i>]&nbsp;<wbr>[&#8211;gnutar_list_dir&nbsp;<wbr><i>string</i>]&nbsp;<wbr>[&#8211;amandates&nbsp;<wbr><i>string</i>]&nbsp;<wbr>[&#8211;no-client-update]&nbsp;<wbr>[&#8211;batch]&nbsp;<wbr>[&#8211;help]</dt></dl>
 <h2>Description</h2>
 <dd>After Amanda rpms are successfully installed and <code>amserverconfig</code> is run, <code>amaddclient</code> will add client to the Amanda configuration. <code>amaddclient</code> create or update Amanda <code><a href="/docs/linux/man/5-disklist/">disklist</a></code>(5) file and create or update /var/lib/amanda/.amandahosts file on the server. </dd>

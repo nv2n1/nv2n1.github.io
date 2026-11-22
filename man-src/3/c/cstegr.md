@@ -11,7 +11,7 @@ description: "cstegr.f –"
 <p> cstegr.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cstegr</code> (JOBZ, RANGE, N, D, E, VL, VU, IL, IU, ABSTOL, M, W, Z, LDZ, ISUPPZ, WORK, LWORK, IWORK, LIWORK, INFO)<br />
+<p> subroutine <code>cstegr</code> (JOBZ, RANGE, N, D, E, VL, VU, IL, IU, ABSTOL, M, W, Z, LDZ, ISUPPZ, WORK, LWORK, IWORK, LIWORK, INFO)<br/>
  <i></i><code>CSTEGR</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cstegr (characterJOBZ, characterRANGE, integerN, real, dimension( * )D, real, dimension( * )E, realVL, realVU, integerIL, integerIU, realABSTOL, integerM, real, dimension( * )W, complex, dimension( ldz, * )Z, integerLDZ, integer, dimension( * )ISUPPZ, real, dimension( * )WORK, integerLWORK, integer, dimension( * )IWORK, integerLIWORK, integerINFO)</h3>
@@ -152,11 +152,11 @@ IU is INTEGER
           (and minimal) LWORK.
 </pre>
 <p> <i>LWORK</i> </p>
-<p>LWORK is INTEGER<br />
-        The dimension of the array WORK.LWORK &gt;= max(1, 18 * N) if JOBZ = &#8216;V&#8217;,<br />
-                                                                   and LWORK &gt;= max(1, 12 * N) if JOBZ = &#8216;N&#8217;.If LWORK = -1, then a workspace query is assumed;<br />
-the routine<br />
-    only calculates the optimal size of the WORK array,<br />
+<p>LWORK is INTEGER<br/>
+        The dimension of the array WORK.LWORK &gt;= max(1, 18 * N) if JOBZ = &#8216;V&#8217;,<br/>
+                                                                   and LWORK &gt;= max(1, 12 * N) if JOBZ = &#8216;N&#8217;.If LWORK = -1, then a workspace query is assumed;<br/>
+the routine<br/>
+    only calculates the optimal size of the WORK array,<br/>
     returns this value as the first entry of the WORK array, and no error message related to LWORK is issued by XERBLA.</p>
 <p> <i>IWORK</i> </p>
 <pre>

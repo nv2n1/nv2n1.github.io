@@ -21,32 +21,32 @@ description: "Latex2man is a tool to translate UNIX manual pages written with La
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-t</code><i>transfile</i></dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;Translation for user defined LaTeX macros.&nbsp; </p>
  </dd>
 <dt><code>-c</code><i>CSSfile</i></dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;If you use the&nbsp;<code>-H</code> you can also specify a file that contains CSS style sheets. The link to the CSS file is inserted into the generatedHTML output using the specified <i>CSSfile</i> filename. </p>
  </dd>
 <dt><code>-M</code></dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;Produce output suitable for the&nbsp;<i><a href="/docs/linux/man/1-man/">man</a></i>(1) command (default). </p>
  </dd>
 <dt><code>-H</code></dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;Instead of producing output suitable for the&nbsp;<i><a href="/docs/linux/man/1-man/">man</a></i>(1) command, HTML code is produced (despite the name of the command). </p>
  </dd>
 <dt><code>-T</code></dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;Instead of producing output suitable for the&nbsp;<i><a href="/docs/linux/man/1-man/">man</a></i>(1) command, TexInfo code is produced (despite the name of the command). The generated .texi-file may be processed with <i><a href="/docs/linux/man/1-makeinfo/">makeinfo</a></i>(1) (to produce an .info-file) which in turn may be installed using <i><a href="/docs/linux/man/1-install-info/">install-info</a></i>(1). The Info tags @dircategory and @direntry are provided. </p>
  </dd>
 <dt><code>-L</code></dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;The LaTeX source is written to the&nbsp;<i>outfile</i>. This is useful in conjunction with the <code>-C</code><i>name</i> option. </p>
  </dd>
 <dt><code>-C</code><i>name</i></dt>
-<dd> <p> <br />
-&nbsp;Output the conditional text for&nbsp;<i>name</i>. If more than one name should be given use quotes: <code>-C</code><i>&#8216;name1 name2 ...&#8216;</i> <br />
+<dd> <p> <br/>
+&nbsp;Output the conditional text for&nbsp;<i>name</i>. If more than one name should be given use quotes: <code>-C</code><i>&#8216;name1 name2 ...&#8216;</i> <br/>
  The following names are defined automatically: </p>
  </dd>
 <dl>
@@ -68,61 +68,61 @@ description: "Latex2man is a tool to translate UNIX manual pages written with La
 <dl>
 <dd>  </dd></dl>
 <dt><code>-a</code><i>char</i></dt>
-<dd> <p> <br />
-&nbsp;Is used only in conjunction with -T. <br />
- Background: <br />
- TexInfo ignores all blanks before the first word on a new line. In order to produce some additional space before that word (using \SP) some character has to be printed before the additional space. By default this is a . (dot). The <i>char</i> specifies an alternative for that first character. Giving a blank to <code>-a</code> supresses the indentation of a line. <br />
+<dd> <p> <br/>
+&nbsp;Is used only in conjunction with -T. <br/>
+ Background: <br/>
+ TexInfo ignores all blanks before the first word on a new line. In order to produce some additional space before that word (using \SP) some character has to be printed before the additional space. By default this is a . (dot). The <i>char</i> specifies an alternative for that first character. Giving a blank to <code>-a</code> supresses the indentation of a line. <br/>
  Note: only for the first \SP of a series that <i>char</i> is printed. </p>
  </dd>
 <dt><code>-h</code></dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;Show a help text.&nbsp; </p>
  </dd>
 <dt><code>-V</code></dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;Show version information.&nbsp; </p>
  </dd></dl>
 <h2>FILES</h2>
 <dl>
 <dt>latex2man.tex</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;The LaTeX file containing this Man-page.&nbsp; </p>
  </dd>
 <dt>latex2man.inc</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;A file read with&nbsp;\input{..}&nbsp;.&nbsp; </p>
  </dd>
 <dt>latex2man.sty</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;The LaTeX package defining the environments and&nbsp; commands. </p>
  </dd>
 <dt>latex2man.cfg</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;The configuration file for Latex2man LaTeX-package. </p>
  </dd>
 <dt>latex2man.css</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;File containing example CSS definitions.&nbsp; </p>
  </dd>
 <dt>latex2man.trans</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;File containing example translations of user&nbsp; defined LaTeX macros. </p>
  </dd>
 <dt>fancyheadings.sty</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;A LaTeX package used to typeset head- and&nbsp; foot lines. </p>
  </dd>
 <dt>fancyhdr.sty</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;A LaTeX package used to typeset head- and foot&nbsp; lines. </p>
  </dd>
 <dt>rcsinfo.sty</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;A LaTeX package used to extract and use RCS version&nbsp; control information in LaTeX documents. </p>
  </dd></dl>
 <dl>
 <dt><code>latex2man.pdf</code></dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;The PDF version of this document.&nbsp; </p>
  </dd></dl>
 <h2>SEE ALSO</h2>
@@ -151,10 +151,10 @@ description: "Latex2man is a tool to translate UNIX manual pages written with La
 <dt>\begin{Table}[width]{columns} </dt>
 <dd> <p> The Table environment takes two arguments: the first optional one specifies a width of the last column, the second one gives the number of columns. For example: </p>
  </dd></dl>
-<p> \begin{Table}[2cm]{3} <br />
- Here &amp; am &amp; I \\\hline <br />
- A 1 &amp; A 2 &amp; A 3 1 2 3 4 5 A 3 1 2 3 4 5 \\ <br />
- B 1 &amp; B 2 &amp; B 3 \\ <br />
+<p> \begin{Table}[2cm]{3} <br/>
+ Here &amp; am &amp; I \\\hline <br/>
+ A 1 &amp; A 2 &amp; A 3 1 2 3 4 5 A 3 1 2 3 4 5 \\ <br/>
+ B 1 &amp; B 2 &amp; B 3 \\ <br/>
  \end{Table} </p>
 <p> will be typeset as: </p>
 <table>
@@ -258,213 +258,213 @@ description: "Latex2man is a tool to translate UNIX manual pages written with La
 <p> They may be nested: </p>
 <dl>
 <dt><code>*</code></dt>
-<dd> <p> Itemize and nested center: <center> A centered line.<br />
- Another centered line. <br />
- <br />
- <br />
+<dd> <p> Itemize and nested center: <center> A centered line.<br/>
+ Another centered line. <br/>
+ <br/>
+ <br/>
  </p>
  </dd>
 <dt><code>*</code></dt>
-<dd> <p> <br />
- Another item an nested enumerate <br />
+<dd> <p> <br/>
+ Another item an nested enumerate <br/>
  </p>
  </dd>
 <dl>
-<dd> <p> <br />
+<dd> <p> <br/>
  </p>
  </dd>
 <dl>
 <dt>1.</dt>
-<dd> <p> <br />
- a <br />
+<dd> <p> <br/>
+ a <br/>
  </p>
  </dd>
 <dt>2.</dt>
-<dd> <p> <br />
- b <br />
+<dd> <p> <br/>
+ b <br/>
  </p>
  </dd></dl>
 </dl>
-<p> <br />
+<p> <br/>
  </p>
 <dl>
-<dd> <p> <br />
+<dd> <p> <br/>
  </p>
-<p> <br />
+<p> <br/>
  </p>
  </dd></dl>
-<p> <br />
+<p> <br/>
  </dl>
  </p>
-<p> <br />
+<p> <br/>
   </p>
 <h3>PACKAGE SPECIFIC MACROS</h3>
-<p> <br />
+<p> <br/>
  </p>
-<p> <br />
- The following commands are provided: <br />
+<p> <br/>
+ The following commands are provided: <br/>
  </p>
 <dl>
 <dt>\Opt{option} </dt>
-<dd> <p> <br />
- Option: \Opt{-o} will be typeset as <code>-o</code>.<br />
+<dd> <p> <br/>
+ Option: \Opt{-o} will be typeset as <code>-o</code>.<br/>
  </p>
  </dd>
 <dt>\Arg{argument} </dt>
-<dd> <p> <br />
- Argument: \Arg{filename} will be typeset as <br />
- <i>filename</i>.<br />
+<dd> <p> <br/>
+ Argument: \Arg{filename} will be typeset as <br/>
+ <i>filename</i>.<br/>
  </p>
  </dd>
 <dt>\OptArg{option}{argument} </dt>
-<dd> <p> <br />
- Option with Argument:<br />
- \OptArg{-o}{filename} will be typeset as <code>-o</code><i>filename</i>.<br />
+<dd> <p> <br/>
+ Option with Argument:<br/>
+ \OptArg{-o}{filename} will be typeset as <code>-o</code><i>filename</i>.<br/>
  </p>
  </dd>
 <dt>\OptoArg{option}{argument} </dt>
-<dd> <p> <br />
- Option with optional Argument:<br />
- \OptoArg{-o}{filename} will be <br />
- typeset as <code>-o</code>[<i>filename</i>].<br />
+<dd> <p> <br/>
+ Option with optional Argument:<br/>
+ \OptoArg{-o}{filename} will be <br/>
+ typeset as <code>-o</code>[<i>filename</i>].<br/>
  </p>
  </dd>
 <dt>\oOpt{option} </dt>
-<dd> <p> <br />
- Optional option, e.g. \oOpt{-o} will be <br />
- typeset as [<code>-o</code>].<br />
+<dd> <p> <br/>
+ Optional option, e.g. \oOpt{-o} will be <br/>
+ typeset as [<code>-o</code>].<br/>
  </p>
  </dd>
 <dt>\oArg{argument} </dt>
-<dd> <p> <br />
- Optional argument, e.g. \oArg{filename} <br />
- will be typeset as [<i>filename</i>].<br />
+<dd> <p> <br/>
+ Optional argument, e.g. \oArg{filename} <br/>
+ will be typeset as [<i>filename</i>].<br/>
  </p>
  </dd>
 <dt>\oOptArg{option}{argument} </dt>
-<dd> <p> <br />
- Optional option with argument, e.g.<br />
- \oOptArg{-o}{filename} will be typeset as [<code>-o</code><i>filename</i>].<br />
+<dd> <p> <br/>
+ Optional option with argument, e.g.<br/>
+ \oOptArg{-o}{filename} will be typeset as [<code>-o</code><i>filename</i>].<br/>
  </p>
  </dd>
 <dt>\oOptoArg{option}{argument} </dt>
-<dd> <p> <br />
- Optional option with optional <br />
- argument, e.g.<br />
- \oOptoArg{-o}{filename} will be typeset as [<code>-o</code>[<i>filename</i>]].<br />
+<dd> <p> <br/>
+ Optional option with optional <br/>
+ argument, e.g.<br/>
+ \oOptoArg{-o}{filename} will be typeset as [<code>-o</code>[<i>filename</i>]].<br/>
  </p>
  </dd>
 <dt>\File{filename} </dt>
-<dd> <p> <br />
- used to typeset filenames, e.g. <br />
- \File{filename} will be typeset as filename.<br />
+<dd> <p> <br/>
+ used to typeset filenames, e.g. <br/>
+ \File{filename} will be typeset as filename.<br/>
  </p>
  </dd>
 <dt>\Prog{prog} </dt>
-<dd> <p> <br />
- used to typeset program names, e.g. <br />
- \Prog{latex2man} will be typeset as latex2man.<br />
+<dd> <p> <br/>
+ used to typeset program names, e.g. <br/>
+ \Prog{latex2man} will be typeset as latex2man.<br/>
  </p>
  </dd>
 <dt>\Cmd{command}{chapter} </dt>
-<dd> <p> <br />
- used to typeset references to other <br />
- commands, e.g.<br />
- \Cmd{latex2man}{1} will be typeset as <i><a href="/docs/linux/man/1-latex2man/">latex2man</a></i>(1).<br />
+<dd> <p> <br/>
+ used to typeset references to other <br/>
+ commands, e.g.<br/>
+ \Cmd{latex2man}{1} will be typeset as <i><a href="/docs/linux/man/1-latex2man/">latex2man</a></i>(1).<br/>
  </p>
  </dd>
 <dt>\Bar </dt>
-<dd> <p> <br />
- is typeset as |.<br />
+<dd> <p> <br/>
+ is typeset as |.<br/>
  </p>
  </dd>
 <dt>\Bs </dt>
-<dd> <p> <br />
- (BackSlash) is typeset as \.<br />
+<dd> <p> <br/>
+ (BackSlash) is typeset as \.<br/>
  </p>
  </dd>
 <dt>\Tilde </dt>
-<dd> <p> <br />
- is typeset as a ~.<br />
+<dd> <p> <br/>
+ is typeset as a ~.<br/>
  </p>
  </dd>
 <dt>\Dots </dt>
-<dd> <p> <br />
- is typeset as ...<br />
- <br />
+<dd> <p> <br/>
+ is typeset as ...<br/>
+ <br/>
  </p>
  </dd>
 <dt>\Bullet </dt>
-<dd> <p> <br />
- us typeset as *.<br />
+<dd> <p> <br/>
+ us typeset as *.<br/>
  </p>
  </dd>
 <dt>\setVersion{..} </dt>
-<dd> <p> <br />
- set .. as version information. <br />
+<dd> <p> <br/>
+ set .. as version information. <br/>
  </p>
  </dd>
 <dt>\setVersionWord{..} </dt>
-<dd> <p> <br />
- set .. for the word <i>Version:</i><br />
- in <br />
- the footline.<br />
- The default is \setVersionWord{Version:}. <br />
+<dd> <p> <br/>
+ set .. for the word <i>Version:</i><br/>
+ in <br/>
+ the footline.<br/>
+ The default is \setVersionWord{Version:}. <br/>
  </p>
  </dd>
 <dt>\Version </dt>
-<dd> <p> <br />
- returns the version information. <br />
+<dd> <p> <br/>
+ returns the version information. <br/>
  </p>
  </dd>
 <dt>\setDate{..} </dt>
-<dd> <p> <br />
- sets .. as date information. <br />
+<dd> <p> <br/>
+ sets .. as date information. <br/>
  </p>
  </dd>
 <dt>\Date </dt>
-<dd> <p> <br />
- returns the date information. <br />
+<dd> <p> <br/>
+ returns the date information. <br/>
  </p>
  </dd>
 <dt>\Email{..} </dt>
-<dd> <p> <br />
- use to mark an Email address:<br />
- \Email{Juergen.Vollmer [at] informatik-vollmer.de} is typeset as:<br />
- <code>Juergen.Vollmer [at] informatik-vollmer.de</code>.<br />
+<dd> <p> <br/>
+ use to mark an Email address:<br/>
+ \Email{Juergen.Vollmer [at] informatik-vollmer.de} is typeset as:<br/>
+ <code>Juergen.Vollmer [at] informatik-vollmer.de</code>.<br/>
  </p>
  </dd>
 <dt>\URL{..} </dt>
-<dd> <p> <br />
- use to mark an URL: <br />
- \URL{<a rel="nofollow" href="http://www.foo.de/\Tilde">http://www.foo.de/\Tilde</a> vollmer} is typeset as<br />
- <code><a rel="nofollow" href="http://www.foo.de/~vollmer">http://www.foo.de/~vollmer</a></code>.<br />
+<dd> <p> <br/>
+ use to mark an URL: <br/>
+ \URL{<a rel="nofollow" href="http://www.foo.de/\Tilde">http://www.foo.de/\Tilde</a> vollmer} is typeset as<br/>
+ <code><a rel="nofollow" href="http://www.foo.de/~vollmer">http://www.foo.de/~vollmer</a></code>.<br/>
  </p>
  </dd>
 <dt>\LatexManEnd </dt>
-<dd> <p> <br />
- the input file is read and processed until reading <br />
- end-of-file or<br />
- \LatexManEnd (at the beginning of a line). <br />
- LaTeXignores this command. <br />
+<dd> <p> <br/>
+ the input file is read and processed until reading <br/>
+ end-of-file or<br/>
+ \LatexManEnd (at the beginning of a line). <br/>
+ LaTeXignores this command. <br/>
  </p>
  </dd>
 <dt>\Lbr, \Rbr </dt>
-<dd> <p> <br />
- is typeset as [ and ] (these variants are <br />
- needed only somtimes like in<br />
- \item[FooBar\LBr xx \Lbr]. Usually [ ] will work. <br />
+<dd> <p> <br/>
+ is typeset as [ and ] (these variants are <br/>
+ needed only somtimes like in<br/>
+ \item[FooBar\LBr xx \Lbr]. Usually [ ] will work. <br/>
  </p>
  </dd>
 <dt>\LBr, \RBr </dt>
-<dd> <p> <br />
- is typeset as { and } (these variants are <br />
- needed when using { or } as arguments to macros. <br />
+<dd> <p> <br/>
+ is typeset as { and } (these variants are <br/>
+ needed when using { or } as arguments to macros. <br/>
  </p>
  </dd>
 <dt>\Circum </dt>
-<dd> <p> <br />
- is typeset as ^.<br />
+<dd> <p> <br/>
+ is typeset as ^.<br/>
  </center> </p>
  </dd>
 <dt>\Percent </dt>
@@ -486,9 +486,9 @@ description: "Latex2man is a tool to translate UNIX manual pages written with La
 <dd> <p> An empty line. </p>
  </dd>
 <dt>\SP </dt>
-<dd> <p> Produces some extra space, works also at the beginning of lines. The code of the second line looks like: \SP abc \SP\SP xx\\: <br />
- abc xx <br />
- abc xx <br />
+<dd> <p> Produces some extra space, works also at the beginning of lines. The code of the second line looks like: \SP abc \SP\SP xx\\: <br/>
+ abc xx <br/>
+ abc xx <br/>
  abc xx </p>
  </dd></dl>
 <p> Note: Due to some ``problems&#8217;&#8216; with TexInfo, the lines starting with \SP have a leading . (dot) in the TexInfo output, see <code>-a</code><i>char</i>. </p>

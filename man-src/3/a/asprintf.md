@@ -10,7 +10,7 @@ description: "asprintf, vasprintf – print to allocated string"
 
 <p> asprintf, vasprintf &#8211; print to allocated string </p>
 <h2>SYNOPSIS</h2>
-<p> <code>#define _GNU_SOURCE</code> /* See <a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a>(7) */<br />
+<p> <code>#define _GNU_SOURCE</code> /* See <a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a>(7) */<br/>
  <code>#include &lt;stdio.h&gt;</code> </p>
 <p> <code>int asprintf(char **</code><i>strp</i><code>, const char *</code><i>fmt</i><code>, &#8230;);</code> </p>
 <p> <code>int vasprintf(char **</code><i>strp</i><code>, const char *</code><i>fmt</i><code>, va_list </code><i>ap</i><code>);</code></p>

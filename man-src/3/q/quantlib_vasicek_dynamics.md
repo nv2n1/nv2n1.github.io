@@ -13,9 +13,9 @@ description: "QuantLib::Vasicek::Dynamics – Short-rate dynamics in the Vasicek
 <p> Inherits <code>QuantLib::OneFactorModel::ShortRateDynamics</code>. </p>
 <h3>Public Member Functions</h3>
 <p><code>Dynamics</code> (Real a, Real b, Real sigma, Real r0) </p>
-<p> virtual Real <code>variable</code> (Time, Rate r) const<br />
- <i>Compute state variable from short rate. </i><br />
- virtual Real <code>shortRate</code> (Time, Real x) const<br />
+<p> virtual Real <code>variable</code> (Time, Rate r) const<br/>
+ <i>Compute state variable from short rate. </i><br/>
+ virtual Real <code>shortRate</code> (Time, Real x) const<br/>
  <i>Compute short rate from state variable. </i></p>
 <h2>Detailed Description</h2>
 <p>Short-rate dynamics in the Vasicek model. </p>

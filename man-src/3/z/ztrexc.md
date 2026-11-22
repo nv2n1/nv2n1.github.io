@@ -10,7 +10,7 @@ description: "ztrexc.f –"
 <p>ztrexc.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>ztrexc</code> (COMPQ, N, T, LDT, Q, LDQ, IFST, ILST, INFO)<br />
+<p>subroutine <code>ztrexc</code> (COMPQ, N, T, LDT, Q, LDQ, IFST, ILST, INFO)<br/>
  <i></i><code>ZTREXC</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ztrexc (characterCOMPQ, integerN, complex*16, dimension( ldt, * )T, integerLDT, complex*16, dimension( ldq, * )Q, integerLDQ, integerIFST, integerILST, integerINFO)</h3>

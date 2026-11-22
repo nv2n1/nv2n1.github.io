@@ -62,7 +62,7 @@ description: "ngIRCd – the \"next generation\" IRC daemon"
 <dt><code>USR2</code></dt>
 <dd>Dump internal server state to the console/syslog when debug mode is on (use command line option &#8211;debug or signal USR1).</dd></dl>
 <h2>Authors</h2>
-<p>Alexander Barton, &lt;alex [at] barton.de&gt;<br />
+<p>Alexander Barton, &lt;alex [at] barton.de&gt;<br/>
  Florian Westphal, &lt;fw [at] strlen.de&gt; </p>
 <p> Homepage: <a rel="nofollow" href="http://ngircd.barton.de/">http://ngircd.barton.de/</a></p>
 <h2>See Also</h2>

@@ -54,5 +54,5 @@ description: "mbox – Format for mail message storage."
 <h2>Author</h2>
 <p>Thomas Roessler &lt;roessler [at] does-not-exist.org&gt;, Urs Janssen &lt;urs [at] tin.org&gt;</p>
 <h2>History</h2>
-<p>The <code>mbox</code> format occurred in Version 6 AT&amp;T Unix.<br />
+<p>The <code>mbox</code> format occurred in Version 6 AT&amp;T Unix.<br/>
  A variant of this format was documented in <code>RFC976</code>.</p>

@@ -72,9 +72,9 @@ description: "dpkg-split – Debian package archive split/join tool"
 <dd> Fatal or unrecoverable error due to invalid command-line usage, a file that looked like a package part file but was corrupted, or interactions with the system, such as accesses to the database, memory allocations, etc.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><font SIZE="-1"><code>DPKG_COLORS</code></font></dt>
+<dt><code>DPKG_COLORS</code></dt>
 <dd> Sets the color mode (since dpkg 1.18.5). The currently accepted values are: <code>auto</code> (default), <code>always</code> and <code>never</code>.</dd>
-<dt><font SIZE="-1"><code>SOURCE_DATE_EPOCH</code></font></dt>
+<dt><code>SOURCE_DATE_EPOCH</code></dt>
 <dd> If set, it will be used as the timestamp (as seconds since the epoch) in the <code><a href="/docs/linux/man/5-deb-split/">deb-split</a></code>(5)&#8217;s <code>ar</code>(5) container.</dd></dl>
 <h2>FILES</h2>
 <dl>

@@ -43,7 +43,7 @@ description: "tito – manage RPM based projects using git"
 <h3>tito init</h3>
 <p>This will create a top-level metadata directory called &quot;.tito/&quot; and commit it to git. This directory will store tito&#8217;s configuration and package metadata on a per branch basis. It will be filtered out when creating .tar.gz&#8217;s. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> Your spec file should list the source as %{name}-%{version}.tar.gz </p>
 </dl>
 <h3>tito tag [options]</h3>
@@ -88,7 +88,7 @@ description: "tito – manage RPM based projects using git"
 <dl>
 <dd>Undo the most recent (un-pushed) tag.</dd></dl>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> Tito will create automatic changelog from git commits. Unless you specify one of auto options, tito will open text editor and allow you to edit the text. Editor is by default. This can be changes by environment variable EDITOR. </p>
 </dl>
 <h3>tito build [options]</h3>
@@ -117,7 +117,7 @@ description: "tito – manage RPM based projects using git"
 <dl>
 <dd>Install any binary RPMs being built.</dd></dl>
 <dl>
-<dd><font SIZE="+1"> <code>Warning</code> </font> </dd>
+<dd> <code>Warning</code>  </dd>
 <p> uses sudo rpm -Uvh &#8211;force </p>
 </dl>
 <p> &#8211;no-sudo</p>

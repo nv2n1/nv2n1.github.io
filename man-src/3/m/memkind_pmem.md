@@ -8,7 +8,7 @@ url: "/docs/linux/man/3-memkind_pmem/"
 description: "memkind_pmem.h – file-backed memory memkind operations. Note: This is EXEPRIMENTAL API. The functionality and the header file itself can be changed (including non-backward compatible changes), or r..."
 ---
 
-<p> memkind_pmem.h &#8211; file-backed memory memkind operations.<br />
+<p> memkind_pmem.h &#8211; file-backed memory memkind operations.<br/>
  Note: This is EXEPRIMENTAL API. The functionality and the header file itself can be changed (including non-backward compatible changes), or remove.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

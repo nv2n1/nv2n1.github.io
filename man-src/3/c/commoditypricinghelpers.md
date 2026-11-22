@@ -10,13 +10,13 @@ description: "ql/experimental/commodities/commoditypricinghelpers.hpp – Commod
 
 <p> ql/experimental/commodities/commoditypricinghelpers.hpp &#8211; Commodity pricing helpers. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/experimental/commodities/energycommodity.hpp&gt;<br />
- #include &lt;ql/experimental/commodities/paymentterm.hpp&gt;<br />
- #include &lt;ql/experimental/commodities/pricingperiod.hpp&gt;<br />
- #include &lt;ql/experimental/commodities/unitofmeasureconversionmanager.hpp&gt;<br />
+<p> #include &lt;ql/experimental/commodities/energycommodity.hpp&gt;<br/>
+ #include &lt;ql/experimental/commodities/paymentterm.hpp&gt;<br/>
+ #include &lt;ql/experimental/commodities/pricingperiod.hpp&gt;<br/>
+ #include &lt;ql/experimental/commodities/unitofmeasureconversionmanager.hpp&gt;<br/>
  #include &lt;ql/currencies/exchangeratemanager.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>CommodityPricingHelper</code><br />
+<p> class <code>CommodityPricingHelper</code><br/>
  <i>commodity index helper </i></p>
 <h2>Detailed Description</h2>
 <p> Commodity pricing helpers. </p>

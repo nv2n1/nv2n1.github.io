@@ -10,7 +10,7 @@ description: "zlahef.f –"
 <p>zlahef.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlahef</code> (UPLO, N, NB, KB, A, LDA, IPIV, W, LDW, INFO)<br />
+<p>subroutine <code>zlahef</code> (UPLO, N, NB, KB, A, LDA, IPIV, W, LDW, INFO)<br/>
  <i></i><code>ZLAHEF</code> computes a partial factorization of a complex Hermitian indefinite matrix using the Bunch-Kaufman diagonal pivoting method (blocked algorithm, calling Level 3 BLAS).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlahef (characterUPLO, integerN, integerNB, integerKB, complex*16, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, complex*16, dimension( ldw, * )W, integerLDW, integerINFO)</h3>

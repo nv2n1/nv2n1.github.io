@@ -10,7 +10,7 @@ description: "ztbcon.f –"
 <p>ztbcon.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>ztbcon</code> (NORM, UPLO, DIAG, N, KD, AB, LDAB, RCOND, WORK, RWORK, INFO)<br />
+<p>subroutine <code>ztbcon</code> (NORM, UPLO, DIAG, N, KD, AB, LDAB, RCOND, WORK, RWORK, INFO)<br/>
  <i></i><code>ZTBCON</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ztbcon (characterNORM, characterUPLO, characterDIAG, integerN, integerKD, complex*16, dimension( ldab, * )AB, integerLDAB, double precisionRCOND, complex*16, dimension( * )WORK, double precision, dimension( * )RWORK, integerINFO)</h3>

@@ -86,7 +86,7 @@ description: "sane – Scanner Access Now Easy: API for accessing scanners"
 <dt><code>genesys</code></dt>
 <dd>Supports several scanners based on the Genesys Logic GL646, GL841, GL843, GL847 and GL124 chips like the Medion 6471 and Hewlett-Packard 2300c. See <code><a href="/docs/linux/man/5-sane-genesys/">sane-genesys</a></code>(5) for details.</dd>
 <dt><code>gt68xx</code></dt>
-<dd>Supports scanners based on the Grandtech GT-6801 and GT-6816 chips like the Artec Ultima 2000 and several Mustek BearPaw CU and TA models.<br />
+<dd>Supports scanners based on the Grandtech GT-6801 and GT-6816 chips like the Artec Ultima 2000 and several Mustek BearPaw CU and TA models.<br/>
  Some Genius, Lexmark, Medion, Packard Bell, Plustek, and Trust scanners are also supported. See <code><a href="/docs/linux/man/5-sane-gt68xx/">sane-gt68xx</a></code>(5) for details.</dd>
 <dt><code>hp</code></dt>
 <dd>Supports Hewlett-Packard ScanJet scanners which utilize SCL (Scanner Control Language by HP). See <code><a href="/docs/linux/man/5-sane-hp/">sane-hp</a></code>(5) for details.</dd>

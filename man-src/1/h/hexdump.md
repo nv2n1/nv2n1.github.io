@@ -137,7 +137,7 @@ description: "hexdump – display file contents in hexadecimal, decimal, octal, 
 </td>
 </tr>
 </table>
-<p> <br />
+<p> <br/>
  </p>
  </dd></dl>
 <h3>Conversion strings</h3>
@@ -213,7 +213,7 @@ description: "hexdump – display file contents in hexadecimal, decimal, octal, 
 <td>  01E rs </td>
 <td>  01F us </td>
 <td>  0FF del </td>
-<td> <p> <br />
+<td> <p> <br/>
  </p>
  </dd></dl>
 <h3>Colors</h3>

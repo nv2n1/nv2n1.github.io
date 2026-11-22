@@ -10,7 +10,7 @@ description: "zla_hercond_c.f –"
 <p>zla_hercond_c.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>DOUBLE PRECISION function <code>zla_hercond_c</code> (UPLO, N, A, LDA, AF, LDAF, IPIV, C, CAPPLY, INFO, WORK, RWORK)<br />
+<p>DOUBLE PRECISION function <code>zla_hercond_c</code> (UPLO, N, A, LDA, AF, LDAF, IPIV, C, CAPPLY, INFO, WORK, RWORK)<br/>
  <i></i><code>ZLA_HERCOND_C</code> computes the infinity norm condition number of op(A)*inv(diag(c)) for Hermitian indefinite matrices.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>DOUBLE PRECISION function zla_hercond_c (characterUPLO, integerN, complex*16, dimension( lda, * )A, integerLDA, complex*16, dimension( ldaf, * )AF, integerLDAF, integer, dimension( * )IPIV, double precision, dimension ( * )C, logicalCAPPLY, integerINFO, complex*16, dimension( * )WORK, double precision, dimension( * )RWORK)</h3>

@@ -10,8 +10,8 @@ description: "mv – move (rename) files"
 
 <p> mv &#8211; move (rename) files </p>
 <h2>SYNOPSIS</h2>
-<p> <code>mv</code> [<i>,OPTION/</i>]&#8230; [<i>,-T/</i>] <i>,SOURCE DEST/</i><br />
- <code>mv</code> [<i>,OPTION/</i>]&#8230; <i>,SOURCE/</i>&#8230; <i>,DIRECTORY/</i><br />
+<p> <code>mv</code> [<i>,OPTION/</i>]&#8230; [<i>,-T/</i>] <i>,SOURCE DEST/</i><br/>
+ <code>mv</code> [<i>,OPTION/</i>]&#8230; <i>,SOURCE/</i>&#8230; <i>,DIRECTORY/</i><br/>
  <code>mv</code> [<i>,OPTION/</i>]&#8230; <i>,-t DIRECTORY SOURCE/</i>&#8230;</p>
 <h2>DESCRIPTION</h2>
 <p> Rename SOURCE to DEST, or move SOURCE(s) to DIRECTORY. </p>
@@ -60,12 +60,12 @@ description: "mv – move (rename) files"
 <h2>AUTHOR</h2>
 <p> Written by Mike Parker, David MacKenzie, and Jim Meyering.</p>
 <h2>REPORTING BUGS</h2>
-<p> GNU coreutils online help: &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/">https://www.gnu.org/software/coreutils/</a>&gt;<br />
+<p> GNU coreutils online help: &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/">https://www.gnu.org/software/coreutils/</a>&gt;<br/>
  Report any translation bugs to &lt;<a rel="nofollow" href="https://translationproject.org/team/">https://translationproject.org/team/</a>&gt;</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2020 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="https://gnu.org/licenses/gpl.html">https://gnu.org/licenses/gpl.html</a>&gt;.<br />
+<p> Copyright &#169; 2020 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="https://gnu.org/licenses/gpl.html">https://gnu.org/licenses/gpl.html</a>&gt;.<br/>
  This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/2-rename/">rename</a>(2) </p>
-<p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/mv">https://www.gnu.org/software/coreutils/mv</a>&gt;<br />
+<p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/mv">https://www.gnu.org/software/coreutils/mv</a>&gt;<br/>
  or available locally via: info &#8216;(coreutils) mv invocation&#8217; </p>

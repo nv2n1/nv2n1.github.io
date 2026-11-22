@@ -44,6 +44,6 @@ description: "hh_server – Hack language typechecker daemon"
 <h2>BUGS</h2>
 <p> The Hack language is part of the HHVM project. Known bugs can be found at that tracker, and new ones should be reported there as well: <i><a rel="nofollow" href="https://github.com/facebook/hhvm/issues">https://github.com/facebook/hhvm/issues</a></i> </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-hh_client/">hh_client</a></code>(1),<code>&nbsp;hackificator</code>(1),<code>&nbsp;hack_remove_soft_types</code>(1).<br />
- <i><a rel="nofollow" href="http://docs.hhvm.com/hack/typechecker/setup">http://docs.hhvm.com/hack/typechecker/setup</a></i><br />
+<p> <code><a href="/docs/linux/man/1-hh_client/">hh_client</a></code>(1),<code>&nbsp;hackificator</code>(1),<code>&nbsp;hack_remove_soft_types</code>(1).<br/>
+ <i><a rel="nofollow" href="http://docs.hhvm.com/hack/typechecker/setup">http://docs.hhvm.com/hack/typechecker/setup</a></i><br/>
  <i><a rel="nofollow" href="http://www.hacklang.org/">http://www.hacklang.org/</a></i> </p>

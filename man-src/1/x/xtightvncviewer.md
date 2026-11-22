@@ -10,9 +10,9 @@ description: "vncviewer – an X viewer client for VNC"
 
 <p> vncviewer &#8211; an X viewer client for VNC </p>
 <h2>SYNOPSIS</h2>
-<p> <code>vncviewer</code> [<i>options</i>] [<i>host</i>][<i>:display</i>]<br />
- <code>vncviewer</code> [<i>options</i>] [<i>host</i>][<i>::port</i>]<br />
- <code>vncviewer</code> [<i>options</i>] <i>-listen</i> [<i>display</i>]<br />
+<p> <code>vncviewer</code> [<i>options</i>] [<i>host</i>][<i>:display</i>]<br/>
+ <code>vncviewer</code> [<i>options</i>] [<i>host</i>][<i>::port</i>]<br/>
+ <code>vncviewer</code> [<i>options</i>] <i>-listen</i> [<i>display</i>]<br/>
  <code>vncviewer</code> <i>-help</i> </p>
 <h2>DESCRIPTION</h2>
 <p> <code>vncviewer</code> is an Xt-based client application for the VNC (Virtual Network Computing) system. It can connect to any VNC-compatible server such as <code>Xvnc</code> or WinVNC, allowing you to control desktop environment of a different machine. </p>
@@ -151,8 +151,8 @@ description: "vncviewer – an X viewer client for VNC"
 <p> <code><a href="/docs/linux/man/1-vncserver/">vncserver</a></code>(1), <code><a href="/docs/linux/man/1-xvnc/">Xvnc</a></code>(1), <code><a href="/docs/linux/man/1-vncpasswd/">vncpasswd</a></code>(1), <code>vncconnect</code>(1), <code><a href="/docs/linux/man/1-ssh/">ssh</a></code>(1)</p>
 <h2>AUTHORS</h2>
 <p> Original VNC was developed in AT&amp;T Laboratories Cambridge. TightVNC additions were implemented by Constantin Kaplinsky. Many other people participated in development, testing and support. </p>
-<p> <code>Man page authors:</code><br />
- Marcus Brinkmann &lt;Marcus.Brinkmann [at] ruhr-uni-bochum.de&gt;,<br />
- Terran Melconian &lt;terran [at] consistent.org&gt;,<br />
- Tim Waugh &lt;twaugh [at] redhat.com&gt;,<br />
+<p> <code>Man page authors:</code><br/>
+ Marcus Brinkmann &lt;Marcus.Brinkmann [at] ruhr-uni-bochum.de&gt;,<br/>
+ Terran Melconian &lt;terran [at] consistent.org&gt;,<br/>
+ Tim Waugh &lt;twaugh [at] redhat.com&gt;,<br/>
  Constantin Kaplinsky &lt;const [at] tightvnc.com&gt; </p>

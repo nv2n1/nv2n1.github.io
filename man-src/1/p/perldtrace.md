@@ -47,7 +47,7 @@ dtrace : description 'perl::sub-entry, perl::sub-return ' matched 10 probes
 
  DTrace is a framework for comprehensive system- and application-level tracing. Perl is a DTrace <i>provider</i>, meaning it exposes several <i>probes</i> for instrumentation. You can use these in conjunction with kernel-level probes, as well as probes from other providers such as MySQL, in order to diagnose software defects, or even just your application's bottlenecks. 
 
- Perl must be compiled with the <tt>&quot;-Dusedtrace&quot;</tt> option in order to make use of the provided probes. While DTrace aims to have no overhead when its instrumentation is not active, Perl's support itself cannot uphold that guarantee, so it is built without DTrace probes under most systems. One notable exception is that Mac <font SIZE="-1">OS X</font> ships a <i>/usr/bin/perl</i> with DTrace support enabled.
+ Perl must be compiled with the <tt>&quot;-Dusedtrace&quot;</tt> option in order to make use of the provided probes. While DTrace aims to have no overhead when its instrumentation is not active, Perl's support itself cannot uphold that guarantee, so it is built without DTrace probes under most systems. One notable exception is that Mac OS X ships a <i>/usr/bin/perl</i> with DTrace support enabled.
 
 <h2>HISTORY</h2>
 
@@ -64,40 +64,40 @@ dtrace : description 'perl::sub-entry, perl::sub-return ' matched 10 probes
 <h2>PROBES</h2>
 
 <dl>
-<dt>sub-entry(<font SIZE="-1">SUBNAME, FILE, LINE, PACKAGE</font>)
+<dt>sub-entry(SUBNAME, FILE, LINE, PACKAGE)
 </dt><dd> Traces the entry of any subroutine. Note that all of the variables refer to the subroutine that is being invoked; there is currently no way to get ahold of any information about the subroutine's <i>caller</i> from a DTrace action. 
  :*perl*::sub-entry
  {
      printf("%s::%s entered at %s line %d\n",
             copyinstr(arg3), copyinstr(arg0), copyinstr(arg1), arg2);
  }
-</dd><dt>sub-return(<font SIZE="-1">SUBNAME, FILE, LINE, PACKAGE</font>)
+</dd><dt>sub-return(SUBNAME, FILE, LINE, PACKAGE)
 </dt><dd> Traces the exit of any subroutine. Note that all of the variables refer to the subroutine that is returning; there is currently no way to get ahold of any information about the subroutine's <i>caller</i> from a DTrace action. 
  :*perl*::sub-return
  {
      printf("%s::%s returned at %s line %d\n",
             copyinstr(arg3), copyinstr(arg0), copyinstr(arg1), arg2);
  }
-</dd><dt>phase-change(<font SIZE="-1">NEWPHASE, OLDPHASE</font>)
+</dd><dt>phase-change(NEWPHASE, OLDPHASE)
 </dt><dd> Traces changes to Perl's interpreter state. You can internalize this as tracing changes to Perl's <tt>&quot;${^GLOBAL_PHASE}&quot;</tt> variable, especially since the values for <tt>&quot;NEWPHASE&quot;</tt> and <tt>&quot;OLDPHASE&quot;</tt> are the strings that <tt>&quot;${^GLOBAL_PHASE}&quot;</tt> reports. 
  :*perl*::phase-change
  {
      printf("Phase changed from %s to %s\n",
             copyinstr(arg1), copyinstr(arg0));
  }
-</dd><dt>op-entry(<font SIZE="-1">OPNAME</font>)
+</dd><dt>op-entry(OPNAME)
 </dt><dd> Traces the execution of each opcode in the Perl runloop. This probe is fired before the opcode is executed. When the Perl debugger is enabled, the DTrace probe is fired <i>after</i> the debugger hooks (but still before the opcode itself is executed). 
  :*perl*::op-entry
  {
      printf("About to execute opcode %s\n", copyinstr(arg0));
  }
-</dd><dt>loading-file(<font SIZE="-1">FILENAME</font>)
+</dd><dt>loading-file(FILENAME)
 </dt><dd> Fires when Perl is about to load an individual file, whether from <tt>&quot;use&quot;</tt>, <tt>&quot;require&quot;</tt>, or <tt>&quot;do&quot;</tt>. This probe fires before the file is read from disk. The filename argument is converted to local filesystem paths instead of providing <tt>&quot;Module::Name&quot;</tt>-style names. 
  :*perl*:loading-file
  {
      printf("About to load %s\n", copyinstr(arg0));
  }
-</dd><dt>loaded-file(<font SIZE="-1">FILENAME</font>)
+</dd><dt>loaded-file(FILENAME)
 </dt><dd> Fires when Perl has successfully loaded an individual file, whether from <tt>&quot;use&quot;</tt>, <tt>&quot;require&quot;</tt>, or <tt>&quot;do&quot;</tt>. This probe fires after the file is read from disk and its contents evaluated. The filename argument is converted to local filesystem paths instead of providing <tt>&quot;Module::Name&quot;</tt>-style names. 
  :*perl*:loaded-file
  {
@@ -135,14 +135,14 @@ warnings::unimport 4589 Exporter::Heavy::_rebuild_cache 5039 Exporter::import 14
 <dl>
 <dt>DTrace Dynamic Tracing Guide
 </dt><dd> &lt;<a rel="nofollow" HREF="http://dtrace.org/guide/preface.html">http://dtrace.org/guide/preface.html</a>&gt;
-</dd><dt>DTrace: Dynamic Tracing in Oracle Solaris, Mac <font SIZE="-1">OS X</font> and FreeBSD
+</dd><dt>DTrace: Dynamic Tracing in Oracle Solaris, Mac OS X and FreeBSD
 </dt><dd> &lt;<a rel="nofollow" HREF="http://www.amazon.com/DTrace-Dynamic-Tracing-Solaris-FreeBSD/dp/0132091518/">http://www.amazon.com/DTrace-Dynamic-Tracing-Solaris-FreeBSD/dp/0132091518/</a>&gt;</dd></dl>
 
 <h2>SEE ALSO</h2>
 
 <dl>
 <dt>Devel::DTrace::Provider
-</dt><dd> This <font SIZE="-1">CPAN</font> module lets you create application-level DTrace probes written in Perl.</dd></dl>
+</dt><dd> This CPAN module lets you create application-level DTrace probes written in Perl.</dd></dl>
 
 <h2>AUTHORS</h2>
 

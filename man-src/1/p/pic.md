@@ -60,7 +60,7 @@ description: "pic – compile pictures for troff or TeX"
 <p> would avoid this. </p>
 <p> To make the vbox having a positive height and a depth of zero (as used e.g. by LaTeX&#8217;s <code>graphics.sty</code>), define the following macro in your document: </p>
 <dl>
-<dd> <p> <code>\def\gpicbox#1{%</code> <br />
+<dd> <p> <code>\def\gpicbox#1{%</code> <br/>
  <code> \vbox{\unvbox\csname #1\endcsname\kern 0pt}}</code> </p>
  </dd></dl>
 <p> Now you can simply say <code>\gpicbox{graph}</code> instead of \box\graph. </p>
@@ -140,7 +140,7 @@ box
 </dl>
 <dd> <p> The commands to be performed for each line can also be taken from a macro defined earlier by giving the name of the macro as the argument to <code>thru</code>. </p>
  </dd></dl>
-<p> <code>reset</code> <br />
+<p> <code>reset</code> <br/>
  </p>
 <dl>
 <dt><code>reset</code><i> variable1/</i>[<code>,</code>]<i> variable2 ...</dt>
@@ -187,30 +187,30 @@ print x &quot; &quot; y
 <p> In this case <i>anything</i> can contain balanced occurrences of <code>{</code> and <code>}</code>. Strings may contain <i>X</i> or imbalanced occurrences of <code>{</code> and <code>}</code>.  </p>
 <h3>Expressions</h3>
 <p> The syntax for expressions has been significantly extended: </p>
-<p> <i>x&nbsp;</i><code>^&nbsp;</code><i>y</i> (exponentiation) <br />
- <code>sin(</code><i>x</i><code>)</code> <br />
- <code>cos(</code><i>x</i><code>)</code> <br />
- <code>atan2(</code><i>y</i><code>,</code><i>&nbsp;x</i><code>)</code> <br />
- <code>log(</code><i>x</i><code>)</code> (base 10) <br />
- <code>exp(</code><i>x</i><code>)</code> (base 10, i.e. 10^<i>x</i>) <br />
- <code>sqrt(</code><i>x</i><code>)</code> <br />
- <code>int(</code><i>x</i><code>)</code> <br />
- <code>rand()</code> (return a random number between 0 and 1) <br />
- <code>rand(</code><i>x</i><code>)</code> (return a random number between 1 and <i>x</i>; deprecated) <br />
- <code>srand(</code><i>x</i><code>)</code> (set the random number seed) <br />
- <code>max(</code><i>e1</i><code>,</code><i>&nbsp;e2</i><code>)</code> <br />
- <code>min(</code><i>e1</i><code>,</code><i>&nbsp;e2</i><code>)</code> <br />
- <code>!</code><i>e</i> <br />
- <i>e1</i><code> &amp;&amp; </code><i>e2</i> <br />
- <i>e1</i><code> || </code><i>e2</i> <br />
- <i>e1</i><code> == </code><i>e2</i> <br />
- <i>e1</i><code> != </code><i>e2</i> <br />
- <i>e1</i><code> &gt;= </code><i>e2</i> <br />
- <i>e1</i><code> &gt; </code><i>e2</i> <br />
- <i>e1</i><code> &lt;= </code><i>e2</i> <br />
- <i>e1</i><code> &lt; </code><i>e2</i> <br />
- <code>&quot;,</code><i>str1</i><code>&quot; == &quot;,</code><i>str2</i><code>&quot;</code> <br />
- <code>&quot;,</code><i>str1</i><code>&quot; != &quot;,</code><i>str2</i><code>&quot;</code> <br />
+<p> <i>x&nbsp;</i><code>^&nbsp;</code><i>y</i> (exponentiation) <br/>
+ <code>sin(</code><i>x</i><code>)</code> <br/>
+ <code>cos(</code><i>x</i><code>)</code> <br/>
+ <code>atan2(</code><i>y</i><code>,</code><i>&nbsp;x</i><code>)</code> <br/>
+ <code>log(</code><i>x</i><code>)</code> (base 10) <br/>
+ <code>exp(</code><i>x</i><code>)</code> (base 10, i.e. 10^<i>x</i>) <br/>
+ <code>sqrt(</code><i>x</i><code>)</code> <br/>
+ <code>int(</code><i>x</i><code>)</code> <br/>
+ <code>rand()</code> (return a random number between 0 and 1) <br/>
+ <code>rand(</code><i>x</i><code>)</code> (return a random number between 1 and <i>x</i>; deprecated) <br/>
+ <code>srand(</code><i>x</i><code>)</code> (set the random number seed) <br/>
+ <code>max(</code><i>e1</i><code>,</code><i>&nbsp;e2</i><code>)</code> <br/>
+ <code>min(</code><i>e1</i><code>,</code><i>&nbsp;e2</i><code>)</code> <br/>
+ <code>!</code><i>e</i> <br/>
+ <i>e1</i><code> &amp;&amp; </code><i>e2</i> <br/>
+ <i>e1</i><code> || </code><i>e2</i> <br/>
+ <i>e1</i><code> == </code><i>e2</i> <br/>
+ <i>e1</i><code> != </code><i>e2</i> <br/>
+ <i>e1</i><code> &gt;= </code><i>e2</i> <br/>
+ <i>e1</i><code> &gt; </code><i>e2</i> <br/>
+ <i>e1</i><code> &lt;= </code><i>e2</i> <br/>
+ <i>e1</i><code> &lt; </code><i>e2</i> <br/>
+ <code>&quot;,</code><i>str1</i><code>&quot; == &quot;,</code><i>str2</i><code>&quot;</code> <br/>
+ <code>&quot;,</code><i>str1</i><code>&quot; != &quot;,</code><i>str2</i><code>&quot;</code> <br/>
  </p>
 <p> String comparison expressions must be parenthesised in some contexts to avoid ambiguity.  </p>
 <h3>Other Changes</h3>
@@ -231,7 +231,7 @@ print x &quot; &quot; y
 <p> is valid. </p>
 <p> There is no limit to the depth to which blocks can be examined. For example, </p>
 <dl>
-<dd> <p> <code>[A: [B: [C: box ]]] with .A.B.C.sw at 1,2</code> <br />
+<dd> <p> <code>[A: [B: [C: box ]]] with .A.B.C.sw at 1,2</code> <br/>
  <code>circle at last [].A.B.C</code> </p>
  </dd></dl>
 <p> is acceptable. </p>
@@ -259,9 +259,9 @@ print x &quot; &quot; y
 <p> Currently, color support isn&#8217;t available in TeX mode. Predefined color names for <code>groff</code> are in the device macro files, for example <code>ps.tmac</code>; additional colors can be defined with the <code>.defcolor</code> request (see the manual page of <code><a href="/docs/linux/man/1-troff/">troff</a></code>(1) for more details). </p>
 <p> To change the name of the vbox in TeX mode, set the pseudo-variable <code>figname</code> (which is actually a specially parsed command) within a picture. Example: </p>
 <dl>
-<dd> <p> <code>.PS</code> <br />
- <code>figname = foobar;</code> <br />
- <code>...</code> <br />
+<dd> <p> <code>.PS</code> <br/>
+ <code>figname = foobar;</code> <br/>
+ <code>...</code> <br/>
  <code>.PE</code> </p>
  </dd></dl>
 <p> The picture is then available in the box <code>\foobar</code>. </p>
@@ -306,7 +306,7 @@ print x &quot; &quot; y
  </dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-troff/">troff</a></code>(1), <code><a href="/docs/linux/man/5-groff_out/">groff_out</a></code>(5), <code><a href="/docs/linux/man/1-tex/">tex</a></code>(1), <code><a href="/docs/linux/man/1-gs/">gs</a></code>(1), <code><a href="/docs/linux/man/1-ps2eps/">ps2eps</a></code>(1), <code><a href="/docs/linux/man/1-pstopnm/">pstopnm</a></code>(1), <code><a href="/docs/linux/man/1-ps2epsi/">ps2epsi</a></code>(1), <code><a href="/docs/linux/man/5-pnm/">pnm</a></code>(5) </p>
-<p> Eric S. Raymond, <i>Making Pictures With GNU PIC.</i> <br />
+<p> Eric S. Raymond, <i>Making Pictures With GNU PIC.</i> <br/>
  <i>/usr/share/doc/groff-base/pic.ps</i> (this file, together with its source file, pic.ms, is part of the groff documentation) </p>
 <p> Tpic: Pic for TeX </p>
 <p> Brian W. Kernighan, <i>PIC --- A Graphics Language for Typesetting (User Manual)</i> AT&amp;T Bell Laboratories, Computing Science Technical Report No. 116 (revised May, 1991). </p>

@@ -13,7 +13,7 @@ description: "sane-as6e – SANE backend for using the Artec AS6E parallel port 
 <h2>Files</h2>
 <p><code>as6edriver</code> &#8211; driver program that controls the scanner.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code>as6edriver</code>(5), <code><a href="/docs/linux/man/8-saned/">saned</a></code>(8), <code>inetd</code>(8), <code><a href="/docs/linux/man/8-xinetd/">xinetd</a></code>(8)<br />
+<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code>as6edriver</code>(5), <code><a href="/docs/linux/man/8-saned/">saned</a></code>(8), <code>inetd</code>(8), <code><a href="/docs/linux/man/8-xinetd/">xinetd</a></code>(8)<br/>
  <i><a rel="nofollow" href="http://as6edriver.sourceforge.net">http://as6edriver.sourceforge.net</a></i> </p>
 <h2>Author</h2>
 <p>Eugene S. Weiss</p>

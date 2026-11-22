@@ -17,8 +17,8 @@ description: "vdptool – manage the VSI associations and status of lldpad"
 <dt><code>-i [ifname]</code></dt>
 <dd>specifies the network interface to which the command applies. Most <code>vdptool</code> commands require specifying a network interface.</dd>
 <dt><code>-V [tlvid]</code></dt>
-<dd>specifies the VDP tlv identifier to be set or queried.<br />
- The tlvid is an integer value used to identify specific VDP TLVs. The tlvid value is the type value for types not equal to 127 (the organizationally specific type). For organizationally specific TLVs, the tlvid is the value represented by the 3 byte OUI and 1 byte subtype &#8211; where the subtype is the lowest order byte of the tlvid.<br />
+<dd>specifies the VDP tlv identifier to be set or queried.<br/>
+ The tlvid is an integer value used to identify specific VDP TLVs. The tlvid value is the type value for types not equal to 127 (the organizationally specific type). For organizationally specific TLVs, the tlvid is the value represented by the 3 byte OUI and 1 byte subtype &#8211; where the subtype is the lowest order byte of the tlvid.<br/>
  The tlvid can be entered as a numerical value (e.g. 10 or 0xa), or for supported TLVs, as a keyword (such as assoc, deassoc, preassoc, preassoc-rr, etc). Review the <code>vdptool</code> help output to see the list of supported TLV keywords. </dd>
 <p> Use option -c to specify the parameters and its values to be set or queried.</p>
 <dt><code>-n</code></dt>
@@ -84,7 +84,7 @@ description: "vdptool – manage the VSI associations and status of lldpad"
 <dd>A vlan number and group identifier, delimited by two slashes (&#8216;&#8211;&#8216;), also known as filter information format 3. For vlan and group details see (1) and (4).</dd></dl>
 </dl>
 <dt><code>oui (Organizationally Unique Identifier):</code></dt>
-<dd>This defines the optional Organizationally defined information field. This contains the specific sets of values for this entry. There can be multiple organizational specific fields, in which case there will be multiple keywords <i>oui=</i> followed by the values. The value is of the following format: oui=OUI,[Organization specific values ] The OUI specifies the name of the Organization that is responsible for defining this content. A comma is mandatory after the OUI field. The fields following this<br />
+<dd>This defines the optional Organizationally defined information field. This contains the specific sets of values for this entry. There can be multiple organizational specific fields, in which case there will be multiple keywords <i>oui=</i> followed by the values. The value is of the following format: oui=OUI,[Organization specific values ] The OUI specifies the name of the Organization that is responsible for defining this content. A comma is mandatory after the OUI field. The fields following this<br/>
 &nbsp;<wbr>is specified by the organization and hence will be decoded based on the value of this OUI field. Currently, the following values for OUI are supported.</dd>
 <dl>
 <dd>
@@ -141,9 +141,9 @@ description: "vdptool – manage the VSI associations and status of lldpad"
 <dt>Query all VSI association on interface eth2</dt>
 <dd>vdptool -i eth2 -t -V assoc </dd>
 <dt>Query VSI association on interface eth2 that matches specific</dt>
-<dd>VSI parameters. Any of the VSI parameters below can be omitted.<br />
- vdptool -i eth2 -t -V assoc -t -V assoc -c mode=assoc \<br />
-&nbsp;<wbr>&nbsp;<wbr>-c mgrid2=blabla -c typeid=5 -c uuid=1122&nbsp;<wbr>\<br />
+<dd>VSI parameters. Any of the VSI parameters below can be omitted.<br/>
+ vdptool -i eth2 -t -V assoc -t -V assoc -c mode=assoc \<br/>
+&nbsp;<wbr>&nbsp;<wbr>-c mgrid2=blabla -c typeid=5 -c uuid=1122&nbsp;<wbr>\<br/>
 &nbsp;<wbr>&nbsp;<wbr>-c typeidver=4 -c hints=none</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-lldptool-dcbx/">lldptool-dcbx</a></code>(8), <code><a href="/docs/linux/man/8-lldptool-ets/">lldptool-ets</a></code>(8), <code><a href="/docs/linux/man/8-lldptool-pfc/">lldptool-pfc</a></code>(8), <code><a href="/docs/linux/man/8-lldptool-app/">lldptool-app</a></code>(8), <code><a href="/docs/linux/man/8-lldptool-med/">lldptool-med</a></code>(8), <code><a href="/docs/linux/man/8-lldptool-vdp/">lldptool-vdp</a></code>(8), <code><a href="/docs/linux/man/8-lldptool-evb/">lldptool-evb</a></code>(8), <code><a href="/docs/linux/man/8-lldptool-evb22/">lldptool-evb22</a></code>(8), <code><a href="/docs/linux/man/8-dcbtool/">dcbtool</a></code>(8), <code><a href="/docs/linux/man/8-lldpad/">lldpad</a></code>(8)</p>

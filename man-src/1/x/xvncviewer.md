@@ -10,7 +10,7 @@ description: "vncviewer – VNC viewer for X"
 
 <p> vncviewer &#8211; VNC viewer for X </p>
 <h2>SYNOPSIS</h2>
-<p> <code>vncviewer</code> [<i>options</i>] [<i>host</i>][:<i>display#</i>]<br />
+<p> <code>vncviewer</code> [<i>options</i>] [<i>host</i>][:<i>display#</i>]<br/>
  <code>vncviewer</code> [<i>options</i>] <code>-listen</code> [<i>port</i>]</p>
 <h2>DESCRIPTION</h2>
 <p> <code>vncviewer</code> is a viewer (client) for Virtual Network Computing. This manual page documents version 4 for the X window system. </p>
@@ -80,7 +80,7 @@ description: "vncviewer – VNC viewer for X"
 <dd> Automatically create encrypted TCP tunnel to the <i>gateway</i> machine before connection, connect to the <i>host</i> through that tunnel (TightVNC-specific). By default, this option invokes SSH local port forwarding, assuming that SSH client binary can be accessed as /usr/bin/ssh. Note that when using the <code>-via</code> option, the host machine name should be specified as known to the gateway machine, e.g. &quot;localhost&quot; denotes the <i>gateway</i>, not the machine where vncviewer was launched. The environment variable <i>VNC_VIA_CMD</i> can override the default tunnel command of <code>/usr/bin/ssh -f -L&nbsp;&quot;$L&quot;:&quot;$H&quot;:&quot;$R&quot;&nbsp;&quot;$G&quot;&nbsp;sleep 20</code>. The tunnel command is executed with the environment variables <i>L</i>, <i>H</i>, <i>R</i>, and <i>G</i> taken the values of the local port number, the remote host, the port number on the remote host, and the gateway machine respectively. </dd>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-xvnc/">Xvnc</a></code>(1), <code><a href="/docs/linux/man/1-vncpasswd/">vncpasswd</a></code>(1), <code><a href="/docs/linux/man/1-vncconfig/">vncconfig</a></code>(1), <code><a href="/docs/linux/man/1-vncserver/">vncserver</a></code>(1)<br />
+<p> <code><a href="/docs/linux/man/1-xvnc/">Xvnc</a></code>(1), <code><a href="/docs/linux/man/1-vncpasswd/">vncpasswd</a></code>(1), <code><a href="/docs/linux/man/1-vncconfig/">vncconfig</a></code>(1), <code><a href="/docs/linux/man/1-vncserver/">vncserver</a></code>(1)<br/>
  <a rel="nofollow" href="http://www.realvnc.com">http://www.realvnc.com</a> </p>
 <h2>AUTHOR</h2>
 <p> Tristan Richardson, RealVNC Ltd. </p>

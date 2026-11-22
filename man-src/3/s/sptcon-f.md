@@ -10,7 +10,7 @@ description: "sptcon.f –"
 <p>sptcon.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>sptcon</code> (N, D, E, ANORM, RCOND, WORK, INFO)<br />
+<p> subroutine <code>sptcon</code> (N, D, E, ANORM, RCOND, WORK, INFO)<br/>
  <i></i><code>SPTCON</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sptcon (integerN, real, dimension( * )D, real, dimension( * )E, realANORM, realRCOND, real, dimension( * )WORK, integerINFO)</h3>

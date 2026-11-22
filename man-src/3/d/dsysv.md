@@ -11,7 +11,7 @@ description: "dsysv.f –"
 <p> dsysv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dsysv</code> (UPLO, N, NRHS, A, LDA, IPIV, B, LDB, WORK, LWORK, INFO)<br />
+<p> subroutine <code>dsysv</code> (UPLO, N, NRHS, A, LDA, IPIV, B, LDB, WORK, LWORK, INFO)<br/>
  <i></i><code> DSYSV computes the solution to system of linear equations A * X = B for SY matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dsysv (characterUPLO, integerN, integerNRHS, double precision, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, double precision, dimension( ldb, * )B, integerLDB, double precision, dimension( * )WORK, integerLWORK, integerINFO)</h3>

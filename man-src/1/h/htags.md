@@ -17,7 +17,7 @@ description: "htags – generate hypertext from source code."
 <p> Since <code>htags</code> generates static hypertext as long as the <code>-D</code> or <code>-f</code> option is not specified, you can move it anywhere and browse it by any browser without web server. </p>
 <p> You must use same parser for both <code><a href="/docs/linux/man/1-gtags/">gtags</a></code>(1) and <code>htags</code>. If you use the default parser, it is not necessary to consider for it. </p>
 <h2>OPTIONS</h2>
-<p> If you are new on htags, it is recommended to invoke with the <code>&#8211;suggest</code> option. With the option, <code>htags</code> use popular options instead of you.<br />
+<p> If you are new on htags, it is recommended to invoke with the <code>&#8211;suggest</code> option. With the option, <code>htags</code> use popular options instead of you.<br/>
  The following options are available:</p>
 <dl>
 <dt><code>-a</code>, <code>&#8211;alphabet</code></dt>
@@ -223,7 +223,7 @@ description: "htags – generate hypertext from source code."
 <p> Verbose message has important level. The most important level is 0, the second it 1 and so on. All the message has level numbers leading blanks.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gtags-parser/">gtags-parser</a></code>(1), <code><a href="/docs/linux/man/1-global/">global</a></code>(1), <code><a href="/docs/linux/man/1-gtags/">gtags</a></code>(1). </p>
-<p> GNU GLOBAL source code tag system<br />
+<p> GNU GLOBAL source code tag system<br/>
  (<a rel="nofollow" href="http://www.gnu.org/software/global/">http://www.gnu.org/software/global/</a>).</p>
 <h2>BUG</h2>
 <p> Generated hypertext is VERY LARGE. In advance, check the space of your disk. </p>

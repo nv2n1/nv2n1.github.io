@@ -17,8 +17,8 @@ description: "ievents – decode IPMI and PET event data"
 <dt>-b bin_file</dt>
 <dd>Interpret a file containing raw binary/hex SEL data dumped in binary form, such as that produced by &quot;ipmitool sel writeraw bin_file&quot;. Each set of 16 bytes in the file will be interpreted as an IPMI event. (same as -h) </dd>
 <dt>-f sel_file</dt>
-<dd>Interpret a file containing raw ascii text SEL data captured with ipmiutil sel -r, or some other similar utility. Each line in the file should be in this form, with no leading spaces:<br />
- 04 00 02 76 a9 4a 47 20 00 04 10 09 6f 42 0f ff<br />
+<dd>Interpret a file containing raw ascii text SEL data captured with ipmiutil sel -r, or some other similar utility. Each line in the file should be in this form, with no leading spaces:<br/>
+ 04 00 02 76 a9 4a 47 20 00 04 10 09 6f 42 0f ff<br/>
  If this option is not specified, the default is to use the 16 bytes taken from the command-line arguments. (same as -r) </dd>
 <dt>-h bin_file</dt>
 <dd>Interpret a file containing raw binary/hex SEL data dumped in binary form, such as that produced by &quot;ipmitool sel writeraw bin_file&quot;. Each set of 16 bytes in the file will be interpreted as an IPMI event. (same as -b) </dd>

@@ -8,7 +8,7 @@ url: "/docs/linux/man/1-jstack-java-1/"
 description: "jstack – Stack Trace"
 ---
 
-<p> jstack - Stack Trace <br />
+<p> jstack - Stack Trace <br/>
  </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
@@ -29,15 +29,15 @@ description: "jstack – Stack Trace"
 <dd>  </dd>
 <dl>
 <dt>executable </dt>
-<dd> <p> Java executable from which the core dump was produced. <br />
+<dd> <p> Java executable from which the core dump was produced. <br/>
  </p>
  </dd>
 <dt>core </dt>
-<dd> <p> core file for which the stack trace is to be printed. <br />
+<dd> <p> core file for which the stack trace is to be printed. <br/>
  </p>
  </dd>
 <dt>remote-hostname-or-IP </dt>
-<dd> <p> remote debug server&#8217;s (see jsadebugd(1)) hostname or IP address. <br />
+<dd> <p> remote debug server&#8217;s (see jsadebugd(1)) hostname or IP address. <br/>
  </p>
  </dd>
 <dt>server-id </dt>
@@ -45,7 +45,7 @@ description: "jstack – Stack Trace"
  </dd></dl>
 </dl>
 <h2>DESCRIPTION</h2>
-<p> <code>jstack</code> prints Java stack traces of Java threads for a given Java process or core file or a remote debug server. For each Java frame, the full class name, method name, &#8216;bci&#8217; (byte code index) and line number, if available, are printed. With the -m option, jstack prints both Java and native frames of all threads along with the &#8216;pc&#8217; (program counter). For each native frame, the closest native symbol to &#8216;pc&#8217;, if available, is printed. C++ mangled names are not demangled. To demangle C++ names, the output of this command may be piped to <code>c++filt</code>. If the given process is running on a 64-bit VM, you may need to specify the <i>-J-d64</i> option, e.g.: <br />
+<p> <code>jstack</code> prints Java stack traces of Java threads for a given Java process or core file or a remote debug server. For each Java frame, the full class name, method name, &#8216;bci&#8217; (byte code index) and line number, if available, are printed. With the -m option, jstack prints both Java and native frames of all threads along with the &#8216;pc&#8217; (program counter). For each native frame, the closest native symbol to &#8216;pc&#8217;, if available, is printed. C++ mangled names are not demangled. To demangle C++ names, the output of this command may be piped to <code>c++filt</code>. If the given process is running on a 64-bit VM, you may need to specify the <i>-J-d64</i> option, e.g.: <br/>
  </p>
 <pre><code>
  jstack -J-d64 -m pid 
@@ -66,12 +66,12 @@ description: "jstack – Stack Trace"
 <dd> <p> prints mixed mode (both Java and native C/C++ frames) stack trace. </p>
  </dd>
 <dt>-h </dt>
-<dd> <p> prints a help message. <br />
- <br />
+<dd> <p> prints a help message. <br/>
+ <br/>
  </p>
  </dd>
 <dt>-help </dt>
-<dd> <p> prints a help message <br />
+<dd> <p> prints a help message <br/>
  </p>
  </dd></dl>
 </dl>
@@ -94,5 +94,5 @@ description: "jstack – Stack Trace"
 </dl>
 <h2>KNOWN BUGS</h2>
 <p>Mixed mode stack trace, the -m option, does not work with the remote debug server. </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr> </p>

@@ -11,7 +11,7 @@ description: "cgeqrt.f –"
 <p> cgeqrt.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cgeqrt</code> (M, N, NB, A, LDA, T, LDT, WORK, INFO)<br />
+<p> subroutine <code>cgeqrt</code> (M, N, NB, A, LDA, T, LDT, WORK, INFO)<br/>
  <i></i><code>CGEQRT</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cgeqrt (integerM, integerN, integerNB, complex, dimension( lda, * )A, integerLDA, complex, dimension( ldt, * )T, integerLDT, complex, dimension( * )WORK, integerINFO)</h3>

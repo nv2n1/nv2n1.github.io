@@ -16,8 +16,8 @@ description: "QuantLib::RandomizedLDS – Randomized (random shift) low-discrepa
 <p><code>RandomizedLDS</code> (const LDS &amp;ldsg, const PRS &amp;prsg) </p>
 <p> <code>RandomizedLDS</code> (const LDS &amp;ldsg) </p>
 <p> <code>RandomizedLDS</code> (Size dimensionality, BigNatural ldsSeed=0, BigNatural prsSeed=0) </p>
-<p> const <code>sample_type</code> &amp; <code>nextSequence</code> () const<br />
- <i>returns next sample using a given randomizing vector </i><br />
+<p> const <code>sample_type</code> &amp; <code>nextSequence</code> () const<br/>
+ <i>returns next sample using a given randomizing vector </i><br/>
  const <code>sample_type</code> &amp; <code>lastSequence</code> () const </p>
 <p> void <code>nextRandomizer</code> () </p>
 <p> Size <code>dimension</code> () const </p>

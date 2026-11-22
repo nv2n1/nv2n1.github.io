@@ -16,11 +16,11 @@ description: "pnmremap – replace colors in a PPM image with colors from anothe
 <p> <code>pnmremap</code> replaces the colors in an input image with those from a colormap you specify. Where a color in the input is not in the colormap, you have three choices: 1) choose the closest color from the colormap; 2) choose the first color from the colormap; 3) use a color specified by a command option. (In this latter case, if the color you specify is not in your color map, the output will not necessarily contain only colors from the colormap). </p>
 <p> Two reasons to do this are: 1) you want to reduce the number of colors in the input image; and 2) you need to feed the image to something that can handle only certain colors. </p>
 <p> To reduce colors, you can generate the colormap with <code>ppmcolormap</code>. Example: </p>
-<p> <code>ppmcolormap testimg.ppm 256 &gt;colormap.ppm</code><br />
- <code>ppmremap -map=colormap.ppm testimg.ppm </code><br />
+<p> <code>ppmcolormap testimg.ppm 256 &gt;colormap.ppm</code><br/>
+ <code>ppmremap -map=colormap.ppm testimg.ppm </code><br/>
  <code>&gt;reduced_testimg.ppm</code> </p>
 <p> To limit colors to a certain set, a typical example is to create an image for posting on the World Wide Web, where different browsers know different colors. But all browsers are supposed to know the 216 &quot;web safe&quot; colors which are essentially all the colors you can represent in a PPM image with a maxval of 5. So you can do this: </p>
-<p> <code>ppmcolors 5 &gt;websafe.ppm</code><br />
+<p> <code>ppmcolors 5 &gt;websafe.ppm</code><br/>
  <code>ppmremap -map=webafe.ppm testimg.ppm &gt;websafe_testimg.ppm</code> </p>
 <p> The output image has the same type and maxval as the map file. </p>
 <h2>PARAMETERS</h2>

@@ -18,5 +18,5 @@ description: "crc32 – compute CRC-32 checksums for the given files"
 <h2>SEE ALSO</h2>
 <p> <code>Archive::Zip</code>(3pm).</p>
 <h2>AUTHOR</h2>
-<p> The Archive::Zip module was written by Ned Konz.<br />
+<p> The Archive::Zip module was written by Ned Konz.<br/>
  This manual page was prepared by Ben Burton &lt;bab [at] debian.org&gt; for the Debian GNU/Linux system (but may be used by others). </p>

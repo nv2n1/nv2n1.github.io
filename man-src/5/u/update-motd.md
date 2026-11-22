@@ -18,28 +18,28 @@ description: "update-motd – dynamic MOTD generation"
 <p> Scripts must not have filename extensions, per <code><a href="/docs/linux/man/8-run-parts/">run-parts</a></code>(8) &#8211;lsbsysinit instructions. </p>
 <p> Packages should add scripts directly into <i>/etc/update-motd.d</i>, rather than symlinks to other scripts, such that administrators can modify or remove these scripts and upgrades will not wipe the local changes. Consider using a simple shell script that simply calls <code>exec</code> on the external utility. </p>
 <p> Long running operations (such as network calls) or resource intensive scripts should cache output, and only update that output if it is deemed expired. For instance: </p>
-<p>&nbsp;<wbr>&nbsp;/etc/update-motd.d/50-news<br />
-&nbsp;<wbr>&nbsp;#!/bin/sh<br />
-&nbsp;<wbr>&nbsp;out=/run/foo<br />
-&nbsp;<wbr>&nbsp;script=&quot;w3m -dump&nbsp;<a rel="nofollow" href="http://news.google.com/">http://news.google.com/</a>&quot;<br />
-&nbsp;<wbr>&nbsp;if&nbsp;[&nbsp;-f&nbsp;&quot;$out&quot;&nbsp;];&nbsp;then<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;#&nbsp;Output exists, print it<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;echo<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;cat&nbsp;&quot;$out&quot;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;#&nbsp;See if it&#8217;s expired, and background update<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;lastrun=$(stat -c&nbsp;%Y&nbsp;&quot;$out&quot;)&nbsp;|| lastrun=0<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;expiration=$(expr&nbsp;$lastrun&nbsp;+&nbsp;86400)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;[&nbsp;$(date&nbsp;+%s)&nbsp;-ge&nbsp;$expiration&nbsp;];&nbsp;then<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$script&nbsp;&gt;&nbsp;&quot;$out&quot;&nbsp;&amp;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;fi<br />
-&nbsp;<wbr>&nbsp;else<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;#&nbsp;No cache at all, so update in the background<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$script&nbsp;&gt;&nbsp;&quot;$out&quot;&nbsp;&amp;<br />
+<p>&nbsp;<wbr>&nbsp;/etc/update-motd.d/50-news<br/>
+&nbsp;<wbr>&nbsp;#!/bin/sh<br/>
+&nbsp;<wbr>&nbsp;out=/run/foo<br/>
+&nbsp;<wbr>&nbsp;script=&quot;w3m -dump&nbsp;<a rel="nofollow" href="http://news.google.com/">http://news.google.com/</a>&quot;<br/>
+&nbsp;<wbr>&nbsp;if&nbsp;[&nbsp;-f&nbsp;&quot;$out&quot;&nbsp;];&nbsp;then<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;#&nbsp;Output exists, print it<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;echo<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;cat&nbsp;&quot;$out&quot;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;#&nbsp;See if it&#8217;s expired, and background update<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;lastrun=$(stat -c&nbsp;%Y&nbsp;&quot;$out&quot;)&nbsp;|| lastrun=0<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;expiration=$(expr&nbsp;$lastrun&nbsp;+&nbsp;86400)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;[&nbsp;$(date&nbsp;+%s)&nbsp;-ge&nbsp;$expiration&nbsp;];&nbsp;then<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$script&nbsp;&gt;&nbsp;&quot;$out&quot;&nbsp;&amp;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;fi<br/>
+&nbsp;<wbr>&nbsp;else<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;#&nbsp;No cache at all, so update in the background<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$script&nbsp;&gt;&nbsp;&quot;$out&quot;&nbsp;&amp;<br/>
 &nbsp;<wbr>&nbsp;fi </p>
 <p> Scripts should emit a blank line before output, and end with a newline character. For instance: </p>
-<p>&nbsp;<wbr>&nbsp;/etc/update-motd/05-lsb-release<br />
-&nbsp;<wbr>&nbsp;#!/bin/sh<br />
-&nbsp;<wbr>&nbsp;echo<br />
+<p>&nbsp;<wbr>&nbsp;/etc/update-motd/05-lsb-release<br/>
+&nbsp;<wbr>&nbsp;#!/bin/sh<br/>
+&nbsp;<wbr>&nbsp;echo<br/>
 &nbsp;<wbr>&nbsp;lsb-release -a</p>
 <h2>Files</h2>
 <p><i>/etc/motd</i>, <i>/run/motd.dynamic</i>, <i>/etc/update-motd.d</i></p>

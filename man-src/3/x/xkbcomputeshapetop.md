@@ -10,7 +10,7 @@ description: "XkbComputeShapeTop – Determines the bounding box of the top surf
 <p>XkbComputeShapeTop &#8211; Determines the bounding box of the top surface of a shape </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Bool XkbComputeShapeTop</code> <code>(XkbShapePtr </code><i>shape</i><code>,</code> <code>XkbBoundsPtr </code><i>bounds_rtrn</i><code>);</code><br />
+<dt> <code>Bool XkbComputeShapeTop</code> <code>(XkbShapePtr </code><i>shape</i><code>,</code> <code>XkbBoundsPtr </code><i>bounds_rtrn</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

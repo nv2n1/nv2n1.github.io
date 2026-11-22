@@ -13,69 +13,69 @@ description: "std::char_traits – std::char_traits"
 template&lt;
 class CharT
 &gt; class char_traits;</code></pre>
-<p>The char_traits class is a traits class template that abstracts basic character and string operations for a given character type. The defined operation set is such that generic algorithms almost always can be implemented in terms of it. It is thus possible to use such algorithms with almost any possible character or string type, just by supplying a customized char_traits class.<br />
-The char_traits class template serves as a basis for explicit instantiations. The user can provide_a_specialization for any custom character types. Several specializations are defined for the standard character types.<br />
-If an operation on traits emits an exception, the behavior is undefined.<br />
-The values of the member typedefs are as follows.<br />
-Specialization char_type int_type off_type pos_type state_type<br />
-char_traits&lt;char&gt; char int std::streamoff std::streampos std::mbstate_t<br />
-char_traits&lt;wchar_t&gt; wchar_t std::wint_t std::streamoff std::wstreampos std::mbstate_t<br />
-char_traits&lt;char16_t&gt; <i>(C++11)</i> char16_t std::uint_least16_t std::streamoff std::u16streampos std::mbstate_t<br />
-char_traits&lt;char32_t&gt; <i>(C++11)</i> char32_t std::uint_least32_t std::streamoff std::u32streampos std::mbstate_t<br />
-char_traits&lt;char8_t&gt; (C++20) char8_t unsigned int std::streamoff std::u8streampos std::mbstate_t<br />
+<p>The char_traits class is a traits class template that abstracts basic character and string operations for a given character type. The defined operation set is such that generic algorithms almost always can be implemented in terms of it. It is thus possible to use such algorithms with almost any possible character or string type, just by supplying a customized char_traits class.<br/>
+The char_traits class template serves as a basis for explicit instantiations. The user can provide_a_specialization for any custom character types. Several specializations are defined for the standard character types.<br/>
+If an operation on traits emits an exception, the behavior is undefined.<br/>
+The values of the member typedefs are as follows.<br/>
+Specialization char_type int_type off_type pos_type state_type<br/>
+char_traits&lt;char&gt; char int std::streamoff std::streampos std::mbstate_t<br/>
+char_traits&lt;wchar_t&gt; wchar_t std::wint_t std::streamoff std::wstreampos std::mbstate_t<br/>
+char_traits&lt;char16_t&gt; <i>(C++11)</i> char16_t std::uint_least16_t std::streamoff std::u16streampos std::mbstate_t<br/>
+char_traits&lt;char32_t&gt; <i>(C++11)</i> char32_t std::uint_least32_t std::streamoff std::u32streampos std::mbstate_t<br/>
+char_traits&lt;char8_t&gt; (C++20) char8_t unsigned int std::streamoff std::u8streampos std::mbstate_t<br/>
 The semantics of the member functions are defined are as follows. Specialization                assign eq                   lt                  eof</p>
 <p>char_traits&lt;char&gt;             =      == for unsigned char &lt; for unsigned char EOF</p>
 <p>char_traits&lt;wchar_t&gt;          =      ==                   &lt;                   WEOF</p>
 <p>char_traits&lt;char16_t&gt; (C++11) =      ==                   &lt;                   invalid UTF-16 code unit</p>
 <p>char_traits&lt;char32_t&gt; (C++11) =      ==                   &lt;                   invalid UTF-32 code unit</p>
-<p>char_traits&lt;char8_t&gt; (C++20)  =      ==                   &lt;                   invalid UTF-8 code unit<br />
+<p>char_traits&lt;char8_t&gt; (C++20)  =      ==                   &lt;                   invalid UTF-8 code unit<br/>
 The char_traits class template satisfies the requirements of CharTraits. </p>
 <h2>Member types</h2>
-<p>Type Definition<br />
-char_type CharT<br />
-int_type an integer type that can hold all values of char_type plus EOF<br />
-off_type implementation-defined<br />
-pos_type implementation-defined<br />
+<p>Type Definition<br/>
+char_type CharT<br/>
+int_type an integer type that can hold all values of char_type plus EOF<br/>
+off_type implementation-defined<br/>
+pos_type implementation-defined<br/>
 state_type implementation-defined</p>
 <h2>Member functions</h2>
-<p>assign assigns a character<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member function)</i><br />
+<p>assign assigns a character<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member function)</i><br/>
 <code>[static]</code> </p>
-<p>eq compares two characters<br />
+<p>eq compares two characters<br/>
 lt <i>(public static member function)</i> </p>
 <p><code>[static]</code> </p>
-<p>move moves one character sequence onto another<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member function)</i><br />
+<p>move moves one character sequence onto another<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member function)</i><br/>
 <code>[static]</code> </p>
-<p>copy copies a character sequence<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member function)</i><br />
+<p>copy copies a character sequence<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member function)</i><br/>
 <code>[static]</code> </p>
-<p>compare lexicographically compares two character sequences<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member function)</i><br />
+<p>compare lexicographically compares two character sequences<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member function)</i><br/>
 <code>[static]</code> </p>
-<p>length returns the length of a character sequence<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member function)</i><br />
+<p>length returns the length of a character sequence<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member function)</i><br/>
 <code>[static]</code> </p>
-<p>find finds a character in a character sequence<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member function)</i><br />
+<p>find finds a character in a character sequence<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member function)</i><br/>
 <code>[static]</code> </p>
-<p>to_char_type converts int_type to equivalent char_type<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member function)</i><br />
+<p>to_char_type converts int_type to equivalent char_type<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member function)</i><br/>
 <code>[static]</code> </p>
-<p>to_int_type converts char_type to equivalent int_type<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member function)</i><br />
+<p>to_int_type converts char_type to equivalent int_type<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member function)</i><br/>
 <code>[static]</code> </p>
-<p>eq_int_type compares two int_type values<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member function)</i><br />
+<p>eq_int_type compares two int_type values<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member function)</i><br/>
 <code>[static]</code> </p>
-<p>eof returns an eof value<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member function)</i><br />
+<p>eof returns an eof value<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member function)</i><br/>
 <code>[static]</code> </p>
-<p>not_eof checks whether a character is eof value<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member function)</i><br />
+<p>not_eof checks whether a character is eof value<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member function)</i><br/>
 <code>[static]</code></p>
 <h2>Example</h2>
-<p>User-defined character traits may be used to provide case-insensitive_comparison<br />
+<p>User-defined character traits may be used to provide case-insensitive_comparison<br/>
  // Run this code </p>
 <pre><code>#include &lt;string&gt;
 #include &lt;iostream&gt;
@@ -133,5 +133,5 @@ int main()
 <h2>Output:</h2>
 <p>&nbsp;<wbr>&nbsp;Hello and heLLo are equal</p>
 <h2>See also</h2>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;stores and manipulates sequences of characters<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;stores and manipulates sequences of characters<br/>
 basic_string <i>(class template)</i> </p>

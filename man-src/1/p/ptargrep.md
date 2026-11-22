@@ -24,9 +24,9 @@ ptargrep[options]&lt;pattern&gt;&lt;tar file&gt;... Options : --basename | -b ig
 <dt><code>&#8211;ignore-case</code> (alias -i)</dt>
 <dd> Make pattern matching case-insensitive.</dd>
 <dt><code>&#8211;list-only</code> (alias -l)</dt>
-<dd> Print the pathname of each matching file from the archive to <font SIZE="-1">STDOUT.</font> Without this option, the default behaviour is to extract each matching file.</dd>
+<dd> Print the pathname of each matching file from the archive to STDOUT. Without this option, the default behaviour is to extract each matching file.</dd>
 <dt><code>&#8211;verbose</code> (alias -v)</dt>
-<dd> Log debugging info to <font SIZE="-1">STDERR.</font></dd>
+<dd> Log debugging info to STDERR.</dd>
 <dt><code>&#8211;help</code> (alias -?)</dt>
 <dd> Display this documentation.</dd></dl>
 <h2>COPYRIGHT</h2>

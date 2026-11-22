@@ -10,7 +10,7 @@ description: "sgebd2.f –"
 <p>sgebd2.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>sgebd2</code> (M, N, A, LDA, D, E, TAUQ, TAUP, WORK, INFO)<br />
+<p>subroutine <code>sgebd2</code> (M, N, A, LDA, D, E, TAUQ, TAUP, WORK, INFO)<br/>
  <i></i><code>SGEBD2</code> reduces a general matrix to bidiagonal form using an unblocked algorithm.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sgebd2 (integerM, integerN, real, dimension( lda, * )A, integerLDA, real, dimension( * )D, real, dimension( * )E, real, dimension( * )TAUQ, real, dimension( * )TAUP, real, dimension( * )WORK, integerINFO)</h3>

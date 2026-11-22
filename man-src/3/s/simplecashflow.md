@@ -16,7 +16,7 @@ description: "QuantLib::SimpleCashFlow – Predetermined cash flow."
 <p> <code>Event interface</code> </p>
 <p> <code>Date</code> <code>date</code> () const </p>
 <p> <code>CashFlow interface</code> </p>
-<p> <code>Real</code> <code>amount</code> () const<br />
+<p> <code>Real</code> <code>amount</code> () const<br/>
  <i>returns the amount of the cash flow </i> </p>
 <p> <code>Visitability</code> </p>
 <p> virtual void <code>accept</code> (<code>AcyclicVisitor</code> &amp;) </p>

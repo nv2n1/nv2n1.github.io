@@ -18,8 +18,8 @@ description: "ncecat – netCDF Ensemble Concatenator"
 <p> Consider a model experiment which generated five realizations of one year of data, say 1985. You can imagine that the experimenter slightly perturbs the initial conditions of the problem before generating each new solution. Assume each file contains all twelve months (a seasonal cycle) of data and we want to produce a single file containing all the seasonal cycles. Here the numeric filename suffix denotes the experiment number (<i>not</i> the month):</p>
 <dl>
 <dt>
-</dt><dd> ncecat 85_01.nc 85_02.nc 85_03.nc 85_04.nc 85_05.nc 85.nc<br />
- ncecat 85_0[1-5].nc 85.nc<br />
+</dt><dd> ncecat 85_01.nc 85_02.nc 85_03.nc 85_04.nc 85_05.nc 85.nc<br/>
+ ncecat 85_0[1-5].nc 85.nc<br/>
  ncecat -n 5,2,1 85_01.nc 85.nc</dd></dl>
 <p> These three commands produce identical answers. The output file, <code>85.nc</code>, is five times the size as a single <i>input-file</i>. It contains 60 months of data (which might or might not be stored in the record dimension, depending on the input files). </p>
 <h2>AUTHOR</h2>
@@ -27,7 +27,7 @@ description: "ncecat – netCDF Ensemble Concatenator"
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;<a rel="nofollow" href="http://sf.net/bugs/?group_id=3331">http://sf.net/bugs/?group_id=3331</a>&gt;. </p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 1995-2012 Charlie Zender<br />
+<p> Copyright &#169; 1995-2012 Charlie Zender<br/>
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>NCO</code> is maintained as a Texinfo manual called the <code>NCO User&#8217;s Guide.</code> Because <code>NCO</code> is mathematical in nature, the documentation includes TeX-intensive portions not viewable on character-based displays. Hence the only complete and authoritative versions of the <code>NCO User&#8217;s Guide </code> are the PDF (recommended), DVI, and Postscript versions at &lt;<a rel="nofollow" href="http://nco.sf.net/nco.pdf">http://nco.sf.net/nco.pdf</a>&gt;, &lt;<a href="http://nco.sf.net/nco.dvi">http://nco.sf.net/nco.dvi</a>&gt;, and &lt;<a rel="nofollow" href="http://nco.sf.net/nco.ps">http://nco.sf.net/nco.ps</a>&gt;, respectively. HTML and XML versions are available at &lt;<a rel="nofollow" href="http://nco.sf.net/nco.html">http://nco.sf.net/nco.html</a>&gt; and &lt;<a rel="nofollow" href="http://nco.sf.net/nco.xml">http://nco.sf.net/nco.xml</a>&gt;, respectively. </p>

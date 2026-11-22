@@ -9,11 +9,11 @@ description: "ql/experimental/commodities/pricingperiod.hpp – Pricing period."
 
 <p>ql/experimental/commodities/pricingperiod.hpp &#8211; Pricing period. </p>
 <h2>Synopsis</h2>
-<p>#include &lt;ql/experimental/commodities/dateinterval.hpp&gt;<br />
- #include &lt;ql/experimental/commodities/quantity.hpp&gt;<br />
+<p>#include &lt;ql/experimental/commodities/dateinterval.hpp&gt;<br/>
+ #include &lt;ql/experimental/commodities/quantity.hpp&gt;<br/>
  #include &lt;vector&gt; </p>
 <h3>Classes</h3>
-<p>class <code>PricingPeriod</code><br />
+<p>class <code>PricingPeriod</code><br/>
  <i>Time pricingperiod described by a number of a given time unit. </i></p>
 <h3>Typedefs</h3>
 <p>typedef std::vector&lt; boost::shared_ptr&lt; PricingPeriod &gt; &gt; <code>PricingPeriods</code> </p>

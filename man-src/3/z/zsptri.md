@@ -10,7 +10,7 @@ description: "zsptri.f –"
 <p>zsptri.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zsptri</code> (UPLO, N, AP, IPIV, WORK, INFO)<br />
+<p>subroutine <code>zsptri</code> (UPLO, N, AP, IPIV, WORK, INFO)<br/>
  <i></i><code>ZSPTRI</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zsptri (characterUPLO, integerN, complex*16, dimension( * )AP, integer, dimension( * )IPIV, complex*16, dimension( * )WORK, integerINFO)</h3>

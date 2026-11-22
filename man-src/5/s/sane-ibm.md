@@ -35,5 +35,5 @@ description: "sane-ibm – SANE backend for IBM and Ricoh SCSI flatbed scanners"
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/1-sane-find-scanner/">sane-find-scanner</a></code>(1), <code><a href="/docs/linux/man/5-sane-scsi/">sane-scsi</a></code>(5), </p>
 <h2>Author</h2>
-<p>mf &lt;<i>massifr [at] tiscalinet.it</i>&gt;<br />
+<p>mf &lt;<i>massifr [at] tiscalinet.it</i>&gt;<br/>
  Maintained by Henning Meier-Geinitz &lt;<i>henning [at] meier-geinitz.de</i>&gt;</p>

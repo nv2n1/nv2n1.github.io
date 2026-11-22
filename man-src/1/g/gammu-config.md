@@ -27,5 +27,5 @@ description: "gammu-config – Gammu configurator"
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-gammu/">gammu</a>(1)</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2003-2009 Michal Cihar and other authors. License GPLv2: GNU GPL version 2 &lt;<a rel="nofollow" href="http://www.gnu.org/licenses/old-licenses/gpl-2.0.html">http://www.gnu.org/licenses/old-licenses/gpl-2.0.html</a>&gt;<br />
+<p> Copyright &#169; 2003-2009 Michal Cihar and other authors. License GPLv2: GNU GPL version 2 &lt;<a rel="nofollow" href="http://www.gnu.org/licenses/old-licenses/gpl-2.0.html">http://www.gnu.org/licenses/old-licenses/gpl-2.0.html</a>&gt;<br/>
  This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law. </p>

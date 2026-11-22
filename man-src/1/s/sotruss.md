@@ -34,7 +34,7 @@ description: "sotruss – trace shared library calls through PLT"
 <h2>AUTHOR</h2>
 <p> Written by Ulrich Drepper.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2013 Free Software Foundation, Inc.<br />
+<p> Copyright &#169; 2013 Free Software Foundation, Inc.<br/>
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-ld-so/">ld.so</a>(8).</code> </p>

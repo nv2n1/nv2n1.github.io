@@ -31,30 +31,30 @@ description: "/etc/and/and.priorities – priority database for the auto nice da
 <dd>Same but after lv3time. </dd>
 </dl>
 <h2>Examples</h2>
-<p>Here are some entries from the real world (i.e. from &quot;my&quot; cluster at the Institute). As lv[123]time, 5 min., 20 min., and 1 hour is assumed. (Which is the default. See <i>/etc/and.conf</i> for details.) You might also check the default priority database that comes with <code>and.</code> # A finer default nice level<br />
- * * * * 4 8 12<br />
- # User dau is an idiot, so treat him like accordingly<br />
- dau * * * 19 19 19<br />
- # Netscape sometimes goes berserk, we must stop it<br />
- * * netscape * 4 -9 -9<br />
- # Most hosts are free for everyone but some are<br />
- # especially for the FOO group<br />
- * * * * 4 8 12<br />
- on (bar|baz)<br />
- * * * * 8 12 16<br />
- # &#8230; or, more radical: * * * * -9 -9 -9<br />
- * foo * * 4 8 12<br />
- on .*<br />
- # KDE screen savers&#8230;<br />
- * * .*kss * 16 16 16<br />
- # Grid jobs (assuming they are started by a master<br />
- # process)<br />
- * * * ancestor=grid_master 10 10 10<br />
- # Now some clever yet deceitful user might start all<br />
- # his jobs using a shell script named grid_master.<br />
- # He shall regret&#8230; whereas the original grid_master<br />
- # (owned by grid) is left alone.<br />
- * * grid_master * -9 -9 -9<br />
+<p>Here are some entries from the real world (i.e. from &quot;my&quot; cluster at the Institute). As lv[123]time, 5 min., 20 min., and 1 hour is assumed. (Which is the default. See <i>/etc/and.conf</i> for details.) You might also check the default priority database that comes with <code>and.</code> # A finer default nice level<br/>
+ * * * * 4 8 12<br/>
+ # User dau is an idiot, so treat him like accordingly<br/>
+ dau * * * 19 19 19<br/>
+ # Netscape sometimes goes berserk, we must stop it<br/>
+ * * netscape * 4 -9 -9<br/>
+ # Most hosts are free for everyone but some are<br/>
+ # especially for the FOO group<br/>
+ * * * * 4 8 12<br/>
+ on (bar|baz)<br/>
+ * * * * 8 12 16<br/>
+ # &#8230; or, more radical: * * * * -9 -9 -9<br/>
+ * foo * * 4 8 12<br/>
+ on .*<br/>
+ # KDE screen savers&#8230;<br/>
+ * * .*kss * 16 16 16<br/>
+ # Grid jobs (assuming they are started by a master<br/>
+ # process)<br/>
+ * * * ancestor=grid_master 10 10 10<br/>
+ # Now some clever yet deceitful user might start all<br/>
+ # his jobs using a shell script named grid_master.<br/>
+ # He shall regret&#8230; whereas the original grid_master<br/>
+ # (owned by grid) is left alone.<br/>
+ * * grid_master * -9 -9 -9<br/>
  grid * grid_master * 0 0 0 </p>
 <h2>Files</h2>
 <dl>

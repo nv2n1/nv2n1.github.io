@@ -22,13 +22,13 @@ description: "QuantLib::InflationTermStructure – Interface for inflation term 
 <p> virtual <code>Frequency</code> <code>frequency</code> () const </p>
 <p> virtual <code>Rate</code> <code>baseRate</code> () const </p>
 <p> virtual <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; <code>nominalTermStructure</code> () const </p>
-<p> virtual <code>Date</code> <code>baseDate</code> () const =0<br />
+<p> virtual <code>Date</code> <code>baseDate</code> () const =0<br/>
  <i>minimum (base) date </i></p>
 <h3>Protected Member Functions</h3>
 <p>virtual void <code>setBaseRate</code> (const <code>Rate</code> &amp;r) </p>
-<p> void <code>checkRange</code> (const <code>Date</code> &amp;, bool extrapolate) const<br />
- <i>date-range check </i><br />
- void <code>checkRange</code> (Time t, bool extrapolate) const<br />
+<p> void <code>checkRange</code> (const <code>Date</code> &amp;, bool extrapolate) const<br/>
+ <i>date-range check </i><br/>
+ void <code>checkRange</code> (Time t, bool extrapolate) const<br/>
  <i>time-range check </i></p>
 <h3>Protected Attributes</h3>
 <p><code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; <code>nominalTermStructure_</code> </p>

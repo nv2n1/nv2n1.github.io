@@ -34,9 +34,9 @@ description: "mono – Mono’s ECMA-CLI native code generator (Just-in-Time and
 <p> Pointer types should be the name of the type, followed by a &#8216;*&#8217;, arrays should be the typename followed by &#8216;[&#8216; one or more commas (to indicate the rank of the array), and &#8216;]&#8217;. </p>
 <p> Generic values should use &#8216;&lt;&#8216;, one or more type names, separated by both a comma and a space and &#8216;&gt;&#8217;. </p>
 <p> By-reference arguments should include a &quot;&amp;&quot; after the typename. </p>
-<p> Examples:<br />
-* : ctor(int)                  // All constructors that take an int as an argument<br />
-    * : Main                   // Methods named Main in any class<br />
+<p> Examples:<br/>
+* : ctor(int)                  // All constructors that take an int as an argument<br/>
+    * : Main                   // Methods named Main in any class<br/>
             * : Main(string[]) // Methods named Main that take a string array in any class</p>
 <h2>RUNTIME OPTIONS</h2>
 <p> The following options are available:</p>
@@ -128,7 +128,7 @@ mono_jit_set_aot_mode (MONO_AOT_MODE_INTERP);
 <dd> This instructs the compiler to generate sequence point checks that allow Mono&#8217;s soft debugger to debug applications even on systems where it is not possible to set breakpoints or to single step (certain hardware configurations like the cell phones and video gaming consoles).</dd>
 <dt><i>static</i></dt>
 <dd> Create an ELF object file (.o) or .s file which can be statically linked into an executable when embedding the mono runtime. When this option is used, the object file needs to be registered with the embedded runtime using the mono_aot_register_module function which takes as its argument the mono_aot_module_&lt;ASSEMBLY NAME&gt;_info global symbol from the object file: </dd>
-<p>extern void *mono_aot_module_hello_info;<br />
+<p>extern void *mono_aot_module_hello_info;<br/>
 mono_aot_register_module(mono_aot_module_hello_info);</p>
 <dt><i>stats</i></dt>
 <dd> Print various stats collected during AOT compilation.</dd>
@@ -209,17 +209,17 @@ mono_aot_register_module(mono_aot_module_hello_info);</p>
 <dt><code>&#8211;nollvm</code></dt>
 <dd> When using a Mono that has been compiled with LLVM support, it forces Mono to fallback to its JIT engine and not use the LLVM backend.</dd>
 <dt><code>&#8211;optimize=MODE</code>, <code>-O=MODE</code></dt>
-<dd> MODE is a comma separated list of optimizations. They also allow optimizations to be turned off by prefixing the optimization name with a minus sign. In general, Mono has been tuned to use the default set of flags, before using these flags for a deployment setting, you might want to actually measure the benefits of using them. The following optimization flags are implemented in the core engine:<br />
-abcrem Array bound checks removal<br />
-        all Turn on all optimizations<br />
-            aot Usage of Ahead Of Time compiled code<br />
-                branch Branch optimizations<br />
-                    cfold Constant folding<br />
-                        cmov Conditional moves[arch &#8211; dependency] deadce Dead code elimination<br />
-                            consprop Constant propagation<br />
-                                copyprop Copy propagation<br />
-                                    fcmov Fast x86 FP compares[arch &#8211; dependency] float32 Perform 32 &#8211;<br />
-    bit float arithmetic using 32 &#8211; bit operations gshared Enable generic code sharing.inline Inline method calls intrins Intrinsic method implementations linears Linear scan global reg allocation leaf Leaf procedures optimizations loop Loop related optimizations peephole Peephole postpass precomp Precompile all methods before executing Main sched Instruction scheduling shared Emit per &#8211; domain code sse2 SSE2 instructions on x86[arch &#8211; dependency] tailc Tail recursion and tail calls<br />
+<dd> MODE is a comma separated list of optimizations. They also allow optimizations to be turned off by prefixing the optimization name with a minus sign. In general, Mono has been tuned to use the default set of flags, before using these flags for a deployment setting, you might want to actually measure the benefits of using them. The following optimization flags are implemented in the core engine:<br/>
+abcrem Array bound checks removal<br/>
+        all Turn on all optimizations<br/>
+            aot Usage of Ahead Of Time compiled code<br/>
+                branch Branch optimizations<br/>
+                    cfold Constant folding<br/>
+                        cmov Conditional moves[arch &#8211; dependency] deadce Dead code elimination<br/>
+                            consprop Constant propagation<br/>
+                                copyprop Copy propagation<br/>
+                                    fcmov Fast x86 FP compares[arch &#8211; dependency] float32 Perform 32 &#8211;<br/>
+    bit float arithmetic using 32 &#8211; bit operations gshared Enable generic code sharing.inline Inline method calls intrins Intrinsic method implementations linears Linear scan global reg allocation leaf Leaf procedures optimizations loop Loop related optimizations peephole Peephole postpass precomp Precompile all methods before executing Main sched Instruction scheduling shared Emit per &#8211; domain code sse2 SSE2 instructions on x86[arch &#8211; dependency] tailc Tail recursion and tail calls<br/>
  For example, to enable all the optimization but dead code elimination and inlining, you can use: </dd>
 <pre>
         -O=all,-deadce,-inline
@@ -433,8 +433,8 @@ command script import $PREFIX/lib/mono/lldb/mono.py
 <dt><code>MONO_CONFIG</code></dt>
 <dd> If set, this variable overrides the default runtime configuration file ($PREFIX/etc/mono/config). The &#8211;config command line options overrides the environment variable.</dd>
 <dt><code>MONO_CPU_ARCH</code></dt>
-<dd> Override the automatic cpu detection mechanism. Currently used only on arm. The format of the value is as follows:<br />
-&#8220;armvV [thumb[2]]&#8221;<br />
+<dd> Override the automatic cpu detection mechanism. Currently used only on arm. The format of the value is as follows:<br/>
+&#8220;armvV [thumb[2]]&#8221;<br/>
  where V is the architecture number 4, 5, 6, 7 and the options can be currently be &quot;thumb&quot; or &quot;thumb2&quot;. Example: </dd>
 <pre>
         MONO_CPU_ARCH=&quot;armv4 thumb&quot; mono ...
@@ -594,77 +594,77 @@ command script import $PREFIX/lib/mono/lldb/mono.py
 <dd> If set to &quot;disabled&quot;, System.IO.FileSystemWatcher will use a file watcher implementation which silently ignores all the watching requests. If set to any other value, System.IO.FileSystemWatcher will use the default managed implementation (slow). If unset, mono will try to use inotify, FAM, Gamin, kevent under Unix systems and native API calls on Windows, falling back to the managed implementation on error.</dd>
 <dt><code>MONO_MESSAGING_PROVIDER</code></dt>
 <dd> Mono supports a plugin model for its implementation of System.Messaging making it possible to support a variety of messaging implementations (e.g. AMQP, ActiveMQ). To specify which messaging implementation is to be used the evironement variable needs to be set to the full class name for the provider. E.g. to use the RabbitMQ based AMQP implementation the variable should be set to: </dd>
-<p>Mono.Messaging.RabbitMQ.RabbitMQMessagingProvider,Mono.Messaging.RabbitMQ<br />
-MONO_NO_SMPIf set causes the mono process to be bound to a single processor. This may be<br />
-useful when debugging or working around race conditions.<br />
-MONO_NO_TLSDisable inlining of thread local accesses. Try setting this if you get a segfault<br />
-early on in the execution of mono.<br />
-MONO_PATHProvides a search path to the runtime where to look for library<br />
-files.   This is a tool convenient for debugging applications, but<br />
-should not be used by deployed applications as it breaks the assembly<br />
-loader in subtle ways.<br />
-Directories are separated by the platform path separator (colons on unix). Example:<br />
-/home/username/lib:/usr/local/mono/lib<br />
-Relative paths are resolved based on the launch-time current directory.<br />
-Alternative solutions to MONO_PATH include: installing libraries into<br />
-the Global Assembly Cache (see gacutil(1)) or having the dependent<br />
-libraries side-by-side with the main executable.<br />
-For a complete description of recommended practices for application<br />
-deployment, see<br />
-http://www.mono-project.com/docs/getting-started/application-deployment/<br />
-MONO_SHARED_DIRIf set its the directory where the &#8220;.wapi&#8221; handle state is stored.<br />
-This is the directory where the Windows I/O Emulation layer stores its<br />
-shared state data (files, events, mutexes, pipes).  By default Mono<br />
-will store the &#8220;.wapi&#8221; directory in the users&#8217;s home directory.<br />
-MONO_SHARED_HOSTNAMEUses the string value of this variable as a replacement for the host name when<br />
-creating file names in the &#8220;.wapi&#8221; directory. This helps if the host name of<br />
-your machine is likely to be changed when a mono application is running or if<br />
-you have a .wapi directory shared among several different computers.<br />
-Mono typically uses the hostname to create the files that are used to<br />
-share state across multiple Mono processes.  This is done to support<br />
-home directories that might be shared over the network.<br />
-MONO_STRICT_IO_EMULATIONIf set, extra checks are made during IO operations.  Currently, this<br />
-includes only advisory locks around file writes.<br />
-MONO_TLS_PROVIDERThis environment variable controls which TLS/SSL provider Mono will<br />
-use.  The options are usually determined by the operating system where<br />
-Mono was compiled and the configuration options that were used for<br />
+<p>Mono.Messaging.RabbitMQ.RabbitMQMessagingProvider,Mono.Messaging.RabbitMQ<br/>
+MONO_NO_SMPIf set causes the mono process to be bound to a single processor. This may be<br/>
+useful when debugging or working around race conditions.<br/>
+MONO_NO_TLSDisable inlining of thread local accesses. Try setting this if you get a segfault<br/>
+early on in the execution of mono.<br/>
+MONO_PATHProvides a search path to the runtime where to look for library<br/>
+files.   This is a tool convenient for debugging applications, but<br/>
+should not be used by deployed applications as it breaks the assembly<br/>
+loader in subtle ways.<br/>
+Directories are separated by the platform path separator (colons on unix). Example:<br/>
+/home/username/lib:/usr/local/mono/lib<br/>
+Relative paths are resolved based on the launch-time current directory.<br/>
+Alternative solutions to MONO_PATH include: installing libraries into<br/>
+the Global Assembly Cache (see gacutil(1)) or having the dependent<br/>
+libraries side-by-side with the main executable.<br/>
+For a complete description of recommended practices for application<br/>
+deployment, see<br/>
+http://www.mono-project.com/docs/getting-started/application-deployment/<br/>
+MONO_SHARED_DIRIf set its the directory where the &#8220;.wapi&#8221; handle state is stored.<br/>
+This is the directory where the Windows I/O Emulation layer stores its<br/>
+shared state data (files, events, mutexes, pipes).  By default Mono<br/>
+will store the &#8220;.wapi&#8221; directory in the users&#8217;s home directory.<br/>
+MONO_SHARED_HOSTNAMEUses the string value of this variable as a replacement for the host name when<br/>
+creating file names in the &#8220;.wapi&#8221; directory. This helps if the host name of<br/>
+your machine is likely to be changed when a mono application is running or if<br/>
+you have a .wapi directory shared among several different computers.<br/>
+Mono typically uses the hostname to create the files that are used to<br/>
+share state across multiple Mono processes.  This is done to support<br/>
+home directories that might be shared over the network.<br/>
+MONO_STRICT_IO_EMULATIONIf set, extra checks are made during IO operations.  Currently, this<br/>
+includes only advisory locks around file writes.<br/>
+MONO_TLS_PROVIDERThis environment variable controls which TLS/SSL provider Mono will<br/>
+use.  The options are usually determined by the operating system where<br/>
+Mono was compiled and the configuration options that were used for<br/>
 it.   </p>
-<p>default<br />
-Uses the default TLS stack that the Mono runtime was configured with.<br />
-Usually this is configured to use Apple&#8217;s SSL stack on Apple<br />
-platforms, and Boring SSL on other platforms.<br />
-apple<br />
-Forces the use of the Apple SSL stack, only works on Apple platforms.<br />
-btls<br />
-Forces the use of the BoringSSL stack.    See<br />
-https://opensource.google.com/projects/boringssl for more information<br />
-about this stack.<br />
-legacy<br />
-This is the old Mono stack, which only supports SSL and TLS up to<br />
+<p>default<br/>
+Uses the default TLS stack that the Mono runtime was configured with.<br/>
+Usually this is configured to use Apple&#8217;s SSL stack on Apple<br/>
+platforms, and Boring SSL on other platforms.<br/>
+apple<br/>
+Forces the use of the Apple SSL stack, only works on Apple platforms.<br/>
+btls<br/>
+Forces the use of the BoringSSL stack.    See<br/>
+https://opensource.google.com/projects/boringssl for more information<br/>
+about this stack.<br/>
+legacy<br/>
+This is the old Mono stack, which only supports SSL and TLS up to<br/>
 version 1.0.   It is deprecated and will be removed in the future.</p>
-<p>MONO_TLS_SESSION_CACHE_TIMEOUTThe time, in seconds, that the SSL/TLS session cache will keep it&#8217;s entry to<br />
-avoid a new negotiation between the client and a server. Negotiation are very<br />
-CPU intensive so an application-specific custom value may prove useful for<br />
-small embedded systems.<br />
-The default is 180 seconds.<br />
-MONO_THREADS_PER_CPUThe minimum number of threads in the general threadpool will be<br />
-MONO_THREADS_PER_CPU * number of CPUs. The default value for this<br />
-variable is 1.<br />
-MONO_XMLSERIALIZER_THSControls the threshold for the XmlSerializer to produce a custom<br />
-serializer for a given class instead of using the Reflection-based<br />
-interpreter.  The possible values are `no&#8217; to disable the use of a<br />
-custom serializer or a number to indicate when the XmlSerializer<br />
-should start serializing.   The default value is 50, which means that<br />
-the a custom serializer will be produced on the 50th use.<br />
-MONO_X509_REVOCATION_MODESets the revocation mode used when validating a X509 certificate chain (https,<br />
-ftps, smtps&#8230;).  The default is &#8216;nocheck&#8217;, which performs no revocation check<br />
-at all. The other possible values are &#8216;offline&#8217;, which performs CRL check (not<br />
-implemented yet) and &#8216;online&#8217; which uses OCSP and CRL to verify the revocation<br />
-status (not implemented yet).<br />
-NO_PROXY(Also no_proxy) If both HTTP_PROXY and NO_PROXY are<br />
-set, NO_PROXY will be treated as a comma-separated list of &#8220;bypass&#8221; domains<br />
-which will not be sent through the proxy. Domains in NO_PROXY may contain<br />
-wildcards, as in &#8220;*.mono-project.com&#8221; or &#8220;build????.local&#8221;. Not supported on<br />
+<p>MONO_TLS_SESSION_CACHE_TIMEOUTThe time, in seconds, that the SSL/TLS session cache will keep it&#8217;s entry to<br/>
+avoid a new negotiation between the client and a server. Negotiation are very<br/>
+CPU intensive so an application-specific custom value may prove useful for<br/>
+small embedded systems.<br/>
+The default is 180 seconds.<br/>
+MONO_THREADS_PER_CPUThe minimum number of threads in the general threadpool will be<br/>
+MONO_THREADS_PER_CPU * number of CPUs. The default value for this<br/>
+variable is 1.<br/>
+MONO_XMLSERIALIZER_THSControls the threshold for the XmlSerializer to produce a custom<br/>
+serializer for a given class instead of using the Reflection-based<br/>
+interpreter.  The possible values are `no&#8217; to disable the use of a<br/>
+custom serializer or a number to indicate when the XmlSerializer<br/>
+should start serializing.   The default value is 50, which means that<br/>
+the a custom serializer will be produced on the 50th use.<br/>
+MONO_X509_REVOCATION_MODESets the revocation mode used when validating a X509 certificate chain (https,<br/>
+ftps, smtps&#8230;).  The default is &#8216;nocheck&#8217;, which performs no revocation check<br/>
+at all. The other possible values are &#8216;offline&#8217;, which performs CRL check (not<br/>
+implemented yet) and &#8216;online&#8217; which uses OCSP and CRL to verify the revocation<br/>
+status (not implemented yet).<br/>
+NO_PROXY(Also no_proxy) If both HTTP_PROXY and NO_PROXY are<br/>
+set, NO_PROXY will be treated as a comma-separated list of &#8220;bypass&#8221; domains<br/>
+which will not be sent through the proxy. Domains in NO_PROXY may contain<br/>
+wildcards, as in &#8220;*.mono-project.com&#8221; or &#8220;build????.local&#8221;. Not supported on<br/>
 Windows, Mac OS, iOS or Android.</p>
 <h2>ENVIRONMENT VARIABLES FOR DEBUGGING</h2>
 <dl>

@@ -10,7 +10,7 @@ description: "dlaed2.f –"
 <p>dlaed2.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dlaed2</code> (K, N, N1, D, Q, LDQ, INDXQ, RHO, Z, DLAMDA, W, Q2, INDX, INDXC, INDXP, COLTYP, INFO)<br />
+<p>subroutine <code>dlaed2</code> (K, N, N1, D, Q, LDQ, INDXQ, RHO, Z, DLAMDA, W, Q2, INDX, INDXC, INDXP, COLTYP, INFO)<br/>
  <i></i><code>DLAED2</code> used by sstedc. Merges eigenvalues and deflates secular equation. Used when the original matrix is tridiagonal.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlaed2 (integerK, integerN, integerN1, double precision, dimension( * )D, double precision, dimension( ldq, * )Q, integerLDQ, integer, dimension( * )INDXQ, double precisionRHO, double precision, dimension( * )Z, double precision, dimension( * )DLAMDA, double precision, dimension( * )W, double precision, dimension( * )Q2, integer, dimension( * )INDX, integer, dimension( * )INDXC, integer, dimension( * )INDXP, integer, dimension( * )COLTYP, integerINFO)</h3>

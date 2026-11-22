@@ -10,7 +10,7 @@ description: "ldns_send"
 
 <p> ldns_send </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ldns_status ldns_send(ldns_pkt **pkt, ldns_resolver *r, const ldns_pkt *query_pkt); </p>

@@ -10,7 +10,7 @@ description: "sgeevx.f –"
 <p>sgeevx.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>sgeevx</code> (BALANC, JOBVL, JOBVR, SENSE, N, A, LDA, WR, WI, VL, LDVL, VR, LDVR, ILO, IHI, SCALE, ABNRM, RCONDE, RCONDV, WORK, LWORK, IWORK, INFO)<br />
+<p>subroutine <code>sgeevx</code> (BALANC, JOBVL, JOBVR, SENSE, N, A, LDA, WR, WI, VL, LDVL, VR, LDVR, ILO, IHI, SCALE, ABNRM, RCONDE, RCONDV, WORK, LWORK, IWORK, INFO)<br/>
  <i></i><code> SGEEVX computes the eigenvalues and, optionally, the left and/or right eigenvectors for GE matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sgeevx (characterBALANC, characterJOBVL, characterJOBVR, characterSENSE, integerN, real, dimension( lda, * )A, integerLDA, real, dimension( * )WR, real, dimension( * )WI, real, dimension( ldvl, * )VL, integerLDVL, real, dimension( ldvr, * )VR, integerLDVR, integerILO, integerIHI, real, dimension( * )SCALE, realABNRM, real, dimension( * )RCONDE, real, dimension( * )RCONDV, real, dimension( * )WORK, integerLWORK, integer, dimension( * )IWORK, integerINFO)</h3>

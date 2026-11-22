@@ -14,7 +14,7 @@ description: "cgi_to_db – convert stored CGI files (from CGI.pm) to fsdb"
 cgi_to_db[-duU][-e EmptyValue][cgi - files...]
 </code></pre>
 <h2>DESCRIPTION</h2>
-<p> Converts all stored <font SIZE="-1">CGI</font> files (from <font SIZE="-1">CGI</font>.pm) to fsdb, optionally unescaping the contents. When contents are unescaped, <font SIZE="-1">CR NL</font> is recoded as &#8220;
+<p> Converts all stored CGI files (from CGI.pm) to fsdb, optionally unescaping the contents. When contents are unescaped, CR NL is recoded as &#8220;
 &#8221;. </p>
 <p> Output is always in fsdb list format with double space (type &#8220;S&#8221;) field separator. </p>
 <p> Unlike most Fsdb programs, the input to this program is <i>not</i> usually from standard input. However, the program will take <tt>&quot;-i&quot;</tt> options. </p>
@@ -22,13 +22,13 @@ cgi_to_db[-duU][-e EmptyValue][cgi - files...]
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-u</code> or <code>&#8211;unescape</code></dt>
-<dd> do unescape data, converting <font SIZE="-1">CGI</font> escape codes like <tt>%xx</tt> to regular characters (default)</dd>
+<dd> do unescape data, converting CGI escape codes like <tt>%xx</tt> to regular characters (default)</dd>
 <dt><code>-U</code> or <code>&#8211;nounescape</code></dt>
 <dd> do <i>not</i> unescape data, but leave it CGI-encoded</dd>
 <dt><code>-e E</code> or <code>&#8211;empty E</code></dt>
 <dd> give value E as the value for empty (null) records</dd>
 <dt><code>-T TmpDir</code></dt>
-<dd> where to put tmp files. Also uses environment variable <font SIZE="-1">TMPDIR,</font> if -T is not specified. Default is /tmp.</dd></dl>
+<dd> where to put tmp files. Also uses environment variable TMPDIR, if -T is not specified. Default is /tmp.</dd></dl>
 <p> This module also supports the standard fsdb options:</p>
 <dl>
 <dt><code>-d</code></dt>
@@ -83,7 +83,7 @@ cgi_to_db[-duU][-e EmptyValue][cgi - files...]
     #  | cgi_to_db TEST/cgi_to_db_ex.in TEST/cgi_to_db_ex.in-2
 </pre>
 <h2>SEE ALSO</h2>
-<p> Fsdb. <font SIZE="-1"><i>CGI</i></font><i></i>(3pm). &lt;<a rel="nofollow" href="http://stein.cshl.org/boulder/">http://stein.cshl.org/boulder/</a>&gt;. &lt;<a rel="nofollow" href="http://stein.cshl.org/WWW/software/CGI/">http://stein.cshl.org/WWW/software/CGI/</a>&gt;</p>
+<p> Fsdb. <i>CGI</i><i></i>(3pm). &lt;<a rel="nofollow" href="http://stein.cshl.org/boulder/">http://stein.cshl.org/boulder/</a>&gt;. &lt;<a rel="nofollow" href="http://stein.cshl.org/WWW/software/CGI/">http://stein.cshl.org/WWW/software/CGI/</a>&gt;</p>
 <h2>AUTHOR and COPYRIGHT</h2>
 <p> Copyright (C) 1991-2008 by John Heidemann &lt;johnh [at] isi.edu&gt; </p>
-<p> This program is distributed under terms of the <font SIZE="-1">GNU</font> general public license, version 2. See the file <font SIZE="-1">COPYING</font> with the distribution for details. </p>
+<p> This program is distributed under terms of the GNU general public license, version 2. See the file COPYING with the distribution for details. </p>

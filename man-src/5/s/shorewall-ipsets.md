@@ -16,12 +16,12 @@ description: "ipsets – Specifying the name if an ipset in Shorewall configurat
 <h2>Description</h2>
 <dd>Note: In the above syntax descriptions, the square brackets (&quot;[]&quot;) are to be taken literally rather than as meta-characters. In most places where a network address may be entered, an ipset may be substituted. Set names must be prefixed by the character &quot;+&quot;, must start with a letter and may be composed of alphanumeric characters, &quot;-&quot; and &quot;_&quot;. Whether the set is matched against the packet source or destination is determined by which column the set name appears (SOURCE or DEST). For those set types that specify a tuple, two alternative syntaxes are available:</dd>
 <dl>
-<dd>[<i>number</i>] &#8211; Indicates that &#8216;src&#8217; or<br />
-&#8216;dst&#8217;&nbsp;<wbr>should be repeated&nbsp;<wbr><i>number</i>&nbsp;<wbr>times.<br />
+<dd>[<i>number</i>] &#8211; Indicates that &#8216;src&#8217; or<br/>
+&#8216;dst&#8217;&nbsp;<wbr>should be repeated&nbsp;<wbr><i>number</i>&nbsp;<wbr>times.<br/>
 Example: myset[2].</dd></dl>
 <dl>
-<dd>[<i>flag</i>,&#8230;] where<br />
-<i>flag</i>&nbsp;<wbr>is&nbsp;<wbr><code>src</code>&nbsp;<wbr>or<br />
+<dd>[<i>flag</i>,&#8230;] where<br/>
+<i>flag</i>&nbsp;<wbr>is&nbsp;<wbr><code>src</code>&nbsp;<wbr>or<br/>
 <code>dst</code>. Example: myset[src,dst].</dd></dl>
 <p> In a SOURCE or SPORT column, the following pairs are equivalent:</p>
 <dl>
@@ -29,13 +29,13 @@ Example: myset[2].</dd></dl>
 <p> In a DEST or DPORT column, the following pairs are equivalent:</p>
 <dl>
 <dd>&bull; +myset[2] and +myset[dst,dst]</dd></dl>
-<p> Beginning with Shorewall 4.4.14, multiple source or destination matches may be specified by enclosing the set names within +[&#8230;]. The set names need not be prefixed with &#8216;+&#8217;. When such a list of sets is specified, matching packets must match all of the listed sets. For information about set lists and exclusion, see m[blue]<code>shorewall-exclusion</code>m[]<font SIZE="-2">[1]</font> (5). Beginning with Shorewall 4.5.16, you can increment one or more nfacct objects each time a packet matches an ipset. You do that by listing the objects separated by commas within parentheses. Example:</p>
+<p> Beginning with Shorewall 4.4.14, multiple source or destination matches may be specified by enclosing the set names within +[&#8230;]. The set names need not be prefixed with &#8216;+&#8217;. When such a list of sets is specified, matching packets must match all of the listed sets. For information about set lists and exclusion, see m[blue]<code>shorewall-exclusion</code>m[][1] (5). Beginning with Shorewall 4.5.16, you can increment one or more nfacct objects each time a packet matches an ipset. You do that by listing the objects separated by commas within parentheses. Example:</p>
 <dl>
 <dd>+myset[src](myobject)</dd></dl>
 <p> In that example, when the source address of a packet matches the <code>myset</code> ipset, the <code>myobject</code> nfacct counter will be incremented. Beginning with Shorewall 4.6.0, an ipset name (and src/dst list, if any) can be immediately be followed by a list of match options.</p>
 <dl>
-<dd><font SIZE="+1"> <code>Important</code> </font><br />
- These additional match options are not available in m[blue]<code><a href="/docs/linux/man/5-shorewall-tcfilters/">shorewall-tcfilters</a>(5)</code>m[]<font SIZE="-2">[2]</font>.  Available options are: nomatch</dd>
+<dd> <code>Important</code> <br/>
+ These additional match options are not available in m[blue]<code><a href="/docs/linux/man/5-shorewall-tcfilters/">shorewall-tcfilters</a>(5)</code>m[][2].  Available options are: nomatch</dd>
 <dl>
 <dd>If the set type supports the nomatch flag, then the matching is reversed: a match with an element flagged with nomatch returns true, while a match with a plain element returns false. This option requires the &#8216;Ipset Match nomatch&#8217; capability in your kernel and ip[6]tables.</dd></dl>
 <p> no-update-counters</p>

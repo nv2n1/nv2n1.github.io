@@ -43,12 +43,12 @@ description: "ntfsls – list directory contents on an NTFS filesystem"
 <dt><code>-x</code>, <code>&#8211;dos</code></dt>
 <dd>Display short file names, i.e. files in the DOS namespace, instead of long file names, i.e. files in the WIN32 namespace.</dd></dl>
 <h2>Bugs</h2>
-<p>There are no known problems with <code>ntfsls</code>. If you find a bug please send an email describing the problem to the development team:<br />
+<p>There are no known problems with <code>ntfsls</code>. If you find a bug please send an email describing the problem to the development team:<br/>
  ntfs-3g-devel [at] lists.sf.net</p>
 <h2>Authors</h2>
 <p>This version of <code>ntfsls</code> was written by Lode Leroy, Anton Altaparmakov, Richard Russon, Carmelo Kintana and Giang Nguyen. It was ported to ntfs-3g by Erik Larsson.</p>
 <h2>Availability</h2>
-<p><code>ntfsls</code> is part of the <code>ntfs-3g</code> package and is available from:<br />
+<p><code>ntfsls</code> is part of the <code>ntfs-3g</code> package and is available from:<br/>
  <a rel="nofollow" href="https://github.com/tuxera/ntfs-3g/wiki/">https://github.com/tuxera/ntfs-3g/wiki/</a></p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-ntfsprogs/">ntfsprogs</a></code>(8) </p>

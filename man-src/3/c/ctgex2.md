@@ -11,7 +11,7 @@ description: "ctgex2.f –"
 <p> ctgex2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>ctgex2</code> (WANTQ, WANTZ, N, A, LDA, B, LDB, Q, LDQ, Z, LDZ, J1, INFO)<br />
+<p> subroutine <code>ctgex2</code> (WANTQ, WANTZ, N, A, LDA, B, LDB, Q, LDQ, Z, LDZ, J1, INFO)<br/>
  <i></i><code>CTGEX2</code> swaps adjacent diagonal blocks in an upper (quasi) triangular matrix pair by an unitary equivalence transformation.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ctgex2 (logicalWANTQ, logicalWANTZ, integerN, complex, dimension( lda, * )A, integerLDA, complex, dimension( ldb, * )B, integerLDB, complex, dimension( ldq, * )Q, integerLDQ, complex, dimension( ldz, * )Z, integerLDZ, integerJ1, integerINFO)</h3>

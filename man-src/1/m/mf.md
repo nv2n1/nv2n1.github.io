@@ -170,9 +170,9 @@ description: "mf, inimf, mf-nowin – Metafont, a language for font and logo des
 <h2>BUGS</h2>
 <p> On January 4, 1986 the &#8220;final&#8221; bug in Metafont was discovered and removed. If an error still lurks in the code, Donald E. Knuth promises to pay a finder&#8217;s fee which doubles every year to the first person who finds it. Happy hunting.</p>
 <h2>SUGGESTED READING</h2>
-<p> Donald E. Knuth, <i>The Metafontbook</i> (Volume C of <i>Computers and Typesetting</i>), Addison-Wesley, 1986, ISBN 0-201-13445-4.<br />
- Donald E. Knuth, <i>Metafont: The Program</i> (Volume D of <i>Computers and Typesetting</i>), Addison-Wesley, 1986, ISBN 0-201-13438-1.<br />
- Donald E. Knuth, <i>Computer Modern Typefaces</i> (Volume E of <i>Computers and Typesetting</i>), Addison-Wesley, 1986, ISBN 0-201-13446-2.<br />
+<p> Donald E. Knuth, <i>The Metafontbook</i> (Volume C of <i>Computers and Typesetting</i>), Addison-Wesley, 1986, ISBN 0-201-13445-4.<br/>
+ Donald E. Knuth, <i>Metafont: The Program</i> (Volume D of <i>Computers and Typesetting</i>), Addison-Wesley, 1986, ISBN 0-201-13438-1.<br/>
+ Donald E. Knuth, <i>Computer Modern Typefaces</i> (Volume E of <i>Computers and Typesetting</i>), Addison-Wesley, 1986, ISBN 0-201-13446-2.<br/>
  <i>TUGboat</i> (the journal of the TeX Users Group).</p>
 <h2>COMMENTS</h2>
 <p> Warning: &#8220;Type design can be hazardous to your other interests. Once you get hooked, you will develop intense feelings about letterforms; the medium will intrude on the messages that you read. And you will perpetually be thinking of improvements to the fonts that you see everywhere, especially those of your own design.&#8221;</p>

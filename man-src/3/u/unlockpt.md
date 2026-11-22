@@ -14,10 +14,10 @@ description: "unlockpt – unlock a pseudoterminal master/slave pair"
 int unlockpt(int fd);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>unlockpt</code>(): </p>
 <dl>
-<dd>Since glibc 2.24:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_XOPEN_SOURCE&nbsp;&gt;=&nbsp;500 ||<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(_XOPEN_SOURCE&nbsp;&amp;&amp;&nbsp;_XOPEN_SOURCE_EXTENDED)<br />
- Glibc 2.23 and earlier:<br />
+<dd>Since glibc 2.24:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_XOPEN_SOURCE&nbsp;&gt;=&nbsp;500 ||<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(_XOPEN_SOURCE&nbsp;&amp;&amp;&nbsp;_XOPEN_SOURCE_EXTENDED)<br/>
+ Glibc 2.23 and earlier:<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_XOPEN_SOURCE</dd></dl>
 <h2>Description</h2>
 <p>The <code>unlockpt</code>() function unlocks the slave pseudoterminal device corresponding to the master pseudoterminal referred to by the file descriptor <i>fd</i>. </p>

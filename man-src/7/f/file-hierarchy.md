@@ -9,7 +9,7 @@ description: "file-hierarchy – File system hierarchy overview"
 
 <p>file-hierarchy &#8211; File system hierarchy overview</p>
 <h2>Description</h2>
-<p>Operating systems using the <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1) system and service manager are organized based on a file system hierarchy inspired by UNIX, more specifically the hierarchy described in the m[blue]<code>File System Hierarchy</code>m[]<font SIZE="-2">[1]</font> specification and <code><a href="/docs/linux/man/7-hier/">hier</a></code>(7), with various extensions, partially documented in the m[blue]<code>XDG Base Directory Specification</code>m[]<font SIZE="-2">[2]</font> and m[blue]<code>XDG User Directories</code>m[]<font SIZE="-2">[3]</font>. This manual page describes a more generalized, though minimal and modernized subset of these specifications that defines more strictly the suggestions and restrictions systemd makes on the file system hierarchy. </p>
+<p>Operating systems using the <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1) system and service manager are organized based on a file system hierarchy inspired by UNIX, more specifically the hierarchy described in the m[blue]<code>File System Hierarchy</code>m[][1] specification and <code><a href="/docs/linux/man/7-hier/">hier</a></code>(7), with various extensions, partially documented in the m[blue]<code>XDG Base Directory Specification</code>m[][2] and m[blue]<code>XDG User Directories</code>m[][3]. This manual page describes a more generalized, though minimal and modernized subset of these specifications that defines more strictly the suggestions and restrictions systemd makes on the file system hierarchy. </p>
 <p> Many of the paths described here can be queried with the <code><a href="/docs/linux/man/1-systemd-path/">systemd-path</a></code>(1) tool.</p>
 <h2>General Structure</h2>
 <p>/</p>
@@ -36,8 +36,8 @@ description: "file-hierarchy – File system hierarchy overview"
 <p> /tmp/</p>
 <dl>
 <dd>The place for small temporary files. This directory is usually mounted as a &quot;tmpfs&quot; instance, and should hence not be used for larger files. (Use /var/tmp/ for larger files.) This directory is usually flushed at boot-up. Also, files that are not accessed within a certain time may be automatically deleted. </dd>
-<p> If applications find the environment variable <i>$TMPDIR</i> set, they should use the directory specified in it instead of /tmp/ (see <code><a href="/docs/linux/man/7-environ/">environ</a></code>(7) and m[blue]<code>IEEE Std 1003.1</code>m[]<font SIZE="-2">[4]</font> for details). </p>
-<p> Since /tmp/ is accessible to other users of the system, it is essential that files and subdirectories under this directory are only created with <code><a href="/docs/linux/man/3-mkstemp/">mkstemp</a></code>(3), <code><a href="/docs/linux/man/3-mkdtemp/">mkdtemp</a></code>(3), and similar calls. For more details, see m[blue]<code>Using /tmp/ and /var/tmp/ Safely</code>m[]<font SIZE="-2">[5]</font>.</dl>
+<p> If applications find the environment variable <i>$TMPDIR</i> set, they should use the directory specified in it instead of /tmp/ (see <code><a href="/docs/linux/man/7-environ/">environ</a></code>(7) and m[blue]<code>IEEE Std 1003.1</code>m[][4] for details). </p>
+<p> Since /tmp/ is accessible to other users of the system, it is essential that files and subdirectories under this directory are only created with <code><a href="/docs/linux/man/3-mkstemp/">mkstemp</a></code>(3), <code><a href="/docs/linux/man/3-mkdtemp/">mkdtemp</a></code>(3), and similar calls. For more details, see m[blue]<code>Using /tmp/ and /var/tmp/ Safely</code>m[][5].</dl>
 <h2>Runtime Data</h2>
 <p>/run/</p>
 <dl>
@@ -47,7 +47,7 @@ description: "file-hierarchy – File system hierarchy overview"
 <dd>Runtime system logs. System components may place private logs in this directory. Always writable, even when /var/log/ might not be accessible yet.</dd></dl>
 <p> /run/user/</p>
 <dl>
-<dd>Contains per-user runtime directories, each usually individually mounted &quot;tmpfs&quot; instances. Always writable, flushed at each reboot and when the user logs out. User code should not reference this directory directly, but via the <i>$XDG_RUNTIME_DIR</i> environment variable, as documented in the m[blue]<code>XDG Base Directory Specification</code>m[]<font SIZE="-2">[2]</font>.</dd></dl>
+<dd>Contains per-user runtime directories, each usually individually mounted &quot;tmpfs&quot; instances. Always writable, flushed at each reboot and when the user logs out. User code should not reference this directory directly, but via the <i>$XDG_RUNTIME_DIR</i> environment variable, as documented in the m[blue]<code>XDG Base Directory Specification</code>m[][2].</dd></dl>
 <h2>Vendor-Supplied Operating System Resources</h2>
 <p>/usr/</p>
 <dl>
@@ -63,7 +63,7 @@ description: "file-hierarchy – File system hierarchy overview"
 <dd>Static, private vendor data that is compatible with all architectures (though not necessarily architecture-independent). Note that this includes internal executables or other binaries that are not regularly invoked from a shell. Such binaries may be for any architecture supported by the system. Do not place public libraries in this directory, use <i>$libdir</i> (see below), instead.</dd></dl>
 <p> /lib/<i>arch-id</i>/</p>
 <dl>
-<dd>Location for placing dynamic libraries into, also called <i>$libdir</i>. The architecture identifier to use is defined on m[blue]<code>Multiarch Architecture Specifiers (Tuples)</code>m[]<font SIZE="-2">[6]</font> list. Legacy locations of <i>$libdir</i> are /lib/, /lib64/. This directory should not be used for package-specific data, unless this data is architecture-dependent, too. To query <i>$libdir</i> for the primary architecture of the system, invoke: </dd>
+<dd>Location for placing dynamic libraries into, also called <i>$libdir</i>. The architecture identifier to use is defined on m[blue]<code>Multiarch Architecture Specifiers (Tuples)</code>m[][6] list. Legacy locations of <i>$libdir</i> are /lib/, /lib64/. This directory should not be used for package-specific data, unless this data is architecture-dependent, too. To query <i>$libdir</i> for the primary architecture of the system, invoke: </dd>
 <dl>
 <dd>
 <pre># systemd-path system-library-arch</pre>
@@ -101,7 +101,7 @@ description: "file-hierarchy – File system hierarchy overview"
 <dl>
 <dd>The place for larger and persistent temporary files. In contrast to /tmp/, this directory is usually mounted from a persistent physical file system and can thus accept larger files. (Use /tmp/ for small ephemeral files.) This directory is generally not flushed at boot-up, but time-based cleanup of files that have not been accessed for a certain time is applied. </dd>
 <p> If applications find the environment variable <i>$TMPDIR</i> set, they should use the directory specified in it instead of /var/tmp/ (see <code><a href="/docs/linux/man/7-environ/">environ</a></code>(7) for details). </p>
-<p> The same security restrictions as with /tmp/ apply: <code><a href="/docs/linux/man/3-mkstemp/">mkstemp</a></code>(3), <code><a href="/docs/linux/man/3-mkdtemp/">mkdtemp</a></code>(3), and similar calls should be used. For further details about this directory, see m[blue]<code>Using /tmp/ and /var/tmp/ Safely</code>m[]<font SIZE="-2">[5]</font>.</dl>
+<p> The same security restrictions as with /tmp/ apply: <code><a href="/docs/linux/man/3-mkstemp/">mkstemp</a></code>(3), <code><a href="/docs/linux/man/3-mkdtemp/">mkdtemp</a></code>(3), and similar calls should be used. For further details about this directory, see m[blue]<code>Using /tmp/ and /var/tmp/ Safely</code>m[][5].</dl>
 <h2>Virtual Kernel And Api File Systems</h2>
 <p>/dev/</p>
 <dl>
@@ -135,7 +135,7 @@ description: "file-hierarchy – File system hierarchy overview"
 <dl>
 <dd>This compatibility symlink points to /run/, ensuring that programs referencing this legacy path correctly find their runtime data.</dd></dl>
 <h2>Home Directory</h2>
-<p>User applications may want to place files and directories in the user&#8217;s home directory. They should follow the following basic structure. Note that some of these directories are also standardized (though more weakly) by the m[blue]<code>XDG Base Directory Specification</code>m[]<font SIZE="-2">[2]</font>. Additional locations for high-level user resources are defined by m[blue]<code>xdg-user-dirs</code>m[]<font SIZE="-2">[3]</font>. </p>
+<p>User applications may want to place files and directories in the user&#8217;s home directory. They should follow the following basic structure. Note that some of these directories are also standardized (though more weakly) by the m[blue]<code>XDG Base Directory Specification</code>m[][2]. Additional locations for high-level user resources are defined by m[blue]<code>xdg-user-dirs</code>m[][3]. </p>
 <p> ~/.cache/</p>
 <dl>
 <dd>Persistent user cache data. User programs may place non-essential data in this directory. Flushing this directory should have no effect on operation of programs, except for increased runtimes necessary to rebuild these caches. If an application finds <i>$XDG_CACHE_HOME</i> set, it should use the directory specified in it instead of this directory.</dd></dl>
@@ -150,7 +150,7 @@ description: "file-hierarchy – File system hierarchy overview"
 <dd>Static, private vendor data that is compatible with all architectures.</dd></dl>
 <p> ~/.local/lib/<i>arch-id</i>/</p>
 <dl>
-<dd>Location for placing public dynamic libraries. The architecture identifier to use is defined on m[blue]<code>Multiarch Architecture Specifiers (Tuples)</code>m[]<font SIZE="-2">[6]</font> list.</dd></dl>
+<dd>Location for placing public dynamic libraries. The architecture identifier to use is defined on m[blue]<code>Multiarch Architecture Specifiers (Tuples)</code>m[][6] list.</dd></dl>
 <p> ~/.local/share/</p>
 <dl>
 <dd>Resources shared between multiple packages, such as fonts or artwork. Usually, the precise location and format of files stored below this directory is subject to specifications that ensure interoperability. If an application finds <i>$XDG_DATA_HOME</i> set, it should use the directory specified in it instead of this directory.</dd></dl>

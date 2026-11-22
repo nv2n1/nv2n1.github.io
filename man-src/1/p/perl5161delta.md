@@ -39,15 +39,15 @@ perl5161delta - what is new for perl v5.16.1
 
 <dl>
 <dt>&bull;
-</dt><dd> Building perl with some Windows compilers used to fail due to a problem with miniperl's <tt>&quot;glob&quot;</tt> operator (which uses the <tt>&quot;perlglob&quot;</tt> program) deleting the <font SIZE="-1">PATH</font> environment variable [perl #113798].</dd></dl>
+</dt><dd> Building perl with some Windows compilers used to fail due to a problem with miniperl's <tt>&quot;glob&quot;</tt> operator (which uses the <tt>&quot;perlglob&quot;</tt> program) deleting the PATH environment variable [perl #113798].</dd></dl>
 
 <h2>Platform Support</h2>
 
 <h3>Platform-Specific Notes</h3>
 
 <dl>
-<dt><font SIZE="-1">VMS</font>
-</dt><dd> All C header files from the top-level directory of the distribution are now installed on <font SIZE="-1">VMS,</font> providing consistency with a long-standing practice on other platforms. Previously only a subset were installed, which broke non-core extension builds for extensions that depended on the missing include files.</dd></dl>
+<dt>VMS
+</dt><dd> All C header files from the top-level directory of the distribution are now installed on VMS, providing consistency with a long-standing practice on other platforms. Previously only a subset were installed, which broke non-core extension builds for extensions that depended on the missing include files.</dd></dl>
 
 <h2>Selected Bug Fixes</h2>
 
@@ -65,7 +65,7 @@ perl5161delta - what is new for perl v5.16.1
 </dd><dt>&bull;
 </dt><dd> Under threaded perls, a runtime code block in a regular expression could corrupt the package name stored in the op tree, resulting in bad reads in <tt>&quot;caller&quot;</tt>, and possibly crashes [perl #113060].
 </dd><dt>&bull;
-</dt><dd> For efficiency's sake, many operators and built-in functions return the same scalar each time. Lvalue subroutines and subroutines in the <font SIZE="-1">CORE::</font> namespace were allowing this implementation detail to leak through. <tt>&quot;print &amp;CORE::uc(&quot;a&quot;), &amp;CORE::uc(&quot;b&quot;)&quot;</tt> used to print ``<font SIZE="-1">BB''.</font> The same thing would happen with an lvalue subroutine returning the return value of <tt>&quot;uc&quot;</tt>. Now the value is copied in such cases [perl #113044].
+</dt><dd> For efficiency's sake, many operators and built-in functions return the same scalar each time. Lvalue subroutines and subroutines in the CORE:: namespace were allowing this implementation detail to leak through. <tt>&quot;print &amp;CORE::uc(&quot;a&quot;), &amp;CORE::uc(&quot;b&quot;)&quot;</tt> used to print ``BB''. The same thing would happen with an lvalue subroutine returning the return value of <tt>&quot;uc&quot;</tt>. Now the value is copied in such cases [perl #113044].
 </dd><dt>&bull;
 </dt><dd> <tt>&quot;__SUB__&quot;</tt> now works in special blocks (<tt>&quot;BEGIN&quot;</tt>, <tt>&quot;END&quot;</tt>, etc.).
 </dd><dt>&bull;
@@ -85,9 +85,9 @@ perl5161delta - what is new for perl v5.16.1
 
  The list above is almost certainly incomplete as it is automatically generated from version control history. In particular, it does not include the names of the (very much appreciated) contributors who reported issues to the Perl bug tracker. 
 
- Many of the changes included in this version originated in the <font SIZE="-1">CPAN</font> modules included in Perl's core. We're grateful to the entire <font SIZE="-1">CPAN</font> community for helping Perl to flourish. 
+ Many of the changes included in this version originated in the CPAN modules included in Perl's core. We're grateful to the entire CPAN community for helping Perl to flourish. 
 
- For a more complete list of all of Perl's historical contributors, please see the <i></i><font SIZE="-1"><i>AUTHORS</i></font><i></i> file in the Perl source distribution.
+ For a more complete list of all of Perl's historical contributors, please see the <i></i><i>AUTHORS</i><i></i> file in the Perl source distribution.
 
 <h2>Reporting Bugs</h2>
 
@@ -95,14 +95,14 @@ perl5161delta - what is new for perl v5.16.1
 
  If you believe you have an unreported bug, please run the perlbug program included with your release. Be sure to trim your bug down to a tiny but sufficient test case. Your bug report, along with the output of <tt>&quot;perl -V&quot;</tt>, will be sent off to perlbug [at] perl.org to be analysed by the Perl porting team. 
 
- If the bug you are reporting has security implications, which make it inappropriate to send to a publicly archived mailing list, then please send it to perl5-security-report [at] perl.org. This points to a closed subscription unarchived mailing list, which includes all the core committers, who will be able to help assess the impact of issues, figure out a resolution, and help co-ordinate the release of patches to mitigate or fix the problem across all platforms on which Perl is supported. Please only use this address for security issues in the Perl core, not for modules independently distributed on <font SIZE="-1">CPAN.</font>
+ If the bug you are reporting has security implications, which make it inappropriate to send to a publicly archived mailing list, then please send it to perl5-security-report [at] perl.org. This points to a closed subscription unarchived mailing list, which includes all the core committers, who will be able to help assess the impact of issues, figure out a resolution, and help co-ordinate the release of patches to mitigate or fix the problem across all platforms on which Perl is supported. Please only use this address for security issues in the Perl core, not for modules independently distributed on CPAN.
 
 <h2>SEE ALSO</h2>
 
  The <i>Changes</i> file for an explanation of how to view exhaustive details on what changed. 
 
- The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. 
+ The <i></i><i>INSTALL</i><i></i> file for how to build Perl. 
 
- The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. 
+ The <i></i><i>README</i><i></i> file for general stuff. 
 
  The <i>Artistic</i> and <i>Copying</i> files for copyright information.

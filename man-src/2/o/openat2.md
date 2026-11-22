@@ -26,10 +26,10 @@ long openat2(int dirfd, const char *pathname,
 <p> Rather than taking a single <i>flags</i> argument, an extensible structure (<i>how</i>) is passed to allow for future extensions. The <i>size</i> argument must be specified as <i>sizeof(struct open_how)</i>.</p>
 <h3>The open_how structure</h3>
 <p> The <i>how</i> argument specifies how <i>pathname</i> should be opened, and acts as a superset of the <i>flags</i> and <i>mode</i> arguments to <code><a href="/docs/linux/man/2-openat/">openat</a></code>(2). This argument is a pointer to a structure of the following form: </p>
-<p> struct open_how {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;u64 flags;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;O_*&nbsp;flags&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;u64 mode;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Mode for O_{CREAT,TMPFILE}&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;u64 resolve;&nbsp;<wbr>&nbsp;/*&nbsp;RESOLVE_*&nbsp;flags&nbsp;*/<br />
+<p> struct open_how {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;u64 flags;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;O_*&nbsp;flags&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;u64 mode;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Mode for O_{CREAT,TMPFILE}&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;u64 resolve;&nbsp;<wbr>&nbsp;/*&nbsp;RESOLVE_*&nbsp;flags&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;&#8230;&nbsp;*/ }; </p>
 <p> Any future extensions to <code>openat2</code>() will be implemented as new fields appended to the above structure, with a zero value in a new field resulting in the kernel behaving as though that extension field was not present. Therefore, the caller <i>must</i> zero-fill this structure on initialization. (See the &quot;Extensibility&quot; section of the <code>NOTES</code> for more detail on why this is necessary.) </p>
 <p> The fields of the <i>open_how</i> structure are as follows:</p>
@@ -131,7 +131,7 @@ long openat2(int dirfd, const char *pathname,
 <dt>&bull;</dt>
 <dd> If <i>ksize</i> is smaller than <i>usize</i>, then there are some extension fields which the user-space application is aware of but which the kernel does not support. Because any extension field must have its zero values signify a no-op, the kernel can safely ignore the unsupported extension fields if they are all-zero. If any unsupported extension fields are nonzero, then -1 is returned and <i>errno</i> is set to <code>E2BIG</code>. This provides forwards-compatibility.</dd></dl>
 <p> Because the definition of <i>struct open_how</i> may change in the future (with new fields being added when system headers are updated), user-space applications should zero-fill <i>struct open_how</i> to ensure that recompiling the program with new headers will not result in spurious errors at runtime. The simplest way is to use a designated initializer: </p>
-<p> struct open_how how = { .flags = O_RDWR,<br />
+<p> struct open_how how = { .flags = O_RDWR,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.resolve&nbsp;=&nbsp;RESOLVE_IN_ROOT&nbsp;}; </p>
 <p> or explicitly using <code><a href="/docs/linux/man/3-memset/">memset</a></code>(3) or similar: </p>
 <p> struct open_how how; memset(&amp;how, 0, sizeof(how)); how.flags = O_RDWR; how.resolve = RESOLVE_IN_ROOT; </p>

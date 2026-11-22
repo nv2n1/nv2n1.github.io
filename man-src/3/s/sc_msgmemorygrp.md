@@ -16,9 +16,9 @@ description: "sc::MsgMemoryGrp –"
 <h3>Public Member Functions</h3>
 <p><code>MsgMemoryGrp</code> (const <code>Ref</code>&lt; <code>MessageGrp</code> &gt; &amp;msg) </p>
 <p> <code>MsgMemoryGrp</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;keyval) </p>
-<p> void <code>set_localsize</code> (size_t localsize)<br />
- <i>Set the size of locally held memory. </i><br />
- void <code>sync</code> ()<br />
+<p> void <code>set_localsize</code> (size_t localsize)<br/>
+ <i>Set the size of locally held memory. </i><br/>
+ void <code>sync</code> ()<br/>
  <i>Synchronizes all the nodes. </i></p>
 <h3>Protected Attributes</h3>
 <p><code>Ref</code>&lt; <code>MessageGrp</code> &gt; <code>msg_</code></p>

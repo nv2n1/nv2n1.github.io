@@ -10,7 +10,7 @@ description: "XkbKeyActionsPtr – Returns a pointer to the two-dimensional arra
 <p>XkbKeyActionsPtr &#8211; Returns a pointer to the two-dimensional array of key actions associated with the key corresponding to keycode </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>XkbKeyActionPtr XkbKeyActionsPtr</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>KeyCode </code><i>keycode</i><code>);</code><br />
+<dt> <code>XkbKeyActionPtr XkbKeyActionsPtr</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>KeyCode </code><i>keycode</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

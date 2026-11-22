@@ -10,7 +10,7 @@ description: "slaed6.f –"
 <p>slaed6.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>slaed6</code> (KNITER, ORGATI, RHO, D, Z, FINIT, TAU, INFO)<br />
+<p>subroutine <code>slaed6</code> (KNITER, ORGATI, RHO, D, Z, FINIT, TAU, INFO)<br/>
  <i></i><code>SLAED6</code> used by sstedc. Computes one Newton step in solution of the secular equation.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slaed6 (integerKNITER, logicalORGATI, realRHO, real, dimension( 3 )D, real, dimension( 3 )Z, realFINIT, realTAU, integerINFO)</h3>

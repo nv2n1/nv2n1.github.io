@@ -10,7 +10,7 @@ description: "zgehd2.f –"
 <p>zgehd2.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zgehd2</code> (N, ILO, IHI, A, LDA, TAU, WORK, INFO)<br />
+<p>subroutine <code>zgehd2</code> (N, ILO, IHI, A, LDA, TAU, WORK, INFO)<br/>
  <i></i><code>ZGEHD2</code> reduces a general square matrix to upper Hessenberg form using an unblocked algorithm.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zgehd2 (integerN, integerILO, integerIHI, complex*16, dimension( lda, * )A, integerLDA, complex*16, dimension( * )TAU, complex*16, dimension( * )WORK, integerINFO)</h3>

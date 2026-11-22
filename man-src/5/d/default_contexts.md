@@ -12,13 +12,13 @@ description: "default_contexts – The SELinux default contexts configuration fi
 <p>The default contexts configuration file <i>default_contexts</i> contains entries that allow SELinux-aware login applications such as <code><a href="/docs/linux/man/8-pam/">PAM</a></code>(8) </p>
 <p> SELinux-aware login applications generally use one or more of the following libselinux functions that read these files from the active policy path:</p>
 <dl>
-<dd><code><a href="/docs/linux/man/3-get_default_context/">get_default_context</a></code>(3)<br />
- <code><a href="/docs/linux/man/3-get_ordered_context_list/">get_ordered_context_list</a></code>(3)<br />
- <code><a href="/docs/linux/man/3-get_ordered_context_list_with_level/">get_ordered_context_list_with_level</a></code>(3)<br />
- <code><a href="/docs/linux/man/3-get_default_context_with_level/">get_default_context_with_level</a></code>(3)<br />
- <code><a href="/docs/linux/man/3-get_default_context_with_role/">get_default_context_with_role</a></code>(3)<br />
- <code><a href="/docs/linux/man/3-get_default_context_with_rolelevel/">get_default_context_with_rolelevel</a></code>(3)<br />
- <code><a href="/docs/linux/man/3-query_user_context/">query_user_context</a></code>(3)<br />
+<dd><code><a href="/docs/linux/man/3-get_default_context/">get_default_context</a></code>(3)<br/>
+ <code><a href="/docs/linux/man/3-get_ordered_context_list/">get_ordered_context_list</a></code>(3)<br/>
+ <code><a href="/docs/linux/man/3-get_ordered_context_list_with_level/">get_ordered_context_list_with_level</a></code>(3)<br/>
+ <code><a href="/docs/linux/man/3-get_default_context_with_level/">get_default_context_with_level</a></code>(3)<br/>
+ <code><a href="/docs/linux/man/3-get_default_context_with_role/">get_default_context_with_role</a></code>(3)<br/>
+ <code><a href="/docs/linux/man/3-get_default_context_with_rolelevel/">get_default_context_with_rolelevel</a></code>(3)<br/>
+ <code><a href="/docs/linux/man/3-query_user_context/">query_user_context</a></code>(3)<br/>
  <code><a href="/docs/linux/man/3-manual_user_enter_context/">manual_user_enter_context</a></code>(3)</dd></dl>
 <p> The default context configuration file path for the active policy is returned by <code>selinux_default_contexts_path</code>(3). The default, default contexts file is:</p>
 <dl>
@@ -38,7 +38,7 @@ description: "default_contexts – The SELinux default contexts configuration fi
 <dd>This consists of one or more <i>role</i><code>:</code><i>type</i>[<code>:</code><i>range</i>] entries that represent the user login process context defined in the policy.</dd></dl>
 </dl>
 <h2>Example</h2>
-<p># ./contexts/default_contexts<br />
+<p># ./contexts/default_contexts<br/>
  system_r:crond_t:s0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> system_r:system_crond_t:s0</p>
 <p> system_r:local_login_t:s0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> user_r:user_t:s0 staff_r:staff_t:s0</p>
 <p> system_r:remote_login_t:s0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> user_r:user_t:s0</p>

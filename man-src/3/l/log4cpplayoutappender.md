@@ -18,12 +18,12 @@ description: "log4cpp::LayoutAppender –"
 <h3>Public Member Functions</h3>
 <p><code>LayoutAppender</code> (const std::string &amp;name) </p>
 <p> virtual <code>~LayoutAppender</code> () </p>
-<p> virtual bool <code>requiresLayout</code> () const<br />
- <i>Check if the appender requires a layout. </i><br />
- virtual void <code>setLayout</code> (<code>Layout</code> *layout=NULL)<br />
+<p> virtual bool <code>requiresLayout</code> () const<br/>
+ <i>Check if the appender requires a layout. </i><br/>
+ virtual void <code>setLayout</code> (<code>Layout</code> *layout=NULL)<br/>
  <i>Set the </i><code>Layout</code> for this appender.</p>
 <h3>Protected Member Functions</h3>
-<p><code>Layout</code> &amp; <code>_getLayout</code> ()<br />
+<p><code>Layout</code> &amp; <code>_getLayout</code> ()<br/>
  <i>Return the layout of the appender. </i></p>
 <h3>Additional Inherited Members</h3>
 <h2>Detailed Description</h2>

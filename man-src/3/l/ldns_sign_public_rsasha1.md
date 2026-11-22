@@ -10,7 +10,7 @@ description: "ldns_sign_public_dsa, ldns_sign_public_rsamd5, ldns_sign_public_rs
 
 <p> ldns_sign_public_dsa, ldns_sign_public_rsamd5, ldns_sign_public_rsasha1 </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ldns_rdf* ldns_sign_public_dsa(ldns_buffer *to_sign, DSA *key); </p>

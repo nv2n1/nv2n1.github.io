@@ -14,28 +14,28 @@ description: "QwtWidgetOverlay –"
 <p> Inherits QWidget. </p>
 <p> Inherited by QwtPickerRubberband, and QwtPickerTracker.</p>
 <h3>Public Types</h3>
-<p>enum <code>MaskMode</code> { <code>NoMask</code>, <code>MaskHint</code>, <code>AlphaMask</code> }<br />
- <i>Mask mode. </i><br />
- enum <code>RenderMode</code> { <code>AutoRenderMode</code>, <code>CopyAlphaMask</code>, <code>DrawOverlay</code> }<br />
+<p>enum <code>MaskMode</code> { <code>NoMask</code>, <code>MaskHint</code>, <code>AlphaMask</code> }<br/>
+ <i>Mask mode. </i><br/>
+ enum <code>RenderMode</code> { <code>AutoRenderMode</code>, <code>CopyAlphaMask</code>, <code>DrawOverlay</code> }<br/>
  <i>Render mode. </i></p>
 <h3>Public Member Functions</h3>
-<p><code>QwtWidgetOverlay</code> (QWidget *)<br />
- <i>Constructor. </i><br />
- virtual <code>~QwtWidgetOverlay</code> ()<br />
- <i>Destructor. </i><br />
- void <code>setMaskMode</code> (<code>MaskMode</code>)<br />
- <i>Specify how to find the mask for the overlay. </i><br />
+<p><code>QwtWidgetOverlay</code> (QWidget *)<br/>
+ <i>Constructor. </i><br/>
+ virtual <code>~QwtWidgetOverlay</code> ()<br/>
+ <i>Destructor. </i><br/>
+ void <code>setMaskMode</code> (<code>MaskMode</code>)<br/>
+ <i>Specify how to find the mask for the overlay. </i><br/>
  <code>MaskMode</code> <code>maskMode</code> () const </p>
 <p> void <code>setRenderMode</code> (<code>RenderMode</code>) </p>
 <p> <code>RenderMode</code> <code>renderMode</code> () const </p>
 <p> void <code>updateOverlay</code> () </p>
-<p> virtual bool <code>eventFilter</code> (QObject *, QEvent *)<br />
+<p> virtual bool <code>eventFilter</code> (QObject *, QEvent *)<br/>
  <i>Event filter. </i></p>
 <h3>Protected Member Functions</h3>
 <p>virtual void <code>paintEvent</code> (QPaintEvent *event) </p>
 <p> virtual void <code>resizeEvent</code> (QResizeEvent *event) </p>
-<p> virtual QRegion <code>maskHint</code> () const<br />
- <i>Calculate an approximation for the mask. </i><br />
+<p> virtual QRegion <code>maskHint</code> () const<br/>
+ <i>Calculate an approximation for the mask. </i><br/>
  virtual void <code>drawOverlay</code> (QPainter *painter) const =0 </p>
 <h2>Detailed Description</h2>
 <p>An overlay for a widget. </p>
@@ -98,7 +98,7 @@ description: "QwtWidgetOverlay –"
 <p>Event filter. Resize the overlay according to the size of the parent widget. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>object</i> Object to be filtered<br />
+<dd><i>object</i> Object to be filtered<br/>
  <i>event</i> Event</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

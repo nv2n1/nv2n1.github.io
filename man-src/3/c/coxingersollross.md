@@ -10,12 +10,12 @@ description: "ql/models/shortrate/onefactormodels/coxingersollross.hpp – Cox-I
 
 <p> ql/models/shortrate/onefactormodels/coxingersollross.hpp &#8211; Cox-Ingersoll-Ross model. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/models/shortrate/onefactormodel.hpp&gt;<br />
+<p> #include &lt;ql/models/shortrate/onefactormodel.hpp&gt;<br/>
  #include &lt;ql/stochasticprocess.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>CoxIngersollRoss</code><br />
- <i>Cox-Ingersoll-Ross model class. </i><br />
- class <code>Dynamics</code><br />
+<p> class <code>CoxIngersollRoss</code><br/>
+ <i>Cox-Ingersoll-Ross model class. </i><br/>
+ class <code>Dynamics</code><br/>
  <i>Dynamics of the short-rate under the Cox-Ingersoll-Ross model </i></p>
 <h2>Detailed Description</h2>
 <p> Cox-Ingersoll-Ross model. </p>

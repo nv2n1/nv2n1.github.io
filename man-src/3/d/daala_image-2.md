@@ -12,12 +12,12 @@ description: "daala_image –"
 <h2>Synopsis</h2>
 <p>#include &lt;codec.h&gt;</p>
 <h3>Data Fields</h3>
-<p><code>daala_image_plane</code> <code>planes</code> [<code>OD_NPLANES_MAX</code>]<br />
- <i>Typical 3 planes for Y, Cb, and Cr. </i><br />
- int <code>nplanes</code><br />
- <i>Number of planes (1 for greyscale, 3 for YCbCr, 4 for YCbCr+Alpha ) </i><br />
- int32_t <code>width</code><br />
- <i>Width and height in pixels. </i><br />
+<p><code>daala_image_plane</code> <code>planes</code> [<code>OD_NPLANES_MAX</code>]<br/>
+ <i>Typical 3 planes for Y, Cb, and Cr. </i><br/>
+ int <code>nplanes</code><br/>
+ <i>Number of planes (1 for greyscale, 3 for YCbCr, 4 for YCbCr+Alpha ) </i><br/>
+ int32_t <code>width</code><br/>
+ <i>Width and height in pixels. </i><br/>
  int32_t <code>height</code> </p>
 <h2>Detailed Description</h2>
 <p>Representation of an image or video frame. </p>

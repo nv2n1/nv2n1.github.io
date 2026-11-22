@@ -9,13 +9,13 @@ description: "X Damage Extension Functions – Functions related to the X Damage
 
 <p>X Damage Extension Functions &#8211; Functions related to the X Damage extension. </p>
 <h3>Functions</h3>
-<p>EAPI int <code>ecore_x_damage_query</code> (void)<br />
- <i>Return whether the Damage Extension is available. </i><br />
- EAPI Ecore_X_Damage <code>ecore_x_damage_new</code> (Ecore_X_Drawable drawable, Ecore_X_Damage_Report_Level level)<br />
- <i>Creates a damage object. </i><br />
- EAPI void <code>ecore_x_damage_del</code> (Ecore_X_Damage damage)<br />
- <i>Destroys a damage object. </i><br />
- EAPI void <code>ecore_x_damage_subtract</code> (Ecore_X_Damage damage, Ecore_X_Region repair, Ecore_X_Region parts)<br />
+<p>EAPI int <code>ecore_x_damage_query</code> (void)<br/>
+ <i>Return whether the Damage Extension is available. </i><br/>
+ EAPI Ecore_X_Damage <code>ecore_x_damage_new</code> (Ecore_X_Drawable drawable, Ecore_X_Damage_Report_Level level)<br/>
+ <i>Creates a damage object. </i><br/>
+ EAPI void <code>ecore_x_damage_del</code> (Ecore_X_Damage damage)<br/>
+ <i>Destroys a damage object. </i><br/>
+ EAPI void <code>ecore_x_damage_subtract</code> (Ecore_X_Damage damage, Ecore_X_Region repair, Ecore_X_Region parts)<br/>
  <i>Synchronously modifies the region. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions related to the X Damage extension.</p>
@@ -30,7 +30,7 @@ description: "X Damage Extension Functions – Functions related to the X Damage
 <p>Creates a damage object. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>drawable</i> The drawable to monotor.<br />
+<dd><i>drawable</i> The drawable to monotor.<br/>
  <i>level</i> The level of the damage report.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -46,8 +46,8 @@ description: "X Damage Extension Functions – Functions related to the X Damage
 <p>Synchronously modifies the region. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>damage</i> The damage object to destroy.<br />
- <i>repair</i> The repair region.<br />
+<dd><i>damage</i> The damage object to destroy.<br/>
+ <i>repair</i> The repair region.<br/>
  <i>parts</i> The parts region.</dd></dl>
 <p> Synchronously modifies the regions in the following manner: If repair is XCB_NONE: 1) parts = damage 2) damage = &lt;empty&gt; Otherwise: 1) parts = damage INTERSECT repair 2) damage = damage &#8211; parts 3) Generate DamageNotify for remaining damage areas</p>
 <h2>Author</h2>

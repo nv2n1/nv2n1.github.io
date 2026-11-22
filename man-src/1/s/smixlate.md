@@ -44,5 +44,5 @@ description: "smixlate – translate SMI/SPPI identifiers"
 <h2>SEE ALSO</h2>
 <p> The <code>libsmi</code>(3) project is documented at <code><a rel="nofollow" href="http://www.ibr.cs.tu-bs.de/projects/libsmi/">http://www.ibr.cs.tu-bs.de/projects/libsmi/</a></code>.</p>
 <h2>AUTHORS</h2>
-<p> (C) 2006-2006 J. Schoenwaelder, International University Bremen, Germany<br />
+<p> (C) 2006-2006 J. Schoenwaelder, International University Bremen, Germany<br/>
  and contributions by many other people. </p>

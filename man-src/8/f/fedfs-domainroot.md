@@ -62,23 +62,23 @@ description: "fedfs-domainroot – set up FedFS domain root infrastructure"
 <p>Suppose you are the FedFS administrator of the <i>example.net</i> FedFS domain. After you have chosen a reliable NFS fileserver to serve your FedFS domain root directory, log in on that fileserver as root and ensure that NFSD is running. </p>
 <p> To create a new FedFS domain root for the <i>example.net</i> domain, use:</p>
 <dl>
-<dd># fedfs-domainroot &#8211;silent add example.net<br />
- Added domain root for FedFS domain &quot;example.net&quot;<br />
+<dd># fedfs-domainroot &#8211;silent add example.net<br/>
+ Added domain root for FedFS domain &quot;example.net&quot;<br/>
  # </dd>
 </dl>
 <p> To populate the new domain root, change your current directory to <i>/.domainroot/example.net</i>, then add junctions with the <code><a href="/docs/linux/man/8-nfsref/">nfsref</a></code>(8) command on the fileserver. </p>
 <p> You can list the domain roots that are currently exported by your fileserver with:</p>
 <dl>
-<dd># fedfs-domainroot &#8211;silent status<br />
+<dd># fedfs-domainroot &#8211;silent status<br/>
  FedFS domain roots: </dd>
-<p>&nbsp;<wbr>&nbsp;<wbr>example.net is exported with options<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>*(ro,subtree_check,mp,insecure,sec=sys:none)<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>example.net is exported with options<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>*(ro,subtree_check,mp,insecure,sec=sys:none)<br/>
  # </p>
 </dl>
 <p> When you want to remove this domain root (say, because you have moved it to another fileserver), remove it&#8217;s contents, then use:</p>
 <dl>
-<dd># fedfs-domainroot remove example.net<br />
- Removed domain root for FedFS domain &quot;example.net&quot;<br />
+<dd># fedfs-domainroot remove example.net<br/>
+ Removed domain root for FedFS domain &quot;example.net&quot;<br/>
  #</dd></dl>
 <h2>Domain Root Discovery</h2>
 <p>To enable discovery of new domain roots by FedFS-enabled file-access clients, a DNS SRV record must be added to an appropriate authoritative DNS server. </p>

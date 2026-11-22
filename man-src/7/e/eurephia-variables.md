@@ -49,7 +49,7 @@ description: "Overview over all eurephia configuration variables. These variable
 <dt><code>eurephiadm_xslt_path</code></dt>
 <dd>The <code>eurephiadm</code> utility uses XSLT templates for generating the output to the screen. This variable gives you the possibility to have your own set of templates in a different directory instead of using the system wide XSLT templates installed by default. This variable is not set by default.</dd></dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-eurephiadm-config/">eurephiadm-config</a></code>(7), <code><a href="/docs/linux/man/7-eurephia_init/">eurephia_init</a></code>(7),<br />
+<p><code><a href="/docs/linux/man/7-eurephiadm-config/">eurephiadm-config</a></code>(7), <code><a href="/docs/linux/man/7-eurephia_init/">eurephia_init</a></code>(7),<br/>
  Administrators Tutorial and Manual</p>
 <h2>Author</h2>
 <p>Copyright (C) 2008-2010 David Sommerseth &lt;dazo [at] users.sourceforge.net&gt;</p>

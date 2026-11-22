@@ -11,9 +11,9 @@ description: "ipsec_atoasr, ipsec_rangetoa – convert ASCII to Internet address
 <p> ipsec_atoasr, ipsec_rangetoa &#8211; convert ASCII to Internet address, subnet, or range, convert Internet address range to ASCII</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libreswan.h&gt;</code> </p>
-<p> <code>const char *atoasr(const char *src, size_t srclen,</code><br />
- &nbsp;<wbr> <code>char *type, struct in_addr *addrs);</code><br />
- <code>size_t rangetoa(struct in_addr *addrs, int format,</code><br />
+<p> <code>const char *atoasr(const char *src, size_t srclen,</code><br/>
+ &nbsp;<wbr> <code>char *type, struct in_addr *addrs);</code><br/>
+ <code>size_t rangetoa(struct in_addr *addrs, int format,</code><br/>
  &nbsp;<wbr> <code>char *dst, size_t dstlen);</code></p>
 <h2>DESCRIPTION</h2>
 <p> These functions are obsolete; there is no current equivalent, because so far they have not proved useful. </p>

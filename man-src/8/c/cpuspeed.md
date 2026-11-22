@@ -73,10 +73,10 @@ description: "cpuspeed – user-space cpu frequency scaling program, v1.5.1"
 /etc/init.d/cpuspeed, initialzation script
 /usr/sbin/cpuspeed, cpuspeed program</pre>
 <h2>See Also</h2>
-<p>The CPUSpeed web page:<br />
+<p>The CPUSpeed web page:<br/>
 &nbsp;<wbr>&nbsp;<wbr><code>&nbsp;<wbr><a rel="nofollow" href="http://carlthompson.net/Software/CPUSpeed">http://carlthompson.net/Software/CPUSpeed</a></code></p>
 <h2>License</h2>
-<p>CPUSpeed is released under the GNU General Public License version 2 (or if you wish any later version). This license allows you to use, copy, distribute and modify the software with very few restrictions. The full text of the license may be found here:<br />
+<p>CPUSpeed is released under the GNU General Public License version 2 (or if you wish any later version). This license allows you to use, copy, distribute and modify the software with very few restrictions. The full text of the license may be found here:<br/>
 &nbsp;<wbr>&nbsp;<wbr><code><a rel="nofollow" href="http://carlthompson.net/Software/CPUSpeed/License">http://carlthompson.net/Software/CPUSpeed/License</a></code></p>
 <h2>Author(S):</h2>
 <dl>

@@ -10,22 +10,22 @@ description: "Credential Handle Attributes –"
 
 <p> Credential Handle Attributes &#8211; </p>
 <h3>Typedefs</h3>
-<p> typedef struct<br />
+<p> typedef struct<br/>
  globus_l_gsi_cred_handle_attrs_s * <code>globus_gsi_cred_handle_attrs_t</code>&quot; </p>
 <h3>Functions</h3>
-<p> globus_result_t <code>globus_gsi_cred_handle_attrs_init</code> (<code>globus_gsi_cred_handle_attrs_t</code> *handle_attrs)<br />
- <i>Initialize credential handle attributes. </i><br />
- globus_result_t <code>globus_gsi_cred_handle_attrs_destroy</code> (<code>globus_gsi_cred_handle_attrs_t</code> handle_attrs)<br />
- <i>Destroy credential handle attributes. </i><br />
- globus_result_t <code>globus_gsi_cred_handle_attrs_copy</code> (<code>globus_gsi_cred_handle_attrs_t</code> source, <code>globus_gsi_cred_handle_attrs_t</code> *dest)<br />
- <i>Copy credential handle attributes. </i><br />
- globus_result_t <code>globus_gsi_cred_handle_attrs_set_ca_cert_dir</code> (<code>globus_gsi_cred_handle_attrs_t</code> handle_attrs, const char *ca_cert_dir)<br />
- <i>Set the CA certificate directory. </i><br />
- globus_result_t <code>globus_gsi_cred_handle_attrs_get_ca_cert_dir</code> (<code>globus_gsi_cred_handle_attrs_t</code> handle_attrs, char **ca_cert_dir)<br />
- <i>Get the CA certificate directory. </i><br />
- globus_result_t <code>globus_gsi_cred_handle_attrs_set_search_order</code> (<code>globus_gsi_cred_handle_attrs_t</code> handle_attrs, <code>globus_gsi_cred_type_t</code> search_order[])<br />
- <i>Set the search order. </i><br />
- globus_result_t <code>globus_gsi_cred_handle_attrs_get_search_order</code> (<code>globus_gsi_cred_handle_attrs_t</code> handle_attrs, <code>globus_gsi_cred_type_t</code> **search_order)<br />
+<p> globus_result_t <code>globus_gsi_cred_handle_attrs_init</code> (<code>globus_gsi_cred_handle_attrs_t</code> *handle_attrs)<br/>
+ <i>Initialize credential handle attributes. </i><br/>
+ globus_result_t <code>globus_gsi_cred_handle_attrs_destroy</code> (<code>globus_gsi_cred_handle_attrs_t</code> handle_attrs)<br/>
+ <i>Destroy credential handle attributes. </i><br/>
+ globus_result_t <code>globus_gsi_cred_handle_attrs_copy</code> (<code>globus_gsi_cred_handle_attrs_t</code> source, <code>globus_gsi_cred_handle_attrs_t</code> *dest)<br/>
+ <i>Copy credential handle attributes. </i><br/>
+ globus_result_t <code>globus_gsi_cred_handle_attrs_set_ca_cert_dir</code> (<code>globus_gsi_cred_handle_attrs_t</code> handle_attrs, const char *ca_cert_dir)<br/>
+ <i>Set the CA certificate directory. </i><br/>
+ globus_result_t <code>globus_gsi_cred_handle_attrs_get_ca_cert_dir</code> (<code>globus_gsi_cred_handle_attrs_t</code> handle_attrs, char **ca_cert_dir)<br/>
+ <i>Get the CA certificate directory. </i><br/>
+ globus_result_t <code>globus_gsi_cred_handle_attrs_set_search_order</code> (<code>globus_gsi_cred_handle_attrs_t</code> handle_attrs, <code>globus_gsi_cred_type_t</code> search_order[])<br/>
+ <i>Set the search order. </i><br/>
+ globus_result_t <code>globus_gsi_cred_handle_attrs_get_search_order</code> (<code>globus_gsi_cred_handle_attrs_t</code> handle_attrs, <code>globus_gsi_cred_type_t</code> **search_order)<br/>
  <i>Get the search order. </i></p>
 <h2>Detailed Description</h2>
 <p> Create/Destroy/Modify GSI Credential Handle Attributes. </p>
@@ -45,7 +45,7 @@ description: "Credential Handle Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>source</i> The handle attribute to be copied<br />
+</dt><dd> <i>source</i> The handle attribute to be copied<br/>
  <i>dest</i> The copy</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -66,7 +66,7 @@ description: "Credential Handle Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle_attrs</i> the credential handle attributes to get the trusted ca cert directory from<br />
+</dt><dd> <i>handle_attrs</i> the credential handle attributes to get the trusted ca cert directory from<br/>
  <i>ca_cert_dir</i> the trusted ca certificates directory</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -77,7 +77,7 @@ description: "Credential Handle Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle_attrs</i> The handle attributes to get the search order from<br />
+</dt><dd> <i>handle_attrs</i> The handle attributes to get the search order from<br/>
  <i>search_order</i> The search_order of the handle attributes</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -103,7 +103,7 @@ description: "Credential Handle Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle_attrs</i> the credential handle attributes to set<br />
+</dt><dd> <i>handle_attrs</i> the credential handle attributes to set<br/>
  <i>ca_cert_dir</i> the trusted ca certificates directory</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -114,7 +114,7 @@ description: "Credential Handle Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle_attrs</i> The handle attributes to set the search order of<br />
+</dt><dd> <i>handle_attrs</i> The handle attributes to set the search order of<br/>
  <i>search_order</i> The search order. Should be a three element array containing in some order PROXY, USER, HOST, SERVICE. The array should be terminated by the value GLOBUS_SO_END.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

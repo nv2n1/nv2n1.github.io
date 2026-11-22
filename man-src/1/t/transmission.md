@@ -10,7 +10,7 @@ description: "transmission – a bittorrent client"
 
 <p> <code>transmission</code> &#8211; a bittorrent client</p>
 <h2>SYNOPSIS</h2>
-<p> <code>transmission</code> &#8211;<code>?</code><br />
+<p> <code>transmission</code> &#8211;<code>?</code><br/>
 <code>transmission</code> [-<code>pqm</code> ] [<i>torrent-file &#8230;</i> ]</p>
 <h2>DESCRIPTION</h2>
 <p> <code>transmission</code> is a fast and easy BitTorrent client. </p>

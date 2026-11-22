@@ -10,7 +10,7 @@ description: "XkbAllocIndicatorMaps – Allocates, directly, the indicators memb
 <p>XkbAllocIndicatorMaps &#8211; Allocates, directly, the <i>indicators </i> member of the keyboard description record </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Status XkbAllocIndicatorMaps</code> <code>(variable_type *</code><i>xkb</i><code>);</code><br />
+<dt> <code>Status XkbAllocIndicatorMaps</code> <code>(variable_type *</code><i>xkb</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

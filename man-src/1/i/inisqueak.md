@@ -10,7 +10,7 @@ description: "squeak, inisqueak – Unix Squeak virtual machine and installer"
 
 <p> squeak, inisqueak &#8211; Unix Squeak virtual machine and installer</p>
 <h2>SYNOPSIS</h2>
-<p> <code>inisqueak</code><br />
+<p> <code>inisqueak</code><br/>
  <code>squeak</code> [ <i>option</i>&#8230; ] [ <i>image</i> ] [ <i>script</i> [ <i>argument</i>&#8230; ] ]</p>
 <h2>DESCRIPTION</h2>
 <p> <code>squeak</code> is the virtual machine for the Squeak Smalltalk system. It requires three files to operate correctly: an <code>image</code> file containing a `snapshot&#8217; of a live Squeak session, a <code>changes</code> file containing the source code for modified methods in the image, and a copy of (or a link to) a shared system <code>sources</code> file containing the source code for methods that have not been modified since the last major version increment. </p>
@@ -344,17 +344,17 @@ SystemDictionary&gt;&gt;getSystemAttribute:
 <dl>
 <dt>
 </dt><dd> A link to the system sources file.</dd></dl>
-<p> <i>./</i>name<i>.image</i><br />
+<p> <i>./</i>name<i>.image</i><br/>
  <i>./</i>name<i>.changes</i></p>
 <dl>
 <dt>
 </dt><dd> Private copies of image and changes files.</dd></dl>
-<p> <i>/usr/lib64/squeak/3.10-5/*.so</i><br />
+<p> <i>/usr/lib64/squeak/3.10-5/*.so</i><br/>
  <i>/usr/lib64/squeak/3.10-5/*.la</i></p>
 <dl>
 <dt>
 </dt><dd> Virtual machine &#8216;plugins&#8217; (containing primitives that are loaded on demand) and drivers (for different types of display and sound hardware).</dd></dl>
-<p> <i>/usr/bin/squeak</i><br />
+<p> <i>/usr/bin/squeak</i><br/>
  <i>/usr/bin/inisqueak</i></p>
 <dl>
 <dt>

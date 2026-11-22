@@ -10,7 +10,7 @@ description: "pmUnitsStr, pmUnitsStr_r – convert a performance metric’s unit
 <p><code>pmUnitsStr</code>, <code>pmUnitsStr_r &#8211; convert a performance metric&#8217;s units into a string </code></p>
 <h2>C Synopsis</h2>
 <p><code> #include &lt;pcp/pmapi.h&gt; </p>
-<p> const char *pmUnitsStr(const pmUnits *</code><i>pu</i>);<br />
+<p> const char *pmUnitsStr(const pmUnits *</code><i>pu</i>);<br/>
  char *pmUnitsStr_r(const pmUnits *<i>pu</i>, char *<i>buf</i>, int <i>buflen</i>); </p>
 <p> cc &#8230; -lpcp</p>
 <h2>Description</h2>

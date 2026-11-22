@@ -25,18 +25,18 @@ vipe - edit pipe
   vipe --suffix csv
 </pre> 
 
- to create a tempfile with .csv extensions which makes Emacs (or your favorite editor) launch in <font SIZE="-1">CSV</font> major mode.
+ to create a tempfile with .csv extensions which makes Emacs (or your favorite editor) launch in CSV major mode.
 
 <h2>ENVIRONMENT VARIABLES</h2>
 
 <dl>
-<dt><font SIZE="-1">EDITOR</font>
+<dt>EDITOR
 </dt><dd> Editor to use.
-</dd><dt><font SIZE="-1">VISUAL</font>
+</dd><dt>VISUAL
 </dt><dd> Also supported to determine what editor to use.</dd></dl>
 
 <h2>AUTHOR</h2>
 
  Copyright 2006 by Joey Hess &lt;id [at] joeyh.name&gt; 
 
- Licensed under the <font SIZE="-1">GNU GPL.</font>
+ Licensed under the GNU GPL.

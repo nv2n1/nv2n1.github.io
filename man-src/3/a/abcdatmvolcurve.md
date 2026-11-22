@@ -10,11 +10,11 @@ description: "ql/experimental/volatility/abcdatmvolcurve.hpp – Abcd-interpolat
 
 <p> ql/experimental/volatility/abcdatmvolcurve.hpp &#8211; Abcd-interpolated at-the-money (no-smile) interest rate vol curve. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/experimental/volatility/blackatmvolcurve.hpp&gt;<br />
- #include &lt;ql/patterns/lazyobject.hpp&gt;<br />
+<p> #include &lt;ql/experimental/volatility/blackatmvolcurve.hpp&gt;<br/>
+ #include &lt;ql/patterns/lazyobject.hpp&gt;<br/>
  #include &lt;ql/math/interpolations/abcdinterpolation.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>AbcdAtmVolCurve</code><br />
+<p> class <code>AbcdAtmVolCurve</code><br/>
  <i>Abcd-interpolated at-the-money (no-smile) volatility curve. </i></p>
 <h2>Detailed Description</h2>
 <p> Abcd-interpolated at-the-money (no-smile) interest rate vol curve. </p>

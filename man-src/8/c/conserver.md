@@ -99,7 +99,7 @@ description: "conserver – console server daemon"
 <p>The protocol used to interact with the <code>conserver</code> daemon has two basic styles. The first style is the initial line-based mode, which occurs before connecting to a console. The second style is the character-based, escape-sequence mode, while connected to a console. </p>
 <p> The initial line-based mode begins the same for both the master process and its children. Upon a successful (non-rejected) client connection, an &#8220;ok&#8221; is sent. The client then issues a command and the server responds to it with a result string (&#8220;ok&#8221; being the sign of success for most commands). The commands available are &#8220;help&#8221;, &#8220;ssl&#8221; (if SSL was built into the code), &#8220;login&#8221;, and &#8220;exit&#8221;. Using the &#8220;login&#8221; command, the client authenticates and gains access to the extended command set. This is where the master process and its children differ. The master process gives the client access to global commands, and the child provides commands for interacting with the consoles it manages. The &#8220;help&#8221; command, in both cases, will provide a complete list of commands and a short description of what they do. </p>
 <p> The second, character-based, style of interaction occurs when the client issues the &#8220;call&#8221; command with a child process. This command connects the client to a console and, at that point, relays all traffic between the client and the console. There is no more command-based interaction between the client and the server, any interaction with the server is done with the default escape sequence. </p>
-<p> This is, by no means, a complete description of the entire client/server interaction. It is, however, a brief explanation in order to give a idea of what the program does. See the <font SIZE="-1"><code>PROTOCOL</code></font> file in the distribution for further details.</p>
+<p> This is, by no means, a complete description of the entire client/server interaction. It is, however, a brief explanation in order to give a idea of what the program does. See the <code>PROTOCOL</code> file in the distribution for further details.</p>
 <h2>Files</h2>
 <p>The following default file locations may be overridden at compile time or by the command-line options described above. Run <code>conserver -V</code> to see the defaults set at compile time. </p>
 <dl>
@@ -117,8 +117,8 @@ description: "conserver – console server daemon"
 <h2>Bugs</h2>
 <p>I&#8217;m sure there are bugs, I just don&#8217;t know where they are. Please let me know if you find any.</p>
 <h2>Authors</h2>
-<p>Thomas A. Fine, Ohio State Computer Science<br />
- Kevin S Braunsdorf, Purdue University Computing Center<br />
+<p>Thomas A. Fine, Ohio State Computer Science<br/>
+ Kevin S Braunsdorf, Purdue University Computing Center<br/>
  Bryan Stansell, conserver.com</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-console/">console</a></code>(1), <code><a href="/docs/linux/man/5-conserver-cf/">conserver.cf</a></code>(5), <code><a href="/docs/linux/man/5-conserver-passwd/">conserver.passwd</a></code>(5) </p>

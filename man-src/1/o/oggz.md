@@ -8,12 +8,12 @@ url: "/docs/linux/man/1-oggz/"
 description: "oggz — inspect and manipulate Ogg multimedia files"
 ---
 
-<p> oggz &#8212; inspect and manipulate Ogg multimedia files<br />
+<p> oggz &#8212; inspect and manipulate Ogg multimedia files<br/>
 &nbsp;<wbr></p>
 <h2>SYNOPSIS</h2>
 <p> <code>oggz</code>help <code>command</code> command <code>args</code></p>
 <h2>Description</h2>
-<p> <code>oggz</code> is a suite of tools for manipulating Ogg multimedia files. It supports multiplexed files conformant with RFC3533. Oggz can parse headers for CELT, CMML, Dirac, FLAC, Kate, PCM, Speex, Theora and Vorbis, and can read and write Ogg Skeleton logical bitstreams.<br />
+<p> <code>oggz</code> is a suite of tools for manipulating Ogg multimedia files. It supports multiplexed files conformant with RFC3533. Oggz can parse headers for CELT, CMML, Dirac, FLAC, Kate, PCM, Speex, Theora and Vorbis, and can read and write Ogg Skeleton logical bitstreams.<br/>
 &nbsp;<wbr></p>
 <h2>Commands</h2>
 <dl>
@@ -42,7 +42,7 @@ description: "oggz — inspect and manipulate Ogg multimedia files"
 <dt> &bull;</dt>
 <dd> <code>comment</code>List or edit comments in an Ogg file. <code>merge</code>Merge Ogg files together, interleaving pages in order of presentation time.<code>sort</code>Sort the pages of an Ogg file in order of presentation time.</dd></dl>
 <h2>Options</h2>
-<p> <code>oggz</code> accepts the following options:<br />
+<p> <code>oggz</code> accepts the following options:<br/>
 &nbsp;<wbr></p>
 <h3>Miscellaneous options</h3>
 <dl>
@@ -53,7 +53,7 @@ description: "oggz — inspect and manipulate Ogg multimedia files"
 <h2>AUTHOR</h2>
 <p> Conrad Parker July 9, 2008;</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2008 Annodex Association<br />
+<p> Copyright &#169; 2008 Annodex Association<br/>
 &nbsp;<wbr></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ogginfo/">ogginfo</a></code><code>(1)</code> <code>hogg</code><code>(1)</code> </p>

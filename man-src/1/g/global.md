@@ -10,13 +10,13 @@ description: "global – print the locations of specified object."
 
 <p> global &#8211; print the locations of specified object.</p>
 <h2>SYNOPSIS</h2>
-<p> <code>global</code> [-aGilnqrstTvx][-e] <i>pattern</i><br />
- <code>global</code> -c[qrsv] <i>prefix</i><br />
- <code>global</code> -f[anqrstvx] <i>files</i><br />
- <code>global</code> -g[aGilnoOqtvx][-e] <i>pattern</i><br />
- <code>global</code> -I[ailnqtvx][-e] <i>pattern</i><br />
- <code>global</code> -P[aGilnoOqtvx][-e] <i>pattern</i><br />
- <code>global</code> -p[qrv]<br />
+<p> <code>global</code> [-aGilnqrstTvx][-e] <i>pattern</i><br/>
+ <code>global</code> -c[qrsv] <i>prefix</i><br/>
+ <code>global</code> -f[anqrstvx] <i>files</i><br/>
+ <code>global</code> -g[aGilnoOqtvx][-e] <i>pattern</i><br/>
+ <code>global</code> -I[ailnqtvx][-e] <i>pattern</i><br/>
+ <code>global</code> -P[aGilnoOqtvx][-e] <i>pattern</i><br/>
+ <code>global</code> -p[qrv]<br/>
  <code>global</code> -u[qv] </p>
 <h2>DESCRIPTION</h2>
 <p> <code>Global</code> find the locations of specified object in C, C++, Yacc, Java, PHP and Assembly source files. <code>Global</code> can treat a source tree, that is, a directory that has sub-directories and source files as a project. You can get the relative path of objects from anywhere within the project. <code>Global</code> can locate not only object definitions but also object references and other symbols. </p>
@@ -139,7 +139,7 @@ $ ls - F Makefile src / lib / $ gtags $ global main src / main.c $ global - x ma
 <p> <code>Global</code> exits with a non 0 value if an error occurred, 0 otherwise.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gtags-parser/">gtags-parser</a></code>(1), <code><a href="/docs/linux/man/1-gtags/">gtags</a></code>(1), <code><a href="/docs/linux/man/1-htags/">htags</a></code>(1), <code><a href="/docs/linux/man/1-less/">less</a></code>(1). </p>
-<p> GNU GLOBAL source code tag system<br />
+<p> GNU GLOBAL source code tag system<br/>
  (<a rel="nofollow" href="http://www.gnu.org/software/global/">http://www.gnu.org/software/global/</a>).</p>
 <h2>AUTHOR</h2>
 <p> Tama Communications Corporation.</p>

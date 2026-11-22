@@ -13,9 +13,9 @@ description: "ip-token – tokenized interface identifier support"
 { COMMAND |
     help }
 </code></pre>
-<p> <code>ip token set</code> <i>TOKEN</i> <code>dev</code> <i>DEV</i><br />
- <code>ip token del dev</code> <i>DEV</i><br />
- <code>ip token get</code> [ <code>dev</code> <i>DEV</i> ]<br />
+<p> <code>ip token set</code> <i>TOKEN</i> <code>dev</code> <i>DEV</i><br/>
+ <code>ip token del dev</code> <i>DEV</i><br/>
+ <code>ip token get</code> [ <code>dev</code> <i>DEV</i> ]<br/>
  <code>ip token</code> [ <code>list</code> ] </p>
 <h2>Description</h2>
 <p>IPv6 tokenized interface identifier support is used for assigning well-known host-part addresses to nodes whilst still obtaining a global network prefix from Router advertisements. The primary target for tokenized identifiers are server platforms where addresses are usually manually configured, rather than using DHCPv6 or SLAAC. By using tokenized identifiers, hosts can still determine their network prefix by use of SLAAC, but more readily be automatically renumbered should their network prefix change [1]. Tokenized IPv6 Identifiers are described in the draft [1]: &lt;draft-chown-6man-tokenised-ipv6-identifiers-02&gt;.</p>

@@ -71,13 +71,13 @@ CONTROL := {
 <h2>Examples</h2>
 <p>The following example encapsulates incoming ICMP packets on eth0 from 10.0.0.2 into VLAN ID 123:</p>
 <dl>
-<dd>#tc qdisc add dev eth0 handle ffff: ingress #tc filter add dev eth0 parent ffff: pref 11 protocol ip \ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>u32 match ip protocol 1 0xff flowid 1:1 \<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt> match ip src 10.0.0.2 flowid 1:1 \<br />
+<dd>#tc qdisc add dev eth0 handle ffff: ingress #tc filter add dev eth0 parent ffff: pref 11 protocol ip \ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>u32 match ip protocol 1 0xff flowid 1:1 \<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt> match ip src 10.0.0.2 flowid 1:1 \<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>action vlan push id 123
 </dd></dl>
 <p> Here is an example of the <code>pop</code> function: Incoming VLAN packets on eth0 are decapsulated and the classification process then restarted for the plain packet:</p>
 <dl>
-<dd>#tc qdisc add dev eth0 handle ffff: ingress #tc filter add dev $ETH parent ffff: pref 1 protocol 802.1Q \ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>u32 match u32 0 0 flowid 1:1 \<br />
+<dd>#tc qdisc add dev eth0 handle ffff: ingress #tc filter add dev $ETH parent ffff: pref 1 protocol 802.1Q \ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>u32 match u32 0 0 flowid 1:1 \<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>action vlan pop reclassify
 </dd></dl>
 <p> For an example of the <code>pop_eth</code> and <code>push_eth</code> modes, see <code><a href="/docs/linux/man/8-tc-mpls/">tc-mpls</a></code>(8). </p>

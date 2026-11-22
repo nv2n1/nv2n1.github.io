@@ -9,13 +9,13 @@ description: "old_api – Calls mib module code written in the old style of code
 
 <p>old_api &#8211; Calls mib module code written in the old style of code.</p>
 <h3>Functions</h3>
-<p><code>netsnmp_mib_handler</code> * <code>get_old_api_handler</code> (void)<br />
- <i>returns a old_api handler that should be the final calling handler. </i><br />
- int <code>netsnmp_register_old_api</code> (const char *moduleName, struct <code>variable</code> *var, size_t varsize, size_t numvars, oid *mibloc, size_t mibloclen, int priority, int range_subid, oid range_ubound, <code>netsnmp_session</code> *ss, const char *context, int timeout, int flags)<br />
- <i>Registers an old API set into the mib tree. </i><br />
- int <code>netsnmp_register_mib_table_row</code> (const char *moduleName, struct <code>variable</code> *var, size_t varsize, size_t numvars, oid *mibloc, size_t mibloclen, int priority, int var_subid, <code>netsnmp_session</code> *ss, const char *context, int timeout, int flags)<br />
- <i>registers a row within a mib table </i><br />
- int <code>netsnmp_old_api_helper</code> (<code>netsnmp_mib_handler</code> *handler, <code>netsnmp_handler_registration</code> *reginfo, <code>netsnmp_agent_request_info</code> *reqinfo, <code>netsnmp_request_info</code> *requests)<br />
+<p><code>netsnmp_mib_handler</code> * <code>get_old_api_handler</code> (void)<br/>
+ <i>returns a old_api handler that should be the final calling handler. </i><br/>
+ int <code>netsnmp_register_old_api</code> (const char *moduleName, struct <code>variable</code> *var, size_t varsize, size_t numvars, oid *mibloc, size_t mibloclen, int priority, int range_subid, oid range_ubound, <code>netsnmp_session</code> *ss, const char *context, int timeout, int flags)<br/>
+ <i>Registers an old API set into the mib tree. </i><br/>
+ int <code>netsnmp_register_mib_table_row</code> (const char *moduleName, struct <code>variable</code> *var, size_t varsize, size_t numvars, oid *mibloc, size_t mibloclen, int priority, int var_subid, <code>netsnmp_session</code> *ss, const char *context, int timeout, int flags)<br/>
+ <i>registers a row within a mib table </i><br/>
+ int <code>netsnmp_old_api_helper</code> (<code>netsnmp_mib_handler</code> *handler, <code>netsnmp_handler_registration</code> *reginfo, <code>netsnmp_agent_request_info</code> *reqinfo, <code>netsnmp_request_info</code> *requests)<br/>
  <i>implements the old_api handler </i></p>
 <h2>Detailed Description</h2>
 <p>Calls mib module code written in the old style of code. </p>

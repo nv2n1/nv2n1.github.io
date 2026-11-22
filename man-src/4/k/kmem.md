@@ -22,8 +22,8 @@ description: "mem, kmem, port – system memory, kernel memory and system ports"
 <p> It is typically created by: </p>
 <p> mknod -m 660 /dev/port c 1 4 chown root:kmem /dev/port</p>
 <h2>Files</h2>
-<p><i>/dev/mem</i><br />
- <i>/dev/kmem</i><br />
+<p><i>/dev/mem</i><br/>
+ <i>/dev/kmem</i><br/>
  <i>/dev/port</i></p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-chown/">chown</a></code>(1), <code><a href="/docs/linux/man/1-mknod/">mknod</a></code>(1), <code><a href="/docs/linux/man/2-ioperm/">ioperm</a></code>(2)</p>

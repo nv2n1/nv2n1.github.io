@@ -12,8 +12,8 @@ description: "IV_INOTIFY_INIT, iv_inotify_register, iv_inotify_unregister, IV_IN
 <pre><code>#include &lt;iv_inotify.h&gt;</code>
 struct iv_inotify {
 };</pre>
-<p><code>void IV_INOTIFY_INIT(struct iv_inotify *</code><i>inotify</i><code>);</code><br />
- <code>int iv_inotify_register(struct iv_inotify *</code><i>inotify</i><code>);</code><br />
+<p><code>void IV_INOTIFY_INIT(struct iv_inotify *</code><i>inotify</i><code>);</code><br/>
+ <code>int iv_inotify_register(struct iv_inotify *</code><i>inotify</i><code>);</code><br/>
  <code>void iv_inotify_unregister(struct iv_inotify *inotify</code><i>);</i> </p>
 <pre>struct iv_inotify_watch {
  struct iv_inotify *inotify;
@@ -22,8 +22,8 @@ struct iv_inotify {
  void *cookie;
  void (*handler)(void *, struct inotify_event *);
 };</pre>
-<p><code>void IV_INOTIFY_WATCH_INIT(struct iv_inotify_watch *</code><i>watch</i><code>);</code><br />
- <code>int iv_inotify_watch_register(struct iv_inotify_watch *</code><i>watch</i><code>);</code><br />
+<p><code>void IV_INOTIFY_WATCH_INIT(struct iv_inotify_watch *</code><i>watch</i><code>);</code><br/>
+ <code>int iv_inotify_watch_register(struct iv_inotify_watch *</code><i>watch</i><code>);</code><br/>
  <code>int iv_inotify_watch_unregister(struct iv_inotify_watch *</code><i>watch</i><code>);</code> </p>
 <h2>Description</h2>
 <p>The <code>iv_inotify_register</code> function registers an <code>iv_inotify</code> instance with the <code>iv_inotify</code>(3) module. The <code>inotify</code> parameter is a pointer to the <code>iv_inotify</code> structure to be registered. </p>

@@ -10,13 +10,13 @@ description: "lrzip – a large-file compression program"
 
 <p> lrzip &#8211; a large-file compression program</p>
 <h2>SYNOPSIS</h2>
-<p> lrzip [OPTIONS] &lt;file&gt;<br />
- lrzip -d [OPTIONS] &lt;file&gt;<br />
- lrunzip [OPTIONS] &lt;file&gt;<br />
- lrzcat [OPTIONS] &lt;file&gt;<br />
- lrztar [lrzip options] &lt;directory&gt;<br />
- lrztar -d [lrzip options] &lt;directory&gt;<br />
- lrzuntar [lrzip options] &lt;directory&gt;<br />
+<p> lrzip [OPTIONS] &lt;file&gt;<br/>
+ lrzip -d [OPTIONS] &lt;file&gt;<br/>
+ lrunzip [OPTIONS] &lt;file&gt;<br/>
+ lrzcat [OPTIONS] &lt;file&gt;<br/>
+ lrztar [lrzip options] &lt;directory&gt;<br/>
+ lrztar -d [lrzip options] &lt;directory&gt;<br/>
+ lrzuntar [lrzip options] &lt;directory&gt;<br/>
  LRZIP=NOCONFIG [lrzip|lrunzip] [OPTIONS] &lt;file&gt; </p>
 <h2>DESCRIPTION</h2>
 <p> LRZIP is a file compression program designed to do particularly well on very large files containing long distance redundancy. lrztar is a wrapper for LRZIP to simplify compression and decompression of directories. </p>
@@ -138,8 +138,8 @@ If no filenames or "-" is specified, stdin/out will be used.
 <h2>FILES</h2>
 <p> LRZIP recognises a configuration file that contains default settings. This configuration is searched for in the current directory, /etc/lrzip, and $HOME/.lrzip. The configuration filename must be <code>lrzip.conf</code>. </p>
 <h2>ENVIRONMENT</h2>
-<p> By default, lrzip will search for and use a configuration file, lrzip.conf. If the user wishes to bypass the file, a startup ENV variable may be set.<br />
- <code>LRZIP =</code> <i>NOCONFIG </i> <code>[lrzip|lrunzip]</code> [OPTIONS] &lt;file&gt;<br />
+<p> By default, lrzip will search for and use a configuration file, lrzip.conf. If the user wishes to bypass the file, a startup ENV variable may be set.<br/>
+ <code>LRZIP =</code> <i>NOCONFIG </i> <code>[lrzip|lrunzip]</code> [OPTIONS] &lt;file&gt;<br/>
  which will force lrzip to ignore the configuration file. </p>
 <h2>HISTORY &#8211; Notes on rzip by Andrew Tridgell</h2>
 <p> The ideas behind rzip were first implemented in 1998 while I was working on rsync. That version was too slow to be practical, and was replaced by this version in 2003. LRZIP was created by the desire to have better compression and/or speed by Con Kolivas on blending the lzma and lzo compression algorithms with the rzip first stage, and extending the compression windows to scale with increasing ram sizes. </p>
@@ -148,11 +148,11 @@ If no filenames or "-" is specified, stdin/out will be used.
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/5-lrzip-conf/">lrzip.conf</a>(5), <a href="/docs/linux/man/1-lrunzip/">lrunzip</a>(1), <a href="/docs/linux/man/1-lrzcat/">lrzcat</a>(1), <a href="/docs/linux/man/1-lrztar/">lrztar</a>(1), <a href="/docs/linux/man/1-lrzuntar/">lrzuntar</a>(1), <a href="/docs/linux/man/1-bzip2/">bzip2</a>(1), <a href="/docs/linux/man/1-gzip/">gzip</a>(1), <a href="/docs/linux/man/1-lzop/">lzop</a>(1), rzip(1), <a href="/docs/linux/man/1-zip/">zip</a>(1) </p>
 <h2>AUTHOR and CREDITS</h2>
-<p> lrzip is being extensively bastardised from rzip by Con Kolivas.<br />
- rzip was written by Andrew Tridgell.<br />
- lzma was written by Igor Pavlov.<br />
- lzo was written by Markus Oberhumer.<br />
- zpaq was written by Matt Mahoney.<br />
+<p> lrzip is being extensively bastardised from rzip by Con Kolivas.<br/>
+ rzip was written by Andrew Tridgell.<br/>
+ lzma was written by Igor Pavlov.<br/>
+ lzo was written by Markus Oberhumer.<br/>
+ zpaq was written by Matt Mahoney.<br/>
  Peter Hyman added informational output, updated LZMA SDK, and added lzma multi-threading capabilities. </p>
 <p> If you wish to report a problem, or make a suggestion, then please email Con at kernel [at] kolivas.org </p>
 <p> lrzip is released under the GNU General Public License version 2. Please see the file COPYING for license details. </p>

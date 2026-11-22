@@ -14,8 +14,8 @@ description: "ANTLR3_BASE_TREE_struct –"
 <h3>Data Fields</h3>
 <p>void(* <code>addChild</code> )(struct <code>ANTLR3_BASE_TREE_struct</code> *tree, void *child) </p>
 <p> void(* <code>addChildren</code> )(struct <code>ANTLR3_BASE_TREE_struct</code> *tree, <code>pANTLR3_LIST</code> kids) </p>
-<p> <code>pANTLR3_VECTOR</code> <code>children</code><br />
- <i>The list of all the children that belong to this node. </i><br />
+<p> <code>pANTLR3_VECTOR</code> <code>children</code><br/>
+ <i>The list of all the children that belong to this node. </i><br/>
  void(* <code>createChildrenList</code> )(struct <code>ANTLR3_BASE_TREE_struct</code> *tree) </p>
 <p> void *(* <code>deleteChild</code> )(struct <code>ANTLR3_BASE_TREE_struct</code> *tree, <code>ANTLR3_UINT32</code> i) </p>
 <p> void *(* <code>dupNode</code> )(struct <code>ANTLR3_BASE_TREE_struct</code> *<code>dupNode</code>) </p>
@@ -31,24 +31,24 @@ description: "ANTLR3_BASE_TREE_struct –"
 <p> <code>ANTLR3_UINT32</code>(* <code>getLine</code> )(struct <code>ANTLR3_BASE_TREE_struct</code> *tree) </p>
 <p> struct <code>ANTLR3_BASE_TREE_struct</code> *(* <code>getParent</code> )(struct <code>ANTLR3_BASE_TREE_struct</code> *tree) </p>
 <p> <code>pANTLR3_STRING</code>(* <code>getText</code> )(struct <code>ANTLR3_BASE_TREE_struct</code> *tree) </p>
-<p> <code>pANTLR3_COMMON_TOKEN</code>(* <code>getToken</code> )(struct <code>ANTLR3_BASE_TREE_struct</code> *tree)<br />
- <i>A pointer to a function that returns the common token pointer for the payload in the supplied tree. </i><br />
+<p> <code>pANTLR3_COMMON_TOKEN</code>(* <code>getToken</code> )(struct <code>ANTLR3_BASE_TREE_struct</code> *tree)<br/>
+ <i>A pointer to a function that returns the common token pointer for the payload in the supplied tree. </i><br/>
  <code>ANTLR3_UINT32</code>(* <code>getType</code> )(struct <code>ANTLR3_BASE_TREE_struct</code> *tree) </p>
 <p> <code>ANTLR3_BOOLEAN</code>(* <code>isNilNode</code> )(struct <code>ANTLR3_BASE_TREE_struct</code> *tree) </p>
 <p> void(* <code>replaceChildren</code> )(struct <code>ANTLR3_BASE_TREE_struct</code> *parent, <code>ANTLR3_INT32</code> startChildIndex, <code>ANTLR3_INT32</code> stopChildIndex, struct <code>ANTLR3_BASE_TREE_struct</code> *t) </p>
 <p> void(* <code>reuse</code> )(struct <code>ANTLR3_BASE_TREE_struct</code> *tree) </p>
-<p> <code>ANTLR3_MARKER</code> <code>savedIndex</code><br />
- <i>This is used to store the current child index position while descending and ascending trees as the tree walk progresses. </i><br />
+<p> <code>ANTLR3_MARKER</code> <code>savedIndex</code><br/>
+ <i>This is used to store the current child index position while descending and ascending trees as the tree walk progresses. </i><br/>
  void(* <code>setChild</code> )(struct <code>ANTLR3_BASE_TREE_struct</code> *tree, <code>ANTLR3_UINT32</code> i, void *child) </p>
 <p> void(* <code>setChildIndex</code> )(struct <code>ANTLR3_BASE_TREE_struct</code> *tree, <code>ANTLR3_INT32</code>) </p>
 <p> void(* <code>setParent</code> )(struct <code>ANTLR3_BASE_TREE_struct</code> *tree, struct <code>ANTLR3_BASE_TREE_struct</code> *parent) </p>
-<p> <code>pANTLR3_STRING_FACTORY</code> <code>strFactory</code><br />
- <i>A string factory to produce strings for toString etc. </i><br />
- void * <code>super</code><br />
- <i>Implementers of this interface sometimes require a pointer to their selves. </i><br />
+<p> <code>pANTLR3_STRING_FACTORY</code> <code>strFactory</code><br/>
+ <i>A string factory to produce strings for toString etc. </i><br/>
+ void * <code>super</code><br/>
+ <i>Implementers of this interface sometimes require a pointer to their selves. </i><br/>
  <code>pANTLR3_STRING</code>(* <code>toString</code> )(struct <code>ANTLR3_BASE_TREE_struct</code> *tree) </p>
 <p> <code>pANTLR3_STRING</code>(* <code>toStringTree</code> )(struct <code>ANTLR3_BASE_TREE_struct</code> *tree) </p>
-<p> void * <code>u</code><br />
+<p> void * <code>u</code><br/>
  <i>Generic void pointer allows the grammar programmer to attach any structure they like to a tree node, in many cases saving the need to create their own tree and tree adaptors. </i></p>
 <h2>Detailed Description</h2>
 <p>A generic tree implementation with no payload. </p>

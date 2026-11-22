@@ -13,7 +13,7 @@ description: "mlx5dv_ts_to_ns – Convert device timestamp from HCA core clock u
 <code>uint64_t mlx5dv_ts_to_ns(struct mlx5dv_clock_info *clock_info,</code>
 <code> uint64_t device_timestamp);</code></pre>
 <h2>Description</h2>
-<p><code><a href="/docs/linux/man/3-mlx5dv_ts_to_ns/">mlx5dv_ts_to_ns</a>(3)</code> Converts a host byte order<br />
+<p><code><a href="/docs/linux/man/3-mlx5dv_ts_to_ns/">mlx5dv_ts_to_ns</a>(3)</code> Converts a host byte order<br/>
  <i>device_timestamp</i> from HCA core clock units into the corresponding nanosecond wallclock time. </p>
 <p> <code>struct mlx5dv_clock_info</code> can be retrieved using <code><a href="/docs/linux/man/3-mlx5dv_get_clock_info/">mlx5dv_get_clock_info</a>(3)</code>. </p>
 <p> The greater the difference between the device reporting a timestamp and the last mlx5dv_clock_info update, the greater the inaccuracy of the clock time conversion. </p>

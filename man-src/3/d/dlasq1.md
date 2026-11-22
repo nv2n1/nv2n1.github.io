@@ -11,7 +11,7 @@ description: "dlasq1.f –"
 <p> dlasq1.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dlasq1</code> (N, D, E, WORK, INFO)<br />
+<p> subroutine <code>dlasq1</code> (N, D, E, WORK, INFO)<br/>
  <i></i><code>DLASQ1</code> computes the singular values of a real square bidiagonal matrix. Used by sbdsqr.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlasq1 (integerN, double precision, dimension( * )D, double precision, dimension( * )E, double precision, dimension( * )WORK, integerINFO)</h3>

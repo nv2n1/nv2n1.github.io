@@ -9,15 +9,15 @@ description: "File Event Handling Functions – Functions that deal with file de
 
 <p>File Event Handling Functions &#8211; Functions that deal with file descriptor handlers. </p>
 <h3>Functions</h3>
-<p>EAPI <code>Ecore_Fd_Handler</code> * <code>ecore_main_fd_handler_add</code> (int fd, Ecore_Fd_Handler_Flags flags, int(*func)(void *data, <code>Ecore_Fd_Handler</code> *fd_handler), const void *data, int(*buf_func)(void *buf_data, <code>Ecore_Fd_Handler</code> *fd_handler), const void *buf_data)<br />
- <i>Adds a callback for activity on the given file descriptor. </i><br />
- EAPI void * <code>ecore_main_fd_handler_del</code> (<code>Ecore_Fd_Handler</code> *fd_handler)<br />
- <i>Deletes the given FD handler. </i><br />
- EAPI int <code>ecore_main_fd_handler_fd_get</code> (<code>Ecore_Fd_Handler</code> *fd_handler)<br />
- <i>Retrieves the file descriptor that the given handler is handling. </i><br />
- EAPI int <code>ecore_main_fd_handler_active_get</code> (<code>Ecore_Fd_Handler</code> *fd_handler, Ecore_Fd_Handler_Flags flags)<br />
- <i>Return if read, write or error, or a combination thereof, is active on the file descriptor of the given FD handler. </i><br />
- EAPI void <code>ecore_main_fd_handler_active_set</code> (<code>Ecore_Fd_Handler</code> *fd_handler, Ecore_Fd_Handler_Flags flags)<br />
+<p>EAPI <code>Ecore_Fd_Handler</code> * <code>ecore_main_fd_handler_add</code> (int fd, Ecore_Fd_Handler_Flags flags, int(*func)(void *data, <code>Ecore_Fd_Handler</code> *fd_handler), const void *data, int(*buf_func)(void *buf_data, <code>Ecore_Fd_Handler</code> *fd_handler), const void *buf_data)<br/>
+ <i>Adds a callback for activity on the given file descriptor. </i><br/>
+ EAPI void * <code>ecore_main_fd_handler_del</code> (<code>Ecore_Fd_Handler</code> *fd_handler)<br/>
+ <i>Deletes the given FD handler. </i><br/>
+ EAPI int <code>ecore_main_fd_handler_fd_get</code> (<code>Ecore_Fd_Handler</code> *fd_handler)<br/>
+ <i>Retrieves the file descriptor that the given handler is handling. </i><br/>
+ EAPI int <code>ecore_main_fd_handler_active_get</code> (<code>Ecore_Fd_Handler</code> *fd_handler, Ecore_Fd_Handler_Flags flags)<br/>
+ <i>Return if read, write or error, or a combination thereof, is active on the file descriptor of the given FD handler. </i><br/>
+ EAPI void <code>ecore_main_fd_handler_active_set</code> (<code>Ecore_Fd_Handler</code> *fd_handler, Ecore_Fd_Handler_Flags flags)<br/>
  <i>Set what active streams the given FD handler should be monitoring. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that deal with file descriptor handlers.</p>
@@ -26,7 +26,7 @@ description: "File Event Handling Functions – Functions that deal with file de
 <p>Return if read, write or error, or a combination thereof, is active on the file descriptor of the given FD handler. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>fd_handler</i> The given FD handler.<br />
+<dd><i>fd_handler</i> The given FD handler.<br/>
  <i>flags</i> The flags, ECORE_FD_READ, ECORE_FD_WRITE or ECORE_FD_ERROR to query.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -36,7 +36,7 @@ description: "File Event Handling Functions – Functions that deal with file de
 <p>Set what active streams the given FD handler should be monitoring. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>fd_handler</i> The given FD handler.<br />
+<dd><i>fd_handler</i> The given FD handler.<br/>
  <i>flags</i> The flags to be watching.</dd></dl>
 <p> Referenced by ecore_con_client_send(), ecore_con_server_send(), ecore_exe_pipe_run(), and ecore_exe_send().</p>
 <h3>EAPI <code>Ecore_Fd_Handler</code>* ecore_main_fd_handler_add (int fd, Ecore_Fd_Handler_Flags flags, int(*)(void *data, <code>Ecore_Fd_Handler</code> *fd_handler) func, const void * data, int(*)(void *buf_data, <code>Ecore_Fd_Handler</code> *fd_handler) buf_func, const void * buf_data)</h3>
@@ -46,11 +46,11 @@ description: "File Event Handling Functions – Functions that deal with file de
 <p> buf_func is called during event loop handling to check if data that has been read from the file descriptor is in a buffer and is available to read. Some systems (notably xlib) handle their own buffering, and would otherwise not work with select(). These systems should use a buf_func. This is a most annoying hack, only ecore_x uses it, so refer to that for an example. NOTE &#8211; func should probably return &#8216;one&#8217; always if buf_func is used, to avoid confusion with the other return value semantics. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>fd</i> The file descriptor to watch.<br />
- <i>flags</i> To watch it for read (ECORE_FD_READ) and/or (ECORE_FD_WRITE) write ability. ECORE_FD_ERROR<br />
- <i>func</i> The callback function.<br />
- <i>data</i> The data to pass to the callback.<br />
- <i>buf_func</i> The function to call to check if any data has been buffered and already read from the fd. Can be NULL.<br />
+<dd><i>fd</i> The file descriptor to watch.<br/>
+ <i>flags</i> To watch it for read (ECORE_FD_READ) and/or (ECORE_FD_WRITE) write ability. ECORE_FD_ERROR<br/>
+ <i>func</i> The callback function.<br/>
+ <i>data</i> The data to pass to the callback.<br/>
+ <i>buf_func</i> The function to call to check if any data has been buffered and already read from the fd. Can be NULL.<br/>
  <i>buf_data</i> The data to pass to the buf_func function.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

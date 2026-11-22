@@ -15,33 +15,33 @@ description: "sysinfo – return system information"
 <h2>DESCRIPTION</h2>
 <p> <code>sysinfo</code>() returns certain statistics on memory and swap usage, as well as the load average. </p>
 <p> Until Linux 2.3.16, <code>sysinfo</code>() returned information in the following structure: </p>
-<p> struct sysinfo {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;long uptime;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Seconds since boot&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long loads[3];&nbsp;<wbr>&nbsp;/*&nbsp;1, 5, and 15 minute load averages&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long totalram;&nbsp;<wbr>&nbsp;/*&nbsp;Total usable main memory size&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long freeram;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Available memory size&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long sharedram;&nbsp;/*&nbsp;Amount of shared memory&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long bufferram;&nbsp;/*&nbsp;Memory used by buffers&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long totalswap;&nbsp;/*&nbsp;Total swap space size&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long freeswap;&nbsp;<wbr>&nbsp;/*&nbsp;Swap space still available&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short procs;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Number of current processes&nbsp;*/<br />
+<p> struct sysinfo {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;long uptime;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Seconds since boot&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long loads[3];&nbsp;<wbr>&nbsp;/*&nbsp;1, 5, and 15 minute load averages&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long totalram;&nbsp;<wbr>&nbsp;/*&nbsp;Total usable main memory size&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long freeram;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Available memory size&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long sharedram;&nbsp;/*&nbsp;Amount of shared memory&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long bufferram;&nbsp;/*&nbsp;Memory used by buffers&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long totalswap;&nbsp;/*&nbsp;Total swap space size&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long freeswap;&nbsp;<wbr>&nbsp;/*&nbsp;Swap space still available&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short procs;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Number of current processes&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;_f[22];&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Pads structure to 64 bytes&nbsp;*/ }; </p>
 <p> In the above structure, the sizes of the memory and swap fields are given in bytes. </p>
 <p> Since Linux 2.3.23 (i386) and Linux 2.3.48 (all architectures) the structure is: </p>
-<p> struct sysinfo {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;long uptime;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Seconds since boot&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long loads[3];&nbsp;<wbr>&nbsp;/*&nbsp;1, 5, and 15 minute load averages&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long totalram;&nbsp;<wbr>&nbsp;/*&nbsp;Total usable main memory size&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long freeram;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Available memory size&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long sharedram;&nbsp;/*&nbsp;Amount of shared memory&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long bufferram;&nbsp;/*&nbsp;Memory used by buffers&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long totalswap;&nbsp;/*&nbsp;Total swap space size&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long freeswap;&nbsp;<wbr>&nbsp;/*&nbsp;Swap space still available&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short procs;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Number of current processes&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long totalhigh;&nbsp;/*&nbsp;Total high memory size&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long freehigh;&nbsp;<wbr>&nbsp;/*&nbsp;Available high memory size&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned int mem_unit;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Memory unit size in bytes&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;_f[20-2*sizeof(long)-sizeof(int)];<br />
+<p> struct sysinfo {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;long uptime;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Seconds since boot&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long loads[3];&nbsp;<wbr>&nbsp;/*&nbsp;1, 5, and 15 minute load averages&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long totalram;&nbsp;<wbr>&nbsp;/*&nbsp;Total usable main memory size&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long freeram;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Available memory size&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long sharedram;&nbsp;/*&nbsp;Amount of shared memory&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long bufferram;&nbsp;/*&nbsp;Memory used by buffers&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long totalswap;&nbsp;/*&nbsp;Total swap space size&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long freeswap;&nbsp;<wbr>&nbsp;/*&nbsp;Swap space still available&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short procs;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Number of current processes&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long totalhigh;&nbsp;/*&nbsp;Total high memory size&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long freehigh;&nbsp;<wbr>&nbsp;/*&nbsp;Available high memory size&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned int mem_unit;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Memory unit size in bytes&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;_f[20-2*sizeof(long)-sizeof(int)];<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Padding to 64 bytes&nbsp;*/ }; </p>
 <p> In the above structure, sizes of the memory and swap fields are given as multiples of <i>mem_unit</i> bytes.</p>
 <h2>RETURN VALUE</h2>

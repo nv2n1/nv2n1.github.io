@@ -13,8 +13,8 @@ description: "pure-pwconvert – Generate a virtual users file from system accou
 <h2>Description</h2>
 <p>This program scans system accounts (<code>/etc/passwd</code>) and outputs a FTP virtual users list, suitable to the <code>pure-pw</code> command.</p>
 <h2>Files</h2>
-<p><i>/etc/passwd</i><br />
- <i>/etc/shadow</i><br />
+<p><i>/etc/passwd</i><br/>
+ <i>/etc/shadow</i><br/>
  <i>/etc/master.passwd</i></p>
 <h2>Authors</h2>
 <p>Frank Denis &lt;j at pureftpd dot org&gt;</p>

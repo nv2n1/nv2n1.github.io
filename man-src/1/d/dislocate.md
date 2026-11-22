@@ -47,7 +47,7 @@ description: "Dislocate – disconnect and reconnect processes"
 <h2>CAVEATS</h2>
 <p> This program was written by the author as an exercise to show that communicating with disconnected processes is easy. There are many features that could be added, but that is not the intent of this program. </p>
 <h2>SEE ALSO</h2>
-<p> <code>Tcl</code>(3), <code><a href="/docs/linux/man/3-libexpect/">libexpect</a></code>(3)<br />
+<p> <code>Tcl</code>(3), <code><a href="/docs/linux/man/3-libexpect/">libexpect</a></code>(3)<br/>
  <i>&quot;Exploring Expect: A Tcl-Based Toolkit for Automating Interactive Programs&quot;</i> by Don Libes, O&#8217;Reilly and Associates, January 1995.</p>
 <h2>AUTHOR</h2>
 <p> Don Libes, National Institute of Standards and Technology </p>

@@ -10,7 +10,7 @@ description: "XkbNoteControlsChanges – Notes the changes in a changes structur
 <p>XkbNoteControlsChanges &#8211; Notes the changes in a changes structure when a client receives an XkbControlsNotify event </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>void XkbNoteControlsChanges</code> <code>(XkbControlsChangesPtr </code><i>changes</i><code>,</code> <code>XkbControlsNotifyEvent *</code><i>new</i><code>,</code> <code>unsigned int </code><i>wanted</i><code>);</code><br />
+<dt> <code>void XkbNoteControlsChanges</code> <code>(XkbControlsChangesPtr </code><i>changes</i><code>,</code> <code>XkbControlsNotifyEvent *</code><i>new</i><code>,</code> <code>unsigned int </code><i>wanted</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

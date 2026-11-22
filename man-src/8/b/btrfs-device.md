@@ -45,7 +45,7 @@ description: "btrfs-device – manage devices of btrfs filesystems"
 <p> It is possible to delete the device that was used to mount the filesystem. The device entry in the mount table will be replaced by another device name with the lowest device id. </p>
 <p> If the filesystem is mounted in degraded mode (-o degraded), special term <i>missing</i> can be used for <i>device</i>. In that case, the first device that is described by the filesystem metadata, but not present at the mount time will be removed. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  In most cases, there is only one missing device in degraded mode, otherwise mount fails. If there are two or more devices missing (e.g. possible in RAID6), you need specify <i>missing</i> as many times as the number of missing devices to remove all of them. </dd>
 </dl>
 </dl>
@@ -117,21 +117,21 @@ description: "btrfs-device – manage devices of btrfs filesystems"
 <h3>Starting With A Single-Device Filesystem</h3>
 <p>Assume we&#8217;ve created a filesystem on a block device <i>/dev/sda</i> with profile <i>single/single</i> (data/metadata), the device size is 50GiB and we&#8217;ve used the whole device for the filesystem. The mount point is <i>/mnt</i>. </p>
 <p> The amount of data stored is 16GiB, metadata have allocated 2GiB. </p>
-<p> <font SIZE="+1"> <code>ADD NEW DEVICE</code></p>
+<p>  <code>ADD NEW DEVICE</code></p>
 <dl>
 <dd>We want to increase the total size of the filesystem and keep the profiles. The size of the new device <i>/dev/sdb</i> is 100GiB. </dd>
 <dl>
-<dd></font></dd>
+<dd></dd>
 <pre>$ btrfs device add /dev/sdb /mnt</pre>
 </dl>
 <p> The amount of free data space increases by less than 100GiB, some space is allocated for metadata.</dl>
-<p> <font SIZE="+1"> <code>CONVERT TO RAID1</code></p>
+<p>  <code>CONVERT TO RAID1</code></p>
 <dl>
 <dd>Now we want to increase the redundancy level of both data and metadata, but we&#8217;ll do that in steps. Note, that the device sizes are not equal and we&#8217;ll use that to show the capabilities of split data/metadata and independent profiles. </dd>
 <p> The constraint for RAID1 gives us at most 50GiB of usable space and exactly 2 copies will be stored on the devices. </p>
 <p> First we&#8217;ll convert the metadata. As the metadata occupy less than 50GiB and there&#8217;s enough workspace for the conversion process, we can do: </p>
 <dl>
-<dd></font></dd>
+<dd></dd>
 <pre>$ btrfs balance start -mconvert=raid1 /mnt</pre>
 </dl>
 <p> This operation can take a while, because all metadata have to be moved and all block pointers updated. Depending on the physical locations of the old and new blocks, the disk seeking is the key factor affecting performance. </p>
@@ -148,11 +148,11 @@ description: "btrfs-device – manage devices of btrfs filesystems"
 </dd></dl>
 <p> The balance process needs some workspace (ie. a free device space without any data or metadata block groups) so the command could fail if there&#8217;s too much data or the block groups occupy the whole first device. </p>
 <p> The device size of <i>/dev/sdb</i> as seen by the filesystem remains unchanged, but the logical space from 50-100GiB will be unused.</dl>
-<p> <font SIZE="+1"> <code>REMOVE DEVICE</code></p>
+<p>  <code>REMOVE DEVICE</code></p>
 <dl>
 <dd>Device removal must satisfy the profile constraints, otherwise the command fails. For example: </dd>
 <dl>
-<dd></font></dd>
+<dd></dd>
 <pre>$ btrfs device remove /dev/sda /mnt
 ERROR: error removing device '/dev/sda': unable to go below two devices on raid1</pre>
 </dl>

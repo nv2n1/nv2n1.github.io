@@ -11,10 +11,10 @@ description: "ipmiutil_sol – an IPMI Serial-Over-LAN Console application"
 <h2>Synopsis</h2>
 <p><code>ipmiutil sol [-acdeilorsvwxz -NUPREFJTVY]</code> </p>
 <h2>Description</h2>
-<p>This utility starts an IPMI Serial-Over-LAN console session. A Serial-over-LAN console allows the client to see and modify functions before the OS boots, such as BIOS setup, grub, etc. This utility uses either the IPMI LAN 1.5 or 2.0 SOL interface. The 1.5 SOL interface is specific to Intel BMCs, while any IPMI 2.0 BMC should support 2.0 SOL. The target system/node must first have these parameters configured before SOL sessions can be started:<br />
- &#8211; [BIOS] serial console redirection parameters,<br />
- &#8211; [IPMI] lan and SOL parameters (see ipmiutil lan or ilan), and<br />
- &#8211; [OS] For Linux, edit grub.conf, inittab, and securetty parameters.<br />
+<p>This utility starts an IPMI Serial-Over-LAN console session. A Serial-over-LAN console allows the client to see and modify functions before the OS boots, such as BIOS setup, grub, etc. This utility uses either the IPMI LAN 1.5 or 2.0 SOL interface. The 1.5 SOL interface is specific to Intel BMCs, while any IPMI 2.0 BMC should support 2.0 SOL. The target system/node must first have these parameters configured before SOL sessions can be started:<br/>
+ &#8211; [BIOS] serial console redirection parameters,<br/>
+ &#8211; [IPMI] lan and SOL parameters (see ipmiutil lan or ilan), and<br/>
+ &#8211; [OS] For Linux, edit grub.conf, inittab, and securetty parameters.<br/>
  Be sure that the baud rate matches in all of the above places. See the ipmiutil UserGuide section 4.8 for details. </p>
 <h2>Options</h2>
 <dl>
@@ -66,8 +66,8 @@ description: "ipmiutil_sol – an IPMI Serial-Over-LAN Console application"
 <dd>Yes, do prompt the user for the IPMI LAN remote password. Alternatives for the password are -E or -P. </dd>
 </dl>
 <h2>Examples</h2>
-<p>ipmiutil sol -a -N nodename -U username -P password<br />
- Starts an SOL console session to the nodename. Detect the lan protocol. ipmiutil sol -a -N nodename -U username -P password -Flan2<br />
+<p>ipmiutil sol -a -N nodename -U username -P password<br/>
+ Starts an SOL console session to the nodename. Detect the lan protocol. ipmiutil sol -a -N nodename -U username -P password -Flan2<br/>
  Starts an SOL console session to the nodename. Force lan protocol to 2.0. </p>
 <h2>Platform Serial Port Configuration Examples</h2>
 <p>First, enter BIOS Setup for Serial Console Redirection parameters: (these vary by platform) </p>
@@ -76,15 +76,15 @@ description: "ipmiutil_sol – an IPMI Serial-Over-LAN Console application"
 <p>&nbsp;<wbr>&nbsp;<wbr>Baud Rate&nbsp;<wbr>=&nbsp;<wbr>115.2K </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>Flow Control&nbsp;<wbr>=&nbsp;<wbr>CTS/RTS </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>Terminal Type&nbsp;<wbr>=&nbsp;<wbr>VT100 </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>Legacy Redirection&nbsp;<wbr>=&nbsp;<wbr>Enabled<br />
- Note that the Baud Rate can vary, but it must match in all locations where it is used (BIOS, IPMI, and Linux).<br />
- For some non-Intel platforms, the serial console would be COM1 instead of COM2, but should be enabled in BIOS.<br />
- From Linux, run &quot;ipmiutil serial -c&quot; for Terminal Mode shared configuration.<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>Legacy Redirection&nbsp;<wbr>=&nbsp;<wbr>Enabled<br/>
+ Note that the Baud Rate can vary, but it must match in all locations where it is used (BIOS, IPMI, and Linux).<br/>
+ For some non-Intel platforms, the serial console would be COM1 instead of COM2, but should be enabled in BIOS.<br/>
+ From Linux, run &quot;ipmiutil serial -c&quot; for Terminal Mode shared configuration.<br/>
  Or, on older Intel TSRLT2 platforms: From Linux, run &quot;ipmiutil serial -s&quot; for Basic Mode Shared configuration.</p>
 <h2>Linux Configuration For Serial Console</h2>
 <p>If using lilo, in /etc/lilo.conf, add </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>append=&quot;console=ttyS1,19200n8 console=tty0&quot;<br />
- (and comment out the &quot;message=&quot; line because it includes graphics)<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>append=&quot;console=ttyS1,19200n8 console=tty0&quot;<br/>
+ (and comment out the &quot;message=&quot; line because it includes graphics)<br/>
  Note that the append line can be placed in the global section and removed from each kernel section if there are no other differences. </p>
 <p> Or, if using grub, edit /boot/grub/grub.conf as follows: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>#Omit the splashimage or gfxmenu </p>

@@ -10,13 +10,13 @@ description: "ql/cashflows/digitalcoupon.hpp – Floating-rate coupon with digit
 
 <p> ql/cashflows/digitalcoupon.hpp &#8211; Floating-rate coupon with digital call/put option. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/cashflows/floatingratecoupon.hpp&gt;<br />
- #include &lt;ql/cashflows/couponpricer.hpp&gt;<br />
- #include &lt;ql/cashflows/replication.hpp&gt;<br />
- #include &lt;ql/position.hpp&gt;<br />
+<p> #include &lt;ql/cashflows/floatingratecoupon.hpp&gt;<br/>
+ #include &lt;ql/cashflows/couponpricer.hpp&gt;<br/>
+ #include &lt;ql/cashflows/replication.hpp&gt;<br/>
+ #include &lt;ql/position.hpp&gt;<br/>
  #include &lt;ql/utilities/null.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>DigitalCoupon</code><br />
+<p> class <code>DigitalCoupon</code><br/>
  <i>Digital-payoff coupon. </i></p>
 <h2>Detailed Description</h2>
 <p> Floating-rate coupon with digital call/put option. </p>

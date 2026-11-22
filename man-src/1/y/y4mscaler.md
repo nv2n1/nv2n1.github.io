@@ -48,9 +48,9 @@ description: "y4mscaler – Scale/crop/translate a YUV4MPEG2 stream"
 <p> The first three options, -v, -V, and -h, are simple straightforward options which take either no arguments or one numeric argument.</p>
 <dl>
 <dt><code>-v</code><i> [0,1,2]</i></dt>
-<dd> Set verbosity level.<br />
-&nbsp;<wbr>0&nbsp;<wbr>=&nbsp;<wbr>warnings and errors only.<br />
-&nbsp;<wbr>1&nbsp;<wbr>=&nbsp;<wbr>add informative messages, too&nbsp;<wbr>(default).<br />
+<dd> Set verbosity level.<br/>
+&nbsp;<wbr>0&nbsp;<wbr>=&nbsp;<wbr>warnings and errors only.<br/>
+&nbsp;<wbr>1&nbsp;<wbr>=&nbsp;<wbr>add informative messages, too&nbsp;<wbr>(default).<br/>
 &nbsp;<wbr>2&nbsp;<wbr>=&nbsp;<wbr>add chatty debugging message, too. </dd>
 <dt><code>-V</code></dt>
 <dd> Show version information and exit. </dd>
@@ -66,14 +66,14 @@ description: "y4mscaler – Scale/crop/translate a YUV4MPEG2 stream"
 </dt><dd> Specify parameters for the source/input stream. All &#8216;-I&#8217; arguments are evaluated in order, and later arguments on the command-line will override earlier ones. All &#8216;-I&#8217; arguments are evaluated before any &#8216;-O&#8217; arguments.</dd>
 <dl>
 <dt><code>active=</code><i>WxH+X+Yaa</i></dt>
-<dd> Specify the active region of the source frame, which is scaled to fit the active region of the target frame. The default is the full frame. (The &quot;WxH&quot; may be omitted, and the region size defaults to the size of of the source frame.) W and H are width and height. X and Y are the offset of the anchor point. &quot;aa&quot; is the anchor mode (default: TL); see &quot;NOTES ON REGION GEOMETRY&quot; for details.<br />
+<dd> Specify the active region of the source frame, which is scaled to fit the active region of the target frame. The default is the full frame. (The &quot;WxH&quot; may be omitted, and the region size defaults to the size of of the source frame.) W and H are width and height. X and Y are the offset of the anchor point. &quot;aa&quot; is the anchor mode (default: TL); see &quot;NOTES ON REGION GEOMETRY&quot; for details.<br/>
  Example: active=200&#215;180+30+24cc</dd>
 <dt><code>matte=</code><i>WxH+X+Y</i></dt>
-<dd> Specify a matte region for the source frame. All pixels outside of this region are set to the source background color. The default matte is the full frame. (The &quot;WxH&quot; may be omitted, and the region size defaults to the size of of the source frame.) W and H are width and height. X and Y are the offset of the anchor point. &quot;aa&quot; is the anchor mode (default: TL); see &quot;NOTES ON REGION GEOMETRY&quot; for details.<br />
+<dd> Specify a matte region for the source frame. All pixels outside of this region are set to the source background color. The default matte is the full frame. (The &quot;WxH&quot; may be omitted, and the region size defaults to the size of of the source frame.) W and H are width and height. X and Y are the offset of the anchor point. &quot;aa&quot; is the anchor mode (default: TL); see &quot;NOTES ON REGION GEOMETRY&quot; for details.<br/>
  Example: matte=200&#215;180+30+24cc</dd></dl>
-<p> <code>bg=</code><i>RGB:r,g,b</i><br />
- <code>bg=</code><i>YCBCR:y,cb,cr</i><br />
- <code>bg=</code><i>RGBA:r,g,b,a</i><br />
+<p> <code>bg=</code><i>RGB:r,g,b</i><br/>
+ <code>bg=</code><i>YCBCR:y,cb,cr</i><br/>
+ <code>bg=</code><i>RGBA:r,g,b,a</i><br/>
  <code>bg=</code><i>YCBCRA:y,cb,cr,a</i></p>
 <dl>
 <dt>
@@ -82,11 +82,11 @@ description: "y4mscaler – Scale/crop/translate a YUV4MPEG2 stream"
 <dt><code>norm=</code>[<code>NTSC</code>|<code>PAL</code>|<code>SECAM</code>]</dt>
 <dd> Specify the &quot;norm&quot; of the source stream. This is normally inferred from the stream header.</dd>
 <dt><code>ilace=</code>[<code>NONE</code>|<code>TOP_FIRST</code>|<code>BOTTOM_FIRST</code>|<code>TOP_ONLY</code>|<code>BOTTOM_ONLY</code>]</dt>
-<dd> Specify the interlacing used by the source stream. NONE, TOP_FIRST, and BOTTOM_FIRST correspond to non-interlaced, top-field-first, and bottom-field-first. These values are normally inferred from the stream header; specifying them will override the stream header.<br />
+<dd> Specify the interlacing used by the source stream. NONE, TOP_FIRST, and BOTTOM_FIRST correspond to non-interlaced, top-field-first, and bottom-field-first. These values are normally inferred from the stream header; specifying them will override the stream header.<br/>
  TOP_ONLY and BOTTOM_ONLY specify that only the top or bottom field of each frame should be used; the other field is discarded. These options can only be used with an interlaced input, and cause the interlaced stream to be treated as a progressive stream with half the height. (This is particularly useful in creating a VCD from a full-size interlaced input stream.) These two special options can only be used when the source is a pure progressive stream (as opposed to a YUV4MPEG2 &quot;mixed-mode&quot; stream).</dd>
 <dt><code>chromass=</code>[<code>420JPEG</code>|<code>420MPEG2</code>|<code>420PALDV</code>|<code>444</code>|<code>422</code>|<code>411</code>|<code>mono</code>|<code>444alpha</code>]</dt>
 <dd> Specify the chroma subsampling mode used in the source stream. This parameter is inferred from the stream header, so this keyword should almost never be used in a source specification. The only useful reason to specify this keyword is to override one variety of 4:2:0 with another. Any other use will cause processing to fail.</dd></dl>
-<p> <code>sar=</code><i>N:D</i><br />
+<p> <code>sar=</code><i>N:D</i><br/>
  <code>sar=</code>[<code>NTSC</code>|<code>PAL</code>|<code>NTSC_WIDE</code>|<code>PAL_WIDE</code>]</p>
 <dl>
 <dt>
@@ -97,35 +97,35 @@ description: "y4mscaler – Scale/crop/translate a YUV4MPEG2 stream"
 </dd><dl>
 <dt>
 </dt><dd> Specify parameters for the destination/output stream. All &#8216;-O&#8217; arguments are evaluated in order, and later arguments on the command-line will override earlier ones. All &#8216;-O&#8217; arguments are evaluated after any &#8216;-I&#8217; arguments. </dd>
-<p> <code>size=</code><i>WxH</i><br />
+<p> <code>size=</code><i>WxH</i><br/>
  <code>size=SRC</code></p>
 <dl>
 <dt>
 </dt><dd> Set the output/target frame size, as width W and height H in pixels. Use the keyword <code>SRC</code> to specify that the target frame size should match the source frame size.</dd></dl>
 <dl>
 <dt><code>active=</code><i>WxH+X+Yaa</i></dt>
-<dd> Specify the active region of the target frame, into which the active region of the source frame is scaled. The default is the full target frame. (The &quot;WxH&quot; may be omitted, and the region size defaults to the size of of the target frame.) W and H are width and height. X and Y are the offset of the anchor point. &quot;aa&quot; is the anchor mode (default: TL); see &quot;NOTES ON REGION GEOMETRY&quot; for details.<br />
+<dd> Specify the active region of the target frame, into which the active region of the source frame is scaled. The default is the full target frame. (The &quot;WxH&quot; may be omitted, and the region size defaults to the size of of the target frame.) W and H are width and height. X and Y are the offset of the anchor point. &quot;aa&quot; is the anchor mode (default: TL); see &quot;NOTES ON REGION GEOMETRY&quot; for details.<br/>
  Example: active=200&#215;180+30+24cc</dd></dl>
-<p> <code>bg=</code><i>RGB:r,g,b</i><br />
- <code>bg=</code><i>YCBCR:y,cb,cr</i><br />
- <code>bg=</code><i>RGBA:r,g,b,a</i><br />
+<p> <code>bg=</code><i>RGB:r,g,b</i><br/>
+ <code>bg=</code><i>YCBCR:y,cb,cr</i><br/>
+ <code>bg=</code><i>RGBA:r,g,b,a</i><br/>
  <code>bg=</code><i>YCBCRA:y,cb,cr,a</i></p>
 <dl>
 <dt>
 </dt><dd> Set the target background color. Pixels outside of the target&#8217;s active region are set to this color. One can specify the color as either a R&#8217;G&#8217;B&#8217; or Y&#8217;CbCr triplet. For example, the default color is black, specified as &quot;bg=YCBCR:16,128,128&quot; or &quot;bg=RGB:0,0,0&quot;. The &#8216;A&#8217; versions will set the alpha (transparency) value of the color. The alpha range is [0,255] for RGBA and [16,235] for YCBCRA. The default is fully-opaque (255 for RGBA, 235 for YCBCRA).</dd></dl>
 <dl>
 <dt><code>ilace=</code>[<code>NONE</code>|<code>TOP_FIRST</code>|<code>BOTTOM_FIRST</code>]</dt>
-<dd> Specify the interlacing used by the target stream. NONE, TOP_FIRST, and BOTTOM_FIRST correspond to non-interlaced, top-field-first, and bottom-field-first. The default if to match the source stream.<br />
+<dd> Specify the interlacing used by the target stream. NONE, TOP_FIRST, and BOTTOM_FIRST correspond to non-interlaced, top-field-first, and bottom-field-first. The default if to match the source stream.<br/>
  If the source and target are both interlaced, but with different modes (i.e. one is bottom-first, and the other is top-first), then <code>y4mscaler</code> will convert one mode to the other by dropping the first source field.</dd>
 <dt><code>chromass=</code>[<code>420JPEG</code>|<code>420MPEG2</code>|<code>420PALDV</code>|<code>444</code>|<code>422</code>|<code>411</code>|<code>mono</code>|<code>444alpha</code>]</dt>
 <dd> Specify the chroma subsampling mode to be used in the target stream. The default is to match the source mode. See &quot;NOTES ON CHROMA MODES AND SUBSAMPLING&quot; for more information.</dd></dl>
-<p> <code>sar=</code><i>N:D</i><br />
+<p> <code>sar=</code><i>N:D</i><br/>
  <code>sar=</code>[<code>SRC</code>|<code>NTSC</code>|<code>PAL</code>|<code>NTSC_WIDE</code>|<code>PAL_WIDE</code>]</p>
 <dl>
 <dt>
 </dt><dd> Specify the sample-aspect-ratio of the source stream. The value can either be or numeric ratio (such as &quot;10:11&quot;) or one of the keywords, which correspond to the CCIR-601 values for 4:3 or 16:9 displays, respectively. The keyword <code>SRC</code> specifies that the target SAR should match the source.</dd></dl>
-<p> <code>scale=</code><i>N/D</i><br />
- <code>Xscale=</code><i>N/D</i><br />
+<p> <code>scale=</code><i>N/D</i><br/>
+ <code>Xscale=</code><i>N/D</i><br/>
  <code>Yscale=</code><i>N/D</i></p>
 <dl>
 <dt>
@@ -137,8 +137,8 @@ description: "y4mscaler – Scale/crop/translate a YUV4MPEG2 stream"
 <dd> Set whether the above heuristic uses exact ratios, or whether it is allowed to slightly adjust active regions to simplify the scaling ratios. The keywords are mutually exclusive. The default is SIMPLIFY.</dd>
 <dt><code>align=</code>[<code>TL</code>|<code>TC</code>|<code>TR</code>|<code>CL</code>|<code>CC</code>|<code>CR</code>|<code>BL</code>|<code>BC</code>|<code>BR</code>]</dt>
 <dd> Set the alignment point between the source and target active regions. The keywords specify &quot;top-left&quot;, &quot;top-center&quot;, &quot;top-right&quot;, etc. The specified corner or point from the source region will be mapped to the same spot in the target region; and cropping or padding which is applied to the active regions will preserve this mapping. The default is CC, for &quot;center-center&quot;, i.e. the source and target regions are mutually centered. The keywords are mutually exclusive. The default is CC. See &quot;NOTES ON SOURCE AND TARGET ALIGNMENT&quot; for details.</dd></dl>
-<p> <code>preset=</code>[<code>VCD</code>|<code>CVD</code>|<code>SVCD</code>|<code>DVD</code>|<code>DVD_WIDE</code>|<code>DV</code>|<code>DV_WIDE</code>|<br />
- <code>SVCD_STILL_HI</code>|<code>SVCD_STILL_LO</code>|<code>VCD_STILL_HI</code>|<code>VCD_STILL_LO</code>|<br />
+<p> <code>preset=</code>[<code>VCD</code>|<code>CVD</code>|<code>SVCD</code>|<code>DVD</code>|<code>DVD_WIDE</code>|<code>DV</code>|<code>DV_WIDE</code>|<br/>
+ <code>SVCD_STILL_HI</code>|<code>SVCD_STILL_LO</code>|<code>VCD_STILL_HI</code>|<code>VCD_STILL_LO</code>|<br/>
  <code>ATSC_720P</code>|<code>ATSC_1080I</code>|<code>ATSC_1080P</code>] </p>
 <dl>
 <dt>
@@ -302,10 +302,10 @@ Preset Frame Size Interlace SAR Subsampling-- -- -- -- -- -- -- -- -- -- -- -- -
 <p> Often, the source and target active regions do not match exactly. This happens when, using the given or calculated scaling ratios, the source region scales to a different size or shape than the target region. In this case, the source and target regions are mutually clipped, so that only the portion of the source which fits will be scaled into the target. </p>
 <p> Before any clipping or padding, the source and target regions are aligned so that the points specified via the &quot;align=aa&quot; parameter coincide. The &quot;aa&quot; code specifies an anchor point as described above. </p>
 <p> For example, &quot;align=BC&quot; specifies that the bottom-center of the source region should get mapped to the bottom-center of the target region. In other words, the source region will be horizontally centered and vertically aligned to the bottom of the target region before clipping: </p>
-<p>&#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;source | abcdefghijklmn |<br />
-    &#8212; &#8211; | opqrstuvwxyz01 | &#8212; -target&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; | | 234567890ABCDE | | | 234567890ABCDE |<br />
-    | | FGHIJKLMNOPQRS | | | FGHIJKLMNOPQRS |<br />
-    | | TUVWXYZabcdefg | | | TUVWXYZabcdefg |<br />
+<p>&#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;source | abcdefghijklmn |<br/>
+    &#8212; &#8211; | opqrstuvwxyz01 | &#8212; -target&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; | | 234567890ABCDE | | | 234567890ABCDE |<br/>
+    | | FGHIJKLMNOPQRS | | | FGHIJKLMNOPQRS |<br/>
+    | | TUVWXYZabcdefg | | | TUVWXYZabcdefg |<br/>
     &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;Before Mutually Clipped</p>
 <p> If instead &quot;align=TR&quot; were centered, the source would be clipped in a different place, and scaled into a different region of the target frame: </p>
 <pre><code>
@@ -354,7 +354,7 @@ Preset Frame Size Interlace SAR Subsampling-- -- -- -- -- -- -- -- -- -- -- -- -
 <dd> Usage, syntax, or operational error. </dd>
 </dl>
 <h2>AUTHOR</h2>
-<p> This manual page is copyright 2005 by Matthew Marjanovic.<br />
+<p> This manual page is copyright 2005 by Matthew Marjanovic.<br/>
  Feel free to direct any questions, remarks, problems, or bug reports concerning this tool to <i>&lt;dmg @ mir.com&gt;.</i> </p>
 <dl>
 <dt>For more info, see our website at:</dt>

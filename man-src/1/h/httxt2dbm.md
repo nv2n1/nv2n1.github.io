@@ -11,16 +11,16 @@ description: "httxt2dbm – Generate dbm files for use with RewriteMap"
 <p> httxt2dbm &#8211; Generate dbm files for use with RewriteMap</p>
 <h2>SYNOPSIS</h2>
 <p>&nbsp; </p>
-<p> <code>httxt2dbm</code> [ &#8211;<code>v</code> ] [ &#8211;<code>f</code> <i>DBM_TYPE</i> ] &#8211;<code>i</code> <i>SOURCE_TXT</i> &#8211;<code>o</code> <i>OUTPUT_DBM</i><br />
+<p> <code>httxt2dbm</code> [ &#8211;<code>v</code> ] [ &#8211;<code>f</code> <i>DBM_TYPE</i> ] &#8211;<code>i</code> <i>SOURCE_TXT</i> &#8211;<code>o</code> <i>OUTPUT_DBM</i><br/>
 &nbsp; </p>
 <h2>SUMMARY</h2>
 <p>&nbsp; </p>
-<p> <code>httxt2dbm</code> is used to generate dbm files from text input, for use in RewriteMap with the <code>dbm</code> map type.<br />
+<p> <code>httxt2dbm</code> is used to generate dbm files from text input, for use in RewriteMap with the <code>dbm</code> map type.<br/>
 &nbsp; </p>
-<p> If the output file already exists, it will not be truncated. New keys will be added and existing keys will be updated.<br />
+<p> If the output file already exists, it will not be truncated. New keys will be added and existing keys will be updated.<br/>
 &nbsp; </p>
 <h2>OPTIONS</h2>
-<p>&nbsp;<br />
+<p>&nbsp;<br/>
 &nbsp;</p>
 <dl>
 <dt><code>-v</code></dt>
@@ -30,7 +30,7 @@ description: "httxt2dbm – Generate dbm files for use with RewriteMap"
 <dt><code>-i </code><i>SOURCE_TXT</i></dt>
 <dd> Input file from which the dbm is to be created. The file should be formatted with one record per line, of the form: <code>key value</code>. See the documentation for RewriteMap for further details of this file&#8217;s format and meaning.</dd>
 <dt><code>-o </code><i>OUTPUT_DBM</i></dt>
-<dd> Name of the output dbm files.<br />
+<dd> Name of the output dbm files.<br/>
 &nbsp;</dd></dl>
 <h2>EXAMPLES</h2>
 <p>&nbsp; </p>

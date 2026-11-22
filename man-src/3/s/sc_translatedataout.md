@@ -13,17 +13,17 @@ description: "sc::TranslateDataOut –"
 <pre><code>
 #include &lt;translate.h&gt;
 Public Member Functions</code></pre>
-<p> <code>TranslateDataOut</code> (<code>StateOut</code> *s, <code>TranslateData</code> *t)<br />
- <i>Write to s using the translation defined by t. </i><br />
- virtual int <code>put</code> (const char *, int)<br />
- <i>Translate and write the data. </i><br />
+<p> <code>TranslateDataOut</code> (<code>StateOut</code> *s, <code>TranslateData</code> *t)<br/>
+ <i>Write to s using the translation defined by t. </i><br/>
+ virtual int <code>put</code> (const char *, int)<br/>
+ <i>Translate and write the data. </i><br/>
  virtual int <code>put</code> (const short *, int) </p>
 <p> virtual int <code>put</code> (const unsigned int *, int) </p>
 <p> virtual int <code>put</code> (const int *, int) </p>
 <p> virtual int <code>put</code> (const long *, int) </p>
 <p> virtual int <code>put</code> (const float *, int) </p>
 <p> virtual int <code>put</code> (const double *, int) </p>
-<p> <code>TranslateData</code> * <code>translator</code> ()<br />
+<p> <code>TranslateData</code> * <code>translator</code> ()<br/>
  <i>Returns the translator. </i></p>
 <h3>Protected Member Functions</h3>
 <pre><code>int putv (const void *d, int s)</code></pre>

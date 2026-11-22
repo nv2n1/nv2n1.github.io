@@ -14,11 +14,11 @@ description: "QuantLib::FractionalDividend – Predetermined cash flow."
 <p> Inherits <code>QuantLib::Dividend</code>.</p>
 <h3>Public Member Functions</h3>
 <p><code>FractionalDividend</code> (Real rate, const <code>Date</code> &amp;date) </p>
-<p> <code>FractionalDividend</code> (Real rate, Real nominal, const <code>Date</code> &amp;date)<br />
+<p> <code>FractionalDividend</code> (Real rate, Real nominal, const <code>Date</code> &amp;date)<br/>
  <code>Dividend interface</code> </p>
-<p> virtual Real <code>amount</code> () const<br />
- <i>returns the amount of the cash flow </i><br />
- virtual Real <code>amount</code> (Real underlying) const<br />
+<p> virtual Real <code>amount</code> () const<br/>
+ <i>returns the amount of the cash flow </i><br/>
+ virtual Real <code>amount</code> (Real underlying) const<br/>
  <code>Inspectors</code> </p>
 <p> Real <code>rate</code> () const </p>
 <p> Real <code>nominal</code> () const</p>

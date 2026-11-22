@@ -10,43 +10,43 @@ description: "Globus GASS Cache –"
 
 <p> Globus GASS Cache &#8211; </p>
 <h3>Macros</h3>
-<p> #define <code>GLOBUS_GASS_CACHE_MODULE</code> (&amp;globus_i_gass_cache_module)<br />
+<p> #define <code>GLOBUS_GASS_CACHE_MODULE</code> (&amp;globus_i_gass_cache_module)<br/>
  <i>module_descriptor </i></p>
 <h3>Typedefs</h3>
-<p> typedef struct<br />
- globus_i_gass_cache_t * <code>globus_gass_cache_t</code>&quot;<br />
+<p> typedef struct<br/>
+ globus_i_gass_cache_t * <code>globus_gass_cache_t</code>&quot;<br/>
  <i>GASS Cache Handle. </i></p>
 <h3>Functions</h3>
-<p> int <code>globus_gass_cache_open</code> (const char *cache_directory_path, <code>globus_gass_cache_t</code> *cache_handlep)<br />
- <i>Open a GASS Cache. </i><br />
- int <code>globus_gass_cache_close</code> (<code>globus_gass_cache_t</code> *cache_handlep)<br />
- <i>Close a cache handle. </i><br />
- int <code>globus_gass_cache_add</code> (<code>globus_gass_cache_t</code> cache_handle, const char *url, const char *tag, globus_bool_t create, unsigned long *timestamp, char **local_filename)<br />
- <i>Add a tag to an URL in the cache. </i><br />
- int <code>globus_gass_cache_add_done</code> (<code>globus_gass_cache_t</code> cache_handle, const char *url, const char *tag, unsigned long timestamp)<br />
- <i>Complete adding a cache entry and unlock it. </i><br />
- int <code>globus_gass_cache_query</code> (<code>globus_gass_cache_t</code> cache_handle, const char *url, const char *tag, globus_bool_t wait_for_lock, unsigned long *timestamp, char **local_filename, globus_bool_t *is_locked)<br />
- <i>Query the GASS Cache. </i><br />
- int <code>globus_gass_cache_delete_start</code> (<code>globus_gass_cache_t</code> cache_handle, const char *url, const char *tag, unsigned long *timestamp)<br />
- <i>Remove a cache tag. </i><br />
- int <code>globus_gass_cache_delete</code> (<code>globus_gass_cache_t</code> cache_handle, const char *url, const char *tag, unsigned long timestamp, globus_bool_t is_locked)<br />
- <i>Remove one instance of the tag from the cache entry&#8217;s tag list. </i><br />
- int <code>globus_gass_cache_cleanup_tag</code> (<code>globus_gass_cache_t</code> cache_handle, const char *url, const char *tag)<br />
- <i>Remove a tag from a cache entry. </i><br />
- int <code>globus_gass_cache_cleanup_tag_all</code> (<code>globus_gass_cache_t</code> cache_handle, char *tag)<br />
+<p> int <code>globus_gass_cache_open</code> (const char *cache_directory_path, <code>globus_gass_cache_t</code> *cache_handlep)<br/>
+ <i>Open a GASS Cache. </i><br/>
+ int <code>globus_gass_cache_close</code> (<code>globus_gass_cache_t</code> *cache_handlep)<br/>
+ <i>Close a cache handle. </i><br/>
+ int <code>globus_gass_cache_add</code> (<code>globus_gass_cache_t</code> cache_handle, const char *url, const char *tag, globus_bool_t create, unsigned long *timestamp, char **local_filename)<br/>
+ <i>Add a tag to an URL in the cache. </i><br/>
+ int <code>globus_gass_cache_add_done</code> (<code>globus_gass_cache_t</code> cache_handle, const char *url, const char *tag, unsigned long timestamp)<br/>
+ <i>Complete adding a cache entry and unlock it. </i><br/>
+ int <code>globus_gass_cache_query</code> (<code>globus_gass_cache_t</code> cache_handle, const char *url, const char *tag, globus_bool_t wait_for_lock, unsigned long *timestamp, char **local_filename, globus_bool_t *is_locked)<br/>
+ <i>Query the GASS Cache. </i><br/>
+ int <code>globus_gass_cache_delete_start</code> (<code>globus_gass_cache_t</code> cache_handle, const char *url, const char *tag, unsigned long *timestamp)<br/>
+ <i>Remove a cache tag. </i><br/>
+ int <code>globus_gass_cache_delete</code> (<code>globus_gass_cache_t</code> cache_handle, const char *url, const char *tag, unsigned long timestamp, globus_bool_t is_locked)<br/>
+ <i>Remove one instance of the tag from the cache entry&#8217;s tag list. </i><br/>
+ int <code>globus_gass_cache_cleanup_tag</code> (<code>globus_gass_cache_t</code> cache_handle, const char *url, const char *tag)<br/>
+ <i>Remove a tag from a cache entry. </i><br/>
+ int <code>globus_gass_cache_cleanup_tag_all</code> (<code>globus_gass_cache_t</code> cache_handle, char *tag)<br/>
  <i>Remove a tag from all cache entries</i> </p>
-<p> Remove all instances of the tag from the cache entry&#8217;s tag list. If there are no more tags in the tag list, then remove this cache entry and delete the associated local cache file. If the cache entry is locked with the same tag as is passed to this function, then the entry is unlocked after removing the tags. Otherwise, the cache entry&#8217;s lock is left untouched. &quot;<br />
- int <code>globus_gass_cache_mangle_url</code> (const <code>globus_gass_cache_t</code> cache_handle, const char *url, char **mangled_url, int *length)<br />
- <i>Convert a URL to a string suitable as a file path. </i><br />
- int <code>globus_gass_cache_mangle_tag</code> (const <code>globus_gass_cache_t</code> cache_handle, const char *tag, char **mangled_tag, int *length)<br />
- <i>Convert a tag to a string suitable as a file path. </i><br />
- int <code>globus_gass_cache_get_cache_dir</code> (const <code>globus_gass_cache_t</code> cache_handle, char **cache_dir)<br />
- <i>Get the GASS Cache&#8217;s root directory. </i><br />
- int <code>globus_gass_cache_get_dirs</code> (const <code>globus_gass_cache_t</code> cache_handle, const char *url, const char *tag, char **global_root, char **local_root, char **tmp_root, char **log_root, char **global_dir, char **local_dir)<br />
- <i>Get the set of directories used by a GASS Cache. </i><br />
- int <code>globus_gass_cache_get_cache_type_string</code> (const <code>globus_gass_cache_t</code> cache_handle, char **cache_type)<br />
- <i>Get the type of GASS Cache directory layout. </i><br />
- const char * <code>globus_gass_cache_error_string</code> (int error_code)<br />
+<p> Remove all instances of the tag from the cache entry&#8217;s tag list. If there are no more tags in the tag list, then remove this cache entry and delete the associated local cache file. If the cache entry is locked with the same tag as is passed to this function, then the entry is unlocked after removing the tags. Otherwise, the cache entry&#8217;s lock is left untouched. &quot;<br/>
+ int <code>globus_gass_cache_mangle_url</code> (const <code>globus_gass_cache_t</code> cache_handle, const char *url, char **mangled_url, int *length)<br/>
+ <i>Convert a URL to a string suitable as a file path. </i><br/>
+ int <code>globus_gass_cache_mangle_tag</code> (const <code>globus_gass_cache_t</code> cache_handle, const char *tag, char **mangled_tag, int *length)<br/>
+ <i>Convert a tag to a string suitable as a file path. </i><br/>
+ int <code>globus_gass_cache_get_cache_dir</code> (const <code>globus_gass_cache_t</code> cache_handle, char **cache_dir)<br/>
+ <i>Get the GASS Cache&#8217;s root directory. </i><br/>
+ int <code>globus_gass_cache_get_dirs</code> (const <code>globus_gass_cache_t</code> cache_handle, const char *url, const char *tag, char **global_root, char **local_root, char **tmp_root, char **log_root, char **global_dir, char **local_dir)<br/>
+ <i>Get the set of directories used by a GASS Cache. </i><br/>
+ int <code>globus_gass_cache_get_cache_type_string</code> (const <code>globus_gass_cache_t</code> cache_handle, char **cache_type)<br/>
+ <i>Get the type of GASS Cache directory layout. </i><br/>
+ const char * <code>globus_gass_cache_error_string</code> (int error_code)<br/>
  <i>Look up the error string corresponding to a GASS Cache error. </i></p>
 <h2>Detailed Description</h2>
 <p> The GASS cache management API is part of the Globus module called &#8216;GASS&#8217;, (Global Access to Secondary Storage) The GASS cache management API defines calls for manipulating a local file cache. </p>
@@ -101,11 +101,11 @@ description: "Globus GASS Cache –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>cache_handle</i> Handle to the opened cache directory to use.<br />
- <i>url</i> URL of the file to be cached. It is used as the main key to the cache entries.<br />
- <i>tag</i> Tag specifying which job is/are using the cache. This is usually the GLOBUS_GRAM_JOB_CONTACT. Can be NULL or empty; the tag &#8216;null&#8217; is then used. create &#8211; Tells if the cache entry should be created if it is not already existing.<br />
- <i>create</i> Flag to create if it does not already exist.<br />
- <i>timestamp</i> Timestamp of the cached file, set by globus_gass_cache_done(), (or <code>globus_gass_cache_delete()</code> ).<br />
+</dt><dd> <i>cache_handle</i> Handle to the opened cache directory to use.<br/>
+ <i>url</i> URL of the file to be cached. It is used as the main key to the cache entries.<br/>
+ <i>tag</i> Tag specifying which job is/are using the cache. This is usually the GLOBUS_GRAM_JOB_CONTACT. Can be NULL or empty; the tag &#8216;null&#8217; is then used. create &#8211; Tells if the cache entry should be created if it is not already existing.<br/>
+ <i>create</i> Flag to create if it does not already exist.<br/>
+ <i>timestamp</i> Timestamp of the cached file, set by globus_gass_cache_done(), (or <code>globus_gass_cache_delete()</code> ).<br/>
  <i>local_filename</i> Path the the local file caching the file specified by &#8216;url&#8217;. NULL if &#8216;url&#8217; not yet cached and creation not requested (create false).</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -124,9 +124,9 @@ description: "Globus GASS Cache –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>cache_handle</i> Handle to the opened cache directory to use.<br />
- <i>url</i> URL of the cached file to set as &#8216;done&#8217; (unlock)<br />
- <i>tag</i> Tag specifying which job has locked the cache and must therefore be unlocked. It is an error to call this function with a tag which does not currently own the cache lock.<br />
+</dt><dd> <i>cache_handle</i> Handle to the opened cache directory to use.<br/>
+ <i>url</i> URL of the cached file to set as &#8216;done&#8217; (unlock)<br/>
+ <i>tag</i> Tag specifying which job has locked the cache and must therefore be unlocked. It is an error to call this function with a tag which does not currently own the cache lock.<br/>
  <i>timestamp</i> Timestamp of the cached file.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -142,8 +142,8 @@ description: "Globus GASS Cache –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>cache_handle</i> Handle to the opened cache directory to use.<br />
- <i>url</i> URL of the file to be cached. It is used as the main key to the cache entries.<br />
+</dt><dd> <i>cache_handle</i> Handle to the opened cache directory to use.<br/>
+ <i>url</i> URL of the file to be cached. It is used as the main key to the cache entries.<br/>
  <i>tag</i> Tag specifying which job is/are using the cache. This is usually the GLOBUS_GRAM_JOB_CONTACT. Can be NULL or empty; the tag &#8216;null&#8217; is then used.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -159,7 +159,7 @@ description: "Globus GASS Cache –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>cache_handle</i> Handle to the opened cache directory to use.<br />
+</dt><dd> <i>cache_handle</i> Handle to the opened cache directory to use.<br/>
  <i>tag</i> Tag specifying which job is/are using the cache. This is usually the GLOBUS_GRAM_JOB_CONTACT. Can be NULL or empty; the tag &#8216;null&#8217; is then used.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -186,10 +186,10 @@ description: "Globus GASS Cache –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>cache_handle</i> Handle to the opened cache directory to use.<br />
- <i>url</i> URL of the file to be cached. It is used as the main key to the cache entries.<br />
- <i>tag</i> Tag specifying which job is/are using the cache. This is usually the GLOBUS_GRAM_JOB_CONTACT. Can be NULL or empty; the tag &#8216;null&#8217; is then used.<br />
- <i>timestamp</i> Timestamp of the cached file.<br />
+</dt><dd> <i>cache_handle</i> Handle to the opened cache directory to use.<br/>
+ <i>url</i> URL of the file to be cached. It is used as the main key to the cache entries.<br/>
+ <i>tag</i> Tag specifying which job is/are using the cache. This is usually the GLOBUS_GRAM_JOB_CONTACT. Can be NULL or empty; the tag &#8216;null&#8217; is then used.<br/>
+ <i>timestamp</i> Timestamp of the cached file.<br/>
  <i>is_locked</i> Indicate if this cache entry was locked during a previous call to <code>globus_gass_cache_add()</code> or <code>globus_gass_cache_delete_start()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -200,9 +200,9 @@ description: "Globus GASS Cache –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>cache_handle</i> Handle to the opened cache directory to use.<br />
- <i>url</i> URL of the cached file to set as &#8216;done&#8217; (unlock)<br />
- <i>tag</i> Tag specifying which job has locked the cache and must therefore be unlocked. It is an error to call this function with a tag which does not currently own the cache lock.<br />
+</dt><dd> <i>cache_handle</i> Handle to the opened cache directory to use.<br/>
+ <i>url</i> URL of the cached file to set as &#8216;done&#8217; (unlock)<br/>
+ <i>tag</i> Tag specifying which job has locked the cache and must therefore be unlocked. It is an error to call this function with a tag which does not currently own the cache lock.<br/>
  <i>timestamp</i> Timestamp of the cached file, set by globus_gass_cache_done(), (or <code>globus_gass_cache_delete()</code> ).</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -223,71 +223,71 @@ description: "Globus GASS Cache –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>cache_handle</i> Handle to the opened cache directory to use.<br />
+</dt><dd> <i>cache_handle</i> Handle to the opened cache directory to use.<br/>
  <i>cache_dir</i> Pointer to the cache directory</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GLOBUS_SUCCESS</i> Success<br />
+</dt><dd> <i>GLOBUS_SUCCESS</i> Success<br/>
  <i>GLOBUS_GASS_CACHE_ERROR_NO_MEMORY</i> No memory</dd></dl>
 <h3>int globus_gass_cache_get_cache_type_string (const <code>globus_gass_cache_t</code>cache_handle, char **cache_type)</h3>
 <p> Get the type of GASS Cache directory layout. Get a string which describes the cache type (&#8216;normal&#8217; or &#8216;flat&#8217;) </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>cache_handle</i> Handle to the opened cache directory to use.<br />
+</dt><dd> <i>cache_handle</i> Handle to the opened cache directory to use.<br/>
  <i>cache_type</i> Pointer to the strdup()ed string</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GLOBUS_SUCCESS</i> Success<br />
+</dt><dd> <i>GLOBUS_SUCCESS</i> Success<br/>
  <i>GLOBUS_GASS_CACHE_ERROR_NO_MEMORY</i> No memory</dd></dl>
 <h3>int globus_gass_cache_get_dirs (const <code>globus_gass_cache_t</code>cache_handle, const char *url, const char *tag, char **global_root, char **local_root, char **tmp_root, char **log_root, char **global_dir, char **local_dir)</h3>
 <p> Get the set of directories used by a GASS Cache. Gets a bunch of directories. This is exported for use in the globus_gass_cache program. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>cache_handle</i> Handle to the opened cache directory to use.<br />
- <i>url</i> The incoming URL<br />
- <i>tag</i> The incoming tag<br />
- <i>local_root</i> Pointer to the &#8216;local root&#8217; directory<br />
- <i>global_root</i> Pointer to the &#8216;global root&#8217; directory<br />
- <i>tmp_root</i> Pointer to the &#8216;tmp root&#8217; directory<br />
- <i>log_root</i> Pointer to the root log directory<br />
- <i>local_dir</i> Pointer to the related &#8216;local&#8217; directory<br />
+</dt><dd> <i>cache_handle</i> Handle to the opened cache directory to use.<br/>
+ <i>url</i> The incoming URL<br/>
+ <i>tag</i> The incoming tag<br/>
+ <i>local_root</i> Pointer to the &#8216;local root&#8217; directory<br/>
+ <i>global_root</i> Pointer to the &#8216;global root&#8217; directory<br/>
+ <i>tmp_root</i> Pointer to the &#8216;tmp root&#8217; directory<br/>
+ <i>log_root</i> Pointer to the root log directory<br/>
+ <i>local_dir</i> Pointer to the related &#8216;local&#8217; directory<br/>
  <i>global_dir</i> Pointer to the related &#8216;global&#8217; directory</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GLOBUS_SUCCESS</i> Success<br />
+</dt><dd> <i>GLOBUS_SUCCESS</i> Success<br/>
  <i>GLOBUS_GASS_CACHE_ERROR_NO_MEMORY</i> No memory</dd></dl>
 <h3>int globus_gass_cache_mangle_tag (const <code>globus_gass_cache_t</code>cache_handle, const char *tag, char **mangled_tag, int *length)</h3>
 <p> Convert a tag to a string suitable as a file path. Mangles the given tag into a chunk suitable for using as a file / path name. This is exported for use in the globus_gass_cache program. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>cache_handle</i> Handle to the opened cache directory to use.<br />
- <i>tag</i> The incoming tag to mangle (NULL-terminated)<br />
- <i>mangled_tag</i> Pointer to the output string; a buffer for the real string is malloc()ed for the application. If mangled is NULL, then no such buffer is allocated, and no mangled string is created. This can be useful to just get the length of the mangled string.<br />
+</dt><dd> <i>cache_handle</i> Handle to the opened cache directory to use.<br/>
+ <i>tag</i> The incoming tag to mangle (NULL-terminated)<br/>
+ <i>mangled_tag</i> Pointer to the output string; a buffer for the real string is malloc()ed for the application. If mangled is NULL, then no such buffer is allocated, and no mangled string is created. This can be useful to just get the length of the mangled string.<br/>
  <i>length</i> A pointer to the length of the resulting string. If NULL, this is not assigned to.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GLOBUS_SUCCESS</i> Success<br />
+</dt><dd> <i>GLOBUS_SUCCESS</i> Success<br/>
  <i>GLOBUS_GASS_CACHE_ERROR_NO_MEMORY</i> No memory</dd></dl>
 <h3>int globus_gass_cache_mangle_url (const <code>globus_gass_cache_t</code>cache_handle, const char *url, char **mangled_url, int *length)</h3>
 <p> Convert a URL to a string suitable as a file path. Mangles the given URL into a chunk suitable for using as a file / path name. This is exported for use in the globus_gass_cache program. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>cache_handle</i> Handle to the opened cache directory to use.<br />
- <i>url</i> The incoming URL to mangle (NULL-terminated)<br />
- <i>mangled_url</i> Pointer to the output string; a buffer for the real string is malloc()ed for the application. If mangled is NULL, then no such buffer is allocated, and no mangled string is created. This can be useful to just get the length of the mangled string.<br />
+</dt><dd> <i>cache_handle</i> Handle to the opened cache directory to use.<br/>
+ <i>url</i> The incoming URL to mangle (NULL-terminated)<br/>
+ <i>mangled_url</i> Pointer to the output string; a buffer for the real string is malloc()ed for the application. If mangled is NULL, then no such buffer is allocated, and no mangled string is created. This can be useful to just get the length of the mangled string.<br/>
  <i>length</i> A pointer to the length of the resulting string. If NULL, this is not assigned to.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GLOBUS_SUCCESS</i> Success<br />
+</dt><dd> <i>GLOBUS_SUCCESS</i> Success<br/>
  <i>GLOBUS_GASS_CACHE_ERROR_NO_MEMORY</i> No memory</dd></dl>
 <h3>int globus_gass_cache_open (const char *cache_directory_path, <code>globus_gass_cache_t</code> *cache_handlep)</h3>
 <p> Open a GASS Cache. Open the cache specified by the cache_directory_path argument, and return a cache handle that can be used in subsequent cache calls. </p>
@@ -297,14 +297,14 @@ description: "Globus GASS Cache –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>cache_directory_path</i> Path to the cache directory to open. Can be NULL (see above)<br />
+</dt><dd> <i>cache_directory_path</i> Path to the cache directory to open. Can be NULL (see above)<br/>
  <i>cache_handlep</i> Structure containning all the necessary information to access the cache (file names, descriptor,&#8230;) (see globus_gass_gache.h) Some files are also opened: <code>globus_gass_cache_close()</code> must be called subsequently to close those files. This parameter is modified by the <code>globus_gass_cache_open()</code></dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GLOBUS_SUCCESS</i> Success<br />
- <i>GLOBUS_GASS_CACHE_ERROR_CACHE_ALREADY_OPENED</i> Handle already opened<br />
- <i>GLOBUS_GASS_CACHE_ERROR_NAME_TOO_LONG</i> Path name too long<br />
+</dt><dd> <i>GLOBUS_SUCCESS</i> Success<br/>
+ <i>GLOBUS_GASS_CACHE_ERROR_CACHE_ALREADY_OPENED</i> Handle already opened<br/>
+ <i>GLOBUS_GASS_CACHE_ERROR_NAME_TOO_LONG</i> Path name too long<br/>
  <i>GLOBUS_GASS_CACHE_ERROR_NO_HOME</i> Can&#8217;t find home directory for default cache path</dd></dl>
 <h3>int globus_gass_cache_query (<code>globus_gass_cache_t</code>cache_handle, const char *url, const char *tag, globus_bool_twait_for_lock, unsigned long *timestamp, char **local_filename, globus_bool_t *is_locked)</h3>
 <p> Query the GASS Cache. Query if an item is in the cache </p>
@@ -312,12 +312,12 @@ description: "Globus GASS Cache –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>cache_handle</i> Handle to the opened cache directory to use.<br />
- <i>url</i> URL of the file to query. It is used as the main key to the cache entries.<br />
- <i>tag</i> Tag specifying which job is/are using the cache. This is usually the GLOBUS_GRAM_JOB_CONTACT. Can be NULL or empty; the tag &#8216;null&#8217; is then used.<br />
- <i>wait_for_lock</i> If GLOBUS_TRUE, wait for any lock existing lock to be released. If GLOBUS_FALSE, doesn&#8217;t wait for a lock to be released.<br />
- <i>timestamp</i> Timestamp of the cached file, set by globus_gass_cache_done(), (or <code>globus_gass_cache_delete()</code> ).<br />
- <i>local_filename</i> Path the the local file caching the file specified by &#8216;url&#8217;. NULL if &#8216;url&#8217; not yet cached and creation not requested (create false).<br />
+</dt><dd> <i>cache_handle</i> Handle to the opened cache directory to use.<br/>
+ <i>url</i> URL of the file to query. It is used as the main key to the cache entries.<br/>
+ <i>tag</i> Tag specifying which job is/are using the cache. This is usually the GLOBUS_GRAM_JOB_CONTACT. Can be NULL or empty; the tag &#8216;null&#8217; is then used.<br/>
+ <i>wait_for_lock</i> If GLOBUS_TRUE, wait for any lock existing lock to be released. If GLOBUS_FALSE, doesn&#8217;t wait for a lock to be released.<br/>
+ <i>timestamp</i> Timestamp of the cached file, set by globus_gass_cache_done(), (or <code>globus_gass_cache_delete()</code> ).<br/>
+ <i>local_filename</i> Path the the local file caching the file specified by &#8216;url&#8217;. NULL if &#8216;url&#8217; not yet cached and creation not requested (create false).<br/>
  <i>is_locked</i> GLOBUS_TRUE if the file is currently (at return time) locked.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

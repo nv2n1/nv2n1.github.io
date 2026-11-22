@@ -34,7 +34,7 @@ description: "Callout Configuration –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The handle that is to be configured<br />
+</dt><dd> <i>handle</i> The handle that is to be configured<br/>
  <i>filename</i> The file to read configuration from</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -43,8 +43,8 @@ description: "Callout Configuration –"
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GLOBUS_CALLOUT_ERROR_OPENING_CONF_FILE</i> Error opening filename<br />
- <i>GLOBUS_CALLOUT_ERROR_PARSING_CONF_FILE</i> Error parsing file<br />
+</dt><dd> <i>GLOBUS_CALLOUT_ERROR_OPENING_CONF_FILE</i> Error opening filename<br/>
+ <i>GLOBUS_CALLOUT_ERROR_PARSING_CONF_FILE</i> Error parsing file<br/>
  <i>GLOBUS_CALLOUT_ERROR_OUT_OF_MEMORY</i> Out of memory</dd></dl>
 <h3>globus_result_t globus_callout_register (<code>globus_callout_handle_t</code>handle, char *type, char *library, char *symbol)</h3>
 <p> Register callout configuration </p>
@@ -52,9 +52,9 @@ description: "Callout Configuration –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The handle that is to be configured<br />
- <i>type</i> The abstract type of the callout<br />
- <i>library</i> The location of the library containing the callout<br />
+</dt><dd> <i>handle</i> The handle that is to be configured<br/>
+ <i>type</i> The abstract type of the callout<br/>
+ <i>library</i> The location of the library containing the callout<br/>
  <i>symbol</i> The symbol (ie function name) for the callout</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

@@ -43,13 +43,13 @@ void setSingleRedemption (Real notional, Real redemption, const Date &amp;date)
 Protected Attributes</code></pre>
 <p> Inherits <code>QuantLib::Instrument</code>. Inherited by <code>AmortizingCmsRateBond</code>, <code>AmortizingFixedRateBond</code>, <code>AmortizingFloatingRateBond</code>, <code>CallableBond</code>, <code>CmsRateBond</code>, <code>ConvertibleBond</code>, <code>FixedRateBond</code>, <code>FloatingRateBond</code>, and <code>ZeroCouponBond</code>.</p>
 <h3>Public Member Functions</h3>
-<p><code>Bond</code> (<code>Natural</code> settlementDays, const <code>Calendar</code> &amp;calendar, const <code>Date</code> &amp;issueDate=<code>Date</code>(), const Leg &amp;coupons=Leg())<br />
- <i>constructor for amortizing or non-amortizing bonds. </i><br />
- <code>Bond</code> (<code>Natural</code> settlementDays, const <code>Calendar</code> &amp;calendar, <code>Real</code> faceAmount, const <code>Date</code> &amp;maturityDate, const <code>Date</code> &amp;issueDate=<code>Date</code>(), const Leg &amp;cashflows=Leg())<br />
- <i>old constructor for non amortizing bonds. </i><br />
+<p><code>Bond</code> (<code>Natural</code> settlementDays, const <code>Calendar</code> &amp;calendar, const <code>Date</code> &amp;issueDate=<code>Date</code>(), const Leg &amp;coupons=Leg())<br/>
+ <i>constructor for amortizing or non-amortizing bonds. </i><br/>
+ <code>Bond</code> (<code>Natural</code> settlementDays, const <code>Calendar</code> &amp;calendar, <code>Real</code> faceAmount, const <code>Date</code> &amp;maturityDate, const <code>Date</code> &amp;issueDate=<code>Date</code>(), const Leg &amp;cashflows=Leg())<br/>
+ <i>old constructor for non amortizing bonds. </i><br/>
  virtual <code>Rate</code> <code>nextCoupon</code> (<code>Date</code> d=<code>Date</code>()) const </p>
-<p> <code>Rate</code> <code>previousCoupon</code> (<code>Date</code> d=<code>Date</code>()) const<br />
- <i>Previous coupon already paid at a given date. </i> <code>Inspectors</code><br />
+<p> <code>Rate</code> <code>previousCoupon</code> (<code>Date</code> d=<code>Date</code>()) const<br/>
+ <i>Previous coupon already paid at a given date. </i> <code>Inspectors</code><br/>
  Real cleanPrice () const</p>
 <p>theoretical clean price</p>
 <p>Real dirtyPrice () const</p>
@@ -74,7 +74,7 @@ Protected Attributes</code></pre>
 <p>accrued amount at a given date</p>
 <p>bool isExpired () const</p>
 <p>returns whether the instrument is still tradable.</p>
-<p>Protected Member Functions<br />
+<p>Protected Member Functions<br/>
 void setupExpired () const</p>
 <p>void setupArguments (PricingEngine::arguments *) const</p>
 <p>void fetchResults (const PricingEngine::results *) const</p>

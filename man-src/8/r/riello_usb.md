@@ -11,7 +11,7 @@ description: "riello_usb – Driver for Riello UPS Protocol UPS equipment via US
 <h2>Synopsis</h2>
 <p><code>riello_usb</code> -h <code>riello_usb</code> -a <i>UPS_NAME</i> [<i>OPTIONS</i>]</p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  This man page only documents the hardware-specific features of the riello_usb driver. For information about the core driver, see <code><a href="/docs/linux/man/8-nutupsdrv/">nutupsdrv</a></code>(8). </dd>
 <h2>Supported Hardware</h2>
 <p>riello_usb supports all recent Riello UPS with USB. </p>

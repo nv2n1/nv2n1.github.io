@@ -227,30 +227,30 @@ CREATE TABLE IF NOT EXISTS mysql.failover_console (host char(30), port char(10))
 </dd></dl>
 <p> When the console starts, a row is inserted containing the hostname and port of the master. On startup, if a row matches these values, the console will not start. If you use the <code>&#8211;force</code> option, the row is deleted. </p>
 <p> When running the utility using the <code>&#8211;daemon</code> option with <code>nodetach</code> the <code>&#8211;pidfile</code> option can be omitted, will be ignored if used. </p>
-<p> When running the utility using the <code>&#8211;daemon</code> option with <code>nodetach</code> the <code>&#8211;pidfile</code> option can be omitted, will be ignored if used.<br />
+<p> When running the utility using the <code>&#8211;daemon</code> option with <code>nodetach</code> the <code>&#8211;pidfile</code> option can be omitted, will be ignored if used.<br/>
 EXAMPLES </p>
 <p> To launch the utility, you must specify at a minimum the <code>&#8211;master</code> option and either the <code>&#8211;discover-slaves-login</code> option or the <code>&#8211;slaves</code> option. The option: option can be used in conjunction with the <code>&#8211;slaves</code> option to specify a list of known slaves (or slaves that do not report their host and ip) and to discover any other slaves connected to the master. </p>
 <p> An example of the user interface and some of the report views are shown in the following examples. </p>
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> The &quot;GTID Executed Set&quot; will display the first GTID listed in the SHOW MASTER STATUS view. If there are multiple GTIDs listed, the utility shall display [&#8230;] to indicate there are additional GTIDs to view. You can view the complete list of GTIDs on the GTID display screens. </p>
 </dl>
 <p> The default interface will display the replication health report like the following. In this example the log file is enabled. A sample startup command is shown below: </p>
 <dl>
 <dt>
 </dt><dd>
-$ mysqlfailover&#8211; master = root[at] localhost : 3331 &#8211;discover &#8211; slaves &#8211; login = root&#8211; log = log.txt<br />
-                                                                                                    MySQL Replication Monitor and Failover Utility<br />
-                                                                                                        Failover Mode = auto Next Interval = Mon Mar 19 15 : 56 : 03 2012 Master Information&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;Binary Log File Position Binlog_Do_DB Binlog_Ignore_DB<br />
-                                                                                                                                                     mysql &#8211;<br />
-                                                                                                                                                 bin .000001 571 GTID Executed Set 2A67DE00 &#8211; 2DA1 &#8211; 11E2 &#8211; A711 &#8211; 00764F2BE90F : 1 &#8211; 7 [&#8230;] Replication Health Status + &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; -+ |<br />
-                                                                                                                                             host | port | role | state | gtid_mode | health |<br />
-                                                                                                                                             +&#8211; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; -+ | localhost | 3331 | MASTER | UP | ON | OK |<br />
-                                                                                                                                             | localhost | 3332 | SLAVE | UP | ON | OK |<br />
-                                                                                                                                             | localhost | 3333 | SLAVE | UP | ON | OK |<br />
-                                                                                                                                             | localhost | 3334 | SLAVE | UP | ON | OK |<br />
+$ mysqlfailover&#8211; master = root[at] localhost : 3331 &#8211;discover &#8211; slaves &#8211; login = root&#8211; log = log.txt<br/>
+                                                                                                    MySQL Replication Monitor and Failover Utility<br/>
+                                                                                                        Failover Mode = auto Next Interval = Mon Mar 19 15 : 56 : 03 2012 Master Information&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;Binary Log File Position Binlog_Do_DB Binlog_Ignore_DB<br/>
+                                                                                                                                                     mysql &#8211;<br/>
+                                                                                                                                                 bin .000001 571 GTID Executed Set 2A67DE00 &#8211; 2DA1 &#8211; 11E2 &#8211; A711 &#8211; 00764F2BE90F : 1 &#8211; 7 [&#8230;] Replication Health Status + &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; -+ |<br/>
+                                                                                                                                             host | port | role | state | gtid_mode | health |<br/>
+                                                                                                                                             +&#8211; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; -+ | localhost | 3331 | MASTER | UP | ON | OK |<br/>
+                                                                                                                                             | localhost | 3332 | SLAVE | UP | ON | OK |<br/>
+                                                                                                                                             | localhost | 3333 | SLAVE | UP | ON | OK |<br/>
+                                                                                                                                             | localhost | 3334 | SLAVE | UP | ON | OK |<br/>
                                                                                                                                              +&#8211; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; -+Q &#8211; quit R &#8211; refresh H &#8211; health G &#8211; GTID Lists U &#8211; UUIDs L &#8211; log entries
 </dd></dl>
 <p> Pressing the &#8216;q&#8217; key will exit the utility. Pressing the &#8216;r&#8217; key will refresh the current display. Pressing the &#8216;h&#8217; key will return to the replication health report. </p>
@@ -258,13 +258,13 @@ $ mysqlfailover&#8211; master = root[at] localhost : 3331 &#8211;discover &#8211
 <dl>
 <dt>
 </dt><dd>
-MySQL Replication Monitor and Failover Utility<br />
-    Failover Mode = auto Next Interval = Mon Mar 19 15 : 59 : 33 2012 Master Information&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;Binary Log File Position Binlog_Do_DB Binlog_Ignore_DB<br />
-                                                 mysql &#8211;<br />
-                                             bin .000001 571 GTID Executed Set 2A67DE00 &#8211; 2DA1 &#8211; 11E2 &#8211; A711 &#8211; 00764F2BE90F : 1 &#8211; 7 [&#8230;] Master GTID Executed Set + &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+ |<br />
-                                         gtid |<br />
-                                         +&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+ | 2A67DE00 &#8211; 2DA1 &#8211; 11E2 &#8211; A711 &#8211; 00764F2BE90F : 1 &#8211; 7 |<br />
-                                         | 5503D37E-2DB2 &#8211; 11E2 &#8211; A781 &#8211; 8077D4C14B33 : 1 &#8211; 3 |<br />
+MySQL Replication Monitor and Failover Utility<br/>
+    Failover Mode = auto Next Interval = Mon Mar 19 15 : 59 : 33 2012 Master Information&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;Binary Log File Position Binlog_Do_DB Binlog_Ignore_DB<br/>
+                                                 mysql &#8211;<br/>
+                                             bin .000001 571 GTID Executed Set 2A67DE00 &#8211; 2DA1 &#8211; 11E2 &#8211; A711 &#8211; 00764F2BE90F : 1 &#8211; 7 [&#8230;] Master GTID Executed Set + &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+ |<br/>
+                                         gtid |<br/>
+                                         +&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+ | 2A67DE00 &#8211; 2DA1 &#8211; 11E2 &#8211; A711 &#8211; 00764F2BE90F : 1 &#8211; 7 |<br/>
+                                         | 5503D37E-2DB2 &#8211; 11E2 &#8211; A781 &#8211; 8077D4C14B33 : 1 &#8211; 3 |<br/>
                                          +&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+Q &#8211; quit R &#8211; refresh H &#8211; health G &#8211; GTID Lists U &#8211; UUIDs L &#8211; log entries Up | Down &#8211; scroll
 </dd></dl>
 <p> If the user continues to press the &#8216;g&#8217; key, the display will cycle through the three gtid lists. </p>
@@ -273,47 +273,47 @@ MySQL Replication Monitor and Failover Utility<br />
 <dl>
 <dt>
 </dt><dd>
-MySQL Replication Monitor and Failover Utility<br />
-    Failover Mode = auto Next Interval = Mon Mar 19 16 : 02 : 34 2012 Master Information&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;Binary Log File Position Binlog_Do_DB Binlog_Ignore_DB<br />
-                                                 mysql &#8211;<br />
-                                             bin .000001 571 GTID Executed Set 2A67DE00 &#8211; 2DA1 &#8211; 11E2 &#8211; A711 &#8211; 00764F2BE90F : 1 &#8211; 7 [&#8230;] UUIDs + &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+ |<br />
-                                         host | port | role | uuid |<br />
-                                         +&#8211; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+ | localhost | 3331 | MASTER | 55c65a00 &#8211; 71fd &#8211; 11e1 &#8211; 9f80 &#8211; ac64ef85c961 |<br />
-                                         | localhost | 3332 | SLAVE | 5dd30888 &#8211; 71fd &#8211; 11e1 &#8211; 9f80 &#8211; dc242138b7ec |<br />
-                                         | localhost | 3333 | SLAVE | 65ccbb38 &#8211; 71fd &#8211; 11e1 &#8211; 9f80 &#8211; bda8146bdb0a |<br />
-                                         | localhost | 3334 | SLAVE | 6dd6abf4 &#8211; 71fd &#8211; 11e1 &#8211; 9f80 &#8211; d406a0117519 |<br />
+MySQL Replication Monitor and Failover Utility<br/>
+    Failover Mode = auto Next Interval = Mon Mar 19 16 : 02 : 34 2012 Master Information&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;Binary Log File Position Binlog_Do_DB Binlog_Ignore_DB<br/>
+                                                 mysql &#8211;<br/>
+                                             bin .000001 571 GTID Executed Set 2A67DE00 &#8211; 2DA1 &#8211; 11E2 &#8211; A711 &#8211; 00764F2BE90F : 1 &#8211; 7 [&#8230;] UUIDs + &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+ |<br/>
+                                         host | port | role | uuid |<br/>
+                                         +&#8211; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+ | localhost | 3331 | MASTER | 55c65a00 &#8211; 71fd &#8211; 11e1 &#8211; 9f80 &#8211; ac64ef85c961 |<br/>
+                                         | localhost | 3332 | SLAVE | 5dd30888 &#8211; 71fd &#8211; 11e1 &#8211; 9f80 &#8211; dc242138b7ec |<br/>
+                                         | localhost | 3333 | SLAVE | 65ccbb38 &#8211; 71fd &#8211; 11e1 &#8211; 9f80 &#8211; bda8146bdb0a |<br/>
+                                         | localhost | 3334 | SLAVE | 6dd6abf4 &#8211; 71fd &#8211; 11e1 &#8211; 9f80 &#8211; d406a0117519 |<br/>
                                          +&#8211; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -+Q &#8211; quit R &#8211; refresh H &#8211; health G &#8211; GTID Lists U &#8211; UUIDs L &#8211; log entries
 </dd></dl>
 <p> If, once the master is detected as down and failover mode is auto or elect and there are viable candidate slaves, the failover feature will engage automatically and the user will see the failover messages appear. When failover is complete, the interface returns to monitoring replication health after 5 seconds. The following shows an example of failover occurring.: </p>
 <dl>
 <dt>
 </dt><dd>
-Failover starting&#8230;<br />
-#Candidate slave localhost : 3332 will become the new master.<br />
-#Preparing candidate for failover.<br />
-#Creating replication user if it does not exist.<br />
-#Stopping slaves.<br />
-#Performing STOP on all slaves.<br />
-#Switching slaves to new master.<br />
-#Starting slaves.<br />
-#Performing START on all slaves.<br />
-#Checking slaves for errors.<br />
-#Failover complete.<br />
-#Discovering slaves for master at localhost : 3332<br />
+Failover starting&#8230;<br/>
+#Candidate slave localhost : 3332 will become the new master.<br/>
+#Preparing candidate for failover.<br/>
+#Creating replication user if it does not exist.<br/>
+#Stopping slaves.<br/>
+#Performing STOP on all slaves.<br/>
+#Switching slaves to new master.<br/>
+#Starting slaves.<br/>
+#Performing START on all slaves.<br/>
+#Checking slaves for errors.<br/>
+#Failover complete.<br/>
+#Discovering slaves for master at localhost : 3332<br/>
     Failover console will restart in 5 seconds.
 </dd></dl>
 <p> After the failover event, the new topology is shown in the replication health report.: </p>
 <dl>
 <dt>
 </dt><dd>
-MySQL Replication Monitor and Failover Utility<br />
-    Failover Mode = auto Next Interval = Mon Mar 19 16 : 05 : 12 2012 Master Information&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;Binary Log File Position Binlog_Do_DB Binlog_Ignore_DB<br />
-                                                 mysql &#8211;<br />
-                                             bin .000001 1117 GTID Executed Set 2A67DE00 &#8211; 2DA1 &#8211; 11E2 &#8211; A711 &#8211; 00764F2BE90F : 1 &#8211; 7 [&#8230;] UUIDs + &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; -+ |<br />
-                                         host | port | role | state | gtid_mode | health |<br />
-                                         +&#8211; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; -+ | localhost | 3332 | MASTER | UP | ON | OK |<br />
-                                         | localhost | 3333 | SLAVE | UP | ON | OK |<br />
-                                         | localhost | 3334 | SLAVE | UP | ON | OK |<br />
+MySQL Replication Monitor and Failover Utility<br/>
+    Failover Mode = auto Next Interval = Mon Mar 19 16 : 05 : 12 2012 Master Information&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;Binary Log File Position Binlog_Do_DB Binlog_Ignore_DB<br/>
+                                                 mysql &#8211;<br/>
+                                             bin .000001 1117 GTID Executed Set 2A67DE00 &#8211; 2DA1 &#8211; 11E2 &#8211; A711 &#8211; 00764F2BE90F : 1 &#8211; 7 [&#8230;] UUIDs + &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; -+ |<br/>
+                                         host | port | role | state | gtid_mode | health |<br/>
+                                         +&#8211; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; -+ | localhost | 3332 | MASTER | UP | ON | OK |<br/>
+                                         | localhost | 3333 | SLAVE | UP | ON | OK |<br/>
+                                         | localhost | 3334 | SLAVE | UP | ON | OK |<br/>
                                          +&#8211; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; -+Q &#8211; quit R &#8211; refresh H &#8211; health G &#8211; GTID Lists U &#8211; UUIDs L &#8211; log entries
 </dd></dl>
 <p> If the user presses the &#8216;l&#8217; key and the <code>&#8211;log</code> option was specified, the interface will show the entries in the log file. Note: example truncated for space allowance.: </p>

@@ -56,17 +56,17 @@ description: "shorewall6-lite – Administration tool for Shoreline 6 Firewall L
 <dd>The shorewall6-lite utility is used to control the Shoreline Firewall Lite (Shorewall Lite).</dd>
 <h2>Options</h2>
 <p>The <code>trace</code> and <code>debug</code> options are used for debugging. See m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/starting_and_stopping_shorewall.htm#Trace">http://www.shorewall.net/starting_and_stopping_shorewall.htm#Trace</a></code>m[]. </p>
-<p> The <code>nolock</code> option prevents the command from attempting to acquire the shorewall6-lite lockfile. It is useful if you need to include <code>shorewall</code> commands in the startedm[blue]<code>extension script</code>m[]<font SIZE="-2">[1]</font>. </p>
-<p> The <i>options</i> control the amount of output that the command produces. They consist of a sequence of the letters <code>v</code> and <code>q</code>. If the options are omitted, the amount of output is determined by the setting of the VERBOSITY parameter in m[blue]<code>shorewall6.conf</code>m[]<font SIZE="-2">[2]</font>(5). Each <code>v</code> adds one to the effective verbosity and each <code>q</code> subtracts one from the effective VERBOSITY. Alternately, <code>v</code> may be followed immediately with one of -1,0,1,2 to specify VERBOSITY. There may be no white-space between <code>v</code> and the VERBOSITY. </p>
+<p> The <code>nolock</code> option prevents the command from attempting to acquire the shorewall6-lite lockfile. It is useful if you need to include <code>shorewall</code> commands in the startedm[blue]<code>extension script</code>m[][1]. </p>
+<p> The <i>options</i> control the amount of output that the command produces. They consist of a sequence of the letters <code>v</code> and <code>q</code>. If the options are omitted, the amount of output is determined by the setting of the VERBOSITY parameter in m[blue]<code>shorewall6.conf</code>m[][2](5). Each <code>v</code> adds one to the effective verbosity and each <code>q</code> subtracts one from the effective VERBOSITY. Alternately, <code>v</code> may be followed immediately with one of -1,0,1,2 to specify VERBOSITY. There may be no white-space between <code>v</code> and the VERBOSITY. </p>
 <p> The <i>options</i> may also include the letter <code>t</code> which causes all progress messages to be timestamped.</p>
 <h2>Commands</h2>
 <p>The available commands are listed below. </p>
 <p> <code>add </code>{ <i>interface</i>[:<i>host-list</i>]&#8230; <i>zone</i> | <i>zone</i> <i>host-list</i> }</p>
 <dl>
 <dd>Adds a list of hosts or subnets to a dynamic zone usually used with VPN&#8217;s. </dd>
-<p> The <i>interface</i> argument names an interface defined in the m[blue]<code>shorewall-interfaces</code>m[]<font SIZE="-2">[3]</font>(5) file. A <i>host-list</i> is comma-separated list whose elements are host or network addresses. </p>
+<p> The <i>interface</i> argument names an interface defined in the m[blue]<code>shorewall-interfaces</code>m[][3](5) file. A <i>host-list</i> is comma-separated list whose elements are host or network addresses. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Caution</code> </font><br />
+<dd> <code>Caution</code> <br/>
  The <code>add</code> command is not very robust. If there are errors in the <i>host-list</i>, you may see a large number of error messages yet a subsequent <code>shorewall6-lite show zones</code> command will indicate that all hosts were added. If this happens, replace <code>add</code> by <code>delete</code> and run the same command again. Then enter the correct command. </dd>
 </dl>
 </dl>
@@ -75,7 +75,7 @@ description: "shorewall6-lite – Administration tool for Shoreline 6 Firewall L
 <dd>Re-enables receipt of packets from hosts previously blacklisted by a <code>drop</code>, <code>logdrop</code>, <code>reject</code>, or <code>logreject</code> command. Beginning with Shorewall 5.0.10, this command can also re-enable addresses blacklisted using the <code>blacklist</code> command.</dd></dl>
 <p> <code>blacklist</code> <i>address</i> [ <i>option</i> &#8230; ]</p>
 <dl>
-<dd>Added in Shorewall 5.0.8 and requires DYNAMIC_BLACKLIST=ipset.. in m[blue]<code>shorewall6.conf</code>m[]<font SIZE="-2">[4]</font>(5). Causes packets from the given host or network <i>address</i> to be dropped, based on the setting of BLACKLIST in m[blue]<code>shorewall6.conf</code>m[]<font SIZE="-2">[4]</font>(5). The <i>address</i> along with any <i>option</i>s are passed to the <code>ipset add</code> command. </dd>
+<dd>Added in Shorewall 5.0.8 and requires DYNAMIC_BLACKLIST=ipset.. in m[blue]<code>shorewall6.conf</code>m[][4](5). Causes packets from the given host or network <i>address</i> to be dropped, based on the setting of BLACKLIST in m[blue]<code>shorewall6.conf</code>m[][4](5). The <i>address</i> along with any <i>option</i>s are passed to the <code>ipset add</code> command. </dd>
 <p> If the <code>disconnect</code> option is specified in the DYNAMIC_BLACKLISTING setting, then the effective VERBOSITY determines the amount of information displayed: </p>
 <dl>
 <dd>&bull; If the effective verbosity is &gt; 0, then a message giving the number of conntrack flows deleted by the command is displayed.</dd></dl>
@@ -97,7 +97,7 @@ description: "shorewall6-lite – Administration tool for Shoreline 6 Firewall L
 <p> <code>delete </code>{ <i>interface</i>[:<i>host-list</i>]&#8230; <i>zone</i> | <i>zone</i> <i>host-list</i> }</p>
 <dl>
 <dd>The delete command reverses the effect of an earlier <code>add</code> command. </dd>
-<p> The <i>interface</i> argument names an interface defined in the m[blue]<code>shorewall-interfaces</code>m[]<font SIZE="-2">[3]</font>(5) file. A <i>host-list</i> is comma-separated list whose elements are a host or network address.</dl>
+<p> The <i>interface</i> argument names an interface defined in the m[blue]<code>shorewall-interfaces</code>m[][3](5) file. A <i>host-list</i> is comma-separated list whose elements are a host or network address.</dl>
 <p> <code>disable </code>{ <i>interface</i> | <i>provider</i> }</p>
 <dl>
 <dd>Added in Shorewall 4.4.26. Disables the optional provider associated with the specified <i>interface</i> or <i>provider</i>. Where more than one provider share a single network interface, a <i>provider</i> name must be given.</dd></dl>
@@ -116,7 +116,7 @@ description: "shorewall6-lite – Administration tool for Shoreline 6 Firewall L
 <dd>Added in Shorewall 4.4.26. Enables the optional provider associated with the specified <i>interface</i> or <i>provider</i>. Where more than one provider share a single network interface, a <i>provider</i> name must be given.</dd></dl>
 <p> <code>forget </code>[ <i>filename</i> ]</p>
 <dl>
-<dd>Deletes /var/lib/shorewall6-lite/<i>filename</i> and /var/lib/shorewall6-lite/save. If no <i>filename</i> is given then the file specified by RESTOREFILE in m[blue]<code>shorewall6.conf</code>m[]<font SIZE="-2">[2]</font>(5) is assumed.</dd></dl>
+<dd>Deletes /var/lib/shorewall6-lite/<i>filename</i> and /var/lib/shorewall6-lite/save. If no <i>filename</i> is given then the file specified by RESTOREFILE in m[blue]<code>shorewall6.conf</code>m[][2](5) is assumed.</dd></dl>
 <p> <code>help</code></p>
 <dl>
 <dd>Displays a syntax summary.</dd></dl>
@@ -133,15 +133,15 @@ description: "shorewall6-lite – Administration tool for Shoreline 6 Firewall L
 <dd><code>list</code> is a synonym for <code>show</code> &#8212; please see below.</dd></dl>
 <p> <code>logdrop </code><i>address</i></p>
 <dl>
-<dd>Causes traffic from the listed <i>address</i>es to be logged then discarded. Logging occurs at the log level specified by the BLACKLIST_LOGLEVEL setting in m[blue]<code>shorewall6.conf</code>m[]<font SIZE="-2">[2]</font> (5).</dd></dl>
+<dd>Causes traffic from the listed <i>address</i>es to be logged then discarded. Logging occurs at the log level specified by the BLACKLIST_LOGLEVEL setting in m[blue]<code>shorewall6.conf</code>m[][2] (5).</dd></dl>
 <p> <code>logwatch </code>[-<code>m</code>] [<i>refresh-interval</i>]</p>
 <dl>
-<dd>Monitors the log file specified by the LOGFILE option in m[blue]<code>shorewall6.conf</code>m[]<font SIZE="-2">[2]</font>(5) and produces an audible alarm when new shorewall6-lite messages are logged. </dd>
+<dd>Monitors the log file specified by the LOGFILE option in m[blue]<code>shorewall6.conf</code>m[][2](5) and produces an audible alarm when new shorewall6-lite messages are logged. </dd>
 <p> The <code>-m</code> option causes the MAC address of each packet source to be displayed if that information is available. </p>
 <p> The <i>refresh-interval</i> specifies the time in seconds between screen refreshes. You can enter a negative number by preceding the number with &quot;&#8211;&quot; (e.g., <code>shorewall6-lite logwatch &#8212; -30</code>). In this case, when a packet count changes, you will be prompted to hit any key to resume screen refreshes.</dl>
 <p> <code>logreject </code><i>address</i></p>
 <dl>
-<dd>Causes traffic from the listed <i>address</i>es to be logged then rejected. Logging occurs at the log level specified by the BLACKLIST_LOGLEVEL setting in m[blue]<code>shorewall6.conf</code>m[]<font SIZE="-2">[2]</font> (5).</dd></dl>
+<dd>Causes traffic from the listed <i>address</i>es to be logged then rejected. Logging occurs at the log level specified by the BLACKLIST_LOGLEVEL setting in m[blue]<code>shorewall6.conf</code>m[][2] (5).</dd></dl>
 <p> <code>ls</code></p>
 <dl>
 <dd><code>ls</code> is a synonym for <code>show</code> &#8212; please see below.</dd></dl>
@@ -151,7 +151,7 @@ description: "shorewall6-lite – Administration tool for Shoreline 6 Firewall L
 <p> The <i>ip6tables match expression</i> must be one given in the <code>iptrace</code> command being canceled.</dl>
 <p> <code>open</code> <i>source</i> <i>dest</i> [ <i>protocol</i> [ <i>port</i> ] ]</p>
 <dl>
-<dd>Added in Shorewall 4.6.8. This command requires that the firewall be in the started state and that DYNAMIC_BLACKLIST=Yes in m[blue]<code>shorewall6.conf (5)</code>m[]<font SIZE="-2">[4]</font>. The effect of the command is to temporarily open the firewall for connections matching the parameters. </dd>
+<dd>Added in Shorewall 4.6.8. This command requires that the firewall be in the started state and that DYNAMIC_BLACKLIST=Yes in m[blue]<code>shorewall6.conf (5)</code>m[][4]. The effect of the command is to temporarily open the firewall for connections matching the parameters. </dd>
 <p> The <i>source</i> and <i>dest</i> parameters may each be specified as <code>all</code> if you don&#8217;t wish to restrict the connection source or destination respectively. Otherwise, each must contain a host or network address or a valid DNS name. </p>
 <p> The <i>protocol</i> may be specified either as a number or as a name listed in /etc/protocols. The <i>port</i> may be specified numerically or as a name listed in /etc/services. </p>
 <p> To reverse the effect of a successful <code>open</code> command, use the <code>close</code> command with the same parameters or simply restart the firewall. </p>
@@ -189,9 +189,9 @@ description: "shorewall6-lite – Administration tool for Shoreline 6 Firewall L
 <p> The <code>-C</code> option was added in Shorewall 4.6.5. If the specified (or implicit) firewall script is the one that generated the current running configuration, then the running netfilter configuration will be reloaded as is so as to preserve the iptables packet and byte counters.</dl>
 <p> <code>restore </code>[-<code>n</code>] [-<code>p</code>] [-<code>C</code>] [ <i>filename</i> ]</p>
 <dl>
-<dd>Restore shorewall6-lite to a state saved using the <code>shorewall6-lite save</code> command. Existing connections are maintained. The <i>filename</i> names a restore file in /var/lib/shorewall6-lite created using <code>shorewall6-lite save</code>; if no <i>filename</i> is given then shorewall6-lite will be restored from the file specified by the RESTOREFILE option in m[blue]<code>shorewall6.conf</code>m[]<font SIZE="-2">[2]</font>(5). </dd>
+<dd>Restore shorewall6-lite to a state saved using the <code>shorewall6-lite save</code> command. Existing connections are maintained. The <i>filename</i> names a restore file in /var/lib/shorewall6-lite created using <code>shorewall6-lite save</code>; if no <i>filename</i> is given then shorewall6-lite will be restored from the file specified by the RESTOREFILE option in m[blue]<code>shorewall6.conf</code>m[][2](5). </dd>
 <dl>
-<dd><font SIZE="+1"> <code>Caution</code> </font><br />
+<dd> <code>Caution</code> <br/>
  If your ip6tables ruleset depends on variables that are detected at run-time, either in your params file or by Shorewall-generated code, <code>restore</code> will use the values that were current when the ruleset was saved, which may be different from the current values. </dd>
 </dl>
 <p> The <code>-C</code> option was added in Shorewall 4.6.5. If the <code>-C</code> option was specified during <code>shorewall7-lite save</code>, then the counters saved by that operation will be restored.</dl>
@@ -201,11 +201,11 @@ description: "shorewall6-lite – Administration tool for Shoreline 6 Firewall L
 <p> Before executing the command, the script will detect the configuration, setting all SW_* variables and will run your init extension script with $COMMAND = &#8216;run&#8217;.</dl>
 <p> <code>save </code>[-<code>C</code>] [ <i>filename</i> ]</p>
 <dl>
-<dd>The dynamic blacklist is stored in /var/lib/shorewall6-lite/save. The state of the firewall is stored in /var/lib/shorewall6-lite/<i>filename</i> for use by the <code>shorewall6-lite restore</code> command. If <i>filename</i> is not given then the state is saved in the file specified by the RESTOREFILE option in m[blue]<code>shorewall6.conf</code>m[]<font SIZE="-2">[2]</font>(5). </dd>
+<dd>The dynamic blacklist is stored in /var/lib/shorewall6-lite/save. The state of the firewall is stored in /var/lib/shorewall6-lite/<i>filename</i> for use by the <code>shorewall6-lite restore</code> command. If <i>filename</i> is not given then the state is saved in the file specified by the RESTOREFILE option in m[blue]<code>shorewall6.conf</code>m[][2](5). </dd>
 <p> The <code>-C</code> option, added in Shorewall 4.6.5, causes the ip6tables packet and byte counters to be saved along with the chains and rules.</dl>
 <p> <code>savesets</code></p>
 <dl>
-<dd>Added in shorewall 4.6.8. Performs the same action as the <code>stop</code> command with respect to saving ipsets (see the SAVE_IPSETS option in m[blue]<code>shorewall6.conf</code>m[]<font SIZE="-2">[4]</font> (5)). This command may be used to proactively save your ipset contents in the event that a system failure occurs prior to issuing a <code>stop</code> command.</dd></dl>
+<dd>Added in shorewall 4.6.8. Performs the same action as the <code>stop</code> command with respect to saving ipsets (see the SAVE_IPSETS option in m[blue]<code>shorewall6.conf</code>m[][4] (5)). This command may be used to proactively save your ipset contents in the event that a system failure occurs prior to issuing a <code>stop</code> command.</dd></dl>
 <p> <code>show</code></p>
 <dl>
 <dd>The show command can have a number of different arguments: </dd>
@@ -244,10 +244,10 @@ description: "shorewall6-lite – Administration tool for Shoreline 6 Firewall L
 <dd>Displays the system&#8217;s IPv4 configuration.</dd></dl>
 <p> <code>ipa</code></p>
 <dl>
-<dd>Added in Shorewall 4.4.17. Displays the per-IP accounting counters (m[blue]<code>shorewall-accounting</code>m[]<font SIZE="-2">[5]</font> (5)).</dd></dl>
+<dd>Added in Shorewall 4.4.17. Displays the per-IP accounting counters (m[blue]<code>shorewall-accounting</code>m[][5] (5)).</dd></dl>
 <p> [-<code>m</code>] <code>log</code></p>
 <dl>
-<dd>Displays the last 20 shorewall6-lite messages from the log file specified by the LOGFILE option in m[blue]<code>shorewall6.conf</code>m[]<font SIZE="-2">[2]</font>(5). </dd>
+<dd>Displays the last 20 shorewall6-lite messages from the log file specified by the LOGFILE option in m[blue]<code>shorewall6.conf</code>m[][2](5). </dd>
 <p> The <code>-m</code> option causes the MAC address of each packet source to be displayed if that information is available.</dl>
 <p> [-<code>x</code>] <code>mangle</code></p>
 <dl>
@@ -282,11 +282,11 @@ description: "shorewall6-lite – Administration tool for Shoreline 6 Firewall L
 <dd>Start Shorewall6 Lite. Existing connections through shorewall6-lite managed interfaces are untouched. New connections will be allowed only if they are allowed by the firewall rules or policies. </dd>
 <p> The <code>-p</code> option causes the connection tracking table to be flushed; the <code>conntrack</code> utility must be installed to use this option. </p>
 <p> The <code>-n</code> option prevents the firewall script from modifying the current routing configuration. </p>
-<p> The <code>-f</code> option was added in Shorewall 4.6.5. If the RESTOREFILE named in m[blue]<code>shorewall.conf</code>m[]<font SIZE="-2">[2]</font>(5) exists, is executable and is not older than the current filewall script, then that saved configuration is restored. </p>
+<p> The <code>-f</code> option was added in Shorewall 4.6.5. If the RESTOREFILE named in m[blue]<code>shorewall.conf</code>m[][2](5) exists, is executable and is not older than the current filewall script, then that saved configuration is restored. </p>
 <p> The <code>-C</code> option was added in Shorewall 4.6.5 and is only meaningful when the <code>-f</code> option is also specified. If the previously-saved configuration is restored, and if the <code>-C</code> option was also specified in the <code>save</code> command, then the packet and byte counters will be restored.</dl>
 <p> <code>stop </code>[-<code>f</code>]</p>
 <dl>
-<dd>Stops the firewall. All existing connections, except those listed in m[blue]<code>shorewall-routestopped</code>m[]<font SIZE="-2">[6]</font>(5) or permitted by the ADMINISABSENTMINDED option in m[blue]<code>shorewall6.conf</code>m[]<font SIZE="-2">[2]</font>(5), are taken down. The only new traffic permitted through the firewall is from systems listed in m[blue]<code>shorewall-routestopped</code>m[]<font SIZE="-2">[6]</font>(5) or by ADMINISABSENTMINDED. </dd>
+<dd>Stops the firewall. All existing connections, except those listed in m[blue]<code>shorewall-routestopped</code>m[][6](5) or permitted by the ADMINISABSENTMINDED option in m[blue]<code>shorewall6.conf</code>m[][2](5), are taken down. The only new traffic permitted through the firewall is from systems listed in m[blue]<code>shorewall-routestopped</code>m[][6](5) or by ADMINISABSENTMINDED. </dd>
 <p> If <code>-f</code> is given, the command will be processed by the compiled script that executed the last successful <code>start</code>, <code>restart</code> or <code>refresh</code> command if that script exists.</dl>
 <p> <code>status</code></p>
 <dl>
@@ -305,7 +305,7 @@ description: "shorewall6-lite – Administration tool for Shoreline 6 Firewall L
 <p>Two environmental variables are recognized by Shorewall6-lite: </p>
 <p> SHOREWALL_INIT_SCRIPT</p>
 <dl>
-<dd>When set to 1, causes Std out to be redirected to the file specified in the STARTUP_LOG option in m[blue]<code><a href="/docs/linux/man/5-shorewall6-conf/">shorewall6.conf</a>(5)</code>m[]<font SIZE="-2">[7]</font>.</dd></dl>
+<dd>When set to 1, causes Std out to be redirected to the file specified in the STARTUP_LOG option in m[blue]<code><a href="/docs/linux/man/5-shorewall6-conf/">shorewall6.conf</a>(5)</code>m[][7].</dd></dl>
 <p> SW_LOGGERTAG</p>
 <dl>
 <dd>Added in Shorewall 5.0.8. When set to a non-empty value, that value is passed to the logger utility in its -t (&#8211;tag) option.</dd></dl>

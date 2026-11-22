@@ -17,8 +17,8 @@ description: "hdf_copy – copy part of an HDF dataset to another"
 NEOERR *hdf_copy(HDF *dest_hdf, const char *name, HDF *src);
 </code></pre>
 <h2>ARGUMENTS</h2>
-<p> dest_hdf -&gt; the destination dataset<br />
- name -&gt; the name of the destination node<br />
+<p> dest_hdf -&gt; the destination dataset<br/>
+ name -&gt; the name of the destination node<br/>
  src -&gt; the hdf dataset to copy to the destination </p>
 <h2>DESCRIPTION</h2>
 <p> hdf_copy is a deep copy of an HDF tree pointed to by src to the named node of dest. dest and src need not be part of the same data set </p>

@@ -10,20 +10,20 @@ description: "mtnopt – generate shell variables from monotone workspace option
 
 <p> mtnopt &#8211; generate shell variables from monotone workspace options</p>
 <h2>SYNOPSIS</h2>
-<p> <code>mtnopt</code> [<code>-s</code>|<code>-c</code>|<code>-v</code>] [<code>-d</code> <i>dir</i>] [<code>-k</code> <i>keys</i>]<br />
+<p> <code>mtnopt</code> [<code>-s</code>|<code>-c</code>|<code>-v</code>] [<code>-d</code> <i>dir</i>] [<code>-k</code> <i>keys</i>]<br/>
  <code>mtnopt -h</code> </p>
 <h2>DESCRIPTION</h2>
 <p> <code>mtnopt</code> prints shell variable assignments for each value in the file of monotone workspace options, <i>_MTN/options</i>, in the current directory. For instance, if <i>_MTN/options</i> contained this text:</p>
 <dl>
 <dt>
-</dt><dd> <tt>database &quot;/home/user/src/monotone.mtn&quot;</tt><br />
- <tt> branch &quot;net.venge.monotone&quot;</tt><br />
+</dt><dd> <tt>database &quot;/home/user/src/monotone.mtn&quot;</tt><br/>
+ <tt> branch &quot;net.venge.monotone&quot;</tt><br/>
  <tt> keydir &quot;/home/user/.monotone/keys&quot;</tt></dd></dl>
 <p> <code>mtnopt</code> would print:</p>
 <dl>
 <dt>
-</dt><dd> <tt>MTN_database=&quot;/home/user/src/monotone.mtn&quot;;</tt><br />
- <tt>MTN_branch=&quot;net.venge.monotone&quot;;</tt><br />
+</dt><dd> <tt>MTN_database=&quot;/home/user/src/monotone.mtn&quot;;</tt><br/>
+ <tt>MTN_branch=&quot;net.venge.monotone&quot;;</tt><br/>
  <tt>MTN_keydir=&quot;/home/user/.monotone/keys&quot;;</tt></dd></dl>
 <p> By default, <code>mtnopt </code> attempts to guess appropriate syntax from the value of the <code>SHELL</code> environment variable. This can be overridden with the <code>-s</code> and <code>-c</code> command-line options.</p>
 <h2>OPTIONS</h2>

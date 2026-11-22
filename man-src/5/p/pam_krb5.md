@@ -32,7 +32,7 @@ description: "pam_krb5 – Kerberos 5 authentication"
 <dt>ccname_template = <i>KEYRING:krb5cc_%U_%P</i></dt>
 <dd>
 </dd><dt>ccname_template = <i>FILE:%d/krb5cc_%U_XXXXXX</i></dt>
-<dd>specifies the location in which to place the user&#8217;s session-specific credential cache. This value is treated as a template, and these sequences are substituted:<br />
+<dd>specifies the location in which to place the user&#8217;s session-specific credential cache. This value is treated as a template, and these sequences are substituted:<br/>
 &nbsp;<wbr>&nbsp;<wbr>%u<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>login name</dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>%U<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>login UID</p>
 <p>&nbsp;<wbr>&nbsp;<wbr>%p<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>principal name</p>
@@ -91,8 +91,8 @@ description: "pam_krb5 – Kerberos 5 authentication"
 <dt>tokens = <i>true</i>|<i>false</i>|<i>service&nbsp;<wbr>[&#8230;]</i></dt>
 <dd>signals that pam_krb5.so should create an AFS PAG and obtain tokens during authentication in addition to session setup. This is primarily useful in server applications which need to access a user&#8217;s files but which do not open PAM sessions before doing so. For correctly-written applications, this flag is not necessary. </dd>
 <dt>token_strategy = <i>rxk5,2b[,&#8230;]</i></dt>
-<dd>controls how, and using which format, pam_krb5.so should attempt to set AFS tokens for the user&#8217;s session. By default, the module is configured with &quot;token_strategy = <i>2b</i>&quot;. Recognized strategy names include:<br />
-&nbsp;<wbr><i>rxk5</i>&nbsp;<wbr>&nbsp;<wbr>rxk5&nbsp;<wbr>(requires OpenAFS 1.6 or later)<br />
+<dd>controls how, and using which format, pam_krb5.so should attempt to set AFS tokens for the user&#8217;s session. By default, the module is configured with &quot;token_strategy = <i>2b</i>&quot;. Recognized strategy names include:<br/>
+&nbsp;<wbr><i>rxk5</i>&nbsp;<wbr>&nbsp;<wbr>rxk5&nbsp;<wbr>(requires OpenAFS 1.6 or later)<br/>
 &nbsp;<wbr><i>2b</i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rxkad&nbsp;<wbr>&quot;2b&quot;&nbsp;<wbr>(requires OpenAFS 1.2.8 or later) </dd>
 <dt>trace = <i>true</i>|<i>false</i>|<i>service [&#8230;]</i></dt>
 <dd>turns on libkrb5&#8217;s library tracing. Trace messages are logged to <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3) with priority <i>LOG_DEBUG</i>. </dd>

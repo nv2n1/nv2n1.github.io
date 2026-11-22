@@ -165,13 +165,13 @@ description: "zmq_getsockopt – get 0MQ socket options"
 <h3>ZMQ_FD: Retrieve file descriptor associated with the socket</h3>
 <p>The <i>ZMQ_FD</i> option shall retrieve the file descriptor associated with the specified <i>socket</i>. The returned file descriptor can be used to integrate the socket into an existing event loop; the 0MQ library shall signal any pending events on the socket in an <i>edge-triggered</i> fashion by making the file descriptor become ready for reading.</p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  The ability to read from the returned file descriptor does not necessarily indicate that messages are available to be read from, or can be written to, the underlying socket; applications must retrieve the actual event state with a subsequent retrieval of the <i>ZMQ_EVENTS</i> option. </dd>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  The returned file descriptor is also used internally by the <i>zmq_send</i> and <i>zmq_recv</i> functions. As the descriptor is edge triggered, applications must update the state of <i>ZMQ_EVENTS</i> after each invocation of <i>zmq_send</i> or <i>zmq_recv</i>.To be more explicit: after calling <i>zmq_send</i> the socket may become readable (and vice versa) without triggering a read event on the file descriptor. </dd>
 <dl>
-<dd><font SIZE="+1"> <code>Caution</code> </font><br />
+<dd> <code>Caution</code> <br/>
  The returned file descriptor is intended for use with a <i>poll</i> or similar system call only. Applications must never attempt to read or write data to it directly, neither should they try to close it.  Option value type </td>
 <td> int on POSIX systems, SOCKET on Windows
 </td>
@@ -730,7 +730,7 @@ description: "zmq_getsockopt – get 0MQ socket options"
 <h3>ZMQ_RECONNECT_IVL: Retrieve reconnection interval</h3>
 <p>The <i>ZMQ_RECONNECT_IVL</i> option shall retrieve the initial reconnection interval for the specified <i>socket</i>. The reconnection interval is the period 0MQ shall wait between attempts to reconnect disconnected peers when using connection-oriented transports. The value -1 means no reconnection.</p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  The reconnection interval may be randomized by 0MQ to prevent reconnection storms in topologies with a large number of peers per socket.  Option value type </td>
 <td> int
 </td>
@@ -754,7 +754,7 @@ description: "zmq_getsockopt – get 0MQ socket options"
 <h3>ZMQ_RECONNECT_IVL_MAX: Retrieve maximum reconnection interval</h3>
 <p>The <i>ZMQ_RECONNECT_IVL_MAX</i> option shall retrieve the maximum reconnection interval for the specified <i>socket</i>. This is the maximum period 0MQ shall wait between attempts to reconnect. On each reconnect attempt, the previous interval shall be doubled untill ZMQ_RECONNECT_IVL_MAX is reached. This allows for exponential backoff strategy. Default value means no exponential backoff is performed and reconnect interval calculations are only based on ZMQ_RECONNECT_IVL.</p>
 </dd><dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  Values less than ZMQ_RECONNECT_IVL will be ignored.  Option value type </td>
 <td> int
 </td>

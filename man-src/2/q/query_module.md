@@ -32,17 +32,17 @@ int query_module(const char *name, int which, void *buf,
 <dt><code>QM_SYMBOLS</code></dt>
 <dd> Returns the symbols and values exported by the kernel or the indicated module. The returned buffer is an array of structures of the following form</dd>
 <dt>
-</dt><dd> struct module_symbol {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long value;<br />
+</dt><dd> struct module_symbol {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long value;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long name; };</dd>
 <dt>
 </dt><dd> followed by null-terminated strings. The value of <i>name</i> is the character offset of the string relative to the start of <i>buf</i>; <i>ret</i> is set to the number of symbols.</dd>
 <dt><code>QM_INFO</code></dt>
 <dd> Returns miscellaneous information about the indicated module. The output buffer format is:</dd>
 <dt>
-</dt><dd> struct module_info {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long address;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long size;<br />
+</dt><dd> struct module_info {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long address;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long size;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long flags; };</dd>
 <dt>
 </dt><dd> where <i>address</i> is the kernel address at which the module resides, <i>size</i> is the size of the module in bytes, and <i>flags</i> is a mask of <code>MOD_RUNNING</code>, <code>MOD_AUTOCLEAN</code>, and so on, that indicates the current status of the module (see the Linux kernel source file <i>include/linux/module.h</i>). <i>ret</i> is set to the size of the <i>module_info</i> structure.</dd></dl>

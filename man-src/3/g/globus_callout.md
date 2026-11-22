@@ -10,15 +10,15 @@ description: "Globus Callout API –"
 
 <p> Globus Callout API &#8211; </p>
 <h3>Modules</h3>
-<p> <code>Activation</code><br />
- <i>Callback API Activation. </i><br />
- <code>Callout Handle Operations</code><br />
- <i>Manage a Globus Callout Handle structure. </i><br />
- <code>Callout Configuration</code><br />
- <i>Register callouts. </i><br />
- <code>Callout Invocation</code><br />
- <i>Invoke callouts. </i><br />
- <code>Callout Constants</code><br />
+<p> <code>Activation</code><br/>
+ <i>Callback API Activation. </i><br/>
+ <code>Callout Handle Operations</code><br/>
+ <i>Manage a Globus Callout Handle structure. </i><br/>
+ <code>Callout Configuration</code><br/>
+ <i>Register callouts. </i><br/>
+ <code>Callout Invocation</code><br/>
+ <i>Invoke callouts. </i><br/>
+ <code>Callout Constants</code><br/>
  <i>Constants. </i></p>
 <h2>Detailed Description</h2>
 <p> This API is intended to ease integration of configurable callouts into the Globus Toolkit and to provide a platform independent way of dealing with runtime loadable functions. It (hopefully) achieves this goal by providing the following functionality: </p>

@@ -75,7 +75,7 @@ description: "lldpad – Link Layer Discovery Protocol (LLDP) agent daemon"
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-dcbtool/">dcbtool</a></code>(8), <code><a href="/docs/linux/man/8-lldptool/">lldptool</a></code>(8), <code><a href="/docs/linux/man/8-lldptool-dcbx/">lldptool-dcbx</a></code>(8), <code><a href="/docs/linux/man/8-lldptool-ets/">lldptool-ets</a></code>(8), <code><a href="/docs/linux/man/8-lldptool-pfc/">lldptool-pfc</a></code>(8), <code><a href="/docs/linux/man/8-lldptool-app/">lldptool-app</a></code>(8), <code><a href="/docs/linux/man/8-lldptool-med/">lldptool-med</a></code>(8), <code><a href="/docs/linux/man/8-lldptool-vdp/">lldptool-vdp</a></code>(8), <code><a href="/docs/linux/man/8-lldptool-evb/">lldptool-evb</a></code>(8) </p>
 <h2>Copyright</h2>
-<p>lldpad &#8211; LLDP agent daemon with DCBX support<br />
+<p>lldpad &#8211; LLDP agent daemon with DCBX support<br/>
  Copyright(c) 2007-2012 Intel Corporation. Portions of lldpad are based on:</p>
 <dl>
 <dt>hostapd-0.5.7</dt>

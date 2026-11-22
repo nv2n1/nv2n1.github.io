@@ -48,14 +48,14 @@ description: "svipc – System V interprocess communication mechanisms"
 <dd>Get resource options.</dd></dl>
 <p> Note that <code>IPC_PRIVATE</code> is a <i>key_t</i> type, while all the other symbolic constants are flag fields and can be OR&#8217;ed into an <i>int</i> type variable.</p>
 <h3>Message queues</h3>
-<p>A message queue is uniquely identified by a positive integer (its <i>msqid</i>) and has an associated data structure of type <i>struct msqid_ds</i>, defined in <i>&lt;sys/msg.h&gt;</i>, containing the following members: struct msqid_ds {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct ipc_perm msg_perm;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;msgqnum_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;msg_qnum;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;no of messages on queue&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;msglen_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;msg_qbytes;&nbsp;<wbr>&nbsp;/*&nbsp;bytes max on a queue&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;pid_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;msg_lspid;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;PID of last&nbsp;<a href="/docs/linux/man/2-msgsnd/">msgsnd</a>(2)&nbsp;call&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;pid_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;msg_lrpid;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;PID of last&nbsp;<a href="/docs/linux/man/2-msgrcv/">msgrcv</a>(2)&nbsp;call&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;time_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;msg_stime;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;last&nbsp;<a href="/docs/linux/man/2-msgsnd/">msgsnd</a>(2)&nbsp;time&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;time_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;msg_rtime;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;last&nbsp;<a href="/docs/linux/man/2-msgrcv/">msgrcv</a>(2)&nbsp;time&nbsp;*/<br />
+<p>A message queue is uniquely identified by a positive integer (its <i>msqid</i>) and has an associated data structure of type <i>struct msqid_ds</i>, defined in <i>&lt;sys/msg.h&gt;</i>, containing the following members: struct msqid_ds {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct ipc_perm msg_perm;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;msgqnum_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;msg_qnum;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;no of messages on queue&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;msglen_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;msg_qbytes;&nbsp;<wbr>&nbsp;/*&nbsp;bytes max on a queue&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;pid_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;msg_lspid;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;PID of last&nbsp;<a href="/docs/linux/man/2-msgsnd/">msgsnd</a>(2)&nbsp;call&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;pid_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;msg_lrpid;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;PID of last&nbsp;<a href="/docs/linux/man/2-msgrcv/">msgrcv</a>(2)&nbsp;call&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;time_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;msg_stime;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;last&nbsp;<a href="/docs/linux/man/2-msgsnd/">msgsnd</a>(2)&nbsp;time&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;time_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;msg_rtime;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;last&nbsp;<a href="/docs/linux/man/2-msgrcv/">msgrcv</a>(2)&nbsp;time&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;time_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;msg_ctime;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;last change time&nbsp;*/ };</p>
 <dl>
 <dt><i>msg_perm</i></dt>
@@ -77,10 +77,10 @@ description: "svipc – System V interprocess communication mechanisms"
 <h3>Semaphore sets</h3>
 <p>A semaphore set is uniquely identified by a positive integer (its <i>semid</i>) and has an associated data structure of type <i>struct semid_ds</i>, defined in <i>&lt;sys/sem.h&gt;</i>, containing the following members:</p>
 <dl>
-<dd>struct semid_ds {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct ipc_perm sem_perm;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;time_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sem_otime;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;last operation time&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;time_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sem_ctime;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;last change time&nbsp;*/<br />
+<dd>struct semid_ds {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct ipc_perm sem_perm;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;time_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sem_otime;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;last operation time&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;time_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sem_ctime;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;last change time&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long&nbsp;<wbr>&nbsp;<wbr>&nbsp;sem_nsems;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;count of sems in set&nbsp;*/ };</dd>
 <dt><i>sem_perm</i></dt>
 <dd><i>ipc_perm</i> structure that specifies the access permissions on the semaphore set.</dd>
@@ -90,8 +90,8 @@ description: "svipc – System V interprocess communication mechanisms"
 <dd>Time of last <code><a href="/docs/linux/man/2-semctl/">semctl</a></code>(2) system call that changed a member of the above structure or of one semaphore belonging to the set.</dd>
 <dt><i>sem_nsems</i></dt>
 <dd>Number of semaphores in the set. Each semaphore of the set is referenced by a nonnegative integer ranging from <code>0</code> to <i>sem_nsems-1</i>.</dd></dl>
-<p> A semaphore is a data structure of type <i>struct sem</i> containing the following members: struct sem {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int semval;&nbsp;<wbr>&nbsp;/*&nbsp;semaphore value&nbsp;*/<br />
+<p> A semaphore is a data structure of type <i>struct sem</i> containing the following members: struct sem {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int semval;&nbsp;<wbr>&nbsp;/*&nbsp;semaphore value&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int sempid;&nbsp;<wbr>&nbsp;/*&nbsp;PID of process that last modified&nbsp;*/ };</p>
 <dl>
 <dt><i>semval</i></dt>
@@ -99,14 +99,14 @@ description: "svipc – System V interprocess communication mechanisms"
 <dt><i>sempid</i></dt>
 <dd>PID of the last process that modified the value of this semaphore.</dd></dl>
 <h3>Shared memory segments</h3>
-<p>A shared memory segment is uniquely identified by a positive integer (its <i>shmid</i>) and has an associated data structure of type <i>struct shmid_ds</i>, defined in <i>&lt;sys/shm.h&gt;</i>, containing the following members: struct shmid_ds {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct ipc_perm shm_perm;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;size_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;shm_segsz;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;size of segment&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;pid_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;shm_cpid;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;PID of creator&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;pid_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;shm_lpid;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;PID, last operation&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;shmatt_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;shm_nattch;&nbsp;<wbr>&nbsp;/*&nbsp;no. of current attaches&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;time_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;shm_atime;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;time of last attach&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;time_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;shm_dtime;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;time of last detach&nbsp;*/<br />
+<p>A shared memory segment is uniquely identified by a positive integer (its <i>shmid</i>) and has an associated data structure of type <i>struct shmid_ds</i>, defined in <i>&lt;sys/shm.h&gt;</i>, containing the following members: struct shmid_ds {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct ipc_perm shm_perm;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;size_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;shm_segsz;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;size of segment&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;pid_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;shm_cpid;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;PID of creator&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;pid_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;shm_lpid;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;PID, last operation&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;shmatt_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;shm_nattch;&nbsp;<wbr>&nbsp;/*&nbsp;no. of current attaches&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;time_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;shm_atime;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;time of last attach&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;time_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;shm_dtime;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;time of last detach&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;time_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;shm_ctime;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;time of last change&nbsp;*/ };</p>
 <dl>
 <dt><i>shm_perm</i></dt>

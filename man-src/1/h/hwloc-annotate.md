@@ -48,7 +48,7 @@ description: "hwloc-annotate – Add info attributes to a XML topology"
 <p> Add an info attribute to OS device #2 and #3: </p>
 <p>&nbsp;<wbr>$&nbsp;<wbr>hwloc-annotate input.xml output.xml os:2-3 info infoname infovalue </p>
 <p> Change package objects to green with red text in the lstopo graphical output: </p>
-<p>&nbsp;<wbr>$&nbsp;<wbr>hwloc-annotate topo.xml topo.xml package:all info lstopoStyle&nbsp;<wbr>&quot;Background=#00ff00;Text=#ff0000&quot;<br />
+<p>&nbsp;<wbr>$&nbsp;<wbr>hwloc-annotate topo.xml topo.xml package:all info lstopoStyle&nbsp;<wbr>&quot;Background=#00ff00;Text=#ff0000&quot;<br/>
 &nbsp;<wbr>$&nbsp;<wbr>lstopo -i topo.xml</p>
 <h2>RETURN VALUE</h2>
 <p> Upon successful execution, hwloc-annotate generates the output topology. The return value is 0. </p>

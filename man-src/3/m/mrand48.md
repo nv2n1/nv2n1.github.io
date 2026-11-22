@@ -20,8 +20,8 @@ description: "drand48, erand48, lrand48, nrand48, mrand48, jrand48, srand48, see
 <code>unsigned short *seed48(unsigned short </code><i>seed16v</i><code>[3]);</code>
 <code>void lcong48(unsigned short </code><i>param</i><code>[7]);</code></pre>
 <p>Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
-<p> All functions shown above: _XOPEN_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc since 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
+<p> All functions shown above: _XOPEN_SOURCE<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc since 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_SVID_SOURCE</p>
 <h2>Description</h2>
 <p>These functions generate pseudo-random numbers using the linear congruential algorithm and 48-bit integer arithmetic. </p>

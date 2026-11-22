@@ -66,42 +66,42 @@ description: "mq_notify – register for notification when a message is availabl
 <p>The following program registers a notification request for the message queue named in its command-line argument. Notification is performed by creating a thread. The thread executes a function which reads one message from the queue and then terminates the process.</p>
 <h3>Program source</h3>
 <p>#include &lt;pthread.h&gt; #include &lt;mqueue.h&gt; #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; #include &lt;unistd.h&gt; </p>
-<p> #define handle_error(msg) \<br />
+<p> #define handle_error(msg) \<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;do&nbsp;{&nbsp;perror(msg);&nbsp;exit(EXIT_FAILURE);&nbsp;}&nbsp;while&nbsp;(0) </p>
-<p> static void /* Thread start function */ tfunc(union sigval sv) {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct mq_attr attr;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;ssize_t nr;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;void&nbsp;*buf;<br />
+<p> static void /* Thread start function */ tfunc(union sigval sv) {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct mq_attr attr;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;ssize_t nr;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;void&nbsp;*buf;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;mqd_t mqdes&nbsp;=&nbsp;*((mqd_t&nbsp;*)&nbsp;sv.sival_ptr); </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Determine max. msg size;&nbsp;allocate buffer to receive msg&nbsp;*/ </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(mq_getattr(mqdes,&nbsp;&amp;attr)&nbsp;==&nbsp;-1)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;handle_error(&quot;mq_getattr&quot;);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;buf&nbsp;=&nbsp;malloc(attr.mq_msgsize);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(buf&nbsp;==&nbsp;NULL)<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(mq_getattr(mqdes,&nbsp;&amp;attr)&nbsp;==&nbsp;-1)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;handle_error(&quot;mq_getattr&quot;);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;buf&nbsp;=&nbsp;malloc(attr.mq_msgsize);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(buf&nbsp;==&nbsp;NULL)<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;handle_error(&quot;malloc&quot;); </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;nr&nbsp;=&nbsp;mq_receive(mqdes, buf, attr.mq_msgsize, NULL);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(nr&nbsp;==&nbsp;-1)<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;nr&nbsp;=&nbsp;mq_receive(mqdes, buf, attr.mq_msgsize, NULL);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(nr&nbsp;==&nbsp;-1)<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;handle_error(&quot;mq_receive&quot;); </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;Read&nbsp;%zd bytes from MQ
-&quot;, nr);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;free(buf);<br />
+&quot;, nr);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;free(buf);<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_SUCCESS);&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Terminate the process&nbsp;*/ } </p>
-<p> int main(int argc, char *argv[]) {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;mqd_t mqdes;<br />
+<p> int main(int argc, char *argv[]) {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;mqd_t mqdes;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct sigevent sev; </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(argc&nbsp;!=&nbsp;2)&nbsp;{<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(argc&nbsp;!=&nbsp;2)&nbsp;{<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;fprintf(stderr,&nbsp;&quot;Usage:&nbsp;%s&nbsp;&lt;mq-name&gt;
-&quot;, argv[0]);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_FAILURE);<br />
+&quot;, argv[0]);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_FAILURE);<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;} </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;mqdes&nbsp;=&nbsp;mq_open(argv[1], O_RDONLY);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(mqdes&nbsp;==&nbsp;(mqd_t)&nbsp;-1)<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;mqdes&nbsp;=&nbsp;mq_open(argv[1], O_RDONLY);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(mqdes&nbsp;==&nbsp;(mqd_t)&nbsp;-1)<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;handle_error(&quot;mq_open&quot;); </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sev.sigev_notify&nbsp;=&nbsp;SIGEV_THREAD;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sev.sigev_notify_function&nbsp;=&nbsp;tfunc;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sev.sigev_notify_attributes&nbsp;=&nbsp;NULL;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sev.sigev_value.sival_ptr&nbsp;=&nbsp;&amp;mqdes;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Arg. to thread func.&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(mq_notify(mqdes,&nbsp;&amp;sev)&nbsp;==&nbsp;-1)<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sev.sigev_notify&nbsp;=&nbsp;SIGEV_THREAD;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sev.sigev_notify_function&nbsp;=&nbsp;tfunc;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sev.sigev_notify_attributes&nbsp;=&nbsp;NULL;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sev.sigev_value.sival_ptr&nbsp;=&nbsp;&amp;mqdes;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Arg. to thread func.&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(mq_notify(mqdes,&nbsp;&amp;sev)&nbsp;==&nbsp;-1)<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;handle_error(&quot;mq_notify&quot;); </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;pause();&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Process will be terminated by thread function&nbsp;*/ }</p>
 <h2>See Also</h2>

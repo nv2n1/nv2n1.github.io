@@ -35,9 +35,9 @@ description: "sane-coolscan – SANE backend for Nikon film-scanners"
 <dt><code>SANE_DEBUG_COOLSCAN</code></dt>
 <dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend. E.g., a value of 128 requests all debug output to be printed. Smaller levels reduce verbosity. </dd>
 <p> Examples: </p>
-<p> On bash:<br />
+<p> On bash:<br/>
  export SANE_DEBUG_COOLSCAN=8 </p>
-<p> On csh:<br />
+<p> On csh:<br/>
  setenv SANE_DEBUG_COOLSCAN 8 </p>
 </dl>
 <h2>Bugs</h2>

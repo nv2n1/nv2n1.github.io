@@ -47,12 +47,12 @@ char *stpcpy(char *dest, const char *src);</code></pre>
 <h2>EXAMPLES</h2>
 <p> For example, this program uses <code>stpcpy</code>() to concatenate <code>foo</code> and <code>bar</code> to produce <code>foobar</code>, which it then prints. </p>
 <p> #define _GNU_SOURCE #include &lt;string.h&gt; #include &lt;stdio.h&gt; </p>
-<p> int main(void) { <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char buffer[20]; <br />
+<p> int main(void) { <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char buffer[20]; <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;*to&nbsp;=&nbsp;buffer; </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;to&nbsp;=&nbsp;stpcpy(to,&nbsp;&quot;foo&quot;); <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;to&nbsp;=&nbsp;stpcpy(to,&nbsp;&quot;bar&quot;); <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;to&nbsp;=&nbsp;stpcpy(to,&nbsp;&quot;foo&quot;); <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;to&nbsp;=&nbsp;stpcpy(to,&nbsp;&quot;bar&quot;); <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;%s\n&quot;, buffer); }  </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-bcopy/">bcopy</a></code>(3), <code><a href="/docs/linux/man/3-memccpy/">memccpy</a></code>(3), <code><a href="/docs/linux/man/3-memcpy/">memcpy</a></code>(3), <code><a href="/docs/linux/man/3-memmove/">memmove</a></code>(3), <code><a href="/docs/linux/man/3-stpncpy/">stpncpy</a></code>(3), <code><a href="/docs/linux/man/3-strcpy/">strcpy</a></code>(3), <code><a href="/docs/linux/man/3-string/">string</a></code>(3), <code><a href="/docs/linux/man/3-wcpcpy/">wcpcpy</a></code>(3)  </p>

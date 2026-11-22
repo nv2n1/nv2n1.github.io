@@ -61,7 +61,7 @@ description: "msginit – initialize a message catalog"
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;bug-gnu-gettext [at] gnu.org&gt;.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2001-2016 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt;<br />
+<p> Copyright &#169; 2001-2016 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt;<br/>
  This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.</p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>msginit</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>msginit</code> programs are properly installed at your site, the command</p>

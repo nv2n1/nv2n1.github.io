@@ -13,9 +13,9 @@ description: "iprconfig – IBM Power RAID storage adapter configuration/recover
 <p> <code>iprconfig &#8211;version &#8211;debug &#8211;force</code></p>
 <h2>Description</h2>
 <p><code>iprconfig</code> is used to configure IBM Power RAID storage adapters, display information about them, and to perform adapter and disk unit recovery. The menu options are: </p>
-<p> <code>1. Display hardware status.</code><br />
+<p> <code>1. Display hardware status.</code><br/>
  This option can be used to display various information regarding the IBM Power RAID adapters attached to the system and the disk units controlled by them. For each adapter and disk unit, their /dev name, physical location, description, vendor/product ID, and hardware status will be available. Beside each resource is an OPT field. By entering a 1 beside any resource, detailed information about that resource can be obtained. For an adapter resource, this will display the adapter firmware version and the physical location amongst other things. </p>
-<p> <code>2. Work with Disk Arrays</code><br />
+<p> <code>2. Work with Disk Arrays</code><br/>
  This option will present a second menu containing disk array related commands. </p>
 <p> <code>Display disk array status</code> is used to display the status of disk arrays on the system. </p>
 <p> <code>Create a disk array</code> is used to create a disk array. </p>
@@ -60,10 +60,10 @@ description: "iprconfig – IBM Power RAID storage adapter configuration/recover
 <dt><code>show-arrays</code></dt>
 <dd>Show all ipr arrays.</dd>
 <dt><code>show-battery-info [IOA]</code></dt>
-<dd>Show cache battery information for specified IOA. Example:<br />
+<dd>Show cache battery information for specified IOA. Example:<br/>
  <code>iprconfig -c show-battery-info sg5</code></dd>
 <dt><code>show-details [device]</code></dt>
-<dd>Show device details for specified device. Example:<br />
+<dd>Show device details for specified device. Example:<br/>
  <code>iprconfig -c show-details sda</code></dd>
 <dt><code>show-hot-spares</code></dt>
 <dd>Show all configured hot spares.</dd>
@@ -76,15 +76,15 @@ description: "iprconfig – IBM Power RAID storage adapter configuration/recover
 <dt><code>show-slots</code></dt>
 <dd>Show all disks slots available on the system.</dd>
 <dt><code>status [device]</code></dt>
-<dd>Show the status of the specified device. This is the same status as which shows up in the last column of the Display hardware status menu. Can specify either a /dev/sdX name or a /dev/sgX name. Example:<br />
+<dd>Show the status of the specified device. This is the same status as which shows up in the last column of the Display hardware status menu. Can specify either a /dev/sdX name or a /dev/sgX name. Example:<br/>
  <code>iprconfig -c status /dev/sda</code> </dd>
 <dt><code>alt-status [device]</code></dt>
 <dd>Show the status of the specified device. This is the same status as above with the exception of when a long running command is executing to the device, in which case the percent complete for the long running command is printed. </dd>
 <dt><code>query-raid-create [IOA]</code></dt>
-<dd>Show all devices attached to the specified IOA that are candidates for being used in a RAID array. Example:<br />
+<dd>Show all devices attached to the specified IOA that are candidates for being used in a RAID array. Example:<br/>
  <code>iprconfig -c query-raid-create sg5</code></dd>
 <dt><code>query-raid-delete [IOA]</code></dt>
-<dd>Show all RAID arrays attached to the specified IOA that can be deleted.<br />
+<dd>Show all RAID arrays attached to the specified IOA that can be deleted.<br/>
  <code>iprconfig -c query-raid-delete sg5</code></dd>
 <dt><code>query-hot-spare-create [IOA]</code></dt>
 <dd>Show all devices attached to the specified IOA that are candidates for being hot spares.</dd>
@@ -183,18 +183,18 @@ description: "iprconfig – IBM Power RAID storage adapter configuration/recover
 <dt><code>query-write-cache-policy [device]</code></dt>
 <dd>Show the current write cache policy for [device].</dd>
 <dt><code>raid-create [-r raid_level] [-s stripe_size_in_kb] [-l label] [&#8211;skip-format] [-c cache_policy] [devices&#8230;]</code></dt>
-<dd>Create a RAID array. RAID level can be any supported RAID level for the given adapter, such as 0, 10, 5, 6. Currently supported stripe sizes in kb include 16, 64, and 256. If raid_level is not specified, it will default to RAID 5. If stripe size is not specified, it will default to the recommended stripe size for the selected RAID level. Available cache policies are the same that can be passed to set-write-cache-policy command. If none is specified, write back is assumed. Devices are specified with their full name, either the /dev/sd name or the /dev/sg name is acceptable. On some RAID adapters, a label can also be specified. Example array creation:<br />
- <code>iprconfig -c raid-create -r 5 -s 64 /dev/sda /dev/sdb /dev/sdc</code><br />
+<dd>Create a RAID array. RAID level can be any supported RAID level for the given adapter, such as 0, 10, 5, 6. Currently supported stripe sizes in kb include 16, 64, and 256. If raid_level is not specified, it will default to RAID 5. If stripe size is not specified, it will default to the recommended stripe size for the selected RAID level. Available cache policies are the same that can be passed to set-write-cache-policy command. If none is specified, write back is assumed. Devices are specified with their full name, either the /dev/sd name or the /dev/sg name is acceptable. On some RAID adapters, a label can also be specified. Example array creation:<br/>
+ <code>iprconfig -c raid-create -r 5 -s 64 /dev/sda /dev/sdb /dev/sdc</code><br/>
  This would create a RAID 5 array with a 64k stripe size using the specified devices.</dd>
 <dt><code>raid-delete [RAID device]</code></dt>
-<dd>Delete the specified RAID array. Specify either the /dev/sd name or the /dev/sg name. Only 1 array can be deleted with a single command. Example:<br />
- <code>iprconfig -c raid-delete /dev/sda</code><br />
+<dd>Delete the specified RAID array. Specify either the /dev/sd name or the /dev/sg name. Only 1 array can be deleted with a single command. Example:<br/>
+ <code>iprconfig -c raid-delete /dev/sda</code><br/>
  This would delete the disk array represented by /dev/sda</dd>
 <dt><code>raid-include [array] [disk] &#8230; [disk]</code></dt>
-<dd>Add the specified devices to the specified disk array to increase its capacity. Example:<br />
+<dd>Add the specified devices to the specified disk array to increase its capacity. Example:<br/>
  <code>iprconfig -c raid-include sda sg6 sg7</code></dd>
 <dt><code>raid-migrate -r raid_level [-s stripe_size_in_kb] array [disk] &#8230; [disk]</code></dt>
-<dd>Migrate an existing RAID array to a new RAID protection level. Optionally, a new stripe size can be given. In some cases one or more new disks must be added for the migration to succeed. Example:<br />
+<dd>Migrate an existing RAID array to a new RAID protection level. Optionally, a new stripe size can be given. In some cases one or more new disks must be added for the migration to succeed. Example:<br/>
  <code>iprconfig -c raid-migrate -r 10 -s 64 sda sg5 sg6</code></dd>
 <dt><code>format-for-raid [disk] &#8230; [disk]</code></dt>
 <dd>Format the specified disks for Advanced Function so they can be used in a RAID array or as a hot spare.</dd>
@@ -229,72 +229,72 @@ description: "iprconfig – IBM Power RAID storage adapter configuration/recover
 <dt><code>set-log-level [IOA] [log level]</code></dt>
 <dd>Set the error logging verbosity to use for the specified IOA. Default is 2.</dd>
 <dt><code>set-write-cache-policy [device] [writeback|writethrough]</code></dt>
-<dd>Set the write cache policy for [device]. Available policies are writeback and writethrough. This command supports JBOD disk (write cache) and Volume Sets (vset write cache). Example:<br />
+<dd>Set the write cache policy for [device]. Available policies are writeback and writethrough. This command supports JBOD disk (write cache) and Volume Sets (vset write cache). Example:<br/>
  <code>iprconfig -c set-write-cache-policy sdp writeback</code></dd>
 <dt><code>identify-disk [disk] [0 = turn off identify LED, 1 = turn on identify LED]</code></dt>
 <dd>Turn on/off the disk identify LED for the specified disk. This function may or may not be available depending on the hardware packaging.</dd>
 <dt><code>identify-slot [location] [0 = turn off identify LED, 1 = turn on identify LED]</code></dt>
-<dd>Turn on/off the disk identify LED for the specified location. This function may or may not be available depending on the hardware packaging. Example:<br />
+<dd>Turn on/off the disk identify LED for the specified location. This function may or may not be available depending on the hardware packaging. Example:<br/>
  <code>iprconfig -c identify-slot 0000:d8:01.0/0:1:1: 1</code></dd>
 <dt><code>remove-disk [disk] [0 = turn off identify LED, 1 = turn on identify LED]</code></dt>
 <dd>Turn on/off the disk remove identify LED for the specified device. When 1 is specified as the second argument, the specified disk is set to the remove state. When in this state, the disk may be removed. Once the disk has been physically removed, iprconfig must be invoked again with the second argument set to 0. This turns off the slot identifier light and logically removes the disk from the host operating system.</dd>
 <dt><code>remove-slot [location] [0 = turn off identify LED, 1 = turn on identify LED]</code></dt>
-<dd>Turn on/off the disk remove identify LED for the specified location. When 1 is specified as the second argument, the specified location is set to the remove state. When in this state, the disk may be removed. Once the disk has been physically removed, iprconfig must be invoked again with the second argument set to 0. This turns off the slot identifier light and logically removes the disk from the host operating system. Example:<br />
+<dd>Turn on/off the disk remove identify LED for the specified location. When 1 is specified as the second argument, the specified location is set to the remove state. When in this state, the disk may be removed. Once the disk has been physically removed, iprconfig must be invoked again with the second argument set to 0. This turns off the slot identifier light and logically removes the disk from the host operating system. Example:<br/>
  <code>iprconfig -c remove-slot 0000:d8:01.0/0:1:1: 1</code></dd>
 <dt><code>add-slot [location] [0 = turn off identify LED, 1 = turn on identify LED]</code></dt>
-<dd>Turn on/off the disk insert identify LED for the specified location. When 1 is specified as the second argument, the specified location is set to the insert state. When in this state, the disk may be inserted. Once the disk has been physically inserted, iprconfig must be invoked again with the second argument set to 0. This turns off the slot identifier light and logically adds the disk to the host operating system. Example:<br />
+<dd>Turn on/off the disk insert identify LED for the specified location. When 1 is specified as the second argument, the specified location is set to the insert state. When in this state, the disk may be inserted. Once the disk has been physically inserted, iprconfig must be invoked again with the second argument set to 0. This turns off the slot identifier light and logically adds the disk to the host operating system. Example:<br/>
  <code>iprconfig -c add-slot 0000:d8:01.0/0:1:1: 1</code></dd>
 <dt><code>set-initiator-id [IOA] [busno] [initiator id]</code></dt>
 <dd>Set the IOA&#8217;s SCSI initiator ID for the specified bus. Must be a value between 0 and 7 and must not conflict with any other device on the SCSI bus.</dd>
 <dt><code>set-bus-speed [IOA] [busno] [speed in MB/sec]</code></dt>
 <dd>Set the maximum SCSI bus speed allowed on the specified SCSI bus.</dd>
 <dt><code>set-bus-width [IOA] [busno] [bus width in # bits]</code></dt>
-<dd>Set the SCSI bus width to use for the specified SCSI bus. Example:<br />
+<dd>Set the SCSI bus width to use for the specified SCSI bus. Example:<br/>
  <code>iprconfig -c set-bus-width sg5 0 16</code></dd>
 <dt><code>primary [IOA]</code></dt>
-<dd>Set the adapter as the <code>preferred primary </code> adapter. This is used in dual initiator RAID configurations to indicate which adapter should be the <code>primary</code> adapter. The <code>primary </code> adapter should be the adapter receiving the majority of the I/O. Example:<br />
+<dd>Set the adapter as the <code>preferred primary </code> adapter. This is used in dual initiator RAID configurations to indicate which adapter should be the <code>primary</code> adapter. The <code>primary </code> adapter should be the adapter receiving the majority of the I/O. Example:<br/>
  <code>iprconfig -c primary sg5</code></dd>
 <dt><code>secondary [IOA]</code></dt>
-<dd>Set the adapter to indicate it is not the <code>preferred primary </code> adapter. See the notes for the <code>preferred primary</code> for additional information. Example:<br />
+<dd>Set the adapter to indicate it is not the <code>preferred primary </code> adapter. See the notes for the <code>preferred primary</code> for additional information. Example:<br/>
  <code>iprconfig -c secondary sg5</code></dd>
 <dt><code>set-all-primary</code></dt>
-<dd>Set all attached ipr adapters as the <code>preferred primary </code> adapter. This can be used when running a dual initiator RAID HA configuration. This command can be run on the <code>primary </code> system to quickly enable the <code>preferred primary </code> mode for all attached adapters. Refer to /etc/ha.d/resource.d/iprha for an example of how this might be used. Example:<br />
+<dd>Set all attached ipr adapters as the <code>preferred primary </code> adapter. This can be used when running a dual initiator RAID HA configuration. This command can be run on the <code>primary </code> system to quickly enable the <code>preferred primary </code> mode for all attached adapters. Refer to /etc/ha.d/resource.d/iprha for an example of how this might be used. Example:<br/>
  <code>iprconfig -c set-all-primary</code></dd>
 <dt><code>set-all-secondary</code></dt>
-<dd>Set all attached ipr adapters to indicate they are not the <code>preferred primary </code> adapter. Example:<br />
+<dd>Set all attached ipr adapters to indicate they are not the <code>preferred primary </code> adapter. Example:<br/>
  <code>iprconfig -c set-all-secondary</code></dd>
 <dt><code>query-ha-mode [IOA]</code></dt>
-<dd>When an adapter is configured in a highly available dual adapter configuration, it may be able to be configured in one of two ways. The default mode is <code>Normal. </code> This mode is used for all SCSI adapters and many SAS adapters. Some SAS adapters also support a <code>JBOD </code> dual adapter configuration. This mode is to be used when the dual adapter configuration is to consist of JBOD disks rather than RAID arrays. If the adapter is <code>NOT </code> going to be used in a dual adapter configuration, this mode <code>MUST </code> be set to <code>Normal.</code> Example:<br />
+<dd>When an adapter is configured in a highly available dual adapter configuration, it may be able to be configured in one of two ways. The default mode is <code>Normal. </code> This mode is used for all SCSI adapters and many SAS adapters. Some SAS adapters also support a <code>JBOD </code> dual adapter configuration. This mode is to be used when the dual adapter configuration is to consist of JBOD disks rather than RAID arrays. If the adapter is <code>NOT </code> going to be used in a dual adapter configuration, this mode <code>MUST </code> be set to <code>Normal.</code> Example:<br/>
  <code>iprconfig -c query-ha-mode sg5</code></dd>
 <dt><code>set-ha-mode [IOA] [Normal | RAID]</code></dt>
-<dd>Used to set the high-availability mode of the adapter. Refer to the <code>query-ha-mode </code> command for more information regarding these settings. Example:<br />
+<dd>Used to set the high-availability mode of the adapter. Refer to the <code>query-ha-mode </code> command for more information regarding these settings. Example:<br/>
  <code>iprconfig -c set-ha-mode sg5 Normal</code></dd>
 <dt><code>set-array-asymmetric-access-mode [array] [Optimized | Non-Optimized]</code></dt>
-<dd>Used to set the asymmetric access mode of the disk array. Example:<br />
+<dd>Used to set the asymmetric access mode of the disk array. Example:<br/>
  <code>iprconfig -c set-array-asymmetric-access-mode sda Optimized</code></dd>
 <dt><code>set-ioa-asymmetric-access-mode [IOA] [Enabled | Disabled]</code></dt>
-<dd>Used to set the asymmetric access mode of the IOA.<br />
- Example:<br />
+<dd>Used to set the asymmetric access mode of the IOA.<br/>
+ Example:<br/>
  <code>iprconfig -c set-ioa-asymmetric-access-mode sg5 Enabled</code></dd>
 <dt><code>set-ioa-caching [IOA] [Default | Disabled]</code></dt>
-<dd>Used to set the requested caching mode of the IOA.<br />
- Example:<br />
+<dd>Used to set the requested caching mode of the IOA.<br/>
+ Example:<br/>
  <code>iprconfig -c set-ioa-caching sg5 Disabled</code></dd>
 <dt><code>set-array-rebuild-verify [IOA] [enable | disable | default]</code></dt>
-<dd>Used to define whether to perform verification during an array rebuild. Enabling this can affect performance. The default value is disabled.<br />
- Example:<br />
+<dd>Used to define whether to perform verification during an array rebuild. Enabling this can affect performance. The default value is disabled.<br/>
+ Example:<br/>
  <code>iprconfig -c set-array-rebuild-rate sg5 disable</code></dd>
 <dt><code>set-array-rebuild-rate [IOA] [Rebuild Rate | default]</code></dt>
-<dd>Used to set the rebuilt rate ratio of the IOA. [Rebuild Rate] must be in range 10..100. If &#8216;default&#8217; is used, the IOA will reset to the implementation default rate. The value actually configured may not be the exact rate configured by the user, but an approximation to the closest rate supported by the IOA.<br />
- Example:<br />
+<dd>Used to set the rebuilt rate ratio of the IOA. [Rebuild Rate] must be in range 10..100. If &#8216;default&#8217; is used, the IOA will reset to the implementation default rate. The value actually configured may not be the exact rate configured by the user, but an approximation to the closest rate supported by the IOA.<br/>
+ Example:<br/>
  <code>iprconfig -c set-array-rebuild-rate sg5 10</code></dd>
 <dt><code>get-live-dump [IOA]</code></dt>
-<dd>Dump the IOA&#8217;s implementation unique critical information. The dump data will be saved in the /var/log/ directory with the pattern ipr-CCIN-PCI_ADDRESS-dump-TIMESTAMP.<br />
- Example:<br />
+<dd>Dump the IOA&#8217;s implementation unique critical information. The dump data will be saved in the /var/log/ directory with the pattern ipr-CCIN-PCI_ADDRESS-dump-TIMESTAMP.<br/>
+ Example:<br/>
  <code>iprconfig -c get-live-dump sg5</code> </dd>
 <dt><code>dump</code></dt>
-<dd>Display detailed hardware and system information on standard output. In case a report file is needed, the iprsos command will create one at /var/log/iprsos.log.<br />
- Example:<br />
+<dd>Display detailed hardware and system information on standard output. In case a report file is needed, the iprsos command will create one at /var/log/iprsos.log.<br/>
+ Example:<br/>
  <code>iprconfig -c dump</code>
 </dd></dl>
 </dl>

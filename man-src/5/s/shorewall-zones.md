@@ -16,7 +16,7 @@ description: "zones – Shorewall zone declaration file"
 <p> The columns in the file are as follows (where the column name is followed by a different name in parentheses, the different name is used in the alternate specification syntax). </p>
 <p> <code>ZONE</code> &#8211; <i>zone</i>[<code>:</code><i>parent-zone</i>[<code>,</code><i>parent-zone</i>]&#8230;]</p>
 <dl>
-<dd>Name of the <i>zone</i>. Must start with a letter and consist of letters, digits or &#8216;_&#8217;. The names &quot;all&quot;, &quot;none&quot;, &quot;any&quot;, &quot;SOURCE&quot; and &quot;DEST&quot; are reserved and may not be used as zone names. The maximum length of a zone name is determined by the setting of the LOGFORMAT option in m[blue]<code>shorewall.conf</code>m[]<font SIZE="-2">[1]</font>(5). With the default LOGFORMAT, zone names can be at most 5 characters long. The maximum length of an iptables log prefix is 29 bytes. As explained in m[blue]<code>shorewall.conf</code>m[]<font SIZE="-2">[1]</font> (5), the default LOGPREFIX formatting string is &#8220;Shorewall:%s:%s:&#8221; where the first %s is replaced by the chain name and the second is replaced by the disposition. </dd>
+<dd>Name of the <i>zone</i>. Must start with a letter and consist of letters, digits or &#8216;_&#8217;. The names &quot;all&quot;, &quot;none&quot;, &quot;any&quot;, &quot;SOURCE&quot; and &quot;DEST&quot; are reserved and may not be used as zone names. The maximum length of a zone name is determined by the setting of the LOGFORMAT option in m[blue]<code>shorewall.conf</code>m[][1](5). With the default LOGFORMAT, zone names can be at most 5 characters long. The maximum length of an iptables log prefix is 29 bytes. As explained in m[blue]<code>shorewall.conf</code>m[][1] (5), the default LOGPREFIX formatting string is &#8220;Shorewall:%s:%s:&#8221; where the first %s is replaced by the chain name and the second is replaced by the disposition. </dd>
 <dl>
 <dd>&bull; The default formatting string has 12 fixed characters (&quot;Shorewall&quot; and three colons).</dd></dl>
 <dl>
@@ -32,7 +32,7 @@ description: "zones – Shorewall zone declaration file"
 <dl>
 <dd>M = 5</dd></dl>
 </dl>
-<p> The order in which Shorewall matches addresses from packets to zones is determined by the order of zone declarations. Where a zone is nested in one or more other zones, you may either ensure that the nested zone precedes its parents in this file, or you may follow the (sub)zone name by &quot;:&quot; and a comma-separated list of the parent zones. The parent zones must have been declared in earlier records in this file. See m[blue]<code>shorewall-nesting</code>m[]<font SIZE="-2">[2]</font>(5) for additional information. </p>
+<p> The order in which Shorewall matches addresses from packets to zones is determined by the order of zone declarations. Where a zone is nested in one or more other zones, you may either ensure that the nested zone precedes its parents in this file, or you may follow the (sub)zone name by &quot;:&quot; and a comma-separated list of the parent zones. The parent zones must have been declared in earlier records in this file. See m[blue]<code>shorewall-nesting</code>m[][2](5) for additional information. </p>
 <p> Example: </p>
 <dl>
 <dd>
@@ -41,14 +41,14 @@ a ipv4
 b ipv4
 c:a,b ipv4</pre>
 </dd></dl>
-<p> Currently, Shorewall uses this information to reorder the zone list so that parent zones appear after their subzones in the list. The IMPLICIT_CONTINUE option in m[blue]<code>shorewall.conf</code>m[]<font SIZE="-2">[1]</font>(5) can also create implicit CONTINUE policies to/from the subzone. </p>
+<p> Currently, Shorewall uses this information to reorder the zone list so that parent zones appear after their subzones in the list. The IMPLICIT_CONTINUE option in m[blue]<code>shorewall.conf</code>m[][1](5) can also create implicit CONTINUE policies to/from the subzone. </p>
 <p> Where an <code>ipsec</code> zone is explicitly included as a child of an <code>ipv4</code> zone, the ruleset allows CONTINUE policies (explicit or implicit) to work as expected. </p>
 <p> In the future, Shorewall may make additional use of nesting information.</dl>
 <p> <code>TYPE</code></p>
 <dl>
 <dd><code>ipv4</code></dd>
 <dl>
-<dd>This is the standard Shorewall zone type and is the default if you leave this column empty or if you enter &quot;-&quot; in the column. Communication with some zone hosts may be encrypted. Encrypted hosts are designated using the &#8216;ipsec&#8217; option in m[blue]<code>shorewall-hosts</code>m[]<font SIZE="-2">[3]</font>(5).</dd></dl>
+<dd>This is the standard Shorewall zone type and is the default if you leave this column empty or if you enter &quot;-&quot; in the column. Communication with some zone hosts may be encrypted. Encrypted hosts are designated using the &#8216;ipsec&#8217; option in m[blue]<code>shorewall-hosts</code>m[][3](5).</dd></dl>
 <p> <code>ipsec</code> (or <code>ipsec4</code>)</p>
 <dl>
 <dd>Communication with all zone hosts is encrypted. Your kernel and iptables must include policy match support.</dd></dl>
@@ -60,7 +60,7 @@ c:a,b ipv4</pre>
 <dd>The zone is associated with one or more ports on a single bridge.</dd></dl>
 <p> <code>vserver</code></p>
 <dl>
-<dd>Added in Shorewall 4.4.11 Beta 2 &#8211; A zone composed of Linux-vserver guests. The zone contents must be defined in m[blue]<code>shorewall-hosts</code>m[]<font SIZE="-2">[3]</font> (5). </dd>
+<dd>Added in Shorewall 4.4.11 Beta 2 &#8211; A zone composed of Linux-vserver guests. The zone contents must be defined in m[blue]<code>shorewall-hosts</code>m[][3] (5). </dd>
 <p> Vserver zones are implicitly handled as subzones of the firewall zone.</dl>
 <p> <code>loopback</code></p>
 <dl>
@@ -69,7 +69,7 @@ c:a,b ipv4</pre>
 <dl>
 <dd>&bull; By default, all traffic through the interface is ACCEPTed.</dd></dl>
 <dl>
-<dd>&bull; If a $FW -&gt; $FW policy is defined or $FW -&gt; $FW rules are defined, they are placed in a chain named ${FW}2${F2} or ${FW}-${FW} (e.g., &#8216;fw2fw&#8217; or &#8216;fw-fw&#8217; ) depending on the ZONE2ZONE setting in m[blue]<code>shorewall.conf</code>m[]<font SIZE="-2">[1]</font>(5).</dd></dl>
+<dd>&bull; If a $FW -&gt; $FW policy is defined or $FW -&gt; $FW rules are defined, they are placed in a chain named ${FW}2${F2} or ${FW}-${FW} (e.g., &#8216;fw2fw&#8217; or &#8216;fw-fw&#8217; ) depending on the ZONE2ZONE setting in m[blue]<code>shorewall.conf</code>m[][1](5).</dd></dl>
 <dl>
 <dd>&bull; $FW -&gt; $FW traffic is only filtered in the OUTPUT chain.</dd></dl>
 <p> By defining a <code>loopback</code> zone and associating it with the loopback interface in <a href="/docs/linux/man/5-shorewall-interfaces/">shorewall-interfaces</a>(5), you can effect a slightly different model. Suppose that the <code>loopback</code> zone name is &#8216;local&#8217;; then: </p>
@@ -90,7 +90,7 @@ c:a,b ipv4</pre>
 <dd>A comma-separated list of options. With the exception of the <code>mss</code> and <code>blacklist</code> options, these only apply to TYPE <code>ipsec</code> zones. </dd>
 <p> <code>dynamic_shared</code></p>
 <dl>
-<dd>Added in Shorewall 4.5.9. May only be specified in the OPTIONS column and indicates that only a single ipset should be created for this zone if it has multiple dynamic entries in m[blue]<code>shorewall-hosts</code>m[]<font SIZE="-2">[3]</font>(5). Without this option, a separate ipset is created for each interface.</dd></dl>
+<dd>Added in Shorewall 4.5.9. May only be specified in the OPTIONS column and indicates that only a single ipset should be created for this zone if it has multiple dynamic entries in m[blue]<code>shorewall-hosts</code>m[][3](5). Without this option, a separate ipset is created for each interface.</dd></dl>
 <p> <code>reqid=</code><i>number</i></p>
 <dl>
 <dd>where <i>number</i> is specified using <a href="/docs/linux/man/8-setkey/">setkey</a>(8) using the &#8216;unique:<i>number</i> option for the SPD level.</dd></dl>
@@ -102,7 +102,7 @@ c:a,b ipv4</pre>
 <dd>IPSEC Encapsulation Protocol</dd></dl>
 <p> <code>mss=</code><i>number</i></p>
 <dl>
-<dd>sets the MSS field in TCP packets. If you supply this option, you should also set FASTACCEPT=No in m[blue]<code>shorewall.conf</code>m[]<font SIZE="-2">[1]</font>(5) to insure that both the SYN and SYN,ACK packets have their MSS field adjusted.</dd></dl>
+<dd>sets the MSS field in TCP packets. If you supply this option, you should also set FASTACCEPT=No in m[blue]<code>shorewall.conf</code>m[][1](5) to insure that both the SYN and SYN,ACK packets have their MSS field adjusted.</dd></dl>
 <p> <code>mode=</code><code>transport</code>|<code>tunnel</code></p>
 <dl>
 <dd>IPSEC mode</dd></dl>
@@ -123,8 +123,8 @@ c:a,b ipv4</pre>
 <h2>Files</h2>
 <p>/etc/shorewall/zones</p>
 <h2>See Also</h2>
-<p>m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/Multiple_Zones.html">http://www.shorewall.net/Multiple_Zones.html</a></code>m[]<font SIZE="-2">[4]</font>. </p>
-<p> m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/configuration_file_basics.htm#Pairs">http://www.shorewall.net/configuration_file_basics.htm#Pairs</a></code>m[]<font SIZE="-2">[5]</font> </p>
+<p>m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/Multiple_Zones.html">http://www.shorewall.net/Multiple_Zones.html</a></code>m[][4]. </p>
+<p> m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/configuration_file_basics.htm#Pairs">http://www.shorewall.net/configuration_file_basics.htm#Pairs</a></code>m[][5] </p>
 <p> <a href="/docs/linux/man/8-shorewall/">shorewall</a>(8), <a href="/docs/linux/man/5-shorewall-accounting/">shorewall-accounting</a>(5), <a href="/docs/linux/man/5-shorewall-actions/">shorewall-actions</a>(5), <a href="/docs/linux/man/5-shorewall-hosts/">shorewall-hosts</a>(5), shorewall_interfaces(5), <a href="/docs/linux/man/5-shorewall-ipsets/">shorewall-ipsets</a>(5), <a href="/docs/linux/man/5-shorewall-maclist/">shorewall-maclist</a>(5), <a href="/docs/linux/man/5-shorewall-masq/">shorewall-masq</a>(5), <a href="/docs/linux/man/5-shorewall-nat/">shorewall-nat</a>(5), shorewall-nesting(8), <a href="/docs/linux/man/5-shorewall-netmap/">shorewall-netmap</a>(5), <a href="/docs/linux/man/5-shorewall-params/">shorewall-params</a>(5), <a href="/docs/linux/man/5-shorewall-policy/">shorewall-policy</a>(5), <a href="/docs/linux/man/5-shorewall-providers/">shorewall-providers</a>(5), <a href="/docs/linux/man/5-shorewall-proxyarp/">shorewall-proxyarp</a>(5), <a href="/docs/linux/man/5-shorewall-rtrules/">shorewall-rtrules</a>(5), <a href="/docs/linux/man/5-shorewall-rules/">shorewall-rules</a>(5), <a href="/docs/linux/man/5-shorewall-conf/">shorewall.conf</a>(5), <a href="/docs/linux/man/5-shorewall-secmarks/">shorewall-secmarks</a>(5), <a href="/docs/linux/man/5-shorewall-tcclasses/">shorewall-tcclasses</a>(5), <a href="/docs/linux/man/5-shorewall-tcdevices/">shorewall-tcdevices</a>(5), <a href="/docs/linux/man/5-shorewall-mangle/">shorewall-mangle</a>(5), <a href="/docs/linux/man/5-shorewall-tos/">shorewall-tos</a>(5), <a href="/docs/linux/man/5-shorewall-tunnels/">shorewall-tunnels</a>(5)</p>
 <h2>Notes</h2>
 <dl>

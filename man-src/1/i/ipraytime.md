@@ -34,48 +34,48 @@ description: "ipraytime – An Islamic Prayer Times Calculator"
 <dl>
 <dl>
 <dt><code>1</code></dt>
-<dd> Egyptian General Authority of Survey<br />
-&nbsp;<wbr>&nbsp;<wbr>Fajr/Isha Angle&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: 20/18<br />
-&nbsp;<wbr>&nbsp;<wbr>Used in&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: Africa, Indonesia, Iraq,&nbsp;<wbr><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Jordan, Lebanon, Malaysia,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Singapore, Syria,<br />
+<dd> Egyptian General Authority of Survey<br/>
+&nbsp;<wbr>&nbsp;<wbr>Fajr/Isha Angle&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: 20/18<br/>
+&nbsp;<wbr>&nbsp;<wbr>Used in&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: Africa, Indonesia, Iraq,&nbsp;<wbr><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Jordan, Lebanon, Malaysia,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Singapore, Syria,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Parts of the USA</dd>
 <dt><code>2</code></dt>
-<dd> University of Islamic Sciences, Karachi (Shaf&#8217;i)<br />
-&nbsp;<wbr>&nbsp;<wbr>Fajr/Isha Angle&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: 18/18<br />
-&nbsp;<wbr>&nbsp;<wbr>Used in&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: Iran, Kuwait,<br />
+<dd> University of Islamic Sciences, Karachi (Shaf&#8217;i)<br/>
+&nbsp;<wbr>&nbsp;<wbr>Fajr/Isha Angle&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: 18/18<br/>
+&nbsp;<wbr>&nbsp;<wbr>Used in&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: Iran, Kuwait,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Parts of Europe</dd>
 <dt><code>3</code></dt>
-<dd> University of Islamic Sciences, Karachi (Hanafi)<br />
-&nbsp;<wbr>&nbsp;<wbr>Fajr/Isha Angle&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: 18/18<br />
-&nbsp;<wbr>&nbsp;<wbr>Used in&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: Afghanistan, Bangladesh,<br />
+<dd> University of Islamic Sciences, Karachi (Hanafi)<br/>
+&nbsp;<wbr>&nbsp;<wbr>Fajr/Isha Angle&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: 18/18<br/>
+&nbsp;<wbr>&nbsp;<wbr>Used in&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: Afghanistan, Bangladesh,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>India</dd>
 <dt><code>4</code></dt>
-<dd> Islamic Society of North America<br />
-&nbsp;<wbr>&nbsp;<wbr>Fajr/Isha&nbsp;<wbr>&nbsp;<wbr>Angle&nbsp;<wbr>&nbsp;<wbr>: 15/15<br />
-&nbsp;<wbr>&nbsp;<wbr>Used in&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: Canada, Parts of UK,<br />
+<dd> Islamic Society of North America<br/>
+&nbsp;<wbr>&nbsp;<wbr>Fajr/Isha&nbsp;<wbr>&nbsp;<wbr>Angle&nbsp;<wbr>&nbsp;<wbr>: 15/15<br/>
+&nbsp;<wbr>&nbsp;<wbr>Used in&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: Canada, Parts of UK,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Parts of USA</dd>
 <dt><code>5</code></dt>
-<dd> Muslim World League (MWL)<br />
-&nbsp;<wbr>&nbsp;<wbr>Fajr/Isha&nbsp;<wbr>&nbsp;<wbr>Angle&nbsp;<wbr>&nbsp;<wbr>: 18/17<br />
-&nbsp;<wbr>&nbsp;<wbr>Used in&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: Parts of Europe,<br />
+<dd> Muslim World League (MWL)<br/>
+&nbsp;<wbr>&nbsp;<wbr>Fajr/Isha&nbsp;<wbr>&nbsp;<wbr>Angle&nbsp;<wbr>&nbsp;<wbr>: 18/17<br/>
+&nbsp;<wbr>&nbsp;<wbr>Used in&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: Parts of Europe,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Far East, Parts of USA</dd>
 <dt><code>6</code></dt>
-<dd> Umm Al-Qurra University<br />
-&nbsp;<wbr>&nbsp;<wbr>Fajr/Isha Angl e&nbsp;<wbr>&nbsp;<wbr>: 19/0<br />
-&nbsp;<wbr>&nbsp;<wbr>Isha Interval&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: 90 minutes from Al-Maghrib<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>prayer but set to 120<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>during Ramadan.<br />
+<dd> Umm Al-Qurra University<br/>
+&nbsp;<wbr>&nbsp;<wbr>Fajr/Isha Angl e&nbsp;<wbr>&nbsp;<wbr>: 19/0<br/>
+&nbsp;<wbr>&nbsp;<wbr>Isha Interval&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: 90 minutes from Al-Maghrib<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>prayer but set to 120<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>during Ramadan.<br/>
 &nbsp;<wbr>&nbsp;<wbr>Used in&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: Saudi Arabia</dd>
 <dt><code>7</code></dt>
-<dd> Fixed Isha Angle Interval (always 90)<br />
-&nbsp;<wbr>&nbsp;<wbr>Fajr/Isha Angle&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: 19.5/0<br />
-&nbsp;<wbr>&nbsp;<wbr>Isha Interval&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: 90 minutes from Al-Maghrib<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>prayer<br />
+<dd> Fixed Isha Angle Interval (always 90)<br/>
+&nbsp;<wbr>&nbsp;<wbr>Fajr/Isha Angle&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: 19.5/0<br/>
+&nbsp;<wbr>&nbsp;<wbr>Isha Interval&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: 90 minutes from Al-Maghrib<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>prayer<br/>
 &nbsp;<wbr>&nbsp;<wbr>Used in&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: Bahrain, Oman, Qatar, UAE</dd>
 <dt><code>8</code></dt>
-<dd> Egyptian General Authority of Survey (Egypt)<br />
-&nbsp;<wbr>&nbsp;<wbr>Fajr/Isha Angle&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: 19.5/17.5<br />
+<dd> Egyptian General Authority of Survey (Egypt)<br/>
+&nbsp;<wbr>&nbsp;<wbr>Fajr/Isha Angle&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: 19.5/17.5<br/>
 &nbsp;<wbr>&nbsp;<wbr>Used in&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: Egypt</dd></dl>
 </dl>
 <dt><code>-fa, &#8211;fajrangle </code><i>[real_num]</i></dt>
@@ -84,7 +84,7 @@ description: "ipraytime – An Islamic Prayer Times Calculator"
 <dd> Specify which angle to use for Isha. Will override the one set by the &#8211;anglemethod.</dd>
 <dt><code>-s, &#8211;dst </code><i>[int_num]</i></dt>
 <dd> By default, <code>ipraytime</code> uses the host&#8217;s machine timezone information to determine whether daylight saving time is in effect or not. If this information is unavailable or not accurate, this option provides the means to explicitly set the DST status. Set this to 0 to completely disable daylight saving time. Set it to 1 to always add one hour to the computed prayer times.</dd></dl>
-<p> <code>-ss, &#8211;dst-start </code><i>yyyymmdd</i><br />
+<p> <code>-ss, &#8211;dst-start </code><i>yyyymmdd</i><br/>
  <code>-se, &#8211;dst-end </code><i>yyyymmdd</i> </p>
 <dl>
 <dt>
@@ -248,7 +248,7 @@ ipraytime -lat 29.5000 -lon 47.7500 -u 3 --anglemethod 2 -d 20071229 -h12
 <h2>AUTHORS</h2>
 <p> Written by Nadim Shaikli and Thamer Mahmoud. Part of the Arabeyes.org project.</p>
 <h2>COPYRIGHT</h2>
-<p> <code>ipraytime</code> is subject to the GNU General Public License (GPL).<br />
+<p> <code>ipraytime</code> is subject to the GNU General Public License (GPL).<br/>
  Copyright &#169; 2005, Arabeyes, Nadim Shaikli.</p>
 <h2>SEE ALSO</h2>
 <p> The ITL library (libitl) from the Islamic Tools and Libraries project. It is the underlying requirement for <code>ipraytime</code> to function. The ITL library was created and is hosted at <code><a rel="nofollow" href="http://www.arabeyes.org">www.arabeyes.org</a></code>. </p>

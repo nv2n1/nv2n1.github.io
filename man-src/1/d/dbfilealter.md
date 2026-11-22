@@ -48,11 +48,11 @@ description: "dbfilealter – alter the format of an Fsdb file, changing the row
 <dd>
 </dd><dt><code>t</code> single tab character (exactly one tab for input and output).</dt>
 <dd>
-</dd><dt><font SIZE="-1"><code>XN</code></font> take <i>N</i> as one or more hex digits that specify a unicode character. Accept one or more of those characters on input, output exactly one of those characters.</dt>
+</dd><dt><code>XN</code> take <i>N</i> as one or more hex digits that specify a unicode character. Accept one or more of those characters on input, output exactly one of those characters.</dt>
 <dd>
-</dd><dt><font SIZE="-1"><code>CA</code></font> take <i>A</i> as a one (unicode) literal character. Accept one or more of those characters on input, output exactly one of those characters.</dt>
+</dd><dt><code>CA</code> take <i>A</i> as a one (unicode) literal character. Accept one or more of those characters on input, output exactly one of those characters.</dt>
 <dd></dd></dl>
-<p> Potentially in the future <tt>&quot;xN&quot;</tt> and <tt>&quot;cA&quot;</tt> will support single-character-on-input equivalents of <tt>&quot;XN&quot;</tt> and &lt;<font SIZE="-1">CA</font>&gt;.</p>
+<p> Potentially in the future <tt>&quot;xN&quot;</tt> and <tt>&quot;cA&quot;</tt> will support single-character-on-input equivalents of <tt>&quot;XN&quot;</tt> and &lt;CA&gt;.</p>
 <h3>Valid Row Seperators</h3>
 <p> Three row separators are allowed:</p>
 <dl>
@@ -123,4 +123,4 @@ description: "dbfilealter – alter the format of an Fsdb file, changing the row
 <p> Fsdb, dbcoldefine.</p>
 <h2>AUTHOR and COPYRIGHT</h2>
 <p> Copyright (C) 2008-2015 by John Heidemann &lt;johnh [at] isi.edu&gt; </p>
-<p> This program is distributed under terms of the <font SIZE="-1">GNU</font> general public license, version 2. See the file <font SIZE="-1">COPYING</font> with the distribution for details. </p>
+<p> This program is distributed under terms of the GNU general public license, version 2. See the file COPYING with the distribution for details. </p>

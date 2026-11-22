@@ -34,9 +34,9 @@ void vwarnx(const char *fmt, va_list args);</code></pre>
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>err</code>(), <code>errx</code>(),<br />
- <code>warn</code>(), <code>warnx</code>(),<br />
- <code>verr</code>(), <code>verrx</code>(),<br />
+<td> <code>err</code>(), <code>errx</code>(),<br/>
+ <code>warn</code>(), <code>warnx</code>(),<br/>
+ <code>verr</code>(), <code>verrx</code>(),<br/>
  <code>vwarn</code>(), <code>vwarnx</code>() </td>
 <td>Thread safety</td>
 <td>MT-Safe locale
@@ -46,14 +46,14 @@ void vwarnx(const char *fmt, va_list args);</code></pre>
 <h2>Conforming To</h2>
 <p>These functions are nonstandard BSD extensions.</p>
 <h2>Examples</h2>
-<p>Display the current <i>errno</i> information string and exit: fd = open(raw_device, O_RDONLY, 0);<br />
-if (fd == -1)<br />
-    warnx(&quot;%s: %s: trying the block device&quot;,<br />
-          raw_device, strerror(errno));<br />
-fd = open(block_device, O_RDONLY, 0);<br />
-if (fd == -1)<br />
-    err(EXIT_FAILURE, &quot;%s&quot;, block_device); Display an error message and exit: if (tm.tm_hour &lt; START_TIME)<br />
-    errx(EXIT_FAILURE, &quot;too early, wait until %s&quot;,<br />
+<p>Display the current <i>errno</i> information string and exit: fd = open(raw_device, O_RDONLY, 0);<br/>
+if (fd == -1)<br/>
+    warnx(&quot;%s: %s: trying the block device&quot;,<br/>
+          raw_device, strerror(errno));<br/>
+fd = open(block_device, O_RDONLY, 0);<br/>
+if (fd == -1)<br/>
+    err(EXIT_FAILURE, &quot;%s&quot;, block_device); Display an error message and exit: if (tm.tm_hour &lt; START_TIME)<br/>
+    errx(EXIT_FAILURE, &quot;too early, wait until %s&quot;,<br/>
          start_time_string); Warn of an error: </p>
 <pre><code>fd = open(raw_device, O_RDONLY, 0);
 if (fd == -1)

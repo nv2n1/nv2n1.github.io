@@ -14,27 +14,27 @@ description: "perlandroid – Perl under Android"
 <h2>DESCRIPTION</h2>
 <p> This document describes how to set up your host environment when attempting to build Perl for Android.</p>
 <h2>Cross-compilation</h2>
-<p> These instructions assume an Unixish build environment on your host system; they&#8217;ve been tested on Linux and <font SIZE="-1">OS X,</font> and may work on Cygwin and <font SIZE="-1">MSYS.</font> While Google also provides an <font SIZE="-1">NDK</font> for Windows, these steps won&#8217;t work native there, although it may be possible to cross-compile through different means. </p>
-<p> If your host system&#8217;s architecture is 32 bits, remember to change the <tt>&quot;x86_64&quot;</tt>&#8216;s below to <tt>&quot;x86&quot;</tt>&#8216;s. On a similar vein, the examples below use the 4.8 toolchain; if you want to use something older or newer (for example, the 4.4.3 toolchain included in the 8th revision of the <font SIZE="-1">NDK</font>), just change those to the relevant version.</p>
-<h3>Get the Android Native Development Kit (<font SIZE="-1">NDK</font>)</h3>
-<p> You can download the <font SIZE="-1">NDK</font> from &lt;<a rel="nofollow" href="https://developer.android.com/tools/sdk/ndk/index.html">https://developer.android.com/tools/sdk/ndk/index.html</a>&gt;. You&#8217;ll want the normal, non-legacy version.</p>
+<p> These instructions assume an Unixish build environment on your host system; they&#8217;ve been tested on Linux and OS X, and may work on Cygwin and MSYS. While Google also provides an NDK for Windows, these steps won&#8217;t work native there, although it may be possible to cross-compile through different means. </p>
+<p> If your host system&#8217;s architecture is 32 bits, remember to change the <tt>&quot;x86_64&quot;</tt>&#8216;s below to <tt>&quot;x86&quot;</tt>&#8216;s. On a similar vein, the examples below use the 4.8 toolchain; if you want to use something older or newer (for example, the 4.4.3 toolchain included in the 8th revision of the NDK), just change those to the relevant version.</p>
+<h3>Get the Android Native Development Kit (NDK)</h3>
+<p> You can download the NDK from &lt;<a rel="nofollow" href="https://developer.android.com/tools/sdk/ndk/index.html">https://developer.android.com/tools/sdk/ndk/index.html</a>&gt;. You&#8217;ll want the normal, non-legacy version.</p>
 <h3>Determine the architecture you&#8217;ll be cross-compiling for</h3>
-<p> There&#8217;s three possible options: arm-linux-androideabi for <font SIZE="-1">ARM,</font> mipsel-linux-android for <font SIZE="-1">MIPS,</font> and simply x86 for x86. As of 2014, most Android devices run on <font SIZE="-1">ARM,</font> so that is generally a safe bet. </p>
+<p> There&#8217;s three possible options: arm-linux-androideabi for ARM, mipsel-linux-android for MIPS, and simply x86 for x86. As of 2014, most Android devices run on ARM, so that is generally a safe bet. </p>
 <p> With those two in hand, you should add </p>
 <pre><code>
 $ANDROID_NDK / toolchains / $TARGETARCH - 4.8 / prebuilt /`uname | tr '[A-Z]' '[a-z]'`- x86_64 / bin
 </code></pre>
-<p> to your <tt>&quot;PATH&quot;</tt>, where <tt>$ANDROID_NDK</tt> is the location where you unpacked the <font SIZE="-1">NDK,</font> and <tt>$TARGETARCH</tt> is your target&#8217;s architecture.</p>
+<p> to your <tt>&quot;PATH&quot;</tt>, where <tt>$ANDROID_NDK</tt> is the location where you unpacked the NDK, and <tt>$TARGETARCH</tt> is your target&#8217;s architecture.</p>
 <h3>Set up a standalone toolchain</h3>
 <p> This creates a working sysroot that we can feed to Configure later. </p>
 <pre><code>
 $ export ANDROID_TOOLCHAIN = / tmp / my - toolchain - $TARGETARCH $ export SYSROOT = $ANDROID_TOOLCHAIN / sysroot $ $ANDROID_NDK / build / tools / make - standalone - toolchain.sh-- platform = android - 9 --install - dir = $ANDROID_TOOLCHAIN-- system =`uname | tr '[A-Z]' '[a-z]'`- x86_64-- toolchain = $TARGETARCH - 4.8
 </code></pre>
 <h3>adb or ssh?</h3>
-<p> adb is the Android Debug Bridge. For our purposes, it&#8217;s basically a way of establishing an ssh connection to an Android device without having to install anything on the device itself, as long as the device is either on the same local network as the host, or it is connected to the host through <font SIZE="-1">USB.</font> </p>
-<p> Perl can be cross-compiled using either adb or a normal ssh connection; in general, if you can connect your device to the host using a <font SIZE="-1">USB</font> port, or if you don&#8217;t feel like installing an sshd app on your device, you may want to use adb, although you may be forced to switch to ssh if your device is not rooted and you&#8217;re unlucky &#8212; more on that later. Alternatively, if you&#8217;re cross-compiling to an emulator, you&#8217;ll have to use adb. </p>
+<p> adb is the Android Debug Bridge. For our purposes, it&#8217;s basically a way of establishing an ssh connection to an Android device without having to install anything on the device itself, as long as the device is either on the same local network as the host, or it is connected to the host through USB. </p>
+<p> Perl can be cross-compiled using either adb or a normal ssh connection; in general, if you can connect your device to the host using a USB port, or if you don&#8217;t feel like installing an sshd app on your device, you may want to use adb, although you may be forced to switch to ssh if your device is not rooted and you&#8217;re unlucky &#8212; more on that later. Alternatively, if you&#8217;re cross-compiling to an emulator, you&#8217;ll have to use adb. </p>
 <p> <i>adb</i> </p>
-<p> To use adb, download the Android <font SIZE="-1">SDK</font> from &lt;<a rel="nofollow" href="https://developer.android.com/sdk/index.html">https://developer.android.com/sdk/index.html</a>&gt;. The &#8220;<font SIZE="-1">SDK</font> Tools Only&#8221; version should suffice &#8212; if you downloaded the <font SIZE="-1">ADT</font> Bundle, you can find the sdk under <i></i>$ADT_BUNDLE<i>/sdk/</i>. </p>
+<p> To use adb, download the Android SDK from &lt;<a rel="nofollow" href="https://developer.android.com/sdk/index.html">https://developer.android.com/sdk/index.html</a>&gt;. The &#8220;SDK Tools Only&#8221; version should suffice &#8212; if you downloaded the ADT Bundle, you can find the sdk under <i></i>$ADT_BUNDLE<i>/sdk/</i>. </p>
 <p> Add <i></i>$ANDROID_SDK<i>/platform-tools</i> to your <tt>&quot;PATH&quot;</tt>, which should give you access to adb. You&#8217;ll now have to find your device&#8217;s name using <tt>&quot;adb devices&quot;</tt>, and later pass that to Configure through <tt>&quot;-Dtargethost=$DEVICE&quot;</tt>. </p>
 <p> However, before calling Configure, you need to check if using adb is a viable choice in the first place. Because Android doesn&#8217;t have a <i>/tmp</i>, nor does it allow executables in the sdcard, we need to find somewhere in the device for Configure to put some files in, as well as for the tests to run in. If your device is rooted, then you&#8217;re good. Try running these: </p>
 <pre>

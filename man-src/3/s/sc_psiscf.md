@@ -18,9 +18,9 @@ description: "sc::PsiSCF –"
 <h3>Public Member Functions</h3>
 <p><code>PsiSCF</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;) </p>
 <p> <code>PsiSCF</code> (<code>StateIn</code> &amp;) </p>
-<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br />
- <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br />
- virtual PsiSCF::RefType <code>reftype</code> () const =0<br />
+<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br/>
+ <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br/>
+ virtual PsiSCF::RefType <code>reftype</code> () const =0<br/>
  <i>Returns the PsiSCF::RefType of this particular Psi </i><code>SCF</code> wave function.</p>
 <h2>Detailed Description</h2>
 <p><code>PsiSCF</code> is an abstract base for all Psi <code>SCF</code> wave functions.</p>

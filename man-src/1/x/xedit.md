@@ -412,7 +412,7 @@ nto       not
 /macro some long string with \
  newlines \
 </pre>
-<p> Will automatically replace the word <i>nto</i> by <i>not</i>, and <i>/macro</i> by <i>some long string with<br />
+<p> Will automatically replace the word <i>nto</i> by <i>not</i>, and <i>/macro</i> by <i>some long string with<br/>
 &nbsp;newlines </i> when you type that words.</p>
 <dt><code>ispell.dictionaries (</code>Class <code>ispell.Dictionary)</code></dt>
 <dd> Specifies a list of dictionary names, separated by spaces, available to the ispell program. The default value is <i>&quot;american americamed+ english&quot;</i>.</dd>
@@ -482,10 +482,10 @@ Xedit  xedit
 <h2>RESTRICTIONS</h2>
 <p> Xedit is not a replacement to Emacs.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright 1988, Digital Equipment Corporation.<br />
- Copyright 1989, X Consortium<br />
- Copyright 1998, The XFree86 Project<br />
+<p> Copyright 1988, Digital Equipment Corporation.<br/>
+ Copyright 1989, X Consortium<br/>
+ Copyright 1998, The XFree86 Project<br/>
  See <i><a href="/docs/linux/man/7-x/">X</a></i>(7) for a full statement of rights and permissions.</p>
 <h2>AUTHORS</h2>
-<p> Chris D. Peterson, MIT X Consortium<br />
+<p> Chris D. Peterson, MIT X Consortium<br/>
  Paulo Cesar Pereira de Andrade, The XFree86 Project </p>

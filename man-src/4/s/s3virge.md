@@ -9,11 +9,11 @@ description: "s3virge – S3 ViRGE video driver"
 
 <p>s3virge &#8211; S3 ViRGE video driver</p>
 <h2>Synopsis</h2>
-<p><code>Section N&#8217;34&#8217;DeviceN&#8217;34&#8217;</code><br />
- <code> Identifier N&#8217;34&#8217;</code><i>devname</i><code>N&#8217;34&#8217;</code><br />
- <code> Driver N&#8217;34&#8217;s3virgeN&#8217;34&#8217;</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&#8230;<br />
- &nbsp;<wbr>&nbsp;<wbr>[ <code>Option</code> &quot;optionname&quot; [&quot;optionvalue&quot;]]<br />
+<p><code>Section N&#8217;34&#8217;DeviceN&#8217;34&#8217;</code><br/>
+ <code> Identifier N&#8217;34&#8217;</code><i>devname</i><code>N&#8217;34&#8217;</code><br/>
+ <code> Driver N&#8217;34&#8217;s3virgeN&#8217;34&#8217;</code><br/>
+ &nbsp;<wbr>&nbsp;<wbr>&#8230;<br/>
+ &nbsp;<wbr>&nbsp;<wbr>[ <code>Option</code> &quot;optionname&quot; [&quot;optionvalue&quot;]]<br/>
  <code>EndSection</code></p>
 <h2>Description</h2>
 <p><code>s3virge </code> is an Xorg driver for S3 based video cards. The driver is fully accelerated, and provides support for the following framebuffer depths: 8, 15, 16, and 24. All visual types are supported for depth 8, and TrueColor visuals are supported for the other depths. XVideo hardware up scaling is supported in depth 16 and 24 on the DX, GX, GX2, MX, MX+, and Trio3D/2X. Doublescan modes are supported and tested in depth 8 and 16 on DX, but disable XVideo. Doublescan modes on other chipsets are untested.</p>

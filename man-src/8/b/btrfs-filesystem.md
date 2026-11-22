@@ -76,11 +76,11 @@ GlobalReserve, single: total=512.00MiB, used=0.00B</pre>
 <dd>Defragment file data on a mounted filesystem. Requires kernel 2.6.33 and newer. </dd>
 <p> If <i>-r</i> is passed, files in dir will be defragmented recursively (not descending to subvolumes and mount points). The start position and the number of bytes to defragment can be specified by start and length using <i>-s</i> and <i>-l</i> options below. Extents bigger than value given by <i>-t</i> will be skipped, otherwise this value is used as a target extent size, but is only advisory and may not be reached if the free space is too fragmented. Use 0 to take the kernel default, which is 256kB but may change in the future. You can also turn on compression in defragment operations. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Warning</code> </font><br />
+<dd> <code>Warning</code> <br/>
  Defragmenting with Linux kernel versions &lt; 3.9 or &ge; 3.14-rc2 as well as with Linux stable kernel versions &ge; 3.10.31, &ge; 3.12.12 or &ge; 3.13.4 will break up the reflinks of COW data (for example files copied with <code>cp &#8211;reflink</code>, snapshots or de-duplicated data). This may cause considerable increase of space usage depending on the broken up reflinks. </dd>
 </dl>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  Directory arguments without <i>-r</i> do not defragment files recursively but will defragment certain internal trees (extent tree and the subvolume tree). This has been confusing and could be removed in the future. </dd>
 </dl>
 <p> For <i>start</i>, <i>len</i>, <i>size</i> it is possible to append units designator: &#8216;K&#8217;, &#8216;M&#8217;, &#8216;G&#8217;, &#8216;T&#8217;, &#8216;P&#8217;, or &#8216;E&#8217;, which represent KiB, MiB, GiB, TiB, PiB, or EiB, respectively (case does not matter). </p>
@@ -148,7 +148,7 @@ GlobalReserve, single: total=512.00MiB, used=0.00B</pre>
 <dd>Show or update the label of a filesystem. This works on a mounted filesystem or a filesystem image. </dd>
 <p> The <i>newlabel</i> argument is optional. Current label is printed if the argument is omitted. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  the maximum allowable length shall be less than 256 chars and must not contain a newline. The trailing newline is stripped automatically. </dd>
 </dl>
 </dl>
@@ -156,7 +156,7 @@ GlobalReserve, single: total=512.00MiB, used=0.00B</pre>
 <dl>
 <dd>Resize a mounted filesystem identified by <i>path</i>. A particular device can be resized by specifying a <i>devid</i>. </dd>
 <dl>
-<dd><font SIZE="+1"> <code>Warning</code> </font><br />
+<dd> <code>Warning</code> <br/>
  If <i>path</i> is a file containing a BTRFS image then resize does not work as expected and does not resize the image. This would resize the underlying filesystem instead. </dd>
 </dl>
 <p> The <i>devid</i> can be found in the output of <code>btrfs filesystem show</code> and defaults to 1 if not specified. The <i>size</i> parameter specifies the new size of the filesystem. If the prefix <i>+</i> or <i>&#8211;</i> is present the size is increased or decreased by the quantity <i>size</i>. If no units are specified, bytes are assumed for <i>size</i>. Optionally, the size parameter may be suffixed by one of the following unit designators: &#8216;K&#8217;, &#8216;M&#8217;, &#8216;G&#8217;, &#8216;T&#8217;, &#8216;P&#8217;, or &#8216;E&#8217;, which represent KiB, MiB, GiB, TiB, PiB, or EiB, respectively (case does not matter). </p>
@@ -270,7 +270,7 @@ Unallocated:
 <h2>Examples</h2>
 <p><code>$ btrfs filesystem defrag -v -r dir/</code> Recursively defragment files under <i>dir/</i>, print files as they are processed. The file names will be printed in batches, similarly the amount of data triggered by defragmentation will be proportional to last N printed files. The system dirty memory throttling will slow down the defragmentation but there can still be a lot of IO load and the system may stall for a moment. <code>$ btrfs filesystem defrag -v -r -f dir/</code> Recursively defragment files under <i>dir/</i>, be verbose and wait until all blocks are flushed before processing next file. You can note slower progress of the output and lower IO load (proportional to currently defragmented file). <code>$ btrfs filesystem defrag -v -r -f -clzo dir/</code> Recursively defragment files under <i>dir/</i>, be verbose, wait until all blocks are flushed and force file compression. <code>$ btrfs filesystem defrag -v -r -t 64M dir/</code> Recursively defragment files under <i>dir/</i>, be verbose and try to merge extents to be about 64MiB. As stated above, the success rate depends on actual free space fragmentation and the final result is not guaranteed to meet the target even if run repeatedly. <code>$ btrfs filesystem resize -1G /path</code> <code>$ btrfs filesystem resize 1:-1G /path</code> Shrink size of the filesystem&#8217;s device id 1 by 1GiB. The first syntax expects a device with id 1 to exist, otherwise fails. The second is equivalent and more explicit. For a single-device filesystem it&#8217;s typically not necessary to specify the devid though. <code>$ btrfs filesystem resize max /path</code> <code>$ btrfs filesystem resize 1:max /path</code> Let&#8217;s assume that devid 1 exists and the filesystem does not occupy the whole block device, eg. it has been enlarged and we want to grow the filesystem. By simply using <i>max</i> as size we will achieve that.</p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  There are two ways to minimize the filesystem on a given device. The <code>btrfs inspect-internal min-dev-size</code> command, or iteratively shrink in steps. </dd>
 <h2>Exit Status</h2>
 <p><code>btrfs filesystem</code> returns a zero exit status if it succeeds. Non zero is returned in case of failure.</p>

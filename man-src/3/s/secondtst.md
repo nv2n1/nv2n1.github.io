@@ -10,8 +10,8 @@ description: "secondtst.f –"
 <p>secondtst.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>program <code>__secondtst.f__</code><br />
- <i></i><code>SECONDTST</code><br />
+<p>program <code>__secondtst.f__</code><br/>
+ <i></i><code>SECONDTST</code><br/>
  subroutine <code>mysub</code> (N, X, Y)</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>program __secondtst.f__ ()</h3>

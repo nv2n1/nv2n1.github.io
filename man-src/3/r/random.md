@@ -16,8 +16,8 @@ char *initstate(unsigned seed, char *state, size_t n);
 char *setstate(char *state);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>random</code>(), <code>srandom</code>(), <code>initstate</code>(), <code>setstate</code>():</p>
 <dl>
-<dd>_XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc since 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
+<dd>_XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc since 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_SVID_SOURCE ||&nbsp;_BSD_SOURCE</dd></dl>
 <h2>Description</h2>
 <p>The <code>random</code>() function uses a nonlinear additive feedback random number generator employing a default table of size 31 long integers to return successive pseudo-random numbers in the range from 0 to 2^31 &#8211; 1. The period of this random number generator is very large, approximately <i>16&nbsp;*&nbsp;((2^31)&nbsp;&#8211; 1)</i>. </p>
@@ -44,7 +44,7 @@ char *setstate(char *state);</code></pre>
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>random</code>(), <code>srandom</code>(),<br />
+<td> <code>random</code>(), <code>srandom</code>(),<br/>
  <code>initstate</code>(), <code>setstate</code>() </td>
 <td>Thread safety</td>
 <td>MT-Safe

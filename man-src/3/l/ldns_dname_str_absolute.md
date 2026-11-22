@@ -10,7 +10,7 @@ description: "ldns_dname_is_subdomain, ldns_dname_str_absolute, ldns_dname_label
 
 <p> ldns_dname_is_subdomain, ldns_dname_str_absolute, ldns_dname_label </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> bool ldns_dname_is_subdomain(const ldns_rdf *sub, const ldns_rdf *parent); </p>

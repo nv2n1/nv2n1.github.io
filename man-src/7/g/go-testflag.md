@@ -16,27 +16,27 @@ description: "go – tool for managing Go source code"
 <dt><code>-bench</code><i> regexp</i></dt>
 <dd>Run only those benchmarks matching a regular expression. By default, no benchmarks are run. To run all benchmarks, use &#8216;-bench .&#8217; or &#8216;-bench=.&#8217;. The regular expression is split by unbracketed slash (/) characters into a sequence of regular expressions, and each part of a benchmark&#8217;s identifier must match the corresponding element in the sequence, if any. Possible parents of matches are run with b.N=1 to identify sub-benchmarks. For example, given -bench=X/Y, top-level benchmarks matching X are run with b.N=1 to find any sub-benchmarks matching Y, which are then run in full.</dd>
 <dt><code>-benchtime</code><i> t</i></dt>
-<dd>Run enough iterations of each benchmark to take <i>t</i>, specified as a time.Duration (for example, -benchtime 1h30s).<br />
- The default is 1 second (1s).<br />
+<dd>Run enough iterations of each benchmark to take <i>t</i>, specified as a time.Duration (for example, -benchtime 1h30s).<br/>
+ The default is 1 second (1s).<br/>
  The special syntax <i>N</i>x means to run the benchmark <i>N</i> times (for example, -benchtime 100x).</dd>
 <dt><code>-count</code><i> n</i></dt>
-<dd>Run each test and benchmark <i>n</i> times (default 1).<br />
- If -cpu is set, run n times for each GOMAXPROCS value.<br />
+<dd>Run each test and benchmark <i>n</i> times (default 1).<br/>
+ If -cpu is set, run n times for each GOMAXPROCS value.<br/>
  Examples are always run once.</dd>
 <dt><code>-cover</code></dt>
-<dd>Enable coverage analysis.<br />
+<dd>Enable coverage analysis.<br/>
  Note that because coverage works by annotating the source code before compilation, compilation and test failures with coverage enabled may report line numbers that don&#8217;t correspond to the original sources.</dd>
 <dt><code>-covermode</code> set,count,atomic</dt>
-<dd>Set the mode for coverage analysis for the package[s] being tested. The default is &quot;set&quot; unless -race is enabled, in which case it is &quot;atomic&quot;.<br />
- The values:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;set: bool: does this statement run?<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;count: int: how many times does this statement run?<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;atomic: int: count, but correct in multithreaded tests;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;significantly more expensive.<br />
+<dd>Set the mode for coverage analysis for the package[s] being tested. The default is &quot;set&quot; unless -race is enabled, in which case it is &quot;atomic&quot;.<br/>
+ The values:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;set: bool: does this statement run?<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;count: int: how many times does this statement run?<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;atomic: int: count, but correct in multithreaded tests;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;significantly more expensive.<br/>
  Sets -cover.</dd>
 <dt><code>-coverpkg </code><i>pattern1</i><code>,</code><i>pattern2</i><code>,</code><i>pattern3</i></dt>
-<dd>Apply coverage analysis in each test to packages matching the patterns. The default is for each test to analyze only the package being tested.<br />
- See &#8216;go help packages&#8217; for a description of package patterns.<br />
+<dd>Apply coverage analysis in each test to packages matching the patterns. The default is for each test to analyze only the package being tested.<br/>
+ See &#8216;go help packages&#8217; for a description of package patterns.<br/>
  Sets -cover.</dd>
 <dt><code>-cpu </code><i>1</i><code>,</code><i>2</i><code>,</code><i>4</i></dt>
 <dd>Specify a list of GOMAXPROCS values for which the tests or benchmarks should be executed. The default is the current value of GOMAXPROCS.</dd>
@@ -53,39 +53,39 @@ description: "go – tool for managing Go source code"
 <dt><code>-shuffle </code>off,on,N</dt>
 <dd>Randomize the execution order of tests and benchmarks. It is off by default. If -shuffle is set to on, then it will seed the randomizer using the system clock. If -shuffle is set to an integer N, then N will be used as the seed value. In both cases, the seed will be reported for reproducibility.</dd>
 <dt><code>-timeout</code><i> d</i></dt>
-<dd>If a test binary runs longer than duration <i>d</i>, panic.<br />
- If <i>d</i> is 0, the timeout is disabled.<br />
+<dd>If a test binary runs longer than duration <i>d</i>, panic.<br/>
+ If <i>d</i> is 0, the timeout is disabled.<br/>
  The default is 10 minutes (10m).</dd>
 <dt><code>-v</code></dt>
 <dd>Verbose output: log all tests as they are run. Also print all text from Log and Logf calls even if the test succeeds.</dd>
 <dt><code>-vet</code><i> list</i></dt>
-<dd>Configure the invocation of &quot;go vet&quot; during &quot;go test&quot; to use the comma-separated list of vet checks.<br />
- If list is empty, &quot;go test&quot; runs &quot;go vet&quot; with a curated list of checks believed to be always worth addressing.<br />
+<dd>Configure the invocation of &quot;go vet&quot; during &quot;go test&quot; to use the comma-separated list of vet checks.<br/>
+ If list is empty, &quot;go test&quot; runs &quot;go vet&quot; with a curated list of checks believed to be always worth addressing.<br/>
  If list is &quot;off&quot;, &quot;go test&quot; does not run &quot;go vet&quot; at all.</dd></dl>
 <p> The following flags are also recognized by &#8216;go test&#8217; and can be used to profile the tests during execution:</p>
 <dl>
 <dt><code>-benchmem</code></dt>
 <dd>Print memory allocation statistics for benchmarks.</dd>
 <dt><code>-blockprofile </code>block.out</dt>
-<dd>Write a goroutine blocking profile to the specified file when all tests are complete.<br />
+<dd>Write a goroutine blocking profile to the specified file when all tests are complete.<br/>
  Writes test binary as -c would.</dd>
 <dt><code>-blockprofilerate</code><i> n</i></dt>
-<dd>Control the detail provided in goroutine blocking profiles by calling runtime.SetBlockProfileRate with <i>n</i>.<br />
- See &#8216;go doc runtime.SetBlockProfileRate&#8217;.<br />
+<dd>Control the detail provided in goroutine blocking profiles by calling runtime.SetBlockProfileRate with <i>n</i>.<br/>
+ See &#8216;go doc runtime.SetBlockProfileRate&#8217;.<br/>
  The profiler aims to sample, on average, one blocking event every n nanoseconds the program spends blocked. By default, if -test.blockprofile is set without this flag, all blocking events are recorded, equivalent to -test.blockprofilerate=1.</dd>
 <dt><code>-coverprofile </code>cover.out</dt>
-<dd>Write a coverage profile to the file after all tests have passed.<br />
+<dd>Write a coverage profile to the file after all tests have passed.<br/>
  Sets -cover.</dd>
 <dt><code>-cpuprofile </code>cpu.out</dt>
-<dd>Write a CPU profile to the specified file before exiting.<br />
+<dd>Write a CPU profile to the specified file before exiting.<br/>
  Writes test binary as -c would.</dd>
 <dt><code>-memprofile </code>mem.out</dt>
-<dd>Write an allocation profile to the file after all tests have passed.<br />
+<dd>Write an allocation profile to the file after all tests have passed.<br/>
  Writes test binary as -c would.</dd>
 <dt><code>-memprofilerate</code><i> n</i></dt>
 <dd>Enable more precise (and expensive) memory allocation profiles by setting runtime.MemProfileRate. See &#8216;go doc runtime.MemProfileRate&#8217;. To profile all memory allocations, use -test.memprofilerate=1.</dd>
 <dt><code>-mutexprofile </code>mutex.out</dt>
-<dd>Write a mutex contention profile to the specified file when all tests are complete.<br />
+<dd>Write a mutex contention profile to the specified file when all tests are complete.<br/>
  Writes test binary as -c would.</dd>
 <dt><code>-mutexprofilefraction</code><i> n</i></dt>
 <dd>Sample 1 in <i>n</i> stack traces of goroutines holding a contended mutex.</dd>

@@ -31,18 +31,18 @@ description: "latex2rtf – Convert a LaTeX file to an RTF file"
 <dd> <p> Used to specify the number of dots per inch in equations that are converted to bitmaps and for graphics that must be converted. Default is 300 dpi. </p>
  </dd>
 <dt><code>-E# </code></dt>
-<dd> <p> where # selects the type of figure handling desired. RTF does not support insertion of PS, PDF, or EPS file types. These figures must be converted to a bitmap format and then inserted. One trick is to insert the filenames into the RTF file and then in post-processing, insert the file. These options can be added together. <br />
- -E3 insert all figures (DEFAULT) <br />
- -E0 no figures in the RTF <br />
- -E1 insert figures having RTF-supported formats <br />
- -E2 convert and insert unsupported figure formats <br />
- -E4 insert only filenames for supported file formats <br />
+<dd> <p> where # selects the type of figure handling desired. RTF does not support insertion of PS, PDF, or EPS file types. These figures must be converted to a bitmap format and then inserted. One trick is to insert the filenames into the RTF file and then in post-processing, insert the file. These options can be added together. <br/>
+ -E3 insert all figures (DEFAULT) <br/>
+ -E0 no figures in the RTF <br/>
+ -E1 insert figures having RTF-supported formats <br/>
+ -E2 convert and insert unsupported figure formats <br/>
+ -E4 insert only filenames for supported file formats <br/>
  -E8 insert only filenames for unsupported file formats </p>
  </dd>
 <dt><code>-f use fields</code></dt>
-<dd> <p> -f0 do not use fields in RTF. This is handy when primitive RTF editors are being used to view the RTF output. <br />
- -f1 use fields for equations but not \ref and \cite. <br />
- -f2 use fields for \ref and \cite but not equations. <br />
+<dd> <p> -f0 do not use fields in RTF. This is handy when primitive RTF editors are being used to view the RTF output. <br/>
+ -f1 use fields for equations but not \ref and \cite. <br/>
+ -f2 use fields for \ref and \cite but not equations. <br/>
  -f3 use fields when possible. This is the default and is most useful when the RTF file is being exported to be used in Word. This retains the most information from the original LaTeX file. </p>
  </dd>
 <dt><code>-F</code></dt>
@@ -61,23 +61,23 @@ description: "latex2rtf – Convert a LaTeX file to an RTF file"
 <dd> <p> Redirect output to <i>outputfile</i> Unless an <i>outputfile</i> is specified with the -o option, the resulting RTF is produced in a file with .tex replaced by .rtf. </p>
  </dd>
 <dt><code>-M#</code></dt>
-<dd> <p> where # selects the type of equation conversion. <br />
- -M1 displayed equations to RTF <br />
- -M2 inline equations to RTF <br />
- -M4 displayed equations to bitmap <br />
- -M8 inline equations to bitmap <br />
- -M16 insert Word comment field containing the raw LaTeX equation <br />
- -M32 insert raw LaTeX equation delimited by $...$ and \[...\] <br />
- -M64 displayed equations to EPS files with filenames in RTF <br />
- -M128 inline equations to EPS files with filenames in RTF <br />
+<dd> <p> where # selects the type of equation conversion. <br/>
+ -M1 displayed equations to RTF <br/>
+ -M2 inline equations to RTF <br/>
+ -M4 displayed equations to bitmap <br/>
+ -M8 inline equations to bitmap <br/>
+ -M16 insert Word comment field containing the raw LaTeX equation <br/>
+ -M32 insert raw LaTeX equation delimited by $...$ and \[...\] <br/>
+ -M64 displayed equations to EPS files with filenames in RTF <br/>
+ -M128 inline equations to EPS files with filenames in RTF <br/>
  </p>
  </dd>
 <dt>These options may be added together to get different results</dt>
-<dd> <p> <br />
- -M0 no equations fields in the RTF. <br />
- -M3 converts both inline and displayed equations to RTF (DEFAULT). <br />
- -M12 converts inline and displayed equations to bitmaps. <br />
- -M192 converts inline and displayed equations to eps files and inserts a tag in RTF. <br />
+<dd> <p> <br/>
+ -M0 no equations fields in the RTF. <br/>
+ -M3 converts both inline and displayed equations to RTF (DEFAULT). <br/>
+ -M12 converts inline and displayed equations to bitmaps. <br/>
+ -M192 converts inline and displayed equations to eps files and inserts a tag in RTF. <br/>
  Bitmap conversion requires a working latex2png script. Producing bitmaps is slow. </p>
  </dd>
 <dt><code>-p</code></dt>
@@ -96,8 +96,8 @@ description: "latex2rtf – Convert a LaTeX file to an RTF file"
 <dd> <p> Use semicolons to separate arguments in RTF fields. This is needed when the machine opening the RTF file has a version of Word that uses commas for decimal points. This also can fix displaying some formulas as &#8216;Error!&#8216; You may also need to try the -p option. </p>
  </dd>
 <dt><code>-t#</code></dt>
-<dd> <p> selects the type of table conversion. <br />
- -t1 convert tables to RTF (default) <br />
+<dd> <p> selects the type of table conversion. <br/>
+ -t1 convert tables to RTF (default) <br/>
  -t2 convert tables to bitmaps </p>
  </dd>
 <dt><code>-T /path/to/tmp</code></dt>

@@ -8,17 +8,17 @@ url: "/docs/linux/man/1-ypdomainname/"
 description: "hostname – show or set the system’s host name domainname – show or set the system’s NIS/YP domain name ypdomainname – show or set the system’s NIS/YP domain name nisdomainname – show or set the sys..."
 ---
 
-<p> hostname &#8211; show or set the system&#8217;s host name<br />
- domainname &#8211; show or set the system&#8217;s NIS/YP domain name<br />
- ypdomainname &#8211; show or set the system&#8217;s NIS/YP domain name<br />
- nisdomainname &#8211; show or set the system&#8217;s NIS/YP domain name<br />
+<p> hostname &#8211; show or set the system&#8217;s host name<br/>
+ domainname &#8211; show or set the system&#8217;s NIS/YP domain name<br/>
+ ypdomainname &#8211; show or set the system&#8217;s NIS/YP domain name<br/>
+ nisdomainname &#8211; show or set the system&#8217;s NIS/YP domain name<br/>
  dnsdomainname &#8211; show the system&#8217;s DNS domain name </p>
 <h2>SYNOPSIS</h2>
-<p> <code>hostname</code> [<code>-a|&#8211;alias</code>] [<code>-d|&#8211;domain</code>] [<code>-f|&#8211;fqdn|&#8211;long</code>] [<code>-A|&#8211;all-fqdns</code>] [<code>-i|&#8211;ip-address</code>] [<code>-I|&#8211;all-ip-addresses</code>] [<code>-s|&#8211;short</code>] [<code>-y|&#8211;yp|&#8211;nis</code>]<br />
- <code>hostname</code> [<code>-b|&#8211;boot</code>] [<code>-F|&#8211;file filename</code>] [<code>hostname</code>]<br />
+<p> <code>hostname</code> [<code>-a|&#8211;alias</code>] [<code>-d|&#8211;domain</code>] [<code>-f|&#8211;fqdn|&#8211;long</code>] [<code>-A|&#8211;all-fqdns</code>] [<code>-i|&#8211;ip-address</code>] [<code>-I|&#8211;all-ip-addresses</code>] [<code>-s|&#8211;short</code>] [<code>-y|&#8211;yp|&#8211;nis</code>]<br/>
+ <code>hostname</code> [<code>-b|&#8211;boot</code>] [<code>-F|&#8211;file filename</code>] [<code>hostname</code>]<br/>
  <code>hostname</code> [<code>-h|&#8211;help</code>] [<code>-V|&#8211;version</code>] </p>
-<p> <code>domainname</code> [<code>nisdomain</code>] [<code>-F file</code>]<br />
- <code>ypdomainname</code> [<code>nisdomain</code>] [<code>-F file</code>]<br />
+<p> <code>domainname</code> [<code>nisdomain</code>] [<code>-F file</code>]<br/>
+ <code>ypdomainname</code> [<code>nisdomain</code>] [<code>-F file</code>]<br/>
  <code>nisdomainname</code> [<code>nisdomain</code>] [<code>-F file</code>] </p>
 <p> <code>dnsdomainname</code> </p>
 <h2>DESCRIPTION</h2>
@@ -75,6 +75,6 @@ description: "hostname – show or set the system’s host name domainname – s
 <p> <code>/etc/hostname</code> Historically this file was supposed to only contain the hostname and not the full canonical FQDN. Nowadays most software is able to cope with a full FQDN here. This file is read at boot time by the system initialization scripts to set the hostname. </p>
 <p> <code>/etc/hosts</code> Usually, this is where one sets the domain name by aliasing the host name to the FQDN.</p>
 <h2>AUTHORS</h2>
-<p> Peter Tobias, &lt;tobias [at] et-inf.fho-emden.de&gt;<br />
- Bernd Eckenfels, &lt;net-tools [at] lina.inka.de&gt; (NIS and manpage).<br />
+<p> Peter Tobias, &lt;tobias [at] et-inf.fho-emden.de&gt;<br/>
+ Bernd Eckenfels, &lt;net-tools [at] lina.inka.de&gt; (NIS and manpage).<br/>
  Michael Meskes, &lt;meskes [at] debian.org&gt; </p>

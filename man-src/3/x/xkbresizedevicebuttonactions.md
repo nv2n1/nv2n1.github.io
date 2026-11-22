@@ -10,7 +10,7 @@ description: "XkbResizeDeviceButtonActions – Allocate additional space for but
 <p>XkbResizeDeviceButtonActions &#8211; Allocate additional space for button actions in an XkbDeviceInfoRec structure </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Status XkbResizeDeviceButtonActions</code> <code>(XkbDeviceInfoPtr </code><i>device_info</i><code>,</code> <code>unsigned int </code><i>new_total</i><code>);</code><br />
+<dt> <code>Status XkbResizeDeviceButtonActions</code> <code>(XkbDeviceInfoPtr </code><i>device_info</i><code>,</code> <code>unsigned int </code><i>new_total</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

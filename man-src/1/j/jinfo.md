@@ -47,31 +47,31 @@ description: "jinfo – Generates configuration information. This command is exp
 <dd> <p> Prints both command-line flags and system property name-value pairs. </p>
  </dd>
 <dt>-flag <i>name</i></dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  Prints the name and value of the specified command-line flag. </p>
  </dd>
 <dt>-flag <i>[+|-]name</i></dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  enables or disables the specified Boolean command-line flag. </p>
  </dd>
 <dt>-flag <i>name=value</i></dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  Sets the specified command-line flag to the specified value. </p>
  </dd>
 <dt>-flags</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  Prints command-line flags passed to the JVM. </p>
  </dd>
 <dt>-sysprops</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  Prints Java system properties as name-value pairs. </p>
  </dd>
 <dt>-h</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  Prints a help message. </p>
  </dd>
 <dt>-help</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  Prints a help message. </p>
  </dd></dl>
 <h2>SEE ALSO</h2>
@@ -80,6 +80,6 @@ description: "jinfo – Generates configuration information. This command is exp
 <dd> <p> <a href="/docs/linux/man/1-jps/">jps</a>(1) </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> jsadebugd(1) <br />
+<dd> <p> jsadebugd(1) <br/>
  </p>
  </dd></dl>

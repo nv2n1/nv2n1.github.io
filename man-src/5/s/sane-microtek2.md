@@ -64,13 +64,13 @@ image (if there was scanned something). Zip them before sending.
 <p> Its contents is a list of device names that correspond to Microtek scanners with SCSI-2 interface. Empty lines and lines starting with a hash mark (#) are ignored. </p>
 <p> The configuration file may also contain options. Global options that are valid for all devices are placed above the device names. Device-specific options are placed under the device name. Note that, except for option dump &lt;n&gt; and option strip-height &lt;n&gt;, the entry in the microtek2.conf file only enables the corresponding option for being showed in the frontend. There, in the frontend, you can switch the options on and off. Currently the following options are supported: </p>
 <dl>
-<dd>option dump &lt;n&gt;<br />
- option strip-height &lt;n&gt;<br />
- option no-backtrack-option &lt;on/off&gt;<br />
- option lightlid-35 &lt;on/off&gt;<br />
- option toggle-lamp &lt;on/off&gt;<br />
- option lineart-autoadjust &lt;on/off&gt;<br />
- option backend-calibration &lt;on/off&gt;<br />
+<dd>option dump &lt;n&gt;<br/>
+ option strip-height &lt;n&gt;<br/>
+ option no-backtrack-option &lt;on/off&gt;<br/>
+ option lightlid-35 &lt;on/off&gt;<br/>
+ option toggle-lamp &lt;on/off&gt;<br/>
+ option lineart-autoadjust &lt;on/off&gt;<br/>
+ option backend-calibration &lt;on/off&gt;<br/>
  option colorbalance-adjust &lt;on/off&gt;</dd></dl>
 <p> <i>option dump &lt;n&gt;</i> enables printing of additional information about the SCSI commands that are sent to the scanner to stderr. This option is primarily useful for debugging purpose. This option has to be a global option and is best placed at the top of the <i>microtek2.conf</i> file. </p>
 <p> If n=1 the contents of the command blocks and the results for the INQUIRY and READ SCANNER ATTRIBUTES command are printed to stderr. </p>
@@ -87,23 +87,23 @@ image (if there was scanned something). Zip them before sending.
 <p> <i>option colorbalance-adjust &lt;on/off&gt;</i> Some scanners (e.g. Phantom 330CX and 636CX) need to have corrected the color balance. If this option is enabled you get advanced options where you can balance the colors. And you will have a button to use the values that the firmware of the scanner provides. </p>
 <p> A sample configuration file is shown below: </p>
 <dl>
-<dd>option dump 1<br />
- option strip-height 1.0<br />
- /dev/scanner<br />
- option no-backtrack-option on<br />
- # this is a comment<br />
- /dev/sge<br />
+<dd>option dump 1<br/>
+ option strip-height 1.0<br/>
+ /dev/scanner<br/>
+ option no-backtrack-option on<br/>
+ # this is a comment<br/>
+ /dev/sge<br/>
  option lightlid-35 on</dd></dl>
 <p> This backend also supports the new configuration file format which makes it easier to detect scanners under Linux. If you have only one scanner it would be best to use the following configuration file for this backend: </p>
 <dl>
-<dd>option dump 1<br />
- option strip-height 14.0<br />
- option no-backtrack-option on<br />
- option backend-calibration on<br />
- option lightlid-35 on<br />
- option toggle-lamp on<br />
- option lineart-autoadjust on<br />
- option colorbalance-adjust off<br />
+<dd>option dump 1<br/>
+ option strip-height 14.0<br/>
+ option no-backtrack-option on<br/>
+ option backend-calibration on<br/>
+ option lightlid-35 on<br/>
+ option toggle-lamp on<br/>
+ option lineart-autoadjust on<br/>
+ option colorbalance-adjust off<br/>
  scsi * * Scanner</dd></dl>
 <p> In this case all SCSI-Scanners should be detected automatically because of the </p>
 <p> scsi * * Scanner </p>
@@ -119,12 +119,12 @@ image (if there was scanned something). Zip them before sending.
 <h2>Environment</h2>
 <dl>
 <dt><code>SANE_DEBUG_MICROTEK2</code></dt>
-<dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend. E.g., a value of 255 requests all debug output to be printed. Smaller levels reduce verbosity. To see error messages on stderr set <code>SANE_DEBUG_MICROTEK2</code> to 1 (Remark: The whole debugging levels should be better revised).<br />
- E.g. just say:<br />
+<dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend. E.g., a value of 255 requests all debug output to be printed. Smaller levels reduce verbosity. To see error messages on stderr set <code>SANE_DEBUG_MICROTEK2</code> to 1 (Remark: The whole debugging levels should be better revised).<br/>
+ E.g. just say:<br/>
  export SANE_DEBUG_MICROTEK2=128 </dd>
 </dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-sane-scsi/">sane-scsi</a>(5)</code>, <code><a href="/docs/linux/man/7-sane/">sane</a></code>(7) </p>
 <h2>Authors</h2>
-<p>Bernd Schroeder (not active anymore)<br />
+<p>Bernd Schroeder (not active anymore)<br/>
  Karsten Festag &lt;<i>karsten.festag [at] gmx.de</i>&gt;.</p>

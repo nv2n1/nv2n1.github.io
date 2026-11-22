@@ -19,7 +19,7 @@ url: "/docs/linux/man/1-puuencode/"
 
 <h2>DESCRIPTION</h2>
 
- Puuencode reads the inputfile and writes a printable version of it to <font SIZE="-1">STDOUT</font> in uuencoded style. Nothing fancy, just a simple uuencode replacement.
+ Puuencode reads the inputfile and writes a printable version of it to STDOUT in uuencoded style. Nothing fancy, just a simple uuencode replacement.
 
 <h2>BUGS</h2>
 

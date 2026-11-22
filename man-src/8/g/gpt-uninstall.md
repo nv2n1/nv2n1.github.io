@@ -7,7 +7,7 @@ url: "/docs/linux/man/8-gpt-uninstall/"
 description: "gpt-uninstall – Uninstall any GPT package."
 ---
 
-<p><code>gpt-uninstall</code> &#8211; Uninstall any <font SIZE="-1">GPT</font> package.</p>
+<p><code>gpt-uninstall</code> &#8211; Uninstall any GPT package.</p>
 <h2>Synopsis</h2>
 <p>gpt-uninstall [&#8211;force &#8211;help -name ] pkgname-flavor-pkgtype</p>
 <h2>Description</h2>
@@ -25,7 +25,7 @@ description: "gpt-uninstall – Uninstall any GPT package."
 <dt><code>-man</code></dt>
 <dd>Prints the manual page and exits.</dd>
 <dt><code>-version</code></dt>
-<dd>Prints the version of <font SIZE="-1">GPT</font> and exits.</dd></dl>
+<dd>Prints the version of GPT and exits.</dd></dl>
 <h2>Examples</h2>
 <pre> gpt-uninstall -name=foo</pre>
 <p>removes all flavors and package types with the name &#8220;foo&#8221;. </p>

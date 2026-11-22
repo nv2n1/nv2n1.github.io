@@ -13,17 +13,17 @@ description: "glutVideoPan – Undocumented, unimplemented."
 <h2>Synopsis</h2>
 <p>In openglut.h Ft void Fn glutVideoPan int x int y int w int h</p>
 <h2>Parameters</h2>
-<p>Bf Em<br />
-&nbsp;<wbr>x Ef<br />
+<p>Bf Em<br/>
+&nbsp;<wbr>x Ef<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>A horizontal position. </p>
-<p> Bf Em<br />
-&nbsp;<wbr>y Ef<br />
+<p> Bf Em<br/>
+&nbsp;<wbr>y Ef<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>A vertical position. </p>
-<p> Bf Em<br />
-&nbsp;<wbr>w Ef<br />
+<p> Bf Em<br/>
+&nbsp;<wbr>w Ef<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>A width. </p>
-<p> Bf Em<br />
-&nbsp;<wbr>h Ef<br />
+<p> Bf Em<br/>
+&nbsp;<wbr>h Ef<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>A height.</p>
 <h2>Description</h2>
 <p>This function is undocumented. This function is unimplemeneted (presently). </p>

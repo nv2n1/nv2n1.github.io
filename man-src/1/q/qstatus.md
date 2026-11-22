@@ -69,7 +69,7 @@ description: "qstatus – xxQS_NAMExx qstatus script"
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;reuti [at] staff.uni-marburg.de&gt;.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2010 Philipps-University of Marburg.<br />
+<p> Copyright &#169; 2010 Philipps-University of Marburg.<br/>
  This is free software. You may redistribute copies of it under the terms of the GNU General Public License &lt;URL: <a rel="nofollow" href="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</a> &gt;. There is NO WARRANTY, to the extent permitted by law.</p>
 <h2>SEE ALSO</h2>
 <p> of xxQS_NAMExx.</p>

@@ -68,17 +68,17 @@ number of evaluation of cost function
 Integer gradientEvaluation () const
 number of evaluation of cost function gradient
 Protected Attributes</code></pre>
-<p> <code>CostFunction</code> &amp; <code>costFunction_</code><br />
- <i>Unconstrained cost function. </i><br />
- <code>Constraint</code> &amp; <code>constraint_</code><br />
- <i></i><code>Constraint</code>.<br />
- <code>Array</code> <code>currentValue_</code><br />
- <i>current value of the local minimum </i><br />
- <code>Real</code> <code>functionValue_</code><br />
- <i>function and gradient norm values at the curentValue_ (i.e. the last step) </i><br />
+<p> <code>CostFunction</code> &amp; <code>costFunction_</code><br/>
+ <i>Unconstrained cost function. </i><br/>
+ <code>Constraint</code> &amp; <code>constraint_</code><br/>
+ <i></i><code>Constraint</code>.<br/>
+ <code>Array</code> <code>currentValue_</code><br/>
+ <i>current value of the local minimum </i><br/>
+ <code>Real</code> <code>functionValue_</code><br/>
+ <i>function and gradient norm values at the curentValue_ (i.e. the last step) </i><br/>
  <code>Real</code> <code>squaredNorm_</code> </p>
-<p> <code>Integer</code> <code>functionEvaluation_</code><br />
- <i>number of evaluation of cost function and its gradient </i><br />
+<p> <code>Integer</code> <code>functionEvaluation_</code><br/>
+ <i>number of evaluation of cost function and its gradient </i><br/>
  <code>Integer</code> <code>gradientEvaluation_</code></p>
 <h2>Detailed Description</h2>
 <p>Constrained optimization problem.</p>

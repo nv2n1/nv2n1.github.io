@@ -10,47 +10,47 @@ description: "io.h –"
 <p>io.h &#8211; </p>
 <p> C wrapper for I/O interfaces.</p>
 <h2>Synopsis</h2>
-<p>#include &#8216;dmlite.h&#8217;<br />
- #include &#8216;any.h&#8217;<br />
- #include &#8216;pool.h&#8217;<br />
- #include &lt;sys/uio.h&gt;<br />
+<p>#include &#8216;dmlite.h&#8217;<br/>
+ #include &#8216;any.h&#8217;<br/>
+ #include &#8216;pool.h&#8217;<br/>
+ #include &lt;sys/uio.h&gt;<br/>
  #include &lt;unistd.h&gt; </p>
 <h3>Macros</h3>
 <p>#define <code>O_INSECURE</code> 010 </p>
 <h3>Typedefs</h3>
 <p>typedef struct <code>dmlite_fd</code> <code>dmlite_fd</code> </p>
 <h3>Functions</h3>
-<p><code>dmlite_fd</code> * <code>dmlite_fopen</code> (<code>dmlite_context</code> *context, const char *path, int flags, const <code>dmlite_any_dict</code> *extra,&#8230;)<br />
- <i>Opens a file. </i><br />
- int <code>dmlite_fclose</code> (<code>dmlite_fd</code> *fd)<br />
- <i>Closes a file. </i><br />
- int <code>dmlite_fstat</code> (<code>dmlite_fd</code> *fd, struct stat *buf)<br />
- <i>Gets information about a file descriptor. </i><br />
- int <code>dmlite_fseek</code> (<code>dmlite_fd</code> *fd, off_t offset, int whence)<br />
- <i>Sets the file position. </i><br />
- off_t <code>dmlite_ftell</code> (<code>dmlite_fd</code> *fd)<br />
- <i>Returns the cursor position. </i><br />
- ssize_t <code>dmlite_fread</code> (<code>dmlite_fd</code> *fd, void *buffer, size_t count)<br />
- <i>Reads from a file. </i><br />
- ssize_t <code>dmlite_fwrite</code> (<code>dmlite_fd</code> *fd, const void *buffer, size_t count)<br />
- <i>Writes to a file. </i><br />
- ssize_t <code>dmlite_freadv</code> (<code>dmlite_fd</code> *fd, const struct iovec *vector, size_t count)<br />
- <i>Reads from a file into multiple buffers. </i><br />
- ssize_t <code>dmlite_fwritev</code> (<code>dmlite_fd</code> *fd, const struct iovec *vector, size_t count)<br />
- <i>Reads from a file into multiple buffers. </i><br />
- ssize_t <code>dmlite_fpread</code> (<code>dmlite_fd</code> *fd, void *buffer, size_t count, off_t offset)<br />
- <i>Reads up to count bytes starting at the given offset. Does not change internal offset. </i><br />
- ssize_t <code>dmlite_fpwrite</code> (<code>dmlite_fd</code> *fd, const void *buffer, size_t count, off_t offset)<br />
- <i>Writes count bytes starting at the given offset. Does not change internal offset. </i><br />
- int <code>dmlite_feof</code> (<code>dmlite_fd</code> *fd)<br />
- <i>Returns 1 if EOF. </i><br />
- int <code>dmlite_ferrno</code> (<code>dmlite_fd</code> *fd)<br />
- <i>Returns the last errror code. </i><br />
- const char * <code>dmlite_ferror</code> (<code>dmlite_fd</code> *fd)<br />
- <i>Returns the last error message. </i><br />
- int <code>dmlite_donewriting</code> (<code>dmlite_context</code> *context, const <code>dmlite_location</code> *loc)<br />
- <i>Finishes a PUT. </i><br />
- int <code>dmlite_fileno</code> (<code>dmlite_fd</code> *fd)<br />
+<p><code>dmlite_fd</code> * <code>dmlite_fopen</code> (<code>dmlite_context</code> *context, const char *path, int flags, const <code>dmlite_any_dict</code> *extra,&#8230;)<br/>
+ <i>Opens a file. </i><br/>
+ int <code>dmlite_fclose</code> (<code>dmlite_fd</code> *fd)<br/>
+ <i>Closes a file. </i><br/>
+ int <code>dmlite_fstat</code> (<code>dmlite_fd</code> *fd, struct stat *buf)<br/>
+ <i>Gets information about a file descriptor. </i><br/>
+ int <code>dmlite_fseek</code> (<code>dmlite_fd</code> *fd, off_t offset, int whence)<br/>
+ <i>Sets the file position. </i><br/>
+ off_t <code>dmlite_ftell</code> (<code>dmlite_fd</code> *fd)<br/>
+ <i>Returns the cursor position. </i><br/>
+ ssize_t <code>dmlite_fread</code> (<code>dmlite_fd</code> *fd, void *buffer, size_t count)<br/>
+ <i>Reads from a file. </i><br/>
+ ssize_t <code>dmlite_fwrite</code> (<code>dmlite_fd</code> *fd, const void *buffer, size_t count)<br/>
+ <i>Writes to a file. </i><br/>
+ ssize_t <code>dmlite_freadv</code> (<code>dmlite_fd</code> *fd, const struct iovec *vector, size_t count)<br/>
+ <i>Reads from a file into multiple buffers. </i><br/>
+ ssize_t <code>dmlite_fwritev</code> (<code>dmlite_fd</code> *fd, const struct iovec *vector, size_t count)<br/>
+ <i>Reads from a file into multiple buffers. </i><br/>
+ ssize_t <code>dmlite_fpread</code> (<code>dmlite_fd</code> *fd, void *buffer, size_t count, off_t offset)<br/>
+ <i>Reads up to count bytes starting at the given offset. Does not change internal offset. </i><br/>
+ ssize_t <code>dmlite_fpwrite</code> (<code>dmlite_fd</code> *fd, const void *buffer, size_t count, off_t offset)<br/>
+ <i>Writes count bytes starting at the given offset. Does not change internal offset. </i><br/>
+ int <code>dmlite_feof</code> (<code>dmlite_fd</code> *fd)<br/>
+ <i>Returns 1 if EOF. </i><br/>
+ int <code>dmlite_ferrno</code> (<code>dmlite_fd</code> *fd)<br/>
+ <i>Returns the last errror code. </i><br/>
+ const char * <code>dmlite_ferror</code> (<code>dmlite_fd</code> *fd)<br/>
+ <i>Returns the last error message. </i><br/>
+ int <code>dmlite_donewriting</code> (<code>dmlite_context</code> *context, const <code>dmlite_location</code> *loc)<br/>
+ <i>Finishes a PUT. </i><br/>
+ int <code>dmlite_fileno</code> (<code>dmlite_fd</code> *fd)<br/>
  <i>Returns the system file descriptor if available. </i></p>
 <h2>Detailed Description</h2>
 <p>C wrapper for I/O interfaces. </p>
@@ -68,7 +68,7 @@ description: "io.h –"
 <p>Finishes a PUT. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> The DM context.<br />
+<dd><i>context</i> The DM context.<br/>
  <i>loc</i> The location as returned by dmlite_put.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -124,10 +124,10 @@ description: "io.h –"
 <p>Opens a file. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> The DM context.<br />
- <i>path</i> The path to open.<br />
- <i>flags</i> See open()<br />
- <i>extra</i> The key-value pairs.<br />
+<dd><i>context</i> The DM context.<br/>
+ <i>path</i> The path to open.<br/>
+ <i>flags</i> See open()<br/>
+ <i>extra</i> The key-value pairs.<br/>
  <i>&#8230;</i> Should be mode_t when called with O_CREAT.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -136,9 +136,9 @@ description: "io.h –"
 <p>Reads up to count bytes starting at the given offset. Does not change internal offset. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>fd</i> File descriptor.<br />
- <i>buffer</i> Buffer where to put the data.<br />
- <i>count</i> Number of bytes to read.<br />
+<dd><i>fd</i> File descriptor.<br/>
+ <i>buffer</i> Buffer where to put the data.<br/>
+ <i>count</i> Number of bytes to read.<br/>
  <i>offset</i> Read offset.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -147,9 +147,9 @@ description: "io.h –"
 <p>Writes count bytes starting at the given offset. Does not change internal offset. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>fd</i> File descriptor.<br />
- <i>buffer</i> Data to write.<br />
- <i>count</i> Number of bytes to read.<br />
+<dd><i>fd</i> File descriptor.<br/>
+ <i>buffer</i> Data to write.<br/>
+ <i>count</i> Number of bytes to read.<br/>
  <i>offset</i> Write offset.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -158,8 +158,8 @@ description: "io.h –"
 <p>Reads from a file. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>fd</i> The file descriptor.<br />
- <i>buffer</i> Where to put the data.<br />
+<dd><i>fd</i> The file descriptor.<br/>
+ <i>buffer</i> Where to put the data.<br/>
  <i>count</i> Number of bytes to read.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -168,8 +168,8 @@ description: "io.h –"
 <p>Reads from a file into multiple buffers. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>fd</i> The file descriptor.<br />
- <i>vector</i> Array of buffers.<br />
+<dd><i>fd</i> The file descriptor.<br/>
+ <i>vector</i> Array of buffers.<br/>
  <i>count</i> Number of elements in the array of buffers.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -178,8 +178,8 @@ description: "io.h –"
 <p>Sets the file position. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>fd</i> The file descriptor.<br />
- <i>offset</i> The offset.<br />
+<dd><i>fd</i> The file descriptor.<br/>
+ <i>offset</i> The offset.<br/>
  <i>whence</i> See fseek()</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -188,7 +188,7 @@ description: "io.h –"
 <p>Gets information about a file descriptor. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>fd</i> The file descriptor.<br />
+<dd><i>fd</i> The file descriptor.<br/>
  <i>buf</i> Where to put the information.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -208,8 +208,8 @@ description: "io.h –"
 <p>Writes to a file. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>fd</i> The file descriptor.<br />
- <i>buffer</i> A pointer to the data.<br />
+<dd><i>fd</i> The file descriptor.<br/>
+ <i>buffer</i> A pointer to the data.<br/>
  <i>count</i> Number of bytes to write.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -218,8 +218,8 @@ description: "io.h –"
 <p>Reads from a file into multiple buffers. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>fd</i> The file descriptor.<br />
- <i>vector</i> Array of buffers.<br />
+<dd><i>fd</i> The file descriptor.<br/>
+ <i>vector</i> Array of buffers.<br/>
  <i>count</i> Number of elements in the array of buffers.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

@@ -12,12 +12,12 @@ description: "Atlas::Funky::EncMap – Encoder in Map state."
 <p>#include &lt;<a href="file:/usr/include/FEncoder.h">FEncoder.h</a>&gt; </p>
 <h3>Public Member Functions</h3>
 <p><code>EncMap</code> (B &amp;<code>b</code>) </p>
-<p> <code>EncMapValue</code>&lt; B, <code>EncMap</code>&lt; B, T &gt; &gt; <code>operator&lt;&lt;</code> (const std::string &amp;name)<br />
- <i>Start a value with its name. </i><br />
- T <code>operator&lt;&lt;</code> (<code>EndMap</code>)<br />
+<p> <code>EncMapValue</code>&lt; B, <code>EncMap</code>&lt; B, T &gt; &gt; <code>operator&lt;&lt;</code> (const std::string &amp;name)<br/>
+ <i>Start a value with its name. </i><br/>
+ T <code>operator&lt;&lt;</code> (<code>EndMap</code>)<br/>
  <i>End this map. </i></p>
 <h3>Protected Attributes</h3>
-<p>B &amp; <code>b</code><br />
+<p>B &amp; <code>b</code><br/>
  <i>The bridge or encoder that is written to. </i></p>
 <h2>Detailed Description</h2>
 <h3>template&lt;class B, class T&gt; class Atlas::Funky::EncMap&lt; B, T &gt;</h3>

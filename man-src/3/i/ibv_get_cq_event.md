@@ -27,64 +27,64 @@ void ibv_ack_cq_events(struct ibv_cq *cq, unsigned int nevents);
 <p> Calling <code>ibv_ack_cq_events()</code> may be relatively expensive in the datapath, since it must take a mutex. Therefore it may be better to amortize this cost by keeping a count of the number of events needing acknowledgement and acking several completion events in one call to <code>ibv_ack_cq_events()</code>.</p>
 <h2>EXAMPLES</h2>
 <p> The following code example demonstrates one possible way to work with completion events. It performs the following steps: </p>
-<p> Stage I: Preparation<br />
- 1. Creates a CQ<br />
+<p> Stage I: Preparation<br/>
+ 1. Creates a CQ<br/>
  2. Requests for notification upon a new (first) completion event </p>
-<p> Stage II: Completion Handling Routine<br />
- 3. Wait for the completion event and ack it<br />
- 4. Request for notification upon the next completion event<br />
+<p> Stage II: Completion Handling Routine<br/>
+ 3. Wait for the completion event and ack it<br/>
+ 4. Request for notification upon the next completion event<br/>
  5. Empty the CQ </p>
 <p> Note that an extra event may be triggered without having a corresponding completion entry in the CQ. This occurs if a completion entry is added to the CQ between Step 4 and Step 5, and the CQ is then emptied (polled) in Step 5. </p>
-<p>cq = ibv_create_cq(ctx, 1, ev_ctx, channel, 0);<br />
-if (!cq) {<br />
+<p>cq = ibv_create_cq(ctx, 1, ev_ctx, channel, 0);<br/>
+if (!cq) {<br/>
     fprintf(stderr, &#8220;Failed to create CQ
-&#8221;);<br />
-    return 1;<br />
-}<br />
-/* Request notification before any completion can be created */<br />
-if (ibv_req_notify_cq(cq, 0)) {<br />
+&#8221;);<br/>
+    return 1;<br/>
+}<br/>
+/* Request notification before any completion can be created */<br/>
+if (ibv_req_notify_cq(cq, 0)) {<br/>
     fprintf(stderr, &#8220;Couldn&#8217;t request CQ notification
-&#8221;);<br />
-    return 1;<br />
-}<br />
-.<br />
-    .<br />
-    .<br />
-    /* Wait for the completion event */<br />
-    if (ibv_get_cq_event(channel, &amp;ev_cq, &amp;ev_ctx))<br />
-{<br />
+&#8221;);<br/>
+    return 1;<br/>
+}<br/>
+.<br/>
+    .<br/>
+    .<br/>
+    /* Wait for the completion event */<br/>
+    if (ibv_get_cq_event(channel, &amp;ev_cq, &amp;ev_ctx))<br/>
+{<br/>
     fprintf(stderr, &#8220;Failed to get cq_event
-&#8221;);<br />
-    return 1;<br />
-}<br />
-/* Ack the event */<br />
-ibv_ack_cq_events(ev_cq, 1);<br />
-/* Request notification upon the next completion event */<br />
-if (ibv_req_notify_cq(ev_cq, 0)) {<br />
+&#8221;);<br/>
+    return 1;<br/>
+}<br/>
+/* Ack the event */<br/>
+ibv_ack_cq_events(ev_cq, 1);<br/>
+/* Request notification upon the next completion event */<br/>
+if (ibv_req_notify_cq(ev_cq, 0)) {<br/>
     fprintf(stderr, &#8220;Couldn&#8217;t request CQ notification
-&#8221;);<br />
-    return 1;<br />
-}<br />
-/* Empty the CQ: poll all of the completions from the CQ (if any exist) */<br />
-do {<br />
-    ne = ibv_poll_cq(cq, 1, &amp;wc);<br />
-    if (ne &lt; 0) {<br />
+&#8221;);<br/>
+    return 1;<br/>
+}<br/>
+/* Empty the CQ: poll all of the completions from the CQ (if any exist) */<br/>
+do {<br/>
+    ne = ibv_poll_cq(cq, 1, &amp;wc);<br/>
+    if (ne &lt; 0) {<br/>
         fprintf(stderr, &#8220;Failed to poll completions from the CQ
-&#8221;);<br />
-        return 1;<br />
-    }<br />
-    /* there may be an extra event with no completion in the CQ */<br />
-    if (ne == 0)<br />
-        continue;<br />
-    if (wc.status != IBV_WC_SUCCESS) {<br />
+&#8221;);<br/>
+        return 1;<br/>
+    }<br/>
+    /* there may be an extra event with no completion in the CQ */<br/>
+    if (ne == 0)<br/>
+        continue;<br/>
+    if (wc.status != IBV_WC_SUCCESS) {<br/>
         fprintf(stderr, &#8220;Completion with status 0x%x was found
-&#8221;, wc.status);<br />
-        return 1;<br />
-    }<br />
+&#8221;, wc.status);<br/>
+        return 1;<br/>
+    }<br/>
 } while (ne);</p>
 <p> The following code example demonstrates one possible way to work with completion events in non-blocking mode. It performs the following steps: </p>
-<p> 1. Set the completion event channel to be non-blocked<br />
- 2. Poll the channel until there it has a completion event<br />
+<p> 1. Set the completion event channel to be non-blocked<br/>
+ 2. Poll the channel until there it has a completion event<br/>
  3. Get the completion event and ack it </p>
 <pre><code>
 /* change the blocking mode of the completion channel */

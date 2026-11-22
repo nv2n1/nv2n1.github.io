@@ -33,7 +33,7 @@ description: "expire – Usenet article and history expiration program"
 <dt><code>-p</code></dt>
 <dd><code>expire</code> makes its decisions on the time the article arrived, as found in the <i>history</i> file. This means articles are often kept a little longer than with other expiration programs that base their decisions on the article&#8217;s posting date. To use the article&#8217;s posting date, use the <code>-p</code> flag.</dd>
 <dt><code>-r</code> <i>reason</i></dt>
-<dd><code>expire</code> normally sends a <tt>&quot;pause&quot;</tt> command to the local <code>innd</code> daemon when it needs exclusive access to the <i>history</i> file, using the string <tt>&quot;Expiring&quot;</tt> as the reason. To give a different reason, use the <code>-r</code> flag. The process <font SIZE="-1">ID</font> will be appended to the reason. When <code>expire</code> is finished and the new <i>history</i> file is ready, it sends a <tt>&quot;go&quot;</tt> command. See also the <code>-n</code> flag.</dd>
+<dd><code>expire</code> normally sends a <tt>&quot;pause&quot;</tt> command to the local <code>innd</code> daemon when it needs exclusive access to the <i>history</i> file, using the string <tt>&quot;Expiring&quot;</tt> as the reason. To give a different reason, use the <code>-r</code> flag. The process ID will be appended to the reason. When <code>expire</code> is finished and the new <i>history</i> file is ready, it sends a <tt>&quot;go&quot;</tt> command. See also the <code>-n</code> flag.</dd>
 <dt><code>-s</code> <i>size</i></dt>
 <dd>Optimize the new history database for approximately <i>size</i> pairs (lines in <i>history</i>). Accurately specifying the size will create a more efficient database. (The size should be the estimated eventual size of the file, typically the size of the old file.)</dd>
 <dt><code>-t</code></dt>
@@ -47,7 +47,7 @@ description: "expire – Usenet article and history expiration program"
 <dt><code>-z</code> <i>file</i></dt>
 <dd>If the <code>-z</code> flag is used, then articles are not removed, but their names are appended to the specified <i>file</i>. See the description of <code>delayrm</code> in <i><a href="/docs/linux/man/8-news-daily/">news.daily</a></i>(8). If a filename is specified, it is taken as the control file and parsed according to the rules in <i>expire.ctl</i>. A single dash (<tt>&quot;-&quot;</tt>) may be used to read the file from standard input. If no file is specified, the file <i>pathetc</i>/expire.ctl is read.</dd></dl>
 <h2>History</h2>
-<p>Written by Rich <tt>$alz</tt> &lt;rsalz [at] uunet.uu.net&gt; for InterNetNews. Converted to <font SIZE="-1">POD</font> by Julien Elie. </p>
+<p>Written by Rich <tt>$alz</tt> &lt;rsalz [at] uunet.uu.net&gt; for InterNetNews. Converted to POD by Julien Elie. </p>
 <p> <tt>$Id:</tt> expire.pod 8577 2009-08-18 14:02:02Z iulius $</p>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/8-ctlinnd/">ctlinnd</a></i>(8), <i><a href="/docs/linux/man/3-dbz/">dbz</a></i>(3), <i><a href="/docs/linux/man/5-expire-ctl/">expire.ctl</a></i>(5), <i><a href="/docs/linux/man/5-history/">history</a></i>(5), <i><a href="/docs/linux/man/5-inn-conf/">inn.conf</a></i>(5), <i><a href="/docs/linux/man/8-innd/">innd</a></i>(8), <i>inndcomm</i>(3), <i><a href="/docs/linux/man/8-news-daily/">news.daily</a></i>(8). </p>

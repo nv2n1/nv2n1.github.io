@@ -10,11 +10,11 @@ description: "ql/termstructures/credit/interpolatedhazardratecurve.hpp – inter
 
 <p> ql/termstructures/credit/interpolatedhazardratecurve.hpp &#8211; interpolated hazard-rate term structure </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/termstructures/credit/hazardratestructure.hpp&gt;<br />
- #include &lt;ql/math/interpolation.hpp&gt;<br />
+<p> #include &lt;ql/termstructures/credit/hazardratestructure.hpp&gt;<br/>
+ #include &lt;ql/math/interpolation.hpp&gt;<br/>
  #include &lt;boost/noncopyable.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>InterpolatedHazardRateCurve&lt; Interpolator &gt;</code><br />
+<p> class <code>InterpolatedHazardRateCurve&lt; Interpolator &gt;</code><br/>
  <i>interpolated hazard-rate curve </i></p>
 <h2>Detailed Description</h2>
 <p> interpolated hazard-rate term structure </p>

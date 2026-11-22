@@ -17,9 +17,9 @@ description: "docker-push – Push an image or a repository to a registry"
 <p> Killing the <code>docker push</code> process, for example by pressing <code>CTRL-c</code> while it is running in a terminal, terminates the push operation. </p>
 <p> Registry credentials are managed by <code><a href="/docs/linux/man/1-docker-login/">docker-login</a>(1)</code>. </p>
 <h2>OPTIONS</h2>
-<p> <code>&#8211;disable-content-trust</code><br />
+<p> <code>&#8211;disable-content-trust</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Skip image verification&nbsp;<wbr>(default true) </p>
-<p> <code>&#8211;help</code><br />
+<p> <code>&#8211;help</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Print usage statement </p>
 <h2>EXAMPLES</h2>
 <h2>Pushing a new image to a registry</h2>

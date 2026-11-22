@@ -22,5 +22,5 @@ description: "XtAddExposureToRegion – merge exposure events into a region"
 <p>The <code>XtAddExposureToRegion</code> function computes the union of the rectangle defined by the exposure event and the specified region. Then, it stores the results back in region. If the event argument is not an <code>Expose</code> or <code>GraphicsExpose</code> event, <code>XtAddExposureToRegion</code> returns without an error and without modifying region. </p>
 <p> This function is used by the exposure compression mechanism (see Section 7.9.3).</p>
 <h2>See Also</h2>
-<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

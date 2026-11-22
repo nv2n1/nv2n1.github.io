@@ -10,9 +10,9 @@ description: "CMPIString – CMPIString class implementation"
 <p>CMPIString &#8211; CMPIString class implementation</p>
 <h2>Synopsis</h2>
 <h3>Public Attributes</h3>
-<p>int <code>void * hdl;</code><br />
- <i>Opaque pointer to class instance data. </i><br />
- <code>CMPIStringFT</code> * <code>ft;</code><br />
+<p>int <code>void * hdl;</code><br/>
+ <i>Opaque pointer to class instance data. </i><br/>
+ <code>CMPIStringFT</code> * <code>ft;</code><br/>
  <i>Pointer to the Args Function Table. </i></p>
 <h2>Methods</h2>
 <p><code>CMPIStatus</code> <code>release</code> (<code>CMPIString</code> *string) </p>

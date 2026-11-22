@@ -366,60 +366,60 @@ description: "dmstats — device-mapper statistics management"
 <dt><code>hist_bins</code></dt>
 <dd>The number of latency histogram bins configured for the area.</dd></dl>
 <h2>Examples</h2>
-<p>Create a whole-device region with one area on vg00/lvol1<br />
- # <code>dmstats create vg00/lvol1</code><br />
+<p>Create a whole-device region with one area on vg00/lvol1<br/>
+ # <code>dmstats create vg00/lvol1</code><br/>
  vg00/lvol1: Created new region with 1 area(s) as region ID 0 </p>
-<p> Create a 32M region 1G into device d0<br />
- # <code>dmstats create &#8211;start 1G &#8211;length 32M d0</code><br />
+<p> Create a 32M region 1G into device d0<br/>
+ # <code>dmstats create &#8211;start 1G &#8211;length 32M d0</code><br/>
  d0: Created new region with 1 area(s) as region ID 0 </p>
 <p> Create a whole-device region with 8 areas on every device </p>
-<p> # <code>dmstats create &#8211;areas 8</code><br />
- vg00-lvol1: Created new region with 8 area(s) as region ID 0<br />
- vg00-lvol2: Created new region with 8 area(s) as region ID 0<br />
- vg00-lvol3: Created new region with 8 area(s) as region ID 0<br />
- vg01-lvol0: Created new region with 8 area(s) as region ID 2<br />
- vg01-lvol1: Created new region with 8 area(s) as region ID 0<br />
+<p> # <code>dmstats create &#8211;areas 8</code><br/>
+ vg00-lvol1: Created new region with 8 area(s) as region ID 0<br/>
+ vg00-lvol2: Created new region with 8 area(s) as region ID 0<br/>
+ vg00-lvol3: Created new region with 8 area(s) as region ID 0<br/>
+ vg01-lvol0: Created new region with 8 area(s) as region ID 2<br/>
+ vg01-lvol1: Created new region with 8 area(s) as region ID 0<br/>
  vg00-lvol2: Created new region with 8 area(s) as region ID 1 </p>
 <p> Delete all regions on all devices </p>
 <p> # <code>dmstats delete &#8211;alldevices &#8211;allregions</code> </p>
 <p> Create a whole-device region with areas 10GiB in size on vg00/lvol1 using dmsetup </p>
-<p> # <code>dmsetup stats create &#8211;areasize 10G vg00/lvol1</code><br />
+<p> # <code>dmsetup stats create &#8211;areasize 10G vg00/lvol1</code><br/>
  vg00-lvol1: Created new region with 5 area(s) as region ID 1 </p>
-<p> Create a 1GiB region with 16 areas at the start of vg00/lvol1<br />
- # <code>dmstats create &#8211;start 0 &#8211;len 1G &#8211;areas=16 vg00/lvol1</code><br />
+<p> Create a 1GiB region with 16 areas at the start of vg00/lvol1<br/>
+ # <code>dmstats create &#8211;start 0 &#8211;len 1G &#8211;areas=16 vg00/lvol1</code><br/>
  vg00-lvol1: Created new region with 16 area(s) as region ID 0 </p>
-<p> List the statistics regions registered on vg00/lvol1<br />
- # <code>dmstats list vg00/lvol1</code><br />
- Name RgID RStart RSize #Areas ASize ProgID<br />
- vg00-lvol1 0 0 61.00g 1 61.00g dmstats<br />
- vg00-lvol1 1 61.00g 19.20g 1 19.20g dmstats<br />
+<p> List the statistics regions registered on vg00/lvol1<br/>
+ # <code>dmstats list vg00/lvol1</code><br/>
+ Name RgID RStart RSize #Areas ASize ProgID<br/>
+ vg00-lvol1 0 0 61.00g 1 61.00g dmstats<br/>
+ vg00-lvol1 1 61.00g 19.20g 1 19.20g dmstats<br/>
  vg00-lvol1 2 80.20g 2.14g 1 2.14g dmstats </p>
 <p> Display five statistics reports for vg00/lvol1 at an interval of one second </p>
-<p> # <code>dmstats report &#8211;interval 1 &#8211;count 5 vg00/lvol1</code><br />
- # <code>dmstats report</code><br />
- Name RgID ArID AStart ASize RRqM/s WRqM/s R/s W/s RSz/s WSz/s AvRqSz QSize Util% AWait RdAWa WrAWa<br />
- vg_hex-lv_home 0 0 0 61.00g 0.00 0.00 0.00 218.00 0 1.04m 4.50k 2.97 81.70 13.62 0.00 13.62<br />
- vg_hex-lv_home 1 0 61.00g 19.20g 0.00 0.00 0.00 5.00 0 548.00k 109.50k 0.14 11.00 27.40 0.00 27.40<br />
+<p> # <code>dmstats report &#8211;interval 1 &#8211;count 5 vg00/lvol1</code><br/>
+ # <code>dmstats report</code><br/>
+ Name RgID ArID AStart ASize RRqM/s WRqM/s R/s W/s RSz/s WSz/s AvRqSz QSize Util% AWait RdAWa WrAWa<br/>
+ vg_hex-lv_home 0 0 0 61.00g 0.00 0.00 0.00 218.00 0 1.04m 4.50k 2.97 81.70 13.62 0.00 13.62<br/>
+ vg_hex-lv_home 1 0 61.00g 19.20g 0.00 0.00 0.00 5.00 0 548.00k 109.50k 0.14 11.00 27.40 0.00 27.40<br/>
  vg_hex-lv_home 2 0 80.20g 2.14g 0.00 0.00 0.00 14.00 0 1.15m 84.00k 0.39 18.70 27.71 0.00 27.71 </p>
 <p> Create one region for reach target contained in device vg00/lvol1 </p>
-<p> # <code>dmstats create &#8211;segments vg00/lvol1</code><br />
- vg00-lvol1: Created new region with 1 area(s) as region ID 0<br />
- vg00-lvol1: Created new region with 1 area(s) as region ID 1<br />
+<p> # <code>dmstats create &#8211;segments vg00/lvol1</code><br/>
+ vg00-lvol1: Created new region with 1 area(s) as region ID 0<br/>
+ vg00-lvol1: Created new region with 1 area(s) as region ID 1<br/>
  vg00-lvol1: Created new region with 1 area(s) as region ID 2 </p>
-<p> Create regions mapping each file in the directory images/ and place them into separate groups, each named after the corresponding file<br />
- # <code>dmstats create &#8211;filemap images/*</code><br />
- images/vm1.qcow2: Created new group with 87 region(s) as group ID 0.<br />
- images/vm1-1.qcow2: Created new group with 8 region(s) as group ID 87.<br />
- images/vm2.qcow2: Created new group with 11 region(s) as group ID 95.<br />
- images/vm2-1.qcow2: Created new group with 1454 region(s) as group ID 106.<br />
+<p> Create regions mapping each file in the directory images/ and place them into separate groups, each named after the corresponding file<br/>
+ # <code>dmstats create &#8211;filemap images/*</code><br/>
+ images/vm1.qcow2: Created new group with 87 region(s) as group ID 0.<br/>
+ images/vm1-1.qcow2: Created new group with 8 region(s) as group ID 87.<br/>
+ images/vm2.qcow2: Created new group with 11 region(s) as group ID 95.<br/>
+ images/vm2-1.qcow2: Created new group with 1454 region(s) as group ID 106.<br/>
  images/vm3.img: Created new group with 2 region(s) as group ID 1560. </p>
-<p> Print raw counters for region 4 on device d0<br />
- # <code>dmstats print &#8211;regionid 4 d0</code><br />
+<p> Print raw counters for region 4 on device d0<br/>
+ # <code>dmstats print &#8211;regionid 4 d0</code><br/>
  2097152+65536 0 0 0 0 29 0 264 701 0 41 701 0 41</p>
 <h2>Authors</h2>
 <p>Bryn M. Reeves &lt;bmr [at] redhat.com&gt;</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-dmsetup/">dmsetup</a></code>(8) LVM2 resource page: <a rel="nofollow" href="https://www.sourceware.org/lvm2/">https://www.sourceware.org/lvm2/</a><br />
- Device-mapper resource page: <a rel="nofollow" href="http://sources.redhat.com/dm/">http://sources.redhat.com/dm/</a><br />
- Device-mapper statistics kernel documentation<br />
+<p><code><a href="/docs/linux/man/8-dmsetup/">dmsetup</a></code>(8) LVM2 resource page: <a rel="nofollow" href="https://www.sourceware.org/lvm2/">https://www.sourceware.org/lvm2/</a><br/>
+ Device-mapper resource page: <a rel="nofollow" href="http://sources.redhat.com/dm/">http://sources.redhat.com/dm/</a><br/>
+ Device-mapper statistics kernel documentation<br/>
  <i>Documentation/device-mapper/statistics.txt</i> </p>

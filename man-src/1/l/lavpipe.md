@@ -47,12 +47,12 @@ description: "lavpipe – creates raw YUV streams from pipe list scripts"
 <dt><i>num</i></dt>
 <dd> This is the number of input commands. lavpipe will read the next <i>num</i> lines and interpret them as input stream commands. </dd>
 <dt><i>command</i>&nbsp;<wbr>(<i>num</i>&nbsp;<wbr>times)</dt>
-<dd> This is a valid command line with two variables $o and $n that will be replaced by lavpipe with the offset and number of frames that the program has to output. Example:<br />
+<dd> This is a valid command line with two variables $o and $n that will be replaced by lavpipe with the offset and number of frames that the program has to output. Example:<br/>
  <code>lav2yuv -o $o -f $n input.avi</code> </dd>
 </dl>
-<p> Thus, an example <code>source list</code> could look like this:<br />
- <code>2</code><br />
- <code>lav2yuv -o $o -f $n scene1.avi</code><br />
+<p> Thus, an example <code>source list</code> could look like this:<br/>
+ <code>2</code><br/>
+ <code>lav2yuv -o $o -f $n scene1.avi</code><br/>
  <code>lav2yuv -o $o -f $n scene2.avi</code> </p>
 <p> after this you can append as many <code>sequence descriptions</code> as needed. Each of them is built up as follows: </p>
 <dl>
@@ -61,44 +61,44 @@ description: "lavpipe – creates raw YUV streams from pipe list scripts"
 <dt><i>num</i></dt>
 <dd> The number of inputs that will be used in this sequence. This number must of course be less than or equal to the number of inputs that are defined above. </dd>
 <dt><i>idx</i> [<i>ofs</i>] (<i>num</i> times)</dt>
-<dd> These are the indices to the sources that are defined at the beginning of the file (first source is 0) with an optional frame offset (i.e. sequence starts with frame number <i>ofs</i> of this input.) &#8211; this value defaults to 0. Example:<br />
+<dd> These are the indices to the sources that are defined at the beginning of the file (first source is 0) with an optional frame offset (i.e. sequence starts with frame number <i>ofs</i> of this input.) &#8211; this value defaults to 0. Example:<br/>
  <code>0 150</code> </dd>
 <dt><i>command</i></dt>
-<dd> This is a valid command line to a YUV filter tool that reads <i>num</i> input streams and writes one output stream, combining its inputs. Optionally, the filter tool can be given the two $o and $n variables that will be replaced by lavpipe as in the source commands (see above). For further info read <i>README.lavpipe</i> or the documentation for the filter programs (if available). An example filter could look like this:<br />
- <code>transist.flt -o 0 -O 255 -s $o -n $n -d 50</code><br />
- And if the sequence only has one input that simply should be copied to the output, you can use a dash instead of a command line:<br />
+<dd> This is a valid command line to a YUV filter tool that reads <i>num</i> input streams and writes one output stream, combining its inputs. Optionally, the filter tool can be given the two $o and $n variables that will be replaced by lavpipe as in the source commands (see above). For further info read <i>README.lavpipe</i> or the documentation for the filter programs (if available). An example filter could look like this:<br/>
+ <code>transist.flt -o 0 -O 255 -s $o -n $n -d 50</code><br/>
+ And if the sequence only has one input that simply should be copied to the output, you can use a dash instead of a command line:<br/>
  <code>&#8211;</code> </dd>
 </dl>
 <p> And here&#8217;s an example for a complete pipe list that implements a transistion from scene1.avi to scene2.avi </p>
 <p> <code>REMOVE THE COMMENTS AFTER The #</code> </p>
-<p> <code>LAV Pipe List</code><br />
- <code>PAL</code><br />
- <code>2</code><br />
- <code>lav2yuv -o $o -f $n scene1.avi</code><br />
- <code>lav2yuv -o $o -f $n scene2.avi</code><br />
- <code>50</code> # first sequence: 50 frames<br />
- <code>1</code> # contains one input:<br />
- <code>0 0</code> # scene1.avi, offset 0<br />
- <code>&#8211;</code> # simple output<br />
- <code>25</code> # second sequence: 25 frames<br />
- <code>2</code> # contains two inputs:<br />
- <code>0 50</code> # scene1.avi, offset 50<br />
- <code>1</code> # scene2.avi, offset 0<br />
- <code>transist.flt -o 0 -O 255 -s $o -n $n -d 50</code> # transistion<br />
- <code>50</code> # third sequence: 50 frames<br />
- <code>1</code> # contains one input:<br />
- <code>1 25</code> # scene2.avi, offset 25<br />
+<p> <code>LAV Pipe List</code><br/>
+ <code>PAL</code><br/>
+ <code>2</code><br/>
+ <code>lav2yuv -o $o -f $n scene1.avi</code><br/>
+ <code>lav2yuv -o $o -f $n scene2.avi</code><br/>
+ <code>50</code> # first sequence: 50 frames<br/>
+ <code>1</code> # contains one input:<br/>
+ <code>0 0</code> # scene1.avi, offset 0<br/>
+ <code>&#8211;</code> # simple output<br/>
+ <code>25</code> # second sequence: 25 frames<br/>
+ <code>2</code> # contains two inputs:<br/>
+ <code>0 50</code> # scene1.avi, offset 50<br/>
+ <code>1</code> # scene2.avi, offset 0<br/>
+ <code>transist.flt -o 0 -O 255 -s $o -n $n -d 50</code> # transistion<br/>
+ <code>50</code> # third sequence: 50 frames<br/>
+ <code>1</code> # contains one input:<br/>
+ <code>1 25</code> # scene2.avi, offset 25<br/>
  <code>&#8211;</code> # simple output </p>
 <h2>BUGS</h2>
 <p> I&#8217;m sure there are enough of them. lavpipe often accepts malformed pipe lists and then writes out a video that was all but intended &#8211; without warning. </p>
 <p> <code>The mention of $n above is wrong. At one time there were two parameters but now a program is allowed to produce as many frames as it wants. THe author of the program hard coded, for reasons unknown, $n to be 0.</code></p>
 <h2>NOTES</h2>
-<p> There are also some serious limitations in the system, such as frame-by-frame processing. But as the goal when writing lavpipe was the simplicity of the pipeline, other tools will have to be written to do more interesting tasks.<br />
+<p> There are also some serious limitations in the system, such as frame-by-frame processing. But as the goal when writing lavpipe was the simplicity of the pipeline, other tools will have to be written to do more interesting tasks.<br/>
  But I want to note that it is very well possible to write a pipe list that combines several files, and then use that pipe list as an input for another pipe list by simply using the lavpipe command in the source list (see above) &#8211; this can be already used to do some nice things, if you have some nice filters. </p>
 <p> <code>Comments are NOT allowed in pipelist files. The comments (text after #) above are for illustration only.</code></p>
 <h2>AUTHOR</h2>
-<p> This man page was written by Philipp Zabel.<br />
- If you have questions, remarks, problems or you just want to contact the developers, the main mailing list for the MJPEG-tools is:<br />
+<p> This man page was written by Philipp Zabel.<br/>
+ If you have questions, remarks, problems or you just want to contact the developers, the main mailing list for the MJPEG-tools is:<br/>
 &nbsp;<wbr>&nbsp;<wbr><i>mjpeg-users [at] lists.sourceforge.net</i> </p>
 <dl>
 <dt>For more info, see our website at</dt>

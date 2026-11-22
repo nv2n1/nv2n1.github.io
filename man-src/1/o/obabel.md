@@ -10,9 +10,9 @@ description: "babel , obabel – a converter for chemistry and molecular modelin
 
 <p> <code>babel , obabel</code> &#8211; a converter for chemistry and molecular modeling data files</p>
 <h2>SYNOPSIS</h2>
-<p> [-<code>H </code><i>help-options</i> ]<br />
+<p> [-<code>H </code><i>help-options</i> ]<br/>
  [<i>OPTIONS</i> ] [-<code>i </code><i>input-type</i> ] <i>infile</i> [-<code>o </code><i>output-type</i> ] <i>outfile</i> </p>
-<p><code>obabel</code> [-<code>H </code><i>help-options</i> ]<br />
+<p><code>obabel</code> [-<code>H </code><i>help-options</i> ]<br/>
 <code>obabel</code> [<i>OPTIONS</i> ] [-<code>i </code><i>input-type | &#8211;</i><code>: Qo </code><i>SMILES-string Qc </i><i>infile</i> ] [-<code>o </code><i>output-type</i> ] &#8211;<code>O </code><i>outfile</i></p>
 <h2>DESCRIPTION</h2>
 <p> is a cross-platform program designed to interconvert between many file formats used in molecular modeling and computational chemistry and related areas. </p>
@@ -41,10 +41,10 @@ description: "babel , obabel – a converter for chemistry and molecular modelin
 <dd> Delete Hydrogens</dd>
 <dt><code>&#8212;errorlevel </code><i>2</i></dt>
 <dd> Filter the level of errors and warnings displayed: </dd>
-<p>&nbsp;<wbr>1&nbsp;<wbr>=&nbsp;<wbr>critical errors only<br />
-&nbsp;<wbr>2&nbsp;<wbr>=&nbsp;<wbr>include warnings too&nbsp;<wbr>(default)<br />
-&nbsp;<wbr>3&nbsp;<wbr>=&nbsp;<wbr>include informational messages too<br />
-&nbsp;<wbr>4&nbsp;<wbr>=&nbsp;<wbr>include&nbsp;<wbr>&quot;audit log&quot;&nbsp;<wbr>messages of changes to data<br />
+<p>&nbsp;<wbr>1&nbsp;<wbr>=&nbsp;<wbr>critical errors only<br/>
+&nbsp;<wbr>2&nbsp;<wbr>=&nbsp;<wbr>include warnings too&nbsp;<wbr>(default)<br/>
+&nbsp;<wbr>3&nbsp;<wbr>=&nbsp;<wbr>include informational messages too<br/>
+&nbsp;<wbr>4&nbsp;<wbr>=&nbsp;<wbr>include&nbsp;<wbr>&quot;audit log&quot;&nbsp;<wbr>messages of changes to data<br/>
 &nbsp;<wbr>5&nbsp;<wbr>=&nbsp;<wbr>include debugging messages too</p>
 <dt><code>-f </code><i>file &#8230;</i></dt>
 <dd> For multiple entry input, start import with molecule # as the first entry</dd>
@@ -322,7 +322,7 @@ description: "babel , obabel – a converter for chemistry and molecular modelin
 <h2>AUTHORS</h2>
 <p> An -nosplit A cast of many, including the currrent maintainers An Geoff Hutchison , An Chris Morley , An Michael Banck , and innumerable others who have contributed fixes and additions. For more contributors to Open Babel, see &lt;<code><a rel="nofollow" href="http://openbabel.org/wiki/THANKS">http://openbabel.org/wiki/THANKS</a></code>&gt;</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright (C) 1998-2001 by OpenEye Scientific Software, Inc.<br />
+<p> Copyright (C) 1998-2001 by OpenEye Scientific Software, Inc.<br/>
  Some portions Copyright (C) 2001-2007 by Geoffrey R. Hutchison </p>
 <p>&nbsp;<wbr>This program is free software;&nbsp;<wbr>you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation version 2 of the License. </p>
 <p>&nbsp;<wbr>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. </p>

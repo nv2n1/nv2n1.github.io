@@ -11,7 +11,7 @@ description: "dorgtr.f –"
 <p> dorgtr.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dorgtr</code> (UPLO, N, A, LDA, TAU, WORK, LWORK, INFO)<br />
+<p> subroutine <code>dorgtr</code> (UPLO, N, A, LDA, TAU, WORK, LWORK, INFO)<br/>
  <i></i><code>DORGTR</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dorgtr (characterUPLO, integerN, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( * )TAU, double precision, dimension( * )WORK, integerLWORK, integerINFO)</h3>

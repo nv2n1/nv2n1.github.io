@@ -14,22 +14,22 @@ description: "docker-tag – Tag an image into a repository"
 <h2>DESCRIPTION</h2>
 <p> Assigns a new alias to an image in a registry. An alias refers to the entire image name including the optional TAG after the &#8216;:&#8217;. </p>
 <h2>OPTIONS</h2>
-<p> <code>&#8211;help</code><br />
+<p> <code>&#8211;help</code><br/>
 Print usage statement. </p>
-<p> <code>NAME</code><br />
-The image name which is made up of slash-separated name components,<br />
-optionally prefixed by a registry hostname. The hostname must comply with<br />
-standard DNS rules, but may not contain underscores. If a hostname is<br />
-present, it may optionally be followed by a port number in the format<br />
-:8080. If not present, the command uses Docker&#8217;s public registry located at<br />
-registry-1.docker.io by default. Name components may contain lowercase<br />
-characters, digits and separators. A separator is defined as a period, one or<br />
-two underscores, or one or more dashes. A name component may not start or end<br />
+<p> <code>NAME</code><br/>
+The image name which is made up of slash-separated name components,<br/>
+optionally prefixed by a registry hostname. The hostname must comply with<br/>
+standard DNS rules, but may not contain underscores. If a hostname is<br/>
+present, it may optionally be followed by a port number in the format<br/>
+:8080. If not present, the command uses Docker&#8217;s public registry located at<br/>
+registry-1.docker.io by default. Name components may contain lowercase<br/>
+characters, digits and separators. A separator is defined as a period, one or<br/>
+two underscores, or one or more dashes. A name component may not start or end<br/>
 with a separator. </p>
-<p> <code>TAG</code><br />
-The tag assigned to the image to version and distinguish images with the same<br />
-name. The tag name may contain lowercase and uppercase characters, digits,<br />
-underscores, periods and dashes. A tag name may not start with a period or a<br />
+<p> <code>TAG</code><br/>
+The tag assigned to the image to version and distinguish images with the same<br/>
+name. The tag name may contain lowercase and uppercase characters, digits,<br/>
+underscores, periods and dashes. A tag name may not start with a period or a<br/>
 dash and may contain a maximum of 128 characters. </p>
 <h2>EXAMPLES</h2>
 <h2>Tagging an image referenced by ID</h2>

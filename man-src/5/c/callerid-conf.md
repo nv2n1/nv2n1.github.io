@@ -98,8 +98,8 @@ description: "/etc/isdn/callerid.conf – config file for isdnlog numbers and sc
 <dt>\$3</dt>
 <dd>Called number (complete with area code).</dd>
 <dt>\$4</dt>
-<dd>Time the connection started. Example:<br />
- &quot;Wed May 28 23:07:44 1997&quot;.<br />
+<dd>Time the connection started. Example:<br/>
+ &quot;Wed May 28 23:07:44 1997&quot;.<br/>
  Contains &quot;?&quot; if there is no connection yet (e.g. still at RING phase).</dd>
 <dt>\$5</dt>
 <dd>Duration of connection up to now (in seconds).</dd>

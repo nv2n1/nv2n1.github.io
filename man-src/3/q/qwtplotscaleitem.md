@@ -13,13 +13,13 @@ description: "QwtPlotScaleItem –"
 <p>#include &lt;qwt_plot_scaleitem.h&gt; </p>
 <p> Inherits <code>QwtPlotItem</code>.</p>
 <h3>Public Member Functions</h3>
-<p><code>QwtPlotScaleItem</code> (<code>QwtScaleDraw::Alignment</code>=<code>QwtScaleDraw::BottomScale</code>, const double pos=0.0)<br />
- <i>Constructor for scale item at the position pos. </i><br />
- virtual <code>~QwtPlotScaleItem</code> ()<br />
- <i>Destructor. </i><br />
+<p><code>QwtPlotScaleItem</code> (<code>QwtScaleDraw::Alignment</code>=<code>QwtScaleDraw::BottomScale</code>, const double pos=0.0)<br/>
+ <i>Constructor for scale item at the position pos. </i><br/>
+ virtual <code>~QwtPlotScaleItem</code> ()<br/>
+ <i>Destructor. </i><br/>
  virtual int <code>rtti</code> () const </p>
-<p> void <code>setScaleDiv</code> (const <code>QwtScaleDiv</code> &amp;)<br />
- <i>Assign a scale division. </i><br />
+<p> void <code>setScaleDiv</code> (const <code>QwtScaleDiv</code> &amp;)<br/>
+ <i>Assign a scale division. </i><br/>
  const <code>QwtScaleDiv</code> &amp; <code>scaleDiv</code> () const </p>
 <p> void <code>setScaleDivFromAxis</code> (bool on) </p>
 <p> bool <code>isScaleDivFromAxis</code> () const </p>
@@ -27,19 +27,19 @@ description: "QwtPlotScaleItem –"
 <p> QPalette <code>palette</code> () const </p>
 <p> void <code>setFont</code> (const QFont &amp;) </p>
 <p> QFont <code>font</code> () const </p>
-<p> void <code>setScaleDraw</code> (<code>QwtScaleDraw</code> *)<br />
- <i>Set a scale draw. </i><br />
+<p> void <code>setScaleDraw</code> (<code>QwtScaleDraw</code> *)<br/>
+ <i>Set a scale draw. </i><br/>
  const <code>QwtScaleDraw</code> * <code>scaleDraw</code> () const </p>
 <p> <code>QwtScaleDraw</code> * <code>scaleDraw</code> () </p>
 <p> void <code>setPosition</code> (double pos) </p>
 <p> double <code>position</code> () const </p>
-<p> void <code>setBorderDistance</code> (int numPixels)<br />
- <i>Align the scale to the canvas. </i><br />
+<p> void <code>setBorderDistance</code> (int numPixels)<br/>
+ <i>Align the scale to the canvas. </i><br/>
  int <code>borderDistance</code> () const </p>
 <p> void <code>setAlignment</code> (<code>QwtScaleDraw::Alignment</code>) </p>
-<p> virtual void <code>draw</code> (QPainter *p, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;rect) const<br />
- <i>Draw the scale. </i><br />
- virtual void <code>updateScaleDiv</code> (const <code>QwtScaleDiv</code> &amp;, const <code>QwtScaleDiv</code> &amp;)<br />
+<p> virtual void <code>draw</code> (QPainter *p, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;rect) const<br/>
+ <i>Draw the scale. </i><br/>
+ virtual void <code>updateScaleDiv</code> (const <code>QwtScaleDiv</code> &amp;, const <code>QwtScaleDiv</code> &amp;)<br/>
  <i>Update the item to changes of the axes scale division. </i></p>
 <h3>Additional Inherited Members</h3>
 <h2>Detailed Description</h2>
@@ -61,7 +61,7 @@ plot-&gt;enableAxis(QwtPlot::yLeft, false);</pre>
 <p>Constructor for scale item at the position pos. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>alignment</i> In case of <code>QwtScaleDraw::BottomScale</code> or <code>QwtScaleDraw::TopScale</code> the scale item is corresponding to the <code>xAxis()</code>, otherwise it corresponds to the <code>yAxis()</code>.<br />
+<dd><i>alignment</i> In case of <code>QwtScaleDraw::BottomScale</code> or <code>QwtScaleDraw::TopScale</code> the scale item is corresponding to the <code>xAxis()</code>, otherwise it corresponds to the <code>yAxis()</code>.<br/>
  <i>pos</i> x or y position, depending on the corresponding axis.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -199,7 +199,7 @@ plot-&gt;enableAxis(QwtPlot::yLeft, false);</pre>
 <p>Update the item to changes of the axes scale division. In case of <code>isScaleDivFromAxis()</code>, the scale draw is synchronized to the correspond axis. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>xScaleDiv</i> Scale division of the x-axis<br />
+<dd><i>xScaleDiv</i> Scale division of the x-axis<br/>
  <i>yScaleDiv</i> Scale division of the y-axis</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>

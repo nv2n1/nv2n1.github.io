@@ -10,26 +10,26 @@ description: "rifle – ranger’s file opener"
 
 <p> rifle &#8211; ranger&#8217;s file opener </p>
 <h2>SYNOPSIS</h2>
-<p> <code>rifle</code> [<code>&#8211;help</code>] [<code>-f</code> <i></i><font SIZE="-1"><i>FLAGS</i></font><i></i>] [<code>-l</code>] [<code>-p</code> <i></i><font SIZE="-1"><i>KEYWORD</i></font><i></i>] [<code>-w</code> <i></i><font SIZE="-1"><i>PROGRAM</i></font><i></i>] [<code>-c</code> <i></i><font SIZE="-1"><i>CONFIG_FILE</i></font><i></i>] <i>files</i></p>
+<p> <code>rifle</code> [<code>&#8211;help</code>] [<code>-f</code> <i></i><i>FLAGS</i><i></i>] [<code>-l</code>] [<code>-p</code> <i></i><i>KEYWORD</i><i></i>] [<code>-w</code> <i></i><i>PROGRAM</i><i></i>] [<code>-c</code> <i></i><i>CONFIG_FILE</i><i></i>] <i>files</i></p>
 <h2>DESCRIPTION</h2>
 <p> rifle is a powerful file executor that allows for complex file type checking, written to meet the needs of the file manager <i>ranger</i>. rifle&#8217;s strength lies in automatically determining file types, depending on which programs are installed on the system, even without any user interaction.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-f</code> <i></i><font SIZE="-1"><i>FLAGS</i></font><i></i></dt>
+<dt><code>-f</code> <i></i><i>FLAGS</i><i></i></dt>
 <dd> Specify flags for opening the files. Flags are letters that changes how the program is executed. Any combination of flags will work. Writing uppercase flags will negate the effect of all previously used lowercase flags of the same letter. </dd>
-<p> Table of all flags:<br />
-&nbsp;f&nbsp;<wbr>&nbsp;<wbr>&nbsp;fork program to background<br />
-&nbsp;r&nbsp;<wbr>&nbsp;<wbr>&nbsp;run program as root, using sudo<br />
+<p> Table of all flags:<br/>
+&nbsp;f&nbsp;<wbr>&nbsp;<wbr>&nbsp;fork program to background<br/>
+&nbsp;r&nbsp;<wbr>&nbsp;<wbr>&nbsp;run program as root, using sudo<br/>
 &nbsp;t&nbsp;<wbr>&nbsp;<wbr>&nbsp;run program in a separate terminal, as specified by&nbsp;<tt>$TERMCMD</tt></p>
 <dt><code>-l</code></dt>
 <dd> List all possible ways to open the specified files. Each line will contain information in the format of <i>id:label:flags:command</i>. <i>id</i> is the identification number. <i>label</i> is an arbitrary string that was specified for this command, <i>flags</i> are the flags that are used by default, and <i>command</i> is the command that is going to be executed.</dd>
-<dt><code>-p</code> <i></i><font SIZE="-1"><i>KEYWORD</i></font><i></i></dt>
+<dt><code>-p</code> <i></i><i>KEYWORD</i><i></i></dt>
 <dd> Pick a method to open the files. </dd>
-<p> <i></i><font SIZE="-1"><i>KEYWORD</i></font><i></i> is either the <font SIZE="-1">ID</font> number listed by <tt>&quot;rifle -l&quot;</tt> or a string that matches a label in the configuration file.</p>
-<dt><code>-w</code> <i></i><font SIZE="-1"><i>PROGRAM</i></font><i></i></dt>
-<dd> Open the files with the program <i></i><font SIZE="-1"><i>PROGRAM</i></font><i></i></dd>
-<dt><code>-c</code> <i></i><font SIZE="-1"><i>CONFIG_FILE</i></font><i></i></dt>
-<dd> Read configuration from <i></i><font SIZE="-1"><i>CONFIG_FILE</i></font><i></i>, instead of the default.</dd>
+<p> <i></i><i>KEYWORD</i><i></i> is either the ID number listed by <tt>&quot;rifle -l&quot;</tt> or a string that matches a label in the configuration file.</p>
+<dt><code>-w</code> <i></i><i>PROGRAM</i><i></i></dt>
+<dd> Open the files with the program <i></i><i>PROGRAM</i><i></i></dd>
+<dt><code>-c</code> <i></i><i>CONFIG_FILE</i><i></i></dt>
+<dd> Read configuration from <i></i><i>CONFIG_FILE</i><i></i>, instead of the default.</dd>
 <dt><code>-h</code>, <code>&#8211;help</code></dt>
 <dd> Print a list of options and exit.</dd></dl>
 <h2>FILES</h2>
@@ -37,15 +37,15 @@ description: "rifle – ranger’s file opener"
 <p> This file specifies patterns for determining the commands to open files with. The syntax is described in the comments of the default <i>rifle.conf</i> that ships with ranger. To obtain it, you need to run: <tt>&quot;ranger --copy-config=rifle&quot;</tt></p>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><font SIZE="-1">VISUAL</font></dt>
+<dt>VISUAL</dt>
 <dd> Determines which editor to use for editing files.</dd>
-<dt><font SIZE="-1">EDITOR</font></dt>
-<dd> Determines which editor to use for editing files if <font SIZE="-1">VISUAL</font> is undefined or empty (in the default <i>rifle.conf</i>). If both are undefined or empty, &#8220;vim&#8221; is used instead.</dd>
-<dt><font SIZE="-1">PAGER</font></dt>
+<dt>EDITOR</dt>
+<dd> Determines which editor to use for editing files if VISUAL is undefined or empty (in the default <i>rifle.conf</i>). If both are undefined or empty, &#8220;vim&#8221; is used instead.</dd>
+<dt>PAGER</dt>
 <dd> Determines which pager to use for displaying files (in the default <i>rifle.conf</i>).</dd>
-<dt><font SIZE="-1">TERMCMD</font></dt>
-<dd> Determines the terminal emulator command for use with the <i>t</i> flag. It is required that the value is the path to an executable file which accepts the &#8220;-e <font SIZE="-1">COMMAND&#8221;</font> argument.</dd>
-<dt><font SIZE="-1">XDG_CONFIG_HOME</font></dt>
+<dt>TERMCMD</dt>
+<dd> Determines the terminal emulator command for use with the <i>t</i> flag. It is required that the value is the path to an executable file which accepts the &#8220;-e COMMAND&#8221; argument.</dd>
+<dt>XDG_CONFIG_HOME</dt>
 <dd> Specifies the directory for configuration files. Defaults to <i></i>$HOME<i>/.config</i>.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> List all the different methods: </p>

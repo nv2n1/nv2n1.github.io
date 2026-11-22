@@ -79,7 +79,7 @@ description: "install-docs – manage online Debian documentation"
 <dt><i>/var/lib/doc-base/info/files.db</i></dt>
 <dd>Timestamps and documents ids of registered doc-base files.</dd>
 <dt><i>/var/lib/doc-base/omf/</i></dt>
-<dd>The location of generated scrollkeeper <font SIZE="-1">OMF</font> files. Note: <i>/usr/share/omf/doc-base</i> should be a symbolic link pointing to the directory.</dd></dl>
+<dd>The location of generated scrollkeeper OMF files. Note: <i>/usr/share/omf/doc-base</i> should be a symbolic link pointing to the directory.</dd></dl>
 <h2>Bugs</h2>
 <p>See <a rel="nofollow" href="http://bugs.debian.org/doc-base">http://bugs.debian.org/doc-base</a> &lt;<a href="http://bugs.debian.org/doc-base">http://bugs.debian.org/doc-base</a>&gt;.</p>
 <h2>See Also</h2>

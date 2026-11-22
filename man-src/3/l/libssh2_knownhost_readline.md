@@ -11,7 +11,7 @@ description: "libssh2_knownhost_readline – read a known host line"
 <p> libssh2_knownhost_readline &#8211; read a known host line</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>
-<p> int libssh2_knownhost_readline(LIBSSH2_KNOWNHOSTS *hosts,<br />
+<p> int libssh2_knownhost_readline(LIBSSH2_KNOWNHOSTS *hosts,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>const char&nbsp;<wbr>*line, size_t len, int type):</p>
 <h2>DESCRIPTION</h2>
 <p> Tell libssh2 to read a buffer as it if is a line from a known hosts file. </p>

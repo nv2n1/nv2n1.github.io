@@ -10,7 +10,7 @@ description: "slarra.f –"
 <p>slarra.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>slarra</code> (N, D, E, E2, SPLTOL, TNRM, NSPLIT, ISPLIT, INFO)<br />
+<p>subroutine <code>slarra</code> (N, D, E, E2, SPLTOL, TNRM, NSPLIT, ISPLIT, INFO)<br/>
  <i></i><code>SLARRA</code> computes the splitting points with the specified threshold.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slarra (integerN, real, dimension( * )D, real, dimension( * )E, real, dimension( * )E2, realSPLTOL, realTNRM, integerNSPLIT, integer, dimension( * )ISPLIT, integerINFO)</h3>

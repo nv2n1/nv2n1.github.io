@@ -304,8 +304,8 @@ Each pretty-printed commit will be rewrapped before it is shown.
 <dl>
 <dt>
 </dt><dd>
-.- A&#8211; &#8211; M&#8211; &#8211; N&#8211; &#8211; O&#8211; &#8211; P&#8211; &#8211; Q / / / / / / I B C D E Y<br />
-         \ / / / / /<br />
+.- A&#8211; &#8211; M&#8211; &#8211; N&#8211; &#8211; O&#8211; &#8211; P&#8211; &#8211; Q / / / / / / I B C D E Y<br/>
+         \ / / / / /<br/>
           `&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; -&#8216;   X
 </dd></dl>
 <p> The horizontal line of history A&#8212;Q is taken to be the first parent of each merge. The commits are: </p>
@@ -364,8 +364,8 @@ Each pretty-printed commit will be rewrapped before it is shown.
 <dl>
 <dt>
 </dt><dd>
-.- A&#8211; &#8211; M&#8211; &#8211; N&#8211; &#8211; O&#8211; &#8211; P&#8211; &#8211; Q / / / / / I B / D /<br />
-         \ / / / /<br />
+.- A&#8211; &#8211; M&#8211; &#8211; N&#8211; &#8211; O&#8211; &#8211; P&#8211; &#8211; Q / / / / / I B / D /<br/>
+         \ / / / /<br/>
           `&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; -&#8216;
 </dd></dl>
 <p> Compare to <code>&#8211;full-history</code> without rewriting above. Note that <code>E</code> was pruned away because it is TREESAME, but the parent list of P was rewritten to contain <code>E</code>&#8216;s parent <code>I</code>. The same happened for <code>C</code> and <code>N</code>, and <code>X</code>, <code>Y</code> and <code>Q</code>.</dl>
@@ -397,8 +397,8 @@ Each pretty-printed commit will be rewrapped before it is shown.
 <dl>
 <dt>
 </dt><dd>
-.- A&#8211; &#8211; M&#8211; &#8211; N&#8211; &#8211; O / / / I B D<br />
-         \ / /<br />
+.- A&#8211; &#8211; M&#8211; &#8211; N&#8211; &#8211; O / / / I B D<br/>
+         \ / /<br/>
           `&#8211; &#8212; &#8212; &#8212; -&#8216;
 </dd></dl>
 <p> Note the major differences in <code>N</code>, <code>P</code>, and <code>Q</code> over <code>&#8211;full-history</code>: </p>
@@ -428,7 +428,7 @@ D&#8211; &#8211; E&#8211; &#8212; &#8212; -F /     \ B&#8211; &#8211; C&#8211; &
 <dl>
 <dt>
 </dt><dd>
-E&#8211; &#8212; &#8212; -F<br />
+E&#8211; &#8212; &#8212; -F<br/>
                  \ G&#8211; &#8211; H&#8211; &#8211; I&#8211; &#8211; J</dd>
 <p>                                          L&#8211; M
 </dl>
@@ -438,9 +438,9 @@ E&#8211; &#8212; &#8212; -F<br />
 <dl>
 <dt>
 </dt><dd>
-.- A&#8211; &#8211; M&#8211; &#8212; -C&#8211; N&#8211; &#8211; O&#8211; &#8211; P / / \  \  \/ / / I B   \ R &#8211; &#8216;`-Z&#8217; /<br />
-         \ /     \/ /<br />
-          \ / /\ /<br />
+.- A&#8211; &#8211; M&#8211; &#8212; -C&#8211; N&#8211; &#8211; O&#8211; &#8211; P / / \  \  \/ / / I B   \ R &#8211; &#8216;`-Z&#8217; /<br/>
+         \ /     \/ /<br/>
+          \ / /\ /<br/>
            `&#8211; -X&#8211; &#8216;  `&#8212;Y&#8211;&#8216;
 </dd></dl>
 <p> For this example, suppose <code>I</code> created <code>file.txt</code> which was modified by <code>A</code>, <code>B</code>, and <code>X</code> in different ways. The single-parent commits <code>C</code>, <code>Z</code>, and <code>Y</code> do not change <code>file.txt</code>. The merge commit <code>M</code> was created by resolving the merge conflict to include both changes from <code>A</code> and <code>B</code> and hence is not TREESAME to either. The merge commit <code>R</code>, however, was created by ignoring the contents of <code>file.txt</code> at <code>M</code> and taking only the contents of <code>file.txt</code> at <code>X</code>. Hence, <code>R</code> is TREESAME to <code>X</code> but not <code>M</code>. Finally, the natural merge resolution to create <code>N</code> is to take the contents of <code>file.txt</code> at <code>R</code>, so <code>N</code> is TREESAME to <code>R</code> but not <code>C</code>. The merge commits <code>O</code> and <code>P</code> are TREESAME to their first parents, but not to their second parents, <code>Z</code> and <code>Y</code> respectively. </p>
@@ -456,9 +456,9 @@ E&#8211; &#8212; &#8212; -F<br />
 <dl>
 <dt>
 </dt><dd>
-.- A&#8211; &#8211; M&#8211; &#8212; &#8212; &#8211;N&#8211; &#8211; O&#8211; &#8211; P / / \  \  \/ / / I B   \ R &#8211; &#8216;`&#8211;&#8216; /<br />
-         \ /     \/ /<br />
-          \ / /\ /<br />
+.- A&#8211; &#8211; M&#8211; &#8212; &#8212; &#8211;N&#8211; &#8211; O&#8211; &#8211; P / / \  \  \/ / / I B   \ R &#8211; &#8216;`&#8211;&#8216; /<br/>
+         \ /     \/ /<br/>
+          \ / /\ /<br/>
            `&#8211; -X&#8211; &#8216;  `&#8212;&#8212;&#8216;
 </dd></dl>
 <p> Here, the merge commits <code>O</code> and <code>P</code> contribute extra noise, as they did not actually contribute a change to <code>file.txt</code>. They only merged a topic that was based on an older version of <code>file.txt</code>. This is a common issue in repositories using a workflow where many contributors work in parallel and merge their topic branches along a single trunk: manu unrelated merges appear in the <code>&#8211;full-history</code> results. </p>
@@ -466,9 +466,9 @@ E&#8211; &#8212; &#8212; -F<br />
 <dl>
 <dt>
 </dt><dd>
-.- A&#8211; &#8211; M&#8211;./ / I B R<br />
-         \ / /<br />
-          \ / /<br />
+.- A&#8211; &#8211; M&#8211;./ / I B R<br/>
+         \ / /<br/>
+          \ / /<br/>
            `&#8211; -X&#8211;&#8216;
 </dd></dl>
 <p> In this view, we see all of the important single-parent changes from <code>A</code>, <code>B</code>, and <code>X</code>. We also see the carefully-resolved merge <code>M</code> and the not-so-carefully-resolved merge <code>R</code>. This is usually enough information to determine why the commits <code>A</code> and <code>B</code> &quot;disappeared&quot; from history in the default view. However, there are a few issues with this approach. </p>

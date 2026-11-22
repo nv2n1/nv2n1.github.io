@@ -10,7 +10,7 @@ description: "ssytd2.f –"
 <p>ssytd2.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>ssytd2</code> (UPLO, N, A, LDA, D, E, TAU, INFO)<br />
+<p>subroutine <code>ssytd2</code> (UPLO, N, A, LDA, D, E, TAU, INFO)<br/>
  <i></i><code>SSYTD2</code> reduces a symmetric matrix to real symmetric tridiagonal form by an orthogonal similarity transformation (unblocked algorithm).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ssytd2 (characterUPLO, integerN, real, dimension( lda, * )A, integerLDA, real, dimension( * )D, real, dimension( * )E, real, dimension( * )TAU, integerINFO)</h3>

@@ -44,8 +44,8 @@ description: "dh_strip – strip executables, shared libraries, and some static 
 <dt><code>&#8211;ddeb-migration=</code><i>package-relation</i></dt>
 <dd> Historical name for <code>&#8211;dbgsym-migration</code>.</dd></dl>
 <h2>NOTES</h2>
-<p> If the <font SIZE="-1"><code>DEB_BUILD_OPTIONS</code></font> environment variable contains <code>nostrip</code>, nothing will be stripped, in accordance with Debian policy (section 10.1 &#8220;Binaries&#8221;). This will also inhibit the automatic creation of debug symbol packages. </p>
-<p> The automatic creation of debug symbol packages can also be prevented by adding <code>noautodbgsym</code> to the <font SIZE="-1"><code>DEB_BUILD_OPTIONS</code></font> environment variable. However, <code>dh_strip</code> will still add debuglinks to <font SIZE="-1">ELF</font> binaries when this flag is set. This is to ensure that the regular deb package will be identical with and without this flag (assuming it is otherwise &#8220;bit-for-bit&#8221; reproducible).</p>
+<p> If the <code>DEB_BUILD_OPTIONS</code> environment variable contains <code>nostrip</code>, nothing will be stripped, in accordance with Debian policy (section 10.1 &#8220;Binaries&#8221;). This will also inhibit the automatic creation of debug symbol packages. </p>
+<p> The automatic creation of debug symbol packages can also be prevented by adding <code>noautodbgsym</code> to the <code>DEB_BUILD_OPTIONS</code> environment variable. However, <code>dh_strip</code> will still add debuglinks to ELF binaries when this flag is set. This is to ensure that the regular deb package will be identical with and without this flag (assuming it is otherwise &#8220;bit-for-bit&#8221; reproducible).</p>
 <h2>CONFORMS TO</h2>
 <p> Debian policy, version 3.0.1</p>
 <h2>SEE ALSO</h2>

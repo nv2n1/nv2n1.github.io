@@ -11,7 +11,7 @@ description: "dlapmt.f –"
 <p> dlapmt.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dlapmt</code> (FORWRD, M, N, X, LDX, K)<br />
+<p> subroutine <code>dlapmt</code> (FORWRD, M, N, X, LDX, K)<br/>
  <i></i><code>DLAPMT</code> performs a forward or backward permutation of the columns of a matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlapmt (logicalFORWRD, integerM, integerN, double precision, dimension( ldx, * )X, integerLDX, integer, dimension( * )K)</h3>

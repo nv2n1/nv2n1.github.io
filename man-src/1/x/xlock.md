@@ -944,22 +944,22 @@ description: "xlock – Locks the local X display until a password is entered."
 <p> The latest version is currently at:</p>
 <dl>
 <dt>
-</dt><dd> <i><a rel="nofollow" href="http://www.sillycycle.com/xlock">http://www.sillycycle.com/xlock</a></i><br />
+</dt><dd> <i><a rel="nofollow" href="http://www.sillycycle.com/xlock">http://www.sillycycle.com/xlock</a></i><br/>
  <i><a href="ftp://ibiblio.org/pub/Linux/X11/screensavers">ftp://ibiblio.org/pub/Linux/X11/screensavers</a></i></dd></dl>
 <p> Original Author:</p>
 <dl>
 <dt>
-</dt><dd> Patrick J. Naughton, &lt;<i>naughton AT eng.sun.com</i>&gt;<br />
- Mailstop 21-14<br />
- Sun Microsystems Laboratories, Inc.<br />
- Mountain View, CA 94043<br />
+</dt><dd> Patrick J. Naughton, &lt;<i>naughton AT eng.sun.com</i>&gt;<br/>
+ Mailstop 21-14<br/>
+ Sun Microsystems Laboratories, Inc.<br/>
+ Mountain View, CA 94043<br/>
  415/336-1080</dd></dl>
 <p> with many additional contributors. </p>
 <h2>COPYRIGHT</h2>
-<p> Copyright (c) 1988-1991 by Patrick J. Naughton<br />
+<p> Copyright (c) 1988-1991 by Patrick J. Naughton<br/>
  Copyright (c) 1993-2016 by David A. Bagley </p>
 <p> Permission to use, copy, modify, and distribute this software and its documentation for any purpose and without fee is hereby granted, provided that the above copyright notice appear in all copies and that both that copyright notice and this permission notice appear in supporting documentation. </p>
-<p> This file is provided AS IS with no warranties of any kind. The author shall have no liability with respect to the infringement of copyrights, trade secrets or any patents by this file or any part thereof. In no event will the author be liable for any lost revenue or profits or<br />
-&nbsp;<wbr>other special, indirect and consequential damages.<br />
- The original BSD daemon is Copyright (c) 1988 Marshall Kirk McKusick. All Rights Reserved.<br />
+<p> This file is provided AS IS with no warranties of any kind. The author shall have no liability with respect to the infringement of copyrights, trade secrets or any patents by this file or any part thereof. In no event will the author be liable for any lost revenue or profits or<br/>
+&nbsp;<wbr>other special, indirect and consequential damages.<br/>
+ The original BSD daemon is Copyright (c) 1988 Marshall Kirk McKusick. All Rights Reserved.<br/>
  DEC, HP, IBM, Linux, SCO, SGI, and Sun icons have their respective copyrights. </p>

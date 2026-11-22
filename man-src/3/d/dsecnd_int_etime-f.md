@@ -10,7 +10,7 @@ description: "dsecnd_INT_ETIME.f –"
 <p>dsecnd_INT_ETIME.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>DOUBLE PRECISION function <code>dsecnd</code> ()<br />
+<p>DOUBLE PRECISION function <code>dsecnd</code> ()<br/>
  <i></i><code>DSECND</code> Using the INTERNAL function ETIME.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>DOUBLE PRECISION function dsecnd ()</h3>

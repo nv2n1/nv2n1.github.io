@@ -8,33 +8,33 @@ url: "/docs/linux/man/1-fax2tiff/"
 description: "fax2tiff – create a TIFF Class F fax file from raw fax data"
 ---
 
-<p> fax2tiff &#8211; create a <font SIZE="-1">TIFF</font> Class F fax file from raw fax data</p>
+<p> fax2tiff &#8211; create a TIFF Class F fax file from raw fax data</p>
 <h2>SYNOPSIS</h2>
 <p> <code>fax2tiff</code> [ <i>options</i> ] [ <code>-o</code> <i>output.tif</i> ] <i>input.raw</i></p>
 <h2>DESCRIPTION</h2>
-<p> <i>Fax2tiff</i> creates a <font SIZE="-1">TIFF</font> file containing <font SIZE="-1">CCITT</font> Group 3 or Group 4 encoded data from one or more files containing &#8220;raw&#8221; Group 3 or Group 4 encoded data (typically obtained directly from a fax modem). By default, each row of data in the resultant <font SIZE="-1">TIFF</font> file is 1-dimensionally encoded and padded or truncated to 1728 pixels, as needed. The resultant image is a set of low resolution (98 lines/inch) or medium resolution (196 lines/inch) pages, each of which is a single strip of data. The generated file conforms to the <font SIZE="-1">TIFF</font> Class F (<font SIZE="-1">FAX</font>) specification for storing facsimile data. This means, in particular, that each page of the data does <code>not</code> include the trailing <i>return to control</i> (<font SIZE="-1">RTC</font>) code; as required for transmission by the <font SIZE="-1">CCITT</font> Group 3 specifications. The old, &#8220;classic&#8221;, format is created if the <code>-c</code> option is used. (The Class F format can also be requested with the <code>-f</code> option.) </p>
+<p> <i>Fax2tiff</i> creates a TIFF file containing CCITT Group 3 or Group 4 encoded data from one or more files containing &#8220;raw&#8221; Group 3 or Group 4 encoded data (typically obtained directly from a fax modem). By default, each row of data in the resultant TIFF file is 1-dimensionally encoded and padded or truncated to 1728 pixels, as needed. The resultant image is a set of low resolution (98 lines/inch) or medium resolution (196 lines/inch) pages, each of which is a single strip of data. The generated file conforms to the TIFF Class F (FAX) specification for storing facsimile data. This means, in particular, that each page of the data does <code>not</code> include the trailing <i>return to control</i> (RTC) code; as required for transmission by the CCITT Group 3 specifications. The old, &#8220;classic&#8221;, format is created if the <code>-c</code> option is used. (The Class F format can also be requested with the <code>-f</code> option.) </p>
 <p> The default name of the output image is <i>fax.tif</i>; this can be changed with the <code>-o</code> option. Each input file is assumed to be a separate page of facsimile data from the same document. The order in which input files are specified on the command line is the order in which the resultant pages appear in the output file.</p>
 <h2>OPTIONS</h2>
 <p> Options that affect the interpretation of input data are:</p>
 <dl>
 <dt><code>-3</code></dt>
-<dd> Assume input data is <font SIZE="-1">CCITT</font> Group 3 encoded (default).</dd>
+<dd> Assume input data is CCITT Group 3 encoded (default).</dd>
 <dt><code>-4</code></dt>
-<dd> Assume input data is <font SIZE="-1">CCITT</font> Group 4 encoded.</dd>
+<dd> Assume input data is CCITT Group 4 encoded.</dd>
 <dt><code>-U</code></dt>
 <dd> Assume input data is uncompressed (Group 3 or Group 4).</dd>
 <dt><code>-1</code></dt>
-<dd> Assume input data is encoded with the 1-dimensional version of the <font SIZE="-1">CCITT</font> Group 3 Huffman encoding algorithm (default).</dd>
+<dd> Assume input data is encoded with the 1-dimensional version of the CCITT Group 3 Huffman encoding algorithm (default).</dd>
 <dt><code>-2</code></dt>
-<dd> Assume input data is 2-dimensional version of the <font SIZE="-1">CCITT</font> Group 3 Huffman encoding algorithm.</dd>
+<dd> Assume input data is 2-dimensional version of the CCITT Group 3 Huffman encoding algorithm.</dd>
 <dt><code>-P</code></dt>
 <dd> Assume input data is <code>not</code> EOL-aligned (default). This option has effect with Group 3 encoded input only.</dd>
 <dt><code>-A</code></dt>
 <dd> Assume input data is EOL-aligned. This option has effect with Group 3 encoded input only.</dd>
 <dt><code>-M</code></dt>
-<dd> Treat input data as having bits filled from most significant bit (<font SIZE="-1">MSB</font>) to most least bit (<font SIZE="-1">LSB</font>).</dd>
+<dd> Treat input data as having bits filled from most significant bit (MSB) to most least bit (LSB).</dd>
 <dt><code>-L</code></dt>
-<dd> Treat input data as having bits filled from least significant bit (<font SIZE="-1">LSB</font>) to most significant bit (<font SIZE="-1">MSB</font>) (default).</dd>
+<dd> Treat input data as having bits filled from least significant bit (LSB) to most significant bit (MSB) (default).</dd>
 <dt><code>-B</code></dt>
 <dd> Assume input data was encoded with black as 0 and white as 1.</dd>
 <dt><code>-W</code></dt>
@@ -48,17 +48,17 @@ description: "fax2tiff – create a TIFF Class F fax file from raw fax data"
 <dt><code>-o</code></dt>
 <dd> Specify the name of the output file.</dd>
 <dt><code>-7</code></dt>
-<dd> Force output to be compressed with the <font SIZE="-1">CCITT</font> Group 3 Huffman encoding algorithm (default).</dd>
+<dd> Force output to be compressed with the CCITT Group 3 Huffman encoding algorithm (default).</dd>
 <dt><code>-8</code></dt>
-<dd> Force output to be compressed with the <font SIZE="-1">CCITT</font> Group 4 Huffman encoding.</dd>
+<dd> Force output to be compressed with the CCITT Group 4 Huffman encoding.</dd>
 <dt><code>-u</code></dt>
 <dd> Force output to be uncompressed (Group 3 or Group 4).</dd>
 <dt><code>-5</code></dt>
-<dd> Force output to be encoded with the 1-dimensional version of the <font SIZE="-1">CCITT</font> Group 3 Huffman encoding algorithm.</dd>
+<dd> Force output to be encoded with the 1-dimensional version of the CCITT Group 3 Huffman encoding algorithm.</dd>
 <dt><code>-6</code></dt>
-<dd> Force output to be encoded with the 2-dimensional version of the <font SIZE="-1">CCITT</font> Group 3 Huffman encoding algorithm (default).</dd>
+<dd> Force output to be encoded with the 2-dimensional version of the CCITT Group 3 Huffman encoding algorithm (default).</dd>
 <dt><code>-a</code></dt>
-<dd> Force the last bit of each <i>End Of Line</i> (<font SIZE="-1">EOL</font>) code to land on a byte boundary (default). This &#8220;zero padding&#8221; will be reflected in the contents of the <i>Group3Options</i> tag of the resultant <font SIZE="-1">TIFF</font> file. This option has effect with Group 3 encoded output only.</dd>
+<dd> Force the last bit of each <i>End Of Line</i> (EOL) code to land on a byte boundary (default). This &#8220;zero padding&#8221; will be reflected in the contents of the <i>Group3Options</i> tag of the resultant TIFF file. This option has effect with Group 3 encoded output only.</dd>
 <dt><code>-p</code></dt>
 <dd> Do not EOL-align output. This option has effect with Group 3 encoded output only.</dd>
 <dt><code>-c</code></dt>
@@ -66,9 +66,9 @@ description: "fax2tiff – create a TIFF Class F fax file from raw fax data"
 <dt><code>-f</code></dt>
 <dd> Generate TIFF Class F (TIFF/F) format (default).</dd>
 <dt><code>-m</code></dt>
-<dd> Force output data to have bits filled from most significant bit (<font SIZE="-1">MSB</font>) to most least bit (<font SIZE="-1">LSB</font>).</dd>
+<dd> Force output data to have bits filled from most significant bit (MSB) to most least bit (LSB).</dd>
 <dt><code>-l</code></dt>
-<dd> Force output data to have bits filled from least significant bit (<font SIZE="-1">LSB</font>) to most significant bit (<font SIZE="-1">MSB</font>) (default).</dd>
+<dd> Force output data to have bits filled from least significant bit (LSB) to most significant bit (MSB) (default).</dd>
 <dt><code>-r</code></dt>
 <dd> Specify the number of rows (scanlines) in each strip of data written to the output file. By default (or when value <code>0</code> is specified), <i>tiffcp</i> attempts to set the rows/strip that no more than 8 kilobytes of data appear in a strip (with except of G3/G4 compression schemes). If you specify special value <code>-1</code> it will results in infinite number of the rows per strip. The entire image will be the one strip in that case. This is default in case of G3/G4 output compression schemes.</dd>
 <dt><code>-s</code></dt>
@@ -90,7 +90,7 @@ description: "fax2tiff – create a TIFF Class F fax file from raw fax data"
 <h2>BUGS</h2>
 <p> Input data are assumed to have a a &#8220;top left&#8221; orientation; it should be possible to override this assumption from the command line.</p>
 <h2>SEE ALSO</h2>
-<p> <font SIZE="-1"><code>CCITT</code></font><code> Recommendation T.4</code> (Standardization of Group 3 Facsimile Apparatus for Document Transmission). </p>
+<p> <code>CCITT</code><code> Recommendation T.4</code> (Standardization of Group 3 Facsimile Apparatus for Document Transmission). </p>
 <p> <code>The Spirit of TIFF Class F,</code> an appendix to the TIFF 5.0 specification prepared by Cygnet Technologies. </p>
 <p> <code><a href="/docs/linux/man/1-tiffinfo/">tiffinfo</a></code>(1), <code><a href="/docs/linux/man/1-tiffdither/">tiffdither</a></code>(1), <code>tiffgt</code>(1), <code>libtiff</code>(3) </p>
 <p> Libtiff library home page: <code><a rel="nofollow" href="http://www.remotesensing.org/libtiff/">http://www.remotesensing.org/libtiff/</a></code> </p>

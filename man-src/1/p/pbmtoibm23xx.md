@@ -23,7 +23,7 @@ description: "pbmtoibm23xx – convert a PBM image to IBM 23XX printer stream"
 <dt><code>-yres=</code><i>dpi</i></dt>
 <dd> This option specifies the vertical resolution in dots per inch. Valid values are 60, 120, and 240. </dd>
 <dt><code>-slow</code></dt>
-<dd> Use the slower printing mode where two modes with the same resolution are available. This usually produces better quality prints. This affects only modes with horizontal resolution 120, but might affect other modes in future versions of the program.<br />
+<dd> Use the slower printing mode where two modes with the same resolution are available. This usually produces better quality prints. This affects only modes with horizontal resolution 120, but might affect other modes in future versions of the program.<br/>
 &nbsp;<wbr>&nbsp;<wbr> </dd>
 </dl>
 <h2>LIMITATIONS</h2>

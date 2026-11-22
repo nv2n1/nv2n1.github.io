@@ -32,6 +32,6 @@ description: "gsel_norm_tran (Select normalization transformation) – selects a
 <p>Online: <code>set(3NCARG),</code> <code>gset_win(3NCARG),</code> <code>gset_vp(3NCARG),</code> <code>ginq_clip(3NCARG),</code> <code>gks(3NCARG),</code> <code>ncarg_gks_cbind(3NCARG)</code> </p>
 <p> Hardcopy: User&#8217;s Guide for NCAR GKS-0A Graphics; NCAR Graphics Fundamentals, UNIX Version</p>
 <h2>Copyright</h2>
-<p>Copyright (C) 1987-2009<br />
- University Corporation for Atmospheric Research<br />
+<p>Copyright (C) 1987-2009<br/>
+ University Corporation for Atmospheric Research<br/>
  The use of this Software is governed by a License Agreement.</p>

@@ -24,53 +24,53 @@ description: "create-native-map – C/C# Mapping Creator"
 </code></pre>
 <dt><i>&#8211;autoconf-member=MEMBER</i></dt>
 <dd> Specify that any access to <i>MEMBER</i> should be wrapped within a <i>#ifdef HAVE_MEMBER</i> block. <i>MEMBER</i> can be either a <i>field-name</i> or a <i>class-name</i> . <i>field-name</i> combination. </dd>
-<p> For example, given the C# declaration:<br />
-[Mono.Unix.Native.Map(&#8220;struct dirent&#8221;)] struct Dirent {<br />
-  public<br />
-    long d_off;<br />
-}<br />
- then <i>&#8211;autoconf-member=d_off</i> would generate the code similar to:<br />
-int ToDirent(struct dirent *from, struct Dirent *to)<br />
-{<br />
-#ifdef HAVE_STRUCT_DIRENT_D_OFF<br />
-    to-&gt;d_off = from-&gt;d_off;<br />
-#endif /* ndef HAVE_STRUCT_DIRENT_D_OFF */<br />
+<p> For example, given the C# declaration:<br/>
+[Mono.Unix.Native.Map(&#8220;struct dirent&#8221;)] struct Dirent {<br/>
+  public<br/>
+    long d_off;<br/>
+}<br/>
+ then <i>&#8211;autoconf-member=d_off</i> would generate the code similar to:<br/>
+int ToDirent(struct dirent *from, struct Dirent *to)<br/>
+{<br/>
+#ifdef HAVE_STRUCT_DIRENT_D_OFF<br/>
+    to-&gt;d_off = from-&gt;d_off;<br/>
+#endif /* ndef HAVE_STRUCT_DIRENT_D_OFF */<br/>
 }</p>
 <dt><i>&#8211;exclude-native-symbol=SYMBOL</i></dt>
 <dd> <i>SYMBOL</i> is a <i>[DllImport]</i> -marked method that should <i>not</i> have a prototype generated for it.</dd>
 <dt><i>&#8211;impl-header=HEADER</i></dt>
 <dd> Insert a <i>#include</i> statement within the generated <i>.c</i> file for <i>HEADER</i> . </dd>
-<p> For example, <i>&#8211;impl-header=&lt;<a href="file:/usr/include/stdlib.h">stdlib.h</a>&gt;</i> generates<br />
+<p> For example, <i>&#8211;impl-header=&lt;<a href="file:/usr/include/stdlib.h">stdlib.h</a>&gt;</i> generates<br/>
 #include &lt;stdlib.h&gt;</p>
 <dt><i>&#8211;impl-macro=MACRO</i></dt>
 <dd> Insert a <i>#define</i> statement within the generated <i>.c</i> file. <i>MACRO</i> can contain a <i>=</i> to separate the macro name from the macro value. </dd>
-<p> For example, <i>&#8211;impl-macro=FOO=42</i> generates<br />
+<p> For example, <i>&#8211;impl-macro=FOO=42</i> generates<br/>
 #define FOO 42</p>
 <dt><i>&#8211;library=LIBRARY</i></dt>
 <dd> Create prototypes for <i>[DllImport]</i> -marked methods which reference the native library <i>LIBRARY</i> into the generated <i>.h</i> file.</dd>
 <dt><i>&#8211;public-header=HEADER</i></dt>
 <dd> Insert a <i>#include</i> statement within the generated <i>.h</i> file for <i>HEADER</i> . </dd>
-<p> For example, <i>&#8211;public-header=&lt;<a href="file:/usr/include/stdlib.h">stdlib.h</a>&gt;</i> generates<br />
+<p> For example, <i>&#8211;public-header=&lt;<a href="file:/usr/include/stdlib.h">stdlib.h</a>&gt;</i> generates<br/>
 #include &lt;stdlib.h&gt;</p>
 <dt><i>&#8211;public-macro=MACRO</i></dt>
 <dd> Insert a <i>#define</i> statement within the generated <i>.h</i> file. <i>MACRO</i> can contain a <i>=</i> to separate the macro name from the macro value. </dd>
-<p> For example, <i>&#8211;public-macro=FOO=42</i> generates<br />
+<p> For example, <i>&#8211;public-macro=FOO=42</i> generates<br/>
 #define FOO 42</p>
 <dt><i>&#8211;rename-member=FROM=TO</i></dt>
 <dd> This is used when <i>FROM</i> is a C macro, and thus must be altered in order to be used sanely. All generated references to the managed representation will use <i>TO </i> instead of <i>FROM</i> . </dd>
-<p> For example, given the C# declaration:<br />
-[Mono.Unix.Native.Map(&#8220;struct stat&#8221;)] struct Stat {<br />
-  public<br />
-    long st_atime;<br />
-}<br />
- and the argument <i>&#8211;rename-member=st_atime=st_atime_</i> , the generated <i>.h</i> file would contain:<br />
-struct Stat {<br />
-    gint64 st_atime_;<br />
-};<br />
- (note the altered field name), while the generated <i>.c</i> file would contain:<br />
-ToStat(struct stat *from, struct Stat *to)<br />
-{<br />
-    to-&gt;st_atime_ = from-&gt;st_atime;<br />
+<p> For example, given the C# declaration:<br/>
+[Mono.Unix.Native.Map(&#8220;struct stat&#8221;)] struct Stat {<br/>
+  public<br/>
+    long st_atime;<br/>
+}<br/>
+ and the argument <i>&#8211;rename-member=st_atime=st_atime_</i> , the generated <i>.h</i> file would contain:<br/>
+struct Stat {<br/>
+    gint64 st_atime_;<br/>
+};<br/>
+ (note the altered field name), while the generated <i>.c</i> file would contain:<br/>
+ToStat(struct stat *from, struct Stat *to)<br/>
+{<br/>
+    to-&gt;st_atime_ = from-&gt;st_atime;<br/>
 }</p>
 <dt><i>&#8211;rename-namespace=FROM=TO</i></dt>
 <dd> By default, the C &quot;namespace&quot; (symbol prefix) is the C# namespace; types within the C# namespace <i>Mono.Unix.Native</i> would be in the C &quot;namespace&quot; <i>Mono_Unix_Native</i> . Use <i>&#8211;rename-namespace</i> to modify the default, e.g. <i>&#8211;rename-namespace=Mono.Unix.Native=Mono_Posix</i> .</dd></dl>
@@ -103,99 +103,99 @@ ToStat(struct stat *from, struct Stat *to)<br />
 <dl>
 <dt>Delegates</dt>
 <dd> Code generation for delegates ignores the <i>MapAttribute.NativeType</i> property, and generates a function pointer <i>typedef</i> that best matches the delegate declaration into the <i>.h</i> file. </dd>
-<p> For example,<br />
-namespace Foo<br />
-{<br />
-[Map] delegate string MyCallback(string s);<br />
-}<br />
- generates the <i>typedef</i> :<br />
+<p> For example,<br/>
+namespace Foo<br/>
+{<br/>
+[Map] delegate string MyCallback(string s);<br/>
+}<br/>
+ generates the <i>typedef</i> :<br/>
 typedef char *(*Foo_MyCallback)(const char *s);</p>
 <dt>Classes and Structures</dt>
-<dd> A <i>[Map]</i> -decorated class or structure will get a C structure declaration within the <i>.h</i> file:<br />
-[Map] struct Foo {<br />
-  public<br />
-    int i;<br />
-}<br />
- becomes<br />
-struct Foo {<br />
-  public<br />
-    int i;<br />
-};<br />
- If the <i>MapAttribute.NativeType</i> property is set, then conversion functions will be declared within the <i>.h</i> file and created within the <i>.c</i> file:<br />
-namespace Foo<br />
-{<br />
-[Map(&#8220;struct stat&#8221;)] struct Stat {<br />
-  public<br />
-    uint st_uid;<br />
-}<br />
-}<br />
- becomes<br />
-/* The .h file */<br />
-struct Foo_Stat {<br />
-    unsigned int st_uid;<br />
-};<br />
-int Foo_FromStat(struct Foo_Stat *from, struct stat *to);<br />
-int Foo_ToStat(struct stat *to, sxtruct Foo_Stat *to);<br />
-/* The .c file */<br />
-int Foo_FromStat(struct Foo_Stat *from, struct stat *to)<br />
-{<br />
-                memset (to, 0, sizeof(*to);<br />
-                to-&gt;st_uid = from-&gt;st_uid;<br />
-                return 0;<br />
-}<br />
-int Foo_ToStat(struct stat *to, sxtruct Foo_Stat *to)<br />
-{<br />
-                memset (to, 0, sizeof(*to);<br />
-                to-&gt;st_uid = from-&gt;st_uid;<br />
-                return 0;<br />
+<dd> A <i>[Map]</i> -decorated class or structure will get a C structure declaration within the <i>.h</i> file:<br/>
+[Map] struct Foo {<br/>
+  public<br/>
+    int i;<br/>
+}<br/>
+ becomes<br/>
+struct Foo {<br/>
+  public<br/>
+    int i;<br/>
+};<br/>
+ If the <i>MapAttribute.NativeType</i> property is set, then conversion functions will be declared within the <i>.h</i> file and created within the <i>.c</i> file:<br/>
+namespace Foo<br/>
+{<br/>
+[Map(&#8220;struct stat&#8221;)] struct Stat {<br/>
+  public<br/>
+    uint st_uid;<br/>
+}<br/>
+}<br/>
+ becomes<br/>
+/* The .h file */<br/>
+struct Foo_Stat {<br/>
+    unsigned int st_uid;<br/>
+};<br/>
+int Foo_FromStat(struct Foo_Stat *from, struct stat *to);<br/>
+int Foo_ToStat(struct stat *to, sxtruct Foo_Stat *to);<br/>
+/* The .c file */<br/>
+int Foo_FromStat(struct Foo_Stat *from, struct stat *to)<br/>
+{<br/>
+                memset (to, 0, sizeof(*to);<br/>
+                to-&gt;st_uid = from-&gt;st_uid;<br/>
+                return 0;<br/>
+}<br/>
+int Foo_ToStat(struct stat *to, sxtruct Foo_Stat *to)<br/>
+{<br/>
+                memset (to, 0, sizeof(*to);<br/>
+                to-&gt;st_uid = from-&gt;st_uid;<br/>
+                return 0;<br/>
 }</dd>
 <dt>Fields</dt>
-<dd> If a field (1) has the <i>MapAttribute</i> attribute, and (2) has the <i>MapAttribute.NativeType</i> property set, then the specified native type will be used for overflow checking. For example:<br />
-namespace Foo<br />
-{<br />
-[Map(&#8220;struct stat&#8221;)] struct Stat {<br />
-    [Map(&#8220;off_t&#8221;)] public long st_size;<br />
-}<br />
-}<br />
- generates<br />
-/* The .h file */<br />
-struct Foo_Stat {<br />
-    gint64 st_size;<br />
-};<br />
-int Foo_FromStat(struct Foo_Stat *from, struct stat *to);<br />
-int Foo_ToStat(struct stat *to, sxtruct Foo_Stat *to);<br />
-/* The .c file */<br />
-int Foo_FromStat(struct Foo_Stat *from, struct stat *to)<br />
-{<br />
-    _cnm_return_val_if_overflow(off_t, from-&gt;st_size, -1);<br />
-                memset (to, 0, sizeof(*to);<br />
-                to-&gt;st_size = from-&gt;st_size;<br />
-                return 0;<br />
-}<br />
-int Foo_ToStat(struct stat *to, sxtruct Foo_Stat *to)<br />
-{<br />
-    _cnm_return_val_if_overflow(gint64, from-&gt;st_size, -1);<br />
-                memset (to, 0, sizeof(*to);<br />
-                to-&gt;st_size = from-&gt;st_size;<br />
-                return 0;<br />
-}<br />
+<dd> If a field (1) has the <i>MapAttribute</i> attribute, and (2) has the <i>MapAttribute.NativeType</i> property set, then the specified native type will be used for overflow checking. For example:<br/>
+namespace Foo<br/>
+{<br/>
+[Map(&#8220;struct stat&#8221;)] struct Stat {<br/>
+    [Map(&#8220;off_t&#8221;)] public long st_size;<br/>
+}<br/>
+}<br/>
+ generates<br/>
+/* The .h file */<br/>
+struct Foo_Stat {<br/>
+    gint64 st_size;<br/>
+};<br/>
+int Foo_FromStat(struct Foo_Stat *from, struct stat *to);<br/>
+int Foo_ToStat(struct stat *to, sxtruct Foo_Stat *to);<br/>
+/* The .c file */<br/>
+int Foo_FromStat(struct Foo_Stat *from, struct stat *to)<br/>
+{<br/>
+    _cnm_return_val_if_overflow(off_t, from-&gt;st_size, -1);<br/>
+                memset (to, 0, sizeof(*to);<br/>
+                to-&gt;st_size = from-&gt;st_size;<br/>
+                return 0;<br/>
+}<br/>
+int Foo_ToStat(struct stat *to, sxtruct Foo_Stat *to)<br/>
+{<br/>
+    _cnm_return_val_if_overflow(gint64, from-&gt;st_size, -1);<br/>
+                memset (to, 0, sizeof(*to);<br/>
+                to-&gt;st_size = from-&gt;st_size;<br/>
+                return 0;<br/>
+}<br/>
  This is useful for better error checking within the conversion functions. <i>MapAttribute.NativeType</i> is required for this as there is no other way to know what the native type is (without parsing the system header files&#8230;).</dd>
 <dt>Enumerations</dt>
 <dd> Generates a C enumeration and macros for each of the members within the enumeration. <i>To</i> and <i>From</i> functions are also declared in the <i>.h</i> file and implemented in the <i>.c</i> file. </dd>
-<p> For example,<br />
-namespace Foo<br />
-{<br />
-[Map] enum Errno {<br />
-    EINVAL<br />
-}<br />
-}<br />
- would generate the following in the <i>.h</i> file:<br />
-enum Foo_Errno {<br />
-    Foo_Errno_EINVAL = 0,<br />
-#define Foo_Errno_EINVAL Foo_Errno_EINVAL<br />
-};<br />
-int Foo_FromErrno(int from, int *to);<br />
-int Foo_ToErrno(int from, int *to);<br />
+<p> For example,<br/>
+namespace Foo<br/>
+{<br/>
+[Map] enum Errno {<br/>
+    EINVAL<br/>
+}<br/>
+}<br/>
+ would generate the following in the <i>.h</i> file:<br/>
+enum Foo_Errno {<br/>
+    Foo_Errno_EINVAL = 0,<br/>
+#define Foo_Errno_EINVAL Foo_Errno_EINVAL<br/>
+};<br/>
+int Foo_FromErrno(int from, int *to);<br/>
+int Foo_ToErrno(int from, int *to);<br/>
  and generates the following in the the <i>.c</i> file: </p>
 <pre><code>
 int Foo_FromErrno(int from, int *to)

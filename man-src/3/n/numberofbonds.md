@@ -10,39 +10,39 @@ description: "QuantLib::FittedBondDiscountCurve – Discount curve fitted to a s
 
 <p>QuantLib::FittedBondDiscountCurve &#8211; <code>Discount</code> curve fitted to a set of fixed-coupon bonds. </p>
 
-<p> <br />
+<p> <br/>
  </p>
 <p>#include &lt;ql/termstructures/yield/fittedbonddiscountcurve.hpp&gt; </p>
 <p>Inherits <code>QuantLib::YieldTermStructure</code>, and <code>QuantLib::LazyObject</code>. </p>
 <h3>Classes</h3>
-<p> <br />
- class <code>FittingMethod</code> <br />
+<p> <br/>
+ class <code>FittingMethod</code> <br/>
  <i>Base fitting method used to construct a fitted bond discount curve. </i>  </p>
 <h3>Public Member Functions</h3>
-<p> <code>Constructors</code> <br />
+<p> <code>Constructors</code> <br/>
  </p>
-<p> <br />
- <code>FittedBondDiscountCurve</code> (<code>Natural</code> settlementDays, const <code>Calendar</code> &amp;calendar, const std::vector&lt; boost::shared_ptr&lt; <code>FixedRateBondHelper</code> &gt; &gt; &amp;instruments, const <code>DayCounter</code> &amp;dayCounter, const <code>FittingMethod</code> &amp;fittingMethod, <code>Real</code> accuracy=1.0e-10, Size maxEvaluations=10000, const Array &amp;guess=Array(), Real simplexLambda=1.0) <br />
- <i>reference date based on current evaluation date </i> <br />
- <code>FittedBondDiscountCurve</code> (const <code>Date</code> &amp;referenceDate, const std::vector&lt; boost::shared_ptr&lt; <code>FixedRateBondHelper</code> &gt; &gt; &amp;instruments, const <code>DayCounter</code> &amp;dayCounter, const <code>FittingMethod</code> &amp;fittingMethod, <code>Real</code> accuracy=1.0e-10, Size maxEvaluations=10000, const Array &amp;guess=Array(), Real simplexLambda=1.0) <br />
+<p> <br/>
+ <code>FittedBondDiscountCurve</code> (<code>Natural</code> settlementDays, const <code>Calendar</code> &amp;calendar, const std::vector&lt; boost::shared_ptr&lt; <code>FixedRateBondHelper</code> &gt; &gt; &amp;instruments, const <code>DayCounter</code> &amp;dayCounter, const <code>FittingMethod</code> &amp;fittingMethod, <code>Real</code> accuracy=1.0e-10, Size maxEvaluations=10000, const Array &amp;guess=Array(), Real simplexLambda=1.0) <br/>
+ <i>reference date based on current evaluation date </i> <br/>
+ <code>FittedBondDiscountCurve</code> (const <code>Date</code> &amp;referenceDate, const std::vector&lt; boost::shared_ptr&lt; <code>FixedRateBondHelper</code> &gt; &gt; &amp;instruments, const <code>DayCounter</code> &amp;dayCounter, const <code>FittingMethod</code> &amp;fittingMethod, <code>Real</code> accuracy=1.0e-10, Size maxEvaluations=10000, const Array &amp;guess=Array(), Real simplexLambda=1.0) <br/>
  <i>curve reference date fixed for life of curve </i> </p>
-<p> <code>Inspectors</code> <br />
+<p> <code>Inspectors</code> <br/>
  </p>
-<p> <br />
- Size <code>numberOfBonds</code> () const <br />
- <i>total number of bonds used to fit the yield curve </i> <br />
- <code>Date</code> <code>maxDate</code> () const <br />
- <i>the latest date for which the curve can return values </i> <br />
- const <code>FittingMethod</code> &amp; <code>fitResults</code> () const <br />
+<p> <br/>
+ Size <code>numberOfBonds</code> () const <br/>
+ <i>total number of bonds used to fit the yield curve </i> <br/>
+ <code>Date</code> <code>maxDate</code> () const <br/>
+ <i>the latest date for which the curve can return values </i> <br/>
+ const <code>FittingMethod</code> &amp; <code>fitResults</code> () const <br/>
  <i>class holding the results of the fit </i> </p>
-<p> <code>Observer interface</code> <br />
+<p> <code>Observer interface</code> <br/>
  </p>
-<p> <br />
- void <code>update</code> () <br />
+<p> <br/>
+ void <code>update</code> () <br/>
   </p>
 <h3>Friends</h3>
-<p> <br />
- class <code>FittingMethod</code> <br />
+<p> <br/>
+ class <code>FittingMethod</code> <br/>
   </p>
 <h2>Detailed Description</h2>
 <p> <code>Discount</code> curve fitted to a set of fixed-coupon bonds. </p>

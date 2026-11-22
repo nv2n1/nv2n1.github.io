@@ -22,64 +22,64 @@ description: "motv – a Motif program for watching TV"
 <dt><code>-hwscan</code></dt>
 <dd> Print a list of available devices.</dd>
 <dt><code>-f</code>, <code>-fullscreen</code></dt>
-<dd> startup in fullscreen mode.<br />
+<dd> startup in fullscreen mode.<br/>
  Resource: motv.fullscreen (bool).</dd>
 <dt><code>-n</code>, <code>-noconf</code></dt>
-<dd> don&#8217;t read the config file ($HOME/.xawtv).<br />
+<dd> don&#8217;t read the config file ($HOME/.xawtv).<br/>
  Resource: motv.readconfig (bool).</dd>
 <dt><code>-o</code>, <code>-outfile</code> base</dt>
-<dd> set basestring for the snapshot output files. The filename will be &quot;base-timestamp-nr.ext&quot;.<br />
+<dd> set basestring for the snapshot output files. The filename will be &quot;base-timestamp-nr.ext&quot;.<br/>
  Resource: motv.basename (string).</dd>
 <dt><code>-c</code>, <code>-device</code> device</dt>
-<dd> set video4linux device (default is /dev/video0). This option also disables Xvideo support.<br />
+<dd> set video4linux device (default is /dev/video0). This option also disables Xvideo support.<br/>
  Resource: motv.device (string).</dd>
 <dt><code>-D</code>, <code>-driver</code> name</dt>
-<dd> set video4linux driver (default is &quot;libv4l&quot;). This option also disables Xvideo support.<br />
+<dd> set video4linux driver (default is &quot;libv4l&quot;). This option also disables Xvideo support.<br/>
  Resource: motv.driver (string).</dd>
 <dt><code>-C</code>, <code>-dspdev</code> device</dt>
-<dd> set audio device (default is /dev/dsp).<br />
+<dd> set audio device (default is /dev/dsp).<br/>
  Resource: motv.dspdev (string).</dd>
 <dt><code>-vbidev</code> device</dt>
-<dd> set vbi device (default is /dev/vbi0).<br />
+<dd> set vbi device (default is /dev/vbi0).<br/>
  Resource: motv.vbidev (string).</dd>
 <dt><code>-c</code>, <code>-xvport</code> number</dt>
-<dd> set Xvideo port (defaults to the first usable if Xvideo is available). This option also enables Xvideo support.<br />
+<dd> set Xvideo port (defaults to the first usable if Xvideo is available). This option also enables Xvideo support.<br/>
  Resource: motv.xvport (int).</dd>
 <dt><code>-joydev</code> device</dt>
-<dd> joystick device to use for controlling xawtv.<br />
+<dd> joystick device to use for controlling xawtv.<br/>
  Resource: xawtv.joydev (string).</dd>
 <dt><code>-v</code>, <code>-debug</code> level</dt>
-<dd> Be verbose, <code>level</code> may be 0 (default), 1 or 2. It exists just for debugging and trouble-shooting.<br />
+<dd> Be verbose, <code>level</code> may be 0 (default), 1 or 2. It exists just for debugging and trouble-shooting.<br/>
  Resource: motv.debug (int).</dd>
 <dt><code>-remote</code></dt>
-<dd> X11 display is remote. This basically disables overlay mode, you might need this if xawtv fails to autodetect a remote X11 display.<br />
+<dd> X11 display is remote. This basically disables overlay mode, you might need this if xawtv fails to autodetect a remote X11 display.<br/>
  Resource: motv.remote (bool).</dd>
 <dt><code>-b</code>, <code>-bpp</code> n</dt>
-<dd> force xawtv into <code>n</code> bpp color depth. Works for switching between 15/16 and 24/32 bpp. This gets just passed through to <a href="/docs/linux/man/8-v4l-conf/">v4l-conf</a>(8).<br />
+<dd> force xawtv into <code>n</code> bpp color depth. Works for switching between 15/16 and 24/32 bpp. This gets just passed through to <a href="/docs/linux/man/8-v4l-conf/">v4l-conf</a>(8).<br/>
  Resource: motv.bpp (int).</dd>
 <dt><code>-shift</code> n</dt>
-<dd> Shift the video display by <code>n</code> bytes. Try this if your video display is&#8217;nt within the xawtv window, some older matrox cards show this problem. This gets passed through to <a href="/docs/linux/man/8-v4l-conf/">v4l-conf</a>(8) too.<br />
+<dd> Shift the video display by <code>n</code> bytes. Try this if your video display is&#8217;nt within the xawtv window, some older matrox cards show this problem. This gets passed through to <a href="/docs/linux/man/8-v4l-conf/">v4l-conf</a>(8) too.<br/>
  Resource: motv.shift (int).</dd>
 <dt><code>-fb</code></dt>
-<dd> Use the framebuffer device to determine the video framebuffer address (instead of the DGA extension). Yet another pass through argument.<br />
+<dd> Use the framebuffer device to determine the video framebuffer address (instead of the DGA extension). Yet another pass through argument.<br/>
  Resource: motv.fbdev (bool).</dd>
 <dt><code>-xv/-noxv </code></dt>
-<dd> enable/disable the usage of the Xvideo extension altogether, i.e. -noxv has the same effect as both -noxv-video and -noxv-image switches (see below).<br />
+<dd> enable/disable the usage of the Xvideo extension altogether, i.e. -noxv has the same effect as both -noxv-video and -noxv-image switches (see below).<br/>
  Resource: xawtv.xv (bool).</dd>
 <dt><code>-xv-video/-noxv-video </code></dt>
-<dd> enable/disable the usage of the Xvideo extension for video overlay (i.e. XvPutVideo). overlay mode uses this. default is on.<br />
+<dd> enable/disable the usage of the Xvideo extension for video overlay (i.e. XvPutVideo). overlay mode uses this. default is on.<br/>
  Resource: xawtv.xvVideo (bool).</dd>
 <dt><code>-xv-image/-noxv-image </code></dt>
-<dd> enable/disable the usage of the Xvideo extension for image scaling (i.e. XvPutImage). grabdisplay mode uses this. default is on.<br />
+<dd> enable/disable the usage of the Xvideo extension for image scaling (i.e. XvPutImage). grabdisplay mode uses this. default is on.<br/>
  Resource: xawtv.xvImage (bool).</dd>
 <dt><code>-vm/-novm</code></dt>
-<dd> enable/disable the usage of the VidMode extension, default is off. If there is a fullscreen video mode configured in the config file, the vidmode extension will be enabled automatically.<br />
+<dd> enable/disable the usage of the VidMode extension, default is off. If there is a fullscreen video mode configured in the config file, the vidmode extension will be enabled automatically.<br/>
  Resource: motv.vidmode (bool).</dd>
 <dt><code>-dga/-nodga</code></dt>
-<dd> enable/disable the usage of the DGA extension, default is on.<br />
+<dd> enable/disable the usage of the DGA extension, default is on.<br/>
  Resource: motv.dga (bool).</dd>
 <dt><code>-parallel</code> n</dt>
-<dd> use n compression threads (default: one).<br />
+<dd> use n compression threads (default: one).<br/>
  Resource: xawtv.parallel (int).</dd></dl>
 <p> The usual toolkit options like <code>-geometry</code> are supported too.</p>
 <h2>SUPPORTED HARDWARE / INTERFACES</h2>
@@ -128,7 +128,7 @@ Enter        mute (keypad)
 <p> <code>Bug reports with images attached go to /dev/null unseen.</code> </p>
 <p> motv depends on a correct driver configuration. If you can&#8217;t tune TV stations even if the settings in the options window are correct it is very likely a driver issue.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/5-xawtvrc/">xawtvrc</a>(5), <a href="/docs/linux/man/1-xawtv/">xawtv</a>(1), <a href="/docs/linux/man/1-fbtv/">fbtv</a>(1), <a href="/docs/linux/man/8-v4l-conf/">v4l-conf</a>(8), <a href="/docs/linux/man/1-mtt/">mtt</a>(1)<br />
+<p> <a href="/docs/linux/man/5-xawtvrc/">xawtvrc</a>(5), <a href="/docs/linux/man/1-xawtv/">xawtv</a>(1), <a href="/docs/linux/man/1-fbtv/">fbtv</a>(1), <a href="/docs/linux/man/8-v4l-conf/">v4l-conf</a>(8), <a href="/docs/linux/man/1-mtt/">mtt</a>(1)<br/>
  <a rel="nofollow" href="http://bytesex.org/xawtv/">http://bytesex.org/xawtv/</a> (homepage)</p>
 <h2>AUTHOR</h2>
 <p> Gerd Knorr &lt;kraxel [at] bytesex.org&gt;</p>

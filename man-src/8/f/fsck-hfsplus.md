@@ -9,8 +9,8 @@ description: "fsck.hfsplus – HFS file system consistency check"
 
 <p><code>fsck.hfsplus</code> &#8211; HFS file system consistency check</p>
 <h2>Synopsis</h2>
-<p><code>fsck.hfsplus</code> &#8211;<code>q</code> [-<code>df</code> ] <i>special &#8230;</i><br />
-<code>fsck.hfsplus</code> &#8211;<code>p</code> [-<code>df</code> ] <i>special &#8230;</i><br />
+<p><code>fsck.hfsplus</code> &#8211;<code>q</code> [-<code>df</code> ] <i>special &#8230;</i><br/>
+<code>fsck.hfsplus</code> &#8211;<code>p</code> [-<code>df</code> ] <i>special &#8230;</i><br/>
 <code>fsck.hfsplus</code> [-<code>n | y | r</code> ] [-<code>dfgxlE</code> ] [-<code>D </code><i>flags</i> ] [-<code>b </code><i>size</i> ] [-<code>B </code><i>path</i> ] [-<code>m </code><i>mode</i> ] [-<code>c </code><i>size</i> ] [-<code>R </code><i>flags</i> ] <i>special &#8230;</i></p>
 <h2>Description</h2>
 <p>The <code>fsck.hfsplus</code> utility verifies and repairs standard HFS and HFS+ file systems. </p>

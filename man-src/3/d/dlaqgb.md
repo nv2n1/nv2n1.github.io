@@ -11,7 +11,7 @@ description: "dlaqgb.f –"
 <p> dlaqgb.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dlaqgb</code> (M, N, KL, KU, AB, LDAB, R, C, ROWCND, COLCND, AMAX, EQUED)<br />
+<p> subroutine <code>dlaqgb</code> (M, N, KL, KU, AB, LDAB, R, C, ROWCND, COLCND, AMAX, EQUED)<br/>
  <i></i><code>DLAQGB</code> scales a general band matrix, using row and column scaling factors computed by sgbequ.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlaqgb (integerM, integerN, integerKL, integerKU, double precision, dimension( ldab, * )AB, integerLDAB, double precision, dimension( * )R, double precision, dimension( * )C, double precisionROWCND, double precisionCOLCND, double precisionAMAX, characterEQUED)</h3>

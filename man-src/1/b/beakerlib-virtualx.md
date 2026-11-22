@@ -23,7 +23,7 @@ BeakerLib - virtualX - Helpers for handling virtual X server
 
  <i>rlVirtualXGetDisplay</i> 
 
- Get the <font SIZE="-1">DISPLAY</font> variable for specified virtual X server. 
+ Get the DISPLAY variable for specified virtual X server. 
 
  <pre> rlVirtualXGetDisplay name</pre><dl><dt>name
 </dt><dd>String identifying the X server.</dd></dl>
@@ -43,14 +43,14 @@ BeakerLib - virtualX - Helpers for handling virtual X server
 
  <i>Example</i> 
 
- Below is a simple example of usage. Note that a lot of usefull debugging information is reported on the <font SIZE="-1">DEBUG</font> level, so you can run your test with <tt>&quot;DEBUG=1 make run&quot;</tt> to get them. 
+ Below is a simple example of usage. Note that a lot of usefull debugging information is reported on the DEBUG level, so you can run your test with <tt>&quot;DEBUG=1 make run&quot;</tt> to get them. 
 
  <pre> rlVirtualXStart $TEST
  rlAssert0 &quot;Virtual X server started&quot; $?
  export DISPLAY=&quot;$( rlVirtualXGetDisplay $TEST )&quot;
  # ...your test which needs X...
  rlVirtualXStop $TEST
- rlAssert0 &quot;Virtual X server killed&quot; $?</pre>These are ``Requires'' lines for your scripts - note different package names for different <font SIZE="-1">RHEL</font> versions: 
+ rlAssert0 &quot;Virtual X server killed&quot; $?</pre>These are ``Requires'' lines for your scripts - note different package names for different RHEL versions: 
 
  <pre> @echo &quot;Requires: xorg-x11-server-Xvfb&quot; &gt;&gt; $(METADATA) # RHEL-5
  @echo &quot;Requires: xorg-x11-Xvfb&quot; &gt;&gt; $(METADATA) # RHEL-4

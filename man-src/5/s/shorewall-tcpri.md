@@ -12,7 +12,7 @@ description: "tcpri – Shorewall file"
 <dl>
 <dt> <code>/etc/shorewall/tcpri</code></dt></dl>
 <h2>Description</h2>
-<dd>This file is used to specify the priority of traffic for simple traffic shaping (TC_ENABLED=Simple in m[blue]<code>shorewall.conf</code>m[]<font SIZE="-2">[1]</font>(5)). The priority band of each packet is determined by the <code>last</code> entry that the packet matches. If a packet doesn&#8217;t match any entry in this file, then its priority will be determined by its TOS field. The default mapping is as follows but can be changed by setting the TC_PRIOMAP option in m[blue]<code>shorewall.conf</code>m[]<font SIZE="-2">[1]</font>(5).</dd>
+<dd>This file is used to specify the priority of traffic for simple traffic shaping (TC_ENABLED=Simple in m[blue]<code>shorewall.conf</code>m[][1](5)). The priority band of each packet is determined by the <code>last</code> entry that the packet matches. If a packet doesn&#8217;t match any entry in this file, then its priority will be determined by its TOS field. The default mapping is as follows but can be changed by setting the TC_PRIOMAP option in m[blue]<code>shorewall.conf</code>m[][1](5).</dd>
 <dl>
 <dd>
 <pre>TOS Bits Means Linux Priority BAND
@@ -36,7 +36,7 @@ description: "tcpri – Shorewall file"
 </dd></dl>
 <p> The columns in the file are as follows. <code>BAND</code> &#8211; {<code>1</code>|<code>2</code>|<code>3</code>}</p>
 <dl>
-<dd>Classifies matching traffic as High Priority (1), Medium Priority (2) or Low Priority (3). For those interfaces listed in m[blue]<code>shorewall-tcinterfaces</code>m[]<font SIZE="-2">[2]</font>(5), Priority 2 traffic will be deferred so long and there is Priority 1 traffic queued and Priority 3 traffic will be deferred so long as there is Priority 1 or Priority 2 traffic to send.</dd></dl>
+<dd>Classifies matching traffic as High Priority (1), Medium Priority (2) or Low Priority (3). For those interfaces listed in m[blue]<code>shorewall-tcinterfaces</code>m[][2](5), Priority 2 traffic will be deferred so long and there is Priority 1 traffic queued and Priority 3 traffic will be deferred so long as there is Priority 1 or Priority 2 traffic to send.</dd></dl>
 <p> <code>PROTO</code> &#8211; <i>protocol</i>[,&#8230;]</p>
 <dl>
 <dd>Optional. The name or number of an IPv4 <i>protocol</i>. Beginning with Shorewall 4.5.12, this column can accept a comma-separated list of protocols.</dd></dl>
@@ -50,14 +50,14 @@ description: "tcpri – Shorewall file"
 <dl>
 <dd>Optional. The logical name of an <i>interface</i> that traffic arrives from. If given, the PROTO, PORT(S) and ADDRESS columns must be empty (&quot;-&quot;).</dd>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  INTERFACE classification of packets occurs before classification by PROTO/PORT(S)/ADDRESS. So it is highly recommended to place entries that specify INTERFACE at the top of the file so that the rule about <i>last entry matches</i> is preserved.  <code>HELPER</code> &#8211; [<i>helper</i>]</dd>
 <dl>
 <dd>Optional. Names a Netfilter protocol helper module such as ftp, sip, amanda, etc. A packet will match if it was accepted by the named helper module. You can also append &quot;-&quot; and a port number to the helper module name (e.g., ftp-21) to specify the port number that the original connection was made on.</dd></dl>
 <h2>Files</h2>
 <p>/etc/shorewall/tcpri</p>
 <h2>See Also</h2>
-<p>m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/configuration_file_basics.htm#Pairs">http://www.shorewall.net/configuration_file_basics.htm#Pairs</a></code>m[]<font SIZE="-2">[3]</font> </p>
+<p>m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/configuration_file_basics.htm#Pairs">http://www.shorewall.net/configuration_file_basics.htm#Pairs</a></code>m[][3] </p>
 <p> prio(8), <a href="/docs/linux/man/8-shorewall/">shorewall</a>(8), <a href="/docs/linux/man/5-shorewall-accounting/">shorewall-accounting</a>(5), <a href="/docs/linux/man/5-shorewall-actions/">shorewall-actions</a>(5), <a href="/docs/linux/man/5-shorewall-blacklist/">shorewall-blacklist</a>(5), <a href="/docs/linux/man/5-shorewall-hosts/">shorewall-hosts</a>(5), shorewall_interfaces(5), <a href="/docs/linux/man/5-shorewall-ipsets/">shorewall-ipsets</a>(5), <a href="/docs/linux/man/5-shorewall-maclist/">shorewall-maclist</a>(5), <a href="/docs/linux/man/5-shorewall-masq/">shorewall-masq</a>(5), <a href="/docs/linux/man/5-shorewall-nat/">shorewall-nat</a>(5), <a href="/docs/linux/man/5-shorewall-netmap/">shorewall-netmap</a>(5), <a href="/docs/linux/man/5-shorewall-params/">shorewall-params</a>(5), <a href="/docs/linux/man/5-shorewall-policy/">shorewall-policy</a>(5), <a href="/docs/linux/man/5-shorewall-providers/">shorewall-providers</a>(5), <a href="/docs/linux/man/5-shorewall-proxyarp/">shorewall-proxyarp</a>(5), <a href="/docs/linux/man/5-shorewall-rtrules/">shorewall-rtrules</a>(5), <a href="/docs/linux/man/5-shorewall-routestopped/">shorewall-routestopped</a>(5), <a href="/docs/linux/man/5-shorewall-rules/">shorewall-rules</a>(5), <a href="/docs/linux/man/5-shorewall-conf/">shorewall.conf</a>(5), <a href="/docs/linux/man/5-shorewall-secmarks/">shorewall-secmarks</a>(5), <a href="/docs/linux/man/5-shorewall-tcclasses/">shorewall-tcclasses</a>(5), <a href="/docs/linux/man/5-shorewall-tcdevices/">shorewall-tcdevices</a>(5), <a href="/docs/linux/man/5-shorewall-mangle/">shorewall-mangle</a>(5), <a href="/docs/linux/man/5-shorewall-tos/">shorewall-tos</a>(5), <a href="/docs/linux/man/5-shorewall-tunnels/">shorewall-tunnels</a>(5), <a href="/docs/linux/man/5-shorewall-zones/">shorewall-zones</a>(5)</p>
 <h2>Notes</h2>
 <dl>

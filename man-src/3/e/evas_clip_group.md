@@ -9,13 +9,13 @@ description: "Clip Functions – Functions that manage the clipping of objects b
 
 <p>Clip Functions &#8211; Functions that manage the clipping of objects by other objects. </p>
 <h3>Functions</h3>
-<p>EAPI void <code>evas_object_clip_set</code> (<code>Evas_Object</code> *obj, <code>Evas_Object</code> *clip)<br />
- <i>Clip one object to another. </i><br />
- EAPI <code>Evas_Object</code> * <code>evas_object_clip_get</code> (const <code>Evas_Object</code> *obj)<br />
- <i>Get the object clipping this one (if any). </i><br />
- EAPI void <code>evas_object_clip_unset</code> (<code>Evas_Object</code> *obj)<br />
- <i>Disable clipping for an object. </i><br />
- EAPI const <code>Evas_List</code> * <code>evas_object_clipees_get</code> (const <code>Evas_Object</code> *obj)<br />
+<p>EAPI void <code>evas_object_clip_set</code> (<code>Evas_Object</code> *obj, <code>Evas_Object</code> *clip)<br/>
+ <i>Clip one object to another. </i><br/>
+ EAPI <code>Evas_Object</code> * <code>evas_object_clip_get</code> (const <code>Evas_Object</code> *obj)<br/>
+ <i>Get the object clipping this one (if any). </i><br/>
+ EAPI void <code>evas_object_clip_unset</code> (<code>Evas_Object</code> *obj)<br/>
+ <i>Disable clipping for an object. </i><br/>
+ EAPI const <code>Evas_List</code> * <code>evas_object_clipees_get</code> (const <code>Evas_Object</code> *obj)<br/>
  <i>Return a list of objects currently clipped by a specific object. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that manage the clipping of objects by other objects.</p>
@@ -37,7 +37,7 @@ description: "Clip Functions – Functions that manage the clipping of objects b
 <p>Clip one object to another. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>obj</i> The object to be clipped<br />
+<dd><i>obj</i> The object to be clipped<br/>
  <i>clip</i> The object to clip obj by</dd></dl>
 <p> This function will clip the object obj to the area occupied by the object clipper. This means the object obj will only be visible within the area occupied by the clipping object (clip). The color of the object being clipped will be multiplied by the color of the clipping object, so the resulting color for the clipped object is RESULT = (OBJ * CLIP) / (255 * 255) per color element (red, green, blue and alpha). Clipping is recursive, so clip objects may be clipped by other objects, and their color will in tern be multiplied. You may NOT set up circular clipping lists (i.e. object 1 clips object 2 which clips object 1). The behavior of Evas is undefined in this case. Objects which do not clip others are visible as normal, those that clip 1 or more objects become invisible themselves, only affecting what they clip. If an object ceases to have other objects being clipped by it, it will become visible again. The visibility of an object affects the objects that are clipped by it, so if the object clipping others is not shown, the objects clipped will not be shown either. If the object was being clipped by another object when this function is called, it is implicitly removed from the clipper it is being clipped to, and now is made to clip its new clipper. </p>
 <p> At the moment the only objects that can validly be used to clip other objects are rectangle objects. All other object types are invalid and the result of using them is undefined. </p>

@@ -9,7 +9,7 @@ description: "pure-statsdecode – Show human-readable dates from a \"stats\" lo
 
 <p>pure-statsdecode &#8211; Show human-readable dates from a &quot;stats&quot; logfile</p>
 <h2>Syntax</h2>
-<p>pure-statsdecode <i>filename</i><br />
+<p>pure-statsdecode <i>filename</i><br/>
  pure-statsdecode <i>&#8211;</i></p>
 <h2>Description</h2>
 <p>This program decodes Pure-FTPd&#8217;s &quot;stats&quot; log files and converts timestamps into human-readable dates. </p>

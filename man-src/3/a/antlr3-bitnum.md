@@ -12,15 +12,15 @@ description: "ANTLR3_INT_TRIE_NODE_struct –"
 <h2>Synopsis</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3collections.h">antlr3collections.h</a>&gt;</p>
 <h3>Data Fields</h3>
-<p> <code>ANTLR3_UINT32</code> <code>bitNum</code><br />
- <i>This is the left/right bit index for traversal along the nodes. </i><br />
- <code>pANTLR3_TRIE_ENTRY</code> <code>buckets</code><br />
- <i>This is the data bucket(s) that the key indexes, which may be NULL. </i><br />
- <code>ANTLR3_INTKEY</code> <code>key</code><br />
- <i>This is the actual key that the entry represents if it is a terminal node. </i><br />
- struct <code>ANTLR3_INT_TRIE_NODE_struct</code> * <code>leftN</code><br />
- <i>Pointer to the left node from here when sKey &amp; bitNum = 0. </i><br />
- struct <code>ANTLR3_INT_TRIE_NODE_struct</code> * <code>rightN</code><br />
+<p> <code>ANTLR3_UINT32</code> <code>bitNum</code><br/>
+ <i>This is the left/right bit index for traversal along the nodes. </i><br/>
+ <code>pANTLR3_TRIE_ENTRY</code> <code>buckets</code><br/>
+ <i>This is the data bucket(s) that the key indexes, which may be NULL. </i><br/>
+ <code>ANTLR3_INTKEY</code> <code>key</code><br/>
+ <i>This is the actual key that the entry represents if it is a terminal node. </i><br/>
+ struct <code>ANTLR3_INT_TRIE_NODE_struct</code> * <code>leftN</code><br/>
+ <i>Pointer to the left node from here when sKey &amp; bitNum = 0. </i><br/>
+ struct <code>ANTLR3_INT_TRIE_NODE_struct</code> * <code>rightN</code><br/>
  <i>Pointer to the right node from here when sKey &amp; bitNum, = 1. </i></p>
 <h2>Detailed Description</h2>
 <p> Structure that defines an element/node in an ANTLR3_INT_TRIE.</p>

@@ -26,7 +26,7 @@ description: "pbmtextps – render text into a bitmap via postscript"
 <p> In particular, the meaning of the font size is determined by this resolution. If the font size is 24 points and the resolution is 150 dpi, then the font size is 50 pixels. </p>
 <p> Default is 150 dpi. </p>
 <dt><code>-stroke</code></dt>
-<dd> Width of line to use for stroke font. There is no default stroke width because the letters are solid by default.<br />
+<dd> Width of line to use for stroke font. There is no default stroke width because the letters are solid by default.<br/>
 &nbsp; </dd>
 </dl>
 <h2>USAGE</h2>

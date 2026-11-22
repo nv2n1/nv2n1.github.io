@@ -297,12 +297,12 @@ XF      XOFF character if not haS</code></pre>
 <p> There are several ways of defining the control codes for string capabilities: Every normal character represents itself, except &#8216;ha&#8217;, &#8216;\&#8217;, and &#8216;%&#8217;. A <code>hax</code> means Control-x. Control-A equals 1 decimal. </p>
 <p> \x means a special code. x can be one of the following characters: </p>
 <dl>
-<dd> <p> E Escape (27) <br />
- n Linefeed (10) <br />
- r Carriage return (13) <br />
- t Tabulation (9) <br />
- b Backspace (8) <br />
- f Form feed (12) <br />
+<dd> <p> E Escape (27) <br/>
+ n Linefeed (10) <br/>
+ r Carriage return (13) <br/>
+ t Tabulation (9) <br/>
+ b Backspace (8) <br/>
+ f Form feed (12) <br/>
  0 Null character. A \xxx specifies the octal character xxx. </p>
  </dd></dl>
 <dl>

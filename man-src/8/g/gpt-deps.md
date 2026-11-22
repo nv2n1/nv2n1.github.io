@@ -24,7 +24,7 @@ description: "gpt-deps – Reports on an installation’s package dependencies"
 <dt><code>-man</code></dt>
 <dd>Prints the manual page and exits.</dd>
 <dt><code>-version</code></dt>
-<dd>Prints the version of <font SIZE="-1">GPT</font> and exits.</dd></dl>
+<dd>Prints the version of GPT and exits.</dd></dl>
 <h2>Bugs</h2>
 <p>Future versions will provide more flexibility in inputs, and output formats.</p>
 <h2>See Also</h2>

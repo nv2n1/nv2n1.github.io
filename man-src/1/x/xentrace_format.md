@@ -17,7 +17,7 @@ description: "xentrace_format – pretty-print Xen trace data"
 <p> <i>event_id</i> <i>whitespace</i> <i>format</i> </p>
 <p> Each rule should start on a new line. </p>
 <p> The format string may include format specifiers, such as: %(cpu)d, %(tsc)d, %(event)d, %(1)d, %(2)d, %(3)d, %(4)d, %(5)d </p>
-<p> [ the `d&#8217; format specifier output in decimal, alternatively `x&#8217;<br />
+<p> [ the `d&#8217; format specifier output in decimal, alternatively `x&#8217;<br/>
 &nbsp;<wbr>&nbsp;<wbr>will output in hexadecimal and&nbsp;<wbr>`o&#8217;&nbsp;<wbr>will output in octal&nbsp;<wbr>] </p>
 <p> These correspond to the CPU number, event ID, timestamp counter and the 5 data fields from the trace record. There should be one such rule for each type of event to be pretty-printed (events which do not have formatting rules are ignored). </p>
 <p> A sample format file for Xen&#8217;s predefined trace events is available in the file tools/xentrace/formats in the Xen source tree. </p>

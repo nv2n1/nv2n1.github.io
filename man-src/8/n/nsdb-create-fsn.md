@@ -85,11 +85,11 @@ description: "nsdb-create-fsn – create a fileset name (FSN) record on an NSDB"
 </dl>
 <p> Further suppose the NSDB <i>nsdb.example.net:389</i> has an NSDB Container Entry whose distinguished name is <i>o=fedfs</i>. To create a corresponding FSN record, you might use:</p>
 <dl>
-<dd>$ nsdb-create-fsn -D cn=Manager -e o=fedfs \<br />
+<dd>$ nsdb-create-fsn -D cn=Manager -e o=fedfs \<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>-l nsdb.example.net \</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>8e246ddc-7b46-11e0-8252-000c297fd679</p>
-<p> Enter NSDB password:<br />
- Successfully created FSN record<br />
+<p> Enter NSDB password:<br/>
+ Successfully created FSN record<br/>
 &nbsp;<wbr>&nbsp;<wbr>fedfsFsnUuid=8e246ddc-7b46-11e0-8252-000c297fd679,o=fedfs </p>
 </dl>
 <p> A new FSN record is created on <i>nsdb.example.net:389</i> with a distinguished name of</p>

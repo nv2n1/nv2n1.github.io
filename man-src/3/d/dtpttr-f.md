@@ -10,7 +10,7 @@ description: "dtpttr.f –"
 <p>dtpttr.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dtpttr</code> (UPLO, N, AP, A, LDA, INFO)<br />
+<p>subroutine <code>dtpttr</code> (UPLO, N, AP, A, LDA, INFO)<br/>
  <i></i><code>DTPTTR</code> copies a triangular matrix from the standard packed format (TP) to the standard full format (TR).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dtpttr (characterUPLO, integerN, double precision, dimension( * )AP, double precision, dimension( lda, * )A, integerLDA, integerINFO)</h3>

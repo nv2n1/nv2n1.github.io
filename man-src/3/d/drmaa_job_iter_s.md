@@ -13,7 +13,7 @@ description: "drmaa_job_iter_s –"
 <h2>SYNOPSIS</h2>
 <p> #include &lt;jobs.h&gt;</p>
 <h3>Data Fields</h3>
-<p> unsigned <code>hash</code><br />
+<p> unsigned <code>hash</code><br/>
  <i>Hash value of job identifier. </i></p>
 <h2>Detailed Description</h2>
 <p> Iterates over submitted jobs set. </p>

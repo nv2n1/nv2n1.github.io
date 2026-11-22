@@ -10,9 +10,9 @@ description: "dc – an arbitrary precision calculator"
 
 <p> dc &#8211; an arbitrary precision calculator </p>
 <h2>SYNOPSIS</h2>
-<p> dc [-V] [&#8211;version] [-h] [&#8211;help]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;[-e scriptexpression]&nbsp;[&#8211;expression=scriptexpression]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;[-f scriptfile]&nbsp;[&#8211;file=scriptfile]<br />
+<p> dc [-V] [&#8211;version] [-h] [&#8211;help]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;[-e scriptexpression]&nbsp;[&#8211;expression=scriptexpression]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;[-f scriptfile]&nbsp;[&#8211;file=scriptfile]<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;[file &#8230;]</p>
 <h2>DESCRIPTION</h2>
 <p> <i>dc</i> is a reverse-polish desk calculator which supports unlimited precision arithmetic. It also allows you to define and call macros. Normally <i>dc</i> reads from the standard input; if any command arguments are given to it, they are filenames, and <i>dc</i> reads and executes the contents of the files before reading from standard input. All normal output is to standard output; all error output is to standard error. </p>

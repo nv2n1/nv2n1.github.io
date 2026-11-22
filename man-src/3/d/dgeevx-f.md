@@ -10,7 +10,7 @@ description: "dgeevx.f –"
 <p>dgeevx.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dgeevx</code> (BALANC, JOBVL, JOBVR, SENSE, N, A, LDA, WR, WI, VL, LDVL, VR, LDVR, ILO, IHI, SCALE, ABNRM, RCONDE, RCONDV, WORK, LWORK, IWORK, INFO)<br />
+<p>subroutine <code>dgeevx</code> (BALANC, JOBVL, JOBVR, SENSE, N, A, LDA, WR, WI, VL, LDVL, VR, LDVR, ILO, IHI, SCALE, ABNRM, RCONDE, RCONDV, WORK, LWORK, IWORK, INFO)<br/>
  <i></i><code> DGEEVX computes the eigenvalues and, optionally, the left and/or right eigenvectors for GE matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dgeevx (characterBALANC, characterJOBVL, characterJOBVR, characterSENSE, integerN, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( * )WR, double precision, dimension( * )WI, double precision, dimension( ldvl, * )VL, integerLDVL, double precision, dimension( ldvr, * )VR, integerLDVR, integerILO, integerIHI, double precision, dimension( * )SCALE, double precisionABNRM, double precision, dimension( * )RCONDE, double precision, dimension( * )RCONDV, double precision, dimension( * )WORK, integerLWORK, integer, dimension( * )IWORK, integerINFO)</h3>

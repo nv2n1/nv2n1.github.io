@@ -30,19 +30,19 @@ struct wl_list listener_list</code></pre>
 <p>Add the specified listener to this signal. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>signal</i> The signal that will emit events to the listener<br />
+<dd><i>signal</i> The signal that will emit events to the listener<br/>
  <i>listener</i> The listener to add</dd></dl>
 <h3>static void wl_signal_emit (struct <code>wl_signal</code> *signal, void *data) [inline]</h3>
 <p>Emits this signal, notifying all registered listeners. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>signal</i> The signal object that will emit the signal<br />
+<dd><i>signal</i> The signal object that will emit the signal<br/>
  <i>data</i> The data that will be emitted with the signal</dd></dl>
 <h3>static struct <code>wl_listener</code> * wl_signal_get (struct <code>wl_signal</code> *signal, wl_notify_func_tnotify)</h3>
 <p>Gets the listener struct for the specified callback. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>signal</i> The signal that contains the specified listener<br />
+<dd><i>signal</i> The signal that contains the specified listener<br/>
  <i>notify</i> The listener that is the target of this search</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

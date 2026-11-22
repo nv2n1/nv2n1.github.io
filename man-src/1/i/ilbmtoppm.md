@@ -49,10 +49,10 @@ description: "ilbmtoppm – convert an ILBM file into a portable pixmap"
 <h2>BUGS</h2>
 <p> The multipalette PCHG BigLineChanges and Huffman decompression code is untested.</p>
 <h2>REFERENCES</h2>
-<p> Amiga ROM Kernel Reference Manual &#8211; Devices (3rd Ed.)<br />
+<p> Amiga ROM Kernel Reference Manual &#8211; Devices (3rd Ed.)<br/>
  Addison Wesley, ISBN 0-201-56775-X</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/5-ppm/">ppm</a>(5), <a href="/docs/linux/man/1-ppmtoilbm/">ppmtoilbm</a>(1)</p>
 <h2>AUTHORS</h2>
-<p> Copyright (C) 1989 by Jef Poskanzer.<br />
+<p> Copyright (C) 1989 by Jef Poskanzer.<br/>
  Modified October 1993 by Ingo Wilken (Ingo.Wilken [at] informatik.uni-oldenburg.de) </p>

@@ -17,17 +17,17 @@ description: "hdf_sort_obj – sort the children of an HDF node"
 hdf_sort_obj()
 </pre>
 <h2>ARGUMENTS</h2>
-<p> h &#8211; HDF node<br />
- compareFunc &#8211; function which returns 1,0,-1 depending on some<br />
- criteria. The arguments to this sort function<br />
- are pointers to pointers to HDF elements. For<br />
- example:<br />
- int sortByName(const void *a, const void *b) {<br />
- HDF **ha = (HDF **)a;<br />
- HDF **hb = (HDF **)b;<br />
- *<br />
- return strcasecmp(hdf_obj_name(*ha), hdf_obj_name(*hb));<br />
- }<br />
+<p> h &#8211; HDF node<br/>
+ compareFunc &#8211; function which returns 1,0,-1 depending on some<br/>
+ criteria. The arguments to this sort function<br/>
+ are pointers to pointers to HDF elements. For<br/>
+ example:<br/>
+ int sortByName(const void *a, const void *b) {<br/>
+ HDF **ha = (HDF **)a;<br/>
+ HDF **hb = (HDF **)b;<br/>
+ *<br/>
+ return strcasecmp(hdf_obj_name(*ha), hdf_obj_name(*hb));<br/>
+ }<br/>
  * </p>
 <h2>DESCRIPTION</h2>
 <p> hdf_sort_obj will sort the children of an HDF node, based on the given comparison function. This function works by creating an array of the pointers for each child object of h, using qsort to sort that array, and then re-ordering the linked list of children to the new order. The qsort compare function uses a pointer to the value in the array, which in our case is a pointer to an HDF struct, so your comparison function should work on HDF ** pointers. </p>

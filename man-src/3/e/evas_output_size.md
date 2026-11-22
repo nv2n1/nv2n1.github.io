@@ -9,13 +9,13 @@ description: "Evas Output and Viewport Resizing Functions – Functions that set
 
 <p>Evas Output and Viewport Resizing Functions &#8211; Functions that set and retrieve the output and viewport size of an evas. </p>
 <h3>Functions</h3>
-<p>EAPI void <code>evas_output_size_set</code> (<code>Evas</code> *e, int w, int h)<br />
- <i>Sets the output size of the render engine of the given evas. </i><br />
- EAPI void <code>evas_output_size_get</code> (const <code>Evas</code> *e, int *w, int *h)<br />
- <i>Retrieve the output size of the render engine of the given evas. </i><br />
- EAPI void <code>evas_output_viewport_set</code> (<code>Evas</code> *e, Evas_Coord x, Evas_Coord y, Evas_Coord w, Evas_Coord h)<br />
- <i>Sets the output viewport of the given evas in evas units. </i><br />
- EAPI void <code>evas_output_viewport_get</code> (const <code>Evas</code> *e, Evas_Coord *x, Evas_Coord *y, Evas_Coord *w, Evas_Coord *h)<br />
+<p>EAPI void <code>evas_output_size_set</code> (<code>Evas</code> *e, int w, int h)<br/>
+ <i>Sets the output size of the render engine of the given evas. </i><br/>
+ EAPI void <code>evas_output_size_get</code> (const <code>Evas</code> *e, int *w, int *h)<br/>
+ <i>Retrieve the output size of the render engine of the given evas. </i><br/>
+ EAPI void <code>evas_output_viewport_set</code> (<code>Evas</code> *e, Evas_Coord x, Evas_Coord y, Evas_Coord w, Evas_Coord h)<br/>
+ <i>Sets the output viewport of the given evas in evas units. </i><br/>
+ EAPI void <code>evas_output_viewport_get</code> (const <code>Evas</code> *e, Evas_Coord *x, Evas_Coord *y, Evas_Coord *w, Evas_Coord *h)<br/>
  <i>Get the render engine&#8217;s output viewport co-ordinates in canvas units. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that set and retrieve the output and viewport size of an evas.</p>
@@ -26,8 +26,8 @@ description: "Evas Output and Viewport Resizing Functions – Functions that set
 <p> If either w or h is NULL, then it is ignored. If e is invalid, the returned results are undefined. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>e</i> The given evas.<br />
- <i>w</i> The pointer to an integer to store the width in.<br />
+<dd><i>e</i> The given evas.<br/>
+ <i>w</i> The pointer to an integer to store the width in.<br/>
  <i>h</i> The pointer to an integer to store the height in.</dd></dl>
 <h3>EAPI void evas_output_size_set (<code>Evas</code> * e, int w, int h)</h3>
 <p>Sets the output size of the render engine of the given evas. </p>
@@ -35,17 +35,17 @@ description: "Evas Output and Viewport Resizing Functions – Functions that set
 <p> The units used for w and h depend on the engine used by the evas. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>e</i> The given evas.<br />
- <i>w</i> The width in output units, usually pixels.<br />
+<dd><i>e</i> The given evas.<br/>
+ <i>w</i> The width in output units, usually pixels.<br/>
  <i>h</i> The height in output units, usually pixels.</dd></dl>
 <h3>EAPI void evas_output_viewport_get (const <code>Evas</code> * e, Evas_Coord * x, Evas_Coord * y, Evas_Coord * w, Evas_Coord * h)</h3>
 <p>Get the render engine&#8217;s output viewport co-ordinates in canvas units. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>e</i> The pointer to the Evas Canvas<br />
- <i>x</i> The pointer to a x variable to be filled in<br />
- <i>y</i> The pointer to a y variable to be filled in<br />
- <i>w</i> The pointer to a width variable to be filled in<br />
+<dd><i>e</i> The pointer to the Evas Canvas<br/>
+ <i>x</i> The pointer to a x variable to be filled in<br/>
+ <i>y</i> The pointer to a y variable to be filled in<br/>
+ <i>w</i> The pointer to a width variable to be filled in<br/>
  <i>h</i> The pointer to a height variable to be filled in</dd></dl>
 <p> Calling this function writes the current canvas output viewport size and location values into the variables pointed to by x, y, w and h. On success the variables have the output location and size values written to them in canvas units. Any of x, y, w or h that are NULL will not be written to. If e is invalid, the results are undefined. </p>
 <p> Example: </p>
@@ -61,10 +61,10 @@ description: "Evas Output and Viewport Resizing Functions – Functions that set
 <dd>The coordinate values do not have to map 1-to-1 with the output target. However, it is generally advised that it is done for ease of use.</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>e</i> The given evas.<br />
- <i>x</i> The top-left corner x value of the viewport.<br />
- <i>y</i> The top-left corner y value of the viewport.<br />
- <i>w</i> The width of the viewport. Must be greater than 0.<br />
+<dd><i>e</i> The given evas.<br/>
+ <i>x</i> The top-left corner x value of the viewport.<br/>
+ <i>y</i> The top-left corner y value of the viewport.<br/>
+ <i>w</i> The width of the viewport. Must be greater than 0.<br/>
  <i>h</i> The height of the viewport. Must be greater than 0.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Evas from the source code.</p>

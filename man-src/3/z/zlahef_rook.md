@@ -10,7 +10,7 @@ description: "zlahef_rook.f –"
 <p>zlahef_rook.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlahef_rook</code> (UPLO, N, NB, KB, A, LDA, IPIV, W, LDW, INFO)<br />
+<p>subroutine <code>zlahef_rook</code> (UPLO, N, NB, KB, A, LDA, IPIV, W, LDW, INFO)<br/>
  <i> </i></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlahef_rook (characterUPLO, integerN, integerNB, integerKB, complex*16, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, complex*16, dimension( ldw, * )W, integerLDW, integerINFO)</h3>

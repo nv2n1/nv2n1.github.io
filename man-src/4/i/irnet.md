@@ -54,19 +54,19 @@ description: "irnet – IrNET protocol device"
 <dd>This computer successfully terminated an IrNET connection with a peer.</dd></dl>
 <p> File <code>/proc/net/irda/irnet</code> will also show the current state of the various IrNET connections.</p>
 <h2>Example</h2>
-<p>Start a IrNET server accepting any incoming connection:<br />
+<p>Start a IrNET server accepting any incoming connection:<br/>
  <code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>pppd /dev/irnet 9600 local noauth nolock passive</code> </p>
 <p> Start a IrNET client connecting to any IrDA peer:</p>
 <p> <code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>pppd /dev/irnet 9600 local noauth nolock</code> </p>
-<p> Start a IrNET client connecting to the IrDA peer called<br />
- <i>MyIrDANode</i>:<br />
+<p> Start a IrNET client connecting to the IrDA peer called<br/>
+ <i>MyIrDANode</i>:<br/>
  <code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>pppd /dev/irnet 9600 local noauth nolock connect echo name MyIrDANode</code> </p>
 <p> Start a IrNET server accepting incoming connection from peer with IrDA address 0x12345678 only on IrDA port 0x87654321:</p>
 <p> <code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>pppd /dev/irnet 9600 local noauth nolock passive connect echo daddr 0x12345678 , saddr 0x87654321</code></p>
 <h2>Author</h2>
 <p>Jean Tourrilhes &#8211; jt [at] hpl.hp.com</p>
 <h2>Files</h2>
-<p><i>/dev/irnet</i><br />
+<p><i>/dev/irnet</i><br/>
  <i>/proc/net/irda/irnet</i></p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/7-irda/">irda</a></code>(7), <code><a href="/docs/linux/man/8-irnetd/">irnetd</a></code>(8), <code><a href="/docs/linux/man/8-pppd/">pppd</a></code>(8), <code><a href="/docs/linux/man/8-irattach/">irattach</a></code>(8), <code><a href="/docs/linux/man/8-irdadump/">irdadump</a></code>(8). </p>

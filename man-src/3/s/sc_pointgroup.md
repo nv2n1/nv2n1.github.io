@@ -14,36 +14,36 @@ description: "sc::PointGroup –"
 #include &lt;pointgrp.h&gt;</code></pre>
 <p> Inherits <code>sc::SavableState</code>.</p>
 <h3>Public Member Functions</h3>
-<p><code>PointGroup</code> (const char *)<br />
- <i>This constructor takes a string containing the Schoenflies symbol of the </i><code>point</code> group as its only argument.<br />
- <code>PointGroup</code> (const char *, <code>SymmetryOperation</code> &amp;)<br />
- <i>Like the above, but this constructor also takes a frame of reference as an argument. </i><br />
- <code>PointGroup</code> (const char *, <code>SymmetryOperation</code> &amp;, const <code>SCVector3</code> &amp;)<br />
- <i>Like the above, but this constructor also takes a </i><code>point</code> of origin as an argument.<br />
- <code>PointGroup</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br />
- <i>The </i><code>PointGroup</code> <code>KeyVal</code> constructor looks for three keywords: symmetry, symmetry_frame, and origin.<br />
+<p><code>PointGroup</code> (const char *)<br/>
+ <i>This constructor takes a string containing the Schoenflies symbol of the </i><code>point</code> group as its only argument.<br/>
+ <code>PointGroup</code> (const char *, <code>SymmetryOperation</code> &amp;)<br/>
+ <i>Like the above, but this constructor also takes a frame of reference as an argument. </i><br/>
+ <code>PointGroup</code> (const char *, <code>SymmetryOperation</code> &amp;, const <code>SCVector3</code> &amp;)<br/>
+ <i>Like the above, but this constructor also takes a </i><code>point</code> of origin as an argument.<br/>
+ <code>PointGroup</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br/>
+ <i>The </i><code>PointGroup</code> <code>KeyVal</code> constructor looks for three keywords: symmetry, symmetry_frame, and origin.<br/>
  <code>PointGroup</code> (<code>StateIn</code> &amp;) </p>
 <p> <code>PointGroup</code> (const <code>PointGroup</code> &amp;) </p>
 <p> <code>PointGroup</code> (const <code>Ref</code>&lt; <code>PointGroup</code> &gt; &amp;) </p>
 <p> <code>PointGroup</code> &amp; <code>operator=</code> (const <code>PointGroup</code> &amp;) </p>
-<p> int <code>equiv</code> (const <code>Ref</code>&lt; <code>PointGroup</code> &gt; &amp;, double tol=1.0e-6) const<br />
- <i>Returns 1 if the </i><code>point</code> groups are equivalent, 0 otherwise.<br />
- <code>CharacterTable</code> <code>char_table</code> () const<br />
- <i>Returns the </i><code>CharacterTable</code> for this <code>point</code> group.<br />
- const char * <code>symbol</code> () const<br />
- <i>Returns the Schoenflies symbol for this </i><code>point</code> group.<br />
- <code>SymmetryOperation</code> &amp; <code>symm_frame</code> ()<br />
- <i>Returns the frame of reference for this </i><code>point</code> group.<br />
- const <code>SymmetryOperation</code> &amp; <code>symm_frame</code> () const<br />
- <i>A const version of the above. </i><br />
- <code>SCVector3</code> &amp; <code>origin</code> ()<br />
- <i>Returns the origin of the symmetry frame. </i><br />
+<p> int <code>equiv</code> (const <code>Ref</code>&lt; <code>PointGroup</code> &gt; &amp;, double tol=1.0e-6) const<br/>
+ <i>Returns 1 if the </i><code>point</code> groups are equivalent, 0 otherwise.<br/>
+ <code>CharacterTable</code> <code>char_table</code> () const<br/>
+ <i>Returns the </i><code>CharacterTable</code> for this <code>point</code> group.<br/>
+ const char * <code>symbol</code> () const<br/>
+ <i>Returns the Schoenflies symbol for this </i><code>point</code> group.<br/>
+ <code>SymmetryOperation</code> &amp; <code>symm_frame</code> ()<br/>
+ <i>Returns the frame of reference for this </i><code>point</code> group.<br/>
+ const <code>SymmetryOperation</code> &amp; <code>symm_frame</code> () const<br/>
+ <i>A const version of the above. </i><br/>
+ <code>SCVector3</code> &amp; <code>origin</code> ()<br/>
+ <i>Returns the origin of the symmetry frame. </i><br/>
  const <code>SCVector3</code> &amp; <code>origin</code> () const </p>
-<p> void <code>set_symbol</code> (const char *)<br />
- <i>Sets (or resets) the Schoenflies symbol. </i><br />
- void <code>save_data_state</code> (<code>StateOut</code> &amp;so)<br />
- <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br />
- void <code>print</code> (std::ostream &amp;o=ExEnv::out0()) const<br />
+<p> void <code>set_symbol</code> (const char *)<br/>
+ <i>Sets (or resets) the Schoenflies symbol. </i><br/>
+ void <code>save_data_state</code> (<code>StateOut</code> &amp;so)<br/>
+ <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br/>
+ void <code>print</code> (std::ostream &amp;o=ExEnv::out0()) const<br/>
  <i>Print the object. </i></p>
 <h2>Detailed Description</h2>
 <p>The <code>PointGroup</code> class is really a place holder for a <code>CharacterTable</code>. </p>

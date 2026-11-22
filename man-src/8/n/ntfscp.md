@@ -47,14 +47,14 @@ description: "ntfscp – copy file to an NTFS volume."
 <dl>
 <dd><code>ntfscp -N stream /dev/hda1 myfile /some/path</code> </dd>
 <h2>Bugs</h2>
-<p>There are no known problems with <code>ntfscp</code>. If you find a bug please send an email describing the problem to the development team:<br />
+<p>There are no known problems with <code>ntfscp</code>. If you find a bug please send an email describing the problem to the development team:<br/>
  ntfs-3g-devel [at] lists.sf.net</p>
 <h2>Authors</h2>
 <p><code>ntfscp</code> was written by Yura Pakhuchiy, with contributions from Anton Altaparmakov and Hil Liao. It was ported to ntfs-3g by Erik Larsson.</p>
 <h2>Dedication</h2>
 <p>With love to Marina Sapego.</p>
 <h2>Availability</h2>
-<p><code>ntfscp</code> is part of the <code>ntfs-3g</code> package and is available from:<br />
+<p><code>ntfscp</code> is part of the <code>ntfs-3g</code> package and is available from:<br/>
  <a rel="nofollow" href="https://github.com/tuxera/ntfs-3g">https://github.com/tuxera/ntfs-3g</a></p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-ntfsprogs/">ntfsprogs</a></code>(8) </p>

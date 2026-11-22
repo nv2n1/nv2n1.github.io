@@ -10,12 +10,12 @@ description: "ql/math/incompletegamma.hpp – Incomplete Gamma function."
 
 <p> ql/math/incompletegamma.hpp &#8211; Incomplete Gamma function. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/errors.hpp&gt;<br />
- #include &lt;ql/types.hpp&gt;<br />
+<p> #include &lt;ql/errors.hpp&gt;<br/>
+ #include &lt;ql/types.hpp&gt;<br/>
  #include &lt;functional&gt; </p>
 <h3>Functions</h3>
-<p> Real <code>incompleteGammaFunction</code> (Real a, Real x, Real accuracy=1.0e-13, Integer maxIteration=100)<br />
- <i>Incomplete Gamma function. </i><br />
+<p> Real <code>incompleteGammaFunction</code> (Real a, Real x, Real accuracy=1.0e-13, Integer maxIteration=100)<br/>
+ <i>Incomplete Gamma function. </i><br/>
  Real <code>incompleteGammaFunctionSeriesRepr</code> (Real a, Real x, Real accuracy=1.0e-13, Integer maxIteration=100) </p>
 <p> Real <code>incompleteGammaFunctionContinuedFractionRepr</code> (Real a, Real x, Real accuracy=1.0e-13, Integer maxIteration=100) </p>
 <h2>Detailed Description</h2>

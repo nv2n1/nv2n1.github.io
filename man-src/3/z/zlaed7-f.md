@@ -10,7 +10,7 @@ description: "zlaed7.f –"
 <p>zlaed7.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlaed7</code> (N, CUTPNT, QSIZ, TLVLS, CURLVL, CURPBM, D, Q, LDQ, RHO, INDXQ, QSTORE, QPTR, PRMPTR, PERM, GIVPTR, GIVCOL, GIVNUM, WORK, RWORK, IWORK, INFO)<br />
+<p>subroutine <code>zlaed7</code> (N, CUTPNT, QSIZ, TLVLS, CURLVL, CURPBM, D, Q, LDQ, RHO, INDXQ, QSTORE, QPTR, PRMPTR, PERM, GIVPTR, GIVCOL, GIVNUM, WORK, RWORK, IWORK, INFO)<br/>
  <i></i><code>ZLAED7</code> used by sstedc. Computes the updated eigensystem of a diagonal matrix after modification by a rank-one symmetric matrix. Used when the original matrix is dense.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlaed7 (integerN, integerCUTPNT, integerQSIZ, integerTLVLS, integerCURLVL, integerCURPBM, double precision, dimension( * )D, complex*16, dimension( ldq, * )Q, integerLDQ, double precisionRHO, integer, dimension( * )INDXQ, double precision, dimension( * )QSTORE, integer, dimension( * )QPTR, integer, dimension( * )PRMPTR, integer, dimension( * )PERM, integer, dimension( * )GIVPTR, integer, dimension( 2, * )GIVCOL, double precision, dimension( 2, * )GIVNUM, complex*16, dimension( * )WORK, double precision, dimension( * )RWORK, integer, dimension( * )IWORK, integerINFO)</h3>

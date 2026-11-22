@@ -37,7 +37,7 @@ description: "radeontool — utility to get/set registers and to control backlig
 <dt><code>&#8211;skip=n</code></dt>
 <dd>Skips the first n cards and acts on the n+1</dd></dl>
 <h2>Author</h2>
-<p>This manual page was written by Luigi Gangitano luigi [at] debian.org for the <code>Debian</code> system (but may be used by others). Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 any later version published by the Free Software Foundation.<br />
+<p>This manual page was written by Luigi Gangitano luigi [at] debian.org for the <code>Debian</code> system (but may be used by others). Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 any later version published by the Free Software Foundation.<br/>
 &nbsp;<wbr> </p>
-<p> On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL.<br />
+<p> On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL.<br/>
 &nbsp;<wbr></p>

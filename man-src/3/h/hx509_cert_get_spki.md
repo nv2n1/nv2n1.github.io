@@ -49,8 +49,8 @@ description: "hx509 certificate functions –"
 <p>Encodes the hx509 certificate as a DER encode binary. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> A hx509 context.<br />
- <i>c</i> the certificate to encode.<br />
+<dd><i>context</i> A hx509 context.<br/>
+ <i>c</i> the certificate to encode.<br/>
  <i>os</i> the encode certificate, set to NULL, 0 on case of error. Free the os-&gt;data with <code>hx509_xfree()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -59,9 +59,9 @@ description: "hx509 certificate functions –"
 <p>Check the extended key usage on the hx509 certificate. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> A hx509 context.<br />
- <i>cert</i> A hx509 context.<br />
- <i>eku</i> the EKU to check for<br />
+<dd><i>context</i> A hx509 context.<br/>
+ <i>cert</i> A hx509 context.<br/>
+ <i>eku</i> the EKU to check for<br/>
  <i>allow_any_eku</i> if the any EKU is set, allow that to be a substitute.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -70,7 +70,7 @@ description: "hx509 certificate functions –"
 <p>Compare to hx509 certificate object, useful for sorting. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>p</i> a hx509 certificate object.<br />
+<dd><i>p</i> a hx509 certificate object.<br/>
  <i>q</i> a hx509 certificate object.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -80,9 +80,9 @@ description: "hx509 certificate functions –"
 <p> The returned list of octet string should be freed with <code>hx509_free_octet_string_list()</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> A hx509 context.<br />
- <i>cert</i> a hx509 certificate object.<br />
- <i>oid</i> an oid to for SubjectAltName.<br />
+<dd><i>context</i> A hx509 context.<br/>
+ <i>cert</i> a hx509 certificate object.<br/>
+ <i>oid</i> an oid to for SubjectAltName.<br/>
  <i>list</i> list of matching SubjectAltName.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -96,7 +96,7 @@ description: "hx509 certificate functions –"
 <p>Get an external attribute for the certificate, examples are friendly name and id. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>cert</i> hx509 certificate object to search<br />
+<dd><i>cert</i> hx509 certificate object to search<br/>
  <i>oid</i> an oid to search for.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -105,8 +105,8 @@ description: "hx509 certificate functions –"
 <p>Return the name of the base subject of the hx509 certificate. If the certiicate is a verified proxy certificate, the this function return the base certificate (root of the proxy chain). If the proxy certificate is not verified with the base certificate HX509_PROXY_CERTIFICATE_NOT_CANONICALIZED is returned. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> a hx509 context.<br />
- <i>c</i> a hx509 certificate object.<br />
+<dd><i>context</i> a hx509 context.<br/>
+ <i>c</i> a hx509 certificate object.<br/>
  <i>name</i> a pointer to a hx509 name, should be freed by <code>hx509_name_free()</code>. See also <code>hx509_cert_get_subject()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -123,7 +123,7 @@ description: "hx509 certificate functions –"
 <p>Return the name of the issuer of the hx509 certificate. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>p</i> a hx509 certificate object.<br />
+<dd><i>p</i> a hx509 certificate object.<br/>
  <i>name</i> a pointer to a hx509 name, should be freed by <code>hx509_name_free()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -132,8 +132,8 @@ description: "hx509 certificate functions –"
 <p>Get a copy of the Issuer Unique ID </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> a hx509_context<br />
- <i>p</i> a hx509 certificate<br />
+<dd><i>context</i> a hx509_context<br/>
+ <i>p</i> a hx509 certificate<br/>
  <i>issuer</i> the issuer id returned, free with der_free_bit_string()</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -158,7 +158,7 @@ description: "hx509 certificate functions –"
 <p>Get serial number of the certificate. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>p</i> a hx509 certificate object.<br />
+<dd><i>p</i> a hx509 certificate object.<br/>
  <i>i</i> serial number, should be freed ith der_free_heim_integer().</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -167,8 +167,8 @@ description: "hx509 certificate functions –"
 <p>Get the SubjectPublicKeyInfo structure from the hx509 certificate. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> a hx509 context.<br />
- <i>p</i> a hx509 certificate object.<br />
+<dd><i>context</i> a hx509 context.<br/>
+ <i>p</i> a hx509 certificate object.<br/>
  <i>spki</i> SubjectPublicKeyInfo, should be freed with free_SubjectPublicKeyInfo().</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -177,8 +177,8 @@ description: "hx509 certificate functions –"
 <p>Get the AlgorithmIdentifier from the hx509 certificate. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> a hx509 context.<br />
- <i>p</i> a hx509 certificate object.<br />
+<dd><i>context</i> a hx509 context.<br/>
+ <i>p</i> a hx509 certificate object.<br/>
  <i>alg</i> AlgorithmIdentifier, should be freed with free_AlgorithmIdentifier(). The algorithmidentifier is typicly rsaEncryption, or id-ecPublicKey, or some other public key mechanism.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -187,7 +187,7 @@ description: "hx509 certificate functions –"
 <p>Return the name of the subject of the hx509 certificate. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>p</i> a hx509 certificate object.<br />
+<dd><i>p</i> a hx509 certificate object.<br/>
  <i>name</i> a pointer to a hx509 name, should be freed by <code>hx509_name_free()</code>. See also <code>hx509_cert_get_base_subject()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -196,8 +196,8 @@ description: "hx509 certificate functions –"
 <p>Get a copy of the Subect Unique ID </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> a hx509_context<br />
- <i>p</i> a hx509 certificate<br />
+<dd><i>context</i> a hx509_context<br/>
+ <i>p</i> a hx509 certificate<br/>
  <i>subject</i> the subject id returned, free with der_free_bit_string()</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -206,8 +206,8 @@ description: "hx509 certificate functions –"
 <p>Allocate and init an hx509 certificate object from the decoded certificate `c´. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> A hx509 context.<br />
- <i>c</i><br />
+<dd><i>context</i> A hx509 context.<br/>
+ <i>c</i><br/>
  <i>error</i></dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -217,9 +217,9 @@ description: "hx509 certificate functions –"
 <p> If the memory region doesn&#8217;t contain just the certificate and nothing more the function will fail with HX509_EXTRA_DATA_AFTER_STRUCTURE. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> A hx509 context.<br />
- <i>ptr</i> pointer to memory region containing encoded certificate.<br />
- <i>len</i> length of memory region.<br />
+<dd><i>context</i> A hx509 context.<br/>
+ <i>ptr</i> pointer to memory region containing encoded certificate.<br/>
+ <i>len</i> length of memory region.<br/>
  <i>error</i> possibly returns an error</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -236,7 +236,7 @@ description: "hx509 certificate functions –"
 <p>Set the friendly name on the certificate. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>cert</i> The certificate to set the friendly name on<br />
+<dd><i>cert</i> The certificate to set the friendly name on<br/>
  <i>name</i> Friendly name.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -245,8 +245,8 @@ description: "hx509 certificate functions –"
 <p>Print a simple representation of a certificate </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> A hx509 context, can be NULL<br />
- <i>cert</i> certificate to print<br />
+<dd><i>context</i> A hx509 context, can be NULL<br/>
+ <i>cert</i> certificate to print<br/>
  <i>out</i> the stdio output stream, if NULL, stdout is used</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -255,7 +255,7 @@ description: "hx509 certificate functions –"
 <p>Allocate an query controller. Free using <code>hx509_query_free()</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> A hx509 context.<br />
+<dd><i>context</i> A hx509 context.<br/>
  <i>q</i> return pointer to a hx509_query.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -264,14 +264,14 @@ description: "hx509 certificate functions –"
 <p>Free the query controller. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> A hx509 context.<br />
+<dd><i>context</i> A hx509 context.<br/>
  <i>q</i> a pointer to the query controller.</dd></dl>
 <h3>int hx509_query_match_cmp_func (hx509_query *q, int(*)(hx509_context, hx509_cert, void *)func, void *ctx)</h3>
 <p>Set the query controller to match using a specific match function. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>q</i> a hx509 query controller.<br />
- <i>func</i> function to use for matching, if the argument is NULL, the match function is removed.<br />
+<dd><i>q</i> a hx509 query controller.<br/>
+ <i>func</i> function to use for matching, if the argument is NULL, the match function is removed.<br/>
  <i>ctx</i> context passed to the function.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -280,7 +280,7 @@ description: "hx509 certificate functions –"
 <p>Set the query controller to require an one specific EKU (extended key usage). Any previous EKU matching is overwitten. If NULL is passed in as the eku, the EKU requirement is reset. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>q</i> a hx509 query controller.<br />
+<dd><i>q</i> a hx509 query controller.<br/>
  <i>eku</i> an EKU to match on.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -289,7 +289,7 @@ description: "hx509 certificate functions –"
 <p>Set the query controller to match on a friendly name </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>q</i> a hx509 query controller.<br />
+<dd><i>q</i> a hx509 query controller.<br/>
  <i>name</i> a friendly name to match on</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -298,8 +298,8 @@ description: "hx509 certificate functions –"
 <p>Set the issuer and serial number of match in the query controller. The function make copies of the isser and serial number. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>q</i> a hx509 query controller<br />
- <i>issuer</i> issuer to search for<br />
+<dd><i>q</i> a hx509 query controller<br/>
+ <i>issuer</i> issuer to search for<br/>
  <i>serialNumber</i> the serialNumber of the issuer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -308,7 +308,7 @@ description: "hx509 certificate functions –"
 <p>Set match options for the hx509 query controller. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>q</i> query controller.<br />
+<dd><i>q</i> query controller.<br/>
  <i>option</i> options to control the query controller.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -317,20 +317,20 @@ description: "hx509 certificate functions –"
 <p>Set a statistic file for the query statistics. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> A hx509 context.<br />
+<dd><i>context</i> A hx509 context.<br/>
  <i>fn</i> statistics file name</dd></dl>
 <h3>void hx509_query_unparse_stats (hx509_contextcontext, intprinttype, FILE *out)</h3>
 <p>Unparse the statistics file and print the result on a FILE descriptor. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> A hx509 context.<br />
- <i>printtype</i> tyep to print<br />
+<dd><i>context</i> A hx509 context.<br/>
+ <i>printtype</i> tyep to print<br/>
  <i>out</i> the FILE to write the data on.</dd></dl>
 <h3>void hx509_verify_ctx_f_allow_default_trustanchors (hx509_verify_ctxctx, intboolean)</h3>
 <p>Allow using the operating system builtin trust anchors if no other trust anchors are configured. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ctx</i> a verification context<br />
+<dd><i>ctx</i> a verification context<br/>
  <i>boolean</i> if non zero, useing the operating systems builtin trust anchors.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -339,8 +339,8 @@ description: "hx509 certificate functions –"
 <p>Verify that the certificate is allowed to be used for the hostname and address. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> A hx509 context.<br />
- <i>cert</i> the certificate to match with<br />
+<dd><i>context</i> A hx509 context.<br/>
+ <i>cert</i> the certificate to match with<br/>
  <i>flags</i> Flags to modify the behavior:</dd>
 <dl COMPACT>
 <dt>&bull;</dt>
@@ -351,8 +351,8 @@ description: "hx509 certificate functions –"
 <dd>HX509_HN_HOSTNAME for plain hostname.</dd>
 <dt>&bull;</dt>
 <dd>HX509_HN_DNSSRV for DNS SRV names.</dd></dl>
-<p> <i>hostname</i> the hostname to check<br />
- <i>sa</i> address of the host<br />
+<p> <i>hostname</i> the hostname to check<br/>
+ <i>sa</i> address of the host<br/>
  <i>sa_size</i> length of address</dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

@@ -268,12 +268,12 @@ Changes not staged for commit:
 <p> In addition to being the staging area for new commits, the index file is also populated from the object database when checking out a branch, and is used to hold the trees involved in a merge operation. See <code><a href="/docs/linux/man/7-gitcore-tutorial/">gitcore-tutorial</a></code>(7) and the relevant man pages for details.</p>
 <h2>What Next?</h2>
 <p>At this point you should know everything necessary to read the man pages for any of the git commands; one good place to start would be with the commands mentioned in <code><a href="/docs/linux/man/7-giteveryday/">giteveryday</a></code>(7). You should be able to find any unknown jargon in <code><a href="/docs/linux/man/7-gitglossary/">gitglossary</a></code>(7). </p>
-<p> The m[blue]<code>Git User&#8217;s Manual</code>m[]<font SIZE="-2">[1]</font> provides a more comprehensive introduction to Git. </p>
+<p> The m[blue]<code>Git User&#8217;s Manual</code>m[][1] provides a more comprehensive introduction to Git. </p>
 <p> <code><a href="/docs/linux/man/7-gitcvs-migration/">gitcvs-migration</a></code>(7) explains how to import a CVS repository into Git, and shows how to use Git in a CVS-like way. </p>
-<p> For some interesting examples of Git use, see the m[blue]<code>howtos</code>m[]<font SIZE="-2">[2]</font>. </p>
+<p> For some interesting examples of Git use, see the m[blue]<code>howtos</code>m[][2]. </p>
 <p> For Git developers, <code><a href="/docs/linux/man/7-gitcore-tutorial/">gitcore-tutorial</a></code>(7) goes into detail on the lower-level Git mechanisms involved in, for example, creating a new commit.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-gittutorial/">gittutorial</a></code>(7), <code><a href="/docs/linux/man/7-gitcvs-migration/">gitcvs-migration</a></code>(7), <code><a href="/docs/linux/man/7-gitcore-tutorial/">gitcore-tutorial</a></code>(7), <code><a href="/docs/linux/man/7-gitglossary/">gitglossary</a></code>(7), <code><a href="/docs/linux/man/1-git-help/">git-help</a></code>(1), <code><a href="/docs/linux/man/7-giteveryday/">giteveryday</a></code>(7), m[blue]<code>The Git User&#8217;s Manual</code>m[]<font SIZE="-2">[1]</font></p>
+<p><code><a href="/docs/linux/man/7-gittutorial/">gittutorial</a></code>(7), <code><a href="/docs/linux/man/7-gitcvs-migration/">gitcvs-migration</a></code>(7), <code><a href="/docs/linux/man/7-gitcore-tutorial/">gitcore-tutorial</a></code>(7), <code><a href="/docs/linux/man/7-gitglossary/">gitglossary</a></code>(7), <code><a href="/docs/linux/man/1-git-help/">git-help</a></code>(1), <code><a href="/docs/linux/man/7-giteveryday/">giteveryday</a></code>(7), m[blue]<code>The Git User&#8217;s Manual</code>m[][1]</p>
 <h2>Git</h2>
 <p>Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite</p>
 <h2>Notes</h2>

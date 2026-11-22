@@ -27,7 +27,7 @@ description: "bochs – Portable x86 Emulator."
 <dt><code>-h, &#8211;help</code></dt>
 <dd> Print a summary of the command line options for bochs and exit.</dd></dl>
 <p> You can override the settings from the configuration file with command line arguments, using the same syntax as the bochsrc file. If you have any spaces in your command line arguments, they should be enclosed in single quotes. For information on Bochs command line and configuration file arguments, see the man page <code><a href="/docs/linux/man/5-bochsrc/">bochsrc</a>(5).</code> </p>
-<p> Example:<br />
+<p> Example:<br/>
 &nbsp;<wbr>&nbsp;<wbr>bochs -q&nbsp;<wbr>&#8216;boot:a&#8217;&nbsp;<wbr>&#8216;floppya: 1_44=a.img, status=inserted&#8217; </p>
 <h2>LICENSE</h2>
 <p> This program is distributed under the terms of the GNU Lesser General Public License as published by the Free Software Foundation. See the COPYING file located in /usr/share/doc/bochs-2.3.8/ for details on the license and the lack of warranty.</p>

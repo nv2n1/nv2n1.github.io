@@ -10,7 +10,7 @@ description: "deluser, delgroup – remove a user or group from the system"
 <p>deluser, delgroup &#8211; remove a user or group from the system</p>
 <h2>Synopsis</h2>
 <p><code>deluser</code> [options] [&#8211;force] [&#8211;remove-home] [&#8211;remove-all-files] [&#8211;backup] [&#8211;backup-to DIR] user </p>
-<p> <code>deluser</code> &#8211;group [options] group<br />
+<p> <code>deluser</code> &#8211;group [options] group<br/>
  <code>delgroup</code> [options] [&#8211;only-if-empty] group </p>
 <p> <code>deluser</code> [options] user group</p>
 <h3>Common Options</h3>
@@ -23,7 +23,7 @@ description: "deluser, delgroup – remove a user or group from the system"
 <p> The <code>&#8211;remove-all-files</code> option removes all files on the system owned by the user. Note that if you activate both options <code>&#8211;remove-home</code> will have no effect because all files including the home directory and mail spool are already covered by the <code>&#8211;remove-all-files</code> option. </p>
 <p> If you want to backup all files before deleting them you can activate the <code>&#8211;backup</code> option which will create a file username.tar(.gz|.bz2) in the directory specified by the <code>&#8211;backup-to</code> option (defaulting to the current working directory). Both the remove and backup options can also be activated for default in the configuration file /etc/deluser.conf. See <code><a href="/docs/linux/man/5-deluser-conf/">deluser.conf</a>(5)</code> for details. </p>
 <p> If you want to remove the root account (uid 0), then use the <code>&#8211;force </code> parameter; this may prevent to remove the root user by accident. </p>
-<p> If the file <code>/usr/local/sbin/deluser.local</code> exists, it will be executed after the user account has been removed in order to do any local cleanup. The arguments passed to <code>deluser.local</code> are:<br />
+<p> If the file <code>/usr/local/sbin/deluser.local</code> exists, it will be executed after the user account has been removed in order to do any local cleanup. The arguments passed to <code>deluser.local</code> are:<br/>
  username uid gid home-directory</p>
 <h3>Remove a group</h3>
 <p>If <code>deluser</code> is called with the <code>&#8211;group</code> option, or <code>delgroup</code> is called, a group will be removed. </p>
@@ -86,8 +86,8 @@ description: "deluser, delgroup – remove a user or group from the system"
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-adduser/">adduser</a></code>(8), <code><a href="/docs/linux/man/5-deluser-conf/">deluser.conf</a></code>(5), <code><a href="/docs/linux/man/8-groupdel/">groupdel</a></code>(8), <code><a href="/docs/linux/man/8-userdel/">userdel</a></code>(8) </p>
 <h2>Copyright</h2>
-<p>Copyright (C) 2000 Roland Bauerschmidt. Modifications (C) 2004 Marc Haber and Joerg Hoh. This manpage and the deluser program are based on adduser which is:<br />
- Copyright (C) 1997, 1998, 1999 Guy Maor.<br />
- Copyright (C) 1995 Ted Hajek, with a great deal borrowed from the original Debian <code>adduser</code><br />
+<p>Copyright (C) 2000 Roland Bauerschmidt. Modifications (C) 2004 Marc Haber and Joerg Hoh. This manpage and the deluser program are based on adduser which is:<br/>
+ Copyright (C) 1997, 1998, 1999 Guy Maor.<br/>
+ Copyright (C) 1995 Ted Hajek, with a great deal borrowed from the original Debian <code>adduser</code><br/>
  Copyright (C) 1994 Ian Murdock. <code>deluser</code> is free software; see the GNU General Public Licence version 2 or later for copying conditions. There is <i>no</i> warranty.</p>
 </dl>

@@ -18,9 +18,9 @@ description: "QuantLib::GenericSequenceStatistics – Statistics analysis of N-d
 <p> <code>inspectors</code> </p>
 <p> Size <code>size</code> () const </p>
 <p> <code>covariance and correlation</code> </p>
-<p> <code>Disposable</code>&lt; <code>Matrix</code> &gt; <code>covariance</code> () const<br />
- <i>returns the covariance </i><code>Matrix</code><br />
- <code>Disposable</code>&lt; <code>Matrix</code> &gt; <code>correlation</code> () const<br />
+<p> <code>Disposable</code>&lt; <code>Matrix</code> &gt; <code>covariance</code> () const<br/>
+ <i>returns the covariance </i><code>Matrix</code><br/>
+ <code>Disposable</code>&lt; <code>Matrix</code> &gt; <code>correlation</code> () const<br/>
  <i>returns the correlation </i><code>Matrix</code> </p>
 <p> <code>1-D inspectors lifted from underlying statistics class</code> </p>
 <p> Size <code>samples</code> () const </p>

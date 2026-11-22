@@ -11,7 +11,7 @@ description: "dorgl2.f –"
 <p> dorgl2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dorgl2</code> (M, N, K, A, LDA, TAU, WORK, INFO)<br />
+<p> subroutine <code>dorgl2</code> (M, N, K, A, LDA, TAU, WORK, INFO)<br/>
  <i></i><code>DORGL2</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dorgl2 (integerM, integerN, integerK, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( * )TAU, double precision, dimension( * )WORK, integerINFO)</h3>

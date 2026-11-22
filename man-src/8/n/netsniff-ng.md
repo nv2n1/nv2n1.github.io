@@ -119,15 +119,15 @@ description: "netsniff-ng – the packet sniffing beast"
 <p>Starts two netsniff-ng fanout instances. Both are assigned into the same fanout group membership and traffic is splitted among them by incoming cpu. Furthermore, the kernel is supposed to defragment possible incoming fragments. First instance is assigned to CPU 0 and the second one to CPU 1, IRQ bindings are not altered as they might have been adapted to this scenario by the user a-priori, and traffic is captured on interface em1, and written out in 120 second intervals as pcap files into /var/cap/cpu0/. Tools like <a href="/docs/linux/man/1-mergecap/">mergecap</a>(1) will be able to merge the cpu0/1 split back together if needed.</p>
 <h2>Config Files</h2>
 <p>Files under /etc/netsniff-ng/ can be modified to extend netsniff-ng&#8217;s functionality: </p>
-<p>&nbsp;<wbr>*&nbsp;<wbr>oui.conf &#8211; OUI/MAC vendor database<br />
-&nbsp;<wbr>*&nbsp;<wbr>ether.conf &#8211; Ethernet type descriptions<br />
-&nbsp;<wbr>*&nbsp;<wbr>tcp.conf &#8211; TCP port/services map<br />
-&nbsp;<wbr>*&nbsp;<wbr>udp.conf &#8211; UDP port/services map<br />
+<p>&nbsp;<wbr>*&nbsp;<wbr>oui.conf &#8211; OUI/MAC vendor database<br/>
+&nbsp;<wbr>*&nbsp;<wbr>ether.conf &#8211; Ethernet type descriptions<br/>
+&nbsp;<wbr>*&nbsp;<wbr>tcp.conf &#8211; TCP port/services map<br/>
+&nbsp;<wbr>*&nbsp;<wbr>udp.conf &#8211; UDP port/services map<br/>
 &nbsp;<wbr>*&nbsp;<wbr>geoip.conf &#8211; GeoIP database mirrors</p>
 <h2>Filter Example</h2>
 <p>netsniff-ng supports both, low-level and high-level filters that are attached to its <a href="/docs/linux/man/7-packet/">packet</a>(7) socket. Low-level filters are described in the <a href="/docs/linux/man/8-bpfc/">bpfc</a>(8) man page. </p>
 <p> Low-level filters can be used with netsniff-ng in the following way: </p>
-<p>&nbsp;<wbr>1. bpfc foo&nbsp;<wbr>&gt;&nbsp;<wbr>bar<br />
+<p>&nbsp;<wbr>1. bpfc foo&nbsp;<wbr>&gt;&nbsp;<wbr>bar<br/>
 &nbsp;<wbr>2. netsniff-ng -f bar </p>
 <p> Here, foo is the bpfc program that will be translated into a netsniff-ng readable &#8220;opcodes&#8221; file and passed to netsniff-ng through the -f option. </p>
 <p> Similarly, high-level filter can be either passed through the -f option, e.g. -f &quot;tcp or udp&quot; or at the end of all options without the &#8220;-f&#8221;. </p>
@@ -177,26 +177,26 @@ description: "netsniff-ng – the packet sniffing beast"
 <p> If you do not need to dump all possible traffic, you have to consider running netsniff-ng with a BPF filter for the ingress path. For that purpose, read the <a href="/docs/linux/man/8-bpfc/">bpfc</a>(8) man page. </p>
 <p> Also, to aggregate multiple NICs that you want to capture on, you should consider using team devices, further explained in libteam resp. <a href="/docs/linux/man/8-teamd/">teamd</a>(8). </p>
 <p> The following netsniff-ng pcap magic numbers are compatible with other tools, at least tcpdump or Wireshark: </p>
-<p>&nbsp;<wbr>0xa1b2c3d4&nbsp;<wbr>(tcpdump-capable pcap)<br />
-&nbsp;<wbr>0xa1b23c4d&nbsp;<wbr>(tcpdump-capable pcap with ns resolution)<br />
+<p>&nbsp;<wbr>0xa1b2c3d4&nbsp;<wbr>(tcpdump-capable pcap)<br/>
+&nbsp;<wbr>0xa1b23c4d&nbsp;<wbr>(tcpdump-capable pcap with ns resolution)<br/>
 &nbsp;<wbr>0xa1b2cd34&nbsp;<wbr>(Alexey Kuznetzov&#8217;s pcap) </p>
 <p> Pcap files with different meta data endianness are supported by netsniff-ng as well.</p>
 <h2>Bugs</h2>
-<p>When replaying pcap files, the timing information from the pcap packet header is currently ignored. Also, when replaying pcap files, demultiplexing traffic among multiple networking interfaces does not work. Currently, it is only sent via the interface that is given by the &#8211;out parameter. When performing traffic capture on the Ethernet interface, the pcap file is created and packets are received but without a 802.1Q header. When one uses tshark, all headers are visible, but netsniff-ng removes 802.1Q headers. Is that normal behavior? Yes and no. The way VLAN headers are handled in PF_PACKET sockets by the kernel is somewhat &#8220;problematic&#8221; [1]. The problem in the Linux kernel is that some drivers already handle VLANs, others do not. Those who handle it can have different implementations, such as hardware acceleration and so on. So in some cases the VLAN tag is even stripped before entering the protocol stack, in some cases probably not. The bottom line is that a &quot;hack&quot; was introduced in PF_PACKET so that a VLAN ID is visible in some helper data structure that is accessible from the RX_RING. Then it gets really messy in the user space to artificially put the VLAN header back into the right place. Not to mention the resulting performance implications on all of libpcap(3) tools since parts of the packet need to be copied for reassembly via <a href="/docs/linux/man/3-memmove/">memmove</a>(3). A user reported the following, just to demonstrate this mess: some tests were made with two machines, and it seems that results depend on the driver &#8230;<br />
-&nbsp;<wbr>AR8131:<br />
-ethtool -k eth0 gives&nbsp;<wbr>&quot;rx-vlan-offload: on&quot;<br />
-&#8211; wireshark gets the vlan header<br />
-&#8211; netsniff-ng doesn&#8217;t get the vlan header<br />
-ethtool -K eth0 rxvlan off<br />
-&#8211; wireshark gets a QinQ header even though noone sent QinQ<br />
-&#8211; netsniff-ng gets the vlan header<br />
-&nbsp;<wbr>RTL8111/8168B:<br />
-ethtool -k eth0 gives&nbsp;<wbr>&quot;rx-vlan-offload: on&quot;<br />
-&#8211; wireshark gets the vlan header<br />
-&#8211; netsniff-ng doesn&#8217;t get the vlan header<br />
-ethtool -K eth0 rxvlan off<br />
-&#8211; wireshark gets the vlan header<br />
-&#8211; netsniff-ng doesn&#8217;t get the vlan header Even if we agreed on doing the same workaround as libpcap, we still will not be able to see QinQ, for instance, due to the fact that only one VLAN tag is stored in the kernel helper data structure. We think that there should be a good consensus on the kernel space side about what gets transferred to userland first. Update (28.11.2012): the Linux kernel and also <a href="/docs/linux/man/8-bpfc/">bpfc</a>(8) has built-in support for hardware accelerated VLAN filtering, even though tags might not be visible in the payload itself as reported here. However, the filtering for VLANs works reliable if your NIC supports it. See <a href="/docs/linux/man/8-bpfc/">bpfc</a>(8) for an example.<br />
+<p>When replaying pcap files, the timing information from the pcap packet header is currently ignored. Also, when replaying pcap files, demultiplexing traffic among multiple networking interfaces does not work. Currently, it is only sent via the interface that is given by the &#8211;out parameter. When performing traffic capture on the Ethernet interface, the pcap file is created and packets are received but without a 802.1Q header. When one uses tshark, all headers are visible, but netsniff-ng removes 802.1Q headers. Is that normal behavior? Yes and no. The way VLAN headers are handled in PF_PACKET sockets by the kernel is somewhat &#8220;problematic&#8221; [1]. The problem in the Linux kernel is that some drivers already handle VLANs, others do not. Those who handle it can have different implementations, such as hardware acceleration and so on. So in some cases the VLAN tag is even stripped before entering the protocol stack, in some cases probably not. The bottom line is that a &quot;hack&quot; was introduced in PF_PACKET so that a VLAN ID is visible in some helper data structure that is accessible from the RX_RING. Then it gets really messy in the user space to artificially put the VLAN header back into the right place. Not to mention the resulting performance implications on all of libpcap(3) tools since parts of the packet need to be copied for reassembly via <a href="/docs/linux/man/3-memmove/">memmove</a>(3). A user reported the following, just to demonstrate this mess: some tests were made with two machines, and it seems that results depend on the driver &#8230;<br/>
+&nbsp;<wbr>AR8131:<br/>
+ethtool -k eth0 gives&nbsp;<wbr>&quot;rx-vlan-offload: on&quot;<br/>
+&#8211; wireshark gets the vlan header<br/>
+&#8211; netsniff-ng doesn&#8217;t get the vlan header<br/>
+ethtool -K eth0 rxvlan off<br/>
+&#8211; wireshark gets a QinQ header even though noone sent QinQ<br/>
+&#8211; netsniff-ng gets the vlan header<br/>
+&nbsp;<wbr>RTL8111/8168B:<br/>
+ethtool -k eth0 gives&nbsp;<wbr>&quot;rx-vlan-offload: on&quot;<br/>
+&#8211; wireshark gets the vlan header<br/>
+&#8211; netsniff-ng doesn&#8217;t get the vlan header<br/>
+ethtool -K eth0 rxvlan off<br/>
+&#8211; wireshark gets the vlan header<br/>
+&#8211; netsniff-ng doesn&#8217;t get the vlan header Even if we agreed on doing the same workaround as libpcap, we still will not be able to see QinQ, for instance, due to the fact that only one VLAN tag is stored in the kernel helper data structure. We think that there should be a good consensus on the kernel space side about what gets transferred to userland first. Update (28.11.2012): the Linux kernel and also <a href="/docs/linux/man/8-bpfc/">bpfc</a>(8) has built-in support for hardware accelerated VLAN filtering, even though tags might not be visible in the payload itself as reported here. However, the filtering for VLANs works reliable if your NIC supports it. See <a href="/docs/linux/man/8-bpfc/">bpfc</a>(8) for an example.<br/>
 [1]&nbsp;<wbr><a rel="nofollow" href="http://lkml.indiana.edu/hypermail/linux/kernel/0710.3/3816.html">http://lkml.indiana.edu/hypermail/linux/kernel/0710.3/3816.html</a> </p>
 <h2>Legal</h2>
 <p>netsniff-ng is licensed under the GNU GPL version 2.0.</p>

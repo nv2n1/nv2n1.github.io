@@ -9,9 +9,9 @@ description: "ttyI – ISDN character devices with modem emulator"
 
 <p>ttyI &#8211; ISDN character devices with modem emulator</p>
 <h2>Description</h2>
-<p><i>ttyI</i><code>[</code><i>0-63</i><code>]</code> are emulated tty devices of the Linux <font SIZE="-1">ISDN</font> subsystem. These devices can be used in the same way as the traditional serial devices <i>ttySx.</i> The official major device numbers are <code>43</code> for <i>ttyI .</i> The minor device numbers start with <code>0</code> and end with <code>63</code>. The <font SIZE="-1">ISDN</font> tty devices are equipped with a modem emulation implementing a set of traditional and some special AT commands. This provides easy use together with almost all communication software that uses modem commands: <code><a href="/docs/linux/man/1-minicom/">minicom</a></code>(1), <code>seyon</code>(1), <code>XCept</code>(1), <code><a href="/docs/linux/man/8-uucico/">uucico</a></code>(8), <code><a href="/docs/linux/man/8-mgetty/">mgetty</a></code>(8), <code>dip</code>(8), <code><a href="/docs/linux/man/8-pppd/">pppd</a></code>(8) and more. When enabled during kernel configuration, the emulator is capable of a reduced set of commands to support audio. To use audio features, an <font SIZE="-1">ISDN</font> card with a audio-capable low-level driver is needed. Currently the only audio-capable drivers are the teles and HiSax driver. The line disciplines are handled by the kernel so that SLIP, CSLIP and asynchronous PPP are possible. The port speed of the <font SIZE="-1">ISDN</font> tty devices is always 64000 bps. </p>
+<p><i>ttyI</i><code>[</code><i>0-63</i><code>]</code> are emulated tty devices of the Linux ISDN subsystem. These devices can be used in the same way as the traditional serial devices <i>ttySx.</i> The official major device numbers are <code>43</code> for <i>ttyI .</i> The minor device numbers start with <code>0</code> and end with <code>63</code>. The ISDN tty devices are equipped with a modem emulation implementing a set of traditional and some special AT commands. This provides easy use together with almost all communication software that uses modem commands: <code><a href="/docs/linux/man/1-minicom/">minicom</a></code>(1), <code>seyon</code>(1), <code>XCept</code>(1), <code><a href="/docs/linux/man/8-uucico/">uucico</a></code>(8), <code><a href="/docs/linux/man/8-mgetty/">mgetty</a></code>(8), <code>dip</code>(8), <code><a href="/docs/linux/man/8-pppd/">pppd</a></code>(8) and more. When enabled during kernel configuration, the emulator is capable of a reduced set of commands to support audio. To use audio features, an ISDN card with a audio-capable low-level driver is needed. Currently the only audio-capable drivers are the teles and HiSax driver. The line disciplines are handled by the kernel so that SLIP, CSLIP and asynchronous PPP are possible. The port speed of the ISDN tty devices is always 64000 bps. </p>
 <h2>At Command Set</h2>
-<p>The description of <code>AT commands</code> here does <code>not</code> cover audio related commands. For a description of audio related commands, see <code><a href="/docs/linux/man/4-isdn_audio/">isdn_audio</a></code>(4). The following <code>AT commands</code> are supported by <font SIZE="-1">ISDN</font> tty devices:</p>
+<p>The description of <code>AT commands</code> here does <code>not</code> cover audio related commands. For a description of audio related commands, see <code><a href="/docs/linux/man/4-isdn_audio/">isdn_audio</a></code>(4). The following <code>AT commands</code> are supported by ISDN tty devices:</p>
 <dl>
 <dt><code>ATA</code></dt>
 <dd>Answer an incoming call.</dd>
@@ -104,7 +104,7 @@ description: "ttyI – ISDN character devices with modem emulator"
 <dt><code>11</code> (default 70)</dt>
 <dd>Duration and delay in milliseconds for touch tone dialling (ignored).</dd>
 <dt><code>12</code> (default 69)</dt>
-<dd>Bit-mapped register.<br />
+<dd>Bit-mapped register.<br/>
  Bit<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>Description</dd>
 <p> 0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>0 = Suppress response messages.</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>1 = Show response messages.</p>
@@ -125,7 +125,7 @@ description: "ttyI – ISDN character devices with modem emulator"
 <p> 7<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>0 = Cisco-PPP-flag-hack off.</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>1 = Cisco-PPP-flag-hack on.</p>
 <dt><code>13</code> (default 4)</dt>
-<dd>Bit-mapped register.<br />
+<dd>Bit-mapped register.<br/>
  Bit<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>Description</dd>
 <p> 0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>0 = Use delayed sending of data.</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>1 = Immediately send data.</p>
@@ -149,21 +149,21 @@ description: "ttyI – ISDN character devices with modem emulator"
 <p>&nbsp;<wbr>1&nbsp;<wbr>=&nbsp;<wbr>X75/LAPB with UI-frames. </p>
 <p>&nbsp;<wbr>2&nbsp;<wbr>=&nbsp;<wbr>X75/LAPB with BUI-frames. </p>
 <p>&nbsp;<wbr>3&nbsp;<wbr>=&nbsp;<wbr>HDLC. </p>
-<p>&nbsp;<wbr>4&nbsp;<wbr>=&nbsp;<wbr>TRANSPARENT.<br />
- 10 = Analog Modem. (only if hardware supports this)<br />
+<p>&nbsp;<wbr>4&nbsp;<wbr>=&nbsp;<wbr>TRANSPARENT.<br/>
+ 10 = Analog Modem. (only if hardware supports this)<br/>
  11 = Fax G3. (only if hardware supports this)</p>
 <dt><code>15</code> (default 0)</dt>
-<dd>Layer-3 protocol.<br />
- 0 = transparent<br />
- 1 = transparent with audio features (e.g. DSP)<br />
+<dd>Layer-3 protocol.<br/>
+ 0 = transparent<br/>
+ 1 = transparent with audio features (e.g. DSP)<br/>
  2 = Fax G3</dd>
 <dt><code>16</code> (default 250)</dt>
 <dd>Outgoing packet size / 16.</dd>
 <dt><code>17</code></dt>
 <dd>reserved.</dd>
 <dt><code>18</code> (default 4)</dt>
-<dd>Service-Octet-1 to accept or to be used on dial out.<br />
- Bit-mapped register.<br />
+<dd>Service-Octet-1 to accept or to be used on dial out.<br/>
+ Bit-mapped register.<br/>
  Bit<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>Description</dd>
 <p> 0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>Service 1 (audio) when set.</p>
 <p> 1<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>Service 5 (BTX) when set.</p>
@@ -193,7 +193,7 @@ description: "ttyI – ISDN character devices with modem emulator"
 <dt><code>22</code> (read only)</dt>
 <dd>Bit-mapped register. Set on incoming call (during RING) to the value of octet 3a of calling party number Information Element (Screening info). See section <code>4.5.10</code> of <code>ITU Q.931</code>.</dd>
 <dt><code>23</code> (default 0)</dt>
-<dd>Bit-mapped register.<br />
+<dd>Bit-mapped register.<br/>
  Bit<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>Description</dd>
 <p> 0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>0 = Disable CPN extended RING.</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>1 = Enable CPN extended RING.</p>
@@ -203,7 +203,7 @@ description: "ttyI – ISDN character devices with modem emulator"
 <h2>Note</h2>
 <dd>There used also be <i>cui</i> devices (major device number 44), but since the <i>cua</i> devices for regular tty devices are no longer supported in the kernel, these are also no longer supported for ISDN4linux.</dd>
 <h2>Author</h2>
-<p>Fritz Elfert &lt;fritz [at] isdn4linux.de&gt;<br />
+<p>Fritz Elfert &lt;fritz [at] isdn4linux.de&gt;<br/>
  modified by Paul Slootman &lt;paul [at] isdn4linux.de&gt;</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-icnctrl/">icnctrl</a></code>(8), <code>telesctrl</code>(8), <code><a href="/docs/linux/man/4-isdninfo/">isdninfo</a></code>(4), <code><a href="/docs/linux/man/4-isdn_audio/">isdn_audio</a></code>(4), <code><a href="/docs/linux/man/8-isdnctrl/">isdnctrl</a></code>(8). </p>

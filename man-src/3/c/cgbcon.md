@@ -11,7 +11,7 @@ description: "cgbcon.f –"
 <p> cgbcon.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cgbcon</code> (NORM, N, KL, KU, AB, LDAB, IPIV, ANORM, RCOND, WORK, RWORK, INFO)<br />
+<p> subroutine <code>cgbcon</code> (NORM, N, KL, KU, AB, LDAB, IPIV, ANORM, RCOND, WORK, RWORK, INFO)<br/>
  <i></i><code>CGBCON</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cgbcon (characterNORM, integerN, integerKL, integerKU, complex, dimension( ldab, * )AB, integerLDAB, integer, dimension( * )IPIV, realANORM, realRCOND, complex, dimension( * )WORK, real, dimension( * )RWORK, integerINFO)</h3>

@@ -151,12 +151,12 @@ description: "ntfsfallocate – preallocate space to a file on an NTFS volume"
 <dd><code>ntfsfallocate -l 100M /dev/sda1 Data/database.db</code> </dd>
 <h2>Bugs</h2>
 <p>There are no known problems with <code>ntfsfallocate</code>, however it can lead to configurations not supported by Windows and Windows may crash (BSOD) when writing to preallocated clusters which were not written to earlier. Files with preallocated space should be fully be written to before they are updated by Windows. </p>
-<p> If you find a bug in <code>ntfsfallocate</code> proper, please send an email describing the problem to the development team:<br />
+<p> If you find a bug in <code>ntfsfallocate</code> proper, please send an email describing the problem to the development team:<br/>
  ntfs-3g-devel [at] lists.sf.net</p>
 <h2>Authors</h2>
 <p><code>ntfsfallocate</code> was written by Jean-Pierre Andre.</p>
 <h2>Availability</h2>
-<p><code>ntfsfallocate</code> is part of the <code>ntfs-3g</code> package and is available from:<br />
+<p><code>ntfsfallocate</code> is part of the <code>ntfs-3g</code> package and is available from:<br/>
  <a rel="nofollow" href="https://github.com/tuxera/ntfs-3g/wiki/">https://github.com/tuxera/ntfs-3g/wiki/</a></p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-ntfs-3g/">ntfs-3g</a></code>(8), <code><a href="/docs/linux/man/8-ntfstruncate/">ntfstruncate</a></code>(8), <code><a href="/docs/linux/man/8-ntfsprogs/">ntfsprogs</a></code>(8), <code><a href="/docs/linux/man/1-fallocate/">fallocate</a></code>(1) </p>

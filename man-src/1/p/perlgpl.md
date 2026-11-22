@@ -22,7 +22,7 @@ description: "perlgpl – the GNU General Public License, version 1"
         later version, or
         b) the &quot;Artistic License&quot; which comes with this Kit.
 </pre>
-<p> This is the <code>&#8220;</code><font SIZE="-1"><code>GNU</code></font><code> General Public License, version 1&#8221;</code>. It&#8217;s here so that modules, programs, etc., that want to declare this as their distribution license can link to it. </p>
+<p> This is the <code>&#8220;</code><code>GNU</code><code> General Public License, version 1&#8221;</code>. It&#8217;s here so that modules, programs, etc., that want to declare this as their distribution license can link to it. </p>
 <p> For the Perl Artistic License, see perlartistic.</p>
 <h2>GNU GENERAL PUBLIC LICENSE</h2>
 <pre><code>

@@ -31,4 +31,4 @@ fusioninventory-inventory - Standalone inventory
 
 <h2>DESCRIPTION</h2>
 
- <i>fusioninventory-inventory</i> allows to run an inventory task without a <font SIZE="-1">GLPI</font> server.
+ <i>fusioninventory-inventory</i> allows to run an inventory task without a GLPI server.

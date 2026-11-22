@@ -13,9 +13,9 @@ description: "sc::DistShellPair::SharedData –"
 <pre><code>
 #include &lt;distshpair.h&gt;
 Public Member Functions</code></pre>
-<p> <code>SharedData</code> ()<br />
- <i>Construct and initialize. </i><br />
- void <code>init</code> ()<br />
+<p> <code>SharedData</code> ()<br/>
+ <i>Construct and initialize. </i><br/>
+ void <code>init</code> ()<br/>
  <i>If this will be used to iterate through the shells again, then init must be called. </i></p>
 <h3>Public Attributes</h3>
 <p>volatile long int <code>shellpair_</code></p>

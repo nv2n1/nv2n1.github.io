@@ -14,7 +14,7 @@ description: "docker-commit – Create a new image from a container’s changes"
 <h2>DESCRIPTION</h2>
 <p> Alias for docker container commit. </p>
 <h2>OPTIONS</h2>
-<p> <code>-a</code>, <code>&#8211;author</code>=&quot;&quot; <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Author (e.g., &quot;John Hannibal Smith hannibal [at] a-team.com<br />
+<p> <code>-a</code>, <code>&#8211;author</code>=&quot;&quot; <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Author (e.g., &quot;John Hannibal Smith hannibal [at] a-team.com<br/>
  &lt;mailto:hannibal [at] a-team.com&gt;&quot;) </p>
 <p> <code>-c</code>, <code>&#8211;change</code>= <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Apply Dockerfile instruction to the created image</p>
 <p> <code>-h</code>, <code>&#8211;help</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>help for commit</p>

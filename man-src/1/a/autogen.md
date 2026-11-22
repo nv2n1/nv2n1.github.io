@@ -41,8 +41,8 @@ description: "autogen – The Automated Program Generator"
 <p> If the local C library supports &quot;<code>fopencookie(3GNU)</code>&quot;, or &quot;<code>funopen(3BSD)</code>&quot; then AutoGen prefers to use in-memory stream buffer opens instead of anonymous files. This may lead to problems if there is a shortage of virtual memory. If, for a particular application, you run out of memory, then specify this option. This is unlikely in a modern 64-bit virtual memory environment. </p>
 <p> On platforms without these functions, the option is accepted but ignored. <code>fmemopen(POSIX)</code> is not adequate because its string buffer is not reallocatable. <code>open_memstream(POSIX)</code> is <i>also</i> not adequate because the stream is only opened for output. AutoGen needs a reallocatable buffer available for both reading and writing.</p>
 <dt><code>&#8211;equate</code>=<i>char-list</i></dt>
-<dd> characters considered equivalent. The default <i>char-list</i> for this option is:<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><br />
+<dd> characters considered equivalent. The default <i>char-list</i> for this option is:<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><br/>
 &nbsp;<wbr>_-^ </dd>
 <p> This option will alter the list of characters considered equivalent. The default are the three characters, &quot;_-^&quot;. (The last is conventional on a Tandem/HP-NonStop, and I used to do a lot of work on Tandems.)</dl>
 <h3>The following options modify how output is handled</h3>
@@ -65,8 +65,8 @@ description: "autogen – The Automated Program Generator"
 exactly -1, or
 in the range  1 through 0x1000000
 </pre>
-<p> The default <i>lim</i> for this option is:<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><br />
+<p> The default <i>lim</i> for this option is:<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><br/>
 &nbsp;<wbr>256 </p>
 <p> This option prevents runaway loops. For example, if you accidentally specify, &quot;FOR x (for-from 1) (for-to -1) (for-by 1)&quot;, it will take a long time to finish. If you do have more than 256 entries in tables, you will need to specify a new limit with this option.</p>
 <dt><code>-t</code> <i>seconds</i>, <code>&#8211;timeout</code>=<i>seconds</i></dt>
@@ -84,8 +84,8 @@ templates     block-macros  expressions
 everything
 </pre>
 <p> or their numeric equivalent. </p>
-<p> The default <i>level</i> for this option is:<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><br />
+<p> The default <i>level</i> for this option is:<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><br/>
 &nbsp;<wbr>nothing </p>
 <p> This option will cause AutoGen to display a trace of its template processing. There are six levels, each level including messages from the previous levels: </p>
 <p> <i>nothing</i> Does no tracing at all (default) </p>

@@ -11,7 +11,7 @@ description: "sgeev.f –"
 <p> sgeev.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>sgeev</code> (JOBVL, JOBVR, N, A, LDA, WR, WI, VL, LDVL, VR, LDVR, WORK, LWORK, INFO)<br />
+<p> subroutine <code>sgeev</code> (JOBVL, JOBVR, N, A, LDA, WR, WI, VL, LDVL, VR, LDVR, WORK, LWORK, INFO)<br/>
  <i></i><code> SGEEV computes the eigenvalues and, optionally, the left and/or right eigenvectors for GE matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sgeev (characterJOBVL, characterJOBVR, integerN, real, dimension( lda, * )A, integerLDA, real, dimension( * )WR, real, dimension( * )WI, real, dimension( ldvl, * )VL, integerLDVL, real, dimension( ldvr, * )VR, integerLDVR, real, dimension( * )WORK, integerLWORK, integerINFO)</h3>
@@ -111,9 +111,9 @@ if JOBVL
           v(j+1) = VR(:,j) - i*VR(:,j+1).
 </pre>
 <p> <i>LDVR</i> </p>
-<p>LDVR is INTEGER<br />
-        The leading dimension of the array VR.LDVR &gt;= 1;<br />
-if JOBVR<br />
+<p>LDVR is INTEGER<br/>
+        The leading dimension of the array VR.LDVR &gt;= 1;<br/>
+if JOBVR<br/>
 = &#8216;V&#8217;, LDVR &gt;= N.</p>
 <p> <i>WORK</i> </p>
 <pre>

@@ -173,8 +173,8 @@ description: "Plugin data access –"
 <p>Query a plugin for a single variable (i.e. SELECT a single ?value). </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>plugin</i> The plugin to query.<br />
- <i>sparql_str</i> A SPARQL SELECT query.<br />
+<dd><i>plugin</i> The plugin to query.<br/>
+ <i>sparql_str</i> A SPARQL SELECT query.<br/>
  <i>variable</i> The index of the variable to return results for (e.g. with &#8216;&lt;code&gt;SELECT ?foo ?bar&lt;/code&gt;&#8217; foo=0, bar=1).</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -184,7 +184,7 @@ description: "Plugin data access –"
 <p>Query a plugin and return the number of results found. Note that this function will work, but is mostly meaningless for queries that are not SELECT DISTINCT. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>plugin</i> The plugin to query.<br />
+<dd><i>plugin</i> The plugin to query.<br/>
  <i>sparql_str</i> A SPARQL SELECT DISTINCT query.</dd></dl>
 <p> Time = Query</p>
 <h3>SLV2Port slv2_plugin_get_port_by_index (SLV2Pluginplugin, uint32_tindex)</h3>
@@ -243,7 +243,7 @@ description: "Plugin data access –"
 <p>Check whether a plugin UI is a given type. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>ui</i> The Plugin UI<br />
+<dd><i>ui</i> The Plugin UI<br/>
  <i>class_uri</i> The URI of the LV2 UI type to check this UI against</dd></dl>
 <p> Time = O(1)</p>
 <h3>SLV2Value slv2_ui_get_bundle_uri (SLV2UIui)</h3>

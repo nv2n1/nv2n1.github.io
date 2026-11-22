@@ -10,7 +10,7 @@ description: "zhecon.f –"
 <p>zhecon.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zhecon</code> (UPLO, N, A, LDA, IPIV, ANORM, RCOND, WORK, INFO)<br />
+<p>subroutine <code>zhecon</code> (UPLO, N, A, LDA, IPIV, ANORM, RCOND, WORK, INFO)<br/>
  <i></i><code>ZHECON</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zhecon (characterUPLO, integerN, complex*16, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, double precisionANORM, double precisionRCOND, complex*16, dimension( * )WORK, integerINFO)</h3>

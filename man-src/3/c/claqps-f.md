@@ -10,7 +10,7 @@ description: "claqps.f –"
 <p>claqps.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>claqps</code> (M, N, OFFSET, NB, KB, A, LDA, JPVT, TAU, VN1, VN2, AUXV, F, LDF)<br />
+<p>subroutine <code>claqps</code> (M, N, OFFSET, NB, KB, A, LDA, JPVT, TAU, VN1, VN2, AUXV, F, LDF)<br/>
  <i></i><code>CLAQPS</code> computes a step of QR factorization with column pivoting of a real m-by-n matrix A by using BLAS level 3.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine claqps (integerM, integerN, integerOFFSET, integerNB, integerKB, complex, dimension( lda, * )A, integerLDA, integer, dimension( * )JPVT, complex, dimension( * )TAU, real, dimension( * )VN1, real, dimension( * )VN2, complex, dimension( * )AUXV, complex, dimension( ldf, * )F, integerLDF)</h3>

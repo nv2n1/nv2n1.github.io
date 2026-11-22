@@ -51,7 +51,7 @@ hesinfo <i>[-bl]</i> <i>HesiodName</i> <i>HesiodNameType</i>
 <dt><code>&lt;printer-cluster-name&gt;</code></dt>
 <dd> name of an Athena print cluster. </dd>
 <dt><code>&lt;foo&gt;</code></dt>
-<dd> some <code>hesinfo</code> calls (e.g. <code>prclusterlist</code> ) do not require a specific <i>HesiodName</i> argument. However, you must include a dummy string (e.g. &#8216;foo&#8217;) for <code>hesinfo</code><br />
+<dd> some <code>hesinfo</code> calls (e.g. <code>prclusterlist</code> ) do not require a specific <i>HesiodName</i> argument. However, you must include a dummy string (e.g. &#8216;foo&#8217;) for <code>hesinfo</code><br/>
 &nbsp;<wbr>to work properly. </dd>
 </dl>
 <h3>VALID Hesiod_Name_Types</h3>
@@ -89,5 +89,5 @@ hesinfo <i>[-bl]</i> <i>HesiodName</i> <i>HesiodNameType</i>
 <h2>SEE ALSO</h2>
 <p> `Hesiod &#8211; Project Athena Technical Plan &#8212; Name Service&#8217;, <a href="/docs/linux/man/8-named/">named</a>(8), <a href="/docs/linux/man/3-hesiod/">hesiod</a>(3)</p>
 <h2>AUTHOR</h2>
-<p> Steve Dyer, IBM/Project Athena<br />
+<p> Steve Dyer, IBM/Project Athena<br/>
  Copyright 1987, 1988, 1996 by the Massachusetts Institute of Technology. </p>

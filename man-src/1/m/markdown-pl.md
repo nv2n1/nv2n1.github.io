@@ -10,7 +10,7 @@ Markdown.pl - Convert Markdown syntax to (X)HTML
 
 <h2>Description</h2>This program is distributed as part of Perl's Text::Markdown module, illustrating sample usage. 
 
- Markdown can be invoked on any file containing Markdown-syntax, and will produce the corresponding (X)HTML on <font SIZE="-1">STDOUT:</font> 
+ Markdown can be invoked on any file containing Markdown-syntax, and will produce the corresponding (X)HTML on STDOUT: 
 
  <pre> $ cat file.txt
  This is a *test*.
@@ -23,7 +23,7 @@ Markdown.pl - Convert Markdown syntax to (X)HTML
  &lt;ul&gt;
  &lt;li&gt;test&lt;/li&gt;
  &lt;li&gt;Yup, test.&lt;/li&gt;
- &lt;/ul&gt;</pre>If no file is specified, it will expect its input from <font SIZE="-1">STDIN:</font> 
+ &lt;/ul&gt;</pre>If no file is specified, it will expect its input from STDIN: 
 
  <pre> $ echo &quot;A **simple** test&quot; | markdown
  &lt;p&gt;A &lt;strong&gt;simple&lt;/strong&gt; test&lt;/p&gt;</pre><h2>Options</h2><dl><dt>version
@@ -31,7 +31,7 @@ Markdown.pl - Convert Markdown syntax to (X)HTML
 </dd><dt>shortversion
 </dt><dd>Shows only the version number
 </dd><dt>html4tags
-</dt><dd>Produce <font SIZE="-1">HTML</font> 4-style tags instead of <font SIZE="-1">XHTML - XHTML</font> requires elements that do not wrap a block (i.e. the <tt>&quot;hr&quot;</tt> tag) to state they will not be closed, by closing with <tt>&quot;/&gt;&quot;</tt>. <font SIZE="-1">HTML</font> 4-style will plainly output the tag as it comes: 
+</dt><dd>Produce HTML 4-style tags instead of XHTML - XHTML requires elements that do not wrap a block (i.e. the <tt>&quot;hr&quot;</tt> tag) to state they will not be closed, by closing with <tt>&quot;/&gt;&quot;</tt>. HTML 4-style will plainly output the tag as it comes: 
  <pre> $ echo '---' | markdown
  &lt;hr /&gt;
  $ echo '---' | markdown --html4tags

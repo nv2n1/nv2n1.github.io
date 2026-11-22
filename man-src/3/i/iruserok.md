@@ -29,10 +29,10 @@ int ruserok_af(const char *rhost, int superuser,
                const char *ruser, const char *luser, sa_family_t af);
 </code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
-<p> <code>rcmd</code>(), <code>rcmd_af</code>(), <code>rresvport</code>(), <code>rresvport_af</code>(), <code>iruserok</code>(), <code>iruserok_af</code>(), <code>ruserok</code>(), <code>ruserok_af</code>():<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Since glibc 2.19:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.19 and earlier:<br />
+<p> <code>rcmd</code>(), <code>rcmd_af</code>(), <code>rresvport</code>(), <code>rresvport_af</code>(), <code>iruserok</code>(), <code>iruserok_af</code>(), <code>ruserok</code>(), <code>ruserok_af</code>():<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Since glibc 2.19:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.19 and earlier:<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_BSD_SOURCE</p>
 <h2>DESCRIPTION</h2>
 <p> The <code>rcmd</code>() function is used by the superuser to execute a command on a remote machine using an authentication scheme based on privileged port numbers. The <code>rresvport</code>() function returns a file descriptor to a socket with an address in the privileged port space. The <code>iruserok</code>() and <code>ruserok</code>() functions are used by servers to authenticate clients requesting service with <code>rcmd</code>(). All four functions are used by the <code>rshd</code>(8) server (among others).</p>
@@ -76,7 +76,7 @@ int ruserok_af(const char *rhost, int superuser,
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>iruserok</code>(), <code>ruserok</code>(),<br />
+<td> <code>iruserok</code>(), <code>ruserok</code>(),<br/>
  <code>iruserok_af</code>(), <code>ruserok_af</code>() </td>
 <td>Thread safety</td>
 <td>MT-Safe locale

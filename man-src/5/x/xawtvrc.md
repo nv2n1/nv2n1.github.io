@@ -9,7 +9,7 @@ description: "xawtvrc — TV apps config file"
 
 <p>xawtvrc &#8212; TV apps config file</p>
 <h2>Synopsis</h2>
-<p>/etc/X11/xawtvrc<br />
+<p>/etc/X11/xawtvrc<br/>
  $HOME/.xawtv</p>
 <h2>Description</h2>
 <p><code>xawtvrc</code> is the config file originally used by xawtv only (that&#8217;s why the name xawtvrc). These days a number of other TV applications / utilities read it too to get configuration information from it. </p>

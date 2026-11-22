@@ -11,8 +11,8 @@ description: "smartd – SMART Disk Monitoring Daemon"
 <h2>Synopsis</h2>
 <p><code>smartd [options]</code> </p>
 <h2>Description</h2>
-<p>[This man page is generated for the Linux version of smartmontools. It does not contain info specific to other platforms.] <code>smartd</code> is a daemon that monitors the Self-Monitoring, Analysis and Reporting Technology (SMART) system built into most ATA/SATA and SCSI/SAS hard drives and solid-state drives. The purpose of SMART is to monitor the reliability of the hard drive and predict drive failures, and to carry out different types of drive self-tests. This version of <code>smartd</code> is compatible with ACS-3, ACS-2, ATA8-ACS, ATA/ATAPI-7 and earlier standards (see <code>REFERENCES</code> below). <code>smartd</code> will attempt to enable SMART monitoring on ATA devices (equivalent to <code>smartctl -s on</code>) and polls these and SCSI devices every 30 minutes (configurable), logging SMART errors and changes of SMART Attributes via the SYSLOG interface. The default location for these SYSLOG notifications and warnings is system-dependent (typically <code>/var/log/messages</code> or <code>/var/log/syslog</code>). To change this default location, please see the <code>&#8216;-l&#8217;</code> command-line option described below. In addition to logging to a file, <code>smartd</code> can also be configured to send email warnings if problems are detected. Depending upon the type of problem, you may want to run self-tests on the disk, back up the disk, replace the disk, or use a manufacturer&#8217;s utility to force reallocation of bad or unreadable disk sectors. If disk problems are detected, please see the <code>smartctl</code> manual page and the <code>smartmontools</code> web page/FAQ for further guidance. If you send a <code>USR1</code> signal to <code>smartd</code> it will immediately check the status of the disks, and then return to polling the disks every 30 minutes. See the <code>&#8216;-i&#8217;</code> option below for additional details. <code>smartd</code> can be configured at start-up using the configuration file <code>/etc/smartd.conf</code> (Windows: <code>EXEDIR/smartd.conf</code>). If the configuration file is subsequently modified, <code>smartd</code> can be told to re-read the configuration file by sending it a <code>HUP</code> signal, for example with the command:<br />
- <code>killall -HUP smartd</code>.<br />
+<p>[This man page is generated for the Linux version of smartmontools. It does not contain info specific to other platforms.] <code>smartd</code> is a daemon that monitors the Self-Monitoring, Analysis and Reporting Technology (SMART) system built into most ATA/SATA and SCSI/SAS hard drives and solid-state drives. The purpose of SMART is to monitor the reliability of the hard drive and predict drive failures, and to carry out different types of drive self-tests. This version of <code>smartd</code> is compatible with ACS-3, ACS-2, ATA8-ACS, ATA/ATAPI-7 and earlier standards (see <code>REFERENCES</code> below). <code>smartd</code> will attempt to enable SMART monitoring on ATA devices (equivalent to <code>smartctl -s on</code>) and polls these and SCSI devices every 30 minutes (configurable), logging SMART errors and changes of SMART Attributes via the SYSLOG interface. The default location for these SYSLOG notifications and warnings is system-dependent (typically <code>/var/log/messages</code> or <code>/var/log/syslog</code>). To change this default location, please see the <code>&#8216;-l&#8217;</code> command-line option described below. In addition to logging to a file, <code>smartd</code> can also be configured to send email warnings if problems are detected. Depending upon the type of problem, you may want to run self-tests on the disk, back up the disk, replace the disk, or use a manufacturer&#8217;s utility to force reallocation of bad or unreadable disk sectors. If disk problems are detected, please see the <code>smartctl</code> manual page and the <code>smartmontools</code> web page/FAQ for further guidance. If you send a <code>USR1</code> signal to <code>smartd</code> it will immediately check the status of the disks, and then return to polling the disks every 30 minutes. See the <code>&#8216;-i&#8217;</code> option below for additional details. <code>smartd</code> can be configured at start-up using the configuration file <code>/etc/smartd.conf</code> (Windows: <code>EXEDIR/smartd.conf</code>). If the configuration file is subsequently modified, <code>smartd</code> can be told to re-read the configuration file by sending it a <code>HUP</code> signal, for example with the command:<br/>
+ <code>killall -HUP smartd</code>.<br/>
  On startup, if <code>smartd</code> finds a syntax error in the configuration file, it will print an error message and then exit. However if <code>smartd</code> is already running, then is told with a <code>HUP</code> signal to re-read the configuration file, and then find a syntax error in this file, it will print an error message and then continue, ignoring the contents of the (faulty) configuration file, as if the <code>HUP</code> signal had never been received. When <code>smartd</code> is running in debug mode, the <code>INT</code> signal (normally generated from a shell with CONTROL-C) is treated in the same way as a <code>HUP</code> signal: it makes <code>smartd</code> reload its configuration file. To exit <code>smartd</code> use CONTROL-\ On startup, in the absence of the configuration file <code>/etc/smartd.conf</code>, the <code>smartd</code> daemon first scans for all devices that support SMART. The scanning is done as follows:</p>
 <dl>
 <dt><code>LINUX:</code></dt>
@@ -83,9 +83,9 @@ description: "smartd – SMART Disk Monitoring Daemon"
 <dd>Prints version, copyright, license, home page and SVN revision information for your copy of <code>smartd</code> to STDOUT and then exits. Please include this information if you are reporting bugs or problems. </dd>
 </dl>
 <h2>Examples</h2>
-<p><code>smartd</code><br />
- Runs the daemon in forked mode. This is the normal way to run <code>smartd</code>. Entries are logged to SYSLOG. <code>smartd -d -i 30</code><br />
- Run in foreground (debug) mode, checking the disk status every 30 seconds. <code>smartd -q onecheck</code><br />
+<p><code>smartd</code><br/>
+ Runs the daemon in forked mode. This is the normal way to run <code>smartd</code>. Entries are logged to SYSLOG. <code>smartd -d -i 30</code><br/>
+ Run in foreground (debug) mode, checking the disk status every 30 seconds. <code>smartd -q onecheck</code><br/>
  Registers devices, and checks the status of the devices exactly once. The exit status (the shell <code>$?</code> variable) will be zero if all went well, and nonzero if no devices were detected or some other problem was encountered. </p>
 <h2>Configuration</h2>
 <p>The syntax of the <code><a href="/docs/linux/man/5-smartd-conf/">smartd.conf</a></code>(5) file is discussed separately.</p>
@@ -145,22 +145,22 @@ description: "smartd – SMART Disk Monitoring Daemon"
 <dd>optional local drive database (see &#8216;-B&#8217; option). </dd>
 </dl>
 <h2>Authors</h2>
-<p><code>Bruce Allen</code> (project initiator),<br />
- <code>Christian Franke</code> (project manager, Windows port and all sort of things),<br />
- <code>Douglas Gilbert</code> (SCSI subsystem),<br />
- <code>Volker Kuhlmann</code> (moderator of support and database mailing list),<br />
- <code>Gabriele Pohl</code> (wiki &amp; development team support),<br />
+<p><code>Bruce Allen</code> (project initiator),<br/>
+ <code>Christian Franke</code> (project manager, Windows port and all sort of things),<br/>
+ <code>Douglas Gilbert</code> (SCSI subsystem),<br/>
+ <code>Volker Kuhlmann</code> (moderator of support and database mailing list),<br/>
+ <code>Gabriele Pohl</code> (wiki &amp; development team support),<br/>
  <code>Alex Samorukov</code> (FreeBSD port and more, new Trac wiki). </p>
 <p> Many other individuals have made contributions and corrections, see AUTHORS, ChangeLog and repository files. </p>
 <p> The first smartmontools code was derived from the smartsuite package, written by Michael Cornwell and Andre Hedrick.</p>
 <h2>Reporting Bugs</h2>
-<p>To submit a bug report, create a ticket in smartmontools wiki:<br />
- &lt;<code><a rel="nofollow" href="http://www.smartmontools.org/">http://www.smartmontools.org/</a></code>&gt;.<br />
- Alternatively send the info to the smartmontools support mailing list:<br />
+<p>To submit a bug report, create a ticket in smartmontools wiki:<br/>
+ &lt;<code><a rel="nofollow" href="http://www.smartmontools.org/">http://www.smartmontools.org/</a></code>&gt;.<br/>
+ Alternatively send the info to the smartmontools support mailing list:<br/>
  &lt;<code><a rel="nofollow" href="https://lists.sourceforge.net/lists/listinfo/smartmontools-support">https://lists.sourceforge.net/lists/listinfo/smartmontools-support</a>&gt;. </p>
 <p> </code></p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/5-smartd-conf/">smartd.conf</a></code>(5), <code><a href="/docs/linux/man/8-smartctl/">smartctl</a></code>(8).<br />
+<p><code><a href="/docs/linux/man/5-smartd-conf/">smartd.conf</a></code>(5), <code><a href="/docs/linux/man/8-smartctl/">smartctl</a></code>(8).<br/>
  <code><a href="/docs/linux/man/8-update-smart-drivedb/">update-smart-drivedb</a></code>(8). </p>
 <h2>References</h2>
 <p>Please see the following web site for more info: <code><a rel="nofollow" href="http://www.smartmontools.org/">http://www.smartmontools.org/</a></code> </p>
@@ -169,5 +169,5 @@ description: "smartd – SMART Disk Monitoring Daemon"
 <p> The functioning of SMART was originally defined by the SFF-8035i revision 2 and the SFF-8055i revision 1.4 specifications. These are publications of the Small Form Factors (SFF) Committee. </p>
 <p> Links to these and other documents may be found on the Links page of the <code>smartmontools</code> Wiki at <code><a rel="nofollow" href="http://www.smartmontools.org/wiki/Links">http://www.smartmontools.org/wiki/Links</a></code> .</p>
 <h2>Package Version</h2>
-<p>smartmontools-6.6 2016-05-31 r4324<br />
+<p>smartmontools-6.6 2016-05-31 r4324<br/>
  $Id: smartd.8.in 4299 2016-04-16 19:45:57Z chrfranke $</p>

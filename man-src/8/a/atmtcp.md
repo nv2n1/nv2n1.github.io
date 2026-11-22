@@ -9,7 +9,7 @@ description: "atmtcp – set up ATM over TCP connections"
 
 <p>atmtcp &#8211; set up ATM over TCP connections</p>
 <h2>Synopsis</h2>
-<p><code>atmtcp</code> [<code>-d</code>] [<code>-v</code>] <i>command</i> <code>&#8230;</code><br />
+<p><code>atmtcp</code> [<code>-d</code>] [<code>-v</code>] <i>command</i> <code>&#8230;</code><br/>
  <code>atmtcp</code> <code>-V</code></p>
 <h2>Description</h2>
 <p>The main purpose of <code>atmtcp</code> is to establish TCP connections and to configure them as virtual ATM devices. Such pairs of &quot;ATM over TCP&quot; devices are connected as if they were real ATM adapters linked by a cable or fiber, i.e. SDUs sent on a given VPI/VCI are received at the other end on the same VPI/VCI. </p>

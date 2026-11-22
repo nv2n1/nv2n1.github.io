@@ -536,7 +536,7 @@ description: "groffer – display groff files and man pages on X and tty"
 <p> It is not necessary to use quotes in an option or argument, except for empty arguments. An empty argument can be provided by appending a pair of quotes to the separating equal sign or whitespace; with a short option, the separator can be omitted as well. For a long option with a separating equal sign &#8220;<code>=</code>&#8220;, the pair of quotes can be omitted, thus ending the line with the separating equal sign. All other quote characters are cancelled internally. </p>
 <p> In the configuration files, arbitrary whitespace is allowed at the beginning of each line, it is just ignored. Each whitespace within a line is replaced by a single space character &#8221; &#8221; internally. </p>
 <p> All lines of the configuration lines that do not start with a minus character are ignored, such that comments starting with &#8220;<code>#</code>&#8221; are possible. So there are no shell commands in the configuration files. </p>
-<p> As an example, consider the following configuration file that can be used either in <code>/etc/groff/groffer.conf</code> or <font SIZE="+2"><code>~</code></font><code>/.groff/groffer.conf .</code> </p>
+<p> As an example, consider the following configuration file that can be used either in <code>/etc/groff/groffer.conf</code> or <code>~</code><code>/.groff/groffer.conf .</code> </p>
 <pre>
 # groffer configuration file
 #

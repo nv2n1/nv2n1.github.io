@@ -15,7 +15,7 @@ description: "clisp – ANSI Common Lisp compiler, interpreter and debugger."
 <h2>DESCRIPTION</h2>
 <dd>Invokes the <i></i><code>Common Lisp</code>[1] interpreter and compiler. When called without arguments, executes the <i>read-eval-print loop</i>[2], in which expressions are in turn <i></i><code>READ</code>[3] from the standard input, <i></i><code>EVAL</code>[4]uated by the lisp interpreter, and their results are <i></i><code>PRINT</code>[5]ed to the standard output. Invoked with <code>-c</code>, compiles the specified lisp files to a platform-independent bytecode which can be executed more efficiently.</dd>
 <h2>OPTIONS</h2>
-<p> <code>-h</code><br />
+<p> <code>-h</code><br/>
  <code>&#8211;help</code></p>
 <dl>
 <dt>
@@ -57,17 +57,17 @@ description: "clisp – ANSI Common Lisp compiler, interpreter and debugger."
 <dl>
 <dt>
 </dt><dd> Sets the amount of memory <i></i><code>CLISP</code>[6] tries to grab on startup. The amount may be given as </dd>
-<p> <i>n</i><br />
+<p> <i>n</i><br/>
  <i>n</i><code>B</code></p>
 <dl>
 <dt>
 </dt><dd> measured in bytes</dd></dl>
-<p> <i>n</i><br />
+<p> <i>n</i><br/>
  <i>n</i><code>W</code></p>
 <dl>
 <dt>
 </dt><dd> measured in machine words (4&#215;<i>n</i> on 32-bit platforms, 8&#215;<i>n</i> on 64-bit platforms)</dd></dl>
-<p> <i>n</i><code>K</code><br />
+<p> <i>n</i><code>K</code><br/>
  <i>n</i><code>KB</code></p>
 <dl>
 <dt>
@@ -76,7 +76,7 @@ description: "clisp – ANSI Common Lisp compiler, interpreter and debugger."
 <dl>
 <dt>
 </dt><dd> measured in kilowords</dd></dl>
-<p> <i>n</i><code>M</code><br />
+<p> <i>n</i><code>M</code><br/>
  <i>n</i><code>MB</code></p>
 <dl>
 <dt>
@@ -124,10 +124,10 @@ description: "clisp – ANSI Common Lisp compiler, interpreter and debugger."
 <dt>
 </dt><dd> affecting all of the above.</dd></dl>
 <p> Warning Note that the values of these <i>SYMBOL-MACRO</i>[10]s that have been saved in a memory image are ignored: these <i>SYMBOL-MACRO</i>[10]s are reset based on the OS environment <code>after</code> the memory image is loaded. You have to use the RC file, <i>CUSTOM:*INIT-HOOKS*</i> or init function to set them on startup, but it is best to set the aforementioned <i>environment variable</i>[12]s appropriately for consistency with other programs. See Section 31.1, lqCustomizing CLISP Process Initialization and Terminationrq.</dl>
-<p> <code>-q</code><br />
- <code>&#8211;quiet</code><br />
- <code>&#8211;silent</code><br />
- <code>-v</code><br />
+<p> <code>-q</code><br/>
+ <code>&#8211;quiet</code><br/>
+ <code>&#8211;silent</code><br/>
+ <code>-v</code><br/>
  <code>&#8211;verbose</code></p>
 <dl>
 <dt>
@@ -243,8 +243,8 @@ description: "clisp – ANSI Common Lisp compiler, interpreter and debugger."
 <dl>
 <dt>
 </dt><dd> describe the <i>symbol</i>.</dd></dl>
-<p> (exit)<br />
- (quit)<br />
+<p> (exit)<br/>
+ (quit)<br/>
  (bye)</p>
 <dl>
 <dt>
@@ -284,7 +284,7 @@ description: "clisp – ANSI Common Lisp compiler, interpreter and debugger."
 <dl>
 <dt>
 </dt><dd> startup driver (a script or an executable)</dd></dl>
-<p> <i>lisp.run</i><br />
+<p> <i>lisp.run</i><br/>
  <i>lisp.exe</i></p>
 <dl>
 <dt>
@@ -328,12 +328,12 @@ description: "clisp – ANSI Common Lisp compiler, interpreter and debugger."
 <dl>
 <dt>
 </dt><dd> specifies the language <i></i><code>CLISP</code>[6] uses to communicate with the user, unless it is already specified through the <i>environment variable</i>[12] <code>CLISP_LANGUAGE</code> or the <code>-L</code> option. It also specifies the locale determining the character set in use, unless already specified through the <i>environment variable</i>[12] <code>LC_CTYPE</code>. The value may begin with a two-letter ISO 639 language code, for example <code>en</code>, <code>de</code>, <code>fr</code>.</dd></dl>
-<p> <code>HOME</code><br />
+<p> <code>HOME</code><br/>
  <code>USER</code></p>
 <dl>
 <dt>
 </dt><dd> used for determining the value of the function <i></i><code>USER-HOMEDIR-PATHNAME</code>[33].</dd></dl>
-<p> <code>SHELL</code><br />
+<p> <code>SHELL</code><br/>
  <code>COMSPEC</code></p>
 <dl>
 <dt>
@@ -358,8 +358,8 @@ description: "clisp – ANSI Common Lisp compiler, interpreter and debugger."
 <dl>
 <dt>
 </dt><dd> for <code>editor-name</code> in <i>config.lisp</i>.</dd></dl>
-<p> <code>LOGICAL_HOST_</code><i>host</i><code>_FROM</code><br />
- <code>LOGICAL_HOST_</code><i>host</i><code>_TO</code><br />
+<p> <code>LOGICAL_HOST_</code><i>host</i><code>_FROM</code><br/>
+ <code>LOGICAL_HOST_</code><i>host</i><code>_TO</code><br/>
  <code>LOGICAL_HOST_</code><i>host</i></p>
 <dl>
 <dt>
@@ -430,7 +430,7 @@ description: "clisp – ANSI Common Lisp compiler, interpreter and debugger."
 <dt>
 </dt><dd> See <i>COPYRIGHT</i> (file in the CLISP sources) for the list of other contributors and the license.</dd></dl>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 1992-2008 Bruno Haible<br />
+<p> Copyright &#169; 1992-2008 Bruno Haible<br/>
  Copyright &#169; 1998-2008 Sam Steingold </p>
 <h2>NOTES</h2>
 <dl>
@@ -590,7 +590,7 @@ description: "clisp – ANSI Common Lisp compiler, interpreter and debugger."
 <dt>
 </dt><dd> <a rel="nofollow" href="http://www.lispworks.com/documentation/HyperSpec/Body/fun_compile.html">http://www.lispworks.com/documentation/HyperSpec/Body/fun_compile.html</a></dd></dl>
 <dt>32.</dt>
-<dd> lqrun<br />
+<dd> lqrun<br/>
 &nbsp;<wbr>&nbsp;<wbr>controlrq&nbsp;<wbr>(RC)</dd>
 <dl>
 <dt>

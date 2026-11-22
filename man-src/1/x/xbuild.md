@@ -24,8 +24,8 @@ description: "xbuild – Mono’s tool to build MSBuild project files"
 <dd> Custom logger to log build events</dd>
 <dt><code>//toolsversion:version , /tv:version</code></dt>
 <dd> Specify the toolset version to use. </dd>
-<p> Eg. /tv:4.0<br />
-&nbsp;<wbr>This would cause 4.0 version of the Microsoft.Common.targets&nbsp;<wbr>(among others)&nbsp;<wbr>to be used. This overrides<br />
+<p> Eg. /tv:4.0<br/>
+&nbsp;<wbr>This would cause 4.0 version of the Microsoft.Common.targets&nbsp;<wbr>(among others)&nbsp;<wbr>to be used. This overrides<br/>
 &nbsp;<wbr>the value specified in a project file. </p>
 <p> Valid values: 2.0, 3.0, 3.5 and 4.0</p>
 <dt><code>//verbosity:&lt;level&gt;</code></dt>
@@ -67,9 +67,9 @@ description: "xbuild – Mono’s tool to build MSBuild project files"
 <dd> MSBuild extensions are usually installed in $(MSBuildExtensionsPath), which xbuild resolves to $prefix/lib/mono/xbuild . When used in Import, like: </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>&lt;Import Project=&quot;$(MSBuildExtensionsPath)\TestTargets.targets&quot;/&gt; </p>
 <p> xbuild tries various values for the msbuild property $(MSBuildExtensionsPath), in order: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>1. Paths specified in the environment variable&nbsp;<wbr>$MSBuildExtensionsPath.<br />
-&nbsp;<wbr>&nbsp;<wbr>2.&nbsp;<wbr>/Library/Frameworks/Mono.framework/External/xbuild on Mac OSX.<br />
-&nbsp;<wbr>&nbsp;<wbr>3.&nbsp;<wbr>$XDG_CONFIG_HOME/xbuild/tasks&nbsp;<wbr>(or Environment.SpecialFolder.ApplicationData)<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>1. Paths specified in the environment variable&nbsp;<wbr>$MSBuildExtensionsPath.<br/>
+&nbsp;<wbr>&nbsp;<wbr>2.&nbsp;<wbr>/Library/Frameworks/Mono.framework/External/xbuild on Mac OSX.<br/>
+&nbsp;<wbr>&nbsp;<wbr>3.&nbsp;<wbr>$XDG_CONFIG_HOME/xbuild/tasks&nbsp;<wbr>(or Environment.SpecialFolder.ApplicationData)<br/>
 &nbsp;<wbr>&nbsp;<wbr>4.&nbsp;<wbr>$prefix/lib/mono/xbuild&nbsp;<wbr>(default location) </p>
 <p> Anywhere else in the project files, $(MSBuildExtensionsPath) will always resolve to the default location. This is a xbuild-only feature. This is also applicable for the properties $(MSBuildExtensionsPath32) and $(MSBuildExtensionsPath64), and the environment variables have the corresponding names &#8211; MSBuildExtensionsPath32/64 .</p>
 <dt><i>XBUILD_FRAMEWORK_FOLDERS_PATH</i></dt>
@@ -90,7 +90,7 @@ description: "xbuild – Mono’s tool to build MSBuild project files"
 </pre>
 <p> XBuild tries the paths given above, in order, till it finds a FrameworkList.xml for the moniker. Running with /v:detailed or higher verbosity will show the various paths that it tries. </p>
 <p> The FrameworkList.xml itself just has a root element like: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&lt;FileList&nbsp;<wbr>&nbsp;<wbr>Name=&quot;.NET Framework 3.5&quot;&nbsp;<wbr>TargetFrameworkDirectory=&quot;..\..\..\..\3.5&quot;&nbsp;<wbr>IncludeFramework=&quot;v3.0&quot;&gt;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&lt;FileList&nbsp;<wbr>&nbsp;<wbr>Name=&quot;.NET Framework 3.5&quot;&nbsp;<wbr>TargetFrameworkDirectory=&quot;..\..\..\..\3.5&quot;&nbsp;<wbr>IncludeFramework=&quot;v3.0&quot;&gt;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&lt;/FileList&gt; </p>
 <p> Here the TargetFrameworkDirectory attribute specifies the directory where the assemblies for this particular framework can be found. If this is not set, then the parent of the folder containing the xml file is taken as the framework directory. </p>
 <p> IncludeFramework attribute specifies the version of a framework (under the *same* $(TargetFrameworkIdentifier)) which should be included in the final list of Target framework directories. </p>

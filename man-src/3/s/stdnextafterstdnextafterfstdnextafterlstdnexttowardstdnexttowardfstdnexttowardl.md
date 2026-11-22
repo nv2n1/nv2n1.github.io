@@ -9,18 +9,18 @@ description: "std::nextafter,std::nextafterf,std::nextafterl,std::nexttoward,std
 
 <p>std::nextafter,std::nextafterf,std::nextafterl,std::nexttoward,std::nexttowardf,std::nexttowardl &#8211; std::nextafter,std::nextafterf,std::nextafterl,std::nexttoward,std::nexttowardf,std::nexttowardl</p>
 <h2>Synopsis</h2>
-<p>Defined in header &lt;cmath&gt;<br />
-float nextafter ( float from, float to ); <code>(1)</code> <i>(since C++11)</i><br />
-float nextafterf( float from, float to );<br />
-double nextafter ( double from, double to ); <code>(2)</code> <i>(since C++11)</i><br />
-long double nextafter ( long double from, long double to ); <code>(3)</code> <i>(since C++11)</i><br />
-long double nextafterl( long double from, long double to );<br />
-Promoted nextafter ( Arithmetic1 from, Arithmetic2 to ); <code>(4)</code> <i>(since C++11)</i><br />
-float nexttoward ( float from, long double to ); <code>(5)</code> <i>(since C++11)</i><br />
-float nexttowardf( float from, long double to );<br />
-double nexttoward ( double from, long double to ); <code>(6)</code> <i>(since C++11)</i><br />
-long double nexttoward ( long double from, long double to ); <code>(7)</code> <i>(since C++11)</i><br />
-long double nexttowardl( long double from, long double to );<br />
+<p>Defined in header &lt;cmath&gt;<br/>
+float nextafter ( float from, float to ); <code>(1)</code> <i>(since C++11)</i><br/>
+float nextafterf( float from, float to );<br/>
+double nextafter ( double from, double to ); <code>(2)</code> <i>(since C++11)</i><br/>
+long double nextafter ( long double from, long double to ); <code>(3)</code> <i>(since C++11)</i><br/>
+long double nextafterl( long double from, long double to );<br/>
+Promoted nextafter ( Arithmetic1 from, Arithmetic2 to ); <code>(4)</code> <i>(since C++11)</i><br/>
+float nexttoward ( float from, long double to ); <code>(5)</code> <i>(since C++11)</i><br/>
+float nexttowardf( float from, long double to );<br/>
+double nexttoward ( double from, long double to ); <code>(6)</code> <i>(since C++11)</i><br/>
+long double nexttoward ( long double from, long double to ); <code>(7)</code> <i>(since C++11)</i><br/>
+long double nexttowardl( long double from, long double to );<br/>
 double nexttoward ( IntegralType from, long double to ); <code>(8)</code> <i>(since C++11)</i> </p>
 <pre><code>Returns the next representable value of from in the direction of to.
 1-3) If from equals to to, to is returned.
@@ -31,18 +31,18 @@ double nexttoward ( IntegralType from, long double to ); <code>(8)</code> <i>(si
 <h2>Parameters</h2>
 <p>from, to &#8211; floating point values</p>
 <h2>Return value</h2>
-<p>If no errors occur, the next representable value of from in the direction of to. is returned. If from equals to, then to is returned.<br />
-If a range error due to overflow occurs, ±HUGE_VAL, ±HUGE_VALF, or ±HUGE_VALL is returned (with the same sign as from)<br />
+<p>If no errors occur, the next representable value of from in the direction of to. is returned. If from equals to, then to is returned.<br/>
+If a range error due to overflow occurs, ±HUGE_VAL, ±HUGE_VALF, or ±HUGE_VALL is returned (with the same sign as from)<br/>
 If a range error occurs due to underflow, the correct result is returned. </p>
 <h2>Error handling</h2>
-<p>Errors are reported as specified in math_errhandling.<br />
+<p>Errors are reported as specified in math_errhandling.<br/>
 If the implementation supports IEEE floating-point arithmetic (IEC 60559), </p>
-<p>* if from is finite, but the expected result is an infinity, raises FE_INEXACT and FE_OVERFLOW<br />
-* if from does not equal to and the result is subnormal or zero, raises FE_INEXACT and FE_UNDERFLOW<br />
-* in any case, the returned value is independent of the current rounding mode<br />
+<p>* if from is finite, but the expected result is an infinity, raises FE_INEXACT and FE_OVERFLOW<br/>
+* if from does not equal to and the result is subnormal or zero, raises FE_INEXACT and FE_UNDERFLOW<br/>
+* in any case, the returned value is independent of the current rounding mode<br/>
 * if either from or to is NaN, NaN is returned</p>
 <h2>Notes</h2>
-<p>POSIX_specifies that the overflow and the underflow conditions are range errors (errno may be set)<br />
+<p>POSIX_specifies that the overflow and the underflow conditions are range errors (errno may be set)<br/>
 IEC 60559 recommends that from is returned whenever from==to. These functions return to instead, which makes the behavior around zero consistent: std::nextafter(-0.0, +0.0) returns +0.0 and std::nextafter(+0.0, -0.0) returns –0.0. </p>
 <h2>Example</h2>
 <p>// Run this code </p>
@@ -105,15 +105,15 @@ and &quot; &lt;&lt; to3 &lt;&lt; std::hexfloat &lt;&lt; &quot; (&quot; &lt;&lt; 
 }
 </code></pre>
 <h2>Output:</h2>
-<p>&nbsp;<wbr>&nbsp;The next representable float after 0 is 1.4012984643248170709e-45 (0x1p-149)<br />
-&nbsp;<wbr>&nbsp;The next representable float after 1 is 1.0000001192092895508 (0x1.000002p+0)<br />
-&nbsp;<wbr>&nbsp;The number 0.1 lies between two valid doubles:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0.09999999999999999167332731531132594682276248931884765625 (0x1.9999999999999p-4)<br />
-&nbsp;<wbr>&nbsp;and 0.1000000000000000055511151231257827021181583404541015625 (0x1.999999999999ap-4)<br />
-&nbsp;<wbr>&nbsp;With nextafter, next float after 0 is 0<br />
-&nbsp;<wbr>&nbsp;With nexttoward, next float after 0 is 1.4012984643248170709e-45<br />
-&nbsp;<wbr>&nbsp;The next representable double after 1.79769e+308 (0x1.fffffffffffffp+1023) is inf (inf)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;raised FE_OVERFLOW<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;raised FE_INEXACT<br />
+<p>&nbsp;<wbr>&nbsp;The next representable float after 0 is 1.4012984643248170709e-45 (0x1p-149)<br/>
+&nbsp;<wbr>&nbsp;The next representable float after 1 is 1.0000001192092895508 (0x1.000002p+0)<br/>
+&nbsp;<wbr>&nbsp;The number 0.1 lies between two valid doubles:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0.09999999999999999167332731531132594682276248931884765625 (0x1.9999999999999p-4)<br/>
+&nbsp;<wbr>&nbsp;and 0.1000000000000000055511151231257827021181583404541015625 (0x1.999999999999ap-4)<br/>
+&nbsp;<wbr>&nbsp;With nextafter, next float after 0 is 0<br/>
+&nbsp;<wbr>&nbsp;With nexttoward, next float after 0 is 1.4012984643248170709e-45<br/>
+&nbsp;<wbr>&nbsp;The next representable double after 1.79769e+308 (0x1.fffffffffffffp+1023) is inf (inf)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;raised FE_OVERFLOW<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;raised FE_INEXACT<br/>
 &nbsp;<wbr>&nbsp;std::nextafter(+0.0, -0.0) gives -0.000000</p>
 <h2>See also</h2>

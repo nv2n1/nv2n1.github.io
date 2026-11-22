@@ -34,8 +34,8 @@ description: "hx509 certificate store functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a hx509 context.<br />
- <i>certs</i> certificate store to add the certificate to.<br />
+</dt><dd> <i>context</i> a hx509 context.<br/>
+ <i>certs</i> certificate store to add the certificate to.<br/>
  <i>cert</i> certificate to add.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -46,9 +46,9 @@ description: "hx509 certificate store functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a hx509 context.<br />
- <i>to</i> the store to merge into.<br />
- <i>lock</i> a lock that unlocks the certificates store, use NULL to select no password/certifictes/prompt lock (see <code>Locking and unlocking certificates and encrypted data.</code>).<br />
+</dt><dd> <i>context</i> a hx509 context.<br/>
+ <i>to</i> the store to merge into.<br/>
+ <i>lock</i> a lock that unlocks the certificates store, use NULL to select no password/certifictes/prompt lock (see <code>Locking and unlocking certificates and encrypted data.</code>).<br/>
  <i>name</i> name of the source store</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -59,8 +59,8 @@ description: "hx509 certificate store functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a hx509 context.<br />
- <i>certs</i> certificate store to iterate over.<br />
+</dt><dd> <i>context</i> a hx509 context.<br/>
+ <i>certs</i> certificate store to iterate over.<br/>
  <i>cursor</i> cursor that will keep track of progress, freed.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -71,9 +71,9 @@ description: "hx509 certificate store functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a hx509 context.<br />
- <i>certs</i> certificate store to search.<br />
- <i>q</i> query allocated with <code>hx509 query functions</code> functions.<br />
+</dt><dd> <i>context</i> a hx509 context.<br/>
+ <i>certs</i> certificate store to search.<br/>
+ <i>q</i> query allocated with <code>hx509 query functions</code> functions.<br/>
  <i>result</i> the filtered certificate store, caller must free with <code>hx509_certs_free()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -85,9 +85,9 @@ description: "hx509 certificate store functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a hx509 context.<br />
- <i>certs</i> certificate store to search.<br />
- <i>q</i> query allocated with <code>hx509 query functions</code> functions.<br />
+</dt><dd> <i>context</i> a hx509 context.<br/>
+ <i>certs</i> certificate store to search.<br/>
+ <i>q</i> query allocated with <code>hx509 query functions</code> functions.<br/>
  <i>r</i> return certificate (or NULL on error), should be freed with <code>hx509_cert_free()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -105,9 +105,9 @@ description: "hx509 certificate store functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a hx509 context.<br />
- <i>certs</i> certificate store to print information about.<br />
- <i>func</i> function that will get each line of the information, if NULL is used the data is printed on a FILE descriptor that should be passed in ctx, if ctx also is NULL, stdout is used.<br />
+</dt><dd> <i>context</i> a hx509 context.<br/>
+ <i>certs</i> certificate store to print information about.<br/>
+ <i>func</i> function that will get each line of the information, if NULL is used the data is printed on a FILE descriptor that should be passed in ctx, if ctx also is NULL, stdout is used.<br/>
  <i>ctx</i> parameter to func.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -118,23 +118,23 @@ description: "hx509 certificate store functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A hx509 context<br />
- <i>name</i> name of the store, format is TYPE:type-specific-string, if NULL is used the MEMORY store is used.<br />
+</dt><dd> <i>context</i> A hx509 context<br/>
+ <i>name</i> name of the store, format is TYPE:type-specific-string, if NULL is used the MEMORY store is used.<br/>
  <i>flags</i> list of flags:</dd>
 <dl>
 <dt>&bull;</dt>
 <dd> HX509_CERTS_CREATE create a new keystore of the specific TYPE.</dd>
 <dt>&bull;</dt>
 <dd> HX509_CERTS_UNPROTECT_ALL fails if any private key failed to be extracted.</dd></dl>
-<p> <i>lock</i> a lock that unlocks the certificates store, use NULL to select no password/certifictes/prompt lock (see <code>Locking and unlocking certificates and encrypted data.</code>).<br />
+<p> <i>lock</i> a lock that unlocks the certificates store, use NULL to select no password/certifictes/prompt lock (see <code>Locking and unlocking certificates and encrypted data.</code>).<br/>
  <i>certs</i> return pointer, free with <code>hx509_certs_free()</code>.</dl>
 <h3>int hx509_certs_iter_f (hx509_contextcontext, hx509_certscerts, int(*)(hx509_context, void *, hx509_cert)func, void *ctx)</h3>
 <p> Iterate over all certificates in a keystore and call an block for each fo them. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a hx509 context.<br />
- <i>certs</i> certificate store to iterate over.<br />
+</dt><dd> <i>context</i> a hx509 context.<br/>
+ <i>certs</i> certificate store to iterate over.<br/>
  <i>func</i> block to call for each certificate. The function should return non-zero to abort the iteration, that value is passed back to the caller of hx509_certs_iter().</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -143,9 +143,9 @@ description: "hx509 certificate store functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a hx509 context.<br />
- <i>certs</i> certificate store to iterate over.<br />
- <i>func</i> function to call for each certificate. The function should return non-zero to abort the iteration, that value is passed back to the caller of <code>hx509_certs_iter_f()</code>.<br />
+</dt><dd> <i>context</i> a hx509 context.<br/>
+ <i>certs</i> certificate store to iterate over.<br/>
+ <i>func</i> function to call for each certificate. The function should return non-zero to abort the iteration, that value is passed back to the caller of <code>hx509_certs_iter_f()</code>.<br/>
  <i>ctx</i> context variable that will passed to the function.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -155,9 +155,9 @@ description: "hx509 certificate store functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a hx509 context.<br />
- <i>certs</i> certificate store to iterate over.<br />
- <i>func</i> function to call for each certificate. The function should return non-zero to abort the iteration, that value is passed back to the caller of <code>hx509_certs_iter_f()</code>.<br />
+</dt><dd> <i>context</i> a hx509 context.<br/>
+ <i>certs</i> certificate store to iterate over.<br/>
+ <i>func</i> function to call for each certificate. The function should return non-zero to abort the iteration, that value is passed back to the caller of <code>hx509_certs_iter_f()</code>.<br/>
  <i>ctx</i> context variable that will passed to the function.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -168,8 +168,8 @@ description: "hx509 certificate store functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a hx509 context.<br />
- <i>to</i> the store to merge into.<br />
+</dt><dd> <i>context</i> a hx509 context.<br/>
+ <i>to</i> the store to merge into.<br/>
  <i>from</i> the store to copy the object from.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -180,9 +180,9 @@ description: "hx509 certificate store functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a hx509 context.<br />
- <i>certs</i> certificate store to iterate over.<br />
- <i>cursor</i> cursor that keeps track of progress.<br />
+</dt><dd> <i>context</i> a hx509 context.<br/>
+ <i>certs</i> certificate store to iterate over.<br/>
+ <i>cursor</i> cursor that keeps track of progress.<br/>
  <i>cert</i> return certificate next in store, NULL if the store contains no more certificates. Free with <code>hx509_cert_free()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -193,8 +193,8 @@ description: "hx509 certificate store functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a hx509 context.<br />
- <i>certs</i> certificate store to iterate over<br />
+</dt><dd> <i>context</i> a hx509 context.<br/>
+ <i>certs</i> certificate store to iterate over<br/>
  <i>cursor</i> cursor that will keep track of progress, free with <code>hx509_certs_end_seq()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -205,9 +205,9 @@ description: "hx509 certificate store functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A hx509 context.<br />
- <i>certs</i> a certificate store to store.<br />
- <i>flags</i> currently unused, use 0.<br />
+</dt><dd> <i>context</i> A hx509 context.<br/>
+ <i>certs</i> a certificate store to store.<br/>
+ <i>flags</i> currently unused, use 0.<br/>
  <i>lock</i> a lock that unlocks the certificates store, use NULL to select no password/certifictes/prompt lock (see <code>Locking and unlocking certificates and encrypted data.</code>).</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -218,8 +218,8 @@ description: "hx509 certificate store functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a hx509 context.<br />
- <i>ctx</i> used by <code>hx509_certs_iter_f()</code>.<br />
+</dt><dd> <i>context</i> a hx509 context.<br/>
+ <i>ctx</i> used by <code>hx509_certs_iter_f()</code>.<br/>
  <i>c</i> a certificate</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -229,8 +229,8 @@ description: "hx509 certificate store functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a hx509 context.<br />
- <i>certs</i> certificate store to iterate over.<br />
+</dt><dd> <i>context</i> a hx509 context.<br/>
+ <i>certs</i> certificate store to iterate over.<br/>
  <i>func</i> function to call for each certificate. The function should return non-zero to abort the iteration, that value is passed back to the caller of hx509_certs_iter().</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -239,8 +239,8 @@ description: "hx509 certificate store functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a hx509 context.<br />
- <i>ctx</i> used by <code>hx509_certs_iter_f()</code>.<br />
+</dt><dd> <i>context</i> a hx509 context.<br/>
+ <i>ctx</i> used by <code>hx509_certs_iter_f()</code>.<br/>
  <i>c</i> a certificate</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -251,8 +251,8 @@ description: "hx509 certificate store functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a hx509 context.<br />
- <i>certs</i> a certificate store to get the certificate from.<br />
+</dt><dd> <i>context</i> a hx509 context.<br/>
+ <i>certs</i> a certificate store to get the certificate from.<br/>
  <i>c</i> return certificate, should be freed with <code>hx509_cert_free()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

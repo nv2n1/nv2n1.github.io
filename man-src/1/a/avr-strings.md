@@ -10,15 +10,15 @@ description: "strings – print the strings of printable characters in files."
 
 <p> strings &#8211; print the strings of printable characters in files. </p>
 <h2>SYNOPSIS</h2>
-<p> strings [<code>-afovV</code>] [<code>&#8211;</code><i>min-len</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-n</code>&nbsp;<wbr><i>min-len</i>]&nbsp;<wbr>[<code>&#8211;bytes=</code><i>min-len</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-t</code>&nbsp;<wbr><i>radix</i>]&nbsp;<wbr>[<code>&#8211;radix=</code><i>radix</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-e</code>&nbsp;<wbr><i>encoding</i>]&nbsp;<wbr>[<code>&#8211;encoding=</code><i>encoding</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;</code>]&nbsp;<wbr>[<code>&#8211;all</code>]&nbsp;<wbr>[<code>&#8211;print-file-name</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-T</code>&nbsp;<wbr><i>bfdname</i>]&nbsp;<wbr>[<code>&#8211;target=</code><i>bfdname</i>]<br />
+<p> strings [<code>-afovV</code>] [<code>&#8211;</code><i>min-len</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-n</code>&nbsp;<wbr><i>min-len</i>]&nbsp;<wbr>[<code>&#8211;bytes=</code><i>min-len</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-t</code>&nbsp;<wbr><i>radix</i>]&nbsp;<wbr>[<code>&#8211;radix=</code><i>radix</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-e</code>&nbsp;<wbr><i>encoding</i>]&nbsp;<wbr>[<code>&#8211;encoding=</code><i>encoding</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;</code>]&nbsp;<wbr>[<code>&#8211;all</code>]&nbsp;<wbr>[<code>&#8211;print-file-name</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-T</code>&nbsp;<wbr><i>bfdname</i>]&nbsp;<wbr>[<code>&#8211;target=</code><i>bfdname</i>]<br/>
 &nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;help</code>]&nbsp;<wbr>[<code>&#8211;version</code>]&nbsp;<wbr><i>file</i>&#8230;</p>
 <h2>DESCRIPTION</h2>
-<p> For each <i>file</i> given, <font SIZE="-1">GNU </font><code>strings</code> prints the printable character sequences that are at least 4 characters long (or the number given with the options below) and are followed by an unprintable character. By default, it only prints the strings from the initialized and loaded sections of object files; for other types of files, it prints the strings from the whole file. </p>
+<p> For each <i>file</i> given, GNU <code>strings</code> prints the printable character sequences that are at least 4 characters long (or the number given with the options below) and are followed by an unprintable character. By default, it only prints the strings from the initialized and loaded sections of object files; for other types of files, it prints the strings from the whole file. </p>
 <p> <code>strings</code> is mainly useful for determining the contents of non-text files.</p>
 <h2>OPTIONS</h2>
 <dl>
@@ -49,7 +49,7 @@ description: "strings – print the strings of printable characters in files."
 <dt><code>-e</code> <i>encoding</i></dt>
 <dd>
 </dd><dt><code>&#8211;encoding=</code><i>encoding</i></dt>
-<dd> Select the character encoding of the strings that are to be found. Possible values for <i>encoding</i> are: <code>s</code> = single-7-bit-byte characters (<font SIZE="-1">ASCII, ISO 8859,</font> etc., default), <code>S</code> = single-8-bit-byte characters, <code>b</code> = 16-bit bigendian, <code>l</code> = 16-bit littleendian, <code>B</code> = 32-bit bigendian, <code>L</code> = 32-bit littleendian. Useful for finding wide character strings. (<code>l</code> and <code>b</code> apply to, for example, Unicode <font SIZE="-1">UTF-16/UCS-2</font> encodings).</dd>
+<dd> Select the character encoding of the strings that are to be found. Possible values for <i>encoding</i> are: <code>s</code> = single-7-bit-byte characters (ASCII, ISO 8859, etc., default), <code>S</code> = single-8-bit-byte characters, <code>b</code> = 16-bit bigendian, <code>l</code> = 16-bit littleendian, <code>B</code> = 32-bit bigendian, <code>L</code> = 32-bit littleendian. Useful for finding wide character strings. (<code>l</code> and <code>b</code> apply to, for example, Unicode UTF-16/UCS-2 encodings).</dd>
 <dt><code>-T</code> <i>bfdname</i></dt>
 <dd>
 </dd><dt><code>&#8211;target=</code><i>bfdname</i></dt>
@@ -67,4 +67,4 @@ description: "strings – print the strings of printable characters in files."
 <p> <i><a href="/docs/linux/man/1-ar/">ar</a></i>(1), <i><a href="/docs/linux/man/1-nm/">nm</a></i>(1), <i><a href="/docs/linux/man/1-objdump/">objdump</a></i>(1), <i><a href="/docs/linux/man/1-ranlib/">ranlib</a></i>(1), <i><a href="/docs/linux/man/1-readelf/">readelf</a></i>(1) and the Info entries for <i>binutils</i>.</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 1991-2013 Free Software Foundation, Inc. </p>
-<p> Permission is granted to copy, distribute and/or modify this document under the terms of the <font SIZE="-1">GNU</font> Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts. A copy of the license is included in the section entitled &#8220;<font SIZE="-1">GNU</font> Free Documentation License&#8221;. </p>
+<p> Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts. A copy of the license is included in the section entitled &#8220;GNU Free Documentation License&#8221;. </p>

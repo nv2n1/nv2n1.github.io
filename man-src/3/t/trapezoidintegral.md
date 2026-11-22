@@ -14,7 +14,7 @@ description: "ql/math/integrals/trapezoidintegral.hpp – integral of a one-dime
 #include &lt;ql/utilities/null.hpp&gt;
 #include &lt;ql/errors.hpp&gt;</code></pre>
 <h3>Classes</h3>
-<p>class <code>TrapezoidIntegral&lt; IntegrationPolicy &gt;</code><br />
+<p>class <code>TrapezoidIntegral&lt; IntegrationPolicy &gt;</code><br/>
  <i>Integral of a one-dimensional function. </i></p>
 <h2>Detailed Description</h2>
 <p>integral of a one-dimensional function using the trapezoid formula</p>

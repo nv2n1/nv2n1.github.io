@@ -27,12 +27,12 @@ void checkRange (Time, Time, Rate strike, bool extrapolate) const
 void checkRange (const Date &amp;optionDate, const Period &amp;bondTenor, Rate strike, bool extrapolate) const</code></pre>
 <p> Inherits <code>QuantLib::TermStructure</code>. Inherited by <code>CallableBondConstantVolatility</code>.</p>
 <h3>Public Member Functions</h3>
-<p>virtual std::pair&lt; Time, Time &gt; <code>convertDates</code> (const <code>Date</code> &amp;optionDate, const <code>Period</code> &amp;bondTenor) const<br />
- <i>implements the conversion between dates and times </i><br />
- virtual <code>BusinessDayConvention</code> <code>businessDayConvention</code> () const<br />
- <i>the business day convention used for option date calculation </i><br />
- <code>Date</code> <code>optionDateFromTenor</code> (const <code>Period</code> &amp;optionTenor) const<br />
- <i>implements the conversion between optionTenors and optionDates </i> <code>Constructors</code><br />
+<p>virtual std::pair&lt; Time, Time &gt; <code>convertDates</code> (const <code>Date</code> &amp;optionDate, const <code>Period</code> &amp;bondTenor) const<br/>
+ <i>implements the conversion between dates and times </i><br/>
+ virtual <code>BusinessDayConvention</code> <code>businessDayConvention</code> () const<br/>
+ <i>the business day convention used for option date calculation </i><br/>
+ <code>Date</code> <code>optionDateFromTenor</code> (const <code>Period</code> &amp;optionTenor) const<br/>
+ <i>implements the conversion between optionTenors and optionDates </i> <code>Constructors</code><br/>
  See the <code>TermStructure</code> documentation for issues regarding constructors. virtual const Period &amp; maxBondTenor () const =0</p>
 <p>the largest length for which the term structure can return vols</p>
 <p>virtual Time maxBondLength () const</p>
@@ -41,14 +41,14 @@ void checkRange (const Date &amp;optionDate, const Period &amp;bondTenor, Rate s
 <p>the minimum strike for which the term structure can return vols</p>
 <p>virtual Rate maxStrike () const =0</p>
 <p>the maximum strike for which the term structure can return vols</p>
-<p>Protected Member Functions<br />
+<p>Protected Member Functions<br/>
 virtual boost::shared_ptr&lt; SmileSection &gt; smileSectionImpl (Time optionTime, Time bondLength) const =0</p>
 <p>return smile section</p>
 <p>virtual Volatility volatilityImpl (Time optionTime, Time bondLength, Rate strike) const =0</p>
 <p>implements the actual volatility calculation in derived classes</p>
 <p>virtual Volatility volatilityImpl (const Date &amp;optionDate, const Period &amp;bondTenor, Rate strike) const</p>
 <p>void checkRange (Time, Time, Rate strike, bool extrapolate) const</p>
-<p>void checkRange (const Date &amp;optionDate, const Period &amp;bondTenor, Rate strike, bool extrapolate) const <code>Volatility, variance and smile</code><br />
+<p>void checkRange (const Date &amp;optionDate, const Period &amp;bondTenor, Rate strike, bool extrapolate) const <code>Volatility, variance and smile</code><br/>
  virtual const Period &amp; maxBondTenor () const =0</p>
 <p>the largest length for which the term structure can return vols</p>
 <p>virtual Time maxBondLength () const</p>
@@ -57,7 +57,7 @@ virtual boost::shared_ptr&lt; SmileSection &gt; smileSectionImpl (Time optionTim
 <p>the minimum strike for which the term structure can return vols</p>
 <p>virtual Rate maxStrike () const =0</p>
 <p>the maximum strike for which the term structure can return vols</p>
-<p>Protected Member Functions<br />
+<p>Protected Member Functions<br/>
 virtual boost::shared_ptr&lt; SmileSection &gt; smileSectionImpl (Time optionTime, Time bondLength) const =0</p>
 <p>return smile section</p>
 <p>virtual Volatility volatilityImpl (Time optionTime, Time bondLength, Rate strike) const =0</p>

@@ -10,7 +10,7 @@ description: "ldns_get_rr_list_hosts_frm_fp_l"
 
 <p> ldns_get_rr_list_hosts_frm_fp_l </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ldns_rr_list* ldns_get_rr_list_hosts_frm_fp_l(FILE *fp, int *line_nr); </p>

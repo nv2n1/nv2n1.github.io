@@ -10,7 +10,7 @@ description: "ldns_rr_uncompressed_size"
 
 <p> ldns_rr_uncompressed_size </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> size_t ldns_rr_uncompressed_size(const ldns_rr *r); </p>

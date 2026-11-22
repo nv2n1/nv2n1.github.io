@@ -10,7 +10,7 @@ description: "dtgsyl.f –"
 <p>dtgsyl.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dtgsyl</code> (TRANS, IJOB, M, N, A, LDA, B, LDB, C, LDC, D, LDD, E, LDE, F, LDF, SCALE, DIF, WORK, LWORK, IWORK, INFO)<br />
+<p>subroutine <code>dtgsyl</code> (TRANS, IJOB, M, N, A, LDA, B, LDB, C, LDC, D, LDD, E, LDE, F, LDF, SCALE, DIF, WORK, LWORK, IWORK, INFO)<br/>
  <i></i><code>DTGSYL</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dtgsyl (characterTRANS, integerIJOB, integerM, integerN, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( ldb, * )B, integerLDB, double precision, dimension( ldc, * )C, integerLDC, double precision, dimension( ldd, * )D, integerLDD, double precision, dimension( lde, * )E, integerLDE, double precision, dimension( ldf, * )F, integerLDF, double precisionSCALE, double precisionDIF, double precision, dimension( * )WORK, integerLWORK, integer, dimension( * )IWORK, integerINFO)</h3>

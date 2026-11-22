@@ -11,7 +11,7 @@ description: "sormtr.f –"
 <p> sormtr.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>sormtr</code> (SIDE, UPLO, TRANS, M, N, A, LDA, TAU, C, LDC, WORK, LWORK, INFO)<br />
+<p> subroutine <code>sormtr</code> (SIDE, UPLO, TRANS, M, N, A, LDA, TAU, C, LDC, WORK, LWORK, INFO)<br/>
  <i></i><code>SORMTR</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sormtr (characterSIDE, characterUPLO, characterTRANS, integerM, integerN, real, dimension( lda, * )A, integerLDA, real, dimension( * )TAU, real, dimension( ldc, * )C, integerLDC, real, dimension( * )WORK, integerLWORK, integerINFO)</h3>
@@ -73,8 +73,8 @@ if UPLO
           returned by SSYTRD.
 </pre>
 <p> <i>LDA</i> </p>
-<p>LDA is INTEGER<br />
-        The leading dimension of the array A.LDA &gt;= max(1, M) if SIDE = &#8216;L&#8217;;<br />
+<p>LDA is INTEGER<br/>
+        The leading dimension of the array A.LDA &gt;= max(1, M) if SIDE = &#8216;L&#8217;;<br/>
 LDA &gt;= max(1, N) if SIDE = &#8216;R&#8217;.</p>
 <p> <i>TAU</i> </p>
 <pre>

@@ -13,12 +13,12 @@ description: "sc::SymmSCMatrixNSCExtrapData –"
 <h3>Public Member Functions</h3>
 <p> <code>SymmSCMatrixNSCExtrapData</code> (<code>StateIn</code> &amp;) </p>
 <p> <code>SymmSCMatrixNSCExtrapData</code> (int n, <code>RefSymmSCMatrix</code> *) </p>
-<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br />
- <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br />
- <code>SCExtrapData</code> * <code>copy</code> ()<br />
- <i>Return a copy of this. </i><br />
- void <code>zero</code> ()<br />
- <i>Set this to zero. </i><br />
+<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br/>
+ <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br/>
+ <code>SCExtrapData</code> * <code>copy</code> ()<br/>
+ <i>Return a copy of this. </i><br/>
+ void <code>zero</code> ()<br/>
+ <i>Set this to zero. </i><br/>
  void <code>accumulate_scaled</code> (double, const <code>Ref</code>&lt; <code>SCExtrapData</code> &gt; &amp;) </p>
 <h2>Member Function Documentation</h2>
 <h3><code>SCExtrapData</code>* sc::SymmSCMatrixNSCExtrapData::copy () [virtual]</h3>

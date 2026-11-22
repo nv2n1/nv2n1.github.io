@@ -32,7 +32,7 @@ define device default {
 <p> Device properties specified outside of any device definition apply to all devices. This syntax is provided mainly for backward compatibility, and for simple Amanda configurations. Note that there is no way to provide properties specific to a device without defining a device alias. </p>
 <p> See <code><a href="/docs/linux/man/7-amanda-changers/">amanda-changers</a></code>(7) for details on how devices are configured, and in particular on how device properties are specified. See <code><a href="/docs/linux/man/5-amanda-conf/">amanda.conf</a></code>(5) for more information on Amanda configuration in general. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> There is no way to reset a device property to its default value. </p>
 </dl>
 <h2>Properties</h2>
@@ -107,7 +107,7 @@ device-property &quot;USE_QUBITS&quot; &quot;no&quot;</pre>
 <p> Amanda has historically supported a single, fixed block size &#8212; usually 32k. The Device API adds the ability to specify a block size at runtime, using the BLOCK_SIZE property. Devices provide MIN_BLOCK_SIZE and MAX_BLOCK_SIZE as a guide to the range of acceptable block sizes. Note that this does not imply that all sizes in the range MIN_BLOCK_SIZE &#8211; MAX_BLOCK_SIZE are available &#8212; the device may require that block sizes are even multiples of some power of two, for example. Consult the documentation for your hardware and operating system for more information. </p>
 <p> Most devices are flexible enough to read a volume using a different block size than that with which it was written. This can be useful when handling old volumes written with a smaller blocksize, or volumes of unknown blocksize. Unfortunately, some tape devices do not detect oversized blocks correctly, and may lose data if the configured block size is smaller than the volume&#8217;s block size. The tape device driver has a READ_BLOCK_SIZE property which specifies the minimum buffer size that will be allocated for reads from tape. If the hardware supports it, setting this property allows Amanda to correctly read from tapes written with any blocksize less than or equal to READ_BLOCK_SIZE. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> The RAIT device does not support flexible block sizes, as its parity algorithm requires that all child devices have the same, fixed block size. </p>
 </dl>
 <h3>Leom Detection</h3>
@@ -143,7 +143,7 @@ device-property &quot;S3_SECRET_KEY&quot; &quot;MYSECRETKEY&quot;</pre>
 <p> Amanda automatically creates a bucket when writing, if the bucket doesn&#8217;t already exist. At that time, it specifies where Amazon should store the data based on the S3_BUCKET_LOCATION property. If this property is not set, Amazon&#8217;s default value (equivalent to &quot;*&quot;) is used. The bucket location has both billing and legal concerns, so you are encouraged to consult Amazon&#8217;s documentation for details. </p>
 <p> Amazon does not permit changes to bucket locations, so this is a permanent specification. If the bucket already exists and the property is set, then Amanda checks the property against the location of the bucket, and produces an error if they do not match. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> If a location constraint is set, the bucket name must consist only of lower-case letters, numbers, dashes, and dots. </p>
 </dl>
 <p> This driver supports the VERBOSE property, but use it carefully &#8212; it produces a great deal of output, and may cause spurious failures by filling your debug log partition. Its logging is generally only useful for developers chasing down a problem in communications with Amazon&#8217;s servers. </p>
@@ -251,9 +251,9 @@ device-property &quot;S3_SECRET_KEY&quot; &quot;agphc2Q7Zmxragphc2RmO2xragpzZGY7
 <dl>
 <dd>(read-write) If true, verbose data about each HTTP transaction is sent to the debug log.</dd></dl>
 <h3>S3 Url</h3>
-<p>&nbsp;<wbr>&nbsp;<wbr>SSL&nbsp;<wbr>&amp;&amp;&nbsp;<wbr>&nbsp;<wbr>SUBDOMAIN:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="https://bucket.host/service_path/file">https://bucket.host/service_path/file</a><br />
-&nbsp;<wbr>&nbsp;<wbr>SSL&nbsp;<wbr>&amp;&amp;&nbsp;<wbr>!SUBDOMAIN:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="https://host/service_path/bucket/file">https://host/service_path/bucket/file</a><br />
-&nbsp;<wbr>!SSL&nbsp;<wbr>&amp;&amp;&nbsp;<wbr>&nbsp;<wbr>SUBDOMAIN:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="http://bucket.host/service_path/file">http://bucket.host/service_path/file</a><br />
+<p>&nbsp;<wbr>&nbsp;<wbr>SSL&nbsp;<wbr>&amp;&amp;&nbsp;<wbr>&nbsp;<wbr>SUBDOMAIN:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="https://bucket.host/service_path/file">https://bucket.host/service_path/file</a><br/>
+&nbsp;<wbr>&nbsp;<wbr>SSL&nbsp;<wbr>&amp;&amp;&nbsp;<wbr>!SUBDOMAIN:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="https://host/service_path/bucket/file">https://host/service_path/bucket/file</a><br/>
+&nbsp;<wbr>!SSL&nbsp;<wbr>&amp;&amp;&nbsp;<wbr>&nbsp;<wbr>SUBDOMAIN:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="http://bucket.host/service_path/file">http://bucket.host/service_path/file</a><br/>
 &nbsp;<wbr>!SSL&nbsp;<wbr>&amp;&amp;&nbsp;<wbr>!SUBDOMAIN:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="http://host/service_path/bucket/file">http://host/service_path/bucket/file</a></p>
 <h3>Tape Device</h3>
 <pre>tapedev &quot;tape:/dev/nst0&quot;</pre>
@@ -267,20 +267,20 @@ device-property &quot;S3_SECRET_KEY&quot; &quot;agphc2Q7Zmxragphc2RmO2xragpzZGY7
 <dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>Set this boolean property if the system&#8217;s GMT_ONLINE macro gives incorrect results.&nbsp;<wbr>&nbsp;<wbr>This is currently true for the Linux IDE-TAPE driver.</dd></dl>
 <p> BSF</p>
 <dl>
-<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>This boolean property specifies whether the device<br />
+<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>This boolean property specifies whether the device<br/>
 &nbsp;<wbr>driver may execute the MTBSF operation&nbsp;<wbr>(backward seek file).</dd></dl>
 <p> BSF_AFTER_EOM</p>
 <dl>
-<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>This boolean property specifies whether the device<br />
-&nbsp;<wbr>driver should execute an MTBSF&nbsp;<wbr>(backward seek file)&nbsp;<wbr>operation after<br />
+<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>This boolean property specifies whether the device<br/>
+&nbsp;<wbr>driver should execute an MTBSF&nbsp;<wbr>(backward seek file)&nbsp;<wbr>operation after<br/>
 &nbsp;<wbr>MTEOM&nbsp;<wbr>(seek to end of recorded data)&nbsp;<wbr>in order to append.</dd></dl>
 <p> BSR</p>
 <dl>
-<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>This boolean property specifies whether the device<br />
+<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>This boolean property specifies whether the device<br/>
 &nbsp;<wbr>driver may use the MTBSR operation&nbsp;<wbr>(backward seek record).</dd></dl>
 <p> EOM</p>
 <dl>
-<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>This boolean property specifies whether the device<br />
+<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>This boolean property specifies whether the device<br/>
 &nbsp;<wbr>driver may use the MTEOM command&nbsp;<wbr>(seek to end of recorded data).</dd></dl>
 <p> FINAL_FILEMARKS</p>
 <dl>
@@ -299,7 +299,7 @@ device-property &quot;S3_SECRET_KEY&quot; &quot;agphc2Q7Zmxragphc2RmO2xragpzZGY7
 <dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>Set this boolean property to&nbsp;<wbr>&quot;true&quot;&nbsp;<wbr>if O_NONBLOCK must be used on the open call. Default to&nbsp;<wbr>&quot;true&quot;&nbsp;<wbr>on Linux and&nbsp;<wbr>&quot;false&quot;&nbsp;<wbr>on all others machines. Without it, Linux wait for a few seconds if no tape are loaded. Solaris have strange error it is set to&nbsp;<wbr>&quot;yes&quot;.</dd></dl>
 <p> READ_BLOCK_SIZE</p>
 <dl>
-<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>This property&nbsp;<wbr>(previously known as&nbsp;<wbr><i>READ_BUFFER_SIZE</i>)&nbsp;<wbr>specifies the block size that will be used for reads;&nbsp;<wbr>this should be large enough to contain any block that may be read from the device&nbsp;<wbr>(for example, from a tape containing variable-sized blocks), and must be larger than BLOCK_SIZE.&nbsp;<wbr>&nbsp;<wbr>This property is most often used when overwriting tapes using a new, smaller block size.<br />
+<dd>&nbsp;<wbr>(read-write)&nbsp;<wbr>This property&nbsp;<wbr>(previously known as&nbsp;<wbr><i>READ_BUFFER_SIZE</i>)&nbsp;<wbr>specifies the block size that will be used for reads;&nbsp;<wbr>this should be large enough to contain any block that may be read from the device&nbsp;<wbr>(for example, from a tape containing variable-sized blocks), and must be larger than BLOCK_SIZE.&nbsp;<wbr>&nbsp;<wbr>This property is most often used when overwriting tapes using a new, smaller block size.<br/>
 &nbsp;<wbr>The tapetype parameter&nbsp;<wbr><i>READBLOCKSIZE</i>&nbsp;<wbr>sets this property.&nbsp;<wbr>&nbsp;<wbr>See BLOCK SIZES, above.</dd></dl>
 <h3>NDMP Device</h3>
 <pre>tapedev &quot;ndmp:my.filer.com:10000@st1&quot;
@@ -333,10 +333,10 @@ device-property &quot;NDMP_PASSWORD&quot; &quot;thelock&quot;</pre>
 <h3>Device-Specific Properties</h3>
 <p>MONITOR_FREE_SPACE</p>
 <dl>
-<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> (read-write) This property controls whether the device will monitor<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> the filesystem&#8217;s free space to detect a full filesystem before an<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> error occurs, and defaults to true. The monitoring operation works on<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> most filesystems, but if it causes problems, use this property to<br />
+<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> (read-write) This property controls whether the device will monitor<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> the filesystem&#8217;s free space to detect a full filesystem before an<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> error occurs, and defaults to true. The monitoring operation works on<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> most filesystems, but if it causes problems, use this property to<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> disable it.
 </dd></dl>
 <h3>DVD-RW Device</h3>

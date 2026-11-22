@@ -13,7 +13,7 @@ description: "deb-substvars – Debian source substitution variables"
 <h2>Description</h2>
 <p>Before <code>dpkg-source</code>, <code>dpkg-gencontrol</code> and <code>dpkg-genchanges</code> write their control information (to the source control file <code>.dsc</code> for <code>dpkg-source</code> and to standard output for <code>dpkg-gencontrol</code> and <code>dpkg-genchanges</code>) they perform some variable substitutions on the output file. </p>
 <p> A variable substitution has the form <code>${</code><i>variable-name</i><code>}</code>. Variable names consist of alphanumerics (a-zA-Z0-9), hyphens (-) and colons (:) and start with an alphanumeric, and are case-sensitive, even though they might refer to other entities which are case-preserving. Variable substitutions are performed repeatedly until none are left; the full text of the field after the substitution is rescanned to look for more substitutions. </p>
-<p> After all the substitutions have been done each occurrence of the string <code>${}</code> (which is not a legal substitution) is replaced with a <code>$</code> sign. This can be used as an escape sequence such as <code>${}{</code><i></i><font SIZE="-1"><i>VARIABLE</i></font><i></i><code>}</code> which will end up as <code>${</code><i></i><font SIZE="-1"><i>VARIABLE</i></font><i></i><code>}</code> on the output. </p>
+<p> After all the substitutions have been done each occurrence of the string <code>${}</code> (which is not a legal substitution) is replaced with a <code>$</code> sign. This can be used as an escape sequence such as <code>${}{</code><i></i><i>VARIABLE</i><i></i><code>}</code> which will end up as <code>${</code><i></i><i>VARIABLE</i><i></i><code>}</code> on the output. </p>
 <p> While variable substitution is done on all control fields, some of those fields are used and needed during the build when the substitution did not yet occur. That&#8217;s why you can&#8217;t use variables in the <code>Package</code>, <code>Source</code> and <code>Architecture</code> fields. </p>
 <p> Variable substitution happens on the content of the fields after they have been parsed, thus if you want a variable to expand over multiple lines you do not have to include a space after the newline. This is done implicitly when the field is output. For example, if the variable <code>${Description}</code> is set to &#8220;foo is bar.${Newline}foo is great.&#8221; and if you have the following field: </p>
 <pre> Description: foo application
@@ -30,11 +30,11 @@ description: "deb-substvars – Debian source substitution variables"
 <p> Additionally, the following standard variables are available:</p>
 <dl>
 <dt><code>Arch</code></dt>
-<dd>The current host architecture (i.e. the architecture the package is being built for, the equivalent of <font SIZE="-1"><code>DEB_HOST_ARCH</code></font>).</dd>
+<dd>The current host architecture (i.e. the architecture the package is being built for, the equivalent of <code>DEB_HOST_ARCH</code>).</dd>
 <dt><code>vendor:Name</code></dt>
 <dd>The current vendor name (since dpkg 1.20.0). This value comes from the <code>Vendor</code> field for the current vendor&#8217;s origin file, as <code><a href="/docs/linux/man/1-dpkg-vendor/">dpkg-vendor</a></code>(1) would retrieve it.</dd>
 <dt><code>vendor:Id</code></dt>
-<dd>The current vendor <font SIZE="-1">ID</font> (since dpkg 1.20.0). This is just the lowercase variant of <code>vendor:Name</code>.</dd>
+<dd>The current vendor ID (since dpkg 1.20.0). This is just the lowercase variant of <code>vendor:Name</code>.</dd>
 <dt><code>source:Version</code></dt>
 <dd>The source package version (since dpkg 1.13.19).</dd>
 <dt><code>source:Upstream-Version</code></dt>

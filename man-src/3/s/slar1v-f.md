@@ -10,7 +10,7 @@ description: "slar1v.f –"
 <p>slar1v.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>slar1v</code> (N, B1, BN, LAMBDA, D, L, LD, LLD, PIVMIN, GAPTOL, Z, WANTNC, NEGCNT, ZTZ, MINGMA, R, ISUPPZ, NRMINV, RESID, RQCORR, WORK)<br />
+<p>subroutine <code>slar1v</code> (N, B1, BN, LAMBDA, D, L, LD, LLD, PIVMIN, GAPTOL, Z, WANTNC, NEGCNT, ZTZ, MINGMA, R, ISUPPZ, NRMINV, RESID, RQCORR, WORK)<br/>
  <i></i><code>SLAR1V</code> computes the (scaled) r-th column of the inverse of the submatrix in rows b1 through bn of the tridiagonal matrix LDLT &#8211; λI.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slar1v (integerN, integerB1, integerBN, realLAMBDA, real, dimension( * )D, real, dimension( * )L, real, dimension( * )LD, real, dimension( * )LLD, realPIVMIN, realGAPTOL, real, dimension( * )Z, logicalWANTNC, integerNEGCNT, realZTZ, realMINGMA, integerR, integer, dimension( * )ISUPPZ, realNRMINV, realRESID, realRQCORR, real, dimension( * )WORK)</h3>

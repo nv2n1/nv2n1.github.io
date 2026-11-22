@@ -331,8 +331,8 @@ $ git log A...B
 <dl>
 <dt>
 </dt><dd>
-.- A&#8211; &#8211; M&#8211; &#8211; N&#8211; &#8211; O&#8211; &#8211; P&#8211; &#8211; Q / / / / / / I B C D E Y<br />
-         \ / / / / /<br />
+.- A&#8211; &#8211; M&#8211; &#8211; N&#8211; &#8211; O&#8211; &#8211; P&#8211; &#8211; Q / / / / / / I B C D E Y<br/>
+         \ / / / / /<br/>
           `&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; -&#8216;   X
 </dd></dl>
 <p> The horizontal line of history A&#8212;Q is taken to be the first parent of each merge. The commits are: </p>
@@ -391,8 +391,8 @@ $ git log A...B
 <dl>
 <dt>
 </dt><dd>
-.- A&#8211; &#8211; M&#8211; &#8211; N&#8211; &#8211; O&#8211; &#8211; P&#8211; &#8211; Q / / / / / I B / D /<br />
-         \ / / / /<br />
+.- A&#8211; &#8211; M&#8211; &#8211; N&#8211; &#8211; O&#8211; &#8211; P&#8211; &#8211; Q / / / / / I B / D /<br/>
+         \ / / / /<br/>
           `&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; -&#8216;
 </dd></dl>
 <p> Compare to <code>&#8211;full-history</code> without rewriting above. Note that <code>E</code> was pruned away because it is TREESAME, but the parent list of P was rewritten to contain <code>E</code>&#8216;s parent <code>I</code>. The same happened for <code>C</code> and <code>N</code>, and <code>X</code>, <code>Y</code> and <code>Q</code>.</dl>
@@ -424,8 +424,8 @@ $ git log A...B
 <dl>
 <dt>
 </dt><dd>
-.- A&#8211; &#8211; M&#8211; &#8211; N&#8211; &#8211; O / / / I B D<br />
-         \ / /<br />
+.- A&#8211; &#8211; M&#8211; &#8211; N&#8211; &#8211; O / / / I B D<br/>
+         \ / /<br/>
           `&#8211; &#8212; &#8212; &#8212; -&#8216;
 </dd></dl>
 <p> Note the major differences in <code>N</code>, <code>P</code>, and <code>Q</code> over <code>&#8211;full-history</code>: </p>
@@ -455,7 +455,7 @@ D&#8211; &#8211; E&#8211; &#8212; &#8212; -F /     \ B&#8211; &#8211; C&#8211; &
 <dl>
 <dt>
 </dt><dd>
-E&#8211; &#8212; &#8212; -F<br />
+E&#8211; &#8212; &#8212; -F<br/>
                  \ G&#8211; &#8211; H&#8211; &#8211; I&#8211; &#8211; J</dd>
 <p>                                          L&#8211; M
 </dl>
@@ -465,9 +465,9 @@ E&#8211; &#8212; &#8212; -F<br />
 <dl>
 <dt>
 </dt><dd>
-.- A&#8211; &#8211; M&#8211; &#8212; -C&#8211; N&#8211; &#8211; O&#8211; &#8211; P / / \  \  \/ / / I B   \ R &#8211; &#8216;`-Z&#8217; /<br />
-         \ /     \/ /<br />
-          \ / /\ /<br />
+.- A&#8211; &#8211; M&#8211; &#8212; -C&#8211; N&#8211; &#8211; O&#8211; &#8211; P / / \  \  \/ / / I B   \ R &#8211; &#8216;`-Z&#8217; /<br/>
+         \ /     \/ /<br/>
+          \ / /\ /<br/>
            `&#8211; -X&#8211; &#8216;  `&#8212;Y&#8211;&#8216;
 </dd></dl>
 <p> For this example, suppose <code>I</code> created <code>file.txt</code> which was modified by <code>A</code>, <code>B</code>, and <code>X</code> in different ways. The single-parent commits <code>C</code>, <code>Z</code>, and <code>Y</code> do not change <code>file.txt</code>. The merge commit <code>M</code> was created by resolving the merge conflict to include both changes from <code>A</code> and <code>B</code> and hence is not TREESAME to either. The merge commit <code>R</code>, however, was created by ignoring the contents of <code>file.txt</code> at <code>M</code> and taking only the contents of <code>file.txt</code> at <code>X</code>. Hence, <code>R</code> is TREESAME to <code>X</code> but not <code>M</code>. Finally, the natural merge resolution to create <code>N</code> is to take the contents of <code>file.txt</code> at <code>R</code>, so <code>N</code> is TREESAME to <code>R</code> but not <code>C</code>. The merge commits <code>O</code> and <code>P</code> are TREESAME to their first parents, but not to their second parents, <code>Z</code> and <code>Y</code> respectively. </p>
@@ -483,9 +483,9 @@ E&#8211; &#8212; &#8212; -F<br />
 <dl>
 <dt>
 </dt><dd>
-.- A&#8211; &#8211; M&#8211; &#8212; &#8212; &#8211;N&#8211; &#8211; O&#8211; &#8211; P / / \  \  \/ / / I B   \ R &#8211; &#8216;`&#8211;&#8216; /<br />
-         \ /     \/ /<br />
-          \ / /\ /<br />
+.- A&#8211; &#8211; M&#8211; &#8212; &#8212; &#8211;N&#8211; &#8211; O&#8211; &#8211; P / / \  \  \/ / / I B   \ R &#8211; &#8216;`&#8211;&#8216; /<br/>
+         \ /     \/ /<br/>
+          \ / /\ /<br/>
            `&#8211; -X&#8211; &#8216;  `&#8212;&#8212;&#8216;
 </dd></dl>
 <p> Here, the merge commits <code>O</code> and <code>P</code> contribute extra noise, as they did not actually contribute a change to <code>file.txt</code>. They only merged a topic that was based on an older version of <code>file.txt</code>. This is a common issue in repositories using a workflow where many contributors work in parallel and merge their topic branches along a single trunk: manu unrelated merges appear in the <code>&#8211;full-history</code> results. </p>
@@ -493,9 +493,9 @@ E&#8211; &#8212; &#8212; -F<br />
 <dl>
 <dt>
 </dt><dd>
-.- A&#8211; &#8211; M&#8211;./ / I B R<br />
-         \ / /<br />
-          \ / /<br />
+.- A&#8211; &#8211; M&#8211;./ / I B R<br/>
+         \ / /<br/>
+          \ / /<br/>
            `&#8211; -X&#8211;&#8216;
 </dd></dl>
 <p> In this view, we see all of the important single-parent changes from <code>A</code>, <code>B</code>, and <code>X</code>. We also see the carefully-resolved merge <code>M</code> and the not-so-carefully-resolved merge <code>R</code>. This is usually enough information to determine why the commits <code>A</code> and <code>B</code> &quot;disappeared&quot; from history in the default view. However, there are a few issues with this approach. </p>
@@ -518,9 +518,9 @@ E&#8211; &#8212; &#8212; -F<br />
 <dl>
 <dt>
 </dt><dd>
-.- A&#8211; &#8211; M&#8211;.N / /    \ / I B R<br />
-         \ / /<br />
-          \ / /<br />
+.- A&#8211; &#8211; M&#8211;.N / /    \ / I B R<br/>
+         \ / /<br/>
+          \ / /<br/>
            `&#8211; -X&#8211;&#8216;
 </dd></dl>
 <p> Notice that since <code>M</code> is reachable from <code>R</code>, the edge from <code>N</code> to <code>M</code> was simplified away. However, <code>N</code> still appears in the history as an important commit because it &quot;pulled&quot; the change <code>R</code> into the main branch.</dl>
@@ -543,7 +543,7 @@ E&#8211; &#8212; &#8212; -F<br />
 <dl>
 <dt>
 </dt><dd>
-&#8212; -1 &#8212; &#8211;2 &#8212; &#8211;4 &#8212; &#8211;7<br />
+&#8212; -1 &#8212; &#8211;2 &#8212; &#8211;4 &#8212; &#8211;7<br/>
         \ 3 &#8212; &#8211;5 &#8212; &#8211;6 &#8212; &#8211;8 &#8212; &#8211;
 </dd></dl>
 <p> where the numbers denote the order of commit timestamps, <code>git rev-list</code> and friends with <code>&#8211;date-order</code> show the commits in the timestamp order: 8 7 6 5 4 3 2 1. </p>
@@ -1201,7 +1201,7 @@ The title was &gt;&gt;t4119: test autocomputing -p&lt;n&gt; for traditional diff
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> Some placeholders may depend on other options given to the revision traversal engine. For example, the <code>%g*</code> reflog options will insert an empty string unless we are traversing reflog entries (e.g., by <code>git log -g</code>). The <code>%d</code> and <code>%D</code> placeholders will use the &quot;short&quot; decoration format if <code>&#8211;decorate</code> was not already provided on the command line. </p>
 </dl>
 <p> If you add a <code>+</code> (plus sign) after <i>%</i> of a placeholder, a line-feed is inserted immediately before the expansion if and only if the placeholder expands to a non-empty string. </p>
@@ -1598,7 +1598,7 @@ $ git log -2 --pretty=%h 4da45bef
 <dl>
 <dt>
 </dt><dd>
-+ return frotz(nitfol, two-&gt;ptr, 1, 0);<br />
++ return frotz(nitfol, two-&gt;ptr, 1, 0);<br/>
 &#8230; &#8211; hit = frotz(nitfol, mf2.ptr, 1, 0);
 </dd></dl>
 <p> While <code>git log -G&quot;frotz\(nitfol&quot;</code> will show this commit, <code>git log -S&quot;frotz\(nitfol&quot; &#8211;pickaxe-regex</code> will not (because the number of occurrences of that string did not change). </p>
@@ -1785,26 +1785,26 @@ rename to a
 <dl>
 <dt>
 </dt><dd>
-diff&#8211; combined describe.c<br />
-    index fabadb8,<br />
-    cc95eb0..4866510 &#8212; -a / describe.c++ + b / describe.c<br />
-                                                @ @ @-98,<br />
-    20 &#8211; 98, 12 + 98, 20 @ @ @ return (a_date &gt; b_date) ? -1 : (a_date == b_date) ? 0<br />
-                                                                                  : 1;<br />
-}<br />
-&#8211; static void describe(char *arg) &#8211; static void describe(struct commit *cmit, int last_one)++ static void describe(char *arg, int last_one)<br />
-{<br />
-    +unsigned char sha1[20];<br />
-    +struct commit *cmit;<br />
-    struct commit_list *list;<br />
-    static int initialized = 0;<br />
-    struct commit_name *n;<br />
-    +if (get_sha1(arg, sha1) &lt; 0) + usage(describe_usage);<br />
-    +cmit = lookup_commit_reference(sha1);<br />
-    +if (!cmit) + usage(describe_usage);<br />
-    +if (!initialized)<br />
-    {<br />
-        initialized = 1;<br />
+diff&#8211; combined describe.c<br/>
+    index fabadb8,<br/>
+    cc95eb0..4866510 &#8212; -a / describe.c++ + b / describe.c<br/>
+                                                @ @ @-98,<br/>
+    20 &#8211; 98, 12 + 98, 20 @ @ @ return (a_date &gt; b_date) ? -1 : (a_date == b_date) ? 0<br/>
+                                                                                  : 1;<br/>
+}<br/>
+&#8211; static void describe(char *arg) &#8211; static void describe(struct commit *cmit, int last_one)++ static void describe(char *arg, int last_one)<br/>
+{<br/>
+    +unsigned char sha1[20];<br/>
+    +struct commit *cmit;<br/>
+    struct commit_list *list;<br/>
+    static int initialized = 0;<br/>
+    struct commit_name *n;<br/>
+    +if (get_sha1(arg, sha1) &lt; 0) + usage(describe_usage);<br/>
+    +cmit = lookup_commit_reference(sha1);<br/>
+    +if (!cmit) + usage(describe_usage);<br/>
+    +if (!initialized)<br/>
+    {<br/>
+        initialized = 1;<br/>
         for_each_ref(get_name);
 </dd></dl>
 <dl>

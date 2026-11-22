@@ -11,7 +11,7 @@ description: "dscal.f –"
 <p> dscal.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dscal</code> (N, DA, DX, INCX)<br />
+<p> subroutine <code>dscal</code> (N, DA, DX, INCX)<br/>
  <i></i><code>DSCAL</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dscal (integerN, double precisionDA, double precision, dimension(*)DX, integerINCX)</h3>

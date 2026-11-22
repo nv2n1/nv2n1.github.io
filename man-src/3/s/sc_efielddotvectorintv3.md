@@ -12,7 +12,7 @@ description: "sc::EfieldDotVectorIntV3 –"
 <p> Inherits <code>sc::OneBodyInt</code>.</p>
 <h3>Public Member Functions</h3>
 <p><code>EfieldDotVectorIntV3</code> (<code>Integral</code> *, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;, const <code>Ref</code>&lt; <code>EfieldDotVectorData</code> &gt; &amp;) </p>
-<p> void <code>compute_shell</code> (int, int)<br />
+<p> void <code>compute_shell</code> (int, int)<br/>
  <i>Computes the integrals between basis functions in the given shell pair. </i></p>
 <h3>Protected Attributes</h3>
 <p><code>Ref</code>&lt; <code>Int1eV3</code> &gt; <code>int1ev3_</code> </p>

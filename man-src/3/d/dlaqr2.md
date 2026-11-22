@@ -11,7 +11,7 @@ description: "dlaqr2.f –"
 <p> dlaqr2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dlaqr2</code> (WANTT, WANTZ, N, KTOP, KBOT, NW, H, LDH, ILOZ, IHIZ, Z, LDZ, NS, ND, SR, SI, V, LDV, NH, T, LDT, NV, WV, LDWV, WORK, LWORK)<br />
+<p> subroutine <code>dlaqr2</code> (WANTT, WANTZ, N, KTOP, KBOT, NW, H, LDH, ILOZ, IHIZ, Z, LDZ, NS, ND, SR, SI, V, LDV, NH, T, LDT, NV, WV, LDWV, WORK, LWORK)<br/>
  <i></i><code>DLAQR2</code> performs the orthogonal similarity transformation of a Hessenberg matrix to detect and deflate fully converged eigenvalues from a trailing principal submatrix (aggressive early deflation).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlaqr2 (logicalWANTT, logicalWANTZ, integerN, integerKTOP, integerKBOT, integerNW, double precision, dimension( ldh, * )H, integerLDH, integerILOZ, integerIHIZ, double precision, dimension( ldz, * )Z, integerLDZ, integerNS, integerND, double precision, dimension( * )SR, double precision, dimension( * )SI, double precision, dimension( ldv, * )V, integerLDV, integerNH, double precision, dimension( ldt, * )T, integerLDT, integerNV, double precision, dimension( ldwv, * )WV, integerLDWV, double precision, dimension( * )WORK, integerLWORK)</h3>

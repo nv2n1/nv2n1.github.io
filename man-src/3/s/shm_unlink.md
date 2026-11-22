@@ -85,109 +85,109 @@ int shm_unlink(const char *name);</code></pre>
 <h2>Examples</h2>
 <p>The programs below employ POSIX shared memory and POSIX unnamed semaphores to exchange a piece of data. The &quot;bounce&quot; program (which must be run first) raises the case of a string that is placed into the shared memory by the &quot;send&quot; program. Once the data has been modified, the &quot;send&quot; program then prints the contents of the modified shared memory. An example execution of the two programs is the following: $ <code>./pshm_ucase_bounce /myshm &amp;</code> [1] 270171 $ <code>./pshm_ucase_send /myshm hello</code> HELLO Further detail about these programs is provided below.</p>
 <h3>Program source: pshm_ucase.h</h3>
-<p>The following header file is included by both programs below. Its primary purpose is to define a structure that will be imposed on the memory object that is shared between the two programs. Licensed under GNU General Public License v2 or later.<br />
-                                                        * /<br />
-#include &quot;pshm_ucase.h&quot;<br />
-#include &lt;string.h&gt;<br />
-                                                    int<br />
-                                                    main(int argc, char *argv[])<br />
-{<br />
-    if (argc != 3) {<br />
+<p>The following header file is included by both programs below. Its primary purpose is to define a structure that will be imposed on the memory object that is shared between the two programs. Licensed under GNU General Public License v2 or later.<br/>
+                                                        * /<br/>
+#include &quot;pshm_ucase.h&quot;<br/>
+#include &lt;string.h&gt;<br/>
+                                                    int<br/>
+                                                    main(int argc, char *argv[])<br/>
+{<br/>
+    if (argc != 3) {<br/>
         fprintf(stderr, &quot;Usage: %s /shm-path string
-&quot;, argv[0]);<br />
-        exit(EXIT_FAILURE);<br />
-    }<br />
-    char *shmpath = argv[1];<br />
-    char *string = argv[2];<br />
-    size_t len = strlen(string);<br />
-    if (len &gt; BUF_SIZE) {<br />
+&quot;, argv[0]);<br/>
+        exit(EXIT_FAILURE);<br/>
+    }<br/>
+    char *shmpath = argv[1];<br/>
+    char *string = argv[2];<br/>
+    size_t len = strlen(string);<br/>
+    if (len &gt; BUF_SIZE) {<br/>
         fprintf(stderr, &quot;String is too long
-&quot;);<br />
-        exit(EXIT_FAILURE);<br />
-    }<br />
-    /* Open the existing shared memory object and map it<br />
-           into the caller&#8217;s address space */<br />
-    int fd = shm_open(shmpath, O_RDWR, 0);<br />
-    if (fd == -1)<br />
-        errExit(&quot;shm_open&quot;);<br />
-    struct shmbuf *shmp = mmap(NULL, sizeof(*shmp),<br />
-                               PROT_READ | PROT_WRITE,<br />
-                               MAP_SHARED, fd, 0);<br />
-    if (shmp == MAP_FAILED)<br />
-        errExit(&quot;mmap&quot;);<br />
-    /* Copy data into the shared memory object */<br />
-    shmp-&gt;cnt = len;<br />
-    memcpy(&amp;shmp-&gt;buf, string, len);<br />
-    /* Tell peer that it can now access shared memory */<br />
-    if (sem_post(&amp;shmp-&gt;sem1) == -1)<br />
-        errExit(&quot;sem_post&quot;);<br />
-    /* Wait until peer says that it has finished accessing<br />
-           the shared memory */<br />
-    if (sem_wait(&amp;shmp-&gt;sem2) == -1)<br />
-        errExit(&quot;sem_wait&quot;);<br />
-    /* Write modified data in shared memory to standard output */<br />
-    write(STDOUT_FILENO, &amp;shmp-&gt;buf, len);<br />
+&quot;);<br/>
+        exit(EXIT_FAILURE);<br/>
+    }<br/>
+    /* Open the existing shared memory object and map it<br/>
+           into the caller&#8217;s address space */<br/>
+    int fd = shm_open(shmpath, O_RDWR, 0);<br/>
+    if (fd == -1)<br/>
+        errExit(&quot;shm_open&quot;);<br/>
+    struct shmbuf *shmp = mmap(NULL, sizeof(*shmp),<br/>
+                               PROT_READ | PROT_WRITE,<br/>
+                               MAP_SHARED, fd, 0);<br/>
+    if (shmp == MAP_FAILED)<br/>
+        errExit(&quot;mmap&quot;);<br/>
+    /* Copy data into the shared memory object */<br/>
+    shmp-&gt;cnt = len;<br/>
+    memcpy(&amp;shmp-&gt;buf, string, len);<br/>
+    /* Tell peer that it can now access shared memory */<br/>
+    if (sem_post(&amp;shmp-&gt;sem1) == -1)<br/>
+        errExit(&quot;sem_post&quot;);<br/>
+    /* Wait until peer says that it has finished accessing<br/>
+           the shared memory */<br/>
+    if (sem_wait(&amp;shmp-&gt;sem2) == -1)<br/>
+        errExit(&quot;sem_wait&quot;);<br/>
+    /* Write modified data in shared memory to standard output */<br/>
+    write(STDOUT_FILENO, &amp;shmp-&gt;buf, len);<br/>
     write(STDOUT_FILENO, &quot;
-&quot;, 1);<br />
-    exit(EXIT_SUCCESS);<br />
-} /* Define a structure that will be imposed on the shared<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;memory object&nbsp;*/ struct shmbuf {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sem_t&nbsp;<wbr>&nbsp;sem1;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;POSIX unnamed semaphore&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sem_t&nbsp;<wbr>&nbsp;sem2;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;POSIX unnamed semaphore&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;size_t cnt;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Number of bytes used in&nbsp;&#8216;buf&#8217;&nbsp;*/<br />
+&quot;, 1);<br/>
+    exit(EXIT_SUCCESS);<br/>
+} /* Define a structure that will be imposed on the shared<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;memory object&nbsp;*/ struct shmbuf {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sem_t&nbsp;<wbr>&nbsp;sem1;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;POSIX unnamed semaphore&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sem_t&nbsp;<wbr>&nbsp;sem2;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;POSIX unnamed semaphore&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;size_t cnt;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Number of bytes used in&nbsp;&#8216;buf&#8217;&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;<wbr>&nbsp;<wbr>&nbsp;buf[BUF_SIZE];&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Data being transferred&nbsp;*/ };</p>
 <h3>Program source: pshm_ucase_bounce.c</h3>
-<p>The &quot;bounce&quot; program creates a new shared memory object with the name given in its command-line argument and sizes the object to match the size of the <i>shmbuf</i> structure defined in the header file. It then maps the object into the process&#8217;s address space, and initializes two POSIX semaphores inside the object to 0. After the &quot;send&quot; program has posted the first of the semaphores, the &quot;bounce&quot; program upper cases the data that has been placed in the memory by the &quot;send&quot; program and then posts the second semaphore to tell the &quot;send&quot; program that it may now access the shared memory. /* pshm_ucase_bounce.c Licensed under GNU General Public License v2 or later.<br />
-                                                        * /<br />
-#include &quot;pshm_ucase.h&quot;<br />
-#include &lt;ctype.h&gt;<br />
-                                                    int<br />
-                                                    main(int argc, char *argv[])<br />
-{<br />
-    if (argc != 2) {<br />
+<p>The &quot;bounce&quot; program creates a new shared memory object with the name given in its command-line argument and sizes the object to match the size of the <i>shmbuf</i> structure defined in the header file. It then maps the object into the process&#8217;s address space, and initializes two POSIX semaphores inside the object to 0. After the &quot;send&quot; program has posted the first of the semaphores, the &quot;bounce&quot; program upper cases the data that has been placed in the memory by the &quot;send&quot; program and then posts the second semaphore to tell the &quot;send&quot; program that it may now access the shared memory. /* pshm_ucase_bounce.c Licensed under GNU General Public License v2 or later.<br/>
+                                                        * /<br/>
+#include &quot;pshm_ucase.h&quot;<br/>
+#include &lt;ctype.h&gt;<br/>
+                                                    int<br/>
+                                                    main(int argc, char *argv[])<br/>
+{<br/>
+    if (argc != 2) {<br/>
         fprintf(stderr, &quot;Usage: %s /shm-path
-&quot;, argv[0]);<br />
-        exit(EXIT_FAILURE);<br />
-    }<br />
-    char *shmpath = argv[1];<br />
-    /* Create shared memory object and set its size to the size<br />
-           of our structure */<br />
-    int fd = shm_open(shmpath, O_CREAT | O_EXCL | O_RDWR,<br />
-                      S_IRUSR | S_IWUSR);<br />
-    if (fd == -1)<br />
-        errExit(&quot;shm_open&quot;);<br />
-    if (ftruncate(fd, sizeof(struct shmbuf)) == -1)<br />
-        errExit(&quot;ftruncate&quot;);<br />
-    /* Map the object into the caller&#8217;s address space */<br />
-    struct shmbuf *shmp = mmap(NULL, sizeof(*shmp),<br />
-                               PROT_READ | PROT_WRITE,<br />
-                               MAP_SHARED, fd, 0);<br />
-    if (shmp == MAP_FAILED)<br />
-        errExit(&quot;mmap&quot;);<br />
-    /* Initialize semaphores as process-shared, with value 0 */<br />
-    if (sem_init(&amp;shmp-&gt;sem1, 1, 0) == -1)<br />
-        errExit(&quot;sem_init-sem1&quot;);<br />
-    if (sem_init(&amp;shmp-&gt;sem2, 1, 0) == -1)<br />
-        errExit(&quot;sem_init-sem2&quot;);<br />
-    /* Wait for &#8216;sem1&#8217; to be posted by peer before touching<br />
-           shared memory */<br />
-    if (sem_wait(&amp;shmp-&gt;sem1) == -1)<br />
-        errExit(&quot;sem_wait&quot;);<br />
-    /* Convert data in shared memory into upper case */<br />
-    for (int j = 0; j &lt; shmp-&gt;cnt; j++)<br />
-        shmp-&gt;buf[j] = toupper((unsigned char)shmp-&gt;buf[j]);<br />
-    /* Post &#8216;sem2&#8217; to tell the to tell peer that it can now<br />
-           access the modified data in shared memory */<br />
-    if (sem_post(&amp;shmp-&gt;sem2) == -1)<br />
-        errExit(&quot;sem_post&quot;);<br />
-    /* Unlink the shared memory object. Even if the peer process<br />
-           is still using the object, this is okay. The object will<br />
-           be removed only after all open references are closed. */<br />
-    shm_unlink(shmpath);<br />
-    exit(EXIT_SUCCESS);<br />
+&quot;, argv[0]);<br/>
+        exit(EXIT_FAILURE);<br/>
+    }<br/>
+    char *shmpath = argv[1];<br/>
+    /* Create shared memory object and set its size to the size<br/>
+           of our structure */<br/>
+    int fd = shm_open(shmpath, O_CREAT | O_EXCL | O_RDWR,<br/>
+                      S_IRUSR | S_IWUSR);<br/>
+    if (fd == -1)<br/>
+        errExit(&quot;shm_open&quot;);<br/>
+    if (ftruncate(fd, sizeof(struct shmbuf)) == -1)<br/>
+        errExit(&quot;ftruncate&quot;);<br/>
+    /* Map the object into the caller&#8217;s address space */<br/>
+    struct shmbuf *shmp = mmap(NULL, sizeof(*shmp),<br/>
+                               PROT_READ | PROT_WRITE,<br/>
+                               MAP_SHARED, fd, 0);<br/>
+    if (shmp == MAP_FAILED)<br/>
+        errExit(&quot;mmap&quot;);<br/>
+    /* Initialize semaphores as process-shared, with value 0 */<br/>
+    if (sem_init(&amp;shmp-&gt;sem1, 1, 0) == -1)<br/>
+        errExit(&quot;sem_init-sem1&quot;);<br/>
+    if (sem_init(&amp;shmp-&gt;sem2, 1, 0) == -1)<br/>
+        errExit(&quot;sem_init-sem2&quot;);<br/>
+    /* Wait for &#8216;sem1&#8217; to be posted by peer before touching<br/>
+           shared memory */<br/>
+    if (sem_wait(&amp;shmp-&gt;sem1) == -1)<br/>
+        errExit(&quot;sem_wait&quot;);<br/>
+    /* Convert data in shared memory into upper case */<br/>
+    for (int j = 0; j &lt; shmp-&gt;cnt; j++)<br/>
+        shmp-&gt;buf[j] = toupper((unsigned char)shmp-&gt;buf[j]);<br/>
+    /* Post &#8216;sem2&#8217; to tell the to tell peer that it can now<br/>
+           access the modified data in shared memory */<br/>
+    if (sem_post(&amp;shmp-&gt;sem2) == -1)<br/>
+        errExit(&quot;sem_post&quot;);<br/>
+    /* Unlink the shared memory object. Even if the peer process<br/>
+           is still using the object, this is okay. The object will<br/>
+           be removed only after all open references are closed. */<br/>
+    shm_unlink(shmpath);<br/>
+    exit(EXIT_SUCCESS);<br/>
 }</p>
 <p>Program source : pshm_ucase_send.c</p>
-<p>                     The &quot;send&quot; program takes two command &#8211;<br />
+<p>                     The &quot;send&quot; program takes two command &#8211;<br/>
     line arguments : the pathname of a shared memory object previously created by the &quot;bounce&quot; program and a string that is to be copied into that object. The program opens the shared memory object and maps the object into its address space. It then copies the data specified in its second argument into the shared memory, and posts the first semaphore, which tells the &quot;bounce&quot; program that it can now access that data. After the &quot;bounce&quot; program posts the second semaphore, the &quot;send&quot; program prints the contents of the shared memory on standard output. /* pshm_ucase_send.c </p>
 <pre><code>Licensed under GNU General Public License v2 or later.
                                                         * /

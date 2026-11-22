@@ -9,7 +9,7 @@ description: "xfs_mkfile – create an XFS file"
 
 <p>xfs_mkfile &#8211; create an XFS file</p>
 <h2>Synopsis</h2>
-<p><code>xfs_mkfile</code> [ <code>-v</code> ] [ <code>-n</code> ] [ <code>-p</code> ] <i>size</i>[<code>k</code>|<code>b</code>|<code>m</code>|<code>g</code>] <i>filename</i> &#8230;<br />
+<p><code>xfs_mkfile</code> [ <code>-v</code> ] [ <code>-n</code> ] [ <code>-p</code> ] <i>size</i>[<code>k</code>|<code>b</code>|<code>m</code>|<code>g</code>] <i>filename</i> &#8230;<br/>
  <code>xfs_mkfile -V</code></p>
 <h2>Description</h2>
 <p><code>xfs_mkfile</code> creates one or more files. The file is padded with zeroes by default. The default size is in bytes, but it can be flagged as kilobytes, blocks, megabytes, or gigabytes with the <code>k</code>, <code>b</code>, <code>m</code>, or <code>g</code> suffixes, respectively.</p>

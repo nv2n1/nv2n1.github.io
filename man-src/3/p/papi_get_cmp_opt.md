@@ -13,8 +13,8 @@ description: "PAPI_get_cmp_opt –"
 <h2>Detailed Description</h2>
 <p><code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>option</i> is an input parameter describing the course of action. Possible values are defined in <code>papi.h</code> and briefly described in the table below. The Fortran calls are implementations of specific options.<br />
- <i>ptr</i> is a pointer to a structure that acts as both an input and output parameter.<br />
+<dd><i>option</i> is an input parameter describing the course of action. Possible values are defined in <code>papi.h</code> and briefly described in the table below. The Fortran calls are implementations of specific options.<br/>
+ <i>ptr</i> is a pointer to a structure that acts as both an input and output parameter.<br/>
  <i>cidx</i> An integer identifier for a component. By convention, component 0 is always the cpu component.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>

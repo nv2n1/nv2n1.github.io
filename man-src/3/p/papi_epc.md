@@ -13,21 +13,21 @@ description: "PAPI_epc –"
 <h2>Detailed Description</h2>
 <p><code>C Interface: </code></p>
 <dl COMPACT>
-<dd>#include &lt;<code>papi.h</code>&gt;<br />
+<dd>#include &lt;<code>papi.h</code>&gt;<br/>
  int <code>PAPI_epc( int event, float *rtime, float *ptime, long long *ref, long long *core, long long *evt, float *epc )</code>;</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>event</i> event code to be measured (0 defaults to PAPI_TOT_INS)<br />
- <i>*rtime</i> total realtime since the first call<br />
- <i>*ptime</i> total process time since the first call<br />
- <i>*ref</i> incremental reference clock cycles since the last call<br />
- <i>*core</i> incremental core clock cycles since the last call<br />
- <i>*evt</i> total events since the first call<br />
+<dd><i>event</i> event code to be measured (0 defaults to PAPI_TOT_INS)<br/>
+ <i>*rtime</i> total realtime since the first call<br/>
+ <i>*ptime</i> total process time since the first call<br/>
+ <i>*ref</i> incremental reference clock cycles since the last call<br/>
+ <i>*core</i> incremental core clock cycles since the last call<br/>
+ <i>*evt</i> total events since the first call<br/>
  <i>*epc</i> incremental events per cycle since the last call</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>PAPI_EINVAL</i> The counters were already started by something other than <code>PAPI_epc()</code>.<br />
- <i>PAPI_ENOEVNT</i> One of the requested events does not exist.<br />
+<dd><i>PAPI_EINVAL</i> The counters were already started by something other than <code>PAPI_epc()</code>.<br/>
+ <i>PAPI_ENOEVNT</i> One of the requested events does not exist.<br/>
  <i>PAPI_ENOMEM</i> Insufficient memory to complete the operation.</dd></dl>
 <p> The first call to <code>PAPI_epc()</code> will initialize the PAPI High Level interface, set up the counters to monitor the user specified event, PAPI_TOT_CYC, and PAPI_REF_CYC (if it exists) and start the counters. </p>
 <p> Subsequent calls will read the counters and return total real time, total process time, total event counts since the start of the measurement and the core and reference cycle count and EPC rate since the latest call to <code>PAPI_epc()</code>. </p>

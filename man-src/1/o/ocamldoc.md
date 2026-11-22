@@ -167,5 +167,5 @@ description: "ocamldoc – The OCaml documentation generator"
 <dd> Set the section number used for generated man filenames. Default is 3. </dd>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-ocaml/">ocaml</a></code>(1), <code><a href="/docs/linux/man/1-ocamlc/">ocamlc</a></code>(1), <code><a href="/docs/linux/man/1-ocamlopt/">ocamlopt</a></code>(1).<br />
+<p> <code><a href="/docs/linux/man/1-ocaml/">ocaml</a></code>(1), <code><a href="/docs/linux/man/1-ocamlc/">ocamlc</a></code>(1), <code><a href="/docs/linux/man/1-ocamlopt/">ocamlopt</a></code>(1).<br/>
  <i>The OCaml user&#8217;s manual,</i> chapter &quot;The documentation generator&quot;. </p>

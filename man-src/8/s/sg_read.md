@@ -58,7 +58,7 @@ description: "sg_read – read multiple blocks of data, optionally with SCSI REA
 <h2>Examples</h2>
 <p>Let us assume that /dev/sg0 is a disk and we wish to time the disk&#8217;s cache performance. </p>
 <pre><code>sg_read if=/dev/sg0 bs=512 count=1MB mmap=1 time=2</code></pre>
-<p> This command will continually read 128 512 byte blocks from block 0. The &quot;128&quot; is the default value for &#8216;bpt&#8217; while &quot;block 0&quot; is chosen because the &#8216;skip&#8217; argument was not given. This will continue until 1,000,000 blocks are read. The idea behind using &#8216;time=2&#8217; is that the first 64 KiB read operation will involve reading the magnetic media while the remaining read operations will &quot;hit&quot; the disk&#8217;s cache. The output of third command will look like this:<br />
+<p> This command will continually read 128 512 byte blocks from block 0. The &quot;128&quot; is the default value for &#8216;bpt&#8217; while &quot;block 0&quot; is chosen because the &#8216;skip&#8217; argument was not given. This will continue until 1,000,000 blocks are read. The idea behind using &#8216;time=2&#8217; is that the first 64 KiB read operation will involve reading the magnetic media while the remaining read operations will &quot;hit&quot; the disk&#8217;s cache. The output of third command will look like this:<br/>
 &nbsp;<wbr>&nbsp;<wbr>time from second command to end was 4.50 secs, 113.70 MB/sec </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>Average number of READ commands per second was 1735.27 </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>1000000+0 records in, SCSI commands issued: 7813</p>
@@ -69,7 +69,7 @@ description: "sg_read – read multiple blocks of data, optionally with SCSI REA
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;dgilbert at interlog dot com&gt;.</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2000-2012 Douglas Gilbert<br />
+<p>Copyright &#169; 2000-2012 Douglas Gilbert<br/>
  This software is distributed under the GPL version 2. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>See Also</h2>
 <p>To time streaming media read or write time see <code>sg_dd</code> is in the sg3_utils package. The lmbench package contains <code>lmdd</code> which is also interesting. <code><a href="/docs/linux/man/8-raw/">raw</a>(8), <a href="/docs/linux/man/1-dd/">dd</a>(1)</code> </p>

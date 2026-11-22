@@ -285,7 +285,7 @@ x!<i>names</i>: exclude files in <i>names</i> multiple exclusions are allowed
 </dd></dl>
 </pre>
 <dt><code>y</code></dt>
-<dd> Assume Yes on all queries except diskette volume prompts<br />
+<dd> Assume Yes on all queries except diskette volume prompts<br/>
 &nbsp;<wbr>Use this switch for batch mode</dd>
 <dt><code>z</code></dt>
 <dd> Supply archive comment file <code>_</code> Convert filenames to lower case </dd>
@@ -680,7 +680,7 @@ The "dc" command is an abbreviation for "d -jb"
 <dt><code>Command</code></dt>
 <dd> prompt for and execute one system command</dd></dl>
 <h2>ENVIRONMENT</h2>
-<p> <code>ARJ_SW</code> = <code>-jyry -jv -i1</code><br />
+<p> <code>ARJ_SW</code> = <code>-jyry -jv -i1</code><br/>
  <code>ARJ_SW</code> = <i>/etc/arj.cfg</i></p>
 <h2>EXIT STATUS</h2>
 <dl>

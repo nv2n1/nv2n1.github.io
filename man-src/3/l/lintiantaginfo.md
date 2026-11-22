@@ -32,13 +32,13 @@ description: "Lintian::Tag::Info – Lintian interface to tag metadata"
 <dd>
 </dd><dt>aliases</dt>
 <dd>
-</dd><dt>load(<font SIZE="-1">PATH</font>)</dt>
-<dd>Loads a tag description from <font SIZE="-1">PATH.</font></dd>
+</dd><dt>load(PATH)</dt>
+<dd>Loads a tag description from PATH.</dd>
 <dt><code>code()</code></dt>
 <dd>Returns the one-letter code for the tag. This will be a letter chosen from <tt>&quot;E&quot;</tt>, <tt>&quot;W&quot;</tt>, <tt>&quot;I&quot;</tt>, or <tt>&quot;P&quot;</tt>, based on the tag severity, and other attributes (such as whether experimental is set). This code will never be <tt>&quot;O&quot;</tt> or <tt>&quot;X&quot;</tt>; overrides and experimental tags are handled separately.</dd>
-<dt>description([<font SIZE="-1">FORMAT</font> [, <font SIZE="-1">INDENT</font>]])</dt>
-<dd>Returns the formatted description (the Info field) for a tag. <font SIZE="-1">FORMAT</font> must be either <tt>&quot;text&quot;</tt> or <tt>&quot;html&quot;</tt> and defaults to <tt>&quot;text&quot;</tt> if no format is specified. If <tt>&quot;text&quot;</tt>, returns wrapped paragraphs formatted in plain text with a right margin matching the Text::Wrap default, preserving as verbatim paragraphs that begin with whitespace. If <tt>&quot;html&quot;</tt>, return paragraphs formatted in <font SIZE="-1">HTML.</font> </dd>
-<p> If <font SIZE="-1">INDENT</font> is specified, the string <font SIZE="-1">INDENT</font> is prepended to each line of the formatted output.</dl>
+<dt>description([FORMAT [, INDENT]])</dt>
+<dd>Returns the formatted description (the Info field) for a tag. FORMAT must be either <tt>&quot;text&quot;</tt> or <tt>&quot;html&quot;</tt> and defaults to <tt>&quot;text&quot;</tt> if no format is specified. If <tt>&quot;text&quot;</tt>, returns wrapped paragraphs formatted in plain text with a right margin matching the Text::Wrap default, preserving as verbatim paragraphs that begin with whitespace. If <tt>&quot;html&quot;</tt>, return paragraphs formatted in HTML. </dd>
+<p> If INDENT is specified, the string INDENT is prepended to each line of the formatted output.</dl>
 <h2>Author</h2>
 <p>Originally written by Russ Allbery &lt;rra [at] debian.org&gt; for Lintian.</p>
 <h2>See Also</h2>

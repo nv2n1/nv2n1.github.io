@@ -21,10 +21,10 @@ int innetgr(const char *netgroup, const char *host,
             const char *user, const char *domain);
 </code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
-<p> <code>setnetgrent</code>(), <code>endnetgrent</code>(), <code>getnetgrent</code>(), <code>getnetgrent_r</code>(), <code>innetgr</code>():<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Since glibc 2.19:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.19 and earlier:<br />
+<p> <code>setnetgrent</code>(), <code>endnetgrent</code>(), <code>getnetgrent</code>(), <code>getnetgrent_r</code>(), <code>innetgr</code>():<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Since glibc 2.19:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.19 and earlier:<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</p>
 <h2>DESCRIPTION</h2>
 <p> The <i>netgroup</i> is a SunOS invention. A netgroup database is a list of string triples (<i>hostname</i>, <i>username</i>, <i>domainname</i>) or other netgroup names. Any of the elements in a triple can be empty, which means that anything matches. The functions described here allow access to the netgroup databases. The file <i>/etc/nsswitch.conf</i> defines what database is searched. </p>
@@ -33,7 +33,7 @@ int innetgr(const char *netgroup, const char *host,
 <h2>RETURN VALUE</h2>
 <p> These functions return 1 on success and 0 for failure.</p>
 <h2>FILES</h2>
-<p> <i>/etc/netgroup</i><br />
+<p> <i>/etc/netgroup</i><br/>
  <i>/etc/nsswitch.conf</i></p>
 <h2>ATTRIBUTES</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
@@ -45,11 +45,11 @@ int innetgr(const char *netgroup, const char *host,
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>setnetgrent</code>(),<br />
- <code>getnetgrent_r</code>(),<br />
+<td> <code>setnetgrent</code>(),<br/>
+ <code>getnetgrent_r</code>(),<br/>
  <code>innetgr</code>() </td>
 <td>Thread safety</td>
-<td> MT-Unsafe race:netgrent<br />
+<td> MT-Unsafe race:netgrent<br/>
  locale
 </td>
 </tr>
@@ -62,7 +62,7 @@ int innetgr(const char *netgroup, const char *host,
 <tr VALIGN=top>
 <td> <code>getnetgrent</code>() </td>
 <td>Thread safety</td>
-<td> MT-Unsafe race:netgrent<br />
+<td> MT-Unsafe race:netgrent<br/>
  race:netgrentbuf locale
 </td>
 </tr>

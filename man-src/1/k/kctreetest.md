@@ -34,34 +34,34 @@ description: "kctreetest – command line interface to test the file tree databa
 <p> Options feature the following. </p>
 <dl>
 <dt>
-</dt><dd> <code>-th </code><i>num</i> : specifies the number of worker threads.<br />
- <code>-rnd</code> : performs random test.<br />
- <code>-set</code> : performs setting operation only.<br />
- <code>-get</code> : performs getting operation only.<br />
- <code>-getw</code> : performs getting with a buffer operation only.<br />
- <code>-rem</code> : performs removing operation only.<br />
- <code>-etc</code> : performs miscellaneous operations.<br />
- <code>-tran</code> : performs transaction.<br />
- <code>-oat</code> : opens the database with the auto transaction option.<br />
- <code>-oas</code> : opens the database with the auto synchronization option.<br />
- <code>-onl</code> : opens the database with the no locking option.<br />
- <code>-otl</code> : opens the database with the try locking option.<br />
- <code>-onr</code> : opens the database with the no auto repair option.<br />
- <code>-apow </code><i>num</i> : specifies the power of the alignment of record size.<br />
- <code>-fpow </code><i>num</i> : specifies the power of the capacity of the free block pool.<br />
- <code>-ts</code> : tunes the database with the small option.<br />
- <code>-tl</code> : tunes the database with the linear option.<br />
- <code>-tc</code> : tunes the database with the compression option.<br />
- <code>-bnum </code><i>num</i> : specifies the number of buckets of the hash table.<br />
- <code>-psiz </code><i>num</i> : specifies the size of each page.<br />
- <code>-msiz </code><i>num</i> : specifies the size of the memory-mapped region.<br />
- <code>-dfunit </code><i>num</i> : specifies the unit step number of auto defragmentation.<br />
- <code>-pccap </code><i>num</i> : specifies the capacity size of the page cache.<br />
- <code>-rcd</code> : use the decimal comparator instead of the lexical one.<br />
- <code>-rcld</code> : use the lexical descending comparator instead of the ascending one.<br />
- <code>-rcdd</code> : use the decimal descending comparator instead of the lexical one.<br />
- <code>-lv</code> : reports all errors.<br />
- <code>-it </code><i>num</i> : specifies the number of repetition.<br />
+</dt><dd> <code>-th </code><i>num</i> : specifies the number of worker threads.<br/>
+ <code>-rnd</code> : performs random test.<br/>
+ <code>-set</code> : performs setting operation only.<br/>
+ <code>-get</code> : performs getting operation only.<br/>
+ <code>-getw</code> : performs getting with a buffer operation only.<br/>
+ <code>-rem</code> : performs removing operation only.<br/>
+ <code>-etc</code> : performs miscellaneous operations.<br/>
+ <code>-tran</code> : performs transaction.<br/>
+ <code>-oat</code> : opens the database with the auto transaction option.<br/>
+ <code>-oas</code> : opens the database with the auto synchronization option.<br/>
+ <code>-onl</code> : opens the database with the no locking option.<br/>
+ <code>-otl</code> : opens the database with the try locking option.<br/>
+ <code>-onr</code> : opens the database with the no auto repair option.<br/>
+ <code>-apow </code><i>num</i> : specifies the power of the alignment of record size.<br/>
+ <code>-fpow </code><i>num</i> : specifies the power of the capacity of the free block pool.<br/>
+ <code>-ts</code> : tunes the database with the small option.<br/>
+ <code>-tl</code> : tunes the database with the linear option.<br/>
+ <code>-tc</code> : tunes the database with the compression option.<br/>
+ <code>-bnum </code><i>num</i> : specifies the number of buckets of the hash table.<br/>
+ <code>-psiz </code><i>num</i> : specifies the size of each page.<br/>
+ <code>-msiz </code><i>num</i> : specifies the size of the memory-mapped region.<br/>
+ <code>-dfunit </code><i>num</i> : specifies the unit step number of auto defragmentation.<br/>
+ <code>-pccap </code><i>num</i> : specifies the capacity size of the page cache.<br/>
+ <code>-rcd</code> : use the decimal comparator instead of the lexical one.<br/>
+ <code>-rcld</code> : use the lexical descending comparator instead of the ascending one.<br/>
+ <code>-rcdd</code> : use the decimal descending comparator instead of the lexical one.<br/>
+ <code>-lv</code> : reports all errors.<br/>
+ <code>-it </code><i>num</i> : specifies the number of repetition.<br/>
  <code>-hard</code> : performs physical synchronization.
 </dd></dl>
 <p> This command returns 0 on success, another on failure. </p>

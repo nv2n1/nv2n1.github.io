@@ -10,50 +10,50 @@ description: "QuantLib::PiecewiseDefaultCurve – Piecewise default-probability 
 
 <p>QuantLib::PiecewiseDefaultCurve &#8211; Piecewise default-probability term structure. </p>
 
-<p> <br />
+<p> <br/>
  </p>
 <p>#include &lt;ql/termstructures/credit/piecewisedefaultcurve.hpp&gt; </p>
 <p>Inherits Traits::template curve::type&lt;Interpolator&gt;, and <code>QuantLib::LazyObject</code>. </p>
 <h3>Public Types</h3>
-<p> <br />
- typedef Traits <code>traits_type</code> <br />
- <br />
- typedef Interpolator <code>interpolator_type</code> <br />
+<p> <br/>
+ typedef Traits <code>traits_type</code> <br/>
+ <br/>
+ typedef Interpolator <code>interpolator_type</code> <br/>
   </p>
 <h3>Public Member Functions</h3>
-<p> <code>Constructors</code> <br />
+<p> <code>Constructors</code> <br/>
  </p>
-<p> <br />
- <code>PiecewiseDefaultCurve</code> (const <code>Date</code> &amp;referenceDate, const std::vector&lt; boost::shared_ptr&lt; typename Traits::helper &gt; &gt; &amp;instruments, const <code>DayCounter</code> &amp;dayCounter, <code>Real</code> accuracy=1.0e-12, const Interpolator &amp;i=Interpolator()) <br />
- <br />
- <code>PiecewiseDefaultCurve</code> (<code>Natural</code> settlementDays, const <code>Calendar</code> &amp;calendar, const std::vector&lt; boost::shared_ptr&lt; typename Traits::helper &gt; &gt; &amp;instruments, const <code>DayCounter</code> &amp;dayCounter, <code>Real</code> accuracy=1.0e-12, const Interpolator &amp;i=Interpolator()) <br />
+<p> <br/>
+ <code>PiecewiseDefaultCurve</code> (const <code>Date</code> &amp;referenceDate, const std::vector&lt; boost::shared_ptr&lt; typename Traits::helper &gt; &gt; &amp;instruments, const <code>DayCounter</code> &amp;dayCounter, <code>Real</code> accuracy=1.0e-12, const Interpolator &amp;i=Interpolator()) <br/>
+ <br/>
+ <code>PiecewiseDefaultCurve</code> (<code>Natural</code> settlementDays, const <code>Calendar</code> &amp;calendar, const std::vector&lt; boost::shared_ptr&lt; typename Traits::helper &gt; &gt; &amp;instruments, const <code>DayCounter</code> &amp;dayCounter, <code>Real</code> accuracy=1.0e-12, const Interpolator &amp;i=Interpolator()) <br/>
  </p>
-<p> <code>DefaultTermStructure interface</code> <br />
+<p> <code>DefaultTermStructure interface</code> <br/>
  </p>
-<p> <br />
- <code>Date</code> <code>maxDate</code> () const <br />
+<p> <br/>
+ <code>Date</code> <code>maxDate</code> () const <br/>
  </p>
-<p> <code>Inspectors</code> <br />
+<p> <code>Inspectors</code> <br/>
  </p>
-<p> <br />
- const std::vector&lt; Time &gt; &amp; <code>times</code> () const <br />
- <br />
- const std::vector&lt; <code>Date</code> &gt; &amp; <code>dates</code> () const <br />
- <br />
- const std::vector&lt; <code>Real</code> &gt; &amp; <code>data</code> () const <br />
- <br />
- std::vector&lt; std::pair&lt; <code>Date</code>, <code>Real</code> &gt; &gt; <code>nodes</code> () const <br />
+<p> <br/>
+ const std::vector&lt; Time &gt; &amp; <code>times</code> () const <br/>
+ <br/>
+ const std::vector&lt; <code>Date</code> &gt; &amp; <code>dates</code> () const <br/>
+ <br/>
+ const std::vector&lt; <code>Real</code> &gt; &amp; <code>data</code> () const <br/>
+ <br/>
+ std::vector&lt; std::pair&lt; <code>Date</code>, <code>Real</code> &gt; &gt; <code>nodes</code> () const <br/>
  </p>
-<p> <code>Observer interface</code> <br />
+<p> <code>Observer interface</code> <br/>
  </p>
-<p> <br />
- void <code>update</code> () <br />
+<p> <br/>
+ void <code>update</code> () <br/>
   </p>
 <h3>Friends</h3>
-<p> <br />
- class <code>Bootstrap&lt; this_curve &gt;</code> <br />
- <br />
- class <code>BootstrapError&lt; this_curve &gt;</code> <br />
+<p> <br/>
+ class <code>Bootstrap&lt; this_curve &gt;</code> <br/>
+ <br/>
+ class <code>BootstrapError&lt; this_curve &gt;</code> <br/>
   </p>
 <h2>Detailed Description</h2>
 <h3>template&lt;class Traits, class Interpolator, template&lt; class &gt; class Bootstrap = IterativeBootstrap&gt; class QuantLib::PiecewiseDefaultCurve&lt; Traits, Interpolator, Bootstrap &gt;</h3>

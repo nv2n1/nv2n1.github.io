@@ -29,14 +29,14 @@ description: "sg_format – format or resize a SCSI disk (perhaps change its blo
 <p>&nbsp;<wbr>&nbsp;<wbr>(<i>COUNT</i>&nbsp;<wbr>=&nbsp;<wbr>0)&nbsp;<wbr>and block size changed : recommended maximum block </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>count for new block size </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>(<i>COUNT</i>&nbsp;<wbr>=&nbsp;<wbr>-1)&nbsp;<wbr>: use recommended maximum block count </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>(<i>COUNT</i>&nbsp;<wbr>&lt;&nbsp;<wbr>-1)&nbsp;<wbr>: illegal<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>(<i>COUNT</i>&nbsp;<wbr>&lt;&nbsp;<wbr>-1)&nbsp;<wbr>: illegal<br/>
  With <i>&#8211;resize</i> this option must be given and <i>COUNT</i> has this interpretation: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>(<i>COUNT</i>&nbsp;<wbr>&gt;&nbsp;<wbr>0)&nbsp;<wbr>: after resize READ CAPACITY will report&nbsp;<wbr><i>COUNT</i> </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>blocks </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>(<i>COUNT</i>&nbsp;<wbr>=&nbsp;<wbr>0)&nbsp;<wbr>: after resize READ CAPACITY will report 0 blocks </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>(<i>COUNT</i>&nbsp;<wbr>=&nbsp;<wbr>-1)&nbsp;<wbr>: after resize READ CAPACITY will report its </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>maximum number of blocks </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>(<i>COUNT</i>&nbsp;<wbr>&lt;&nbsp;<wbr>-1)&nbsp;<wbr>: illegal<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>(<i>COUNT</i>&nbsp;<wbr>&lt;&nbsp;<wbr>-1)&nbsp;<wbr>: illegal<br/>
  In both cases if the given <i>COUNT</i> exceeds the maximum number of blocks (for the block size) then the disk reports an error. See NOTES section below.</p>
 <dt><code>-D</code>, <code>&#8211;dcrt</code></dt>
 <dd>this option sets the DCRT bit in the FORMAT UNIT command&#8217;s parameter list header. It will &quot;disable certification&quot;. Certification verifies that blocks are usable during the format process. Using this option may speed the format. The default action of this utility (i.e. when this option is not given) is to clear the DCRT bit thereby requesting &quot;media certification&quot;. When the DCRT bit is set, the FOV bit must also be set hence sg_format does that.</dd>
@@ -85,7 +85,7 @@ description: "sg_format – format or resize a SCSI disk (perhaps change its blo
 <p>&nbsp;<wbr>&nbsp;<wbr><code>0</code>&nbsp;<wbr>: &#8211;fmtpinfo=0 &#8211;pfu=0 </p>
 <p>&nbsp;<wbr>&nbsp;<wbr><code>1</code>&nbsp;<wbr>: &#8211;fmtpinfo=2 &#8211;pfu=0 </p>
 <p>&nbsp;<wbr>&nbsp;<wbr><code>2</code>&nbsp;<wbr>: &#8211;fmtpinfo=3 &#8211;pfu=0 </p>
-<p>&nbsp;<wbr>&nbsp;<wbr><code>3</code>&nbsp;<wbr>: &#8211;fmtpinfo=3 &#8211;pfu=1<br />
+<p>&nbsp;<wbr>&nbsp;<wbr><code>3</code>&nbsp;<wbr>: &#8211;fmtpinfo=3 &#8211;pfu=1<br/>
  The default value of <i>FPI</i> (in <i>&#8211;fmtpinfo=FPI</i>) is 0 and the default value of <i>PFU</i> (in <i>&#8211;pfu=PFU</i>) is 0. So if neither <i>&#8211;fmtpinfo=FPI</i> nor <i>&#8211;pfu=PFU</i> are given then protection type 0 (i.e. no protection information) is chosen.</p>
 <h2>Notes</h2>
 <p>The SBC-2 standard states that the REQUEST SENSE command should be used for obtaining progress indication when the format command is underway. However, tests on a selection of disks shows that TEST UNIT READY commands yield progress indications (but not REQUEST SENSE commands). So the current version of this utility defaults to using TEST UNIT READY commands to poll the disk to find out the progress of the format. The <i>&#8211;poll=PT</i> option has been added to control this. </p>
@@ -99,9 +99,9 @@ description: "sg_format – format or resize a SCSI disk (perhaps change its blo
 <p> The <i>COUNT</i> numeric argument may include a multiplicative suffix or be given in hexadecimal. See the &quot;NUMERIC ARGUMENTS&quot; section in the <a href="/docs/linux/man/8-sg3_utils/">sg3_utils</a>(8) man page. </p>
 <p> The SCSI SANITIZE command was introduced in SBC-3 revision 27. It is closely related to the ATA sanitize disk feature set and can be used to remove all existing data from a disk. Sanitize is more likely to be implemented on modern disks (including SSDs) than FORMAT UNIT&#8217;s security initialization feature (see the <i>&#8211;security</i> option) and in some cases much faster.</p>
 <h2>Examples</h2>
-<p>These examples use Linux device names. For suitable device names in other supported Operating Systems see the <a href="/docs/linux/man/8-sg3_utils/">sg3_utils</a>(8) man page. In the first example below simply find out the existing block count and size derived from two sources: a block descriptor in a MODE SELECT command response and from the response of a READ CAPACITY commands. No changes are made:<br />
-#&nbsp;<wbr>sg_format&nbsp;<wbr>/dev/sdm Now a simple format, leaving the block count and size as they were previously. The FORMAT UNIT command is executed in IMMED mode and the device is polled every 60 seconds to print out a progress indication:<br />
-#&nbsp;<wbr>sg_format &#8211;format&nbsp;<wbr>/dev/sdm Now the same format, but waiting (passively) until the format operation is complete:<br />
+<p>These examples use Linux device names. For suitable device names in other supported Operating Systems see the <a href="/docs/linux/man/8-sg3_utils/">sg3_utils</a>(8) man page. In the first example below simply find out the existing block count and size derived from two sources: a block descriptor in a MODE SELECT command response and from the response of a READ CAPACITY commands. No changes are made:<br/>
+#&nbsp;<wbr>sg_format&nbsp;<wbr>/dev/sdm Now a simple format, leaving the block count and size as they were previously. The FORMAT UNIT command is executed in IMMED mode and the device is polled every 60 seconds to print out a progress indication:<br/>
+#&nbsp;<wbr>sg_format &#8211;format&nbsp;<wbr>/dev/sdm Now the same format, but waiting (passively) until the format operation is complete:<br/>
 #&nbsp;<wbr>sg_format &#8211;format &#8211;wait&nbsp;<wbr>/dev/sdm Next is a format in which the block size is changed to 520 bytes and the block count is set to the manufacturer&#8217;s maximum value (for that block size). Note, not all disks support changing the block size: </p>
 <pre><code># sg_format --format --size=520 /dev/sdm</code></pre>
 <p> Now a resize operation so that only the first 0x10000 (65536) blocks on a disk are accessible. The remaining blocks remain unaltered. # sg_format &#8211;resize &#8211;count=0x10000 /dev/sdm Now resize the disk back to its normal (maximum) block count: # sg_format &#8211;resize &#8211;count=-1 /dev/sdm One reason to format a SCSI disk is to add protection information. First check which protection types are supported by a disk (by checking the SPT field in the Extended inquiry VPD page together with the Protect bit in the standard inquiry response): # sg_vpd -p ei -l /dev/sdb</p>
@@ -122,7 +122,7 @@ description: "sg_format – format or resize a SCSI disk (perhaps change its blo
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;dgilbert at interlog dot com&gt;.</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2005-2013 Grant Grundler, James Bottomley and Douglas Gilbert<br />
+<p>Copyright &#169; 2005-2013 Grant Grundler, James Bottomley and Douglas Gilbert<br/>
  This software is distributed under the GPL version 2. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-sg_turs/">sg_turs</a>(8), <a href="/docs/linux/man/8-sg_requests/">sg_requests</a>(8), <a href="/docs/linux/man/8-sg_inq/">sg_inq</a>(8), <a href="/docs/linux/man/8-sg_modes/">sg_modes</a>(8), <a href="/docs/linux/man/8-sg_vpd/">sg_vpd</a>(8),</code> <code><a href="/docs/linux/man/8-sg_reassign/">sg_reassign</a>(8), <a href="/docs/linux/man/8-sg_readcap/">sg_readcap</a>(8), <a href="/docs/linux/man/8-sg3_utils/">sg3_utils</a>(8),</code> <code><a href="/docs/linux/man/8-sg_sanitize/">sg_sanitize</a>(8) [all in sg3_utils],</code> <code><a href="/docs/linux/man/8-sdparm/">sdparm</a>(8), scsiformat (old), <a href="/docs/linux/man/8-hdparm/">hdparm</a>(8)</code> </p>

@@ -14,8 +14,8 @@ description: "html_table_to_db – convert HTML tables into fsdb"
     html_table_to_db &lt;source.html &gt;dest.fsdb
 </pre>
 <h2>DESCRIPTION</h2>
-<p> Converts a <font SIZE="-1">HTML</font> table to Fsdb format. </p>
-<p> The input is an <font SIZE="-1">HTML</font> table (<i>not</i> fsdb). Column names are taken from <tt>&quot;TH&quot;</tt> elements, or defined as <tt>&quot;column0&quot;</tt> through <tt>&quot;columnN&quot;</tt> if no such elements appear. </p>
+<p> Converts a HTML table to Fsdb format. </p>
+<p> The input is an HTML table (<i>not</i> fsdb). Column names are taken from <tt>&quot;TH&quot;</tt> elements, or defined as <tt>&quot;column0&quot;</tt> through <tt>&quot;columnN&quot;</tt> if no such elements appear. </p>
 <p> The output is two-space-separated fsdb. (Someday more general field separators should be supported.) Fsdb fields are normalized version of the html file: multiple spaces are compressed to one. </p>
 <p> This module also supports the standard fsdb options:</p>
 <dl>
@@ -58,4 +58,4 @@ description: "html_table_to_db – convert HTML tables into fsdb"
 <p> Fsdb. db_to_html_table.</p>
 <h2>AUTHOR and COPYRIGHT</h2>
 <p> Copyright (C) 1991-2015 by John Heidemann &lt;johnh [at] isi.edu&gt; </p>
-<p> This program is distributed under terms of the <font SIZE="-1">GNU</font> general public license, version 2. See the file <font SIZE="-1">COPYING</font> with the distribution for details. </p>
+<p> This program is distributed under terms of the GNU general public license, version 2. See the file COPYING with the distribution for details. </p>

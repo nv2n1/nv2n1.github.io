@@ -10,20 +10,20 @@ description: "globus_module.h –"
 <p>globus_module.h &#8211; </p>
 <p> Reference Counting Module Activation and Deactivation.</p>
 <h2>Synopsis</h2>
-<p>#include &#8216;globus_error_generic.h&#8217;<br />
+<p>#include &#8216;globus_error_generic.h&#8217;<br/>
  #include &lt;stdio.h&gt; </p>
 <h3>Data Structures</h3>
-<p>struct <code>globus_module_descriptor_s</code><br />
+<p>struct <code>globus_module_descriptor_s</code><br/>
  <i>Module Descriptor. </i></p>
 <h3>Typedefs</h3>
 <p>typedef int(* <code>globus_module_deactivate_proxy_cb_t</code> )(<code>globus_module_descriptor_t</code> *module_descriptor, void *user_arg) </p>
 <h3>Functions</h3>
-<p>int <code>globus_module_activate</code> (<code>globus_module_descriptor_t</code> *module_descriptor)<br />
- <i>Activate a module. </i><br />
- int <code>globus_module_activate_array</code> (<code>globus_module_descriptor_t</code> *modules[], <code>globus_module_descriptor_t</code> **failed_module)<br />
- <i>Activate a group of modules. </i><br />
- int <code>globus_module_deactivate</code> (<code>globus_module_descriptor_t</code> *module_descriptor)<br />
- <i>Deactivate a module. </i><br />
+<p>int <code>globus_module_activate</code> (<code>globus_module_descriptor_t</code> *module_descriptor)<br/>
+ <i>Activate a module. </i><br/>
+ int <code>globus_module_activate_array</code> (<code>globus_module_descriptor_t</code> *modules[], <code>globus_module_descriptor_t</code> **failed_module)<br/>
+ <i>Activate a group of modules. </i><br/>
+ int <code>globus_module_deactivate</code> (<code>globus_module_descriptor_t</code> *module_descriptor)<br/>
+ <i>Deactivate a module. </i><br/>
  int <code>globus_module_activate_proxy</code> (<code>globus_module_descriptor_t</code> *module_descriptor, <code>globus_module_deactivate_proxy_cb_t</code> deactivate_cb, void *user_arg) </p>
 <p> void <code>globus_module_setenv</code> (const char *name, const char *value) </p>
 <p> char * <code>globus_module_getenv</code> (const char *name) </p>
@@ -48,7 +48,7 @@ description: "globus_module.h –"
 <p> This function copies the version structure associated with the module into &#8216;version&#8217;. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>module_descriptor</i> pointer to a module descriptor (module does NOT need to be activated)<br />
+<dd><i>module_descriptor</i> pointer to a module descriptor (module does NOT need to be activated)<br/>
  <i>version</i> pointer to storage for a globus_version_t. The version will be copied into this</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -66,7 +66,7 @@ description: "globus_module.h –"
 <p> This function prints all activated modules&#8217; version info using the standard form provided by globus_version_print </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>stream</i> stream to print on (stdout, stderr, etc)<br />
+<dd><i>stream</i> stream to print on (stdout, stderr, etc)<br/>
  <i>verbose</i> If GLOBUS_TRUE, then all available version info is printed (ex: globus_module: 1.1 (1013708618-5)) else, only the major.minor is printed (ex: globus_module: 1.1)</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -80,8 +80,8 @@ description: "globus_module.h –"
 <p> This function prints a modules version info using the standard form provided by globus_version_print </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>module_descriptor</i> pointer to a module descriptor (module does NOT need to be activated)<br />
- <i>stream</i> stream to print on (stdout, stderr, etc)<br />
+<dd><i>module_descriptor</i> pointer to a module descriptor (module does NOT need to be activated)<br/>
+ <i>stream</i> stream to print on (stdout, stderr, etc)<br/>
  <i>verbose</i> If GLOBUS_TRUE, then all available version info is printed (ex: globus_module: 1.1 (1013708618-5)) else, only the major.minor is printed (ex: globus_module: 1.1)</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -98,9 +98,9 @@ description: "globus_module.h –"
 <p> In either case, if name is NULL, then only the numerical version will be printed. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>name</i> A string to prefix the version. May be NULL<br />
- <i>version</i> The version structure containing the info to print. (May be NULL, although pointless to do so)<br />
- <i>stream</i> stream to print on (stdout, stderr, etc)<br />
+<dd><i>name</i> A string to prefix the version. May be NULL<br/>
+ <i>version</i> The version structure containing the info to print. (May be NULL, although pointless to do so)<br/>
+ <i>stream</i> stream to print on (stdout, stderr, etc)<br/>
  <i>verbose</i> If GLOBUS_TRUE, then all available version info is printed (ex: globus_module: 1.1 (1013708618-5)) else, only the major.minor is printed (ex: globus_module: 1.1)</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

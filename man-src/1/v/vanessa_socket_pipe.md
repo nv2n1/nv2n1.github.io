@@ -38,7 +38,7 @@ description: "vanessa_socket_pipe – Trivial TCP/IP pipe based on libvanessa_so
 <dt><code>-t|&#8211;timeout: </code></dt>
 <dd> Idle timeout in seconds. Value of zero sets infinite timeout. (default 1800)</dd>
 <dt><code>Notes: </code></dt>
-<dd> Default value for binary flags is off.<br />
+<dd> Default value for binary flags is off.<br/>
  -L|&#8211;listen_port and -o|&#8211;outgoing_host must be defined.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Simon Horman &lt;horms [at] verge.net.au&gt; </p>

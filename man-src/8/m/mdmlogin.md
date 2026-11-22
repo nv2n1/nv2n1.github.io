@@ -11,7 +11,7 @@ description: "mdmlogin – MDM Display Manager greeting window"
 <h2>Synopsis</h2>
 <p>mdmlogin</p>
 <h2>Description</h2>
-<p><code>mdmlogin</code> is invoked by <i><a href="/docs/linux/man/8-mdm/">mdm</a></i>(8). It displays a <font SIZE="-1">GNOME</font> login window and obtains a login/password combination from the user. This is then sent to the controlling <code>mdm</code> process for verification.</p>
+<p><code>mdmlogin</code> is invoked by <i><a href="/docs/linux/man/8-mdm/">mdm</a></i>(8). It displays a GNOME login window and obtains a login/password combination from the user. This is then sent to the controlling <code>mdm</code> process for verification.</p>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/8-mdm/">mdm</a></i>(8)</p>
 <h2>Author</h2>

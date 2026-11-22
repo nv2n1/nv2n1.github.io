@@ -11,11 +11,11 @@ description: "QuantLib::BrownianBridge – Builds Wiener process paths using Gau
 <h2>Synopsis</h2>
 <p>#include &lt;ql/methods/montecarlo/brownianbridge.hpp&gt; </p>
 <h3>Public Member Functions</h3>
-<p><code>BrownianBridge</code> (Size steps)<br />
- <i>unit-time path </i><br />
- <code>BrownianBridge</code> (const std::vector&lt; <code>Time</code> &gt; &amp;times)<br />
- <i>generic times </i><br />
- <code>BrownianBridge</code> (const <code>TimeGrid</code> &amp;timeGrid)<br />
+<p><code>BrownianBridge</code> (Size steps)<br/>
+ <i>unit-time path </i><br/>
+ <code>BrownianBridge</code> (const std::vector&lt; <code>Time</code> &gt; &amp;times)<br/>
+ <i>generic times </i><br/>
+ <code>BrownianBridge</code> (const <code>TimeGrid</code> &amp;timeGrid)<br/>
  <i>generic times </i> </p>
 <p> <code>inspectors</code> </p>
 <p> Size <code>size</code> () const </p>

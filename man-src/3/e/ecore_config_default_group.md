@@ -9,27 +9,27 @@ description: "Ecore Config Defaults – Functions that are used to set the defau
 
 <p>Ecore Config Defaults &#8211; Functions that are used to set the default values of properties. </p>
 <h3>Functions</h3>
-<p>EAPI int <code>ecore_config_default</code> (const char *key, const char *val, float lo, float hi, float step)<br />
- <i>Sets the indicated property if it has not already been set or loaded. </i><br />
- EAPI int <code>ecore_config_boolean_default</code> (const char *key, int val)<br />
- <i>Sets the indicated property to the given boolean if the property has not yet been set. </i><br />
- EAPI int <code>ecore_config_int_default</code> (const char *key, int val)<br />
- <i>Sets the indicated property to the given integer if the property has not yet been set. </i><br />
- EAPI int <code>ecore_config_int_default_bound</code> (const char *key, int val, int low, int high, int step)<br />
- <i>Sets the indicated property to the given integer if the property has not yet been set. </i><br />
- EAPI int <code>ecore_config_string_default</code> (const char *key, const char *val)<br />
- <i>Sets the indicated property to the given string if the property has not yet been set. </i><br />
- EAPI int <code>ecore_config_float_default</code> (const char *key, float val)<br />
- <i>Sets the indicated property to the given float if the property has not yet been set. </i><br />
- EAPI int <code>ecore_config_float_default_bound</code> (const char *key, float val, float low, float high, float step)<br />
- <i>Sets the indicated property to the given float if the property has not yet been set. </i><br />
- EAPI int <code>ecore_config_argb_default</code> (const char *key, int a, int r, int g, int b)<br />
- <i>Sets the indicated property to a color value if the property has not yet been set. </i><br />
- EAPI int <code>ecore_config_argbint_default</code> (const char *key, long argb)<br />
- <i>Sets the indicated property to a color value if the property has not yet been set. </i><br />
- EAPI int <code>ecore_config_argbstr_default</code> (const char *key, const char *val)<br />
- <i>Sets the indicated property to a color value if the property has not yet been set. </i><br />
- EAPI int <code>ecore_config_theme_default</code> (const char *key, const char *val)<br />
+<p>EAPI int <code>ecore_config_default</code> (const char *key, const char *val, float lo, float hi, float step)<br/>
+ <i>Sets the indicated property if it has not already been set or loaded. </i><br/>
+ EAPI int <code>ecore_config_boolean_default</code> (const char *key, int val)<br/>
+ <i>Sets the indicated property to the given boolean if the property has not yet been set. </i><br/>
+ EAPI int <code>ecore_config_int_default</code> (const char *key, int val)<br/>
+ <i>Sets the indicated property to the given integer if the property has not yet been set. </i><br/>
+ EAPI int <code>ecore_config_int_default_bound</code> (const char *key, int val, int low, int high, int step)<br/>
+ <i>Sets the indicated property to the given integer if the property has not yet been set. </i><br/>
+ EAPI int <code>ecore_config_string_default</code> (const char *key, const char *val)<br/>
+ <i>Sets the indicated property to the given string if the property has not yet been set. </i><br/>
+ EAPI int <code>ecore_config_float_default</code> (const char *key, float val)<br/>
+ <i>Sets the indicated property to the given float if the property has not yet been set. </i><br/>
+ EAPI int <code>ecore_config_float_default_bound</code> (const char *key, float val, float low, float high, float step)<br/>
+ <i>Sets the indicated property to the given float if the property has not yet been set. </i><br/>
+ EAPI int <code>ecore_config_argb_default</code> (const char *key, int a, int r, int g, int b)<br/>
+ <i>Sets the indicated property to a color value if the property has not yet been set. </i><br/>
+ EAPI int <code>ecore_config_argbint_default</code> (const char *key, long argb)<br/>
+ <i>Sets the indicated property to a color value if the property has not yet been set. </i><br/>
+ EAPI int <code>ecore_config_argbstr_default</code> (const char *key, const char *val)<br/>
+ <i>Sets the indicated property to a color value if the property has not yet been set. </i><br/>
+ EAPI int <code>ecore_config_theme_default</code> (const char *key, const char *val)<br/>
  <i>Sets the indicated property to a theme name if the property has not yet been set. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that are used to set the default values of properties.</p>
@@ -38,10 +38,10 @@ description: "Ecore Config Defaults – Functions that are used to set the defau
 <p>Sets the indicated property to a color value if the property has not yet been set. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>key</i> The property key.<br />
- <i>a</i> integer 0..255<br />
- <i>r</i> integer 0..255<br />
- <i>g</i> integer 0..255<br />
+<dd><i>key</i> The property key.<br/>
+ <i>a</i> integer 0..255<br/>
+ <i>r</i> integer 0..255<br/>
+ <i>g</i> integer 0..255<br/>
  <i>b</i> integer 0..255</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -51,7 +51,7 @@ description: "Ecore Config Defaults – Functions that are used to set the defau
 <p>Sets the indicated property to a color value if the property has not yet been set. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>key</i> The property key.<br />
+<dd><i>key</i> The property key.<br/>
  <i>argb</i> ARGB data as long</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -61,7 +61,7 @@ description: "Ecore Config Defaults – Functions that are used to set the defau
 <p>Sets the indicated property to a color value if the property has not yet been set. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>key</i> The property key.<br />
+<dd><i>key</i> The property key.<br/>
  <i>val</i> Color value in ARGB format.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -71,7 +71,7 @@ description: "Ecore Config Defaults – Functions that are used to set the defau
 <p>Sets the indicated property to the given boolean if the property has not yet been set. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>key</i> The property key.<br />
+<dd><i>key</i> The property key.<br/>
  <i>val</i> Boolean Integer to set the value to.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -81,10 +81,10 @@ description: "Ecore Config Defaults – Functions that are used to set the defau
 <p>Sets the indicated property if it has not already been set or loaded. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>key</i> The property key.<br />
- <i>val</i> Default value of the key.<br />
- <i>lo</i> Lowest valid value for the key.<br />
- <i>hi</i> Highest valid value for the key.<br />
+<dd><i>key</i> The property key.<br/>
+ <i>val</i> Default value of the key.<br/>
+ <i>lo</i> Lowest valid value for the key.<br/>
+ <i>hi</i> Highest valid value for the key.<br/>
  <i>step</i> Used by integer and float values.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -97,7 +97,7 @@ description: "Ecore Config Defaults – Functions that are used to set the defau
 <p>Sets the indicated property to the given float if the property has not yet been set. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>key</i> The property key.<br />
+<dd><i>key</i> The property key.<br/>
  <i>val</i> Float to set the property to.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -108,10 +108,10 @@ description: "Ecore Config Defaults – Functions that are used to set the defau
 <p> The bounds and step values are set regardless. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>key</i> The property key.<br />
- <i>val</i> Float to set the property to.<br />
- <i>low</i> Lowest valid integer value for the property.<br />
- <i>high</i> Highest valid float value for the property.<br />
+<dd><i>key</i> The property key.<br/>
+ <i>val</i> Float to set the property to.<br/>
+ <i>low</i> Lowest valid integer value for the property.<br/>
+ <i>high</i> Highest valid float value for the property.<br/>
  <i>step</i> Increment value for the property.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -121,7 +121,7 @@ description: "Ecore Config Defaults – Functions that are used to set the defau
 <p>Sets the indicated property to the given integer if the property has not yet been set. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>key</i> The property key.<br />
+<dd><i>key</i> The property key.<br/>
  <i>val</i> Integer to set the value to.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -132,10 +132,10 @@ description: "Ecore Config Defaults – Functions that are used to set the defau
 <p> The bounds and step values are set regardless. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>key</i> The property key.<br />
- <i>val</i> Integer to set the property to.<br />
- <i>low</i> Lowest valid integer value for the property.<br />
- <i>high</i> Highest valid integer value for the property.<br />
+<dd><i>key</i> The property key.<br/>
+ <i>val</i> Integer to set the property to.<br/>
+ <i>low</i> Lowest valid integer value for the property.<br/>
+ <i>high</i> Highest valid integer value for the property.<br/>
  <i>step</i> Increment value for the property.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -145,7 +145,7 @@ description: "Ecore Config Defaults – Functions that are used to set the defau
 <p>Sets the indicated property to the given string if the property has not yet been set. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>key</i> The property key.<br />
+<dd><i>key</i> The property key.<br/>
  <i>val</i> String to set the property to.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -156,7 +156,7 @@ description: "Ecore Config Defaults – Functions that are used to set the defau
 <p>Sets the indicated property to a theme name if the property has not yet been set. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>key</i> The property key.<br />
+<dd><i>key</i> The property key.<br/>
  <i>val</i> String giving the name of the theme.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

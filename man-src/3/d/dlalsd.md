@@ -11,7 +11,7 @@ description: "dlalsd.f –"
 <p> dlalsd.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dlalsd</code> (UPLO, SMLSIZ, N, NRHS, D, E, B, LDB, RCOND, RANK, WORK, IWORK, INFO)<br />
+<p> subroutine <code>dlalsd</code> (UPLO, SMLSIZ, N, NRHS, D, E, B, LDB, RCOND, RANK, WORK, IWORK, INFO)<br/>
  <i></i><code>DLALSD</code> uses the singular value decomposition of A to solve the least squares problem.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlalsd (characterUPLO, integerSMLSIZ, integerN, integerNRHS, double precision, dimension( * )D, double precision, dimension( * )E, double precision, dimension( ldb, * )B, integerLDB, double precisionRCOND, integerRANK, double precision, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>

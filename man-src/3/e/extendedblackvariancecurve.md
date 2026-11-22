@@ -10,12 +10,12 @@ description: "ql/experimental/volatility/extendedblackvariancecurve.hpp – Blac
 
 <p> ql/experimental/volatility/extendedblackvariancecurve.hpp &#8211; Black volatility curve modelled as variance curve. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/termstructures/volatility/equityfx/blackvoltermstructure.hpp&gt;<br />
- #include &lt;ql/math/interpolation.hpp&gt;<br />
- #include &lt;ql/handle.hpp&gt;<br />
+<p> #include &lt;ql/termstructures/volatility/equityfx/blackvoltermstructure.hpp&gt;<br/>
+ #include &lt;ql/math/interpolation.hpp&gt;<br/>
+ #include &lt;ql/handle.hpp&gt;<br/>
  #include &lt;ql/quote.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>ExtendedBlackVarianceCurve</code><br />
+<p> class <code>ExtendedBlackVarianceCurve</code><br/>
  <i>Black volatility curve modelled as variance curve. </i></p>
 <h2>Detailed Description</h2>
 <p> Black volatility curve modelled as variance curve. </p>

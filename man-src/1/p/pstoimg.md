@@ -30,15 +30,15 @@ description: "pstoimg – Convert a PostScript file to a bitmap image using Ghos
 <dt><code>-debug</code></dt>
 <dd> Turn on debugging output. This can get rather verbose. Any intermediate files generated are not removed to help debugging.</dd>
 <dt><code>-density</code> <i>num</i></dt>
-<dd> The density (resolution) in <font SIZE="-1">DPI</font> in which to render the bitmap. The default is 72.</dd>
+<dd> The density (resolution) in DPI in which to render the bitmap. The default is 72.</dd>
 <dt><code>-depth</code> <i>num</i> or <code>-color</code> <i>num</i></dt>
 <dd> Specify the color depth of the bitmap. Legal values are 1 (black &amp; white), 8 (256 colors) and 24 (true color).</dd>
 <dt><code>-discard</code></dt>
-<dd> Delete the input postscript file if the conversion was successful. Setting the environment <font SIZE="-1">DISCARD</font> to a true value (as perl sees it) has the same effect.</dd>
+<dd> Delete the input postscript file if the conversion was successful. Setting the environment DISCARD to a true value (as perl sees it) has the same effect.</dd>
 <dt><code>-flip</code> <i>code</i></dt>
 <dd> Flip all generated output bitmaps. The following codes are recognized: lr (flip left-right), tb (flip top-bottom), xy (flip bottom/left-top/right), r90 and ccw (rotate by 90 degrees counterclockwise), r270 and cw (rotate 90 degrees clockwise) and r180 (rotate 180 degrees).</dd>
 <dt><code>-geometry</code> <i>X</i>x<i>Y</i></dt>
-<dd> Render only this &#8220;window&#8221; of the PostScript file. If given, this option can dramatically reduce memory requirements and speed up conversion. The geometry is automatically detected in case of <font SIZE="-1">EPS</font> files (Encapsulated PostScript).</dd>
+<dd> Render only this &#8220;window&#8221; of the PostScript file. If given, this option can dramatically reduce memory requirements and speed up conversion. The geometry is automatically detected in case of EPS files (Encapsulated PostScript).</dd>
 <dt><code>-interlaced</code></dt>
 <dd> Generate an interlaced bitmap. Interlaced images build up from coarse to fine as they are loaded. This option may not work on every installation and/or bitmap type, depending of the capabilities of external programs.</dd>
 <dt><code>-margins</code> <i>X</i>,<i>Y</i></dt>
@@ -53,23 +53,23 @@ description: "pstoimg – Convert a PostScript file to a bitmap image using Ghos
 <dt><code>-rightjustify</code> <i>num</i></dt>
 <dd> Add the appropriate amount of whitespace to the left of the image so that it appears to be aligned to the right in a total width of <i>num</i> pixels.</dd>
 <dt><code>-scale</code> <i>factor</i></dt>
-<dd> Scale the image by <i>factor</i>. Valid choices are any numbers greater than zero. Useful choices are numbers between 0.1 &#8211; 5. Large numbers may generate very large intermediate files and will take longer to process. If this option is omitted, the environment <font SIZE="-1">SCALE</font> is considered.</dd>
+<dd> Scale the image by <i>factor</i>. Valid choices are any numbers greater than zero. Useful choices are numbers between 0.1 &#8211; 5. Large numbers may generate very large intermediate files and will take longer to process. If this option is omitted, the environment SCALE is considered.</dd>
 <dt><code>-shoreup</code> <i>num</i>[<code>d</code>]</dt>
-<dd> Make height and width of the bitmap(s) an exact multiple of <i>num</i>. If <i>num</i> is followed by a &#8220;d&#8221;, then half the extra vertical space is placed underneath. This option is useful, if you want to have &#8220;blown-up&#8221; images of high quality for print, but downscale them in <font SIZE="-1">HTML</font> using <tt>&quot;&lt;IMG WIDTH=x HEIGHT=y&gt;&quot;</tt>. If the actual image is is not an integer multiple of x,y then browsers tend to display distorted images.</dd>
+<dd> Make height and width of the bitmap(s) an exact multiple of <i>num</i>. If <i>num</i> is followed by a &#8220;d&#8221;, then half the extra vertical space is placed underneath. This option is useful, if you want to have &#8220;blown-up&#8221; images of high quality for print, but downscale them in HTML using <tt>&quot;&lt;IMG WIDTH=x HEIGHT=y&gt;&quot;</tt>. If the actual image is is not an integer multiple of x,y then browsers tend to display distorted images.</dd>
 <dt><code>-tmp</code> <i>path</i></dt>
-<dd> Use <i>path</i> to store temporary files. Defaults to /tmp on this installation. This parameter can be set by the environment <font SIZE="-1"><code>TMP</code></font> or <font SIZE="-1"><code>TEMP</code></font>, too.</dd>
+<dd> Use <i>path</i> to store temporary files. Defaults to /tmp on this installation. This parameter can be set by the environment <code>TMP</code> or <code>TEMP</code>, too.</dd>
 <dt><code>-topjustify</code> [<code>x</code>]<i>num</i></dt>
 <dd> Add padding whitespace to the image so that it gets a defined height. If an integer value is given, it defines the total height. The whitespace is added at the bottom. If the number is preceded by &#8220;x&#8221;, then this multiple of the image height is added as whitespace at the bottom.</dd>
 <dt><code>-transparent</code></dt>
 <dd> Generate transparent bitmaps, i.e. the background color (white) is transparent if viewed with certain viewers (e.g. browsers). This option may not be available due to missing capabilities of external programs.</dd>
 <dt><code>-type</code> <i>type</i></dt>
-<dd> Instruct pstoimg to render the bitmap in <i>type</i> format. Depending on the local installation, pstoimg is capable of generating either <font SIZE="-1">GIF</font> or <font SIZE="-1">PNG</font> bitmaps. This site features the following types: svg png gif </dd>
+<dd> Instruct pstoimg to render the bitmap in <i>type</i> format. Depending on the local installation, pstoimg is capable of generating either GIF or PNG bitmaps. This site features the following types: svg png gif </dd>
 <p> If omitted, the first type in this list is taken.</p>
 <dt><code>-white</code></dt>
 <dd> Remove TeX&#8217;s page color information from the PostScript file before converting so that a white background is used.</dd></dl>
 <h2>DESCRIPTION</h2>
-<p> <code>pstoimg</code> iterates over the given input files and runs them through Ghostscript. The resulting pnm (portable anymap files) are processed with different Netpbm tools (cropping, color mapping, aligning, &#8230;) and finally converted into (currently) either <font SIZE="-1">GIF</font> or <font SIZE="-1">PNG</font> format. The bitmaps can now be included e.g. in <font SIZE="-1">WWW</font> pages. </p>
-<p> The PostScript file is converted as is. If a valid bounding box is found (<font SIZE="-1">EPS</font> format), then only this area is converted. The image is <i>not</i> cropped by default.</p>
+<p> <code>pstoimg</code> iterates over the given input files and runs them through Ghostscript. The resulting pnm (portable anymap files) are processed with different Netpbm tools (cropping, color mapping, aligning, &#8230;) and finally converted into (currently) either GIF or PNG format. The bitmaps can now be included e.g. in WWW pages. </p>
+<p> The PostScript file is converted as is. If a valid bounding box is found (EPS format), then only this area is converted. The image is <i>not</i> cropped by default.</p>
 <h2>RETURN VALUE</h2>
 <dl>
 <dt>0</dt>
@@ -86,27 +86,27 @@ description: "pstoimg – Convert a PostScript file to a bitmap image using Ghos
 <dd> Consider foo.ps a multiple page PostScript file and create output files bar1.gif, bar2.gif, etc.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><font SIZE="-1">DENSITY, DEPTH, DEBUG, DISCARD</font></dt>
+<dt>DENSITY, DEPTH, DEBUG, DISCARD</dt>
 <dd> See <code>-density</code>, <code>-depth</code>, <code>-debug</code>, <code>-discard</code>, respectively.</dd>
-<dt><font SIZE="-1">GS_LIB</font></dt>
-<dd> This variable is set to the path(s) where Ghostscript libraries have been found on this system during configuration, but only if the built-in paths are not correct. This fixes the problem of relocation that is quite common on Win32 installations. This behavior can be overridden by setting <font SIZE="-1">GS_LIB</font> manually before starting pstoimg.</dd>
-<dt><font SIZE="-1">LATEX2HTMLDIR</font></dt>
+<dt>GS_LIB</dt>
+<dd> This variable is set to the path(s) where Ghostscript libraries have been found on this system during configuration, but only if the built-in paths are not correct. This fixes the problem of relocation that is quite common on Win32 installations. This behavior can be overridden by setting GS_LIB manually before starting pstoimg.</dd>
+<dt>LATEX2HTMLDIR</dt>
 <dd> The directory where the LaTeX2HTML library and perl modules are found. Defaults to &#8220;/usr/share/latex2html&#8221; on this installation.</dd>
-<dt><font SIZE="-1">OUTFILE</font></dt>
+<dt>OUTFILE</dt>
 <dd> Setting this has the same effect as specifying <code>-out</code>. Please do not rely on this feature any more, it will disappear from the next releases!</dd>
-<dt><font SIZE="-1">PAPERSIZE</font></dt>
+<dt>PAPERSIZE</dt>
 <dd> The papersize to use by Ghostscript to render the image. pstoimg tries hard to optimize for rendering on the smallest possible bitmap size. Still this option is there to enable tuning by hand, although it is deprecated. If pstoimg finds a better setting, this parameter is ignored.</dd>
-<dt><font SIZE="-1">SCALE</font></dt>
+<dt>SCALE</dt>
 <dd> See the discussion of <code>-scale</code>.</dd>
-<dt><font SIZE="-1">TMP</font> and <font SIZE="-1">TEMP</font></dt>
-<dd> Unless overridden by <code>-tmp</code>, these variables denote a directory where to store temporary files. <font SIZE="-1">TMP</font> is considered first, then <font SIZE="-1">TEMP.</font></dd></dl>
+<dt>TMP and TEMP</dt>
+<dd> Unless overridden by <code>-tmp</code>, these variables denote a directory where to store temporary files. TMP is considered first, then TEMP.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> gs, pnmcrop, pnmquant, pbmmake, pnmcat, pnmfile, pnmflip, ppmtogif, pnmtopng, giftool, giftrans.</p>
 <h2>NOTES</h2>
 <p> Several people have suggested to use ImageMagick&#8217;s convert instead of pstoimg. A few comments on this: convert uses (of course) Ghostscript for conversion of PostScript to bitmap, so one still needs gs. And for the special requirements of LaTeX2HTML convert&#8217;s features are not sufficient. The ImageMagick toolset has everything in place, but it has some overhead that can prove killing when processing some 100 images. pstoimg only does what it really has to, so it should be quite efficient. Don&#8217;t get me wrong &#8211; I like ImageMagick, but not in the context of LaTeX2HTML.</p>
 <h2>CAVEATS</h2>
 <p> This utility is automatically configured and built to work on the local setup. If this setup changes (e.g. some of the external commands are moved), the script has be be reconfigured. </p>
-<p> Despite the portability of perl, a pstoimg configured on <font SIZE="-1">UNIX</font> will probably not work on Win32 and vice versa.</p>
+<p> Despite the portability of perl, a pstoimg configured on UNIX will probably not work on Win32 and vice versa.</p>
 <h2>BUGS</h2>
 <p> Please report bugs to latex2html [at] tug.org, stating the (debug) output of pstoimg, your perl version and the versions of the external tools. Best is to include the cfgcache.pm file from the configuration procedure.</p>
 <h2>AUTHOR</h2>

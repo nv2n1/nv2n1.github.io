@@ -8,7 +8,7 @@ url: "/docs/linux/man/3-hbwallocator/"
 description: "hbw::allocator<T> – The C++ allocator compatible with the C++ standard library allocator concepts Note: This is EXEPRIMENTAL API. The functionality and the header file itself can be changed (includ..."
 ---
 
-<p> hbw::allocator&lt;T&gt; &#8211; The C++ allocator compatible with the C++ standard library allocator concepts<br />
+<p> hbw::allocator&lt;T&gt; &#8211; The C++ allocator compatible with the C++ standard library allocator concepts<br/>
  Note: This is EXEPRIMENTAL API. The functionality and the header file itself can be changed (including non-backward compatible changes), or remove.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>
@@ -29,13 +29,13 @@ Link with - lmemkind
 <h2>DESCRIPTION</h2>
 <p> The hbw::allocator&lt;T&gt; is intended to be used with STL containers to allocate high bandwidth memory. Memory management is based on hbwmalloc (memkind library), enabling users to gain performance in multithreaded applications. Refer <a href="/docs/linux/man/3-hbwmalloc/">hbwmalloc</a>(3) and <a href="/docs/linux/man/3-memkind/">memkind</a>(3) man page for more details. </p>
 <p> All public member types and functions corresponds to standard library allocator concepts and definitions. The current implementation supports C++03 standard. </p>
-<p> Template arguments:<br />
- T is an object type aliased by value_type.<br />
+<p> Template arguments:<br/>
+ T is an object type aliased by value_type.<br/>
  U is an object type. </p>
-<p> Note:<br />
- hbw::allocator&lt;T&gt;::pointer hbw::allocator&lt;T&gt;::allocate(hbw::allocator&lt;T&gt;::size_type n, const void * = 0) allocates high bandwidth memory using <i>hbw_malloc().</i> Throw <i>std::bad_alloc</i> when:<br />
- <i>n</i> = 0,<br />
- <i>n</i> &gt; max_size()<i>,</i><br />
+<p> Note:<br/>
+ hbw::allocator&lt;T&gt;::pointer hbw::allocator&lt;T&gt;::allocate(hbw::allocator&lt;T&gt;::size_type n, const void * = 0) allocates high bandwidth memory using <i>hbw_malloc().</i> Throw <i>std::bad_alloc</i> when:<br/>
+ <i>n</i> = 0,<br/>
+ <i>n</i> &gt; max_size()<i>,</i><br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>or there is not enough memory to satisfy the request.</p>
 <p> void hbw::allocator&lt;T&gt;::deallocate(hbw::allocator&lt;T&gt;::pointer p, hbw::allocator&lt;T&gt;::size_type n) deallocates memory associated with pointer returned by <i>allocate()</i> using <i>hbw_free().</i> </p>
 <p> To find out more about <i>hbw_malloc()</i> and <i>hbw_free()</i> read <a href="/docs/linux/man/3-hbwmalloc/">hbwmalloc</a>(3) man page. </p>

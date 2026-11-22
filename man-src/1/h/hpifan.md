@@ -14,7 +14,7 @@ description: "hpifan – An openhpi sample application that shows \"Fan Control\
 hpifan[-D nn][-N host[:port]][-C&lt;cfgfile&gt;][-h][-s auto | nn][-X] hpifan[--domain = nn][--host = host[:port]][--cfgfile = file][--help][--speed = auto | nn][--debug]
 </code></pre>
 <h2>DESCRIPTION</h2>
-<p> hpifan walks the <font SIZE="-1">RPT </font>(Resource Present Table) for resouces that have &#8220;Fan Control&#8221; management instruments (<font SIZE="-1">SAHPI_CTRL_FAN_SPEED</font>). </p>
+<p> hpifan walks the RPT (Resource Present Table) for resouces that have &#8220;Fan Control&#8221; management instruments (SAHPI_CTRL_FAN_SPEED). </p>
 <p> If no domain or host is selected, hpifan uses the default domain as specified in the openhpiclient.conf file.</p>
 <h2>OPTIONS</h2>
 <h3>Help Options:</h3>
@@ -24,13 +24,13 @@ hpifan[-D nn][-N host[:port]][-C&lt;cfgfile&gt;][-h][-s auto | nn][-X] hpifan[--
 <h3>Application Options:</h3>
 <dl>
 <dt><code>-s</code>, <code>&#8211;speed</code>=<i>auto|nn</i></dt>
-<dd> Set fan speed for <font SIZE="-1">ALL</font> fans in domain speed is a number or &#8220;auto&#8221; for setting fan in auto mode</dd>
+<dd> Set fan speed for ALL fans in domain speed is a number or &#8220;auto&#8221; for setting fan in auto mode</dd>
 <dt><code>-D</code> <i>nn</i>, <code>&#8211;domain</code>=<i>nn</i></dt>
 <dd> Select domain id <i>nn</i></dd>
 <dt><code>-X</code>, <code>&#8211;debug</code></dt>
 <dd> Display debug messages</dd>
 <dt><code>-N</code> <i>&quot;host[:port]&quot;</i>, <code>&#8211;host</code>=<i>&quot;host[:port]&quot;</i></dt>
-<dd> Open session to the domain served by the daemon at the specified <font SIZE="-1">URL </font>(host:port). This option overrides the <font SIZE="-1">OPENHPI_DAEMON_HOST</font> and <font SIZE="-1">OPENHPI_DAEMON_PORT</font> environment variables. If host contains &#8216;:&#8217; (for example IPv6 address) then enclose it in square brackets. For example: <i>&#8220;[::1]&#8221;</i> or <i>&#8220;[::1]:4743&#8221;</i>.</dd>
+<dd> Open session to the domain served by the daemon at the specified URL (host:port). This option overrides the OPENHPI_DAEMON_HOST and OPENHPI_DAEMON_PORT environment variables. If host contains &#8216;:&#8217; (for example IPv6 address) then enclose it in square brackets. For example: <i>&#8220;[::1]&#8221;</i> or <i>&#8220;[::1]:4743&#8221;</i>.</dd>
 <dt><code>-C</code> <i>&quot;file&quot;</i>, <code>&#8211;cfgfile</code>=<i>&quot;file&quot;</i></dt>
 <dd> Use passed file as client configuration file. This option overrides the OPENHPICLIENT_CONf environment variable.</dd></dl>
 <h2>SEE ALSO</h2>

@@ -10,7 +10,7 @@ description: "zsytrs.f –"
 <p>zsytrs.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zsytrs</code> (UPLO, N, NRHS, A, LDA, IPIV, B, LDB, INFO)<br />
+<p>subroutine <code>zsytrs</code> (UPLO, N, NRHS, A, LDA, IPIV, B, LDB, INFO)<br/>
  <i></i><code>ZSYTRS</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zsytrs (characterUPLO, integerN, integerNRHS, complex*16, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, complex*16, dimension( ldb, * )B, integerLDB, integerINFO)</h3>

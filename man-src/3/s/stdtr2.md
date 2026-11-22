@@ -71,7 +71,7 @@ _Traits &gt; &amp; operator&lt;&lt; (std::basic_ostream&lt; _CharT, _Traits &gt;
 <p>Global bitwise operations on bitsets. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__x</i> A bitset.<br />
+<dd><i>__x</i> A bitset.<br/>
  <i>__y</i> A bitset of the same size as <i>__x</i>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -82,7 +82,7 @@ _Traits &gt; &amp; operator&lt;&lt; (std::basic_ostream&lt; _CharT, _Traits &gt;
 <p>Global bitwise operations on bitsets. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__x</i> A bitset.<br />
+<dd><i>__x</i> A bitset.<br/>
  <i>__y</i> A bitset of the same size as <i>__x</i>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -116,7 +116,7 @@ _Traits &gt; &amp; operator&lt;&lt; (std::basic_ostream&lt; _CharT, _Traits &gt;
 <p>Global bitwise operations on bitsets. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__x</i> A bitset.<br />
+<dd><i>__x</i> A bitset.<br/>
  <i>__y</i> A bitset of the same size as <i>__x</i>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -127,7 +127,7 @@ _Traits &gt; &amp; operator&lt;&lt; (std::basic_ostream&lt; _CharT, _Traits &gt;
 <p>Global bitwise operations on bitsets. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__x</i> A bitset.<br />
+<dd><i>__x</i> A bitset.<br/>
  <i>__y</i> A bitset of the same size as <i>__x</i>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

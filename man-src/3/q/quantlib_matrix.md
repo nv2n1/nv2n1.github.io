@@ -26,12 +26,12 @@ description: "QuantLib::Matrix – Matrix used in linear algebra."
 <p> typedef boost::reverse_iterator&lt; <code>const_column_iterator</code> &gt; <code>const_reverse_column_iterator</code> </p>
 <h3>Public Member Functions</h3>
 <p><code>Constructors, destructor, and assignment</code> </p>
-<p> <code>Matrix</code> ()<br />
- <i>creates a null matrix </i><br />
- <code>Matrix</code> (Size rows, Size columns)<br />
- <i>creates a matrix with the given dimensions </i><br />
- <code>Matrix</code> (Size rows, Size columns, Real value)<br />
- <i>creates the matrix and fills it with </i>value<br />
+<p> <code>Matrix</code> ()<br/>
+ <i>creates a null matrix </i><br/>
+ <code>Matrix</code> (Size rows, Size columns)<br/>
+ <i>creates a matrix with the given dimensions </i><br/>
+ <code>Matrix</code> (Size rows, Size columns, Real value)<br/>
+ <i>creates the matrix and fills it with </i>value<br/>
  <code>Matrix</code> (const <code>Matrix</code> &amp;) </p>
 <p> <code>Matrix</code> (const <code>Disposable</code>&lt; <code>Matrix</code> &gt; &amp;) </p>
 <p> <code>Matrix</code> &amp; <code>operator=</code> (const <code>Matrix</code> &amp;) </p>
@@ -79,7 +79,7 @@ description: "QuantLib::Matrix – Matrix used in linear algebra."
 <p> <code>Utilities</code> </p>
 <p> void <code>swap</code> (<code>Matrix</code> &amp;) </p>
 <h3>Related Functions</h3>
-<p>(Note that these are not member functions.)<br />
+<p>(Note that these are not member functions.)<br/>
  const <code>Disposable</code>&lt; <code>Matrix</code> &gt; <code>operator+</code> (const <code>Matrix</code> &amp;, const <code>Matrix</code> &amp;) </p>
 <p> const <code>Disposable</code>&lt; <code>Matrix</code> &gt; <code>operator-</code> (const <code>Matrix</code> &amp;, const <code>Matrix</code> &amp;) </p>
 <p> const <code>Disposable</code>&lt; <code>Matrix</code> &gt; <code>operator*</code> (const <code>Matrix</code> &amp;, Real) </p>
@@ -96,9 +96,9 @@ description: "QuantLib::Matrix – Matrix used in linear algebra."
 <p> <code>Disposable</code>&lt; <code>Matrix</code> &gt; <code>inverse</code> (const <code>Matrix</code> &amp;m) </p>
 <p> Real <code>determinant</code> (const <code>Matrix</code> &amp;m) </p>
 <p> const <code>Disposable</code>&lt; <code>Matrix</code> &gt; <code>CholeskyDecomposition</code> (const <code>Matrix</code> &amp;m, bool flexible=false) </p>
-<p> const <code>Disposable</code>&lt; <code>Matrix</code> &gt; <code>pseudoSqrt</code> (const <code>Matrix</code> &amp;, SalvagingAlgorithm::Type=SalvagingAlgorithm::None)<br />
- <i>Returns the pseudo square root of a real symmetric matrix. </i><br />
- const <code>Disposable</code>&lt; <code>Matrix</code> &gt; <code>rankReducedSqrt</code> (const <code>Matrix</code> &amp;, Size maxRank, Real componentRetainedPercentage, SalvagingAlgorithm::Type)<br />
+<p> const <code>Disposable</code>&lt; <code>Matrix</code> &gt; <code>pseudoSqrt</code> (const <code>Matrix</code> &amp;, SalvagingAlgorithm::Type=SalvagingAlgorithm::None)<br/>
+ <i>Returns the pseudo square root of a real symmetric matrix. </i><br/>
+ const <code>Disposable</code>&lt; <code>Matrix</code> &gt; <code>rankReducedSqrt</code> (const <code>Matrix</code> &amp;, Size maxRank, Real componentRetainedPercentage, SalvagingAlgorithm::Type)<br/>
  <i>Returns the rank-reduced pseudo square root of a real symmetric matrix. </i></p>
 <h2>Detailed Description</h2>
 <p>Matrix used in linear algebra. </p>

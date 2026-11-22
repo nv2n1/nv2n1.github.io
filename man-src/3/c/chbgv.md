@@ -11,7 +11,7 @@ description: "chbgv.f –"
 <p> chbgv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>chbgv</code> (JOBZ, UPLO, N, KA, KB, AB, LDAB, BB, LDBB, W, Z, LDZ, WORK, RWORK, INFO)<br />
+<p> subroutine <code>chbgv</code> (JOBZ, UPLO, N, KA, KB, AB, LDAB, BB, LDBB, W, Z, LDZ, WORK, RWORK, INFO)<br/>
  <i></i><code>CHBGST</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine chbgv (characterJOBZ, characterUPLO, integerN, integerKA, integerKB, complex, dimension( ldab, * )AB, integerLDAB, complex, dimension( ldbb, * )BB, integerLDBB, real, dimension( * )W, complex, dimension( ldz, * )Z, integerLDZ, complex, dimension( * )WORK, real, dimension( * )RWORK, integerINFO)</h3>
@@ -76,14 +76,14 @@ description: "chbgv.f –"
           The leading dimension of the array AB.  LDAB &gt;= KA+1.
 </pre>
 <p> <i>BB</i> </p>
-<p>          BB is COMPLEX array, dimension (LDBB, N)<br />
-          On entry, the upper or lower triangle of the Hermitian band<br />
-          matrix B, stored in the first kb+1 rows of the array.  The<br />
-          j-th column of B is stored in the j-th column of the array BB<br />
-          as follows:<br />
-          if UPLO = &#8216;U&#8217;, BB(kb+1+i-j,j) = B(i,j) for max(1,j-kb)&lt;=i&lt;=j;<br />
-          if UPLO = &#8216;L&#8217;, BB(1+i-j,j)    = B(i,j) for j&lt;=i&lt;=min(n,j+kb).<br />
-          On exit, the factor S from the split Cholesky factorization<br />
+<p>          BB is COMPLEX array, dimension (LDBB, N)<br/>
+          On entry, the upper or lower triangle of the Hermitian band<br/>
+          matrix B, stored in the first kb+1 rows of the array.  The<br/>
+          j-th column of B is stored in the j-th column of the array BB<br/>
+          as follows:<br/>
+          if UPLO = &#8216;U&#8217;, BB(kb+1+i-j,j) = B(i,j) for max(1,j-kb)&lt;=i&lt;=j;<br/>
+          if UPLO = &#8216;L&#8217;, BB(1+i-j,j)    = B(i,j) for j&lt;=i&lt;=min(n,j+kb).<br/>
+          On exit, the factor S from the split Cholesky factorization<br/>
           B = S**H*S, as returned by CPBSTF.</p>
 <p> <i>LDBB</i> </p>
 <pre>

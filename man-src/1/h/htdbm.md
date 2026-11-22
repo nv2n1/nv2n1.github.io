@@ -11,28 +11,28 @@ description: "htdbm – Manipulate DBM password databases"
 <p> htdbm &#8211; Manipulate DBM password databases</p>
 <h2>SYNOPSIS</h2>
 <p>&nbsp; </p>
-<p> <code>htdbm</code> [ &#8211;<code>T</code><i>DBTYPE</i> ] [ &#8211;<code>i</code> ] [ &#8211;<code>c</code> ] [ &#8211;<code>m</code> | &#8211;<code>B</code> | &#8211;<code>d</code> | &#8211;<code>s</code> | &#8211;<code>p</code> ] [ &#8211;<code>C</code> <i>cost</i> ] [ &#8211;<code>t</code> ] [ &#8211;<code>v</code> ] <i>filename</i> <i>username</i><br />
+<p> <code>htdbm</code> [ &#8211;<code>T</code><i>DBTYPE</i> ] [ &#8211;<code>i</code> ] [ &#8211;<code>c</code> ] [ &#8211;<code>m</code> | &#8211;<code>B</code> | &#8211;<code>d</code> | &#8211;<code>s</code> | &#8211;<code>p</code> ] [ &#8211;<code>C</code> <i>cost</i> ] [ &#8211;<code>t</code> ] [ &#8211;<code>v</code> ] <i>filename</i> <i>username</i><br/>
 &nbsp; </p>
-<p> <code>htdbm</code> &#8211;<code>b</code> [ &#8211;<code>T</code><i>DBTYPE</i> ] [ &#8211;<code>c</code> ] [ &#8211;<code>m</code> | &#8211;<code>B</code> | &#8211;<code>d</code> | &#8211;<code>s</code> | &#8211;<code>p</code> ] [ &#8211;<code>C</code> <i>cost</i> ] [ &#8211;<code>t</code> ] [ &#8211;<code>v</code> ] <i>filename</i> <i>username</i> <i>password</i><br />
+<p> <code>htdbm</code> &#8211;<code>b</code> [ &#8211;<code>T</code><i>DBTYPE</i> ] [ &#8211;<code>c</code> ] [ &#8211;<code>m</code> | &#8211;<code>B</code> | &#8211;<code>d</code> | &#8211;<code>s</code> | &#8211;<code>p</code> ] [ &#8211;<code>C</code> <i>cost</i> ] [ &#8211;<code>t</code> ] [ &#8211;<code>v</code> ] <i>filename</i> <i>username</i> <i>password</i><br/>
 &nbsp; </p>
-<p> <code>htdbm</code> &#8211;<code>n</code> [ &#8211;<code>i</code> ] [ &#8211;<code>c</code> ] [ &#8211;<code>m</code> | &#8211;<code>B</code> | &#8211;<code>d</code> | &#8211;<code>s</code> | &#8211;<code>p</code> ] [ &#8211;<code>C</code> <i>cost</i> ] [ &#8211;<code>t</code> ] [ &#8211;<code>v</code> ] <i>username</i><br />
+<p> <code>htdbm</code> &#8211;<code>n</code> [ &#8211;<code>i</code> ] [ &#8211;<code>c</code> ] [ &#8211;<code>m</code> | &#8211;<code>B</code> | &#8211;<code>d</code> | &#8211;<code>s</code> | &#8211;<code>p</code> ] [ &#8211;<code>C</code> <i>cost</i> ] [ &#8211;<code>t</code> ] [ &#8211;<code>v</code> ] <i>username</i><br/>
 &nbsp; </p>
-<p> <code>htdbm</code> &#8211;<code>nb</code> [ &#8211;<code>c</code> ] [ &#8211;<code>m</code> | &#8211;<code>B</code> | &#8211;<code>d</code> | &#8211;<code>s</code> | &#8211;<code>p</code> ] [ &#8211;<code>C</code> <i>cost</i> ] [ &#8211;<code>t</code> ] [ &#8211;<code>v</code> ] <i>username</i> <i>password</i><br />
+<p> <code>htdbm</code> &#8211;<code>nb</code> [ &#8211;<code>c</code> ] [ &#8211;<code>m</code> | &#8211;<code>B</code> | &#8211;<code>d</code> | &#8211;<code>s</code> | &#8211;<code>p</code> ] [ &#8211;<code>C</code> <i>cost</i> ] [ &#8211;<code>t</code> ] [ &#8211;<code>v</code> ] <i>username</i> <i>password</i><br/>
 &nbsp; </p>
-<p> <code>htdbm</code> &#8211;<code>v</code> [ &#8211;<code>T</code><i>DBTYPE</i> ] [ &#8211;<code>i</code> ] [ &#8211;<code>c</code> ] [ &#8211;<code>m</code> | &#8211;<code>B</code> | &#8211;<code>d</code> | &#8211;<code>s</code> | &#8211;<code>p</code> ] [ &#8211;<code>C</code> <i>cost</i> ] [ &#8211;<code>t</code> ] [ &#8211;<code>v</code> ] <i>filename</i> <i>username</i><br />
+<p> <code>htdbm</code> &#8211;<code>v</code> [ &#8211;<code>T</code><i>DBTYPE</i> ] [ &#8211;<code>i</code> ] [ &#8211;<code>c</code> ] [ &#8211;<code>m</code> | &#8211;<code>B</code> | &#8211;<code>d</code> | &#8211;<code>s</code> | &#8211;<code>p</code> ] [ &#8211;<code>C</code> <i>cost</i> ] [ &#8211;<code>t</code> ] [ &#8211;<code>v</code> ] <i>filename</i> <i>username</i><br/>
 &nbsp; </p>
-<p> <code>htdbm</code> &#8211;<code>vb</code> [ &#8211;<code>T</code><i>DBTYPE</i> ] [ &#8211;<code>c</code> ] [ &#8211;<code>m</code> | &#8211;<code>B</code> | &#8211;<code>d</code> | &#8211;<code>s</code> | &#8211;<code>p</code> ] [ &#8211;<code>C</code> <i>cost</i> ] [ &#8211;<code>t</code> ] [ &#8211;<code>v</code> ] <i>filename</i> <i>username</i> <i>password</i><br />
+<p> <code>htdbm</code> &#8211;<code>vb</code> [ &#8211;<code>T</code><i>DBTYPE</i> ] [ &#8211;<code>c</code> ] [ &#8211;<code>m</code> | &#8211;<code>B</code> | &#8211;<code>d</code> | &#8211;<code>s</code> | &#8211;<code>p</code> ] [ &#8211;<code>C</code> <i>cost</i> ] [ &#8211;<code>t</code> ] [ &#8211;<code>v</code> ] <i>filename</i> <i>username</i> <i>password</i><br/>
 &nbsp; </p>
-<p> <code>htdbm</code> &#8211;<code>x</code> [ &#8211;<code>T</code><i>DBTYPE</i> ] <i>filename</i> <i>username</i><br />
+<p> <code>htdbm</code> &#8211;<code>x</code> [ &#8211;<code>T</code><i>DBTYPE</i> ] <i>filename</i> <i>username</i><br/>
 &nbsp; </p>
-<p> <code>htdbm</code> &#8211;<code>l</code> [ &#8211;<code>T</code><i>DBTYPE</i> ]<br />
+<p> <code>htdbm</code> &#8211;<code>l</code> [ &#8211;<code>T</code><i>DBTYPE</i> ]<br/>
 &nbsp; </p>
 <h2>SUMMARY</h2>
 <p>&nbsp; </p>
-<p> <code>htdbm</code> is used to manipulate the DBM format files used to store usernames and password for basic authentication of HTTP users via mod_authn_dbm. See the dbmmanage documentation for more information about these DBM files.<br />
+<p> <code>htdbm</code> is used to manipulate the DBM format files used to store usernames and password for basic authentication of HTTP users via mod_authn_dbm. See the dbmmanage documentation for more information about these DBM files.<br/>
 &nbsp; </p>
 <h2>OPTIONS</h2>
-<p>&nbsp;<br />
+<p>&nbsp;<br/>
 &nbsp;</p>
 <dl>
 <dt><code>-b</code></dt>
@@ -70,17 +70,17 @@ description: "htdbm – Manipulate DBM password databases"
 <dt><i>password</i></dt>
 <dd> The plaintext password to be encrypted and stored in the DBM file. Used only with the <code>-b</code> flag.</dd>
 <dt><code>-T</code><i>DBTYPE</i></dt>
-<dd> Type of DBM file (SDBM, GDBM, DB, or &quot;default&quot;).<br />
+<dd> Type of DBM file (SDBM, GDBM, DB, or &quot;default&quot;).<br/>
 &nbsp;</dd></dl>
 <h2>BUGS</h2>
 <p>&nbsp; </p>
-<p> One should be aware that there are a number of different DBM file formats in existence, and with all likelihood, libraries for more than one format may exist on your system. The three primary examples are SDBM, NDBM, GNU GDBM, and Berkeley/Sleepycat DB 2/3/4. Unfortunately, all these libraries use different file formats, and you must make sure that the file format used by <i>filename</i> is the same format that <code>htdbm</code> expects to see. <code>htdbm</code> currently has no way of determining what type of DBM file it is looking at. If used against the wrong format, will simply return nothing, or may create a different DBM file with a different name, or at worst, it may corrupt the DBM file if you were attempting to write to it.<br />
+<p> One should be aware that there are a number of different DBM file formats in existence, and with all likelihood, libraries for more than one format may exist on your system. The three primary examples are SDBM, NDBM, GNU GDBM, and Berkeley/Sleepycat DB 2/3/4. Unfortunately, all these libraries use different file formats, and you must make sure that the file format used by <i>filename</i> is the same format that <code>htdbm</code> expects to see. <code>htdbm</code> currently has no way of determining what type of DBM file it is looking at. If used against the wrong format, will simply return nothing, or may create a different DBM file with a different name, or at worst, it may corrupt the DBM file if you were attempting to write to it.<br/>
 &nbsp; </p>
-<p> One can usually use the <code>file</code> program supplied with most Unix systems to see what format a DBM file is in.<br />
+<p> One can usually use the <code>file</code> program supplied with most Unix systems to see what format a DBM file is in.<br/>
 &nbsp;</p>
 <h2>EXIT STATUS</h2>
 <p>&nbsp; </p>
-<p> <code>htdbm</code> returns a zero status (&quot;true&quot;) if the username and password have been successfully added or updated in the DBM File. <code>htdbm</code> returns <code>1</code> if it encounters some problem accessing files, <code>2</code> if there was a syntax problem with the command line, <code>3</code> if the password was entered interactively and the verification entry didn&#8217;t match, <code>4</code> if its operation was interrupted, <code>5</code> if a value is too long (username, filename, password, or final computed record), <code>6</code> if the username contains illegal characters (see the Restrictions section), and <code>7</code> if the file is not a valid DBM password file.<br />
+<p> <code>htdbm</code> returns a zero status (&quot;true&quot;) if the username and password have been successfully added or updated in the DBM File. <code>htdbm</code> returns <code>1</code> if it encounters some problem accessing files, <code>2</code> if there was a syntax problem with the command line, <code>3</code> if the password was entered interactively and the verification entry didn&#8217;t match, <code>4</code> if its operation was interrupted, <code>5</code> if a value is too long (username, filename, password, or final computed record), <code>6</code> if the username contains illegal characters (see the Restrictions section), and <code>7</code> if the file is not a valid DBM password file.<br/>
 &nbsp;</p>
 <h2>EXAMPLES</h2>
 <p>&nbsp; </p>
@@ -88,37 +88,37 @@ description: "htdbm – Manipulate DBM password databases"
       htdbm /usr/local/etc/apache/.htdbm-users jsmith
 </pre>
 <p>&nbsp; </p>
-<p> Adds or modifies the password for user <code>jsmith</code>. The user is prompted for the password. If executed on a Windows system, the password will be encrypted using the modified Apache MD5 algorithm; otherwise, the system&#8217;s <code>crypt()</code> routine will be used. If the file does not exist, <code>htdbm</code> will do nothing except return an error.<br />
+<p> Adds or modifies the password for user <code>jsmith</code>. The user is prompted for the password. If executed on a Windows system, the password will be encrypted using the modified Apache MD5 algorithm; otherwise, the system&#8217;s <code>crypt()</code> routine will be used. If the file does not exist, <code>htdbm</code> will do nothing except return an error.<br/>
 &nbsp; </p>
 <pre>
       htdbm -c /home/doe/public_html/.htdbm jane
 </pre>
 <p>&nbsp; </p>
-<p> Creates a new file and stores a record in it for user <code>jane</code>. The user is prompted for the password. If the file exists and cannot be read, or cannot be written, it is not altered and <code>htdbm</code> will display a message and return an error status.<br />
+<p> Creates a new file and stores a record in it for user <code>jane</code>. The user is prompted for the password. If the file exists and cannot be read, or cannot be written, it is not altered and <code>htdbm</code> will display a message and return an error status.<br/>
 &nbsp; </p>
 <pre>
       htdbm -mb /usr/web/.htdbm-all jones Pwd4Steve
 </pre>
 <p>&nbsp; </p>
-<p> Encrypts the password from the command line (<code>Pwd4Steve</code>) using the MD5 algorithm, and stores it in the specified file.<br />
+<p> Encrypts the password from the command line (<code>Pwd4Steve</code>) using the MD5 algorithm, and stores it in the specified file.<br/>
 &nbsp;</p>
 <h2>SECURITY CONSIDERATIONS</h2>
 <p>&nbsp; </p>
-<p> Web password files such as those managed by <code>htdbm</code> should <i>not</i> be within the Web server&#8217;s URI space &#8212; that is, they should not be fetchable with a browser.<br />
+<p> Web password files such as those managed by <code>htdbm</code> should <i>not</i> be within the Web server&#8217;s URI space &#8212; that is, they should not be fetchable with a browser.<br/>
 &nbsp; </p>
-<p> The use of the <code>-b</code> option is discouraged, since when it is used the unencrypted password appears on the command line.<br />
+<p> The use of the <code>-b</code> option is discouraged, since when it is used the unencrypted password appears on the command line.<br/>
 &nbsp; </p>
-<p> When using the <code>crypt()</code> algorithm, note that only the first 8 characters of the password are used to form the password. If the supplied password is longer, the extra characters will be silently discarded.<br />
+<p> When using the <code>crypt()</code> algorithm, note that only the first 8 characters of the password are used to form the password. If the supplied password is longer, the extra characters will be silently discarded.<br/>
 &nbsp; </p>
-<p> The SHA encryption format does not use salting: for a given password, there is only one encrypted representation. The <code>crypt()</code> and MD5 formats permute the representation by prepending a random salt string, to make dictionary attacks against the passwords more difficult.<br />
+<p> The SHA encryption format does not use salting: for a given password, there is only one encrypted representation. The <code>crypt()</code> and MD5 formats permute the representation by prepending a random salt string, to make dictionary attacks against the passwords more difficult.<br/>
 &nbsp; </p>
-<p> The SHA and <code>crypt()</code> formats are insecure by today&#8217;s standards.<br />
+<p> The SHA and <code>crypt()</code> formats are insecure by today&#8217;s standards.<br/>
 &nbsp;</p>
 <h2>RESTRICTIONS</h2>
 <p>&nbsp; </p>
-<p> On the Windows platform, passwords encrypted with <code>htdbm</code> are limited to no more than <code>255</code> characters in length. Longer passwords will be truncated to 255 characters.<br />
+<p> On the Windows platform, passwords encrypted with <code>htdbm</code> are limited to no more than <code>255</code> characters in length. Longer passwords will be truncated to 255 characters.<br/>
 &nbsp; </p>
-<p> The MD5 algorithm used by <code>htdbm</code> is specific to the Apache software; passwords encrypted using it will not be usable with other Web servers.<br />
+<p> The MD5 algorithm used by <code>htdbm</code> is specific to the Apache software; passwords encrypted using it will not be usable with other Web servers.<br/>
 &nbsp; </p>
-<p> Usernames are limited to <code>255</code> bytes and may not include the character <code>:</code>.<br />
+<p> Usernames are limited to <code>255</code> bytes and may not include the character <code>:</code>.<br/>
 &nbsp; </p>

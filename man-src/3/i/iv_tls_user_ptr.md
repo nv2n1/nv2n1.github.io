@@ -18,7 +18,7 @@ struct iv_tls_user {
     void (*deinit_thread)(void *st);
 };
 </code></pre>
-<p> <code>void iv_tls_user_register(struct iv_tls_user *</code><i>tu</i><code>);</code><br />
+<p> <code>void iv_tls_user_register(struct iv_tls_user *</code><i>tu</i><code>);</code><br/>
  <code>void *iv_tls_user_ptr(struct iv_tls_user *</code><i>tu</i><code>);</code> </p>
 <h2>DESCRIPTION</h2>
 <p> The <code>iv_tls</code> interface provides thread-local storage handling to <code>ivykis</code> modules. </p>

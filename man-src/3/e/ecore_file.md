@@ -10,73 +10,73 @@ description: "Ecore_File.h – Files utility functions."
 <p>Ecore_File.h &#8211; Files utility functions. </p>
 <h2>Synopsis</h2>
 <h3>Functions</h3>
-<p>EAPI int <code>ecore_file_init</code> (void)<br />
- <i>Initialize Ecore_File and the services it will use. </i><br />
- EAPI int <code>ecore_file_shutdown</code> (void)<br />
- <i>Shutdown the Ecore_File. </i><br />
- EAPI long long <code>ecore_file_mod_time</code> (const char *file)<br />
- <i>Get the time of the last modification to the give file. </i><br />
- EAPI long long <code>ecore_file_size</code> (const char *file)<br />
- <i>Get the size of the given file. </i><br />
- EAPI int <code>ecore_file_exists</code> (const char *file)<br />
- <i>Check if file exists. </i><br />
- EAPI int <code>ecore_file_is_dir</code> (const char *file)<br />
- <i>Check if file is a directory. </i><br />
- EAPI int <code>ecore_file_mkdir</code> (const char *dir)<br />
- <i>Create a new directory. </i><br />
- EAPI int <code>ecore_file_rmdir</code> (const char *dir)<br />
- <i>Delete the given dir. </i><br />
- EAPI int <code>ecore_file_recursive_rm</code> (const char *dir)<br />
- <i>Delete a directory and all its contents. </i><br />
- EAPI int <code>ecore_file_mkpath</code> (const char *path)<br />
- <i>Create a complete path. </i><br />
- EAPI int <code>ecore_file_cp</code> (const char *src, const char *dst)<br />
- <i>Copy a file. </i><br />
- EAPI int <code>ecore_file_mv</code> (const char *src, const char *dst)<br />
- <i>Move a file. </i><br />
- EAPI int <code>ecore_file_symlink</code> (const char *src, const char *dest)<br />
- <i>Create a symbolic link. </i><br />
- EAPI char * <code>ecore_file_realpath</code> (const char *file)<br />
- <i>Get the canonicalized absolute pathname. </i><br />
- EAPI int <code>ecore_file_unlink</code> (const char *file)<br />
- <i>Delete the given file. </i><br />
- EAPI const char * <code>ecore_file_file_get</code> (const char *path)<br />
- <i>Get the filename from a give path. </i><br />
- EAPI char * <code>ecore_file_dir_get</code> (const char *path)<br />
- <i>Get the directory where file reside. </i><br />
- EAPI int <code>ecore_file_can_read</code> (const char *file)<br />
- <i>Check if file can be read. </i><br />
- EAPI int <code>ecore_file_can_write</code> (const char *file)<br />
- <i>Check if file can be written. </i><br />
- EAPI int <code>ecore_file_can_exec</code> (const char *file)<br />
- <i>Check if file can be executed. </i><br />
- EAPI char * <code>ecore_file_readlink</code> (const char *link)<br />
- <i>Get the path pointed by link. </i><br />
- EAPI Ecore_List * <code>ecore_file_ls</code> (const char *dir)<br />
- <i>Get the list of the files and directories in a given directory. </i><br />
- EAPI char * <code>ecore_file_app_exe_get</code> (const char *app)<br />
- <i>FIXME: To be documented. </i><br />
- EAPI char * <code>ecore_file_escape_name</code> (const char *filename)<br />
- <i>Add the escape sequence (&#8216;\&#8217;) to the given filename. </i><br />
- EAPI char * <code>ecore_file_strip_ext</code> (const char *file)<br />
- <i>Remove the extension from a given path. </i><br />
- EAPI int <code>ecore_file_dir_is_empty</code> (const char *dir)<br />
- <i>Check if the given directory is empty. </i><br />
- EAPI Ecore_File_Monitor * <code>ecore_file_monitor_add</code> (const char *path, void(*func)(void *data, Ecore_File_Monitor *em, Ecore_File_Event event, const char *path), void *data)<br />
- <i>Monitor a path using inotify or polling. </i><br />
- EAPI void <code>ecore_file_monitor_del</code> (Ecore_File_Monitor *ecore_file_monitor)<br />
- <i>Stop monitoring a path. </i><br />
- EAPI const char * <code>ecore_file_monitor_path_get</code> (Ecore_File_Monitor *ecore_file_monitor)<br />
- <i>Get the monitored path. </i><br />
- EAPI int <code>ecore_file_path_dir_exists</code> (const char *in_dir)<br />
- <i>Check if the given directory is in PATH. </i><br />
- EAPI int <code>ecore_file_app_installed</code> (const char *exe)<br />
- <i>Check if the given application is installed. </i><br />
- EAPI Ecore_List * <code>ecore_file_app_list</code> (void)<br />
- <i>Get a list of all the applications installed on the system. </i><br />
- EAPI int <code>ecore_file_download</code> (const char *url, const char *dst, void(*completion_cb)(void *data, const char *file, int status), int(*progress_cb)(void *data, const char *file, long int dltotal, long int dlnow, long int ultotal, long int ulnow), void *data)<br />
- <i>Download </i>url to the given dst.<br />
- EAPI int <code>ecore_file_download_protocol_available</code> (const char *protocol)<br />
+<p>EAPI int <code>ecore_file_init</code> (void)<br/>
+ <i>Initialize Ecore_File and the services it will use. </i><br/>
+ EAPI int <code>ecore_file_shutdown</code> (void)<br/>
+ <i>Shutdown the Ecore_File. </i><br/>
+ EAPI long long <code>ecore_file_mod_time</code> (const char *file)<br/>
+ <i>Get the time of the last modification to the give file. </i><br/>
+ EAPI long long <code>ecore_file_size</code> (const char *file)<br/>
+ <i>Get the size of the given file. </i><br/>
+ EAPI int <code>ecore_file_exists</code> (const char *file)<br/>
+ <i>Check if file exists. </i><br/>
+ EAPI int <code>ecore_file_is_dir</code> (const char *file)<br/>
+ <i>Check if file is a directory. </i><br/>
+ EAPI int <code>ecore_file_mkdir</code> (const char *dir)<br/>
+ <i>Create a new directory. </i><br/>
+ EAPI int <code>ecore_file_rmdir</code> (const char *dir)<br/>
+ <i>Delete the given dir. </i><br/>
+ EAPI int <code>ecore_file_recursive_rm</code> (const char *dir)<br/>
+ <i>Delete a directory and all its contents. </i><br/>
+ EAPI int <code>ecore_file_mkpath</code> (const char *path)<br/>
+ <i>Create a complete path. </i><br/>
+ EAPI int <code>ecore_file_cp</code> (const char *src, const char *dst)<br/>
+ <i>Copy a file. </i><br/>
+ EAPI int <code>ecore_file_mv</code> (const char *src, const char *dst)<br/>
+ <i>Move a file. </i><br/>
+ EAPI int <code>ecore_file_symlink</code> (const char *src, const char *dest)<br/>
+ <i>Create a symbolic link. </i><br/>
+ EAPI char * <code>ecore_file_realpath</code> (const char *file)<br/>
+ <i>Get the canonicalized absolute pathname. </i><br/>
+ EAPI int <code>ecore_file_unlink</code> (const char *file)<br/>
+ <i>Delete the given file. </i><br/>
+ EAPI const char * <code>ecore_file_file_get</code> (const char *path)<br/>
+ <i>Get the filename from a give path. </i><br/>
+ EAPI char * <code>ecore_file_dir_get</code> (const char *path)<br/>
+ <i>Get the directory where file reside. </i><br/>
+ EAPI int <code>ecore_file_can_read</code> (const char *file)<br/>
+ <i>Check if file can be read. </i><br/>
+ EAPI int <code>ecore_file_can_write</code> (const char *file)<br/>
+ <i>Check if file can be written. </i><br/>
+ EAPI int <code>ecore_file_can_exec</code> (const char *file)<br/>
+ <i>Check if file can be executed. </i><br/>
+ EAPI char * <code>ecore_file_readlink</code> (const char *link)<br/>
+ <i>Get the path pointed by link. </i><br/>
+ EAPI Ecore_List * <code>ecore_file_ls</code> (const char *dir)<br/>
+ <i>Get the list of the files and directories in a given directory. </i><br/>
+ EAPI char * <code>ecore_file_app_exe_get</code> (const char *app)<br/>
+ <i>FIXME: To be documented. </i><br/>
+ EAPI char * <code>ecore_file_escape_name</code> (const char *filename)<br/>
+ <i>Add the escape sequence (&#8216;\&#8217;) to the given filename. </i><br/>
+ EAPI char * <code>ecore_file_strip_ext</code> (const char *file)<br/>
+ <i>Remove the extension from a given path. </i><br/>
+ EAPI int <code>ecore_file_dir_is_empty</code> (const char *dir)<br/>
+ <i>Check if the given directory is empty. </i><br/>
+ EAPI Ecore_File_Monitor * <code>ecore_file_monitor_add</code> (const char *path, void(*func)(void *data, Ecore_File_Monitor *em, Ecore_File_Event event, const char *path), void *data)<br/>
+ <i>Monitor a path using inotify or polling. </i><br/>
+ EAPI void <code>ecore_file_monitor_del</code> (Ecore_File_Monitor *ecore_file_monitor)<br/>
+ <i>Stop monitoring a path. </i><br/>
+ EAPI const char * <code>ecore_file_monitor_path_get</code> (Ecore_File_Monitor *ecore_file_monitor)<br/>
+ <i>Get the monitored path. </i><br/>
+ EAPI int <code>ecore_file_path_dir_exists</code> (const char *in_dir)<br/>
+ <i>Check if the given directory is in PATH. </i><br/>
+ EAPI int <code>ecore_file_app_installed</code> (const char *exe)<br/>
+ <i>Check if the given application is installed. </i><br/>
+ EAPI Ecore_List * <code>ecore_file_app_list</code> (void)<br/>
+ <i>Get a list of all the applications installed on the system. </i><br/>
+ EAPI int <code>ecore_file_download</code> (const char *url, const char *dst, void(*completion_cb)(void *data, const char *file, int status), int(*progress_cb)(void *data, const char *file, long int dltotal, long int dlnow, long int ultotal, long int ulnow), void *data)<br/>
+ <i>Download </i>url to the given dst.<br/>
+ EAPI int <code>ecore_file_download_protocol_available</code> (const char *protocol)<br/>
  <i>Check if the given protocol is available. </i></p>
 <h2>Detailed Description</h2>
 <p>Files utility functions. </p>
@@ -127,7 +127,7 @@ description: "Ecore_File.h – Files utility functions."
 <p>Copy a file. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>src</i> The name of the source file<br />
+<dd><i>src</i> The name of the source file<br/>
  <i>dst</i> The name of the destination file</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -153,9 +153,9 @@ description: "Ecore_File.h – Files utility functions."
 <p>Download url to the given dst. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>url</i> The complete url to download<br />
- <i>dst</i> The local file to save the downloaded to<br />
- <i>completion_cb</i> A callback called on download complete<br />
+<dd><i>url</i> The complete url to download<br/>
+ <i>dst</i> The local file to save the downloaded to<br/>
+ <i>completion_cb</i> A callback called on download complete<br/>
  <i>progress_cb</i> A callback called during the download operation</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -254,8 +254,8 @@ description: "Ecore_File.h – Files utility functions."
 <p>Monitor a path using inotify or polling. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>path</i> The path to monitor<br />
- <i>func</i> The function to call on changes<br />
+<dd><i>path</i> The path to monitor<br/>
+ <i>func</i> The function to call on changes<br/>
  <i>data</i> The data passed to func</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -283,7 +283,7 @@ description: "Ecore_File.h – Files utility functions."
 <p>Move a file. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>src</i> The name of the source file<br />
+<dd><i>src</i> The name of the source file<br/>
  <i>dst</i> The name of the destination file</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -356,7 +356,7 @@ description: "Ecore_File.h – Files utility functions."
 <p>Create a symbolic link. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>src</i> The name of the file to link<br />
+<dd><i>src</i> The name of the file to link<br/>
  <i>dest</i> The name of link</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

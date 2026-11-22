@@ -28,8 +28,8 @@ description: "groff_trace – groff macro package trace.tmac"
 <p>Example:</p>
 <dl>
 <dd><i>sh#</i> echo &#8216;. &gt; .de child &gt; .. &gt; .de parent &gt; .child &gt; .. &gt; .parent &gt; &#8216; | groff -m trace &gt; /dev/null </dd>
-<p> *** .de child *** .de parent *** de trace enter: .parent<br />
-&nbsp;***&nbsp;de trace enter: .child<br />
+<p> *** .de child *** .de parent *** de trace enter: .parent<br/>
+&nbsp;***&nbsp;de trace enter: .child<br/>
 &nbsp;***&nbsp;trace exit: .child *** trace exit: .parent</dl>
 <p> This shows that macro calls can be nested. This powerful feature can help to tack down quite complex call stacks.</p>
 <h3>Activating with .mso</h3>

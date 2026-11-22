@@ -12,7 +12,7 @@ description: "QuantLib::Italy – Italian calendars."
 <p>#include &lt;ql/time/calendars/italy.hpp&gt; </p>
 <p> Inherits <code>QuantLib::Calendar</code>. </p>
 <h3>Public Types</h3>
-<p>enum <code>Market</code> { <code>Settlement</code>, <code>Exchange</code> }<br />
+<p>enum <code>Market</code> { <code>Settlement</code>, <code>Exchange</code> }<br/>
  <i>Italian calendars. </i></p>
 <h3>Public Member Functions</h3>
 <p><code>Italy</code> (<code>Market</code> market=<code>Settlement</code>) </p>

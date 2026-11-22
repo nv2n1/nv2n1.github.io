@@ -76,7 +76,7 @@ description: "sg_map – displays mapping between Linux sg and other SCSI device
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;dgilbert at interlog dot com&gt;.</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2000-2013 Douglas Gilbert<br />
+<p>Copyright &#169; 2000-2013 Douglas Gilbert<br/>
  This software is distributed under the GPL version 2. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-sg_map26/">sg_map26</a>(8)</code> , <code>scsi_info(8)</code> , <code>scsidev(8)</code> , <code>devfsd(8)</code> , <code><a href="/docs/linux/man/8-lsscsi/">lsscsi</a>(8)</code> , <code><a href="/docs/linux/man/7-udev/">udev</a>(7)</code> </p>

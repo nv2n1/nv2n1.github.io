@@ -12,7 +12,7 @@ description: "libmemcached – Introducing the C Client Library for memcached"
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached/memcached.h&gt; </p>
 <p> Compile and link with -lmemcached </p>
-<p> <center> &#8212;-<br />
+<p> <center> &#8212;-<br/>
  </center> </p>
 <p> libMemcached is an open source C/C++ client library and tools for the memcached server (<i><a rel="nofollow" href="http://memcached.org/">http://memcached.org/</a></i>). It has been designed to be light on memory usage, thread safe, and provide full access to server side methods. </p>
 <p> libMemcached was designed to provide the greatest number of options to use Memcached. Some of the features provided:</p>

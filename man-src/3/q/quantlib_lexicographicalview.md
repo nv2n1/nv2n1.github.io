@@ -11,16 +11,16 @@ description: "QuantLib::LexicographicalView – Lexicographical 2-D view of a co
 <h2>Synopsis</h2>
 <p>#include &lt;ql/math/lexicographicalview.hpp&gt; </p>
 <h3>Public Types</h3>
-<p>typedef RandomAccessIterator <code>x_iterator</code><br />
- <i>iterates over $ v_{ij} $ with $ j $ fixed. </i><br />
- typedef boost::reverse_iterator&lt; RandomAccessIterator &gt; <code>reverse_x_iterator</code><br />
- <i>iterates backwards over $ v_{ij} $ with $ j $ fixed. </i><br />
- typedef <code>step_iterator</code>&lt; RandomAccessIterator &gt; <code>y_iterator</code><br />
- <i>iterates over $ v_{ij} $ with $ i $ fixed. </i><br />
- typedef boost::reverse_iterator&lt; <code>y_iterator</code> &gt; <code>reverse_y_iterator</code><br />
+<p>typedef RandomAccessIterator <code>x_iterator</code><br/>
+ <i>iterates over $ v_{ij} $ with $ j $ fixed. </i><br/>
+ typedef boost::reverse_iterator&lt; RandomAccessIterator &gt; <code>reverse_x_iterator</code><br/>
+ <i>iterates backwards over $ v_{ij} $ with $ j $ fixed. </i><br/>
+ typedef <code>step_iterator</code>&lt; RandomAccessIterator &gt; <code>y_iterator</code><br/>
+ <i>iterates over $ v_{ij} $ with $ i $ fixed. </i><br/>
+ typedef boost::reverse_iterator&lt; <code>y_iterator</code> &gt; <code>reverse_y_iterator</code><br/>
  <i>iterates backwards over $ v_{ij} $ with $ i $ fixed. </i></p>
 <h3>Public Member Functions</h3>
-<p><code>LexicographicalView</code> (const RandomAccessIterator &amp;begin, const RandomAccessIterator &amp;end, Size xSize)<br />
+<p><code>LexicographicalView</code> (const RandomAccessIterator &amp;begin, const RandomAccessIterator &amp;end, Size xSize)<br/>
  <i>attaches the view with the given dimension to a sequence </i> </p>
 <p> <code>Element access</code> </p>
 <p> <code>y_iterator</code> <code>operator[]</code> (Size i) </p>
@@ -34,9 +34,9 @@ description: "QuantLib::LexicographicalView – Lexicographical 2-D view of a co
 <p> <code>reverse_y_iterator</code> <code>rybegin</code> (Size i) </p>
 <p> <code>reverse_y_iterator</code> <code>ryend</code> (Size i) </p>
 <p> <code>Inspectors</code> </p>
-<p> Size <code>xSize</code> () const<br />
- <i>dimension of the array along x </i><br />
- Size <code>ySize</code> () const<br />
+<p> Size <code>xSize</code> () const<br/>
+ <i>dimension of the array along x </i><br/>
+ Size <code>ySize</code> () const<br/>
  <i>dimension of the array along y </i></p>
 <h2>Detailed Description</h2>
 <h3>template&lt;class RandomAccessIterator&gt; class QuantLib::LexicographicalView&lt; RandomAccessIterator &gt;</h3>

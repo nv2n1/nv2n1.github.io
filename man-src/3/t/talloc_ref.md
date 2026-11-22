@@ -10,26 +10,26 @@ description: "The talloc reference function. –"
 <p>The talloc reference function. &#8211; </p>
 <p> This module contains the definitions around talloc references.</p>
 <h3>Modules</h3>
-<p><code>The talloc array functions</code><br />
+<p><code>The talloc array functions</code><br/>
  <i>Talloc contains some handy helpers for handling Arrays conveniently. </i></p>
 <h3>Functions</h3>
-<p>int <code>talloc_increase_ref_count</code> (const void *ptr)<br />
- <i>Increase the reference count of a talloc chunk. </i><br />
- size_t <code>talloc_reference_count</code> (const void *ptr)<br />
- <i>Get the number of references to a talloc chunk. </i><br />
- void * <code>talloc_reference</code> (const void *ctx, const void *ptr)<br />
- <i>Create an additional talloc parent to a pointer. </i><br />
- int <code>talloc_unlink</code> (const void *context, void *ptr)<br />
- <i>Remove a specific parent from a talloc chunk. </i><br />
- void * <code>talloc_autofree_context</code> (void)<br />
- <i>Provide a talloc context that is freed at program exit. </i><br />
- size_t <code>talloc_get_size</code> (const void *ctx)<br />
- <i>Get the size of a talloc chunk. </i><br />
- void <code>talloc_show_parents</code> (const void *context, FILE *file)<br />
- <i>Show the parentage of a context. </i><br />
- int <code>talloc_is_parent</code> (const void *context, const void *ptr)<br />
- <i>Check if a context is parent of a talloc chunk. </i><br />
- void * <code>talloc_reparent</code> (const void *old_parent, const void *new_parent, const void *ptr)<br />
+<p>int <code>talloc_increase_ref_count</code> (const void *ptr)<br/>
+ <i>Increase the reference count of a talloc chunk. </i><br/>
+ size_t <code>talloc_reference_count</code> (const void *ptr)<br/>
+ <i>Get the number of references to a talloc chunk. </i><br/>
+ void * <code>talloc_reference</code> (const void *ctx, const void *ptr)<br/>
+ <i>Create an additional talloc parent to a pointer. </i><br/>
+ int <code>talloc_unlink</code> (const void *context, void *ptr)<br/>
+ <i>Remove a specific parent from a talloc chunk. </i><br/>
+ void * <code>talloc_autofree_context</code> (void)<br/>
+ <i>Provide a talloc context that is freed at program exit. </i><br/>
+ size_t <code>talloc_get_size</code> (const void *ctx)<br/>
+ <i>Get the size of a talloc chunk. </i><br/>
+ void <code>talloc_show_parents</code> (const void *context, FILE *file)<br/>
+ <i>Show the parentage of a context. </i><br/>
+ int <code>talloc_is_parent</code> (const void *context, const void *ptr)<br/>
+ <i>Check if a context is parent of a talloc chunk. </i><br/>
+ void * <code>talloc_reparent</code> (const void *old_parent, const void *new_parent, const void *ptr)<br/>
  <i>Change the parent context of a talloc pointer. </i></p>
 <h2>Detailed Description</h2>
 <p>This module contains the definitions around talloc references.</p>
@@ -63,7 +63,7 @@ description: "The talloc reference function. –"
 <p>Check if a context is parent of a talloc chunk. This checks if context is referenced in the talloc hierarchy above ptr. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>context</i> The assumed talloc context.<br />
+<dd><i>context</i> The assumed talloc context.<br/>
  <i>ptr</i> The talloc chunk to check.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -80,7 +80,7 @@ description: "The talloc reference function. –"
 <p> For more control on which parent to remove, see <code>talloc_unlink()</code> </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>ctx</i> The additional parent.<br />
+<dd><i>ctx</i> The additional parent.<br/>
  <i>ptr</i> The pointer you want to create an additional parent for.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -112,8 +112,8 @@ description: "The talloc reference function. –"
 <p> The difference between <code>talloc_reparent()</code> and <code>talloc_steal()</code> is that <code>talloc_reparent()</code> can specify which parent you wish to change. This is useful when a pointer has multiple parents via references. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>old_parent</i><br />
- <i>new_parent</i><br />
+<dd><i>old_parent</i><br/>
+ <i>new_parent</i><br/>
  <i>ptr</i></dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -122,14 +122,14 @@ description: "The talloc reference function. –"
 <p>Show the parentage of a context. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>context</i> The talloc context to look at.<br />
+<dd><i>context</i> The talloc context to look at.<br/>
  <i>file</i> The output to use, a file, stdout or stderr.</dd></dl>
 <h3>int talloc_unlink (const void *context, void *ptr)</h3>
 <p>Remove a specific parent from a talloc chunk. The function removes a specific parent from ptr. The context passed must either be a context used in <code>talloc_reference()</code> with this pointer, or must be a direct parent of ptr. </p>
 <p> You can just use <code>talloc_free()</code> instead of <code>talloc_unlink()</code> if there is at maximum one parent. This behaviour has been changed since the release of version 2.0. Further informations in the description of &#8216;talloc_free&#8217;. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>context</i> The talloc parent to remove.<br />
+<dd><i>context</i> The talloc parent to remove.<br/>
  <i>ptr</i> The talloc ptr you want to remove the parent from.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

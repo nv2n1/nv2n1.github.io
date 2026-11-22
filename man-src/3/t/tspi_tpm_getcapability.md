@@ -7,7 +7,7 @@ url: "/docs/linux/man/3-tspi_tpm_getcapability/"
 description: "Tspi_TPM_GetCapability – get information on the capabilities of the TPM"
 ---
 
-<p>TCG Software Stack Developer&#8217;s Reference<br />
+<p>TCG Software Stack Developer&#8217;s Reference<br/>
  </center></p>
 <h2>Name</h2>
 <p>Tspi_TPM_GetCapability &#8211; get information on the capabilities of the TPM </p>
@@ -39,32 +39,32 @@ description: "Tspi_TPM_GetCapability – get information on the capabilities of 
 <p>The <i>prgbRespData</i> parameter receives a pointer to the actual data of the specified attribute. </p>
 <h2>Notes</h2>
 <p>The following Capability Areas and Sub-Capability Areas are supported by 1.1 TSS&#8217;s: </p>
-<p> <code>TSS_TPMCAP_ORD</code> &#8211; query whether an ordinal is supported by the TPM.<br />
+<p> <code>TSS_TPMCAP_ORD</code> &#8211; query whether an ordinal is supported by the TPM.<br/>
 &nbsp;<wbr>&nbsp;<wbr>subCaps: TPM_ORD_*&nbsp;<wbr>(see tcpa_literals.h) </p>
-<p> <code>TSS_TPMCAP_FLAG</code> &#8211; query for the volatile and non-volatile flags inside the TPM. (Must be owner authorized). In this case, the 2 UINT32 values will be returned concatenated together in prgbRespData.<br />
+<p> <code>TSS_TPMCAP_FLAG</code> &#8211; query for the volatile and non-volatile flags inside the TPM. (Must be owner authorized). In this case, the 2 UINT32 values will be returned concatenated together in prgbRespData.<br/>
 &nbsp;<wbr>&nbsp;<wbr>subCaps: ignored. </p>
-<p> <code>TSS_TPMCAP_ALG</code> &#8211; query whether an algorithm is supported by the TPM.<br />
-&nbsp;<wbr>&nbsp;<wbr>subCaps: TSS_ALG_RSA<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>TSS_ALG_DES<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>TSS_ALG_3DES<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>TSS_ALG_SHA<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>TSS_ALG_HMAC<br />
+<p> <code>TSS_TPMCAP_ALG</code> &#8211; query whether an algorithm is supported by the TPM.<br/>
+&nbsp;<wbr>&nbsp;<wbr>subCaps: TSS_ALG_RSA<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>TSS_ALG_DES<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>TSS_ALG_3DES<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>TSS_ALG_SHA<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>TSS_ALG_HMAC<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>TSS_ALG_AES </p>
-<p> <code>TSS_TPMCAP_PROPERTY</code> &#8211; query a property of the TPM.<br />
-&nbsp;<wbr>&nbsp;<wbr>subCaps: TSS_TPMCAP_PROP_PCR<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>TSS_TPMCAP_PROP_DIR<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>TSS_TPMCAP_PROP_MANUFACTURER<br />
+<p> <code>TSS_TPMCAP_PROPERTY</code> &#8211; query a property of the TPM.<br/>
+&nbsp;<wbr>&nbsp;<wbr>subCaps: TSS_TPMCAP_PROP_PCR<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>TSS_TPMCAP_PROP_DIR<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>TSS_TPMCAP_PROP_MANUFACTURER<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>TSS_TPMCAP_PROP_SLOTS </p>
-<p> <code>TSS_TPMCAP_VERSION</code> &#8211; get the TSS_VERSION structure tha identifies the TPM.<br />
+<p> <code>TSS_TPMCAP_VERSION</code> &#8211; get the TSS_VERSION structure tha identifies the TPM.<br/>
 &nbsp;<wbr>&nbsp;<wbr>subCaps: ignored. </p>
 <h2>Return Codes</h2>
 <p><code>Tspi_TPM_GetCapability</code> returns TSS_SUCCESS on success, otherwise one of the following values is returned:</p>
 <dl COMPACT>
-<dt><font SIZE="-1">TSS_E_INVALID_HANDLE</font></dt>
+<dt>TSS_E_INVALID_HANDLE</dt>
 <dd><i>hTPM</i> is not a valid handle. </dd>
-<dt><font SIZE="-1">TSS_E_INTERNAL_ERROR</font></dt>
+<dt>TSS_E_INTERNAL_ERROR</dt>
 <dd>An internal SW error has been detected. </dd>
-<dt><font SIZE="-1">TSS_E_BAD_PARAMETER</font></dt>
+<dt>TSS_E_BAD_PARAMETER</dt>
 <dd>One or more parameters is bad. </dd>
 </dl>
 <h2>Conforming To</h2>

@@ -11,7 +11,7 @@ description: "log4cpp::PropertyConfiguratorImpl –"
 <h2>Synopsis</h2>
 <p>#include &lt;PropertyConfiguratorImpl.hh&gt;</p>
 <h3>Public Types</h3>
-<p>typedef std::map&lt; std::string,<br />
+<p>typedef std::map&lt; std::string,<br/>
  <code>Appender</code> * &gt; <code>AppenderMap</code>&quot; </p>
 <h3>Public Member Functions</h3>
 <p><code>PropertyConfiguratorImpl</code> () </p>
@@ -19,14 +19,14 @@ description: "log4cpp::PropertyConfiguratorImpl –"
 <p> virtual void <code>doConfigure</code> (const std::string &amp;initFileName) throw (ConfigureFailure) </p>
 <p> virtual void <code>doConfigure</code> (std::istream &amp;in) throw (ConfigureFailure) </p>
 <h3>Protected Member Functions</h3>
-<p>void <code>configureCategory</code> (const std::string &amp;categoryname) throw (ConfigureFailure)<br />
- <i>configure the given category. </i><br />
- void <code>getCategories</code> (std::vector&lt; std::string &gt; &amp;categories) const<br />
- <i>Get a list of categories for which we should do the configuration. </i><br />
+<p>void <code>configureCategory</code> (const std::string &amp;categoryname) throw (ConfigureFailure)<br/>
+ <i>configure the given category. </i><br/>
+ void <code>getCategories</code> (std::vector&lt; std::string &gt; &amp;categories) const<br/>
+ <i>Get a list of categories for which we should do the configuration. </i><br/>
  void <code>instantiateAllAppenders</code> () throw (ConfigureFailure) </p>
-<p> <code>Appender</code> * <code>instantiateAppender</code> (const std::string &amp;name)<br />
- <i>Intantiate and configure the appender referred to by the given name. </i><br />
- void <code>setLayout</code> (<code>Appender</code> *appender, const std::string &amp;name)<br />
+<p> <code>Appender</code> * <code>instantiateAppender</code> (const std::string &amp;name)<br/>
+ <i>Intantiate and configure the appender referred to by the given name. </i><br/>
+ void <code>setLayout</code> (<code>Appender</code> *appender, const std::string &amp;name)<br/>
  <i>Method for instantiating and configuring the layouts associated with each appender. </i></p>
 <h3>Protected Attributes</h3>
 <p><code>Properties</code> <code>_properties</code> </p>
@@ -64,7 +64,7 @@ description: "log4cpp::PropertyConfiguratorImpl –"
 <p>Method for instantiating and configuring the layouts associated with each appender. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>appender</i> <code>Appender</code> to which we are setting this layout.<br />
+<dd><i>appender</i> <code>Appender</code> to which we are setting this layout.<br/>
  <i>name</i> Name in the properties of this appender.</dd></dl>
 <h2>Member Data Documentation</h2>
 <h3><code>AppenderMap</code> log4cpp::PropertyConfiguratorImpl::_allAppenders [protected]</h3>

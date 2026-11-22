@@ -86,16 +86,16 @@ typedef enum {
 <dl>
 <dt>
 </dt><dd>
-typedef enum /*&lt; skip &gt;*/<br />
-{<br />
-    PREFIX_FOO<br />
-} PrefixThisEnumWillBeSkipped;<br />
-typedef enum /*&lt; flags,prefix=PREFIX &gt;*/<br />
-{<br />
-    PREFIX_THE_ZEROTH_VALUE, /*&lt; skip &gt;*/<br />
-    PREFIX_THE_FIRST_VALUE,<br />
-    PREFIX_THE_SECOND_VALUE,<br />
-    PREFIX_THE_THIRD_VALUE, /*&lt; nick=the-last-value &gt;*/<br />
+typedef enum /*&lt; skip &gt;*/<br/>
+{<br/>
+    PREFIX_FOO<br/>
+} PrefixThisEnumWillBeSkipped;<br/>
+typedef enum /*&lt; flags,prefix=PREFIX &gt;*/<br/>
+{<br/>
+    PREFIX_THE_ZEROTH_VALUE, /*&lt; skip &gt;*/<br/>
+    PREFIX_THE_FIRST_VALUE,<br/>
+    PREFIX_THE_SECOND_VALUE,<br/>
+    PREFIX_THE_THIRD_VALUE, /*&lt; nick=the-last-value &gt;*/<br/>
 } PrefixTheFlagsEnum;
 </dd></dl>
 <h2>OPTIONS</h2>
@@ -186,53 +186,53 @@ typedef enum /*&lt; flags,prefix=PREFIX &gt;*/<br />
 <dl>
 <dt>
 </dt><dd>
-/*** BEGIN file-header ***/<br />
-#pragma once<br />
-/* Include the main project header */<br />
-#include &#8220;project.h&#8221;<br />
-G_BEGIN_DECLS<br />
-/*** END file-header ***/<br />
-/*** BEGIN file-production ***/<br />
-/* enumerations from &#8220;@basename@&#8221; */<br />
-/*** END file-production ***/<br />
-/*** BEGIN value-header ***/<br />
-GType @enum_name[at] _get_type(void) G_GNUC_CONST;<br />
-#define @ENUMPREFIX[at] _TYPE_ @ENUMSHORT @(@enum_name[at] _get_type())<br />
-/*** END value-header ***/<br />
-/*** BEGIN file-tail ***/<br />
-G_END_DECLS<br />
+/*** BEGIN file-header ***/<br/>
+#pragma once<br/>
+/* Include the main project header */<br/>
+#include &#8220;project.h&#8221;<br/>
+G_BEGIN_DECLS<br/>
+/*** END file-header ***/<br/>
+/*** BEGIN file-production ***/<br/>
+/* enumerations from &#8220;@basename@&#8221; */<br/>
+/*** END file-production ***/<br/>
+/*** BEGIN value-header ***/<br/>
+GType @enum_name[at] _get_type(void) G_GNUC_CONST;<br/>
+#define @ENUMPREFIX[at] _TYPE_ @ENUMSHORT @(@enum_name[at] _get_type())<br/>
+/*** END value-header ***/<br/>
+/*** BEGIN file-tail ***/<br/>
+G_END_DECLS<br/>
 /*** END file-tail ***/
 </dd></dl>
 <p> A C source template file will typically look like this: </p>
 <dl>
 <dt>
 </dt><dd>
-/*** BEGIN file-header ***/<br />
-#include &#8220;config.h&#8221;<br />
-#include &#8220;enum-types.h&#8221;<br />
-/*** END file-header ***/<br />
-/*** BEGIN file-production ***/<br />
-/* enumerations from &#8220;@basename@&#8221; */<br />
-/*** END file-production ***/<br />
-/*** BEGIN value-header ***/<br />
-GType<br />
-    @enum_name[at] _get_type(void)<br />
-{<br />
-    static volatile gsize g_[at] type @_type_id__volatile;<br />
-    if (g_once_init_enter(&amp;g_define_type_id__volatile)) {<br />
-        static const G @Type[at] Value values[] = {<br />
-            /*** END value-header ***/<br />
-            /*** BEGIN value-production ***/<br />
-            {@VALUENAME @, &#8220;@VALUENAME@&#8221;, &#8220;@valuenick@&#8221;},<br />
-            /*** END value-production ***/<br />
-            /*** BEGIN value-tail ***/<br />
-            {0, NULL, NULL}};<br />
-        GType g_[at] type @_type_id =<br />
-            g_[at] type @_register_static(g_intern_static_string(&#8220;@EnumName@&#8221;), values);<br />
-        g_once_init_leave(&amp;g_[at] type @_type_id__volatile, g_[at] type @_type_id);<br />
-    }<br />
-    return g_[at] type @_type_id__volatile;<br />
-}<br />
+/*** BEGIN file-header ***/<br/>
+#include &#8220;config.h&#8221;<br/>
+#include &#8220;enum-types.h&#8221;<br/>
+/*** END file-header ***/<br/>
+/*** BEGIN file-production ***/<br/>
+/* enumerations from &#8220;@basename@&#8221; */<br/>
+/*** END file-production ***/<br/>
+/*** BEGIN value-header ***/<br/>
+GType<br/>
+    @enum_name[at] _get_type(void)<br/>
+{<br/>
+    static volatile gsize g_[at] type @_type_id__volatile;<br/>
+    if (g_once_init_enter(&amp;g_define_type_id__volatile)) {<br/>
+        static const G @Type[at] Value values[] = {<br/>
+            /*** END value-header ***/<br/>
+            /*** BEGIN value-production ***/<br/>
+            {@VALUENAME @, &#8220;@VALUENAME@&#8221;, &#8220;@valuenick@&#8221;},<br/>
+            /*** END value-production ***/<br/>
+            /*** BEGIN value-tail ***/<br/>
+            {0, NULL, NULL}};<br/>
+        GType g_[at] type @_type_id =<br/>
+            g_[at] type @_register_static(g_intern_static_string(&#8220;@EnumName@&#8221;), values);<br/>
+        g_once_init_leave(&amp;g_[at] type @_type_id__volatile, g_[at] type @_type_id);<br/>
+    }<br/>
+    return g_[at] type @_type_id__volatile;<br/>
+}<br/>
 /*** END value-tail ***/
 </dd></dl>
 <p> Template files are easier to modify and update, and can be used to generate various types of outputs using the same command line or tools during the build.</p>
@@ -280,7 +280,7 @@ mainlib = library('project',
 mainlib_dep = declare_dependency(sources: enum_files[1], link_with: mainlib)
 </pre>
 </dd></dl>
-<p> You should not include the generated source file as well, otherwise it will be built separately for every target that depends on it, causing build failures. To know more about why all this is required, please refer to the m[blue]<code>corresponding Meson FAQ entry</code>m[]<font SIZE="-2">[1]</font>. </p>
+<p> You should not include the generated source file as well, otherwise it will be built separately for every target that depends on it, causing build failures. To know more about why all this is required, please refer to the m[blue]<code>corresponding Meson FAQ entry</code>m[][1]. </p>
 <p> If you are generating C header and source files that require special templates, you can use gnome.mkenums() to provide those headers, for instance: </p>
 <dl>
 <dt>
@@ -294,13 +294,13 @@ enum_files = gnome.mkenums('enum-types',
 )
 </pre>
 </dd></dl>
-<p> For more information, see the m[blue]<code>Meson documentation for gnome.mkenums()</code>m[]<font SIZE="-2">[2]</font>.</p>
+<p> For more information, see the m[blue]<code>Meson documentation for gnome.mkenums()</code>m[][2].</p>
 <h2>USING GLIB-MKENUMS WITH AUTOTOOLS</h2>
 <p> In order to use <code>glib-mkenums</code> in your project when using Autotools as the build system, you will first need to modify your configure.ac file to ensure you find the appropriate command using <code>pkg-config</code>, similarly as to how you discover the compiler and linker flags for GLib. </p>
 <dl>
 <dt>
 </dt><dd>
-PKG_PROG_PKG_CONFIG([0.28])<br />
+PKG_PROG_PKG_CONFIG([0.28])<br/>
 PKG_CHECK_VAR([GLIB_MKENUMS], [glib &#8211; 2.0], [glib_mkenums])
 </dd></dl>
 <p> In your Makefile.am file you will typically use rules like these: </p>

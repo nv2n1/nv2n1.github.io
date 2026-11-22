@@ -11,13 +11,13 @@ description: "sane-umax_pp – SANE backend for Umax Astra parallel port flatbed
 <h2>Description</h2>
 <p>The <code>sane-umax_pp</code> library implements a SANE (Scanner Access Now Easy) backend that provides access to Umax parallel port flatbed scanners. The following scanners work with this backend:</p>
 <dl>
-<dd>Model:<br />
- &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;<br />
- Astra 610P<br />
- Astra 1220P<br />
- HP3200C<br />
- Astra 1600P<br />
- Astra 2000P<br />
+<dd>Model:<br/>
+ &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;<br/>
+ Astra 610P<br/>
+ Astra 1220P<br/>
+ HP3200C<br/>
+ Astra 1600P<br/>
+ Astra 2000P<br/>
  Genius ColorPage-Life Pro
 </dd></dl>
 <p> This backend handles 75&#215;75, 150&#215;150, 300&#215;300, 600&#215;600 and 600&#215;1200 for 1220P/1600P/2000P dpi scan resolutions, and 75&#215;75, 150&#215;150, 300&#215;300 and 300&#215;600 for 610P. In color and gray levels, there is a software lineart mode. The new generation models share a newer version of the 610P ASIC embedded in an EPAT chip. Only parts such as CCD and ADC change from one to another. They even all reports being UMAX Astra 1220P via IEEE1284. There isn&#8217;t software way to recognize them properly. Under windows, model is set by the driver installed, regardless of the hardware.</p>
@@ -47,8 +47,8 @@ description: "sane-umax_pp – SANE backend for Umax Astra parallel port flatbed
 <p> <code>NOTE:</code> in all cases, you must have sufficient privileges to get access to the chosen device or address. Depending on the security settings, devices may not be available for all users. You have to change permissions on the dev/ppi* or /dev/parport* devices. </p>
 <p> You can rename any device using the </p>
 <dl>
-<dd><i>name devname</i><br />
- <i>model model</i><br />
+<dd><i>name devname</i><br/>
+ <i>model model</i><br/>
  <i>vendor vendor</i></dd></dl>
 <p> options. These options apply to the last port option.</p>
 <h2>Configuration</h2>

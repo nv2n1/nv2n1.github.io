@@ -10,7 +10,7 @@ description: "zlaqsy.f –"
 <p>zlaqsy.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlaqsy</code> (UPLO, N, A, LDA, S, SCOND, AMAX, EQUED)<br />
+<p>subroutine <code>zlaqsy</code> (UPLO, N, A, LDA, S, SCOND, AMAX, EQUED)<br/>
  <i></i><code>ZLAQSY</code> scales a symmetric/Hermitian matrix, using scaling factors computed by spoequ.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlaqsy (characterUPLO, integerN, complex*16, dimension( lda, * )A, integerLDA, double precision, dimension( * )S, double precisionSCOND, double precisionAMAX, characterEQUED)</h3>

@@ -13,17 +13,17 @@ description: "QuantLib::VarianceOption – Variance option."
 #include &lt;ql/experimental/varianceoption/varianceoption.hpp&gt;</code></pre>
 <p> Inherits <code>QuantLib::Instrument</code>.</p>
 <h3>Classes</h3>
-<p>class <code>arguments</code><br />
- <i>Arguments for forward fair-variance calculation </i><br />
- class <code>engine</code><br />
- <i>base class for variance-option engines </i><br />
- class <code>results</code><br />
+<p>class <code>arguments</code><br/>
+ <i>Arguments for forward fair-variance calculation </i><br/>
+ class <code>engine</code><br/>
+ <i>base class for variance-option engines </i><br/>
+ class <code>results</code><br/>
  <i>Results from variance-option calculation </i></p>
 <h3>Public Member Functions</h3>
 <p><code>VarianceOption</code> (const boost::shared_ptr&lt; <code>Payoff</code> &gt; &amp;payoff, <code>Real</code> notional, const <code>Date</code> &amp;startDate, const <code>Date</code> &amp;maturityDate) </p>
-<p> void <code>setupArguments</code> (PricingEngine::arguments *args) const<br />
+<p> void <code>setupArguments</code> (PricingEngine::arguments *args) const<br/>
  <code>Instrument interface</code> </p>
-<p> bool <code>isExpired</code> () const<br />
+<p> bool <code>isExpired</code> () const<br/>
  <i>returns whether the instrument is still tradable. </i> <code>Inspectors</code> </p>
 <p> <code>Date</code> <code>startDate</code> () const </p>
 <p> <code>Date</code> <code>maturityDate</code> () const </p>

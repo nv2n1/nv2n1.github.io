@@ -10,7 +10,7 @@ description: "dsytrs2.f –"
 <p>dsytrs2.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dsytrs2</code> (UPLO, N, NRHS, A, LDA, IPIV, B, LDB, WORK, INFO)<br />
+<p>subroutine <code>dsytrs2</code> (UPLO, N, NRHS, A, LDA, IPIV, B, LDB, WORK, INFO)<br/>
  <i></i><code>DSYTRS2</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dsytrs2 (characterUPLO, integerN, integerNRHS, double precision, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, double precision, dimension( ldb, * )B, integerLDB, double precision, dimension( * )WORK, integerINFO)</h3>

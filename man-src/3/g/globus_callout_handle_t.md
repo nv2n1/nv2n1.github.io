@@ -11,7 +11,7 @@ description: "Callout Handle Operations –"
 <p> Callout Handle Operations &#8211; </p>
 <p> Manage a Globus Callout Handle structure.</p>
 <h3>Typedefs</h3>
-<p> typedef struct<br />
+<p> typedef struct<br/>
  globus_i_callout_handle_s * <code>globus_callout_handle_t</code>&quot; </p>
 <h3>Functions</h3>
 <p> globus_result_t <code>globus_callout_handle_init</code> (<code>globus_callout_handle_t</code> *handle) </p>

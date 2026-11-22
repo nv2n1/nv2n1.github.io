@@ -37,24 +37,24 @@ description: "backup-manager-upload – Multiprotocol uploader for backup-manage
 <dt><code>&#8211;list</code></dt>
 <dd>Just list the files to upload.</dd>
 <dt><code>&#8211;ftp-purge</code></dt>
-<dd>Purge the remote directory before uploading files in <font SIZE="-1">FTP</font> mode.</dd>
+<dd>Purge the remote directory before uploading files in FTP mode.</dd>
 <dt><code>&#8211;s3-purge</code></dt>
-<dd>Purge the remote directory before uploading files in <font SIZE="-1">FTP</font> mode.</dd>
+<dd>Purge the remote directory before uploading files in FTP mode.</dd>
 <dt><code>&#8211;ssh-purge</code></dt>
-<dd>Purge the remote directory before uploading files in <font SIZE="-1">SSH</font> mode.</dd>
+<dd>Purge the remote directory before uploading files in SSH mode.</dd>
 <dt><code>&#8211;verbose</code></dt>
 <dd>Flag to enable verbose mode.</dd>
 <dt><code>date</code></dt>
-<dd>Date pattern to select some files to upload, can be a valid date (<font SIZE="-1">YYYYMMDD</font>) or &#8216;today&#8217; or &#8216;yesterday&#8217;.</dd></dl>
+<dd>Date pattern to select some files to upload, can be a valid date (YYYYMMDD) or &#8216;today&#8217; or &#8216;yesterday&#8217;.</dd></dl>
 <h2>Error Codes</h2>
-<p>If something goes wrong during an upload, backup-manager-upload will exit with a non null value. In such a case every error messages are sent to <font SIZE="-1">STDERR</font>. </p>
+<p>If something goes wrong during an upload, backup-manager-upload will exit with a non null value. In such a case every error messages are sent to STDERR. </p>
 <p> Here are the possible error codes:</p>
 <dl>
 <dt>bad command line (wrong arguments) : 10</dt>
 <dd>
-</dd><dt><font SIZE="-1">FTP</font> transfer failure : 20</dt>
+</dd><dt>FTP transfer failure : 20</dt>
 <dd>
-</dd><dt><font SIZE="-1">SCP</font> transfer failure : 21</dt>
+</dd><dt>SCP transfer failure : 21</dt>
 <dd>
 </dd><dt>S3 transfer failure : 22</dt>
 <dd>

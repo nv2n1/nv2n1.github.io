@@ -62,7 +62,7 @@ localhost : 3311(MASTER) |
 <dt>
 </dt><dd> &bull; <code>vertical</code> </dd>
 <p> Display output in single-column format like that of the \G command for the <code>mysql</code> monitor.</dl>
-<p> The utility uses of the <code>SHOW SLAVE HOSTS</code> statement to determine which slaves the master has. If you want to use the <code>&#8211;recurse</code> option, slaves should have been started with the &#8211;report-host and &#8211;report-port options set to their actual host name and port number or the utility may not be able to connect to the slaves to determine their own slaves.<br />
+<p> The utility uses of the <code>SHOW SLAVE HOSTS</code> statement to determine which slaves the master has. If you want to use the <code>&#8211;recurse</code> option, slaves should have been started with the &#8211;report-host and &#8211;report-port options set to their actual host name and port number or the utility may not be able to connect to the slaves to determine their own slaves.<br/>
 OPTIONS </p>
 <p> <code>mysqlrplshow</code> accepts the following command-line options: </p>
 <dl>
@@ -119,18 +119,18 @@ OPTIONS </p>
 <p> For the <code>&#8211;format</code> option, the permitted values are not case sensitive. In addition, values may be specified as any unambiguous prefix of a valid value. For example, <code>&#8211;format=g</code> specifies the grid format. An error occurs if a prefix matches more than one valid value. </p>
 <p> Mixing IP and hostnames is not recommended. The replication-specific utilities will attempt to compare hostnames and IP addresses as aliases for checking slave connectivity to the master. However, if your installation does not support reverse name lookup, the comparison could fail. Without the ability to do a reverse name lookup, the replication utilities could report a false negative that the slave is (not) connected to the master. </p>
 <p> For example, if you setup replication using MASTER_HOST=ubuntu.net on the slave and later connect to the slave with mysqlrplcheck and have the master specified as &#8211;master=192.168.0.6 using the valid IP address for ubuntu.net, you must have the ability to do a reverse name lookup to compare the IP (192.168.0.6) and the hostname (ubuntu.net) to determine if they are the same machine. </p>
-<p> The path to the MySQL client tools should be included in the PATH environment variable in order to use the authentication mechanism with login-paths. This will allow the utility to use the my_print_defaults tools which is required to read the login-path values from the login configuration file (.mylogin.cnf).<br />
+<p> The path to the MySQL client tools should be included in the PATH environment variable in order to use the authentication mechanism with login-paths. This will allow the utility to use the my_print_defaults tools which is required to read the login-path values from the login configuration file (.mylogin.cnf).<br/>
 EXAMPLES </p>
 <p> To show the slaves for a master running on port 3311 on the local host, use the following command: </p>
 <dl>
 <dt>
 </dt><dd>
-$ mysqlrplshow&#8211; master = root[at] localhost : 3311 &#8211;discover &#8211; slaves &#8211; login = root<br />
-#master on localhost : &#8230; connected.<br />
-#Finding slaves for master : localhost : 3311<br />
-#Replication Topology Graph<br />
-                                                                                      localhost : 3311(MASTER) |<br />
-                                                                                  +&#8211; -localhost : 3310 &#8211; (SLAVE) |<br />
+$ mysqlrplshow&#8211; master = root[at] localhost : 3311 &#8211;discover &#8211; slaves &#8211; login = root<br/>
+#master on localhost : &#8230; connected.<br/>
+#Finding slaves for master : localhost : 3311<br/>
+#Replication Topology Graph<br/>
+                                                                                      localhost : 3311(MASTER) |<br/>
+                                                                                  +&#8211; -localhost : 3310 &#8211; (SLAVE) |<br/>
                                                                                   +&#8211; -localhost : 3312 &#8211; (SLAVE)
 </dd></dl>
 <p> As shown in the example, you must provide valid login information for the master. </p>
@@ -138,25 +138,25 @@ $ mysqlrplshow&#8211; master = root[at] localhost : 3311 &#8211;discover &#8211;
 <dl>
 <dt>
 </dt><dd>
-$ mysqlrplshow&#8211; master = root[at] localhost : 3311 &#8211;discover &#8211; slaves &#8211; login = root&#8211; verbose<br />
-#master on localhost : &#8230; connected.<br />
-#Finding slaves for master : localhost : 3311<br />
-#Replication Topology Graph<br />
-                                                                                      localhost : 3311(MASTER) |<br />
-                                                                                  +&#8211; -localhost : 3310 [IO:Yes, SQL:Yes] &#8211; (SLAVE) |<br />
+$ mysqlrplshow&#8211; master = root[at] localhost : 3311 &#8211;discover &#8211; slaves &#8211; login = root&#8211; verbose<br/>
+#master on localhost : &#8230; connected.<br/>
+#Finding slaves for master : localhost : 3311<br/>
+#Replication Topology Graph<br/>
+                                                                                      localhost : 3311(MASTER) |<br/>
+                                                                                  +&#8211; -localhost : 3310 [IO:Yes, SQL:Yes] &#8211; (SLAVE) |<br/>
                                                                                   +&#8211; -localhost : 3312 [IO:Yes, SQL:Yes] &#8211; (SLAVE)
 </dd></dl>
 <p> To show the full replication topology of a master running on the local host, use the following command: </p>
 <dl>
 <dt>
 </dt><dd>
-$ mysqlrplshow&#8211; master = root[at] localhost : 3311 &#8211;recurse&#8211; discover &#8211; slaves &#8211; login = root<br />
-#master on localhost : &#8230; connected.<br />
-#Finding slaves for master : localhost : 3311<br />
-#Replication Topology Graph<br />
-                                                                                                localhost : 3311(MASTER) |<br />
-                                                                                            +&#8211; -localhost : 3310 &#8211; (SLAVE) |<br />
-                                                                                            +&#8211; -localhost : 3312 &#8211; (SLAVE + MASTER) |<br />
+$ mysqlrplshow&#8211; master = root[at] localhost : 3311 &#8211;recurse&#8211; discover &#8211; slaves &#8211; login = root<br/>
+#master on localhost : &#8230; connected.<br/>
+#Finding slaves for master : localhost : 3311<br/>
+#Replication Topology Graph<br/>
+                                                                                                localhost : 3311(MASTER) |<br/>
+                                                                                            +&#8211; -localhost : 3310 &#8211; (SLAVE) |<br/>
+                                                                                            +&#8211; -localhost : 3312 &#8211; (SLAVE + MASTER) |<br/>
                                                                                             +&#8211; -localhost : 3313 &#8211; (SLAVE)
 </dd></dl>
 <p> To show the full replication topology of a master running on the local host, prompting for the user name and password for slaves that do not have the same user name and password credentials as the master, use the following command: </p>

@@ -322,11 +322,11 @@ description: "nfs – fstab format and options for the nfs file systems"
 <p> Before 2.6.8, the Linux NFS client used only synchronous reads and writes when the <code>rsize</code> and <code>wsize</code> settings were smaller than the system&#8217;s page size. </p>
 <p> The Linux NFS client does not yet support certain optional features of the NFS version 4 protocol, such as security negotiation, server referrals, and named attributes.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/5-fstab/">fstab</a></code>(5), <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8), <code><a href="/docs/linux/man/8-umount/">umount</a></code>(8), <code>mount.nfs</code>(5), <code>umount.nfs</code>(5), <code><a href="/docs/linux/man/5-exports/">exports</a></code>(5), <code><a href="/docs/linux/man/5-nfsmount-conf/">nfsmount.conf</a></code>(5), <code><a href="/docs/linux/man/5-netconfig/">netconfig</a></code>(5), <code><a href="/docs/linux/man/7-ipv6/">ipv6</a></code>(7), <code><a href="/docs/linux/man/8-nfsd/">nfsd</a></code>(8), <code><a href="/docs/linux/man/8-sm-notify/">sm-notify</a></code>(8), <code>rpc.statd</code>(8), <code>rpc.idmapd</code>(8), <code>rpc.gssd</code>(8), <code>rpc.svcgssd</code>(8), <code><a href="/docs/linux/man/1-kerberos/">kerberos</a></code>(1) RFC 768 for the UDP specification.<br />
- RFC 793 for the TCP specification.<br />
- RFC 1094 for the NFS version 2 specification.<br />
- RFC 1813 for the NFS version 3 specification.<br />
- RFC 1832 for the XDR specification.<br />
- RFC 1833 for the RPC bind specification.<br />
- RFC 2203 for the RPCSEC GSS API protocol specification.<br />
+<p><code><a href="/docs/linux/man/5-fstab/">fstab</a></code>(5), <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8), <code><a href="/docs/linux/man/8-umount/">umount</a></code>(8), <code>mount.nfs</code>(5), <code>umount.nfs</code>(5), <code><a href="/docs/linux/man/5-exports/">exports</a></code>(5), <code><a href="/docs/linux/man/5-nfsmount-conf/">nfsmount.conf</a></code>(5), <code><a href="/docs/linux/man/5-netconfig/">netconfig</a></code>(5), <code><a href="/docs/linux/man/7-ipv6/">ipv6</a></code>(7), <code><a href="/docs/linux/man/8-nfsd/">nfsd</a></code>(8), <code><a href="/docs/linux/man/8-sm-notify/">sm-notify</a></code>(8), <code>rpc.statd</code>(8), <code>rpc.idmapd</code>(8), <code>rpc.gssd</code>(8), <code>rpc.svcgssd</code>(8), <code><a href="/docs/linux/man/1-kerberos/">kerberos</a></code>(1) RFC 768 for the UDP specification.<br/>
+ RFC 793 for the TCP specification.<br/>
+ RFC 1094 for the NFS version 2 specification.<br/>
+ RFC 1813 for the NFS version 3 specification.<br/>
+ RFC 1832 for the XDR specification.<br/>
+ RFC 1833 for the RPC bind specification.<br/>
+ RFC 2203 for the RPCSEC GSS API protocol specification.<br/>
  RFC 3530 for the NFS version 4 specification. </p>

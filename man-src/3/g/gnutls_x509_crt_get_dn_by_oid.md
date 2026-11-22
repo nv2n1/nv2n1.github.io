@@ -29,15 +29,15 @@ description: "gnutls_x509_crt_get_dn_by_oid – API function"
 <h2>DESCRIPTION</h2>
 <p> This function will extract the part of the name of the Certificate subject specified by the given OID. The output, if the raw flag is not used, will be encoded as described in RFC4514. Thus a string that is ASCII or UTF-8 encoded, depending on the certificate data. </p>
 <p> Some helper macros with popular OIDs can be found in gnutls/x509.h If raw flag is (0), this function will only return known OIDs as text. Other OIDs will be DER encoded, as described in RFC4514 &#8212; in hex format with a &#8216;#&#8217; prefix. You can check about known OIDs using <code>gnutls_x509_dn_oid_known()</code>. </p>
-<p> If <i>buf</i> is null then only the size will be filled. If the <i>raw_flag</i> is not specified the output is always null terminated, although the<br />
+<p> If <i>buf</i> is null then only the size will be filled. If the <i>raw_flag</i> is not specified the output is always null terminated, although the<br/>
 &nbsp;<wbr><i>buf_size</i>&nbsp;<wbr>will not include the null character.</p>
 <h2>RETURNS</h2>
 <p> <code>GNUTLS_E_SHORT_MEMORY_BUFFER</code> if the provided buffer is not long enough, and in that case the <i>buf_size</i> will be updated with the required size. <code>GNUTLS_E_REQUESTED_DATA_NOT_AVAILABLE</code> if there are no data in the current index. On success 0 is returned.</p>
 <h2>REPORTING BUGS</h2>
-<p> Report bugs to &lt;bugs [at] gnutls.org&gt;.<br />
+<p> Report bugs to &lt;bugs [at] gnutls.org&gt;.<br/>
  Home page: <a rel="nofollow" href="http://www.gnutls.org">http://www.gnutls.org</a> </p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2001-2014 Free Software Foundation, Inc..<br />
+<p> Copyright &#169; 2001-2014 Free Software Foundation, Inc..<br/>
  Copying and distribution of this file, with or without modification, are permitted in any medium without royalty provided the copyright notice and this notice are preserved.</p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>

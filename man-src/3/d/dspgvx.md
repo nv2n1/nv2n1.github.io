@@ -11,7 +11,7 @@ description: "dspgvx.f –"
 <p> dspgvx.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dspgvx</code> (ITYPE, JOBZ, RANGE, UPLO, N, AP, BP, VL, VU, IL, IU, ABSTOL, M, W, Z, LDZ, WORK, IWORK, IFAIL, INFO)<br />
+<p> subroutine <code>dspgvx</code> (ITYPE, JOBZ, RANGE, UPLO, N, AP, BP, VL, VU, IL, IU, ABSTOL, M, W, Z, LDZ, WORK, IWORK, IFAIL, INFO)<br/>
  <i></i><code>DSPGST</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dspgvx (integerITYPE, characterJOBZ, characterRANGE, characterUPLO, integerN, double precision, dimension( * )AP, double precision, dimension( * )BP, double precisionVL, double precisionVU, integerIL, integerIU, double precisionABSTOL, integerM, double precision, dimension( * )W, double precision, dimension( ldz, * )Z, integerLDZ, double precision, dimension( * )WORK, integer, dimension( * )IWORK, integer, dimension( * )IFAIL, integerINFO)</h3>
@@ -77,14 +77,14 @@ description: "dspgvx.f –"
           On exit, the contents of AP are destroyed.
 </code></pre>
 <p> <i>BP</i> </p>
-<p>          BP is DOUBLE PRECISION array, dimension (N*(N+1)/2)<br />
-          On entry, the upper or lower triangle of the symmetric matrix<br />
-          B, packed columnwise in a linear array.  The j-th column of B<br />
-          is stored in the array BP as follows:<br />
-          if UPLO = &#8216;U&#8217;, BP(i + (j-1)*j/2) = B(i,j) for 1&lt;=i&lt;=j;<br />
-          if UPLO = &#8216;L&#8217;, BP(i + (j-1)*(2*n-j)/2) = B(i,j) for j&lt;=i&lt;=n.<br />
-          On exit, the triangular factor U or L from the Cholesky<br />
-          factorization B = U**T*U or B = L*L**T, in the same storage<br />
+<p>          BP is DOUBLE PRECISION array, dimension (N*(N+1)/2)<br/>
+          On entry, the upper or lower triangle of the symmetric matrix<br/>
+          B, packed columnwise in a linear array.  The j-th column of B<br/>
+          is stored in the array BP as follows:<br/>
+          if UPLO = &#8216;U&#8217;, BP(i + (j-1)*j/2) = B(i,j) for 1&lt;=i&lt;=j;<br/>
+          if UPLO = &#8216;L&#8217;, BP(i + (j-1)*(2*n-j)/2) = B(i,j) for j&lt;=i&lt;=n.<br/>
+          On exit, the triangular factor U or L from the Cholesky<br/>
+          factorization B = U**T*U or B = L*L**T, in the same storage<br/>
           format as B.</p>
 <p> <i>VL</i> </p>
 <pre>
@@ -102,12 +102,12 @@ description: "dspgvx.f –"
           IL is INTEGER
 </pre>
 <p> <i>IU</i> </p>
-<p>IU is INTEGER<br />
-    If RANGE = &#8216;I&#8217;,<br />
-       the indices(in ascending order) of the<br />
-           smallest and largest eigenvalues to be returned.1 &lt;= IL<br />
-           &lt;= IU &lt;= N,<br />
-       if N &gt; 0;<br />
+<p>IU is INTEGER<br/>
+    If RANGE = &#8216;I&#8217;,<br/>
+       the indices(in ascending order) of the<br/>
+           smallest and largest eigenvalues to be returned.1 &lt;= IL<br/>
+           &lt;= IU &lt;= N,<br/>
+       if N &gt; 0;<br/>
 IL = 1 and IU = 0 if N = 0. Not referenced if RANGE = &#8216;A&#8217; or &#8216;V&#8217;.</p>
 <p> <i>ABSTOL</i> </p>
 <pre>
@@ -140,12 +140,12 @@ IL = 1 and IU = 0 if N = 0. Not referenced if RANGE = &#8216;A&#8217; or &#8216;
           eigenvalues in ascending order.
 </pre>
 <p> <i>Z</i> </p>
-<p>Z is DOUBLE PRECISION array, dimension(LDZ, max(1, M)) If JOBZ = &#8216;N&#8217;, then Z is not referenced.If JOBZ = &#8216;V&#8217;, then if INFO = 0, the first M columns of Z contain the orthonormal eigenvectors of the matrix A corresponding to the selected eigenvalues, with the i &#8211; th column of Z holding the eigenvector associated with W(i).The eigenvectors are normalized as follows : if ITYPE = 1 or 2, Z **T *B *Z = I;<br />
-if ITYPE<br />
-    = 3, Z **T *inv(B) *Z = I.If an eigenvector fails to converge, then that column of Z contains the latest approximation to the eigenvector, and the index of the eigenvector is returned in IFAIL.Note : the user must ensure that at least max(1, M) columns are supplied in the array Z;<br />
-if RANGE<br />
-= &#8216;V&#8217;, the exact value of M<br />
-               is not known in advance and<br />
+<p>Z is DOUBLE PRECISION array, dimension(LDZ, max(1, M)) If JOBZ = &#8216;N&#8217;, then Z is not referenced.If JOBZ = &#8216;V&#8217;, then if INFO = 0, the first M columns of Z contain the orthonormal eigenvectors of the matrix A corresponding to the selected eigenvalues, with the i &#8211; th column of Z holding the eigenvector associated with W(i).The eigenvectors are normalized as follows : if ITYPE = 1 or 2, Z **T *B *Z = I;<br/>
+if ITYPE<br/>
+    = 3, Z **T *inv(B) *Z = I.If an eigenvector fails to converge, then that column of Z contains the latest approximation to the eigenvector, and the index of the eigenvector is returned in IFAIL.Note : the user must ensure that at least max(1, M) columns are supplied in the array Z;<br/>
+if RANGE<br/>
+= &#8216;V&#8217;, the exact value of M<br/>
+               is not known in advance and<br/>
            an upper bound must be used.</p>
 <p> <i>LDZ</i> </p>
 <pre>

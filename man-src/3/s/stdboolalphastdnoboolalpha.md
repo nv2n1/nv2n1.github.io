@@ -9,11 +9,11 @@ description: "std::boolalpha,std::noboolalpha – std::boolalpha,std::noboolalph
 
 <p>std::boolalpha,std::noboolalpha &#8211; std::boolalpha,std::noboolalpha</p>
 <h2>Synopsis</h2>
-<p>Defined in header &lt;ios&gt;<br />
-std::ios_base&amp; boolalpha( std::ios_base&amp; str ); <code>(1)</code><br />
-std::ios_base&amp; noboolalpha( std::ios_base&amp; str ); <code>(2)</code><br />
-1) Enables the boolalpha flag in the stream str as if by calling str.setf(std::ios_base::boolalpha)<br />
-2) Disables the boolalpha flag in the stream str as if by calling str.unsetf(std::ios_base::boolalpha)<br />
+<p>Defined in header &lt;ios&gt;<br/>
+std::ios_base&amp; boolalpha( std::ios_base&amp; str ); <code>(1)</code><br/>
+std::ios_base&amp; noboolalpha( std::ios_base&amp; str ); <code>(2)</code><br/>
+1) Enables the boolalpha flag in the stream str as if by calling str.setf(std::ios_base::boolalpha)<br/>
+2) Disables the boolalpha flag in the stream str as if by calling str.unsetf(std::ios_base::boolalpha)<br/>
 std::boolalpha is an I/O manipulator, so it may be called with an expression such as out &lt;&lt; std::boolalpha for any out of type std::basic_ostream or with an expression such as in &gt;&gt; std::boolalpha for any in of type std::basic_istream. </p>
 <h2>Parameters</h2>
 <p>str &#8211; reference to I/O stream</p>
@@ -46,16 +46,16 @@ int main()
 }
 </code></pre>
 <h2>Output:</h2>
-<p>&nbsp;<wbr>&nbsp;boolalpha true: true<br />
-&nbsp;<wbr>&nbsp;boolalpha false: false<br />
-&nbsp;<wbr>&nbsp;noboolalpha true: 1<br />
-&nbsp;<wbr>&nbsp;noboolalpha false: 0<br />
+<p>&nbsp;<wbr>&nbsp;boolalpha true: true<br/>
+&nbsp;<wbr>&nbsp;boolalpha false: false<br/>
+&nbsp;<wbr>&nbsp;noboolalpha true: 1<br/>
+&nbsp;<wbr>&nbsp;noboolalpha false: 0<br/>
 &nbsp;<wbr>&nbsp;&quot;true false&quot; parsed as 1 0</p>
 <h2>See also</h2>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;clears the specified ios_base flags<br />
-resetiosflags <i>(function)</i><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sets the specified ios_base flags<br />
-setiosflags <i>(function)</i><br />
-do_truename provides the string to use as the name of the boolean true and false<br />
-do_falsename <i>(virtual protected member function of std::numpunct&lt;CharT&gt;)</i><br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;clears the specified ios_base flags<br/>
+resetiosflags <i>(function)</i><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sets the specified ios_base flags<br/>
+setiosflags <i>(function)</i><br/>
+do_truename provides the string to use as the name of the boolean true and false<br/>
+do_falsename <i>(virtual protected member function of std::numpunct&lt;CharT&gt;)</i><br/>
 <code>[virtual]</code> </p>

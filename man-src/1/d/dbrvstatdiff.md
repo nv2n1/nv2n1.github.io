@@ -14,7 +14,7 @@ description: "dbrvstatdiff – evaluate statistical differences between two rand
 dbrvstatdiff[-f format][-c ConfRating]
             [-h HypothesizedDifference] m1c sd1c n1c m2c sd2c n2c
 </code></pre>
-<p> <font SIZE="-1">OR</font> </p>
+<p> OR </p>
 <pre><code>
 dbrvstatdiff[-f format][-c ConfRating] m1c n1c m2c n2c
 </code></pre>
@@ -32,9 +32,9 @@ dbrvstatdiff[-f format][-c ConfRating] m1c n1c m2c n2c
 <p> Creates up to ten new columns:</p>
 <dl>
 <dt>&quot;diff&quot;</dt>
-<dd> The difference of <font SIZE="-1">RV 2 &#8211; RV 1.</font></dd>
+<dd> The difference of RV 2 &#8211; RV 1.</dd>
 <dt>&quot;diff_pct&quot;</dt>
-<dd> The percentage difference (<font SIZE="-1">RV2-RV1</font>)/1</dd>
+<dd> The percentage difference (RV2-RV1)/1</dd>
 <dt>&quot;diff_conf_{half,low,high}&quot; and &quot;diff_conf_pct_{half,low,high}&quot;</dt>
 <dd> The half half confidence intervals and low and high values for absolute and relative confidence.</dd>
 <dt>&quot;t_test&quot;</dt>
@@ -49,11 +49,11 @@ dbrvstatdiff[-f format][-c ConfRating] m1c n1c m2c n2c
 <p> T-tests are only computed if a hypothesized difference is provided. Hypothesized differences should be proceeded by &lt;=, &gt;=, =. T-tests assume normal distributions with common variances.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c </code><font SIZE="-1"><code>FRACTION</code></font> or <code>&#8211;confidence </code><font SIZE="-1"><code>FRACTION</code></font></dt>
-<dd> Specify <font SIZE="-1">FRACTION</font> for the confidence interval. Defaults to 0.95 for a 95% confidence factor (alpha = 0.05).</dd>
-<dt><code>-f </code><font SIZE="-1"><code>FORMAT</code></font> or <code>&#8211;format </code><font SIZE="-1"><code>FORMAT</code></font></dt>
+<dt><code>-c </code><code>FRACTION</code> or <code>&#8211;confidence </code><code>FRACTION</code></dt>
+<dd> Specify FRACTION for the confidence interval. Defaults to 0.95 for a 95% confidence factor (alpha = 0.05).</dd>
+<dt><code>-f </code><code>FORMAT</code> or <code>&#8211;format </code><code>FORMAT</code></dt>
 <dd> Specify a <i><a href="/docs/linux/man/3-printf/">printf</a></i>(3)-style format for output statistics. Defaults to <tt>&quot;%.5g&quot;</tt>.</dd>
-<dt><code>-h </code><font SIZE="-1"><code>DIFF</code></font> or <code>&#8211;hypothesis </code><font SIZE="-1"><code>DIFF</code></font></dt>
+<dt><code>-h </code><code>DIFF</code> or <code>&#8211;hypothesis </code><code>DIFF</code></dt>
 <dd> Specify the hypothesized difference as <tt>&quot;DIFF&quot;</tt>, where <tt>&quot;DIFF&quot;</tt> is something like <tt>&quot;&lt;=0&quot;</tt> or <tt>&quot;&gt;=0&quot;</tt>, etc.</dd></dl>
 <p> This module also supports the standard fsdb options:</p>
 <dl>
@@ -168,4 +168,4 @@ dbrvstatdiff[-f format][-c ConfRating] m1c n1c m2c n2c
 <p> Fsdb. dbcolstats. dbcolcopylast.</p>
 <h2>AUTHOR and COPYRIGHT</h2>
 <p> Copyright (C) 1991-2015 by John Heidemann &lt;johnh [at] isi.edu&gt; </p>
-<p> This program is distributed under terms of the <font SIZE="-1">GNU</font> general public license, version 2. See the file <font SIZE="-1">COPYING</font> with the distribution for details. </p>
+<p> This program is distributed under terms of the GNU general public license, version 2. See the file COPYING with the distribution for details. </p>

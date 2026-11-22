@@ -10,7 +10,7 @@ description: "ldns_rr_label_count"
 
 <p> ldns_rr_label_count </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> uint8_t ldns_rr_label_count(ldns_rr *rr); </p>

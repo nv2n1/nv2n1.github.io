@@ -60,5 +60,5 @@ description: "XCreateFontSet, XFreeFontSet – create and free an international 
 <p> The returned <code>XFontSet</code> and missing charset list should be freed with <code>XFreeFontSet</code> and <code>XFreeStringList</code>, respectively. The client-supplied base_font_name_list may be freed by the client after calling <code>XCreateFontSet</code>. </p>
 <p> The <code>XFreeFontSet</code> function frees the specified font set. The associated base font name list, font name list, <code>XFontStruct</code> list, and <code>XFontSetExtents</code>, if any, are freed.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xextentsoffontset/">XExtentsofFontSet</a>(3), <a href="/docs/linux/man/3-xfontsoffontset/">XFontsOfFontSet</a>(3), <a href="/docs/linux/man/3-xfontsetextents/">XFontSetExtents</a>(3)<br />
+<p><a href="/docs/linux/man/3-xextentsoffontset/">XExtentsofFontSet</a>(3), <a href="/docs/linux/man/3-xfontsoffontset/">XFontsOfFontSet</a>(3), <a href="/docs/linux/man/3-xfontsetextents/">XFontSetExtents</a>(3)<br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

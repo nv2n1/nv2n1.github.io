@@ -10,7 +10,7 @@ description: "ldns_rr2str, ldns_pkt2str, ldns_rdf2str, ldns_rr_list2str, ldns_ke
 
 <p> ldns_rr2str, ldns_pkt2str, ldns_rdf2str, ldns_rr_list2str, ldns_key2str </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> char* ldns_rr2str(const ldns_rr *rr); </p>

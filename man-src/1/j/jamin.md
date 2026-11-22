@@ -73,35 +73,35 @@ description: "jamin – JACK Audio Mastering interface"
 <p> Since <code>jamin</code> is not a standalone program we generally need other programs to provide input audio and receive the mastered output. This example uses <code>alsaplayer</code> with output going to the first two ALSA playback ports: </p>
 <dl>
 <dt>
-</dt><dd> <code>jackd -R -d alsa -p 2048 -r 44100 &amp;</code><br />
- <code>alsaplayer -o jack -s src -d noconnect song.wav &amp;</code><br />
+</dt><dd> <code>jackd -R -d alsa -p 2048 -r 44100 &amp;</code><br/>
+ <code>alsaplayer -o jack -s src -d noconnect song.wav &amp;</code><br/>
  <code>jamin src:out_1 src:out_2</code> </dd>
 </dl>
 <p> That was the brute force method. It is much easier to have <code>qjackctl</code> start the JACK server and handle its connections. After the server is running, start <code>jackplayer</code> and <code>jamin</code>. The &quot;transport&quot; option tells <code>jackplayer</code> (an <code>alsaplayer</code> alias) to start and stop under JACK transport control. </p>
 <dl>
 <dt>
-</dt><dd> <code>qjackctl &amp;</code><br />
- <code>jackplayer -d noconnect/transport song.wav &amp;</code><br />
+</dt><dd> <code>qjackctl &amp;</code><br/>
+ <code>jackplayer -d noconnect/transport song.wav &amp;</code><br/>
  <code>jamin</code></dd></dl>
 <p> Any JACK-aware player such as <code>rezound</code>, <code>ecasound</code> or <code>ecamegapedal</code> can be used, instead. </p>
 <p> A more advanced technique uses <code>ardour</code> for both the source and destination. In <code>ardour</code>, run all of your track outputs into a stereo bus, connect its output ports to JAMin, then run the JAMin outputs back into a record-enabled stereo track. This allows mixing and mastering at the same time. If JAMin is already running when <code>ardour</code> reopens the session, it will automatically reconnect all these ports. </p>
 <dl>
 <dt>
-</dt><dd> <code>qjackctl &amp;</code><br />
- <code>jamin &amp;</code><br />
+</dt><dd> <code>qjackctl &amp;</code><br/>
+ <code>jamin &amp;</code><br/>
  <code>ardour</code> </dd>
 </dl>
 <h2>SEE ALSO:</h2>
-<p> <code>&lt;<a rel="nofollow" href="http://jamin.sourceforge.net">http://jamin.sourceforge.net</a></code>&gt;<br />
- <code>&lt;<a rel="nofollow" href="http://www.alsa-project.org">http://www.alsa-project.org</a></code>&gt;<br />
- <code>&lt;<a rel="nofollow" href="http://jackaudio.org">http://jackaudio.org</a></code>&gt;<br />
- <code>&lt;<a rel="nofollow" href="http://qjackctl.sourceforge.net">http://qjackctl.sourceforge.net</a></code>&gt;<br />
- <code>&lt;<a rel="nofollow" href="http://www.suse.de/~mana/jack.html">http://www.suse.de/~mana/jack.html</a></code>&gt;<br />
- <code>&lt;<a rel="nofollow" href="http://alsaplayer.sourceforge.net">http://alsaplayer.sourceforge.net</a></code>&gt;<br />
- <code>&lt;<a rel="nofollow" href="http://www.ardour.org">http://www.ardour.org</a></code>&gt;<br />
- <code>&lt;<a rel="nofollow" href="http://rezound.sourceforge.net">http://rezound.sourceforge.net</a></code>&gt;<br />
- <code><a href="/docs/linux/man/1-jackd/">jackd</a>(1)</code><br />
- <code>alsaplayer(1)</code><br />
+<p> <code>&lt;<a rel="nofollow" href="http://jamin.sourceforge.net">http://jamin.sourceforge.net</a></code>&gt;<br/>
+ <code>&lt;<a rel="nofollow" href="http://www.alsa-project.org">http://www.alsa-project.org</a></code>&gt;<br/>
+ <code>&lt;<a rel="nofollow" href="http://jackaudio.org">http://jackaudio.org</a></code>&gt;<br/>
+ <code>&lt;<a rel="nofollow" href="http://qjackctl.sourceforge.net">http://qjackctl.sourceforge.net</a></code>&gt;<br/>
+ <code>&lt;<a rel="nofollow" href="http://www.suse.de/~mana/jack.html">http://www.suse.de/~mana/jack.html</a></code>&gt;<br/>
+ <code>&lt;<a rel="nofollow" href="http://alsaplayer.sourceforge.net">http://alsaplayer.sourceforge.net</a></code>&gt;<br/>
+ <code>&lt;<a rel="nofollow" href="http://www.ardour.org">http://www.ardour.org</a></code>&gt;<br/>
+ <code>&lt;<a rel="nofollow" href="http://rezound.sourceforge.net">http://rezound.sourceforge.net</a></code>&gt;<br/>
+ <code><a href="/docs/linux/man/1-jackd/">jackd</a>(1)</code><br/>
+ <code>alsaplayer(1)</code><br/>
  <code><a href="/docs/linux/man/1-ardour/">ardour</a>(1)</code></p>
 <h2>BUGS</h2>
 <p> Please send bug reports to &lt;<code>jamin-devel [at] lists.sourceforge.net</code>&gt;.</p>

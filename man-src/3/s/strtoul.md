@@ -15,7 +15,7 @@ unsigned long long strtoull(const char *nptr, char **endptr,
                             int base);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>strtoull</code>():</p>
 <dl>
-<dd>_ISOC99_SOURCE ||<br />
+<dd>_ISOC99_SOURCE ||<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_SVID_SOURCE ||&nbsp;_BSD_SOURCE</dd></dl>
 <h2>Description</h2>
 <p>The <code>strtoul</code>() function converts the initial part of the string in <i>nptr</i> to an <i>unsigned long</i> value according to the given <i>base</i>, which must be between 2 and 36 inclusive, or be the special value 0. </p>

@@ -35,12 +35,12 @@ description: "microcode_ctl – microcode utility for Intel IA32 processors"
 <dt>/etc/microcode.dat</dt>
 <dd>The default microcode location</dd></dl>
 <h2>Author</h2>
-<p>Microcode utility written by Simon Trimmer<br />
+<p>Microcode utility written by Simon Trimmer<br/>
  Linux Kernel driver written by Tigran Aivazian.</p>
 <h2>Reporting Bugs</h2>
 <p>Report bugs to either Simon Trimmer &lt;simon [at] urbanmyth.org&gt; or Tigran Aivazian &lt;tigran [at] aivazian.fsnet.co.uk&gt;</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2000 VERITAS Software<br />
+<p>Copyright &#169; 2000 VERITAS Software<br/>
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>Special Thanks</h2>
 <p>Thanks to the Intel Corporation, for supplying microcode update data and publishing the specifications that enabled us to write microcode driver for Linux.</p>

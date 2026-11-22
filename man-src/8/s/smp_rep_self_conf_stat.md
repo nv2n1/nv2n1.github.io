@@ -47,7 +47,7 @@ description: "smp_rep_self_conf_stat – invoke REPORT SELF-CONFIGURATION STATUS
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;dgilbert at interlog dot com&gt;.</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2011 Douglas Gilbert<br />
+<p>Copyright &#169; 2011 Douglas Gilbert<br/>
  This software is distributed under a FreeBSD license. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>See Also</h2>
 <p><code>smp_utils, smp_rep_general, smp_discover, smp_discover_list(smp_utils)</code> </p>

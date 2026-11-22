@@ -10,7 +10,7 @@ description: "Connecting to BrlAPI –"
 
 <p> Connecting to BrlAPI &#8211; </p>
 <h3>Data Structures</h3>
-<p> struct <code>brlapi_connectionSettings_t</code><br />
+<p> struct <code>brlapi_connectionSettings_t</code><br/>
  <i>Settings structure for BrlAPI</i> connection.</p>
 <h3>Macros</h3>
 <p> #define <code>BRLAPI_SOCKETPORTNUM</code> 4101 </p>
@@ -23,9 +23,9 @@ description: "Connecting to BrlAPI –"
 <h3>Typedefs</h3>
 <p> typedef int <code>brlapi_fileDescriptor</code> </p>
 <h3>Functions</h3>
-<p> <code>brlapi_fileDescriptor</code><br />
+<p> <code>brlapi_fileDescriptor</code><br/>
  <code>BRLAPI_STDCALL</code> <code>brlapi_openConnection</code> (const <code>brlapi_connectionSettings_t</code> *desiredSettings, <code>brlapi_connectionSettings_t</code> *actualSettings)&quot; </p>
-<p> <code>brlapi_fileDescriptor</code><br />
+<p> <code>brlapi_fileDescriptor</code><br/>
  <code>BRLAPI_STDCALL</code> <code>brlapi__openConnection</code> (<code>brlapi_handle_t</code> *handle, const <code>brlapi_connectionSettings_t</code> *desiredSettings, <code>brlapi_connectionSettings_t</code> *actualSettings)&quot; </p>
 <p> void <code>BRLAPI_STDCALL</code> <code>brlapi_closeConnection</code> (void) </p>
 <p> void <code>BRLAPI_STDCALL</code> <code>brlapi__closeConnection</code> (<code>brlapi_handle_t</code> *handle) </p>
@@ -86,7 +86,7 @@ if (brlapi_openConnection(&amp;settings, &amp;settings) &lt; 0) {
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>desiredSettings</i> this gives the desired connection parameters, as described in <code>brlapi_connectionSettings_t</code>. If NULL, defaults values are used, so that it is generally a good idea to give NULL as default, and only fill a <code>brlapi_connectionSettings_t</code> structure when the user gave parameters to the program for instance;<br />
+</dt><dd> <i>desiredSettings</i> this gives the desired connection parameters, as described in <code>brlapi_connectionSettings_t</code>. If NULL, defaults values are used, so that it is generally a good idea to give NULL as default, and only fill a <code>brlapi_connectionSettings_t</code> structure when the user gave parameters to the program for instance;<br/>
  <i>actualSettings</i> if not NULL, parameters which were actually used are stored here, if the application ever needs them.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>

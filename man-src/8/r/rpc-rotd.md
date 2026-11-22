@@ -19,14 +19,14 @@ description: "rotd – Hamlib rotator service daemon"
 <p> Here is a summary of the supported options:</p>
 <dl>
 <dt><code>-m, &#8211;model=id</code></dt>
-<dd>Select rotator model number. See model list (use &#8216;rotctl -l&#8217;).<br />
+<dd>Select rotator model number. See model list (use &#8216;rotctl -l&#8217;).<br/>
  NB: <code>rotctl</code> (or third party software) will use rotor model 101 when using <code>rotd</code>.</dd>
 <dt><code>-r, &#8211;rot-file=device</code></dt>
 <dd>Use <i>device</i> as the file name of the port the rotator is connected. Often a serial port, but could be a USB to serial adapter. Typically /dev/ttyS0, /dev/ttyS1, /dev/ttyUSB0, etc.</dd>
 <dt><code>-s, &#8211;serial-speed=baud</code></dt>
 <dd>Set serial speed to <i>baud</i> rate. Uses maximum serial speed from rotor backend as the default.</dd>
 <dt><code>-C, &#8211;set-conf=parm=val[,parm=val]*</code></dt>
-<dd>Set config parameter. e.g. stop_bits=2<br />
+<dd>Set config parameter. e.g. stop_bits=2<br/>
  Use -L option of <code>rotctl</code> for a list.</dd>
 <dt><code>-t, &#8211;prog=number</code></dt>
 <dd>Use <i>number</i> as the RPC program number. The default is 536873369.</dd>
@@ -52,13 +52,13 @@ description: "rotd – Hamlib rotator service daemon"
 <h2>Bugs</h2>
 <p>Does not support more than one communication device for multiple rotor control. (e.g. for Single Operator 2 Radio) Help needed!</p>
 <h2>Reporting Bugs</h2>
-<p>Report bugs to &lt;hamlib-developer [at] lists.sourceforge.net&gt;.<br />
+<p>Report bugs to &lt;hamlib-developer [at] lists.sourceforge.net&gt;.<br/>
  We are already aware of the bug in the previous section :-)</p>
 <h2>Authors</h2>
-<p>Written by Stephane Fillod and the Hamlib Group<br />
+<p>Written by Stephane Fillod and the Hamlib Group<br/>
  &lt;<a rel="nofollow" href="http://www.hamlib.org">http://www.hamlib.org</a>&gt;.</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2000-2007 Stephane Fillod and the Hamlib Group. Contributed by Francois Retief &lt;fgretief [at] sun.ac.za&gt;.<br />
+<p>Copyright &#169; 2000-2007 Stephane Fillod and the Hamlib Group. Contributed by Francois Retief &lt;fgretief [at] sun.ac.za&gt;.<br/>
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-rotctl/">rotctl</a></code>(1), <code>hamlib</code>(3) </p>

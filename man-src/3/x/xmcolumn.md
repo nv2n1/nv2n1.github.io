@@ -255,14 +255,14 @@ description: "XmColumn — The XmColumn widget class"
 </table>
 <dl COMPACT>
 <dt><code>XmNdefaultEntryLabelAlignment</code></dt>
-<dd>Specifies the default XmNentryLabelAlignment to use when a child specifies no significant value. Resources that specify Alignment have values of XmALIGNMENT_BEGINNING,<br />
+<dd>Specifies the default XmNentryLabelAlignment to use when a child specifies no significant value. Resources that specify Alignment have values of XmALIGNMENT_BEGINNING,<br/>
  <code>XmALIGNMENT_CENTER, XmALIGNMENT_END, and XmALIGNMENT_UNSPECIFIED. </code> Valid string values that can be used in a resources file are: alignment_unspecified, unspecified, alignment_beginning, beginning, alignment_center, center, alignment_end, end.</dd>
 <dt><code>XmNdefaultEntryLabelFontList</code></dt>
 <dd>Specifies the default XmNentryLabelFontList to use when a child specifies no significant value. If unspecified, uses XmNlabelFontList resource of the XmBulletinBoard.</dd>
 <dt><code>XmNdefaultFillStyle</code></dt>
 <dd>Specifies the default XmNfillStyle to use when a child specifies no significant value.</dd>
 <dt><code>XmNdistribution</code></dt>
-<dd>Specifies whether the spacing between each pair of rows should be increased equally (XmDISTRIBUTE_SPREAD) or remain constant (XmDISTRIBUTE_TIGHT) when the column is resized vertically to be larger than its natural size. This resource has no effect if any child has its<br />
+<dd>Specifies whether the spacing between each pair of rows should be increased equally (XmDISTRIBUTE_SPREAD) or remain constant (XmDISTRIBUTE_TIGHT) when the column is resized vertically to be larger than its natural size. This resource has no effect if any child has its<br/>
  <code>XmNstretchable resource set to True. This resource is valid only when the orientation is vertical.</code></dd>
 <dt><code>XmNitemSpacing</code></dt>
 <dd>Specifies the spacing between each pair of rows (in vertical orientation) or between pairs of labels and children (in horizontal orientation).</dd>
@@ -544,7 +544,7 @@ description: "XmColumn — The XmColumn widget class"
 <dt><code>XmNentryLabelType</code></dt>
 <dd>Specifies whether to display a string (XmSTRING) or a pixmap (XmPIXMAP) in the child&#8217;s associated label.</dd>
 <dt><code>XmNfillStyle</code></dt>
-<dd>Specifies whether the child should be displayed at its natural size (XmFILL_RAGGED) or stretched to fill the entire width of the column it is displayed within (XmFILL_FLUSH).<br />
+<dd>Specifies whether the child should be displayed at its natural size (XmFILL_RAGGED) or stretched to fill the entire width of the column it is displayed within (XmFILL_FLUSH).<br/>
  <code>XmFILL_UNSPECIFIED uses the value of the XmColumn&#8217;s XmNdefaultFillStyle.</code></dd>
 <dt><code>XmNshowEntryLabel</code></dt>
 <dd>Specifies whether or not to display the child&#8217;s associated label.</dd>

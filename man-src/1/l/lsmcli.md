@@ -36,29 +36,29 @@ description: "lsmcli – libStorageMgmt command line interface"
 </dt><dd> * Simulator:</dd>
 <dl>
 <dt>
-</dt><dd> <code>sim://</code><br />
+</dt><dd> <code>sim://</code><br/>
  <code>simc://</code></dd></dl>
 <dl>
 <dt>
 </dt><dd> * NetApp ONTAP:</dd>
 <dl>
 <dt>
-</dt><dd> <code><a href="ontap://username@host">ontap://username@host</a></code><br />
+</dt><dd> <code><a href="ontap://username@host">ontap://username@host</a></code><br/>
  <code>ontap+<a href="ssl://username@host">ssl://username@host</a></code></dd></dl>
 <dl>
 <dt>
 </dt><dd> * SMI-S supported arrays (eg. EMC CX/VNX, HDS AMS, IBM SVC/DS, LSI MegaRAID and others):</dd>
 <dl>
 <dt>
-</dt><dd> <code><a href="smis://username@host:">smis://username@host:</a>&lt;port&gt;?namespace=&lt;namespace&gt;</code><br />
+</dt><dd> <code><a href="smis://username@host:">smis://username@host:</a>&lt;port&gt;?namespace=&lt;namespace&gt;</code><br/>
  <code>smis+<a href="ssl://username@host:">ssl://username@host:</a>&lt;port&gt;?namespace=&lt;namespace&gt;</code></dd></dl>
 <dl>
 <dt>
 </dt><dd> You can pass URI to lsmcli via one of these methods:</dd>
 <dl>
 <dt>
-</dt><dd> * Using &#8216;<code>-u</code>, <code>&#8211;uri</code>&#8216; argument.<br />
- * Using &#8216;<code>LSMCLI_URI</code>&#8216; environment variable.<br />
+</dt><dd> * Using &#8216;<code>-u</code>, <code>&#8211;uri</code>&#8216; argument.<br/>
+ * Using &#8216;<code>LSMCLI_URI</code>&#8216; environment variable.<br/>
  * Add this line into <code>$HOME/.lsmcli</code>:</dd>
 <dl>
 <dt>
@@ -68,7 +68,7 @@ description: "lsmcli – libStorageMgmt command line interface"
 <dd> For storage array password authentication you can pass it to lsmcli via one of the following methods:</dd>
 <dl>
 <dt>
-</dt><dd> * &#8216;<code>-P</code>, <code>&#8211;prompt</code>&#8216; argument to prompt for password.<br />
+</dt><dd> * &#8216;<code>-P</code>, <code>&#8211;prompt</code>&#8216; argument to prompt for password.<br/>
  * &#8216;<code>LSMCLI_PASSWORD</code>&#8216; environment variable.</dd></dl>
 </dl>
 </dl>
@@ -102,24 +102,24 @@ description: "lsmcli – libStorageMgmt command line interface"
 <dt><code>-b</code></dt>
 <dd> Run the command asynchronously instead of waiting for completion. The lsmcli command will exit with exit code(7) and job id will be written to STDOUT when a command is still executing on the storage array. Use &#8216;job-status &#8211;id <i>&lt;job id&gt;</i>&#8216; to inquire on the progress of the command. Some arrays or plugins might not support asynchronous operations, in those circumstances, -b will be ineffective. Command will wait until finished.</dd>
 <dt><code>-s</code>, <code>&#8211;script</code></dt>
-<dd> Displaying data in script friendly way.<br />
+<dd> Displaying data in script friendly way.<br/>
  Without this option, data is displayed in this manner (default): </dd>
-<p>&nbsp;<wbr>ID&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>| Name&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>| Element Type&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8230;<br />
-&nbsp;<wbr>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&nbsp;<wbr>&nbsp;<wbr>&#8230;<br />
-&nbsp;<wbr>aggr0&nbsp;<wbr>&nbsp;<wbr>| aggr0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>| FS,SYSTEM_RESERVED,POOL&nbsp;<wbr>&nbsp;<wbr>&#8230;<br />
+<p>&nbsp;<wbr>ID&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>| Name&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>| Element Type&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8230;<br/>
+&nbsp;<wbr>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&nbsp;<wbr>&nbsp;<wbr>&#8230;<br/>
+&nbsp;<wbr>aggr0&nbsp;<wbr>&nbsp;<wbr>| aggr0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>| FS,SYSTEM_RESERVED,POOL&nbsp;<wbr>&nbsp;<wbr>&#8230;<br/>
 &nbsp;<wbr>iscsi&nbsp;<wbr>&nbsp;<wbr>| iscsi&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>| FS,POOL&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8230; </p>
 <p> With this option, data is displayed in this manner. </p>
-<p>&nbsp;<wbr>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;<br />
-&nbsp;<wbr>ID&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>| aggr0<br />
-&nbsp;<wbr>Name&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>| aggr0<br />
-&nbsp;<wbr>Element Type&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>| FS,SYSTEM_RESERVED,POOL<br />
-&nbsp;<wbr>&#8230;<br />
-&nbsp;<wbr>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;<br />
-&nbsp;<wbr>ID&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>| iscsi<br />
-&nbsp;<wbr>Name&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>| iscsi<br />
-&nbsp;<wbr>Element Type&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>| FS,POOL<br />
+<p>&nbsp;<wbr>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;<br/>
+&nbsp;<wbr>ID&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>| aggr0<br/>
+&nbsp;<wbr>Name&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>| aggr0<br/>
+&nbsp;<wbr>Element Type&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>| FS,SYSTEM_RESERVED,POOL<br/>
+&nbsp;<wbr>&#8230;<br/>
+&nbsp;<wbr>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;<br/>
+&nbsp;<wbr>ID&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>| iscsi<br/>
+&nbsp;<wbr>Name&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>| iscsi<br/>
+&nbsp;<wbr>Element Type&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>| FS,POOL<br/>
 &nbsp;<wbr>&#8230; </p>
-<p> Please note:<br />
+<p> Please note:<br/>
  To reduce the width of output, NOT all properties will be displayed in default column display. </p>
 </dl>
 <h2>COMMANDS</h2>
@@ -127,8 +127,8 @@ description: "lsmcli – libStorageMgmt command line interface"
 <p> List information on LSM objects</p>
 <dl>
 <dt><code>&#8211;type</code> <i>&lt;TYPE&gt;</i></dt>
-<dd> Required. Valid values are (case insensitive):<br />
- <code>VOLUMES</code>, <code>POOLS</code>, <code>FS</code>, <code>SNAPSHOTS</code>, <code>EXPORTS</code>, <code>NFS_CLIENT_AUTH</code>,<br />
+<dd> Required. Valid values are (case insensitive):<br/>
+ <code>VOLUMES</code>, <code>POOLS</code>, <code>FS</code>, <code>SNAPSHOTS</code>, <code>EXPORTS</code>, <code>NFS_CLIENT_AUTH</code>,<br/>
  <code>ACCESS_GROUPS</code>, <code>SYSTEMS</code>, <code>DISKS</code>, <code>PLUGINS</code>, <code>TARGET_PORTS</code>, <code>BATTERIES</code>. </dd>
 <dt><code>&#8211;fs</code> <i>&lt;FS_ID&gt;</i></dt>
 <dd> Required for <code>&#8211;type</code>=<code>SNAPSHOTS</code>. List the snapshots of certain filesystem. PLUGINS will list all supported plugins of LSM, not only the current one.</dd>
@@ -137,14 +137,14 @@ description: "lsmcli – libStorageMgmt command line interface"
 <dt><code>&#8211;pool</code> <i>&lt;POOL_ID&gt;</i></dt>
 <dd> Search resources from pool with POOL_ID. Only supported by these types of resources: <code>VOLUMES</code>, <code>POOLS</code>, <code>FS</code>.</dd>
 <dt><code>&#8211;vol</code> <i>&lt;VOL_ID&gt;</i></dt>
-<dd> Search resources from volume with VOL_ID. Only supported by these types of resources: <code>VOLUMES</code>, <code>ACCESS_GROUPS</code>.<br />
- To query volume masking status, please use this command:<br />
+<dd> Search resources from volume with VOL_ID. Only supported by these types of resources: <code>VOLUMES</code>, <code>ACCESS_GROUPS</code>.<br/>
+ To query volume masking status, please use this command:<br/>
 lsmcli list &#8211;type ACCESS_GROUPS &#8211;vol&nbsp;<wbr>&lt;VOL_ID&gt;</dd>
 <dt><code>&#8211;disk</code> <i>&lt;DISK_ID&gt;</i></dt>
 <dd> Search resources from disk with DISK_ID. Only supported by these types of resources: <code>DISK</code>.</dd>
 <dt><code>&#8211;ag</code> <i>&lt;AG_ID&gt;</i></dt>
-<dd> Search resources from access group with AG_ID. Only supported by these types of resources: <code>ACCESS_GROUPS</code>, <code>VOLUMES</code>.<br />
- To query volume masking status, please use this command:<br />
+<dd> Search resources from access group with AG_ID. Only supported by these types of resources: <code>ACCESS_GROUPS</code>, <code>VOLUMES</code>.<br/>
+ To query volume masking status, please use this command:<br/>
 lsmcli list &#8211;type VOLUMES &#8211;ag&nbsp;<wbr>&lt;AG_ID&gt;</dd>
 <dt><code>&#8211;fs</code> <i>&lt;FS_ID&gt;</i></dt>
 <dd> Search resources from file system with FS_ID. Only supported by these types of resources: <code>FS</code>.</dd>
@@ -233,7 +233,7 @@ lsmcli list &#8211;type VOLUMES &#8211;ag&nbsp;<wbr>&lt;AG_ID&gt;</dd>
 <dt><code>&#8211;name</code> <i>&lt;NAME&gt;</i></dt>
 <dd> Required. The name for new volume to hold replicated data.</dd>
 <dt><code>&#8211;rep-type</code> <i>&lt;REPL_TYPE&gt;</i> (see <code>VOLUME REPLICATION TYPES)</code></dt>
-<dd> Required. Valid types of replication are:<br />
+<dd> Required. Valid types of replication are:<br/>
  <code>CLONE</code>, <code>COPY</code>, <code>MIRROR_ASYNC</code>, <code>MIRROR_SYNC</code>.</dd>
 <dt><code>&#8211;pool</code> <i>&lt;POOL_ID&gt;</i></dt>
 <dd> Optional. The ID of pool where the new volume should be created from. If not specified, plugin or array will choose appropriate pool. </dd>
@@ -246,7 +246,7 @@ lsmcli list &#8211;type VOLUMES &#8211;ag&nbsp;<wbr>&lt;AG_ID&gt;</dd>
 <dt><code>&#8211;dst-vol</code> <i>&lt;DST_VOL_ID&gt;</i></dt>
 <dd> Required. The ID of replication destination volume.</dd>
 <dt><code>&#8211;rep-type</code> <i>&lt;REPL_TYPE&gt;</i> (see <code>VOLUME REPLICATION TYPES)</code></dt>
-<dd> Required. Appropriate types of replication are:<br />
+<dd> Required. Appropriate types of replication are:<br/>
  <code>CLONE</code>, <code>COPY</code>.</dd>
 <dt><code>&#8211;src-start</code> <i>&lt;SRC_START_BLK&gt;</i></dt>
 <dd> Required. Replication source volume start block number. Must in pair with <code>&#8211;count</code> and <code>&#8211;dst-start</code>. If you have several non-continuous block ranges, you can define repeatly define this arugument, like &#8216;<code>&#8211;src-start 0 &#8211;dst-start 0 &#8211;count 1024 &#8211;src-start 2048 &#8211;dst-start 2048 &#8211;count 2048</code>&#8216;</dd>
@@ -469,7 +469,7 @@ lsmcli list &#8211;type VOLUMES &#8211;ag&nbsp;<wbr>&lt;AG_ID&gt;</dd>
 <dd> Optional. Repeatable. Only remove dependencies on specific file(s), eg. &#8216;<code>&#8211;file fileA &#8211;file pathB</code>&#8216;. </dd>
 </dl>
 <h3>file-clone</h3>
-<p> Creates a clone of a file (thin provisioned). Note: &#8211;src and &#8211;dst need to be paired<br />
+<p> Creates a clone of a file (thin provisioned). Note: &#8211;src and &#8211;dst need to be paired<br/>
 &nbsp;<wbr>eg.&nbsp;<wbr>&#8216;<code>&#8211;src fileA &#8211;src fileB &#8211;dst fileA_clone &#8211;dst fileB_clone</code>&#8216;.</p>
 <dl>
 <dt><code>&#8211;src</code> <i>&lt;SRC_FILE_PATH&gt;</i></dt>
@@ -616,21 +616,21 @@ lsmcli list &#8211;type VOLUMES &#8211;ag&nbsp;<wbr>&lt;AG_ID&gt;</dd>
 </dl>
 <h2>SIZE OPTION</h2>
 <h3><code>&#8211;size</code> <i>&lt;SIZE&gt;</i></h3>
-<p> Storage space size. Format is &#8216;<i>&lt;number&gt;</i>&#8216; + &#8216;<i>&lt;prefix&gt;</i>&#8216;. Example: &quot;10GiB&quot;, &quot;20.5MB&quot;. No postfix indicates bytes. Valid prefixes are:<br />
-&nbsp;<wbr>KiB,&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>2^10 Bytes<br />
-&nbsp;<wbr>MiB,&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>2^20 Bytes<br />
-&nbsp;<wbr>GiB,&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>2^30 Bytes<br />
-&nbsp;<wbr>TiB,&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>2^40 Bytes<br />
-&nbsp;<wbr>PiB,&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>2^50 Bytes<br />
-&nbsp;<wbr>EiB,&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>2^60 Bytes<br />
-&nbsp;<wbr>KB,&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>10^3 Bytes<br />
-&nbsp;<wbr>MB,&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>10^6 Bytes<br />
-&nbsp;<wbr>GB,&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>10^9 Bytes<br />
-&nbsp;<wbr>TB,&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>10^12 Bytes<br />
-&nbsp;<wbr>PB,&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>10^15 Bytes<br />
+<p> Storage space size. Format is &#8216;<i>&lt;number&gt;</i>&#8216; + &#8216;<i>&lt;prefix&gt;</i>&#8216;. Example: &quot;10GiB&quot;, &quot;20.5MB&quot;. No postfix indicates bytes. Valid prefixes are:<br/>
+&nbsp;<wbr>KiB,&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>2^10 Bytes<br/>
+&nbsp;<wbr>MiB,&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>2^20 Bytes<br/>
+&nbsp;<wbr>GiB,&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>2^30 Bytes<br/>
+&nbsp;<wbr>TiB,&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>2^40 Bytes<br/>
+&nbsp;<wbr>PiB,&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>2^50 Bytes<br/>
+&nbsp;<wbr>EiB,&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>2^60 Bytes<br/>
+&nbsp;<wbr>KB,&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>10^3 Bytes<br/>
+&nbsp;<wbr>MB,&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>10^6 Bytes<br/>
+&nbsp;<wbr>GB,&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>10^9 Bytes<br/>
+&nbsp;<wbr>TB,&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>10^12 Bytes<br/>
+&nbsp;<wbr>PB,&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>10^15 Bytes<br/>
 &nbsp;<wbr>EB,&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>10^17 Bytes </p>
-<p> These prefixes are supported also, but not recommended:<br />
-&nbsp;<wbr>K, M, G, T, P, E,&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>equal to KiB, MiB, and etc<br />
+<p> These prefixes are supported also, but not recommended:<br/>
+&nbsp;<wbr>K, M, G, T, P, E,&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>equal to KiB, MiB, and etc<br/>
 &nbsp;<wbr>k, m, g, t, p, e,&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>equal to KiB, MiB, and etc </p>
 <h2>FILES</h2>
 <dl>
@@ -651,8 +651,8 @@ $ lsmcli -u <a href="smispy://username@host:5988/?namespace=root/interop">smispy
         -l SYSTEMS -P
 </pre>
 </dd><dt>Targetd, list pools (using env variables for URI and password)</dt>
-<dd> $ export LSMCLI_URI=targetd://username [at] host:18700<br />
- $ export LSMCLI_PASSWORD=<i>&lt;password&gt;</i><br />
+<dd> $ export LSMCLI_URI=targetd://username [at] host:18700<br/>
+ $ export LSMCLI_PASSWORD=<i>&lt;password&gt;</i><br/>
  $ lsmcli -l POOLS</dd>
 <dt>NexentaStor, create volume (using environment variables for URI and password)</dt>
 <dd>
@@ -710,5 +710,5 @@ $ lsmcli -u smispy+<a href="ssl://username@host:5989/?namespace=interop">ssl://u
 <h2>BUGS</h2>
 <p> Please report bugs to <i>&lt;libstoragemgmt-devel [at] lists.fedorahosted.org&gt;</i></p>
 <h2>AUTHOR</h2>
-<p> Tony Asleson <i>&lt;tasleson [at] redhat.com&gt;</i><br />
+<p> Tony Asleson <i>&lt;tasleson [at] redhat.com&gt;</i><br/>
  Gris Ge <i>&lt;fge [at] redhat.com&gt;</i> </p>

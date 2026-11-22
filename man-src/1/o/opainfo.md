@@ -99,15 +99,15 @@ description: "opainfo"
 <dd> Verbose output. Additional invocations (#8217#8211;v -v &#8230;) turn on debugging, openib debugging, and libibumad debugging. </dd>
 </dl>
 <h2>Examples</h2>
-<p> opainfo<br />
- hfi1_0:1 PortGID:0xfe80000000000000:001175010165b19c<br />
- PortState: Active<br />
- LinkSpeed Act: 25Gb En: 25Gb<br />
- LinkWidth Act: 4 En: 4<br />
- LinkWidthDnGrd ActTx: 4 Rx: 4 En: 3,4<br />
- LCRC Act: 14-bit En: 14-bit,16-bit,48-bit Mgmt: True<br />
- LID: 0x00000001-0x00000001 SM LID: 0x00000002 SL: 0<br />
- QSFP: PassiveCu, 1m FCI Electronics P/N 10131941-2010LF Rev 5<br />
- Xmit Data: 22581581 MB Pkts: 5100825193<br />
- Recv Data: 18725619 MB Pkts: 4024569756<br />
+<p> opainfo<br/>
+ hfi1_0:1 PortGID:0xfe80000000000000:001175010165b19c<br/>
+ PortState: Active<br/>
+ LinkSpeed Act: 25Gb En: 25Gb<br/>
+ LinkWidth Act: 4 En: 4<br/>
+ LinkWidthDnGrd ActTx: 4 Rx: 4 En: 3,4<br/>
+ LCRC Act: 14-bit En: 14-bit,16-bit,48-bit Mgmt: True<br/>
+ LID: 0x00000001-0x00000001 SM LID: 0x00000002 SL: 0<br/>
+ QSFP: PassiveCu, 1m FCI Electronics P/N 10131941-2010LF Rev 5<br/>
+ Xmit Data: 22581581 MB Pkts: 5100825193<br/>
+ Recv Data: 18725619 MB Pkts: 4024569756<br/>
  Link Quality: 5 (Excellent) </p>

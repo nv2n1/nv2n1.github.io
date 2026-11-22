@@ -11,7 +11,7 @@ description: "chpgst.f –"
 <p> chpgst.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>chpgst</code> (ITYPE, UPLO, N, AP, BP, INFO)<br />
+<p> subroutine <code>chpgst</code> (ITYPE, UPLO, N, AP, BP, INFO)<br/>
  <i></i><code>CHPGST</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine chpgst (integerITYPE, characterUPLO, integerN, complex, dimension( * )AP, complex, dimension( * )BP, integerINFO)</h3>

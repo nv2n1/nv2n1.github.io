@@ -10,7 +10,7 @@ description: "dzasum.f –"
 <p>dzasum.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>DOUBLE PRECISION function <code>dzasum</code> (N, ZX, INCX)<br />
+<p>DOUBLE PRECISION function <code>dzasum</code> (N, ZX, INCX)<br/>
  <i></i><code>DZASUM</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>DOUBLE PRECISION function dzasum (integerN, complex*16, dimension(*)ZX, integerINCX)</h3>

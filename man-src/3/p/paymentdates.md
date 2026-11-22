@@ -10,52 +10,52 @@ description: "QuantLib::YearOnYearInflationSwap – Year-on-year inflation-index
 
 <p>QuantLib::YearOnYearInflationSwap &#8211; Year-on-year inflation-indexed swap. </p>
 
-<p> <br />
+<p> <br/>
  </p>
 <p>#include &lt;ql/instruments/yearonyearinflationswap.hpp&gt; </p>
 <p>Inherits <code>QuantLib::InflationSwap</code>. </p>
 <h3>Public Member Functions</h3>
-<p> <br />
- <code>YearOnYearInflationSwap</code> (const <code>Date</code> &amp;start, const <code>Date</code> &amp;maturity, const <code>Period</code> &amp;lag, <code>Rate</code> fixedRate, const <code>Calendar</code> &amp;calendar, <code>BusinessDayConvention</code> convention, const <code>DayCounter</code> &amp;dayCounter, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;yieldTS, const <code>Handle</code>&lt; <code>YoYInflationTermStructure</code> &gt; &amp;inflationTS, bool allowAmbiguousPayments=false, const <code>Period</code> &amp;ambiguousPaymentPeriod=<code>Period</code>(1, Months)) <br />
+<p> <br/>
+ <code>YearOnYearInflationSwap</code> (const <code>Date</code> &amp;start, const <code>Date</code> &amp;maturity, const <code>Period</code> &amp;lag, <code>Rate</code> fixedRate, const <code>Calendar</code> &amp;calendar, <code>BusinessDayConvention</code> convention, const <code>DayCounter</code> &amp;dayCounter, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;yieldTS, const <code>Handle</code>&lt; <code>YoYInflationTermStructure</code> &gt; &amp;inflationTS, bool allowAmbiguousPayments=false, const <code>Period</code> &amp;ambiguousPaymentPeriod=<code>Period</code>(1, Months)) <br/>
  </p>
-<p> <code>Instrument interface</code> <br />
+<p> <code>Instrument interface</code> <br/>
  </p>
-<p> <br />
- bool <code>isExpired</code> () const <br />
+<p> <br/>
+ bool <code>isExpired</code> () const <br/>
  <i>returns whether the instrument is still tradable. </i> </p>
-<p> <code>InflationSwap interface</code> <br />
+<p> <code>InflationSwap interface</code> <br/>
  </p>
-<p> <br />
- <code>Rate</code> <code>fairRate</code> () const <br />
+<p> <br/>
+ <code>Rate</code> <code>fairRate</code> () const <br/>
  <i>the rate $ ilde{K} $ such that NPV = 0. </i> </p>
-<p> <code>Inspectors</code> <br />
+<p> <code>Inspectors</code> <br/>
  </p>
-<p> <br />
- <code>Rate</code> <code>fixedRate</code> () const <br />
- <i>$ K $ in the above formula. </i> <br />
- std::vector&lt; <code>Date</code> &gt; <code>paymentDates</code> () const <br />
+<p> <br/>
+ <code>Rate</code> <code>fixedRate</code> () const <br/>
+ <i>$ K $ in the above formula. </i> <br/>
+ std::vector&lt; <code>Date</code> &gt; <code>paymentDates</code> () const <br/>
   </p>
 <h3>Protected Member Functions</h3>
-<p> <code>Instrument interface</code> <br />
+<p> <code>Instrument interface</code> <br/>
  </p>
-<p> <br />
- void <code>setupExpired</code> () const <br />
- <br />
- void <code>performCalculations</code> () const <br />
+<p> <br/>
+ void <code>setupExpired</code> () const <br/>
+ <br/>
+ void <code>performCalculations</code> () const <br/>
   </p>
 <h3>Protected Attributes</h3>
-<p> <br />
- <code>Rate</code> <code>fixedRate_</code> <br />
- <br />
- <code>Handle</code>&lt; <code>YoYInflationTermStructure</code> &gt; <code>inflationTS_</code> <br />
- <br />
- bool <code>allowAmbiguousPayments_</code> <br />
- <br />
- <code>Period</code> <code>ambiguousPaymentPeriod_</code> <br />
- <br />
- std::vector&lt; <code>Date</code> &gt; <code>paymentDates_</code> <br />
- <br />
- <code>Rate</code> <code>fairRate_</code> <br />
+<p> <br/>
+ <code>Rate</code> <code>fixedRate_</code> <br/>
+ <br/>
+ <code>Handle</code>&lt; <code>YoYInflationTermStructure</code> &gt; <code>inflationTS_</code> <br/>
+ <br/>
+ bool <code>allowAmbiguousPayments_</code> <br/>
+ <br/>
+ <code>Period</code> <code>ambiguousPaymentPeriod_</code> <br/>
+ <br/>
+ std::vector&lt; <code>Date</code> &gt; <code>paymentDates_</code> <br/>
+ <br/>
+ <code>Rate</code> <code>fairRate_</code> <br/>
   </p>
 <h2>Detailed Description</h2>
 <p>Year-on-year inflation-indexed swap. </p>

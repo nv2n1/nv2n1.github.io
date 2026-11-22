@@ -50,5 +50,5 @@ description: "saveconfig.json – Saved configuration file for rtslib-fb and LIO
 <h2>Author</h2>
 <p>Man page written by Andy Grover &lt;agrover [at] redhat.com&gt;.</p>
 <h2>Reporting Bugs</h2>
-<p>Report bugs via &lt;targetcli-fb-devel [at] lists.fedorahosted.org&gt;<br />
+<p>Report bugs via &lt;targetcli-fb-devel [at] lists.fedorahosted.org&gt;<br/>
  or &lt;<a rel="nofollow" href="https://github.com/open-iscsi/rtslib-fb/issues">https://github.com/open-iscsi/rtslib-fb/issues</a>&gt;</p>

@@ -8,17 +8,17 @@ url: "/docs/linux/man/1-tiffmedian/"
 description: "tiffmedian – apply the median cut algorithm to data in a TIFF file"
 ---
 
-<p> tiffmedian &#8211; apply the median cut algorithm to data in a <font SIZE="-1">TIFF</font> file</p>
+<p> tiffmedian &#8211; apply the median cut algorithm to data in a TIFF file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tiffmedian</code> [ <i>options</i> ] <i>input.tif</i> <i>output.tif</i></p>
 <h2>DESCRIPTION</h2>
-<p> <i>tiffmedian</i> applies the median cut algorithm to an <font SIZE="-1">RGB</font> image in <i>input.tif</i> to generate a palette image that is written to <i>output.tif</i>. The generated colormap has, by default, 256 entries. The image data is quantized by mapping each pixel to the closest color values in the colormap.</p>
+<p> <i>tiffmedian</i> applies the median cut algorithm to an RGB image in <i>input.tif</i> to generate a palette image that is written to <i>output.tif</i>. The generated colormap has, by default, 256 entries. The image data is quantized by mapping each pixel to the closest color values in the colormap.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-c</code></dt>
 <dd> Specify the compression to use for data written to the output file: <code>none </code> for no compression, <code>packbits</code> for PackBits compression, <code>lzw</code> for Lempel-Ziv &amp; Welch compression, and <code>zip</code> for Deflate compression. By default <i>tiffmedian</i> will compress data according to the value of the <i>Compression</i> tag found in the source file.</dd>
 <dt>
-</dt><dd> <font SIZE="-1">LZW</font> compression can be specified together with a <i>predictor</i> value. A predictor value of 2 causes each scanline of the output image to undergo horizontal differencing before it is encoded; a value of 1 forces each scanline to be encoded without differencing. LZW-specific options are specified by appending a &#8220;:&#8221;-separated list to the &#8220;lzw&#8221; option; e.g. <code>-c lzw:2</code> for <font SIZE="-1">LZW</font> compression with horizontal differencing.</dd>
+</dt><dd> LZW compression can be specified together with a <i>predictor</i> value. A predictor value of 2 causes each scanline of the output image to undergo horizontal differencing before it is encoded; a value of 1 forces each scanline to be encoded without differencing. LZW-specific options are specified by appending a &#8220;:&#8221;-separated list to the &#8220;lzw&#8221; option; e.g. <code>-c lzw:2</code> for LZW compression with horizontal differencing.</dd>
 <dt><code>-C</code></dt>
 <dd> Specify the number of entries to use in the generated colormap. By default all 256 entries/colors are used.</dd>
 <dt><code>-f</code></dt>

@@ -34,12 +34,12 @@ description: "kcstashtest – command line interface to test the stash database"
 <p> Options feature the following. </p>
 <dl>
 <dt>
-</dt><dd> <code>-th </code><i>num</i> : specifies the number of worker threads.<br />
- <code>-rnd</code> : performs random test.<br />
- <code>-etc</code> : performs miscellaneous operations.<br />
- <code>-tran</code> : performs transaction.<br />
- <code>-bnum </code><i>num</i> : specifies the number of buckets of the hash table.<br />
- <code>-lv</code> : reports all errors.<br />
+</dt><dd> <code>-th </code><i>num</i> : specifies the number of worker threads.<br/>
+ <code>-rnd</code> : performs random test.<br/>
+ <code>-etc</code> : performs miscellaneous operations.<br/>
+ <code>-tran</code> : performs transaction.<br/>
+ <code>-bnum </code><i>num</i> : specifies the number of buckets of the hash table.<br/>
+ <code>-lv</code> : reports all errors.<br/>
  <code>-it </code><i>num</i> : specifies the number of repetition.
 </dd></dl>
 <p> This command returns 0 on success, another on failure. </p>

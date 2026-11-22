@@ -35,8 +35,8 @@ ssize_t process_vm_writev(pid_t pid,
 <p> The <code>process_vm_readv</code>() system call transfers data from the remote process to the local process. The data to be transferred is identified by <i>remote_iov</i> and <i>riovcnt</i>: <i>remote_iov</i> is a pointer to an array describing address ranges in the process <i>pid</i>, and <i>riovcnt</i> specifies the number of elements in <i>remote_iov</i>. The data is transferred to the locations specified by <i>local_iov</i> and <i>liovcnt</i>: <i>local_iov</i> is a pointer to an array describing address ranges in the calling process, and <i>liovcnt</i> specifies the number of elements in <i>local_iov</i>. </p>
 <p> The <code>process_vm_writev</code>() system call is the converse of <code>process_vm_readv</code>()&#8212;it transfers data from the local process to the remote process. Other than the direction of the transfer, the arguments <i>liovcnt</i>, <i>local_iov</i>, <i>riovcnt</i>, and <i>remote_iov</i> have the same meaning as for <code>process_vm_readv</code>(). </p>
 <p> The <i>local_iov</i> and <i>remote_iov</i> arguments point to an array of <i>iovec</i> structures, defined in <i>&lt;sys/uio.h&gt;</i> as: </p>
-<p> struct iovec {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;void&nbsp;<wbr>&nbsp;*iov_base;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Starting address&nbsp;*/<br />
+<p> struct iovec {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;void&nbsp;<wbr>&nbsp;*iov_base;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Starting address&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;size_t iov_len;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Number of bytes to transfer&nbsp;*/ }; </p>
 <p> Buffers are processed in array order. This means that <code>process_vm_readv</code>() completely fills <i>local_iov[0]</i> before proceeding to <i>local_iov[1]</i>, and so on. Likewise, <i>remote_iov[0]</i> is completely read before proceeding to <i>remote_iov[1]</i>, and so on. </p>
 <p> Similarly, <code>process_vm_writev</code>() writes out the entire contents of <i>local_iov[0]</i> before proceeding to <i>local_iov[1]</i>, and it completely fills <i>remote_iov[0]</i> before proceeding to <i>remote_iov[1]</i>. </p>
@@ -77,23 +77,23 @@ ssize_t process_vm_writev(pid_t pid,
 <h2>EXAMPLES</h2>
 <p> The following code sample demonstrates the use of <code>process_vm_readv</code>(). It reads 20 bytes at the address 0x10000 from the process with PID 10 and writes the first 10 bytes into <i>buf1</i> and the second 10 bytes into <i>buf2</i>. </p>
 <p> #include &lt;sys/uio.h&gt; </p>
-<p> int main(void) {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct iovec local[2];<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct iovec remote[1];<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char buf1[10];<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char buf2[10];<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;ssize_t nread;<br />
+<p> int main(void) {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct iovec local[2];<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct iovec remote[1];<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char buf1[10];<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char buf2[10];<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;ssize_t nread;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;pid_t pid&nbsp;=&nbsp;10;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;PID of remote process&nbsp;*/ </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;local[0].iov_base&nbsp;=&nbsp;buf1;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;local[0].iov_len&nbsp;=&nbsp;10;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;local[1].iov_base&nbsp;=&nbsp;buf2;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;local[1].iov_len&nbsp;=&nbsp;10;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;remote[0].iov_base&nbsp;=&nbsp;(void&nbsp;*)&nbsp;0x10000;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;local[0].iov_base&nbsp;=&nbsp;buf1;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;local[0].iov_len&nbsp;=&nbsp;10;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;local[1].iov_base&nbsp;=&nbsp;buf2;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;local[1].iov_len&nbsp;=&nbsp;10;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;remote[0].iov_base&nbsp;=&nbsp;(void&nbsp;*)&nbsp;0x10000;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;remote[0].iov_len&nbsp;=&nbsp;20; </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;nread&nbsp;=&nbsp;process_vm_readv(pid, local, 2, remote, 1, 0);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(nread&nbsp;!=&nbsp;20)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;return 1;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;else<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;nread&nbsp;=&nbsp;process_vm_readv(pid, local, 2, remote, 1, 0);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(nread&nbsp;!=&nbsp;20)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;return 1;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;else<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;return 0; }</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/2-readv/">readv</a></code>(2), <code><a href="/docs/linux/man/2-writev/">writev</a></code>(2)</p>

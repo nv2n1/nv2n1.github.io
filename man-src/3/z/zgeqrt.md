@@ -10,7 +10,7 @@ description: "zgeqrt.f –"
 <p>zgeqrt.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zgeqrt</code> (M, N, NB, A, LDA, T, LDT, WORK, INFO)<br />
+<p>subroutine <code>zgeqrt</code> (M, N, NB, A, LDA, T, LDT, WORK, INFO)<br/>
  <i></i><code>ZGEQRT</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zgeqrt (integerM, integerN, integerNB, complex*16, dimension( lda, * )A, integerLDA, complex*16, dimension( ldt, * )T, integerLDT, complex*16, dimension( * )WORK, integerINFO)</h3>

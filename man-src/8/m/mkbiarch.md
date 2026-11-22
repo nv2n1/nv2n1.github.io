@@ -21,7 +21,7 @@ description: "mkbiarch.py – make a multiple architecture Live boot disk image 
 <h2>Bugs</h2>
 <p>Please report any bugs to <a rel="nofollow" href="http://bugzilla.redhat.com">http://bugzilla.redhat.com</a> under component livecd-tools </p>
 <h2>Availability</h2>
-<p>To check out the git version of this program<br />
+<p>To check out the git version of this program<br/>
 &nbsp;<wbr>git clone&nbsp;<wbr><a href="git://git.fedorahosted.org/livecd">git://git.fedorahosted.org/livecd</a></p>
 <h2>Author</h2>
 <p>Jasper Hartline &lt;autopsy [at] liveprojects.info&gt;</p>

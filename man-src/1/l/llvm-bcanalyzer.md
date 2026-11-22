@@ -12,14 +12,14 @@ description: "llvm-bcanalyzer – LLVM bitcode analyzer"
 <h2>SYNOPSIS</h2>
 <p> <code>llvm-bcanalyzer</code> [<i>options</i>] [<i>filename</i>]</p>
 <h2>DESCRIPTION</h2>
-<p> The <code>llvm-bcanalyzer</code> command is a small utility for analyzing bitcode files. The tool reads a bitcode file (such as generated with the <code>llvm-as</code> tool) and produces a statistical report on the contents of the bitcode file. The tool can also dump a low level but human readable version of the bitcode file. This tool is probably not of much interest or utility except for those working directly with the bitcode file format. Most <font SIZE="-1">LLVM</font> users can just ignore this tool. </p>
+<p> The <code>llvm-bcanalyzer</code> command is a small utility for analyzing bitcode files. The tool reads a bitcode file (such as generated with the <code>llvm-as</code> tool) and produces a statistical report on the contents of the bitcode file. The tool can also dump a low level but human readable version of the bitcode file. This tool is probably not of much interest or utility except for those working directly with the bitcode file format. Most LLVM users can just ignore this tool. </p>
 <p> If <i>filename</i> is omitted or is <tt>&quot;-&quot;</tt>, then <code>llvm-bcanalyzer</code> reads its input from standard input. This is useful for combining the tool into a pipeline. Output is written to the standard output.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-nodetails</code></dt>
 <dd> Causes <code>llvm-bcanalyzer</code> to abbreviate its output by writing out only a module level summary. The details for individual functions are not displayed.</dd>
 <dt><code>-dump</code></dt>
-<dd> Causes <code>llvm-bcanalyzer</code> to dump the bitcode in a human readable format. This format is significantly different from <font SIZE="-1">LLVM</font> assembly and provides details about the encoding of the bitcode file.</dd>
+<dd> Causes <code>llvm-bcanalyzer</code> to dump the bitcode in a human readable format. This format is significantly different from LLVM assembly and provides details about the encoding of the bitcode file.</dd>
 <dt><code>-verify</code></dt>
 <dd> Causes <code>llvm-bcanalyzer</code> to verify the module produced by reading the bitcode. This ensures that the statistics generated are based on a consistent module.</dd>
 <dt><code>-help</code></dt>
@@ -32,7 +32,7 @@ description: "llvm-bcanalyzer – LLVM bitcode analyzer"
 <dt><code>Bitcode Analysis Of Module</code></dt>
 <dd> This just provides the name of the module for which bitcode analysis is being generated.</dd>
 <dt><code>Bitcode Version Number</code></dt>
-<dd> The bitcode version (not <font SIZE="-1">LLVM</font> version) of the file read by the analyzer.</dd>
+<dd> The bitcode version (not LLVM version) of the file read by the analyzer.</dd>
 <dt><code>File Size</code></dt>
 <dd> The size, in bytes, of the entire bitcode file.</dd>
 <dt><code>Module Bytes</code></dt>
@@ -66,7 +66,7 @@ description: "llvm-bcanalyzer – LLVM bitcode analyzer"
 <dt><code>Number Of Instructions</code></dt>
 <dd> The total number of instructions defined in all functions in the bitcode file.</dd>
 <dt><code>Number Of Long Instructions</code></dt>
-<dd> The total number of long instructions defined in all functions in the bitcode file. Long instructions are those taking greater than 4 bytes. Typically long instructions are GetElementPtr with several indices, <font SIZE="-1">PHI</font> nodes, and calls to functions with large numbers of arguments.</dd>
+<dd> The total number of long instructions defined in all functions in the bitcode file. Long instructions are those taking greater than 4 bytes. Typically long instructions are GetElementPtr with several indices, PHI nodes, and calls to functions with large numbers of arguments.</dd>
 <dt><code>Number Of Operands</code></dt>
 <dd> The total number of operands used in all instructions in the bitcode file.</dd>
 <dt><code>Number Of Compaction Tables</code></dt>
@@ -89,16 +89,16 @@ description: "llvm-bcanalyzer – LLVM bitcode analyzer"
 <dd> The average size of a global definition (constants and global variables).</dd>
 <dt><code>Bytes Per Function</code></dt>
 <dd> The average number of bytes per function definition. This is computed by dividing Function Bytes by Number Of Functions.</dd>
-<dt><code># of </code><font SIZE="-1"><code>VBR</code></font><code> 32-bit Integers</code></dt>
+<dt><code># of </code><code>VBR</code><code> 32-bit Integers</code></dt>
 <dd> The total number of 32-bit integers encoded using the Variable Bit Rate encoding scheme.</dd>
-<dt><code># of </code><font SIZE="-1"><code>VBR</code></font><code> 64-bit Integers</code></dt>
+<dt><code># of </code><code>VBR</code><code> 64-bit Integers</code></dt>
 <dd> The total number of 64-bit integers encoded using the Variable Bit Rate encoding scheme.</dd>
-<dt><code># of </code><font SIZE="-1"><code>VBR</code></font><code> Compressed Bytes</code></dt>
+<dt><code># of </code><code>VBR</code><code> Compressed Bytes</code></dt>
 <dd> The total number of bytes consumed by the 32-bit and 64-bit integers that use the Variable Bit Rate encoding scheme.</dd>
-<dt><code># of </code><font SIZE="-1"><code>VBR</code></font><code> Expanded Bytes</code></dt>
+<dt><code># of </code><code>VBR</code><code> Expanded Bytes</code></dt>
 <dd> The total number of bytes that would have been consumed by the 32-bit and 64-bit integers had they not been compressed with the Variable Bit Rage encoding scheme.</dd>
-<dt><code>Bytes Saved With </code><font SIZE="-1"><code>VBR</code></font></dt>
-<dd> The total number of bytes saved by using the Variable Bit Rate encoding scheme. The percentage is relative to # of <font SIZE="-1">VBR</font> Expanded Bytes.</dd></dl>
+<dt><code>Bytes Saved With </code><code>VBR</code></dt>
+<dd> The total number of bytes saved by using the Variable Bit Rate encoding scheme. The percentage is relative to # of VBR Expanded Bytes.</dd></dl>
 <h2>DETAILED OUTPUT DEFINITIONS</h2>
 <p> The following definitions occur only if the -nodetails option was not given. The detailed output provides additional information on a per-function basis.</p>
 <dl>
@@ -120,17 +120,17 @@ description: "llvm-bcanalyzer – LLVM bitcode analyzer"
 <dd> The average number of bytes consumed by the instructions in the funtion. This value is computed by dividing Instruction Size by Instructions.</dd>
 <dt><code>Bytes Per Instruction</code></dt>
 <dd> The average number of bytes used by the function per instruction. This value is computed by dividing Byte Size by Instructions. Note that this is not the same as Average Instruction Size. It computes a number relative to the total function size not just the size of the instruction list.</dd>
-<dt><code>Number of </code><font SIZE="-1"><code>VBR</code></font><code> 32-bit Integers</code></dt>
+<dt><code>Number of </code><code>VBR</code><code> 32-bit Integers</code></dt>
 <dd> The total number of 32-bit integers found in this function (for any use).</dd>
-<dt><code>Number of </code><font SIZE="-1"><code>VBR</code></font><code> 64-bit Integers</code></dt>
+<dt><code>Number of </code><code>VBR</code><code> 64-bit Integers</code></dt>
 <dd> The total number of 64-bit integers found in this function (for any use).</dd>
-<dt><code>Number of </code><font SIZE="-1"><code>VBR</code></font><code> Compressed Bytes</code></dt>
+<dt><code>Number of </code><code>VBR</code><code> Compressed Bytes</code></dt>
 <dd> The total number of bytes in this function consumed by the 32-bit and 64-bit integers that use the Variable Bit Rate encoding scheme.</dd>
-<dt><code>Number of </code><font SIZE="-1"><code>VBR</code></font><code> Expanded Bytes</code></dt>
+<dt><code>Number of </code><code>VBR</code><code> Expanded Bytes</code></dt>
 <dd> The total number of bytes in this function that would have been consumed by the 32-bit and 64-bit integers had they not been compressed with the Variable Bit Rate encoding scheme.</dd>
-<dt><code>Bytes Saved With </code><font SIZE="-1"><code>VBR</code></font></dt>
-<dd> The total number of bytes saved in this function by using the Variable Bit Rate encoding scheme. The percentage is relative to # of <font SIZE="-1">VBR</font> Expanded Bytes.</dd></dl>
+<dt><code>Bytes Saved With </code><code>VBR</code></dt>
+<dd> The total number of bytes saved in this function by using the Variable Bit Rate encoding scheme. The percentage is relative to # of VBR Expanded Bytes.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> llvm-dis, &lt;<a rel="nofollow" href="http://llvm.org/docs/BitCodeFormat.html">http://llvm.org/docs/BitCodeFormat.html</a>&gt;</p>
 <h2>AUTHORS</h2>
-<p> Maintained by the <font SIZE="-1">LLVM</font> Team (&lt;<a rel="nofollow" href="http://llvm.org">http://llvm.org</a>&gt;). </p>
+<p> Maintained by the LLVM Team (&lt;<a rel="nofollow" href="http://llvm.org">http://llvm.org</a>&gt;). </p>

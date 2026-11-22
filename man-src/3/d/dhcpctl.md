@@ -24,20 +24,20 @@ s = dhcpctl_connect(&amp;cxn, "127.0.0.1", 7911, NULL);
 <p> connects to the DHCP server on the localhost via port 7911 (the standard OMAPI port). No authentication is used for the connection. </p>
 <p> Fn dhcpctl_wait_for_completion flushes a pending message to the server and waits for the response. The result of the request as processed on the server is returned via the second parameter. </p>
 <blockquote><p>
-s = dhcpctl_wait_for_completion(cxn, &amp;wv);<br />
-if (s != ISC_R_SUCCESS)<br />
-    local_failure(s);<br />
-else if (wv != ISC_R_SUCCESS)<br />
+s = dhcpctl_wait_for_completion(cxn, &amp;wv);<br/>
+if (s != ISC_R_SUCCESS)<br/>
+    local_failure(s);<br/>
+else if (wv != ISC_R_SUCCESS)<br/>
     server_failure(wc);
  </p></blockquote>
 <p> The call to Fn dhcpctl_wait_for_completion won&#8217;t return until the remote message processing completes or the connection to the server is lost. </p>
 <p> Fn dhcpctl_get_value extracts a value of an attribute from the handle. The value can be of any length and is treated as a sequence of bytes. The handle must have been created first with Fn dhcpctl_new_object and opened with Fn dhcpctl_open_object . The value is returned via the parameter named &#8220;value&#8221; The last parameter is the name of attribute to retrieve. </p>
 <blockquote><p>
-dhcpctl_data_string value = NULL;<br />
-dhcpctl_handle lease;<br />
-time_t thetime;<br />
-s = dhcpctl_get_value(&amp;value, lease, &#8220;ends&#8221;);<br />
-assert(s == ISC_R_SUCCESS &amp;&amp; value-&gt;len == sizeof(thetime));<br />
+dhcpctl_data_string value = NULL;<br/>
+dhcpctl_handle lease;<br/>
+time_t thetime;<br/>
+s = dhcpctl_get_value(&amp;value, lease, &#8220;ends&#8221;);<br/>
+assert(s == ISC_R_SUCCESS &amp;&amp; value-&gt;len == sizeof(thetime));<br/>
 memcpy(&amp;thetime, value-&gt;value, value-&gt;len);
  </p></blockquote>
 <p> Fn dhcpctl_get_boolean extracts a boolean valued attribute from the object handle. </p>

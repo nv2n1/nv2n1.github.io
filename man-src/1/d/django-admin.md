@@ -91,12 +91,12 @@ python manage.py check --deploy --settings=production_settings
 <p> You can pass <code>&#8211;use-fuzzy</code> option (or <code>-f</code>) to include fuzzy translations into compiled files. </p>
 <p> Added <code>&#8211;exclude</code> and <code>&#8211;use-fuzzy</code> options. </p>
 <p> Example usage: </p>
-<p>django &#8211; admin compilemessages&#8211; locale = pt_BR<br />
-                                              django &#8211;<br />
-                                          admin compilemessages&#8211; locale = pt_BR&#8211; locale = fr &#8211; f django &#8211; admin compilemessages &#8211; l pt_BR django &#8211; admin compilemessages &#8211; l pt_BR &#8211; l fr&#8211; use &#8211; fuzzy django &#8211; admin compilemessages&#8211; exclude = pt_BR<br />
-                                                                                                                                                                                                                                                         django &#8211;<br />
-                                                                                                                                                                                                                                                     admin compilemessages&#8211; exclude = pt_BR&#8211; exclude = fr<br />
-                                                                                                                                                                                                                                                                                                             django &#8211;<br />
+<p>django &#8211; admin compilemessages&#8211; locale = pt_BR<br/>
+                                              django &#8211;<br/>
+                                          admin compilemessages&#8211; locale = pt_BR&#8211; locale = fr &#8211; f django &#8211; admin compilemessages &#8211; l pt_BR django &#8211; admin compilemessages &#8211; l pt_BR &#8211; l fr&#8211; use &#8211; fuzzy django &#8211; admin compilemessages&#8211; exclude = pt_BR<br/>
+                                                                                                                                                                                                                                                         django &#8211;<br/>
+                                                                                                                                                                                                                                                     admin compilemessages&#8211; exclude = pt_BR&#8211; exclude = fr<br/>
+                                                                                                                                                                                                                                                                                                             django &#8211;<br/>
                                                                                                                                                                                                                                                                                                          admin compilemessages &#8211; x pt_BR django &#8211; admin compilemessages &#8211; x pt_BR &#8211; x fr
 </dd></dl>
 <h3>createcachetable</h3>
@@ -230,24 +230,24 @@ django-admin loaddata foo/bar/mydata.json
 </pre>
 <p> would search <code>&lt;app_label&gt;/fixtures/foo/bar/mydata.json</code> for each installed application, <code>&lt;dirname&gt;/foo/bar/mydata.json</code> for each directory in <code>FIXTURE_DIRS</code>, and the literal path <code>foo/bar/mydata.json</code>. </p>
 <p> When fixture files are processed, the data is saved to the database as is. Model defined <code>save()</code> methods are not called, and any <code>pre_save</code> or <code>post_save</code> signals will be called with <code>raw=True</code> since the instance only contains attributes that are local to the model. You may, for example, want to disable handlers that access related fields that aren&#8217;t present during fixture loading and would otherwise raise an exception: </p>
-<p>from django.db.models.signals import post_save<br />
-    from.models import MyModel<br />
-        def my_handler(**kwargs)<br />
-    :<br />
-#disable the handler during fixture loading<br />
+<p>from django.db.models.signals import post_save<br/>
+    from.models import MyModel<br/>
+        def my_handler(**kwargs)<br/>
+    :<br/>
+#disable the handler during fixture loading<br/>
       if kwargs[&#8216;raw&#8217;] : return &#8230; post_save.connect(my_handler, sender = MyModel)</p>
 <p> You could also write a simple decorator to encapsulate this logic: </p>
-<p>from functools import wraps<br />
-    def<br />
-    disable_for_loaddata(signal_handler)<br />
-    : &#8220;&#8221;<br />
-      &#8221;<br />
-      Decorator that turns off signal handlers when loading fixture data.&#8221;&#8221;<br />
-                                                                         &#8221;<br />
-      @wraps(signal_handler)<br />
-          def wrapper(*args, **kwargs)<br />
-    : if kwargs[&#8216;raw&#8217;] : return signal_handler(*args, **kwargs) return wrapper<br />
-                         @disable_for_loaddata def my_handler(**kwargs)<br />
+<p>from functools import wraps<br/>
+    def<br/>
+    disable_for_loaddata(signal_handler)<br/>
+    : &#8220;&#8221;<br/>
+      &#8221;<br/>
+      Decorator that turns off signal handlers when loading fixture data.&#8221;&#8221;<br/>
+                                                                         &#8221;<br/>
+      @wraps(signal_handler)<br/>
+          def wrapper(*args, **kwargs)<br/>
+    : if kwargs[&#8216;raw&#8217;] : return signal_handler(*args, **kwargs) return wrapper<br/>
+                         @disable_for_loaddata def my_handler(**kwargs)<br/>
     : &#8230;</p>
 <p> Just be aware that this logic will disable the signals whenever fixtures are deserialized, not just during <code>loaddata</code>. </p>
 <p> Note that the order in which fixture files are processed is undefined. However, all fixture data is installed as a single transaction, so data in one fixture can reference data in another fixture. If the database backend supports row-level constraints, these constraints will be checked at the end of the transaction. </p>

@@ -19,9 +19,9 @@ description: "accounting – Shorewall6 Accounting file"
 <dd>&bull; <code>accountout</code>: Rules that are valid in the OUTPUT chain (may not specify an input interface or a MAC address).</dd></dl>
 <dl>
 <dd>&bull; <code>accounting</code>: Other rules.</dd></dl>
-<p> The new structure is enabled by sectioning the accounting file in a manner similar to the m[blue]<code>rules file</code>m[]<font SIZE="-2">[1]</font>. The sections are <code>INPUT</code>, <code>OUTPUT</code> and <code>FORWARD</code> and must appear in that order (although any of them may be omitted). The first non-commentary record in the accounting file must be a section header when sectioning is used.</p>
+<p> The new structure is enabled by sectioning the accounting file in a manner similar to the m[blue]<code>rules file</code>m[][1]. The sections are <code>INPUT</code>, <code>OUTPUT</code> and <code>FORWARD</code> and must appear in that order (although any of them may be omitted). The first non-commentary record in the accounting file must be a section header when sectioning is used.</p>
 <dl>
-<dd><font SIZE="+1"> <code>Warning</code> </font><br />
+<dd> <code>Warning</code> <br/>
  If sections are not used, the Shorewall rules compiler cannot detect certain violations of netfilter restrictions. These violations can result in run-time errors such as the following: <code>ip6tables-restore v1.4.13: Can&#8217;t use -o with INPUT</code>  Beginning with Shorewall 4.4.20, the ACCOUNTING_TABLE setting was added to shorewall.conf and shorewall6.conf. That setting determines the Netfilter table (filter or mangle) where the accounting rules are added. When ACCOUNTING_TABLE=mangle is specified, the available sections are <code>PREROUTING</code>, <code>INPUT</code>, <code>OUTPUT</code>, <code>FORWARD</code> and <code>POSTROUTING</code>. Section headers have the form: <code>[?]SECTION</code><i>section-name</i> The optional &quot;?&quot; was added in Shorewalll 4.6.0 and is preferred. Existing configurations may be converted to use this form using the <code>shorewall6 update</code> command. When sections are enabled:</dd>
 <dl>
 <dd>&bull; A jump to a user-defined accounting chain must appear before entries that add rules to that chain. This eliminates loops and unreferenced chains.</dd></dl>
@@ -117,7 +117,7 @@ description: "accounting – Shorewall6 Accounting file"
 <dl>
 <dd>#program named upnpd</dd>
 <dl>
-<dd><font SIZE="+1"> <code>Important</code> </font><br />
+<dd> <code>Important</code> <br/>
  The ability to specify a program name was removed from Netfilter in kernel version 2.6.14.  This column was formerly labelled USER/GROUP.</dd></dl>
 <p> <code>MARK</code> &#8211; [<code>!</code>]<i>value</i>[/<i>mask</i>][<code>:C</code>]</p>
 <dl>
@@ -211,9 +211,9 @@ description: "accounting – Shorewall6 Accounting file"
 <h2>Files</h2>
 <p>/etc/shorewall6/accounting</p>
 <h2>See Also</h2>
-<p>m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/Accounting.html">http://www.shorewall.net/Accounting.html</a></code>m[]<font SIZE="-2">[2]</font> </p>
-<p> m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/shorewall_logging.html">http://www.shorewall.net/shorewall_logging.html</a></code>m[]<font SIZE="-2">[3]</font> </p>
-<p> m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/configuration_file_basics.htm#Pairs">http://www.shorewall.net/configuration_file_basics.htm#Pairs</a></code>m[]<font SIZE="-2">[4]</font> </p>
+<p>m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/Accounting.html">http://www.shorewall.net/Accounting.html</a></code>m[][2] </p>
+<p> m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/shorewall_logging.html">http://www.shorewall.net/shorewall_logging.html</a></code>m[][3] </p>
+<p> m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/configuration_file_basics.htm#Pairs">http://www.shorewall.net/configuration_file_basics.htm#Pairs</a></code>m[][4] </p>
 <p> <a href="/docs/linux/man/8-shorewall6/">shorewall6</a>(8), <a href="/docs/linux/man/5-shorewall6-actions/">shorewall6-actions</a>(5), shorewall6-blacklist(5), <a href="/docs/linux/man/5-shorewall6-hosts/">shorewall6-hosts</a>(5), <a href="/docs/linux/man/5-shorewall6-interfaces/">shorewall6-interfaces</a>(5), <a href="/docs/linux/man/5-shorewall6-maclist/">shorewall6-maclist</a>(5), <a href="/docs/linux/man/5-shorewall6-netmap/">shorewall6-netmap</a>(5),<a href="/docs/linux/man/5-shorewall6-params/">shorewall6-params</a>(5), <a href="/docs/linux/man/5-shorewall6-policy/">shorewall6-policy</a>(5), <a href="/docs/linux/man/5-shorewall6-providers/">shorewall6-providers</a>(5), <a href="/docs/linux/man/5-shorewall6-rtrules/">shorewall6-rtrules</a>(5), shorewall6-routestopped(5), <a href="/docs/linux/man/5-shorewall6-rules/">shorewall6-rules</a>(5), <a href="/docs/linux/man/5-shorewall6-conf/">shorewall6.conf</a>(5), <a href="/docs/linux/man/5-shorewall6-secmarks/">shorewall6-secmarks</a>(5), <a href="/docs/linux/man/5-shorewall6-tcclasses/">shorewall6-tcclasses</a>(5), <a href="/docs/linux/man/5-shorewall6-tcdevices/">shorewall6-tcdevices</a>(5), <a href="/docs/linux/man/5-shorewall6-mangle/">shorewall6-mangle</a>(5), shorewall6-tos(5), <a href="/docs/linux/man/5-shorewall6-tunnels/">shorewall6-tunnels</a>(5), <a href="/docs/linux/man/5-shorewall6-zones/">shorewall6-zones</a>(5)</p>
 <h2>Notes</h2>
 <dl>

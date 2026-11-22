@@ -11,7 +11,7 @@ description: "curl_multi_info_read – read multi stack informationals"
 <p> curl_multi_info_read &#8211; read multi stack informationals</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;curl/curl.h&gt; </p>
-<p> CURLMsg *curl_multi_info_read( CURLM *multi_handle,<br />
+<p> CURLMsg *curl_multi_info_read( CURLM *multi_handle,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>int&nbsp;<wbr>*msgs_in_queue);</p>
 <h2>DESCRIPTION</h2>
 <p> Ask the multi handle if there are any messages/informationals from the individual transfers. Messages may include informationals such as an error code from the transfer or just the fact that a transfer is completed. More details on these should be written down as well. </p>

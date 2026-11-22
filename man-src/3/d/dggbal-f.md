@@ -10,7 +10,7 @@ description: "dggbal.f –"
 <p>dggbal.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dggbal</code> (JOB, N, A, LDA, B, LDB, ILO, IHI, LSCALE, RSCALE, WORK, INFO)<br />
+<p>subroutine <code>dggbal</code> (JOB, N, A, LDA, B, LDB, ILO, IHI, LSCALE, RSCALE, WORK, INFO)<br/>
  <i></i><code>DGGBAL</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dggbal (characterJOB, integerN, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( ldb, * )B, integerLDB, integerILO, integerIHI, double precision, dimension( * )LSCALE, double precision, dimension( * )RSCALE, double precision, dimension( * )WORK, integerINFO)</h3>

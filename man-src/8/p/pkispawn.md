@@ -80,7 +80,7 @@ etc.</pre>
 <p> <code>Instance Specific Parameters</code></p>
 <dl>
 <dt><i>Instance name:</i></dt>
-<dd>the name of the tomcat instance in which the subsystem is to be installed. The default value is pki-tomcat.<br />
+<dd>the name of the tomcat instance in which the subsystem is to be installed. The default value is pki-tomcat.<br/>
  <code>Note:</code> Only one subsystem of a given type (CA, KRA, OCSP, TKS, TPS) can exist within a given instance.</dd>
 <dt><i>HTTP port:</i></dt>
 <dd>the HTTP port of the Tomcat instance. The default value is 8080.</dd>

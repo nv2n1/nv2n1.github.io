@@ -450,210 +450,210 @@ description: "keytool – Key and Certificate Management Tool"
 <dd>
 </dd><dl>
 <dt>*</dt>
-<dd><code>Alias</code>: thawtepersonalfreemailca<br />
- <code>Owner DN</code>: EmailAddress=personal-freemail [at] thawte.com,<br />
- CN=Thawte Personal Freemail CA,<br />
- OU=Certification Services Division,<br />
+<dd><code>Alias</code>: thawtepersonalfreemailca<br/>
+ <code>Owner DN</code>: EmailAddress=personal-freemail [at] thawte.com,<br/>
+ CN=Thawte Personal Freemail CA,<br/>
+ OU=Certification Services Division,<br/>
  O=Thawte Consulting, L=Cape Town, ST=Western Cape, C=ZA</dd>
 <dt>*</dt>
-<dd><code>Alias</code>: thawtepersonalbasicca<br />
- <code>Owner DN</code>: EmailAddress=personal-basic [at] thawte.com,<br />
- CN=Thawte Personal Basic CA,<br />
- OU=Certification Services Division,<br />
+<dd><code>Alias</code>: thawtepersonalbasicca<br/>
+ <code>Owner DN</code>: EmailAddress=personal-basic [at] thawte.com,<br/>
+ CN=Thawte Personal Basic CA,<br/>
+ OU=Certification Services Division,<br/>
  O=Thawte Consulting, L=Cape Town, ST=Western Cape, C=ZA</dd>
 <dt>*</dt>
-<dd><code>Alias</code>: thawtepersonalpremiumca<br />
- <code>Owner DN</code>: EmailAddress=personal-premium [at] thawte.com,<br />
- CN=Thawte Personal Premium CA,<br />
- OU=Certification Services Division,<br />
+<dd><code>Alias</code>: thawtepersonalpremiumca<br/>
+ <code>Owner DN</code>: EmailAddress=personal-premium [at] thawte.com,<br/>
+ CN=Thawte Personal Premium CA,<br/>
+ OU=Certification Services Division,<br/>
  O=Thawte Consulting, L=Cape Town, ST=Western Cape, C=ZA</dd>
 <dt>*</dt>
-<dd><code>Alias</code>: thawteserverca<br />
- <code>Owner DN</code>: EmailAddress=server-certs [at] thawte.com,<br />
- CN=Thawte Server CA, OU=Certification Services Division,<br />
+<dd><code>Alias</code>: thawteserverca<br/>
+ <code>Owner DN</code>: EmailAddress=server-certs [at] thawte.com,<br/>
+ CN=Thawte Server CA, OU=Certification Services Division,<br/>
  O=Thawte Consulting cc, L=Cape Town, ST=Western Cape, C=ZA</dd>
 <dt>*</dt>
-<dd><code>Alias</code>: thawtepremiumserverca<br />
- <code>Owner DN</code>: EmailAddress=premium-server [at] thawte.com,<br />
- CN=Thawte Premium Server CA,<br />
- OU=Certification Services Division,<br />
+<dd><code>Alias</code>: thawtepremiumserverca<br/>
+ <code>Owner DN</code>: EmailAddress=premium-server [at] thawte.com,<br/>
+ CN=Thawte Premium Server CA,<br/>
+ OU=Certification Services Division,<br/>
  O=Thawte Consulting cc, L=Cape Town, ST=Western Cape, C=ZA</dd>
 <dt>*</dt>
-<dd><code>Alias</code>: verisignclass1ca<br />
- <code>Owner DN</code>: OU=Class 1 Public Primary Certification Authority,<br />
+<dd><code>Alias</code>: verisignclass1ca<br/>
+ <code>Owner DN</code>: OU=Class 1 Public Primary Certification Authority,<br/>
  O=&quot;VeriSign, Inc.&quot;, C=US</dd>
 <dt>*</dt>
-<dd><code>Alias</code>: verisignclass2ca<br />
- <code>Owner DN</code>: OU=Class 2 Public Primary Certification Authority,<br />
+<dd><code>Alias</code>: verisignclass2ca<br/>
+ <code>Owner DN</code>: OU=Class 2 Public Primary Certification Authority,<br/>
  O=&quot;VeriSign, Inc.&quot;, C=US</dd>
 <dt>*</dt>
-<dd><code>Alias</code>: verisignclass3ca<br />
- <code>Owner DN</code>: OU=Class 3 Public Primary Certification Authority,<br />
+<dd><code>Alias</code>: verisignclass3ca<br/>
+ <code>Owner DN</code>: OU=Class 3 Public Primary Certification Authority,<br/>
  O=&quot;VeriSign, Inc.&quot;, C=US</dd>
 <dt>*</dt>
-<dd><code>Alias</code>: verisignserverca<br />
- <code>Owner DN</code>: OU=Secure Server Certification Authority,<br />
+<dd><code>Alias</code>: verisignserverca<br/>
+ <code>Owner DN</code>: OU=Secure Server Certification Authority,<br/>
  O=&quot;RSA Data Security, Inc.&quot;, C=US</dd>
 <dt>*</dt>
-<dd><code>Alias</code>: verisignclass1g2ca<br />
- <code>Owner DN</code>: OU=VeriSign Trust Network,<br />
- OU=&quot;(c) 1998 VeriSign, Inc. &#8211; For authorized use only&quot;,<br />
- OU=Class 1 Public Primary Certification Authority &#8211; G2,<br />
+<dd><code>Alias</code>: verisignclass1g2ca<br/>
+ <code>Owner DN</code>: OU=VeriSign Trust Network,<br/>
+ OU=&quot;(c) 1998 VeriSign, Inc. &#8211; For authorized use only&quot;,<br/>
+ OU=Class 1 Public Primary Certification Authority &#8211; G2,<br/>
  O=&quot;VeriSign, Inc.&quot;, C=US</dd>
 <dt>*</dt>
-<dd><code>Alias</code>: verisignclass1g3ca<br />
- <code>Owner DN</code>: CN=VeriSign Class 1 Public Primary Certification Authority &#8211; G3, OU=&quot;(c) 1999 VeriSign, Inc. &#8211; For authorized use only&quot;,<br />
- OU=VeriSign Trust Network,<br />
+<dd><code>Alias</code>: verisignclass1g3ca<br/>
+ <code>Owner DN</code>: CN=VeriSign Class 1 Public Primary Certification Authority &#8211; G3, OU=&quot;(c) 1999 VeriSign, Inc. &#8211; For authorized use only&quot;,<br/>
+ OU=VeriSign Trust Network,<br/>
  O=&quot;VeriSign, Inc.&quot;, C=US</dd>
 <dt>*</dt>
-<dd><code>Alias</code>: verisignclass2g2ca<br />
- <code>Owner DN</code>: OU=VeriSign Trust Network,<br />
- OU=&quot;(c) 1998 VeriSign, Inc. &#8211; For authorized use only&quot;,<br />
- OU=Class 2 Public Primary Certification Authority &#8211; G2,<br />
+<dd><code>Alias</code>: verisignclass2g2ca<br/>
+ <code>Owner DN</code>: OU=VeriSign Trust Network,<br/>
+ OU=&quot;(c) 1998 VeriSign, Inc. &#8211; For authorized use only&quot;,<br/>
+ OU=Class 2 Public Primary Certification Authority &#8211; G2,<br/>
  O=&quot;VeriSign, Inc.&quot;, C=US</dd>
 <dt>*</dt>
-<dd><code>Alias</code>: verisignclass2g3ca<br />
- <code>Owner DN</code>: CN=VeriSign Class 2 Public Primary Certification Authority &#8211; G3,<br />
- OU=&quot;(c) 1999 VeriSign, Inc. &#8211; For authorized use only&quot;,<br />
- OU=VeriSign Trust Network,<br />
+<dd><code>Alias</code>: verisignclass2g3ca<br/>
+ <code>Owner DN</code>: CN=VeriSign Class 2 Public Primary Certification Authority &#8211; G3,<br/>
+ OU=&quot;(c) 1999 VeriSign, Inc. &#8211; For authorized use only&quot;,<br/>
+ OU=VeriSign Trust Network,<br/>
  O=&quot;VeriSign, Inc.&quot;, C=US</dd>
 <dt>*</dt>
-<dd><code>Alias</code>: verisignclass3g2ca<br />
- <code>Owner DN</code>: OU=VeriSign Trust Network,<br />
- OU=&quot;(c) 1998 VeriSign, Inc. &#8211; For authorized use only&quot;,<br />
- OU=Class 3 Public Primary Certification Authority &#8211; G2,<br />
+<dd><code>Alias</code>: verisignclass3g2ca<br/>
+ <code>Owner DN</code>: OU=VeriSign Trust Network,<br/>
+ OU=&quot;(c) 1998 VeriSign, Inc. &#8211; For authorized use only&quot;,<br/>
+ OU=Class 3 Public Primary Certification Authority &#8211; G2,<br/>
  O=&quot;VeriSign, Inc.&quot;, C=US</dd>
 <dt>*</dt>
-<dd><code>Alias</code>: verisignclass3g3ca<br />
- <code>Owner DN</code>: CN=VeriSign Class 3 Public Primary Certification Authority &#8211; G3,<br />
- OU=&quot;(c) 1999 VeriSign, Inc. &#8211; For authorized use only&quot;,<br />
- OU=VeriSign Trust Network,<br />
+<dd><code>Alias</code>: verisignclass3g3ca<br/>
+ <code>Owner DN</code>: CN=VeriSign Class 3 Public Primary Certification Authority &#8211; G3,<br/>
+ OU=&quot;(c) 1999 VeriSign, Inc. &#8211; For authorized use only&quot;,<br/>
+ OU=VeriSign Trust Network,<br/>
  O=&quot;VeriSign, Inc.&quot;, C=US</dd>
 <dt>*</dt>
-<dd><code>Alias</code>: baltimorecodesigningca<br />
- <code>Owner DN</code>: CN=Baltimore CyberTrust Code Signing Root,<br />
+<dd><code>Alias</code>: baltimorecodesigningca<br/>
+ <code>Owner DN</code>: CN=Baltimore CyberTrust Code Signing Root,<br/>
  OU=CyberTrust, O=Baltimore, C=IE</dd>
 <dt>*</dt>
-<dd><code>Alias</code>: gtecybertrustglobalca<br />
- <code>Owner DN</code>: CN=GTE CyberTrust Global Root,<br />
+<dd><code>Alias</code>: gtecybertrustglobalca<br/>
+ <code>Owner DN</code>: CN=GTE CyberTrust Global Root,<br/>
  OU=&quot;GTE CyberTrust Solutions, Inc.&quot;, O=GTE Corporation, C=US</dd>
 <dt>*</dt>
-<dd><code>Alias</code>: baltimorecybertrustca<br />
- <code>Owner DN</code>: CN=Baltimore CyberTrust Root,<br />
+<dd><code>Alias</code>: baltimorecybertrustca<br/>
+ <code>Owner DN</code>: CN=Baltimore CyberTrust Root,<br/>
  OU=CyberTrust, O=Baltimore, C=IE</dd>
 <dt>*</dt>
-<dd><code>Alias</code>: gtecybertrustca<br />
- <code>Owner DN</code>: CN=GTE CyberTrust Root,<br />
+<dd><code>Alias</code>: gtecybertrustca<br/>
+ <code>Owner DN</code>: CN=GTE CyberTrust Root,<br/>
  O=GTE Corporation, C=US</dd>
 <dt>*</dt>
-<dd><code>Alias</code>: gtecybertrust5ca<br />
- <code>Owner DN</code>: CN=GTE CyberTrust Root 5,<br />
+<dd><code>Alias</code>: gtecybertrust5ca<br/>
+ <code>Owner DN</code>: CN=GTE CyberTrust Root 5,<br/>
  OU=&quot;GTE CyberTrust Solutions, Inc.&quot;, O=GTE Corporation, C=US</dd>
 <dt>*</dt>
-<dd><code>Alias</code>: entrustclientca<br />
- <code>Owner DN</code>: CN=Entrust.net Client Certification Authority,<br />
- OU=(c) 1999 Entrust.net Limited,<br />
- OU=<a rel="nofollow" href="http://www.entrust.net">www.entrust.net</a>/Client_CA_Info/CPS incorp. by ref. limits liab.,<br />
+<dd><code>Alias</code>: entrustclientca<br/>
+ <code>Owner DN</code>: CN=Entrust.net Client Certification Authority,<br/>
+ OU=(c) 1999 Entrust.net Limited,<br/>
+ OU=<a rel="nofollow" href="http://www.entrust.net">www.entrust.net</a>/Client_CA_Info/CPS incorp. by ref. limits liab.,<br/>
  O=Entrust.net, C=US</dd>
 <dt>*</dt>
-<dd><code>Alias</code>: entrustglobalclientca<br />
- <code>Owner DN</code>: CN=Entrust.net Client Certification Authority,<br />
- OU=(c) 2000 Entrust.net Limited,<br />
- OU=<a rel="nofollow" href="http://www.entrust.net">www.entrust.net</a>/GCCA_CPS incorp. by ref. (limits liab.),<br />
+<dd><code>Alias</code>: entrustglobalclientca<br/>
+ <code>Owner DN</code>: CN=Entrust.net Client Certification Authority,<br/>
+ OU=(c) 2000 Entrust.net Limited,<br/>
+ OU=<a rel="nofollow" href="http://www.entrust.net">www.entrust.net</a>/GCCA_CPS incorp. by ref. (limits liab.),<br/>
  O=Entrust.net</dd>
 <dt>*</dt>
-<dd><code>Alias</code>: entrust2048ca<br />
- <code>Owner DN</code>: CN=Entrust.net Certification Authority (2048),<br />
- OU=(c) 1999 Entrust.net Limited,<br />
- OU=<a rel="nofollow" href="http://www.entrust.net">www.entrust.net</a>/CPS_2048 incorp. by ref. (limits liab.),<br />
+<dd><code>Alias</code>: entrust2048ca<br/>
+ <code>Owner DN</code>: CN=Entrust.net Certification Authority (2048),<br/>
+ OU=(c) 1999 Entrust.net Limited,<br/>
+ OU=<a rel="nofollow" href="http://www.entrust.net">www.entrust.net</a>/CPS_2048 incorp. by ref. (limits liab.),<br/>
  O=Entrust.net</dd>
 <dt>*</dt>
-<dd><code>Alias</code>: entrustsslca<br />
- <code>Owner DN</code>: CN=Entrust.net Secure Server Certification Authority,<br />
- OU=(c) 1999 Entrust.net Limited,<br />
- OU=<a rel="nofollow" href="http://www.entrust.net">www.entrust.net</a>/CPS incorp. by ref. (limits liab.),<br />
+<dd><code>Alias</code>: entrustsslca<br/>
+ <code>Owner DN</code>: CN=Entrust.net Secure Server Certification Authority,<br/>
+ OU=(c) 1999 Entrust.net Limited,<br/>
+ OU=<a rel="nofollow" href="http://www.entrust.net">www.entrust.net</a>/CPS incorp. by ref. (limits liab.),<br/>
  O=Entrust.net, C=US</dd>
 <dt>*</dt>
-<dd><code>Alias</code>: entrustgsslca<br />
- <code>Owner DN</code>: CN=Entrust.net Secure Server Certification Authority,<br />
- OU=(c) 2000 Entrust.net Limited,<br />
- OU=<a rel="nofollow" href="http://www.entrust.net">www.entrust.net</a>/SSL_CPS incorp. by ref. (limits liab.),<br />
+<dd><code>Alias</code>: entrustgsslca<br/>
+ <code>Owner DN</code>: CN=Entrust.net Secure Server Certification Authority,<br/>
+ OU=(c) 2000 Entrust.net Limited,<br/>
+ OU=<a rel="nofollow" href="http://www.entrust.net">www.entrust.net</a>/SSL_CPS incorp. by ref. (limits liab.),<br/>
  O=Entrust.net</dd>
 <dt>*</dt>
-<dd><code>Alias</code>: godaddyclass2ca<br />
- <code>Owner DN</code>: OU=Go Daddy Class 2 Certification Authority,<br />
+<dd><code>Alias</code>: godaddyclass2ca<br/>
+ <code>Owner DN</code>: OU=Go Daddy Class 2 Certification Authority,<br/>
  O=&quot;The Go Daddy Group, Inc.&quot;, C=US</dd>
 <dt>*</dt>
-<dd><code>Alias</code>: starfieldclass2ca<br />
- <code>Owner DN</code>: OU=Starfield Class 2 Certification Authority,<br />
+<dd><code>Alias</code>: starfieldclass2ca<br/>
+ <code>Owner DN</code>: OU=Starfield Class 2 Certification Authority,<br/>
  O=&quot;Starfield Technologies, Inc.&quot;, C=US</dd>
 <dt>*</dt>
-<dd><code>Alias</code>: valicertclass2ca<br />
- <code>Owner DN</code>: EMAILADDRESS=info [at] valicert.com,<br />
- CN=<a rel="nofollow" href="http://www.valicert.com/,">http://www.valicert.com/,</a><br />
- OU=ValiCert Class 2 Policy Validation Authority,<br />
+<dd><code>Alias</code>: valicertclass2ca<br/>
+ <code>Owner DN</code>: EMAILADDRESS=info [at] valicert.com,<br/>
+ CN=<a rel="nofollow" href="http://www.valicert.com/,">http://www.valicert.com/,</a><br/>
+ OU=ValiCert Class 2 Policy Validation Authority,<br/>
  O=&quot;ValiCert, Inc.&quot;, L=ValiCert Validation Network</dd>
 <dt>*</dt>
-<dd><code>Alias</code>: geotrustglobalca<br />
- <code>Owner DN</code>: CN=GeoTrust Global CA,<br />
+<dd><code>Alias</code>: geotrustglobalca<br/>
+ <code>Owner DN</code>: CN=GeoTrust Global CA,<br/>
  O=GeoTrust Inc., C=US</dd>
 <dt>*</dt>
-<dd><code>Alias</code>: equifaxsecureca<br />
- <code>Owner DN</code>: OU=Equifax Secure Certificate Authority,<br />
+<dd><code>Alias</code>: equifaxsecureca<br/>
+ <code>Owner DN</code>: OU=Equifax Secure Certificate Authority,<br/>
  O=Equifax, C=US</dd>
 <dt>*</dt>
-<dd><code>Alias</code>: equifaxsecureebusinessca1<br />
- <code>Owner DN</code>: CN=Equifax Secure eBusiness CA-1,<br />
+<dd><code>Alias</code>: equifaxsecureebusinessca1<br/>
+ <code>Owner DN</code>: CN=Equifax Secure eBusiness CA-1,<br/>
  O=Equifax Secure Inc., C=US</dd>
 <dt>*</dt>
-<dd><code>Alias</code>: equifaxsecureebusinessca2<br />
- <code>Owner DN</code>: OU=Equifax Secure eBusiness CA-2,<br />
+<dd><code>Alias</code>: equifaxsecureebusinessca2<br/>
+ <code>Owner DN</code>: OU=Equifax Secure eBusiness CA-2,<br/>
  O=Equifax Secure, C=US</dd>
 <dt>*</dt>
-<dd><code>Alias</code>: equifaxsecureglobalebusinessca1<br />
- <code>Owner DN</code>: CN=Equifax Secure Global eBusiness CA-1,<br />
+<dd><code>Alias</code>: equifaxsecureglobalebusinessca1<br/>
+ <code>Owner DN</code>: CN=Equifax Secure Global eBusiness CA-1,<br/>
  O=Equifax Secure Inc., C=US</dd>
 <dt>*</dt>
-<dd><code>Alias</code>: soneraclass1ca<br />
+<dd><code>Alias</code>: soneraclass1ca<br/>
  <code>Owner DN</code>: CN=Sonera Class1 CA, O=Sonera, C=FI</dd>
 <dt>*</dt>
-<dd><code>Alias</code>: soneraclass2ca<br />
+<dd><code>Alias</code>: soneraclass2ca<br/>
  <code>Owner DN</code>: CN=Sonera Class2 CA, O=Sonera, C=FI</dd>
 <dt>*</dt>
-<dd><code>Alias</code>: comodoaaaca<br />
- <code>Owner DN</code>: CN=AAA Certificate Services,<br />
+<dd><code>Alias</code>: comodoaaaca<br/>
+ <code>Owner DN</code>: CN=AAA Certificate Services,<br/>
  O=Comodo CA Limited, L=Salford, ST=Greater Manchester, C=GB</dd>
 <dt>*</dt>
-<dd><code>Alias</code>: addtrustclass1ca<br />
- <code>Owner DN</code>: CN=AddTrust Class 1 CA Root,<br />
+<dd><code>Alias</code>: addtrustclass1ca<br/>
+ <code>Owner DN</code>: CN=AddTrust Class 1 CA Root,<br/>
  OU=AddTrust TTP Network, O=AddTrust AB, C=SE</dd>
 <dt>*</dt>
-<dd><code>Alias</code>: addtrustexternalca<br />
- <code>Owner DN</code>: CN=AddTrust External CA Root,<br />
+<dd><code>Alias</code>: addtrustexternalca<br/>
+ <code>Owner DN</code>: CN=AddTrust External CA Root,<br/>
  OU=AddTrust External TTP Network, O=AddTrust AB, C=SE</dd>
 <dt>*</dt>
-<dd><code>Alias</code>: addtrustqualifiedca<br />
- <code>Owner DN</code>: CN=AddTrust Qualified CA Root,<br />
+<dd><code>Alias</code>: addtrustqualifiedca<br/>
+ <code>Owner DN</code>: CN=AddTrust Qualified CA Root,<br/>
  OU=AddTrust TTP Network, O=AddTrust AB, C=SE</dd>
 <dt>*</dt>
-<dd><code>Alias</code>: utnuserfirsthardwareca<br />
- <code>Owner DN</code>: CN=UTN-USERFirst-Hardware,<br />
- OU=<a rel="nofollow" href="http://www.usertrust.com,">http://www.usertrust.com,</a> O=The USERTRUST Network,<br />
+<dd><code>Alias</code>: utnuserfirsthardwareca<br/>
+ <code>Owner DN</code>: CN=UTN-USERFirst-Hardware,<br/>
+ OU=<a rel="nofollow" href="http://www.usertrust.com,">http://www.usertrust.com,</a> O=The USERTRUST Network,<br/>
  L=Salt Lake City, ST=UT, C=US</dd>
 <dt>*</dt>
-<dd><code>Alias</code>: utnuserfirstclientauthemailca<br />
- <code>Owner DN</code>: CN=UTN-USERFirst-Client Authentication and Email,<br />
- OU=<a rel="nofollow" href="http://www.usertrust.com,">http://www.usertrust.com,</a> O=The USERTRUST Network,<br />
+<dd><code>Alias</code>: utnuserfirstclientauthemailca<br/>
+ <code>Owner DN</code>: CN=UTN-USERFirst-Client Authentication and Email,<br/>
+ OU=<a rel="nofollow" href="http://www.usertrust.com,">http://www.usertrust.com,</a> O=The USERTRUST Network,<br/>
  L=Salt Lake City, ST=UT, C=US</dd>
 <dt>*</dt>
-<dd><code>Alias</code>: utndatacorpsgcca<br />
- <code>Owner DN</code>: CN=UTN &#8211; DATACorp SGC,<br />
- OU=<a rel="nofollow" href="http://www.usertrust.com,">http://www.usertrust.com,</a> O=The USERTRUST Network,<br />
+<dd><code>Alias</code>: utndatacorpsgcca<br/>
+ <code>Owner DN</code>: CN=UTN &#8211; DATACorp SGC,<br/>
+ OU=<a rel="nofollow" href="http://www.usertrust.com,">http://www.usertrust.com,</a> O=The USERTRUST Network,<br/>
  L=Salt Lake City, ST=UT, C=US</dd>
 <dt>*</dt>
-<dd><code>Alias</code>: utnuserfirstobjectca<br />
- <code>Owner DN</code>: CN=UTN-USERFirst-Object,<br />
- OU=<a rel="nofollow" href="http://www.usertrust.com,">http://www.usertrust.com,</a> O=The USERTRUST Network,<br />
+<dd><code>Alias</code>: utnuserfirstobjectca<br/>
+ <code>Owner DN</code>: CN=UTN-USERFirst-Object,<br/>
+ OU=<a rel="nofollow" href="http://www.usertrust.com,">http://www.usertrust.com,</a> O=The USERTRUST Network,<br/>
  L=Salt Lake City, ST=UT, C=US</dd></dl>
 </dl>
 <p> The initial password of the &quot;cacerts&quot; keystore file is &quot;changeit&quot;. System administrators should change that password and the default access permission of that file upon installing the SDK. </p>

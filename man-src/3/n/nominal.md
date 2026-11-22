@@ -49,7 +49,7 @@ accrued amount at the given date</code></pre>
 <p>day counter for accrual calculation</p>
 <p>virtual Real accruedAmount (const Date &amp;) const =0</p>
 <p>accrued amount at the given date <code>Partial CashFlow interface</code> </p>
-<p> <code>Date</code> <code>date</code> () const<br />
+<p> <code>Date</code> <code>date</code> () const<br/>
  <code>Inspectors</code> </p>
 <pre><code>Real nominal () const
 const Date &amp; accrualStartDate () const

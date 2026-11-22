@@ -21,7 +21,7 @@ description: "QuantLib::Clone – cloning proxy to an underlying object"
 <p> bool <code>empty</code> () const </p>
 <p> void <code>swap</code> (<code>Clone</code>&lt; T &gt; &amp;t) </p>
 <h3>Related Functions</h3>
-<p>(Note that these are not member functions.)<br />
+<p>(Note that these are not member functions.)<br/>
  template&lt;class T &gt; void <code>swap</code> (<code>Clone</code>&lt; T &gt; &amp;, <code>Clone</code>&lt; T &gt; &amp;) </p>
 <h2>Detailed Description</h2>
 <h3>template&lt;class T&gt; class QuantLib::Clone&lt; T &gt;</h3>

@@ -11,22 +11,22 @@ perlnetware - Perl for NetWare
 
 <h2>DESCRIPTION</h2>
 
- This file gives instructions for building Perl 5.7 and above, and also Perl modules for NetWare. Before you start, you may want to read the <font SIZE="-1">README</font> file found in the top level directory into which the Perl source code distribution was extracted. Make sure you read and understand the terms under which the software is being distributed.
+ This file gives instructions for building Perl 5.7 and above, and also Perl modules for NetWare. Before you start, you may want to read the README file found in the top level directory into which the Perl source code distribution was extracted. Make sure you read and understand the terms under which the software is being distributed.
 
 <h2>BUILD</h2>
 
- This section describes the steps to be performed to build a Perl <font SIZE="-1">NLM</font> and other associated NLMs.
+ This section describes the steps to be performed to build a Perl NLM and other associated NLMs.
 
-<h3>Tools &amp; <font SIZE="-1">SDK</font></h3>
+<h3>Tools &amp; SDK</h3>
 
- The build requires CodeWarrior compiler and linker. In addition, the ``NetWare <font SIZE="-1">SDK'', ``NLM &amp;</font> NetWare Libraries for C'' and ``NetWare Server Protocol Libraries for C'', all available at &lt;<a rel="nofollow" HREF="http://developer.novell.com/wiki/index.php/Category:Novell_Developer_Kit">http://developer.novell.com/wiki/index.php/Category:Novell_Developer_Kit</a>&gt;, are required. Microsoft Visual C<font SIZE="-2">++</font> version 4.2 or later is also required.
+ The build requires CodeWarrior compiler and linker. In addition, the ``NetWare SDK'', ``NLM &amp; NetWare Libraries for C'' and ``NetWare Server Protocol Libraries for C'', all available at &lt;<a rel="nofollow" HREF="http://developer.novell.com/wiki/index.php/Category:Novell_Developer_Kit">http://developer.novell.com/wiki/index.php/Category:Novell_Developer_Kit</a>&gt;, are required. Microsoft Visual C++ version 4.2 or later is also required.
 
 <h3>Setup</h3>
 
- The build process is dependent on the location of the NetWare <font SIZE="-1">SDK.</font> Once the Tools &amp; <font SIZE="-1">SDK</font> are installed, the build environment has to be setup. The following batch files setup the environment.
+ The build process is dependent on the location of the NetWare SDK. Once the Tools &amp; SDK are installed, the build environment has to be setup. The following batch files setup the environment.
 <dl>
 <dt>SetNWBld.bat
-</dt><dd> The Execution of this file takes 2 parameters as input. The first being the NetWare <font SIZE="-1">SDK</font> path, second being the path for CodeWarrior Compiler &amp; tools. Execution of this file sets these paths and also sets the build type to Release by default.
+</dt><dd> The Execution of this file takes 2 parameters as input. The first being the NetWare SDK path, second being the path for CodeWarrior Compiler &amp; tools. Execution of this file sets these paths and also sets the build type to Release by default.
 </dd><dt>Buildtype.bat
 </dt><dd> This is used to set the build type to debug or release. Change the build type only after executing SetNWBld.bat 
  Example:
@@ -51,9 +51,9 @@ perlnetware - Perl for NetWare
  Currently the following two build types are tested on NetWare:
 <dl>
 <dt>&bull;
-</dt><dd> <font SIZE="-1">USE_MULTI, USE_ITHREADS &amp; USE_IMP_SYS</font> defined
+</dt><dd> USE_MULTI, USE_ITHREADS &amp; USE_IMP_SYS defined
 </dd><dt>&bull;
-</dt><dd> <font SIZE="-1">USE_MULTI &amp; USE_IMP_SYS</font> defined and <font SIZE="-1">USE_ITHREADS</font> not defined</dd></dl>
+</dt><dd> USE_MULTI &amp; USE_IMP_SYS defined and USE_ITHREADS not defined</dd></dl>
 
 <h3>Interpreter</h3>
 
@@ -75,7 +75,7 @@ perlnetware - Perl for NetWare
 
 <h2>BUILD NEW EXTENSIONS</h2>
 
- To build extensions other than standard extensions, NetWare Perl has to be installed on Windows along with Windows Perl. The Perl for Windows can be either downloaded from the <font SIZE="-1">CPAN</font> site and built using the sources, or the binaries can be directly downloaded from the ActiveState site. Installation can be done by invoking <i>nmake install</i> from the NetWare folder on a WinNT command prompt after building NetWare Perl by following steps given above. This will copy all the *.pm files and other required files. Documentation files are not copied. Thus one must first install Windows Perl, Then install NetWare Perl. 
+ To build extensions other than standard extensions, NetWare Perl has to be installed on Windows along with Windows Perl. The Perl for Windows can be either downloaded from the CPAN site and built using the sources, or the binaries can be directly downloaded from the ActiveState site. Installation can be done by invoking <i>nmake install</i> from the NetWare folder on a WinNT command prompt after building NetWare Perl by following steps given above. This will copy all the *.pm files and other required files. Documentation files are not copied. Thus one must first install Windows Perl, Then install NetWare Perl. 
 
  Once this is done, do the following to build any extension:
 <dl>
@@ -114,7 +114,7 @@ perlnetware - Perl for NetWare
   INSTALLSITELIB=i:\perl\lib
 </pre>
 </dd><dt>&bull;
-</dt><dd> Note: Some modules downloaded from <font SIZE="-1">CPAN</font> may require NetWare related <font SIZE="-1">API</font> in order to build on NetWare. Other modules may however build smoothly with or without minor changes depending on the type of module.</dd></dl>
+</dt><dd> Note: Some modules downloaded from CPAN may require NetWare related API in order to build on NetWare. Other modules may however build smoothly with or without minor changes depending on the type of module.</dd></dl>
 
 <h2>ACKNOWLEDGEMENTS</h2>
 

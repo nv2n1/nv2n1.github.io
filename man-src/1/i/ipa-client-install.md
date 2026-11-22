@@ -33,16 +33,16 @@ description: "ipa-client-install – Configure an IPA client"
 <p> In order to avoid the aforementioned DNS autodiscovery issues, the client machine hostname should be in a domain with properly defined DNS SRV records pointing to IPA servers, either manually with a custom DNS server or with IPA DNS integrated solution. A second approach would be to avoid autodiscovery and configure the installer to use a fixed list of IPA server hostnames using the &#8211;server option and with a &#8211;fixed-primary option disabling DNS SRV record autodiscovery in SSSD. </p>
 <h3>Re-enrollment of the host</h3>
 <p> Requirements: </p>
-<p> 1. Host has not been un-enrolled (the ipa-client-install &#8211;uninstall command has not been run).<br />
+<p> 1. Host has not been un-enrolled (the ipa-client-install &#8211;uninstall command has not been run).<br/>
  2. The host entry has not been disabled via the ipa host-disable command. </p>
 <p> If this has been the case, host can be re-enrolled using the usual methods. </p>
 <p> There are two method of authenticating a re-enrollment: </p>
-<p> 1. You can use &#8211;force-join option with ipa-client-install command. This authenticates the re-enrollment using the admin&#8217;s credentials provided via the -w/&#8211;password option.<br />
+<p> 1. You can use &#8211;force-join option with ipa-client-install command. This authenticates the re-enrollment using the admin&#8217;s credentials provided via the -w/&#8211;password option.<br/>
  2. If providing the admin&#8217;s password via the command line is not an option (e.g you want to create a script to re-enroll a host and keep the admin&#8217;s password secure), you can use backed up keytab from the previous enrollment of this host to authenticate. See &#8211;keytab option. </p>
 <p> Consequences of the re-enrollment on the host entry: </p>
-<p> 1. A new host certificate is issued<br />
- 2. The old host certificate is revoked<br />
- 3. New SSH keys are generated<br />
+<p> 1. A new host certificate is issued<br/>
+ 2. The old host certificate is revoked<br/>
+ 3. New SSH keys are generated<br/>
  4. ipaUniqueID is preserved </p>
 <h2>OPTIONS</h2>
 <h3>BASIC OPTIONS</h3>
@@ -148,27 +148,27 @@ description: "ipa-client-install – Configure an IPA client"
 <p> /etc/sssd/sssd.conf</p>
 </dd><dt>Files that will be replaced if they exist and SSSD is not configured (&#8211;no-sssd):</dt>
 <dd>
-<p> /etc/ldap.conf<br />
- /etc/nss_ldap.conf<br />
- /etc/libnss-ldap.conf<br />
- /etc/pam_ldap.conf<br />
+<p> /etc/ldap.conf<br/>
+ /etc/nss_ldap.conf<br/>
+ /etc/libnss-ldap.conf<br/>
+ /etc/pam_ldap.conf<br/>
  /etc/nslcd.conf</p>
 </dd><dt>Files replaced if NTP is enabled:</dt>
 <dd>
-<p> /etc/ntp.conf<br />
- /etc/sysconfig/ntpd<br />
+<p> /etc/ntp.conf<br/>
+ /etc/sysconfig/ntpd<br/>
  /etc/ntp/step-tickers</p>
 </dd><dt>Files always created (replacing existing content):</dt>
 <dd>
-<p> /etc/krb5.conf<br />
- /etc/ipa/ca.crt<br />
- /etc/ipa/default.conf<br />
- /etc/ipa/nssdb<br />
+<p> /etc/krb5.conf<br/>
+ /etc/ipa/ca.crt<br/>
+ /etc/ipa/default.conf<br/>
+ /etc/ipa/nssdb<br/>
  /etc/openldap/ldap.conf</p>
 </dd><dt>Files updated, existing content is maintained:</dt>
 <dd>
-<p> /etc/nsswitch.conf<br />
- /etc/krb5.keytab<br />
+<p> /etc/nsswitch.conf<br/>
+ /etc/krb5.keytab<br/>
  /etc/sysconfig/network</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> 0 if the installation was successful </p>

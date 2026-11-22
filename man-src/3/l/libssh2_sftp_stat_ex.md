@@ -22,8 +22,8 @@ int libssh2_sftp_stat_ex(LIBSSH2_SFTP *sftp, const char *path,
 <p> <i>path</i> &#8211; Remote filesystem object to stat/lstat/setstat. </p>
 <p> <i>path_len</i> &#8211; Length of the name of the remote filesystem object to stat/lstat/setstat. </p>
 <p> <i>stat_type</i> &#8211; One of the three constants specifying the type of stat operation to perform: </p>
-<p> <code>LIBSSH2_SFTP_STAT</code>: performs <a href="/docs/linux/man/2-stat/">stat</a>(2) operation<br />
- <code>LIBSSH2_SFTP_LSTAT</code>: performs <a href="/docs/linux/man/2-lstat/">lstat</a>(2) operation<br />
+<p> <code>LIBSSH2_SFTP_STAT</code>: performs <a href="/docs/linux/man/2-stat/">stat</a>(2) operation<br/>
+ <code>LIBSSH2_SFTP_LSTAT</code>: performs <a href="/docs/linux/man/2-lstat/">lstat</a>(2) operation<br/>
  <code>LIBSSH2_SFTP_SETSTAT</code>: performs operation to set stat info on file </p>
 <p> <i>attrs</i> &#8211; Pointer to a <code>LIBSSH2_SFTP_ATTRIBUTES</code> structure to set file metadata from or into depending on the value of stat_type. </p>
 <p> Get or Set statbuf type data on a remote filesystem object. When getting statbuf data, <code><a href="/docs/linux/man/3-libssh2_sftp_stat/">libssh2_sftp_stat</a>(3)</code> will follow all symlinks, while <code><a href="/docs/linux/man/3-libssh2_sftp_lstat/">libssh2_sftp_lstat</a>(3)</code> will return data about the object encountered, even if that object happens to be a symlink. </p>

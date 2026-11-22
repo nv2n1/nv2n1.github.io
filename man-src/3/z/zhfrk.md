@@ -10,7 +10,7 @@ description: "zhfrk.f –"
 <p>zhfrk.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zhfrk</code> (TRANSR, UPLO, TRANS, N, K, ALPHA, A, LDA, BETA, C)<br />
+<p>subroutine <code>zhfrk</code> (TRANSR, UPLO, TRANS, N, K, ALPHA, A, LDA, BETA, C)<br/>
  <i></i><code>ZHFRK</code> performs a Hermitian rank-k operation for matrix in RFP format.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zhfrk (characterTRANSR, characterUPLO, characterTRANS, integerN, integerK, double precisionALPHA, complex*16, dimension( lda, * )A, integerLDA, double precisionBETA, complex*16, dimension( * )C)</h3>

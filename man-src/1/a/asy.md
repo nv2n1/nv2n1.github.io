@@ -17,7 +17,7 @@ description: "asy – Asymptote: a script-based vector graphics language"
 <p> If no arguments are given, Asymptote runs in interactive mode. </p>
 <p> If &quot;-&quot; is given as the file argument, Asymptote reads from standard input. </p>
 <p> A summary of options is included below. The effect of most options can be negated by prepending <code>no</code> to the option name. Default values for most options may also be entered in the file <code>.asy/config.asy</code> in the user&#8217;s home directory using the long form: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;import settings;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;import settings;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;batchView=true; </p>
 <p> For a complete description, see the Info files.</p>
 <dl>

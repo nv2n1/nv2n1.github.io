@@ -10,7 +10,7 @@ description: "ztgsy2.f –"
 <p>ztgsy2.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>ztgsy2</code> (TRANS, IJOB, M, N, A, LDA, B, LDB, C, LDC, D, LDD, E, LDE, F, LDF, SCALE, RDSUM, RDSCAL, INFO)<br />
+<p>subroutine <code>ztgsy2</code> (TRANS, IJOB, M, N, A, LDA, B, LDB, C, LDC, D, LDD, E, LDE, F, LDF, SCALE, RDSUM, RDSCAL, INFO)<br/>
  <i></i><code>ZTGSY2</code> solves the generalized Sylvester equation (unblocked algorithm).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ztgsy2 (characterTRANS, integerIJOB, integerM, integerN, complex*16, dimension( lda, * )A, integerLDA, complex*16, dimension( ldb, * )B, integerLDB, complex*16, dimension( ldc, * )C, integerLDC, complex*16, dimension( ldd, * )D, integerLDD, complex*16, dimension( lde, * )E, integerLDE, complex*16, dimension( ldf, * )F, integerLDF, double precisionSCALE, double precisionRDSUM, double precisionRDSCAL, integerINFO)</h3>

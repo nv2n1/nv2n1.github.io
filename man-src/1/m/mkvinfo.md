@@ -149,7 +149,7 @@ info.txt
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mkvmerge/">mkvmerge</a></code>(1), <code><a href="/docs/linux/man/1-mkvextract/">mkvextract</a></code>(1), <code><a href="/docs/linux/man/1-mkvpropedit/">mkvpropedit</a></code>(1), <code><a href="/docs/linux/man/1-mmg/">mmg</a></code>(1)  </p>
 <h2>WWW</h2>
-<p> The latest version can always be found at m[blue]<code>the MKVToolNix homepage</code>m[]<font SIZE="-2">[1]</font>.  </p>
+<p> The latest version can always be found at m[blue]<code>the MKVToolNix homepage</code>m[][1].  </p>
 <h2>AUTHOR</h2>
 <p> <code>Moritz Bunkus</code> &lt;moritz [at] bunkus.org&gt; </p>
 <dl>

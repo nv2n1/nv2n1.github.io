@@ -9,27 +9,27 @@ description: "edg-mkgridmap – a tool to build the grid-mapfile"
 
 <p>edg-mkgridmap &#8211; a tool to build the grid-mapfile</p>
 <h2>Synopsis</h2>
-<p><code>edg-mkgridmap</code> [<code>&#8211;help</code>] [<code>&#8211;version</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;conf</code>=<i>config_file</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;output</code>[=<i>output_file</i>]]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;quiet</code>]&nbsp;<wbr>[<code>&#8211;verbose</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;safe</code>]&nbsp;<wbr>[<code>&#8211;nosafe</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;cache</code>]&nbsp;<wbr>[<code>&#8211;nocache</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;proxy</code>]&nbsp;<wbr>[<code>&#8211;noproxy</code>]<br />
+<p><code>edg-mkgridmap</code> [<code>&#8211;help</code>] [<code>&#8211;version</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;conf</code>=<i>config_file</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;output</code>[=<i>output_file</i>]]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;quiet</code>]&nbsp;<wbr>[<code>&#8211;verbose</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;safe</code>]&nbsp;<wbr>[<code>&#8211;nosafe</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;cache</code>]&nbsp;<wbr>[<code>&#8211;nocache</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;proxy</code>]&nbsp;<wbr>[<code>&#8211;noproxy</code>]<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;usermode</code>]</p>
 <h2>Description</h2>
-<p><code>edg-mkgridmap</code> is a tool to build the grid-mapfile from <font SIZE="-1">VO</font> servers, taking into account both <font SIZE="-1">VO</font> and local policies.</p>
+<p><code>edg-mkgridmap</code> is a tool to build the grid-mapfile from VO servers, taking into account both VO and local policies.</p>
 <h2>Configuration</h2>
 <p><i>edg-mkgridmap.conf</i> file contains configuration information for <code>edg-mkgridmap</code>. </p>
 <p> The syntax of the <i>edg-mkgridmap.conf</i> file is discussed seperately. The <i><a href="/docs/linux/man/5-edg-mkgridmap-conf/">edg-mkgridmap.conf</a></i>(5) documentation should be consulted for detailed reference information. </p>
 <p> The default location is <i>/etc/edg-mkgridmap.conf</i>. </p>
 <p> The file essentially consists of a list of directives composed by a keyword and one or more arguments. Optional arguments are put in square brackets.</p>
 <dl>
-<dt>* <code>group</code> <i></i><font SIZE="-1"><i>URI</i></font><i></i> <i>[lcluser]</i></dt>
+<dt>* <code>group</code> <i></i><i>URI</i><i></i> <i>[lcluser]</i></dt>
 <dd>
 </dd><dt>* <code>default_lcluser</code> <i>default_lcluser</i></dt>
 <dd>
-</dd><dt>* <code>auth</code> <i></i><font SIZE="-1"><i>URI</i></font><i></i></dt>
+</dd><dt>* <code>auth</code> <i></i><i>URI</i><i></i></dt>
 <dd>
 </dd><dt>* <code>allow</code>|<code>deny</code> <i>pattern_to_match</i></dt>
 <dd>
@@ -44,7 +44,7 @@ description: "edg-mkgridmap – a tool to build the grid-mapfile"
 <dt><code>&#8211;conf</code>=<i>config_file</i></dt>
 <dd>Specifies the configuration file that is used by <code>edg-mkgridmap</code>. If omitted, <code>edg-mkgridmap</code> checks <i>/var/lib/edg-mkgridmap/etc/edg-mkgridmap.conf</i> to see if a machine-specific configuration has been setup. If such a file is not present, <code>edg-mkgridmap</code> uses the default configuration file <i>/etc/edg-mkgridmap.conf</i>.</dd>
 <dt><code>&#8211;output</code>[=<i>output_file</i>]</dt>
-<dd>Specifies the output file. If omitted, <i>stdout</i> is used. If the optional argument <i>output_file</i> is omitted, the value of the environment variable <font SIZE="-1"><code>GRIDMAP</code></font> is used. If <font SIZE="-1"><code>GRIDMAP</code></font> is not set, then the default value <i>/etc/grid-security/grid-mapfile</i> is used.</dd>
+<dd>Specifies the output file. If omitted, <i>stdout</i> is used. If the optional argument <i>output_file</i> is omitted, the value of the environment variable <code>GRIDMAP</code> is used. If <code>GRIDMAP</code> is not set, then the default value <i>/etc/grid-security/grid-mapfile</i> is used.</dd>
 <dt><code>&#8211;quiet</code></dt>
 <dd>Turn off error messages.</dd>
 <dt><code>&#8211;verbose</code></dt>
@@ -54,7 +54,7 @@ description: "edg-mkgridmap – a tool to build the grid-mapfile"
 <dt><code>&#8211;cache</code>, <code>&#8211;nocache</code></dt>
 <dd>Disable (<code>&#8211;cache</code>) or enable (<code>&#8211;nocache</code>) the grid-mapfile update when its contents remain unchanged. Default is enable (<code>&#8211;nocache</code>).</dd>
 <dt><code>&#8211;proxy</code>, <code>&#8211;noproxy</code></dt>
-<dd>Enable (<code>&#8211;proxy</code>) or disable (<code>&#8211;noproxy</code>) proxy support for <font SIZE="-1">HTTP/HTTPS</font> and <font SIZE="-1">VOMS/VOMSS</font> connections. Default is disable (<code>&#8211;noproxy</code>). </dd>
+<dd>Enable (<code>&#8211;proxy</code>) or disable (<code>&#8211;noproxy</code>) proxy support for HTTP/HTTPS and VOMS/VOMSS connections. Default is disable (<code>&#8211;noproxy</code>). </dd>
 <p> The proxy support must be configured through appropriate environmental variables.</p>
 <dt><code>&#8211;usermode</code></dt>
 <dd>Facilitate running the script as an ordinary user by having the relevant environment variables point to the user&#8217;s X509 proxy instead of using the personal certificate and key. The user&#8217;s proxy is taken from the <code>X509_USER_PROXY</code> environment variable, if defined, else from the default location <i>/tmp/x509up_u$UID</i>.</dd></dl>
@@ -76,12 +76,12 @@ description: "edg-mkgridmap – a tool to build the grid-mapfile"
 <p> Any error message generated by <code>edg-mkgridmap</code> is logged to the <code>syslogd</code>.</p>
 <h2>Environment</h2>
 <dl>
-<dt><font SIZE="-1"><code>EDG_MKGRIDMAP_OPTIONS</code></font></dt>
+<dt><code>EDG_MKGRIDMAP_OPTIONS</code></dt>
 <dd>Used to specify command line options.</dd>
-<dt><font SIZE="-1"><code>GRIDMAP</code></font></dt>
+<dt><code>GRIDMAP</code></dt>
 <dd>Used to determine the location of the grid-mapfile. If not set, then the default value <i>/etc/grid-security/grid-mapfile</i> is used.</dd>
-<dt><font SIZE="-1"><code>CERTDIR</code></font></dt>
-<dd>Used to determine the directory containing <font SIZE="-1">CA</font> certificates. If not set, then the default value <i>/etc/grid-security/certificates</i> is used.</dd>
+<dt><code>CERTDIR</code></dt>
+<dd>Used to determine the directory containing CA certificates. If not set, then the default value <i>/etc/grid-security/certificates</i> is used.</dd>
 <dt><code>X509_USER_CERT</code></dt>
 <dd>Used to determine the location of the host certificate. If not set, then the default value <i>/etc/grid-security/hostcert.pem</i> is used.</dd>
 <dt><code>X509_USER_KEY</code></dt>
@@ -89,10 +89,10 @@ description: "edg-mkgridmap – a tool to build the grid-mapfile"
 <dt><code>X509_USER_PROXY</code></dt>
 <dd>Used to determine the location of the user&#8217;s proxy when the <code>&#8211;usermode</code> option is given. If not set, the default value <i>/tmp/x509up_u$UID</i> is used.</dd>
 <dt><code>http_proxy</code></dt>
-<dd>Used to determine the proxy for <font SIZE="-1">HTTP</font> connections. The syntax is: </dd>
+<dd>Used to determine the proxy for HTTP connections. The syntax is: </dd>
 <pre> http_proxy=&quot;[<a rel="nofollow" href="http://]">http://]</a>&lt;host&gt;:&lt;port&gt;&quot;</pre>
 <dt><code>https_proxy</code></dt>
-<dd>Used to determine the proxy for <font SIZE="-1">HTTPS</font> connections. The syntax is: </dd>
+<dd>Used to determine the proxy for HTTPS connections. The syntax is: </dd>
 <pre> https_proxy=&quot;[<a rel="nofollow" href="http://]">http://]</a>&lt;host&gt;:&lt;port&gt;&quot;</pre>
 </dl>
 <h2>Examples</h2>
@@ -111,4 +111,4 @@ description: "edg-mkgridmap – a tool to build the grid-mapfile"
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/5-edg-mkgridmap-conf/">edg-mkgridmap.conf</a></i>(5)</p>
 <h2>Authors</h2>
-<p><font SIZE="-1">EU</font> DataGrid Authorization Working Group, <font SIZE="-1">EGEE</font> Middleware Security Group, Maarten Litmaath (<font SIZE="-1">CERN/WLCG</font>)</p>
+<p>EU DataGrid Authorization Working Group, EGEE Middleware Security Group, Maarten Litmaath (CERN/WLCG)</p>

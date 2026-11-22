@@ -42,54 +42,54 @@ Functions</code></pre>
 <h3>globus_result_t globus_scheduler_event (const char * format, &#8230;)</h3>
 <p>Send an arbitrary SEG notification. <code>Parameters:</code></p>
 <dl>
-<dd><i>format</i> Printf-style format of the SEG notification message<br />
+<dd><i>format</i> Printf-style format of the SEG notification message<br/>
  <i>&#8230;</i> Varargs which will be interpreted as per format.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
-<dd><i>GLOBUS_SUCCESS</i> Scheduler message sent or queued.<br />
- <i>GLOBUS_SEG_ERROR_NULL</i> Null format.<br />
+<dd><i>GLOBUS_SUCCESS</i> Scheduler message sent or queued.<br/>
+ <i>GLOBUS_SEG_ERROR_NULL</i> Null format.<br/>
  <i>GLOBUS_SEG_ERROR_INVALID_FORMAT</i> Unable to determine length of formatted string.</dd></dl>
 <h3>globus_result_t globus_scheduler_event_pending (time_t timestamp, const char * jobid)</h3>
 <p>Send a job pending event to the JobSchedulerMonitor implementation. <code>Parameters:</code></p>
 <dl>
-<dd><i>timestamp</i> Timestamp to use for the event. If set to 0, the time which this function was called is used.<br />
+<dd><i>timestamp</i> Timestamp to use for the event. If set to 0, the time which this function was called is used.<br/>
  <i>jobid</i> String indicating the scheduler-specific name of the job.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
-<dd><i>GLOBUS_SUCCESS</i> Scheduler message sent or queued.<br />
- <i>GLOBUS_SEG_ERROR_NULL</i> Null jobid.<br />
+<dd><i>GLOBUS_SUCCESS</i> Scheduler message sent or queued.<br/>
+ <i>GLOBUS_SEG_ERROR_NULL</i> Null jobid.<br/>
  <i>GLOBUS_SEG_ERROR_INVALID_FORMAT</i> Unable to determine length of formatted string.</dd></dl>
 <h3>globus_result_t globus_scheduler_event_active (time_t timestamp, const char * jobid)</h3>
 <p>Send a job active event to the JobSchedulerMonitor implementation. <code>Parameters:</code></p>
 <dl>
-<dd><i>timestamp</i> Timestamp to use for the event. If set to 0, the time which this function was called is used.<br />
+<dd><i>timestamp</i> Timestamp to use for the event. If set to 0, the time which this function was called is used.<br/>
  <i>jobid</i> String indicating the scheduler-specific name of the job.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
-<dd><i>GLOBUS_SUCCESS</i> Scheduler message sent or queued.<br />
- <i>GLOBUS_SEG_ERROR_NULL</i> Null jobid.<br />
+<dd><i>GLOBUS_SUCCESS</i> Scheduler message sent or queued.<br/>
+ <i>GLOBUS_SEG_ERROR_NULL</i> Null jobid.<br/>
  <i>GLOBUS_SEG_ERROR_INVALID_FORMAT</i> Unable to determine length of formatted string.</dd></dl>
 <h3>globus_result_t globus_scheduler_event_failed (time_t timestamp, const char * jobid, int failure_code)</h3>
 <p>Send a job failed event to the JobSchedulerMonitor implementation. <code>Parameters:</code></p>
 <dl>
-<dd><i>timestamp</i> Timestamp to use for the event. If set to 0, the time which this function was called is used.<br />
- <i>jobid</i> String indicating the scheduler-specific name of the job.<br />
+<dd><i>timestamp</i> Timestamp to use for the event. If set to 0, the time which this function was called is used.<br/>
+ <i>jobid</i> String indicating the scheduler-specific name of the job.<br/>
  <i>failure_code</i> Failure code of the process if known.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
-<dd><i>GLOBUS_SUCCESS</i> Scheduler message sent or queued.<br />
- <i>GLOBUS_SEG_ERROR_NULL</i> Null jobid.<br />
+<dd><i>GLOBUS_SUCCESS</i> Scheduler message sent or queued.<br/>
+ <i>GLOBUS_SEG_ERROR_NULL</i> Null jobid.<br/>
  <i>GLOBUS_SEG_ERROR_INVALID_FORMAT</i> Unable to determine length of formatted string.</dd></dl>
 <h3>globus_result_t globus_scheduler_event_done (time_t timestamp, const char * jobid, int exit_code)</h3>
 <p>Send a job done event to the JobSchedulerMonitor implementation. <code>Parameters:</code></p>
 <dl>
-<dd><i>timestamp</i> Timestamp to use for the event. If set to 0, the time which this function was called is used.<br />
- <i>jobid</i> String indicating the scheduler-specific name of the job.<br />
+<dd><i>timestamp</i> Timestamp to use for the event. If set to 0, the time which this function was called is used.<br/>
+ <i>jobid</i> String indicating the scheduler-specific name of the job.<br/>
  <i>exit_code</i> Exit code of the process if known.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
-<dd><i>GLOBUS_SUCCESS</i> Scheduler message sent or queued.<br />
- <i>GLOBUS_SEG_ERROR_NULL</i> Null jobid.<br />
+<dd><i>GLOBUS_SUCCESS</i> Scheduler message sent or queued.<br/>
+ <i>GLOBUS_SEG_ERROR_NULL</i> Null jobid.<br/>
  <i>GLOBUS_SEG_ERROR_INVALID_FORMAT</i> Unable to determine length of formatted string.</dd></dl>
 <h3>globus_result_t globus_scheduler_event_generator_get_timestamp (time_t * timestamp)</h3>
 <p>Get the timestamp for the earliest event an SEG module should send. <code>Parameters:</code></p>
@@ -97,7 +97,7 @@ Functions</code></pre>
 <dd><i>timestamp</i> Pointer to a time_t which will be set to the timestamp passed to the SEG executable. The module should not send any events which occur prior to this timestamp.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
-<dd><i>GLOBUS_SEG_ERROR_NULL</i> Null timestamp.<br />
+<dd><i>GLOBUS_SEG_ERROR_NULL</i> Null timestamp.<br/>
  <i>GLOBUS_SUCCESS</i> Timestamp value updated. If the timestamp was not set on the SEG command-line, then the value pointed to by <i>timestamp</i> will be set to 0.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for globus scheduler event generator from the source code.</p>

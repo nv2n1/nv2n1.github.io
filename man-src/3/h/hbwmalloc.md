@@ -8,7 +8,7 @@ url: "/docs/linux/man/3-hbwmalloc/"
 description: "hbwmalloc – The high bandwidth memory interface Note: hbwmalloc.h functionality is considered as stable API (STANDARD API)."
 ---
 
-<p> hbwmalloc &#8211; The high bandwidth memory interface<br />
+<p> hbwmalloc &#8211; The high bandwidth memory interface<br/>
  Note: hbwmalloc.h functionality is considered as stable API (STANDARD API).</p>
 <h2>SYNOPSIS</h2>
 <pre><code>
@@ -44,7 +44,7 @@ int hbw_set_policy(hbw_policy_t mode);
 <dt><code>HBW_PAGESIZE_1GB_STRICT</code></dt>
 <dd> The one gigabyte page size option. The total size of the allocation must be a multiple of 1GB with this option, otherwise the allocation will fail.</dd></dl>
 <p> <code>hbw_get_policy</code>() returns the current fallback policy when insufficient high bandwith memory is available. </p>
-<p> <code>hbw_set_policy</code>() sets the current fallback policy. The policy can be modified only once in the lifetime of an application and before calling hbw_*alloc() or hbw_posix_memalign*() function.<br />
+<p> <code>hbw_set_policy</code>() sets the current fallback policy. The policy can be modified only once in the lifetime of an application and before calling hbw_*alloc() or hbw_posix_memalign*() function.<br/>
  Note: If the policy is not set, than HBW_POLICY_PREFERRED will be used by default.</p>
 <dl>
 <dt><code>HBW_POLICY_BIND</code></dt>

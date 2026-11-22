@@ -27,7 +27,7 @@ description: "createrepo – Create repomd (xml-rpm-metadata) repository"
 <dt><code>-q &#8211;quiet</code></dt>
 <dd>Run quietly.</dd>
 <dt><code>-g &#8211;groupfile</code> &lt;groupfile&gt;</dt>
-<dd>A precreated xml filename to point to for group information.<br />
+<dd>A precreated xml filename to point to for group information.<br/>
  See examples section below for further explanation.</dd>
 <dt><code>-v &#8211;verbose</code></dt>
 <dd>Run verbosely.</dd>
@@ -87,7 +87,7 @@ description: "createrepo – Create repomd (xml-rpm-metadata) repository"
 <dd>use xz for repodata compression</dd>
 <dd></dd></dl>
 <h2>Examples</h2>
-<p>Here is an example of a repository with a groups file. Note that the groups file should be in the same directory as the rpm packages (i.e. /path/to/rpms/comps.xml).<br />
+<p>Here is an example of a repository with a groups file. Note that the groups file should be in the same directory as the rpm packages (i.e. /path/to/rpms/comps.xml).<br/>
  <code>createrepo</code> -g comps.xml /path/to/rpms </p>
 <h2>Files</h2>
 <pre>repodata/filelists.xml.gz

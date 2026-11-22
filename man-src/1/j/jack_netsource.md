@@ -12,8 +12,8 @@ description: "jack_netsource – Netjack Master client for one slave"
 <h2>SYNOPSIS</h2>
 <p> <code>jack_netsource</code> [ <i>-H</i> hostname ] [ <i>options</i> ] </p>
 <h2>DESCRIPTION</h2>
-<p> <code>jack_netsource</code> The Master side of a netjack connection. Represents the slave jackd -dnet in the master jack graph. Most connection parameters are configured via the netsource, and the slave will set itself up according to the commandline option given to jack_netsource.<br />
- Netjack allows low latency audio connections over general IP networks. When using celt for compression, it is even possible to establish transatlantic links, with latencies not much over the actual ping time.<br />
+<p> <code>jack_netsource</code> The Master side of a netjack connection. Represents the slave jackd -dnet in the master jack graph. Most connection parameters are configured via the netsource, and the slave will set itself up according to the commandline option given to jack_netsource.<br/>
+ Netjack allows low latency audio connections over general IP networks. When using celt for compression, it is even possible to establish transatlantic links, with latencies not much over the actual ping time.<br/>
  But the main usecase is of course a LAN, where it can achieve one jack period of latency. </p>
 <h2>OPTIONS</h2>
 <dl>
@@ -77,11 +77,11 @@ description: "jack_netsource – Netjack Master client for one slave"
  Output version information and exit </dd>
 </dl>
 <h2>EXAMPLES</h2>
-<p> run a 4 audio channel bidirectional link with one period of latency and no midi channels. Audio data is flowing uncompressed over the wire:<br />
+<p> run a 4 audio channel bidirectional link with one period of latency and no midi channels. Audio data is flowing uncompressed over the wire:<br/>
  On <i>hostA</i>:</p>
 <dl>
 <dt>
-</dt><dd> <code>jackd -d alsa </code><br />
+</dt><dd> <code>jackd -d alsa </code><br/>
  <code>jack_netsource -H hostB -n1 -i4 -o4 -I0 -O0 </code></dd></dl>
 <p> On <i>hostB</i>:</p>
 <dl>

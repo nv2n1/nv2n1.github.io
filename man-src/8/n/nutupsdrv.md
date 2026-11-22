@@ -14,7 +14,7 @@ description: "nutupsdrv – generic manual for unified NUT drivers"
 <h2>Description</h2>
 <p><code>nutupsdrv</code> is not actually a driver. This is a combined man page for the shared code that is the core of many drivers within the Network UPS Tools package. For information on the specific drivers, see their individual man pages. UPS drivers provide a communication channel between the physical UPS hardware and the <code><a href="/docs/linux/man/8-upsd/">upsd</a></code>(8) server. The driver is responsible for translating the native protocol of the UPS to the common format used by the rest of this package. The core has two modes of operation which are determined by the command line switches. In the normal mode, the driver will periodically poll the UPS for its state and parameters. The results of this command is presented to upsd. The driver will also handle setting variables and instant commands if available. The driver can also instruct the UPS to shut down the load, possibly after some delay. This mode of operation is intended for cases when it is known that the UPS is running out of battery power and the systems attached must be turned off to ensure a proper reboot when power returns.</p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  You probably don&#8217;t want to use any of these options directly. You should use <code><a href="/docs/linux/man/8-upsdrvctl/">upsdrvctl</a></code>(8) to control your drivers, and <code><a href="/docs/linux/man/5-ups-conf/">ups.conf</a></code>(5) to configure them. The rest of this manual describes options and parameters that generally are not needed by normal users. </dd>
 <h2>Options</h2>
 <p><code>-h</code></p>

@@ -22,32 +22,32 @@ description: "g_wham – weighted histogram analysis after umbrella sampling"
 <p> <code> -noprof</code> only calculate min and max </p>
 <p> <code> -bins</code> number of bins to use in calculation </p>
 <h2>FILES</h2>
-<p> <code>-o</code><i> profile.xvg</i> <code>Output</code><br />
+<p> <code>-o</code><i> profile.xvg</i> <code>Output</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-hist</code><i> histo.xvg</i> <code>Output</code><br />
+<p> <code>-hist</code><i> histo.xvg</i> <code>Output</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
 <h2>OTHER OPTIONS</h2>
-<p> <code>-[no]h</code><i>no </i><br />
+<p> <code>-[no]h</code><i>no </i><br/>
 &nbsp;<wbr>Print help info and quit </p>
-<p> <code>-nice</code><i> int</i><code> 0</code><br />
+<p> <code>-nice</code><i> int</i><code> 0</code><br/>
 &nbsp;<wbr>Set the nicelevel </p>
-<p> <code>-[no]w</code><i>no </i><br />
+<p> <code>-[no]w</code><i>no </i><br/>
 &nbsp;<wbr>View output xvg, xpm, eps and pdb files </p>
-<p> <code>-[no]xvgr</code><i>yes </i><br />
+<p> <code>-[no]xvgr</code><i>yes </i><br/>
 &nbsp;<wbr>Add specific codes&nbsp;<wbr>(legends etc.)&nbsp;<wbr>in the output xvg files for the xmgrace program </p>
-<p> <code>-min</code><i> real</i><code> 0 </code><br />
+<p> <code>-min</code><i> real</i><code> 0 </code><br/>
 &nbsp;<wbr>Minimum coordinate in profile </p>
-<p> <code>-max</code><i> real</i><code> 0 </code><br />
+<p> <code>-max</code><i> real</i><code> 0 </code><br/>
 &nbsp;<wbr>Maximum coordinate in profile </p>
-<p> <code>-bins</code><i> int</i><code> 100</code><br />
+<p> <code>-bins</code><i> int</i><code> 100</code><br/>
 &nbsp;<wbr>Number of bins in profile </p>
-<p> <code>-[no]prof</code><i>yes </i><br />
+<p> <code>-[no]prof</code><i>yes </i><br/>
 &nbsp;<wbr>Only calculate min and max </p>
-<p> <code>-temp</code><i> real</i><code> 298 </code><br />
+<p> <code>-temp</code><i> real</i><code> 298 </code><br/>
 &nbsp;<wbr>Temperature </p>
-<p> <code>-[no]flip</code><i>no </i><br />
+<p> <code>-[no]flip</code><i>no </i><br/>
 &nbsp;<wbr>Combine halves of profile </p>
-<p> <code>-tol</code><i> real</i><code> 0.01 </code><br />
+<p> <code>-tol</code><i> real</i><code> 0.01 </code><br/>
 &nbsp;<wbr>Tolerance </p>
 <h2>SEE ALSO</h2>
 <p> <code>gromacs(7)</code> </p>

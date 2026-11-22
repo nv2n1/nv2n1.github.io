@@ -10,7 +10,7 @@ description: "ldns_is_rrset"
 
 <p> ldns_is_rrset </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> bool ldns_is_rrset(ldns_rr_list *rr_list); </p>

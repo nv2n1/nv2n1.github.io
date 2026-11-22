@@ -9,117 +9,117 @@ description: "Heimdal Kerberos 5 library –"
 
 <p>Heimdal Kerberos 5 library &#8211; </p>
 <h3>Functions</h3>
-<p>KRB5_LIB_FUNCTION<br />
+<p>KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_add_et_list</code> (krb5_context context, void(*func)(struct et_list **))&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_set_password</code> (krb5_context context, krb5_creds *creds, const char *newpw, krb5_principal targprinc, int *result_code, krb5_data *result_code_string, krb5_data *result_string)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_init_context</code> (krb5_context *context)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_copy_context</code> (krb5_context context, krb5_context *out)&quot; </p>
-<p> KRB5_LIB_FUNCTION void<br />
+<p> KRB5_LIB_FUNCTION void<br/>
  KRB5_LIB_CALL <code>krb5_free_context</code> (krb5_context context)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_set_config_files</code> (krb5_context context, char **filenames)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_prepend_config_files_default</code> (const char *filelist, char ***pfilenames)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_get_default_config_files</code> (char ***pfilenames)&quot; </p>
-<p> KRB5_LIB_FUNCTION void<br />
+<p> KRB5_LIB_FUNCTION void<br/>
  KRB5_LIB_CALL <code>krb5_free_config_files</code> (char **filenames)&quot; </p>
-<p> KRB5_LIB_FUNCTION const<br />
+<p> KRB5_LIB_FUNCTION const<br/>
  krb5_enctype *KRB5_LIB_CALL <code>krb5_kerberos_enctypes</code> (krb5_context context)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_set_default_in_tkt_etypes</code> (krb5_context context, const krb5_enctype *etypes)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_get_default_in_tkt_etypes</code> (krb5_context context, krb5_pdu pdu_type, krb5_enctype **etypes)&quot; </p>
-<p> KRB5_LIB_FUNCTION void<br />
+<p> KRB5_LIB_FUNCTION void<br/>
  KRB5_LIB_CALL <code>krb5_init_ets</code> (krb5_context context)&quot; </p>
-<p> KRB5_LIB_FUNCTION void<br />
+<p> KRB5_LIB_FUNCTION void<br/>
  KRB5_LIB_CALL <code>krb5_set_use_admin_kdc</code> (krb5_context context, krb5_boolean flag)&quot; </p>
-<p> KRB5_LIB_FUNCTION krb5_boolean<br />
+<p> KRB5_LIB_FUNCTION krb5_boolean<br/>
  KRB5_LIB_CALL <code>krb5_get_use_admin_kdc</code> (krb5_context context)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_add_extra_addresses</code> (krb5_context context, krb5_addresses *addresses)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_set_extra_addresses</code> (krb5_context context, const krb5_addresses *addresses)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_get_extra_addresses</code> (krb5_context context, krb5_addresses *addresses)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_add_ignore_addresses</code> (krb5_context context, krb5_addresses *addresses)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_set_ignore_addresses</code> (krb5_context context, const krb5_addresses *addresses)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_get_ignore_addresses</code> (krb5_context context, krb5_addresses *addresses)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_set_fcache_version</code> (krb5_context context, int version)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_get_fcache_version</code> (krb5_context context, int *version)&quot; </p>
-<p> KRB5_LIB_FUNCTION krb5_boolean<br />
+<p> KRB5_LIB_FUNCTION krb5_boolean<br/>
  KRB5_LIB_CALL <code>krb5_is_thread_safe</code> (void)&quot; </p>
-<p> KRB5_LIB_FUNCTION void<br />
+<p> KRB5_LIB_FUNCTION void<br/>
  KRB5_LIB_CALL <code>krb5_set_dns_canonicalize_hostname</code> (krb5_context context, krb5_boolean flag)&quot; </p>
-<p> KRB5_LIB_FUNCTION krb5_boolean<br />
+<p> KRB5_LIB_FUNCTION krb5_boolean<br/>
  KRB5_LIB_CALL <code>krb5_get_dns_canonicalize_hostname</code> (krb5_context context)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_get_kdc_sec_offset</code> (krb5_context context, int32_t *sec, int32_t *usec)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_set_kdc_sec_offset</code> (krb5_context context, int32_t sec, int32_t usec)&quot; </p>
-<p> KRB5_LIB_FUNCTION time_t<br />
+<p> KRB5_LIB_FUNCTION time_t<br/>
  KRB5_LIB_CALL <code>krb5_get_max_time_skew</code> (krb5_context context)&quot; </p>
-<p> KRB5_LIB_FUNCTION void<br />
+<p> KRB5_LIB_FUNCTION void<br/>
  KRB5_LIB_CALL <code>krb5_set_max_time_skew</code> (krb5_context context, time_t t)&quot; </p>
-<p> KRB5_LIB_FUNCTION krb5_boolean<br />
+<p> KRB5_LIB_FUNCTION krb5_boolean<br/>
  KRB5_LIB_CALL <code>krb5_set_home_dir_access</code> (krb5_context context, krb5_boolean allow)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_copy_host_realm</code> (krb5_context context, const krb5_realm *from, krb5_realm **to)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_free_cred_contents</code> (krb5_context context, krb5_creds *c)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_copy_creds_contents</code> (krb5_context context, const krb5_creds *incred, krb5_creds *c)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_copy_creds</code> (krb5_context context, const krb5_creds *incred, krb5_creds **outcred)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_free_creds</code> (krb5_context context, krb5_creds *c)&quot; </p>
-<p> KRB5_LIB_FUNCTION krb5_boolean<br />
+<p> KRB5_LIB_FUNCTION krb5_boolean<br/>
  KRB5_LIB_CALL <code>krb5_compare_creds</code> (krb5_context context, krb5_flags whichfields, const krb5_creds *mcreds, const krb5_creds *creds)&quot; </p>
-<p> KRB5_LIB_FUNCTION unsigned<br />
+<p> KRB5_LIB_FUNCTION unsigned<br/>
  long KRB5_LIB_CALL <code>krb5_creds_get_ticket_flags</code> (krb5_creds *creds)&quot; </p>
-<p> KRB5_LIB_FUNCTION void<br />
+<p> KRB5_LIB_FUNCTION void<br/>
  KRB5_LIB_CALL <code>krb5_data_zero</code> (krb5_data *p)&quot; </p>
-<p> KRB5_LIB_FUNCTION void<br />
+<p> KRB5_LIB_FUNCTION void<br/>
  KRB5_LIB_CALL <code>krb5_data_free</code> (krb5_data *p)&quot; </p>
-<p> KRB5_LIB_FUNCTION void<br />
+<p> KRB5_LIB_FUNCTION void<br/>
  KRB5_LIB_CALL <code>krb5_free_data</code> (krb5_context context, krb5_data *p)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_data_alloc</code> (krb5_data *p, int len)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_data_realloc</code> (krb5_data *p, int len)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_data_copy</code> (krb5_data *p, const void *data, size_t len)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_copy_data</code> (krb5_context context, const krb5_data *indata, krb5_data **outdata)&quot; </p>
 <p> KRB5_LIB_FUNCTION int KRB5_LIB_CALL <code>krb5_data_cmp</code> (const krb5_data *data1, const krb5_data *data2) </p>
 <p> KRB5_LIB_FUNCTION int KRB5_LIB_CALL <code>krb5_data_ct_cmp</code> (const krb5_data *data1, const krb5_data *data2) </p>
-<p> KRB5_LIB_FUNCTION const char<br />
+<p> KRB5_LIB_FUNCTION const char<br/>
  *KRB5_LIB_CALL <code>KRB5_DEPRECATED_FUNCTION</code> (&#8216;Use <code>krb5_get_error_message</code> instead&#8217;)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_copy_ticket</code> (krb5_context, const krb5_ticket *, krb5_ticket **)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_free_ticket</code> (krb5_context, krb5_ticket *)&quot; </p>
-<p> KRB5_LIB_FUNCTION const char<br />
+<p> KRB5_LIB_FUNCTION const char<br/>
  *KRB5_LIB_CALL <code>krb5_get_err_text</code> (krb5_context, krb5_error_code) <code>KRB5_DEPRECATED_FUNCTION</code>(&#8216;Use <code>krb5_get_error_message</code> instead&#8217;)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_krbhst_get_addrinfo</code> (krb5_context, krb5_krbhst_info *, struct addrinfo **)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_set_real_time</code> (krb5_context, krb5_timestamp, int32_t)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_ticket_get_authorization_data_type</code> (krb5_context, krb5_ticket *, int, krb5_data *)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_ticket_get_client</code> (krb5_context, const krb5_ticket *, krb5_principal *)&quot; </p>
-<p> KRB5_LIB_FUNCTION time_t<br />
+<p> KRB5_LIB_FUNCTION time_t<br/>
  KRB5_LIB_CALL <code>krb5_ticket_get_endtime</code> (krb5_context, const krb5_ticket *)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_ticket_get_server</code> (krb5_context, const krb5_ticket *, krb5_principal *)&quot; </p>
 <h2>Detailed Description</h2>
 <h2>Function Documentation</h2>
@@ -127,7 +127,7 @@ description: "Heimdal Kerberos 5 library –"
 <p>Add a specified list of error messages to the et list in context. Call func (probably a comerr-generated function) with a pointer to the current et_list. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> A kerberos context.<br />
+<dd><i>context</i> A kerberos context.<br/>
  <i>func</i> The generated com_err et function.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -136,7 +136,7 @@ description: "Heimdal Kerberos 5 library –"
 <p>Add extra address to the address list that the library will add to the client&#8217;s address list when communicating with the KDC. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> Kerberos 5 context.<br />
+<dd><i>context</i> Kerberos 5 context.<br/>
  <i>addresses</i> addreses to add</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -145,7 +145,7 @@ description: "Heimdal Kerberos 5 library –"
 <p>Add extra addresses to ignore when fetching addresses from the underlaying operating system. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> Kerberos 5 context.<br />
+<dd><i>context</i> Kerberos 5 context.<br/>
  <i>addresses</i> addreses to ignore</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -174,9 +174,9 @@ description: "Heimdal Kerberos 5 library –"
 <dd>KRB5_TC_MATCH_IS_SKEY Compares the existance of the second ticket.</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> Kerberos 5 context.<br />
- <i>whichfields</i> which fields to compare.<br />
- <i>mcreds</i> cred to compare with.<br />
+<dd><i>context</i> Kerberos 5 context.<br/>
+ <i>whichfields</i> which fields to compare.<br/>
+ <i>mcreds</i> cred to compare with.<br/>
  <i>creds</i> cred to compare with.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -185,7 +185,7 @@ description: "Heimdal Kerberos 5 library –"
 <p>Make a copy for the Kerberos 5 context, the new krb5_context shoud be freed with <code>krb5_free_context()</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> the Kerberos context to copy<br />
+<dd><i>context</i> the Kerberos context to copy<br/>
  <i>out</i> the copy of the Kerberos, set to NULL error.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -194,8 +194,8 @@ description: "Heimdal Kerberos 5 library –"
 <p>Copy krb5_creds. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> Kerberos 5 context.<br />
- <i>incred</i> source credential<br />
+<dd><i>context</i> Kerberos 5 context.<br/>
+ <i>incred</i> source credential<br/>
  <i>outcred</i> destination credential, free with <code>krb5_free_creds()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -204,8 +204,8 @@ description: "Heimdal Kerberos 5 library –"
 <p>Copy content of krb5_creds. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> Kerberos 5 context.<br />
- <i>incred</i> source credential<br />
+<dd><i>context</i> Kerberos 5 context.<br/>
+ <i>incred</i> source credential<br/>
  <i>c</i> destination credential, free with <code>krb5_free_cred_contents()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -214,8 +214,8 @@ description: "Heimdal Kerberos 5 library –"
 <p>Copy the data into a newly allocated krb5_data. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> Kerberos 5 context.<br />
- <i>indata</i> the krb5_data data to copy<br />
+<dd><i>context</i> Kerberos 5 context.<br/>
+ <i>indata</i> the krb5_data data to copy<br/>
  <i>outdata</i> new krb5_date to copy too. Free with <code>krb5_free_data()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -224,8 +224,8 @@ description: "Heimdal Kerberos 5 library –"
 <p>Copy the list of realms from `from&#8217; to `to&#8217;. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> Kerberos 5 context.<br />
- <i>from</i> list of realms to copy from.<br />
+<dd><i>context</i> Kerberos 5 context.<br/>
+ <i>from</i> list of realms to copy from.<br/>
  <i>to</i> list of realms to copy to, free list of <code>krb5_free_host_realm()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -234,8 +234,8 @@ description: "Heimdal Kerberos 5 library –"
 <p>Copy ticket and content </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> a Kerberos 5 context<br />
- <i>from</i> ticket to copy<br />
+<dd><i>context</i> a Kerberos 5 context<br/>
+ <i>from</i> ticket to copy<br/>
  <i>to</i> new copy of ticket, free with <code>krb5_free_ticket()</code></dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -252,7 +252,7 @@ description: "Heimdal Kerberos 5 library –"
 <p>Allocate data of and krb5_data. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>p</i> krb5_data to allocate.<br />
+<dd><i>p</i> krb5_data to allocate.<br/>
  <i>len</i> size to allocate.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -261,7 +261,7 @@ description: "Heimdal Kerberos 5 library –"
 <p>Compare to data. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>data1</i> krb5_data to compare<br />
+<dd><i>data1</i> krb5_data to compare<br/>
  <i>data2</i> krb5_data to compare</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -270,8 +270,8 @@ description: "Heimdal Kerberos 5 library –"
 <p>Copy the data of len into the krb5_data. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>p</i> krb5_data to copy into.<br />
- <i>data</i> data to copy..<br />
+<dd><i>p</i> krb5_data to copy into.<br/>
+ <i>data</i> data to copy..<br/>
  <i>len</i> new size.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -280,7 +280,7 @@ description: "Heimdal Kerberos 5 library –"
 <p>Compare to data not exposing timing information from the checksum data </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>data1</i> krb5_data to compare<br />
+<dd><i>data1</i> krb5_data to compare<br/>
  <i>data2</i> krb5_data to compare</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -294,7 +294,7 @@ description: "Heimdal Kerberos 5 library –"
 <p>Grow (or shrink) the content of krb5_data to a new size. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>p</i> krb5_data to free.<br />
+<dd><i>p</i> krb5_data to free.<br/>
  <i>len</i> new size.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -309,7 +309,7 @@ description: "Heimdal Kerberos 5 library –"
 <p> This function is deprecated since its not threadsafe. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> Kerberos 5 context.<br />
+<dd><i>context</i> Kerberos 5 context.<br/>
  <i>code</i> Kerberos error code.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -331,7 +331,7 @@ description: "Heimdal Kerberos 5 library –"
 <p>Free content of krb5_creds. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> Kerberos 5 context.<br />
+<dd><i>context</i> Kerberos 5 context.<br/>
  <i>c</i> krb5_creds to free.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -340,7 +340,7 @@ description: "Heimdal Kerberos 5 library –"
 <p>Free krb5_creds. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> Kerberos 5 context.<br />
+<dd><i>context</i> Kerberos 5 context.<br/>
  <i>c</i> krb5_creds to free.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -349,13 +349,13 @@ description: "Heimdal Kerberos 5 library –"
 <p>Free krb5_data (and its content). </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> Kerberos 5 context.<br />
+<dd><i>context</i> Kerberos 5 context.<br/>
  <i>p</i> krb5_data to free.</dd></dl>
 <h3>KRB5_LIB_FUNCTION krb5_error_code KRB5_LIB_CALL krb5_free_ticket (krb5_contextcontext, krb5_ticket *ticket)</h3>
 <p>Free ticket and content </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> a Kerberos 5 context<br />
+<dd><i>context</i> a Kerberos 5 context<br/>
  <i>ticket</i> ticket to free</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -372,7 +372,7 @@ description: "Heimdal Kerberos 5 library –"
 <p>Get the default encryption types that will be use in communcation with the KDC, clients and servers. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> Kerberos 5 context.<br />
+<dd><i>context</i> Kerberos 5 context.<br/>
  <i>etypes</i> Encryption types, array terminated with ETYPE_NULL(0), caller should free array with krb5_xfree():</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -390,7 +390,7 @@ description: "Heimdal Kerberos 5 library –"
 <p> This function is deprecated since its not threadsafe. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> Kerberos 5 context.<br />
+<dd><i>context</i> Kerberos 5 context.<br/>
  <i>code</i> Kerberos error code.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -399,7 +399,7 @@ description: "Heimdal Kerberos 5 library –"
 <p>Get extra address to the address list that the library will add to the client&#8217;s address list when communicating with the KDC. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> Kerberos 5 context.<br />
+<dd><i>context</i> Kerberos 5 context.<br/>
  <i>addresses</i> addreses to set</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -408,7 +408,7 @@ description: "Heimdal Kerberos 5 library –"
 <p>Get version of fcache that the library should use. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> Kerberos 5 context.<br />
+<dd><i>context</i> Kerberos 5 context.<br/>
  <i>version</i> version number.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -417,7 +417,7 @@ description: "Heimdal Kerberos 5 library –"
 <p>Get extra addresses to ignore when fetching addresses from the underlaying operating system. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> Kerberos 5 context.<br />
+<dd><i>context</i> Kerberos 5 context.<br/>
  <i>addresses</i> list addreses ignored</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -426,8 +426,8 @@ description: "Heimdal Kerberos 5 library –"
 <p>Get current offset in time to the KDC. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> Kerberos 5 context.<br />
- <i>sec</i> seconds part of offset.<br />
+<dd><i>context</i> Kerberos 5 context.<br/>
+ <i>sec</i> seconds part of offset.<br/>
  <i>usec</i> micro seconds part of offset.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -481,7 +481,7 @@ description: "Heimdal Kerberos 5 library –"
 <p>Prepend the filename to the global configuration list. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>filelist</i> a filename to add to the default list of filename<br />
+<dd><i>filelist</i> a filename to add to the default list of filename<br/>
  <i>pfilenames</i> return array of filenames, should be freed with <code>krb5_free_config_files()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -490,7 +490,7 @@ description: "Heimdal Kerberos 5 library –"
 <p>Reinit the context from a new set of filenames. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> context to add configuration too.<br />
+<dd><i>context</i> context to add configuration too.<br/>
  <i>filenames</i> array of filenames, end of list is indicated with a NULL filename.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -499,7 +499,7 @@ description: "Heimdal Kerberos 5 library –"
 <p>Set the default encryption types that will be use in communcation with the KDC, clients and servers. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> Kerberos 5 context.<br />
+<dd><i>context</i> Kerberos 5 context.<br/>
  <i>etypes</i> Encryption types, array terminated with ETYPE_NULL (0).</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -508,13 +508,13 @@ description: "Heimdal Kerberos 5 library –"
 <p>Set if the library should use DNS to canonicalize hostnames. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> Kerberos 5 context.<br />
+<dd><i>context</i> Kerberos 5 context.<br/>
  <i>flag</i> if its dns canonicalizion is used or not.</dd></dl>
 <h3>KRB5_LIB_FUNCTION krb5_error_code KRB5_LIB_CALL krb5_set_extra_addresses (krb5_contextcontext, const krb5_addresses *addresses)</h3>
 <p>Set extra address to the address list that the library will add to the client&#8217;s address list when communicating with the KDC. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> Kerberos 5 context.<br />
+<dd><i>context</i> Kerberos 5 context.<br/>
  <i>addresses</i> addreses to set</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -523,7 +523,7 @@ description: "Heimdal Kerberos 5 library –"
 <p>Set version of fcache that the library should use. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> Kerberos 5 context.<br />
+<dd><i>context</i> Kerberos 5 context.<br/>
  <i>version</i> version number.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -534,7 +534,7 @@ description: "Heimdal Kerberos 5 library –"
 <p> Administrator (root user), never uses the home directory. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> a Kerberos 5 context or NULL<br />
+<dd><i>context</i> a Kerberos 5 context or NULL<br/>
  <i>allow</i> allow if TRUE home directory</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -543,7 +543,7 @@ description: "Heimdal Kerberos 5 library –"
 <p>Set extra addresses to ignore when fetching addresses from the underlaying operating system. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> Kerberos 5 context.<br />
+<dd><i>context</i> Kerberos 5 context.<br/>
  <i>addresses</i> addreses to ignore</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -552,8 +552,8 @@ description: "Heimdal Kerberos 5 library –"
 <p>Set current offset in time to the KDC. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> Kerberos 5 context.<br />
- <i>sec</i> seconds part of offset.<br />
+<dd><i>context</i> Kerberos 5 context.<br/>
+ <i>sec</i> seconds part of offset.<br/>
  <i>usec</i> micro seconds part of offset.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -562,18 +562,18 @@ description: "Heimdal Kerberos 5 library –"
 <p>Set max time skew allowed. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> Kerberos 5 context.<br />
+<dd><i>context</i> Kerberos 5 context.<br/>
  <i>t</i> timeskew in seconds.</dd></dl>
 <h3>KRB5_LIB_FUNCTION krb5_error_code KRB5_LIB_CALL krb5_set_password (krb5_contextcontext, krb5_creds *creds, const char *newpw, krb5_principaltargprinc, int *result_code, krb5_data *result_code_string, krb5_data *result_string)</h3>
 <p>Change password using creds. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> a Keberos context<br />
- <i>creds</i> The initial kadmin/passwd for the principal or an admin principal<br />
- <i>newpw</i> The new password to set<br />
- <i>targprinc</i> if unset, the default principal is used.<br />
- <i>result_code</i> Result code, KRB5_KPASSWD_SUCCESS is when password is changed.<br />
- <i>result_code_string</i> binary message from the server, contains at least the result_code.<br />
+<dd><i>context</i> a Keberos context<br/>
+ <i>creds</i> The initial kadmin/passwd for the principal or an admin principal<br/>
+ <i>newpw</i> The new password to set<br/>
+ <i>targprinc</i> if unset, the default principal is used.<br/>
+ <i>result_code</i> Result code, KRB5_KPASSWD_SUCCESS is when password is changed.<br/>
+ <i>result_code_string</i> binary message from the server, contains at least the result_code.<br/>
  <i>result_string</i> A message from the kpasswd service or the library in human printable form. The string is NUL terminated.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -583,8 +583,8 @@ description: "Heimdal Kerberos 5 library –"
 <p>Set the absolute time that the caller knows the kdc has so the kerberos library can calculate the relative diffrence beteen the KDC time and local system time. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> Keberos 5 context.<br />
- <i>sec</i> The applications new of &#8216;now&#8217; in seconds<br />
+<dd><i>context</i> Keberos 5 context.<br/>
+ <i>sec</i> The applications new of &#8216;now&#8217; in seconds<br/>
  <i>usec</i> The applications new of &#8216;now&#8217; in micro seconds</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -594,22 +594,22 @@ description: "Heimdal Kerberos 5 library –"
 <p>Make the kerberos library default to the admin KDC. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> Kerberos 5 context.<br />
+<dd><i>context</i> Kerberos 5 context.<br/>
  <i>flag</i> boolean flag to select if the use the admin KDC or not.</dd></dl>
 <h3>KRB5_LIB_FUNCTION krb5_error_code KRB5_LIB_CALL krb5_ticket_get_authorization_data_type (krb5_contextcontext, krb5_ticket *ticket, inttype, krb5_data *data)</h3>
 <p>Extract the authorization data type of type from the ticket. Store the field in data. This function is to use for kerberos applications. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> a Kerberos 5 context<br />
- <i>ticket</i> Kerberos ticket<br />
- <i>type</i> type to fetch<br />
+<dd><i>context</i> a Kerberos 5 context<br/>
+ <i>ticket</i> Kerberos ticket<br/>
+ <i>type</i> type to fetch<br/>
  <i>data</i> returned data, free with <code>krb5_data_free()</code></dd></dl>
 <h3>KRB5_LIB_FUNCTION krb5_error_code KRB5_LIB_CALL krb5_ticket_get_client (krb5_contextcontext, const krb5_ticket *ticket, krb5_principal *client)</h3>
 <p>Return client principal in ticket </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> a Kerberos 5 context<br />
- <i>ticket</i> ticket to copy<br />
+<dd><i>context</i> a Kerberos 5 context<br/>
+ <i>ticket</i> ticket to copy<br/>
  <i>client</i> client principal, free with <code>krb5_free_principal()</code></dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -618,7 +618,7 @@ description: "Heimdal Kerberos 5 library –"
 <p>Return end time of ticket </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> a Kerberos 5 context<br />
+<dd><i>context</i> a Kerberos 5 context<br/>
  <i>ticket</i> ticket to copy</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -627,8 +627,8 @@ description: "Heimdal Kerberos 5 library –"
 <p>Return server principal in ticket </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> a Kerberos 5 context<br />
- <i>ticket</i> ticket to copy<br />
+<dd><i>context</i> a Kerberos 5 context<br/>
+ <i>ticket</i> ticket to copy<br/>
  <i>server</i> server principal, free with <code>krb5_free_principal()</code></dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

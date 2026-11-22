@@ -14,10 +14,10 @@ description: "rpl8 – Firmware loader for DVD drives"
 <p><code>rpl8</code> is a program for Linux 2.4 and upwards that uploads firmware to DVD drives (mostly DVD+RW). </p>
 <p> <code>rpl8</code> stands for RICOH Program Loader 8, though it also supports Program Loader 9. </p>
 <p> The program never updates Program Loader code so that you should always be able to downgrade your firmware in case something goes wrong. </p>
-<p> So far <code>rpl8</code> has been tested with the following:<br />
- * HP dvd100i<br />
- * Ricoh MP5120A<br />
- * Philips DVDRW208<br />
+<p> So far <code>rpl8</code> has been tested with the following:<br/>
+ * HP dvd100i<br/>
+ * Ricoh MP5120A<br/>
+ * Philips DVDRW208<br/>
  * HP dvd200i </p>
 <p> To run <code>rpl8</code> correctly, make sure you have no media in drive. Optionally go to single user mode and reboot after uploading the new firmware.</p>
 <h2>Options</h2>

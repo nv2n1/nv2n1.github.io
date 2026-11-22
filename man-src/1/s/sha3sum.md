@@ -41,21 +41,21 @@ sha3sum - Print or Check SHA-3 Checksums
 
 <h2>DESCRIPTION</h2>
 
- Running <i>sha3sum</i> is often the quickest way to compute <font SIZE="-1">SHA-3</font> message digests. The user simply feeds data to the script through files or standard input, and then collects the results from standard output. 
+ Running <i>sha3sum</i> is often the quickest way to compute SHA-3 message digests. The user simply feeds data to the script through files or standard input, and then collects the results from standard output. 
 
- The following command shows how to compute digests for typical inputs such as the <font SIZE="-1">NIST</font> test vector ``abc'': 
+ The following command shows how to compute digests for typical inputs such as the NIST test vector ``abc'': 
 
  <pre>
         perl -e &quot;print qq(abc)&quot; | sha3sum
 </pre> 
 
- Or, if you want to use <font SIZE="-1">SHA3-256</font> instead of the default <font SIZE="-1">SHA3-224,</font> simply say: 
+ Or, if you want to use SHA3-256 instead of the default SHA3-224, simply say: 
 
  <pre>
         perl -e &quot;print qq(abc)&quot; | sha3sum -a 256
 </pre> 
 
- Unlike many other digest computation programs, <i>sha3sum</i> implements the full <font SIZE="-1">SHA-3</font> standard by allowing partial-byte inputs, which can be recognized through the <font SIZE="-1">BITS</font> option (<i>-0</i>). The following example computes the <font SIZE="-1">SHA3-384</font> digest of the 7-bit message <i>0001100</i>: 
+ Unlike many other digest computation programs, <i>sha3sum</i> implements the full SHA-3 standard by allowing partial-byte inputs, which can be recognized through the BITS option (<i>-0</i>). The following example computes the SHA3-384 digest of the 7-bit message <i>0001100</i>: 
 
  <pre>
         perl -e &quot;print qq(0001100)&quot; | sha3sum -0 -a 384

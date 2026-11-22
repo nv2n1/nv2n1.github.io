@@ -49,6 +49,6 @@ description: "cl_status – Check Status of the High-Availability Linux (Linux-H
 <h2>DOCUMENTATION</h2>
 <p> More information may be found at <a rel="nofollow" href="http://www.linux-ha.org/">http://www.linux-ha.org/</a> </p>
 <h2>AUTHORS</h2>
-<p> cl_status &#8211; Sun Jiang Dong &lt;sunjd [at] cn.ibm.com&gt;<br />
- linux-ha &#8211; Alan Robertson &lt;alanr [at] unix.sh&gt; <i>et al</i>.<br />
+<p> cl_status &#8211; Sun Jiang Dong &lt;sunjd [at] cn.ibm.com&gt;<br/>
+ linux-ha &#8211; Alan Robertson &lt;alanr [at] unix.sh&gt; <i>et al</i>.<br/>
  man page &#8211; Horms &lt;horms [at] verge.net.au&gt; </p>

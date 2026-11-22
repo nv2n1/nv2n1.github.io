@@ -14,7 +14,7 @@ description: "BeakerLib – a shell-level integration testing library"
 <p> The essential features include:</p>
 <dl>
 <dt>&bull;</dt>
-<dd> <code>Journal</code> &#8211; uniform logging mechanism (logs &amp; results saved in flexible <font SIZE="-1">XML</font> format, easy to compare results &amp; generate reports)</dd>
+<dd> <code>Journal</code> &#8211; uniform logging mechanism (logs &amp; results saved in flexible XML format, easy to compare results &amp; generate reports)</dd>
 <dt>&bull;</dt>
 <dd> <code>Phases</code> &#8211; logical grouping of test actions, clear separation of setup / test / cleanup (preventing false fails)</dd>
 <dt>&bull;</dt>
@@ -25,8 +25,8 @@ description: "BeakerLib – a shell-level integration testing library"
 <pre>
     . /usr/share/beakerlib/beakerlib.sh
 </pre>
-<p> See the <font SIZE="-1">EXAMPLES</font> section for quick start inspiration. </p>
-<p> See the <font SIZE="-1">BKRDOC</font> section for more information about Automated documentation generator for BeakerLib tests.</p>
+<p> See the EXAMPLES section for quick start inspiration. </p>
+<p> See the BKRDOC section for more information about Automated documentation generator for BeakerLib tests.</p>
 <h2>FUNCTIONS</h2>
 <h3>Journalling</h3>
 <p> <i>rlJournalStart</i> </p>
@@ -40,7 +40,7 @@ description: "BeakerLib – a shell-level integration testing library"
 <pre>
     rlJournalEnd
 </pre>
-<p> Run on the very end of your script to print summary of the whole test run, generate <font SIZE="-1">OUTPUTFILE</font> and include journal in Beaker logs. </p>
+<p> Run on the very end of your script to print summary of the whole test run, generate OUTPUTFILE and include journal in Beaker logs. </p>
 <p> <i>rlJournalPrint</i> </p>
 <p> Print the content of the journal in pretty xml format. </p>
 <pre>
@@ -86,36 +86,36 @@ description: "BeakerLib – a shell-level integration testing library"
 </pre>
 <dl>
 <dt>&#8211;full-journal</dt>
-<dd> With this option, additional items like some <font SIZE="-1">HW</font> information will be printed in the journal.</dd></dl>
+<dd> With this option, additional items like some HW information will be printed in the journal.</dd></dl>
 <p> Example: </p>
-<p>    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::<br />
-    :: [   LOG    ] :: TEST PROTOCOL<br />
-    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::<br />
-    :: [   LOG    ] :: Test run ID   : debugging<br />
-    :: [   LOG    ] :: Package       : debugging<br />
-    :: [   LOG    ] :: Test started  : 2010-02-08 14:45:57<br />
-    :: [   LOG    ] :: Test finished : 2010-02-08 14:45:58<br />
-    :: [   LOG    ] :: Test name     :<br />
-    :: [   LOG    ] :: Distro:       : Fedora release 12 (Constantine)<br />
-    :: [   LOG    ] :: Hostname      : localhost<br />
-    :: [   LOG    ] :: Architecture  : i686<br />
-    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::<br />
-    :: [   LOG    ] :: Test description<br />
-    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::<br />
-    PURPOSE of /examples/beakerlib/Sanity/simple<br />
-    Description: Minimal BeakerLib sanity test<br />
-    Author: Petr Splichal &lt;psplicha [at] redhat.com&gt;<br />
-    This is a minimal sanity test for BeakerLib. It contains a single<br />
-    phase with a couple of asserts. We Just check that the &#8220;setup&#8221;<br />
-    package is installed and that there is a sane /etc/passwd file.<br />
-    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::<br />
-    :: [   LOG    ] :: Test<br />
-    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::<br />
-    :: [   PASS   ] :: Checking for the presence of setup rpm<br />
-    :: [   PASS   ] :: File /etc/passwd should exist<br />
-    :: [   PASS   ] :: File &#8216;/etc/passwd&#8217; should contain &#8216;root&#8217;<br />
-    :: [   LOG    ] :: Duration: 1s<br />
-    :: [   LOG    ] :: Assertions: 3 good, 0 bad<br />
+<p>    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::<br/>
+    :: [   LOG    ] :: TEST PROTOCOL<br/>
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::<br/>
+    :: [   LOG    ] :: Test run ID   : debugging<br/>
+    :: [   LOG    ] :: Package       : debugging<br/>
+    :: [   LOG    ] :: Test started  : 2010-02-08 14:45:57<br/>
+    :: [   LOG    ] :: Test finished : 2010-02-08 14:45:58<br/>
+    :: [   LOG    ] :: Test name     :<br/>
+    :: [   LOG    ] :: Distro:       : Fedora release 12 (Constantine)<br/>
+    :: [   LOG    ] :: Hostname      : localhost<br/>
+    :: [   LOG    ] :: Architecture  : i686<br/>
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::<br/>
+    :: [   LOG    ] :: Test description<br/>
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::<br/>
+    PURPOSE of /examples/beakerlib/Sanity/simple<br/>
+    Description: Minimal BeakerLib sanity test<br/>
+    Author: Petr Splichal &lt;psplicha [at] redhat.com&gt;<br/>
+    This is a minimal sanity test for BeakerLib. It contains a single<br/>
+    phase with a couple of asserts. We Just check that the &#8220;setup&#8221;<br/>
+    package is installed and that there is a sane /etc/passwd file.<br/>
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::<br/>
+    :: [   LOG    ] :: Test<br/>
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::<br/>
+    :: [   PASS   ] :: Checking for the presence of setup rpm<br/>
+    :: [   PASS   ] :: File /etc/passwd should exist<br/>
+    :: [   PASS   ] :: File &#8216;/etc/passwd&#8217; should contain &#8216;root&#8217;<br/>
+    :: [   LOG    ] :: Duration: 1s<br/>
+    :: [   LOG    ] :: Assertions: 3 good, 0 bad<br/>
     :: [   PASS   ] :: RESULT: Test</p>
 <p> <i>rlGetTestState</i> </p>
 <p> Returns number of failed asserts in so far, 255 if there are more then 255 failures. </p>
@@ -134,13 +134,13 @@ description: "BeakerLib – a shell-level integration testing library"
 <p> <i>rlLogWarning</i> </p>
 <p> <i>rlLogError</i> </p>
 <p> <i>rlLogFatal</i> </p>
-<p> Create a time/priority-labelled message in the log. There is a bunch of aliases which can create messages formated as <font SIZE="-1">DEBUG/INFO/WARNING/ERROR</font> or <font SIZE="-1">FATAL </font>(but you would probably want to use rlDie instead of the last one). </p>
+<p> Create a time/priority-labelled message in the log. There is a bunch of aliases which can create messages formated as DEBUG/INFO/WARNING/ERROR or FATAL (but you would probably want to use rlDie instead of the last one). </p>
 <p>rlLog message[logfile][priority][label]</p>
 <dl>
 <dt>message</dt>
 <dd> Message you want to show (use quotes when invoking).</dd>
 <dt>logfile</dt>
-<dd> Log file. If not supplied, <font SIZE="-1">OUTPUTFILE</font> is assumed.</dd>
+<dd> Log file. If not supplied, OUTPUTFILE is assumed.</dd>
 <dt>priority</dt>
 <dd> Priority of the log.</dd>
 <dt>label</dt>
@@ -211,7 +211,7 @@ description: "BeakerLib – a shell-level integration testing library"
     rlGetDistroRelease
     rlGetDistroVariant
 </pre>
-<p> For example on the <font SIZE="-1">RHEL-4-AS</font> you will get release 4 and variant <font SIZE="-1">AS,</font> on the RHEL-5-Client you will get release 5 and variant Client. </p>
+<p> For example on the RHEL-4-AS you will get release 4 and variant AS, on the RHEL-5-Client you will get release 5 and variant Client. </p>
 <p> <i>rlShowRunningKernel</i> </p>
 <p> Log a message with version of the currently running kernel. </p>
 <pre>
@@ -228,16 +228,16 @@ description: "BeakerLib – a shell-level integration testing library"
 <dd> Type of the phase, one of the following:</dd>
 <dl>
 <dl>
-<dt><font SIZE="-1">FAIL</font></dt>
-<dd> When assert fails here, phase will report a <font SIZE="-1">FAIL.</font></dd>
-<dt><font SIZE="-1">WARN</font></dt>
-<dd> When assert fails here, phase will report a <font SIZE="-1">WARN.</font></dd></dl>
+<dt>FAIL</dt>
+<dd> When assert fails here, phase will report a FAIL.</dd>
+<dt>WARN</dt>
+<dd> When assert fails here, phase will report a WARN.</dd></dl>
 </dl>
 <dl>
 </dl>
 <dt>name</dt>
 <dd> Optional name of the phase (if not provided, one will be generated).</dd></dl>
-<p> If all asserts included in the phase pass, phase reports <font SIZE="-1">PASS.</font> </p>
+<p> If all asserts included in the phase pass, phase reports PASS. </p>
 <p> <i>rlPhaseEnd</i> </p>
 <p> End current phase, summarize asserts included and report phase result. </p>
 <pre>
@@ -247,7 +247,7 @@ description: "BeakerLib – a shell-level integration testing library"
 <p> <i>rlPhaseStartSetup</i> </p>
 <p> <i>rlPhaseStartTest</i> </p>
 <p> <i>rlPhaseStartCleanup</i> </p>
-<p> Start a phase of the specified type: Setup -&gt; <font SIZE="-1">WARN,</font> Test -&gt; <font SIZE="-1">FAIL,</font> Cleanup -&gt; <font SIZE="-1">WARN.</font> </p>
+<p> Start a phase of the specified type: Setup -&gt; WARN, Test -&gt; FAIL, Cleanup -&gt; WARN. </p>
 <p>rlPhaseStartSetup[name] rlPhaseStartTest[name] rlPhaseStartCleanup[name]</p>
 <dl>
 <dt>name</dt>
@@ -265,8 +265,8 @@ description: "BeakerLib – a shell-level integration testing library"
 <dt>value</dt>
 <dd> Value of the metric.</dd>
 <dt>tolerance</dt>
-<dd> It is used when comparing via rcw. It means how larger can the second value be to not trigger a <font SIZE="-1">FAIL.</font> Default is 0.2</dd></dl>
-<p> When comparing <font SIZE="-1">FIRST, SECOND,</font> then: </p>
+<dd> It is used when comparing via rcw. It means how larger can the second value be to not trigger a FAIL. Default is 0.2</dd></dl>
+<p> When comparing FIRST, SECOND, then: </p>
 <pre>
     FIRST &gt;= SECOND means PASS
     FIRST+FIRST*tolerance &gt;= SECOND means WARN
@@ -291,8 +291,8 @@ description: "BeakerLib – a shell-level integration testing library"
 <dt>value</dt>
 <dd> Value of the metric.</dd>
 <dt>tolerance</dt>
-<dd> It is used when comparing via rcw. It means how lower can the second value be to not trigger a <font SIZE="-1">FAIL.</font> Default is 0.2</dd></dl>
-<p> When comparing <font SIZE="-1">FIRST, SECOND,</font> then: </p>
+<dd> It is used when comparing via rcw. It means how lower can the second value be to not trigger a FAIL. Default is 0.2</dd></dl>
+<p> When comparing FIRST, SECOND, then: </p>
 <pre>
     FIRST &lt;= SECOND means PASS
     FIRST+FIRST*tolerance &lt;= SECOND means WARN
@@ -300,23 +300,23 @@ description: "BeakerLib – a shell-level integration testing library"
 </pre>
 <h3>Manual Asserts</h3>
 <p> <i>rlPass</i> </p>
-<p> Manual assertion, asserts and logs <font SIZE="-1">PASS.</font> </p>
+<p> Manual assertion, asserts and logs PASS. </p>
 <pre>
     rlPass comment
 </pre>
 <dl>
 <dt>comment</dt>
 <dd> Short test summary.</dd></dl>
-<p> Returns 0 and asserts <font SIZE="-1">PASS.</font> </p>
+<p> Returns 0 and asserts PASS. </p>
 <p> <i>rlFail</i> </p>
-<p> Manual assertion, asserts and logs <font SIZE="-1">FAIL.</font> </p>
+<p> Manual assertion, asserts and logs FAIL. </p>
 <pre>
     rlFail comment
 </pre>
 <dl>
 <dt>comment</dt>
 <dd> Short test summary.</dd></dl>
-<p> Returns 1 and asserts <font SIZE="-1">FAIL.</font></p>
+<p> Returns 1 and asserts FAIL.</p>
 <h3>Arithmetic Asserts</h3>
 <p> <i>rlAssert0</i> </p>
 <p> Assertion checking for the equality of parameter to zero. </p>
@@ -328,7 +328,7 @@ description: "BeakerLib – a shell-level integration testing library"
 <dd> Short test summary, e.g. &#8220;Test if compilation ended successfully&#8221;.</dd>
 <dt>value</dt>
 <dd> Integer value (usually return code of a command).</dd></dl>
-<p> Returns 0 and asserts <font SIZE="-1">PASS</font> when <tt>&quot;value == 0&quot;</tt>. </p>
+<p> Returns 0 and asserts PASS when <tt>&quot;value == 0&quot;</tt>. </p>
 <p> <i>rlAssertEquals</i> </p>
 <p> Assertion checking for the equality of two parameters. </p>
 <pre>
@@ -341,7 +341,7 @@ description: "BeakerLib – a shell-level integration testing library"
 <dd> First parameter to compare, can be a number or a string</dd>
 <dt>value2</dt>
 <dd> Second parameter to compare, can be a number or a string</dd></dl>
-<p> Returns 0 and asserts <font SIZE="-1">PASS</font> when <tt>&quot;value1 == value2&quot;</tt>. </p>
+<p> Returns 0 and asserts PASS when <tt>&quot;value1 == value2&quot;</tt>. </p>
 <p> <i>rlAssertNotEquals</i> </p>
 <p> Assertion checking for the non-equality of two parameters. </p>
 <pre>
@@ -354,7 +354,7 @@ description: "BeakerLib – a shell-level integration testing library"
 <dd> First parameter to compare, can be a number or a string</dd>
 <dt>value2</dt>
 <dd> Second parameter to compare, can be a number or a string</dd></dl>
-<p> Returns 0 and asserts <font SIZE="-1">PASS</font> when <tt>&quot;value1 != value2&quot;</tt>. </p>
+<p> Returns 0 and asserts PASS when <tt>&quot;value1 != value2&quot;</tt>. </p>
 <p> <i>rlAssertGreater</i> </p>
 <p> Assertion checking whether first parameter is greater than the second one. </p>
 <pre>
@@ -367,7 +367,7 @@ description: "BeakerLib – a shell-level integration testing library"
 <dd> Integer value.</dd>
 <dt>value2</dt>
 <dd> Integer value.</dd></dl>
-<p> Returns 0 and asserts <font SIZE="-1">PASS</font> when <tt>&quot;value1 &gt; value2&quot;</tt>. </p>
+<p> Returns 0 and asserts PASS when <tt>&quot;value1 &gt; value2&quot;</tt>. </p>
 <p> <i>rlAssertGreaterOrEqual</i> </p>
 <p> Assertion checking whether first parameter is greater or equal to the second one. </p>
 <pre>
@@ -380,7 +380,7 @@ description: "BeakerLib – a shell-level integration testing library"
 <dd> Integer value.</dd>
 <dt>value2</dt>
 <dd> Integer value.</dd></dl>
-<p> Returns 0 and asserts <font SIZE="-1">PASS</font> when <tt>&quot;value1 &gt;= value2&quot;</tt>.</p>
+<p> Returns 0 and asserts PASS when <tt>&quot;value1 &gt;= value2&quot;</tt>.</p>
 <h3>File Asserts</h3>
 <p> <i>rlAssertExists</i> </p>
 <p> Assertion checking for the existence of a file or a directory. </p>
@@ -390,7 +390,7 @@ description: "BeakerLib – a shell-level integration testing library"
 <dl>
 <dt>file|directory</dt>
 <dd> Path to the file or directory.</dd></dl>
-<p> Returns 0 and asserts <font SIZE="-1">PASS</font> when <tt>&quot;file&quot;</tt> exists. </p>
+<p> Returns 0 and asserts PASS when <tt>&quot;file&quot;</tt> exists. </p>
 <p> <i>rlAssertNotExists</i> </p>
 <p> Assertion checking for the non-existence of a file or a directory. </p>
 <pre>
@@ -399,7 +399,7 @@ description: "BeakerLib – a shell-level integration testing library"
 <dl>
 <dt>file|directory</dt>
 <dd> Path to the file or directory.</dd></dl>
-<p> Returns 0 and asserts <font SIZE="-1">PASS</font> when <tt>&quot;file&quot;</tt> does not exist. </p>
+<p> Returns 0 and asserts PASS when <tt>&quot;file&quot;</tt> does not exist. </p>
 <p> <i>rlAssertGrep</i> </p>
 <p> Assertion checking if the file contains a pattern. </p>
 <pre>
@@ -412,7 +412,7 @@ description: "BeakerLib – a shell-level integration testing library"
 <dd> Path to the file.</dd>
 <dt>options</dt>
 <dd> Optional parameters to be passed to grep, default is <tt>&quot;-q&quot;</tt>. Can be used to perform case insensitive matches (-i), or using extended (-E) or perl (-P) regular expressions.</dd></dl>
-<p> Returns 0 and asserts <font SIZE="-1">PASS</font> when <tt>&quot;file&quot;</tt> exists and contains given <tt>&quot;pattern&quot;</tt>. </p>
+<p> Returns 0 and asserts PASS when <tt>&quot;file&quot;</tt> exists and contains given <tt>&quot;pattern&quot;</tt>. </p>
 <p> <i>rlAssertNotGrep</i> </p>
 <p> Assertion checking that the file does not contain a pattern. </p>
 <pre>
@@ -425,7 +425,7 @@ description: "BeakerLib – a shell-level integration testing library"
 <dd> Path to the file.</dd>
 <dt>options</dt>
 <dd> Optional parameters to be passed to grep, default is <tt>&quot;-q&quot;</tt>. Can be used to perform case insensitive matches (-i), or using extended (-E) or perl (-P) regular expressions.</dd></dl>
-<p> Returns 0 and asserts <font SIZE="-1">PASS</font> when <tt>&quot;file&quot;</tt> exists and does not contain given <tt>&quot;pattern&quot;</tt>. </p>
+<p> Returns 0 and asserts PASS when <tt>&quot;file&quot;</tt> exists and does not contain given <tt>&quot;pattern&quot;</tt>. </p>
 <p> <i>rlAssertDiffer</i> </p>
 <p> Assertion checking that two files differ (are not identical). </p>
 <pre>
@@ -436,7 +436,7 @@ description: "BeakerLib – a shell-level integration testing library"
 <dd> Path to first file1</dd>
 <dt>file2</dt>
 <dd> Path to second file</dd></dl>
-<p> Returns 0 and asserts <font SIZE="-1">PASS</font> when <tt>&quot;file1&quot;</tt> and <tt>&quot;file2&quot;</tt> differs. </p>
+<p> Returns 0 and asserts PASS when <tt>&quot;file1&quot;</tt> and <tt>&quot;file2&quot;</tt> differs. </p>
 <p> <i>rlAssertNotDiffer</i> </p>
 <p> Assertion checking that two files do not differ (are identical). </p>
 <pre>
@@ -447,14 +447,14 @@ description: "BeakerLib – a shell-level integration testing library"
 <dd> Path to first file1</dd>
 <dt>file2</dt>
 <dd> Path to second file</dd></dl>
-<p> Returns 0 and asserts <font SIZE="-1">PASS</font> when <tt>&quot;file1&quot;</tt> and <tt>&quot;file2&quot;</tt> do not differ.</p>
+<p> Returns 0 and asserts PASS when <tt>&quot;file1&quot;</tt> and <tt>&quot;file2&quot;</tt> do not differ.</p>
 <h3>Run, Watch, Report</h3>
 <p> <i>rlRun</i> </p>
 <p> Run command with optional comment and make sure its exit code matches expectations. </p>
 <p>rlRun[-t][-l][-c][-s] command[status[, status&#8230;]][comment]</p>
 <dl>
 <dt>-t</dt>
-<dd> If specified, stdout and stderr of the command output will be tagged with strigs &#8216;<font SIZE="-1">STDOUT: </font>&#8216; and &#8216;<font SIZE="-1">STDERR: </font>&#8216;.</dd>
+<dd> If specified, stdout and stderr of the command output will be tagged with strigs &#8216;STDOUT: &#8216; and &#8216;STDERR: &#8216;.</dd>
 <dt>-l</dt>
 <dd> If specified, output of the command (tagged, if -t was specified) is logged using rlLog function. This is intended for short outputs, and therefore only last 50 lines are logged this way. Longer outputs should be analysed separately, or uploaded via rlFileSubmit or rlBundleLogs.</dd>
 <dt>-c</dt>
@@ -465,10 +465,10 @@ description: "BeakerLib – a shell-level integration testing library"
 <dt>command</dt>
 <dd> Command to run.</dd>
 <dt>status</dt>
-<dd> Expected exit code(s). Optional, default 0. If you expect more exit codes, separate them with comma (e.g. &#8220;0,1&#8221; when both 0 and 1 are <font SIZE="-1">OK</font> and expected), or use from-to notation (i.e. &#8220;2-5&#8221; for &#8220;2,3,4,5&#8221;), or combine them (e.g. &#8220;2-4,26&#8221; for &#8220;2,3,4,26&#8221;).</dd>
+<dd> Expected exit code(s). Optional, default 0. If you expect more exit codes, separate them with comma (e.g. &#8220;0,1&#8221; when both 0 and 1 are OK and expected), or use from-to notation (i.e. &#8220;2-5&#8221; for &#8220;2,3,4,5&#8221;), or combine them (e.g. &#8220;2-4,26&#8221; for &#8220;2,3,4,26&#8221;).</dd>
 <dt>comment</dt>
 <dd> Short summary describing the action (optional, but recommended &#8211; explain what are you doing here).</dd></dl>
-<p> Returns the exit code of the command run. Asserts <font SIZE="-1">PASS</font> when command\&#8217;s exit status is in the list of expected exit codes. </p>
+<p> Returns the exit code of the command run. Asserts PASS when command\&#8217;s exit status is in the list of expected exit codes. </p>
 <p> Note:</p>
 <dl>
 <dt>&bull;</dt>
@@ -485,9 +485,9 @@ description: "BeakerLib – a shell-level integration testing library"
 <dt>timeout</dt>
 <dd> Timeout to wait, in seconds.</dd>
 <dt>signal</dt>
-<dd> Signal to use (optional, default <font SIZE="-1">KILL</font>).</dd>
+<dd> Signal to use (optional, default KILL).</dd>
 <dt>callback</dt>
-<dd> Callback function to be called before the signal is send (optional, none by default). The callback function will have one argument available &#8212; <font SIZE="-1">PGID</font> of the process group.</dd></dl>
+<dd> Callback function to be called before the signal is send (optional, none by default). The callback function will have one argument available &#8212; PGID of the process group.</dd></dl>
 <p> Returns 0 if the command ends normally, without need to be killed. </p>
 <p> <i>rlReport</i> </p>
 <p> Report test result to the test harness. The command to be used for reporting is set by the respective plugin. You can also use the <tt>$BEAKERLIB_COMMAND_REPORT_RESULT</tt> variable to use your custom command. </p>
@@ -496,7 +496,7 @@ description: "BeakerLib – a shell-level integration testing library"
 <dt>name</dt>
 <dd> Name of the test result.</dd>
 <dt>result</dt>
-<dd> Result (one of <font SIZE="-1">PASS, WARN, FAIL</font>). If called with something else, will use <font SIZE="-1">WARN.</font></dd>
+<dd> Result (one of PASS, WARN, FAIL). If called with something else, will use WARN.</dd>
 <dt>score</dt>
 <dd> Test score (optional).</dd>
 <dt>log</dt>
@@ -518,15 +518,15 @@ description: "BeakerLib – a shell-level integration testing library"
 <p> Returns 0 if the expresison ver1 op ver2 is true; 1 if the expression is false and 2 if something went wrong.</p>
 <h3>Release Info</h3>
 <p> <i>rlIsRHEL</i> </p>
-<p> Check whether we&#8217;re running on <font SIZE="-1">RHEL.</font> With given number of version as parameter returns 0 if the particular <font SIZE="-1">RHEL</font> version is running. Multiple arguments can be passed separated with space as well as any particular release (5.1 5.2 5.3). Each version can have a prefix consisting of &#8216;&lt;&#8216;, &#8216;&lt;=&#8217;, &#8216;=&#8217;, &#8216;&gt;=&#8217;, &#8216;&gt;&#8217;, matching whenever the currently installed version is lesser, lesser or equal, equal, equal or greater, greater than the version specified as argument. Note that ie. &#8216;=5&#8217; (unlike just &#8216;5&#8217;) matches exactly 5 (5.0), not 5.N, where N &gt; 0. </p>
+<p> Check whether we&#8217;re running on RHEL. With given number of version as parameter returns 0 if the particular RHEL version is running. Multiple arguments can be passed separated with space as well as any particular release (5.1 5.2 5.3). Each version can have a prefix consisting of &#8216;&lt;&#8216;, &#8216;&lt;=&#8217;, &#8216;=&#8217;, &#8216;&gt;=&#8217;, &#8216;&gt;&#8217;, matching whenever the currently installed version is lesser, lesser or equal, equal, equal or greater, greater than the version specified as argument. Note that ie. &#8216;=5&#8217; (unlike just &#8216;5&#8217;) matches exactly 5 (5.0), not 5.N, where N &gt; 0. </p>
 <pre>
     rlIsRHEL
 </pre>
-<p> Returns 0 if we are running on <font SIZE="-1">RHEL.</font> </p>
+<p> Returns 0 if we are running on RHEL. </p>
 <pre>
     rlIsRHEL 4.8 5
 </pre>
-<p> Returns 0 if we are running <font SIZE="-1">RHEL 4.8</font> or any <font SIZE="-1">RHEL 5.</font> </p>
+<p> Returns 0 if we are running RHEL 4.8 or any RHEL 5. </p>
 <p> <i>rlIsFedora</i> </p>
 <p> Check whether we&#8217;re running on Fedora. With given number of version as parameter returns 0 if the particular Fedora version is running. Range matching can be used in the form used by rlIsRHEL. </p>
 <pre>
@@ -564,7 +564,7 @@ description: "BeakerLib – a shell-level integration testing library"
 <p> Returns 0 if the specified package is installed. </p>
 <p> <i>rlAssertRpm</i> </p>
 <p> Assertion making sure that a package is installed. </p>
-<p>rlAssertRpm name[version][release][arch] &gt;<br />
+<p>rlAssertRpm name[version][release][arch] &gt;<br/>
     rlAssertRpm&#8211; all</p>
 <dl>
 <dt>name</dt>
@@ -577,7 +577,7 @@ description: "BeakerLib – a shell-level integration testing library"
 <dd> Package architucture like <tt>&quot;i386&quot;</tt></dd>
 <dt>&#8211;all</dt>
 <dd> Assert all packages listed in the <tt>$PACKAGES</tt> <tt>$REQUIRES</tt> and <tt>$COLLECTIONS</tt> environment variables.</dd></dl>
-<p> Returns 0 and asserts <font SIZE="-1">PASS</font> if the specified package is installed. </p>
+<p> Returns 0 and asserts PASS if the specified package is installed. </p>
 <p> <i>rlAssertNotRpm</i> </p>
 <p> Assertion making sure that a package is not installed. This is just inverse of <tt>&quot;rlAssertRpm&quot;</tt>. </p>
 <p>rlAssertNotRpm name[version][release][arch] &gt;</p>
@@ -590,7 +590,7 @@ description: "BeakerLib – a shell-level integration testing library"
 <dd> Package release like <tt>&quot;55.fc9&quot;</tt></dd>
 <dt>arch</dt>
 <dd> Package architucture like <tt>&quot;i386&quot;</tt></dd></dl>
-<p> Returns 0 and asserts <font SIZE="-1">PASS</font> if the specified package is not installed. </p>
+<p> Returns 0 and asserts PASS if the specified package is not installed. </p>
 <p> <i>Example</i> </p>
 <p> Function <tt>&quot;rlAssertRpm&quot;</tt> is useful especially in prepare phase where it causes abort if a package is missing, while <tt>&quot;rlCheckRpm&quot;</tt> is handy when doing something like: </p>
 <pre>
@@ -607,7 +607,7 @@ description: "BeakerLib – a shell-level integration testing library"
 <dd> Binary name like <tt>&quot;ksh&quot;</tt> or <tt>&quot;/bin/ksh&quot;</tt></dd>
 <dt>package</dt>
 <dd> List of packages like <tt>&quot;ksh mksh&quot;</tt>. The parameter is optional. If missing, contents of environment variable <tt>$PACKAGES</tt> are taken into account.</dd></dl>
-<p> Returns 0 and asserts <font SIZE="-1">PASS</font> if the specified binary belongs to (one of) the given package(s). Returns 1 and asserts <font SIZE="-1">FAIL</font> if the specified binary does not belong to (any of) the given package(s). Returns 2 and asserts <font SIZE="-1">FAIL</font> if the specified binary is not found. Returns 3 and asserts <font SIZE="-1">FAIL</font> if no packages are given. Returns 100 and asserts <font SIZE="-1">FAIL</font> if invoked with no parameters. </p>
+<p> Returns 0 and asserts PASS if the specified binary belongs to (one of) the given package(s). Returns 1 and asserts FAIL if the specified binary does not belong to (any of) the given package(s). Returns 2 and asserts FAIL if the specified binary is not found. Returns 3 and asserts FAIL if no packages are given. Returns 100 and asserts FAIL if invoked with no parameters. </p>
 <p> <i>Example</i> </p>
 <p> Function <tt>&quot;rlAssertBinaryOrigin&quot;</tt> is useful especially in prepare phase where it causes abort if a binary is missing or is owned by different package: </p>
 <pre>
@@ -625,7 +625,7 @@ description: "BeakerLib – a shell-level integration testing library"
     rlRun &quot;rlCheckRequirements REQ...&quot;
 </pre>
 <dl>
-<dt><font SIZE="-1">REQ</font></dt>
+<dt>REQ</dt>
 <dd> Requirement to be checked. It can be package name, provides string or binary name.</dd></dl>
 <p> Returns number of unsatisfied requirements. </p>
 <p> <i>rlCheckMakefileRequires</i> </p>
@@ -638,52 +638,52 @@ description: "BeakerLib – a shell-level integration testing library"
 <p> Return 255 if requirements could not be retrieved, 0 if all requirements are satisfied or number of unsatisfied requirements.</p>
 <h3>Mounting</h3>
 <p> <i>rlMount</i> </p>
-<p> Create mount point (if neccessary) and mount a <font SIZE="-1">NFS</font> share. </p>
+<p> Create mount point (if neccessary) and mount a NFS share. </p>
 <pre>
     rlMount [-o MOUNT_OPTS] server share mountpoint
 </pre>
 <dl>
 <dt>server</dt>
-<dd> <font SIZE="-1">NFS</font> server hostname.</dd>
+<dd> NFS server hostname.</dd>
 <dt>share</dt>
 <dd> Shared directory name.</dd>
 <dt>mountpoint</dt>
 <dd> Local mount point.</dd>
-<dt><font SIZE="-1">MOUNT_OPTS</font></dt>
+<dt>MOUNT_OPTS</dt>
 <dd> Mount options.</dd></dl>
 <p> Returns 0 if mounting the share was successful. </p>
 <p> <i>rlCheckMount</i> </p>
 <p> Check either if a directory is a mountpoint, if it is a mountpoint to a specific server, or if it is a mountpoint to a specific export on a specific server and if it uses specific mount options. </p>
-<p>rlCheckMount[-o MOUNT_OPTS] mountpoint<br />
-    rlCheckMount[-o MOUNT_OPTS] server mountpoint<br />
+<p>rlCheckMount[-o MOUNT_OPTS] mountpoint<br/>
+    rlCheckMount[-o MOUNT_OPTS] server mountpoint<br/>
         rlCheckMount[-o MOUNT_OPTS] server share mountpoint</p>
 <dl>
 <dt>mountpoint</dt>
 <dd> Local mount point.</dd>
 <dt>server</dt>
-<dd> <font SIZE="-1">NFS</font> server hostname</dd>
+<dd> NFS server hostname</dd>
 <dt>share</dt>
 <dd> Shared directory name</dd>
-<dt><font SIZE="-1">MOUNT_OPTS</font></dt>
+<dt>MOUNT_OPTS</dt>
 <dd> Mount options to check (comma separated list)</dd></dl>
 <p> With one parameter, returns 0 when specified directory exists and is a mountpoint. With two parameters, returns 0 when specific directory exists, is a mountpoint and an export from specific server is mounted there. With three parameters, returns 0 if a specific shared directory is mounted on a given server on a given mountpoint </p>
 <p> If the -o option is provided, returns 0 if the mountpoint uses all the given options, 2 otherwise. </p>
 <p> <i>rlAssertMount</i> </p>
 <p> Assertion making sure that given directory is a mount point, if it is a mountpoint to a specific server, or if it is a mountpoint to a specific export on a specific server and if it uses specific mount options. </p>
-<p>rlAssertMount[-o MOUNT_OPTS] mountpoint<br />
-    rlAssertMount[-o MOUNT_OPTS] server mountpoint<br />
+<p>rlAssertMount[-o MOUNT_OPTS] mountpoint<br/>
+    rlAssertMount[-o MOUNT_OPTS] server mountpoint<br/>
         rlAssertMount[-o MOUNT_OPTS] server share mountpoint</p>
 <dl>
 <dt>mountpoint</dt>
 <dd> Local mount point.</dd>
 <dt>server</dt>
-<dd> <font SIZE="-1">NFS</font> server hostname</dd>
+<dd> NFS server hostname</dd>
 <dt>share</dt>
 <dd> Shared directory name</dd>
-<dt><font SIZE="-1">MOUNT_OPTS</font></dt>
+<dt>MOUNT_OPTS</dt>
 <dd> Mount options to check (comma separated list)</dd></dl>
-<p> With one parameter, returns 0 when specified directory exists and is a mountpoint. With two parameters, returns 0 when specific directory exists, is a mountpoint and an export from specific server is mounted there. With three parameters, returns 0 if a specific shared directory is mounted on a given server on a given mountpoint. Asserts <font SIZE="-1">PASS</font> when the condition is true. </p>
-<p> If the -o option is provided, asserts <font SIZE="-1">PASS</font> if the above conditions are met and the mountpoint uses all the given options. </p>
+<p> With one parameter, returns 0 when specified directory exists and is a mountpoint. With two parameters, returns 0 when specific directory exists, is a mountpoint and an export from specific server is mounted there. With three parameters, returns 0 if a specific shared directory is mounted on a given server on a given mountpoint. Asserts PASS when the condition is true. </p>
+<p> If the -o option is provided, asserts PASS if the above conditions are met and the mountpoint uses all the given options. </p>
 <p> <i>rlHash, rlUnhash</i> </p>
 <p> Hashes/Unhashes given string. </p>
 <p>rlHash[&#8211;decode][&#8211;algorithm HASH_ALG]&#8211; stdin | STRING rlUnhash[&#8211;algorithm HASH_ALG]&#8211; stdin | STRING</p>
@@ -691,14 +691,14 @@ description: "BeakerLib – a shell-level integration testing library"
 <dt>&#8211;decode</dt>
 <dd> Unhash given string.</dd>
 <dt>&#8211;algorithm</dt>
-<dd> Use given hash algorithm. Currently supported algorithms:<br />
-&nbsp;<wbr>&nbsp;<wbr>base64<br />
-&nbsp;<wbr>&nbsp;<wbr>base64_&nbsp;<wbr>&#8211; this is standard base64 where&nbsp;<wbr>&#8216;=&#8217;&nbsp;<wbr>is replaced by&nbsp;<wbr>&#8216;_&#8217;<br />
+<dd> Use given hash algorithm. Currently supported algorithms:<br/>
+&nbsp;<wbr>&nbsp;<wbr>base64<br/>
+&nbsp;<wbr>&nbsp;<wbr>base64_&nbsp;<wbr>&#8211; this is standard base64 where&nbsp;<wbr>&#8216;=&#8217;&nbsp;<wbr>is replaced by&nbsp;<wbr>&#8216;_&#8217;<br/>
 &nbsp;<wbr>&nbsp;<wbr>hex </dd>
 <p> Defaults to hex. Default algorithm can be override using global variable rlHashAlgorithm.</p>
 <dt>&#8211;stdin</dt>
 <dd> Get the string from stdin.</dd>
-<dt><font SIZE="-1">STRING</font></dt>
+<dt>STRING</dt>
 <dd> String to be hashed/unhashed.</dd></dl>
 <p> Returns 0 if success. </p>
 <p> Example with &#8211;clean: </p>
@@ -721,7 +721,7 @@ description: "BeakerLib – a shell-level integration testing library"
 <dd> Do raise an error in case of missing file to backup. This is useful with &#8211;clean. This behaviour can be globally set by global variable BEAKERLIB_FILEBACKUP_MISSING_OK=false.</dd>
 <dt>file</dt>
 <dd> Files and/or directories to be backed up.</dd></dl>
-<p> Returns 0 if the backup was successful. Returns 1 if parsing of parameters was not successful. Returns 2 if no files specification was provided. Returns 3 if <font SIZE="-1">BEAKERLIB_DIR</font> variable is not set, e.g. rlJournalStart was not executed. Returns 4 if creating of main backup destination directories was not successful. Returns 5 if creating of file specific backup destination directories was not successful. Returns 6 if the copy of backed up files was not successful. Returns 7 if attributes of backedup files were not successfuly copied. Returns 8 if backed up files does not exist. This can be suppressed based on other options. </p>
+<p> Returns 0 if the backup was successful. Returns 1 if parsing of parameters was not successful. Returns 2 if no files specification was provided. Returns 3 if BEAKERLIB_DIR variable is not set, e.g. rlJournalStart was not executed. Returns 4 if creating of main backup destination directories was not successful. Returns 5 if creating of file specific backup destination directories was not successful. Returns 6 if the copy of backed up files was not successful. Returns 7 if attributes of backedup files were not successfuly copied. Returns 8 if backed up files does not exist. This can be suppressed based on other options. </p>
 <p> Example with &#8211;clean: </p>
 <pre>
     touch cleandir/aaa
@@ -743,12 +743,12 @@ description: "BeakerLib – a shell-level integration testing library"
 <dt>&#8211;namespace name</dt>
 <dd> Specifies the namespace to use. Namespaces can be used to separate backups and their restoration.</dd></dl>
 <p> Returns 0 if backup dir is found and files are restored successfully. </p>
-<p> Return code bits meaning <font SIZE="-1">XXXXX<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></font>&nbsp;<wbr>|||||<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>||||\_&nbsp;<wbr>error parsing parameters<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>|||\__&nbsp;<wbr>could not find backup directory<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>||\___&nbsp;<wbr>files cleanup failed<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>|\____&nbsp;<wbr>files restore failed<br />
+<p> Return code bits meaning XXXXX<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>|||||<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>||||\_&nbsp;<wbr>error parsing parameters<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>|||\__&nbsp;<wbr>could not find backup directory<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>||\___&nbsp;<wbr>files cleanup failed<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>|\____&nbsp;<wbr>files restore failed<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>\_____&nbsp;<wbr>no files were restored nor cleaned</p>
 <h3>Services</h3>
 <p> Following routines implement comfortable way how to start/stop system services with the possibility to restore them to their original state after testing. </p>
@@ -760,7 +760,7 @@ description: "BeakerLib – a shell-level integration testing library"
 <dl>
 <dt>service</dt>
 <dd> Name of the service(s) to start.</dd></dl>
-<p> Returns number of services which failed to start/restart; thus zero is returned when everything is <font SIZE="-1">OK.</font> </p>
+<p> Returns number of services which failed to start/restart; thus zero is returned when everything is OK. </p>
 <p> <i>rlServiceStop</i> </p>
 <p> Make sure the given <tt>&quot;service&quot;</tt> is stopped. Stop it if it is running and do nothing when it is already stopped. In addition, when called for the first time, the current state is saved so that the <tt>&quot;service&quot;</tt> can be restored to its original state when testing is finished, see <tt>&quot;rlServiceRestore&quot;</tt>. </p>
 <pre>
@@ -769,7 +769,7 @@ description: "BeakerLib – a shell-level integration testing library"
 <dl>
 <dt>service</dt>
 <dd> Name of the service(s) to stop.</dd></dl>
-<p> Returns number of services which failed to become stopped; thus zero is returned when everything is <font SIZE="-1">OK.</font> </p>
+<p> Returns number of services which failed to become stopped; thus zero is returned when everything is OK. </p>
 <p> <i>rlServiceRestore</i> </p>
 <p> Restore given <tt>&quot;service&quot;</tt> into its original state (before the first <tt>&quot;rlServiceStart&quot;</tt> or <tt>&quot;rlServiceStop&quot;</tt> was called). </p>
 <pre>
@@ -778,7 +778,7 @@ description: "BeakerLib – a shell-level integration testing library"
 <dl>
 <dt>service</dt>
 <dd> Name of the service(s) to restore to original state. All services will be restored in reverse order if no service name is given.</dd></dl>
-<p> Returns number of services which failed to get back to their original state; thus zero is returned when everything is <font SIZE="-1">OK.</font> </p>
+<p> Returns number of services which failed to get back to their original state; thus zero is returned when everything is OK. </p>
 <p> <i>rlServiceEnable</i> </p>
 <p> Enables selected services if needed, or does nothing if already enabled. In addition, when called for the first time, the current state is saved so that the <tt>&quot;service&quot;</tt> can be restored to its original state when testing is finished, see <tt>&quot;rlServiceRestore&quot;</tt>. </p>
 <pre>
@@ -787,7 +787,7 @@ description: "BeakerLib – a shell-level integration testing library"
 <dl>
 <dt>service</dt>
 <dd> Name of the service(s) to enable.</dd></dl>
-<p> Returns number of services which failed enablement; thus zero is returned when everything is <font SIZE="-1">OK.</font> </p>
+<p> Returns number of services which failed enablement; thus zero is returned when everything is OK. </p>
 <p> <i>rlServiceDisable</i> </p>
 <p> Disables selected services if needed, or does nothing if already disabled. In addition, when called for the first time, the current state is saved so that the <tt>&quot;service&quot;</tt> can be restored to its original state when testing is finished, see <tt>&quot;rlServiceRestore&quot;</tt>. </p>
 <pre>
@@ -796,7 +796,7 @@ description: "BeakerLib – a shell-level integration testing library"
 <dl>
 <dt>service</dt>
 <dd> Name of the service(s) to disable.</dd></dl>
-<p> Returns number of services which failed disablement; thus zero is returned when everything is <font SIZE="-1">OK.</font></p>
+<p> Returns number of services which failed disablement; thus zero is returned when everything is OK.</p>
 <h3>Sockets</h3>
 <p> Following routines implement comfortable way how to start/stop system sockets with the possibility to restore them to their original state after testing. </p>
 <p> <i>rlSocketStart</i> </p>
@@ -807,7 +807,7 @@ description: "BeakerLib – a shell-level integration testing library"
 <dl>
 <dt>socket</dt>
 <dd> Name of the socket(s) to start.</dd></dl>
-<p> Returns number of sockets which failed to start/restart; thus zero is returned when everything is <font SIZE="-1">OK.</font> </p>
+<p> Returns number of sockets which failed to start/restart; thus zero is returned when everything is OK. </p>
 <p> <i>rlSocketStop</i> </p>
 <p> Make sure the given <tt>&quot;socket&quot;</tt> is stopped. Stop it if it is running and do nothing when it is already stopped. In addition, when called for the first time, the current state is saved so that the <tt>&quot;socket&quot;</tt> can be restored to its original state when testing is finished, see <tt>&quot;rlSocketRestore&quot;</tt>. </p>
 <pre>
@@ -816,21 +816,21 @@ description: "BeakerLib – a shell-level integration testing library"
 <dl>
 <dt>socket</dt>
 <dd> Name of the socket(s) to stop.</dd></dl>
-<p> Returns number of sockets which failed to become stopped; thus zero is returned when everything is <font SIZE="-1">OK.</font> </p>
+<p> Returns number of sockets which failed to become stopped; thus zero is returned when everything is OK. </p>
 <p> <i>rlSocketRestore</i> </p>
 <p> Restore given <tt>&quot;socket&quot;</tt> into its original state (before the first <tt>&quot;rlSocketStart&quot;</tt> or <tt>&quot;rlSocketStop&quot;</tt> was called). </p>
-<p> Warning !!! Xinetd process [even though it might have been used] is <font SIZE="-1">NOT</font> restored. It is recommended to call rlServiceRestore xinetd as well. </p>
+<p> Warning !!! Xinetd process [even though it might have been used] is NOT restored. It is recommended to call rlServiceRestore xinetd as well. </p>
 <pre>
     rlSocketRestore socket [socket...]
 </pre>
 <dl>
 <dt>socket</dt>
 <dd> Name of the socket(s) to restore to original state.</dd></dl>
-<p> Returns number of sockets which failed to get back to their original state; thus zero is returned when everything is <font SIZE="-1">OK.</font></p>
+<p> Returns number of sockets which failed to get back to their original state; thus zero is returned when everything is OK.</p>
 <h3>Cleanup management</h3>
 <p> Cleanup management works with a so-called cleanup buffer, which is a temporary representation of what should be run at cleanup time, and a final cleanup script (executable), which is generated from this buffer and wraps it using BeakerLib essentials (journal initialization, cleanup phase, &#8230;). The cleanup script must always be updated on an atomic basis (filesystem-wise) to allow an asynchronous execution by a third party (ie. test watcher). </p>
 <p> The test watcher usage is mandatory for the cleanup management system to work properly as it is the test watcher that executes the actual cleanup script. Limited, catastrophe-avoiding mechanism is in place even when the test is not run in test watcher, but that should be seen as a backup and such situation is to be avoided whenever possible. </p>
-<p> The cleanup script shares all environment (variables, exported or not, and functions) with the test itself &#8211; the cleanup append/prepend functions &#8220;sample&#8221; or &#8220;snapshot&#8221; the environment at the time of their call, <font SIZE="-1">IOW</font> any changes to the test environment are synchronized to the cleanup script only upon calling append/prepend. When the append/prepend functions are called within a function which has local variables, these will appear as global in the cleanup. </p>
+<p> The cleanup script shares all environment (variables, exported or not, and functions) with the test itself &#8211; the cleanup append/prepend functions &#8220;sample&#8221; or &#8220;snapshot&#8221; the environment at the time of their call, IOW any changes to the test environment are synchronized to the cleanup script only upon calling append/prepend. When the append/prepend functions are called within a function which has local variables, these will appear as global in the cleanup. </p>
 <p> While the cleanup script receives <tt>$PWD</tt> from the test, its working dir is set to the initial test execution dir even if <tt>$PWD</tt> contains something else. It is impossible to use relative paths inside cleanup reliably &#8211; certain parts of the cleanup might have been added under different current directories (CWDs). Therefore always use absolute paths in append/prepend cleanup or make sure you never &#8216;cd&#8217; elsewhere (ie. to a TmpDir). </p>
 <p> <i>rlCleanupAppend</i> </p>
 <p> Appends a string to the cleanup buffer and recreates the cleanup script. </p>
@@ -867,21 +867,21 @@ description: "BeakerLib – a shell-level integration testing library"
 <dd> Warm-up run, run if this option is not &#8220;warmup&#8221; (optional, default=&#8220;warmup&#8221;)</dd></dl>
 <h3>Analyze</h3>
 <p> <i>rlDejaSum</i> </p>
-<p> <font SIZE="-1">TODO</font> description </p>
+<p> TODO description </p>
 <pre>
     rlDejaSum par1 par2
 </pre>
 <dl>
 <dt>par1</dt>
-<dd> <font SIZE="-1">TODO</font> description</dd>
+<dd> TODO description</dd>
 <dt>par2</dt>
-<dd> <font SIZE="-1">TODO</font> description</dd></dl>
-<p> Return 0 if&#8230; <font SIZE="-1">TODO</font> </p>
+<dd> TODO description</dd></dl>
+<p> Return 0 if&#8230; TODO </p>
 <p> <i>rlImport</i> </p>
 <p> Imports code provided by one or more libraries into the test namespace. The library search mechanism is based on Beaker test hierarchy system, i.e.: </p>
 <p> /component/type/test-name/test-file </p>
 <p> When test-file calls rlImport with &#8216;foo/bar&#8217; parameter, the directory path is traversed upwards, and a check for presence of the test /foo/Library/bar/ will be performed. This means this function needs to be called from the test hierarchy, not e.g. the /tmp directory. </p>
-<p> Once library is found, it is sourced and a verifier function is called. The verifier function is cunstructed by composing the library prefix and LibraryLoaded. Library prefix can be defined in the library itself. If the verifier passes the library is ready to use. Also variable <code>&lt;</code><font SIZE="-1"><code>PREFIX</code></font><code>&gt;LibraryDir</code> is created and it points to the library folder. </p>
+<p> Once library is found, it is sourced and a verifier function is called. The verifier function is cunstructed by composing the library prefix and LibraryLoaded. Library prefix can be defined in the library itself. If the verifier passes the library is ready to use. Also variable <code>&lt;</code><code>PREFIX</code><code>&gt;LibraryDir</code> is created and it points to the library folder. </p>
 <p> Usage: </p>
 <pre>
     rlImport --all
@@ -890,20 +890,20 @@ description: "BeakerLib – a shell-level integration testing library"
 <dl>
 <dt>&#8211;all</dt>
 <dd> Read Makefile in current/original directory, pick library requirements up and import them all.</dd>
-<dt><font SIZE="-1">LIBRARY</font></dt>
+<dt>LIBRARY</dt>
 <dd> Must have &#8216;component/library&#8217; format. Identifies the library to import.</dd></dl>
 <p> Returns 0 if the import of all libraries was successful. Returns non-zero if one or more library failed to import.</p>
 <h3>Process Synchronisation</h3>
 <p> <i>rlWaitForCmd</i> </p>
-<p> Pauses script execution until command exit status is the expeced value. Logs a <font SIZE="-1">WARNING</font> and returns 1 if the command didn&#8217;t exit successfully before timeout elapsed or a maximum number of invocations has been reached. </p>
+<p> Pauses script execution until command exit status is the expeced value. Logs a WARNING and returns 1 if the command didn&#8217;t exit successfully before timeout elapsed or a maximum number of invocations has been reached. </p>
 <p>rlWaitForCmd command[-p PID][-t time][-m count][-d delay][-r retval]</p>
 <dl>
 <dt>command</dt>
 <dd> Command that will be executed until its return code is equal 0 or value speciefied as option to `-r&#8217;.</dd>
 <dt>-t time</dt>
 <dd> Timeout in seconds, default=120. If the command doesn&#8217;t return 0 before time elapses, the command will be killed.</dd>
-<dt>-p <font SIZE="-1">PID</font></dt>
-<dd> <font SIZE="-1">PID</font> of the process to check before running command. If the process exits before the socket is opened, the command will log a <font SIZE="-1">WARNING.</font></dd>
+<dt>-p PID</dt>
+<dd> PID of the process to check before running command. If the process exits before the socket is opened, the command will log a WARNING.</dd>
 <dt>-m count</dt>
 <dd> Maximum number of `command&#8217; executions before continuing anyway. Default is infite. Returns 1 if the maximum was reached.</dd>
 <dt>-d delay</dt>
@@ -911,27 +911,27 @@ description: "BeakerLib – a shell-level integration testing library"
 <dt>-r retval</dt>
 <dd> Expected return value of command. Default 0.</dd></dl>
 <p> <i>rlWaitForFile</i> </p>
-<p> Pauses script execution until specified file or directory starts existing. Returns 0 if file started existing, 1 if timeout was reached or <font SIZE="-1">PID</font> exited. Return code is greater than 1 in case of error. </p>
+<p> Pauses script execution until specified file or directory starts existing. Returns 0 if file started existing, 1 if timeout was reached or PID exited. Return code is greater than 1 in case of error. </p>
 <p>rlWaitForFile path[-p PID][-t time][-d delay]</p>
 <dl>
 <dt>path</dt>
 <dd> Path to file that should start existing.</dd>
 <dt>-t time</dt>
 <dd> Timeout in seconds (optional, default=120). If the file isn&#8217;t opened before the time elapses the command returns 1.</dd>
-<dt>-p <font SIZE="-1">PID</font></dt>
-<dd> <font SIZE="-1">PID</font> of the process that should also be running. If the process exits before the file is created, the command returns with status code of 1.</dd>
+<dt>-p PID</dt>
+<dd> PID of the process that should also be running. If the process exits before the file is created, the command returns with status code of 1.</dd>
 <dt>-d delay</dt>
 <dd> Delay between subsequent checks for existence of file. Default 1.</dd></dl>
 <p> <i>rlWaitForSocket</i> </p>
-<p> Pauses script execution until socket starts listening. Returns 0 if socket started listening, 1 if timeout was reached or <font SIZE="-1">PID</font> exited. Return code is greater than 1 in case of error. </p>
+<p> Pauses script execution until socket starts listening. Returns 0 if socket started listening, 1 if timeout was reached or PID exited. Return code is greater than 1 in case of error. </p>
 <p>rlWaitForSocket{port | path}[-p PID][-t time][-d delay][&#8211;close]</p>
 <dl>
 <dt>port|path</dt>
-<dd> Network port to wait for opening or a path to <font SIZE="-1">UNIX</font> socket. Regular expressions are also supported.</dd>
+<dd> Network port to wait for opening or a path to UNIX socket. Regular expressions are also supported.</dd>
 <dt>-t time</dt>
 <dd> Timeout in seconds (optional, default=120). If the socket isn&#8217;t opened before the time elapses the command returns 1.</dd>
-<dt>-p <font SIZE="-1">PID</font></dt>
-<dd> <font SIZE="-1">PID</font> of the process that should also be running. If the process exits before the socket is opened, the command returns with status code of 1.</dd>
+<dt>-p PID</dt>
+<dd> PID of the process that should also be running. If the process exits before the socket is opened, the command returns with status code of 1.</dd>
 <dt>-d delay</dt>
 <dd> Delay between subsequent checks for availability of socket. Default 1.</dd>
 <dt>&#8211;close</dt>
@@ -944,8 +944,8 @@ description: "BeakerLib – a shell-level integration testing library"
 <dd> List of PIDs to wait for. They need to be background tasks of current shell. See <i>bash_builtins</i>(1) section for `wait&#8217; command/</dd>
 <dt>-t time</dt>
 <dd> Timeout in seconds (optional, default=30). If the wait isn&#8217;t successful before the time elapses then all specified tasks are killed.</dd>
-<dt>-s <font SIZE="-1">SIGNAL</font></dt>
-<dd> Signal used to kill the process, optional <font SIZE="-1">SIGTERM</font> by default.</dd></dl>
+<dt>-s SIGNAL</dt>
+<dd> Signal used to kill the process, optional SIGTERM by default.</dd></dl>
 <h3>Virtual X Server</h3>
 <p> Functions providing simple way how to start and stop virtual X server. </p>
 <p> <i>rlVirtualXStart</i> </p>
@@ -958,7 +958,7 @@ description: "BeakerLib – a shell-level integration testing library"
 <dd> String identifying the X server.</dd></dl>
 <p> Returns 0 when the server is started successfully. </p>
 <p> <i>rlVirtualXGetDisplay</i> </p>
-<p> Get the <font SIZE="-1">DISPLAY</font> variable for specified virtual X server. </p>
+<p> Get the DISPLAY variable for specified virtual X server. </p>
 <pre>
     rlVirtualXGetDisplay name
 </pre>
@@ -976,7 +976,7 @@ description: "BeakerLib – a shell-level integration testing library"
 <dd> String identifying the X server.</dd></dl>
 <p> Returns 0 when the server is stopped successfully. </p>
 <p> <i>Example</i> </p>
-<p> Below is a simple example of usage. Note that a lot of usefull debugging information is reported on the <font SIZE="-1">DEBUG</font> level, so you can run your test with <tt>&quot;DEBUG=1 make run&quot;</tt> to get them. </p>
+<p> Below is a simple example of usage. Note that a lot of usefull debugging information is reported on the DEBUG level, so you can run your test with <tt>&quot;DEBUG=1 make run&quot;</tt> to get them. </p>
 <pre>
     rlVirtualXStart $TEST
     rlAssert0 &quot;Virtual X server started&quot; $?
@@ -985,7 +985,7 @@ description: "BeakerLib – a shell-level integration testing library"
     rlVirtualXStop $TEST
     rlAssert0 &quot;Virtual X server killed&quot; $?
 </pre>
-<p> These are &#8220;Requires&#8221; lines for your scripts &#8211; note different package names for different <font SIZE="-1">RHEL</font> versions: </p>
+<p> These are &#8220;Requires&#8221; lines for your scripts &#8211; note different package names for different RHEL versions: </p>
 <pre>
     @echo &quot;Requires: xorg-x11-server-Xvfb&quot; &gt;&gt; $(METADATA) # RHEL-5
     @echo &quot;Requires: xorg-x11-Xvfb&quot;        &gt;&gt; $(METADATA) # RHEL-4
@@ -1039,63 +1039,63 @@ description: "BeakerLib – a shell-level integration testing library"
     rlJournalPrintText
 </pre>
 <p> The ouput of the rlJournalPrintText command would produce an output similar to the following: </p>
-<p>    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::<br />
-    :: [   LOG    ] :: TEST PROTOCOL<br />
-    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::<br />
-    :: [   LOG    ] :: Test run ID   : debugging<br />
-    :: [   LOG    ] :: Package       : coreutils<br />
-    :: [   LOG    ] :: Installed:    : coreutils-7.6-9.fc12.i686<br />
-    :: [   LOG    ] :: Test started  : 2010-02-08 14:55:44<br />
-    :: [   LOG    ] :: Test finished : 2010-02-08 14:55:50<br />
-    :: [   LOG    ] :: Test name     : /examples/beakerlib/Sanity/phases<br />
-    :: [   LOG    ] :: Distro:       : Fedora release 12 (Constantine)<br />
-    :: [   LOG    ] :: Hostname      : localhost<br />
-    :: [   LOG    ] :: Architecture  : i686<br />
-    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::<br />
-    :: [   LOG    ] :: Test description<br />
-    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::<br />
-    PURPOSE of /examples/beakerlib/Sanity/phases<br />
-    Description: Testing BeakerLib phases<br />
-    Author: Petr Splichal &lt;psplicha [at] redhat.com&gt;<br />
-    This example shows how the phases work in the BeakerLib on a<br />
-    trivial smoke test for the &#8220;touch&#8221;, &#8220;ls&#8221; and &#8220;rm&#8221; commands from<br />
-    the coreutils package.<br />
-    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::<br />
-    :: [   LOG    ] :: Setup<br />
-    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::<br />
-    :: [   PASS   ] :: Checking for the presence of coreutils rpm<br />
-    :: [   PASS   ] :: Creating tmp directory<br />
-    :: [   PASS   ] :: Running &#8216;pushd /tmp/tmp.IcluQu5GVS&#8217; # no-reboot<br />
-    :: [   LOG    ] :: Duration: 0s<br />
-    :: [   LOG    ] :: Assertions: 3 good, 0 bad<br />
-    :: [   PASS   ] :: RESULT: Setup<br />
-    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::<br />
-    :: [   LOG    ] :: Test<br />
-    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::<br />
-    :: [   PASS   ] :: Creating the foo test file<br />
-    :: [   PASS   ] :: File foo should exist<br />
-    :: [   PASS   ] :: Listing the foo test file<br />
-    :: [   PASS   ] :: Removing the foo test file<br />
-    :: [   PASS   ] :: File foo should not exist<br />
-    :: [   PASS   ] :: Listing foo should now report an error<br />
-    :: [   LOG    ] :: Duration: 1s<br />
-    :: [   LOG    ] :: Assertions: 6 good, 0 bad<br />
-    :: [   PASS   ] :: RESULT: Test<br />
-    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::<br />
-    :: [   LOG    ] :: Cleanup<br />
-    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::<br />
-    :: [   PASS   ] :: Running &#8216;popd&#8217;<br />
-    :: [   PASS   ] :: Removing tmp directory<br />
-    :: [   LOG    ] :: Duration: 1s<br />
-    :: [   LOG    ] :: Assertions: 2 good, 0 bad<br />
+<p>    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::<br/>
+    :: [   LOG    ] :: TEST PROTOCOL<br/>
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::<br/>
+    :: [   LOG    ] :: Test run ID   : debugging<br/>
+    :: [   LOG    ] :: Package       : coreutils<br/>
+    :: [   LOG    ] :: Installed:    : coreutils-7.6-9.fc12.i686<br/>
+    :: [   LOG    ] :: Test started  : 2010-02-08 14:55:44<br/>
+    :: [   LOG    ] :: Test finished : 2010-02-08 14:55:50<br/>
+    :: [   LOG    ] :: Test name     : /examples/beakerlib/Sanity/phases<br/>
+    :: [   LOG    ] :: Distro:       : Fedora release 12 (Constantine)<br/>
+    :: [   LOG    ] :: Hostname      : localhost<br/>
+    :: [   LOG    ] :: Architecture  : i686<br/>
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::<br/>
+    :: [   LOG    ] :: Test description<br/>
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::<br/>
+    PURPOSE of /examples/beakerlib/Sanity/phases<br/>
+    Description: Testing BeakerLib phases<br/>
+    Author: Petr Splichal &lt;psplicha [at] redhat.com&gt;<br/>
+    This example shows how the phases work in the BeakerLib on a<br/>
+    trivial smoke test for the &#8220;touch&#8221;, &#8220;ls&#8221; and &#8220;rm&#8221; commands from<br/>
+    the coreutils package.<br/>
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::<br/>
+    :: [   LOG    ] :: Setup<br/>
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::<br/>
+    :: [   PASS   ] :: Checking for the presence of coreutils rpm<br/>
+    :: [   PASS   ] :: Creating tmp directory<br/>
+    :: [   PASS   ] :: Running &#8216;pushd /tmp/tmp.IcluQu5GVS&#8217; # no-reboot<br/>
+    :: [   LOG    ] :: Duration: 0s<br/>
+    :: [   LOG    ] :: Assertions: 3 good, 0 bad<br/>
+    :: [   PASS   ] :: RESULT: Setup<br/>
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::<br/>
+    :: [   LOG    ] :: Test<br/>
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::<br/>
+    :: [   PASS   ] :: Creating the foo test file<br/>
+    :: [   PASS   ] :: File foo should exist<br/>
+    :: [   PASS   ] :: Listing the foo test file<br/>
+    :: [   PASS   ] :: Removing the foo test file<br/>
+    :: [   PASS   ] :: File foo should not exist<br/>
+    :: [   PASS   ] :: Listing foo should now report an error<br/>
+    :: [   LOG    ] :: Duration: 1s<br/>
+    :: [   LOG    ] :: Assertions: 6 good, 0 bad<br/>
+    :: [   PASS   ] :: RESULT: Test<br/>
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::<br/>
+    :: [   LOG    ] :: Cleanup<br/>
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::<br/>
+    :: [   PASS   ] :: Running &#8216;popd&#8217;<br/>
+    :: [   PASS   ] :: Removing tmp directory<br/>
+    :: [   LOG    ] :: Duration: 1s<br/>
+    :: [   LOG    ] :: Assertions: 2 good, 0 bad<br/>
     :: [   PASS   ] :: RESULT: Cleanup</p>
-<p> Note that the detailed test description is read from a separate file <font SIZE="-1">PURPOSE</font> placed in the same directory as the test itself. </p>
-<p> A lot of useful debugging information is reported on the <font SIZE="-1">DEBUG</font> level. You can run your test with <tt>&quot;DEBUG=1 make run&quot;</tt> to get them. </p>
-<p> Verbosity of the test logging may be altered also by setting the <font SIZE="-1">LOG_LEVEL</font> variable. Possible values are &#8220;<font SIZE="-1">ERROR&#8221;, &#8220;WARNING&#8221;, &#8220;INFO&#8221;</font> and &#8220;<font SIZE="-1">DEBUG&#8221;.</font> You will see messages like the ones below. </p>
+<p> Note that the detailed test description is read from a separate file PURPOSE placed in the same directory as the test itself. </p>
+<p> A lot of useful debugging information is reported on the DEBUG level. You can run your test with <tt>&quot;DEBUG=1 make run&quot;</tt> to get them. </p>
+<p> Verbosity of the test logging may be altered also by setting the LOG_LEVEL variable. Possible values are &#8220;ERROR&#8221;, &#8220;WARNING&#8221;, &#8220;INFO&#8221; and &#8220;DEBUG&#8221;. You will see messages like the ones below. </p>
 <pre><code>
 ::[WARNING] ::rlGetArch : Update test to use rlGetPrimaryArch / rlGetSecondaryArch ::[DEBUG] ::rlGetArch : This is architecture 'x86_64' ::[ERROR] ::this function was dropped as its development is completely moved to the beaker library ::[INFO] ::if you realy on this function and you really need to have it present in core beakerlib, file a RFE, please
 </code></pre>
-<p> Setting LOG_LEVEL=&#8220;<font SIZE="-1">DEBUG&#8221;</font> is equivalent to DEBUG=1.</p>
+<p> Setting LOG_LEVEL=&#8220;DEBUG&#8221; is equivalent to DEBUG=1.</p>
 <h2>BKRDOC</h2>
 <dl>
 <dt>Description</dt>

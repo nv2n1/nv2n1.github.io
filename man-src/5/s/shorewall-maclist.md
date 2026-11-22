@@ -12,11 +12,11 @@ description: "maclist – Shorewall MAC Verification file"
 <dl>
 <dt> <code>/etc/shorewall/maclist</code></dt></dl>
 <h2>Description</h2>
-<dd>This file is used to define the MAC addresses and optionally their associated IP addresses to be allowed to use the specified interface. The feature is enabled by using the <code>maclist</code> option in the m[blue]<code>shorewall-interfaces</code>m[]<font SIZE="-2">[1]</font>(5) or m[blue]<code>shorewall-hosts</code>m[]<font SIZE="-2">[2]</font>(5) configuration file. </dd>
+<dd>This file is used to define the MAC addresses and optionally their associated IP addresses to be allowed to use the specified interface. The feature is enabled by using the <code>maclist</code> option in the m[blue]<code>shorewall-interfaces</code>m[][1](5) or m[blue]<code>shorewall-hosts</code>m[][2](5) configuration file. </dd>
 <p> The columns in the file are as follows (where the column name is followed by a different name in parentheses, the different name is used in the alternate specification syntax). </p>
 <p> <code>DISPOSITION</code> &#8211; {<code>ACCEPT</code>|<code>DROP</code>|<code>REJECT</code>}[<code>:</code><i>log-level</i>]</p>
 <dl>
-<dd><code>ACCEPT</code> or <code>DROP</code> (if MACLIST_TABLE=filter in m[blue]<code>shorewall.conf</code>m[]<font SIZE="-2">[3]</font>(5), then REJECT is also allowed). If specified, the <i>log-level</i> causes packets matching the rule to be logged at that level.</dd></dl>
+<dd><code>ACCEPT</code> or <code>DROP</code> (if MACLIST_TABLE=filter in m[blue]<code>shorewall.conf</code>m[][3](5), then REJECT is also allowed). If specified, the <i>log-level</i> causes packets matching the rule to be logged at that level.</dd></dl>
 <p> <code>INTERFACE</code> &#8211; <i>interface</i></p>
 <dl>
 <dd>Network <i>interface</i> to a host.</dd></dl>
@@ -29,8 +29,8 @@ description: "maclist – Shorewall MAC Verification file"
 <h2>Files</h2>
 <p>/etc/shorewall/maclist</p>
 <h2>See Also</h2>
-<p>m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/MAC_Validation.html">http://www.shorewall.net/MAC_Validation.html</a></code>m[]<font SIZE="-2">[4]</font> </p>
-<p> m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/configuration_file_basics.htm#Pairs">http://www.shorewall.net/configuration_file_basics.htm#Pairs</a></code>m[]<font SIZE="-2">[5]</font> </p>
+<p>m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/MAC_Validation.html">http://www.shorewall.net/MAC_Validation.html</a></code>m[][4] </p>
+<p> m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/configuration_file_basics.htm#Pairs">http://www.shorewall.net/configuration_file_basics.htm#Pairs</a></code>m[][5] </p>
 <p> <a href="/docs/linux/man/8-shorewall/">shorewall</a>(8), <a href="/docs/linux/man/5-shorewall-accounting/">shorewall-accounting</a>(5), <a href="/docs/linux/man/5-shorewall-actions/">shorewall-actions</a>(5), <a href="/docs/linux/man/5-shorewall-blacklist/">shorewall-blacklist</a>(5), <a href="/docs/linux/man/5-shorewall-hosts/">shorewall-hosts</a>(5), shorewall_interfaces(5), <a href="/docs/linux/man/5-shorewall-ipsets/">shorewall-ipsets</a>(5), <a href="/docs/linux/man/5-shorewall-masq/">shorewall-masq</a>(5), <a href="/docs/linux/man/5-shorewall-nat/">shorewall-nat</a>(5), <a href="/docs/linux/man/5-shorewall-netmap/">shorewall-netmap</a>(5), <a href="/docs/linux/man/5-shorewall-params/">shorewall-params</a>(5), <a href="/docs/linux/man/5-shorewall-policy/">shorewall-policy</a>(5), <a href="/docs/linux/man/5-shorewall-providers/">shorewall-providers</a>(5), <a href="/docs/linux/man/5-shorewall-proxyarp/">shorewall-proxyarp</a>(5), <a href="/docs/linux/man/5-shorewall-rtrules/">shorewall-rtrules</a>(5), <a href="/docs/linux/man/5-shorewall-routestopped/">shorewall-routestopped</a>(5), <a href="/docs/linux/man/5-shorewall-rules/">shorewall-rules</a>(5), <a href="/docs/linux/man/5-shorewall-conf/">shorewall.conf</a>(5), <a href="/docs/linux/man/5-shorewall-secmarks/">shorewall-secmarks</a>(5), <a href="/docs/linux/man/5-shorewall-tcclasses/">shorewall-tcclasses</a>(5), <a href="/docs/linux/man/5-shorewall-tcdevices/">shorewall-tcdevices</a>(5), <a href="/docs/linux/man/5-shorewall-mangle/">shorewall-mangle</a>(5), <a href="/docs/linux/man/5-shorewall-tos/">shorewall-tos</a>(5), <a href="/docs/linux/man/5-shorewall-tunnels/">shorewall-tunnels</a>(5), <a href="/docs/linux/man/5-shorewall-zones/">shorewall-zones</a>(5)</p>
 <h2>Notes</h2>
 <dl>

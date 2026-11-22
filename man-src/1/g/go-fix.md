@@ -13,7 +13,7 @@ description: "go-fix – update packages to use new APIs"
 <p> <code>go fix</code> [<i>packages</i>]</p>
 <h2>DESCRIPTION</h2>
 <p> Fix runs the Go fix command on the packages named by the import paths. </p>
-<p> For more about fix, see &#8216;go doc cmd/fix&#8217;.<br />
+<p> For more about fix, see &#8216;go doc cmd/fix&#8217;.<br/>
  For more about specifying packages, see <code><a href="/docs/linux/man/7-go-packages/">go-packages</a></code>(7). </p>
 <p> To run fix with specific options, run &#8216;go tool fix&#8217;.</p>
 <h2>SEE ALSO</h2>

@@ -68,7 +68,7 @@ description: "jpegtopnm – convert JPEG/JFIF file to portable pixmap or graymap
 <p> You can easily use these converters together. E.g.:</p>
 <dl>
 <dt>
-</dt><dd> <code>jpegtopnm foo.jpg | ppmtopgm | pnmscale .25 </code><br />
+</dt><dd> <code>jpegtopnm foo.jpg | ppmtopgm | pnmscale .25 </code><br/>
  <code>&gt;foo.pgm</code></dd></dl>
 <p> <code>-dct fast</code> and/or <code>-nosmooth</code> gain speed at a small sacrifice in quality. </p>
 <p> If you are fortunate enough to have very fast floating point hardware, <code>-dct float</code> may be even faster than <code>-dct fast</code>. But on most machines <code>-dct float</code> is slower than <code>-dct int</code>; in this case it is not worth using, because its theoretical accuracy advantage is too small to be significant in practice. </p>
@@ -79,8 +79,8 @@ description: "jpegtopnm – convert JPEG/JFIF file to portable pixmap or graymap
 <dt><code>JPEGMEM</code></dt>
 <dd> If this environment variable is set, its value is the default memory limit. The value is specified as described for the <code>-maxmemory</code> option. An explicit <code>-maxmemory </code> option overrides any <code>JPEGMEM</code>.</dd></dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/5-ppm/">ppm</a></code>(5), <code><a href="/docs/linux/man/5-pgm/">pgm</a></code>(5), <code><a href="/docs/linux/man/1-ppmtojpeg/">ppmtojpeg</a></code>(1), <code><a href="/docs/linux/man/1-ppmquant/">ppmquant</a></code>(1), <code><a href="/docs/linux/man/1-pnmscale/">pnmscale</a></code>(1), <code><a href="/docs/linux/man/1-ppmtopgm/">ppmtopgm</a></code>(1), <code><a href="/docs/linux/man/1-ppmdither/">ppmdither</a></code>(1), <code><a href="/docs/linux/man/1-pnmdepth/">pnmdepth</a></code>(1),<br />
- <code><a href="/docs/linux/man/1-djpeg/">djpeg</a></code>(1), <code><a href="/docs/linux/man/1-cjpeg/">cjpeg</a></code>(1), <code><a href="/docs/linux/man/1-jpegtran/">jpegtran</a></code>(1), <code><a href="/docs/linux/man/1-rdjpgcom/">rdjpgcom</a></code>(1), <code><a href="/docs/linux/man/1-wrjpgcom/">wrjpgcom</a></code>(1), <code><a href="/docs/linux/man/1-jhead/">jhead</a></code>(1)<br />
+<p> <code><a href="/docs/linux/man/5-ppm/">ppm</a></code>(5), <code><a href="/docs/linux/man/5-pgm/">pgm</a></code>(5), <code><a href="/docs/linux/man/1-ppmtojpeg/">ppmtojpeg</a></code>(1), <code><a href="/docs/linux/man/1-ppmquant/">ppmquant</a></code>(1), <code><a href="/docs/linux/man/1-pnmscale/">pnmscale</a></code>(1), <code><a href="/docs/linux/man/1-ppmtopgm/">ppmtopgm</a></code>(1), <code><a href="/docs/linux/man/1-ppmdither/">ppmdither</a></code>(1), <code><a href="/docs/linux/man/1-pnmdepth/">pnmdepth</a></code>(1),<br/>
+ <code><a href="/docs/linux/man/1-djpeg/">djpeg</a></code>(1), <code><a href="/docs/linux/man/1-cjpeg/">cjpeg</a></code>(1), <code><a href="/docs/linux/man/1-jpegtran/">jpegtran</a></code>(1), <code><a href="/docs/linux/man/1-rdjpgcom/">rdjpgcom</a></code>(1), <code><a href="/docs/linux/man/1-wrjpgcom/">wrjpgcom</a></code>(1), <code><a href="/docs/linux/man/1-jhead/">jhead</a></code>(1)<br/>
  Wallace, Gregory K. &quot;The JPEG Still Picture Compression Standard&quot;, Communications of the ACM, April 1991 (vol. 34, no. 4), pp. 30-44. </p>
 <h2>LIMITATIONS</h2>
 <p> Arithmetic coding is not supported for legal reasons. </p>

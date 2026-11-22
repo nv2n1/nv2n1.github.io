@@ -8,7 +8,7 @@ url: "/docs/linux/man/3-dpkgsourcepackage/"
 
 Dpkg::Source::Package - manipulate Debian source packages 
 
-<h2>Description</h2>This module provides an object that can manipulate Debian source packages. While it supports both the extraction and the creation of source packages, the only <font SIZE="-1">API</font> that is officially supported is the one that supports the extraction of the source package.
+<h2>Description</h2>This module provides an object that can manipulate Debian source packages. While it supports both the extraction and the creation of source packages, the only API that is officially supported is the one that supports the extraction of the source package.
 <h2>Functions</h2><dl COMPACT><dt>my $string = <i>get_default_diff_ignore_regex()</i>
 </dt><dd>Returns the default diff ignore regex.
 </dd><dt>set_default_diff_ignore_regex($string)
@@ -26,13 +26,13 @@ Dpkg::Source::Package - manipulate Debian source packages
 </dt><dd>If set to 1, the <i>check_signature()</i> method will be stricter and will error out if the signature can't be verified.
 </dd><dt>copy_orig_tarballs
 </dt><dd>If set to 1, the extraction will copy the upstream tarballs next the target directory. This is useful if you want to be able to rebuild the source package after its extraction.</dd></dl></dl><dl COMPACT><dd></dd></dl><dt>$p-&gt;<i>get_filename()</i>
-</dt><dd>Returns the filename of the <font SIZE="-1">DSC</font> file.
+</dt><dd>Returns the filename of the DSC file.
 </dd><dt>$p-&gt;<i>get_files()</i>
 </dt><dd>Returns the list of files referenced by the source package. The filenames usually do not have any path information.
 </dd><dt>$p-&gt;<i>check_checksums()</i>
-</dt><dd>Verify the checksums embedded in the <font SIZE="-1">DSC</font> file. It requires the presence of the other files constituting the source package. If any inconsistency is discovered, it immediately errors out.
+</dt><dd>Verify the checksums embedded in the DSC file. It requires the presence of the other files constituting the source package. If any inconsistency is discovered, it immediately errors out.
 </dd><dt>$bool = $p-&gt;<i>is_signed()</i>
-</dt><dd>Returns 1 if the <font SIZE="-1">DSC</font> files contains an embedded OpenPGP signature. Otherwise returns 0.
+</dt><dd>Returns 1 if the DSC files contains an embedded OpenPGP signature. Otherwise returns 0.
 </dd><dt>$p-&gt;<i>check_signature()</i>
 </dt><dd>Implement the same OpenPGP signature check that dpkg-source does. In case of problems, it prints a warning or errors out. 
 

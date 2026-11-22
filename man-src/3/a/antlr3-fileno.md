@@ -12,62 +12,62 @@ description: "ANTLR3_INPUT_STREAM_struct –"
 <h2>Synopsis</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3input.h">antlr3input.h</a>&gt;</p>
 <h3>Data Fields</h3>
-<p> void *(* <code>_LT</code> )(struct <code>ANTLR3_INPUT_STREAM_struct</code> *input, <code>ANTLR3_INT32</code> lt)<br />
- <i>Pointer to function to return input stream element at 1 based offset from nextChar. </i><br />
- <code>ANTLR3_UINT8</code> <code>charByteSize</code><br />
- <i>Indicates the size, in 8 bit units, of a single character. </i><br />
- <code>ANTLR3_INT32</code> <code>charPositionInLine</code><br />
- <i>The offset within the current line of the current character. </i><br />
- void(* <code>close</code> )(struct <code>ANTLR3_INPUT_STREAM_struct</code> *input)<br />
- <i>Pointer to function that closes the input stream. </i><br />
- void * <code>currentLine</code><br />
- <i>Pointer into the input buffer where the current line started. </i><br />
- void * <code>data</code><br />
- <i>Pointer the start of the input string, characters may be taken as offsets from here and in original input format encoding. </i><br />
- <code>pANTLR3_STRING</code> <code>fileName</code><br />
- <i>File name string, set to pointer to memory if you set it manually as it will be </i><code>free()</code>d.<br />
- <code>ANTLR3_UINT32</code> <code>fileNo</code><br />
- <i>File number, needs to be set manually to some file index of your devising. </i><br />
+<p> void *(* <code>_LT</code> )(struct <code>ANTLR3_INPUT_STREAM_struct</code> *input, <code>ANTLR3_INT32</code> lt)<br/>
+ <i>Pointer to function to return input stream element at 1 based offset from nextChar. </i><br/>
+ <code>ANTLR3_UINT8</code> <code>charByteSize</code><br/>
+ <i>Indicates the size, in 8 bit units, of a single character. </i><br/>
+ <code>ANTLR3_INT32</code> <code>charPositionInLine</code><br/>
+ <i>The offset within the current line of the current character. </i><br/>
+ void(* <code>close</code> )(struct <code>ANTLR3_INPUT_STREAM_struct</code> *input)<br/>
+ <i>Pointer to function that closes the input stream. </i><br/>
+ void * <code>currentLine</code><br/>
+ <i>Pointer into the input buffer where the current line started. </i><br/>
+ void * <code>data</code><br/>
+ <i>Pointer the start of the input string, characters may be taken as offsets from here and in original input format encoding. </i><br/>
+ <code>pANTLR3_STRING</code> <code>fileName</code><br/>
+ <i>File name string, set to pointer to memory if you set it manually as it will be </i><code>free()</code>d.<br/>
+ <code>ANTLR3_UINT32</code> <code>fileNo</code><br/>
+ <i>File number, needs to be set manually to some file index of your devising. </i><br/>
  void(* <code>free</code> )(struct <code>ANTLR3_INPUT_STREAM_struct</code> *input) </p>
-<p> <code>ANTLR3_UINT32</code>(* <code>getCharPositionInLine</code> )(struct <code>ANTLR3_INPUT_STREAM_struct</code> *input)<br />
- <i>Pointer to function to return the current offset in the current input stream line. </i><br />
- <code>ANTLR3_UINT32</code>(* <code>getLine</code> )(struct <code>ANTLR3_INPUT_STREAM_struct</code> *input)<br />
- <i>Pointer to function to return the current line number in the input stream. </i><br />
- void *(* <code>getLineBuf</code> )(struct <code>ANTLR3_INPUT_STREAM_struct</code> *input)<br />
- <i>Pointer to function to return the current line buffer in the input stream The pointer returned is directly into the input stream so you must copy it if you wish to manipulate it without damaging the input stream. </i><br />
- int <code>isAllocated</code><br />
- <i>Indicates if the data pointer was allocated by us, and so should be freed when the stream dies. </i><br />
- <code>pANTLR3_INT_STREAM</code> <code>istream</code><br />
- <i>Interfaces that provide streams must all provide a generic ANTLR3_INT_STREAM interface and an ANTLR3_INPUT_STREAM is no different. </i><br />
- <code>ANTLR3_UINT32</code> <code>line</code><br />
- <i>The line number we are traversing in the input file. </i><br />
- <code>ANTLR3_UINT32</code> <code>markDepth</code><br />
- <i>Tracks how deep </i><code>mark()</code> calls are nested.<br />
- <code>pANTLR3_VECTOR</code> <code>markers</code><br />
- <i>List of </i><code>mark()</code> points in the input stream.<br />
- <code>ANTLR3_UCHAR</code> <code>newlineChar</code><br />
- <i>Character that automatically causes an internal line count increment. </i><br />
- void * <code>nextChar</code><br />
- <i>Pointer to the next character to be consumed from the input data This is cast to point at the encoding of the original file that was read by the functions installed as pointer in this input stream context instance at file/string/whatever load time. </i><br />
- void(* <code>reset</code> )(struct <code>ANTLR3_INPUT_STREAM_struct</code> *input)<br />
- <i>Pointer to function that resets the input stream. </i><br />
- void(* <code>setCharPositionInLine</code> )(struct <code>ANTLR3_INPUT_STREAM_struct</code> *input, <code>ANTLR3_UINT32</code> position)<br />
- <i>Pointer to function to set the current position in the current line. </i><br />
- void(* <code>setLine</code> )(struct <code>ANTLR3_INPUT_STREAM_struct</code> *input, <code>ANTLR3_UINT32</code> <code>line</code>)<br />
- <i>Pointer to function to set the current line number in the input stream. </i><br />
- void(* <code>SetNewLineChar</code> )(struct <code>ANTLR3_INPUT_STREAM_struct</code> *input, <code>ANTLR3_UINT32</code> <code>newlineChar</code>)<br />
- <i>Pointer to function to override the default newline character that the input stream looks for to trigger the line and offset and line buffer recording information. </i><br />
- void(* <code>setUcaseLA</code> )(<code>pANTLR3_INPUT_STREAM</code> input, <code>ANTLR3_BOOLEAN</code> flag)<br />
- <i>Pinter to function that installs a version of LA that always returns upper case. </i><br />
- <code>ANTLR3_UINT32</code>(* <code>size</code> )(struct <code>ANTLR3_INPUT_STREAM_struct</code> *input)<br />
- <i>Pointer to function to return the total size of the input buffer. </i><br />
- <code>ANTLR3_UINT32</code> <code>sizeBuf</code><br />
- <i>Number of characters that can be consumed at this point in time. </i><br />
- <code>pANTLR3_STRING_FACTORY</code> <code>strFactory</code><br />
- <i>String factory for this input stream. </i><br />
- <code>pANTLR3_STRING</code>(* <code>substr</code> )(struct <code>ANTLR3_INPUT_STREAM_struct</code> *input, <code>ANTLR3_MARKER</code> start, <code>ANTLR3_MARKER</code> stop)<br />
- <i>Pointer to function to return a substring of the input stream. </i><br />
- void * <code>super</code><br />
+<p> <code>ANTLR3_UINT32</code>(* <code>getCharPositionInLine</code> )(struct <code>ANTLR3_INPUT_STREAM_struct</code> *input)<br/>
+ <i>Pointer to function to return the current offset in the current input stream line. </i><br/>
+ <code>ANTLR3_UINT32</code>(* <code>getLine</code> )(struct <code>ANTLR3_INPUT_STREAM_struct</code> *input)<br/>
+ <i>Pointer to function to return the current line number in the input stream. </i><br/>
+ void *(* <code>getLineBuf</code> )(struct <code>ANTLR3_INPUT_STREAM_struct</code> *input)<br/>
+ <i>Pointer to function to return the current line buffer in the input stream The pointer returned is directly into the input stream so you must copy it if you wish to manipulate it without damaging the input stream. </i><br/>
+ int <code>isAllocated</code><br/>
+ <i>Indicates if the data pointer was allocated by us, and so should be freed when the stream dies. </i><br/>
+ <code>pANTLR3_INT_STREAM</code> <code>istream</code><br/>
+ <i>Interfaces that provide streams must all provide a generic ANTLR3_INT_STREAM interface and an ANTLR3_INPUT_STREAM is no different. </i><br/>
+ <code>ANTLR3_UINT32</code> <code>line</code><br/>
+ <i>The line number we are traversing in the input file. </i><br/>
+ <code>ANTLR3_UINT32</code> <code>markDepth</code><br/>
+ <i>Tracks how deep </i><code>mark()</code> calls are nested.<br/>
+ <code>pANTLR3_VECTOR</code> <code>markers</code><br/>
+ <i>List of </i><code>mark()</code> points in the input stream.<br/>
+ <code>ANTLR3_UCHAR</code> <code>newlineChar</code><br/>
+ <i>Character that automatically causes an internal line count increment. </i><br/>
+ void * <code>nextChar</code><br/>
+ <i>Pointer to the next character to be consumed from the input data This is cast to point at the encoding of the original file that was read by the functions installed as pointer in this input stream context instance at file/string/whatever load time. </i><br/>
+ void(* <code>reset</code> )(struct <code>ANTLR3_INPUT_STREAM_struct</code> *input)<br/>
+ <i>Pointer to function that resets the input stream. </i><br/>
+ void(* <code>setCharPositionInLine</code> )(struct <code>ANTLR3_INPUT_STREAM_struct</code> *input, <code>ANTLR3_UINT32</code> position)<br/>
+ <i>Pointer to function to set the current position in the current line. </i><br/>
+ void(* <code>setLine</code> )(struct <code>ANTLR3_INPUT_STREAM_struct</code> *input, <code>ANTLR3_UINT32</code> <code>line</code>)<br/>
+ <i>Pointer to function to set the current line number in the input stream. </i><br/>
+ void(* <code>SetNewLineChar</code> )(struct <code>ANTLR3_INPUT_STREAM_struct</code> *input, <code>ANTLR3_UINT32</code> <code>newlineChar</code>)<br/>
+ <i>Pointer to function to override the default newline character that the input stream looks for to trigger the line and offset and line buffer recording information. </i><br/>
+ void(* <code>setUcaseLA</code> )(<code>pANTLR3_INPUT_STREAM</code> input, <code>ANTLR3_BOOLEAN</code> flag)<br/>
+ <i>Pinter to function that installs a version of LA that always returns upper case. </i><br/>
+ <code>ANTLR3_UINT32</code>(* <code>size</code> )(struct <code>ANTLR3_INPUT_STREAM_struct</code> *input)<br/>
+ <i>Pointer to function to return the total size of the input buffer. </i><br/>
+ <code>ANTLR3_UINT32</code> <code>sizeBuf</code><br/>
+ <i>Number of characters that can be consumed at this point in time. </i><br/>
+ <code>pANTLR3_STRING_FACTORY</code> <code>strFactory</code><br/>
+ <i>String factory for this input stream. </i><br/>
+ <code>pANTLR3_STRING</code>(* <code>substr</code> )(struct <code>ANTLR3_INPUT_STREAM_struct</code> *input, <code>ANTLR3_MARKER</code> start, <code>ANTLR3_MARKER</code> stop)<br/>
+ <i>Pointer to function to return a substring of the input stream. </i><br/>
+ void * <code>super</code><br/>
  <i>Whatever super structure is providing the INPUT stream needs a pointer to itself so that this can be passed back to it whenever the api functions are called back from this interface. </i></p>
 <h2>Detailed Description</h2>
 <p> Master context structure for an ANTLR3 C runtime based input stream.</p>

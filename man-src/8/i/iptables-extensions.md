@@ -80,10 +80,10 @@ description: "iptables-extensions — list of extensions in the standard iptable
 <p> The code format is similar to the output of the tcpdump -ddd command: one line that stores the number of instructions, followed by one line for each instruction. Instruction lines follow the pattern &#8216;u16 u8 u8 u32&#8217; in decimal notation. Fields encode the operation, jump offset if true, jump offset if false and generic multiuse field &#8216;K&#8217;. Comments are not supported. </p>
 <p> For example, to read only packets matching &#8216;ip proto 6&#8217;, insert the following, without the comments or trailing whitespace:</p>
 <dl>
-<dd>4 # number of instructions<br />
- 48 0 0 9 # load byte ip-&gt;proto<br />
- 21 0 1 6 # jump equal IPPROTO_TCP<br />
- 6 0 0 1 # return pass (non-zero)<br />
+<dd>4 # number of instructions<br/>
+ 48 0 0 9 # load byte ip-&gt;proto<br/>
+ 21 0 1 6 # jump equal IPPROTO_TCP<br/>
+ 6 0 0 1 # return pass (non-zero)<br/>
  6 0 0 0 # return fail (zero)</dd></dl>
 <p> You can pass this filter to the bpf match with the following command:</p>
 <dl>
@@ -93,8 +93,8 @@ description: "iptables-extensions — list of extensions in the standard iptable
 <dd>iptables -A OUTPUT -m bpf &#8211;bytecode &quot;`nfbpf_compile RAW &#8216;ip proto 6&#8217;`&quot; -j ACCEPT</dd></dl>
 <p> Or use tcpdump -ddd. In that case, generate BPF targeting a device with the same data link type as the xtables match. Iptables passes packets from the network layer up, without mac layer. Select a device with data link type RAW, such as a tun device:</p>
 <dl>
-<dd>ip tuntap add tun0 mode tun<br />
- ip link set tun0 up<br />
+<dd>ip tuntap add tun0 mode tun<br/>
+ ip link set tun0 up<br/>
  tcpdump -ddd -i tun0 ip proto 6</dd></dl>
 <p> See tcpdump -L -i $dev for a list of known data link types for a given device. </p>
 <p> You may want to learn more about BPF from FreeBSD&#8217;s bpf(4) manpage.</p>
@@ -777,9 +777,9 @@ description: "iptables-extensions — list of extensions in the standard iptable
 </dd><dt>[<code>!</code>] <code>&#8211;chunk-types</code> {<code>all</code>|<code>any</code>|<code>only</code>} <i>chunktype</i>[<code>:</code><i>flags</i>] [&#8230;]</dt>
 <dd>The flag letter in upper case indicates that the flag is to match if set, in the lower case indicates to match if unset. </dd>
 <p> Chunk types: DATA INIT INIT_ACK SACK HEARTBEAT HEARTBEAT_ACK ABORT SHUTDOWN SHUTDOWN_ACK ERROR COOKIE_ECHO COOKIE_ACK ECN_ECNE ECN_CWR SHUTDOWN_COMPLETE ASCONF ASCONF_ACK FORWARD_TSN </p>
-<p> chunk type available flags<br />
- DATA I U B E i u b e<br />
- ABORT T t<br />
+<p> chunk type available flags<br/>
+ DATA I U B E i u b e<br/>
+ ABORT T t<br/>
  SHUTDOWN_COMPLETE T t </p>
 <p> (lowercase means flag should be &quot;off&quot;, uppercase means &quot;on&quot;)</dl>
 <p> Examples: </p>
@@ -865,9 +865,9 @@ description: "iptables-extensions — list of extensions in the standard iptable
 <dd>Ignore case when searching.</dd>
 <dt>Examples:</dt>
 <dd>
-</dd><dd># The string pattern can be used for simple text characters.<br />
+</dd><dd># The string pattern can be used for simple text characters.<br/>
  iptables -A INPUT -p tcp &#8211;dport 80 -m string &#8211;algo bm &#8211;string &#8216;GET /index.html&#8217; -j LOG</dd>
-<dd># The hex string pattern can be used for non-printable characters, like |0D 0A| or |0D0A|.<br />
+<dd># The hex string pattern can be used for non-printable characters, like |0D 0A| or |0D0A|.<br/>
  iptables -p udp &#8211;dport 53 -m string &#8211;algo bm &#8211;from 40 &#8211;to 57 &#8211;hex-string &#8216;|03|www|09|netfilter|03|org|00|&#8217;</dd></dl>
 <h3>tcp</h3>
 <p>These extensions can be used if `&#8211;protocol tcp&#8217; is specified. It provides the following options:</p>
@@ -1188,7 +1188,7 @@ description: "iptables-extensions — list of extensions in the standard iptable
 <dt><code>&#8211;hmark-rnd</code> <i>value</i></dt>
 <dd>A 32 bit random custom value to feed hash calculation.</dd></dl>
 <p> <i>Examples:</i> </p>
-<p> iptables -t mangle -A PREROUTING -m conntrack &#8211;ctstate NEW<br />
+<p> iptables -t mangle -A PREROUTING -m conntrack &#8211;ctstate NEW<br/>
 &nbsp;-j HMARK &#8211;hmark-tuple ct,src,dst,proto &#8211;hmark-offset 10000 &#8211;hmark-mod 10 &#8211;hmark-rnd 0xfeedcafe </p>
 <p> iptables -t mangle -A PREROUTING -j HMARK &#8211;hmark-offset 10000 &#8211;hmark-tuple src,dst,proto &#8211;hmark-mod 10 &#8211;hmark-rnd 0xdeafbeef</p>
 <h3>Idletimer</h3>
@@ -1403,8 +1403,8 @@ description: "iptables-extensions — list of extensions in the standard iptable
 <p> Determine tcp options used by backend, from an external system</p>
 <dl>
 <dd>tcpdump -pni eth0 -c 1 &#8216;tcp[tcpflags] == (tcp-syn|tcp-ack)&#8217; </dd>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;port 80&nbsp;&amp;<br />
- telnet 192.0.2.42 80<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;port 80&nbsp;&amp;<br/>
+ telnet 192.0.2.42 80<br/>
  18:57:24.693307 IP 192.0.2.42.80 &gt; 192.0.2.43.48757: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Flags&nbsp;[S.], seq 360414582, ack 788841994, win 14480, </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;options&nbsp;[mss 1460,sackOK, </p>
@@ -1416,12 +1416,12 @@ description: "iptables-extensions — list of extensions in the standard iptable
 <dd>echo 0 &gt; /proc/sys/net/netfilter/nf_conntrack_tcp_loose</dd></dl>
 <p> Make SYN packets untracked</p>
 <dl>
-<dd>iptables -t raw -A PREROUTING -i eth0 -p tcp &#8211;dport 80<br />
+<dd>iptables -t raw -A PREROUTING -i eth0 -p tcp &#8211;dport 80<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211;syn -j CT &#8211;notrack</dd></dl>
 <p> Catch UNTRACKED (SYN packets) and INVALID (3WHS ACK packets) states and send them to SYNPROXY. This rule will respond to SYN packets with SYN+ACK syncookies, create ESTABLISHED for valid client response (3WHS ACK packets) and drop incorrect cookies. Flags combinations not expected during 3WHS will not match and continue (e.g. SYN+FIN, SYN+ACK).</p>
 <dl>
-<dd>iptables -A INPUT -i eth0 -p tcp &#8211;dport 80<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;-m state &#8211;state UNTRACKED,INVALID -j SYNPROXY<br />
+<dd>iptables -A INPUT -i eth0 -p tcp &#8211;dport 80<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;-m state &#8211;state UNTRACKED,INVALID -j SYNPROXY<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211;sack-perm &#8211;timestamp &#8211;mss 1460 &#8211;wscale 9</dd></dl>
 <p> Drop invalid packets, this will be out-of-flow packets that were not matched by SYNPROXY.</p>
 <dl>
@@ -1438,7 +1438,7 @@ description: "iptables-extensions — list of extensions in the standard iptable
 <dd>ssh works fine, but scp hangs after initial handshaking.</dd></dl>
 <p> Workaround: activate this option and add a rule to your firewall configuration like:</p>
 <dl>
-<dd>&nbsp;iptables -t mangle -A FORWARD -p tcp &#8211;tcp-flags SYN,RST SYN<br />
+<dd>&nbsp;iptables -t mangle -A FORWARD -p tcp &#8211;tcp-flags SYN,RST SYN<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;-j TCPMSS &#8211;clamp-mss-to-pmtu</dd>
 <dt><code>&#8211;set-mss</code> <i>value</i></dt>
 <dd>Explicitly sets MSS option to specified value. If the MSS of the packet is already lower than <i>value</i>, it will <code>not</code> be increased (from Linux 2.6.25 onwards) to avoid more problems with hosts relying on a proper MSS.</dd>

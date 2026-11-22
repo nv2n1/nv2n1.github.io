@@ -23,15 +23,15 @@ perlperf - Perl Performance and Optimization Techniques
 
  Perhaps the most common mistake programmers make is to attempt to optimize their code before a program actually does anything useful - this is a bad idea. There's no point in having an extremely fast program that doesn't work. The first job is to get a program to <i>correctly</i> do something <b>useful</b>, (not to mention ensuring the test suite is fully functional), and only then to consider optimizing it. Having decided to optimize existing working code, there are several simple but essential steps to consider which are intrinsic to any optimization process.
 
-<h3><font SIZE="-1">ONE STEP SIDEWAYS</font></h3>
+<h3>ONE STEP SIDEWAYS</h3>
 
  Firstly, you need to establish a baseline time for the existing code, which timing needs to be reliable and repeatable. You'll probably want to use the <tt>&quot;Benchmark&quot;</tt> or <tt>&quot;Devel::NYTProf&quot;</tt> modules, or something similar, for this step, or perhaps the Unix system <tt>&quot;time&quot;</tt> utility, whichever is appropriate. See the base of this document for a longer list of benchmarking and profiling modules, and recommended further reading.
 
-<h3><font SIZE="-1">ONE STEP FORWARD</font></h3>
+<h3>ONE STEP FORWARD</h3>
 
  Next, having examined the program for <i>hot spots</i>, (places where the code seems to run slowly), change the code with the intention of making it run faster. Using version control software, like <tt>&quot;subversion&quot;</tt>, will ensure no changes are irreversible. It's too easy to fiddle here and fiddle there - don't change too much at any one time or you might not discover which piece of code <b>really</b> was the slow bit.
 
-<h3><font SIZE="-1">ANOTHER STEP SIDEWAYS</font></h3>
+<h3>ANOTHER STEP SIDEWAYS</h3>
 
  It's not enough to say: ``that will make it run faster'', you have to check it. Rerun the code under control of the benchmarking or profiling modules, from the first step above, and check that the new code executed the <b>same task</b> in <i>less time</i>. Save your work and repeat...
 
@@ -45,7 +45,7 @@ perlperf - Perl Performance and Optimization Techniques
 
  For applications using database backends, the standard <tt>&quot;DBIx&quot;</tt> namespace has tries to help with keeping things nippy, not least because it tries to <i>not</i> query the database until the latest possible moment, but always read the docs which come with your choice of libraries. Among the many issues facing developers dealing with databases should remain aware of is to always use <tt>&quot;SQL&quot;</tt> placeholders and to consider pre-fetching data sets when this might prove advantageous. Splitting up a large file by assigning multiple processes to parsing a single file, using say <tt>&quot;POE&quot;</tt>, <tt>&quot;threads&quot;</tt> or <tt>&quot;fork&quot;</tt> can also be a useful way of optimizing your usage of the available <tt>&quot;CPU&quot;</tt> resources, though this technique is fraught with concurrency issues and demands high attention to detail. 
 
- Every case has a specific application and one or more exceptions, and there is no replacement for running a few tests and finding out which method works best for your particular environment, this is why writing optimal code is not an exact science, and why we love using Perl so much - <font SIZE="-1">TMTOWTDI.</font>
+ Every case has a specific application and one or more exceptions, and there is no replacement for running a few tests and finding out which method works best for your particular environment, this is why writing optimal code is not an exact science, and why we love using Perl so much - TMTOWTDI.
 
 <h2>BENCHMARKS</h2>
 
@@ -265,7 +265,7 @@ exit 0;
 
 <h3>Devel::DProf</h3>
 
- This venerable module has been the de-facto standard for Perl code profiling for more than a decade, but has been replaced by a number of other modules which have brought us back to the 21st century. Although you're recommended to evaluate your tool from the several mentioned here and from the <font SIZE="-1">CPAN</font> list at the base of this document, (and currently Devel::NYTProf seems to be the weapon of choice - see below), we'll take a quick look at the output from Devel::DProf first, to set a baseline for Perl profiling tools. Run the above program under the control of <tt>&quot;Devel::DProf&quot;</tt> by using the <tt>&quot;-d&quot;</tt> switch on the command-line. 
+ This venerable module has been the de-facto standard for Perl code profiling for more than a decade, but has been replaced by a number of other modules which have brought us back to the 21st century. Although you're recommended to evaluate your tool from the several mentioned here and from the CPAN list at the base of this document, (and currently Devel::NYTProf seems to be the weapon of choice - see below), we'll take a quick look at the output from Devel::DProf first, to set a baseline for Perl profiling tools. Run the above program under the control of <tt>&quot;Devel::DProf&quot;</tt> by using the <tt>&quot;-d&quot;</tt> switch on the command-line. 
 
  <pre>
  $&gt; perl -d:DProf wordmatch -f perl5db.pl
@@ -357,7 +357,7 @@ exit 0;
  fixing.
 </pre> 
 
- <font SIZE="-1">YMMV.</font> 
+ YMMV. 
 
  See also <tt>&quot;Devel::Apache::Profiler&quot;</tt> which hooks <tt>&quot;Devel::Profiler&quot;</tt> into <tt>&quot;mod_perl&quot;</tt>.
 
@@ -476,7 +476,7 @@ wordmatch:
  words with only vowels: 1701
 </pre> 
 
- <tt>&quot;NYTProf&quot;</tt> will generate a report database into the file <i>nytprof.out</i> by default. Human readable reports can be generated from here by using the supplied <tt>&quot;nytprofhtml&quot;</tt> (<font SIZE="-1">HTML</font> output) and <tt>&quot;nytprofcsv&quot;</tt> (<font SIZE="-1">CSV</font> output) programs. We've used the Unix system <tt>&quot;html2text&quot;</tt> utility to convert the <i>nytprof/index.html</i> file for convenience here. 
+ <tt>&quot;NYTProf&quot;</tt> will generate a report database into the file <i>nytprof.out</i> by default. Human readable reports can be generated from here by using the supplied <tt>&quot;nytprofhtml&quot;</tt> (HTML output) and <tt>&quot;nytprofcsv&quot;</tt> (CSV output) programs. We've used the Unix system <tt>&quot;html2text&quot;</tt> utility to convert the <i>nytprof/index.html</i> file for convenience here. 
 
  <pre>
  $&gt; html2text nytprof/index.html
@@ -760,9 +760,9 @@ exit 0;
 <dl>
 <dt>Elapsed Real Time
 </dt><dd> The overall, or wallclock, time between when <tt>&quot;time&quot;</tt> was called, and when it terminates. The elapsed time includes both user and system times, and time spent waiting for other users and processes on the system. Inevitably, this is the most approximate of the measurements given.
-</dd><dt>User <font SIZE="-1">CPU</font> Time
+</dd><dt>User CPU Time
 </dt><dd> The user time is the amount of time the entire process spent on behalf of the user on this system executing this program.
-</dd><dt>System <font SIZE="-1">CPU</font> Time
+</dd><dt>System CPU Time
 </dt><dd> The system time is the amount of time the kernel itself spent executing routines, or system calls, on behalf of this process user.</dd></dl>
  
 
@@ -821,7 +821,7 @@ use warnings;
  3044173777 52029194 out-schwarz
 </pre> 
 
- <font SIZE="-1">BTW.</font> Beware too of pressure from managers who see you speed a program up by 50% of the runtime once, only to get a request one month later to do the same again (true story) - you'll just have to point out you're only human, even if you are a Perl programmer, and you'll see what you can do...
+ BTW. Beware too of pressure from managers who see you speed a program up by 50% of the runtime once, only to get a request one month later to do the same again (true story) - you'll just have to point out you're only human, even if you are a Perl programmer, and you'll see what you can do...
 
 <h2>LOGGING</h2>
 
@@ -876,9 +876,9 @@ timethese(100000, {
       debug: 14 wallclock secs (13.18 usr +  0.04 sys = 13.22 CPU) @ 7564.30/s (n=100000)
 </pre> 
 
- In the one case the code, which does exactly the same thing as far as outputting any debugging information is concerned, in other words nothing, takes 14 seconds, and in the other case the code takes one hundredth of a second. Looks fairly definitive. Use a <tt>$DEBUG</tt> variable <font SIZE="-1">BEFORE</font> you call the subroutine, rather than relying on the smart functionality inside it.
+ In the one case the code, which does exactly the same thing as far as outputting any debugging information is concerned, in other words nothing, takes 14 seconds, and in the other case the code takes one hundredth of a second. Looks fairly definitive. Use a <tt>$DEBUG</tt> variable BEFORE you call the subroutine, rather than relying on the smart functionality inside it.
 
-<h3>Logging if <font SIZE="-1">DEBUG</font> (constant)</h3>
+<h3>Logging if DEBUG (constant)</h3>
 
  It's possible to take the previous idea a little further, by using a compile time <tt>&quot;DEBUG&quot;</tt> constant. 
 
@@ -960,7 +960,7 @@ use strict 'refs';
 
  Further reading can be found using the modules and links below.
 
-<h3><font SIZE="-1">PERLDOCS</font></h3>
+<h3>PERLDOCS</h3>
 
  For example: <tt>&quot;perldoc -f sort&quot;</tt>. 
 
@@ -970,13 +970,13 @@ use strict 'refs';
 
  threads.
 
-<h3><font SIZE="-1">MAN PAGES</font></h3>
+<h3>MAN PAGES</h3>
 
  <tt>&quot;time&quot;</tt>.
 
-<h3><font SIZE="-1">MODULES</font></h3>
+<h3>MODULES</h3>
 
- It's not possible to individually showcase all the performance related code for Perl here, naturally, but here's a short list of modules from the <font SIZE="-1">CPAN</font> which deserve further attention. 
+ It's not possible to individually showcase all the performance related code for Perl here, naturally, but here's a short list of modules from the CPAN which deserve further attention. 
 
  <pre>
  Apache::DProf
@@ -1000,7 +1000,7 @@ use strict 'refs';
  Sort::Maker
 </pre>
 
-<h3><font SIZE="-1">URLS</font></h3>
+<h3>URLS</h3>
 
  Very useful online reference material: 
 

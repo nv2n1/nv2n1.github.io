@@ -18,8 +18,8 @@ description: "mime.convs – mime type conversion file for cups (deprecated)"
 <p> The <i>cost</i> field specifies the relative cost for running the filter. A value of 100 means that the filter uses a large amount of resources while a value of 0 means that the filter uses very few resources. </p>
 <p> The <i>filter</i> field specifies the filter program filename. Filenames are relative to the CUPS filter directory.</p>
 <h2>Files</h2>
-<p><i>/etc/cups</i> &#8211; Typical CUPS configuration directory.<br />
- <i>/usr/lib/cups/filter</i> &#8211; Typical CUPS filter directory.<br />
+<p><i>/etc/cups</i> &#8211; Typical CUPS configuration directory.<br/>
+ <i>/usr/lib/cups/filter</i> &#8211; Typical CUPS filter directory.<br/>
  <i>/usr/libexec/cups/filter</i> &#8211; CUPS filter directory on macOS.</p>
 <h2>Examples</h2>
 <p>Define a filter that converts PostScript documents to CUPS Raster format: </p>

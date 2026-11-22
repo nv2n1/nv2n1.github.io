@@ -10,10 +10,10 @@ description: "cdb – Constant DataBase manipulation tool"
 
 <p> cdb &#8211; Constant DataBase manipulation tool</p>
 <h2>SYNOPSYS</h2>
-<p> <code>cdb</code> -q [-m] [-n <i>num</i>] <i>dbname</i> <i>key</i><br />
- <code>cdb</code> -d [-m] [<i>dbname</i>|-]<br />
- <code>cdb</code> -l [-m] [<i>dbname</i>|-]<br />
- <code>cdb</code> -s [<i>dbname</i>|-]<br />
+<p> <code>cdb</code> -q [-m] [-n <i>num</i>] <i>dbname</i> <i>key</i><br/>
+ <code>cdb</code> -d [-m] [<i>dbname</i>|-]<br/>
+ <code>cdb</code> -l [-m] [<i>dbname</i>|-]<br/>
+ <code>cdb</code> -s [<i>dbname</i>|-]<br/>
  <code>cdb</code> -c [-m] [-t <i>tmpname</i>|-] [-p <i>perms</i>] [-weru0] <i>dbname</i> [<i>infile</i>&#8230;] </p>
 <h2>DESCRIPTION</h2>
 <p> <code>cdb</code> used to query, dump, list, analyze or create CDB (Constant DataBase) files. Format of cdb described in <i><a href="/docs/linux/man/5-cdb/">cdb</a></i>(5) manpage. This manual page corresponds to version <code>0.78</code> of <code>tinycdb</code> package. </p>
@@ -53,12 +53,12 @@ description: "cdb – Constant DataBase manipulation tool"
 <h3>Input/Output Format</h3>
 <p> By default, <code>cdb</code> expects (for create operation) or writes (for dump/list) native cdb format data. Cdb native format is a sequence of records in a form: </p>
 <p>&nbsp;<wbr>+<i>klen</i>,<i>vlen</i>:<i>key</i>-&gt;<i>val</i>
-<br />
+<br/>
  where &quot;+&quot;, &quot;,&quot;, &quot;:&quot;, &quot;-&quot;, &quot;&gt;&quot; and &quot;
 &quot; (newline) are literal characters, <i>klen</i> and <i>vlen</i> are length of key and value as decimal numbers, and <i>key</i> and <i>val</i> are key and value themselves. Series of records terminated by an empty line. This is the only format where key and value may contain any character including newline, zero (\0) and so on. </p>
-<p> When <code>-l</code> option requested (list keys mode), <code>cdb</code> will produce slightly modified output in a form: <br />
- <br />
-&nbsp;<wbr>+<i>klen</i>:<i>key</i>\n <br />
+<p> When <code>-l</code> option requested (list keys mode), <code>cdb</code> will produce slightly modified output in a form: <br/>
+ <br/>
+&nbsp;<wbr>+<i>klen</i>:<i>key</i>\n <br/>
  (note <i>vlen</i> and <i>val</i> are omitted, together with surrounding delimiters). </p>
 <p> If <code>-m</code> option is given, <code>cdb</code> will expect or produce one line for every record (newline is a record delimiter), and every line should contain optional whitespace, key, whitespace and value up to end of line. Lines started with hash character (#) and empty lines are ignored. This is the same format as <code><a href="/docs/linux/man/1-mkmap/">mkmap</a></code>(1) utility expects. </p>
 <h2>OPTIONS SUMMARY</h2>

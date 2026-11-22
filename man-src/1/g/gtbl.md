@@ -31,8 +31,8 @@ description: "tbl – format tables for troff"
 <p> The easiest table definition is.</p>
 <dl>
 <dt>
-</dt><dd> .TS c c c . This<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>is<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>centered<br />
- Well,<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>this<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>also<br />
+</dt><dd> .TS c c c . This<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>is<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>centered<br/>
+ Well,<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>this<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>also<br/>
  .TE</dd></dl>
 <p> By using <code>c c</code> <code>c</code>, each cell in the whole table will be centered. The separating character is here the default <i>tab</i>. </p>
 <p> The result is</p>
@@ -259,7 +259,7 @@ description: "tbl – format tables for troff"
 </td>
 </tr>
 <tr VALIGN=top>
-<td> 1111<br />
+<td> 1111<br/>
  2222 </td>
 <td VALIGN=center ROWSPAN=2>foo
 </td>
@@ -268,7 +268,7 @@ description: "tbl – format tables for troff"
 <td ALIGN=right>r</td>
 </tr>
 <tr VALIGN=top>
-<td VALIGN=center ROWSPAN=2> 3333<br />
+<td VALIGN=center ROWSPAN=2> 3333<br/>
  4444 </td>
 <td ALIGN=right VALIGN=center ROWSPAN=2>bar
 </td>

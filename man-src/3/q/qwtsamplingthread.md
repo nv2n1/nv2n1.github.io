@@ -16,13 +16,13 @@ description: "QwtSamplingThread –"
 <p>void <code>setInterval</code> (double <code>interval</code>) </p>
 <p> void <code>stop</code> () </p>
 <h3>Public Member Functions</h3>
-<p>virtual <code>~QwtSamplingThread</code> ()<br />
- <i>Destructor. </i><br />
+<p>virtual <code>~QwtSamplingThread</code> ()<br/>
+ <i>Destructor. </i><br/>
  double <code>interval</code> () const </p>
 <p> double <code>elapsed</code> () const </p>
 <h3>Protected Member Functions</h3>
-<p><code>QwtSamplingThread</code> (QObject *parent=NULL)<br />
- <i>Constructor. </i><br />
+<p><code>QwtSamplingThread</code> (QObject *parent=NULL)<br/>
+ <i>Constructor. </i><br/>
  virtual void <code>run</code> () </p>
 <p> virtual void <code>sample</code> (double <code>elapsed</code>)=0 </p>
 <h2>Detailed Description</h2>

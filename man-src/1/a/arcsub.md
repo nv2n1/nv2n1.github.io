@@ -60,11 +60,11 @@ description: "arcsub – ARC Submission"
 <h2>EXTENDED DESCRIPTION</h2>
 <p> <code>arcsub</code> is the key command when submitting jobs to Grid enabled computing resources with the ARC client. As default <code>arcsub</code> is able to submit jobs to A-REX, CREAM and EMI ES enabled computing elements (CEs), and as always for successful submission you need to be authenticated at the targeted computing services. Since <code>arcsub</code> is build on a modular library, modules can be installed which enables submission to other targets, e.g. the classic ARC CE Grid-Manager. </p>
 <p> Job submission can be accomplished by specifying a job description file to submit as an argument. <code>arcsub</code> will then by default perform resource discovery on the Grid and then the discovered resources will be matched to the job description and ranked according to the chosen broker (<code>&#8211;broker</code> option). If no Grid environment has been configured, please contact your system administrator, or setup one yourself in the client configuration file (see files section). Another option is to explicitly specify a registry service (or multiple) to <code>arcsub</code> using the <code>&#8211;index</code> option, which accepts an URL, alias or group. Alternatively a specific CE (or multiple) can be targeted by using the <code>&#8211;cluster</code> option. If such a scenario is the most common, it is worthwhile to specify those CEs in the client configuration as default services, which makes it superfluous to specify them as argument. In the same manner aliases and groups, defined in the configuration file, can be utilized, and can be used as argument to the <code>&#8211;cluster</code> or <code>&#8211;index</code> options. In all of the above scenarios <code>arcsub</code> obtains resource information from the services which is then used for matchmaking against the job description, however that step can be avoided by specifying the <code>&#8211;direct</code> option, in which case the job description is submitted directly to first specified endpoint. </p>
-<p> The format of a classic GRIDFTP-based cluster URLs:<br />
- <code>[<a href="ldap://]">ldap://]</a>&lt;hostname&gt;[:2135/nordugrid-cluster-name=&lt;hostname&gt;,Mds-Vo-name=local,o=grid]</code><br />
+<p> The format of a classic GRIDFTP-based cluster URLs:<br/>
+ <code>[<a href="ldap://]">ldap://]</a>&lt;hostname&gt;[:2135/nordugrid-cluster-name=&lt;hostname&gt;,Mds-Vo-name=local,o=grid]</code><br/>
  Only the <code>hostname</code> part has to be specified, the rest of the URL is automatically generated. </p>
-<p> The format of an A-REX URL is:<br />
- <code>[<a rel="nofollow" href="https://]">https://]</a>&lt;hostname&gt;[:&lt;port&gt;][/&lt;path&gt;]</code><br />
+<p> The format of an A-REX URL is:<br/>
+ <code>[<a rel="nofollow" href="https://]">https://]</a>&lt;hostname&gt;[:&lt;port&gt;][/&lt;path&gt;]</code><br/>
  Here the port is 443 by default, but the path cannot be guessed, so if it is not specified, then the service is assumed to live on the root path. </p>
 <p> Job descriptions can also be specified using the <code>&#8211;jobdescrfile</code> option which expect the file name of the description as argument, or the <code>&#8211;jobdescrstring</code> option which expect as argument the job description as a string, and both options can be specified multiple times and one does not exclude the other. The default supported job description languages are xRSL, JSDL and JDL. </p>
 <p> If the job description is successfully submitted a job-ID is returned and printed. This job-ID uniquely identifies the job while it is being executed. On the other hand it is also possible that no CEs matches the constraints defined in the description in which case no submission will be done. Upon successful submission, the job-ID along with more technical job information is stored in the job-list file (described below). The stored information enables the job management commands of the ARC client to manage jobs easily, and thus the job-ID need not to be saved manually. By default the job-list file is stored in the .arc directory in the home directory of the user, however another location can be specified using the <code>&#8211;joblist</code> option taking the location of this file as argument. If the <code>&#8211;joblist</code> option was used during submission, it should also be specified in the consecutive commands when managing the job. If a Computing Element has multiple job submission interfaces (e.g. gridftp, EMI-ES, BES), then the brokering algorithm will choose one of them. With the <code>&#8211;submissioninterface</code> option the requested interface can be specified, and in that case only those Computing Elements will be considered which has that specific interface, and only that interface will be used to submit the jobs. </p>
@@ -86,24 +86,24 @@ description: "arcsub – ARC Submission"
 <p> Before submission, <code>arcsub</code> performs an intelligent modification of the job description (adding or modifying attributes, even converting the description language to fit the needs of the CE) ensuring that it is valid. The modified job description can be printed by specifying the <code>&#8211;dumpdescription</code> option. The format, i.e. job description language, of the printed job description cannot be specified, and will be that which will be sent to and accepted by the chosen target. Further information from <code>arcsub</code> can be obtained by increasing the verbosity, which is done with the <code>&#8211;debug</code> option where the default verbosity level is WARNING. Setting the level to DEBUG will show all messages, while setting it to FATAL will only show fatal log messages. </p>
 <p> To <code>validate</code> your job description without actually submitting a job, use the <code>&#8211;dryrun</code> option: it will capture possible syntax or other errors, but will instruct the site not to submit the job for execution. Only the grid-manager (ARC0) and A-REX (ARC1) CEs support this feature. </p>
 <h2>EXAMPLES</h2>
-<p> Submission of a job description file &quot;helloworld.jsdl&quot; to the Grid<br />
+<p> Submission of a job description file &quot;helloworld.jsdl&quot; to the Grid<br/>
  <code>arcsub helloworld.jsdl</code> </p>
-<p> A information index server (registry) can also be queried for CEs to submit to:<br />
+<p> A information index server (registry) can also be queried for CEs to submit to:<br/>
  <code>arcsub -g registry.example.com helloworld.jsdl</code> </p>
-<p> Submission of a job description file &quot;helloworld.jsdl&quot; to ce.example.com:<br />
+<p> Submission of a job description file &quot;helloworld.jsdl&quot; to ce.example.com:<br/>
  <code>arcsub -c ce.example.com helloworld.jsdl</code> </p>
-<p> Direct submission to a CE is done as:<br />
+<p> Direct submission to a CE is done as:<br/>
  <code>arcsub &#8211;direct -c cd.example.com helloworld.jsdl</code> </p>
-<p> The job description can also be specified directly on the command line as shown in the example, using the XRSL job description language:<br />
- <code>arcsub -c example.com/arex -e \<br />
+<p> The job description can also be specified directly on the command line as shown in the example, using the XRSL job description language:<br/>
+ <code>arcsub -c example.com/arex -e \<br/>
  &#8216;&amp;(executable=&quot;/bin/echo&quot;)(arguments=&quot;Hello World!&quot;)&#8217;</code> </p>
-<p> When submitting against CEs retrieved from information index servers it might be useful to do resource brokering:<br />
+<p> When submitting against CEs retrieved from information index servers it might be useful to do resource brokering:<br/>
  <code>arcsub -g registry.example.com -b FastestQueue helloworld.jsdl</code> </p>
-<p> If the job has a large input data set, it can be useful to send it to a CE where those files are already cached. The ACIX broker can be used for this:<br />
+<p> If the job has a large input data set, it can be useful to send it to a CE where those files are already cached. The ACIX broker can be used for this:<br/>
  <code>arcsub -g registry.example.com -b PythonBroker:ACIXBroker.ACIXBroker:<a rel="nofollow" href="https://cacheindex.ndgf.org:6443/data/index">https://cacheindex.ndgf.org:6443/data/index</a> helloworld.jsdl</code> </p>
-<p> Disregarding a specific CE for submission submitting against an information index server:<br />
+<p> Disregarding a specific CE for submission submitting against an information index server:<br/>
  <code>arcsub -g registry.example.com -R badcomputingelement.com/arex helloworld.jsdl</code> </p>
-<p> Dumping the job description is done as follows:<br />
+<p> Dumping the job description is done as follows:<br/>
  <code>arcsub -c example.com/arex -x helloworld.jsdl</code> </p>
 <h2>FILES</h2>
 <dl>

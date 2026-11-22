@@ -9,9 +9,9 @@ description: "ntfs-3g – Third Generation Read/Write NTFS Driver"
 
 <p>ntfs-3g &#8211; Third Generation Read/Write NTFS Driver</p>
 <h2>Synopsis</h2>
-<p><code>ntfs-3g</code> <code>[-o </code><i>option</i><code>[,&#8230;]]</code> <i>volume mount_point</i><br />
- <code>mount -t ntfs-3g</code> <code>[-o </code><i>option</i><code>[,&#8230;]]</code> <i>volume mount_point</i><br />
- <code>lowntfs-3g</code> <code>[-o </code><i>option</i><code>[,&#8230;]]</code> <i>volume mount_point</i><br />
+<p><code>ntfs-3g</code> <code>[-o </code><i>option</i><code>[,&#8230;]]</code> <i>volume mount_point</i><br/>
+ <code>mount -t ntfs-3g</code> <code>[-o </code><i>option</i><code>[,&#8230;]]</code> <i>volume mount_point</i><br/>
+ <code>lowntfs-3g</code> <code>[-o </code><i>option</i><code>[,&#8230;]]</code> <i>volume mount_point</i><br/>
  <code>mount -t lowntfs-3g</code> <code>[-o </code><i>option</i><code>[,&#8230;]]</code> <i>volume mount_point</i></p>
 <h2>Description</h2>
 <p><code>ntfs-3g</code> is an NTFS driver, which can create, remove, rename, move files, directories, hard links, and streams; it can read and write files, including streams, sparse files and transparently compressed files; it can handle special files like symbolic links, devices, and FIFOs; moreover it provides standard management of file ownership and permissions, including POSIX ACLs. </p>
@@ -155,8 +155,8 @@ description: "ntfs-3g – Third Generation Read/Write NTFS Driver"
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> &#8211; it contains some not allowed character, <br />
- &#8211; or the last character is a space or a dot, <br />
+<dd> <p> &#8211; it contains some not allowed character, <br/>
+ &#8211; or the last character is a space or a dot, <br/>
  &#8211; or the name is reserved. </p>
  </dd></dl>
 <p> The forbidden characters are the nine characters &quot; * / : &lt; &gt; ? \ | and those whose code is less than 0x20, and the reserved names are CON, PRN, AUX, NUL, COM1..COM9, LPT1..LPT9, with no suffix or followed by a dot. </p>

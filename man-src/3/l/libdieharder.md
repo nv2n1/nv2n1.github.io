@@ -11,37 +11,37 @@ description: "libdieharder – A testing and benchmarking library for random num
 <p> libdieharder &#8211; A testing and benchmarking library for random number generators </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include dieharder.h</code> </p>
-<p> <code>void run_user_template()</code><br />
+<p> <code>void run_user_template()</code><br/>
  <code>{</code> </p>
-<p> <code>Test **user_template_test;</code><br />
- <code>/*</code><br />
- <code> * Create the test</code><br />
- <code> */</code><br />
+<p> <code>Test **user_template_test;</code><br/>
+ <code>/*</code><br/>
+ <code> * Create the test</code><br/>
+ <code> */</code><br/>
  <code>user_template_test = create_test(&amp;user_template_dtest,tsamples,psamples,&amp;user_template);</code> </p>
-<p> <code>/*</code><br />
- <code> * Set any GLOBAL data used by the test.</code><br />
- <code> */</code><br />
+<p> <code>/*</code><br/>
+ <code> * Set any GLOBAL data used by the test.</code><br/>
+ <code> */</code><br/>
  <code>user_template_lag = (int)x_user;</code> </p>
-<p> <code>/*</code><br />
- <code> * Show the standard test header</code><br />
- <code> */</code><br />
+<p> <code>/*</code><br/>
+ <code> * Show the standard test header</code><br/>
+ <code> */</code><br/>
  <code>show_test_header(&amp;user_template_dtest,user_template_test);</code> </p>
-<p> <code>/*</code><br />
- <code> * Call the test</code><br />
- <code> */</code><br />
+<p> <code>/*</code><br/>
+ <code> * Call the test</code><br/>
+ <code> */</code><br/>
  <code>std_test(&amp;user_template_dtest,user_template_test);</code> </p>
-<p> <code>/*</code><br />
- <code> * This almost certainly belongs in the show_test_results section,</code><br />
- <code> * possibly with additional conditionals rejecting test results involving</code><br />
- <code> * rewinds, period.</code><br />
- <code> */</code><br />
- <code>if(strncmp(<br />
- </code> <code> printf(# %u rands were used in this test,file_input_get_rtot(rng));</code><br />
- <code> printf(# The file %s was rewound %u times,gsl_rng_name(rng),file_input_get_rewind_cnt(rng));</code><br />
+<p> <code>/*</code><br/>
+ <code> * This almost certainly belongs in the show_test_results section,</code><br/>
+ <code> * possibly with additional conditionals rejecting test results involving</code><br/>
+ <code> * rewinds, period.</code><br/>
+ <code> */</code><br/>
+ <code>if(strncmp(<br/>
+ </code> <code> printf(# %u rands were used in this test,file_input_get_rtot(rng));</code><br/>
+ <code> printf(# The file %s was rewound %u times,gsl_rng_name(rng),file_input_get_rewind_cnt(rng));</code><br/>
  <code>}</code> </p>
-<p> <code>/*</code><br />
- <code> * Show standard test results</code><br />
- <code> */.</code><br />
+<p> <code>/*</code><br/>
+ <code> * Show standard test results</code><br/>
+ <code> */.</code><br/>
  <code>show_test_results(&amp;user_template_dtest,user_template_test);</code> </p>
 <p> <code>}</code> </p>
 <h2>DESCRIPTION</h2>

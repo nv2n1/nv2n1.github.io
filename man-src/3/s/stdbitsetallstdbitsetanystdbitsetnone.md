@@ -9,20 +9,20 @@ description: "std::bitset<N>::all,std::bitset<N>::any,std::bitset<N>::none – s
 
 <p>std::bitset&lt;N&gt;::all,std::bitset&lt;N&gt;::any,std::bitset&lt;N&gt;::none &#8211; std::bitset&lt;N&gt;::all,std::bitset&lt;N&gt;::any,std::bitset&lt;N&gt;::none</p>
 <h2>Synopsis</h2>
-<p>bool all() const noexcept; <code>(1)</code> <i>(since C++11)</i><br />
-bool any() const; <i>(until C++11)</i><br />
-bool any() const noexcept; <code>(2)</code> <i>(since C++11)</i><br />
-bool none() const; <code>(3)</code> <i>(until C++11)</i><br />
-bool none() const noexcept; <i>(since C++11)</i><br />
-Checks if all, any or none of the bits are set to true.<br />
-1) Checks if all bits are set to true<br />
-2) Checks if any bits are set to true<br />
+<p>bool all() const noexcept; <code>(1)</code> <i>(since C++11)</i><br/>
+bool any() const; <i>(until C++11)</i><br/>
+bool any() const noexcept; <code>(2)</code> <i>(since C++11)</i><br/>
+bool none() const; <code>(3)</code> <i>(until C++11)</i><br/>
+bool none() const noexcept; <i>(since C++11)</i><br/>
+Checks if all, any or none of the bits are set to true.<br/>
+1) Checks if all bits are set to true<br/>
+2) Checks if any bits are set to true<br/>
 3) Checks if none of the bits are set to true </p>
 <h2>Parameters</h2>
 <p><i>(none)</i></p>
 <h2>Return value</h2>
-<p>1) true if all bits are set to true, otherwise false<br />
-2) true if any of the bits are set to true, otherwise false<br />
+<p>1) true if all bits are set to true, otherwise false<br/>
+2) true if any of the bits are set to true, otherwise false<br/>
 3) true if none of the bits are set to true, otherwise false </p>
 <h2>Example</h2>
 <p>// Run this code </p>
@@ -47,7 +47,7 @@ int main()
 }
 </code></pre>
 <h2>Output:</h2>
-<p>&nbsp;<wbr>&nbsp;bitset all any none<br />
-&nbsp;<wbr>&nbsp;0000 0 0 1<br />
-&nbsp;<wbr>&nbsp;0101 0 1 0<br />
+<p>&nbsp;<wbr>&nbsp;bitset all any none<br/>
+&nbsp;<wbr>&nbsp;0000 0 0 1<br/>
+&nbsp;<wbr>&nbsp;0101 0 1 0<br/>
 &nbsp;<wbr>&nbsp;1111 1 1 0</p>

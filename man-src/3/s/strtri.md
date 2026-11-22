@@ -11,7 +11,7 @@ description: "strtri.f –"
 <p> strtri.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>strtri</code> (UPLO, DIAG, N, A, LDA, INFO)<br />
+<p> subroutine <code>strtri</code> (UPLO, DIAG, N, A, LDA, INFO)<br/>
  <i></i><code>STRTRI</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine strtri (characterUPLO, characterDIAG, integerN, real, dimension( lda, * )A, integerLDA, integerINFO)</h3>

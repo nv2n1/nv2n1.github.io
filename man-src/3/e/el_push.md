@@ -13,49 +13,49 @@ description: "editline, el_init, el_end, el_reset, el_gets, el_getc, el_push, el
 <p> Command Line Editor Library (libedit, -ledit)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/histedit.h">histedit.h</a>&gt;</code> </p>
-<p> <i>EditLine *</i><br />
+<p> <i>EditLine *</i><br/>
  <code>el_init</code>(<i>const char *prog</i>, <i>FILE *fin</i>, <i>FILE *fout</i>, <i>FILE *ferr</i>); </p>
-<p> <i>void</i><br />
+<p> <i>void</i><br/>
  <code>el_end</code>(<i>EditLine *e</i>); </p>
-<p> <i>void</i><br />
+<p> <i>void</i><br/>
  <code>el_reset</code>(<i>EditLine *e</i>); </p>
-<p> <i>const char *</i><br />
+<p> <i>const char *</i><br/>
  <code>el_gets</code>(<i>EditLine *e</i>, <i>int *count</i>); </p>
-<p> <i>int</i><br />
+<p> <i>int</i><br/>
  <code>el_getc</code>(<i>EditLine *e</i>, <i>char *ch</i>); </p>
-<p> <i>void</i><br />
+<p> <i>void</i><br/>
  <code>el_push</code>(<i>EditLine *e</i>, <i>const char *str</i>); </p>
-<p> <i>int</i><br />
+<p> <i>int</i><br/>
  <code>el_parse</code>(<i>EditLine *e</i>, <i>int argc</i>, <i>const char *argv[]</i>); </p>
-<p> <i>int</i><br />
+<p> <i>int</i><br/>
  <code>el_set</code>(<i>EditLine *e</i>, <i>int op</i>, <i>&#8230;</i>); </p>
-<p> <i>int</i><br />
+<p> <i>int</i><br/>
  <code>el_get</code>(<i>EditLine *e</i>, <i>int op</i>, <i>&#8230;</i>); </p>
-<p> <i>int</i><br />
+<p> <i>int</i><br/>
  <code>el_source</code>(<i>EditLine *e</i>, <i>const char *file</i>); </p>
-<p> <i>void</i><br />
+<p> <i>void</i><br/>
  <code>el_resize</code>(<i>EditLine *e</i>); </p>
-<p> <i>const LineInfo *</i><br />
+<p> <i>const LineInfo *</i><br/>
  <code>el_line</code>(<i>EditLine *e</i>); </p>
-<p> <i>int</i><br />
+<p> <i>int</i><br/>
  <code>el_insertstr</code>(<i>EditLine *e</i>, <i>const char *str</i>); </p>
-<p> <i>void</i><br />
+<p> <i>void</i><br/>
  <code>el_deletestr</code>(<i>EditLine *e</i>, <i>int count</i>); </p>
-<p> <i>History *</i><br />
+<p> <i>History *</i><br/>
  <code>history_init</code>(); </p>
-<p> <i>void</i><br />
+<p> <i>void</i><br/>
  <code>history_end</code>(<i>History *h</i>); </p>
-<p> <i>int</i><br />
+<p> <i>int</i><br/>
  <code>history</code>(<i>History *h</i>, <i>HistEvent *ev</i>, <i>int op</i>, <i>&#8230;</i>); </p>
-<p> <i>Tokenizer *</i><br />
+<p> <i>Tokenizer *</i><br/>
  <code>tok_init</code>(<i>const char *IFS</i>); </p>
-<p> <i>void</i><br />
+<p> <i>void</i><br/>
  <code>tok_end</code>(<i>Tokenizer *t</i>); </p>
-<p> <i>void</i><br />
+<p> <i>void</i><br/>
  <code>tok_reset</code>(<i>Tokenizer *t</i>); </p>
-<p> <i>int</i><br />
+<p> <i>int</i><br/>
  <code>tok_line</code>(<i>Tokenizer *t</i>, <i>const LineInfo *li</i>, <i>int *argc</i>, <i>const char **argv[]</i>, <i>int *cursorc</i>, <i>int *cursoro</i>); </p>
-<p> <i>int</i><br />
+<p> <i>int</i><br/>
  <code>tok_str</code>(<i>Tokenizer *t</i>, <i>const char *str</i>, <i>int *argc</i>, <i>const char **argv[]</i>);</p>
 <h2>DESCRIPTION</h2>
 <p> The <code>editline</code> library provides generic line editing, history and tokenization functions, similar to those found in <code><a href="/docs/linux/man/1-sh/">sh</a></code>(1). </p>
@@ -178,7 +178,7 @@ description: "editline, el_init, el_end, el_reset, el_gets, el_getc, el_push, el
 <p> typedef struct lineinfo { </p>
 <p>&nbsp;<wbr>const char&nbsp;<wbr>*buffer;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>address of buffer&nbsp;<wbr>*/ </p>
 <p>&nbsp;<wbr>const char&nbsp;<wbr>*cursor;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>address of cursor&nbsp;<wbr>*/ </p>
-<p>&nbsp;<wbr>const char&nbsp;<wbr>*lastchar;&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>address of last character&nbsp;<wbr>*/<br />
+<p>&nbsp;<wbr>const char&nbsp;<wbr>*lastchar;&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>address of last character&nbsp;<wbr>*/<br/>
  } LineInfo; </p>
 <p> <i>buffer </i> is not NUL terminated. This function may be called after <code>el_gets</code>() to obtain the <i>LineInfo </i> structure pertaining to line returned by that function, and from within user defined functions added with EL_ADDFN .</p>
 <dt><code>el_insertstr</code>()</dt>

@@ -10,7 +10,7 @@ description: "pqlist – List available NetWare print queues"
 
 <p> pqlist &#8211; List available NetWare print queues</p>
 <h2>SYNOPSIS</h2>
-<p> <code>pqlist</code> [ <code>-h</code> ] [ <code>-S</code> <i>server</i> ] [ <code>-U</code> <i>user name</i> ] [ <code>-P</code> <i>password</i><br />
+<p> <code>pqlist</code> [ <code>-h</code> ] [ <code>-S</code> <i>server</i> ] [ <code>-U</code> <i>user name</i> ] [ <code>-P</code> <i>password</i><br/>
 &nbsp;<wbr>| <code>-n</code> ] [ <code>-C</code> ] [ <i>pattern</i> ]</p>
 <h2>DESCRIPTION</h2>
 <p> <code>pqlist</code> lists all the NetWare print queues available to you on some server. If you are already connected to some server, this one is used. </p>

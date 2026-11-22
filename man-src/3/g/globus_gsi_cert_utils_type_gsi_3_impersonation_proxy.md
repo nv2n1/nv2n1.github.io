@@ -9,7 +9,7 @@ description: "Cert Utils Constants –"
 
 <p>Cert Utils Constants &#8211; </p>
 <h3>Typedefs</h3>
-<p>typedef enum<br />
+<p>typedef enum<br/>
  <code>globus_gsi_cert_utils_cert_type_e</code> <code>globus_gsi_cert_utils_cert_type_t</code>&quot; </p>
 <h3>Enumerations</h3>
 <p>enum <code>globus_gsi_cert_utils_error_t</code> { <code>GLOBUS_GSI_CERT_UTILS_ERROR_SUCCESS</code> = 0, <code>GLOBUS_GSI_CERT_UTILS_ERROR_GETTING_NAME_ENTRY_OF_SUBJECT</code> = 1, <code>GLOBUS_GSI_CERT_UTILS_ERROR_COPYING_SUBJECT</code> = 2, <code>GLOBUS_GSI_CERT_UTILS_ERROR_GETTING_CN_ENTRY</code> = 3, <code>GLOBUS_GSI_CERT_UTILS_ERROR_ADDING_CN_TO_SUBJECT</code> = 4, <code>GLOBUS_GSI_CERT_UTILS_ERROR_OUT_OF_MEMORY</code> = 5, <code>GLOBUS_GSI_CERT_UTILS_ERROR_UNEXPECTED_FORMAT</code> = 6, <code>GLOBUS_GSI_CERT_UTILS_ERROR_NON_COMPLIANT_PROXY</code> = 7, <code>GLOBUS_GSI_CERT_UTILS_ERROR_DETERMINING_CERT_TYPE</code> = 8, <code>GLOBUS_GSI_CERT_UTILS_ERROR_LAST</code> = 9 } </p>

@@ -861,28 +861,28 @@ zstyle ':completion:*' matcher - list '' 'm:{a-zA-Z}={A-Za-z}'
 <dl>
 <dt>
 </dt><dd>
-zstyle &#8216;:completion:*&#8217; matcher &#8211; list \<br />
+zstyle &#8216;:completion:*&#8217; matcher &#8211; list \<br/>
        &#8221; &#8216;+m:{a-z}={A-Z}&#8217; &#8216;+m:{A-Z}={a-z}&#8217;
 </dd></dl>
 <p> It is possible to create match specifications valid for particular completers by using the third field of the context. This applies only to completers that override the global matcher-list, which as of this writing includes only <code>_prefix</code> and <code>_ignored</code>. For example, to use the completers <code>_complete</code> and <code>_prefix</code> but allow case-insensitive completion only with <code>_complete</code>: </p>
 <dl>
 <dt>
 </dt><dd>
-zstyle &#8216;:completion:*&#8217; completer _complete _prefix<br />
-        zstyle &#8216;:completion:*:complete:*:*:*&#8217; matcher &#8211;<br />
-    list \<br />
+zstyle &#8216;:completion:*&#8217; completer _complete _prefix<br/>
+        zstyle &#8216;:completion:*:complete:*:*:*&#8217; matcher &#8211;<br/>
+    list \<br/>
        &#8221; &#8216;m:{a-zA-Z}={A-Za-z}&#8217;
 </dd></dl>
 <p> User-defined names, as explained for the <code>completer</code> style, are available. This makes it possible to try the same completer more than once with different match specifications each time. For example, to try normal completion without a match specification, then normal completion with case-insensitive matching, then correction, and finally partial-word completion: </p>
 <dl>
 <dt>
 </dt><dd>
-zstyle &#8216;:completion:*&#8217; completer \<br />
-    _complete _correct _complete : foo<br />
-                                       zstyle &#8216;:completion:*:complete:*:*:*&#8217; matcher &#8211;<br />
-                                   list \<br />
-    &#8221; &#8216;m:{a-zA-Z}={A-Za-z}&#8217; zstyle &#8216;:completion:*:foo:*:*:*&#8217; matcher &#8211;<br />
-                                   list \<br />
+zstyle &#8216;:completion:*&#8217; completer \<br/>
+    _complete _correct _complete : foo<br/>
+                                       zstyle &#8216;:completion:*:complete:*:*:*&#8217; matcher &#8211;<br/>
+                                   list \<br/>
+    &#8221; &#8216;m:{a-zA-Z}={A-Za-z}&#8217; zstyle &#8216;:completion:*:foo:*:*:*&#8217; matcher &#8211;<br/>
+                                   list \<br/>
     &#8216;m:{a-zA-Z}={A-Za-z} r:|[-_./]=* r:|=*&#8217;
 </dd></dl>
 <p> If the style is unset in any context no match specification is applied. Note also that some completers such as <code>_correct</code> and <code>_approximate</code> do not use the match specifications at all, though these completers will only ever be called once even if the <code>matcher-list</code> contains more than one element. </p>
@@ -1059,7 +1059,7 @@ zstyle &#8216;:completion:*&#8217; completer \<br />
 </dd><dl>
 <dt>
 </dt><dd>
-zstyle &#8211; e &#8216;:completion:*&#8217; special &#8211; dirs \<br />
+zstyle &#8211; e &#8216;:completion:*&#8217; special &#8211; dirs \<br/>
    &#8216;[[ $PREFIX = (../)#(|.|..) ]] &amp;&amp; reply=(..)&#8217;
 </dd></dl>
 </dl>
@@ -1130,11 +1130,11 @@ zstyle ':completion:*:functions-non-comp' \
 <dl>
 <dt>
 </dt><dd>
-zstyle &#8216;:completion:*&#8217; tag &#8211; order \<br />
-    &#8216;options:-long:long\ options options : -short : short\ options options : -single &#8211;<br />
-                                                                             letter : single\ letter\ options&#8217; zstyle &#8216;:completion:*:options-long&#8217; \<br />
-     ignored &#8211; patterns &#8216;[-+](|-|[^-]*)&#8217; zstyle &#8216;:completion:*:options-short&#8217; \<br />
-     ignored &#8211; patterns &#8216;&#8211;*&#8217; &#8216;[-+]?&#8217; zstyle &#8216;:completion:*:options-single-letter&#8217; \<br />
+zstyle &#8216;:completion:*&#8217; tag &#8211; order \<br/>
+    &#8216;options:-long:long\ options options : -short : short\ options options : -single &#8211;<br/>
+                                                                             letter : single\ letter\ options&#8217; zstyle &#8216;:completion:*:options-long&#8217; \<br/>
+     ignored &#8211; patterns &#8216;[-+](|-|[^-]*)&#8217; zstyle &#8216;:completion:*:options-short&#8217; \<br/>
+     ignored &#8211; patterns &#8216;&#8211;*&#8217; &#8216;[-+]?&#8217; zstyle &#8216;:completion:*:options-single-letter&#8217; \<br/>
      ignored &#8211; patterns &#8216;???*&#8217;
 </dd></dl>
 <p> With the <code>group-names</code> style set, options beginning with `<code>&#8211;</code><code>&#8211;</code>&#8216;, options beginning with a single `<code>&#8211;</code>&#8216; or `<code>+</code>&#8216; but containing multiple characters, and single-letter options will be displayed in separate groups with different descriptions. </p>
@@ -1149,9 +1149,9 @@ zstyle &#8216;:completion:*:*:foo:*:*&#8217; tag &#8211; order &#8216;*&#8217; &
 <dl>
 <dt>
 </dt><dd>
-zstyle &#8211; e &#8216;*:-command-:*&#8217; tag &#8211; order &#8216; if[[-n $PREFIX$SUFFIX]];<br />
-then<br />
-    reply = () else reply = (-)<br />
+zstyle &#8211; e &#8216;*:-command-:*&#8217; tag &#8211; order &#8216; if[[-n $PREFIX$SUFFIX]];<br/>
+then<br/>
+    reply = () else reply = (-)<br/>
         fi&#8217;
 </dd></dl>
 <p> Completion in command position will be attempted only if the string typed so far is not empty. This is tested using the <code>PREFIX</code> special parameter; see zshcompwid for a description of parameters which are special inside completion widgets. Setting <code>reply</code> to an empty array provides the default behaviour of trying all tags at once; setting it to an array containing only a hyphen disables the use of all tags and hence of all completions. </p>
@@ -1258,9 +1258,9 @@ zstyle ':completion:all-matches:*' insert true</code>
 <dl>
 <dt>
 </dt><dd>
-zstyle &#8211; e &#8216;:completion:*&#8217; completer &#8216; if [[$_last_try != &#8220;$HISTNO$BUFFER$CURSOR&#8221;]];<br />
-then<br />
-    _last_try = &#8220;$HISTNO$BUFFER$CURSOR&#8221; reply = (_complete _match _prefix) else reply = (_ignored _correct _approximate)<br />
+zstyle &#8211; e &#8216;:completion:*&#8217; completer &#8216; if [[$_last_try != &#8220;$HISTNO$BUFFER$CURSOR&#8221;]];<br/>
+then<br/>
+    _last_try = &#8220;$HISTNO$BUFFER$CURSOR&#8221; reply = (_complete _match _prefix) else reply = (_ignored _correct _approximate)<br/>
         fi&#8217;
 </dd></dl>
 <p> This uses the <code>HISTNO</code> parameter and the <code>BUFFER</code> and <code>CURSOR</code> special parameters that are available inside zle and completion widgets to find out if the command line hasn&#8217;t changed since the last time completion was tried. Only then are the <code>_ignored</code>, <code>_correct</code> and <code>_approximate</code> completers called.</dl>
@@ -1760,21 +1760,21 @@ typeset -A opt_args</code>
 <dl>
 <dt>
 </dt><dd>
-_arguments \<br />
-    &#8211;<br />
-    a &#8211; b \<br />
+_arguments \<br/>
+    &#8211;<br/>
+    a &#8211; b \<br/>
   + &#8216;(operation)&#8217; \ </dd>
-<p>{<br />
-    -c, &#8211;compress<br />
-}<br />
+<p>{<br/>
+    -c, &#8211;compress<br/>
+}<br/>
 &#8216;[compress]&#8217; \ </p>
-<p>{<br />
-    -d, &#8211;decompress<br />
-}<br />
+<p>{<br/>
+    -d, &#8211;decompress<br/>
+}<br/>
 &#8216;[decompress]&#8217; \ </p>
-<p>{<br />
-    -l, &#8211;list<br />
-}<br />
+<p>{<br/>
+    -l, &#8211;list<br/>
+}<br/>
 &#8216;[list]&#8217;
 </dl>
 <p> If an option in a group appears on the command line, it is stored in the associative array `<code>opt_args</code>&#8216; with &#8216;<i>group</i><code>&#8211;</code><i>option</i>&#8216; as a key. In the example above, a key `<code>operation&#8211;c</code>&#8216; is used if the option `<code>-c</code>&#8216; is present on the command line. </p>
@@ -1804,9 +1804,9 @@ _arguments \<br />
 <dl>
 <dt>
 </dt><dd>
-_arguments&#8211; &#8216;*\*:toggle:(yes no)&#8217; \<br />
-              &#8216;*=FILE*:file:_files&#8217; \<br />
-              &#8216;*=DIR*:directory:_files -/&#8217; \<br />
+_arguments&#8211; &#8216;*\*:toggle:(yes no)&#8217; \<br/>
+              &#8216;*=FILE*:file:_files&#8217; \<br/>
+              &#8216;*=DIR*:directory:_files -/&#8217; \<br/>
               &#8216;*=PATH*:directory:_files -/&#8217;
 </dd></dl>
 <p> Here, `<code>yes</code>&#8216; and `<code>no</code>&#8216; will be completed as the argument of options whose description ends in a star; file names will be completed for options that contain the substring `<code>=FILE</code>&#8216; in the description; and directories will be completed for options whose description contains `<code>=DIR</code>&#8216; or `<code>=PATH</code>&#8216;. The last three are in fact the default and so need not be given explicitly, although it is possible to override the use of these patterns. A typical help text which uses this feature is: </p>
@@ -1944,9 +1944,9 @@ _arguments&#8211; &#8216;*\*:toggle:(yes no)&#8217; \<br />
 </dd><dl>
 <dt>
 </dt><dd>
-local expl<br />
-        _description files expl file<br />
-            compadd &#8220;$expl[@]&#8221; &#8211;<br />
+local expl<br/>
+        _description files expl file<br/>
+            compadd &#8220;$expl[@]&#8221; &#8211;<br/>
     &#8220;$files[@]&#8221;
 </dd></dl>
 <p> Note the use of the parameter <code>expl</code>, the hyphen, and the list of matches. Almost all calls to <code>compadd</code> within the completion system use a similar format; this ensures that user-specified styles are correctly passed down to the builtins which implement the internals of completion.</dl>
@@ -2040,9 +2040,9 @@ local expl<br />
 </dd><dl>
 <dt>
 </dt><dd>
-local expl ret = 1 &#8230; if _requested foo;<br />
-then&#8230; while _next_label foo expl &#8216;&#8230;&#8217;;<br />
-do<br />
+local expl ret = 1 &#8230; if _requested foo;<br/>
+then&#8230; while _next_label foo expl &#8216;&#8230;&#8217;;<br/>
+do<br/>
 compadd &#8220;$expl[@]&#8221; &#8230; &amp;&amp;ret = 0 done&#8230; fi return ret
 </dd></dl>
 </dl>

@@ -11,21 +11,21 @@ description: "sa – summarizes accounting information"
 <h2>Synopsis</h2>
 <dl>
 <dt><code>sa</code></dt>
-<dd>[ <code>-a</code> | <code>&#8211;list-all-names</code> ]<br />
- [ <code>-b</code> | <code>&#8211;sort-sys-user-div-calls </code> ]<br />
- [ <code>-c</code> | <code>&#8211;percentages</code> ] [ <code>-d</code> | <code>&#8211;sort-avio</code> ]<br />
- [ <code>-D</code> | <code>&#8211;sort-tio</code> ] [ <code>-f</code> | <code>&#8211;not-interactive</code> ]<br />
- [ <code>-i</code> | <code>&#8211;dont-read-summary-files</code> ]<br />
- [ <code>-j</code> | <code>&#8211;print-seconds</code> ] [ <code>-k</code> | <code>&#8211;sort-cpu-avmem</code> ]<br />
- [ <code>-K</code> | <code>&#8211;sort-ksec</code> ] [ <code>-l</code> | <code>&#8211;separate-times</code> ]<br />
- [ <code>-m</code> | <code>&#8211;user-summary</code> ] [ <code>-n</code> | <code>&#8211;sort-num-calls</code> ]<br />
- [ <code>-p</code> | <code>&#8211;show-paging</code> ] [ <code>-P</code> | <code>&#8211;show-paging-avg</code> ]<br />
- [ <code>-r</code> | <code>&#8211;reverse-sort</code> ] [ <code>-s</code> | <code>&#8211;merge</code> ]<br />
- [ <code>-t</code> | <code>&#8211;print-ratio</code> ] [ <code>-u</code> | <code>&#8211;print-users</code> ]<br />
- [ <code>-v</code><i> num</i> | <code>&#8211;threshold</code><i> num</i> ] [ <code>&#8211;sort-real-time</code> ]<br />
- [ <code>&#8211;debug</code> ] [ <code>-V</code> | <code>&#8211;version</code> ] [ <code>-h</code> | <code>&#8211;help </code> ]<br />
- [ <code>&#8211;other-usracct-file </code><i>filename</i> ] [ <code>&#8211;ahz</code><i> hz</i> ]<br />
- [ <code>&#8211;other-savacct-file </code><i>filename</i> ]<br />
+<dd>[ <code>-a</code> | <code>&#8211;list-all-names</code> ]<br/>
+ [ <code>-b</code> | <code>&#8211;sort-sys-user-div-calls </code> ]<br/>
+ [ <code>-c</code> | <code>&#8211;percentages</code> ] [ <code>-d</code> | <code>&#8211;sort-avio</code> ]<br/>
+ [ <code>-D</code> | <code>&#8211;sort-tio</code> ] [ <code>-f</code> | <code>&#8211;not-interactive</code> ]<br/>
+ [ <code>-i</code> | <code>&#8211;dont-read-summary-files</code> ]<br/>
+ [ <code>-j</code> | <code>&#8211;print-seconds</code> ] [ <code>-k</code> | <code>&#8211;sort-cpu-avmem</code> ]<br/>
+ [ <code>-K</code> | <code>&#8211;sort-ksec</code> ] [ <code>-l</code> | <code>&#8211;separate-times</code> ]<br/>
+ [ <code>-m</code> | <code>&#8211;user-summary</code> ] [ <code>-n</code> | <code>&#8211;sort-num-calls</code> ]<br/>
+ [ <code>-p</code> | <code>&#8211;show-paging</code> ] [ <code>-P</code> | <code>&#8211;show-paging-avg</code> ]<br/>
+ [ <code>-r</code> | <code>&#8211;reverse-sort</code> ] [ <code>-s</code> | <code>&#8211;merge</code> ]<br/>
+ [ <code>-t</code> | <code>&#8211;print-ratio</code> ] [ <code>-u</code> | <code>&#8211;print-users</code> ]<br/>
+ [ <code>-v</code><i> num</i> | <code>&#8211;threshold</code><i> num</i> ] [ <code>&#8211;sort-real-time</code> ]<br/>
+ [ <code>&#8211;debug</code> ] [ <code>-V</code> | <code>&#8211;version</code> ] [ <code>-h</code> | <code>&#8211;help </code> ]<br/>
+ [ <code>&#8211;other-usracct-file </code><i>filename</i> ] [ <code>&#8211;ahz</code><i> hz</i> ]<br/>
+ [ <code>&#8211;other-savacct-file </code><i>filename</i> ]<br/>
  [ [ <code>&#8211;other-acct-file </code> ] <i>filename</i> ]</dd></dl>
 <h2>Description</h2>
 <p><code>sa</code> summarizes information about previously executed commands as recorded in the <i>acct</i> file. In addition, it condenses this data into a summary file named <i>savacct</i> which contains the number of times the command was called and the system resources used. The information can also be summarized on a per-user basis; <code>sa</code> will save this information into a file named <i>usracct.</i> </p>

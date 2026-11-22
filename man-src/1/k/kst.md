@@ -104,7 +104,7 @@ description: "kst – A plotting and data viewing program"
 <dl>
 <dt>
 </dt><dd>
-<p> <code> kst -p 2 /usr/share/apps/kst/tutorial/gytodata.dat -r 10 -l 14 </code><br />
+<p> <code> kst -p 2 /usr/share/apps/kst/tutorial/gytodata.dat -r 10 -l 14 </code><br/>
 &nbsp;<wbr> </p>
 </dd></dl>
 <p> (Using optional HEALPix Data Source) To plot the first 3 maps in a HEALPix FITS file in a 2&#215;2 grid: </p>

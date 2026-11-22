@@ -89,16 +89,16 @@ description: "lvmreport — LVM reporting and related features"
 <dd>
 </dd><dl>
 <dt>&#8211;</dt>
-<dd>&#8211;options|-o FieldSet<br />
+<dd>&#8211;options|-o FieldSet<br/>
  Field set to use. See <code>main report specifics</code> and <code>log report specifics</code> for information about field sets configured with global configuratin settings that this option overrides.</dd>
 <dt>&#8211;</dt>
-<dd>&#8211;options|-o+ FieldSet<br />
+<dd>&#8211;options|-o+ FieldSet<br/>
  Fields to include to current field set. See <code>main report specifics</code>&nbsp;and <code>log report specifics</code> for information about field sets configured with global configuration settings that this option extends.</dd>
 <dt>&#8211;</dt>
-<dd>&#8211;options|-o- FieldSet<br />
+<dd>&#8211;options|-o- FieldSet<br/>
  Fields to exclude from current field set. See <code>main report specifics</code> and <code>log report specifics</code> for information about field sets configured with global configuration settings that this option reduces.</dd>
 <dt>&#8211;</dt>
-<dd>&#8211;options|-o# FieldSet<br />
+<dd>&#8211;options|-o# FieldSet<br/>
  Compaction of unused fields. Overrides report/compact_output_cols configuration setting.</dd></dl>
 </dl>
 <dt>&bull;</dt>
@@ -107,10 +107,10 @@ description: "lvmreport — LVM reporting and related features"
 <dd>
 </dd><dl>
 <dt>&#8211;</dt>
-<dd>&#8211;sort|-O+ FieldSet<br />
+<dd>&#8211;sort|-O+ FieldSet<br/>
  Fields to sort by in ascending order. See <code>main report specifics</code> and <code>log report specifics</code> for information about field sets configured with global configuration settings that this option overrides.</dd>
 <dt>&#8211;</dt>
-<dd>&#8211;sort|-O- FieldSet<br />
+<dd>&#8211;sort|-O- FieldSet<br/>
  Fields to sort by in descending order. See <code>main report specifics</code> and <code>log report specifics</code> for information about fields sets configured with global configuration settings that this options overrides.</dd></dl>
 </dl>
 <dt>&bull;</dt>
@@ -119,7 +119,7 @@ description: "lvmreport — LVM reporting and related features"
 <dd>
 </dd><dl>
 <dt>&#8211;</dt>
-<dd>&#8211;select|-S Selection<br />
+<dd>&#8211;select|-S Selection<br/>
  Define selection criteria for report output. For <code>log report</code>, this also overrides log/command_log_selection configuration setting, see also <code>log report specifics</code>.</dd></dl>
 </dl>
 <dt>&bull;</dt>
@@ -128,34 +128,34 @@ description: "lvmreport — LVM reporting and related features"
 <dd>
 </dd><dl>
 <dt>&#8211;</dt>
-<dd>&#8211;reportformat<br />
+<dd>&#8211;reportformat<br/>
  Overrides report/output_format configuration setting.</dd>
 <dt>&#8211;</dt>
-<dd>&#8211;aligned<br />
+<dd>&#8211;aligned<br/>
  Overrides report/aligned configuration setting.</dd>
 <dt>&#8211;</dt>
-<dd>&#8211;binary<br />
+<dd>&#8211;binary<br/>
  Overrides report/binary_values_as_numeric configuration setting.</dd>
 <dt>&#8211;</dt>
-<dd>&#8211;nameprefixes<br />
+<dd>&#8211;nameprefixes<br/>
  Overrides report/prefixes configuration setting.</dd>
 <dt>&#8211;</dt>
-<dd>&#8211;noheadings<br />
+<dd>&#8211;noheadings<br/>
  Overrides report/noheadings configuration setting.</dd>
 <dt>&#8211;</dt>
-<dd>&#8211;nosuffix<br />
+<dd>&#8211;nosuffix<br/>
  Overrides global/suffix configuration setting.</dd>
 <dt>&#8211;</dt>
-<dd>&#8211;rows<br />
+<dd>&#8211;rows<br/>
  Overrides report/columns_as_rows configuration setting.</dd>
 <dt>&#8211;</dt>
-<dd>&#8211;separator<br />
+<dd>&#8211;separator<br/>
  Overrides report/separator configuration setting.</dd>
 <dt>&#8211;</dt>
-<dd>&#8211;units<br />
+<dd>&#8211;units<br/>
  Overrides global/units configuration setting.</dd>
 <dt>&#8211;</dt>
-<dd>&#8211;unquoted<br />
+<dd>&#8211;unquoted<br/>
  Overrides report/quoted configuration setting.</dd></dl>
 </dl>
 <dt>&bull;</dt>
@@ -164,13 +164,13 @@ description: "lvmreport — LVM reporting and related features"
 <dd>
 </dd><dl>
 <dt>&#8211;</dt>
-<dd>&#8211;configreport <code>ReportName</code><br />
+<dd>&#8211;configreport <code>ReportName</code><br/>
  This defines the <code>ReportName</code> for which any subsequent -o&#8211;columns, -O&#8211;sort or -S&#8211;select applies to. See also <code>main report specifics</code> and <code>log report specifics</code> for possible <code>ReportName</code> values.</dd>
 <dt>&#8211;</dt>
-<dd>&#8211;logonly<br />
+<dd>&#8211;logonly<br/>
  When an LVM command contains both <code>main report</code> and <code>log report</code>, this option suppresses the <code>main report</code> output and it causes the <code>log report</code> output to be displayed only.</dd>
 <dt>&#8211;</dt>
-<dd>&#8211;unbuffered<br />
+<dd>&#8211;unbuffered<br/>
  Overrides report/bufffered configuration setting.</dd></dl>
 </dl>
 </dl>
@@ -292,7 +292,7 @@ description: "lvmreport — LVM reporting and related features"
 </dl>
 </dl>
 <p> You always need to use <code>&#8211;configreport log</code> together with <code>-o&#8211;options, -O&#8211;sort or -S&#8211;selection</code> to override configuration settings directly on command line for <code>log report</code>. When compared to <code>main report</code>, in addition to usual configuration settings for report fields and sorting, the <code>log report</code> has also configuration option for selection &#8211; <code>report/command_log_selection</code>. This configuration setting is provided for convenience so it&#8217;s not necessary to use <code>-S&#8211;select</code> on command line each time an LVM command is executed and we need the same selection criteria to be applied for <code>log report</code>. Default selection criteria used for <code>log report</code> are <code>log/command_log_selection=&quot;!(log_type=status &amp;&amp; message=success)&quot;</code>. This means that, by default, <code>log report</code> doesn&#8217;t display status messages about successful operation and it displays only rows with error, warning, print-type messages and messages about failure states (for more information, see <code>log report content</code> below). </p>
-<p> <code>Log report coverage</code><br />
+<p> <code>Log report coverage</code><br/>
  Currently, when running LVM commands directly (not in LVM shell), the log report covers command&#8217;s <code>processing stage</code> which is the moment when LVM entities are iterated and processed one by one. It does not cover any command initialization nor command finalization stage. If there is any message issued out of log report&#8217;s coverage range, such message goes directly to output, bypassing the <code>log report</code>. By default, that is <code>standard error output</code> for error and warning messages and <code>standard output</code> for common print-like messages. </p>
 <p> When running LVM commands in <code>LVM shell</code>, the log report covers the whole LVM command&#8217;s execution, including command&#8217;s <code>processing</code> as well as <code>initialization</code> and <code>finalization stage</code>. So from this point of view, the log report coverage is complete for executed LVM commands. Note that there are still a few moments when LVM shell needs to initialize itself before it even enters the main loop in which it executes LVM commands. Also, there is a moment when <code>LVM shell</code> needs to prepare <code>log report</code> properly for next command executed in the shell and then, after the command&#8217;s run, the shell needs to display the log report for that recently executed command. If there is a failure or any other message issued during this time, the LVM will bypass <code>log report</code> and display messages on output directly. </p>
 <p> For these reasons and for completeness, it&#8217;s not possible to rely fully on <code>log report</code> as the only indicator of LVM command&#8217;s status and the only place where all messages issued during LVM command execution are collected. You always need to check whether the command has not failed out of log report&#8217;s range by checking the non-report output too. </p>
@@ -301,7 +301,7 @@ description: "lvmreport — LVM reporting and related features"
 <dl>
 <dd>LVM_OUT_FD=3 LVM_ERR_FD=4 LVM_REPORT_FD=5 &lt;lvm command&gt; 3&gt;out_file 4&gt;err_file 5&gt;report_file</dd></dl>
 <p> Where the &lt;lvm_command&gt; is either direct LVM command or LVM shell. You can collect all three types of output in particular files then. </p>
-<p> <code>Log report content</code><br />
+<p> <code>Log report content</code><br/>
  Each item in the log report consists of these set of fields providing various information: </p>
 <dl>
 <dd>
@@ -312,10 +312,10 @@ description: "lvmreport — LVM reporting and related features"
 <dd>
 </dd><dl>
 <dt>&#8211;</dt>
-<dd>log_seq_num<br />
+<dd>log_seq_num<br/>
  Item sequence number. The sequence number is unique for each log item and it increases in the order of the log items as they appeared during LVM command execution. </dd>
 <dt>&#8211;</dt>
-<dd>log_type<br />
+<dd>log_type<br/>
  Type of log for the item. Currently, these types are used:</dd>
 <dl>
 <dd>
@@ -326,7 +326,7 @@ description: "lvmreport — LVM reporting and related features"
 <dd><code>warn</code> for any warning message printed while the log is collected</dd></dl>
 </dl>
 <dt>&#8211;</dt>
-<dd>log_context<br />
+<dd>log_context<br/>
  Context of the log for the item. Currently, two contexts are identified:</dd>
 <dl>
 <dd>
@@ -342,7 +342,7 @@ description: "lvmreport — LVM reporting and related features"
 <dd>
 </dd><dl>
 <dt>&#8211;</dt>
-<dd>log_message<br />
+<dd>log_message<br/>
  Any message associated with current item. For <code>status</code> log type, the message contains either <code>success</code> or <code>failure</code> denoting current state. For <code>print</code>, <code>error</code> and <code>warn</code> log types, the message contains the exact message of that type that got issued.</dd></dl>
 </dl>
 <dt>&bull;</dt>
@@ -351,7 +351,7 @@ description: "lvmreport — LVM reporting and related features"
 <dd>
 </dd><dl>
 <dt>&#8211;</dt>
-<dd>log_object_type field<br />
+<dd>log_object_type field<br/>
  Type of the object processed. Currently, these object types are recognized:</dd>
 <dl>
 <dd>
@@ -364,16 +364,16 @@ description: "lvmreport — LVM reporting and related features"
 <dd><code>lv</code> for LV processing</dd></dl>
 </dl>
 <dt>&#8211;</dt>
-<dd>log_object_name<br />
+<dd>log_object_name<br/>
  Name of the object processed. </dd>
 <dt>&#8211;</dt>
-<dd>log_object_id<br />
+<dd>log_object_id<br/>
  ID of the object processed. </dd>
 <dt>&#8211;</dt>
-<dd>log_object_group<br />
+<dd>log_object_group<br/>
  A group where the processed object belongs to. </dd>
 <dt>&#8211;</dt>
-<dd>log_object_group_id<br />
+<dd>log_object_group_id<br/>
  An ID of a group where the processed object belongs to.</dd></dl>
 </dl>
 <dt>&bull;</dt>
@@ -382,10 +382,10 @@ description: "lvmreport — LVM reporting and related features"
 <dd>
 </dd><dl>
 <dt>&#8211;</dt>
-<dd>log_errno<br />
+<dd>log_errno<br/>
  Error number associated with current item.</dd>
 <dt>&#8211;</dt>
-<dd>log_ret_code<br />
+<dd>log_ret_code<br/>
  Rreturn code associated with current item.</dd></dl>
 </dl>
 </dl>
@@ -442,7 +442,7 @@ description: "lvmreport — LVM reporting and related features"
 </dl>
 </dl>
 </dl>
-<p> <code>Field types and selection operands</code><br />
+<p> <code>Field types and selection operands</code><br/>
  Field type restricts the set of operators and values that you may use with the field when defining selection criteria. You can see field type for each field if you run <code>&lt;lvm command&gt; -S help</code> where you can find the type name enclosed in square brackets. Currently, LVM recognizes these field types in reports: </p>
 <dl>
 <dd>
@@ -557,11 +557,11 @@ description: "lvmreport — LVM reporting and related features"
 <dd>
 </dd><dl>
 <dd><code>STATEMENT</code> = <code>column</code> cmp_op <code>VALUE</code> | <code>STATEMENT</code> log_op <code>STATEMENT</code> | <code>(STATEMENT)</code> | <code>!(STATEMENT)</code></dd>
-<dd><code>VALUE</code> = <code>[VALUE</code> log_op <code>VALUE]</code><br />
+<dd><code>VALUE</code> = <code>[VALUE</code> log_op <code>VALUE]</code><br/>
  For list-based types: string list. Matches strictly. The log_op must always be of one type within the whole list value.</dd>
-<dd><code>VALUE</code> = <code>{VALUE</code> log_op <code>VALUE}</code><br />
+<dd><code>VALUE</code> = <code>{VALUE</code> log_op <code>VALUE}</code><br/>
  For list-based types: string list. Matches a subset. The log_op must always be of one type within the whole list value.</dd>
-<dd><code>VALUE</code> = <code>value</code><br />
+<dd><code>VALUE</code> = <code>value</code><br/>
  For scalar types: number, size, percent, string (or string regex).</dd></dl>
 </dl>
 <h2>Examples</h2>

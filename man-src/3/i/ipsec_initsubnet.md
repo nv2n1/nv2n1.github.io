@@ -11,13 +11,13 @@ description: "ipsec_initsubnet, ipsec_addrtosubnet, ipsec_subnettypeof, ipsec_ma
 <p> ipsec_initsubnet, ipsec_addrtosubnet, ipsec_subnettypeof, ipsec_masktocount, ipsec_networkof, ipsec_maskof &#8211; initialize an ip_subnet, initialize a singleton ip_subnet, get address type of an ip_subnet, convert subnet mask to bit count, get base address of an ip_subnet, get subnet mask of an ip_subnet</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libreswan.h&gt;</code> </p>
-<p> <code>const char *initsubnet(const ip_address *addr,</code><br />
- &nbsp;<wbr> <code>int maskbits, int clash, ip_subnet *dst);</code><br />
- <code>const char *addrtosubnet(const ip_address *addr,</code><br />
+<p> <code>const char *initsubnet(const ip_address *addr,</code><br/>
+ &nbsp;<wbr> <code>int maskbits, int clash, ip_subnet *dst);</code><br/>
+ <code>const char *addrtosubnet(const ip_address *addr,</code><br/>
  &nbsp;<wbr> <code>ip_subnet *dst);</code> </p>
-<p> <code>int subnettypeof(const ip_subnet *src);</code><br />
- <code>int masktocount(const ip_address *src);</code><br />
- <code>void networkof(const ip_subnet *src, ip_address *dst);</code><br />
+<p> <code>int subnettypeof(const ip_subnet *src);</code><br/>
+ <code>int masktocount(const ip_address *src);</code><br/>
+ <code>void networkof(const ip_subnet *src, ip_address *dst);</code><br/>
  <code>void maskof(const ip_subnet *src, ip_address *dst);</code></p>
 <h2>DESCRIPTION</h2>
 <p> The <code>&lt;libreswan.h&gt;</code> library uses an internal type <i>ip_subnet</i> to contain a description of an IP subnet (base address plus mask). These functions provide basic tools for creating and examining this type. </p>

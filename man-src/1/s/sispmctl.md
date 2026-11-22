@@ -53,10 +53,10 @@ description: "sispmctl – Gembird Silver Shield PM ConTroL program"
 <dt>-a</dt>
 <dd> get plannification for given outlet</dd>
 <dt>-A</dt>
-<dd> set plannification for given outlet<br />
-&nbsp;<wbr>&#8211;Aat&nbsp;<wbr>&quot;date&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; sets an event time as a date&nbsp;<wbr>&#8216;%Y-%m-%d&nbsp;<wbr>%H:%M&#8217;<br />
-&nbsp;<wbr>&#8211;Aafter N&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; sets an event time as N minutes after the previous one<br />
-&nbsp;<wbr>&#8211;Ado&nbsp;<wbr>&lt;on|off&gt;&nbsp;<wbr>&#8211; sets the current event&#8217;s action<br />
+<dd> set plannification for given outlet<br/>
+&nbsp;<wbr>&#8211;Aat&nbsp;<wbr>&quot;date&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; sets an event time as a date&nbsp;<wbr>&#8216;%Y-%m-%d&nbsp;<wbr>%H:%M&#8217;<br/>
+&nbsp;<wbr>&#8211;Aafter N&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; sets an event time as N minutes after the previous one<br/>
+&nbsp;<wbr>&#8211;Ado&nbsp;<wbr>&lt;on|off&gt;&nbsp;<wbr>&#8211; sets the current event&#8217;s action<br/>
 &nbsp;<wbr>&#8211;Aloop N&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; loops to 1st event&#8217;s action after N minutes</dd>
 <dt>-v</dt>
 <dd> print version &amp; copyright </dd>

@@ -17,19 +17,19 @@ description: "ppmshadow – add simulated shadows to a portable pixmap image"
 <dl>
 <dt><code>-b</code><i> blur_size</i></dt>
 <dd>
-<p> Sets the distance of the light source from the image. Larger values move the light source closer, casting a more diffuse shadow, while smaller settings move the light further away, yielding a sharper shadow. <i>blur_size</i> defaults to 11 pixels.<br />
+<p> Sets the distance of the light source from the image. Larger values move the light source closer, casting a more diffuse shadow, while smaller settings move the light further away, yielding a sharper shadow. <i>blur_size</i> defaults to 11 pixels.<br/>
 &nbsp;</p>
 </dd><dt><code>-k</code></dt>
-<dd> Keep the intermediate temporary image files. When debugging, these intermediate files provide many clues as to the source of an error. See <code>FILES </code> below for a list of the contents of each file.<br />
+<dd> Keep the intermediate temporary image files. When debugging, these intermediate files provide many clues as to the source of an error. See <code>FILES </code> below for a list of the contents of each file.<br/>
 &nbsp;</dd>
 <dt><code>-t</code></dt>
-<dd> Consider the non-background material in the image translucent &#8212; it casts shadows of its own colour rather than a black shadow, which is default. This often results in fuzzy, difficult-to-read images but in some circumstances may look better.<br />
+<dd> Consider the non-background material in the image translucent &#8212; it casts shadows of its own colour rather than a black shadow, which is default. This often results in fuzzy, difficult-to-read images but in some circumstances may look better.<br/>
 &nbsp;</dd>
 <dt><code>-u</code></dt>
-<dd> Print command syntax and a summary of options.<br />
+<dd> Print command syntax and a summary of options.<br/>
 &nbsp;</dd>
 <dt><code>-x</code><i> xoffset</i></dt>
-<dd> Specifies the displacement of the light source to the left of the image. Larger settings of <code>xoffset</code> displace the shadow to the right, as would be cast by a light further to the left. If not specified, the horizontal offset is half of <i>blur_size </i> (above), to the left.<br />
+<dd> Specifies the displacement of the light source to the left of the image. Larger settings of <code>xoffset</code> displace the shadow to the right, as would be cast by a light further to the left. If not specified, the horizontal offset is half of <i>blur_size </i> (above), to the left.<br/>
 &nbsp;</dd>
 <dt><code>-y</code><i> yoffset</i></dt>
 <dd> Specifies the displacement of the light source above the top of the image. Larger settings displace the shadow downward, corresponding to moving the light further above the top of the image. If you don&#8217;t specify <code>-y</code>, the vertical offset defaults to the same as the horizontal offset (above), upward. </dd>

@@ -10,7 +10,7 @@ description: "socketpair – create a pair of connected sockets"
 
 <p> socketpair &#8211; create a pair of connected sockets </p>
 <h2>SYNOPSIS</h2>
-<p> <code>#include &lt;sys/types.h&gt;</code> /* See NOTES */<br />
+<p> <code>#include &lt;sys/types.h&gt;</code> /* See NOTES */<br/>
  <code>#include &lt;sys/socket.h&gt;</code> </p>
 <p> <code>int socketpair(int </code><i>domain</i><code>, int </code><i>type</i><code>, int </code><i>protocol</i><code>, int </code><i>sv</i><code>[2]);</code></p>
 <h2>DESCRIPTION</h2>

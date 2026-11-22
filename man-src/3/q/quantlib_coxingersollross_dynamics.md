@@ -14,9 +14,9 @@ description: "QuantLib::CoxIngersollRoss::Dynamics – Dynamics of the short-rat
 <p> Inherited by <code>Dynamics</code>. </p>
 <h3>Public Member Functions</h3>
 <p><code>Dynamics</code> (Real theta, Real k, Real sigma, Real x0) </p>
-<p> virtual Real <code>variable</code> (Time, Rate r) const<br />
- <i>Compute state variable from short rate. </i><br />
- virtual Real <code>shortRate</code> (Time, Real y) const<br />
+<p> virtual Real <code>variable</code> (Time, Rate r) const<br/>
+ <i>Compute state variable from short rate. </i><br/>
+ virtual Real <code>shortRate</code> (Time, Real y) const<br/>
  <i>Compute short rate from state variable. </i></p>
 <h2>Detailed Description</h2>
 <p>Dynamics of the short-rate under the Cox-Ingersoll-Ross model </p>

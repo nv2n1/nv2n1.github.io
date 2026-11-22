@@ -10,11 +10,11 @@ description: "doveadm-search – Show a list of mailbox GUIDs and message UIDs m
 
 <p> doveadm-search &#8211; Show a list of mailbox GUIDs and message UIDs matching given search query.</p>
 <h2>SYNOPSIS</h2>
-<p> <code>doveadm</code> [<code>-Dv</code>] [<code>-f</code> <i>formatter</i>] <code>search</code> [<code>-S</code> <i>socket_path</i>] <i>search_query</i><br />
- <code>doveadm</code> [<code>-Dv</code>] [<code>-f</code> <i>formatter</i>] <code>search</code> [<code>-S</code> <i>socket_path</i>] <code>-A</code><i>&nbsp;<wbr>search_query</i><br />
+<p> <code>doveadm</code> [<code>-Dv</code>] [<code>-f</code> <i>formatter</i>] <code>search</code> [<code>-S</code> <i>socket_path</i>] <i>search_query</i><br/>
+ <code>doveadm</code> [<code>-Dv</code>] [<code>-f</code> <i>formatter</i>] <code>search</code> [<code>-S</code> <i>socket_path</i>] <code>-A</code><i>&nbsp;<wbr>search_query</i><br/>
  <code>doveadm</code> [<code>-Dv</code>] [<code>-f</code> <i>formatter</i>] <code>search</code> [<code>-S</code> <i>socket_path</i>] <code>-u</code><i> user search_query</i></p>
 <h2>DESCRIPTION</h2>
-<p> The <code>search</code> command is used to find matching messages. <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) will print the mailbox&#8217;s guid and the message&#8217;s uid for each match.<br />
+<p> The <code>search</code> command is used to find matching messages. <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) will print the mailbox&#8217;s guid and the message&#8217;s uid for each match.<br/>
  When used with the <code>-A</code> or <code>-u</code><i>&nbsp;<wbr>wildcard</i> options, <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) will print the fields <code>username</code>, <code>mailbox-guid</code>&nbsp;<wbr>and <code>uid</code> for each matching message. </p>
 <p> In the first form, <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) will executed the <code>search</code> action with the environment of the logged in system user. </p>
 <p> In the second form, the command will be performed for all users. </p>
@@ -49,7 +49,7 @@ description: "doveadm-search – Show a list of mailbox GUIDs and message UIDs m
 <dd> The option&#8217;s argument is either an absolute path to a local UNIX domain socket, or a hostname and port (<i>hostname</i>:<i>port</i>), in order to connect a remote host via a TCP socket. </dd>
 <p> This allows an administrator to execute <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) mail commands through the given socket.</p>
 <dt><code>-u&nbsp;<wbr></code><i>user/mask</i></dt>
-<dd> Run the <i>command</i> only for the given <i>user</i>. It&#8217;s also possible to use &#8216;<code>*</code>&#8216; and &#8216;<code>?</code>&#8216; wildcards (e.g. -u *@example.org).<br />
+<dd> Run the <i>command</i> only for the given <i>user</i>. It&#8217;s also possible to use &#8216;<code>*</code>&#8216; and &#8216;<code>?</code>&#8216; wildcards (e.g. -u *@example.org).<br/>
  When neither the <code>-A</code> option nor <code>-u&nbsp;<wbr></code><i>user</i> was specified, the <i>command</i> will be executed with the environment of the currently logged in user.</dd></dl>
 <h2>ARGUMENTS</h2>
 <dl>

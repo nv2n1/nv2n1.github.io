@@ -133,7 +133,7 @@ description: "sg3_utils – a package of utilities for sending SCSI commands"
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;dgilbert at interlog dot com&gt;.</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 1999-2013 Douglas Gilbert<br />
+<p>Copyright &#169; 1999-2013 Douglas Gilbert<br/>
  Some utilities are distributed under a GPL version 2 license while others, usually more recent ones, are under a FreeBSD license. The files that are common to almost all utilities and thus contain the most reusable code, namely sg_lib.[hc], sg_cmds_basic.[hc] and sg_cmds_extra.[hc] are under a FreeBSD license. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>See Also</h2>
 <p><code>sdparm(sdparm), ddpt(ddpt), lsscsi(lsscsi), <a href="/docs/linux/man/1-dmesg/">dmesg</a>(1), <a href="/docs/linux/man/1-mt/">mt</a>(1)</code> </p>

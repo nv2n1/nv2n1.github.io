@@ -10,11 +10,11 @@ description: "ql/pricingengines/swaption/g2swaptionengine.hpp – Swaption prici
 
 <p> ql/pricingengines/swaption/g2swaptionengine.hpp &#8211; Swaption pricing engine for two-factor additive Gaussian Model G2++. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/pricingengines/genericmodelengine.hpp&gt;<br />
- #include &lt;ql/models/shortrate/twofactormodels/g2.hpp&gt;<br />
+<p> #include &lt;ql/pricingengines/genericmodelengine.hpp&gt;<br/>
+ #include &lt;ql/models/shortrate/twofactormodels/g2.hpp&gt;<br/>
  #include &lt;ql/pricingengines/swap/discountingswapengine.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>G2SwaptionEngine</code><br />
+<p> class <code>G2SwaptionEngine</code><br/>
  <i>Swaption priced by means of the Black formula </i></p>
 <h2>Detailed Description</h2>
 <p> Swaption pricing engine for two-factor additive Gaussian Model G2++. </p>

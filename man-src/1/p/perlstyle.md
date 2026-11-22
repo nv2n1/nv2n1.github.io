@@ -12,20 +12,20 @@ description: "perlstyle – Perl style guide"
 <h2>DESCRIPTION</h2>
 <p> Each programmer will, of course, have his or her own preferences in regards to formatting, but there are some general guidelines that will make your programs easier to read, understand, and maintain. </p>
 <p> The most important thing is to run your programs under the <code>-w</code> flag at all times. You may turn it off explicitly for particular portions of code via the <tt>&quot;no warnings&quot;</tt> pragma or the <tt>$^W</tt> variable if you must. You should also always run under <tt>&quot;use strict&quot;</tt> or know the reason why not. The <tt>&quot;use sigtrap&quot;</tt> and even <tt>&quot;use diagnostics&quot;</tt> pragmas may also prove useful. </p>
-<p> Regarding aesthetics of code lay out, about the only thing Larry cares strongly about is that the closing curly bracket of a multi-line <font SIZE="-1">BLOCK</font> should line up with the keyword that started the construct. Beyond that, he has other preferences that aren&#8217;t so strong:</p>
+<p> Regarding aesthetics of code lay out, about the only thing Larry cares strongly about is that the closing curly bracket of a multi-line BLOCK should line up with the keyword that started the construct. Beyond that, he has other preferences that aren&#8217;t so strong:</p>
 <dl>
 <dt>&bull;</dt>
 <dd> 4-column indent.</dd>
 <dt>&bull;</dt>
 <dd> Opening curly on same line as keyword, if possible, otherwise line up.</dd>
 <dt>&bull;</dt>
-<dd> Space before the opening curly of a multi-line <font SIZE="-1">BLOCK.</font></dd>
+<dd> Space before the opening curly of a multi-line BLOCK.</dd>
 <dt>&bull;</dt>
-<dd> One-line <font SIZE="-1">BLOCK</font> may be put on one line, including curlies.</dd>
+<dd> One-line BLOCK may be put on one line, including curlies.</dd>
 <dt>&bull;</dt>
 <dd> No space before the semicolon.</dd>
 <dt>&bull;</dt>
-<dd> Semicolon omitted in &#8220;short&#8221; one-line <font SIZE="-1">BLOCK.</font></dd>
+<dd> Semicolon omitted in &#8220;short&#8221; one-line BLOCK.</dd>
 <dt>&bull;</dt>
 <dd> Space around most operators.</dd>
 <dt>&bull;</dt>
@@ -50,7 +50,7 @@ description: "perlstyle – Perl style guide"
 <p> Here are some other more substantive style issues to think about:</p>
 <dl>
 <dt>&bull;</dt>
-<dd> Just because you <i></i><font SIZE="-1"><i>CAN</i></font><i></i> do something a particular way doesn&#8217;t mean that you <i></i><font SIZE="-1"><i>SHOULD</i></font><i></i> do it that way. Perl is designed to give you several ways to do anything, so consider picking the most readable one. For instance </dd>
+<dd> Just because you <i></i><i>CAN</i><i></i> do something a particular way doesn&#8217;t mean that you <i></i><i>SHOULD</i><i></i> do it that way. Perl is designed to give you several ways to do anything, so consider picking the most readable one. For instance </dd>
 <pre>
     open(FOO,$foo) || die &quot;Can't open $foo: $!&quot;;
 </pre>
@@ -70,7 +70,7 @@ description: "perlstyle – Perl style guide"
 </pre>
 <p> because the main point isn&#8217;t whether the user typed <code>-v</code> or not. </p>
 <p> Similarly, just because an operator lets you assume default arguments doesn&#8217;t mean that you have to make use of the defaults. The defaults are there for lazy systems programmers writing one-shot programs. If you want your program to be readable, consider supplying the argument. </p>
-<p> Along the same lines, just because you <i></i><font SIZE="-1"><i>CAN</i></font><i></i> omit parentheses in many places doesn&#8217;t mean that you ought to: </p>
+<p> Along the same lines, just because you <i></i><i>CAN</i><i></i> omit parentheses in many places doesn&#8217;t mean that you ought to: </p>
 <pre><code>
 return print reverse sort num values % array;
 return print(reverse(sort num(values(% array))));
@@ -79,12 +79,12 @@ return print(reverse(sort num(values(% array))));
 <p> Even if you aren&#8217;t in doubt, consider the mental welfare of the person who has to maintain the code after you, and who will probably put parentheses in the wrong place.</p>
 <dt>&bull;</dt>
 <dd> Don&#8217;t go through silly contortions to exit a loop at the top or the bottom, when Perl provides the <tt>&quot;last&quot;</tt> operator so you can exit in the middle. Just &#8220;outdent&#8221; it a little to make it more visible: </dd>
-<p>LINE : for (;;)<br />
-{<br />
-    statements;<br />
-    last LINE if $foo;<br />
-    next LINE if / ^# / ;<br />
-    statements;<br />
+<p>LINE : for (;;)<br/>
+{<br/>
+    statements;<br/>
+    last LINE if $foo;<br/>
+    next LINE if / ^# / ;<br/>
+    statements;<br/>
 }</p>
 <dt>&bull;</dt>
 <dd> Don&#8217;t be afraid to use loop labels&#8212;they&#8217;re there to enhance readability as well as to allow multilevel loop breaks. See the previous example.</dd>
@@ -114,15 +114,15 @@ return print(reverse(sort num(values(% array))));
 <dd> Use here documents instead of repeated <tt>&quot;print()&quot;</tt> statements.</dd>
 <dt>&bull;</dt>
 <dd> Line up corresponding things vertically, especially if it&#8217;d be too long to fit on one line anyway. </dd>
-<p>$IDX = $ST_MTIME;<br />
-$IDX = $ST_ATIME if $opt_u;<br />
-$IDX = $ST_CTIME if $opt_c;<br />
-$IDX = $ST_SIZE if $opt_s;<br />
-mkdir $tmpdir, 0700 or die &#8220;can&#8217;t mkdir $tmpdir: $!&#8221;;<br />
-chdir($tmpdir) or die &#8220;can&#8217;t chdir $tmpdir: $!&#8221;;<br />
+<p>$IDX = $ST_MTIME;<br/>
+$IDX = $ST_ATIME if $opt_u;<br/>
+$IDX = $ST_CTIME if $opt_c;<br/>
+$IDX = $ST_SIZE if $opt_s;<br/>
+mkdir $tmpdir, 0700 or die &#8220;can&#8217;t mkdir $tmpdir: $!&#8221;;<br/>
+chdir($tmpdir) or die &#8220;can&#8217;t chdir $tmpdir: $!&#8221;;<br/>
 mkdir &#8216;tmp&#8217;, 0777 or die &#8220;can&#8217;t mkdir $tmpdir/tmp: $!&#8221;;</p>
 <dt>&bull;</dt>
-<dd> Always check the return codes of system calls. Good error messages should go to <tt>&quot;STDERR&quot;</tt>, include which program caused the problem, what the failed system call and arguments were, and (<font SIZE="-1">VERY IMPORTANT</font>) should contain the standard system error message for what went wrong. Here&#8217;s a simple but sufficient example: </dd>
+<dd> Always check the return codes of system calls. Good error messages should go to <tt>&quot;STDERR&quot;</tt>, include which program caused the problem, what the failed system call and arguments were, and (VERY IMPORTANT) should contain the standard system error message for what went wrong. Here&#8217;s a simple but sufficient example: </dd>
 <pre>
     opendir(D, $dir)     or die &quot;can't opendir $dir: $!&quot;;
 </pre>

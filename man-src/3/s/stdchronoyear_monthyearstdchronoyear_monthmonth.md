@@ -9,9 +9,9 @@ description: "std::chrono::year_month::year,std::chrono::year_month::month – s
 
 <p>std::chrono::year_month::year,std::chrono::year_month::month &#8211; std::chrono::year_month::year,std::chrono::year_month::month</p>
 <h2>Synopsis</h2>
-<p>constexpr std::chrono::year year() const noexcept; <code>(1)</code> <i>(since C++20)</i><br />
-constexpr std::chrono::month month() const noexcept; <code>(2)</code> <i>(since C++20)</i><br />
+<p>constexpr std::chrono::year year() const noexcept; <code>(1)</code> <i>(since C++20)</i><br/>
+constexpr std::chrono::month month() const noexcept; <code>(2)</code> <i>(since C++20)</i><br/>
 Retrieves the year and month values stored in this year_month object. </p>
 <h2>Return values</h2>
-<p>1) Returns the stored std::chrono::year value.<br />
+<p>1) Returns the stored std::chrono::year value.<br/>
 2) Returns the stored std::chrono::month value.</p>

@@ -8,10 +8,10 @@ url: "/docs/linux/man/1-geod/"
 description: "geod – direct geodesic computations invgeod – inverse geodesic computations"
 ---
 
-<p> geod &#8211; direct geodesic computations<br />
+<p> geod &#8211; direct geodesic computations<br/>
  invgeod &#8211; inverse geodesic computations</p>
 <h2>SYNOPSIS</h2>
-<p> <code>geod</code> <code>+ellps=&lt;ellipse&gt;</code> [ <code>-afFIlptwW</code> [ <i>args</i> ] ] [ <code>+args</code> ] file[s]<br />
+<p> <code>geod</code> <code>+ellps=&lt;ellipse&gt;</code> [ <code>-afFIlptwW</code> [ <i>args</i> ] ] [ <code>+args</code> ] file[s]<br/>
  <code>invgeod</code> <code>+ellps=&lt;ellipse&gt;</code> [ <code>-afFIlptwW</code> [ <i>args</i> ] ] [ <code>+args</code> ] file[s]</p>
 <h2>DESCRIPTION</h2>
 <p> <i>Geod</i> (direct) and <i>invgeod</i> (inverse) perform geodesic (&#8220;Great Circle&#8221;) computations for determining latitude, longitude and back azimuth of a terminus point given a initial point latitude, longitude, azimuth and distance (direct) or the forward and back azimuths and distance between an initial and terminus point latitudes and longitudes (inverse). </p>
@@ -46,8 +46,8 @@ description: "geod – direct geodesic computations invgeod – inverse geodesic
 <dl>
 <dt>
 </dt><dd>
-&nbsp;<wbr><tt>geod&nbsp;<wbr>+ellps=clrk66&nbsp;<wbr>&lt;&lt;EOF -I&nbsp;<wbr>+units=us-mi<br />
-&nbsp;<wbr>42d15'N 71d07'W 45d31'N 123d41'W<br />
+&nbsp;<wbr><tt>geod&nbsp;<wbr>+ellps=clrk66&nbsp;<wbr>&lt;&lt;EOF -I&nbsp;<wbr>+units=us-mi<br/>
+&nbsp;<wbr>42d15'N 71d07'W 45d31'N 123d41'W<br/>
 &nbsp;<wbr>EOF</tt></dd></dl>
 <p> which gives the results:</p>
 <dl>
@@ -59,8 +59,8 @@ description: "geod – direct geodesic computations invgeod – inverse geodesic
 <dl>
 <dt>
 </dt><dd>
-&nbsp;<wbr>geod&nbsp;<wbr>+ellps=clrk66&nbsp;<wbr>&lt;&lt;EOF&nbsp;<wbr>+units=us-mi<br />
-&nbsp;<wbr>42d15'N 71d07'W -66d31'50.141&quot;&nbsp;<wbr>2587.504<br />
+&nbsp;<wbr>geod&nbsp;<wbr>+ellps=clrk66&nbsp;<wbr>&lt;&lt;EOF&nbsp;<wbr>+units=us-mi<br/>
+&nbsp;<wbr>42d15'N 71d07'W -66d31'50.141&quot;&nbsp;<wbr>2587.504<br/>
 &nbsp;<wbr>EOF</tt></dd></dl>
 <p> which gives:</p>
 <dl>

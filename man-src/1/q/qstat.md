@@ -167,22 +167,22 @@ description: "qstat – show the status of xxQS_NAMExx jobs and queues"
 <p> If the <code>-F</code> option was used, resource availability information is printed following the queue status line. For each resource (as selected in an option argument to <code>-F</code>, or for all resources if the option argument was omitted) a single line is displayed with the following format:</p>
 <dl>
 <dt>&bull;</dt>
-<dd> a one letter specifier indicating whether the current resource availability value was dominated by either<br />
- &#8216;<code>g</code>&#8216; &#8211; a cluster global,<br />
- &#8216;<code>h</code>&#8216; &#8211; a host total or<br />
+<dd> a one letter specifier indicating whether the current resource availability value was dominated by either<br/>
+ &#8216;<code>g</code>&#8216; &#8211; a cluster global,<br/>
+ &#8216;<code>h</code>&#8216; &#8211; a host total or<br/>
  &#8216;<code>q</code>&#8216; &#8211; a queue related resource consumption.</dd>
 <dt>&bull;</dt>
-<dd> a second one letter specifier indicating the source for the current resource availability value, one of<br />
- &#8216;<code>l</code>&#8216; &#8211; a load value reported for the resource,<br />
- &#8216;<code>L</code>&#8216; &#8211; a load value for the resource after administrator defined load scaling has been applied,<br />
- &#8216;<code>c</code>&#8216; &#8211; availability derived from the consumable resources facility (see<br />
+<dd> a second one letter specifier indicating the source for the current resource availability value, one of<br/>
+ &#8216;<code>l</code>&#8216; &#8211; a load value reported for the resource,<br/>
+ &#8216;<code>L</code>&#8216; &#8211; a load value for the resource after administrator defined load scaling has been applied,<br/>
+ &#8216;<code>c</code>&#8216; &#8211; availability derived from the consumable resources facility (see<br/>
  &#8216;<code>f</code>&#8216; &#8211; a fixed availability definition derived from a non-consumable complex attribute or a fixed resource limit.</dd>
 <dt>&bull;</dt>
 <dd> after a colon the name of the resource on which information is displayed.</dd>
 <dt>&bull;</dt>
 <dd> after an equal sign the current resource availability value.</dd></dl>
 <p> The displayed availability values and the sources from which they derive are always the minimum values of all possible combinations. Hence, for example, a line of the form &quot;qf:h_vmem=4G&quot; indicates that a queue currently has a maximum availability in virtual memory of 4 Gigabyte, where this value is a fixed value (e.g. a resource limit in the queue configuration) and it is queue dominated, i.e. the host in total may have more virtual memory available than this, but the queue doesn&#8217;t allow for more. Contrarily a line &quot;hl:h_vmem=4G&quot; would also indicate an upper bound of 4 Gigabyte virtual memory availability, but the limit would be derived from a load value currently reported for the host. So while the queue might allow for jobs with higher virtual memory requirements, the host on which this particular queue resides currently only has 4 Gigabyte available. </p>
-<p> If the <code>-explain</code> option was used with the character &#8216;a&#8217; or &#8216;A&#8217;, information about resources is displayed, that violate load or suspend thresholds.<br />
+<p> If the <code>-explain</code> option was used with the character &#8216;a&#8217; or &#8216;A&#8217;, information about resources is displayed, that violate load or suspend thresholds.<br/>
  The same format as with the <code>-F</code> option is used with following extensions:</p>
 <dl>
 <dt>&bull;</dt>

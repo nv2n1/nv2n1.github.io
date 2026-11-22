@@ -13,38 +13,38 @@ description: "getdns_list_set, getdns_list_set_bindata, getdns_list_set_dict, ge
 <p> DNS Resolver library (libgetdns, -lgetdns) </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;getdns.h&gt; </p>
-<p> getdns_return_t<br />
+<p> getdns_return_t<br/>
  <code>getdns_list_set_bindata</code> (getdns_list *this_list,</p>
 <dl>
 <dt>
-</dt><dd> size_t index,<br />
+</dt><dd> size_t index,<br/>
  getdns_bindata *child_bindata)</dd></dl>
-<p> getdns_return_t<br />
+<p> getdns_return_t<br/>
  <code>getdns_list_set_dict</code> (getdns_list *this_list,</p>
 <dl>
 <dt>
-</dt><dd> size_t index,<br />
+</dt><dd> size_t index,<br/>
  getdns_dict *child_dict)</dd></dl>
-<p> getdns_return_t<br />
+<p> getdns_return_t<br/>
  <code>getdns_list_set_int</code> (getdns_list *this_list,</p>
 <dl>
 <dt>
-</dt><dd> size_t index,<br />
+</dt><dd> size_t index,<br/>
  uint32_t child_uint32_t)</dd></dl>
-<p> getdns_return_t<br />
+<p> getdns_return_t<br/>
  <code>getdns_list_set_list</code> (getdns_list *this_list,</p>
 <dl>
 <dt>
-</dt><dd> size_t index,<br />
+</dt><dd> size_t index,<br/>
  getdns_list *child_list)</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The getdns_list type is used to manage a heterogeneous indexed list of values that include:</p>
 <dl>
 <dt>
 </dt><dd>
- getdns_bindata<br />
- getdns_dict<br />
- getdns_list<br />
+ getdns_bindata<br/>
+ getdns_dict<br/>
+ getdns_list<br/>
  uint32_t</dd></dl>
 <p> <i>this_list</i> the list in which to add/update the indexed item </p>
 <p> <i>index</i> the index whose associated value is to be set. If the index exists in the list the value associated with that index is replaced, if the index does not exist in the list a new item is added to the list at the specified index. </p>

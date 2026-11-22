@@ -14,7 +14,7 @@ description: "dcb-ets – show / manipulate ETS (Enhanced Transmission Selection
 ets
 { COMMAND | help }
 </code></pre>
-<p> <code>dcb ets show dev</code> DEV [ <code>willing</code> ] [ <code>ets-cap</code> ] [ <code>cbs</code> ] [ <code>tc-tsa</code> ] [ <code>reco-tc-tsa</code> ] [ <code>pg-bw</code> ] [ <code>tc-bw</code> ] [ <code>reco-tc-bw</code> ] [ <code>prio-tc</code> ] [ <code>reco-prio-tc</code> ]<br />
+<p> <code>dcb ets show dev</code> DEV [ <code>willing</code> ] [ <code>ets-cap</code> ] [ <code>cbs</code> ] [ <code>tc-tsa</code> ] [ <code>reco-tc-tsa</code> ] [ <code>pg-bw</code> ] [ <code>tc-bw</code> ] [ <code>reco-tc-bw</code> ] [ <code>prio-tc</code> ] [ <code>reco-prio-tc</code> ]<br/>
  <code>dcb ets set dev</code> DEV [ <code>willing</code> { <code>on</code> | <code>off</code> } ] [ { <code>tc-tsa</code> | <code>reco-tc-tsa</code> } <i>TSA-MAP</i> ] [ { <code>pg-bw</code> | <code>tc-bw</code> | <code>reco-tc-bw</code> } <i>BW-MAP</i> ] [ { <code>prio-tc</code> | <code>reco-prio-tc</code> } <i>PRIO-MAP</i> ] </p>
 <pre><code>TSA-MAP := [ TSA-MAP ] TSA-MAPPING
 TSA-MAPPING := { TC | all }:{ strict |
@@ -41,9 +41,9 @@ PRIO := { 0 .. 7 }
 <dd><code>reco-prio-tc </code><i>PRIO-MAP</i> <i>PRIO-MAP</i> uses the array parameter syntax, see <code><a href="/docs/linux/man/8-dcb/">dcb</a></code>(8) for details. Keys are priorities, values are traffic classes. For each priority sets a TC where traffic with that priority is directed to. </dd>
 <dt><code>tc-tsa </code><i>TSA-MAP</i></dt>
 <dd><code>reco-tc-tsa </code><i>TSA-MAP</i> <i>TSA-MAP</i> uses the array parameter syntax, see <code><a href="/docs/linux/man/8-dcb/">dcb</a></code>(8) for details. Keys are TCs, values are Transmission Selection Algorithm (TSA) keywords described below. For each TC sets an algorithm used for deciding how traffic queued up at this TC is scheduled for transmission. Supported TSAs are: </dd>
-<p> <code>strict</code> &#8211; for strict priority, where traffic in higher-numbered TCs always takes precedence over traffic in lower-numbered TCs.<br />
- <code>ets</code> &#8211; for Enhanced Traffic Selection, where available bandwidth is distributed among the ETS-enabled TCs according to the weights set by <code>tc-bw</code> and <code>reco-tc-bw</code>, respectively.<br />
- <code>cbs</code> &#8211; for Credit Based Shaper, where traffic is scheduled in a strict manner up to the limit set by a shaper.<br />
+<p> <code>strict</code> &#8211; for strict priority, where traffic in higher-numbered TCs always takes precedence over traffic in lower-numbered TCs.<br/>
+ <code>ets</code> &#8211; for Enhanced Traffic Selection, where available bandwidth is distributed among the ETS-enabled TCs according to the weights set by <code>tc-bw</code> and <code>reco-tc-bw</code>, respectively.<br/>
+ <code>cbs</code> &#8211; for Credit Based Shaper, where traffic is scheduled in a strict manner up to the limit set by a shaper.<br/>
  <code>vendor</code> &#8211; for vendor-specific traffic selection algorithm. </p>
 <dt><code>tc-bw </code><i>BW-MAP</i></dt>
 <dd><code>reco-tc-bw </code><i>BW-MAP</i> <i>BW-MAP</i> uses the array parameter syntax, see <code><a href="/docs/linux/man/8-dcb/">dcb</a></code>(8) for details. Keys are TCs, values are integers representing percent of available bandwidth given to the traffic class in question. The value should be 0 for TCs whose TSA is not <code>ets</code>, and the sum of all values shall be 100. As an exception to the standard wording, a configuration with no <code>ets</code> TCs is permitted to sum up to 0 instead. </dd>
@@ -57,9 +57,9 @@ PRIO := { 0 .. 7 }
 <p> # dcb ets set dev eth0 tc-tsa all:strict 0:ets 1:ets 2:ets \ </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tc-bw all:0 0:33 1:33 2:34 </p>
 <p> Show what was set: </p>
-<p> # dcb ets show dev eth0 prio-tc tc-tsa tc-bw<br />
- prio-tc 0:0 1:1 2:2 3:3 4:4 5:5 6:6 7:7<br />
- tc-tsa 0:ets 1:ets 2:ets 3:strict 4:strict 5:strict 6:strict 7:strict<br />
+<p> # dcb ets show dev eth0 prio-tc tc-tsa tc-bw<br/>
+ prio-tc 0:0 1:1 2:2 3:3 4:4 5:5 6:6 7:7<br/>
+ tc-tsa 0:ets 1:ets 2:ets 3:strict 4:strict 5:strict 6:strict 7:strict<br/>
  tc-bw 0:33 1:33 2:34 3:0 4:0 5:0 6:0 7:0</p>
 <h2>Exit Status</h2>
 <p>Exit status is 0 if command was successful or a positive integer upon failure.</p>

@@ -15,14 +15,14 @@ description: "lintian – Static analysis tool for Debian packages"
 <p> Lintian dissects Debian packages and reports bugs and policy violations. It contains automated checks for many aspects of Debian policy as well as some checks for common errors. </p>
 <p> There are two ways to specify binary, udeb or source packages for Lintian to process: by file name (the .deb file for a binary package or the .dsc file for a source package), or by naming a <i>.changes</i> file. </p>
 <p> If you specify a <i>.changes</i> file, Lintian will process all packages listed in that file. This is convenient when checking a new package before uploading it. </p>
-<p> If you specify packages to be checked or use the option <code>&#8211;packages-from-file</code>, the packages requested will be processed. Otherwise, if <i>debian/changelog</i> exists, it is parsed to determine the name of the .changes file to look for in the parent directory (when using the actions <code>&#8211;check</code> or <code>&#8211;unpack</code>). See &#8220;<font SIZE="-1">CHECKING LAST BUILD&#8221;</font> for more information.</p>
+<p> If you specify packages to be checked or use the option <code>&#8211;packages-from-file</code>, the packages requested will be processed. Otherwise, if <i>debian/changelog</i> exists, it is parsed to determine the name of the .changes file to look for in the parent directory (when using the actions <code>&#8211;check</code> or <code>&#8211;unpack</code>). See &#8220;CHECKING LAST BUILD&#8221; for more information.</p>
 <h2>OPTIONS</h2>
 <p> Actions of the lintian command: (Only one action can be specified per invocation)</p>
 <dl>
 <dt><code>-c</code>, <code>&#8211;check</code></dt>
 <dd> Run all checks over the specified packages. This is the default action.</dd>
 <dt><code>-C</code> chk1,chk2,&#8230;, <code>&#8211;check-part</code> chk1,chk2,&#8230;</dt>
-<dd> Run only the specified checks. You can either specify the name of the check script or the abbreviation. For details, see the &#8220;<font SIZE="-1">CHECKS&#8221;</font> section below.</dd>
+<dd> Run only the specified checks. You can either specify the name of the check script or the abbreviation. For details, see the &#8220;CHECKS&#8221; section below.</dd>
 <dt><code>-F</code>, <code>&#8211;ftp-master-rejects</code></dt>
 <dd> Run only the checks that issue tags that result in automatic rejects from the Debian upload queue. The list of such tags is refreshed with each Lintian release, so may be slightly out of date if it has changed recently. </dd>
 <p> This is implemented via a profile and thus this option cannot be used together with <code>&#8211;profile</code>.</p>
@@ -33,10 +33,10 @@ description: "lintian – Static analysis tool for Debian packages"
 <dd> Same functionality as <code>&#8211;tags</code>, but read the list of tags from a file. Blank lines and lines beginning with # are ignored. All other lines are taken to be tag names or comma-separated lists of tag names to (potentially) issue. </dd>
 <p> With this options all tags listed will be displayed regardless of the display settings.</p>
 <dt><code>-u</code>, <code>&#8211;unpack</code></dt>
-<dd> Unpacks the package will all collections. See the &#8220;<font SIZE="-1">COLLECTION&#8221;</font> section below. </dd>
-<p> Note in this option will also run all collections. See the &#8220;<font SIZE="-1">COLLECTION&#8221;</font> section below.</p>
+<dd> Unpacks the package will all collections. See the &#8220;COLLECTION&#8221; section below. </dd>
+<p> Note in this option will also run all collections. See the &#8220;COLLECTION&#8221; section below.</p>
 <dt><code>-X</code> chk1,chk2,&#8230;, <code>&#8211;dont-check-part</code> chk1,chk2,&#8230;</dt>
-<dd> Run all but the specified checks. You can either specify the name of the check script or the abbreviation. For details, see the &#8220;<font SIZE="-1">CHECKS&#8221;</font> section below.</dd></dl>
+<dd> Run all but the specified checks. You can either specify the name of the check script or the abbreviation. For details, see the &#8220;CHECKS&#8221; section below.</dd></dl>
 <p> General options:</p>
 <dl>
 <dt><code>-h</code>, <code>&#8211;help</code></dt>
@@ -56,10 +56,10 @@ description: "lintian – Static analysis tool for Debian packages"
 <p> Behavior options for <code>lintian</code>.</p>
 <dl>
 <dt><code>&#8211;color</code> (never|always|auto|html)</dt>
-<dd> Whether to colorize tags in lintian output based on their visibility. The default is &#8220;never&#8221;, which never uses color. &#8220;always&#8221; will always use color, &#8220;auto&#8221; will use color only if the output is going to a terminal, and &#8220;html&#8221; will use <font SIZE="-1">HTML</font> &lt;span&gt; tags with a color style attribute (instead of <font SIZE="-1">ANSI</font> color escape sequences). </dd>
+<dd> Whether to colorize tags in lintian output based on their visibility. The default is &#8220;never&#8221;, which never uses color. &#8220;always&#8221; will always use color, &#8220;auto&#8221; will use color only if the output is going to a terminal, and &#8220;html&#8221; will use HTML &lt;span&gt; tags with a color style attribute (instead of ANSI color escape sequences). </dd>
 <p> This option overrides the <code>color</code> variable in the configuration file.</p>
 <dt><code>&#8211;hyperlinks</code> (on|off)</dt>
-<dd> Shows text-based hyperlinks to tag descriptions on lintian.debian.org on terminals that support it. The default is on for terminals that support it, unless the user selected &#8216;&#8211;color never&#8217;. This currently only works in <font SIZE="-1">GNOME</font> Terminal. </dd>
+<dd> Shows text-based hyperlinks to tag descriptions on lintian.debian.org on terminals that support it. The default is on for terminals that support it, unless the user selected &#8216;&#8211;color never&#8217;. This currently only works in GNOME Terminal. </dd>
 <p> This option overrides the <code>color</code> variable in the configuration file.</p>
 <dt><code>&#8211;default-display-level</code></dt>
 <dd> Reset the current display level to the default. Basically, this option behaves exactly like passing the following options to lintian:</dd>
@@ -119,8 +119,8 @@ description: "lintian – Static analysis tool for Debian packages"
   --profile debian
 </pre>
 <p> Likewise, on a Debian machine you can use this to request the Ubuntu checks. </p>
-<p> If the token <i>{</i><font SIZE="-1"><i>VENDOR</i></font><i>}</i> appears in the profile name, <code>lintian</code> will substitute the token with a vendor name to find the profile. <code>lintian</code> uses Dpkg::Vendor to determine the best vendor to use (the closer to the current vendor, the better). This is mostly useful for people implementing their own checks on top of Lintian. </p>
-<p> If not specified, the default value is <i>{</i><font SIZE="-1"><i>VENDOR</i></font><i>}/main</i>. </p>
+<p> If the token <i>{</i><i>VENDOR</i><i>}</i> appears in the profile name, <code>lintian</code> will substitute the token with a vendor name to find the profile. <code>lintian</code> uses Dpkg::Vendor to determine the best vendor to use (the closer to the current vendor, the better). This is mostly useful for people implementing their own checks on top of Lintian. </p>
+<p> If not specified, the default value is <i>{</i><i>VENDOR</i><i>}/main</i>. </p>
 <p> Please Refer to the Lintian User Manual for the full documentation of profiles.</p>
 <dt><code>&#8211;show-overrides</code>, <code>&#8211;hide-overrides</code></dt>
 <dd> Controls whether tags that have been overridden should be shown. </dd>
@@ -135,33 +135,33 @@ description: "lintian – Static analysis tool for Debian packages"
 <dd> Suppress all tags listed in the given file. Blank lines and lines beginning with # are ignored. All other lines are taken to be tag names or comma-separated lists of tag names to suppress. The suppressed tags will not be reported if they occur and will not affect the exit status of Lintian. </dd>
 <p> Tags parsed from the file will be handled as if they had been given to the <code>&#8211;suppress-tags</code> option (e.g. ignored if <code>&#8211;tags</code> is used).</p>
 <dt><code>&#8211;tag-display-limit</code>[=X]</dt>
-<dd> By default, lintian limits itself to emitting at most 4 instances of each tag per processable when <font SIZE="-1">STDOUT</font> is a <font SIZE="-1">TTY.</font> This option specified that limit. See also <code>&#8211;no-tag-display-limit</code>.</dd>
+<dd> By default, lintian limits itself to emitting at most 4 instances of each tag per processable when STDOUT is a TTY. This option specified that limit. See also <code>&#8211;no-tag-display-limit</code>.</dd>
 <dt><code>&#8211;no-tag-display-limit</code></dt>
-<dd> By default, lintian limits itself to emitting at most 4 instances of each tag per processable when <font SIZE="-1">STDOUT</font> is a <font SIZE="-1">TTY.</font> This option disables that limit. </dd>
-<p> When <font SIZE="-1">STDOUT</font> is not a <font SIZE="-1">TTY,</font> lintian has no limit. See also <code>&#8211;tag-display-limit</code>.</dl>
+<dd> By default, lintian limits itself to emitting at most 4 instances of each tag per processable when STDOUT is a TTY. This option disables that limit. </dd>
+<p> When STDOUT is not a TTY, lintian has no limit. See also <code>&#8211;tag-display-limit</code>.</dl>
 <p> Configuration options:</p>
 <dl>
 <dt><code>&#8211;cfg</code> configfile</dt>
-<dd> Read the configuration from configfile rather than the default locations. This option overrides the <font SIZE="-1"><code>LINTIAN_CFG</code></font> environment variable.</dd>
+<dd> Read the configuration from configfile rather than the default locations. This option overrides the <code>LINTIAN_CFG</code> environment variable.</dd>
 <dt><code>&#8211;no-cfg</code></dt>
 <dd> Do not read any configuration file. This option overrides the <code>&#8211;cfg</code> above.</dd>
 <dt><code>&#8211;ignore-lintian-env</code></dt>
-<dd> Ignore all environment variables starting with <i></i><font SIZE="-1"><i>LINTIAN_</i></font><i></i>. </dd>
-<p> This option is mostly useful for applications running <code>lintian</code> for checking packages and do not want the invoking user to affect the result (by setting <font SIZE="-1">LINTIAN_PROFILE</font> etc.). </p>
-<p> Note it does <i>not</i> cause <code>lintian</code> to ignore the entire environment like <i></i><font SIZE="-1"><i>TMPDIR</i></font><i></i> or <i></i><font SIZE="-1"><i>DEB_VENDOR</i></font><i></i>. The latter can affect the default profile (or &#8220;{<font SIZE="-1">VENDOR</font>}&#8221; token for <code>&#8211;profile</code>). </p>
-<p> Should usually be combined with <code>&#8211;no-user-dirs</code> (or unsetting <tt>$HOME</tt> and all <i></i><font SIZE="-1"><i>XDG_</i></font><i></i> variables).</p>
+<dd> Ignore all environment variables starting with <i></i><i>LINTIAN_</i><i></i>. </dd>
+<p> This option is mostly useful for applications running <code>lintian</code> for checking packages and do not want the invoking user to affect the result (by setting LINTIAN_PROFILE etc.). </p>
+<p> Note it does <i>not</i> cause <code>lintian</code> to ignore the entire environment like <i></i><i>TMPDIR</i><i></i> or <i></i><i>DEB_VENDOR</i><i></i>. The latter can affect the default profile (or &#8220;{VENDOR}&#8221; token for <code>&#8211;profile</code>). </p>
+<p> Should usually be combined with <code>&#8211;no-user-dirs</code> (or unsetting <tt>$HOME</tt> and all <i></i><i>XDG_</i><i></i> variables).</p>
 <dt><code>&#8211;include-dir</code> dir</dt>
-<dd> Use dir as an additional &#8220;<font SIZE="-1">LINTIAN_ROOT&#8221;.</font> The directory is expected have a similar layout to the <font SIZE="-1">LINTIAN_ROOT</font> (if it exists), but does not need to be a full self-contained root. </dd>
+<dd> Use dir as an additional &#8220;LINTIAN_ROOT&#8221;. The directory is expected have a similar layout to the LINTIAN_ROOT (if it exists), but does not need to be a full self-contained root. </dd>
 <p> <code>lintian</code> will check this directory for (additional) profiles, data files, support libraries and checks. The latter two imply that Lintian may attempt to <i>load and execute code</i> from this directory. </p>
 <p> This option may appear more than once; each time adding an additional directory. Directories are searched in the order they appear on the command line. </p>
-<p> The additional directories will be checked <i>after</i> the user directories (though see <code>&#8211;no-user-dirs</code>) and <i>before</i> the core <font SIZE="-1">LINTIAN_ROOT.</font> </p>
+<p> The additional directories will be checked <i>after</i> the user directories (though see <code>&#8211;no-user-dirs</code>) and <i>before</i> the core LINTIAN_ROOT. </p>
 <p> <code>Note</code>: This option should be the very first if given.</p>
 <dt><code>-j</code> X, <code>&#8211;jobs</code>=X</dt>
 <dd> Set the limit for how many unpacking jobs Lintian will run in parallel. This option overrides the <code>jobs</code> variable in the configuration file. </dd>
 <p> By default Lintian will use <i>nproc</i> to determine a reasonable default (or 2, if the nproc fails).</p>
 <dt><code>&#8211;user-dirs</code>, <code>&#8211;no-user-dirs</code></dt>
 <dd> By default, <code>lintian</code> will check <i></i>$HOME<i></i> and <i>/etc</i> for files supplied by the user or the local sysadmin (e.g. config files and profiles). This default can be disabled (and re-enabled) by using <code>&#8211;no-user-dirs</code> (and <code>&#8211;user-dirs</code>, respectively). </dd>
-<p> These options will <i>not</i> affect the inclusion of <font SIZE="-1">LINTIAN_ROOT,</font> which is always included. </p>
+<p> These options will <i>not</i> affect the inclusion of LINTIAN_ROOT, which is always included. </p>
 <p> These option can appear multiple times, in which case the last of them to appear determines the result. </p>
 <p> Note that if the intention is only to disable the user&#8217;s <i></i>$HOME<i></i>, then unsetting <i></i>$HOME<i></i> and <i>XDG_*_HOME</i> may suffice. Alternatively, <i>/etc</i> can be &#8220;re-added&#8221; by using <i>&#8211;include-dir</i> (caveat: <i>/etc/lintianrc</i> will be ignored by this). </p>
 <p> If the intention is to avoid (unintentional) side-effects from the calling user, then this option could be combined with <code>&#8211;ignore-lintian-env</code>. </p>
@@ -175,17 +175,17 @@ description: "lintian – Static analysis tool for Debian packages"
 <dd> By default, temporary labs will be removed after lintian is finished. Specifying this options will leave the lab behind, which might be useful for debugging purposes. You can find out where the temporary lab is located by running lintian with the <code>&#8211;verbose</code> option.</dd>
 <dt><code>&#8211;packages-from-file</code> X</dt>
 <dd> The line is read as the path to a file to process (all whitespace is included!). </dd>
-<p> If X is &#8220;-&#8221;, Lintian will read the packages from <font SIZE="-1">STDIN.</font></p>
+<p> If X is &#8220;-&#8221;, Lintian will read the packages from STDIN.</p>
 <dt><code>&#8211;perf-debug</code></dt>
 <dd> Enable performance related debug logging. </dd>
 <p> The data logged and the format used is subject to change with every release. </p>
 <p> Note that some of the information may also be available (possibly in a different format) with the <code>&#8211;debug</code> option.</p>
-<dt><code>&#8211;perf-output</code> <font SIZE="-1">OUTPUT</font></dt>
-<dd> Write performance related debug information to the specified file or file descriptor. If <font SIZE="-1">OUTPUT</font> starts with a &#8216;&amp;&#8217; or &#8216;+&#8217;, Lintian will handle <font SIZE="-1">OUTPUT</font> specially. Otherwise, Lintian will open the file denoted by <font SIZE="-1">OUTPUT</font> for writing (truncating if it exists, creating it if it does not exist). </dd>
-<p> If the first character of <font SIZE="-1">OUTPUT</font> is a &amp; and the rest of argument is a number N, then lintian attempts to write it to the file descriptor with the number N. Said file descriptor must be open for writing. E.g <i>&amp;2</i> makes Lintian write the performance logging to <font SIZE="-1">STDERR.</font> </p>
-<p> If the first character of <font SIZE="-1">OUTPUT</font> is a +, Lintian will append to the file rather than truncating it. In this case, the file name is <font SIZE="-1">OUTPUT</font> with initial &#8220;+&#8221; character removed. E.g. <i>+my-file</i> makes Lintian append to <i>my-file</i> </p>
+<dt><code>&#8211;perf-output</code> OUTPUT</dt>
+<dd> Write performance related debug information to the specified file or file descriptor. If OUTPUT starts with a &#8216;&amp;&#8217; or &#8216;+&#8217;, Lintian will handle OUTPUT specially. Otherwise, Lintian will open the file denoted by OUTPUT for writing (truncating if it exists, creating it if it does not exist). </dd>
+<p> If the first character of OUTPUT is a &amp; and the rest of argument is a number N, then lintian attempts to write it to the file descriptor with the number N. Said file descriptor must be open for writing. E.g <i>&amp;2</i> makes Lintian write the performance logging to STDERR. </p>
+<p> If the first character of OUTPUT is a +, Lintian will append to the file rather than truncating it. In this case, the file name is OUTPUT with initial &#8220;+&#8221; character removed. E.g. <i>+my-file</i> makes Lintian append to <i>my-file</i> </p>
 <p> If Lintian should write the output to a file starting with a literal &#8216;&amp;&#8217; or &#8216;+&#8217;, then simply prefix it with &#8220;./&#8221; (e.g. &#8220;+my-file&#8221; becomes &#8220;./+my-file&#8221;). </p>
-<p> If this option omitted, Lintian will default to using <font SIZE="-1">STDOUT.</font></p>
+<p> If this option omitted, Lintian will default to using STDOUT.</p>
 <dt><code>-U</code> info1,info2,&#8230;, <code>&#8211;unpack-info</code> info1,info2,&#8230;</dt>
 <dd> Collect information info1, info2, etc. even if these are not required by the checks. Collections requested by this option are also not auto-removed (in this run). </dd>
 <p> This option is mostly useful for debugging or special purpose setups. </p>
@@ -209,17 +209,17 @@ description: "lintian – Static analysis tool for Debian packages"
 <dd> <i></i>$XDG_CONFIG_HOME<i>/lintian/lintianrc</i></dd>
 <dt>&bull;</dt>
 <dd> <i></i>$HOME<i>/.lintianrc</i> </dd>
-<p> Deprecated in Lintian/2.5.12 and newer (use the <font SIZE="-1">XDG</font> based variant above)</p>
+<p> Deprecated in Lintian/2.5.12 and newer (use the XDG based variant above)</p>
 <dt>&bull;</dt>
 <dd> <i>XGD_DIR/lintian/lintianrc</i> </dd>
-<p> Where <font SIZE="-1">XGD_DIR</font> is a directories listed in <i></i>$XDG_CONFIG_DIRS<i></i> (or <i>/etc/xdg</i> if <i></i>$XDG_CONFIG_DIRS<i></i> is unset).</p>
+<p> Where XGD_DIR is a directories listed in <i></i>$XDG_CONFIG_DIRS<i></i> (or <i>/etc/xdg</i> if <i></i>$XDG_CONFIG_DIRS<i></i> is unset).</p>
 <dt>&bull;</dt>
 <dd> <i>/etc/lintianrc</i> </dd>
-<p> Deprecated in Lintian/2.5.12 and newer (use the <font SIZE="-1">XDG</font> based variant above)</dl>
+<p> Deprecated in Lintian/2.5.12 and newer (use the XDG based variant above)</dl>
 <p> Lintian uses the following directories:</p>
 <dl>
 <dt><i>/tmp</i></dt>
-<dd> Lintian defaults to creating a temporary lab directory in <i>/tmp</i>. To change the directory used, set the <font SIZE="-1">TMPDIR</font> environment variable to a suitable directory. <font SIZE="-1">TMPDIR</font> can be set in the configuration file.</dd>
+<dd> Lintian defaults to creating a temporary lab directory in <i>/tmp</i>. To change the directory used, set the TMPDIR environment variable to a suitable directory. TMPDIR can be set in the configuration file.</dd>
 <dt><i>/usr/share/lintian/checks</i></dt>
 <dd> Scripts that check aspects of a package.</dd>
 <dt><i>/usr/share/lintian/collection</i></dt>
@@ -243,10 +243,10 @@ description: "lintian – Static analysis tool for Debian packages"
 </pre>
 <p> Unless otherwise specified, no option may appear more than once. Lintian will ignore empty lines or lines starting with the <code>#</code>-character. </p>
 <p> Generally options will be the long form of the command-line option without the leading dashes. There some exceptions (such as &#8211;profile), where Lintian uses the same name as the environment variable. </p>
-<p> Lintian only allows a subset of the options specified in the configuration file; please refer to the individual options in &#8220;<font SIZE="-1">OPTIONS&#8221;</font>. </p>
+<p> Lintian only allows a subset of the options specified in the configuration file; please refer to the individual options in &#8220;OPTIONS&#8221;. </p>
 <p> In the configuration file, all options listed must have a value, even if they do not accept a value on command line (e.g. &#8211;pedantic). The values &#8220;yes&#8221;, &#8220;y&#8221;, &#8220;1&#8221;, or &#8220;true&#8221; will enable such an option and &#8220;no&#8221;, &#8220;n&#8221;, &#8220;0&#8221; or &#8220;false&#8221; will disable it. Prior to the 2.5.2 release, these values were case sensitive. </p>
-<p> For other options, they generally take the same values as they do on the command line. Though some options allow a slightly different format (e.g. &#8211;display-level). These exceptions are explained for the relevant options in &#8220;<font SIZE="-1">OPTIONS&#8221;</font>. </p>
-<p> Beyond command line options, it is also allowed to specify the environment variable &#8220;<font SIZE="-1">TMPDIR&#8221;</font> in the configuration file. </p>
+<p> For other options, they generally take the same values as they do on the command line. Though some options allow a slightly different format (e.g. &#8211;display-level). These exceptions are explained for the relevant options in &#8220;OPTIONS&#8221;. </p>
+<p> Beyond command line options, it is also allowed to specify the environment variable &#8220;TMPDIR&#8221; in the configuration file. </p>
 <p> A sample configuration file could look like: </p>
 <pre><code>
 #Sample configuration file for lintian
@@ -288,9 +288,9 @@ LINTIAN_PROFILE = debian
 <p> In each directory, Lintian will attempt to find a <i>.changes</i> file using the following values as architecture (in order):</p>
 <dl>
 <dt><i></i>$DEB_BUILD_ARCH<i></i> (or <i>dpkg &#8211;print-architecture</i>)</dt>
-<dd> The environment variable <font SIZE="-1">DEB_BUILD_ARCH</font> (if not set, &#8220;dpkg &#8211;print-architecture&#8221; will be used instead)</dd>
+<dd> The environment variable DEB_BUILD_ARCH (if not set, &#8220;dpkg &#8211;print-architecture&#8221; will be used instead)</dd>
 <dt><i></i>$DEB_HOST_ARCH<i></i></dt>
-<dd> The environment variable <font SIZE="-1">DEB_HOST_ARCH.</font></dd>
+<dd> The environment variable DEB_HOST_ARCH.</dd>
 <dt><i>dpkg &#8211;print-foreign-architectures</i></dt>
 <dd> If <code><a href="/docs/linux/man/1-dpkg/">dpkg</a></code>(1) appears to support multi-arch, then any architecture listed by &#8220;dpkg &#8211;print-foreign-architectures&#8221; will be used (in the order returned by dpkg).</dd>
 <dt><i>multi</i></dt>
@@ -299,7 +299,7 @@ LINTIAN_PROFILE = debian
 <dd> Used when building architecture indep packages only (e.g. dpkg-buildpackage -A).</dd>
 <dt><i>source</i></dt>
 <dd> Used for &#8220;source only&#8221; builds (e.g. dpkg-buildpackage -S).</dd></dl>
-<p> If a <i>.changes</i> file matches any combination above exists, Lintian will process the first match as if you had passed it per command line. If no <i>.changes</i> file can be found, Lintian will print a list of attempted locations on <font SIZE="-1">STDERR</font> and exit 0.</p>
+<p> If a <i>.changes</i> file matches any combination above exists, Lintian will process the first match as if you had passed it per command line. If no <i>.changes</i> file can be found, Lintian will print a list of attempted locations on STDERR and exit 0.</p>
 <h2>EXAMPLES</h2>
 <dl>
 <dt><code>$ lintian foo.changes</code></dt>

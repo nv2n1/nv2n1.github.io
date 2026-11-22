@@ -19,12 +19,12 @@ description: "QuantLib::HullWhiteForwardProcess – Forward Hull-White stochasti
 <p> Real <code>M_T</code> (Real s, Real t, Real T) const </p>
 <p> Real <code>B</code> (Time t, Time T) const </p>
 <p> <code>StochasticProcess1D interface</code> </p>
-<p> Real <code>x0</code> () const<br />
- <i>returns the initial value of the state variable </i><br />
- Real <code>drift</code> (Time t, Real x) const<br />
- <i>returns the drift part of the equation, i.e. $ mu(t, x_t) $ </i><br />
- Real <code>diffusion</code> (Time t, Real x) const<br />
- <i>returns the diffusion part of the equation, i.e. $ igma(t, x_t) $ </i><br />
+<p> Real <code>x0</code> () const<br/>
+ <i>returns the initial value of the state variable </i><br/>
+ Real <code>drift</code> (Time t, Real x) const<br/>
+ <i>returns the drift part of the equation, i.e. $ mu(t, x_t) $ </i><br/>
+ Real <code>diffusion</code> (Time t, Real x) const<br/>
+ <i>returns the diffusion part of the equation, i.e. $ igma(t, x_t) $ </i><br/>
  Real <code>expectation</code> (Time t0, Real x0, Time dt) const </p>
 <p> Real <code>stdDeviation</code> (Time t0, Real x0, Time dt) const </p>
 <p> Real <code>variance</code> (Time t0, Real x0, Time dt) const </p>

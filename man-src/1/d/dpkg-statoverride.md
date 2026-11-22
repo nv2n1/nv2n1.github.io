@@ -45,7 +45,7 @@ description: "dpkg-statoverride – override ownership and mode of files"
 <p> <code>all</code>: Turns on (or off) all force options. </p>
 <p> <code>statoverride-add</code>: Overwrite an existing stat override when adding it (since dpkg 1.19.5). </p>
 <p> <code>statoverride-remove</code>: Ignore a missing stat override when removing it (since dpkg 1.19.5). </p>
-<p> <code>security-mac</code>(*): Use platform-specific Mandatory Access Controls (<font SIZE="-1">MAC</font>) based security when installing files into the filesystem (since dpkg 1.19.5). On Linux systems the implementation uses SELinux.</p>
+<p> <code>security-mac</code>(*): Use platform-specific Mandatory Access Controls (MAC) based security when installing files into the filesystem (since dpkg 1.19.5). On Linux systems the implementation uses SELinux.</p>
 <dt><code>&#8211;force</code></dt>
 <dd> Force an action, even if a sanity check would otherwise prohibit it. This is necessary to override an existing override. This option is deprecated (since dpkg 1.19.5), it is replaced by <code>&#8211;force-all</code>.</dd>
 <dt><code>&#8211;update</code></dt>
@@ -62,13 +62,13 @@ description: "dpkg-statoverride – override ownership and mode of files"
 <dd> Fatal or unrecoverable error due to invalid command-line usage, or interactions with the system, such as accesses to the database, memory allocations, etc.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><font SIZE="-1"><code>DPKG_ROOT</code></font></dt>
+<dt><code>DPKG_ROOT</code></dt>
 <dd> If set and the <code>&#8211;instdir</code> or <code>&#8211;root</code> options have not been specified, it will be used as the filesystem root directory (since dpkg 1.19.2).</dd>
-<dt><font SIZE="-1"><code>DPKG_ADMINDIR</code></font></dt>
+<dt><code>DPKG_ADMINDIR</code></dt>
 <dd> If set and the <code>&#8211;admindir</code> or <code>&#8211;root</code> options have not been specified, it will be used as the <code>dpkg</code> data directory.</dd>
-<dt><font SIZE="-1"><code>DPKG_FORCE</code></font></dt>
+<dt><code>DPKG_FORCE</code></dt>
 <dd> If set and none of the <code>&#8211;force-</code><i>&#8230;</i> options have been specified, it will be used as the force options to use (since dpkg 1.19.5).</dd>
-<dt><font SIZE="-1"><code>DPKG_COLORS</code></font></dt>
+<dt><code>DPKG_COLORS</code></dt>
 <dd> Sets the color mode (since dpkg 1.18.5). The currently accepted values are: <code>auto</code> (default), <code>always</code> and <code>never</code>.</dd></dl>
 <h2>FILES</h2>
 <dl>

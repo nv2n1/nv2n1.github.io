@@ -19,25 +19,25 @@ description: "pamtopfm – Convert Netpbm image to PFM (Portable Float Map)"
 <p> There are details of the PFM format in the <code>PFM</code> Format Description (1) </p>
 <p> USC&#8217;s HDRShop program and a program called Lefty use it. </p>
 <p> <code>pamtopfm</code> creates a color PFM image if its input is RGB (PPM) and a non-color PFM otherwise. </p>
-<p> Use <code><a href="/docs/linux/man/1-pfmtopam/">pfmtopam</a></code>(1)<br />
+<p> Use <code><a href="/docs/linux/man/1-pfmtopam/">pfmtopam</a></code>(1)<br/>
 &nbsp;<wbr>to convert a PFM image to Netpbm format. </p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-scale=</code><i>float</i></dt>
 <dd>
-<p> This specifies the scale factor of the PFM image.<br />
-&nbsp;<wbr>&nbsp;<wbr>Scale factor is a component of the PFM format.<br />
+<p> This specifies the scale factor of the PFM image.<br/>
+&nbsp;<wbr>&nbsp;<wbr>Scale factor is a component of the PFM format.<br/>
 &nbsp;<wbr>&nbsp;<wbr>Default is 1.0. </p>
 </dd><dt><code>-endian=</code>{<code>big</code>|<code>little</code>}</dt>
 <dd>
-<p> This specifies the endianness of the PFM image. The samples<br />
-&nbsp;<wbr>&nbsp;<wbr>in the raster of a PFM image are 4 byte IEEE floating point<br />
-&nbsp;<wbr>&nbsp;<wbr>numbers.&nbsp;<wbr>&nbsp;<wbr>A parameter of the IEEE format, and therefore the PFM<br />
-&nbsp;<wbr>&nbsp;<wbr>format, is endianness, i.e. whether the specified bytes are<br />
+<p> This specifies the endianness of the PFM image. The samples<br/>
+&nbsp;<wbr>&nbsp;<wbr>in the raster of a PFM image are 4 byte IEEE floating point<br/>
+&nbsp;<wbr>&nbsp;<wbr>numbers.&nbsp;<wbr>&nbsp;<wbr>A parameter of the IEEE format, and therefore the PFM<br/>
+&nbsp;<wbr>&nbsp;<wbr>format, is endianness, i.e. whether the specified bytes are<br/>
 &nbsp;<wbr>&nbsp;<wbr>ordered from low addresses to high addresses or vice versa. </p>
-<p> <code>big</code> means big endian &#8212; the natural ordering;<br />
+<p> <code>big</code> means big endian &#8212; the natural ordering;<br/>
 &nbsp;<wbr>&nbsp;<wbr><code>little</code>&nbsp;<wbr>means little-endian, the Intel-friendly ordering. </p>
-<p> Default is whichever endianness the machine on which <code>pamtopfm</code><br />
+<p> Default is whichever endianness the machine on which <code>pamtopfm</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>runs uses internally, which results in the faster execution. </p>
 </dd></dl>
 <h2>SEE ALSO</h2>

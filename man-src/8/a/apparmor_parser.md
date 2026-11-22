@@ -25,7 +25,7 @@ description: "apparmor_parser – loads AppArmor profiles into the kernel"
 <dt>unprivileged profile commands</dt>
 <dd>Commands that operate on a profile either specified on the command line or read from stdin if no profile was specified.</dd>
 <dt>privileged commands</dt>
-<dd>Commands that require the <font SIZE="-1">MAC_ADMIN</font> capability within the affected AppArmor namespace to load policy into the kernel or filesystem write permissions to update the affected privileged files (cache etc).</dd>
+<dd>Commands that require the MAC_ADMIN capability within the affected AppArmor namespace to load policy into the kernel or filesystem write permissions to update the affected privileged files (cache etc).</dd>
 <dt>privileged profile commands</dt>
 <dd>Commands that require privilege and operate on profiles.</dd></dl>
 <h2>Unprivileged commands</h2>
@@ -69,9 +69,9 @@ description: "apparmor_parser – loads AppArmor profiles into the kernel"
 <dt>-f n, &#8211;apparmorfs n</dt>
 <dd>Set the location of the apparmor security filesystem (default is &#8220;/sys/kernel/security/apparmor&#8221;).</dd>
 <dt>&#8211;policy-features n</dt>
-<dd>Specify the feature set that the policy was developed under. This does not override feature <font SIZE="-1">ABI</font> rules.</dd>
+<dd>Specify the feature set that the policy was developed under. This does not override feature ABI rules.</dd>
 <dt>&#8211;override-policy-abi n</dt>
-<dd>Specify the feature set that the policy was developed under and override any feature <font SIZE="-1">ABI</font> rules that the policy may be using.</dd>
+<dd>Specify the feature set that the policy was developed under and override any feature ABI rules that the policy may be using.</dd>
 <dt>&#8211;kernel-features n</dt>
 <dd>Specify the feature set of the kernel that the policy is being compiled for. If not specified this will be determined by the system&#8217;s kernel.</dd>
 <dt>-M n, &#8211;features-file n</dt>
@@ -83,7 +83,7 @@ description: "apparmor_parser – loads AppArmor profiles into the kernel"
 <dt>-n n, &#8211;namespace-string n</dt>
 <dd>Force a profile to load in the namespace &#8220;n&#8221;.</dd>
 <dt>-X, &#8211;readimpliesX</dt>
-<dd>In the case of profiles that are loading on systems were <font SIZE="-1">READ_IMPLIES_EXEC</font> is set in the kernel for a given process, load the profile so that any &#8220;r&#8221; flags are processed as &#8220;mr&#8221;.</dd>
+<dd>In the case of profiles that are loading on systems were READ_IMPLIES_EXEC is set in the kernel for a given process, load the profile so that any &#8220;r&#8221; flags are processed as &#8220;mr&#8221;.</dd>
 <dt>-k, &#8211;show-cache</dt>
 <dd>Report the cache processing (hit/miss details) when loading or saving cached profiles.</dd>
 <dt>-K, &#8211;skip-cache</dt>
@@ -130,10 +130,10 @@ description: "apparmor_parser – loads AppArmor profiles into the kernel"
  # - a specific number of jobs
  auto - the # of cpus in the in the system
  x# - # * number of cpus</pre>
-<p>Eg.<br />
-&nbsp;<wbr>&nbsp;-j8&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<font SIZE="-1">OR</font>&nbsp;&#8211;jobs=8&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;allows for 8 parallel jobs<br />
-&nbsp;<wbr>&nbsp;-jauto&nbsp;<wbr>&nbsp;<font SIZE="-1">OR</font>&nbsp;&#8211;jobs=auto&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sets the jobs to the&nbsp;#&nbsp;of cpus<br />
-&nbsp;<wbr>&nbsp;-jx4&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<font SIZE="-1">OR</font>&nbsp;&#8211;jobs=x4&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sets the jobs to&nbsp;#&nbsp;of cpus&nbsp;*&nbsp;4<br />
+<p>Eg.<br/>
+&nbsp;<wbr>&nbsp;-j8&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;OR&nbsp;&#8211;jobs=8&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;allows for 8 parallel jobs<br/>
+&nbsp;<wbr>&nbsp;-jauto&nbsp;<wbr>&nbsp;OR&nbsp;&#8211;jobs=auto&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sets the jobs to the&nbsp;#&nbsp;of cpus<br/>
+&nbsp;<wbr>&nbsp;-jx4&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;OR&nbsp;&#8211;jobs=x4&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sets the jobs to&nbsp;#&nbsp;of cpus&nbsp;*&nbsp;4<br/>
 &nbsp;<wbr>&nbsp;-jx1&nbsp;<wbr>&nbsp;<wbr>&nbsp;is equivalent to&nbsp;<wbr>&nbsp;<wbr>&nbsp;-jauto </p>
 <p> The default value is the number of cpus in the system. Note that if jobs is a positive integer number the &#8211;jobs-max parameter is automatically set to the same value.</p>
 <dt>&#8211;max-jobs n</dt>
@@ -153,13 +153,13 @@ description: "apparmor_parser – loads AppArmor profiles into the kernel"
 <h2>Config File</h2>
 <p>An optional config file /etc/apparmor/parser.conf can be used to specify the default options for the parser, which then can be overridden using the command line options. </p>
 <p> The config file ignores leading whitespace and treats lines that begin with # as comments. Config options are specified one per line using the same format as the longform command line options (without the preceding &#8211;). </p>
-<p> Eg.<br />
+<p> Eg.<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;#comment </p>
 <pre> optimize=no-expr-tree
  optimize=compress-fast</pre>
 <p>As with the command line some options accumulate and others override, ie. when there are conflicting versions of switch the last option is the one chosen. </p>
-<p> Eg.<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Optimize=no-minimize<br />
+<p> Eg.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Optimize=no-minimize<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Optimize=minimize </p>
 <p> would result in Optimize=minimize being set. </p>
 <p> The Include, Dump, and Optimize options accululate except for the inversion option (no-X vs. X), and a couple options that work by setting/clearing multiple options (compress-small). In that case the option will override the flags it sets but will may accumulate with others. </p>

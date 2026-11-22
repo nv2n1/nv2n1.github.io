@@ -11,7 +11,7 @@ description: "saxpy.f –"
 <p> saxpy.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>saxpy</code> (N, SA, SX, INCX, SY, INCY)<br />
+<p> subroutine <code>saxpy</code> (N, SA, SX, INCX, SY, INCY)<br/>
  <i></i><code>SAXPY</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine saxpy (integerN, realSA, real, dimension(*)SX, integerINCX, real, dimension(*)SY, integerINCY)</h3>

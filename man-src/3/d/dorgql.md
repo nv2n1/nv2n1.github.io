@@ -11,7 +11,7 @@ description: "dorgql.f –"
 <p> dorgql.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dorgql</code> (M, N, K, A, LDA, TAU, WORK, LWORK, INFO)<br />
+<p> subroutine <code>dorgql</code> (M, N, K, A, LDA, TAU, WORK, LWORK, INFO)<br/>
  <i></i><code>DORGQL</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dorgql (integerM, integerN, integerK, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( * )TAU, double precision, dimension( * )WORK, integerLWORK, integerINFO)</h3>

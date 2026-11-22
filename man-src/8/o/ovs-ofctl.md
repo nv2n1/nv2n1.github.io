@@ -366,24 +366,24 @@ description: "ovs-ofctl – administer OpenFlow switches"
 <dd>
 </dd><dt><code>sctp_dst=</code><i>port</i><code>/</code><i>mask</i></dt>
 <dd>Bitwise match on TCP (or UDP or SCTP) source or destination port. The <i>port</i> and <i>mask</i> are 16-bit numbers written in decimal or in hexadecimal prefixed by <code>0x</code>. Each 1-bit in <i>mask</i> requires that the corresponding bit in <i>port</i> must match. Each 0-bit in <i>mask</i> causes the corresponding bit to be ignored.</dd>
-<dd>Bitwise matches on transport ports are rarely useful in isolation, but a group of them can be used to reduce the number of flows required to match on a range of transport ports. For example, suppose that the goal is to match TCP source ports 1000 to 1999, inclusive. One way is to insert 1000 flows, each of which matches on a single source port. Another way is to look at the binary representations of 1000 and 1999, as follows:<br />
- <code>01111101000</code><br />
- <code>11111001111</code><br />
- and then to transform those into a series of bitwise matches that accomplish the same results:<br />
- <code>01111101xxx</code><br />
- <code>0111111xxxx</code><br />
- <code>10xxxxxxxxx</code><br />
- <code>110xxxxxxxx</code><br />
- <code>1110xxxxxxx</code><br />
- <code>11110xxxxxx</code><br />
- <code>1111100xxxx</code><br />
- which become the following when written in the syntax required by <code>ovs-ofctl</code>:<br />
- <code>tcp,tcp_src=0x03e8/0xfff8</code><br />
- <code>tcp,tcp_src=0x03f0/0xfff0</code><br />
- <code>tcp,tcp_src=0x0400/0xfe00</code><br />
- <code>tcp,tcp_src=0x0600/0xff00</code><br />
- <code>tcp,tcp_src=0x0700/0xff80</code><br />
- <code>tcp,tcp_src=0x0780/0xffc0</code><br />
+<dd>Bitwise matches on transport ports are rarely useful in isolation, but a group of them can be used to reduce the number of flows required to match on a range of transport ports. For example, suppose that the goal is to match TCP source ports 1000 to 1999, inclusive. One way is to insert 1000 flows, each of which matches on a single source port. Another way is to look at the binary representations of 1000 and 1999, as follows:<br/>
+ <code>01111101000</code><br/>
+ <code>11111001111</code><br/>
+ and then to transform those into a series of bitwise matches that accomplish the same results:<br/>
+ <code>01111101xxx</code><br/>
+ <code>0111111xxxx</code><br/>
+ <code>10xxxxxxxxx</code><br/>
+ <code>110xxxxxxxx</code><br/>
+ <code>1110xxxxxxx</code><br/>
+ <code>11110xxxxxx</code><br/>
+ <code>1111100xxxx</code><br/>
+ which become the following when written in the syntax required by <code>ovs-ofctl</code>:<br/>
+ <code>tcp,tcp_src=0x03e8/0xfff8</code><br/>
+ <code>tcp,tcp_src=0x03f0/0xfff0</code><br/>
+ <code>tcp,tcp_src=0x0400/0xfe00</code><br/>
+ <code>tcp,tcp_src=0x0600/0xff00</code><br/>
+ <code>tcp,tcp_src=0x0700/0xff80</code><br/>
+ <code>tcp,tcp_src=0x0780/0xffc0</code><br/>
  <code>tcp,tcp_src=0x07c0/0xfff0</code></dd>
 <dd>Only Open vSwitch 1.6 and later supports bitwise matching on transport ports.</dd>
 <dd>Like the exact-match forms described above, the bitwise match forms apply only when <code>dl_type</code> and <code>nw_proto</code> specify TCP or UDP or SCTP.</dd>
@@ -573,8 +573,8 @@ description: "ovs-ofctl – administer OpenFlow switches"
 </dd><dt><code>tun_gbp_flags=</code><i>value</i>[<code>/</code><i>mask</i>]</dt>
 <dd>Matches the group policy identifier and flags in the VXLAN header. Only packets that arrive over a VXLAN tunnel with the &quot;gbp&quot; extension enabled can have this field set. The fields may also be referred to by NXM_NX_TUN_GBP_ID[] (16 bits) and NXM_NX_TUN_GBP_FLAGS[] (8 bits) in the context of field manipulation actions. If these fields are set and the packet matched by the flow is encapsulated in a VXLAN-GBP tunnel, then the policy identifier and flags are transmitted to the destination VXLAN tunnel endpoint.</dd>
 <dd>The <code>tun_gbp_flags</code> field has the following format:</dd>
-<dd>+-+-+-+-+-+-+-+-+<br />
- |-|D|-|-|A|-|-|-|<br />
+<dd>+-+-+-+-+-+-+-+-+<br/>
+ |-|D|-|-|A|-|-|-|<br/>
  +-+-+-+-+-+-+-+-+ <code>D :=</code> Don&#8217;t Learn bit. When set, this bit indicates that the egress tunnel endpoint MUST NOT learn the source address of the encapsulated frame. <code>A :=</code> Indicates that the group policy has already been applied to this packet. Policies MUST NOT be applied by devices when the A bit is set.</dd>
 <dd>For more information, please see the corresponding IETF draft: <a rel="nofollow" href="https://tools.ietf.org/html/draft-smith-vxlan-group-policy">https://tools.ietf.org/html/draft-smith-vxlan-group-policy</a></dd>
 <dt><code>tun_metadata</code><i>idx</i>[<code>=</code><i>value</i>[<code>/</code><i>mask</i>]]</dt>
@@ -782,13 +782,13 @@ description: "ovs-ofctl – administer OpenFlow switches"
 </dl>
 <dd>When committing related connections, the <code>ct_mark</code> for that connection is inherited from the current <code>ct_mark</code> stored with the original connection (ie, the connection created by <code>ct(alg=&#8230;)</code>).</dd></dl>
 </dl>
-<dd>The <code>ct</code> action may be used as a primitive to construct stateful firewalls by selectively committing some traffic, then matching the <code>ct_state</code> to allow established connections while denying new connections. The following flows provide an example of how to implement a simple firewall that allows new connections from port 1 to port 2, and only allows established connections to send traffic from port 2 to port 1:<br />
-&nbsp;<wbr><code>table=0,priority=1,action=drop<br />
-&nbsp;<wbr>table=0,priority=10,arp,action=normal<br />
-&nbsp;<wbr>table=0,priority=100,ip,ct_state=-trk,action=ct(table=1)<br />
-&nbsp;<wbr>table=1,in_port=1,ip,ct_state=+trk+new,action=ct(commit),2<br />
-&nbsp;<wbr>table=1,in_port=1,ip,ct_state=+trk+est,action=2<br />
-&nbsp;<wbr>table=1,in_port=2,ip,ct_state=+trk+new,action=drop<br />
+<dd>The <code>ct</code> action may be used as a primitive to construct stateful firewalls by selectively committing some traffic, then matching the <code>ct_state</code> to allow established connections while denying new connections. The following flows provide an example of how to implement a simple firewall that allows new connections from port 1 to port 2, and only allows established connections to send traffic from port 2 to port 1:<br/>
+&nbsp;<wbr><code>table=0,priority=1,action=drop<br/>
+&nbsp;<wbr>table=0,priority=10,arp,action=normal<br/>
+&nbsp;<wbr>table=0,priority=100,ip,ct_state=-trk,action=ct(table=1)<br/>
+&nbsp;<wbr>table=1,in_port=1,ip,ct_state=+trk+new,action=ct(commit),2<br/>
+&nbsp;<wbr>table=1,in_port=1,ip,ct_state=+trk+est,action=2<br/>
+&nbsp;<wbr>table=1,in_port=2,ip,ct_state=+trk+new,action=drop<br/>
 &nbsp;<wbr>table=1,in_port=2,ip,ct_state=+trk+est,action=1</code></dd>
 <dd>If <code>ct</code> is executed on IP (or IPv6) fragments, then the message is implicitly reassembled before sending to the connection tracker and refragmented upon <code>output</code>, to the original maximum received fragment size. Reassembly occurs within the context of the <code>zone</code>, meaning that IP fragments in different zones are not assembled together. Pipeline processing for the initial fragments is halted; When the final fragment is received, the message is assembled and pipeline processing will continue for that flow. Because packet ordering is not guaranteed by IP protocols, it is not possible to determine which IP fragment will cause message reassembly (and therefore continue pipeline processing). As such, it is strongly recommended that multiple flows should not execute <code>ct</code> to reassemble fragments from the same IP message.</dd>
 <dd>Currently, connection tracking is only available on Linux kernels with the nf_conntrack module loaded. The <code>ct</code> action was introduced in Open vSwitch 2.5.</dd>
@@ -980,16 +980,16 @@ description: "ovs-ofctl – administer OpenFlow switches"
 <dt><code>conjunction(</code><i>id</i><code>, </code><i>k</i><code>/</code><i>n</i><code>)</code></dt>
 <dd>An individual OpenFlow flow can match only a single value for each field. However, situations often arise where one wants to match one of a set of values within a field or fields. For matching a single field against a set, it is straightforward and efficient to add multiple flows to the flow table, one for each value in the set. For example, one might use the following flows to send packets with IP source address <i>a</i>, <i>b</i>, <i>c</i>, or <i>d</i> to the OpenFlow controller:</dd>
 <dl>
-<dd><code>ip,ip_src=</code><i>a</i><code> actions=controller</code><br />
- <code>ip,ip_src=</code><i>b</i><code> actions=controller</code><br />
- <code>ip,ip_src=</code><i>c</i><code> actions=controller</code><br />
+<dd><code>ip,ip_src=</code><i>a</i><code> actions=controller</code><br/>
+ <code>ip,ip_src=</code><i>b</i><code> actions=controller</code><br/>
+ <code>ip,ip_src=</code><i>c</i><code> actions=controller</code><br/>
  <code>ip,ip_src=</code><i>d</i><code> actions=controller</code>
 </dd></dl>
 <dd>Similarly, these flows send packets with IP destination address <i>e</i>, <i>f</i>, <i>g</i>, or <i>h</i> to the OpenFlow controller:</dd>
 <dl>
-<dd><code>ip,ip_dst=</code><i>e</i><code> actions=controller</code><br />
- <code>ip,ip_dst=</code><i>f</i><code> actions=controller</code><br />
- <code>ip,ip_dst=</code><i>g</i><code> actions=controller</code><br />
+<dd><code>ip,ip_dst=</code><i>e</i><code> actions=controller</code><br/>
+ <code>ip,ip_dst=</code><i>f</i><code> actions=controller</code><br/>
+ <code>ip,ip_dst=</code><i>g</i><code> actions=controller</code><br/>
  <code>ip,ip_dst=</code><i>h</i><code> actions=controller</code>
 </dd></dl>
 <dd>Installing all of the above flows in a single flow table yields a disjunctive effect: a packet is sent to the controller if <code>ip_src</code> mo {<i>a</i>,<i>b</i>,<i>c</i>,<i>d</i>} or <code>ip_dst</code> mo {<i>e</i>,<i>f</i>,<i>g</i>,<i>h</i>} (or both). (Pedantically, if both of the above sets of flows are present in the flow table, they should have different priorities, because OpenFlow says that the results are undefined when two flows with same priority can both match a single packet.)</dd>
@@ -998,14 +998,14 @@ description: "ovs-ofctl – administer OpenFlow switches"
 <dd>To implement a conjunctive flow with <code>conjunction</code>, assign the conjunctive flow a 32-bit <i>id</i>, which must be unique within an OpenFlow table. Assign each of the <i>n</i> &ge; 2 dimensions a unique number from 1 to <i>n</i>; the ordering is unimportant. Add one flow to the OpenFlow flow table for each possible value of each dimension with <code>conjunction(</code><i>id, k</i><code>/</code><i>n</i><code>)</code> as the flow&#8217;s actions, where <i>k</i> is the number assigned to the flow&#8217;s dimension. Together, these flows specify the conjunctive flow&#8217;s match condition. When the conjunctive match condition is met, Open vSwitch looks up one more flow that specifies the conjunctive flow&#8217;s actions and receives its statistics. This flow is found by setting <code>conj_id</code> to the specified <i>id</i> and then again searching the flow table.</dd>
 <dd>The following flows provide an example. Whenever the IP source is one of the values in the flows that match on the IP source (dimension 1 of 2), <i>and</i> the IP destination is one of the values in the flows that match on IP destination (dimension 2 of 2), Open vSwitch searches for a flow that matches <code>conj_id</code> against the conjunction ID (1234), finding the first flow listed below.</dd>
 <dl>
-<dd><code>conj_id=1234 actions=controller</code><br />
- <code>ip,ip_src=10.0.0.1 actions=conjunction(1234, 1/2)</code><br />
- <code>ip,ip_src=10.0.0.4 actions=conjunction(1234, 1/2)</code><br />
- <code>ip,ip_src=10.0.0.6 actions=conjunction(1234, 1/2)</code><br />
- <code>ip,ip_src=10.0.0.7 actions=conjunction(1234, 1/2)</code><br />
- <code>ip,ip_dst=10.0.0.2 actions=conjunction(1234, 2/2)</code><br />
- <code>ip,ip_dst=10.0.0.5 actions=conjunction(1234, 2/2)</code><br />
- <code>ip,ip_dst=10.0.0.7 actions=conjunction(1234, 2/2)</code><br />
+<dd><code>conj_id=1234 actions=controller</code><br/>
+ <code>ip,ip_src=10.0.0.1 actions=conjunction(1234, 1/2)</code><br/>
+ <code>ip,ip_src=10.0.0.4 actions=conjunction(1234, 1/2)</code><br/>
+ <code>ip,ip_src=10.0.0.6 actions=conjunction(1234, 1/2)</code><br/>
+ <code>ip,ip_src=10.0.0.7 actions=conjunction(1234, 1/2)</code><br/>
+ <code>ip,ip_dst=10.0.0.2 actions=conjunction(1234, 2/2)</code><br/>
+ <code>ip,ip_dst=10.0.0.5 actions=conjunction(1234, 2/2)</code><br/>
+ <code>ip,ip_dst=10.0.0.7 actions=conjunction(1234, 2/2)</code><br/>
  <code>ip,ip_dst=10.0.0.8 actions=conjunction(1234, 2/2)</code></dd></dl>
 <dd>Many subtleties exist:</dd>
 <dl>

@@ -10,7 +10,7 @@ description: "osinfo-db-path – Report database locations"
 
 <p> osinfo-db-path &#8211; Report database locations </p>
 <h2>SYNOPSIS</h2>
-<p> osinfo-db-path [<font SIZE="-1">OPTIONS&#8230;</font>]</p>
+<p> osinfo-db-path [OPTIONS&#8230;]</p>
 <h2>DESCRIPTION</h2>
 <p> The <code>osinfo-db-path</code> tool will report the paths associated with the standard osinfo database locations:</p>
 <dl>
@@ -30,7 +30,7 @@ description: "osinfo-db-path – Report database locations"
 <dt><code>&#8211;system</code></dt>
 <dd> Override the default behaviour to force reporting of the <code>system</code> database location.</dd>
 <dt><code>&#8211;dir=PATH</code></dt>
-<dd> Override the default behaviour to force reporting of the custom directory <font SIZE="-1"><code>PATH</code></font>.</dd>
+<dd> Override the default behaviour to force reporting of the custom directory <code>PATH</code>.</dd>
 <dt><code>&#8211;root=PATH</code></dt>
 <dd> Prefix the database location with the root directory given by <tt>&quot;PATH&quot;</tt>. This is useful when wishing to report paths relative to a chroot environment or equivalent.</dd></dl>
 <h2>EXIT STATUS</h2>
@@ -42,4 +42,4 @@ description: "osinfo-db-path – Report database locations"
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2016 Red Hat, Inc.</p>
 <h2>LICENSE</h2>
-<p> <tt>&quot;osinfo-db-import&quot;</tt> is distributed under the terms of the <font SIZE="-1">GNU LGPL</font> v2+ license. This is free software; see the source for copying conditions. There is <font SIZE="-1">NO</font> warranty; not even for <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE</font> </p>
+<p> <tt>&quot;osinfo-db-import&quot;</tt> is distributed under the terms of the GNU LGPL v2+ license. This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE </p>

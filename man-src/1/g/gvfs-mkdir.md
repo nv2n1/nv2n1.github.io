@@ -12,7 +12,7 @@ description: "gvfs-mkdir"
 <h2>DESCRIPTION</h2>
 <p> <code>gvfs-mkdir</code> has been deprecated and it is redirected to <code>gio mkdir</code>.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-gio/">gio</a></code>(1), m[blue]<code>GIO commandline tool</code>m[]<font SIZE="-2">[1]</font></p>
+<p> <code><a href="/docs/linux/man/1-gio/">gio</a></code>(1), m[blue]<code>GIO commandline tool</code>m[][1]</p>
 <h2>NOTES</h2>
 <dl>
 <dt> 1.</dt>

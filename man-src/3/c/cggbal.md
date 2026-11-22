@@ -11,7 +11,7 @@ description: "cggbal.f –"
 <p> cggbal.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cggbal</code> (JOB, N, A, LDA, B, LDB, ILO, IHI, LSCALE, RSCALE, WORK, INFO)<br />
+<p> subroutine <code>cggbal</code> (JOB, N, A, LDA, B, LDB, ILO, IHI, LSCALE, RSCALE, WORK, INFO)<br/>
  <i></i><code>CGGBAL</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cggbal (characterJOB, integerN, complex, dimension( lda, * )A, integerLDA, complex, dimension( ldb, * )B, integerLDB, integerILO, integerIHI, real, dimension( * )LSCALE, real, dimension( * )RSCALE, real, dimension( * )WORK, integerINFO)</h3>

@@ -16,27 +16,27 @@ description: "lvscan – List all logical volumes in all volume groups"
 <h2>Usage</h2>
 <p><code>lvscan</code> </p>
 <dl>
-<dd>[ <code>-a</code>|<code>&#8211;all</code> ]<br />
- [ <code>-b</code>|<code>&#8211;blockdevice</code> ]<br />
- [ <code>&#8211;ignorelockingfailure</code> ]<br />
- [ <code>&#8211;readonly</code> ]<br />
- [ <code>&#8211;reportformat</code> <code>basic</code>|<code>json</code> ]<br />
+<dd>[ <code>-a</code>|<code>&#8211;all</code> ]<br/>
+ [ <code>-b</code>|<code>&#8211;blockdevice</code> ]<br/>
+ [ <code>&#8211;ignorelockingfailure</code> ]<br/>
+ [ <code>&#8211;readonly</code> ]<br/>
+ [ <code>&#8211;reportformat</code> <code>basic</code>|<code>json</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <p> Common options for lvm:</p>
 <dl>
-<dd>[ <code>-d</code>|<code>&#8211;debug</code> ]<br />
- [ <code>-h</code>|<code>&#8211;help</code> ]<br />
- [ <code>-q</code>|<code>&#8211;quiet</code> ]<br />
- [ <code>-t</code>|<code>&#8211;test</code> ]<br />
- [ <code>-v</code>|<code>&#8211;verbose</code> ]<br />
- [ <code>-y</code>|<code>&#8211;yes</code> ]<br />
- [ <code>&#8211;commandprofile</code> <i>String</i> ]<br />
- [ <code>&#8211;config</code> <i>String</i> ]<br />
- [ <code>&#8211;driverloaded</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;lockopt</code> <i>String</i> ]<br />
- [ <code>&#8211;longhelp</code> ]<br />
- [ <code>&#8211;nolocking</code> ]<br />
- [ <code>&#8211;profile</code> <i>String</i> ]<br />
+<dd>[ <code>-d</code>|<code>&#8211;debug</code> ]<br/>
+ [ <code>-h</code>|<code>&#8211;help</code> ]<br/>
+ [ <code>-q</code>|<code>&#8211;quiet</code> ]<br/>
+ [ <code>-t</code>|<code>&#8211;test</code> ]<br/>
+ [ <code>-v</code>|<code>&#8211;verbose</code> ]<br/>
+ [ <code>-y</code>|<code>&#8211;yes</code> ]<br/>
+ [ <code>&#8211;commandprofile</code> <i>String</i> ]<br/>
+ [ <code>&#8211;config</code> <i>String</i> ]<br/>
+ [ <code>&#8211;driverloaded</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;lockopt</code> <i>String</i> ]<br/>
+ [ <code>&#8211;longhelp</code> ]<br/>
+ [ <code>&#8211;nolocking</code> ]<br/>
+ [ <code>&#8211;profile</code> <i>String</i> ]<br/>
  [ <code>&#8211;version</code> ]</dd></dl>
 <h2>Options</h2>
 <dl>

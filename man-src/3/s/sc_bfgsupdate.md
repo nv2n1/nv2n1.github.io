@@ -16,8 +16,8 @@ description: "sc::BFGSUpdate –"
 <h3>Public Member Functions</h3>
 <p><code>BFGSUpdate</code> (<code>StateIn</code> &amp;) </p>
 <p> <code>BFGSUpdate</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;) </p>
-<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br />
- <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br />
+<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br/>
+ <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br/>
  void <code>update</code> (const <code>RefSymmSCMatrix</code> &amp;ihessian, const <code>Ref</code>&lt; <code>Function</code> &gt; &amp;, const <code>RefSCVector</code> &amp;xnew, const <code>RefSCVector</code> &amp;gnew)</p>
 <h2>Detailed Description</h2>
 <p>The <code>DFPUpdate</code> class is used to specify a Broyden, Fletcher, Goldfarb, and Shanno hessian update scheme. </p>

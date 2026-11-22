@@ -72,19 +72,19 @@ description: "xrandr – primitive command line interface to RandR extension"
 <dl>
 <dl>
 <dt>
-</dt><dd> a b c<br />
- d e f<br />
+</dt><dd> a b c<br/>
+ d e f<br/>
  g h i</dd></dl>
 <p> The transformation is based on homogeneous coordinates. The matrix multiplied by the coordinate vector of a pixel of the output gives the transformed coordinate vector of a pixel in the graphic buffer. More precisely, the vector (x y) of the output pixel is extended to 3 values (x y w), with 1 as the w coordinate and multiplied against the matrix. The final device coordinates of the pixel are then calculated with the so-called homogenic division by the transformed w coordinate. In other words, the device coordinates (x&#8217; y&#8217;) of the transformed pixel are:</p>
 <dl>
 <dt>
-</dt><dd> x&#8217; = (ax + by + c) / w&#8217; and<br />
- y&#8217; = (dx + ey + f) / w&#8217; ,<br />
+</dt><dd> x&#8217; = (ax + by + c) / w&#8217; and<br/>
+ y&#8217; = (dx + ey + f) / w&#8217; ,<br/>
  with w&#8217; = (gx + hy + i) .</dd></dl>
 <p> Typically, <i>a</i> and <i>e</i> corresponds to the scaling on the X and Y axes, <i>c</i> and <i>f</i> corresponds to the translation on those axes, and <i>g</i>, <i>h</i>, and <i>i</i> are respectively 0, 0 and 1. The matrix can also be used to express more complex transformations such as keystone correction, or rotation. For a rotation of an angle T, this formula can be used:</p>
 <dl>
 <dt>
-</dt><dd> cos T -sin T 0<br />
+</dt><dd> cos T -sin T 0<br/>
  sin T cos T 0 </dd>
 <p>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;1</dl>
 <p> As a special argument, instead of passing a matrix, one can pass the string <i>none</i>, in which case the default values are used (a unit matrix without filter).</dl>
@@ -168,8 +168,8 @@ description: "xrandr – primitive command line interface to RandR extension"
 <p> Forces to use a 1024&#215;768 mode on an output called VGA:</p>
 <dl>
 <dt>
-</dt><dd> xrandr &#8211;newmode &quot;1024&#215;768&quot; 63.50 1024 1072 1176 1328 768 771 775 798 -hsync +vsync<br />
- xrandr &#8211;addmode VGA 1024&#215;768<br />
+</dt><dd> xrandr &#8211;newmode &quot;1024&#215;768&quot; 63.50 1024 1072 1176 1328 768 771 775 798 -hsync +vsync<br/>
+ xrandr &#8211;addmode VGA 1024&#215;768<br/>
  xrandr &#8211;output VGA &#8211;mode 1024&#215;768</dd></dl>
 <p> Enables panning on a 1600&#215;768 desktop while displaying 1024&#215;768 mode on an output called VGA:</p>
 <dl>

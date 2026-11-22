@@ -10,7 +10,7 @@ description: "socket – create an endpoint for communication"
 
 <p> socket &#8211; create an endpoint for communication </p>
 <h2>SYNOPSIS</h2>
-<p> <code>#include &lt;sys/types.h&gt;</code> /* See NOTES */<br />
+<p> <code>#include &lt;sys/types.h&gt;</code> /* See NOTES */<br/>
  <code>#include &lt;sys/socket.h&gt;</code> </p>
 <p> <code>int socket(int </code><i>domain</i><code>, int </code><i>type</i><code>, int </code><i>protocol</i><code>);</code></p>
 <h2>DESCRIPTION</h2>
@@ -98,7 +98,7 @@ description: "socket – create an endpoint for communication"
 <tr VALIGN=top>
 <td> <code>AF_RDS</code> &nbsp;</td>
 <td> Reliable Datagram Sockets (RDS) protocol </td>
-<td> <code>rds</code>(7)<br />
+<td> <code>rds</code>(7)<br/>
  <code>rds-rdma</code>(7)
 </td>
 </tr>

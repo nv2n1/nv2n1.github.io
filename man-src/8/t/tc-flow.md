@@ -107,7 +107,7 @@ KEY := {
 <dt>Classic SFQ hash:</dt>
 <dd>tc filter add &#8230; flow hash \ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>keys src,dst,proto,proto-src,proto-dst divisor 1024</dd>
 <dt>Classic SFQ hash, but using information from conntrack to work properly in combination with NAT:</dt>
-<dd>tc filter add &#8230; flow hash \ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>keys nfct-src,nfct-dst,proto,nfct-proto-src,nfct-proto-dst \<br />
+<dd>tc filter add &#8230; flow hash \ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>keys nfct-src,nfct-dst,proto,nfct-proto-src,nfct-proto-dst \<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>divisor 1024</dd>
 <dt>Map destination IPs of 192.168.0.0/24 to classids 1-256:</dt>
 <dd>tc filter add &#8230; flow map \ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>key dst addend -192.168.0.0 divisor 256</dd>

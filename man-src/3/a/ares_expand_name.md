@@ -31,5 +31,5 @@ int ares_expand_name(const unsigned char *encoded,
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-ares_mkquery/">ares_mkquery</a></code>(3),<code><a href="/docs/linux/man/3-ares_free_string/">ares_free_string</a></code>(3)</p>
 <h2>AUTHOR</h2>
-<p> Greg Hudson, MIT Information Systems<br />
+<p> Greg Hudson, MIT Information Systems<br/>
  Copyright 1998 by the Massachusetts Institute of Technology. </p>

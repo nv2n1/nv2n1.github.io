@@ -136,7 +136,7 @@ daemon sensord</pre>
 <h2>Bugs</h2>
 <p>Round-robin database support doesn&#8217;t cope with multiple sensor chips having duplicate sensor labels.</p>
 <h2>Files</h2>
-<p><i>/etc/sensors3.conf</i><br />
+<p><i>/etc/sensors3.conf</i><br/>
  <i>/etc/sensors.conf</i></p>
 <dl>
 <dd>The system-wide <code><a href="/docs/linux/man/3-libsensors/">libsensors</a></code>(3) configuration file. See <code><a href="/docs/linux/man/5-sensors-conf/">sensors.conf</a></code>(5) for further details.</dd></dl>

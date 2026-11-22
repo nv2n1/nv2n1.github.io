@@ -14,19 +14,19 @@ description: "QuantLib::LiborForwardModelProcess – libor-forward-model process
 <p> Inherits <code>QuantLib::StochasticProcess</code>. </p>
 <h3>Public Member Functions</h3>
 <p> <code>LiborForwardModelProcess</code> (Size size, const boost::shared_ptr&lt; <code>IborIndex</code> &gt; &amp;index) </p>
-<p> <code>Disposable</code>&lt; <code>Array</code> &gt; <code>initialValues</code> () const<br />
- <i>returns the initial values of the state variables </i><br />
- <code>Disposable</code>&lt; <code>Array</code> &gt; <code>drift</code> (Time t, const <code>Array</code> &amp;x) const<br />
- <i>returns the drift part of the equation, i.e., $ mu(t, mathrm{x}_t) $ </i><br />
- <code>Disposable</code>&lt; <code>Matrix</code> &gt; <code>diffusion</code> (Time t, const <code>Array</code> &amp;x) const<br />
- <i>returns the diffusion part of the equation, i.e. $ igma(t, mathrm{x}_t) $ </i><br />
+<p> <code>Disposable</code>&lt; <code>Array</code> &gt; <code>initialValues</code> () const<br/>
+ <i>returns the initial values of the state variables </i><br/>
+ <code>Disposable</code>&lt; <code>Array</code> &gt; <code>drift</code> (Time t, const <code>Array</code> &amp;x) const<br/>
+ <i>returns the drift part of the equation, i.e., $ mu(t, mathrm{x}_t) $ </i><br/>
+ <code>Disposable</code>&lt; <code>Matrix</code> &gt; <code>diffusion</code> (Time t, const <code>Array</code> &amp;x) const<br/>
+ <i>returns the diffusion part of the equation, i.e. $ igma(t, mathrm{x}_t) $ </i><br/>
  <code>Disposable</code>&lt; <code>Matrix</code> &gt; <code>covariance</code> (Time t0, const <code>Array</code> &amp;x0, Time dt) const </p>
 <p> <code>Disposable</code>&lt; <code>Array</code> &gt; <code>apply</code> (const <code>Array</code> &amp;x0, const <code>Array</code> &amp;dx) const </p>
 <p> <code>Disposable</code>&lt; <code>Array</code> &gt; <code>evolve</code> (Time t0, const <code>Array</code> &amp;x0, Time dt, const <code>Array</code> &amp;dw) const </p>
-<p> Size <code>size</code> () const<br />
- <i>returns the number of dimensions of the stochastic process </i><br />
- Size <code>factors</code> () const<br />
- <i>returns the number of independent factors of the process </i><br />
+<p> Size <code>size</code> () const<br/>
+ <i>returns the number of dimensions of the stochastic process </i><br/>
+ Size <code>factors</code> () const<br/>
+ <i>returns the number of independent factors of the process </i><br/>
  boost::shared_ptr&lt; <code>IborIndex</code> &gt; <code>index</code> () const </p>
 <p> Leg <code>cashFlows</code> (<code>Real</code> amount=1.0) const </p>
 <p> void <code>setCovarParam</code> (const boost::shared_ptr&lt; <code>LfmCovarianceParameterization</code> &gt; &amp;param) </p>

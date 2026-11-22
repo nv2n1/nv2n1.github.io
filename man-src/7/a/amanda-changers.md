@@ -199,7 +199,7 @@ tpchanger &quot;chg-rait:{vtape,robot}&quot;</pre>
 <p> Drive names are parsed in a similar fashion, for operations that take drive names (clean and eject). </p>
 <p> This changer is fast-search capable only if all of its child changers are fast-search capable. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  The old chg-rait script is no longer supported nor shipped with Amanda, although the old script will continue to function via <code>chg-compat</code>, giving users time to upgrade their configuration. </dd>
 </dl>
 <h3>chg-null:</h3>

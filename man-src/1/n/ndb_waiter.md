@@ -76,7 +76,7 @@ shell&gt; <code>ndb_waiter --nowait-nodes=1,3,7-9</code>
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Important</code> </font><br />
+  <code>Important</code> <br/>
  Do <i>not</i> use this option together with the <code>&#8211;wait-nodes</code> option. </dd>
 </dl>
 <p> This option was added in MySQL Cluster NDB 6.2.1.</dl>
@@ -94,7 +94,7 @@ shell&gt; <code>ndb_waiter --wait-nodes=2,4-6,10</code>
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Important</code> </font><br />
+  <code>Important</code> <br/>
  Do <i>not</i> use this option together with the <code>&#8211;nowait-nodes</code> option. </dd>
 </dl>
 <p> This option was added in MySQL Cluster NDB 6.3.34, 7.0.15, and 7.1.4.</dl>
@@ -153,7 +153,7 @@ NDBT_ProgramExit: 0 - OK
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> If no connectstring is specified, then <code>ndb_waiter</code> tries to connect to a management on localhost, and reports Connecting to mgmsrv at (null). </p>
 </dl>
 <h2>COPYRIGHT</h2>

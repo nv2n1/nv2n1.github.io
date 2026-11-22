@@ -10,7 +10,7 @@ description: "ppmrainbow – Generate a rainbow"
 
 <p> ppmrainbow &#8211; Generate a rainbow</p>
 <h2>SYNOPSIS</h2>
-<p> <code>ppmrainbow</code> [<code>-width=</code><i>number</i>] [<code>-height=</code><i>number</i>]<br />
+<p> <code>ppmrainbow</code> [<code>-width=</code><i>number</i>] [<code>-height=</code><i>number</i>]<br/>
  [<code>-tmpdir=</code><i>directory</i>] [<code>-verbose</code>] <i>color</i> &#8230; </p>
 <p> All options can be abbreviated to their shortest unique prefix. You may use two hyphens instead of one to designate an option. You may use either white space or equals signs between an option name and its value. </p>
 <h2>DESCRIPTION</h2>

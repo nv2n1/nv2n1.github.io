@@ -15,14 +15,14 @@ description: "sc::EulerMaclaurinRadialIntegrator –"
 <p> Inherits <code>sc::RadialIntegrator</code>.</p>
 <h3>Public Member Functions</h3>
 <p><code>EulerMaclaurinRadialIntegrator</code> (int i) </p>
-<p> <code>EulerMaclaurinRadialIntegrator</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br />
- <i>Constructs a </i><code>EulerMaclaurinRadialIntegrator</code> from <code>KeyVal</code> input.<br />
+<p> <code>EulerMaclaurinRadialIntegrator</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br/>
+ <i>Constructs a </i><code>EulerMaclaurinRadialIntegrator</code> from <code>KeyVal</code> input.<br/>
  <code>EulerMaclaurinRadialIntegrator</code> (<code>StateIn</code> &amp;) </p>
-<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br />
- <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br />
+<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br/>
+ <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br/>
  int <code>nr</code> () const </p>
 <p> double <code>radial_value</code> (int ir, int nr, double radii, double &amp;multiplier) </p>
-<p> void <code>print</code> (std::ostream &amp;=ExEnv::out0()) const<br />
+<p> void <code>print</code> (std::ostream &amp;=ExEnv::out0()) const<br/>
  <i>Print the object. </i></p>
 <h2>Detailed Description</h2>
 <p>An implementation of a radial integrator using the Euler-Maclaurin weights and grid points.</p>

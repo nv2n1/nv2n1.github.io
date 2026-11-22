@@ -11,9 +11,9 @@ clipbrowse - Load a URL from the clipboard into your browser.
 
 <h2>USAGE</h2>
 
- # ...copy something # (You might want to do a `clipjoin` if the <font SIZE="-1">URL</font> text is messy) $ clipbrowse 
+ # ...copy something # (You might want to do a `clipjoin` if the URL text is messy) $ clipbrowse 
 
- Remember that many browsers will usefully load things that don't look like <font SIZE="-1">URL</font>'s. For example Firefox does a Google ``I'm feeling lucky'' with non-URLs. This means you can have any text in your clipboard and `clipbrowse`.
+ Remember that many browsers will usefully load things that don't look like URL's. For example Firefox does a Google ``I'm feeling lucky'' with non-URLs. This means you can have any text in your clipboard and `clipbrowse`.
 
 <h2>MOTIVATION</h2>
 
@@ -29,7 +29,7 @@ clipbrowse - Load a URL from the clipboard into your browser.
 
 <h2>AUTHOR</h2>
 
- Ryan King &lt;rking [at] panoptic.com&gt; =head1 <font SIZE="-1">COPYRIGHT</font> 
+ Ryan King &lt;rking [at] panoptic.com&gt; =head1 COPYRIGHT 
 
  Copyright (c) 2010. Ryan King. All rights reserved. 
 

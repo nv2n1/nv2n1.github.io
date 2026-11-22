@@ -9,7 +9,7 @@ description: "mmv_lookup_value_desc – find a value in the Memory Mapped Value 
 
 <p><code>mmv_lookup_value_desc</code> &#8211; find a value in the Memory Mapped Value file</p>
 <h2>C Synopsis</h2>
-<p><code> #include &lt;pcp/pmapi.h&gt;<br />
+<p><code> #include &lt;pcp/pmapi.h&gt;<br/>
  #include &lt;pcp/mmv_stats.h&gt; </p>
 <p> pmAtomValue *mmv_lookup_value_desc(void *</code><i>addr</i>, const char *<i>metric</i>, const char&nbsp;<wbr>*<i>inst</i>); </p>
 <p> cc &#8230; -lpcp_mmv -lpcp</p>

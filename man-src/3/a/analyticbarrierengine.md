@@ -10,11 +10,11 @@ description: "ql/pricingengines/barrier/analyticbarrierengine.hpp – Analytic b
 
 <p> ql/pricingengines/barrier/analyticbarrierengine.hpp &#8211; Analytic barrier option engines. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/instruments/barrieroption.hpp&gt;<br />
- #include &lt;ql/processes/blackscholesprocess.hpp&gt;<br />
+<p> #include &lt;ql/instruments/barrieroption.hpp&gt;<br/>
+ #include &lt;ql/processes/blackscholesprocess.hpp&gt;<br/>
  #include &lt;ql/math/distributions/normaldistribution.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>AnalyticBarrierEngine</code><br />
+<p> class <code>AnalyticBarrierEngine</code><br/>
  <i>Pricing engine for barrier options using analytical formulae. </i></p>
 <h2>Detailed Description</h2>
 <p> Analytic barrier option engines. </p>

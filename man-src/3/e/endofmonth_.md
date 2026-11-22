@@ -22,7 +22,7 @@ description: "QuantLib::IborIndex – base class for Inter-Bank-Offered-Rate ind
 <p> <code>Date calculations</code> </p>
 <p> <code>Date</code> <code>maturityDate</code> (const <code>Date</code> &amp;valueDate) const </p>
 <p> <code>Other methods</code> </p>
-<p> virtual boost::shared_ptr&lt; <code>IborIndex</code> &gt; <code>clone</code> (const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;h) const<br />
+<p> virtual boost::shared_ptr&lt; <code>IborIndex</code> &gt; <code>clone</code> (const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;h) const<br/>
  <i>returns a copy of itself linked to a different forecast curve </i></p>
 <h3>Protected Member Functions</h3>
 <p><code>Rate</code> <code>forecastFixing</code> (const <code>Date</code> &amp;fixingDate) const </p>

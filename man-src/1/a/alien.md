@@ -14,7 +14,7 @@ description: "alien – Convert or install an alien binary package"
 alien[--to - deb][--to - rpm][--to - tgz][--to - slp][options] file[...]
 </code></pre>
 <h2>DESCRIPTION</h2>
-<p> <code>alien</code> is a program that converts between Red Hat rpm, Debian deb, Stampede slp, Slackware tgz, and Solaris pkg file formats. If you want to use a package from another linux distribution than the one you have installed on your system, you can use <code>alien</code> to convert it to your preferred package format and install it. It also supports <font SIZE="-1">LSB</font> packages.</p>
+<p> <code>alien</code> is a program that converts between Red Hat rpm, Debian deb, Stampede slp, Slackware tgz, and Solaris pkg file formats. If you want to use a package from another linux distribution than the one you have installed on your system, you can use <code>alien</code> to convert it to your preferred package format and install it. It also supports LSB packages.</p>
 <h2>WARNING</h2>
 <p> <code>alien</code> should not be used to replace important system packages, like init, libc, or other things that are essential for the functioning of your system. Many of these packages are set up differently by the different distributions, and packages from the different distributions cannot be used interchangeably. In general, if you can&#8217;t remove a package without breaking your system, don&#8217;t try to replace it with an alien version.</p>
 <h2>PACKAGE FORMAT NOTES</h2>
@@ -23,15 +23,15 @@ alien[--to - deb][--to - rpm][--to - tgz][--to - slp][options] file[...]
 <dd> For converting to and from rpm format the Red Hat Package Manager must be installed.</dd>
 <dt>lsb</dt>
 <dd> Unlike the other package formats, <code>alien</code> can handle the depenendencies of lsb packages if the destination package format supports dependencies. Note that this means that the package generated from a lsb package will depend on a package named &#8220;lsb&#8221; &#8212; your distribution should provide a package by that name, if it is lsb compliant. The scripts in the lsb package will be converted by default as well. </dd>
-<p> To generate lsb packages, the Red Hat Package Manager must be installed, and <code>alien</code> will use by preference a program named lsb-rpm, if it exists. No guarantees are made that the generated lsb packages will be fully <font SIZE="-1">LSB</font> compliant, and it&#8217;s rather unlikely they will unless you build them in the lsbdev environment. </p>
-<p> Note that unlike other package formats, converting an <font SIZE="-1">LSB</font> package to another format will not cause its minor version number to be changed.</p>
+<p> To generate lsb packages, the Red Hat Package Manager must be installed, and <code>alien</code> will use by preference a program named lsb-rpm, if it exists. No guarantees are made that the generated lsb packages will be fully LSB compliant, and it&#8217;s rather unlikely they will unless you build them in the lsbdev environment. </p>
+<p> Note that unlike other package formats, converting an LSB package to another format will not cause its minor version number to be changed.</p>
 <dt>deb</dt>
 <dd> For converting to (but not from) deb format, the gcc, make, debhelper, dpkg-dev, and dpkg packages must be installed.</dd>
 <dt>tgz</dt>
-<dd> Note that when converting from the tgz format, <code>alien</code> will simply generate an output package that has the same files in it as are in the tgz file. This only works well if the tgz file has precompiled binaries in it in a standard linux directory tree. Do <font SIZE="-1">NOT</font> run <code>alien</code> on tar files with source code in them, unless you want this source code to be installed in your root directory when you install the package! </dd>
+<dd> Note that when converting from the tgz format, <code>alien</code> will simply generate an output package that has the same files in it as are in the tgz file. This only works well if the tgz file has precompiled binaries in it in a standard linux directory tree. Do NOT run <code>alien</code> on tar files with source code in them, unless you want this source code to be installed in your root directory when you install the package! </dd>
 <p> When using <code>alien</code> to convert a tgz package, all files in /etc in are assumed to be configuration files.</p>
 <dt>pkg</dt>
-<dd> To manipulate packages in the Solaris pkg format (which is really the <font SIZE="-1">SV </font> datastream package format), you will need the Solaris pkginfo and pkgtrans tools.</dd></dl>
+<dd> To manipulate packages in the Solaris pkg format (which is really the SV  datastream package format), you will need the Solaris pkginfo and pkgtrans tools.</dd></dl>
 <h2>OPTIONS</h2>
 <p> <code>alien</code> will convert all the files you pass into it into all the output types you specify. If no output type is specified, it defaults to converting to deb format.</p>
 <dl>
@@ -99,11 +99,11 @@ alien[--to - deb][--to - rpm][--to - tgz][--to - slp][options] file[...]
 <h2>ENVIRONMENT</h2>
 <p> <code>alien</code> recognizes the following environment variables:</p>
 <dl>
-<dt><font SIZE="-1">RPMBUILDOPT</font></dt>
+<dt>RPMBUILDOPT</dt>
 <dd> Options to pass to rpm when it is building a package.</dd>
-<dt><font SIZE="-1">RPMINSTALLOPT</font></dt>
+<dt>RPMINSTALLOPT</dt>
 <dd> Options to pass to rpm when it is installing a package.</dd>
-<dt><font SIZE="-1">EMAIL</font></dt>
+<dt>EMAIL</dt>
 <dd> If set, <code>alien</code> assumes this is your email address. Email addresses are included in generated debian packages.</dd></dl>
 <h2>AUTHOR</h2>
 <p> <code>alien</code> was written by Christoph Lameter, <code>&lt;clameter [at] debian.org</code>&gt;. </p>
@@ -111,4 +111,4 @@ alien[--to - deb][--to - rpm][--to - tgz][--to - slp][options] file[...]
 <p> The Solaris pkg code was written by Mark A. Hershberger <code>&lt;mah [at] everybody.org</code>&gt;. </p>
 <p> alien has been extensively rewritten (3 times) and is now maintained by Joey Hess, <code>&lt;joeyh [at] debian.org</code>&gt;.</p>
 <h2>COPYRIGHT</h2>
-<p> alien may be copied and modified under the terms of the <font SIZE="-1">GNU</font> General Public License. </p>
+<p> alien may be copied and modified under the terms of the GNU General Public License. </p>

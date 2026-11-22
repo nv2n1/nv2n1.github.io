@@ -18,13 +18,13 @@ int _sysctl(struct __sysctl_args *args);
 <h2>DESCRIPTION</h2>
 <p> <code>This system call no longer exists on current kernels!</code> See NOTES. </p>
 <p> The <code>_sysctl</code>() call reads and/or writes kernel parameters. For example, the hostname, or the maximum number of open files. The argument has the form </p>
-<p> struct __sysctl_args {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;*name;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;integer vector describing variable&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;nlen;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;length of this vector&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;void&nbsp;<wbr>&nbsp;<wbr>&nbsp;*oldval;&nbsp;<wbr>&nbsp;/*&nbsp;0 or address where to store old value&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;size_t&nbsp;*oldlenp;&nbsp;/*&nbsp;available room for old value,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;overwritten by actual size of old value&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;void&nbsp;<wbr>&nbsp;<wbr>&nbsp;*newval;&nbsp;<wbr>&nbsp;/*&nbsp;0 or address of new value&nbsp;*/<br />
+<p> struct __sysctl_args {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;*name;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;integer vector describing variable&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;nlen;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;length of this vector&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;void&nbsp;<wbr>&nbsp;<wbr>&nbsp;*oldval;&nbsp;<wbr>&nbsp;/*&nbsp;0 or address where to store old value&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;size_t&nbsp;*oldlenp;&nbsp;/*&nbsp;available room for old value,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;overwritten by actual size of old value&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;void&nbsp;<wbr>&nbsp;<wbr>&nbsp;*newval;&nbsp;<wbr>&nbsp;/*&nbsp;0 or address of new value&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;size_t&nbsp;<wbr>&nbsp;newlen;&nbsp;<wbr>&nbsp;/*&nbsp;size of new value&nbsp;*/ }; </p>
 <p> This call does a search in a tree structure, possibly resembling a directory tree under <i>/proc/sys</i>, and if the requested item is found calls some appropriate routine to read or modify the value.</p>
 <h2>RETURN VALUE</h2>
@@ -52,23 +52,23 @@ int _sysctl(struct __sysctl_args *args);
 <p> #define _GNU_SOURCE #include &lt;unistd.h&gt; #include &lt;sys/syscall.h&gt; #include &lt;string.h&gt; #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; #include &lt;linux/sysctl.h&gt; </p>
 <p> int _sysctl(struct __sysctl_args *args ); </p>
 <p> #define OSNAMESZ 100 </p>
-<p> int main(void) {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct&nbsp;__sysctl_args args;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char osname[OSNAMESZ];<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;size_t osnamelth;<br />
+<p> int main(void) {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct&nbsp;__sysctl_args args;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char osname[OSNAMESZ];<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;size_t osnamelth;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int name[]&nbsp;=&nbsp;{&nbsp;CTL_KERN, KERN_OSTYPE&nbsp;}; </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;memset(&amp;args, 0, sizeof(args));<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;args.name&nbsp;=&nbsp;name;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;args.nlen&nbsp;=&nbsp;sizeof(name)/sizeof(name[0]);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;args.oldval&nbsp;=&nbsp;osname;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;memset(&amp;args, 0, sizeof(args));<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;args.name&nbsp;=&nbsp;name;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;args.nlen&nbsp;=&nbsp;sizeof(name)/sizeof(name[0]);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;args.oldval&nbsp;=&nbsp;osname;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;args.oldlenp&nbsp;=&nbsp;&amp;osnamelth; </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;osnamelth&nbsp;=&nbsp;sizeof(osname); </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(syscall(SYS__sysctl,&nbsp;&amp;args)&nbsp;==&nbsp;-1)&nbsp;{<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;perror(&quot;_sysctl&quot;);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_FAILURE);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;}<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(syscall(SYS__sysctl,&nbsp;&amp;args)&nbsp;==&nbsp;-1)&nbsp;{<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;perror(&quot;_sysctl&quot;);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_FAILURE);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;}<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;This machine is running&nbsp;%*s
-&quot;, osnamelth, osname);<br />
+&quot;, osnamelth, osname);<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_SUCCESS); }</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-proc/">proc</a></code>(5)</p>

@@ -16,18 +16,18 @@ description: "std::experimental::filesystem::last_write_time – std::experiment
         void last_write_time(const path &amp;p, file_time_type new_time);
 (2)(filesystem TS)
     void last_write_time(const path &amp;p, file_time_type new_time, error_code &amp;ec);</code></pre>
-<p>1) Returns the time of the last modification of p, determined as if by accessing the member st_mtime of the POSIX stat (symlinks are followed) The non-throwing overload returns file_time_type::min() on errors.<br />
+<p>1) Returns the time of the last modification of p, determined as if by accessing the member st_mtime of the POSIX stat (symlinks are followed) The non-throwing overload returns file_time_type::min() on errors.<br/>
 2) Changes the time of the last modification of p, as if by POSIX futimens (symlinks are followed) </p>
 <h2>Parameters</h2>
-<p>p &#8211; path to examine or modify<br />
-new_time &#8211; new modification time<br />
+<p>p &#8211; path to examine or modify<br/>
+new_time &#8211; new modification time<br/>
 ec &#8211; out-parameter for error reporting in the non-throwing overload</p>
 <h2>Return value</h2>
-<p>1) The time of the last modification of p<br />
+<p>1) The time of the last modification of p<br/>
 2) <i>(none)</i> </p>
 <h2>Exceptions</h2>
-<p>The overload that does not take a error_code&amp; parameter throws filesystem_error on underlying OS API errors, constructed with p as the first argument and the OS error code as the error code argument. std::bad_alloc may be thrown if memory allocation fails. The overload taking a error_code&amp; parameter sets it to the OS API error code if an OS API call fails, and executes ec.clear() if no errors occur. This overload has<br />
-noexcept specification:<br />
+<p>The overload that does not take a error_code&amp; parameter throws filesystem_error on underlying OS API errors, constructed with p as the first argument and the OS error code as the error code argument. std::bad_alloc may be thrown if memory allocation fails. The overload taking a error_code&amp; parameter sets it to the OS API error code if an OS API call fails, and executes ec.clear() if no errors occur. This overload has<br/>
+noexcept specification:<br/>
 noexcept</p>
 <h2>Notes</h2>
 <p>It is not guaranteed that immediately after setting the write time, the value returned by <code>(1)</code> is the same as what was passed as the argument to <code>(2)</code> because the file system&#8217;s time may be more granular than file_time_type. </p>
@@ -60,5 +60,5 @@ int main()
 <p>&nbsp;<wbr>&nbsp;File write time is Tue Mar 31 19:47:04 2015 </p>
 <p>&nbsp;<wbr>&nbsp;File write time is Tue Mar 31 20:47:04 2015</p>
 <h2>See also</h2>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;represents file time values<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;represents file time values<br/>
 file_time_type <i>(typedef)</i> </p>

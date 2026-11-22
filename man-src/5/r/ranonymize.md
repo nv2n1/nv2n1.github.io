@@ -23,10 +23,10 @@ description: "ranonymize.conf – ranonymize(1) configuration file."
 <code>RANON_TIME_SEC_OFFSET=</code>random
 <code>RANON_TIME_USEC_OFFSET=</code>random</pre>
 <h2>Ethernet Address Vendor Codes</h2>
-<p>When anonymizing ethernet addresses, <code>ranonymize</code> has the option to preserve the vendor portion, if desired. This allows analytical programs to differentiate anonymized data by vendor type. This feature is turned off by default.<br />
+<p>When anonymizing ethernet addresses, <code>ranonymize</code> has the option to preserve the vendor portion, if desired. This allows analytical programs to differentiate anonymized data by vendor type. This feature is turned off by default.<br/>
 &nbsp;<wbr> <code>RANON_PRESERVE_ETHERNET_VENDOR=</code>no</p>
 <h2>Broadcast Addresses</h2>
-<p>Ranonymize has the option to preserve the semantic that an address is a broadcast address. This is very important when doing flow analysis for either operational or performance managment tasks, using anonymized data.<br />
+<p>Ranonymize has the option to preserve the semantic that an address is a broadcast address. This is very important when doing flow analysis for either operational or performance managment tasks, using anonymized data.<br/>
 &nbsp;<wbr> <code>RANON_PRESERVE_BROADCAST_ADDRESS=</code>yes</p>
 <h2>IPv4 Address Anonymization</h2>
 <p>IPv4 address are composed of two parts, a network part and a host part. Because the addressing strategy of a site may have integrated semantics that would want to be retained in the anonymized addresses, IPv4 address anonymization involves specifying a one-to-one translation table for both the network and host address spaces in an IPv4 address. Once a new network address has been allocated, every occurence of that network address will be substituted in the anonymizers output stream. The host address space is anonymized in an independent but similar fashion. </p>

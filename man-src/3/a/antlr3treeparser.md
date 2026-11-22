@@ -10,14 +10,14 @@ description: "include/antlr3treeparser.h –"
 
 <p> include/antlr3treeparser.h &#8211; </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;<a href="file:/usr/include/antlr3defs.h">antlr3defs.h</a>&gt;<br />
- #include &lt;<a href="file:/usr/include/antlr3baserecognizer.h">antlr3baserecognizer.h</a>&gt;<br />
+<p> #include &lt;<a href="file:/usr/include/antlr3defs.h">antlr3defs.h</a>&gt;<br/>
+ #include &lt;<a href="file:/usr/include/antlr3baserecognizer.h">antlr3baserecognizer.h</a>&gt;<br/>
  #include &lt;<a href="file:/usr/include/antlr3commontreenodestream.h">antlr3commontreenodestream.h</a>&gt; </p>
 <h3>Data Structures</h3>
-<p> struct <code>ANTLR3_TREE_PARSER_struct</code><br />
+<p> struct <code>ANTLR3_TREE_PARSER_struct</code><br/>
  <i>Internal structure representing an element in a hash bucket. </i></p>
 <h3>Typedefs</h3>
-<p> typedef struct <code>ANTLR3_TREE_PARSER_struct</code> <code>ANTLR3_TREE_PARSER</code><br />
+<p> typedef struct <code>ANTLR3_TREE_PARSER_struct</code> <code>ANTLR3_TREE_PARSER</code><br/>
  <i>Internal structure representing an element in a hash bucket. </i></p>
 <h2>Typedef Documentation</h2>
 <h3>typedef struct <code>ANTLR3_TREE_PARSER_struct</code></h3>

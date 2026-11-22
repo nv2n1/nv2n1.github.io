@@ -22,7 +22,7 @@ description: "dmlite_replica –"
 <p> enum <code>dmlite_replica_type</code> <code>type</code> </p>
 <p> char <code>server</code> [<code>HOST_NAME_MAX</code>] </p>
 <p> char <code>rfn</code> [<code>URL_MAX</code>] </p>
-<p> <code>dmlite_any_dict</code> * <code>extra</code><br />
+<p> <code>dmlite_any_dict</code> * <code>extra</code><br/>
  <i>If != NULL, additional metadata will be put here. </i></p>
 <h2>Detailed Description</h2>
 <p> A replica of a file</p>

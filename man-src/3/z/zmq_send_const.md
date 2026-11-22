@@ -19,7 +19,7 @@ description: "zmq_send_const – send a constant-memory message part on a socket
 <dl>
 <dd>Specifies that the message being sent is a multi-part message, and that further message parts are to follow. Refer to the section regarding multi-part messages below for a detailed description.</dd></dl>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> A successful invocation of <i>zmq_send_const()</i> does not indicate that the message has been transmitted to the network, only that it has been queued on the <i>socket</i> and 0MQ has assumed responsibility for the message. </p>
 </dl>
 <h3>Multi-part messages</h3>

@@ -39,18 +39,18 @@ description: "simple – basic example action"
 <dt>6)</dt>
 <dd>display stats again and observe increment by 1 hadi [at] noma1$ ping -c 1 www.google.ca</dd>
 <p>PING www.google.ca (74.125.225.120) 56(84) bytes of data.</p>
-<p>64 bytes from ord08s08-in-f24.1e100.net (74.125.225.120): icmp_req=1 ttl=53 time=31.3 ms<br />
+<p>64 bytes from ord08s08-in-f24.1e100.net (74.125.225.120): icmp_req=1 ttl=53 time=31.3 ms<br/>
 &#8212; www.google.ca ping statistics &#8212;</p>
 <p>1 packets transmitted, 1 received, 0% packet loss, time 0ms</p>
-<p>rtt min/avg/max/mdev = 31.316/31.316/31.316/0.000 ms<br />
-&nbsp;<wbr>&nbsp;hadi [at] noma1:$&nbsp;sudo tc -s filter ls&nbsp;<wbr>&nbsp;dev eth0 parent ffff:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;filter protocol ip pref 5 u32<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;filter protocol ip pref 5 u32 fh 800: ht divisor 1<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;filter protocol ip pref 5 u32 fh 800::800 order 2048 key ht 800 bkt 0 flowid 1:1<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;match 00010000/00ff0000 at 8 <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>action order 1: Simple &lt;Incoming ICMP&gt;<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt> index 4 ref 1 bind 1 installed 29 sec used 29 sec<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt> Action statistics:<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Sent 0 bytes 0 pkt (dropped 0, overlimits 0 requeues 0)<br />
+<p>rtt min/avg/max/mdev = 31.316/31.316/31.316/0.000 ms<br/>
+&nbsp;<wbr>&nbsp;hadi [at] noma1:$&nbsp;sudo tc -s filter ls&nbsp;<wbr>&nbsp;dev eth0 parent ffff:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;filter protocol ip pref 5 u32<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;filter protocol ip pref 5 u32 fh 800: ht divisor 1<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;filter protocol ip pref 5 u32 fh 800::800 order 2048 key ht 800 bkt 0 flowid 1:1<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;match 00010000/00ff0000 at 8 <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>action order 1: Simple &lt;Incoming ICMP&gt;<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt> index 4 ref 1 bind 1 installed 29 sec used 29 sec<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt> Action statistics:<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Sent 0 bytes 0 pkt (dropped 0, overlimits 0 requeues 0)<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>backlog 0b 0p requeues 0</p>
 <pre><code>hadi [at] noma1$ ping -c 1 www.google.ca
 PING www.google.ca (74.125.225.120) 56(84) bytes of data.
@@ -58,16 +58,16 @@ PING www.google.ca (74.125.225.120) 56(84) bytes of data.
 --- www.google.ca ping statistics ---
 1 packets transmitted, 1 received, 0% packet loss, time 0ms
 rtt min/avg/max/mdev = 31.316/31.316/31.316/0.000 ms</code></pre>
-<p>&nbsp;<wbr>&nbsp;hadi [at] noma1$&nbsp;dmesg | grep simple<br />
-&nbsp;<wbr>&nbsp;[135354.473951]&nbsp;simple: Incoming ICMP_1<br />
-&nbsp;<wbr>&nbsp;hadi [at] noma1$&nbsp;sudo tc/tc -s filter ls&nbsp;<wbr>&nbsp;dev eth0 parent ffff:<br />
-&nbsp;<wbr>&nbsp;filter protocol ip pref 5 u32<br />
-&nbsp;<wbr>&nbsp;filter protocol ip pref 5 u32 fh 800: ht divisor 1<br />
-&nbsp;<wbr>&nbsp;filter protocol ip pref 5 u32 fh 800::800 order 2048 key ht 800 bkt 0 flowid 1:1<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;match 00010000/00ff0000 at 8 <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>action order 1: Simple &lt;Incoming ICMP&gt;<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt> index 4 ref 1 bind 1 installed 206 sec used 67 sec<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Action statistics:<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Sent 84 bytes 1 pkt (dropped 0, overlimits 0 requeues 0)<br />
+<p>&nbsp;<wbr>&nbsp;hadi [at] noma1$&nbsp;dmesg | grep simple<br/>
+&nbsp;<wbr>&nbsp;[135354.473951]&nbsp;simple: Incoming ICMP_1<br/>
+&nbsp;<wbr>&nbsp;hadi [at] noma1$&nbsp;sudo tc/tc -s filter ls&nbsp;<wbr>&nbsp;dev eth0 parent ffff:<br/>
+&nbsp;<wbr>&nbsp;filter protocol ip pref 5 u32<br/>
+&nbsp;<wbr>&nbsp;filter protocol ip pref 5 u32 fh 800: ht divisor 1<br/>
+&nbsp;<wbr>&nbsp;filter protocol ip pref 5 u32 fh 800::800 order 2048 key ht 800 bkt 0 flowid 1:1<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;match 00010000/00ff0000 at 8 <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>action order 1: Simple &lt;Incoming ICMP&gt;<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt> index 4 ref 1 bind 1 installed 206 sec used 67 sec<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Action statistics:<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Sent 84 bytes 1 pkt (dropped 0, overlimits 0 requeues 0)<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>backlog 0b 0p requeues 0
 </dl>
 <h2>See Also</h2>

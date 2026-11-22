@@ -17,7 +17,7 @@ description: "cgiwrap_write – wrapper for the fwrite(stdout)"
 NEOERR *cgiwrap_write(const char *buf, int buf_len);
 </code></pre>
 <h2>ARGUMENTS</h2>
-<p> buf &#8211; a character buffer<br />
+<p> buf &#8211; a character buffer<br/>
  buf_len &#8211; the length of the buffer in buf </p>
 <h2>DESCRIPTION</h2>
 <p> cgiwrap_write is the block data output function for cgiwrap that replaces fwrite(stdout) in regular CGIs </p>

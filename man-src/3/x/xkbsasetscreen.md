@@ -10,7 +10,7 @@ description: "XkbSASetScreen – Sets the screenXXX field of act from s"
 <p>XkbSASetScreen &#8211; Sets the screenXXX field of act from s </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>void XkbSASetScreen</code> <code>(XkbSwitchScreenAction </code><i>act</i><code>,</code> <code>int </code><i>s</i><code>);</code><br />
+<dt> <code>void XkbSASetScreen</code> <code>(XkbSwitchScreenAction </code><i>act</i><code>,</code> <code>int </code><i>s</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

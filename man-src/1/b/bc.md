@@ -151,11 +151,11 @@ description: "bc – An arbitrary precision calculator language"
 <dt><code>while</code> ( expression ) statement</dt>
 <dd> The while statement will execute the statement while the expression is non-zero. It evaluates the expression before each execution of the statement. Termination of the loop is caused by a zero expression value or the execution of a break statement.</dd>
 <dt><code>for</code> ( [expression1] ; [expression2] ; [expression3] ) statement</dt>
-<dd> The for statement controls repeated execution of the statement. Expression1 is evaluated before the loop. Expression2 is evaluated before each execution of the statement. If it is non-zero, the statement is evaluated. If it is zero, the loop is terminated. After each execution of the statement, expression3 is evaluated before the reevaluation of expression2. If expression1 or expression3 are missing, nothing is evaluated at the point they would be evaluated. If expression2 is missing, it is the same as substituting the value 1 for expression2. (The optional expressions are an extension. POSIX <code>bc</code> requires all three expressions.) The following is equivalent code for the for statement:<br />
-expression1;<br />
-while (expression2) {<br />
-    statement;<br />
-    expression3;<br />
+<dd> The for statement controls repeated execution of the statement. Expression1 is evaluated before the loop. Expression2 is evaluated before each execution of the statement. If it is non-zero, the statement is evaluated. If it is zero, the loop is terminated. After each execution of the statement, expression3 is evaluated before the reevaluation of expression2. If expression1 or expression3 are missing, nothing is evaluated at the point they would be evaluated. If expression2 is missing, it is the same as substituting the value 1 for expression2. (The optional expressions are an extension. POSIX <code>bc</code> requires all three expressions.) The following is equivalent code for the for statement:<br/>
+expression1;<br/>
+while (expression2) {<br/>
+    statement;<br/>
+    expression3;<br/>
 }</dd>
 <dt><code>break</code></dt>
 <dd> This statement causes a forced exit of the most recent enclosing while statement or for statement.</dd>
@@ -189,26 +189,26 @@ while (expression2) {<br />
 <p> The function body is a list of <code>bc</code> statements. Again, statements are separated by semicolons or newlines. Return statements cause the termination of a function and the return of a value. There are two versions of the return statement. The first form, &quot;<code>return</code>&quot;, returns the value 0 to the calling expression. The second form, &quot;<code>return ( </code><i>expression </i><code>)</code>&quot;, computes the value of the expression and returns that value to the calling expression. There is an implied &quot;<code>return (0)</code>&quot; at the end of every function. This allows a function to terminate and return 0 without an explicit return statement. </p>
 <p> Functions also change the usage of the variable <code>ibase</code>. All constants in the function body will be converted using the value of <code>ibase</code> at the time of the function call. Changes of <code>ibase</code> will be ignored during the execution of the function except for the standard function <code>read</code>, which will always use the current value of <code>ibase</code> for conversion of numbers. </p>
 <p> Several extensions have been added to functions. First, the format of the definition has been slightly relaxed. The standard requires the opening brace be on the same line as the <code>define</code> keyword and all other parts must be on following lines. This version of <code>bc</code> will allow any number of newlines before and after the opening brace of the function. For example, the following definitions are legal. </p>
-<p>define d(n)<br />
-{<br />
-    return (2 * n);<br />
-}<br />
-define d(n)<br />
-{<br />
-    return (2 * n);<br />
+<p>define d(n)<br/>
+{<br/>
+    return (2 * n);<br/>
+}<br/>
+define d(n)<br/>
+{<br/>
+    return (2 * n);<br/>
 }</p>
 <p> Functions may be defined as <code>void</code>. A void function returns no value and thus may not be used in any place that needs a value. A void function does not produce any output when called by itself on an input line. The key word <code>void</code> is placed between the key word <code>define</code> and the function name. For example, consider the following session. </p>
-<p>define py(y)<br />
-{<br />
+<p>define py(y)<br/>
+{<br/>
     print &#8220;&#8212;&gt;&#8221;, y, &#8220;&lt;&#8212;&#8220;, &#8220;
-&#8221;;<br />
-}<br />
-define void px(x)<br />
-{<br />
+&#8221;;<br/>
+}<br/>
+define void px(x)<br/>
+{<br/>
     print &#8220;&#8212;&gt;&#8221;, x, &#8220;&lt;&#8212;&#8220;, &#8220;
-&#8221;;<br />
-}<br />
-py(1)&#8212;&gt;1 &lt; &#8212; -0 px(1)&#8212;&gt;1 &lt; &#8212; &#8211;<br />
+&#8221;;<br/>
+}<br/>
+py(1)&#8212;&gt;1 &lt; &#8212; -0 px(1)&#8212;&gt;1 &lt; &#8212; &#8211;<br/>
  Since <code>py</code> is not a void function, the call of <code>py(1)</code> prints the desired output and then prints a second line that is the value of the function. Since the value of a function that is not given an explicit return statement is zero, the zero is printed. For <code>px(1)</code>, no zero is printed because the function is a void function. </p>
 <p> Also, call by variable for arrays was added. To declare a call by variable array, the declaration of the array parameter in the function definition looks like &quot;,<i>*name/</i><code>[]</code>&quot;. The call to the function remains the same as call by value arrays.</p>
 <h3>MATH LIBRARY</h3>
@@ -232,38 +232,38 @@ py(1)&#8212;&gt;1 &lt; &#8212; -0 px(1)&#8212;&gt;1 &lt; &#8212; &#8211;<br />
 <dt>
 </dt><dd> <tt> pi=$(echo &quot;scale=10; 4*a(1)&quot; | bc -l) </tt></dd></dl>
 <p> The following is the definition of the exponential function used in the math library. This function is written in POSIX <code>bc</code>. </p>
-<p>scale = 20<br />
-    /* Uses the fact that e^x = (e^(x/2))^2<br />
-       When x is small enough, we use the series:<br />
-         e^x = 1 + x + x^2/2! + x^3/3! + &#8230;<br />
-    */<br />
-    define<br />
-    e(x)<br />
-{<br />
-    auto a, d, e, f, i, m, v, z<br />
-                              /* Check the sign of x. */<br />
-                              if (x &lt; 0){m = 1 x = -x} /* Precondition x. */<br />
-                              z = scale;<br />
-    scale = 4 + z + .44 * x;<br />
-    while (x &gt; 1) {<br />
-        f += 1;<br />
-        x /= 2;<br />
-    }<br />
-    /* Initialize the variables. */<br />
-    v = 1 + x<br />
-                a = x<br />
-            d = 1 for (i = 2; 1; i++)<br />
-    {<br />
-        e = (a *= x) / (d *= i) if (e == 0)<br />
-        {<br />
-            if (f &gt; 0)<br />
-                while (f&#8211;)<br />
-                    v = v * v;<br />
-            scale = z if (m) return (1 / v);<br />
-            return (v / 1);<br />
-        }<br />
-        v += e<br />
-    }<br />
+<p>scale = 20<br/>
+    /* Uses the fact that e^x = (e^(x/2))^2<br/>
+       When x is small enough, we use the series:<br/>
+         e^x = 1 + x + x^2/2! + x^3/3! + &#8230;<br/>
+    */<br/>
+    define<br/>
+    e(x)<br/>
+{<br/>
+    auto a, d, e, f, i, m, v, z<br/>
+                              /* Check the sign of x. */<br/>
+                              if (x &lt; 0){m = 1 x = -x} /* Precondition x. */<br/>
+                              z = scale;<br/>
+    scale = 4 + z + .44 * x;<br/>
+    while (x &gt; 1) {<br/>
+        f += 1;<br/>
+        x /= 2;<br/>
+    }<br/>
+    /* Initialize the variables. */<br/>
+    v = 1 + x<br/>
+                a = x<br/>
+            d = 1 for (i = 2; 1; i++)<br/>
+    {<br/>
+        e = (a *= x) / (d *= i) if (e == 0)<br/>
+        {<br/>
+            if (f &gt; 0)<br/>
+                while (f&#8211;)<br/>
+                    v = v * v;<br/>
+            scale = z if (m) return (1 / v);<br/>
+            return (v / 1);<br/>
+        }<br/>
+        v += e<br/>
+    }<br/>
 }</p>
 <p> The following is code that uses the extended features of <code>bc</code> to implement a simple program for calculating checkbook balances. This program is best kept in a file so that it can be used many times without having to retype it at every use. </p>
 <p>scale = 2 print &#8220;
@@ -271,18 +271,18 @@ Check book program!
 &#8221; print &#8221;  Remember, deposits are negative transactions.
 &#8221; print &#8221;  Exit by a 0 transaction.
 
-&#8221; print &#8220;Initial balance? &#8220;;<br />
-bal = read()<br />
+&#8221; print &#8220;Initial balance? &#8220;;<br/>
+bal = read()<br/>
     bal /= 1 print &#8220;
-&#8221; while (1)<br />
-{<br />
-    &#8220;current balance = &#8220;;<br />
-    bal<br />
-        &#8220;transaction? &#8220;;<br />
-    trans = read() if (trans == 0) break;<br />
-    bal -= trans<br />
-        bal /= 1<br />
-}<br />
+&#8221; while (1)<br/>
+{<br/>
+    &#8220;current balance = &#8220;;<br/>
+    bal<br/>
+        &#8220;transaction? &#8220;;<br/>
+    trans = read() if (trans == 0) break;<br/>
+    bal -= trans<br/>
+        bal /= 1<br/>
+}<br/>
 quit</p>
 <p> The following is the definition of the recursive factorial function. </p>
 <pre><code>

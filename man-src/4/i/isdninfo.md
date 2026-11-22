@@ -11,9 +11,9 @@ description: "isdninfo – ISDN status device"
 <h2>Synopsis</h2>
 <pre><code>#include &lt;linux/isdn.h&gt;</code></pre>
 <h2>Description</h2>
-<p><i>/dev/isdninfo</i> is a character device with major number <code>45</code> and minor number <code>255</code>. It delivers status information from the Linux <font SIZE="-1">ISDN</font> subsystem to user level.</p>
+<p><i>/dev/isdninfo</i> is a character device with major number <code>45</code> and minor number <code>255</code>. It delivers status information from the Linux ISDN subsystem to user level.</p>
 <h2>Data Format</h2>
-<p>When reading from this device, the current status of the Linux <font SIZE="-1">ISDN</font> subsystem is delivered in <code>6</code> lines of text. Each line starts with a tag string followed by a colon and whitespace. After that the status values are appended separated by whitespace.</p>
+<p>When reading from this device, the current status of the Linux ISDN subsystem is delivered in <code>6</code> lines of text. Each line starts with a tag string followed by a colon and whitespace. After that the status values are appended separated by whitespace.</p>
 <dl>
 <dt><code>idmap</code></dt>
 <dd>is the tag of the first line. In this line for every virtual channel, the Id-string of the corresponding lowlevel driver is shown. If no driver is loaded, a &#8211; (hyphen) is shown.</dd>

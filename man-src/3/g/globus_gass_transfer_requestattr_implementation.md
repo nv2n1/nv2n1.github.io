@@ -21,8 +21,8 @@ description: "Implementing Request Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>obj</i><br />
- <i>backlog</i><br />
+</dt><dd> <i>obj</i><br/>
+ <i>backlog</i><br/>
  <i>port</i></dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -33,10 +33,10 @@ description: "Implementing Request Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>obj</i><br />
- <i>proxy_url</i><br />
- <i>block_size</i><br />
- <i>file_mode</i><br />
+</dt><dd> <i>obj</i><br/>
+ <i>proxy_url</i><br/>
+ <i>block_size</i><br/>
+ <i>file_mode</i><br/>
  <i>connection_reuse</i></dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -47,15 +47,15 @@ description: "Implementing Request Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>obj</i><br />
- <i>proxy_url</i><br />
- <i>block_size</i><br />
- <i>file_mode</i><br />
- <i>connection_reuse</i><br />
- <i>sndbuf</i><br />
- <i>rcvbuf</i><br />
- <i>nodelay</i><br />
- <i>authorization</i><br />
+</dt><dd> <i>obj</i><br/>
+ <i>proxy_url</i><br/>
+ <i>block_size</i><br/>
+ <i>file_mode</i><br/>
+ <i>connection_reuse</i><br/>
+ <i>sndbuf</i><br/>
+ <i>rcvbuf</i><br/>
+ <i>nodelay</i><br/>
+ <i>authorization</i><br/>
  <i>subject</i></dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -66,13 +66,13 @@ description: "Implementing Request Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>obj</i><br />
- <i>proxy_url</i><br />
- <i>block_size</i><br />
- <i>file_mode</i><br />
- <i>connection_reuse</i><br />
- <i>sndbuf</i><br />
- <i>rcvbuf</i><br />
+</dt><dd> <i>obj</i><br/>
+ <i>proxy_url</i><br/>
+ <i>block_size</i><br/>
+ <i>file_mode</i><br/>
+ <i>connection_reuse</i><br/>
+ <i>sndbuf</i><br/>
+ <i>rcvbuf</i><br/>
  <i>nodelay</i></dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

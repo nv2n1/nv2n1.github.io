@@ -11,7 +11,7 @@ description: "cgeesx.f –"
 <p> cgeesx.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cgeesx</code> (JOBVS, SORT, SELECT, SENSE, N, A, LDA, SDIM, W, VS, LDVS, RCONDE, RCONDV, WORK, LWORK, RWORK, BWORK, INFO)<br />
+<p> subroutine <code>cgeesx</code> (JOBVS, SORT, SELECT, SENSE, N, A, LDA, SDIM, W, VS, LDVS, RCONDE, RCONDV, WORK, LWORK, RWORK, BWORK, INFO)<br/>
  <i></i><code> CGEESX computes the eigenvalues, the Schur form, and, optionally, the matrix of Schur vectors for GE matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cgeesx (characterJOBVS, characterSORT, logical, externalSELECT, characterSENSE, integerN, complex, dimension( lda, * )A, integerLDA, integerSDIM, complex, dimension( * )W, complex, dimension( ldvs, * )VS, integerLDVS, realRCONDE, realRCONDV, complex, dimension( * )WORK, integerLWORK, real, dimension( * )RWORK, logical, dimension( * )BWORK, integerINFO)</h3>
@@ -64,10 +64,10 @@ description: "cgeesx.f –"
           An eigenvalue W(j) is selected if SELECT(W(j)) is true.
 </pre>
 <p> <i>SENSE</i> </p>
-<p>SENSE is CHARACTER * 1 Determines which reciprocal condition numbers are computed.= &#8216;N&#8217; : None are computed;<br />
-          = &#8216;E&#8217;: Computed for average of selected eigenvalues only;<br />
-          = &#8216;V&#8217;: Computed for selected right invariant subspace only;<br />
-          = &#8216;B&#8217;: Computed for both.<br />
+<p>SENSE is CHARACTER * 1 Determines which reciprocal condition numbers are computed.= &#8216;N&#8217; : None are computed;<br/>
+          = &#8216;E&#8217;: Computed for average of selected eigenvalues only;<br/>
+          = &#8216;V&#8217;: Computed for selected right invariant subspace only;<br/>
+          = &#8216;B&#8217;: Computed for both.<br/>
           If SENSE = &#8216;E&#8217;, &#8216;V&#8217; or &#8216;B&#8217;, SORT must equal &#8216;S&#8217;.</p>
 <p> <i>N</i> </p>
 <pre>
@@ -131,22 +131,22 @@ description: "cgeesx.f –"
           On exit, if INFO = 0, WORK(1) returns the optimal LWORK.
 </pre>
 <p> <i>LWORK</i> </p>
-<p>LWORK is INTEGER<br />
-        The dimension of the array WORK.LWORK &gt;= max(1, 2 * N).Also,<br />
-    if SENSE = &#8216;E&#8217; or &#8216;V&#8217; or &#8216;B&#8217;, LWORK &gt;= 2 * SDIM *(N &#8211; SDIM),<br />
-       where SDIM is the number of selected eigenvalues computed by<br />
-               this routine.Note that 2 *<br />
-               SDIM *(N &#8211; SDIM) &lt;=<br />
-           N *N / 2. Note also<br />
-               that an error is only returned if LWORK &lt;<br />
-           max(1, 2 * N),<br />
-       but if SENSE = &#8216;E&#8217; or &#8216;V&#8217; or &#8216;B&#8217; this may not be large enough.For good performance, LWORK must generally be larger.If LWORK = -1, then a workspace query is assumed;<br />
-the routine<br />
-    only calculates upper bound on the optimal size of the<br />
-        array WORK,<br />
-    returns this value as the first entry of the WORK<br />
-        array,<br />
-    and no error message related to LWORK is issued by<br />
+<p>LWORK is INTEGER<br/>
+        The dimension of the array WORK.LWORK &gt;= max(1, 2 * N).Also,<br/>
+    if SENSE = &#8216;E&#8217; or &#8216;V&#8217; or &#8216;B&#8217;, LWORK &gt;= 2 * SDIM *(N &#8211; SDIM),<br/>
+       where SDIM is the number of selected eigenvalues computed by<br/>
+               this routine.Note that 2 *<br/>
+               SDIM *(N &#8211; SDIM) &lt;=<br/>
+           N *N / 2. Note also<br/>
+               that an error is only returned if LWORK &lt;<br/>
+           max(1, 2 * N),<br/>
+       but if SENSE = &#8216;E&#8217; or &#8216;V&#8217; or &#8216;B&#8217; this may not be large enough.For good performance, LWORK must generally be larger.If LWORK = -1, then a workspace query is assumed;<br/>
+the routine<br/>
+    only calculates upper bound on the optimal size of the<br/>
+        array WORK,<br/>
+    returns this value as the first entry of the WORK<br/>
+        array,<br/>
+    and no error message related to LWORK is issued by<br/>
             XERBLA.</p>
 <p> <i>RWORK</i> </p>
 <pre>

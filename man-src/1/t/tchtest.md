@@ -43,24 +43,24 @@ description: "tchtest – test cases of the hash database API"
 <p> Options feature the following. </p>
 <dl>
 <dt>
-</dt><dd> <code>-mt</code> : call the function `tchdbsetmutex&#8217;.<br />
- <code>-tl</code> : enable the option `HDBTLARGE&#8217;.<br />
- <code>-td</code> : enable the option `HDBTDEFLATE&#8217;.<br />
- <code>-tb</code> : enable the option `HDBTBZIP&#8217;.<br />
- <code>-tt</code> : enable the option `HDBTTCBS&#8217;.<br />
- <code>-tx</code> : enable the option `HDBTEXCODEC&#8217;.<br />
- <code>-rc </code><i>num</i> : specify the number of cached records.<br />
- <code>-xm </code><i>num</i> : specify the size of the extra mapped memory.<br />
- <code>-df </code><i>num</i> : specify the unit step number of auto defragmentation.<br />
- <code>-nl</code> : enable the option `HDBNOLCK&#8217;.<br />
- <code>-nb</code> : enable the option `HDBLCKNB&#8217;.<br />
- <code>-as</code> : use the function `tchdbputasync&#8217; instead of `tchdbput&#8217;.<br />
- <code>-rnd</code> : select keys at random.<br />
- <code>-wb</code> : use the function `tchdbget3&#8242; instead of `tchdbget&#8217;.<br />
- <code>-pn </code><i>num</i> : specify the number of patterns.<br />
- <code>-dai</code> : use the function `tchdbaddint&#8217; instead of `tchdbputcat&#8217;.<br />
- <code>-dad</code> : use the function `tchdbadddouble&#8217; instead of `tchdbputcat&#8217;.<br />
- <code>-rl</code> : set the length of values at random.<br />
+</dt><dd> <code>-mt</code> : call the function `tchdbsetmutex&#8217;.<br/>
+ <code>-tl</code> : enable the option `HDBTLARGE&#8217;.<br/>
+ <code>-td</code> : enable the option `HDBTDEFLATE&#8217;.<br/>
+ <code>-tb</code> : enable the option `HDBTBZIP&#8217;.<br/>
+ <code>-tt</code> : enable the option `HDBTTCBS&#8217;.<br/>
+ <code>-tx</code> : enable the option `HDBTEXCODEC&#8217;.<br/>
+ <code>-rc </code><i>num</i> : specify the number of cached records.<br/>
+ <code>-xm </code><i>num</i> : specify the size of the extra mapped memory.<br/>
+ <code>-df </code><i>num</i> : specify the unit step number of auto defragmentation.<br/>
+ <code>-nl</code> : enable the option `HDBNOLCK&#8217;.<br/>
+ <code>-nb</code> : enable the option `HDBLCKNB&#8217;.<br/>
+ <code>-as</code> : use the function `tchdbputasync&#8217; instead of `tchdbput&#8217;.<br/>
+ <code>-rnd</code> : select keys at random.<br/>
+ <code>-wb</code> : use the function `tchdbget3&#8242; instead of `tchdbget&#8217;.<br/>
+ <code>-pn </code><i>num</i> : specify the number of patterns.<br/>
+ <code>-dai</code> : use the function `tchdbaddint&#8217; instead of `tchdbputcat&#8217;.<br/>
+ <code>-dad</code> : use the function `tchdbadddouble&#8217; instead of `tchdbputcat&#8217;.<br/>
+ <code>-rl</code> : set the length of values at random.<br/>
  <code>-ru</code> : select update operations at random.
 </dd></dl>
 <p> This command returns 0 on success, another on failure. </p>

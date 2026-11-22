@@ -10,7 +10,7 @@ description: "zla_gerfsx_extended.f –"
 <p>zla_gerfsx_extended.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zla_gerfsx_extended</code> (PREC_TYPE, TRANS_TYPE, N, NRHS, A, LDA, AF, LDAF, IPIV, COLEQU, C, B, LDB, Y, LDY, BERR_OUT, N_NORMS, ERRS_N, ERRS_C, RES, AYB, DY, Y_TAIL, RCOND, ITHRESH, RTHRESH, DZ_UB, IGNORE_CWISE, INFO)<br />
+<p>subroutine <code>zla_gerfsx_extended</code> (PREC_TYPE, TRANS_TYPE, N, NRHS, A, LDA, AF, LDAF, IPIV, COLEQU, C, B, LDB, Y, LDY, BERR_OUT, N_NORMS, ERRS_N, ERRS_C, RES, AYB, DY, Y_TAIL, RCOND, ITHRESH, RTHRESH, DZ_UB, IGNORE_CWISE, INFO)<br/>
  <i></i><code>ZLA_GERFSX_EXTENDED</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zla_gerfsx_extended (integerPREC_TYPE, integerTRANS_TYPE, integerN, integerNRHS, complex*16, dimension( lda, * )A, integerLDA, complex*16, dimension( ldaf, * )AF, integerLDAF, integer, dimension( * )IPIV, logicalCOLEQU, double precision, dimension( * )C, complex*16, dimension( ldb, * )B, integerLDB, complex*16, dimension( ldy, * )Y, integerLDY, double precision, dimension( * )BERR_OUT, integerN_NORMS, double precision, dimension( nrhs, * )ERRS_N, double precision, dimension( nrhs, * )ERRS_C, complex*16, dimension( * )RES, double precision, dimension( * )AYB, complex*16, dimension( * )DY, complex*16, dimension( * )Y_TAIL, double precisionRCOND, integerITHRESH, double precisionRTHRESH, double precisionDZ_UB, logicalIGNORE_CWISE, integerINFO)</h3>

@@ -11,7 +11,7 @@ description: "dla_gerpvgrw.f –"
 <p> dla_gerpvgrw.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> DOUBLE PRECISION function <code>dla_gerpvgrw</code> (N, NCOLS, A, LDA, AF, LDAF)<br />
+<p> DOUBLE PRECISION function <code>dla_gerpvgrw</code> (N, NCOLS, A, LDA, AF, LDAF)<br/>
  <i></i><code>DLA_GERPVGRW</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>DOUBLE PRECISION function dla_gerpvgrw (integerN, integerNCOLS, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( ldaf, * )AF, integerLDAF)</h3>

@@ -11,7 +11,7 @@ description: "dlapy2.f –"
 <p> dlapy2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> DOUBLE PRECISION function <code>dlapy2</code> (X, Y)<br />
+<p> DOUBLE PRECISION function <code>dlapy2</code> (X, Y)<br/>
  <i></i><code>DLAPY2</code> returns sqrt(x2+y2).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>DOUBLE PRECISION function dlapy2 (double precisionX, double precisionY)</h3>

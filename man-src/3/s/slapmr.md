@@ -11,7 +11,7 @@ description: "slapmr.f –"
 <p> slapmr.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>slapmr</code> (FORWRD, M, N, X, LDX, K)<br />
+<p> subroutine <code>slapmr</code> (FORWRD, M, N, X, LDX, K)<br/>
  <i></i><code>SLAPMR</code> rearranges rows of a matrix as specified by a permutation vector.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slapmr (logicalFORWRD, integerM, integerN, real, dimension( ldx, * )X, integerLDX, integer, dimension( * )K)</h3>

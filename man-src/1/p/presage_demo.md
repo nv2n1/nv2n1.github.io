@@ -24,5 +24,5 @@ description: "presage_demo – presage demo program (ncurses)"
 <dd> output version information and exit</dd></dl>
 <p> Direct your bug reports to: matteo.vescovi [at] yahoo.co.uk</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2004 Matteo Vescovi.<br />
+<p> Copyright &#169; 2004 Matteo Vescovi.<br/>
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE, to the extent permitted by law. </p>

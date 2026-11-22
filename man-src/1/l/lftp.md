@@ -10,10 +10,10 @@ description: "lftp – Sophisticated file transfer program"
 
 <p> lftp - Sophisticated file transfer program </p>
 <h2>SYNTAX</h2>
-<p> <code>lftp</code> [<code>-d</code>] [<code>-e </code><i>cmd</i>] [<code>-p </code><i>port</i>] [<code>-u </code><i>user</i>[<code>,</code><i>pass</i>]] [<i>site</i>] <br />
- <code>lftp -f </code><i>script_file</i> <br />
- <code>lftp -c </code><i>commands</i> <br />
- <code>lftp --version</code> <br />
+<p> <code>lftp</code> [<code>-d</code>] [<code>-e </code><i>cmd</i>] [<code>-p </code><i>port</i>] [<code>-u </code><i>user</i>[<code>,</code><i>pass</i>]] [<i>site</i>] <br/>
+ <code>lftp -f </code><i>script_file</i> <br/>
+ <code>lftp -c </code><i>commands</i> <br/>
+ <code>lftp --version</code> <br/>
  <code>lftp --help</code> </p>
 <h2>VERSION</h2>
 <p> This man page documents lftp version 4.8.1. </p>
@@ -1197,7 +1197,7 @@ repeat 1d mirror
 <p> <code>slot</code> [<i>name</i>] </p>
 <p> Select specified slot or list all slots allocated. A slot is a connection to a server, somewhat like a virtual console. You can create multiple slots connected to different servers and switch between them. You can also use <i>slot:name</i> as a pseudo-URL evaluating to that slot location. </p>
 <p> Default readline binding allows quick switching between slots named 0-9 using Meta-0 - Meta-9 keys (often you can use Alt instead of Meta). </p>
-<p> <code>source</code> <i>file</i> <br />
+<p> <code>source</code> <i>file</i> <br/>
  <code>source -e</code> <i>command</i> </p>
 <p> Execute commands recorded in file <i>file</i> or returned by specified external command. </p>
 <pre><code>source ~/.lftp/rc
@@ -1240,12 +1240,12 @@ source -e echo help
 </td>
 </tr>
 </table>
-<p> <code>user</code> <i>user</i> [<i>pass</i>] <br />
+<p> <code>user</code> <i>user</i> [<i>pass</i>] <br/>
  <code>user</code> <i>URL</i> [<i>pass</i>] </p>
 <p> Use specified info for remote login. If you specify an URL with user name, the entered password will be cached so that future URL references can use it. </p>
 <p> <code>version</code> </p>
 <p> Print <code>lftp</code> version. </p>
-<p> <code>wait</code> [<i>jobno</i>] <br />
+<p> <code>wait</code> [<i>jobno</i>] <br/>
  <code>wait all</code> </p>
 <p> Wait for specified job to terminate. If jobno is omitted, wait for last backgrounded job. </p>
 <p> `wait all&#8217; waits for all jobs to terminate. </p>
@@ -1790,7 +1790,7 @@ cd directory &amp;
 <dd> <p> specify corresponding HTTP request header. </p>
  </dd>
 <dt><code>http:cookie</code>&nbsp;(string) </dt>
-<dd> <p> send this cookie to server. A closure is useful here: <br />
+<dd> <p> send this cookie to server. A closure is useful here: <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;set cookie/<a rel="nofollow" href="http://www.somehost.com">www.somehost.com</a>&nbsp;&quot;param=value&quot; </p>
  </dd>
 <dt><code>http:decode</code>&nbsp;(boolean) </dt>
@@ -2231,13 +2231,13 @@ set sftp:server-program /usr/libexec/openssh/sftp-server
 <dd> <p> The file is consulted to get default login and password to a server when it is specified without a protocol to the `open&#8217; command. Passwords are also searched here if an URL with user name but with no password is used. </p>
  </dd></dl>
 <h2>SEE ALSO</h2>
-<p> <code>ftpd</code>(8),&nbsp;<code><a href="/docs/linux/man/1-ftp/">ftp</a></code>(1) <br />
- RFC854 (telnet), RFC959 (ftp), RFC1123, RFC1945 (http/1.0), RFC2052 (SRV RR), RFC2228 (ftp security extensions), RFC2389 (ftp FEAT), RFC2428 (ftp/ipv6), RFC2518 (WebDAV), RFC2616 (http/1.1), RFC2617 (http/1.1 authentication), RFC2640 (ftp i18n), RFC3659 (ftp extensions), RFC4217 (ftp over ssl), BEP0003 (BitTorrent Protocol), BEP0005 (DHT Protocol), BEP0006 (Fast Extension), BEP0007 (IPv6 Tracker Extension), BEP0009 (Extension for Peers to Send Metadata Files), BEP0010 (Extension Protocol), BEP0012 (Multitracker Metadata Extension), BEP0023 (Tracker Returns Compact Peer Lists), BEP0032 (DHT Extensions for IPv6). <br />
- <a rel="nofollow" href="https://tools.ietf.org/html/draft-preston-ftpext-deflate-04">https://tools.ietf.org/html/draft-preston-ftpext-deflate-04</a> (ftp deflate transmission mode), <br />
- <a rel="nofollow" href="https://tools.ietf.org/html/draft-ietf-secsh-filexfer-13">https://tools.ietf.org/html/draft-ietf-secsh-filexfer-13</a> (sftp). <br />
- <a rel="nofollow" href="http://wiki.theory.org/BitTorrentSpecification">http://wiki.theory.org/BitTorrentSpecification</a> <br />
- <a rel="nofollow" href="http://www.bittornado.com/docs/multitracker-spec.txt">http://www.bittornado.com/docs/multitracker-spec.txt</a> <br />
- <a rel="nofollow" href="http://www.rasterbar.com/products/libtorrent/dht_sec.html">http://www.rasterbar.com/products/libtorrent/dht_sec.html</a> (DHT security extension) <br />
+<p> <code>ftpd</code>(8),&nbsp;<code><a href="/docs/linux/man/1-ftp/">ftp</a></code>(1) <br/>
+ RFC854 (telnet), RFC959 (ftp), RFC1123, RFC1945 (http/1.0), RFC2052 (SRV RR), RFC2228 (ftp security extensions), RFC2389 (ftp FEAT), RFC2428 (ftp/ipv6), RFC2518 (WebDAV), RFC2616 (http/1.1), RFC2617 (http/1.1 authentication), RFC2640 (ftp i18n), RFC3659 (ftp extensions), RFC4217 (ftp over ssl), BEP0003 (BitTorrent Protocol), BEP0005 (DHT Protocol), BEP0006 (Fast Extension), BEP0007 (IPv6 Tracker Extension), BEP0009 (Extension for Peers to Send Metadata Files), BEP0010 (Extension Protocol), BEP0012 (Multitracker Metadata Extension), BEP0023 (Tracker Returns Compact Peer Lists), BEP0032 (DHT Extensions for IPv6). <br/>
+ <a rel="nofollow" href="https://tools.ietf.org/html/draft-preston-ftpext-deflate-04">https://tools.ietf.org/html/draft-preston-ftpext-deflate-04</a> (ftp deflate transmission mode), <br/>
+ <a rel="nofollow" href="https://tools.ietf.org/html/draft-ietf-secsh-filexfer-13">https://tools.ietf.org/html/draft-ietf-secsh-filexfer-13</a> (sftp). <br/>
+ <a rel="nofollow" href="http://wiki.theory.org/BitTorrentSpecification">http://wiki.theory.org/BitTorrentSpecification</a> <br/>
+ <a rel="nofollow" href="http://www.bittornado.com/docs/multitracker-spec.txt">http://www.bittornado.com/docs/multitracker-spec.txt</a> <br/>
+ <a rel="nofollow" href="http://www.rasterbar.com/products/libtorrent/dht_sec.html">http://www.rasterbar.com/products/libtorrent/dht_sec.html</a> (DHT security extension) <br/>
  <a rel="nofollow" href="http://xbtt.sourceforge.net/udp_tracker_protocol.html">http://xbtt.sourceforge.net/udp_tracker_protocol.html</a> (UDP tracker) </p>
 <h2>AUTHOR</h2>
 <pre><code>Alexander V. Lukyanov

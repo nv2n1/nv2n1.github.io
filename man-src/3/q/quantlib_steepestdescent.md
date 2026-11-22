@@ -13,7 +13,7 @@ description: "QuantLib::SteepestDescent – Multi-dimensional steepest-descent c
 <p> Inherits QuantLib::LineSearchBasedMethod. </p>
 <h3>Public Member Functions</h3>
 <p><code>SteepestDescent</code> (const boost::shared_ptr&lt; <code>LineSearch</code> &gt; &amp;lineSearch=boost::shared_ptr&lt; <code>LineSearch</code> &gt;()) </p>
-<p> virtual EndCriteria::Type <code>minimize</code> (<code>Problem</code> &amp;P, const <code>EndCriteria</code> &amp;endCriteria)<br />
+<p> virtual EndCriteria::Type <code>minimize</code> (<code>Problem</code> &amp;P, const <code>EndCriteria</code> &amp;endCriteria)<br/>
  <i>minimize the optimization problem P </i></p>
 <h2>Detailed Description</h2>
 <p>Multi-dimensional steepest-descent class. </p>

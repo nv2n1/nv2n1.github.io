@@ -13,19 +13,19 @@ description: "QuantLib::IndexManager – global repository for past index fixing
 #include &lt;ql/indexes/indexmanager.hpp&gt;</code></pre>
 <p> Inherits <code>Singleton&lt; IndexManager &gt;</code>.</p>
 <h3>Public Member Functions</h3>
-<p>bool <code>hasHistory</code> (const std::string &amp;name) const<br />
- <i>returns whether historical fixings were stored for the index </i><br />
- const <code>TimeSeries</code>&lt; <code>Real</code> &gt; &amp; <code>getHistory</code> (const std::string &amp;name) const<br />
- <i>returns the (possibly empty) history of the index fixings </i><br />
- void <code>setHistory</code> (const std::string &amp;name, const <code>TimeSeries</code>&lt; <code>Real</code> &gt; &amp;)<br />
- <i>stores the historical fixings of the index </i><br />
- boost::shared_ptr&lt; <code>Observable</code> &gt; <code>notifier</code> (const std::string &amp;name) const<br />
- <i>observer notifying of changes in the index fixings </i><br />
- std::vector&lt; std::string &gt; <code>histories</code> () const<br />
- <i>returns all names of the indexes for which fixings were stored </i><br />
- void <code>clearHistory</code> (const std::string &amp;name)<br />
- <i>clears the historical fixings of the index </i><br />
- void <code>clearHistories</code> ()<br />
+<p>bool <code>hasHistory</code> (const std::string &amp;name) const<br/>
+ <i>returns whether historical fixings were stored for the index </i><br/>
+ const <code>TimeSeries</code>&lt; <code>Real</code> &gt; &amp; <code>getHistory</code> (const std::string &amp;name) const<br/>
+ <i>returns the (possibly empty) history of the index fixings </i><br/>
+ void <code>setHistory</code> (const std::string &amp;name, const <code>TimeSeries</code>&lt; <code>Real</code> &gt; &amp;)<br/>
+ <i>stores the historical fixings of the index </i><br/>
+ boost::shared_ptr&lt; <code>Observable</code> &gt; <code>notifier</code> (const std::string &amp;name) const<br/>
+ <i>observer notifying of changes in the index fixings </i><br/>
+ std::vector&lt; std::string &gt; <code>histories</code> () const<br/>
+ <i>returns all names of the indexes for which fixings were stored </i><br/>
+ void <code>clearHistory</code> (const std::string &amp;name)<br/>
+ <i>clears the historical fixings of the index </i><br/>
+ void <code>clearHistories</code> ()<br/>
  <i>clears all stored fixings </i></p>
 <h3>Friends</h3>
 <p>class <code>Singleton&lt; IndexManager &gt;</code></p>

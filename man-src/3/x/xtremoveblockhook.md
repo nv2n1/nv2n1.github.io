@@ -26,5 +26,5 @@ description: "XtAppAddBlockHook, XtRemoveBlockHook – register a block hook pro
 <p> Block hook procedures are removed automatically and the <code>XtBlockHookId</code> is destroyed when the application context in which they were added is destroyed. </p>
 <p> <code>XtRemoveBlockHook</code> removes the specified block hook procedure from the list in which it was registered.</p>
 <h2>See Also</h2>
-<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

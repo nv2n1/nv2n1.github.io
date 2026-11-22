@@ -49,7 +49,7 @@ JS&gt;
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-kjs/">kjs</a></i>(1)</p>
 <h2>BUGS</h2>
-<p> There are probably tons of bugs. Use m[blue]<code>bugs.kde.org</code>m[]<font SIZE="-2">[1]</font> to report them.</p>
+<p> There are probably tons of bugs. Use m[blue]<code>bugs.kde.org</code>m[][1] to report them.</p>
 <h2>AUTHOR</h2>
 <p> <code>Harri Porten</code> &lt;porten [at] kde.org&gt;</p>
 <dl>

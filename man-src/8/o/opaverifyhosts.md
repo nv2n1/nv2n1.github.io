@@ -9,7 +9,7 @@ description: "opaverifyhosts Verifies basic node configuration and performance b
 
 <p>opaverifyhosts Verifies basic node configuration and performance by running FF_HOSTVERIFY_DIR/hostverify.sh on all specified hosts. <code>NOTE:</code> Prior to using opaverifyhosts, copy the sample file /usr/lib/opa-ff/samples/hostverify.sh to FF_HOSTVERIFY_DIR and edit it to appropriate configuration and performance expectations and select which tests to run by default. On the first run for a given node, use the -c option so that hostverify.sh gets copied to each node. FF_HOSTVERIFY_DIR defines both the location of hostverify.sh and the destination of the hostverify.res output file. FF_HOSTVERIFY_DIR is configured in the /etc/sysconfig/opa/opafastfabric.conf file. A summary of results is appended to the FF_RESULT_DIR/verifyhosts.res file. A punchlist of failures is also appended to the FF_RESULT_DIR/punchlist.csv file. Only failures are shown on stdout. </p>
 <h2>Syntax</h2>
-<p>opaverifyhosts [-kc] [-f <i>hostfile</i>] [-u <i>upload_file</i>] [-d <i>upload_dir</i>]<br />
+<p>opaverifyhosts [-kc] [-f <i>hostfile</i>] [-u <i>upload_file</i>] [-d <i>upload_dir</i>]<br/>
  [-h <i>hosts</i>] [-T <i>timelimit</i>] [ <i>test</i>&#8230;]</p>
 <h2>Options</h2>
 <dl>
@@ -34,8 +34,8 @@ description: "opaverifyhosts Verifies basic node configuration and performance b
 <dd>One or more specific tests to run. See /usr/lib/opa-ff/samples/hostverify.sh for a list of available tests. </dd>
 </dl>
 <h2>Examples</h2>
-<p>opaverifyhosts -c<br />
- opaverifyhosts -h &#8216;arwen elrond&#8217;<br />
+<p>opaverifyhosts -c<br/>
+ opaverifyhosts -h &#8216;arwen elrond&#8217;<br/>
  HOSTS=&#8217;arwen elrond&#8217; opaverifyhosts</p>
 <h2>Environment Variables</h2>
 <dl>

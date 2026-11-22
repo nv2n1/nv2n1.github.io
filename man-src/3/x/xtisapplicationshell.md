@@ -45,6 +45,6 @@ description: "XtClass, XtSuperclass, XtIsSubclass, XtCheckSubclass, XtIsObject, 
 <p> To test if a given widget belongs to a subclass of an Intrinsics-defined class, the Intrinsics defines macros or functions equivalent to <code>XtIsSubclass</code> for each of the built-in classes. These procedures are <code>XtIsObject</code>, <code>XtIsRectObj</code>, <code>XtIsWidget</code>, <code>XtIsComposite</code>, <code>XtIsConstraint</code>, <code>XtIsShell</code>, <code>XtIsOverrideShell</code>, <code>XtIsWMShell</code>, <code>XtIsVendorShell</code>, <code>XtIsTransientShell</code>, <code>XtIsTopLevelShell</code>, <code>XtIsApplicationShell</code>, and <code>XtIsSessionShell</code>. </p>
 <p> The</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xtapperrormsg/">XtAppErrorMsg</a>(3), <a href="/docs/linux/man/3-xtdisplay/">XtDisplay</a>(3)<br />
- <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><a href="/docs/linux/man/3-xtapperrormsg/">XtAppErrorMsg</a>(3), <a href="/docs/linux/man/3-xtdisplay/">XtDisplay</a>(3)<br/>
+ <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

@@ -25,10 +25,10 @@ description: "zmq_bind – accept incoming connections on a socket"
 <dd>reliable multicast transport using PGM, see <code><a href="/docs/linux/man/7-zmq_pgm/">zmq_pgm</a></code>(7)</dd></dl>
 <p> Every 0MQ socket type except <i>ZMQ_PAIR</i> supports one-to-many and many-to-one semantics. The precise semantics depend on the socket type and are defined in <code><a href="/docs/linux/man/3-zmq_socket/">zmq_socket</a></code>(3). The <i>ipc</i> and <i>tcp</i> transports accept wildcard addresses: see <code><a href="/docs/linux/man/7-zmq_ipc/">zmq_ipc</a></code>(7) and <code><a href="/docs/linux/man/7-zmq_tcp/">zmq_tcp</a></code>(7) for details.</p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  the address syntax may be different for <i>zmq_bind()</i> and <i>zmq_connect()</i> especially for the <i>tcp</i>, <i>pgm</i> and <i>epgm</i> transports. </dd>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  following a <i>zmq_bind()</i>, the socket enters a <i>mute</i> state unless or until at least one incoming or outgoing connection is made, at which point the socket enters a <i>ready</i> state. In the mute state, the socket blocks or drops messages according to the socket type, as defined in <code><a href="/docs/linux/man/3-zmq_socket/">zmq_socket</a></code>(3). By contrast, following a libzmq:zmq_connect[3], the socket enters the <i>ready</i> state. </dd>
 <h2>Return Value</h2>
 <p>The <i>zmq_bind()</i> function returns zero if successful. Otherwise it returns -1 and sets <i>errno</i> to one of the values defined below.</p>

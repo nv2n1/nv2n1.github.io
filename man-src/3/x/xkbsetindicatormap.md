@@ -10,7 +10,7 @@ description: "XkbSetIndicatorMap – Downloads the changes to the server based o
 <p>XkbSetIndicatorMap &#8211; Downloads the changes to the server based on modifications to a local copy of the keyboard description which will update the maps for one or more indicators </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Bool XkbSetIndicatorMap</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>unsigned int </code><i>which</i><code>,</code> <code>XkbDescPtr </code><i>desc</i><code>);</code><br />
+<dt> <code>Bool XkbSetIndicatorMap</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>unsigned int </code><i>which</i><code>,</code> <code>XkbDescPtr </code><i>desc</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
@@ -165,8 +165,8 @@ description: "XkbSetIndicatorMap – Downloads the changes to the server based o
 </td>
 </tr>
 </table>
-<p> If XkbIM_LEDDrivesKB is set and XkbIM_NoExplicit is not, and if you call a function that updates the server&#8217;s image of the indicator map (such as <i>XkbSetIndicatorMap </i> or <i>XkbSetNamedIndicator),</i><br />
-&nbsp;Xkb changes the keyboard state and controls to reflect the other fields of the&nbsp; indicator map. If you attempt to explicitly change the value of an indicator for which XkbIM_LEDDrivesKB is absent or for which XkbIM_NoExplicit is present, keyboard state or controls are unaffected.<br />
+<p> If XkbIM_LEDDrivesKB is set and XkbIM_NoExplicit is not, and if you call a function that updates the server&#8217;s image of the indicator map (such as <i>XkbSetIndicatorMap </i> or <i>XkbSetNamedIndicator),</i><br/>
+&nbsp;Xkb changes the keyboard state and controls to reflect the other fields of the&nbsp; indicator map. If you attempt to explicitly change the value of an indicator for which XkbIM_LEDDrivesKB is absent or for which XkbIM_NoExplicit is present, keyboard state or controls are unaffected.<br/>
 &nbsp; If neither XkbIM_NoAutomatic nor XkbIM_NoExplicit is set in an indicator map, Xkb honors any request to change the state of the indicator, but the new state might be immediately superseded by automatic changes to the indicator state if the keyboard state or controls change. </p>
 <p> The effects of changing an indicator that drives the keyboard are cumulative; it is possible for a single change to affect keyboard group, modifiers, and controls simultaneously. </p>
 <p> If you change an indicator for which both the XkbIM_LEDDrivesKB and XkbIM_NoAutomatic flags are specified, Xkb applies the keyboard changes specified in the other indicator map fields and changes the indicator to reflect the state that was explicitly requested. The indicator remains in the new state until it is explicitly changed again. </p>

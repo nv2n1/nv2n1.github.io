@@ -12,7 +12,7 @@ description: "med – NCAR CGM metafile frame editor"
 <h2>SYNOPSIS</h2>
 <p> <code>med</code> [ <code>-e</code><i> command</i> ]* [ <code>-f</code><i> sfilename</i> ] [ <code>-l</code><i> local_dir</i> ] [ <code>-V</code> ] [ <i>filename</i>]</p>
 <h2>DESCRIPTION</h2>
-<p> <code>med </code> is a frame-level, metafile editor designed to resemble syntactically <font SIZE="-1">UNIX&#8217;s </font> <code><a href="/docs/linux/man/1-sed/">sed</a></code>(1) and <code><a href="/docs/linux/man/1-ed/">ed</a>(1).</code> <code>med </code> operates on a copy of <i>filename</i>, called a buffer, and overwrites a file only when you issue the <code>w </code> (write) command. <code>med </code> provides line oriented editing commands to display or delete frames from the buffer, to move, copy or merge frames within the buffer, or to write frames from and read frames into the buffer. By default <code>med</code> reads in commands from standard input.</p>
+<p> <code>med </code> is a frame-level, metafile editor designed to resemble syntactically UNIX&#8217;s  <code><a href="/docs/linux/man/1-sed/">sed</a></code>(1) and <code><a href="/docs/linux/man/1-ed/">ed</a>(1).</code> <code>med </code> operates on a copy of <i>filename</i>, called a buffer, and overwrites a file only when you issue the <code>w </code> (write) command. <code>med </code> provides line oriented editing commands to display or delete frames from the buffer, to move, copy or merge frames within the buffer, or to write frames from and read frames into the buffer. By default <code>med</code> reads in commands from standard input.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-e</code><i> command</i></dt>
@@ -108,9 +108,9 @@ description: "med – NCAR CGM metafile frame editor"
 <p> Or one could pass the following script to <code>med</code> as a <code>-f</code><i>scriptfile</i> option or enter the commands interactively. </p>
 <dl>
 <dt>
-</dt><dd> r ncgm1<br />
- r ncgm2<br />
- r ncgm3<br />
+</dt><dd> r ncgm1<br/>
+ r ncgm2<br/>
+ r ncgm3<br/>
  w ncgm123 </dd>
 </dl>
 <p> To Overlay the contents of frame <code>5</code> on top of frame <code>4 </code> from a file <code>ncgm1</code> one could execute:</p>
@@ -123,11 +123,11 @@ description: "med – NCAR CGM metafile frame editor"
 <p> <code>cgm(5NCARG),</code> <i><a href="/docs/linux/man/1-ed/">ed</a>(1),</i> <code>sed(1V)</code> </p>
 <p> Hardcopy: NCAR Graphics Fundamentals, UNIX Version</p>
 <h2>BUGS</h2>
-<p> <code>med</code><br />
+<p> <code>med</code><br/>
 &nbsp;<wbr>does not understand filenames that begin with a digit or a period. </p>
 <h2>CAVEATS</h2>
 <p> The <code>append, read </code> and <code>merge </code> commands may produce surprising results. A CGM may contain a set of global graphical primitive attributes that are applied to every frame in a file. Thus reading frames in from a file with different global attributes than the current working file may not produce the desired effect. The same is true when appending frames to a previously existing file. Similarly, the CGM standard specifies that graphical attributes specified within a metafile frame affect all succeeding primitives. Thus a frame which is the product of the <code>merge</code> command may appear differently than expected.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright (C) 1987-2009<br />
+<p> Copyright (C) 1987-2009<br/>
  University Corporation for Atmospheric Research </p>
 <p> The use of this Software is governed by a License Agreement. </p>

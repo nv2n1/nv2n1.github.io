@@ -10,7 +10,7 @@ description: "XkbLockModifiers – Locks and unlocks any of the eight real keybo
 <p>XkbLockModifiers &#8211; Locks and unlocks any of the eight real keyboard modifiers </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Bool XkbLockModifiers</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>,</code> <code>unsigned int </code><i>affect</i><code>,</code> <code>unsigned int </code><i>values</i><code>);</code><br />
+<dt> <code>Bool XkbLockModifiers</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>,</code> <code>unsigned int </code><i>affect</i><code>,</code> <code>unsigned int </code><i>values</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

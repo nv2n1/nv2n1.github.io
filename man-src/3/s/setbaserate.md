@@ -18,7 +18,7 @@ minimum (base) date
 Protected Member Functions</code></pre>
 <p> Inherits <code>QuantLib::TermStructure</code>. Inherited by <code>YoYInflationTermStructure</code>, and <code>ZeroInflationTermStructure</code>.</p>
 <h3>Public Member Functions</h3>
-<p><code>Constructors</code><br />
+<p><code>Constructors</code><br/>
  virtual Period lag () const</p>
 <p>virtual Frequency frequency () const</p>
 <p>virtual Rate baseRate () const</p>
@@ -34,9 +34,9 @@ virtual Date baseDate () const =0
 minimum (base) date
 Protected Member Functions</code></pre>
 <p> virtual void <code>setBaseRate</code> (const <code>Rate</code> &amp;r) </p>
-<p> void <code>checkRange</code> (const <code>Date</code> &amp;, bool extrapolate) const<br />
- <i>date-range check </i><br />
- void <code>checkRange</code> (Time t, bool extrapolate) const<br />
+<p> void <code>checkRange</code> (const <code>Date</code> &amp;, bool extrapolate) const<br/>
+ <i>date-range check </i><br/>
+ void <code>checkRange</code> (Time t, bool extrapolate) const<br/>
  <i>time-range check </i></p>
 <h3>Protected Attributes</h3>
 <p><code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; <code>nominalTermStructure_</code> </p>

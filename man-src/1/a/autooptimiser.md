@@ -39,8 +39,8 @@ description: "autooptimiser – Optimize image positions"
 <dl>
 <dt><code>-q</code></dt>
 <dd> Quiet operation (no progress is reported)</dd>
-<dt><code>-v</code> <i></i><font SIZE="-1"><i>HFOV</i></font><i></i></dt>
-<dd> Specify horizontal field of view of input images. Used if the .pto file contains invalid <font SIZE="-1">HFOV</font> values (autopano-SIFT writes .pto files with invalid <font SIZE="-1">HFOV</font>)</dd></dl>
+<dt><code>-v</code> <i></i><i>HFOV</i><i></i></dt>
+<dd> Specify horizontal field of view of input images. Used if the .pto file contains invalid HFOV values (autopano-SIFT writes .pto files with invalid HFOV)</dd></dl>
 <p> When <code>-a</code>, <code>-l</code>, <code>-m</code> and <code>-s</code> options are used together, an operation similar to the one of the &#8220;Align&#8221; button in hugin is performed.</p>
 <h2>AUTHORS</h2>
 <p> Written by Pablo d&#8217;Angelo. Also contains contributions from Douglas Wilkins, Ippei Ukai, Ed Halley, Bruno Postle, Gerry Patterson and Brent Townshend. </p>

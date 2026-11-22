@@ -24,7 +24,7 @@ description: "systemd-machine-id-setup – Initialize the machine ID in /etc/mac
 </dt><dd> 2. If run inside a KVM virtual machine and a UUID is configured (via the <code>-uuid</code> option), this UUID is used to initialize the machine ID. The caller must ensure that the UUID passed is sufficiently unique and is different for every booted instance of the VM.</dd></dl>
 <dl>
 <dt>
-</dt><dd> 3. Similarly, if run inside a Linux container environment and a UUID is configured for the container, this is used to initialize the machine ID. For details, see the documentation of the m[blue]<code>Container Interface</code>m[]<font SIZE="-2">[1]</font>.</dd></dl>
+</dt><dd> 3. Similarly, if run inside a Linux container environment and a UUID is configured for the container, this is used to initialize the machine ID. For details, see the documentation of the m[blue]<code>Container Interface</code>m[][1].</dd></dl>
 <dl>
 <dt>
 </dt><dd> 4. Otherwise, a new ID is randomly generated.</dd></dl>

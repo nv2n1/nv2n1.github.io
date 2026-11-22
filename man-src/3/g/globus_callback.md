@@ -15,20 +15,20 @@ description: "Globus Callback –"
 <p> <code>Globus Callback Spaces</code> </p>
 <p> <code>Globus Callback Signal Handling</code> </p>
 <h3>Macros</h3>
-<p> #define <code>GLOBUS_CALLBACK_MODULE</code><br />
- <i>Module descriptor. </i><br />
- #define <code>GLOBUS_POLL_MODULE</code><br />
+<p> #define <code>GLOBUS_CALLBACK_MODULE</code><br/>
+ <i>Module descriptor. </i><br/>
+ #define <code>GLOBUS_POLL_MODULE</code><br/>
  <i>Module descriptor. </i></p>
 <h3>Typedefs</h3>
-<p> typedef int <code>globus_callback_handle_t</code><br />
- <i>Periodic callback handle. </i><br />
- typedef int <code>globus_callback_space_t</code><br />
- <i>Callback space handle. </i><br />
- typedef struct<br />
- globus_l_callback_space_attr_s * <code>globus_callback_space_attr_t</code>&quot;<br />
+<p> typedef int <code>globus_callback_handle_t</code><br/>
+ <i>Periodic callback handle. </i><br/>
+ typedef int <code>globus_callback_space_t</code><br/>
+ <i>Callback space handle. </i><br/>
+ typedef struct<br/>
+ globus_l_callback_space_attr_s * <code>globus_callback_space_attr_t</code>&quot;<br/>
  <i>Callback space attribute. </i></p>
 <h3>Enumerations</h3>
-<p> enum <code>globus_callback_error_type_t</code> { <code>GLOBUS_CALLBACK_ERROR_INVALID_CALLBACK_HANDLE</code> = 1024, <code>GLOBUS_CALLBACK_ERROR_INVALID_SPACE</code>, <code>GLOBUS_CALLBACK_ERROR_MEMORY_ALLOC</code>, <code>GLOBUS_CALLBACK_ERROR_INVALID_ARGUMENT</code>, <code>GLOBUS_CALLBACK_ERROR_ALREADY_CANCELED</code>, <code>GLOBUS_CALLBACK_ERROR_NO_ACTIVE_CALLBACK</code> }<br />
+<p> enum <code>globus_callback_error_type_t</code> { <code>GLOBUS_CALLBACK_ERROR_INVALID_CALLBACK_HANDLE</code> = 1024, <code>GLOBUS_CALLBACK_ERROR_INVALID_SPACE</code>, <code>GLOBUS_CALLBACK_ERROR_MEMORY_ALLOC</code>, <code>GLOBUS_CALLBACK_ERROR_INVALID_ARGUMENT</code>, <code>GLOBUS_CALLBACK_ERROR_ALREADY_CANCELED</code>, <code>GLOBUS_CALLBACK_ERROR_NO_ACTIVE_CALLBACK</code> }<br/>
  <i>Error types. </i></p>
 <h2>Detailed Description</h2>
 <p> Globus Callback Function Interface. </p>

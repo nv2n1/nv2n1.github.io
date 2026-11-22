@@ -20,7 +20,7 @@ int qfcvt_r(long double number, int ndigits, int *decpt,
             int *sign, char *buf, size_t len);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>ecvt_r</code>(), <code>fcvt_r</code>(), <code>qecvt_r</code>(), <code>qfcvt_r</code>():</p>
 <dl>
-<dd>/* Glibc since 2.19: */ _DEFAULT_SOURCE<br />
+<dd>/* Glibc since 2.19: */ _DEFAULT_SOURCE<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_SVID_SOURCE ||&nbsp;_BSD_SOURCE</dd></dl>
 <h2>Description</h2>
 <p>The functions <code>ecvt_r</code>(), <code>fcvt_r</code>(), <code>qecvt_r</code>(), and <code>qfcvt_r</code>() are identical to <code><a href="/docs/linux/man/3-ecvt/">ecvt</a></code>(3), <code><a href="/docs/linux/man/3-fcvt/">fcvt</a></code>(3), <code><a href="/docs/linux/man/3-qecvt/">qecvt</a></code>(3), and <code><a href="/docs/linux/man/3-qfcvt/">qfcvt</a></code>(3), respectively, except that they do not return their result in a static buffer, but instead use the supplied <i>buf</i> of size <i>len</i>. See <code><a href="/docs/linux/man/3-ecvt/">ecvt</a></code>(3) and <code><a href="/docs/linux/man/3-qecvt/">qecvt</a></code>(3).</p>
@@ -36,7 +36,7 @@ int qfcvt_r(long double number, int ndigits, int *decpt,
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>ecvt_r</code>(), <code>fcvt_r</code>(),<br />
+<td> <code>ecvt_r</code>(), <code>fcvt_r</code>(),<br/>
  <code>qecvt_r</code>(), <code>qfcvt_r</code>() </td>
 <td>Thread safety</td>
 <td>MT-Safe

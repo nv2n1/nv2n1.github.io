@@ -10,7 +10,7 @@ description: "ldns_rr_push_rdf, ldns_rr_pop_rdf"
 
 <p> ldns_rr_push_rdf, ldns_rr_pop_rdf </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> bool ldns_rr_push_rdf(ldns_rr *rr, const ldns_rdf *f); </p>

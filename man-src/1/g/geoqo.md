@@ -39,7 +39,7 @@ description: "geoqo – Geocaching DataBase"
 <pre>
   <a rel="nofollow" href="http://www.geoqo.org/wiki/">http://www.geoqo.org/wiki/</a>
 </pre>
-<p> This document discusses how to use geoqo using the command line syntax. For instructions on using the <font SIZE="-1">GUI</font>, please see the tutorial on the wiki web page above which contains screen-shot walk throughs.</p>
+<p> This document discusses how to use geoqo using the command line syntax. For instructions on using the GUI, please see the tutorial on the wiki web page above which contains screen-shot walk throughs.</p>
 <h2>QUICK OVERVIEW</h2>
 <p> Import a file: </p>
 <pre>
@@ -107,21 +107,21 @@ description: "geoqo – Geocaching DataBase"
   &gt; geoqo -i myfile.gpx
   &gt; geoqo -i gpx:setname=myname:myfile.gpx
 </pre>
-<p> The gpx importer imports gpx files taken from the geocaching.com site (and probably many other sites too, but only geocaching.com <font SIZE="-1">GPX</font> files have been tested so for) and imports the data into your geoqo database. </p>
+<p> The gpx importer imports gpx files taken from the geocaching.com site (and probably many other sites too, but only geocaching.com GPX files have been tested so for) and imports the data into your geoqo database. </p>
 <p> <i>Options:</i></p>
 <dl>
 <dt>setname:</dt>
-<dd> Uses setname as the name of geoqo <font SIZE="-1">SET</font> to create based on the data. Normally this is extracted from the <i>name</i> field within the gpx file itself and prepended with &#8220;import:&#8221;. <font SIZE="-1">IE</font>, if you had a pocket query named &#8220;my search&#8221; then, when you imported the gpx file into geoqo, you&#8217;d get a new set named &#8220;import:my search&#8221;.</dd></dl>
+<dd> Uses setname as the name of geoqo SET to create based on the data. Normally this is extracted from the <i>name</i> field within the gpx file itself and prepended with &#8220;import:&#8221;. IE, if you had a pocket query named &#8220;my search&#8221; then, when you imported the gpx file into geoqo, you&#8217;d get a new set named &#8220;import:my search&#8221;.</dd></dl>
 <h2>Import Zip:</h2>
 <pre>
   &gt; geoqo -i myfile.zip
 </pre>
-<p> The <i>zip</i> importer allows you to simply specify a zip file for importing instead of having to unzip it yourself. It expects the contents of the zip file to be named similar to the zip file itself, just like groundspeak sends them out for geocaching.com pocket queries. <font SIZE="-1">IE</font>, if you import &#8220;111111.zip&#8221; it&#8217;ll try to unzip it and then import the contained 111111.gpx file. It&#8217;ll also try to import the 1111111-wpts.gpx file, if one existed as well. </p>
+<p> The <i>zip</i> importer allows you to simply specify a zip file for importing instead of having to unzip it yourself. It expects the contents of the zip file to be named similar to the zip file itself, just like groundspeak sends them out for geocaching.com pocket queries. IE, if you import &#8220;111111.zip&#8221; it&#8217;ll try to unzip it and then import the contained 111111.gpx file. It&#8217;ll also try to import the 1111111-wpts.gpx file, if one existed as well. </p>
 <p> Note: using this importer requires you to have <code>unzip</code> installed on your system. </p>
 <p> <i>Options:</i></p>
 <dl>
 <dt>setname:</dt>
-<dd> Uses setname as the name of geoqo <font SIZE="-1">SET</font> to create based on the data. Normally this is extracted from the <i>name</i> field within the gpx file itself and prepended with &#8220;import:&#8221;. <font SIZE="-1">IE</font>, if you had a pocket query named &#8220;my search&#8221; then, when you imported the gpx file into geoqo, you&#8217;d get a new set named &#8220;import:my search&#8221;.</dd>
+<dd> Uses setname as the name of geoqo SET to create based on the data. Normally this is extracted from the <i>name</i> field within the gpx file itself and prepended with &#8220;import:&#8221;. IE, if you had a pocket query named &#8220;my search&#8221; then, when you imported the gpx file into geoqo, you&#8217;d get a new set named &#8220;import:my search&#8221;.</dd>
 <dt>tmpdir:</dt>
 <dd> The zip importer works by copying the zip file to a tmpdir and then unzipping it there. This is normally set to <i></i>$HOME<i>/.geoqo/tmpdir</i>. This option lets you override that default. </dd>
 <p> default: /home/hardaker/.geoqo/temp</dl>
@@ -133,7 +133,7 @@ description: "geoqo – Geocaching DataBase"
 <p> <i>Options:</i></p>
 <dl>
 <dt>setname:</dt>
-<dd> Uses setname as the name of geoqo <font SIZE="-1">SET</font> to create based on the data. Normally this is extracted from the <i>name</i> field within the gpx file itself and prepended with &#8220;import:&#8221;. <font SIZE="-1">IE</font>, if you had a pocket query named &#8220;my search&#8221; then, when you imported the gpx file into geoqo, you&#8217;d get a new set named &#8220;import:my search&#8221;.</dd>
+<dd> Uses setname as the name of geoqo SET to create based on the data. Normally this is extracted from the <i>name</i> field within the gpx file itself and prepended with &#8220;import:&#8221;. IE, if you had a pocket query named &#8220;my search&#8221; then, when you imported the gpx file into geoqo, you&#8217;d get a new set named &#8220;import:my search&#8221;.</dd>
 <dt>tmpdir:</dt>
 <dd> The zip importer works by copying the zip file to a tmpdir and then unzipping it there. This is normally set to <i></i>$HOME<i>/.geoqo/tmpdir</i>. This option lets you override that default. </dd>
 <p> default: /home/hardaker/.geoqo/temp</dl>
@@ -142,11 +142,11 @@ description: "geoqo – Geocaching DataBase"
   &gt; geoqo -i myfile.loc
   &gt; geoqo -i loc:setname=myname:myfile.loc
 </pre>
-<p> The loc importer imports loc files taken from the geocaching.com and waymarking.com site (and probably many other sites too, but only geocaching.com and waymarking.com <font SIZE="-1">LOC</font> files have been tested so for) and imports the data into your geoqo database. </p>
+<p> The loc importer imports loc files taken from the geocaching.com and waymarking.com site (and probably many other sites too, but only geocaching.com and waymarking.com LOC files have been tested so for) and imports the data into your geoqo database. </p>
 <p> <i>Options:</i></p>
 <dl>
 <dt>setname:</dt>
-<dd> Uses setname as the name of geoqo <font SIZE="-1">SET</font> to create based on the data. Normally this is extracted from the <i>name</i> field within the gpx file itself and prepended with &#8220;import:&#8221;. <font SIZE="-1">IE</font>, if you had a pocket query named &#8220;my search&#8221; then, when you imported the gpx file into geoqo, you&#8217;d get a new set named &#8220;import:my search&#8221;.</dd></dl>
+<dd> Uses setname as the name of geoqo SET to create based on the data. Normally this is extracted from the <i>name</i> field within the gpx file itself and prepended with &#8220;import:&#8221;. IE, if you had a pocket query named &#8220;my search&#8221; then, when you imported the gpx file into geoqo, you&#8217;d get a new set named &#8220;import:my search&#8221;.</dd></dl>
 <h2>Import Base64:</h2>
 <pre>
   &gt; cat message | geoqo -i base64:-
@@ -156,7 +156,7 @@ description: "geoqo – Geocaching DataBase"
 <p> <i>Options:</i></p>
 <dl>
 <dt>setname:</dt>
-<dd> Uses setname as the name of geoqo <font SIZE="-1">SET</font> to create based on the data. Normally this is extracted from the <i>name</i> field within the gpx file itself and prepended with &#8220;import:&#8221;. <font SIZE="-1">IE</font>, if you had a pocket query named &#8220;my search&#8221; then, when you imported the gpx file into geoqo, you&#8217;d get a new set named &#8220;import:my search&#8221;.</dd>
+<dd> Uses setname as the name of geoqo SET to create based on the data. Normally this is extracted from the <i>name</i> field within the gpx file itself and prepended with &#8220;import:&#8221;. IE, if you had a pocket query named &#8220;my search&#8221; then, when you imported the gpx file into geoqo, you&#8217;d get a new set named &#8220;import:my search&#8221;.</dd>
 <dt>tmpdir:</dt>
 <dd> The zip importer works by copying the zip file to a tmpdir and then unzipping it there. This is normally set to <i></i>$HOME<i>/.geoqo/tmpdir</i>. This option lets you override that default. </dd>
 <p> default: /home/hardaker/.geoqo/temp</dl>
@@ -165,22 +165,22 @@ description: "geoqo – Geocaching DataBase"
   &gt; geoqo -i myfile.wigle
   &gt; geoqo -i wigle:setname=myname:mywiglefile
 </pre>
-<p> The wigle importer imports wigle files taken from the geocaching.com and waymarking.com site (and probably many other sites too, but only geocaching.com and waymarking.com <font SIZE="-1">WIGLE</font> files have been tested so for) and imports the data into your geoqo database. </p>
+<p> The wigle importer imports wigle files taken from the geocaching.com and waymarking.com site (and probably many other sites too, but only geocaching.com and waymarking.com WIGLE files have been tested so for) and imports the data into your geoqo database. </p>
 <p> <i>Options:</i></p>
 <dl>
 <dt>setname:</dt>
-<dd> Uses setname as the name of geoqo <font SIZE="-1">SET</font> to create based on the data.</dd></dl>
+<dd> Uses setname as the name of geoqo SET to create based on the data.</dd></dl>
 <h2>Import System:</h2>
 <pre>
   &gt; geoqo -i &quot;system:gpsbabel -i garmin -f /dev/ttyS0 -o gpx -F %{file:gpx}&quot;
 </pre>
-<p> The <i>system</i> importer allows you to simply specify a command to run which generates a file of a type that geoqo can actually import. For example, the above command runs gpsbabel to import all the waypoints stored in a <font SIZE="-1">GPS</font> on a unix system (/dev/ttyS0 is the name of a serial device on a linux machine). </p>
+<p> The <i>system</i> importer allows you to simply specify a command to run which generates a file of a type that geoqo can actually import. For example, the above command runs gpsbabel to import all the waypoints stored in a GPS on a unix system (/dev/ttyS0 is the name of a serial device on a linux machine). </p>
 <p> <i>Options:</i></p>
 <dl>
 <dt>cmd:</dt>
 <dd> It must contain a %{file:TYPE} string that indicates where the output file will be stored, but the path and the name of that file will be created by geoqo. Example gpsbable arguments would be -o gpx -F %{file:gpx}</dd>
 <dt>setname:</dt>
-<dd> Uses setname as the name of geoqo <font SIZE="-1">SET</font> to create based on the data. Normally this is extracted from the <i>name</i> field within the gpx file itself and prepended with &#8220;import:&#8221;. <font SIZE="-1">IE</font>, if you had a pocket query named &#8220;my search&#8221; then, when you imported the gpx file into geoqo, you&#8217;d get a new set named &#8220;import:my search&#8221;. However if your system command doesn&#8217;t properly name the resulting file, this can be used to override it.</dd>
+<dd> Uses setname as the name of geoqo SET to create based on the data. Normally this is extracted from the <i>name</i> field within the gpx file itself and prepended with &#8220;import:&#8221;. IE, if you had a pocket query named &#8220;my search&#8221; then, when you imported the gpx file into geoqo, you&#8217;d get a new set named &#8220;import:my search&#8221;. However if your system command doesn&#8217;t properly name the resulting file, this can be used to override it.</dd>
 <dt>tmpdir:</dt>
 <dd> The temporary directory to use </dd>
 <p> default: /home/hardaker/.geoqo/temp</dl>
@@ -192,7 +192,7 @@ description: "geoqo – Geocaching DataBase"
 <pre>
   &gt; geoqo -i create
 </pre>
-<p> should bring up a <font SIZE="-1">GUI</font> form which will prompt you for the needed information. Leave anything out that isn&#8217;t appropriate for the waypoint type you&#8217;re creating. </p>
+<p> should bring up a GUI form which will prompt you for the needed information. Leave anything out that isn&#8217;t appropriate for the waypoint type you&#8217;re creating. </p>
 <p> <i>Options:</i></p>
 <dl>
 <dt>type:</dt>
@@ -237,7 +237,7 @@ description: "geoqo – Geocaching DataBase"
 </dd><dt>setname:</dt>
 <dd> default: created</dd></dl>
 <h2>Import Project:</h2>
-<p> <font SIZE="-1">XXXXX</font> <font SIZE="-1">DO</font> <font SIZE="-1">NOT</font> <font SIZE="-1">USE</font> <font SIZE="-1">THIS</font> <font SIZE="-1">PLUGIN</font>; <font SIZE="-1">IT</font> <font SIZE="-1">IS</font> <font SIZE="-1">NOT</font> <font SIZE="-1">FINISHED</font> <font SIZE="-1">XXXXX</font> </p>
+<p> XXXXX DO NOT USE THIS PLUGIN; IT IS NOT FINISHED XXXXX </p>
 <pre>
   &gt; geoqo -i project:ident=newwaypoint,from=oldwaypoint,distance=528,direction=45
 </pre>
@@ -367,11 +367,11 @@ description: "geoqo – Geocaching DataBase"
 <pre>
   geqo -s waypoint:I&lt;TERMS&gt;
 </pre>
-<p> where <font SIZE="-1">TERMS</font> are a comma separated list of search terms. Normally these would be specified like: </p>
+<p> where TERMS are a comma separated list of search terms. Normally these would be specified like: </p>
 <pre>
   waypoint:FIELDNAME=VALUE
 </pre>
-<p> The <i></i><font SIZE="-1"><i>FIELDNAME</i></font><i></i> indicates the field name you want to search (see below), and the <i></i><font SIZE="-1"><i>VALUE</i></font><i></i> is the value you want to search for. The value field is actually surrounded by wildcards, and thus searching for &#8220;me&#8221; will match any value with &#8220;me&#8221; somewhere in it including &#8220;He and I went to the store&#8221; and &#8220;sometimes&#8221;. Using two equals signs turns off the automatic wildcard support (ie, name==me means search for a name that is <code>just</code> &#8220;me&#8221;). </p>
+<p> The <i></i><i>FIELDNAME</i><i></i> indicates the field name you want to search (see below), and the <i></i><i>VALUE</i><i></i> is the value you want to search for. The value field is actually surrounded by wildcards, and thus searching for &#8220;me&#8221; will match any value with &#8220;me&#8221; somewhere in it including &#8220;He and I went to the store&#8221; and &#8220;sometimes&#8221;. Using two equals signs turns off the automatic wildcard support (ie, name==me means search for a name that is <code>just</code> &#8220;me&#8221;). </p>
 <p> An example: find all waypoints with a urlname field containing &#8220;unusual&#8221;: </p>
 <pre>
       &gt; geoqo -s waypoint:urlname=tubular -d list
@@ -408,13 +408,13 @@ description: "geoqo – Geocaching DataBase"
        17 GCVVWY   Spelunk's 'Fishy' Doings
        18 GCW26F   Mountain or Desert? Cache
 </pre>
-<p> Note that terms will match anything beyond the underscore (&#8220;_&#8221;). <font SIZE="-1">IE</font>, if you do a search for: </p>
+<p> Note that terms will match anything beyond the underscore (&#8220;_&#8221;). IE, if you do a search for: </p>
 <pre>
   waypoint:short=some text
 </pre>
 <p> It will search the short description for &#8220;some text&#8221; even though the actual field name it&#8217;ll search is &#8220;groundspeak_short_description&#8221;. Using an exact fully spelled out field name is the most precise, but you can truncate names for convience. </p>
 <p> Finally, you can use &#8216;*&#8217;s to indicate wildcard spots (<i>u*sal</i> would match &#8220;unusual&#8221; and &#8220;unit of sale&#8221;). By default geoqo already adds a * to both the front and the back of your search time (ie, <i>name=unusual</i> is actually interpreted as <i>name=*unusual*</i>). </p>
-<p> You can also use the folling <font SIZE="-1">ARGUMENT</font> types when searching for field values in a waypoint: </p>
+<p> You can also use the folling ARGUMENT types when searching for field values in a waypoint: </p>
 <pre>
    field ARGUMENT value
 </pre>
@@ -425,13 +425,13 @@ description: "geoqo – Geocaching DataBase"
   waypoint:desc=blowfish
 </pre>
 <dt>field==value</dt>
-<dd> Also as mentioned above, if you don&#8217;t want to use the automatic wild card searching discussed above, you can use 2 equal signs to indicate this. Thus if you search for &#8220;desc=blowfish&#8221; it will search the desc fields for an exact match on the word &#8220;blowfish&#8221; (<font SIZE="-1">IE</font>, must not contain any other words). </dd>
+<dd> Also as mentioned above, if you don&#8217;t want to use the automatic wild card searching discussed above, you can use 2 equal signs to indicate this. Thus if you search for &#8220;desc=blowfish&#8221; it will search the desc fields for an exact match on the word &#8220;blowfish&#8221; (IE, must not contain any other words). </dd>
 <p> You should use == searches for numeric values too, or else something like &#8220;difficult=3&#8221; will also match difficult numbers like 3.5. </p>
 <pre>
   waypoint:desc==blowfish
 </pre>
 <dt>field&lt;value and field&gt;value</dt>
-<dd> Allows you to search on less than or greater than numeric values. <font SIZE="-1">IE:</font> </dd>
+<dd> Allows you to search on less than or greater than numeric values. IE: </dd>
 <pre>
   waypoint:lon&lt;42.123
 </pre>
@@ -440,7 +440,7 @@ description: "geoqo – Geocaching DataBase"
   waypoint:terrain&gt;2
 </pre>
 <dt>&lt;&gt;</dt>
-<dd> If you use both, it becomes &#8220;not equal to&#8221;. <font SIZE="-1">IE:</font> </dd>
+<dd> If you use both, it becomes &#8220;not equal to&#8221;. IE: </dd>
 <pre>
   waypoint:type&lt;&gt;unusual
 </pre>
@@ -493,14 +493,14 @@ description: "geoqo – Geocaching DataBase"
    noter
    dnfer
 </pre>
-<p> <font SIZE="-1">WARNING:</font> this may be amazingly slow on a mysql server. I think. Postgresql or sqlite2 (the defualt) database backends are just zippy, however.</p>
+<p> WARNING: this may be amazingly slow on a mysql server. I think. Postgresql or sqlite2 (the defualt) database backends are just zippy, however.</p>
 <h2>Search Attribute:</h2>
 <p> Attribute searches groundspeak (geocaching.com) attributes that were loaded into the database when doing an import from a groundspeak .gpx file. </p>
 <pre>
   &gt; geoqo -s attribute:Dogs -d count
   Search Result Count: 32
 </pre>
-<p> <font SIZE="-1">NOTE:</font> this does <font SIZE="-1">NOT</font> search the user-defined attributes and only searches (geocaching.com) attributes. For searching user attributes you should use the attr: search plugin intstead.</p>
+<p> NOTE: this does NOT search the user-defined attributes and only searches (geocaching.com) attributes. For searching user attributes you should use the attr: search plugin intstead.</p>
 <h2>Search Attr:</h2>
 <p> Attr searches attributes that you yourself have placed on a cache using the modify <i>setattr</i> module. </p>
 <pre>
@@ -508,7 +508,7 @@ description: "geoqo – Geocaching DataBase"
   &gt; geoqo -s attr:found=1 -d count
   Search Result Count: 1
 </pre>
-<p> <font SIZE="-1">NOTE:</font> this does <font SIZE="-1">NOT</font> search groundpseak (geocaching.com) attributes. For this you should use the attribute: search plugin intstead.</p>
+<p> NOTE: this does NOT search groundpseak (geocaching.com) attributes. For this you should use the attribute: search plugin intstead.</p>
 <h2>Search Rating:</h2>
 <p> The rating plugin lets you search ratings that may have been placed on a cache using the modify <i>rate</i> module. </p>
 <pre>
@@ -546,7 +546,7 @@ description: "geoqo – Geocaching DataBase"
   Search Result Count: 500
 </pre>
 <p> This command would count everything in the database that was in the &#8220;import:my query&#8221; set name (that was likely imported from a pocket query). See the Advanced Searching section in the geoqo documentation for other examples of combining <i>set:</i> searches and <i>waypoint:</i> (or other) searches so you can search for &#8220;all waypoints matching a criteia within a set&#8221; for example. </p>
-<p> If you prefix the name with a minus sign (-) then it will include all caches <font SIZE="-1"><code>NOT</code></font> in that set. For example to find all caches that are in seta but not in setb then the following expression would accomplish that: </p>
+<p> If you prefix the name with a minus sign (-) then it will include all caches <code>NOT</code> in that set. For example to find all caches that are in seta but not in setb then the following expression would accomplish that: </p>
 <pre>
     &gt; geoqo -s 'set:seta&amp;&amp;set:-setb'
 </pre>
@@ -567,7 +567,7 @@ description: "geoqo – Geocaching DataBase"
   &gt; geoqo -s track:mytrackfile.gpx -d count:
   Search/Set Count: 3
 </pre>
-<p> The <i>track</i> plugin loads track data from a <font SIZE="-1">GPX</font> track file (which you can retrieve from you gps using gpsbabel) and then compares the list of caches in you database to this data. It then matches all caches where your speed dropped below a configurable speed (3MPH is the default) and where the distance from the track is less than a configurable amount (defaults to near 500 feet). </p>
+<p> The <i>track</i> plugin loads track data from a GPX track file (which you can retrieve from you gps using gpsbabel) and then compares the list of caches in you database to this data. It then matches all caches where your speed dropped below a configurable speed (3MPH is the default) and where the distance from the track is less than a configurable amount (defaults to near 500 feet). </p>
 <p> This is even more useful when combined with the Track modify plugin, which can order caches based on the track and report the times you found them as well. </p>
 <p> If you know all the caches are in a given set, however, you should probably limit the data it has to search through to a subset of you total database if it runs slowly. </p>
 <p> To get track data from the gps, use gpsbabel: </p>
@@ -578,7 +578,7 @@ description: "geoqo – Geocaching DataBase"
 <p> <i>Options:</i></p>
 <dl>
 <dt>trackfile:</dt>
-<dd> A <font SIZE="-1">GPX</font> trackfile to load and search by</dd>
+<dd> A GPX trackfile to load and search by</dd>
 <dt>speed:</dt>
 <dd> Only look for caches where your speed dropped below this </dd>
 <p> default: 3</p>
@@ -616,7 +616,7 @@ description: "geoqo – Geocaching DataBase"
 <p> <i>Options:</i></p>
 <dl>
 <dt>gpstype:</dt>
-<dd> Type of <font SIZE="-1">GPS</font> </dd>
+<dd> Type of GPS </dd>
 <p> default: garmin</p>
 <dt>gpsport:</dt>
 <dd> The port to use </dd>
@@ -626,11 +626,11 @@ description: "geoqo – Geocaching DataBase"
   &gt; geoqo -s gps -d count
   Search/Set Count: 3
 </pre>
-<p> The <i>gps</i> plugin talks to a gps and finds all the waypoints in the geoqo database that are also in the <font SIZE="-1">GPS</font>. This is done by pulling out all the waypoints from the <font SIZE="-1">GPS</font> and then using the list to search the database. </p>
+<p> The <i>gps</i> plugin talks to a gps and finds all the waypoints in the geoqo database that are also in the GPS. This is done by pulling out all the waypoints from the GPS and then using the list to search the database. </p>
 <p> <i>Options:</i></p>
 <dl>
 <dt>gpstype:</dt>
-<dd> Type of <font SIZE="-1">GPS</font> </dd>
+<dd> Type of GPS </dd>
 <p> default: garmin</p>
 <dt>gpsport:</dt>
 <dd> The port to use </dd>
@@ -650,7 +650,7 @@ description: "geoqo – Geocaching DataBase"
       &gt; geoqo -s 5-10 -e out.gpx
 </pre>
 <h2>Logical Searches</h2>
-<p> You can use &amp;&amp; (<font SIZE="-1">AND</font>) and || (<font SIZE="-1">OR</font>) pairs to add powerful searching combinations to your results. In fact, this is actually useful and can <code>increase</code> the speed of your queries if used properly (if you know you only want to search the data from a particular import, use a set: search &amp;&amp; with a waypoint: search and the result will likely be returned faster). </p>
+<p> You can use &amp;&amp; (AND) and || (OR) pairs to add powerful searching combinations to your results. In fact, this is actually useful and can <code>increase</code> the speed of your queries if used properly (if you know you only want to search the data from a particular import, use a set: search &amp;&amp; with a waypoint: search and the result will likely be returned faster). </p>
 <p> This example searches for all waypoints owned by &#8220;spelunk&#8221; that I have found (ie, it exists in the &#8220;import:My Finds Pocket Query&#8221; imported gpx file). </p>
 <pre>
       &gt; geoqo -s 'waypoint:owner_name=spelunk&amp;&amp;set:import:My Finds Pocket Query' -d list
@@ -682,7 +682,7 @@ description: "geoqo – Geocaching DataBase"
         ... [same result] ...
 </pre>
 <h2>grouping search terms</h2>
-<p> The () arguments can be used to group search terms together as well when you need to mix operations. In the following case we&#8217;re looking for all waypoints &#8220;owned by scoobert <font SIZE="-1">AND</font> have the word Ditch in them&#8221;, and add to that all waypoints logged by me and all waypoints with &#8216;ninja&#8217; in the title. Silly example, I know. </p>
+<p> The () arguments can be used to group search terms together as well when you need to mix operations. In the following case we&#8217;re looking for all waypoints &#8220;owned by scoobert AND have the word Ditch in them&#8221;, and add to that all waypoints logged by me and all waypoints with &#8216;ninja&#8217; in the title. Silly example, I know. </p>
 <pre>
       &gt; perl -I. geoqo -s '(waypoint:groundspeak:name=Ditch&amp;&amp;waypoint:owner_name=scoobert)||waypoint:groundspeak:name=ninja||log:finder=Yamar' -d list
         1 GCYBDY   Whodunit?
@@ -765,7 +765,7 @@ description: "geoqo – Geocaching DataBase"
 <pre>
   %{3:count} %{8:ident} %{66:urlname}
 </pre>
-<p> The number prefix is the number of spaces to print it in and it will pad with extra spaces if it doesn&#8217;t fill that space. If left out, it&#8217;ll print it straight out in any length it may be. Adding a decimal point will limit it to a maximum of that length. <font SIZE="-1">IE:</font> </p>
+<p> The number prefix is the number of spaces to print it in and it will pad with extra spaces if it doesn&#8217;t fill that space. If left out, it&#8217;ll print it straight out in any length it may be. Adding a decimal point will limit it to a maximum of that length. IE: </p>
 <pre>
   %{20.20:urlname}
 </pre>
@@ -820,7 +820,7 @@ switch):
 </pre>
 <p> The <i>Map</i> display plugin displays a map of a set of waypoints with little red dots for each waypoint. </p>
 <p> This plugin requires internet access since the map tiles are pulled from the <a rel="nofollow" href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> project (which I highly recommend you contribute to; it&#8217;s easy and fun to edit/fix the maps!). </p>
-<p> (Eventually it should be possible to display with symbols, colors, etc as well as display the density overlays like the <font SIZE="-1">KML</font> export plugin does) </p>
+<p> (Eventually it should be possible to display with symbols, colors, etc as well as display the density overlays like the KML export plugin does) </p>
 <p> <i>Options:</i></p>
 <dl>
 <dt>style:</dt>
@@ -954,12 +954,12 @@ switch):
   Example:
   geoqo -s cache:urlname=funny -d gui/list
 </pre>
-<p> The gui/list module displays a <font SIZE="-1">GUI</font> in a graphical window that lets you examine the caches within a cache set. </p>
+<p> The gui/list module displays a GUI in a graphical window that lets you examine the caches within a cache set. </p>
 <p> This is only very preliminary work and is subject to greater expansion in the future. </p>
 <p> <i>Options:</i></p>
 <dl>
 <dt>fields:</dt>
-<dd> default: Ident Type Subtype Groundspeak_Owner_Name <font SIZE="-1">URLNAME</font></dd>
+<dd> default: Ident Type Subtype Groundspeak_Owner_Name URLNAME</dd>
 <dt>plugins:</dt>
 <dd>
 </dd><dt>separator:</dt>
@@ -969,7 +969,7 @@ switch):
   Example:
   geoqo -s cache:urlname=funny -d gui/show
 </pre>
-<p> The gui/show module displays a <font SIZE="-1">GUI</font> in a graphical window that lets you examine the caches within a cache set. </p>
+<p> The gui/show module displays a GUI in a graphical window that lets you examine the caches within a cache set. </p>
 <p> This is only very preliminary work and is subject to greater expansion in the future.</p>
 <h2>Display Bounds:</h2>
 <pre>
@@ -992,7 +992,7 @@ switch):
 <p> <i>Options:</i></p>
 <dl>
 <dt>finder:</dt>
-<dd> Sets the <font SIZE="-1">NAME</font> of the finder you&#8217;re looking for to a particular geocaching name (ie, the name of the user that is logging the finds). 99/100 egoists recommend using your own geocaching name here.</dd>
+<dd> Sets the NAME of the finder you&#8217;re looking for to a particular geocaching name (ie, the name of the user that is logging the finds). 99/100 egoists recommend using your own geocaching name here.</dd>
 <dt>logtype:</dt>
 <dd> Defines the log type to graph. </dd>
 <p> default: Found it</dl>
@@ -1005,7 +1005,7 @@ switch):
 <p> <i>Options:</i></p>
 <dl>
 <dt>type:</dt>
-<dd> Examines creation date based on this frequency (X-axis column). <font SIZE="-1">PERIOD</font> may be either month, day, year, weekday or yearday. The default is month (ie, the graph will be from 1-12 showing the number of caches placed during each month in your loaded search set). </dd>
+<dd> Examines creation date based on this frequency (X-axis column). PERIOD may be either month, day, year, weekday or yearday. The default is month (ie, the graph will be from 1-12 showing the number of caches placed during each month in your loaded search set). </dd>
 <p> default: month</dl>
 <h2>Display Dump:</h2>
 <pre>
@@ -1043,7 +1043,7 @@ switch):
 <pre>
   &gt; geoqo -s ident:GCABCD -e 'solved:+loc:out.loc'
 </pre>
-<p> This plugin replaces the latitude and longitude coordinates of a waypoint with those in the puzn and puzw attributes. Use the above examples as a guide for solving a puzzle and then using the solved: plugin when exporting your database ready for uploading into a <font SIZE="-1">GPS</font>. </p>
+<p> This plugin replaces the latitude and longitude coordinates of a waypoint with those in the puzn and puzw attributes. Use the above examples as a guide for solving a puzzle and then using the solved: plugin when exporting your database ready for uploading into a GPS. </p>
 <p> <i>Options:</i></p>
 <dl>
 <dt>nattr:</dt>
@@ -1056,19 +1056,19 @@ switch):
 <dd> Drops caches that do not have puzzle answers but are not parseable </dd>
 <p> default: 1</dl>
 <h2>Modify Gctodiff:</h2>
-<p> The &#8220;gctodiff&#8221; plugin (short for &#8220;<font SIZE="-1">GC</font> to difficulty&#8221;) replaces the first two letters in the 6-digit cache identifier with a single digit representation of both the difficulty and terrain ratings. </p>
-<p> <font SIZE="-1">IE</font>, if you had this cache: </p>
+<p> The &#8220;gctodiff&#8221; plugin (short for &#8220;GC to difficulty&#8221;) replaces the first two letters in the 6-digit cache identifier with a single digit representation of both the difficulty and terrain ratings. </p>
+<p> IE, if you had this cache: </p>
 <pre>
     &gt; geoqo -l
     num GCID     Name
     1   GCQEBQ   Yamar's Unusual #6: The ORB
 </pre>
-<p> It&#8217;s rated a 1.5 in difficulty and a 2 in terrain. If you ran the gctodiff modify plugin on this data, it would replace the &#8216;<font SIZE="-1">GC</font>&#8216; with a 2 and 3: </p>
+<p> It&#8217;s rated a 1.5 in difficulty and a 2 in terrain. If you ran the gctodiff modify plugin on this data, it would replace the &#8216;GC&#8216; with a 2 and 3: </p>
 <pre>
     &gt; geoqo -m gctodiff: -d 'list:format=%{newident} %{desc}'
     23QEBQ   Yamar's Unusual #6: The ORB
 </pre>
-<p> It actually stores the data in the &#8216;newident&#8217; field so the old one is still available. The export modules, however, use the newident field when writing out the cache identifiers so this is what your <font SIZE="-1">GPS</font>, or what-have-you, will see when you load it into that. </p>
+<p> It actually stores the data in the &#8216;newident&#8217; field so the old one is still available. The export modules, however, use the newident field when writing out the cache identifiers so this is what your GPS, or what-have-you, will see when you load it into that. </p>
 <p> I (Yamar) do this specifically so when I&#8217;m looking at my garmin, for example, I get an immediate feel for how hard a particular cache is going to be without having to pull up data about it. (I also use the symbol plugin to change the symbol so I can see the type of cache it is too). My goal here is to maximize the amount of data I seen on the screen! </p>
 <p> The map from groundspeak/geocaching.com ratings is as follows: </p>
 <pre>
@@ -1112,7 +1112,7 @@ switch):
   &gt; geoqo -s ident:GCABCD -e 'solved:+loc:out.loc'
 </pre>
 <p> The setattr plugin lets you store your own information about a cache into the database. Some of the other plugins use attributes to manipulate things (see the <i>solved</i> plugin for an example). Sometimes you may want your own &#8220;notes&#8221;. As an example, I modify Unknown puzzles that you solve in the field (instead of &#8220;in advance&#8221; puzzles like cross puzzles) with &#8220;setattr:infield=1&#8221;. (then I can use that attribute with the modifier: plugin to drop all unknowns that don&#8217;t have that attribute set or don&#8217;t have a &#8216;puzn&#8217; coordinate assigned showing I&#8217;ve solved it. </p>
-<p> <font SIZE="-1"><code>IMPORTANT</code></font><font SIZE="-1"><code>NOTE:</code></font> You must specify &#8211;save to the command line to have geoqo save your attribute changes back to the database. Otherwise you&#8217;re only setting attributes temporarily during the one-time call of geoqo.</p>
+<p> <code>IMPORTANT</code><code>NOTE:</code> You must specify &#8211;save to the command line to have geoqo save your attribute changes back to the database. Otherwise you&#8217;re only setting attributes temporarily during the one-time call of geoqo.</p>
 <h2>Math and Substitution</h2>
 <p> Math and Substition can be done by prefixing the values with &#8220;math:&#8221; and &#8220;substitute:&#8221; where the contents will be searched for names with other attribute names in ()s and replaced with the attribute values. And if the math: was used, it will then be evaluated. Multiple depth replacements/math will work. </p>
 <p> Here&#8217;s a more complex than needed example (the puzw attribute needs to be set as well for this to work): </p>
@@ -1218,7 +1218,7 @@ switch):
 </dd><dt>geoqopass:</dt>
 <dd></dd></dl>
 <h2>Modify Makepuzzle:</h2>
-<p> This plugin extracts puzzle coordinates and equations from a cache description and sets up some attributes for doing the puzzle solving. If a cache description has text in it like &#8220;N38 <font SIZE="-1">AB</font>.CDE&#8221; then this plugin will create 5 attributes A-E and a &#8220;puzn&#8221; attribute with the text &#8220;replace:N38 (A)(B).(C)(D)(E)&#8221; so that merely by filling in the A-E attributes will complete the puzzle. </p>
+<p> This plugin extracts puzzle coordinates and equations from a cache description and sets up some attributes for doing the puzzle solving. If a cache description has text in it like &#8220;N38 AB.CDE&#8221; then this plugin will create 5 attributes A-E and a &#8220;puzn&#8221; attribute with the text &#8220;replace:N38 (A)(B).(C)(D)(E)&#8221; so that merely by filling in the A-E attributes will complete the puzzle. </p>
 <p> <i>Options:</i></p>
 <dl>
 <dt>nattr:</dt>
@@ -1270,13 +1270,13 @@ switch):
   &gt; geoqo -s some_search_criteria -e 'mem:FILENAME+out.gpx'
 </pre>
 <p> That way all multi-caches get remapped to a &#8216;Fitness Center&#8217; because the &#8216;Fitness Center&#8217; icon on my garmin looks like a little guy lifting weights, and thus I know it&#8217;s going to be a harder cache (or one I&#8217;ll likely have to walk more). I like multi&#8217;s a lot, but I do like to know when I&#8217;m hitting them. Similarily, a Cemetery icon on my etrex is a small dot, a Tunnel is a bit larger, and a Geocache found icon is very large so I use them to represent sizes. </p>
-<p> If you want to use the symbol plugin, you should pick your own symbols that seem right on your gps or other software system. Each <font SIZE="-1">GPS</font>&#8216;s symbols tend to be quite different (and the name chosen should be a symbol your <font SIZE="-1">GPS</font> or software actually matches). </p>
+<p> If you want to use the symbol plugin, you should pick your own symbols that seem right on your gps or other software system. Each GPS&#8216;s symbols tend to be quite different (and the name chosen should be a symbol your GPS or software actually matches). </p>
 <p> <i>Formatting</i> </p>
 <p> The format of the plugin is as follows: </p>
 <pre>
   symbol:CACHEDATA=CACHEVALUE=SYMBOLNAME,CACHEDATA2=CACHEVALUE2=SYMBOLNAME2,
 </pre>
-<p> They are <code>exact</code> matches only. So the <font SIZE="-1">CACHEVALUE</font> must exactly equal the value found in the <font SIZE="-1">CACHEDATA</font> field or it won&#8217;t be replaced. The symbol plugin will stop after the first match so the first symbol in the list that gets matched always wins.</p>
+<p> They are <code>exact</code> matches only. So the CACHEVALUE must exactly equal the value found in the CACHEDATA field or it won&#8217;t be replaced. The symbol plugin will stop after the first match so the first symbol in the list that gets matched always wins.</p>
 <h2>Modify Translate:</h2>
 <p> By far, this is one of the most powerful modification plugins. It uses online services (like Google) to translate cache fields from one language to another. As an example, here are some of my caches: </p>
 <pre>
@@ -1339,7 +1339,7 @@ num GCID     Name
 <pre>
   &gt; geoqo -s ident:GCABCD -m 'distance:n=n38 12.123,w=w42 22.333'
 </pre>
-<p> or from another waypoint already in the <font SIZE="-1">DB:</font> </p>
+<p> or from another waypoint already in the DB: </p>
 <p> You can calculate distance from coordinates: </p>
 <pre>
   &gt; geoqo -s ident:GCABCD -m 'distance:from=GCABCD'
@@ -1380,7 +1380,7 @@ num GCID     Name
  - optionally sorts the resulting waypoints by time visited if the
    sort option is set.
 </pre>
-<p> Using this and the track search plugin you can take a track <font SIZE="-1">GPX</font> file downloaded from a <font SIZE="-1">GPS</font> and list all the caches you came near in the order you went to them along with the time stamp when you visited it. As an example, this is the results of a trip I took one day: </p>
+<p> Using this and the track search plugin you can take a track GPX file downloaded from a GPS and list all the caches you came near in the order you went to them along with the time stamp when you visited it. As an example, this is the results of a trip I took one day: </p>
 <pre>
   &gt; geoqo -s 'track:track.gpx' -m 'track:track.gpx' -d list:'%{7.7:ident} %{attr:trkpttime}  %{urlname}'
   GC10J27 10:55:22  This one is Golden
@@ -1419,7 +1419,7 @@ num GCID     Name
 <dd> the name of the output file to store the html formated differences in.</dd></dl>
 <h2>Modify Limit:</h2>
 <p> This module limits the number of waypoints in a set to a certain number (starting at an optional certain point in the list of waypoints). </p>
-<p> <font SIZE="-1">IE</font>, it starts at the <i>offset</i>th waypoint in the set being modified, and limits the total number to <i>number</i>, stripping off all of the waypoints before the <i>offset</i> first and then everything from offset+number next. </p>
+<p> IE, it starts at the <i>offset</i>th waypoint in the set being modified, and limits the total number to <i>number</i>, stripping off all of the waypoints before the <i>offset</i> first and then everything from offset+number next. </p>
 <p> If just <i>number</i> is specified (the common case) the firest <i>number</i> waypoints are kept. </p>
 <p> If there are 250 caches in the set:</p>
 <dl>
@@ -1440,7 +1440,7 @@ num GCID     Name
 <dt>offset:</dt>
 <dd> default: 0</dd></dl>
 <h2>Modify Only:</h2>
-<p> This is most useful when doing really complex exporting. See Yamar&#8217;s usage description on the web page for why this is helpful sometimes. It&#8217;s mostly useful when you want to only include certain waypoints in a given export file, and you want to create lots of export files (TomTom&#8217;s require one file per <font SIZE="-1">POI</font> you wish to create, and I (Yamar) create different POIs for each cache type, size, etc.) </p>
+<p> This is most useful when doing really complex exporting. See Yamar&#8217;s usage description on the web page for why this is helpful sometimes. It&#8217;s mostly useful when you want to only include certain waypoints in a given export file, and you want to create lots of export files (TomTom&#8217;s require one file per POI you wish to create, and I (Yamar) create different POIs for each cache type, size, etc.) </p>
 <p> The argument formatting is: </p>
 <pre>
   only:field=value
@@ -1504,7 +1504,7 @@ num GCID     Name
 <p> Basically, since this is a confusing one, is if you&#8217;re doing complex exporting (multiple files at once) put this on the -m switch to speed things up.</p>
 <h2>EXPORTING RESULTS</h2>
 <p> None of this is useful if you can&#8217;t export your results of course. There are a number of export plugins you can pass to the -e switch to export the results of your search to a file.</p>
-<h2><font SIZE="-1">QUICK</font> <font SIZE="-1">EXPORT</font> <font SIZE="-1">EXAMPLES</font></h2>
+<h2>QUICK EXPORT EXAMPLES</h2>
 <p> Some quick examples: </p>
 <p> Exporting all waypoints from two sets: </p>
 <pre>
@@ -1515,19 +1515,19 @@ num GCID     Name
 <pre>
     &gt; geodb -s 'set:import:somefile&amp;&amp;waypoint:type=Unknown' -e partfilebackout.loc
 </pre>
-<h2><font SIZE="-1">EXPORTING</font> <font SIZE="-1">AND</font> <font SIZE="-1">MODIFYING</font></h2>
+<h2>EXPORTING AND MODIFYING</h2>
 <p> You can also combine modifications and exports in one pass. First list the modifications specs you want to do (see the documentation on the modification plugins for details) separated by + signs. Everything before the last + will call a modification plugin, and after the last + will be an export plugin. </p>
 <p> An example: </p>
 <pre>
     &gt; geodb -s 'cache:type=Unknown' -e gctodiff+partfilebackout.loc
 </pre>
-<h2><font SIZE="-1">OUTPUTING</font> <font SIZE="-1">TO</font> <font SIZE="-1">MULTIPLE</font> <font SIZE="-1">FILES</font></h2>
+<h2>OUTPUTING TO MULTIPLE FILES</h2>
 <p> You can also specify multiple output files separated by &#8216;;&#8217;s. Modification attributes will <code>only</code> apply to the next file. If you want every file to contain a modification plugin result, use the -m flag instead. </p>
 <pre>
     &gt; geodb -s 'cache:type=Unknown' -e 'gctodiff+partfilebackout.loc;partfilebackout2.gpx
 </pre>
 <p> The above applies the gctodiff plugin to only the .loc file; the gpx file is written out using raw data.</p>
-<h2><font SIZE="-1">EXPORT</font> <font SIZE="-1">PLUGIN</font> <font SIZE="-1">TYPES</font></h2>
+<h2>EXPORT PLUGIN TYPES</h2>
 <h2>Export Gpx:</h2>
 <pre>
   &gt; geoqo -s 'cache:name=cool cache' -e myfile.gpx
@@ -1556,7 +1556,7 @@ num GCID     Name
   Example:
   geoqo -s set:import:myPQ -e map:output.png
 </pre>
-<p> The map will show red dots whereever there is a cache (Yes virginia, there will eventually be symbols and names). The output (currently) must be a <font SIZE="-1">PNG</font> file. </p>
+<p> The map will show red dots whereever there is a cache (Yes virginia, there will eventually be symbols and names). The output (currently) must be a PNG file. </p>
 <p> <i>Options:</i></p>
 <dl>
 <dt>style:</dt>
@@ -1583,11 +1583,11 @@ num GCID     Name
 <p> <i>Options:</i></p>
 <dl>
 <dt>subdir:</dt>
-<dd> Puts created <font SIZE="-1">HTML</font> files in this sub directory name. </dd>
+<dd> Puts created HTML files in this sub directory name. </dd>
 <p> default: caches</p>
 <dt>title:</dt>
 <dd> The title to put at the top of the page </dd>
-<p> default: GeoDB <font SIZE="-1">HTML</font> Export</dl>
+<p> default: GeoDB HTML Export</dl>
 <h2>Export Kml:</h2>
 <pre>
   &gt; geoqo -s 'set:import:near me' -e fortheearth.kml
@@ -1600,7 +1600,7 @@ num GCID     Name
 <pre>
   &gt; geoqo -s 'set:import:near me' -e kml:size=100:fortheearth.kml
 </pre>
-<p> Changes the number of squares in the density plot to <font SIZE="-1">NUM</font> by <font SIZE="-1">NUM</font>. Defaults to 50.</p>
+<p> Changes the number of squares in the density plot to NUM by NUM. Defaults to 50.</p>
 </dd><dt>width=NUM</dt>
 <dd>
 </dd><dt>height=NUM</dt>
@@ -1635,14 +1635,14 @@ num GCID     Name
 </dd><dt>squareratio:</dt>
 <dd> default: 1</dd>
 <dt>size:</dt>
-<dd> Creates a plot where there are <font SIZE="-1">SIZE</font> by <font SIZE="-1">SIZE</font> squares of colored rectangles </dd>
+<dd> Creates a plot where there are SIZE by SIZE squares of colored rectangles </dd>
 <p> default: 200</p>
 <dt>width:</dt>
 <dd> Normally equal to the size value but can be set independently. It specifies the width (in squares) of the density plot.</dd>
 <dt>height:</dt>
 <dd> Normally equal to the size value but can be set independently. It specifies the height (in squares) of the density plot.</dd>
 <dt>spread:</dt>
-<dd> Sets the spread that determines the number of neighboring squares that a given cache will effect. <font SIZE="-1">EG</font>, a spread of 5 will affect a circle of density squares in a radius of 5. This generally should be a low value of probably not more than 5 or so. </dd>
+<dd> Sets the spread that determines the number of neighboring squares that a given cache will effect. EG, a spread of 5 will affect a circle of density squares in a radius of 5. This generally should be a low value of probably not more than 5 or so. </dd>
 <p> default: 5</p>
 <dt>doempty:</dt>
 <dd> If set to 1, even empty squares will be colored (red). Otherwise the empty squares are removed from the plot leaving the plane ground underneath. </dd>
@@ -1703,9 +1703,9 @@ num GCID     Name
 <p> <i>Options:</i></p>
 <dl>
 <dt>cmd:</dt>
-<dd> <font SIZE="-1">COMMAND</font> is what gets run. If it contains a %{file:TYPE} string in it, that will be replaced with a file name of that type and it&#8217;ll get run just once. If it doesn&#8217;t, it&#8217;ll get run once per cache in the set being processed and each %{token} specifier will get replaced by that item from the cache.</dd>
+<dd> COMMAND is what gets run. If it contains a %{file:TYPE} string in it, that will be replaced with a file name of that type and it&#8217;ll get run just once. If it doesn&#8217;t, it&#8217;ll get run once per cache in the set being processed and each %{token} specifier will get replaced by that item from the cache.</dd>
 <dt>sleep:</dt>
-<dd> Between each command executed in the per-cache mode, geoqo will sleep for <font SIZE="-1">NUM</font> seconds before running the next. It defaults to 1, and can be set to 0 to just fire them off as fast as possible.</dd>
+<dd> Between each command executed in the per-cache mode, geoqo will sleep for NUM seconds before running the next. It defaults to 1, and can be set to 0 to just fire them off as fast as possible.</dd>
 <dt>dontdelete:</dt>
 <dd> if set to 1, don&#8217;t delete the temporary files</dd>
 <dt>tmpdir:</dt>
@@ -1715,7 +1715,7 @@ num GCID     Name
 <p> Here are some useful plugins that can be used in many command line definitions.</p>
 <h2>Everywhere mem:</h2>
 <p> It hard to repeatedly type complex queries, tasks, or what have you so to facilitate this you can use the <i>Mem</i> plugin for remembering complex strings (or even simple onse, if you choose). </p>
-<p> To do this, take a complex search (or export, or modify) string and save it in a file in the directory &#8220;$HOME/.geoqo/mem/TYPE/FILENAME&#8221;. Where <font SIZE="-1">TYPE</font> is one of &#8220;search&#8221;, &#8220;export&#8221;, or &#8220;modify&#8221; and <font SIZE="-1">FILENAME</font> is a file name of your choosing. You can also store file entries directly in <tt>$HOME</tt>/.geoqo/mem/FILENAME (note the missing &#8220;<font SIZE="-1">TYPE</font>&#8221; part), which then makes the definition usable for all types. It is not likely you&#8217;ll need to use a definition for both searching and exporting (as an example), however, so I suggest you store them in a type-based subdirectory instead. Only because it&#8217;s cleaner. You want to be neat and tidy right? </p>
+<p> To do this, take a complex search (or export, or modify) string and save it in a file in the directory &#8220;$HOME/.geoqo/mem/TYPE/FILENAME&#8221;. Where TYPE is one of &#8220;search&#8221;, &#8220;export&#8221;, or &#8220;modify&#8221; and FILENAME is a file name of your choosing. You can also store file entries directly in <tt>$HOME</tt>/.geoqo/mem/FILENAME (note the missing &#8220;TYPE&#8221; part), which then makes the definition usable for all types. It is not likely you&#8217;ll need to use a definition for both searching and exporting (as an example), however, so I suggest you store them in a type-based subdirectory instead. Only because it&#8217;s cleaner. You want to be neat and tidy right? </p>
 <p> All lines read in these file will be merged together and leading and trailing white-space characters are stripped as well comment lines (which should start with a #). For example if you had a file like so: </p>
 <pre>
   &gt; cat $HOME/.geoqo/mem/search/memtest
@@ -1735,7 +1735,7 @@ num GCID     Name
 <pre>
   &gt; geoqo -s set:import:near me&amp;&amp;cache:finder&lt;&gt;Yamar&amp;&amp;cache:subtype&lt;&gt;Unknown -d count
 </pre>
-<p> Since you may want to frequently replace parts of your super-long and complicated definition strings you&#8217;ve built up, you can do this as well by putting %[<font SIZE="-1">NAME</font>,DEFAULT] strings inside your definitions. <font SIZE="-1">IE</font>, doing this: </p>
+<p> Since you may want to frequently replace parts of your super-long and complicated definition strings you&#8217;ve built up, you can do this as well by putting %[NAME,DEFAULT] strings inside your definitions. IE, doing this: </p>
 <pre>
   &gt; cat $HOME/.geoqo/mem/memtest
     set:import:%[setname,near me]
@@ -1754,8 +1754,8 @@ num GCID     Name
 </pre>
 <p> Final note: you can have mem: definitions that call other mem: definitions. The only caveat there is that parameters aren&#8217;t passed down automatically, so if your second mem: definition being called has a %[something,xxx] definition then you should call it within the higher definition as mem:subdef,something=%[something,xxx] as well.</p>
 <h2>SCRIPTING ABILITY</h2>
-<p> GeoQO can also perform a bunch of tasks at once in a scripted fashion. <font SIZE="-1">IE</font>, if you find yourself repeatedly doing a standard search followed by an export, you can script things together in a single file and call geoqo -x <font SIZE="-1">FILE</font>. </p>
-<p> The script file format contains lines that start with a &#8216;%MODE&#8217; followed by text for that <font SIZE="-1">MODE</font>. <font SIZE="-1">MODE</font> should be one of: search, export, import, modify, display or print. You can break long lines into pieces just like the mem: plugin discusses above. </p>
+<p> GeoQO can also perform a bunch of tasks at once in a scripted fashion. IE, if you find yourself repeatedly doing a standard search followed by an export, you can script things together in a single file and call geoqo -x FILE. </p>
+<p> The script file format contains lines that start with a &#8216;%MODE&#8217; followed by text for that MODE. MODE should be one of: search, export, import, modify, display or print. You can break long lines into pieces just like the mem: plugin discusses above. </p>
 <p> Thus the following script (saved in, for example, &#8220;myscript.txt&#8221;) will display unsolved puzzles in your database ordered by distance: </p>
 <pre>
   # searches for all 'Unknown' caches
@@ -1786,7 +1786,7 @@ num GCID     Name
 <p> It&#8217;ll count all the geocaches instead.</p>
 <h2>Special Script Formatting</h2>
 <p> <i>White Space Wrapping</i> </p>
-<p> Normally script lines are merged together, stripping leading and trailing white space off of a line. <font SIZE="-1">EG</font>, Scripts that look like: </p>
+<p> Normally script lines are merged together, stripping leading and trailing white space off of a line. EG, Scripts that look like: </p>
 <pre>
   %search
   waypoint:type=
@@ -1798,7 +1798,7 @@ num GCID     Name
 <pre>
   wayoint:type==Geocache
 </pre>
-<p> If you need to force whitespace into a script line at the begining or end you can use a triple &quot; in order to forec it. <font SIZE="-1">EG:</font> </p>
+<p> If you need to force whitespace into a script line at the begining or end you can use a triple &quot; in order to forec it. EG: </p>
 <pre>
   %search
   cache:owner_name=Super
@@ -1817,7 +1817,7 @@ num GCID     Name
 <p> These special options may include these global options as well as any keyword-specific options discussed below:</p>
 <dl>
 <dt>allowgui=1</dt>
-<dd> This lets the <font SIZE="-1">GUI</font> screens be shown for the sub-scripts. Normally they&#8217;re hidden as the top script is always expected to pass needed parameters down.</dd></dl>
+<dd> This lets the GUI screens be shown for the sub-scripts. Normally they&#8217;re hidden as the top script is always expected to pass needed parameters down.</dd></dl>
 <p> The special script keywords that mayb be used are:</p>
 <dl>
 <dt>%print</dt>
@@ -1828,9 +1828,9 @@ num GCID     Name
 <dd> Runs a subscript based on the text following the <tt>%script</tt> line. (may include the script name and potentially arguments following a &#8216;:&#8217;). </dd>
 <p> Example: </p>
 <p> <tt>%script</tt> scriptname:arg1=value1</p>
-<dt>%include <i>[</i><font SIZE="-1"><i>ARGUMENTS</i></font><i>]</i> <i></i><font SIZE="-1"><i>SCRIPT_FILE_NAME</i></font><i></dt>
+<dt>%include <i>[</i><i>ARGUMENTS</i><i>]</i> <i></i><i>SCRIPT_FILE_NAME</i><i></dt>
 <dd> Include another script as part of this script. Unlike the </i><tt>%script</tt> command, the <tt>%include</tt> command operates on the same search set, becomes part of the same auto-gui screen, etc. </dd>
-<p> You can also pass a type=hooks argument to include a bunch of files. <font SIZE="-1">EG:</font> </p>
+<p> You can also pass a type=hooks argument to include a bunch of files. EG: </p>
 <p> <tt>%include</tt> type=hooks specialhooks/*.inc </p>
 <p> Will include every file that matches that pattern in each of the script search paths. The order in which they are included is determined by alphabetical ordering of the last filename component (ie, not directory path component). </p>
 <p> Finally, you can auto-wrap includes in if statements and use the resulting titles from the included files in menu to select which file gets executed. This is primarily intended for building dynamic menus from found plugins. This is best seen by an example: </p>
@@ -1879,9 +1879,9 @@ num GCID     Name
 <dt>%save</dt>
 <dd> Calls &#8216;save&#8217; on the current set saving all the data to the db (needed if modified in anyway that should result in a save, such as when the setattr: modify plugin was called).</dd>
 <dt>%saveset name=MYNAME</dt>
-<dd> Remembers the current set as <font SIZE="-1">MYNAME</font>.</dd>
+<dd> Remembers the current set as MYNAME.</dd>
 <dt>%webfile</dt>
-<dd> Pulls a file from a <font SIZE="-1">URL</font> and saves it to a file. The format is the file name to save it to, a comma and then the <font SIZE="-1">URL</font>. Example: </dd>
+<dd> Pulls a file from a URL and saves it to a file. The format is the file name to save it to, a comma and then the URL. Example: </dd>
 <pre>
   %webfile
   waymarks-train.gif,<a rel="nofollow" href="http://www.waymarking.com/images/cat_icons/train.gif">http://www.waymarking.com/images/cat_icons/train.gif</a>
@@ -1900,12 +1900,12 @@ num GCID     Name
 </pre>
 <dt>%system</dt>
 <dd> Run&#8217;s a system command. webfile: prefixes within the command string will be replaced by paths to a stored <tt>%webfile</tt>.</dd>
-<dt>%if <font SIZE="-1">CLAUSE</font></dt>
+<dt>%if CLAUSE</dt>
 <dd>
 </dd><dt>%else</dt>
 <dd>
 </dd><dt>%endif</dt>
-<dd> These sections allow for variablity of what is done based on user input. <font SIZE="-1">CLAUSE</font> is evaluated as perl code (returning a perl true or false response (eg, 1 or 0)) to determine what to do next. <font SIZE="-1">CLAUSE</font> will be evaluated first in terms of parameteritized input. Thus: </dd>
+<dd> These sections allow for variablity of what is done based on user input. CLAUSE is evaluated as perl code (returning a perl true or false response (eg, 1 or 0)) to determine what to do next. CLAUSE will be evaluated first in terms of parameteritized input. Thus: </dd>
 <pre>
   %print
   %if %[desire,1,type=checkbox]
@@ -1916,10 +1916,10 @@ num GCID     Name
 </pre>
 <p> Will print &#8220;hello&#8221; if the user clicks the check box (defaults to on) or &#8220;world&#8221; if the user does not. (They may also hand-specify the &#8216;Desire&#8217; parameter as scriptname:desire=1 or equievelent). </p>
 <p> Nesting is properly handled.</p>
-<dt>%foreach <font SIZE="-1">VAR</font> value1 value2 &#8230;</dt>
+<dt>%foreach VAR value1 value2 &#8230;</dt>
 <dd>
 </dd><dt>%endforeach</dt>
-<dd> Allows repeated script sections with %{<font SIZE="-1">VAR</font>} being replaced with a different value for each section. </dd>
+<dd> Allows repeated script sections with %{VAR} being replaced with a different value for each section. </dd>
 <pre>
   %foreach it 1 2 3 a b word
   %print
@@ -1947,7 +1947,7 @@ num GCID     Name
   My super title
 </pre>
 <dt>%introduction</dt>
-<dd> Includes a paragraph in the top of the <font SIZE="-1">GUI</font> screen when the script is run. </dd>
+<dd> Includes a paragraph in the top of the GUI screen when the script is run. </dd>
 <pre>
   %introduction
   This is how you use this screen
@@ -1955,35 +1955,35 @@ num GCID     Name
 </dl>
 <h2>COMMAND LINE OPTIONS</h2>
 <dl>
-<dt>-i <font SIZE="-1">STRING</font></dt>
+<dt>-i STRING</dt>
 <dd>
 </dd><dt>&#8211;import-file=STRING</dt>
 <dd> Import a file. File should be specified as type:file</dd>
-<dt>-n <font SIZE="-1">STRING</font></dt>
+<dt>-n STRING</dt>
 <dd>
 </dd><dt>&#8211;name=STRING</dt>
 <dd> Comma separated names to assign to the objects in the file</dd>
-<dt>-m <font SIZE="-1">STRING</font></dt>
+<dt>-m STRING</dt>
 <dd>
 </dd><dt>&#8211;modify=STRING</dt>
 <dd> Modify the search set before displaying or exporting</dd>
-<dt>-e <font SIZE="-1">STRING</font></dt>
+<dt>-e STRING</dt>
 <dd>
 </dd><dt>&#8211;export-file=STRING</dt>
 <dd> Export a file. File should be specified as type:file</dd>
 <dt>&#8211;execute-script=FILENAME</dt>
 <dd>
-</dd><dt>-x <font SIZE="-1">FILENAME</font></dt>
-<dd> Run a script stored in <font SIZE="-1">FILENAME</font></dd></dl>
+</dd><dt>-x FILENAME</dt>
+<dd> Run a script stored in FILENAME</dd></dl>
 <h2>Search Options:</h2>
 <dl>
-<dt>-s <font SIZE="-1">STRING</font></dt>
+<dt>-s STRING</dt>
 <dd>
 </dd><dt>&#8211;search=STRING</dt>
 <dd> Search terms for geocaches</dd>
 <dt>&#8211;limit=INTEGER</dt>
 <dd> Maximum number of records to return for searches</dd>
-<dt>-N <font SIZE="-1">STRING</font></dt>
+<dt>-N STRING</dt>
 <dd>
 </dd><dt>&#8211;set-name=STRING</dt>
 <dd> Set/Search Storage Name (&#8216;search:geoqo&#8217;)</dd></dl>
@@ -2001,43 +2001,43 @@ num GCID     Name
 <dd>
 </dd><dt>&#8211;show-logs</dt>
 <dd> Show log messages in details output</dd>
-<dt>-d <font SIZE="-1">STRING</font></dt>
+<dt>-d STRING</dt>
 <dd>
 </dd><dt>&#8211;display=STRING</dt>
 <dd> Display output thingies</dd>
 <dt>&#8211;save</dt>
 <dd>
 </dd><dt>&#8211;save-changes</dt>
-<dd> Save changes to the set to the <font SIZE="-1">DB</font></dd></dl>
+<dd> Save changes to the set to the DB</dd></dl>
 <h2>Database Options:</h2>
 <dl>
-<dt>-t <font SIZE="-1">STRING</font></dt>
+<dt>-t STRING</dt>
 <dd>
 </dd><dt>&#8211;db-type=STRING</dt>
 <dd> Database Type (sqlite2, sqlite, mysql, postgres)</dd>
-<dt>-H <font SIZE="-1">STRING</font></dt>
+<dt>-H STRING</dt>
 <dd>
 </dd><dt>&#8211;db-host=STRING</dt>
 <dd> Database Host (localhost)</dd>
-<dt>-u <font SIZE="-1">STRING</font></dt>
+<dt>-u STRING</dt>
 <dd>
 </dd><dt>&#8211;db-user=STRING</dt>
 <dd> Database User (geoqo)</dd>
-<dt>-p <font SIZE="-1">STRING</font></dt>
+<dt>-p STRING</dt>
 <dd>
 </dd><dt>&#8211;db-password=STRING</dt>
 <dd> Database Password</dd>
 <dt>&#8211;db-name=STRING</dt>
 <dd> Database Name (geoqo)</dd>
 <dt>&#8211;db-flush</dt>
-<dd> Delete the existing <font SIZE="-1">DB</font> first</dd>
+<dd> Delete the existing DB first</dd>
 <dt>&#8211;db-port=INTEGER</dt>
 <dd> Port number for the database</dd>
 <dt>&#8211;setup-database</dt>
 <dd> Initialize the database table structure</dd></dl>
 <h2>Configuration Options:</h2>
 <dl>
-<dt>-c <font SIZE="-1">STRING</font></dt>
+<dt>-c STRING</dt>
 <dd>
 </dd><dt>&#8211;config-file=STRING</dt>
 <dd> Configuration File to read</dd>
@@ -2062,21 +2062,21 @@ num GCID     Name
 <h2>CONFIGURING</h2>
 <p> GeoQO supports a configuration file where multiple types of things can be specified.</p>
 <h2>Command Line Options and Default</h2>
-<p> You can also store &#8220;always use this&#8221; options in a configuration file named ~/.geoqo/config. This file should be the option name on the left (single letter option if available, not longer ones) followed by the value you want after a space. <font SIZE="-1">EG</font> to always use debugging and postgresql and the &#8216;geo&#8217; database user: </p>
+<p> You can also store &#8220;always use this&#8221; options in a configuration file named ~/.geoqo/config. This file should be the option name on the left (single letter option if available, not longer ones) followed by the value you want after a space. EG to always use debugging and postgresql and the &#8216;geo&#8217; database user: </p>
 <pre>
   t postgresql
   u geo
   debug 5
 </pre>
 <p> Any option may be added to this file. Options on the command line will override options in this file (as you&#8217;d expect).</p>
-<h2><font SIZE="-1">GUI</font> Defaults</h2>
-<p> When using the auto-gui created screens, you can specify your own defaults for widgets created by geoqo modules or scripts using the &#8220;default&#8221; keyword. <font SIZE="-1">EG:</font> </p>
+<h2>GUI Defaults</h2>
+<p> When using the auto-gui created screens, you can specify your own defaults for widgets created by geoqo modules or scripts using the &#8220;default&#8221; keyword. EG: </p>
 <pre>
   default searchby Power Search
 </pre>
-<p> Will set the default search mechanism to the &#8220;Power Search&#8221; option. Knowing what keyword to use and what value to use generaly requires understanding how geoqo works at this point though (or you can ask Yamar in the #geoqo <font SIZE="-1">IRC</font> channel).</p>
-<h2>Per-Screen <font SIZE="-1">GUI</font> Defaults</h2>
-<p> You can also set defaults or for particular script screens. To set the default search type in the devices/cachemate script <font SIZE="-1">GUI</font> screen: </p>
+<p> Will set the default search mechanism to the &#8220;Power Search&#8221; option. Knowing what keyword to use and what value to use generaly requires understanding how geoqo works at this point though (or you can ask Yamar in the #geoqo IRC channel).</p>
+<h2>Per-Screen GUI Defaults</h2>
+<p> You can also set defaults or for particular script screens. To set the default search type in the devices/cachemate script GUI screen: </p>
 <pre>
   screen devices/cachemate searchby Power Search
 </pre>
@@ -2089,24 +2089,24 @@ num GCID     Name
 <dd> Self proclaimed &#8220;test monkey&#8221;. He tested lots of early verions and has caught various bugs as well and given me better usage ideas through his &#8220;why can&#8217;t I do this&#8221; set of questions. </dd>
 <p> He was also the first person to get it working on Windows and has contributed vastly to the windows documentation.</p>
 <dt>ClayJar</dt>
-<dd> Who won the renaming contest on <font SIZE="-1">IRC</font> after SourceForge told me GeoDB was an internal reserved name: </dd>
+<dd> Who won the renaming contest on IRC after SourceForge told me GeoDB was an internal reserved name: </dd>
 <pre>
   [03:38:13 pm] &lt;ClayJar_SSH&gt;Yamar: How about &quot;Geoqo&quot;.  You'll have
   sole Google of that one, I imagine. You can pronounce it &quot;ge-OH-ko&quot;,
   and &quot;QO&quot; is DB after ROT13.
 </pre>
-<p> For those that don&#8217;t know, <font SIZE="-1">ROT13</font> is the cheap encryption mechanism that geocaching.com (and other places) use to encrypt their logs. </p>
-<p> (<font SIZE="-1">ROT13</font> is used in many, many other ways too, and the first most popular usage of it was to encrypt potentially offensive material (ie, jokes) when posting to <font SIZE="-1">USENET</font> news groups)</p>
+<p> For those that don&#8217;t know, ROT13 is the cheap encryption mechanism that geocaching.com (and other places) use to encrypt their logs. </p>
+<p> (ROT13 is used in many, many other ways too, and the first most popular usage of it was to encrypt potentially offensive material (ie, jokes) when posting to USENET news groups)</p>
 <dt>Planet</dt>
 <dd> Planet nicely volunteered to proof-read a copy of this manual and sent me many wonderful suggestions about improving it.</dd>
 <dt>jslagle</dt>
 <dd> The first person to send me a code patch (implementing a better zip file import handler)! Yay! He&#8217;s now a co-developer.</dd>
 <dt>brdad</dt>
-<dd> The first person to wade through what it takes to get the <font SIZE="-1">GUI</font> working under windows.</dd>
+<dd> The first person to wade through what it takes to get the GUI working under windows.</dd>
 <dt>lairsdragon</dt>
-<dd> Submitted patches for the build system to make it more <font SIZE="-1">PREFIX</font> friendly.</dd>
+<dd> Submitted patches for the build system to make it more PREFIX friendly.</dd>
 <dt>Zemmy</dt>
 <dd> An early Windows test case for the installer components.</dd></dl>
 <h2>AUTHOR</h2>
-<p> Wes Hardaker &lt;hardaker <font SIZE="-1">ATAT</font> users.sourceforge.net&gt; </p>
-<p> <font SIZE="-1">AKA</font> &#8220;Yamar&#8221; on Geocaching.com, <font SIZE="-1">IRC</font>, and other places </p>
+<p> Wes Hardaker &lt;hardaker ATAT users.sourceforge.net&gt; </p>
+<p> AKA &#8220;Yamar&#8221; on Geocaching.com, IRC, and other places </p>

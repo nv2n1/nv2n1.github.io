@@ -58,16 +58,16 @@ description: "tcamgr – the command line utility of the abstract database API"
 <p> Options feature the following. </p>
 <dl>
 <dt>
-</dt><dd> <code>-sx</code> : the input data is evaluated as a hexadecimal data string.<br />
- <code>-sep </code><i>chr</i> : specify the separator of the input data.<br />
- <code>-dk</code> : use the function `tcadbputkeep&#8217; instead of `tcadbput&#8217;.<br />
- <code>-dc</code> : use the function `tcadbputcat&#8217; instead of `tcadbput&#8217;.<br />
- <code>-dai</code> : use the function `tcadbaddint&#8217; instead of `tcadbput&#8217;.<br />
- <code>-dad</code> : use the function `tcadbadddouble&#8217; instead of `tcadbput&#8217;.<br />
- <code>-px</code> : the output data is converted into a hexadecimal data string.<br />
- <code>-pz</code> : do not append line feed at the end of the output.<br />
- <code>-m </code><i>num</i> : specify the maximum number of the output.<br />
- <code>-pv</code> : print values of records also.<br />
+</dt><dd> <code>-sx</code> : the input data is evaluated as a hexadecimal data string.<br/>
+ <code>-sep </code><i>chr</i> : specify the separator of the input data.<br/>
+ <code>-dk</code> : use the function `tcadbputkeep&#8217; instead of `tcadbput&#8217;.<br/>
+ <code>-dc</code> : use the function `tcadbputcat&#8217; instead of `tcadbput&#8217;.<br/>
+ <code>-dai</code> : use the function `tcadbaddint&#8217; instead of `tcadbput&#8217;.<br/>
+ <code>-dad</code> : use the function `tcadbadddouble&#8217; instead of `tcadbput&#8217;.<br/>
+ <code>-px</code> : the output data is converted into a hexadecimal data string.<br/>
+ <code>-pz</code> : do not append line feed at the end of the output.<br/>
+ <code>-m </code><i>num</i> : specify the maximum number of the output.<br/>
+ <code>-pv</code> : print values of records also.<br/>
  <code>-fm </code><i>str</i> : specify the prefix of keys.
 </dd></dl>
 <p> This command returns 0 on success, another on failure. </p>

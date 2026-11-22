@@ -11,7 +11,7 @@ description: "bregex – Bacula’s ‘regex’ engine"
 <h2>Synopsis</h2>
 <p><code>bregex</code> [<i>options</i>] <i>-f &lt;data-file&gt;</i></p>
 <h2>Description</h2>
-<p>This manual page documents briefly the <code>bregex</code> command.<br />
+<p>This manual page documents briefly the <code>bregex</code> command.<br/>
  This program can be useful for testing regex expressions to be applied against a list of filenames. </p>
 <h2>Options</h2>
 <p>A summary of options is included below.</p>

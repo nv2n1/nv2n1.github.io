@@ -10,7 +10,7 @@ description: "gxl2gv,gv2gxl – GXL-GV converters"
 
 <p> gxl2gv,gv2gxl &#8211; GXL-GV converters </p>
 <h2>SYNOPSIS</h2>
-<p> <code>gxl2gv</code> [ <code>-gd?</code> ] [ <code>-o</code><i>outfile</i> ] [ <i>files</i> ]<br />
+<p> <code>gxl2gv</code> [ <code>-gd?</code> ] [ <code>-o</code><i>outfile</i> ] [ <i>files</i> ]<br/>
  <code>gv2gxl</code> [ <code>-gd?</code> ] [ <code>-o</code><i>outfile</i> ] [ <i>files</i> ]</p>
 <h2>DESCRIPTION</h2>
 <p> <code>gxl2gv</code> converts between graphs represented in GXL and in the GV language. Unless a conversion type is specified using a flag, <code>gxl2gv</code> will deduce the type of conversion from the suffix of the input file, a &quot;.gv&quot; suffix causing a conversion from GV to GXL, and a &quot;.gxl&quot; suffix causing a conversion from GXL to GV. If no suffix is available, e.g. when the input is from a pipe, and no flags are used then <code>gxl2gv</code> assumes the type of the input file from its executable name so that <code>gxl2gv</code> converts from GXL to GV, and <code>gv2gxl</code> converts from GV to GXL. </p>
@@ -38,7 +38,7 @@ description: "gxl2gv,gv2gxl – GXL-GV converters"
 <p> The conversion can only handle one graph per GXL file. </p>
 <p> There are some GXL constructs which <code>gxl2gv</code> cannot handle.</p>
 <h2>AUTHORS</h2>
-<p> Krishnam Pericherla &lt;kp [at] research.att.com&gt;<br />
+<p> Krishnam Pericherla &lt;kp [at] research.att.com&gt;<br/>
  Emden R. Gansner &lt;erg [at] research.att.com&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-dot/">dot</a>(1), libgraph(3), libagraph(3), <a href="/docs/linux/man/1-neato/">neato</a>(1), <a href="/docs/linux/man/1-twopi/">twopi</a>(1) </p>

@@ -10,11 +10,11 @@ description: "tv_augment_tz – Convert floating time to explicit time."
 
 <p> tv_augment_tz &#8211; Convert floating time to explicit time. </p>
 <h2>SYNOPSIS</h2>
-<p> tv_augment_tz [&#8211;help] [&#8211;output <font SIZE="-1">FILE</font>] [&#8211;tz <font SIZE="-1">TIMEZONE</font>] [<font SIZE="-1">FILE&#8230;</font>]</p>
+<p> tv_augment_tz [&#8211;help] [&#8211;output FILE] [&#8211;tz TIMEZONE] [FILE&#8230;]</p>
 <h2>DESCRIPTION</h2>
-<p> Read <font SIZE="-1">XMLTV</font> data and augment all times with the correct offset. Times that are already explicit will be converted to <font SIZE="-1">TIMEZONE</font> as well. </p>
-<p> <code>&#8211;output </code><font SIZE="-1"><code>FILE</code></font> write to <font SIZE="-1">FILE</font> rather than standard output </p>
-<p> <code>&#8211;tz </code><font SIZE="-1"><code>TIMEZONE</code></font> use <font SIZE="-1">TIMEZONE </font>(e.g. Europe/Berlin) rather then the default of <font SIZE="-1">UTC</font></p>
+<p> Read XMLTV data and augment all times with the correct offset. Times that are already explicit will be converted to TIMEZONE as well. </p>
+<p> <code>&#8211;output </code><code>FILE</code> write to FILE rather than standard output </p>
+<p> <code>&#8211;tz </code><code>TIMEZONE</code> use TIMEZONE (e.g. Europe/Berlin) rather then the default of UTC</p>
 <h2>SEE ALSO</h2>
 <p> <i>xmltv</i>(5).</p>
 <h2>AUTHOR</h2>

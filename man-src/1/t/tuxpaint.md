@@ -13,109 +13,109 @@ description: "tuxpaint — \"Tux Paint\", a drawing program for young children."
 <p> <code>tuxpaint</code> [&#8211;help &#8211;version &#8211;verbose-version &#8211;usage &#8211;copying] </p>
 <dl>
 <dt><code>tuxpaint</code></dt>
-<dd> [&#8211;fullscreen]<br />
- [&#8211;allowscreensaver]<br />
- [&#8211;WIDTHxHEIGHT]<br />
- [&#8211;native]<br />
- [&#8211;orient=portrait]<br />
- [&#8211;startblank]<br />
- [&#8211;nosound]<br />
- [&#8211;noquit]<br />
- [&#8211;noprint]<br />
- [&#8211;printdelay=<i>SECONDS</i>]<br />
- [&#8211;printcfg]<br />
- [&#8211;altprintalways | &#8211;altprintnever]<br />
- [&#8211;papersize <i>PAPERSIZE</i> | &#8211;papersize help]<br />
- [&#8211;simpleshapes]<br />
- [&#8211;uppercase]<br />
- [&#8211;grab]<br />
- [&#8211;noshortcuts]<br />
- [&#8211;nowheelmouse]<br />
- [&#8211;nobuttondistinction]<br />
- [&#8211;nofancycursors]<br />
- [&#8211;hidecursor]<br />
- [&#8211;nooutlines]<br />
- [&#8211;nostamps]<br />
- [&#8211;nostampcontrols]<br />
- [&#8211;nomagiccontrols]<br />
- [&#8211;nolabel]<br />
- [&#8211;mirrorstamps]<br />
- [&#8211;mouse-accessibility]<br />
- [&#8211;onscreen-keyboard]<br />
- [&#8211;joystick-dev=<i>DEVICE</i>]<br />
- [&#8211;joystick-dev=list]<br />
- [&#8211;joystick-slowness=<i>SPEED</i>]<br />
- [&#8211;joystick-threshold=<i>THRESHOLD</i>]<br />
- [&#8211;joystick-maxsteps=<i>STEPS</i>]<br />
- [&#8211;joystick-hat-timeout=<i>MILLISECONDS</i>]<br />
- [&#8211;joystick-hat-slowness=<i>SPEED</i>]<br />
- [&#8211;joystick-btn-escape=<i>BUTTON</i>]<br />
- [&#8211;joystick-btn-brush=<i>BUTTON</i>]<br />
- [&#8211;joystick-btn-stamp=<i>BUTTON</i>]<br />
- [&#8211;joystick-btn-lines=<i>BUTTON</i>]<br />
- [&#8211;joystick-btn-shapes=<i>BUTTON</i>]<br />
- [&#8211;joystick-btn-text=<i>BUTTON</i>]<br />
- [&#8211;joystick-btn-label=<i>BUTTON</i>]<br />
- [&#8211;joystick-btn-magic=<i>BUTTON</i>]<br />
- [&#8211;joystick-btn-undo=<i>BUTTON</i>]<br />
- [&#8211;joystick-btn-redo=<i>BUTTON</i>]<br />
- [&#8211;joystick-btn-eraser=<i>BUTTON</i>]<br />
- [&#8211;joystick-btn-new=<i>BUTTON</i>]<br />
- [&#8211;joystick-btn-open=<i>BUTTON</i>]<br />
- [&#8211;joystick-btn-save=<i>BUTTON</i>]<br />
- [&#8211;joystick-btn-pgsetup=<i>BUTTON</i>]<br />
- [&#8211;joystick-btn-print=<i>BUTTON</i>]<br />
- [&#8211;joystick-buttons-ignore=<i>BUTTON1,BUTTON2,&#8230;</i>]<br />
- [&#8211;stampsize=<i>SIZE</i>]<br />
- [&#8211;keyboard]<br />
- [&#8211;nosysfonts]<br />
- [&#8211;alllocalefonts]<br />
- [&#8211;savedir <i>DIR</i>]<br />
- [&#8211;datadir <i>DIR</i>]<br />
- [&#8211;saveover]<br />
- [&#8211;saveovernew]<br />
- [&#8211;nosave]<br />
- [&#8211;autosave]<br />
+<dd> [&#8211;fullscreen]<br/>
+ [&#8211;allowscreensaver]<br/>
+ [&#8211;WIDTHxHEIGHT]<br/>
+ [&#8211;native]<br/>
+ [&#8211;orient=portrait]<br/>
+ [&#8211;startblank]<br/>
+ [&#8211;nosound]<br/>
+ [&#8211;noquit]<br/>
+ [&#8211;noprint]<br/>
+ [&#8211;printdelay=<i>SECONDS</i>]<br/>
+ [&#8211;printcfg]<br/>
+ [&#8211;altprintalways | &#8211;altprintnever]<br/>
+ [&#8211;papersize <i>PAPERSIZE</i> | &#8211;papersize help]<br/>
+ [&#8211;simpleshapes]<br/>
+ [&#8211;uppercase]<br/>
+ [&#8211;grab]<br/>
+ [&#8211;noshortcuts]<br/>
+ [&#8211;nowheelmouse]<br/>
+ [&#8211;nobuttondistinction]<br/>
+ [&#8211;nofancycursors]<br/>
+ [&#8211;hidecursor]<br/>
+ [&#8211;nooutlines]<br/>
+ [&#8211;nostamps]<br/>
+ [&#8211;nostampcontrols]<br/>
+ [&#8211;nomagiccontrols]<br/>
+ [&#8211;nolabel]<br/>
+ [&#8211;mirrorstamps]<br/>
+ [&#8211;mouse-accessibility]<br/>
+ [&#8211;onscreen-keyboard]<br/>
+ [&#8211;joystick-dev=<i>DEVICE</i>]<br/>
+ [&#8211;joystick-dev=list]<br/>
+ [&#8211;joystick-slowness=<i>SPEED</i>]<br/>
+ [&#8211;joystick-threshold=<i>THRESHOLD</i>]<br/>
+ [&#8211;joystick-maxsteps=<i>STEPS</i>]<br/>
+ [&#8211;joystick-hat-timeout=<i>MILLISECONDS</i>]<br/>
+ [&#8211;joystick-hat-slowness=<i>SPEED</i>]<br/>
+ [&#8211;joystick-btn-escape=<i>BUTTON</i>]<br/>
+ [&#8211;joystick-btn-brush=<i>BUTTON</i>]<br/>
+ [&#8211;joystick-btn-stamp=<i>BUTTON</i>]<br/>
+ [&#8211;joystick-btn-lines=<i>BUTTON</i>]<br/>
+ [&#8211;joystick-btn-shapes=<i>BUTTON</i>]<br/>
+ [&#8211;joystick-btn-text=<i>BUTTON</i>]<br/>
+ [&#8211;joystick-btn-label=<i>BUTTON</i>]<br/>
+ [&#8211;joystick-btn-magic=<i>BUTTON</i>]<br/>
+ [&#8211;joystick-btn-undo=<i>BUTTON</i>]<br/>
+ [&#8211;joystick-btn-redo=<i>BUTTON</i>]<br/>
+ [&#8211;joystick-btn-eraser=<i>BUTTON</i>]<br/>
+ [&#8211;joystick-btn-new=<i>BUTTON</i>]<br/>
+ [&#8211;joystick-btn-open=<i>BUTTON</i>]<br/>
+ [&#8211;joystick-btn-save=<i>BUTTON</i>]<br/>
+ [&#8211;joystick-btn-pgsetup=<i>BUTTON</i>]<br/>
+ [&#8211;joystick-btn-print=<i>BUTTON</i>]<br/>
+ [&#8211;joystick-buttons-ignore=<i>BUTTON1,BUTTON2,&#8230;</i>]<br/>
+ [&#8211;stampsize=<i>SIZE</i>]<br/>
+ [&#8211;keyboard]<br/>
+ [&#8211;nosysfonts]<br/>
+ [&#8211;alllocalefonts]<br/>
+ [&#8211;savedir <i>DIR</i>]<br/>
+ [&#8211;datadir <i>DIR</i>]<br/>
+ [&#8211;saveover]<br/>
+ [&#8211;saveovernew]<br/>
+ [&#8211;nosave]<br/>
+ [&#8211;autosave]<br/>
  [&#8211;colorfile <i>FILE</i>] </dd>
 <dt><code>tuxpaint (defaults)</code></dt>
-<dd> [&#8211;windowed]<br />
- [&#8211;disablescreensaver]<br />
- [&#8211;800&#215;600]<br />
- [&#8211;orient=landscape]<br />
- [&#8211;startlast]<br />
- [&#8211;sound]<br />
- [&#8211;quit]<br />
- [&#8211;print]<br />
- [&#8211;printdelay=0]<br />
- [&#8211;noprintcfg]<br />
- [&#8211;altprintmod]<br />
- [&#8211;complexshapes]<br />
- [&#8211;mixedcase]<br />
- [&#8211;dontgrab]<br />
- [&#8211;shortcuts]<br />
- [&#8211;wheelmouse]<br />
- [&#8211;buttondistinction]<br />
- [&#8211;fancycursors]<br />
- [&#8211;showcursor]<br />
- [&#8211;outlines]<br />
- [&#8211;stamps]<br />
- [&#8211;stampcontrols]<br />
- [&#8211;magiccontrols]<br />
- [&#8211;label]<br />
- [&#8211;dontmirrorstamps]<br />
- [&#8211;stampsize=default]<br />
- [&#8211;mouse]<br />
- [&#8211;sysfonts]<br />
- [&#8211;currentlocalefont]<br />
- [&#8211;saveoverask]<br />
- [&#8211;save]<br />
+<dd> [&#8211;windowed]<br/>
+ [&#8211;disablescreensaver]<br/>
+ [&#8211;800&#215;600]<br/>
+ [&#8211;orient=landscape]<br/>
+ [&#8211;startlast]<br/>
+ [&#8211;sound]<br/>
+ [&#8211;quit]<br/>
+ [&#8211;print]<br/>
+ [&#8211;printdelay=0]<br/>
+ [&#8211;noprintcfg]<br/>
+ [&#8211;altprintmod]<br/>
+ [&#8211;complexshapes]<br/>
+ [&#8211;mixedcase]<br/>
+ [&#8211;dontgrab]<br/>
+ [&#8211;shortcuts]<br/>
+ [&#8211;wheelmouse]<br/>
+ [&#8211;buttondistinction]<br/>
+ [&#8211;fancycursors]<br/>
+ [&#8211;showcursor]<br/>
+ [&#8211;outlines]<br/>
+ [&#8211;stamps]<br/>
+ [&#8211;stampcontrols]<br/>
+ [&#8211;magiccontrols]<br/>
+ [&#8211;label]<br/>
+ [&#8211;dontmirrorstamps]<br/>
+ [&#8211;stampsize=default]<br/>
+ [&#8211;mouse]<br/>
+ [&#8211;sysfonts]<br/>
+ [&#8211;currentlocalefont]<br/>
+ [&#8211;saveoverask]<br/>
+ [&#8211;save]<br/>
  [&#8211;noautosave] </dd>
 <dt><code>tuxpaint</code></dt>
 <dd> [&#8211;locale <i>LOCALE</i>] </dd>
 <dt><code>tuxpaint</code></dt>
 <dd> [&#8211;lang <i>LANGUAGE</i> | &#8211;lang help] </dd>
 <dt><code>tuxpaint</code></dt>
-<dd> [&#8211;nosysconfig]<br />
+<dd> [&#8211;nosysconfig]<br/>
  [&#8211;nolockfile] </dd>
 </dl>
 <h2>DESCRIPTION</h2>

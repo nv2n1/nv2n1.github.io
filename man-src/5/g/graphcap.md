@@ -116,6 +116,6 @@ description: "graphcap – A list of supported NCAR Graphics device definition f
 <p>Online: ctrans(1NCARG), ras_formats(1NCARG), graphc(5NCARG), ncarg_env(5NCARG) </p>
 <p> Hardcopy: NCAR Graphics Fundamentals, UNIX Version; CGM, Graphcap, and Fontcap Supplement</p>
 <h2>Copyright</h2>
-<p>Copyright (C) 1987-2009<br />
- University Corporation for Atmospheric Research<br />
+<p>Copyright (C) 1987-2009<br/>
+ University Corporation for Atmospheric Research<br/>
  The use of this Software is governed by a License Agreement.</p>

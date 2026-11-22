@@ -10,12 +10,12 @@ description: "ql/methods/finitedifferences/onefactoroperator.hpp – general dif
 
 <p> ql/methods/finitedifferences/onefactoroperator.hpp &#8211; general differential operator for one-factor interest rate models </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/methods/finitedifferences/tridiagonaloperator.hpp&gt;<br />
- #include &lt;ql/models/shortrate/onefactormodel.hpp&gt;<br />
- #include &lt;ql/math/transformedgrid.hpp&gt;<br />
+<p> #include &lt;ql/methods/finitedifferences/tridiagonaloperator.hpp&gt;<br/>
+ #include &lt;ql/models/shortrate/onefactormodel.hpp&gt;<br/>
+ #include &lt;ql/math/transformedgrid.hpp&gt;<br/>
  #include &lt;ql/methods/finitedifferences/pdeshortrate.hpp&gt; </p>
 <h3>Typedefs</h3>
-<p> typedef PdeOperator&lt; PdeShortRate &gt; <code>OneFactorOperator</code><br />
+<p> typedef PdeOperator&lt; PdeShortRate &gt; <code>OneFactorOperator</code><br/>
  <i>Interest-rate single factor model differential operator. </i></p>
 <h2>Detailed Description</h2>
 <p> general differential operator for one-factor interest rate models </p>

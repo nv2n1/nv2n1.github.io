@@ -11,7 +11,7 @@ description: "dtpsv.f –"
 <p> dtpsv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dtpsv</code> (UPLO, TRANS, DIAG, N, AP, X, INCX)<br />
+<p> subroutine <code>dtpsv</code> (UPLO, TRANS, DIAG, N, AP, X, INCX)<br/>
  <i></i><code>DTPSV</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dtpsv (characterUPLO, characterTRANS, characterDIAG, integerN, double precision, dimension(*)AP, double precision, dimension(*)X, integerINCX)</h3>

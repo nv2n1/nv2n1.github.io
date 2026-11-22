@@ -11,7 +11,7 @@ description: "cspcon.f –"
 <p> cspcon.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cspcon</code> (UPLO, N, AP, IPIV, ANORM, RCOND, WORK, INFO)<br />
+<p> subroutine <code>cspcon</code> (UPLO, N, AP, IPIV, ANORM, RCOND, WORK, INFO)<br/>
  <i></i><code>CSPCON</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cspcon (characterUPLO, integerN, complex, dimension( * )AP, integer, dimension( * )IPIV, realANORM, realRCOND, complex, dimension( * )WORK, integerINFO)</h3>

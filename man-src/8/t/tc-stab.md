@@ -60,8 +60,8 @@ IPoA - 8 (ATM - 8)
 <h2>Ethernet Cards Considerations</h2>
 <p>It&#8217;s often forgotten that modern network cards (even cheap ones on desktop motherboards) and/or their drivers often support different offloading mechanisms. In the context of traffic shaping, &#8216;tso&#8217; and &#8216;gso&#8217; might cause undesirable effects, due to massive TCP segments being considered during traffic shaping (including stab calculations). For slow uplink interfaces, it&#8217;s good to use <code>ethtool</code> to turn off offloading features.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-tc/">tc</a></code>(8), <code><a href="/docs/linux/man/7-tc-hfsc/">tc-hfsc</a></code>(7), <code><a href="/docs/linux/man/8-tc-hfsc/">tc-hfsc</a></code>(8),<br />
- <code>[1]</code> <a rel="nofollow" href="http://ace-host.stuart.id.au/russell/files/tc/tc-atm/">http://ace-host.stuart.id.au/russell/files/tc/tc-atm/</a><br />
+<p><code><a href="/docs/linux/man/8-tc/">tc</a></code>(8), <code><a href="/docs/linux/man/7-tc-hfsc/">tc-hfsc</a></code>(7), <code><a href="/docs/linux/man/8-tc-hfsc/">tc-hfsc</a></code>(8),<br/>
+ <code>[1]</code> <a rel="nofollow" href="http://ace-host.stuart.id.au/russell/files/tc/tc-atm/">http://ace-host.stuart.id.au/russell/files/tc/tc-atm/</a><br/>
  <code>[2]</code> <a rel="nofollow" href="http://www.faqs.org/rfcs/rfc2684.html">http://www.faqs.org/rfcs/rfc2684.html</a> </p>
 <p> Please direct bugreports and patches to: &lt;netdev [at] vger.kernel.org&gt;</p>
 <h2>Author</h2>

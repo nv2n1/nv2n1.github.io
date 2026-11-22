@@ -11,7 +11,7 @@ description: "dlaqtr.f –"
 <p> dlaqtr.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dlaqtr</code> (LTRAN, LREAL, N, T, LDT, B, W, SCALE, X, WORK, INFO)<br />
+<p> subroutine <code>dlaqtr</code> (LTRAN, LREAL, N, T, LDT, B, W, SCALE, X, WORK, INFO)<br/>
  <i></i><code>DLAQTR</code> solves a real quasi-triangular system of equations, or a complex quasi-triangular system of special form, in real arithmetic.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlaqtr (logicalLTRAN, logicalLREAL, integerN, double precision, dimension( ldt, * )T, integerLDT, double precision, dimension( * )B, double precisionW, double precisionSCALE, double precision, dimension( * )X, double precision, dimension( * )WORK, integerINFO)</h3>

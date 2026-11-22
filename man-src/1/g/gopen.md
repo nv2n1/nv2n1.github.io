@@ -35,7 +35,7 @@ description: "gopen – open files"
 <p> To print the .plan file in your home folder, use the <code>-p</code> flag: </p>
 <p> <i>gopen -p ~/.plan</i> </p>
 <h2>BUGS</h2>
-<p> Using the <code>-a</code> <i>application</i> argument, <code>gopen</code> allows you to open any kind of file with any application you want. This does, however, not work with applications employing the NSDocument architecture as they will only receive filenames whose types the application has registered. To circumvent this limitation, applications may advertise their ability to open all kinds of files through the &quot;*&quot; filetype. When <code>gopen</code> is used with only the <code>-a</code> <i>application </i> argument but no <i>filename</i><br />
+<p> Using the <code>-a</code> <i>application</i> argument, <code>gopen</code> allows you to open any kind of file with any application you want. This does, however, not work with applications employing the NSDocument architecture as they will only receive filenames whose types the application has registered. To circumvent this limitation, applications may advertise their ability to open all kinds of files through the &quot;*&quot; filetype. When <code>gopen</code> is used with only the <code>-a</code> <i>application </i> argument but no <i>filename</i><br/>
 &nbsp;<wbr>present, the application is simply launched without opening a specific file.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/7-gnustep/">GNUstep</a>(7), <a href="/docs/linux/man/1-openapp/">openapp</a>(1)</p>

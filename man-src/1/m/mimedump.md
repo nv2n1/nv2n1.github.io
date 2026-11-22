@@ -11,7 +11,7 @@ mimedump - dump out the contents of a parsed MIME message
 
 <h2>DESCRIPTION</h2>
 
- Read a <font SIZE="-1">MIME</font> stream from the stdin, and dump its contents to the stdout.
+ Read a MIME stream from the stdin, and dump its contents to the stdout.
 
 <h2>SYNOPSIS</h2>
 

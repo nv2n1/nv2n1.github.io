@@ -37,17 +37,17 @@ description: "glocktop – Display or print active GFS2 locks."
 <dt><code>@ name</code></dt>
 <dd>This is the GFS2 file system name for which the information is printed. It also gives the time stamp of the report, and the cluster node name.</dd>
 <dt><code>G:</code></dt>
-<dd>This line represents a glock (internode GFS2 lock).<br />
+<dd>This line represents a glock (internode GFS2 lock).<br/>
 &nbsp;<wbr>G:&nbsp;<wbr>&nbsp;<wbr>s:UN n:2/609b4 f:lIqob t:EX d:EX/0 a:0 v:0 r:3 m:200&nbsp;<wbr>(inode)</dd>
 <dt><code>D:</code></dt>
-<dd>This line gives you glocktop&#8217;s interpretation of the glock&#8217;s state as far as DLM (distributed lock manager) is concerned.<br />
+<dd>This line gives you glocktop&#8217;s interpretation of the glock&#8217;s state as far as DLM (distributed lock manager) is concerned.<br/>
 &nbsp;<wbr>&nbsp;<wbr>D: Granted PR on node 2 to pid 17511&nbsp;<wbr>[python]</dd>
 <dt><code>H:</code></dt>
-<dd>This line represents a glock holder: a process that&#8217;s either holding the glock, or is waiting to hold it. The value after S: represents how this holder needs the lock: EX (Exclusive), SH (Shared), PR (Protected Read), or UN (Unlocked). The value after F: indicates the holder flags: a W indicates the holder is Waiting for the lock to be granted. An H indicates the holder is currently holding the lock.<br />
+<dd>This line represents a glock holder: a process that&#8217;s either holding the glock, or is waiting to hold it. The value after S: represents how this holder needs the lock: EX (Exclusive), SH (Shared), PR (Protected Read), or UN (Unlocked). The value after F: indicates the holder flags: a W indicates the holder is Waiting for the lock to be granted. An H indicates the holder is currently holding the lock.<br/>
 &nbsp;<wbr>&nbsp;<wbr>H: s:EX f:W e:0 p:17511&nbsp;<wbr>[python]&nbsp;<wbr>gfs2_unlink+0x7e/0x250&nbsp;<wbr>[gfs2]</dd>
 <dt><code>U:</code></dt>
-<dd>These lines represent glocktop&#8217;s user interpretation of the data, both glock and holder. Lines that begin with (N/A:&#8230;) can probably be ignored because they ought to be unimportant: system files such as journals, etc.<br />
-&nbsp;<wbr>&nbsp;<wbr>U:&nbsp;<wbr>&nbsp;<wbr>W inode&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>183f5&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Is:Shared, Want:Exclusive&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[Demote pending, Reply pending, Queued, Blocking]<br />
+<dd>These lines represent glocktop&#8217;s user interpretation of the data, both glock and holder. Lines that begin with (N/A:&#8230;) can probably be ignored because they ought to be unimportant: system files such as journals, etc.<br/>
+&nbsp;<wbr>&nbsp;<wbr>U:&nbsp;<wbr>&nbsp;<wbr>W inode&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>183f5&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Is:Shared, Want:Exclusive&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[Demote pending, Reply pending, Queued, Blocking]<br/>
 &nbsp;<wbr>&nbsp;<wbr>U:&nbsp;<wbr>&nbsp;<wbr>W&nbsp;<wbr>&nbsp;<wbr>&#8212;&gt;&nbsp;<wbr>&nbsp;<wbr>waiting pid 17511&nbsp;<wbr>[python]&nbsp;<wbr>&nbsp;<wbr>(Granted PR on node 2 to pid 17511&nbsp;<wbr>[python])</dd>
 <dt><code>C:</code></dt>
 <dd>These lines give you the call trace (call stack) of the process that&#8217;s either holding or waiting to hold the glock.</dd>

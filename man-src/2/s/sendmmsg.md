@@ -21,8 +21,8 @@ int sendmmsg(int sockfd, struct mmsghdr *msgvec, unsigned int vlen,
 <p> The <i>sockfd</i> argument is the file descriptor of the socket on which data is to be transmitted. </p>
 <p> The <i>msgvec</i> argument is a pointer to an array of <i>mmsghdr</i> structures. The size of this array is specified in <i>vlen</i>. </p>
 <p> The <i>mmsghdr</i> structure is defined in <i>&lt;sys/socket.h&gt;</i> as: </p>
-<p> struct mmsghdr {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct msghdr msg_hdr;&nbsp;<wbr>&nbsp;/*&nbsp;Message header&nbsp;*/<br />
+<p> struct mmsghdr {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct msghdr msg_hdr;&nbsp;<wbr>&nbsp;/*&nbsp;Message header&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned int&nbsp;<wbr>&nbsp;msg_len;&nbsp;<wbr>&nbsp;/*&nbsp;Number of bytes transmitted&nbsp;*/ }; </p>
 <p> The <i>msg_hdr</i> field is a <i>msghdr</i> structure, as described in <code><a href="/docs/linux/man/2-sendmsg/">sendmsg</a></code>(2). The <i>msg_len</i> field is used to return the number of bytes sent from the message in <i>msg_hdr</i> (i.e., the same as the return value from a single <code><a href="/docs/linux/man/2-sendmsg/">sendmsg</a></code>(2) call). </p>
 <p> The <i>flags</i> argument contains flags ORed together. The flags are the same as for <code><a href="/docs/linux/man/2-sendmsg/">sendmsg</a></code>(2). </p>
@@ -44,41 +44,41 @@ int sendmmsg(int sockfd, struct mmsghdr *msgvec, unsigned int vlen,
 <h2>EXAMPLES</h2>
 <p> The example below uses <code>sendmmsg</code>() to send <i>onetwo</i> and <i>three</i> in two distinct UDP datagrams using one system call. The contents of the first datagram originates from a pair of buffers. </p>
 <p> #define _GNU_SOURCE #include &lt;netinet/ip.h&gt; #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; #include &lt;string.h&gt; #include &lt;sys/types.h&gt; #include &lt;sys/socket.h&gt; </p>
-<p> int main(void) {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int sockfd;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct sockaddr_in addr;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct mmsghdr msg[2];<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct iovec msg1[2], msg2;<br />
+<p> int main(void) {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int sockfd;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct sockaddr_in addr;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct mmsghdr msg[2];<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct iovec msg1[2], msg2;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int retval; </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sockfd&nbsp;=&nbsp;socket(AF_INET, SOCK_DGRAM, 0);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(sockfd&nbsp;==&nbsp;-1)&nbsp;{<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;perror(&quot;socket()&quot;);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_FAILURE);<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sockfd&nbsp;=&nbsp;socket(AF_INET, SOCK_DGRAM, 0);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(sockfd&nbsp;==&nbsp;-1)&nbsp;{<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;perror(&quot;socket()&quot;);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_FAILURE);<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;} </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;addr.sin_family&nbsp;=&nbsp;AF_INET;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;addr.sin_addr.s_addr&nbsp;=&nbsp;htonl(INADDR_LOOPBACK);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;addr.sin_port&nbsp;=&nbsp;htons(1234);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(connect(sockfd,&nbsp;(struct sockaddr&nbsp;*)&nbsp;&amp;addr, sizeof(addr))&nbsp;==&nbsp;-1)&nbsp;{<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;perror(&quot;connect()&quot;);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_FAILURE);<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;addr.sin_family&nbsp;=&nbsp;AF_INET;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;addr.sin_addr.s_addr&nbsp;=&nbsp;htonl(INADDR_LOOPBACK);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;addr.sin_port&nbsp;=&nbsp;htons(1234);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(connect(sockfd,&nbsp;(struct sockaddr&nbsp;*)&nbsp;&amp;addr, sizeof(addr))&nbsp;==&nbsp;-1)&nbsp;{<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;perror(&quot;connect()&quot;);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_FAILURE);<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;} </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;memset(msg1, 0, sizeof(msg1));<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;msg1[0].iov_base&nbsp;=&nbsp;&quot;one&quot;;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;msg1[0].iov_len&nbsp;=&nbsp;3;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;msg1[1].iov_base&nbsp;=&nbsp;&quot;two&quot;;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;memset(msg1, 0, sizeof(msg1));<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;msg1[0].iov_base&nbsp;=&nbsp;&quot;one&quot;;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;msg1[0].iov_len&nbsp;=&nbsp;3;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;msg1[1].iov_base&nbsp;=&nbsp;&quot;two&quot;;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;msg1[1].iov_len&nbsp;=&nbsp;3; </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;memset(&amp;msg2, 0, sizeof(msg2));<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;msg2.iov_base&nbsp;=&nbsp;&quot;three&quot;;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;memset(&amp;msg2, 0, sizeof(msg2));<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;msg2.iov_base&nbsp;=&nbsp;&quot;three&quot;;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;msg2.iov_len&nbsp;=&nbsp;5; </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;memset(msg, 0, sizeof(msg));<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;msg[0].msg_hdr.msg_iov&nbsp;=&nbsp;msg1;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;memset(msg, 0, sizeof(msg));<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;msg[0].msg_hdr.msg_iov&nbsp;=&nbsp;msg1;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;msg[0].msg_hdr.msg_iovlen&nbsp;=&nbsp;2; </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;msg[1].msg_hdr.msg_iov&nbsp;=&nbsp;&amp;msg2;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;msg[1].msg_hdr.msg_iov&nbsp;=&nbsp;&amp;msg2;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;msg[1].msg_hdr.msg_iovlen&nbsp;=&nbsp;1; </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;retval&nbsp;=&nbsp;sendmmsg(sockfd, msg, 2, 0);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(retval&nbsp;==&nbsp;-1)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;perror(&quot;sendmmsg()&quot;);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;else<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;retval&nbsp;=&nbsp;sendmmsg(sockfd, msg, 2, 0);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(retval&nbsp;==&nbsp;-1)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;perror(&quot;sendmmsg()&quot;);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;else<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;%d messages sent
 &quot;, retval); </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(0); }</p>

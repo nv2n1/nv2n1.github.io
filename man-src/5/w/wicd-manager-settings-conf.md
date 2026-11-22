@@ -9,43 +9,43 @@ description: "wicd-manager-settings.conf – contains settings that control Wicd
 
 <p>wicd-manager-settings.conf &#8211; contains settings that control Wicd&#8217;s behavior</p>
 <h2>Description</h2>
-<p>This file contains general configuration information for Wicd.<br />
+<p>This file contains general configuration information for Wicd.<br/>
  This file is located at /etc/wicd/manager-settings.conf </p>
 <h2>Settings</h2>
 <dl>
 <dt><code>link_detect_tool = </code><i>&lt;0|1|2&gt;</i></dt>
-<dd>0 = autodetect<br />
- 1 = ethtool<br />
+<dd>0 = autodetect<br/>
+ 1 = ethtool<br/>
  2 = mii-tool</dd>
 <dt><code>flush_tool = </code><i>&lt;0|1|2&gt;</i></dt>
-<dd>0 = autodetect<br />
- 1 = ip<br />
+<dd>0 = autodetect<br/>
+ 1 = ip<br/>
  2 = route</dd>
 <dt><code>backend = </code><i>&lt;ioctl|external&gt;</i></dt>
 <dd>Default is ioctl backend.</dd>
 <dt><code>signal_display_type = </code><i>&lt;0|1&gt;</i></dt>
-<dd>0 = Show signal strength as a percentage<br />
+<dd>0 = Show signal strength as a percentage<br/>
  1 = Show signal strength in dBm</dd>
 <dt><code>dhcp_client = </code><i>&lt;0|1|2|3&gt;</i></dt>
-<dd>0 = autodetect<br />
- 1 = dhclient<br />
- 2 = dhcpcd<br />
+<dd>0 = autodetect<br/>
+ 1 = dhclient<br/>
+ 2 = dhcpcd<br/>
  3 = pump</dd>
 <dt><code>sudo_app = </code><i>&lt;0|1|2|3&gt;</i></dt>
-<dd>0 = autodetect<br />
- 1 = gksu<br />
- 2 = kdesu<br />
+<dd>0 = autodetect<br/>
+ 1 = gksu<br/>
+ 2 = kdesu<br/>
  3 = ktsuss</dd>
 <dt><code>wired_interface = </code><i>&lt;interface_name|None&gt;</i></dt>
 <dd>
 </dd><dt><code>always_show_wired_interface = </code><i>&lt;True|False&gt;</i></dt>
 <dd>
 </dd><dt><code>wired_connect_mode = </code><i>&lt;1|2|3&gt;</i></dt>
-<dd>1 = default profile<br />
- 2 = show list<br />
+<dd>1 = default profile<br/>
+ 2 = show list<br/>
  3 = last used profile</dd>
 <dt><code>prefer_wired = </code><i>&lt;True|False&gt;</i></dt>
-<dd>True = Switch to wired interface if a link is detected, even if already connected to wireless<br />
+<dd>True = Switch to wired interface if a link is detected, even if already connected to wireless<br/>
  False = Do not switch to wired interface automatically</dd>
 <dt><code>wireless_interface = </code><i>&lt;name_of_wireless_interface|None&gt;</i></dt>
 <dd>
@@ -64,7 +64,7 @@ description: "wicd-manager-settings.conf – contains settings that control Wicd
 </dd><dt><code>global_dns_3 = </code><i>&lt;ip_address&gt;</i></dt>
 <dd>
 </dd><dt><code>debug_mode = </code><i>&lt;integer_value&gt;</i></dt>
-<dd>0 = disabled<br />
+<dd>0 = disabled<br/>
  1 = enabled </dd>
 </dl>
 <h2>See Also</h2>

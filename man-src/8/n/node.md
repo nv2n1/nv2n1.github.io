@@ -98,5 +98,5 @@ description: "node – Node front end for AX.25, NET/ROM, Rose and TCP"
 <h2>See Also</h2>
 <p><code>node.conf</code>(5), <code>node.perms</code>(5), <code><a href="/docs/linux/man/5-axports/">axports</a></code>(5), <code><a href="/docs/linux/man/8-ax25d/">ax25d</a></code>(8), <code><a href="/docs/linux/man/8-mheardd/">mheardd</a></code>(8).</p>
 <h2>Author</h2>
-<p>Tomi Manninen OH2BNS &lt;tpmannin [at] cc.hut.fi&gt;<br />
+<p>Tomi Manninen OH2BNS &lt;tpmannin [at] cc.hut.fi&gt;<br/>
  Alan Cox GW4PTS &lt;gw4pts [at] gw4pts.ampr.org&gt;</p>

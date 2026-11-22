@@ -41,7 +41,7 @@ description: "fvwm-perllib – shows the documentation of the Fvwm Perl library"
 <h2>AUTHORS</h2>
 <p> Mikhael Goikhman &lt;migo [at] homemail.com&gt;.</p>
 <h2>COPYING</h2>
-<p> The script is distributed by the same terms as fvwm itself. See <font SIZE="-1">GNU</font> General Public License for details.</p>
+<p> The script is distributed by the same terms as fvwm itself. See GNU General Public License for details.</p>
 <h2>BUGS</h2>
 <p> No known bugs. </p>
 <p> Report bugs to fvwm-bug [at] fvwm.org. </p>

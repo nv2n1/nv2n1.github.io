@@ -41,8 +41,8 @@ description: "fapg – Fast Audio Playlist Generator"
 <dd> Read filenames and/or directories from standard input instead of command line. </dd>
 </dl>
 <h2>EXAMPLES</h2>
-<p> Generate a PLS playlist for an album: <code>fapg &#8211;format=pls &#8211;output=~/path/to/album/list.pls ~/path/to/album</code><br />
-&nbsp;<wbr> You have a file server using Samba which shares a large amount of audio files for Windows powered computers using Winamp. The directory on the server containing the files is <i>/samba/mp3 </i> and is visible on the Windows network as <i>\\server\mp3</i> : <code>cd /samba/mp3 &amp;&amp; fapg &#8211;backslash &#8211;output=/samba/mp3/list.m3u &#8211;prefix=&#8217;\\server\mp3\&#8217; &#8211;recursive &#8211;windows ./</code><br />
+<p> Generate a PLS playlist for an album: <code>fapg &#8211;format=pls &#8211;output=~/path/to/album/list.pls ~/path/to/album</code><br/>
+&nbsp;<wbr> You have a file server using Samba which shares a large amount of audio files for Windows powered computers using Winamp. The directory on the server containing the files is <i>/samba/mp3 </i> and is visible on the Windows network as <i>\\server\mp3</i> : <code>cd /samba/mp3 &amp;&amp; fapg &#8211;backslash &#8211;output=/samba/mp3/list.m3u &#8211;prefix=&#8217;\\server\mp3\&#8217; &#8211;recursive &#8211;windows ./</code><br/>
 &nbsp;<wbr> An HTML playlist for an album: <code>fapg &#8211;output=fapg.html ~/path/to/album</code> </p>
 <p> A playlist that contains all your classical tracks may receive the genres to include (or exclude) in one or multiple portions <code>fapg &#8211;genre=32:105 &#8211;genre=106:104:103 /path/to/all/music</code> </p>
 <p> Generate a podcasting XML file using an external program rss.sh to generate a detailed description: <code>fapg &#8211;output=dir.xml -f rss -c /usr/local/bin/rss.sh -r &#8211;prefix=<a rel="nofollow" href="http://thisserver/basedir">http://thisserver/basedir</a> path/to/mp3</code> </p>

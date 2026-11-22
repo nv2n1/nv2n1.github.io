@@ -10,7 +10,7 @@ description: "clalsd.f –"
 <p>clalsd.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>clalsd</code> (UPLO, SMLSIZ, N, NRHS, D, E, B, LDB, RCOND, RANK, WORK, RWORK, IWORK, INFO)<br />
+<p>subroutine <code>clalsd</code> (UPLO, SMLSIZ, N, NRHS, D, E, B, LDB, RCOND, RANK, WORK, RWORK, IWORK, INFO)<br/>
  <i></i><code>CLALSD</code> uses the singular value decomposition of A to solve the least squares problem.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine clalsd (characterUPLO, integerSMLSIZ, integerN, integerNRHS, real, dimension( * )D, real, dimension( * )E, complex, dimension( ldb, * )B, integerLDB, realRCOND, integerRANK, complex, dimension( * )WORK, real, dimension( * )RWORK, integer, dimension( * )IWORK, integerINFO)</h3>

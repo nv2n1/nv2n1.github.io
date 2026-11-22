@@ -10,7 +10,7 @@ description: "slaqr5.f –"
 <p>slaqr5.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>slaqr5</code> (WANTT, WANTZ, KACC22, N, KTOP, KBOT, NSHFTS, SR, SI, H, LDH, ILOZ, IHIZ, Z, LDZ, V, LDV, U, LDU, NV, WV, LDWV, NH, WH, LDWH)<br />
+<p> subroutine <code>slaqr5</code> (WANTT, WANTZ, KACC22, N, KTOP, KBOT, NSHFTS, SR, SI, H, LDH, ILOZ, IHIZ, Z, LDZ, V, LDV, U, LDU, NV, WV, LDWV, NH, WH, LDWH)<br/>
  <i></i><code>SLAQR5</code> performs a single small-bulge multi-shift QR sweep.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slaqr5 (logicalWANTT, logicalWANTZ, integerKACC22, integerN, integerKTOP, integerKBOT, integerNSHFTS, real, dimension( * )SR, real, dimension( * )SI, real, dimension( ldh, * )H, integerLDH, integerILOZ, integerIHIZ, real, dimension( ldz, * )Z, integerLDZ, real, dimension( ldv, * )V, integerLDV, real, dimension( ldu, * )U, integerLDU, integerNV, real, dimension( ldwv, * )WV, integerLDWV, integerNH, real, dimension( ldwh, * )WH, integerLDWH)</h3>

@@ -7,7 +7,7 @@ url: "/docs/linux/man/3-tspi_tpm_takeownership/"
 description: "Tspi_TPM_TakeOwnership – take ownership of a TPM"
 ---
 
-<p>TCG Software Stack Developer&#8217;s Reference<br />
+<p>TCG Software Stack Developer&#8217;s Reference<br/>
  </center></p>
 <h2>Name</h2>
 <p>Tspi_TPM_TakeOwnership &#8211; take ownership of a TPM </p>
@@ -33,9 +33,9 @@ description: "Tspi_TPM_TakeOwnership – take ownership of a TPM"
 <h2>Return Codes</h2>
 <p><code>Tspi_TPM_TakeOwnership</code> returns TSS_SUCCESS on success, otherwise one of the following values is returned:</p>
 <dl COMPACT>
-<dt><font SIZE="-1">TSS_E_INVALID_HANDLE</font></dt>
+<dt>TSS_E_INVALID_HANDLE</dt>
 <dd>Either the TPM or one of the key handles is not valid. </dd>
-<dt><font SIZE="-1">TSS_E_INTERNAL_ERROR</font></dt>
+<dt>TSS_E_INTERNAL_ERROR</dt>
 <dd>An internal SW error has been detected. </dd>
 </dl>
 <h2>Conforming To</h2>

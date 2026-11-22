@@ -22,5 +22,5 @@ description: "XSetICFocus, XUnsetICFocus – set and unset input context focus"
 <p> The <code>XUnsetICFocus</code> function allows a client to notify an input method that the specified input context has lost the keyboard focus and that no more input is expected on the focus window attached to that input context. The input method should take action to provide appropriate feedback. Complete feedback specification is a matter of user interface policy. </p>
 <p> Calling <code>XUnsetICFocus</code> does not affect the focus window value; the client may still receive events from the input method that are directed to the focus window.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xcreateic/">XCreateIC</a>(3), <a href="/docs/linux/man/3-xopenim/">XOpenIM</a>(3), <a href="/docs/linux/man/3-xseticvalues/">XSetICValues</a>(3), <a href="/docs/linux/man/3-xmbresetic/">XmbResetIC</a>(3)<br />
+<p><a href="/docs/linux/man/3-xcreateic/">XCreateIC</a>(3), <a href="/docs/linux/man/3-xopenim/">XOpenIM</a>(3), <a href="/docs/linux/man/3-xseticvalues/">XSetICValues</a>(3), <a href="/docs/linux/man/3-xmbresetic/">XmbResetIC</a>(3)<br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

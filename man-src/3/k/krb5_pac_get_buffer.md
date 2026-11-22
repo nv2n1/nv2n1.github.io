@@ -10,9 +10,9 @@ description: "Heimdal Kerberos 5 PAC handling functions –"
 
 <p> Heimdal Kerberos 5 PAC handling functions &#8211; </p>
 <h3>Functions</h3>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_pac_get_buffer</code> (krb5_context, krb5_pac, uint32_t, krb5_data *)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_pac_verify</code> (krb5_context, const krb5_pac, time_t, krb5_const_principal, const krb5_keyblock *, const krb5_keyblock *)&quot; </p>
 <h2>Detailed Description</h2>
 <h2>Function Documentation</h2>
@@ -21,9 +21,9 @@ description: "Heimdal Kerberos 5 PAC handling functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> Kerberos 5 context.<br />
- <i>p</i> the pac structure returned by krb5_pac_parse().<br />
- <i>type</i> type of buffer to get<br />
+</dt><dd> <i>context</i> Kerberos 5 context.<br/>
+ <i>p</i> the pac structure returned by krb5_pac_parse().<br/>
+ <i>type</i> type of buffer to get<br/>
  <i>data</i> return data, free with <code>krb5_data_free()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -34,11 +34,11 @@ description: "Heimdal Kerberos 5 PAC handling functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> Kerberos 5 context.<br />
- <i>pac</i> the pac structure returned by krb5_pac_parse().<br />
- <i>authtime</i> The time of the ticket the PAC belongs to.<br />
- <i>principal</i> the principal to verify.<br />
- <i>server</i> The service key, most always be given.<br />
+</dt><dd> <i>context</i> Kerberos 5 context.<br/>
+ <i>pac</i> the pac structure returned by krb5_pac_parse().<br/>
+ <i>authtime</i> The time of the ticket the PAC belongs to.<br/>
+ <i>principal</i> the principal to verify.<br/>
+ <i>server</i> The service key, most always be given.<br/>
  <i>privsvr</i> The KDC key, may be given.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

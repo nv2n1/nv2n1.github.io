@@ -21,12 +21,12 @@ description: "asn1_array2tree – API function"
 <dt>char * errorDescription</dt>
 <dd> return the error description.</dd></dl>
 <h2>DESCRIPTION</h2>
-<p> Creates the structures needed to manage the ASN.1 definitions.<br />
+<p> Creates the structures needed to manage the ASN.1 definitions.<br/>
 &nbsp;<wbr><i>array</i>&nbsp;<wbr>is a vector created by&nbsp;<wbr><code>asn1_parser2array()</code>.</p>
 <h2>RETURNS</h2>
 <p> <code>ASN1_SUCCESS</code> if structure was created correctly, <code>ASN1_ELEMENT_NOT_EMPTY</code> if * <i>definitions</i> not NULL, <code>ASN1_IDENTIFIER_NOT_FOUND</code> if in the file there is an identifier that is not defined (see <i>errorDescription</i> for more information), <code>ASN1_ARRAY_ERROR</code> if the array pointed by <i>array</i> is wrong.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2006-2015 Free Software Foundation, Inc..<br />
+<p> Copyright &#169; 2006-2015 Free Software Foundation, Inc..<br/>
  Copying and distribution of this file, with or without modification, are permitted in any medium without royalty provided the copyright notice and this notice are preserved.</p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>libtasn1</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>libtasn1</code> programs are properly installed at your site, the command</p>

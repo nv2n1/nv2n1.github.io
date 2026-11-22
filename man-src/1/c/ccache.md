@@ -67,13 +67,13 @@ ln -s ccache /usr/local/bin/c++
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Warning</code> </font> </dd>
+  <code>Warning</code>  </dd>
 <p> The technique of letting ccache masquerade as the compiler works well, but currently doesn&#8217;t interact well with other tools that do the same thing. See USING CCACHE WITH OTHER COMPILER WRAPPERS. </p>
 </dl>
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Warning</code> </font> </dd>
+  <code>Warning</code>  </dd>
 <p> Do not use a hard link, use a symbolic link. A hard link will cause &#8220;interesting&#8221; problems. </p>
 </dl>
 <h2>OPTIONS</h2>
@@ -309,7 +309,7 @@ max_size = 10G
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  In previous versions of ccache, <code>CCACHE_TEMPDIR</code> had to be on the same filesystem as the <code>CCACHE_DIR</code> path, but this requirement has been relaxed.) </dd>
 </dl>
 </dl>

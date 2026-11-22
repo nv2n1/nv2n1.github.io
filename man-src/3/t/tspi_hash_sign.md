@@ -7,7 +7,7 @@ url: "/docs/linux/man/3-tspi_hash_sign/"
 description: "Tspi_Hash_Sign – sign the hash data of an object with a signing key"
 ---
 
-<p>TCG Software Stack Developer&#8217;s Reference<br />
+<p>TCG Software Stack Developer&#8217;s Reference<br/>
  </center></p>
 <h2>Name</h2>
 <p>Tspi_Hash_Sign &#8211; sign the hash data of an object with a signing key </p>
@@ -35,17 +35,17 @@ description: "Tspi_Hash_Sign – sign the hash data of an object with a signing 
 <h2>Return Codes</h2>
 <p><code>Tspi_Hash_Sign</code> returns TSS_SUCCESS on success, otherwise one of the following values is returned:</p>
 <dl COMPACT>
-<dt><font SIZE="-1">TSS_E_INVALID_HANDLE</font></dt>
+<dt>TSS_E_INVALID_HANDLE</dt>
 <dd><i>hKey</i> is not a valid handle. </dd>
-<dt><font SIZE="-1">TSS_E_INTERNAL_ERROR</font></dt>
+<dt>TSS_E_INTERNAL_ERROR</dt>
 <dd>An internal SW error has been detected. </dd>
-<dt><font SIZE="-1">TSS_E_BAD_PARAMETER</font></dt>
+<dt>TSS_E_BAD_PARAMETER</dt>
 <dd>One or more parameters is bad. </dd>
-<dt><font SIZE="-1">TSS_E_HASH_INVALID_LENGTH</font></dt>
+<dt>TSS_E_HASH_INVALID_LENGTH</dt>
 <dd>Hash length is inconsistent with hash algorithm. </dd>
-<dt><font SIZE="-1">TSS_E_HASH_NO_DATA</font></dt>
+<dt>TSS_E_HASH_NO_DATA</dt>
 <dd>Hash object has no internal hash value. </dd>
-<dt><font SIZE="-1">TSS_E_HASH_NO_IDENTIFIER</font></dt>
+<dt>TSS_E_HASH_NO_IDENTIFIER</dt>
 <dd>The hash algorithm identifier is not set. </dd>
 </dl>
 <h2>Conforming To</h2>

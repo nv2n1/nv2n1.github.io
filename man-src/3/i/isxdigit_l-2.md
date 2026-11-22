@@ -39,8 +39,8 @@ description: "isalnum, isalpha, isascii, isblank, iscntrl, isdigit, isgraph, isl
 <p>Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
 <p> <code>isascii</code>():</p>
 <dl COMPACT>
-<dd>_XOPEN_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc since 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
+<dd>_XOPEN_SOURCE<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc since 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_SVID_SOURCE</dd></dl>
 <p> <code>isblank</code>():</p>
 <dl COMPACT>
@@ -95,7 +95,7 @@ description: "isalnum, isalpha, isascii, isblank, iscntrl, isdigit, isgraph, isl
 <dt><code>isupper</code>()</dt>
 <dd>checks for an uppercase letter.</dd>
 <dt><code>isxdigit</code>()</dt>
-<dd>checks for hexadecimal digits, that is, one of<br />
+<dd>checks for hexadecimal digits, that is, one of<br/>
  <code>0 1 2 3 4 5 6 7 8 9 a b c d e f A B C D E F</code>.</dd></dl>
 <h2>Return Value</h2>
 <p>The values returned are nonzero if the character <i>c</i> falls into the tested class, and zero if not.</p>

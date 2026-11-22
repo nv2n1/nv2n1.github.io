@@ -33,18 +33,18 @@ description: "google-chrome – the web browser from Google"
 <p>&nbsp;<wbr>&nbsp;&quot;http&quot;,&nbsp;&quot;socks&quot;,&nbsp;&quot;socks4&quot;,&nbsp;&quot;socks5&quot;. </p>
 <p> If the &lt;proxy-scheme&gt; is omitted, it defaults to &quot;http&quot;. Also note that &quot;socks&quot; is equivalent to &quot;socks5&quot;. </p>
 <p> Examples: </p>
-<p>&nbsp;<wbr>&nbsp;&#8211;proxy-server=&quot;foopy:99&quot;<br />
+<p>&nbsp;<wbr>&nbsp;&#8211;proxy-server=&quot;foopy:99&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Use the HTTP proxy&nbsp;&quot;foopy:99&quot;&nbsp;to load all URLs. </p>
-<p>&nbsp;<wbr>&nbsp;&#8211;proxy-server=&quot;<a href="socks://foobar:1080">socks://foobar:1080</a>&quot;<br />
+<p>&nbsp;<wbr>&nbsp;&#8211;proxy-server=&quot;<a href="socks://foobar:1080">socks://foobar:1080</a>&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Use the SOCKS v5 proxy&nbsp;&quot;foobar:1080&quot;&nbsp;to load all URLs. </p>
-<p>&nbsp;<wbr>&nbsp;&#8211;proxy-server=&quot;socks4://foobar:1080&quot;<br />
+<p>&nbsp;<wbr>&nbsp;&#8211;proxy-server=&quot;socks4://foobar:1080&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Use the SOCKS v4 proxy&nbsp;&quot;foobar:1080&quot;&nbsp;to load all URLs. </p>
-<p>&nbsp;<wbr>&nbsp;&#8211;proxy-server=&quot;socks5://foobar:66&quot;<br />
+<p>&nbsp;<wbr>&nbsp;&#8211;proxy-server=&quot;socks5://foobar:66&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Use the SOCKS v5 proxy&nbsp;&quot;foobar:66&quot;&nbsp;to load all URLs. </p>
 <p> It is also possible to specify a separate proxy server for different URL types, by prefixing the proxy server specifier with a URL specifier: </p>
 <p> Example: </p>
-<p>&nbsp;<wbr>&nbsp;&#8211;proxy-server=&quot;https=proxy1:80;http=socks4://baz:1080&quot;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Load&nbsp;<a rel="nofollow" href="https://*">https://*</a>&nbsp;URLs using the HTTP proxy&nbsp;&quot;proxy1:80&quot;. And load&nbsp;<a rel="nofollow" href="http://*">http://*</a><br />
+<p>&nbsp;<wbr>&nbsp;&#8211;proxy-server=&quot;https=proxy1:80;http=socks4://baz:1080&quot;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Load&nbsp;<a rel="nofollow" href="https://*">https://*</a>&nbsp;URLs using the HTTP proxy&nbsp;&quot;proxy1:80&quot;. And load&nbsp;<a rel="nofollow" href="http://*">http://*</a><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;URLs using the SOCKS v4 proxy&nbsp;&quot;baz:1080&quot;. </p>
 <dt><code>&#8211;no-proxy-server</code></dt>
 <dd> Disables the proxy server. Overrides any environment variables or settings picked via the options dialog. </dd>

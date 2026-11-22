@@ -46,10 +46,10 @@ foo.com         FOO.COM
 </blockquote>
 <p> A krb5.conf file that covers this case might look like: </p>
 <blockquote><p>
-[libdefaults] v4_instance_resolve = yes<br />
-                                        [realms] FOO.COM = {<br />
-    kdc = kerberos.foo.com<br />
-              v4_instance_convert = {<br />
+[libdefaults] v4_instance_resolve = yes<br/>
+                                        [realms] FOO.COM = {<br/>
+    kdc = kerberos.foo.com<br/>
+              v4_instance_convert = {<br/>
         foo = foo.com} v4_domains = foo.com}
  </p></blockquote>
 <p> With this setup and the following host table: </p>

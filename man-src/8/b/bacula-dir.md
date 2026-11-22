@@ -11,7 +11,7 @@ description: "bacula-dir – Bacula Director"
 <h2>Synopsis</h2>
 <p><code>bacula-dir</code> [<i>options</i>]</p>
 <h2>Description</h2>
-<p>This manual page documents briefly the <code>bacula-dir</code> command.<br />
+<p>This manual page documents briefly the <code>bacula-dir</code> command.<br/>
  Bacula&#8217;s Director Daemon acts as the controller of the network backup system: it is responsible for scheduling and coordinating backups across the network.</p>
 <h2>Options</h2>
 <dl>

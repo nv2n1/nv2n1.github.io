@@ -10,12 +10,12 @@ description: "atool – A script for managing file archives of various types"
 
 <p> atool &#8211; A script for managing file archives of various types </p>
 <h2>SYNOPSIS</h2>
-<p> <code>atool</code> [<i>OPTION</i>]&#8230;<i> ARCHIVE </i>[<i>FILE</i>]&#8230;<br />
- <code>aunpack</code> [<i>OPTION</i>]&#8230;<i> ARCHIVE </i>[<i>FILE</i>]&#8230;<br />
- <code>apack</code> [<i>OPTION</i>]&#8230;<i> ARCHIVE </i>[<i>FILE</i>]&#8230;<br />
- <code>als</code> [<i>OPTION</i>]&#8230;<i> ARCHIVE </i>[<i>FILE</i>]&#8230;<br />
- <code>acat</code> [<i>OPTION</i>]&#8230;<i> ARCHIVE </i>[<i>FILE</i>]&#8230;<br />
- <code>adiff</code> [<i>OPTION</i>]&#8230;<i> ARCHIVE </i><i>ARCHIVE</i><br />
+<p> <code>atool</code> [<i>OPTION</i>]&#8230;<i> ARCHIVE </i>[<i>FILE</i>]&#8230;<br/>
+ <code>aunpack</code> [<i>OPTION</i>]&#8230;<i> ARCHIVE </i>[<i>FILE</i>]&#8230;<br/>
+ <code>apack</code> [<i>OPTION</i>]&#8230;<i> ARCHIVE </i>[<i>FILE</i>]&#8230;<br/>
+ <code>als</code> [<i>OPTION</i>]&#8230;<i> ARCHIVE </i>[<i>FILE</i>]&#8230;<br/>
+ <code>acat</code> [<i>OPTION</i>]&#8230;<i> ARCHIVE </i>[<i>FILE</i>]&#8230;<br/>
+ <code>adiff</code> [<i>OPTION</i>]&#8230;<i> ARCHIVE </i><i>ARCHIVE</i><br/>
  <code>arepack</code> [<i>OPTION</i>]&#8230;<i> OLD-ARCHIVE </i><i>NEW-ARCHIVE</i></p>
 <h2>DESCRIPTION</h2>
 <p> This manual page document describes the <code>atool</code> commands. These commands are used for managing file archives of various types, such as tar and Zip archives. Each command can be executed individually or by giving the appropriate options to <code>atool</code> (see <code>OPTIONS</code> below). </p>
@@ -71,7 +71,7 @@ description: "atool – A script for managing file archives of various types"
 <p> You can specify this multiple times to override different options.</p>
 <dt>
 </dt><dd> <code>-O, &#8211;format-option</code>=<i>OPTION</i> Send additional options to the archiver command. This can be useful when specifying compression options for some archives, e.g. </dd>
-<p>&nbsp;<wbr>&nbsp;<wbr><code>apack -F7z -O-mx=9 archive.7z dir</code><br />
+<p>&nbsp;<wbr>&nbsp;<wbr><code>apack -F7z -O-mx=9 archive.7z dir</code><br/>
  You can specify this multiple times add different options.</p>
 <dt><code>&#8211;save-outdir</code>=<i>FILE</i></dt>
 <dd> When extracting files, save the name of the directory which the archive was extracted to to the specified file. If the command was not `extract&#8217;, or the archive was not extracted to a new directory, then nothing will be written to the specified file. If multiple archives were specified (with -e), then only the last directory that files were extracted to will be written to FILE. </dd>
@@ -307,23 +307,23 @@ description: "atool – A script for managing file archives of various types"
 <h2>ENVIRONMENT VARIABLES</h2>
 <p> <code>PAGER</code> The default pager to use when the -p/&#8211;page option is specified.</p>
 <h2>EXAMPLES</h2>
-<p> To extract all files from archive `foobar.tar.gz&#8217; to a subdirectory (or the current directory if it only contains one file):<br />
+<p> To extract all files from archive `foobar.tar.gz&#8217; to a subdirectory (or the current directory if it only contains one file):<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><code>aunpack foobar.tar.gz</code></p>
-<p> To extract all files from all `.tar.gz&#8217; archives in the current directory:<br />
+<p> To extract all files from all `.tar.gz&#8217; archives in the current directory:<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><code>aunpack -e *.tar.gz</code></p>
-<p> To create a zip archive of two files `foo&#8217; and `bar&#8217;:<br />
+<p> To create a zip archive of two files `foo&#8217; and `bar&#8217;:<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><code>apack myarchive.zip foo bar</code></p>
-<p> To display the file `baz&#8217; in the archive `myarchive.zip&#8217; through a pager:<br />
+<p> To display the file `baz&#8217; in the archive `myarchive.zip&#8217; through a pager:<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><code>acat -p myarchive.zip baz</code></p>
-<p> To list contents of the rar archive `stuff.rar&#8217;:<br />
+<p> To list contents of the rar archive `stuff.rar&#8217;:<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><code>als stuff.rar</code></p>
-<p> To create three archives, `dir1.tar.gz&#8217;, `dir2.tar.gz&#8217; and `dir3.tar.gz&#8217;, so that the first one contains all files in dir1, the second all in dir2 and the third all dir3:<br />
+<p> To create three archives, `dir1.tar.gz&#8217;, `dir2.tar.gz&#8217; and `dir3.tar.gz&#8217;, so that the first one contains all files in dir1, the second all in dir2 and the third all dir3:<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><code>apack -e -F .tar.gz dir1 dir2 dir3</code></p>
-<p> To show all differences between version 2.4.17 and 2.4.18 of the kernel:<br />
+<p> To show all differences between version 2.4.17 and 2.4.18 of the kernel:<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><code>adiff linux-2.4.17.tar.gz linux-2.4.18.tar.gz</code></p>
-<p> To repack all .tar.gz archives in the current directory to .tar.7z (the old archive will be kept untouched):<br />
+<p> To repack all .tar.gz archives in the current directory to .tar.7z (the old archive will be kept untouched):<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><code>arepack -F.tar.7z -e *.tar.gz</code></p>
-<p> Here&#8217;s a shell function that will make the aunpack command change into the directory where files were extracted:<br />
+<p> Here&#8217;s a shell function that will make the aunpack command change into the directory where files were extracted:<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><code>aunpack () {</code></p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><code> TMP=`mktemp /tmp/aunpack.XXXXXXXXXX`</code></p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><code> atool -x &#8211;save-outdir=$TMP &quot;$@&quot;</code></p>
@@ -331,12 +331,12 @@ description: "atool – A script for managing file archives of various types"
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><code> [ &quot;$DIR&quot; != &quot;&quot; -a -d &quot;$DIR&quot; ] &amp;&amp; cd &quot;$DIR&quot;</code></p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><code> rm $TMP</code></p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><code>}</code></p>
-<p> If you don&#8217;t have the mktemp program, you can replace the second line with (note however that this is not entirely safe)<br />
+<p> If you don&#8217;t have the mktemp program, you can replace the second line with (note however that this is not entirely safe)<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><code> TMP=&quot;/tmp/atool_outdir.$$&quot;</code></p>
 <h2>KNOWN BUGS</h2>
 <p> Trying to extract gzip and other compressed files without the .gz (or .bz2 etc) extension won&#8217;t work: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>aunpack: foo: format not known, identifying using file<br />
-&nbsp;<wbr>&nbsp;<wbr>aunpack: foo: format is&nbsp;<wbr>`gzip&#8217;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>aunpack: foo: format not known, identifying using file<br/>
+&nbsp;<wbr>&nbsp;<wbr>aunpack: foo: format is&nbsp;<wbr>`gzip&#8217;<br/>
 &nbsp;<wbr>&nbsp;<wbr>gzip: foo: unknown suffix &#8212; ignored </p>
 <p> This last error above is generated by <code>gzip -d foo</code>. </p>
 <p> If you find a bug not listed here, please report it to &lt;oskar [at] osk.mine.nu&gt;.</p>

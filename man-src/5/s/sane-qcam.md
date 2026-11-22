@@ -18,9 +18,9 @@ description: "sane-qcam – SANE backend for Connectix QuickCam cameras"
 <h2>Configuration</h2>
 <p>The contents of the <i>qcam.conf</i> file is a list port addresses that may be connected to a Connectix QuickCam. Empty lines and everything starting from a hash mark (#) up to the end of a line are ignored. A sample configuration file is shown below: </p>
 <dl>
-<dd>0x37b # /dev/lp0<br />
- 0x378 # /dev/lp1<br />
- u0x278 # /dev/lp2 forced in uni-directional mode<br />
+<dd>0x37b # /dev/lp0<br/>
+ 0x378 # /dev/lp1<br/>
+ u0x278 # /dev/lp2 forced in uni-directional mode<br/>
  0x3bc # /dev/lp0 (alternate address)</dd></dl>
 <p> In general, it is safest to list only the port addresses that really correspond to a QuickCam. For example, if one of the listed addresses actually connect to a printer, then starting up this backend will cause the printer to perform a device reset (which is generally undesirable).</p>
 <h2>Files</h2>

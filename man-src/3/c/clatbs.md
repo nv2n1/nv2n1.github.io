@@ -11,7 +11,7 @@ description: "clatbs.f –"
 <p> clatbs.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>clatbs</code> (UPLO, TRANS, DIAG, NORMIN, N, KD, AB, LDAB, X, SCALE, CNORM, INFO)<br />
+<p> subroutine <code>clatbs</code> (UPLO, TRANS, DIAG, NORMIN, N, KD, AB, LDAB, X, SCALE, CNORM, INFO)<br/>
  <i></i><code>CLATBS</code> solves a triangular banded system of equations.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine clatbs (characterUPLO, characterTRANS, characterDIAG, characterNORMIN, integerN, integerKD, complex, dimension( ldab, * )AB, integerLDAB, complex, dimension( * )X, realSCALE, real, dimension( * )CNORM, integerINFO)</h3>

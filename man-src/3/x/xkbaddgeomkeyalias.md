@@ -10,7 +10,7 @@ description: "XkbAddGeomKeyAlias – Add one key alias to an existing keyboard g
 <p>XkbAddGeomKeyAlias &#8211; Add one key alias to an existing keyboard geometry description </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>XkbKeyAliasPtr XkbAddGeomKeyAlias</code> <code>(XkbGeometryPtr </code><i>geom</i><code>,</code> <code>char *</code><i>alias</i><code>,</code> <code>char *</code><i>real</i><code>);</code><br />
+<dt> <code>XkbKeyAliasPtr XkbAddGeomKeyAlias</code> <code>(XkbGeometryPtr </code><i>geom</i><code>,</code> <code>char *</code><i>alias</i><code>,</code> <code>char *</code><i>real</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

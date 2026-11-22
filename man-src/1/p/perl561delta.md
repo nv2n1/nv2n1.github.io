@@ -37,7 +37,7 @@ description: "perl561delta – what’s new for perl v5.6.1"
 <dt>Bugs in regular expressions</dt>
 <dd> Pattern matches on overloaded values are now handled correctly. </dd>
 <p> Perl 5.6.0 parsed m/\x{ab}/ incorrectly, leading to spurious warnings. This has been corrected. </p>
-<p> The <font SIZE="-1">RE</font> engine found in Perl 5.6.0 accidentally pessimised certain kinds of simple pattern matches. These are now handled better. </p>
+<p> The RE engine found in Perl 5.6.0 accidentally pessimised certain kinds of simple pattern matches. These are now handled better. </p>
 <p> Regular expression debug output (whether through <code>&quot;use re &#8216;debug&#8217;&quot;</code> or via <code>&quot;-Dr&quot;</code>) now looks better. </p>
 <p> Multi-line matches like <code>&quot;&quot;a\nxb\n&quot; =~ /(?!\A)x/m&quot;</code> were flawed. The bug has been fixed. </p>
 <p> Use of $&amp; could trigger a core dump under some situations. This is now avoided. </p>
@@ -61,7 +61,7 @@ description: "perl561delta – what’s new for perl v5.6.1"
 <p> ``our&#8217;&#8216; variables of the same name declared in two sibling blocks resulted in bogus warnings about ``redeclaration&#8217;&#8216; of the variables. The problem has been corrected. </p>
  </dd>
 <dt><code>glob()</code></dt>
-<dd> <p> Compatibility of the builtin <code>glob()</code> with old csh-based glob has been improved with the addition of <font SIZE="-1">GLOB_ALPHASORT</font> option. See <code>&quot;File::Glob&quot;</code>. </p>
+<dd> <p> Compatibility of the builtin <code>glob()</code> with old csh-based glob has been improved with the addition of GLOB_ALPHASORT option. See <code>&quot;File::Glob&quot;</code>. </p>
 <p> <code>File::Glob::glob()</code> has been renamed to <code>File::Glob::bsd_glob()</code> because the name clashes with the builtin <code>glob()</code>. The older name is still available for compatibility, but is deprecated. </p>
 <p> Spurious syntax errors generated in certain situations, when <code>glob()</code> caused File::Glob to be loaded for the first time, have been fixed. </p>
  </dd>
@@ -89,8 +89,8 @@ description: "perl561delta – what’s new for perl v5.6.1"
 <p> <code>$.</code> is no longer corrupted by the debugger. </p>
 <p> All debugger output now correctly goes to the socket if RemotePort is set. </p>
  </dd>
-<dt><font SIZE="-1">PERL5OPT</font></dt>
-<dd> <p> <font SIZE="-1">PERL5OPT</font> can be set to more than one switch group. Previously, it used to be limited to one group of options only. </p>
+<dt>PERL5OPT</dt>
+<dd> <p> PERL5OPT can be set to more than one switch group. Previously, it used to be limited to one group of options only. </p>
  </dd>
 <dt><code>chop()</code></dt>
 <dd> <p> chop(@list) in list context returned the characters chopped in reverse order. This has been reversed to be in the right order. </p>
@@ -121,7 +121,7 @@ description: "perl561delta – what’s new for perl v5.6.1"
 <dd> <p> File::Find now <code>chdir()</code>s correctly when chasing symbolic links. </p>
  </dd>
 <dt>xsubpp</dt>
-<dd> <p> xsubpp now tolerates embedded <font SIZE="-1">POD</font> sections. </p>
+<dd> <p> xsubpp now tolerates embedded POD sections. </p>
  </dd>
 <dt>&quot;no Module;&quot;</dt>
 <dd> <p> <code>&quot;no Module;&quot;</code> does not produce an error even if Module does not have an <code>unimport()</code> method. This parallels the behavior of <code>&quot;use&quot;</code> vis-a-vis <code>&quot;import&quot;</code>. </p>
@@ -130,13 +130,13 @@ description: "perl561delta – what’s new for perl v5.6.1"
 <dd> <p> A large number of tests have been added. </p>
  </dd></dl>
 <h3>Core features</h3>
-<p> <code>untie()</code> will now call an <font SIZE="-1"><code>UNTIE</code></font><code>()</code> hook if it exists. See perltie for details. </p>
+<p> <code>untie()</code> will now call an <code>UNTIE</code><code>()</code> hook if it exists. See perltie for details. </p>
 <p> The <code>&quot;-DT&quot;</code> command line switch outputs copious tokenizing information. See perlrun. </p>
 <p> Arrays are now always interpolated in double-quotish strings. Previously, <code>&quot;foo [at] bar.com&quot;</code> used to be a fatal error at compile time, if an array <code>@bar</code> was not used or declared. This transitional behavior was intended to help migrate perl4 code, and is deemed to be no longer useful. See ``Arrays now always interpolate into double-quoted strings&#8217;&#8216;. </p>
 <p> <code>keys()</code>, <code>each()</code>, <code>pop()</code>, <code>push()</code>, <code>shift()</code>, <code>splice()</code> and <code>unshift()</code> can all be overridden now. </p>
 <p> <code>&quot;my __PACKAGE__ $obj&quot;</code> now does the expected thing.  </p>
 <h3>Configuration issues</h3>
-<p> On some systems (<font SIZE="-1">IRIX</font> and Solaris among them) the system malloc is demonstrably better. While the defaults haven&#8217;t been changed in order to retain binary compatibility with earlier releases, you may be better off building perl with <code>&quot;Configure -Uusemymalloc ...&quot;</code> as discussed in the <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file. </p>
+<p> On some systems (IRIX and Solaris among them) the system malloc is demonstrably better. While the defaults haven&#8217;t been changed in order to retain binary compatibility with earlier releases, you may be better off building perl with <code>&quot;Configure -Uusemymalloc ...&quot;</code> as discussed in the <i></i><i>INSTALL</i><i></i> file. </p>
 <p> <code>&quot;Configure&quot;</code> has been enhanced in various ways: </p>
 <dl>
 <dt>&bull;</dt>
@@ -153,13 +153,13 @@ description: "perl561delta – what’s new for perl v5.6.1"
 <pre><code>    sh /path/to/source/Configure -Dmksymlinks ...
     make all test install
 </code></pre>
-<p> in a directory other than the perl source directory. See <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i>. </p>
+<p> in a directory other than the perl source directory. See <i></i><i>INSTALL</i><i></i>. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> <code>&quot;Configure -S&quot;</code> can be run non-interactively. </p>
  </dd></dl>
 <h3>Documentation</h3>
-<p> <font SIZE="-1">README</font>.aix, <font SIZE="-1">README</font>.solaris and <font SIZE="-1">README</font>.macos have been added. <font SIZE="-1">README</font>.posix-bc has been renamed to <font SIZE="-1">README</font>.bs2000. These are installed as perlaix, perlsolaris, perlmacos, and perlbs2000 respectively. </p>
+<p> README.aix, README.solaris and README.macos have been added. README.posix-bc has been renamed to README.bs2000. These are installed as perlaix, perlsolaris, perlmacos, and perlbs2000 respectively. </p>
 <p> The following pod documents are brand new: </p>
 <pre><code>    perlclib Internal replacements for standard C library functions
     perldebtut Perl debugging tutorial
@@ -169,7 +169,7 @@ description: "perl561delta – what’s new for perl v5.6.1"
     perlretut Perl regular expressions tutorial
     perlutil utilities packaged with the Perl distribution
 </code></pre>
-<p> The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file has been expanded to cover various issues, such as 64-bit support. </p>
+<p> The <i></i><i>INSTALL</i><i></i> file has been expanded to cover various issues, such as 64-bit support. </p>
 <p> A longer list of contributors has been added to the source distribution. See the file <code>&quot;AUTHORS&quot;</code>. </p>
 <p> Numerous other changes have been made to the included documentation and FAQs.  </p>
 <h3>Bundled modules</h3>
@@ -185,21 +185,21 @@ description: "perl561delta – what’s new for perl v5.6.1"
 <dd> <p> Converts Pod data to formatted LaTeX. See Pod::LaTeX. </p>
  </dd>
 <dt>Pod::Text::Overstrike</dt>
-<dd> <p> Converts <font SIZE="-1">POD</font> data to formatted overstrike text. See Pod::Text::Overstrike. </p>
+<dd> <p> Converts POD data to formatted overstrike text. See Pod::Text::Overstrike. </p>
  </dd></dl>
 <p> The following modules have been upgraded. </p>
 <dl>
-<dt><font SIZE="-1">CGI</font></dt>
-<dd> <p> <font SIZE="-1">CGI</font> v2.752 is now included. </p>
+<dt>CGI</dt>
+<dd> <p> CGI v2.752 is now included. </p>
  </dd>
-<dt><font SIZE="-1">CPAN</font></dt>
-<dd> <p> <font SIZE="-1">CPAN</font> v1.59_54 is now included. </p>
+<dt>CPAN</dt>
+<dd> <p> CPAN v1.59_54 is now included. </p>
  </dd>
 <dt>Class::Struct</dt>
 <dd> <p> Various bugfixes have been added. </p>
  </dd>
 <dt>DB_File</dt>
-<dd> <p> DB_File v1.75 supports newer Berkeley <font SIZE="-1">DB</font> versions, among other improvements. </p>
+<dd> <p> DB_File v1.75 supports newer Berkeley DB versions, among other improvements. </p>
  </dd>
 <dt>Devel::Peek</dt>
 <dd> <p> Devel::Peek has been enhanced to support dumping of memory statistics, when perl is built with the included <code>malloc()</code>. </p>
@@ -249,31 +249,31 @@ description: "perl561delta – what’s new for perl v5.6.1"
 <h3>Platform-specific improvements</h3>
 <p> The following new ports are now available. </p>
 <dl>
-<dt><font SIZE="-1">NCR</font> MP-RAS</dt>
+<dt>NCR MP-RAS</dt>
 <dd>  </dd>
 <dt>NonStop-UX</dt>
 <dd>  </dd></dl>
-<p> Perl now builds under Amdahl <font SIZE="-1">UTS.</font> </p>
-<p> Perl has also been verified to build under Amiga <font SIZE="-1">OS.</font> </p>
-<p> Support for <font SIZE="-1">EPOC</font> has been much improved. See <font SIZE="-1">README</font>.epoc. </p>
-<p> Building perl with -Duseithreads or -Duse5005threads now works under HP-UX 10.20 (previously it only worked under 10.30 or later). You will need a thread library package installed. See <font SIZE="-1">README</font>.hpux. </p>
+<p> Perl now builds under Amdahl UTS. </p>
+<p> Perl has also been verified to build under Amiga OS. </p>
+<p> Support for EPOC has been much improved. See README.epoc. </p>
+<p> Building perl with -Duseithreads or -Duse5005threads now works under HP-UX 10.20 (previously it only worked under 10.30 or later). You will need a thread library package installed. See README.hpux. </p>
 <p> Long doubles should now work under Linux. </p>
-<p> Mac <font SIZE="-1">OS</font> Classic is now supported in the mainstream source package. See <font SIZE="-1">README</font>.macos. </p>
-<p> Support for MPE/iX has been updated. See <font SIZE="-1">README</font>.mpeix. </p>
-<p> Support for <font SIZE="-1">OS/2</font> has been improved. See <code>&quot;os2/Changes&quot;</code> and <font SIZE="-1">README</font>.os2. </p>
-<p> Dynamic loading on z/OS (formerly <font SIZE="-1">OS/390</font>) has been improved. See <font SIZE="-1">README</font>.os390. </p>
-<p> Support for <font SIZE="-1">VMS</font> has seen many incremental improvements, including better support for operators like backticks and <code>system()</code>, and better <code>%ENV</code> handling. See <code>&quot;README.vms&quot;</code> and perlvms. </p>
-<p> Support for Stratus <font SIZE="-1">VOS</font> has been improved. See <code>&quot;vos/Changes&quot;</code> and <font SIZE="-1">README</font>.vos. </p>
+<p> Mac OS Classic is now supported in the mainstream source package. See README.macos. </p>
+<p> Support for MPE/iX has been updated. See README.mpeix. </p>
+<p> Support for OS/2 has been improved. See <code>&quot;os2/Changes&quot;</code> and README.os2. </p>
+<p> Dynamic loading on z/OS (formerly OS/390) has been improved. See README.os390. </p>
+<p> Support for VMS has seen many incremental improvements, including better support for operators like backticks and <code>system()</code>, and better <code>%ENV</code> handling. See <code>&quot;README.vms&quot;</code> and perlvms. </p>
+<p> Support for Stratus VOS has been improved. See <code>&quot;vos/Changes&quot;</code> and README.vos. </p>
 <p> Support for Windows has been improved. </p>
 <dl>
 <dt>&bull;</dt>
 <dd> <p> <code>fork()</code> emulation has been improved in various ways, but still continues to be experimental. See perlfork for known bugs and caveats. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <code>%SIG</code> has been enabled under <font SIZE="-1">USE_ITHREADS,</font> but its use is completely unsupported under all configurations. </p>
+<dd> <p> <code>%SIG</code> has been enabled under USE_ITHREADS, but its use is completely unsupported under all configurations. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Borland C<font SIZE="-2">++</font> v5.5 is now a supported compiler that can build Perl. However, the generated binaries continue to be incompatible with those generated by the other supported compilers (<font SIZE="-1">GCC</font> and Visual C<font SIZE="-2">++</font>). </p>
+<dd> <p> Borland C++ v5.5 is now a supported compiler that can build Perl. However, the generated binaries continue to be incompatible with those generated by the other supported compilers (GCC and Visual C++). </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Non-blocking waits for child processes (or pseudo-processes) are supported via <code>&quot;waitpid($pid, &amp;POSIX::WNOHANG)&quot;</code>. </p>
@@ -300,13 +300,13 @@ description: "perl561delta – what’s new for perl v5.6.1"
 <dd> <p> <code>Win32::GetCwd()</code> correctly returns C:\ instead of C: when at the drive root. Other bugs in <code>chdir()</code> and <code>Cwd::cwd()</code> have also been fixed. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <code>fork()</code> correctly returns undef and sets <font SIZE="-1">EAGAIN</font> when it runs out of pseudo-process handles. </p>
+<dd> <p> <code>fork()</code> correctly returns undef and sets EAGAIN when it runs out of pseudo-process handles. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> ExtUtils::MakeMaker now uses <code>$ENV</code>{<font SIZE="-1">LIB</font>} to search for libraries. </p>
+<dd> <p> ExtUtils::MakeMaker now uses <code>$ENV</code>{LIB} to search for libraries. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <font SIZE="-1">UNC</font> path handling is better when perl is built to support <code>fork()</code>. </p>
+<dd> <p> UNC path handling is better when perl is built to support <code>fork()</code>. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> A handle leak in socket handling has been fixed. </p>
@@ -317,20 +317,20 @@ description: "perl561delta – what’s new for perl v5.6.1"
 <p> Unless specifically qualified otherwise, the remainder of this document covers changes between the 5.005 and 5.6.0 releases.  </p>
 <h2>Core Enhancements</h2>
 <h3>Interpreter cloning, threads, and concurrency</h3>
-<p> Perl 5.6.0 introduces the beginnings of support for running multiple interpreters concurrently in different threads. In conjunction with the <code>perl_clone()</code> <font SIZE="-1">API</font> call, which can be used to selectively duplicate the state of any given interpreter, it is possible to compile a piece of code once in an interpreter, clone that interpreter one or more times, and run all the resulting interpreters in distinct threads. </p>
+<p> Perl 5.6.0 introduces the beginnings of support for running multiple interpreters concurrently in different threads. In conjunction with the <code>perl_clone()</code> API call, which can be used to selectively duplicate the state of any given interpreter, it is possible to compile a piece of code once in an interpreter, clone that interpreter one or more times, and run all the resulting interpreters in distinct threads. </p>
 <p> On the Windows platform, this feature is used to emulate <code>fork()</code> at the interpreter level. See perlfork for details about that. </p>
 <p> This feature is still in evolution. It is eventually meant to be used to selectively clone a subroutine and data reachable from that subroutine in a separate interpreter and run the cloned subroutine in a separate thread. Since there is no shared data between the interpreters, little or no locking will be needed (unless parts of the symbol table are explicitly shared). This is obviously intended to be an easy-to-use replacement for the existing threads support. </p>
-<p> Support for cloning interpreters and interpreter concurrency can be enabled using the -Dusethreads Configure option (see win32/Makefile for how to enable it on Windows.) The resulting perl executable will be functionally identical to one that was built with -Dmultiplicity, but the <code>perl_clone()</code> <font SIZE="-1">API</font> call will only be available in the former. </p>
-<p> -Dusethreads enables the cpp macro <font SIZE="-1">USE_ITHREADS</font> by default, which in turn enables Perl source code changes that provide a clear separation between the op tree and the data it operates with. The former is immutable, and can therefore be shared between an interpreter and all of its clones, while the latter is considered local to each interpreter, and is therefore copied for each clone. </p>
-<p> Note that building Perl with the -Dusemultiplicity Configure option is adequate if you wish to run multiple <code>independent</code> interpreters concurrently in different threads. -Dusethreads only provides the additional functionality of the <code>perl_clone()</code> <font SIZE="-1">API</font> call and other support for running <code>cloned</code> interpreters concurrently. </p>
+<p> Support for cloning interpreters and interpreter concurrency can be enabled using the -Dusethreads Configure option (see win32/Makefile for how to enable it on Windows.) The resulting perl executable will be functionally identical to one that was built with -Dmultiplicity, but the <code>perl_clone()</code> API call will only be available in the former. </p>
+<p> -Dusethreads enables the cpp macro USE_ITHREADS by default, which in turn enables Perl source code changes that provide a clear separation between the op tree and the data it operates with. The former is immutable, and can therefore be shared between an interpreter and all of its clones, while the latter is considered local to each interpreter, and is therefore copied for each clone. </p>
+<p> Note that building Perl with the -Dusemultiplicity Configure option is adequate if you wish to run multiple <code>independent</code> interpreters concurrently in different threads. -Dusethreads only provides the additional functionality of the <code>perl_clone()</code> API call and other support for running <code>cloned</code> interpreters concurrently. </p>
 <pre><code>    NOTE: This is an experimental feature. Implementation details are
     subject to change.
 </code></pre>
 <h3>Lexically scoped warning categories</h3>
 <p> You can now control the granularity of warnings emitted by perl at a finer level using the <code>&quot;use warnings&quot;</code> pragma. warnings and perllexwarn have copious documentation on this feature.  </p>
-<font SIZE="-1"></font><h3>Unicode and UTF-8 support</h3>
-<p> Perl now uses <font SIZE="-1">UTF-8</font> as its internal representation for character strings. The <code>&quot;utf8&quot;</code> and <code>&quot;bytes&quot;</code> pragmas are used to control this support in the current lexical scope. See perlunicode, utf8 and bytes for more information. </p>
-<p> This feature is expected to evolve quickly to support some form of I/O disciplines that can be used to specify the kind of input and output data (bytes or characters). Until that happens, additional modules from <font SIZE="-1">CPAN</font> will be needed to complete the toolkit for dealing with Unicode. </p>
+<h3>Unicode and UTF-8 support</h3>
+<p> Perl now uses UTF-8 as its internal representation for character strings. The <code>&quot;utf8&quot;</code> and <code>&quot;bytes&quot;</code> pragmas are used to control this support in the current lexical scope. See perlunicode, utf8 and bytes for more information. </p>
+<p> This feature is expected to evolve quickly to support some form of I/O disciplines that can be used to specify the kind of input and output data (bytes or characters). Until that happens, additional modules from CPAN will be needed to complete the toolkit for dealing with Unicode. </p>
 <pre><code>    NOTE: This should be considered an experimental feature. Implementation
     details are subject to change.
 </code></pre>
@@ -421,10 +421,10 @@ description: "perl561delta – what’s new for perl v5.6.1"
 <dd> <p> <code>pack()</code> and <code>unpack()</code> ``q&#8217;&#8216; and ``Q&#8217;&#8216; formats </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> in basic arithmetics: + &#8211; * / % (<font SIZE="-1">NOTE:</font> operating close to the limits of the integer values may produce surprising results) </p>
+<dd> <p> in basic arithmetics: + &#8211; * / % (NOTE: operating close to the limits of the integer values may produce surprising results) </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> in bit arithmetics: &amp; | ^ ~ &lt;&lt; &gt;&gt; (<font SIZE="-1">NOTE:</font> these used to be forced to be 32 bits wide but now operate on the full native width.) </p>
+<dd> <p> in bit arithmetics: &amp; | ^ ~ &lt;&lt; &gt;&gt; (NOTE: these used to be forced to be 32 bits wide but now operate on the full native width.) </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> <code>vec()</code> </p>
@@ -467,9 +467,9 @@ description: "perl561delta – what’s new for perl v5.6.1"
 <pre><code>    NOTE: This is currently an experimental feature. Interfaces and
     implementation are subject to change.
 </code></pre>
-<font SIZE="-1"></font><h3>Support for CHECK blocks</h3>
-<p> In addition to <code>&quot;BEGIN&quot;</code>, <code>&quot;INIT&quot;</code>, <code>&quot;END&quot;</code>, <code>&quot;DESTROY&quot;</code> and <code>&quot;AUTOLOAD&quot;</code>, subroutines named <code>&quot;CHECK&quot;</code> are now special. These are queued up during compilation and behave similar to <font SIZE="-1">END</font> blocks, except they are called at the end of compilation rather than at the end of execution. They cannot be called directly.  </p>
-<font SIZE="-1"></font><h3>POSIX character class syntax [: :] supported</h3>
+<h3>Support for CHECK blocks</h3>
+<p> In addition to <code>&quot;BEGIN&quot;</code>, <code>&quot;INIT&quot;</code>, <code>&quot;END&quot;</code>, <code>&quot;DESTROY&quot;</code> and <code>&quot;AUTOLOAD&quot;</code>, subroutines named <code>&quot;CHECK&quot;</code> are now special. These are queued up during compilation and behave similar to END blocks, except they are called at the end of compilation rather than at the end of execution. They cannot be called directly.  </p>
+<h3>POSIX character class syntax [: :] supported</h3>
 <p> For example to match alphabetic characters use /[[:alpha:]]/. See perlre for details.  </p>
 <h3>Better pseudo-random number generator</h3>
 <p> In 5.005_0x and earlier, perl&#8217;s <code>rand()</code> function used the C library <code><a href="/docs/linux/man/3-rand/">rand</a></code>(3) function. As of 5.005_52, Configure tests for <code>drand48()</code>, <code>random()</code>, and <code>rand()</code> (in that order) and picks the first one it finds. </p>
@@ -494,7 +494,7 @@ description: "perl561delta – what’s new for perl v5.6.1"
 <p> In previous versions of Perl, you couldn&#8217;t cache objects so as to allow them to be deleted if the last reference from outside the cache is deleted. The reference in the cache would hold a reference count on the object and the objects would never be destroyed. </p>
 <p> Another familiar problem is with circular references. When an object references itself, its reference count would never go down to zero, and it would not get destroyed until the program is about to exit. </p>
 <p> Weak references solve this by allowing you to ``weaken&#8217;&#8216; any reference, that is, make it not count towards the reference count. When the last non-weak reference to an object is deleted, the object is destroyed and all the weak references to the object are automatically undef-ed. </p>
-<p> To use this feature, you need the Devel::WeakRef package from <font SIZE="-1">CPAN,</font> which contains additional documentation. </p>
+<p> To use this feature, you need the Devel::WeakRef package from CPAN, which contains additional documentation. </p>
 <pre><code>    NOTE: This is an experimental feature. Details are subject to change.
 </code></pre>
 <h3>Binary numbers supported</h3>
@@ -514,8 +514,8 @@ description: "perl561delta – what’s new for perl v5.6.1"
 <p> The <code>exists()</code> builtin now works on subroutine names. A subroutine is considered to exist if it has been declared (even if implicitly). See ``exists&#8217;&#8216; in perlfunc for examples.  </p>
 <code></code><code></code><h3>exists() and delete() are supported on array elements</h3>
 <p> The <code>exists()</code> and <code>delete()</code> builtins now work on simple arrays as well. The behavior is similar to that on hash elements. </p>
-<p> <code>exists()</code> can be used to check whether an array element has been initialized. This avoids autovivifying array elements that don&#8217;t exist. If the array is tied, the <font SIZE="-1"><code>EXISTS</code></font><code>()</code> method in the corresponding tied package will be invoked. </p>
-<p> <code>delete()</code> may be used to remove an element from the array and return it. The array element at that position returns to its uninitialized state, so that testing for the same element with <code>exists()</code> will return false. If the element happens to be the one at the end, the size of the array also shrinks up to the highest element that tests true for <code>exists()</code>, or 0 if none such is found. If the array is tied, the <font SIZE="-1"><code>DELETE</code></font><code>()</code> method in the corresponding tied package will be invoked. </p>
+<p> <code>exists()</code> can be used to check whether an array element has been initialized. This avoids autovivifying array elements that don&#8217;t exist. If the array is tied, the <code>EXISTS</code><code>()</code> method in the corresponding tied package will be invoked. </p>
+<p> <code>delete()</code> may be used to remove an element from the array and return it. The array element at that position returns to its uninitialized state, so that testing for the same element with <code>exists()</code> will return false. If the element happens to be the one at the end, the size of the array also shrinks up to the highest element that tests true for <code>exists()</code>, or 0 if none such is found. If the array is tied, the <code>DELETE</code><code>()</code> method in the corresponding tied package will be invoked. </p>
 <p> See ``exists&#8217;&#8216; in perlfunc and ``delete&#8217;&#8216; in perlfunc for examples.  </p>
 <h3>Pseudo-hashes work better</h3>
 <p> Dereferencing some types of reference values in a pseudo-hash, such as <code>&quot;$ph-&gt;{foo}[1]&quot;</code>, was accidentally disallowed. This has been corrected. </p>
@@ -530,7 +530,7 @@ description: "perl561delta – what’s new for perl v5.6.1"
 </code></pre>
 <h3>Automatic flushing of output buffers</h3>
 <p> <code>fork()</code>, <code>exec()</code>, <code>system()</code>, qx//, and pipe <code>open()</code>s now flush buffers of all files opened for output when the operation was attempted. This mostly eliminates confusing buffering mishaps suffered by users unaware of how Perl internally handles I/O. </p>
-<p> This is not supported on some platforms like Solaris where a suitably correct implementation of fflush(<font SIZE="-1">NULL</font>) isn&#8217;t available.  </p>
+<p> This is not supported on some platforms like Solaris where a suitably correct implementation of fflush(NULL) isn&#8217;t available.  </p>
 <h3>Better diagnostics on meaningless filehandle operations</h3>
 <p> Constructs such as <code>&quot;open(&lt;FH&gt;)&quot;</code> and <code>&quot;close(&lt;FH&gt;)&quot;</code> are compile time errors. Attempting to read from filehandles that were opened only for writing will now produce warnings (just as writing to read-only filehandles does).  </p>
 <h3>Where possible, buffered data discarded from duped input filehandle</h3>
@@ -539,14 +539,14 @@ description: "perl561delta – what’s new for perl v5.6.1"
 <p> <code>&quot;eof()&quot;</code> would return true if no attempt to read from <code>&quot;&lt;&gt;&quot;</code> had yet been made. <code>&quot;eof()&quot;</code> has been changed to have a little magic of its own, it now opens the <code>&quot;&lt;&gt;&quot;</code> files.  </p>
 <code></code><h3>binmode() can be used to set :crlf and :raw modes</h3>
 <p> <code>binmode()</code> now accepts a second argument that specifies a discipline for the handle in question. The two pseudo-disciplines ``:raw&#8217;&#8216; and ``:crlf&#8217;&#8216; are currently supported on DOS-derivative platforms. See ``binmode&#8217;&#8216; in perlfunc and open.  </p>
-<font SIZE="-1"></font><h3>-T filetest recognizes UTF-8 encoded files as text</h3>
-<p> The algorithm used for the <code>&quot;-T&quot;</code> filetest has been enhanced to correctly identify <font SIZE="-1">UTF-8</font> content as ``text&#8217;&#8216;.  </p>
+<h3>-T filetest recognizes UTF-8 encoded files as text</h3>
+<p> The algorithm used for the <code>&quot;-T&quot;</code> filetest has been enhanced to correctly identify UTF-8 content as ``text&#8217;&#8216;.  </p>
 <code></code><code></code><h3>system() , backticks and pipe open now reflect exec() failure</h3>
-<p> On Unix and similar platforms, <code>system()</code>, <code>qx()</code> and open(<font SIZE="-1">FOO,</font> ``cmd |&#8216;&#8216;) etc., are implemented via <code>fork()</code> and <code>exec()</code>. When the underlying <code>exec()</code> fails, earlier versions did not report the error properly, since the <code>exec()</code> happened to be in a different process. </p>
+<p> On Unix and similar platforms, <code>system()</code>, <code>qx()</code> and open(FOO, ``cmd |&#8216;&#8216;) etc., are implemented via <code>fork()</code> and <code>exec()</code>. When the underlying <code>exec()</code> fails, earlier versions did not report the error properly, since the <code>exec()</code> happened to be in a different process. </p>
 <p> The child process now communicates with the parent about the error in launching the external command, which allows these constructs to return with their usual error value and set $!.  </p>
 <h3>Improved diagnostics</h3>
 <p> Line numbers are no longer suppressed (under most likely circumstances) during the global destruction phase. </p>
-<p> Diagnostics emitted from code running in threads other than the main thread are now accompanied by the thread <font SIZE="-1">ID.</font> </p>
+<p> Diagnostics emitted from code running in threads other than the main thread are now accompanied by the thread ID. </p>
 <p> Embedded null characters in diagnostics now actually show up. They used to truncate the message in prior versions. </p>
 <p> <code>$foo::a</code> and <code>$foo::b</code> are now exempt from ``possible typo&#8217;&#8216; warnings only if <code>sort()</code> is encountered in package <code>&quot;foo&quot;</code>. </p>
 <p> Unrecognized alphabetic escapes encountered when parsing quote constructs now generate a warning, since they may take on new semantics in later versions of Perl. </p>
@@ -557,7 +557,7 @@ description: "perl561delta – what’s new for perl v5.6.1"
 <p> Diagnostics that occur within eval may also report the file and line number where the eval is located, in addition to the eval sequence number and the line number within the evaluated text itself. For example: </p>
 <pre><code>    Not enough arguments for scalar at (eval 4)[newlib/perl5db.pl:1411] line 2, at EOF
 </code></pre>
-<font SIZE="-1"></font><h3>Diagnostics follow STDERR</h3>
+<h3>Diagnostics follow STDERR</h3>
 <p> Diagnostic output now goes to whichever file the <code>&quot;STDERR&quot;</code> handle is pointing at, instead of always going to the underlying C runtime library&#8217;s <code>&quot;stderr&quot;</code>.  </p>
 <h3>More consistent close-on-exec behavior</h3>
 <p> On systems that support a close-on-exec flag on filehandles, the flag is now set for any handles created by <code>pipe()</code>, <code>socketpair()</code>, <code>socket()</code>, and <code>accept()</code>, if that is warranted by the value of $^F that may be in effect. Earlier versions neglected to set the flag for handles created with these operators. See ``pipe&#8217;&#8216; in perlfunc, ``socketpair&#8217;&#8216; in perlfunc, ``socket&#8217;&#8216; in perlfunc, ``accept&#8217;&#8216; in perlfunc, and ``$^F&#8217;&#8216; in perlvar.  </p>
@@ -586,19 +586,19 @@ description: "perl561delta – what’s new for perl v5.6.1"
 <p> Bareword prototypes have been rationalized to enable them to be used to override builtins that accept barewords and interpret them in a special way, such as <code>&quot;require&quot;</code> or <code>&quot;do&quot;</code>. </p>
 <p> Arguments prototyped as <code>&quot;*&quot;</code> will now be visible within the subroutine as either a simple scalar or as a reference to a typeglob. See ``Prototypes&#8217;&#8216; in perlsub.  </p>
 <h3>require and do may be overridden</h3>
-<p> <code>&quot;require&quot;</code> and <code>&quot;do &#8216;file&#8217;&quot;</code> operations may be overridden locally by importing subroutines of the same name into the current package (or globally by importing them into the <font SIZE="-1">CORE::GLOBAL::</font> namespace). Overriding <code>&quot;require&quot;</code> will also affect <code>&quot;use&quot;</code>, provided the override is visible at compile-time. See ``Overriding Built-in Functions&#8217;&#8216; in perlsub.  </p>
+<p> <code>&quot;require&quot;</code> and <code>&quot;do &#8216;file&#8217;&quot;</code> operations may be overridden locally by importing subroutines of the same name into the current package (or globally by importing them into the CORE::GLOBAL:: namespace). Overriding <code>&quot;require&quot;</code> will also affect <code>&quot;use&quot;</code>, provided the override is visible at compile-time. See ``Overriding Built-in Functions&#8217;&#8216; in perlsub.  </p>
 <h3>$^X variables may now have names longer than one character</h3>
 <p> Formerly, $^X was synonymous with ${``\cX&#8217;&#8216;}, but $^XY was a syntax error. Now variable names that begin with a control character may be arbitrarily long. However, for compatibility reasons, these variables <i>must</i> be written with explicit braces, as <code>&quot;${^XY}&quot;</code> for example. <code>&quot;${^XYZ}&quot;</code> is synonymous with ${``\cXYZ&#8217;&#8216;}. Variable names with more than one control character, such as <code>&quot;${^XY^Z}&quot;</code>, are illegal. </p>
 <p> The old syntax has not changed. As before, `^X&#8217; may be either a literal control-X character or the two-character sequence `caret&#8217; plus `X&#8217;. When braces are omitted, the variable name stops after the control character. Thus <code>&quot;$^XYZ&quot;</code> continues to be synonymous with <code>&quot;$^X . &quot;YZ&quot;&quot;</code> as before. </p>
 <p> As before, lexical variables may not have names beginning with control characters. As before, variables whose names begin with a control character are always forced to be in package `main&#8217;. All such variables are reserved for future extensions, except those that begin with <code>&quot;^_&quot;</code>, which may be used by user programs and are guaranteed not to acquire special meaning in any future version of Perl.  </p>
 <h3>New variable $^C reflects -c switch</h3>
-<p> <code>$^C</code> has a boolean value that reflects whether perl is being run in compile-only mode (i.e. via the <code>&quot;-c&quot;</code> switch). Since <font SIZE="-1">BEGIN</font> blocks are executed under such conditions, this variable enables perl code to determine whether actions that make sense only during normal running are warranted. See perlvar.  </p>
+<p> <code>$^C</code> has a boolean value that reflects whether perl is being run in compile-only mode (i.e. via the <code>&quot;-c&quot;</code> switch). Since BEGIN blocks are executed under such conditions, this variable enables perl code to determine whether actions that make sense only during normal running are warranted. See perlvar.  </p>
 <h3>New variable $^V contains Perl version as a string</h3>
 <p> <code>$^V</code> contains the Perl version number as a string composed of characters whose ordinals match the version numbers, i.e. v5.6.0. This may be used in string comparisons. </p>
 <p> See <code>&quot;Support for strings represented as a vector of ordinals&quot;</code> for an example.  </p>
 <h3>Optional Y2K warnings</h3>
 <p> If Perl is built with the cpp macro <code>&quot;PERL_Y2KWARN&quot;</code> defined, it emits optional warnings when concatenating the number 19 with another number. </p>
-<p> This behavior must be specifically enabled when running Configure. See <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> and <i></i><font SIZE="-1"><i>README.Y2K</i></font><i></i>.  </p>
+<p> This behavior must be specifically enabled when running Configure. See <i></i><i>INSTALL</i><i></i> and <i></i><i>README.Y2K</i><i></i>.  </p>
 <h3>Arrays now always interpolate into double-quoted strings</h3>
 <p> In double-quoted strings, arrays now interpolate, no matter what. The behavior in earlier versions of perl 5 was that arrays would interpolate into strings if the array had been mentioned before the string was compiled, and otherwise Perl would raise a fatal compile-time error. In versions 5.000 through 5.003, the error was </p>
 <pre><code>        Literal @example now requires backslash
@@ -628,7 +628,7 @@ description: "perl561delta – what’s new for perl v5.6.1"
  </dd>
 <dt>Benchmark</dt>
 <dd> <p> Overall, Benchmark results exhibit lower average error and better timing accuracy. </p>
-<p> You can now run tests for <i>n</i> seconds instead of guessing the right number of tests to run: e.g., timethese(-5, ...) will run each code for at least 5 <font SIZE="-1">CPU</font> seconds. Zero as the ``number of repetitions&#8217;&#8216; means ``for at least 3 <font SIZE="-1">CPU</font> seconds&#8217;&#8216;. The output format has also changed. For example: </p>
+<p> You can now run tests for <i>n</i> seconds instead of guessing the right number of tests to run: e.g., timethese(-5, ...) will run each code for at least 5 CPU seconds. Zero as the ``number of repetitions&#8217;&#8216; means ``for at least 3 CPU seconds&#8217;&#8216;. The output format has also changed. For example: </p>
 <pre><code>   use Benchmark;$x=3;timethese(-5,{a=&gt;sub{$x*$x},b=&gt;sub{$x**2}})
 </code></pre>
 <p> will now output something like this: </p>
@@ -636,11 +636,11 @@ description: "perl561delta – what’s new for perl v5.6.1"
             a: 5 wallclock secs ( 5.77 usr + 0.00 sys = 5.77 CPU) @ 200551.91/s (n=1156516)
             b: 4 wallclock secs ( 5.00 usr + 0.02 sys = 5.02 CPU) @ 159605.18/s (n=800686)
 </code></pre>
-<p> New features: ``each for at least N <font SIZE="-1">CPU</font> seconds...&#8216;&#8216;, ``wallclock secs&#8217;&#8216;, and the ``@ operations/CPU second (n=operations)&#8216;&#8216;. </p>
+<p> New features: ``each for at least N CPU seconds...&#8216;&#8216;, ``wallclock secs&#8217;&#8216;, and the ``@ operations/CPU second (n=operations)&#8216;&#8216;. </p>
 <p> <code>timethese()</code> now returns a reference to a hash of Benchmark objects containing the test results, keyed on the names of the tests. </p>
 <p> <code>timethis()</code> now returns the iterations field in the Benchmark result object instead of 0. </p>
 <p> <code>timethese()</code>, <code>timethis()</code>, and the new <code>cmpthese()</code> (see below) can also take a format specifier of &#8216;none&#8217; to suppress output. </p>
-<p> A new function <code>countit()</code> is just like <code>timeit()</code> except that it takes a <font SIZE="-1">TIME</font> instead of a <font SIZE="-1">COUNT.</font> </p>
+<p> A new function <code>countit()</code> is just like <code>timeit()</code> except that it takes a TIME instead of a COUNT. </p>
 <p> A new function <code>cmpthese()</code> prints a chart comparing the results of each test returned from a <code>timethese()</code> call. For each possible pair of tests, the percentage speed difference (iters/sec or seconds/iter) is shown. </p>
 <p> For other details, see Benchmark. </p>
  </dd>
@@ -649,7 +649,7 @@ description: "perl561delta – what’s new for perl v5.6.1"
  </dd>
 <dt>constant</dt>
 <dd> <p> References can now be used. </p>
-<p> The new version also allows a leading underscore in constant names, but disallows a double leading underscore (as in ``__LINE__&#8216;&#8216;). Some other names are disallowed or warned against, including <font SIZE="-1">BEGIN, END,</font> etc. Some names which were forced into main:: used to fail silently in some cases; now they&#8217;re fatal (outside of main::) and an optional warning (inside of main::). The ability to detect whether a constant had been set with a given name has been added. </p>
+<p> The new version also allows a leading underscore in constant names, but disallows a double leading underscore (as in ``__LINE__&#8216;&#8216;). Some other names are disallowed or warned against, including BEGIN, END, etc. Some names which were forced into main:: used to fail silently in some cases; now they&#8217;re fatal (outside of main::) and an optional warning (inside of main::). The ability to detect whether a constant had been set with a given name has been added. </p>
 <p> See constant. </p>
  </dd>
 <dt>charnames</dt>
@@ -657,20 +657,20 @@ description: "perl561delta – what’s new for perl v5.6.1"
  </dd>
 <dt>Data::Dumper</dt>
 <dd> <p> A <code>&quot;Maxdepth&quot;</code> setting can be specified to avoid venturing too deeply into deep data structures. See Data::Dumper. </p>
-<p> The <font SIZE="-1">XSUB</font> implementation of <code>Dump()</code> is now automatically called if the <code>&quot;Useqq&quot;</code> setting is not in use. </p>
+<p> The XSUB implementation of <code>Dump()</code> is now automatically called if the <code>&quot;Useqq&quot;</code> setting is not in use. </p>
 <p> Dumping <code>&quot;qr//&quot;</code> objects works correctly. </p>
  </dd>
-<dt><font SIZE="-1">DB</font></dt>
-<dd> <p> <code>&quot;DB&quot;</code> is an experimental module that exposes a clean abstraction to Perl&#8217;s debugging <font SIZE="-1">API.</font> </p>
+<dt>DB</dt>
+<dd> <p> <code>&quot;DB&quot;</code> is an experimental module that exposes a clean abstraction to Perl&#8217;s debugging API. </p>
  </dd>
 <dt>DB_File</dt>
-<dd> <p> DB_File can now be built with Berkeley <font SIZE="-1">DB</font> versions 1, 2 or 3. See <code>&quot;ext/DB_File/Changes&quot;</code>. </p>
+<dd> <p> DB_File can now be built with Berkeley DB versions 1, 2 or 3. See <code>&quot;ext/DB_File/Changes&quot;</code>. </p>
  </dd>
 <dt>Devel::DProf</dt>
 <dd> <p> Devel::DProf, a Perl source code profiler has been added. See Devel::DProf and dprofpp. </p>
  </dd>
 <dt>Devel::Peek</dt>
-<dd> <p> The Devel::Peek module provides access to the internal representation of Perl variables and data. It is a data debugging tool for the <font SIZE="-1">XS</font> programmer. </p>
+<dd> <p> The Devel::Peek module provides access to the internal representation of Perl variables and data. It is a data debugging tool for the XS programmer. </p>
  </dd>
 <dt>Dumpvalue</dt>
 <dd> <p> The Dumpvalue module provides screen dumps of Perl data. </p>
@@ -683,10 +683,10 @@ description: "perl561delta – what’s new for perl v5.6.1"
 <dd> <p> <code>$PERL_VERSION</code> now stands for <code>$^V</code> (a string value) rather than for <code>$]</code> (a numeric value). </p>
  </dd>
 <dt>Env</dt>
-<dd> <p> Env now supports accessing environment variables like <font SIZE="-1">PATH</font> as array variables. </p>
+<dd> <p> Env now supports accessing environment variables like PATH as array variables. </p>
  </dd>
 <dt>Fcntl</dt>
-<dd> <p> More Fcntl constants added: F_SETLK64, F_SETLKW64, O_LARGEFILE for large file (more than 4GB) access (<font SIZE="-1">NOTE:</font> the O_LARGEFILE is automatically added to <code>sysopen()</code> flags if large file support has been configured, as is the default), Free/Net/OpenBSD locking behaviour flags F_FLOCK, F_POSIX, Linux F_SHLCK, and O_ACCMODE: the combined mask of O_RDONLY, O_WRONLY, and O_RDWR. The <code>seek()</code>/<code>sysseek()</code> constants <font SIZE="-1">SEEK_SET, SEEK_CUR,</font> and <font SIZE="-1">SEEK_END</font> are available via the <code>&quot;:seek&quot;</code> tag. The <code>chmod()</code>/<code>stat()</code> S_IF* constants and S_IS* functions are available via the <code>&quot;:mode&quot;</code> tag. </p>
+<dd> <p> More Fcntl constants added: F_SETLK64, F_SETLKW64, O_LARGEFILE for large file (more than 4GB) access (NOTE: the O_LARGEFILE is automatically added to <code>sysopen()</code> flags if large file support has been configured, as is the default), Free/Net/OpenBSD locking behaviour flags F_FLOCK, F_POSIX, Linux F_SHLCK, and O_ACCMODE: the combined mask of O_RDONLY, O_WRONLY, and O_RDWR. The <code>seek()</code>/<code>sysseek()</code> constants SEEK_SET, SEEK_CUR, and SEEK_END are available via the <code>&quot;:seek&quot;</code> tag. The <code>chmod()</code>/<code>stat()</code> S_IF* constants and S_IS* functions are available via the <code>&quot;:mode&quot;</code> tag. </p>
  </dd>
 <dt>File::Compare</dt>
 <dd> <p> A <code>compare_text()</code> function has been added, which allows custom comparison functions. See File::Compare. </p>
@@ -712,7 +712,7 @@ description: "perl561delta – what’s new for perl v5.6.1"
 </code></pre>
  </dd>
 <dt>Getopt::Long</dt>
-<dd> <p> Getopt::Long licensing has changed to allow the Perl Artistic License as well as the <font SIZE="-1">GPL.</font> It used to be <font SIZE="-1">GPL</font> only, which got in the way of non-GPL applications that wanted to use Getopt::Long. </p>
+<dd> <p> Getopt::Long licensing has changed to allow the Perl Artistic License as well as the GPL. It used to be GPL only, which got in the way of non-GPL applications that wanted to use Getopt::Long. </p>
 <p> Getopt::Long encourages the use of Pod::Usage to produce help messages. For example: </p>
 <pre><code>    use Getopt::Long;
     use Pod::Usage;
@@ -744,15 +744,15 @@ description: "perl561delta – what’s new for perl v5.6.1"
 <p> A bug that prevented the non-option call-back &lt;&gt; from being specified as the first argument has been fixed. </p>
 <p> To specify the characters &lt; and &gt; as option starters, use &gt;&lt;. Note, however, that changing option starters is strongly deprecated. </p>
  </dd>
-<dt><font SIZE="-1">IO</font></dt>
+<dt>IO</dt>
 <dd> <p> <code>write()</code> and <code>syswrite()</code> will now accept a single-argument form of the call, for consistency with Perl&#8217;s <code>syswrite()</code>. </p>
 <p> You can now create a TCP-based IO::Socket::INET without forcing a connect attempt. This allows you to configure its options (like making it non-blocking) and then call <code>connect()</code> manually. </p>
 <p> A bug that prevented the <code>IO::Socket::protocol()</code> accessor from ever returning the correct value has been corrected. </p>
-<p> IO::Socket::connect now uses non-blocking <font SIZE="-1">IO</font> instead of <code>alarm()</code> to do connect timeouts. </p>
+<p> IO::Socket::connect now uses non-blocking IO instead of <code>alarm()</code> to do connect timeouts. </p>
 <p> IO::Socket::accept now uses <code>select()</code> instead of <code>alarm()</code> for doing timeouts. </p>
 <p> IO::Socket::INET-&gt;new now sets $! correctly on failure. $@ is still set for backwards compatibility. </p>
  </dd>
-<dt><font SIZE="-1">JPL</font></dt>
+<dt>JPL</dt>
 <dd> <p> Java Perl Lingo is now distributed with Perl. See jpl/README for more information. </p>
  </dd>
 <dt>lib</dt>
@@ -790,12 +790,12 @@ description: "perl561delta – what’s new for perl v5.6.1"
 <p> For details and examples, please see Pod::Usage. </p>
  </dd>
 <dt>Pod::Text and Pod::Man</dt>
-<dd> <p> Pod::Text has been rewritten to use Pod::Parser. While <code>pod2text()</code> is still available for backwards compatibility, the module now has a new preferred interface. See Pod::Text for the details. The new Pod::Text module is easily subclassed for tweaks to the output, and two such subclasses (Pod::Text::Termcap for man-page-style bold and underlining using termcap information, and Pod::Text::Color for markup with <font SIZE="-1">ANSI</font> color sequences) are now standard. </p>
+<dd> <p> Pod::Text has been rewritten to use Pod::Parser. While <code>pod2text()</code> is still available for backwards compatibility, the module now has a new preferred interface. See Pod::Text for the details. The new Pod::Text module is easily subclassed for tweaks to the output, and two such subclasses (Pod::Text::Termcap for man-page-style bold and underlining using termcap information, and Pod::Text::Color for markup with ANSI color sequences) are now standard. </p>
 <p> pod2man has been turned into a module, Pod::Man, which also uses Pod::Parser. In the process, several outstanding bugs related to quotes in section headers, quoting of code escapes, and nested lists have been fixed. pod2man is now a wrapper script around this module. </p>
  </dd>
 <dt>SDBM_File</dt>
-<dd> <p> An <font SIZE="-1">EXISTS</font> method has been added to this module (and <code>sdbm_exists()</code> has been added to the underlying sdbm library), so one can now call exists on an SDBM_File tied hash and get the correct result, rather than a runtime error. </p>
-<p> A bug that may have caused data loss when more than one disk block happens to be read from the database in a single <font SIZE="-1"><code>FETCH</code></font><code>()</code> has been fixed. </p>
+<dd> <p> An EXISTS method has been added to this module (and <code>sdbm_exists()</code> has been added to the underlying sdbm library), so one can now call exists on an SDBM_File tied hash and get the correct result, rather than a runtime error. </p>
+<p> A bug that may have caused data loss when more than one disk block happens to be read from the database in a single <code>FETCH</code><code>()</code> has been fixed. </p>
  </dd>
 <dt>Sys::Syslog</dt>
 <dd> <p> Sys::Syslog now uses XSUBs to access facilities from syslog.h so it no longer requires syslog.ph to exist. </p>
@@ -804,7 +804,7 @@ description: "perl561delta – what’s new for perl v5.6.1"
 <dd> <p> Sys::Hostname now uses XSUBs to call the C library&#8217;s <code>gethostname()</code> or <code>uname()</code> if they exist. </p>
  </dd>
 <dt>Term::ANSIColor</dt>
-<dd> <p> Term::ANSIColor is a very simple module to provide easy and readable access to the <font SIZE="-1">ANSI</font> color and highlighting escape sequences, supported by most <font SIZE="-1">ANSI</font> terminal emulators. It is now included standard. </p>
+<dd> <p> Term::ANSIColor is a very simple module to provide easy and readable access to the ANSI color and highlighting escape sequences, supported by most ANSI terminal emulators. It is now included standard. </p>
  </dd>
 <dt>Time::Local</dt>
 <dd> <p> The <code>timelocal()</code> and <code>timegm()</code> functions used to silently return bogus results when the date fell outside the machine&#8217;s integer range. They now consistently <code>croak()</code> if the date falls in an unsupported range. </p>
@@ -815,14 +815,14 @@ description: "perl561delta – what’s new for perl v5.6.1"
     Win32::GetOSVersion
 </code></pre>
 <p> The remaining functions are unchanged and continue to return <code>&quot;undef&quot;</code> on error even in list context. </p>
-<p> The Win32::SetLastError(<font SIZE="-1">ERROR</font>) function has been added as a complement to the <code>Win32::GetLastError()</code> function. </p>
-<p> The new Win32::GetFullPathName(<font SIZE="-1">FILENAME</font>) returns the full absolute pathname for <font SIZE="-1">FILENAME</font> in scalar context. In list context it returns a two-element list containing the fully qualified directory name and the filename. See Win32. </p>
+<p> The Win32::SetLastError(ERROR) function has been added as a complement to the <code>Win32::GetLastError()</code> function. </p>
+<p> The new Win32::GetFullPathName(FILENAME) returns the full absolute pathname for FILENAME in scalar context. In list context it returns a two-element list containing the fully qualified directory name and the filename. See Win32. </p>
  </dd>
 <dt>XSLoader</dt>
 <dd> <p> The XSLoader extension is a simpler alternative to DynaLoader. See XSLoader. </p>
  </dd>
-<dt><font SIZE="-1">DBM</font> Filters</dt>
-<dd> <p> A new feature called ``<font SIZE="-1">DBM</font> Filters&#8217;&#8216; has been added to all the <font SIZE="-1">DBM</font> modules--DB_File, GDBM_File, NDBM_File, ODBM_File, and SDBM_File. <font SIZE="-1">DBM</font> Filters add four new methods to each <font SIZE="-1">DBM</font> module: </p>
+<dt>DBM Filters</dt>
+<dd> <p> A new feature called ``DBM Filters&#8217;&#8216; has been added to all the DBM modules--DB_File, GDBM_File, NDBM_File, ODBM_File, and SDBM_File. DBM Filters add four new methods to each DBM module: </p>
 <pre><code>    filter_store_key
     filter_store_value
     filter_fetch_key
@@ -841,7 +841,7 @@ description: "perl561delta – what’s new for perl v5.6.1"
 <h3>find2perl</h3>
 <p> The <code>&quot;find2perl&quot;</code> utility now uses the enhanced features of the File::Find module. The -depth and -follow options are supported. Pod documentation is also included in the script.  </p>
 <h3>h2xs</h3>
-<p> The <code>&quot;h2xs&quot;</code> tool can now work in conjunction with <code>&quot;C::Scan&quot;</code> (available from <font SIZE="-1">CPAN</font>) to automatically parse real-life header files. The <code>&quot;-M&quot;</code>, <code>&quot;-a&quot;</code>, <code>&quot;-k&quot;</code>, and <code>&quot;-o&quot;</code> options are new.  </p>
+<p> The <code>&quot;h2xs&quot;</code> tool can now work in conjunction with <code>&quot;C::Scan&quot;</code> (available from CPAN) to automatically parse real-life header files. The <code>&quot;-M&quot;</code>, <code>&quot;-a&quot;</code>, <code>&quot;-k&quot;</code>, and <code>&quot;-o&quot;</code> options are new.  </p>
 <h3>perlcc</h3>
 <p> <code>&quot;perlcc&quot;</code> now supports the C and Bytecode backends. By default, it generates output from the simple C backend rather than the optimized C backend. </p>
 <p> Support for non-Unix platforms has been improved.  </p>
@@ -850,10 +850,10 @@ description: "perl561delta – what’s new for perl v5.6.1"
 <h3>The Perl Debugger</h3>
 <p> Many bug fixes and enhancements were added to <i>perl5db.pl</i>, the Perl debugger. The help documentation was rearranged. New commands include <code>&quot;&lt; ?&quot;</code>, <code>&quot;&gt; ?&quot;</code>, and <code>&quot;{ ?&quot;</code> to list out current actions, <code>&quot;man </code>docpage <code>&quot;</code> to run your doc viewer on some perl docset, and support for quoted options. The help information was rearranged, and should be viewable once again if you&#8217;re using <code>less</code> as your pager. A serious security hole was plugged---you should immediately remove all older versions of the Perl debugger as installed in previous releases, all the way back to perl3, from your system to avoid being bitten by this.  </p>
 <h2>Improved Documentation</h2>
-<p> Many of the platform-specific <font SIZE="-1">README</font> files are now part of the perl installation. See perl for the complete list. </p>
+<p> Many of the platform-specific README files are now part of the perl installation. See perl for the complete list. </p>
 <dl>
 <dt>perlapi.pod</dt>
-<dd> <p> The official list of public Perl <font SIZE="-1">API</font> functions. </p>
+<dd> <p> The official list of public Perl API functions. </p>
  </dd>
 <dt>perlboot.pod</dt>
 <dd> <p> A tutorial for beginners on object-oriented Perl. </p>
@@ -862,7 +862,7 @@ description: "perl561delta – what’s new for perl v5.6.1"
 <dd> <p> An introduction to using the Perl Compiler suite. </p>
  </dd>
 <dt>perldbmfilter.pod</dt>
-<dd> <p> A howto document on using the <font SIZE="-1">DBM</font> filter facility. </p>
+<dd> <p> A howto document on using the DBM filter facility. </p>
  </dd>
 <dt>perldebug.pod</dt>
 <dd> <p> All material unrelated to running the Perl debugger, plus all low-level guts-like details that risked crushing the casual user of the debugger, have been relocated from the old manpage to the next entry below. </p>
@@ -907,7 +907,7 @@ description: "perl561delta – what’s new for perl v5.6.1"
 <code></code><h3>Simple sort() using { $a <=> $b } and the like are optimized</h3>
 <p> Many common <code>sort()</code> operations using a simple inlined block are now optimized for faster performance.  </p>
 <h3>Optimized assignments to lexical variables</h3>
-<p> Certain operations in the <font SIZE="-1">RHS</font> of assignment statements have been optimized to directly set the lexical variable on the <font SIZE="-1">LHS,</font> eliminating redundant copying overheads.  </p>
+<p> Certain operations in the RHS of assignment statements have been optimized to directly set the lexical variable on the LHS, eliminating redundant copying overheads.  </p>
 <h3>Faster subroutine calls</h3>
 <p> Minor changes in how subroutine calls are handled internally provide marginal improvements in performance.  </p>
 <code></code><code></code><code></code><h3>delete() , each() , values() and hash iteration are faster</h3>
@@ -942,22 +942,22 @@ description: "perl561delta – what’s new for perl v5.6.1"
 <p> See ``Large file support&#8217;&#8216; for more information.  </p>
 <h3>installusrbinperl</h3>
 <p> You can use ``Configure -Uinstallusrbinperl&#8217;&#8216; which causes installperl to skip installing perl also as /usr/bin/perl. This is useful if you prefer not to modify /usr/bin for some reason or another but harmful because many scripts assume to find Perl in /usr/bin/perl.  </p>
-<font SIZE="-1"></font><h3>SOCKS support</h3>
-<p> You can use ``Configure -Dusesocks&#8217;&#8216; which causes Perl to probe for the <font SIZE="-1">SOCKS</font> proxy protocol library (v5, not v4). For more information on <font SIZE="-1">SOCKS,</font> see: </p>
+<h3>SOCKS support</h3>
+<p> You can use ``Configure -Dusesocks&#8217;&#8216; which causes Perl to probe for the SOCKS proxy protocol library (v5, not v4). For more information on SOCKS, see: </p>
 <pre><code>http://www.socks.nec.com/
 </code></pre>
 <h3>-A flag</h3>
 <p> You can ``post-edit&#8217;&#8216; the Configure variables using the Configure <code>&quot;-A&quot;</code> switch. The editing happens immediately after the platform specific hints files have been processed but before the actual configuration process starts. Run <code>&quot;Configure -h&quot;</code> to find out the full <code>&quot;-A&quot;</code> syntax.  </p>
 <h3>Enhanced Installation Directories</h3>
-<p> The installation structure has been enriched to improve the support for maintaining multiple versions of perl, to provide locations for vendor-supplied modules, scripts, and manpages, and to ease maintenance of locally-added modules, scripts, and manpages. See the section on Installation Directories in the <font SIZE="-1">INSTALL</font> file for complete details. For most users building and installing from source, the defaults should be fine. </p>
-<p> If you previously used <code>&quot;Configure -Dsitelib&quot;</code> or <code>&quot;-Dsitearch&quot;</code> to set special values for library directories, you might wish to consider using the new <code>&quot;-Dsiteprefix&quot;</code> setting instead. Also, if you wish to re-use a config.sh file from an earlier version of perl, you should be sure to check that Configure makes sensible choices for the new directories. See <font SIZE="-1">INSTALL</font> for complete details.  </p>
+<p> The installation structure has been enriched to improve the support for maintaining multiple versions of perl, to provide locations for vendor-supplied modules, scripts, and manpages, and to ease maintenance of locally-added modules, scripts, and manpages. See the section on Installation Directories in the INSTALL file for complete details. For most users building and installing from source, the defaults should be fine. </p>
+<p> If you previously used <code>&quot;Configure -Dsitelib&quot;</code> or <code>&quot;-Dsitearch&quot;</code> to set special values for library directories, you might wish to consider using the new <code>&quot;-Dsiteprefix&quot;</code> setting instead. Also, if you wish to re-use a config.sh file from an earlier version of perl, you should be sure to check that Configure makes sensible choices for the new directories. See INSTALL for complete details.  </p>
 <h3>gcc automatically tried if 'cc' does not seem to be working</h3>
-<p> In many platforms the vendor-supplied &#8216;cc&#8217; is too stripped-down to build Perl (basically, the &#8216;cc&#8217; doesn&#8217;t do <font SIZE="-1">ANSI C</font>). If this seems to be the case and the &#8216;cc&#8217; does not seem to be the <font SIZE="-1">GNU C</font> compiler &#8216;gcc&#8217;, an automatic attempt is made to find and use &#8216;gcc&#8217; instead.  </p>
+<p> In many platforms the vendor-supplied &#8216;cc&#8217; is too stripped-down to build Perl (basically, the &#8216;cc&#8217; doesn&#8217;t do ANSI C). If this seems to be the case and the &#8216;cc&#8217; does not seem to be the GNU C compiler &#8216;gcc&#8217;, an automatic attempt is made to find and use &#8216;gcc&#8217; instead.  </p>
 <h2>Platform specific changes</h2>
 <h3>Supported platforms</h3>
 <dl>
 <dt>&bull;</dt>
-<dd> <p> The Mach CThreads (<font SIZE="-1">NEXTSTEP, OPENSTEP</font>) are now supported by the Thread extension. </p>
+<dd> <p> The Mach CThreads (NEXTSTEP, OPENSTEP) are now supported by the Thread extension. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> GNU/Hurd is now supported. </p>
@@ -966,12 +966,12 @@ description: "perl561delta – what’s new for perl v5.6.1"
 <dd> <p> Rhapsody/Darwin is now supported. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <font SIZE="-1">EPOC</font> is now supported (on Psion 5). </p>
+<dd> <p> EPOC is now supported (on Psion 5). </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> The cygwin port (formerly cygwin32) has been greatly improved. </p>
  </dd></dl>
-<font SIZE="-1"></font><h3>DOS</h3>
+<h3>DOS</h3>
 <dl>
 <dt>&bull;</dt>
 <dd> <p> Perl now works with djgpp 2.02 (and 2.03 alpha). </p>
@@ -985,24 +985,24 @@ description: "perl561delta – what’s new for perl v5.6.1"
 <dt>&bull;</dt>
 <dd> <p> This port continues to use its own builtin globbing (not File::Glob). </p>
  </dd></dl>
-<font SIZE="-1"></font><font SIZE="-1"></font><h3>OS390 (OpenEdition MVS )</h3>
-<p> Support for this <font SIZE="-1">EBCDIC</font> platform has not been renewed in this release. There are difficulties in reconciling Perl&#8217;s standardization on <font SIZE="-1">UTF-8</font> as its internal representation for characters with the <font SIZE="-1">EBCDIC</font> character set, because the two are incompatible. </p>
+<h3>OS390 (OpenEdition MVS )</h3>
+<p> Support for this EBCDIC platform has not been renewed in this release. There are difficulties in reconciling Perl&#8217;s standardization on UTF-8 as its internal representation for characters with the EBCDIC character set, because the two are incompatible. </p>
 <p> It is unclear whether future versions will renew support for this platform, but the possibility exists.  </p>
-<font SIZE="-1"></font><h3>VMS</h3>
+<h3>VMS</h3>
 <p> Numerous revisions and extensions to configuration, build, testing, and installation process to accommodate core changes and VMS-specific options. </p>
-<p> Expand <code>%ENV</code>-handling code to allow runtime mapping to logical names, <font SIZE="-1">CLI</font> symbols, and <font SIZE="-1">CRTL</font> environ array. </p>
+<p> Expand <code>%ENV</code>-handling code to allow runtime mapping to logical names, CLI symbols, and CRTL environ array. </p>
 <p> Extension of subprocess invocation code to accept filespecs as command ``verbs&#8217;&#8216;. </p>
 <p> Add to Perl command line processing the ability to use default file types and to recognize Unix-style <code>&quot;2&gt;&amp;1&quot;</code>. </p>
 <p> Expansion of File::Spec::VMS routines, and integration into ExtUtils::MM_VMS. </p>
 <p> Extension of ExtUtils::MM_VMS to handle complex extensions more flexibly. </p>
 <p> Barewords at start of Unix-syntax paths may be treated as text rather than only as logical names. </p>
 <p> Optional secure translation of several logical names used internally by Perl. </p>
-<p> Miscellaneous bugfixing and porting of new core code to <font SIZE="-1">VMS.</font> </p>
-<p> Thanks are gladly extended to the many people who have contributed <font SIZE="-1">VMS</font> patches, testing, and ideas.  </p>
+<p> Miscellaneous bugfixing and porting of new core code to VMS. </p>
+<p> Thanks are gladly extended to the many people who have contributed VMS patches, testing, and ideas.  </p>
 <h3>Win32</h3>
 <p> Perl can now emulate <code>fork()</code> internally, using multiple interpreters running in different concurrent threads. This support must be enabled at build time. See perlfork for detailed information. </p>
 <p> When given a pathname that consists only of a drivename, such as <code>&quot;A:&quot;</code>, <code>opendir()</code> and <code>stat()</code> now use the current working directory for the drive rather than the drive root. </p>
-<p> The builtin <font SIZE="-1">XSUB</font> functions in the Win32:: namespace are documented. See Win32. </p>
+<p> The builtin XSUB functions in the Win32:: namespace are documented. See Win32. </p>
 <p> $^X now contains the full path name of the running executable. </p>
 <p> A <code>Win32::GetLongPathName()</code> function is provided to complement <code>Win32::GetFullPathName()</code> and <code>Win32::GetShortPathName()</code>. See Win32. </p>
 <p> <code>POSIX::uname()</code> is supported. </p>
@@ -1010,11 +1010,11 @@ description: "perl561delta – what’s new for perl v5.6.1"
 <p> For better compatibility with Unix, <code>&quot;kill(0, $pid)&quot;</code> can now be used to test whether a process exists. </p>
 <p> The <code>&quot;Shell&quot;</code> module is supported. </p>
 <p> Better support for building Perl under command.com in Windows 95 has been added. </p>
-<p> Scripts are read in binary mode by default to allow ByteLoader (and the filter mechanism in general) to work properly. For compatibility, the <font SIZE="-1">DATA</font> filehandle will be set to text mode if a carriage return is detected at the end of the line containing the __END__ or __DATA__ token; if not, the <font SIZE="-1">DATA</font> filehandle will be left open in binary mode. Earlier versions always opened the <font SIZE="-1">DATA</font> filehandle in text mode. </p>
+<p> Scripts are read in binary mode by default to allow ByteLoader (and the filter mechanism in general) to work properly. For compatibility, the DATA filehandle will be set to text mode if a carriage return is detected at the end of the line containing the __END__ or __DATA__ token; if not, the DATA filehandle will be left open in binary mode. Earlier versions always opened the DATA filehandle in text mode. </p>
 <p> The <code>glob()</code> operator is implemented via the <code>&quot;File::Glob&quot;</code> extension, which supports glob syntax of the C shell. This increases the flexibility of the <code>glob()</code> operator, but there may be compatibility issues for programs that relied on the older globbing syntax. If you want to preserve compatibility with the older syntax, you might want to run perl with <code>&quot;-MFile::DosGlob&quot;</code>. For details and compatibility information, see File::Glob.  </p>
 <h2>Significant bug fixes</h2>
-<font SIZE="-1"></font><h3>< HANDLE > on empty files</h3>
-<p> With <code>$/</code> set to <code>&quot;undef&quot;</code>, ``slurping&#8217;&#8216; an empty file returns a string of zero length (instead of <code>&quot;undef&quot;</code>, as it used to) the first time the <font SIZE="-1">HANDLE</font> is read after <code>$/</code> is set to <code>&quot;undef&quot;</code>. Further reads yield <code>&quot;undef&quot;</code>. </p>
+<h3>< HANDLE > on empty files</h3>
+<p> With <code>$/</code> set to <code>&quot;undef&quot;</code>, ``slurping&#8217;&#8216; an empty file returns a string of zero length (instead of <code>&quot;undef&quot;</code>, as it used to) the first time the HANDLE is read after <code>$/</code> is set to <code>&quot;undef&quot;</code>. Further reads yield <code>&quot;undef&quot;</code>. </p>
 <p> This means that the following will append ``foo&#8217;&#8216; to an empty file (it used to do nothing): </p>
 <pre><code>    perl -0777 -pi -e 's/^/foo/' empty_file
 </code></pre>
@@ -1048,11 +1048,11 @@ description: "perl561delta – what’s new for perl v5.6.1"
 <p> See perldata.  </p>
 <h3>(\$) prototype and $foo{a}</h3>
 <p> A scalar reference prototype now correctly allows a hash or array element in that slot.  </p>
-<font SIZE="-1"></font><h3>goto &sub and AUTOLOAD</h3>
+<h3>goto &sub and AUTOLOAD</h3>
 <p> The <code>&quot;goto &amp;sub&quot;</code> construct works correctly when <code>&amp;sub</code> happens to be autoloaded.  </p>
 <h3>-bareword allowed under use integer</h3>
 <p> The autoquoting of barewords preceded by <code>&quot;-&quot;</code> did not work in prior versions when the <code>&quot;integer&quot;</code> pragma was enabled. This has been fixed.  </p>
-<font SIZE="-1"><code></code></font><code></code><h3>Failures in DESTROY ()</h3>
+<code></code><code></code><h3>Failures in DESTROY ()</h3>
 <p> When code in a destructor threw an exception, it went unnoticed in earlier versions of Perl, unless someone happened to be looking in $@ just after the point the destructor happened to run. Such failures are now visible as warnings when warnings are enabled.  </p>
 <h3>Locale bugs fixed</h3>
 <p> <code>printf()</code> and <code>sprintf()</code> previously reset the numeric locale back to the default ``C&#8217;&#8216; locale. This has been fixed. </p>
@@ -1065,10 +1065,10 @@ description: "perl561delta – what’s new for perl v5.6.1"
 <p> Perl could sometimes create empty subroutine stubs when a subroutine was not found in the package. Such cases stopped later method lookups from progressing into base packages. This has been corrected.  </p>
 <h3>Taint failures under -U</h3>
 <p> When running in unsafe mode, taint violations could sometimes cause silent failures. This has been fixed.  </p>
-<font SIZE="-1"></font><h3>END blocks and the -c switch</h3>
-<p> Prior versions used to run <font SIZE="-1">BEGIN</font> <code>and</code> <font SIZE="-1">END</font> blocks when Perl was run in compile-only mode. Since this is typically not the expected behavior, <font SIZE="-1">END</font> blocks are not executed anymore when the <code>&quot;-c&quot;</code> switch is used, or if compilation fails. </p>
-<p> See ``Support for <font SIZE="-1">CHECK</font> blocks&#8217;&#8216; for how to run things when the compile phase ends.  </p>
-<font SIZE="-1"></font><h3>Potential to leak DATA filehandles</h3>
+<h3>END blocks and the -c switch</h3>
+<p> Prior versions used to run BEGIN <code>and</code> END blocks when Perl was run in compile-only mode. Since this is typically not the expected behavior, END blocks are not executed anymore when the <code>&quot;-c&quot;</code> switch is used, or if compilation fails. </p>
+<p> See ``Support for CHECK blocks&#8217;&#8216; for how to run things when the compile phase ends.  </p>
+<h3>Potential to leak DATA filehandles</h3>
 <p> Using the <code>&quot;__DATA__&quot;</code> token creates an implicit filehandle to the file that contains the token. It is the program&#8217;s responsibility to close it when it is done reading from it. </p>
 <p> This caveat is now better explained in the documentation. See perldata.  </p>
 <h2>New or Changed Diagnostics</h2>
@@ -1109,13 +1109,13 @@ description: "perl561delta – what’s new for perl v5.6.1"
 <dt>%s() called too early to check prototype</dt>
 <dd> <p> (W prototype) You&#8217;ve called a function that has a prototype before the parser saw a definition or declaration for it, and Perl could not check that the call conforms to the prototype. You need to either add an early prototype declaration for the subroutine in question, or move the subroutine definition ahead of the call to get proper prototype checking. Alternatively, if you are certain that you&#8217;re calling the function correctly, you may put an ampersand before the name to avoid the warning. See perlsub. </p>
  </dd>
-<dt>%s argument is not a <font SIZE="-1">HASH</font> or <font SIZE="-1">ARRAY</font> element</dt>
+<dt>%s argument is not a HASH or ARRAY element</dt>
 <dd> <p> (F) The argument to <code>exists()</code> must be a hash or array element, such as: </p>
 <pre><code>    $foo{$bar}
     $ref-&gt;{&quot;susie&quot;}[12]
 </code></pre>
  </dd>
-<dt>%s argument is not a <font SIZE="-1">HASH</font> or <font SIZE="-1">ARRAY</font> element or slice</dt>
+<dt>%s argument is not a HASH or ARRAY element or slice</dt>
 <dd> <p> (F) The argument to <code>delete()</code> must be either a hash or array element, such as: </p>
 <pre><code>    $foo{$bar}
     $ref-&gt;{&quot;susie&quot;}[12]
@@ -1132,7 +1132,7 @@ description: "perl561delta – what’s new for perl v5.6.1"
 <dd> <p> (W reserved) A lowercase attribute name was used that had a package-specific handler. That name might have a meaning to Perl itself some day, even though it doesn&#8217;t yet. Perhaps you should use a mixed-case attribute name, instead. See attributes. </p>
  </dd>
 <dt>(in cleanup) %s</dt>
-<dd> <p> (W misc) This prefix usually indicates that a <font SIZE="-1"><code>DESTROY</code></font><code>()</code> method raised the indicated exception. Since destructors are usually called by the system at arbitrary points during execution, and often a vast number of times, the warning is issued only once for any number of failures that would otherwise result in the same message being repeated. </p>
+<dd> <p> (W misc) This prefix usually indicates that a <code>DESTROY</code><code>()</code> method raised the indicated exception. Since destructors are usually called by the system at arbitrary points during execution, and often a vast number of times, the warning is issued only once for any number of failures that would otherwise result in the same message being repeated. </p>
 <p> Failure of user callbacks dispatched using the <code>&quot;G_KEEPERR&quot;</code> flag could also result in this warning. See ``G_KEEPERR&#8217;&#8216; in perlcall. </p>
  </dd>
 <dt>&lt;&gt; should be quotes</dt>
@@ -1164,7 +1164,7 @@ description: "perl561delta – what’s new for perl v5.6.1"
 <dd> <p> (W portable) Using bit vector sizes larger than 32 is non-portable. </p>
  </dd>
 <dt>Buffer overflow in prime_env_iter: %s</dt>
-<dd> <p> (W internal) A warning peculiar to <font SIZE="-1">VMS.</font> While Perl was preparing to iterate over <code>%ENV</code>, it encountered a logical name or symbol definition which was too long, so it was truncated to the string shown. </p>
+<dd> <p> (W internal) A warning peculiar to VMS. While Perl was preparing to iterate over <code>%ENV</code>, it encountered a logical name or symbol definition which was too long, so it was truncated to the string shown. </p>
  </dd>
 <dt>Can&#8217;t check filesystem of script &quot;%s&quot;</dt>
 <dd> <p> (P) For some reason you can&#8217;t check the filesystem of the script for nosuid. </p>
@@ -1175,14 +1175,14 @@ description: "perl561delta – what’s new for perl v5.6.1"
 <dt>Can&#8217;t declare %s in &quot;%s&quot;</dt>
 <dd> <p> (F) Only scalar, array, and hash variables may be declared as ``my&#8217;&#8216; or ``our&#8217;&#8216; variables. They must have ordinary identifiers as names. </p>
  </dd>
-<dt>Can&#8217;t ignore signal <font SIZE="-1">CHLD,</font> forcing to default</dt>
-<dd> <p> (W signal) Perl has detected that it is being run with the <font SIZE="-1">SIGCHLD</font> signal (sometimes known as <font SIZE="-1">SIGCLD</font>) disabled. Since disabling this signal will interfere with proper determination of exit status of child processes, Perl has reset the signal to its default value. This situation typically indicates that the parent program under which Perl may be running (e.g., cron) is being very careless. </p>
+<dt>Can&#8217;t ignore signal CHLD, forcing to default</dt>
+<dd> <p> (W signal) Perl has detected that it is being run with the SIGCHLD signal (sometimes known as SIGCLD) disabled. Since disabling this signal will interfere with proper determination of exit status of child processes, Perl has reset the signal to its default value. This situation typically indicates that the parent program under which Perl may be running (e.g., cron) is being very careless. </p>
  </dd>
 <dt>Can&#8217;t modify non-lvalue subroutine call</dt>
 <dd> <p> (F) Subroutines meant to be used in lvalue context should be declared as such, see ``Lvalue subroutines&#8217;&#8216; in perlsub. </p>
  </dd>
-<dt>Can&#8217;t read <font SIZE="-1">CRTL</font> environ</dt>
-<dd> <p> (S) A warning peculiar to <font SIZE="-1">VMS.</font> Perl tried to read an element of <code>%ENV</code> from the <font SIZE="-1">CRTL</font>&#8216;s internal environment array and discovered the array was missing. You need to figure out where your <font SIZE="-1">CRTL</font> misplaced its environ or define <i></i><font SIZE="-1"><i>PERL_ENV_TABLES</i></font><i></i> (see perlvms) so that environ is not searched. </p>
+<dt>Can&#8217;t read CRTL environ</dt>
+<dd> <p> (S) A warning peculiar to VMS. Perl tried to read an element of <code>%ENV</code> from the CRTL&#8216;s internal environment array and discovered the array was missing. You need to figure out where your CRTL misplaced its environ or define <i></i><i>PERL_ENV_TABLES</i><i></i> (see perlvms) so that environ is not searched. </p>
  </dd>
 <dt>Can&#8217;t remove %s: %s, skipping file</dt>
 <dd> <p> (S) You requested an inplace edit without creating a backup file. Perl was unable to remove the original file to replace it with the modified file. The file was left unmodified. </p>
@@ -1206,7 +1206,7 @@ description: "perl561delta – what’s new for perl v5.6.1"
 <dd> <p> (F) The parser found inconsistencies either while attempting to define an overloaded constant, or when trying to find the character name specified in the <code>&quot;\N{...}&quot;</code> escape. Perhaps you forgot to load the corresponding <code>&quot;overload&quot;</code> or <code>&quot;charnames&quot;</code> pragma? See charnames and overload. </p>
  </dd>
 <dt>CORE::%s is not a keyword</dt>
-<dd> <p> (F) The <font SIZE="-1">CORE::</font> namespace is reserved for Perl keywords. </p>
+<dd> <p> (F) The CORE:: namespace is reserved for Perl keywords. </p>
  </dd>
 <dt>defined(@array) is deprecated</dt>
 <dd> <p> (D) <code>defined()</code> is not usually useful on arrays because it checks for an undefined <i>scalar</i> value. If you want to see if the array is empty, just use <code>&quot;if (@array) { # not empty }&quot;</code> for example. </p>
@@ -1241,11 +1241,11 @@ description: "perl561delta – what’s new for perl v5.6.1"
 <dt>Hexadecimal number &gt; 0xffffffff non-portable</dt>
 <dd> <p> (W portable) The hexadecimal number you specified is larger than 2**32-1 (4294967295) and therefore non-portable between systems. See perlport for more on portability concerns. </p>
  </dd>
-<dt>Ill-formed <font SIZE="-1">CRTL</font> environ value &quot;%s&quot;</dt>
-<dd> <p> (W internal) A warning peculiar to <font SIZE="-1">VMS.</font> Perl tried to read the <font SIZE="-1">CRTL</font>&#8216;s internal environ array, and encountered an element without the <code>&quot;=&quot;</code> delimiter used to separate keys from values. The element is ignored. </p>
+<dt>Ill-formed CRTL environ value &quot;%s&quot;</dt>
+<dd> <p> (W internal) A warning peculiar to VMS. Perl tried to read the CRTL&#8216;s internal environ array, and encountered an element without the <code>&quot;=&quot;</code> delimiter used to separate keys from values. The element is ignored. </p>
  </dd>
 <dt>Ill-formed message in prime_env_iter: |%s|</dt>
-<dd> <p> (W internal) A warning peculiar to <font SIZE="-1">VMS.</font> Perl tried to read a logical name or <font SIZE="-1">CLI</font> symbol definition when preparing to iterate over <code>%ENV</code>, and didn&#8217;t see the expected delimiter between key and value, so the line was ignored. </p>
+<dd> <p> (W internal) A warning peculiar to VMS. Perl tried to read a logical name or CLI symbol definition when preparing to iterate over <code>%ENV</code>, and didn&#8217;t see the expected delimiter between key and value, so the line was ignored. </p>
  </dd>
 <dt>Illegal binary digit %s</dt>
 <dd> <p> (F) You used a digit other than 0 or 1 in a binary number. </p>
@@ -1301,8 +1301,8 @@ description: "perl561delta – what’s new for perl v5.6.1"
 <dt>No space allowed after -%c</dt>
 <dd> <p> (F) The argument to the indicated command line switch must follow immediately after the switch, without intervening spaces. </p>
  </dd>
-<dt>no <font SIZE="-1">UTC</font> offset information; assuming local time is <font SIZE="-1">UTC</font></dt>
-<dd> <p> (S) A warning peculiar to <font SIZE="-1">VMS.</font> Perl was unable to find the local timezone offset, so it&#8217;s assuming that local system time is equivalent to <font SIZE="-1">UTC.</font> If it&#8217;s not, define the logical name <i></i><font SIZE="-1"><i>SYS$TIMEZONE_DIFFERENTIAL</i></font><i></i> to translate to the number of seconds which need to be added to <font SIZE="-1">UTC</font> to get local time. </p>
+<dt>no UTC offset information; assuming local time is UTC</dt>
+<dd> <p> (S) A warning peculiar to VMS. Perl was unable to find the local timezone offset, so it&#8217;s assuming that local system time is equivalent to UTC. If it&#8217;s not, define the logical name <i></i><i>SYS$TIMEZONE_DIFFERENTIAL</i><i></i> to translate to the number of seconds which need to be added to UTC to get local time. </p>
  </dd>
 <dt>Octal number &gt; 037777777777 non-portable</dt>
 <dd> <p> (W portable) The octal number you specified is larger than 2**32-1 (4294967295) and therefore non-portable between systems. See perlport for more on portability concerns. </p>
@@ -1335,7 +1335,7 @@ description: "perl561delta – what’s new for perl v5.6.1"
 <dt>Possible Y2K bug: %s</dt>
 <dd> <p> (W y2k) You are concatenating the number 19 with another number, which could be a potential Year 2000 problem. </p>
  </dd>
-<dt>pragma &quot;attrs&quot; is deprecated, use &quot;sub <font SIZE="-1">NAME : ATTRS&quot;</font> instead</dt>
+<dt>pragma &quot;attrs&quot; is deprecated, use &quot;sub NAME : ATTRS&quot; instead</dt>
 <dd> <p> (W deprecated) You have written something like this: </p>
 <pre><code>    sub doit
     {
@@ -1365,7 +1365,7 @@ description: "perl561delta – what’s new for perl v5.6.1"
 <dd> <p> (W misc) You have attempted to weaken a reference that is already weak. Doing so has no effect. </p>
  </dd>
 <dt>setpgrp can&#8217;t take arguments</dt>
-<dd> <p> (F) Your system has the <code>setpgrp()</code> from <font SIZE="-1">BSD 4.2,</font> which takes no arguments, unlike <font SIZE="-1">POSIX</font> <code>setpgid()</code>, which takes a process <font SIZE="-1">ID</font> and process group <font SIZE="-1">ID.</font> </p>
+<dd> <p> (F) Your system has the <code>setpgrp()</code> from BSD 4.2, which takes no arguments, unlike POSIX <code>setpgid()</code>, which takes a process ID and process group ID. </p>
  </dd>
 <dt>Strange *+?{} on zero-length expression</dt>
 <dd> <p> (W regexp) You applied a regular expression quantifier in a place where it makes no sense, such as on a zero-width assertion. Try putting the quantifier inside the assertion instead. For example, the way to match ``abc&#8217;&#8216; provided that it is followed by three repetitions of ``xyz&#8217;&#8216; is <code>&quot;/abc(?=(?:xyz){3})/&quot;</code>, not <code>&quot;/abc(?=xyz){3}/&quot;</code>. </p>
@@ -1373,19 +1373,19 @@ description: "perl561delta – what’s new for perl v5.6.1"
 <dt>switching effective %s is not implemented</dt>
 <dd> <p> (F) While under the <code>&quot;use filetest&quot;</code> pragma, we cannot switch the real and effective uids or gids. </p>
  </dd>
-<dt>This Perl can&#8217;t reset <font SIZE="-1">CRTL</font> environ elements (%s)</dt>
+<dt>This Perl can&#8217;t reset CRTL environ elements (%s)</dt>
 <dd>  </dd>
-<dt>This Perl can&#8217;t set <font SIZE="-1">CRTL</font> environ elements (%s=%s)</dt>
-<dd> <p> (W internal) Warnings peculiar to <font SIZE="-1">VMS.</font> You tried to change or delete an element of the <font SIZE="-1">CRTL</font>&#8216;s internal environ array, but your copy of Perl wasn&#8217;t built with a <font SIZE="-1">CRTL</font> that contained the <code>setenv()</code> function. You&#8217;ll need to rebuild Perl with a <font SIZE="-1">CRTL</font> that does, or redefine <i></i><font SIZE="-1"><i>PERL_ENV_TABLES</i></font><i></i> (see perlvms) so that the environ array isn&#8217;t the target of the change to <code>%ENV</code> which produced the warning. </p>
+<dt>This Perl can&#8217;t set CRTL environ elements (%s=%s)</dt>
+<dd> <p> (W internal) Warnings peculiar to VMS. You tried to change or delete an element of the CRTL&#8216;s internal environ array, but your copy of Perl wasn&#8217;t built with a CRTL that contained the <code>setenv()</code> function. You&#8217;ll need to rebuild Perl with a CRTL that does, or redefine <i></i><i>PERL_ENV_TABLES</i><i></i> (see perlvms) so that the environ array isn&#8217;t the target of the change to <code>%ENV</code> which produced the warning. </p>
  </dd>
 <dt>Too late to run %s block</dt>
-<dd> <p> (W void) A <font SIZE="-1">CHECK</font> or <font SIZE="-1">INIT</font> block is being defined during run time proper, when the opportunity to run them has already passed. Perhaps you are loading a file with <code>&quot;require&quot;</code> or <code>&quot;do&quot;</code> when you should be using <code>&quot;use&quot;</code> instead. Or perhaps you should put the <code>&quot;require&quot;</code> or <code>&quot;do&quot;</code> inside a <font SIZE="-1">BEGIN</font> block. </p>
+<dd> <p> (W void) A CHECK or INIT block is being defined during run time proper, when the opportunity to run them has already passed. Perhaps you are loading a file with <code>&quot;require&quot;</code> or <code>&quot;do&quot;</code> when you should be using <code>&quot;use&quot;</code> instead. Or perhaps you should put the <code>&quot;require&quot;</code> or <code>&quot;do&quot;</code> inside a BEGIN block. </p>
  </dd>
 <dt>Unknown <code>open()</code> mode &#8216;%s&#8217;</dt>
 <dd> <p> (F) The second argument of 3-argument <code>open()</code> is not among the list of valid modes: <code>&quot;&lt;&quot;</code>, <code>&quot;&gt;&quot;</code>, <code>&quot;&gt;&gt;&quot;</code>, <code>&quot;+&lt;&quot;</code>, <code>&quot;+&gt;&quot;</code>, <code>&quot;+&gt;&gt;&quot;</code>, <code>&quot;-|&quot;</code>, <code>&quot;|-&quot;</code>. </p>
  </dd>
 <dt>Unknown process %x sent message to prime_env_iter: %s</dt>
-<dd> <p> (P) An error peculiar to <font SIZE="-1">VMS.</font> Perl was reading values for <code>%ENV</code> before iterating over it, and someone else stuck a message in the stream of data Perl expected. Someone&#8217;s very confused, or perhaps trying to subvert Perl&#8217;s population of <code>%ENV</code> for nefarious purposes. </p>
+<dd> <p> (P) An error peculiar to VMS. Perl was reading values for <code>%ENV</code> before iterating over it, and someone else stuck a message in the stream of data Perl expected. Someone&#8217;s very confused, or perhaps trying to subvert Perl&#8217;s population of <code>%ENV</code> for nefarious purposes. </p>
  </dd>
 <dt>Unrecognized escape \\%c passed through</dt>
 <dd> <p> (W misc) You used a backslash-character combination which is not recognized by Perl. The character was understood literally. </p>
@@ -1402,8 +1402,8 @@ description: "perl561delta – what’s new for perl v5.6.1"
 <dt>Unterminated subroutine attribute list</dt>
 <dd> <p> (F) The lexer found something other than a simple identifier at the start of a subroutine attribute, and it wasn&#8217;t a semicolon or the start of a block. Perhaps you terminated the parameter list of the previous attribute too soon. </p>
  </dd>
-<dt>Value of <font SIZE="-1">CLI</font> symbol &quot;%s&quot; too long</dt>
-<dd> <p> (W misc) A warning peculiar to <font SIZE="-1">VMS.</font> Perl tried to read the value of an <code>%ENV</code> element from a <font SIZE="-1">CLI</font> symbol table, and found a resultant string longer than 1024 characters. The return value has been truncated to 1024 characters. </p>
+<dt>Value of CLI symbol &quot;%s&quot; too long</dt>
+<dd> <p> (W misc) A warning peculiar to VMS. Perl tried to read the value of an <code>%ENV</code> element from a CLI symbol table, and found a resultant string longer than 1024 characters. The return value has been truncated to 1024 characters. </p>
  </dd>
 <dt>Version number must be a constant number</dt>
 <dd> <p> (P) The attempt to translate a <code>&quot;use Module n.n LIST&quot;</code> statement into its equivalent <code>&quot;BEGIN&quot;</code> block found an internal inconsistency with the version number. </p>
@@ -1420,19 +1420,19 @@ description: "perl561delta – what’s new for perl v5.6.1"
 <dd> <p> Tests for new environment array capability (e.g., <code>&quot;use Env qw(@PATH);&quot;</code>). </p>
  </dd>
 <dt>lib/io_const</dt>
-<dd> <p> <font SIZE="-1">IO</font> constants (SEEK_*, _IO*). </p>
+<dd> <p> IO constants (SEEK_*, _IO*). </p>
  </dd>
 <dt>lib/io_dir</dt>
-<dd> <p> Directory-related <font SIZE="-1">IO</font> methods (new, read, close, rewind, tied delete). </p>
+<dd> <p> Directory-related IO methods (new, read, close, rewind, tied delete). </p>
  </dd>
 <dt>lib/io_multihomed</dt>
-<dd> <p> <font SIZE="-1">INET</font> sockets with multi-homed hosts. </p>
+<dd> <p> INET sockets with multi-homed hosts. </p>
  </dd>
 <dt>lib/io_poll</dt>
-<dd> <p> <font SIZE="-1">IO</font> <code>poll()</code>. </p>
+<dd> <p> IO <code>poll()</code>. </p>
  </dd>
 <dt>lib/io_unix</dt>
-<dd> <p> <font SIZE="-1">UNIX</font> sockets. </p>
+<dd> <p> UNIX sockets. </p>
  </dd>
 <dt>op/attrs</dt>
 <dd> <p> Regression tests for <code>&quot;my ($x,@y,%z) : attrs&quot;</code> and &lt;sub : attrs&gt;. </p>
@@ -1451,8 +1451,8 @@ description: "perl561delta – what’s new for perl v5.6.1"
 <p> Beware that any new warnings that have been added or old ones that have been enhanced are <code>not</code> considered incompatible changes. </p>
 <p> Since all new warnings must be explicitly requested via the <code>&quot;-w&quot;</code> switch or the <code>&quot;warnings&quot;</code> pragma, it is ultimately the programmer&#8217;s responsibility to ensure that warnings are enabled judiciously. </p>
 <dl>
-<dt><font SIZE="-1">CHECK</font> is a new keyword</dt>
-<dd> <p> All subroutine definitions named <font SIZE="-1">CHECK</font> are now special. See <code>&quot;/&quot;Support for CHECK blocks&quot;&quot;</code> for more information. </p>
+<dt>CHECK is a new keyword</dt>
+<dd> <p> All subroutine definitions named CHECK are now special. See <code>&quot;/&quot;Support for CHECK blocks&quot;&quot;</code> for more information. </p>
  </dd>
 <dt>Treatment of list slices of undef has changed</dt>
 <dd> <p> There is a potential incompatibility in the behavior of list slices that are comprised entirely of undefined values. See ``Behavior of list slices is more consistent&#8217;&#8216;. </p>
@@ -1490,14 +1490,14 @@ description: "perl561delta – what’s new for perl v5.6.1"
 <p> <code>delete()</code>, <code>each()</code>, <code>values()</code> and hashes (e.g. <code>&quot;\(%h)&quot;</code>) in a list context return the actual values in the hash, instead of copies (as they used to in earlier versions). Typical idioms for using these constructs copy the returned values, but this can make a significant difference when creating references to the returned values. Keys in the hash are still returned as copies when iterating on a hash. </p>
 <p> See also ``<code>delete()</code>, <code>each()</code>, <code>values()</code> and hash iteration are faster&#8217;&#8216;. </p>
  </dd>
-<dt>vec(<font SIZE="-1">EXPR,OFFSET,BITS</font>) enforces powers-of-two <font SIZE="-1">BITS</font></dt>
-<dd> <p> <code>vec()</code> generates a run-time error if the <font SIZE="-1">BITS</font> argument is not a valid power-of-two integer. </p>
+<dt>vec(EXPR,OFFSET,BITS) enforces powers-of-two BITS</dt>
+<dd> <p> <code>vec()</code> generates a run-time error if the BITS argument is not a valid power-of-two integer. </p>
  </dd>
 <dt>Text of some diagnostic output has changed</dt>
 <dd> <p> Most references to internal Perl operations in diagnostics have been changed to be more descriptive. This may be an issue for programs that may incorrectly rely on the exact text of diagnostics for proper functioning. </p>
  </dd>
 <dt>&quot;%@&quot; has been removed</dt>
-<dd> <p> The undocumented special variable <code>&quot;%@&quot;</code> that used to accumulate ``background&#8217;&#8216; errors (such as those that happen in <font SIZE="-1"><code>DESTROY</code></font><code>()</code>) has been removed, because it could potentially result in memory leaks. </p>
+<dd> <p> The undocumented special variable <code>&quot;%@&quot;</code> that used to accumulate ``background&#8217;&#8216; errors (such as those that happen in <code>DESTROY</code><code>()</code>) has been removed, because it could potentially result in memory leaks. </p>
  </dd>
 <dt>Parenthesized <code>not()</code> behaves like a list operator</dt>
 <dd> <p> The <code>&quot;not&quot;</code> operator now falls under the ``if it looks like a function, it behaves like a function&#8217;&#8216; rule. </p>
@@ -1532,31 +1532,31 @@ description: "perl561delta – what’s new for perl v5.6.1"
 </code></pre>
  </dd>
 <dt>&quot;PERL_IMPLICIT_CONTEXT&quot;</dt>
-<dd> <p> This new build option provides a set of macros for all <font SIZE="-1">API</font> functions such that an implicit interpreter/thread context argument is passed to every <font SIZE="-1">API</font> function. As a result of this, something like <code>&quot;sv_setsv(foo,bar)&quot;</code> amounts to a macro invocation that actually translates to something like <code>&quot;Perl_sv_setsv(my_perl,foo,bar)&quot;</code>. While this is generally expected to not have any significant source compatibility issues, the difference between a macro and a real function call will need to be considered. </p>
-<p> This means that there <code>is</code> a source compatibility issue as a result of this if your extensions attempt to use pointers to any of the Perl <font SIZE="-1">API</font> functions. </p>
+<dd> <p> This new build option provides a set of macros for all API functions such that an implicit interpreter/thread context argument is passed to every API function. As a result of this, something like <code>&quot;sv_setsv(foo,bar)&quot;</code> amounts to a macro invocation that actually translates to something like <code>&quot;Perl_sv_setsv(my_perl,foo,bar)&quot;</code>. While this is generally expected to not have any significant source compatibility issues, the difference between a macro and a real function call will need to be considered. </p>
+<p> This means that there <code>is</code> a source compatibility issue as a result of this if your extensions attempt to use pointers to any of the Perl API functions. </p>
 <p> Note that the above issue is not relevant to the default build of Perl, whose interfaces continue to match those of prior versions (but subject to the other options described here). </p>
-<p> See ``Background and <font SIZE="-1">PERL_IMPLICIT_CONTEXT&#8217;&#8216;</font> in perlguts for detailed information on the ramifications of building Perl with this option. </p>
+<p> See ``Background and PERL_IMPLICIT_CONTEXT&#8217;&#8216; in perlguts for detailed information on the ramifications of building Perl with this option. </p>
 <pre><code>    NOTE: PERL_IMPLICIT_CONTEXT is automatically enabled whenever Perl is built
     with one of -Dusethreads, -Dusemultiplicity, or both. It is not
     intended to be enabled by users at this time.
 </code></pre>
  </dd>
 <dt>&quot;PERL_POLLUTE_MALLOC&quot;</dt>
-<dd> <p> Enabling Perl&#8217;s malloc in release 5.005 and earlier caused the namespace of the system&#8217;s malloc family of functions to be usurped by the Perl versions, since by default they used the same names. Besides causing problems on platforms that do not allow these functions to be cleanly replaced, this also meant that the system versions could not be called in programs that used Perl&#8217;s malloc. Previous versions of Perl have allowed this behaviour to be suppressed with the <font SIZE="-1">HIDEMYMALLOC</font> and <font SIZE="-1">EMBEDMYMALLOC</font> preprocessor definitions. </p>
-<p> As of release 5.6.0, Perl&#8217;s malloc family of functions have default names distinct from the system versions. You need to explicitly compile perl with <code>&quot;-DPERL_POLLUTE_MALLOC&quot;</code> to get the older behaviour. <font SIZE="-1">HIDEMYMALLOC</font> and <font SIZE="-1">EMBEDMYMALLOC</font> have no effect, since the behaviour they enabled is now the default. </p>
-<p> Note that these functions do <code>not</code> constitute Perl&#8217;s memory allocation <font SIZE="-1">API.</font> See ``Memory Allocation&#8217;&#8216; in perlguts for further information about that. </p>
+<dd> <p> Enabling Perl&#8217;s malloc in release 5.005 and earlier caused the namespace of the system&#8217;s malloc family of functions to be usurped by the Perl versions, since by default they used the same names. Besides causing problems on platforms that do not allow these functions to be cleanly replaced, this also meant that the system versions could not be called in programs that used Perl&#8217;s malloc. Previous versions of Perl have allowed this behaviour to be suppressed with the HIDEMYMALLOC and EMBEDMYMALLOC preprocessor definitions. </p>
+<p> As of release 5.6.0, Perl&#8217;s malloc family of functions have default names distinct from the system versions. You need to explicitly compile perl with <code>&quot;-DPERL_POLLUTE_MALLOC&quot;</code> to get the older behaviour. HIDEMYMALLOC and EMBEDMYMALLOC have no effect, since the behaviour they enabled is now the default. </p>
+<p> Note that these functions do <code>not</code> constitute Perl&#8217;s memory allocation API. See ``Memory Allocation&#8217;&#8216; in perlguts for further information about that. </p>
  </dd></dl>
-<font SIZE="-1"></font><h3>Compatible C Source API Changes</h3>
+<h3>Compatible C Source API Changes</h3>
 <dl>
 <dt>&quot;PATCHLEVEL&quot; is now &quot;PERL_VERSION&quot;</dt>
 <dd> <p> The cpp macros <code>&quot;PERL_REVISION&quot;</code>, <code>&quot;PERL_VERSION&quot;</code>, and <code>&quot;PERL_SUBVERSION&quot;</code> are now available by default from perl.h, and reflect the base revision, patchlevel, and subversion respectively. <code>&quot;PERL_REVISION&quot;</code> had no prior equivalent, while <code>&quot;PERL_VERSION&quot;</code> and <code>&quot;PERL_SUBVERSION&quot;</code> were previously available as <code>&quot;PATCHLEVEL&quot;</code> and <code>&quot;SUBVERSION&quot;</code>. </p>
 <p> The new names cause less pollution of the <code>cpp</code> namespace and reflect what the numbers have come to stand for in common practice. For compatibility, the old names are still supported when <i>patchlevel.h</i> is explicitly included (as required before), so there is no source incompatibility from the change. </p>
  </dd></dl>
 <h3>Binary Incompatibilities</h3>
-<p> In general, the default build of this release is expected to be binary compatible for extensions built with the 5.005 release or its maintenance versions. However, specific platforms may have broken binary compatibility due to changes in the defaults used in hints files. Therefore, please be sure to always check the platform-specific <font SIZE="-1">README</font> files for any notes to the contrary. </p>
+<p> In general, the default build of this release is expected to be binary compatible for extensions built with the 5.005 release or its maintenance versions. However, specific platforms may have broken binary compatibility due to changes in the defaults used in hints files. Therefore, please be sure to always check the platform-specific README files for any notes to the contrary. </p>
 <p> The usethreads or usemultiplicity builds are <code>not</code> binary compatible with the corresponding builds in 5.005. </p>
-<p> On platforms that require an explicit list of exports (<font SIZE="-1">AIX, OS/2</font> and Windows, among others), purely internal symbols such as parser functions and the run time opcodes are not exported by default. Perl 5.005 used to export all functions irrespective of whether they were considered part of the public <font SIZE="-1">API</font> or not. </p>
-<p> For the full list of public <font SIZE="-1">API</font> functions, see perlapi.  </p>
+<p> On platforms that require an explicit list of exports (AIX, OS/2 and Windows, among others), purely internal symbols such as parser functions and the run time opcodes are not exported by default. Perl 5.005 used to export all functions irrespective of whether they were considered part of the public API or not. </p>
+<p> For the full list of public API functions, see perlapi.  </p>
 <h2>Known Problems</h2>
 <h3>Localizing a tied hash element may leak memory</h3>
 <p> As of the 5.6.1 release, there is a known leak when code such as this is executed: </p>
@@ -1569,8 +1569,8 @@ description: "perl561delta – what’s new for perl v5.6.1"
 <dl>
 <dt>&bull;</dt>
 <dd> <p> 64-bit builds </p>
-<p> Subtest #15 of lib/b.t may fail under 64-bit builds on platforms such as HP-UX <font SIZE="-1">PA64</font> and Linux <font SIZE="-1">IA64.</font> The issue is still being investigated. </p>
-<p> The lib/io_multihomed test may hang in HP-UX if Perl has been configured to be 64-bit. Because other 64-bit platforms do not hang in this test, HP-UX is suspect. All other tests pass in 64-bit HP-UX. The test attempts to create and connect to ``multihomed&#8217;&#8216; sockets (sockets which have multiple <font SIZE="-1">IP</font> addresses). </p>
+<p> Subtest #15 of lib/b.t may fail under 64-bit builds on platforms such as HP-UX PA64 and Linux IA64. The issue is still being investigated. </p>
+<p> The lib/io_multihomed test may hang in HP-UX if Perl has been configured to be 64-bit. Because other 64-bit platforms do not hang in this test, HP-UX is suspect. All other tests pass in 64-bit HP-UX. The test attempts to create and connect to ``multihomed&#8217;&#8216; sockets (sockets which have multiple IP addresses). </p>
 <p> Note that 64-bit support is still experimental. </p>
  </dd>
 <dt>&bull;</dt>
@@ -1578,17 +1578,17 @@ description: "perl561delta – what’s new for perl v5.6.1"
 <p> The subtests 19 and 20 of lib/thr5005.t test are known to fail due to fundamental problems in the 5.005 threading implementation. These are not new failures---Perl 5.005_0x has the same bugs, but didn&#8217;t have these tests. (Note that support for 5.005-style threading remains experimental.) </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <font SIZE="-1">NEXTSTEP 3.3 POSIX</font> test failure </p>
-<p> In <font SIZE="-1">NEXTSTEP 3</font>.3p2 the implementation of the <code><a href="/docs/linux/man/3-strftime/">strftime</a></code>(3) in the operating system libraries is buggy: the <code>%j</code> format numbers the days of a month starting from zero, which, while being logical to programmers, will cause the subtests 19 to 27 of the lib/posix test may fail. </p>
+<dd> <p> NEXTSTEP 3.3 POSIX test failure </p>
+<p> In NEXTSTEP 3.3p2 the implementation of the <code><a href="/docs/linux/man/3-strftime/">strftime</a></code>(3) in the operating system libraries is buggy: the <code>%j</code> format numbers the days of a month starting from zero, which, while being logical to programmers, will cause the subtests 19 to 27 of the lib/posix test may fail. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Tru64 (aka Digital <font SIZE="-1">UNIX,</font> aka <font SIZE="-1">DEC OSF/1</font>) lib/sdbm test failure with gcc </p>
+<dd> <p> Tru64 (aka Digital UNIX, aka DEC OSF/1) lib/sdbm test failure with gcc </p>
 <p> If compiled with gcc 2.95 the lib/sdbm test will fail (dump core). The cure is to use the vendor cc, it comes with the operating system and produces good code. </p>
  </dd></dl>
-<font SIZE="-1"></font><h3>EBCDIC platforms not fully supported</h3>
-<p> In earlier releases of Perl, <font SIZE="-1">EBCDIC</font> environments like <font SIZE="-1">OS390</font> (also known as Open Edition <font SIZE="-1">MVS</font>) and VM-ESA were supported. Due to changes required by the <font SIZE="-1">UTF-8</font> (Unicode) support, the <font SIZE="-1">EBCDIC</font> platforms are not supported in Perl 5.6.0. </p>
-<p> The 5.6.1 release improves support for <font SIZE="-1">EBCDIC</font> platforms, but they are not fully supported yet.  </p>
-<font SIZE="-1"></font><h3>UNICOS/mk CC failures during Configure run</h3>
+<h3>EBCDIC platforms not fully supported</h3>
+<p> In earlier releases of Perl, EBCDIC environments like OS390 (also known as Open Edition MVS) and VM-ESA were supported. Due to changes required by the UTF-8 (Unicode) support, the EBCDIC platforms are not supported in Perl 5.6.0. </p>
+<p> The 5.6.1 release improves support for EBCDIC platforms, but they are not fully supported yet.  </p>
+<h3>UNICOS/mk CC failures during Configure run</h3>
 <p> In UNICOS/mk the following errors may appear during the Configure run: </p>
 <pre><code>        Guessing which symbols your C compiler and preprocessor define...
         CC-20 cc: ERROR File = try.c, Line = 3
@@ -1623,7 +1623,7 @@ description: "perl561delta – what’s new for perl v5.6.1"
 <dd>  </dd>
 <dt>Internal implementation of file globbing</dt>
 <dd>  </dd>
-<dt>The <font SIZE="-1">DB</font> module</dt>
+<dt>The DB module</dt>
 <dd>  </dd>
 <dt>The regular expression code constructs:</dt>
 <dd> <p> <code>&quot;(?{ code })&quot;</code> and <code>&quot;(??{ code })&quot;</code> </p>
@@ -1634,7 +1634,7 @@ description: "perl561delta – what’s new for perl v5.6.1"
 <dd> <p> (W) Within regular expression character classes ([]) the syntax beginning with ``[:&#8216;&#8216; and ending with ``:]&#8216;&#8216; is reserved for future extensions. If you need to represent those character sequences inside a regular expression character class, just quote the square brackets with the backslash: ``\[:&#8216;&#8216; and ``:\]&#8216;&#8216;. </p>
  </dd>
 <dt>Ill-formed logical name |%s| in prime_env_iter</dt>
-<dd> <p> (W) A warning peculiar to <font SIZE="-1">VMS.</font> A logical name was encountered when preparing to iterate over <code>%ENV</code> which violates the syntactic rules governing logical names. Because it cannot be translated normally, it is skipped, and will not appear in <code>%ENV</code>. This may be a benign occurrence, as some software packages might directly modify logical name tables and introduce nonstandard names, or it may indicate that a logical name table has been corrupted. </p>
+<dd> <p> (W) A warning peculiar to VMS. A logical name was encountered when preparing to iterate over <code>%ENV</code> which violates the syntactic rules governing logical names. Because it cannot be translated normally, it is skipped, and will not appear in <code>%ENV</code>. This may be a benign occurrence, as some software packages might directly modify logical name tables and introduce nonstandard names, or it may indicate that a logical name table has been corrupted. </p>
  </dd>
 <dt>In string, @%s now must be written as \@%s</dt>
 <dd> <p> The description of this error used to say: </p>
@@ -1660,8 +1660,8 @@ description: "perl561delta – what’s new for perl v5.6.1"
 <p> If you believe you have an unreported bug, please run the <code>perlbug</code> program included with your release. Be sure to trim your bug down to a tiny but sufficient test case. Your bug report, along with the output of <code>&quot;perl -V&quot;</code>, will be sent off to perlbug [at] perl.org to be analysed by the Perl porting team.  </p>
 <h2>SEE ALSO</h2>
 <p> The <i>Changes</i> file for exhaustive details on what changed. </p>
-<p> The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. </p>
-<p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
+<p> The <i></i><i>INSTALL</i><i></i> file for how to build Perl. </p>
+<p> The <i></i><i>README</i><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information.  </p>
 <h2>HISTORY</h2>
 <p> Written by Gurusamy Sarathy &lt;<i>gsar [at] ActiveState.com</i>&gt;, with many contributions from The Perl Porters. </p>

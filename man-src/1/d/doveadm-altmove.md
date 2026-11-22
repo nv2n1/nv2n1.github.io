@@ -10,8 +10,8 @@ description: "doveadm-altmove – Move matching mails to the alternative storage
 
 <p> doveadm-altmove &#8211; Move matching mails to the alternative storage (dbox-only)</p>
 <h2>SYNOPSIS</h2>
-<p> <code>doveadm</code> [<code>-Dv</code>] <code>altmove</code> [<code>-r</code>] [-S <i>socket_path</i>] <i>search_query</i><br />
- <code>doveadm</code> [<code>-Dv</code>] <code>altmove</code> [<code>-r</code>] [-S <i>socket_path</i>] <code>-A</code><i> search_query</i><br />
+<p> <code>doveadm</code> [<code>-Dv</code>] <code>altmove</code> [<code>-r</code>] [-S <i>socket_path</i>] <i>search_query</i><br/>
+ <code>doveadm</code> [<code>-Dv</code>] <code>altmove</code> [<code>-r</code>] [-S <i>socket_path</i>] <code>-A</code><i> search_query</i><br/>
  <code>doveadm</code> [<code>-Dv</code>] <code>altmove</code> [<code>-r</code>] [-S <i>socket_path</i>] <code>-u</code><i> user search_query</i></p>
 <h2>DESCRIPTION</h2>
 <p> This command can be used with sdbox or mdbox storage to move mails to alternative storage path when :ALT=&lt;path&gt; is specified for the mail location. </p>
@@ -36,7 +36,7 @@ description: "doveadm-altmove – Move matching mails to the alternative storage
 <dd> The option&#8217;s argument is either an absolute path to a local UNIX domain socket, or a hostname and port (<i>hostname</i>:<i>port</i>), in order to connect a remote host via a TCP socket. </dd>
 <p> This allows an administrator to execute <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) mail commands through the given socket.</p>
 <dt><code>-u&nbsp;<wbr></code><i>user/mask</i></dt>
-<dd> Run the <i>command</i> only for the given <i>user</i>. It&#8217;s also possible to use &#8216;<code>*</code>&#8216; and &#8216;<code>?</code>&#8216; wildcards (e.g. -u *@example.org).<br />
+<dd> Run the <i>command</i> only for the given <i>user</i>. It&#8217;s also possible to use &#8216;<code>*</code>&#8216; and &#8216;<code>?</code>&#8216; wildcards (e.g. -u *@example.org).<br/>
  When neither the <code>-A</code> option nor <code>-u&nbsp;<wbr></code><i>user</i> was specified, the <i>command</i> will be executed with the environment of the currently logged in user.</dd></dl>
 <h2>ARGUMENTS</h2>
 <dl>

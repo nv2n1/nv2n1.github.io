@@ -10,7 +10,7 @@ description: "slarrd.f –"
 <p>slarrd.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>slarrd</code> (RANGE, ORDER, N, VL, VU, IL, IU, GERS, RELTOL, D, E, E2, PIVMIN, NSPLIT, ISPLIT, M, W, WERR, WL, WU, IBLOCK, INDEXW, WORK, IWORK, INFO)<br />
+<p>subroutine <code>slarrd</code> (RANGE, ORDER, N, VL, VU, IL, IU, GERS, RELTOL, D, E, E2, PIVMIN, NSPLIT, ISPLIT, M, W, WERR, WL, WU, IBLOCK, INDEXW, WORK, IWORK, INFO)<br/>
  <i></i><code>SLARRD</code> computes the eigenvalues of a symmetric tridiagonal matrix to suitable accuracy.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slarrd (characterRANGE, characterORDER, integerN, realVL, realVU, integerIL, integerIU, real, dimension( * )GERS, realRELTOL, real, dimension( * )D, real, dimension( * )E, real, dimension( * )E2, realPIVMIN, integerNSPLIT, integer, dimension( * )ISPLIT, integerM, real, dimension( * )W, real, dimension( * )WERR, realWL, realWU, integer, dimension( * )IBLOCK, integer, dimension( * )INDEXW, real, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>

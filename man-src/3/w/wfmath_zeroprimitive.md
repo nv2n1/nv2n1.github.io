@@ -11,9 +11,9 @@ description: "WFMath::ZeroPrimitive – Utility class for providing zero primiti
 <h2>Synopsis</h2>
 <p>#include &lt;<a href="file:/usr/include/zero.h">zero.h</a>&gt; </p>
 <h3>Public Member Functions</h3>
-<p><code>ZeroPrimitive</code> (int dim)<br />
- <i>Ctor. An instance of </i><code>Shape</code> with zero values will be created at construction time.<br />
- const <code>Shape</code> &amp; <code>getShape</code> () const<br />
+<p><code>ZeroPrimitive</code> (int dim)<br/>
+ <i>Ctor. An instance of </i><code>Shape</code> with zero values will be created at construction time.<br/>
+ const <code>Shape</code> &amp; <code>getShape</code> () const<br/>
  <i>Gets the zeroed shape. </i></p>
 <h2>Detailed Description</h2>
 <h3>template&lt;typename Shape&gt; class WFMath::ZeroPrimitive&lt; Shape &gt;</h3>

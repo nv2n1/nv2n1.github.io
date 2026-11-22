@@ -68,7 +68,7 @@ description: "mailtool – Process mailboxes"
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  This option is applicable even when an encrypted IMAP or POP3 connection is not explicitly requested. Many mail servers are capable of automatically upgrading unencrypted connections to a fully-encrypted connection. If a mail server claims to be able to use encryption, then there&#8217;s no reason not to use it. The result is that all encryption certification requirements still apply even when encryption is not explicitly requested. </dd>
 </dl>
 </dl>
@@ -163,7 +163,7 @@ mailtool -filter INBOX pop3://john [at] mail.example.com/novalidate-cert
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> -filter is not meant to be used with large folders. Unless messages are removed quickly, the connection to the server may be disconnected for inactivity. </p>
 </dl>
 <h3>Copying folders</h3>
@@ -196,7 +196,7 @@ mailtool -recurse -tofolder INBOX.converted_mail \
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> Mail accounts that contain hybrid folders (folders that contain both messages and subfolders) can only be copied to account types that also support hybrid folders: either local maildirs, or to remote servers that support hybrid folders. </p>
 </dl>
 <h2>SEE ALSO</h2>

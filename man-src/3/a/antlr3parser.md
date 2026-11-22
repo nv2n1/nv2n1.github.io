@@ -11,13 +11,13 @@ description: "include/antlr3parser.h –"
 <p> include/antlr3parser.h &#8211; </p>
 <p> Base implementation of an ANTLR3 parser.</p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;<a href="file:/usr/include/antlr3defs.h">antlr3defs.h</a>&gt;<br />
+<p> #include &lt;<a href="file:/usr/include/antlr3defs.h">antlr3defs.h</a>&gt;<br/>
  #include &lt;<a href="file:/usr/include/antlr3baserecognizer.h">antlr3baserecognizer.h</a>&gt; </p>
 <h3>Data Structures</h3>
-<p> struct <code>ANTLR3_PARSER_struct</code><br />
+<p> struct <code>ANTLR3_PARSER_struct</code><br/>
  <i>This is the main interface for an ANTLR3 parser. </i></p>
 <h3>Typedefs</h3>
-<p> typedef struct <code>ANTLR3_PARSER_struct</code> <code>ANTLR3_PARSER</code><br />
+<p> typedef struct <code>ANTLR3_PARSER_struct</code> <code>ANTLR3_PARSER</code><br/>
  <i>This is the main interface for an ANTLR3 parser. </i></p>
 <h2>Detailed Description</h2>
 <p> Base implementation of an ANTLR3 parser. </p>

@@ -123,7 +123,7 @@ description: "plowdel – Delete files from file sharing websites links"
 <h2>EXAMPLES</h2>
 <h3>1) Delete one or several files (using delete link)</h3>
 <p> $ plowdel <a rel="nofollow" href="http://d01.megashares.com/?dl=6EUeDtS">http://d01.megashares.com/?dl=6EUeDtS</a> </p>
-<p> # Deletes are successive (not parallel) $ plowdel <a rel="nofollow" href="http://d01.megashares.com/?dl=6EUeDtS">http://d01.megashares.com/?dl=6EUeDtS</a> \<br />
+<p> # Deletes are successive (not parallel) $ plowdel <a rel="nofollow" href="http://d01.megashares.com/?dl=6EUeDtS">http://d01.megashares.com/?dl=6EUeDtS</a> \<br/>
 &nbsp;<wbr><a rel="nofollow" href="http://depositfiles.com/rmv/1643181821669253">http://depositfiles.com/rmv/1643181821669253</a> </p>
 <h2>FILES</h2>
 <dl>

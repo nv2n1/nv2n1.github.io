@@ -9,7 +9,7 @@ description: "xfs_admin – change parameters of an XFS filesystem"
 
 <p>xfs_admin &#8211; change parameters of an XFS filesystem</p>
 <h2>Synopsis</h2>
-<p><code>xfs_admin</code> [ <code>-eflpu</code> ] [ <code>-c 0</code>|<code>1</code> ] [ <code>-L</code> <i>label</i> ] [ <code>-U</code> <i>uuid</i> ] <i>device</i><br />
+<p><code>xfs_admin</code> [ <code>-eflpu</code> ] [ <code>-c 0</code>|<code>1</code> ] [ <code>-L</code> <i>label</i> ] [ <code>-U</code> <i>uuid</i> ] <i>device</i><br/>
  <code>xfs_admin -V</code></p>
 <h2>Description</h2>
 <p><code>xfs_admin</code> uses the <code><a href="/docs/linux/man/8-xfs_db/">xfs_db</a></code>(8) command to modify various parameters of a filesystem. </p>

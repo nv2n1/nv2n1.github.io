@@ -21,7 +21,7 @@ description: "resize2fs – ext2/ext3/ext4 file system resizer"
 <dt><code>-b</code></dt>
 <dd>Turns on the 64bit feature, resizes the group descriptors as necessary, and moves other metadata out of the way.</dd>
 <dt><code>-d </code><i>debug-flags</i></dt>
-<dd>Turns on various resize2fs debugging features, if they have been compiled into the binary. <i>debug-flags</i> should be computed by adding the numbers of the desired features from the following list:<br />
+<dd>Turns on various resize2fs debugging features, if they have been compiled into the binary. <i>debug-flags</i> should be computed by adding the numbers of the desired features from the following list:<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>2<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>&#8211; Debug block relocations</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>4<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>&#8211; Debug inode relocations</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>8<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>&#8211; Debug moving the inode table</p>

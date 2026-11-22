@@ -28,5 +28,5 @@ description: "ttftotype42 – create PostScript Type 42 wrapper of TrueType font
 <p> <i>OpenType Specification</i>, Version 1.4</p>
 <h2>AUTHOR</h2>
 <p> Eddie Kohler (ekohler [at] gmail.com) </p>
-<p> The latest version is available from:<br />
+<p> The latest version is available from:<br/>
  <a rel="nofollow" href="http://www.lcdf.org/type/">http://www.lcdf.org/type/</a> </p>

@@ -10,7 +10,7 @@ description: "crtsv – mutual converter between TSV and QDBM Curia database"
 
 <p> crtsv &#8211; mutual converter between TSV and QDBM Curia database </p>
 <h2>SYNOPSIS</h2>
-<p> <code>crtsv import</code> [-bnum <i>num</i>] [-dnum <i>num</i>] [-bin] <i>name</i><br />
+<p> <code>crtsv import</code> [-bnum <i>num</i>] [-dnum <i>num</i>] [-bin] <i>name</i><br/>
  <code>crtsv export</code> [-bin] <i>name</i></p>
 <h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>crtsv</code> commands. </p>
@@ -25,9 +25,9 @@ description: "crtsv – mutual converter between TSV and QDBM Curia database"
 <dt><code>-bin</code></dt>
 <dd> treat records as Base64 format.</dd></dl>
 <h2>EXAMPLES</h2>
-<p> For example, to make a database to search `/etc/password&#8217; by a user name, perform the following command.<br />
+<p> For example, to make a database to search `/etc/password&#8217; by a user name, perform the following command.<br/>
  <code> cat /etc/passwd | tr &#8216;:&#8217; &#8216; &#8216; | crtsv import casket</code> </p>
-<p> Thus, to retrieve the information of a user `mikio&#8217;, perform the following command.<br />
+<p> Thus, to retrieve the information of a user `mikio&#8217;, perform the following command.<br/>
  <code> crmgr get casket mikio</code> </p>
 <h2>SEE ALSO</h2>
 <p> <code>qdbm</code>(3), <code><a href="/docs/linux/man/1-crmgr/">crmgr</a></code>(1), <code>curia</code>(3), <code>cropen</code>(3).</p>

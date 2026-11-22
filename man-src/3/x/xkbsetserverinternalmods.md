@@ -10,7 +10,7 @@ description: "XkbSetServerInternalMods – Sets the modifiers that are consumed 
 <p>XkbSetServerInternalMods &#8211; Sets the modifiers that are consumed by the server before events are delivered to the client </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Bool XkbSetServerInternalMods</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>,</code> <code>unsigned int </code><i>affect_real</i><code>,</code> <code>unsigned int </code><i>real_values</i><code>,</code> <code>unsigned int </code><i>affect_virtual</i><code>,</code> <code>unsigned int </code><i>virtual_values</i><code>);</code><br />
+<dt> <code>Bool XkbSetServerInternalMods</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>,</code> <code>unsigned int </code><i>affect_real</i><code>,</code> <code>unsigned int </code><i>real_values</i><code>,</code> <code>unsigned int </code><i>affect_virtual</i><code>,</code> <code>unsigned int </code><i>virtual_values</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
@@ -49,7 +49,7 @@ description: "XkbSetServerInternalMods – Sets the modifiers that are consumed 
  XkbCompatMapPtr compat; /* compatibility map */
  XkbGeometryPtr geom; /* physical geometry of keyboard */
 } XkbDescRec, *XkbDescPtr;</pre>
-<p>The display field points to an X display structure. The flags field is private to the library: modifying flags may yield unpredictable results. The device_spec field specifies the device identifier of the keyboard input device, or XkbUseCoreKeyboard, which specifies the core keyboard device. The min_key_code and max_key_code fields specify the least and greatest keycode that can be returned by the keyboard.<br />
+<p>The display field points to an X display structure. The flags field is private to the library: modifying flags may yield unpredictable results. The device_spec field specifies the device identifier of the keyboard input device, or XkbUseCoreKeyboard, which specifies the core keyboard device. The min_key_code and max_key_code fields specify the least and greatest keycode that can be returned by the keyboard.<br/>
 &nbsp; Each structure component has a corresponding mask bit that is used in function calls to indicate that the structure should be manipulated in some manner, such as allocating it or freeing it. These masks and their relationships to the fields in the XkbDescRec are shown in Table 1. </p>
 <table>
 <tr VALIGN=top>

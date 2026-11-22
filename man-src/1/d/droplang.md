@@ -19,7 +19,7 @@ description: "droplang – remove a PostgreSQL procedural language"
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Caution</code> </font> </dd>
+  <code>Caution</code>  </dd>
 <p> droplang is deprecated and may be removed in a future PostgreSQL release. Direct use of the <code>DROP EXTENSION</code> command is recommended instead. </p>
 </dl>
 <h2>OPTIONS</h2>

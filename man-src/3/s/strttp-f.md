@@ -10,7 +10,7 @@ description: "strttp.f –"
 <p>strttp.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>strttp</code> (UPLO, N, A, LDA, AP, INFO)<br />
+<p>subroutine <code>strttp</code> (UPLO, N, A, LDA, AP, INFO)<br/>
  <i></i><code>STRTTP</code> copies a triangular matrix from the standard full format (TR) to the standard packed format (TP).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine strttp (characterUPLO, integerN, real, dimension( lda, * )A, integerLDA, real, dimension( * )AP, integerINFO)</h3>

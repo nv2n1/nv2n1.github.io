@@ -42,8 +42,8 @@ description: "tbf – Token Bucket Filter"
 <p> Like the regular burstsize you can also specify a <code>cell</code> size.</dl>
 <h2>EXAMPLE &amp; USAGE</h2>
 <p>To attach a TBF with a sustained maximum rate of 0.5mbit/s, a peakrate of 1.0mbit/s, a 5kilobyte buffer, with a pre-bucket queue size limit calculated so the TBF causes at most 70ms of latency, with perfect peakrate behaviour, issue: </p>
-<p> # tc qdisc add dev eth0 handle 10: root tbf rate 0.5mbit \<br />
-&nbsp;<wbr>&nbsp;burst 5kb latency 70ms peakrate 1mbit&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;\<br />
+<p> # tc qdisc add dev eth0 handle 10: root tbf rate 0.5mbit \<br/>
+&nbsp;<wbr>&nbsp;burst 5kb latency 70ms peakrate 1mbit&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;\<br/>
 &nbsp;<wbr>&nbsp;minburst 1540 </p>
 <p> To attach an inner qdisc, for example sfq, issue: </p>
 <p> # tc qdisc add dev eth0 parent 10:1 handle 100: sfq </p>

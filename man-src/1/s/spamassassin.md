@@ -15,22 +15,22 @@ description: "spamassassin – extensible email filter used to identify spam"
 <p> For ease of access, the SpamAssassin manual has been split up into several sections. If you&#8217;re intending to read these straight through for the first time, the suggested order will tend to reduce the number of forward references. </p>
 <p> Extensive additional documentation for SpamAssassin is available, primarily on the SpamAssassin web site and wiki. </p>
 <p> You should be able to view SpamAssassin&#8217;s documentation with your <i><a href="/docs/linux/man/1-man/">man</a></i>(1) program or <i><a href="/docs/linux/man/1-perldoc/">perldoc</a></i>(1).</p>
-<h3><font SIZE="-1">OVERVIEW</font></h3>
+<h3>OVERVIEW</h3>
 <pre>
     spamassassin              SpamAssassin overview (this section)
 </pre>
-<h3><font SIZE="-1">CONFIGURATION</font></h3>
+<h3>CONFIGURATION</h3>
 <pre>
     Mail::SpamAssassin::Conf  SpamAssassin configuration files
 </pre>
-<h3><font SIZE="-1">USAGE</font></h3>
+<h3>USAGE</h3>
 <pre>
     spamassassin-run          &quot;spamassassin&quot; front-end filtering script
     sa-learn                  train SpamAssassin's Bayesian classifier
     spamc                     client for spamd (faster than spamassassin)
     spamd                     spamassassin server (needed by spamc)
 </pre>
-<h3><font SIZE="-1">DEFAULT PLUGINS</font></h3>
+<h3>DEFAULT PLUGINS</h3>
 <pre>
     Mail::SpamAssassin::Plugin::AskDNS
     Mail::SpamAssassin::Plugin::AutoLearnThreshold
@@ -120,9 +120,9 @@ description: "spamassassin – extensible email filter used to identify spam"
 <h2>TAGGING</h2>
 <p> The following two sections detail the default tagging and markup that takes place for messages when running <tt>&quot;spamassassin&quot;</tt> or <tt>&quot;spamc&quot;</tt> with <tt>&quot;spamd&quot;</tt> in the default configuration. </p>
 <p> Note: before header modification and addition, all headers beginning with <tt>&quot;X-Spam-&quot;</tt> are removed to prevent spammer mischief and also to avoid potential problems caused by prior invocations of SpamAssassin.</p>
-<h3><font SIZE="-1">TAGGING FOR SPAM MAILS</font></h3>
+<h3>TAGGING FOR SPAM MAILS</h3>
 <p> By default, all messages with a calculated score of 5.0 or higher are tagged as spam. </p>
-<p> If an incoming message is tagged as spam, instead of modifying the original message, SpamAssassin will create a new report message and attach the original message as a message/rfc822 <font SIZE="-1">MIME</font> part (ensuring the original message is completely preserved and easier to recover). </p>
+<p> If an incoming message is tagged as spam, instead of modifying the original message, SpamAssassin will create a new report message and attach the original message as a message/rfc822 MIME part (ensuring the original message is completely preserved and easier to recover). </p>
 <p> The new report message inherits the following headers (if they are present) from the original spam message:</p>
 <dl>
 <dt>From: header</dt>
@@ -146,7 +146,7 @@ description: "spamassassin – extensible email filter used to identify spam"
 <dl>
 <dt>spam mail body text</dt>
 <dd> The SpamAssassin report is added to top of the mail message body, if the message is marked as spam.</dd></dl>
-<h3><font SIZE="-1">DEFAULT TAGGING FOR ALL MAILS</font></h3>
+<h3>DEFAULT TAGGING FOR ALL MAILS</h3>
 <p> These headers are added to all messages, both spam and ham (non-spam).</p>
 <dl>
 <dt>X-Spam-Checker-Version: header</dt>

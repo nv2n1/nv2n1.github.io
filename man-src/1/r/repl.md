@@ -41,23 +41,23 @@ message dated&lt;date&gt; -- -- -- --
 <dl>
 <dt>
 </dt><dd>
-To : &lt;Mail &#8211; Followup &#8211; To&gt;<br />
-         Subject : Re : &lt;Subject&gt;<br />
-                            In &#8211;<br />
+To : &lt;Mail &#8211; Followup &#8211; To&gt;<br/>
+         Subject : Re : &lt;Subject&gt;<br/>
+                            In &#8211;<br/>
                         Reply &#8211; To : Message from&lt;From&gt; of&lt;Date&gt;.</dd>
-<p>                                         &amp;nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
+<p>                                         &amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
 &lt;Message &#8211; Id&gt; &#8212; &#8212; &#8212; &#8212;
 </dl>
 <p> or if the field &lt;Mail-Followup-To&gt; is not available: </p>
@@ -65,19 +65,19 @@ To : &lt;Mail &#8211; Followup &#8211; To&gt;<br />
 <dt>
 </dt><dd>
 To : &lt;Mail &#8211; Reply &#8211; To&gt; or &lt;Reply &#8211; To&gt; or &lt;From&gt; cc : &lt;To&gt; and&lt;cc&gt; and&lt;personal address&gt; Subject : Re : &lt;Subject&gt; In &#8211; Reply &#8211; To : Message from&lt;From&gt; of&lt;Date&gt;.</dd>
-<p>                                                                                                                                          &amp;nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
+<p>                                                                                                                                          &amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
 &lt;Message &#8211; Id&gt; &#8212; &#8212; &#8212; &#8212;
 </dl>
 <p> By default, the &#8220;cc:&#8221; contains all the addresses shown. You may selectively remove addresses from this default with the <code>-nocc</code> <i>type</i> switch. This switch takes an argument ( <i>all</i>/<i>to</i>/<i>cc</i>/<i>me</i>) which specifies who gets removed from the default &#8220;cc:&#8221; list of the reply. You may give this switch multiple times (with different arguments) if you wish to remove multiple types of addresses. </p>
@@ -93,10 +93,10 @@ To : &lt;Mail &#8211; Reply &#8211; To&gt; or &lt;Reply &#8211; To&gt; or &lt;Fr
 <dl>
 <dt>
 </dt><dd>
-;<br />
-mhl.reply;<br />
-; default message filter for `repl&#8217; (repl -format)<br />
-;<br />
+;<br/>
+mhl.reply;<br/>
+; default message filter for `repl&#8217; (repl -format)<br/>
+;<br/>
 from : nocomponent, formatfield = &#8220;%(decode(friendly{text})) writes:&#8221; body : component = &#8220;&gt; &#8220;, overflowtext = &#8220;&gt; &#8220;, overflowoffset = 0
 </dd></dl>
 <p> which outputs each line of the body of the message prefaced with the &#8220;&gt;&#8221; character and a space. </p>

@@ -37,7 +37,7 @@ kservice_desktop_to_json(myplugin myplugin.desktop)</pre>
 </dd></dl>
 <p> This will produce the JSON file myplugin.json, which can be referenced from the <code>K_PLUGIN_FACTORY_WITH_JSON</code> or <code>Q_PLUGIN_METADATA</code> macros.</p>
 <h2>Bugs</h2>
-<p>Please use m[blue]<code>KDE&#8217;s bugtracker</code>m[]<font SIZE="-2">[1]</font> to report bugs.</p>
+<p>Please use m[blue]<code>KDE&#8217;s bugtracker</code>m[][1] to report bugs.</p>
 <h2>Authors</h2>
 <p><code>Scarlett Clark</code> &lt;scarlett [at] scarlettgatelyclark.com&gt;</p>
 <dl>

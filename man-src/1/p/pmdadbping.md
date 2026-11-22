@@ -10,9 +10,9 @@ description: "pmdadbping – database response time and availability PMDA"
 
 <p> <code>pmdadbping</code> &#8211; database response time and availability PMDA</p>
 <h2>DESCRIPTION</h2>
-<p> <code>pmdadbping</code> is a database response time measurement <font SIZE="-1">PMDA</font>. </p>
-<p> <code>pmdadbping</code> runs <code><a href="/docs/linux/man/1-dbprobe/">dbprobe</a></code>(1), and exports the performance measurements it makes available as <font SIZE="-1">PCP</font> metrics. </p>
-<p> <code><a href="/docs/linux/man/1-dbprobe/">dbprobe</a></code>(1) should be configured to use the type of <font SIZE="-1">DBI</font> appropriate for the local database, which includes: <font SIZE="-1">RDBMS</font> flavour, user/password, delay between &quot;ping&quot; requests, and the <font SIZE="-1">SQL</font> statement to use.</p>
+<p> <code>pmdadbping</code> is a database response time measurement PMDA. </p>
+<p> <code>pmdadbping</code> runs <code><a href="/docs/linux/man/1-dbprobe/">dbprobe</a></code>(1), and exports the performance measurements it makes available as PCP metrics. </p>
+<p> <code><a href="/docs/linux/man/1-dbprobe/">dbprobe</a></code>(1) should be configured to use the type of DBI appropriate for the local database, which includes: RDBMS flavour, user/password, delay between &quot;ping&quot; requests, and the SQL statement to use.</p>
 <h2>INSTALLATION</h2>
 <p> Configure <code><a href="/docs/linux/man/1-dbprobe/">dbprobe</a></code>(1) &#8211; it uses a configuration file from (in this order):</p>
 <dl>
@@ -23,13 +23,13 @@ description: "pmdadbping – database response time and availability PMDA"
 <p> This file can contain overridden values (Perl code) for the settings listed at the start of <i>dbprobe.pl</i>, namely:</p>
 <dl>
 <dt>&bull;</dt>
-<dd> database name (see <font SIZE="-1"><code>DBI</code></font>(3) for details)</dd>
+<dd> database name (see <code>DBI</code>(3) for details)</dd>
 <dt>&bull;</dt>
 <dd> database user name</dd>
 <dt>&bull;</dt>
 <dd> database pass word</dd>
 <dt>&bull;</dt>
-<dd> <font SIZE="-1">SQL</font> statement to measure (probe)</dd>
+<dd> SQL statement to measure (probe)</dd>
 <dt>&bull;</dt>
 <dd> delay between probes</dd></dl>
 <p> Once this is setup, you can access the names and values for the dbping performance metrics by doing the following as root: </p>

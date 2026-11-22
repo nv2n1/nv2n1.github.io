@@ -67,8 +67,8 @@ for (np = SPLAY_MIN(NAME, &amp;head); np != NULL; np = SPLAY_NEXT(NAME, &amp;hea
 <p> The Fn RB_REMOVE macro removes the element Fa elm from the tree pointed by Fa head . </p>
 <p> The Fn RB_FIND and Fn RB_NFIND macros can be used to find a particular element in the tree. </p>
 <blockquote><p>
-struct TYPE find, *res;<br />
-find.key = 30;<br />
+struct TYPE find, *res;<br/>
+find.key = 30;<br/>
 res = RB_FIND(NAME, head, &amp;find);
  </p></blockquote>
 <p> The Fn RB_ROOT , Fn RB_MIN , Fn RB_MAX , Fn RB_NEXT , and Fn RB_PREV macros can be used to traverse the tree: </p>
@@ -79,11 +79,11 @@ res = RB_FIND(NAME, head, &amp;find);
 <h2>NOTES</h2>
 <p> Trying to free a tree in the following way is a common error: </p>
 <blockquote><p>
-SPLAY_FOREACH(var, NAME, head)<br />
-{<br />
-    SPLAY_REMOVE(NAME, head, var);<br />
-    free(var);<br />
-}<br />
+SPLAY_FOREACH(var, NAME, head)<br/>
+{<br/>
+    SPLAY_REMOVE(NAME, head, var);<br/>
+    free(var);<br/>
+}<br/>
 free(head);
  </p></blockquote>
 <p> Since <i>var</i> is freed, the Fn FOREACH macro refers to a pointer that may have been reallocated already. Proper code needs a second variable. </p>

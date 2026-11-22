@@ -11,7 +11,7 @@ description: "slapy2.f –"
 <p> slapy2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> REAL function <code>slapy2</code> (X, Y)<br />
+<p> REAL function <code>slapy2</code> (X, Y)<br/>
  <i></i><code>SLAPY2</code> returns sqrt(x2+y2).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>REAL function slapy2 (realX, realY)</h3>

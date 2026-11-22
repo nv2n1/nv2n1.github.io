@@ -94,7 +94,7 @@ description: "MuseekControl – Command-Line control Python Script for Museekd"
 <dt><code>&#8211;minfo</code></dt>
 <dd> Monitor all User Info</dd>
 <dt><code>&#8211;ip &lt;</code><i>user</i>&gt;</dt>
-<dd> Get a user&#8217;s IP and Port<br />
+<dd> Get a user&#8217;s IP and Port<br/>
 &nbsp;<wbr>&nbsp;<wbr>BROWSING:</dd>
 <dt><code>-b. &#8211;browse &lt;</code><i>user</i>&gt;</dt>
 <dd> Get a user&#8217;s shares and show them</dd>

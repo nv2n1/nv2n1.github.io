@@ -40,7 +40,7 @@ Information about the availability of values, gradients, and hessians.
 void print (std::ostream &amp;o=ExEnv::out0()) const
 Print information about the object.
 Protected Member Functions</code></pre>
-<p> void <code>compute</code> ()<br />
+<p> void <code>compute</code> ()<br/>
  <i>Recompute at least the results that have compute true and are not already computed. </i></p>
 <h2>Detailed Description</h2>
 <p>The <code>MBPT2_R12</code> class implements several linear R12 second-order perturbation theory methods.</p>

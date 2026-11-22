@@ -10,7 +10,7 @@ description: "euwatch-put-data – add data points to a CloudWatch metric"
 
 <p> <code>euwatch-put-data</code> &#8211; add data points to a CloudWatch metric </p>
 <h2>SYNOPSIS</h2>
-<p> &#8211;<code>n</code> <i>NAMESPACE</i> [-<code>v </code><i>FLOAT</i> ] <i>&#8230;</i><br />
+<p> &#8211;<code>n</code> <i>NAMESPACE</i> [-<code>v </code><i>FLOAT</i> ] <i>&#8230;</i><br/>
  &#8211;<code>n</code> <i>NAMESPACE</i> [-<code>s </code><i>KEY1=VALUE1,KEY2-VALUE2,&#8230;</i> ] <i>&#8230;</i></p>
 <h2>DESCRIPTION</h2>
 <p> The utility adds data to a CloudWatch metric. A metric datum consists of a metric name, any of several attributes, and either a simple, numeric value (-<code>v</code> ) or a set of statistical values (-<code>s</code> ) </p>

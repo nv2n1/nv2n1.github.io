@@ -43,7 +43,7 @@ int cacheflush(char *addr, int nbytes, int cache);
 <dl>
 <dt>M68K:</dt>
 <dd>
-int cacheflush(unsigned long addr, int scope, int cache,<br />
+int cacheflush(unsigned long addr, int scope, int cache,<br/>
                unsigned long len);</dd>
 <dt>SH:</dt>
 <dd>

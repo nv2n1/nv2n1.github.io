@@ -14,17 +14,17 @@ sks [options] -debug
 
 <h2>Description</h2>
 
-<font SIZE="-1">SKS</font> is a OpenPGP keyserver whose goal is to provide easy to deploy, decentralized, and highly reliable synchronization. That means that a key submitted to one <font SIZE="-1">SKS</font> server will quickly be distributed to all key servers, and even wildly out-of-date servers, or servers that experience spotty connectivity, can fully synchronize with rest of the system. 
+SKS is a OpenPGP keyserver whose goal is to provide easy to deploy, decentralized, and highly reliable synchronization. That means that a key submitted to one SKS server will quickly be distributed to all key servers, and even wildly out-of-date servers, or servers that experience spotty connectivity, can fully synchronize with rest of the system. 
 
- The design of <font SIZE="-1">SKS</font> is deliberately simple. The server consists of two single-threaded processes. The first, ``sks db'', fulfills the normal jobs associated with a public key server, such as answering web requests. The only special functionality of ``sks db'' is that it keeps a log summarizing the changes to the key database. ``sks recon'' does all the work with respect to reconciling hosts databases. ``sks recon'' keeps track of specialized summary information about the database, and can use that information to efficiently determine the differences between its database and that of another host.
+ The design of SKS is deliberately simple. The server consists of two single-threaded processes. The first, ``sks db'', fulfills the normal jobs associated with a public key server, such as answering web requests. The only special functionality of ``sks db'' is that it keeps a log summarizing the changes to the key database. ``sks recon'' does all the work with respect to reconciling hosts databases. ``sks recon'' keeps track of specialized summary information about the database, and can use that information to efficiently determine the differences between its database and that of another host.
 
 <h2>Features</h2>
 
 Highly efficient and reliable reconciliation algorithm 
 
- Follows <font SIZE="-1">RFC2440</font> and RFC2440bis carefully - unlike <font SIZE="-1">PKS, SKS</font> supports new and old style packets, photoID packets, multiple subkeys, and pretty much everything allowed by the RFCs. 
+ Follows RFC2440 and RFC2440bis carefully - unlike PKS, SKS supports new and old style packets, photoID packets, multiple subkeys, and pretty much everything allowed by the RFCs. 
 
- Fully compatible with <font SIZE="-1">PKS</font> system - can both send and receive syncs from <font SIZE="-1">PKS</font> servers, ensuring seamless connectivity. 
+ Fully compatible with PKS system - can both send and receive syncs from PKS servers, ensuring seamless connectivity. 
 
  Simple configuration: each host just needs a (partial) list of the other participating key servers. Gossip is used to distribute information without putting a heavy load an any one host. 
 
@@ -32,7 +32,7 @@ Highly efficient and reliable reconciliation algorithm
 
 <h2>Options</h2>
 
-<font SIZE="-1">SKS</font> binary command options are as follows:
+SKS binary command options are as follows:
 <dl><dt>db
 </dt><dd><pre> Initiates database server.</pre></dd><dt>recon
 </dt><dd>Initiates reconciliation server.
@@ -51,9 +51,9 @@ Highly efficient and reliable reconciliation algorithm
 </dd><dt>drop
 </dt><dd>Drops key from database.
 </dd><dt>update_subkeys [-n # of updates / 1000]
-</dt><dd>Updates subkey keyid index to include all current keys. Only useful when upgrading versions 1.0.4 or before of <font SIZE="-1">SKS.</font>
+</dt><dd>Updates subkey keyid index to include all current keys. Only useful when upgrading versions 1.0.4 or before of SKS.
 </dd><dt>version
-</dt><dd>prints <font SIZE="-1">SKS</font> version and linked version of Berkeley <font SIZE="-1">DB</font> to stdout
+</dt><dd>prints SKS version and linked version of Berkeley DB to stdout
 </dd><dt>help
 </dt><dd>Prints the help message.</dd></dl>
 
@@ -68,7 +68,7 @@ You won't need most of the options below for normal operation. These options can
 </dt><dd><pre> Number of bits defining a bin.</pre></dd><dt>-mbar
 </dt><dd>Number of errors that can be corrected in one shot.
 </dd><dt>-seed
-</dt><dd>Seed used by <font SIZE="-1">RNG.</font>
+</dt><dd>Seed used by RNG.
 </dd><dt>-hostname
 </dt><dd>Current hostname.
 </dd><dt>-nodename
@@ -106,13 +106,13 @@ You won't need most of the options below for normal operation. These options can
 </dd><dt>-recon_port
 </dt><dd>Set recon port number.
 </dd><dt>-recon_address
-</dt><dd>Set recon binding addresses. Can be a list of whitespace separated <font SIZE="-1">IP</font> addresses or domain names.
+</dt><dd>Set recon binding addresses. Can be a list of whitespace separated IP addresses or domain names.
 </dd><dt>-hkp_port
 </dt><dd>Set hkp port number.
 </dd><dt>-hkp_address
-</dt><dd>Set hkp binding addresses. Can be a list of whitespace separated <font SIZE="-1">IP</font> addresses or domain names.
+</dt><dd>Set hkp binding addresses. Can be a list of whitespace separated IP addresses or domain names.
 </dd><dt>-use_port_80
-</dt><dd>Have the <font SIZE="-1">HKP</font> interface listen on port 80, as well as the hkp_port.
+</dt><dd>Have the HKP interface listen on port 80, as well as the hkp_port.
 </dd><dt>-basedir
 </dt><dd>Set base directory.
 </dd><dt>-stdoutlog
@@ -162,7 +162,7 @@ You won't need most of the options below for normal operation. These options can
 </dd><dt>-sendmail_cmd
 </dt><dd>Command used for sending mail.
 </dd><dt>-from_addr
-</dt><dd>From address used in synchronization emails used to communicate with <font SIZE="-1">PKS.</font>
+</dt><dd>From address used in synchronization emails used to communicate with PKS.
 </dd><dt>-dump_new_only
 </dt><dd>When doing a database dump, only dump new keys, not keys already contained in a keydump file.
 </dd><dt>-max_outstanding_recon_requests
@@ -170,7 +170,7 @@ You won't need most of the options below for normal operation. These options can
 </dd><dt>-membership_reload_interval
 </dt><dd>Maximum interval (in hours) at which membership file is reloaded.
 </dd><dt>-disable_mailsync
-</dt><dd>Disable sending of <font SIZE="-1">PKS</font> mailsync messages. <font SIZE="-1">ONLY FOR STANDALONE SERVERS</font>! <font SIZE="-1">THIS IS THE MECHANIASM FOR SENDING UPDATES TO</font> NON-SKS <font SIZE="-1">SERVERS.</font>
+</dt><dd>Disable sending of PKS mailsync messages. ONLY FOR STANDALONE SERVERS! THIS IS THE MECHANIASM FOR SENDING UPDATES TO NON-SKS SERVERS.
 </dd><dt>-disable_log_diffs
 </dt><dd>Disable logging of recent hashset diffs.
 </dd><dt>-server_contact
@@ -182,19 +182,19 @@ You won't need most of the options below for normal operation. These options can
 
 <h2>Files</h2>
 
-Information about important files located in your <font SIZE="-1">SKS</font> basedir.
+Information about important files located in your SKS basedir.
 <dl><dt>bin/sks
-</dt><dd>The main <font SIZE="-1">SKS</font> executable.
+</dt><dd>The main SKS executable.
 </dd><dt>bin/sks_add_mail
-</dt><dd>The executable responsible for parsing incoming mails from <font SIZE="-1">PKS</font> key servers.
+</dt><dd>The executable responsible for parsing incoming mails from PKS key servers.
 </dd><dt>bin/sks_build.sh
 </dt><dd>Script to generate an initial database.
 </dd><dt>mailsync
-</dt><dd>The mailsync should contains a list of email addresses of <font SIZE="-1">PKS</font> keyservers. This file is important, because it ensures that keys submitted directly to an <font SIZE="-1">SKS</font> keyserver are also forwarded to <font SIZE="-1">PKS</font> keyservers. <font SIZE="-1">IMPORTANT :</font> don't add someone to your mailsync file without getting their permission first!
+</dt><dd>The mailsync should contains a list of email addresses of PKS keyservers. This file is important, because it ensures that keys submitted directly to an SKS keyserver are also forwarded to PKS keyservers. IMPORTANT : don't add someone to your mailsync file without getting their permission first!
 </dd><dt>membership
-</dt><dd>With <font SIZE="-1">SKS,</font> two hosts can efficiently compare their databases then repair whatever differences are found. In order to set up reconciliation, you first need to find other <font SIZE="-1">SKS</font> servers that will agree to gossip with you. The hostname and port of the server that has agreed to do so should be added to this file.
+</dt><dd>With SKS, two hosts can efficiently compare their databases then repair whatever differences are found. In order to set up reconciliation, you first need to find other SKS servers that will agree to gossip with you. The hostname and port of the server that has agreed to do so should be added to this file.
 </dd><dt>sksconf
-</dt><dd>The configuration file for your <font SIZE="-1">SKS</font> server.</dd></dl>
+</dt><dd>The configuration file for your SKS server.</dd></dl>
 
 <h2>Examples</h2>
 

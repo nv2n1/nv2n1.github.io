@@ -10,7 +10,7 @@ description: "gettext – translate message"
 
 <p> gettext &#8211; translate message </p>
 <h2>SYNOPSIS</h2>
-<p> <code>gettext</code> [<i>,OPTION/</i>] [[<i>,TEXTDOMAIN/</i>] <i>,MSGID/</i>]<br />
+<p> <code>gettext</code> [<i>,OPTION/</i>] [[<i>,TEXTDOMAIN/</i>] <i>,MSGID/</i>]<br/>
  <code>gettext</code> [<i>,OPTION/</i>] <i>,-s /</i>[<i>,MSGID/</i>]&#8230;</p>
 <h2>DESCRIPTION</h2>
 <p> The <code>gettext</code> program translates a natural language message into the user&#8217;s language, by looking up the translation in a message catalog. </p>
@@ -40,7 +40,7 @@ description: "gettext – translate message"
 <h2>REPORTING BUGS</h2>
 <p> Report bugs in the bug tracker at &lt;<a rel="nofollow" href="https://savannah.gnu.org/projects/gettext">https://savannah.gnu.org/projects/gettext</a>&gt; or by email to &lt;bug-gettext [at] gnu.org&gt;.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 1995-2020 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="https://gnu.org/licenses/gpl.html">https://gnu.org/licenses/gpl.html</a>&gt;<br />
+<p> Copyright &#169; 1995-2020 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="https://gnu.org/licenses/gpl.html">https://gnu.org/licenses/gpl.html</a>&gt;<br/>
  This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.</p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gettext</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>gettext</code> programs are properly installed at your site, the command</p>

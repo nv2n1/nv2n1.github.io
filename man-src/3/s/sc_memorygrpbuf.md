@@ -13,21 +13,21 @@ description: "sc::MemoryGrpBuf –"
 <pre><code>
 #include &lt;memory.h&gt;
 Public Member Functions</code></pre>
-<p> <code>MemoryGrpBuf</code> (const <code>Ref</code>&lt; <code>MemoryGrp</code> &gt; &amp;)<br />
- <i>Creates a new </i><code>MemoryGrpBuf</code> given a <code>MemoryGrp</code> reference.<br />
- data_t * <code>writeonly</code> (<code>distsize_t</code> offset, int length)<br />
- <i>Request write only access to global memory at the global address offset and with size length. </i><br />
- data_t * <code>readwrite</code> (<code>distsize_t</code> offset, int length)<br />
- <i>Request read write access to global memory at the global address offset and with size length. </i><br />
- const data_t * <code>readonly</code> (<code>distsize_t</code> offset, int length)<br />
- <i>Request read only access to global memory at the global address offset and with size length. </i><br />
- data_t * <code>writeonly_on_node</code> (size_t offset, int length, int node=-1)<br />
- <i>These behave like writeonly, readwrite, and readonly, except the offset is local to the node specified by node. </i><br />
+<p> <code>MemoryGrpBuf</code> (const <code>Ref</code>&lt; <code>MemoryGrp</code> &gt; &amp;)<br/>
+ <i>Creates a new </i><code>MemoryGrpBuf</code> given a <code>MemoryGrp</code> reference.<br/>
+ data_t * <code>writeonly</code> (<code>distsize_t</code> offset, int length)<br/>
+ <i>Request write only access to global memory at the global address offset and with size length. </i><br/>
+ data_t * <code>readwrite</code> (<code>distsize_t</code> offset, int length)<br/>
+ <i>Request read write access to global memory at the global address offset and with size length. </i><br/>
+ const data_t * <code>readonly</code> (<code>distsize_t</code> offset, int length)<br/>
+ <i>Request read only access to global memory at the global address offset and with size length. </i><br/>
+ data_t * <code>writeonly_on_node</code> (size_t offset, int length, int node=-1)<br/>
+ <i>These behave like writeonly, readwrite, and readonly, except the offset is local to the node specified by node. </i><br/>
  data_t * <code>readwrite_on_node</code> (size_t offset, int length, int node=-1) </p>
 <p> const data_t * <code>readonly_on_node</code> (size_t offset, int length, int node=-1) </p>
-<p> void <code>release</code> ()<br />
- <i>Release the access to the chunk of global memory that was obtained with writeonly, readwrite, readonly, writeonly_on_node, readwrite_on_node, and readonly_on_node. </i><br />
- int <code>length</code> () const<br />
+<p> void <code>release</code> ()<br/>
+ <i>Release the access to the chunk of global memory that was obtained with writeonly, readwrite, readonly, writeonly_on_node, readwrite_on_node, and readonly_on_node. </i><br/>
+ int <code>length</code> () const<br/>
  <i>The length of the current bit of memory. </i></p>
 <h2>Detailed Description</h2>
 <h3>template&lt;class data_t&gt; class sc::MemoryGrpBuf&lt; data_t &gt;</h3>

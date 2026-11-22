@@ -11,7 +11,7 @@ description: "clarfg.f –"
 <p> clarfg.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>clarfg</code> (N, ALPHA, X, INCX, TAU)<br />
+<p> subroutine <code>clarfg</code> (N, ALPHA, X, INCX, TAU)<br/>
  <i></i><code>CLARFG</code> generates an elementary reflector (Householder matrix).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine clarfg (integerN, complexALPHA, complex, dimension( * )X, integerINCX, complexTAU)</h3>

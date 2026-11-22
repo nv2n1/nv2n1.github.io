@@ -13,25 +13,25 @@ description: "QwtRasterData –"
 <p>#include &lt;qwt_raster_data.h&gt; </p>
 <p> Inherited by <code>QwtMatrixRasterData</code>.</p>
 <h3>Public Types</h3>
-<p>enum <code>ConrecFlag</code> { <code>IgnoreAllVerticesOnLevel</code> = 0x01, <code>IgnoreOutOfRange</code> = 0x02 }<br />
- <i>Flags to modify the contour algorithm. </i><br />
- typedef QMap&lt; double, QPolygonF &gt; <code>ContourLines</code><br />
- <i>Contour lines. </i><br />
- typedef QFlags&lt; <code>ConrecFlag</code> &gt; <code>ConrecFlags</code><br />
+<p>enum <code>ConrecFlag</code> { <code>IgnoreAllVerticesOnLevel</code> = 0x01, <code>IgnoreOutOfRange</code> = 0x02 }<br/>
+ <i>Flags to modify the contour algorithm. </i><br/>
+ typedef QMap&lt; double, QPolygonF &gt; <code>ContourLines</code><br/>
+ <i>Contour lines. </i><br/>
+ typedef QFlags&lt; <code>ConrecFlag</code> &gt; <code>ConrecFlags</code><br/>
  <i>Flags to modify the contour algorithm. </i></p>
 <h3>Public Member Functions</h3>
-<p><code>QwtRasterData</code> ()<br />
- <i>Constructor. </i><br />
- virtual <code>~QwtRasterData</code> ()<br />
- <i>Destructor. </i><br />
+<p><code>QwtRasterData</code> ()<br/>
+ <i>Constructor. </i><br/>
+ virtual <code>~QwtRasterData</code> ()<br/>
+ <i>Destructor. </i><br/>
  virtual void <code>setInterval</code> (Qt::Axis, const <code>QwtInterval</code> &amp;) </p>
 <p> const <code>QwtInterval</code> &amp; <code>interval</code> (Qt::Axis) const </p>
-<p> virtual QRectF <code>pixelHint</code> (const QRectF &amp;) const<br />
- <i>Pixel hint. </i><br />
- virtual void <code>initRaster</code> (const QRectF &amp;, const QSize &amp;raster)<br />
- <i>Initialize a raster. </i><br />
- virtual void <code>discardRaster</code> ()<br />
- <i>Discard a raster. </i><br />
+<p> virtual QRectF <code>pixelHint</code> (const QRectF &amp;) const<br/>
+ <i>Pixel hint. </i><br/>
+ virtual void <code>initRaster</code> (const QRectF &amp;, const QSize &amp;raster)<br/>
+ <i>Initialize a raster. </i><br/>
+ virtual void <code>discardRaster</code> ()<br/>
+ <i>Discard a raster. </i><br/>
  virtual double <code>value</code> (double x, double y) const =0 </p>
 <p> virtual <code>ContourLines</code> <code>contourLines</code> (const QRectF &amp;rect, const QSize &amp;raster, const QList&lt; double &gt; &amp;levels, <code>ConrecFlags</code>) const </p>
 <h2>Detailed Description</h2>
@@ -52,9 +52,9 @@ description: "QwtRasterData –"
 <p>Calculate contour lines </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>rect</i> Bounding rectangle for the contour lines<br />
- <i>raster</i> Number of data pixels of the raster data<br />
- <i>levels</i> List of limits, where to insert contour lines<br />
+<dd><i>rect</i> Bounding rectangle for the contour lines<br/>
+ <i>raster</i> Number of data pixels of the raster data<br/>
+ <i>levels</i> List of limits, where to insert contour lines<br/>
  <i>flags</i> Flags to customize the contouring algorithm</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -71,7 +71,7 @@ description: "QwtRasterData –"
 <p> The default implementation does nothing, but for data sets that are stored in files, it might be good idea to reimplement <code>initRaster()</code>, where the data is resampled and loaded into memory. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>area</i> Area of the raster<br />
+<dd><i>area</i> Area of the raster<br/>
  <i>raster</i> Number of horizontal and vertical pixels</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -100,7 +100,7 @@ description: "QwtRasterData –"
 <p>Set the bounding interval for the x, y or z coordinates. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>axis</i> Axis<br />
+<dd><i>axis</i> Axis<br/>
  <i>interval</i> Bounding interval</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -112,7 +112,7 @@ description: "QwtRasterData –"
 <dd>the value at a raster position</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>x</i> X value in plot coordinates<br />
+<dd><i>x</i> X value in plot coordinates<br/>
  <i>y</i> Y value in plot coordinates</dd></dl>
 <p> Implemented in <code>QwtMatrixRasterData</code>. </p>
 <h2>Author</h2>

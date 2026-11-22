@@ -9,15 +9,15 @@ description: "Image Object Functions – Functions used to create and manipulate
 
 <p>Image Object Functions &#8211; Functions used to create and manipulate image objects. </p>
 <h3>Functions</h3>
-<p>EAPI <code>Evas_Object</code> * <code>evas_object_image_add</code> (<code>Evas</code> *e)<br />
- <i>Creates a new image object on the given evas. </i><br />
- EAPI int <code>evas_object_image_load_error_get</code> (const <code>Evas_Object</code> *obj)<br />
- <i>Retrieves a number representing any error that occurred during the last load of the given image object. </i><br />
- EAPI Evas_Bool <code>evas_object_image_save</code> (const <code>Evas_Object</code> *obj, const char *file, const char *key, const char *flags)<br />
- <i>Save the given image object to a file. </i><br />
- EAPI void <code>evas_object_image_pixels_dirty_set</code> (<code>Evas_Object</code> *obj, Evas_Bool dirty)<br />
- <i>Mark whether the given image object is dirty (needs to be redrawn). </i><br />
- EAPI Evas_Bool <code>evas_object_image_pixels_dirty_get</code> (const <code>Evas_Object</code> *obj)<br />
+<p>EAPI <code>Evas_Object</code> * <code>evas_object_image_add</code> (<code>Evas</code> *e)<br/>
+ <i>Creates a new image object on the given evas. </i><br/>
+ EAPI int <code>evas_object_image_load_error_get</code> (const <code>Evas_Object</code> *obj)<br/>
+ <i>Retrieves a number representing any error that occurred during the last load of the given image object. </i><br/>
+ EAPI Evas_Bool <code>evas_object_image_save</code> (const <code>Evas_Object</code> *obj, const char *file, const char *key, const char *flags)<br/>
+ <i>Save the given image object to a file. </i><br/>
+ EAPI void <code>evas_object_image_pixels_dirty_set</code> (<code>Evas_Object</code> *obj, Evas_Bool dirty)<br/>
+ <i>Mark whether the given image object is dirty (needs to be redrawn). </i><br/>
+ EAPI Evas_Bool <code>evas_object_image_pixels_dirty_get</code> (const <code>Evas_Object</code> *obj)<br/>
  <i>Retrieves whether the given image object is dirty (needs to be redrawn). </i></p>
 <h2>Detailed Description</h2>
 <p>Functions used to create and manipulate image objects. </p>
@@ -69,7 +69,7 @@ description: "Image Object Functions – Functions used to create and manipulate
 <p>Mark whether the given image object is dirty (needs to be redrawn). </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>obj</i> The given image object.<br />
+<dd><i>obj</i> The given image object.<br/>
  <i>dirty</i> Whether the image is dirty.</dd></dl>
 <h3>EAPI Evas_Bool evas_object_image_save (const <code>Evas_Object</code> * obj, const char * file, const char * key, const char * flags)</h3>
 <p>Save the given image object to a file. </p>
@@ -77,9 +77,9 @@ description: "Image Object Functions – Functions used to create and manipulate
 <p> You can specify some flags when saving the image. Currently acceptable flags are quality and compress. Eg.: &#8216;quality=100 compress=9&#8217; </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>obj</i> The given image object.<br />
- <i>file</i> The filename to be used to save the image.<br />
- <i>key</i> The image key in file, or NULL.<br />
+<dd><i>obj</i> The given image object.<br/>
+ <i>file</i> The filename to be used to save the image.<br/>
+ <i>key</i> The image key in file, or NULL.<br/>
  <i>flags</i> String containing the flags to be used.</dd></dl>
 <p> References EVAS_COLORSPACE_ARGB8888.</p>
 <h2>Author</h2>

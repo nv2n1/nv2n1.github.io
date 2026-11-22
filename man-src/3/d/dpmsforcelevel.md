@@ -31,7 +31,7 @@ description: "DPMSForceLevel – forces a DPMS capable display into the specifie
 <dl COMPACT>
 <dt>BadValue</dt>
 <dd>A level other than DPMSModeOn, DPMSModeStandby, DPMSModeSuspend, or DPMSModeOff was specified.</dd>
-<dt><font SIZE="-1">BadMatch</font></dt>
+<dt>BadMatch</dt>
 <dd>DPMS is disabled on the specified display.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-dpmscapable/">DPMSCapable</a></code>(3), <code><a href="/docs/linux/man/3-dpmsinfo/">DPMSInfo</a></code>(3), <code><a href="/docs/linux/man/3-dpmsgettimeouts/">DPMSGetTimeouts</a></code>(3), <code><a href="/docs/linux/man/3-dpmssettimeouts/">DPMSSetTimeouts</a></code>(3)</p>

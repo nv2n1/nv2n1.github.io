@@ -22,12 +22,12 @@ $days #the simple scalar value "days" $days[28] #the 29th element of array @days
         $ #days #the last index of array @days
 </code></pre>
 <p> Entire arrays (and slices of arrays and hashes) are denoted by &#8216;@&#8217;, which works much as the word &#8220;these&#8221; or &#8220;those&#8221; does in English, in that it indicates multiple values are expected. </p>
-<p>@days #($days[0], $days[1], &#8230; $days[n])<br />
-    @days[3, 4, 5] #same as($days[3], $days[4], $days[5])<br />
-        @days<br />
-{<br />
-    &#8216;a&#8217;, &#8216;c&#8217;<br />
-}<br />
+<p>@days #($days[0], $days[1], &#8230; $days[n])<br/>
+    @days[3, 4, 5] #same as($days[3], $days[4], $days[5])<br/>
+        @days<br/>
+{<br/>
+    &#8216;a&#8217;, &#8216;c&#8217;<br/>
+}<br/>
 #same as($days{&#8216;a&#8217;}, $days{&#8216;c&#8217;})</p>
 <p> Entire hashes are denoted by &#8216;%&#8217;: </p>
 <pre>
@@ -35,49 +35,49 @@ $days #the simple scalar value "days" $days[28] #the 29th element of array @days
 </pre>
 <p> In addition, subroutines are named with an initial &#8216;&amp;&#8217;, though this is optional when unambiguous, just as the word &#8220;do&#8221; is often redundant in English. Symbol table entries can be named with an initial &#8216;*&#8217;, but you don&#8217;t really care about that yet (if ever :-). </p>
 <p> Every variable type has its own namespace, as do several non-variable identifiers. This means that you can, without fear of conflict, use the same name for a scalar variable, an array, or a hash&#8212;or, for that matter, for a filehandle, a directory handle, a subroutine name, a format name, or a label. This means that <tt>$foo</tt> and <tt>@foo</tt> are two different variables. It also means that <tt>$foo[1]</tt> is a part of <tt>@foo</tt>, not a part of <tt>$foo</tt>. This may seem a bit weird, but that&#8217;s okay, because it is weird. </p>
-<p> Because variable references always start with &#8216;$&#8217;, &#8216;@&#8217;, or &#8216;%&#8217;, the &#8220;reserved&#8221; words aren&#8217;t in fact reserved with respect to variable names. They <i>are</i> reserved with respect to labels and filehandles, however, which don&#8217;t have an initial special character. You can&#8217;t have a filehandle named &#8220;log&#8221;, for instance. Hint: you could say <tt>&quot;open(LOG,'logfile')&quot;</tt> rather than <tt>&quot;open(log,'logfile')&quot;</tt>. Using uppercase filehandles also improves readability and protects you from conflict with future reserved words. Case <i>is</i> significant&#8211;&#8220;<font SIZE="-1">FOO&#8221;,</font> &#8220;Foo&#8221;, and &#8220;foo&#8221; are all different names. Names that start with a letter or underscore may also contain digits and underscores. </p>
+<p> Because variable references always start with &#8216;$&#8217;, &#8216;@&#8217;, or &#8216;%&#8217;, the &#8220;reserved&#8221; words aren&#8217;t in fact reserved with respect to variable names. They <i>are</i> reserved with respect to labels and filehandles, however, which don&#8217;t have an initial special character. You can&#8217;t have a filehandle named &#8220;log&#8221;, for instance. Hint: you could say <tt>&quot;open(LOG,'logfile')&quot;</tt> rather than <tt>&quot;open(log,'logfile')&quot;</tt>. Using uppercase filehandles also improves readability and protects you from conflict with future reserved words. Case <i>is</i> significant&#8211;&#8220;FOO&#8221;, &#8220;Foo&#8221;, and &#8220;foo&#8221; are all different names. Names that start with a letter or underscore may also contain digits and underscores. </p>
 <p> It is possible to replace such an alphanumeric name with an expression that returns a reference to the appropriate type. For a description of this, see perlref. </p>
 <p> Names that start with a digit may contain only more digits. Names that do not start with a letter, underscore, digit or a caret are limited to one character, e.g., <tt>$%</tt> or <tt>$$</tt>. (Most of these one character names have a predefined significance to Perl. For instance, <tt>$$</tt> is the current process id. And all such names are reserved for Perl&#8217;s possible use.)</p>
 <h3>Identifier parsing</h3>
 <p> Up until Perl 5.18, the actual rules of what a valid identifier was were a bit fuzzy. However, in general, anything defined here should work on previous versions of Perl, while the opposite &#8212; edge cases that work in previous versions, but aren&#8217;t defined here &#8212; probably won&#8217;t work on newer versions. As an important side note, please note that the following only applies to bareword identifiers as found in Perl source code, not identifiers introduced through symbolic references, which have much fewer restrictions. If working under the effect of the <tt>&quot;use utf8;&quot;</tt> pragma, the following rules apply: </p>
-<p>    / (?[ ( \p{Word} &amp; \p{XID_Start} ) + [_] ])<br />
+<p>    / (?[ ( \p{Word} &amp; \p{XID_Start} ) + [_] ])<br/>
       (?[ ( \p{Word} &amp; \p{XID_Continue} ) ]) *    /x</p>
 <p> That is, a &#8220;start&#8221; character followed by any number of &#8220;continue&#8221; characters. Perl requires every character in an identifier to also match <tt>&quot;\w&quot;</tt> (this prevents some problematic cases); and Perl additionally accepts identfier names beginning with an underscore. </p>
-<p> If not under <tt>&quot;use utf8&quot;</tt>, the source is treated as <font SIZE="-1">ASCII + 128</font> extra generic characters, and identifiers should match </p>
+<p> If not under <tt>&quot;use utf8&quot;</tt>, the source is treated as ASCII + 128 extra generic characters, and identifiers should match </p>
 <pre>
     / (?aa) (?!\d) \w+ /x
 </pre>
-<p> That is, any word character in the <font SIZE="-1">ASCII</font> range, as long as the first character is not a digit. </p>
+<p> That is, any word character in the ASCII range, as long as the first character is not a digit. </p>
 <p> There are two package separators in Perl: A double colon (<tt>&quot;::&quot;</tt>) and a single quote (<tt>&quot;'&quot;</tt>). Normal identifiers can start or end with a double colon, and can contain several parts delimited by double colons. Single quotes have similar rules, but with the exception that they are not legal at the end of an identifier: That is, <tt>&quot;$'foo&quot;</tt> and <tt>&quot;$foo'bar&quot;</tt> are legal, but <tt>&quot;$foo'bar'&quot;</tt> is not. </p>
 <p> Additionally, if the identifier is preceded by a sigil &#8212; that is, if the identifier is part of a variable name &#8212; it may optionally be enclosed in braces. </p>
 <p> While you can mix double colons with singles quotes, the quotes must come after the colons: <tt>&quot;$::::'foo&quot;</tt> and <tt>&quot;$foo::'bar&quot;</tt> are legal, but <tt>&quot;$::'::foo&quot;</tt> and <tt>&quot;$foo'::bar&quot;</tt> are not. </p>
 <p> Put together, a grammar to match a basic identifier becomes </p>
-<p> /<br />
-  (?(DEFINE)<br />
-      (?&lt;variable&gt;<br />
-          (?&amp;sigil)<br />
-          (?:<br />
-                  (?&amp;normal_identifier)<br />
-              |   \{ \s* (?&amp;normal_identifier) \s* \}<br />
-          )<br />
-      )<br />
-      (?&lt;normal_identifier&gt;<br />
-          (?: :: )* &#8216;?<br />
-           (?&amp;basic_identifier)<br />
-           (?: (?= (?: :: )+ &#8216;? | (?: :: )* &#8216; ) (?&amp;normal_identifier) )?<br />
-          (?: :: )*<br />
-      )<br />
-      (?&lt;basic_identifier&gt;<br />
-#is use utf8 on ?<br />
-          (?(?{ (caller(0))[8] &amp; $utf8::hint_bits })<br />
-              (?&amp;Perl_XIDS) (?&amp;Perl_XIDC)*<br />
-            | (?aa) (?!\d) \w+<br />
-          )<br />
-      )<br />
-      (?&lt;sigil&gt; [&amp;*\$\@\%])<br />
-      (?&lt;Perl_XIDS&gt; (?[ ( \p{Word} &amp; \p{XID_Start} ) + [_] ]) )<br />
-      (?&lt;Perl_XIDC&gt; (?[ \p{Word} &amp; \p{XID_Continue} ]) )<br />
-  )<br />
+<p> /<br/>
+  (?(DEFINE)<br/>
+      (?&lt;variable&gt;<br/>
+          (?&amp;sigil)<br/>
+          (?:<br/>
+                  (?&amp;normal_identifier)<br/>
+              |   \{ \s* (?&amp;normal_identifier) \s* \}<br/>
+          )<br/>
+      )<br/>
+      (?&lt;normal_identifier&gt;<br/>
+          (?: :: )* &#8216;?<br/>
+           (?&amp;basic_identifier)<br/>
+           (?: (?= (?: :: )+ &#8216;? | (?: :: )* &#8216; ) (?&amp;normal_identifier) )?<br/>
+          (?: :: )*<br/>
+      )<br/>
+      (?&lt;basic_identifier&gt;<br/>
+#is use utf8 on ?<br/>
+          (?(?{ (caller(0))[8] &amp; $utf8::hint_bits })<br/>
+              (?&amp;Perl_XIDS) (?&amp;Perl_XIDC)*<br/>
+            | (?aa) (?!\d) \w+<br/>
+          )<br/>
+      )<br/>
+      (?&lt;sigil&gt; [&amp;*\$\@\%])<br/>
+      (?&lt;Perl_XIDS&gt; (?[ ( \p{Word} &amp; \p{XID_Start} ) + [_] ]) )<br/>
+      (?&lt;Perl_XIDC&gt; (?[ \p{Word} &amp; \p{XID_Continue} ]) )<br/>
+  )<br/>
  /x</p>
 <p> Meanwhile, special identifiers don&#8217;t follow the above rules; For the most part, all of the identifiers in this category have a special meaning given by Perl. Because they have special parsing rules, these generally can&#8217;t be fully-qualified. They come in six forms (but don&#8217;t use forms 5 and 6):</p>
 <dl>
@@ -88,21 +88,21 @@ $days #the simple scalar value "days" $days[28] #the 29th element of array @days
 <dt>3.</dt>
 <dd> A sigil, followed by a caret and any one of the characters <tt>&quot;[][A-Z^_?\]&quot;</tt>, like <tt>$^V</tt> or <tt>$^]</tt>.</dd>
 <dt>4.</dt>
-<dd> Similar to the above, a sigil, followed by bareword text in braces, where the first character is a caret. The next character is any one of the characters <tt>&quot;[][A-Z^_?\]&quot;</tt>, followed by <font SIZE="-1">ASCII</font> word characters. An example is <tt>&quot;${^GLOBAL_PHASE}&quot;</tt>.</dd>
+<dd> Similar to the above, a sigil, followed by bareword text in braces, where the first character is a caret. The next character is any one of the characters <tt>&quot;[][A-Z^_?\]&quot;</tt>, followed by ASCII word characters. An example is <tt>&quot;${^GLOBAL_PHASE}&quot;</tt>.</dd>
 <dt>5.</dt>
-<dd> A sigil, followed by any single character in the range <tt>&quot;[�-��-�]&quot;</tt> when not under <tt>&quot;use utf8&quot;</tt>. (Under <tt>&quot;use utf8&quot;</tt>, the normal identifier rules given earlier in this section apply.) Use of non-graphic characters (the C1 controls, the NO-BREAK <font SIZE="-1">SPACE,</font> and the <font SIZE="-1">SOFT HYPHEN</font>) has been disallowed since v5.26.0. The use of the other characters is unwise, as these are all reserved to have special meaning to Perl, and none of them currently do have special meaning, though this could change without notice. </dd>
+<dd> A sigil, followed by any single character in the range <tt>&quot;[�-��-�]&quot;</tt> when not under <tt>&quot;use utf8&quot;</tt>. (Under <tt>&quot;use utf8&quot;</tt>, the normal identifier rules given earlier in this section apply.) Use of non-graphic characters (the C1 controls, the NO-BREAK SPACE, and the SOFT HYPHEN) has been disallowed since v5.26.0. The use of the other characters is unwise, as these are all reserved to have special meaning to Perl, and none of them currently do have special meaning, though this could change without notice. </dd>
 <p> Note that an implication of this form is that there are identifiers only legal under <tt>&quot;use utf8&quot;</tt>, and vice-versa, for example the identifier <tt>&quot;$état&quot;</tt> is legal under <tt>&quot;use utf8&quot;</tt>, but is otherwise considered to be the single character variable <tt>$é</tt> followed by the bareword <tt>&quot;tat&quot;</tt>, the combination of which is a syntax error.</p>
 <dt>6.</dt>
-<dd> This is a combination of the previous two forms. It is valid only when not under <tt>&quot;use utf8&quot;</tt> (normal identifier rules apply when under <tt>&quot;use utf8&quot;</tt>). The form is a sigil, followed by text in braces, where the first character is any one of the characters in the range <tt>&quot;[�-�]&quot;</tt> followed by <font SIZE="-1">ASCII</font> word characters up to the trailing brace. </dd>
+<dd> This is a combination of the previous two forms. It is valid only when not under <tt>&quot;use utf8&quot;</tt> (normal identifier rules apply when under <tt>&quot;use utf8&quot;</tt>). The form is a sigil, followed by text in braces, where the first character is any one of the characters in the range <tt>&quot;[�-�]&quot;</tt> followed by ASCII word characters up to the trailing brace. </dd>
 <p> The same caveats as the previous form apply: The non-graphic characters are no longer allowed with &#8220;use utf8&#8221;, it is unwise to use this form at all, and utf8ness makes a big difference.</dl>
-<p> Prior to Perl v5.24, non-graphical <font SIZE="-1">ASCII</font> control characters were also allowed in some situations; this had been deprecated since v5.20.</p>
+<p> Prior to Perl v5.24, non-graphical ASCII control characters were also allowed in some situations; this had been deprecated since v5.20.</p>
 <h3>Context</h3>
 <p> The interpretation of operations and values in Perl sometimes depends on the requirements of the context around the operation or value. There are two major contexts: list and scalar. Certain operations return list values in contexts wanting a list, and scalar values otherwise. If this is true of an operation it will be mentioned in the documentation for that operation. In other words, Perl overloads certain operations based on whether the expected return value is singular or plural. Some words in English work this way, like &#8220;fish&#8221; and &#8220;sheep&#8221;. </p>
 <p> In a reciprocal fashion, an operation provides either a scalar or a list context to each of its arguments. For example, if you say </p>
 <pre>
     int( &lt;STDIN&gt; )
 </pre>
-<p> the integer operation provides scalar context for the &lt;&gt; operator, which responds by reading one line from <font SIZE="-1">STDIN</font> and passing it back to the integer operation, which will then find the integer value of that line and return that. If, on the other hand, you say </p>
+<p> the integer operation provides scalar context for the &lt;&gt; operator, which responds by reading one line from STDIN and passing it back to the integer operation, which will then find the integer value of that line and return that. If, on the other hand, you say </p>
 <pre>
     sort( &lt;STDIN&gt; )
 </pre>
@@ -113,21 +113,21 @@ $days #the simple scalar value "days" $days[28] #the 29th element of array @days
 <h3>Scalar values</h3>
 <p> All data in Perl is a scalar, an array of scalars, or a hash of scalars. A scalar may contain one single value in any of three different flavors: a number, a string, or a reference. In general, conversion from one form to another is transparent. Although a scalar may not directly hold multiple values, it may contain a reference to an array or hash which in turn contains multiple values. </p>
 <p> Scalars aren&#8217;t necessarily one thing or another. There&#8217;s no place to declare a scalar variable to be of type &#8220;string&#8221;, type &#8220;number&#8221;, type &#8220;reference&#8221;, or anything else. Because of the automatic conversion of scalars, operations that return scalars don&#8217;t need to care (and in fact, cannot care) whether their caller is looking for a string, a number, or a reference. Perl is a contextually polymorphic language whose scalars can be strings, numbers, or references (which includes objects). Although strings and numbers are considered pretty much the same thing for nearly all purposes, references are strongly-typed, uncastable pointers with builtin reference-counting and destructor invocation. </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<br />
-&nbsp; A scalar value is interpreted as <font SIZE="-1">FALSE</font> in the Boolean sense if it is undefined, the null string or the number 0 (or its string equivalent, &#8220;0&#8221;), and <font SIZE="-1">TRUE</font> if it is anything else. The Boolean context is just a special kind of scalar context where no conversion to a string or a number is ever performed. Negation of a true value by <tt>&quot;!&quot;</tt> or <tt>&quot;not&quot;</tt> returns a special false value. When evaluated as a string it is treated as <tt>&quot;&quot;</tt>, but as a number, it is treated as 0. Most Perl operators that return true or false behave this way. </p>
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<br/>
+&nbsp; A scalar value is interpreted as FALSE in the Boolean sense if it is undefined, the null string or the number 0 (or its string equivalent, &#8220;0&#8221;), and TRUE if it is anything else. The Boolean context is just a special kind of scalar context where no conversion to a string or a number is ever performed. Negation of a true value by <tt>&quot;!&quot;</tt> or <tt>&quot;not&quot;</tt> returns a special false value. When evaluated as a string it is treated as <tt>&quot;&quot;</tt>, but as a number, it is treated as 0. Most Perl operators that return true or false behave this way. </p>
 <p> There are actually two varieties of null strings (sometimes referred to as &#8220;empty&#8221; strings), a defined one and an undefined one. The defined version is just a string of length zero, such as <tt>&quot;&quot;</tt>. The undefined version is the value that indicates that there is no real value for something, such as when there was an error, or at end of file, or when you refer to an uninitialized variable or element of an array or hash. Although in early versions of Perl, an undefined scalar could become defined when first used in a place expecting a defined value, this no longer happens except for rare cases of autovivification as explained in perlref. You can use the <code>defined()</code> operator to determine whether a scalar value is defined (this has no meaning on arrays or hashes), and the <code>undef()</code> operator to produce an undefined value. </p>
 <p> To find out whether a given string is a valid non-zero number, it&#8217;s sometimes enough to test it against both numeric 0 and also lexical &#8220;0&#8221; (although this will cause noises if warnings are on). That&#8217;s because strings that aren&#8217;t numbers count as 0, just as they do in <code>awk</code>: </p>
-<p>if ($str == 0 &amp;&amp; $str ne &#8220;0&#8221;) {<br />
-    warn &#8220;That doesn&#8217;t look like a number&#8221;;<br />
+<p>if ($str == 0 &amp;&amp; $str ne &#8220;0&#8221;) {<br/>
+    warn &#8220;That doesn&#8217;t look like a number&#8221;;<br/>
 }</p>
-<p> That method may be best because otherwise you won&#8217;t treat <font SIZE="-1">IEEE</font> notations like <tt>&quot;NaN&quot;</tt> or <tt>&quot;Infinity&quot;</tt> properly. At other times, you might prefer to determine whether string data can be used numerically by calling the <code>POSIX::strtod()</code> function or by inspecting your string with a regular expression (as documented in perlre). </p>
-<p>warn &#8220;has nondigits&#8221; if /\D / ;<br />
-warn &#8220;not a natural number&#8221; unless / ^\d + $ / ;<br />
-#rejects &#8211; 3 warn &#8220;not an integer&#8221; unless / ^-    ?\d + $ / ;<br />
-#rejects + 3 warn &#8220;not an integer&#8221; unless / ^[+-] ?\d + $ / ;<br />
-warn &#8220;not a decimal number&#8221; unless / ^-?\d +\.     ?\d *$ / ;<br />
-#rejects .2 warn &#8220;not a decimal number&#8221; unless / ^-? (?:\d + (?:\.\d *) ? |\.\d +) $ / ;<br />
-    warn &#8220;not a C float&#8221;<br />
+<p> That method may be best because otherwise you won&#8217;t treat IEEE notations like <tt>&quot;NaN&quot;</tt> or <tt>&quot;Infinity&quot;</tt> properly. At other times, you might prefer to determine whether string data can be used numerically by calling the <code>POSIX::strtod()</code> function or by inspecting your string with a regular expression (as documented in perlre). </p>
+<p>warn &#8220;has nondigits&#8221; if /\D / ;<br/>
+warn &#8220;not a natural number&#8221; unless / ^\d + $ / ;<br/>
+#rejects &#8211; 3 warn &#8220;not an integer&#8221; unless / ^-    ?\d + $ / ;<br/>
+#rejects + 3 warn &#8220;not an integer&#8221; unless / ^[+-] ?\d + $ / ;<br/>
+warn &#8220;not a decimal number&#8221; unless / ^-?\d +\.     ?\d *$ / ;<br/>
+#rejects .2 warn &#8220;not a decimal number&#8221; unless / ^-? (?:\d + (?:\.\d *) ? |\.\d +) $ / ;<br/>
+    warn &#8220;not a C float&#8221;<br/>
         unless /^([+-]?)(?=\d|\.\d)\d*(\.\d*)?([Ee]([+-]?\d+))?$/;</p>
 <p> The length of an array is a scalar value. You may find the length of array <tt>@days</tt> by evaluating <tt>$#days</tt>, as in <code>csh</code>. However, this isn&#8217;t the length of the array; it&#8217;s the subscript of the last element, which is a different value since there is ordinarily a 0th element. Assigning to <tt>$#days</tt> actually changes the length of the array. Shortening an array this way destroys intervening values. Lengthening an array that was previously shortened does not recover values that were in those elements. </p>
 <p> You can also gain some minuscule measure of efficiency by pre-extending an array that is going to get big. You can also extend an array by assigning to an element that is off the end of the array. You can truncate an array down to nothing by assigning the null list () to it. The following are equivalent: </p>
@@ -168,7 +168,7 @@ warn &#8220;not a decimal number&#8221; unless / ^-?\d +\.     ?\d *$ / ;<br />
 <p> You are allowed to use underscores (underbars) in numeric literals between digits for legibility (but not multiple underscores in a row: <tt>&quot;23__500&quot;</tt> is not legal; <tt>&quot;23_500&quot;</tt> is). You could, for example, group binary digits by threes (as for a Unix-style mode argument such as 0b110_100_100) or by fours (to represent nibbles, as in 0b1010_0110) or in other groups. </p>
 <p> String literals are usually delimited by either single or double quotes. They work much like quotes in the standard Unix shells: double-quoted string literals are subject to backslash and variable substitution; single-quoted strings are not (except for <tt>&quot;\'&quot;</tt> and <tt>&quot;\&quot;</tt>). The usual C-style backslash rules apply for making characters such as newline, tab, etc., as well as some more exotic forms. See &#8220;Quote and Quote-like Operators&#8221; in perlop for a list. </p>
 <p> Hexadecimal, octal, or binary, representations in string literals (e.g. &#8216;0xff&#8217;) are not automatically converted to their integer representation. The <code>hex()</code> and <code>oct()</code> functions make these conversions for you. See &#8220;hex&#8221; in perlfunc and &#8220;oct&#8221; in perlfunc for more details. </p>
-<p> Hexadecimal floating point can start just like a hexadecimal literal, and it can be followed by an optional fractional hexadecimal part, but it must be followed by <tt>&quot;p&quot;</tt>, an optional sign, and a power of two. The format is useful for accurately presenting floating point values, avoiding conversions to or from decimal floating point, and therefore avoiding possible loss in precision. Notice that while most current platforms use the 64-bit <font SIZE="-1">IEEE 754</font> floating point, not all do. Another potential source of (low-order) differences are the floating point rounding modes, which can differ between CPUs, operating systems, and compilers, and which Perl doesn&#8217;t control. </p>
+<p> Hexadecimal floating point can start just like a hexadecimal literal, and it can be followed by an optional fractional hexadecimal part, but it must be followed by <tt>&quot;p&quot;</tt>, an optional sign, and a power of two. The format is useful for accurately presenting floating point values, avoiding conversions to or from decimal floating point, and therefore avoiding possible loss in precision. Notice that while most current platforms use the 64-bit IEEE 754 floating point, not all do. Another potential source of (low-order) differences are the floating point rounding modes, which can differ between CPUs, operating systems, and compilers, and which Perl doesn&#8217;t control. </p>
 <p> You can also embed newlines directly in your strings, i.e., they can end on a different line than they begin. This is nice, but if you forget your trailing quote, the error will not be reported until Perl finds another line containing the quote character, which may be much further on in the script. Variable substitution inside strings is limited to scalar variables, arrays, and array or hash slices. (In other words, names beginning with $ or @, followed by an optional bracketed expression as a subscript.) The following code segment prints out &#8220;The price is <tt>$100</tt>.&#8221; </p>
 <pre>
     $Price = '$100';    # not interpolated
@@ -176,11 +176,11 @@ warn &#8220;not a decimal number&#8221; unless / ^-?\d +\.     ?\d *$ / ;<br />
 &quot;;     # interpolated
 </pre>
 <p> There is no double interpolation in Perl, so the <tt>$100</tt> is left as is. </p>
-<p> By default floating point numbers substituted inside strings use the dot (&#8220;.&#8221;) as the decimal separator. If <tt>&quot;use locale&quot;</tt> is in effect, and <code>POSIX::setlocale()</code> has been called, the character used for the decimal separator is affected by the <font SIZE="-1">LC_NUMERIC</font> locale. See perllocale and <font SIZE="-1">POSIX</font>. </p>
+<p> By default floating point numbers substituted inside strings use the dot (&#8220;.&#8221;) as the decimal separator. If <tt>&quot;use locale&quot;</tt> is in effect, and <code>POSIX::setlocale()</code> has been called, the character used for the decimal separator is affected by the LC_NUMERIC locale. See perllocale and POSIX. </p>
 <p> As in some shells, you can enclose the variable name in braces to disambiguate it from following alphanumerics (and underscores). You must also do this when interpolating a variable into a string to separate the variable name from a following double-colon or an apostrophe, since these would be otherwise treated as a package separator: </p>
-<p>$who = &#8220;Larry&#8221;;<br />
+<p>$who = &#8220;Larry&#8221;;<br/>
 print PASSWD &#8220;${who}::0:0:Superuser:/:/bin/perl
-&#8221;;<br />
+&#8221;;<br/>
 print &#8220;We use ${who}speak when ${who}&#8217;s here.
 &#8221;;</p>
 <p> Without the braces, Perl would have looked for a <tt>$whospeak</tt>, a <tt>$who::0</tt>, and a <tt>&quot;$who's&quot;</tt> variable. The last two would be the <tt>$0</tt> and the <tt>$s</tt> variables in the (presumably) non-existent package <tt>&quot;who&quot;</tt>. </p>
@@ -189,7 +189,7 @@ print &#8220;We use ${who}speak when ${who}&#8217;s here.
 <p> Floating point values include the special values <tt>&quot;Inf&quot;</tt> and <tt>&quot;NaN&quot;</tt>, for infinity and not-a-number. The infinity can be also negative. </p>
 <p> The infinity is the result of certain math operations that overflow the floating point range, like 9**9**9. The not-a-number is the result when the result is undefined or unrepresentable. Though note that you cannot get <tt>&quot;NaN&quot;</tt> from some common &#8220;undefined&#8221; or &#8220;out-of-range&#8221; operations like dividing by zero, or square root of a negative number, since Perl generates fatal errors for those. </p>
 <p> The infinity and not-a-number have their own special arithmetic rules. The general rule is that they are &#8220;contagious&#8221;: <tt>&quot;Inf&quot;</tt> plus one is <tt>&quot;Inf&quot;</tt>, and <tt>&quot;NaN&quot;</tt> plus one is <tt>&quot;NaN&quot;</tt>. Where things get interesting is when you combine infinities and not-a-numbers: <tt>&quot;Inf&quot;</tt> minus <tt>&quot;Inf&quot;</tt> and <tt>&quot;Inf&quot;</tt> divided by <tt>&quot;Inf&quot;</tt> are <tt>&quot;NaN&quot;</tt> (while <tt>&quot;Inf&quot;</tt> plus <tt>&quot;Inf&quot;</tt> is <tt>&quot;Inf&quot;</tt> and <tt>&quot;Inf&quot;</tt> times <tt>&quot;Inf&quot;</tt> is <tt>&quot;Inf&quot;</tt>). <tt>&quot;NaN&quot;</tt> is also curious in that it does not equal any number, <i>including</i> itself: <tt>&quot;NaN&quot;</tt> != <tt>&quot;NaN&quot;</tt>. </p>
-<p> Perl doesn&#8217;t understand <tt>&quot;Inf&quot;</tt> and <tt>&quot;NaN&quot;</tt> as numeric literals, but you can have them as strings, and Perl will convert them as needed: &#8220;Inf&#8221; + 1. (You can, however, import them from the <font SIZE="-1">POSIX</font> extension; <tt>&quot;use POSIX qw(Inf NaN);&quot;</tt> and then use them as literals.) </p>
+<p> Perl doesn&#8217;t understand <tt>&quot;Inf&quot;</tt> and <tt>&quot;NaN&quot;</tt> as numeric literals, but you can have them as strings, and Perl will convert them as needed: &#8220;Inf&#8221; + 1. (You can, however, import them from the POSIX extension; <tt>&quot;use POSIX qw(Inf NaN);&quot;</tt> and then use them as literals.) </p>
 <p> Note that on input (string to number) Perl accepts <tt>&quot;Inf&quot;</tt> and <tt>&quot;NaN&quot;</tt> in many forms. Case is ignored, and the Win32-specific forms like <tt>&quot;1.#INF&quot;</tt> are understood, but on output the values are normalized to <tt>&quot;Inf&quot;</tt> and <tt>&quot;NaN&quot;</tt>. </p>
 <p> <i>Version Strings</i> </p>
 <p> A literal of the form <tt>&quot;v1.20.300.4000&quot;</tt> is parsed as a string composed of characters with the specified ordinals. This form, known as v-strings, provides an alternative, more readable way to construct strings, rather than use the somewhat less readable interpolation form <tt>&quot;</tt>\x{1}\x{14}\x{12c}\x{fa0}&quot;</code>. This is useful for representing Unicode strings, and for comparing version ``numbers&#8217;&#8216; using the string comparison operators, <code>&quot;cmp&quot;</code>, <code>&quot;gt&quot;</code>, <code>&quot;lt&quot;</code> etc. If there are two or more dots in the literal, the leading <code>&quot;v&quot;</code> may be omitted. </p>
@@ -203,14 +203,14 @@ print &#8220;We use ${who}speak when ${who}&#8217;s here.
 <p> The special literals __FILE__, __LINE__, and __PACKAGE__ represent the current filename, line number, and package name at that point in your program. __SUB__ gives a reference to the current subroutine. They may be used only as separate tokens; they will not be interpolated into strings. If there is no current package (due to an empty <code>&quot;package;&quot;</code> directive), __PACKAGE__ is the undefined value. (But the empty <code>&quot;package;&quot;</code> is no longer supported, as of version 5.10.) Outside of a subroutine, __SUB__ is the undefined value. __SUB__ is only available in 5.16 or higher, and only with a <code>&quot;use v5.16&quot;</code> or <code>&quot;use feature &quot;current_sub&quot;&quot;</code> declaration. </p>
 <p> The two control characters ^D and ^Z, and the tokens __END__ and __DATA__ may be used to indicate the logical end of the script before the actual end of file. Any following text is ignored. </p>
 <p> Text after __DATA__ may be read via the filehandle <code>&quot;PACKNAME::DATA&quot;</code>, where <code>&quot;PACKNAME&quot;</code> is the package that was current when the __DATA__ token was encountered. The filehandle is left open pointing to the line after __DATA__. The program should <code>&quot;close DATA&quot;</code> when it is done reading from it. (Leaving it open leaks filehandles if the module is reloaded for any reason, so it&#8217;s a safer practice to close it.) For compatibility with older scripts written before __DATA__ was introduced, __END__ behaves like __DATA__ in the top level script (but not in files loaded with <code>&quot;require&quot;</code> or <code>&quot;do&quot;</code>) and leaves the remaining contents of the file accessible via <code>&quot;main::DATA&quot;</code>. </p>
-<p> The <code>&quot;DATA&quot;</code> file handle by default has whatever PerlIO layers were in place when Perl read the file to parse the source. Normally that means that the file is being read bytewise, as if it were encoded in Latin-1, but there are two major ways for it to be otherwise. Firstly, if the <code>&quot;__END__&quot;</code>/<code>&quot;__DATA__&quot;</code> token is in the scope of a <code>&quot;use utf8&quot;</code> pragma then the <code>&quot;DATA&quot;</code> handle will be in <font SIZE="-1">UTF-8</font> mode. And secondly, if the source is being read from perl&#8217;s standard input then the <code>&quot;DATA&quot;</code> file handle is actually aliased to the <code>&quot;STDIN&quot;</code> file handle, and may be in <font SIZE="-1">UTF-8</font> mode because of the <code>&quot;PERL_UNICODE&quot;</code> environment variable or perl&#8217;s command-line switches. </p>
-<p> See SelfLoader for more description of __DATA__, and an example of its use. Note that you cannot read from the <font SIZE="-1">DATA</font> filehandle in a <font SIZE="-1">BEGIN</font> block: the <font SIZE="-1">BEGIN</font> block is executed as soon as it is seen (during compilation), at which point the corresponding __DATA__ (or __END__) token has not yet been seen. </p>
+<p> The <code>&quot;DATA&quot;</code> file handle by default has whatever PerlIO layers were in place when Perl read the file to parse the source. Normally that means that the file is being read bytewise, as if it were encoded in Latin-1, but there are two major ways for it to be otherwise. Firstly, if the <code>&quot;__END__&quot;</code>/<code>&quot;__DATA__&quot;</code> token is in the scope of a <code>&quot;use utf8&quot;</code> pragma then the <code>&quot;DATA&quot;</code> handle will be in UTF-8 mode. And secondly, if the source is being read from perl&#8217;s standard input then the <code>&quot;DATA&quot;</code> file handle is actually aliased to the <code>&quot;STDIN&quot;</code> file handle, and may be in UTF-8 mode because of the <code>&quot;PERL_UNICODE&quot;</code> environment variable or perl&#8217;s command-line switches. </p>
+<p> See SelfLoader for more description of __DATA__, and an example of its use. Note that you cannot read from the DATA filehandle in a BEGIN block: the BEGIN block is executed as soon as it is seen (during compilation), at which point the corresponding __DATA__ (or __END__) token has not yet been seen. </p>
 <p> <i>Barewords</i> </p>
 <p> A word that has no other interpretation in the grammar will be treated as if it were a quoted string. These are known as ``barewords&#8217;&#8216;. As with filehandles and labels, a bareword that consists entirely of lowercase letters risks conflict with future reserved words, and if you use the <code>&quot;use warnings&quot;</code> pragma or the <code>-w</code> switch, Perl will warn you about any such words. Perl limits barewords (like identifiers) to about 250 characters. Future versions of Perl are likely to eliminate these arbitrary limitations. </p>
 <p> Some people may wish to outlaw barewords entirely. If you say </p>
 <pre><code>    use strict 'subs';
 </code></pre>
-<p> then any bareword that would <font SIZE="-1">NOT</font> be interpreted as a subroutine call produces a compile-time error instead. The restriction lasts to the end of the enclosing block. An inner block may countermand this by saying <code>&quot;no strict &#8216;subs&#8217;&quot;</code>. </p>
+<p> then any bareword that would NOT be interpreted as a subroutine call produces a compile-time error instead. The restriction lasts to the end of the enclosing block. An inner block may countermand this by saying <code>&quot;no strict &#8216;subs&#8217;&quot;</code>. </p>
 <p> <i>Array Interpolation</i> </p>
 <p> Arrays and slices are interpolated into double-quoted strings by joining the elements with the delimiter specified in the <code>$&quot;</code> variable (<code>$LIST_SEPARATOR</code> if ``use English;&#8216;&#8216; is specified), space by default. The following are equivalent: </p>
 <pre><code>    $temp = join($&quot;, @ARGV);
@@ -249,10 +249,10 @@ print &#8220;We use ${who}speak when ${who}&#8217;s here.
         white wine
     End_Lines
 </code></pre>
-<p> LISTs do automatic interpolation of sublists. That is, when a <font SIZE="-1">LIST</font> is evaluated, each element of the list is evaluated in list context, and the resulting list value is interpolated into <font SIZE="-1">LIST</font> just as if each individual element were a member of <font SIZE="-1">LIST.</font> Thus arrays and hashes lose their identity in a LIST---the list </p>
+<p> LISTs do automatic interpolation of sublists. That is, when a LIST is evaluated, each element of the list is evaluated in list context, and the resulting list value is interpolated into LIST just as if each individual element were a member of LIST. Thus arrays and hashes lose their identity in a LIST---the list </p>
 <pre><code>    (@foo,@bar,&amp;SomeSub,%glarch)
 </code></pre>
-<p> contains all the elements of <code>@foo</code> followed by all the elements of <code>@bar</code>, followed by all the elements returned by the subroutine named SomeSub called in list context, followed by the key/value pairs of <code>%glarch</code>. To make a list reference that does <i></i><font SIZE="-1"><i>NOT</i></font><i></i> interpolate, see perlref. </p>
+<p> contains all the elements of <code>@foo</code> followed by all the elements of <code>@bar</code>, followed by all the elements returned by the subroutine named SomeSub called in list context, followed by the key/value pairs of <code>%glarch</code>. To make a list reference that does <i></i><i>NOT</i><i></i> interpolate, see perlref. </p>
 <p> The null list is represented by (). Interpolating it in a list has no effect. Thus ((),(),()) is equivalent to (). Similarly, interpolating an array with no elements is the same as if no array had been interpolated at that point. </p>
 <p> This interpolation combines with the facts that the opening and closing parentheses are optional (except when necessary for precedence) and lists may end with an optional comma to mean that multiple commas within lists are legal syntax. The list <code>&quot;1,,3&quot;</code> is a concatenation of two lists, <code>&quot;1,&quot;</code> and <code>3</code>, the first of which ends with that optional comma. <code>&quot;1,,3&quot;</code> is <code>&quot;(1,),(3)&quot;</code> is <code>&quot;1,3&quot;</code> (And similarly for <code>&quot;1,,,3&quot;</code> is <code>&quot;(1,),(,),3&quot;</code> is <code>&quot;1,3&quot;</code> and so on.) Not that we&#8217;d advise you to use this obfuscation. </p>
 <p> A list value may also be subscripted like a normal array. You must put the list in parentheses to avoid ambiguity. For example: </p>
@@ -306,7 +306,7 @@ print &#8220;We use ${who}speak when ${who}&#8217;s here.
 <pre><code>    $x = (($foo,$bar) = (3,2,1)); # set $x to 3, not 2
     $x = (($foo,$bar) = f()); # set $x to f()'s return count
 </code></pre>
-<p> This is handy when you want to do a list assignment in a Boolean context, because most list functions return a null list when finished, which when assigned produces a 0, which is interpreted as <font SIZE="-1">FALSE.</font> </p>
+<p> This is handy when you want to do a list assignment in a Boolean context, because most list functions return a null list when finished, which when assigned produces a 0, which is interpreted as FALSE. </p>
 <p> It&#8217;s also the source of a useful idiom for executing a function or performing an operation in list context and then counting the number of return values, by assigning to an empty list and then using that assignment in scalar context. For example, this code: </p>
 <pre><code>    $count = () = $string =~ /\d+/g;
 </code></pre>
@@ -393,7 +393,7 @@ print &#8220;We use ${who}speak when ${who}&#8217;s here.
 <p> is equivalent to </p>
 <pre><code>    $foo{join($;, $x, $y, $z)}
 </code></pre>
-<p> The default subscript separator is ``\034&#8217;&#8216;, the same as <font SIZE="-1">SUBSEP</font> in <code>awk</code>.  </p>
+<p> The default subscript separator is ``\034&#8217;&#8216;, the same as SUBSEP in <code>awk</code>.  </p>
 <h3>Slices</h3>
 <p> A slice accesses several elements of a list, an array, or a hash simultaneously using a list of subscripts. It&#8217;s more convenient than writing out the individual elements as a list of separate scalar values. </p>
 <pre><code>    ($him, $her) = @folks[0,-1]; # array slice
@@ -487,7 +487,7 @@ print &#8220;We use ${who}speak when ${who}&#8217;s here.
     }
     $fh = newopen('/etc/passwd');
 </code></pre>
-<p> Now that we have the <code>*foo{THING}</code> notation, typeglobs aren&#8217;t used as much for filehandle manipulations, although they&#8217;re still needed to pass brand new file and directory handles into or out of functions. That&#8217;s because <code>*HANDLE{IO}</code> only works if <font SIZE="-1">HANDLE</font> has already been used as a handle. In other words, <code>*FH</code> must be used to create new symbol table entries; <code>*foo{THING}</code> cannot. When in doubt, use <code>*FH</code>. </p>
+<p> Now that we have the <code>*foo{THING}</code> notation, typeglobs aren&#8217;t used as much for filehandle manipulations, although they&#8217;re still needed to pass brand new file and directory handles into or out of functions. That&#8217;s because <code>*HANDLE{IO}</code> only works if HANDLE has already been used as a handle. In other words, <code>*FH</code> must be used to create new symbol table entries; <code>*foo{THING}</code> cannot. When in doubt, use <code>*FH</code>. </p>
 <p> All functions that are capable of creating filehandles (<code>open()</code>, <code>opendir()</code>, <code>pipe()</code>, <code>socketpair()</code>, <code>sysopen()</code>, <code>socket()</code>, and <code>accept()</code>) automatically create an anonymous filehandle if the handle passed to them is an uninitialized scalar variable. This allows the constructs such as <code>&quot;open(my $fh, ...)&quot;</code> and <code>&quot;open(local $fh,...)&quot;</code> to be used to create filehandles that will conveniently be closed automatically when the scope ends, provided there are no other references to them. This largely eliminates the need for typeglobs when opening filehandles that must be passed around, as in the following example: </p>
 <pre><code>    sub myopen {
         open my $fh, &quot;@_&quot;

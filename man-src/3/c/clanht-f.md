@@ -10,7 +10,7 @@ description: "clanht.f –"
 <p>clanht.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>REAL function <code>clanht</code> (NORM, N, D, E)<br />
+<p>REAL function <code>clanht</code> (NORM, N, D, E)<br/>
  <i></i><code>CLANHT</code> returns the value of the 1-norm, or the Frobenius norm, or the infinity norm, or the element of largest absolute value of a complex Hermitian tridiagonal matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>REAL function clanht (characterNORM, integerN, real, dimension( * )D, complex, dimension( * )E)</h3>

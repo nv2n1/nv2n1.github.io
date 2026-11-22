@@ -10,31 +10,31 @@ description: "The talloc debugging support functions –"
 <p>The talloc debugging support functions &#8211; </p>
 <p> To aid memory debugging, talloc contains routines to inspect the currently allocated memory hierarchy.</p>
 <h3>Functions</h3>
-<p>void <code>talloc_report_depth_cb</code> (const void *ptr, int depth, int max_depth, void(*callback)(const void *ptr, int depth, int max_depth, int is_ref, void *private_data), void *private_data)<br />
- <i>Walk a complete talloc hierarchy. </i><br />
- void <code>talloc_report_depth_file</code> (const void *ptr, int depth, int max_depth, FILE *f)<br />
- <i>Print a talloc hierarchy. </i><br />
- void <code>talloc_report_full</code> (const void *ptr, FILE *f)<br />
- <i>Print a summary report of all memory used by ptr. </i><br />
- void <code>talloc_report</code> (const void *ptr, FILE *f)<br />
- <i>Print a summary report of all memory used by ptr. </i><br />
- void <code>talloc_enable_null_tracking</code> (void)<br />
- <i>Enable tracking the use of NULL memory contexts. </i><br />
- void <code>talloc_enable_null_tracking_no_autofree</code> (void)<br />
- <i>Enable tracking the use of NULL memory contexts. </i><br />
- void <code>talloc_disable_null_tracking</code> (void)<br />
- <i>Disable tracking of the NULL memory context. </i><br />
- void <code>talloc_enable_leak_report</code> (void)<br />
- <i>Enable leak report when a program exits. </i><br />
- void <code>talloc_enable_leak_report_full</code> (void)<br />
- <i>Enable full leak report when a program exits. </i><br />
- void <code>talloc_set_abort_fn</code> (void(*abort_fn)(const char *reason))<br />
- <i>Set a custom &#8216;abort&#8217; function that is called on serious error. </i><br />
- void <code>talloc_set_log_fn</code> (void(*log_fn)(const char *message))<br />
- <i>Set a logging function. </i><br />
- void <code>talloc_set_log_stderr</code> (void)<br />
- <i>Set stderr as the output for logs. </i><br />
- int <code>talloc_set_memlimit</code> (const void *ctx, size_t max_size)<br />
+<p>void <code>talloc_report_depth_cb</code> (const void *ptr, int depth, int max_depth, void(*callback)(const void *ptr, int depth, int max_depth, int is_ref, void *private_data), void *private_data)<br/>
+ <i>Walk a complete talloc hierarchy. </i><br/>
+ void <code>talloc_report_depth_file</code> (const void *ptr, int depth, int max_depth, FILE *f)<br/>
+ <i>Print a talloc hierarchy. </i><br/>
+ void <code>talloc_report_full</code> (const void *ptr, FILE *f)<br/>
+ <i>Print a summary report of all memory used by ptr. </i><br/>
+ void <code>talloc_report</code> (const void *ptr, FILE *f)<br/>
+ <i>Print a summary report of all memory used by ptr. </i><br/>
+ void <code>talloc_enable_null_tracking</code> (void)<br/>
+ <i>Enable tracking the use of NULL memory contexts. </i><br/>
+ void <code>talloc_enable_null_tracking_no_autofree</code> (void)<br/>
+ <i>Enable tracking the use of NULL memory contexts. </i><br/>
+ void <code>talloc_disable_null_tracking</code> (void)<br/>
+ <i>Disable tracking of the NULL memory context. </i><br/>
+ void <code>talloc_enable_leak_report</code> (void)<br/>
+ <i>Enable leak report when a program exits. </i><br/>
+ void <code>talloc_enable_leak_report_full</code> (void)<br/>
+ <i>Enable full leak report when a program exits. </i><br/>
+ void <code>talloc_set_abort_fn</code> (void(*abort_fn)(const char *reason))<br/>
+ <i>Set a custom &#8216;abort&#8217; function that is called on serious error. </i><br/>
+ void <code>talloc_set_log_fn</code> (void(*log_fn)(const char *message))<br/>
+ <i>Set a logging function. </i><br/>
+ void <code>talloc_set_log_stderr</code> (void)<br/>
+ <i>Set stderr as the output for logs. </i><br/>
+ int <code>talloc_set_memlimit</code> (const void *ctx, size_t max_size)<br/>
  <i>Set a max memory limit for the current context hierarchy This affects all children of this context and constrain any allocation in the hierarchy to never exceed the limit set. </i></p>
 <h2>Detailed Description</h2>
 <p>To aid memory debugging, talloc contains routines to inspect the currently allocated memory hierarchy.</p>
@@ -78,7 +78,7 @@ description: "The talloc debugging support functions –"
 <p> You can pass NULL for the pointer, in which case a report is printed for the top level memory context, but only if <code>talloc_enable_leak_report()</code> or <code>talloc_enable_leak_report_full()</code> has been called. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>ptr</i> The talloc chunk.<br />
+<dd><i>ptr</i> The talloc chunk.<br/>
  <i>f</i> The file handle to print to.</dd></dl>
 <p> Example: </p>
 <pre>* unsigned int *a, *b;
@@ -96,25 +96,25 @@ description: "The talloc debugging support functions –"
 <p> The recursion is stopped when depth &gt;= max_depth. max_depth = -1 means only stop at leaf nodes. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>ptr</i> The talloc chunk.<br />
- <i>depth</i> Internal parameter to control recursion. Call with 0.<br />
- <i>max_depth</i> Maximum recursion level.<br />
- <i>callback</i> Function to be called on every chunk.<br />
+<dd><i>ptr</i> The talloc chunk.<br/>
+ <i>depth</i> Internal parameter to control recursion. Call with 0.<br/>
+ <i>max_depth</i> Maximum recursion level.<br/>
+ <i>callback</i> Function to be called on every chunk.<br/>
  <i>private_data</i> Private pointer passed to callback.</dd></dl>
 <h3>void talloc_report_depth_file (const void *ptr, intdepth, intmax_depth, FILE *f)</h3>
 <p>Print a talloc hierarchy. This provides a more flexible reports than <code>talloc_report()</code>. It will let you specify the depth and max_depth. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>ptr</i> The talloc chunk.<br />
- <i>depth</i> Internal parameter to control recursion. Call with 0.<br />
- <i>max_depth</i> Maximum recursion level.<br />
+<dd><i>ptr</i> The talloc chunk.<br/>
+ <i>depth</i> Internal parameter to control recursion. Call with 0.<br/>
+ <i>max_depth</i> Maximum recursion level.<br/>
  <i>f</i> The file handle to print to.</dd></dl>
 <h3>void talloc_report_full (const void *ptr, FILE *f)</h3>
 <p>Print a summary report of all memory used by ptr. This provides a more detailed report than <code>talloc_report()</code>. It will recursively print the entire tree of memory referenced by the pointer. References in the tree are shown by giving the name of the pointer that is referenced. </p>
 <p> You can pass NULL for the pointer, in which case a report is printed for the top level memory context, but only if <code>talloc_enable_leak_report()</code> or <code>talloc_enable_leak_report_full()</code> has been called. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>ptr</i> The talloc chunk.<br />
+<dd><i>ptr</i> The talloc chunk.<br/>
  <i>f</i> The file handle to print to.</dd></dl>
 <p> Example: </p>
 <pre>* unsigned int *a, *b;
@@ -182,7 +182,7 @@ description: "The talloc debugging support functions –"
  any further allocation on that hierarchy will then fail.</pre>
 <p><code>Parameters:</code></p>
 <dl>
-<dd><i>ctx</i> The talloc context to set the limit on<br />
+<dd><i>ctx</i> The talloc context to set the limit on<br/>
  <i>max_size</i> The (new) max_size</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for talloc from the source code.</p>

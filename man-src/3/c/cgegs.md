@@ -11,7 +11,7 @@ description: "cgegs.f –"
 <p> cgegs.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cgegs</code> (JOBVSL, JOBVSR, N, A, LDA, B, LDB, ALPHA, BETA, VSL, LDVSL, VSR, LDVSR, WORK, LWORK, RWORK, INFO)<br />
+<p> subroutine <code>cgegs</code> (JOBVSL, JOBVSR, N, A, LDA, B, LDB, ALPHA, BETA, VSL, LDVSL, VSR, LDVSR, WORK, LWORK, RWORK, INFO)<br/>
  <i></i><code> CGEEVX computes the eigenvalues and, optionally, the left and/or right eigenvectors for GE matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cgegs (characterJOBVSL, characterJOBVSR, integerN, complex, dimension( lda, * )A, integerLDA, complex, dimension( ldb, * )B, integerLDB, complex, dimension( * )ALPHA, complex, dimension( * )BETA, complex, dimension( ldvsl, * )VSL, integerLDVSL, complex, dimension( ldvsr, * )VSR, integerLDVSR, complex, dimension( * )WORK, integerLWORK, real, dimension( * )RWORK, integerINFO)</h3>

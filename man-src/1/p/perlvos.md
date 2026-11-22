@@ -15,11 +15,11 @@ perlvos - Perl for Stratus OpenVOS
 
  These are instructions for building Perl from source. This version of Perl requires the dynamic linking support that is found in OpenVOS Release 17.1 and thus is not supported on OpenVOS Release 17.0 or earlier releases. 
 
- If you are running <font SIZE="-1">VOS</font> Release 14.4.1 or later, you can obtain a pre-compiled, supported copy of perl by purchasing the <font SIZE="-1">GNU</font> Tools product from Stratus Technologies.
+ If you are running VOS Release 14.4.1 or later, you can obtain a pre-compiled, supported copy of perl by purchasing the GNU Tools product from Stratus Technologies.
 
 <h2>BUILDING PERL FOR OPENVOS</h2>
 
- To build perl from its source code on the Stratus V Series platform you must have OpenVOS Release 17.1.0 or later, <font SIZE="-1">GNU</font> Tools Release 3.5 or later, and the C/POSIX Runtime Libraries. 
+ To build perl from its source code on the Stratus V Series platform you must have OpenVOS Release 17.1.0 or later, GNU Tools Release 3.5 or later, and the C/POSIX Runtime Libraries. 
 
  Follow the normal instructions for building perl; e.g, enter bash, run the Configure script, then use ``gmake'' to build perl.
 
@@ -32,7 +32,7 @@ perlvos - Perl for Stratus OpenVOS
      gmake install
 </pre>
 </dd><dt>2.
-</dt><dd> While there are currently no architecture-specific extensions or modules distributed with perl, the following directories can be used to hold such files (replace the string <font SIZE="-1">VERSION</font> by the appropriate version number): 
+</dt><dd> While there are currently no architecture-specific extensions or modules distributed with perl, the following directories can be used to hold such files (replace the string VERSION by the appropriate version number): 
  <pre>
      &gt;system&gt;ported&gt;lib&gt;perl5&gt;VERSION&gt;i786
 </pre>
@@ -54,19 +54,19 @@ perlvos - Perl for Stratus OpenVOS
 
  This port of Perl version 5 prefers Unix-style, slash-separated pathnames over OpenVOS-style greater-than-separated pathnames. OpenVOS-style pathnames should work in most contexts, but if you have trouble, replace all greater-than characters by slash characters. Because the slash character is used as a pathname delimiter, Perl cannot process OpenVOS pathnames containing a slash character in a directory or file name; these must be renamed. 
 
- This port of Perl also uses Unix-epoch date values internally. As long as you are dealing with <font SIZE="-1">ASCII</font> character string representations of dates, this should not be an issue. The supported epoch is January 1, 1980 to January 17, 2038. 
+ This port of Perl also uses Unix-epoch date values internally. As long as you are dealing with ASCII character string representations of dates, this should not be an issue. The supported epoch is January 1, 1980 to January 17, 2038. 
 
  See the file pod/perlport.pod for more information about the OpenVOS port of Perl.
 
 <h2>TEST STATUS</h2>
 
- A number of the perl self-tests fails for various reasons; generally these are minor and due to subtle differences between common POSIX-based environments and the OpenVOS <font SIZE="-1">POSIX</font> environment. Ensure that you conduct sufficient testing of your code to guarantee that it works properly in the OpenVOS environment.
+ A number of the perl self-tests fails for various reasons; generally these are minor and due to subtle differences between common POSIX-based environments and the OpenVOS POSIX environment. Ensure that you conduct sufficient testing of your code to guarantee that it works properly in the OpenVOS environment.
 
 <h2>SUPPORT STATUS</h2>
 
  I'm offering this port ``as is''. You can ask me questions, but I can't guarantee I'll be able to answer them. There are some excellent books available on the Perl language; consult a book seller. 
 
- If you want a supported version of perl for OpenVOS, purchase the OpenVOS <font SIZE="-1">GNU</font> Tools product from Stratus Technologies, along with a support contract (or from anyone else who will sell you support).
+ If you want a supported version of perl for OpenVOS, purchase the OpenVOS GNU Tools product from Stratus Technologies, along with a support contract (or from anyone else who will sell you support).
 
 <h2>AUTHOR</h2>
 

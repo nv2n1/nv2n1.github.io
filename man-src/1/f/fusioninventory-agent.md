@@ -78,7 +78,7 @@ description: "fusioninventory-agent – FusionInventory agent For Linux/UNIX, Wi
                                      experiment perl crash under win32 !!!
 </code></pre>
 <h2>DESCRIPTION</h2>
-<p> The <i>fusioninventory-agent</i> agent is a generic multi-platform agent. It can perform a large array of management tasks, such as local inventory, software deployment or network discovery. It can be used either standalone, or in combination with a compatible server (<font SIZE="-1">OCS, GLPI, OTRS</font>) acting as a centralized control point.</p>
+<p> The <i>fusioninventory-agent</i> agent is a generic multi-platform agent. It can perform a large array of management tasks, such as local inventory, software deployment or network discovery. It can be used either standalone, or in combination with a compatible server (OCS, GLPI, OTRS) acting as a centralized control point.</p>
 <h2>OPTIONS</h2>
 <p> Most of the options are available in a <i>short</i> form and a <i>long</i> form. For example, the two lines below are all equivalent: </p>
 <pre>
@@ -87,32 +87,32 @@ description: "fusioninventory-agent – FusionInventory agent For Linux/UNIX, Wi
 </pre>
 <h3>Target definition options</h3>
 <dl>
-<dt><code>-s</code>, <code>&#8211;server</code>=<i></i><font SIZE="-1"><i>URI</i></font><i></i></dt>
+<dt><code>-s</code>, <code>&#8211;server</code>=<i></i><i>URI</i><i></i></dt>
 <dd> Send the results of tasks execution to given server. </dd>
-<p> If <i></i><font SIZE="-1"><i>URI</i></font><i></i> doesn&#8217;t start with http:// or <a rel="nofollow" href="https://,">https://,</a> the agent assume the parameter is a hostname and rewrite it as: </p>
+<p> If <i></i><i>URI</i><i></i> doesn&#8217;t start with http:// or <a rel="nofollow" href="https://,">https://,</a> the agent assume the parameter is a hostname and rewrite it as: </p>
 <pre>
     % --server=<a rel="nofollow" href="http://servername/ocsinventory">http://servername/ocsinventory</a>
 </pre>
-<p> In general, <font SIZE="-1">OCS</font> Inventory server <font SIZE="-1">URL</font> have this format: </p>
+<p> In general, OCS Inventory server URL have this format: </p>
 <pre>
     <a rel="nofollow" href="http://servername/ocsinventory">http://servername/ocsinventory</a>
 </pre>
-<p> and FusionInventory for <font SIZE="-1">GLPI</font> this one: </p>
+<p> and FusionInventory for GLPI this one: </p>
 <pre>
     <a rel="nofollow" href="http://servername/glpi/plugins/fusioninventory/front/plugin_fusioninventory.communication.php">http://servername/glpi/plugins/fusioninventory/front/plugin_fusioninventory.communication.php</a>
 </pre>
 <p> Multiple values can be specified, using comma as a separator.</p>
-<dt><code>-l</code>, <code>&#8211;local</code>=<i></i><font SIZE="-1"><i>PATH</i></font><i></i></dt>
+<dt><code>-l</code>, <code>&#8211;local</code>=<i></i><i>PATH</i><i></i></dt>
 <dd> Write the results of tasks execution locally. </dd>
 <p> Exact behaviour according to given path:</p>
 <dl>
 <dl>
 <dt>&bull;</dt>
-<dd> if <i></i><font SIZE="-1"><i>PATH</i></font><i></i> is a directory, a file will be created therein</dd>
+<dd> if <i></i><i>PATH</i><i></i> is a directory, a file will be created therein</dd>
 <dt>&bull;</dt>
-<dd> if <i></i><font SIZE="-1"><i>PATH</i></font><i></i> is a file, it will be used directly</dd>
+<dd> if <i></i><i>PATH</i><i></i> is a file, it will be used directly</dd>
 <dt>&bull;</dt>
-<dd> if <i></i><font SIZE="-1"><i>PATH</i></font><i></i> is &#8216;-&#8216;, <font SIZE="-1">STDOUT</font> will be used</dd></dl>
+<dd> if <i></i><i>PATH</i><i></i> is &#8216;-&#8216;, STDOUT will be used</dd></dl>
 </dl>
 <dl>
 <dt>
@@ -121,8 +121,8 @@ description: "fusioninventory-agent – FusionInventory agent For Linux/UNIX, Wi
 </dl>
 <h3>Target scheduling options</h3>
 <dl>
-<dt><code>&#8211;delaytime</code>=<i></i><font SIZE="-1"><i>LIMIT</i></font><i></i></dt>
-<dd> Set an initial delay before the first target, whose value is computed randomly between <font SIZE="-1">LIMIT / 2</font> and <font SIZE="-1">LIMIT</font> seconds. This setting is ignored for server targets after the initial contact, in favor of server-specified parameter (<font SIZE="-1">PROLOG_FREQ</font>).</dd>
+<dt><code>&#8211;delaytime</code>=<i></i><i>LIMIT</i><i></i></dt>
+<dd> Set an initial delay before the first target, whose value is computed randomly between LIMIT / 2 and LIMIT seconds. This setting is ignored for server targets after the initial contact, in favor of server-specified parameter (PROLOG_FREQ).</dd>
 <dt><code>&#8211;lazy</code></dt>
 <dd> Do not contact the target before next scheduled time. </dd>
 <p> This option is only available when the agent is not run as a server.</dl>
@@ -130,22 +130,22 @@ description: "fusioninventory-agent – FusionInventory agent For Linux/UNIX, Wi
 <dl>
 <dt><code>&#8211;list-tasks</code></dt>
 <dd> List all available tasks, tasks planned for execution and exit</dd>
-<dt><code>&#8211;no-task</code>=<i></i><font SIZE="-1"><i>TASK</i></font><i></i></dt>
+<dt><code>&#8211;no-task</code>=<i></i><i>TASK</i><i></i></dt>
 <dd> Do not run given task. </dd>
 <p> Multiple values can be specified, using comma as a separator. See option <i>&#8211;list-tasks</i> for the list of available tasks.</p>
-<dt><code>&#8211;tasks</code>=<i></i><font SIZE="-1"><i>TASK</i></font><i></i></dt>
+<dt><code>&#8211;tasks</code>=<i></i><i>TASK</i><i></i></dt>
 <dd> Run given tasks in given order. </dd>
 <p> Multiple tasks can be specified, using comma as a separator. A task can be specified several times. if &#8216;&#8230;&#8217; is given as last element, all other available tasks are executed. </p>
 <p> See option <i>&#8211;list-tasks</i> for the list of available tasks. </p>
-<p> Examples : * &#8211;tasks=inventory,deploy,inventory<br />
-&nbsp;<wbr>&nbsp;<wbr>First task executed is&nbsp;<wbr>&#8216;inventory&#8217;, second task is&nbsp;<wbr>&#8216;deploy&#8217;, third and last<br />
+<p> Examples : * &#8211;tasks=inventory,deploy,inventory<br/>
+&nbsp;<wbr>&nbsp;<wbr>First task executed is&nbsp;<wbr>&#8216;inventory&#8217;, second task is&nbsp;<wbr>&#8216;deploy&#8217;, third and last<br/>
 &nbsp;<wbr>&nbsp;<wbr>task is&nbsp;<wbr>&#8216;inventory&#8217;. </p>
-<p> * &#8211;tasks=inventory,deploy,&#8230;<br />
-&nbsp;<wbr>&nbsp;<wbr>First executed task is&nbsp;<wbr>&#8216;inventory&#8217;, second task is&nbsp;<wbr>&#8216;deploy&#8217;&nbsp;<wbr>and then all<br />
+<p> * &#8211;tasks=inventory,deploy,&#8230;<br/>
+&nbsp;<wbr>&nbsp;<wbr>First executed task is&nbsp;<wbr>&#8216;inventory&#8217;, second task is&nbsp;<wbr>&#8216;deploy&#8217;&nbsp;<wbr>and then all<br/>
 &nbsp;<wbr>&nbsp;<wbr>other available tasks are executed.</dl>
 <h3>Inventory task specific options</h3>
 <dl>
-<dt><code>&#8211;no-category</code>=<i></i><font SIZE="-1"><i>CATEGORY</i></font><i></i></dt>
+<dt><code>&#8211;no-category</code>=<i></i><i>CATEGORY</i><i></i></dt>
 <dd> Do not list given category items in inventory. </dd>
 <p> Multiple values can be specified, using comma as a separator. The available categories are:</p>
 <dl>
@@ -206,51 +206,51 @@ description: "fusioninventory-agent – FusionInventory agent For Linux/UNIX, Wi
 <dt><code>&#8211;scan-profiles</code></dt>
 <dd> Allow the agent to scan user profiles for softwares.</dd>
 <dt><code>&#8211;html</code></dt>
-<dd> Save the inventory as <font SIZE="-1">HTML.</font> </dd>
+<dd> Save the inventory as HTML. </dd>
 <p> This is only used for local inventories.</p>
 <dt><code>-f</code>, <code>&#8211;force</code></dt>
 <dd> Send an inventory to the server, even if this last one doesn&#8217;t ask for it.</dd>
-<dt><code>&#8211;backend-collect-timeout</code>=<i></i><font SIZE="-1"><i>TIME</i></font><i></i></dt>
+<dt><code>&#8211;backend-collect-timeout</code>=<i></i><i>TIME</i><i></i></dt>
 <dd> Timeout for inventory modules execution.</dd>
-<dt><code>&#8211;additional-content</code>=<i></i><font SIZE="-1"><i>FILE</i></font><i></i></dt>
+<dt><code>&#8211;additional-content</code>=<i></i><i>FILE</i><i></i></dt>
 <dd> Additional inventory content file. </dd>
-<p> This file should be an <font SIZE="-1">XML</font> file, using same syntax as the one produced by the agent.</dl>
+<p> This file should be an XML file, using same syntax as the one produced by the agent.</dl>
 <h3>Package deployment task specific options</h3>
 <dl>
 <dt><code>&#8211;no-p2p</code></dt>
 <dd> Do not use peer to peer to download files.</dd></dl>
 <h3>Server target specific options</h3>
 <dl>
-<dt><code>-P</code>, <code>&#8211;proxy</code>=<i></i><font SIZE="-1"><i>PROXY</i></font><i></i></dt>
-<dd> Use <i></i><font SIZE="-1"><i>PROXY</i></font><i></i> as <font SIZE="-1">HTTP</font> proxy. </dd>
-<p> By default, the agent uses <font SIZE="-1">HTTP_PROXY</font> environment variable.</p>
-<dt><code>-u</code> <i></i><font SIZE="-1"><i>USER</i></font><i></i>, <code>&#8211;user</code>=<i></i><font SIZE="-1"><i>USER</i></font><i></i></dt>
-<dd> Use <i></i><font SIZE="-1"><i>USER</i></font><i></i> for server authentication.</dd>
-<dt><code>-p</code>, <code>&#8211;password</code>=<i></i><font SIZE="-1"><i>PASSWORD</i></font><i></i></dt>
-<dd> Use <i></i><font SIZE="-1"><i>PASSWORD</i></font><i></i> for server authentication.</dd>
-<dt><code>&#8211;ca-cert-dir</code>=<i></i><font SIZE="-1"><i>DIRECTORY</i></font><i></i></dt>
-<dd> <font SIZE="-1">CA</font> certificates directory.</dd>
-<dt><code>&#8211;ca-cert-file</code>=<i></i><font SIZE="-1"><i>FILE</i></font><i></i></dt>
-<dd> <font SIZE="-1">CA</font> certificates file.</dd>
+<dt><code>-P</code>, <code>&#8211;proxy</code>=<i></i><i>PROXY</i><i></i></dt>
+<dd> Use <i></i><i>PROXY</i><i></i> as HTTP proxy. </dd>
+<p> By default, the agent uses HTTP_PROXY environment variable.</p>
+<dt><code>-u</code> <i></i><i>USER</i><i></i>, <code>&#8211;user</code>=<i></i><i>USER</i><i></i></dt>
+<dd> Use <i></i><i>USER</i><i></i> for server authentication.</dd>
+<dt><code>-p</code>, <code>&#8211;password</code>=<i></i><i>PASSWORD</i><i></i></dt>
+<dd> Use <i></i><i>PASSWORD</i><i></i> for server authentication.</dd>
+<dt><code>&#8211;ca-cert-dir</code>=<i></i><i>DIRECTORY</i><i></i></dt>
+<dd> CA certificates directory.</dd>
+<dt><code>&#8211;ca-cert-file</code>=<i></i><i>FILE</i><i></i></dt>
+<dd> CA certificates file.</dd>
 <dt><code>&#8211;no-ssl-check</code></dt>
-<dd> Do not check server <font SIZE="-1">SSL</font> certificate.</dd>
-<dt><code>&#8211;timeout</code>=<i></i><font SIZE="-1"><i>TIME</i></font><i></i></dt>
+<dd> Do not check server SSL certificate.</dd>
+<dt><code>&#8211;timeout</code>=<i></i><i>TIME</i><i></i></dt>
 <dd> Timeout for server connections.</dd></dl>
 <h3>Web interface options</h3>
 <dl>
 <dt><code>&#8211;no-httpd</code></dt>
 <dd> Disable the embedded web server.</dd>
-<dt><code>&#8211;httpd-ip</code>=<i></i><font SIZE="-1"><i>IP</i></font><i></i></dt>
+<dt><code>&#8211;httpd-ip</code>=<i></i><i>IP</i><i></i></dt>
 <dd> The network interface to use for the embedded web server (all).</dd>
-<dt><code>&#8211;httpd-port</code>=<i></i><font SIZE="-1"><i>PORT</i></font><i></i></dt>
+<dt><code>&#8211;httpd-port</code>=<i></i><i>PORT</i><i></i></dt>
 <dd> The network port to use for the embedded web server (62354).</dd>
-<dt><code>&#8211;httpd-trust</code>=<i></i><font SIZE="-1"><i>IP</i></font><i></i></dt>
+<dt><code>&#8211;httpd-trust</code>=<i></i><i>IP</i><i></i></dt>
 <dd> Trust requests from given addresses without authentication token (false). </dd>
-<p> For example: &#8220;192.168.0.0/24&#8221;, &#8220;192.168.168.0.5&#8221; or an <font SIZE="-1">IP</font> range like &#8220;20.34.101.207 &#8211; 201.3.9.99&#8221;. Hostnames are also accepted. See Net::IP documentation to get more example. </p>
+<p> For example: &#8220;192.168.0.0/24&#8221;, &#8220;192.168.168.0.5&#8221; or an IP range like &#8220;20.34.101.207 &#8211; 201.3.9.99&#8221;. Hostnames are also accepted. See Net::IP documentation to get more example. </p>
 <p> Multiple values can be specified, using comma as a separator.</dl>
 <h3>Logging options</h3>
 <dl>
-<dt><code>&#8211;logger</code>=<i></i><font SIZE="-1"><i>BACKEND</i></font><i></i></dt>
+<dt><code>&#8211;logger</code>=<i></i><i>BACKEND</i><i></i></dt>
 <dd> Logger backend to use. </dd>
 <p> Multiple values can be specified, using comma as a separator. The available backends are:</p>
 <dl>
@@ -266,18 +266,18 @@ description: "fusioninventory-agent – FusionInventory agent For Linux/UNIX, Wi
 <dt>
 </dt><dd>
 <p> Multiple values can be specified, using comma as a separator.</dd></dl>
-<dt><code>&#8211;logfile</code>=<i></i><font SIZE="-1"><i>FILE</i></font><i></i></dt>
-<dd> Log message in <i></i><font SIZE="-1"><i>FILE</i></font><i></i> (implies File logger backend).</dd>
-<dt><code>&#8211;logfile-maxsize</code>=<i></i><font SIZE="-1"><i>SIZE</i></font><i></i></dt>
-<dd> Max logfile size in <font SIZE="-1">MB,</font> default is unlimited. When the max size is reached, the file is truncated. This is only useful if there is no log rotation mechanism on the system.</dd>
-<dt><code>&#8211;logfacility</code>=<i></i><font SIZE="-1"><i>FACILITY</i></font><i></i></dt>
-<dd> Syslog facility to use (default <font SIZE="-1">LOG_USER</font>).</dd>
+<dt><code>&#8211;logfile</code>=<i></i><i>FILE</i><i></i></dt>
+<dd> Log message in <i></i><i>FILE</i><i></i> (implies File logger backend).</dd>
+<dt><code>&#8211;logfile-maxsize</code>=<i></i><i>SIZE</i><i></i></dt>
+<dd> Max logfile size in MB, default is unlimited. When the max size is reached, the file is truncated. This is only useful if there is no log rotation mechanism on the system.</dd>
+<dt><code>&#8211;logfacility</code>=<i></i><i>FACILITY</i><i></i></dt>
+<dd> Syslog facility to use (default LOG_USER).</dd>
 <dt><code>&#8211;color</code></dt>
 <dd> Display color on the terminal, when the Stderr backend is used. </dd>
 <p> This options is ignored on Windows.</dl>
 <h3>Configuration options</h3>
 <dl>
-<dt><code>&#8211;config</code>=<i></i><font SIZE="-1"><i>BACKEND</i></font><i></i></dt>
+<dt><code>&#8211;config</code>=<i></i><i>BACKEND</i><i></i></dt>
 <dd> Configuration backend to use. </dd>
 <p> The available backends are:</p>
 <dl>
@@ -291,27 +291,27 @@ description: "fusioninventory-agent – FusionInventory agent For Linux/UNIX, Wi
 </dl>
 <dl>
 </dl>
-<dt><code>&#8211;conf-file</code>=<i></i><font SIZE="-1"><i>FILE</i></font><i></i></dt>
-<dd> Use <i></i><font SIZE="-1"><i>FILE</i></font><i></i> as configuration file (implies file configuration backend).</dd>
-<dt><code>&#8211;conf-reload-interval</code>=<i></i><font SIZE="-1"><i>SECONDS</i></font><i></i></dt>
-<dd> <font SIZE="-1">SECONDS</font> is the number of seconds between two configuration reloadings. Default value is 0, which means that configuration is never reloaded. Minimum value is 60. If given value is less than this minimum, it is set to this minimum. If given value is less than 0, it is set to 0.</dd></dl>
+<dt><code>&#8211;conf-file</code>=<i></i><i>FILE</i><i></i></dt>
+<dd> Use <i></i><i>FILE</i><i></i> as configuration file (implies file configuration backend).</dd>
+<dt><code>&#8211;conf-reload-interval</code>=<i></i><i>SECONDS</i><i></i></dt>
+<dd> SECONDS is the number of seconds between two configuration reloadings. Default value is 0, which means that configuration is never reloaded. Minimum value is 60. If given value is less than this minimum, it is set to this minimum. If given value is less than 0, it is set to 0.</dd></dl>
 <h3>Execution mode options</h3>
 <dl>
-<dt><code>-w</code> <i></i><font SIZE="-1"><i>LIMIT</i></font><i></i>, <code>&#8211;wait</code>=<i></i><font SIZE="-1"><i>LIMIT</i></font><i></i></dt>
-<dd> Wait a random delay whose value is computed randomly between 0 and <font SIZE="-1">LIMIT</font> seconds, before execution. This is useful when execution is triggered from some kind of system scheduling on multiple clients, to spread the server load.</dd>
+<dt><code>-w</code> <i></i><i>LIMIT</i><i></i>, <code>&#8211;wait</code>=<i></i><i>LIMIT</i><i></i></dt>
+<dd> Wait a random delay whose value is computed randomly between 0 and LIMIT seconds, before execution. This is useful when execution is triggered from some kind of system scheduling on multiple clients, to spread the server load.</dd>
 <dt><code>-d</code>, <code>&#8211;daemon</code></dt>
 <dd> Run the agent as a daemon.</dd>
 <dt><code>&#8211;no-fork</code></dt>
 <dd> Don&#8217;t fork in background. </dd>
 <p> This is only useful when running as a daemon.</p>
-<dt><code>&#8211;pidfile</code>=<i></i><font SIZE="-1"><i>FILE</i></font><i></i></dt>
-<dd> Store pid in <i></i><font SIZE="-1"><i>FILE</i></font><i></i>. </dd>
+<dt><code>&#8211;pidfile</code>=<i></i><i>FILE</i><i></i></dt>
+<dd> Store pid in <i></i><i>FILE</i><i></i>. </dd>
 <p> This is only useful when running as a daemon.</p>
-<dt><code>&#8211;tag</code>=<i></i><font SIZE="-1"><i>TAG</i></font><i></i></dt>
+<dt><code>&#8211;tag</code>=<i></i><i>TAG</i><i></i></dt>
 <dd> Add the given tag to every inventory results.</dd>
 <dt><code>&#8211;debug</code></dt>
 <dd> Turn the debug mode on. You can use the parameter up to 3 times in a row to increase the verbosity (e.g: <code>&#8211;debug &#8211;debug</code>). </dd>
-<p> Level 3 turns on the debug mode of some external libraries like Net::SSLeay. These messages will only be be printed on <font SIZE="-1">STDERR.</font></p>
+<p> Level 3 turns on the debug mode of some external libraries like Net::SSLeay. These messages will only be be printed on STDERR.</p>
 <dt><code>&#8211;setup</code></dt>
 <dd> Print the agent setup directories and exit.</dd>
 <dt><code>&#8211;version</code></dt>

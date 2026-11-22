@@ -15,9 +15,9 @@ description: "docker-search – Search the Docker Hub for images"
 <p> Search Docker Hub for images that match the specified TERM. The table of images returned displays the name, description (truncated by default), number of stars awarded, whether the image is official, and whether it is automated. </p>
 <p> <i>Note</i> &#8211; Search queries will only return up to 25 results </p>
 <h2>Filter</h2>
-<p> Filter output based on these conditions:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; stars=<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; is-automated=(true|false)<br />
+<p> Filter output based on these conditions:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; stars=<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; is-automated=(true|false)<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; is-official=(true|false) </p>
 <h2>EXAMPLES</h2>
 <h2>Search Docker Hub for ranked images</h2>

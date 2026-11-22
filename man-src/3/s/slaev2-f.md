@@ -10,7 +10,7 @@ description: "slaev2.f –"
 <p>slaev2.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>slaev2</code> (A, B, C, RT1, RT2, CS1, SN1)<br />
+<p>subroutine <code>slaev2</code> (A, B, C, RT1, RT2, CS1, SN1)<br/>
  <i></i><code>SLAEV2</code> computes the eigenvalues and eigenvectors of a 2-by-2 symmetric/Hermitian matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slaev2 (realA, realB, realC, realRT1, realRT2, realCS1, realSN1)</h3>

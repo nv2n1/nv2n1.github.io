@@ -11,7 +11,7 @@ description: "dlarrf.f –"
 <p> dlarrf.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dlarrf</code> (N, D, L, LD, CLSTRT, CLEND, W, WGAP, WERR, SPDIAM, CLGAPL, CLGAPR, PIVMIN, SIGMA, DPLUS, LPLUS, WORK, INFO)<br />
+<p> subroutine <code>dlarrf</code> (N, D, L, LD, CLSTRT, CLEND, W, WGAP, WERR, SPDIAM, CLGAPL, CLGAPR, PIVMIN, SIGMA, DPLUS, LPLUS, WORK, INFO)<br/>
  <i></i><code>DLARRF</code> finds a new relatively robust representation such that at least one of the eigenvalues is relatively isolated.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlarrf (integerN, double precision, dimension( * )D, double precision, dimension( * )L, double precision, dimension( * )LD, integerCLSTRT, integerCLEND, double precision, dimension( * )W, double precision, dimension( * )WGAP, double precision, dimension( * )WERR, double precisionSPDIAM, double precisionCLGAPL, double precisionCLGAPR, double precisionPIVMIN, double precisionSIGMA, double precision, dimension( * )DPLUS, double precision, dimension( * )LPLUS, double precision, dimension( * )WORK, integerINFO)</h3>

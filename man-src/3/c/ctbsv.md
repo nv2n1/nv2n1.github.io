@@ -11,7 +11,7 @@ description: "ctbsv.f –"
 <p> ctbsv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>ctbsv</code> (UPLO, TRANS, DIAG, N, K, A, LDA, X, INCX)<br />
+<p> subroutine <code>ctbsv</code> (UPLO, TRANS, DIAG, N, K, A, LDA, X, INCX)<br/>
  <i></i><code>CTBSV</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ctbsv (characterUPLO, characterTRANS, characterDIAG, integerN, integerK, complex, dimension(lda,*)A, integerLDA, complex, dimension(*)X, integerINCX)</h3>

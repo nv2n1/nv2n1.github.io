@@ -27,7 +27,7 @@ tv_grab_na_dd-- help
                                       [--download - only][--padd n][--dropbadchar][--agent NAME]
 </code></pre>
 <h2>DESCRIPTION</h2>
-<p> This script downloads <font SIZE="-1">TV</font> listings using Schedules Direct&#8217;s data service, converts it to <font SIZE="-1">XMLTV</font> format, and outputs the results. </p>
+<p> This script downloads TV listings using Schedules Direct&#8217;s data service, converts it to XMLTV format, and outputs the results. </p>
 <p> You must first register with Schedules Direct at: &lt;<a rel="nofollow" href="http://www.schedulesdirect.org">http://www.schedulesdirect.org</a>&gt; </p>
 <p> Schedules Direct is a non-profit organization whose mission is to provide low-cost television program guide data to end-users of Open Source and Freeware applications. </p>
 <p> The raw data source is Tribune Media Service&#8217;s Data Direct Service, which is very similar to the free Zap2IT Labs service Tribune previously offerred. </p>
@@ -35,7 +35,7 @@ tv_grab_na_dd-- help
 <p> First you must become a member at the &lt;<a rel="nofollow" href="http://www.schedulesdirect.org">http://www.schedulesdirect.org</a>&gt; site. </p>
 <p> Next, you use that website to add lineup(s) to your account. </p>
 <p> Next, you execute <tt>&quot;tv_grab_na_dd --configure&quot;</tt> to set up the grabber. </p>
-<p> Finally, you execute <code>tv_grab_na_dd</code> with no arguments and it will output listings in <font SIZE="-1">XML</font> format to standard output. See below for other options. </p>
+<p> Finally, you execute <code>tv_grab_na_dd</code> with no arguments and it will output listings in XML format to standard output. See below for other options. </p>
 <p> Like many utilities, tv_grab_na_dd tries to exit with a &#8220;0&#8221; on success and something else on error.</p>
 <h2>Stand-alone options</h2>
 <dl>
@@ -49,8 +49,8 @@ tv_grab_na_dd-- help
 <dl>
 <dt>&#8211;configure</dt>
 <dd> Activates configure mode. If a config file already exists the values are used as defaults.</dd>
-<dt>&#8211;gui <font SIZE="-1">OPTION</font></dt>
-<dd> Use this option to enable a graphical interface to be used. <font SIZE="-1">OPTION</font> may be &#8216;Tk&#8217;, or left blank for the best available choice. Additional allowed values of <font SIZE="-1">OPTION</font> are &#8216;Term&#8217; for normal terminal output (default) and &#8216;TermNoProgressBar&#8217; to disable the use of Term::ProgressBar.</dd>
+<dt>&#8211;gui OPTION</dt>
+<dd> Use this option to enable a graphical interface to be used. OPTION may be &#8216;Tk&#8217;, or left blank for the best available choice. Additional allowed values of OPTION are &#8216;Term&#8217; for normal terminal output (default) and &#8216;TermNoProgressBar&#8217; to disable the use of Term::ProgressBar.</dd>
 <dt>&#8211;list-lineups</dt>
 <dd> Lists available lineups. Only requires username in the config file. Used by programs that automate the &#8220;&#8211;configure&#8221; process.</dd></dl>
 <h2>General Options</h2>
@@ -82,18 +82,18 @@ tv_grab_na_dd-- help
 <dd> Write xml to <i>file</i> rather than standard output.</dd>
 <dt>&#8211;list-channel</dt>
 <dd> Same as <code>&#8211;days</code> 0</dd>
-<dt>&#8211;share <i></i><font SIZE="-1"><i>SHAREDIR</i></font><i></i></dt>
-<dd> tv_grab_na_icons stores icons in <i></i><font SIZE="-1"><i>SHAREDIR</i></font><i></i>/icons. The share directory is set at install time, but there may be times when it needs to be specified. (for example: no write access to the default share directory)</dd>
+<dt>&#8211;share <i></i><i>SHAREDIR</i><i></i></dt>
+<dd> tv_grab_na_icons stores icons in <i></i><i>SHAREDIR</i><i></i>/icons. The share directory is set at install time, but there may be times when it needs to be specified. (for example: no write access to the default share directory)</dd>
 <dt>&#8211;list-times</dt>
-<dd> Report to <font SIZE="-1">STDERR</font> the Schedules Direct blockedTime (not currently enforced) and suggestedTime values to assist automated processes with scheduling.</dd>
+<dd> Report to STDERR the Schedules Direct blockedTime (not currently enforced) and suggestedTime values to assist automated processes with scheduling.</dd>
 <dt>&#8211;download-only</dt>
 <dd> Don&#8217;t generate any output, just fetch the data. Personally I don&#8217;t see the point, but it was requested and easy to add.</dd>
 <dt>&#8211;padd <i>n</i></dt>
-<dd> Add &lt;n&gt; spaces to the front of the start date. This is normally not needed, but can be helpful in working around a Tribune problem when the request packet spans <font SIZE="-1">TCP</font> packets. Recommended initial value is &#8220;20&#8221;. This is only needed if you get &#8220;invalid start time&#8221; messages. If this helps, please post results to the list.</dd>
+<dd> Add &lt;n&gt; spaces to the front of the start date. This is normally not needed, but can be helpful in working around a Tribune problem when the request packet spans TCP packets. Recommended initial value is &#8220;20&#8221;. This is only needed if you get &#8220;invalid start time&#8221; messages. If this helps, please post results to the list.</dd>
 <dt>&#8211;dropbadchar</dt>
-<dd> <font SIZE="-1">DD</font> data is supposed to be in <font SIZE="-1">UTF-8</font> format. Sometimes <font SIZE="-1">DD</font> sends bad characters which cause a &#8220;Bad <font SIZE="-1">XML</font> from <font SIZE="-1">DD&#8221;</font> error. This option causes those bad characters to be deleted.</dd>
-<dt>&#8211;agent <font SIZE="-1">NAME</font></dt>
-<dd> appends <font SIZE="-1">NAME</font> to the http agent string when fetching data. This is a polite way to tell Schedules Direct which application is being used. It helps developers know how many people are using their application and gives applications credit towards free accounts.</dd></dl>
+<dd> DD data is supposed to be in UTF-8 format. Sometimes DD sends bad characters which cause a &#8220;Bad XML from DD&#8221; error. This option causes those bad characters to be deleted.</dd>
+<dt>&#8211;agent NAME</dt>
+<dd> appends NAME to the http agent string when fetching data. This is a polite way to tell Schedules Direct which application is being used. It helps developers know how many people are using their application and gives applications credit towards free accounts.</dd></dl>
 <h2>Automating configuration</h2>
 <p> Sometimes applications want to call <code>tv_grab_na_dd</code> as a standalone application, but automate the configure process. The best way is to hook in to the XMLTV::Ask module, but if that&#8217;s not available, here is a solution. </p>
 <dl>
@@ -122,7 +122,7 @@ tv_grab_na_dd-- config - file = lineup1.dat-- output = lineup1.xml-- dd - data =
  tv_cat lineup1.xml lineup2.xml lineup3.xml &gt;guide.xml
 </pre>
 <h2>Non-US/Canada listings. fake postal codes.</h2>
-<p> <font SIZE="-1">TMS</font>&#8216;s Data direct service proivdes listings for a few non US/Canada locations. These are accessed with &#8220;fake&#8221; postal codes. The following are available: </p>
+<p> TMS&#8216;s Data direct service proivdes listings for a few non US/Canada locations. These are accessed with &#8220;fake&#8221; postal codes. The following are available: </p>
 <pre>
     147BERM Bermuda Cablevision
     366HAMI Hamilton, Bermuda Wow World on Wireless
@@ -132,7 +132,7 @@ tv_grab_na_dd-- config - file = lineup1.dat-- output = lineup1.xml-- dd - data =
     512TRIN Trinidad Express
     782YOKO Yokota AFB, Japan. Americable International
 </pre>
-<p> For a more complete list, check the Schedules Direct <font SIZE="-1">FAQ</font></p>
+<p> For a more complete list, check the Schedules Direct FAQ</p>
 <h2>Adding icon links to listings</h2>
 <p> <code>tv_grab_na_dd</code> checks for channel icons in a directory share/<code>icons</code>. The <i>share</i> directory is usually set during the install. For windows exe users, it defaults to the location where <code>xmltv.exe</code> is. <code>tv_grab_na_icons</code> is available to download the icons.</p>
 <h2>Notes on channel lists</h2>
@@ -144,7 +144,7 @@ tv_grab_na_dd-- config - file = lineup1.dat-- output = lineup1.xml-- dd - data =
 <dt>xmltv_ns</dt>
 <dd> always <tt>&quot;..a/b&quot;</tt> for part <tt>&quot;a&quot;</tt> of <tt>&quot;b&quot;</tt>. First two xmltv_ns fields always blank.</dd>
 <dt>dd_progid</dt>
-<dd> <font SIZE="-1">TMS</font> generated <tt>&quot;a.b.c/d&quot;</tt> where <tt>&quot;a&quot;</tt> is a unique program id, <tt>&quot;b&quot;</tt> is a unique episode id, <tt>&quot;c/d&quot;</tt> is part <tt>&quot;c&quot;</tt> of <tt>&quot;d&quot;</tt> similar to xmltv_ns.</dd>
+<dd> TMS generated <tt>&quot;a.b.c/d&quot;</tt> where <tt>&quot;a&quot;</tt> is a unique program id, <tt>&quot;b&quot;</tt> is a unique episode id, <tt>&quot;c/d&quot;</tt> is part <tt>&quot;c&quot;</tt> of <tt>&quot;d&quot;</tt> similar to xmltv_ns.</dd>
 <dt>onscreen</dt>
 <dd> Distributor-designated number corresponding to an episode of a specific show. Varies by distributor.</dd></dl>
 <h2>Notes on passwords</h2>
@@ -153,8 +153,8 @@ tv_grab_na_dd-- config - file = lineup1.dat-- output = lineup1.xml-- dd - data =
 <p> Data Direct currently adds a channel to your lineup automatically when it is available. When <code>tv_grab_na_dd</code> sees the new channel in the Schedules Direct lineup, it prints a message (and potentially adds or ignores it based on &#8211;auto-config). </p>
 <p> If you are sensitive to bandwidth issues, I would set <code>&#8211;auto-config ignore</code> and periodically check your <code>&#8211;config-file</code> for ignored channels and remove from your Schedules Direct lineup.</p>
 <h2>Notes on previously-shown</h2>
-<p> Previous releases of tv_grab_na_dd set <font SIZE="-1">XMLTV</font>&#8216;s &#8220;date&#8221; field for <font SIZE="-1">DD </font>&#8220;original-air-date&#8221; field. The correct place for the data is &#8220;previously-shown-&gt;start&#8221; The <font SIZE="-1">OAD</font> is in both places temporarily for compatability reasons. </p>
-<p> <font SIZE="-1">DD</font> has dropped the &#8220;repeat&#8221; flag and replaced it with a &#8220;new&#8221; flag. Now we set &quot;previously-shown</p>
+<p> Previous releases of tv_grab_na_dd set XMLTV&#8216;s &#8220;date&#8221; field for DD &#8220;original-air-date&#8221; field. The correct place for the data is &#8220;previously-shown-&gt;start&#8221; The OAD is in both places temporarily for compatability reasons. </p>
+<p> DD has dropped the &#8220;repeat&#8221; flag and replaced it with a &#8220;new&#8221; flag. Now we set &quot;previously-shown</p>
 <h2>Known issues</h2>
 <p> none!</p>
 <h2>SEE ALSO</h2>

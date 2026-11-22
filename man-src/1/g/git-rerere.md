@@ -19,7 +19,7 @@ description: "git-rerere – Reuse recorded resolution of conflicted merges"
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> You need to set the configuration variable <code>rerere.enabled</code> in order to enable this command. </p>
 </dl>
 <h2>COMMANDS</h2>
@@ -61,9 +61,9 @@ o-- - *-- -o topic / o-- - o-- - o-- - *-- -o-- - o master
 <dl>
 <dt>
 </dt><dd>
-$ git switch topic<br />
-        $ git merge master<br />
-            o&#8211; &#8211;<br />
+$ git switch topic<br/>
+        $ git merge master<br/>
+            o&#8211; &#8211;<br/>
     *&#8211; -o&#8211; &#8211; +topic / / o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; *&#8211; -o&#8211; &#8211; o master
 </dd></dl>
 <p> The commits marked with <code>*</code> touch the same area in the same file; you need to resolve the conflicts when creating the commit marked with <code>+</code>. Then you can test the result to make sure your work-in-progress still works with what is in the latest master. </p>
@@ -71,12 +71,12 @@ $ git switch topic<br />
 <dl>
 <dt>
 </dt><dd>
-$ git switch topic<br />
-        $ git merge master<br />
-            $&#8230; work on both topic and master branches<br />
-                $ git switch master<br />
-                    $ git merge topic<br />
-                        o&#8211; &#8211;<br />
+$ git switch topic<br/>
+        $ git merge master<br/>
+            $&#8230; work on both topic and master branches<br/>
+                $ git switch master<br/>
+                    $ git merge topic<br/>
+                        o&#8211; &#8211;<br/>
     *&#8211; -o&#8211; &#8211; +&#8211; -o&#8211; &#8211; o topic / / o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; *&#8211; -o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; +master
 </dd></dl>
 <p> When your topic branch is long-lived, however, your topic branch would end up having many such &quot;Merge from master&quot; commits on it, which would unnecessarily clutter the development history. Readers of the Linux kernel mailing list may remember that Linus complained about such too frequent test merges when a subsystem maintainer asked to pull from a branch full of &quot;useless merges&quot;. </p>
@@ -84,15 +84,15 @@ $ git switch topic<br />
 <dl>
 <dt>
 </dt><dd>
-$ git switch topic<br />
-        $ git merge master<br />
-            $ git reset&#8211; hard HEAD ^<br />
-    ;<br />
-#rewind the test merge<br />
-        $&#8230; work on both topic and master branches<br />
-            $ git switch master<br />
-                $ git merge topic<br />
-                    o&#8211; &#8211;<br />
+$ git switch topic<br/>
+        $ git merge master<br/>
+            $ git reset&#8211; hard HEAD ^<br/>
+    ;<br/>
+#rewind the test merge<br/>
+        $&#8230; work on both topic and master branches<br/>
+            $ git switch master<br/>
+                $ git merge topic<br/>
+                    o&#8211; &#8211;<br/>
     *&#8211; -o&#8211; &#8212; &#8212; -o&#8211; &#8211; o topic / o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; *&#8211; -o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; +master
 </dd></dl>
 <p> This would leave only one merge commit when your topic branch is finally ready and merged into the master branch. This merge would require you to resolve the conflict, introduced by the commits marked with <code>*</code>. However, this conflict is often the same conflict you resolved when you created the test merge you blew away. <i>git rerere</i> helps you resolve this final conflicted merge using the information from your earlier hand resolve. </p>

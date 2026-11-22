@@ -15,7 +15,7 @@ description: "std::numpunct<CharT>::thousands_sep,do_thousands_sep – std::nump
 protected:
 (2)
     virtual char_type do_thousands_sep() const;</code></pre>
-<p>1) Public member function, calls the member function do_thousands_sep of the most derived class.<br />
+<p>1) Public member function, calls the member function do_thousands_sep of the most derived class.<br/>
 2) Returns the character to be used as the separator between digit groups when parsing or formatting integers and integral parts of floating-point values. </p>
 <h2>Return value</h2>
 <p>The object of type char_type to use as the thousands separator. The standard specializations of std::numpunct return &#8216;,&#8217; and L&#8217;,&#8217;. </p>
@@ -43,9 +43,9 @@ int main()
 }
 </code></pre>
 <h2>Output:</h2>
-<p>&nbsp;<wbr>&nbsp;default locale: 12345678<br />
+<p>&nbsp;<wbr>&nbsp;default locale: 12345678<br/>
 &nbsp;<wbr>&nbsp;locale with modified numpunct: 1 2 3 4 5 6 7 8</p>
 <h2>See also</h2>
-<p>do_grouping provides the numbers of digits between each pair of thousands separators<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(virtual protected member function)</i><br />
+<p>do_grouping provides the numbers of digits between each pair of thousands separators<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(virtual protected member function)</i><br/>
 <code>[virtual]</code> </p>

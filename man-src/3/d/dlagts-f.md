@@ -10,7 +10,7 @@ description: "dlagts.f –"
 <p>dlagts.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dlagts</code> (JOB, N, A, B, C, D, IN, Y, TOL, INFO)<br />
+<p>subroutine <code>dlagts</code> (JOB, N, A, B, C, D, IN, Y, TOL, INFO)<br/>
  <i></i><code>DLAGTS</code> solves the system of equations (T-λI)x = y or (T-λI)Tx = y,where T is a general tridiagonal matrix and λ a scalar, using the LU factorization computed by slagtf.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlagts (integerJOB, integerN, double precision, dimension( * )A, double precision, dimension( * )B, double precision, dimension( * )C, double precision, dimension( * )D, integer, dimension( * )IN, double precision, dimension( * )Y, double precisionTOL, integerINFO)</h3>

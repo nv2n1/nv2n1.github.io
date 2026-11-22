@@ -11,8 +11,8 @@ description: "aa_createedit – Simple interactive line editor provided as helpe
 <p> aa_createedit &#8211; Simple interactive line editor provided as helper function.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>
-<p> struct aa_edit *aa_createedit<br />
- (<br />
+<p> struct aa_edit *aa_createedit<br/>
+ (<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>aa_context *c,</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>int x,</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>int y,</p>

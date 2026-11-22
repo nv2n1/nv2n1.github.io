@@ -10,7 +10,7 @@ description: "dtbcon.f –"
 <p>dtbcon.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dtbcon</code> (NORM, UPLO, DIAG, N, KD, AB, LDAB, RCOND, WORK, IWORK, INFO)<br />
+<p>subroutine <code>dtbcon</code> (NORM, UPLO, DIAG, N, KD, AB, LDAB, RCOND, WORK, IWORK, INFO)<br/>
  <i></i><code>DTBCON</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dtbcon (characterNORM, characterUPLO, characterDIAG, integerN, integerKD, double precision, dimension( ldab, * )AB, integerLDAB, double precisionRCOND, double precision, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>

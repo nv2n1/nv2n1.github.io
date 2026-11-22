@@ -23,12 +23,12 @@ description: "tlmgr – the native TeX Live Manager"
 <dt>&quot;tlmgr option repository ctan&quot;</dt>
 <dd>
 </dd><dt>&quot;tlmgr option repository <a rel="nofollow" href="https://mirror.ctan.org/systems/texlive/tlnet">https://mirror.ctan.org/systems/texlive/tlnet</a>&quot;</dt>
-<dd> Tell <tt>&quot;tlmgr&quot;</tt> to use a nearby <font SIZE="-1">CTAN</font> mirror for future updates; useful if you installed TeX Live from the <font SIZE="-1">DVD</font> image and want to have continuing updates. The two commands are equivalent; <tt>&quot;ctan&quot;</tt> is just an alias for the given url. </dd>
-<p> Caveat: <tt>&quot;mirror.ctan.org&quot;</tt> resolves to many different hosts, and they are not perfectly synchronized; we recommend updating only daily (at most), and not more often. You can choose a particular mirror if problems; the list of all <font SIZE="-1">CTAN</font> mirrors with the status of each is at &lt;<a rel="nofollow" href="https://ctan.org/mirrors/mirmon">https://ctan.org/mirrors/mirmon</a>&gt;.</p>
+<dd> Tell <tt>&quot;tlmgr&quot;</tt> to use a nearby CTAN mirror for future updates; useful if you installed TeX Live from the DVD image and want to have continuing updates. The two commands are equivalent; <tt>&quot;ctan&quot;</tt> is just an alias for the given url. </dd>
+<p> Caveat: <tt>&quot;mirror.ctan.org&quot;</tt> resolves to many different hosts, and they are not perfectly synchronized; we recommend updating only daily (at most), and not more often. You can choose a particular mirror if problems; the list of all CTAN mirrors with the status of each is at &lt;<a rel="nofollow" href="https://ctan.org/mirrors/mirmon">https://ctan.org/mirrors/mirmon</a>&gt;.</p>
 <dt>&quot;tlmgr update &#8211;list&quot;</dt>
 <dd> Report what would be updated without actually updating anything.</dd>
 <dt>&quot;tlmgr update &#8211;all&quot;</dt>
-<dd> Make your local TeX installation correspond to what is in the package repository (typically useful when updating from <font SIZE="-1">CTAN</font>).</dd>
+<dd> Make your local TeX installation correspond to what is in the package repository (typically useful when updating from CTAN).</dd>
 <dt>&quot;tlmgr info&quot; <i>what</i></dt>
 <dd> Display detailed information about a package <i>what</i>, such as the installation status and description, of searches for <i>what</i> in all packages.</dd></dl>
 <p> For all the capabilities and details of <tt>&quot;tlmgr&quot;</tt>, please read the following voluminous information.</p>
@@ -36,13 +36,13 @@ description: "tlmgr – the native TeX Live Manager"
 <p> The following options to <tt>&quot;tlmgr&quot;</tt> are global options, not specific to any action. All options, whether global or action-specific, can be given anywhere on the command line, and in any order. The first non-option argument will be the main action. In all cases, <tt>&quot;--&quot;</tt><i>option</i> and <tt>&quot;-&quot;</tt><i>option</i> are equivalent, and an <tt>&quot;=&quot;</tt> is optional between an option name and its value.</p>
 <dl>
 <dt><code>&#8211;repository</code> <i>url|path</i></dt>
-<dd> Specify the package repository from which packages should be installed or updated, either a local directory or network location, as below. This overridesthe default package repository found in the installation&#8217;s TeX Live Package Database (a.k.a. the <font SIZE="-1">TLPDB,</font> which is given entirely in the file <tt>&quot;tlpkg/texlive.tlpdb&quot;</tt>). </dd>
+<dd> Specify the package repository from which packages should be installed or updated, either a local directory or network location, as below. This overridesthe default package repository found in the installation&#8217;s TeX Live Package Database (a.k.a. the TLPDB, which is given entirely in the file <tt>&quot;tlpkg/texlive.tlpdb&quot;</tt>). </dd>
 <p> This <tt>&quot;--repository&quot;</tt> option changes the location only for the current run; to make a permanent change, use <tt>&quot;option repository&quot;</tt> (see the &#8220;option&#8221; action). </p>
-<p> As an example, you can choose a particular <font SIZE="-1">CTAN</font> mirror with something like this: </p>
+<p> As an example, you can choose a particular CTAN mirror with something like this: </p>
 <pre>
   -repository <a rel="nofollow" href="http://ctan.example.org/its/ctan/dir/systems/texlive/tlnet">http://ctan.example.org/its/ctan/dir/systems/texlive/tlnet</a>
 </pre>
-<p> Of course a real hostname and its particular top-level <font SIZE="-1">CTAN</font> directory have to be specified. The list of <font SIZE="-1">CTAN</font> mirrors is available at &lt;<a rel="nofollow" href="https://ctan.org/mirrors/mirmon">https://ctan.org/mirrors/mirmon</a>&gt;. </p>
+<p> Of course a real hostname and its particular top-level CTAN directory have to be specified. The list of CTAN mirrors is available at &lt;<a rel="nofollow" href="https://ctan.org/mirrors/mirmon">https://ctan.org/mirrors/mirmon</a>&gt;. </p>
 <p> Here&#8217;s an example of using a local directory: </p>
 <pre>
   -repository /local/TL/repository
@@ -58,13 +58,13 @@ description: "tlmgr – the native TeX Live Manager"
 <dt>&quot;ctan&quot;</dt>
 <dd>
 </dd><dt>&quot;<a rel="nofollow" href="https://mirror.ctan.org/systems/texlive/tlnet">https://mirror.ctan.org/systems/texlive/tlnet</a>&quot;</dt>
-<dd> Pick a <font SIZE="-1">CTAN</font> mirror automatically, trying for one that is both nearby and up-to-date. The chosen mirror is used for the entire download. The bare <tt>&quot;ctan&quot;</tt> is merely an alias for the full url. (See &lt;<a rel="nofollow" href="https://ctan.org">https://ctan.org</a>&gt; for more about <font SIZE="-1">CTAN</font> and its mirrors.)</dd>
+<dd> Pick a CTAN mirror automatically, trying for one that is both nearby and up-to-date. The chosen mirror is used for the entire download. The bare <tt>&quot;ctan&quot;</tt> is merely an alias for the full url. (See &lt;<a rel="nofollow" href="https://ctan.org">https://ctan.org</a>&gt; for more about CTAN and its mirrors.)</dd>
 <dt>&quot;<a rel="nofollow" href="http://server/path/to/tlnet">http://server/path/to/tlnet</a>&quot;</dt>
-<dd> Standard <font SIZE="-1">HTTP.</font> If the (default) <font SIZE="-1">LWP</font> method is used, persistent connections are supported. <font SIZE="-1">TL</font> can also use <tt>&quot;curl&quot;</tt> or <tt>&quot;wget&quot;</tt> to do the downloads, or an arbitrary user-specified program, as described in the <tt>&quot;tlmgr&quot;</tt> documentation (&lt;<a rel="nofollow" href="https://tug.org/texlive/doc/tlmgr.html#ENVIRONMENT-VARIABLES">https://tug.org/texlive/doc/tlmgr.html#ENVIRONMENT-VARIABLES</a>&gt;).</dd>
+<dd> Standard HTTP. If the (default) LWP method is used, persistent connections are supported. TL can also use <tt>&quot;curl&quot;</tt> or <tt>&quot;wget&quot;</tt> to do the downloads, or an arbitrary user-specified program, as described in the <tt>&quot;tlmgr&quot;</tt> documentation (&lt;<a rel="nofollow" href="https://tug.org/texlive/doc/tlmgr.html#ENVIRONMENT-VARIABLES">https://tug.org/texlive/doc/tlmgr.html#ENVIRONMENT-VARIABLES</a>&gt;).</dd>
 <dt>&quot;<a rel="nofollow" href="https://server/path/to/tlnet">https://server/path/to/tlnet</a>&quot;</dt>
-<dd> Again, if the (default) <font SIZE="-1">LWP</font> method is used, this supports persistent connections. Unfortunately, some versions of <tt>&quot;wget&quot;</tt> and <tt>&quot;curl&quot;</tt> do not support https, and even when <tt>&quot;wget&quot;</tt> supports https, certificates may be rejected even when the certificate is fine, due to a lack of local certificate roots. The simplest workaround for this problem is to use http or ftp.</dd>
+<dd> Again, if the (default) LWP method is used, this supports persistent connections. Unfortunately, some versions of <tt>&quot;wget&quot;</tt> and <tt>&quot;curl&quot;</tt> do not support https, and even when <tt>&quot;wget&quot;</tt> supports https, certificates may be rejected even when the certificate is fine, due to a lack of local certificate roots. The simplest workaround for this problem is to use http or ftp.</dd>
 <dt>&quot;<a href="ftp://server/path/to/tlnet">ftp://server/path/to/tlnet</a>&quot;</dt>
-<dd> If the (default) <font SIZE="-1">LWP</font> method is used, persistent connections are supported.</dd>
+<dd> If the (default) LWP method is used, persistent connections are supported.</dd>
 <dt>&quot;user [at] machine:/path/to/tlnet&quot;</dt>
 <dd>
 </dd><dt>&quot;<a href="scp://user@machine/path/to/tlnet">scp://user@machine/path/to/tlnet</a>&quot;</dt>
@@ -77,22 +77,22 @@ description: "tlmgr – the native TeX Live Manager"
 </dt><dd>
 <p> If the repository is on the network, trailing <tt>&quot;/&quot;</tt> characters and/or trailing <tt>&quot;/tlpkg&quot;</tt> and/or <tt>&quot;/archive&quot;</tt> components are ignored.</dd></dl>
 <dt><code>&#8211;gui</code> [<i>action</i>]</dt>
-<dd> Two notable <font SIZE="-1">GUI</font> front-ends for <tt>&quot;tlmgr&quot;</tt>, <tt>&quot;tlshell&quot;</tt> and <tt>&quot;tlcockpit&quot;</tt>, are started up as separate programs; see their own documentation. </dd>
-<p> <tt>&quot;tlmgr&quot;</tt> itself has a graphical interface as well as the command line interface. You can give the option to invoke it, <tt>&quot;--gui&quot;</tt>, together with an action to be brought directly into the respective screen of the <font SIZE="-1">GUI.</font> For example, running </p>
+<dd> Two notable GUI front-ends for <tt>&quot;tlmgr&quot;</tt>, <tt>&quot;tlshell&quot;</tt> and <tt>&quot;tlcockpit&quot;</tt>, are started up as separate programs; see their own documentation. </dd>
+<p> <tt>&quot;tlmgr&quot;</tt> itself has a graphical interface as well as the command line interface. You can give the option to invoke it, <tt>&quot;--gui&quot;</tt>, together with an action to be brought directly into the respective screen of the GUI. For example, running </p>
 <pre>
   tlmgr --gui update
 </pre>
-<p> starts you directly at the update screen. If no action is given, the <font SIZE="-1">GUI</font> will be started at the main screen. See &#8220;<font SIZE="-1">GUI FOR TLMGR&#8221;</font>. </p>
-<p> However, the native <font SIZE="-1">GUI</font> requires Perl/TK, which is no longer included in TeX Live&#8217;s Perl distribution for Windows. You may find <tt>&quot;tlshell&quot;</tt> or <tt>&quot;tlcockpit&quot;</tt> easier to work with.</p>
+<p> starts you directly at the update screen. If no action is given, the GUI will be started at the main screen. See &#8220;GUI FOR TLMGR&#8221;. </p>
+<p> However, the native GUI requires Perl/TK, which is no longer included in TeX Live&#8217;s Perl distribution for Windows. You may find <tt>&quot;tlshell&quot;</tt> or <tt>&quot;tlcockpit&quot;</tt> easier to work with.</p>
 <dt><code>&#8211;gui-lang</code> <i>llcode</i></dt>
-<dd> By default, the <font SIZE="-1">GUI</font> tries to deduce your language from the environment (on Windows via the registry, on Unix via <tt>&quot;LC_MESSAGES&quot;</tt>). If that fails you can select a different language by giving this option with a language code (based on <font SIZE="-1">ISO 639-1</font>). Currently supported (but not necessarily completely translated) are: English&nbsp;(en, default), Czech&nbsp;(cs), German&nbsp;(de), French&nbsp;(fr), Italian&nbsp;(it), Japanese&nbsp;(ja), Dutch&nbsp;(nl), Polish&nbsp;(pl), Brazilian Portuguese&nbsp;(pt_BR), Russian&nbsp;(ru), Slovak&nbsp;(sk), Slovenian&nbsp;(sl), Serbian&nbsp;(sr), Ukrainian&nbsp;(uk), Vietnamese&nbsp;(vi), simplified Chinese&nbsp;(zh_CN), and traditional Chinese&nbsp;(zh_TW). </dd>
+<dd> By default, the GUI tries to deduce your language from the environment (on Windows via the registry, on Unix via <tt>&quot;LC_MESSAGES&quot;</tt>). If that fails you can select a different language by giving this option with a language code (based on ISO 639-1). Currently supported (but not necessarily completely translated) are: English&nbsp;(en, default), Czech&nbsp;(cs), German&nbsp;(de), French&nbsp;(fr), Italian&nbsp;(it), Japanese&nbsp;(ja), Dutch&nbsp;(nl), Polish&nbsp;(pl), Brazilian Portuguese&nbsp;(pt_BR), Russian&nbsp;(ru), Slovak&nbsp;(sk), Slovenian&nbsp;(sl), Serbian&nbsp;(sr), Ukrainian&nbsp;(uk), Vietnamese&nbsp;(vi), simplified Chinese&nbsp;(zh_CN), and traditional Chinese&nbsp;(zh_TW). </dd>
 <p> tlshell shares its message catalog with tlmgr.</p>
 <dt><code>&#8211;command-logfile</code> <i>file</i></dt>
 <dd> <tt>&quot;tlmgr&quot;</tt> logs the output of all programs invoked (mktexlr, mtxrun, fmtutil, updmap) to a separate log file, by default <tt>&quot;TEXMFSYSVAR/web2c/tlmgr-commands.log&quot;</tt>. This option allows you to specify a different file for the log.</dd>
 <dt><code>&#8211;debug-translation</code></dt>
-<dd> In <font SIZE="-1">GUI</font> mode, this switch tells <tt>&quot;tlmgr&quot;</tt> to report any untranslated (or missing) messages to standard error. This can help translators to see what remains to be done.</dd>
+<dd> In GUI mode, this switch tells <tt>&quot;tlmgr&quot;</tt> to report any untranslated (or missing) messages to standard error. This can help translators to see what remains to be done.</dd>
 <dt><code>&#8211;machine-readable</code></dt>
-<dd> Instead of the normal output intended for human consumption, write (to standard output) a fixed format more suitable for machine parsing. See the &#8220;MACHINE-READABLE <font SIZE="-1">OUTPUT&#8221;</font> section below.</dd>
+<dd> Instead of the normal output intended for human consumption, write (to standard output) a fixed format more suitable for machine parsing. See the &#8220;MACHINE-READABLE OUTPUT&#8221; section below.</dd>
 <dt><code>&#8211;no-execute-actions</code></dt>
 <dd> Suppress the execution of the execute actions as defined in the tlpsrc files. Documented only for completeness, as this is only useful in debugging.</dd>
 <dt><code>&#8211;package-logfile</code> <i>file</i></dt>
@@ -107,11 +107,11 @@ description: "tlmgr – the native TeX Live Manager"
 <dt><code>&#8211;pin-file</code></dt>
 <dd> Change the pinning file location from <tt>&quot;TEXMFLOCAL/tlpkg/pinning.txt&quot;</tt> (see &#8220;Pinning&#8221; below). Documented only for completeness, as this is only useful in debugging.</dd>
 <dt><code>&#8211;usermode</code></dt>
-<dd> Activates user mode for this run of <tt>&quot;tlmgr&quot;</tt>; see &#8220;<font SIZE="-1">USER MODE&#8221;</font> below.</dd>
+<dd> Activates user mode for this run of <tt>&quot;tlmgr&quot;</tt>; see &#8220;USER MODE&#8221; below.</dd>
 <dt><code>&#8211;usertree</code> <i>dir</i></dt>
-<dd> Uses <i>dir</i> for the tree in user mode; see &#8220;<font SIZE="-1">USER MODE&#8221;</font> below.</dd>
+<dd> Uses <i>dir</i> for the tree in user mode; see &#8220;USER MODE&#8221; below.</dd>
 <dt><code>&#8211;verify-repo=[none|main|all]</code></dt>
-<dd> Defines the level of verification done: If <tt>&quot;none&quot;</tt> is specified, no verification whatsoever is done. If <tt>&quot;main&quot;</tt> is given and a working GnuPG (<tt>&quot;gpg&quot;</tt>) binary is available, all repositories are checked, but only the main repository is required to be signed. If <tt>&quot;all&quot;</tt> is given, then all repositories need to be signed. See &#8220;<font SIZE="-1">CRYPTOGRAPHIC VERIFICATION&#8221;</font> below for details.</dd></dl>
+<dd> Defines the level of verification done: If <tt>&quot;none&quot;</tt> is specified, no verification whatsoever is done. If <tt>&quot;main&quot;</tt> is given and a working GnuPG (<tt>&quot;gpg&quot;</tt>) binary is available, all repositories are checked, but only the main repository is required to be signed. If <tt>&quot;all&quot;</tt> is given, then all repositories need to be signed. See &#8220;CRYPTOGRAPHIC VERIFICATION&#8221; below for details.</dd></dl>
 <p> The standard options for TeX Live programs are also accepted: <tt>&quot;--help/-h/-?&quot;</tt>, <tt>&quot;--version&quot;</tt>, <tt>&quot;-q&quot;</tt> (no informational messages), <tt>&quot;-v&quot;</tt> (debugging messages, can be repeated). For the details about these, see the <tt>&quot;TeXLive::TLUtils&quot;</tt> documentation. </p>
 <p> The <tt>&quot;--version&quot;</tt> option shows version information about the TeX Live release and about the <tt>&quot;tlmgr&quot;</tt> script itself. If <tt>&quot;-v&quot;</tt> is also given, revision number for the loaded TeX Live Perl modules are shown, too.</p>
 <h2>ACTIONS</h2>
@@ -125,17 +125,17 @@ description: "tlmgr – the native TeX Live Manager"
 <dt><code>backup [</code>option<code>&#8230;] &#8211;all</code></dt>
 <dd>
 </dd><dt><code>backup [</code>option<code>&#8230;] </code>pkg<code>&#8230;</code></dt>
-<dd> If the <tt>&quot;--clean&quot;</tt> option is not specified, this action makes a backup of the given packages, or all packages given <tt>&quot;--all&quot;</tt>. These backups are saved to the value of the <tt>&quot;--backupdir&quot;</tt> option, if that is an existing and writable directory. If <tt>&quot;--backupdir&quot;</tt> is not given, the <tt>&quot;backupdir&quot;</tt> option setting in the <font SIZE="-1">TLPDB</font> is used, if present. If both are missing, no backups are made. (The installer sets <tt>&quot;backupdir&quot;</tt> to <tt>&quot;.../tlpkg/backups&quot;</tt>, under the <font SIZE="-1">TL</font> root installation directory, so it is usually defined; see the &#8220;option&#8221; description for more information.) </dd>
+<dd> If the <tt>&quot;--clean&quot;</tt> option is not specified, this action makes a backup of the given packages, or all packages given <tt>&quot;--all&quot;</tt>. These backups are saved to the value of the <tt>&quot;--backupdir&quot;</tt> option, if that is an existing and writable directory. If <tt>&quot;--backupdir&quot;</tt> is not given, the <tt>&quot;backupdir&quot;</tt> option setting in the TLPDB is used, if present. If both are missing, no backups are made. (The installer sets <tt>&quot;backupdir&quot;</tt> to <tt>&quot;.../tlpkg/backups&quot;</tt>, under the TL root installation directory, so it is usually defined; see the &#8220;option&#8221; description for more information.) </dd>
 <p> If the <tt>&quot;--clean&quot;</tt> option is specified, backups are pruned (removed) instead of saved. The optional integer value <i>N</i> may be specified to set the number of backups that will be retained when cleaning. If <tt>&quot;N&quot;</tt> is not given, the value of the <tt>&quot;autobackup&quot;</tt> option is used. If both are missing, an error is issued. For more details of backup pruning, see the <tt>&quot;option&quot;</tt> action. </p>
 <p> Options:</p>
 <dl>
 <dl>
 <dt><code>&#8211;backupdir</code> <i>directory</i></dt>
-<dd> Overrides the <tt>&quot;backupdir&quot;</tt> option setting in the <font SIZE="-1">TLPDB.</font> The <i>directory</i> argument is required and must specify an existing, writable directory where backups are to be placed.</dd>
+<dd> Overrides the <tt>&quot;backupdir&quot;</tt> option setting in the TLPDB. The <i>directory</i> argument is required and must specify an existing, writable directory where backups are to be placed.</dd>
 <dt><code>&#8211;all</code></dt>
 <dd> If <tt>&quot;--clean&quot;</tt> is not specified, make a backup of all packages in the TeX Live installation; this will take quite a lot of space and time. If <tt>&quot;--clean&quot;</tt> is specified, all packages are pruned.</dd>
 <dt><code>&#8211;clean</code>[=<i>N</i>]</dt>
-<dd> Instead of making backups, prune the backup directory of old backups, as explained above. The optional integer argument <i>N</i> overrides the <tt>&quot;autobackup&quot;</tt> option set in the <font SIZE="-1">TLPDB.</font> You must use <tt>&quot;--all&quot;</tt> or a list of packages together with this option, as desired.</dd>
+<dd> Instead of making backups, prune the backup directory of old backups, as explained above. The optional integer argument <i>N</i> overrides the <tt>&quot;autobackup&quot;</tt> option set in the TLPDB. You must use <tt>&quot;--all&quot;</tt> or a list of packages together with this option, as desired.</dd>
 <dt><code>&#8211;dry-run</code></dt>
 <dd> Nothing is actually backed up or removed; instead, the actions to be performed are written to the terminal.</dd></dl>
 </dl>
@@ -143,7 +143,7 @@ description: "tlmgr – the native TeX Live Manager"
 </dl>
 </dl>
 <h3>candidates <i>pkg</i></h3>
-<p> Shows the available candidate repositories for package <i>pkg</i>. See &#8220;<font SIZE="-1">MULTIPLE REPOSITORIES&#8221;</font> below.</p>
+<p> Shows the available candidate repositories for package <i>pkg</i>. See &#8220;MULTIPLE REPOSITORIES&#8221; below.</p>
 <h3>check [<i>option</i>&#8230;] [depends|executes|files|runfiles|texmfdbs|all]</h3>
 <p> Execute one (or all) check(s) of the consistency of the installation. If no problems are found, there will be no output. (To get a view of what is being done, run <tt>&quot;tlmgr -v check&quot;</tt>.)</p>
 <dl>
@@ -153,7 +153,7 @@ description: "tlmgr – the native TeX Live Manager"
 <dt><code>executes</code></dt>
 <dd> Check that the files referred to by <tt>&quot;execute&quot;</tt> directives in the TeX Live Database are present.</dd>
 <dt><code>files</code></dt>
-<dd> Checks that all files listed in the local <font SIZE="-1">TLPDB</font> (<tt>&quot;texlive.tlpdb&quot;</tt>) are actually present, and lists those missing.</dd>
+<dd> Checks that all files listed in the local TLPDB (<tt>&quot;texlive.tlpdb&quot;</tt>) are actually present, and lists those missing.</dd>
 <dt><code>runfiles</code></dt>
 <dd> List those filenames that are occurring more than one time in the runfiles sections, except for known duplicates.</dd>
 <dt><code>texmfdbs</code></dt>
@@ -175,7 +175,7 @@ description: "tlmgr – the native TeX Live Manager"
 <p> Options:</p>
 <dl>
 <dt><code>&#8211;use-svn</code></dt>
-<dd> Use the output of <tt>&quot;svn status&quot;</tt> instead of listing the files; for checking the <font SIZE="-1">TL</font> development repository. (This is run nightly.)</dd></dl>
+<dd> Use the output of <tt>&quot;svn status&quot;</tt> instead of listing the files; for checking the TL development repository. (This is run nightly.)</dd></dl>
 <h3>conf</h3>
 <dl>
 <dt><code>conf [texmf|tlmgr|updmap [&#8211;conffile </code>file<code>] [&#8211;delete] [</code>key<code> [</code>value<code>]]]</code></dt>
@@ -185,7 +185,7 @@ description: "tlmgr – the native TeX Live Manager"
 <p> With one of <tt>&quot;conf texmf&quot;</tt>, <tt>&quot;conf tlmgr&quot;</tt>, or <tt>&quot;conf updmap&quot;</tt>, shows all key/value pairs (i.e., all settings) as saved in <tt>&quot;ROOT/texmf.cnf&quot;</tt>, the user-specific <tt>&quot;tlmgr&quot;</tt> configuration file (see below), or the first found (via <tt>&quot;kpsewhich&quot;</tt>) <tt>&quot;updmap.cfg&quot;</tt> file, respectively. </p>
 <p> If <i>key</i> is given in addition, shows the value of only that <i>key</i> in the respective file. If option <i>&#8211;delete</i> is also given, the value in the given configuration file is entirely removed (not just commented out). </p>
 <p> If <i>value</i> is given in addition, <i>key</i> is set to <i>value</i> in the respective file. <i>No error checking is done!</i> </p>
-<p> The <tt>&quot;PATH&quot;</tt> value shown by <tt>&quot;conf&quot;</tt> is as used by <tt>&quot;tlmgr&quot;</tt>. The directory in which the <tt>&quot;tlmgr&quot;</tt> executable is found is automatically prepended to the <font SIZE="-1">PATH</font> value inherited from the environment. </p>
+<p> The <tt>&quot;PATH&quot;</tt> value shown by <tt>&quot;conf&quot;</tt> is as used by <tt>&quot;tlmgr&quot;</tt>. The directory in which the <tt>&quot;tlmgr&quot;</tt> executable is found is automatically prepended to the PATH value inherited from the environment. </p>
 <p> Here is a practical example of changing configuration values. If the execution of (some or all) system commands via <tt>&quot;\write18&quot;</tt> was left enabled during installation, you can disable it afterwards: </p>
 <pre>
   tlmgr conf texmf shell_escape 0
@@ -198,22 +198,22 @@ description: "tlmgr – the native TeX Live Manager"
 <p> In all cases the configuration file can be explicitly specified via the option <tt>&quot;--conffile&quot;</tt> <i>file</i>, e.g., if you don&#8217;t want to change the system-wide configuration. </p>
 <p> Warning: The general facility for changing configuration values is here, but tinkering with settings in this way is strongly discouraged. Again, no error checking on either keys or values is done, so any sort of breakage is possible.</dl>
 <h3>dump-tlpdb [<i>option</i>&#8230;] [&#8211;json]</h3>
-<p> Dump complete local or remote <font SIZE="-1">TLPDB</font> to standard output, as-is. The output is analogous to the <tt>&quot;--machine-readable&quot;</tt> output; see &#8220;MACHINE-READABLE <font SIZE="-1">OUTPUT&#8221;</font> section. </p>
+<p> Dump complete local or remote TLPDB to standard output, as-is. The output is analogous to the <tt>&quot;--machine-readable&quot;</tt> output; see &#8220;MACHINE-READABLE OUTPUT&#8221; section. </p>
 <p> Options:</p>
 <dl>
 <dt><code>&#8211;local</code></dt>
-<dd> Dump the local <font SIZE="-1">TLPDB.</font></dd>
+<dd> Dump the local TLPDB.</dd>
 <dt><code>&#8211;remote</code></dt>
-<dd> Dump the remote <font SIZE="-1">TLPDB.</font></dd>
+<dd> Dump the remote TLPDB.</dd>
 <dt><code>&#8211;json</code></dt>
-<dd> Instead of dumping the actual content, the database is dumped as <font SIZE="-1">JSON.</font> For the format of <font SIZE="-1">JSON</font> output see <tt>&quot;tlpkg/doc/JSON-formats.txt&quot;</tt>, format definition <tt>&quot;TLPDB&quot;</tt>.</dd></dl>
+<dd> Instead of dumping the actual content, the database is dumped as JSON. For the format of JSON output see <tt>&quot;tlpkg/doc/JSON-formats.txt&quot;</tt>, format definition <tt>&quot;TLPDB&quot;</tt>.</dd></dl>
 <p> Exactly one of <tt>&quot;--local&quot;</tt> and <tt>&quot;--remote&quot;</tt> must be given. </p>
 <p> In either case, the first line of the output specifies the repository location, in this format: </p>
 <pre>
   &quot;location-url&quot; &quot;	&quot; location
 </pre>
 <p> where <tt>&quot;location-url&quot;</tt> is the literal field name, followed by a tab, and <i>location</i> is the file or url to the repository. </p>
-<p> Line endings may be either <font SIZE="-1">LF</font> or <font SIZE="-1">CRLF</font> depending on the current platform.</p>
+<p> Line endings may be either LF or CRLF depending on the current platform.</p>
 <h3>generate</h3>
 <dl>
 <dt><code>generate [</code>option<code>&#8230;] language</code></dt>
@@ -227,7 +227,7 @@ description: "tlmgr – the native TeX Live Manager"
 <p> The <tt>&quot;generate&quot;</tt> action overwrites any manual changes made in the respective files: it recreates them from scratch based on the information of the installed packages, plus local adaptions. The TeX Live installer and <tt>&quot;tlmgr&quot;</tt> routinely call <tt>&quot;generate&quot;</tt> for all of these files. </p>
 <p> For managing your own fonts, please read the <tt>&quot;updmap --help&quot;</tt> information and/or &lt;<a rel="nofollow" href="https://tug.org/fonts/fontinstall.html">https://tug.org/fonts/fontinstall.html</a>&gt;. </p>
 <p> For managing your own formats, please read the <tt>&quot;fmtutil --help&quot;</tt> information. </p>
-<p> In more detail: <tt>&quot;generate&quot;</tt> remakes any of the configuration files <tt>&quot;language.dat&quot;</tt>, <tt>&quot;language.def&quot;</tt>, and <tt>&quot;language.dat.lua&quot;</tt> from the information present in the local <font SIZE="-1">TLPDB,</font> plus locally-maintained files. </p>
+<p> In more detail: <tt>&quot;generate&quot;</tt> remakes any of the configuration files <tt>&quot;language.dat&quot;</tt>, <tt>&quot;language.def&quot;</tt>, and <tt>&quot;language.dat.lua&quot;</tt> from the information present in the local TLPDB, plus locally-maintained files. </p>
 <p> The locally-maintained files are <tt>&quot;language-local.dat&quot;</tt>, <tt>&quot;language-local.def&quot;</tt>, or <tt>&quot;language-local.dat.lua&quot;</tt>, searched for in <tt>&quot;TEXMFLOCAL&quot;</tt> in the respective directories. If local additions are present, the final file is made by starting with the main file, omitting any entries that the local file specifies to be disabled, and finally appending the local file. </p>
 <p> (Historical note: The formerly supported <tt>&quot;updmap-local.cfg&quot;</tt> and <tt>&quot;fmtutil-local.cnf&quot;</tt> are no longer read, since <tt>&quot;updmap&quot;</tt> and <tt>&quot;fmtutil&quot;</tt> now reads and supports multiple configuration files. Thus, local additions can and should be put into an <tt>&quot;updmap.cfg&quot;</tt> of <tt>&quot;fmtutil.cnf&quot;</tt> file in <tt>&quot;TEXMFLOCAL&quot;</tt>. The <tt>&quot;generate updmap&quot;</tt> and <tt>&quot;generate fmtutil&quot;</tt> actions no longer exist.) </p>
 <p> Local files specify entries to be disabled with a comment line, namely one of these: </p>
@@ -259,7 +259,7 @@ description: "tlmgr – the native TeX Live Manager"
   tex/generic/config/language.dat.lua (and language-local.dat.lua)
 </pre>
 <h3>gui</h3>
-<p> Start the graphical user interface. See <font SIZE="-1"><code>GUI</code></font> below.</p>
+<p> Start the graphical user interface. See <code>GUI</code> below.</p>
 <h3>info</h3>
 <dl>
 <dt><code>info [</code>option<code>&#8230;] </code>pkg<code>&#8230;</code></dt>
@@ -272,7 +272,7 @@ description: "tlmgr – the native TeX Live Manager"
 <p> With any other arguments, display information about <i>pkg</i>: the name, category, short and long description, sizes, installation status, and TeX Live revision number. If <i>pkg</i> is not locally installed, searches in the remote installation source. </p>
 <p> For normal packages (not collections or schemes), the sizes of the four groups of files (run/src/doc/bin files) are shown separately. For collections, the cumulative size is shown, including all directly-dependent packages (but not dependent collections). For schemes, the cumulative size is also shown, including all directly-dependent collections and packages. </p>
 <p> If <i>pkg</i> is not found locally or remotely, the search action is used and lists matching packages and files. </p>
-<p> It also displays information taken from the TeX Catalogue, namely the package version, date, and license. Consider these, especially the package version, as approximations only, due to timing skew of the updates of the different pieces. By contrast, the <tt>&quot;revision&quot;</tt> value comes directly from <font SIZE="-1">TL</font> and is reliable. </p>
+<p> It also displays information taken from the TeX Catalogue, namely the package version, date, and license. Consider these, especially the package version, as approximations only, due to timing skew of the updates of the different pieces. By contrast, the <tt>&quot;revision&quot;</tt> value comes directly from TL and is reliable. </p>
 <p> The former actions <tt>&quot;show&quot;</tt> and <tt>&quot;list&quot;</tt> are merged into this action, but are still supported for backward compatibility. </p>
 <p> Options:</p>
 <dl>
@@ -286,16 +286,16 @@ description: "tlmgr – the native TeX Live Manager"
 <dt><code>&#8211;data </code>&quot;item1,item2,&#8230;&quot;</dt>
 <dd> If the option <tt>&quot;--data&quot;</tt> is given, its argument must be a comma or colon separated list of field names from: <tt>&quot;name&quot;</tt>, <tt>&quot;category&quot;</tt>, <tt>&quot;localrev&quot;</tt>, <tt>&quot;remoterev&quot;</tt>, <tt>&quot;shortdesc&quot;</tt>, <tt>&quot;longdesc&quot;</tt>, <tt>&quot;installed&quot;</tt>, <tt>&quot;size&quot;</tt>, <tt>&quot;relocatable&quot;</tt>, <tt>&quot;depends&quot;</tt>, <tt>&quot;cat-version&quot;</tt>, <tt>&quot;cat-date&quot;</tt>, <tt>&quot;cat-license&quot;</tt>, plus various <tt>&quot;cat-contact-*&quot;</tt> fields (see below). </dd>
 <p> The <tt>&quot;cat-*&quot;</tt> fields all come from the TeX Catalogue (&lt;<a rel="nofollow" href="https://ctan.org/pkg/catalogue">https://ctan.org/pkg/catalogue</a>&gt;). For each, there are two more variants with prefix <tt>&quot;l&quot;</tt> and <tt>&quot;r&quot;</tt>, e.g., <tt>&quot;lcat-version&quot;</tt> and <tt>&quot;rcat-version&quot;</tt>, which indicate the local and remote information, respectively. The variants without <tt>&quot;l&quot;</tt> and <tt>&quot;r&quot;</tt> show the most current one, which is normally the remote value. </p>
-<p> The requested packages&#8217; information is listed in <font SIZE="-1">CSV</font> format, one package per line, and the column information is given by the <tt>&quot;itemN&quot;</tt>. The <tt>&quot;depends&quot;</tt> column contains the names of all the dependencies separated by <tt>&quot;:&quot;</tt> characters. </p>
-<p> At this writing, the <tt>&quot;cat-contact-*&quot;</tt> fields include: <tt>&quot;home&quot;</tt>, <tt>&quot;repository&quot;</tt>, <tt>&quot;support&quot;</tt>, <tt>&quot;bugs&quot;</tt>, <tt>&quot;announce&quot;</tt>, <tt>&quot;development&quot;</tt>. Each may be empty or a url value. A brief description is on the <font SIZE="-1">CTAN</font> upload page for new packages: &lt;<a rel="nofollow" href="https://ctan.org/upload">https://ctan.org/upload</a>&gt;.</p>
+<p> The requested packages&#8217; information is listed in CSV format, one package per line, and the column information is given by the <tt>&quot;itemN&quot;</tt>. The <tt>&quot;depends&quot;</tt> column contains the names of all the dependencies separated by <tt>&quot;:&quot;</tt> characters. </p>
+<p> At this writing, the <tt>&quot;cat-contact-*&quot;</tt> fields include: <tt>&quot;home&quot;</tt>, <tt>&quot;repository&quot;</tt>, <tt>&quot;support&quot;</tt>, <tt>&quot;bugs&quot;</tt>, <tt>&quot;announce&quot;</tt>, <tt>&quot;development&quot;</tt>. Each may be empty or a url value. A brief description is on the CTAN upload page for new packages: &lt;<a rel="nofollow" href="https://ctan.org/upload">https://ctan.org/upload</a>&gt;.</p>
 <dt><code>&#8211;json</code></dt>
-<dd> In case <tt>&quot;--json&quot;</tt> is specified, the output is a <font SIZE="-1">JSON</font> encoded array where each array element is the <font SIZE="-1">JSON</font> representation of a single <tt>&quot;TLPOBJ&quot;</tt> but with additional information. For details see <tt>&quot;tlpkg/doc/JSON-formats.txt&quot;</tt>, format definition: <tt>&quot;TLPOBJINFO&quot;</tt>. If both <tt>&quot;--json&quot;</tt> and <tt>&quot;--data&quot;</tt> are given, <tt>&quot;--json&quot;</tt> takes precedence.</dd></dl>
+<dd> In case <tt>&quot;--json&quot;</tt> is specified, the output is a JSON encoded array where each array element is the JSON representation of a single <tt>&quot;TLPOBJ&quot;</tt> but with additional information. For details see <tt>&quot;tlpkg/doc/JSON-formats.txt&quot;</tt>, format definition: <tt>&quot;TLPOBJINFO&quot;</tt>. If both <tt>&quot;--json&quot;</tt> and <tt>&quot;--data&quot;</tt> are given, <tt>&quot;--json&quot;</tt> takes precedence.</dd></dl>
 </dl>
 <dl>
 </dl>
 </dl>
 <h3>init-usertree</h3>
-<p> Sets up a texmf tree for so-called user mode management, either the default user tree (<tt>&quot;TEXMFHOME&quot;</tt>), or one specified on the command line with <tt>&quot;--usertree&quot;</tt>. See &#8220;<font SIZE="-1">USER MODE&#8221;</font> below.</p>
+<p> Sets up a texmf tree for so-called user mode management, either the default user tree (<tt>&quot;TEXMFHOME&quot;</tt>), or one specified on the command line with <tt>&quot;--usertree&quot;</tt>. See &#8220;USER MODE&#8221; below.</p>
 <h3>install [<i>option</i>&#8230;] <i>pkg</i>&#8230;</h3>
 <p> Install each <i>pkg</i> given on the command line, if it is not already installed. It does not touch existing packages; see the <tt>&quot;update&quot;</tt> action for how to get the latest version of a package. </p>
 <p> By default this also installs all packages on which the given <i>pkg</i>s are dependent. Options:</p>
@@ -311,7 +311,7 @@ description: "tlmgr – the native TeX Live Manager"
 <dt><code>&#8211;no-depends-at-all</code></dt>
 <dd> Normally, when you install a package which ships binary files the respective binary package will also be installed. That is, for a package <tt>&quot;foo&quot;</tt>, the package <tt>&quot;foo.i386-linux&quot;</tt> will also be installed on an <tt>&quot;i386-linux&quot;</tt> system. This option suppresses this behavior, and also implies <tt>&quot;--no-depends&quot;</tt>. Don&#8217;t use it unless you are sure of what you are doing.</dd>
 <dt><code>&#8211;reinstall</code></dt>
-<dd> Reinstall a package (including dependencies for collections) even if it already seems to be installed (i.e, is present in the <font SIZE="-1">TLPDB</font>). This is useful to recover from accidental removal of files in the hierarchy. </dd>
+<dd> Reinstall a package (including dependencies for collections) even if it already seems to be installed (i.e, is present in the TLPDB). This is useful to recover from accidental removal of files in the hierarchy. </dd>
 <p> When re-installing, only dependencies on normal packages are followed (i.e., not those of category Scheme or Collection).</p>
 <dt><code>&#8211;with-doc</code></dt>
 <dd>
@@ -329,7 +329,7 @@ description: "tlmgr – the native TeX Live Manager"
 </dd><dt><code>key add </code>file</dt>
 <dd>
 </dd><dt><code>key remove </code>keyid</dt>
-<dd> The action <tt>&quot;key&quot;</tt> allows listing, adding and removing additional <font SIZE="-1">GPG</font> keys to the set of trusted keys, that is, those that are used to verify the TeX Live databases. </dd>
+<dd> The action <tt>&quot;key&quot;</tt> allows listing, adding and removing additional GPG keys to the set of trusted keys, that is, those that are used to verify the TeX Live databases. </dd>
 <p> With the <tt>&quot;list&quot;</tt> argument, <tt>&quot;key&quot;</tt> lists all keys. </p>
 <p> The <tt>&quot;add&quot;</tt> argument requires another argument, either a filename or <tt>&quot;-&quot;</tt> for stdin, from which the key is added. The key is added to the local keyring <tt>&quot;GNUPGHOME/repository-keys.gpg&quot;</tt>, which is normally <tt>&quot;tlpkg/gpg/repository-keys.gpg&quot;</tt>. </p>
 <p> The <tt>&quot;remove&quot;</tt> argument requires a key id and removes the requested id from the local keyring.</dl>
@@ -343,9 +343,9 @@ description: "tlmgr – the native TeX Live Manager"
 <dd>
 </dd><dt><code>option </code>key<code> [</code>value<code>]</code></dt>
 <dd></dd></dl>
-<p> The first form, <tt>&quot;show&quot;</tt>, shows the global TeX Live settings currently saved in the <font SIZE="-1">TLPDB</font> with a short description and the <tt>&quot;key&quot;</tt> used for changing it in parentheses. </p>
+<p> The first form, <tt>&quot;show&quot;</tt>, shows the global TeX Live settings currently saved in the TLPDB with a short description and the <tt>&quot;key&quot;</tt> used for changing it in parentheses. </p>
 <p> The second form, <tt>&quot;showall&quot;</tt>, is similar, but also shows options which can be defined but are not currently set to any value (<tt>&quot;help&quot;</tt> is a synonym). </p>
-<p> Both <tt>&quot;show...&quot;</tt> forms take an option <tt>&quot;--json&quot;</tt>, which dumps the option information in <font SIZE="-1">JSON</font> format. In this case, both forms dump the same data. For the format of the <font SIZE="-1">JSON</font> output see <tt>&quot;tlpkg/doc/JSON-formats.txt&quot;</tt>, format definition <tt>&quot;TLOPTION&quot;</tt>. </p>
+<p> Both <tt>&quot;show...&quot;</tt> forms take an option <tt>&quot;--json&quot;</tt>, which dumps the option information in JSON format. In this case, both forms dump the same data. For the format of the JSON output see <tt>&quot;tlpkg/doc/JSON-formats.txt&quot;</tt>, format definition <tt>&quot;TLOPTION&quot;</tt>. </p>
 <p> In the third form, with <i>key</i>, if <i>value</i> is not given, the setting for <i>key</i> is displayed. If <i>value</i> is present, <i>key</i> is set to <i>value</i>. </p>
 <p> Possible values for <i>key</i> are (run <tt>&quot;tlmgr option showall&quot;</tt> for the definitive list): </p>
 <pre>
@@ -363,7 +363,7 @@ description: "tlmgr – the native TeX Live Manager"
  fileassocs (Windows-only: change file associations)
  multiuser  (Windows-only: install for all users)
 </pre>
-<p> One common use of <tt>&quot;option&quot;</tt> is to permanently change the installation to get further updates from the Internet, after originally installing from <font SIZE="-1">DVD.</font> To do this, you can run </p>
+<p> One common use of <tt>&quot;option&quot;</tt> is to permanently change the installation to get further updates from the Internet, after originally installing from DVD. To do this, you can run </p>
 <pre>
  tlmgr option repository <a rel="nofollow" href="https://mirror.ctan.org/systems/texlive/tlnet">https://mirror.ctan.org/systems/texlive/tlnet</a>
 </pre>
@@ -371,7 +371,7 @@ description: "tlmgr – the native TeX Live Manager"
 <p> If <tt>&quot;formats&quot;</tt> is set (this is the default), then formats are regenerated when either the engine or the format files have changed. Disable this only when you know how and want to regenerate formats yourself whenever needed (which is often, in practice). </p>
 <p> The <tt>&quot;postcode&quot;</tt> option controls execution of per-package postinstallation action code. It is set by default, and again disabling is not likely to be of interest except to developers doing debugging. </p>
 <p> The <tt>&quot;docfiles&quot;</tt> and <tt>&quot;srcfiles&quot;</tt> options control the installation of their respective file groups (documentation, sources; grouping is approximate) per package. By default both are enabled (1). Either or both can be disabled (set to 0) if disk space is limited or for minimal testing installations, etc. When disabled, the respective files are not downloaded at all. </p>
-<p> The options <tt>&quot;autobackup&quot;</tt> and <tt>&quot;backupdir&quot;</tt> determine the defaults for the actions <tt>&quot;update&quot;</tt>, <tt>&quot;backup&quot;</tt> and <tt>&quot;restore&quot;</tt>. These three actions need a directory in which to read or write the backups. If <tt>&quot;--backupdir&quot;</tt> is not specified on the command line, the <tt>&quot;backupdir&quot;</tt> option value is used (if set). The <font SIZE="-1">TL</font> installer sets <tt>&quot;backupdir&quot;</tt> to <tt>&quot;.../tlpkg/backups&quot;</tt>, under the <font SIZE="-1">TL</font> root installation directory. </p>
+<p> The options <tt>&quot;autobackup&quot;</tt> and <tt>&quot;backupdir&quot;</tt> determine the defaults for the actions <tt>&quot;update&quot;</tt>, <tt>&quot;backup&quot;</tt> and <tt>&quot;restore&quot;</tt>. These three actions need a directory in which to read or write the backups. If <tt>&quot;--backupdir&quot;</tt> is not specified on the command line, the <tt>&quot;backupdir&quot;</tt> option value is used (if set). The TL installer sets <tt>&quot;backupdir&quot;</tt> to <tt>&quot;.../tlpkg/backups&quot;</tt>, under the TL root installation directory. </p>
 <p> The <tt>&quot;autobackup&quot;</tt> option (de)activates automatic generation of backups. Its value is an integer. If the <tt>&quot;autobackup&quot;</tt> value is <tt>&quot;-1&quot;</tt>, no backups are removed. If <tt>&quot;autobackup&quot;</tt> is 0 or more, it specifies the number of backups to keep. Thus, backups are disabled if the value is 0. In the <tt>&quot;--clean&quot;</tt> mode of the <tt>&quot;backup&quot;</tt> action this option also specifies the number to be kept. The default value is 1, so that backups are made, but only one backup is kept. </p>
 <p> To setup <tt>&quot;autobackup&quot;</tt> to <tt>&quot;-1&quot;</tt> on the command line, use: </p>
 <pre>
@@ -393,7 +393,7 @@ description: "tlmgr – the native TeX Live Manager"
 <p> With a program given as the first argument and no paper size specified (e.g., <tt>&quot;tlmgr dvips paper&quot;</tt>), shows the default paper size for that program. </p>
 <p> With a program given as the first argument and a paper size as the last argument (e.g., <tt>&quot;tlmgr dvips paper a4&quot;</tt>), set the default for that program to that paper size. </p>
 <p> With a program given as the first argument and <tt>&quot;--list&quot;</tt> given as the last argument (e.g., <tt>&quot;tlmgr dvips paper --list&quot;</tt>), shows all valid paper sizes for that program. The first size shown is the default. </p>
-<p> If <tt>&quot;--json&quot;</tt> is specified without other options, the paper setup is dumped in <font SIZE="-1">JSON</font> format. For the format of <font SIZE="-1">JSON</font> output see <tt>&quot;tlpkg/doc/JSON-formats.txt&quot;</tt>, format definition <tt>&quot;TLPAPER&quot;</tt>. </p>
+<p> If <tt>&quot;--json&quot;</tt> is specified without other options, the paper setup is dumped in JSON format. For the format of JSON output see <tt>&quot;tlpkg/doc/JSON-formats.txt&quot;</tt>, format definition <tt>&quot;TLPAPER&quot;</tt>. </p>
 <p> Incidentally, this syntax of having a specific program name before the <tt>&quot;paper&quot;</tt> keyword is unusual. It is inherited from the longstanding <tt>&quot;texconfig&quot;</tt> script, which supports other configuration settings for some programs, notably <tt>&quot;dvips&quot;</tt>. <tt>&quot;tlmgr&quot;</tt> does not support those extra settings.</p>
 <h3>path</h3>
 <dl>
@@ -462,7 +462,7 @@ description: "tlmgr – the native TeX Live Manager"
 <h3>print-platform</h3>
 <p> Print the TeX Live identifier for the detected platform (hardware/operating system) combination to standard output, and exit. <tt>&quot;--print-arch&quot;</tt> is a synonym.</p>
 <h3>print-platform-info</h3>
-<p> Print the TeX Live platform identifier, <font SIZE="-1">TL</font> platform long name, and original output from guess.</p>
+<p> Print the TeX Live platform identifier, TL platform long name, and original output from guess.</p>
 <h3>remove [<i>option</i>&#8230;] <i>pkg</i>&#8230;</h3>
 <p> Remove each <i>pkg</i> specified. Removing a collection removes all package dependencies (unless <tt>&quot;--no-depends&quot;</tt> is specified), but not any collection dependencies of that collection. However, when removing a package, dependencies are never removed. Options:</p>
 <dl>
@@ -496,8 +496,8 @@ description: "tlmgr – the native TeX Live Manager"
 </dd><dt><code>repository set </code>path<code>[#</code>tag<code>] [</code>path<code>[#</code>tag<code>] &#8230;]</code></dt>
 <dd>
 </dd><dt><code>repository status</code></dt>
-<dd> This action manages the list of repositories. See <font SIZE="-1">MULTIPLE REPOSITORIES</font> below for detailed explanations. </dd>
-<p> The first form, <tt>&quot;repository list&quot;</tt>, lists all configured repositories and the respective tags if set. If a path, url, or tag is given after the <tt>&quot;list&quot;</tt> keyword, it is interpreted as the source from which to initialize a <font SIZE="-1">TL</font> database and lists the contained packages. This can also be an otherwise-unused repository, either local or remote. If the option <tt>&quot;--with-platforms&quot;</tt> is specified in addition, for each package the available platforms (if any) are also listed. </p>
+<dd> This action manages the list of repositories. See MULTIPLE REPOSITORIES below for detailed explanations. </dd>
+<p> The first form, <tt>&quot;repository list&quot;</tt>, lists all configured repositories and the respective tags if set. If a path, url, or tag is given after the <tt>&quot;list&quot;</tt> keyword, it is interpreted as the source from which to initialize a TL database and lists the contained packages. This can also be an otherwise-unused repository, either local or remote. If the option <tt>&quot;--with-platforms&quot;</tt> is specified in addition, for each package the available platforms (if any) are also listed. </p>
 <p> The form <tt>&quot;repository add&quot;</tt> adds a repository (optionally attaching a tag) to the list of repositories, while <tt>&quot;repository remove&quot;</tt> removes a repository, either by full path/url, or by tag. </p>
 <p> The form <tt>&quot;repository set&quot;</tt> sets the list of available repositories to the items given on the command line, overwriting previous settings. </p>
 <p> The form <tt>&quot;repository status&quot;</tt> reports the verification status of the loaded repositories with the format of one repository per line with fields separated by a single space:</p>
@@ -530,13 +530,13 @@ description: "tlmgr – the native TeX Live Manager"
 <dt><code>&#8211;all</code></dt>
 <dd> Try to restore the latest revision of all package backups found in the backup directory. Additional non-option arguments (like <i>pkg</i>) are not allowed.</dd>
 <dt><code>&#8211;backupdir</code> <i>directory</i></dt>
-<dd> Specify the directory where the backups are to be found. If not given it will be taken from the configuration setting in the <font SIZE="-1">TLPDB.</font></dd>
+<dd> Specify the directory where the backups are to be found. If not given it will be taken from the configuration setting in the TLPDB.</dd>
 <dt><code>&#8211;dry-run</code></dt>
 <dd> Nothing is actually restored; instead, the actions to be performed are written to the terminal.</dd>
 <dt><code>&#8211;force</code></dt>
 <dd> Don&#8217;t ask questions.</dd>
 <dt><code>&#8211;json</code></dt>
-<dd> When listing backups, the option <tt>&quot;--json&quot;</tt> turn on <font SIZE="-1">JSON</font> output. The format is an array of <font SIZE="-1">JSON</font> objects (<tt>&quot;name&quot;</tt>, <tt>&quot;rev&quot;</tt>, <tt>&quot;date&quot;</tt>). For details see <tt>&quot;tlpkg/doc/JSON-formats.txt&quot;</tt>, format definition: <tt>&quot;TLBACKUPS&quot;</tt>. If both <tt>&quot;--json&quot;</tt> and <tt>&quot;--data&quot;</tt> are given, <tt>&quot;--json&quot;</tt> takes precedence.</dd></dl>
+<dd> When listing backups, the option <tt>&quot;--json&quot;</tt> turn on JSON output. The format is an array of JSON objects (<tt>&quot;name&quot;</tt>, <tt>&quot;rev&quot;</tt>, <tt>&quot;date&quot;</tt>). For details see <tt>&quot;tlpkg/doc/JSON-formats.txt&quot;</tt>, format definition: <tt>&quot;TLBACKUPS&quot;</tt>. If both <tt>&quot;--json&quot;</tt> and <tt>&quot;--data&quot;</tt> are given, <tt>&quot;--json&quot;</tt> takes precedence.</dd></dl>
 </dl>
 <dl>
 </dl>
@@ -566,7 +566,7 @@ description: "tlmgr – the native TeX Live Manager"
 </dl>
 <h3>shell</h3>
 <p> Starts an interactive mode, where tlmgr prompts for commands. This can be used directly, or for scripting. The first line of output is <tt>&quot;protocol&quot;</tt> <i>n</i>, where <i>n</i> is an unsigned number identifying the protocol version (currently 1). </p>
-<p> In general, tlmgr actions that can be given on the command line translate to commands in this shell mode. For example, you can say <tt>&quot;update --list&quot;</tt> to see what would be updated. The <font SIZE="-1">TLPDB</font> is loaded the first time it is needed (not at the beginning), and used for the rest of the session. </p>
+<p> In general, tlmgr actions that can be given on the command line translate to commands in this shell mode. For example, you can say <tt>&quot;update --list&quot;</tt> to see what would be updated. The TLPDB is loaded the first time it is needed (not at the beginning), and used for the rest of the session. </p>
 <p> Besides these actions, a few commands are specific to shell mode:</p>
 <dl>
 <dt>protocol</dt>
@@ -575,14 +575,14 @@ description: "tlmgr – the native TeX Live Manager"
 <dd> Print pointers to this documentation.</dd>
 <dt>version</dt>
 <dd> Print tlmgr version information.</dd>
-<dt>quit, end, bye, byebye, <font SIZE="-1">EOF</font></dt>
+<dt>quit, end, bye, byebye, EOF</dt>
 <dd> Exit.</dd>
 <dt>restart</dt>
 <dd> Restart <tt>&quot;tlmgr shell&quot;</tt> with the original command line; most useful when developing <tt>&quot;tlmgr&quot;</tt>.</dd>
 <dt>load [local|remote]</dt>
-<dd> Explicitly load the local or remote, respectively, <font SIZE="-1">TLPDB.</font></dd>
+<dd> Explicitly load the local or remote, respectively, TLPDB.</dd>
 <dt>save</dt>
-<dd> Save the local <font SIZE="-1">TLPDB,</font> presumably after other operations have changed it.</dd>
+<dd> Save the local TLPDB, presumably after other operations have changed it.</dd>
 <dt>get [<i>var</i>] =item set [<i>var</i> [<i>val</i>]]</dt>
 <dd> Get the value of <i>var</i>, or set it to <i>val</i>. Possible <i>var</i> names: <tt>&quot;debug-translation&quot;</tt>, <tt>&quot;machine-readable&quot;</tt>, <tt>&quot;no-execute-actions&quot;</tt>, <tt>&quot;require-verification&quot;</tt>, <tt>&quot;verify-downloads&quot;</tt>, <tt>&quot;repository&quot;</tt>, and <tt>&quot;prompt&quot;</tt>. All except <tt>&quot;repository&quot;</tt> and <tt>&quot;prompt&quot;</tt> are booleans, taking values 0 and 1, and behave like the corresponding command line option. The <tt>&quot;repository&quot;</tt> variable takes a string, and sets the remote repository location. The <tt>&quot;prompt&quot;</tt> variable takes a string, and sets the current default prompt. </dd>
 <p> If <i>var</i> or then <i>val</i> is not specified, it is prompted for.</dl>
@@ -622,7 +622,7 @@ tlmgr update-- self #update infrastructure only
 <pre>
   tlmgr update --all --exclude a2ping
 </pre>
-<p> will not update <tt>&quot;a2ping&quot;</tt>, <tt>&quot;a2ping.i386-linux&quot;</tt>, or any other <tt>&quot;a2ping.&quot;</tt><i></i><font SIZE="-1"><i>ARCH</i></font><i></i> package. </p>
+<p> will not update <tt>&quot;a2ping&quot;</tt>, <tt>&quot;a2ping.i386-linux&quot;</tt>, or any other <tt>&quot;a2ping.&quot;</tt><i></i><i>ARCH</i><i></i> package. </p>
 <p> If this option specifies a package that would otherwise be a candidate for auto-installation, auto-removal, or reinstallation of a forcibly removed package, <tt>&quot;tlmgr&quot;</tt> quits with an error message. Excludes are not supported in these circumstances. </p>
 <p> This option can also be set permanently in the tlmgr config file with the key <tt>&quot;update-exclude&quot;</tt>.</p>
 <dt><code>&#8211;no-auto-remove</code> [<i>pkg</i>&#8230;]</dt>
@@ -674,7 +674,7 @@ tlmgr update-- self #update infrastructure only
 <dl>
 <dt>&quot;auto-remove&quot;, value 0 or 1 (default 1), same as command-line option.</dt>
 <dd>
-</dd><dt>&quot;gui-expertmode&quot;, value 0 or 1 (default 1). This switches between the full <font SIZE="-1">GUI</font> and a simplified <font SIZE="-1">GUI</font> with only the most common settings.</dt>
+</dd><dt>&quot;gui-expertmode&quot;, value 0 or 1 (default 1). This switches between the full GUI and a simplified GUI with only the most common settings.</dt>
 <dd>
 </dd><dt>&quot;gui-lang&quot; <i>llcode</i>, with a language code value as with the command-line option.</dt>
 <dd>
@@ -694,14 +694,14 @@ tlmgr update-- self #update infrastructure only
 <dl>
 <dt>&quot;allowed-actions&quot; <i>action1</i> [,<i>action</i>,&#8230;] The value is a comma-separated list of &quot;tlmgr&quot; actions which are allowed to be executed when &quot;tlmgr&quot; is invoked in system mode (that is, without &quot;&#8211;usermode&quot;).</dt>
 <dd> This allows distributors to include the <tt>&quot;tlmgr&quot;</tt> in their packaging, but allow only a restricted set of actions that do not interfere with their distro package manager. For native TeX Live installations, it doesn&#8217;t make sense to set this.</dd></dl>
-<p> The <tt>&quot;no-checksums&quot;</tt> key needs more explanation. By default, package checksums computed and stored on the server (in the <font SIZE="-1">TLPDB</font>) are compared to checksums computed locally after downloading. <tt>&quot;no-checksums&quot;</tt> disables this process. </p>
-<p> The checksum algorithm is <font SIZE="-1">SHA-512.</font> Your system must have one of (looked for in this order) the Perl <tt>&quot;Digest::SHA&quot;</tt> module, the <tt>&quot;openssl&quot;</tt> program (&lt;<a rel="nofollow" href="https://openssl.org">https://openssl.org</a>&gt;), the <tt>&quot;sha512sum&quot;</tt> program (from <font SIZE="-1">GNU</font> Coreutils, &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils">https://www.gnu.org/software/coreutils</a>&gt;), or finally the <tt>&quot;shasum&quot;</tt> program (just to support old Macs). If none of these are available, a warning is issued and <tt>&quot;tlmgr&quot;</tt> proceeds without checking checksums. (Incidentally, other <font SIZE="-1">SHA</font> implementations, such as the pure Perl and pure Lua modules, are much too slow to be usable in our context.) <tt>&quot;no-checksums&quot;</tt> avoids the warning.</p>
+<p> The <tt>&quot;no-checksums&quot;</tt> key needs more explanation. By default, package checksums computed and stored on the server (in the TLPDB) are compared to checksums computed locally after downloading. <tt>&quot;no-checksums&quot;</tt> disables this process. </p>
+<p> The checksum algorithm is SHA-512. Your system must have one of (looked for in this order) the Perl <tt>&quot;Digest::SHA&quot;</tt> module, the <tt>&quot;openssl&quot;</tt> program (&lt;<a rel="nofollow" href="https://openssl.org">https://openssl.org</a>&gt;), the <tt>&quot;sha512sum&quot;</tt> program (from GNU Coreutils, &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils">https://www.gnu.org/software/coreutils</a>&gt;), or finally the <tt>&quot;shasum&quot;</tt> program (just to support old Macs). If none of these are available, a warning is issued and <tt>&quot;tlmgr&quot;</tt> proceeds without checking checksums. (Incidentally, other SHA implementations, such as the pure Perl and pure Lua modules, are much too slow to be usable in our context.) <tt>&quot;no-checksums&quot;</tt> avoids the warning.</p>
 <h2>CRYPTOGRAPHIC VERIFICATION</h2>
-<p> <tt>&quot;tlmgr&quot;</tt> and <tt>&quot;install-tl&quot;</tt> perform cryptographic verification if possible. If verification is performed and successful, the programs report <tt>&quot;(verified)&quot;</tt> after loading the <font SIZE="-1">TLPDB</font>; otherwise, they report <tt>&quot;(not verified)&quot;</tt>. But either way, by default the installation and/or updates proceed normally. </p>
+<p> <tt>&quot;tlmgr&quot;</tt> and <tt>&quot;install-tl&quot;</tt> perform cryptographic verification if possible. If verification is performed and successful, the programs report <tt>&quot;(verified)&quot;</tt> after loading the TLPDB; otherwise, they report <tt>&quot;(not verified)&quot;</tt>. But either way, by default the installation and/or updates proceed normally. </p>
 <p> If a program named <tt>&quot;gpg&quot;</tt> is available (that is, found in <tt>&quot;PATH&quot;</tt>), by default cryptographic signatures will be checked: we require the main repository be signed, but not any additional repositories. If <tt>&quot;gpg&quot;</tt> is not available, by default signatures are not checked and no verification is carried out, but <tt>&quot;tlmgr&quot;</tt> still proceeds normally. </p>
 <p> The behavior of the verification can be controlled by the command line and config file option <tt>&quot;verify-repo&quot;</tt> which takes one of the following values: <tt>&quot;none&quot;</tt>, <tt>&quot;main&quot;</tt>, or <tt>&quot;all&quot;</tt>. With <tt>&quot;none&quot;</tt>, no verification whatsoever is attempted. With <tt>&quot;main&quot;</tt> (the default) verification is required only for the main repository, and only if <tt>&quot;gpg&quot;</tt> is available; though attempted for all, missing signatures of subsidiary repositories will not result in an error. Finally, in the case of <tt>&quot;all&quot;</tt>, <tt>&quot;gpg&quot;</tt> must be available and all repositories need to be signed. </p>
 <p> In all cases, if a signature is checked and fails to verify, an error is raised. </p>
-<p> Cryptographic verification requires checksum checking (described just above) to succeed, and a working GnuPG (<tt>&quot;gpg&quot;</tt>) program (see below for search method). Then, unless cryptographic verification has been disabled, a signature file (<tt>&quot;texlive.tlpdb.*.asc&quot;</tt>) of the checksum file is downloaded and the signature verified. The signature is created by the TeX Live Distribution <font SIZE="-1">GPG</font> key 0x0D5E5D9106BAB6BC, which in turn is signed by Karl Berry&#8217;s key 0x0716748A30D155AD and Norbert Preining&#8217;s key 0x6CACA448860CDC13. All of these keys are obtainable from the standard key servers. </p>
+<p> Cryptographic verification requires checksum checking (described just above) to succeed, and a working GnuPG (<tt>&quot;gpg&quot;</tt>) program (see below for search method). Then, unless cryptographic verification has been disabled, a signature file (<tt>&quot;texlive.tlpdb.*.asc&quot;</tt>) of the checksum file is downloaded and the signature verified. The signature is created by the TeX Live Distribution GPG key 0x0D5E5D9106BAB6BC, which in turn is signed by Karl Berry&#8217;s key 0x0716748A30D155AD and Norbert Preining&#8217;s key 0x6CACA448860CDC13. All of these keys are obtainable from the standard key servers. </p>
 <p> Additional trusted keys can be added using the <tt>&quot;key&quot;</tt> action.</p>
 <h3>Configuration of GnuPG invocation</h3>
 <p> The executable used for GnuPG is searched as follows: If the environment variable <tt>&quot;TL_GNUPG&quot;</tt> is set, it is tested and used; otherwise <tt>&quot;gpg&quot;</tt> is checked; finally <tt>&quot;gpg2&quot;</tt> is checked. </p>
@@ -778,9 +778,9 @@ tlmgr update-- self #update infrastructure only
 </pre>
 <p> A summary of <tt>&quot;tlmgr pinning&quot;</tt> actions is given above.</p>
 <h2>GUI FOR TLMGR</h2>
-<p> The graphical user interface for <tt>&quot;tlmgr&quot;</tt> requires Perl/Tk &lt;<a rel="nofollow" href="https://search.cpan.org/search?query=perl%2Ftk">https://search.cpan.org/search?query=perl%2Ftk</a>&gt;. For Unix-based systems Perl/Tk (as well as Perl of course) has to be installed outside of <font SIZE="-1">TL.</font> &lt;<a rel="nofollow" href="https://tug.org/texlive/distro.html#perltk">https://tug.org/texlive/distro.html#perltk</a>&gt; has a list of invocations for some distros. For Windows the necessary modules are no longer shipped within TeX Live, so you&#8217;ll have to have an external Perl available that includes them. </p>
-<p> We are talking here about the <font SIZE="-1">GUI</font> built into tlmgr itself, not about the other tlmgr GUIs, which are: tlshell (Tcl/Tk-based), tlcockpit (Java-based) and, only on Macs, TeX Live Utility. These are invoked as separate programs. </p>
-<p> The <font SIZE="-1">GUI</font> mode of tlmgr is started with the invocation <tt>&quot;tlmgr gui&quot;</tt>; assuming Tk is loadable, the graphical user interface will be shown. The main window contains a menu bar, the main display, and a status area where messages normally shown on the console are displayed. </p>
+<p> The graphical user interface for <tt>&quot;tlmgr&quot;</tt> requires Perl/Tk &lt;<a rel="nofollow" href="https://search.cpan.org/search?query=perl%2Ftk">https://search.cpan.org/search?query=perl%2Ftk</a>&gt;. For Unix-based systems Perl/Tk (as well as Perl of course) has to be installed outside of TL. &lt;<a rel="nofollow" href="https://tug.org/texlive/distro.html#perltk">https://tug.org/texlive/distro.html#perltk</a>&gt; has a list of invocations for some distros. For Windows the necessary modules are no longer shipped within TeX Live, so you&#8217;ll have to have an external Perl available that includes them. </p>
+<p> We are talking here about the GUI built into tlmgr itself, not about the other tlmgr GUIs, which are: tlshell (Tcl/Tk-based), tlcockpit (Java-based) and, only on Macs, TeX Live Utility. These are invoked as separate programs. </p>
+<p> The GUI mode of tlmgr is started with the invocation <tt>&quot;tlmgr gui&quot;</tt>; assuming Tk is loadable, the graphical user interface will be shown. The main window contains a menu bar, the main display, and a status area where messages normally shown on the console are displayed. </p>
 <p> Within the main display there are three main parts: the <tt>&quot;Display configuration&quot;</tt> area, the list of packages, and the action buttons. </p>
 <p> Also, at the top right the currently loaded repository is shown; this also acts as a button and when clicked will try to load the default repository. To load a different repository, see the <tt>&quot;tlmgr&quot;</tt> menu item. </p>
 <p> Finally, the status area at the bottom of the window gives additional information about what is going on.</p>
@@ -791,7 +791,7 @@ tlmgr update-- self #update infrastructure only
 <dt>Status</dt>
 <dd> Select whether to show all packages (the default), only those installed, only those <i>not</i> installed, or only those with update available.</dd>
 <dt>Category</dt>
-<dd> Select which categories are shown: packages, collections, and/or schemes. These are briefly explained in the &#8220;<font SIZE="-1">DESCRIPTION&#8221;</font> section above.</dd>
+<dd> Select which categories are shown: packages, collections, and/or schemes. These are briefly explained in the &#8220;DESCRIPTION&#8221; section above.</dd>
 <dt>Match</dt>
 <dd> Select packages matching for a specific pattern. By default, this searches both descriptions and filenames. You can also select a subset for searching.</dd>
 <dt>Selection</dt>
@@ -808,7 +808,7 @@ tlmgr update-- self #update infrastructure only
 <dt>package name</dt>
 <dd> The name (identifier) of the package as given in the database.</dd>
 <dt>local revision (and version)</dt>
-<dd> If the package is installed the TeX Live revision number for the installed package will be shown. If there is a catalogue version given in the database for this package, it will be shown in parentheses. However, the catalogue version, unlike the <font SIZE="-1">TL</font> revision, is not guaranteed to reflect what is actually installed.</dd>
+<dd> If the package is installed the TeX Live revision number for the installed package will be shown. If there is a catalogue version given in the database for this package, it will be shown in parentheses. However, the catalogue version, unlike the TL revision, is not guaranteed to reflect what is actually installed.</dd>
 <dt>remote revision (and version)</dt>
 <dd> If a repository has been loaded the revision of the package in the repository (if present) is shown. As with the local column, if a catalogue version is provided it will be displayed. And also as with the local column, the catalogue version may be stale.</dd>
 <dt>short description</dt>
@@ -833,15 +833,15 @@ tlmgr update-- self #update infrastructure only
 <dt>&quot;tlmgr&quot; menu</dt>
 <dd> The items here load various repositories: the default as specified in the TeX Live database, the default network repository, the repository specified on the command line (if any), and an arbitrarily manually-entered one. Also has the so-necessary <tt>&quot;quit&quot;</tt> operation.</dd>
 <dt>&quot;Options menu&quot;</dt>
-<dd> Provides access to several groups of options: <tt>&quot;Paper&quot;</tt> (configuration of default paper sizes), <tt>&quot;Platforms&quot;</tt> (only on Unix, configuration of the supported/installed platforms), <tt>&quot;GUI Language&quot;</tt> (select language used in the <font SIZE="-1">GUI</font> interface), and <tt>&quot;General&quot;</tt> (everything else). </dd>
-<p> Several toggles are also here. The first is <tt>&quot;Expert options&quot;</tt>, which is set by default. If you turn this off, the next time you start the <font SIZE="-1">GUI</font> a simplified screen will be shown that display only the most important functionality. This setting is saved in the configuration file of <tt>&quot;tlmgr&quot;</tt>; see &#8220;<font SIZE="-1">CONFIGURATION FILE FOR TLMGR&#8221;</font> for details. </p>
+<dd> Provides access to several groups of options: <tt>&quot;Paper&quot;</tt> (configuration of default paper sizes), <tt>&quot;Platforms&quot;</tt> (only on Unix, configuration of the supported/installed platforms), <tt>&quot;GUI Language&quot;</tt> (select language used in the GUI interface), and <tt>&quot;General&quot;</tt> (everything else). </dd>
+<p> Several toggles are also here. The first is <tt>&quot;Expert options&quot;</tt>, which is set by default. If you turn this off, the next time you start the GUI a simplified screen will be shown that display only the most important functionality. This setting is saved in the configuration file of <tt>&quot;tlmgr&quot;</tt>; see &#8220;CONFIGURATION FILE FOR TLMGR&#8221; for details. </p>
 <p> The other toggles are all off by default: for debugging output, to disable the automatic installation of new packages, and to disable the automatic removal of packages deleted from the server. Playing with the choices of what is or isn&#8217;t installed may lead to an inconsistent TeX Live installation; e.g., when a package is renamed.</p>
 <dt>&quot;Actions menu&quot;</dt>
 <dd> Provides access to several actions: update the filename database (aka <tt>&quot;ls-R&quot;</tt>, <tt>&quot;mktexlsr&quot;</tt>, <tt>&quot;texhash&quot;</tt>), rebuild all formats (<tt>&quot;fmtutil-sys --all&quot;</tt>), update the font map database (<tt>&quot;updmap-sys&quot;</tt>), restore from a backup of a package, and use of symbolic links in system directories (not on Windows). </dd>
 <p> The final action is to remove the entire TeX Live installation (also not on Windows).</p>
 <dt>&quot;Help menu&quot;</dt>
 <dd> Provides access to the TeX Live manual (also on the web at &lt;<a rel="nofollow" href="https://tug.org/texlive/doc.html">https://tug.org/texlive/doc.html</a>&gt;) and the usual &#8220;About&#8221; box.</dd></dl>
-<h3><font SIZE="-1">GUI</font> options</h3>
+<h3>GUI options</h3>
 <p> Some generic Perl/Tk options can be specified with <tt>&quot;tlmgr gui&quot;</tt> to control the display:</p>
 <dl>
 <dt>&quot;-background&quot; <i>color</i></dt>
@@ -871,7 +871,7 @@ tlmgr update-- self #update infrastructure only
 </pre>
 <p> The header section currently has two fields: <tt>&quot;location-url&quot;</tt> (the repository source from which updates are being drawn), and <tt>&quot;total-bytes&quot;</tt> (the total number of bytes to be downloaded). </p>
 <p> The <i>localrev</i> and <i>serverrev</i> fields for each package are the revision numbers in the local installation and server repository, respectively. The <i>size</i> field is the number of bytes to be downloaded, i.e., the size of the compressed tar file for a network installation, not the unpacked size. The runtime and esttot fields are only present for updated and auto-install packages, and contain the currently passed time since start of installation/updates and the estimated total time. </p>
-<p> Line endings may be either <font SIZE="-1">LF</font> or <font SIZE="-1">CRLF</font> depending on the current platform.</p>
+<p> Line endings may be either LF or CRLF depending on the current platform.</p>
 <dl>
 <dt>&quot;location-url&quot; <i>location</i></dt>
 <dd> The <i>location</i> may be a url (including <tt>&quot;file:///foo/bar/...&quot;</tt>), or a directory name (<tt>&quot;/foo/bar&quot;</tt>). It is the package repository from which the new package information was drawn.</dd>
@@ -931,11 +931,11 @@ tlmgr update-- self #update infrastructure only
 <dt>1.</dt>
 <dd> If the environment variable <tt>&quot;TEXLIVE_COMPRESSOR&quot;</tt> is defined, use it; abort if it doesn&#8217;t work. Possible values: <tt>&quot;lz4&quot;</tt>, <tt>&quot;gzip&quot;</tt>, <tt>&quot;xz&quot;</tt>. The necessary options are added internally.</dd>
 <dt>2.</dt>
-<dd> If lz4 is available (either from the system or <font SIZE="-1">TL</font>) and working, use that.</dd>
+<dd> If lz4 is available (either from the system or TL) and working, use that.</dd>
 <dt>3.</dt>
 <dd> If gzip is available (from the system) and working, use that.</dd>
 <dt>4.</dt>
-<dd> If xz is available (either from the system or <font SIZE="-1">TL</font>) and working, use that.</dd></dl>
+<dd> If xz is available (either from the system or TL) and working, use that.</dd></dl>
 </dl>
 <dl>
 <dt>
@@ -954,21 +954,21 @@ tlmgr update-- self #update infrastructure only
 <dt>2.</dt>
 <dd> If the environment variable <tt>&quot;TL_DOWNLOAD_PROGRAM&quot;</tt> is defined (can be any value), use it together with <tt>&quot;TL_DOWNLOAD_ARGS&quot;</tt>; abort if it doesn&#8217;t work.</dd>
 <dt>3.</dt>
-<dd> If <font SIZE="-1">LWP</font> is available and working, use that (by far the most efficient method, as it supports persistent downloads).</dd>
+<dd> If LWP is available and working, use that (by far the most efficient method, as it supports persistent downloads).</dd>
 <dt>4.</dt>
 <dd> If curl is available (from the system) and working, use that.</dd>
 <dt>5.</dt>
-<dd> If wget is available (either from the system or <font SIZE="-1">TL</font>) and working, use that.</dd></dl>
+<dd> If wget is available (either from the system or TL) and working, use that.</dd></dl>
 </dl>
 <dl>
 <dt>
 </dt><dd>
-<p> <font SIZE="-1">TL</font> provides <tt>&quot;wget&quot;</tt> binaries for platforms where necessary, so some download method should always be available.</dd></dl>
+<p> TL provides <tt>&quot;wget&quot;</tt> binaries for platforms where necessary, so some download method should always be available.</dd></dl>
 <dt>&quot;TEXLIVE_PREFER_OWN&quot;</dt>
 <dd> By default, compression and download programs provided by the system, i.e., found along <tt>&quot;PATH&quot;</tt> are preferred over those shipped with TeX Live. </dd>
-<p> This can create problems with systems that are too old, and so can be overridden by setting the environment variable <tt>&quot;TEXLIVE_PREFER_OWN&quot;</tt> to 1. In this case, executables shipped with <font SIZE="-1">TL</font> will be preferred. </p>
-<p> Extra compression/download programs not provided by <font SIZE="-1">TL,</font> such as gzip, lwp, and curl, are still checked for on the system and used if available, per the above. <tt>&quot;TEXLIVE_PREFER_OWN&quot;</tt> only applies when the program being checked for is shipped with <font SIZE="-1">TL,</font> namely the lz4 and xz compressors and wget downloader. </p>
-<p> Exception: on Windows, the <tt>&quot;tar.exe&quot;</tt> shipped with <font SIZE="-1">TL</font> is always used, regardless of any setting.</dl>
+<p> This can create problems with systems that are too old, and so can be overridden by setting the environment variable <tt>&quot;TEXLIVE_PREFER_OWN&quot;</tt> to 1. In this case, executables shipped with TL will be preferred. </p>
+<p> Extra compression/download programs not provided by TL, such as gzip, lwp, and curl, are still checked for on the system and used if available, per the above. <tt>&quot;TEXLIVE_PREFER_OWN&quot;</tt> only applies when the program being checked for is shipped with TL, namely the lz4 and xz compressors and wget downloader. </p>
+<p> Exception: on Windows, the <tt>&quot;tar.exe&quot;</tt> shipped with TL is always used, regardless of any setting.</dl>
 <h2>AUTHORS AND COPYRIGHT</h2>
-<p> This script and its documentation were written for the TeX Live distribution (&lt;<a rel="nofollow" href="https://tug.org/texlive">https://tug.org/texlive</a>&gt;) and both are licensed under the <font SIZE="-1">GNU</font> General Public License Version 2 or later. </p>
+<p> This script and its documentation were written for the TeX Live distribution (&lt;<a rel="nofollow" href="https://tug.org/texlive">https://tug.org/texlive</a>&gt;) and both are licensed under the GNU General Public License Version 2 or later. </p>
 <p> <tt>$Id:</tt> tlmgr.pl 60557 2021-09-20 10:46:43Z preining $ </p>

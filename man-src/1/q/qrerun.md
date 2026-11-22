@@ -17,8 +17,8 @@ description: "qrerun – rerun a pbs batch job"
 <p> If a job is marked as not rerunable then the rerun request will fail for that job. If the mini-server running the job is down, or the rejects the request, the <i>Rerun Job</i> batch request will return a failure unless -f is used. </p>
 <p> Using -f violates IEEE Batch Processing Services Std and should be handled with great care. It should only be used under exceptional circumstances. Best practice is to fix the problem mini-server host and letting qrerun run normally. The previous nodes may need manual cleaning. See the <i> option on the </i><code>qsub </code> and <code>qalter</code> commands.</p>
 <h2>OPERANDS</h2>
-<p> The qrerun command accepts one or more <i> operands of the form:<br />
- </i><code><br />
+<p> The qrerun command accepts one or more <i> operands of the form:<br/>
+ </i><code><br/>
  </code></p>
 <h2>STANDARD ERROR</h2>
 <p> The qrerun command will write a diagnostic message to standard error for each error occurrence.</p>

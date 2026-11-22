@@ -9,13 +9,13 @@ description: "Evas Coordinate Mapping Functions – Functions that are used to m
 
 <p>Evas Coordinate Mapping Functions &#8211; Functions that are used to map coordinates from the canvas to the screen or the screen to the canvas. </p>
 <h3>Functions</h3>
-<p>EAPI Evas_Coord <code>evas_coord_screen_x_to_world</code> (const <code>Evas</code> *e, int x)<br />
- <i>Convert/scale an ouput screen co-ordinate into canvas co-ordinates. </i><br />
- EAPI Evas_Coord <code>evas_coord_screen_y_to_world</code> (const <code>Evas</code> *e, int y)<br />
- <i>Convert/scale an ouput screen co-ordinate into canvas co-ordinates. </i><br />
- EAPI int <code>evas_coord_world_x_to_screen</code> (const <code>Evas</code> *e, Evas_Coord x)<br />
- <i>Convert/scale a canvas co-ordinate into output screen co-ordinates. </i><br />
- EAPI int <code>evas_coord_world_y_to_screen</code> (const <code>Evas</code> *e, Evas_Coord y)<br />
+<p>EAPI Evas_Coord <code>evas_coord_screen_x_to_world</code> (const <code>Evas</code> *e, int x)<br/>
+ <i>Convert/scale an ouput screen co-ordinate into canvas co-ordinates. </i><br/>
+ EAPI Evas_Coord <code>evas_coord_screen_y_to_world</code> (const <code>Evas</code> *e, int y)<br/>
+ <i>Convert/scale an ouput screen co-ordinate into canvas co-ordinates. </i><br/>
+ EAPI int <code>evas_coord_world_x_to_screen</code> (const <code>Evas</code> *e, Evas_Coord x)<br/>
+ <i>Convert/scale a canvas co-ordinate into output screen co-ordinates. </i><br/>
+ EAPI int <code>evas_coord_world_y_to_screen</code> (const <code>Evas</code> *e, Evas_Coord y)<br/>
  <i>Convert/scale a canvas co-ordinate into output screen co-ordinates. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that are used to map coordinates from the canvas to the screen or the screen to the canvas.</p>
@@ -24,7 +24,7 @@ description: "Evas Coordinate Mapping Functions – Functions that are used to m
 <p>Convert/scale an ouput screen co-ordinate into canvas co-ordinates. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>e</i> The pointer to the Evas Canvas<br />
+<dd><i>e</i> The pointer to the Evas Canvas<br/>
  <i>x</i> The screen/output x co-ordinate</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -40,7 +40,7 @@ description: "Evas Coordinate Mapping Functions – Functions that are used to m
 <p>Convert/scale an ouput screen co-ordinate into canvas co-ordinates. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>e</i> The pointer to the Evas Canvas<br />
+<dd><i>e</i> The pointer to the Evas Canvas<br/>
  <i>y</i> The screen/output y co-ordinate</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -56,7 +56,7 @@ description: "Evas Coordinate Mapping Functions – Functions that are used to m
 <p>Convert/scale a canvas co-ordinate into output screen co-ordinates. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>e</i> The pointer to the Evas Canvas<br />
+<dd><i>e</i> The pointer to the Evas Canvas<br/>
  <i>x</i> The canvas x co-ordinate</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -72,7 +72,7 @@ description: "Evas Coordinate Mapping Functions – Functions that are used to m
 <p>Convert/scale a canvas co-ordinate into output screen co-ordinates. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>e</i> The pointer to the Evas Canvas<br />
+<dd><i>e</i> The pointer to the Evas Canvas<br/>
  <i>y</i> The canvas y co-ordinate</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

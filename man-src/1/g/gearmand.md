@@ -39,7 +39,7 @@ gearmand - Gearman client/worker connector.
 
 <h2>WARRANTY</h2>
 
- This is free software. <font SIZE="-1">IT</font> <font SIZE="-1">COMES</font> <font SIZE="-1">WITHOUT</font> <font SIZE="-1">WARRANTY</font> <font SIZE="-1">OF</font> <font SIZE="-1">ANY</font> <font SIZE="-1">KIND</font>.
+ This is free software. IT COMES WITHOUT WARRANTY OF ANY KIND.
 
 <h2>AUTHORS</h2>
 

@@ -10,7 +10,7 @@ description: "fpm2 – Figaro’s Password Manager 2"
 
 <p> fpm2 &#8211; Figaro&#8217;s Password Manager 2</p>
 <h2>DESCRIPTION</h2>
-<p> <code>fpm2</code> is a <font SIZE="-1">GUI</font> password manager using the <font SIZE="-1">GTK2 libraries. Passwords are encrypted using the AES-256 algorithm.</font></p>
+<p> <code>fpm2</code> is a GUI password manager using the GTK2 libraries. Passwords are encrypted using the AES-256 algorithm.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-f filename</code></dt>
@@ -41,9 +41,9 @@ description: "fpm2 – Figaro’s Password Manager 2"
 <p> Using the $p variable means that your password ends up in <i>.bash_history</i> in addition to being visible by <code>ps aux</code>! </p>
 <p> In order to work around this problem conveniently <code>fpm2</code> can have your password copied to your primary selection, so that you may easily paste it where needed. Then your password should be as secured as your transport.</p>
 <h2>COPYRIGHT</h2>
-<p> <font SIZE="-1">GNU GPL</font> (GNU GENERAL PUBLIC LICENSE) Version 2, or (at your option) any later version. </p>
+<p> GNU GPL (GNU GENERAL PUBLIC LICENSE) Version 2, or (at your option) any later version. </p>
 <p> The licence text is available on any Debian GNU/Linux system in <i>/usr/share/common-licenses/GPL</i></p>
 <h2>AUTHOR</h2>
-<p> John Conneely &lt;jconneely [at] figaro.org&gt;<br />
+<p> John Conneely &lt;jconneely [at] figaro.org&gt;<br/>
  Aleš Koval &lt;als [at] regnet.cz&gt; </p>
 <p> This manual page was written by Lars Bahner &lt;bahner [at] debian.org&gt; for the Debian GNU/Linux system. </p>

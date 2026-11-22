@@ -21,14 +21,14 @@ cfgcheck(\@target_names, \% globalcfg, \% targetcfg, \@parsed_targets);
 
 <h2>DESCRIPTION</h2>
 
- MRTG_lib is part of <font SIZE="-1">MRTG</font>, the Multi Router Traffic Grapher. It was separated from <font SIZE="-1">MRTG</font> to allow other programs to easily use the same config files. The main part of MRTG_lib is the config file parser but some other funcions are there too.
+ MRTG_lib is part of MRTG, the Multi Router Traffic Grapher. It was separated from MRTG to allow other programs to easily use the same config files. The main part of MRTG_lib is the config file parser but some other funcions are there too.
 <dl>
 <dt>$MRTG_lib::OS
-</dt><dd> Type of <font SIZE="-1">OS:</font> <font SIZE="-1">WIN</font>, <font SIZE="-1">UNIX</font>, <font SIZE="-1">VMS</font>
+</dt><dd> Type of OS: WIN, UNIX, VMS
 </dd><dt>$MRTG_lib::SL
-</dt><dd> <i>Slash</i> in the current <font SIZE="-1">OS</font>.
+</dt><dd> <i>Slash</i> in the current OS.
 </dd><dt>$MRTG_lib::PS
-</dt><dd> Path separator in <font SIZE="-1">PATH</font> variable
+</dt><dd> Path separator in PATH variable
 </dd><dt>&quot;readcfg&quot;
 </dt><dd> <tt>&quot;readcfg($file, \@targets, \%globalcfg, \%targetcfg [, $prefix, \%extrules])&quot;</tt> 
  Reads a config file, parses it and fills some arrays and hashes. The mandatory arguments are: the name of the config file, a ref to an array which will be filled with a list of the target names, a hashref for the global configuration, a hashref for the target configuration. 
@@ -45,7 +45,7 @@ workdir : / var / stat / mrtg target[router1] : 2 : public[at] router1.local.net
 </pre> 
  The target config hash has the structure 
 $targetcfg{configoption} {targetname} = 'value'
- See mrtg-reference for more information about the <font SIZE="-1">MRTG</font> configuration syntax. 
+ See mrtg-reference for more information about the MRTG configuration syntax. 
  <tt>&quot;readcfg&quot;</tt> can take two additional arguments to extend the config file syntax. This allows programs to put their configuration into the mrtg config file. The fifth argument is the prefix of the extension, the sixth argument is a hash with the checkrules for these extension settings. E.g. if the prefix is ``14all'' <tt>&quot;readcfg&quot;</tt> will check config lines that begin with ``14all*'', i.e. all lines like 
  <pre>
  14all*columns: 2
@@ -68,16 +68,16 @@ $targetcfg{'14all*graphsize'} {'target3'} = '500 200'
 </pre> 
  to a hash: 
 $targetcfg{'option'} {'bits'} {'router1'} = 1 $targetcfg{'option'} {'growright'} {'router1'} = 1
- This is not done by <tt>&quot;readcfg&quot;</tt> so if you don't use <tt>&quot;cfgcheck&quot;</tt> you have to check the scalar variable <i></i>$targetcfg<i>{'option'}{'router1'}</i> (<font SIZE="-1">MRTG</font> allows options to be separated by space or ',').
+ This is not done by <tt>&quot;readcfg&quot;</tt> so if you don't use <tt>&quot;cfgcheck&quot;</tt> you have to check the scalar variable <i></i>$targetcfg<i>{'option'}{'router1'}</i> (MRTG allows options to be separated by space or ',').
 </dd><dt>&quot;ensureSL&quot;
 </dt><dd> <tt>&quot;ensureSL(\$pathname)&quot;</tt> 
- Checks that the <i>pathname</i> does not contain double path separators and ends with a path separator. It uses <tt>$MRTG_lib::SL</tt> as path separator which will be / or \ depending on the <font SIZE="-1">OS</font>.
+ Checks that the <i>pathname</i> does not contain double path separators and ends with a path separator. It uses <tt>$MRTG_lib::SL</tt> as path separator which will be / or \ depending on the OS.
 </dd><dt>&quot;log2rrd&quot;
 </dt><dd> <tt>&quot;log2rrd ($router,\%globalcfg,\%targetcfg)&quot;</tt> 
  Convert log file to rrd format. Needs rrdtool.
 </dd><dt>&quot;datestr&quot;
 </dt><dd> <tt>&quot;datestr(time)&quot;</tt> 
- Returns the time given in the argument as a nicely formated date string. The argument has to be in <font SIZE="-1">UNIX</font> time format (seconds since 1970-1-1).
+ Returns the time given in the argument as a nicely formated date string. The argument has to be in UNIX time format (seconds since 1970-1-1).
 </dd><dt>&quot;timestamp&quot;
 </dt><dd> <tt>&quot;timestamp()&quot;</tt> 
  Return a string representing the current time.
@@ -86,7 +86,7 @@ $targetcfg{'option'} {'bits'} {'router1'} = 1 $targetcfg{'option'} {'growright'}
  Install signalhandlers for __DIE__ and __WARN__ making the errors go the the specified destination. If filename is 'eventlog' mrtg will log to the windows event logger.
 </dd><dt>&quot;expistr&quot;
 </dt><dd> <tt>&quot;expistr(time)&quot;</tt> 
- Returns the time given in the argument formatted suitable for <font SIZE="-1">HTTP</font> Expire-Headers.
+ Returns the time given in the argument formatted suitable for HTTP Expire-Headers.
 </dd><dt>&quot;create_pid&quot;
 </dt><dd> <tt>&quot;create_pid()&quot;</tt> 
  Creates a pid file for the mrtg daemon
@@ -95,7 +95,7 @@ $targetcfg{'option'} {'bits'} {'router1'} = 1 $targetcfg{'option'} {'growright'}
  Puts the running program into background, detaching it from the terminal.
 </dd><dt>&quot;populatecache&quot;
 </dt><dd> <tt>&quot;populatecache(\%confcache, $host, $reread, $snmpoptshash)&quot;</tt> 
- Reads the <font SIZE="-1">SNMP</font> variables <i>ifDescr</i>, <i>ipAdEntIfIndex</i>, <i>ifPhysAddress</i>, <i>ifName</i> from the <i>host</i> and stores the values in <i></i>%confcache<i></i> as follows: 
+ Reads the SNMP variables <i>ifDescr</i>, <i>ipAdEntIfIndex</i>, <i>ifPhysAddress</i>, <i>ifName</i> from the <i>host</i> and stores the values in <i></i>%confcache<i></i> as follows: 
  <pre><code>
 $confcache{$host} {'Descr'} {ifDescr} {oid} = (ifDescr or 'Dup')
     $confcache{$host} {'IP'} {ipAdEntIfIndex} {oid} = (ipAdEntIfIndex or 'Dup')
@@ -121,7 +121,7 @@ $confcache{$host} {'Descr'} {ifDescr} {oid} = (ifDescr or 'Dup')
 </dt><dd> <tt>&quot;clearfromcache($confcache,$host)&quot;</tt>
 </dd><dt>&quot;debug&quot;
 </dt><dd> <tt>&quot;debug($type, $message)&quot;</tt> 
- Prints the <i>message</i> on <font SIZE="-1">STDERR</font> if debugging is enabled for type <i>type</i>. A debug type is enabled if <i>type</i> is in array <tt>@main::DEBUG</tt>.</dd></dl>
+ Prints the <i>message</i> on STDERR if debugging is enabled for type <i>type</i>. A debug type is enabled if <i>type</i> is in array <tt>@main::DEBUG</tt>.</dd></dl>
 
 <h2>AUTHORS</h2>
 

@@ -11,7 +11,7 @@ description: "dlacon.f –"
 <p> dlacon.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dlacon</code> (N, V, X, ISGN, EST, KASE)<br />
+<p> subroutine <code>dlacon</code> (N, V, X, ISGN, EST, KASE)<br/>
  <i></i><code>DLACON</code> estimates the 1-norm of a square matrix, using reverse communication for evaluating matrix-vector products.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlacon (integerN, double precision, dimension( * )V, double precision, dimension( * )X, integer, dimension( * )ISGN, double precisionEST, integerKASE)</h3>
@@ -87,7 +87,7 @@ description: "dlacon.f –"
 <p> <code>References: </code></p>
 <dl>
 <dt>
-</dt><dd> N.J. Higham, &#8216;FORTRAN codes for estimating the one-norm of<br />
+</dt><dd> N.J. Higham, &#8216;FORTRAN codes for estimating the one-norm of<br/>
 &nbsp;<wbr>&nbsp;<wbr>a real or complex matrix, with applications to condition estimation&#8217;, ACM Trans. Math. Soft., vol. 14, no. 4, pp. 381-396, December 1988.&nbsp;<wbr></dd></dl>
 <p> Definition at line 116 of file dlacon.f.</p>
 <h2>Author</h2>

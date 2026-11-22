@@ -19,11 +19,11 @@ template &lt;class T, class U&gt;
 template &lt;class T, class U&gt;
 (3)(since C++ 11)
     struct is_nothrow_assignable;</code></pre>
-<p>1) If the expression std::declval&lt;T&gt;() = std::declval&lt;U&gt;() is well-formed in unevaluated context, provides the member constant value equal true. Otherwise, value is false. Access_checks are performed as if from a context unrelated to either type.<br />
-2) same as <code>(1)</code>, but the evaluation of the assignment expression will not call any operation that is not trivial. For the purposes of this check, a call to std::declval is considered trivial and not considered an odr-use of std::declval.<br />
-3) same as <code>(1)</code>, but the evaluation of the assignment expression will not call any operation that is not noexcept.<br />
-T and U shall each be a complete type, (possibly cv-qualified) void, or an array of unknown bound. Otherwise, the behavior is undefined.<br />
-If an instantiation of a template above depends, directly or indirectly, on an incomplete type, and that instantiation could yield a different result if that type were hypothetically completed, the behavior is undefined.<br />
+<p>1) If the expression std::declval&lt;T&gt;() = std::declval&lt;U&gt;() is well-formed in unevaluated context, provides the member constant value equal true. Otherwise, value is false. Access_checks are performed as if from a context unrelated to either type.<br/>
+2) same as <code>(1)</code>, but the evaluation of the assignment expression will not call any operation that is not trivial. For the purposes of this check, a call to std::declval is considered trivial and not considered an odr-use of std::declval.<br/>
+3) same as <code>(1)</code>, but the evaluation of the assignment expression will not call any operation that is not noexcept.<br/>
+T and U shall each be a complete type, (possibly cv-qualified) void, or an array of unknown bound. Otherwise, the behavior is undefined.<br/>
+If an instantiation of a template above depends, directly or indirectly, on an incomplete type, and that instantiation could yield a different result if that type were hypothetically completed, the behavior is undefined.<br/>
 Helper variable templates template&lt; class T, class U &gt;                                                             (since C++17)</p>
 <p>inline constexpr bool is_assignable_v = is_assignable&lt;T, U&gt;::value;</p>
 <p>template&lt; class T, class U &gt;                                                             (since C++17)</p>
@@ -32,18 +32,18 @@ Helper variable templates template&lt; class T, class U &gt;                    
 <p>inline constexpr bool is_nothrow_assignable_v = is_nothrow_assignable&lt;T, U&gt;::value;</p>
 <p>Inherited from std::integral_constant </p>
 <h2>Member constants</h2>
-<p>value true if T is assignable from U , false otherwise<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member constant)</i><br />
+<p>value true if T is assignable from U , false otherwise<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member constant)</i><br/>
 <code>[static]</code></p>
 <h2>Member functions</h2>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;converts the object to bool, returns value<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;converts the object to bool, returns value<br/>
 operator bool <i>(public member function)</i> </p>
-<p>operator() returns value<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public member function)</i><br />
+<p>operator() returns value<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public member function)</i><br/>
 <i>(C++14)</i></p>
 <h2>Member types</h2>
-<p>Type Definition<br />
-value_type bool<br />
+<p>Type Definition<br/>
+value_type bool<br/>
 type std::integral_constant&lt;bool, value&gt;</p>
 <h2>Notes</h2>
 <p>This trait does not check anything outside the immediate context of the assignment expression: if the use of T or U would trigger template specializations, generation of implicitly-defined special member functions etc, and those have errors, the actual assignment may not compile even if std::is_assignable&lt;T,U&gt;::value compiles and evaluates to true. </p>
@@ -79,24 +79,24 @@ int main()
 }
 </code></pre>
 <h2>Output:</h2>
-<p>&nbsp;<wbr>&nbsp;int is assignable from int? false<br />
-&nbsp;<wbr>&nbsp;int&amp; is assignable from int? true<br />
-&nbsp;<wbr>&nbsp;int is assignable from double? false<br />
-&nbsp;<wbr>&nbsp;int&amp; is nothrow assignable from double? true<br />
-&nbsp;<wbr>&nbsp;string is assignable from double? true<br />
+<p>&nbsp;<wbr>&nbsp;int is assignable from int? false<br/>
+&nbsp;<wbr>&nbsp;int&amp; is assignable from int? true<br/>
+&nbsp;<wbr>&nbsp;int is assignable from double? false<br/>
+&nbsp;<wbr>&nbsp;int&amp; is nothrow assignable from double? true<br/>
+&nbsp;<wbr>&nbsp;string is assignable from double? true<br/>
 &nbsp;<wbr>&nbsp;Ex1&amp; is trivially assignable from const Ex1&amp;? true</p>
 <h2>See also</h2>
-<p>is_copy_assignable<br />
-is_trivially_copy_assignable<br />
-is_nothrow_copy_assignable checks if a type has a copy assignment operator<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(class template)</i><br />
-<i>(C++11)</i><br />
-<i>(C++11)</i><br />
-<i>(C++11)</i><br />
-is_move_assignable<br />
-is_trivially_move_assignable<br />
-is_nothrow_move_assignable checks if a type has a move assignment operator<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(class template)</i><br />
-<i>(C++11)</i><br />
-<i>(C++11)</i><br />
+<p>is_copy_assignable<br/>
+is_trivially_copy_assignable<br/>
+is_nothrow_copy_assignable checks if a type has a copy assignment operator<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(class template)</i><br/>
+<i>(C++11)</i><br/>
+<i>(C++11)</i><br/>
+<i>(C++11)</i><br/>
+is_move_assignable<br/>
+is_trivially_move_assignable<br/>
+is_nothrow_move_assignable checks if a type has a move assignment operator<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(class template)</i><br/>
+<i>(C++11)</i><br/>
+<i>(C++11)</i><br/>
 <i>(C++11)</i> </p>

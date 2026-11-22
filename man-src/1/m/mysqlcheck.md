@@ -31,7 +31,7 @@ note     : The storage engine for the table doesn't support check
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Caution</code> </font> </dd>
+  <code>Caution</code>  </dd>
 <p> It is best to make a backup of a table before performing a table repair operation; under some circumstances the operation might cause data loss. Possible causes include but are not limited to file system errors. </p>
 </dl>
 <p> There are three general ways to invoke <code>mysqlcheck</code>: </p>
@@ -288,7 +288,7 @@ shell &gt; mysqlcheck[options] db_name[tbl_name...] shell &gt; mysqlcheck[option
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  If the OpenSSL FIPS Object Module is not available, the only permitted value for <code>&#8211;ssl-fips-mode</code> is OFF. In this case, setting <code>&#8211;ssl-fips-mode</code> to ON or STRICT causes the client to produce a warning at startup and to operate in non-FIPS mode. </dd>
 </dl>
 </dl>

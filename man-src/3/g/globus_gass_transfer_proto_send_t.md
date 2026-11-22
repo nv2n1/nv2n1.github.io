@@ -11,16 +11,16 @@ description: "Protocol Modules –"
 <p> Protocol Modules &#8211; </p>
 <p> Protocol Implementation API.</p>
 <h3>Data Structures</h3>
-<p> struct <code>globus_gass_transfer_request_proto_s</code><br />
- <i>Protocol module request handling structure. </i><br />
- struct <code>globus_gass_transfer_listener_proto_s</code><br />
- <i>Protocol module listener handling structure. </i><br />
- struct <code>globus_gass_transfer_proto_descriptor_t</code><br />
+<p> struct <code>globus_gass_transfer_request_proto_s</code><br/>
+ <i>Protocol module request handling structure. </i><br/>
+ struct <code>globus_gass_transfer_listener_proto_s</code><br/>
+ <i>Protocol module listener handling structure. </i><br/>
+ struct <code>globus_gass_transfer_proto_descriptor_t</code><br/>
  <i>Protocol module descriptor structure. </i></p>
 <h3>Typedefs</h3>
-<p> typedef struct<br />
+<p> typedef struct<br/>
  <code>globus_gass_transfer_request_proto_s</code> <code>globus_gass_transfer_request_proto_t</code>&quot; </p>
-<p> typedef struct<br />
+<p> typedef struct<br/>
  <code>globus_gass_transfer_listener_proto_s</code> <code>globus_gass_transfer_listener_proto_t</code>&quot; </p>
 <p> typedef void(* <code>globus_gass_transfer_proto_send_t</code> )(<code>globus_gass_transfer_request_proto_t</code> *proto, <code>globus_gass_transfer_request_t</code> request, globus_byte_t *bytes, globus_size_t send_length, globus_bool_t last_data) </p>
 <p> typedef void(* <code>globus_gass_transfer_proto_receive_t</code> )(<code>globus_gass_transfer_request_proto_t</code> *proto, <code>globus_gass_transfer_request_t</code> request, globus_byte_t *bytes, globus_size_t bytes_length, globus_size_t wait_for_length) </p>
@@ -64,9 +64,9 @@ description: "Protocol Modules –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>proto</i> The protocol specific listener data structure associated with the listener handle.<br />
- <i>listener</i> The listener handle which the user requested the listen on.<br />
- <i>request</i> The new request handle.<br />
+</dt><dd> <i>proto</i> The protocol specific listener data structure associated with the listener handle.<br/>
+ <i>listener</i> The listener handle which the user requested the listen on.<br/>
+ <i>request</i> The new request handle.<br/>
  <i>attr</i> The request attribute set to be used when processing this request.</dd></dl>
 <h3>typedef int(* globus_gass_transfer_proto_create_listener_t)(globus_gass_transfer_listener_t listener, globus_gass_transfer_listenerattr_t *attr, char *scheme, char **base_url, <code>globus_gass_transfer_listener_proto_t</code> **proto)</h3>
 <p> Protocol module implementation function type for new server listeners. </p>
@@ -74,10 +74,10 @@ description: "Protocol Modules –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>listener</i> The listener handle to assocate with the new <i>proto</i> created by the protocol module.<br />
- <i>attr</i> A protocol-specific attribute set, created by calling the protocol module&#8217;s <code>new_listenerattr function pointer</code>.<br />
- <i>scheme</i> The URL scheme that the server has requested for the new listener. This will be one the scheme associated with a particular protocol module.<br />
- <i>base_url</i> A pointer to be set the value of the base url of this listener. For most protocols, this will contain the scheme, hostname, and port number of the listener. This string must be allocated using one of the memory allocators defined in the globus_common library. It will be freed by the GASS Transfer library when the listener is closed.<br />
+</dt><dd> <i>listener</i> The listener handle to assocate with the new <i>proto</i> created by the protocol module.<br/>
+ <i>attr</i> A protocol-specific attribute set, created by calling the protocol module&#8217;s <code>new_listenerattr function pointer</code>.<br/>
+ <i>scheme</i> The URL scheme that the server has requested for the new listener. This will be one the scheme associated with a particular protocol module.<br/>
+ <i>base_url</i> A pointer to be set the value of the base url of this listener. For most protocols, this will contain the scheme, hostname, and port number of the listener. This string must be allocated using one of the memory allocators defined in the globus_common library. It will be freed by the GASS Transfer library when the listener is closed.<br/>
  <i>proto</i> A pointer to be set to a new globus_gass_transfer_listener_proto_t which will be associated with this listener. This must be allocated by the protocol module using one of the memory allocators defined in the globus_common library. It will be freed by the GASS Transfer library when the listener is closed.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -90,7 +90,7 @@ description: "Protocol Modules –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>proto</i> The protocol module&#8217;s request handler.<br />
+</dt><dd> <i>proto</i> The protocol module&#8217;s request handler.<br/>
  <i>request</i> The request handle.</dd></dl>
 <h3>typedef void(* globus_gass_transfer_proto_listener_t)(<code>globus_gass_transfer_listener_proto_t</code> *proto, globus_gass_transfer_listener_t listener)</h3>
 <p> Protocol module implementation function type for server operations. </p>
@@ -98,7 +98,7 @@ description: "Protocol Modules –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>proto</i> The protocol-specific implementation of the <code>globus_gass_transfer_listener_proto_t</code> for a particular listener.<br />
+</dt><dd> <i>proto</i> The protocol-specific implementation of the <code>globus_gass_transfer_listener_proto_t</code> for a particular listener.<br/>
  <i>listener</i> The listener handle associated with the <i>proto</i>.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
@@ -127,7 +127,7 @@ description: "Protocol Modules –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>request</i> The request handle containing the information about the request.<br />
+</dt><dd> <i>request</i> The request handle containing the information about the request.<br/>
  <i>attr</i> A protocol-specific attribute set, created by calling the protocol module&#8217;s <code>new_requestattr function pointer</code>.</dd></dl>
 <h3>typedef void(* globus_gass_transfer_proto_receive_t)(<code>globus_gass_transfer_request_proto_t</code> *proto, <code>globus_gass_transfer_request_t</code> request, globus_byte_t *bytes, globus_size_t bytes_length, globus_size_t wait_for_length)</h3>
 <p> Protocol module function type to handle receiving data. </p>
@@ -136,10 +136,10 @@ description: "Protocol Modules –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>proto</i> The protocol module&#8217;s request handler.<br />
- <i>request</i> The request handle with which this block of bytes is associated.<br />
- <i>bytes</i> The user-supplied byte array containing the data associated with the request.<br />
- <i>bytes_length</i> The length of the <i>bytes</i> array.<br />
+</dt><dd> <i>proto</i> The protocol module&#8217;s request handler.<br/>
+ <i>request</i> The request handle with which this block of bytes is associated.<br/>
+ <i>bytes</i> The user-supplied byte array containing the data associated with the request.<br/>
+ <i>bytes_length</i> The length of the <i>bytes</i> array.<br/>
  <i>wait_for_length</i> The minimum amount of data to receive before calling <code>globus_gass_transfer_proto_receive_complete()</code> for the request. The GASS Transfer protocol module may call that function with a smaller value for the amount received if EOF has been reached.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
@@ -152,10 +152,10 @@ description: "Protocol Modules –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>proto</i> The protocol module&#8217;s request handler.<br />
- <i>request</i> The request handle with which this block of bytes is associated.<br />
- <i>bytes</i> The user-supplied byte array containing the data associated with the request.<br />
- <i>bytes_length</i> The length of the <i>bytes</i> array.<br />
+</dt><dd> <i>proto</i> The protocol module&#8217;s request handler.<br/>
+ <i>request</i> The request handle with which this block of bytes is associated.<br/>
+ <i>bytes</i> The user-supplied byte array containing the data associated with the request.<br/>
+ <i>bytes_length</i> The length of the <i>bytes</i> array.<br/>
  <i>last_data</i> A flag to indicate whether this is the final block of data for the request. If this is true, then the <i>callback</i> function will be delayed until the server acknowledges that the file has been completely received.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
@@ -181,9 +181,9 @@ description: "Protocol Modules –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>listener</i> The listener handle used to accept this request.<br />
- <i>request</i> The request handle used for this request. This was created by the user calling one of the functions in the &#8216;@ref<br />
-&nbsp;<wbr>globus_gass_transfer_client&#8217;&nbsp;<wbr>section of this manual.&nbsp;<wbr><br />
+</dt><dd> <i>listener</i> The listener handle used to accept this request.<br/>
+ <i>request</i> The request handle used for this request. This was created by the user calling one of the functions in the &#8216;@ref<br/>
+&nbsp;<wbr>globus_gass_transfer_client&#8217;&nbsp;<wbr>section of this manual.&nbsp;<wbr><br/>
  <i>proto</i> The protocol-module specific request structure. This structure contains a set of function pointers to allow GASS to continue to process this request.</dd></dl>
 <h3>void globus_gass_transfer_proto_receive_complete (<code>globus_gass_transfer_request_t</code>request, globus_byte_t *bytes, globus_size_tnbytes, globus_bool_tfailed, globus_bool_tlast_data)</h3>
 <p> Data receive complete. </p>
@@ -191,10 +191,10 @@ description: "Protocol Modules –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>request</i> The request handle associated with this byte array.<br />
- <i>bytes</i> The byte array which was received into. This should be the same as the pointer passed in the send_buffer method.<br />
- <i>nbytes</i> The number of bytes which were sent from this byte array. This may be different than length passed to the send_buffer method if an error occurred or EOF was reached while receiving the data.<br />
- <i>failed</i> A boolean indicating whether this byte range was successfully received or not. This should be set to <i>GLOBUS_TRUE</i> if either a protocol error or a user-generated abort has occurred while processing the byte range. If this is set to <i>GLOBUS_TRUE</i>, then the <i>last_data</i> parameter must also be set to <i>GLOBUS_TRUE</i>.<br />
+</dt><dd> <i>request</i> The request handle associated with this byte array.<br/>
+ <i>bytes</i> The byte array which was received into. This should be the same as the pointer passed in the send_buffer method.<br/>
+ <i>nbytes</i> The number of bytes which were sent from this byte array. This may be different than length passed to the send_buffer method if an error occurred or EOF was reached while receiving the data.<br/>
+ <i>failed</i> A boolean indicating whether this byte range was successfully received or not. This should be set to <i>GLOBUS_TRUE</i> if either a protocol error or a user-generated abort has occurred while processing the byte range. If this is set to <i>GLOBUS_TRUE</i>, then the <i>last_data</i> parameter must also be set to <i>GLOBUS_TRUE</i>.<br/>
  <i>last_data</i> A boolean indicating whether this byte range was the final one which can be processed for this request. This should be set to <i>GLOBUS_TRUE</i> if an error occurred while processing this byte range, and user-generated abort occurred, or this is the final byte range in the data transfer.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
@@ -206,13 +206,13 @@ description: "Protocol Modules –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>proto_desc</i> The protocol module descriptor. See the &#8216;@ref<br />
+</dt><dd> <i>proto_desc</i> The protocol module descriptor. See the &#8216;@ref<br/>
 &nbsp;<wbr>globus_gass_transfer_protocol&#8217;&nbsp;<wbr>section of the manual for information on this structure.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GLOBUS_SUCCESS</i> The protocol module was successfully registered with GASS.<br />
- <i>GLOBUS_GASS_TRANSFER_ERROR_NULL_POINTER</i> The <i>proto_desc</i> parameter was <i>GLOBUS_NULL</i>.<br />
+</dt><dd> <i>GLOBUS_SUCCESS</i> The protocol module was successfully registered with GASS.<br/>
+ <i>GLOBUS_GASS_TRANSFER_ERROR_NULL_POINTER</i> The <i>proto_desc</i> parameter was <i>GLOBUS_NULL</i>.<br/>
  <i>GLOBUS_GASS_TRANSFER_ERROR_ALREADY_REGISTERED</i> A protocol module has already been registered with GASS to handle this URL scheme.</dd></dl>
 <h3>void globus_gass_transfer_proto_request_denied (<code>globus_gass_transfer_request_t</code>request, intreason, char *message)</h3>
 <p> Request denied. </p>
@@ -220,9 +220,9 @@ description: "Protocol Modules –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>request</i> The request handle used for this request. This was created by the user calling one of the functions in the &#8216;@ref<br />
-&nbsp;<wbr>globus_gass_transfer_client&#8217;&nbsp;<wbr>section of this manual.&nbsp;<wbr><br />
- <i>reason</i> A protocol-specific reason code.<br />
+</dt><dd> <i>request</i> The request handle used for this request. This was created by the user calling one of the functions in the &#8216;@ref<br/>
+&nbsp;<wbr>globus_gass_transfer_client&#8217;&nbsp;<wbr>section of this manual.&nbsp;<wbr><br/>
+ <i>reason</i> A protocol-specific reason code.<br/>
  <i>message</i> A string containing a message describing why the request was denied. The GASS Transfer library is responsible for freeing this message. It must be allocated using one of the memory allocators defined in the Globus Common Library.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
@@ -234,8 +234,8 @@ description: "Protocol Modules –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>request</i> The request handle used for this request. This was created by the user calling one of the functions in the &#8216;@ref<br />
-&nbsp;<wbr>globus_gass_transfer_client&#8217;&nbsp;<wbr>section of this manual.&nbsp;<wbr><br />
+</dt><dd> <i>request</i> The request handle used for this request. This was created by the user calling one of the functions in the &#8216;@ref<br/>
+&nbsp;<wbr>globus_gass_transfer_client&#8217;&nbsp;<wbr>section of this manual.&nbsp;<wbr><br/>
  <i>proto</i> The protocol-module specific request structure. This structure contains a set of function pointers to allow GASS to continue to process this request.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
@@ -247,9 +247,9 @@ description: "Protocol Modules –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>request</i> The request handle used for this request. This was created by the user calling one of the functions in the &#8216;@ref<br />
-&nbsp;<wbr>globus_gass_transfer_client&#8217;&nbsp;<wbr>section of this manual.&nbsp;<wbr><br />
- <i>url</i> An array of url strings containing alternate locations for this file. The GASS transfer library is responsible for freeing this array. It must be allocated using one of the memory allocators defined in the Globus Common Library.<br />
+</dt><dd> <i>request</i> The request handle used for this request. This was created by the user calling one of the functions in the &#8216;@ref<br/>
+&nbsp;<wbr>globus_gass_transfer_client&#8217;&nbsp;<wbr>section of this manual.&nbsp;<wbr><br/>
+ <i>url</i> An array of url strings containing alternate locations for this file. The GASS transfer library is responsible for freeing this array. It must be allocated using one of the memory allocators defined in the Globus Common Library.<br/>
  <i>num_urls</i> The length of the <i>url</i> array.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
@@ -261,10 +261,10 @@ description: "Protocol Modules –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>request</i> The request handle associated with this byte array.<br />
- <i>bytes</i> The byte array which was sent. This should be the same as the pointer passed in the send_buffer method.<br />
- <i>nbytes</i> The number of bytes which were sent from this byte array. This may be different than length passed to the send_buffer method if an error occurred.<br />
- <i>failed</i> A boolean indicating whether this byte range was successfully sent or not. This should be set to <i>GLOBUS_TRUE</i> if either a protocol error or a user-generated abort has occurred while processing the byte range. If this is set to <i>GLOBUS_TRUE</i>, then the <i>last_data</i> parameter must also be set to <i>GLOBUS_TRUE</i>.<br />
+</dt><dd> <i>request</i> The request handle associated with this byte array.<br/>
+ <i>bytes</i> The byte array which was sent. This should be the same as the pointer passed in the send_buffer method.<br/>
+ <i>nbytes</i> The number of bytes which were sent from this byte array. This may be different than length passed to the send_buffer method if an error occurred.<br/>
+ <i>failed</i> A boolean indicating whether this byte range was successfully sent or not. This should be set to <i>GLOBUS_TRUE</i> if either a protocol error or a user-generated abort has occurred while processing the byte range. If this is set to <i>GLOBUS_TRUE</i>, then the <i>last_data</i> parameter must also be set to <i>GLOBUS_TRUE</i>.<br/>
  <i>last_data</i> A boolean indicating whether this byte range was the final one which can be processed for this request. This should be set to <i>GLOBUS_TRUE</i> if an error occurred while processing this byte range, and user-generated abort occurred, or this is the final byte range in the data transfer.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
@@ -276,13 +276,13 @@ description: "Protocol Modules –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>proto_desc</i> The protocol module descriptor. See the &#8216;@ref<br />
+</dt><dd> <i>proto_desc</i> The protocol module descriptor. See the &#8216;@ref<br/>
 &nbsp;<wbr>globus_gass_transfer_protocol&#8217;&nbsp;<wbr>section of the manual for information on this structure.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GLOBUS_SUCCESS</i> The protocol module was successfully registered with GASS.<br />
- <i>GLOBUS_GASS_TRANSFER_ERROR_NULL_POINTER</i> The <i>proto_desc</i> parameter was <i>GLOBUS_NULL</i>.<br />
+</dt><dd> <i>GLOBUS_SUCCESS</i> The protocol module was successfully registered with GASS.<br/>
+ <i>GLOBUS_GASS_TRANSFER_ERROR_NULL_POINTER</i> The <i>proto_desc</i> parameter was <i>GLOBUS_NULL</i>.<br/>
  <i>GLOBUS_GASS_TRANSFER_ERROR_INVALID_USE</i> A protocol module has not been registered with GASS to handle this URL scheme.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gass_transfer from the source code. </p>

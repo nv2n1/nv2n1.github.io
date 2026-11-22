@@ -10,7 +10,7 @@ description: "slarf.f –"
 <p>slarf.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>slarf</code> (SIDE, M, N, V, INCV, TAU, C, LDC, WORK)<br />
+<p>subroutine <code>slarf</code> (SIDE, M, N, V, INCV, TAU, C, LDC, WORK)<br/>
  <i></i><code>SLARF</code> applies an elementary reflector to a general rectangular matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slarf (characterSIDE, integerM, integerN, real, dimension( * )V, integerINCV, realTAU, real, dimension( ldc, * )C, integerLDC, real, dimension( * )WORK)</h3>

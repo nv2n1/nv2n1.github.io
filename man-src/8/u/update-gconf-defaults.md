@@ -14,10 +14,10 @@ description: "update-gconf-defaults – generate GConf defaults shipped in Debia
 <p>This manual page documents briefly the <code>update-gconf-defaults</code> command. </p>
 <p> <code>update-gconf-defaults</code> is responsible for generating defaults used by GConf from the files found in <i>/usr/share/gconf/defaults</i>. </p>
 <p> The syntax of files in this directory consists in lines containing the key name, some white space, and the key value, which can be an integer, a boolean, a float, a string or a list of strings. Example: </p>
-<p> /apps/myprogram/frob_number 42<br />
- /apps/myprogram/do_foo true<br />
- /apps/myprogram/priority 1.25<br />
- /apps/myprogram/name &quot;Gotcha !&quot;<br />
+<p> /apps/myprogram/frob_number 42<br/>
+ /apps/myprogram/do_foo true<br/>
+ /apps/myprogram/priority 1.25<br/>
+ /apps/myprogram/name &quot;Gotcha !&quot;<br/>
  /apps/myprogram/names [Ha ha!,Let&#8217;s keep serious,Ho ho!] </p>
 <p> Files are processed in alphabetical order. Files processed later take precedence over the previous ones if they include the same defaults. Thus, it is recommended to name them <i>NN</i>_<i>package</i> with <i>NN</i> being a 2-digit number and <i>package</i> the package name. It is recommended to set <i>NN</i> as 10 for packages in the Debian archive, 20 for derived distributions, 50 for CDD distributions, and 90 for site-specific packages.</p>
 <h2>Options</h2>

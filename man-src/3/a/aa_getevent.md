@@ -11,8 +11,8 @@ description: "aa_getevent – keyboard functions"
 <p> aa_getevent &#8211; keyboard functions</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>
-<p> int aa_getevent<br />
- (<br />
+<p> int aa_getevent<br/>
+ (<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>aa_context *c,</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>int wait</p>
 <p> ); </code></p>

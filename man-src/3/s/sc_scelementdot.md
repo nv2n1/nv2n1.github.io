@@ -12,12 +12,12 @@ description: "sc::SCElementDot –"
 <p> Inherits <code>sc::SCElementOp</code>.</p>
 <h3>Public Member Functions</h3>
 <p><code>SCElementDot</code> (<code>StateIn</code> &amp;) </p>
-<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br />
- <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br />
+<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br/>
+ <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br/>
  <code>SCElementDot</code> (double **a, double **b, int length) </p>
-<p> void <code>process</code> (<code>SCMatrixBlockIter</code> &amp;)<br />
- <i>This is the fallback routine to process blocks and is called by process_spec members that are not overridden. </i><br />
- int <code>has_side_effects</code> ()<br />
+<p> void <code>process</code> (<code>SCMatrixBlockIter</code> &amp;)<br/>
+ <i>This is the fallback routine to process blocks and is called by process_spec members that are not overridden. </i><br/>
+ int <code>has_side_effects</code> ()<br/>
  <i>By default this returns nonzero. </i></p>
 <h2>Member Function Documentation</h2>
 <h3>int sc::SCElementDot::has_side_effects () [virtual]</h3>

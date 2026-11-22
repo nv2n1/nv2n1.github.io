@@ -11,7 +11,7 @@ description: "register-ds-admin.pl – Registers Directory Server instances with
 <h2>Synopsis</h2>
 <p><code>register-ds-admin.pl</code> [<i>&#8211;options</i>] <i>&#8212; </i>[<i>args</i>]</p>
 <h2>Description</h2>
-<p>Registers existing Directory Server instances with an existing Admin Server. This command does the set up necessary for the use of the Console to manage the Directory Server instances you are registering. You can register local Directory Server instances with a local Configuration Directory Server/Admin Server. You can also create an Admin Server and register standalone instances with it. You can register remote Directory Server instances to the local Admin Server, as well as register local Directory Server instances with a remote Admin Server &#8211; this allows a single Console/Admin Server to manage all the Directory Servers in your network. Use this command with the <code>&#8211;update</code> option after an upgrade to refresh<br />
+<p>Registers existing Directory Server instances with an existing Admin Server. This command does the set up necessary for the use of the Console to manage the Directory Server instances you are registering. You can register local Directory Server instances with a local Configuration Directory Server/Admin Server. You can also create an Admin Server and register standalone instances with it. You can register remote Directory Server instances to the local Admin Server, as well as register local Directory Server instances with a remote Admin Server &#8211; this allows a single Console/Admin Server to manage all the Directory Servers in your network. Use this command with the <code>&#8211;update</code> option after an upgrade to refresh<br/>
 &nbsp;<wbr>the server information&nbsp;<wbr>(version, build number, etc.)&nbsp;<wbr>in the Console. Can be run in interactive mode with different levels of verbosity, or in silent mode with parameters supplied in a .inf format file or on the command line. </p>
 <h2>Options</h2>
 <p>A summary of options is included below:</p>
@@ -49,66 +49,66 @@ description: "register-ds-admin.pl – Registers Directory Server instances with
 <p>The .inf file use three directives depending on what you want to do: [General], [admin], and [register]. The [admin] section is only needed if an Admin Server needs to be installed on the local system. </p>
 <p> Here is an example of creating an Admin Server, and turning a standalone Directory Server instance into a configuration instance. In this case we need the [General], [admin], and [register] directives</p>
 <dl>
-<dd>[General]<br />
- FullMachineName= localhost.localdomain<br />
- SuiteSpotUserID= dirsrv<br />
- SuiteSpotGroup= dirsrv<br />
- AdminDomain= redhat.com<br />
- ConfigDirectoryAdminID= admin<br />
- ConfigDirectoryAdminPwd= admin<br />
+<dd>[General]<br/>
+ FullMachineName= localhost.localdomain<br/>
+ SuiteSpotUserID= dirsrv<br/>
+ SuiteSpotGroup= dirsrv<br/>
+ AdminDomain= redhat.com<br/>
+ ConfigDirectoryAdminID= admin<br/>
+ ConfigDirectoryAdminPwd= admin<br/>
  ConfigDirectoryLdapURL= <a href="ldap://localhost.localdomain:389/o=NetscapeRoot">ldap://localhost.localdomain:389/o=NetscapeRoot</a> </dd>
-<p> [admin]<br />
- Port= 9830<br />
- ServerIpAddress= 127.0.0.1<br />
- ServerAdminID= admin<br />
+<p> [admin]<br/>
+ Port= 9830<br/>
+ ServerIpAddress= 127.0.0.1<br/>
+ ServerAdminID= admin<br/>
  ServerAdminPwd= password </p>
-<p> [register]<br />
+<p> [register]<br/>
  configinst= slapd-localhost::cn=directory manager::password </p>
 </dl>
 <p> Here is an example of an .inf file that registers two local Directory Server instances (slapi-replica, slapd-instance2) with the local Configuration Directory Server (slapd-localhost).</p>
 <dl>
-<dd>[General]<br />
- FullMachineName= localhost.localdomain<br />
- SuiteSpotUserID= dirsrv<br />
- SuiteSpotGroup= dirsrv<br />
- AdminDomain= redhat.com<br />
- ConfigDirectoryAdminID= admin<br />
- ConfigDirectoryAdminPwd= admin<br />
+<dd>[General]<br/>
+ FullMachineName= localhost.localdomain<br/>
+ SuiteSpotUserID= dirsrv<br/>
+ SuiteSpotGroup= dirsrv<br/>
+ AdminDomain= redhat.com<br/>
+ ConfigDirectoryAdminID= admin<br/>
+ ConfigDirectoryAdminPwd= admin<br/>
  ConfigDirectoryLdapURL= <a href="ldap://localhost.localdomain:389/o=NetscapeRoot">ldap://localhost.localdomain:389/o=NetscapeRoot</a> </dd>
-<p> [register]<br />
- configinst= slapd-localhost::cn=directory manager::password<br />
- localinst= slapd-instance2::cn=directory manager::password<br />
+<p> [register]<br/>
+ configinst= slapd-localhost::cn=directory manager::password<br/>
+ localinst= slapd-instance2::cn=directory manager::password<br/>
  localinst= slapd-replica::cn=directory manager::password </p>
 </dl>
 <p> This example will add the slapd-replica instance to the local configuration server. Then this server&#8217;s configuration to added to the remote configuration server on ldap.redhat.com</p>
 <dl>
-<dd>[General]<br />
- FullMachineName= localhost.localdomain<br />
- SuiteSpotUserID= dirsrv<br />
- SuiteSpotGroup= dirsrv<br />
- AdminDomain= redhat.com<br />
- ConfigDirectoryAdminID= admin<br />
- ConfigDirectoryAdminPwd= admin<br />
+<dd>[General]<br/>
+ FullMachineName= localhost.localdomain<br/>
+ SuiteSpotUserID= dirsrv<br/>
+ SuiteSpotGroup= dirsrv<br/>
+ AdminDomain= redhat.com<br/>
+ ConfigDirectoryAdminID= admin<br/>
+ ConfigDirectoryAdminPwd= admin<br/>
  ConfigDirectoryLdapURL= <a href="ldap://localhost.localdomain:389/o=NetscapeRoot">ldap://localhost.localdomain:389/o=NetscapeRoot</a> </dd>
-<p> [register]<br />
- configinst= slapd-localhost::cn=directory manager::password<br />
- localinst= slapd-replica::cn=directory manager::password<br />
- localcertdir= /etc/dirsrv/slapd-localhost<br />
- remotehost= ldap.redhat.com<br />
- remoteport= 636<br />
- remotebinddn= cn=directory manager<br />
- remotebindpw= password<br />
- admindomain= redhat.com<br />
- admindn= uid=admin,ou=Administrators,ou=TopologyManagement,o=NetscapeRoot<br />
- adminpw= password<br />
+<p> [register]<br/>
+ configinst= slapd-localhost::cn=directory manager::password<br/>
+ localinst= slapd-replica::cn=directory manager::password<br/>
+ localcertdir= /etc/dirsrv/slapd-localhost<br/>
+ remotehost= ldap.redhat.com<br/>
+ remoteport= 636<br/>
+ remotebinddn= cn=directory manager<br/>
+ remotebindpw= password<br/>
+ admindomain= redhat.com<br/>
+ admindn= uid=admin,ou=Administrators,ou=TopologyManagement,o=NetscapeRoot<br/>
+ adminpw= password<br/>
  destination= remote
 </dl>
 <p> The <code>[register]</code> directive parameter descriptions:</p>
 <dl>
 <dt><code>configinst</code> = INSTANCE::BIND_DN::PASSWORD</dt>
 <dd>
-</dd><dd><i>INSTANCE</i> = The server where the existing configuration exists, or the server where you want to add the configuration to. The value takes the form of slapd-INSTANCE.<br />
- <i>BIND_DN</i> = The root DN, usually &#8220;cn=directory manager&#8221;, for the local configuration server.<br />
+</dd><dd><i>INSTANCE</i> = The server where the existing configuration exists, or the server where you want to add the configuration to. The value takes the form of slapd-INSTANCE.<br/>
+ <i>BIND_DN</i> = The root DN, usually &#8220;cn=directory manager&#8221;, for the local configuration server.<br/>
  <i>PASSWORD</i> = the root DN password.</dd>
 <dt><code>localinst</code> = INSTANCE::BIND_DN::PASSWORD</dt>
 <dd>
@@ -131,12 +131,12 @@ description: "register-ds-admin.pl – Registers Directory Server instances with
 <dd>
 </dd><dt><code>destination</code> = <code>local</code>, or <code>remote</code></dt>
 <dd>
-</dd><dd><i>local</i> = Registers the remote server with the local configuration server.<br />
+</dd><dd><i>local</i> = Registers the remote server with the local configuration server.<br/>
  <i>remote</i> = Registers the local server with the remote configuration server.</dd></dl>
 <h2>Author</h2>
 <p>register-ds-admin.pl was written by the 389 Project.</p>
 <h2>Reporting Bugs</h2>
 <p>Report bugs to <a rel="nofollow" href="http://bugzilla.redhat.com.">http://bugzilla.redhat.com.</a></p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2010 Red Hat, Inc.<br />
+<p>Copyright &#169; 2010 Red Hat, Inc.<br/>
  This is free software. You may redistribute copies of it under the terms of the Directory Server license found in the LICENSE file of this software distribution. This license is essentially the GNU General Public License version 2 with an exception for plug-in distribution.</p>

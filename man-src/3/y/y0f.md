@@ -21,14 +21,14 @@ long double y1l(long double x);
 long double ynl(int n, long double x);</code></pre>
 <p> Link with <i>-lm</i>. Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>y0</code>(), <code>y1</code>(), <code>yn</code>():</p>
 <dl>
-<dd>_XOPEN_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
+<dd>_XOPEN_SOURCE<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_SVID_SOURCE ||&nbsp;_BSD_SOURCE</dd></dl>
 <p> <code>y0f</code>(), <code>y0l</code>(), <code>y1f</code>(), <code>y1l</code>(), <code>ynf</code>(), <code>ynl</code>():</p>
 <dl>
-<dd>_XOPEN_SOURCE &nbsp;&gt;=&nbsp;600<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;(_ISOC99_SOURCE&nbsp;&amp;&amp;&nbsp;_XOPEN_SOURCE)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
+<dd>_XOPEN_SOURCE &nbsp;&gt;=&nbsp;600<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;(_ISOC99_SOURCE&nbsp;&amp;&amp;&nbsp;_XOPEN_SOURCE)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_SVID_SOURCE ||&nbsp;_BSD_SOURCE</dd></dl>
 <h2>Description</h2>
 <p>The <code>y0</code>() and <code>y1</code>() functions return Bessel functions of <i>x</i> of the second kind of orders 0 and 1, respectively. The <code>yn</code>() function returns the Bessel function of <i>x</i> of the second kind of order <i>n</i>. </p>

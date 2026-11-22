@@ -10,7 +10,7 @@ description: "zgeqr2.f –"
 <p>zgeqr2.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zgeqr2</code> (M, N, A, LDA, TAU, WORK, INFO)<br />
+<p>subroutine <code>zgeqr2</code> (M, N, A, LDA, TAU, WORK, INFO)<br/>
  <i></i><code>ZGEQR2</code> computes the QR factorization of a general rectangular matrix using an unblocked algorithm.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zgeqr2 (integerM, integerN, complex*16, dimension( lda, * )A, integerLDA, complex*16, dimension( * )TAU, complex*16, dimension( * )WORK, integerINFO)</h3>

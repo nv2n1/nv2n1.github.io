@@ -10,7 +10,7 @@ description: "ldns_zone_new, ldns_zone_deep_free, ldns_zone_new_frm_fp, ldns_zon
 
 <p> ldns_zone_new, ldns_zone_deep_free, ldns_zone_new_frm_fp, ldns_zone_new_frm_fp_l </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ldns_zone * ldns_zone_new(void); </p>

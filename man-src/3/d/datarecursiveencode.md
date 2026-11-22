@@ -23,10 +23,10 @@ Data::Recursive::Encode - Encode/Decode Values In A Structure
 </dd><dt>encode_utf8
 </dt><dd><pre> my $ret = Data::Recursive::Encode-&gt;encode_utf8($data);</pre>Returns a structure containing nodes which have been processed through encode_utf8.
 </dd><dt>from_to
-</dt><dd><pre> my $ret = Data::Recursive::Encode-&gt;from_to($data, FROM_ENC, TO_ENC[, CHECK]);</pre>Returns a structure containing nodes which have been processed through from_to.</dd></dl><h2>Author</h2>Tokuhiro Matsuno &lt;tokuhirom <font SIZE="-1">AAJKLFJEF GMAIL COM</font>&gt; 
+</dt><dd><pre> my $ret = Data::Recursive::Encode-&gt;from_to($data, FROM_ENC, TO_ENC[, CHECK]);</pre>Returns a structure containing nodes which have been processed through from_to.</dd></dl><h2>Author</h2>Tokuhiro Matsuno &lt;tokuhirom AAJKLFJEF GMAIL COM&gt; 
 
  gfx
-<h2>See Also</h2>This module is inspired from Data::Visitor::Encode, but this module depended to too much modules. I want to use this module in pure-perl, but Data::Visitor::Encode depend to <font SIZE="-1">XS</font> modules. 
+<h2>See Also</h2>This module is inspired from Data::Visitor::Encode, but this module depended to too much modules. I want to use this module in pure-perl, but Data::Visitor::Encode depend to XS modules. 
 
  Unicode::RecursiveDowngrade does not supports perl5's Unicode way correctly.
 <h2>License</h2>Copyright (C) 2010 Tokuhiro Matsuno All rights reserved. 

@@ -10,9 +10,9 @@ description: "Heimdal Kerberos 4 compatiblity functions –"
 
 <p> Heimdal Kerberos 4 compatiblity functions &#8211; </p>
 <h3>Functions</h3>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb524_convert_creds_kdc</code> (krb5_context context, krb5_creds *in_cred, struct credentials *v4creds) <code>KRB5_DEPRECATED_FUNCTION</code>(&#8216;Use X instead&#8217;)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb524_convert_creds_kdc_ccache</code> (krb5_context context, krb5_ccache ccache, krb5_creds *in_cred, struct credentials *v4creds) <code>KRB5_DEPRECATED_FUNCTION</code>(&#8216;Use X instead&#8217;)&quot; </p>
 <h2>Detailed Description</h2>
 <h2>Function Documentation</h2>
@@ -21,8 +21,8 @@ description: "Heimdal Kerberos 4 compatiblity functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> Kerberos 5 context.<br />
- <i>in_cred</i> the credential to convert<br />
+</dt><dd> <i>context</i> Kerberos 5 context.<br/>
+ <i>in_cred</i> the credential to convert<br/>
  <i>v4creds</i> the converted credential</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -33,9 +33,9 @@ description: "Heimdal Kerberos 4 compatiblity functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> Kerberos 5 context.<br />
- <i>ccache</i> credential cache used to check for des-ticket.<br />
- <i>in_cred</i> the credential to convert<br />
+</dt><dd> <i>context</i> Kerberos 5 context.<br/>
+ <i>ccache</i> credential cache used to check for des-ticket.<br/>
+ <i>in_cred</i> the credential to convert<br/>
  <i>v4creds</i> the converted credential</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

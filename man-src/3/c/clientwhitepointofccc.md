@@ -26,5 +26,5 @@ description: "DisplayOfCCC, VisualOfCCC, ScreenNumberOfCCC, ScreenWhitePointOfCC
 <p> The <code>ScreenWhitePointOfCCC</code> macro returns the screen white point of the screen associated with the specified CCC. </p>
 <p> The <code>ClientWhitePointOfCCC</code> macro returns the client white point of the screen associated with the specified CCC.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xcmscccofcolormap/">XcmsCCCOfColormap</a>(3), <a href="/docs/linux/man/3-xcmsconvertcolors/">XcmsConvertColors</a>(3), <a href="/docs/linux/man/3-xcmscreateccc/">XcmsCreateCCC</a>(3), <a href="/docs/linux/man/3-xcmsdefaultccc/">XcmsDefaultCCC</a>(3), <a href="/docs/linux/man/3-xcmssetwhitepoint/">XcmsSetWhitePoint</a>(3)<br />
+<p><a href="/docs/linux/man/3-xcmscccofcolormap/">XcmsCCCOfColormap</a>(3), <a href="/docs/linux/man/3-xcmsconvertcolors/">XcmsConvertColors</a>(3), <a href="/docs/linux/man/3-xcmscreateccc/">XcmsCreateCCC</a>(3), <a href="/docs/linux/man/3-xcmsdefaultccc/">XcmsDefaultCCC</a>(3), <a href="/docs/linux/man/3-xcmssetwhitepoint/">XcmsSetWhitePoint</a>(3)<br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

@@ -35,5 +35,5 @@ description: "ocamlcp, ocamloptp – The OCaml profiling compilers"
 <p> Calling <code><a href="/docs/linux/man/1-ocamlcp/">ocamlcp</a></code>(1) or <code><a href="/docs/linux/man/1-ocamloptp/">ocamloptp</a></code>(1) without the <code>-P</code> option defaults to <code>-P fm</code>, meaning that only function calls and pattern matching are profiled. </p>
 <p> Note: for compatibility with previous versions, <code><a href="/docs/linux/man/1-ocamlcp/">ocamlcp</a></code>(1) also accepts the option <code>-p</code> with the same argument and meaning as <code>-P</code>. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-ocamlc/">ocamlc</a></code>(1), <code><a href="/docs/linux/man/1-ocamlopt/">ocamlopt</a></code>(1), <code><a href="/docs/linux/man/1-ocamlprof/">ocamlprof</a></code>(1).<br />
+<p> <code><a href="/docs/linux/man/1-ocamlc/">ocamlc</a></code>(1), <code><a href="/docs/linux/man/1-ocamlopt/">ocamlopt</a></code>(1), <code><a href="/docs/linux/man/1-ocamlprof/">ocamlprof</a></code>(1).<br/>
  <i>The OCaml user&#8217;s manual</i>, chapter &quot;Profiling&quot;. </p>

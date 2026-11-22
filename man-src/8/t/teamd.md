@@ -9,10 +9,10 @@ description: "teamd — team network device control daemon"
 
 <p>teamd &#8212; team network device control daemon</p>
 <h2>Synopsis</h2>
-<p><code>teamd</code> <code>-k</code> [<code>-p</code> <i>pid_file</i>] [<code>-g</code>]<br />
- <code>teamd</code> <code>-e</code> [<code>-p</code> <i>pid_file</i>] [<code>-g</code>]<br />
- <code>teamd</code> <code>-c</code><i> config_text</i> [<code>-p</code> <i>pid_file</i>] [<code>-gdrD</code>] [<code>-Z</code> <i>address</i>]<br />
- <code>teamd</code> <code>-f</code><i> config_file</i> [<code>-p</code> <i>pid_file</i>] [<code>-gdrD</code>] [<code>-Z</code> <i>address</i>]<br />
+<p><code>teamd</code> <code>-k</code> [<code>-p</code> <i>pid_file</i>] [<code>-g</code>]<br/>
+ <code>teamd</code> <code>-e</code> [<code>-p</code> <i>pid_file</i>] [<code>-g</code>]<br/>
+ <code>teamd</code> <code>-c</code><i> config_text</i> [<code>-p</code> <i>pid_file</i>] [<code>-gdrD</code>] [<code>-Z</code> <i>address</i>]<br/>
+ <code>teamd</code> <code>-f</code><i> config_file</i> [<code>-p</code> <i>pid_file</i>] [<code>-gdrD</code>] [<code>-Z</code> <i>address</i>]<br/>
  <code>teamd</code> <code>-h</code>|<code>-V</code></p>
 <h2>Description</h2>
 <p>teamd is a daemon to control a given team network device, during runtime, as a puppeteer controls a puppet. It uses libteam to communicate with the kernel team device instance via Netlink sockets. The behaviour depends on the selected runner and its configuration. This daemon is part of the libteam project.</p>

@@ -69,13 +69,13 @@ description: "Lintian::Processable — An (abstract) object that Lintian can pro
 <dd>Creates a link to the input file near where all files in that group will be unpacked and analyzed.</dd>
 <dt>guess_name</dt>
 <dd>Creates a link to the input file near where all files in that group will be unpacked and analyzed.</dd>
-<dt>unfolded_field (<font SIZE="-1">FIELD</font>)</dt>
-<dd>This method returns the unfolded value of the control field <font SIZE="-1">FIELD</font> in the control file for the package. For a source package, this is the *.dsc file; for a binary package, this is the control file in the control section of the package. </dd>
-<p> If <font SIZE="-1">FIELD</font> is passed but not present, then this method returns undef. </p>
+<dt>unfolded_field (FIELD)</dt>
+<dd>This method returns the unfolded value of the control field FIELD in the control file for the package. For a source package, this is the *.dsc file; for a binary package, this is the control file in the control section of the package. </dd>
+<p> If FIELD is passed but not present, then this method returns undef. </p>
 <p> Needs-Info requirements for using <i>unfolded_field</i>: none</p>
-<dt>field ([FIELD[, <font SIZE="-1">DEFAULT</font>]])</dt>
-<dd>If <font SIZE="-1">FIELD</font> is given, this method returns the value of the control field <font SIZE="-1">FIELD</font> in the control file for the package. For a source package, this is the *.dsc file; for a binary package, this is the control file in the control section of the package. </dd>
-<p> If <font SIZE="-1">FIELD</font> is passed but not present, then this method will return <font SIZE="-1">DEFAULT</font> (if given) or undef. </p>
+<dt>field ([FIELD[, DEFAULT]])</dt>
+<dd>If FIELD is given, this method returns the value of the control field FIELD in the control file for the package. For a source package, this is the *.dsc file; for a binary package, this is the control file in the control section of the package. </dd>
+<p> If FIELD is passed but not present, then this method will return DEFAULT (if given) or undef. </p>
 <p> Otherwise this will return a hash of fields, where the key is the field name (in all lowercase). </p>
 <p> Needs-Info requirements for using <i>field</i>: none</dl>
 <h2>Author</h2>

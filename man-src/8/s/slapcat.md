@@ -18,7 +18,7 @@ description: "slapcat – SLAPD database to LDIF utility"
 <dl>
 <dt><code>-a</code><i>&nbsp;<wbr>filter</i></dt>
 <dd>Only dump entries matching the asserted filter. For example </dd>
-<p> slapcat -a \<br />
+<p> slapcat -a \<br/>
 &nbsp;<wbr>&quot;(!(entryDN:dnSubtreeMatch:=ou=People,dc=example,dc=com))&quot; </p>
 <p> will dump all but the &quot;ou=People,dc=example,dc=com&quot; subtree of the &quot;dc=example,dc=com&quot; database. Deprecated; use <code>-H</code> <i><a href="ldap:///???(filter)">ldap:///???(filter)</a></i> instead.</p>
 <dt><code>-b</code><i>&nbsp;<wbr>suffix</i></dt>

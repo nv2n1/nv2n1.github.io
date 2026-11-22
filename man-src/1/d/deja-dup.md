@@ -10,9 +10,9 @@ description: "deja-dup – a desktop backup tool"
 
 <p> deja-dup &#8211; a desktop backup tool </p>
 <h2>SYNOPSIS</h2>
-<p> <code>deja-dup</code> [OPTIONS…]<br />
- <code>deja-dup</code> &#8211;backup<br />
- <code>deja-dup</code> &#8211;restore [FILES…]<br />
+<p> <code>deja-dup</code> [OPTIONS…]<br/>
+ <code>deja-dup</code> &#8211;backup<br/>
+ <code>deja-dup</code> &#8211;restore [FILES…]<br/>
  <code>deja-dup</code> &#8211;restore-missing DIRECTORY</p>
 <h2>DESCRIPTION</h2>
 <p> Déjà Dup is a simple backup tool. It hides the complexity of backing up the Right Way (encrypted, off-site, and regular) and uses duplicity as the backend.</p>

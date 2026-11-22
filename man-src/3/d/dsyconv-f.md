@@ -10,7 +10,7 @@ description: "dsyconv.f –"
 <p>dsyconv.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dsyconv</code> (UPLO, WAY, N, A, LDA, IPIV, WORK, INFO)<br />
+<p>subroutine <code>dsyconv</code> (UPLO, WAY, N, A, LDA, IPIV, WORK, INFO)<br/>
  <i></i><code>DSYCONV</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dsyconv (characterUPLO, characterWAY, integerN, double precision, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, double precision, dimension( * )WORK, integerINFO)</h3>

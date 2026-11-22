@@ -261,9 +261,9 @@ $ tig --word-diff=plain
 <dt>
 </dt><dd> When compiled with readline support, Tig writes a persistent command and search history. The location of the history file is determined in the following way. If $XDG_DATA_HOME is set and $XDG_DATA_HOME/tig/ exists, store history to $XDG_DATA_HOME/tig/history. If $XDG_DATA_HOME is empty or undefined, store history to ~/.local/share/tig/history if the directory ~/.local/share/tig/ exists, and fall back to ~/.tig_history if it does not exist.</dd></dl>
 <h2>BUGS</h2>
-<p> Please visit Tig&#8217;s m[blue]<code>home page</code>m[]<font SIZE="-2">[1]</font> or m[blue]<code>main Git repository</code>m[]<font SIZE="-2">[2]</font> for information about new releases and how to report bugs or feature request.</p>
+<p> Please visit Tig&#8217;s m[blue]<code>home page</code>m[][1] or m[blue]<code>main Git repository</code>m[][2] for information about new releases and how to report bugs or feature request.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright (c) 2006-2014 Jonas Fonseca &lt;m[blue]<code>jonas.fonseca [at] gmail.com</code>m[]<font SIZE="-2">[3]</font>&gt; </p>
+<p> Copyright (c) 2006-2014 Jonas Fonseca &lt;m[blue]<code>jonas.fonseca [at] gmail.com</code>m[][3]&gt; </p>
 <p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-tigrc/">tigrc</a></code>(5), <code><a href="/docs/linux/man/7-tigmanual/">tigmanual</a></code>(7), git(7)</p>

@@ -14,17 +14,17 @@ description: "sc::SCExtrapData –"
 #include &lt;scextrap.h&gt;</code></pre>
 <p> Inherits <code>sc::SavableState</code>. Inherited by <code>sc::SymmSCMatrix2SCExtrapData</code>, <code>sc::SymmSCMatrix4SCExtrapData</code>, <code>sc::SymmSCMatrixNSCExtrapData</code>, and <code>sc::SymmSCMatrixSCExtrapData</code>.</p>
 <h3>Public Member Functions</h3>
-<p><code>SCExtrapData</code> ()<br />
- <i>Construct a new </i><code>SCExtrapData</code>.<br />
- <code>SCExtrapData</code> (<code>StateIn</code> &amp;)<br />
- <i>Constructor to restore </i><code>SCExtrapData</code> from a <code>StateIn</code> object.<br />
- void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br />
- <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br />
- virtual <code>SCExtrapData</code> * <code>copy</code> ()=0<br />
- <i>Return a copy of this. </i><br />
- virtual void <code>zero</code> ()=0<br />
- <i>Set this to zero. </i><br />
- virtual void <code>accumulate_scaled</code> (double scale, const <code>Ref</code>&lt; <code>SCExtrapData</code> &gt; &amp;)=0<br />
+<p><code>SCExtrapData</code> ()<br/>
+ <i>Construct a new </i><code>SCExtrapData</code>.<br/>
+ <code>SCExtrapData</code> (<code>StateIn</code> &amp;)<br/>
+ <i>Constructor to restore </i><code>SCExtrapData</code> from a <code>StateIn</code> object.<br/>
+ void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br/>
+ <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br/>
+ virtual <code>SCExtrapData</code> * <code>copy</code> ()=0<br/>
+ <i>Return a copy of this. </i><br/>
+ virtual void <code>zero</code> ()=0<br/>
+ <i>Set this to zero. </i><br/>
+ virtual void <code>accumulate_scaled</code> (double scale, const <code>Ref</code>&lt; <code>SCExtrapData</code> &gt; &amp;)=0<br/>
  <i>The passed </i><code>SCExtrapData</code> is accumulated into this after applying the scaling factor.</p>
 <h2>Detailed Description</h2>
 <p><code>SCExtrapData</code> hold the data to be extrapolated needed by <code>SelfConsistentExtrapolation</code>.</p>

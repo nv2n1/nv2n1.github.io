@@ -42,14 +42,14 @@ description: "condor_update_machine_ad update a machine ClassAd"
 <p> This tool is intended for the use of system administrators when dealing with offline universes. </p>
 <h2>Examples</h2>
 <p> To re-enable matching with the VM universe jobs, place on stdin a complete ClassAd (including the ending newline character) to change the value of ClassAd attribute HasVM : </p>
-<p> echo &quot;HasVM = True<br />
+<p> echo &quot;HasVM = True<br/>
  &quot; | condor_update_machine_ad </p>
 <p> To prevent vm universe jobs from matching with the machine: </p>
-<p> echo &quot;HasVM = False<br />
+<p> echo &quot;HasVM = False<br/>
  &quot; | condor_update_machine_ad </p>
 <p> To prevent vm universe jobs from matching with the machine and specify a reason: </p>
-<p> echo &quot;HasVM = False<br />
- VMOfflineReason = \&quot;Cosmic rays.\&quot;<br />
+<p> echo &quot;HasVM = False<br/>
+ VMOfflineReason = \&quot;Cosmic rays.\&quot;<br/>
  &quot; | condor_update_machine_ad </p>
 <p> Note that the quotes around the reason are required by ClassAds, and they must be escaped because of the shell. Using a file instead of stdin may be preferable in these situations, because neither quoting nor escape characters are needed. </p>
 <h2>Exit Status</h2>

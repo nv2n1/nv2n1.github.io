@@ -51,7 +51,7 @@ description: "perltrap – Perl traps for the unwary"
 <dt>&bull;</dt>
 <dd> The match operator is &#8220;=~&#8221;, not &#8220;~&#8221;. (&#8220;~&#8221; is the one&#8217;s complement operator, as in C.)</dd>
 <dt>&bull;</dt>
-<dd> The exponentiation operator is &#8220;**&#8221;, not &#8220;^&#8221;. &#8220;^&#8221; is the <font SIZE="-1">XOR</font> operator, as in C. (You know, one could get the feeling that <code>awk</code> is basically incompatible with C.)</dd>
+<dd> The exponentiation operator is &#8220;**&#8221;, not &#8220;^&#8221;. &#8220;^&#8221; is the XOR operator, as in C. (You know, one could get the feeling that <code>awk</code> is basically incompatible with C.)</dd>
 <dt>&bull;</dt>
 <dd> The concatenation operator is &#8220;.&#8221;, not the null string. (Using the null string would render <tt>&quot;/pat/ /pat/&quot;</tt> unparsable, because the third slash would be interpreted as a division operator&#8212;the tokenizer is in fact slightly context sensitive for operators like &#8220;/&#8221;, &#8220;?&#8221;, and &#8220;&gt;&#8221;. And in fact, &#8220;.&#8221; itself can be the beginning of a number.)</dd>
 <dt>&bull;</dt>
@@ -79,8 +79,8 @@ description: "perltrap – Perl traps for the unwary"
 <dd> You cannot set <tt>$RS</tt> to a pattern, only a string.</dd>
 <dt>&bull;</dt>
 <dd> When in doubt, run the <code>awk</code> construct through <code>a2p</code> and see what it gives you.</dd></dl>
-<h3>C/C<font SIZE="-2">++</font> Traps</h3>
-<p> Cerebral C and C<font SIZE="-2">++</font> programmers should take note of the following:</p>
+<h3>C/C++ Traps</h3>
+<p> Cerebral C and C++ programmers should take note of the following:</p>
 <dl>
 <dt>&bull;</dt>
 <dd> Curly brackets are required on <tt>&quot;if&quot;</tt>&#8216;s and <tt>&quot;while&quot;</tt>&#8216;s.</dd>
@@ -93,7 +93,7 @@ description: "perltrap – Perl traps for the unwary"
 <dt>&bull;</dt>
 <dd> Variables begin with &#8220;$&#8221;, &#8220;@&#8221; or &#8220;%&#8221; in Perl.</dd>
 <dt>&bull;</dt>
-<dd> Comments begin with &#8220;#&#8221;, not &#8220;/*&#8221; or &#8220;//&#8221;. Perl may interpret C/C<font SIZE="-2">++</font> comments as division operators, unterminated regular expressions or the defined-or operator.</dd>
+<dd> Comments begin with &#8220;#&#8221;, not &#8220;/*&#8221; or &#8220;//&#8221;. Perl may interpret C/C++ comments as division operators, unterminated regular expressions or the defined-or operator.</dd>
 <dt>&bull;</dt>
 <dd> You can&#8217;t take the address of anything, although a similar operator in Perl is the backslash, which creates a reference.</dd>
 <dt>&bull;</dt>
@@ -189,7 +189,7 @@ for ($object) {
 <dt>&bull;</dt>
 <dd> People have a hard time remembering that some functions default to <tt>$_</tt>, or <tt>@ARGV</tt>, or whatever, but that others which you might expect to do not.</dd>
 <dt>&bull;</dt>
-<dd> The &lt;<font SIZE="-1">FH</font>&gt; construct is not the name of the filehandle, it is a readline operation on that handle. The data read is assigned to <tt>$_</tt> only if the file read is the sole condition in a while loop: </dd>
+<dd> The &lt;FH&gt; construct is not the name of the filehandle, it is a readline operation on that handle. The data read is assigned to <tt>$_</tt> only if the file read is the sole condition in a while loop: </dd>
 <pre><code>
 while (&lt;FH&gt;) {
 }

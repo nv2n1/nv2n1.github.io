@@ -94,10 +94,10 @@ description: "chemtool – chemical structures editor"
 <p> The symbols &#8216;plusminus&#8217; and &#8216;registered&#8217; (trademark) are already in the standard font, although they are not normally available on the keyboard. Use the following commands (or add the declarations to your <i>.xmodmaprc</i> ) to make them available via &lt;AltGr&gt;+&lt;Key&gt; (&lt;RightAlt&gt;+&lt;Key&gt;): </p>
 <dl>
 <dt>
-</dt><dd> xmodmap -e &#8216;keysym r = r R registered&#8217; \<br />
-&nbsp;<wbr>&nbsp;<wbr>-e&nbsp;<wbr>&#8216;keysym o&nbsp;<wbr>=&nbsp;<wbr>o O yen&#8217;&nbsp;<wbr>\<br />
-&nbsp;<wbr>&nbsp;<wbr>-e&nbsp;<wbr>&#8216;keysym p&nbsp;<wbr>=&nbsp;<wbr>p P plusminus&#8217;&nbsp;<wbr>\<br />
-&nbsp;<wbr>&nbsp;<wbr>-e&nbsp;<wbr>&#8216;keysym u&nbsp;<wbr>=&nbsp;<wbr>u U hyphen&#8217;&nbsp;<wbr>\<br />
+</dt><dd> xmodmap -e &#8216;keysym r = r R registered&#8217; \<br/>
+&nbsp;<wbr>&nbsp;<wbr>-e&nbsp;<wbr>&#8216;keysym o&nbsp;<wbr>=&nbsp;<wbr>o O yen&#8217;&nbsp;<wbr>\<br/>
+&nbsp;<wbr>&nbsp;<wbr>-e&nbsp;<wbr>&#8216;keysym p&nbsp;<wbr>=&nbsp;<wbr>p P plusminus&#8217;&nbsp;<wbr>\<br/>
+&nbsp;<wbr>&nbsp;<wbr>-e&nbsp;<wbr>&#8216;keysym u&nbsp;<wbr>=&nbsp;<wbr>u U hyphen&#8217;&nbsp;<wbr>\<br/>
 &nbsp;<wbr>&nbsp;<wbr>-e&nbsp;<wbr>&#8216;keysym d&nbsp;<wbr>=&nbsp;<wbr>d D macron&#8217;</dd></dl>
 <p> (this leads to AltGr-P = plusminus, AltGr-R = registered in normal mode and AltGr-O = infinity, AltGr-U = uparrow, AltGr-D = downarrow in symbol font). </p>
 <p> For &#8216;dots-and-crosses&#8217; diagrams, the following mappings to the symbol font might be useful: acute -&gt; cross (e.g. keysym x = x X acute) middle dot -&gt; filled dot (e.g. keysym d = d D periodcentered) (using the degree sign for the open dot). </p>
@@ -171,5 +171,5 @@ description: "chemtool – chemical structures editor"
 <p> and many others. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-babel/">babel</a></code>(1), <code><a href="/docs/linux/man/1-cht/">cht</a></code>(1), <code><a href="/docs/linux/man/1-fig2dev/">fig2dev</a></code>(1), <code><a href="/docs/linux/man/1-fig2sxd/">fig2sxd</a></code>(1), <code><a href="/docs/linux/man/1-transfig/">transfig</a></code>(1), <code><a href="/docs/linux/man/1-xfig/">xfig</a></code>(1) </p>
-<p> Homepage:<br />
+<p> Homepage:<br/>
  <i><a rel="nofollow" href="http://ruby.chemie.uni-freiburg.de/~martin/chemtool/chemtool.html">http://ruby.chemie.uni-freiburg.de/~martin/chemtool/chemtool.html</a></i> </p>

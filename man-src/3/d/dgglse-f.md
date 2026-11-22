@@ -10,7 +10,7 @@ description: "dgglse.f –"
 <p>dgglse.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dgglse</code> (M, N, P, A, LDA, B, LDB, C, D, X, WORK, LWORK, INFO)<br />
+<p> subroutine <code>dgglse</code> (M, N, P, A, LDA, B, LDB, C, D, X, WORK, LWORK, INFO)<br/>
  <i></i><code> DGGLSE solves overdetermined or underdetermined systems for OTHER matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dgglse (integerM, integerN, integerP, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( ldb, * )B, integerLDB, double precision, dimension( * )C, double precision, dimension( * )D, double precision, dimension( * )X, double precision, dimension( * )WORK, integerLWORK, integerINFO)</h3>

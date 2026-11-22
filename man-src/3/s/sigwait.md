@@ -13,9 +13,9 @@ description: "sigwait – wait for a signal"
 int sigwait(const sigset_t *set, int *sig);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>sigwait</code>():</p>
 <dl>
-<dd>Since glibc 2.26:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;199506L<br />
- Glibc 2.25 and earlier:<br />
+<dd>Since glibc 2.26:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;199506L<br/>
+ Glibc 2.25 and earlier:<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_POSIX_C_SOURCE</dd></dl>
 <h2>Description</h2>
 <p>The <code>sigwait</code>() function suspends execution of the calling thread until one of the signals specified in the signal set <i>set</i> becomes pending. The function accepts the signal (removes it from the pending list of signals), and returns the signal number in <i>sig</i>. </p>

@@ -19,10 +19,10 @@ description: "mysql – the MySQL command-line client"
 <p> If you have problems due to insufficient memory for large result sets, use the <code>--quick</code> option. This forces <code>mysql</code> to retrieve results from the server a row at a time rather than retrieving the entire result set and buffering it in memory before displaying it. This is done by returning the result set using the mysql_use_result() C API function in the client/server library rather than mysql_store_result(). </p>
  </dd>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Note</code> </font> <br />
+<dd> <p> <br/>
+  <code>Note</code>  <br/>
  </p>
-<p> Alternatively, MySQL Shell offers access to the X DevAPI. For details, see m[blue]<code>MySQL Shell 8.0 (part of MySQL 8.0)</code>m[]<font SIZE="-2">[1]</font>. </p>
+<p> Alternatively, MySQL Shell offers access to the X DevAPI. For details, see m[blue]<code>MySQL Shell 8.0 (part of MySQL 8.0)</code>m[][1]. </p>
  </dd></dl>
 <p> Using <code>mysql</code> is very easy. Invoke it from the prompt of your command interpreter as follows: </p>
 <dl>
@@ -54,8 +54,8 @@ description: "mysql – the MySQL command-line client"
 <p> To complete a name, enter the first part and press Tab. If the name is unambiguous, <code>mysql</code> completes it. Otherwise, you can press Tab again to see the possible names that begin with what you have typed so far. Completion does not occur if there is no default database. </p>
  </dd>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Note</code> </font> <br />
+<dd> <p> <br/>
+  <code>Note</code>  <br/>
  This feature requires a MySQL client that is compiled with the <code>readline</code> library. Typically, the <code>readline</code> library is not available on Windows. </p>
  </dd></dl>
 </dl>
@@ -98,8 +98,8 @@ description: "mysql – the MySQL command-line client"
 <p> Whether to strip or preserve comments in statements sent to the server. The default is <code>--skip-comments</code> (strip comments), enable with <code>--comments</code> (preserve comments). </p>
  </dd>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Note</code> </font> <br />
+<dd> <p> <br/>
+  <code>Note</code>  <br/>
  In MySQL 5.7, the <code>mysql</code> client always passes optimizer hints to the server, regardless of whether this option is given. To ensure that optimizer hints are not stripped if you are using an older version of the <code>mysql</code> client with a version of the server that understands optimizer hints, invoke <code>mysql</code> with the <code>--comments</code> option. </p>
 <p> Comment stripping is deprecated as of MySQL 5.7.20. This feature and the options to control it will be removed in a future MySQL release. </p>
  </dd></dl>
@@ -346,8 +346,8 @@ CHAR(92)
 <p> As of MySQL 5.7.5, this option is deprecated and will be removed in a future MySQL release. It is always enabled and attempting to disable it (<code>--skip-secure-auth</code>, <code>--secure-auth=0</code>) produces an error. Before MySQL 5.7.5, this option is enabled by default but can be disabled. </p>
  </dd>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Note</code> </font> <br />
+<dd> <p> <br/>
+  <code>Note</code>  <br/>
  Passwords that use the pre-4.1 hashing method are less secure than passwords that use the native password hashing method and should be avoided. Pre-4.1 passwords are deprecated and support for them was removed in MySQL 5.7.5. For account upgrade instructions, see Section 6.4.1.3, "Migrating Away from Pre-4.1 Password Hashing and the mysql_old_password Plugin". </p>
  </dd></dl>
 </dl>
@@ -2825,7 +2825,7 @@ mysql&gt; SELECT * FROM t; +------+
 <p> If it is desirable for <code>mysql</code> not to interpret short-form commands within comments, a partial workaround is to use the <code>--binary-mode</code> option, which causes all <code>mysql</code> commands to be disabled except \C and \d in noninteractive mode (for input piped to <code>mysql</code> or loaded using the source command). </p>
  </dd></dl>
 <h2>COPYRIGHT</h2>
-<p> <br />
+<p> <br/>
  </p>
 <p> Copyright &#169; 1997, 2019, Oracle and/or its affiliates. All rights reserved. </p>
 <p> This documentation is free software; you can redistribute it and/or modify it only under the terms of the GNU General Public License as published by the Free Software Foundation; version 2 of the License. </p>

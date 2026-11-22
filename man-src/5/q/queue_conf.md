@@ -52,7 +52,7 @@ description: "queue_conf – xxQS_NAMExx queue configuration file format"
 <h3><code>qtype</code></h3>
 <p>The type of queue. Currently <code>BATCH</code>, <code>INTERACTIVE</code>, a combination in a comma-separated list of both, or <code>NONE</code>. </p>
 <p> Jobs submitted with option <code>-now y</code> can only be scheduled on <i>interactive</i> queues, and <code>-now n</code> targets <i>batch</i> queues. <code>-now y</code> is the default for <i>qsh</i>, <i>qrsh</i>, and <i>qlogin</i>, while <code>-now n</code> is the default for <i>qsub</i>. Nevertheless, the option can be applied to all commands, with either argument, to direct jobs to specific queue types. </p>
-<p> The formerly supported types <code>PARALLEL</code> and <code>CHECKPOINTING</code> are not allowed anymore. A queue instance is implicitly of type parallel/checkpointing if there is a parallel environment or a checkpointing interface specified for this queue instance in <code>pe_list</code>/<code>ckpt_list</code>, and is implicitly <code>BATCH</code><br />
+<p> The formerly supported types <code>PARALLEL</code> and <code>CHECKPOINTING</code> are not allowed anymore. A queue instance is implicitly of type parallel/checkpointing if there is a parallel environment or a checkpointing interface specified for this queue instance in <code>pe_list</code>/<code>ckpt_list</code>, and is implicitly <code>BATCH</code><br/>
 &nbsp;if it has a parallel environment attached. Formerly possible settings e.g. </p>
 <pre>qtype PARALLEL</pre>
 <p>could be changed to </p>
@@ -82,8 +82,8 @@ pe_list pe_name</pre>
 <dt><i>posix_compliant</i></dt>
 <dd>POSIX does not consider first script line comments such as `#!/bin/csh&#8217; significant. The POSIX standard for batch queuing systems (P1003.2d) therefore requires a compliant queuing system to ignore such lines and to use user specified or configured default command interpreters instead. Thus, if <code>shell_start_mode</code> is set to <i>posix_compliant</i> xxQS_NAMExx will either use the command interpreter indicated by the <code>-S</code> option of the command or the <code>shell</code> parameter of the queue to be used (see above).</dd>
 <dt><i>script_from_stdin</i></dt>
-<dd>Setting the <code>shell_start_mode</code> parameter either to <i>posix_compliant</i> or <i>unix_behavior</i> requires you to set the umask in use for such that every user has read access to the active_jobs directory in the spool directory of the corresponding execution daemon. In case you have <code>prolog</code> and <code>epilog</code> scripts configured, they also need to be readable by any user who may execute jobs.<br />
- If this violates your site&#8217;s security policies you may want to set <code>shell_start_mode</code> to <i>script_from_stdin</i>. This will force xxQS_NAMExx to open the job script, as well as the epilogue and prologue scripts, for reading into STDIN as root (if was started as root) before changing to the job owner&#8217;s user account. The script is then fed into the STDIN stream of the command interpreter indicated by the <code>-S</code> option of the command or the <code>shell</code> parameter of the queue to be used (see above).<br />
+<dd>Setting the <code>shell_start_mode</code> parameter either to <i>posix_compliant</i> or <i>unix_behavior</i> requires you to set the umask in use for such that every user has read access to the active_jobs directory in the spool directory of the corresponding execution daemon. In case you have <code>prolog</code> and <code>epilog</code> scripts configured, they also need to be readable by any user who may execute jobs.<br/>
+ If this violates your site&#8217;s security policies you may want to set <code>shell_start_mode</code> to <i>script_from_stdin</i>. This will force xxQS_NAMExx to open the job script, as well as the epilogue and prologue scripts, for reading into STDIN as root (if was started as root) before changing to the job owner&#8217;s user account. The script is then fed into the STDIN stream of the command interpreter indicated by the <code>-S</code> option of the command or the <code>shell</code> parameter of the queue to be used (see above).<br/>
  Thus setting <code>shell_start_mode</code> to <i>script_from_stdin</i> also implies <i>posix_compliant</i> behavior. <code>Note</code>, however, that feeding scripts into the STDIN stream of a command interpreter may cause trouble if commands like <i><a href="/docs/linux/man/1-rsh/">rsh</a></i>(1) are invoked inside a job script as they also process the STDIN stream of the command interpreter. These problems can usually be resolved by redirecting the STDIN channel of those commands to come from /dev/null (e.g. rsh host date &lt; /dev/null). <code>Note also</code>, that any command-line options associated with the job are passed to the executing shell. The shell will only forward them to the job if they are not recognized as valid shell options.</dd></dl>
 <p> The default for <code>shell_start_mode</code> is <i>posix_compliant</i>. Note, though, that the <code>shell_start_mode</code> can only be used for batch jobs submitted by and can&#8217;t be used for interactive jobs submitted by</p>
 <h3><code>prolog</code></h3>
@@ -161,13 +161,13 @@ pe_list pe_name</pre>
 <dt> <i>queue_def</i> =<i>queue</i>[:<i>seq_no</i>][:<i>action</i>]</dt>
 <dt> <i>queue</i> =a xxQS_NAMExx queue name in the format for <i>queue_name</i> in</dt>
 <dt> &quot;<i>seq_no</i>&quot; =sequence number among all subordinated queues</dt>
-<dd>of the same depth in the tree.<br />
+<dd>of the same depth in the tree.<br/>
  The higher the sequence number, the lower is the priority of the queue. Default is 0, which is the highest priority.</dd>
 <dt> <i>action</i> =the action to be taken if the threshold is</dt>
-<dd>exceeded.<br />
- Supported are:<br />
- &quot;sr&quot;: Suspend the task with the shortest run time.<br />
- &quot;lr&quot;: Suspend the task with the longest run time.<br />
+<dd>exceeded.<br/>
+ Supported are:<br/>
+ &quot;sr&quot;: Suspend the task with the shortest run time.<br/>
+ &quot;lr&quot;: Suspend the task with the longest run time.<br/>
  Default is &quot;sr&quot;.</dd></dl>
 <p> Some examples of possible configurations and their functionalities: </p>
 <p> a) The simplest configuration </p>
@@ -187,7 +187,7 @@ pe_list pe_name</pre>
 <p>A use case for this configuration could be a host with a dual core CPU and queue &quot;B.q&quot; and &quot;C.q&quot; for jobs with different requirements, e.g. &quot;B.q&quot; for interactive jobs, &quot;C.q&quot; for batch jobs. Again, the tasks in &quot;A.q&quot; always get a CPU core, while tasks in &quot;B.q&quot; and &quot;C.q&quot; are suspended only if the threshold of running tasks is exceeded. Here the sequence number among the queues of the same depth comes into play. Tasks scheduled to &quot;B.q&quot; can&#8217;t directly trigger the suspension of tasks in &quot;C.q&quot;, but if there is a task to be suspended, first &quot;C.q&quot; will be searched for a suitable task. </p>
 <p> If there is one task running in &quot;A.q&quot;, one in &quot;C.q&quot; and a new task is scheduled to &quot;B.q&quot;, the threshold of &quot;2&quot; in &quot;A.q&quot;, &quot;B.q&quot; and &quot;C.q&quot; is exceeded. This triggers the suspension of one task in either &quot;B.q&quot; or &quot;C.q&quot;. The sequence number gives &quot;B.q&quot; a higher priority than &quot;C.q&quot;, therefore the task in &quot;C.q&quot; is suspended. After suspension, there is one task running in &quot;A.q&quot;, one task running in &quot;B.q&quot; and one task suspended in &quot;C.q&quot;. </p>
 <p> c) More than two levels </p>
-<p> Configuration of A.q: subordinate_list slots=2(B.q)<br />
+<p> Configuration of A.q: subordinate_list slots=2(B.q)<br/>
  Configuration of B.q: subordinate_list slots=2(C.q) </p>
 <p> looks like this: </p>
 <pre> A.q

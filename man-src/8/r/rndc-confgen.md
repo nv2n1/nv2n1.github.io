@@ -57,5 +57,5 @@ description: "rndc-confgen – rndc key generation tool"
 <h2>Author</h2>
 <p>Internet Systems Consortium</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2004, 2005, 2007, 2009 Internet Systems Consortium, Inc. (&quot;ISC&quot;)<br />
+<p>Copyright &#169; 2004, 2005, 2007, 2009 Internet Systems Consortium, Inc. (&quot;ISC&quot;)<br/>
  Copyright &#169; 2001, 2003 Internet Software Consortium.</p>

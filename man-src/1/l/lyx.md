@@ -46,25 +46,25 @@ description: "LyX – A Document Processor"
 <dd> by using the lyxpipe, ask an already running instance of LyX to open the documents passed as arguments and then exit. If the lyxpipe is not set up or is not working, a new instance is created and execution continues normally.</dd>
 <dt><code>-batch</code></dt>
 <dd> causes LyX to run the given commands without opening a GUI window. Thus, something like: </dd>
-<p>&nbsp;<wbr>lyx -batch -x&nbsp;<wbr>&quot;buffer-print printer default dvips&quot;&nbsp;<wbr>myfile.lyx<br />
+<p>&nbsp;<wbr>lyx -batch -x&nbsp;<wbr>&quot;buffer-print printer default dvips&quot;&nbsp;<wbr>myfile.lyx<br/>
  will cause LyX to print myfile.lyx to the default printer, using dvips and the default print settings (which, of course, have to have been configured already). </p>
 </dl>
 <h2>ENVIRONMENT</h2>
 <dl>
 <dt><code>LYX_DIR_21x</code></dt>
 <dd> can be used to specify which system directory to use.</dd></dl>
-<p> The system directory is determined by searching for the file &quot;chkconfig.ltx&quot;. Directories are searched in this order:<br />
- 1) -sysdir command line parameter<br />
- 2) LYX_DIR_21x environment variable<br />
- 3) Maybe &lt;path of binary&gt;/TOP_SRCDIR/lib<br />
- 4) &lt;path of binary&gt;/../share/&lt;name of binary&gt;/<br />
+<p> The system directory is determined by searching for the file &quot;chkconfig.ltx&quot;. Directories are searched in this order:<br/>
+ 1) -sysdir command line parameter<br/>
+ 2) LYX_DIR_21x environment variable<br/>
+ 3) Maybe &lt;path of binary&gt;/TOP_SRCDIR/lib<br/>
+ 4) &lt;path of binary&gt;/../share/&lt;name of binary&gt;/<br/>
  5) hardcoded lyx_dir (at build time: /usr/share/lyx)</p>
 <dl>
 <dt><code>LYX_USERDIR_21x</code></dt>
 <dd> can be used to specify which user directory to use.</dd></dl>
-<p> The user directory is, in order of precedence:<br />
- 1) -userdir command line parameter<br />
- 2) LYX_USERDIR_21x environment variable<br />
+<p> The user directory is, in order of precedence:<br/>
+ 1) -userdir command line parameter<br/>
+ 2) LYX_USERDIR_21x environment variable<br/>
  3) $HOME/.&lt;name of binary&gt; if no explicit setting is made </p>
 <dl>
 <dt><code>LYX_LOCALEDIR</code></dt>

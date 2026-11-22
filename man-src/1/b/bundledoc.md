@@ -26,7 +26,7 @@ description: "bundledoc – bundle all the files needed by a LaTeX document"
     document
 }
 </code></pre>
-<p> The <tt>&quot;\RequirePackage{snapshot}&quot;</tt> causes a <i>hello.dep</i> file to be produced. When <code>bundledoc</code> is then given <tt>&quot;hello.dep&quot;</tt> as an argument, it locates the dependent files &#8212; <i>snapshot.sty</i>, <i>article.cls</i>, and <i>size11.clo</i> &#8212; and bundles them into a single archive file, along with <i>hello.tex</i> and a <i></i><font SIZE="-1"><i>MANIFEST</i></font><i></i> file (described in &#8220;<font SIZE="-1">OPTIONS&#8221;</font>, below).</p>
+<p> The <tt>&quot;\RequirePackage{snapshot}&quot;</tt> causes a <i>hello.dep</i> file to be produced. When <code>bundledoc</code> is then given <tt>&quot;hello.dep&quot;</tt> as an argument, it locates the dependent files &#8212; <i>snapshot.sty</i>, <i>article.cls</i>, and <i>size11.clo</i> &#8212; and bundles them into a single archive file, along with <i>hello.tex</i> and a <i></i><i>MANIFEST</i><i></i> file (described in &#8220;OPTIONS&#8221;, below).</p>
 <h2>OPTIONS</h2>
 <p> In the following descriptions, <i>somefile</i> refers to the name of your main LaTeX document (no extension). </p>
 <p> <code>bundledoc</code> requires the name of the dependency file produced by <code>snapshot</code>, normally <i>somefile</i><i>.dep</i>). (For convenience, the file can be specified without its <i>.dep</i> extension.) The following options may also be given:</p>
@@ -47,8 +47,8 @@ description: "bundledoc – bundle all the files needed by a LaTeX document"
 <dd> While <tt>&quot;--localonly&quot;</tt> causes files outside of the <i>.tex</i> file&#8217;s directory tree to be omitted from the archive, <tt>&quot;--exclude&quot;</tt> provides finer-grained control over files to omit from the archive. The <tt>&quot;--exclude&quot;</tt> option, which can be specified repeatedly on the command line, causes all files whose name contains <i>string</i> to be omitted from the archive.</dd>
 <dt><code>&#8211;include</code>=<i>filespec</i> (default: <i>none</i>)</dt>
 <dd> The <tt>&quot;--include&quot;</tt> option, which can be specified repeatedly on the command line, instructs <code>bundledoc</code> to include in the archive all of the files matching <i>filespec</i>, even if they&#8217;re not referenced in the <i>.dep</i> file.</dd>
-<dt><code>&#8211;manifest</code>=<i>manifest file</i> (default: <i></i><font SIZE="-1"><i>MANIFEST</i></font><i></i>)</dt>
-<dd> In addition to the dependent files, <code>bundledoc</code> includes in the archive file one extra file called, by default, &#8220;<i></i><font SIZE="-1"><i>MANIFEST</i></font><i></i>&#8221;. <i></i><font SIZE="-1"><i>MANIFEST</i></font><i></i> is a text file that lists the original filenames of all the dependencies. To change the filename from &#8220;<i></i><font SIZE="-1"><i>MANIFEST</i></font><i></i>&#8221; to something else, use the <tt>&quot;--manifest&quot;</tt> option. As a special case, <tt>&quot;--manifest=&quot;&quot;&quot;</tt> tells <code>bundledoc</code> not to include a manifest file at all.</dd>
+<dt><code>&#8211;manifest</code>=<i>manifest file</i> (default: <i></i><i>MANIFEST</i><i></i>)</dt>
+<dd> In addition to the dependent files, <code>bundledoc</code> includes in the archive file one extra file called, by default, &#8220;<i></i><i>MANIFEST</i><i></i>&#8221;. <i></i><i>MANIFEST</i><i></i> is a text file that lists the original filenames of all the dependencies. To change the filename from &#8220;<i></i><i>MANIFEST</i><i></i>&#8221; to something else, use the <tt>&quot;--manifest&quot;</tt> option. As a special case, <tt>&quot;--manifest=&quot;&quot;&quot;</tt> tells <code>bundledoc</code> not to include a manifest file at all.</dd>
 <dt><code>&#8211;listdeps</code>=[yes|no|only|rel]&#8230;] (default: &quot;no&quot;)</dt>
 <dd> <tt>&quot;--listdeps&quot;</tt> accepts one or more of <tt>&quot;yes&quot;</tt>, <tt>&quot;no&quot;</tt>, <tt>&quot;only&quot;</tt>, or <tt>&quot;rel&quot;</tt> as a comma-separated list. As long as <tt>&quot;no&quot;</tt> does not appear in this list, <code>bundledoc</code> outputs all of the main LaTeX file&#8217;s dependencies. If the list contains <tt>&quot;rel&quot;</tt>, then <code>bundledoc</code> outputs the list of dependencies with relative pathnames. If the list contains <tt>&quot;only&quot;</tt>, then <code>bundledoc</code> exits after displaying the list, without producing an archive.</dd>
 <dt><code>&#8212;</code>[<code>no</code>]<code>keepdirs</code> (default: &quot;nokeepdirs&quot;)</dt>
@@ -85,7 +85,7 @@ description: "bundledoc – bundle all the files needed by a LaTeX document"
 </dt><dd>
 <p> <tt>&quot;--directory&quot;</tt> is not used when <tt>&quot;--keepdirs&quot;</tt> is in effect. In addition, no manifest file is written to the archive file as it contains redundant information.</dd></dl>
 <dt><code>&#8211;config</code>=<i>configuration file</i> (default: &lt;none&gt;)</dt>
-<dd> The <tt>&quot;--config&quot;</tt> option is used to point <code>bundledoc</code> to the appropriate configuration (<i>.cfg</i>) file for your TeX distribution and operating system. <code>bundledoc</code> comes with a few configuration files and it&#8217;s easy to write more. See &#8220;<font SIZE="-1">CONFIGURATION FILES&#8221;</font> (below) for a description of the configuration file format. For convenience, the file can be specified without its <i>.cfg</i> extension.</dd></dl>
+<dd> The <tt>&quot;--config&quot;</tt> option is used to point <code>bundledoc</code> to the appropriate configuration (<i>.cfg</i>) file for your TeX distribution and operating system. <code>bundledoc</code> comes with a few configuration files and it&#8217;s easy to write more. See &#8220;CONFIGURATION FILES&#8221; (below) for a description of the configuration file format. For convenience, the file can be specified without its <i>.cfg</i> extension.</dd></dl>
 <h2>CONFIGURATION FILES</h2>
 <h3>Format</h3>
 <p> Configuration files follow a fairly simple format. Lines beginning with <tt>&quot;#&quot;</tt> are comments. Blank lines are ignored. All other lines are of the form: </p>
@@ -101,9 +101,9 @@ description: "bundledoc – bundle all the files needed by a LaTeX document"
 <dt><code>find</code></dt>
 <dd> The command to find a file within the TeX tree(s).</dd></dl>
 <p> Values that are too long for one line can be split across multiple lines by using <tt>&quot;\&quot;</tt> as the line-continuation symbol. </p>
-<p> There are two environment variables that <code>bundledoc</code> makes available for use by configuration-file commands: <tt>&quot;BDBASE&quot;</tt>, which is set to <i>somefile</i> (as in &#8220;<font SIZE="-1">OPTIONS&#8221;</font>), and <tt>&quot;BDINPUTS&quot;</tt>, which is set to a space-separated list of files that a command is to operate upon. That is, when the command associated with <tt>&quot;bundle&quot;</tt> is running, <tt>&quot;BDINPUTS&quot;</tt> contains the list of all the files that are to be archived. In contrast, when the command associated with <tt>&quot;find&quot;</tt> is running, <tt>&quot;BDINPUTS&quot;</tt> contains the name of the file to search for.</p>
+<p> There are two environment variables that <code>bundledoc</code> makes available for use by configuration-file commands: <tt>&quot;BDBASE&quot;</tt>, which is set to <i>somefile</i> (as in &#8220;OPTIONS&#8221;), and <tt>&quot;BDINPUTS&quot;</tt>, which is set to a space-separated list of files that a command is to operate upon. That is, when the command associated with <tt>&quot;bundle&quot;</tt> is running, <tt>&quot;BDINPUTS&quot;</tt> contains the list of all the files that are to be archived. In contrast, when the command associated with <tt>&quot;find&quot;</tt> is running, <tt>&quot;BDINPUTS&quot;</tt> contains the name of the file to search for.</p>
 <h3>Examples</h3>
-<p> The following configuration file parallels <code>bundledoc</code>&#8216;s default values of the various configuration-file variables, which represents a kpathsea-based TeX distribution running on a generic Unix system, which doesn&#8217;t necessarily have any of the <font SIZE="-1">GNU</font> tools, such as <code>gzip</code> or <font SIZE="-1">GNU</font> <code>tar</code>: </p>
+<p> The following configuration file parallels <code>bundledoc</code>&#8216;s default values of the various configuration-file variables, which represents a kpathsea-based TeX distribution running on a generic Unix system, which doesn&#8217;t necessarily have any of the GNU tools, such as <code>gzip</code> or GNU <code>tar</code>: </p>
 <pre>
     # &quot;Default&quot; configuration file
     # By Scott Pakin &lt;scott+bdoc [at] pakin.org&gt;
@@ -117,7 +117,7 @@ description: "bundledoc – bundle all the files needed by a LaTeX document"
 <pre>
     bundle: (shar --archive-name=&quot;$BDBASE&quot; $BDINPUTS &gt; $BDBASE.sh)
 </pre>
-<p> or a <font SIZE="-1">CAB</font> file on Microsoft Windows with something like: </p>
+<p> or a CAB file on Microsoft Windows with something like: </p>
 <pre>
     bundle: cabarc -r -p N %BDBASE%.cab %BDINPUTS%
 </pre>
@@ -130,12 +130,12 @@ description: "bundledoc – bundle all the files needed by a LaTeX document"
 <pre>
     bundledoc --config=miktex myfile
 </pre>
-<p> The following builds a <i>.tar.gz</i> archive with the TeX Live distribution running on a Unix-like operating system. <code>bundledoc</code> will produce verbose output describing its operations. All files not in the same directory tree as <i>myfile.tex</i> and all files containing &#8220;.fd&#8221; or &#8220;.sty&#8221; in their names are omitted. However, all <i>.bib</i> files in the current directory will be included in the archive even though none of them are referenced by <i>myfile.dep</i>. Finally, no <i></i><font SIZE="-1"><i>MANIFEST</i></font><i></i> file will be produced. </p>
+<p> The following builds a <i>.tar.gz</i> archive with the TeX Live distribution running on a Unix-like operating system. <code>bundledoc</code> will produce verbose output describing its operations. All files not in the same directory tree as <i>myfile.tex</i> and all files containing &#8220;.fd&#8221; or &#8220;.sty&#8221; in their names are omitted. However, all <i>.bib</i> files in the current directory will be included in the archive even though none of them are referenced by <i>myfile.dep</i>. Finally, no <i></i><i>MANIFEST</i><i></i> file will be produced. </p>
 <pre><code>
 bundledoc-- config = texlive - unix.cfg-- verbose-- localonly-- exclude =.fd-- exclude =.cfg-- include = "*.bib" --manifest = "" myfile.dep
 </code></pre>
 <h2>FILES</h2>
-<p> The user must have previously installed <i>snapshot.sty</i> and used it to produce a dependency file for his document. Besides that, the set of external files needed by <code>bundledoc</code> is system-specific and depends on the configuration file used. (See &#8220;<font SIZE="-1">CONFIGURATION FILES&#8221;</font>, above.) </p>
+<p> The user must have previously installed <i>snapshot.sty</i> and used it to produce a dependency file for his document. Besides that, the set of external files needed by <code>bundledoc</code> is system-specific and depends on the configuration file used. (See &#8220;CONFIGURATION FILES&#8221;, above.) </p>
 <p> <code>bundledoc</code> currently comes with two configuration files:</p>
 <dl>
 <dt><i>texlive-unix.cfg</i></dt>
@@ -165,7 +165,7 @@ bundledoc-- config = texlive - unix.cfg-- verbose-- localonly-- exclude =.fd-- e
 <dd> Rename <i>bundledoc</i> to <i>bundledoc.pl</i> and run <tt>&quot;bundledoc.pl&quot;</tt>. (This is assuming you have a file association set up for <i>.pl</i>.)</dd>
 <dt>&bull;</dt>
 <dd> Run the <code>pl2bat</code> script (if you have it) to convert <i>bundledoc</i> to <i>bundledoc.bat</i>, then run <tt>&quot;bundledoc&quot;</tt>.</dd></dl>
-<p> Second, Windows uses a multi-rooted filesystem (i.e., multiple drive letters). I wouldn&#8217;t be surprised if bad things were to happen if the files to be bundled are scattered across drives. In addition, Windows supports &#8220;<font SIZE="-1">UNC</font>&#8221; filenames, which have no drive letter at all, just a machine and share name. <font SIZE="-1">UNC</font> filenames are also untested waters for <code>bundledoc</code>. Be careful!</p>
+<p> Second, Windows uses a multi-rooted filesystem (i.e., multiple drive letters). I wouldn&#8217;t be surprised if bad things were to happen if the files to be bundled are scattered across drives. In addition, Windows supports &#8220;UNC&#8221; filenames, which have no drive letter at all, just a machine and share name. UNC filenames are also untested waters for <code>bundledoc</code>. Be careful!</p>
 <h3>Testing Status</h3>
 <p> I have tested <code>bundledoc</code> only with Perl v5.6.0 and later and only on the following platforms:</p>
 <dl>
@@ -174,12 +174,12 @@ bundledoc-- config = texlive - unix.cfg-- verbose-- localonly-- exclude =.fd-- e
 <dt>&bull;</dt>
 <dd> Linux + teTeX</dd>
 <dt>&bull;</dt>
-<dd> Windows <font SIZE="-1">NT +</font> MiKTeX</dd>
+<dd> Windows NT + MiKTeX</dd>
 <dt>&bull;</dt>
 <dd> Solaris + ??? (something kpathsea-based)</dd></dl>
 <p> It is my hope that <code>bundledoc</code> works on many more platforms than those. I tried to make the program itself fairly independent of the operating system; only the configuration files should have to change to run <code>bundledoc</code> on a different system.</p>
 <h3>Future Work</h3>
-<p> I&#8217;d like <code>bundledoc</code> to work on as wide a variety of TeX distributions as possible. If your platform is significantly different from the ones listed in &#8220;Testing Status&#8221; (e.g., if you&#8217;re running <font SIZE="-1">OS</font>&nbsp;X) and you need to create a substantially different configuration file from <i>texlive-unix.cfg</i> and <i>miktex.cfg</i>, please send it to me at the address listed in &#8220;<font SIZE="-1">AUTHOR&#8221;</font> so I can include it in a future version of <code>bundledoc</code>. (I make no promises, though). </p>
+<p> I&#8217;d like <code>bundledoc</code> to work on as wide a variety of TeX distributions as possible. If your platform is significantly different from the ones listed in &#8220;Testing Status&#8221; (e.g., if you&#8217;re running OS&nbsp;X) and you need to create a substantially different configuration file from <i>texlive-unix.cfg</i> and <i>miktex.cfg</i>, please send it to me at the address listed in &#8220;AUTHOR&#8221; so I can include it in a future version of <code>bundledoc</code>. (I make no promises, though). </p>
 <p> Once <code>bundledoc</code> works on all the major operating systems and TeX distributions it would be really convenient if I could get <code>bundledoc</code> to detect the platform it&#8217;s running on and automatically select an appropriate configuration file. </p>
 <p> Finally, it would be handy for <code>bundledoc</code> to include fonts in the archive file. At a minimum, it should include <i>.tfm</i> files, but it would be even better if it included <i>.mf</i>, <i>.pfb</i>, <i>.ttf</i>, and other common font formats, as well.</p>
 <h3>Acknowledgments</h3>

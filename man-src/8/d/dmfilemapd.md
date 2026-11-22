@@ -47,22 +47,22 @@ description: "dmfilemapd — device-mapper filemap monitoring daemon"
 <p> There is a further loss of events in that there is currently no way to atomically resize a <code>dmstats</code> region and preserve its current counter values. This affects files when they grow by extending the final extent, rather than allocating a new extent: any events that had accumulated in the region between any prior operation and the resize are lost. </p>
 <p> File mapping is currently most effective in cases where the majority of IO does not trigger extent allocation. Future updates may address these limitations when kernel support is available.</p>
 <h2>Examples</h2>
-<p>Normally the daemon is started automatically by the <code>dmstats</code> <code>create</code> or <code>update_filemap</code> commands but it can be run manually for debugging or testing purposes. Start the daemon in the background, in follow-path mode<br />
- # <code>dmfilemapd 3 0 /srv/images/vm.img path 0 0 3&lt; /srv/images/vm.img</code><br />
- Start the daemon in follow-inode mode, disable forking and enable verbose logging<br />
- # <code>dmfilemapd 3 0 /var/tmp/data inode 1 3 3&lt; /var/tmp/data</code><br />
- Starting dmfilemapd with fd=3, group_id=0 mode=inode, path=/var/tmp/data<br />
- dm version [ opencount flush ] [16384] (*1)<br />
- dm info (253:0) [ opencount flush ] [16384] (*1)<br />
- dm message (253:0) [ opencount flush ] @stats_list dmstats [16384] (*1)<br />
- Read alias &#8216;data&#8217; from aux_data<br />
- Found group_id 0: alias=&quot;data&quot;<br />
- dm_stats_walk_init: initialised flags to 4000000000000<br />
- starting stats walk with GROUP<br />
- exiting _filemap_monitor_get_events() with deleted=0, check=0<br />
+<p>Normally the daemon is started automatically by the <code>dmstats</code> <code>create</code> or <code>update_filemap</code> commands but it can be run manually for debugging or testing purposes. Start the daemon in the background, in follow-path mode<br/>
+ # <code>dmfilemapd 3 0 /srv/images/vm.img path 0 0 3&lt; /srv/images/vm.img</code><br/>
+ Start the daemon in follow-inode mode, disable forking and enable verbose logging<br/>
+ # <code>dmfilemapd 3 0 /var/tmp/data inode 1 3 3&lt; /var/tmp/data</code><br/>
+ Starting dmfilemapd with fd=3, group_id=0 mode=inode, path=/var/tmp/data<br/>
+ dm version [ opencount flush ] [16384] (*1)<br/>
+ dm info (253:0) [ opencount flush ] [16384] (*1)<br/>
+ dm message (253:0) [ opencount flush ] @stats_list dmstats [16384] (*1)<br/>
+ Read alias &#8216;data&#8217; from aux_data<br/>
+ Found group_id 0: alias=&quot;data&quot;<br/>
+ dm_stats_walk_init: initialised flags to 4000000000000<br/>
+ starting stats walk with GROUP<br/>
+ exiting _filemap_monitor_get_events() with deleted=0, check=0<br/>
  Waiting for check interval </p>
 <h2>Authors</h2>
 <p>Bryn M. Reeves &lt;bmr [at] redhat.com&gt;</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-dmstats/">dmstats</a></code>(8) LVM2 resource page: <a rel="nofollow" href="https://www.sourceware.org/lvm2/">https://www.sourceware.org/lvm2/</a><br />
+<p><code><a href="/docs/linux/man/8-dmstats/">dmstats</a></code>(8) LVM2 resource page: <a rel="nofollow" href="https://www.sourceware.org/lvm2/">https://www.sourceware.org/lvm2/</a><br/>
  Device-mapper resource page: <a rel="nofollow" href="http://sources.redhat.com/dm/">http://sources.redhat.com/dm/</a> </p>

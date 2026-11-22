@@ -16,7 +16,7 @@ smbldap-usermod [-c gecos] [-d home_dir] [-r login_name] [-u uid] [-g gid] [-o] 
 
 The smbldap-usermod command modifies the system account files to reflect the changes that are specified on the command line.
 
-<h3><font SIZE="-1">UNIX</font> options</h3>
+<h3>UNIX options</h3>
 
 -c, --gecos gecos 
 &nbsp;<wbr>The new value of the user's comment field&nbsp;<wbr>(gecos).&nbsp;<wbr>(Don't use this to modify displayName or cn. Use -N and -S options combined instead). 
@@ -28,7 +28,7 @@ The smbldap-usermod command modifies the system account files to reflect the cha
 &nbsp;<wbr>Allow to rename a user. This option will update the dn attribute for the user. You can also update others attributes using the corresponding script options. 
 
  -u, --uid uid 
-&nbsp;<wbr>The numerical&nbsp;<wbr>&nbsp;<wbr>value&nbsp;<wbr>&nbsp;<wbr>of&nbsp;<wbr>&nbsp;<wbr>the&nbsp;<wbr>&nbsp;<wbr>user's&nbsp;<wbr>&nbsp;<wbr><font SIZE="-1">ID.&nbsp;<wbr>&nbsp;<wbr></font>&nbsp;<wbr>This value must be unique, unless the -o option is used.&nbsp;<wbr>&nbsp;<wbr>The value must&nbsp;<wbr>&nbsp;<wbr>be&nbsp;<wbr>&nbsp;<wbr>non negative.&nbsp;<wbr>&nbsp;<wbr>Any files which the user owns&nbsp;<wbr>&nbsp;<wbr>and&nbsp;<wbr>&nbsp;<wbr>which&nbsp;<wbr>&nbsp;<wbr>are located&nbsp;<wbr>&nbsp;<wbr>in&nbsp;<wbr>&nbsp;<wbr>the directory tree rooted at the user's home directory will have the file user&nbsp;<wbr><font SIZE="-1">ID&nbsp;<wbr></font>&nbsp;<wbr>changed&nbsp;<wbr>&nbsp;<wbr>automatically.&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Files outside of the user's home directory must be altered manually. 
+&nbsp;<wbr>The numerical&nbsp;<wbr>&nbsp;<wbr>value&nbsp;<wbr>&nbsp;<wbr>of&nbsp;<wbr>&nbsp;<wbr>the&nbsp;<wbr>&nbsp;<wbr>user's&nbsp;<wbr>&nbsp;<wbr>ID.&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>This value must be unique, unless the -o option is used.&nbsp;<wbr>&nbsp;<wbr>The value must&nbsp;<wbr>&nbsp;<wbr>be&nbsp;<wbr>&nbsp;<wbr>non negative.&nbsp;<wbr>&nbsp;<wbr>Any files which the user owns&nbsp;<wbr>&nbsp;<wbr>and&nbsp;<wbr>&nbsp;<wbr>which&nbsp;<wbr>&nbsp;<wbr>are located&nbsp;<wbr>&nbsp;<wbr>in&nbsp;<wbr>&nbsp;<wbr>the directory tree rooted at the user's home directory will have the file user&nbsp;<wbr>ID&nbsp;<wbr>&nbsp;<wbr>changed&nbsp;<wbr>&nbsp;<wbr>automatically.&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Files outside of the user's home directory must be altered manually. 
 
  -o, --canBeNotUnique 
 &nbsp;<wbr>uidNumber can be non unique 
@@ -79,20 +79,20 @@ The smbldap-usermod command modifies the system account files to reflect the cha
  -U, --shadowUnlock 
 &nbsp;<wbr>Unlock unix user's password. This removes the&nbsp;<wbr>'!'&nbsp;<wbr>in front of the encrypted password.
 
-<h3><font SIZE="-1">SAMBA</font> options</h3>
+<h3>SAMBA options</h3>
 
 -a, --addsambaSAMAccount 
 &nbsp;<wbr>Add the sambaSAMAccount objectclass to the specified user account. This allow the user to become a samba user. 
 
- -e, --expire &lt;<font SIZE="-1">YYYY-MM-DD</font>(<font SIZE="-1">HH:MM:SS</font>)/n&gt; 
+ -e, --expire &lt;YYYY-MM-DD(HH:MM:SS)/n&gt; 
 &nbsp;<wbr>Sets the expiration for both samba&nbsp;<wbr>(--sambaExpire)&nbsp;<wbr>and shadow&nbsp;<wbr>(--shadowExpire). 
 
  --ou node 
 &nbsp;<wbr>The user's account will be moved to the specified organazional unit. It is relative to the user suffix dn&nbsp;<wbr>($usersdn)&nbsp;<wbr>defined in the configuration file. 
 &nbsp;<wbr>Ex:&nbsp;<wbr>'ou=admin,ou=all' 
 
- --sambaExpire &lt;<font SIZE="-1">YYYY-MM-DD</font> HH:MM:SS/n&gt; 
-&nbsp;<wbr>Set the expiration date for the user account. This only affects the samba account. The date must be in the following format: YYYY-MM-DD&nbsp;<wbr><font SIZE="-1">HH:MM:SS.</font>&nbsp;<wbr>The n-days format of shadowExpire is also supported. This option uses the internal&nbsp;<wbr>'timelocal'&nbsp;<wbr>command to set calculate the number of seconds from Junary 1 1970 to the specified date. 
+ --sambaExpire &lt;YYYY-MM-DD HH:MM:SS/n&gt; 
+&nbsp;<wbr>Set the expiration date for the user account. This only affects the samba account. The date must be in the following format: YYYY-MM-DD&nbsp;<wbr>HH:MM:SS.&nbsp;<wbr>The n-days format of shadowExpire is also supported. This option uses the internal&nbsp;<wbr>'timelocal'&nbsp;<wbr>command to set calculate the number of seconds from Junary 1 1970 to the specified date. 
 
  -A, --sambaPwdCanChange 
 &nbsp;<wbr>can change password&nbsp;<wbr>?&nbsp;<wbr>0 if no, 1 if yes 
@@ -101,19 +101,19 @@ The smbldap-usermod command modifies the system account files to reflect the cha
 &nbsp;<wbr>must change password&nbsp;<wbr>?&nbsp;<wbr>0 if no, 1 if yes 
 
  -C, --sambaHomePath path 
-&nbsp;<wbr>sambaHomePath&nbsp;<wbr>(<font SIZE="-1">SMB</font>&nbsp;<wbr>home share, like&nbsp;<wbr>'\\\\PDC-SRV\\homes') 
+&nbsp;<wbr>sambaHomePath&nbsp;<wbr>(SMB&nbsp;<wbr>home share, like&nbsp;<wbr>'\\\\PDC-SRV\\homes') 
 
  -D, --sambaHomeDrive drive 
 &nbsp;<wbr>sambaHomeDrive&nbsp;<wbr>(letter associated with home share, like&nbsp;<wbr>'H:') 
 
  -E, --sambaLogonScript script 
-&nbsp;<wbr>sambaLogonScript, relative to the&nbsp;<wbr>[netlogon]&nbsp;<wbr>share&nbsp;<wbr>(<font SIZE="-1">DOS</font>&nbsp;<wbr>script to execute on login, like&nbsp;<wbr>'foo.bat') 
+&nbsp;<wbr>sambaLogonScript, relative to the&nbsp;<wbr>[netlogon]&nbsp;<wbr>share&nbsp;<wbr>(DOS&nbsp;<wbr>script to execute on login, like&nbsp;<wbr>'foo.bat') 
 
  -F, --sambaProfilePath path 
 &nbsp;<wbr>sambaProfilePath&nbsp;<wbr>(profile directory, like&nbsp;<wbr>'\\\\PDC-SRV\\profiles\\foo') 
 
  -H, --sambaAcctFlags flags 
-&nbsp;<wbr>sambaAcctFlags, spaces and trailing bracket are ignored&nbsp;<wbr>(samba account control bits like&nbsp;<wbr>'[<font SIZE="-1">NDHTUMWSLKI</font>]') 
+&nbsp;<wbr>sambaAcctFlags, spaces and trailing bracket are ignored&nbsp;<wbr>(samba account control bits like&nbsp;<wbr>'[NDHTUMWSLKI]') 
 
  -I, --sambaDisable 
 &nbsp;<wbr>disable user. Can't be used with -H or -J 

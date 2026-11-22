@@ -12,42 +12,42 @@ description: "xine – a free video player"
 <p>MRLs are similar to URLs in your web browser. They describe the media to read from. Valid MRLs may be plain file names or one of the following (see also the notes below):</p>
 <dl>
 <dt>&bull; Filesystem:</dt>
-<dd><code>file:</code><i>&lt;path&gt;</i><br />
- <code>fifo:</code><i>&lt;path&gt;</i><br />
+<dd><code>file:</code><i>&lt;path&gt;</i><br/>
+ <code>fifo:</code><i>&lt;path&gt;</i><br/>
  <code>stdin:/</code></dd></dl>
 <dl>
 <dt>&bull; CD and DVD:</dt>
-<dd><code>dvd:/[</code><i>device_name</i><code>][/</code><i>title</i><code>[.</code><i>part</i><code>]]</code><br />
- <code>dvd:/</code><i>DVD_image_file</i><code>[/</code><i>title</i><code>[.</code><i>part</i><code>]]</code><br />
- <code>dvd:/</code><i>DVD_directory</i><code>[/</code><i>title</i><code>[.</code><i>part</i><code>]]</code><br />
+<dd><code>dvd:/[</code><i>device_name</i><code>][/</code><i>title</i><code>[.</code><i>part</i><code>]]</code><br/>
+ <code>dvd:/</code><i>DVD_image_file</i><code>[/</code><i>title</i><code>[.</code><i>part</i><code>]]</code><br/>
+ <code>dvd:/</code><i>DVD_directory</i><code>[/</code><i>title</i><code>[.</code><i>part</i><code>]]</code><br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>(use the path of the directory which contains VIDEO_TS)</dd>
-<p> <code><a href="vcd://[">vcd://[</a></code><i>CD_image_or_device_name</i><code>][@[</code><i>letter</i><code>]</code><i>number</i><code>]</code><br />
- <code>vcdo://</code><i>track_number</i><br />
+<p> <code><a href="vcd://[">vcd://[</a></code><i>CD_image_or_device_name</i><code>][@[</code><i>letter</i><code>]</code><i>number</i><code>]</code><br/>
+ <code>vcdo://</code><i>track_number</i><br/>
  <code>cdda:/[</code><i>device</i><code>][/</code><i>track_number</i><code>]</code></dl>
 <dl>
 <dt>&bull; Video devices:</dt>
-<dd><code>v4l://[</code><i>tuner_device</i><code>/</code><i>frequency</i><code>]</code><br />
- <code>v4l2://</code><i>tuner_device</i><br />
- <code>dvb://</code><i>channel_number</i><br />
+<dd><code>v4l://[</code><i>tuner_device</i><code>/</code><i>frequency</i><code>]</code><br/>
+ <code>v4l2://</code><i>tuner_device</i><br/>
+ <code>dvb://</code><i>channel_number</i><br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>(nth channel in your channels.conf)</dd>
-<p> <code>dvb://</code><i>channel_name</i><br />
- <code>dvbc://</code><i>channel_name</i><code>:</code><i>tuning_parameters</i><br />
- <code>dvbs://</code><i>channel_name</i><code>:</code><i>tuning_parameters</i><br />
- <code>dvbt://</code><i>channel_name</i><code>:</code><i>tuning_parameters</i><br />
- <code>dvba://</code><i>channel_name</i><code>:</code><i>tuning_parameters</i><br />
- <code>pvr:/</code><i>tmp_files_path</i><code>!</code><i>saved_files_path</i><code>!</code><i>max_page_age</i><br />
+<p> <code>dvb://</code><i>channel_name</i><br/>
+ <code>dvbc://</code><i>channel_name</i><code>:</code><i>tuning_parameters</i><br/>
+ <code>dvbs://</code><i>channel_name</i><code>:</code><i>tuning_parameters</i><br/>
+ <code>dvbt://</code><i>channel_name</i><code>:</code><i>tuning_parameters</i><br/>
+ <code>dvba://</code><i>channel_name</i><code>:</code><i>tuning_parameters</i><br/>
+ <code>pvr:/</code><i>tmp_files_path</i><code>!</code><i>saved_files_path</i><code>!</code><i>max_page_age</i><br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>(for WinTV PVR 250 and 350)
 </dl>
 <dl>
 <dt>&bull; Network:</dt>
-<dd><code>http://</code><i>host&#8230;</i><br />
- <code>tcp://</code><i>host</i><code>[:</code><i>port</i><code>]</code><br />
- <code>udp://</code><i>host</i><code>[:</code><i>port</i><code>[?iface=</code><i>interface</i><code>]]</code><br />
- <code>rtp://</code><i>host</i><code>[:</code><i>port</i><code>[?iface=</code><i>interface</i><code>]]</code><br />
+<dd><code>http://</code><i>host&#8230;</i><br/>
+ <code>tcp://</code><i>host</i><code>[:</code><i>port</i><code>]</code><br/>
+ <code>udp://</code><i>host</i><code>[:</code><i>port</i><code>[?iface=</code><i>interface</i><code>]]</code><br/>
+ <code>rtp://</code><i>host</i><code>[:</code><i>port</i><code>[?iface=</code><i>interface</i><code>]]</code><br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>(default port for tcp, udp and rtp is 7658)</dd>
-<p> <code><a href="smb://...">smb://&#8230;</a></code><br />
- <code>mms://</code><i>host&#8230;</i><br />
- <code>pnm://</code><i>host&#8230;</i><br />
+<p> <code><a href="smb://...">smb://&#8230;</a></code><br/>
+ <code>mms://</code><i>host&#8230;</i><br/>
+ <code>pnm://</code><i>host&#8230;</i><br/>
  <code>rtsp://</code><i>host&#8230;</i> (requires Real codecs)
 </dl>
 <p> Additional input plugins will provide additional MRL types. The ones listed above are available with stock libxine. </p>
@@ -154,12 +154,12 @@ description: "xine – a free video player"
 <dt><code>Mouse wheel &amp; button 1</code></dt>
 <dd>Scroll through channel list &amp; select the highlighted channel</dd></dl>
 <h2>Subtitle</h2>
-<p><code>external subtitle files (any mrl)</code><br />
+<p><code>external subtitle files (any mrl)</code><br/>
  Text subtitle files may be appended to the MRL:.</p>
 <dl>
 <dt><code>&lt;mrl&gt;#subtitle:&lt;subtitlefile&gt;</code></dt>
-<dd>This is the normal way to define the subtitle file to use. The frontend will not take any notice of the subtitle file. For example:<br />
- <i>file://home/user/wibble.mpg#subtitle:/home/user/wibble.sub</i><br />
+<dd>This is the normal way to define the subtitle file to use. The frontend will not take any notice of the subtitle file. For example:<br/>
+ <i>file://home/user/wibble.mpg#subtitle:/home/user/wibble.sub</i><br/>
  (Note that some front ends can detect subtitles files where the name differs as shown in the example.)
 </dd></dl>
 <h2>Stream Options</h2>
@@ -182,7 +182,7 @@ description: "xine – a free video player"
 <dt><code>save:</code><i>&lt;file&gt;</i></dt>
 <dd>Save the stream (if allowed) to the named file, relative to the directory given by the option &quot;media.capture.save_dir&quot;.</dd>
 <dt><code>change configuration option &#8216;on the fly&#8217;:</code></dt>
-<dd>You can change a configuration option at any time, using the special <code>cfg:/</code> MRL style. The syntax is:<br />
+<dd>You can change a configuration option at any time, using the special <code>cfg:/</code> MRL style. The syntax is:<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>cfg:/&lt;config entry&gt; : &lt;config value&gt;</dd>
 <p> Unlike stream config option, you can change anything <i>before</i> playing the stream. </p>
 </dl>

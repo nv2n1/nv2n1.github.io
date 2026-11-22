@@ -14,8 +14,8 @@ Protected Attributes</code></pre>
 <p> Inherits <code>QuantLib::EnergyCommodity</code>.</p>
 <h3>Public Member Functions</h3>
 <p><code>EnergyFuture</code> (<code>Integer</code> buySell, const <code>Quantity</code> &amp;quantity, const CommodityUnitCost &amp;tradePrice, const boost::shared_ptr&lt; <code>CommodityIndex</code> &gt; &amp;index, const <code>CommodityType</code> &amp;commodityType, const boost::shared_ptr&lt; SecondaryCosts &gt; &amp;secondaryCosts) </p>
-<p> bool <code>isExpired</code> () const<br />
- <i>returns whether the instrument is still tradable. </i><br />
+<p> bool <code>isExpired</code> () const<br/>
+ <i>returns whether the instrument is still tradable. </i><br/>
  <code>Quantity</code> <code>quantity</code> () const </p>
 <p> const CommodityUnitCost &amp; <code>tradePrice</code> () const </p>
 <p> const boost::shared_ptr&lt; <code>CommodityIndex</code> &gt; <code>index</code> () const</p>

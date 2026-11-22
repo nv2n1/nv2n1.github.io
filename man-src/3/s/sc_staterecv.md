@@ -14,9 +14,9 @@ description: "sc::StateRecv –"
 #include &lt;mstate.h&gt;</code></pre>
 <p> Inherits <code>sc::MsgStateRecv</code>.</p>
 <h3>Public Member Functions</h3>
-<p><code>StateRecv</code> (const <code>Ref</code>&lt; <code>MessageGrp</code> &gt; &amp;)<br />
- <i>Create a </i><code>StateRecv</code> given a <code>MessageGrp</code>.<br />
- void <code>source</code> (int)<br />
+<p><code>StateRecv</code> (const <code>Ref</code>&lt; <code>MessageGrp</code> &gt; &amp;)<br/>
+ <i>Create a </i><code>StateRecv</code> given a <code>MessageGrp</code>.<br/>
+ void <code>source</code> (int)<br/>
  <i>Specify the source node. </i></p>
 <h3>Protected Member Functions</h3>
 <pre><code>void next_buffer ()

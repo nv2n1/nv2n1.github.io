@@ -26,7 +26,7 @@ description: "retrace-server-cleanup – Collects garbage from Retrace server."
 <h2>AUTHORS</h2>
 <dl>
 <dt>
-</dt><dd> &bull; Michal Toman &lt;m[blue]<code>_mtoman [at] redhat.com_</code>m[]<font SIZE="-2">[1]</font>&gt;</dd></dl>
+</dt><dd> &bull; Michal Toman &lt;m[blue]<code>_mtoman [at] redhat.com_</code>m[][1]&gt;</dd></dl>
 <h2>NOTES</h2>
 <dl>
 <dt> 1.</dt>

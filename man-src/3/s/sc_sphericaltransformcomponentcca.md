@@ -11,7 +11,7 @@ description: "sc::SphericalTransformComponentCCA –"
 <h2>Synopsis</h2>
 <p> Inherits <code>sc::SphericalTransformComponent</code>.</p>
 <h3>Public Member Functions</h3>
-<p>void <code>init</code> (int a, int b, int c, double coef, int pureindex)<br />
+<p>void <code>init</code> (int a, int b, int c, double coef, int pureindex)<br/>
  <i>Initialize this object. </i></p>
 <h2>Member Function Documentation</h2>
 <h3>void sc::SphericalTransformComponentCCA::init (int a, int b, int c, double coef, int pureindex) [inline, virtual]</h3>

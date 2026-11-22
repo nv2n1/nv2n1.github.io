@@ -10,7 +10,7 @@ description: "cgetf2.f –"
 <p>cgetf2.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>cgetf2</code> (M, N, A, LDA, IPIV, INFO)<br />
+<p>subroutine <code>cgetf2</code> (M, N, A, LDA, IPIV, INFO)<br/>
  <i></i><code>CGETF2</code> computes the LU factorization of a general m-by-n matrix using partial pivoting with row interchanges (unblocked algorithm).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cgetf2 (integerM, integerN, complex, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, integerINFO)</h3>

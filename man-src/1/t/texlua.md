@@ -10,8 +10,8 @@ description: "luatex, dviluatex, luahbtex, luajittex, texlua, texluac – An ext
 
 <p> luatex, dviluatex, luahbtex, luajittex, texlua, texluac - An extended version of TeX using Lua as an embedded scripting language </p>
 <h2>SYNOPSIS</h2>
-<p> <code>luatex</code> [<code>--lua=</code><i>FILE</i>] [<i>OPTION</i>]... [<i>TEXNAME</i>[<i></i><code>.tex</code>]] [<i>COMMANDS</i>] <br />
- <code>luatex</code> [<code>--lua=</code><i>FILE</i>] [<i>OPTION</i>]... <code>\</code><i>FIRST-LINE</i> <br />
+<p> <code>luatex</code> [<code>--lua=</code><i>FILE</i>] [<i>OPTION</i>]... [<i>TEXNAME</i>[<i></i><code>.tex</code>]] [<i>COMMANDS</i>] <br/>
+ <code>luatex</code> [<code>--lua=</code><i>FILE</i>] [<i>OPTION</i>]... <code>\</code><i>FIRST-LINE</i> <br/>
  <code>luatex</code> [<code>--lua=</code><i>FILE</i>] [<i>OPTION</i>]... <code>&amp;</code><i>FMT</i> [<i>ARGS</i>]  </p>
 <h2>DESCRIPTION</h2>
 <p> Run the luaTeX typesetter on <i>TEXNAME</i>, usually creating <i>TEXNAME</i><code>.pdf</code>. Any remaining <i>COMMANDS</i> are processed as luaTeX input, after <i>TEXNAME</i> is read. </p>
@@ -42,26 +42,26 @@ description: "luatex, dviluatex, luahbtex, luajittex, texlua, texluac – An ext
 <p> Then the regular web2c options: </p>
 <dl>
 <dt><code>--debug-format</code></dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  Debug format loading. </p>
  </dd>
 <dt><code>--draftmode</code></dt>
 <dd> <p> Sets \pdfdraftmode so luaTeX doesn&#8217;t write a PDF and doesn&#8217;t read any included images, thus speeding up execution. </p>
  </dd>
 <dt><code>--enable-write18</code></dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  Synonym for <code>--shell-escape</code>. </p>
  </dd>
 <dt><code>--disable-write18</code></dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  Synonym for <code>--no-shell-escape</code>. </p>
  </dd>
 <dt><code>--shell-escape</code></dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  Enable the <code>\write18{</code><i>command</i><code>}</code> construct, and Lua functions <code>os.execute()</code>, <code>os.exec()</code>, <code>os.spawn()</code>, and <code>io.popen()</code>. The <i>command</i> can be any shell command. This construct is normally disallowed for security reasons. </p>
  </dd>
 <dt><code>--no-shell-escape</code></dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  Disable the <code>\write18{</code><i>command</i><code>}</code> construct and the other Lua functions, even if it is enabled in the <i>texmf.cnf</i> file. </p>
  </dd>
 <dt><code>--shell-restricted</code></dt>

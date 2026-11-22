@@ -100,15 +100,15 @@ description: "e2fsck – check a Linux ext2/ext3/ext4 file system"
 <dd>Before overwriting a file system block, write the old contents of the block to an undo file. This undo file can be used with <a href="/docs/linux/man/8-e2undo/">e2undo</a>(8) to restore the old contents of the file system should something go wrong. If the empty string is passed as the undo_file argument, the undo file will be written to a file named e2fsck-<i>device</i>.e2undo in the directory specified via the <i>E2FSPROGS_UNDO_DIR</i> environment variable. </dd>
 <p> WARNING: The undo file cannot be used to recover from a power or system crash.</dl>
 <h2>Exit Code</h2>
-<p>The exit code returned by <code>e2fsck</code> is the sum of the following conditions:<br />
- 0 &#8211; No errors<br />
- 1 &#8211; File system errors corrected<br />
- 2 &#8211; File system errors corrected, system should<br />
- &nbsp;<wbr>&nbsp;be rebooted<br />
- 4 &#8211; File system errors left uncorrected<br />
- 8 &#8211; Operational error<br />
- 16 &#8211; Usage or syntax error<br />
- 32 &#8211; E2fsck canceled by user request<br />
+<p>The exit code returned by <code>e2fsck</code> is the sum of the following conditions:<br/>
+ 0 &#8211; No errors<br/>
+ 1 &#8211; File system errors corrected<br/>
+ 2 &#8211; File system errors corrected, system should<br/>
+ &nbsp;<wbr>&nbsp;be rebooted<br/>
+ 4 &#8211; File system errors left uncorrected<br/>
+ 8 &#8211; Operational error<br/>
+ 16 &#8211; Usage or syntax error<br/>
+ 32 &#8211; E2fsck canceled by user request<br/>
  128 &#8211; Shared library error</p>
 <h2>Signals</h2>
 <p>The following signals have the following effect when sent to <code>e2fsck</code>.</p>

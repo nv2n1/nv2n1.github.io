@@ -32,7 +32,7 @@ description: "arp – manipulate the system ARP cache"
 <dt><code>-D, &#8211;use-device</code></dt>
 <dd>Instead of a hw_addr, the given argument is the name of an interface. <code>arp</code> will use the MAC address of that interface for the table entry. This is usually the best option to set up a proxy ARP entry to yourself.</dd>
 <dt><code>-i</code><i> If</i>, <code>&#8211;device</code><i> If</i></dt>
-<dd>Select an interface. When dumping the ARP cache only entries matching the specified interface will be printed. When setting a permanent or <code>temp</code> ARP entry this interface will be associated with the entry; if this option is not used, the kernel will guess based on the routing table. For <code>pub</code> entries the specified interface is the interface on which ARP requests will be answered.<br />
+<dd>Select an interface. When dumping the ARP cache only entries matching the specified interface will be printed. When setting a permanent or <code>temp</code> ARP entry this interface will be associated with the entry; if this option is not used, the kernel will guess based on the routing table. For <code>pub</code> entries the specified interface is the interface on which ARP requests will be answered.<br/>
  <code>NOTE:</code> This has to be different from the interface to which the IP datagrams will be routed. <code>NOTE:</code> As of kernel 2.2.0 it is no longer possible to set an ARP entry for an entire subnet. Linux instead does automagic proxy arp when a route exists and it is forwarding. See <code><a href="/docs/linux/man/7-arp/">arp</a></code>(7) for details. Also the <code>dontpub</code> option which is available for delete and set operations cannot be used with 2.4 and newer kernels.</dd>
 <dt><code>-f</code><i> filename</i>, <code>&#8211;file</code><i> filename</i></dt>
 <dd>Similar to the <code>-s</code> option, only this time the address info is taken from file <i>filename</i>. This can be used if ARP entries for a lot of hosts have to be set up. The name of the data file is very often <i>/etc/ethers</i>, but this is not official. If no filename is specified <i>/etc/ethers</i> is used as default. </dd>
@@ -46,9 +46,9 @@ description: "arp – manipulate the system ARP cache"
 <p> <code>/usr/sbin/arp -i eth1 -d 10.0.0.1</code> </p>
 <p> Delete the ARP table entry for 10.0.0.1 on interface eth1. This will match published proxy ARP entries and permanent entries.</p>
 <h2>Files</h2>
-<p><i>/proc/net/arp</i><br />
- <i>/etc/networks</i><br />
- <i>/etc/hosts</i><br />
+<p><i>/proc/net/arp</i><br/>
+ <i>/etc/networks</i><br/>
+ <i>/etc/hosts</i><br/>
  <i>/etc/ethers</i></p>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/8-rarp/">rarp</a>(8), <a href="/docs/linux/man/8-route/">route</a>(8), <a href="/docs/linux/man/8-ifconfig/">ifconfig</a>(8), <a href="/docs/linux/man/8-netstat/">netstat</a>(8)</p>

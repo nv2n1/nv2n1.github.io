@@ -10,7 +10,7 @@ description: "zungrq.f –"
 <p>zungrq.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zungrq</code> (M, N, K, A, LDA, TAU, WORK, LWORK, INFO)<br />
+<p>subroutine <code>zungrq</code> (M, N, K, A, LDA, TAU, WORK, LWORK, INFO)<br/>
  <i></i><code>ZUNGRQ</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zungrq (integerM, integerN, integerK, complex*16, dimension( lda, * )A, integerLDA, complex*16, dimension( * )TAU, complex*16, dimension( * )WORK, integerLWORK, integerINFO)</h3>

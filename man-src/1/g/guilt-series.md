@@ -27,9 +27,9 @@ description: "guilt-series – Print the stack of patches"
 <dt>
 </dt><dd> Verbose output; adds an = next to the top most applied patch, and a + to all other applied patches</dd></dl>
 <h2>AUTHOR</h2>
-<p> Written by Josef &quot;Jeff&quot; Sipek &lt;m[blue]<code>jeffpc [at] josefsipek.net</code>m[]<font SIZE="-2">[1]</font>&gt;</p>
+<p> Written by Josef &quot;Jeff&quot; Sipek &lt;m[blue]<code>jeffpc [at] josefsipek.net</code>m[][1]&gt;</p>
 <h2>DOCUMENTATION</h2>
-<p> Documentation by Josef &quot;Jeff&quot; Sipek &lt;m[blue]<code>jeffpc [at] josefsipek.net</code>m[]<font SIZE="-2">[1]</font>&gt;</p>
+<p> Documentation by Josef &quot;Jeff&quot; Sipek &lt;m[blue]<code>jeffpc [at] josefsipek.net</code>m[][1]&gt;</p>
 <h2>GUILT</h2>
 <p> Part of the linkguilt:guilt[7] suite (Generated for Guilt v0.33)</p>
 <h2>NOTES</h2>

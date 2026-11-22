@@ -15,9 +15,9 @@ int remctl_noop(struct remctl *r);</code></pre>
 
 <h2>Description</h2>
 
-<i>remctl_noop()</i> sends a <font SIZE="-1">NOOP</font> message to a remctl server and reads the expected <font SIZE="-1">NOOP</font> response. This is primarily used to keep a connection to a remctl server alive, such as through a firewall with a session timeout, while waiting to issue further commands. 
+<i>remctl_noop()</i> sends a NOOP message to a remctl server and reads the expected NOOP response. This is primarily used to keep a connection to a remctl server alive, such as through a firewall with a session timeout, while waiting to issue further commands. 
 
- The <font SIZE="-1">NOOP</font> message requires protocol version 3 support in the server, so the caller should be prepared for this function to fail, indicating that the connection could not be kept alive and possibly that it was closed by the server. In this case, the client will need to explicitly reopen the connection with <i>remctl_open()</i>.
+ The NOOP message requires protocol version 3 support in the server, so the caller should be prepared for this function to fail, indicating that the connection could not be kept alive and possibly that it was closed by the server. In this case, the client will need to explicitly reopen the connection with <i>remctl_open()</i>.
 
 <h2>Return Value</h2>
 

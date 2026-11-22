@@ -67,13 +67,13 @@ description: "hb_report – create report for CRM based clusters (Pacemaker)"
 <h2>Examples</h2>
 <p>Last night during the backup there were several warnings encountered (logserver is the log host): </p>
 <dl>
-<dd><font SIZE="-1"> </font></dd>
+<dd> </dd>
 <pre>logserver# hb_report -f 3:00 -t 4:00 -n &quot;node1 node2&quot; /tmp/report</pre>
-<p><font SIZE="+1"></dl>
+<p></dl>
 <p> collects everything from all nodes from 3am to 4am last night. The files are compressed to a tarball /tmp/report.tar.bz2. </p>
 <p> Just found a problem during testing: </p>
 <dl>
-<dd></font> </dd>
+<dd> </dd>
 <pre># note the current time
 node1# date
 Fri Sep 11 18:51:40 CEST 2009
@@ -81,57 +81,57 @@ node1# /etc/init.d/heartbeat start
 node1# nasty-command-that-breaks-things
 node1# sleep 120 #wait for the cluster to settle
 node1# hb_report -f 18:51 /tmp/hb1</pre>
-<p><font SIZE="+1"></dl>
+<p></dl>
 <dl>
-<dd></font> </dd>
+<dd> </dd>
 <pre># if hb_report can't figure out that this is openais
 node1# hb_report -f 18:51 -A /tmp/hb1</pre>
-<p><font SIZE="+1"></dl>
+<p></dl>
 <dl>
-<dd></font> </dd>
+<dd> </dd>
 <pre># if hb_report can't figure out the cluster members
 node1# hb_report -f 18:51 -n &quot;node1 node2&quot; /tmp/hb1</pre>
-<p><font SIZE="+1"></dl>
-<p> The files are compressed to a tarball /tmp/hb1.tar.bz2. </font></p>
+<p></dl>
+<p> The files are compressed to a tarball /tmp/hb1.tar.bz2. </p>
 <h2>Interpreting Results</h2>
 <p>The compressed tar archive is the final product of hb_report. This is one example of its content, for a CTS test case on a three node OpenAIS cluster: </p>
 <dl>
-<dd><font SIZE="-1"> </font></dd>
+<dd> </dd>
 <pre>$ ls -RF 001-Restart</pre>
-<p><font SIZE="+1"></dl>
+<p></dl>
 <dl>
-<dd></font> </dd>
+<dd> </dd>
 <pre>001-Restart:
 analysis.txt events.txt logd.cf s390vm13/ s390vm16/
 description.txt ha-log.txt openais.conf s390vm14/</pre>
-<p><font SIZE="+1"></dl>
+<p></dl>
 <dl>
-<dd></font> </dd>
+<dd> </dd>
 <pre>001-Restart/s390vm13:
 STOPPED crm_verify.txt hb_uuid.txt openais.conf@ sysinfo.txt
 cib.txt dlm_dump.txt logd.cf@ pengine/ sysstats.txt
 cib.xml events.txt messages permissions.txt</pre>
-<p><font SIZE="+1"></dl>
+<p></dl>
 <dl>
-<dd></font> </dd>
+<dd> </dd>
 <pre>001-Restart/s390vm13/pengine:
 pe-input-738.bz2 pe-input-740.bz2 pe-warn-450.bz2
 pe-input-739.bz2 pe-warn-449.bz2 pe-warn-451.bz2</pre>
-<p><font SIZE="+1"></dl>
+<p></dl>
 <dl>
-<dd></font> </dd>
+<dd> </dd>
 <pre>001-Restart/s390vm14:
 STOPPED crm_verify.txt hb_uuid.txt openais.conf@ sysstats.txt
 cib.txt dlm_dump.txt logd.cf@ permissions.txt
 cib.xml events.txt messages sysinfo.txt</pre>
-<p><font SIZE="+1"></dl>
+<p></dl>
 <dl>
-<dd></font> </dd>
+<dd> </dd>
 <pre>001-Restart/s390vm16:
 STOPPED crm_verify.txt hb_uuid.txt messages sysinfo.txt
 cib.txt dlm_dump.txt hostcache openais.conf@ sysstats.txt
 cib.xml events.txt logd.cf@ permissions.txt</pre>
-<p><font SIZE="+1"></dl>
+<p></dl>
 <p> The top directory contains information which pertains to the cluster or event as a whole. Files with exactly the same content on all nodes will also be at the top, with per-node links created (as it is in this example the case with openais.conf and logd.cf). </p>
 <p> The cluster log files are named ha-log.txt regardless of the actual log file name on the system. If it is found on the loghost, then it is placed in the top directory. Files named messages are excerpts of /var/log/messages from nodes. </p>
 <p> Most files are copied verbatim or they contain output of a command. For instance, cib.xml is a copy of the CIB found in /var/lib/heartbeat/crm/cib.xml. crm_verify.txt is output of the <a href="/docs/linux/man/8-crm_verify/">crm_verify</a>(8) program. </p>
@@ -154,7 +154,7 @@ cib.xml events.txt logd.cf@ permissions.txt</pre>
 <p> <code>sysstats.txt</code></p>
 <dl>
 <dd>Output of various system commands such as <a href="/docs/linux/man/1-ps/">ps</a>(1), <a href="/docs/linux/man/1-uptime/">uptime</a>(1), <a href="/docs/linux/man/8-netstat/">netstat</a>(8), and <a href="/docs/linux/man/8-ifconfig/">ifconfig</a>(8). The dynamic part of the system.</dd></dl>
-<p> description.txt should contain a user supplied description of the problem, but since it is very seldom used, it will be dropped from the future releases. </font></p>
+<p> description.txt should contain a user supplied description of the problem, but since it is very seldom used, it will be dropped from the future releases. </p>
 <h2>Prerequisites</h2>
 <p>ssh</p>
 <dl>
@@ -170,44 +170,44 @@ cib.xml events.txt logd.cf@ permissions.txt</pre>
 <h2>Times</h2>
 <p>Specifying times can at times be a nuisance. That is why we have chosen to use one of the perl modules&#8212;they do allow certain freedom when talking dates. You can either read the instructions at the Date::Parse examples page. or just rely on common sense and try stuff like: </p>
 <dl>
-<dd><font SIZE="-1"> </font></dd>
+<dd> </dd>
 <pre>3:00 (today at 3am)
 15:00 (today at 3pm)
 2007/9/1 2pm (September 1st at 2pm)
 Tue Sep 15 20:46:27 CEST 2009 (September 15th etc)</pre>
-<p><font SIZE="+1"></dl>
+<p></dl>
 <p> FChb_reportF[] will (probably) complain if it cancqt figure out what do you mean. </p>
 <p> Try to delimit the event as close as possible in order to reduce the size of the report, but still leaving a minute or two around for good measure. </p>
-<p> FC-fF[] is not optional. And doncqt forget to quote dates when they contain spaces. </font></p>
+<p> FC-fF[] is not optional. And doncqt forget to quote dates when they contain spaces. </p>
 <h2>Should I send all this to the rest of Internet?</h2>
 <p>We make an effort to remove sensitive data from the configuration (CIB, ha.cf, and transition graphs). By default, parameters starting matching <i>passw.</i><i></i><i> are replaced by a string of </i><i></i>. Use the FC-pF[] option to specify additional regular expressions to match variable names which may contain information you doncqt want to leak. For example: </p>
 <dl>
-<dd><font SIZE="-1"> </font></dd>
+<dd> </dd>
 <pre># hb_report -f 18:00 -p &quot;user.*&quot; -p &quot;secret.*&quot; /var/tmp/report</pre>
-<p><font SIZE="+1"></dl>
-<p> Logs and other files are not filtered. </font></p>
+<p></dl>
+<p> Logs and other files are not filtered. </p>
 <h2>Logs</h2>
 <p>It may be tricky to find syslog logs. The scheme used is to log a unique message on all nodes and then look it up in the usual syslog locations. This procedure is not foolproof, in particular if the syslog files are in a non-standard directory. We look in /var/log /var/logs /var/syslog /var/adm /var/log/ha /var/log/cluster. In case we cancqt find the logs, please supply their location: </p>
 <dl>
-<dd><font SIZE="-1"> </font></dd>
+<dd> </dd>
 <pre># hb_report -f 5pm -l /var/log/cluster1/ha-log -S /tmp/report_node1</pre>
-<p><font SIZE="+1"></dl>
+<p></dl>
 <p> If you have different log locations on different nodes, well, perhaps youcqd like to make them the same and make life easier for everybody. </p>
 <p> Files starting with &quot;ha-&quot; are preferred. In case syslog sends messages to more than one file, if one of them is named ha-log or ha-debug those will be favoured to syslog or messages. </p>
 <p> hb_report supports also archived logs in case the period specified extends that far in the past. The archives must reside in the same directory as the current log and their names must be prefixed with the name of the current log (syslog-1.gz or messages-20090105.bz2). </p>
-<p> If there is no separate log for the cluster, possibly unrelated messages from other programs are included. We doncqt filter logs, just pick a segment for the period you specified. </font></p>
+<p> If there is no separate log for the cluster, possibly unrelated messages from other programs are included. We doncqt filter logs, just pick a segment for the period you specified. </p>
 <h2>Manual Report Collection</h2>
 <p>So, your ssh doesncqt work. In that case, you will have to run this procedure on all nodes. Use FC-SF[] so that we doncqt bother with ssh: </p>
 <dl>
-<dd><font SIZE="-1"> </font></dd>
+<dd> </dd>
 <pre># hb_report -f 5:20pm -t 5:30pm -S /tmp/report_node1</pre>
-<p><font SIZE="+1"></dl>
+<p></dl>
 <p> If you also have a log host which is not in the cluster, then youcqll have to copy the log to one of the nodes and tell us where it is: </p>
 <dl>
-<dd></font> </dd>
+<dd> </dd>
 <pre># hb_report -f 5:20pm -t 5:30pm -l /var/tmp/ha-log -S /tmp/report_node1</pre>
-<p><font SIZE="+1"></dl>
-<p> If you reconsider and want the ssh setup, take a look at the CTS README file for instructions. </font></p>
+<p></dl>
+<p> If you reconsider and want the ssh setup, take a look at the CTS README file for instructions. </p>
 <h2>Operation</h2>
 <p>hb_report collects files and other information in a fairly straightforward way. The most complex tasks are discovering the log file locations (if syslog is used which is the most common case) and coordinating the operation on multiple nodes. </p>
 <p> The instance of hb_report running on the host where it was invoked is the master instance. Instances running on other nodes are slave instances. The master instance communicates with slave instances by ssh. There are multiple ssh invocations per run, so it is essential that the ssh works without password, i.e. with the public key authentication and authorized_keys. </p>

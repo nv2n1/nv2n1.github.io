@@ -264,9 +264,9 @@ description: "condor_status Display status of the HTCondor pool"
 <p> <i>Example 1</i> To view information from all nodes of an SMP machine, use only the host name. For example, if you had a 4-CPU machine, named vulture.cs.wisc.edu , you might see </p>
 <p> % condor_status vulture </p>
 <p> Name OpSys Arch State Activity LoadAv Mem ActvtyTime </p>
-<p> slot1 [at] vulture.cs.w LINUX INTEL Claimed Busy 1.050 512 0+01:47:42<br />
- slot2 [at] vulture.cs.w LINUX INTEL Claimed Busy 1.000 512 0+01:48:19<br />
- slot3 [at] vulture.cs.w LINUX INTEL Unclaimed Idle 0.070 512 1+11:05:32<br />
+<p> slot1 [at] vulture.cs.w LINUX INTEL Claimed Busy 1.050 512 0+01:47:42<br/>
+ slot2 [at] vulture.cs.w LINUX INTEL Claimed Busy 1.000 512 0+01:48:19<br/>
+ slot3 [at] vulture.cs.w LINUX INTEL Unclaimed Idle 0.070 512 1+11:05:32<br/>
  slot4 [at] vulture.cs.w LINUX INTEL Unclaimed Idle 0.000 512 1+11:05:34 </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Total Owner Claimed Unclaimed Matched Preempting Backfill </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>INTEL/LINUX&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>4&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>2&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>2&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0 </p>
@@ -291,9 +291,9 @@ description: "condor_status Display status of the HTCondor pool"
 <p> % condor_status -constraint &#8216;Mips&gt;750&#8217; </p>
 <p> <i>-cod option example</i> </p>
 <p> The <code>-cod</code> option displays the status of COD claims within a given HTCondor pool. </p>
-<p> Name ID ClaimState TimeInState RemoteUser JobId Keyword<br />
- astro.cs.wi COD1 Idle 0+00:00:04 wright<br />
- chopin.cs.w COD1 Running 0+00:02:05 wright 3.0 fractgen<br />
+<p> Name ID ClaimState TimeInState RemoteUser JobId Keyword<br/>
+ astro.cs.wi COD1 Idle 0+00:00:04 wright<br/>
+ chopin.cs.w COD1 Running 0+00:02:05 wright 3.0 fractgen<br/>
  chopin.cs.w COD2 Suspended 0+00:10:21 wright 4.0 fractgen </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Total&nbsp;<wbr>&nbsp;<wbr>Idle&nbsp;<wbr>&nbsp;<wbr>Running&nbsp;<wbr>&nbsp;<wbr>Suspended&nbsp;<wbr>&nbsp;<wbr>Vacating&nbsp;<wbr>&nbsp;<wbr>Killing </p>
 <p>&nbsp;<wbr>INTEL/LINUX&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>3&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0 </p>

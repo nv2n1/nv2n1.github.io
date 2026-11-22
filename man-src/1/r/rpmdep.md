@@ -112,7 +112,7 @@ description: "rpmdep – display the full dependency of an installed rpm package
 <p> <i><a href="/docs/linux/man/1-rpmduplicates/">rpmduplicates</a></i>(1) </p>
 <p> <i><a href="/docs/linux/man/1-rpmextra/">rpmextra</a></i>(1)</p>
 <h2>LICENSE AND COPYRIGHT</h2>
-<p> Copyright (C) 2008 by Eric Gerbier This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
+<p> Copyright (C) 2008 by Eric Gerbier This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
 <h2>AUTHOR</h2>
 <p> Eric Gerbier </p>
 <p> you can report any bug or suggest to gerbier [at] users.sourceforge.net </p>

@@ -10,12 +10,12 @@ description: "ql/pricingengines/vanilla/fdamericanengine.hpp – Finite-differen
 
 <p> ql/pricingengines/vanilla/fdamericanengine.hpp &#8211; Finite-differences American option engine. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/instruments/oneassetoption.hpp&gt;<br />
- #include &lt;ql/pricingengines/vanilla/fdstepconditionengine.hpp&gt;<br />
- #include &lt;ql/pricingengines/vanilla/fdconditions.hpp&gt;<br />
+<p> #include &lt;ql/instruments/oneassetoption.hpp&gt;<br/>
+ #include &lt;ql/pricingengines/vanilla/fdstepconditionengine.hpp&gt;<br/>
+ #include &lt;ql/pricingengines/vanilla/fdconditions.hpp&gt;<br/>
  #include &lt;ql/methods/finitedifferences/fdtypedefs.hpp&gt; </p>
 <h3>Typedefs</h3>
-<p> typedef FDEngineAdapter&lt; FDAmericanCondition&lt; FDStepConditionEngine &gt;, OneAssetOption::engine &gt; <code>FDAmericanEngine</code><br />
+<p> typedef FDEngineAdapter&lt; FDAmericanCondition&lt; FDStepConditionEngine &gt;, OneAssetOption::engine &gt; <code>FDAmericanEngine</code><br/>
  <i>Finite-differences pricing engine for American one asset options. </i></p>
 <h2>Detailed Description</h2>
 <p> Finite-differences American option engine. </p>

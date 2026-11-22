@@ -28,9 +28,9 @@ description: "pklogin_finder – maps certificates into a user"
 <h2>FILES</h2>
 <p> <i>/etc/pam_pkcs11/pam_pkcs11.conf</i></p>
 <h2>EXAMPLES</h2>
-<p> To run this program the standard way, insert a smart card into the reader and type:<br />
+<p> To run this program the standard way, insert a smart card into the reader and type:<br/>
 &nbsp;<wbr>pklogin_finder&nbsp;<wbr> </p>
-<p> Alternatively you can specify options:<br />
+<p> Alternatively you can specify options:<br/>
 &nbsp;<wbr>pklogin_finder debug config_file=${HOME}/.pam_pkcs11.conf</p>
 <h2>AUTHORS</h2>
 <p> Juan Antonio Martinez &lt;jonsito [at] teleline.es&gt;</p>

@@ -12,9 +12,9 @@ description: "log4cpp::SimpleConfigurator –"
 <h2>Synopsis</h2>
 <p>#include &lt;SimpleConfigurator.hh&gt;</p>
 <h3>Static Public Member Functions</h3>
-<p>static void <code>configure</code> (const std::string &amp;initFileName) throw (ConfigureFailure)<br />
- <i>Configure </i><code>log4cpp</code> with the configuration in the given file.<br />
- static void <code>configure</code> (std::istream &amp;initFile) throw (ConfigureFailure)<br />
+<p>static void <code>configure</code> (const std::string &amp;initFileName) throw (ConfigureFailure)<br/>
+ <i>Configure </i><code>log4cpp</code> with the configuration in the given file.<br/>
+ static void <code>configure</code> (std::istream &amp;initFile) throw (ConfigureFailure)<br/>
  <i>Configure </i><code>log4cpp</code> with the configuration in the given file.</p>
 <h2>Detailed Description</h2>
 <p>This class implements a simple Configurator for <code>log4cpp</code>. </p>

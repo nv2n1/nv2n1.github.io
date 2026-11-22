@@ -38,7 +38,7 @@ description: "fedup – Fedora Upgrade tool"
 <dl>
 <dd>Device or mountpoint of mounted install media. If <i>DEV</i> is omitted, <code>fedup</code> will scan all currently-mounted removable devices (USB disks, optical media, etc.) </dd>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  Fedora Live images cannot be used as install media! </dd>
 </dl>
 </dl>
@@ -66,7 +66,7 @@ description: "fedup – Fedora Upgrade tool"
 <p> /metalink?repo=fedora-install-<i>$releasever</i>&amp;arch=<i>$basearch</i> </p>
 <p> where <i>$basearch</i> is the system&#8217;s arch (<i>i386</i>, <i>x86_64</i>, etc.) and <i>$releasever</i> is the <i>VERSION</i> given with the <code>&#8211;network</code> option. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  You should only need to use this option if you&#8217;re testing <code>fedup</code> before the release is public. </dd>
 </dl>
 </dl>

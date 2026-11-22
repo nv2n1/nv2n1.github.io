@@ -19,7 +19,7 @@ description: "control.ctl – Specify handling of Usenet control messages"
 <dt><code>/encoding/</code></dt>
 <dd>This type specifies the encoding of newgroup and checkgroups control messages so that new descriptions could be decoded the right way. </dd>
 <pre> /encoding/:*:cn.*:gb18030</pre>
-<p>means that a description for a newsgroup in the Chinese cn.* hierarchy will be decoded as though it were encoded in <font SIZE="-1">GB18030</font>, unless a charset is specified in the control message (in such a case, the charset mentioned in the message is used). However, it is possible to override the mentioned charset if <tt>&quot;=force&quot;</tt> is appended after the encoding. For instance, </p>
+<p>means that a description for a newsgroup in the Chinese cn.* hierarchy will be decoded as though it were encoded in GB18030, unless a charset is specified in the control message (in such a case, the charset mentioned in the message is used). However, it is possible to override the mentioned charset if <tt>&quot;=force&quot;</tt> is appended after the encoding. For instance, </p>
 <pre> /encoding/:*:scout.forum.chinese:big5=force</pre>
 <p>means that the description for scout.forum.chinese will always be decoded as though it were encoded in Big5, no matter the charset of the corresponding control message. </p>
 <p> The default value when no encoding is mentioned (or when the specified encoding is unknown) is <tt>&quot;CP1252&quot;</tt>. </p>
@@ -27,7 +27,7 @@ description: "control.ctl – Specify handling of Usenet control messages"
 <dt><code>/localencoding/</code></dt>
 <dd>When this type is used, the line consist of only two fields. The default value when this type does not appear in <i>control.ctl</i> (or when the specified charset is unknown) is equivalent to: </dd>
 <pre> /localencoding/:utf-8</pre>
-<p>It means that new descriptions in the <i>newsgroups</i> file will be written using <font SIZE="-1">UTF-8</font>. And <code>controlchan</code> will try to read existing descriptions, so as to see whether they should be updated, as though they were encoded in <font SIZE="-1">UTF-8</font>. </p>
+<p>It means that new descriptions in the <i>newsgroups</i> file will be written using UTF-8. And <code>controlchan</code> will try to read existing descriptions, so as to see whether they should be updated, as though they were encoded in UTF-8. </p>
 <p> The last matching line in <i>control.ctl</i> will be used.</p>
 <dt><code>/maxdocheckgroups/</code></dt>
 <dd>This type specifies the maximum number of changes that could be made at one time by a checkgroups before bailing and mailing the changes to the admin if no log file was specified. The default value is <tt>10</tt>. </dd>
@@ -56,12 +56,12 @@ description: "control.ctl – Specify handling of Usenet control messages"
 <dt><code>verify-*</code></dt>
 <dd>If the action starts with the string <tt>&quot;verify-&quot;</tt>, as in: </dd>
 <pre> verify-news.announce.newgroups</pre>
-<p>then <font SIZE="-1">PGP</font> verification of the control message will be done and the user <font SIZE="-1">ID</font> of the key of the authenticated signer will be checked against the expected identity defined by the rest of the string (<tt>&quot;news.announce.newgroups&quot;</tt> in the above example). This verification is done via <code>pgpverify</code>; see <i>pgpverify</i>(8) for more details. </p>
+<p>then PGP verification of the control message will be done and the user ID of the key of the authenticated signer will be checked against the expected identity defined by the rest of the string (<tt>&quot;news.announce.newgroups&quot;</tt> in the above example). This verification is done via <code>pgpverify</code>; see <i>pgpverify</i>(8) for more details. </p>
 <p> If no logging is specified (with =<i>file</i> as mentioned below), logging will be done the same as with <code>doit</code> as described above.</p>
 <dt><code>verify-*</code>=<code>mail</code></dt>
-<dd><font SIZE="-1">PGP</font> verification is done as for the <code>verify-*</code> action described above, and notification of successful newgroup and rmgroup control messages and the output of checkgroups messages will be mailed to the news administrator. (In the case of checkgroups messages, this means that the shell script that should be run will be mailed to the administrator. The subject of the mail will contain information on whether the script has already been run, depending on the value of <code>/maxdocheckgroups/</code>.)</dd>
+<dd>PGP verification is done as for the <code>verify-*</code> action described above, and notification of successful newgroup and rmgroup control messages and the output of checkgroups messages will be mailed to the news administrator. (In the case of checkgroups messages, this means that the shell script that should be run will be mailed to the administrator. The subject of the mail will contain information on whether the script has already been run, depending on the value of <code>/maxdocheckgroups/</code>.)</dd>
 <dt><code>verify-*</code>=<i>file</i></dt>
-<dd><font SIZE="-1">PGP</font> verification is done as for the <code>verify-*</code> action described above, and a log entry is written to the specified file as described in <code>doit</code>=<i>file</i> above. (In the case of checkgroups messages, this means that the shell script output of the checkgroups message will be written to that file. The initial line of the log will contain information on whether the script has already been run, depending on the value of <code>/maxdocheckgroups/</code>.)</dd>
+<dd>PGP verification is done as for the <code>verify-*</code> action described above, and a log entry is written to the specified file as described in <code>doit</code>=<i>file</i> above. (In the case of checkgroups messages, this means that the shell script output of the checkgroups message will be written to that file. The initial line of the log will contain information on whether the script has already been run, depending on the value of <code>/maxdocheckgroups/</code>.)</dd>
 <dt><code>log</code></dt>
 <dd>A one-line log message is sent to standard error. <code>innd</code> normally directs this to <i>pathlog</i>/errlog.</dd>
 <dt><code>log</code>=<i>file</i></dt>
@@ -69,15 +69,15 @@ description: "control.ctl – Specify handling of Usenet control messages"
 <dt><code>mail</code></dt>
 <dd>A mail message is sent to the news administrator without taking any other action.</dd></dl>
 <p> One of the difference between a <code>doit</code> or <code>verify</code> action and a <code>mail</code> action for a checkgroups control message lies in what e-mail is sent; <code>doit</code> or <code>verify</code> will mail the news administrator a shell script (which may have already been run) to create, delete, or modify newsgroups to match the checkgroups message, whereas <code>mail</code> will just mail relevant lines of the checkgroups for manual processing by the news administrator. </p>
-<p> Use of the <code>verify</code> action for processing newgroup, rmgroup and checkgroups messages is <font SIZE="-1">STRONGLY</font> recommended. Abuse of control messages is rampant, and authentication via <font SIZE="-1">PGP</font> signature is currently the only reliable way to be sure that a control message comes from who it claims to be from. Most major hierarchies are now issuing PGP-authenticated control messages. </p>
-<p> In order to use <code>verify</code> actions, the <font SIZE="-1">PGP</font> key ring of the news user must be populated with the <font SIZE="-1">PGP</font> keys of the hierarchy maintainers whose control messages you want to honour. For more details on PGP-authenticated control messages and the <font SIZE="-1">URL</font> for downloading the <font SIZE="-1">PGP</font> keys of major hierarchies, see <i>pgpverify</i>(8). </p>
+<p> Use of the <code>verify</code> action for processing newgroup, rmgroup and checkgroups messages is STRONGLY recommended. Abuse of control messages is rampant, and authentication via PGP signature is currently the only reliable way to be sure that a control message comes from who it claims to be from. Most major hierarchies are now issuing PGP-authenticated control messages. </p>
+<p> In order to use <code>verify</code> actions, the PGP key ring of the news user must be populated with the PGP keys of the hierarchy maintainers whose control messages you want to honour. For more details on PGP-authenticated control messages and the URL for downloading the PGP keys of major hierarchies, see <i>pgpverify</i>(8). </p>
 <p> Control messages of type cancel are handled internally by <code>innd</code> and cannot be affected by any of the mechanisms described here.</p>
 <h2>Examples</h2>
 <p>With the following three lines in <i>control.ctl</i>: </p>
 <pre> newgroup:*:*:drop
  newgroup:group-admin [at] isc.org:comp.*:verify-news.announce.newgroups
  newgroup:kre [at] munnari.oz.au:aus.*:mail</pre>
-<p>a newgroup coming from <tt>&quot;group-admin [at] isc.org&quot;</tt> will be honoured if it is for a newsgroup in the comp.* hierarchy and if it has a valid signature corresponding to the <font SIZE="-1">PGP</font> key with a user <font SIZE="-1">ID</font> of <tt>&quot;news.announce.newgroups&quot;</tt>. If any newgroup claiming to be from <tt>&quot;kre [at] munnari.oz.au&quot;</tt> for a newsgroup in the aus.* hierarchy is received, it too will be honoured. All other newgroup messages will be ignored. </p>
+<p>a newgroup coming from <tt>&quot;group-admin [at] isc.org&quot;</tt> will be honoured if it is for a newsgroup in the comp.* hierarchy and if it has a valid signature corresponding to the PGP key with a user ID of <tt>&quot;news.announce.newgroups&quot;</tt>. If any newgroup claiming to be from <tt>&quot;kre [at] munnari.oz.au&quot;</tt> for a newsgroup in the aus.* hierarchy is received, it too will be honoured. All other newgroup messages will be ignored. </p>
 <p> Besides, if a <i>control.ctl.local</i> file exists and contains: </p>
 <pre> newgroup:*:comp.lang.*:drop</pre>
 <p>then a newgroup control article for comp.lang.awk will not be honoured even though it comes from <tt>&quot;group-admin [at] isc.org&quot;</tt> with a valid signature. </p>
@@ -108,7 +108,7 @@ description: "control.ctl – Specify handling of Usenet control messages"
 <dt>1.</dt>
 <dd>The newsgroups foo.bar5 and foo.bar5.first are marked as unwanted. But nothing is done yet: other <i>control.ctl</i> entries have to be processed with a real action and a set of newsgroups containing foo.bar5 and foo.bar5.first.</dd>
 <dt>2.</dt>
-<dd>The newsgroup foo.bar4 is silently created on the news server, with the description &#8220;A newsgroup you want.&#8221; added to the <i>newsgroups</i> file. In the absence of encoding values (either in the checkgroups message or in <code>/encoding/</code> and <code>/localencoding</code>), the default is to decode the sentence as <font SIZE="-1">CP1242</font> and reencode it as <font SIZE="-1">UTF-8</font>. </dd>
+<dd>The newsgroup foo.bar4 is silently created on the news server, with the description &#8220;A newsgroup you want.&#8221; added to the <i>newsgroups</i> file. In the absence of encoding values (either in the checkgroups message or in <code>/encoding/</code> and <code>/localencoding</code>), the default is to decode the sentence as CP1242 and reencode it as UTF-8. </dd>
 <p> If <tt>&quot;doit=mail&quot;</tt> was used, a mail would be sent to the news administrator to inform him that foo.bar4 was successfully created.</p>
 <dt>3.</dt>
 <dd>The newsgroup foo.bar3.second is no longer present. A mail is sent to the news administrator with a shell script to execute. When it is manually executed, foo.bar3.second will be removed. </dd>
@@ -117,11 +117,11 @@ description: "control.ctl – Specify handling of Usenet control messages"
 <dd>The newsgroups foo.bar2.first, foo.bar2.second and foo.bar2.third are no longer present. However, as the maximum number of changes that could be made at one time by a checkgroups before bailing and mailing the changes to the news administrator is 2, these newsgroups are not removed. A mail is sent with a shell script to manually execute in order to remove these groups from the news server. </dd>
 <p> Note that their descriptions are removed from the <i>newsgroups</i> file, as well as any other possible descriptions for obsolete newsgroups in foo.bar2.*.</p>
 <dt>5.</dt>
-<dd>The remaining entry is executed if the <font SIZE="-1">PGP</font> verification of the checkgroups message is successful. Otherwise, nothing is done (especially, foo.bar5 remains on the news server). </dd>
-<p> In case the <font SIZE="-1">PGP</font> signature is verified, foo.bar3 and foo.bar5 are removed from the news server. This entry acts upon newsgroups marked as dropped in its scope and newsgroups not already dealt with by previous <i>control.ctl</i> entries (like foo.bar3 because only foo.bar3.* was previously checked). </p>
+<dd>The remaining entry is executed if the PGP verification of the checkgroups message is successful. Otherwise, nothing is done (especially, foo.bar5 remains on the news server). </dd>
+<p> In case the PGP signature is verified, foo.bar3 and foo.bar5 are removed from the news server. This entry acts upon newsgroups marked as dropped in its scope and newsgroups not already dealt with by previous <i>control.ctl</i> entries (like foo.bar3 because only foo.bar3.* was previously checked). </p>
 <p> Note that if you had wanted to keep foo.bar3 or foo.bar5, you could have added them to the <i>localgroups</i> file in <i>pathetc</i>.</dl>
 <h2>History</h2>
-<p>Written by Rich <tt>$alz</tt> &lt;rsalz [at] uunet.uu.net&gt; for InterNetNews. Rewritten in <font SIZE="-1">POD</font> by Russ Allbery &lt;eagle [at] eyrie.org&gt;. </p>
+<p>Written by Rich <tt>$alz</tt> &lt;rsalz [at] uunet.uu.net&gt; for InterNetNews. Rewritten in POD by Russ Allbery &lt;eagle [at] eyrie.org&gt;. </p>
 <p> <tt>$Id:</tt> control.ctl.pod 9768 2014-12-07 21:22:57Z iulius $</p>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/8-controlchan/">controlchan</a></i>(8), <i><a href="/docs/linux/man/5-inn-conf/">inn.conf</a></i>(5), <i><a href="/docs/linux/man/8-innd/">innd</a></i>(8), <i><a href="/docs/linux/man/5-newsfeeds/">newsfeeds</a></i>(5), <i><a href="/docs/linux/man/5-newsgroups/">newsgroups</a></i>(5), <i>pgpverify</i>(8), <i><a href="/docs/linux/man/1-sh/">sh</a></i>(1). </p>

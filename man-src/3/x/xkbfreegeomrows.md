@@ -10,7 +10,7 @@ description: "XkbFreeGeomRows – Free rows in a section"
 <p>XkbFreeGeomRows &#8211; Free rows in a section </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>void XkbFreeGeomRows</code> <code>(XkbSectionPtr </code><i>section</i><code>,</code> <code>int </code><i>first</i><code>,</code> <code>int </code><i>count</i><code>,</code> <code>Bool </code><i>free_all</i><code>);</code><br />
+<dt> <code>void XkbFreeGeomRows</code> <code>(XkbSectionPtr </code><i>section</i><code>,</code> <code>int </code><i>first</i><code>,</code> <code>int </code><i>count</i><code>,</code> <code>Bool </code><i>free_all</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

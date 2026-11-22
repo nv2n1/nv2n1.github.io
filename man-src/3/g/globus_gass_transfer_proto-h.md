@@ -10,19 +10,19 @@ description: "globus_gass_transfer_proto.h –"
 <p>globus_gass_transfer_proto.h &#8211; </p>
 <p> GASS Transfer Protocol Interface.</p>
 <h2>Synopsis</h2>
-<p>#include &#8216;globus_common.h&#8217;<br />
+<p>#include &#8216;globus_common.h&#8217;<br/>
  #include &#8216;globus_gass_transfer.h&#8217; </p>
 <h3>Data Structures</h3>
-<p>struct <code>globus_gass_transfer_request_proto_s</code><br />
- <i>Protocol module request handling structure. </i><br />
- struct <code>globus_gass_transfer_listener_proto_s</code><br />
- <i>Protocol module listener handling structure. </i><br />
- struct <code>globus_gass_transfer_proto_descriptor_t</code><br />
+<p>struct <code>globus_gass_transfer_request_proto_s</code><br/>
+ <i>Protocol module request handling structure. </i><br/>
+ struct <code>globus_gass_transfer_listener_proto_s</code><br/>
+ <i>Protocol module listener handling structure. </i><br/>
+ struct <code>globus_gass_transfer_proto_descriptor_t</code><br/>
  <i>Protocol module descriptor structure. </i></p>
 <h3>Typedefs</h3>
-<p>typedef struct<br />
+<p>typedef struct<br/>
  <code>globus_gass_transfer_request_proto_s</code> <code>globus_gass_transfer_request_proto_t</code>&quot; </p>
-<p> typedef struct<br />
+<p> typedef struct<br/>
  <code>globus_gass_transfer_listener_proto_s</code> <code>globus_gass_transfer_listener_proto_t</code>&quot; </p>
 <p> typedef void(* <code>globus_gass_transfer_proto_send_t</code> )(<code>globus_gass_transfer_request_proto_t</code> *proto, <code>globus_gass_transfer_request_t</code> request, globus_byte_t *bytes, globus_size_t send_length, globus_bool_t last_data) </p>
 <p> typedef void(* <code>globus_gass_transfer_proto_receive_t</code> )(<code>globus_gass_transfer_request_proto_t</code> *proto, <code>globus_gass_transfer_request_t</code> request, globus_byte_t *bytes, globus_size_t bytes_length, globus_size_t wait_for_length) </p>

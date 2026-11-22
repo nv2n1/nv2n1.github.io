@@ -11,7 +11,7 @@ description: "cstemr.f –"
 <p> cstemr.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cstemr</code> (JOBZ, RANGE, N, D, E, VL, VU, IL, IU, M, W, Z, LDZ, NZC, ISUPPZ, TRYRAC, WORK, LWORK, IWORK, LIWORK, INFO)<br />
+<p> subroutine <code>cstemr</code> (JOBZ, RANGE, N, D, E, VL, VU, IL, IU, M, W, Z, LDZ, NZC, ISUPPZ, TRYRAC, WORK, LWORK, IWORK, LIWORK, INFO)<br/>
  <i></i><code>CSTEMR</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cstemr (characterJOBZ, characterRANGE, integerN, real, dimension( * )D, real, dimension( * )E, realVL, realVU, integerIL, integerIU, integerM, real, dimension( * )W, complex, dimension( ldz, * )Z, integerLDZ, integerNZC, integer, dimension( * )ISUPPZ, logicalTRYRAC, real, dimension( * )WORK, integerLWORK, integer, dimension( * )IWORK, integerLIWORK, integerINFO)</h3>
@@ -136,11 +136,11 @@ hy_{n-1}}), the complex Hermitean
           IL is INTEGER
 </pre>
 <p> <i>IU</i> </p>
-<p>IU is INTEGER<br />
-    If RANGE = &#8216;I&#8217;,<br />
-       the indices(in ascending order) of the<br />
-           smallest and largest eigenvalues to be returned.1 &lt;= IL<br />
-           &lt;= IU &lt;= N,<br />
+<p>IU is INTEGER<br/>
+    If RANGE = &#8216;I&#8217;,<br/>
+       the indices(in ascending order) of the<br/>
+           smallest and largest eigenvalues to be returned.1 &lt;= IL<br/>
+           &lt;= IU &lt;= N,<br/>
        if N &gt; 0. Not referenced if RANGE = &#8216;A&#8217; or &#8216;V&#8217;.</p>
 <p> <i>M</i> </p>
 <pre>
@@ -217,11 +217,11 @@ hy_{n-1}}), the complex Hermitean
           (and minimal) LWORK.
 </pre>
 <p> <i>LWORK</i> </p>
-<p>LWORK is INTEGER<br />
-        The dimension of the array WORK.LWORK &gt;= max(1, 18 * N) if JOBZ = &#8216;V&#8217;,<br />
-                                                                   and LWORK &gt;= max(1, 12 * N) if JOBZ = &#8216;N&#8217;.If LWORK = -1, then a workspace query is assumed;<br />
-the routine<br />
-    only calculates the optimal size of the WORK array,<br />
+<p>LWORK is INTEGER<br/>
+        The dimension of the array WORK.LWORK &gt;= max(1, 18 * N) if JOBZ = &#8216;V&#8217;,<br/>
+                                                                   and LWORK &gt;= max(1, 12 * N) if JOBZ = &#8216;N&#8217;.If LWORK = -1, then a workspace query is assumed;<br/>
+the routine<br/>
+    only calculates the optimal size of the WORK array,<br/>
     returns this value as the first entry of the WORK array, and no error message related to LWORK is issued by XERBLA.</p>
 <p> <i>IWORK</i> </p>
 <pre>

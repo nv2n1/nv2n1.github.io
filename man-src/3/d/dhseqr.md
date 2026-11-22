@@ -11,7 +11,7 @@ description: "dhseqr.f –"
 <p> dhseqr.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dhseqr</code> (JOB, COMPZ, N, ILO, IHI, H, LDH, WR, WI, Z, LDZ, WORK, LWORK, INFO)<br />
+<p> subroutine <code>dhseqr</code> (JOB, COMPZ, N, ILO, IHI, H, LDH, WR, WI, Z, LDZ, WORK, LWORK, INFO)<br/>
  <i></i><code>DHSEQR</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dhseqr (characterJOB, characterCOMPZ, integerN, integerILO, integerIHI, double precision, dimension( ldh, * )H, integerLDH, double precision, dimension( * )WR, double precision, dimension( * )WI, double precision, dimension( ldz, * )Z, integerLDZ, double precision, dimension( * )WORK, integerLWORK, integerINFO)</h3>

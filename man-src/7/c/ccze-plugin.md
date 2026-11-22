@@ -10,20 +10,20 @@ description: "ccze – A robust log colorizer, plugin infrastructure"
 <p>ccze &#8211; A robust log colorizer, plugin infrastructure</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;ccze.h&gt;</code></pre>
-<p> <code>/* Plugin support */</code><br />
- <code>typedef void (*</code><i>ccze_plugin_startup_t</i><code>) (void);</code><br />
- <code>typedef void (*</code><i>ccze_plugin_shutdown_t</i><code>) (void);</code><br />
- <code>typedef int (*</code><i>ccze_plugin_handle_t</i><code>) (const char *</code><i>str</i><code>,</code> <code>size_t </code><i>length</i><code>, char **</code><i>rest</i><code>);</code> <code>CCZE_DEFINE_PLUGIN (</code><i>name</i><code>, </code><i>type</i><code>, </code><i>desc</i><code>);</code><br />
- <code>CCZE_DEFINE_PLUGINS (</code><i>plugins</i><code>&#8230;);</code><br />
- <code>/* Display */</code><br />
- <code>void ccze_addstr (ccze_color_t </code><i>col</i><code>, const char *</code><i>str</i><code>);</code><br />
- <code>void ccze_newline (void);</code><br />
- <code>void ccze_space (void);</code><br />
- <code>void ccze_wordcolor_process_one (char *</code><i>word</i><code>, int </code><i>slookup</i><code>);</code><br />
- <code>/* Helpers */</code><br />
- <code>ccze_color_t ccze_http_action (const char *</code><i>method</i><code>);</code><br />
- <code>void ccze_print_date (const char *</code><i>date</i><code>);</code> <code>/* Command line */</code><br />
- <code>char **ccze_plugin_argv_get (const char *</code><i>name</i><code>);</code><br />
+<p> <code>/* Plugin support */</code><br/>
+ <code>typedef void (*</code><i>ccze_plugin_startup_t</i><code>) (void);</code><br/>
+ <code>typedef void (*</code><i>ccze_plugin_shutdown_t</i><code>) (void);</code><br/>
+ <code>typedef int (*</code><i>ccze_plugin_handle_t</i><code>) (const char *</code><i>str</i><code>,</code> <code>size_t </code><i>length</i><code>, char **</code><i>rest</i><code>);</code> <code>CCZE_DEFINE_PLUGIN (</code><i>name</i><code>, </code><i>type</i><code>, </code><i>desc</i><code>);</code><br/>
+ <code>CCZE_DEFINE_PLUGINS (</code><i>plugins</i><code>&#8230;);</code><br/>
+ <code>/* Display */</code><br/>
+ <code>void ccze_addstr (ccze_color_t </code><i>col</i><code>, const char *</code><i>str</i><code>);</code><br/>
+ <code>void ccze_newline (void);</code><br/>
+ <code>void ccze_space (void);</code><br/>
+ <code>void ccze_wordcolor_process_one (char *</code><i>word</i><code>, int </code><i>slookup</i><code>);</code><br/>
+ <code>/* Helpers */</code><br/>
+ <code>ccze_color_t ccze_http_action (const char *</code><i>method</i><code>);</code><br/>
+ <code>void ccze_print_date (const char *</code><i>date</i><code>);</code> <code>/* Command line */</code><br/>
+ <code>char **ccze_plugin_argv_get (const char *</code><i>name</i><code>);</code><br/>
  <code>const char *ccze_plugin_name_get (void);</code></p>
 <h2>Description</h2>
 <p>This manual page attempts to outline the internals of CCZE plugins: how they work, how they are implemented, and how to add new ones. </p>

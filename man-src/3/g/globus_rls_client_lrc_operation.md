@@ -11,7 +11,7 @@ description: "LRC Operations –"
 <p> LRC Operations &#8211; </p>
 <p> Functions to view and update data managed by a LRC server.</p>
 <h3>Data Structures</h3>
-<p> struct <code>globus_rls_rli_info_t</code><br />
+<p> struct <code>globus_rls_rli_info_t</code><br/>
  <i>Information about RLI server, returned by </i><code>globus_rls_client_lrc_rli_info()</code> and <code>globus_rls_client_lrc_rli_list()</code>.</p>
 <h3>Defines</h3>
 <p> #define <code>FRLI_BLOOMFILTER</code> 0x1 </p>
@@ -65,8 +65,8 @@ description: "LRC Operations –"
 <p> Add an attribute to an object in the LRC database. <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>h</i> Handle connected to an RLS server.<br />
- <i>key</i> Logical or Physical File Name (LFN or PFN) that identifies object attribute should be added to.<br />
+</dt><dd> <i>h</i> Handle connected to an RLS server.<br/>
+ <i>key</i> Logical or Physical File Name (LFN or PFN) that identifies object attribute should be added to.<br/>
  <i>attr</i> Attribute to be added to object. <code>name, objtype, type and val </code> should be set in <i>attr</i>.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
@@ -76,16 +76,16 @@ description: "LRC Operations –"
 <p> Bulk add attributes to objects in the LRC database. <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>h</i> Handle connected to an RLS server.<br />
- <i>attr_obj_list</i> List of object names (LFN or PFN) and attributes to be added. Each list datum should be of type <code>globus_rls_attribute_object_t</code>.<br />
+</dt><dd> <i>h</i> Handle connected to an RLS server.<br/>
+ <i>attr_obj_list</i> List of object names (LFN or PFN) and attributes to be added. Each list datum should be of type <code>globus_rls_attribute_object_t</code>.<br/>
  <i>str2bulk_list</i> List of failed updates. Each list datum is a <code>globus_rls_string2_bulk_t</code> structure. <code>str2.s1</code> will be the oject name, <code>str2.s2</code> the attribute name, and <code>rc</code> will be the result code from the failed update. Only failed updates will be returned.</dd></dl>
 <h3>globus_result_t globus_rls_client_lrc_attr_create (<code>globus_rls_handle_t</code> * h, char * name, <code>globus_rls_obj_type_t</code> objtype, <code>globus_rls_attr_type_t</code> type)</h3>
 <p> Define new attribute in LRC database. <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>h</i> Handle connected to an LRC server.<br />
- <i>name</i> Name of attribute.<br />
- <i>objtype</i> Object (LFN or PFN) type that attribute applies to.<br />
+</dt><dd> <i>h</i> Handle connected to an LRC server.<br/>
+ <i>name</i> Name of attribute.<br/>
+ <i>objtype</i> Object (LFN or PFN) type that attribute applies to.<br/>
  <i>type</i> Type of attribute value.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
@@ -95,9 +95,9 @@ description: "LRC Operations –"
 <p> Undefine attribute in LRC database, previously created with <code>globus_rls_client_lrc_attr_create()</code>. <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>h</i> Handle connected to an LRC server.<br />
- <i>name</i> Name of attribute.<br />
- <i>objtype</i> Object (LFN or PFN) type that attribute applies to.<br />
+</dt><dd> <i>h</i> Handle connected to an LRC server.<br/>
+ <i>name</i> Name of attribute.<br/>
+ <i>objtype</i> Object (LFN or PFN) type that attribute applies to.<br/>
  <i>clearvalues</i> If GLOBUS_TRUE then any any values for this attribute are first removed from the objects they&#8217;re associated with. If GLOBUS_FALSE and any values exist then <code>GLOBUS_RLS_ATTR_EXIST</code> is returned.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
@@ -107,9 +107,9 @@ description: "LRC Operations –"
 <p> Return definitions of attributes in LRC database. <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>h</i> Handle connected to an RLS server.<br />
- <i>name</i> Name of attribute. If name is NULL all attributes of the specified <i>objtype</i> are returned.<br />
- <i>objtype</i> Object (LFN or PFN) type that attribute applies to.<br />
+</dt><dd> <i>h</i> Handle connected to an RLS server.<br/>
+ <i>name</i> Name of attribute. If name is NULL all attributes of the specified <i>objtype</i> are returned.<br/>
+ <i>objtype</i> Object (LFN or PFN) type that attribute applies to.<br/>
  <i>attr_list</i> Any attribute definitions found will be returned as a list of <code>globus_rls_attribute_t</code> structures.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
@@ -119,8 +119,8 @@ description: "LRC Operations –"
 <p> Modify an attribute value. <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>h</i> Handle connected to an RLS server.<br />
- <i>key</i> Name of object (LFN or PFN).<br />
+</dt><dd> <i>h</i> Handle connected to an RLS server.<br/>
+ <i>key</i> Name of object (LFN or PFN).<br/>
  <i>attr</i> Attribute to be modified. The <code>objtype </code>, <code>name </code> and <code>type </code> fields should be set in <i>attr</i> to identify the attribute, the <code>val </code> field should be the new value.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
@@ -130,8 +130,8 @@ description: "LRC Operations –"
 <p> Remove an attribute from an object (LFN or PFN) in the LRC database. <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>h</i> Handle connected to an RLS server.<br />
- <i>key</i> Name of object (LFN or PFN).<br />
+</dt><dd> <i>h</i> Handle connected to an RLS server.<br/>
+ <i>key</i> Name of object (LFN or PFN).<br/>
  <i>attr</i> Attribute to be removed. The <code>objtype </code> and <code>name </code> fields should be set in <i>attr</i> to identify the attribute.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
@@ -141,21 +141,21 @@ description: "LRC Operations –"
 <p> Bulk remove attributes from objects in the LRC database. <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>h</i> Handle connected to an RLS server.<br />
- <i>attr_obj_list</i> List of object names (LFN or PFN) and attributes to be removed. It is not necessary to set the attribute type or value. Each list datum should be of type <code>globus_rls_attribute_object_t</code>.<br />
+</dt><dd> <i>h</i> Handle connected to an RLS server.<br/>
+ <i>attr_obj_list</i> List of object names (LFN or PFN) and attributes to be removed. It is not necessary to set the attribute type or value. Each list datum should be of type <code>globus_rls_attribute_object_t</code>.<br/>
  <i>str2bulk_list</i> List of failed updates. Each list datum is a <code>globus_rls_string2_bulk_t</code> structure. <code>str2.s1</code> will be the oject name, <code>str2.s2</code> the attribute name, and <code>rc</code> will be the result code from the failed update. Only failed updates will be returned.</dd></dl>
 <h3>globus_result_t globus_rls_client_lrc_attr_search (<code>globus_rls_handle_t</code> * h, char * name, <code>globus_rls_obj_type_t</code> objtype, <code>globus_rls_attr_op_t</code> op, <code>globus_rls_attribute_t</code> * operand1, <code>globus_rls_attribute_t</code> * operand2, int * offset, int reslimit, globus_list_t ** attr_obj_list)</h3>
 <p> Search for objects (LFNs or PFNs) in a LRC database that have the specified attribute whose value matches a boolean expression. <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>h</i> Handle connected to an RLS server.<br />
- <i>name</i> Name of attribute.<br />
- <i>objtype</i> Object (LFN or PFN) type that attribute applies to.<br />
- <i>op</i> Operator to be used in searching for values.<br />
- <i>operand1</i> First operand in boolean expression. <code>type </code> and <code>val </code> should be set in <code>globus_rls_attribute_t</code>.<br />
- <i>operand2</i> Second operand in boolean expression, only used when <i>op</i> is globus_rls_client_attr_op_btw. <code>type </code> and <code>val </code> should be set in <code>globus_rls_attribute_t</code>.<br />
- <i>offset</i> Offset into result list. Used in conjunction with <i>reslimit</i> to retrieve results a few at a time. Use 0 to begin with first result. If NULL then API will handle accumulating partial results transparently.<br />
- <i>reslimit</i> Maximum number of results to return. Used in conjunction with <i>offset</i> to retrieve results a few at a time. Use 0 to retrieve all results.<br />
+</dt><dd> <i>h</i> Handle connected to an RLS server.<br/>
+ <i>name</i> Name of attribute.<br/>
+ <i>objtype</i> Object (LFN or PFN) type that attribute applies to.<br/>
+ <i>op</i> Operator to be used in searching for values.<br/>
+ <i>operand1</i> First operand in boolean expression. <code>type </code> and <code>val </code> should be set in <code>globus_rls_attribute_t</code>.<br/>
+ <i>operand2</i> Second operand in boolean expression, only used when <i>op</i> is globus_rls_client_attr_op_btw. <code>type </code> and <code>val </code> should be set in <code>globus_rls_attribute_t</code>.<br/>
+ <i>offset</i> Offset into result list. Used in conjunction with <i>reslimit</i> to retrieve results a few at a time. Use 0 to begin with first result. If NULL then API will handle accumulating partial results transparently.<br/>
+ <i>reslimit</i> Maximum number of results to return. Used in conjunction with <i>offset</i> to retrieve results a few at a time. Use 0 to retrieve all results.<br/>
  <i>attr_obj_list</i> Any objects with the specified attribute will be returned, with the attribute value, in a list of <code>globus_rls_attribute_object_t</code> structures.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
@@ -165,10 +165,10 @@ description: "LRC Operations –"
 <p> Return attributes in LRC database for specified object (LFN or PFN). <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>h</i> Handle connected to an RLS server.<br />
- <i>key</i> Logical or Physical File Name (LFN or PFN) that identifies object attributes should be retrieved for.<br />
- <i>name</i> Name of attribute to retrieve. If NULL all attributes for <i>key</i>, <i>objtype</i> are returned.<br />
- <i>objtype</i> Object (LFN or PFN) type that attribute applies to.<br />
+</dt><dd> <i>h</i> Handle connected to an RLS server.<br/>
+ <i>key</i> Logical or Physical File Name (LFN or PFN) that identifies object attributes should be retrieved for.<br/>
+ <i>name</i> Name of attribute to retrieve. If NULL all attributes for <i>key</i>, <i>objtype</i> are returned.<br/>
+ <i>objtype</i> Object (LFN or PFN) type that attribute applies to.<br/>
  <i>attr_list</i> Any attributes found will be returned in this list of <code>globus_rls_attribute_t</code> structures.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
@@ -178,10 +178,10 @@ description: "LRC Operations –"
 <p> Return attributes in LRC database for specified objects (LFN or PFN). <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>h</i> Handle connected to an RLS server.<br />
- <i>keylist</i> Logical or Physical File Names (LFNs or PFNs) that identify object attributes should be retrieved for. Each list datum should be a string containing the LFN or PFN.<br />
- <i>name</i> Name of attribute to retrieve. If NULL all attributes for <i>key</i>, <i>objtype</i> are returned.<br />
- <i>objtype</i> Object (LFN or PFN) type that attribute applies to.<br />
+</dt><dd> <i>h</i> Handle connected to an RLS server.<br/>
+ <i>keylist</i> Logical or Physical File Names (LFNs or PFNs) that identify object attributes should be retrieved for. Each list datum should be a string containing the LFN or PFN.<br/>
+ <i>name</i> Name of attribute to retrieve. If NULL all attributes for <i>key</i>, <i>objtype</i> are returned.<br/>
+ <i>objtype</i> Object (LFN or PFN) type that attribute applies to.<br/>
  <i>attr_obj_list</i> Any attributes found will be returned in this list of <code>globus_rls_attribute_object_t</code> structures.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
@@ -191,8 +191,8 @@ description: "LRC Operations –"
 <p> Add mapping to PFN to an existing LFN. <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>h</i> Handle connected to an RLS server.<br />
- <i>lfn</i> LFN to add <i>pfn</i> mapping to, should already exist.<br />
+</dt><dd> <i>h</i> Handle connected to an RLS server.<br/>
+ <i>lfn</i> LFN to add <i>pfn</i> mapping to, should already exist.<br/>
  <i>pfn</i> PFN that <i>lfn</i> should map to.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
@@ -203,8 +203,8 @@ description: "LRC Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>h</i> Handle connected to an RLS server.<br />
- <i>str2_list</i> LFN,PFN pairs to add mappings.<br />
+</dt><dd> <i>h</i> Handle connected to an RLS server.<br/>
+ <i>str2_list</i> LFN,PFN pairs to add mappings.<br/>
  <i>str2bulk_list</i> List of failed updates. Each list datum is a <code>globus_rls_string2_bulk_t</code> structure. <code>str2.s1</code> will be the LFN, and <code>str2.s2</code> the PFN it maps to, and <code>rc</code> will be the result code from the failed update. Only failed updates will be returned.</dd></dl>
 <h3>globus_result_t globus_rls_client_lrc_clear (<code>globus_rls_handle_t</code> * h)</h3>
 <p> Clear all mappings from LRC database. User needs both ADMIN and LRCUPDATE privileges to perform this operation. Note that if the LRC is cleared this will not be reflected in any RLI servers updated by the LRC until the next softstate update, even if immediate updates are enabled. </p>
@@ -221,8 +221,8 @@ description: "LRC Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>h</i> Handle connected to an RLS server.<br />
- <i>lfn</i> LFN to add <i>pfn</i> mapping to, should not already exist.<br />
+</dt><dd> <i>h</i> Handle connected to an RLS server.<br/>
+ <i>lfn</i> LFN to add <i>pfn</i> mapping to, should not already exist.<br/>
  <i>pfn</i> PFN that <i>lfn</i> should map to.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
@@ -232,15 +232,15 @@ description: "LRC Operations –"
 <p> Bulk create LFN,PFN mappings in LRC database. <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>h</i> Handle connected to an RLS server.<br />
- <i>str2_list</i> LFN,PFN pairs to create mappings for.<br />
+</dt><dd> <i>h</i> Handle connected to an RLS server.<br/>
+ <i>str2_list</i> LFN,PFN pairs to create mappings for.<br/>
  <i>str2bulk_list</i> List of failed updates. Each list datum is a <code>globus_rls_string2_bulk_t</code> structure. <code>str2.s1</code> will be the LFN, and <code>str2.s2</code> the PFN it maps to, and <code>rc</code> will be the result code from the failed update. Only failed updates will be returned.</dd></dl>
 <h3>globus_result_t globus_rls_client_lrc_delete (<code>globus_rls_handle_t</code> * h, char * lfn, char * pfn)</h3>
 <p> Delete mapping between LFN and PFN. <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>h</i> Handle connected to an RLS server.<br />
- <i>lfn</i> LFN to remove mapping from.<br />
+</dt><dd> <i>h</i> Handle connected to an RLS server.<br/>
+ <i>lfn</i> LFN to remove mapping from.<br/>
  <i>pfn</i> PFN that <i>lfn</i> maps to that is being removed.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
@@ -250,15 +250,15 @@ description: "LRC Operations –"
 <p> Bulk delete LFN,PFN mappings in LRC database. <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>h</i> Handle connected to an RLS server.<br />
- <i>str2_list</i> LFN,PFN pairs to add mappings.<br />
+</dt><dd> <i>h</i> Handle connected to an RLS server.<br/>
+ <i>str2_list</i> LFN,PFN pairs to add mappings.<br/>
  <i>str2bulk_list</i> List of failed updates. Each list datum is a <code>globus_rls_string2_bulk_t</code> structure. <code>str2.s1</code> will be the LFN, and <code>str2.s2</code> the PFN it maps to, and <code>rc</code> will be the result code from the failed update. Only failed updates will be returned.</dd></dl>
 <h3>globus_result_t globus_rls_client_lrc_exists (<code>globus_rls_handle_t</code> * h, char * key, <code>globus_rls_obj_type_t</code> objtype)</h3>
 <p> Check if an object exists in the LRC database. <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>h</i> Handle connected to an RLS server.<br />
- <i>key</i> LFN or PFN that identifies object.<br />
+</dt><dd> <i>h</i> Handle connected to an RLS server.<br/>
+ <i>key</i> LFN or PFN that identifies object.<br/>
  <i>objtype</i> Type of object <i>key</i> refers to (<code>globus_rls_obj_lrc_lfn</code> or <code>globus_rls_obj_lrc_pfn</code>).</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
@@ -268,18 +268,18 @@ description: "LRC Operations –"
 <p> Bulk check if objects exist in the LRC database. <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>h</i> Handle connected to an RLS server.<br />
- <i>keylist</i> LFNs or PFNs that identify objects.<br />
- <i>objtype</i> Type of object <i>key</i> refers to (<code>globus_rls_obj_lrc_lfn</code> or <code>globus_rls_obj_lrc_pfn</code>).<br />
+</dt><dd> <i>h</i> Handle connected to an RLS server.<br/>
+ <i>keylist</i> LFNs or PFNs that identify objects.<br/>
+ <i>objtype</i> Type of object <i>key</i> refers to (<code>globus_rls_obj_lrc_lfn</code> or <code>globus_rls_obj_lrc_pfn</code>).<br/>
  <i>str2bulk_list</i> Results of existence check. Each list datum will be a <code>globus_rls_string2_bulk_t</code> structure. <code>str2.s1</code> will be the LFN or PFN, and <code>str2.s2</code> empty, and <code>rc</code> will be the result code indicating existence.</dd></dl>
 <h3>globus_result_t globus_rls_client_lrc_get_lfn (<code>globus_rls_handle_t</code> * h, char * pfn, int * offset, int reslimit, globus_list_t ** str2_list)</h3>
 <p> Return LFNs mapped to PFN in the LRC database. <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>h</i> Handle connected to an RLS server.<br />
- <i>pfn</i> PFN to search for.<br />
- <i>offset</i> Offset into result list. Used in conjunction with <i>reslimit</i> to retrieve results a few at a time. Use 0 to begin with first result. If NULL then API will handle accumulating partial results transparently.<br />
- <i>reslimit</i> Maximum number of results to return. Used in conjunction with <i>offset</i> to retrieve results a few at a time. Use 0 to retrieve all results.<br />
+</dt><dd> <i>h</i> Handle connected to an RLS server.<br/>
+ <i>pfn</i> PFN to search for.<br/>
+ <i>offset</i> Offset into result list. Used in conjunction with <i>reslimit</i> to retrieve results a few at a time. Use 0 to begin with first result. If NULL then API will handle accumulating partial results transparently.<br/>
+ <i>reslimit</i> Maximum number of results to return. Used in conjunction with <i>offset</i> to retrieve results a few at a time. Use 0 to retrieve all results.<br/>
  <i>str2_list</i> List of LFNs that map to <i>pfn</i>. Each list datum will be a <code>globus_rls_string2_t</code> structure. <code>s1</code> will be the LFN, and <code>s2</code> the PFN it maps to.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
@@ -289,18 +289,18 @@ description: "LRC Operations –"
 <p> Bulk return LFNs mapped to PFN in the LRC database. <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>h</i> Handle connected to an RLS server.<br />
- <i>pfnlist</i> PFNs to search for.<br />
+</dt><dd> <i>h</i> Handle connected to an RLS server.<br/>
+ <i>pfnlist</i> PFNs to search for.<br/>
  <i>str2bulk_list</i> Results of queries. Each list datum will be a <code>globus_rls_string2_bulk_t</code> structure. <code>str2.s1</code> will be the LFN, and <code>str2.s2</code> the PFN it maps to, and <code>rc</code> will be the result code from the query.</dd></dl>
 <h3>globus_result_t globus_rls_client_lrc_get_lfn_wc (<code>globus_rls_handle_t</code> * h, char * pfn_pattern, <code>globus_rls_pattern_t</code> type, int * offset, int reslimit, globus_list_t ** str2_list)</h3>
 <p> Return LFNs mapped to wildcarded PFN in the LRC database. <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>h</i> Handle connected to an RLS server.<br />
- <i>pfn_pattern</i> PFN pattern to search for.<br />
- <i>type</i> Identifies wildcard characters used in <i>pfn_pattern</i>. Wildcard chars can be Unix file globbing chars (* matches 0 or more characters, ? matches any single character) or SQL &#8216;like&#8217; wildcard characters (% matches 0 or more charactes, _ matches any single character).<br />
- <i>offset</i> Offset into result list. Used in conjunction with <i>reslimit</i> to retrieve results a few at a time. Use 0 to begin with first result. If NULL then the API will handle accumulating partial results transparently.<br />
- <i>reslimit</i> Maximum number of results to return. Used in conjunction with <i>offset</i> to retrieve results a few at a time. Use 0 to retrieve all results.<br />
+</dt><dd> <i>h</i> Handle connected to an RLS server.<br/>
+ <i>pfn_pattern</i> PFN pattern to search for.<br/>
+ <i>type</i> Identifies wildcard characters used in <i>pfn_pattern</i>. Wildcard chars can be Unix file globbing chars (* matches 0 or more characters, ? matches any single character) or SQL &#8216;like&#8217; wildcard characters (% matches 0 or more charactes, _ matches any single character).<br/>
+ <i>offset</i> Offset into result list. Used in conjunction with <i>reslimit</i> to retrieve results a few at a time. Use 0 to begin with first result. If NULL then the API will handle accumulating partial results transparently.<br/>
+ <i>reslimit</i> Maximum number of results to return. Used in conjunction with <i>offset</i> to retrieve results a few at a time. Use 0 to retrieve all results.<br/>
  <i>str2_list</i> List of LFNs that map to <i>pfn_pattern</i>. Each list datum will be a <code>globus_rls_string2_t</code> structure. <code>s1</code> will be the LFN, and <code>s2</code> the PFN it maps to.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
@@ -310,10 +310,10 @@ description: "LRC Operations –"
 <p> Return PFNs mapped to LFN in the LRC database. <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>h</i> Handle connected to an RLS server.<br />
- <i>lfn</i> LFN to search for.<br />
- <i>offset</i> Offset into result list. Used in conjunction with <i>reslimit</i> to retrieve results a few at a time. Use 0 to begin with first result.<br />
- <i>reslimit</i> Maximum number of results to return. Used in conjunction with <i>offset</i> to retrieve results a few at a time. Use 0 to retrieve all results.<br />
+</dt><dd> <i>h</i> Handle connected to an RLS server.<br/>
+ <i>lfn</i> LFN to search for.<br/>
+ <i>offset</i> Offset into result list. Used in conjunction with <i>reslimit</i> to retrieve results a few at a time. Use 0 to begin with first result.<br/>
+ <i>reslimit</i> Maximum number of results to return. Used in conjunction with <i>offset</i> to retrieve results a few at a time. Use 0 to retrieve all results.<br/>
  <i>str2_list</i> List of PFNs that map to <i>lfn</i>. Each list datum will be a <code>globus_rls_string2_t</code> structure. <code>s1</code> will be the LFN, and <code>s2</code> the PFN it maps to.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
@@ -323,18 +323,18 @@ description: "LRC Operations –"
 <p> Bulk return PFNs mapped to LFN in the LRC database. <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>h</i> Handle connected to an RLS server.<br />
- <i>lfnlist</i> LFNs to search for.<br />
+</dt><dd> <i>h</i> Handle connected to an RLS server.<br/>
+ <i>lfnlist</i> LFNs to search for.<br/>
  <i>str2bulk_list</i> Results of queries. Each list datum will be a <code>globus_rls_string2_bulk_t</code> structure. <code>str2.s1</code> will be the LFN, and <code>str2.s2</code> the PFN it maps to, and <code>rc</code> will be the result code from the query.</dd></dl>
 <h3>globus_result_t globus_rls_client_lrc_get_pfn_wc (<code>globus_rls_handle_t</code> * h, char * lfn_pattern, <code>globus_rls_pattern_t</code> type, int * offset, int reslimit, globus_list_t ** str2_list)</h3>
 <p> Return PFNs mapped to wildcarded LFN in the LRC database. <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>h</i> Handle connected to an RLS server.<br />
- <i>lfn_pattern</i> LFN pattern to search for.<br />
- <i>type</i> Identifies wildcard characters used in <i>lfn_pattern</i>. Wildcard chars can be Unix file globbing chars (* matches 0 or more characters, ? matches any single character) or SQL &#8216;like&#8217; wildcard characters (% matches 0 or more charactes, _ matches any single character).<br />
- <i>offset</i> Offset into result list. Used in conjunction with <i>reslimit</i> to retrieve results a few at a time. Use 0 to begin with first result.<br />
- <i>reslimit</i> Maximum number of results to return. Used in conjunction with <i>offset</i> to retrieve results a few at a time. Use 0 to retrieve all results.<br />
+</dt><dd> <i>h</i> Handle connected to an RLS server.<br/>
+ <i>lfn_pattern</i> LFN pattern to search for.<br/>
+ <i>type</i> Identifies wildcard characters used in <i>lfn_pattern</i>. Wildcard chars can be Unix file globbing chars (* matches 0 or more characters, ? matches any single character) or SQL &#8216;like&#8217; wildcard characters (% matches 0 or more charactes, _ matches any single character).<br/>
+ <i>offset</i> Offset into result list. Used in conjunction with <i>reslimit</i> to retrieve results a few at a time. Use 0 to begin with first result.<br/>
+ <i>reslimit</i> Maximum number of results to return. Used in conjunction with <i>offset</i> to retrieve results a few at a time. Use 0 to retrieve all results.<br/>
  <i>str2_list</i> List of PFNs that map to <i>lfn_pattern</i>. Each list datum will be a <code>globus_rls_string2_t</code> structure. <code>s1</code> will be the LFN, and <code>s2</code> the PFN it maps to.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
@@ -344,8 +344,8 @@ description: "LRC Operations –"
 <p> Check if a mapping exists in the LRC database. <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>h</i> Handle connected to an RLS server.<br />
- <i>lfn</i> LFN of mapping.<br />
+</dt><dd> <i>h</i> Handle connected to an RLS server.<br/>
+ <i>lfn</i> LFN of mapping.<br/>
  <i>pfn</i> PFN of mapping.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
@@ -356,8 +356,8 @@ description: "LRC Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>h</i> Handle connected to an RLS server.<br />
- <i>oldname</i> Existing LFN name, to be renamed.<br />
+</dt><dd> <i>h</i> Handle connected to an RLS server.<br/>
+ <i>oldname</i> Existing LFN name, to be renamed.<br/>
  <i>newname</i> New LFN name, to replace existing name.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
@@ -368,15 +368,15 @@ description: "LRC Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>h</i> Handle connected to an RLS server.<br />
- <i>str2_list</i> oldname,newname pairs such that newname replaces oldname for LFNs.<br />
+</dt><dd> <i>h</i> Handle connected to an RLS server.<br/>
+ <i>str2_list</i> oldname,newname pairs such that newname replaces oldname for LFNs.<br/>
  <i>str2bulk_list</i> List of failed updates. Each list datum is a <code>globus_rls_string2_bulk_t</code> structure. <code>str2.s1</code> will be the old LFN name, and <code>str2.s2</code> the new LFN name, and <code>rc</code> will be the result code from the failed update. Only failed updates will be returned.</dd></dl>
 <h3>globus_result_t globus_rls_client_lrc_renamepfn (<code>globus_rls_handle_t</code> * h, char * oldname, char * newname)</h3>
 <p> Rename PFN. <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>h</i> Handle connected to an RLS server.<br />
- <i>oldname</i> Exisintg PFN name, to be renamed.<br />
+</dt><dd> <i>h</i> Handle connected to an RLS server.<br/>
+ <i>oldname</i> Exisintg PFN name, to be renamed.<br/>
  <i>newname</i> New PFN name, to replace existing name.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
@@ -387,17 +387,17 @@ description: "LRC Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>h</i> Handle connected to an RLS server.<br />
- <i>str2_list</i> oldname,newname pairs such that newname replaces oldname for PFNs.<br />
+</dt><dd> <i>h</i> Handle connected to an RLS server.<br/>
+ <i>str2_list</i> oldname,newname pairs such that newname replaces oldname for PFNs.<br/>
  <i>str2bulk_list</i> List of failed updates. Each list datum is a <code>globus_rls_string2_bulk_t</code> structure. <code>str2.s1</code> will be the old PFN name, and <code>str2.s2</code> the new PFN name, and <code>rc</code> will be the result code from the failed update. Only failed updates will be returned.</dd></dl>
 <h3>globus_result_t globus_rls_client_lrc_rli_add (<code>globus_rls_handle_t</code> * h, char * rli_url, int flags, char * pattern)</h3>
 <p> LRC servers send information about LFNs in their database to the the list of RLI servers in the database, added with the following function. Updates may be partitioned amongst multiple RLIs by specifying one or more patterns for an RLI. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>h</i> Handle connected to an RLS server.<br />
- <i>rli_url</i> URL of RLI server that LRC should send updates to.<br />
- <i>flags</i> Should be zero or <code>FRLI_BLOOMFILTER</code>.<br />
+</dt><dd> <i>h</i> Handle connected to an RLS server.<br/>
+ <i>rli_url</i> URL of RLI server that LRC should send updates to.<br/>
+ <i>flags</i> Should be zero or <code>FRLI_BLOOMFILTER</code>.<br/>
  <i>pattern</i> If not NULL used to filter which LFNs are sent to <i>rli_url</i>. Standard Unix wildcard characters (*, ?) may be used to do wildcard matches.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
@@ -407,8 +407,8 @@ description: "LRC Operations –"
 <p> Delete an entry from the LRC rli/partition tables. <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>h</i> Handle connected to an RLS server.<br />
- <i>rli_url</i> URL of RLI server to remove from LRC partition table.<br />
+</dt><dd> <i>h</i> Handle connected to an RLS server.<br/>
+ <i>rli_url</i> URL of RLI server to remove from LRC partition table.<br/>
  <i>pattern</i> If not NULL then only the specific <i>rli_url/pattern</i> is removed, else all partition information for <i>rli_url</i> is removed.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
@@ -418,9 +418,9 @@ description: "LRC Operations –"
 <p> Get RLI update partitions from LRC server. <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>h</i> Handle connected to an RLS server.<br />
- <i>rli_url</i> If not NULL identifies RLI that partition data will be retrieved for. If NULL then all RLIs are retrieved.<br />
- <i>pattern</i> If not NULL returns only partitions with matching patterns, otherwise all patterns are retrieved.<br />
+</dt><dd> <i>h</i> Handle connected to an RLS server.<br/>
+ <i>rli_url</i> If not NULL identifies RLI that partition data will be retrieved for. If NULL then all RLIs are retrieved.<br/>
+ <i>pattern</i> If not NULL returns only partitions with matching patterns, otherwise all patterns are retrieved.<br/>
  <i>str2_list</i> Results added to list. Datums in <i>str2_list</i> are of type <code>globus_rls_string2_t</code> structure. <code>s1</code> will be the rli url, <code>s2</code> an empty string or the pattern used to partition updates. See <code>Query Results</code>.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
@@ -430,8 +430,8 @@ description: "LRC Operations –"
 <p> Get info about RLI server updated by an LRC server. <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>h</i> Handle connected to an RLS server.<br />
- <i>rli_url</i> URL of RLI server to retrieve info for.<br />
+</dt><dd> <i>h</i> Handle connected to an RLS server.<br/>
+ <i>rli_url</i> URL of RLI server to retrieve info for.<br/>
  <i>info</i> Data about RLI server will be written here.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
@@ -441,7 +441,7 @@ description: "LRC Operations –"
 <p> Return URLs of RLIs that LRC sends updates to. <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>h</i> Handle connected to an RLS server.<br />
+</dt><dd> <i>h</i> Handle connected to an RLS server.<br/>
  <i>rliinfo_list</i> List of RLIs updated by this LRC returned in this list. Each list datum is of type <code>globus_rls_rli_info_t</code>. <i>rliinfo_list</i> should be freed with <code>globus_rls_client_free_list()</code> when no longer needed.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>

@@ -78,7 +78,7 @@ description: "Makefile.fpc – Configuration file for fpcmake."
 <dt><code>rules</code></dt>
 <dd>In this section you can insert dependency rules and any other targets you wish to have. Do not insert &#8216;default rules&#8217; here.</dd>
 <dt><code>sections</code></dt>
-<dd>Here you can specify which &#8216;rule sections&#8217; should be included in the Makefile. The sections consist of a series of boolean keywords; each keyword decies whether a particular section will be written to the makefile. By default, all sections are written.<br />
+<dd>Here you can specify which &#8216;rule sections&#8217; should be included in the Makefile. The sections consist of a series of boolean keywords; each keyword decies whether a particular section will be written to the makefile. By default, all sections are written.<br/>
 &nbsp;<wbr> You can have the following boolean keywords in this section.</dd>
 <dl>
 <dd>

@@ -15,12 +15,12 @@ Protected Attributes</code></pre>
 <h3>Public Member Functions</h3>
 <p><code>Constructors</code> </p>
 <p> <code>Swap</code> (const Leg &amp;firstLeg, const Leg &amp;secondLeg) </p>
-<p> <code>Swap</code> (const std::vector&lt; Leg &gt; &amp;legs, const std::vector&lt; bool &gt; &amp;payer)<br />
+<p> <code>Swap</code> (const std::vector&lt; Leg &gt; &amp;legs, const std::vector&lt; bool &gt; &amp;payer)<br/>
  <code>Instrument interface</code> </p>
-<p> bool <code>isExpired</code> () const<br />
- <i>returns whether the instrument is still tradable. </i><br />
+<p> bool <code>isExpired</code> () const<br/>
+ <i>returns whether the instrument is still tradable. </i><br/>
  void <code>setupArguments</code> (PricingEngine::arguments *) const </p>
-<p> void <code>fetchResults</code> (const PricingEngine::results *) const<br />
+<p> void <code>fetchResults</code> (const PricingEngine::results *) const<br/>
  <code>Additional interface</code> </p>
 <p> <code>Date</code> <code>startDate</code> () const </p>
 <p> <code>Date</code> <code>maturityDate</code> () const </p>
@@ -29,7 +29,7 @@ Protected Attributes</code></pre>
 <p> const Leg &amp; <code>leg</code> (Size j) const</p>
 <h3>Protected Member Functions</h3>
 <p><code>Constructors</code> </p>
-<p> <code>Swap</code> (Size legs)<br />
+<p> <code>Swap</code> (Size legs)<br/>
  <code>Instrument interface</code> </p>
 <pre><code>void setupExpired () const
 Protected Attributes</code></pre>

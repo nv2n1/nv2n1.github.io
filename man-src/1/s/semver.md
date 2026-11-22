@@ -40,64 +40,64 @@ const semver = require('semver')
 <dl>
 <dt>
 </dt><dd>
-// load the whole API at once in a single object<br />
-const semver = require(&#8216;semver&#8217;)<br />
-    // or just load the bits you need<br />
-    // all of them listed here, just pick and choose what you want<br />
-    // classes<br />
-    const SemVer = require(&#8216;semver/classes/semver&#8217;)<br />
-        const Comparator = require(&#8216;semver/classes/comparator&#8217;)<br />
-            const Range = require(&#8216;semver/classes/range&#8217;)<br />
-    // functions for working with versions<br />
-    const semverParse = require(&#8216;semver/functions/parse&#8217;)<br />
-        const semverValid = require(&#8216;semver/functions/valid&#8217;)<br />
-            const semverClean = require(&#8216;semver/functions/clean&#8217;)<br />
-                const semverInc = require(&#8216;semver/functions/inc&#8217;)<br />
-                    const semverDiff = require(&#8216;semver/functions/diff&#8217;)<br />
-                        const semverMajor = require(&#8216;semver/functions/major&#8217;)<br />
-                            const semverMinor = require(&#8216;semver/functions/minor&#8217;)<br />
-                                const semverPatch = require(&#8216;semver/functions/patch&#8217;)<br />
-                                    const semverPrerelease = require(&#8216;semver/functions/prerelease&#8217;)<br />
-                                        const semverCompare = require(&#8216;semver/functions/compare&#8217;)<br />
-                                            const semverRcompare = require(&#8216;semver/functions/rcompare&#8217;)<br />
-                                                const semverCompareLoose = require(&#8216;semver/functions/compare-loose&#8217;)<br />
-                                                    const semverCompareBuild = require(&#8216;semver/functions/compare-build&#8217;)<br />
-                                                        const semverSort = require(&#8216;semver/functions/sort&#8217;)<br />
-                                                            const semverRsort = require(&#8216;semver/functions/rsort&#8217;)<br />
-    // low-level comparators between versions<br />
-    const semverGt = require(&#8216;semver/functions/gt&#8217;)<br />
-        const semverLt = require(&#8216;semver/functions/lt&#8217;)<br />
-            const semverEq = require(&#8216;semver/functions/eq&#8217;)<br />
-                const semverNeq = require(&#8216;semver/functions/neq&#8217;)<br />
-                    const semverGte = require(&#8216;semver/functions/gte&#8217;)<br />
-                        const semverLte = require(&#8216;semver/functions/lte&#8217;)<br />
-                            const semverCmp = require(&#8216;semver/functions/cmp&#8217;)<br />
-                                const semverCoerce = require(&#8216;semver/functions/coerce&#8217;)<br />
-    // working with ranges<br />
-    const semverSatisfies = require(&#8216;semver/functions/satisfies&#8217;)<br />
-        const semverMaxSatisfying = require(&#8216;semver/ranges/max-satisfying&#8217;)<br />
-            const semverMinSatisfying = require(&#8216;semver/ranges/min-satisfying&#8217;)<br />
-                const semverToComparators = require(&#8216;semver/ranges/to-comparators&#8217;)<br />
-                    const semverMinVersion = require(&#8216;semver/ranges/min-version&#8217;)<br />
-                        const semverValidRange = require(&#8216;semver/ranges/valid&#8217;)<br />
-                            const semverOutside = require(&#8216;semver/ranges/outside&#8217;)<br />
-                                const semverGtr = require(&#8216;semver/ranges/gtr&#8217;)<br />
-                                    const semverLtr = require(&#8216;semver/ranges/ltr&#8217;)<br />
+// load the whole API at once in a single object<br/>
+const semver = require(&#8216;semver&#8217;)<br/>
+    // or just load the bits you need<br/>
+    // all of them listed here, just pick and choose what you want<br/>
+    // classes<br/>
+    const SemVer = require(&#8216;semver/classes/semver&#8217;)<br/>
+        const Comparator = require(&#8216;semver/classes/comparator&#8217;)<br/>
+            const Range = require(&#8216;semver/classes/range&#8217;)<br/>
+    // functions for working with versions<br/>
+    const semverParse = require(&#8216;semver/functions/parse&#8217;)<br/>
+        const semverValid = require(&#8216;semver/functions/valid&#8217;)<br/>
+            const semverClean = require(&#8216;semver/functions/clean&#8217;)<br/>
+                const semverInc = require(&#8216;semver/functions/inc&#8217;)<br/>
+                    const semverDiff = require(&#8216;semver/functions/diff&#8217;)<br/>
+                        const semverMajor = require(&#8216;semver/functions/major&#8217;)<br/>
+                            const semverMinor = require(&#8216;semver/functions/minor&#8217;)<br/>
+                                const semverPatch = require(&#8216;semver/functions/patch&#8217;)<br/>
+                                    const semverPrerelease = require(&#8216;semver/functions/prerelease&#8217;)<br/>
+                                        const semverCompare = require(&#8216;semver/functions/compare&#8217;)<br/>
+                                            const semverRcompare = require(&#8216;semver/functions/rcompare&#8217;)<br/>
+                                                const semverCompareLoose = require(&#8216;semver/functions/compare-loose&#8217;)<br/>
+                                                    const semverCompareBuild = require(&#8216;semver/functions/compare-build&#8217;)<br/>
+                                                        const semverSort = require(&#8216;semver/functions/sort&#8217;)<br/>
+                                                            const semverRsort = require(&#8216;semver/functions/rsort&#8217;)<br/>
+    // low-level comparators between versions<br/>
+    const semverGt = require(&#8216;semver/functions/gt&#8217;)<br/>
+        const semverLt = require(&#8216;semver/functions/lt&#8217;)<br/>
+            const semverEq = require(&#8216;semver/functions/eq&#8217;)<br/>
+                const semverNeq = require(&#8216;semver/functions/neq&#8217;)<br/>
+                    const semverGte = require(&#8216;semver/functions/gte&#8217;)<br/>
+                        const semverLte = require(&#8216;semver/functions/lte&#8217;)<br/>
+                            const semverCmp = require(&#8216;semver/functions/cmp&#8217;)<br/>
+                                const semverCoerce = require(&#8216;semver/functions/coerce&#8217;)<br/>
+    // working with ranges<br/>
+    const semverSatisfies = require(&#8216;semver/functions/satisfies&#8217;)<br/>
+        const semverMaxSatisfying = require(&#8216;semver/ranges/max-satisfying&#8217;)<br/>
+            const semverMinSatisfying = require(&#8216;semver/ranges/min-satisfying&#8217;)<br/>
+                const semverToComparators = require(&#8216;semver/ranges/to-comparators&#8217;)<br/>
+                    const semverMinVersion = require(&#8216;semver/ranges/min-version&#8217;)<br/>
+                        const semverValidRange = require(&#8216;semver/ranges/valid&#8217;)<br/>
+                            const semverOutside = require(&#8216;semver/ranges/outside&#8217;)<br/>
+                                const semverGtr = require(&#8216;semver/ranges/gtr&#8217;)<br/>
+                                    const semverLtr = require(&#8216;semver/ranges/ltr&#8217;)<br/>
                                         const semverIntersects = require(&#8216;semver/ranges/intersects&#8217;)
 </dd></dl>
 <p> As a command-line utility: </p>
 <dl>
 <dt>
 </dt><dd>
-$ semver &#8211; h A JavaScript implementation of the https : // semver.org/ specification<br />
-                                                        Copyright Isaac Z.Schlueter Usage : semver[options]&lt;version&gt;[&lt;version&gt;[&#8230;]] Prints valid versions sorted by SemVer precedence Options : -r&#8211; range&lt;range&gt;<br />
-                                                                                                                                                                                                     Print versions that match the specified range.-<br />
-    i&#8211; increment[&lt;level&gt;] Increment a version by the specified level.Level can<br />
-        be one of : major,<br />
-    minor, patch, premajor, preminor,<br />
-    prepatch, or prerelease.Default level is &#8216;patch&#8217;.Only one version may be specified.&#8211;preid&lt;identifier&gt;<br />
-                      Identifier to be used to prefix premajor,<br />
-    preminor,<br />
+$ semver &#8211; h A JavaScript implementation of the https : // semver.org/ specification<br/>
+                                                        Copyright Isaac Z.Schlueter Usage : semver[options]&lt;version&gt;[&lt;version&gt;[&#8230;]] Prints valid versions sorted by SemVer precedence Options : -r&#8211; range&lt;range&gt;<br/>
+                                                                                                                                                                                                     Print versions that match the specified range.-<br/>
+    i&#8211; increment[&lt;level&gt;] Increment a version by the specified level.Level can<br/>
+        be one of : major,<br/>
+    minor, patch, premajor, preminor,<br/>
+    prepatch, or prerelease.Default level is &#8216;patch&#8217;.Only one version may be specified.&#8211;preid&lt;identifier&gt;<br/>
+                      Identifier to be used to prefix premajor,<br/>
+    preminor,<br/>
     prepatch or prerelease version increments.- l&#8211; loose Interpret versions and ranges loosely &#8211; p&#8211; include &#8211; prerelease Always include prerelease versions in range matching &#8211; c&#8211; coerce Coerce a string into SemVer if possible (does not imply&#8211; loose)&#8211; rtl Coerce version strings right to left&#8211; ltr Coerce version strings left to right(default) Program exits successfully if any valid version satisfies all supplied ranges, and prints all satisfying versions.If no satisfying versions are found, then exits failure.Versions are printed in ascending order, so supplying multiple versions to the utility will just sort them.
 </dd></dl>
 <h2>Versions</h2>

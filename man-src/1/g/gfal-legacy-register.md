@@ -44,8 +44,8 @@ description: "gfal-legacy-register – register a replica"
 </dt><dd> All configuration files in this directory affect the behavior of the underlying gfal2. </dd>
 </dl>
 <h2>AUTHORS</h2>
-<p> Duarte Meneses &lt;duarte.meneses [at] cern.ch&gt;<br />
- Adrien Devresse &lt;adrien.devresse [at] cern.ch&gt;<br />
+<p> Duarte Meneses &lt;duarte.meneses [at] cern.ch&gt;<br/>
+ Adrien Devresse &lt;adrien.devresse [at] cern.ch&gt;<br/>
  Alejandro Alvarez Ayllon &lt;alejandro.alvarez.ayllon [at] cern.ch&gt; </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gfal-legacy-replicas/">gfal-legacy-replicas</a></code>(1), <code><a href="/docs/linux/man/1-gfal-legacy-unregister/">gfal-legacy-unregister</a></code>(1) </p>

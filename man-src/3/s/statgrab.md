@@ -12,12 +12,12 @@ description: "statgrab, libstatgrab – get system statistics"
 <pre><code>#include &lt;statgrab.h&gt;
 </code></pre>
 <p> sg_error <code>sg_init</code> (int <i>ignore_init_errors</i>); sg_error <code>sg_shutdown</code> (void); sg_error <code>sg_drop_privileges</code> (void); sg_error <code>sg_get_error</code> (void); const char *sg_get_error_arg</p>
-<p>    (void);<br />
+<p>    (void);<br/>
 int sg_get_error_errno</p>
-<p>    (void);<br />
+<p>    (void);<br/>
 const char *sg_str_error</p>
 <p>    (sg_error code); sg_error <code>sg_get_error_details</code> (sg_error_details *<i>err_details</i>); char *sg_strperror</p>
-<p>    (char **buf, const sg_error_details *const err_details);<br />
+<p>    (char **buf, const sg_error_details *const err_details);<br/>
 size_t sg_get_nelements</p>
 <p>    (const void *data); sg_error <code>sg_free_stats_buf</code> (void *<i>data</i>); sg_error <code>sg_lock_mutex</code> (const char *<i>mutex_name</i>); sg_error <code>sg_unlock_mutex</code> (const char *<i>mutex_name</i>); sg_cpu_percents *<code>sg_get_cpu_percents</code> (void); sg_cpu_percents *<code>sg_get_cpu_percents_of</code> (sg_cpu_percent_source <i>cps</i>); sg_cpu_percents *<code>sg_get_cpu_percents_r</code> (const sg_cpu_stats *<i>whereof</i>); void sg_free_cpu_percents</p>
 <p>    (sg_cpu_percents *data); sg_cpu_stats *<code>sg_get_cpu_stats</code> (void); sg_cpu_stats *<code>sg_get_cpu_stats_diff</code> (void); sg_cpu_stats *<code>sg_get_cpu_stats_r</code> (void); sg_cpu_stats *<code>sg_get_cpu_stats_diff_between</code> (const sg_cpu_stats *<i>cpu_now</i>, const sg_cpu_stats *<i>cpu_last</i>); sg_error <code>sg_free_cpu_stats</code> (sg_cpu_stats *<i>data</i>); sg_disk_io_stats *<code>sg_get_disk_io_stats</code> (size_t *<i>entries</i>); sg_disk_io_stats *<code>sg_get_disk_io_stats_r</code> (size_t *<i>entries</i>); sg_disk_io_stats *<code>sg_get_disk_io_stats_diff</code> (size_t *<i>entries</i>); sg_disk_io_stats *<code>sg_get_disk_io_stats_diff_between</code> (const sg_disk_io_stats *<i>cur</i>, const sg_disk_io_stats *<i>last</i>, size_t *<i>entries</i>); sg_error <code>sg_free_disk_io_stats</code> (sg_disk_io_stats *<i>data</i>); sg_fs_stats *<code>sg_get_fs_stats</code> (size_t *<i>entries</i>); sg_fs_stats *<code>sg_get_fs_stats_r</code> (size_t *<i>entries</i>); sg_error <code>sg_free_fs_stats</code> (sg_fs_stats *<i>data</i>); </p>

@@ -21,15 +21,15 @@ description: "task-color – A color tutorial for the Taskwarrior command line t
 <p>It should be mentioned that Taskwarrior is aware of whether its output is going to a terminal, or to a file or through a pipe. When Taskwarrior output goes to a terminal, color is desirable, but consider the following command: </p>
 <p>&nbsp;<wbr>$&nbsp;<wbr>task list&nbsp;<wbr>&gt;&nbsp;<wbr>file.txt </p>
 <p> Do we really want all those color control codes in the file? Taskwarrior assumes that you do not, and temporarily sets color to &#8216;off&#8217; while generating the output. This explains the output from the following command: </p>
-<p>&nbsp;<wbr>$&nbsp;<wbr>task show | grep&nbsp;<wbr>&#8216;^color&nbsp;<wbr>&#8216;<br />
+<p>&nbsp;<wbr>$&nbsp;<wbr>task show | grep&nbsp;<wbr>&#8216;^color&nbsp;<wbr>&#8216;<br/>
 &nbsp;<wbr>color&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>off </p>
 <p> it always returns &#8216;off&#8217;, no matter what the setting, because the output is being sent to a pipe. </p>
 <p> If you wanted those color codes, you can override this behavior by setting the _forcecolor variable to on, like this: </p>
-<p>&nbsp;<wbr>$&nbsp;<wbr>task config&nbsp;<wbr>_forcecolor on<br />
-&nbsp;<wbr>$&nbsp;<wbr>task config | grep&nbsp;<wbr>&#8216;^color&nbsp;<wbr>&#8216;<br />
+<p>&nbsp;<wbr>$&nbsp;<wbr>task config&nbsp;<wbr>_forcecolor on<br/>
+&nbsp;<wbr>$&nbsp;<wbr>task config | grep&nbsp;<wbr>&#8216;^color&nbsp;<wbr>&#8216;<br/>
 &nbsp;<wbr>color&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>on </p>
 <p> or by temporarily overriding it like this: </p>
-<p>&nbsp;<wbr>$&nbsp;<wbr>task rc._forcecolor=on config | grep&nbsp;<wbr>&#8216;^color&nbsp;<wbr>&#8216;<br />
+<p>&nbsp;<wbr>$&nbsp;<wbr>task rc._forcecolor=on config | grep&nbsp;<wbr>&#8216;^color&nbsp;<wbr>&#8216;<br/>
 &nbsp;<wbr>color&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>on</p>
 <h2>Available Colors</h2>
 <p>Taskwarrior has a &#8216;color&#8217; command that will show all the colors it is capable of displaying. Try this: </p>
@@ -41,15 +41,15 @@ description: "task-color – A color tutorial for the Taskwarrior command line t
 <p>&nbsp;<wbr>black, red, blue, green, magenta, cyan, yellow, white </p>
 <p> Foreground color (for text) is simply specified as one of the above colors, or not specified at all to use the default terminal text color. </p>
 <p> Background color is specified by using the word &#8216;on&#8217;, and one of the above colors. Some examples: </p>
-<p>&nbsp;<wbr>green&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>green text, default background color<br />
-&nbsp;<wbr>green on yellow&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>green text, yellow background<br />
+<p>&nbsp;<wbr>green&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>green text, default background color<br/>
+&nbsp;<wbr>green on yellow&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>green text, yellow background<br/>
 &nbsp;<wbr>on yellow&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>default text color, yellow background </p>
 <p> These colors can be modified further, by making the foreground bold, or by making the background bright. Some examples: </p>
-<p>&nbsp;<wbr>bold green<br />
-&nbsp;<wbr>bold white on bright red<br />
+<p>&nbsp;<wbr>bold green<br/>
+&nbsp;<wbr>bold white on bright red<br/>
 &nbsp;<wbr>on bright cyan </p>
 <p> The order of the words is not important, so the following are equivalent: </p>
-<p>&nbsp;<wbr>bold green<br />
+<p>&nbsp;<wbr>bold green<br/>
 &nbsp;<wbr>green bold </p>
 <p> But the &#8216;on&#8217; is important &#8211; colors before the &#8216;on&#8217; are foreground, and colors after &#8216;on&#8217; are background. </p>
 <p> There is an additional &#8216;underline&#8217; attribute that may be used: </p>
@@ -62,10 +62,10 @@ description: "task-color – A color tutorial for the Taskwarrior command line t
 <p> Some combinations look very nice, some look terrible. Different terminal programs do implement slightly different versions of &#8216;red&#8217;, for example, so you may see some unexpected variation across machines. The brightness of your display is also a factor.</p>
 <h2>256-Color Support</h2>
 <p>Using 256 colors follows the same form, but the names are different, and some colors can be referenced in different ways. First there is by color ordinal, which is like this: </p>
-<p>&nbsp;<wbr>color0<br />
-&nbsp;<wbr>color1<br />
-&nbsp;<wbr>color2<br />
-&nbsp;<wbr>&#8230;<br />
+<p>&nbsp;<wbr>color0<br/>
+&nbsp;<wbr>color1<br/>
+&nbsp;<wbr>color2<br/>
+&nbsp;<wbr>&#8230;<br/>
 &nbsp;<wbr>color255 </p>
 <p> This gives you access to all 256 colors, but doesn&#8217;t help you much. This range is a combination of 8 basic colors (color0 &#8211; color7), then 8 brighter variations (color8 &#8211; color15). Then a block of 216 colors (color16 &#8211; color231). Then a block of 24 gray colors (color232 &#8211; color255). </p>
 <p> The large block of 216 colors (6x6x6 = 216) represents a color cube, which can be addressed via RGB values from 0 to 5 for each component color. A value of 0 means none of this component color, and a value of 5 means the most intense component color. For example, a bright red is specified as: </p>
@@ -73,7 +73,7 @@ description: "task-color – A color tutorial for the Taskwarrior command line t
 <p> And a darker red would be: </p>
 <p>&nbsp;<wbr>rgb300 </p>
 <p> Note that the three digits represent the three component values, so in this example the 5, 0 and 0 represent red=5, green=0, blue=0. Combining intense red with no green and no blue yields red. Similarly, blue and green are: </p>
-<p>&nbsp;<wbr>rgb005<br />
+<p>&nbsp;<wbr>rgb005<br/>
 &nbsp;<wbr>rgb050 </p>
 <p> Another example &#8211; bright yellow &#8211; is a mix of bright red and bright green, but no blue component, so bright yellow is addressed as: </p>
 <p>&nbsp;<wbr>rgb550 </p>
@@ -95,8 +95,8 @@ description: "task-color – A color tutorial for the Taskwarrior command line t
 <p> This gives you an example of each of the colors, so you can see the effect, without necessarily creating a set of tasks that meet each of the rule criteria.</p>
 <h2>Rules</h2>
 <p>Taskwarrior supports colorization rules. These are configuration values that specify a color, and the conditions under which that color is used. By example, let us add a few tasks: </p>
-<p>&nbsp;<wbr>$&nbsp;<wbr>task add project:Home priority:H pay the bills&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(1)<br />
-&nbsp;<wbr>$&nbsp;<wbr>task add project:Home&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>clean the rug&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(2)<br />
+<p>&nbsp;<wbr>$&nbsp;<wbr>task add project:Home priority:H pay the bills&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(1)<br/>
+&nbsp;<wbr>$&nbsp;<wbr>task add project:Home&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>clean the rug&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(2)<br/>
 &nbsp;<wbr>$&nbsp;<wbr>task add project:Garden&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>clean out the garage&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(3) </p>
 <p> We can add a color rule that uses a blue background for all tasks in the Home project: </p>
 <p>&nbsp;<wbr>$&nbsp;<wbr>task config color.project.Home&nbsp;<wbr>&#8216;on blue&#8217; </p>
@@ -118,20 +118,20 @@ description: "task-color – A color tutorial for the Taskwarrior command line t
 <dd>include /usr/share/doc/task/rc/dark-256.theme</dd></dl>
 <p> You can use any of the standard Taskwarrior themes: </p>
 <dl>
-<dd>dark-16.theme<br />
- dark-256.theme<br />
- dark-blue-256.theme<br />
- dark-gray-256.theme<br />
- dark-green-256.theme<br />
- dark-red-256.theme<br />
- dark-violets-256.theme<br />
- dark-yellow-green.theme<br />
- light-16.theme<br />
- light-256.theme<br />
- solarized-dark-256.theme<br />
- solarized-light-256.theme<br />
- dark-default-16.theme<br />
- dark-gray-blue-256.theme<br />
+<dd>dark-16.theme<br/>
+ dark-256.theme<br/>
+ dark-blue-256.theme<br/>
+ dark-gray-256.theme<br/>
+ dark-green-256.theme<br/>
+ dark-red-256.theme<br/>
+ dark-violets-256.theme<br/>
+ dark-yellow-green.theme<br/>
+ light-16.theme<br/>
+ light-256.theme<br/>
+ solarized-dark-256.theme<br/>
+ solarized-light-256.theme<br/>
+ dark-default-16.theme<br/>
+ dark-gray-blue-256.theme<br/>
  no-color.theme</dd></dl>
 <p> Bear in mind that if you are using a terminal with a dark background, you will see better results using a dark theme. </p>
 <p> You can also see how the theme will color the various tasks with the command: </p>

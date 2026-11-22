@@ -10,7 +10,7 @@ description: "dtrsen.f –"
 <p>dtrsen.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dtrsen</code> (JOB, COMPQ, SELECT, N, T, LDT, Q, LDQ, WR, WI, M, S, SEP, WORK, LWORK, IWORK, LIWORK, INFO)<br />
+<p>subroutine <code>dtrsen</code> (JOB, COMPQ, SELECT, N, T, LDT, Q, LDQ, WR, WI, M, S, SEP, WORK, LWORK, IWORK, LIWORK, INFO)<br/>
  <i></i><code>DTRSEN</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dtrsen (characterJOB, characterCOMPQ, logical, dimension( * )SELECT, integerN, double precision, dimension( ldt, * )T, integerLDT, double precision, dimension( ldq, * )Q, integerLDQ, double precision, dimension( * )WR, double precision, dimension( * )WI, integerM, double precisionS, double precisionSEP, double precision, dimension( * )WORK, integerLWORK, integer, dimension( * )IWORK, integerLIWORK, integerINFO)</h3>
@@ -81,7 +81,7 @@ description: "dtrsen.f –"
  LDQ &gt;= 1; and if COMPQ = 'V', LDQ &gt;= N.</pre>
 <p><i>WR</i> </p>
 <pre> WR is DOUBLE PRECISION array, dimension (N)</pre>
-<p>&nbsp;<wbr><br />
+<p>&nbsp;<wbr><br/>
  <i>WI</i> </p>
 <pre> WI is DOUBLE PRECISION array, dimension (N)
  The real and imaginary parts, respectively, of the reordered

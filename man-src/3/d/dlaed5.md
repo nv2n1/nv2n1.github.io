@@ -11,7 +11,7 @@ description: "dlaed5.f –"
 <p> dlaed5.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dlaed5</code> (I, D, Z, DELTA, RHO, DLAM)<br />
+<p> subroutine <code>dlaed5</code> (I, D, Z, DELTA, RHO, DLAM)<br/>
  <i></i><code>DLAED5</code> used by sstedc. Solves the 2-by-2 secular equation.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlaed5 (integerI, double precision, dimension( 2 )D, double precision, dimension( 2 )Z, double precision, dimension( 2 )DELTA, double precisionRHO, double precisionDLAM)</h3>

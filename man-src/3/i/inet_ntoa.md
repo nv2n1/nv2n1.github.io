@@ -51,7 +51,7 @@ in_addr_t inet_netof(struct in_addr in);
 <p> The <code>inet_makeaddr</code>() function is the converse of <code>inet_netof</code>() and <code>inet_lnaof</code>(). It returns an Internet host address in network byte order, created by combining the network number <i>net</i> with the local address <i>host</i>, both in host byte order. </p>
 <p> The structure <i>in_addr</i> as used in <code>inet_ntoa</code>(), <code>inet_makeaddr</code>(), <code>inet_lnaof</code>(), and <code>inet_netof</code>() is defined in <i>&lt;netinet/in.h&gt;</i> as: </p>
 <p> typedef uint32_t in_addr_t; </p>
-<p> struct in_addr {<br />
+<p> struct in_addr {<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;in_addr_t s_addr; };</p>
 <h2>ATTRIBUTES</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
@@ -63,14 +63,14 @@ in_addr_t inet_netof(struct in_addr in);
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>inet_aton</code>(), <code>inet_addr</code>(),<br />
+<td> <code>inet_aton</code>(), <code>inet_addr</code>(),<br/>
  <code>inet_network</code>(), <code>inet_ntoa</code>() </td>
 <td>Thread safety</td>
 <td>MT-Safe locale
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>inet_makeaddr</code>(), <code>inet_lnaof</code>(),<br />
+<td> <code>inet_makeaddr</code>(), <code>inet_lnaof</code>(),<br/>
  <code>inet_netof</code>() </td>
 <td>Thread safety</td>
 <td>MT-Safe
@@ -96,20 +96,20 @@ in_addr_t inet_netof(struct in_addr in);
 <p> $<code> ./a.out 226.000.000.037</code> # Last byte is in octal 226.0.0.31 $<code> ./a.out 0x7f.1 </code> # First byte is in hex 127.0.0.1</p>
 <h3>Program source</h3>
 <p> #define _BSD_SOURCE #include &lt;arpa/inet.h&gt; #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; </p>
-<p> int main(int argc, char *argv[]) {<br />
+<p> int main(int argc, char *argv[]) {<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct in_addr addr; </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(argc&nbsp;!=&nbsp;2)&nbsp;{<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(argc&nbsp;!=&nbsp;2)&nbsp;{<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;fprintf(stderr,&nbsp;&quot;%s&nbsp;&lt;dotted-address&gt;
-&quot;, argv[0]);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_FAILURE);<br />
+&quot;, argv[0]);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_FAILURE);<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;} </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(inet_aton(argv[1],&nbsp;&amp;addr)&nbsp;==&nbsp;0)&nbsp;{<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(inet_aton(argv[1],&nbsp;&amp;addr)&nbsp;==&nbsp;0)&nbsp;{<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;fprintf(stderr,&nbsp;&quot;Invalid address
-&quot;);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_FAILURE);<br />
+&quot;);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_FAILURE);<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;} </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;%s
-&quot;, inet_ntoa(addr));<br />
+&quot;, inet_ntoa(addr));<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_SUCCESS); }</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-byteorder/">byteorder</a></code>(3), <code><a href="/docs/linux/man/3-getaddrinfo/">getaddrinfo</a></code>(3), <code><a href="/docs/linux/man/3-gethostbyname/">gethostbyname</a></code>(3), <code><a href="/docs/linux/man/3-getnameinfo/">getnameinfo</a></code>(3), <code><a href="/docs/linux/man/3-getnetent/">getnetent</a></code>(3), <code>inet_net_pton</code>(3), <code>inet_ntop</code>(3), <code>inet_pton</code>(3), <code><a href="/docs/linux/man/5-hosts/">hosts</a></code>(5), <code><a href="/docs/linux/man/5-networks/">networks</a></code>(5)</p>

@@ -59,22 +59,22 @@ description: "isdnctrl_conf – isdnctrl configuration"
 <dt><code>PPPBIND = </code><i>num</i></dt>
 <dd>Binds the current interface to the ippp device <code>/dev/ippp</code><i>X</i><code>.</code> This works only for synchronous PPP. The value must be a number. <code>Example:</code> PPPBIND = 0</dd>
 <dt><code>Example for a configuration file</code></dt>
-<dd>[ISDNCTRL]<br />
-&nbsp;<wbr>&nbsp;<wbr>INTERFACES&nbsp;<wbr>=&nbsp;<wbr>{<br />
-&nbsp;<wbr>[INTERFACE]<br />
-&nbsp;<wbr>NAME&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>isdn0<br />
-&nbsp;<wbr>EAZ&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>4711<br />
-&nbsp;<wbr>PHONE_IN&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>08151234<br />
-&nbsp;<wbr>PHONE_OUT&nbsp;<wbr>=&nbsp;<wbr>08151234<br />
-&nbsp;<wbr>SECURE&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>on<br />
-&nbsp;<wbr>DIALMAX&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>1<br />
-&nbsp;<wbr>HUPTIMEOUT=&nbsp;<wbr>20<br />
-&nbsp;<wbr>IHUP&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>on<br />
-&nbsp;<wbr>CHARGEHUP&nbsp;<wbr>=&nbsp;<wbr>on<br />
-&nbsp;<wbr>L2_PROT&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>hdlc<br />
-&nbsp;<wbr>L3_PROT&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>trans<br />
-&nbsp;<wbr>ENCAP&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>rawip<br />
-&nbsp;<wbr>ADDSLAVE&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>s-isdn0<br />
+<dd>[ISDNCTRL]<br/>
+&nbsp;<wbr>&nbsp;<wbr>INTERFACES&nbsp;<wbr>=&nbsp;<wbr>{<br/>
+&nbsp;<wbr>[INTERFACE]<br/>
+&nbsp;<wbr>NAME&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>isdn0<br/>
+&nbsp;<wbr>EAZ&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>4711<br/>
+&nbsp;<wbr>PHONE_IN&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>08151234<br/>
+&nbsp;<wbr>PHONE_OUT&nbsp;<wbr>=&nbsp;<wbr>08151234<br/>
+&nbsp;<wbr>SECURE&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>on<br/>
+&nbsp;<wbr>DIALMAX&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>1<br/>
+&nbsp;<wbr>HUPTIMEOUT=&nbsp;<wbr>20<br/>
+&nbsp;<wbr>IHUP&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>on<br/>
+&nbsp;<wbr>CHARGEHUP&nbsp;<wbr>=&nbsp;<wbr>on<br/>
+&nbsp;<wbr>L2_PROT&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>hdlc<br/>
+&nbsp;<wbr>L3_PROT&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>trans<br/>
+&nbsp;<wbr>ENCAP&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>rawip<br/>
+&nbsp;<wbr>ADDSLAVE&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>s-isdn0<br/>
 &nbsp;<wbr>SDELAY&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>10 </dd>
 <pre><code>[SLAVE]
 NAME      = s-isdn0

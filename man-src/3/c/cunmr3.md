@@ -11,7 +11,7 @@ description: "cunmr3.f –"
 <p> cunmr3.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cunmr3</code> (SIDE, TRANS, M, N, K, L, A, LDA, TAU, C, LDC, WORK, INFO)<br />
+<p> subroutine <code>cunmr3</code> (SIDE, TRANS, M, N, K, L, A, LDA, TAU, C, LDC, WORK, INFO)<br/>
  <i></i><code>CUNMR3</code> multiplies a general matrix by the unitary matrix from a RZ factorization determined by ctzrzf (unblocked algorithm).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cunmr3 (characterSIDE, characterTRANS, integerM, integerN, integerK, integerL, complex, dimension( lda, * )A, integerLDA, complex, dimension( * )TAU, complex, dimension( ldc, * )C, integerLDC, complex, dimension( * )WORK, integerINFO)</h3>

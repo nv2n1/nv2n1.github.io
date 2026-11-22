@@ -21,29 +21,29 @@ description: "lavrec – Record MJPEG-video from a zoran/video4linux-device"
 <dt><code>&#8211;software-encoding</code></dt>
 <dd> By default, lavrec will capture in a mode that is only suitable for recording from hardware MJPEG devices. Using this option will make lavrec use software-JPEG-encoding (using libjpeg) which enables MJPEG-video-capture from many generic video4linux devices (such as Bt848/Bt878-based ones). </dd>
 <dt><code>&#8211;software-encoding-yuvp</code></dt>
-<dd> This option adds support for the EM28XX USB driver. As this driver is V4L2. As the original BTTV software implementation assumes that the driver supports V4L it will not work with the EM28XX driver, not even with the V4L1 emulation layer. This option enables two things:<br />
-&nbsp;<wbr>&nbsp;<wbr>It enables the V4L2 calls to make interaction with this driver possible<br />
+<dd> This option adds support for the EM28XX USB driver. As this driver is V4L2. As the original BTTV software implementation assumes that the driver supports V4L it will not work with the EM28XX driver, not even with the V4L1 emulation layer. This option enables two things:<br/>
+&nbsp;<wbr>&nbsp;<wbr>It enables the V4L2 calls to make interaction with this driver possible<br/>
 &nbsp;<wbr>&nbsp;<wbr>It select the cards YUV Packed format and converts this in software to YUV Planar The process is after this the same as for the BTTV driver. ome things of note are the fact that the EM28XX driver expects 48KHz audio recording. If you choose slower things will work, but a lot of deleted/inserted frames will occur. The lower the sample rate, the worse this problem gets. Recording at 48KHz is therefore recommended. This code was tested and found working with a DVC100 Pinnacle Dazzle. This option should work with any EM28XX, but this hasnt been tested. It might work for any other V4L2 device that outputs YUV packed format, this has however not been tested. Feedback would be appreciated. </dd>
 <dt><code>-f/&#8211;format</code> [<code>a</code>|<code>A</code>|<code>q</code>|<code>m</code>]</dt>
-<dd> The format in which the video should be saved to the harddisk.<br />
-&nbsp;<wbr>&nbsp;<wbr>a &#8211; MJPEG AVI<br />
-&nbsp;<wbr>&nbsp;<wbr>A &#8211; MJPEG AVI with fields exchanged<br />
-&nbsp;<wbr>&nbsp;<wbr>q &#8211; Quicktime<br />
+<dd> The format in which the video should be saved to the harddisk.<br/>
+&nbsp;<wbr>&nbsp;<wbr>a &#8211; MJPEG AVI<br/>
+&nbsp;<wbr>&nbsp;<wbr>A &#8211; MJPEG AVI with fields exchanged<br/>
+&nbsp;<wbr>&nbsp;<wbr>q &#8211; Quicktime<br/>
  By default, lavrec will look at the extension of the first file (*.avi, *.qt) and choose a format based on that. </dd>
 <dt><code>-i/&#8211;input</code> [<code>p</code>|<code>P</code>|<code>n</code>|<code>N</code>|<code>s</code>|<code>S</code>|<code>t</code>|<code>T</code>|<code>f</code>|<code>a</code>]</dt>
 <dd> or</dd>
 <dt><code>-i/&#8211;input</code> input[:norm]</dt>
-<dd> The recording source and the video source standard format.<br />
-&nbsp;<wbr>p &#8211; PAL through Composite or 1st Bt8x8 input<br />
-&nbsp;<wbr>P &#8211; PAL through SVHS- or 2nd Bt8x8 input<br />
-&nbsp;<wbr>t &#8211; PAL through TV-tuner- or 3rd Bt8x8 input<br />
-&nbsp;<wbr>n &#8211; NTSC through Composite or 1st Bt8x8 input<br />
-&nbsp;<wbr>N &#8211; NTSC through SVHS- or 2nd Bt8x8 input<br />
-&nbsp;<wbr>T &#8211; NTSC through TV-tuner- or 3rd Bt8x8 input<br />
-&nbsp;<wbr>s &#8211; SECAM through Composite or 1st Bt8x8 input<br />
-&nbsp;<wbr>S &#8211; SECAM through SVHS- or 2nd Bt8x8 input<br />
-&nbsp;<wbr>f &#8211; SECAM through TV-tuner- or 3rd Bt8x8 input<br />
-&nbsp;<wbr>a &#8211;&nbsp;<wbr>(or every other letter)&nbsp;<wbr>Autosense&nbsp;<wbr>(default)<br />
+<dd> The recording source and the video source standard format.<br/>
+&nbsp;<wbr>p &#8211; PAL through Composite or 1st Bt8x8 input<br/>
+&nbsp;<wbr>P &#8211; PAL through SVHS- or 2nd Bt8x8 input<br/>
+&nbsp;<wbr>t &#8211; PAL through TV-tuner- or 3rd Bt8x8 input<br/>
+&nbsp;<wbr>n &#8211; NTSC through Composite or 1st Bt8x8 input<br/>
+&nbsp;<wbr>N &#8211; NTSC through SVHS- or 2nd Bt8x8 input<br/>
+&nbsp;<wbr>T &#8211; NTSC through TV-tuner- or 3rd Bt8x8 input<br/>
+&nbsp;<wbr>s &#8211; SECAM through Composite or 1st Bt8x8 input<br/>
+&nbsp;<wbr>S &#8211; SECAM through SVHS- or 2nd Bt8x8 input<br/>
+&nbsp;<wbr>f &#8211; SECAM through TV-tuner- or 3rd Bt8x8 input<br/>
+&nbsp;<wbr>a &#8211;&nbsp;<wbr>(or every other letter)&nbsp;<wbr>Autosense&nbsp;<wbr>(default)<br/>
  The input can be specified using either single letters or an input number with an optional norm, where the number specifies the n&#8217;th input of the card, ranging from 1 to 10. Using a numerical input is necessary when using input four or higher with a card that has more than three inputs, for instance the AverMedia 6 Eyes. When using numeric input with the norm it must contain the whole norm name; valid names are pal, ntsc and secam. You can use numeric input selection for cards with only three inputs, too, which most Zoran based cards has. &quot;-i 2:pal&quot; used with a Buz would be equivalent to &quot;-i P&quot;, recording from the S-Video input in PAL format. </dd>
 <dt><code>-d/&#8211;decimation</code><i> num</i></dt>
 <dd> Recording decimation, either 1, 2 or 4. This will decimate the size of the recorded video horizontally and vertically. To use different horizontal and vertical decimations, use two numbers, the first one being the horizontal and the second one being the vertical (-d 12). <code>Note:</code> this option can only be used during hardware recording. </dd>
@@ -103,8 +103,8 @@ description: "lavrec – Record MJPEG-video from a zoran/video4linux-device"
 <dd> The mixer device. Default is /dev/mixer </dd>
 </dl>
 <h2>OUTPUT</h2>
-<p> Lavrec will output the current recording state. Typically, this looks like:<br />
- 0.06.14:22 int: 00040 lst:0 ins:0 del:0 ae:0 td1=0.014 td2=0.029<br />
+<p> Lavrec will output the current recording state. Typically, this looks like:<br/>
+ 0.06.14:22 int: 00040 lst:0 ins:0 del:0 ae:0 td1=0.014 td2=0.029<br/>
  The first part is the time that has been spent recording (hours &#8211; minutes &#8211; seconds &#8211; frames). <code>int</code> is the interval (in milliseconds) between two captured frames (this should be around 40 for PAL/SECAM and 33 for NTSC). <code>lst</code> is the number of lost frames. <code>ins</code> and <code>del</code> are the number of frames inserted and deleted for sync correction. <code>ae</code> is the number of audio errors. <code>td1</code> and <code>td2</code> are the audio/video time-difference (out-of-sync&#8217;ness). </p>
 <h2>TYPICAL RECORDING SESSIONS</h2>
 <p> Okay, that&#8217;s a lot of options. Now how would I normally record video? Let&#8217;s assume you want to record at VCD resolution (352&#215;288) from PAL source. You might want some higher quality than default (80%). You use default audio options and record to an AVI file. That having said, your recording command line would look like:</p>
@@ -118,7 +118,7 @@ description: "lavrec – Record MJPEG-video from a zoran/video4linux-device"
 <p> lavrec should be able to detect automatically whether to use software JPEG encoding or whether to use the card&#8217;s hardware JPEG encoding features (if available). </p>
 <p> Besides that, software JPEG encoding seems, for some people, to cause small out-of-sync&#8217;ness. SMP support for JPEG encoding is currently work-in-progress. </p>
 <h2>AUTHOR</h2>
-<p> This man page was written by Ronald Bultje.<br />
+<p> This man page was written by Ronald Bultje.<br/>
  If you have questions, remarks, problems or you just want to contact the developers, the main mailing list for the MJPEG-tools is: </p>
 <p>&nbsp;<wbr><i>mjpeg-users [at] lists.sourceforge.net</i> </p>
 <p> For more info, see our website at </p>

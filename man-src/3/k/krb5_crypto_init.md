@@ -10,62 +10,62 @@ description: "Heimdal Kerberos 5 cryptography functions –"
 
 <p> Heimdal Kerberos 5 cryptography functions &#8211; </p>
 <h3>Functions</h3>
-<p> HEIMDAL_WARN_UNUSED_RESULT_ATTRIBUTE<br />
- KRB5_LIB_FUNCTION<br />
+<p> HEIMDAL_WARN_UNUSED_RESULT_ATTRIBUTE<br/>
+ KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_generate_random</code> (void *buf, size_t len)&quot; </p>
-<p> KRB5_LIB_FUNCTION void<br />
+<p> KRB5_LIB_FUNCTION void<br/>
  KRB5_LIB_CALL <code>krb5_generate_random_block</code> (void *buf, size_t len)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_enctype_valid</code> (krb5_context context, krb5_enctype etype)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_cksumtype_to_enctype</code> (krb5_context context, krb5_cksumtype ctype, krb5_enctype *etype)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_encrypt_iov_ivec</code> (krb5_context context, krb5_crypto crypto, unsigned usage, <code>krb5_crypto_iov</code> *data, int num_data, void *ivec)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_decrypt_iov_ivec</code> (krb5_context context, krb5_crypto crypto, unsigned usage, <code>krb5_crypto_iov</code> *data, unsigned int num_data, void *ivec)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_create_checksum_iov</code> (krb5_context context, krb5_crypto crypto, unsigned usage, <code>krb5_crypto_iov</code> *data, unsigned int num_data, krb5_cksumtype *type)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_verify_checksum_iov</code> (krb5_context context, krb5_crypto crypto, unsigned usage, <code>krb5_crypto_iov</code> *data, unsigned int num_data, krb5_cksumtype *type)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_crypto_init</code> (krb5_context context, const krb5_keyblock *key, krb5_enctype etype, krb5_crypto *crypto)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_crypto_destroy</code> (krb5_context context, krb5_crypto crypto)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_crypto_getblocksize</code> (krb5_context context, krb5_crypto crypto, size_t *blocksize)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_crypto_getenctype</code> (krb5_context context, krb5_crypto crypto, krb5_enctype *enctype)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_crypto_getpadsize</code> (krb5_context context, krb5_crypto crypto, size_t *padsize)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_crypto_getconfoundersize</code> (krb5_context context, krb5_crypto crypto, size_t *confoundersize)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_enctype_disable</code> (krb5_context context, krb5_enctype enctype)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_enctype_enable</code> (krb5_context context, krb5_enctype enctype)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_allow_weak_crypto</code> (krb5_context context, krb5_boolean enable)&quot; </p>
-<p> KRB5_LIB_FUNCTION krb5_boolean<br />
+<p> KRB5_LIB_FUNCTION krb5_boolean<br/>
  KRB5_LIB_CALL <code>krb5_is_enctype_weak</code> (krb5_context context, krb5_enctype enctype)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_random_to_key</code> (krb5_context context, krb5_enctype type, const void *data, size_t size, krb5_keyblock *key)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_crypto_fx_cf2</code> (krb5_context context, const krb5_crypto crypto1, const krb5_crypto crypto2, krb5_data *pepper1, krb5_data *pepper2, krb5_enctype enctype, krb5_keyblock *res)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_generate_subkey_extended</code> (krb5_context context, const krb5_keyblock *key, krb5_enctype etype, krb5_keyblock **subkey)&quot; </p>
-<p> KRB5_LIB_FUNCTION void<br />
+<p> KRB5_LIB_FUNCTION void<br/>
  KRB5_LIB_CALL <code>krb5_keyblock_zero</code> (krb5_keyblock *keyblock)&quot; </p>
-<p> KRB5_LIB_FUNCTION void<br />
+<p> KRB5_LIB_FUNCTION void<br/>
  KRB5_LIB_CALL <code>krb5_free_keyblock_contents</code> (krb5_context context, krb5_keyblock *keyblock)&quot; </p>
-<p> KRB5_LIB_FUNCTION void<br />
+<p> KRB5_LIB_FUNCTION void<br/>
  KRB5_LIB_CALL <code>krb5_free_keyblock</code> (krb5_context context, krb5_keyblock *keyblock)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_copy_keyblock_contents</code> (krb5_context context, const krb5_keyblock *inblock, krb5_keyblock *to)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_copy_keyblock</code> (krb5_context context, const krb5_keyblock *inblock, krb5_keyblock **to)&quot; </p>
-<p> KRB5_LIB_FUNCTION krb5_enctype<br />
+<p> KRB5_LIB_FUNCTION krb5_enctype<br/>
  KRB5_LIB_CALL <code>krb5_keyblock_get_enctype</code> (const krb5_keyblock *block)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_keyblock_init</code> (krb5_context context, krb5_enctype type, const void *data, size_t size, krb5_keyblock *key)&quot; </p>
 <h2>Detailed Description</h2>
 <h2>Function Documentation</h2>
@@ -74,7 +74,7 @@ description: "Heimdal Kerberos 5 cryptography functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> Kerberos 5 context<br />
+</dt><dd> <i>context</i> Kerberos 5 context<br/>
  <i>enable</i> true to enable, false to disable</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -85,8 +85,8 @@ description: "Heimdal Kerberos 5 cryptography functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> Kerberos context<br />
- <i>ctype</i> The checksum type to get the result enctype for<br />
+</dt><dd> <i>context</i> Kerberos context<br/>
+ <i>ctype</i> The checksum type to get the result enctype for<br/>
  <i>etype</i> The returned encryption, when the matching etype is not found, etype is set to ETYPE_NULL.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -97,8 +97,8 @@ description: "Heimdal Kerberos 5 cryptography functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a Kerberos 5 context<br />
- <i>inblock</i> the key to copy<br />
+</dt><dd> <i>context</i> a Kerberos 5 context<br/>
+ <i>inblock</i> the key to copy<br/>
  <i>to</i> the output key.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -109,8 +109,8 @@ description: "Heimdal Kerberos 5 cryptography functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a Kerberos 5 context<br />
- <i>inblock</i> the key to copy<br />
+</dt><dd> <i>context</i> a Kerberos 5 context<br/>
+ <i>inblock</i> the key to copy<br/>
  <i>to</i> the output key.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -121,11 +121,11 @@ description: "Heimdal Kerberos 5 cryptography functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> Kerberos context<br />
- <i>crypto</i> Kerberos crypto context<br />
- <i>usage</i> Key usage for this buffer<br />
- <i>data</i> array of buffers to process<br />
- <i>num_data</i> length of array<br />
+</dt><dd> <i>context</i> Kerberos context<br/>
+ <i>crypto</i> Kerberos crypto context<br/>
+ <i>usage</i> Key usage for this buffer<br/>
+ <i>data</i> array of buffers to process<br/>
+ <i>num_data</i> length of array<br/>
  <i>type</i> output data</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -136,7 +136,7 @@ description: "Heimdal Kerberos 5 cryptography functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> Kerberos context<br />
+</dt><dd> <i>context</i> Kerberos context<br/>
  <i>crypto</i> crypto context to free</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -147,12 +147,12 @@ description: "Heimdal Kerberos 5 cryptography functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> Kerberos 5 context<br />
- <i>crypto1</i> first key to combine<br />
- <i>crypto2</i> second key to combine<br />
- <i>pepper1</i> factor to combine with first key to garante uniqueness<br />
- <i>pepper2</i> factor to combine with second key to garante uniqueness<br />
- <i>enctype</i> the encryption type of the resulting key<br />
+</dt><dd> <i>context</i> Kerberos 5 context<br/>
+ <i>crypto1</i> first key to combine<br/>
+ <i>crypto2</i> second key to combine<br/>
+ <i>pepper1</i> factor to combine with first key to garante uniqueness<br/>
+ <i>pepper2</i> factor to combine with second key to garante uniqueness<br/>
+ <i>enctype</i> the encryption type of the resulting key<br/>
  <i>res</i> allocated key, free with <code>krb5_free_keyblock_contents()</code></dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -163,8 +163,8 @@ description: "Heimdal Kerberos 5 cryptography functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> Kerberos context<br />
- <i>crypto</i> crypto context to query<br />
+</dt><dd> <i>context</i> Kerberos context<br/>
+ <i>crypto</i> crypto context to query<br/>
  <i>blocksize</i> the resulting blocksize</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -175,8 +175,8 @@ description: "Heimdal Kerberos 5 cryptography functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> Kerberos context<br />
- <i>crypto</i> crypto context to query<br />
+</dt><dd> <i>context</i> Kerberos context<br/>
+ <i>crypto</i> crypto context to query<br/>
  <i>confoundersize</i> the returned confounder size</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -187,8 +187,8 @@ description: "Heimdal Kerberos 5 cryptography functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> Kerberos context<br />
- <i>crypto</i> crypto context to query<br />
+</dt><dd> <i>context</i> Kerberos context<br/>
+ <i>crypto</i> crypto context to query<br/>
  <i>enctype</i> the resulting encryption type</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -199,8 +199,8 @@ description: "Heimdal Kerberos 5 cryptography functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> Kerberos context<br />
- <i>crypto</i> crypto context to query<br />
+</dt><dd> <i>context</i> Kerberos context<br/>
+ <i>crypto</i> crypto context to query<br/>
  <i>padsize</i> the return padding size</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -212,9 +212,9 @@ description: "Heimdal Kerberos 5 cryptography functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> Kerberos context<br />
- <i>key</i> the key block information with all key data<br />
- <i>etype</i> the encryption type<br />
+</dt><dd> <i>context</i> Kerberos context<br/>
+ <i>key</i> the key block information with all key data<br/>
+ <i>etype</i> the encryption type<br/>
  <i>crypto</i> the resulting crypto context</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -225,11 +225,11 @@ description: "Heimdal Kerberos 5 cryptography functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> Kerberos context<br />
- <i>crypto</i> Kerberos crypto context<br />
- <i>usage</i> Key usage for this buffer<br />
- <i>data</i> array of buffers to process<br />
- <i>num_data</i> length of array<br />
+</dt><dd> <i>context</i> Kerberos context<br/>
+ <i>crypto</i> Kerberos crypto context<br/>
+ <i>usage</i> Key usage for this buffer<br/>
+ <i>data</i> array of buffers to process<br/>
+ <i>num_data</i> length of array<br/>
  <i>ivec</i> initial cbc/cts vector</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -245,11 +245,11 @@ description: "Heimdal Kerberos 5 cryptography functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> Kerberos context<br />
- <i>crypto</i> Kerberos crypto context<br />
- <i>usage</i> Key usage for this buffer<br />
- <i>data</i> array of buffers to process<br />
- <i>num_data</i> length of array<br />
+</dt><dd> <i>context</i> Kerberos context<br/>
+ <i>crypto</i> Kerberos crypto context<br/>
+ <i>usage</i> Key usage for this buffer<br/>
+ <i>data</i> array of buffers to process<br/>
+ <i>num_data</i> length of array<br/>
  <i>ivec</i> initial cbc/cts vector</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -270,7 +270,7 @@ description: "Heimdal Kerberos 5 cryptography functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> Kerberos 5 context<br />
+</dt><dd> <i>context</i> Kerberos 5 context<br/>
  <i>enctype</i> encryption type to disable</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -281,7 +281,7 @@ description: "Heimdal Kerberos 5 cryptography functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> Kerberos 5 context<br />
+</dt><dd> <i>context</i> Kerberos 5 context<br/>
  <i>enctype</i> encryption type to enable</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -292,7 +292,7 @@ description: "Heimdal Kerberos 5 cryptography functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> Kerberos context<br />
+</dt><dd> <i>context</i> Kerberos context<br/>
  <i>etype</i> enctype to check if its valid or not</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -303,14 +303,14 @@ description: "Heimdal Kerberos 5 cryptography functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a Kerberos 5 context<br />
+</dt><dd> <i>context</i> a Kerberos 5 context<br/>
  <i>keyblock</i> keyblock to free, NULL is valid argument</dd></dl>
 <h3>KRB5_LIB_FUNCTION void KRB5_LIB_CALL krb5_free_keyblock_contents (krb5_contextcontext, krb5_keyblock *keyblock)</h3>
 <p> Free a keyblock&#8217;s content, also zero out the content of the keyblock. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a Kerberos 5 context<br />
+</dt><dd> <i>context</i> a Kerberos 5 context<br/>
  <i>keyblock</i> keyblock content to free, NULL is valid argument</dd></dl>
 <h3>HEIMDAL_WARN_UNUSED_RESULT_ATTRIBUTE KRB5_LIB_FUNCTION krb5_error_code KRB5_LIB_CALL krb5_generate_random (void *buf, size_tlen)</h3>
 <p> Fill buffer buf with len bytes of PRNG randomness that is ok to use for key generation, padding and public diclosing the randomness w/o disclosing the randomness source. </p>
@@ -318,7 +318,7 @@ description: "Heimdal Kerberos 5 cryptography functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>buf</i> a buffer to fill with randomness<br />
+</dt><dd> <i>buf</i> a buffer to fill with randomness<br/>
  <i>len</i> length of memory that buf points to.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -331,16 +331,16 @@ description: "Heimdal Kerberos 5 cryptography functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>buf</i> a buffer to fill with randomness<br />
+</dt><dd> <i>buf</i> a buffer to fill with randomness<br/>
  <i>len</i> length of memory that buf points to.</dd></dl>
 <h3>KRB5_LIB_FUNCTION krb5_error_code KRB5_LIB_CALL krb5_generate_subkey_extended (krb5_contextcontext, const krb5_keyblock *key, krb5_enctypeetype, krb5_keyblock **subkey)</h3>
 <p> Generate subkey, from keyblock </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> kerberos context<br />
- <i>key</i> session key<br />
- <i>etype</i> encryption type of subkey, if ETYPE_NULL, use key&#8217;s enctype<br />
+</dt><dd> <i>context</i> kerberos context<br/>
+ <i>key</i> session key<br/>
+ <i>etype</i> encryption type of subkey, if ETYPE_NULL, use key&#8217;s enctype<br/>
  <i>subkey</i> returned new, free with <code>krb5_free_keyblock()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -351,7 +351,7 @@ description: "Heimdal Kerberos 5 cryptography functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> Kerberos 5 context<br />
+</dt><dd> <i>context</i> Kerberos 5 context<br/>
  <i>enctype</i> encryption type to probe</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -376,10 +376,10 @@ description: "Heimdal Kerberos 5 cryptography functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> Kerberos 5 context<br />
- <i>type</i> the enctype resulting key will be of<br />
- <i>data</i> input random data to convert to a key<br />
- <i>size</i> size of input random data, at least krb5_enctype_keysize() long<br />
+</dt><dd> <i>context</i> Kerberos 5 context<br/>
+ <i>type</i> the enctype resulting key will be of<br/>
+ <i>data</i> input random data to convert to a key<br/>
+ <i>size</i> size of input random data, at least krb5_enctype_keysize() long<br/>
  <i>key</i> key, output key, free with <code>krb5_free_keyblock_contents()</code></dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -390,11 +390,11 @@ description: "Heimdal Kerberos 5 cryptography functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> Kerberos context<br />
- <i>crypto</i> Kerberos crypto context<br />
- <i>usage</i> Key usage for this buffer<br />
- <i>data</i> array of buffers to process<br />
- <i>num_data</i> length of array<br />
+</dt><dd> <i>context</i> Kerberos context<br/>
+ <i>crypto</i> Kerberos crypto context<br/>
+ <i>usage</i> Key usage for this buffer<br/>
+ <i>data</i> array of buffers to process<br/>
+ <i>num_data</i> length of array<br/>
  <i>type</i> return checksum type if not NULL</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

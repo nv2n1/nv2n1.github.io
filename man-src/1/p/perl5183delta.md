@@ -36,7 +36,7 @@ perl5183delta - what is new for perl v5.18.3
 </dd><dl>
 <dl>
 <dt>&bull;
-</dt><dd> Introduced by perl #113536 &lt;<a rel="nofollow" HREF="https://rt.perl.org/Public/Bug/Display.html?id=113536">https://rt.perl.org/Public/Bug/Display.html?id=113536</a>&gt;, a memory leak on every call to <tt>&quot;system&quot;</tt> and backticks (<tt>&quot; `` &quot;</tt>), on most Win32 Perls starting from 5.18.0 has been fixed. The memory leak only occurred if you enabled psuedo-fork in your build of Win32 Perl, and were running that build on Server 2003 R2 or newer <font SIZE="-1">OS. </font> The leak does not appear on WinXP <font SIZE="-1">SP3.</font> [perl #121676 &lt;<a rel="nofollow" HREF="https://rt.perl.org/Public/Bug/Display.html?id=121676">https://rt.perl.org/Public/Bug/Display.html?id=121676</a>&gt;]</dd></dl>
+</dt><dd> Introduced by perl #113536 &lt;<a rel="nofollow" HREF="https://rt.perl.org/Public/Bug/Display.html?id=113536">https://rt.perl.org/Public/Bug/Display.html?id=113536</a>&gt;, a memory leak on every call to <tt>&quot;system&quot;</tt> and backticks (<tt>&quot; `` &quot;</tt>), on most Win32 Perls starting from 5.18.0 has been fixed. The memory leak only occurred if you enabled psuedo-fork in your build of Win32 Perl, and were running that build on Server 2003 R2 or newer OS.  The leak does not appear on WinXP SP3. [perl #121676 &lt;<a rel="nofollow" HREF="https://rt.perl.org/Public/Bug/Display.html?id=121676">https://rt.perl.org/Public/Bug/Display.html?id=121676</a>&gt;]</dd></dl>
 </dl>
 
 <dl>
@@ -51,7 +51,7 @@ perl5183delta - what is new for perl v5.18.3
 </dd><dt>&bull;
 </dt><dd> A segfault in Digest::SHA has been addressed. [perl #121421]
 </dd><dt>&bull;
-</dt><dd> perl can again be built with <font SIZE="-1">USE_64_BIT_INT,</font> with Visual C 2003, 32 bit. [perl #120925]
+</dt><dd> perl can again be built with USE_64_BIT_INT, with Visual C 2003, 32 bit. [perl #120925]
 </dd><dt>&bull;
 </dt><dd> A leading { (brace) in formats is properly parsed again. [perl #119973]
 </dd><dt>&bull;
@@ -69,9 +69,9 @@ perl5183delta - what is new for perl v5.18.3
 
  The list above is almost certainly incomplete as it is automatically generated from version control history. In particular, it does not include the names of the (very much appreciated) contributors who reported issues to the Perl bug tracker. 
 
- Many of the changes included in this version originated in the <font SIZE="-1">CPAN</font> modules included in Perl's core. We're grateful to the entire <font SIZE="-1">CPAN</font> community for helping Perl to flourish. 
+ Many of the changes included in this version originated in the CPAN modules included in Perl's core. We're grateful to the entire CPAN community for helping Perl to flourish. 
 
- For a more complete list of all of Perl's historical contributors, please see the <i></i><font SIZE="-1"><i>AUTHORS</i></font><i></i> file in the Perl source distribution.
+ For a more complete list of all of Perl's historical contributors, please see the <i></i><i>AUTHORS</i><i></i> file in the Perl source distribution.
 
 <h2>Reporting Bugs</h2>
 
@@ -79,14 +79,14 @@ perl5183delta - what is new for perl v5.18.3
 
  If you believe you have an unreported bug, please run the perlbug program included with your release. Be sure to trim your bug down to a tiny but sufficient test case. Your bug report, along with the output of <tt>&quot;perl -V&quot;</tt>, will be sent off to perlbug [at] perl.org to be analysed by the Perl porting team. 
 
- If the bug you are reporting has security implications, which make it inappropriate to send to a publicly archived mailing list, then please send it to perl5-security-report [at] perl.org. This points to a closed subscription unarchived mailing list, which includes all the core committers, who will be able to help assess the impact of issues, figure out a resolution, and help co-ordinate the release of patches to mitigate or fix the problem across all platforms on which Perl is supported. Please only use this address for security issues in the Perl core, not for modules independently distributed on <font SIZE="-1">CPAN.</font>
+ If the bug you are reporting has security implications, which make it inappropriate to send to a publicly archived mailing list, then please send it to perl5-security-report [at] perl.org. This points to a closed subscription unarchived mailing list, which includes all the core committers, who will be able to help assess the impact of issues, figure out a resolution, and help co-ordinate the release of patches to mitigate or fix the problem across all platforms on which Perl is supported. Please only use this address for security issues in the Perl core, not for modules independently distributed on CPAN.
 
 <h2>SEE ALSO</h2>
 
  The <i>Changes</i> file for an explanation of how to view exhaustive details on what changed. 
 
- The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. 
+ The <i></i><i>INSTALL</i><i></i> file for how to build Perl. 
 
- The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. 
+ The <i></i><i>README</i><i></i> file for general stuff. 
 
  The <i>Artistic</i> and <i>Copying</i> files for copyright information.

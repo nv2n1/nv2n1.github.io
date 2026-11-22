@@ -25,9 +25,9 @@ description: "voms_api.h –"
 <p>struct contactdata</p>
 <p>struct voms</p>
 <p>struct vomsdata</p>
-<p>Macros<br />
+<p>Macros<br/>
 #define NOGLOBUS</p>
-<p>Typedefs<br />
+<p>Typedefs<br/>
  typedef void * <code>gss_cred_id_t</code> </p>
 <p> typedef void * <code>gss_ctx_id_t</code> </p>
 <p> typedef bool(* <code>check_sig</code> )(X509 *, void *, <code>verror_type</code> &amp;)</p>

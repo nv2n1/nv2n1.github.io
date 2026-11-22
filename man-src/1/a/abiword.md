@@ -24,7 +24,7 @@ description: "abiword — flexible cross-platform word processor"
 <dt><code>-u </code><i>PROFILE</i><code>, &#8211;userprofile=</code><i>PROFILE</i></dt>
 <dd> Use <i>PROFILE</i> instead of the default ~/.AbiSuite/AbiWord.Profile to read and store settings.</dd>
 <dt><code>-t </code><i>DEST</i><code>, &#8211;to=</code><i>DEST</i></dt>
-<dd> Convert the given file to another format, writing the result to <i>DEST</i>. The format of <i>DEST</i> is determined by its extension.<br />
+<dd> Convert the given file to another format, writing the result to <i>DEST</i>. The format of <i>DEST</i> is determined by its extension.<br/>
  See also <code>&#8211;to=</code><i>FORMAT</i> and <code>&#8211;to-name</code>.</dd>
 <dt><code>-t </code><i>FORMAT</i><code>, &#8211;to=</code><i>FORMAT</i></dt>
 <dd> Convert the given files(s) to the given format. Unless explicitly specified with <code>&#8211;to-name</code>, the original filename will be used (with a different extension, if necessary). See also <code>EXAMPLES</code>.</dd>

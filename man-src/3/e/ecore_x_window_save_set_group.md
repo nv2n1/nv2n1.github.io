@@ -9,9 +9,9 @@ description: "X Window Change Save Set Functions – Functions that either inser
 
 <p>X Window Change Save Set Functions &#8211; Functions that either inserts or deletes the specified window from the client&#8217;s save-set. </p>
 <h3>Functions</h3>
-<p>EAPI void <code>ecore_x_window_save_set_add</code> (Ecore_X_Window window)<br />
- <i>Inserts the window in the client&#8217;s save-set. </i><br />
- EAPI void <code>ecore_x_window_save_set_del</code> (Ecore_X_Window window)<br />
+<p>EAPI void <code>ecore_x_window_save_set_add</code> (Ecore_X_Window window)<br/>
+ <i>Inserts the window in the client&#8217;s save-set. </i><br/>
+ EAPI void <code>ecore_x_window_save_set_del</code> (Ecore_X_Window window)<br/>
  <i>Deletes the window from the client&#8217;s save-set. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that either inserts or deletes the specified window from the client&#8217;s save-set.</p>

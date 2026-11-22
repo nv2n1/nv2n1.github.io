@@ -11,7 +11,7 @@ description: "ssbev.f –"
 <p> ssbev.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>ssbev</code> (JOBZ, UPLO, N, KD, AB, LDAB, W, Z, LDZ, WORK, INFO)<br />
+<p> subroutine <code>ssbev</code> (JOBZ, UPLO, N, KD, AB, LDAB, W, Z, LDZ, WORK, INFO)<br/>
  <i></i><code> SSBEV computes the eigenvalues and, optionally, the left and/or right eigenvectors for OTHER matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ssbev (characterJOBZ, characterUPLO, integerN, integerKD, real, dimension( ldab, * )AB, integerLDAB, real, dimension( * )W, real, dimension( ldz, * )Z, integerLDZ, real, dimension( * )WORK, integerINFO)</h3>

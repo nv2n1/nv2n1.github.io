@@ -11,7 +11,7 @@ description: "clatps.f –"
 <p> clatps.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>clatps</code> (UPLO, TRANS, DIAG, NORMIN, N, AP, X, SCALE, CNORM, INFO)<br />
+<p> subroutine <code>clatps</code> (UPLO, TRANS, DIAG, NORMIN, N, AP, X, SCALE, CNORM, INFO)<br/>
  <i></i><code>CLATPS</code> solves a triangular system of equations with the matrix held in packed storage.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine clatps (characterUPLO, characterTRANS, characterDIAG, characterNORMIN, integerN, complex, dimension( * )AP, complex, dimension( * )X, realSCALE, real, dimension( * )CNORM, integerINFO)</h3>

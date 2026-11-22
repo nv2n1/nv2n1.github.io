@@ -23,14 +23,14 @@ The duration of the return type is computed from Duration in an unspecified mann
 These function templates are optional: an implementation may choose to instead provide to_sys and from_sys.
 </code></pre>
 <h2>Return value</h2>
-<p>1) A utc_time representing the same point in time as the argument.<br />
+<p>1) A utc_time representing the same point in time as the argument.<br/>
 2) A file_time representing the same point in time as the argument. </p>
 <h2>Notes</h2>
 <p>User code should usually use std::chrono::clock_cast, which provides a generic interface to convert time points between clocks, rather than call these functions directly. </p>
 <h2>See also</h2>
-<p>to_sys converts between file_time and sys_time<br />
-from_sys <i>(public static member function)</i><br />
-<code>[static]</code> (optional)<br />
-clock_cast convert time points of one clock to another<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(function template)</i><br />
+<p>to_sys converts between file_time and sys_time<br/>
+from_sys <i>(public static member function)</i><br/>
+<code>[static]</code> (optional)<br/>
+clock_cast convert time points of one clock to another<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(function template)</i><br/>
 (C++20) </p>

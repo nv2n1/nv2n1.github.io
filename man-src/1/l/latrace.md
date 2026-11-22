@@ -550,8 +550,8 @@ void char u_char short u_short int u_int long u_long
 <dl>
 <dt>
 </dt><dd>
-typedef base_type new_type;<br />
-typedef base_type *new_type;<br />
+typedef base_type new_type;<br/>
+typedef base_type *new_type;<br/>
 typedef base_type **new_type;
 </dd></dl>
 </dl>
@@ -569,13 +569,13 @@ typedef base_type **new_type;
 <dl>
 <dt>
 </dt><dd>
-START::struct NAME {<br />
-    STRUCT_DEF<br />
-};<br />
-STRUCT_DEF::DEF | EMPTY DEF::NAME NAME |<br />
-    NAME &#8216;*&#8217; NAME |<br />
-    struct NAME NAME |<br />
-    struct NAME &#8216;*&#8217; NAME<br />
+START::struct NAME {<br/>
+    STRUCT_DEF<br/>
+};<br/>
+STRUCT_DEF::DEF | EMPTY DEF::NAME NAME |<br/>
+    NAME &#8216;*&#8217; NAME |<br/>
+    struct NAME NAME |<br/>
+    struct NAME &#8216;*&#8217; NAME<br/>
             NAME::[-0 &#8211; 9a &#8211; zA &#8211; Z_] +
 </dd></dl>
 </dl>
@@ -663,7 +663,7 @@ struct ex_st *f3(pid_t *p, struct ex_st k);
 </tr>
 </table>
 <h2>BUGS</h2>
-<p> MANY, plz report bugs to &lt;m[blue]<code>latrace [at] lists.fedorahosted.org</code>m[]<font SIZE="-2">[1]</font>&gt; or &lt;m[blue]<code>olsajiri [at] gmail.com</code>m[]<font SIZE="-2">[2]</font>&gt;. </p>
+<p> MANY, plz report bugs to &lt;m[blue]<code>latrace [at] lists.fedorahosted.org</code>m[][1]&gt; or &lt;m[blue]<code>olsajiri [at] gmail.com</code>m[][2]&gt;. </p>
 <p> You can also visit the m[blue]<code><a rel="nofollow" href="http://people.redhat.com/jolsa/latrace/">http://people.redhat.com/jolsa/latrace/</a></code>m[] page to see the latest release notes information. </p>
 <p> LD_AUDIT related glibc bugs: </p>
 <dl>
@@ -676,23 +676,23 @@ struct ex_st *f3(pid_t *p, struct ex_st k);
 <dt>
 </dt><dd> &bull; <code>Bug 3924 (FIXED in 2.7-2)</code></dd></dl>
 <h2>AUTHOR</h2>
-<p> Jiri Olsa &lt;m[blue]<code>olsajiri [at] gmail.com</code>m[]<font SIZE="-2">[2]</font>&gt;</p>
+<p> Jiri Olsa &lt;m[blue]<code>olsajiri [at] gmail.com</code>m[][2]&gt;</p>
 <h2>CONTRIBUTORS</h2>
 <dl>
 <dt>
-</dt><dd> &bull; Nix &lt;m[blue]<code>nix [at] esperi.org.uk</code>m[]<font SIZE="-2">[3]</font>&gt;</dd></dl>
+</dt><dd> &bull; Nix &lt;m[blue]<code>nix [at] esperi.org.uk</code>m[][3]&gt;</dd></dl>
 <dl>
 <dt>
-</dt><dd> &bull; Akos Pasztory &lt;m[blue]<code>akos.pasztory [at] gmail.com</code>m[]<font SIZE="-2">[4]</font>&gt;</dd></dl>
+</dt><dd> &bull; Akos Pasztory &lt;m[blue]<code>akos.pasztory [at] gmail.com</code>m[][4]&gt;</dd></dl>
 <dl>
 <dt>
-</dt><dd> &bull; Artur Skawina &lt;m[blue]<code>art.08.09 [at] gmail.com</code>m[]<font SIZE="-2">[5]</font>&gt;</dd></dl>
+</dt><dd> &bull; Artur Skawina &lt;m[blue]<code>art.08.09 [at] gmail.com</code>m[][5]&gt;</dd></dl>
 <dl>
 <dt>
-</dt><dd> &bull; Dr. David Alan Gilbert &lt;m[blue]<code>david.gilbert [at] linaro.org</code>m[]<font SIZE="-2">[6]</font>&gt;</dd></dl>
+</dt><dd> &bull; Dr. David Alan Gilbert &lt;m[blue]<code>david.gilbert [at] linaro.org</code>m[][6]&gt;</dd></dl>
 <dl>
 <dt>
-</dt><dd> &bull; Sebastian Pipping &lt;m[blue]<code>sping [at] gentoo.org</code>m[]<font SIZE="-2">[7]</font>&gt;</dd></dl>
+</dt><dd> &bull; Sebastian Pipping &lt;m[blue]<code>sping [at] gentoo.org</code>m[][7]&gt;</dd></dl>
 <h2>LICENSE</h2>
 <p> This is free software, distributed under the <code>GPLv3</code> license.</p>
 <h2>SEE ALSO</h2>

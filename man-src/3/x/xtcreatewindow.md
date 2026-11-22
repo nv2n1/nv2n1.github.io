@@ -45,5 +45,5 @@ description: "XtCreateWindow – window creation convenience function"
 <dt>&bull;</dt>
 <dd>border_width</dd></dl>
 <h2>See Also</h2>
-<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

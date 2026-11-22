@@ -17,9 +17,9 @@ description: "hdf_get_int_value – Return the integer value of a point in the d
 int hdf_get_int_value(HDF *hdf, const char *name, int defval);
 </code></pre>
 <h2>ARGUMENTS</h2>
-<p> hdf -&gt; a node in an HDF data set<br />
- name -&gt; the name of a node to walk to in the data set<br />
- defval -&gt; value to return in case of error or if the node<br />
+<p> hdf -&gt; a node in an HDF data set<br/>
+ name -&gt; the name of a node to walk to in the data set<br/>
+ defval -&gt; value to return in case of error or if the node<br/>
  doesn&#8217;t exist </p>
 <h2>DESCRIPTION</h2>
 <p> hdf_get_int_value walks the HDF data set pointed to by hdf to name, and returns the value of that node converted to an integer. If that node does not exist, or it does not contain a number, the defval is returned. </p>

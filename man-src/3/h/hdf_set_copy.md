@@ -17,8 +17,8 @@ description: "hdf_set_copy -> Copy a value from one location in the dataset to a
 NEOERR *hdf_set_copy(HDF *hdf, const char *dest, const char *src);
 </code></pre>
 <h2>ARGUMENTS</h2>
-<p> hdf -&gt; the pointer to the dataset node<br />
- dest -&gt; the name of the destination node<br />
+<p> hdf -&gt; the pointer to the dataset node<br/>
+ dest -&gt; the name of the destination node<br/>
  src -&gt; the name of the source node </p>
 <h2>DESCRIPTION</h2>
 <p> hdf_set_copy first walks the hdf dataset to the named src node, and then copies that value to the named dest node. If the src node is not found, an error is raised. </p>

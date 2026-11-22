@@ -19,9 +19,9 @@ description: "ANTLR3_STACK_struct –"
 <p> void *(* <code>pop</code> )(struct <code>ANTLR3_STACK_struct</code> *stack) </p>
 <p> <code>ANTLR3_BOOLEAN</code>(* <code>push</code> )(struct <code>ANTLR3_STACK_struct</code> *stack, void *element, void(ANTLR3_CDECL *freeptr)(void *)) </p>
 <p> <code>ANTLR3_UINT32</code>(* <code>size</code> )(struct <code>ANTLR3_STACK_struct</code> *stack) </p>
-<p> void * <code>top</code><br />
- <i>Used for quick access to the top of the stack. </i><br />
- <code>pANTLR3_VECTOR</code> <code>vector</code><br />
+<p> void * <code>top</code><br/>
+ <i>Used for quick access to the top of the stack. </i><br/>
+ <code>pANTLR3_VECTOR</code> <code>vector</code><br/>
  <i>List that supports the stack structure. </i></p>
 <h2>Detailed Description</h2>
 <p> Structure that represents a Stack collection.</p>

@@ -11,7 +11,7 @@ description: "spteqr.f –"
 <p> spteqr.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>spteqr</code> (COMPZ, N, D, E, Z, LDZ, WORK, INFO)<br />
+<p> subroutine <code>spteqr</code> (COMPZ, N, D, E, Z, LDZ, WORK, INFO)<br/>
  <i></i><code>SPTEQR</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine spteqr (characterCOMPZ, integerN, real, dimension( * )D, real, dimension( * )E, real, dimension( ldz, * )Z, integerLDZ, real, dimension( * )WORK, integerINFO)</h3>
@@ -72,8 +72,8 @@ description: "spteqr.f –"
           On exit, E has been destroyed.
 </pre>
 <p> <i>Z</i> </p>
-<p>Z is REAL array, dimension(LDZ, N) On entry, if COMPZ = &#8216;V&#8217;, the orthogonal matrix used in the reduction to tridiagonal form.On exit, if COMPZ = &#8216;V&#8217;, the orthonormal eigenvectors of the original symmetric matrix;<br />
-if COMPZ<br />
+<p>Z is REAL array, dimension(LDZ, N) On entry, if COMPZ = &#8216;V&#8217;, the orthogonal matrix used in the reduction to tridiagonal form.On exit, if COMPZ = &#8216;V&#8217;, the orthonormal eigenvectors of the original symmetric matrix;<br/>
+if COMPZ<br/>
 = &#8216;I&#8217;, the orthonormal eigenvectors of the tridiagonal matrix.If INFO &gt; 0 on exit, Z contains the eigenvectors associated with only the stored eigenvalues.If COMPZ = &#8216;N&#8217;, then Z is not referenced.</p>
 <p> <i>LDZ</i> </p>
 <pre>

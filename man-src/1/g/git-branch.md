@@ -213,7 +213,7 @@ $ git branch -d -r origin/todo origin/html origin/man   <code>(1)</code>
 $ git branch -D test                                    <code>(2)</code>
 </pre>
 </dd></dl>
-<p> <code>1. </code>Delete the remote-tracking branches &quot;todo&quot;, &quot;html&quot; and &quot;man&quot;. The next <i>fetch</i> or <i>pull</i> will create them again unless you configure them not to. See <code><a href="/docs/linux/man/1-git-fetch/">git-fetch</a></code>(1).<br />
+<p> <code>1. </code>Delete the remote-tracking branches &quot;todo&quot;, &quot;html&quot; and &quot;man&quot;. The next <i>fetch</i> or <i>pull</i> will create them again unless you configure them not to. See <code><a href="/docs/linux/man/1-git-fetch/">git-fetch</a></code>(1).<br/>
  <code>2. </code>Delete the &quot;test&quot; branch even if the &quot;master&quot; branch (or whichever branch is currently checked out) does not have all commits from the test branch.
 </dl>
 <p> Listing branches from a specific remote</p>
@@ -226,7 +226,7 @@ $ git branch -r -l '&lt;remote&gt;/&lt;pattern&gt;'                 <code>(1)</c
 $ git for-each-ref 'refs/remotes/&lt;remote&gt;/&lt;pattern&gt;'    <code>(2)</code>
 </pre>
 </dd></dl>
-<p> <code>1. </code>Using <code>-a</code> would conflate &lt;remote&gt; with any local branches you happen to have been prefixed with the same &lt;remote&gt; pattern.<br />
+<p> <code>1. </code>Using <code>-a</code> would conflate &lt;remote&gt; with any local branches you happen to have been prefixed with the same &lt;remote&gt; pattern.<br/>
  <code>2. </code><code>for-each-ref</code> can take a wide range of options. See <code><a href="/docs/linux/man/1-git-for-each-ref/">git-for-each-ref</a></code>(1)
 </dl>
 <p> Patterns will normally need quoting.</p>
@@ -248,7 +248,7 @@ $ git for-each-ref 'refs/remotes/&lt;remote&gt;/&lt;pattern&gt;'    <code>(2)</c
 <p> When combining multiple <code>&#8211;contains</code> and <code>&#8211;no-contains</code> filters, only references that contain at least one of the <code>&#8211;contains</code> commits and contain none of the <code>&#8211;no-contains</code> commits are shown. </p>
 <p> When combining multiple <code>&#8211;merged</code> and <code>&#8211;no-merged</code> filters, only references that are reachable from at least one of the <code>&#8211;merged</code> commits and from none of the <code>&#8211;no-merged</code> commits are shown.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-git-check-ref-format/">git-check-ref-format</a></code>(1), <code><a href="/docs/linux/man/1-git-fetch/">git-fetch</a></code>(1), <code><a href="/docs/linux/man/1-git-remote/">git-remote</a></code>(1), m[blue]<code>&#8220;Understanding history: What is a branch?&#8221;</code>m[]<font SIZE="-2">[1]</font> in the Git User&#8217;s Manual.</p>
+<p> <code><a href="/docs/linux/man/1-git-check-ref-format/">git-check-ref-format</a></code>(1), <code><a href="/docs/linux/man/1-git-fetch/">git-fetch</a></code>(1), <code><a href="/docs/linux/man/1-git-remote/">git-remote</a></code>(1), m[blue]<code>&#8220;Understanding history: What is a branch?&#8221;</code>m[][1] in the Git User&#8217;s Manual.</p>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite</p>
 <h2>NOTES</h2>

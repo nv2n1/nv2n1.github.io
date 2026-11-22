@@ -122,5 +122,5 @@ ar ru libx.a x.o
 <h2>SEE ALSO</h2>
 <p> as well as <i><a href="/docs/linux/man/1-make/">make</a></i>(1) (GNU make manpage) and <i>The</i>GNU<i>Make</i>Manual via <i><a href="/docs/linux/man/1-info/">info</a></i>(1).</p>
 <h2>COPYRIGHT</h2>
-<p> <i>Qmake</i> Is based on GNU Make (<i>gmake</i>), which is copyright by the Free Software Foundation, Inc., Boston, MA, and is protected by the GNU General Public License.<br />
+<p> <i>Qmake</i> Is based on GNU Make (<i>gmake</i>), which is copyright by the Free Software Foundation, Inc., Boston, MA, and is protected by the GNU General Public License.<br/>
  See and the information provided in <i>&lt;xxqs_name_sxx_root&gt;/doc/LICENCES</i> for a statement of further rights and permissions. </p>

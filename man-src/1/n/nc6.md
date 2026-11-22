@@ -10,7 +10,7 @@ description: "nc6 – network swiss army knife"
 
 <p> nc6 &#8211; network swiss army knife</p>
 <h2>SYNOPSIS</h2>
-<p> <code>nc6</code> <i>[options&#8230;] hostname port</i><br />
+<p> <code>nc6</code> <i>[options&#8230;] hostname port</i><br/>
  <code>nc6</code> <i>-l -p port [-s addr] [options&#8230;] [hostname] [port]</i></p>
 <h2>DESCRIPTION</h2>
 <p> <code>netcat6</code> is a simple unix utility which reads and writes data across network connections, using the TCP or UDP protocol over IPv4 or IPv6 networks. It is designed to be a reliable &quot;back-end&quot; tool that can be used directly or easily driven by other programs and scripts. At the same time, it is a feature-rich network debugging and exploration tool, since it can create almost any kind of connection you would need and has several interesting built-in capabilities. <code>netcat6</code> , or <code>nc6</code> as the actual program is named, should have been supplied long ago as another one of those cryptic but standard Unix tools. In the simplest usage, &quot; <code>nc6 host port</code> &quot; creates a TCP connection to the given port on the given target host. Your standard input is then sent to the host, and anything that comes back across the connection is sent to your standard output. This continues indefinitely, until the network side of the connection shuts down. Note that this behavior is different from most other applications which shut everything down and exit after an end-of-file on the standard input (though this style of operation can easily be enabled). netcat6 can also function as a server, by listening for inbound connections on arbitrary ports and then doing the same reading and writing. With minor limitations, netcat6 doesn&#8217;t really care if it runs in &quot;client&quot; or &quot;server&quot; mode &#8212; it still shovels data back and forth until there isn&#8217;t any more left. In this manual page, these two working modes are referred as &quot;connect mode&quot; and &quot;listen mode&quot;, respectively.</p>
@@ -121,5 +121,5 @@ description: "nc6 – network swiss army knife"
 <h2>COPYRIGHT</h2>
 <p> GPL.</p>
 <h2>AUTHORS</h2>
-<p>&nbsp;<wbr>Mauro Tortonesi&nbsp;<wbr>&lt;mauro [at] deepspace6.net&gt;<br />
+<p>&nbsp;<wbr>Mauro Tortonesi&nbsp;<wbr>&lt;mauro [at] deepspace6.net&gt;<br/>
 &nbsp;<wbr>Chris Leishman&nbsp;<wbr>&lt;chris [at] leishman.org&gt; The original netcat was written by a guy we know as the Hobbit &lt;hobbit [at] avian.org&gt;. </p>

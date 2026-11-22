@@ -13,8 +13,8 @@ description: "glutDestroyMenu – Destroy a menu."
 <h2>Synopsis</h2>
 <p>In openglut.h Ft void Fn glutDestroyMenu int menuID</p>
 <h2>Parameters</h2>
-<p>Bf Em<br />
-&nbsp;<wbr>menuID Ef<br />
+<p>Bf Em<br/>
+&nbsp;<wbr>menuID Ef<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>The menu to destroy.</p>
 <h2>Description</h2>
 <p>Destroys a given menu object by its ID. </p>

@@ -94,9 +94,9 @@ description: "rtld-audit – auditing API for the dynamic linker"
 <code> const char *</code><i>symname</i><code>, long *</code><i>framesizep</i><code>);</code></pre>
 <p>This function is invoked just before a PLT entry is called, between two shared objects that have been marked for binding notification. The <i>sym</i>, <i>ndx</i>, <i>refcook</i>, <i>defcook</i>, and <i>symname</i> are as for <code>la_symbind*</code>(). The <i>regs</i> argument points to a structure (defined in <i>&lt;link.h&gt;</i>) containing the values of registers to be used for the call to this PLT entry. The <i>flags</i> argument points to a bit mask that conveys information about, and can be used to modify subsequent auditing of, this PLT entry, as for <code>la_symbind*</code>(). The <i>framesizep</i> argument points to a <i>long int</i> buffer that can be used to explicitly set the frame size used for the call to this PLT entry. If different <code>la_pltenter</code>() invocations for this symbol return different values, then the maximum returned value is used. The <code>la_pltexit</code>() function is called only if this buffer is explicitly set to a suitable value. The return value of <code>la_pltenter</code>() is as for <code>la_symbind*</code>().</p>
 <h3>la_pltexit()</h3>
-<p>The precise name and argument types for this function depend on the hardware platform. (The appropriate definition is supplied by <i>&lt;link.h&gt;</i>.) Here is the definition for x86-32: unsigned int la_i86_gnu_pltexit(Elf32_Sym *sym, unsigned int ndx,<br />
-                                uintptr_t *refcook, uintptr_t *defcook,<br />
-                                const La_i86_regs *inregs, La_i86_retval *outregs,<br />
+<p>The precise name and argument types for this function depend on the hardware platform. (The appropriate definition is supplied by <i>&lt;link.h&gt;</i>.) Here is the definition for x86-32: unsigned int la_i86_gnu_pltexit(Elf32_Sym *sym, unsigned int ndx,<br/>
+                                uintptr_t *refcook, uintptr_t *defcook,<br/>
+                                const La_i86_regs *inregs, La_i86_retval *outregs,<br/>
                                 const char *symname); This function is called when a PLT entry, made between two shared objects that have been marked for binding notification, returns. The function is called just before control returns to the caller of the PLT entry. The <i>sym</i>, <i>ndx</i>, <i>refcook</i>, <i>defcook</i>, and <i>symname</i> are as for <code>la_symbind*</code>(). The <i>inregs</i> argument points to a structure (defined in <i>&lt;link.h&gt;</i>) containing the values of registers used for the call to this PLT entry. The <i>outregs</i> argument points to a structure (defined in <i>&lt;link.h&gt;</i>) containing return values for the call to this PLT entry. These values can be modified by the caller, and the changes will be visible to the caller of the PLT entry. In the current GNU implementation, the return value of <code>la_pltexit</code>() is ignored.</p>
 <h2>Conforming To</h2>
 <p>This API is nonstandard, but very similar to the Solaris API, described in the Solaris <i>Linker and Libraries Guide</i>, in the chapter <i>Runtime Linker Auditing Interface</i>.</p>
@@ -112,87 +112,87 @@ description: "rtld-audit – auditing API for the dynamic linker"
 <h2>Bugs</h2>
 <p>In glibc versions up to and include 2.9, specifying more than one audit library in <code>LD_AUDIT</code> results in a run-time crash. This is reportedly fixed in glibc 2.10.</p>
 <h2>Examples</h2>
-<p>#include &lt;link.h&gt;<br />
-#include &lt;stdio.h&gt;<br />
-unsigned int<br />
-la_version(unsigned int version)<br />
-{<br />
+<p>#include &lt;link.h&gt;<br/>
+#include &lt;stdio.h&gt;<br/>
+unsigned int<br/>
+la_version(unsigned int version)<br/>
+{<br/>
     printf(&quot;la_version(): version = %u; LAV_CURRENT = %u
-&quot;,<br />
-           version, LAV_CURRENT);<br />
-    return LAV_CURRENT;<br />
-}<br />
-char *<br />
-la_objsearch(const char *name, uintptr_t *cookie, unsigned int flag)<br />
-{<br />
-    printf(&quot;la_objsearch(): name = %s; cookie = %p&quot;, name, cookie);<br />
+&quot;,<br/>
+           version, LAV_CURRENT);<br/>
+    return LAV_CURRENT;<br/>
+}<br/>
+char *<br/>
+la_objsearch(const char *name, uintptr_t *cookie, unsigned int flag)<br/>
+{<br/>
+    printf(&quot;la_objsearch(): name = %s; cookie = %p&quot;, name, cookie);<br/>
     printf(&quot;; flag = %s
-&quot;,<br />
-           (flag == LA_SER_ORIG) ? &quot;LA_SER_ORIG&quot; : (flag == LA_SER_LIBPATH) ? &quot;LA_SER_LIBPATH&quot;<br />
-                                               : (flag == LA_SER_RUNPATH)   ? &quot;LA_SER_RUNPATH&quot;<br />
-                                               : (flag == LA_SER_DEFAULT)   ? &quot;LA_SER_DEFAULT&quot;<br />
-                                               : (flag == LA_SER_CONFIG)    ? &quot;LA_SER_CONFIG&quot;<br />
-                                               : (flag == LA_SER_SECURE)    ? &quot;LA_SER_SECURE&quot;<br />
-                                                                            : &quot;???&quot;);<br />
-    return name;<br />
-}<br />
-void la_activity(uintptr_t *cookie, unsigned int flag)<br />
-{<br />
+&quot;,<br/>
+           (flag == LA_SER_ORIG) ? &quot;LA_SER_ORIG&quot; : (flag == LA_SER_LIBPATH) ? &quot;LA_SER_LIBPATH&quot;<br/>
+                                               : (flag == LA_SER_RUNPATH)   ? &quot;LA_SER_RUNPATH&quot;<br/>
+                                               : (flag == LA_SER_DEFAULT)   ? &quot;LA_SER_DEFAULT&quot;<br/>
+                                               : (flag == LA_SER_CONFIG)    ? &quot;LA_SER_CONFIG&quot;<br/>
+                                               : (flag == LA_SER_SECURE)    ? &quot;LA_SER_SECURE&quot;<br/>
+                                                                            : &quot;???&quot;);<br/>
+    return name;<br/>
+}<br/>
+void la_activity(uintptr_t *cookie, unsigned int flag)<br/>
+{<br/>
     printf(&quot;la_activity(): cookie = %p; flag = %s
-&quot;, cookie,<br />
-           (flag == LA_ACT_CONSISTENT) ? &quot;LA_ACT_CONSISTENT&quot; : (flag == LA_ACT_ADD)  ? &quot;LA_ACT_ADD&quot;<br />
-                                                           : (flag == LA_ACT_DELETE) ? &quot;LA_ACT_DELETE&quot;<br />
-                                                                                     : &quot;???&quot;);<br />
-}<br />
-unsigned int<br />
-la_objopen(struct link_map *map, Lmid_t lmid, uintptr_t *cookie)<br />
-{<br />
+&quot;, cookie,<br/>
+           (flag == LA_ACT_CONSISTENT) ? &quot;LA_ACT_CONSISTENT&quot; : (flag == LA_ACT_ADD)  ? &quot;LA_ACT_ADD&quot;<br/>
+                                                           : (flag == LA_ACT_DELETE) ? &quot;LA_ACT_DELETE&quot;<br/>
+                                                                                     : &quot;???&quot;);<br/>
+}<br/>
+unsigned int<br/>
+la_objopen(struct link_map *map, Lmid_t lmid, uintptr_t *cookie)<br/>
+{<br/>
     printf(&quot;la_objopen(): loading \&quot;%s\&quot;; lmid = %s; cookie=%p
-&quot;,<br />
-           map-&gt;l_name,<br />
-           (lmid == LM_ID_BASE) ? &quot;LM_ID_BASE&quot; : (lmid == LM_ID_NEWLM) ? &quot;LM_ID_NEWLM&quot;<br />
-                                                                       : &quot;???&quot;,<br />
-           cookie);<br />
-    return LA_FLG_BINDTO | LA_FLG_BINDFROM;<br />
-}<br />
-unsigned int<br />
-la_objclose(uintptr_t *cookie)<br />
-{<br />
+&quot;,<br/>
+           map-&gt;l_name,<br/>
+           (lmid == LM_ID_BASE) ? &quot;LM_ID_BASE&quot; : (lmid == LM_ID_NEWLM) ? &quot;LM_ID_NEWLM&quot;<br/>
+                                                                       : &quot;???&quot;,<br/>
+           cookie);<br/>
+    return LA_FLG_BINDTO | LA_FLG_BINDFROM;<br/>
+}<br/>
+unsigned int<br/>
+la_objclose(uintptr_t *cookie)<br/>
+{<br/>
     printf(&quot;la_objclose(): %p
-&quot;, cookie);<br />
-    return 0;<br />
-}<br />
-void la_preinit(uintptr_t *cookie)<br />
-{<br />
+&quot;, cookie);<br/>
+    return 0;<br/>
+}<br/>
+void la_preinit(uintptr_t *cookie)<br/>
+{<br/>
     printf(&quot;la_preinit(): %p
-&quot;, cookie);<br />
-}<br />
-uintptr_t<br />
-la_symbind32(Elf32_Sym *sym, unsigned int ndx, uintptr_t *refcook,<br />
-             uintptr_t *defcook, unsigned int *flags, const char *symname)<br />
-{<br />
+&quot;, cookie);<br/>
+}<br/>
+uintptr_t<br/>
+la_symbind32(Elf32_Sym *sym, unsigned int ndx, uintptr_t *refcook,<br/>
+             uintptr_t *defcook, unsigned int *flags, const char *symname)<br/>
+{<br/>
     printf(&quot;la_symbind32(): symname = %s; sym-&gt;st_value = %p
-&quot;,<br />
-           symname, sym-&gt;st_value);<br />
-    printf(&quot;        ndx = %u; flags = %#x&quot;, ndx, *flags);<br />
+&quot;,<br/>
+           symname, sym-&gt;st_value);<br/>
+    printf(&quot;        ndx = %u; flags = %#x&quot;, ndx, *flags);<br/>
     printf(&quot;; refcook = %p; defcook = %p
-&quot;, refcook, defcook);<br />
-    return sym-&gt;st_value;<br />
-}<br />
-uintptr_t<br />
-la_symbind64(Elf64_Sym *sym, unsigned int ndx, uintptr_t *refcook,<br />
-             uintptr_t *defcook, unsigned int *flags, const char *symname)<br />
-{<br />
+&quot;, refcook, defcook);<br/>
+    return sym-&gt;st_value;<br/>
+}<br/>
+uintptr_t<br/>
+la_symbind64(Elf64_Sym *sym, unsigned int ndx, uintptr_t *refcook,<br/>
+             uintptr_t *defcook, unsigned int *flags, const char *symname)<br/>
+{<br/>
     printf(&quot;la_symbind64(): symname = %s; sym-&gt;st_value = %p
-&quot;,<br />
-           symname, sym-&gt;st_value);<br />
-    printf(&quot;        ndx = %u; flags = %#x&quot;, ndx, *flags);<br />
+&quot;,<br/>
+           symname, sym-&gt;st_value);<br/>
+    printf(&quot;        ndx = %u; flags = %#x&quot;, ndx, *flags);<br/>
     printf(&quot;; refcook = %p; defcook = %p
-&quot;, refcook, defcook);<br />
-    return sym-&gt;st_value;<br />
-} Elf32_Addr la_i86_gnu_pltenter(Elf32_Sym *sym, unsigned int ndx,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uintptr_t&nbsp;*refcook, uintptr_t&nbsp;*defcook, La_i86_regs&nbsp;*regs,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned int&nbsp;*flags, const char&nbsp;*symname, long&nbsp;*framesizep) {<br />
+&quot;, refcook, defcook);<br/>
+    return sym-&gt;st_value;<br/>
+} Elf32_Addr la_i86_gnu_pltenter(Elf32_Sym *sym, unsigned int ndx,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uintptr_t&nbsp;*refcook, uintptr_t&nbsp;*defcook, La_i86_regs&nbsp;*regs,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned int&nbsp;*flags, const char&nbsp;*symname, long&nbsp;*framesizep) {<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;la_i86_gnu_pltenter():&nbsp;%s&nbsp;(%p)
 &quot;, symname, sym-&gt;st_value); </p>
 <pre><code>return sym-&gt;st_value;

@@ -10,7 +10,7 @@ description: "dlartv.f –"
 <p>dlartv.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dlartv</code> (N, X, INCX, Y, INCY, C, S, INCC)<br />
+<p>subroutine <code>dlartv</code> (N, X, INCX, Y, INCY, C, S, INCC)<br/>
  <i></i><code>DLARTV</code> applies a vector of plane rotations with real cosines and real sines to the elements of a pair of vectors.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlartv (integerN, double precision, dimension( * )X, integerINCX, double precision, dimension( * )Y, integerINCY, double precision, dimension( * )C, double precision, dimension( * )S, integerINCC)</h3>

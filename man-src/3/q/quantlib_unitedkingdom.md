@@ -12,7 +12,7 @@ description: "QuantLib::UnitedKingdom – United Kingdom calendars."
 <p>#include &lt;ql/time/calendars/unitedkingdom.hpp&gt; </p>
 <p> Inherits <code>QuantLib::Calendar</code>. </p>
 <h3>Public Types</h3>
-<p>enum <code>Market</code> { <code>Settlement</code>, <code>Exchange</code>, <code>Metals</code> }<br />
+<p>enum <code>Market</code> { <code>Settlement</code>, <code>Exchange</code>, <code>Metals</code> }<br/>
  <i>UK calendars. </i></p>
 <h3>Public Member Functions</h3>
 <p><code>UnitedKingdom</code> (<code>Market</code> market=<code>Settlement</code>) </p>

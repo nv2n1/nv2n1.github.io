@@ -10,8 +10,8 @@ description: "ibmssh IB MANAGEMENT SIMULATOR – Extentended TCL shell"
 
 <p> <code>ibmssh</code> IB MANAGEMENT SIMULATOR &#8211; Extentended TCL shell</p>
 <h2>DESCRIPTION</h2>
-<p> <code>ibmssh</code> is a <font SIZE="-1">TCL</font> shell extended with interface for the <font SIZE="-1">IB</font> Management Simulator facilities. Normally you will not run this shell directly &#8211; but instead it will be invoked by the <code>IBMgtSim</code> utility. However, in order to write simulation flows that interacts closely with the simulated model, a simulation flow should be provided. This flow is loaded by IBMgtSim and excersize the <font SIZE="-1">API</font> provided by this shell. </p>
-<p> The following sub sections provide detailed definition for those objects and <font SIZE="-1">API</font>.</p>
+<p> <code>ibmssh</code> is a TCL shell extended with interface for the IB Management Simulator facilities. Normally you will not run this shell directly &#8211; but instead it will be invoked by the <code>IBMgtSim</code> utility. However, in order to write simulation flows that interacts closely with the simulated model, a simulation flow should be provided. This flow is loaded by IBMgtSim and excersize the API provided by this shell. </p>
+<p> The following sub sections provide detailed definition for those objects and API.</p>
 <h2>IBMgtSim Constants</h2>
 <p> These constants are provided by IBMgtSim </p>
 <p> <code>Massage Manager Log Verbosity Flags</code> </p>
@@ -187,7 +187,7 @@ description: "ibmssh IB MANAGEMENT SIMULATOR – Extentended TCL shell"
 <p> <code>class ib_node_desc_t</code> </p>
 <dl>
 <dt>[ Member data: returns uint8_array_t * ] -description</dt>
-<dd> Node String is an array of <font SIZE="-1">UTF-8</font> character that describes the node in text format Note that this string is <font SIZE="-1">NOT</font> <font SIZE="-1">NULL</font> <font SIZE="-1">TERMINATED</font>!
+<dd> Node String is an array of UTF-8 character that describes the node in text format Note that this string is NOT NULL TERMINATED!
 </dd></dl>
 <p> <code>class ib_lft_record_t</code> </p>
 <dl>
@@ -287,13 +287,13 @@ description: "ibmssh IB MANAGEMENT SIMULATOR – Extentended TCL shell"
 <dt>[ Member : returns int ] setPKeyTblBlock portNum blockNum tbl</dt>
 <dd> set pkey table block</dd>
 <dt>[ Member : returns int ] setCrSpace startAddr length data</dt>
-<dd> set <font SIZE="-1">CR</font> Space Value</dd>
+<dd> set CR Space Value</dd>
 <dt>[ Member : returns int ] getCrSpace startAddr length data</dt>
-<dd> get <font SIZE="-1">CR</font> Space Value</dd>
+<dd> get CR Space Value</dd>
 <dt>[ Member : returns int ] getMFTBlock blockIdx portIdx</dt>
-<dd> get <font SIZE="-1">MFT</font> block</dd>
+<dd> get MFT block</dd>
 <dt>[ Member : returns int ] setMFTBlock blockIdx portIdx inMftBlock</dt>
-<dd> set <font SIZE="-1">MFT</font> block
+<dd> set MFT block
 </dd></dl>
 <p> <code>class madMcMemberRec</code> </p>
 <dl>
@@ -489,4 +489,4 @@ description: "ibmssh IB MANAGEMENT SIMULATOR – Extentended TCL shell"
 </dd><dt>[ Member : returns int ] send_trap pFromNode fromPort destLid</dt>
 <dd></dd></dl>
 <h2>AUTHOR</h2>
-<p> Eitan Zahavi, Mellanox Technologies <font SIZE="-1">LTD</font>, eitan [at] mellanox.co.il </p>
+<p> Eitan Zahavi, Mellanox Technologies LTD, eitan [at] mellanox.co.il </p>

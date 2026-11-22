@@ -165,10 +165,10 @@ compctl &#8211; M &#8221; &#8216;m:{a-zA-Z}={A-Za-z}&#8217;
 <dl>
 <dt>
 </dt><dd>
-function whoson<br />
-{<br />
-    reply = (`users`);<br />
-}<br />
+function whoson<br/>
+{<br/>
+    reply = (`users`);<br/>
+}<br/>
 compctl &#8211; K whoson talk
 </dd></dl>
 <p> completes only logged-on users after `<code>talk</code>&#8216;. Note that `<code>whoson</code>&#8216; must return an array, so `<code>reply=`users`</code>&#8216; would be incorrect.</dl>
@@ -332,8 +332,8 @@ compctl &#8211; x &#8216;r[-exec,;]&#8217; &#8211; l &#8221; &#8211;find
 <dl>
 <dt>
 </dt><dd>
-compctl &#8211; u &#8211; x &#8216;s[+] c[-1,-f],s[-f+]&#8217; \<br />
-  &#8211; g &#8216;~/Mail/*(:t)&#8217; &#8211;<br />
+compctl &#8211; u &#8211; x &#8216;s[+] c[-1,-f],s[-f+]&#8217; \<br/>
+  &#8211; g &#8216;~/Mail/*(:t)&#8217; &#8211;<br/>
     &#8216;s[-f],c[-1,-f]&#8217; &#8211; f&#8211; mail
 </dd></dl>
 <p> This is to be interpreted as follows: </p>

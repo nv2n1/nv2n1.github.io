@@ -23,7 +23,7 @@ description: "pbs_mom – start a pbs batch execution mini-server"
 <dt>-C chkdirectory</dt>
 <dd>Specifies the path of the directory used to hold checkpoint files. [Currently this is only valid on Cray systems.] The default directory is PBS_HOME/spool/checkpoint, see the -d option. The directory specified with the -C option must be owned by root and accessible (rwx) only by root to protect the security of the checkpoint files.</dd>
 <dt>-c config</dt>
-<dd>Specifies an alternative configuration file, see description below. If this is a relative file name it will be relative to PBS_HOME/mom_priv, see the -d option. If the specified file cannot be opened, pbs_mom will abort. If the -c option is not supplied, pbs_mom will attempt to open the default<br />
+<dd>Specifies an alternative configuration file, see description below. If this is a relative file name it will be relative to PBS_HOME/mom_priv, see the -d option. If the specified file cannot be opened, pbs_mom will abort. If the -c option is not supplied, pbs_mom will attempt to open the default<br/>
 &nbsp;<wbr>configuration file&nbsp;<wbr>&quot;config&quot;&nbsp;<wbr>in PBS_HOME/mom_priv.&nbsp;<wbr>&nbsp;<wbr>If this file is not present, pbs_mom will log the fact and continue.</dd>
 <dt>-h help</dt>
 <dd>Displays the help/usage message.</dd>
@@ -32,7 +32,7 @@ description: "pbs_mom – start a pbs batch execution mini-server"
 <dt>-d directory</dt>
 <dd>Specifies the path of the directory which is the home of the servers working files, PBS_HOME. This option is typically used along with -M when debugging MOM. The default directory is given by $PBS_SERVER_HOME which is typically <code></dd>
 <dt>-L logfile</dt>
-<dd>Specifies an absolute path name for use as the log file. If not specified, MOM will open a file named for the current date in the PBS_HOME/mom_logs directory, see the </code><i> </i><font SIZE="-1"><i> option.</dd>
+<dd>Specifies an absolute path name for use as the log file. If not specified, MOM will open a file named for the current date in the PBS_HOME/mom_logs directory, see the </code><i> </i><i> option.</dd>
 <dt>-m</dt>
 <dd>Directs the MOM to start in multi-mom mode. In addition to using -m the -M, -R and -A options need to be used to properly start a MOM in multi-mom mode. For example </i><code>pbs_mom -m -M 30002 -R 30003 -A alias-host </code> will start pbs_mom with the service port on port 30002, the manager port at 30003 and with the name alias-host.</dd>
 <dt>-M port</dt>
@@ -40,8 +40,8 @@ description: "pbs_mom – start a pbs batch execution mini-server"
 <dt>-R port</dt>
 <dd>Specifies the port number on which the mini-server (MOM) will listen for resource monitor requests, task manager requests and inter-MOM messages.</dd>
 <dt>-p</dt>
-<dd>(Default after version 2.4.0) (Preserve running jobs) &#8212; Specifies the impact on jobs which were in execution when the<tt>&nbsp;<wbr></tt>mini-server shut-down.<br />
- The -p option tries to preserve any running jobs when the MOM restarts. The new mini-server will not be the parent of any running jobs, MOM has lost control of her<tt>&nbsp;<wbr></tt>offspring (not a new situation for a mother).<br />
+<dd>(Default after version 2.4.0) (Preserve running jobs) &#8212; Specifies the impact on jobs which were in execution when the<tt>&nbsp;<wbr></tt>mini-server shut-down.<br/>
+ The -p option tries to preserve any running jobs when the MOM restarts. The new mini-server will not be the parent of any running jobs, MOM has lost control of her<tt>&nbsp;<wbr></tt>offspring (not a new situation for a mother).<br/>
  The MOM will allow the jobs to continue to run and monitor them indirectly via polling. All recovered jobs will report an exit code of 0 when they are complete. The -p option is mutually exclusive with the -r, -P and -q options.</dd>
 <dt>-P</dt>
 <dd>(Terminate all jobs and remove them from the queue) &#8212; Specifies the impact on jobs which were in execution when the mini-server shut-down. With the -P option, it is assumed that either the entire system has been restarted or the MOM has been down so long that it can no longer guarantee that the pid of any running process is the same as the recorded job process pid of a recovering job. Unlike the -p option no attempt is made to try and preserve or recover running jobs. All jobs are terminated and removed from the queue. The -q option is mutually exclusive with the -p, -q and -r options.</dd>
@@ -54,7 +54,7 @@ description: "pbs_mom – start a pbs batch execution mini-server"
 <dd>Specifies the port number on which the pbs_server is listening for requests. If pbs_server is started with a -p option, pbs_mom will need to use the -S option and match the port value which was used to start pbs_server.</dd>
 <dt>-x</dt>
 <dd>Disables the check for privileged port resource monitor connections. This is used mainly for testing since the privileged port is the only mechanism used to prevent any ordinary user from connecting.</dd></dl>
-<p> </font></p>
+<p> </p>
 <h2>Configuration File</h2>
 <p>The configuration file may be specified on the command line at program start with the -c flag. The use of this file is to provide several types of run time information to pbs_mom: static resource names and values, external resources provided by a program to be run on request via a shell escape, and values to pass to internal set up functions at initialization (and re-initialization). </p>
 <p> Each item type is on a single line with the component parts separated by white space. If the line starts with a hash mark (pound sign, #), the line is considered to be a comment and is skipped.</p>
@@ -122,10 +122,10 @@ description: "pbs_mom – start a pbs batch execution mini-server"
 <dt>max_load</dt>
 <dd>maximum processor load. Nodes over this load average are considered busy (see ideal_load above).</dd>
 <dt>memory_pressure_threshold</dt>
-<dd>The option is only available, if pbs_mom is enabled to use cpusets. If set to a value &gt; 0, a job gets killed if its memory pressure exceeds this value, and if $memory_pressure_duration is set. The default is 0 (memory pressure recording is off).<br />
+<dd>The option is only available, if pbs_mom is enabled to use cpusets. If set to a value &gt; 0, a job gets killed if its memory pressure exceeds this value, and if $memory_pressure_duration is set. The default is 0 (memory pressure recording is off).<br/>
  See <a href="/docs/linux/man/7-cpuset/">cpuset</a>(7) for more information about memory pressure.</dd>
 <dt>memory_pressure_duration</dt>
-<dd>The option is only available, if pbs_mom is enabled to use cpusets. Specifies the number of subsequent MOM intervals a job&#8217;s memory pressure must be above $memory_pressure_threshold to get killed. The default is 0 (jobs are never killed due to memory pressure). set<br />
+<dd>The option is only available, if pbs_mom is enabled to use cpusets. Specifies the number of subsequent MOM intervals a job&#8217;s memory pressure must be above $memory_pressure_threshold to get killed. The default is 0 (jobs are never killed due to memory pressure). set<br/>
  See <a href="/docs/linux/man/7-cpuset/">cpuset</a>(7) for more information about memory pressure.</dd>
 <dt>node_check_script</dt>
 <dd>specifies the fully qualified pathname of the health check script to run (see HEALTH CHECK for more information).</dd>
@@ -136,7 +136,7 @@ description: "pbs_mom – start a pbs batch execution mini-server"
 </dd><dt>nodefile_suffix</dt>
 <dd>Specifies the suffix to append to a host names to denote the data channel network adapter in a multihomed compute node. With the suffix of &#8216;i&#8217; and the control channel adapter with the name node01, the data channel would have a hostname of node01i.</dd>
 <dt>nospool_dir_list</dt>
-<dd>If the job&#8217;s output file should be in one of the paths specified here, then it will be spooled directly in that directory instead of the normal spool directory.<br />
+<dd>If the job&#8217;s output file should be in one of the paths specified here, then it will be spooled directly in that directory instead of the normal spool directory.<br/>
  Specified in the format path1, path2, etc.</dd>
 <dt>pbsclient</dt>
 <dd>which causes a host name to be added to the list of hosts which will be allowed to connect to MOM as long as they are using a privilaged port for the purposes of resource monitor requests. For example, here are two configuration file lines which will allow the hosts &quot;fred&quot; and &quot;wilma&quot; to connect:</dd>
@@ -152,7 +152,7 @@ description: "pbs_mom – start a pbs batch execution mini-server"
 </dd><dt>restricted</dt>
 <dd>which causes a host name to be added to the list of hosts which will be allowed to connect to MOM without needing to use a privilaged port. These names allow for wildcard matching. For example, here is a configuration file line which will allow queries from any host from the domain &quot;ibm.com&quot;.</dd>
 <dd>
-</dd><dd>The restriction which applies to these connections is that only internal queries may be made. No resources from a config file will be found. This is to prevent any shell commands from being run by a non-root process.<br />
+</dd><dd>The restriction which applies to these connections is that only internal queries may be made. No resources from a config file will be found. This is to prevent any shell commands from being run by a non-root process.<br/>
  This parameter is generally not required except for some versions of OSX.</dd>
 <dt>remote_checkpoint_dirs</dt>
 <dd>Specifies what server checkpoint directories are remotely mounted. This directive is used to tell the MOM which directories are shared with the server. Using remote checkpoint directories eliminates the need to copy the checkpoint files back and forth between the MOM and the server. This parameter is available in 2.4.1 and later.</dd>
@@ -168,7 +168,7 @@ description: "pbs_mom – start a pbs batch execution mini-server"
 <dt>status_update_time</dt>
 <dd>Specifies (in seconds) how often MOM updates its status information to pbs_server. This value should correlate with the server&#8217;s scheduling interval. High values increase the load of pbs_server and the network. Low values cause pbs_server to report stale information. Default is 45 seconds.</dd>
 <dt>tmpdir</dt>
-<dd>Sets the directory basename for a per-job temporary directory. Before job launch, MOM will append the jobid to the tmpdir basename and create the directory. After the job exit, MOM will recursively delete it. The env variable TMPDIR will be set for all pro/epilog scripts, the job script, and TM tasks.<br />
+<dd>Sets the directory basename for a per-job temporary directory. Before job launch, MOM will append the jobid to the tmpdir basename and create the directory. After the job exit, MOM will recursively delete it. The env variable TMPDIR will be set for all pro/epilog scripts, the job script, and TM tasks.<br/>
  Directory creation and removal is done as the job owner and group, so the owner must have write permission to create the directory. If the directory already exists and is owned by the job owner, it will not be deleted after the job. If the directory already exists and is NOT owned by the job owner, the job start will be rejected.</dd>
 <dt>timeout</dt>
 <dd>Specifies the number of seconds before TCP messages will time out. TCP messages include job obituaries, and TM requests if RPP is disabled. Default is 60 seconds.</dd>

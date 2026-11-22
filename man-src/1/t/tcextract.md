@@ -16,8 +16,8 @@ description: "tcextract – read multimedia file from medium, extract or demulti
 <h2>COPYRIGHT</h2>
 <p> <code>tcextract</code> is Copyright (C) by Thomas Oestreich.</p>
 <h2>DESCRIPTION</h2>
-<p> <code>tcextract</code> is part of and usually called by <code>transcode</code>.<br />
- However, it can also be used independently.<br />
+<p> <code>tcextract</code> is part of and usually called by <code>transcode</code>.<br/>
+ However, it can also be used independently.<br/>
  <code>tcextract</code> reads source (from stdin if not explicitely defined) and prints on the standard output.</p>
 <h2>OPTIONS</h2>
 <dl>
@@ -67,7 +67,7 @@ description: "tcextract – read multimedia file from medium, extract or demulti
 <h2>EXAMPLES</h2>
 <p> The command <code>tcextract -i foo.avi -x mp3 -a 3</code> extracts MPEG audio track 3 from the AVI-file foo.avi and prints the bitstream to stdout. </p>
 <h2>AUTHORS</h2>
-<p> <code>tcextract</code> was written by Thomas Oestreich<br />
+<p> <code>tcextract</code> was written by Thomas Oestreich<br/>
  &lt;ostreich [at] theorie.physik.uni-goettingen.de&gt; with contributions from many others. See AUTHORS for details.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-avifix/">avifix</a></code>(1), <code><a href="/docs/linux/man/1-avisync/">avisync</a></code>(1), <code><a href="/docs/linux/man/1-avimerge/">avimerge</a></code>(1), <code><a href="/docs/linux/man/1-avisplit/">avisplit</a></code>(1), <code><a href="/docs/linux/man/1-tcprobe/">tcprobe</a></code>(1), <code><a href="/docs/linux/man/1-tcscan/">tcscan</a></code>(1), <code><a href="/docs/linux/man/1-tccat/">tccat</a></code>(1), <code><a href="/docs/linux/man/1-tcdemux/">tcdemux</a></code>(1), <code><a href="/docs/linux/man/1-tcextract/">tcextract</a></code>(1), <code><a href="/docs/linux/man/1-tcdecode/">tcdecode</a></code>(1), <code><a href="/docs/linux/man/1-transcode/">transcode</a></code>(1) </p>

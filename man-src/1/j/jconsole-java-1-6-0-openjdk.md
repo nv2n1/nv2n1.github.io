@@ -19,8 +19,8 @@ description: "jconsole – Java Monitoring and Management Console"
 <dt>connection = pid | host:port | jmxUrl</dt>
 <dd>
 </dd><dl>
-<dd><i>pid</i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> Process ID of a local Java VM. The Java VM must be running with the same user ID as the user ID running jconsole. See JMX Monitoring and Management for details.<br />
- <i>host</i>:<i>port</i>&nbsp;<wbr>&nbsp;<wbr> Name of the host system on which the Java VM is running and the port number specified by the system property <i>com.sun.management.jmxremote.port</i> when the Java VM was started. See JMX Monitoring and Management for details.<br />
+<dd><i>pid</i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> Process ID of a local Java VM. The Java VM must be running with the same user ID as the user ID running jconsole. See JMX Monitoring and Management for details.<br/>
+ <i>host</i>:<i>port</i>&nbsp;<wbr>&nbsp;<wbr> Name of the host system on which the Java VM is running and the port number specified by the system property <i>com.sun.management.jmxremote.port</i> when the Java VM was started. See JMX Monitoring and Management for details.<br/>
  <i>jmxUrl</i>&nbsp;<wbr>&nbsp;<wbr> Address of the JMX agent to be connected to as described in JMXServiceURL.</dd></dl>
 </dl>
 </dl>

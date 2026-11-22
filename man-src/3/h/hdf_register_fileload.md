@@ -17,8 +17,8 @@ description: "hdf_register_fileload – register a fileload function"
 void hdf_register_fileload(HDF *hdf, void *ctx, HDFFILELOAD fileload);
 </code></pre>
 <h2>ARGUMENTS</h2>
-<p> hdf &#8211; pointer to a head HDF node<br />
- ctx &#8211; pointer that is passed to the HDFFILELOAD function when called<br />
+<p> hdf &#8211; pointer to a head HDF node<br/>
+ ctx &#8211; pointer that is passed to the HDFFILELOAD function when called<br/>
  fileload &#8211; a HDFFILELOAD function </p>
 <h2>DESCRIPTION</h2>
 <p> hdf_register_fileload registers a fileload function that overrides the built-in function. The built-in function uses hdf_search_path and ne_file_load (based on stat/open/read) to find and load the file on every hdf_read_file (including #include). You can override this function if you wish to provide other file search functions, or load the hdf file from an in-memory cache, etc. </p>

@@ -36,10 +36,10 @@ description: "pki –req – Create a PKCS#10 certificate request"
 <dd>Encoding of the created certificate file. Either <i>der</i> (ASN.1 DER) or <i>pem</i> (Base64 PEM), defaults to <i>der</i>.</dd></dl>
 <h2>Examples</h2>
 <p>Generate a certificate request for an RSA key, with a subjectAltName extension: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>pki &#8211;req &#8211;in key.der &#8211;dn&nbsp;<wbr>&quot;C=CH, O=strongSwan, CN=moon&quot;&nbsp;<wbr>\<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>pki &#8211;req &#8211;in key.der &#8211;dn&nbsp;<wbr>&quot;C=CH, O=strongSwan, CN=moon&quot;&nbsp;<wbr>\<br/>
 &nbsp;<wbr>&#8211;san moon [at] strongswan.org&nbsp;<wbr>&gt;&nbsp;<wbr>req.der </p>
 <p> Generate a certificate request for an ECDSA key and a different digest: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>pki &#8211;req &#8211;in key.der &#8211;type ecdsa &#8211;digest sha256&nbsp;<wbr>\<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>pki &#8211;req &#8211;in key.der &#8211;type ecdsa &#8211;digest sha256&nbsp;<wbr>\<br/>
 &#8211;dn&nbsp;<wbr>&quot;C=CH, O=strongSwan, CN=carol&quot;&nbsp;<wbr>&nbsp;<wbr>&gt;&nbsp;<wbr>req.der </p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-pki/">pki</a></code>(1)</p>

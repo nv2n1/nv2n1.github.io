@@ -12,18 +12,18 @@ description: "pg – browse pagewise through text files"
 <h2>SYNOPSIS</h2>
 <p> <code>pg</code> [<code>&#8211;</code><i>number</i>] [<code>-p</code> <i>string</i>] [<code>-cefnrs</code>] [<code>+</code><i>line</i>] [<code>+/</code><i>pattern</i>/] [<i>file</i>&#8230;]</p>
 <h2>DESCRIPTION</h2>
-<p> <code>pg</code> displays a text file on a <font SIZE="-1">CRT</font> one screenful at once. After each page, a prompt is displayed. The user may then either press the newline key to view the next page or one of the keys described below. </p>
+<p> <code>pg</code> displays a text file on a CRT one screenful at once. After each page, a prompt is displayed. The user may then either press the newline key to view the next page or one of the keys described below. </p>
 <p> If no filename is given on the command line, <code>pg</code> reads from standard input. If standard output is not a terminal, <code>pg</code> acts like <i><a href="/docs/linux/man/1-cat/">cat</a></i>(1) but precedes each file with its name if there is more than one. </p>
 <p> If input comes from a pipe, <code>pg</code> stores the data in a buffer file while reading to make navigation possible.</p>
 <h2>OPTIONS</h2>
 <p> <code>pg</code> accepts the following options:</p>
 <dl>
 <dt><code>&#8211;</code><i>number</i></dt>
-<dd> The number of lines per page. Usually, this is the number of <font SIZE="-1">CRT</font> lines minus one.</dd>
+<dd> The number of lines per page. Usually, this is the number of CRT lines minus one.</dd>
 <dt><code>-c</code></dt>
 <dd> Clear the screen before a page is displayed, if the terminfo entry for the terminal provides this capability.</dd>
 <dt><code>-e</code></dt>
-<dd> Do not pause and display <font SIZE="-1">(EOF)</font> at the end of a file.</dd>
+<dd> Do not pause and display (EOF) at the end of a file.</dd>
 <dt><code>-f</code></dt>
 <dd> Do not split long lines.</dd>
 <dt><code>-n</code></dt>
@@ -91,6 +91,6 @@ description: "pg – browse pagewise through text files"
 <p> <code><a href="/docs/linux/man/1-cat/">cat</a></code>(1), <code><a href="/docs/linux/man/1-more/">more</a></code>(1), <code><a href="/docs/linux/man/1-sh/">sh</a></code>(1), <code><a href="/docs/linux/man/5-terminfo/">terminfo</a></code>(5), <code><a href="/docs/linux/man/7-locale/">locale</a></code>(7), <code><a href="/docs/linux/man/7-regex/">regex</a></code>(7), <code><a href="/docs/linux/man/7-term/">term</a></code>(7)</p>
 <h2>NOTES</h2>
 <p> <code>pg</code> expects the terminal tabulators to be set every eight positions. </p>
-<p> Files that include <font SIZE="-1">NUL</font> characters cannot be displayed by <code>pg</code>.</p>
+<p> Files that include NUL characters cannot be displayed by <code>pg</code>.</p>
 <h2>AVAILABILITY</h2>
 <p> The pg command is part of the util-linux package and is available from <a href="ftp://ftp.kernel.org/pub/linux/utils/util-linux/.">ftp://ftp.kernel.org/pub/linux/utils/util-linux/.</a> </p>

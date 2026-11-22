@@ -17,8 +17,8 @@ description: "pmParseInterval – convert interval string to timeval structure"
 <p> The input <i>string</i> is most commonly the argument following a <code>-t</code> command line option to a PCP application, and the syntax is fully described in <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1).</p>
 <h2>Diagnostics</h2>
 <p><code>pmParseInterval</code> returns 0 and <i>errmsg</i> is undefined if the parsing is successful. </p>
-<p> If the given <i>string</i> does not conform to the required syntax <code>pmParseInterval</code> returns -1 and a dynamically allocated error message string in <i>errmsg</i>. The error message is terminated with a newline and includes the text of the input <i>string</i> along with an indicator of the position at which the error was detected, e.g.<br />
- <i>4minutes 30mumble</i><br />
+<p> If the given <i>string</i> does not conform to the required syntax <code>pmParseInterval</code> returns -1 and a dynamically allocated error message string in <i>errmsg</i>. The error message is terminated with a newline and includes the text of the input <i>string</i> along with an indicator of the position at which the error was detected, e.g.<br/>
+ <i>4minutes 30mumble</i><br/>
  <i> ^ &#8212; unexpected value</i> </p>
 <p> In the case of an error, the caller is responsible for calling <code><a href="/docs/linux/man/3-free/">free</a></code>(3) to release the space allocated for <i>errmsg</i>.</p>
 <h2>See Also</h2>

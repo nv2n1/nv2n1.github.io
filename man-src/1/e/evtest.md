@@ -41,8 +41,8 @@ fuser -v /dev/input/eventX
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-inputattach/">inputattach</a>(1)</p>
 <h2>AUTHOR</h2>
-<p> evtest was written by Vojtech Pavlik &lt;m[blue]<code>vojtech [at] suse.cz</code>m[]<font SIZE="-2">[1]</font>&gt;. </p>
-<p> This manual page was written by Stephen Kitt &lt;m[blue]<code>steve [at] sk2.org</code>m[]<font SIZE="-2">[2]</font>&gt;, based on that present in the lineakd package, for the Debian GNU/Linux system (but may be used by others).</p>
+<p> evtest was written by Vojtech Pavlik &lt;m[blue]<code>vojtech [at] suse.cz</code>m[][1]&gt;. </p>
+<p> This manual page was written by Stephen Kitt &lt;m[blue]<code>steve [at] sk2.org</code>m[][2]&gt;, based on that present in the lineakd package, for the Debian GNU/Linux system (but may be used by others).</p>
 <h2>NOTES</h2>
 <dl>
 <dt> 1.</dt>

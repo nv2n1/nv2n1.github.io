@@ -11,7 +11,7 @@ description: "chbgvd.f –"
 <p> chbgvd.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>chbgvd</code> (JOBZ, UPLO, N, KA, KB, AB, LDAB, BB, LDBB, W, Z, LDZ, WORK, LWORK, RWORK, LRWORK, IWORK, LIWORK, INFO)<br />
+<p> subroutine <code>chbgvd</code> (JOBZ, UPLO, N, KA, KB, AB, LDAB, BB, LDBB, W, Z, LDZ, WORK, LWORK, RWORK, LRWORK, IWORK, LIWORK, INFO)<br/>
  <i></i><code>CHBGST</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine chbgvd (characterJOBZ, characterUPLO, integerN, integerKA, integerKB, complex, dimension( ldab, * )AB, integerLDAB, complex, dimension( ldbb, * )BB, integerLDBB, real, dimension( * )W, complex, dimension( ldz, * )Z, integerLDZ, complex, dimension( * )WORK, integerLWORK, real, dimension( * )RWORK, integerLRWORK, integer, dimension( * )IWORK, integerLIWORK, integerINFO)</h3>
@@ -83,14 +83,14 @@ description: "chbgvd.f –"
           The leading dimension of the array AB.  LDAB &gt;= KA+1.
 </pre>
 <p> <i>BB</i> </p>
-<p>          BB is COMPLEX array, dimension (LDBB, N)<br />
-          On entry, the upper or lower triangle of the Hermitian band<br />
-          matrix B, stored in the first kb+1 rows of the array.  The<br />
-          j-th column of B is stored in the j-th column of the array BB<br />
-          as follows:<br />
-          if UPLO = &#8216;U&#8217;, BB(kb+1+i-j,j) = B(i,j) for max(1,j-kb)&lt;=i&lt;=j;<br />
-          if UPLO = &#8216;L&#8217;, BB(1+i-j,j)    = B(i,j) for j&lt;=i&lt;=min(n,j+kb).<br />
-          On exit, the factor S from the split Cholesky factorization<br />
+<p>          BB is COMPLEX array, dimension (LDBB, N)<br/>
+          On entry, the upper or lower triangle of the Hermitian band<br/>
+          matrix B, stored in the first kb+1 rows of the array.  The<br/>
+          j-th column of B is stored in the j-th column of the array BB<br/>
+          as follows:<br/>
+          if UPLO = &#8216;U&#8217;, BB(kb+1+i-j,j) = B(i,j) for max(1,j-kb)&lt;=i&lt;=j;<br/>
+          if UPLO = &#8216;L&#8217;, BB(1+i-j,j)    = B(i,j) for j&lt;=i&lt;=min(n,j+kb).<br/>
+          On exit, the factor S from the split Cholesky factorization<br/>
           B = S**H*S, as returned by CPBSTF.</p>
 <p> <i>LDBB</i> </p>
 <pre>
@@ -123,15 +123,15 @@ description: "chbgvd.f –"
           On exit, if INFO=0, WORK(1) returns the optimal LWORK.
 </pre>
 <p> <i>LWORK</i> </p>
-<p>LWORK is INTEGER<br />
-        The dimension of the array WORK.If N &lt;= 1,<br />
-    LWORK &gt;= 1. If JOBZ = &#8216;N&#8217; and N &gt; 1, LWORK &gt;= N.If JOBZ = &#8216;V&#8217; and N &gt; 1, LWORK &gt;= 2 *N ** 2. If LWORK = -1, then a workspace query is assumed;<br />
-the routine<br />
-    only calculates the optimal sizes of the WORK,<br />
-    RWORK and<br />
-        IWORK arrays,<br />
-    returns these values as the first entries of<br />
-        the WORK,<br />
+<p>LWORK is INTEGER<br/>
+        The dimension of the array WORK.If N &lt;= 1,<br/>
+    LWORK &gt;= 1. If JOBZ = &#8216;N&#8217; and N &gt; 1, LWORK &gt;= N.If JOBZ = &#8216;V&#8217; and N &gt; 1, LWORK &gt;= 2 *N ** 2. If LWORK = -1, then a workspace query is assumed;<br/>
+the routine<br/>
+    only calculates the optimal sizes of the WORK,<br/>
+    RWORK and<br/>
+        IWORK arrays,<br/>
+    returns these values as the first entries of<br/>
+        the WORK,<br/>
     RWORK and IWORK arrays, and no error message related to LWORK or LRWORK or LIWORK is issued by XERBLA.</p>
 <p> <i>RWORK</i> </p>
 <pre>
@@ -139,15 +139,15 @@ the routine<br />
           On exit, if INFO=0, RWORK(1) returns the optimal LRWORK.
 </pre>
 <p> <i>LRWORK</i> </p>
-<p>LRWORK is INTEGER<br />
-        The dimension of array RWORK.If N &lt;= 1,<br />
-    LRWORK &gt;= 1. If JOBZ = &#8216;N&#8217; and N &gt; 1, LRWORK &gt;= N.If JOBZ = &#8216;V&#8217; and N &gt; 1, LRWORK &gt;= 1 + 5 *N + 2 *N ** 2. If LRWORK = -1, then a workspace query is assumed;<br />
-the<br />
-    routine only calculates the optimal sizes of the WORK,<br />
-    RWORK<br />
-        and IWORK arrays,<br />
-    returns these values as the first entries<br />
-        of the WORK,<br />
+<p>LRWORK is INTEGER<br/>
+        The dimension of array RWORK.If N &lt;= 1,<br/>
+    LRWORK &gt;= 1. If JOBZ = &#8216;N&#8217; and N &gt; 1, LRWORK &gt;= N.If JOBZ = &#8216;V&#8217; and N &gt; 1, LRWORK &gt;= 1 + 5 *N + 2 *N ** 2. If LRWORK = -1, then a workspace query is assumed;<br/>
+the<br/>
+    routine only calculates the optimal sizes of the WORK,<br/>
+    RWORK<br/>
+        and IWORK arrays,<br/>
+    returns these values as the first entries<br/>
+        of the WORK,<br/>
     RWORK and IWORK arrays, and no error message related to LWORK or LRWORK or LIWORK is issued by XERBLA.</p>
 <p> <i>IWORK</i> </p>
 <pre>
@@ -155,15 +155,15 @@ the<br />
           On exit, if INFO=0, IWORK(1) returns the optimal LIWORK.
 </pre>
 <p> <i>LIWORK</i> </p>
-<p>LIWORK is INTEGER<br />
-    The dimension of array IWORK.If JOBZ = &#8216;N&#8217; or N &lt;= 1,<br />
-                                    LIWORK &gt;= 1. If JOBZ = &#8216;V&#8217; and N &gt; 1, LIWORK &gt;= 3 + 5 *N.If LIWORK = -1, then a workspace query is assumed;<br />
-the<br />
-    routine only calculates the optimal sizes of the WORK,<br />
-    RWORK<br />
-        and IWORK arrays,<br />
-    returns these values as the first entries<br />
-        of the WORK,<br />
+<p>LIWORK is INTEGER<br/>
+    The dimension of array IWORK.If JOBZ = &#8216;N&#8217; or N &lt;= 1,<br/>
+                                    LIWORK &gt;= 1. If JOBZ = &#8216;V&#8217; and N &gt; 1, LIWORK &gt;= 3 + 5 *N.If LIWORK = -1, then a workspace query is assumed;<br/>
+the<br/>
+    routine only calculates the optimal sizes of the WORK,<br/>
+    RWORK<br/>
+        and IWORK arrays,<br/>
+    returns these values as the first entries<br/>
+        of the WORK,<br/>
     RWORK and IWORK arrays, and no error message related to LWORK or LRWORK or LIWORK is issued by XERBLA.</p>
 <p> <i>INFO</i> </p>
 <pre><code>

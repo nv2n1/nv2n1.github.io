@@ -9,7 +9,7 @@ description: "xfs_quota – manage use of quota on XFS filesystems"
 
 <p>xfs_quota &#8211; manage use of quota on XFS filesystems</p>
 <h2>Synopsis</h2>
-<p><code>xfs_quota</code> [ <code>-x</code> ] [ <code>-f</code> ] [ <code>-p</code> <i>prog</i> ] [ <code>-c</code> <i>cmd</i> ] &#8230; [ <code>-d</code> <i>project</i> ] &#8230; [ <code>-D</code> <i>projects_file</i> ] [ <code>-P</code> <i>projid_file</i> ] [ <i>path</i> &#8230; ]<br />
+<p><code>xfs_quota</code> [ <code>-x</code> ] [ <code>-f</code> ] [ <code>-p</code> <i>prog</i> ] [ <code>-c</code> <i>cmd</i> ] &#8230; [ <code>-d</code> <i>project</i> ] &#8230; [ <code>-D</code> <i>projects_file</i> ] [ <code>-P</code> <i>projid_file</i> ] [ <i>path</i> &#8230; ]<br/>
  <code>xfs_quota -V</code></p>
 <h2>Description</h2>
 <p><code>xfs_quota</code> is a utility for reporting and editing various aspects of filesystem quota. </p>
@@ -43,8 +43,8 @@ description: "xfs_quota – manage use of quota on XFS filesystems"
 <p> There are four numbers for each limit: current usage, soft limit (quota), hard limit, and time limit. The soft limit is the number of 1K-blocks (or files) that the user is expected to remain below. The hard limit cannot be exceeded. If a user&#8217;s usage reaches the hard limit, further requests for space (or attempts to create a file) fail with the &quot;Quota exceeded&quot; (EDQUOT) error. </p>
 <p> When a user exceeds the soft limit, the timer is enabled. Any time the quota drops below the soft limits, the timer is disabled. If the timer pops, the particular limit that has been exceeded is treated as if the hard limit has been reached, and no more resources are allocated to the user. The only way to reset this condition, short of turning off limit enforcement or increasing the limit, is to reduce usage below quota. Only the superuser (i.e. a sufficiently capable process) can set the time limits and this is done on a per filesystem basis.</p>
 <h3>Surviving When the Quota Limit Is Reached</h3>
-<p>In most cases, the only way for a user to recover from over-quota conditions is to abort whatever activity is in progress on the filesystem that has reached its limit, remove sufficient files to bring the limit back below quota, and retry the failed program.<br />
- However, if a user is in the editor and a write fails because of an over quota situation, that is not a suitable course of action. It is most likely that initially attempting to write the file has truncated its previous contents, so if the editor is aborted without correctly writing the file, not only are the recent changes lost, but possibly much, or even all, of the contents that previously existed.<br />
+<p>In most cases, the only way for a user to recover from over-quota conditions is to abort whatever activity is in progress on the filesystem that has reached its limit, remove sufficient files to bring the limit back below quota, and retry the failed program.<br/>
+ However, if a user is in the editor and a write fails because of an over quota situation, that is not a suitable course of action. It is most likely that initially attempting to write the file has truncated its previous contents, so if the editor is aborted without correctly writing the file, not only are the recent changes lost, but possibly much, or even all, of the contents that previously existed.<br/>
  There are several possible safe exits for a user caught in this situation. He can use the editor shell escape command to examine his file space and remove surplus files. Alternatively, using <code><a href="/docs/linux/man/1-sh/">sh</a></code>(1), he can suspend the editor, remove some files, then resume it. A third possibility is to write the file to some other filesystem (perhaps to a file on <i>/tmp</i>) where the user&#8217;s quota has not been exceeded. Then after rectifying the quota situation, the file can be moved back to the filesystem it belongs on.</p>
 <h2>User Commands</h2>
 <dl>
@@ -56,7 +56,7 @@ description: "xfs_quota – manage use of quota on XFS filesystems"
 <dd>
 </dd><dd>Show individual usage and limits, for a single user <i>name</i> or numeric user <i>ID</i>. The <code>-h</code> option reports in a &quot;human-readable&quot; format similar to the <code><a href="/docs/linux/man/1-df/">df</a></code>(1) command. The <code>-n</code> option reports the numeric IDs rather than the name. The <code>-N</code> option omits the header. The <code>-v</code> option outputs verbose information. The <code>-f</code> option sends the output to <i>file</i> instead of stdout.</dd>
 <dt> <code></dt>
-<dd>free</code> [ <code>-bir</code> ] [ <code>-hN</code> ] [ <code>-f</code> <i>file</i> ]<br />
+<dd>free</code> [ <code>-bir</code> ] [ <code>-hN</code> ] [ <code>-f</code> <i>file</i> ]<br/>
  Reports filesystem usage, much like the <code><a href="/docs/linux/man/1-df/">df</a></code>(1) utility. It can show usage for <code>b</code>locks, <code>i</code>node, and/or <code>r</code>ealtime block space, and shows used, free, and total available. If project quota are in use (see the DIRECTORY TREE QUOTA section below), it will also report utilisation for those projects (directory trees). The <code>-h</code> option reports in a &quot;human-readable&quot; format. The <code>-N</code> option omits the header. The <code>-f</code> option outputs the report to <i>file</i> instead of stdout.</dd>
 <dt> <code>help</code> [ <i>command</i> ]</dt>
 <dd>
@@ -97,10 +97,10 @@ description: "xfs_quota – manage use of quota on XFS filesystems"
 <dd>
 </dd><dd>Report filesystem quota information. This reports all quota usage for a filesystem, for the specified quota type (<code>u</code>/<code>g</code>/<code>p</code> and/or <code>b</code>locks/<code>i</code>nodes/<code>r</code>ealtime). It reports blocks in 1KB units by default. The <code>-h</code> option reports in a &quot;human-readable&quot; format similar to the <code><a href="/docs/linux/man/1-df/">df</a></code>(1) command. The <code>-f</code> option outputs the report to <i>file</i> instead of stdout. The <code>-a</code> option reports on all filesystems. By default, outputs the name of the user/group/project. If no name is defined for a given ID, outputs the numeric ID instead. The <code>-n</code> option outputs the numeric ID instead of the name. The <code>-L</code> and <code>-U</code> options specify lower and upper ID bounds to report on. If upper/lower bounds are specified, then by default only the IDs will be displayed in output; with the <code>-l</code> option, a lookup will be performed to translate these IDs to names. The <code>-N</code> option reports information without the header line. The <code>-t</code> option performs a terse report.</dd>
 <dt> <code></dt>
-<dd>state</code> [ <code>-gpu</code> ] [ <code>-av</code> ] [ <code>-f</code> <i>file</i> ]<br />
+<dd>state</code> [ <code>-gpu</code> ] [ <code>-av</code> ] [ <code>-f</code> <i>file</i> ]<br/>
  Report overall quota state information. This reports on the state of quota accounting, quota enforcement, and the number of extents being used by quota metadata within the filesystem. The <code>-f</code> option outputs state information to <i>file</i> instead of stdout. The <code>-a</code> option reports state on all filesystems and not just the current path.</dd>
 <dt> <code></dt>
-<dd>limit</code> [ <code>-g</code> | <code>-p</code> | <code>-u</code> ] <code>bsoft=</code><i>N</i> | <code>bhard=</code><i>N</i> | <code>isoft=</code><i>N</i> | <code>ihard=</code><i>N</i> | <code>rtbsoft=</code><i>N</i> | <code>rtbhard=</code><i>N</i> <code>-d</code> | <i>id</i> | <i>name</i><br />
+<dd>limit</code> [ <code>-g</code> | <code>-p</code> | <code>-u</code> ] <code>bsoft=</code><i>N</i> | <code>bhard=</code><i>N</i> | <code>isoft=</code><i>N</i> | <code>ihard=</code><i>N</i> | <code>rtbsoft=</code><i>N</i> | <code>rtbhard=</code><i>N</i> <code>-d</code> | <i>id</i> | <i>name</i><br/>
  Set quota block limits (bhard/bsoft), inode count limits (ihard/isoft) and/or realtime block limits (rtbhard/rtbsoft). The <code>-d</code> option (defaults) can be used to set the default value that will be used, otherwise a specific <code>u</code>ser/<code>g</code>roup/<code>p</code>roject <i>name</i> or numeric <i>id</i>entifier must be specified.</dd>
 <dt> <code>timer</code> [ <code>-g</code> | <code>-p</code> | <code>-u</code> ] [ <code>-bir</code> ] <i>value</i></dt>
 <dd>
@@ -117,13 +117,13 @@ description: "xfs_quota – manage use of quota on XFS filesystems"
 <dt><code>remove</code> [ <code>-gpu</code> ] [ <code>-v</code> ]</dt>
 <dd>Remove any space allocated to quota metadata from the filesystem identified by the current path. Quota must not be enabled on the filesystem, else this operation will report an error.</dd>
 <dt> <code></dt>
-<dd>dump</code> [ <code>-g</code> | <code>-p</code> | <code>-u</code> ] [ <code>-f</code> <i>file</i> ]<br />
+<dd>dump</code> [ <code>-g</code> | <code>-p</code> | <code>-u</code> ] [ <code>-f</code> <i>file</i> ]<br/>
  Dump out quota limit information for backup utilities, either to standard output (default) or to a <i>file</i>. This is only the limits, not the usage information, of course.</dd>
 <dt> <code>restore</code> [ <code>-g</code> | <code>-p</code> | <code>-u</code> ] [ <code>-f</code> <i>file</i> ]</dt>
 <dd>
 </dd><dd>Restore quota limits from a backup <i>file</i>. The file must be in the format produced by the <code>dump</code> command.</dd>
 <dt> <code></dt>
-<dd>quot</code> [ <code>-g</code> | <code>-p</code> | <code>-u</code> ] [ <code>-bir</code> ] [ <code>-acnv</code> ] [ <code>-f</code> <i>file</i> ]<br />
+<dd>quot</code> [ <code>-g</code> | <code>-p</code> | <code>-u</code> ] [ <code>-bir</code> ] [ <code>-acnv</code> ] [ <code>-f</code> <i>file</i> ]<br/>
  Summarize filesystem ownership, by user, group or project. This command uses a special XFS &quot;bulkstat&quot; interface to quickly scan an entire filesystem and report usage information. This command can be used even when filesystem quota are not enabled, as it is a full-filesystem scan (it may also take a long time&#8230;). The <code>-a</code> option displays information on all filesystems. The <code>-c</code> option displays a histogram instead of a report. The <code>-n</code> option displays numeric IDs rather than names. The <code>-v</code> option displays verbose information. The <code>-f</code> option send the output to <i>file</i> instead of stdout.</dd>
 <dt> <code>project</code> [ <code>-cCs</code> [ <code>-d</code> <i>depth</i> ] [ <code>-p</code> <i>path</i> ] <i>id</i> | <i>name</i> ]</dt>
 <dd>

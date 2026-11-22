@@ -16,11 +16,11 @@ description: "pcsc_scan – regularly scans every PC/SC readers connected to the
 <p> <code>pcsc_scan</code> is a program that regularly scans every PC/SC readers connected to the host </p>
 <p> The normal way to exit the program is to use Control-C. </p>
 <p> When <code>pcsc_scan</code> is started it asks <code>pcscd</code> the list of available smart card readers. The list is printed. A sequence number is printed before each reader. </p>
-<p> Example:<br />
-&nbsp;<wbr>PC/SC device scanner<br />
-&nbsp;<wbr>V 1.1.0&nbsp;<wbr>(c)&nbsp;<wbr>2001-2002, Ludovic Rousseau<br />
-&nbsp;<wbr>PC/SC lite version: 1.1.1<br />
-&nbsp;<wbr>0: GemPC410 0 0<br />
+<p> Example:<br/>
+&nbsp;<wbr>PC/SC device scanner<br/>
+&nbsp;<wbr>V 1.1.0&nbsp;<wbr>(c)&nbsp;<wbr>2001-2002, Ludovic Rousseau<br/>
+&nbsp;<wbr>PC/SC lite version: 1.1.1<br/>
+&nbsp;<wbr>0: GemPC410 0 0<br/>
 &nbsp;<wbr>1: GemPC430 0 0 </p>
 <p> When a card is inserted in any reader some information is printed:</p>
 <dl>
@@ -34,11 +34,11 @@ description: "pcsc_scan – regularly scans every PC/SC readers connected to the
 <dd> ATR: 3B 82 00 86 1E</dd>
 <dt>print an ATR analysis if the <code>ATR_analysis</code> command is available:</dt>
 <dd>
-&nbsp;<wbr>ATR: 3B 82 00 86 1E<br />
-&nbsp;<wbr>+&nbsp;<wbr>TS&nbsp;<wbr>=&nbsp;<wbr>3B &#8211;&gt;&nbsp;<wbr>Direct Convention<br />
-&nbsp;<wbr>+&nbsp;<wbr>T0&nbsp;<wbr>=&nbsp;<wbr>82,&nbsp;<wbr>Y(1): 1000, K: 2&nbsp;<wbr>(historical bytes)<br />
-TD(1)&nbsp;<wbr>=&nbsp;<wbr>00 &#8211;&gt;&nbsp;<wbr>Y(i+1)&nbsp;<wbr>=&nbsp;<wbr>0000, Protocol T&nbsp;<wbr>=&nbsp;<wbr>0<br />
-&nbsp;<wbr>&#8212;&#8211;<br />
+&nbsp;<wbr>ATR: 3B 82 00 86 1E<br/>
+&nbsp;<wbr>+&nbsp;<wbr>TS&nbsp;<wbr>=&nbsp;<wbr>3B &#8211;&gt;&nbsp;<wbr>Direct Convention<br/>
+&nbsp;<wbr>+&nbsp;<wbr>T0&nbsp;<wbr>=&nbsp;<wbr>82,&nbsp;<wbr>Y(1): 1000, K: 2&nbsp;<wbr>(historical bytes)<br/>
+TD(1)&nbsp;<wbr>=&nbsp;<wbr>00 &#8211;&gt;&nbsp;<wbr>Y(i+1)&nbsp;<wbr>=&nbsp;<wbr>0000, Protocol T&nbsp;<wbr>=&nbsp;<wbr>0<br/>
+&nbsp;<wbr>&#8212;&#8211;<br/>
 &nbsp;<wbr>+&nbsp;<wbr>Historical bytes: 86 1E</dd></dl>
 <h2>OPTIONS</h2>
 <dl>

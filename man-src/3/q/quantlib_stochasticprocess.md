@@ -13,20 +13,20 @@ description: "QuantLib::StochasticProcess – multi-dimensional stochastic proce
 <p> Inherits <code>QuantLib::Observer</code>, and <code>QuantLib::Observable</code>. </p>
 <p> Inherited by <code>ForwardMeasureProcess</code>, <code>G2Process</code>, <code>GJRGARCHProcess</code>, <code>HestonProcess</code>, JointStochasticProcess, <code>LiborForwardModelProcess</code>, <code>StochasticProcess1D</code>, and <code>StochasticProcessArray</code>. </p>
 <h3>Classes</h3>
-<p>class <code>discretization</code><br />
+<p>class <code>discretization</code><br/>
  <i></i><code>discretization</code> of a stochastic process over a given time interval</p>
 <h3>Public Member Functions</h3>
 <p><code>Stochastic process interface</code> </p>
-<p> virtual Size <code>size</code> () const =0<br />
- <i>returns the number of dimensions of the stochastic process </i><br />
- virtual Size <code>factors</code> () const<br />
- <i>returns the number of independent factors of the process </i><br />
- virtual <code>Disposable</code>&lt; <code>Array</code> &gt; <code>initialValues</code> () const =0<br />
- <i>returns the initial values of the state variables </i><br />
- virtual <code>Disposable</code>&lt; <code>Array</code> &gt; <code>drift</code> (Time t, const <code>Array</code> &amp;x) const =0<br />
- <i>returns the drift part of the equation, i.e., $ mu(t, mathrm{x}_t) $ </i><br />
- virtual <code>Disposable</code>&lt; <code>Matrix</code> &gt; <code>diffusion</code> (Time t, const <code>Array</code> &amp;x) const =0<br />
- <i>returns the diffusion part of the equation, i.e. $ igma(t, mathrm{x}_t) $ </i><br />
+<p> virtual Size <code>size</code> () const =0<br/>
+ <i>returns the number of dimensions of the stochastic process </i><br/>
+ virtual Size <code>factors</code> () const<br/>
+ <i>returns the number of independent factors of the process </i><br/>
+ virtual <code>Disposable</code>&lt; <code>Array</code> &gt; <code>initialValues</code> () const =0<br/>
+ <i>returns the initial values of the state variables </i><br/>
+ virtual <code>Disposable</code>&lt; <code>Array</code> &gt; <code>drift</code> (Time t, const <code>Array</code> &amp;x) const =0<br/>
+ <i>returns the drift part of the equation, i.e., $ mu(t, mathrm{x}_t) $ </i><br/>
+ virtual <code>Disposable</code>&lt; <code>Matrix</code> &gt; <code>diffusion</code> (Time t, const <code>Array</code> &amp;x) const =0<br/>
+ <i>returns the diffusion part of the equation, i.e. $ igma(t, mathrm{x}_t) $ </i><br/>
  virtual <code>Disposable</code>&lt; <code>Array</code> &gt; <code>expectation</code> (Time t0, const <code>Array</code> &amp;x0, Time dt) const </p>
 <p> virtual <code>Disposable</code>&lt; <code>Matrix</code> &gt; <code>stdDeviation</code> (Time t0, const <code>Array</code> &amp;x0, Time dt) const </p>
 <p> virtual <code>Disposable</code>&lt; <code>Matrix</code> &gt; <code>covariance</code> (Time t0, const <code>Array</code> &amp;x0, Time dt) const </p>

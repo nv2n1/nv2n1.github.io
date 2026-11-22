@@ -10,7 +10,7 @@ description: "pmdaoracle – Oracle database PMDA"
 
 <p> <code>pmdaoracle</code> &#8211; Oracle database PMDA</p>
 <h2>DESCRIPTION</h2>
-<p> <code>pmdaoracle</code> is a Performance Co-Pilot <font SIZE="-1">PMDA</font> which extracts live performance data from a running Oracle database.</p>
+<p> <code>pmdaoracle</code> is a Performance Co-Pilot PMDA which extracts live performance data from a running Oracle database.</p>
 <h2>INSTALLATION</h2>
 <p> <code>pmdaoracle</code> uses a configuration file from (in this order):</p>
 <dl>
@@ -56,7 +56,7 @@ oracle.control.connected
 <h2>FILES</h2>
 <dl>
 <dt><code>/etc/pcpdbi.conf</code></dt>
-<dd> configuration file for all <font SIZE="-1">PCP</font> database monitors</dd>
+<dd> configuration file for all PCP database monitors</dd>
 <dt><code>$PCP_PMDAS_DIR/oracle/oracle.conf</code></dt>
 <dd> configuration file for <code>pmdaoracle</code></dd>
 <dt><code>$PCP_PMDAS_DIR/oracle/sample.conf</code></dt>

@@ -10,7 +10,7 @@ description: "jbig2dec – File format converter specialized in JBIG2 decoding"
 
 <p> jbig2dec &#8211; File format converter specialized in JBIG2 decoding</p>
 <h2>SYNOPSIS</h2>
-<p> <code>jbig2dec</code> [<i>options</i>] <i>file.jbig2</i><br />
+<p> <code>jbig2dec</code> [<i>options</i>] <i>file.jbig2</i><br/>
  <code>jbig2dec</code> [<i>options</i>] <i>global-stream page-stream</i> </p>
 <h2>DESCRIPTION</h2>
 <p> The <code>jbig2dec</code> command converts JBIG2 files to png or pbm files. </p>

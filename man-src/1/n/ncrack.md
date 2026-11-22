@@ -17,7 +17,7 @@ description: "ncrack – Network authentication cracking tool"
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Warning</code> </font> </dd>
+  <code>Warning</code>  </dd>
 <p> Ncrack is a new project started in the Summer of 2009. While it is already useful for some purposes, it is still unfinished, alpha quality software. You can help out by testing it and reporting any problems as described in the section called &#8220;BUGS&#8221;. </p>
 </dl>
 <p> The output from Ncrack is a list of found credentials, if any, for each of the targets specified. Ncrack can also print an interactive status report of progress so far and possibly additional debugging information that can help track problems, if the user selected that option. </p>

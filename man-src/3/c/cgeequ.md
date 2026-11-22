@@ -11,7 +11,7 @@ description: "cgeequ.f –"
 <p> cgeequ.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cgeequ</code> (M, N, A, LDA, R, C, ROWCND, COLCND, AMAX, INFO)<br />
+<p> subroutine <code>cgeequ</code> (M, N, A, LDA, R, C, ROWCND, COLCND, AMAX, INFO)<br/>
  <i></i><code>CGEEQU</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cgeequ (integerM, integerN, complex, dimension( lda, * )A, integerLDA, real, dimension( * )R, real, dimension( * )C, realROWCND, realCOLCND, realAMAX, integerINFO)</h3>

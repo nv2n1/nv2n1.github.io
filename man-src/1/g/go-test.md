@@ -20,7 +20,7 @@ description: "go-test – test packages"
       ...
 </pre>
 <p> followed by detailed output for each failed package. </p>
-<p> &quot;Go test&quot; recompiles each package along with any files with names matching the file pattern &quot;*_test.go&quot;. These additional files can contain test functions, benchmark functions, and example functions. See &#8216;go help testfunc&#8217; for more.<br />
+<p> &quot;Go test&quot; recompiles each package along with any files with names matching the file pattern &quot;*_test.go&quot;. These additional files can contain test functions, benchmark functions, and example functions. See &#8216;go help testfunc&#8217; for more.<br/>
  Each listed package causes the execution of a separate test binary. Files whose names begin with &quot;_&quot; (including &quot;_test.go&quot;) or &quot;.&quot; are ignored. </p>
 <p> Test files that declare a package with the suffix &quot;_test&quot; will be compiled as a separate package, and then linked and run with the main test binary. </p>
 <p> The go tool will ignore a directory named &quot;testdata&quot;, making it available to hold ancillary data needed by the tests. </p>

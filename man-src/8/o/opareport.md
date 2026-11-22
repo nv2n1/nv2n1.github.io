@@ -10,10 +10,10 @@ description: "opareport"
 <p>opareport </p>
 <p> <code>(All)</code> Provides powerful fabric analysis and reporting capabilities. Must be run on a host connected to the Intel(R) Omni-Path Fabric with the Intel(R) Omni-Path Fabric Suite FastFabric Toolset installed.</p>
 <h2>Syntax</h2>
-<p>opareport [-v][-q] [-h <i>hfi</i>] [-p <i>port</i>]<br />
- [-o <i>report</i>] [-d <i>detail</i>] [-P|-H] [-N] [-x]<br />
- [-X <i>snapshot_input</i>] [-T <i>topology_input</i>] [-s] [-r] [-V]<br />
- [-i#8217#160; <i>seconds</i>] [-C] [-a] [-m] [-K <i>mkey</i>] [-M] [-A] [-c <i>file</i>] [-L]<br />
+<p>opareport [-v][-q] [-h <i>hfi</i>] [-p <i>port</i>]<br/>
+ [-o <i>report</i>] [-d <i>detail</i>] [-P|-H] [-N] [-x]<br/>
+ [-X <i>snapshot_input</i>] [-T <i>topology_input</i>] [-s] [-r] [-V]<br/>
+ [-i#8217#160; <i>seconds</i>] [-C] [-a] [-m] [-K <i>mkey</i>] [-M] [-A] [-c <i>file</i>] [-L]<br/>
  [-F <i>point</i>] [-S <i>point</i>] [-D <i>point</i>] [-Q]</p>
 <h2>Options</h2>
 <dl>
@@ -273,48 +273,48 @@ description: "opareport"
 <dd>Ports with a link quality greater than or equal to <i>value</i>. </dd>
 </dl>
 <h2>Examples</h2>
-<p>opareport can generate hundreds of different reports. Commonly generated reports include the following:opareport -o comps -d 3<br />
- opareport -o errors -o slowlinks<br />
- opareport -o nodes -F portguid:0x00117500a000447b<br />
- opareport -o nodes -F nodeguid:0x001175009800447b:port:1<br />
- opareport -o nodes -F nodeguid:0x001175009800447b<br />
- opareport -o nodes -F &#8216;node:duster hfi1_0&#8217;<br />
- opareport -o nodes -F &#8216;node:duster hfi1_0:port:1&#8217;<br />
- opareport -o nodes -F &#8216;nodepat:d*&#8217;<br />
- opareport -o nodes -F &#8216;nodepat:d*:port:1&#8217;<br />
- opareport -o nodes -F &#8216;nodedetpat:compute*&#8217;<br />
- opareport -o nodes -F &#8216;nodedetpat:compute*:port:1&#8217;<br />
- opareport -o nodes -F nodetype:FI<br />
- opareport -o nodes -F nodetype:FI:port:1<br />
- opareport -o nodes -F lid:1<br />
- opareport -o nodes -F lid:1:node<br />
- opareport -o nodes -F lid:1:port:2<br />
- opareport -o nodes -F gid:0xfe80000000000000:0x00117500a000447b<br />
- opareport -o nodes -F systemguid:0x001175009800447b<br />
- opareport -o nodes -F systemguid:0x001175009800447b:port:1<br />
- opareport -o nodes -F iocguid:0x00117501300001e0<br />
- opareport -o nodes -F iocguid:0x00117501300001e0:port:2<br />
- opareport -o nodes -F &#8216;ioc:Chassis 0x001175005000010C, Slot 2, IOC 1&#8217;<br />
- opareport -o nodes -F &#8216;ioc:Chassis 0x001175005000010C, Slot 2, IOC 1:port:2&#8217;<br />
- opareport -o nodes -F &#8216;iocpat:*Slot 2*&#8217;<br />
- opareport -o nodes -F &#8216;iocpat:*Slot 2*:port:2&#8217;<br />
- opareport -o nodes -F ioctype:VNIC<br />
- opareport -o nodes -F ioctype:VNIC:port:2<br />
- opareport -o extlinks -F rate:5g<br />
- opareport -o extlinks -F portstate:armed<br />
- opareport -o extlinks -F portphysstate:linkup<br />
- opareport -o extlinks -F &#8216;labelpat:S1345*&#8217;<br />
- opareport -o extlinks -F &#8216;lengthpat:11m&#8217;<br />
- opareport -o extlinks -F &#8216;cabledetpat:*gore*&#8217;<br />
- opareport -o extlinks -F &#8216;linkdetpat:*core ISL*&#8217;<br />
- opareport -o extlinks -F &#8216;portdetpat:*mgmt*&#8217;<br />
- opareport -o links -F mtucap:2048<br />
- opareport -o nodes -F sm<br />
- opareport -o nodes -F &#8216;smdetpat:primary*&#8217;<br />
- opareport -o nodes -F &#8216;route:node:duster hfi1_0:node:cuda hfi1_0&#8217;<br />
- opareport -o nodes -F &#8216;route:node:duster hfi1_0:port:1:node:cuda hfi1_0:port:2&#8217;<br />
- opareport -s -o snapshot #8217gt; file<br />
- opareport -o topology #8217gt; topology.xml<br />
+<p>opareport can generate hundreds of different reports. Commonly generated reports include the following:opareport -o comps -d 3<br/>
+ opareport -o errors -o slowlinks<br/>
+ opareport -o nodes -F portguid:0x00117500a000447b<br/>
+ opareport -o nodes -F nodeguid:0x001175009800447b:port:1<br/>
+ opareport -o nodes -F nodeguid:0x001175009800447b<br/>
+ opareport -o nodes -F &#8216;node:duster hfi1_0&#8217;<br/>
+ opareport -o nodes -F &#8216;node:duster hfi1_0:port:1&#8217;<br/>
+ opareport -o nodes -F &#8216;nodepat:d*&#8217;<br/>
+ opareport -o nodes -F &#8216;nodepat:d*:port:1&#8217;<br/>
+ opareport -o nodes -F &#8216;nodedetpat:compute*&#8217;<br/>
+ opareport -o nodes -F &#8216;nodedetpat:compute*:port:1&#8217;<br/>
+ opareport -o nodes -F nodetype:FI<br/>
+ opareport -o nodes -F nodetype:FI:port:1<br/>
+ opareport -o nodes -F lid:1<br/>
+ opareport -o nodes -F lid:1:node<br/>
+ opareport -o nodes -F lid:1:port:2<br/>
+ opareport -o nodes -F gid:0xfe80000000000000:0x00117500a000447b<br/>
+ opareport -o nodes -F systemguid:0x001175009800447b<br/>
+ opareport -o nodes -F systemguid:0x001175009800447b:port:1<br/>
+ opareport -o nodes -F iocguid:0x00117501300001e0<br/>
+ opareport -o nodes -F iocguid:0x00117501300001e0:port:2<br/>
+ opareport -o nodes -F &#8216;ioc:Chassis 0x001175005000010C, Slot 2, IOC 1&#8217;<br/>
+ opareport -o nodes -F &#8216;ioc:Chassis 0x001175005000010C, Slot 2, IOC 1:port:2&#8217;<br/>
+ opareport -o nodes -F &#8216;iocpat:*Slot 2*&#8217;<br/>
+ opareport -o nodes -F &#8216;iocpat:*Slot 2*:port:2&#8217;<br/>
+ opareport -o nodes -F ioctype:VNIC<br/>
+ opareport -o nodes -F ioctype:VNIC:port:2<br/>
+ opareport -o extlinks -F rate:5g<br/>
+ opareport -o extlinks -F portstate:armed<br/>
+ opareport -o extlinks -F portphysstate:linkup<br/>
+ opareport -o extlinks -F &#8216;labelpat:S1345*&#8217;<br/>
+ opareport -o extlinks -F &#8216;lengthpat:11m&#8217;<br/>
+ opareport -o extlinks -F &#8216;cabledetpat:*gore*&#8217;<br/>
+ opareport -o extlinks -F &#8216;linkdetpat:*core ISL*&#8217;<br/>
+ opareport -o extlinks -F &#8216;portdetpat:*mgmt*&#8217;<br/>
+ opareport -o links -F mtucap:2048<br/>
+ opareport -o nodes -F sm<br/>
+ opareport -o nodes -F &#8216;smdetpat:primary*&#8217;<br/>
+ opareport -o nodes -F &#8216;route:node:duster hfi1_0:node:cuda hfi1_0&#8217;<br/>
+ opareport -o nodes -F &#8216;route:node:duster hfi1_0:port:1:node:cuda hfi1_0:port:2&#8217;<br/>
+ opareport -s -o snapshot #8217gt; file<br/>
+ opareport -o topology #8217gt; topology.xml<br/>
  opareport -o errors -X file </p>
 <h2>Other Information</h2>
 <p>opareport also supports operation with the Fabric Manager Performance Manager (PM)/Performance Manager Agent (PMA). When opareport detects the presence of a PMA, it automatically issues any required PortCounter queries and clears to the PMA to access the PMs running totals. If a PMA is not detected, then opareport directly accesses the PMAs on all the nodes. The -M option can force access to the PMA even if a PMA is present. </p>

@@ -19,8 +19,8 @@ description: "QuantLib::BMASwap – swap paying Libor against BMA coupons"
 <p> <code>Real</code> <code>liborFraction</code> () const </p>
 <p> <code>Spread</code> <code>liborSpread</code> () const </p>
 <p> <code>Real</code> <code>nominal</code> () const </p>
-<p> Type <code>type</code> () const<br />
- <i>&#8216;payer&#8217; or &#8216;receiver&#8217; refer to the BMA leg </i><br />
+<p> Type <code>type</code> () const<br/>
+ <i>&#8216;payer&#8217; or &#8216;receiver&#8217; refer to the BMA leg </i><br/>
  const Leg &amp; <code>bmaLeg</code> () const </p>
 <p> const Leg &amp; <code>liborLeg</code> () const </p>
 <p> <code>Results</code> </p>

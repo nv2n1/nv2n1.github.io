@@ -10,7 +10,7 @@ description: "slabad.f –"
 <p>slabad.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>slabad</code> (SMALL, LARGE)<br />
+<p>subroutine <code>slabad</code> (SMALL, LARGE)<br/>
  <i></i><code>SLABAD</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slabad (realSMALL, realLARGE)</h3>

@@ -7,7 +7,7 @@ url: "/docs/linux/man/8-tpm_setenable/"
 description: "tpm_setenable – change TPM enable states"
 ---
 
-<p>TPM Management &#8211; tpm_setenable<br />
+<p>TPM Management &#8211; tpm_setenable<br/>
  </center></p>
 <h2>Name</h2>
 <p>tpm_setenable &#8211; change TPM enable states</p>

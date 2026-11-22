@@ -41,9 +41,9 @@ description: "guilt-select – Select guards to apply when pushing patches"
 <dt>
 </dt><dd> List all guards listed in the series file</dd></dl>
 <h2>AUTHOR</h2>
-<p> Written by Eric Lesh &lt;m[blue]<code>eclesh [at] ucla.edu</code>m[]<font SIZE="-2">[1]</font>&gt;</p>
+<p> Written by Eric Lesh &lt;m[blue]<code>eclesh [at] ucla.edu</code>m[][1]&gt;</p>
 <h2>DOCUMENTATION</h2>
-<p> Documentation by Eric Lesh &lt;m[blue]<code>eclesh [at] ucla.edu</code>m[]<font SIZE="-2">[1]</font>&gt;</p>
+<p> Documentation by Eric Lesh &lt;m[blue]<code>eclesh [at] ucla.edu</code>m[][1]&gt;</p>
 <h2>GUILT</h2>
 <p> Part of the linkguilt:guilt[7] suite (Generated for Guilt v0.33)</p>
 <h2>NOTES</h2>

@@ -41,18 +41,18 @@ description: "corosync-objctl – Configure objects in the Object Database"
 <dt>Create the objOne object.</dt>
 <dd>$ corosync-objctl -c objOne</dd>
 <dt>Print the objOne object (empty).</dt>
-<dd>$ corosync-objctl objOne<br />
+<dd>$ corosync-objctl objOne<br/>
  objOne</dd>
 <dt>Write two new keys to the objOne object.</dt>
 <dd>$ corosync-objctl -w objOne.max=3000 objOne.min=100</dd>
 <dt>Print the objOne object (with the two new keys).</dt>
-<dd>$ corosync-objctl objOne<br />
- objOne.min=100<br />
+<dd>$ corosync-objctl objOne<br/>
+ objOne.min=100<br/>
  objOne.max=3000</dd>
 <dt>Delete the objOne.min key</dt>
 <dd>$ corosync-objctl -d objOne.min=100</dd>
 <dt>Prove that is gone.</dt>
-<dd>$ corosync-objctl objOne<br />
+<dd>$ corosync-objctl objOne<br/>
  objOne.max=3000</dd>
 <dt>Delete the whole objOne object.</dt>
 <dd>$ corosync-objctl -d objOne</dd>

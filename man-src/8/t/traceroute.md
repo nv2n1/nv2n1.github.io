@@ -15,7 +15,7 @@ description: "traceroute – print the route packets trace to network host"
 <p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [<code>-l flow_label</code>] [<code>-w waittime</code>] [<code>-z sendwait</code>] [<code>-UL</code>] [<code>-D</code>] </p>
 <p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [<code>-P proto</code>] [<code>&#8211;sport=port</code>] [<code>-M method</code>] [<code>-O mod_options</code>] </p>
 <p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [<code>&#8211;mtu</code>] [<code>&#8211;back</code>] </p>
-<p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> <code>host</code> [<code>packet_len</code>]<br />
+<p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> <code>host</code> [<code>packet_len</code>]<br/>
  <code>traceroute6</code> [<i>options</i>]</p>
 <h2>Description</h2>
 <p><i>traceroute</i> tracks the route packets taken from an IP network on their way to a given host. It utilizes the IP protocol&#8217;s time to live (TTL) field and attempts to elicit an ICMP TIME_EXCEEDED response from each gateway along the path to the host. </p>
@@ -50,16 +50,16 @@ description: "traceroute – print the route packets trace to network host"
 <dt><code>-m</code><i> max_ttl</i><code>, &#8211;max-hops=</code><i>max_ttl</i></dt>
 <dd>Specifies the maximum number of hops (max time-to-live value) <i>traceroute</i> will probe. The default is 30.</dd>
 <dt><code>-N</code><i> squeries</i><code>, &#8211;sim-queries=</code><i>squeries</i></dt>
-<dd>Specifies the number of probe packets sent out simultaneously. Sending several probes concurrently can speed up <i>traceroute</i> considerably. The default value is 16.<br />
+<dd>Specifies the number of probe packets sent out simultaneously. Sending several probes concurrently can speed up <i>traceroute</i> considerably. The default value is 16.<br/>
  Note that some routers and hosts can use ICMP rate throttling. In such a situation specifying too large number can lead to loss of some responses.</dd>
 <dt><code>-n</code></dt>
 <dd>Do not try to map IP addresses to host names when displaying them.</dd>
 <dt><code>-p</code><i> port</i><code>, &#8211;port=</code><i>port</i></dt>
-<dd>For UDP tracing, specifies the destination port base <i>traceroute</i> will use (the destination port number will be incremented by each probe).<br />
- For ICMP tracing, specifies the initial ICMP sequence value (incremented by each probe too).<br />
+<dd>For UDP tracing, specifies the destination port base <i>traceroute</i> will use (the destination port number will be incremented by each probe).<br/>
+ For ICMP tracing, specifies the initial ICMP sequence value (incremented by each probe too).<br/>
  For TCP and others specifies just the (constant) destination port to connect.</dd>
 <dt><code>-t</code><i> tos</i><code>, &#8211;tos=</code><i>tos</i></dt>
-<dd>For IPv4, set the Type of Service (TOS) and Precedence value. Useful values are 16 (low delay) and 8 (high throughput). Note that in order to use some TOS precedence values, you have to be super user.<br />
+<dd>For IPv4, set the Type of Service (TOS) and Precedence value. Useful values are 16 (low delay) and 8 (high throughput). Note that in order to use some TOS precedence values, you have to be super user.<br/>
  For IPv6, set the Traffic Control value.</dd>
 <dt><code>-l</code><i> flow_label</i><code>, &#8211;flowlabel=</code><i>flow_label</i></dt>
 <dd>Use specified flow_label for IPv6 packets.</dd>
@@ -87,7 +87,7 @@ description: "traceroute – print the route packets trace to network host"
 <dt><code>&#8211;fwmark</code>=<i>mark</i></dt>
 <dd>Set the firewall mark for outgoing packets (since the Linux kernel 2.6.25).</dd>
 <dt><code>-M</code><i> method</i><code>, &#8211;module=</code><i>name</i></dt>
-<dd>Use specified method for traceroute operations. Default traditional udp method has name <i>default</i>, icmp (<code>-I</code>) and tcp (<code>-T</code>) have names <i>icmp</i> and <i>tcp</i> respectively.<br />
+<dd>Use specified method for traceroute operations. Default traditional udp method has name <i>default</i>, icmp (<code>-I</code>) and tcp (<code>-T</code>) have names <i>icmp</i> and <i>tcp</i> respectively.<br/>
  Method-specific options can be passed by <code>-O&nbsp;<wbr></code>. Most methods have their simple shortcuts, (<code>-I </code>means<code> -M icmp</code>, etc).</dd>
 <dt><code>-O</code><i> option</i><code>, &#8211;options=</code><i>options</i></dt>
 <dd>Specifies some method-specific option. Several options are separated by comma (or use several <code>-O</code> on cmdline). Each method may have its own specific options, or many not have them at all. To print information about available options, use <code>-O help</code>.</dd>
@@ -101,7 +101,7 @@ description: "traceroute – print the route packets trace to network host"
 <dd>Use raw packet of specified protocol for tracerouting. Default protocol is 253 (rfc3692).</dd>
 <dt><code>&#8211;mtu</code></dt>
 <dd>Discover MTU along the path being traced. Implies <code>-F -N 1</code>. New <i>mtu</i> is printed once in a form of <code>F=</code><i>NUM</i> at the first probe of a hop which requires such <i>mtu</i> to be reached. (Actually, the correspond &quot;frag needed&quot; icmp message normally is sent by the previous hop). </dd>
-<p> Note, that some routers might cache once the seen information on a fragmentation. Thus you can receive the final mtu from a closer hop. Try to specify an unusual <i>tos</i> by <code>-t</code> , this can help for one attempt (then it can be cached there as well).<br />
+<p> Note, that some routers might cache once the seen information on a fragmentation. Thus you can receive the final mtu from a closer hop. Try to specify an unusual <i>tos</i> by <code>-t</code> , this can help for one attempt (then it can be cached there as well).<br/>
  See <code>-F</code> option for more info.</p>
 <dt><code>&#8211;back</code></dt>
 <dd>Print the number of backward hops when it seems different with the forward direction. This number is guessed in assumption that remote hops send reply packets with initial ttl set to either 64, or 128 or 255 (which seems a common practice). It is printed as a negate value in a form of &#8216;-NUM&#8217; .</dd></dl>
@@ -112,18 +112,18 @@ description: "traceroute – print the route packets trace to network host"
 <p> Probe packets are udp datagrams with so-called &quot;unlikely&quot; destination ports. The &quot;unlikely&quot; port of the first probe is 33434, then for each next probe it is incremented by one. Since the ports are expected to be unused, the destination host normally returns &quot;icmp unreach port&quot; as a final response. (Nobody knows what happens when some application listens for such ports, though). </p>
 <p> This method is allowed for unprivileged users.</p>
 <h3>icmp &nbsp;<wbr> &nbsp;<wbr> &nbsp;<wbr> -I</h3>
-<p>Most usual method for now, which uses icmp echo packets for probes.<br />
+<p>Most usual method for now, which uses icmp echo packets for probes.<br/>
  If you can <a href="/docs/linux/man/8-ping/">ping</a>(8) the destination host, icmp tracerouting is applicable as well. </p>
-<p> This method may be allowed for unprivileged users since the kernel 3.0 (IPv4 only), which supports new <i>dgram icmp</i> (or <i></i><i>ping</i>) sockets. To allow such sockets, sysadmin should provide <i>net/ipv4/ping_group_range</i> sysctl range to match any group of the user.<br />
+<p> This method may be allowed for unprivileged users since the kernel 3.0 (IPv4 only), which supports new <i>dgram icmp</i> (or <i></i><i>ping</i>) sockets. To allow such sockets, sysadmin should provide <i>net/ipv4/ping_group_range</i> sysctl range to match any group of the user.<br/>
  Options:</p>
 <dl>
 <dt><code>raw</code></dt>
-<dd>Use only raw sockets (the traditional way).<br />
+<dd>Use only raw sockets (the traditional way).<br/>
  This way is tried first by default (for compatibility reasons), then new dgram icmp sockets as fallback.</dd>
 <dt><code>dgram</code></dt>
 <dd>Use only dgram icmp sockets.</dd></dl>
 <h3>tcp &nbsp;<wbr> &nbsp;<wbr> &nbsp;<wbr> &nbsp;<wbr>-T</h3>
-<p>Well-known modern method, intended to bypass firewalls.<br />
+<p>Well-known modern method, intended to bypass firewalls.<br/>
  Uses the constant destination port (default is 80, http). </p>
 <p> If some filters are present in the network path, then most probably any &quot;unlikely&quot; udp ports (as for <i>default</i> method) or even icmp echoes (as for <i>icmp</i>) are filtered, and whole tracerouting will just stop at such a firewall. To bypass a network filter, we have to use only allowed protocol/port combinations. If we trace for some, say, mailserver, then more likely <code>-T -p 25</code> can reach it, even when <code>-I</code> can not. </p>
 <p> This method uses well-known &quot;half-open technique&quot;, which prevents applications on the destination host from seeing our probes at all. Normally, a tcp syn is sent. For non-listened ports we receive tcp reset, and all is done. For active listening ports we receive tcp syn+ack, but answer by tcp reset (instead of expected tcp ack), this way the remote tcp session is dropped even without the application ever taking notice. </p>
@@ -147,13 +147,13 @@ description: "traceroute – print the route packets trace to network host"
 <h3>tcpconn</h3>
 <p>An initial implementation of tcp method, simple using <a href="/docs/linux/man/2-connect/">connect</a>(2) call, which does full tcp session opening. Not recommended for normal use, because a destination application is always affected (and can be confused).</p>
 <h3>udp &nbsp;<wbr> &nbsp;<wbr> &nbsp;<wbr> &nbsp;<wbr>-U</h3>
-<p>Use udp datagram with constant destination port (default 53, dns).<br />
+<p>Use udp datagram with constant destination port (default 53, dns).<br/>
  Intended to bypass firewall as well. </p>
 <p> Note, that unlike in <i>tcp</i> method, the correspond application on the destination host <code>always</code> receive our probes (with random data), and most can easily be confused by them. Most cases it will not respond to our packets though, so we will never see the final hop in the trace. (Fortunately, it seems that at least dns servers replies with something angry). </p>
 <p> This method is allowed for unprivileged users.</p>
 <h3>udplite &nbsp;<wbr> &nbsp;<wbr>-UL</h3>
 <p>Use udplite datagram for probes (with constant destination port, default 53). </p>
-<p> This method is allowed for unprivileged users.<br />
+<p> This method is allowed for unprivileged users.<br/>
  Options:</p>
 <dl>
 <dt><code>coverage</code>=<i>num</i></dt>
@@ -166,9 +166,9 @@ description: "traceroute – print the route packets trace to network host"
 <dt><code>service</code>=<i>num</i></dt>
 <dd>Set DCCP service code to <i>num</i> (default is 1885957735).</dd></dl>
 <h3>raw &nbsp;<wbr> &nbsp;<wbr> &nbsp;<wbr> &nbsp;<wbr>-P proto</h3>
-<p>Send raw packet of protocol <i>proto</i>.<br />
- No protocol-specific headers are used, just IP header only.<br />
- Implies <code>-N 1</code>.<br />
+<p>Send raw packet of protocol <i>proto</i>.<br/>
+ No protocol-specific headers are used, just IP header only.<br/>
+ Implies <code>-N 1</code>.<br/>
  Options:</p>
 <dl>
 <dt><code>protocol</code>=<i>proto</i></dt>

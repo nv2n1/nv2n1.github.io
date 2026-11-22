@@ -21,7 +21,7 @@ description: "voms_apic.h –"
 <p>The type of data returned.</p>
 <p>struct voms</p>
 <p>struct vomsdata</p>
-<p>Macros<br />
+<p>Macros<br/>
 #define NOGLOBUS</p>
 <p>#define TYPE_NODATA   0</p>
 <p>#define TYPE_STD   1</p>
@@ -60,7 +60,7 @@ description: "voms_apic.h –"
 <p>#define VERR_ORDER   19</p>
 <p>#define VERR_SERVERCODE   20</p>
 <p>#define VERR_NOTAVAIL   21</p>
-<p>Typedefs<br />
+<p>Typedefs<br/>
  typedef void * <code>gss_cred_id_t</code> </p>
 <p> typedef void * <code>gss_ctx_id_t</code></p>
 <h3>Functions</h3>
@@ -220,8 +220,8 @@ int VOMS_LoadCredentials (X509 *cert, EVP_PKEY *pkey, STACK_OF(X509)*chain, stru
 <p>Adds a target to the AC. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>vd</i> The vomsdata structure.<br />
- <i>target</i> The target to add. It should be a FQDN.<br />
+<dd><i>vd</i> The vomsdata structure.<br/>
+ <i>target</i> The target to add. It should be a FQDN.<br/>
  <i>error</i> RETURN PARAMETER: qualifies the error message.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -231,11 +231,11 @@ int VOMS_LoadCredentials (X509 *cert, EVP_PKEY *pkey, STACK_OF(X509)*chain, stru
 <p> It is the equivalent of the voms_proxy_init command, but without the &#8211;include functionality. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>hostname</i> FQDN of the VOMS server<br />
- <i>port</i> the port on which the VOMS server is listening<br />
- <i>servsubject</i> the subject of the server&#8217;s certificate<br />
- <i>command</i> Command<br />
- <i>vd</i> RETURN PARAMETER: contains the data returned by the connection<br />
+<dd><i>hostname</i> FQDN of the VOMS server<br/>
+ <i>port</i> the port on which the VOMS server is listening<br/>
+ <i>servsubject</i> the subject of the server&#8217;s certificate<br/>
+ <i>command</i> Command<br/>
+ <i>vd</i> RETURN PARAMETER: contains the data returned by the connection<br/>
  <i>error</i> RETURN PARAMETER: Qualifies the error message</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -244,14 +244,14 @@ int VOMS_LoadCredentials (X509 *cert, EVP_PKEY *pkey, STACK_OF(X509)*chain, stru
 <p>The same as VOMS_Contact, except that instead of starting the verification process, the data is returned as is in the </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>data</i> and<br />
- <i>datalen</i> fields.<br />
- <i>hostname</i> FQDN of the VOMS server<br />
- <i>port</i> the port on which the VOMS server is listening<br />
- <i>servsubject</i> the subject of the server&#8217;s certificate<br />
- <i>command</i> the command sent to the server<br />
- <i>version</i> is the version number of the data.<br />
- <i>vd</i> RETURN PARAMETER: contains the data returned by the connection<br />
+<dd><i>data</i> and<br/>
+ <i>datalen</i> fields.<br/>
+ <i>hostname</i> FQDN of the VOMS server<br/>
+ <i>port</i> the port on which the VOMS server is listening<br/>
+ <i>servsubject</i> the subject of the server&#8217;s certificate<br/>
+ <i>command</i> the command sent to the server<br/>
+ <i>version</i> is the version number of the data.<br/>
+ <i>vd</i> RETURN PARAMETER: contains the data returned by the connection<br/>
  <i>error</i> RETURN PARAMETER: Qualifies the error message</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -262,7 +262,7 @@ int VOMS_LoadCredentials (X509 *cert, EVP_PKEY *pkey, STACK_OF(X509)*chain, stru
 <p>&nbsp;<wbr>copy of another voms structure.&nbsp;<wbr> </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>v</i> The structure to copy.<br />
+<dd><i>v</i> The structure to copy.<br/>
  <i>error</i> RETURN PARAMETER: qualifies the error message.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -273,7 +273,7 @@ int VOMS_LoadCredentials (X509 *cert, EVP_PKEY *pkey, STACK_OF(X509)*chain, stru
 <p>&nbsp;<wbr>copy of another vomsdata structure.&nbsp;<wbr> </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>vd</i> The structure to copy.<br />
+<dd><i>vd</i> The structure to copy.<br/>
  <i>error</i> RETURN PARAMETER: qualifies the error message.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -282,7 +282,7 @@ int VOMS_LoadCredentials (X509 *cert, EVP_PKEY *pkey, STACK_OF(X509)*chain, stru
 <p>Gets the default attributes from a vomsdata structure. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>vd</i> the vomsdata structure to analyze<br />
+<dd><i>vd</i> the vomsdata structure to analyze<br/>
  <i>error</i> RETURN PARAMETER: Qualifies the error message</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -308,9 +308,9 @@ int VOMS_LoadCredentials (X509 *cert, EVP_PKEY *pkey, STACK_OF(X509)*chain, stru
 <p>&nbsp;<wbr> </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>vd</i> The vomsdata structure to analyze<br />
- <i>error</i> The error returned by the last function<br />
- <i>buffer</i> A pointer to a buffer where the error message will be written. If NULL, then memory is allocated by the function, and will have to be free()ed by the caller.<br />
+<dd><i>vd</i> The vomsdata structure to analyze<br/>
+ <i>error</i> The error returned by the last function<br/>
+ <i>buffer</i> A pointer to a buffer where the error message will be written. If NULL, then memory is allocated by the function, and will have to be free()ed by the caller.<br/>
  <i>len</i> The length of the memory pointed to by the buffer parameter.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -320,9 +320,9 @@ int VOMS_LoadCredentials (X509 *cert, EVP_PKEY *pkey, STACK_OF(X509)*chain, stru
 <p>&nbsp;<wbr> </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>buffer</i> OUTPUT PARAMETER contains the converted data<br />
- <i>buflen</i> OUTPUT PARAMETER contains the length of buffer<br />
- <i>vd</i> contains the data to convert<br />
+<dd><i>buffer</i> OUTPUT PARAMETER contains the converted data<br/>
+ <i>buflen</i> OUTPUT PARAMETER contains the length of buffer<br/>
+ <i>vd</i> contains the data to convert<br/>
  <i>error</i> RETURN PARAMETER Qualifies the error message</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -331,10 +331,10 @@ int VOMS_LoadCredentials (X509 *cert, EVP_PKEY *pkey, STACK_OF(X509)*chain, stru
 <p>Gets a list of VOMS servers which share an alias. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>vd</i> The correctly initialized vomsdata structured.<br />
- <i>alias</i> The alias to look for.<br />
- <i>system</i> The directory in which to look for the system configuration files. If NULL, defaults to /opt/edc/etc/vomses<br />
- <i>user</i> The directory in which to look for the user configuration files. Defaults to $VOMS_USERCONF if NULL. Again defaults to $HOME/.edg/vomses if the latter is NULL, or to ~/.edg/vomses as a last resort.<br />
+<dd><i>vd</i> The correctly initialized vomsdata structured.<br/>
+ <i>alias</i> The alias to look for.<br/>
+ <i>system</i> The directory in which to look for the system configuration files. If NULL, defaults to /opt/edc/etc/vomses<br/>
+ <i>user</i> The directory in which to look for the user configuration files. Defaults to $VOMS_USERCONF if NULL. Again defaults to $HOME/.edg/vomses if the latter is NULL, or to ~/.edg/vomses as a last resort.<br/>
  <i>error</i> RETURN PARAMETER: qualifies the error message.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -343,10 +343,10 @@ int VOMS_LoadCredentials (X509 *cert, EVP_PKEY *pkey, STACK_OF(X509)*chain, stru
 <p>Gets a list of VOMS servers which serve the same VO. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>vd</i> The correctly initialized vomsdata structured.<br />
- <i>vo</i> The VO to look for.<br />
- <i>system</i> The directory in which to look for the system configuration files. If NULL, defaults to /opt/edc/etc/vomses<br />
- <i>user</i> The directory in which to look for the user configuration files. Defaults to $VOMS_USERCONF if NULL. Again defaults to $HOME/.edg/vomses if the latter is NULL, or to ~/.edg/vomses as a last resort.<br />
+<dd><i>vd</i> The correctly initialized vomsdata structured.<br/>
+ <i>vo</i> The VO to look for.<br/>
+ <i>system</i> The directory in which to look for the system configuration files. If NULL, defaults to /opt/edc/etc/vomses<br/>
+ <i>user</i> The directory in which to look for the user configuration files. Defaults to $VOMS_USERCONF if NULL. Again defaults to $HOME/.edg/vomses if the latter is NULL, or to ~/.edg/vomses as a last resort.<br/>
  <i>error</i> RETURN PARAMETER: qualifies the error message.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -355,7 +355,7 @@ int VOMS_LoadCredentials (X509 *cert, EVP_PKEY *pkey, STACK_OF(X509)*chain, stru
 <p>Delete the targets from the AC. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>vd</i> The vomsdata structure.<br />
+<dd><i>vd</i> The vomsdata structure.<br/>
  <i>error</i> RETURN PARAMETER: qualifies the error message.</dd></dl>
 <h3>void VOMS_FreeTargetsList (char **)</h3>
 <h3>AC* VOMS_GetAC (struct <code>voms</code> *v)</h3>
@@ -370,9 +370,9 @@ int VOMS_LoadCredentials (X509 *cert, EVP_PKEY *pkey, STACK_OF(X509)*chain, stru
 <p> The function does verify the data. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>buffer</i> contains the data to be converted<br />
- <i>buflen</i> contains the length of buffer<br />
- <i>vd</i> RETURN PARAMETER: contains the data returned by the connection<br />
+<dd><i>buffer</i> contains the data to be converted<br/>
+ <i>buflen</i> contains the length of buffer<br/>
+ <i>vd</i> RETURN PARAMETER: contains the data returned by the connection<br/>
  <i>error</i> RETURN PARAMETER: Qualifies the error message</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -381,7 +381,7 @@ int VOMS_LoadCredentials (X509 *cert, EVP_PKEY *pkey, STACK_OF(X509)*chain, stru
 <p>Initializes a vomsdata structure for use by the other functions. N.B: This is the ONLY way to correctly initialize a vomsdata structure. It is also forbidden to directly take the sizeof() of this structure. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>voms</i> The directory which contains the certificates of the VOMS servers<br />
+<dd><i>voms</i> The directory which contains the certificates of the VOMS servers<br/>
  <i>cert</i> The directory which contains the CA certificates</dd></dl>
 <p> If voms_dir is empty, the value of the environment variable X509_VOMS_DIR is taken </p>
 <p> If cert_dir is empty, the value of the environment variable X509_CERT_DIR is taken </p>
@@ -394,8 +394,8 @@ int VOMS_LoadCredentials (X509 *cert, EVP_PKEY *pkey, STACK_OF(X509)*chain, stru
 <p>Further specified the order of the returned attributes. Please do note that calls are cumulative unless <code>VOMS_ResetOrder()</code> is called. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>order</i> the group:role attribute.<br />
- <i>vd</i> RETURN PARAMETER: contains the modified data.<br />
+<dd><i>order</i> the group:role attribute.<br/>
+ <i>vd</i> RETURN PARAMETER: contains the modified data.<br/>
  <i>error</i> RETURN PARAMETER: Qualifies the error message</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -404,7 +404,7 @@ int VOMS_LoadCredentials (X509 *cert, EVP_PKEY *pkey, STACK_OF(X509)*chain, stru
 <p>Unsets the return order of the attributes. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>vd</i> RETURN PARAMETER: contains the modified data.<br />
+<dd><i>vd</i> RETURN PARAMETER: contains the modified data.<br/>
  <i>error</i> RETURN PARAMETER: Qualifies the error message</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -431,8 +431,8 @@ aram error RETURN PARAMETER: Qualifies the error message
 <p>&nbsp;<wbr> </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>ext</i> The extension to parse.<br />
- <i>vd</i> RETURN PARAMETER: contains the data returned by the connection<br />
+<dd><i>ext</i> The extension to parse.<br/>
+ <i>vd</i> RETURN PARAMETER: contains the data returned by the connection<br/>
  <i>error</i> RETURN PARAMETER: Qualifies the error message</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -442,8 +442,8 @@ aram error RETURN PARAMETER: Qualifies the error message
 <p>&nbsp;<wbr> </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>ac</i> AC from which to get the credentials<br />
- <i>vd</i> RETURN PARAMETER: contains the data returned by the connection<br />
+<dd><i>ac</i> AC from which to get the credentials<br/>
+ <i>vd</i> RETURN PARAMETER: contains the data returned by the connection<br/>
  <i>error</i> RETURN PARAMETER: Qualifies the error message</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -453,9 +453,9 @@ aram error RETURN PARAMETER: Qualifies the error message
 <p>&nbsp;<wbr> </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>cred</i> The credential from which to retrieve the certificate.<br />
- <i>how</i> Recursion type<br />
- <i>vd</i> RETURN PARAMETER: contains the data returned by the connection<br />
+<dd><i>cred</i> The credential from which to retrieve the certificate.<br/>
+ <i>how</i> Recursion type<br/>
+ <i>vd</i> RETURN PARAMETER: contains the data returned by the connection<br/>
  <i>error</i> RETURN PARAMETER: Qualifies the error message</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -465,9 +465,9 @@ aram error RETURN PARAMETER: Qualifies the error message
 <p>&nbsp;<wbr> </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>ctx</i> The context from which to retrieve the certificate.<br />
- <i>how</i> Recursion type<br />
- <i>vd</i> RETURN PARAMETER: contains the data returned by the connection<br />
+<dd><i>ctx</i> The context from which to retrieve the certificate.<br/>
+ <i>how</i> Recursion type<br/>
+ <i>vd</i> RETURN PARAMETER: contains the data returned by the connection<br/>
  <i>error</i> RETURN PARAMETER: Qualifies the error message</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -477,9 +477,9 @@ aram error RETURN PARAMETER: Qualifies the error message
 <p>&nbsp;<wbr> </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>file</i> The file from which to retrieve the certificate.<br />
- <i>how</i> Recursion type<br />
- <i>vd</i> RETURN PARAMETER: contains the data returned by the connection<br />
+<dd><i>file</i> The file from which to retrieve the certificate.<br/>
+ <i>how</i> Recursion type<br/>
+ <i>vd</i> RETURN PARAMETER: contains the data returned by the connection<br/>
  <i>error</i> RETURN PARAMETER: Qualifies the error message</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -489,8 +489,8 @@ aram error RETURN PARAMETER: Qualifies the error message
 <p>&nbsp;<wbr> </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>how</i> Recursion type<br />
- <i>vd</i> RETURN PARAMETER: contains the data returned by the connection<br />
+<dd><i>how</i> Recursion type<br/>
+ <i>vd</i> RETURN PARAMETER: contains the data returned by the connection<br/>
  <i>error</i> RETURN PARAMETER: Qualifies the error message</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -499,8 +499,8 @@ aram error RETURN PARAMETER: Qualifies the error message
 <p>Set requested lifetime for <code>VOMS_Contact()</code> calls. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>length</i> Lifetime requested.<br />
- <i>vd</i> RETURN PARAMETER: contains the modified data.<br />
+<dd><i>length</i> Lifetime requested.<br/>
+ <i>vd</i> RETURN PARAMETER: contains the modified data.<br/>
  <i>error</i> RETURN PARAMETER: Qualifies the error message</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

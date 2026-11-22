@@ -17,7 +17,7 @@ description: "PAPI_state –"
 <p>&nbsp;<wbr>int&nbsp;<wbr><code>PAPI_state(&nbsp;<wbr>int&nbsp;<wbr>&nbsp;<wbr>EventSet, int&nbsp;<wbr>*&nbsp;<wbr>status&nbsp;<wbr>)</code>;</dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>EventSet</i> &#8212; an integer handle for a PAPI event set as created by <code>PAPI_create_eventset</code><br />
+<dd><i>EventSet</i> &#8212; an integer handle for a PAPI event set as created by <code>PAPI_create_eventset</code><br/>
  <i>status</i> &#8212; an integer containing a boolean combination of one or more of the following nonzero constants as defined in the PAPI header file <code>papi.h</code>: </dd>
 <dl COMPACT>
 <dt>&bull;</dt>
@@ -42,8 +42,8 @@ description: "PAPI_state –"
 </dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>PAPI_OK</i><br />
- <i>PAPI_EINVAL</i> One or more of the arguments is invalid.<br />
+<dd><i>PAPI_OK</i><br/>
+ <i>PAPI_EINVAL</i> One or more of the arguments is invalid.<br/>
  <i>PAPI_ENOEVST</i> The EventSet specified does not exist.
 </dd></dl>
 <p> <code>PAPI_state()</code> returns the counting state of the specified event set. </p>

@@ -27,15 +27,15 @@ int isinf(x);
 <p> <code>isnan</code>():</p>
 <dl>
 <dt>
-</dt><dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;_XOPEN_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
+</dt><dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;_XOPEN_SOURCE<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
 <p> <code>isinf</code>():</p>
 <dl>
 <dt>
-</dt><dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
+</dt><dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Floating point numbers can have special values, such as infinite or NaN. With the macro <code>fpclassify(</code><i>x</i><code>)</code> you can find out what type <i>x</i> is. The macro takes any floating-point expression as argument. The result is one of the following values:</p>
@@ -53,7 +53,7 @@ int isinf(x);
 <p> The other macros provide a short answer to some standard questions.</p>
 <dl>
 <dt><code>isfinite(</code><i>x</i><code>)</code></dt>
-<dd> returns a nonzero value if<br />
+<dd> returns a nonzero value if<br/>
  (fpclassify(x) != FP_NAN &amp;&amp; fpclassify(x) != FP_INFINITE)</dd>
 <dt><code>isnormal(</code><i>x</i><code>)</code></dt>
 <dd> returns a nonzero value if (fpclassify(x) == FP_NORMAL)</dd>

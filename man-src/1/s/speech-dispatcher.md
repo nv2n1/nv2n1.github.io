@@ -47,7 +47,7 @@ description: "speech-dispatcher – speech synthesis daemon"
 <dd> Print this info</dd></dl>
 <p> Please report bugs to speechd-discuss [at] nongnu.org</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2002-2012 Brailcom, o.p.s.<br />
+<p> Copyright &#169; 2002-2012 Brailcom, o.p.s.<br/>
  This is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2, or (at your option) any later version. Please see COPYING for more details.</p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>speech-dispatcher</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>speech-dispatcher</code> programs are properly installed at your site, the command</p>

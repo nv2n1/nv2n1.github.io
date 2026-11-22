@@ -11,7 +11,7 @@ description: "mge-utalk – Driver for MGE UPS SYSTEMS UTalk protocol equipment"
 <h2>Synopsis</h2>
 <p><code>mge-utalk</code> -h <code>mge-utalk</code> -a <i>UPS_NAME</i> [<i>OPTIONS</i>]</p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  This man page only documents the hardware-specific features of the mge-utalk driver. For information about the core driver, see <code><a href="/docs/linux/man/8-nutupsdrv/">nutupsdrv</a></code>(8). </dd>
 <h2>Supported Hardware</h2>
 <p>mge-utalk supports the following legacy units, using the MGE UTalk protocol: </p>

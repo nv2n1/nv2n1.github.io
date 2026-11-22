@@ -10,7 +10,7 @@ Dpkg::Vendor::Default - default vendor object
 
 <h2>Description</h2>A vendor object is used to provide vendor specific behaviour in various places. This is the default object used in case there's none for the current vendor or in case the vendor could not be identified (see Dpkg::Vendor documentation). 
 
- It provides some hooks that are called by various dpkg-* tools. If you need a new hook, please file a bug against dpkg-dev and explain your need. Note that the hook <font SIZE="-1">API</font> has no guaranty to be stable over an extended period. If you run an important distribution that makes use of vendor hooks, you'd better submit them for integration so that we avoid breaking your code.
+ It provides some hooks that are called by various dpkg-* tools. If you need a new hook, please file a bug against dpkg-dev and explain your need. Note that the hook API has no guaranty to be stable over an extended period. If you run an important distribution that makes use of vendor hooks, you'd better submit them for integration so that we avoid breaking your code.
 <h2>Functions</h2><dl COMPACT><dt>$vendor_obj = Dpkg::Vendor::Default-&gt;<i>new()</i>
 </dt><dd>Creates the default vendor object. Can be inherited by all vendor objects if they don't need any specific initialization at object creation time.
 </dd><dt>$vendor_obj-&gt;run_hook($id, @params)

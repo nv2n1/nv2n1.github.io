@@ -10,7 +10,7 @@ description: "ldns_rdf_set_size, ldns_rdf_set_type, ldns_rdf_set_data"
 
 <p> ldns_rdf_set_size, ldns_rdf_set_type, ldns_rdf_set_data </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> void ldns_rdf_set_size(ldns_rdf *rd, size_t size); </p>

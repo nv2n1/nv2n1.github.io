@@ -11,7 +11,7 @@ description: "cpstrf.f –"
 <p> cpstrf.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cpstrf</code> (UPLO, N, A, LDA, PIV, RANK, TOL, WORK, INFO)<br />
+<p> subroutine <code>cpstrf</code> (UPLO, N, A, LDA, PIV, RANK, TOL, WORK, INFO)<br/>
  <i></i><code>CPSTRF</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cpstrf (characterUPLO, integerN, complex, dimension( lda, * )A, integerLDA, integer, dimension( n )PIV, integerRANK, realTOL, real, dimension( 2*n )WORK, integerINFO)</h3>

@@ -10,7 +10,7 @@ description: "zhseqr.f –"
 <p>zhseqr.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zhseqr</code> (JOB, COMPZ, N, ILO, IHI, H, LDH, W, Z, LDZ, WORK, LWORK, INFO)<br />
+<p>subroutine <code>zhseqr</code> (JOB, COMPZ, N, ILO, IHI, H, LDH, W, Z, LDZ, WORK, LWORK, INFO)<br/>
  <i></i><code>ZHSEQR</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zhseqr (characterJOB, characterCOMPZ, integerN, integerILO, integerIHI, complex*16, dimension( ldh, * )H, integerLDH, complex*16, dimension( * )W, complex*16, dimension( ldz, * )Z, integerLDZ, complex*16, dimension( * )WORK, integerLWORK, integerINFO)</h3>

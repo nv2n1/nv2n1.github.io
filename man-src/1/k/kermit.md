@@ -216,33 +216,33 @@ The initialization file, if any, unless suppressed with -Y.
 <p>&nbsp;<wbr>&nbsp;<wbr>set transfer mode automatic </p>
 <p> which sets Kermit&#8217;s &quot;transfer mode&quot; to &quot;automatic&quot; (whatever that means). </p>
 <p> While typing commands, you can abbreviate, ask for help (by pressing the &quot;?&quot; key anywhere in a command), complete keywords or filenames (with the Tab or Esc key), and edit your typing with Backspace or Delete, Ctrl-W, Ctrl-U, etc. You can also recall previous commands, save your command history, and who knows what else. Give the INTRO command for details. </p>
-<p> C-Kermit has hundreds of commands, and they can be issued in infinite variety and combinations, including commands for:<br />
-&amp;bull;<br />
+<p> C-Kermit has hundreds of commands, and they can be issued in infinite variety and combinations, including commands for:<br/>
+&amp;bull;<br/>
 Making connections(SET LINE, DIAL, TELNET, SSH, FTP, &#8230;)</p>
-<p>    &amp; bull;<br />
+<p>    &amp; bull;<br/>
 Breaking connections(HANGUP, CLOSE)</p>
-<p>    &amp; bull;<br />
+<p>    &amp; bull;<br/>
 Transferring files(SEND, GET, RECEIVE, MOVE, RESEND, &#8230;)</p>
-<p>    &amp; bull;<br />
+<p>    &amp; bull;<br/>
 Establishing preferences(SET)</p>
-<p>    &amp; bull;<br />
+<p>    &amp; bull;<br/>
 Displaying preferences(SHOW)</p>
-<p>    &amp; bull;<br />
+<p>    &amp; bull;<br/>
 Managing local files(CD, DELETE, MKDIR, DIR, RENAME, TYPE, &#8230;)</p>
-<p>    &amp; bull;<br />
+<p>    &amp; bull;<br/>
 Managing remote files(RCD, RDEL, RMKDIR, RDIR, &#8230;)</p>
-<p>    &amp; bull;<br />
+<p>    &amp; bull;<br/>
 Using local files(FOPEN, FCLOSE, FREAD, FWRITE)</p>
-<p>    &amp; bull;<br />
+<p>    &amp; bull;<br/>
 Programming(TAKE, DEFINE, IF, FOR, WHILE, SWITCH, DECLARE, &#8230;)</p>
-<p>    &amp; bull;<br />
+<p>    &amp; bull;<br/>
 Interacting with the user(ECHO, ASK, &#8230;)</p>
-<p>    &amp; bull;<br />
+<p>    &amp; bull;<br/>
 Interacting with a remote computer(INPUT, OUTPUT, &#8230;)</p>
-<p>    &amp; bull;<br />
+<p>    &amp; bull;<br/>
 Interacting with local programs(RUN, EXEC, PTY, &#8230;)</p>
-<p>    &amp; bull;<br />
-Logging things(LOG SESSION, LOG PACKETS, LOG DEBUG, &#8230;)<br />
+<p>    &amp; bull;<br/>
+Logging things(LOG SESSION, LOG PACKETS, LOG DEBUG, &#8230;)<br/>
  And of course QUIT or EXIT to get out and HELP to get help, and for programmers: loops, decision making, variables, arrays, associative arrays, integer and floating point arithmetic, macros, built-in and user-defined functions, string manipulation, pattern matching, block structure, scoping, recursion, and all the rest. To get a list of all C-Kermit&#8217;s commands, type a question mark (?) at the prompt. To get a description of any command, type HELP followed by the name of the command, for example: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>help send </p>
 <p> The command interruption character is Ctrl-C (hold down the Ctrl key and press the C key). </p>
@@ -257,47 +257,47 @@ Logging things(LOG SESSION, LOG PACKETS, LOG DEBUG, &#8230;)<br />
 <p> That is, a top line that starts with &quot;#!&quot;, followed immediately by the full path of the Kermit executable, and then, if the Kermit script is to be given arguments on the command line, a space and a plus sign. The script file must also have execute permission: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>chmod&nbsp;<wbr>+x commandfile </p>
 <p> Except for the &quot; +&quot; part, this is exactly the same as you would do for a shell script, a Perl script, etc. Here&#8217;s a simple but useless example script that regurgitates its arguments (up to three of them): </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>#!/usr/local/bin/kermit&nbsp;<wbr>+<br />
-&nbsp;<wbr>&nbsp;<wbr>if defined&nbsp;<wbr>\%1 echo&nbsp;<wbr>&quot;Argument 1:&nbsp;<wbr>\%1&quot;<br />
-&nbsp;<wbr>&nbsp;<wbr>if defined&nbsp;<wbr>\%2 echo&nbsp;<wbr>&quot;Argument 2:&nbsp;<wbr>\%2&quot;<br />
-&nbsp;<wbr>&nbsp;<wbr>if defined&nbsp;<wbr>\%3 echo&nbsp;<wbr>&quot;Argument 3:&nbsp;<wbr>\%3&quot;<br />
-&nbsp;<wbr>&nbsp;<wbr>if defined&nbsp;<wbr>\%4 echo&nbsp;<wbr>&quot;etc&#8230;&quot;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>#!/usr/local/bin/kermit&nbsp;<wbr>+<br/>
+&nbsp;<wbr>&nbsp;<wbr>if defined&nbsp;<wbr>\%1 echo&nbsp;<wbr>&quot;Argument 1:&nbsp;<wbr>\%1&quot;<br/>
+&nbsp;<wbr>&nbsp;<wbr>if defined&nbsp;<wbr>\%2 echo&nbsp;<wbr>&quot;Argument 2:&nbsp;<wbr>\%2&quot;<br/>
+&nbsp;<wbr>&nbsp;<wbr>if defined&nbsp;<wbr>\%3 echo&nbsp;<wbr>&quot;Argument 3:&nbsp;<wbr>\%3&quot;<br/>
+&nbsp;<wbr>&nbsp;<wbr>if defined&nbsp;<wbr>\%4 echo&nbsp;<wbr>&quot;etc&#8230;&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>exit </p>
 <p> If this file is stored in your current directory as &quot;commandfile&quot;, then: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>./commandfile one two three four five </p>
 <p> prints: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>Argument 1: one<br />
-&nbsp;<wbr>&nbsp;<wbr>Argument 2: two<br />
-&nbsp;<wbr>&nbsp;<wbr>Argument 3: three<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>Argument 1: one<br/>
+&nbsp;<wbr>&nbsp;<wbr>Argument 2: two<br/>
+&nbsp;<wbr>&nbsp;<wbr>Argument 3: three<br/>
 &nbsp;<wbr>&nbsp;<wbr>etc&#8230; </p>
 <p> This illustrates the basic structure of a standalone Kermit script: the &quot;kerbang line&quot;, then some commands. It should end with &quot;exit&quot; unless you want the Kermit prompt to appear when it is finished. \%1 is the first argument, \%2 the second, and so on. </p>
 <p> You can also create your own commands by defining named macros composed of other Kermit commands (or macros). For example: </p>
-<p>define mydelete<br />
-{<br />
-    local trash<br />
-            assign trash (home) trashcan /<br />
-        if not defined \% 1 end 1 &#8220;Delete what?&#8221; if wild \% 1<br />
-    {<br />
-        end 1 &#8220;Deleting multiple files is too scary&#8221;<br />
-    }<br />
-    if<br />
-        not exist \% 1 end 1 &#8220;I can&#8217;t find \%1&#8221; if not directory \m(trash)<br />
-        {<br />
-            mkdir \m(trash) if fail end 1 &#8220;No trash can&#8221;<br />
-        }<br />
-    rename / list \% 1 \m(trash)<br />
-}<br />
-define myundelete<br />
-{<br />
-    local trash<br />
-            assign trash (home) trashcan /<br />
-        if not defined \% 1 end 1 &#8220;Undelete what?&#8221; if wild \% 1<br />
-    {<br />
-        end 1 &#8220;Undeleting multiple files is too hard&#8221;<br />
-    }<br />
-    if<br />
-        not directory \m(trash) end 1 &#8220;No trash can&#8221; if not exist \m(trash)\% 1 {end 1 &#8220;I can&#8217;t find \%1 in trash can&#8221;} rename / list \m(trash)\% 1.<br />
-}<br />
+<p>define mydelete<br/>
+{<br/>
+    local trash<br/>
+            assign trash (home) trashcan /<br/>
+        if not defined \% 1 end 1 &#8220;Delete what?&#8221; if wild \% 1<br/>
+    {<br/>
+        end 1 &#8220;Deleting multiple files is too scary&#8221;<br/>
+    }<br/>
+    if<br/>
+        not exist \% 1 end 1 &#8220;I can&#8217;t find \%1&#8221; if not directory \m(trash)<br/>
+        {<br/>
+            mkdir \m(trash) if fail end 1 &#8220;No trash can&#8221;<br/>
+        }<br/>
+    rename / list \% 1 \m(trash)<br/>
+}<br/>
+define myundelete<br/>
+{<br/>
+    local trash<br/>
+            assign trash (home) trashcan /<br/>
+        if not defined \% 1 end 1 &#8220;Undelete what?&#8221; if wild \% 1<br/>
+    {<br/>
+        end 1 &#8220;Undeleting multiple files is too hard&#8221;<br/>
+    }<br/>
+    if<br/>
+        not directory \m(trash) end 1 &#8220;No trash can&#8221; if not exist \m(trash)\% 1 {end 1 &#8220;I can&#8217;t find \%1 in trash can&#8221;} rename / list \m(trash)\% 1.<br/>
+}<br/>
  These sample macros are not exactly production quality (they don&#8217;t handle filenames that include path segments, they don&#8217;t handle multiple files, etc), but you get the idea: you can pass arguments to macros, and they can check them and make other kinds of decisions. If you put the above lines into your initialization or customization file (explained below), you&#8217;ll have MYDELETE and MYUNDELETE commands available every time you start Kermit, at least as long as you don&#8217;t suppress execution of the initialization file. (Exercise for the reader: Make these macros generally useful: remove limitations, add trashcan display, browsing, emptying, etc.) </p>
 <p> Kerbang scripts execute without the initialization file. This to keep them portable and also to make them start faster. If you want to write Kerbang scripts that depend on the initialization file, include the command </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>take&nbsp;<wbr>(home).kermrc </p>
@@ -595,7 +595,7 @@ define myundelete<br />
 <dd> In this state, which can be entered only when in Local mode (i.e. when Kermit has made a connection to another computer), Kermit is acting as a terminal to the remote computer. Your keystrokes are sent to the remote computer and characters that arrive over the communication connection are displayed on your screen. This state is entered when you give a CONNECT, DIAL, TELNET, RLOGIN, or IKSD command. You can return to command state by logging out of the remote computer, or by typing: </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>Ctrl-\c </p>
 <p> That is: Hold down the Ctrl key and press the backslash key, then let go of the Ctrl key and press the C key. This is called escaping back. Certain other escape-level commands are also provided; type Ctrl-\? for a list. For example, you can enter Shell state with: </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;<wbr>Ctrl-\! </p>
 <p> To send a Ctrl-\ to the host while in Connect state, type two of them in a row. See HELP CONNECT and HELP SET ESCAPE for more info. </p>
 <dt>Local file-transfer state</dt>
@@ -649,7 +649,7 @@ define myundelete<br />
  </dd>
 <dt>Making an SSH Connection</dt>
 <dd> <p> Unlike Telnet and Rlogin, SSH connections are not built-in, but handled by running your external SSH client through a pseudoterminal. Using C-Kermit to control the SSH client gives you all of Kermit&#8217;s features (file transfer, character-set conversion, scripting, etc) over SSH. </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;<wbr>ssh foo.bar.com </p>
 <p> More info: HELP SSH, HELP SET SSH. </p>
  </dd>
@@ -697,22 +697,22 @@ define myundelete<br />
 <dl>
 <dt>Downloading Files</dt>
 <dd> <p> Let&#8217;s say you have Kermit 95, C-Kermit, or MS-DOS Kermit on your desktop computer, with a connection to a Unix computer that has C-Kermit installed as &quot;kermit&quot;. To download a file (send it from Unix to your desktop computer), just type the following command at your Unix shell prompt: </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;<wbr>kermit -s oofa.txt </p>
 <p> (where oofa.txt is the filename). If you want to send more than one file, you can put as many filenames as you want on the command line, and they can be any combination of text and binary: </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;<wbr>kermit -s oofa.txt oofa.zip oofa.html oofa.tar.gz </p>
 <p> and/or you can use wildcards to send groups of files: </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;<wbr>kermit -s oofa.* </p>
 <p> If you want to send a file under an assumed name, use: </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;<wbr>kermit -s friday.txt -a today.txt </p>
 <p> This sends the file friday.txt but tells the receiving Kermit that its name is today.txt. In all cases, as noted, when the file transfer is finished, your desktop Kermit returns automatically to Connect state. No worries about escaping back, re-connecting, text/binary mode switching. Almost too easy, right? </p>
  </dd>
 <dt>Uploading Files</dt>
 <dd> <p> To upload files (send them from your desktop computer to the remote Unix computer) do the same thing, but use the -g (GET) option instead of -s: </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;<wbr>kermit -g oofa.txt </p>
 <p> This causes your local Kermit to enter server mode; then the remote Kermit program requests the named file and the local Kermit sends it and returns automatically to Connect state when done. </p>
 <p> If you want to upload multiple files, you have have use shell quoting rules, since these aren&#8217;t local files: </p>
@@ -720,17 +720,17 @@ define myundelete<br />
   kermit -g &quot;oofa.*&quot;
 </code></pre>
 <p> If you want to upload a file but store it under a different name, use: </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;<wbr>kermit -g friday.txt -a today.txt </p>
  </dd>
 <dt>Kermit Transfers the Old-Fashioned Way</dt>
 <dd> <p> If your desktop communications software does not support autoupload or autodownload, or it does not include Kermit server mode, the procedure requires more steps. </p>
 <p> To download a file, type: </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;<wbr>kermit -s filename </p>
 <p> on the host as before, but if nothing happens automatically in response to this command, you have to switch your desktop communications software into Kermit Receive state. This might be done by escaping back using keyboard characters or hot keys (Alt-x is typical) and/or with a command (like RECEIVE) or a menu. When the file transfer is complete, you have to go back to Connect state, Terminal emulation, or whatever terminology applies to your desktop communications software. </p>
 <p> To upload a file, type: </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;<wbr>kermit -r </p>
 <p> on the host (rather than &quot;kermit -g&quot;). This tells C-Kermit to wait passively for a file to start arriving. Then regain the attention of your desktop software (Alt-x or whatever) and instruct it to send the desired file(s) with Kermit protocol. When the transfer is finished, return to the Connect or Terminal screen. </p>
  </dd>
@@ -819,7 +819,7 @@ define myundelete<br />
 <dd> <p> FTP sessions can be fully automated. </p>
  </dd></dl>
 <p> Pending publication of the next edition of the manual, the Kermit FTP client is thoroughly documented at the Kermit Project website: </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="http://www.columbia.edu/kermit/ftpclient.html">http://www.columbia.edu/kermit/ftpclient.html</a> </p>
 <p> You also can use HELP FTP and HELP SET FTP to get descriptions of Kermit&#8217;s FTP-related commands. </p>
 <p> The HTTP client is similar to the FTP one, except you prefix each command with HTTP instead of FTP: HTTP OPEN, HTTP GET, HTTP PUT, HTTP CLOSE, etc. Type HELP HTTP for details, or visit the to view the manual supplements. HTTP connections can be open at the same time as regular serial or Telnet connections and FTP connections. So Kermit can manage up to three types connections simultaneously.  </p>
@@ -830,38 +830,38 @@ define myundelete<br />
   iksd foo.bar.edu
 </code></pre>
 <p> The IKSD command is equivalent to a TELNET command specifying port 1649. For more information about making and using connections to an IKSD, see: </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="http://www.columbia.edu/kermit/cuiksd.html">http://www.columbia.edu/kermit/cuiksd.html</a> </p>
 <p> You can run an Internet Kermit Service on your own computer too (if you are the system administrator). For instructions, see: </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="http://www.columbia.edu/kermit/iksd.html">http://www.columbia.edu/kermit/iksd.html</a>  </p>
 <h2>SECURITY</h2>
 <p> All of C-Kermit&#8217;s built-in TCP/IP networking methods (Telnet, Rlogin, IKSD, FTP, and HTTP) can be secured by one or more of the following IETF-approved methods: </p>
-<p> &bull;<code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>MIT Kerberos IV<br />
- <br />
- &bull;<code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>MIT Kerberos V<br />
- <br />
- &bull;<code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>SSL/TLS<br />
- <br />
- &bull;<code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>Stanford SRP<br />
+<p> &bull;<code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>MIT Kerberos IV<br/>
+ <br/>
+ &bull;<code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>MIT Kerberos V<br/>
+ <br/>
+ &bull;<code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>SSL/TLS<br/>
+ <br/>
+ &bull;<code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>Stanford SRP<br/>
  </p>
 <p> For complete instructions see: </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="http://www.columbia.edu/kermit/security.html">http://www.columbia.edu/kermit/security.html</a> </p>
 <p> And as noted previously, you can also make SSH connections with C-Kermit if you already have an SSH client installed.  </p>
 <h2>ALTERNATIVE COMMAND-LINE PERSONALITIES</h2>
 <p> When invoked as &quot;kermit&quot; or any other name besides &quot;ftp&quot; or &quot;telnet&quot;, C-Kermit has the command-line options described above in the OPTIONS section. However, if you invoke C-Kermit as &quot;telnet&quot; or &quot;ftp&quot;, it changes its command-line personality to match. This can be done (among other ways) with symbolic links (symlinks). For example, if you want C-Kermit to be your regular Telnet client, or the Telnet helper of your Web browser, you can create a link like the following in a directory that lies in your PATH ahead of the regular telnet program: </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;<wbr>ln -s&nbsp;<wbr>/usr/local/bin/kermit telnet </p>
 <p> Now when you give a &quot;telnet&quot; command, you are invoking Kermit instead, but with its Telnet command-line personality so, for example: </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;<wbr>telnet xyzcorp.com </p>
 <p> Makes a Telnet connection to xyzcorp.com, and Kermit exits automatically when the connection is closed (just like the regular Telnet client). Type &quot;telnet -h&quot; to get a list of Kermit&#8217;s Telnet-personality command-line options, which are intended to be as compatible as possible with the regular Telnet client. </p>
 <p> Similarly for FTP: </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;<wbr>ln -s&nbsp;<wbr>/usr/local/bin/kermit ftp </p>
 <p> And now type &quot;ftp -h&quot; to see its command-line options, and command lines just like you would give your regular FTP client: </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;<wbr>ftp xyzcorp.com </p>
 <p> but with additional options allowing an entire session to be specified on the command line. Finally, if Kermit&#8217;s first command-line option is a Telnet, FTP, IKSD, or HTTP URL, Kermit automatically makes the appropriate kind of connection and, if indicated by the URL, takes the desired action: </p>
 <dl>
@@ -885,7 +885,7 @@ define myundelete<br />
  </dd></dl>
 <h2>LICENSE</h2>
 <p> C-Kermit has an unusual license, but a fair and sensible one since the Kermit Project must support itself out of revenue: it&#8217;s not a BSD license, not GPL, not Artistic, not commercial, not shareware, not freeware. It can be summed up like this: if you want C-Kermit for your own use, you can download and use it without cost or license (but we&#8217;d appreciate it if you would purchase the manual). But if you want to sell C-Kermit or bundle it with a product or otherwise distribute it in a commercial setting EXCEPT WITH AN OPEN-SOURCE OPERATING SYSTEM DISTRIBUTION such as Linux, FreeBSD, NetBSD, or OpenBSD, you must license it. To see the complete license, give the LICENSE command at the prompt, or see the COPYING.TXT file distributed with C-Kermit 7.0 or later, or download it from </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;<wbr><a href="ftp://kermit.columbia.edu/kermit/c-kermit/COPYING.TXT">ftp://kermit.columbia.edu/kermit/c-kermit/COPYING.TXT</a> </p>
 <p> Send licensing inquiries to kermit [at] columbia.edu.  </p>
 <h2>BUGS</h2>
@@ -898,17 +898,17 @@ define myundelete<br />
 <dd> <p> Unix-specific C-Kermit bugs, hints, tips. </p>
  </dd></dl>
 <p> Report bugs and problems by email to: </p>
-<p> <br />
+<p> <br/>
 kermit-support [at] columbia.edu. </p>
 <p> Before requesting technical support, please read the hints here: </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="http://www.columbia.edu/kermit/support.html">http://www.columbia.edu/kermit/support.html</a> </p>
 <p> and also read the C-Kermit Frequently Asked Questions: </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="http://www.columbia.edu/kermit/ckfaq.html">http://www.columbia.edu/kermit/ckfaq.html</a>  </p>
 <h2>OTHER TOPICS</h2>
 <p> There&#8217;s way more to C-Kermit than we&#8217;ve touched on here -- troubleshooting, customization, character sets, dialing directories, sending pages, script writing, and on and on, all of which are covered in the manual and updates and supplements. For the most up-to-date information on documentation (or updated documentation itself) visit the Kermit Project website: </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="http://www.columbia.edu/kermit/">http://www.columbia.edu/kermit/</a> </p>
 <p> There you will also find Kermit software packages for other platforms: different Unix varieties, Windows, DOS, VMS, IBM mainframes, and many others: 20+ years&#8217; worth.  </p>
 <h2>DOCUMENTATION AND UPDATES</h2>
@@ -927,7 +927,7 @@ kermit-support [at] columbia.edu. </p>
 <dd> <p> <a rel="nofollow" href="http://www.columbia.edu/kermit/ckermit90.html">http://www.columbia.edu/kermit/ckermit90.html</a> </p>
  </dd></dl>
 <p> Visit C-Kermit home page: </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="http://www.columbia.edu/kermit/ckermit.html">http://www.columbia.edu/kermit/ckermit.html</a> </p>
 <p> to learn about new versions, Beta tests, and other news; to read case studies and tutorials; to download source code, install packages, and prebuilt binaries for many platforms. Also visit: </p>
 <dl>
@@ -1014,7 +1014,7 @@ kermit-support [at] columbia.edu. </p>
 <h2>AUTHORS</h2>
 <dl>
 <dt>Software</dt>
-<dd> <p> Frank da Cruz and Jeffrey E Altman, <br />
+<dd> <p> Frank da Cruz and Jeffrey E Altman, <br/>
  1985-present, with contributions from hundreds of others all over the world. </p>
  </dd>
 <dt>Documentation</dt>
@@ -1031,6 +1031,6 @@ USA
 <dd> <p> kermit [at] columbia.edu </p>
  </dd>
 <dt>Web</dt>
-<dd> <p> <a rel="nofollow" href="http://www.columbia.edu/kermit/">http://www.columbia.edu/kermit/</a> <br />
+<dd> <p> <a rel="nofollow" href="http://www.columbia.edu/kermit/">http://www.columbia.edu/kermit/</a> <br/>
  </p>
  </dd></dl>

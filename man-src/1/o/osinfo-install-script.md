@@ -10,9 +10,9 @@ description: "osinfo-install-script – generate a script for automated installa
 
 <p> osinfo-install-script &#8211; generate a script for automated installation </p>
 <h2>SYNOPSIS</h2>
-<p> osinfo-install-script [<font SIZE="-1">OPTIONS&#8230;</font>] MEDIA-FILE|OS-ID</p>
+<p> osinfo-install-script [OPTIONS&#8230;] MEDIA-FILE|OS-ID</p>
 <h2>DESCRIPTION</h2>
-<p> Generate a script suitable for performing an automated installation of <tt>&quot;MEDIA_FILE&quot;</tt> or <tt>&quot;OS-ID&quot;</tt>. <tt>&quot;MEDIA_FILE&quot;</tt> should be a path to an installer or live media (typically an <font SIZE="-1">ISO</font> file). <tt>&quot;OS-ID&quot;</tt> should be a <font SIZE="-1">URI</font> identifying the operating system, or its short <font SIZE="-1">ID.</font> </p>
+<p> Generate a script suitable for performing an automated installation of <tt>&quot;MEDIA_FILE&quot;</tt> or <tt>&quot;OS-ID&quot;</tt>. <tt>&quot;MEDIA_FILE&quot;</tt> should be a path to an installer or live media (typically an ISO file). <tt>&quot;OS-ID&quot;</tt> should be a URI identifying the operating system, or its short ID. </p>
 <p> By default a script will be generated for a <tt>&quot;JEOS&quot;</tt> style install.</p>
 <h2>OPTIONS</h2>
 <dl>
@@ -61,4 +61,4 @@ description: "osinfo-install-script – generate a script for automated installa
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2012 Red Hat, Inc.</p>
 <h2>LICENSE</h2>
-<p> <tt>&quot;osinfo-install-script&quot;</tt> is distributed under the termsof the <font SIZE="-1">GNU LGPL</font> v2 license. This is free software; see the source for copying conditions. There is <font SIZE="-1">NO</font> warranty; not even for <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE</font> </p>
+<p> <tt>&quot;osinfo-install-script&quot;</tt> is distributed under the termsof the GNU LGPL v2 license. This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE </p>

@@ -70,19 +70,19 @@ description: "fpaste – A cli frontend for the fpaste.org pastebin"
 </dd><dt>To paste the output of more than one program and/or file at a time, use the following example forms:</dt>
 <dd>
 </dd><dt>
-</dt><dd> <code>(lsusb ; lspci) | fpaste</code><br />
+</dt><dd> <code>(lsusb ; lspci) | fpaste</code><br/>
  <code>fpaste &lt;(lsusb) &lt;(lspci)</code> </dd>
-<p> <code>fpaste &lt;(fdisk -l) /etc/grub.conf </code><br />
+<p> <code>fpaste &lt;(fdisk -l) /etc/grub.conf </code><br/>
  <code>(fdisk -l ; cat /etc/grub.conf) | fpaste </code> </p>
 <p> <code>(uname -a ; yum repolist) | fpaste</code></p>
 <dt>Gather and paste various information about the running system. The info collected should be practically anonymous, and you may use the &#8211;printonly or &#8211;confirm options to preview what would be sent. fpaste.org URLs are also practically anonymous ([a-zA-Z0-9]**4 == 14,776,336 combinations), so you may also preview it instead before giving the link out.</dt>
 <dd>
 </dd><dt>
-</dt><dd> <code>fpaste &#8211;sysinfo</code><br />
- <code>fpaste &#8211;sysinfo &#8211;confirm</code><br />
+</dt><dd> <code>fpaste &#8211;sysinfo</code><br/>
+ <code>fpaste &#8211;sysinfo &#8211;confirm</code><br/>
  <code>fpaste &#8211;sysinfo &#8211;printonly | less</code></dd></dl>
 <h2>BUGS</h2>
-<p> Report bugs to: <a rel="nofollow" href="https://fedorahosted.org/fpaste/newticket">https://fedorahosted.org/fpaste/newticket</a><br />
+<p> Report bugs to: <a rel="nofollow" href="https://fedorahosted.org/fpaste/newticket">https://fedorahosted.org/fpaste/newticket</a><br/>
  or to: Jason &#8216;zcat&#8217; Farrell &lt;farrellj AT gmail DOT com&gt;.</p>
 <h2>AUTHOR</h2>
 <p> Fedora Unity </p>

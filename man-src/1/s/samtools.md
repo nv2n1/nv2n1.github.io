@@ -222,7 +222,7 @@ description: "samtools – Utilities for the Sequence Alignment/Map (SAM) format
 <dd> samtools import [<i>options</i>] <i>in.fastq</i> [ &#8230; ] </dd>
 <p> Converts one or more FASTQ files to unaligned SAM, BAM or CRAM. These formats offer a richer capability of tracking sample meta-data via the SAM header and per-read meta-data via the auxiliary tags. The <code>fastq</code> command may be used to reverse this conversion. </p>
 <dt><code>fastq/a</code></dt>
-<dd> samtools fastq [<i>options</i>] <i>in.bam</i><br />
+<dd> samtools fastq [<i>options</i>] <i>in.bam</i><br/>
  samtools fasta [<i>options</i>] <i>in.bam</i> </dd>
 <p> Converts a BAM or CRAM into either FASTQ or FASTA format depending on the command invoked. The files will be automatically compressed if the file names have a .gz or .bgzf extension. </p>
 <p> The input to this program must be collated by name. Use <code>samtools collate</code> or <code>samtools sort -n</code> to ensure this. </p>
@@ -881,8 +881,8 @@ samtools view -C -T ref.fa aln.bam &gt; aln.cram
 <p> Heng Li from the Sanger Institute wrote the original C version of samtools. Bob Handsaker from the Broad Institute implemented the BGZF library. Petr Danecek and Heng Li wrote the VCF/BCF implementation. James Bonfield from the Sanger Institute developed the CRAM implementation. Other large code contributions have been made by John Marshall, Rob Davies, Martin Pollard, Andrew Whitwham, Valeriu Ohan, Vasudeva Sarma (all while primarily at the Sanger Institute), with numerous other smaller but valuable contributions. See the per-command manual pages for further authorship. </p>
 <h2>SEE ALSO</h2>
 <p> <i>samtools-addreplacerg</i>(1), <i>samtools-ampliconclip</i>(1), <i>samtools-ampliconstats</i>(1), <i>samtools-bedcov</i>(1), <i>samtools-calmd</i>(1), <i>samtools-cat</i>(1), <i>samtools-collate</i>(1), <i>samtools-consensus</i>(1), <i>samtools-coverage</i>(1), <i>samtools-cram-size</i>(1), <i>samtools-depad</i>(1), <i>samtools-depth</i>(1), <i>samtools-dict</i>(1), <i>samtools-faidx</i>(1), <i>samtools-fasta</i>(1), <i>samtools-fastq</i>(1), <i>samtools-fixmate</i>(1), <i>samtools-flags</i>(1), <i>samtools-flagstat</i>(1), <i>samtools-fqidx</i>(1), <i>samtools-head</i>(1), <i>samtools-idxstats</i>(1), <i>samtools-import</i>(1), <i>samtools-index</i>(1), <i>samtools-markdup</i>(1), <i>samtools-merge</i>(1), <i>samtools-mpileup</i>(1), <i>samtools-phase</i>(1), <i>samtools-quickcheck</i>(1), <i>samtools-reference</i>(1), <i>samtools-reheader</i>(1), <i>samtools-reset</i>(1), <i>samtools-rmdup</i>(1), <i>samtools-sort</i>(1), <i>samtools-split</i>(1), <i>samtools-stats</i>(1), <i>samtools-targetcut</i>(1), <i>samtools-tview</i>(1), <i>samtools-view</i>(1), <i><a href="/docs/linux/man/1-bcftools/">bcftools</a></i>(1), <i><a href="/docs/linux/man/5-sam/">sam</a></i>(5), <i><a href="/docs/linux/man/1-tabix/">tabix</a></i>(1) </p>
-<p> Samtools website: &lt;<a rel="nofollow" href="http://www.htslib.org/">http://www.htslib.org/</a>&gt;<br />
- File format specification of SAM/BAM,CRAM,VCF/BCF: &lt;<a rel="nofollow" href="http://samtools.github.io/hts-specs">http://samtools.github.io/hts-specs</a>&gt;<br />
- Samtools latest source: &lt;<a rel="nofollow" href="https://github.com/samtools/samtools">https://github.com/samtools/samtools</a>&gt;<br />
- HTSlib latest source: &lt;<a rel="nofollow" href="https://github.com/samtools/htslib">https://github.com/samtools/htslib</a>&gt;<br />
+<p> Samtools website: &lt;<a rel="nofollow" href="http://www.htslib.org/">http://www.htslib.org/</a>&gt;<br/>
+ File format specification of SAM/BAM,CRAM,VCF/BCF: &lt;<a rel="nofollow" href="http://samtools.github.io/hts-specs">http://samtools.github.io/hts-specs</a>&gt;<br/>
+ Samtools latest source: &lt;<a rel="nofollow" href="https://github.com/samtools/samtools">https://github.com/samtools/samtools</a>&gt;<br/>
+ HTSlib latest source: &lt;<a rel="nofollow" href="https://github.com/samtools/htslib">https://github.com/samtools/htslib</a>&gt;<br/>
  Bcftools website: &lt;<a rel="nofollow" href="http://samtools.github.io/bcftools">http://samtools.github.io/bcftools</a>&gt; </p>

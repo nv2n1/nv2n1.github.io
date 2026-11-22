@@ -11,7 +11,7 @@ description: "chegv.f –"
 <p> chegv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>chegv</code> (ITYPE, JOBZ, UPLO, N, A, LDA, B, LDB, W, WORK, LWORK, RWORK, INFO)<br />
+<p> subroutine <code>chegv</code> (ITYPE, JOBZ, UPLO, N, A, LDA, B, LDB, W, WORK, LWORK, RWORK, INFO)<br/>
  <i></i><code>CHEGST</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine chegv (integerITYPE, characterJOBZ, characterUPLO, integerN, complex, dimension( lda, * )A, integerLDA, complex, dimension( ldb, * )B, integerLDB, real, dimension( * )W, complex, dimension( * )WORK, integerLWORK, real, dimension( * )RWORK, integerINFO)</h3>
@@ -96,13 +96,13 @@ if ITYPE
           On exit, if INFO = 0, WORK(1) returns the optimal LWORK.
 </pre>
 <p> <i>LWORK</i> </p>
-<p>          LWORK is INTEGER<br />
-          The length of the array WORK.  LWORK &gt;= max(1,2*N-1).<br />
-          For optimal efficiency, LWORK &gt;= (NB+1)*N,<br />
-          where NB is the blocksize for CHETRD returned by ILAENV.<br />
-          If LWORK = -1, then a workspace query is assumed;<br />
-          the routine<br />
-              only calculates the optimal size of the WORK array,<br />
+<p>          LWORK is INTEGER<br/>
+          The length of the array WORK.  LWORK &gt;= max(1,2*N-1).<br/>
+          For optimal efficiency, LWORK &gt;= (NB+1)*N,<br/>
+          where NB is the blocksize for CHETRD returned by ILAENV.<br/>
+          If LWORK = -1, then a workspace query is assumed;<br/>
+          the routine<br/>
+              only calculates the optimal size of the WORK array,<br/>
               returns this value as the first entry of the WORK array, and no error message related to LWORK is issued by XERBLA.</p>
 <p> <i>RWORK</i> </p>
 <pre>

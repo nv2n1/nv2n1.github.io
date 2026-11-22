@@ -10,7 +10,7 @@ description: "zrotg.f –"
 <p>zrotg.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zrotg</code> (CA, CB, C, S)<br />
+<p>subroutine <code>zrotg</code> (CA, CB, C, S)<br/>
  <i></i><code>ZROTG</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zrotg (complex*16CA, complex*16CB, double precisionC, complex*16S)</h3>

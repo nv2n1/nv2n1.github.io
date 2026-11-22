@@ -47,12 +47,12 @@ description: "sane-canon_lide70 – SANE backend for the Canon LiDE 70 and 600(F
 <dl>
 <dt><code>SANE_DEBUG_CANON_LIDE70</code></dt>
 <dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend. Higher debug levels increase the verbosity of the output. </dd>
-<p> Example:<br />
+<p> Example:<br/>
  SANE_DEBUG_CANON_LIDE70=128 scanimage &gt; /dev/null</dl>
 <h2>Known Problems</h2>
 <p>At low resolutions (75 and 150 dpi, implying high slider speeds) the LiDE 70 misses the top one millimeter of the scan area. This can be remedied by shifting the document one millimeter downward, in cases where such precision matters. Note that <code><a href="/docs/linux/man/1-xsane/">xsane</a></code>(1) uses the 75 dpi mode for prescans. The problem is worse on the LiDE 600(F), where the offset is five millimeters.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/5-sane-usb/">sane-usb</a></code>(5), <code><a href="/docs/linux/man/1-sane-find-scanner/">sane-find-scanner</a></code>(1), <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1), <code><a href="/docs/linux/man/1-xsane/">xsane</a></code>(1),<br />
+<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/5-sane-usb/">sane-usb</a></code>(5), <code><a href="/docs/linux/man/1-sane-find-scanner/">sane-find-scanner</a></code>(1), <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1), <code><a href="/docs/linux/man/1-xsane/">xsane</a></code>(1),<br/>
  <a rel="nofollow" href="http://www.juergen-ernst.de/info_sane.html">http://www.juergen-ernst.de/info_sane.html</a> </p>
 <h2>Author</h2>
 <p>pimvantend, building upon pioneering work by Juergen Ernst.</p>

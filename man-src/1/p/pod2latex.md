@@ -17,7 +17,7 @@ description: "pod2latex – convert pod documentation to latex format"
   pod2latex -prefile h.tex -postfile t.tex my.pod
 </pre>
 <h2>DESCRIPTION</h2>
-<p> <tt>&quot;pod2latex&quot;</tt> is a program to convert <font SIZE="-1">POD</font> format documentation (perlpod) into latex. It can process multiple input documents at a time and either generate a latex file per input document or a single combined output file.</p>
+<p> <tt>&quot;pod2latex&quot;</tt> is a program to convert POD format documentation (perlpod) into latex. It can process multiple input documents at a time and either generate a latex file per input document or a single combined output file.</p>
 <h2>OPTIONS AND ARGUMENTS</h2>
 <p> This section describes the supported command line options. Minimum matching is supported.</p>
 <dl>
@@ -26,9 +26,9 @@ description: "pod2latex – convert pod documentation to latex format"
 <dt><code>-full</code></dt>
 <dd> Creates a complete <tt>&quot;latex&quot;</tt> file that can be processed immediately (unless <tt>&quot;=for/=begin&quot;</tt> directives are used that rely on extra packages). Table of contents and index generation commands are included in the wrapper <tt>&quot;latex&quot;</tt> code.</dd>
 <dt><code>-sections</code></dt>
-<dd> Specify pod sections to include (or remove if negated) in the translation. See &#8220;<font SIZE="-1">SECTION SPECIFICATIONS&#8221;</font> in Pod::Select for the format to use for <i>section-spec</i>. This option may be given multiple times on the command line.This is identical to the similar option in the <tt>&quot;podselect()&quot;</tt> command.</dd>
+<dd> Specify pod sections to include (or remove if negated) in the translation. See &#8220;SECTION SPECIFICATIONS&#8221; in Pod::Select for the format to use for <i>section-spec</i>. This option may be given multiple times on the command line.This is identical to the similar option in the <tt>&quot;podselect()&quot;</tt> command.</dd>
 <dt><code>-modify</code></dt>
-<dd> This option causes the output <tt>&quot;latex&quot;</tt> to be slightly modified from the input pod such that when a <tt>&quot;=head1 NAME&quot;</tt> is encountered a section is created containing the actual pod name (rather than <font SIZE="-1"><code>NAME</code></font>) and all subsequent <tt>&quot;=head1&quot;</tt> directives are treated as subsections. This has the advantage that the description of a module will be in its own section which is helpful for including module descriptions in documentation. Also forces <tt>&quot;latex&quot;</tt> label and index entries to be prefixed by the name of the module.</dd>
+<dd> This option causes the output <tt>&quot;latex&quot;</tt> to be slightly modified from the input pod such that when a <tt>&quot;=head1 NAME&quot;</tt> is encountered a section is created containing the actual pod name (rather than <code>NAME</code>) and all subsequent <tt>&quot;=head1&quot;</tt> directives are treated as subsections. This has the advantage that the description of a module will be in its own section which is helpful for including module descriptions in documentation. Also forces <tt>&quot;latex&quot;</tt> label and index entries to be prefixed by the name of the module.</dd>
 <dt><code>-h1level</code></dt>
 <dd> Specifies the <tt>&quot;latex&quot;</tt> section that is equivalent to a <tt>&quot;H1&quot;</tt> pod directive. This is an integer between 0 and 5 with 0 equivalent to a <tt>&quot;latex&quot;</tt> chapter, 1 equivalent to a <tt>&quot;latex&quot;</tt> section etc. The default is 1 (<tt>&quot;H1&quot;</tt> equivalent to a latex section).</dd>
 <dt><code>-help</code></dt>

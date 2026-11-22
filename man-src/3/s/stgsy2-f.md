@@ -10,7 +10,7 @@ description: "stgsy2.f –"
 <p>stgsy2.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>stgsy2</code> (TRANS, IJOB, M, N, A, LDA, B, LDB, C, LDC, D, LDD, E, LDE, F, LDF, SCALE, RDSUM, RDSCAL, IWORK, PQ, INFO)<br />
+<p>subroutine <code>stgsy2</code> (TRANS, IJOB, M, N, A, LDA, B, LDB, C, LDC, D, LDD, E, LDE, F, LDF, SCALE, RDSUM, RDSCAL, IWORK, PQ, INFO)<br/>
  <i></i><code>STGSY2</code> solves the generalized Sylvester equation (unblocked algorithm).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine stgsy2 (characterTRANS, integerIJOB, integerM, integerN, real, dimension( lda, * )A, integerLDA, real, dimension( ldb, * )B, integerLDB, real, dimension( ldc, * )C, integerLDC, real, dimension( ldd, * )D, integerLDD, real, dimension( lde, * )E, integerLDE, real, dimension( ldf, * )F, integerLDF, realSCALE, realRDSUM, realRDSCAL, integer, dimension( * )IWORK, integerPQ, integerINFO)</h3>

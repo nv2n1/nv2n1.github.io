@@ -13,7 +13,7 @@ description: "std::chrono::_V2::steady_clock –"
 <p>typedef <code>chrono::nanoseconds</code> <code>duration</code> </p>
 <p> typedef duration::period <code>period</code> </p>
 <p> typedef duration::rep <code>rep</code> </p>
-<p> typedef <code>chrono::time_point</code><br />
+<p> typedef <code>chrono::time_point</code><br/>
  &lt; <code>steady_clock</code>, <code>duration</code> &gt; <code>time_point</code>&quot;</p>
 <h3>Static Public Member Functions</h3>
 <pre><code>static time_point now () noexcept

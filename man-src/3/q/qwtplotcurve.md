@@ -17,71 +17,71 @@ description: "QwtPlotCurve –"
 <p> enum <code>CurveAttribute</code> { <code>Inverted</code> = 0x01, <code>Fitted</code> = 0x02 } </p>
 <p> enum <code>LegendAttribute</code> { <code>LegendNoAttribute</code> = 0x00, <code>LegendShowLine</code> = 0x01, <code>LegendShowSymbol</code> = 0x02, <code>LegendShowBrush</code> = 0x04 } </p>
 <p> enum <code>PaintAttribute</code> { <code>ClipPolygons</code> = 0x01, <code>FilterPoints</code> = 0x02, <code>MinimizeMemory</code> = 0x04, <code>ImageBuffer</code> = 0x08 } </p>
-<p> typedef QFlags&lt; <code>CurveAttribute</code> &gt; <code>CurveAttributes</code><br />
- <i>Curve attributes. </i><br />
- typedef QFlags&lt; <code>LegendAttribute</code> &gt; <code>LegendAttributes</code><br />
- <i>Legend attributes. </i><br />
- typedef QFlags&lt; <code>PaintAttribute</code> &gt; <code>PaintAttributes</code><br />
+<p> typedef QFlags&lt; <code>CurveAttribute</code> &gt; <code>CurveAttributes</code><br/>
+ <i>Curve attributes. </i><br/>
+ typedef QFlags&lt; <code>LegendAttribute</code> &gt; <code>LegendAttributes</code><br/>
+ <i>Legend attributes. </i><br/>
+ typedef QFlags&lt; <code>PaintAttribute</code> &gt; <code>PaintAttributes</code><br/>
  <i>Paint attributes. </i></p>
 <h3>Public Member Functions</h3>
 <p><code>QwtPlotCurve</code> (const QString &amp;<code>title</code>=QString::null) </p>
 <p> <code>QwtPlotCurve</code> (const <code>QwtText</code> &amp;<code>title</code>) </p>
-<p> virtual <code>~QwtPlotCurve</code> ()<br />
- <i>Destructor. </i><br />
+<p> virtual <code>~QwtPlotCurve</code> ()<br/>
+ <i>Destructor. </i><br/>
  virtual int <code>rtti</code> () const </p>
 <p> void <code>setPaintAttribute</code> (<code>PaintAttribute</code>, bool on=true) </p>
 <p> bool <code>testPaintAttribute</code> (<code>PaintAttribute</code>) const </p>
 <p> void <code>setLegendAttribute</code> (<code>LegendAttribute</code>, bool on=true) </p>
 <p> bool <code>testLegendAttribute</code> (<code>LegendAttribute</code>) const </p>
-<p> void <code>setRawSamples</code> (const double *xData, const double *yData, int size)<br />
- <i>Initialize the data by pointing to memory blocks which are not managed by </i><code>QwtPlotCurve</code>.<br />
+<p> void <code>setRawSamples</code> (const double *xData, const double *yData, int size)<br/>
+ <i>Initialize the data by pointing to memory blocks which are not managed by </i><code>QwtPlotCurve</code>.<br/>
  void <code>setSamples</code> (const double *xData, const double *yData, int size) </p>
-<p> void <code>setSamples</code> (const QVector&lt; double &gt; &amp;xData, const QVector&lt; double &gt; &amp;yData)<br />
- <i>Initialize data with x- and y-arrays (explicitly shared) </i><br />
+<p> void <code>setSamples</code> (const QVector&lt; double &gt; &amp;xData, const QVector&lt; double &gt; &amp;yData)<br/>
+ <i>Initialize data with x- and y-arrays (explicitly shared) </i><br/>
  void <code>setSamples</code> (const QVector&lt; QPointF &gt; &amp;) </p>
 <p> void <code>setSamples</code> (<code>QwtSeriesData</code>&lt; QPointF &gt; *) </p>
 <p> int <code>closestPoint</code> (const QPoint &amp;pos, double *dist=NULL) const </p>
-<p> double <code>minXValue</code> () const<br />
- <i></i><code>boundingRect()</code>.left()<br />
- double <code>maxXValue</code> () const<br />
- <i></i><code>boundingRect()</code>.right()<br />
- double <code>minYValue</code> () const<br />
- <i></i><code>boundingRect()</code>.top()<br />
- double <code>maxYValue</code> () const<br />
- <i></i><code>boundingRect()</code>.bottom()<br />
+<p> double <code>minXValue</code> () const<br/>
+ <i></i><code>boundingRect()</code>.left()<br/>
+ double <code>maxXValue</code> () const<br/>
+ <i></i><code>boundingRect()</code>.right()<br/>
+ double <code>minYValue</code> () const<br/>
+ <i></i><code>boundingRect()</code>.top()<br/>
+ double <code>maxYValue</code> () const<br/>
+ <i></i><code>boundingRect()</code>.bottom()<br/>
  void <code>setCurveAttribute</code> (<code>CurveAttribute</code>, bool on=true) </p>
 <p> bool <code>testCurveAttribute</code> (<code>CurveAttribute</code>) const </p>
 <p> void <code>setPen</code> (const QColor &amp;, qreal width=0.0, Qt::PenStyle=Qt::SolidLine) </p>
 <p> void <code>setPen</code> (const QPen &amp;) </p>
 <p> const QPen &amp; <code>pen</code> () const </p>
-<p> void <code>setBrush</code> (const QBrush &amp;)<br />
- <i>Assign a brush. </i><br />
+<p> void <code>setBrush</code> (const QBrush &amp;)<br/>
+ <i>Assign a brush. </i><br/>
  const QBrush &amp; <code>brush</code> () const </p>
-<p> void <code>setBaseline</code> (double)<br />
- <i>Set the value of the baseline. </i><br />
+<p> void <code>setBaseline</code> (double)<br/>
+ <i>Set the value of the baseline. </i><br/>
  double <code>baseline</code> () const </p>
 <p> void <code>setStyle</code> (<code>CurveStyle</code> <code>style</code>) </p>
 <p> <code>CurveStyle</code> <code>style</code> () const </p>
-<p> void <code>setSymbol</code> (<code>QwtSymbol</code> *)<br />
- <i>Assign a symbol. </i><br />
+<p> void <code>setSymbol</code> (<code>QwtSymbol</code> *)<br/>
+ <i>Assign a symbol. </i><br/>
  const <code>QwtSymbol</code> * <code>symbol</code> () const </p>
 <p> void <code>setCurveFitter</code> (<code>QwtCurveFitter</code> *) </p>
 <p> <code>QwtCurveFitter</code> * <code>curveFitter</code> () const </p>
 <p> virtual void <code>drawSeries</code> (QPainter *, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;canvasRect, int from, int to) const </p>
 <p> virtual <code>QwtGraphic</code> <code>legendIcon</code> (int index, const QSizeF &amp;) const </p>
 <h3>Protected Member Functions</h3>
-<p>void <code>init</code> ()<br />
- <i>Initialize internal members. </i><br />
- virtual void <code>drawCurve</code> (QPainter *p, int <code>style</code>, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;canvasRect, int from, int to) const<br />
- <i>Draw the line part (without symbols) of a curve interval. </i><br />
+<p>void <code>init</code> ()<br/>
+ <i>Initialize internal members. </i><br/>
+ virtual void <code>drawCurve</code> (QPainter *p, int <code>style</code>, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;canvasRect, int from, int to) const<br/>
+ <i>Draw the line part (without symbols) of a curve interval. </i><br/>
  virtual void <code>drawSymbols</code> (QPainter *p, const <code>QwtSymbol</code> &amp;, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;canvasRect, int from, int to) const </p>
-<p> virtual void <code>drawLines</code> (QPainter *p, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;canvasRect, int from, int to) const<br />
- <i>Draw lines. </i><br />
+<p> virtual void <code>drawLines</code> (QPainter *p, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;canvasRect, int from, int to) const<br/>
+ <i>Draw lines. </i><br/>
  virtual void <code>drawSticks</code> (QPainter *p, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;canvasRect, int from, int to) const </p>
 <p> virtual void <code>drawDots</code> (QPainter *p, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;canvasRect, int from, int to) const </p>
 <p> virtual void <code>drawSteps</code> (QPainter *p, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;canvasRect, int from, int to) const </p>
 <p> virtual void <code>fillCurve</code> (QPainter *, const <code>QwtScaleMap</code> &amp;, const <code>QwtScaleMap</code> &amp;, const QRectF &amp;canvasRect, QPolygonF &amp;) const </p>
-<p> void <code>closePolyline</code> (QPainter *, const <code>QwtScaleMap</code> &amp;, const <code>QwtScaleMap</code> &amp;, QPolygonF &amp;) const<br />
+<p> void <code>closePolyline</code> (QPainter *, const <code>QwtScaleMap</code> &amp;, const <code>QwtScaleMap</code> &amp;, QPolygonF &amp;) const<br/>
  <i>Complete a polygon to be a closed polygon including the area between the original polygon and the baseline. </i></p>
 <h2>Detailed Description</h2>
 <p>A plot item, that represents a series of points. </p>
@@ -197,15 +197,15 @@ description: "QwtPlotCurve –"
 <p>Complete a polygon to be a closed polygon including the area between the original polygon and the baseline. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>xMap</i> X map<br />
- <i>yMap</i> Y map<br />
+<dd><i>painter</i> Painter<br/>
+ <i>xMap</i> X map<br/>
+ <i>yMap</i> Y map<br/>
  <i>polygon</i> Polygon to be completed</dd></dl>
 <h3>int QwtPlotCurve::closestPoint (const QPoint &amp;pos, double *dist = NULL) const</h3>
 <p>Find the closest curve point for a specific position </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>pos</i> Position, where to look for the closest curve point<br />
+<dd><i>pos</i> Position, where to look for the closest curve point<br/>
  <i>dist</i> If dist != NULL, <code>closestPoint()</code> returns the distance between the position and the closest curve point</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -225,12 +225,12 @@ description: "QwtPlotCurve –"
 <p>Draw the line part (without symbols) of a curve interval. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>style</i> curve style, see <code>QwtPlotCurve::CurveStyle</code><br />
- <i>xMap</i> x map<br />
- <i>yMap</i> y map<br />
- <i>canvasRect</i> Contents rectangle of the canvas<br />
- <i>from</i> index of the first point to be painted<br />
+<dd><i>painter</i> Painter<br/>
+ <i>style</i> curve style, see <code>QwtPlotCurve::CurveStyle</code><br/>
+ <i>xMap</i> x map<br/>
+ <i>yMap</i> y map<br/>
+ <i>canvasRect</i> Contents rectangle of the canvas<br/>
+ <i>from</i> index of the first point to be painted<br/>
  <i>to</i> index of the last point to be painted</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -239,11 +239,11 @@ description: "QwtPlotCurve –"
 <p>Draw dots </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>xMap</i> x map<br />
- <i>yMap</i> y map<br />
- <i>canvasRect</i> Contents rectangle of the canvas<br />
- <i>from</i> index of the first point to be painted<br />
+<dd><i>painter</i> Painter<br/>
+ <i>xMap</i> x map<br/>
+ <i>yMap</i> y map<br/>
+ <i>canvasRect</i> Contents rectangle of the canvas<br/>
+ <i>from</i> index of the first point to be painted<br/>
  <i>to</i> index of the last point to be painted</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -252,11 +252,11 @@ description: "QwtPlotCurve –"
 <p>Draw lines. If the CurveAttribute Fitted is enabled a <code>QwtCurveFitter</code> tries to interpolate/smooth the curve, before it is painted. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>xMap</i> x map<br />
- <i>yMap</i> y map<br />
- <i>canvasRect</i> Contents rectangle of the canvas<br />
- <i>from</i> index of the first point to be painted<br />
+<dd><i>painter</i> Painter<br/>
+ <i>xMap</i> x map<br/>
+ <i>yMap</i> y map<br/>
+ <i>canvasRect</i> Contents rectangle of the canvas<br/>
+ <i>from</i> index of the first point to be painted<br/>
  <i>to</i> index of the last point to be painted</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -265,11 +265,11 @@ description: "QwtPlotCurve –"
 <p>Draw an interval of the curve </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>xMap</i> Maps x-values into pixel coordinates.<br />
- <i>yMap</i> Maps y-values into pixel coordinates.<br />
- <i>canvasRect</i> Contents rectangle of the canvas<br />
- <i>from</i> Index of the first point to be painted<br />
+<dd><i>painter</i> Painter<br/>
+ <i>xMap</i> Maps x-values into pixel coordinates.<br/>
+ <i>yMap</i> Maps y-values into pixel coordinates.<br/>
+ <i>canvasRect</i> Contents rectangle of the canvas<br/>
+ <i>from</i> Index of the first point to be painted<br/>
  <i>to</i> Index of the last point to be painted. If to &lt; 0 the curve will be painted to its last point.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -280,11 +280,11 @@ description: "QwtPlotCurve –"
 <p> The direction of the steps depends on Inverted attribute. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>xMap</i> x map<br />
- <i>yMap</i> y map<br />
- <i>canvasRect</i> Contents rectangle of the canvas<br />
- <i>from</i> index of the first point to be painted<br />
+<dd><i>painter</i> Painter<br/>
+ <i>xMap</i> x map<br/>
+ <i>yMap</i> y map<br/>
+ <i>canvasRect</i> Contents rectangle of the canvas<br/>
+ <i>from</i> index of the first point to be painted<br/>
  <i>to</i> index of the last point to be painted</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -293,11 +293,11 @@ description: "QwtPlotCurve –"
 <p>Draw sticks </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>xMap</i> x map<br />
- <i>yMap</i> y map<br />
- <i>canvasRect</i> Contents rectangle of the canvas<br />
- <i>from</i> index of the first point to be painted<br />
+<dd><i>painter</i> Painter<br/>
+ <i>xMap</i> x map<br/>
+ <i>yMap</i> y map<br/>
+ <i>canvasRect</i> Contents rectangle of the canvas<br/>
+ <i>from</i> index of the first point to be painted<br/>
  <i>to</i> index of the last point to be painted</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -306,12 +306,12 @@ description: "QwtPlotCurve –"
 <p>Draw symbols </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>symbol</i> Curve symbol<br />
- <i>xMap</i> x map<br />
- <i>yMap</i> y map<br />
- <i>canvasRect</i> Contents rectangle of the canvas<br />
- <i>from</i> Index of the first point to be painted<br />
+<dd><i>painter</i> Painter<br/>
+ <i>symbol</i> Curve symbol<br/>
+ <i>xMap</i> x map<br/>
+ <i>yMap</i> y map<br/>
+ <i>canvasRect</i> Contents rectangle of the canvas<br/>
+ <i>from</i> Index of the first point to be painted<br/>
  <i>to</i> Index of the last point to be painted</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -320,10 +320,10 @@ description: "QwtPlotCurve –"
 <p>Fill the area between the curve and the baseline with the curve brush </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>xMap</i> x map<br />
- <i>yMap</i> y map<br />
- <i>canvasRect</i> Contents rectangle of the canvas<br />
+<dd><i>painter</i> Painter<br/>
+ <i>xMap</i> x map<br/>
+ <i>yMap</i> y map<br/>
+ <i>canvasRect</i> Contents rectangle of the canvas<br/>
  <i>polygon</i> Polygon &#8211; will be modified !</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -334,7 +334,7 @@ description: "QwtPlotCurve –"
 <dd>Icon representing the curve on the legend</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>index</i> Index of the legend entry ( ignored as there is only one )<br />
+<dd><i>index</i> Index of the legend entry ( ignored as there is only one )<br/>
  <i>size</i> Icon size</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -375,7 +375,7 @@ description: "QwtPlotCurve –"
 <p>Specify an attribute for drawing the curve </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>attribute</i> Curve attribute<br />
+<dd><i>attribute</i> Curve attribute<br/>
  <i>on</i> On/Off</dd></dl>
 <p> /sa <code>testCurveAttribute()</code>, <code>setCurveFitter()</code></p>
 <h3>void QwtPlotCurve::setCurveFitter (<code>QwtCurveFitter</code> *curveFitter)</h3>
@@ -393,13 +393,13 @@ description: "QwtPlotCurve –"
 <p>Specify an attribute how to draw the legend icon </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>attribute</i> Attribute<br />
+<dd><i>attribute</i> Attribute<br/>
  <i>on</i> On/Off /sa <code>testLegendAttribute()</code>. <code>legendIcon()</code></dd></dl>
 <h3>void QwtPlotCurve::setPaintAttribute (<code>PaintAttribute</code>attribute, boolon = true)</h3>
 <p>Specify an attribute how to draw the curve </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>attribute</i> Paint attribute<br />
+<dd><i>attribute</i> Paint attribute<br/>
  <i>on</i> On/Off</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -409,8 +409,8 @@ description: "QwtPlotCurve –"
 <p> In Qt5 the default pen width is 1.0 ( 0.0 in Qt4 ) what makes it non cosmetic ( see QPen::isCosmetic() ). This method has been introduced to hide this incompatibility. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>color</i> Pen color<br />
- <i>width</i> Pen width<br />
+<dd><i>color</i> Pen color<br/>
+ <i>width</i> Pen width<br/>
  <i>style</i> Pen style</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -427,8 +427,8 @@ description: "QwtPlotCurve –"
 <p>Initialize the data by pointing to memory blocks which are not managed by <code>QwtPlotCurve</code>. setRawSamples is provided for efficiency. It is important to keep the pointers during the lifetime of the underlying <code>QwtCPointerData</code> class. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>xData</i> pointer to x data<br />
- <i>yData</i> pointer to y data<br />
+<dd><i>xData</i> pointer to x data<br/>
+ <i>yData</i> pointer to y data<br/>
  <i>size</i> size of x and y</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -437,8 +437,8 @@ description: "QwtPlotCurve –"
 <p>Set data by copying x- and y-values from specified memory blocks. Contrary to <code>setRawSamples()</code>, this function makes a &#8216;deep copy&#8217; of the data. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>xData</i> pointer to x values<br />
- <i>yData</i> pointer to y values<br />
+<dd><i>xData</i> pointer to x values<br/>
+ <i>yData</i> pointer to y values<br/>
  <i>size</i> size of xData and yData</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -447,7 +447,7 @@ description: "QwtPlotCurve –"
 <p>Initialize data with x- and y-arrays (explicitly shared) </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>xData</i> x data<br />
+<dd><i>xData</i> x data<br/>
  <i>yData</i> y data</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>

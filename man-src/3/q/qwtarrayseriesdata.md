@@ -13,15 +13,15 @@ description: "QwtArraySeriesData< T > –"
 <p>#include &lt;qwt_series_data.h&gt; </p>
 <p> Inherits <code>QwtSeriesData&lt; T &gt;</code>.</p>
 <h3>Public Member Functions</h3>
-<p><code>QwtArraySeriesData</code> ()<br />
- <i>Constructor. </i><br />
+<p><code>QwtArraySeriesData</code> ()<br/>
+ <i>Constructor. </i><br/>
  <code>QwtArraySeriesData</code> (const QVector&lt; T &gt; &amp;<code>samples</code>) </p>
 <p> void <code>setSamples</code> (const QVector&lt; T &gt; &amp;<code>samples</code>) </p>
 <p> const QVector&lt; T &gt; <code>samples</code> () const </p>
 <p> virtual size_t <code>size</code> () const </p>
 <p> virtual T <code>sample</code> (size_t index) const </p>
 <h3>Protected Attributes</h3>
-<p>QVector&lt; T &gt; <code>d_samples</code><br />
+<p>QVector&lt; T &gt; <code>d_samples</code><br/>
  <i>Vector of samples. </i></p>
 <h2>Detailed Description</h2>
 <h3>template&lt;typename T&gt;class QwtArraySeriesData&lt; T &gt;</h3>

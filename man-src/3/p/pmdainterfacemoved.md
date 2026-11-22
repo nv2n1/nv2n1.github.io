@@ -9,8 +9,8 @@ description: "pmdaInterfaceMoved – reset internal state of a pmdaInterface str
 
 <p><code>pmdaInterfaceMoved</code> &#8211; reset internal state of a <i>pmdaInterface</i> structure</p>
 <h2>C Synopsis</h2>
-<p><code> #include &lt;pcp/pmapi.h&gt;<br />
- #include &lt;pcp/impl.h&gt;<br />
+<p><code> #include &lt;pcp/pmapi.h&gt;<br/>
+ #include &lt;pcp/impl.h&gt;<br/>
  #include &lt;pcp/pmda.h&gt; </p>
 <p> void pmdaInterfaceMoved(pmdaInterface *</code><i>dispatch</i>) </p>
 <p> cc &#8230; -lpcp_pmda -lpcp</p>

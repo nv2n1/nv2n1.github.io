@@ -51,29 +51,29 @@ void endservent(void);</code></pre>
 <tr VALIGN=top>
 <td> <code>getservent</code>() </td>
 <td>Thread safety</td>
-<td> MT-Unsafe race:servent<br />
+<td> MT-Unsafe race:servent<br/>
  race:serventbuf locale
 </td>
 </tr>
 <tr VALIGN=top>
 <td> <code>getservbyname</code>() </td>
 <td>Thread safety</td>
-<td> MT-Unsafe race:servbyname<br />
+<td> MT-Unsafe race:servbyname<br/>
  locale
 </td>
 </tr>
 <tr VALIGN=top>
 <td> <code>getservbyport</code>() </td>
 <td>Thread safety</td>
-<td> MT-Unsafe race:servbyport<br />
+<td> MT-Unsafe race:servbyport<br/>
  locale
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>setservent</code>(),<br />
+<td> <code>setservent</code>(),<br/>
  <code>endservent</code>() </td>
 <td>Thread safety</td>
-<td> MT-Unsafe race:servent<br />
+<td> MT-Unsafe race:servent<br/>
  locale
 </td>
 </tr>

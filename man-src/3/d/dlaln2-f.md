@@ -10,7 +10,7 @@ description: "dlaln2.f –"
 <p>dlaln2.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dlaln2</code> (LTRANS, NA, NW, SMIN, CA, A, LDA, D1, D2, B, LDB, WR, WI, X, LDX, SCALE, XNORM, INFO)<br />
+<p>subroutine <code>dlaln2</code> (LTRANS, NA, NW, SMIN, CA, A, LDA, D1, D2, B, LDB, WR, WI, X, LDX, SCALE, XNORM, INFO)<br/>
  <i></i><code>DLALN2</code> solves a 1-by-1 or 2-by-2 linear system of equations of the specified form.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlaln2 (logicalLTRANS, integerNA, integerNW, double precisionSMIN, double precisionCA, double precision, dimension( lda, * )A, integerLDA, double precisionD1, double precisionD2, double precision, dimension( ldb, * )B, integerLDB, double precisionWR, double precisionWI, double precision, dimension( ldx, * )X, integerLDX, double precisionSCALE, double precisionXNORM, integerINFO)</h3>

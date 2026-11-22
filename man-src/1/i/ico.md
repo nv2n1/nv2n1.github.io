@@ -50,5 +50,5 @@ description: "ico – animate an icosahedron or other polyhedron"
 <p> Pyramids and tetrahedrons with filled faces do not display correctly. </p>
 <p> A separate color cell is allocated for each name in the -colors list, even when the same name may be specified twice. Color allocation fails in TrueColor displays and option <i>-faces</i> does not work well.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright 1994 X Consortium<br />
+<p> Copyright 1994 X Consortium<br/>
  See <i><a href="/docs/linux/man/7-x/">X</a>(7)</i> for a full statement of rights and permissions. </p>

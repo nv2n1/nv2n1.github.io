@@ -10,16 +10,16 @@ description: "qperf – Measure RDMA and IP performance"
 
 <p> qperf &#8211; Measure RDMA and IP performance</p>
 <h2>SYNOPSIS</h2>
-<p> <code>qperf</code><br />
+<p> <code>qperf</code><br/>
  <code>qperf</code> <i>SERVERNODE</i> [<i>OPTIONS</i>] <i>TESTS</i> </p>
 <h2>DESCRIPTION</h2>
 <p> qperf measures bandwidth and latency between two nodes. It can work over TCP/IP as well as the RDMA transports. On one of the nodes, qperf is typically run with no arguments designating it the server node. One may then run qperf on a client node to obtain measurements such as bandwidth, latency and cpu utilization. </p>
 <p> In its most basic form, qperf is run on one node in server mode by invoking it with no arguments. On the other node, it is run with two arguments: the name of the server node followed by the name of the test. A list of tests can be found in the section, TESTS. A variety of options may also be specified. </p>
 <p> One can get more detailed information on qperf by using the &#8211;help option. Below are examples of using the &#8211;help option: </p>
-<p>&nbsp;<wbr>qperf &#8211;help examples&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Some examples of using qperf<br />
-&nbsp;<wbr>qperf &#8211;help opts&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Summary of options<br />
-&nbsp;<wbr>qperf &#8211;help options&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Description of options<br />
-&nbsp;<wbr>qperf &#8211;help tests&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Short summary and description of tests<br />
+<p>&nbsp;<wbr>qperf &#8211;help examples&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Some examples of using qperf<br/>
+&nbsp;<wbr>qperf &#8211;help opts&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Summary of options<br/>
+&nbsp;<wbr>qperf &#8211;help options&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Description of options<br/>
+&nbsp;<wbr>qperf &#8211;help tests&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Short summary and description of tests<br/>
 &nbsp;<wbr>qperf &#8211;help TESTNAME&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>More information on test TESTNAME</p>
 <h2>EXAMPLES</h2>
 <p> In these examples, we first run qperf on a node called myserver in server mode by invoking it with no arguments. In all the subsequent examples, we run qperf on another node and connect to the server which we assume has a hostname of myserver.</p>

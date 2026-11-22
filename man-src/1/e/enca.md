@@ -10,7 +10,7 @@ description: "enca — detect and convert encoding of text files"
 
 <p> enca &#8212; detect and convert encoding of text files</p>
 <h2>SYNOPSIS</h2>
-<p> <code>enca</code> [<code>-L</code> <i>LANGUAGE</i>] [<i>OPTION</i>]&#8230; [<i>FILE</i>]&#8230;<br />
+<p> <code>enca</code> [<code>-L</code> <i>LANGUAGE</i>] [<i>OPTION</i>]&#8230; [<i>FILE</i>]&#8230;<br/>
  <code>enconv</code> [<code>-L</code> <i>LANGUAGE</i>] [<i>OPTION</i>]&#8230; [<i>FILE</i>]&#8230;</p>
 <h2>INTRODUCTION AND EXAMPLES</h2>
 <p> If you are lucky enough, the only two things you will ever need to know are: command</p>

@@ -60,18 +60,18 @@ description: "gvhdl – Frontend to the VHDL compiler/simulator FreeHDL."
 <p> will build an object file including all components provided in adder.vhdl. However, in this case the components will be associated with library mylib instead of the default library name work. Note that option -l does only effect the generated C++ source code but does not alter the place where the object files or executables are stored.</p>
 <h2>SIMULATION COMMANDS</h2>
 <p> After the simulator has been started a short summary of the available commands is printed to the screen: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>c&nbsp;<wbr>&lt;number&gt;&nbsp;<wbr>: execute cycles&nbsp;<wbr>=&nbsp;<wbr>execute&nbsp;<wbr>&lt;number&gt;&nbsp;<wbr>simulation cycles<br />
-&nbsp;<wbr>&nbsp;<wbr>n&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: next&nbsp;<wbr>=&nbsp;<wbr>execute next simulation cycle<br />
-&nbsp;<wbr>&nbsp;<wbr>q&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: quit&nbsp;<wbr>=&nbsp;<wbr>quit simulation<br />
-&nbsp;<wbr>&nbsp;<wbr>r&nbsp;<wbr>&lt;time&gt;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: run&nbsp;<wbr>=&nbsp;<wbr>execute simulation for&nbsp;<wbr>&lt;time&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>d&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: dump&nbsp;<wbr>=&nbsp;<wbr>dump signals<br />
-&nbsp;<wbr>&nbsp;<wbr>doff&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: dump off&nbsp;<wbr>=&nbsp;<wbr>stop dumping signals<br />
-&nbsp;<wbr>&nbsp;<wbr>don&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: dump on&nbsp;<wbr>=&nbsp;<wbr>continue dumping signals<br />
-&nbsp;<wbr>&nbsp;<wbr>s&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: show&nbsp;<wbr>=&nbsp;<wbr>show signal values<br />
-&nbsp;<wbr>&nbsp;<wbr>dv&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: dump var&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>dump a signal from the signal lists<br />
-&nbsp;<wbr>&nbsp;<wbr>ds&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: dump show&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>shows the list of dumped signals<br />
-&nbsp;<wbr>&nbsp;<wbr>nds&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: number&nbsp;<wbr>&nbsp;<wbr>show&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>shows the number&nbsp;<wbr>&nbsp;<wbr>of dumped signals<br />
-&nbsp;<wbr>&nbsp;<wbr>dc&nbsp;<wbr>[-f&nbsp;<wbr>&lt;filename&gt;]&nbsp;<wbr>[-t&nbsp;<wbr>&lt;timescale&gt;&nbsp;<wbr>&lt;time unit&gt;]&nbsp;<wbr>[-cfg&nbsp;<wbr>&lt;translation file&gt;]&nbsp;<wbr>[-q]<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>c&nbsp;<wbr>&lt;number&gt;&nbsp;<wbr>: execute cycles&nbsp;<wbr>=&nbsp;<wbr>execute&nbsp;<wbr>&lt;number&gt;&nbsp;<wbr>simulation cycles<br/>
+&nbsp;<wbr>&nbsp;<wbr>n&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: next&nbsp;<wbr>=&nbsp;<wbr>execute next simulation cycle<br/>
+&nbsp;<wbr>&nbsp;<wbr>q&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: quit&nbsp;<wbr>=&nbsp;<wbr>quit simulation<br/>
+&nbsp;<wbr>&nbsp;<wbr>r&nbsp;<wbr>&lt;time&gt;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: run&nbsp;<wbr>=&nbsp;<wbr>execute simulation for&nbsp;<wbr>&lt;time&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>d&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: dump&nbsp;<wbr>=&nbsp;<wbr>dump signals<br/>
+&nbsp;<wbr>&nbsp;<wbr>doff&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: dump off&nbsp;<wbr>=&nbsp;<wbr>stop dumping signals<br/>
+&nbsp;<wbr>&nbsp;<wbr>don&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: dump on&nbsp;<wbr>=&nbsp;<wbr>continue dumping signals<br/>
+&nbsp;<wbr>&nbsp;<wbr>s&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: show&nbsp;<wbr>=&nbsp;<wbr>show signal values<br/>
+&nbsp;<wbr>&nbsp;<wbr>dv&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: dump var&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>dump a signal from the signal lists<br/>
+&nbsp;<wbr>&nbsp;<wbr>ds&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: dump show&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>shows the list of dumped signals<br/>
+&nbsp;<wbr>&nbsp;<wbr>nds&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: number&nbsp;<wbr>&nbsp;<wbr>show&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>shows the number&nbsp;<wbr>&nbsp;<wbr>of dumped signals<br/>
+&nbsp;<wbr>&nbsp;<wbr>dc&nbsp;<wbr>[-f&nbsp;<wbr>&lt;filename&gt;]&nbsp;<wbr>[-t&nbsp;<wbr>&lt;timescale&gt;&nbsp;<wbr>&lt;time unit&gt;]&nbsp;<wbr>[-cfg&nbsp;<wbr>&lt;translation file&gt;]&nbsp;<wbr>[-q]<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: configures dump process&nbsp;<wbr> </p>
 <p> Note that signals are dumped into a file (default file name is &quot;wave.dmp&quot;) in VCD format. This file format should be accepted by each VCD waveform viewer. The file name is set to &quot;wave.dmp&quot; but may be changed using &quot;dc -f &lt;new_file_name&gt;&quot;. However, make sure to execute &quot;dc -f &#8230;&quot; before executing &quot;d&quot;.</p>
 <h2>SIMULATOR COMMAND LINE OPTIONS</h2>

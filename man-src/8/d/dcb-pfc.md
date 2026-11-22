@@ -14,7 +14,7 @@ description: "dcb-pfc – show / manipulate PFC (Priority-based Flow Control) se
 pfc
 { COMMAND | help }
 </code></pre>
-<p> <code>dcb pfc show dev</code> DEV [ <code>pfc-cap</code> ] [ <code>prio-pfc</code> ] [ <code>macsec-bypass</code> ] [ <code>delay</code> ] [ <code>requests</code> ] [ <code>indications</code> ]<br />
+<p> <code>dcb pfc show dev</code> DEV [ <code>pfc-cap</code> ] [ <code>prio-pfc</code> ] [ <code>macsec-bypass</code> ] [ <code>delay</code> ] [ <code>requests</code> ] [ <code>indications</code> ]<br/>
  <code>dcb pfc set dev</code> DEV [ <code>prio-pfc</code> <i>PFC-MAP</i> ] [ <code>macsec-bypass</code> { <code>on</code> | <code>off</code> } ] [ <code>delay</code> <i>INTEGER</i> ] </p>
 <pre><code>PFC-MAP := [ PFC-MAP ] PFC-MAPPING
 PFC-MAPPING := { PRIO | all }:{
@@ -45,8 +45,8 @@ PRIO := { 0 .. 7 }
 <p> Disable PFC of all priorities except 6 and 7, and configure delay to 4096 bits: </p>
 <p> # dcb pfc set dev eth0 prio-pfc all:off 6:on 7:on delay 0x1000 </p>
 <p> Show what was set: </p>
-<p> # dcb pfc show dev eth0<br />
- pfc-cap 8 macsec-bypass off delay 4096<br />
+<p> # dcb pfc show dev eth0<br/>
+ pfc-cap 8 macsec-bypass off delay 4096<br/>
  prio-pfc 0:off 1:off 2:off 3:off 4:off 5:off 6:on 7:on</p>
 <h2>Exit Status</h2>
 <p>Exit status is 0 if command was successful or a positive integer upon failure.</p>

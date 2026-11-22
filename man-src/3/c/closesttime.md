@@ -13,19 +13,19 @@ description: "QuantLib::TimeGrid – time grid class"
 <h3>Public Member Functions</h3>
 <p><code>Constructors</code> </p>
 <p> <code>TimeGrid</code> () </p>
-<p> <code>TimeGrid</code> (<code>Time</code> end, Size steps)<br />
- <i>Regularly spaced time-grid. </i><br />
- template&lt;class Iterator &gt; <code>TimeGrid</code> (Iterator begin, Iterator end)<br />
- <i>Time grid with mandatory time points. </i><br />
- template&lt;class Iterator &gt; <code>TimeGrid</code> (Iterator begin, Iterator end, Size steps)<br />
+<p> <code>TimeGrid</code> (<code>Time</code> end, Size steps)<br/>
+ <i>Regularly spaced time-grid. </i><br/>
+ template&lt;class Iterator &gt; <code>TimeGrid</code> (Iterator begin, Iterator end)<br/>
+ <i>Time grid with mandatory time points. </i><br/>
+ template&lt;class Iterator &gt; <code>TimeGrid</code> (Iterator begin, Iterator end, Size steps)<br/>
  <i>Time grid with mandatory time points. </i> </p>
 <p> <code>Time grid interface</code> </p>
-<p> Size <code>index</code> (<code>Time</code> t) const<br />
- <i>returns the index i such that grid[i] = t </i><br />
- Size <code>closestIndex</code> (<code>Time</code> t) const<br />
- <i>returns the index i such that grid[i] is closest to t </i><br />
- <code>Time</code> <code>closestTime</code> (<code>Time</code> t) const<br />
- <i>returns the time on the grid closest to the given t </i><br />
+<p> Size <code>index</code> (<code>Time</code> t) const<br/>
+ <i>returns the index i such that grid[i] = t </i><br/>
+ Size <code>closestIndex</code> (<code>Time</code> t) const<br/>
+ <i>returns the index i such that grid[i] is closest to t </i><br/>
+ <code>Time</code> <code>closestTime</code> (<code>Time</code> t) const<br/>
+ <i>returns the time on the grid closest to the given t </i><br/>
  const std::vector&lt; <code>Time</code> &gt; &amp; <code>mandatoryTimes</code> () const </p>
 <p> <code>Time</code> <code>dt</code> (Size i) const </p>
 <h3>sequence interface</h3>

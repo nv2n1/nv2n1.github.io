@@ -11,21 +11,21 @@ description: "gcov-tool – offline gcda profile processing tool"
 <p> gcov-tool &#8211; offline gcda profile processing tool </p>
 <h2>SYNOPSIS</h2>
 <p> gcov-tool [<code>-v</code>|<code>&#8211;version</code>] [<code>-h</code>|<code>&#8211;help</code>] </p>
-<p> gcov-tool merge [merge-options] <i>directory1</i> <i>directory2</i><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-o</code>|<code>&#8211;output</code>&nbsp;<i>directory</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-v</code>|<code>&#8211;verbose</code>]<br />
+<p> gcov-tool merge [merge-options] <i>directory1</i> <i>directory2</i><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-o</code>|<code>&#8211;output</code>&nbsp;<i>directory</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-v</code>|<code>&#8211;verbose</code>]<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-w</code>|<code>&#8211;weight</code>&nbsp;<i>w1,w2</i>] </p>
-<p> gcov-tool rewrite [rewrite-options] <i>directory</i><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-n</code>|<code>&#8211;normalize</code>&nbsp;<i>long_long_value</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-o</code>|<code>&#8211;output</code>&nbsp;<i>directory</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-s</code>|<code>&#8211;scale</code>&nbsp;<i>float_or_simple-frac_value</i>]<br />
+<p> gcov-tool rewrite [rewrite-options] <i>directory</i><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-n</code>|<code>&#8211;normalize</code>&nbsp;<i>long_long_value</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-o</code>|<code>&#8211;output</code>&nbsp;<i>directory</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-s</code>|<code>&#8211;scale</code>&nbsp;<i>float_or_simple-frac_value</i>]<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-v</code>|<code>&#8211;verbose</code>] </p>
-<p> gcov-tool overlap [overlap-options] <i>directory1</i> <i>directory2</i><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-f</code>|<code>&#8211;function</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-F</code>|<code>&#8211;fullname</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-h</code>|<code>&#8211;hotonly</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-o</code>|<code>&#8211;object</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-t</code>|<code>&#8211;hot_threshold</code>]&nbsp;<i>float</i><br />
+<p> gcov-tool overlap [overlap-options] <i>directory1</i> <i>directory2</i><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-f</code>|<code>&#8211;function</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-F</code>|<code>&#8211;fullname</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-h</code>|<code>&#8211;hotonly</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-o</code>|<code>&#8211;object</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-t</code>|<code>&#8211;hot_threshold</code>]&nbsp;<i>float</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-v</code>|<code>&#8211;verbose</code>]</p>
 <h2>DESCRIPTION</h2>
 <p> <code>gcov-tool</code> is an offline tool to process gcc&#8217;s gcda profile files. </p>
@@ -48,7 +48,7 @@ description: "gcov-tool – offline gcda profile processing tool"
 <dt>*</dt>
 <dd> histogram difference: This offline tool recomputes the histogram after merging the counters. The resulting histogram, therefore, is precise. The online merging does not have this capability &#8212; the histogram is merged from two histograms and the result is an approximation.</dd>
 <dt>*</dt>
-<dd> summary checksum difference: Summary checksum uses a <font SIZE="-1">CRC32</font> operation. The value depends on the link list order of gcov-info objects. This order is different in gcov-tool from that in the online merge. It&#8217;s expected to have different summary checksums. It does not really matter as the compiler does not use this checksum anywhere.</dd>
+<dd> summary checksum difference: Summary checksum uses a CRC32 operation. The value depends on the link list order of gcov-info objects. This order is different in gcov-tool from that in the online merge. It&#8217;s expected to have different summary checksums. It does not really matter as the compiler does not use this checksum anywhere.</dd>
 <dt>*</dt>
 <dd> value profile counter values difference: Some counter values for value profile are runtime dependent, like heap addresses. It&#8217;s normal to see some difference in these kind of counters.</dd></dl>
 <h2>OPTIONS</h2>
@@ -139,12 +139,12 @@ description: "gcov-tool – offline gcda profile processing tool"
 <p> <i>gpl</i>(7), <i>gfdl</i>(7), <i>fsf-funding</i>(7), <i><a href="/docs/linux/man/1-gcc/">gcc</a></i>(1), <i><a href="/docs/linux/man/1-gcov/">gcov</a></i>(1) and the Info entry for <i>gcc</i>.</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 2014-2021 Free Software Foundation, Inc. </p>
-<p> Permission is granted to copy, distribute and/or modify this document under the terms of the <font SIZE="-1">GNU</font> Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with the Invariant Sections being &#8220;<font SIZE="-1">GNU</font> General Public License&#8221; and &#8220;Funding Free Software&#8221;, the Front-Cover texts being (a) (see below), and with the Back-Cover Texts being (b) (see below). A copy of the license is included in the <i>gfdl</i>(7) man page. </p>
-<p> (a) The <font SIZE="-1">FSF</font>&#8216;s Front-Cover Text is: </p>
+<p> Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with the Invariant Sections being &#8220;GNU General Public License&#8221; and &#8220;Funding Free Software&#8221;, the Front-Cover texts being (a) (see below), and with the Back-Cover Texts being (b) (see below). A copy of the license is included in the <i>gfdl</i>(7) man page. </p>
+<p> (a) The FSF&#8216;s Front-Cover Text is: </p>
 <pre>
      A GNU Manual
 </pre>
-<p> (b) The <font SIZE="-1">FSF</font>&#8216;s Back-Cover Text is: </p>
+<p> (b) The FSF&#8216;s Back-Cover Text is: </p>
 <pre>
      You have freedom to copy and modify this GNU Manual, like GNU
      software.  Copies published by the Free Software Foundation raise

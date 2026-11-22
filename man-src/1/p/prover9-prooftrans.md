@@ -10,9 +10,9 @@ description: "prooftrans – tool for transforming Prover9 proofs"
 
 <p> prooftrans &#8211; tool for transforming Prover9 proofs</p>
 <h2>SYNOPSIS</h2>
-<p> <code>prooftrans</code> [<i>parents_only</i>] [<i>expand</i>] [<i>renumber</i>] [<i>striplabels</i>] [<i>-f file</i>]<br />
- <code>prooftrans</code> xml [<i>expand</i>] [<i>renumber</i>] [<i>striplabels</i>] [<i>-f file</i>]<br />
- <code>prooftrans</code> ivy [<i>renumber</i>] [<i>-f file</i>]<br />
+<p> <code>prooftrans</code> [<i>parents_only</i>] [<i>expand</i>] [<i>renumber</i>] [<i>striplabels</i>] [<i>-f file</i>]<br/>
+ <code>prooftrans</code> xml [<i>expand</i>] [<i>renumber</i>] [<i>striplabels</i>] [<i>-f file</i>]<br/>
+ <code>prooftrans</code> ivy [<i>renumber</i>] [<i>-f file</i>]<br/>
  <code>prooftrans</code> hints [<i>-label label</i>] [<i>expand</i>] [<i>striplabels</i>] [<i>-f file</i>]</p>
 <h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>prooftrans</code> command. </p>
@@ -37,7 +37,7 @@ description: "prooftrans – tool for transforming Prover9 proofs"
 <dt><code>-f </code><i>file</i></dt>
 <dd> Take input from <i>file</i> instead of from standard input.</dd></dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-prover9/">prover9</a></code>(1).<br />
+<p> <code><a href="/docs/linux/man/1-prover9/">prover9</a></code>(1).<br/>
  Full documentation for <code>prooftrans</code> is found in the <code>prover9</code> manual, available on Debian systems in the <i>prover9-doc</i> package at <i>/usr/share/doc/prover9-doc/manual/index.html</i>.</p>
 <h2>AUTHOR</h2>
 <p> <code>prooftrans</code> was written by William McCune &lt;mccune [at] cs.unm.edu&gt; </p>

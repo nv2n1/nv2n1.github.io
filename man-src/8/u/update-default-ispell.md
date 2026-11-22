@@ -11,7 +11,7 @@ description: "update-default-ispell – update default ispell dictionary"
 <h2>Synopsis</h2>
 <pre> update-default-ispell [--skip-symlinks] [--triggered]</pre>
 <h2>Description</h2>
-<p><font SIZE="-1">WARNING:</font> Not to be used from the command line unless you know very well what you are doing. </p>
+<p>WARNING: Not to be used from the command line unless you know very well what you are doing. </p>
 <p> This program is intended to be called from ispell dictionary package postinst, from <code>select-default-ispell</code> or from dictionaries-common postinst. </p>
 <p> When called under dpkg control with the <code>&#8211;trigger</code> option the script is run normally, otherwise the dictionaries-common <code>update-default-ispell</code> trigger is enabled for later run. </p>
 <p> With the <code>&#8211;skip-symlinks</code> option the symlinks setting is skipped. This is needed for <code>update-default-ispell</code> when called from dictionaries-common postinst, since autobuilt hashes may not yet be available. </p>

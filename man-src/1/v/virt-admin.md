@@ -10,8 +10,8 @@ description: "virt-admin – daemon administration interface"
 
 <p> virt-admin &#8211; daemon administration interface </p>
 <h2>SYNOPSIS</h2>
-<p> <code>virt-admin</code> [<i></i><font SIZE="-1"><i>OPTION</i></font><i></i>]&#8230; [<i></i><font SIZE="-1"><i>COMMAND_STRING</i></font><i></i>] </p>
-<p> <code>virt-admin</code> [<i></i><font SIZE="-1"><i>OPTION</i></font><i></i>]&#8230; <i></i><font SIZE="-1"><i>COMMAND</i></font><i></i> [<i></i><font SIZE="-1"><i>ARG</i></font><i></i>]&#8230;</p>
+<p> <code>virt-admin</code> [<i></i><i>OPTION</i><i></i>]&#8230; [<i></i><i>COMMAND_STRING</i><i></i>] </p>
+<p> <code>virt-admin</code> [<i></i><i>OPTION</i><i></i>]&#8230; <i></i><i>COMMAND</i><i></i> [<i></i><i>ARG</i><i></i>]&#8230;</p>
 <h2>DESCRIPTION</h2>
 <p> The <code>virt-admin</code> program is the main administration interface for modifying the libvirt daemon configuration at runtime, changing daemon behaviour as well as for monitoring and managing all clients connected to the daemon. </p>
 <p> The basic structure of most virt-admin usage is: </p>
@@ -19,17 +19,17 @@ description: "virt-admin – daemon administration interface"
 virt - admin[OPTION]...&lt;command&gt;[ARG]...
 </code></pre>
 <p> Where <i>command</i> is one of the commands listed below. </p>
-<p> The <code>virt-admin</code> program can be used either to run one <i></i><font SIZE="-1"><i>COMMAND</i></font><i></i> by giving the command and its arguments on the shell command line, or a <i></i><font SIZE="-1"><i>COMMAND_STRING</i></font><i></i> which is a single shell argument consisting of multiple <i></i><font SIZE="-1"><i>COMMAND</i></font><i></i> actions and their arguments joined with whitespace, and separated by semicolons between commands. Within <i></i><font SIZE="-1"><i>COMMAND_STRING</i></font><i></i>, virt-admin understands the same single, double, and backslash escapes as the shell, although you must add another layer of shell escaping in creating the single shell argument. If no command is given in the command line, <code>virt-admin</code> will then start a minimal interpreter waiting for your commands, and the <code>quit</code> command will then exit the program. </p>
-<p> The <code>virt-admin</code> program understands the following <i></i><font SIZE="-1"><i>OPTIONS</i></font><i></i>.</p>
+<p> The <code>virt-admin</code> program can be used either to run one <i></i><i>COMMAND</i><i></i> by giving the command and its arguments on the shell command line, or a <i></i><i>COMMAND_STRING</i><i></i> which is a single shell argument consisting of multiple <i></i><i>COMMAND</i><i></i> actions and their arguments joined with whitespace, and separated by semicolons between commands. Within <i></i><i>COMMAND_STRING</i><i></i>, virt-admin understands the same single, double, and backslash escapes as the shell, although you must add another layer of shell escaping in creating the single shell argument. If no command is given in the command line, <code>virt-admin</code> will then start a minimal interpreter waiting for your commands, and the <code>quit</code> command will then exit the program. </p>
+<p> The <code>virt-admin</code> program understands the following <i></i><i>OPTIONS</i><i></i>.</p>
 <dl>
-<dt><code>-c</code>, <code>&#8211;connect</code> <i></i><font SIZE="-1"><i>URI</i></font><i></i></dt>
-<dd> Connect to the specified <i></i><font SIZE="-1"><i>URI</i></font><i></i>, as if by the <code>connect</code> command, instead of the default connection.</dd>
-<dt><code>-d</code>, <code>&#8211;debug</code> <i></i><font SIZE="-1"><i>LEVEL</i></font><i></i></dt>
-<dd> Enable debug messages at integer <i></i><font SIZE="-1"><i>LEVEL</i></font><i></i> and above. <i></i><font SIZE="-1"><i>LEVEL</i></font><i></i> can range from 0 to 4 (default). See the documentation of <font SIZE="-1"><code>VIRT_ADMIN_DEBUG</code></font> environment variable below for the description of each <i></i><font SIZE="-1"><i>LEVEL</i></font><i></i>.</dd>
+<dt><code>-c</code>, <code>&#8211;connect</code> <i></i><i>URI</i><i></i></dt>
+<dd> Connect to the specified <i></i><i>URI</i><i></i>, as if by the <code>connect</code> command, instead of the default connection.</dd>
+<dt><code>-d</code>, <code>&#8211;debug</code> <i></i><i>LEVEL</i><i></i></dt>
+<dd> Enable debug messages at integer <i></i><i>LEVEL</i><i></i> and above. <i></i><i>LEVEL</i><i></i> can range from 0 to 4 (default). See the documentation of <code>VIRT_ADMIN_DEBUG</code> environment variable below for the description of each <i></i><i>LEVEL</i><i></i>.</dd>
 <dt><code>-h</code>, <code>&#8211;help</code></dt>
 <dd> Ignore all other arguments, and behave as if the <code>help</code> command were given instead.</dd>
-<dt><code>-l</code>, <code>&#8211;log</code> <i></i><font SIZE="-1"><i>FILE</i></font><i></i></dt>
-<dd> Output logging details to <i></i><font SIZE="-1"><i>FILE</i></font><i></i>.</dd>
+<dt><code>-l</code>, <code>&#8211;log</code> <i></i><i>FILE</i><i></i></dt>
+<dd> Output logging details to <i></i><i>FILE</i><i></i>.</dd>
 <dt><code>-q</code>, <code>&#8211;quiet</code></dt>
 <dd> Avoid extra informational messages.</dd>
 <dt><code>-v</code>, <code>&#8211;version[=short]</code></dt>
@@ -56,16 +56,16 @@ virt - admin[OPTION]...&lt;command&gt;[ARG]...
  Running against daemon: 1.2.20
 </pre>
 <dt><code>cd</code> [<i>directory</i>]</dt>
-<dd> Will change current directory to <i>directory</i>. The default directory for the <code>cd</code> command is the home directory or, if there is no <i></i><font SIZE="-1"><i>HOME</i></font><i></i> variable in the environment, the root directory. </dd>
+<dd> Will change current directory to <i>directory</i>. The default directory for the <code>cd</code> command is the home directory or, if there is no <i></i><i>HOME</i><i></i> variable in the environment, the root directory. </dd>
 <p> This command is only available in interactive mode.</p>
 <dt><code>pwd</code></dt>
 <dd> Will print the current directory.</dd>
-<dt><code>connect</code> [<i></i><font SIZE="-1"><i>URI</i></font><i></i>]</dt>
-<dd> (Re)-Connect to a daemon&#8217;s administrating server. The <i></i><font SIZE="-1"><i>URI</i></font><i></i> parameter specifies how to connect to the administrating server. If <i></i><font SIZE="-1"><i>LIBVIRT_ADMIN_DEFAULT_URI</i></font><i></i> or <i>uri_default</i> (see below) were set, <i>connect</i> is automatically issued every time a command that requires an active connection is executed. Note that this only applies if there is no connection at all or there is an inactive one. </dd>
-<p> To find the currently used <font SIZE="-1">URI,</font> check the <i>uri</i> command documented below. </p>
+<dt><code>connect</code> [<i></i><i>URI</i><i></i>]</dt>
+<dd> (Re)-Connect to a daemon&#8217;s administrating server. The <i></i><i>URI</i><i></i> parameter specifies how to connect to the administrating server. If <i></i><i>LIBVIRT_ADMIN_DEFAULT_URI</i><i></i> or <i>uri_default</i> (see below) were set, <i>connect</i> is automatically issued every time a command that requires an active connection is executed. Note that this only applies if there is no connection at all or there is an inactive one. </dd>
+<p> To find the currently used URI, check the <i>uri</i> command documented below. </p>
 <p> For remote access see the documentation page at &lt;<a rel="nofollow" href="http://libvirt.org/uri.html">http://libvirt.org/uri.html</a>&gt; on how to make URIs.</p>
 <dt><code>uri</code></dt>
-<dd> Prints the administrating server canonical <font SIZE="-1">URI,</font> can be useful in shell mode. If no <i>uri</i> was specified, neither <i></i><font SIZE="-1"><i>LIBVIRT_ADMIN_DEFAULT_URI</i></font><i></i> environment variable nor <i>uri_default</i> option (libvirt-admin.conf) were set, libvirtd:///system is used.</dd></dl>
+<dd> Prints the administrating server canonical URI, can be useful in shell mode. If no <i>uri</i> was specified, neither <i></i><i>LIBVIRT_ADMIN_DEFAULT_URI</i><i></i> environment variable nor <i>uri_default</i> option (libvirt-admin.conf) were set, libvirtd:///system is used.</dd></dl>
 <h2>SERVER COMMANDS</h2>
 <p> Following commands manipulate daemon&#8217;s server internal configuration. The <i>server</i> is specified by its name.</p>
 <dl>
@@ -91,7 +91,7 @@ virt - admin[OPTION]...&lt;command&gt;[ARG]...
 </dt><dd>
 <p> <code>Background</code> </p>
 <p> Each daemon server utilizes a threadpool to accomplish tasks requested by clients connected to it. Every time a client request arrives to the server, it checks whether there is a worker available to accomplish the given task or it should create a new worker for the job (rather than being destroyed, the worker becomes free once the task is finished). Creating new workers, however, is only possible when the current number of workers is still below the configured upper limit. </p>
-<p> In addition to these &#8216;standard&#8217; workers, a threadpool also contains a special set of workers called <i>priority</i> workers. Their purpose is to perform tasks that, unlike tasks carried out by normal workers, are within libvirt&#8217;s full control and libvirt guarantees that such a task cannot hang, thus will always finish. An example of such a task this would be destroying a domain:<br />
+<p> In addition to these &#8216;standard&#8217; workers, a threadpool also contains a special set of workers called <i>priority</i> workers. Their purpose is to perform tasks that, unlike tasks carried out by normal workers, are within libvirt&#8217;s full control and libvirt guarantees that such a task cannot hang, thus will always finish. An example of such a task this would be destroying a domain:<br/>
 &nbsp;<wbr>$&nbsp;<wbr>virsh destroy&nbsp;<wbr>&lt;domain&gt;.</dd></dl>
 <dt><code>srv-threadpool-set</code> <i>server</i> [<i>&#8211;min-workers</i> <code>count</code>] [<i>&#8211;max-workers</i> <code>count</code>] [<i>&#8211;priority-workers</i> <code>count</code>]</dt>
 <dd> Change threadpool attributes on a server. Only a fraction of all attributes as described in <i>srv-threadpool-info</i> is supported for the setter.</dd>
@@ -110,11 +110,11 @@ virt - admin[OPTION]...&lt;command&gt;[ARG]...
 <dd> Print a table showing the list of clients connected to &lt;server&gt;, also providing information about transport type used on client&#8217;s connection (supported transports include <code>unix</code>, <code>tcp</code>, and <code>tls</code>), as well as providing information about client&#8217;s connection time (system local time is used).</dd>
 <dt><code>srv-clients-info</code> <i>server</i></dt>
 <dd> Get information about the current setting of limits regarding connections of new clients. This information comprises of the limits to the maximum number of clients connected to <i>server</i>, maximum number of clients waiting for authentication, in order to be connected to the server, as well as the current runtime values, more specifically, the current number of clients connected to <i>server</i> and the current number of clients waiting for authentication. </dd>
-<p> <code>Example</code><br />
-&nbsp;<wbr>#&nbsp;<wbr>virt-admin srv-clients-info libvirtd<br />
-&nbsp;<wbr>nclients_max&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: 120<br />
-&nbsp;<wbr>nclients&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: 3<br />
-&nbsp;<wbr>nclients_unauth_max : 20<br />
+<p> <code>Example</code><br/>
+&nbsp;<wbr>#&nbsp;<wbr>virt-admin srv-clients-info libvirtd<br/>
+&nbsp;<wbr>nclients_max&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: 120<br/>
+&nbsp;<wbr>nclients&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: 3<br/>
+&nbsp;<wbr>nclients_unauth_max : 20<br/>
 &nbsp;<wbr>nclients_unauth&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: 0</p>
 <dt><code>srv-clients-set</code> <i>server</i> [<i>&#8211;max-clients</i> <code>count</code>] [<i>&#8211;max-unauth-clients</i> <code>count</code>]</dt>
 <dd> Set new client-related limits on <i>server</i>.</dd>
@@ -129,11 +129,11 @@ virt - admin[OPTION]...&lt;command&gt;[ARG]...
 </dl>
 </dl>
 <h2>CLIENT COMMANDS</h2>
-<p> Following commands provide management and monitoring of clients connected to one of daemon&#8217;s available servers. Clients are specified by their numeric <font SIZE="-1">ID</font> which is obtained by listing all clients connected to a specified server (see command <code>srv-clients-list</code>).</p>
+<p> Following commands provide management and monitoring of clients connected to one of daemon&#8217;s available servers. Clients are specified by their numeric ID which is obtained by listing all clients connected to a specified server (see command <code>srv-clients-list</code>).</p>
 <dl>
 <dt><code>client-info</code> <i>server</i> <i>client</i></dt>
 <dd> Retrieve identity information about <i>client</i> from <i>server</i>. The attributes returned may vary depending on the connection transport used. Transport-dependent attributes include local client process&#8217;s pid, uid, user name, and group name, as well as socket address of the remote peer, see <code>Examples</code> below. </dd>
-<p> On the other hand, transport-independent attributes include client&#8217;s SELinux context (if enabled on the host) and <font SIZE="-1">SASL</font> username (if <font SIZE="-1">SASL</font> authentication is enabled within daemon). </p>
+<p> On the other hand, transport-independent attributes include client&#8217;s SELinux context (if enabled on the host) and SASL username (if SASL authentication is enabled within daemon). </p>
 <p> <code>Examples</code> </p>
 <pre>
  # virt-admin client-info libvirtd 1
@@ -164,44 +164,44 @@ virt - admin[OPTION]...&lt;command&gt;[ARG]...
 <dl>
 <dt>&bull;</dt>
 <dd> VIRT_ADMIN_DEBUG=0 </dd>
-<p> <font SIZE="-1">DEBUG &#8211;</font> Messages at <font SIZE="-1">ALL</font> levels get logged</p>
+<p> DEBUG &#8211; Messages at ALL levels get logged</p>
 <dt>&bull;</dt>
 <dd> VIRT_ADMIN_DEBUG=1 </dd>
-<p> <font SIZE="-1">INFO &#8211;</font> Logs messages at levels <font SIZE="-1">INFO, NOTICE, WARNING</font> and <font SIZE="-1">ERROR</font></p>
+<p> INFO &#8211; Logs messages at levels INFO, NOTICE, WARNING and ERROR</p>
 <dt>&bull;</dt>
 <dd> VIRT_ADMIN_DEBUG=2 </dd>
-<p> <font SIZE="-1">NOTICE &#8211;</font> Logs messages at levels <font SIZE="-1">NOTICE, WARNING</font> and <font SIZE="-1">ERROR</font></p>
+<p> NOTICE &#8211; Logs messages at levels NOTICE, WARNING and ERROR</p>
 <dt>&bull;</dt>
 <dd> VIRT_ADMIN_DEBUG=3 </dd>
-<p> <font SIZE="-1">WARNING &#8211;</font> Logs messages at levels <font SIZE="-1">WARNING</font> and <font SIZE="-1">ERROR</font></p>
+<p> WARNING &#8211; Logs messages at levels WARNING and ERROR</p>
 <dt>&bull;</dt>
 <dd> VIRT_ADMIN_DEBUG=4 </dd>
-<p> <font SIZE="-1">ERROR &#8211;</font> Messages at only <font SIZE="-1">ERROR</font> level gets logged.</dl>
+<p> ERROR &#8211; Messages at only ERROR level gets logged.</dl>
 </dl>
 <dl>
 </dl>
 <dt>VIRT_ADMIN_LOG_FILE=&quot;LOGFILE&quot;</dt>
 <dd> The file to log virt-admin debug messages.</dd>
-<dt><font SIZE="-1">LIBVIRT_ADMIN_DEFAULT_URI</font></dt>
-<dd> The daemon whose admin server to connect to by default. Set this to a <font SIZE="-1">URI,</font> in the same format as accepted by the <code>connect</code> option. This overrides the default <font SIZE="-1">URI</font> set in any client config file.</dd>
-<dt><font SIZE="-1">VIRT_ADMIN_HISTSIZE</font></dt>
+<dt>LIBVIRT_ADMIN_DEFAULT_URI</dt>
+<dd> The daemon whose admin server to connect to by default. Set this to a URI, in the same format as accepted by the <code>connect</code> option. This overrides the default URI set in any client config file.</dd>
+<dt>VIRT_ADMIN_HISTSIZE</dt>
 <dd> The number of commands to remember in the command history. The default value is 500.</dd>
 <dt>LIBVIRT_DEBUG=LEVEL</dt>
-<dd> Turn on verbose debugging of all libvirt <font SIZE="-1">API</font> calls. Valid levels are</dd>
+<dd> Turn on verbose debugging of all libvirt API calls. Valid levels are</dd>
 <dl>
 <dl>
 <dt>&bull;</dt>
 <dd> LIBVIRT_DEBUG=1 </dd>
-<p> Messages at level <font SIZE="-1">DEBUG</font> or above</p>
+<p> Messages at level DEBUG or above</p>
 <dt>&bull;</dt>
 <dd> LIBVIRT_DEBUG=2 </dd>
-<p> Messages at level <font SIZE="-1">INFO</font> or above</p>
+<p> Messages at level INFO or above</p>
 <dt>&bull;</dt>
 <dd> LIBVIRT_DEBUG=3 </dd>
-<p> Messages at level <font SIZE="-1">WARNING</font> or above</p>
+<p> Messages at level WARNING or above</p>
 <dt>&bull;</dt>
 <dd> LIBVIRT_DEBUG=4 </dd>
-<p> Messages at level <font SIZE="-1">ERROR</font> or above</dl>
+<p> Messages at level ERROR or above</dl>
 </dl>
 <dl>
 <dt>
@@ -216,8 +216,8 @@ virt - admin[OPTION]...&lt;command&gt;[ARG]...
   Based on the virsh man page.
 </pre>
 <h2>COPYRIGHT</h2>
-<p> Copyright (C) 2015 Red Hat, Inc., and the authors listed in the libvirt <font SIZE="-1">AUTHORS</font> file.</p>
+<p> Copyright (C) 2015 Red Hat, Inc., and the authors listed in the libvirt AUTHORS file.</p>
 <h2>LICENSE</h2>
-<p> virt-admin is distributed under the terms of the <font SIZE="-1">GNU LGPL</font> v2+. This is free software; see the source for copying conditions. There is <font SIZE="-1">NO</font> warranty; not even for <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE</font></p>
+<p> virt-admin is distributed under the terms of the GNU LGPL v2+. This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-virsh/">virsh</a></i>(1), <i><a href="/docs/linux/man/1-virt-xml-validate/">virt-xml-validate</a></i>(1), <i><a href="/docs/linux/man/1-virt-host-validate/">virt-host-validate</a></i>(1), &lt;<a rel="nofollow" href="http://www.libvirt.org/">http://www.libvirt.org/</a>&gt; </p>

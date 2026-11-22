@@ -10,7 +10,7 @@ description: "zgetc2.f –"
 <p>zgetc2.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zgetc2</code> (N, A, LDA, IPIV, JPIV, INFO)<br />
+<p>subroutine <code>zgetc2</code> (N, A, LDA, IPIV, JPIV, INFO)<br/>
  <i></i><code>ZGETC2</code> computes the LU factorization with complete pivoting of the general n-by-n matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zgetc2 (integerN, complex*16, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, integer, dimension( * )JPIV, integerINFO)</h3>

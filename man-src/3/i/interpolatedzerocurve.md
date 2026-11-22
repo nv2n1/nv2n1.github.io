@@ -19,8 +19,8 @@ description: "QuantLib::InterpolatedZeroCurve – Term structure based on interp
 <p> std::vector&lt; <code>Rate</code> &gt; <code>data_</code> </p>
 <p> <code>Interpolation</code> <code>interpolation_</code> </p>
 <p> Interpolator <code>interpolator_</code> </p>
-<p> <code>Date</code> <code>maxDate</code> () const<br />
- <i>the latest date for which the curve can return values </i><br />
+<p> <code>Date</code> <code>maxDate</code> () const<br/>
+ <i>the latest date for which the curve can return values </i><br/>
  const std::vector&lt; Time &gt; &amp; <code>times</code> () const </p>
 <p> const std::vector&lt; <code>Date</code> &gt; &amp; <code>dates</code> () const </p>
 <p> const std::vector&lt; <code>Rate</code> &gt; &amp; <code>zeroRates</code> () const </p>
@@ -28,7 +28,7 @@ description: "QuantLib::InterpolatedZeroCurve – Term structure based on interp
 <p> <code>InterpolatedZeroCurve</code> (const <code>DayCounter</code> &amp;, const Interpolator &amp;interpolator=Interpolator()) </p>
 <p> <code>InterpolatedZeroCurve</code> (const <code>Date</code> &amp;referenceDate, const <code>DayCounter</code> &amp;, const Interpolator &amp;interpolator=Interpolator()) </p>
 <p> <code>InterpolatedZeroCurve</code> (<code>Natural</code> settlementDays, const <code>Calendar</code> &amp;, const <code>DayCounter</code> &amp;, const Interpolator &amp;interpolator=Interpolator()) </p>
-<p> <code>Rate</code> <code>zeroYieldImpl</code> (Time t) const<br />
+<p> <code>Rate</code> <code>zeroYieldImpl</code> (Time t) const<br/>
  <i>zero-yield calculation </i></p>
 <h2>Detailed Description</h2>
 <h3>template&lt;class Interpolator&gt; class QuantLib::InterpolatedZeroCurve&lt; Interpolator &gt;</h3>

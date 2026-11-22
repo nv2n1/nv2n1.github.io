@@ -12,7 +12,7 @@ description: "QuantLib::UnitedStates – United States calendars."
 <p>#include &lt;ql/time/calendars/unitedstates.hpp&gt; </p>
 <p> Inherits <code>QuantLib::Calendar</code>. </p>
 <h3>Public Types</h3>
-<p>enum <code>Market</code> { <code>Settlement</code>, <code>NYSE</code>, <code>GovernmentBond</code>, <code>NERC</code> }<br />
+<p>enum <code>Market</code> { <code>Settlement</code>, <code>NYSE</code>, <code>GovernmentBond</code>, <code>NERC</code> }<br/>
  <i>US calendars. </i></p>
 <h3>Public Member Functions</h3>
 <p><code>UnitedStates</code> (<code>Market</code> market=<code>Settlement</code>) </p>

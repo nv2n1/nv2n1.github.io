@@ -17,8 +17,8 @@ description: "cs_dump – dump the cs parse tree"
 NEOERR *cs_dump(CSPARSE *parse, void *ctx, CSOUTFUNC cb);
 </code></pre>
 <h2>ARGUMENTS</h2>
-<p> parse &#8211; the CSPARSE structure created with cs_init<br />
- ctx &#8211; user data to be passed to the CSOUTFUNC<br />
+<p> parse &#8211; the CSPARSE structure created with cs_init<br/>
+ ctx &#8211; user data to be passed to the CSOUTFUNC<br/>
  cb &#8211; a CSOUTFUNC callback </p>
 <h2>DESCRIPTION</h2>
 <p> cs_dump will dump the CS parse tree in the parse struct. This can be useful for debugging your templates. This function also uses the CSOUTFUNC callback to display the parse tree. </p>

@@ -11,33 +11,33 @@ description: "NFStest – NFS Test Suite"
 <p> NFStest &#8211; NFS Test Suite</p>
 <h2>DESCRIPTION</h2>
 <p> Provides a set of tools for testing either the NFS client or the NFS server, included tests focused mainly on testing the client. These tools include the following:.SS Test utilities package (nfstest) Provides a set of tools for testing either the NFS client or the NFS server, most of the functionality is focused mainly on testing the client. These tools include the following: </p>
-<p>&nbsp;<wbr>&#8211; Process command line arguments<br />
-&nbsp;<wbr>&#8211; Provide functionality for PASS/FAIL<br />
-&nbsp;<wbr>&#8211; Provide test grouping functionality<br />
-&nbsp;<wbr>&#8211; Provide multiple client support<br />
-&nbsp;<wbr>&#8211; Logging mechanism<br />
-&nbsp;<wbr>&#8211; Debug info control<br />
-&nbsp;<wbr>&#8211; Mount/Unmount control<br />
-&nbsp;<wbr>&#8211; Create files/directories<br />
-&nbsp;<wbr>&#8211; Provide mechanism to start a packet trace<br />
-&nbsp;<wbr>&#8211; Provide mechanism to simulate a network partition<br />
+<p>&nbsp;<wbr>&#8211; Process command line arguments<br/>
+&nbsp;<wbr>&#8211; Provide functionality for PASS/FAIL<br/>
+&nbsp;<wbr>&#8211; Provide test grouping functionality<br/>
+&nbsp;<wbr>&#8211; Provide multiple client support<br/>
+&nbsp;<wbr>&#8211; Logging mechanism<br/>
+&nbsp;<wbr>&#8211; Debug info control<br/>
+&nbsp;<wbr>&#8211; Mount/Unmount control<br/>
+&nbsp;<wbr>&#8211; Create files/directories<br/>
+&nbsp;<wbr>&#8211; Provide mechanism to start a packet trace<br/>
+&nbsp;<wbr>&#8211; Provide mechanism to simulate a network partition<br/>
 &nbsp;<wbr>&#8211; Support for pNFS testing </p>
 <h3>Packet trace package (packet)</h3>
 <p> Testing NFS has mostly been done using test tools like connectathon test suite, filebench, iozone and others. But mostly using the connectathon test suite. These are good tools for testing, but they are outdated and they also cannot be used for testing pNFS thoroughly. </p>
 <p> For example, you can run the connectathon test suite on pNFS, it runs, it passes all the tests &#8212; but how can we make sure that pNFS worked properly. How can we verify that a layout is granted, but not only that a layout is granted, what type of layout was granted (read, rw). Did the client sent IO to the data servers or to the metadata server. </p>
 <p> The Packet trace module takes a trace file created by tcpdump and unpacks the contents of each packet. You can decode one packet at a time, or do a search for specific packets. The main difference between this modules and other tools used to decode trace files is that you can use this module to completely automate your tests. </p>
 <p> How does it work? It opens the trace file and reads one record at a time keeping track where each record starts. This way, very large trace files can be opened without having to wait for the file to load and avoid loading the whole file into memory. </p>
-<p> Packet layers supported:<br />
-&nbsp;<wbr>&#8211; ETHERNET II&nbsp;<wbr>(RFC 894)<br />
-&nbsp;<wbr>&#8211; IP layer&nbsp;<wbr>(supports IPv4 and IPv6)<br />
-&nbsp;<wbr>&#8211; TCP layer<br />
-&nbsp;<wbr>&#8211; UDP layer<br />
-&nbsp;<wbr>&#8211; RPC layer<br />
-&nbsp;<wbr>&#8211; NFS v4.0<br />
-&nbsp;<wbr>&#8211; NFS v4.1 including pNFS file layouts<br />
-&nbsp;<wbr>&#8211; NFS v4.2<br />
-&nbsp;<wbr>&#8211; PORTMAP v2<br />
-&nbsp;<wbr>&#8211; MOUNT v3<br />
+<p> Packet layers supported:<br/>
+&nbsp;<wbr>&#8211; ETHERNET II&nbsp;<wbr>(RFC 894)<br/>
+&nbsp;<wbr>&#8211; IP layer&nbsp;<wbr>(supports IPv4 and IPv6)<br/>
+&nbsp;<wbr>&#8211; TCP layer<br/>
+&nbsp;<wbr>&#8211; UDP layer<br/>
+&nbsp;<wbr>&#8211; RPC layer<br/>
+&nbsp;<wbr>&#8211; NFS v4.0<br/>
+&nbsp;<wbr>&#8211; NFS v4.1 including pNFS file layouts<br/>
+&nbsp;<wbr>&#8211; NFS v4.2<br/>
+&nbsp;<wbr>&#8211; PORTMAP v2<br/>
+&nbsp;<wbr>&#8211; MOUNT v3<br/>
 &nbsp;<wbr>&#8211; NLM v4</p>
 <h2>REQUIREMENTS AND LIMITATIONS</h2>
 <p> In order to run the included tests, the user id in all the client hosts must have access to run commands as root using the &#8216;sudo&#8217; command without the need for a password, this includes the host where the test is being executed. This is used to run commands like &#8216;mount&#8217; and &#8216;umount&#8217;. Furthermore, the user id must be able to ssh to remote hosts without the need for a password if test requires the use of multiple clients. </p>
@@ -122,16 +122,16 @@ time then reads the contents of the file to verify it was written
 correctly. This is done twice for each test.
 </pre>
 <h3>nfstest_lock</h3>
-<p>Basic locking tests verify that a lock is granted using various arguments<br />
-to fcntl. These include blocking and non-blocking locks, read or write locks,<br />
-where the file is opened either for reading, writing or both. It also checks<br />
-different ranges including limit conditions.<br />
-Non-overlapping tests verity that locks are granted on both the client under<br />
-test and a second process or a remote client when locking the same file.<br />
-Overlapping tests verity that a lock is granted on the client under test<br />
-and a second process or a remote client trying to lock the same file will<br />
-be denied if a non-blocking lock is issue or will be blocked if a blocking<br />
-lock is issue on the second process or remote client.<br />
+<p>Basic locking tests verify that a lock is granted using various arguments<br/>
+to fcntl. These include blocking and non-blocking locks, read or write locks,<br/>
+where the file is opened either for reading, writing or both. It also checks<br/>
+different ranges including limit conditions.<br/>
+Non-overlapping tests verity that locks are granted on both the client under<br/>
+test and a second process or a remote client when locking the same file.<br/>
+Overlapping tests verity that a lock is granted on the client under test<br/>
+and a second process or a remote client trying to lock the same file will<br/>
+be denied if a non-blocking lock is issue or will be blocked if a blocking<br/>
+lock is issue on the second process or remote client.<br/>
 Valid for any version of NFS</p>
 <h3>nfstest_pnfs</h3>
 <pre><code>
@@ -206,82 +206,82 @@ given in the call.
 Valid for packet traces with NFSv4 and above
 </pre>
 <h2>INSTALLATION</h2>
-<p> 1. Install package using one of the following methods:<br />
-a. Install the rpm as root:<br />
+<p> 1. Install package using one of the following methods:<br/>
+a. Install the rpm as root:<br/>
 #&nbsp;<wbr>rpm -i NFStest-2.1-1.noarch.rpm </p>
-<p>All manual pages are available<br />
+<p>All manual pages are available<br/>
 $&nbsp;<wbr>man nfstest </p>
-<p>Run tests:<br />
+<p>Run tests:<br/>
 $&nbsp;<wbr>nfstest_pnfs &#8211;help </p>
-<p>b. Untar the tarball:<br />
+<p>b. Untar the tarball:<br/>
 Get the latest tarball from&nbsp;<wbr><a rel="nofollow" href="http://wiki.linux-nfs.org/wiki/index.php/NFStest">http://wiki.linux-nfs.org/wiki/index.php/NFStest</a> </p>
 <p>$&nbsp;<wbr>tar -zxvf NFStest-2.1.tar.gz </p>
-<p>The tests can run without installation, just set the python path<br />
-environment variable:<br />
-$&nbsp;<wbr>cd NFStest-2.1<br />
-$&nbsp;<wbr>export PYTHONPATH=$PWD<br />
-$&nbsp;<wbr>cd test<br />
+<p>The tests can run without installation, just set the python path<br/>
+environment variable:<br/>
+$&nbsp;<wbr>cd NFStest-2.1<br/>
+$&nbsp;<wbr>export PYTHONPATH=$PWD<br/>
+$&nbsp;<wbr>cd test<br/>
 $&nbsp;<wbr>./nfstest_pnfs &#8211;help </p>
-<p>Or install to standard python site-packages and executable directories:<br />
-$&nbsp;<wbr>cd&nbsp;<wbr>~/NFStest-2.1<br />
+<p>Or install to standard python site-packages and executable directories:<br/>
+$&nbsp;<wbr>cd&nbsp;<wbr>~/NFStest-2.1<br/>
 $&nbsp;<wbr>sudo python setup.py install </p>
-<p>All manual pages are available<br />
+<p>All manual pages are available<br/>
 $&nbsp;<wbr>man nfstest </p>
-<p>Run tests:<br />
+<p>Run tests:<br/>
 $&nbsp;<wbr>nfstest_pnfs &#8211;help </p>
-<p>c. Clone the git repository:<br />
-$&nbsp;<wbr>cd&nbsp;<wbr>~<br />
+<p>c. Clone the git repository:<br/>
+$&nbsp;<wbr>cd&nbsp;<wbr>~<br/>
 $&nbsp;<wbr>git clone&nbsp;<wbr><a href="git://git.linux-nfs.org/projects/mora/nfstest.git">git://git.linux-nfs.org/projects/mora/nfstest.git</a> </p>
-<p>The tests can run without installation, just set the python path<br />
-environment variable:<br />
-$&nbsp;<wbr>cd nfstest<br />
-$&nbsp;<wbr>export PYTHONPATH=$PWD<br />
-$&nbsp;<wbr>cd test<br />
+<p>The tests can run without installation, just set the python path<br/>
+environment variable:<br/>
+$&nbsp;<wbr>cd nfstest<br/>
+$&nbsp;<wbr>export PYTHONPATH=$PWD<br/>
+$&nbsp;<wbr>cd test<br/>
 $&nbsp;<wbr>./nfstest_pnfs &#8211;help </p>
-<p>Or install to standard python site-packages and executable directories:<br />
-$&nbsp;<wbr>cd&nbsp;<wbr>~/nfstest<br />
+<p>Or install to standard python site-packages and executable directories:<br/>
+$&nbsp;<wbr>cd&nbsp;<wbr>~/nfstest<br/>
 $&nbsp;<wbr>sudo python setup.py install </p>
-<p>All manual pages are available<br />
+<p>All manual pages are available<br/>
 $&nbsp;<wbr>man nfstest </p>
-<p>Run tests:<br />
+<p>Run tests:<br/>
 $&nbsp;<wbr>nfstest_pnfs &#8211;help </p>
-<p> 2. Make sure user running the tests can run commands using &#8216;sudo&#8217; without<br />
+<p> 2. Make sure user running the tests can run commands using &#8216;sudo&#8217; without<br/>
 the need for a password. </p>
-<p> 3. Make sure user running the tests can run commands remotely using &#8216;ssh&#8217;<br />
-without the need for a password. This is only needed for tests which<br />
+<p> 3. Make sure user running the tests can run commands remotely using &#8216;ssh&#8217;<br/>
+without the need for a password. This is only needed for tests which<br/>
 require multiple clients. </p>
-<p> 4. Create the mount point specified by the &#8211;mtpoint (default: /mnt/t) option<br />
-on all the clients.<br />
-$&nbsp;<wbr>sudo mkdir&nbsp;<wbr>/mnt/t<br />
+<p> 4. Create the mount point specified by the &#8211;mtpoint (default: /mnt/t) option<br/>
+on all the clients.<br/>
+$&nbsp;<wbr>sudo mkdir&nbsp;<wbr>/mnt/t<br/>
 $&nbsp;<wbr>sudo chmod 777&nbsp;<wbr>/mnt/t</p>
 <h2>EXAMPLES</h2>
-<p> The only required option is &#8211;server<br />
+<p> The only required option is &#8211;server<br/>
  $ nfstest_pnfs &#8211;server 192.168.0.11 </p>
-<p> Required options are &#8211;server and &#8211;client<br />
+<p> Required options are &#8211;server and &#8211;client<br/>
  $ nfstest_cache &#8211;server 192.168.0.11 &#8211;client 192.168.0.20 </p>
-<p> Testing with different values of &#8211;acmin and &#8211;acmax (this takes a long time)<br />
+<p> Testing with different values of &#8211;acmin and &#8211;acmax (this takes a long time)<br/>
  $ nfstest_cache &#8211;server 192.168.0.11 &#8211;client 192.168.0.20 &#8211;acmin 10,20 &#8211;acmax 20,30,60,80 </p>
-<p> The only required option is &#8211;server but only the basic delegation tests will be run. In order to run the recall tests the &#8211;client option must be used<br />
+<p> The only required option is &#8211;server but only the basic delegation tests will be run. In order to run the recall tests the &#8211;client option must be used<br/>
  $ nfstest_delegation &#8211;server 192.168.0.11 &#8211;client 192.168.0.20 </p>
-<p> The only required option is &#8211;server<br />
+<p> The only required option is &#8211;server<br/>
  $ nfstest_dio &#8211;server 192.168.0.11 </p>
-<p> The only required option is &#8211;server<br />
+<p> The only required option is &#8211;server<br/>
  $ nfstest_interop &#8211;server 192.168.0.11 </p>
-<p> The only required option is &#8211;server but use the &#8211;client option to run the conflicting lock tests<br />
+<p> The only required option is &#8211;server but use the &#8211;client option to run the conflicting lock tests<br/>
  $ nfstest_lock &#8211;server 192.168.0.11 &#8211;client 192.168.0.20 </p>
-<p> The only required option is &#8211;server<br />
+<p> The only required option is &#8211;server<br/>
  $ nfstest_posix &#8211;server 192.168.0.11 </p>
-<p> The only required option is &#8211;server<br />
+<p> The only required option is &#8211;server<br/>
  $ nfstest_alloc &#8211;server 192.168.0.11 </p>
-<p> The only required option is &#8211;server<br />
+<p> The only required option is &#8211;server<br/>
  $ nfstest_sparse &#8211;server 192.168.0.11 </p>
-<p> The only required option is &#8211;datadir (-d)<br />
+<p> The only required option is &#8211;datadir (-d)<br/>
  $ nfstest_io -d /mnt/t/data -v all -n 10 -r 3600 </p>
-<p> Display all the NFS packets in the trace file<br />
+<p> Display all the NFS packets in the trace file<br/>
  $ nfstest_pkt /tmp/trace.cap </p>
-<p> Display all packets for the file name given The only required option is &#8211;path (-p)<br />
+<p> Display all packets for the file name given The only required option is &#8211;path (-p)<br/>
  $ nfstest_file -p f00000001 /tmp/trace.cap </p>
-<p> Search the packet trace for XID inconsistencies<br />
+<p> Search the packet trace for XID inconsistencies<br/>
  $ nfstest_xid /tmp/trace.cap</p>
 <h2>USEFUL OPTIONS</h2>
 <dl>
@@ -293,28 +293,28 @@ $&nbsp;<wbr>sudo chmod 777&nbsp;<wbr>/mnt/t</p>
 <dd> Do not remove any trace files at the end of execution</dd>
 <dt>-v, &#8211;verbose &lt;none|opts|info|debug|all|intbitmask&gt;</dt>
 <dd> Verbose level for info/debug messages </dd>
-<p> Example:<br />
-&nbsp;<wbr>$&nbsp;<wbr>nfstest_posix &#8211;server 192.168.0.11 &#8211;verbose all<br />
+<p> Example:<br/>
+&nbsp;<wbr>$&nbsp;<wbr>nfstest_posix &#8211;server 192.168.0.11 &#8211;verbose all<br/>
 &nbsp;<wbr>$&nbsp;<wbr>nfstest_posix &#8211;server 192.168.0.11 &#8211;verbose 0x0F</p>
 <dt>&#8211;runtest &lt;[^]testname1[,testname2[,&#8230;]]&gt;</dt>
 <dd> Comma separated list of tests to run, if the first character on the list is &#8216;^&#8217; then run all the tests except the ones listed. </dd>
-<p> Example:<br />
-&nbsp;<wbr>Run only the access, chdir, creat and fcntl tests<br />
+<p> Example:<br/>
+&nbsp;<wbr>Run only the access, chdir, creat and fcntl tests<br/>
 &nbsp;<wbr>$&nbsp;<wbr>nfstest_posix &#8211;server 192.168.0.11 &#8211;runtest access,chdir,creat,fcntl </p>
-<p>&nbsp;<wbr>Run all the tests except for open and chmod<br />
+<p>&nbsp;<wbr>Run all the tests except for open and chmod<br/>
 &nbsp;<wbr>$&nbsp;<wbr>nfstest_posix &#8211;server 192.168.0.11 &#8211;runtest&nbsp;<wbr>^open,chmod</p>
 <dt>&#8211;tverbose &lt;group|normal|verbose&gt;</dt>
 <dd> Verbose level for test messages (default: normal) When tverbose=group, only the test groups are displayed as PASS if all the tests in the group passed, otherwise it will FAIL. In some of the tests tverbose could be &#8216;verbose&#8217; for a greater level of verbosity in which a particular test have many sub-tests (&gt;100) </dd>
-<p> Example:<br />
-&nbsp;<wbr>$&nbsp;<wbr>nfstest_posix &#8211;server 192.168.0.11<br />
-&nbsp;<wbr>***&nbsp;<wbr>Verify POSIX API access()&nbsp;<wbr>on NFSv4<br />
-&nbsp;<wbr>&nbsp;<wbr>PASS: access &#8211; file access allowed with mode F_OK<br />
-&nbsp;<wbr>&nbsp;<wbr>PASS: access &#8211; file access not allowed with mode F_OK for a non-existent file<br />
-&nbsp;<wbr>&nbsp;<wbr>PASS: access &#8211; file access allowed with mode R_OK for file with permissions 0777<br />
-&nbsp;<wbr>&nbsp;<wbr>PASS: access &#8211; file access allowed with mode W_OK for file with permissions 0777<br />
-&nbsp;<wbr>&nbsp;<wbr>PASS: access &#8211; file access allowed with mode X_OK for file with permissions 0777<br />
+<p> Example:<br/>
+&nbsp;<wbr>$&nbsp;<wbr>nfstest_posix &#8211;server 192.168.0.11<br/>
+&nbsp;<wbr>***&nbsp;<wbr>Verify POSIX API access()&nbsp;<wbr>on NFSv4<br/>
+&nbsp;<wbr>&nbsp;<wbr>PASS: access &#8211; file access allowed with mode F_OK<br/>
+&nbsp;<wbr>&nbsp;<wbr>PASS: access &#8211; file access not allowed with mode F_OK for a non-existent file<br/>
+&nbsp;<wbr>&nbsp;<wbr>PASS: access &#8211; file access allowed with mode R_OK for file with permissions 0777<br/>
+&nbsp;<wbr>&nbsp;<wbr>PASS: access &#8211; file access allowed with mode W_OK for file with permissions 0777<br/>
+&nbsp;<wbr>&nbsp;<wbr>PASS: access &#8211; file access allowed with mode X_OK for file with permissions 0777<br/>
 &nbsp;<wbr>&nbsp;<wbr>&#8230; </p>
-<p>&nbsp;<wbr>$&nbsp;<wbr>nfstest_posix &#8211;server 192.168.0.11 &#8211;tverbose group<br />
+<p>&nbsp;<wbr>$&nbsp;<wbr>nfstest_posix &#8211;server 192.168.0.11 &#8211;tverbose group<br/>
 &nbsp;<wbr>&nbsp;<wbr>PASS: Verify POSIX API access()&nbsp;<wbr>on NFSv4&nbsp;<wbr>(58 passed, 0 failed)</p>
 <dt>&#8211;bugmsgs &lt;filename&gt;</dt>
 <dd> File containing test messages to mark as bugs if they failed. When at least one of the tests fails the exit code is set to 1. When this option is specified, all known bugs are not counted as failures so the whole test execution is not failed. If the known bugs actually passed, using this option will fail the test to let the user know that the bug has been fixed.</dd>

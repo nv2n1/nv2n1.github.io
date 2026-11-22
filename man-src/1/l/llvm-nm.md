@@ -12,8 +12,8 @@ description: "llvm-nm – list LLVM bitcode file’s symbol table"
 <h2>SYNOPSIS</h2>
 <p> <code>llvm-nm</code> [<i>options</i>] [<i>filenames&#8230;</i>]</p>
 <h2>DESCRIPTION</h2>
-<p> The <code>llvm-nm</code> utility lists the names of symbols from the <font SIZE="-1">LLVM</font> bitcode files, or <code>ar</code> archives containing <font SIZE="-1">LLVM</font> bitcode files, named on the command line. Each symbol is listed along with some simple information about its provenance. If no file name is specified, or <i>&#8211;</i> is used as a file name, <code>llvm-nm</code> will process a bitcode file on its standard input stream. </p>
-<p> <code>llvm-nm</code>&#8216;s default output format is the traditional <font SIZE="-1">BSD</font> <code>nm</code> output format. Each such output record consists of an (optional) 8-digit hexadecimal address, followed by a type code character, followed by a name, for each symbol. One record is printed per line; fields are separated by spaces. When the address is omitted, it is replaced by 8 spaces. </p>
+<p> The <code>llvm-nm</code> utility lists the names of symbols from the LLVM bitcode files, or <code>ar</code> archives containing LLVM bitcode files, named on the command line. Each symbol is listed along with some simple information about its provenance. If no file name is specified, or <i>&#8211;</i> is used as a file name, <code>llvm-nm</code> will process a bitcode file on its standard input stream. </p>
+<p> <code>llvm-nm</code>&#8216;s default output format is the traditional BSD <code>nm</code> output format. Each such output record consists of an (optional) 8-digit hexadecimal address, followed by a type code character, followed by a name, for each symbol. One record is printed per line; fields are separated by spaces. When the address is omitted, it is replaced by 8 spaces. </p>
 <p> Type code characters currently supported, and their meanings, are as follows:</p>
 <dl>
 <dt>U</dt>
@@ -32,13 +32,13 @@ description: "llvm-nm – list LLVM bitcode file’s symbol table"
 <dd> Global data object</dd>
 <dt>?</dt>
 <dd> Something unrecognizable</dd></dl>
-<p> Because <font SIZE="-1">LLVM</font> bitcode files typically contain objects that are not considered to have addresses until they are linked into an executable image or dynamically compiled &#8220;just-in-time&#8221;, <code>llvm-nm</code> does not print an address for any symbol, even symbols which are defined in the bitcode file.</p>
+<p> Because LLVM bitcode files typically contain objects that are not considered to have addresses until they are linked into an executable image or dynamically compiled &#8220;just-in-time&#8221;, <code>llvm-nm</code> does not print an address for any symbol, even symbols which are defined in the bitcode file.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-P</code></dt>
-<dd> Use <font SIZE="-1">POSIX</font>.2 output format. Alias for <code>&#8211;format=posix</code>.</dd>
+<dd> Use POSIX.2 output format. Alias for <code>&#8211;format=posix</code>.</dd>
 <dt><code>-B</code> (default)</dt>
-<dd> Use <font SIZE="-1">BSD</font> output format. Alias for <code>&#8211;format=bsd</code>.</dd>
+<dd> Use BSD output format. Alias for <code>&#8211;format=bsd</code>.</dd>
 <dt><code>-help</code></dt>
 <dd> Print a summary of command-line options and their meanings.</dd>
 <dt><code>&#8211;defined-only</code></dt>
@@ -50,10 +50,10 @@ description: "llvm-nm – list LLVM bitcode file’s symbol table"
 <dt><code>&#8211;format=</code><i>fmt</i>, <code>-f</code></dt>
 <dd> Select an output format; <i>fmt</i> may be <i>sysv</i>, <i>posix</i>, or <i>bsd</i>. The default is <i>bsd</i>.</dd></dl>
 <h2>BUGS</h2>
-<p> <code>llvm-nm</code> cannot demangle C<font SIZE="-2">++</font> mangled names, like <font SIZE="-1">GNU</font> <code>nm</code> can.</p>
+<p> <code>llvm-nm</code> cannot demangle C++ mangled names, like GNU <code>nm</code> can.</p>
 <h2>EXIT STATUS</h2>
 <p> <code>llvm-nm</code> exits with an exit code of zero.</p>
 <h2>SEE ALSO</h2>
 <p> llvm-dis, <i><a href="/docs/linux/man/1-ar/">ar</a></i>(1), <i><a href="/docs/linux/man/1-nm/">nm</a></i>(1)</p>
 <h2>AUTHOR</h2>
-<p> Maintained by the <font SIZE="-1">LLVM</font> Team (&lt;<a rel="nofollow" href="http://llvm.org">http://llvm.org</a>&gt;). </p>
+<p> Maintained by the LLVM Team (&lt;<a rel="nofollow" href="http://llvm.org">http://llvm.org</a>&gt;). </p>

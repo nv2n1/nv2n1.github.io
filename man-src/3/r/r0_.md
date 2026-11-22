@@ -16,7 +16,7 @@ returns the short-rate dynamics
 Protected Member Functions</code></pre>
 <p> Inherits <code>QuantLib::OneFactorAffineModel</code>. Inherited by <code>HullWhite</code>.</p>
 <h3>Classes</h3>
-<p>class <code>Dynamics</code><br />
+<p>class <code>Dynamics</code><br/>
  <i>Short-rate dynamics in the Vasicek model. </i></p>
 <h3>Public Member Functions</h3>
 <pre><code>Vasicek (Rate r0=0.05, Real a=0.1, Real b=0.05, Real sigma=0.01, Real lambda=0.0)

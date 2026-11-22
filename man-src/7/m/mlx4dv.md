@@ -7,7 +7,7 @@ url: "/docs/linux/man/7-mlx4dv/"
 description: "mlx4dv – Direct verbs for mlx4 devices This is low level access to mlx4 devices to perform data path operations, without general branching performed by"
 ---
 
-<p>mlx4dv &#8211; Direct verbs for mlx4 devices<br />
+<p>mlx4dv &#8211; Direct verbs for mlx4 devices<br/>
  This is low level access to mlx4 devices to perform data path operations, without general branching performed by <code></p>
 <p> ibv_post_send</code>(3). </p>
 <h2>Description</h2>

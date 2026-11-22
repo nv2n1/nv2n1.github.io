@@ -9,6 +9,6 @@ url: "/docs/linux/man/1-ns_to_db/"
 
 ns_to_db - convert one of ns's output format to jdb 
 
-<h3><font SIZE="-1">KNOWN BUGS</font></h3>
+<h3>KNOWN BUGS</h3>
 
  No test case.

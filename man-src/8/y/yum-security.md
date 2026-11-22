@@ -11,14 +11,14 @@ description: "yum security plugin"
 <h2>Synopsis</h2>
 <p><code>yum</code> [options] [command] [package &#8230;]</p>
 <h2>Description</h2>
-<p>This plugin extends <code>yum</code> to allow lists and updates to be limited using security relevant criteria added yum <i>command</i>s are:<br />
- <i></i> * update-minimal This works like the update command, but if you have the the package foo-1 installed and have foo-2 and foo-3 available with updateinfo.xml then update-minimal will update you to foo-3.<br />
- <i></i> * info-updateinfo<br />
- <i></i> * list-updateinfo both of the last two take these <i>sub-commands</i>s:<br />
- <i></i> * * &lt;advisory&gt; [advisory&#8230;]<br />
- <i></i> * * bugzillas<br />
- <i></i> * * cves<br />
- <i></i> * * security<br />
+<p>This plugin extends <code>yum</code> to allow lists and updates to be limited using security relevant criteria added yum <i>command</i>s are:<br/>
+ <i></i> * update-minimal This works like the update command, but if you have the the package foo-1 installed and have foo-2 and foo-3 available with updateinfo.xml then update-minimal will update you to foo-3.<br/>
+ <i></i> * info-updateinfo<br/>
+ <i></i> * list-updateinfo both of the last two take these <i>sub-commands</i>s:<br/>
+ <i></i> * * &lt;advisory&gt; [advisory&#8230;]<br/>
+ <i></i> * * bugzillas<br/>
+ <i></i> * * cves<br/>
+ <i></i> * * security<br/>
  <i></i> * * new-packages </p>
 <dl>
 <dt><code>&lt;advisory&gt; [advisory&#8230;]</code></dt>

@@ -21,5 +21,5 @@ int ares_fds(ares_channel channel, fd_set *read_fds,
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-ares_timeout/">ares_timeout</a></code>(3), <code><a href="/docs/linux/man/3-ares_process/">ares_process</a></code>(3)</p>
 <h2>AUTHOR</h2>
-<p> Greg Hudson, MIT Information Systems<br />
+<p> Greg Hudson, MIT Information Systems<br/>
  Copyright 1998 by the Massachusetts Institute of Technology. </p>

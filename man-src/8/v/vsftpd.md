@@ -13,11 +13,11 @@ description: "vsftpd – Very Secure FTP Daemon"
 <h2>Description</h2>
 <p><code>vsftpd</code> is the Very Secure File Transfer Protocol Daemon. The server can be launched via a &#8220;super-server&#8221; such as inetd(8) or <a href="/docs/linux/man/8-xinetd/">xinetd</a>(8). Alternatively, vsftpd can be launched in standalone mode, in which case vsftpd itself will listen on the network. This latter mode is easier to use, and recommended. It is activated by setting listen=YES in /etc/vsftpd/vsftpd.conf Direct execution of the <code>vsftpd</code> binary will then launch the FTP service ready for immediate client connections. </p>
 <p> Systemd changes the vsftpd daemon start-up. The vsftpd package contains vsftpd-generator script generating symbolic links to /var/run/systemd/generator/vsftpd.target.wants directory. The generator is called during e.g. &#8216;systemctl &#8211;system daemon-reload&#8217;. All these symbolic links link /usr/lib/systemd/system/vsftpd [at] .service file. The vsftpd daemon(s) is/are controlled by one of following ways: </p>
-<p> 1. Single daemon using default /etc/vsftpd/vsftpd.conf configuration file<br />
+<p> 1. Single daemon using default /etc/vsftpd/vsftpd.conf configuration file<br/>
  # systemctl {start,stop,&#8230;} vsftpd[.service] </p>
-<p> 2. Single daemon using /etc/vsftpd/&lt;conf-name&gt;.conf<br />
+<p> 2. Single daemon using /etc/vsftpd/&lt;conf-name&gt;.conf<br/>
  # systemctl {start,stop,&#8230;} vsftpd@&lt;conf-name&gt;[.service] </p>
-<p> 3. All instances together<br />
+<p> 3. All instances together<br/>
  # systemctl {restart,stop} vsftpd.target </p>
 <p> See <a href="/docs/linux/man/5-systemd-unit/">systemd.unit</a>(5), <a href="/docs/linux/man/5-systemd-target/">systemd.target</a>(5) for further details.</p>
 <h2>Options</h2>

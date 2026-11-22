@@ -17,8 +17,8 @@ description: "greylistd – simple greylisting system for mail transport agents"
 <p> On the other hand, if no prior relationship exists, the delivery is temporarily rejected, using a 451 SMTP response. Legitimate MTAs will treat this response accordingly, and retry the delivery in a while. In contrast, ratware will usually fail to retry the delivery in a normal fashion. </p>
 <p> As a result, greylisting is currently more than 90% effective in blocking incoming junk mail, while nearly all legitimate mail goes through. </p>
 <p> Three pieces of information (herafter called a <i>triplet</i>) from the delivery attempt are cached for future reference: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&#8211; The address of the host attempting the delivery<br />
-&nbsp;<wbr>&nbsp;<wbr>&#8211; The envelope sender address&nbsp;<wbr>(MAIL FROM:)<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&#8211; The address of the host attempting the delivery<br/>
+&nbsp;<wbr>&nbsp;<wbr>&#8211; The envelope sender address&nbsp;<wbr>(MAIL FROM:)<br/>
 &nbsp;<wbr>&nbsp;<wbr>&#8211; The envelope recipient address&nbsp;<wbr>(RCPT TO:) </p>
 <p> If a delivery attempt was temporarily rejected, then after an initial timeout (60 minutes by default), but before a retry expiration time (8 hours by default), new delivery attempts with the same <i>triplet</i> are accepted, and the <i>triplet</i> is added to a whitelist. This allows for delivery retries, presumably from legitimate MTAs, and ensures that future mail from the same contact is not subject to greylisting. </p>
 <p> If a whitelisted <i>triplet</i> has not been seen for an extended duration (by default 60 days), it is expired. This prevents unlimited growth of the list. </p>
@@ -36,7 +36,7 @@ description: "greylistd – simple greylisting system for mail transport agents"
 <dd>Allows arbitrary strings to be passed on via a UNIX domain socket (<code>/var/run/greylistd/socket</code>) or supplied to external programs (<code><a href="/docs/linux/man/1-greylist/">greylist</a></code>(1)).</dd>
 <dt> &#8211;</dt>
 <dd>Can defer the incoming delivery, based on the response.</dd></dl>
-<p> Some MTAs either have limited or no support for such external filters in the SMTP transaction (e.g. Sendmail), or define a very custom interface for such filters (e.g. Postifx &quot;Policy Servers&quot;). That said, solutions exist for these other MTAs as well. For Postfix, check into &quot;postgrey&quot;, and for Sendmail there is &quot;relaydelay&quot;. For other MTAs, check the links on Evan Harris&#8217; greylisting project page:<br />
+<p> Some MTAs either have limited or no support for such external filters in the SMTP transaction (e.g. Sendmail), or define a very custom interface for such filters (e.g. Postifx &quot;Policy Servers&quot;). That said, solutions exist for these other MTAs as well. For Postfix, check into &quot;postgrey&quot;, and for Sendmail there is &quot;relaydelay&quot;. For other MTAs, check the links on Evan Harris&#8217; greylisting project page:<br/>
 &nbsp;<wbr><a rel="nofollow" href="http://projects.puremagic.com/greylisting/links.html">http://projects.puremagic.com/greylisting/links.html</a> </p>
 <h2>Files</h2>
 <h3>/etc/greylistd/config</h3>
@@ -66,7 +66,7 @@ description: "greylistd – simple greylisting system for mail transport agents"
 <h3>/var/lib/greylistd/triplets</h3>
 <p>(default path, can be modified in the configuration file) </p>
 <p> Unhashed data &#8211; i.e. the original triplets passed to greylistd. Internally, <code><a href="/docs/linux/man/8-greylistd/">greylistd</a></code>(8) hashes the provided data into a single 32-bit value for efficiency. Prior to version 0.6, the original data was not retained; as of version 0.6, data is optionally saved into this file. </p>
-<p> Data items are saved in the form:<br />
+<p> Data items are saved in the form:<br/>
 &nbsp;<wbr><i>hash</i>&nbsp;<wbr>=&nbsp;<wbr><i>data</i>&nbsp;<wbr>&#8230;</p>
 <h3>/var/run/greylistd/socket</h3>
 <p>(default path, can be modified in the configuration file) </p>

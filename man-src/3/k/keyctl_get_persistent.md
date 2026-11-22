@@ -45,11 +45,11 @@ long keyctl_get_persistent(uid_t uid, key_serial_t keyring);
 <h2>LINKING</h2>
 <p> This is a library function that can be found in <i>libkeyutils</i>. When linking, <code>-lkeyutils</code> should be specified to the linker.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-keyctl/">keyctl</a></code>(1),<br />
- <code><a href="/docs/linux/man/2-add_key/">add_key</a></code>(2),<br />
- <code><a href="/docs/linux/man/2-keyctl/">keyctl</a></code>(2),<br />
- <code><a href="/docs/linux/man/2-request_key/">request_key</a></code>(2),<br />
- <code><a href="/docs/linux/man/3-keyctl/">keyctl</a></code>(3),<br />
- <code><a href="/docs/linux/man/7-persistent-keyring/">persistent-keyring</a></code>(7),<br />
- <code><a href="/docs/linux/man/7-keyutils/">keyutils</a></code>(7),<br />
+<p> <code><a href="/docs/linux/man/1-keyctl/">keyctl</a></code>(1),<br/>
+ <code><a href="/docs/linux/man/2-add_key/">add_key</a></code>(2),<br/>
+ <code><a href="/docs/linux/man/2-keyctl/">keyctl</a></code>(2),<br/>
+ <code><a href="/docs/linux/man/2-request_key/">request_key</a></code>(2),<br/>
+ <code><a href="/docs/linux/man/3-keyctl/">keyctl</a></code>(3),<br/>
+ <code><a href="/docs/linux/man/7-persistent-keyring/">persistent-keyring</a></code>(7),<br/>
+ <code><a href="/docs/linux/man/7-keyutils/">keyutils</a></code>(7),<br/>
  <code><a href="/docs/linux/man/7-keyrings/">keyrings</a></code>(7) </p>

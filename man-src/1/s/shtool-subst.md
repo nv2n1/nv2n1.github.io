@@ -47,6 +47,6 @@ shtool subst - i - e 's;(c) \([0-9]*\)-2000;(c) \1-2001;' *.[ch]
          `find.- name Makefile - print` make install
 </code></pre>
 <h2>HISTORY</h2>
-<p> The <font SIZE="-1"><code>GNU</code></font><code> shtool</code> <code>subst</code> command was originally written by Ralf S. Engelschall &lt;rse [at] engelschall.com&gt; in 2001 for <font SIZE="-1"><code>GNU</code></font><code> shtool</code>. It was prompted by the need to have a uniform and convenient patching frontend to <i><a href="/docs/linux/man/1-sed/">sed</a></i>(1) operations in the <code>OpenPKG</code> package specifications.</p>
+<p> The <code>GNU</code><code> shtool</code> <code>subst</code> command was originally written by Ralf S. Engelschall &lt;rse [at] engelschall.com&gt; in 2001 for <code>GNU</code><code> shtool</code>. It was prompted by the need to have a uniform and convenient patching frontend to <i><a href="/docs/linux/man/1-sed/">sed</a></i>(1) operations in the <code>OpenPKG</code> package specifications.</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-shtool/">shtool</a></i>(1), <i><a href="/docs/linux/man/1-sed/">sed</a></i>(1). </p>

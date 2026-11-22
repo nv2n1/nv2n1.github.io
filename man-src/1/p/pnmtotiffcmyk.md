@@ -15,8 +15,8 @@ description: "pnmtotiffcmyk – convert a portable anymap into a CMYK encoded TI
 <dt>Compargs:</dt>
 <dd> [<code>-none</code>|<code>-packbits</code>|<code>-lzw</code> [<code>-predictor</code> <i>n</i>]]</dd>
 <dt>Tiffargs:</dt>
-<dd> [<code>-msb2lsb</code>|<code>-lsb2msb</code>] [<code>-rowsperstrip</code> <i>n</i>]<br />
- [<code>-lowdotrange</code> <i>n</i>] [<code>-highdotrange</code> <i>n</i>]<br />
+<dd> [<code>-msb2lsb</code>|<code>-lsb2msb</code>] [<code>-rowsperstrip</code> <i>n</i>]<br/>
+ [<code>-lowdotrange</code> <i>n</i>] [<code>-highdotrange</code> <i>n</i>]<br/>
  [<code>-knormal</code>|<code>-konly</code>|<code>-kremove</code>] </dd>
 <dt>Convargs:</dt>
 <dd> [[<code>-default</code>][<code>Defargs</code>]|<code>-negative</code>]</dd>

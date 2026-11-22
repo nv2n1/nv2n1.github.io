@@ -10,9 +10,9 @@ description: "ntfsclone – Efficiently clone, image, restore or rescue an NTFS"
 
 <p>ntfsclone &#8211; Efficiently clone, image, restore or rescue an NTFS </p>
 
-<p> <code>ntfsclone</code> [<i>OPTIONS</i>] <i>SOURCE</i> <br />
- <code>ntfsclone --save-image</code> [<i>OPTIONS</i>] <i>SOURCE</i> <br />
- <code>ntfsclone --restore-image</code> [<i>OPTIONS</i>] <i>SOURCE</i> <br />
+<p> <code>ntfsclone</code> [<i>OPTIONS</i>] <i>SOURCE</i> <br/>
+ <code>ntfsclone --save-image</code> [<i>OPTIONS</i>] <i>SOURCE</i> <br/>
+ <code>ntfsclone --restore-image</code> [<i>OPTIONS</i>] <i>SOURCE</i> <br/>
  <code>ntfsclone --metadata</code> [<i>OPTIONS</i>] <i>SOURCE</i>  </p>
 <h2>DESCRIPTION</h2>
 <p> <code>ntfsclone</code> will efficiently clone (copy, save, backup, restore) or rescue an NTFS filesystem to a sparse file, image, device (partition) or standard output. It works at disk sector level and copies only the used data. Unused disk space becomes zero (cloning to sparse file), encoded with control codes (saving in special image format), left unchanged (cloning to a disk/partition) or filled with zeros (cloning to standard output). </p>
@@ -110,22 +110,22 @@ description: "ntfsclone – Efficiently clone, image, restore or rescue an NTFS"
  </dd></dl>
 <p> Restore an NTFS volume from a compressed image file: </p>
 <dl>
-<dd> <p> <code>gunzip -c backup.img.gz | \\</code> <br />
+<dd> <p> <code>gunzip -c backup.img.gz | \\</code> <br/>
  <code>ntfsclone --restore-image --overwrite /dev/hda1 -</code> </p>
  </dd></dl>
 <p> Backup an NTFS volume to a remote host, using ssh. Please note, that ssh may ask for a password! </p>
 <dl>
-<dd> <p> <code>ntfsclone --save-image --output - /dev/hda1 | \\</code> <br />
+<dd> <p> <code>ntfsclone --save-image --output - /dev/hda1 | \\</code> <br/>
  <code>gzip -c | ssh host &#8216;cat &gt; backup.img.gz&#8217;</code> </p>
  </dd></dl>
 <p> Restore an NTFS volume from a remote host via ssh. Please note, that ssh may ask for a password! </p>
 <dl>
-<dd> <p> <code>ssh host &#8216;cat backup.img.gz&#8217; | gunzip -c | \\</code> <br />
+<dd> <p> <code>ssh host &#8216;cat backup.img.gz&#8217; | gunzip -c | \\</code> <br/>
  <code>ntfsclone --restore-image --overwrite /dev/hda1 -</code> </p>
  </dd></dl>
 <p> Stream an image file from a web server and restore it to a partition: </p>
 <dl>
-<dd> <p> <code>wget -qO - <a rel="nofollow" href="http://server/backup.img">http://server/backup.img</a> | \\</code> <br />
+<dd> <p> <code>wget -qO - <a rel="nofollow" href="http://server/backup.img">http://server/backup.img</a> | \\</code> <br/>
  <code>ntfsclone --restore-image --overwrite /dev/hda1 -</code> </p>
  </dd></dl>
 <p> Clone an NTFS volume to a non-existent file: </p>
@@ -134,14 +134,14 @@ description: "ntfsclone – Efficiently clone, image, restore or rescue an NTFS"
  </dd></dl>
 <p> Pack NTFS metadata for NTFS experts. Please note that bzip2 runs very long but results usually at least 10 times smaller archives than gzip on a sparse file. </p>
 <dl>
-<dd> <p> <code>ntfsclone --metadata --output ntfsmeta.img /dev/hda1</code> <br />
+<dd> <p> <code>ntfsclone --metadata --output ntfsmeta.img /dev/hda1</code> <br/>
  <code>bzip2 ntfsmeta.img</code> </p>
-<p>Or, outputting to a compressed image : <br />
+<p>Or, outputting to a compressed image : <br/>
  <code>ntfsclone -mst --output - /dev/hda1 | bzip2 &gt; ntfsmeta.bz2</code> </p>
  </dd></dl>
 <p> Unpacking NTFS metadata into a sparse file: </p>
 <dl>
-<dd> <p> <code>bunzip2 -c ntfsmeta.img.bz2 | \\</code> <br />
+<dd> <p> <code>bunzip2 -c ntfsmeta.img.bz2 | \\</code> <br/>
  <code>cp --sparse=always /proc/self/fd/0 ntfsmeta.img</code> </p>
  </dd></dl>
 <h2>KNOWN ISSUES</h2>
@@ -150,7 +150,7 @@ description: "ntfsclone – Efficiently clone, image, restore or rescue an NTFS"
 <h2>AUTHORS</h2>
 <p> <code>ntfsclone</code> was written by Szabolcs Szakacsits with contributions from Per Olofsson (special image format support) and Anton Altaparmakov. It was ported to ntfs-3g by Erik Larsson and Jean-Pierre Andre.  </p>
 <h2>AVAILABILITY</h2>
-<p> <code>ntfsclone</code> is part of the <code>ntfs-3g</code> package and is available at: <br />
+<p> <code>ntfsclone</code> is part of the <code>ntfs-3g</code> package and is available at: <br/>
  <a rel="nofollow" href="https://github.com/tuxera/ntfs-3g/wiki/">https://github.com/tuxera/ntfs-3g/wiki/</a>  </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-ntfsresize/">ntfsresize</a></code>(8) <code><a href="/docs/linux/man/8-ntfsprogs/">ntfsprogs</a></code>(8) <code><a href="/docs/linux/man/8-xfs_copy/">xfs_copy</a></code>(8) <code><a href="/docs/linux/man/8-debugreiserfs/">debugreiserfs</a></code>(8) <code><a href="/docs/linux/man/8-e2image/">e2image</a></code>(8) </p>

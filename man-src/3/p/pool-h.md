@@ -26,30 +26,30 @@ Macros
 #define POOL_TYPE_MAX   16
 #define POOL_MAX   16
 Typedefs</code></pre>
-<p> typedef struct <code>dmlite_pool</code> <code>dmlite_pool</code><br />
- <i>Pool data. </i><br />
- typedef struct <code>dmlite_chunk</code> <code>dmlite_chunk</code><br />
- <i>Chunk of data. </i><br />
- typedef struct <code>dmlite_location</code> <code>dmlite_location</code><br />
+<p> typedef struct <code>dmlite_pool</code> <code>dmlite_pool</code><br/>
+ <i>Pool data. </i><br/>
+ typedef struct <code>dmlite_chunk</code> <code>dmlite_chunk</code><br/>
+ <i>Chunk of data. </i><br/>
+ typedef struct <code>dmlite_location</code> <code>dmlite_location</code><br/>
  <i>Collection of chunks that form a replica. </i></p>
 <h3>Functions</h3>
-<p>int <code>dmlite_getpools</code> (<code>dmlite_context</code> *context, unsigned *nPools, <code>dmlite_pool</code> **pools)<br />
- <i>Gets the list of pools. </i><br />
- int <code>dmlite_pools_free</code> (unsigned nPools, <code>dmlite_pool</code> *pools)<br />
- <i>Frees an array of pools. </i><br />
- <code>dmlite_location</code> * <code>dmlite_get</code> (<code>dmlite_context</code> *context, const char *path)<br />
- <i>Gets a single replica (synchronous). </i><br />
- <code>dmlite_location</code> * <code>dmlite_iget</code> (<code>dmlite_context</code> *context, ino_t inode)<br />
- <i>Gets a single replica (synchronous). </i><br />
- <code>dmlite_location</code> * <code>dmlite_getlocation</code> (<code>dmlite_context</code> *context, const <code>dmlite_replica</code> *replica)<br />
- <i>Gets the location of a replica. </i><br />
- <code>dmlite_location</code> * <code>dmlite_put</code> (<code>dmlite_context</code> *context, const char *path)<br />
- <i>Puts a file (synchronous). </i><br />
- int <code>dmlite_put_abort</code> (<code>dmlite_context</code> *context, const <code>dmlite_location</code> *loc)<br />
- <i>Aborts a put request. </i><br />
- int <code>dmlite_location_free</code> (<code>dmlite_location</code> *loc)<br />
- <i>Frees a location struct. </i><br />
- int <code>dmlite_getdirspaces</code> (<code>dmlite_context</code> *context, const char *logicaldir, int64_t *freespace, int64_t *used)<br />
+<p>int <code>dmlite_getpools</code> (<code>dmlite_context</code> *context, unsigned *nPools, <code>dmlite_pool</code> **pools)<br/>
+ <i>Gets the list of pools. </i><br/>
+ int <code>dmlite_pools_free</code> (unsigned nPools, <code>dmlite_pool</code> *pools)<br/>
+ <i>Frees an array of pools. </i><br/>
+ <code>dmlite_location</code> * <code>dmlite_get</code> (<code>dmlite_context</code> *context, const char *path)<br/>
+ <i>Gets a single replica (synchronous). </i><br/>
+ <code>dmlite_location</code> * <code>dmlite_iget</code> (<code>dmlite_context</code> *context, ino_t inode)<br/>
+ <i>Gets a single replica (synchronous). </i><br/>
+ <code>dmlite_location</code> * <code>dmlite_getlocation</code> (<code>dmlite_context</code> *context, const <code>dmlite_replica</code> *replica)<br/>
+ <i>Gets the location of a replica. </i><br/>
+ <code>dmlite_location</code> * <code>dmlite_put</code> (<code>dmlite_context</code> *context, const char *path)<br/>
+ <i>Puts a file (synchronous). </i><br/>
+ int <code>dmlite_put_abort</code> (<code>dmlite_context</code> *context, const <code>dmlite_location</code> *loc)<br/>
+ <i>Aborts a put request. </i><br/>
+ int <code>dmlite_location_free</code> (<code>dmlite_location</code> *loc)<br/>
+ <i>Frees a location struct. </i><br/>
+ int <code>dmlite_getdirspaces</code> (<code>dmlite_context</code> *context, const char *logicaldir, int64_t *freespace, int64_t *used)<br/>
  <i>Get the estimation of the free/used space for writing into a directory. </i></p>
 <h2>Detailed Description</h2>
 <p>C wrapper for DMLite Pool API. </p>
@@ -71,7 +71,7 @@ Typedefs</code></pre>
 <p>Gets a single replica (synchronous). </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>context</i> The DM context.<br />
+<dd><i>context</i> The DM context.<br/>
  <i>path</i> The logical file name.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -80,8 +80,8 @@ Typedefs</code></pre>
 <p>Get the estimation of the free/used space for writing into a directory. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>path</i> The path of the directory to query<br />
- <i>totalfree</i> The total number of free bytes (may not be contiguous)<br />
+<dd><i>path</i> The path of the directory to query<br/>
+ <i>totalfree</i> The total number of free bytes (may not be contiguous)<br/>
  <i>used</i> The total number of used bytes</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -90,7 +90,7 @@ Typedefs</code></pre>
 <p>Gets the location of a replica. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>context</i> The DM context.<br />
+<dd><i>context</i> The DM context.<br/>
  <i>replica</i> The replica to translate.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -99,8 +99,8 @@ Typedefs</code></pre>
 <p>Gets the list of pools. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>context</i> The DM context.<br />
- <i>nPools</i> The number of pools.<br />
+<dd><i>context</i> The DM context.<br/>
+ <i>nPools</i> The number of pools.<br/>
  <i>pools</i> An array with the pools. <code>Use dmlite_freepools to free</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -109,7 +109,7 @@ Typedefs</code></pre>
 <p>Gets a single replica (synchronous). </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>context</i> The DM context.<br />
+<dd><i>context</i> The DM context.<br/>
  <i>inode</i> The file inode.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -126,7 +126,7 @@ Typedefs</code></pre>
 <p>Frees an array of pools. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>nPools</i> The number of pools in the array.<br />
+<dd><i>nPools</i> The number of pools in the array.<br/>
  <i>pools</i> The array to free.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -135,7 +135,7 @@ Typedefs</code></pre>
 <p>Puts a file (synchronous). </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>context</i> The DM context.<br />
+<dd><i>context</i> The DM context.<br/>
  <i>path</i> The logical file name to put.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -144,7 +144,7 @@ Typedefs</code></pre>
 <p>Aborts a put request. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>context</i> The DM context.<br />
+<dd><i>context</i> The DM context.<br/>
  <i>loc</i> As returned by dmlite_put.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

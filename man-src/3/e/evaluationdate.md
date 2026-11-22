@@ -12,8 +12,8 @@ description: "QuantLib::Settings – global repository for run-time library sett
 <p>#include &lt;ql/settings.hpp&gt; </p>
 <p> Inherits <code>Singleton&lt; Settings &gt;</code>. </p>
 <h3>Public Member Functions</h3>
-<p>DateProxy &amp; <code>evaluationDate</code> ()<br />
- <i>the date at which pricing is to be performed. </i><br />
+<p>DateProxy &amp; <code>evaluationDate</code> ()<br/>
+ <i>the date at which pricing is to be performed. </i><br/>
  const DateProxy &amp; <code>evaluationDate</code> () const </p>
 <p> bool &amp; <code>enforcesTodaysHistoricFixings</code> () </p>
 <p> bool <code>enforcesTodaysHistoricFixings</code> () const </p>

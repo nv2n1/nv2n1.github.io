@@ -995,8 +995,8 @@ description: "groff_diff – differences between GNU troff and classical troff"
 <p> There is a continuation convention which permits the argument to the <code>x X</code> command to contain newlines: when outputting the argument to the <code>x X</code> command, GNU troff follows each newline in the argument with a <code>+</code> character (as usual, it terminates the entire argument with a newline); thus if the line after the line containing the <code>x X</code> command starts with <code>+</code>, then the newline ending the line containing the <code>x X</code> command should be treated as part of the argument to the <code>x X</code> command, the <code>+</code> should be ignored, and the part of the line following the <code>+</code> should be treated like the part of the line following the <code>x X</code> command. </p>
 <p>The first three output commands are guaranteed to be: </p>
 <dl>
-<dd> <p> <code>x T&nbsp;</code><i>device</i> <br />
- <code>x res&nbsp;</code><i>n h v</i> <br />
+<dd> <p> <code>x T&nbsp;</code><i>device</i> <br/>
+ <code>x res&nbsp;</code><i>n h v</i> <br/>
  <code>x init</code> </p>
  </dd></dl>
 <h2>INCOMPATIBILITIES</h2>

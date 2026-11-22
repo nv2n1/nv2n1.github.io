@@ -23,7 +23,7 @@ description: "ipetoipe – Convert between Ipe file formats"
 <dt><code>-xml</code></dt>
 <dd> convert to XML format</dd>
 <dt><code>-export</code></dt>
-<dd> do not include Ipe markup in the output file.<br />
+<dd> do not include Ipe markup in the output file.<br/>
  <i>Warning:</i> this means that Ipe will not be able to read the resulting output file.</dd>
 <dt><code>-from</code> and <code>-to</code></dt>
 <dd> restrict exporting to PDF to this page range. This only works in conjunction with the <code>-export</code> option.</dd>

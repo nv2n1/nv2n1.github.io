@@ -59,7 +59,7 @@ description: "quotacheck – scan a filesystem for disk usage, create, check and
 <dt><code>/etc/mtab</code></dt>
 <dd>names and locations of mounted filesystems</dd></dl>
 <h2>Author</h2>
-<p>Jan Kara &lt;jack [at] suse.cz&gt;<br />
- Based on old <code>quotacheck</code> by:<br />
- Edvard Tuinder &lt;ed [at] elm.net&gt;<br />
+<p>Jan Kara &lt;jack [at] suse.cz&gt;<br/>
+ Based on old <code>quotacheck</code> by:<br/>
+ Edvard Tuinder &lt;ed [at] elm.net&gt;<br/>
  Marco van Wieringen &lt;mvw [at] planets.elm.net&gt;</p>

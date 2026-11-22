@@ -10,25 +10,25 @@ description: "ssh-keygen – authentication key generation, management and conve
 
 <p> <code>ssh-keygen</code> &#8211; authentication key generation, management and conversion</p>
 <h2>SYNOPSIS</h2>
-<p> -words <code>ssh-keygen</code> [-<code>q</code> ] [-<code>b </code><i>bits</i> ] [-<code>t </code><i>type</i> ] [-<code>N </code><i>new_passphrase</i> ] [-<code>C </code><i>comment</i> ] [-<code>f </code><i>output_keyfile</i> ]<br />
-<code>ssh-keygen</code> &#8211;<code>p</code> [-<code>P </code><i>old_passphrase</i> ] [-<code>N </code><i>new_passphrase</i> ] [-<code>f </code><i>keyfile</i> ]<br />
-<code>ssh-keygen</code> &#8211;<code>i</code> [-<code>m </code><i>key_format</i> ] [-<code>f </code><i>input_keyfile</i> ]<br />
-<code>ssh-keygen</code> &#8211;<code>e</code> [-<code>m </code><i>key_format</i> ] [-<code>f </code><i>input_keyfile</i> ]<br />
-<code>ssh-keygen</code> &#8211;<code>y</code> [-<code>f </code><i>input_keyfile</i> ]<br />
-<code>ssh-keygen</code> &#8211;<code>c</code> [-<code>P </code><i>passphrase</i> ] [-<code>C </code><i>comment</i> ] [-<code>f </code><i>keyfile</i> ]<br />
-<code>ssh-keygen</code> &#8211;<code>l</code> [-<code>f </code><i>input_keyfile</i> ]<br />
-<code>ssh-keygen</code> &#8211;<code>B</code> [-<code>f </code><i>input_keyfile</i> ]<br />
-<code>ssh-keygen</code> &#8211;<code>D </code><i>pkcs11</i><br />
-<code>ssh-keygen</code> &#8211;<code>F </code><i>hostname</i> [-<code>f </code><i>known_hosts_file</i> ] [-<code>l</code> ]<br />
-<code>ssh-keygen</code> &#8211;<code>H</code> [-<code>f </code><i>known_hosts_file</i> ]<br />
-<code>ssh-keygen</code> &#8211;<code>R </code><i>hostname</i> [-<code>f </code><i>known_hosts_file</i> ]<br />
-<code>ssh-keygen</code> &#8211;<code>r </code><i>hostname</i> [-<code>f </code><i>input_keyfile</i> ] [-<code>g</code> ]<br />
-<code>ssh-keygen</code> &#8211;<code>G </code><i>output_file</i> [-<code>v</code> ] [-<code>b </code><i>bits</i> ] [-<code>M </code><i>memory</i> ] [-<code>S </code><i>start_point</i> ]<br />
-<code>ssh-keygen</code> &#8211;<code>T </code><i>output_file</i> &#8211;<code>f </code><i>input_file</i> [-<code>v</code> ] [-<code>a </code><i>rounds</i> ] [-<code>J </code><i>num_lines</i> ] [-<code>j </code><i>start_line</i> ] [-<code>K </code><i>checkpt</i> ] [-<code>W </code><i>generator</i> ]<br />
-<code>ssh-keygen</code> &#8211;<code>s </code><i>ca_key</i> &#8211;<code>I </code><i>certificate_identity</i> [-<code>h</code> ] [-<code>n </code><i>principals</i> ] [-<code>O </code><i>option</i> ] [-<code>V </code><i>validity_interval</i> ] [-<code>z </code><i>serial_number</i> ] <i>file &#8230;</i><br />
-<code>ssh-keygen</code> &#8211;<code>L</code> [-<code>f </code><i>input_keyfile</i> ]<br />
-<code>ssh-keygen</code> &#8211;<code>A</code><br />
-<code>ssh-keygen</code> &#8211;<code>k</code> &#8211;<code>f </code><i>krl_file</i> [-<code>u</code> ] [-<code>s </code><i>ca_public</i> ] [-<code>z </code><i>version_number</i> ] <i>file &#8230;</i><br />
+<p> -words <code>ssh-keygen</code> [-<code>q</code> ] [-<code>b </code><i>bits</i> ] [-<code>t </code><i>type</i> ] [-<code>N </code><i>new_passphrase</i> ] [-<code>C </code><i>comment</i> ] [-<code>f </code><i>output_keyfile</i> ]<br/>
+<code>ssh-keygen</code> &#8211;<code>p</code> [-<code>P </code><i>old_passphrase</i> ] [-<code>N </code><i>new_passphrase</i> ] [-<code>f </code><i>keyfile</i> ]<br/>
+<code>ssh-keygen</code> &#8211;<code>i</code> [-<code>m </code><i>key_format</i> ] [-<code>f </code><i>input_keyfile</i> ]<br/>
+<code>ssh-keygen</code> &#8211;<code>e</code> [-<code>m </code><i>key_format</i> ] [-<code>f </code><i>input_keyfile</i> ]<br/>
+<code>ssh-keygen</code> &#8211;<code>y</code> [-<code>f </code><i>input_keyfile</i> ]<br/>
+<code>ssh-keygen</code> &#8211;<code>c</code> [-<code>P </code><i>passphrase</i> ] [-<code>C </code><i>comment</i> ] [-<code>f </code><i>keyfile</i> ]<br/>
+<code>ssh-keygen</code> &#8211;<code>l</code> [-<code>f </code><i>input_keyfile</i> ]<br/>
+<code>ssh-keygen</code> &#8211;<code>B</code> [-<code>f </code><i>input_keyfile</i> ]<br/>
+<code>ssh-keygen</code> &#8211;<code>D </code><i>pkcs11</i><br/>
+<code>ssh-keygen</code> &#8211;<code>F </code><i>hostname</i> [-<code>f </code><i>known_hosts_file</i> ] [-<code>l</code> ]<br/>
+<code>ssh-keygen</code> &#8211;<code>H</code> [-<code>f </code><i>known_hosts_file</i> ]<br/>
+<code>ssh-keygen</code> &#8211;<code>R </code><i>hostname</i> [-<code>f </code><i>known_hosts_file</i> ]<br/>
+<code>ssh-keygen</code> &#8211;<code>r </code><i>hostname</i> [-<code>f </code><i>input_keyfile</i> ] [-<code>g</code> ]<br/>
+<code>ssh-keygen</code> &#8211;<code>G </code><i>output_file</i> [-<code>v</code> ] [-<code>b </code><i>bits</i> ] [-<code>M </code><i>memory</i> ] [-<code>S </code><i>start_point</i> ]<br/>
+<code>ssh-keygen</code> &#8211;<code>T </code><i>output_file</i> &#8211;<code>f </code><i>input_file</i> [-<code>v</code> ] [-<code>a </code><i>rounds</i> ] [-<code>J </code><i>num_lines</i> ] [-<code>j </code><i>start_line</i> ] [-<code>K </code><i>checkpt</i> ] [-<code>W </code><i>generator</i> ]<br/>
+<code>ssh-keygen</code> &#8211;<code>s </code><i>ca_key</i> &#8211;<code>I </code><i>certificate_identity</i> [-<code>h</code> ] [-<code>n </code><i>principals</i> ] [-<code>O </code><i>option</i> ] [-<code>V </code><i>validity_interval</i> ] [-<code>z </code><i>serial_number</i> ] <i>file &#8230;</i><br/>
+<code>ssh-keygen</code> &#8211;<code>L</code> [-<code>f </code><i>input_keyfile</i> ]<br/>
+<code>ssh-keygen</code> &#8211;<code>A</code><br/>
+<code>ssh-keygen</code> &#8211;<code>k</code> &#8211;<code>f </code><i>krl_file</i> [-<code>u</code> ] [-<code>s </code><i>ca_public</i> ] [-<code>z </code><i>version_number</i> ] <i>file &#8230;</i><br/>
 <code>ssh-keygen</code> &#8211;<code>Q</code> &#8211;<code>f </code><i>krl_file</i> <i>file &#8230;</i></p>
 <h2>DESCRIPTION</h2>
 <p> <code>ssh-keygen</code> generates, manages and converts authentication keys for <a href="/docs/linux/man/1-ssh/">ssh</a>(1). <code>ssh-keygen</code> can create RSA keys for use by SSH protocol version 1 and DSA, ECDSA, ED25519 or RSA keys for use by SSH protocol version 2. The type of key to be generated is specified with the &#8211;<code>t</code> option. If invoked without any arguments, <code>ssh-keygen</code> will generate an RSA key for use in SSH protocol 2 connections. </p>

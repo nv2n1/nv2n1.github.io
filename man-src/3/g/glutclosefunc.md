@@ -13,17 +13,17 @@ description: "glutCloseFunc – Window destruction callback."
 <h2>Synopsis</h2>
 <p>In openglut.h Ft void Fn glutCloseFunc void( *callback )( void )</p>
 <h2>Parameters</h2>
-<p>Bf Em<br />
-&nbsp;<wbr>callback Ef<br />
+<p>Bf Em<br/>
+&nbsp;<wbr>callback Ef<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Client window destruction hook.</p>
 <h2>Description</h2>
 <p>When a window is destroyed by user-action in traditional GLUT, the application terminates. In freeglut and OpenGLUT, the application can choose to persist and treat the window close event as a normal event. This callback is how that event is transmitted to the application. </p>
-<p> This callback is bound to the Bf Li<br />
-&nbsp;<wbr>current window Ef<br />
+<p> This callback is bound to the Bf Li<br/>
+&nbsp;<wbr>current window Ef<br/>
 &nbsp;<wbr>. </p>
 <h2>Caveats</h2>
-<p>This function is Bf Em<br />
-&nbsp;<wbr>exactly Ef<br />
+<p>This function is Bf Em<br/>
+&nbsp;<wbr>exactly Ef<br/>
 &nbsp;<wbr>&nbsp;<wbr>the same as glutWMCloseFunc(), which has been deprecated. This function should be used instead. </p>
 <h2>Todo</h2>
 <p>There needs to be some work to rationalize the behavior when a window is closed. </p>

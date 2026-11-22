@@ -37,9 +37,9 @@ double * w_</code></pre>
 <p>An implementation of a Lebedev angular integrator. </p>
 <p> It uses code written by Dr. Dmitri N. Laikov. </p>
 <p> This can generate grids with the following numbers of points: 6, 14, 26, 38, 50, 74, 86, 110, 146, 170, 194, 230, 266, 302, 350, 386, 434, 482, 530, 590, 650, 698, 770, 830, 890, 974, 1046, 1118, 1202, 1274, 1358, 1454, 1538, 1622, 1730, 1814, 1910, 2030, 2126, 2222, 2354, 2450, 2558, 2702, 2810, 2930, 3074, 3182, 3314, 3470, 3590, 3722, 3890, 4010, 4154, 4334, 4466, 4610, 4802, 4934, 5090, 5294, 5438, 5606, and 5810. </p>
-<p> V.I. Lebedev, and D.N. Laikov &#8216;A quadrature formula for the sphere of the 131st<br />
+<p> V.I. Lebedev, and D.N. Laikov &#8216;A quadrature formula for the sphere of the 131st<br/>
 &nbsp;<wbr>&nbsp;<wbr>algebraic order of accuracy&#8217;&nbsp;<wbr>Doklady Mathematics, Vol. 59, No. 3, 1999, pp. 477-481. </p>
-<p> V.I. Lebedev &#8216;A quadrature formula for the sphere of 59th algebraic<br />
+<p> V.I. Lebedev &#8216;A quadrature formula for the sphere of 59th algebraic<br/>
 &nbsp;<wbr>&nbsp;<wbr>order of accuracy&#8217;&nbsp;<wbr>Russian Acad. Sci. Dokl. Math., Vol. 50, 1995, pp. 283-286. </p>
 <p> V.I. Lebedev, and A.L. Skorokhodov &#8216;Quadrature formulas of orders 41, 47, and 53 for the sphere&#8217; Russian Acad. Sci. Dokl. Math., Vol. 45, 1992, pp. 587-592. </p>
 <p> V.I. Lebedev &#8216;Spherical quadrature formulas exact to orders 25-29&#8217; Siberian Mathematical Journal, Vol. 18, 1977, pp. 99-107. </p>

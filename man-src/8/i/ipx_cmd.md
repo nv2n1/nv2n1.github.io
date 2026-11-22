@@ -21,9 +21,9 @@ description: "ipx_cmd – bridge between Novell’s SCMD driver and local IPX ne
 <h2>Example</h2>
 <p>If you are on server <i>platan.vc.cvut.cz</i> (<i>147.32.240.81</i>) and your migration agent runs on server <i>boris.vc.cvut.cz</i>, you can configure your system with: </p>
 <dl>
-<dd>insmod ethertap<br />
- ifconfig tap0 hw ether 7E:01:93:20:F0:51 up<br />
- ipx_interface add -p tap0 EtherII<br />
+<dd>insmod ethertap<br/>
+ ifconfig tap0 hw ether 7E:01:93:20:F0:51 up<br/>
+ ipx_interface add -p tap0 EtherII<br/>
  ipx_cmd -A boris.vc.cvut.cz -l 147.32.240.81 &amp;</dd></dl>
 <h2>Bugs</h2>
 <p>This program was written to satisfy my own needs and should be really improved. At least it should configure <i>tap</i> interface itself.</p>

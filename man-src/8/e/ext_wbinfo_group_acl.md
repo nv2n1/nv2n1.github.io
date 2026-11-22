@@ -11,7 +11,7 @@ url: "/docs/linux/man/8-ext_wbinfo_group_acl/"
 <pre> ext_wbinfo_group_acl [-dhK]</pre>
 <h2>Description</h2>
 <p><code>ext_wbinfo_group_acl</code> is an installed executable script. It uses <code>wbinfo</code> from Samba to lookup group membership of logged in users. </p>
-<p> This helper must be used in with an authentication scheme (typically Basic or <font SIZE="-1">NTLM</font>) based on Windows <font SIZE="-1">NT/2000</font> domain users. </p>
+<p> This helper must be used in with an authentication scheme (typically Basic or NTLM) based on Windows NT/2000 domain users. </p>
 <p> It reads from the standard input the domain username and a list of groups and tries to match each against the groups membership of the specified username.</p>
 <h2>Options</h2>
 <dl>
@@ -20,7 +20,7 @@ url: "/docs/linux/man/8-ext_wbinfo_group_acl/"
 <dt><code>-h</code></dt>
 <dd>Print the help.</dd>
 <dt><code>-K</code></dt>
-<dd>Downgrade Kerberos credentials to <font SIZE="-1">NTLM.</font></dd></dl>
+<dd>Downgrade Kerberos credentials to NTLM.</dd></dl>
 <h2>Configuration</h2>
 <pre> external_acl_type wbinfo_check %LOGIN /path/to/ext_wbinfo_group_acl
  acl allowed_group external wbinfo_check Group1 Group2
@@ -48,4 +48,4 @@ url: "/docs/linux/man/8-ext_wbinfo_group_acl/"
 <p> Report serious security bugs to <i>Squid Bugs &lt;squid-bugs [at] squid-cache.org</i>&gt; </p>
 <p> Report ideas for new improvements to the <i>Squid Developers mailing list &lt;squid-dev [at] squid-cache.org</i>&gt;</p>
 <h2>See Also</h2>
-<p>The Squid <font SIZE="-1">FAQ</font> wiki <a rel="nofollow" href="http://wiki.squid-cache.org/SquidFaq">http://wiki.squid-cache.org/SquidFaq</a> The Squid Configuration Manual <a rel="nofollow" href="http://www.squid-cache.org/Doc/config/">http://www.squid-cache.org/Doc/config/</a> </p>
+<p>The Squid FAQ wiki <a rel="nofollow" href="http://wiki.squid-cache.org/SquidFaq">http://wiki.squid-cache.org/SquidFaq</a> The Squid Configuration Manual <a rel="nofollow" href="http://www.squid-cache.org/Doc/config/">http://www.squid-cache.org/Doc/config/</a> </p>

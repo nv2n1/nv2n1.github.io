@@ -18,12 +18,12 @@ description: "htfuzzy – fuzzy command-line search utility for the ht://Dig sea
 <dt><code>-c </code><i>configfile</i></dt>
 <dd> Use the specified <i>configfile</i> instead of the default.</dd>
 <dt><code>-v </code></dt>
-<dd> <i>Verbose mode</i> <i> -vv</i> , <i>-vvv</i><br />
+<dd> <i>Verbose mode</i> <i> -vv</i> , <i>-vvv</i><br/>
 &nbsp;<wbr>etc ). Specifying more than two v&#8217;s is probably only useful for debugging purposes.</dd></dl>
 <h2>Supported Algorithms</h2>
 <dl>
 <dt>Different algoritms are supported for searching:</dt>
-<dd> <i>soundex</i> Creates a slightly modified soundex key database. Differences with the standard soundex algorithm are: Keys are 6 digits and the first letter is also encoded. <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><br />
+<dd> <i>soundex</i> Creates a slightly modified soundex key database. Differences with the standard soundex algorithm are: Keys are 6 digits and the first letter is also encoded. <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><br/>
  <i>metaphone</i> Creates a metaphone key database. This algorithm is more specific to English, but will get fewer &quot;weird&quot; matches than the soundex algorithm. </dd>
 <p> <i>accents</i> (No description of the algorithm at the moment) </p>
 <p> <i>endings</i> Creates two databases which can be used to match common word endings. The creation of these databases requires a list of affix rules and a dictionary which uses those affix rules. The format of the affix rules and dictionary files are the ones used by the ispell program. Included with the distribution are the affix rules for English and a fairly small English dictionary. Other languages can be supported by getting the appropriate affix rules and dictionaries. These are available for many languages; check the ispell distribu- tion for more details. </p>

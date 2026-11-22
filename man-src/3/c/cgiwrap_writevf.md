@@ -17,7 +17,7 @@ description: "cgiwrap_writevf – a wrapper for vprintf"
 NEOERR *cgiwrap_writevf(const char *fmt, va_list ap);
 </code></pre>
 <h2>ARGUMENTS</h2>
-<p> fmt &#8211; standard printf fmt string<br />
+<p> fmt &#8211; standard printf fmt string<br/>
  ap &#8211; stdarg argument pointer </p>
 <h2>DESCRIPTION</h2>
 <p> cgiwrap_writevf is the formatted output command that replaces vprintf or fvprintf(stdout) in a standard CGI It is also used by cgiwrap_writef (the actual wrapped function is a v type function) </p>

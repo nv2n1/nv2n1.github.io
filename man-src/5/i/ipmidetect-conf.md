@@ -25,7 +25,7 @@ description: "ipmidetect.conf – specify alternate default values for the ipmid
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;freeipmi-users [at] gnu.org&gt; or &lt;freeipmi-devel [at] gnu.org&gt;.</p>
 <h2>Copyright</h2>
-<p>Copyright (C) 2007-2012 Lawrence Livermore National Security, LLC.<br />
+<p>Copyright (C) 2007-2012 Lawrence Livermore National Security, LLC.<br/>
  Copyright (C) 2007 The Regents of the University of California.</p>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/3-libipmidetect/">libipmidetect</a>(3), <a href="/docs/linux/man/8-ipmidetect/">ipmidetect</a>(8) <a rel="nofollow" href="http://www.gnu.org/software/freeipmi/">http://www.gnu.org/software/freeipmi/</a> </p>

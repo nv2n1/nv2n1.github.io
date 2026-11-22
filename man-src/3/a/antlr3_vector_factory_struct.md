@@ -12,21 +12,21 @@ description: "ANTLR3_VECTOR_FACTORY_struct –"
 <h2>Synopsis</h2>
 <p>#include &lt;<a href="file:/usr/include/antlr3collections.h">antlr3collections.h</a>&gt;</p>
 <h3>Data Fields</h3>
-<p>void(* <code>close</code> )(struct <code>ANTLR3_VECTOR_FACTORY_struct</code> *factory)<br />
- <i>Function to close the vector factory. </i><br />
- <code>pANTLR3_STACK</code> <code>freeStack</code><br />
- <i>Consumers from the factory can release a factory produced vector back to the factory so that it may be reused (and thus conserve memory) by another caller. </i><br />
- <code>pANTLR3_VECTOR</code>(* <code>newVector</code> )(struct <code>ANTLR3_VECTOR_FACTORY_struct</code> *factory)<br />
- <i>Function to supply a new vector. </i><br />
- <code>ANTLR3_UINT32</code> <code>nextVector</code><br />
- <i>The next vector available in the pool. </i><br />
- <code>pANTLR3_VECTOR</code> * <code>pools</code><br />
- <i>List of all vector pools allocated so far. </i><br />
- void(* <code>returnVector</code> )(struct <code>ANTLR3_VECTOR_FACTORY_struct</code> *factory, <code>pANTLR3_VECTOR</code> vector)<br />
- <i>Function to return a vector to the factory for reuse. </i><br />
- <code>ANTLR3_INT32</code> <code>thisPool</code><br />
- <i>Count of the vector pools allocated so far (current active pool). </i><br />
- <code>ANTLR3_VECTOR</code> <code>unTruc</code><br />
+<p>void(* <code>close</code> )(struct <code>ANTLR3_VECTOR_FACTORY_struct</code> *factory)<br/>
+ <i>Function to close the vector factory. </i><br/>
+ <code>pANTLR3_STACK</code> <code>freeStack</code><br/>
+ <i>Consumers from the factory can release a factory produced vector back to the factory so that it may be reused (and thus conserve memory) by another caller. </i><br/>
+ <code>pANTLR3_VECTOR</code>(* <code>newVector</code> )(struct <code>ANTLR3_VECTOR_FACTORY_struct</code> *factory)<br/>
+ <i>Function to supply a new vector. </i><br/>
+ <code>ANTLR3_UINT32</code> <code>nextVector</code><br/>
+ <i>The next vector available in the pool. </i><br/>
+ <code>pANTLR3_VECTOR</code> * <code>pools</code><br/>
+ <i>List of all vector pools allocated so far. </i><br/>
+ void(* <code>returnVector</code> )(struct <code>ANTLR3_VECTOR_FACTORY_struct</code> *factory, <code>pANTLR3_VECTOR</code> vector)<br/>
+ <i>Function to return a vector to the factory for reuse. </i><br/>
+ <code>ANTLR3_INT32</code> <code>thisPool</code><br/>
+ <i>Count of the vector pools allocated so far (current active pool). </i><br/>
+ <code>ANTLR3_VECTOR</code> <code>unTruc</code><br/>
  <i>Trick to quickly initialize a new vector via memcpy and not a function call. </i></p>
 <h2>Detailed Description</h2>
 <p>Structure that tracks vectors in a vector and auto deletes the vectors in the vector factory when closed.</p>

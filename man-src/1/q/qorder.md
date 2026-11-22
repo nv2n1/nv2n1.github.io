@@ -15,8 +15,8 @@ description: "qorder – exchange order of two pbs batch jobs in a queue."
 <p> To order two jobs is to exchange the jobs positions in the queue or queues in which the jobs resides. The two jobs must be located at the same server. No attribute of the job, such as priority is changed. The impact of interchanging the order with the queue(s) is dependent on local job scheduled policy, contact your systems administrator. </p>
 <p> A job in the <code>running</code> state cannot be reordered.</p>
 <h2>OPERANDS</h2>
-<p> Both operands are <i> which specify the jobs to be exchanged. The qorder command accepts two operands of the form:<br />
- </i><code><br />
+<p> Both operands are <i> which specify the jobs to be exchanged. The qorder command accepts two operands of the form:<br/>
+ </i><code><br/>
  The server specification for the two jobs must agree as to the current location of the two job IDs. </code></p>
 <h2>STANDARD ERROR</h2>
 <p> The qorder command will write diagnostic messages to standard error for each error occurrence.</p>

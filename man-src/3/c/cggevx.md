@@ -11,7 +11,7 @@ description: "cggevx.f –"
 <p> cggevx.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cggevx</code> (BALANC, JOBVL, JOBVR, SENSE, N, A, LDA, B, LDB, ALPHA, BETA, VL, LDVL, VR, LDVR, ILO, IHI, LSCALE, RSCALE, ABNRM, BBNRM, RCONDE, RCONDV, WORK, LWORK, RWORK, IWORK, BWORK, INFO)<br />
+<p> subroutine <code>cggevx</code> (BALANC, JOBVL, JOBVR, SENSE, N, A, LDA, B, LDB, ALPHA, BETA, VL, LDVL, VR, LDVR, ILO, IHI, LSCALE, RSCALE, ABNRM, BBNRM, RCONDE, RCONDV, WORK, LWORK, RWORK, IWORK, BWORK, INFO)<br/>
  <i></i><code> CGGEVX computes the eigenvalues and, optionally, the left and/or right eigenvectors for GE matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cggevx (characterBALANC, characterJOBVL, characterJOBVR, characterSENSE, integerN, complex, dimension( lda, * )A, integerLDA, complex, dimension( ldb, * )B, integerLDB, complex, dimension( * )ALPHA, complex, dimension( * )BETA, complex, dimension( ldvl, * )VL, integerLDVL, complex, dimension( ldvr, * )VR, integerLDVR, integerILO, integerIHI, real, dimension( * )LSCALE, real, dimension( * )RSCALE, realABNRM, realBBNRM, real, dimension( * )RCONDE, real, dimension( * )RCONDV, complex, dimension( * )WORK, integerLWORK, real, dimension( * )RWORK, integer, dimension( * )IWORK, logical, dimension( * )BWORK, integerINFO)</h3>
@@ -47,13 +47,13 @@ description: "cggevx.f –"
 <dl>
 <dt>
 </dt><dd> <i>BALANC</i> </dd>
-<p>BALANC is CHARACTER * 1 Specifies the balance option to be performed : = &#8216;N&#8217; : do not diagonally scale or permute;<br />
-= &#8216;P&#8217; : permute only;<br />
-= &#8216;S&#8217; : scale only;<br />
-          = &#8216;B&#8217;:  both permute and scale.<br />
-          Computed reciprocal condition numbers will be for the<br />
-          matrices after permuting and/or balancing. Permuting does<br />
-          not change condition numbers (in exact arithmetic), but<br />
+<p>BALANC is CHARACTER * 1 Specifies the balance option to be performed : = &#8216;N&#8217; : do not diagonally scale or permute;<br/>
+= &#8216;P&#8217; : permute only;<br/>
+= &#8216;S&#8217; : scale only;<br/>
+          = &#8216;B&#8217;:  both permute and scale.<br/>
+          Computed reciprocal condition numbers will be for the<br/>
+          matrices after permuting and/or balancing. Permuting does<br/>
+          not change condition numbers (in exact arithmetic), but<br/>
           balancing does.</p>
 <p> <i>JOBVL</i> </p>
 <pre>
@@ -68,9 +68,9 @@ description: "cggevx.f –"
           = 'V':  compute the right generalized eigenvectors.
 </pre>
 <p> <i>SENSE</i> </p>
-<p>SENSE is CHARACTER * 1 Determines which reciprocal condition numbers are computed.= &#8216;N&#8217; : none are computed;<br />
-          = &#8216;E&#8217;: computed for eigenvalues only;<br />
-          = &#8216;V&#8217;: computed for eigenvectors only;<br />
+<p>SENSE is CHARACTER * 1 Determines which reciprocal condition numbers are computed.= &#8216;N&#8217; : none are computed;<br/>
+          = &#8216;E&#8217;: computed for eigenvalues only;<br/>
+          = &#8216;V&#8217;: computed for eigenvectors only;<br/>
           = &#8216;B&#8217;: computed for eigenvalues and eigenvectors.</p>
 <p> <i>N</i> </p>
 <pre>

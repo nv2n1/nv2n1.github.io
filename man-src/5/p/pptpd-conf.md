@@ -41,8 +41,8 @@ description: "pptpd.conf – PPTP VPN daemon configuration"
 <dt><code>speed </code><i>speed</i></dt>
 <dd>specifies a speed (in bits per second) to pass to the PPP daemon as the interface speed for the tty/pty pair. This is ignored by some PPP daemons, such as Linux&#8217;s <code><a href="/docs/linux/man/8-pppd/">pppd</a></code>(8). The default is 115200 bytes per second, which some implementations interpret as meaning &quot;no limit&quot;. Equivalent to the command line <code>&#8211;speed</code> option.</dd></dl>
 <h2>Notes</h2>
-<p>An <i>ip-specification</i> above (for the <code>localip</code> and <code>remoteip</code> tags) may be a list of IP addresses (for example 192.168.0.2,192.168.0.3), a range (for example 192.168.0.1-254 or 192.168.0-255.2) or some combination (for example 192.168.0.2,192.168.0.5-8). For some valid pairs might be (depending on use of the VPN): <code>localip </code><i>192.168.0.1</i><br />
- <code>remoteip </code><i>192.168.0.2-254</i> or <code>localip </code><i>192.168.1.2-254</i><br />
+<p>An <i>ip-specification</i> above (for the <code>localip</code> and <code>remoteip</code> tags) may be a list of IP addresses (for example 192.168.0.2,192.168.0.3), a range (for example 192.168.0.1-254 or 192.168.0-255.2) or some combination (for example 192.168.0.2,192.168.0.5-8). For some valid pairs might be (depending on use of the VPN): <code>localip </code><i>192.168.0.1</i><br/>
+ <code>remoteip </code><i>192.168.0.2-254</i> or <code>localip </code><i>192.168.1.2-254</i><br/>
  <code>remoteip </code><i>192.168.0.2-254</i> </p>
 <h2>Routing Checklist &#8211; Proxyarp</h2>
 <p>Allocate a section of your LAN addresses for use by clients. </p>

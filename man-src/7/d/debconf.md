@@ -17,7 +17,7 @@ description: "debconf – Debian package configuration system"
 <p> Sometimes you might want to preconfigure a package by hand, when you&#8217;re not installing it with apt. You can use <code><a href="/docs/linux/man/8-dpkg-preconfigure/">dpkg-preconfigure</a></code>(8) to do that, just pass it the filenames of the packages you want to preconfigure. You will need apt-utils installed for that to work.</p>
 <h2>Reconfiguring packages</h2>
 <p>Suppose you installed the package, and answered debconf&#8217;s questions, but now that you&#8217;ve used it awhile, you realize you want to go back and change some of your answers. In the past, reinstalling a package was often the thing to do when you got in this situation, but when you reinstall the package, debconf seems to remember you have answered the questions, and doesn&#8217;t ask them again (this is a feature). </p>
-<p> Luckily, debconf makes it easy to reconfigure any package that uses it. Suppose you want to reconfigure debconf itself. Just run, as root:<br />
+<p> Luckily, debconf makes it easy to reconfigure any package that uses it. Suppose you want to reconfigure debconf itself. Just run, as root:<br/>
 &nbsp;<wbr>&nbsp;<wbr>dpkg-reconfigure debconf </p>
 <p> This will ask all the questions you saw when debconf was first installed. It may ask you other questions as well, since it asks even low priority questions that may have been skipped when the package was installed. You can use it on any other package that uses debconf, as well.</p>
 <h2>Frontends</h2>
@@ -45,7 +45,7 @@ description: "debconf – Debian package configuration system"
 <dd>This frontend acts as a web server, that you connect to with your web browser, to browse the questions and answer them. It has a lot of promise, but is a little rough so far. When this frontend starts up, it will print out the location you should point your web browser to. You have to run the web browser on the same machine you are configuring, for security reasons. </dd>
 <p> Do keep in mind that this is not a very secure frontend. Anyone who has access to the computer being configured can currently access the web server and configure things while this frontend is running. So this is more of a proof of concept than anything.</dl>
 </dl>
-<p> You can change the default frontend debconf uses by reconfiguring debconf. On the other hand, if you just want to change the frontend for a minute, you can set the DEBIAN_FRONTEND environment variable to the name of the frontend to use. For example:<br />
+<p> You can change the default frontend debconf uses by reconfiguring debconf. On the other hand, if you just want to change the frontend for a minute, you can set the DEBIAN_FRONTEND environment variable to the name of the frontend to use. For example:<br/>
 &nbsp;<wbr>&nbsp;<wbr>DEBIAN_FRONTEND=readline apt-get install slrn </p>
 <p> The <code><a href="/docs/linux/man/8-dpkg-reconfigure/">dpkg-reconfigure</a></code>(8) and <code><a href="/docs/linux/man/8-dpkg-preconfigure/">dpkg-preconfigure</a></code>(8) commands also let you pass <i>&#8211;frontend=</i> to them, followed by the frontend you want them to use. </p>
 <p> Note that not all frontends will work in all circumstances. If a frontend fails to start up for some reason, debconf will print out a message explaining why, and fall back to the next-most similar frontend.</p>
@@ -62,7 +62,7 @@ description: "debconf – Debian package configuration system"
 <dd>Questions that you really, really need to see (or else).</dd></dl>
 <p> Only questions with a priority equal to or greater than the priority you choose will be shown to you. You can set the priority value by reconfiguring debconf, or temporarily by passing <i>&#8211;priority=</i> followed by the value to the <code><a href="/docs/linux/man/8-dpkg-reconfigure/">dpkg-reconfigure</a></code>(8) and <code><a href="/docs/linux/man/8-dpkg-preconfigure/">dpkg-preconfigure</a></code>(8) commands, or by setting the DEBIAN_PRIORITY environment variable.</p>
 <h2>Backend Database</h2>
-<p>Debconf uses a rather flexible and potentially complicated backend database for storing data such as the answers to questions. The file <code>/etc/debconf.conf</code> is used to configure this database. If you need to set up something complicated, like make debconf read a remote database to get defaults, with local overrides, read the <code><a href="/docs/linux/man/5-debconf-conf/">debconf.conf</a></code>(5) man page for all the gory details. Generally, the backend database is located in <code>/var/cache/debconf/</code><br />
+<p>Debconf uses a rather flexible and potentially complicated backend database for storing data such as the answers to questions. The file <code>/etc/debconf.conf</code> is used to configure this database. If you need to set up something complicated, like make debconf read a remote database to get defaults, with local overrides, read the <code><a href="/docs/linux/man/5-debconf-conf/">debconf.conf</a></code>(5) man page for all the gory details. Generally, the backend database is located in <code>/var/cache/debconf/</code><br/>
 &nbsp;<wbr>.</p>
 <h2>Unattended Package Installation</h2>
 <p>If you have many machines to manage you will sometimes find yourself in the position of needing to perform an unattended installation or upgrade of packages on many systems, when the default answers to some configuration questions are not acceptable. There are many ways to approach this; all involve setting up a database and making debconf use it to get the answers you want. </p>
@@ -71,21 +71,21 @@ description: "debconf – Debian package configuration system"
 <p> Once you have the database, you need to figure out how to make the remote systems use it. This depends of course on the configuration of those systems and what database types they are set up to use. </p>
 <p> If you are using the LDAP debconf database, an entire network of debian machines can also have any or all package installation questions answered automatically by a single LDAP server. </p>
 <p> But perhaps you&#8217;re using something a little bit easier to set up like, say, the default debconf database configuration, or you just don&#8217;t want your remote systems to use LDAP all the time. In this case the best approach is to temporarily configure the remote systems to stack your database underneath their own existing databases, so they pull default values out of it. Debconf offers two environment variables, DEBCONF_DB_FALLBACK and DEBCONF_DB_OVERRIDE, to make it easy to do this on the fly. Here is a sample use: </p>
-<p>cat&nbsp;<wbr>/var/cache/debconf/config.dat |&nbsp;<wbr>\<br />
-ssh root [at] target&nbsp;<wbr>&quot;DEBIAN_FRONTEND=noninteractive&nbsp;<wbr>\<br />
+<p>cat&nbsp;<wbr>/var/cache/debconf/config.dat |&nbsp;<wbr>\<br/>
+ssh root [at] target&nbsp;<wbr>&quot;DEBIAN_FRONTEND=noninteractive&nbsp;<wbr>\<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>DEBCONF_DB_FALLBACK=Pipe apt-get upgrade&quot; </p>
 <p> This makes the debconf on the remote host read in the data that is piped across the ssh connection and interpret it as a plain text format debconf database. It then uses that database as a fallback database &#8212; a read-only database that is queried for answers to questions if the system&#8217;s main debconf database lacks answers. </p>
 <p> Here&#8217;s another way to use the DEBCONF_DB_FALLBACK environment variable: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>ssh -R 389:ldap:389 root [at] target&nbsp;<wbr>\<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>ssh -R 389:ldap:389 root [at] target&nbsp;<wbr>\<br/>
 &nbsp;<wbr>&nbsp;<wbr><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>&quot;DEBCONF_DB_FALLBACK=&#8217;LDAP{host:localhost}&#8217;&nbsp;<wbr>apt-get upgrade&quot;</p>
 <p> Here ssh is used to set up a tunneled LDAP connection and run debconf. Debconf is told to use the LDAP server as the fallback database. Note the use of &quot;{host:localhost}&quot; to configure how debconf accesses the LDAP database by providing the &quot;host&quot; field with a value of &quot;localhost&quot;. </p>
 <p> Here&#8217;s another method: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>scp config.dat root [at] target:<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>scp config.dat root [at] target:<br/>
 &nbsp;<wbr>&nbsp;<wbr>ssh root [at] target&nbsp;<wbr>&quot;DEBCONF_DB_FALLBACK=&#8217;File{/root/config.dat}&#8217;&nbsp;<wbr>apt-get upgrade </p>
 <p> Here you copy the database over with scp, and then ssh over and make debconf use the file you copied over. This illustrates a shorthand you can use in the DEBCONF_DB_FALLBACK parameters &#8212; if a field name is left off, it defaults to &quot;filename&quot;. </p>
 <p> There is only one problem with these uses of the DEBCONF_DB_FALLBACK parameter: While the fallback database can provide answers to questions the other debconf databases have never seen, it is only queried as a fallback; after the other databases. If you need to instead temporarily override an existing value on the remote host, you should instead use the DEBCONF_DB_OVERRIDE variable. Like DEBCONF_DB_FALLBACK, it sets up a temporary database, but this database is consulted before any others, and can be used to override existing values.</p>
 <h2>Developing for Debconf</h2>
-<p>Package developers and others who want to develop packages that use debconf should read <code><a href="/docs/linux/man/7-debconf-devel/">debconf-devel</a></code>(7)<br />
+<p>Package developers and others who want to develop packages that use debconf should read <code><a href="/docs/linux/man/7-debconf-devel/">debconf-devel</a></code>(7)<br/>
 &nbsp;<wbr>. </p>
 <p> Briefly, debconf communicates with maintainer scripts or other programs via standard input and output, using a simple line-oriented command language similar to that used by common internet protocols such as SMTP. Programs use this protocol to ask debconf to display questions to the user, and retrieve the user&#8217;s answers. The questions themselves are defined in a separate file, called the &quot;templates file&quot;, which has a format not unlike a debian control file. </p>
 <p> Debian packages which use debconf typically provide both a templates file and a &quot;config&quot; script (run to preconfigure the package) in the control metadata section of the package.</p>
@@ -113,11 +113,11 @@ ssh root [at] target&nbsp;<wbr>&quot;DEBIAN_FRONTEND=noninteractive&nbsp;<wbr>\<
 <dd>Set to &quot;yes&quot; to enable terse mode, in which debconf frontends cut down on the verbiage as much as possible.</dd>
 <dt><code>DEBCONF_DB_FALLBACK</code></dt>
 <dd>Stack a database after the normally used databases, so that it is used as a fallback to get configuration information from. See &quot;Unattended Package Installation&quot; above. If the value of the variable is the name of an existing database in debconf.conf, then that database will be used. Otherwise, the environment variable can be used to configure a database on the fly, by telling the type of database, and optionally passing field:value settings, inside curly braces after the type. Spaces are used to separate fields, so you cannot specify a field value containing whitespace.</dd></dl>
-<p> Thus, this uses the fallbackdb in debconf.conf:<br />
+<p> Thus, this uses the fallbackdb in debconf.conf:<br/>
 &nbsp;<wbr>&nbsp;<wbr>DEBCONF_DB_FALLBACK=fallbackdb </p>
-<p> While this sets up a new database of type File, and tells it a filename to use and turns off backups:<br />
+<p> While this sets up a new database of type File, and tells it a filename to use and turns off backups:<br/>
 &nbsp;<wbr>&nbsp;<wbr>DEBCONF_DB_FALLBACK=File{Filename:/root/config.dat Backup:no} </p>
-<p> And as a shorthand, this sets up a database of type File with a filename:<br />
+<p> And as a shorthand, this sets up a database of type File with a filename:<br/>
 &nbsp;<wbr>&nbsp;<wbr>DEBCONF_DB_FALLBACK=File{/root/config.dat} </p>
 <p> Note that if a fallback database is set up on the fly, it will be read-only by default.</p>
 <dl>

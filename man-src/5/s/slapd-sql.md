@@ -23,8 +23,8 @@ description: "slapd-sql – SQL backend to slapd"
 <dl>
 <dt><code>dbname &lt;datasource name&gt;</code></dt>
 <dd>The name of the ODBC datasource to use.</dd></dl>
-<p> <code>dbhost &lt;hostname&gt;</code><br />
- <code>dbpasswd &lt;password&gt;</code><br />
+<p> <code>dbhost &lt;hostname&gt;</code><br/>
+ <code>dbpasswd &lt;password&gt;</code><br/>
  <code>dbuser &lt;username&gt;</code></p>
 <dl>
 <dd>The three above options are generally unneeded, because this information is taken from the datasource specified by the <code>dbname</code> directive. They allow to override datasource settings. Also, several RDBMS&#8217; drivers tend to require explicit passing of user/password, even if those are given in datasource (Note: <code>dbhost</code> is currently ignored).</dd></dl>
@@ -80,7 +80,7 @@ description: "slapd-sql – SQL backend to slapd"
 <dt><code>create_needs_select { NO | yes }</code></dt>
 <dd>Instructs the database whether or not entry creation in table <i>ldap_entries</i> needs a subsequent select to collect the automatically assigned ID, instead of being returned by a stored procedure. </dd>
 </dl>
-<p> <code>fetch_attrs &lt;attrlist&gt;</code><br />
+<p> <code>fetch_attrs &lt;attrlist&gt;</code><br/>
  <code>fetch_all_attrs { NO | yes }</code></p>
 <dl>
 <dd>The first statement allows to provide a list of attributes that must always be fetched in addition to those requested by any specific operation, because they are required for the proper usage of the backend. For instance, all attributes used in ACLs should be listed here. The second statement is a shortcut to require all attributes to be always loaded. Note that the dynamically generated attributes, e.g. <i>hasSubordinates</i>, <i>entryDN</i> and other implementation dependent attributes are <code>NOT</code> generated at this point, for consistency with the rest of slapd. This may change in the future.</dd></dl>

@@ -31,16 +31,16 @@ description: "XtAppAddInput, XtRemoveInput – register and remove an input sour
 <p>The <code>XtAppAddInput</code> function registers with the Intrinsics read routine a new source of events, which is usually file input but can also be file output. Note that file should be loosely interpreted to mean any sink or source of data. <code>XtAppAddInput</code> also specifies the conditions under which the source can generate events. When input is pending on this source, the callback procedure is called. </p>
 <p> The legal values for the condition argument are operating-system dependent. On a UNIX-based system, the condition is some union of <code>XtInputReadMask</code>, <code>XtInputWriteMask</code>, and <code>XtInputExceptMask</code>. The <code>XtRemoveInput</code> function causes the Intrinsics read routine to stop watching for input from the input source.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xtappaddtimeout/">XtAppAddTimeOut</a>(3),<a href="/docs/linux/man/3-xtappaddsignal/">XtAppAddSignal</a>(3)<br />
- <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><a href="/docs/linux/man/3-xtappaddtimeout/">XtAppAddTimeOut</a>(3),<a href="/docs/linux/man/3-xtappaddsignal/">XtAppAddSignal</a>(3)<br/>
+ <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i> </p>
 <h2>Bugs</h2>
 <p>In ANSI C it is necessary to cast the condition to an XtPointer, e.g.:</p>
 <dl COMPACT>
 <dd>XtAppAddInput(app_context,</dd>
 <dl COMPACT>
-<dd>source,<br />
- <code>(XtPointer)</code> (XtInputReadMask | XtInputWriteMask),<br />
- proc,<br />
+<dd>source,<br/>
+ <code>(XtPointer)</code> (XtInputReadMask | XtInputWriteMask),<br/>
+ proc,<br/>
  client_data);</dd></dl>
 </dl>

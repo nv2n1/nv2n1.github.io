@@ -9,7 +9,7 @@ description: "intltool-prepare – Prepare software to make use of intltool"
 
 <p>intltool-prepare &#8211; Prepare software to make use of intltool</p>
 <h2>Synopsis</h2>
-<p><code>intltool-prepare</code> [<i>option</i>] [<i></i><font SIZE="-1"><i>KEYWORD</i></font><i></i>]&#8230; </p>
+<p><code>intltool-prepare</code> [<i>option</i>] [<i></i><i>KEYWORD</i><i></i>]&#8230; </p>
 <h2>Description</h2>
 <p>For software packages that include some specific type of translatable files (such as .desktop and .soundlist), before they make use of <code>intltool</code>, translators have to dig through them one by one, and add their localization into each file. This process is error prone, since translators may include typing errors, or add their localization in wrong encoding. Besides, translators may not alwas know other files (beside .po files) are translatable. <i>intltool</i> avoids all the problems above by extracting strings inside those translatable files into po template (.pot) file. All translators need to care about is just translating po files. Afterwards, <code><a href="/docs/linux/man/8-intltool-merge/">intltool-merge</a></code>(8) will merge localized strings into those files. Before your software becomes intltool-aware, a few issues have to be sorted out, and <code>intltool-prepare</code> tries to take care of all of them. <code>intltool-prepare</code> will:</p>
 <dl>
@@ -43,8 +43,8 @@ description: "intltool-prepare – Prepare software to make use of intltool"
 <h2>Reporting Bugs</h2>
 <p>Report bugs to <a rel="nofollow" href="http://bugs.launchpad.net/intltool">http://bugs.launchpad.net/intltool</a></p>
 <h2>Author</h2>
-<p>Darin Adler &lt;darin [at] bentspoon.com&gt;<br />
- Kenneth Christiansen &lt;kenneth [at] gnu.org&gt;<br />
+<p>Darin Adler &lt;darin [at] bentspoon.com&gt;<br/>
+ Kenneth Christiansen &lt;kenneth [at] gnu.org&gt;<br/>
  Maciej Stachowiak &lt;mjs [at] eazel.com&gt;</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-intltoolize/">intltoolize</a></code>(8), <code><a href="/docs/linux/man/8-intltool-update/">intltool-update</a></code>(8), <code><a href="/docs/linux/man/8-intltool-extract/">intltool-extract</a></code>(8), <code><a href="/docs/linux/man/8-intltool-merge/">intltool-merge</a></code>(8) </p>

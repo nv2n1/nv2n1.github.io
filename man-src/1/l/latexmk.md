@@ -161,11 +161,11 @@ description: "latexmk – generate LaTeX document"
 <dd> Set the basename of output files(s) to STRING, instead of the default, which is the basename of the specified TeX file. (At present, STRING should not contain spaces.) </dd>
 <p> This is like the same option for current implementations of the <i>*latex</i>, and the passing of this option to these programs is part of <i>latexmk</i>&#8216;s implementation of <code>-jobname</code>. </p>
 <p> There is one enhancement, that the STRING may contain the placeholder &#8216;%A&#8217;. This will be substituted by the basename of the TeX file. The primary purpose is when multiple files are specified on the command line to <i>latexmk</i>, and you wish to use a jobname with a different file-dependent value for each file. For example, suppose you had .tex files test1.tex and test2.tex, and you wished to compare the results of compilation by <i>*latex</i> and those with <i>xelatex</i>. Then under a unix-type operating system you could use the command line </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;latexmk -pdf -jobname=%A-pdflatex&nbsp;*.tex<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;latexmk -pdf -jobname=%A-pdflatex&nbsp;*.tex<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;latexmk -pdfxe -jobname=%A-xelatex&nbsp;*.tex </p>
 <p> Then the .aux, .log, and .pdf files from the use of <i>pdflatex</i> would have basenames test1-pdflatex and test2-pdflatex, while from <i>xelatex</i>, the basenames would be test1-xelatex and test2-xelatex. </p>
 <p> Under MS-Windows with cmd.exe, you would need to double the percent sign, so that the percent character is passed to latexmk rather than being used to substitute an environment variable: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;latexmk -pdf -jobname=%%A-pdflatex&nbsp;*.tex<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;latexmk -pdf -jobname=%%A-pdflatex&nbsp;*.tex<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;latexmk -pdfxe -jobname=%%A-xelatex&nbsp;*.tex </p>
 <dt><code>-l</code></dt>
 <dd> Run in landscape mode, using the landscape mode for the previewers and the dvi to postscript converters. This option is not normally needed nowadays, since current previewers normally determine this information automatically. </dd>
@@ -427,21 +427,21 @@ description: "latexmk – generate LaTeX document"
 <h2>CONFIGURATION/INITIALIZATION (RC) FILES</h2>
 <p> In this section is explained which configuration files are read by <i>latexmk</i>. Subsequent sections &quot;How to Set Variables in Initialization Files&quot;, &quot;Format of Command Specifications&quot;, &quot;List of Configuration Variables Usable in Initialization Files&quot;, &quot;Custom Dependencies&quot;, and &quot;Advanced Configuration&quot; give details on what can be configured and how. </p>
 <p> <i>Latexmk</i> can be customized using initialization files, which are read at startup in the following order: </p>
-<p> 1) The system RC file, if it exists.<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;On a UNIX system,&nbsp;<i>latexmk</i>&nbsp;searches the following directories for a<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;system RC file, which may be named either&nbsp;&quot;LatexMk&quot;&nbsp;or&nbsp;&quot;latexmkrc&quot;.&nbsp;<wbr>&nbsp;The<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;directories are searched in the following order, and&nbsp;<i>latexmk</i>&nbsp;uses<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;the first such file it finds&nbsp;(if any):<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;&quot;/etc&quot;,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;&quot;/opt/local/share/latexmk&quot;,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;&quot;/usr/local/share/latexmk&quot;,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;&quot;/usr/local/lib/latexmk&quot;.<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;On a MS-Windows system it looks just in&nbsp;&quot;C:\latexmk&quot;.<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;On a cygwin system&nbsp;(i.e., a MS-Windows system in which Perl is that of cygwin), <i>latexmk</i> looks in the directories<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;&quot;/cygdrive/c/latexmk&quot;,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;&quot;/etc&quot;,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;&quot;/opt/local/share/latexmk&quot;,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;&quot;/usr/local/share/latexmk&quot;,<br />
+<p> 1) The system RC file, if it exists.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;On a UNIX system,&nbsp;<i>latexmk</i>&nbsp;searches the following directories for a<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;system RC file, which may be named either&nbsp;&quot;LatexMk&quot;&nbsp;or&nbsp;&quot;latexmkrc&quot;.&nbsp;<wbr>&nbsp;The<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;directories are searched in the following order, and&nbsp;<i>latexmk</i>&nbsp;uses<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;the first such file it finds&nbsp;(if any):<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;&quot;/etc&quot;,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;&quot;/opt/local/share/latexmk&quot;,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;&quot;/usr/local/share/latexmk&quot;,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;&quot;/usr/local/lib/latexmk&quot;.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;On a MS-Windows system it looks just in&nbsp;&quot;C:\latexmk&quot;.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;On a cygwin system&nbsp;(i.e., a MS-Windows system in which Perl is that of cygwin), <i>latexmk</i> looks in the directories<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;&quot;/cygdrive/c/latexmk&quot;,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;&quot;/etc&quot;,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;&quot;/opt/local/share/latexmk&quot;,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;&quot;/usr/local/share/latexmk&quot;,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;&quot;/usr/local/lib/latexmk&quot;. </p>
 <p> If the environment variable LATEXMKRCSYS is set, its value is used as the name of the system RC file, instead of any of the above. </p>
 <p> 2) The user&#8217;s RC file, if it exists. This can be in one of two places. The traditional one is &quot;.latexmkrc&quot; in the user&#8217;s home directory. The other possibility is &quot;latexmk/latexmkrc&quot; in the user&#8217;s XDG configuration home directory. The actual file read is the first of &quot;$XDG_CONFIG_HOME/latexmk/latexmkrc&quot; or &quot;$HOME/.latexmkrc&quot; which exists. (See <a rel="nofollow" href="https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html">https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html</a> for details on the XDG Base Directory Specification.) </p>
@@ -504,8 +504,8 @@ description: "latexmk – generate LaTeX document"
 <p> This will be translated to whatever is appropriate for your operating system. </p>
 <p> Notes: (1) In some circumstances, <i>latexmk</i> will always run a command detached. This is the case for a previewer in preview continuous mode, since otherwise previewing continuously makes no sense. (2) This precludes the possibility of running a command named start. (3) If the word start occurs more than once at the beginning of the command string, that is equivalent to having just one. (4) Under cygwin, some complications happen, since cygwin amounts to a complicated merging of UNIX and MS-Windows. See the source code for how I&#8217;ve handled the problem. </p>
 <p> <code>Command names containing spaces</code>: Under MS-Windows it is common that the name of a command includes spaces, since software is often installed in a subdirectory of &quot;C:\Program Files&quot;. Such command names should be enclosed in double quotes, as in </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$lpr_pdf&nbsp;=&nbsp;&#8216;&quot;c:/Program Files/Ghostgum/gsview/gsview32.exe&quot;&nbsp;/p&nbsp;%S&#8217;;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$pdf_previewer&nbsp;=&nbsp;&#8216;start&nbsp;&quot;c:/Program Files/SumatraPDF/SumatraPDF.exe&quot;&nbsp;%O&nbsp;%S&#8217;;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$lpr_pdf&nbsp;=&nbsp;&#8216;&quot;c:/Program Files/Ghostgum/gsview/gsview32.exe&quot;&nbsp;/p&nbsp;%S&#8217;;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$pdf_previewer&nbsp;=&nbsp;&#8216;start&nbsp;&quot;c:/Program Files/SumatraPDF/SumatraPDF.exe&quot;&nbsp;%O&nbsp;%S&#8217;;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$pdf_previewer&nbsp;=&nbsp;&#8216;start&nbsp;&quot;c:/Program Files/SumatraPDF&nbsp;(x86)/SumatraPDF.exe&quot;&nbsp;%O&nbsp;%S&#8217;; </p>
 <p> (Note about the above example: Under MS-Windows forward slashes are equivalent to backslashes in a filename under almost all circumstances, provided that the filename is inside double quotes. It is easier to use forward slashes in examples like the one above, since then one does not have to worry about the rules for dealing with forward slashes in strings in the Perl language.) </p>
 <p> <code>Command names under Cygwin</code>: If <i>latexmk</i> is executed by Cygwin&#8217;s Perl, <i> be particularly certain that pathnames in commands have </i><code>forward</code><i> slashes</i> not the usual backslashes for the separator of pathname components. See the above examples. Backslashes often get misinterpreted by the Unix shell used by Cygwin&#8217;s Perl to execute external commands. Forward slashes don&#8217;t suffer from this problem, and (when quoted, as above) are equally acceptable to MS-Windows. </p>
@@ -518,11 +518,11 @@ description: "latexmk – generate LaTeX document"
 <p> <code>Options to commands</code>: Setting the name of a command can be used not only for changing the name of the command called, but also to add options to command. Suppose you want <i>latexmk</i> to use latex with source specials enabled. Then you might use the following line in an initialization file: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$latex&nbsp;=&nbsp;&#8216;latex &#8211;src-specials&nbsp;%O&nbsp;%S&#8217;; </p>
 <p> <code>Running a subroutine instead of an external command</code>: Use a specification starting with &quot;internal&quot;, as in </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$latex&nbsp;=&nbsp;&#8216;internal mylatex&nbsp;%O&nbsp;%S&#8217;;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sub mylatex&nbsp;{<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;my&nbsp;@args&nbsp;=&nbsp;@_;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;#&nbsp;Possible preprocessing here<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;return system&nbsp;&#8216;latex&#8217;,&nbsp;@args;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$latex&nbsp;=&nbsp;&#8216;internal mylatex&nbsp;%O&nbsp;%S&#8217;;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sub mylatex&nbsp;{<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;my&nbsp;@args&nbsp;=&nbsp;@_;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;#&nbsp;Possible preprocessing here<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;return system&nbsp;&#8216;latex&#8217;,&nbsp;@args;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;} </p>
 <p> For some of the more exotic possibilities that then become available, see the section &quot;ADVANCED CONFIGURATION: Some extra resources and advanced tricks&quot;. Also see some of the examples in the directory <i>example_rcfiles</i> in the <i>latexmk</i> distribution. </p>
 <p> <code>Advanced tricks</code>: Normally one specifies a single command for the commands invoked by <i>latexmk</i>. Naturally, if there is some complicated additional processing you need to do in your special situation, you can write a script (or batch file) to do the processing, and then configure <i>latexmk</i> to use your script in place of the standard program. </p>
@@ -531,7 +531,7 @@ description: "latexmk – generate LaTeX document"
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$pdflatex&nbsp;=&nbsp;&#8216;pdflatex &#8211;shell-escape&nbsp;%O&nbsp;%S;&nbsp;pst2pdf_for_latexmk&nbsp;%B&#8217;; </p>
 <p> This definition assumes you are using a UNIX-like system (which includes Linux and OS-X), so that the two commands to be run are separated by the semicolon in the middle of the string. </p>
 <p> If you are using MS-Windows, you would replace the above line by </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$pdflatex&nbsp;=&nbsp;&#8216;cmd&nbsp;/c pdflatex &#8211;shell-escape&nbsp;%O&nbsp;%S&#8217;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$pdflatex&nbsp;=&nbsp;&#8216;cmd&nbsp;/c pdflatex &#8211;shell-escape&nbsp;%O&nbsp;%S&#8217;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.&nbsp;&#8216;&amp;&amp;&nbsp;pst2pdf_for_latexmk&nbsp;%B&#8217;; </p>
 <p> Here, the UNIX command separator ; is replaced by &amp;&amp;. In addition, there is a problem that some versions of <i>Perl</i> on MS-Windows do not obey the command separator; this problem is overcome by explicitly invoking the MS-Windows command-line processor <i>cmd.exe</i>. </p>
 <h2>LIST OF CONFIGURATION VARIABLES USABLE IN INITIALIZATION FILES</h2>
@@ -575,10 +575,10 @@ description: "latexmk – generate LaTeX document"
 <dd> A decimal number that specifies how large the banner message will be printed. Experimentation is necessary to get the right scale for your message, as a rule of thumb the scale should be about equal to 1100 divided by the number of characters in the message. The Default is just right for 5 character messages. This is equivalent to the <code>-bs</code> option.</dd>
 <dt><code>@BIBINPUTS</code></dt>
 <dd> This is an array variable, now mostly obsolete, that specifies directories where <i>latexmk</i> should look for .bib files. By default it is set from the BIBINPUTS environment variable of the operating system. If that environment variable is not set, a single element list consisting of the current directory is set. The format of the directory names depends on your operating system, of course. Examples for setting this variable are: </dd>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;@BIBINPUTS&nbsp;=&nbsp;(&nbsp;&quot;.&quot;,&nbsp;&quot;C:\bibfiles&quot;&nbsp;);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;@BIBINPUTS&nbsp;=&nbsp;(&nbsp;&quot;.&quot;,&nbsp;&quot;\serveribfiles&quot;&nbsp;);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;@BIBINPUTS&nbsp;=&nbsp;(&nbsp;&quot;.&quot;,&nbsp;&quot;C:/bibfiles&quot;&nbsp;);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;@BIBINPUTS&nbsp;=&nbsp;(&nbsp;&quot;.&quot;,&nbsp;&quot;//server/bibfiles&quot;&nbsp;);<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;@BIBINPUTS&nbsp;=&nbsp;(&nbsp;&quot;.&quot;,&nbsp;&quot;C:\bibfiles&quot;&nbsp;);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;@BIBINPUTS&nbsp;=&nbsp;(&nbsp;&quot;.&quot;,&nbsp;&quot;\serveribfiles&quot;&nbsp;);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;@BIBINPUTS&nbsp;=&nbsp;(&nbsp;&quot;.&quot;,&nbsp;&quot;C:/bibfiles&quot;&nbsp;);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;@BIBINPUTS&nbsp;=&nbsp;(&nbsp;&quot;.&quot;,&nbsp;&quot;//server/bibfiles&quot;&nbsp;);<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;@BIBINPUTS&nbsp;=&nbsp;(&nbsp;&quot;.&quot;,&nbsp;&quot;/usr/local/texmf/bibtex/bib&quot;&nbsp;); </p>
 <p> Note that under MS Windows, either a forward slash &quot;/&quot; or a backward slash &quot;\&quot; can be used to separate pathname components, so the first two and the second two examples are equivalent. Each backward slash should be doubled to avoid running afoul of <i>Perl</i>&#8216;s rules for writing strings. </p>
 <p> <i>Important note:</i> This variable is now mostly obsolete in the current version of <i>latexmk</i>, since it has a better method of searching for files using the kpsewhich command. However, if your system is an unusual one without the kpsewhich command, you may need to set the variable <i>@BIBINPUTS</i>.</p>
@@ -598,10 +598,10 @@ description: "latexmk – generate LaTeX document"
 <dd> Switch(es) for the BibTeX processing program when silent mode is on.</dd>
 <dt><code>$bibtex_use [1]</code></dt>
 <dd> Under what conditions to run <i>bibtex</i> or <i>biber</i>. When <i>latexmk</i> discovers from the log file that one (or more) <i>bibtex</i>/<i>biber</i>-generated bibliographies are used, it can run <i>bibtex</i> or <i>biber</i> whenever it appears necessary to regenerate the bbl file(s) from their source bib database file(s). But sometimes, the bib file(s) are not available (e.g., for a document obtained from an external archive), but the bbl files are provided. In that case use of <i>bibtex</i> or <i>biber</i> will result in incorrect overwriting of the precious bbl files. The variable <i>$bibtex_use</i> controls whether this happens, and also controls whether or not .bbl files are deleted in a cleanup operation. </dd>
-<p> The possible values of <i>$bibtex_use</i> are:<br />
-&nbsp;<wbr>&nbsp;0: never use BibTeX or biber;&nbsp; never delete .bbl files in a cleanup.<br />
-&nbsp;<wbr>&nbsp;1: only use&nbsp;<i>bibtex</i>&nbsp;or&nbsp;<i>biber</i>&nbsp;if the bib files exist; never delete .bbl files in a cleanup.<br />
-&nbsp;<wbr>&nbsp;1.5: only use&nbsp;<i>bibtex</i>&nbsp;or&nbsp;<i>biber</i>&nbsp;if the bib files exist; conditionally delete .bbl files in a cleanup (i.e., delete them only when the bib files all exist).<br />
+<p> The possible values of <i>$bibtex_use</i> are:<br/>
+&nbsp;<wbr>&nbsp;0: never use BibTeX or biber;&nbsp; never delete .bbl files in a cleanup.<br/>
+&nbsp;<wbr>&nbsp;1: only use&nbsp;<i>bibtex</i>&nbsp;or&nbsp;<i>biber</i>&nbsp;if the bib files exist; never delete .bbl files in a cleanup.<br/>
+&nbsp;<wbr>&nbsp;1.5: only use&nbsp;<i>bibtex</i>&nbsp;or&nbsp;<i>biber</i>&nbsp;if the bib files exist; conditionally delete .bbl files in a cleanup (i.e., delete them only when the bib files all exist).<br/>
 &nbsp;<wbr>&nbsp;2: run&nbsp;<i>bibtex</i>&nbsp;or&nbsp;<i>biber</i>&nbsp;whenever it appears necessary to update the bbl files, without testing for the existence of the bib files; always delete .bbl files in a cleanup. </p>
 <p> Note that the value 1.5 does <i>not</i> work properly if the document uses <i>biber</i> instead of <i>bibtex</i>. (There&#8217;s a long story why not.) </p>
 <dt><code>$cleanup_includes_cusdep_generated [0]</code></dt>
@@ -631,10 +631,10 @@ description: "latexmk – generate LaTeX document"
 <p> The commands are executed at the following points: <i>$compiling_cmd</i> at the start of compilation, <i>$success_cmd</i> at the end of a completely successful compilation, <i>$failure_cmd</i> at the end of an unsuccessful compilation, <i>$warning_cmd</i> at the of an otherwise successful compilation that gives warnings about undefined citations or references or about multiply defined references. If any of above variables is undefined or blank (the default situation), then the corresponding command is not executed. </p>
 <p> However, when <i>$warning_cmd</i> is not set, then in the case of a compilation with warnings about references or citations, but with no other error, one or other of <i>$success_cmd</i> or <i>$failure_cmd</i> is used (if it is set) according to the setting of <i>$warnings_as_errors</i>. </p>
 <p> An example of a simple setting of these variables is as follows </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$compiling_cmd&nbsp;=&nbsp;&quot;xdotool search &#8211;name&nbsp;\&quot;%D\&quot;&nbsp;set_window &#8211;name&nbsp;\&quot;%D compiling\&quot;&quot;;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$success_cmd&nbsp;<wbr>&nbsp;<wbr>&nbsp;=&nbsp;&quot;xdotool search &#8211;name&nbsp;\&quot;%D\&quot;&nbsp;set_window &#8211;name&nbsp;\&quot;%D OK\&quot;&quot;;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$warning_cmd&nbsp;<wbr>&nbsp;<wbr>&nbsp;=&nbsp;&quot;xdotool search &#8211;name&nbsp;\&quot;%D\&quot;&nbsp;&quot;.<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&quot;set_window &#8211;name&nbsp;\&quot;%D CITE/REF ISSUE\&quot;&quot;;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$compiling_cmd&nbsp;=&nbsp;&quot;xdotool search &#8211;name&nbsp;\&quot;%D\&quot;&nbsp;set_window &#8211;name&nbsp;\&quot;%D compiling\&quot;&quot;;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$success_cmd&nbsp;<wbr>&nbsp;<wbr>&nbsp;=&nbsp;&quot;xdotool search &#8211;name&nbsp;\&quot;%D\&quot;&nbsp;set_window &#8211;name&nbsp;\&quot;%D OK\&quot;&quot;;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$warning_cmd&nbsp;<wbr>&nbsp;<wbr>&nbsp;=&nbsp;&quot;xdotool search &#8211;name&nbsp;\&quot;%D\&quot;&nbsp;&quot;.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&quot;set_window &#8211;name&nbsp;\&quot;%D CITE/REF ISSUE\&quot;&quot;;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$failure_cmd&nbsp;<wbr>&nbsp;<wbr>&nbsp;=&nbsp;&quot;xdotool search &#8211;name&nbsp;\&quot;%D\&quot;&nbsp;set_window &#8211;name&nbsp;\&quot;%D FAILURE\&quot;&quot;; </p>
 <p> These assume that the program <i>xdotool</i> is installed, that the previewer is using an X-Window system for display, and that the title of the window contains the name of the displayed file, as it normally does. When the commands are executed, the placeholder string %D is replaced by the name of the destination file, which is the previewed file. The above commands result in an appropriate string being appended to the filename in the window title: &quot; compiling&quot;, &quot; OK&quot;, or &quot; FAILURE&quot;. </p>
 <p> Other placeholders that can be used are %S, %T, and %R, with %S and %T normally being identical. These can be useful for a command changing the title of the edit window. The visual indication in a window title can useful, since the user does not have to keep shifting attention to the (possibly hidden) compilation window to know the status of the compilation. </p>
@@ -694,11 +694,11 @@ description: "latexmk – generate LaTeX document"
 <dt><code>$dvi_update_command []</code></dt>
 <dd> When the dvi previewer is set to be updated by running a command, this is the command that is run. See the information for the variable <i>$dvi_update_method</i> for further information, and see information on the variable <i>$pdf_update_method</i> for an example for the analogous case of a pdf previewer.</dd>
 <dt><code>$dvi_update_method [2 under UNIX, 1 under MS-Windows]</code></dt>
-<dd> How the dvi viewer updates its display when the dvi file has changed. The values here apply equally to the <i>$pdf_update_method</i> and to the <i>$ps_update_method</i> variables.<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;=&gt;&nbsp;update is automatic,&nbsp;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;1=&gt;&nbsp;manual update by user, which may only mean a mouse click on the viewer&#8217;s window or may mean a more serious action.<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;2&nbsp;=&gt;&nbsp;Send the signal, whose number is in the variable <i>$dvi_update_signal</i>. The default value under UNIX is suitable for <i>xdvi</i>.<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;3&nbsp;=&gt;&nbsp;Viewer cannot do an update, because it locks the file.&nbsp;(As with <i>acroread</i> under MS-Windows.)<br />
+<dd> How the dvi viewer updates its display when the dvi file has changed. The values here apply equally to the <i>$pdf_update_method</i> and to the <i>$ps_update_method</i> variables.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;=&gt;&nbsp;update is automatic,&nbsp;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;1=&gt;&nbsp;manual update by user, which may only mean a mouse click on the viewer&#8217;s window or may mean a more serious action.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;2&nbsp;=&gt;&nbsp;Send the signal, whose number is in the variable <i>$dvi_update_signal</i>. The default value under UNIX is suitable for <i>xdvi</i>.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;3&nbsp;=&gt;&nbsp;Viewer cannot do an update, because it locks the file.&nbsp;(As with <i>acroread</i> under MS-Windows.)<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;4&nbsp;=&gt;&nbsp;run a command to do the update.&nbsp;<wbr>&nbsp;The command is specified by the variable <i>$dvi_update_command</i>. </dd>
 <p> See information on the variable <i>$pdf_update_method</i> for an example of updating by command.</p>
 <dt><code>$dvi_update_signal [Under UNIX: SIGUSR1, which is a system-dependent value]</code></dt>
@@ -845,8 +845,8 @@ description: "latexmk – generate LaTeX document"
 <dd> How the pdf viewer updates its display when the pdf file has changed. See the information on the variable <i>$dvi_update_method</i> for the codes. (Note that information needs be changed slightly so that for the value 4, to run a command to do the update, the command is specified by the variable <i>$pdf_update_command</i>, and for the value 2, to specify update by signal, the signal is specified by <i>$pdf_update_signal</i>.) </dd>
 <p> Note that acroread under MS-Windows (but not UNIX) locks the pdf file, so the default value is then 3. </p>
 <p> Arranging to use a command to get a previewer explicitly updated requires three variables to be set. For example: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$pdf_previewer&nbsp;=&nbsp;&quot;start xpdf -remote&nbsp;%R&nbsp;%O&nbsp;%S&quot;;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$pdf_update_method&nbsp;=&nbsp;4;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$pdf_previewer&nbsp;=&nbsp;&quot;start xpdf -remote&nbsp;%R&nbsp;%O&nbsp;%S&quot;;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$pdf_update_method&nbsp;=&nbsp;4;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$pdf_update_command&nbsp;=&nbsp;&quot;xpdf -remote&nbsp;%R -reload&quot;; </p>
 <p> The first setting arranges for the xpdf program to be used in its &quot;remote server mode&quot;, with the server name specified as the rootname of the TeX file. The second setting arranges for updating to be done in response to a command, and the third setting sets the update command.</p>
 <dt><code>$pdf_update_signal [Under UNIX: SIGHUP, which is a system-dependent value]</code></dt>
@@ -860,10 +860,10 @@ description: "latexmk – generate LaTeX document"
 <dt><code>$pre_tex_code [&#8221;]</code></dt>
 <dd>
 <p> Sets TeX code to be executed before inputting the source file. This works if the relevant one of <i>$latex</i>, etc contains a suitable command line with a %P or %U substitution. For example you could do </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$latex&nbsp;=&nbsp;&#8216;latex&nbsp;%O&nbsp;%P&#8217;;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$latex&nbsp;=&nbsp;&#8216;latex&nbsp;%O&nbsp;%P&#8217;;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$pre_tex_code&nbsp;=&nbsp;&#8216;\AtBeginDocument{An initial message\par}&#8217;; </p>
 <p> To set all of <i>$latex</i>, <i>$pdflatex</i>, <i>$lualatex</i>, and <i>$xelatex</i> you could use the subroutine <i>alt_tex_cmds</i>: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&amp;alt_tex_cmds;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&amp;alt_tex_cmds;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$pre_tex_code&nbsp;=&nbsp;&#8216;\AtBeginDocument{An initial message\par}&#8217;; </p>
 </dd><dt><code>$preview_continuous_mode [0]</code></dt>
 <dd> If nonzero, run a previewer to view the document, and continue running <i>latexmk</i> to keep .dvi up-to-date. Equivalent to the <code>-pvc</code> option. Which previewer is run depends on the other settings, see the command line options <code>-view=</code>, and the variable <i>$view</i>.</dd>
@@ -963,8 +963,8 @@ description: "latexmk – generate LaTeX document"
 <h3>Defining a custom dependency:</h3>
 <p> The old method of configuring <i>latexmk</i> to use a custom dependency was to directly manipulate the <i>@cus_dep_list</i> array that contains information defining the custom dependencies. (See the section &quot;Old Method of Defining Custom Dependencies&quot; for details.) This method still works, but is no longer preferred. </p>
 <p> A better method is to use the subroutines that allow convenient manipulations of the custom dependency list. These are </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;add_cus_dep(&nbsp;fromextension, toextension, must, subroutine&nbsp;)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;remove_cus_dep(&nbsp;fromextension, toextension&nbsp;)<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;add_cus_dep(&nbsp;fromextension, toextension, must, subroutine&nbsp;)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;remove_cus_dep(&nbsp;fromextension, toextension&nbsp;)<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;show_cus_dep() </p>
 <p> The arguments are as follows:</p>
 <dl>
@@ -988,17 +988,17 @@ description: "latexmk – generate LaTeX document"
 <h3>Function to implement custom dependency, traditional method:</h3>
 <p> The function that implements a custom dependency gets the information on the files to be processed in two ways. The first is through its one argument; the argument contains the base name of the source and destination files. The second way is described later. </p>
 <p> A simple and typical example of code in an initialization rcfile using the first method is: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;add_cus_dep(&nbsp;&#8216;fig&#8217;,&nbsp;&#8216;eps&#8217;, 0,&nbsp;&#8216;fig2eps&#8217;&nbsp;);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sub fig2eps&nbsp;{<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;system(&nbsp;&quot;fig2dev -Leps&nbsp;\&quot;$_[0].fig\&quot;&nbsp;\&quot;$_[0].eps\&quot;&quot;&nbsp;);&nbsp;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;add_cus_dep(&nbsp;&#8216;fig&#8217;,&nbsp;&#8216;eps&#8217;, 0,&nbsp;&#8216;fig2eps&#8217;&nbsp;);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sub fig2eps&nbsp;{<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;system(&nbsp;&quot;fig2dev -Leps&nbsp;\&quot;$_[0].fig\&quot;&nbsp;\&quot;$_[0].eps\&quot;&quot;&nbsp;);&nbsp;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;} </p>
 <p> The first line adds a custom dependency that converts a file with extension &quot;fig&quot;, as created by the <i>xfig</i> program, to an encapsulated postscript file, with extension &quot;eps&quot;. The remaining lines define a subroutine that carries out the conversion. If a rule for converting &quot;fig&quot; to &quot;eps&quot; files already exists (e.g., from a previously read-in initialization file), the <i>latexmk</i> will delete this rule before making the new one. </p>
 <p> Suppose <i>latexmk</i> is using this rule to convert a file &quot;figure.fig&quot; to &quot;figure.eps&quot;. Then it will invoke the fig2eps subroutine defined in the above code with a single argument &quot;figure&quot;, which is the basename of each of the files (possibly with a path component). This argument is referred to by <i>Perl</i> as $_[0]. In the example above, the subroutine uses the <i>Perl</i> command system to invoke the program fig2dev. The double quotes around the string are a <i>Perl</i> idiom that signify that each string of the form of a variable name, $_[0] in this case, is to be substituted by its value. </p>
 <p> If the return value of the subroutine is non-zero, then <i>latexmk</i> will assume an error occurred during the execution of the subroutine. In the above example, no explicit return value is given, and instead the return value is the value returned by the last (and only) statement, i.e., the invocation of system, which returns the value 0 on success. </p>
 <p> If you use <i>pdflatex</i>, <i>lualatex</i> or <i>xelatex</i> instead of <i>latex</i>, then you will probably prefer to convert your graphics files to pdf format, in which case you would replace the above code in an initialization file by </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;add_cus_dep(&nbsp;&#8216;fig&#8217;,&nbsp;&#8216;pdf, 0,&nbsp;&#8216;fig2pdf&#8217;&nbsp;);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sub fig2pdf&nbsp;{<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;system(&nbsp;&quot;fig2dev -Lpdf&nbsp;\&quot;$_[0].fig\&quot;&nbsp;\&quot;$_[0].pdf\&quot;&quot;&nbsp;);&nbsp;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;add_cus_dep(&nbsp;&#8216;fig&#8217;,&nbsp;&#8216;pdf, 0,&nbsp;&#8216;fig2pdf&#8217;&nbsp;);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sub fig2pdf&nbsp;{<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;system(&nbsp;&quot;fig2dev -Lpdf&nbsp;\&quot;$_[0].fig\&quot;&nbsp;\&quot;$_[0].pdf\&quot;&quot;&nbsp;);&nbsp;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;} </p>
 <p> <code>Note 1:</code> In the command lines given in the system commands in the above examples, double quotes have been inserted around the file names (implemented by &#8216;\&quot;&#8217; in the Perl language). They immunize the running of the program against special characters in filenames. Very often these quotes are not necessary, i.e., they can be omitted. But it is normally safer to keep them in. Even though the rules for quoting vary between operating systems, command shells and individual pieces of software, the quotes in the above examples do not cause problems in the cases I have tested. </p>
 <p> <code>Note 2:</code> One case in which the quotes are important is when the files are in a subdirectory and your operating system is Microsoft Windows. Then the separator character for directory components can be either a forward slash &#8216;/&#8217; or Microsoft&#8217;s more usual backward slash &#8216;\&#8217;. Forward slashes are generated by <i>latexmk</i>, to maintain its sanity from software like MiKTeX that mixes both directory separators; but their correct use normally requires quoted filenames. (See a log file from a run of MiKTeX (at least in v. 2.9) for an example of the use of both directory separators.) </p>
@@ -1015,25 +1015,25 @@ description: "latexmk – generate LaTeX document"
 <p> Examples of their use is given in the following examples, concerning multiple index files and glossaries. </p>
 <p> The only index-file conversion built-in to <i>latexmk</i> is from an &quot;.idx&quot; file written on one run of <i>*latex</i> to an &quot;.ind&quot; file to be read in on a subsequent run. But with the index.sty package, for example, you can create extra indexes with extensions that you configure. <i>Latexmk</i> does not know how to deduce the extensions from the information it has. But you can easily write a custom dependency. For example if your latex file uses the command &quot;
 ewindex{special}{ndx}{nnd}{Special index}&quot; you will need to get <i>latexmk</i> to convert files with the extension <i>.ndx</i> to <i>.nnd</i>. The most elementary method is to define a custom dependency as follows: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;add_cus_dep(&nbsp;&#8216;ndx&#8217;,&nbsp;&#8216;nnd&#8217;, 0,&nbsp;&#8216;ndx2nnd&#8217;&nbsp;);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sub ndx2nnd&nbsp;{<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;return system(&nbsp;&quot;makeindex -o&nbsp;\&quot;$_[0].nnd\&quot;&nbsp;\&quot;$_[0].ndx\&quot;&quot;&nbsp;);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;}<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;add_cus_dep(&nbsp;&#8216;ndx&#8217;,&nbsp;&#8216;nnd&#8217;, 0,&nbsp;&#8216;ndx2nnd&#8217;&nbsp;);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sub ndx2nnd&nbsp;{<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;return system(&nbsp;&quot;makeindex -o&nbsp;\&quot;$_[0].nnd\&quot;&nbsp;\&quot;$_[0].ndx\&quot;&quot;&nbsp;);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;}<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;push&nbsp;@generated_exts,&nbsp;&#8216;ndx&#8217;,&nbsp;&#8216;nnd&#8217;; </p>
 <p> Notice the added line compared with earlier examples. The extra line gets the extensions &quot;ndx&quot; and &quot;nnd&quot; added to the list of extensions for generated files; then the extra index files will be deleted by clean-up operations </p>
 <p> But if you have yet more indexes with yet different extensions, e.g., &quot;adx&quot; and &quot;and&quot;, then you will need a separate function for each pair of extensions. This is quite annoying. You can use the <i>Run_subst</i> function to simplify the definitions to use a single function: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;add_cus_dep(&nbsp;&#8216;ndx&#8217;,&nbsp;&#8216;nnd&#8217;, 0,&nbsp;&#8216;dx2nd&#8217;&nbsp;);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;add_cus_dep(&nbsp;&#8216;adx&#8217;,&nbsp;&#8216;and&#8217;, 0,&nbsp;&#8216;dx2nd&#8217;&nbsp;);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sub dx2nd&nbsp;{<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;return Run_subst(&nbsp;&quot;makeindex -o&nbsp;%D&nbsp;%S&quot;&nbsp;);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;}<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;add_cus_dep(&nbsp;&#8216;ndx&#8217;,&nbsp;&#8216;nnd&#8217;, 0,&nbsp;&#8216;dx2nd&#8217;&nbsp;);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;add_cus_dep(&nbsp;&#8216;adx&#8217;,&nbsp;&#8216;and&#8217;, 0,&nbsp;&#8216;dx2nd&#8217;&nbsp;);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sub dx2nd&nbsp;{<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;return Run_subst(&nbsp;&quot;makeindex -o&nbsp;%D&nbsp;%S&quot;&nbsp;);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;}<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;push&nbsp;@generated_exts,&nbsp;&#8216;ndx&#8217;,&nbsp;&#8216;nnd&#8217;,&nbsp;&#8216;adx&#8217;,&nbsp;&#8216;and&#8217;; </p>
 <p> You could also instead use </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;add_cus_dep(&nbsp;&#8216;ndx&#8217;,&nbsp;&#8216;nnd&#8217;, 0,&nbsp;&#8216;dx2nd&#8217;&nbsp;);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;add_cus_dep(&nbsp;&#8216;adx&#8217;,&nbsp;&#8216;and&#8217;, 0,&nbsp;&#8216;dx2nd&#8217;&nbsp;);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sub dx2nd&nbsp;{<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;return Run_subst(&nbsp;$makeindex&nbsp;);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;}<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;add_cus_dep(&nbsp;&#8216;ndx&#8217;,&nbsp;&#8216;nnd&#8217;, 0,&nbsp;&#8216;dx2nd&#8217;&nbsp;);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;add_cus_dep(&nbsp;&#8216;adx&#8217;,&nbsp;&#8216;and&#8217;, 0,&nbsp;&#8216;dx2nd&#8217;&nbsp;);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sub dx2nd&nbsp;{<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;return Run_subst(&nbsp;$makeindex&nbsp;);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;}<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;push&nbsp;@generated_exts,&nbsp;&#8216;ndx&#8217;,&nbsp;&#8216;nnd&#8217;,&nbsp;&#8216;adx&#8217;,&nbsp;&#8216;and&#8217;; </p>
 <p> This last example uses the command specification in <i>$makeindex</i>, and so any customization you have made for the standard index also applies to your extra indexes. </p>
 <p> Similar techniques can be applied for glossaries. </p>
@@ -1042,9 +1042,9 @@ ewindex{special}{ndx}{nnd}{Special index}&quot; you will need to get <i>latexmk<
 <h3>Old Method of Defining Custom Dependencies:</h3>
 <p> In much older versions of <i>latexmk</i>, the only method of defining custom dependencies was to directly manipulate the table of custom dependencies. This is contained in the <i>@cus_dep_list</i> array. It is an array of strings, and each string in the array has four items in it, each separated by a space, the from-extension, the to-extension, the &quot;must&quot; item, and the name of the subroutine for the custom dependency. These were all defined above. </p>
 <p> An example of the old method of defining custom dependencies is as follows. It is the code in an RC file to ensure automatic conversion of <i>.fig</i> files to <i>.eps</i> files: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;push&nbsp;@cus_dep_list,&nbsp;&quot;fig eps 0 fig2eps&quot;;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sub fig2eps&nbsp;{<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;return system(&nbsp;&quot;fig2dev -Lps&nbsp;\&quot;$_[0].fig\&quot;&nbsp;\&quot;$_[0].eps\&quot;&quot;&nbsp;);<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;push&nbsp;@cus_dep_list,&nbsp;&quot;fig eps 0 fig2eps&quot;;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sub fig2eps&nbsp;{<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;return system(&nbsp;&quot;fig2dev -Lps&nbsp;\&quot;$_[0].fig\&quot;&nbsp;\&quot;$_[0].eps\&quot;&quot;&nbsp;);<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;} </p>
 <p> This method still works, and is almost equivalent to the code given earlier that used the <i>add_cus_dep</i> subroutine. However, the old method doesn&#8217;t delete any previous custom-dependency for the same conversion. So the new method is preferable. </p>
 <h2>ADVANCED CONFIGURATION: Some extra resources and advanced tricks</h2>
@@ -1101,28 +1101,28 @@ ewindex{special}{ndx}{nnd}{Special index}&quot; you will need to get <i>latexmk<
 <p> Nevertheless there are projects for which a Makefile is appropriate, and it is useful to know how to use <i>latexmk</i> from a Makefile. A typical example would be to generate documentation for a software project. Potentially the interaction with the rest of the rules in the Makefile could be quite complicated, for example if some of the source files for a LaTeX document are generated by the project&#8217;s software. </p>
 <p> In this section, I give a couple of examples of how <i>latexmk</i> can be usefully invoked from a Makefile. The examples use specific features of current versions of GNU <i>make</i>, which is the default on both linux and OS-X systems. They may need modifications for other versions of <i>make</i>. </p>
 <p> The simplest method is simply to delegate all the relevant tasks to <i>latexmk</i>, as is suitable for a straightforward LaTeX document. For this a suitable Makefile is like </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.PHONY : FORCE_MAKE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;all : try.pdf<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;%.pdf :&nbsp;%.tex FORCE_MAKE<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.PHONY : FORCE_MAKE<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;all : try.pdf<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;%.pdf :&nbsp;%.tex FORCE_MAKE<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;latexmk -pdf -dvi- -ps-&nbsp;$&lt;&nbsp; </p>
 <p> (Note: the last line must be introduced by a tab for the Makefile to function correctly!) Naturally, if making try.pdf from its associated LaTeX file try.tex were the only task to be performed, a direct use of <i>latexmk</i> without a Makefile would normally be better. The benefit of using a Makefile for a LaTeX document would be in a larger project, where lines such as the above would be only be a small part of a larger Makefile. </p>
 <p> The above example has a pattern rule for making a .pdf file from a .tex file, and it is defined to use <i>latexmk</i> in the obvious way. There is a conventional default target named &quot;all&quot;, with a prerequisite of try.pdf. So when <i>make</i> is invoked, by default it makes try.pdf. The only complication is that there may be many source files beyond try.tex, but these aren&#8217;t specified in the Makefile, so changes in them will not by themselves cause <i>latexmk</i> to be invoked. Instead, the pattern rule is equipped with a &quot;phony&quot; prerequisite FORCE_MAKE; this has the effect of causing the rule to be always out-of-date, so that <i>latexmk</i> is always run. It is <i>latexmk</i> that decides whether any action is needed, e.g., a rerun of <i>pdflatex</i>. Effectively the Makefile delegates all decisions to <i>latexmk</i>, while <i>make</i> has no knowledge of the list of source files except for primary LaTeX file for the document. If there are, for example, graphics files to be made, these must be made by custom dependencies configured in <i>latexmk</i>. </p>
 <p> But something better is needed in more complicated situations, for example, when the making of graphics files needs to be specified by rules in the Makefile. To do this, one can use a Makefile like the following: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;TARGETS&nbsp;=&nbsp;document1.pdf document2.pdf<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;DEPS_DIR&nbsp;=&nbsp;.deps<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;LATEXMK&nbsp;=&nbsp;latexmk -recorder -use-make -deps&nbsp;\<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;TARGETS&nbsp;=&nbsp;document1.pdf document2.pdf<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;DEPS_DIR&nbsp;=&nbsp;.deps<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;LATEXMK&nbsp;=&nbsp;latexmk -recorder -use-make -deps&nbsp;\<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;-e&nbsp;&#8216;warn qq(In Makefile, turn off custom dependencies
-);&#8217;&nbsp;\<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;-e&nbsp;&#8216;@cus_dep_list&nbsp;=&nbsp;();&#8217;&nbsp;\<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;-e&nbsp;&#8216;show_cus_dep();&#8217;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;all :&nbsp;$(TARGETS)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$(foreach file,$(TARGETS),$(eval -include&nbsp;$(DEPS_DIR)/$(file)P))<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$(DEPS_DIR)&nbsp;:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;mkdir&nbsp;$@<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;%.pdf :&nbsp;%.tex<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;[&nbsp;!&nbsp;-e&nbsp;$(DEPS_DIR)&nbsp;];&nbsp;then mkdir&nbsp;$(DEPS_DIR);&nbsp;fi<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$(LATEXMK)&nbsp;-pdf -dvi- -ps- -deps-out=$(DEPS_DIR)/$@P&nbsp;$&lt;&nbsp;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;%.pdf :&nbsp;%.fig<br />
+);&#8217;&nbsp;\<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;-e&nbsp;&#8216;@cus_dep_list&nbsp;=&nbsp;();&#8217;&nbsp;\<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;-e&nbsp;&#8216;show_cus_dep();&#8217;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;all :&nbsp;$(TARGETS)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$(foreach file,$(TARGETS),$(eval -include&nbsp;$(DEPS_DIR)/$(file)P))<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$(DEPS_DIR)&nbsp;:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;mkdir&nbsp;$@<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;%.pdf :&nbsp;%.tex<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;[&nbsp;!&nbsp;-e&nbsp;$(DEPS_DIR)&nbsp;];&nbsp;then mkdir&nbsp;$(DEPS_DIR);&nbsp;fi<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$(LATEXMK)&nbsp;-pdf -dvi- -ps- -deps-out=$(DEPS_DIR)/$@P&nbsp;$&lt;&nbsp;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;%.pdf :&nbsp;%.fig<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;fig2dev -Lpdf&nbsp;$&lt;&nbsp;$@ </p>
 <p> (Again, the lines containing the commands for the rules should be started with tabs.) This example was inspired by how GNU <i>automake</i> handles automatic dependency tracking of C source files. </p>
 <p> After each run of <i>latexmk</i>, dependency information is put in a file in the .deps subdirectory. The Makefile causes these dependency files to be read by <i>make</i>, which now has the full dependency information for each target .pdf file. To make things less trivial it is specificed that two files document1.pdf and document2.pdf are the targets. The dependency files are .deps/document1.pdfP and .deps/document2.pdfP. </p>
@@ -1138,6 +1138,6 @@ ewindex{special}{ndx}{nnd}{Special index}&quot; you will need to get <i>latexmk<
 <p> Authors of previous versions. Many users with their feedback, and especially David Coppit (username david at node coppit.org) who made many useful suggestions that contributed to version 3, and Herbert Schulz. (Please note that the e-mail addresses are not written in their standard form to avoid being harvested too easily.)</p>
 <h2>AUTHOR</h2>
 <p> Current version, by John Collins (Version 4.76). Report bugs etc to his e-mail (jcc8 at psu.edu). </p>
-<p> Released version can be obtained from CTAN: &lt;<a rel="nofollow" href="http://www.ctan.org/pkg/latexmk/">http://www.ctan.org/pkg/latexmk/</a>&gt;, and from the author&#8217;s website &lt;<a rel="nofollow" href="http://www.personal.psu.edu/jcc8/latexmk/">http://www.personal.psu.edu/jcc8/latexmk/</a>&gt;.<br />
- Modifications and enhancements by Evan McLean (Version 2.0)<br />
+<p> Released version can be obtained from CTAN: &lt;<a rel="nofollow" href="http://www.ctan.org/pkg/latexmk/">http://www.ctan.org/pkg/latexmk/</a>&gt;, and from the author&#8217;s website &lt;<a rel="nofollow" href="http://www.personal.psu.edu/jcc8/latexmk/">http://www.personal.psu.edu/jcc8/latexmk/</a>&gt;.<br/>
+ Modifications and enhancements by Evan McLean (Version 2.0)<br/>
  Original script called &quot;go&quot; by David J. Musliner (RCS Version 3.2) </p>

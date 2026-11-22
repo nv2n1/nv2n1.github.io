@@ -38,22 +38,22 @@ char *error_diagnosis,
 size_t error_diag_len
 </code></pre>
 <p> <code>); </p>
-<p> </code><br />
-int drmaa_get_attribute(<br />
-drmaa_job_template_t *jt,<br />
-const char *name,<br />
-char *value,<br />
-size_t value_len,<br />
-char *error_diagnosis,<br />
-size_t error_diag_len<br />
+<p> </code><br/>
+int drmaa_get_attribute(<br/>
+drmaa_job_template_t *jt,<br/>
+const char *name,<br/>
+char *value,<br/>
+size_t value_len,<br/>
+char *error_diagnosis,<br/>
+size_t error_diag_len<br/>
  <code>); </p>
-<p> </code><br />
-int drmaa_set_vector_attribute(<br />
-drmaa_job_template_t *jt,<br />
-const char *name,<br />
-const char *value[],<br />
-char *error_diagnosis,<br />
-size_t error_diag_len<br />
+<p> </code><br/>
+int drmaa_set_vector_attribute(<br/>
+drmaa_job_template_t *jt,<br/>
+const char *name,<br/>
+const char *value[],<br/>
+char *error_diagnosis,<br/>
+size_t error_diag_len<br/>
  <code>); </p>
 <p> </code></p>
 <pre><code>

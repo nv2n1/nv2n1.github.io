@@ -23,7 +23,7 @@ git subtree[&lt;options&gt;] - P&lt;prefix&gt; add&lt;local - commit&gt; git sub
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Tip</code> </font> </dd>
+  <code>Tip</code>  </dd>
 <p> In order to keep your commit messages clean, we recommend that people split their commits between the subtrees and the main project as much as possible. That is, if you make a change that affects both the library and the main application, commit it in two pieces. That way, when you split the library commits out later, their descriptions will still make sense. But if this isn&#8217;t important to you, it&#8217;s not <code>necessary</code>. <i>git subtree</i> will simply leave out the non-library-related parts of the commit when it splits it out into the subproject later. </p>
 </dl>
 <h2>COMMANDS</h2>
@@ -221,7 +221,7 @@ $ git push &lt;new-repo&gt; split:master
 </pre>
 </dd></dl>
 <h2>AUTHOR</h2>
-<p> Written by Avery Pennarun &lt;m[blue]<code>apenwarr [at] gmail.com</code>m[]<font SIZE="-2">[1]</font>&gt;</p>
+<p> Written by Avery Pennarun &lt;m[blue]<code>apenwarr [at] gmail.com</code>m[][1]&gt;</p>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite</p>
 <h2>NOTES</h2>

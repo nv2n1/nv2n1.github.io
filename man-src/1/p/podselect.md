@@ -18,7 +18,7 @@ description: "podselect – print selected sections of pod documentation on stan
 <dt><code>-man</code></dt>
 <dd> Print the manual page and exit.</dd>
 <dt><code>-section</code> <i>section-spec</i></dt>
-<dd> Specify a section to include in the output. See &#8220;<font SIZE="-1">SECTION SPECIFICATIONS&#8221;</font> in Pod::Parser for the format to use for <i>section-spec</i>. This option may be given multiple times on the command line.</dd>
+<dd> Specify a section to include in the output. See &#8220;SECTION SPECIFICATIONS&#8221; in Pod::Parser for the format to use for <i>section-spec</i>. This option may be given multiple times on the command line.</dd>
 <dt><i>file</i></dt>
 <dd> The pathname of a file from which to select sections of pod documentation (defaults to standard input).</dd></dl>
 <h2>DESCRIPTION</h2>

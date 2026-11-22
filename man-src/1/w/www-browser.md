@@ -11,11 +11,11 @@ description: "lynx – a general purpose distributed information browser for the
 <p> lynx &#8211; a general purpose distributed information browser for the World Wide Web </p>
 <h2>SYNOPSIS</h2>
 <p> <code>lynx </code><i>[options] [optional paths or URLs]</i> </p>
-<p> <code>lynx </code><i>[options] [path or URL]</i> <code>-get_data</code><br />
- <i>data</i><br />
+<p> <code>lynx </code><i>[options] [path or URL]</i> <code>-get_data</code><br/>
+ <i>data</i><br/>
  <code>&#8212;</code> </p>
-<p> <code>lynx </code><i>[options] [path or URL]</i> <code>-post_data</code><br />
- <i>data</i><br />
+<p> <code>lynx </code><i>[options] [path or URL]</i> <code>-post_data</code><br/>
+ <i>data</i><br/>
  <code>&#8212;</code> </p>
 <p> Use &#8220;lynx -help&#8221; to display a complete list of current options.</p>
 <h2>DESCRIPTION</h2>
@@ -25,8 +25,8 @@ description: "lynx – a general purpose distributed information browser for the
 <p> At start up, <i>Lynx</i> will load any local file or remote URL specified at the command line. For help with URLs, press &#8220;<code>?</code>&#8221; or &#8220;<code>H</code>&#8221; while running <i>Lynx</i>. Then follow the link titled, &#8220;Help on URLs.&#8221; </p>
 <p> If more than one local file or remote URL is listed on the command line, <i>Lynx</i> will open only the last interactively. All of the names (local files and remote URLs) are added to the <code>G)oto</code> history. </p>
 <p> <i>Lynx</i> uses only long option names. Option names can begin with double dash &#8220;&#8211;&#8221; as well, underscores and dashes can be intermixed in option names (in the reference below, options are shown with one dash &#8220;-&#8221; before them, and with underscores &#8220;_&#8221;). </p>
-<p> <i>Lynx</i> provides many command-line options. Some options require a value (string, number or keyword). These are noted in the reference below. The other options set boolean values in the program. There are three types of boolean options: set, unset and toggle. If no option value is given, these have the obvious meaning: set (to true), unset (to false), or toggle (between true/false). For any of these, an explicit value can be given in different forms to allow for operating system constraints, e.g.,<br />
-&nbsp;.sp<br />
+<p> <i>Lynx</i> provides many command-line options. Some options require a value (string, number or keyword). These are noted in the reference below. The other options set boolean values in the program. There are three types of boolean options: set, unset and toggle. If no option value is given, these have the obvious meaning: set (to true), unset (to false), or toggle (between true/false). For any of these, an explicit value can be given in different forms to allow for operating system constraints, e.g.,<br/>
+&nbsp;.sp<br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre>
 <code>-center:off</code>
@@ -117,8 +117,8 @@ description: "lynx – a general purpose distributed information browser for the
 <dt><code>-dont_wrap_pre</code></dt>
 <dd> inhibit wrapping of text when <code>-dump</code>&#8216;ing and <code>-crawl</code>&#8216;ing, mark wrapped lines of &lt;pre&gt; in interactive session.</dd>
 <dt><code>-dump</code></dt>
-<dd> dumps the formatted output of the default document or those specified on the command line to standard output. Unlike interactive mode, all documents are processed. This can be used in the following way:<br />
-&nbsp;.sp<br />
+<dd> dumps the formatted output of the default document or those specified on the command line to standard output. Unlike interactive mode, all documents are processed. This can be used in the following way:<br/>
+&nbsp;.sp<br/>
 &nbsp;.in&nbsp;+4 </dd>
 <pre>
 lynx <code>-dump</code> <a rel="nofollow" href="http://www.subir.com/lynx.html">http://www.subir.com/lynx.html</a>
@@ -147,8 +147,8 @@ lynx <code>-dump</code> <a rel="nofollow" href="http://www.subir.com/lynx.html">
 <dt>
 </dt><dd> This is most useful when processing files specified on the command line which have an unrecognized suffix (or the suffix is associated with a non-HTML type, such as &#8220;.txt&#8221; for plain text files).</dd>
 <dt>
-</dt><dd> <i>Lynx</i> recognizes these file suffixes as HTML:<br />
-&nbsp;.sp<br />
+</dt><dd> <i>Lynx</i> recognizes these file suffixes as HTML:<br/>
+&nbsp;.sp<br/>
 &nbsp;.in&nbsp;+4 </dd>
 <pre>
 ``.ht3'',
@@ -402,16 +402,16 @@ lynx <code>-dump</code> <a rel="nofollow" href="http://www.subir.com/lynx.html">
 <dt><code>-soft_dquotes</code></dt>
 <dd> toggles emulation of the old Netscape and Mosaic bug which treated &#8220;&gt;&#8221; as a co-terminator for double-quotes and tags.</dd>
 <dt><code>-source</code></dt>
-<dd> works the same as dump but outputs HTML source instead of formatted text. For example<br />
-&nbsp;.sp<br />
+<dd> works the same as dump but outputs HTML source instead of formatted text. For example<br/>
+&nbsp;.sp<br/>
 &nbsp;.in&nbsp;+4 </dd>
 <pre>
 lynx -source .&nbsp;&gt;foo.html
 </pre>
 <p>&nbsp;.in -4</p>
 <dt>
-</dt><dd> generates HTML source listing the files in the current directory. Each file is marked by an href relative to the parent directory. Add a trailing slash to make the href&#8217;s relative to the current directory:<br />
-&nbsp;.sp<br />
+</dt><dd> generates HTML source listing the files in the current directory. Each file is marked by an href relative to the parent directory. Add a trailing slash to make the href&#8217;s relative to the current directory:<br/>
+&nbsp;.sp<br/>
 &nbsp;.in&nbsp;+4 </dd>
 <pre>
 lynx -source ./ &gt;foo.html
@@ -505,15 +505,15 @@ lynx -source ./ &gt;foo.html
 <dt><code>-xhtml_parsing</code></dt>
 <dd> tells <i>Lynx</i> that it can ignore certain tags which have no content in an XHTML 1.0 document. For example &#8220;&lt;p/&gt;&#8221; will be discarded.</dd></dl>
 <h2>COMMANDS</h2>
-<p> More than one key can be mapped to a given command. Here are some of the most useful:<br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 Use <code>Up arrow</code> and <code>Down arrow</code> to scroll through hypertext links.<br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>Right arrow</code> or <code>Return</code> will follow a highlighted hypertext link.<br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>Left Arrow</code> or &#8220;<code>u</code>&#8221; will retreat from a link.<br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 Type &#8220;<code>H</code>&#8221;, &#8220;<code>?</code>&#8221;, or <code>F1</code> for online help and descriptions of key-stroke commands.<br />
+<p> More than one key can be mapped to a given command. Here are some of the most useful:<br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 Use <code>Up arrow</code> and <code>Down arrow</code> to scroll through hypertext links.<br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>Right arrow</code> or <code>Return</code> will follow a highlighted hypertext link.<br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>Left Arrow</code> or &#8220;<code>u</code>&#8221; will retreat from a link.<br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 Type &#8220;<code>H</code>&#8221;, &#8220;<code>?</code>&#8221;, or <code>F1</code> for online help and descriptions of key-stroke commands.<br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 Type &#8220;<code>k</code>&#8221; or &#8220;<code>K</code>&#8221; for a list of the current key-stroke command mappings.</p>
 <dl>
 <dt>
-</dt><dd> If the same command is mapped to the same letter differing only by upper/lowercase only the lowercase mapping is shown.<br />
+</dt><dd> If the same command is mapped to the same letter differing only by upper/lowercase only the lowercase mapping is shown.<br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 Type <code>Delete</code> to view history list.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <p> In addition to various &#8220;standard&#8221; environment variables such as <code>HOME</code>, <code>PATH</code>, <code>USER</code>, <code>DISPLAY</code>, <code>TMPDIR</code>, <code>etc</code>, <i>Lynx</i> utilizes several <i>Lynx</i>-specific environment variables, if they exist. </p>
@@ -555,8 +555,8 @@ lynx -source ./ &gt;foo.html
 <dt>
 </dt><dd> Each protocol used by <i>Lynx</i>, (http, ftp, gopher, etc), can be mapped separately by setting environment variables of the form <i>PROTOCOL</i>_proxy. Protocols are indicated in a URI by the name before &#8220;:&#8221;, e.g., &#8220;http&#8221; in &#8220;<a rel="nofollow" href="http://some.server.dom:port/''">http://some.server.dom:port/&#8221;</a> for HTML.</dd>
 <dt>
-</dt><dd> Depending on your system configuration and supported protocols, the environment variables recognized by <i>lynx</i> may include<br />
-&nbsp;.sp<br />
+</dt><dd> Depending on your system configuration and supported protocols, the environment variables recognized by <i>lynx</i> may include<br/>
+&nbsp;.sp<br/>
 &nbsp;.in&nbsp;+4 </dd>
 <pre>
 cso_proxy
@@ -655,12 +655,12 @@ wais_proxy
 <h2>ACKNOWLEDGMENTS</h2>
 <p> <i>Lynx</i> has incorporated code from a variety of sources along the way. The earliest versions of <i>Lynx</i> included code from Earl Fogel of Computing Services at the University of Saskatchewan, who implemented HYPERREZ in the Unix environment. HYPERREZ was developed by Niel Larson of Think.com and served as the model for the early versions of <i>Lynx</i>. Those versions also incorporated libraries from the Unix Gopher clients developed at the University of Minnesota, and the later versions of <i>Lynx</i> rely on the WWW client library code developed by Tim Berners-Lee and the WWW community. Also a special thanks to Foteos Macrides who ported much of <i>Lynx</i> to VMS and did or organized most of its development since the departures of Lou Montulli and Garrett Blythe from the University of Kansas in the summer of 1994 through the release of v2.7.2, and to everyone on the net who has contributed to <i>Lynx</i>&#8216;s development either directly (through patches, comments or bug reports) or indirectly (through inspiration and development of other systems).</p>
 <h2>AUTHORS</h2>
-<p> Lou Montulli, Garrett Blythe, Craig Lavender, Michael Grobe, Charles Rezac<br />
- Academic Computing Services<br />
- University of Kansas<br />
+<p> Lou Montulli, Garrett Blythe, Craig Lavender, Michael Grobe, Charles Rezac<br/>
+ Academic Computing Services<br/>
+ University of Kansas<br/>
  Lawrence, Kansas 66047 </p>
-<p> Foteos Macrides<br />
- Worcester Foundation for Biomedical Research<br />
+<p> Foteos Macrides<br/>
+ Worcester Foundation for Biomedical Research<br/>
  Shrewsbury, Massachusetts 01545 </p>
-<p> Thomas E. Dickey<br />
+<p> Thomas E. Dickey<br/>
  &lt;dickey [at] invisible-island.net&gt; </p>

@@ -73,11 +73,11 @@ description: "aclocal – manual page for aclocal 1.16.5"
 <dl>
 <dd>and Alexandre Duret-Lutz &lt;adl [at] gnu.org&gt;.</dd></dl>
 <h2>Reporting Bugs</h2>
-<p>Report bugs to &lt;bug-automake [at] gnu.org&gt;.<br />
- GNU Automake home page: &lt;<a rel="nofollow" href="https://www.gnu.org/software/automake/">https://www.gnu.org/software/automake/</a>&gt;.<br />
+<p>Report bugs to &lt;bug-automake [at] gnu.org&gt;.<br/>
+ GNU Automake home page: &lt;<a rel="nofollow" href="https://www.gnu.org/software/automake/">https://www.gnu.org/software/automake/</a>&gt;.<br/>
  General help using GNU software: &lt;<a rel="nofollow" href="https://www.gnu.org/gethelp/">https://www.gnu.org/gethelp/</a>&gt;.</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2021 Free Software Foundation, Inc. License GPLv2+: GNU GPL version 2 or later &lt;<a rel="nofollow" href="https://gnu.org/licenses/gpl-2.0.html">https://gnu.org/licenses/gpl-2.0.html</a>&gt;<br />
+<p>Copyright &#169; 2021 Free Software Foundation, Inc. License GPLv2+: GNU GPL version 2 or later &lt;<a rel="nofollow" href="https://gnu.org/licenses/gpl-2.0.html">https://gnu.org/licenses/gpl-2.0.html</a>&gt;<br/>
  This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.</p>
 <h2>See Also</h2>
 <p>The full documentation for <code>aclocal</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>aclocal</code> programs are properly installed at your site, the command</p>

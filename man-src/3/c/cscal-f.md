@@ -10,7 +10,7 @@ description: "cscal.f –"
 <p>cscal.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>cscal</code> (N, CA, CX, INCX)<br />
+<p>subroutine <code>cscal</code> (N, CA, CX, INCX)<br/>
  <i></i><code>CSCAL</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cscal (integerN, complexCA, complex, dimension(*)CX, integerINCX)</h3>

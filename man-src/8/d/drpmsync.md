@@ -9,8 +9,8 @@ description: "drpmsync – sync a file tree with deltarpms"
 
 <p>drpmsync &#8211; sync a file tree with deltarpms </p>
 <h2>Synopsis</h2>
-<p><code>drpmsync</code> [<code>-c</code> <i>config</i>] [<i>source</i>] <i>dir</i><br />
- <code>drpmsync</code> [<code>-s</code>|<code>-S</code>] <i>serverconfig</i><br />
+<p><code>drpmsync</code> [<code>-c</code> <i>config</i>] [<i>source</i>] <i>dir</i><br/>
+ <code>drpmsync</code> [<code>-s</code>|<code>-S</code>] <i>serverconfig</i><br/>
  <code>cgi-bin/drpmsync</code> </p>
 <h2>Description</h2>
 <p>Drpmsync keeps a local file system tree in sync with a remote one. Its intended use is to work with rpm trees; the deltarpm technology can only save bandwidth if rpms get transmitted. Please use the rsync program for normal file trees. Drpmsync can run in two modes: as a client it connects to a server, receives a file list and brings the tree up to date, as a server it answers incoming requests and transmits files and rpms. </p>
@@ -36,7 +36,7 @@ description: "drpmsync – sync a file tree with deltarpms"
 <p>Drpmsync can wither work as CGI script or as a standalone server. CGI script mode is automatically selected if the <code>REQUEST_METHOD</code> environment variable is set. In this mode drpmsync expects the <code>DRPMSYNC_CONFIG</code> environment variable to contain the path to a server config file. For apache you can set this with the <code>SetEnv</code> directive. </p>
 <p> Standalone mode is selected with the <code>-s</code> or <code>-S</code> option. In this mode the server configuration must be specified as an argument to the drpmsync program. The <code>-s</code> option makes the drpmsync program background itself and exit right away, while <code>-S</code> keeps the server in the foreground. </p>
 <p> The server configuration can contain the following settings: </p>
-<p> <code>allow:</code> <i>pattern1</i> <i>pattern2</i>&#8230;<br />
+<p> <code>allow:</code> <i>pattern1</i> <i>pattern2</i>&#8230;<br/>
  <code>deny:</code> <i>pattern1</i> <i>pattern2</i>&#8230; </p>
 <p> This provides the access control for the server. <i>pattern</i> can either be a simple glob pattern (only <code>*</code> is supported) or it can be a full regular expression if it is written as <code>/RE/</code>. The regular expression is automatically anchored at the start and the end. Examples are <code>10.10.*</code> or <code>/10\.10\..*/</code> If either the numerical ip address or the domain name of the client matches any entry of the deny list, access is forbidden. Otherwise the allow list is searched for a match. If none is found, access is also denied. The default setting for both lists is empty, so you have to provide an allow list to allow access for the clients. </p>
 <p> <code>log:</code> <i>logfile</i> </p>
@@ -52,7 +52,7 @@ description: "drpmsync – sync a file tree with deltarpms"
 <p> The name of the server. If <i>hostname </i> is empty, the fully qualified domain name is used instead. The port defaults to port 80. </p>
 <p> <code>serveraddr:</code> <i>addr</i> </p>
 <p> This address is used for binding the server&#8217;s socket. If not specified, connections can come from any interface. </p>
-<p> <code>serveruser:</code> <i>user</i><br />
+<p> <code>serveruser:</code> <i>user</i><br/>
  <code>servergroup:</code> <i>group</i> </p>
 <p> Configures the user and group the servers swicthes to after binding the socket to the desired port. Examples are <code>nobody</code> or <code>wwwrun</code>. </p>
 <p> <code>maxclients:</code> <i>num</i> </p>

@@ -16,16 +16,16 @@ description: "gfs_controld – daemon that coordinates gfs mounts and recovery"
 <p>Command line options override a corresponding setting in cluster.conf. </p>
 <dl>
 <dt><code>-D</code></dt>
-<dd>Enable debugging to stderr and don&#8217;t fork.<br />
+<dd>Enable debugging to stderr and don&#8217;t fork.<br/>
  See also <code>gfs_control dump</code> in <code><a href="/docs/linux/man/8-gfs_control/">gfs_control</a></code>(8). </dd>
 <dt><code>-L</code></dt>
-<dd>Enable debugging to log file.<br />
+<dd>Enable debugging to log file.<br/>
  See also <code>logging</code> in <code>cluster.conf</code>(5). </dd>
 <dt><code>-g</code><i> num</i></dt>
-<dd>groupd compatibility mode, 0 off, 1 on.<br />
+<dd>groupd compatibility mode, 0 off, 1 on.<br/>
  Default 0. </dd>
 <dt><code>-w</code><i> num</i></dt>
-<dd>Enable (1) or disable (0) withdraw.<br />
+<dd>Enable (1) or disable (0) withdraw.<br/>
  Default 1. </dd>
 <dt><code>-h</code></dt>
 <dd>Print a help message describing available options, then exit. </dd>
@@ -36,22 +36,22 @@ description: "gfs_controld – daemon that coordinates gfs mounts and recovery"
 <p>When performing a rolling upgrade from cluster2 to cluster3, the gfs_controld daemon runs in cluster2 compatibility mode and processes posix lock (plock) requests from the dlm to remain compatible with cluster2 nodes. Otherwise, <code><a href="/docs/linux/man/8-dlm_controld/">dlm_controld</a></code>(8) handles plocks. </p>
 <dl>
 <dt><code>-p</code><i> num</i></dt>
-<dd>Enable (1) or disable (0) plock code for cluster fs.<br />
+<dd>Enable (1) or disable (0) plock code for cluster fs.<br/>
  Default 1. </dd>
 <dt><code>-l</code><i> num</i></dt>
-<dd>Limit the rate of plock operations, 0 for no limit.<br />
+<dd>Limit the rate of plock operations, 0 for no limit.<br/>
  Default 0. </dd>
 <dt><code>-o</code><i> num</i></dt>
-<dd>Enable (1) or disable (0) plock ownership.<br />
+<dd>Enable (1) or disable (0) plock ownership.<br/>
  Default 1. </dd>
 <dt><code>-t</code><i> ms</i></dt>
-<dd>Plock ownership drop resources time (milliseconds).<br />
+<dd>Plock ownership drop resources time (milliseconds).<br/>
  Default 10000. </dd>
 <dt><code>-c</code><i> num</i></dt>
-<dd>Plock ownership drop resources count.<br />
+<dd>Plock ownership drop resources count.<br/>
  Default 10. </dd>
 <dt><code>-a</code><i> ms</i></dt>
-<dd>Plock ownership drop resources age (milliseconds).<br />
+<dd>Plock ownership drop resources age (milliseconds).<br/>
  Default 10000. </dd>
 <dt><code>-P</code></dt>
 <dd>Enable plock debugging messages (can produce excessive output). </dd>

@@ -16,7 +16,7 @@ description: "opachassisanalysis"
 <dt>&bull;</dt>
 <dd>Chassis health (as reported by the chassis command specified in <code>FF_CHASSIS_HEALTH</code> in opafastfabric.conf).</dd></dl>
 <h2>Syntax</h2>
-<p>opachassisanalysis [-b|-e] [-s] [-d <i>dir</i>]<br />
+<p>opachassisanalysis [-b|-e] [-s] [-d <i>dir</i>]<br/>
  [-F <i>chassisfile</i>] [-H#8217#160;&#8217;<i>chassis</i>&#8216;]</p>
 <h2>Options</h2>
 <dl>
@@ -47,7 +47,7 @@ description: "opachassisanalysis"
 <dd>Top-level directory for baselines and failed health checks.</dd></dl>
 <h2>Details</h2>
 <p>Intel recommends that you set up SSH keys for chassis (see <i>opasetupssh</i> ). If SSH keys are not set up, all chassis must be configured with the same admin password and the password must be kept in the /etc/sysconfig/opa/opafastfabric.conf configuration file. </p>
-<p> The default set of <code>FF_CHASSIS_CMDS</code> is:showInventory fwVersion showNodeDesc timeZoneConf timeDSTConf<br />
+<p> The default set of <code>FF_CHASSIS_CMDS</code> is:showInventory fwVersion showNodeDesc timeZoneConf timeDSTConf<br/>
  snmpCommunityConf snmpTargetAddr showChassisIpAddr showDefaultRoute </p>
 <p> The commands specified in <code>FF_CHASSIS_CMDS</code> must be simple commands with no arguments. The output of these commands are compared to the baseline using <code>FF_DIFF_CMD</code>. Therefore, commands that include dynamically changing values, such as port packet counters, should not be included in this list. </p>
 <p> <code>FF_CHASSIS_HEALTH</code> can specify one command (with arguments) to be used to check the chassis health. For chassis with newer firmware, the hwCheck command is recommended. For chassis with older firmware, a benign command, such as fruInfo, should be used. The default is hwCheck. Note that only the exit status of the FF_CHASSIS_HEALTH command is checked. The output is not captured and compared in a snapshot. However, on failure its output is saved to aid diagnosis. </p>

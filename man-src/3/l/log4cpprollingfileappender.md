@@ -20,7 +20,7 @@ description: "log4cpp::RollingFileAppender –"
 <p> virtual size_t <code>getMaxFileSize</code> () const </p>
 <p> virtual void <code>rollOver</code> () </p>
 <h3>Protected Member Functions</h3>
-<p>virtual void <code>_append</code> (const <code>LoggingEvent</code> &amp;event)<br />
+<p>virtual void <code>_append</code> (const <code>LoggingEvent</code> &amp;event)<br/>
  <i>Log in </i><code>Appender</code> specific way.</p>
 <h3>Protected Attributes</h3>
 <p>unsigned int <code>_maxBackupIndex</code> </p>

@@ -83,41 +83,41 @@ filter = test[test.method=POST, baduseragents=&quot;badagent|&lt;known/baduserag
 <dt>loglevel</code></dt>
 <dd>verbosity level of log output: CRITICAL, ERROR, WARNING, NOTICE, INFO, DEBUG. Default: ERROR</dd>
 <dt><code>logtarget</code></dt>
-<dd>log target: filename, SYSLOG, STDERR or STDOUT. Default: STDERR<br />
+<dd>log target: filename, SYSLOG, STDERR or STDOUT. Default: STDERR<br/>
  Only a single log target can be specified. If you change logtarget from the default value and you are using logrotate &#8212; also adjust or disable rotation in the corresponding configuration file (e.g. /etc/logrotate.d/fail2ban on Debian systems).</dd>
 <dt><code>socket</code></dt>
-<dd>socket filename. Default: /var/run/fail2ban/fail2ban.sock<br />
+<dd>socket filename. Default: /var/run/fail2ban/fail2ban.sock<br/>
  This is used for communication with the fail2ban server daemon. Do not remove this file when Fail2ban is running. It will not be possible to communicate with the server afterwards.</dd>
 <dt><code>pidfile</code></dt>
-<dd>PID filename. Default: /var/run/fail2ban/fail2ban.pid<br />
+<dd>PID filename. Default: /var/run/fail2ban/fail2ban.pid<br/>
  This is used to store the process ID of the fail2ban server.</dd>
 <dt><code>dbfile</code></dt>
-<dd>Database filename. Default: /var/lib/fail2ban/fail2ban.sqlite3<br />
+<dd>Database filename. Default: /var/lib/fail2ban/fail2ban.sqlite3<br/>
  This defines where the persistent data for fail2ban is stored. This persistent data allows bans to be reinstated and continue reading log files from the last read position when fail2ban is restarted. A value of <i>None</i> disables this feature.</dd>
 <dt><code>dbpurgeage</code></dt>
-<dd>Database purge age in seconds. Default: 86400 (24hours)<br />
+<dd>Database purge age in seconds. Default: 86400 (24hours)<br/>
  This sets the age at which bans should be purged from the database. </dd>
 </dl>
 <h2>JAIL CONFIGURATION FILE(S) (</code><i>jail.conf</i><code>)</h2>
 <p>The following options are applicable to any jail. They appear in a section specifying the jail name or in the </code><i>[DEFAULT]</i> section which defines default values to be used if not specified in the individual section.</p>
 <dl>
 <dt><code>filter</code></dt>
-<dd>name of the filter &#8212; filename of the filter in /etc/fail2ban/filter.d/ without the .conf/.local extension.<br />
+<dd>name of the filter &#8212; filename of the filter in /etc/fail2ban/filter.d/ without the .conf/.local extension.<br/>
  Only one filter can be specified.</dd>
 <dt><code>logpath</code></dt>
-<dd>filename(s) of the log files to be monitored, separated by new lines.<br />
+<dd>filename(s) of the log files to be monitored, separated by new lines.<br/>
  Globs &#8212; paths containing * and ? or [0-9] &#8212; can be used however only the files that exist at start up matching this glob pattern will be considered. </dd>
 <p> Optional space separated option &#8216;tail&#8217; can be added to the end of the path to cause the log file to be read from the end, else default &#8216;head&#8217; option reads file from the beginning </p>
 <p> Ensure syslog or the program that generates the log file isn&#8217;t configured to compress repeated log messages to &quot;<i>*last message repeated 5 time*s</i>&quot; otherwise it will fail to detect. This is called <i>RepeatedMsgReduction</i> in rsyslog and should be <i>Off</i>.</p>
 <dt><code>logencoding</code></dt>
 <dd>encoding of log files used for decoding. Default value of &quot;auto&quot; uses current system locale.</dd>
 <dt><code>banaction</code></dt>
-<dd>banning action (default iptables-multiport) typically specified in the <i>[DEFAULT]</i> section for all jails.<br />
+<dd>banning action (default iptables-multiport) typically specified in the <i>[DEFAULT]</i> section for all jails.<br/>
  This parameter will be used by the standard substitution of <i>action</i> and can be redefined central in the <i>[DEFAULT]</i> section inside <i>jail.local</i> (to apply it to all jails at once) or separately in each jail, where this substitution will be used.</dd>
 <dt><code>banaction_allports</code></dt>
 <dd>the same as <i>banaction</i> but for some &quot;allports&quot; jails like &quot;pam-generic&quot; or &quot;recidive&quot; (default iptables-allports).</dd>
 <dt><code>action</code></dt>
-<dd>action(s) from <i>/etc/fail2ban/action.d/</i> without the <i>.conf</i>/<i>.local</i> extension.<br />
+<dd>action(s) from <i>/etc/fail2ban/action.d/</i> without the <i>.conf</i>/<i>.local</i> extension.<br/>
  Arguments can be passed to actions to override the default values from the [Init] section in the action file. Arguments are specified by:</dd>
 <dl>
 <dd>
@@ -128,7 +128,7 @@ filter = test[test.method=POST, baduseragents=&quot;badagent|&lt;known/baduserag
 <dt><code>ignoreip</code></dt>
 <dd>list of IPs not to ban. They can include a CIDR mask too.</dd>
 <dt><code>ignorecommand</code></dt>
-<dd>command that is executed to determine if the current candidate IP for banning should not be banned.<br />
+<dd>command that is executed to determine if the current candidate IP for banning should not be banned.<br/>
  IP will not be banned if command returns successfully (exit code 0). Like ACTION FILES, tags like &lt;ip&gt; are can be included in the ignorecommand value and will be substituted before execution. Currently only &lt;ip&gt; is supported however more will be added later.</dd>
 <dt><code>bantime</code></dt>
 <dd>effective ban duration (in seconds).</dd>
@@ -137,7 +137,7 @@ filter = test[test.method=POST, baduseragents=&quot;badagent|&lt;known/baduserag
 <dt><code>maxretry</code></dt>
 <dd>number of failures that have to occur in the last <code>findtime</code> seconds to ban then IP.</dd>
 <dt><code>backend</code></dt>
-<dd>backend to be used to detect changes in the logpath.<br />
+<dd>backend to be used to detect changes in the logpath.<br/>
  It defaults to &quot;auto&quot; which will try &quot;pyinotify&quot;, &quot;gamin&quot;, &quot;systemd&quot; before &quot;polling&quot;. Any of these can be specified. &quot;pyinotify&quot; is only valid on Linux systems with the &quot;pyinotify&quot; Python libraries. &quot;gamin&quot; requires the &quot;gamin&quot; libraries.</dd>
 <dt><code>usedns</code></dt>
 <dd>use DNS to resolve HOST names that appear in the logs. By default it is &quot;warn&quot; which will resolve hostnames to IPs however it will also log a warning. If you are using DNS here you could be blocking the wrong IPs due to the asymmetric nature of reverse DNS (that the application used to write the domain name to log) compared to forward DNS that fail2ban uses to resolve this back to an IP (but not necessarily the same one). Ideally you should configure your applications to log a real IP. This can be set to &quot;yes&quot; to prevent warnings in the log or &quot;no&quot; to disable DNS resolution altogether (thus ignoring entries where hostname, not an IP is logged)..</dd>
@@ -188,7 +188,7 @@ action = smtp.py[dest=chris [at] example.com, actname=smtp-chris]
 <p> Commands specified in the [Definition] section are executed through a system shell so shell redirection and process control is allowed. The commands should return 0, otherwise error would be logged. Moreover if <code>actioncheck</code> exits with non-0 status, it is taken as indication that firewall status has changed and fail2ban needs to reinitialize itself (i.e. issue <code>actionstop</code> and <code>actionstart</code> commands). Tags are enclosed in &lt;&gt;. All the elements of [Init] are tags that are replaced in all action commands. Tags can be added by the <code>fail2ban-client</code> using the &quot;set &lt;JAIL&gt; action &lt;ACT&gt;&quot; command. <code>&lt;br&gt;</code> is a tag that is always a new line (
 ). </p>
 <p> More than a single command is allowed to be specified. Each command needs to be on a separate line and indented with whitespace(s) without blank lines. The following example defines two commands to be executed. </p>
-<p>&nbsp;<wbr>actionban&nbsp;<wbr>=&nbsp;<wbr>iptables -I fail2ban-&lt;name&gt;&nbsp;<wbr>&#8211;source&nbsp;<wbr>&lt;ip&gt;&nbsp;<wbr>-j DROP<br />
+<p>&nbsp;<wbr>actionban&nbsp;<wbr>=&nbsp;<wbr>iptables -I fail2ban-&lt;name&gt;&nbsp;<wbr>&#8211;source&nbsp;<wbr>&lt;ip&gt;&nbsp;<wbr>-j DROP<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>echo ip=&lt;ip&gt;, match=&lt;match&gt;, time=&lt;time&gt;&nbsp;<wbr>&gt;&gt;&nbsp;<wbr>/var/log/fail2ban.log</p>
 <h3>Action Tags</h3>
 <p>The following tags are substituted in the actionban, actionunban and actioncheck (when called before actionban/actionunban) commands.</p>
@@ -228,8 +228,8 @@ action = smtp.py[dest=chris [at] example.com, actname=smtp-chris]
 <dt><code>maxlines</code></dt>
 <dd>specifies the maximum number of lines to buffer to match multi-line regexs. For some log formats this will not required to be changed. Other logs may require to increase this value if a particular log file is frequently written to.</dd>
 <dt><code>datepattern</code></dt>
-<dd>specifies a custom date pattern/regex as an alternative to the default date detectors e.g. %Y-%m-%d %H:%M(?::%S)?. For a list of valid format directives, see Python library documentation for strptime behaviour.<br />
- Also, special values of <i>Epoch</i> (UNIX Timestamp), <i>TAI64N</i> and <i>ISO8601</i> can be used.<br />
+<dd>specifies a custom date pattern/regex as an alternative to the default date detectors e.g. %Y-%m-%d %H:%M(?::%S)?. For a list of valid format directives, see Python library documentation for strptime behaviour.<br/>
+ Also, special values of <i>Epoch</i> (UNIX Timestamp), <i>TAI64N</i> and <i>ISO8601</i> can be used.<br/>
  <code>NOTE:</code> due to config file string substitution, that %&#8217;s must be escaped by an % in config files.</dd>
 <dt><code>journalmatch</code></dt>
 <dd>specifies the systemd journal match used to filter the journal entries. See <code><a href="/docs/linux/man/1-journalctl/">journalctl</a>(1)</code> and <code><a href="/docs/linux/man/7-systemd-journal-fields/">systemd.journal-fields</a>(7)</code> for matches syntax and more details on special journal fields. This option is only valid for the <i>systemd</i> backend.</dd></dl>
@@ -246,8 +246,8 @@ action = smtp.py[dest=chris [at] example.com, actname=smtp-chris]
 <h2>Reporting Bugs</h2>
 <p>Report bugs to <a rel="nofollow" href="https://github.com/fail2ban/fail2ban/issues">https://github.com/fail2ban/fail2ban/issues</a></p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2013 the Fail2Ban Team<br />
- Copyright of modifications held by their respective authors.<br />
+<p>Copyright &#169; 2013 the Fail2Ban Team<br/>
+ Copyright of modifications held by their respective authors.<br/>
  Licensed under the GNU General Public License v2 (GPL) or (at your option) any later version.</p>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/1-fail2ban-server/">fail2ban-server</a>(1) </p>

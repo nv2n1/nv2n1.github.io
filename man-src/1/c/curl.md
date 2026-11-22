@@ -407,13 +407,13 @@ description: "curl – transfer a URL"
 <dt>name [at] filename</dt>
 <dd> This will make curl load data from the given file (including any newlines), URL-encode that data and pass it on in the POST. The name part gets an equal sign appended, resulting in <i>name=urlencoded-file-content</i>. Note that the name is expected to be URL-encoded already.</dd></dl>
 </dl>
-<p> Examples:<br />
-curl&#8211; data &#8211; urlencode name = val https : // example.com<br />
-                                           curl&#8211; data &#8211;<br />
-                                           urlencode = encodethis https : // example.com<br />
-                                                                          curl&#8211; data &#8211;<br />
-                                                                          urlencode name[at] file https : // example.com<br />
-                                                                                                          curl&#8211; data &#8211;<br />
+<p> Examples:<br/>
+curl&#8211; data &#8211; urlencode name = val https : // example.com<br/>
+                                           curl&#8211; data &#8211;<br/>
+                                           urlencode = encodethis https : // example.com<br/>
+                                                                          curl&#8211; data &#8211;<br/>
+                                                                          urlencode name[at] file https : // example.com<br/>
+                                                                                                          curl&#8211; data &#8211;<br/>
                                                                                                           urlencode @fileonly https: // example.com</p>
 <p> See also <i>-d, &#8211;data</i> and <i>&#8211;data-raw</i>.</p>
 <dt>-d, &#8211;data &lt;data&gt;</dt>
@@ -698,9 +698,9 @@ ame=curl' 'file=@load&quot;this' <a rel="nofollow" href="https://example.com">ht
   X-header-2: this is
    another header
 </pre>
-<p> To support sending multipart mail messages, the syntax is extended as follows:<br />
- &#8211; name can be omitted: the equal sign is the first character of the argument,<br />
- &#8211; if data starts with &#8216;(&#8216;, this signals to start a new multipart: it can be followed by a content type specification.<br />
+<p> To support sending multipart mail messages, the syntax is extended as follows:<br/>
+ &#8211; name can be omitted: the equal sign is the first character of the argument,<br/>
+ &#8211; if data starts with &#8216;(&#8216;, this signals to start a new multipart: it can be followed by a content type specification.<br/>
  &#8211; a multipart can be terminated with a &#8216;=)&#8217; argument. </p>
 <p> Example: the following command sends an SMTP mime email consisting in an inline part in two alternative formats: plain text and HTML. It attaches a text file: </p>
 <pre>
@@ -843,7 +843,7 @@ ame=curl' 'file=@load&quot;this' <a rel="nofollow" href="https://example.com">ht
 <p> See also <i>-d, &#8211;data</i> and <i>-X, &#8211;request</i>.</p>
 <dt>-g, &#8211;globoff</dt>
 <dd> This option switches off the &quot;URL globbing parser&quot;. When you set this option, you can specify URLs that contain the letters {}[] without having curl itself interpret them. Note that these letters are not normal legal URL contents but they should be encoded according to the URI standard. </dd>
-<p> Example:<br />
+<p> Example:<br/>
 curl &#8211; g &#8220;https://example.com/{[]}}}}&#8221;</p>
 <p> See also <i>-K, &#8211;config</i> and <i>-q, &#8211;disable</i>.</p>
 <dt>&#8211;happy-eyeballs-timeout-ms &lt;milliseconds&gt;</dt>
@@ -1142,7 +1142,7 @@ curl &#8211; g &#8220;https://example.com/{[]}}}}&#8221;</p>
 <dd> (SMTP) When sending data to multiple recipients, by default curl will abort SMTP conversation if at least one of the recipients causes RCPT TO command to return an error. </dd>
 <p> The default behavior can be changed by passing <i>&#8211;mail-rcpt-allowfails</i> command-line option which will make curl ignore errors and proceed with the remaining valid recipients. </p>
 <p> If all recipients trigger RCPT TO failures and this flag is specified, curl will still abort the SMTP conversation and return the error received from to the last RCPT TO command. </p>
-<p> Example:<br />
+<p> Example:<br/>
 curl&#8211; mail &#8211; rcpt &#8211; allowfails&#8211; mail &#8211; rcpt dest[at] example.com smtp: // example.com</p>
 <p> See also <i>&#8211;mail-rcpt</i>. Added in 7.69.0.</p>
 <dt>&#8211;mail-rcpt &lt;address&gt;</dt>
@@ -1353,8 +1353,8 @@ Example:
   curl example.com -o /dev/null
 </pre>
 <p> Or for Windows use nul: </p>
-<p>curl example.com &#8211; o nul Examples : curl &#8211; o file https : // example.com<br />
-                                                          curl &#8220;http://{one,two}.example.com&#8221; &#8211;<br />
+<p>curl example.com &#8211; o nul Examples : curl &#8211; o file https : // example.com<br/>
+                                                          curl &#8220;http://{one,two}.example.com&#8221; &#8211;<br/>
                                                           o &#8220;file_#1.txt&#8221; curl &#8220;http://{site,host}.host[1-5].com&#8221; &#8211; o &#8220;#1_#2&#8221; curl &#8211; o file https: // example.com -o file2 https://example.net</p>
 <p> See also <i>-O, &#8211;remote-name</i>, <i>&#8211;remote-name-all</i> and <i>-J, &#8211;remote-header-name</i>.</p>
 <dt>&#8211;parallel-immediate</dt>
@@ -1831,11 +1831,11 @@ Example:
 <dt>-e, &#8211;referer &lt;URL&gt;</dt>
 <dd> (HTTP) Sends the &quot;Referrer Page&quot; information to the HTTP server. This can also be set with the <i>-H, &#8211;header</i> flag of course. When used with <i>-L, &#8211;location</i> you can append &quot;;auto&quot; to the <i>-e, &#8211;referer</i> URL to make curl automatically set the previous URL when it follows a Location: header. The &quot;;auto&quot; string can be used alone, even if you do not set an initial <i>-e, &#8211;referer</i>. </dd>
 <p> If this option is used several times, the last one will be used. </p>
-<p> Examples:<br />
-curl&#8211; referer &#8220;https://fake.example&#8221; https : // example.com<br />
-                                              curl&#8211; referer &#8220;https://fake.example;auto&#8221; &#8211;<br />
-                                              L https : // example.com<br />
-                                                        curl&#8211; referer &#8220;;auto&#8221; &#8211;<br />
+<p> Examples:<br/>
+curl&#8211; referer &#8220;https://fake.example&#8221; https : // example.com<br/>
+                                              curl&#8211; referer &#8220;https://fake.example;auto&#8221; &#8211;<br/>
+                                              L https : // example.com<br/>
+                                                        curl&#8211; referer &#8220;;auto&#8221; &#8211;<br/>
                                                         L https: // example.com</p>
 <p> See also <i>-A, &#8211;user-agent</i> and <i>-H, &#8211;header</i>.</p>
 <dt>-J, &#8211;remote-header-name</dt>

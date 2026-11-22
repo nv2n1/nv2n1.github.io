@@ -61,30 +61,30 @@ ssize_t getdelim(char **lineptr, size_t *n, int delim, FILE *stream);
 <p> Both <code>getline</code>() and <code>getdelim</code>() were originally GNU extensions. They were standardized in POSIX.1-2008.  </p>
 <h2>EXAMPLES</h2>
 <p> #define _GNU_SOURCE #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; </p>
-<p> int main(int argc, char *argv[]) { <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;FILE&nbsp;*stream; <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;*line&nbsp;=&nbsp;NULL; <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;size_t len&nbsp;=&nbsp;0; <br />
+<p> int main(int argc, char *argv[]) { <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;FILE&nbsp;*stream; <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;*line&nbsp;=&nbsp;NULL; <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;size_t len&nbsp;=&nbsp;0; <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;ssize_t nread; </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(argc&nbsp;!=&nbsp;2)&nbsp;{ <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;fprintf(stderr,&nbsp;&quot;Usage:&nbsp;%s&nbsp;&lt;file&gt;\n&quot;, argv[0]); <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_FAILURE); <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(argc&nbsp;!=&nbsp;2)&nbsp;{ <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;fprintf(stderr,&nbsp;&quot;Usage:&nbsp;%s&nbsp;&lt;file&gt;\n&quot;, argv[0]); <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_FAILURE); <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;} </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;stream&nbsp;=&nbsp;fopen(argv[1],&nbsp;&quot;r&quot;); <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(stream&nbsp;==&nbsp;NULL)&nbsp;{ <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;perror(&quot;fopen&quot;); <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_FAILURE); <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;stream&nbsp;=&nbsp;fopen(argv[1],&nbsp;&quot;r&quot;); <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(stream&nbsp;==&nbsp;NULL)&nbsp;{ <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;perror(&quot;fopen&quot;); <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_FAILURE); <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;} </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;while&nbsp;((nread&nbsp;=&nbsp;getline(&amp;line,&nbsp;&amp;len, stream))&nbsp;!=&nbsp;-1)&nbsp;{ <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;Retrieved line of length&nbsp;%zd:\n&quot;, nread); <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;fwrite(line, nread, 1, stdout); <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;while&nbsp;((nread&nbsp;=&nbsp;getline(&amp;line,&nbsp;&amp;len, stream))&nbsp;!=&nbsp;-1)&nbsp;{ <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;Retrieved line of length&nbsp;%zd:\n&quot;, nread); <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;fwrite(line, nread, 1, stdout); <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;} </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;free(line); <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;fclose(stream); <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;free(line); <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;fclose(stream); <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_SUCCESS); }  </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/2-read/">read</a></code>(2), <code><a href="/docs/linux/man/3-fgets/">fgets</a></code>(3), <code><a href="/docs/linux/man/3-fopen/">fopen</a></code>(3), <code><a href="/docs/linux/man/3-fread/">fread</a></code>(3), <code><a href="/docs/linux/man/3-scanf/">scanf</a></code>(3)  </p>

@@ -10,7 +10,7 @@ description: "ssprfs.f –"
 <p>ssprfs.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>ssprfs</code> (UPLO, N, NRHS, AP, AFP, IPIV, B, LDB, X, LDX, FERR, BERR, WORK, IWORK, INFO)<br />
+<p>subroutine <code>ssprfs</code> (UPLO, N, NRHS, AP, AFP, IPIV, B, LDB, X, LDX, FERR, BERR, WORK, IWORK, INFO)<br/>
  <i></i><code>SSPRFS</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ssprfs (characterUPLO, integerN, integerNRHS, real, dimension( * )AP, real, dimension( * )AFP, integer, dimension( * )IPIV, real, dimension( ldb, * )B, integerLDB, real, dimension( ldx, * )X, integerLDX, real, dimension( * )FERR, real, dimension( * )BERR, real, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>

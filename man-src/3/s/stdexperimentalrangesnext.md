@@ -39,24 +39,24 @@ return i;.
 4) Equivalent to ranges::advance(i, n, bound);
 return i;
 .</code></pre>
-<p>Customization point objects<br />
-The name ranges::next denotes a customization point object, which is a function_object of a literal Semiregular class type (denoted, for exposition purposes, as NextT). All instances of NextT are equal. Thus, ranges::next can be copied freely and its copies can be used interchangeably.<br />
-Given a set of types Args&#8230;, if std::declval&lt;Args&gt;()&#8230; meet the requirements for arguments to ranges::next above, NextT will satisfy ranges::Invocable&lt;const NextT, Args&#8230;&gt;. Otherwise, no function call operator of NextT participates in overload resolution.<br />
+<p>Customization point objects<br/>
+The name ranges::next denotes a customization point object, which is a function_object of a literal Semiregular class type (denoted, for exposition purposes, as NextT). All instances of NextT are equal. Thus, ranges::next can be copied freely and its copies can be used interchangeably.<br/>
+Given a set of types Args&#8230;, if std::declval&lt;Args&gt;()&#8230; meet the requirements for arguments to ranges::next above, NextT will satisfy ranges::Invocable&lt;const NextT, Args&#8230;&gt;. Otherwise, no function call operator of NextT participates in overload resolution.<br/>
 In every translation unit in which ranges::next is defined, it refers to the same instance of the customization point object. (This means that it can be used freely in things like inline functions and function templates without violating the one-definition_rule.) </p>
 <h2>Return value</h2>
 <p>The advanced iterator. </p>
 <h2>Notes</h2>
 <p>Even though omitting n for overload <code>(2)</code> behaves as if n is 1, omitting n for overload <code>(4)</code> effectively behaves as if n is infinity (always advance to bound). </p>
 <h2>Example</h2>
-<p>&nbsp;This section is incomplete<br />
+<p>&nbsp;This section is incomplete<br/>
 &nbsp;Reason: no example </p>
 <h2>See also</h2>
-<p>next increment an iterator<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(function template)</i><br />
-<i>(C++11)</i><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;advances an iterator by given distance<br />
-advance <i>(function template)</i><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;decrement an iterator<br />
-prev <i>(function template)</i><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;returns the distance between an iterator and a sentinel, or between the beginning and the end of a range<br />
+<p>next increment an iterator<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(function template)</i><br/>
+<i>(C++11)</i><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;advances an iterator by given distance<br/>
+advance <i>(function template)</i><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;decrement an iterator<br/>
+prev <i>(function template)</i><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;returns the distance between an iterator and a sentinel, or between the beginning and the end of a range<br/>
 distance <i>(function template)</i> </p>

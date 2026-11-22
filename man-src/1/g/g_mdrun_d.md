@@ -40,114 +40,114 @@ description: "mdrun – performs a simulation, do a normal mode analysis or an e
 <p> When mdrun receives a TERM signal, it will set nsteps to the current step plus one. When mdrun receives a USR1 signal, it will stop after the next neighbor search step (with nstlist=0 at the next step). In both cases all the usual output will be written to file. When running with MPI, a signal to one of the mdrun processes is sufficient, this signal should not be sent to mpirun or the mdrun process that is the parent of the others. </p>
 <p> When mdrun is started with MPI, it does not run niced by default.</p>
 <h2>FILES</h2>
-<p> <code>-s</code><i> topol.tpr</i> <code>Input</code><br />
+<p> <code>-s</code><i> topol.tpr</i> <code>Input</code><br/>
 &nbsp;<wbr>Run input file: tpr tpb tpa&nbsp;<wbr> </p>
-<p> <code>-o</code><i> traj.trr</i> <code>Output</code><br />
+<p> <code>-o</code><i> traj.trr</i> <code>Output</code><br/>
 &nbsp;<wbr>Full precision trajectory: trr trj cpt&nbsp;<wbr> </p>
-<p> <code>-x</code><i> traj.xtc</i> <code>Output, Opt.</code><br />
+<p> <code>-x</code><i> traj.xtc</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>Compressed trajectory&nbsp;<wbr>(portable xdr format)&nbsp;<wbr> </p>
-<p> <code>-cpi</code><i> state.cpt</i> <code>Input, Opt.</code><br />
+<p> <code>-cpi</code><i> state.cpt</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Checkpoint file&nbsp;<wbr> </p>
-<p> <code>-cpo</code><i> state.cpt</i> <code>Output, Opt.</code><br />
+<p> <code>-cpo</code><i> state.cpt</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>Checkpoint file&nbsp;<wbr> </p>
-<p> <code>-c</code><i> confout.gro</i> <code>Output</code><br />
+<p> <code>-c</code><i> confout.gro</i> <code>Output</code><br/>
 &nbsp;<wbr>Structure file: gro g96 pdb&nbsp;<wbr> </p>
-<p> <code>-e</code><i> ener.edr</i> <code>Output</code><br />
+<p> <code>-e</code><i> ener.edr</i> <code>Output</code><br/>
 &nbsp;<wbr>Energy file: edr ene&nbsp;<wbr> </p>
-<p> <code>-g</code><i> md.log</i> <code>Output</code><br />
+<p> <code>-g</code><i> md.log</i> <code>Output</code><br/>
 &nbsp;<wbr>Log file&nbsp;<wbr> </p>
-<p> <code>-dgdl</code><i> dgdl.xvg</i> <code>Output, Opt.</code><br />
+<p> <code>-dgdl</code><i> dgdl.xvg</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-field</code><i> field.xvg</i> <code>Output, Opt.</code><br />
+<p> <code>-field</code><i> field.xvg</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-table</code><i> table.xvg</i> <code>Input, Opt.</code><br />
+<p> <code>-table</code><i> table.xvg</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-tablep</code><i> tablep.xvg</i> <code>Input, Opt.</code><br />
+<p> <code>-tablep</code><i> tablep.xvg</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-tableb</code><i> table.xvg</i> <code>Input, Opt.</code><br />
+<p> <code>-tableb</code><i> table.xvg</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-rerun</code><i> rerun.xtc</i> <code>Input, Opt.</code><br />
+<p> <code>-rerun</code><i> rerun.xtc</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Trajectory: xtc trr trj gro g96 pdb cpt&nbsp;<wbr> </p>
-<p> <code>-tpi</code><i> tpi.xvg</i> <code>Output, Opt.</code><br />
+<p> <code>-tpi</code><i> tpi.xvg</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-tpid</code><i> tpidist.xvg</i> <code>Output, Opt.</code><br />
+<p> <code>-tpid</code><i> tpidist.xvg</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-ei</code><i> sam.edi</i> <code>Input, Opt.</code><br />
+<p> <code>-ei</code><i> sam.edi</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>ED sampling input&nbsp;<wbr> </p>
-<p> <code>-eo</code><i> sam.edo</i> <code>Output, Opt.</code><br />
+<p> <code>-eo</code><i> sam.edo</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>ED sampling output&nbsp;<wbr> </p>
-<p> <code>-j</code><i> wham.gct</i> <code>Input, Opt.</code><br />
+<p> <code>-j</code><i> wham.gct</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>General coupling stuff&nbsp;<wbr> </p>
-<p> <code>-jo</code><i> bam.gct</i> <code>Output, Opt.</code><br />
+<p> <code>-jo</code><i> bam.gct</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>General coupling stuff&nbsp;<wbr> </p>
-<p> <code>-ffout</code><i> gct.xvg</i> <code>Output, Opt.</code><br />
+<p> <code>-ffout</code><i> gct.xvg</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-devout</code><i> deviatie.xvg</i> <code>Output, Opt.</code><br />
+<p> <code>-devout</code><i> deviatie.xvg</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-runav</code><i> runaver.xvg</i> <code>Output, Opt.</code><br />
+<p> <code>-runav</code><i> runaver.xvg</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-px</code><i> pullx.xvg</i> <code>Output, Opt.</code><br />
+<p> <code>-px</code><i> pullx.xvg</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-pf</code><i> pullf.xvg</i> <code>Output, Opt.</code><br />
+<p> <code>-pf</code><i> pullf.xvg</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-mtx</code><i> nm.mtx</i> <code>Output, Opt.</code><br />
+<p> <code>-mtx</code><i> nm.mtx</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>Hessian matrix&nbsp;<wbr> </p>
-<p> <code>-dn</code><i> dipole.ndx</i> <code>Output, Opt.</code><br />
+<p> <code>-dn</code><i> dipole.ndx</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>Index file&nbsp;<wbr> </p>
 <h2>OTHER OPTIONS</h2>
-<p> <code>-[no]h</code><i>no </i><br />
+<p> <code>-[no]h</code><i>no </i><br/>
 &nbsp;<wbr>Print help info and quit </p>
-<p> <code>-nice</code><i> int</i><code> 19</code><br />
+<p> <code>-nice</code><i> int</i><code> 19</code><br/>
 &nbsp;<wbr>Set the nicelevel </p>
-<p> <code>-deffnm</code><i> string</i><br />
+<p> <code>-deffnm</code><i> string</i><br/>
 &nbsp;<wbr>Set the default filename for all file options </p>
-<p> <code>-[no]xvgr</code><i>yes </i><br />
+<p> <code>-[no]xvgr</code><i>yes </i><br/>
 &nbsp;<wbr>Add specific codes&nbsp;<wbr>(legends etc.)&nbsp;<wbr>in the output xvg files for the xmgrace program </p>
-<p> <code>-[no]pd</code><i>no </i><br />
+<p> <code>-[no]pd</code><i>no </i><br/>
 &nbsp;<wbr>Use particle decompostion </p>
-<p> <code>-dd</code><i> vector</i><code> 0 0 0</code><br />
+<p> <code>-dd</code><i> vector</i><code> 0 0 0</code><br/>
 &nbsp;<wbr>Domain decomposition grid, 0 is optimize </p>
-<p> <code>-npme</code><i> int</i><code> -1</code><br />
+<p> <code>-npme</code><i> int</i><code> -1</code><br/>
 &nbsp;<wbr>Number of separate nodes to be used for PME, -1 is guess </p>
-<p> <code>-ddorder</code><i> enum</i><code> interleave</code><br />
+<p> <code>-ddorder</code><i> enum</i><code> interleave</code><br/>
 &nbsp;<wbr>DD node order:&nbsp;<wbr><code>&nbsp;<wbr>interleave</code>,&nbsp;<wbr><code>&nbsp;<wbr>pp_pme</code>&nbsp;<wbr>or&nbsp;<wbr><code>&nbsp;<wbr>cartesian</code> </p>
-<p> <code>-[no]ddcheck</code><i>yes </i><br />
+<p> <code>-[no]ddcheck</code><i>yes </i><br/>
 &nbsp;<wbr>Check for all bonded interactions with DD </p>
-<p> <code>-rdd</code><i> real</i><code> 0 </code><br />
+<p> <code>-rdd</code><i> real</i><code> 0 </code><br/>
 &nbsp;<wbr>The maximum distance for bonded interactions with DD&nbsp;<wbr>(nm), 0 is determine from initial coordinates </p>
-<p> <code>-rcon</code><i> real</i><code> 0 </code><br />
+<p> <code>-rcon</code><i> real</i><code> 0 </code><br/>
 &nbsp;<wbr>Maximum distance for P-LINCS&nbsp;<wbr>(nm), 0 is estimate </p>
-<p> <code>-dlb</code><i> enum</i><code> auto</code><br />
+<p> <code>-dlb</code><i> enum</i><code> auto</code><br/>
 &nbsp;<wbr>Dynamic load balancing&nbsp;<wbr>(with DD):&nbsp;<wbr><code>&nbsp;<wbr>auto</code>,&nbsp;<wbr><code>&nbsp;<wbr>no</code>&nbsp;<wbr>or&nbsp;<wbr><code>&nbsp;<wbr>yes</code> </p>
-<p> <code>-dds</code><i> real</i><code> 0.8 </code><br />
+<p> <code>-dds</code><i> real</i><code> 0.8 </code><br/>
 &nbsp;<wbr>Minimum allowed dlb scaling of the DD cell size </p>
-<p> <code>-[no]sum</code><i>yes </i><br />
+<p> <code>-[no]sum</code><i>yes </i><br/>
 &nbsp;<wbr>Sum the energies at every step </p>
-<p> <code>-[no]v</code><i>no </i><br />
+<p> <code>-[no]v</code><i>no </i><br/>
 &nbsp;<wbr>Be loud and noisy </p>
-<p> <code>-[no]compact</code><i>yes </i><br />
+<p> <code>-[no]compact</code><i>yes </i><br/>
 &nbsp;<wbr>Write a compact log file </p>
-<p> <code>-[no]seppot</code><i>no </i><br />
+<p> <code>-[no]seppot</code><i>no </i><br/>
 &nbsp;<wbr>Write separate V and dVdl terms for each interaction type and node to the log file(s) </p>
-<p> <code>-pforce</code><i> real</i><code> -1 </code><br />
+<p> <code>-pforce</code><i> real</i><code> -1 </code><br/>
 &nbsp;<wbr>Print all forces larger than this&nbsp;<wbr>(kJ/mol nm) </p>
-<p> <code>-[no]reprod</code><i>no </i><br />
+<p> <code>-[no]reprod</code><i>no </i><br/>
 &nbsp;<wbr>Try to avoid optimizations that affect binary reproducibility </p>
-<p> <code>-cpt</code><i> real</i><code> 15 </code><br />
+<p> <code>-cpt</code><i> real</i><code> 15 </code><br/>
 &nbsp;<wbr>Checkpoint interval&nbsp;<wbr>(minutes) </p>
-<p> <code>-[no]append</code><i>no </i><br />
+<p> <code>-[no]append</code><i>no </i><br/>
 &nbsp;<wbr>Append to previous output files when restarting from checkpoint </p>
-<p> <code>-maxh</code><i> real</i><code> -1 </code><br />
+<p> <code>-maxh</code><i> real</i><code> -1 </code><br/>
 &nbsp;<wbr>Terminate after 0.99 times this time&nbsp;<wbr>(hours) </p>
-<p> <code>-multi</code><i> int</i><code> 0</code><br />
+<p> <code>-multi</code><i> int</i><code> 0</code><br/>
 &nbsp;<wbr>Do multiple simulations in parallel </p>
-<p> <code>-replex</code><i> int</i><code> 0</code><br />
+<p> <code>-replex</code><i> int</i><code> 0</code><br/>
 &nbsp;<wbr>Attempt replica exchange every&nbsp;<wbr>&nbsp;<wbr>steps </p>
-<p> <code>-reseed</code><i> int</i><code> -1</code><br />
+<p> <code>-reseed</code><i> int</i><code> -1</code><br/>
 &nbsp;<wbr>Seed for replica exchange, -1 is generate a seed </p>
-<p> <code>-[no]glas</code><i>no </i><br />
+<p> <code>-[no]glas</code><i>no </i><br/>
 &nbsp;<wbr>Do glass simulation with special long range corrections </p>
-<p> <code>-[no]ionize</code><i>no </i><br />
+<p> <code>-[no]ionize</code><i>no </i><br/>
 &nbsp;<wbr>Do a simulation including the effect of an X-Ray bombardment on your system </p>
 <h2>SEE ALSO</h2>
 <p> <code>gromacs(7)</code> </p>

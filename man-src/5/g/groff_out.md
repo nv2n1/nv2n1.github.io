@@ -31,8 +31,8 @@ description: "groff_out – groff intermediate output format"
 <p>A correct <i>intermediate output</i> document consists of two parts, the <i>prologue</i> and the <i>body</i>. </p>
 <p> The task of the <i>prologue</i> is to set the general device parameters using three exactly specified commands. The <i>groff prologue</i> is guaranteed to consist of the following three lines (in that order):</p>
 <dl>
-<dd><code>x T</code> <i>device</i><br />
- <code>x res</code> <i>n h v</i><br />
+<dd><code>x T</code> <i>device</i><br/>
+ <code>x res</code> <i>n h v</i><br/>
  <code>x init</code></dd></dl>
 <p> with the arguments set as outlined in subsection &#8220;Device Control Commands&#8221; below. However, the parser for the <i>intermediate output</i> format is able to swallow additional whitespace and comments as well. </p>
 <p> The <i>body</i> is the main section for processing the document data. Syntactically, it is a sequence of any commands different from the ones used in the <i>prologue</i>. Processing is terminated as soon as the first <code>x stop</code> command is encountered; the last line of any <i>groff intermediate output</i> always contains such a command. </p>
@@ -100,9 +100,9 @@ description: "groff_out – groff intermediate output format"
 <p> In the following command reference, the syntax element <i>&lt;line-break&gt;</i> means a <i>syntactical line break</i> as defined in subsection &#8220;Separation&#8221; above.</p>
 <dl>
 <dt> <code>D~</code>&nbsp; &#8230;</dt>
-<dd>Draw B-spline from current position to offset (<i>,<i>h/</i><font SIZE="-3">1</font>/</i>,&nbsp;<i>,<i>v/</i><font SIZE="-3">1</font>/</i>), then to offset (<i>,<i>h/</i><font SIZE="-3">2</font>/</i>,&nbsp;<i>,<i>v/</i><font SIZE="-3">2</font>/</i>) if given, etc., up to (<i>,<i>h/</i><font SIZE="-3">n</font>/</i>,&nbsp;<i>,<i>v/</i><font SIZE="-3">n</font>/</i>). This command takes a variable number of argument pairs; the current position is moved to the terminal point of the drawn curve.</dd>
+<dd>Draw B-spline from current position to offset (<i>,<i>h/</i>1/</i>,&nbsp;<i>,<i>v/</i>1/</i>), then to offset (<i>,<i>h/</i>2/</i>,&nbsp;<i>,<i>v/</i>2/</i>) if given, etc., up to (<i>,<i>h/</i>n/</i>,&nbsp;<i>,<i>v/</i>n/</i>). This command takes a variable number of argument pairs; the current position is moved to the terminal point of the drawn curve.</dd>
 <dt> <code>Da</code>&nbsp;</dt>
-<dd>Draw arc from current position to (<i>,<i>h/</i><font SIZE="-3">1</font>/</i>,&nbsp;<i>,<i>v/</i><font SIZE="-3">1</font>/</i>)+ (<i>,<i>h/</i><font SIZE="-3">2</font>/</i>,&nbsp;<i>,<i>v/</i><font SIZE="-3">2</font>/</i>) with center at (<i>,<i>h/</i><font SIZE="-3">1</font>/</i>,&nbsp;<i>,<i>v/</i><font SIZE="-3">1</font>/</i>); then move the current position to the final point of the arc.</dd>
+<dd>Draw arc from current position to (<i>,<i>h/</i>1/</i>,&nbsp;<i>,<i>v/</i>1/</i>)+ (<i>,<i>h/</i>2/</i>,&nbsp;<i>,<i>v/</i>2/</i>) with center at (<i>,<i>h/</i>1/</i>,&nbsp;<i>,<i>v/</i>1/</i>); then move the current position to the final point of the arc.</dd>
 <dt> <code>DC</code>&nbsp;<i>,d/</i></dt>
 <dd><code>DC</code>&nbsp;<i>,d dummy-arg/</i> Draw a solid circle using the current fill color with diameter~<i>d</i> (integer in basic units~<code>u</code>) with leftmost point at the current position; then move the current position to the rightmost point of the circle. An optional second integer argument is ignored (this allows the formatter to generate an even number of arguments). This command is a <i>groff</i> extension.</dd>
 <dt> <code>Dc</code>&nbsp;<i>,d/</i></dt>
@@ -146,7 +146,7 @@ description: "groff_out – groff intermediate output format"
 <dt> <code>Dl</code>&nbsp;<i>,h v/</i></dt>
 <dd>Draw line from current position to offset (<i>,h/</i>,&nbsp;<i>,v/</i>) (integers in basic units~<code>u</code>); then set current position to the end of the drawn line.</dd>
 <dt> <code>Dp</code>&nbsp; &#8230;</dt>
-<dd>Draw a polygon line from current position to offset (<i>,<i>h/</i><font SIZE="-3">1</font>/</i>,&nbsp;<i>,<i>v/</i><font SIZE="-3">1</font>/</i>), from there to offset (<i>,<i>h/</i><font SIZE="-3">2</font>/</i>,&nbsp;<i>,<i>v/</i><font SIZE="-3">2</font>/</i>), etc., up to offset (<i>,<i>h/</i><font SIZE="-3">n</font>/</i>,&nbsp;<i>,<i>v/</i><font SIZE="-3">n</font>/</i>), and from there back to the starting position. As the polygon is closed, the end of drawing is the starting point, so the position doesn&#8217;t change. This command is a <i>groff</i> extension.</dd>
+<dd>Draw a polygon line from current position to offset (<i>,<i>h/</i>1/</i>,&nbsp;<i>,<i>v/</i>1/</i>), from there to offset (<i>,<i>h/</i>2/</i>,&nbsp;<i>,<i>v/</i>2/</i>), etc., up to offset (<i>,<i>h/</i>n/</i>,&nbsp;<i>,<i>v/</i>n/</i>), and from there back to the starting position. As the polygon is closed, the end of drawing is the starting point, so the position doesn&#8217;t change. This command is a <i>groff</i> extension.</dd>
 <dt> <code>DP</code>&nbsp; &#8230;</dt>
 <dd>The same macro as the corresponding <code>Dp</code> command with the same arguments, but draws a solid polygon in the current fill color rather than an outlined polygon. No position changing. This command is a <i>groff</i> extension.</dd>
 <dt> <code>Dt</code>&nbsp;<i>,n/</i></dt>
@@ -157,40 +157,40 @@ description: "groff_out – groff intermediate output format"
 <p> In the following, the syntax element <i>&lt;line-break&gt;</i> means a <i>syntactical line break</i> as defined in subsection &#8220;Separation&#8221; above.</p>
 <dl>
 <dt> <code>xF</code>&nbsp;<i>name</i></dt>
-<dd>(<i>Filename</i> control command)<br />
+<dd>(<i>Filename</i> control command)<br/>
  Use <i>name</i> as the intended name for the current file in error reports. This is useful for remembering the original file name when <code>groff</code> uses an internal piping mechanism. The input file is not changed by this command. This command is a <i>groff</i> extension.</dd>
 <dt> <code>xf</code>&nbsp;<i>n s</i></dt>
-<dd>(<i>font</i> control command)<br />
+<dd>(<i>font</i> control command)<br/>
  Mount font position~<i>n</i> (a non-negative integer) with font named~<i>s</i> (a text word); see <code><a href="/docs/linux/man/5-groff_font/">groff_font</a></code>(5).</dd>
 <dt> <code>xH</code>&nbsp;<i>n</i></dt>
-<dd>(<i>Height</i> control command)<br />
+<dd>(<i>Height</i> control command)<br/>
  Set character height to~<i>n</i> (a positive integer in scaled points~<code>z</code>). <i>Classical troff</i> used the unit points (<code>p</code>) instead; see section &#8220;Compatibility&#8221; below.</dd>
 <dt> <code>xi</code>&nbsp;<i></i></dt>
-<dd>(<i>init</i> control command)<br />
+<dd>(<i>init</i> control command)<br/>
  Initialize device. This is the third command of the <i>prologue</i>.</dd>
 <dt> <code>xp</code>&nbsp;<i></i></dt>
-<dd>(<i>pause</i> control command)<br />
+<dd>(<i>pause</i> control command)<br/>
  Parsed but ignored. The classical documentation reads <i>pause device, can be</i> <i>restarted</i>.</dd>
 <dt> <code>xr</code>&nbsp;<i>n h v</i></dt>
-<dd>(<i>resolution</i> control command)<br />
+<dd>(<i>resolution</i> control command)<br/>
  Resolution is~<i>n</i>, while <i>h</i> is the minimal horizontal motion, and <i>v</i> the minimal vertical motion possible with this device; all arguments are positive integers in basic units~<code>u</code> per inch. This is the second command of the <i>prologue</i>.</dd>
 <dt> <code>xS</code>&nbsp;<i>n</i></dt>
-<dd>(<i>Slant</i> control command)<br />
+<dd>(<i>Slant</i> control command)<br/>
  Set slant to~<i>n</i> degrees (an integer in basic units~<code>u</code>).</dd>
 <dt> <code>xs</code>&nbsp;<i></i></dt>
-<dd>(<i>stop</i> control command)<br />
+<dd>(<i>stop</i> control command)<br/>
  Terminates the processing of the current file; issued as the last command of any <i>intermediate troff</i> <i>output</i>.</dd>
 <dt> <code>xt</code>&nbsp;<i></i></dt>
-<dd>(<i>trailer</i> control command)<br />
+<dd>(<i>trailer</i> control command)<br/>
  Generate trailer information, if any. In <code>groff</code>, this is actually just ignored.</dd>
 <dt> <code>xT</code>&nbsp;<i>xxx</i></dt>
-<dd>(<i>Typesetter</i> control command)<br />
+<dd>(<i>Typesetter</i> control command)<br/>
  Set name of device to word <i>xxx</i>, a sequence of characters ended by the next whitespace character. The possible device names coincide with those from the groff <code>-T</code> option. This is the first command of the <i>prologue</i>.</dd>
 <dt> <code>xu</code>&nbsp;<i>n</i></dt>
-<dd>(<i>underline</i> control command)<br />
+<dd>(<i>underline</i> control command)<br/>
  Configure underlining of spaces. If <i>n</i> is~1, start underlining of spaces; if <i>n</i> is~0, stop underlining of spaces. This is needed for the <code>cu</code> request in <code>nroff</code> mode and is ignored otherwise. This command is a <i>groff</i> extension.</dd>
 <dt> <code>xX</code>&nbsp;<i>anything</i></dt>
-<dd>(<i>X-escape</i> control command)<br />
+<dd>(<i>X-escape</i> control command)<br/>
  Send string <i>anything</i> uninterpreted to the device. If the line following this command starts with a <code>+</code> character this line is interpreted as a continuation line in the following sense. The <code>+</code> is ignored, but a newline character is sent instead to the device, the rest of the line is sent uninterpreted. The same applies to all following lines until the first character of a line is not a <code>+</code> character. This command is generated by the <i>groff</i> escape sequence <code>X</code>. The line-continuing feature is a <i>groff</i> extension.</dd></dl>
 <h3>Obsolete Command</h3>
 <p>In <i>classical troff</i> output, emitting a single glyph was mostly done by a very strange command that combined a horizontal move and the printing of a glyph. It didn&#8217;t have a command code, but is represented by a 3-character argument consisting of exactly 2~digits and a character.</p>

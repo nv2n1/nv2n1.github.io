@@ -10,7 +10,7 @@ description: "spoequ.f –"
 <p>spoequ.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>spoequ</code> (N, A, LDA, S, SCOND, AMAX, INFO)<br />
+<p>subroutine <code>spoequ</code> (N, A, LDA, S, SCOND, AMAX, INFO)<br/>
  <i></i><code>SPOEQU</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine spoequ (integerN, real, dimension( lda, * )A, integerLDA, real, dimension( * )S, realSCOND, realAMAX, integerINFO)</h3>

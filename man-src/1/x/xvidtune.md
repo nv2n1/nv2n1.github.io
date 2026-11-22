@@ -86,7 +86,7 @@ description: "xvidtune – video mode tuner for Xorg"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-xrandr/">xrandr</a></code>(1), <code><a href="/docs/linux/man/1-xorg/">Xorg</a></code>(1), <code><a href="/docs/linux/man/5-xorg-conf/">xorg.conf</a></code>(5).</p>
 <h2>AUTHORS</h2>
-<p> Kaleb S. Keithley, X Consortium.<br />
+<p> Kaleb S. Keithley, X Consortium.<br/>
  Additions and modifications by Jon Tombs, David Dawes, and Joe Moss.</p>
 <h2>BUGS</h2>
 <p> X Error handling, i.e. when the server does not allow xvidtune clients to write new modes, could be better. </p>

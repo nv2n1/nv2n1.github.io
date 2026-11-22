@@ -95,20 +95,20 @@ perf probe[options]-- add = PROBE[...] or
 <dl>
 <dt>
 </dt><dd>
-1) Define event based on function name<br />
+1) Define event based on function name<br/>
  [EVENT=]FUNC[@SRC][:RLN|+OFFS|%return|;PTN] [ARG &#8230;]
 </dd></dl>
 <dl>
 <dt>
 </dt><dd>
-2) Define event based on source file with line number<br />
+2) Define event based on source file with line number<br/>
  [EVENT=]SRC:ALN [ARG &#8230;]
 </dd></dl>
 <dl>
 <dt>
 </dt><dd>
-3) Define event based on source file with lazy pattern<br />
- [EVENT=]SRC;<br />
+3) Define event based on source file with lazy pattern<br/>
+ [EVENT=]SRC;<br/>
 PTN[ARG&#8230;]
 </dd></dl>
 <p> <i>EVENT</i> specifies the name of new event, if omitted, it will be set the name of the probed function. Currently, event group name is set as <i>probe</i>. <i>FUNC</i> specifies a probed function name, and it may have one of the following options; <i>+OFFS</i> is the offset from function entry address in bytes, <i>:RLN</i> is the relative-line number from function entry line, and <i>%return</i> means that it probes function return. And <i>;PTN</i> means lazy matching pattern (see LAZY MATCHING). Note that <i>;PTN</i> must be the end of the probe point definition. In addition, <i>@SRC</i> specifies a source file which has that function. It is also possible to specify a probe point by the source line number or lazy matching by using <i>SRC:ALN</i> or <i>SRC;PTN</i> syntax, where <i>SRC</i> is the source file path, <i>:ALN</i> is the line number and <i>;PTN</i> is the lazy matching pattern. <i>ARG</i> specifies the arguments of this probe point, (see PROBE ARGUMENT).</p>

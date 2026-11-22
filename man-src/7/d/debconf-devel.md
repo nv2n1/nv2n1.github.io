@@ -30,24 +30,24 @@ description: "debconf – developers guide"
 <h2>The Templates File</h2>
 <p>A package that uses debconf probably wants to ask some questions. These questions are stored, in template form, in the templates file. </p>
 <p> Like the config script, the templates file is put in the control.tar.gz section of a deb. Its format is similar to a debian control file; a set of stanzas separated by blank lines, with each stanza having a RFC822-like form: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>Template: foo/bar<br />
-&nbsp;<wbr>&nbsp;<wbr>Type: string<br />
-&nbsp;<wbr>&nbsp;<wbr>Default: foo<br />
-&nbsp;<wbr>&nbsp;<wbr>Description: This is a sample string question.<br />
-This is its extended description.<br />
-.<br />
-Notice that:<br />
-&nbsp;<wbr>&#8211; Like in a debian package description, a dot<br />
-on its own line sets off a new paragraph.<br />
-&nbsp;<wbr>&#8211; Most text is word-wrapped, but doubly-indented<br />
-text is left alone, so you can use it for lists<br />
-of items, like this list. Be careful, since<br />
-it is not word-wrapped, if it&#8217;s too wide<br />
-it will look bad. Using it for short items<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>Template: foo/bar<br/>
+&nbsp;<wbr>&nbsp;<wbr>Type: string<br/>
+&nbsp;<wbr>&nbsp;<wbr>Default: foo<br/>
+&nbsp;<wbr>&nbsp;<wbr>Description: This is a sample string question.<br/>
+This is its extended description.<br/>
+.<br/>
+Notice that:<br/>
+&nbsp;<wbr>&#8211; Like in a debian package description, a dot<br/>
+on its own line sets off a new paragraph.<br/>
+&nbsp;<wbr>&#8211; Most text is word-wrapped, but doubly-indented<br/>
+text is left alone, so you can use it for lists<br/>
+of items, like this list. Be careful, since<br/>
+it is not word-wrapped, if it&#8217;s too wide<br/>
+it will look bad. Using it for short items<br/>
 is best&nbsp;<wbr>(so this is a bad example). </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>Template: foo/baz<br />
-&nbsp;<wbr>&nbsp;<wbr>Type: boolean<br />
-&nbsp;<wbr>&nbsp;<wbr>Description: Clear enough, no?<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>Template: foo/baz<br/>
+&nbsp;<wbr>&nbsp;<wbr>Type: boolean<br/>
+&nbsp;<wbr>&nbsp;<wbr>Description: Clear enough, no?<br/>
 This is another question, of boolean type. </p>
 <p> For some real-life examples of templates files, see /var/lib/dpkg/info/debconf.templates, and other .templates files in that directory. </p>
 <p> Let&#8217;s look at each of the fields in turn..</p>
@@ -173,38 +173,38 @@ This is another question, of boolean type. </p>
 <dt><code>X_LOADTEMPLATEFILE /path/to/templates [owner]</code></dt>
 <dd>This extension loads the specified template file into debconf&#8217;s database. The owner defaults to the package that is being configured with debconf.</dd></dl>
 <p> Here is a simple example of the debconf protocol in action. </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>INPUT medium debconf/frontend<br />
-&nbsp;<wbr>&nbsp;<wbr>30 question skipped<br />
-&nbsp;<wbr>&nbsp;<wbr>FSET debconf/frontend seen false<br />
-&nbsp;<wbr>&nbsp;<wbr>0 false<br />
-&nbsp;<wbr>&nbsp;<wbr>INPUT high debconf/frontend<br />
-&nbsp;<wbr>&nbsp;<wbr>0 question will be asked<br />
-&nbsp;<wbr>&nbsp;<wbr>GO<br />
-&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr>Here debconf displays a question to the user.&nbsp;<wbr>]<br />
-&nbsp;<wbr>&nbsp;<wbr>0 ok<br />
-&nbsp;<wbr>&nbsp;<wbr>GET no/such/question<br />
-&nbsp;<wbr>&nbsp;<wbr>10 no/such/question doesn&#8217;t exist<br />
-&nbsp;<wbr>&nbsp;<wbr>GET debconf/frontend<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>INPUT medium debconf/frontend<br/>
+&nbsp;<wbr>&nbsp;<wbr>30 question skipped<br/>
+&nbsp;<wbr>&nbsp;<wbr>FSET debconf/frontend seen false<br/>
+&nbsp;<wbr>&nbsp;<wbr>0 false<br/>
+&nbsp;<wbr>&nbsp;<wbr>INPUT high debconf/frontend<br/>
+&nbsp;<wbr>&nbsp;<wbr>0 question will be asked<br/>
+&nbsp;<wbr>&nbsp;<wbr>GO<br/>
+&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr>Here debconf displays a question to the user.&nbsp;<wbr>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>0 ok<br/>
+&nbsp;<wbr>&nbsp;<wbr>GET no/such/question<br/>
+&nbsp;<wbr>&nbsp;<wbr>10 no/such/question doesn&#8217;t exist<br/>
+&nbsp;<wbr>&nbsp;<wbr>GET debconf/frontend<br/>
 &nbsp;<wbr>&nbsp;<wbr>0 Dialog</p>
 <h2>Libraries</h2>
 <p>Setting things up so you can talk to debconf, and speaking the debconf protocol by hand is a little too much work, so some thin libraries exist to relieve this minor drudgery. </p>
-<p> For shell programming, there is the /usr/share/debconf/confmodule library, which you can source at the top of a shell script, and talk to debconf in a fairly natural way, using lower-case versions of the debconf protocol commands, that are prefixed with &quot;db_&quot; (ie, &quot;db_input&quot; and &quot;db_go&quot;). For details, see <code>confmodule</code>(3)<br />
+<p> For shell programming, there is the /usr/share/debconf/confmodule library, which you can source at the top of a shell script, and talk to debconf in a fairly natural way, using lower-case versions of the debconf protocol commands, that are prefixed with &quot;db_&quot; (ie, &quot;db_input&quot; and &quot;db_go&quot;). For details, see <code>confmodule</code>(3)<br/>
 &nbsp;<wbr>. </p>
 <p> Perl programmers can use the <code>Debconf::Client::ConfModule</code>(3pm) perl module, and python programmers can use the debconf python module. </p>
 <p> The rest of this manual will use the /usr/share/debconf/confmodule library in example shell scripts. Here is an example config script using that library, that just asks a question: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>#!/bin/sh<br />
-&nbsp;<wbr>&nbsp;<wbr>set -e<br />
-&nbsp;<wbr>&nbsp;<wbr>.&nbsp;<wbr>/usr/share/debconf/confmodule<br />
-&nbsp;<wbr>&nbsp;<wbr>db_set mypackage/reboot-now false<br />
-&nbsp;<wbr>&nbsp;<wbr>db_input high mypackage/reboot-now || true<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>#!/bin/sh<br/>
+&nbsp;<wbr>&nbsp;<wbr>set -e<br/>
+&nbsp;<wbr>&nbsp;<wbr>.&nbsp;<wbr>/usr/share/debconf/confmodule<br/>
+&nbsp;<wbr>&nbsp;<wbr>db_set mypackage/reboot-now false<br/>
+&nbsp;<wbr>&nbsp;<wbr>db_input high mypackage/reboot-now || true<br/>
 &nbsp;<wbr>&nbsp;<wbr>db_go || true </p>
 <p> Notice the uses of &quot;|| true&quot; to prevent the script from dying if debconf decides it can&#8217;t display a question, or the user tries to back up. In those situations, debconf returns a non-zero exit code, and since this shell script is set -e, an untrapped exit code would make it abort. </p>
 <p> And here is a corresponding postinst script, that uses the user&#8217;s answer to the question to see if the system should be rebooted (a rather absurd example..): </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>#!/bin/sh<br />
-&nbsp;<wbr>&nbsp;<wbr>set -e<br />
-&nbsp;<wbr>&nbsp;<wbr>.&nbsp;<wbr>/usr/share/debconf/confmodule<br />
-&nbsp;<wbr>&nbsp;<wbr>db_get mypackage/reboot-now<br />
-&nbsp;<wbr>&nbsp;<wbr>if&nbsp;<wbr>[&nbsp;<wbr>&quot;$RET&quot;&nbsp;<wbr>=&nbsp;<wbr>true&nbsp;<wbr>];&nbsp;<wbr>then<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>#!/bin/sh<br/>
+&nbsp;<wbr>&nbsp;<wbr>set -e<br/>
+&nbsp;<wbr>&nbsp;<wbr>.&nbsp;<wbr>/usr/share/debconf/confmodule<br/>
+&nbsp;<wbr>&nbsp;<wbr>db_get mypackage/reboot-now<br/>
+&nbsp;<wbr>&nbsp;<wbr>if&nbsp;<wbr>[&nbsp;<wbr>&quot;$RET&quot;&nbsp;<wbr>=&nbsp;<wbr>true&nbsp;<wbr>];&nbsp;<wbr>then<br/>
 &nbsp;<wbr>&nbsp;<wbr><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>shutdown -r now</p>
 <p>&nbsp;<wbr>&nbsp;<wbr>fi </p>
 <p> Notice the use of the $RET variable to get at the extended return code from the GET command, which holds the user&#8217;s answer to the question.</p>
@@ -242,9 +242,9 @@ This is another question, of boolean type. </p>
 <dd>
 </dd><dl>
 <dd>The first thing to reach for is the DEBCONF_DEBUG environment variable. If you set and export DEBCONF_DEBUG=developer, debconf will output to stderr a dump of the debconf protocol as your program runs. It&#8217;ll look something like this &#8212; the typo is made clear: </dd>
-<p>&nbsp;<wbr>debconf&nbsp;<wbr>(developer):&nbsp;<wbr>&lt;&#8211; input high debconf/frontand<br />
-&nbsp;<wbr>debconf&nbsp;<wbr>(developer): &#8211;&gt;&nbsp;<wbr>10&nbsp;<wbr>&quot;debconf/frontand&quot;&nbsp;<wbr>doesn&#8217;t exist<br />
-&nbsp;<wbr>debconf&nbsp;<wbr>(developer):&nbsp;<wbr>&lt;&#8211; go<br />
+<p>&nbsp;<wbr>debconf&nbsp;<wbr>(developer):&nbsp;<wbr>&lt;&#8211; input high debconf/frontand<br/>
+&nbsp;<wbr>debconf&nbsp;<wbr>(developer): &#8211;&gt;&nbsp;<wbr>10&nbsp;<wbr>&quot;debconf/frontand&quot;&nbsp;<wbr>doesn&#8217;t exist<br/>
+&nbsp;<wbr>debconf&nbsp;<wbr>(developer):&nbsp;<wbr>&lt;&#8211; go<br/>
 &nbsp;<wbr>debconf&nbsp;<wbr>(developer): &#8211;&gt;&nbsp;<wbr>0 ok </p>
 <p> It&#8217;s rather useful to use debconf&#8217;s readline frontend when you&#8217;re debugging (in the author&#8217;s opinion), as the questions don&#8217;t get in the way, and all the debugging output is easily preserved and logged.</dl>
 <dt><code>DEBCONF_C_VALUES</code></dt>
@@ -267,54 +267,54 @@ This is another question, of boolean type. </p>
 <p>Many of you seem to want to use debconf to help manage config files that are part of your package. Perhaps there is no good default to ship in a conffile, and so you want to use debconf to prompt the user, and write out a config file based on their answers. That seems easy enough to do, but then you consider upgrades, and what to do when someone modifies the config file you generate, and dpkg-reconfigure, and &#8230; </p>
 <p> There are a lot of ways to do this, and most of them are wrong, and will often earn you annoyed bug reports. Here is one right way to do it. It assumes that your config file is really just a series of shell variables being set, with comments in between, and so you can just source the file to &quot;load&quot; it. If you have a more complicated format, reading (and writing) it becomes a bit trickier. </p>
 <p> Your config script will look something like this: </p>
-<p>&nbsp;<wbr>#!/bin/sh<br />
-&nbsp;<wbr>CONFIGFILE=/etc/foo.conf<br />
-&nbsp;<wbr>set -e<br />
+<p>&nbsp;<wbr>#!/bin/sh<br/>
+&nbsp;<wbr>CONFIGFILE=/etc/foo.conf<br/>
+&nbsp;<wbr>set -e<br/>
 &nbsp;<wbr>.&nbsp;<wbr>/usr/share/debconf/confmodule </p>
-<p>&nbsp;<wbr>#&nbsp;<wbr>Load config file, if it exists.<br />
-&nbsp;<wbr>if&nbsp;<wbr>[&nbsp;<wbr>-e&nbsp;<wbr>$CONFIGFILE&nbsp;<wbr>];&nbsp;<wbr>then<br />
+<p>&nbsp;<wbr>#&nbsp;<wbr>Load config file, if it exists.<br/>
+&nbsp;<wbr>if&nbsp;<wbr>[&nbsp;<wbr>-e&nbsp;<wbr>$CONFIGFILE&nbsp;<wbr>];&nbsp;<wbr>then<br/>
 &nbsp;<wbr><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>.&nbsp;<wbr>$CONFIGFILE || true</p>
 <p>&nbsp;<wbr><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>#&nbsp;<wbr>Store values from config file into</p>
 <p>&nbsp;<wbr><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>#&nbsp;<wbr>debconf db.</p>
 <p>&nbsp;<wbr><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>db_set mypackage/foo&nbsp;<wbr>&quot;$FOO&quot;</p>
 <p>&nbsp;<wbr><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>db_set mypackage/bar&nbsp;<wbr>&quot;$BAR&quot;</p>
 <p>&nbsp;<wbr>fi </p>
-<p>&nbsp;<wbr>#&nbsp;<wbr>Ask questions.<br />
-&nbsp;<wbr>db_input medium mypackage/foo || true<br />
-&nbsp;<wbr>db_input medium mypackage/bar || true<br />
+<p>&nbsp;<wbr>#&nbsp;<wbr>Ask questions.<br/>
+&nbsp;<wbr>db_input medium mypackage/foo || true<br/>
+&nbsp;<wbr>db_input medium mypackage/bar || true<br/>
 &nbsp;<wbr>db_go || true </p>
 <p> And the postinst will look something like this: </p>
-<p>&nbsp;<wbr>#!/bin/sh<br />
-&nbsp;<wbr>CONFIGFILE=/etc/foo.conf<br />
-&nbsp;<wbr>set -e<br />
-&nbsp;<wbr>.&nbsp;<wbr>/usr/share/debconf/confmodule<br />
-&nbsp;<wbr><br />
-&nbsp;<wbr>#&nbsp;<wbr>Generate config file, if it doesn&#8217;t exist.<br />
-&nbsp;<wbr>#&nbsp;<wbr>An alternative is to copy in a template<br />
-&nbsp;<wbr>#&nbsp;<wbr>file from elsewhere.<br />
-&nbsp;<wbr>if&nbsp;<wbr>[&nbsp;<wbr>!&nbsp;<wbr>-e&nbsp;<wbr>$CONFIGFILE&nbsp;<wbr>];&nbsp;<wbr>then<br />
+<p>&nbsp;<wbr>#!/bin/sh<br/>
+&nbsp;<wbr>CONFIGFILE=/etc/foo.conf<br/>
+&nbsp;<wbr>set -e<br/>
+&nbsp;<wbr>.&nbsp;<wbr>/usr/share/debconf/confmodule<br/>
+&nbsp;<wbr><br/>
+&nbsp;<wbr>#&nbsp;<wbr>Generate config file, if it doesn&#8217;t exist.<br/>
+&nbsp;<wbr>#&nbsp;<wbr>An alternative is to copy in a template<br/>
+&nbsp;<wbr>#&nbsp;<wbr>file from elsewhere.<br/>
+&nbsp;<wbr>if&nbsp;<wbr>[&nbsp;<wbr>!&nbsp;<wbr>-e&nbsp;<wbr>$CONFIGFILE&nbsp;<wbr>];&nbsp;<wbr>then<br/>
 &nbsp;<wbr><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>echo&nbsp;<wbr>&quot;#&nbsp;<wbr>Config file for my package&quot;&nbsp;<wbr>&gt;&nbsp;<wbr>$CONFIGFILE</p>
 <p>&nbsp;<wbr><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>echo&nbsp;<wbr>&quot;FOO=&quot;&nbsp;<wbr>&gt;&gt;&nbsp;<wbr>$CONFIGFILE</p>
 <p>&nbsp;<wbr><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>echo&nbsp;<wbr>&quot;BAR=&quot;&nbsp;<wbr>&gt;&gt;&nbsp;<wbr>$CONFIGFILE</p>
 <p>&nbsp;<wbr>fi </p>
-<p>&nbsp;<wbr>#&nbsp;<wbr>Substitute in the values from the debconf db.<br />
-&nbsp;<wbr>#&nbsp;<wbr>There are obvious optimizations possible here.<br />
-&nbsp;<wbr>#&nbsp;<wbr>The cp before the sed ensures we do not mess up<br />
-&nbsp;<wbr>#&nbsp;<wbr>the config file&#8217;s ownership and permissions.<br />
-&nbsp;<wbr>db_get mypackage/foo<br />
-&nbsp;<wbr>FOO=&quot;$RET&quot;<br />
-&nbsp;<wbr>db_get mypackage/bar<br />
-&nbsp;<wbr>BAR=&quot;$RET&quot;<br />
+<p>&nbsp;<wbr>#&nbsp;<wbr>Substitute in the values from the debconf db.<br/>
+&nbsp;<wbr>#&nbsp;<wbr>There are obvious optimizations possible here.<br/>
+&nbsp;<wbr>#&nbsp;<wbr>The cp before the sed ensures we do not mess up<br/>
+&nbsp;<wbr>#&nbsp;<wbr>the config file&#8217;s ownership and permissions.<br/>
+&nbsp;<wbr>db_get mypackage/foo<br/>
+&nbsp;<wbr>FOO=&quot;$RET&quot;<br/>
+&nbsp;<wbr>db_get mypackage/bar<br/>
+&nbsp;<wbr>BAR=&quot;$RET&quot;<br/>
 &nbsp;<wbr>cp -a -f&nbsp;<wbr>$CONFIGFILE&nbsp;<wbr>$CONFIGFILE.tmp </p>
-<p>&nbsp;<wbr>#&nbsp;<wbr>If the admin deleted or commented some variables but then set<br />
-&nbsp;<wbr>#&nbsp;<wbr>them via debconf,&nbsp;<wbr>(re-)add them to the conffile.<br />
-&nbsp;<wbr>test -z&nbsp;<wbr>&quot;$FOO&quot;&nbsp;<wbr>|| grep -Eq&nbsp;<wbr>&#8216;^&nbsp;<wbr>*FOO=&#8217;&nbsp;<wbr>$CONFIGFILE ||&nbsp;<wbr>\<br />
+<p>&nbsp;<wbr>#&nbsp;<wbr>If the admin deleted or commented some variables but then set<br/>
+&nbsp;<wbr>#&nbsp;<wbr>them via debconf,&nbsp;<wbr>(re-)add them to the conffile.<br/>
+&nbsp;<wbr>test -z&nbsp;<wbr>&quot;$FOO&quot;&nbsp;<wbr>|| grep -Eq&nbsp;<wbr>&#8216;^&nbsp;<wbr>*FOO=&#8217;&nbsp;<wbr>$CONFIGFILE ||&nbsp;<wbr>\<br/>
 &nbsp;<wbr><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>echo&nbsp;<wbr>&quot;FOO=&quot;&nbsp;<wbr>&gt;&gt;&nbsp;<wbr>$CONFIGFILE</p>
-<p>&nbsp;<wbr>test -z&nbsp;<wbr>&quot;$BAR&quot;&nbsp;<wbr>|| grep -Eq&nbsp;<wbr>&#8216;^&nbsp;<wbr>*BAR=&#8217;&nbsp;<wbr>$CONFIGFILE ||&nbsp;<wbr>\<br />
+<p>&nbsp;<wbr>test -z&nbsp;<wbr>&quot;$BAR&quot;&nbsp;<wbr>|| grep -Eq&nbsp;<wbr>&#8216;^&nbsp;<wbr>*BAR=&#8217;&nbsp;<wbr>$CONFIGFILE ||&nbsp;<wbr>\<br/>
 &nbsp;<wbr><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>echo&nbsp;<wbr>&quot;BAR=&quot;&nbsp;<wbr>&gt;&gt;&nbsp;<wbr>$CONFIGFILE</p>
-<p>&nbsp;<wbr>sed -e&nbsp;<wbr>&quot;s/^&nbsp;<wbr>*FOO=.*/FOO=\&quot;$FOO\&quot;/&quot;&nbsp;<wbr>\<br />
-&nbsp;<wbr>&nbsp;<wbr>-e&nbsp;<wbr>&quot;s/^&nbsp;<wbr>*BAR=.*/BAR=\&quot;$BAR\&quot;/&quot;&nbsp;<wbr>\<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;&nbsp;<wbr>$CONFIGFILE&nbsp;<wbr>&gt;&nbsp;<wbr>$CONFIGFILE.tmp<br />
+<p>&nbsp;<wbr>sed -e&nbsp;<wbr>&quot;s/^&nbsp;<wbr>*FOO=.*/FOO=\&quot;$FOO\&quot;/&quot;&nbsp;<wbr>\<br/>
+&nbsp;<wbr>&nbsp;<wbr>-e&nbsp;<wbr>&quot;s/^&nbsp;<wbr>*BAR=.*/BAR=\&quot;$BAR\&quot;/&quot;&nbsp;<wbr>\<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;&nbsp;<wbr>$CONFIGFILE&nbsp;<wbr>&gt;&nbsp;<wbr>$CONFIGFILE.tmp<br/>
 &nbsp;<wbr>mv -f&nbsp;<wbr>$CONFIGFILE.tmp&nbsp;<wbr>$CONFIGFILE </p>
 <p> Consider how these two scripts handle all the cases. On fresh installs the questions are asked by the config script, and a new config file generated by the postinst. On upgrades and reconfigures, the config file is read in, and the values in it are used to change the values in the debconf database, so the admin&#8217;s manual changes are not lost. The questions are asked again (and may or may not be displayed). Then the postinst substitutes the values back into the config file, leaving the rest of it unchanged.</p>
 <h3>Letting the user back up</h3>
@@ -322,13 +322,13 @@ This is another question, of boolean type. </p>
 <p> Since debconf is driven by your config script, it can&#8217;t jump back to a previous question on its own but with a little help from you, it can accomplish this feat. The first step is to make your config script let debconf know it is capable of handling the user pressing a back button. You use the CAPB command to do this, passing backup as a parameter. </p>
 <p> Then after each GO command, you must test to see if the user asked to back up (debconf returns a code of 30), and if so jump back to the previous question. </p>
 <p> There are several ways to write the control structures of your program so it can jump back to previous questions when necessary. You can write goto-laden spaghetti code. Or you can create several functions and use recursion. But perhaps the cleanest and easiest way is to construct a state machine. Here is a skeleton of a state machine that you can fill out and expand. </p>
-<p>&nbsp;<wbr>#!/bin/sh<br />
-&nbsp;<wbr>set -e<br />
-&nbsp;<wbr>.&nbsp;<wbr>/usr/share/debconf/confmodule<br />
-&nbsp;<wbr>db_capb backup<br />
-&nbsp;<wbr><br />
-&nbsp;<wbr>STATE=1<br />
-&nbsp;<wbr>while true;&nbsp;<wbr>do<br />
+<p>&nbsp;<wbr>#!/bin/sh<br/>
+&nbsp;<wbr>set -e<br/>
+&nbsp;<wbr>.&nbsp;<wbr>/usr/share/debconf/confmodule<br/>
+&nbsp;<wbr>db_capb backup<br/>
+&nbsp;<wbr><br/>
+&nbsp;<wbr>STATE=1<br/>
+&nbsp;<wbr>while true;&nbsp;<wbr>do<br/>
 &nbsp;<wbr><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>case&nbsp;<wbr>&quot;$STATE&quot;&nbsp;<wbr>in</p>
 <p>&nbsp;<wbr>&nbsp;<wbr><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>1)</p>
 <p>&nbsp;<wbr>&nbsp;<wbr><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>#&nbsp;<wbr>Two unrelated questions.</p>
@@ -353,14 +353,14 @@ This is another question, of boolean type. </p>
 <p>&nbsp;<wbr><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>break&nbsp;<wbr>#&nbsp;<wbr>exits the enclosing&nbsp;<wbr>&quot;while&quot;&nbsp;<wbr>loop</p>
 <p>&nbsp;<wbr>&nbsp;<wbr><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>;;</p>
 <p>&nbsp;<wbr>&nbsp;<wbr><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>esac</p>
-<p>&nbsp;<wbr><br />
+<p>&nbsp;<wbr><br/>
 &nbsp;<wbr><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>if db_go;&nbsp;<wbr>then</p>
 <p>&nbsp;<wbr><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>STATE=$(($STATE&nbsp;<wbr>+&nbsp;<wbr>1))</p>
 <p>&nbsp;<wbr><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>else</p>
 <p>&nbsp;<wbr><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>STATE=$(($STATE &#8211; 1))</p>
 <p>&nbsp;<wbr><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>fi</p>
 <p>&nbsp;<wbr>done </p>
-<p>&nbsp;<wbr>if&nbsp;<wbr>[&nbsp;<wbr>$STATE -eq 0&nbsp;<wbr>];&nbsp;<wbr>then<br />
+<p>&nbsp;<wbr>if&nbsp;<wbr>[&nbsp;<wbr>$STATE -eq 0&nbsp;<wbr>];&nbsp;<wbr>then<br/>
 &nbsp;<wbr><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>#&nbsp;<wbr>The user has asked to back up from the first</p>
 <p>&nbsp;<wbr><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>#&nbsp;<wbr>question. This case is problematical. Regular</p>
 <p>&nbsp;<wbr><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>#&nbsp;<wbr>dpkg and apt package installation isn&#8217;t capable</p>
@@ -373,8 +373,8 @@ This is another question, of boolean type. </p>
 <p> Note that if all your config script does is ask a few unrelated questions, then there is no need for the state machine. Just ask them all, and GO; debconf will do its best to present them all in one screen, and the user won&#8217;t need to back up.</p>
 <h3>Preventing infinite loops</h3>
 <p>One gotcha with debconf comes up if you have a loop in your config script. Suppose you&#8217;re asking for input and validating it, and looping if it&#8217;s not valid: </p>
-<p>&nbsp;<wbr>ok=&#8221;<br />
-&nbsp;<wbr>do while&nbsp;<wbr>[&nbsp;<wbr>!&nbsp;<wbr>&quot;$ok&quot;&nbsp;<wbr>];<br />
+<p>&nbsp;<wbr>ok=&#8221;<br/>
+&nbsp;<wbr>do while&nbsp;<wbr>[&nbsp;<wbr>!&nbsp;<wbr>&quot;$ok&quot;&nbsp;<wbr>];<br/>
 &nbsp;<wbr><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>db_input low foo/bar || true</p>
 <p>&nbsp;<wbr><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>db_go || true</p>
 <p>&nbsp;<wbr><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>db_get foo/bar</p>
@@ -389,34 +389,34 @@ This is another question, of boolean type. </p>
 <p>Sometimes a set of related packages can be installed, and you want to prompt the user which of the set should be used by default. Examples of such sets are window managers, or ispell dictionary files. </p>
 <p> While it would be possible for each package in the set to simply prompt, &quot;Should this package be default?&quot;, this leads to a lot of repetitive questions if several of the packages are installed. It&#8217;s possible with debconf to present a list of all the packages in the set and allow the user to choose between them. Here&#8217;s how. </p>
 <p> Make all the packages in the set use a shared template. Something like this: </p>
-<p>&nbsp;<wbr>Template: shared/window-manager<br />
-&nbsp;<wbr>Type: select<br />
-&nbsp;<wbr>Choices:&nbsp;<wbr>${choices}<br />
-&nbsp;<wbr>Description: Select the default window manager.<br />
-&nbsp;<wbr>&nbsp;<wbr>Select the window manager that will be started by<br />
+<p>&nbsp;<wbr>Template: shared/window-manager<br/>
+&nbsp;<wbr>Type: select<br/>
+&nbsp;<wbr>Choices:&nbsp;<wbr>${choices}<br/>
+&nbsp;<wbr>Description: Select the default window manager.<br/>
+&nbsp;<wbr>&nbsp;<wbr>Select the window manager that will be started by<br/>
 &nbsp;<wbr>&nbsp;<wbr>default when X starts. </p>
 <p> Each package should include a copy of the template. Then it should include some code like this in its config script: </p>
-<p>&nbsp;<wbr>db_metaget shared/window-manager owners<br />
-&nbsp;<wbr>OWNERS=$RET<br />
-&nbsp;<wbr>db_metaget shared/window-manager choices<br />
-&nbsp;<wbr>CHOICES=$RET<br />
-&nbsp;<wbr><br />
-&nbsp;<wbr>if&nbsp;<wbr>[&nbsp;<wbr>&quot;$OWNERS&quot;&nbsp;<wbr>!=&nbsp;<wbr>&quot;$CHOICES&quot;&nbsp;<wbr>];&nbsp;<wbr>then<br />
+<p>&nbsp;<wbr>db_metaget shared/window-manager owners<br/>
+&nbsp;<wbr>OWNERS=$RET<br/>
+&nbsp;<wbr>db_metaget shared/window-manager choices<br/>
+&nbsp;<wbr>CHOICES=$RET<br/>
+&nbsp;<wbr><br/>
+&nbsp;<wbr>if&nbsp;<wbr>[&nbsp;<wbr>&quot;$OWNERS&quot;&nbsp;<wbr>!=&nbsp;<wbr>&quot;$CHOICES&quot;&nbsp;<wbr>];&nbsp;<wbr>then<br/>
 &nbsp;<wbr><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>db_subst shared/window-manager choices&nbsp;<wbr>$OWNERS</p>
 <p>&nbsp;<wbr><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>db_fset shared/window-manager seen false</p>
-<p>&nbsp;<wbr>fi<br />
-&nbsp;<wbr><br />
-&nbsp;<wbr>db_input medium shared/window-manager || true<br />
+<p>&nbsp;<wbr>fi<br/>
+&nbsp;<wbr><br/>
+&nbsp;<wbr>db_input medium shared/window-manager || true<br/>
 &nbsp;<wbr>db_go || true </p>
 <p> A bit of an explanation is called for. By the time your config script runs, debconf has already read in all the templates for the packages that are being installed. Since the set of packages share a question, debconf records that fact in the owners field. By a strange coincidence, the format of the owners field is the same as that of the choices field (a comma and space delimited list of values). </p>
 <p> The METAGET command can be used to get the list of owners and the list of choices. If they are different, then a new package has been installed. So use the SUBST command to change the list of choices to be the same as the list of owners, and ask the question. </p>
 <p> When a package is removed, you probably want to see if that package is the currently selected choice, and if so, prompt the user to select a different package to replace it. </p>
 <p> This can be accomplished by adding something like this to the prerm scripts of all related packages (replacing &lt;package&gt; with the package name): </p>
-<p>&nbsp;<wbr>if&nbsp;<wbr>[&nbsp;<wbr>-e&nbsp;<wbr>/usr/share/debconf/confmodule&nbsp;<wbr>];&nbsp;<wbr>then<br />
+<p>&nbsp;<wbr>if&nbsp;<wbr>[&nbsp;<wbr>-e&nbsp;<wbr>/usr/share/debconf/confmodule&nbsp;<wbr>];&nbsp;<wbr>then<br/>
 &nbsp;<wbr><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>.&nbsp;<wbr>/usr/share/debconf/confmodule</p>
 <p>&nbsp;<wbr><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>#&nbsp;<wbr>I no longer claim this question.</p>
 <p>&nbsp;<wbr><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>db_unregister shared/window-manager</p>
-<p>&nbsp;<wbr><br />
+<p>&nbsp;<wbr><br/>
 &nbsp;<wbr><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>#&nbsp;<wbr>See if the shared question still exists.</p>
 <p>&nbsp;<wbr><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>if db_get shared/window-manager;&nbsp;<wbr>then</p>
 <p>&nbsp;<wbr><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>db_metaget shared/window-manager owners</p>
@@ -427,7 +427,7 @@ This is another question, of boolean type. </p>
 <p>&nbsp;<wbr><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>db_input high shared/window-manager || true</p>
 <p>&nbsp;<wbr><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>db_go || true</p>
 <p>&nbsp;<wbr><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>fi</p>
-<p>&nbsp;<wbr><br />
+<p>&nbsp;<wbr><br/>
 &nbsp;<wbr><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>#&nbsp;<wbr>Now do whatever the postinst script did</p>
 <p>&nbsp;<wbr><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>#&nbsp;<wbr>to update the window manager symlink.</p>
 <p>&nbsp;<wbr><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>fi</p>

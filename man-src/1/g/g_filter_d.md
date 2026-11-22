@@ -17,36 +17,36 @@ description: "g_filter – frequency filters trajectories, useful for making smo
 <p> Option <code> -ol</code> writes a low-pass filtered trajectory. A frame is written every <code> nf</code> input frames. This ratio of filter length and output interval ensures a good suppression of aliasing of high-frequency motion, which is useful for making smooth movies. Also averages of properties which are linear in the coordinates are preserved, since all input frames are weighted equally in the output. When all frames are needed, use the <code> -all</code> option. </p>
 <p> Option <code> -oh</code> writes a high-pass filtered trajectory. The high-pass filtered coordinates are added to the coordinates from the structure file. When using high-pass filtering use <code> -fit</code> or make sure you use a trajectory which has been fitted on the coordinates in the structure file.</p>
 <h2>FILES</h2>
-<p> <code>-f</code><i> traj.xtc</i> <code>Input</code><br />
+<p> <code>-f</code><i> traj.xtc</i> <code>Input</code><br/>
 &nbsp;<wbr>Trajectory: xtc trr trj gro g96 pdb cpt&nbsp;<wbr> </p>
-<p> <code>-s</code><i> topol.tpr</i> <code>Input, Opt.</code><br />
+<p> <code>-s</code><i> topol.tpr</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Structure+mass(db): tpr tpb tpa gro g96 pdb&nbsp;<wbr> </p>
-<p> <code>-n</code><i> index.ndx</i> <code>Input, Opt.</code><br />
+<p> <code>-n</code><i> index.ndx</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Index file&nbsp;<wbr> </p>
-<p> <code>-ol</code><i> lowpass.xtc</i> <code>Output, Opt.</code><br />
+<p> <code>-ol</code><i> lowpass.xtc</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>Trajectory: xtc trr trj gro g96 pdb&nbsp;<wbr> </p>
-<p> <code>-oh</code><i> highpass.xtc</i> <code>Output, Opt.</code><br />
+<p> <code>-oh</code><i> highpass.xtc</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>Trajectory: xtc trr trj gro g96 pdb&nbsp;<wbr> </p>
 <h2>OTHER OPTIONS</h2>
-<p> <code>-[no]h</code><i>no </i><br />
+<p> <code>-[no]h</code><i>no </i><br/>
 &nbsp;<wbr>Print help info and quit </p>
-<p> <code>-nice</code><i> int</i><code> 19</code><br />
+<p> <code>-nice</code><i> int</i><code> 19</code><br/>
 &nbsp;<wbr>Set the nicelevel </p>
-<p> <code>-b</code><i> time</i><code> 0 </code><br />
+<p> <code>-b</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>First frame&nbsp;<wbr>(ps)&nbsp;<wbr>to read from trajectory </p>
-<p> <code>-e</code><i> time</i><code> 0 </code><br />
+<p> <code>-e</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>Last frame&nbsp;<wbr>(ps)&nbsp;<wbr>to read from trajectory </p>
-<p> <code>-dt</code><i> time</i><code> 0 </code><br />
+<p> <code>-dt</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>Only use frame when t MOD dt&nbsp;<wbr>=&nbsp;<wbr>first time&nbsp;<wbr>(ps) </p>
-<p> <code>-[no]w</code><i>no </i><br />
+<p> <code>-[no]w</code><i>no </i><br/>
 &nbsp;<wbr>View output xvg, xpm, eps and pdb files </p>
-<p> <code>-nf</code><i> int</i><code> 10</code><br />
+<p> <code>-nf</code><i> int</i><code> 10</code><br/>
 &nbsp;<wbr>Sets the filter length as well as the output interval for low-pass filtering </p>
-<p> <code>-[no]all</code><i>no </i><br />
+<p> <code>-[no]all</code><i>no </i><br/>
 &nbsp;<wbr>Write all low-pass filtered frames </p>
-<p> <code>-[no]nojump</code><i>yes </i><br />
+<p> <code>-[no]nojump</code><i>yes </i><br/>
 &nbsp;<wbr>Remove jumps of atoms across the box </p>
-<p> <code>-[no]fit</code><i>no </i><br />
+<p> <code>-[no]fit</code><i>no </i><br/>
 &nbsp;<wbr>Fit all frames to a reference structure </p>
 <h2>SEE ALSO</h2>
 <p> <code>gromacs(7)</code> </p>

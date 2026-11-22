@@ -230,7 +230,7 @@ description: "cgroups – Linux control groups"
 <p> After the aforementioned steps have been performed, the delegatee can create child cgroups within the delegated subtree (the cgroup subdirectories and the files they contain will be owned by the delegatee) and move processes between cgroups in the subtree. If some controllers are present in <i>dlgt_grp/cgroup.subtree_control</i>, or the ownership of that file was passed to the delegatee, the delegatee can also control the further redistribution of the corresponding resources into the delegated subtree.</p>
 <h3>Cgroups v2 delegation: nsdelegate and cgroup namespaces</h3>
 <p>Starting with Linux 4.13, there is a second way to perform cgroup delegation in the cgroups v2 hierarchy. This is done by mounting or remounting the cgroup v2 filesystem with the <i>nsdelegate</i> mount option. For example, if the cgroup v2 filesystem has already been mounted, we can remount it with the <i>nsdelegate</i> option as follows: </p>
-<p> mount -t cgroup2 -o remount,nsdelegate \<br />
+<p> mount -t cgroup2 -o remount,nsdelegate \<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;none&nbsp;/sys/fs/cgroup/unified </p>
 <p> The effect of this mount option is to cause cgroup namespaces to automatically become delegation boundaries. More specifically, the following restrictions apply for processes inside the cgroup namespace:</p>
 <dl>

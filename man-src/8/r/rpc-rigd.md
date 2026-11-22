@@ -19,7 +19,7 @@ description: "rigd – Hamlib rig service daemon"
 <p> Here is a summary of the supported options:</p>
 <dl>
 <dt><code>-m, &#8211;model=id</code></dt>
-<dd>Select radio model number. See rig model list (use &#8216;rigctl -l&#8217;).<br />
+<dd>Select radio model number. See rig model list (use &#8216;rigctl -l&#8217;).<br/>
  NB: <code>rigctl</code> (or third party software) will use rig model 1901 when using <code>rigd</code>.</dd>
 <dt><code>-r, &#8211;rig-file=device</code></dt>
 <dd>Use <i>device</i> as the file name of the port the radio is connected. Often a serial port, but could be a USB to serial adapter. Typically /dev/ttyS0, /dev/ttyS1, /dev/ttyUSB0, etc.</dd>
@@ -34,10 +34,10 @@ description: "rigd – Hamlib rig service daemon"
 <dt><code>-s, &#8211;serial-speed=baud</code></dt>
 <dd>Set serial speed to <i>baud</i> rate. Uses maximum serial speed from rig backend capabilities as the default.</dd>
 <dt><code>-c, &#8211;civaddr=id</code></dt>
-<dd>Use <i>id</i> as the CI-V address to communicate with the rig. Only useful for Icom rigs.<br />
+<dd>Use <i>id</i> as the CI-V address to communicate with the rig. Only useful for Icom rigs.<br/>
  NB: the <i>id</i> is in decimal notation, unless prefixed by <i>0x</i>, in which case it is hexadecimal.</dd>
 <dt><code>-C, &#8211;set-conf=parm=val[,parm=val]*</code></dt>
-<dd>Set config parameter. e.g. stop_bits=2<br />
+<dd>Set config parameter. e.g. stop_bits=2<br/>
  Use -L option of <code>rigctl</code> for a list.</dd>
 <dt><code>-t, &#8211;prog=number</code></dt>
 <dd>Use <i>number</i> as the RPC program number. The default is 536871065.</dd>
@@ -64,10 +64,10 @@ description: "rigd – Hamlib rig service daemon"
 <p>Does not support more than one rig that share the same serial port (e.g. Icom radios on a CI-V bus). </p>
 <p> Does not support more than one communication device for multiple rig control. (e.g. for Single Operator 2 Radio) Help needed!</p>
 <h2>Reporting Bugs</h2>
-<p>Report bugs to &lt;hamlib-developer [at] lists.sourceforge.net&gt;.<br />
+<p>Report bugs to &lt;hamlib-developer [at] lists.sourceforge.net&gt;.<br/>
  We are already aware of the bugs in the previous section :-)</p>
 <h2>Authors</h2>
-<p>Written by Stephane Fillod and the Hamlib Group<br />
+<p>Written by Stephane Fillod and the Hamlib Group<br/>
  &lt;<a rel="nofollow" href="http://www.hamlib.org">http://www.hamlib.org</a>&gt;.</p>
 <h2>Copyright</h2>
 <p>Copyright &#169; 2000-2007 Stephane Fillod and the Hamlib Group. </p>

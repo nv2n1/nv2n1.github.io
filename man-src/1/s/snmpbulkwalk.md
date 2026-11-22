@@ -33,12 +33,12 @@ description: "snmpbulkwalk – retrieve a subtree of management values using SNM
 <p> The command: </p>
 <p> snmpbulkwalk -v2c -Os -c public zeus system </p>
 <p> will retrieve all of the variables under system: </p>
-<p> sysDescr.0 = STRING: &quot;SunOS zeus.net.cmu.edu 4.1.3_U1 1 sun4m&quot;<br />
- sysObjectID.0 = OID: enterprises.hp.nm.hpsystem.10.1.1<br />
- sysUpTime.0 = Timeticks: (155274552) 17 days, 23:19:05<br />
- sysContact.0 = STRING: &quot;&quot;<br />
- sysName.0 = STRING: &quot;zeus.net.cmu.edu&quot;<br />
- sysLocation.0 = STRING: &quot;&quot;<br />
+<p> sysDescr.0 = STRING: &quot;SunOS zeus.net.cmu.edu 4.1.3_U1 1 sun4m&quot;<br/>
+ sysObjectID.0 = OID: enterprises.hp.nm.hpsystem.10.1.1<br/>
+ sysUpTime.0 = Timeticks: (155274552) 17 days, 23:19:05<br/>
+ sysContact.0 = STRING: &quot;&quot;<br/>
+ sysName.0 = STRING: &quot;zeus.net.cmu.edu&quot;<br/>
+ sysLocation.0 = STRING: &quot;&quot;<br/>
  sysServices.0 = INTEGER: 72 </p>
 <p> In contrast to <code>snmpwalk</code>, this information will typically be gathered in a single transaction with the agent, rather than one transaction per variable found. <code>snmpbulkwalk</code> is thus more efficient in terms of network utilisation, which may be especially important when retrieving large tables.</p>
 <h2>NOTE</h2>

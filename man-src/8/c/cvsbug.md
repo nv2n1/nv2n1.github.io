@@ -9,7 +9,7 @@ description: "cvsbug – send problem report (PR) about CVS to a central support
 
 <p>cvsbug &#8211; send problem report (PR) about CVS to a central support site</p>
 <h2>Synopsis</h2>
-<p><code>cvsbug</code> [ <i>site</i> ] [ <code>-f</code> <i>problem-report</i> ] [ <code>-t</code> <i>mail-address</i> ]<br />
+<p><code>cvsbug</code> [ <i>site</i> ] [ <code>-f</code> <i>problem-report</i> ] [ <code>-t</code> <i>mail-address</i> ]<br/>
  [ <code>-P</code> ] [ <code>-L</code> ] [ <code>&#8211;request-id</code> ] [ <code>-v</code> ]</p>
 <h2>Description</h2>
 <p><code>cvsbug</code> is a tool used to submit <i>problem reports </i> (PRs) to a central support site. In most cases the correct <i>site</i> will be the default. This argument indicates the support site which is responsible for the category of problem involved. Some sites may use a local address as a default. <i>site</i> values are defined by using the <code><a href="/docs/linux/man/5-aliases/">aliases</a></code>(5). </p>
@@ -33,7 +33,7 @@ description: "cvsbug – send problem report (PR) about CVS to a central support
 <dd>Display the <code>cvsbug</code> version number.</dd></dl>
 <p> Note: use <code>cvsbug</code> to submit problem reports rather than mailing them directly. Using both the template and <code>cvsbug</code> itself will help ensure all necessary information will reach the support site.</p>
 <h2>Environment</h2>
-<p>The environment variable <code>EDITOR</code> specifies the editor to invoke on the template.<br />
+<p>The environment variable <code>EDITOR</code> specifies the editor to invoke on the template.<br/>
  default: <code>vi</code> </p>
 <p> If the environment variable <code>PR_FORM</code> is set, then its value is used as the file name of the template for your problem-report editing session. You can use this to start with a partially completed form (for example, a form with the identification fields already completed).</p>
 <h2>How To Fill Out A Problem Report</h2>

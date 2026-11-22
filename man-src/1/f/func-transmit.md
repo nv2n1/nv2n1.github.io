@@ -15,19 +15,19 @@ Func-transmit -- cross-language func adapter
 
 <h2>DESCRIPTION</h2>
 
- Func includes a powerful Python <font SIZE="-1">API</font> for addressing the overlord via software. When writing an app in a language other than Python, func-transmit can be used to operate the overlord and recieve structured results from it. 
+ Func includes a powerful Python API for addressing the overlord via software. When writing an app in a language other than Python, func-transmit can be used to operate the overlord and recieve structured results from it. 
 
  This tool, func-transmit, is intended to be called using pipes, sending formatted data into stdin and recieving return codes via stdout. It also can be invoked using the shell.
 
 <h2>FORMATS AND USAGE</h2>
 
- The input and output format is either <font SIZE="-1">JSON</font> or <font SIZE="-1">YAML</font> 1.0. The default is <font SIZE="-1">JSON</font>. The [--yaml] option enables <font SIZE="-1">YAML</font> support. 
+ The input and output format is either JSON or YAML 1.0. The default is JSON. The [--yaml] option enables YAML support. 
 
  The data formats used by Func transmit are described in more detail (with examples) at <a rel="nofollow" HREF="https://fedorahosted.org/func/wiki/FuncTransmit">https://fedorahosted.org/func/wiki/FuncTransmit</a>
 
 <h2>EXIT_STATUS</h2>
 
- Generally func-transmit should always return 0 if loading is successful. Return data is then expressed in the output stream, to be interpreted by a <font SIZE="-1">JSON</font> or <font SIZE="-1">YAML</font> module at the other end of the pipe. Non-zero return codes indicate more serious setup problems. 
+ Generally func-transmit should always return 0 if loading is successful. Return data is then expressed in the output stream, to be interpreted by a JSON or YAML module at the other end of the pipe. Non-zero return codes indicate more serious setup problems. 
 
  Func-transmit will exit after every command issued to the overlord, it does not await further input on the pipes.
 

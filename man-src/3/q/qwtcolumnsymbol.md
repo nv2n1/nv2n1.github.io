@@ -16,8 +16,8 @@ description: "QwtColumnSymbol –"
 <p> enum <code>FrameStyle</code> { <code>NoFrame</code>, <code>Plain</code>, <code>Raised</code> } </p>
 <h3>Public Member Functions</h3>
 <p><code>QwtColumnSymbol</code> (<code>Style</code>=<code>NoStyle</code>) </p>
-<p> virtual <code>~QwtColumnSymbol</code> ()<br />
- <i>Destructor. </i><br />
+<p> virtual <code>~QwtColumnSymbol</code> ()<br/>
+ <i>Destructor. </i><br/>
  void <code>setFrameStyle</code> (<code>FrameStyle</code> <code>style</code>) </p>
 <p> <code>FrameStyle</code> <code>frameStyle</code> () const </p>
 <p> void <code>setLineWidth</code> (int width) </p>
@@ -72,7 +72,7 @@ description: "QwtColumnSymbol –"
 <p>Draw the symbol depending on its style. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
+<dd><i>painter</i> Painter<br/>
  <i>rect</i> Directed rectangle</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -81,7 +81,7 @@ description: "QwtColumnSymbol –"
 <p>Draw the symbol when it is in Box style. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
+<dd><i>painter</i> Painter<br/>
  <i>rect</i> Directed rectangle</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>

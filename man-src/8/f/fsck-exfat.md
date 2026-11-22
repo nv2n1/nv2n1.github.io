@@ -9,7 +9,7 @@ description: "exfatfsck – check an exFAT file system"
 
 <p><code>exfatfsck</code> &#8211; check an exFAT file system</p>
 <h2>Synopsis</h2>
-<p><code>exfatfsck</code> [ <code>-a</code> | <code>-n</code> | <code>-p</code> | <code>-y</code> ] <i>device</i><br />
+<p><code>exfatfsck</code> [ <code>-a</code> | <code>-n</code> | <code>-p</code> | <code>-y</code> ] <i>device</i><br/>
  <code>exfatfsck</code> [ <code>-V</code> ] </p>
 <h2>Description</h2>
 <p><code>exfatfsck</code> checks an exFAT file system for errors. It can repair some of them. </p>

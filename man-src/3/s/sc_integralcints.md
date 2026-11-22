@@ -17,55 +17,55 @@ description: "sc::IntegralCints –"
 <p><code>IntegralCints</code> (const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;b1=0, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;b2=0, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;b3=0, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;b4=0) </p>
 <p> <code>IntegralCints</code> (<code>StateIn</code> &amp;) </p>
 <p> <code>IntegralCints</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;) </p>
-<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br />
- <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br />
- <code>Integral</code> * <code>clone</code> ()<br />
- <i>Clones the given </i><code>Integral</code> factory. The new factory may need to have set_basis and set_storage to be called on it.<br />
- size_t <code>storage_required_eri</code> (const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;b1, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;b2=0, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;b3=0, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;b4=0)<br />
- <i>Returns how much storage will be needed to initialize a two-body integrals evaluator for electron repulsion integrals. </i><br />
- size_t <code>storage_required_grt</code> (const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;b1, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;b2=0, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;b3=0, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;b4=0)<br />
- <i>Returns how much storage will be needed to initialize a two-body integrals evaluator for linear R12 integrals. </i><br />
- <code>CartesianIter</code> * <code>new_cartesian_iter</code> (int)<br />
- <i>Return a </i><code>CartesianIter</code> object.<br />
- <code>RedundantCartesianIter</code> * <code>new_redundant_cartesian_iter</code> (int)<br />
- <i>Return a </i><code>RedundantCartesianIter</code> object.<br />
- <code>RedundantCartesianSubIter</code> * <code>new_redundant_cartesian_sub_iter</code> (int)<br />
- <i>Return a </i><code>RedundantCartesianSubIter</code> object.<br />
- <code>SphericalTransformIter</code> * <code>new_spherical_transform_iter</code> (int l, int inv=0, int subl=-1)<br />
- <i>Return a </i><code>SphericalTransformIter</code> object.<br />
- const <code>SphericalTransform</code> * <code>spherical_transform</code> (int l, int inv=0, int subl=-1)<br />
- <i>Return a </i><code>SphericalTransform</code> object.<br />
- <code>Ref</code>&lt; <code>OneBodyInt</code> &gt; <code>overlap</code> ()<br />
- <i>Return a </i><code>OneBodyInt</code> that computes the overlap.<br />
- <code>Ref</code>&lt; <code>OneBodyInt</code> &gt; <code>kinetic</code> ()<br />
- <i>Return a </i><code>OneBodyInt</code> that computes the kinetic energy.<br />
- <code>Ref</code>&lt; <code>OneBodyInt</code> &gt; <code>point_charge</code> (const <code>Ref</code>&lt; <code>PointChargeData</code> &gt; &amp;=0)<br />
- <i>Return a </i><code>OneBodyInt</code> that computes the integrals for interactions with <code>point</code> charges.<br />
- <code>Ref</code>&lt; <code>OneBodyInt</code> &gt; <code>nuclear</code> ()<br />
- <i>Return a </i><code>OneBodyInt</code> that computes the nuclear repulsion integrals.<br />
- <code>Ref</code>&lt; <code>OneBodyInt</code> &gt; <code>hcore</code> ()<br />
- <i>Return a </i><code>OneBodyInt</code> that computes the core Hamiltonian integrals.<br />
- <code>Ref</code>&lt; <code>OneBodyInt</code> &gt; <code>efield_dot_vector</code> (const <code>Ref</code>&lt; <code>EfieldDotVectorData</code> &gt; &amp;=0)<br />
- <i>Return a </i><code>OneBodyInt</code> that computes the electric field integrals dotted with a given vector.<br />
- <code>Ref</code>&lt; <code>OneBodyInt</code> &gt; <code>dipole</code> (const <code>Ref</code>&lt; <code>DipoleData</code> &gt; &amp;=0)<br />
- <i>Return a </i><code>OneBodyInt</code> that computes electric dipole moment integrals.<br />
- <code>Ref</code>&lt; <code>OneBodyInt</code> &gt; <code>quadrupole</code> (const <code>Ref</code>&lt; <code>DipoleData</code> &gt; &amp;=0)<br />
- <i>Return a </i><code>OneBodyInt</code> that computes electric quadrupole moment integrals.<br />
- <code>Ref</code>&lt; <code>OneBodyDerivInt</code> &gt; <code>overlap_deriv</code> ()<br />
- <i>Return a </i><code>OneBodyDerivInt</code> that computes overlap derivatives.<br />
- <code>Ref</code>&lt; <code>OneBodyDerivInt</code> &gt; <code>kinetic_deriv</code> ()<br />
- <i>Return a </i><code>OneBodyDerivInt</code> that computes kinetic energy derivatives.<br />
- <code>Ref</code>&lt; <code>OneBodyDerivInt</code> &gt; <code>nuclear_deriv</code> ()<br />
- <i>Return a </i><code>OneBodyDerivInt</code> that computes nuclear repulsion derivatives.<br />
- <code>Ref</code>&lt; <code>OneBodyDerivInt</code> &gt; <code>hcore_deriv</code> ()<br />
- <i>Return a </i><code>OneBodyDerivInt</code> that computes core Hamiltonian derivatives.<br />
- <code>Ref</code>&lt; <code>TwoBodyInt</code> &gt; <code>electron_repulsion</code> ()<br />
- <i>Return a </i><code>TwoBodyInt</code> that computes electron repulsion integrals.<br />
- <code>Ref</code>&lt; <code>TwoBodyInt</code> &gt; <code>grt</code> ()<br />
- <i>Return a </i><code>TwoBodyInt</code> that computes two-electron integrals specific to linear R12 methods.<br />
- <code>Ref</code>&lt; <code>TwoBodyDerivInt</code> &gt; <code>electron_repulsion_deriv</code> ()<br />
- <i>Return a </i><code>TwoBodyDerivInt</code> that computes electron repulsion derivatives.<br />
- void <code>set_basis</code> (const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;b1, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;b2=0, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;b3=0, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;b4=0)<br />
+<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br/>
+ <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br/>
+ <code>Integral</code> * <code>clone</code> ()<br/>
+ <i>Clones the given </i><code>Integral</code> factory. The new factory may need to have set_basis and set_storage to be called on it.<br/>
+ size_t <code>storage_required_eri</code> (const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;b1, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;b2=0, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;b3=0, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;b4=0)<br/>
+ <i>Returns how much storage will be needed to initialize a two-body integrals evaluator for electron repulsion integrals. </i><br/>
+ size_t <code>storage_required_grt</code> (const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;b1, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;b2=0, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;b3=0, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;b4=0)<br/>
+ <i>Returns how much storage will be needed to initialize a two-body integrals evaluator for linear R12 integrals. </i><br/>
+ <code>CartesianIter</code> * <code>new_cartesian_iter</code> (int)<br/>
+ <i>Return a </i><code>CartesianIter</code> object.<br/>
+ <code>RedundantCartesianIter</code> * <code>new_redundant_cartesian_iter</code> (int)<br/>
+ <i>Return a </i><code>RedundantCartesianIter</code> object.<br/>
+ <code>RedundantCartesianSubIter</code> * <code>new_redundant_cartesian_sub_iter</code> (int)<br/>
+ <i>Return a </i><code>RedundantCartesianSubIter</code> object.<br/>
+ <code>SphericalTransformIter</code> * <code>new_spherical_transform_iter</code> (int l, int inv=0, int subl=-1)<br/>
+ <i>Return a </i><code>SphericalTransformIter</code> object.<br/>
+ const <code>SphericalTransform</code> * <code>spherical_transform</code> (int l, int inv=0, int subl=-1)<br/>
+ <i>Return a </i><code>SphericalTransform</code> object.<br/>
+ <code>Ref</code>&lt; <code>OneBodyInt</code> &gt; <code>overlap</code> ()<br/>
+ <i>Return a </i><code>OneBodyInt</code> that computes the overlap.<br/>
+ <code>Ref</code>&lt; <code>OneBodyInt</code> &gt; <code>kinetic</code> ()<br/>
+ <i>Return a </i><code>OneBodyInt</code> that computes the kinetic energy.<br/>
+ <code>Ref</code>&lt; <code>OneBodyInt</code> &gt; <code>point_charge</code> (const <code>Ref</code>&lt; <code>PointChargeData</code> &gt; &amp;=0)<br/>
+ <i>Return a </i><code>OneBodyInt</code> that computes the integrals for interactions with <code>point</code> charges.<br/>
+ <code>Ref</code>&lt; <code>OneBodyInt</code> &gt; <code>nuclear</code> ()<br/>
+ <i>Return a </i><code>OneBodyInt</code> that computes the nuclear repulsion integrals.<br/>
+ <code>Ref</code>&lt; <code>OneBodyInt</code> &gt; <code>hcore</code> ()<br/>
+ <i>Return a </i><code>OneBodyInt</code> that computes the core Hamiltonian integrals.<br/>
+ <code>Ref</code>&lt; <code>OneBodyInt</code> &gt; <code>efield_dot_vector</code> (const <code>Ref</code>&lt; <code>EfieldDotVectorData</code> &gt; &amp;=0)<br/>
+ <i>Return a </i><code>OneBodyInt</code> that computes the electric field integrals dotted with a given vector.<br/>
+ <code>Ref</code>&lt; <code>OneBodyInt</code> &gt; <code>dipole</code> (const <code>Ref</code>&lt; <code>DipoleData</code> &gt; &amp;=0)<br/>
+ <i>Return a </i><code>OneBodyInt</code> that computes electric dipole moment integrals.<br/>
+ <code>Ref</code>&lt; <code>OneBodyInt</code> &gt; <code>quadrupole</code> (const <code>Ref</code>&lt; <code>DipoleData</code> &gt; &amp;=0)<br/>
+ <i>Return a </i><code>OneBodyInt</code> that computes electric quadrupole moment integrals.<br/>
+ <code>Ref</code>&lt; <code>OneBodyDerivInt</code> &gt; <code>overlap_deriv</code> ()<br/>
+ <i>Return a </i><code>OneBodyDerivInt</code> that computes overlap derivatives.<br/>
+ <code>Ref</code>&lt; <code>OneBodyDerivInt</code> &gt; <code>kinetic_deriv</code> ()<br/>
+ <i>Return a </i><code>OneBodyDerivInt</code> that computes kinetic energy derivatives.<br/>
+ <code>Ref</code>&lt; <code>OneBodyDerivInt</code> &gt; <code>nuclear_deriv</code> ()<br/>
+ <i>Return a </i><code>OneBodyDerivInt</code> that computes nuclear repulsion derivatives.<br/>
+ <code>Ref</code>&lt; <code>OneBodyDerivInt</code> &gt; <code>hcore_deriv</code> ()<br/>
+ <i>Return a </i><code>OneBodyDerivInt</code> that computes core Hamiltonian derivatives.<br/>
+ <code>Ref</code>&lt; <code>TwoBodyInt</code> &gt; <code>electron_repulsion</code> ()<br/>
+ <i>Return a </i><code>TwoBodyInt</code> that computes electron repulsion integrals.<br/>
+ <code>Ref</code>&lt; <code>TwoBodyInt</code> &gt; <code>grt</code> ()<br/>
+ <i>Return a </i><code>TwoBodyInt</code> that computes two-electron integrals specific to linear R12 methods.<br/>
+ <code>Ref</code>&lt; <code>TwoBodyDerivInt</code> &gt; <code>electron_repulsion_deriv</code> ()<br/>
+ <i>Return a </i><code>TwoBodyDerivInt</code> that computes electron repulsion derivatives.<br/>
+ void <code>set_basis</code> (const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;b1, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;b2=0, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;b3=0, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;b4=0)<br/>
  <i>Set the basis set for each center. </i></p>
 <h2>Detailed Description</h2>
 <p><code>IntegralCints</code> computes integrals between Gaussian basis functions.</p>

@@ -28,7 +28,7 @@ description: "cdda2ogg — extract audio CD audio tracks and encode them"
 <dt>MP_CODER</dt>
 <dd> The encoder program. </dd>
 <dt>MP_OPTIONS</dt>
-<dd> Additional options passed to <i>$MP_CODER</i>.<br />
+<dd> Additional options passed to <i>$MP_CODER</i>.<br/>
 &nbsp;<wbr></dd>
 <dt>FILEPREFIX</dt>
 <dd> The base part of the filename of resulting audio files. This can also be specified as the first argument to the script. </dd>
@@ -36,9 +36,9 @@ description: "cdda2ogg — extract audio CD audio tracks and encode them"
 <p> See cdda2ogg script file to get the default values </p>
 <p> System administrator can also set default values by creating of a shell include file, defining the variables for the POSIX shell, and storing them as /etc/default/cdda2ogg.</p>
 <h2>EXAMPLES</h2>
-<p> <code>CDDA_DEVICE=/dev/cdrom1 cdda2ogg</code><br />
+<p> <code>CDDA_DEVICE=/dev/cdrom1 cdda2ogg</code><br/>
  just stores every track in this device in audiotrackNUMBER.ogg </p>
-<p> <code>LIST=1 5 7 cdda2ogg PartsOfBestOfFoo</code><br />
+<p> <code>LIST=1 5 7 cdda2ogg PartsOfBestOfFoo</code><br/>
  stores the selected tracks from the default cdrom device as 01-PartsOfBestOfFoo.ogg, 05-PartsOfBestOfFoo.ogg, 07-PartsOfBestOfFoo.ogg. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-icedax/">icedax</a></code>(1)</p>

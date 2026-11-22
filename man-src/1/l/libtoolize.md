@@ -81,11 +81,11 @@ description: "libtoolize – Prepare a package to use libtool"
 <h2>AUTHOR</h2>
 <p> Written by Gary V. Vaughan &lt;gary [at] gnu.org&gt;, 2003</p>
 <h2>REPORTING BUGS</h2>
-<p> Report bugs to &lt;bug-libtool [at] gnu.org&gt;.<br />
- GNU libtool home page: &lt;<a rel="nofollow" href="https://www.gnu.org/software/libtool/">https://www.gnu.org/software/libtool/</a>&gt;.<br />
+<p> Report bugs to &lt;bug-libtool [at] gnu.org&gt;.<br/>
+ GNU libtool home page: &lt;<a rel="nofollow" href="https://www.gnu.org/software/libtool/">https://www.gnu.org/software/libtool/</a>&gt;.<br/>
  General help using GNU software: &lt;<a rel="nofollow" href="http://www.gnu.org/gethelp/">http://www.gnu.org/gethelp/</a>&gt;.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2015 Free Software Foundation, Inc.<br />
+<p> Copyright &#169; 2015 Free Software Foundation, Inc.<br/>
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>libtoolize</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>libtoolize</code> programs are properly installed at your site, the command</p>

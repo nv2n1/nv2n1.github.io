@@ -10,7 +10,7 @@ description: "sormrz.f –"
 <p>sormrz.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>sormrz</code> (SIDE, TRANS, M, N, K, L, A, LDA, TAU, C, LDC, WORK, LWORK, INFO)<br />
+<p>subroutine <code>sormrz</code> (SIDE, TRANS, M, N, K, L, A, LDA, TAU, C, LDC, WORK, LWORK, INFO)<br/>
  <i></i><code>SORMRZ</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sormrz (characterSIDE, characterTRANS, integerM, integerN, integerK, integerL, real, dimension( lda, * )A, integerLDA, real, dimension( * )TAU, real, dimension( ldc, * )C, integerLDC, real, dimension( * )WORK, integerLWORK, integerINFO)</h3>

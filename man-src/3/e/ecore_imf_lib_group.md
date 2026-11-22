@@ -9,9 +9,9 @@ description: "Ecore Input Method Library Functions – Utility functions that se
 
 <p>Ecore Input Method Library Functions &#8211; Utility functions that set up and shut down the Ecore Input Method library. </p>
 <h3>Functions</h3>
-<p>EAPI int <code>ecore_imf_init</code> (void)<br />
- <i>Initialises the Ecore_IMF library. </i><br />
- EAPI int <code>ecore_imf_shutdown</code> (void)<br />
+<p>EAPI int <code>ecore_imf_init</code> (void)<br/>
+ <i>Initialises the Ecore_IMF library. </i><br/>
+ EAPI int <code>ecore_imf_shutdown</code> (void)<br/>
  <i>Shuts down the Ecore_IMF library. </i></p>
 <h2>Detailed Description</h2>
 <p>Utility functions that set up and shut down the Ecore Input Method library.</p>

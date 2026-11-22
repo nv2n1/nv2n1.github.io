@@ -13,12 +13,12 @@ description: "modules – Shorewall file"
 <dt> <code>/usr/share/shorewall/modules</code></dt>
 <dt> <code>/usr/share/shorewall/helpers</code></dt></dl>
 <h2>Description</h2>
-<dd>These files specify which kernel modules Shorewall will load before trying to determine your iptables/kernel&#8217;s capabilities. The modules file is used when LOAD_HELPERS_ONLY=No in m[blue]<code>shorewall.conf</code>m[]<font SIZE="-2">[1]</font>(8); the helpers file is used when LOAD_HELPERS_ONLY=Yes Each record in the files has the following format:</dd>
+<dd>These files specify which kernel modules Shorewall will load before trying to determine your iptables/kernel&#8217;s capabilities. The modules file is used when LOAD_HELPERS_ONLY=No in m[blue]<code>shorewall.conf</code>m[][1](8); the helpers file is used when LOAD_HELPERS_ONLY=Yes Each record in the files has the following format:</dd>
 <dl>
 <dt> <code>loadmodule</code> <i>modulename</i> [<i>moduleoption</i>&#8230;]</dt></dl>
-<dd>The <i>modulename</i> names a kernel module (without suffix). Shorewall will search for modules based on your MODULESDIR and MODULE_SUFFIX settings in m[blue]<code>shorewall.conf</code>m[]<font SIZE="-2">[1]</font>(8). The <i>moduleoption</i>s are passed to modprobe (if installed) or to insmod. The /usr/share/shorewall/modules file contains a large number of modules. Users are encouraged to copy the file to /etc/shorewall/modules and modify the copy to load only the modules required or to use LOAD_HELPERS_ONLY=Yes..if n</dd>
+<dd>The <i>modulename</i> names a kernel module (without suffix). Shorewall will search for modules based on your MODULESDIR and MODULE_SUFFIX settings in m[blue]<code>shorewall.conf</code>m[][1](8). The <i>moduleoption</i>s are passed to modprobe (if installed) or to insmod. The /usr/share/shorewall/modules file contains a large number of modules. Users are encouraged to copy the file to /etc/shorewall/modules and modify the copy to load only the modules required or to use LOAD_HELPERS_ONLY=Yes..if n</dd>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  If you build monolithic kernels and have not installed module-init-tools, then create an empty /etc/shorewall/modules file; that will prevent Shorewall from trying to load modules at all. </dd>
 <h2>Example</h2>
 <p>loadmodule ip_conntrack_ftp ports=21,221</p>

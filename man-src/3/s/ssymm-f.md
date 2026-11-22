@@ -10,7 +10,7 @@ description: "ssymm.f –"
 <p>ssymm.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>ssymm</code> (SIDE, UPLO, M, N, ALPHA, A, LDA, B, LDB, BETA, C, LDC)<br />
+<p>subroutine <code>ssymm</code> (SIDE, UPLO, M, N, ALPHA, A, LDA, B, LDB, BETA, C, LDC)<br/>
  <i></i><code>SSYMM</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ssymm (characterSIDE, characterUPLO, integerM, integerN, realALPHA, real, dimension(lda,*)A, integerLDA, real, dimension(ldb,*)B, integerLDB, realBETA, real, dimension(ldc,*)C, integerLDC)</h3>

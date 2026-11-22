@@ -16,8 +16,8 @@ description: "Lintian::Processable::Source — A dsc source package Lintian can 
 <p>This class represents a &#8216;dsc&#8217; file that Lintian can process. Objects of this kind are often part of a Lintian::Group, which represents all the files in a changes or buildinfo file.</p>
 <h2>Instance Methods</h2>
 <dl COMPACT>
-<dt>init (<font SIZE="-1">FILE</font>)</dt>
-<dd>Initializes a new object from <font SIZE="-1">FILE.</font></dd>
+<dt>init (FILE)</dt>
+<dd>Initializes a new object from FILE.</dd>
 <dt>unpack</dt>
 <dd></dd></dl>
 <h2>Author</h2>

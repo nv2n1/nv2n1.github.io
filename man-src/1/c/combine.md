@@ -36,4 +36,4 @@ description: "combine – combine sets of lines from two files using boolean ope
 <p> <code><a href="/docs/linux/man/1-join/">join</a></code>(1)</p>
 <h2>AUTHOR</h2>
 <p> Copyright 2006 by Joey Hess &lt;id [at] joeyh.name&gt; </p>
-<p> Licensed under the <font SIZE="-1">GNU GPL.</font> </p>
+<p> Licensed under the GNU GPL. </p>

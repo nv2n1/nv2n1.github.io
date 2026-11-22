@@ -10,9 +10,9 @@ description: "bugpoint – automatic test case reduction tool"
 
 <p> bugpoint &#8211; automatic test case reduction tool </p>
 <h2>SYNOPSIS</h2>
-<p> <code>bugpoint</code> [<i>options</i>] [<i>input </i><font SIZE="-1"><i>LLVM</i></font><i> ll/bc files</i>] [<i></i><font SIZE="-1"><i>LLVM</i></font><i> passes</i>] <code>&#8211;args</code> <i>program arguments</i></p>
+<p> <code>bugpoint</code> [<i>options</i>] [<i>input </i><i>LLVM</i><i> ll/bc files</i>] [<i></i><i>LLVM</i><i> passes</i>] <code>&#8211;args</code> <i>program arguments</i></p>
 <h2>DESCRIPTION</h2>
-<p> <code>bugpoint</code> narrows down the source of problems in <font SIZE="-1">LLVM</font> tools and passes. It can be used to debug three types of failures: optimizer crashes, miscompilations by optimizers, or bad native code generation (including problems in the static and <font SIZE="-1">JIT</font> compilers). It aims to reduce large test cases to small, useful ones. For more information on the design and inner workings of <code>bugpoint</code>, as well as advice for using bugpoint, see <i>llvm/docs/Bugpoint.html</i> in the <font SIZE="-1">LLVM</font> distribution.</p>
+<p> <code>bugpoint</code> narrows down the source of problems in LLVM tools and passes. It can be used to debug three types of failures: optimizer crashes, miscompilations by optimizers, or bad native code generation (including problems in the static and JIT compilers). It aims to reduce large test cases to small, useful ones. For more information on the design and inner workings of <code>bugpoint</code>, as well as advice for using bugpoint, see <i>llvm/docs/Bugpoint.html</i> in the LLVM distribution.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>&#8211;additional-so</code> <i>library</i></dt>
@@ -26,7 +26,7 @@ bugpoint[bugpoint args]-- args-- [program args]
 </code></pre>
 <p> The &#8220;&#8211;&#8221; right after the <code>&#8211;args</code> option tells <code>bugpoint</code> to consider any options starting with <tt>&quot;-&quot;</tt> to be part of the <code>&#8211;args</code> option, not as options to <code>bugpoint</code> itself.</p>
 <dt><code>&#8211;tool-args</code> <i>tool args</i></dt>
-<dd> Pass all arguments specified after &#8211;tool-args to the <font SIZE="-1">LLVM</font> tool under test (<code>llc</code>, <code>lli</code>, etc.) whenever it runs. You should use this option in the following way: </dd>
+<dd> Pass all arguments specified after &#8211;tool-args to the LLVM tool under test (<code>llc</code>, <code>lli</code>, etc.) whenever it runs. You should use this option in the following way: </dd>
 <pre><code>
 bugpoint[bugpoint args]-- tool - args-- [tool args]
 </code></pre>
@@ -57,9 +57,9 @@ bugpoint[bugpoint args]-- tool - args-- [tool args]
 <dt><code>&#8211;profile-info-file</code> <i>filename</i></dt>
 <dd> Profile file loaded by <code>&#8211;profile-loader</code>.</dd>
 <dt><code>&#8211;run-{int,jit,llc,cbe,custom}</code></dt>
-<dd> Whenever the test program is compiled, <code>bugpoint</code> should generate code for it using the specified code generator. These options allow you to choose the interpreter, the <font SIZE="-1">JIT</font> compiler, the static native code compiler, the C backend, or a custom command (see <code>&#8211;exec-command</code>) respectively.</dd>
+<dd> Whenever the test program is compiled, <code>bugpoint</code> should generate code for it using the specified code generator. These options allow you to choose the interpreter, the JIT compiler, the static native code compiler, the C backend, or a custom command (see <code>&#8211;exec-command</code>) respectively.</dd>
 <dt><code>&#8211;safe-{llc,cbe,custom}</code></dt>
-<dd> When debugging a code generator, <code>bugpoint</code> should use the specified code generator as the &#8220;safe&#8221; code generator. This is a known-good code generator used to generate the &#8220;reference output&#8221; if it has not been provided, and to compile portions of the program that as they are excluded from the testcase. These options allow you to choose the static native code compiler, the C backend, or a custom command, (see <code>&#8211;exec-command</code>) respectively. The interpreter and the <font SIZE="-1">JIT</font> backends cannot currently be used as the &#8220;safe&#8221; backends.</dd>
+<dd> When debugging a code generator, <code>bugpoint</code> should use the specified code generator as the &#8220;safe&#8221; code generator. This is a known-good code generator used to generate the &#8220;reference output&#8221; if it has not been provided, and to compile portions of the program that as they are excluded from the testcase. These options allow you to choose the static native code compiler, the C backend, or a custom command, (see <code>&#8211;exec-command</code>) respectively. The interpreter and the JIT backends cannot currently be used as the &#8220;safe&#8221; backends.</dd>
 <dt><code>&#8211;exec-command</code> <i>command</i></dt>
 <dd> This option defines the command to use with the <code>&#8211;run-custom</code> and <code>&#8211;safe-custom</code> options to execute the bitcode testcase. This can be useful for cross-compilation.</dd>
 <dt><code>&#8211;safe-path</code> <i>path</i></dt>
@@ -69,4 +69,4 @@ bugpoint[bugpoint args]-- tool - args-- [tool args]
 <h2>SEE ALSO</h2>
 <p> opt</p>
 <h2>AUTHOR</h2>
-<p> Maintained by the <font SIZE="-1">LLVM</font> Team (&lt;<a rel="nofollow" href="http://llvm.org">http://llvm.org</a>&gt;). </p>
+<p> Maintained by the LLVM Team (&lt;<a rel="nofollow" href="http://llvm.org">http://llvm.org</a>&gt;). </p>

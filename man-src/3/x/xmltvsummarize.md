@@ -26,12 +26,12 @@ XMLTV::Summarize - Perl extension to summarize XMLTV data
  print &quot;and episode title $sub_title&quot; if defined $sub_title;
  print &quot;, on channel $channel.\n&quot;;
  }
- }</pre><h2>Description</h2>This module processes programme and channel data from the <font SIZE="-1">XMLTV</font> module to help produce a human-readable summary or <font SIZE="-1">TV</font> guide. It takes care of choosing the correct language (based on the <font SIZE="-1">LANG</font> environment variable) and of looking up the name of channels from their id. 
+ }</pre><h2>Description</h2>This module processes programme and channel data from the XMLTV module to help produce a human-readable summary or TV guide. It takes care of choosing the correct language (based on the LANG environment variable) and of looking up the name of channels from their id. 
 
- There is one public routine, <tt>&quot;summarize()&quot;</tt>. This takes (references to) a channels hash and a programmes list, the same format as those returned by the <font SIZE="-1">XMLTV</font> module. It returns a list of 'summary' elements where each element is a list of five items: start time, stop time, title, 'sub-title', and channel name. The stop time and sub-title may be undef. 
+ There is one public routine, <tt>&quot;summarize()&quot;</tt>. This takes (references to) a channels hash and a programmes list, the same format as those returned by the XMLTV module. It returns a list of 'summary' elements where each element is a list of five items: start time, stop time, title, 'sub-title', and channel name. The stop time and sub-title may be undef. 
 
  The times are formatted as hh:mm, with a timezone appended when the timezone changes in the middle of listings. For the titles and channel name, the shortest string that is in an acceptable language is chosen. 
 
- The list of acceptable languages normally contains just one element, taken from <font SIZE="-1">LANG,</font> but you can set it manually as <tt>@XMLTV::Summarize::PREF_LANGS</tt> if wished.
+ The list of acceptable languages normally contains just one element, taken from LANG, but you can set it manually as <tt>@XMLTV::Summarize::PREF_LANGS</tt> if wished.
 <h2>Author</h2>Ed Avis, ed [at] membled.com
-<h2>See Also</h2><font SIZE="-1"><i>XMLTV</i></font><i></i>(1).
+<h2>See Also</h2><i>XMLTV</i><i></i>(1).

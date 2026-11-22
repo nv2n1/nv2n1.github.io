@@ -33,7 +33,7 @@ ewline) characters. The backslash and the newline are replaced with a space (&qu
 <h3><code>load_values</code></h3>
 <p>This entry cannot be configured but is only displayed in case of a <code>-se</code> command. All load values are displayed as reported by the on the host. The load values are enlisted in a comma separated list. Each load value start with its name, followed by an equal sign and the reported value.</p>
 <h3><code>processors</code></h3>
-<p><code>Note:</code> Deprecated, may be removed in future release.<br />
+<p><code>Note:</code> Deprecated, may be removed in future release.<br/>
  This entry cannot be configured but is only displayed in case of a <code>-se</code> command. Its value is the number of processors which has been detected by on the corresponding host.</p>
 <h3><code>usage_scaling</code></h3>
 <p>The format is equivalent to <code>load_scaling</code> (see above), the only valid attributes to be scaled however are <code>cpu</code> for CPU time consumption, <code>mem </code> for Memory consumption aggregated over the life-time of jobs and <code>io</code> for data transferred via any I/O devices. The default NONE means &quot;no scaling&quot;, i.e. all scaling factors are 1.</p>

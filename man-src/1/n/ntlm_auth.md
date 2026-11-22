@@ -146,7 +146,7 @@ description: "ntlm_auth – tool to allow external access to Winbind’s NTLM au
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Warning</code> </font><br />
+  <code>Warning</code> <br/>
  Implementers should take care to base64 encode any data (such as usernames/passwords) that may contain malicous user data, such as a newline. They may also need to decode strings from the helper, which likewise may have been base64 encoded. </dd>
 </dl>
 </dl>
@@ -252,7 +252,7 @@ auth_param basic credentialsttl 2 hours
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> This example assumes that ntlm_auth has been installed into your path, and that the group permissions on winbindd_privileged are as described above. </p>
 </dl>
 <p> To setup ntlm_auth for use by squid 2.5 with group limitation in addition to the above example, the following should be added to the squid.conf file. </p>

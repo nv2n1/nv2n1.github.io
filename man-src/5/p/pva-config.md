@@ -15,10 +15,10 @@ description: "pva-config – general PHP VOMS-Admin interface configuration"
 <h2>Extended Description</h2>
 <dl>
 <dt>Configuration file is the PHP script containing configuration variables:</dt>
-<dd><code>&lt;?php</code><br />
- <code>$variable1=keyword;</code><br />
+<dd><code>&lt;?php</code><br/>
+ <code>$variable1=keyword;</code><br/>
  <code>$variable2=keyword;</code> </dd>
-<p> <code>$variableN=keyword;</code><br />
+<p> <code>$variableN=keyword;</code><br/>
  <code>?&gt;</code> </p>
 <p> PHP supports &#8216;C&#8217;, &#8216;C++&#8217; and Unix shell-style comments that can be used in file. </p>
 <p> Configuration file contains several configuration variables:</p>

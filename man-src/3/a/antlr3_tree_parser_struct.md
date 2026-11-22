@@ -12,17 +12,17 @@ description: "ANTLR3_TREE_PARSER_struct –"
 <h2>Synopsis</h2>
 <p>#include &lt;<a href="file:/usr/include/antlr3treeparser.h">antlr3treeparser.h</a>&gt;</p>
 <h3>Data Fields</h3>
-<p><code>pANTLR3_COMMON_TREE_NODE_STREAM</code> <code>ctnstream</code><br />
- <i>Pointer to the common tree node stream for the parser. </i><br />
- void(* <code>free</code> )(struct <code>ANTLR3_TREE_PARSER_struct</code> *parser)<br />
- <i>Pointer to a function that knows how to free resources of an ANTLR3 tree parser. </i><br />
- <code>pANTLR3_COMMON_TREE_NODE_STREAM</code>(* <code>getTreeNodeStream</code> )(struct <code>ANTLR3_TREE_PARSER_struct</code> *parser)<br />
- <i>Return a pointer to the input stream. </i><br />
- <code>pANTLR3_BASE_RECOGNIZER</code> <code>rec</code><br />
- <i>A pointer to the base recognizer, where most of the parser functions actually live because they are shared between parser and tree parser and this is the easier way than copying the interface all over the place. </i><br />
- void(* <code>setTreeNodeStream</code> )(struct <code>ANTLR3_TREE_PARSER_struct</code> *parser, <code>pANTLR3_COMMON_TREE_NODE_STREAM</code> input)<br />
- <i>Set the input stream and reset the parser. </i><br />
- void * <code>super</code><br />
+<p><code>pANTLR3_COMMON_TREE_NODE_STREAM</code> <code>ctnstream</code><br/>
+ <i>Pointer to the common tree node stream for the parser. </i><br/>
+ void(* <code>free</code> )(struct <code>ANTLR3_TREE_PARSER_struct</code> *parser)<br/>
+ <i>Pointer to a function that knows how to free resources of an ANTLR3 tree parser. </i><br/>
+ <code>pANTLR3_COMMON_TREE_NODE_STREAM</code>(* <code>getTreeNodeStream</code> )(struct <code>ANTLR3_TREE_PARSER_struct</code> *parser)<br/>
+ <i>Return a pointer to the input stream. </i><br/>
+ <code>pANTLR3_BASE_RECOGNIZER</code> <code>rec</code><br/>
+ <i>A pointer to the base recognizer, where most of the parser functions actually live because they are shared between parser and tree parser and this is the easier way than copying the interface all over the place. </i><br/>
+ void(* <code>setTreeNodeStream</code> )(struct <code>ANTLR3_TREE_PARSER_struct</code> *parser, <code>pANTLR3_COMMON_TREE_NODE_STREAM</code> input)<br/>
+ <i>Set the input stream and reset the parser. </i><br/>
+ void * <code>super</code><br/>
  <i>Pointer to any super class. </i></p>
 <h2>Detailed Description</h2>
 <p>Internal structure representing an element in a hash bucket. </p>

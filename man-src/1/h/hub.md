@@ -10,27 +10,27 @@ description: "hub – git + hub = github"
 
 <p> <code>hub</code> &#8211; git + hub = github</p>
 <h2>SYNOPSIS</h2>
-<p> <code>hub</code> [<code>&#8211;noop</code>] <i>COMMAND</i> <i>OPTIONS</i><br />
+<p> <code>hub</code> [<code>&#8211;noop</code>] <i>COMMAND</i> <i>OPTIONS</i><br/>
  <code>hub alias</code> [<code>-s</code>] [<i>SHELL</i>]</p>
 <h3>Expanded git commands:</h3>
-<p> <code>git init -g</code> <i>OPTIONS</i><br />
- <code>git clone</code> [<code>-p</code>] <i>OPTIONS</i> [<i>USER</i>/]<i>REPOSITORY</i> <i>DIRECTORY</i><br />
- <code>git remote add</code> [<code>-p</code>] <i>OPTIONS</i> <i>USER</i>[/<i>REPOSITORY</i>]<br />
- <code>git remote set-url</code> [<code>-p</code>] <i>OPTIONS</i> <i>REMOTE-NAME</i> <i>USER</i>[/<i>REPOSITORY</i>]<br />
- <code>git fetch</code> <i>USER-1</i>,[<i>USER-2</i>,&#8230;]<br />
- <code>git checkout</code> <i>PULLREQ-URL</i> [<i>BRANCH</i>]<br />
- <code>git merge</code> <i>PULLREQ-URL</i><br />
- <code>git cherry-pick</code> <i>GITHUB-REF</i><br />
- <code>git am</code> <i>GITHUB-URL</i><br />
- <code>git apply</code> <i>GITHUB-URL</i><br />
- <code>git push</code> <i>REMOTE-1</i>,<i>REMOTE-2</i>,&#8230;,<i>REMOTE-N</i> [<i>REF</i>]<br />
+<p> <code>git init -g</code> <i>OPTIONS</i><br/>
+ <code>git clone</code> [<code>-p</code>] <i>OPTIONS</i> [<i>USER</i>/]<i>REPOSITORY</i> <i>DIRECTORY</i><br/>
+ <code>git remote add</code> [<code>-p</code>] <i>OPTIONS</i> <i>USER</i>[/<i>REPOSITORY</i>]<br/>
+ <code>git remote set-url</code> [<code>-p</code>] <i>OPTIONS</i> <i>REMOTE-NAME</i> <i>USER</i>[/<i>REPOSITORY</i>]<br/>
+ <code>git fetch</code> <i>USER-1</i>,[<i>USER-2</i>,&#8230;]<br/>
+ <code>git checkout</code> <i>PULLREQ-URL</i> [<i>BRANCH</i>]<br/>
+ <code>git merge</code> <i>PULLREQ-URL</i><br/>
+ <code>git cherry-pick</code> <i>GITHUB-REF</i><br/>
+ <code>git am</code> <i>GITHUB-URL</i><br/>
+ <code>git apply</code> <i>GITHUB-URL</i><br/>
+ <code>git push</code> <i>REMOTE-1</i>,<i>REMOTE-2</i>,&#8230;,<i>REMOTE-N</i> [<i>REF</i>]<br/>
  <code>git submodule add</code> [<code>-p</code>] <i>OPTIONS</i> [<i>USER</i>/]<i>REPOSITORY</i> <i>DIRECTORY</i></p>
 <h3>Custom git commands:</h3>
-<p> <code>git create</code> [<i>NAME</i>] [<code>-p</code>] [<code>-d</code> <i>DESCRIPTION</i>] [<code>-h</code> <i>HOMEPAGE</i>]<br />
- <code>git browse</code> [<code>-u</code>] [[<i>USER</i><code>/</code>]<i>REPOSITORY</i>] [SUBPAGE]<br />
- <code>git compare</code> [<code>-u</code>] [<i>USER</i>] [[<i>START</i>&#8230;]<i>END</i>]<br />
- <code>git fork</code> [<code>&#8211;no-remote</code>]<br />
- <code>git pull-request</code> [<code>-o</code>|<code>&#8211;browse</code>] [<code>-f</code>] [<code>-m</code> <i>MESSAGE</i>|<code>-F</code> <i>FILE</i>|<code>-i</code> <i>ISSUE</i>|<i>ISSUE-URL</i>] [<code>-b</code> <i>BASE</i>] [<code>-h</code> <i>HEAD</i>]<br />
+<p> <code>git create</code> [<i>NAME</i>] [<code>-p</code>] [<code>-d</code> <i>DESCRIPTION</i>] [<code>-h</code> <i>HOMEPAGE</i>]<br/>
+ <code>git browse</code> [<code>-u</code>] [[<i>USER</i><code>/</code>]<i>REPOSITORY</i>] [SUBPAGE]<br/>
+ <code>git compare</code> [<code>-u</code>] [<i>USER</i>] [[<i>START</i>&#8230;]<i>END</i>]<br/>
+ <code>git fork</code> [<code>&#8211;no-remote</code>]<br/>
+ <code>git pull-request</code> [<code>-o</code>|<code>&#8211;browse</code>] [<code>-f</code>] [<code>-m</code> <i>MESSAGE</i>|<code>-F</code> <i>FILE</i>|<code>-i</code> <i>ISSUE</i>|<i>ISSUE-URL</i>] [<code>-b</code> <i>BASE</i>] [<code>-h</code> <i>HEAD</i>]<br/>
  <code>git ci-status</code> [<code>-v</code>] [<i>COMMIT</i>]</p>
 <h2>DESCRIPTION</h2>
 <p> hub enhances various git commands to ease most common workflows with GitHub.</p>
@@ -84,7 +84,7 @@ description: "hub – git + hub = github"
 <dt>
 </dt><dd> Issue to pull request conversion via <code>-i &lt;ISSUE&gt;</code> or <i>ISSUE-URL</i> arguments is deprecated and will likely be removed from the future versions of both hub and GitHub API.</dd>
 <dt><code>git ci-status</code> [<code>-v</code>] [<i>COMMIT</i>]</dt>
-<dd> Looks up the SHA for <i>COMMIT</i> in GitHub Status API and displays the latest status. Exits with one of:<br />
+<dd> Looks up the SHA for <i>COMMIT</i> in GitHub Status API and displays the latest status. Exits with one of:<br/>
  success (0), error (1), failure (1), pending (2), no status (3)</dd>
 <dt>
 </dt><dd> If <code>-v</code> is given, additionally print the URL to CI build results.</dd></dl>
@@ -158,21 +158,21 @@ $ git cherry-pick mislav@SHA
 &gt; git cherry-pick SHA
 </pre>
 <h3>git am, git apply</h3>
-<p>$ git am https :                                                                                            // github.com/defunkt/hub/pull/55<br />
-                 [downloads patch via API] &gt; git am / tmp / 55.patch $ git am&#8211; ignore &#8211; whitespace https : // github.com/davidbalbert/hub/commit/fdb9921<br />
-                                                                                                            [downloads patch via API] &gt;<br />
-                 git am&#8211; ignore &#8211; whitespace / tmp / fdb9921.patch $ git apply https : // gist.github.com/8da7fb575debd88c54cf<br />
-                                                                                        [downloads patch via API] &gt;<br />
+<p>$ git am https :                                                                                            // github.com/defunkt/hub/pull/55<br/>
+                 [downloads patch via API] &gt; git am / tmp / 55.patch $ git am&#8211; ignore &#8211; whitespace https : // github.com/davidbalbert/hub/commit/fdb9921<br/>
+                                                                                                            [downloads patch via API] &gt;<br/>
+                 git am&#8211; ignore &#8211; whitespace / tmp / fdb9921.patch $ git apply https : // gist.github.com/8da7fb575debd88c54cf<br/>
+                                                                                        [downloads patch via API] &gt;<br/>
                  git apply / tmp / gist &#8211; 8da7fb575debd88c54cf.txt</p>
 <h3>git fork</h3>
-<p>$ git fork<br />
+<p>$ git fork<br/>
         [repo forked on GitHub] &gt; git remote add &#8211; f YOUR_USER git[at] github.com : YOUR_USER / CURRENT_REPO.git</p>
 <h3>git pull-request</h3>
-<p>#while on a topic branch called &#8220;feature&#8221;:<br />
-$ git pull-request<br />
-[ opens text editor to edit title &amp; body for the request ]<br />
-[ opened pull request on GitHub for &#8220;YOUR_USER:feature&#8221; ]<br />
-#explicit title, pull base &amp;head:<br />
+<p>#while on a topic branch called &#8220;feature&#8221;:<br/>
+$ git pull-request<br/>
+[ opens text editor to edit title &amp; body for the request ]<br/>
+[ opened pull request on GitHub for &#8220;YOUR_USER:feature&#8221; ]<br/>
+#explicit title, pull base &amp;head:<br/>
 $ git pull-request -m &#8220;Implemented feature X&#8221; -b defunkt:master -h mislav:feature</p>
 <h3>git checkout</h3>
 <pre>
@@ -188,12 +188,12 @@ $ git merge <a rel="nofollow" href="https://github.com/defunkt/hub/pull/73">http
 &gt; git merge mislav/feature --no-ff -m 'Merge pull request #73 from mislav/feature...'
 </pre>
 <h3>git create</h3>
-<p>$ git create<br />
-        [repo created on GitHub] &gt; git remote add origin git[at] github.com : YOUR_USER / CURRENT_REPO.git<br />
-#with description:<br />
-                                                                                              $ git create &#8211;<br />
-                                       d &#8216;It shall be mine, all mine!&#8217; $ git create recipes<br />
-                                           [repo created on GitHub] &gt;<br />
+<p>$ git create<br/>
+        [repo created on GitHub] &gt; git remote add origin git[at] github.com : YOUR_USER / CURRENT_REPO.git<br/>
+#with description:<br/>
+                                                                                              $ git create &#8211;<br/>
+                                       d &#8216;It shall be mine, all mine!&#8217; $ git create recipes<br/>
+                                           [repo created on GitHub] &gt;<br/>
     git remote add origin git[at] github.com : YOUR_USER / recipes.git $ git create sinatra / recipes[repo created in GitHub organization] &gt; git remote add origin git[at] github.com : sinatra / recipes.git</p>
 <h3>git init</h3>
 <pre>

@@ -93,12 +93,12 @@ description: "cfgmaker – Creates mrtg.cfg files (for mrtg-2.17.4)"
  --output=file     output filename default is STDOUT
 </code></pre>
 <h2>DESCRIPTION</h2>
-<p> <code>Cfgmaker</code> creates <font SIZE="-1">MRTG</font> configuration files based on information pulled from a router or another <font SIZE="-1">SNMP</font> manageable device. </p>
+<p> <code>Cfgmaker</code> creates MRTG configuration files based on information pulled from a router or another SNMP manageable device. </p>
 <p> [<i>community</i><code>@</code>]<i>router</i> </p>
 <p> <i>Community</i> is the community name of the device you want to create a configuration for. If not specified, it defaults to &#8216;<code>public</code>&#8216;; you might want to try this first if you do not know the community name of a device. If you are using the wrong community name you will get no response from the device. </p>
-<p> <i>Router</i> is the <font SIZE="-1">DNS</font> name or the <font SIZE="-1">IP</font> number of an SNMP-managable device. Following the name you can specify 6 further options separated by colons. The full syntax looks like this: </p>
+<p> <i>Router</i> is the DNS name or the IP number of an SNMP-managable device. Following the name you can specify 6 further options separated by colons. The full syntax looks like this: </p>
 <p> <code>router</code>[:[<code>prt</code>][:[<code>tmout</code>][:[<code>retr</code>][:[<code>backoff</code>][:<code>vers</code>]]]]] </p>
-<p> Of special interest may be the last parameter, <code>vers</code>. If you set this to &#8216;2&#8217; then your device will be queried with <font SIZE="-1">SNMP</font> version 2 requests. This allows you to poll the 64 bit traffic counters in the device and will thus work much better with fast interfaces (no more counter overrun). Note that the order in which the routers are specified on the command line do matter as the same order is used when the configuration file is generated. The first specified router has it&#8217;s configuration lines genrated first, followed by the lines belonging to the next router and so on. </p>
+<p> Of special interest may be the last parameter, <code>vers</code>. If you set this to &#8216;2&#8217; then your device will be queried with SNMP version 2 requests. This allows you to poll the 64 bit traffic counters in the device and will thus work much better with fast interfaces (no more counter overrun). Note that the order in which the routers are specified on the command line do matter as the same order is used when the configuration file is generated. The first specified router has it&#8217;s configuration lines genrated first, followed by the lines belonging to the next router and so on. </p>
 <p> Note that the first line of the generated cfg file will contain all the commandline options you used for generating it. This is to allow for the easy &#8216;regeneration&#8217; in case you want to add newhosts or make some other global change.</p>
 <h3>Configuration</h3>
 <p> Except for the <code>&#8211;output</code> and <code>&#8211;global</code> options, all options affect only the routers following them on the command line. If an option specified earlier on the command line reappears later on the command line with another value, the new value overrides the old value as far as remaining routers are concerned. This way options might be tailored for groups of routers or for individual routers. </p>
@@ -110,17 +110,17 @@ description: "cfgmaker – Creates mrtg.cfg files (for mrtg-2.17.4)"
 <dt><code>&#8211;man</code></dt>
 <dd> Prints the manual page and exits.</dd>
 <dt><code>&#8211;version</code></dt>
-<dd> Print the version of cfgmaker. This should match the version of <font SIZE="-1">MRTG</font> for which config files are being created.</dd>
+<dd> Print the version of cfgmaker. This should match the version of MRTG for which config files are being created.</dd>
 <dt><code>&#8211;ifref</code> <code>nr</code>|<code>ip</code>|<code>eth</code>|<code>descr</code>|<code>name</code></dt>
-<dd> Select the interface identification method. Default is <code>nr</code> which identifies the router interfaces by their number. Unfortunately the interface numbering scheme in an <font SIZE="-1">SNMP</font> tree can change. Some routers change their numbering when new interfaces are added, others change thier numbering every full moon just for fun. </dd>
-<p> To work around this sad problem <font SIZE="-1">MRTG</font> can identify interfaces by 4 other properties. None of these works for all interfaces, but you should be able to find one which does fine for you. Note that especially ethernet addrsses can be problematic as some routers have the same ethernet address on most of their interface cards. </p>
-<p> Select <code>ip</code> to identify the interface by its <font SIZE="-1">IP</font> number. Use <code>eth</code> to use the ethernet address for identification. Use <code>descr</code> to use the Interface description. Or use <code>name</code> to use the Interface name. </p>
-<p> You can specify multiple properties if you wish, separated by commas. In this case, cfgmaker will use the first item in the list which can provide unique identification. This allows you to specify, for example, to use <font SIZE="-1">IP</font> address and to use ifName if this is not defined:<br />
+<dd> Select the interface identification method. Default is <code>nr</code> which identifies the router interfaces by their number. Unfortunately the interface numbering scheme in an SNMP tree can change. Some routers change their numbering when new interfaces are added, others change thier numbering every full moon just for fun. </dd>
+<p> To work around this sad problem MRTG can identify interfaces by 4 other properties. None of these works for all interfaces, but you should be able to find one which does fine for you. Note that especially ethernet addrsses can be problematic as some routers have the same ethernet address on most of their interface cards. </p>
+<p> Select <code>ip</code> to identify the interface by its IP number. Use <code>eth</code> to use the ethernet address for identification. Use <code>descr</code> to use the Interface description. Or use <code>name</code> to use the Interface name. </p>
+<p> You can specify multiple properties if you wish, separated by commas. In this case, cfgmaker will use the first item in the list which can provide unique identification. This allows you to specify, for example, to use IP address and to use ifName if this is not defined:<br/>
 &nbsp;<wbr>&nbsp;<wbr>&#8211;ifref ip,name </p>
 <p> If your chosen method does not allow unique interface identification on the device you are querying, <code>cfgmaker</code> will tell you about it.</p>
 <dt><code>&#8211;ifdesc</code> <code>nr</code>|<code>ip</code>|<code>eth</code>|<code>descr</code>|<code>name</code>|<code>type</code>|<code>alias</code></dt>
-<dd> Select what to use as the description of the interface. The description appears in the <tt>&quot;Title[]&quot;</tt> property for the target as well as the text header in the <font SIZE="-1">HTML</font> code defined in the target&#8217;s <tt>&quot;PageTop[]&quot;</tt>. Default is to use <code>nr</code> which is just the interface number which isn&#8217;t always useful to the viewer of the graphs. </dd>
-<p> There are 6 other properties which could be used. Use <code>ip</code> if you want to use the interface&#8217;s IP-address. Use <code>eth</code> if you want to use the interface&#8217;s ethernet address. If you want a better description, you can use either <code>descr</code>, <code>name</code> or <code>alias</code>. Exactly what each of these do varies between different equipment so you might need to experiment. For instance, for a serial interface on a Cisco router running <font SIZE="-1">IOS</font> using <code>name</code> might result in <tt>&quot;S0&quot;</tt> being the interface description , <code>descr</code> might result in <tt>&quot;Serial0&quot;</tt> and <code>alias</code> might result in <tt>&quot;Link to HQ&quot;</tt> (provided that is what is used as the interface&#8217;s <tt>&quot;description&quot;</tt> in the router&#8217;s configuration). </p>
+<dd> Select what to use as the description of the interface. The description appears in the <tt>&quot;Title[]&quot;</tt> property for the target as well as the text header in the HTML code defined in the target&#8217;s <tt>&quot;PageTop[]&quot;</tt>. Default is to use <code>nr</code> which is just the interface number which isn&#8217;t always useful to the viewer of the graphs. </dd>
+<p> There are 6 other properties which could be used. Use <code>ip</code> if you want to use the interface&#8217;s IP-address. Use <code>eth</code> if you want to use the interface&#8217;s ethernet address. If you want a better description, you can use either <code>descr</code>, <code>name</code> or <code>alias</code>. Exactly what each of these do varies between different equipment so you might need to experiment. For instance, for a serial interface on a Cisco router running IOS using <code>name</code> might result in <tt>&quot;S0&quot;</tt> being the interface description , <code>descr</code> might result in <tt>&quot;Serial0&quot;</tt> and <code>alias</code> might result in <tt>&quot;Link to HQ&quot;</tt> (provided that is what is used as the interface&#8217;s <tt>&quot;description&quot;</tt> in the router&#8217;s configuration). </p>
 <p> Finally, if you want to describe the interface by it&#8217;s Btype (i.e <tt>&quot;ethernetCSMA&quot;</tt>, <tt>&quot;propPointtoPoint&quot;</tt> etc) you can use <code>type</code>. </p>
 <p> You can specify multiple properties if you wish, separated by commas. In this case, cfgmaker will use the first item in the list which is available for this interface. This allows you to specify, for example, to use any of the different aliases in order of preference.</p>
 <dt><code>&#8211;if-filter</code> &#8216;<code>filter-expression</code>&#8216;</dt>
@@ -133,7 +133,7 @@ description: "cfgmaker – Creates mrtg.cfg files (for mrtg-2.17.4)"
 <p> For a further discussion on how these templates work, see the section &#8220;Details on Temaplates&#8221; below.</p>
 <dt><code>&#8211;host-template</code> <code>template-file</code></dt>
 <dd> First of all, this is under some development and is experimental. </dd>
-<p> Use this if you want to have some extra targets related to the host itself such as <font SIZE="-1">CPU</font> utilization, ping response time to the host, number of busy modems etc. The contents of the file <code>template-file</code> will be evaluated once per host as a Perl program which generates the lines using certain variables for input and output. </p>
+<p> Use this if you want to have some extra targets related to the host itself such as CPU utilization, ping response time to the host, number of busy modems etc. The contents of the file <code>template-file</code> will be evaluated once per host as a Perl program which generates the lines using certain variables for input and output. </p>
 <p> For a further discussion on how these templates work, see the section &#8220;Details on Templates&#8221; below.</p>
 <dt><code>&#8211;community</code> <code>community-string</code></dt>
 <dd> Use this to set the community for the routers following on the command line to <code>community-string</code>. Individual routers might overrride this community string by using the syntax <code>community</code><code>@</code><code>router</code>.</dd>
@@ -145,11 +145,11 @@ description: "cfgmaker – Creates mrtg.cfg files (for mrtg-2.17.4)"
 <pre>
  cfgmaker --enable-ipv6 [2001:760:4::1]:165:::2
 </pre>
-<p> If the target has both an IPv6 address and an IPv4 address with the same hostname, cfgmaker first queries the target using IPv6 and falls back to IPv4 if it fails. This is useful for targets which don&#8217;t support <font SIZE="-1">SNMP</font> over IPv6.</p>
+<p> If the target has both an IPv6 address and an IPv4 address with the same hostname, cfgmaker first queries the target using IPv6 and falls back to IPv4 if it fails. This is useful for targets which don&#8217;t support SNMP over IPv6.</p>
 <dt><code>&#8211;use-16bit</code></dt>
-<dd> This option forces the use of 16bit <font SIZE="-1">SNMP</font> request IDs. Some broken <font SIZE="-1">SNMP</font> agents do not accept 32bit request IDs. Try to avoid this option as much as possible, complain to your agent vendor instead.</dd>
+<dd> This option forces the use of 16bit SNMP request IDs. Some broken SNMP agents do not accept 32bit request IDs. Try to avoid this option as much as possible, complain to your agent vendor instead.</dd>
 <dt><code>&#8211;snmp-options</code> :[<code>port</code>][:[<code>timeout</code>][:[<code>retries</code>][:[<code>backoff</code>][:<code>version</code>]]]]</dt>
-<dd> Use this to set the default <font SIZE="-1">SNMP</font> options for all routers following on the command line. Individual values might be omitted as well as trailing colons. Note that routers might override individual (or all) values specified by <code>&#8211;snmp-options</code> by using the syntax </dd>
+<dd> Use this to set the default SNMP options for all routers following on the command line. Individual values might be omitted as well as trailing colons. Note that routers might override individual (or all) values specified by <code>&#8211;snmp-options</code> by using the syntax </dd>
 <p> <code>router</code>[:[<code>port</code>][:[<code>timeout</code>][:[<code>retries</code>][:[<code>backoff</code>][:<code>version</code>]]]]]</p>
 <dt><code>&#8211;global</code> <code>&quot;</code><i>bla: abc</i><code>&quot;</code></dt>
 <dd> Use this to add global options to the generated config file. You can call <code>&#8211;global</code> several times to add multiple options. The line will appear in the configuration just before the config for the next router appearing on the command line. </dd>
@@ -162,15 +162,15 @@ description: "cfgmaker – Creates mrtg.cfg files (for mrtg-2.17.4)"
 </pre>
 <p> Specifying <code>&#8211;global</code> after the last router on the command line will create a line in the configuration file which will appear after all the routers.</p>
 <dt><code>&#8211;noreversedns</code></dt>
-<dd> Do not try to reverse lookup <font SIZE="-1">IP</font> numbers &#8230; a must for <font SIZE="-1">DNS</font> free environments.</dd>
+<dd> Do not try to reverse lookup IP numbers &#8230; a must for DNS free environments.</dd>
 <dt><code>&#8211;no-down</code></dt>
-<dd> Normally cfgmaker will not include interfaces which are marked anything but administratively and operationally <font SIZE="-1">UP</font>. With this switch you get them all.</dd>
+<dd> Normally cfgmaker will not include interfaces which are marked anything but administratively and operationally UP. With this switch you get them all.</dd>
 <dt><code>&#8211;show-op-down</code></dt>
 <dd> Include interfaces which are operatively down.</dd>
 <dt><code>&#8211;zero-speed</code> <i>speed</i></dt>
 <dd> Assign this speed in bits-per-second to all interfaces which return 0 for ifSpeed and ifHighSpeed. Some switches, notably Foundry equipment, return a speed of zero for some interfaces. For example, to have all interfaces reporting zero set to 100Mbps, use &#8211;zero-speed=100000000.</dd>
 <dt><code>&#8211;subdirs</code> <i>format</i></dt>
-<dd> Give each router its own subdirectory for the <font SIZE="-1">HTML</font> and graphics (or .rrd) files. The directory name is the given <i>format</i> string with a couple of pattern replacements. The string &#8220;<font SIZE="-1">HOSTNAME</font>&#8221; will be replaced by the hostname of the router (however you specified it on the <code>cfgmaker</code> commandline &#8212; it may be an actual hostname or just an <font SIZE="-1">IP</font> address), and &#8220;<font SIZE="-1">SNMPNAME</font>&#8221; will be replaced with the device&#8217;s idea of its own name (the same name that appears on the right side of the &#8220;Title&#8221; lines). For instance, a call like: </dd>
+<dd> Give each router its own subdirectory for the HTML and graphics (or .rrd) files. The directory name is the given <i>format</i> string with a couple of pattern replacements. The string &#8220;HOSTNAME&#8221; will be replaced by the hostname of the router (however you specified it on the <code>cfgmaker</code> commandline &#8212; it may be an actual hostname or just an IP address), and &#8220;SNMPNAME&#8221; will be replaced with the device&#8217;s idea of its own name (the same name that appears on the right side of the &#8220;Title&#8221; lines). For instance, a call like: </dd>
 <pre>
  cfgmaker --subdirs=HOSTNAME__SNMPNAME public [at] 10.10.0.18
 </pre>
@@ -186,25 +186,25 @@ description: "cfgmaker – Creates mrtg.cfg files (for mrtg-2.17.4)"
 <dt><code>&#8211;interfaces</code></dt>
 <dd> This makes cfgmaker generate configuration lines for interfaces (the default behaviour). </dd>
 <p> The main usage of this option is to negate an &#8211;nointerfaces appearing earlier on the command line.</dl>
-<h3><font SIZE="-1">SNMP</font> V3 Options</h3>
-<p> <code>Cfgmaker</code> supports <font SIZE="-1">SNMP</font> V3 using the <code>Net:SNMP</code> perl module. There are optional parameters affecting <font SIZE="-1">SNMP</font> operation.</p>
+<h3>SNMP V3 Options</h3>
+<p> <code>Cfgmaker</code> supports SNMP V3 using the <code>Net:SNMP</code> perl module. There are optional parameters affecting SNMP operation.</p>
 <dl>
 <dt>&#8211;enablesnmpv3 {yes|no}</dt>
 <dd> The <code>&#8211;enablesnmpv3</code> option is an optional flag to check for the presence of the <code>Net::SNMP</code> libraries. <code>Cfgmaker</code> will try to determine whether this flag is required and will set the values automatically.</dd></dl>
 <p> <i>SNMPv3 Arguments</i> </p>
-<p> A <font SIZE="-1">SNMP</font> context is a collection of management information accessible by a <font SIZE="-1">SNMP</font> entity. An item of management information may exist in more than one context and a <font SIZE="-1">SNMP</font> entity potentially has access to many contexts. The combination of a contextEngineID and a contextName unambiguously identifies a context within an administrative domain. In a SNMPv3 message, the contextEngineID and contextName are included as part of the scopedPDU. All methods that generate a <font SIZE="-1">SNMP</font> message optionally take a <code>&#8211;contextengineid</code> and <code>&#8211;contextname</code> argument to configure these fields.</p>
+<p> A SNMP context is a collection of management information accessible by a SNMP entity. An item of management information may exist in more than one context and a SNMP entity potentially has access to many contexts. The combination of a contextEngineID and a contextName unambiguously identifies a context within an administrative domain. In a SNMPv3 message, the contextEngineID and contextName are included as part of the scopedPDU. All methods that generate a SNMP message optionally take a <code>&#8211;contextengineid</code> and <code>&#8211;contextname</code> argument to configure these fields.</p>
 <dl>
-<dt>Context Engine <font SIZE="-1">ID</font></dt>
-<dd> The <code>&#8211;contextengineid</code> argument expects a hexadecimal string representing the desired contextEngineID. The string must be 10 to 64 characters (5 to 32 octets) long and can be prefixed with an optional &#8220;0x&#8221;. Once the <code>&#8211;contextengineid</code> is specified it stays with the object until it is changed again or reset to default by passing in the undefined value. By default, the contextEngineID is set to match the authoritativeEngineID of the authoritative <font SIZE="-1">SNMP</font> engine.</dd>
+<dt>Context Engine ID</dt>
+<dd> The <code>&#8211;contextengineid</code> argument expects a hexadecimal string representing the desired contextEngineID. The string must be 10 to 64 characters (5 to 32 octets) long and can be prefixed with an optional &#8220;0x&#8221;. Once the <code>&#8211;contextengineid</code> is specified it stays with the object until it is changed again or reset to default by passing in the undefined value. By default, the contextEngineID is set to match the authoritativeEngineID of the authoritative SNMP engine.</dd>
 <dt>Context Name</dt>
 <dd> The contextName is passed as a string which must be 0 to 32 octets in length using the <code>&#8211;contextname</code> argument. The contextName stays with the object until it is changed. The contextName defaults to an empty string which represents the &#8220;default&#8221; context.</dd></dl>
 <p> <i>User-based Security Model Arguments</i> </p>
-<p> The User-based Security Model (<font SIZE="-1">USM</font>) used by SNMPv3 requires that a securityName be specified using the <code>&#8211;username</code> argument. The creation of a Net::SNMP object with the version set to SNMPv3 will fail if the <code>&#8211;username</code> argument is not present. The <code>&#8211;username</code> argument expects a string 1 to 32 octets in length. </p>
+<p> The User-based Security Model (USM) used by SNMPv3 requires that a securityName be specified using the <code>&#8211;username</code> argument. The creation of a Net::SNMP object with the version set to SNMPv3 will fail if the <code>&#8211;username</code> argument is not present. The <code>&#8211;username</code> argument expects a string 1 to 32 octets in length. </p>
 <p> Different levels of security are allowed by the User-based Security Model which address authentication and privacy concerns. A SNMPv3 target will derive the security level (securityLevel) based on which of the following arguments are specified. </p>
 <p> By default a securityLevel of &#8216;noAuthNoPriv&#8217; is assumed. If the <code>&#8211;authkey</code> or <code>&#8211;authpassword</code> arguments are specified, the securityLevel becomes &#8216;authNoPriv&#8217;. The <code>&#8211;authpassword</code> argument expects a string which is at least 1 octet in length. Optionally, the <code>&#8211;authkey</code> argument can be used so that a plain text password does not have to be specified in a script. The <code>&#8211;authkey</code> argument expects a hexadecimal string produced by localizing the password with the authoritativeEngineID for the specific destination device. The <tt>&quot;snmpkey&quot;</tt> utility included with the Net::SNMP distribution can be used to create the hexadecimal string (see snmpkey). </p>
-<p> Two different hash algorithms are defined by SNMPv3 which can be used by the Security Model for authentication. These algorithms are <font SIZE="-1">HMAC-MD5-96</font> &#8220;<font SIZE="-1">MD5</font>&#8221; (<font SIZE="-1">RFC</font> 1321) and <font SIZE="-1">HMAC-SHA-96</font> &#8220;<font SIZE="-1">SHA-1</font>&#8221; (<font SIZE="-1">NIST</font> <font SIZE="-1">FIPS</font> <font SIZE="-1">PUB</font> 180-1). The default algorithm used by the module is <font SIZE="-1">HMAC-MD5-96</font>. This behavior can be changed by using the <code>&#8211;authprotocol</code> argument. This argument expects either the string &#8216;md5&#8217; or &#8216;sha&#8217; to be passed to modify the hash algorithm. </p>
+<p> Two different hash algorithms are defined by SNMPv3 which can be used by the Security Model for authentication. These algorithms are HMAC-MD5-96 &#8220;MD5&#8221; (RFC 1321) and HMAC-SHA-96 &#8220;SHA-1&#8221; (NIST FIPS PUB 180-1). The default algorithm used by the module is HMAC-MD5-96. This behavior can be changed by using the <code>&#8211;authprotocol</code> argument. This argument expects either the string &#8216;md5&#8217; or &#8216;sha&#8217; to be passed to modify the hash algorithm. </p>
 <p> By specifying the arguments <code>&#8211;privkey</code> or <code>&#8211;privpassword</code> the securityLevel associated with the object becomes &#8216;authPriv&#8217;. According to SNMPv3, privacy requires the use of authentication. Therefore, if either of these two arguments are present and the <code>&#8211;authkey</code> or <code>&#8211;authpassword</code> arguments are missing, the creation of the object fails. The <code>&#8211;privkey</code> and <code>&#8211;privpassword</code> arguments expect the same input as the <code>&#8211;authkey</code> and <code>&#8211;authpassword</code> arguments respectively. </p>
-<p> The User-based Security Model described in <font SIZE="-1">RFC</font> 3414 defines a single encryption protocol to be used for privacy. This protocol, CBC-DES &#8220;<font SIZE="-1">DES</font>&#8221; (<font SIZE="-1">NIST</font> <font SIZE="-1">FIPS</font> <font SIZE="-1">PUB</font> 46-1), is used by default or if the string &#8216;des&#8217; is passed to the <code>&#8211;privprotocol</code> argument. By working with the Extended Security Options Consortium <a rel="nofollow" href="http://www.snmp.com/eso/,">http://www.snmp.com/eso/,</a> the module also supports additional protocols which have been defined in draft specifications. The draft <a rel="nofollow" href="http://www.snmp.com/eso/draft-reeder-snmpv3-usm-3desede-00.txt">http://www.snmp.com/eso/draft-reeder-snmpv3-usm-3desede-00.txt</a> defines the support of <font SIZE="-1">CBC-3DES-EDE</font> &#8220;Triple-DES&#8221; (<font SIZE="-1">NIST</font> <font SIZE="-1">FIPS</font> 46-3) in the User-based Security Model. This protocol can be selected using the <code>&#8211;privprotocol</code> argument with the string &#8216;3desede&#8217;. The draft <a rel="nofollow" href="http://www.snmp.com/eso/draft-blumenthal-aes-usm-04.txt">http://www.snmp.com/eso/draft-blumenthal-aes-usm-04.txt</a> describes the use of <font SIZE="-1">CFB128-AES-128/192/256</font> &#8220;<font SIZE="-1">AES</font>&#8221; (<font SIZE="-1">NIST</font> <font SIZE="-1">FIPS</font> <font SIZE="-1">PUB</font> 197) in the <font SIZE="-1">USM</font>. The three <font SIZE="-1">AES</font> encryption protocols, differentiated by their key sizes, can be selected by passing &#8216;aescfb128&#8217;, &#8216;aescfb192&#8217;, or &#8216;aescfb256&#8217; to the <code>-privprotocol</code> argument.</p>
+<p> The User-based Security Model described in RFC 3414 defines a single encryption protocol to be used for privacy. This protocol, CBC-DES &#8220;DES&#8221; (NIST FIPS PUB 46-1), is used by default or if the string &#8216;des&#8217; is passed to the <code>&#8211;privprotocol</code> argument. By working with the Extended Security Options Consortium <a rel="nofollow" href="http://www.snmp.com/eso/,">http://www.snmp.com/eso/,</a> the module also supports additional protocols which have been defined in draft specifications. The draft <a rel="nofollow" href="http://www.snmp.com/eso/draft-reeder-snmpv3-usm-3desede-00.txt">http://www.snmp.com/eso/draft-reeder-snmpv3-usm-3desede-00.txt</a> defines the support of CBC-3DES-EDE &#8220;Triple-DES&#8221; (NIST FIPS 46-3) in the User-based Security Model. This protocol can be selected using the <code>&#8211;privprotocol</code> argument with the string &#8216;3desede&#8217;. The draft <a rel="nofollow" href="http://www.snmp.com/eso/draft-blumenthal-aes-usm-04.txt">http://www.snmp.com/eso/draft-blumenthal-aes-usm-04.txt</a> describes the use of CFB128-AES-128/192/256 &#8220;AES&#8221; (NIST FIPS PUB 197) in the USM. The three AES encryption protocols, differentiated by their key sizes, can be selected by passing &#8216;aescfb128&#8217;, &#8216;aescfb192&#8217;, or &#8216;aescfb256&#8217; to the <code>-privprotocol</code> argument.</p>
 <h3>Details on Filters</h3>
 <p> The purpose of the filters is to decide which interfaces to accept and which interfaces to reject. This decision is done for each interface by evaluating the filter expression as a piece of Perl code and investigating the result of the evaluation. If true, accept the interface otherwise reject it. </p>
 <p> When working with filters, remember that Perl has it&#8217;s own idea of what truth and false is. The empty string &quot;&#8220; and the string &#8221;0&quot; are false, all other strings are true. This further imples that any integer value of 0 is false as well as any undef value. It also implies that all references are considered true. </p>
@@ -226,7 +226,7 @@ description: "cfgmaker – Creates mrtg.cfg files (for mrtg-2.17.4)"
 </pre>
 <dl>
 <dt><code>$if_type</code></dt>
-<dd> This is an integer specifying the interface type as per the <font SIZE="-1">SNMP</font> standards and as reported by the polled device. A complete list of interface types would be impractical for this document , but there are a number predefined varables below. Normally, cfgmaker puts in the target&#8217;s PageTop this iftype value within paranthesis after the name of the interface type. (e.g &#8220;propPointToPointSerial (22)&#8221;). </dd>
+<dd> This is an integer specifying the interface type as per the SNMP standards and as reported by the polled device. A complete list of interface types would be impractical for this document , but there are a number predefined varables below. Normally, cfgmaker puts in the target&#8217;s PageTop this iftype value within paranthesis after the name of the interface type. (e.g &#8220;propPointToPointSerial (22)&#8221;). </dd>
 <p> Here&#8217;s a list of some of the most common interface types by number: </p>
 <pre>
    6 ethernetCsmacd
@@ -270,25 +270,25 @@ description: "cfgmaker – Creates mrtg.cfg files (for mrtg-2.17.4)"
 <dt><code>$if_is_ethernet</code></dt>
 <dd> True for ethernet interfaces (nr 6, 7, 26, 62, 69 and 117).</dd>
 <dt><code>$if_is_isdn</code></dt>
-<dd> True for various <font SIZE="-1">ISDN</font> interface types (nr 20, 21, 63, 75, 76 and 77)</dd>
+<dd> True for various ISDN interface types (nr 20, 21, 63, 75, 76 and 77)</dd>
 <dt><code>$if_is_dialup</code></dt>
-<dd> True for dial-up interfaces such as <font SIZE="-1">PPP</font> as well as <font SIZE="-1">ISDN</font>. (nr 23, 81, 82 and 108 in addition to the numbers of $if_is_isdn).</dd>
+<dd> True for dial-up interfaces such as PPP as well as ISDN. (nr 23, 81, 82 and 108 in addition to the numbers of $if_is_isdn).</dd>
 <dt><code>$if_is_atm</code></dt>
-<dd> True for miscellaneous <font SIZE="-1">ATM</font> related interface types (nr 37, 49, 107, 105, 106, 114 and 134).</dd>
+<dd> True for miscellaneous ATM related interface types (nr 37, 49, 107, 105, 106, 114 and 134).</dd>
 <dt><code>$if_is_wan</code></dt>
-<dd> True for <font SIZE="-1">WAN</font> interfaces point to point, Frame Relay and High Speed Serial ( 22,32,44,46)</dd>
+<dd> True for WAN interfaces point to point, Frame Relay and High Speed Serial ( 22,32,44,46)</dd>
 <dt><code>$if_is_lan</code></dt>
-<dd> True for <font SIZE="-1">LAN</font> interfaces (8, 9, 11, 15, 26, 55, 59, 60 and 115 in addition to the numbers of $if_is_ethernet).</dd>
+<dd> True for LAN interfaces (8, 9, 11, 15, 26, 55, 59, 60 and 115 in addition to the numbers of $if_is_ethernet).</dd>
 <dt><code>$if_is_dsl</code></dt>
-<dd> True for <font SIZE="-1">ADSL</font>, <font SIZE="-1">RDSL</font>, <font SIZE="-1">HDSL</font> and <font SIZE="-1">SDSL</font> (nr 94, 95, 96, 97)</dd>
+<dd> True for ADSL, RDSL, HDSL and SDSL (nr 94, 95, 96, 97)</dd>
 <dt><code>$if_is_loopback</code></dt>
 <dd> True for software loopback interfaces (nr 24)</dd>
 <dt><code>$if_is_ciscovlan</code></dt>
-<dd> True for Cisco <font SIZE="-1">VLAN</font> interfaces (interfaces with the word Vlan or <font SIZE="-1">VLAN</font> in their ifdescs)</dd>
+<dd> True for Cisco VLAN interfaces (interfaces with the word Vlan or VLAN in their ifdescs)</dd>
 <dt><code>$if_vlan_id</code></dt>
-<dd> Returns the vlan id associated with a specific port on Cisco Catalyst switches under both Catalyst <font SIZE="-1">OS</font> and <font SIZE="-1">IOS</font>, and 3Com switches. If it is not a vlan interface, will return undef.</dd>
+<dd> Returns the vlan id associated with a specific port on Cisco Catalyst switches under both Catalyst OS and IOS, and 3Com switches. If it is not a vlan interface, will return undef.</dd>
 <dt><code>$if_cisco_trunk</code></dt>
-<dd> Returns the trunking state of a specific port on Cisco Catalyst switches under both Catalyst <font SIZE="-1">OS</font> and <font SIZE="-1">IOS</font>. Returns &#8220;1&#8221; if the interface is a trunk, undef otherwise.</dd>
+<dd> Returns the trunking state of a specific port on Cisco Catalyst switches under both Catalyst OS and IOS. Returns &#8220;1&#8221; if the interface is a trunk, undef otherwise.</dd>
 <dt><code>$if_MTU</code></dt>
 <dd> Returns the Maximum Transfer Unit associated with a specific port.</dd></dl>
 <p> Besides that, you can also use the variables defined for templates below. Further, all the variables available in cfgmaker is at the scripts disposal even if the use of such features is discouraged. More &#8220;shortcuts&#8221; in the form of variables and functions will be made available in the future instead. </p>
@@ -297,7 +297,7 @@ description: "cfgmaker – Creates mrtg.cfg files (for mrtg-2.17.4)"
 <pre>
  '--if-filter=$default'
 </pre>
-<p> The following filter will make cfgmaker exclude <font SIZE="-1">PPP</font> (23) interfaces: </p>
+<p> The following filter will make cfgmaker exclude PPP (23) interfaces: </p>
 <p>&#8216;&#8211;if-filter=$default &amp;&amp; $if_type!=23&#8217;</p>
 <p> The following filter will make cfgmaker behave as usual except that it will consider the operational state of an interface irrelevant but still reject all interfaces which are administratively down. </p>
 <pre>
@@ -305,7 +305,7 @@ description: "cfgmaker – Creates mrtg.cfg files (for mrtg-2.17.4)"
 </pre>
 <h3>Details on Templates</h3>
 <p> The contents of the template files are evaluated as a Perl program. A number or Perl variables are available for the program to read and others are used to be written to. </p>
-<p> As quite a few of the predefined variables has values which are are supposed to be used in <font SIZE="-1">HTML</font> code some of them have an &#8220;HTML-escaped&#8221; variant, e.g <tt>$html_syslocation</tt> is the <font SIZE="-1">HTML</font> escaped variant of <tt>$syslocation</tt>. The <font SIZE="-1">HTML</font> escaping means that the chars &#8220;&lt;&#8221;, &#8220;&gt;&#8221; and &#8220;&amp;&#8221; are replaced by &#8220;&amp;lt;&#8221;, &#8220;&amp;gt;&#8221; and &#8220;&amp;amp;&#8221; and that newlines embedded in the string are prepended with &#8220;&lt;<font SIZE="-1">BR</font>&gt;&#8221; and appended with a space character (if a newline is last in the string it is not touched). </p>
+<p> As quite a few of the predefined variables has values which are are supposed to be used in HTML code some of them have an &#8220;HTML-escaped&#8221; variant, e.g <tt>$html_syslocation</tt> is the HTML escaped variant of <tt>$syslocation</tt>. The HTML escaping means that the chars &#8220;&lt;&#8221;, &#8220;&gt;&#8221; and &#8220;&amp;&#8221; are replaced by &#8220;&amp;lt;&#8221;, &#8220;&amp;gt;&#8221; and &#8220;&amp;amp;&#8221; and that newlines embedded in the string are prepended with &#8220;&lt;BR&gt;&#8221; and appended with a space character (if a newline is last in the string it is not touched). </p>
 <p> <i>Writable Template Variables</i> </p>
 <p> These are the variables available to store the configuration lines in. Some of them are initialized prior to the evaluation of the template but such content normally is comments for inclusion in the final configuration file so those variables might be reset to the empty string in the template code to eliminate the comments. The other way around is also possible, the contents of these variables might be extended with further information for various reasons such as debugging etc. </p>
 <p> Once the template has been evaluated, the following happens: if the template is a interface template and the actual interface for some reason is rejected and thus needs to be commented out, all the lines in the variable $target_lines are turned into comments by adding a hash mark (&#8220;#&#8221;) at their beginning. Then all the variables $head_lines, $problem_lines , $target_lines and $separator_lines are concatenated together to form the lines to add to the configuration file.</p>
@@ -327,30 +327,30 @@ description: "cfgmaker – Creates mrtg.cfg files (for mrtg-2.17.4)"
 <dt><code>$router_name</code></dt>
 <dd> This is the fully qualified name for the router. It is affected by the following items on the command line: the router name itself and <code>&#8211;dns-domain</code>.</dd>
 <dt><code>$router_connect</code></dt>
-<dd> This is the reference string for the router being polled. It is on the form community [at] router possibly followed by some snmp options. It is affected by the following items on the command line: the router name itself, <code>&#8211;community</code>, <code>&#8211;snmp-options</code> and <code>&#8211;dns-domain</code>. (There&#8217;s no <font SIZE="-1">HTML</font> escaped variant available)</dd>
+<dd> This is the reference string for the router being polled. It is on the form community [at] router possibly followed by some snmp options. It is affected by the following items on the command line: the router name itself, <code>&#8211;community</code>, <code>&#8211;snmp-options</code> and <code>&#8211;dns-domain</code>. (There&#8217;s no HTML escaped variant available)</dd>
 <dt><code>$directory_name</code></dt>
-<dd> This variable should contain the directory name as cfgmaker normally would use as the value for the &#8220;Directory[]&#8221; directive. The value is determined by the <code>&#8211;subdirs</code> command line option. If <code>&#8211;subdirs</code> isn&#8217;t specified $directory_name will be the empty string. (There&#8217;s no <font SIZE="-1">HTML</font> escaped variant available)</dd>
+<dd> This variable should contain the directory name as cfgmaker normally would use as the value for the &#8220;Directory[]&#8221; directive. The value is determined by the <code>&#8211;subdirs</code> command line option. If <code>&#8211;subdirs</code> isn&#8217;t specified $directory_name will be the empty string. (There&#8217;s no HTML escaped variant available)</dd>
 <dt><code>$syscontact</code></dt>
-<dd> This variable is the router&#8217;s <font SIZE="-1">SNMP</font> sysContact value. (<font SIZE="-1">HTML</font> escaped variant: $html_syscontact)</dd>
+<dd> This variable is the router&#8217;s SNMP sysContact value. (HTML escaped variant: $html_syscontact)</dd>
 <dt><code>$sysname</code></dt>
-<dd> This variable is the router&#8217;s <font SIZE="-1">SNMP</font> sysName value. (No <font SIZE="-1">HTML</font> escaped variant available)</dd>
+<dd> This variable is the router&#8217;s SNMP sysName value. (No HTML escaped variant available)</dd>
 <dt><code>$syslocation</code></dt>
-<dd> This variable is the router&#8217;s <font SIZE="-1">SNMP</font> sysLocation value. (<font SIZE="-1">HTML</font> escaped variant: $html_syslocation)</dd>
+<dd> This variable is the router&#8217;s SNMP sysLocation value. (HTML escaped variant: $html_syslocation)</dd>
 <dt><code>$sysdescr</code></dt>
-<dd> This variable is the router&#8217;s <font SIZE="-1">SNMP</font> sysDescr value. It is normally not used by cfgmaker but might be useful in a template. (<font SIZE="-1">HTML</font> escaped variant: $html_sysdescr)</dd></dl>
+<dd> This variable is the router&#8217;s SNMP sysDescr value. It is normally not used by cfgmaker but might be useful in a template. (HTML escaped variant: $html_sysdescr)</dd></dl>
 <p> <i>Interface Target Related Variables</i></p>
 <dl>
 <dt><code>$target_name</code></dt>
-<dd> This is what cfgmaker normally would use as the the name of the target. The target name is what is found within the square brackets, &#8220;[]&#8221;, for target directives. (There&#8217;s no <font SIZE="-1">HTML</font> escaped variant available)</dd>
+<dd> This is what cfgmaker normally would use as the the name of the target. The target name is what is found within the square brackets, &#8220;[]&#8221;, for target directives. (There&#8217;s no HTML escaped variant available)</dd>
 <dt><code>$if_ref</code></dt>
-<dd> This the reference string for the interface. It is expected to be used in the &#8220;Target[xyz]&#8221; directive to distinguish what interface to use. The value of this variable is affected by the <code>&#8211;ifref</code> command line option. It is normally used together with $router_connect. (There&#8217;s no <font SIZE="-1">HTML</font> escaped variant available)</dd>
+<dd> This the reference string for the interface. It is expected to be used in the &#8220;Target[xyz]&#8221; directive to distinguish what interface to use. The value of this variable is affected by the <code>&#8211;ifref</code> command line option. It is normally used together with $router_connect. (There&#8217;s no HTML escaped variant available)</dd>
 <dt><code>$if_ok</code></dt>
 <dd> This variable is true if the interface is going to be included into the configuration file, otherwise false. Don&#8217;t test against other variables such as $problem_lines to find out if an interface will be rejected or not, use this $if_ok instead.</dd>
 <dt><code>$default_target_lines</code></dt>
 <dd> This variable contains all the target lines which cfgmaker by default outputs for this interface. It&#8217;s useful if you want to have the &#8220;standard target&#8221; but want to add some extra lines to it by using a template.</dd></dl>
 <p> By default cfgmaker uses the following directives for each target it generates: Target[], SetEnv[], MaxBytes[], Title[], PageTop[] and if there is any directory specified also the Directory[] directive. </p>
 <p> To facilitate the creation of templates which generates target configs which are similar to the default one, each of the above mentioned directive lines have a corresponding variable containing the line as cfgmaker would have output it by default. </p>
-<p> Note that none of these have a <font SIZE="-1">HTML</font> escaped variant, text in them is <font SIZE="-1">HTML</font> escaped where needed. Also note that they do not have any newline at the end.</p>
+<p> Note that none of these have a HTML escaped variant, text in them is HTML escaped where needed. Also note that they do not have any newline at the end.</p>
 <dl>
 <dt><code>$default_target_directive</code></dt>
 <dd> This variable contains the default string for the Target[] directive line.</dd>
@@ -367,220 +367,220 @@ description: "cfgmaker – Creates mrtg.cfg files (for mrtg-2.17.4)"
 <p> <i>Interface Network Configuration Variables</i></p>
 <dl>
 <dt><code>$if_ip</code></dt>
-<dd> This variable should contain the IP-address of the interface, if any has been assigned to it. (There&#8217;s no <font SIZE="-1">HTML</font> escaped variant available)</dd>
+<dd> This variable should contain the IP-address of the interface, if any has been assigned to it. (There&#8217;s no HTML escaped variant available)</dd>
 <dt><code>$ifindex</code></dt>
-<dd> This variable is the <font SIZE="-1">SNMP</font> ifIndex for the interface which per definition always is an integer. (There&#8217;s no <font SIZE="-1">HTML</font> escaped variant available)</dd>
+<dd> This variable is the SNMP ifIndex for the interface which per definition always is an integer. (There&#8217;s no HTML escaped variant available)</dd>
 <dt><code>$if_index</code></dt>
 <dd> Equivalent with $ifindex.</dd>
 <dt><code>$if_eth</code></dt>
-<dd> Contains the ethernet address of the interface, if any. (There&#8217;s no <font SIZE="-1">HTML</font> escaped variant available)</dd>
+<dd> Contains the ethernet address of the interface, if any. (There&#8217;s no HTML escaped variant available)</dd>
 <dt><code>$if_speed</code></dt>
-<dd> This variable is the speed in bytes/second (with prefixes). (There&#8217;s no <font SIZE="-1">HTML</font> escaped variant available)</dd>
+<dd> This variable is the speed in bytes/second (with prefixes). (There&#8217;s no HTML escaped variant available)</dd>
 <dt><code>$if_speed_str</code></dt>
-<dd> This variable is a cooked speed description which is either in bits or bytes depending on wether or not the bits option is active and also with the proper prefix for the speed (k, M, G etc). (No <font SIZE="-1">HTML</font> escaped variant available)</dd>
+<dd> This variable is a cooked speed description which is either in bits or bytes depending on wether or not the bits option is active and also with the proper prefix for the speed (k, M, G etc). (No HTML escaped variant available)</dd>
 <dt><code>$if_type_desc</code></dt>
-<dd> This variable is a textual description of the interface type. (<font SIZE="-1">HTML</font> escaped variant: $html_if_type_desc)</dd>
+<dd> This variable is a textual description of the interface type. (HTML escaped variant: $html_if_type_desc)</dd>
 <dt><code>$if_type_num</code></dt>
-<dd> This variable the integer value corresponding to the interface type (for a listing for the value for the more common interface types, see the section <font SIZE="-1">DETAILS</font> <font SIZE="-1">ON</font> <font SIZE="-1">FILTERS</font> above). (No <font SIZE="-1">HTML</font> escaped variant available)</dd>
+<dd> This variable the integer value corresponding to the interface type (for a listing for the value for the more common interface types, see the section DETAILS ON FILTERS above). (No HTML escaped variant available)</dd>
 <dt><code>$if_dns_name</code></dt>
-<dd> This is the <font SIZE="-1">DNS</font> name for the interface. (No <font SIZE="-1">HTML</font> escaped variant available)</dd></dl>
+<dd> This is the DNS name for the interface. (No HTML escaped variant available)</dd></dl>
 <p> <i>Interface Name, Description and Alias Variables</i> </p>
-<p> It might seem confusing with both <i>Name</i>, <i>Description</i> and <i>Alias</i> in this context and to some extent it is. <i>Name</i> and <i>Description</i> are usually supported on most equipment but how they are used varies, both between manufacturers as well as between different cathegories of equipment from the same manufacturer. The <i>Alias</i> is at least supported by Cisco <font SIZE="-1">IOS</font>, and that variable contains whatever is used in the <font SIZE="-1">IOS</font> statement called &#8220;description&#8221; for the interface (not to be confused with the <font SIZE="-1">SNMP</font> variables for <i>Description</i>). </p>
+<p> It might seem confusing with both <i>Name</i>, <i>Description</i> and <i>Alias</i> in this context and to some extent it is. <i>Name</i> and <i>Description</i> are usually supported on most equipment but how they are used varies, both between manufacturers as well as between different cathegories of equipment from the same manufacturer. The <i>Alias</i> is at least supported by Cisco IOS, and that variable contains whatever is used in the IOS statement called &#8220;description&#8221; for the interface (not to be confused with the SNMP variables for <i>Description</i>). </p>
 <p> For better control from the command line consider $if_title_desc which contents are controlled by the <code>&#8211;if-descr</code> command line option.</p>
 <dl>
 <dt><code>$if_snmp_descr</code></dt>
-<dd> This variable should contain the &#8220;raw&#8221; description of the interface as determined by the <font SIZE="-1">SNMP</font> polling of the router. (<font SIZE="-1">HTML</font> escaped variant: $html_if_snmp_descr)</dd>
+<dd> This variable should contain the &#8220;raw&#8221; description of the interface as determined by the SNMP polling of the router. (HTML escaped variant: $html_if_snmp_descr)</dd>
 <dt><code>$if_snmp_name</code></dt>
-<dd> The &#8220;raw&#8221; name for the interface as provided by <font SIZE="-1">SNMP</font> polling. (<font SIZE="-1">HTML</font> escaped variant: $html_if_snmp_name)</dd>
+<dd> The &#8220;raw&#8221; name for the interface as provided by SNMP polling. (HTML escaped variant: $html_if_snmp_name)</dd>
 <dt><code>$if_snmp_alias</code></dt>
-<dd> The &#8220;raw&#8221; ifAlias for the interface as provided by <font SIZE="-1">SNMP</font> polling. (<font SIZE="-1">HTML</font> escaped variant: $html_if_snmp_alias)</dd>
+<dd> The &#8220;raw&#8221; ifAlias for the interface as provided by SNMP polling. (HTML escaped variant: $html_if_snmp_alias)</dd>
 <dt><code>$if_cisco_descr</code></dt>
-<dd> The &#8220;raw&#8221; CiscolocIfDescr for the interface as provided by <font SIZE="-1">SNMP</font> polling. (<font SIZE="-1">HTML</font> escaped variant: $html_if_cisco_descr)</dd>
+<dd> The &#8220;raw&#8221; CiscolocIfDescr for the interface as provided by SNMP polling. (HTML escaped variant: $html_if_cisco_descr)</dd>
 <dt><code>$if_description</code></dt>
-<dd> This is the &#8220;cooked&#8221; description string for the interface, taking into account the <font SIZE="-1">SNMP</font> values found for the interface&#8217;s RDescr, ifAlias and CiscolocIfDescr. (<font SIZE="-1">HTML</font> escaped variant: $html_if_description)</dd>
+<dd> This is the &#8220;cooked&#8221; description string for the interface, taking into account the SNMP values found for the interface&#8217;s RDescr, ifAlias and CiscolocIfDescr. (HTML escaped variant: $html_if_description)</dd>
 <dt><code>$if_title</code></dt>
 <dd> The full string cfgmaker by default would have used for the Title[] directive in the configuration as well as the content of the topmost H1 tag in the PageTop[]. Is composed by the contents of $desc_prefix, $if_title_desc and $sysname. </dd>
 <p> As $if_title depends on $if_title_desc, it is possible to indirectly control $if_title by using the command line option <code>&#8211;if-descr</code>. </p>
-<p> (<font SIZE="-1">HTML</font> escaped variant: $html_if_title)</p>
+<p> (HTML escaped variant: $html_if_title)</p>
 <dt><code>$if_port_name</code></dt>
-<dd> If the host is a Cisco Catalyst <font SIZE="-1">LAN</font> switch, this variable is the name of that port. (No <font SIZE="-1">HTML</font> escaped variant available)</dd>
+<dd> If the host is a Cisco Catalyst LAN switch, this variable is the name of that port. (No HTML escaped variant available)</dd>
 <dt><code>$if_pp_port_name</code></dt>
-<dd> If the host is a Nortel Passport <font SIZE="-1">LAN</font> switch, this variable is the name of that port. (No <font SIZE="-1">HTML</font> escaped variant available)</dd>
+<dd> If the host is a Nortel Passport LAN switch, this variable is the name of that port. (No HTML escaped variant available)</dd>
 <dt><code>$desc_prefix</code></dt>
-<dd> This variable is a prefix of the description of what the target is to use in the &#8220;Title[]&#8221; directive and in the H1 section of the &#8220;PageTop[]&#8221;. Default is &#8220;Traffic analysis for &#8221;. (<font SIZE="-1">HTML</font> escaped variant: $html_desc_prefix)</dd>
+<dd> This variable is a prefix of the description of what the target is to use in the &#8220;Title[]&#8221; directive and in the H1 section of the &#8220;PageTop[]&#8221;. Default is &#8220;Traffic analysis for &#8221;. (HTML escaped variant: $html_desc_prefix)</dd>
 <dt><code>$if_title_desc</code></dt>
 <dd> This is the description of the interface normally used by cfgmaker as part of the variable $if_title. The latter is used as the full string in the &#8220;Title[]&#8221; directove and the H1 section in the PageTop[]. </dd>
 <p> $if_title_desc is controlled by the command line option <code>&#8211;if-descr</code> which indirectly controls the contents of $if_title </p>
-<p> (<font SIZE="-1">HTML</font> escaped variant: $html_if_title_desc)</dl>
+<p> (HTML escaped variant: $html_if_title_desc)</dl>
 <p> <i>Help Functions for Templates</i> </p>
 <p> The following functions exists to facilitate the writing of host and interface templates.</p>
 <dl>
 <dt><code>html_escape(</code>string<code>)</code></dt>
-<dd> html_escape() takes a string as an argument and returns a new string where the following substitutions has been done: the chars &#8220;&lt;&#8221;, &#8220;&gt;&#8221; and &#8220;&amp;&#8221; are replaced by &#8220;&amp;lt;&#8221;, &#8220;&amp;gt;&#8221; and &#8220;&amp;amp;&#8221; and that newlines embedded in the string are prepended with &#8220;&lt;<font SIZE="-1">BR</font>&gt;&#8221; and appended with a space character (newlines at the end of the string are not touched).</dd>
+<dd> html_escape() takes a string as an argument and returns a new string where the following substitutions has been done: the chars &#8220;&lt;&#8221;, &#8220;&gt;&#8221; and &#8220;&amp;&#8221; are replaced by &#8220;&amp;lt;&#8221;, &#8220;&amp;gt;&#8221; and &#8220;&amp;amp;&#8221; and that newlines embedded in the string are prepended with &#8220;&lt;BR&gt;&#8221; and appended with a space character (newlines at the end of the string are not touched).</dd>
 <dt><code>oid_pick($router_connect,$v3opt,&quot;oid1&quot;,&quot;oid2&quot;&#8230;)</code></dt>
 <dd> This function will try to poll each of the oids specified until it is successful or has run out of oids. It will return the name of the first oid that worked or undef if it is not successful</dd></dl>
 <p> <i>Example Template Files</i> </p>
 <p> Template Example 1: Eliminating Rejected Targets From Appearing </p>
 <p> This template file generates exactly the same configuration code per interface as cfgmaker does by default, with the exception that it eliminates all lines (comments as well as config code) for an interface if the interface happens to be rejected. </p>
-<p>if (not $problem_lines) {<br />
-    $target_lines.= &lt;&lt; ECHO;<br />
-    Target[$target_name] : $if_ref : $router_connect<br />
-                                         SetEnv[$target_name] : MRTG_INT_IP = &#8220;$if_ip&#8221; MRTG_INT_DESCR = &#8220;$if_snmp_descr&#8221; ECHO if ($directory_name)<br />
-    {<br />
+<p>if (not $problem_lines) {<br/>
+    $target_lines.= &lt;&lt; ECHO;<br/>
+    Target[$target_name] : $if_ref : $router_connect<br/>
+                                         SetEnv[$target_name] : MRTG_INT_IP = &#8220;$if_ip&#8221; MRTG_INT_DESCR = &#8220;$if_snmp_descr&#8221; ECHO if ($directory_name)<br/>
+    {<br/>
         $target_lines.= &#8220;Directory[$target_name]: $directory_name
-&#8221;;<br />
-    }<br />
-    $target_lines.= &lt;&lt; ECHO;<br />
-    MaxBytes[$target_name] : $if_speed<br />
-                                 Title[$target_name] : $html_desc_prefix$html_if_title_desc&#8211; $sysname<br />
-                                                           PageTop[$target_name] : &lt;h1&gt;<br />
-                                                                                       $html_desc_prefix$html_if_title_desc&#8211; $sysname&lt;/ h1&gt;<br />
-                                                                                   &lt;div id = &#8220;sysdetails&#8221;&gt;<br />
-                                                                                   &lt;table&gt;<br />
-                                                                                   &lt;tr&gt;<br />
-                                                                                   &lt;td&gt;<br />
-                                                                                       System : &lt;/ td&gt;<br />
-                                                                                                &lt;td&gt;<br />
-                                                                                                    $sysname in $html_syslocation&lt;/ td&gt;<br />
-                                                                                                &lt;/ tr&gt;<br />
-                                                                                                &lt;tr&gt;<br />
-                                                                                                &lt;td&gt;<br />
-                                                                                                    Maintainer : &lt;/ td&gt;<br />
-                                                                                                                 &lt;td&gt;<br />
-                                                                                                                     $html_syscontact&lt;/ td&gt;<br />
-                                                                                                                 &lt;/ tr&gt;<br />
-                                                                                                                 &lt;tr&gt;<br />
-                                                                                                                 &lt;td&gt;<br />
-                                                                                                                     Description : &lt;/ td&gt;<br />
-                                                                                                                                   &lt;td&gt;<br />
-                                                                                                                                       $html_if_description&lt;/ td&gt;<br />
-                                                                                                                                   &lt;/ tr&gt;<br />
-                                                                                                                                   &lt;tr&gt;<br />
-                                                                                                                                   &lt;td&gt;<br />
-                                                                                                                                       ifType : &lt;/ td&gt;<br />
-                                                                                                                                                &lt;td&gt;<br />
-                                                                                                                                                    $html_if_type_desc($if_type_num)&lt;/ td&gt;<br />
-                                                                                                                                                &lt;/ tr&gt;<br />
-                                                                                                                                                &lt;tr&gt;<br />
-                                                                                                                                                &lt;td&gt;<br />
-                                                                                                                                                    ifName : &lt;/ td&gt;<br />
-                                                                                                                                                             &lt;td&gt;<br />
-                                                                                                                                                                 $html_if_snmp_name&lt;/ td&gt;<br />
-                                                                                                                                                             &lt;/ tr&gt;<br />
-                                                                                                                                                                 ECHO<br />
-                                                                                                                                                                     $target_lines.=<br />
-        &lt;&lt; ECHO if defined $if_port_name;<br />
-    &lt;tr&gt;<br />
-        &lt;td&gt; Port Name : &lt;/ td&gt;<br />
-                         &lt;td&gt;<br />
-                             $if_port_name&lt;/ td&gt;<br />
-                         &lt;/ tr&gt;<br />
-                             ECHO<br />
-                                 $target_lines.=<br />
-        &lt;&lt; ECHO if defined $if_pp_port_name;<br />
-    &lt;tr&gt;<br />
-        &lt;td&gt; Port Name : &lt;/ td&gt;<br />
-                         &lt;td&gt;<br />
-                             $if_pp_port_name&lt;/ td&gt;<br />
-                         &lt;/ tr&gt;<br />
-                             ECHO<br />
-                                 $target_lines.=<br />
-        &lt;&lt; ECHO;<br />
-    &lt;tr&gt;<br />
-        &lt;td&gt; Max Speed : &lt;/ td&gt;<br />
-                         &lt;td&gt;<br />
-                             $if_speed_str&lt;/ td&gt;<br />
-                         &lt;/ tr&gt;<br />
-                             ECHO<br />
-                                 $target_lines.=<br />
-        &lt;&lt; ECHO if $if_ip;<br />
-    &lt;tr&gt;<br />
-        &lt;td&gt; Ip : &lt;/ td&gt;<br />
-                  &lt;td&gt;<br />
-                      $if_ip($if_dns_name)&lt;/ td&gt;<br />
-                  &lt;/ tr&gt;<br />
-                      ECHO<br />
-                          $target_lines.=<br />
-        &lt;&lt; ECHO;<br />
-    &lt;/ table&gt;<br />
-        &lt;/ div&gt;<br />
-            ECHO<br />
-} else {<br />
-    $head_lines = &#8220;&#8221;;<br />
-    $problem_lines = &#8220;&#8221;;<br />
-    $target_lines = &#8220;&#8221;;<br />
-    $separator_lines = &#8220;&#8221;;<br />
+&#8221;;<br/>
+    }<br/>
+    $target_lines.= &lt;&lt; ECHO;<br/>
+    MaxBytes[$target_name] : $if_speed<br/>
+                                 Title[$target_name] : $html_desc_prefix$html_if_title_desc&#8211; $sysname<br/>
+                                                           PageTop[$target_name] : &lt;h1&gt;<br/>
+                                                                                       $html_desc_prefix$html_if_title_desc&#8211; $sysname&lt;/ h1&gt;<br/>
+                                                                                   &lt;div id = &#8220;sysdetails&#8221;&gt;<br/>
+                                                                                   &lt;table&gt;<br/>
+                                                                                   &lt;tr&gt;<br/>
+                                                                                   &lt;td&gt;<br/>
+                                                                                       System : &lt;/ td&gt;<br/>
+                                                                                                &lt;td&gt;<br/>
+                                                                                                    $sysname in $html_syslocation&lt;/ td&gt;<br/>
+                                                                                                &lt;/ tr&gt;<br/>
+                                                                                                &lt;tr&gt;<br/>
+                                                                                                &lt;td&gt;<br/>
+                                                                                                    Maintainer : &lt;/ td&gt;<br/>
+                                                                                                                 &lt;td&gt;<br/>
+                                                                                                                     $html_syscontact&lt;/ td&gt;<br/>
+                                                                                                                 &lt;/ tr&gt;<br/>
+                                                                                                                 &lt;tr&gt;<br/>
+                                                                                                                 &lt;td&gt;<br/>
+                                                                                                                     Description : &lt;/ td&gt;<br/>
+                                                                                                                                   &lt;td&gt;<br/>
+                                                                                                                                       $html_if_description&lt;/ td&gt;<br/>
+                                                                                                                                   &lt;/ tr&gt;<br/>
+                                                                                                                                   &lt;tr&gt;<br/>
+                                                                                                                                   &lt;td&gt;<br/>
+                                                                                                                                       ifType : &lt;/ td&gt;<br/>
+                                                                                                                                                &lt;td&gt;<br/>
+                                                                                                                                                    $html_if_type_desc($if_type_num)&lt;/ td&gt;<br/>
+                                                                                                                                                &lt;/ tr&gt;<br/>
+                                                                                                                                                &lt;tr&gt;<br/>
+                                                                                                                                                &lt;td&gt;<br/>
+                                                                                                                                                    ifName : &lt;/ td&gt;<br/>
+                                                                                                                                                             &lt;td&gt;<br/>
+                                                                                                                                                                 $html_if_snmp_name&lt;/ td&gt;<br/>
+                                                                                                                                                             &lt;/ tr&gt;<br/>
+                                                                                                                                                                 ECHO<br/>
+                                                                                                                                                                     $target_lines.=<br/>
+        &lt;&lt; ECHO if defined $if_port_name;<br/>
+    &lt;tr&gt;<br/>
+        &lt;td&gt; Port Name : &lt;/ td&gt;<br/>
+                         &lt;td&gt;<br/>
+                             $if_port_name&lt;/ td&gt;<br/>
+                         &lt;/ tr&gt;<br/>
+                             ECHO<br/>
+                                 $target_lines.=<br/>
+        &lt;&lt; ECHO if defined $if_pp_port_name;<br/>
+    &lt;tr&gt;<br/>
+        &lt;td&gt; Port Name : &lt;/ td&gt;<br/>
+                         &lt;td&gt;<br/>
+                             $if_pp_port_name&lt;/ td&gt;<br/>
+                         &lt;/ tr&gt;<br/>
+                             ECHO<br/>
+                                 $target_lines.=<br/>
+        &lt;&lt; ECHO;<br/>
+    &lt;tr&gt;<br/>
+        &lt;td&gt; Max Speed : &lt;/ td&gt;<br/>
+                         &lt;td&gt;<br/>
+                             $if_speed_str&lt;/ td&gt;<br/>
+                         &lt;/ tr&gt;<br/>
+                             ECHO<br/>
+                                 $target_lines.=<br/>
+        &lt;&lt; ECHO if $if_ip;<br/>
+    &lt;tr&gt;<br/>
+        &lt;td&gt; Ip : &lt;/ td&gt;<br/>
+                  &lt;td&gt;<br/>
+                      $if_ip($if_dns_name)&lt;/ td&gt;<br/>
+                  &lt;/ tr&gt;<br/>
+                      ECHO<br/>
+                          $target_lines.=<br/>
+        &lt;&lt; ECHO;<br/>
+    &lt;/ table&gt;<br/>
+        &lt;/ div&gt;<br/>
+            ECHO<br/>
+} else {<br/>
+    $head_lines = &#8220;&#8221;;<br/>
+    $problem_lines = &#8220;&#8221;;<br/>
+    $target_lines = &#8220;&#8221;;<br/>
+    $separator_lines = &#8220;&#8221;;<br/>
 }</p>
 <p> <i>Template Example 2: Simplier Version of Example 1</i> </p>
 <p> Example 1 was partly intended to demonstrate how to customize the generation of interface targets but also to provide a hint of how the variables are used in the &#8220;default&#8221; template which one could consider that cfgmaker normally uses. </p>
 <p> If you&#8217;re only intrested in the easiest way of entirely eliminating those reject interfaces, the template below would do the job as well by using $default_target_lines. </p>
-<p>if ($if_ok) {<br />
-    $target_lines = $default_target_lines;<br />
-} else {<br />
-    $head_lines = &#8220;&#8221;;<br />
-    $problem_lines = &#8220;&#8221;;<br />
-    $target_lines = &#8220;&#8221;;<br />
-    $separator_lines = &#8220;&#8221;;<br />
+<p>if ($if_ok) {<br/>
+    $target_lines = $default_target_lines;<br/>
+} else {<br/>
+    $head_lines = &#8220;&#8221;;<br/>
+    $problem_lines = &#8220;&#8221;;<br/>
+    $target_lines = &#8220;&#8221;;<br/>
+    $separator_lines = &#8220;&#8221;;<br/>
 }</p>
-<p> <i>Template Example 3: Creating </i><font SIZE="-1"><i>CPU</i></font><i> Targets for Hosts</i> </p>
+<p> <i>Template Example 3: Creating </i><i>CPU</i><i> Targets for Hosts</i> </p>
 <p> Below is an example of a host template. </p>
-<p>$head_lines.= &lt;&lt; ECHO;<br />
-#&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;<br />
-ECHO<br />
-    my $target_name = $router_name.&#8221;.cpu&#8221;;<br />
-$target_lines.= &lt;&lt; ECHO;<br />
-YLegend[$target_name] : Percentage CPU load<br />
-                            ShortLegend[$target_name] : %<br />
-                                                        Legend1[$target_name] : CPU load in %<br />
-                                                                                Legend2[$target_name] : Legend3[$target_name] : Max Observed CPU load<br />
-                                                                                                                                    Legend4[$target_name] : LegendI[$target_name] : &amp;nbsp;<br />
-CPU Load : LegendO[$target_name] : WithPeak[$target_name] : ywm<br />
-                                                                MaxBytes[$target_name] : 100 Options[$target_name] : growright,<br />
-                                                                                                                     gauge,<br />
-                                                                                                                     nopercent<br />
-                                                                                                                             Title[$target_name] : $router_name CPU load<br />
-                                                                                                                                                       Target[$target_name] : 1.3.6.1.4.1.9.2.1.58.0 &amp;<br />
-                                                                                                                                                   1.3.6.1.4.1.9.2.1.58.0 : $router_connect<br />
-                                                                                                                                                                                PageTop[$target_name] : &lt;h1&gt;<br />
-                                                                                                                                                                                                            $router_name CPU load&lt;/ h1&gt;<br />
-                                                                                                                                                                                                        &lt;div&gt;<br />
-                                                                                                                                                                                                        &lt;table&gt;<br />
-                                                                                                                                                                                                        &lt;tr&gt;<br />
-                                                                                                                                                                                                        &lt;td&gt;<br />
-                                                                                                                                                                                                            System : &lt;/ td&gt;<br />
-                                                                                                                                                                                                                     &lt;td&gt;<br />
-                                                                                                                                                                                                                         $router_name in $html_syslocation&lt;/ td&gt;<br />
-                                                                                                                                                                                                                     &lt;/ tr&gt;<br />
-                                                                                                                                                                                                                     &lt;tr&gt;<br />
-                                                                                                                                                                                                                     &lt;td&gt;<br />
-                                                                                                                                                                                                                         Maintainer : &lt;/ td&gt;<br />
-                                                                                                                                                                                                                                      &lt;td&gt;<br />
-                                                                                                                                                                                                                                          $html_syscontact&lt;/ td&gt;<br />
-                                                                                                                                                                                                                                      &lt;/ tr&gt;<br />
-                                                                                                                                                                                                                                      &lt;tr&gt;<br />
-                                                                                                                                                                                                                                      &lt;td&gt;<br />
-                                                                                                                                                                                                                                          Description : &lt;/ td&gt;<br />
-                                                                                                                                                                                                                                                        &lt;td&gt;<br />
-                                                                                                                                                                                                                                                            $html_sysdescr&lt;/ td&gt;<br />
-                                                                                                                                                                                                                                                        &lt;/ tr&gt;<br />
-                                                                                                                                                                                                                                                        &lt;tr&gt;<br />
-                                                                                                                                                                                                                                                        &lt;td&gt;<br />
-                                                                                                                                                                                                                                                            Resource : &lt;/ td&gt;<br />
-                                                                                                                                                                                                                                                                       &lt;td&gt;<br />
-                                                                                                                                                                                                                                                                           CPU.&lt;/ td&gt;<br />
-                                                                                                                                                                                                                                                                       &lt;/ tr&gt;<br />
-                                                                                                                                                                                                                                                                       &lt;/ table&gt;<br />
-                                                                                                                                                                                                                                                                       &lt;/ div&gt;<br />
+<p>$head_lines.= &lt;&lt; ECHO;<br/>
+#&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;<br/>
+ECHO<br/>
+    my $target_name = $router_name.&#8221;.cpu&#8221;;<br/>
+$target_lines.= &lt;&lt; ECHO;<br/>
+YLegend[$target_name] : Percentage CPU load<br/>
+                            ShortLegend[$target_name] : %<br/>
+                                                        Legend1[$target_name] : CPU load in %<br/>
+                                                                                Legend2[$target_name] : Legend3[$target_name] : Max Observed CPU load<br/>
+                                                                                                                                    Legend4[$target_name] : LegendI[$target_name] : &amp;nbsp;<br/>
+CPU Load : LegendO[$target_name] : WithPeak[$target_name] : ywm<br/>
+                                                                MaxBytes[$target_name] : 100 Options[$target_name] : growright,<br/>
+                                                                                                                     gauge,<br/>
+                                                                                                                     nopercent<br/>
+                                                                                                                             Title[$target_name] : $router_name CPU load<br/>
+                                                                                                                                                       Target[$target_name] : 1.3.6.1.4.1.9.2.1.58.0 &amp;<br/>
+                                                                                                                                                   1.3.6.1.4.1.9.2.1.58.0 : $router_connect<br/>
+                                                                                                                                                                                PageTop[$target_name] : &lt;h1&gt;<br/>
+                                                                                                                                                                                                            $router_name CPU load&lt;/ h1&gt;<br/>
+                                                                                                                                                                                                        &lt;div&gt;<br/>
+                                                                                                                                                                                                        &lt;table&gt;<br/>
+                                                                                                                                                                                                        &lt;tr&gt;<br/>
+                                                                                                                                                                                                        &lt;td&gt;<br/>
+                                                                                                                                                                                                            System : &lt;/ td&gt;<br/>
+                                                                                                                                                                                                                     &lt;td&gt;<br/>
+                                                                                                                                                                                                                         $router_name in $html_syslocation&lt;/ td&gt;<br/>
+                                                                                                                                                                                                                     &lt;/ tr&gt;<br/>
+                                                                                                                                                                                                                     &lt;tr&gt;<br/>
+                                                                                                                                                                                                                     &lt;td&gt;<br/>
+                                                                                                                                                                                                                         Maintainer : &lt;/ td&gt;<br/>
+                                                                                                                                                                                                                                      &lt;td&gt;<br/>
+                                                                                                                                                                                                                                          $html_syscontact&lt;/ td&gt;<br/>
+                                                                                                                                                                                                                                      &lt;/ tr&gt;<br/>
+                                                                                                                                                                                                                                      &lt;tr&gt;<br/>
+                                                                                                                                                                                                                                      &lt;td&gt;<br/>
+                                                                                                                                                                                                                                          Description : &lt;/ td&gt;<br/>
+                                                                                                                                                                                                                                                        &lt;td&gt;<br/>
+                                                                                                                                                                                                                                                            $html_sysdescr&lt;/ td&gt;<br/>
+                                                                                                                                                                                                                                                        &lt;/ tr&gt;<br/>
+                                                                                                                                                                                                                                                        &lt;tr&gt;<br/>
+                                                                                                                                                                                                                                                        &lt;td&gt;<br/>
+                                                                                                                                                                                                                                                            Resource : &lt;/ td&gt;<br/>
+                                                                                                                                                                                                                                                                       &lt;td&gt;<br/>
+                                                                                                                                                                                                                                                                           CPU.&lt;/ td&gt;<br/>
+                                                                                                                                                                                                                                                                       &lt;/ tr&gt;<br/>
+                                                                                                                                                                                                                                                                       &lt;/ table&gt;<br/>
+                                                                                                                                                                                                                                                                       &lt;/ div&gt;<br/>
                                                                                                                                                                                                                                                                            ECHO</p>
 <h2>EXAMPLES</h2>
-<p> The first example creates a config file for <i>router.place.xyz</i>: the router has the community name <i>public</i>. Interfaces get identified by their <font SIZE="-1">IP</font> number. Two global options get added to the config file. The config file gets redirected to <i>mrtg.conf</i>. The &#8216;\&#8217; signs at the end of the line mean that this command should be written on a single line. </p>
+<p> The first example creates a config file for <i>router.place.xyz</i>: the router has the community name <i>public</i>. Interfaces get identified by their IP number. Two global options get added to the config file. The config file gets redirected to <i>mrtg.conf</i>. The &#8216;\&#8217; signs at the end of the line mean that this command should be written on a single line. </p>
 <p>cfgmaker&#8211; global &#8220;WorkDir: /home/tobi&#8221; &#8211;global &#8220;Options[_]: growright,bits&#8221; &#8211;ifref = ip public[at] router.place.xyz &gt; mrtg.cfg</p>
 <p> Note: if cfgmaker is not in your path, but you are in the directory where cfgmaker is stored, you can start it with ./cfgmaker </p>
 <p> The next example creates a config file for four devices: <i>router1.place.xyz</i>, <i>router2.place.xyz</i>, <i>switch1.place.xyz</i> and <i>switch2.place.xyz</i> all with the community <i>public</i>. </p>
 <p> The two routers will have <code>&#8211;ifref</code> set to <code>descr</code> whilst the two switches will use <code>&#8211;ifref</code> set to <code>name</code>. Further the routers will use <code>&#8211;ifdesc</code> set to <code>alias</code> and <i>switch1.place.xyz</i> will use <code>&#8211;ifdesc</code> set to <code>descr</code> whilst <i>switch2.place.xyz</i> use <code>name</code> instead. </p>
 <p> Finally, there will be two Options lines inserted in the configuration: One will be in the beginning, whilst the other will be inserted after the lines related to the two routers but before those lines related to the switches. </p>
 <p>cfgmaker&#8211; global &#8220;WorkDir: /home/tobi&#8221; &#8211;global &#8220;Options[_]: growright,bits&#8221; &#8211;ifref = descr&#8211; ifdesc = alias public[at] router1.place.xyz public[at] router2.place.xyz&#8211; global &#8220;Options[_]: growright&#8221; &#8211;ifref = name&#8211; ifdesc = descr public[at] switch1.place.xyz&#8211; ifdesc = name public[at] switch2.place.xyz &gt; mrtg.cfg</p>
-<p> The next example demonstrates how to use the <code>&#8211;community</code>, <code>&#8211;snmp-options</code> and <code>&#8211;dns-domain</code> to make the command line simpler. All the equipment will use the community <i>hidden</i>, except for the ppp-server which use community <i>access</i>. All equipment uses these <font SIZE="-1">SNMP</font> options: <code>1s timeout</code>, <code>1 retry</code> and <font SIZE="-1"><code>SNMP</code></font><code> version 2</code> (<code>backoff</code> and <code>port</code> is unspecified which means they use the default values). The exception again is the ppp-server which uses <font SIZE="-1"><code>SNMP</code></font><code> version 1</code>. Finally, all the equipment is part of the domain <i>place.xyz</i>, except for the ppp-server which is part of the domain <i>remote.place.xyz</i>. Note that the latter is achieved simply by specifying the name of the ppp-server to be <i>ppp-server.</i>remote<i></i> . </p>
+<p> The next example demonstrates how to use the <code>&#8211;community</code>, <code>&#8211;snmp-options</code> and <code>&#8211;dns-domain</code> to make the command line simpler. All the equipment will use the community <i>hidden</i>, except for the ppp-server which use community <i>access</i>. All equipment uses these SNMP options: <code>1s timeout</code>, <code>1 retry</code> and <code>SNMP</code><code> version 2</code> (<code>backoff</code> and <code>port</code> is unspecified which means they use the default values). The exception again is the ppp-server which uses <code>SNMP</code><code> version 1</code>. Finally, all the equipment is part of the domain <i>place.xyz</i>, except for the ppp-server which is part of the domain <i>remote.place.xyz</i>. Note that the latter is achieved simply by specifying the name of the ppp-server to be <i>ppp-server.</i>remote<i></i> . </p>
 <pre><code>
 cfgmaker-- global "WorkDir: /home/tobi" --global "Options[_]: growright,bits" --dns - domain = place.xyz-- community = hidden-- snmp - options = ::1 : 1 ::2 router1
                                                                                                                                                          router2
@@ -603,6 +603,6 @@ cfgmaker-- global "WorkDir: /home/tobi" --global "Options[_]: growright,bits" --
 <h2>AUTHOR</h2>
 <p> Tobias Oetiker &lt;tobi [at] oetiker.ch&gt; and Jakob Ilves &lt;jakob.ilves [at] oracle.com&gt;</p>
 <h2>LICENSE</h2>
-<p> <font SIZE="-1">GNU</font> General Public License</p>
+<p> GNU General Public License</p>
 <h2>COPYRIGHT</h2>
 <p> Cfgmaker is Copyright 2000 by Tobias Oetiker &lt;tobi [at] oetiker.ch&gt; </p>

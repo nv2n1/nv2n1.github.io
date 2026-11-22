@@ -54,8 +54,8 @@ description: "Globus XIO API –"
 <p> globus_result_t <code>globus_xio_register_close</code> (globus_xio_handle_t handle, globus_xio_attr_t attr, <code>globus_xio_callback_t</code> cb, void *user_arg) </p>
 <p> globus_result_t <code>globus_xio_close</code> (globus_xio_handle_t handle, globus_xio_attr_t attr) </p>
 <p> globus_result_t <code>globus_xio_handle_create_from_url</code> (globus_xio_handle_t *out_h, const char *scheme, globus_xio_attr_t attr, char *param_string) </p>
-<p> globus_result_t <code>globus_xio_driver_list_to_stack_attr</code> (globus_list_t *driver_list, globus_xio_stack_t stack, globus_xio_attr_t attr)<br />
- <i>Add a list of driver entries to a stack. </i><br />
+<p> globus_result_t <code>globus_xio_driver_list_to_stack_attr</code> (globus_list_t *driver_list, globus_xio_stack_t stack, globus_xio_attr_t attr)<br/>
+ <i>Add a list of driver entries to a stack. </i><br/>
  globus_result_t <code>globus_xio_handle_cntl</code> (handle, driver, <code>GLOBUS_XIO_GET_LOCAL_CONTACT</code>, char **contact_string_out) </p>
 <p> globus_result_t <code>globus_xio_handle_cntl</code> (handle, driver, <code>GLOBUS_XIO_GET_LOCAL_NUMERIC_CONTACT</code>, char **contact_string_out) </p>
 <p> globus_result_t <code>globus_xio_handle_cntl</code> (handle, driver, <code>GLOBUS_XIO_GET_REMOTE_CONTACT</code>, char **contact_string_out) </p>
@@ -72,9 +72,9 @@ description: "Globus XIO API –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>server</i> The server object on which the accept was registered.<br />
- <i>handle</i> The newly created handle that was created by the accept operation.<br />
- <i>result</i> A result code indicating the success of the accept operation. GLOBUS_SUCCESS indicates a successful accept.<br />
+</dt><dd> <i>server</i> The server object on which the accept was registered.<br/>
+ <i>handle</i> The newly created handle that was created by the accept operation.<br/>
+ <i>result</i> A result code indicating the success of the accept operation. GLOBUS_SUCCESS indicates a successful accept.<br/>
  <i>user_arg</i> A user argument that is threaded from the registration to the callback.</dd></dl>
 <h3>typedef void(* globus_xio_callback_t)(globus_xio_handle_t handle, globus_result_t result, void *user_arg)</h3>
 <p> globus_xio_callback_t </p>
@@ -98,8 +98,8 @@ description: "Globus XIO API –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The handle the handle on which the timeout operation was requested.<br />
- <i>type</i> The type of operation that timed out: GLOBUS_XIO_OPERATION_OPEN GLOBUS_XIO_OPERATION_CLOSE GLOBUS_XIO_OPERATION_READ GLOBUS_XIO_OPERATION_WRITE<br />
+</dt><dd> <i>handle</i> The handle the handle on which the timeout operation was requested.<br/>
+ <i>type</i> The type of operation that timed out: GLOBUS_XIO_OPERATION_OPEN GLOBUS_XIO_OPERATION_CLOSE GLOBUS_XIO_OPERATION_READ GLOBUS_XIO_OPERATION_WRITE<br/>
  <i>arg</i> A user arg threaded through to the callback.</dd></dl>
 <h2>Enumeration Type Documentation</h2>
 <h3>enum <code>globus_i_xio_op_type_e</code></h3>
@@ -132,8 +132,8 @@ description: "Globus XIO API –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>attr</i> the attribute structure to be manipulated.<br />
- <i>driver</i> This parameter indicates which driver the user would like to perform the requested operation. If this parameter is NULL this request will be scoped to general attribute functions.<br />
+</dt><dd> <i>attr</i> the attribute structure to be manipulated.<br/>
+ <i>driver</i> This parameter indicates which driver the user would like to perform the requested operation. If this parameter is NULL this request will be scoped to general attribute functions.<br/>
  <i>cmd</i> an enum that determines what specific operation the user is requesting. Each driver will determine the value for this enumeration.</dd></dl>
 <h3>globus_result_t globus_xio_attr_copy (globus_xio_attr_t *dst, globus_xio_attr_tsrc)</h3>
 <p> Copy an attribute structure.</p>
@@ -161,15 +161,15 @@ description: "Globus XIO API –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>data_desc</i> An out parameter. The data descriptor to be initialized.<br />
+</dt><dd> <i>data_desc</i> An out parameter. The data descriptor to be initialized.<br/>
  <i>handle</i> The handle this data descriptor will be used with. This parameter is require in order to optimize the code handling the data descriptors use.</dd></dl>
 <h3>globus_result_t globus_xio_driver_list_to_stack_attr (globus_list_t *driver_list, globus_xio_stack_tstack, globus_xio_attr_tattr)</h3>
 <p> Add a list of driver entries to a stack. This function walks a list of globus_xio_driver_list_ent_t * values passed as the driver_list parameter, and pushes them onto the XIO stack passed as the stack parameter and sets attributes for those drivers in the attr passed as the attr parameter to this function. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>driver_list</i> A list of driver list entries in stack order (transport, followed by transform). Each entry may contain a option string for attributes to set for this driver.<br />
- <i>stack</i> A pointer to an XIO stack which will have the drivers pushed onto. It must be previously initialized by calling <code>globus_xio_stack_init()</code>. This function does not overwrite the stack, so the drivers passed in the driver list will be pushed on top of any existing drivers in the stack.<br />
+</dt><dd> <i>driver_list</i> A list of driver list entries in stack order (transport, followed by transform). Each entry may contain a option string for attributes to set for this driver.<br/>
+ <i>stack</i> A pointer to an XIO stack which will have the drivers pushed onto. It must be previously initialized by calling <code>globus_xio_stack_init()</code>. This function does not overwrite the stack, so the drivers passed in the driver list will be pushed on top of any existing drivers in the stack.<br/>
  <i>attr</i> A pointer to an XIO attribute which will have the driver-specific string options set on it, after the drivers are pushed onto the stack. The opts field of the list entries are passed to the GLOBUS_XIO_SET_STRING_OPTIONS attr control function. This value must be previously initialized by calling <code>globus_xio_attr_init()</code>. Errors from the attr control function are ignored.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -243,10 +243,10 @@ description: "Globus XIO API –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>out_h</i> An uninitialized handle that will be initialized in the function to correspond to the scheme given. This handle should be used for any I/O operations.<br />
- <i>scheme</i> A string containing the protocol which the handle should be initialized to. The string can either be a protocol by itself, for example, &#8216;http&#8217;, or a complete scheme such as &#8216;<a rel="nofollow" href="http://www.example.com'.">http://www.example.com&#8217;.</a><br />
- <i>attr</i> Attribute to be used for setting parameter string. It is initialized by the function. Can be NULL if attributes are not being used.<br />
- <i>param_string</i> A string containing attributes to be set for the drivers associated with the scheme. This should be in the form &#8216;protocol1:option1=value1;option2=value2,protocol2:option1=value1;<br />
+</dt><dd> <i>out_h</i> An uninitialized handle that will be initialized in the function to correspond to the scheme given. This handle should be used for any I/O operations.<br/>
+ <i>scheme</i> A string containing the protocol which the handle should be initialized to. The string can either be a protocol by itself, for example, &#8216;http&#8217;, or a complete scheme such as &#8216;<a rel="nofollow" href="http://www.example.com'.">http://www.example.com&#8217;.</a><br/>
+ <i>attr</i> Attribute to be used for setting parameter string. It is initialized by the function. Can be NULL if attributes are not being used.<br/>
+ <i>param_string</i> A string containing attributes to be set for the drivers associated with the scheme. This should be in the form &#8216;protocol1:option1=value1;option2=value2,protocol2:option1=value1;<br/>
 &nbsp;<wbr>option2=value2&#8242;&nbsp;<wbr>Can be NULL if attributes are not being used.&nbsp;<wbr></dd></dl>
 <h3>globus_result_t globus_xio_open (globus_xio_handle_thandle, const char *contact_string, globus_xio_attr_tattr)</h3>
 <p> blocking open</p>
@@ -260,9 +260,9 @@ description: "Globus XIO API –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> the handle to be closed.<br />
- <i>attr</i> how to close attribute<br />
- <i>cb</i> The function to be called when the close operation completes.<br />
+</dt><dd> <i>handle</i> the handle to be closed.<br/>
+ <i>attr</i> how to close attribute<br/>
+ <i>cb</i> The function to be called when the close operation completes.<br/>
  <i>user_arg</i> A user pointer that will be threaded through to the callback.</dd></dl>
 <h3>globus_result_t globus_xio_register_open (globus_xio_handle_thandle, const char *contact_string, globus_xio_attr_tattr, <code>globus_xio_callback_t</code>cb, void *user_arg)</h3>
 <p> Open a handle </p>
@@ -271,10 +271,10 @@ description: "Globus XIO API –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The handle created with <code>globus_xio_handle_create()</code> or <code>globus_xio_server_register_accept()</code> that is to be opened.<br />
- <i>attr</i> how to open attribute. can be NULL<br />
- <i>cb</i> The function to be called when the open operation completes.<br />
- <i>user_arg</i> A user pointer that will be threaded through to the callback.<br />
+</dt><dd> <i>handle</i> The handle created with <code>globus_xio_handle_create()</code> or <code>globus_xio_server_register_accept()</code> that is to be opened.<br/>
+ <i>attr</i> how to open attribute. can be NULL<br/>
+ <i>cb</i> The function to be called when the open operation completes.<br/>
+ <i>user_arg</i> A user pointer that will be threaded through to the callback.<br/>
  <i>contact_string</i> An url describing the resource. NULL is allowed. Drivers interpret the various parts of this url as described in their documentation. An alternative form is also supported: if contact_string does not specify a scheme (e.g. <a rel="nofollow" href="http://)">http://)</a> and it contains a &#8216;:&#8217;, it will be parsed as a host:port pair. if it does not contain a &#8216;:&#8217;, it will be parsed as the path</dd></dl>
 <p> the following are examples of valid formats: </p>
 <pre><code>
@@ -322,8 +322,8 @@ description: "Globus XIO API –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>server</i> An out parameter. Once the function successfully returns this will point to a valid server object.<br />
- <i>server_attr</i> an attribute structure used to alter the default server initialization. This will mostly be used in a driver specific manner. can be NULL.<br />
+</dt><dd> <i>server</i> An out parameter. Once the function successfully returns this will point to a valid server object.<br/>
+ <i>server_attr</i> an attribute structure used to alter the default server initialization. This will mostly be used in a driver specific manner. can be NULL.<br/>
  <i>stack</i></dd></dl>
 <h3>globus_result_t globus_xio_server_get_contact_string (globus_xio_server_tserver, char **contact_string)</h3>
 <p> get contact string </p>
@@ -331,7 +331,7 @@ description: "Globus XIO API –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>server</i> An initialized server handle created with <code>globus_xio_server_create()</code><br />
+</dt><dd> <i>server</i> An initialized server handle created with <code>globus_xio_server_create()</code><br/>
  <i>contact_string</i> an out variable. Will point to a newly allocated string on success. must be freed by the caller.</dd></dl>
 <h3>globus_result_t globus_xio_server_register_accept (globus_xio_server_tserver, <code>globus_xio_accept_callback_t</code>cb, void *user_arg)</h3>
 <p> Asynchronous accept. </p>

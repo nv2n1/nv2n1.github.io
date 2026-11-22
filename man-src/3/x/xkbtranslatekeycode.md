@@ -10,7 +10,7 @@ description: "XkbTranslateKeyCode – Translate a keycode to a key symbol and mo
 <p>XkbTranslateKeyCode &#8211; Translate a keycode to a key symbol and modifiers </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Bool XkbTranslateKeyCode</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>KeyCode </code><i>key</i><code>,</code> <code>unsigned int </code><i>mods</i><code>,</code> <code>unsigned int *</code><i>mods_rtrn</i><code>,</code> <code>KeySym *</code><i>keysym_rtrn</i><code>);</code><br />
+<dt> <code>Bool XkbTranslateKeyCode</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>KeyCode </code><i>key</i><code>,</code> <code>unsigned int </code><i>mods</i><code>,</code> <code>unsigned int *</code><i>mods_rtrn</i><code>,</code> <code>KeySym *</code><i>keysym_rtrn</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

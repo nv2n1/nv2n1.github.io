@@ -40,12 +40,12 @@ description: "hwloc-distances – Displays distance matrices"
 <p> <code>NOTE:</code> lstopo may also display distance matrices in its verbose textual output. However lstopo only prints matrices that cover the entire topology while hwloc-distances also displays matrices that ignore part of the topology.</p>
 <h2>EXAMPLES</h2>
 <p> On a quad-package opteron machine: </p>
-<p>&nbsp;<wbr>$&nbsp;<wbr>hwloc-distances<br />
-&nbsp;<wbr>Latency matrix between 4 NUMANodes&nbsp;<wbr>(depth 2)&nbsp;<wbr>by logical indexes:<br />
-index&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>2&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>3<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0 1.000 1.600 2.200 2.200<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1 1.600 1.000 2.200 2.200<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>2 2.200 2.200 1.000 1.600<br />
+<p>&nbsp;<wbr>$&nbsp;<wbr>hwloc-distances<br/>
+&nbsp;<wbr>Latency matrix between 4 NUMANodes&nbsp;<wbr>(depth 2)&nbsp;<wbr>by logical indexes:<br/>
+index&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>2&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>3<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0 1.000 1.600 2.200 2.200<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1 1.600 1.000 2.200 2.200<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>2 2.200 2.200 1.000 1.600<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>3 2.200 2.200 1.600 1.000</p>
 <h2>RETURN VALUE</h2>
 <p> Upon successful execution, hwloc-distances returns 0. </p>

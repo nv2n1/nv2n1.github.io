@@ -67,7 +67,7 @@ void wordfree(wordexp_t *p);</code></pre>
 <tr VALIGN=top>
 <td> <code>wordexp</code>() </td>
 <td>Thread safety</td>
-<td> MT-Unsafe race:utent const:env<br />
+<td> MT-Unsafe race:utent const:env<br/>
  env sig:ALRM timer locale
 </td>
 </tr>

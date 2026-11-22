@@ -10,11 +10,11 @@ description: "xzgrep – search compressed files for a regular expression"
 
 <p> xzgrep &#8211; search compressed files for a regular expression </p>
 <h2>SYNOPSIS</h2>
-<p> <code>xzgrep</code> [<i>grep_options</i>] [<code>-e</code>] <i>pattern</i> <i>file</i>&#8230;<br />
- <code>xzegrep</code> &#8230;<br />
- <code>xzfgrep</code> &#8230;<br />
- <code>lzgrep</code> &#8230;<br />
- <code>lzegrep</code> &#8230;<br />
+<p> <code>xzgrep</code> [<i>grep_options</i>] [<code>-e</code>] <i>pattern</i> <i>file</i>&#8230;<br/>
+ <code>xzegrep</code> &#8230;<br/>
+ <code>xzfgrep</code> &#8230;<br/>
+ <code>lzgrep</code> &#8230;<br/>
+ <code>lzegrep</code> &#8230;<br/>
  <code>lzfgrep</code> &#8230;</p>
 <h2>DESCRIPTION</h2>
 <p> <code>xzgrep</code> invokes <code><a href="/docs/linux/man/1-grep/">grep</a></code>(1) on <i>files</i> which may be either uncompressed or compressed with <code><a href="/docs/linux/man/1-xz/">xz</a></code>(1), <code><a href="/docs/linux/man/1-lzma/">lzma</a></code>(1), <code><a href="/docs/linux/man/1-gzip/">gzip</a></code>(1), <code><a href="/docs/linux/man/1-bzip2/">bzip2</a></code>(1), <code><a href="/docs/linux/man/1-lzop/">lzop</a></code>(1), or <code><a href="/docs/linux/man/1-zstd/">zstd</a></code>(1). All options specified are passed directly to <code><a href="/docs/linux/man/1-grep/">grep</a></code>(1). </p>

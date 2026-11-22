@@ -35,66 +35,66 @@ description: "pdb2gmx – converts pdb files to topology and coordinate files"
 <p> The option <code> -vsite</code> removes hydrogen and fast improper dihedral motions. Angular and out-of-plane motions can be removed by changing hydrogens into virtual sites and fixing angles, which fixes their position relative to neighboring atoms. Additionally, all atoms in the aromatic rings of the standard amino acids (i.e. PHE, TRP, TYR and HIS) can be converted into virtual sites, elminating the fast improper dihedral fluctuations in these rings. Note that in this case all other hydrogen atoms are also converted to virtual sites. The mass of all atoms that are converted into virtual sites, is added to the heavy atoms. </p>
 <p> Also slowing down of dihedral motion can be done with <code> -heavyh</code> done by increasing the hydrogen-mass by a factor of 4. This is also done for water hydrogens to slow down the rotational motion of water. The increase in mass of the hydrogens is subtracted from the bonded (heavy) atom so that the total mass of the system remains the same.</p>
 <h2>FILES</h2>
-<p> <code>-f</code><i> eiwit.pdb</i> <code>Input</code><br />
+<p> <code>-f</code><i> eiwit.pdb</i> <code>Input</code><br/>
 &nbsp;<wbr>Structure file: gro g96 pdb tpr tpb tpa&nbsp;<wbr> </p>
-<p> <code>-o</code><i> conf.gro</i> <code>Output</code><br />
+<p> <code>-o</code><i> conf.gro</i> <code>Output</code><br/>
 &nbsp;<wbr>Structure file: gro g96 pdb&nbsp;<wbr> </p>
-<p> <code>-p</code><i> topol.top</i> <code>Output</code><br />
+<p> <code>-p</code><i> topol.top</i> <code>Output</code><br/>
 &nbsp;<wbr>Topology file&nbsp;<wbr> </p>
-<p> <code>-i</code><i> posre.itp</i> <code>Output</code><br />
+<p> <code>-i</code><i> posre.itp</i> <code>Output</code><br/>
 &nbsp;<wbr>Include file for topology&nbsp;<wbr> </p>
-<p> <code>-n</code><i> clean.ndx</i> <code>Output, Opt.</code><br />
+<p> <code>-n</code><i> clean.ndx</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>Index file&nbsp;<wbr> </p>
-<p> <code>-q</code><i> clean.pdb</i> <code>Output, Opt.</code><br />
+<p> <code>-q</code><i> clean.pdb</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>Structure file: gro g96 pdb&nbsp;<wbr> </p>
 <h2>OTHER OPTIONS</h2>
-<p> <code>-[no]h</code><i>no </i><br />
+<p> <code>-[no]h</code><i>no </i><br/>
 &nbsp;<wbr>Print help info and quit </p>
-<p> <code>-nice</code><i> int</i><code> 0</code><br />
+<p> <code>-nice</code><i> int</i><code> 0</code><br/>
 &nbsp;<wbr>Set the nicelevel </p>
-<p> <code>-[no]merge</code><i>no </i><br />
+<p> <code>-[no]merge</code><i>no </i><br/>
 &nbsp;<wbr>Merge chains into one molecule definition </p>
-<p> <code>-ff</code><i> string</i><code> select</code><br />
+<p> <code>-ff</code><i> string</i><code> select</code><br/>
 &nbsp;<wbr>Force field, interactive by default. Use -h for information. </p>
-<p> <code>-water</code><i> enum</i><code> spc</code><br />
+<p> <code>-water</code><i> enum</i><code> spc</code><br/>
 &nbsp;<wbr>Water model to use: with GROMOS we recommend SPC, with OPLS, TIP4P:&nbsp;<wbr><code>&nbsp;<wbr>spc</code>,&nbsp;<wbr><code>&nbsp;<wbr>spce</code>,&nbsp;<wbr><code>&nbsp;<wbr>tip3p</code>,&nbsp;<wbr><code>&nbsp;<wbr>tip4p</code>,&nbsp;<wbr><code>&nbsp;<wbr>tip5p</code>&nbsp;<wbr>or&nbsp;<wbr><code>&nbsp;<wbr>f3c</code> </p>
-<p> <code>-[no]inter</code><i>no </i><br />
+<p> <code>-[no]inter</code><i>no </i><br/>
 &nbsp;<wbr>Set the next 8 options to interactive </p>
-<p> <code>-[no]ss</code><i>no </i><br />
+<p> <code>-[no]ss</code><i>no </i><br/>
 &nbsp;<wbr>Interactive SS bridge selection </p>
-<p> <code>-[no]ter</code><i>no </i><br />
+<p> <code>-[no]ter</code><i>no </i><br/>
 &nbsp;<wbr>Interactive termini selection, iso charged </p>
-<p> <code>-[no]lys</code><i>no </i><br />
+<p> <code>-[no]lys</code><i>no </i><br/>
 &nbsp;<wbr>Interactive Lysine selection, iso charged </p>
-<p> <code>-[no]arg</code><i>no </i><br />
+<p> <code>-[no]arg</code><i>no </i><br/>
 &nbsp;<wbr>Interactive Arganine selection, iso charged </p>
-<p> <code>-[no]asp</code><i>no </i><br />
+<p> <code>-[no]asp</code><i>no </i><br/>
 &nbsp;<wbr>Interactive Aspartic Acid selection, iso charged </p>
-<p> <code>-[no]glu</code><i>no </i><br />
+<p> <code>-[no]glu</code><i>no </i><br/>
 &nbsp;<wbr>Interactive Glutamic Acid selection, iso charged </p>
-<p> <code>-[no]gln</code><i>no </i><br />
+<p> <code>-[no]gln</code><i>no </i><br/>
 &nbsp;<wbr>Interactive Glutamine selection, iso neutral </p>
-<p> <code>-[no]his</code><i>no </i><br />
+<p> <code>-[no]his</code><i>no </i><br/>
 &nbsp;<wbr>Interactive Histidine selection, iso checking H-bonds </p>
-<p> <code>-angle</code><i> real</i><code> 135 </code><br />
+<p> <code>-angle</code><i> real</i><code> 135 </code><br/>
 &nbsp;<wbr>Minimum hydrogen-donor-acceptor angle for a H-bond&nbsp;<wbr>(degrees) </p>
-<p> <code>-dist</code><i> real</i><code> 0.3 </code><br />
+<p> <code>-dist</code><i> real</i><code> 0.3 </code><br/>
 &nbsp;<wbr>Maximum donor-acceptor distance for a H-bond&nbsp;<wbr>(nm) </p>
-<p> <code>-[no]una</code><i>no </i><br />
+<p> <code>-[no]una</code><i>no </i><br/>
 &nbsp;<wbr>Select aromatic rings with united CH atoms on Phenylalanine, Tryptophane and Tyrosine </p>
-<p> <code>-[no]ignh</code><i>no </i><br />
+<p> <code>-[no]ignh</code><i>no </i><br/>
 &nbsp;<wbr>Ignore hydrogen atoms that are in the pdb file </p>
-<p> <code>-[no]missing</code><i>no </i><br />
+<p> <code>-[no]missing</code><i>no </i><br/>
 &nbsp;<wbr>Continue when atoms are missing, dangerous </p>
-<p> <code>-[no]v</code><i>no </i><br />
+<p> <code>-[no]v</code><i>no </i><br/>
 &nbsp;<wbr>Be slightly more verbose in messages </p>
-<p> <code>-posrefc</code><i> real</i><code> 1000 </code><br />
+<p> <code>-posrefc</code><i> real</i><code> 1000 </code><br/>
 &nbsp;<wbr>Force constant for position restraints </p>
-<p> <code>-vsite</code><i> enum</i><code> none</code><br />
+<p> <code>-vsite</code><i> enum</i><code> none</code><br/>
 &nbsp;<wbr>Convert atoms to virtual sites:&nbsp;<wbr><code>&nbsp;<wbr>none</code>,&nbsp;<wbr><code>&nbsp;<wbr>hydrogens</code>&nbsp;<wbr>or&nbsp;<wbr><code>&nbsp;<wbr>aromatics</code> </p>
-<p> <code>-[no]heavyh</code><i>no </i><br />
+<p> <code>-[no]heavyh</code><i>no </i><br/>
 &nbsp;<wbr>Make hydrogen atoms heavy </p>
-<p> <code>-[no]deuterate</code><i>no </i><br />
+<p> <code>-[no]deuterate</code><i>no </i><br/>
 &nbsp;<wbr>Change the mass of hydrogens to 2 amu </p>
 <h2>SEE ALSO</h2>
 <p> <code>gromacs(7)</code> </p>

@@ -14,7 +14,7 @@ description: "darktable-generate-cache – update darktable’s thumbnail cache"
 darktable - generate - cache[-h, --help; --version][-m, --max - mip&lt;0 - 7&gt;][--core&lt;darktable options&gt;]
 </code></pre>
 <h2>DESCRIPTION</h2>
-<p> <code>darktable</code> is a digital photography workflow application for <code>Linux</code>, <code>Mac </code><font SIZE="-1"><code>OS X</code></font> and several other <code>Unices</code>. It&#8217;s described further in <i><a href="/docs/linux/man/1-darktable/">darktable</a></i>(1). </p>
+<p> <code>darktable</code> is a digital photography workflow application for <code>Linux</code>, <code>Mac </code><code>OS X</code> and several other <code>Unices</code>. It&#8217;s described further in <i><a href="/docs/linux/man/1-darktable/">darktable</a></i>(1). </p>
 <p> <code>darktable-generate-cache</code> updates darktable&#8217;s thumbnail cache. You can start this program to generate all missing thumbnails in the background when your computer is idle.</p>
 <h2>OPTIONS</h2>
 <p> All parameters are optional. If started without parameters <code>darktable-generate-cache</code> uses reasonable defaults.</p>
@@ -40,4 +40,4 @@ darktable - generate - cache[-h, --help; --version][-m, --max - mip&lt;0 - 7&gt;
 <p> This man page was written by Ulrich Pegelow &lt;ulrich.pegelow [at] tongareva.de&gt; as part of the usermanual. It was turned into a man page by Tobias Ellinghaus &lt;me [at] houz.org&gt;.</p>
 <h2>COPYRIGHT AND LICENSE</h2>
 <p> <code>Copyright (C)</code> 2009-2015 by Authors. </p>
-<p> <code>darktable</code> is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GPL</font> v3 or (at your option) any later version. </p>
+<p> <code>darktable</code> is free software; you can redistribute it and/or modify it under the terms of the GPL v3 or (at your option) any later version. </p>

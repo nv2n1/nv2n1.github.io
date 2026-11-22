@@ -11,7 +11,7 @@ description: "dgeequ.f –"
 <p> dgeequ.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dgeequ</code> (M, N, A, LDA, R, C, ROWCND, COLCND, AMAX, INFO)<br />
+<p> subroutine <code>dgeequ</code> (M, N, A, LDA, R, C, ROWCND, COLCND, AMAX, INFO)<br/>
  <i></i><code>DGEEQU</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dgeequ (integerM, integerN, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( * )R, double precision, dimension( * )C, double precisionROWCND, double precisionCOLCND, double precisionAMAX, integerINFO)</h3>

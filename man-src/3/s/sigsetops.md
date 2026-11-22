@@ -43,9 +43,9 @@ int sigismember(const sigset_t *set, int signum);</code></pre>
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>sigemptyset</code>(), <code>sigfillset</code>(),<br />
- <code>sigaddset</code>(), <code>sigdelset</code>(),<br />
- <code>sigismember</code>(), <code>sigisemptyset</code>(),<br />
+<td> <code>sigemptyset</code>(), <code>sigfillset</code>(),<br/>
+ <code>sigaddset</code>(), <code>sigdelset</code>(),<br/>
+ <code>sigismember</code>(), <code>sigisemptyset</code>(),<br/>
  <code>sigorset</code>(), <code>sigandset</code>() </td>
 <td>Thread safety</td>
 <td>MT-Safe

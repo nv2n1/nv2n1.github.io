@@ -15,7 +15,7 @@ unicode_script_t unicode_script(unicode_char ch);</code></pre>
 <p><code>unicode_script</code>() looks up the &#8220;script&#8221;</p>
 <dd>property of the specified unicode character, and returns it. The unicode_script_t enumeration encodes possible unicode script values. unicode_script_unknown gets returned for a unicode character with an unknown script property.</dd>
 <h2>See Also</h2>
-<p>m[blue]<code>TR-24</code>m[]<font SIZE="-2">[1]</font>, <code><a href="/docs/linux/man/7-courier-unicode/">courier-unicode</a></code>(7).</p>
+<p>m[blue]<code>TR-24</code>m[][1], <code><a href="/docs/linux/man/7-courier-unicode/">courier-unicode</a></code>(7).</p>
 <h2>Author</h2>
 <p><code>Sam Varshavchik</code></p>
 <dl>

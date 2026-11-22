@@ -258,7 +258,7 @@ description: "keyrings – in-kernel key management and retention facility"
 </dl>
 <dt><i>/proc/key-users</i> (since Linux 2.6.10)</dt>
 <dd>This file lists various information for each user ID that has at least one key on the system. An example of the data that one might see in this file is the following:</dd>
-<dd>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;10 9/9 2/1000000 22/25000000<br />
+<dd>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;10 9/9 2/1000000 22/25000000<br/>
 &nbsp;<wbr>&nbsp;42:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;9 9/9 8/200 106/20000 1000: 11 11/11 10/200 271/20000</dd>
 <dd>The fields shown in each line are as follows:</dd>
 <dl>

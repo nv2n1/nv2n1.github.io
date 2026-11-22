@@ -59,7 +59,7 @@ description: "xclip – command line interface to X selections (clipboard)"
 <p> Middle click in an X application supporting HTML to paste the contents of the given file as HTML. </p>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><font SIZE="-1"><code>DISPLAY</code></font></dt>
+<dt><code>DISPLAY</code></dt>
 <dd> X display to use if none is specified with the <code>-display</code> option. </dd>
 </dl>
 <h2>REPORTING BUGS</h2>

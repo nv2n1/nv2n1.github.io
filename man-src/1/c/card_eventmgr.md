@@ -35,17 +35,17 @@ description: "card_eventmgr – PCSC-Lite Event Manager"
 <p>&nbsp;<wbr>card_eventmgr&nbsp;<wbr> </p>
 <p> Alternatively you can specify options: </p>
 <p>&nbsp;<wbr>card_eventmgr debug nodaemon timeout=500 config_file=$HOME/.card_eventmgr.conf </p>
-<p> If you want to start and stop card_eventmgr automatically in an X11 session you can create a <i>~/.xsession</i> file containing:<br />
-&nbsp;<wbr>#&nbsp;<wbr>start the card autolock<br />
+<p> If you want to start and stop card_eventmgr automatically in an X11 session you can create a <i>~/.xsession</i> file containing:<br/>
+&nbsp;<wbr>#&nbsp;<wbr>start the card autolock<br/>
 &nbsp;<wbr>card_eventmgr pidfile=$HOME/.card_eventmgr.pid </p>
-<p>&nbsp;<wbr>#&nbsp;<wbr>start Gnome or something else<br />
+<p>&nbsp;<wbr>#&nbsp;<wbr>start Gnome or something else<br/>
 &nbsp;<wbr>/usr/bin/x-session-manager </p>
-<p>&nbsp;<wbr>#&nbsp;<wbr>kill the card autolock<br />
+<p>&nbsp;<wbr>#&nbsp;<wbr>kill the card autolock<br/>
 &nbsp;<wbr>card_eventmgr kill pidfile=$HOME/.card_eventmgr.pid</p>
 <h2>BUGS</h2>
 <p> Some applications like <code>xscreensaver-command</code> may fail due to external events (eg: try to unlock an unlocked session). In this case, the command incorrectly returns error code.</p>
 <h2>AUTHORS</h2>
-<p> Juan Antonio Martinez &lt;jonsito [at] teleline.es&gt;<br />
+<p> Juan Antonio Martinez &lt;jonsito [at] teleline.es&gt;<br/>
  Ludovic Rousseau &lt;ludovic.rousseau [at] free.fr&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-pam_pkcs11/">pam_pkcs11</a></code>(8), <code><a href="/docs/linux/man/1-pkcs11_eventmgr/">pkcs11_eventmgr</a></code>(1), README.eventmgr, PAM-PKCS11 User Manual </p>

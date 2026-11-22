@@ -14,30 +14,30 @@ description: "log4cpp::AppenderSkeleton –"
 <p> Inherits <code>log4cpp::Appender</code>. </p>
 <p> Inherited by <code>log4cpp::AbortAppender</code>, <code>log4cpp::IdsaAppender</code>, <code>log4cpp::LayoutAppender</code>, and <code>log4cpp::NTEventLogAppender</code>.</p>
 <h3>Public Member Functions</h3>
-<p>virtual <code>~AppenderSkeleton</code> ()<br />
- <i>Destructor for </i><code>AppenderSkeleton</code>.<br />
- virtual void <code>doAppend</code> (const <code>LoggingEvent</code> &amp;event)<br />
- <i>Log in </i><code>Appender</code> specific way.<br />
- virtual bool <code>reopen</code> ()<br />
- <i>Reopens the output destination of this </i><code>Appender</code>, e.g.<br />
- virtual void <code>close</code> ()=0<br />
- <i>Release any resources allocated within the appender such as file handles, network connections, etc. </i><br />
- virtual bool <code>requiresLayout</code> () const =0<br />
- <i>Check if the appender uses a layout. </i><br />
- virtual void <code>setLayout</code> (<code>Layout</code> *layout)=0<br />
- <i>Set the </i><code>Layout</code> for this appender.<br />
- virtual void <code>setThreshold</code> (<code>Priority::Value</code> priority)<br />
- <i>Set the threshold priority of this </i><code>Appender</code>.<br />
- virtual <code>Priority::Value</code> <code>getThreshold</code> ()<br />
- <i>Get the threshold priority of this </i><code>Appender</code>.<br />
- virtual void <code>setFilter</code> (<code>Filter</code> *filter)<br />
- <i>Set a </i><code>Filter</code> for this appender.<br />
- virtual <code>Filter</code> * <code>getFilter</code> ()<br />
+<p>virtual <code>~AppenderSkeleton</code> ()<br/>
+ <i>Destructor for </i><code>AppenderSkeleton</code>.<br/>
+ virtual void <code>doAppend</code> (const <code>LoggingEvent</code> &amp;event)<br/>
+ <i>Log in </i><code>Appender</code> specific way.<br/>
+ virtual bool <code>reopen</code> ()<br/>
+ <i>Reopens the output destination of this </i><code>Appender</code>, e.g.<br/>
+ virtual void <code>close</code> ()=0<br/>
+ <i>Release any resources allocated within the appender such as file handles, network connections, etc. </i><br/>
+ virtual bool <code>requiresLayout</code> () const =0<br/>
+ <i>Check if the appender uses a layout. </i><br/>
+ virtual void <code>setLayout</code> (<code>Layout</code> *layout)=0<br/>
+ <i>Set the </i><code>Layout</code> for this appender.<br/>
+ virtual void <code>setThreshold</code> (<code>Priority::Value</code> priority)<br/>
+ <i>Set the threshold priority of this </i><code>Appender</code>.<br/>
+ virtual <code>Priority::Value</code> <code>getThreshold</code> ()<br/>
+ <i>Get the threshold priority of this </i><code>Appender</code>.<br/>
+ virtual void <code>setFilter</code> (<code>Filter</code> *filter)<br/>
+ <i>Set a </i><code>Filter</code> for this appender.<br/>
+ virtual <code>Filter</code> * <code>getFilter</code> ()<br/>
  <i>Get the </i><code>Filter</code> for this appender.</p>
 <h3>Protected Member Functions</h3>
-<p><code>AppenderSkeleton</code> (const std::string &amp;name)<br />
- <i>Constructor for </i><code>AppenderSkeleton</code>.<br />
- virtual void <code>_append</code> (const <code>LoggingEvent</code> &amp;event)=0<br />
+<p><code>AppenderSkeleton</code> (const std::string &amp;name)<br/>
+ <i>Constructor for </i><code>AppenderSkeleton</code>.<br/>
+ virtual void <code>_append</code> (const <code>LoggingEvent</code> &amp;event)=0<br/>
  <i>Log in </i><code>Appender</code> specific way.</p>
 <h3>Additional Inherited Members</h3>
 <h2>Detailed Description</h2>

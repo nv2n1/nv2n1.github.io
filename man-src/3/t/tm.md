@@ -65,13 +65,13 @@ int *info_len;
 tm_event_t event;</code></pre>
 <pre><code>int tm_finalize()</code></pre>
 <h2>Description</h2>
-<p>These functions provide a partial implementation of the task management interface part of the PSCHED API. In PBS, MOM provides the task manager functions. This library opens a tcp socket to the MOM running on the local host and sends and receives messages. The PSCHED Task Management API description used to create this library was commited to paper on Novermber 15, 1996 and was given the version number 0.1. Changes may have taken place since that time which are not reflected in this library. The API description uses several data types that it purposefully does not define. This was done so an implementaion would not be confined in the way it was written. For this specific work, the definitions follow: struct tm_roots {<br />
-    tm_task_id tm_me;<br />
-    tm_task_id tm_parent;<br />
-    int tm_nnodes;<br />
-    int tm_ntasks;<br />
-    int tm_taskpoolid;<br />
-    tm_task_id *tm_tasklist;<br />
+<p>These functions provide a partial implementation of the task management interface part of the PSCHED API. In PBS, MOM provides the task manager functions. This library opens a tcp socket to the MOM running on the local host and sends and receives messages. The PSCHED Task Management API description used to create this library was commited to paper on Novermber 15, 1996 and was given the version number 0.1. Changes may have taken place since that time which are not reflected in this library. The API description uses several data types that it purposefully does not define. This was done so an implementaion would not be confined in the way it was written. For this specific work, the definitions follow: struct tm_roots {<br/>
+    tm_task_id tm_me;<br/>
+    tm_task_id tm_parent;<br/>
+    int tm_nnodes;<br/>
+    int tm_ntasks;<br/>
+    int tm_taskpoolid;<br/>
+    tm_task_id *tm_tasklist;<br/>
 }; There are a number of error values defined as well: TM_SUCCESS, TM_ESYSTEM, TM_ENOEVENT, TM_ENOTCONNECTED, TM_EUNKNOWNCMD, TM_ENOTIMPLEMENTED, TM_EBADENVIRONMENT, TM_ENOTFOUND. <code>tm_init()</code> initializes the library by opening a socket to the MOM on the local host and sending a TM_INIT message, then waiting for the reply. The <i>info</i> paramenter has no use and is included to conform with the PSCHED document. The <i>roots</i> pointer will contain valid data after the function returns and has the following structure: </p>
 <pre><code>struct tm_roots {
     tm_task_id tm_me;

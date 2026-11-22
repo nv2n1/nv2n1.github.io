@@ -15,7 +15,7 @@ description: "tshark – Dump and analyze network traffic"
 <h2>DESCRIPTION</h2>
 <p> <code>TShark</code> is a network protocol analyzer. It lets you capture packet data from a live network, or read packets from a previously saved capture file, either printing a decoded form of those packets to the standard output or writing the packets to a file. <code>TShark</code>&#8216;s native capture file format is <code>pcap</code> format, which is also the format used by <code>tcpdump</code> and various other tools. </p>
 <p> Without any options set, <code>TShark</code> will work much like <code>tcpdump</code>. It will use the pcap library to capture traffic from the first available network interface and displays a summary line on stdout for each received packet. </p>
-<p> <code>TShark</code> is able to detect, read and write the same capture files that are supported by <code>Wireshark</code>. The input file doesn&#8217;t need a specific filename extension; the file format and an optional gzip compression will be automatically detected. Near the beginning of the <font SIZE="-1">DESCRIPTION</font> section of <i><a href="/docs/linux/man/1-wireshark/">wireshark</a></i>(1) or &lt;<a rel="nofollow" href="http://www.wireshark.org/docs/man-pages/wireshark.html">http://www.wireshark.org/docs/man-pages/wireshark.html</a>&gt; is a detailed description of the way <code>Wireshark</code> handles this, which is the same way <code>Tshark</code> handles this. </p>
+<p> <code>TShark</code> is able to detect, read and write the same capture files that are supported by <code>Wireshark</code>. The input file doesn&#8217;t need a specific filename extension; the file format and an optional gzip compression will be automatically detected. Near the beginning of the DESCRIPTION section of <i><a href="/docs/linux/man/1-wireshark/">wireshark</a></i>(1) or &lt;<a rel="nofollow" href="http://www.wireshark.org/docs/man-pages/wireshark.html">http://www.wireshark.org/docs/man-pages/wireshark.html</a>&gt; is a detailed description of the way <code>Wireshark</code> handles this, which is the same way <code>Tshark</code> handles this. </p>
 <p> Compressed file support uses (and therefore requires) the zlib library. If the zlib library is not present, <code>TShark</code> will compile, but will be unable to read compressed files. </p>
 <p> If the <code>-w</code> option is not specified, <code>TShark</code> writes to the standard output the text of a decoded form of the packets it captures or reads. If the <code>-w</code> option is specified, <code>TShark</code> writes to the file specified by that option the raw data of the packets, along with the packets&#8217; time stamps. </p>
 <p> When writing a decoded form of packets, <code>TShark</code> writes, by default, a summary line containing the fields specified by the preferences file (which are also the fields displayed in the packet list pane in <code>Wireshark</code>), although if it&#8217;s writing packets as it captures them, rather than writing packets from a saved capture file, it won&#8217;t show the &#8220;frame number&#8221; field. If the <code>-V</code> option is specified, it writes instead a view of the details of the packet, showing all the fields of all protocols in the packet. If the <code>-O</code> option is specified, it will only show the full protocols specified. Use the output of &quot;<code>tshark -G protocols</code>&quot; to find the abbreviations of the protocols you can specify. </p>
@@ -45,23 +45,23 @@ description: "tshark – Dump and analyze network traffic"
 <p> Example: <code>-b filesize:1000 -b files:5</code> results in a ring buffer of five files of size one megabyte each.</p>
 <dt>-B &lt;capture buffer size&gt;</dt>
 <dd> Set capture buffer size (in MiB, default is 2 MiB). This is used by the capture driver to buffer packet data until that data can be written to disk. If you encounter packet drops while capturing, try to increase this size. Note that, while <code>Tshark</code> attempts to set the buffer size to 2 MiB by default, and can be told to set it to a larger value, the system or interface on which you&#8217;re capturing might silently limit the capture buffer size to a lower value or raise it to a higher value. </dd>
-<p> This is available on <font SIZE="-1">UNIX</font> systems with libpcap 1.0.0 or later and on Windows. It is not available on <font SIZE="-1">UNIX</font> systems with earlier versions of libpcap. </p>
+<p> This is available on UNIX systems with libpcap 1.0.0 or later and on Windows. It is not available on UNIX systems with earlier versions of libpcap. </p>
 <p> This option can occur multiple times. If used before the first occurrence of the <code>-i</code> option, it sets the default capture buffer size. If used after an <code>-i</code> option, it sets the capture buffer size for the interface specified by the last <code>-i</code> option occurring before this option. If the capture buffer size is not set specifically, the default capture buffer size is used instead.</p>
 <dt>-c &lt;capture packet count&gt;</dt>
 <dd> Set the maximum number of packets to read when capturing live data. If reading a capture file, set the maximum number of packets to read.</dd>
 <dt>-C &lt;configuration profile&gt;</dt>
 <dd> Run with the given configuration profile.</dd>
 <dt>-d &lt;layer type&gt;==&lt;selector&gt;,&lt;decode-as protocol&gt;</dt>
-<dd> Like Wireshark&#8217;s <code>Decode As&#8230;</code> feature, this lets you specify how a layer type should be dissected. If the layer type in question (for example, <code>tcp.port</code> or <code>udp.port</code> for a <font SIZE="-1">TCP</font> or <font SIZE="-1">UDP</font> port number) has the specified selector value, packets should be dissected as the specified protocol. </dd>
-<p> Example: <code>-d tcp.port==8888,http</code> will decode any traffic running over <font SIZE="-1">TCP</font> port 8888 as <font SIZE="-1">HTTP.</font> </p>
-<p> Example: <code>-d tcp.port==8888:3,http</code> will decode any traffic running over <font SIZE="-1">TCP</font> ports 8888, 8889 or 8890 as <font SIZE="-1">HTTP.</font> </p>
-<p> Example: <code>-d tcp.port==8888-8890,http</code> will decode any traffic running over <font SIZE="-1">TCP</font> ports 8888, 8889 or 8890 as <font SIZE="-1">HTTP.</font> </p>
+<dd> Like Wireshark&#8217;s <code>Decode As&#8230;</code> feature, this lets you specify how a layer type should be dissected. If the layer type in question (for example, <code>tcp.port</code> or <code>udp.port</code> for a TCP or UDP port number) has the specified selector value, packets should be dissected as the specified protocol. </dd>
+<p> Example: <code>-d tcp.port==8888,http</code> will decode any traffic running over TCP port 8888 as HTTP. </p>
+<p> Example: <code>-d tcp.port==8888:3,http</code> will decode any traffic running over TCP ports 8888, 8889 or 8890 as HTTP. </p>
+<p> Example: <code>-d tcp.port==8888-8890,http</code> will decode any traffic running over TCP ports 8888, 8889 or 8890 as HTTP. </p>
 <p> Using an invalid selector or protocol will print out a list of valid selectors and protocol names, respectively. </p>
 <p> Example: <code>-d .</code> is a quick way to get a list of valid selectors. </p>
 <p> Example: <code>-d ethertype==0x0800.</code> is a quick way to get a list of protocols that can be selected with an ethertype.</p>
 <dt>-D</dt>
 <dd> Print a list of the interfaces on which <code>TShark</code> can capture, and exit. For each network interface, a number and an interface name, possibly followed by a text description of the interface, is printed. The interface name or the number can be supplied to the <code>-i</code> option to specify an interface on which to capture. </dd>
-<p> This can be useful on systems that don&#8217;t have a command to list them (e.g., Windows systems, or <font SIZE="-1">UNIX</font> systems lacking <code>ifconfig -a</code>); the number can be useful on Windows 2000 and later systems, where the interface name is a somewhat complex string. </p>
+<p> This can be useful on systems that don&#8217;t have a command to list them (e.g., Windows systems, or UNIX systems lacking <code>ifconfig -a</code>); the number can be useful on Windows 2000 and later systems, where the interface name is a somewhat complex string. </p>
 <p> Note that &#8220;can capture&#8221; means that <code>TShark</code> was able to open that device to do a live capture. Depending on your system you may need to run tshark from an account with special privileges (for example, as root) to be able to capture network traffic. If <code>TShark -D</code> is not run from such an account, it will not list any interfaces.</p>
 <dt>-e &lt;field&gt;</dt>
 <dd> Add a field to the list of fields to display if <code>-T fields</code> is selected. This option can be used multiple times on the command line. At least one field must be provided if the <code>-T fields</code> option is selected. Column names may be used prefixed with &#8220;col.&#8221; </dd>
@@ -85,7 +85,7 @@ description: "tshark – Dump and analyze network traffic"
 <dt>-G [fields|protocols|values|decodes|defaultprefs|currentprefs]</dt>
 <dd> The <code>-G</code> option will cause <code>Tshark</code> to dump one of several types of glossaries and then exit. If no specific glossary type is specified, then the <code>fields</code> report will be generated by default. </dd>
 <p> The available report types include: </p>
-<p> <code>fields</code> Dumps the contents of the registration database to stdout. An independent program can take this output and format it into nice tables or <font SIZE="-1">HTML</font> or whatever. There is one record per line. Each record is either a protocol or a header field, differentiated by the first field. The fields are tab-delimited. </p>
+<p> <code>fields</code> Dumps the contents of the registration database to stdout. An independent program can take this output and format it into nice tables or HTML or whatever. There is one record per line. Each record is either a protocol or a header field, differentiated by the first field. The fields are tab-delimited. </p>
 <pre><code>
  * Protocols
  * ---------
@@ -104,15 +104,15 @@ description: "tshark – Dump and analyze network traffic"
  * Field 7 = bitmask: format: hex: 0x....
  * Field 8 = blurb describing field
 </code></pre>
-<p> <code>protocols</code> Dumps the protocols in the registration database to stdout. An independent program can take this output and format it into nice tables or <font SIZE="-1">HTML</font> or whatever. There is one record per line. The fields are tab-delimited. </p>
+<p> <code>protocols</code> Dumps the protocols in the registration database to stdout. An independent program can take this output and format it into nice tables or HTML or whatever. There is one record per line. The fields are tab-delimited. </p>
 <pre>
  * Field 1 = protocol name
  * Field 2 = protocol short name
  * Field 3 = protocol filter name
 </pre>
 <p> <code>values</code> Dumps the value_strings, range_strings or true/false strings for fields that have them. There is one record per line. Fields are tab-delimited. There are three types of records: Value String, Range String and True/False String. The first field, &#8216;V&#8217;, &#8216;R&#8217; or &#8216;T&#8217;, indicates the type of record. </p>
-<p>*Value Strings * &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -*Field 1 = &#8216;V&#8217; * Field 2 = field abbreviation to which this value string corresponds * Field 3 = Integer value * Field 4 = String *<br />
-                                                                                                                                                               *Range Strings * &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -*Field 1 = &#8216;R&#8217; * Field 2 = field abbreviation to which this range string corresponds * Field 3 = Integer value : lower bound * Field 4 = Integer value : upper bound * Field 5 = String *<br />
+<p>*Value Strings * &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -*Field 1 = &#8216;V&#8217; * Field 2 = field abbreviation to which this value string corresponds * Field 3 = Integer value * Field 4 = String *<br/>
+                                                                                                                                                               *Range Strings * &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -*Field 1 = &#8216;R&#8217; * Field 2 = field abbreviation to which this range string corresponds * Field 3 = Integer value : lower bound * Field 4 = Integer value : upper bound * Field 5 = String *<br/>
                                                                                                                                                                                                                                                                                                                                                                                     *True / False Strings * &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;*Field 1 = &#8216;T&#8217; * Field 2 = field abbreviation to which this true / false string corresponds * Field 3 = True String * Field 4 = False String</p>
 <p> <code>decodes</code> Dumps the &#8220;layer type&#8221;/&#8220;decode as&#8221; associations to stdout. There is one record per line. The fields are tab-delimited. </p>
 <pre>
@@ -129,33 +129,33 @@ description: "tshark – Dump and analyze network traffic"
 <p> The &#8220;hosts&#8221; file format is documented at &lt;<a rel="nofollow" href="http://en.wikipedia.org/wiki/Hosts_(file)">http://en.wikipedia.org/wiki/Hosts_(file)</a>&gt;.</p>
 <dt>-i &lt;capture interface&gt; | &#8211;</dt>
 <dd> Set the name of the network interface or pipe to use for live packet capture. </dd>
-<p> Network interface names should match one of the names listed in &quot;<code>tshark -D</code>&#8220; (described above); a number, as reported by &#8221;<code>tshark -D</code>&#8220;, can also be used. If you&#8217;re using <font SIZE="-1">UNIX, &#8221;</font><code>netstat -i</code>&#8220; or &#8221;<code>ifconfig -a</code>&quot; might also work to list interface names, although not all versions of <font SIZE="-1">UNIX</font> support the <code>-a</code> option to <code>ifconfig</code>. </p>
+<p> Network interface names should match one of the names listed in &quot;<code>tshark -D</code>&#8220; (described above); a number, as reported by &#8221;<code>tshark -D</code>&#8220;, can also be used. If you&#8217;re using UNIX, &#8221;<code>netstat -i</code>&#8220; or &#8221;<code>ifconfig -a</code>&quot; might also work to list interface names, although not all versions of UNIX support the <code>-a</code> option to <code>ifconfig</code>. </p>
 <p> If no interface is specified, <code>TShark</code> searches the list of interfaces, choosing the first non-loopback interface if there are any non-loopback interfaces, and choosing the first loopback interface if there are no non-loopback interfaces. If there are no interfaces at all, <code>TShark</code> reports an error and doesn&#8217;t start the capture. </p>
-<p> Pipe names should be either the name of a <font SIZE="-1">FIFO </font>(named pipe) or &#8220;-&#8221; to read data from the standard input. Data read from pipes must be in standard pcap format. </p>
+<p> Pipe names should be either the name of a FIFO (named pipe) or &#8220;-&#8221; to read data from the standard input. Data read from pipes must be in standard pcap format. </p>
 <p> This option can occur multiple times. When capturing from multiple interfaces, the capture file will be saved in pcap-ng format. </p>
 <p> Note: the Win32 version of <code>TShark</code> doesn&#8217;t support capturing from pipes!</p>
 <dt>-I</dt>
-<dd> Put the interface in &#8220;monitor mode&#8221;; this is supported only on <font SIZE="-1">IEEE 802.11</font> Wi-Fi interfaces, and supported only on some operating systems. </dd>
+<dd> Put the interface in &#8220;monitor mode&#8221;; this is supported only on IEEE 802.11 Wi-Fi interfaces, and supported only on some operating systems. </dd>
 <p> Note that in monitor mode the adapter might disassociate from the network with which it&#8217;s associated, so that you will not be able to use any wireless networks with that adapter. This could prevent accessing files on a network server, or resolving host names or network addresses, if you are capturing in monitor mode and are not connected to another network with another adapter. </p>
 <p> This option can occur multiple times. If used before the first occurrence of the <code>-i</code> option, it enables the monitor mode for all interfaces. If used after an <code>-i</code> option, it enables the monitor mode for the interface specified by the last <code>-i</code> option occurring before this option.</p>
 <dt>-K &lt;keytab&gt;</dt>
 <dd> Load kerberos crypto keys from the specified keytab file. This option can be used multiple times to load keys from several files. </dd>
 <p> Example: <code>-K krb5.keytab</code></p>
 <dt>-l</dt>
-<dd> Flush the standard output after the information for each packet is printed. (This is not, strictly speaking, line-buffered if <code>-V</code> was specified; however, it is the same as line-buffered if <code>-V</code> wasn&#8217;t specified, as only one line is printed for each packet, and, as <code>-l</code> is normally used when piping a live capture to a program or script, so that output for a packet shows up as soon as the packet is seen and dissected, it should work just as well as true line-buffering. We do this as a workaround for a deficiency in the Microsoft Visual C<font SIZE="-2">++</font> C library.) </dd>
+<dd> Flush the standard output after the information for each packet is printed. (This is not, strictly speaking, line-buffered if <code>-V</code> was specified; however, it is the same as line-buffered if <code>-V</code> wasn&#8217;t specified, as only one line is printed for each packet, and, as <code>-l</code> is normally used when piping a live capture to a program or script, so that output for a packet shows up as soon as the packet is seen and dissected, it should work just as well as true line-buffering. We do this as a workaround for a deficiency in the Microsoft Visual C++ C library.) </dd>
 <p> This may be useful when piping the output of <code>TShark</code> to another program, as it means that the program to which the output is piped will see the dissected data for a packet as soon as <code>TShark</code> sees the packet and generates that output, rather than seeing it only when the standard output buffer containing that data fills up.</p>
 <dt>-L</dt>
 <dd> List the data link types supported by the interface and exit. The reported link types can be used for the <code>-y</code> option.</dd>
 <dt>-n</dt>
-<dd> Disable network object name resolution (such as hostname, <font SIZE="-1">TCP</font> and <font SIZE="-1">UDP</font> port names); the <code>-N</code> flag might override this one.</dd>
+<dd> Disable network object name resolution (such as hostname, TCP and UDP port names); the <code>-N</code> flag might override this one.</dd>
 <dt>-N &lt;name resolving flags&gt;</dt>
 <dd> Turn on name resolving only for particular types of addresses and port numbers, with name resolving for other types of addresses and port numbers turned off. This flag overrides <code>-n</code> if both <code>-N</code> and <code>-n</code> are present. If both <code>-N</code> and <code>-n</code> flags are not present, all name resolutions are turned on. </dd>
 <p> The argument is a string that may contain the letters: </p>
-<p> <code>m</code> to enable <font SIZE="-1">MAC</font> address resolution </p>
+<p> <code>m</code> to enable MAC address resolution </p>
 <p> <code>n</code> to enable network address resolution </p>
-<p> <code>N</code> to enable using external resolvers (e.g., <font SIZE="-1">DNS</font>) for network address resolution </p>
+<p> <code>N</code> to enable using external resolvers (e.g., DNS) for network address resolution </p>
 <p> <code>t</code> to enable transport-layer port number resolution </p>
-<p> <code>C</code> to enable concurrent (asynchronous) <font SIZE="-1">DNS</font> lookups</p>
+<p> <code>C</code> to enable concurrent (asynchronous) DNS lookups</p>
 <dt>-o &lt;preference&gt;:&lt;value&gt;</dt>
 <dd> Set a preference value, overriding the default value and any value read from a preference file. The argument to the option is a string of the form <i>prefname</i><code>:</code><i>value</i>, where <i>prefname</i> is the name of the preference (which is the same name that would appear in the preference file), and <i>value</i> is the value to which it should be set.</dd>
 <dt>-O &lt;protocols&gt;</dt>
@@ -166,7 +166,7 @@ description: "tshark – Dump and analyze network traffic"
 <dt>-P</dt>
 <dd> Decode and display the packet summary, even if writing raw packet data using the <code>-w</code> option.</dd>
 <dt>-q</dt>
-<dd> When capturing packets, don&#8217;t display the continuous count of packets captured that is normally shown when saving a capture to a file; instead, just display, at the end of the capture, a count of packets captured. On systems that support the <font SIZE="-1">SIGINFO</font> signal, such as various BSDs, you can cause the current count to be displayed by typing your &#8220;status&#8221; character (typically control-T, although it might be set to &#8220;disabled&#8221; by default on at least some BSDs, so you&#8217;d have to explicitly set it to use it). </dd>
+<dd> When capturing packets, don&#8217;t display the continuous count of packets captured that is normally shown when saving a capture to a file; instead, just display, at the end of the capture, a count of packets captured. On systems that support the SIGINFO signal, such as various BSDs, you can cause the current count to be displayed by typing your &#8220;status&#8221; character (typically control-T, although it might be set to &#8220;disabled&#8221; by default on at least some BSDs, so you&#8217;d have to explicitly set it to use it). </dd>
 <p> When reading a capture file, or when capturing and not saving to a file, don&#8217;t print packet information; this is useful if you&#8217;re using a <code>-z</code> option to calculate statistics and don&#8217;t want the packet information printed, just the statistics.</p>
 <dt>-Q</dt>
 <dd> When capturing packets, only display true errors. This outputs less than the <code>-q</code> option, so the interface name and total packet count and the end of a capture are not sent to stderr.</dd>
@@ -191,8 +191,8 @@ description: "tshark – Dump and analyze network traffic"
 <p> <code>dd</code> delta_displayed: The delta_displayed time is the time since the previous displayed packet was captured </p>
 <p> <code>e</code> epoch: The time in seconds since epoch (Jan 1, 1970 00:00:00) </p>
 <p> <code>r</code> relative: The relative time is the time elapsed between the first packet and the current packet </p>
-<p> <code>u</code> <font SIZE="-1">UTC:</font> The <font SIZE="-1">UTC</font> time is the actual time the packet was captured, with no date displayed </p>
-<p> <code>ud</code> <font SIZE="-1">UTC</font> with date: The <font SIZE="-1">UTC</font> date and time is the actual time and date the packet was captured </p>
+<p> <code>u</code> UTC: The UTC time is the actual time the packet was captured, with no date displayed </p>
+<p> <code>ud</code> UTC with date: The UTC date and time is the actual time and date the packet was captured </p>
 <p> The default format is relative.</p>
 <dt>-T pdml|psml|ps|text|fields</dt>
 <dd> Set the format of the output when viewing decoded packet data. The options are one of: </dd>
@@ -204,14 +204,14 @@ description: "tshark – Dump and analyze network traffic"
 <pre>
   -T fields -E separator=, -E quote=d
 </pre>
-<p> would generate comma-separated values (<font SIZE="-1">CSV</font>) output suitable for importing into your favorite spreadsheet program.</p>
+<p> would generate comma-separated values (CSV) output suitable for importing into your favorite spreadsheet program.</p>
 <dt>-v</dt>
 <dd> Print the version and exit.</dd>
 <dt>-V</dt>
 <dd> Cause <code>TShark</code> to print a view of the packet details.</dd>
 <dt>-w &lt;outfile&gt; | &#8211;</dt>
 <dd> Write raw packet data to <i>outfile</i> or to the standard output if <i>outfile</i> is &#8216;-&#8216;. </dd>
-<p> <font SIZE="-1">NOTE:</font> -w provides raw packet data, not text. If you want text output you need to redirect stdout (e.g. using &#8216;&gt;&#8217;), don&#8217;t use the <code>-w</code> option for this.</p>
+<p> NOTE: -w provides raw packet data, not text. If you want text output you need to redirect stdout (e.g. using &#8216;&gt;&#8217;), don&#8217;t use the <code>-w</code> option for this.</p>
 <dt>-W &lt;file format option&gt;</dt>
 <dd> Save extra information in the file if the format supports it. For example, </dd>
 <pre>
@@ -222,7 +222,7 @@ description: "tshark – Dump and analyze network traffic"
 <p> The argument is a string that may contain the following letter: </p>
 <p> <code>n</code> write network address resolution information (pcapng only)</p>
 <dt>-x</dt>
-<dd> Cause <code>TShark</code> to print a hex and <font SIZE="-1">ASCII</font> dump of the packet data after printing the summary and/or details, if either are also being displayed.</dd>
+<dd> Cause <code>TShark</code> to print a hex and ASCII dump of the packet data after printing the summary and/or details, if either are also being displayed.</dd>
 <dt>-X &lt;eXtension options&gt;</dt>
 <dd> Specify an option to be passed to a <code>TShark</code> module. The eXtension option is in the form <i>extension_key</i><code>:</code><i>value</i>, where <i>extension_key</i> can be: </dd>
 <p> <code>lua_script</code>:<i>lua_script_filename</i> tells <code>Wireshark</code> to load the given script in addition to the default Lua scripts.</p>
@@ -259,32 +259,32 @@ description: "tshark – Dump and analyze network traffic"
 <p> If the optional <i>filter</i> is specified, only those packets that match the filter will be used in the calculations. </p>
 <p> The table is presented with one line for each conversation and displays the number of packets/bytes in each direction as well as the total number of packets/bytes. The table is sorted according to the total number of frames.</p>
 <dt><code>-z</code> dcerpc,srt,<i>uuid</i>,<i>major</i>.<i>minor</i>[,<i>filter</i>]</dt>
-<dd> Collect call/reply <font SIZE="-1">SRT </font>(Service Response Time) data for <font SIZE="-1">DCERPC</font> interface <i>uuid</i>, version <i>major</i>.<i>minor</i>. Data collected is the number of calls for each procedure, MinSRT, MaxSRT and AvgSRT. </dd>
-<p> Example: <code>-z dcerpc,srt,12345778-1234-abcd-ef00-0123456789ac,1.0</code> will collect data for the <font SIZE="-1">CIFS SAMR</font> Interface. </p>
+<dd> Collect call/reply SRT (Service Response Time) data for DCERPC interface <i>uuid</i>, version <i>major</i>.<i>minor</i>. Data collected is the number of calls for each procedure, MinSRT, MaxSRT and AvgSRT. </dd>
+<p> Example: <code>-z dcerpc,srt,12345778-1234-abcd-ef00-0123456789ac,1.0</code> will collect data for the CIFS SAMR Interface. </p>
 <p> This option can be used multiple times on the command line. </p>
 <p> If the optional <i>filter</i> is provided, the stats will only be calculated on those calls that match that filter. </p>
-<p> Example: <code>-z dcerpc,srt,12345778-1234-abcd-ef00-0123456789ac,1.0,ip.addr==1.2.3.4</code> will collect <font SIZE="-1">SAMR SRT</font> statistics for a specific host.</p>
+<p> Example: <code>-z dcerpc,srt,12345778-1234-abcd-ef00-0123456789ac,1.0,ip.addr==1.2.3.4</code> will collect SAMR SRT statistics for a specific host.</p>
 <dt><code>-z</code> diameter,avp[,<i>cmd.code</i>,<i>field</i>,<i>field</i>,<i>&#8230;</i>]</dt>
 <dd> This option enables extraction of most important diameter fields from large capture files. Exactly one text line for each diameter message with matched <code>diameter.cmd.code</code> will be printed. </dd>
 <p> Empty diameter command code or &#8216;*&#8217; can be specified to mach any <code>diameter.cmd.code</code> </p>
 <p> Example: <code>-z diameter,avp</code> extract default field set from diameter messages. </p>
-<p> Example: <code>-z diameter,avp,280</code> extract default field set from diameter <font SIZE="-1">DWR</font> messages. </p>
-<p> Example: <code>-z diameter,avp,272</code> extract default field set from diameter <font SIZE="-1">CC</font> messages. </p>
-<p> Extract most important fields from diameter <font SIZE="-1">CC</font> messages: </p>
+<p> Example: <code>-z diameter,avp,280</code> extract default field set from diameter DWR messages. </p>
+<p> Example: <code>-z diameter,avp,272</code> extract default field set from diameter CC messages. </p>
+<p> Extract most important fields from diameter CC messages: </p>
 <p> <code>tshark -r file.cap.gz -q -z diameter,avp,272,CC-Request-Type,CC-Request-Number,Session-Id,Subscription-Id-Data,Rating-Group,Result-Code</code> </p>
 <p> Following fields will be printed out for each diameter message: </p>
-<p>  &#8220;frame&#8221;        Frame number.<br />
-  &#8220;time&#8221;         Unix time of the frame arrival.<br />
-  &#8220;src&#8221;          Source address.<br />
-  &#8220;srcport&#8221;      Source port.<br />
-  &#8220;dst&#8221;          Destination address.<br />
-  &#8220;dstport&#8221;      Destination port.<br />
-  &#8220;proto&#8221;        Constant string &#8216;diameter&#8217;, which can be used for post processing of tshark output.  E.g. grep/sed/awk.<br />
-  &#8220;msgnr&#8221;        seq. number of diameter message within the frame.  E.g. &#8216;2&#8217; for the third diameter message in the same frame.<br />
-  &#8220;is_request&#8221;   &#8216;0&#8217; if message is a request, &#8216;1&#8217; if message is an answer.<br />
-  &#8220;cmd&#8221;          diameter.cmd_code, E.g. &#8216;272&#8217; for credit control messages.<br />
-  &#8220;req_frame&#8221;    Number of frame where matched request was found or &#8216;0&#8217;.<br />
-  &#8220;ans_frame&#8221;    Number of frame where matched answer was found or &#8216;0&#8217;.<br />
+<p>  &#8220;frame&#8221;        Frame number.<br/>
+  &#8220;time&#8221;         Unix time of the frame arrival.<br/>
+  &#8220;src&#8221;          Source address.<br/>
+  &#8220;srcport&#8221;      Source port.<br/>
+  &#8220;dst&#8221;          Destination address.<br/>
+  &#8220;dstport&#8221;      Destination port.<br/>
+  &#8220;proto&#8221;        Constant string &#8216;diameter&#8217;, which can be used for post processing of tshark output.  E.g. grep/sed/awk.<br/>
+  &#8220;msgnr&#8221;        seq. number of diameter message within the frame.  E.g. &#8216;2&#8217; for the third diameter message in the same frame.<br/>
+  &#8220;is_request&#8221;   &#8216;0&#8217; if message is a request, &#8216;1&#8217; if message is an answer.<br/>
+  &#8220;cmd&#8221;          diameter.cmd_code, E.g. &#8216;272&#8217; for credit control messages.<br/>
+  &#8220;req_frame&#8221;    Number of frame where matched request was found or &#8216;0&#8217;.<br/>
+  &#8220;ans_frame&#8221;    Number of frame where matched answer was found or &#8216;0&#8217;.<br/>
   &#8220;resp_time&#8221;    response time in seconds, &#8216;0&#8217; in case if matched Request/Answer is not found in trace.  E.g. in the begin or end of capture.</p>
 <p> <code>-z diameter,avp</code> option is much faster than <code>-V -T text</code> or <code>-T pdml</code> options. </p>
 <p> <code>-z diameter,avp</code> option is more powerful than <code>-T field</code> and <code>-z proto,colinfo</code> options. </p>
@@ -298,66 +298,66 @@ description: "tshark – Dump and analyze network traffic"
 <p> If the optional <i>filter</i> is provided, the stats will only be calculated on those calls that match that filter. </p>
 <p> Example: <code>-z &#8220;expert,note,tcp&#8221;</code> will only collect expert items for frames that include the tcp protocol, with a severity of note or higher.</p>
 <dt><code>-z</code> follow,<i>prot</i>,<i>mode</i>,<i>filter</i>[<i>,range</i>]</dt>
-<dd> Displays the contents of a <font SIZE="-1">TCP</font> or <font SIZE="-1">UDP</font> stream between two nodes. The data sent by the second node is prefixed with a tab to differentiate it from the data sent by the first node. </dd>
-<p> <i>prot</i> specifies the transport protocol. It can be one of:<br />
-&nbsp;<wbr>&nbsp;<wbr><code>tcp</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><font SIZE="-1">TCP<br />
-&nbsp;<wbr>&nbsp;<wbr></font><code>udp</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><font SIZE="-1">UDP<br />
-&nbsp;<wbr>&nbsp;<wbr></font><code>ssl</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><font SIZE="-1">SSL</font> </p>
-<p> <i>mode</i> specifies the output mode. It can be one of:<br />
-&nbsp;<wbr>&nbsp;<wbr><code>ascii</code>&nbsp;<wbr><font SIZE="-1">ASCII</font>&nbsp;<wbr>output with dots for non-printable characters<br />
-&nbsp;<wbr>&nbsp;<wbr><code>hex</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Hexadecimal and&nbsp;<wbr><font SIZE="-1">ASCII</font>&nbsp;<wbr>data with offsets<br />
+<dd> Displays the contents of a TCP or UDP stream between two nodes. The data sent by the second node is prefixed with a tab to differentiate it from the data sent by the first node. </dd>
+<p> <i>prot</i> specifies the transport protocol. It can be one of:<br/>
+&nbsp;<wbr>&nbsp;<wbr><code>tcp</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>TCP<br/>
+&nbsp;<wbr>&nbsp;<wbr><code>udp</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>UDP<br/>
+&nbsp;<wbr>&nbsp;<wbr><code>ssl</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>SSL </p>
+<p> <i>mode</i> specifies the output mode. It can be one of:<br/>
+&nbsp;<wbr>&nbsp;<wbr><code>ascii</code>&nbsp;<wbr>ASCII&nbsp;<wbr>output with dots for non-printable characters<br/>
+&nbsp;<wbr>&nbsp;<wbr><code>hex</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Hexadecimal and&nbsp;<wbr>ASCII&nbsp;<wbr>data with offsets<br/>
 &nbsp;<wbr>&nbsp;<wbr><code>raw</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Hexadecimal data </p>
 <p> Since the output in <code>ascii</code> mode may contain newlines, the length of each section of output plus a newline precedes each section of output. </p>
-<p> <i>filter</i> specifies the stream to be displayed. <font SIZE="-1">UDP</font> streams are selected with <font SIZE="-1">IP</font> address plus port pairs. <font SIZE="-1">TCP</font> streams are selected with either the stream index or <font SIZE="-1">IP</font> address plus port pairs. For example:<br />
-&nbsp;<wbr>&nbsp;<wbr><code>ip-addr0</code>:<code>port0</code>,<code>ip-addr1</code>:<code>port1</code><br />
+<p> <i>filter</i> specifies the stream to be displayed. UDP streams are selected with IP address plus port pairs. TCP streams are selected with either the stream index or IP address plus port pairs. For example:<br/>
+&nbsp;<wbr>&nbsp;<wbr><code>ip-addr0</code>:<code>port0</code>,<code>ip-addr1</code>:<code>port1</code><br/>
 &nbsp;<wbr>&nbsp;<wbr><code>tcp-stream-index</code> </p>
 <p> <i>range</i> optionally specifies which &#8220;chunks&#8221; of the stream should be displayed. </p>
-<p> Example: <code>-z &#8220;follow,tcp,hex,1&#8221;</code> will display the contents of the first <font SIZE="-1">TCP</font> stream in &#8220;hex&#8221; format. </p>
-<p>== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == =<br />
-                                                                                                       Follow : tcp,<br />
-                                                                                                hex<br />
-                                                                                                    Filter : tcp.stream eq 1 Node 0 : 200.57.7.197 : 32891 Node 1 : 200.57.7.198 : 2906 00000000 00 00 00 22 00 00 00 07 00 0a 85 02 07 e9 00 02 &#8230; &#8220;&#8230;. &#8230;&#8230;..<br />
+<p> Example: <code>-z &#8220;follow,tcp,hex,1&#8221;</code> will display the contents of the first TCP stream in &#8220;hex&#8221; format. </p>
+<p>== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == =<br/>
+                                                                                                       Follow : tcp,<br/>
+                                                                                                hex<br/>
+                                                                                                    Filter : tcp.stream eq 1 Node 0 : 200.57.7.197 : 32891 Node 1 : 200.57.7.198 : 2906 00000000 00 00 00 22 00 00 00 07 00 0a 85 02 07 e9 00 02 &#8230; &#8220;&#8230;. &#8230;&#8230;..<br/>
                                                                                                              00000010 07 e9 06 0f 00 0d 00 04 00 00 00 01 00 03 00 06 &#8230;&#8230;&#8230;&#8230;&#8230;.00000020 1f 00 06 04 00 00 &#8230;&#8230; 00000000 00 01 00 00 &#8230;.00000026 00 02 00 00</p>
-<p> Example: <code>-z &#8220;follow,tcp,ascii,200.57.7.197:32891,200.57.7.198:2906&#8221;</code> will display the contents of a <font SIZE="-1">TCP</font> stream between 200.57.7.197 port 32891 and 200.57.7.98 port 2906. </p>
-<p>  ===================================================================<br />
-  Follow: tcp,ascii<br />
-  Filter: (ommitted for readability)<br />
-  Node 0: 200.57.7.197:32891<br />
-  Node 1: 200.57.7.198:2906<br />
-  38<br />
-  &#8230;&#8221;&#8230;..<br />
-  &#8230;&#8230;&#8230;&#8230;&#8230;.<br />
-      4<br />
+<p> Example: <code>-z &#8220;follow,tcp,ascii,200.57.7.197:32891,200.57.7.198:2906&#8221;</code> will display the contents of a TCP stream between 200.57.7.197 port 32891 and 200.57.7.98 port 2906. </p>
+<p>  ===================================================================<br/>
+  Follow: tcp,ascii<br/>
+  Filter: (ommitted for readability)<br/>
+  Node 0: 200.57.7.197:32891<br/>
+  Node 1: 200.57.7.198:2906<br/>
+  38<br/>
+  &#8230;&#8221;&#8230;..<br/>
+  &#8230;&#8230;&#8230;&#8230;&#8230;.<br/>
+      4<br/>
       &#8230;.</p>
 <dt><code>-z</code> h225,counter[<i>,filter</i>]</dt>
 <dd> Count ITU-T H.225 messages and their reasons. In the first column you get a list of H.225 messages and H.225 message reasons, which occur in the current capture file. The number of occurrences of each message or reason is displayed in the second column. </dd>
 <p> Example: <code>-z h225,counter</code>. </p>
-<p> If the optional <i>filter</i> is provided, the stats will only be calculated on those calls that match that filter. Example: use <code>-z &#8220;h225,counter,ip.addr==1.2.3.4&#8221;</code> to only collect stats for H.225 packets exchanged by the host at <font SIZE="-1">IP</font> address 1.2.3.4 . </p>
+<p> If the optional <i>filter</i> is provided, the stats will only be calculated on those calls that match that filter. Example: use <code>-z &#8220;h225,counter,ip.addr==1.2.3.4&#8221;</code> to only collect stats for H.225 packets exchanged by the host at IP address 1.2.3.4 . </p>
 <p> This option can be used multiple times on the command line.</p>
 <dt><code>-z</code> h225,srt[<i>,filter</i>]</dt>
-<dd> Collect requests/response <font SIZE="-1">SRT </font>(Service Response Time) data for ITU-T H.225 <font SIZE="-1">RAS.</font> Data collected is number of calls of each ITU-T H.225 <font SIZE="-1">RAS</font> Message Type, Minimum <font SIZE="-1">SRT,</font> Maximum <font SIZE="-1">SRT,</font> Average <font SIZE="-1">SRT,</font> Minimum in Packet, and Maximum in Packet. You will also get the number of Open Requests (Unresponded Requests), Discarded Responses (Responses without matching request) and Duplicate Messages. </dd>
+<dd> Collect requests/response SRT (Service Response Time) data for ITU-T H.225 RAS. Data collected is number of calls of each ITU-T H.225 RAS Message Type, Minimum SRT, Maximum SRT, Average SRT, Minimum in Packet, and Maximum in Packet. You will also get the number of Open Requests (Unresponded Requests), Discarded Responses (Responses without matching request) and Duplicate Messages. </dd>
 <p> Example: <code>-z h225,srt</code> </p>
 <p> This option can be used multiple times on the command line. </p>
 <p> If the optional <i>filter</i> is provided, the stats will only be calculated on those calls that match that filter. </p>
-<p> Example: <code>-z &#8220;h225,srt,ip.addr==1.2.3.4&#8221;</code> will only collect stats for ITU-T H.225 <font SIZE="-1">RAS</font> packets exchanged by the host at <font SIZE="-1">IP</font> address 1.2.3.4 .</p>
+<p> Example: <code>-z &#8220;h225,srt,ip.addr==1.2.3.4&#8221;</code> will only collect stats for ITU-T H.225 RAS packets exchanged by the host at IP address 1.2.3.4 .</p>
 <dt><code>-z</code> hosts[,ipv4][,ipv6]</dt>
 <dd> Dump any collected IPv4 and/or IPv6 addresses in &#8220;hosts&#8221; format. Both IPv4 and IPv6 addresses are dumped by default. </dd>
 <p> Addresses are collected from a number of sources, including standard &#8220;hosts&#8221; files and captured traffic.</p>
 <dt><code>-z</code> http,stat,</dt>
-<dd> Calculate the <font SIZE="-1">HTTP</font> statistics distribution. Displayed values are the <font SIZE="-1">HTTP</font> status codes and the <font SIZE="-1">HTTP</font> request methods.</dd>
+<dd> Calculate the HTTP statistics distribution. Displayed values are the HTTP status codes and the HTTP request methods.</dd>
 <dt><code>-z</code> http,tree</dt>
-<dd> Calculate the <font SIZE="-1">HTTP</font> packet distribution. Displayed values are the <font SIZE="-1">HTTP</font> request modes and the <font SIZE="-1">HTTP</font> status codes.</dd>
+<dd> Calculate the HTTP packet distribution. Displayed values are the HTTP request modes and the HTTP status codes.</dd>
 <dt><code>-z</code> http_req,tree</dt>
-<dd> Calculate the <font SIZE="-1">HTTP</font> requests by server. Displayed values are the server name and the <font SIZE="-1">URI</font> path.</dd>
+<dd> Calculate the HTTP requests by server. Displayed values are the server name and the URI path.</dd>
 <dt><code>-z</code> http_srv,tree</dt>
-<dd> Calculate the <font SIZE="-1">HTTP</font> requests and responses by server. For the <font SIZE="-1">HTTP</font> requests, displayed values are the server <font SIZE="-1">IP</font> address and server hostname. For the <font SIZE="-1">HTTP</font> responses, displayed values are the server <font SIZE="-1">IP</font> address and status.</dd>
+<dd> Calculate the HTTP requests and responses by server. For the HTTP requests, displayed values are the server IP address and server hostname. For the HTTP responses, displayed values are the server IP address and status.</dd>
 <dt><code>-z</code> icmp,srt[,<i>filter</i>]</dt>
-<dd> Compute total <font SIZE="-1">ICMP</font> echo requests, replies, loss, and percent loss, as well as minimum, maximum, mean, median and sample standard deviation <font SIZE="-1">SRT</font> statistics typical of what ping provides. </dd>
-<p> Example: <code>-z icmp,srt,ip.src==1.2.3.4</code> will collect <font SIZE="-1">ICMP SRT</font> statistics for <font SIZE="-1">ICMP</font> echo request packets originating from a specific host. </p>
+<dd> Compute total ICMP echo requests, replies, loss, and percent loss, as well as minimum, maximum, mean, median and sample standard deviation SRT statistics typical of what ping provides. </dd>
+<p> Example: <code>-z icmp,srt,ip.src==1.2.3.4</code> will collect ICMP SRT statistics for ICMP echo request packets originating from a specific host. </p>
 <p> This option can be used multiple times on the command line.</p>
 <dt><code>-z</code> icmpv6,srt[,<i>filter</i>]</dt>
-<dd> Compute total ICMPv6 echo requests, replies, loss, and percent loss, as well as minimum, maximum, mean, median and sample standard deviation <font SIZE="-1">SRT</font> statistics typical of what ping provides. </dd>
-<p> Example: <code>-z icmpv6,srt,ipv6.src==fe80::1</code> will collect ICMPv6 <font SIZE="-1">SRT</font> statistics for ICMPv6 echo request packets originating from a specific host. </p>
+<dd> Compute total ICMPv6 echo requests, replies, loss, and percent loss, as well as minimum, maximum, mean, median and sample standard deviation SRT statistics typical of what ping provides. </dd>
+<p> Example: <code>-z icmpv6,srt,ipv6.src==fe80::1</code> will collect ICMPv6 SRT statistics for ICMPv6 echo request packets originating from a specific host. </p>
 <p> This option can be used multiple times on the command line.</p>
 <dt><code>-z</code> io,phs[,<i>filter</i>]</dt>
 <dd> Create Protocol Hierarchy Statistics listing both number of packets and bytes. If no <i>filter</i> is specified the statistics will be calculated for all packets. If a <i>filter</i> is specified statistics will only be calculated for those packets that match the filter. </dd>
@@ -367,116 +367,116 @@ description: "tshark – Dump and analyze network traffic"
 <p> If no <i>filter</i> is specified the statistics will be calculated for all packets. If one or more <i>filters</i> are specified statistics will be calculated for all filters and presented with one column of statistics for each filter. </p>
 <p> This option can be used multiple times on the command line. </p>
 <p> Example: <code>-z io,stat,1,ip.addr==1.2.3.4</code> will generate 1 second statistics for all traffic to/from host 1.2.3.4. </p>
-<p> Example: <code>-z &#8220;io,stat,0.001,smb&amp;&amp;ip.addr==1.2.3.4&#8221;</code> will generate 1ms statistics for all <font SIZE="-1">SMB</font> packets to/from host 1.2.3.4. </p>
+<p> Example: <code>-z &#8220;io,stat,0.001,smb&amp;&amp;ip.addr==1.2.3.4&#8221;</code> will generate 1ms statistics for all SMB packets to/from host 1.2.3.4. </p>
 <p> The examples above all use the standard syntax for generating statistics which only calculates the number of packets and bytes in each interval. </p>
-<p> <code>io,stat</code> can also do much more statistics and calculate <font SIZE="-1"><i>COUNT</i></font><i>()</i>, <font SIZE="-1"><i>SUM</i></font><i>()</i>, <font SIZE="-1"><i>MIN</i></font><i>()</i>, <font SIZE="-1"><i>MAX</i></font><i>()</i>, <font SIZE="-1"><i>AVG</i></font><i>()</i> and <font SIZE="-1"><i>LOAD</i></font><i>()</i> using a slightly different filter syntax:</p>
+<p> <code>io,stat</code> can also do much more statistics and calculate <i>COUNT</i><i>()</i>, <i>SUM</i><i>()</i>, <i>MIN</i><i>()</i>, <i>MAX</i><i>()</i>, <i>AVG</i><i>()</i> and <i>LOAD</i><i>()</i> using a slightly different filter syntax:</p>
 <dt>-z io,stat,<i>interval</i>,&quot;[COUNT|SUM|MIN|MAX|AVG|LOAD](<i>field</i>)<i>field</i> [and <i>filter</i>]&quot;</dt>
-<dd> <font SIZE="-1">NOTE:</font> One important thing to note here is that the field that the calculation is based on <font SIZE="-1">MUST</font> also be part of the filter string or else the calculation will fail. </dd>
+<dd> NOTE: One important thing to note here is that the field that the calculation is based on MUST also be part of the filter string or else the calculation will fail. </dd>
 <p> So: <code>-z io,stat,0.010,AVG(smb.time)</code> does not work. Use <code>-z io,stat,0.010,AVG(smb.time)smb.time</code> instead. Also be aware that a field can exist multiple times inside the same packet and will then be counted multiple times in those packets. </p>
-<p> <font SIZE="-1">NOTE: A</font> second important thing to note is that the system setting for decimal separator is set to &#8220;.&#8221;! If it is set to &#8220;,&#8221; the statistics will not be displayed per filter. </p>
-<p> <font SIZE="-1"><code>COUNT</code></font><code>(</code>field<code>)</code>field<code> [and </code>filter<code>]</code> &#8211; Calculates the number of times that the field <i>name</i> (not its value) appears per interval in the filtered packet list. &#8221;<i>field</i>&#8221; can be any display filter name. </p>
-<p> Example: <code>-z io,stat,0.010,&#8220;</code><font SIZE="-1"><code>COUNT</code></font><code>(smb.sid)smb.sid&#8221;</code> </p>
+<p> NOTE: A second important thing to note is that the system setting for decimal separator is set to &#8220;.&#8221;! If it is set to &#8220;,&#8221; the statistics will not be displayed per filter. </p>
+<p> <code>COUNT</code><code>(</code>field<code>)</code>field<code> [and </code>filter<code>]</code> &#8211; Calculates the number of times that the field <i>name</i> (not its value) appears per interval in the filtered packet list. &#8221;<i>field</i>&#8221; can be any display filter name. </p>
+<p> Example: <code>-z io,stat,0.010,&#8220;</code><code>COUNT</code><code>(smb.sid)smb.sid&#8221;</code> </p>
 <p> This will count the total number of SIDs seen in each 10ms interval. </p>
-<p> <font SIZE="-1"><code>SUM</code></font><code>(</code>field<code>)</code>field<code> [and </code>filter<code>]</code> &#8211; Unlike <font SIZE="-1">COUNT,</font> the <i>values</i> of the specified field are summed per time interval. &#8221;<i>field</i>&#8221; can only be a named integer, float, double or relative time field. </p>
-<p> Example: <code>-z io,stat,0.010,&#8220;</code><font SIZE="-1"><code>SUM</code></font><code>(frame.len)frame.len&#8221;</code> </p>
+<p> <code>SUM</code><code>(</code>field<code>)</code>field<code> [and </code>filter<code>]</code> &#8211; Unlike COUNT, the <i>values</i> of the specified field are summed per time interval. &#8221;<i>field</i>&#8221; can only be a named integer, float, double or relative time field. </p>
+<p> Example: <code>-z io,stat,0.010,&#8220;</code><code>SUM</code><code>(frame.len)frame.len&#8221;</code> </p>
 <p> Reports the total number of bytes that were transmitted bidirectionally in all the packets within a 10 millisecond interval. </p>
-<p> <font SIZE="-1"><code>MIN/MAX/AVG</code></font><code>(</code>field<code>)</code>field<code> [and </code>filter<code>]</code> &#8211; The minimum, maximum, or average field value in each interval is calculated. The specified field must be a named integer, float, double or relative time field. For relative time fields, the output is presented in seconds with six decimal digits of precision rounded to the nearest microsecond. </p>
-<p> In the following example, the time of the first Read_AndX call, the last Read_AndX response values are displayed and the minimum, maximum, and average Read response times (SRTs) are calculated. <font SIZE="-1">NOTE:</font> If the <font SIZE="-1">DOS</font> command shell line continuation character, &#8221;^&#8221; is used, each line cannot end in a comma so it is placed at the beginning of each continuation line: </p>
-<p>tshark &#8211; o tcp.desegment_tcp_streams : FALSE &#8211; n &#8211; q &#8211; r smb_reads.cap &#8211; z io, stat, 0,<br />
-    &#8220;MIN(frame.time_relative)frame.time_relative and smb.cmd==0x2e and smb.flags.response==0&#8221;,<br />
-    &#8220;MAX(frame.time_relative)frame.time_relative and smb.cmd==0x2e and smb.flags.response==1&#8221;,<br />
-    &#8220;MIN(smb.time)smb.time and smb.cmd==0x2e&#8221;,<br />
-    &#8220;MAX(smb.time)smb.time and smb.cmd==0x2e&#8221;,<br />
-    &#8220;AVG(smb.time)smb.time and smb.cmd==0x2e&#8221; == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==<br />
-            IO Statistics<br />
-                Column #0 : MIN(frame.time_relative) frame.time_relative and smb.cmd<br />
-            == 0x2e and<br />
+<p> <code>MIN/MAX/AVG</code><code>(</code>field<code>)</code>field<code> [and </code>filter<code>]</code> &#8211; The minimum, maximum, or average field value in each interval is calculated. The specified field must be a named integer, float, double or relative time field. For relative time fields, the output is presented in seconds with six decimal digits of precision rounded to the nearest microsecond. </p>
+<p> In the following example, the time of the first Read_AndX call, the last Read_AndX response values are displayed and the minimum, maximum, and average Read response times (SRTs) are calculated. NOTE: If the DOS command shell line continuation character, &#8221;^&#8221; is used, each line cannot end in a comma so it is placed at the beginning of each continuation line: </p>
+<p>tshark &#8211; o tcp.desegment_tcp_streams : FALSE &#8211; n &#8211; q &#8211; r smb_reads.cap &#8211; z io, stat, 0,<br/>
+    &#8220;MIN(frame.time_relative)frame.time_relative and smb.cmd==0x2e and smb.flags.response==0&#8221;,<br/>
+    &#8220;MAX(frame.time_relative)frame.time_relative and smb.cmd==0x2e and smb.flags.response==1&#8221;,<br/>
+    &#8220;MIN(smb.time)smb.time and smb.cmd==0x2e&#8221;,<br/>
+    &#8220;MAX(smb.time)smb.time and smb.cmd==0x2e&#8221;,<br/>
+    &#8220;AVG(smb.time)smb.time and smb.cmd==0x2e&#8221; == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==<br/>
+            IO Statistics<br/>
+                Column #0 : MIN(frame.time_relative) frame.time_relative and smb.cmd<br/>
+            == 0x2e and<br/>
         smb.flags.response == 0 Column #1 : MAX(frame.time_relative) frame.time_relative and smb.cmd == 0x2e and smb.flags.response == 1 Column #2 : MIN(smb.time) smb.time and smb.cmd == 0x2e Column #3 : MAX(smb.time) smb.time and smb.cmd == 0x2e Column #4 : AVG(smb.time) smb.time and smb.cmd == 0x2e | Column #0 | Column #1 | Column #2 | Column #3 | Column #4 | Time | MIN | MAX | MIN | MAX | AVG | 000.000 &#8211; 0.000000 7.704054 0.000072 0.005539 0.000295 == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==</p>
-<p> The following command displays the average <font SIZE="-1">SMB</font> Read response <font SIZE="-1">PDU</font> size, the total number of read <font SIZE="-1">PDU</font> bytes, the average <font SIZE="-1">SMB</font> Write request <font SIZE="-1">PDU</font> size, and the total number of bytes transferred in <font SIZE="-1">SMB</font> Write PDUs: </p>
-<p>tshark &#8211; n &#8211; q &#8211; r smb_reads_writes.cap &#8211; z io, stat, 0,<br />
-    &#8220;AVG(smb.file.rw.length)smb.file.rw.length and smb.cmd==0x2e and smb.response_to&#8221;,<br />
-    &#8220;SUM(smb.file.rw.length)smb.file.rw.length and smb.cmd==0x2e and smb.response_to&#8221;,<br />
-    &#8220;AVG(smb.file.rw.length)smb.file.rw.length and smb.cmd==0x2f and not smb.response_to&#8221;,<br />
-    &#8220;SUM(smb.file.rw.length)smb.file.rw.length and smb.cmd==0x2f and not smb.response_to&#8221; == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == =<br />
-                                                                                                                                                                                                                            IO Statistics<br />
-                                                                                                                                                                                                                                Column #0 : AVG(smb.file.rw.length) smb.file.rw.length and<br />
-                                                                                                                                                                                                                            smb.cmd == 0x2e and smb.response_to Column #1 : SUM(smb.file.rw.length) smb.file.rw.length and smb.cmd == 0x2e and smb.response_to Column #2 : AVG(smb.file.rw.length) smb.file.rw.length and smb.cmd == 0x2f and not smb.response_to Column #3 : SUM(smb.file.rw.length) smb.file.rw.length and smb.cmd == 0x2f and not smb.response_to | Column #0 | Column #1 | Column #2 | Column #3 | Time | AVG | SUM | AVG | SUM | 000.000 &#8211; 30018 28067522 72 3240 == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==<br />
+<p> The following command displays the average SMB Read response PDU size, the total number of read PDU bytes, the average SMB Write request PDU size, and the total number of bytes transferred in SMB Write PDUs: </p>
+<p>tshark &#8211; n &#8211; q &#8211; r smb_reads_writes.cap &#8211; z io, stat, 0,<br/>
+    &#8220;AVG(smb.file.rw.length)smb.file.rw.length and smb.cmd==0x2e and smb.response_to&#8221;,<br/>
+    &#8220;SUM(smb.file.rw.length)smb.file.rw.length and smb.cmd==0x2e and smb.response_to&#8221;,<br/>
+    &#8220;AVG(smb.file.rw.length)smb.file.rw.length and smb.cmd==0x2f and not smb.response_to&#8221;,<br/>
+    &#8220;SUM(smb.file.rw.length)smb.file.rw.length and smb.cmd==0x2f and not smb.response_to&#8221; == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == =<br/>
+                                                                                                                                                                                                                            IO Statistics<br/>
+                                                                                                                                                                                                                                Column #0 : AVG(smb.file.rw.length) smb.file.rw.length and<br/>
+                                                                                                                                                                                                                            smb.cmd == 0x2e and smb.response_to Column #1 : SUM(smb.file.rw.length) smb.file.rw.length and smb.cmd == 0x2e and smb.response_to Column #2 : AVG(smb.file.rw.length) smb.file.rw.length and smb.cmd == 0x2f and not smb.response_to Column #3 : SUM(smb.file.rw.length) smb.file.rw.length and smb.cmd == 0x2f and not smb.response_to | Column #0 | Column #1 | Column #2 | Column #3 | Time | AVG | SUM | AVG | SUM | 000.000 &#8211; 30018 28067522 72 3240 == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==<br/>
     =</p>
-<p> <font SIZE="-1"><code>LOAD</code></font><code>(</code>field<code>)</code>field<code> [and </code>filter<code>]</code> &#8211; The LOAD/Queue-Depth in each interval is calculated. The specified field must be a relative time field that represents a response time. For example smb.time. For each interval the Queue-Depth for the specified protocol is calculated. </p>
-<p> The following command displays the average <font SIZE="-1">SMB LOAD. A</font> value of 1.0 represents one I/O in flight. </p>
-<p>tshark &#8211; n &#8211; q &#8211; r smb_reads_writes.cap &#8211; z &#8220;io,stat,0.001,LOAD(smb.time)smb.time&#8221; == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==<br />
-        IO Statistics<br />
-            Interval : 0.001000 secs<br />
-                Column #0 : LOAD(smb.time) smb.time<br />
-    | Column #0 |<br />
-    Time | LOAD |<br />
+<p> <code>LOAD</code><code>(</code>field<code>)</code>field<code> [and </code>filter<code>]</code> &#8211; The LOAD/Queue-Depth in each interval is calculated. The specified field must be a relative time field that represents a response time. For example smb.time. For each interval the Queue-Depth for the specified protocol is calculated. </p>
+<p> The following command displays the average SMB LOAD. A value of 1.0 represents one I/O in flight. </p>
+<p>tshark &#8211; n &#8211; q &#8211; r smb_reads_writes.cap &#8211; z &#8220;io,stat,0.001,LOAD(smb.time)smb.time&#8221; == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==<br/>
+        IO Statistics<br/>
+            Interval : 0.001000 secs<br/>
+                Column #0 : LOAD(smb.time) smb.time<br/>
+    | Column #0 |<br/>
+    Time | LOAD |<br/>
     0000.000000 &#8211; 0000.001000 1.000000 0000.001000 &#8211; 0000.002000 0.741000 0000.002000 &#8211; 0000.003000 0.000000 0000.003000 &#8211; 0000.004000 1.000000</p>
-<p> <font SIZE="-1"><code>FRAMES</code></font><code> | BYTES[()</code>filter<code>]</code> &#8211; Displays the total number of frames or bytes. The filter field is optional but if included it must be prepended with &#8221;()&#8221;. </p>
-<p> The following command displays five columns: the total number of frames and bytes (transferred bidirectionally) using a single comma, the same two stats using the <font SIZE="-1">FRAMES</font> and <font SIZE="-1">BYTES</font> subcommands, the total number of frames containing at least one <font SIZE="-1">SMB</font> Read response, and the total number of bytes transmitted to the client (unidirectionally) at <font SIZE="-1">IP</font> address 10.1.0.64. </p>
+<p> <code>FRAMES</code><code> | BYTES[()</code>filter<code>]</code> &#8211; Displays the total number of frames or bytes. The filter field is optional but if included it must be prepended with &#8221;()&#8221;. </p>
+<p> The following command displays five columns: the total number of frames and bytes (transferred bidirectionally) using a single comma, the same two stats using the FRAMES and BYTES subcommands, the total number of frames containing at least one SMB Read response, and the total number of bytes transmitted to the client (unidirectionally) at IP address 10.1.0.64. </p>
 <pre><code>
 tshark - o tcp.desegment_tcp_streams : FALSE - n - q - r smb_reads.cap - z io, stat, 0, , FRAMES, BYTES,
     "FRAMES()smb.cmd==0x2e and smb.response_to", "BYTES()ip.dst==10.1.0.64" == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == = IO Statistics Column #0 : Column #1 : FRAMES Column #2 : BYTES Column #3 : FRAMES() smb.cmd == 0x2e and smb.response_to Column #4 : BYTES() ip.dst == 10.1.0.64 | Column #0 | Column #1 | Column #2 | Column #3 | Column #4 | Time | Frames | Bytes | FRAMES | BYTES | FRAMES | BYTES | 000.000 - 33576 29721685 33576 29721685 870 29004801 == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == =
 </code></pre>
 <dt><code>-z</code> mac-lte,stat[<i>,filter</i>]</dt>
-<dd> This option will activate a counter for <font SIZE="-1">LTE MAC</font> messages. You will get information about the maximum number of UEs/TTI, common messages and various counters for each <font SIZE="-1">UE</font> that appears in the log. </dd>
+<dd> This option will activate a counter for LTE MAC messages. You will get information about the maximum number of UEs/TTI, common messages and various counters for each UE that appears in the log. </dd>
 <p> Example: <code>-z mac-lte,stat</code>. </p>
 <p> This option can be used multiple times on the command line. </p>
-<p> If the optional <i>filter</i> is provided, the stats will only be calculated for those frames that match that filter. Example: <code>-z &quot;mac-lte,stat,mac-lte.rnti</code>3000&quot;&gt; will only collect stats for UEs with an assigned <font SIZE="-1">RNTI</font> whose value is more than 3000.</p>
+<p> If the optional <i>filter</i> is provided, the stats will only be calculated for those frames that match that filter. Example: <code>-z &quot;mac-lte,stat,mac-lte.rnti</code>3000&quot;&gt; will only collect stats for UEs with an assigned RNTI whose value is more than 3000.</p>
 <dt><code>-z</code> megaco,rtd[<i>,filter</i>]</dt>
-<dd> Collect requests/response <font SIZE="-1">RTD </font>(Response Time Delay) data for <font SIZE="-1">MEGACO. </font>(This is similar to <code>-z smb,srt</code>). Data collected is the number of calls for each known <font SIZE="-1">MEGACO</font> Type, MinRTD, MaxRTD and AvgRTD. Additionally you get the number of duplicate requests/responses, unresponded requests, responses, which don&#8217;t match with any request. Example: <code>-z megaco,rtd</code>. </dd>
-<p> If the optional <i>filter</i> is provided, the stats will only be calculated on those calls that match that filter. Example: <code>-z &#8220;megaco,rtd,ip.addr==1.2.3.4&#8221;</code> will only collect stats for <font SIZE="-1">MEGACO</font> packets exchanged by the host at <font SIZE="-1">IP</font> address 1.2.3.4 . </p>
+<dd> Collect requests/response RTD (Response Time Delay) data for MEGACO. (This is similar to <code>-z smb,srt</code>). Data collected is the number of calls for each known MEGACO Type, MinRTD, MaxRTD and AvgRTD. Additionally you get the number of duplicate requests/responses, unresponded requests, responses, which don&#8217;t match with any request. Example: <code>-z megaco,rtd</code>. </dd>
+<p> If the optional <i>filter</i> is provided, the stats will only be calculated on those calls that match that filter. Example: <code>-z &#8220;megaco,rtd,ip.addr==1.2.3.4&#8221;</code> will only collect stats for MEGACO packets exchanged by the host at IP address 1.2.3.4 . </p>
 <p> This option can be used multiple times on the command line.</p>
 <dt><code>-z</code> mgcp,rtd[<i>,filter</i>]</dt>
-<dd> Collect requests/response <font SIZE="-1">RTD </font>(Response Time Delay) data for <font SIZE="-1">MGCP. </font>(This is similar to <code>-z smb,srt</code>). Data collected is the number of calls for each known <font SIZE="-1">MGCP</font> Type, MinRTD, MaxRTD and AvgRTD. Additionally you get the number of duplicate requests/responses, unresponded requests, responses, which don&#8217;t match with any request. Example: <code>-z mgcp,rtd</code>. </dd>
+<dd> Collect requests/response RTD (Response Time Delay) data for MGCP. (This is similar to <code>-z smb,srt</code>). Data collected is the number of calls for each known MGCP Type, MinRTD, MaxRTD and AvgRTD. Additionally you get the number of duplicate requests/responses, unresponded requests, responses, which don&#8217;t match with any request. Example: <code>-z mgcp,rtd</code>. </dd>
 <p> This option can be used multiple times on the command line. </p>
-<p> If the optional <i>filter</i> is provided, the stats will only be calculated on those calls that match that filter. Example: <code>-z &#8220;mgcp,rtd,ip.addr==1.2.3.4&#8221;</code> will only collect stats for <font SIZE="-1">MGCP</font> packets exchanged by the host at <font SIZE="-1">IP</font> address 1.2.3.4 .</p>
+<p> If the optional <i>filter</i> is provided, the stats will only be calculated on those calls that match that filter. Example: <code>-z &#8220;mgcp,rtd,ip.addr==1.2.3.4&#8221;</code> will only collect stats for MGCP packets exchanged by the host at IP address 1.2.3.4 .</p>
 <dt><code>-z</code> proto,colinfo,<i>filter</i>,<i>field</i></dt>
 <dd> Append all <i>field</i> values for the packet to the Info column of the one-line summary output. This feature can be used to append arbitrary fields to the Info column in addition to the normal content of that column. <i>field</i> is the display-filter name of a field which value should be placed in the Info column. <i>filter</i> is a filter string that controls for which packets the field value will be presented in the info column. <i>field</i> will only be presented in the Info column for the packets which match <i>filter</i>. </dd>
-<p> <font SIZE="-1">NOTE:</font> In order for <code>TShark</code> to be able to extract the <i>field</i> value from the packet, <i>field</i> <font SIZE="-1">MUST</font> be part of the <i>filter</i> string. If not, <code>TShark</code> will not be able to extract its value. </p>
+<p> NOTE: In order for <code>TShark</code> to be able to extract the <i>field</i> value from the packet, <i>field</i> MUST be part of the <i>filter</i> string. If not, <code>TShark</code> will not be able to extract its value. </p>
 <p> For a simple example to add the &#8220;nfs.fh.hash&#8221; field to the Info column for all packets containing the &#8220;nfs.fh.hash&#8221; field, use </p>
 <p> <code>-z proto,colinfo,nfs.fh.hash,nfs.fh.hash</code> </p>
 <p> To put &#8220;nfs.fh.hash&#8221; in the Info column but only for packets coming from host 1.2.3.4 use: </p>
 <p> <code>-z &#8220;proto,colinfo,nfs.fh.hash &amp;&amp; ip.src==1.2.3.4,nfs.fh.hash&#8221;</code> </p>
 <p> This option can be used multiple times on the command line.</p>
 <dt><code>-z</code> rlc-lte,stat[<i>,filter</i>]</dt>
-<dd> This option will activate a counter for <font SIZE="-1">LTE RLC</font> messages. You will get information about common messages and various counters for each <font SIZE="-1">UE</font> that appears in the log. </dd>
+<dd> This option will activate a counter for LTE RLC messages. You will get information about common messages and various counters for each UE that appears in the log. </dd>
 <p> Example: <code>-z rlc-lte,stat</code>. </p>
 <p> This option can be used multiple times on the command line. </p>
 <p> If the optional <i>filter</i> is provided, the stats will only be calculated for those frames that match that filter. Example: <code>-z &quot;rlc-lte,stat,rlc-lte.ueid</code>3000&quot;&gt; will only collect stats for UEs with a UEId of more than 3000.</p>
 <dt><code>-z</code> rpc,programs</dt>
-<dd> Collect call/reply <font SIZE="-1">SRT</font> data for all known ONC-RPC programs/versions. Data collected is number of calls for each protocol/version, MinSRT, MaxSRT and AvgSRT. This option can only be used once on the command line.</dd>
+<dd> Collect call/reply SRT data for all known ONC-RPC programs/versions. Data collected is number of calls for each protocol/version, MinSRT, MaxSRT and AvgSRT. This option can only be used once on the command line.</dd>
 <dt><code>-z</code> rpc,srt,<i>program</i>,<i>version</i>[,<i>filter</i>]</dt>
-<dd> Collect call/reply <font SIZE="-1">SRT </font>(Service Response Time) data for <i>program</i>/<i>version</i>. Data collected is number of calls for each procedure, MinSRT, MaxSRT and AvgSRT. </dd>
-<p> Example: <code>-z rpc,srt,100003,3</code> will collect data for <font SIZE="-1">NFS</font> v3. </p>
+<dd> Collect call/reply SRT (Service Response Time) data for <i>program</i>/<i>version</i>. Data collected is number of calls for each procedure, MinSRT, MaxSRT and AvgSRT. </dd>
+<p> Example: <code>-z rpc,srt,100003,3</code> will collect data for NFS v3. </p>
 <p> This option can be used multiple times on the command line. </p>
 <p> If the optional <i>filter</i> is provided, the stats will only be calculated on those calls that match that filter. </p>
-<p> Example: <code>-z rpc,srt,100003,3,nfs.fh.hash==0x12345678</code> will collect <font SIZE="-1">NFS</font> v3 <font SIZE="-1">SRT</font> statistics for a specific file.</p>
+<p> Example: <code>-z rpc,srt,100003,3,nfs.fh.hash==0x12345678</code> will collect NFS v3 SRT statistics for a specific file.</p>
 <dt><code>-z</code> rtp,streams</dt>
-<dd> Collect statistics for all <font SIZE="-1">RTP</font> streams and calculate max. delta, max. and mean jitter and packet loss percentages.</dd>
+<dd> Collect statistics for all RTP streams and calculate max. delta, max. and mean jitter and packet loss percentages.</dd>
 <dt><code>-z</code> scsi,srt,<i>cmdset</i>[,<i>filter</i>]</dt>
-<dd> Collect call/reply <font SIZE="-1">SRT </font>(Service Response Time) data for <font SIZE="-1">SCSI</font> commandset <i>cmdset</i>. </dd>
+<dd> Collect call/reply SRT (Service Response Time) data for SCSI commandset <i>cmdset</i>. </dd>
 <p> Commandsets are 0:SBC 1:SSC 5:MMC </p>
 <p> Data collected is the number of calls for each procedure, MinSRT, MaxSRT and AvgSRT. </p>
-<p> Example: <code>-z scsi,srt,0</code> will collect data for <font SIZE="-1">SCSI BLOCK COMMANDS </font>(<font SIZE="-1">SBC</font>). </p>
+<p> Example: <code>-z scsi,srt,0</code> will collect data for SCSI BLOCK COMMANDS (SBC). </p>
 <p> This option can be used multiple times on the command line. </p>
 <p> If the optional <i>filter</i> is provided, the stats will only be calculated on those calls that match that filter. </p>
-<p> Example: <code>-z scsi,srt,0,ip.addr==1.2.3.4</code> will collect <font SIZE="-1">SCSI SBC SRT</font> statistics for a specific iscsi/ifcp/fcip host.</p>
+<p> Example: <code>-z scsi,srt,0,ip.addr==1.2.3.4</code> will collect SCSI SBC SRT statistics for a specific iscsi/ifcp/fcip host.</p>
 <dt><code>-z</code> sip,stat[<i>,filter</i>]</dt>
-<dd> This option will activate a counter for <font SIZE="-1">SIP</font> messages. You will get the number of occurrences of each <font SIZE="-1">SIP</font> Method and of each <font SIZE="-1">SIP</font> Status-Code. Additionally you also get the number of resent <font SIZE="-1">SIP</font> Messages (only for <font SIZE="-1">SIP</font> over <font SIZE="-1">UDP</font>). </dd>
+<dd> This option will activate a counter for SIP messages. You will get the number of occurrences of each SIP Method and of each SIP Status-Code. Additionally you also get the number of resent SIP Messages (only for SIP over UDP). </dd>
 <p> Example: <code>-z sip,stat</code>. </p>
 <p> This option can be used multiple times on the command line. </p>
-<p> If the optional <i>filter</i> is provided, the stats will only be calculated on those calls that match that filter. Example: <code>-z &#8220;sip,stat,ip.addr==1.2.3.4&#8221;</code> will only collect stats for <font SIZE="-1">SIP</font> packets exchanged by the host at <font SIZE="-1">IP</font> address 1.2.3.4 .</p>
+<p> If the optional <i>filter</i> is provided, the stats will only be calculated on those calls that match that filter. Example: <code>-z &#8220;sip,stat,ip.addr==1.2.3.4&#8221;</code> will only collect stats for SIP packets exchanged by the host at IP address 1.2.3.4 .</p>
 <dt><code>-z</code> smb,sids</dt>
-<dd> When this feature is used <code>TShark</code> will print a report with all the discovered <font SIZE="-1">SID</font> and account name mappings. Only those SIDs where the account name is known will be presented in the table. </dd>
-<p> For this feature to work you will need to either to enable &#8220;Edit/Preferences/Protocols/SMB/Snoop <font SIZE="-1">SID</font> to name mappings&#8221; in the preferences or you can override the preferences by specifying <code>-o&nbsp;<wbr>&#8220;smb.sid_name_snooping:TRUE&#8221;</code> on the <code>TShark</code> command line. </p>
-<p> The current method used by <code>TShark</code> to find the <font SIZE="-1">SID-</font>&gt;name mapping is relatively restricted with a hope of future expansion.</p>
+<dd> When this feature is used <code>TShark</code> will print a report with all the discovered SID and account name mappings. Only those SIDs where the account name is known will be presented in the table. </dd>
+<p> For this feature to work you will need to either to enable &#8220;Edit/Preferences/Protocols/SMB/Snoop SID to name mappings&#8221; in the preferences or you can override the preferences by specifying <code>-o&nbsp;<wbr>&#8220;smb.sid_name_snooping:TRUE&#8221;</code> on the <code>TShark</code> command line. </p>
+<p> The current method used by <code>TShark</code> to find the SID-&gt;name mapping is relatively restricted with a hope of future expansion.</p>
 <dt><code>-z</code> smb,srt[,<i>filter</i>]</dt>
-<dd> Collect call/reply <font SIZE="-1">SRT </font>(Service Response Time) data for <font SIZE="-1">SMB. </font> Data collected is number of calls for each <font SIZE="-1">SMB</font> command, MinSRT, MaxSRT and AvgSRT. </dd>
+<dd> Collect call/reply SRT (Service Response Time) data for SMB.  Data collected is number of calls for each SMB command, MinSRT, MaxSRT and AvgSRT. </dd>
 <p> Example: <code>-z smb,srt</code> </p>
-<p> The data will be presented as separate tables for all normal <font SIZE="-1">SMB</font> commands, all Transaction2 commands and all <font SIZE="-1">NT</font> Transaction commands. Only those commands that are seen in the capture will have its stats displayed. Only the first command in a xAndX command chain will be used in the calculation. So for common SessionSetupAndX + TreeConnectAndX chains, only the SessionSetupAndX call will be used in the statistics. This is a flaw that might be fixed in the future. </p>
+<p> The data will be presented as separate tables for all normal SMB commands, all Transaction2 commands and all NT Transaction commands. Only those commands that are seen in the capture will have its stats displayed. Only the first command in a xAndX command chain will be used in the calculation. So for common SessionSetupAndX + TreeConnectAndX chains, only the SessionSetupAndX call will be used in the statistics. This is a flaw that might be fixed in the future. </p>
 <p> This option can be used multiple times on the command line. </p>
 <p> If the optional <i>filter</i> is provided, the stats will only be calculated on those calls that match that filter. </p>
-<p> Example: <code>-z &#8220;smb,srt,ip.addr==1.2.3.4&#8221;</code> will only collect stats for <font SIZE="-1">SMB</font> packets exchanged by the host at <font SIZE="-1">IP</font> address 1.2.3.4 .</dl>
+<p> Example: <code>-z &#8220;smb,srt,ip.addr==1.2.3.4&#8221;</code> will only collect stats for SMB packets exchanged by the host at IP address 1.2.3.4 .</dl>
 </dl>
 <dl>
 </dl>
@@ -507,7 +507,7 @@ tshark - o tcp.desegment_tcp_streams : FALSE - n - q - r smb_reads.cap - z io, s
 <p> The global <i>disabled_protos</i> file uses the same directory as the global preferences file. </p>
 <p> The personal <i>disabled_protos</i> file uses the same directory as the personal preferences file.</p>
 <dt>Name Resolution (hosts)</dt>
-<dd> If the personal <i>hosts</i> file exists, it is used to resolve IPv4 and IPv6 addresses before any other attempts are made to resolve them. The file has the standard <i>hosts</i> file syntax; each line contains one <font SIZE="-1">IP</font> address and name, separated by whitespace. The same directory as for the personal preferences file is used. </dd>
+<dd> If the personal <i>hosts</i> file exists, it is used to resolve IPv4 and IPv6 addresses before any other attempts are made to resolve them. The file has the standard <i>hosts</i> file syntax; each line contains one IP address and name, separated by whitespace. The same directory as for the personal preferences file is used. </dd>
 <p> Capture filter name resolution is handled by libpcap on UNIX-compatible systems and WinPcap on Windows. As such the Wireshark personal <i>hosts</i> file will not be consulted for capture filter name resolution.</p>
 <dt>Name Resolution (ethers)</dt>
 <dd> The <i>ethers</i> files are consulted to correlate 6-byte hardware addresses to names. First the personal <i>ethers</i> file is tried and if an address is not found there the global <i>ethers</i> file is tried next. </dd>
@@ -521,19 +521,19 @@ tshark - o tcp.desegment_tcp_streams : FALSE - n - q - r smb_reads.cap - z io, s
 <p> The personal <i>ethers</i> file is looked for in the same directory as the personal preferences file. </p>
 <p> Capture filter name resolution is handled by libpcap on UNIX-compatible systems and WinPcap on Windows. As such the Wireshark personal <i>ethers</i> file will not be consulted for capture filter name resolution.</p>
 <dt>Name Resolution (manuf)</dt>
-<dd> The <i>manuf</i> file is used to match the 3-byte vendor portion of a 6-byte hardware address with the manufacturer&#8217;s name; it can also contain well-known <font SIZE="-1">MAC</font> addresses and address ranges specified with a netmask. The format of the file is the same as the <i>ethers</i> files, except that entries of the form: </dd>
+<dd> The <i>manuf</i> file is used to match the 3-byte vendor portion of a 6-byte hardware address with the manufacturer&#8217;s name; it can also contain well-known MAC addresses and address ranges specified with a netmask. The format of the file is the same as the <i>ethers</i> files, except that entries of the form: </dd>
 <pre>
   00:00:0C      Cisco
 </pre>
-<p> can be provided, with the 3-byte <font SIZE="-1">OUI</font> and the name for a vendor, and entries such as: </p>
+<p> can be provided, with the 3-byte OUI and the name for a vendor, and entries such as: </p>
 <pre>
   00-00-0C-07-AC/40     All-HSRP-routers
 </pre>
-<p> can be specified, with a <font SIZE="-1">MAC</font> address and a mask indicating how many bits of the address must match. The above entry, for example, has 40 significant bits, or 5 bytes, and would match addresses from 00-00-0C-07-AC-00 through 00-00-0C-07-AC-FF. The mask need not be a multiple of 8. </p>
+<p> can be specified, with a MAC address and a mask indicating how many bits of the address must match. The above entry, for example, has 40 significant bits, or 5 bytes, and would match addresses from 00-00-0C-07-AC-00 through 00-00-0C-07-AC-FF. The mask need not be a multiple of 8. </p>
 <p> The <i>manuf</i> file is looked for in the same directory as the global preferences file.</p>
 <dt>Name Resolution (ipxnets)</dt>
-<dd> The <i>ipxnets</i> files are used to correlate 4-byte <font SIZE="-1">IPX</font> network numbers to names. First the global <i>ipxnets</i> file is tried and if that address is not found there the personal one is tried next. </dd>
-<p> The format is the same as the <i>ethers</i> file, except that each address is four bytes instead of six. Additionally, the address can be represented as a single hexadecimal number, as is more common in the <font SIZE="-1">IPX</font> world, rather than four hex octets. For example, these four lines are valid lines of an <i>ipxnets</i> file: </p>
+<dd> The <i>ipxnets</i> files are used to correlate 4-byte IPX network numbers to names. First the global <i>ipxnets</i> file is tried and if that address is not found there the personal one is tried next. </dd>
+<p> The format is the same as the <i>ethers</i> file, except that each address is four bytes instead of six. Additionally, the address can be represented as a single hexadecimal number, as is more common in the IPX world, rather than four hex octets. For example, these four lines are valid lines of an <i>ipxnets</i> file: </p>
 <pre>
   C0.A8.2C.00              HR
   c0-a8-1c-00              CEO
@@ -544,40 +544,40 @@ tshark - o tcp.desegment_tcp_streams : FALSE - n - q - r smb_reads.cap - z io, s
 <p> The personal <i>ipxnets</i> file is looked for in the same directory as the personal preferences file.</dl>
 <h2>ENVIRONMENT VARIABLES</h2>
 <dl>
-<dt><font SIZE="-1">WIRESHARK_DEBUG_EP_NO_CHUNKS</font></dt>
+<dt>WIRESHARK_DEBUG_EP_NO_CHUNKS</dt>
 <dd> Normally per-packet memory is allocated in large &#8220;chunks.&#8221; This behavior doesn&#8217;t work well with debugging tools such as Valgrind or ElectricFence. Export this environment variable to force individual allocations. Note: disabling chunks also disables canaries (see below).</dd>
-<dt><font SIZE="-1">WIRESHARK_DEBUG_SE_NO_CHUNKS</font></dt>
+<dt>WIRESHARK_DEBUG_SE_NO_CHUNKS</dt>
 <dd> Normally per-file memory is allocated in large &#8220;chunks.&#8221; This behavior doesn&#8217;t work well with debugging tools such as Valgrind or ElectricFence. Export this environment variable to force individual allocations. Note: disabling chunks also disables canaries (see below).</dd>
-<dt><font SIZE="-1">WIRESHARK_DEBUG_EP_NO_CANARY</font></dt>
+<dt>WIRESHARK_DEBUG_EP_NO_CANARY</dt>
 <dd> Normally per-packet memory allocations are separated by &#8220;canaries&#8221; which allow detection of memory overruns. This comes at the expense of some extra memory usage. Exporting this environment variable disables these canaries.</dd>
-<dt><font SIZE="-1">WIRESHARK_DEBUG_SE_USE_CANARY</font></dt>
+<dt>WIRESHARK_DEBUG_SE_USE_CANARY</dt>
 <dd> Exporting this environment variable causes per-file memory allocations to be protected with &#8220;canaries&#8221; which allow for detection of memory overruns. This comes at the expense of significant extra memory usage.</dd>
-<dt><font SIZE="-1">WIRESHARK_DEBUG_SCRUB_MEMORY</font></dt>
+<dt>WIRESHARK_DEBUG_SCRUB_MEMORY</dt>
 <dd> If this environment variable is set, the contents of per-packet and per-file memory is initialized to 0xBADDCAFE when the memory is allocated and is reset to 0xDEADBEEF when the memory is freed. This functionality is useful mainly to developers looking for bugs in the way memory is handled.</dd>
-<dt><font SIZE="-1">WIRESHARK_DEBUG_WMEM_OVERRIDE</font></dt>
-<dd> Setting this environment variable forces the wmem framework to use the specified allocator backend for *all* allocations, regardless of which backend is normally specified by the code. This is mainly useful to developers when testing or debugging. See <i></i><font SIZE="-1"><i>README</i></font><i>.wmem</i> in the source distribution for details.</dd>
-<dt><font SIZE="-1">WIRESHARK_RUN_FROM_BUILD_DIRECTORY</font></dt>
+<dt>WIRESHARK_DEBUG_WMEM_OVERRIDE</dt>
+<dd> Setting this environment variable forces the wmem framework to use the specified allocator backend for *all* allocations, regardless of which backend is normally specified by the code. This is mainly useful to developers when testing or debugging. See <i></i><i>README</i><i>.wmem</i> in the source distribution for details.</dd>
+<dt>WIRESHARK_RUN_FROM_BUILD_DIRECTORY</dt>
 <dd> This environment variable causes the plugins and other data files to be loaded from the build directory (where the program was compiled) rather than from the standard locations. It has no effect when the program in question is running with root (or setuid) permissions on *NIX.</dd>
-<dt><font SIZE="-1">WIRESHARK_DATA_DIR</font></dt>
+<dt>WIRESHARK_DATA_DIR</dt>
 <dd> This environment variable causes the various data files to be loaded from a directory other than the standard locations. It has no effect when the program in question is running with root (or setuid) permissions on *NIX.</dd>
-<dt><font SIZE="-1">WIRESHARK_PYTHON_DIR</font></dt>
+<dt>WIRESHARK_PYTHON_DIR</dt>
 <dd> This environment variable points to an alternate location for Python. It has no effect when the program in question is running with root (or setuid) permissions on *NIX.</dd>
-<dt><font SIZE="-1">ERF_RECORDS_TO_CHECK</font></dt>
-<dd> This environment variable controls the number of <font SIZE="-1">ERF</font> records checked when deciding if a file really is in the <font SIZE="-1">ERF</font> format. Setting this environment variable a number higher than the default (20) would make false positives less likely.</dd>
-<dt><font SIZE="-1">IPFIX_RECORDS_TO_CHECK</font></dt>
-<dd> This environment variable controls the number of <font SIZE="-1">IPFIX</font> records checked when deciding if a file really is in the <font SIZE="-1">IPFIX</font> format. Setting this environment variable a number higher than the default (20) would make false positives less likely.</dd>
-<dt><font SIZE="-1">WIRESHARK_ABORT_ON_DISSECTOR_BUG</font></dt>
+<dt>ERF_RECORDS_TO_CHECK</dt>
+<dd> This environment variable controls the number of ERF records checked when deciding if a file really is in the ERF format. Setting this environment variable a number higher than the default (20) would make false positives less likely.</dd>
+<dt>IPFIX_RECORDS_TO_CHECK</dt>
+<dd> This environment variable controls the number of IPFIX records checked when deciding if a file really is in the IPFIX format. Setting this environment variable a number higher than the default (20) would make false positives less likely.</dd>
+<dt>WIRESHARK_ABORT_ON_DISSECTOR_BUG</dt>
 <dd> If this environment variable is set, <code>TShark</code> will call <i><a href="/docs/linux/man/3-abort/">abort</a></i>(3) when a dissector bug is encountered. <i><a href="/docs/linux/man/3-abort/">abort</a></i>(3) will cause the program to exit abnormally; if you are running <code>TShark</code> in a debugger, it should halt in the debugger and allow inspection of the process, and, if you are not running it in a debugger, it will, on some OSes, assuming your environment is configured correctly, generate a core dump file. This can be useful to developers attempting to troubleshoot a problem with a protocol dissector.</dd>
-<dt><font SIZE="-1">WIRESHARK_EP_VERIFY_POINTERS</font></dt>
+<dt>WIRESHARK_EP_VERIFY_POINTERS</dt>
 <dd> This environment variable, if present, causes certain uses of pointers to be audited to ensure they do not point to memory that is deallocated after each packet has been fully dissected. This can be useful to developers writing or auditing code.</dd>
-<dt><font SIZE="-1">WIRESHARK_SE_VERIFY_POINTERS</font></dt>
+<dt>WIRESHARK_SE_VERIFY_POINTERS</dt>
 <dd> This environment variable, if present, causes certain uses of pointers to be audited to ensure they do not point to memory that is deallocated after when a capture file is closed. This can be useful to developers writing or auditing code.</dd>
-<dt><font SIZE="-1">WIRESHARK_ABORT_ON_OUT_OF_MEMORY</font></dt>
+<dt>WIRESHARK_ABORT_ON_OUT_OF_MEMORY</dt>
 <dd> This environment variable, if present, causes <i><a href="/docs/linux/man/3-abort/">abort</a></i>(3) to be called if certain out-of-memory conditions (which normally result in an exception and an explanatory error message) are experienced. This can be useful to developers debugging out-of-memory conditions.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/4-wireshark-filter/">wireshark-filter</a></i>(4), <i><a href="/docs/linux/man/1-wireshark/">wireshark</a></i>(1), <i><a href="/docs/linux/man/1-editcap/">editcap</a></i>(1), <i>pcap</i>(3), <i><a href="/docs/linux/man/1-dumpcap/">dumpcap</a></i>(1), <i><a href="/docs/linux/man/1-text2pcap/">text2pcap</a></i>(1), <i><a href="/docs/linux/man/1-mergecap/">mergecap</a></i>(1), <i><a href="/docs/linux/man/7-pcap-filter/">pcap-filter</a></i>(7) or <i><a href="/docs/linux/man/8-tcpdump/">tcpdump</a></i>(8)</p>
 <h2>NOTES</h2>
 <p> <code>TShark</code> is part of the <code>Wireshark</code> distribution. The latest version of <code>Wireshark</code> can be found at &lt;<a rel="nofollow" href="http://www.wireshark.org">http://www.wireshark.org</a>&gt;. </p>
-<p> <font SIZE="-1">HTML</font> versions of the Wireshark project man pages are available at: &lt;<a rel="nofollow" href="http://www.wireshark.org/docs/man-pages">http://www.wireshark.org/docs/man-pages</a>&gt;.</p>
+<p> HTML versions of the Wireshark project man pages are available at: &lt;<a rel="nofollow" href="http://www.wireshark.org/docs/man-pages">http://www.wireshark.org/docs/man-pages</a>&gt;.</p>
 <h2>AUTHORS</h2>
 <p> <code>TShark</code> uses the same packet dissection code that <code>Wireshark</code> does, as well as using many other modules from <code>Wireshark</code>; see the list of authors in the <code>Wireshark</code> man page for a list of authors of that code. </p>

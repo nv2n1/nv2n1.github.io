@@ -11,7 +11,7 @@ description: "spoequb.f –"
 <p> spoequb.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>spoequb</code> (N, A, LDA, S, SCOND, AMAX, INFO)<br />
+<p> subroutine <code>spoequb</code> (N, A, LDA, S, SCOND, AMAX, INFO)<br/>
  <i></i><code>SPOEQUB</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine spoequb (integerN, real, dimension( lda, * )A, integerLDA, real, dimension( * )S, realSCOND, realAMAX, integerINFO)</h3>

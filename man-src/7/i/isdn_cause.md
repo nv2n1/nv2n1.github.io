@@ -9,9 +9,9 @@ description: "isdn_cause – Description of ISDN cause messages."
 
 <p>isdn_cause &#8211; Description of ISDN cause messages.</p>
 <h2>Description</h2>
-<p>This document describes the cause messages, used with the <font SIZE="-1">ISDN</font> D-channel protocols EDSS1 and 1TR6 and their format, visible to the user.</p>
+<p>This document describes the cause messages, used with the ISDN D-channel protocols EDSS1 and 1TR6 and their format, visible to the user.</p>
 <h2>Format</h2>
-<p>Cause messages are 2-byte information elements, describing the state transitions of an <font SIZE="-1">ISDN</font> line. Each cause message describes its origination (location) in one byte, while the cause code is described in the other byte. Internally, when EDSS1 is used, the first byte contains the location while the second byte contains the cause code. When using 1TR6, the first byte contains the cause code while the location is coded in the second byte. In the Linux <font SIZE="-1">ISDN</font> subsystem, the cause messages visible to the user are unified to avoid confusion. All user visible cause messages are displayed as hexadecimal strings. These strings always have the location coded in the first byte, regardless if using 1TR6 or EDSS1. When using EDSS1, these strings are preceeded by the character &#8216;E&#8217;.</p>
+<p>Cause messages are 2-byte information elements, describing the state transitions of an ISDN line. Each cause message describes its origination (location) in one byte, while the cause code is described in the other byte. Internally, when EDSS1 is used, the first byte contains the location while the second byte contains the cause code. When using 1TR6, the first byte contains the cause code while the location is coded in the second byte. In the Linux ISDN subsystem, the cause messages visible to the user are unified to avoid confusion. All user visible cause messages are displayed as hexadecimal strings. These strings always have the location coded in the first byte, regardless if using 1TR6 or EDSS1. When using EDSS1, these strings are preceeded by the character &#8216;E&#8217;.</p>
 <h2>Cause Messages With Edss1</h2>
 <h3>Location</h3>
 <p>The following location codes are defined when using EDSS1:</p>

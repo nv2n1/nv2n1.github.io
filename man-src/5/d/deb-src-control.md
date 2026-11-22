@@ -28,7 +28,7 @@ description: "deb-src-control – Debian source packages’ master control file 
 </dd><dt> <i>long-description</i></dt>
 <dd>The format for the source package description is a short brief summary on the first line (after the <code>Description</code> field). The following lines should be used as a longer, more detailed description. Each line of the long description must be preceded by a space, and blank lines in the long description must contain a single &#8216;<code>.</code>&#8216; following the preceding space.</dd>
 <dt><code>Homepage:</code> <i>url</i></dt>
-<dd>The upstream project home page <font SIZE="-1">URL.</font></dd>
+<dd>The upstream project home page URL.</dd>
 <dt><code>Bugs:</code> <i>url</i></dt>
 <dd>The <i>url</i> of the bug tracking system for this package. The current used format is <i>bts-type</i><code>://</code><i>bts-address</i>, like <code>debbugs://bugs.debian.org</code>. This field is usually not needed.</dd>
 <dt><code>Rules-Requires-Root:</code> <code>no</code>|<code>binary-targets</code>|<i>impl-keywords</i></dt>
@@ -42,9 +42,9 @@ description: "deb-src-control – Debian source packages’ master control file 
 <dd>The binary targets must always be run under (fake)root. This value is the default when the field is omitted; adding the field with an explicit <code>binary-targets</code> while not strictly needed, marks it as having been analyzed for this requirement.</dd>
 <dt><i>impl-keywords</i></dt>
 <dd>This is a space-separated list of keywords which define when (fake)root is required. </dd>
-<p> Keywords consist of <i>namespace</i>/<i>cases</i>. The <i>namespace</i> part cannot contain &#8220;/&#8221; or whitespace. The <i>cases</i> part cannot contain whitespace. Furthermore, both parts must consist entirely of printable <font SIZE="-1">ASCII</font> characters. </p>
+<p> Keywords consist of <i>namespace</i>/<i>cases</i>. The <i>namespace</i> part cannot contain &#8220;/&#8221; or whitespace. The <i>cases</i> part cannot contain whitespace. Furthermore, both parts must consist entirely of printable ASCII characters. </p>
 <p> Each tool/package will define a namespace named after itself and provide a number of cases where (fake)root is required. (See &#8220;Implementation provided keywords&#8221; in <i>rootless-builds.txt</i>). </p>
-<p> When the field is set to one of the <i>impl-keywords</i>, the builder will expose an interface that is used to run a command under (fake)root. (See &#8220;Gain Root <font SIZE="-1">API&#8221;</font> in <i>rootless-builds.txt</i>.)</dl>
+<p> When the field is set to one of the <i>impl-keywords</i>, the builder will expose an interface that is used to run a command under (fake)root. (See &#8220;Gain Root API&#8221; in <i>rootless-builds.txt</i>.)</dl>
 </dl>
 <dl>
 <dd></dd></dl>
@@ -148,7 +148,7 @@ description: "deb-src-control – Debian source packages’ master control file 
 </dd><dt><code>Installer-Menu-Item:</code> <i>value</i></dt>
 <dd>These fields are used by the debian-installer in <code>udeb</code>s and are usually not needed. See /usr/share/doc/debian-installer/devel/modules.txt from the <code>debian-installer</code> package for more details about them.</dd></dl>
 <h2>User-Defined Fields</h2>
-<p>It is allowed to add additional user-defined fields to the control file. The tools will ignore these fields. If you want the fields to be copied over to the output files, such as the binary packages, you need to use a custom naming scheme: the fields should start with an <code>X</code>, followed by zero or more of the letters <font SIZE="-1"><code>SBC</code></font> and a hyphen.</p>
+<p>It is allowed to add additional user-defined fields to the control file. The tools will ignore these fields. If you want the fields to be copied over to the output files, such as the binary packages, you need to use a custom naming scheme: the fields should start with an <code>X</code>, followed by zero or more of the letters <code>SBC</code> and a hyphen.</p>
 <dl>
 <dt><code>S</code></dt>
 <dd>The field will appear in the source package control file, see <code><a href="/docs/linux/man/5-dsc/">dsc</a></code>(5).</dd>
@@ -156,7 +156,7 @@ description: "deb-src-control – Debian source packages’ master control file 
 <dd>The field will appear in the control file in the binary package, see <code><a href="/docs/linux/man/5-deb-control/">deb-control</a></code>(5).</dd>
 <dt><code>C</code></dt>
 <dd>The field will appear in the upload control (.changes) file, see <code><a href="/docs/linux/man/5-deb-changes/">deb-changes</a></code>(5).</dd></dl>
-<p> Note that the <code>X</code>[<font SIZE="-1"><code>SBC</code></font>]<code>&#8211;</code> prefixes are stripped when the fields are copied over to the output files. A field <code>XC-Approved-By</code> will appear as <code>Approved-By</code> in the changes file and will not appear in the binary or source package control files. </p>
+<p> Note that the <code>X</code>[<code>SBC</code>]<code>&#8211;</code> prefixes are stripped when the fields are copied over to the output files. A field <code>XC-Approved-By</code> will appear as <code>Approved-By</code> in the changes file and will not appear in the binary or source package control files. </p>
 <p> Take into account that these user-defined fields will be using the global namespace, which might at some point in the future collide with officially recognized fields. To avoid such potential situation you can prefix those fields with <code>Private-</code>, such as <code>XB-Private-New-Field</code>.</p>
 <h2>Example</h2>
 <pre> # Comment

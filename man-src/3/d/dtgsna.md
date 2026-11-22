@@ -11,7 +11,7 @@ description: "dtgsna.f –"
 <p> dtgsna.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dtgsna</code> (JOB, HOWMNY, SELECT, N, A, LDA, B, LDB, VL, LDVL, VR, LDVR, S, DIF, MM, M, WORK, LWORK, IWORK, INFO)<br />
+<p> subroutine <code>dtgsna</code> (JOB, HOWMNY, SELECT, N, A, LDA, B, LDB, VL, LDVL, VR, LDVR, S, DIF, MM, M, WORK, LWORK, IWORK, INFO)<br/>
  <i></i><code>DTGSNA</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dtgsna (characterJOB, characterHOWMNY, logical, dimension( * )SELECT, integerN, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( ldb, * )B, integerLDB, double precision, dimension( ldvl, * )VL, integerLDVL, double precision, dimension( ldvr, * )VR, integerLDVR, double precision, dimension( * )S, double precision, dimension( * )DIF, integerMM, integerM, double precision, dimension( * )WORK, integerLWORK, integer, dimension( * )IWORK, integerINFO)</h3>
@@ -197,73 +197,73 @@ description: "dtgsna.f –"
 <dl>
 <dt>
 </dt><dd>
-<p>The reciprocal of the condition number of a generalized eigenvalue<br />
-    w = (a, b)is defined as S(w) = (| u * *TAv | **2 + | u * *TBv | **2) * *(1 / 2) / (norm(u) * norm(v)) where u and v are the left and right eigenvectors of(A, B)<br />
-corresponding to w;<br />
-| z | denotes the absolute value of the complex number, and norm(u) denotes the 2 &#8211; norm of the vector u.The pair(a, b)<br />
-corresponds to an eigenvalue w = a / b(= u * *TAv / u * *TBv)<br />
-                                         of the matrix<br />
-                                         pair(A, B)<br />
-                                             .If both a and<br />
-                                 b equal zero,<br />
-                             then(A B) is<br />
-                             singular and S(I) = -1 is returned.An approximate error bound on the chordal distance between the i &#8211; th<br />
-                                                     computed generalized eigenvalue w<br />
-                                                 and the corresponding exact<br />
-                                                         eigenvalue lambda is<br />
-                                                         chord(w, lambda) &lt;= EPS * norm(A, B) / S(I) where EPS is the machine precision.The reciprocal of the condition number DIF(i) of right eigenvector u<br />
-  and left eigenvector v corresponding to the generalized eigenvalue w<br />
-  is defined as follows:<br />
-  a) If the i-th eigenvalue w = (a,b) is real<br />
-     Suppose U and V are orthogonal transformations such that<br />
-              U**T*(A, B)*V  = (S, T) = ( a   *  ) ( b  *  )  1<br />
-                                        ( 0  S22 ),( 0 T22 )  n-1<br />
-                                          1  n-1     1 n-1<br />
-     Then the reciprocal condition number DIF(i) is<br />
-                Difl((a, b), (S22, T22)) = sigma-min( Zl ),<br />
-     where sigma-min(Zl) denotes the smallest singular value of the<br />
-     2(n-1)-by-2(n-1) matrix<br />
-         Zl = [ kron(a, In-1)  -kron(1, S22) ]<br />
-              [ kron(b, In-1)  -kron(1, T22) ] .<br />
-     Here In-1 is the identity matrix of size n-1. kron(X, Y) is the<br />
-     Kronecker product between the matrices X and Y.<br />
-     Note that if the default method for computing DIF(i)<br />
-is wanted(see DLATDF), then the parameter DIFDRI(see below) should be<br />
-                       changed from 3 to 4(routine DLATDF(IJOB = 2 will be used))<br />
-                           .See DTGSYL for more details.b) If the i<br />
-    &#8211; th and (i + 1) &#8211; th eigenvalues are complex conjugate pair,<br />
-    Suppose U and V are orthogonal transformations such that<br />
-    U **T *(A, B) *V = (S, T) = (S11 *)(T11 *)2(0 S22),<br />
-                  (0 T22)n &#8211; 2 2 n &#8211; 2 2 n &#8211; 2 and (S11, T11) corresponds to the complex conjugate eigenvalue<br />
-    pair(w, conjg(w))<br />
-        .There exist unitary matrices U1 and V1 such<br />
-    that<br />
-    U1 **T *S11 *V1 = (s11 s12) and U1 **T *T11 *V1 = (t11 t12)(0 s22)(0 t22)<br />
-        where the generalized eigenvalues w = s11 /<br />
-    t11 and<br />
-    conjg(w) = s22 / t22.Then the reciprocal condition number DIF(i) is bounded by<br />
-         min( d1, max( 1, |real(s11)/real(s22)| )*d2 )<br />
-     where, d1 = Difl((s11, t11), (s22, t22)) = sigma-min(Z1), where<br />
-     Z1 is the complex 2-by-2 matrix<br />
-              Z1 =  [ s11  -s22 ]<br />
-                    [ t11  -t22 ],<br />
-     This is done by computing (using real arithmetic) the<br />
-     roots of the characteristical polynomial det(Z1**T * Z1 &#8211; lambda I),<br />
-     where Z1**T denotes the transpose of Z1 and det(X) denotes<br />
-     the determinant of X.<br />
-     and d2 is an upper bound on Difl((S11, T11), (S22, T22)), i.e. an<br />
-     upper bound on sigma-min(Z2), where Z2 is (2n-2)-by-(2n-2)<br />
-              Z2 = [ kron(S11**T, In-2)  -kron(I2, S22) ]<br />
-                   [ kron(T11**T, In-2)  -kron(I2, T22) ]<br />
-     Note that if the default method for computing DIF is wanted (see<br />
-     DLATDF), then the parameter DIFDRI (see below) should be changed<br />
-     from 3 to 4 (routine DLATDF(IJOB = 2 will be used)). See DTGSYL<br />
-     for more details.<br />
-  For each eigenvalue/vector specified by SELECT, DIF stores a<br />
-  Frobenius norm-based estimate of Difl.<br />
-  An approximate error bound for the i-th computed eigenvector VL(i) or<br />
-  VR(i) is given by<br />
-             EPS * norm(A, B) / DIF(i).<br />
+<p>The reciprocal of the condition number of a generalized eigenvalue<br/>
+    w = (a, b)is defined as S(w) = (| u * *TAv | **2 + | u * *TBv | **2) * *(1 / 2) / (norm(u) * norm(v)) where u and v are the left and right eigenvectors of(A, B)<br/>
+corresponding to w;<br/>
+| z | denotes the absolute value of the complex number, and norm(u) denotes the 2 &#8211; norm of the vector u.The pair(a, b)<br/>
+corresponds to an eigenvalue w = a / b(= u * *TAv / u * *TBv)<br/>
+                                         of the matrix<br/>
+                                         pair(A, B)<br/>
+                                             .If both a and<br/>
+                                 b equal zero,<br/>
+                             then(A B) is<br/>
+                             singular and S(I) = -1 is returned.An approximate error bound on the chordal distance between the i &#8211; th<br/>
+                                                     computed generalized eigenvalue w<br/>
+                                                 and the corresponding exact<br/>
+                                                         eigenvalue lambda is<br/>
+                                                         chord(w, lambda) &lt;= EPS * norm(A, B) / S(I) where EPS is the machine precision.The reciprocal of the condition number DIF(i) of right eigenvector u<br/>
+  and left eigenvector v corresponding to the generalized eigenvalue w<br/>
+  is defined as follows:<br/>
+  a) If the i-th eigenvalue w = (a,b) is real<br/>
+     Suppose U and V are orthogonal transformations such that<br/>
+              U**T*(A, B)*V  = (S, T) = ( a   *  ) ( b  *  )  1<br/>
+                                        ( 0  S22 ),( 0 T22 )  n-1<br/>
+                                          1  n-1     1 n-1<br/>
+     Then the reciprocal condition number DIF(i) is<br/>
+                Difl((a, b), (S22, T22)) = sigma-min( Zl ),<br/>
+     where sigma-min(Zl) denotes the smallest singular value of the<br/>
+     2(n-1)-by-2(n-1) matrix<br/>
+         Zl = [ kron(a, In-1)  -kron(1, S22) ]<br/>
+              [ kron(b, In-1)  -kron(1, T22) ] .<br/>
+     Here In-1 is the identity matrix of size n-1. kron(X, Y) is the<br/>
+     Kronecker product between the matrices X and Y.<br/>
+     Note that if the default method for computing DIF(i)<br/>
+is wanted(see DLATDF), then the parameter DIFDRI(see below) should be<br/>
+                       changed from 3 to 4(routine DLATDF(IJOB = 2 will be used))<br/>
+                           .See DTGSYL for more details.b) If the i<br/>
+    &#8211; th and (i + 1) &#8211; th eigenvalues are complex conjugate pair,<br/>
+    Suppose U and V are orthogonal transformations such that<br/>
+    U **T *(A, B) *V = (S, T) = (S11 *)(T11 *)2(0 S22),<br/>
+                  (0 T22)n &#8211; 2 2 n &#8211; 2 2 n &#8211; 2 and (S11, T11) corresponds to the complex conjugate eigenvalue<br/>
+    pair(w, conjg(w))<br/>
+        .There exist unitary matrices U1 and V1 such<br/>
+    that<br/>
+    U1 **T *S11 *V1 = (s11 s12) and U1 **T *T11 *V1 = (t11 t12)(0 s22)(0 t22)<br/>
+        where the generalized eigenvalues w = s11 /<br/>
+    t11 and<br/>
+    conjg(w) = s22 / t22.Then the reciprocal condition number DIF(i) is bounded by<br/>
+         min( d1, max( 1, |real(s11)/real(s22)| )*d2 )<br/>
+     where, d1 = Difl((s11, t11), (s22, t22)) = sigma-min(Z1), where<br/>
+     Z1 is the complex 2-by-2 matrix<br/>
+              Z1 =  [ s11  -s22 ]<br/>
+                    [ t11  -t22 ],<br/>
+     This is done by computing (using real arithmetic) the<br/>
+     roots of the characteristical polynomial det(Z1**T * Z1 &#8211; lambda I),<br/>
+     where Z1**T denotes the transpose of Z1 and det(X) denotes<br/>
+     the determinant of X.<br/>
+     and d2 is an upper bound on Difl((S11, T11), (S22, T22)), i.e. an<br/>
+     upper bound on sigma-min(Z2), where Z2 is (2n-2)-by-(2n-2)<br/>
+              Z2 = [ kron(S11**T, In-2)  -kron(I2, S22) ]<br/>
+                   [ kron(T11**T, In-2)  -kron(I2, T22) ]<br/>
+     Note that if the default method for computing DIF is wanted (see<br/>
+     DLATDF), then the parameter DIFDRI (see below) should be changed<br/>
+     from 3 to 4 (routine DLATDF(IJOB = 2 will be used)). See DTGSYL<br/>
+     for more details.<br/>
+  For each eigenvalue/vector specified by SELECT, DIF stores a<br/>
+  Frobenius norm-based estimate of Difl.<br/>
+  An approximate error bound for the i-th computed eigenvector VL(i) or<br/>
+  VR(i) is given by<br/>
+             EPS * norm(A, B) / DIF(i).<br/>
   See ref. [2-3] for more details and further references.</p>
 <p>&nbsp;<wbr></dd></dl>
 <p> <code>Contributors: </code></p>

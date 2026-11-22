@@ -9,8 +9,8 @@ description: "ct – tc connection tracking action"
 
 <p>ct &#8211; tc connection tracking action</p>
 <h2>Synopsis</h2>
-<p><code>tc &#8230; action ct commit [ force ] [ zone </code> <i>ZONE</i> <code>] [ mark </code> <i>MASKED_MARK</i> <code>] [ label </code> <i>MASKED_LABEL</i> <code>] [ nat </code> <i>NAT_SPEC</i> <code>]</code><br />
- <code>tc &#8230; action ct [ nat ] [ zone </code> <i>ZONE</i> <code>]</code><br />
+<p><code>tc &#8230; action ct commit [ force ] [ zone </code> <i>ZONE</i> <code>] [ mark </code> <i>MASKED_MARK</i> <code>] [ label </code> <i>MASKED_LABEL</i> <code>] [ nat </code> <i>NAT_SPEC</i> <code>]</code><br/>
+ <code>tc &#8230; action ct [ nat ] [ zone </code> <i>ZONE</i> <code>]</code><br/>
  <code>tc &#8230; action ct clear</code> </p>
 <h2>Description</h2>
 <p>The ct action is a tc action for sending packets and interacting with the netfilter conntrack module. It can (as shown in the synopsis, in order): Send the packet to conntrack, and commit the connection, while configuring a 32bit mark, 128bit label, and src/dst nat. Send the packet to conntrack, which will mark the packet with the connection&#8217;s state and configured metadata (mark/label), and execute previous configured nat. Clear the packet&#8217;s of previous connection tracking state. </p>

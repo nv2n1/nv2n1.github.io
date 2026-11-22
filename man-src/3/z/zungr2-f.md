@@ -10,7 +10,7 @@ description: "zungr2.f –"
 <p>zungr2.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zungr2</code> (M, N, K, A, LDA, TAU, WORK, INFO)<br />
+<p>subroutine <code>zungr2</code> (M, N, K, A, LDA, TAU, WORK, INFO)<br/>
  <i></i><code>ZUNGR2</code> generates all or part of the unitary matrix Q from an RQ factorization determined by cgerqf (unblocked algorithm).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zungr2 (integerM, integerN, integerK, complex*16, dimension( lda, * )A, integerLDA, complex*16, dimension( * )TAU, complex*16, dimension( * )WORK, integerINFO)</h3>

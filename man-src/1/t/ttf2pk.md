@@ -10,8 +10,8 @@ description: "ttf2pk – convert a TrueType font into TeX’s PK format"
 
 <p> ttf2pk &#8211; convert a TrueType font into TeX&#8217;s PK format </p>
 <h2>SYNOPSIS</h2>
-<p> <code>ttf2pk</code> [<code>-q</code>] [<code>-n</code>] <i>font-name resolution</i><br />
- <code>ttf2pk</code> <code>-t</code> [<code>-q</code>] <i>font-name</i><br />
+<p> <code>ttf2pk</code> [<code>-q</code>] [<code>-n</code>] <i>font-name resolution</i><br/>
+ <code>ttf2pk</code> <code>-t</code> [<code>-q</code>] <i>font-name</i><br/>
  <code>ttf2pk &#8211;version</code> | <code>&#8211;help</code></p>
 <h2>DESCRIPTION</h2>
 <p> This program converts a TrueType font into a file; the created font can then be used with TeX or LaTeX. </p>
@@ -69,5 +69,5 @@ description: "ttf2pk – convert a TrueType font into TeX’s PK format"
 <h2>AVAILABILITY</h2>
 <p> <code>ttf2pk</code> is part of the FreeType 1 package, a high quality TrueType rendering library.</p>
 <h2>AUTHORS</h2>
-<p> Werner LEMBERG<br />
+<p> Werner LEMBERG<br/>
  Fr&eacute;d&eacute;ric LOYER </p>

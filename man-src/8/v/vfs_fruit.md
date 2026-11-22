@@ -89,7 +89,7 @@ description: "vfs_fruit – Enhanced OS X and Netatalk interoperability"
 <dl>
 <dd>Whether to enable OS X specific copychunk ioctl that requests a copy of a whole file along with all attached metadata. </dd>
 <p> WARNING: the copyfile request is blocking the client while the server does the copy. </p>
-<p> . <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> The default is<br />
+<p> . <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> The default is<br/>
  <i>no</i>.</dl>
 <p> fruit:posix_rename = yes | no</p>
 <dl>

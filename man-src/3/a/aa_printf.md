@@ -11,8 +11,8 @@ description: "aa_printf – print text to AA-lib output buffers."
 <p> aa_printf &#8211; print text to AA-lib output buffers.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>
-<p> int aa_printf<br />
- (<br />
+<p> int aa_printf<br/>
+ (<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>aa_context *c,</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>int x,</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>int y,</p>

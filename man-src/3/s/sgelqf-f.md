@@ -10,7 +10,7 @@ description: "sgelqf.f –"
 <p>sgelqf.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>sgelqf</code> (M, N, A, LDA, TAU, WORK, LWORK, INFO)<br />
+<p>subroutine <code>sgelqf</code> (M, N, A, LDA, TAU, WORK, LWORK, INFO)<br/>
  <i></i><code>SGELQF</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sgelqf (integerM, integerN, real, dimension( lda, * )A, integerLDA, real, dimension( * )TAU, real, dimension( * )WORK, integerLWORK, integerINFO)</h3>

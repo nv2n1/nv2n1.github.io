@@ -11,15 +11,15 @@ description: "ovsdb-client – command-line interface to"
 <p> ovsdb-client &#8211; command-line interface to <code></p>
 <p><a href="/docs/linux/man/1-ovsdb-server/">ovsdb-server</a></code>(1)</p>
 <h2>SYNOPSIS</h2>
-<p> <code>ovsdb-client </code>[<i>options</i>] <code>list-dbs </code>[<i>server</i>]<br />
- <code>ovsdb-client </code>[<i>options</i>] <code>get-schema </code>[<i>server</i>] [<i>database</i>]<br />
- <code>ovsdb-client </code>[<i>options</i>] <code>get-schema-version</code><i> </i>[<i>server</i>] [<i>database</i>]<br />
- <code>ovsdb-client </code>[<i>options</i>] <code>list-tables</code><i> </i>[<i>server</i>] [<i>database</i>]<br />
- <code>ovsdb-client </code>[<i>options</i>] <code>list-columns</code><i> </i>[<i>server</i>] [<i>database</i>] [<i>table</i>]<br />
- <code>ovsdb-client </code>[<i>options</i>] <code>transact</code><i> </i>[<i>server</i>] <i>transaction</i><br />
- <code>ovsdb-client </code>[<i>options</i>] <code>dump</code><i> </i>[<i>server</i>] [<i>database</i>] [<i>table</i> [<i>column</i>&#8230;]]<br />
- <code>ovsdb-client </code>[<i>options</i>] <code>monitor</code><i> </i>[<i>server</i>] [<i>database</i>] <i>table</i> [<i>column</i>[<code>,</code><i>column</i>]&#8230;]&#8230;<br />
- <code>ovsdb-client </code>[<i>options</i>] <code>monitor</code><i> </i>[<i>server</i>] [<i>database</i>] <code>ALL</code><br />
+<p> <code>ovsdb-client </code>[<i>options</i>] <code>list-dbs </code>[<i>server</i>]<br/>
+ <code>ovsdb-client </code>[<i>options</i>] <code>get-schema </code>[<i>server</i>] [<i>database</i>]<br/>
+ <code>ovsdb-client </code>[<i>options</i>] <code>get-schema-version</code><i> </i>[<i>server</i>] [<i>database</i>]<br/>
+ <code>ovsdb-client </code>[<i>options</i>] <code>list-tables</code><i> </i>[<i>server</i>] [<i>database</i>]<br/>
+ <code>ovsdb-client </code>[<i>options</i>] <code>list-columns</code><i> </i>[<i>server</i>] [<i>database</i>] [<i>table</i>]<br/>
+ <code>ovsdb-client </code>[<i>options</i>] <code>transact</code><i> </i>[<i>server</i>] <i>transaction</i><br/>
+ <code>ovsdb-client </code>[<i>options</i>] <code>dump</code><i> </i>[<i>server</i>] [<i>database</i>] [<i>table</i> [<i>column</i>&#8230;]]<br/>
+ <code>ovsdb-client </code>[<i>options</i>] <code>monitor</code><i> </i>[<i>server</i>] [<i>database</i>] <i>table</i> [<i>column</i>[<code>,</code><i>column</i>]&#8230;]&#8230;<br/>
+ <code>ovsdb-client </code>[<i>options</i>] <code>monitor</code><i> </i>[<i>server</i>] [<i>database</i>] <code>ALL</code><br/>
  <code>ovsdb-client help</code></p>
 <dl>
 <dt>Output formatting options:</dt>
@@ -27,13 +27,13 @@ description: "ovsdb-client – command-line interface to"
 <dt>Daemon options:</dt>
 <dd> [<code>&#8211;pidfile</code>[<code>=</code><i>pidfile</i>]] [<code>&#8211;overwrite-pidfile</code>] [<code>&#8211;detach</code>] [<code>&#8211;no-chdir</code>]</dd>
 <dt>Logging options:</dt>
-<dd> [<code>-v</code>[<i>module</i>[<code>:</code><i>destination</i>[<code>:</code><i>level</i>]]]]&#8230;<br />
- [<code>&#8211;verbose[=</code><i>module</i>[<code>:</code><i>destination</i>[<code>:</code><i>level</i>]]]]&#8230;<br />
+<dd> [<code>-v</code>[<i>module</i>[<code>:</code><i>destination</i>[<code>:</code><i>level</i>]]]]&#8230;<br/>
+ [<code>&#8211;verbose[=</code><i>module</i>[<code>:</code><i>destination</i>[<code>:</code><i>level</i>]]]]&#8230;<br/>
  [<code>&#8211;log-file</code>[<code>=</code><i>file</i>]]</dd>
 <dt>Public key infrastructure options:</dt>
-<dd> [<code>&#8211;private-key=</code><i>privkey.pem</i>]<br />
- [<code>&#8211;certificate=</code><i>cert.pem</i>]<br />
- [<code>&#8211;ca-cert=</code><i>cacert.pem</i>]<br />
+<dd> [<code>&#8211;private-key=</code><i>privkey.pem</i>]<br/>
+ [<code>&#8211;certificate=</code><i>cert.pem</i>]<br/>
+ [<code>&#8211;ca-cert=</code><i>cacert.pem</i>]<br/>
  [<code>&#8211;bootstrap-ca-cert=</code><i>cacert.pem</i>]</dd>
 <dt>Common options:</dt>
 <dd> [<code>-h</code> | <code>&#8211;help</code>] [<code>-V</code> | <code>&#8211;version</code>] </dd>

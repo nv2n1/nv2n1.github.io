@@ -9,15 +9,15 @@ description: "X Display Attributes – Functions that set and retrieve X display
 
 <p>X Display Attributes &#8211; Functions that set and retrieve X display attributes. </p>
 <h3>Functions</h3>
-<p>EAPI Ecore_X_Connection * <code>ecore_x_connection_get</code> (void)<br />
- <i>Retrieves the Ecore_X_Connection handle used for the current X connection. </i><br />
- EAPI int <code>ecore_x_fd_get</code> (void)<br />
- <i>Retrieves the X display file descriptor. </i><br />
- EAPI Ecore_X_Screen * <code>ecore_x_default_screen_get</code> (void)<br />
- <i>Retrieves the Ecore_X_Screen handle used for the current X connection. </i><br />
- EAPI void <code>ecore_x_double_click_time_set</code> (double t)<br />
- <i>Sets the timeout for a double and triple clicks to be flagged. </i><br />
- EAPI double <code>ecore_x_double_click_time_get</code> (void)<br />
+<p>EAPI Ecore_X_Connection * <code>ecore_x_connection_get</code> (void)<br/>
+ <i>Retrieves the Ecore_X_Connection handle used for the current X connection. </i><br/>
+ EAPI int <code>ecore_x_fd_get</code> (void)<br/>
+ <i>Retrieves the X display file descriptor. </i><br/>
+ EAPI Ecore_X_Screen * <code>ecore_x_default_screen_get</code> (void)<br/>
+ <i>Retrieves the Ecore_X_Screen handle used for the current X connection. </i><br/>
+ EAPI void <code>ecore_x_double_click_time_set</code> (double t)<br/>
+ <i>Sets the timeout for a double and triple clicks to be flagged. </i><br/>
+ EAPI double <code>ecore_x_double_click_time_get</code> (void)<br/>
  <i>Retrieves the double and triple click flag timeout. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that set and retrieve X display attributes.</p>

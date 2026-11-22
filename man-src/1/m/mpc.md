@@ -17,14 +17,14 @@ description: "mpc – Program for controlling Music Player Daemon (MPD)"
 <dl>
 <dt><code>&#8211;format</code></dt>
 <dd>
- Configure the format of song display for status and the playlist. The metadata delimiters are &quot;%name%&quot;, &quot;%artist%&quot;, &quot;%album%&quot;, &quot;%title%&quot;, &quot;%track%&quot;, &quot;%time%&quot;, and &quot;%file%&quot;. The [] operator is used to group output such that if no metadata delimiters are found or matched between &#8216;[&#8216; and &#8216;]&#8217;, then none of the characters between &#8216;[&#8216; and &#8216;]&#8217; are output. &#8216;&amp;&#8217; and &#8216;|&#8217; are logical operators for and and or. &#8216;#&#8217; is used to escape characters. Some useful examples for format are: &quot;%file%&quot; and &quot;[[%artist% &#8211; ]%title%]|[%file%]&quot;. This command also takes the following defined escape sequences:<br />
- \ &#8211; backslash<br />
-  &#8211; alert<br />
-  &#8211; backspace<br />
- 	 &#8211; tab<br />
- &#8211; newline<br />
-  &#8211; vertical tab<br />
-  &#8211; form-feed<br />
+ Configure the format of song display for status and the playlist. The metadata delimiters are &quot;%name%&quot;, &quot;%artist%&quot;, &quot;%album%&quot;, &quot;%title%&quot;, &quot;%track%&quot;, &quot;%time%&quot;, and &quot;%file%&quot;. The [] operator is used to group output such that if no metadata delimiters are found or matched between &#8216;[&#8216; and &#8216;]&#8217;, then none of the characters between &#8216;[&#8216; and &#8216;]&#8217; are output. &#8216;&amp;&#8217; and &#8216;|&#8217; are logical operators for and and or. &#8216;#&#8217; is used to escape characters. Some useful examples for format are: &quot;%file%&quot; and &quot;[[%artist% &#8211; ]%title%]|[%file%]&quot;. This command also takes the following defined escape sequences:<br/>
+ \ &#8211; backslash<br/>
+  &#8211; alert<br/>
+  &#8211; backspace<br/>
+ 	 &#8211; tab<br/>
+ &#8211; newline<br/>
+  &#8211; vertical tab<br/>
+  &#8211; form-feed<br/>
  &#8211; carriage return</dd>
 <dt><code>&#8211;no-status</code></dt>
 <dd>
@@ -112,8 +112,8 @@ description: "mpc – Program for controlling Music Player Daemon (MPD)"
 <p> MPD_HOST, MPD_PORT</p>
 <dl>
 <dt>
-</dt><dd> By default, mpc connects to localhost:6600. This can be changed either at compile-time, or by exporting the MPD_HOST and MPD_PORT environment variables.<br />
- If you specify an absolute path in MPD_HOST, mpc attempts a connection via Unix Domain Socket.<br />
+</dt><dd> By default, mpc connects to localhost:6600. This can be changed either at compile-time, or by exporting the MPD_HOST and MPD_PORT environment variables.<br/>
+ If you specify an absolute path in MPD_HOST, mpc attempts a connection via Unix Domain Socket.<br/>
  To use a password with MPD, set MPD_HOST to password [at] host.</dd></dl>
 <h2>EXAMPLES</h2>
 <dl>

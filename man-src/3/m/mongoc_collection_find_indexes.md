@@ -23,8 +23,8 @@ mongoc_collection_find_indexes (mongoc_collection_t *collection,
 <h2>Errors</h2>
 <p>Errors are propagated via the <code>error</code> parameter. </p>
 <h2>Returns</h2>
-<p>A cursor where each result corresponds to the server&#8217;s representation of<br />
-&nbsp;<wbr>an index on this collection. If the collection does not exist on the<br />
+<p>A cursor where each result corresponds to the server&#8217;s representation of<br/>
+&nbsp;<wbr>an index on this collection. If the collection does not exist on the<br/>
 &nbsp;<wbr>server, the cursor will be empty. </p>
 <h2>Colophon</h2>
 <p>This page is part of MongoDB C Driver. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a></p>

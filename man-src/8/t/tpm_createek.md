@@ -7,7 +7,7 @@ url: "/docs/linux/man/8-tpm_createek/"
 description: "tpm_createek – create an Endorsement Key Pair on the TPM"
 ---
 
-<p>TPM Management &#8211; tpm_createek<br />
+<p>TPM Management &#8211; tpm_createek<br/>
  </center></p>
 <h2>Name</h2>
 <p>tpm_createek &#8211; create an Endorsement Key Pair on the TPM</p>

@@ -12,15 +12,15 @@ description: "user_caps – user-defined terminfo capabilities"
 <p><code>tic -x, infocmp -x</code></p>
 <h2>Description</h2>
 <h3>Background</h3>
-<p>Before ncurses 5.0, terminfo databases used a <i>fixed repertoire</i> of terminal capabilities designed for the SVr2 terminal database in 1984, and extended in stages through SVr4 (1989), and standardized in the Single Unix Specification beginning in 1995. Most of the <i>extensions</i> in this fixed repertoire were additions to the tables of boolean, numeric and string capabilities. Rather than change the meaning of an existing capability, a new name was added. The terminfo database uses a binary format; binary compatibility was ensured by using a header which gave the number of items in the tables for each type of capability. The standardization was incomplete:<br />
+<p>Before ncurses 5.0, terminfo databases used a <i>fixed repertoire</i> of terminal capabilities designed for the SVr2 terminal database in 1984, and extended in stages through SVr4 (1989), and standardized in the Single Unix Specification beginning in 1995. Most of the <i>extensions</i> in this fixed repertoire were additions to the tables of boolean, numeric and string capabilities. Rather than change the meaning of an existing capability, a new name was added. The terminfo database uses a binary format; binary compatibility was ensured by using a header which gave the number of items in the tables for each type of capability. The standardization was incomplete:<br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 The <i>binary format</i> itself is not described in the X/Open Curses documentation. Only the <i>source format</i> is described.</p>
 <dl>
-<dd>Library developers rely upon the SVr4 documentation, and reverse-engineering the compiled terminfo files to match the binary format.<br />
+<dd>Library developers rely upon the SVr4 documentation, and reverse-engineering the compiled terminfo files to match the binary format.<br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 Lacking a standard for the binary format, most implementations copy the SVr2 binary format, which uses 16-bit signed integers, and is limited to 4096-byte entries.</dd>
-<dd>The format cannot represent very large numeric capabilities, nor can it represent large numbers of special keyboard definitions.<br />
+<dd>The format cannot represent very large numeric capabilities, nor can it represent large numbers of special keyboard definitions.<br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 The tables of capability names differ between implementations.</dd>
 <dd>Although they <i>may</i> provide all of the standard capability names, the position in the tables differs because some features were added as needed, while others were added (out of order) to comply with X/Open Curses.</dd>
-<dd>While ncurses&#8217; repertoire of predefined capabilities is closest to Solaris, Solaris&#8217;s terminfo database has a few differences from the list published by X/Open Curses. For example, ncurses can be configured with tables which match the terminal databases for AIX, HP-UX or OSF/1, rather than the default Solaris-like configuration.<br />
+<dd>While ncurses&#8217; repertoire of predefined capabilities is closest to Solaris, Solaris&#8217;s terminfo database has a few differences from the list published by X/Open Curses. For example, ncurses can be configured with tables which match the terminal databases for AIX, HP-UX or OSF/1, rather than the default Solaris-like configuration.<br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 In SVr4 curses and ncurses, the terminal database is defined at compile-time using a text file which lists the different terminal capabilities.</dd>
 <dd>In principle, the text-file can be extended, but doing this requires recompiling and reinstalling the library. The text-file used in ncurses for terminal capabilities includes details for various systems past the documented X/Open Curses features. For example, ncurses supports these capabilities in each configuration:</dd>
 <dl>
@@ -34,13 +34,13 @@ description: "user_caps – user-defined terminfo capabilities"
 <dd>(box1) box characters primary set</dd></dl>
 </dl>
 <dd>The memory lock/unlock capabilities were included because they were used in the X11R6 terminal description for <code>xterm</code>. The <i>box1</i> capability is used in tic to help with terminal descriptions written for AIX.</dd></dl>
-<p> During the 1990s, some users were reluctant to use terminfo in spite of its performance advantages over termcap:<br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 The fixed repertoire prevented users from adding features for unanticipated terminal improvements (or required them to reuse existing capabilities as a workaround).<br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 The limitation to 16-bit signed integers was also mentioned. Because termcap stores everything as a string, it could represent larger numbers. Although termcap&#8217;s extensibility was rarely used (it was never the <i>speaker</i> who had actually used the feature), the criticism had a point. ncurses 5.0 provided a way to detect nonstandard capabilities, determine their type and optionally store and retrieve them in a way which did not interfere with other applications. These are referred to as <i>user-defined capabilities</i> because no modifications to the toolset&#8217;s predefined capability names are needed. The ncurses utilities <code>tic</code> and <code>infocmp</code> have a command-line option &#8220;-x&#8221; to control whether the nonstandard capabilities are stored or retrieved. A library function <code>use_extended_names</code> is provided for the same purpose. When compiling a terminal database, if &#8220;-x&#8221; is set, <code>tic</code> will store a user-defined capability if the capability name is not one of the predefined names. Because ncurses provides a termcap library interface, these user-defined capabilities may be visible to termcap applications:<br />
+<p> During the 1990s, some users were reluctant to use terminfo in spite of its performance advantages over termcap:<br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 The fixed repertoire prevented users from adding features for unanticipated terminal improvements (or required them to reuse existing capabilities as a workaround).<br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 The limitation to 16-bit signed integers was also mentioned. Because termcap stores everything as a string, it could represent larger numbers. Although termcap&#8217;s extensibility was rarely used (it was never the <i>speaker</i> who had actually used the feature), the criticism had a point. ncurses 5.0 provided a way to detect nonstandard capabilities, determine their type and optionally store and retrieve them in a way which did not interfere with other applications. These are referred to as <i>user-defined capabilities</i> because no modifications to the toolset&#8217;s predefined capability names are needed. The ncurses utilities <code>tic</code> and <code>infocmp</code> have a command-line option &#8220;-x&#8221; to control whether the nonstandard capabilities are stored or retrieved. A library function <code>use_extended_names</code> is provided for the same purpose. When compiling a terminal database, if &#8220;-x&#8221; is set, <code>tic</code> will store a user-defined capability if the capability name is not one of the predefined names. Because ncurses provides a termcap library interface, these user-defined capabilities may be visible to termcap applications:<br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 The termcap interface (like all implementations of termcap) requires that the capability names are 2-characters.</p>
 <dl>
-<dd>When the capability is simple enough for use in a termcap application, it is provided as a 2-character name.<br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 There are other user-defined capabilities which refer to features not usable in termcap, e.g., parameterized strings that use more than two parameters or use more than the trivial expression support provided by termcap. For these, the terminfo database should have only capability names with 3 or more characters.<br />
+<dd>When the capability is simple enough for use in a termcap application, it is provided as a 2-character name.<br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 There are other user-defined capabilities which refer to features not usable in termcap, e.g., parameterized strings that use more than two parameters or use more than the trivial expression support provided by termcap. For these, the terminfo database should have only capability names with 3 or more characters.<br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 Some terminals can send distinct strings for special keys (cursor-, keypad- or function-keys) depending on modifier keys (shift, control, etc.). While terminfo and termcap have a set of 60 predefined function-key names, to which a series of keys can be assigned, that is insufficient for more than a dozen keys multiplied by more than a couple of modifier combinations. The ncurses database uses a convention based on <code>xterm</code> to provide extended special-key names.</dd>
 <dd>Fitting that into termcap&#8217;s limitation of 2-character names would be pointless. These extended keys are available only with terminfo.</dd></dl>
 <h3>Recognized capabilities</h3>
@@ -269,8 +269,8 @@ description: "user_caps – user-defined terminfo capabilities"
 </tr>
 </table>
 </dd></dl>
-<p> None of these are predefined; terminal descriptions can refer to <i>names</i> which ncurses will allocate at runtime to <i>key-codes</i>. To use these keys in an ncurses program, an application could do this:<br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 using a list of extended key <i>names</i>, ask <code>tigetstr</code>(3X) for their values, and<br />
+<p> None of these are predefined; terminal descriptions can refer to <i>names</i> which ncurses will allocate at runtime to <i>key-codes</i>. To use these keys in an ncurses program, an application could do this:<br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 using a list of extended key <i>names</i>, ask <code>tigetstr</code>(3X) for their values, and<br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 given the list of values, ask <code>key_defined</code>(3X) for the <i>key-code</i> which would be returned for those keys by <code>wgetch</code>(3X). </p>
 <h2>Portability</h2>
 <p>The &#8220;-x&#8221; extension feature of <code>tic</code> and <code>infocmp</code> has been adopted in NetBSD curses. That implementation stores user-defined capabilities, but makes no use of these capabilities itself.</p>
@@ -279,5 +279,5 @@ description: "user_caps – user-defined terminfo capabilities"
 <p> The terminal database section <i>NCURSES USER-DEFINABLE CAPABILITIES</i> summarizes commonly-used user-defined capabilities which are used in the terminal descriptions. Some of those features are mentioned in <code><a href="/docs/linux/man/1-screen/">screen</a></code>(1) or <code><a href="/docs/linux/man/1-tmux/">tmux</a></code>(1). </p>
 <p> <i>XTerm Control Sequences</i> provides further information on the <code>xterm</code> features which are used in these extended capabilities.</p>
 <h2>Authors</h2>
-<p>Thomas E. Dickey<br />
+<p>Thomas E. Dickey<br/>
  beginning with ncurses 5.0 (1999)</p>

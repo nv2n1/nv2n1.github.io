@@ -25,7 +25,7 @@ description: "audispd – an event multiplexor"
 <dt><i>args</i></dt>
 <dd>This allows you to pass arguments to the child program. Generally plugins do not take arguments and have their own config file that instructs them how they should be configured. At the moment, there is a limit of 2 args.</dd>
 <dt><i>format</i></dt>
-<dd>The valid options for this are <i>binary</i> and <i>string.</i> <i>Binary</i> passes the data exactly as the audit event dispatcher gets it from the audit daemon. The <i>string</i> option tells the dispatcher to completely change the event into a string suitable for parsing with the audit parsing library. The default value is <i>string.</i><br />
+<dd>The valid options for this are <i>binary</i> and <i>string.</i> <i>Binary</i> passes the data exactly as the audit event dispatcher gets it from the audit daemon. The <i>string</i> option tells the dispatcher to completely change the event into a string suitable for parsing with the audit parsing library. The default value is <i>string.</i><br/>
 &nbsp;<wbr></dd></dl>
 <h2>Files</h2>
 <p>/etc/audisp/audispd.conf /etc/audisp/plugins.d</p>

@@ -10,7 +10,7 @@ description: "pmFreeEventResult, pmFreeHighResEventResult – release storage al
 <p><code>pmFreeEventResult</code>, <code>pmFreeHighResEventResult</code> &#8211; release storage allocated for unpacked event records</p>
 <h2>C Synopsis</h2>
 <p><code> #include &lt;pcp/pmapi.h&gt; </p>
-<p> void pmFreeEventResult(pmResult **</code><i>rset</i>);<br />
+<p> void pmFreeEventResult(pmResult **</code><i>rset</i>);<br/>
  void pmFreeHighResEventResult(pmHighResResult **<i>hrset</i>); </p>
 <p> cc &#8230; -lpcp</p>
 <h2>Description</h2>

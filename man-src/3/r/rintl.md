@@ -21,14 +21,14 @@ long double rintl(long double x);</code></pre>
 <dd>_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L || _ISOC99_SOURCE</dd></dl>
 <p> <code>rint</code>():</p>
 <dl>
-<dd>_ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;_XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
+<dd>_ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;_XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
 <p> <code>rintf</code>(), <code>rintl</code>():</p>
 <dl>
-<dd>_ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
+<dd>_ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
 <h2>Description</h2>
 <p>The <code>nearbyint</code>(), <code>nearbyintf</code>(), and <code>nearbyintl</code>() functions round their argument to an integer value in floating-point format, using the current rounding direction (see <code><a href="/docs/linux/man/3-fesetround/">fesetround</a></code>(3)) and without raising the <i>inexact</i> exception. When the current rounding direction is to nearest, these functions round halfway cases to the even integer in accordance with IEEE-754. </p>
@@ -48,8 +48,8 @@ long double rintl(long double x);</code></pre>
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>nearbyint</code>(), <code>nearbyintf</code>(),<br />
- <code>nearbyintl</code>(), <code>rint</code>(),<br />
+<td> <code>nearbyint</code>(), <code>nearbyintf</code>(),<br/>
+ <code>nearbyintl</code>(), <code>rint</code>(),<br/>
  <code>rintf</code>(), <code>rintl</code>() </td>
 <td>Thread safety</td>
 <td>MT-Safe

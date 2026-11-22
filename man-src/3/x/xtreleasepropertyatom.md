@@ -22,5 +22,5 @@ description: "XtReservePropertyAtom, XtReleasePropertyAtom – maintain a cache 
 <h2>Description</h2>
 <p><code>XtReservePropertyAtom</code> returns an atom that may be used for properties in conjunction with conversion requests from widget <i>w</i>. The atom returned will be unique for the display of the widget specified.</p>
 <h2>See Also</h2>
-<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

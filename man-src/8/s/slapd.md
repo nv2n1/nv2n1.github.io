@@ -58,7 +58,7 @@ description: "slapd – Stand-alone LDAP Daemon"
 <dd>
 </dd><dl>
 <dt><code>slp=</code>{<code>on</code>|<code>off</code>|<i>slp-attrs</i>}</dt>
-<dd>When SLP support is compiled into slapd, disable it (<code>off</code>),<br />
+<dd>When SLP support is compiled into slapd, disable it (<code>off</code>),<br/>
 &nbsp;<wbr>enable it by registering at SLP DAs without specific SLP attributes&nbsp;<wbr>(<code>on</code>), or with specific SLP attributes <i>slp-attrs</i> that must be an SLP attribute list definition according to the SLP standard. </dd>
 <p> For example, <code>&quot;slp=(tree=production),(server-type=OpenLDAP),(server-version=2.4.15)&quot;</code> registers at SLP DAs with the three SLP attributes tree, server-type and server-version that have the values given above. This allows to specifically query the SLP DAs for LDAP servers holding the <i>production</i> tree in case multiple trees are available.</dl>
 </dl>

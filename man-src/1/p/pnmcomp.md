@@ -10,9 +10,9 @@ description: "pnmcomp – composite (overlay) two portable anymap files together
 
 <p> pnmcomp &#8211; composite (overlay) two portable anymap files together </p>
 <h2>SYNOPSIS</h2>
-<p> <code>pnmcomp</code> [<code>-xoff=</code><i>X</i> | <code>-align=</code>{<code>left</code>,<code>center</code>,<code>right</code>}]<br />
- [<code>-yoff=</code><i>Y</i> | <code>-valign=</code>{<code>top</code>,<code>middle</code>,<code>bottom</code>}]<br />
- [<code>-alpha=</code><i>alpha-pgmfile</i>] [<code>-invert</code>]<br />
+<p> <code>pnmcomp</code> [<code>-xoff=</code><i>X</i> | <code>-align=</code>{<code>left</code>,<code>center</code>,<code>right</code>}]<br/>
+ [<code>-yoff=</code><i>Y</i> | <code>-valign=</code>{<code>top</code>,<code>middle</code>,<code>bottom</code>}]<br/>
+ [<code>-alpha=</code><i>alpha-pgmfile</i>] [<code>-invert</code>]<br/>
  <i>overlay</i> [<i>pnm-input</i>] [<i>pnm-output</i>] </p>
 <p> Minimum unique abbreviations are acceptable. </p>
 <h2>DESCRIPTION</h2>

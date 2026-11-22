@@ -10,11 +10,11 @@ description: "ql/termstructures/credit/interpolateddefaultdensitycurve.hpp – i
 
 <p> ql/termstructures/credit/interpolateddefaultdensitycurve.hpp &#8211; interpolated default-density term structure </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/termstructures/credit/defaultdensitystructure.hpp&gt;<br />
- #include &lt;ql/math/interpolation.hpp&gt;<br />
+<p> #include &lt;ql/termstructures/credit/defaultdensitystructure.hpp&gt;<br/>
+ #include &lt;ql/math/interpolation.hpp&gt;<br/>
  #include &lt;boost/noncopyable.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>InterpolatedDefaultDensityCurve&lt; Interpolator &gt;</code><br />
+<p> class <code>InterpolatedDefaultDensityCurve&lt; Interpolator &gt;</code><br/>
  <i>interpolated default-density curve </i></p>
 <h2>Detailed Description</h2>
 <p> interpolated default-density term structure </p>

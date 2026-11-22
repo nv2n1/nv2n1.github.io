@@ -17,10 +17,10 @@ description: "QwtLinearColorMap –"
 <h3>Public Member Functions</h3>
 <p><code>QwtLinearColorMap</code> (<code>QwtColorMap::Format</code>=<code>QwtColorMap::RGB</code>) </p>
 <p> <code>QwtLinearColorMap</code> (const QColor &amp;from, const QColor &amp;to, <code>QwtColorMap::Format</code>=<code>QwtColorMap::RGB</code>) </p>
-<p> virtual <code>~QwtLinearColorMap</code> ()<br />
- <i>Destructor. </i><br />
- void <code>setMode</code> (<code>Mode</code>)<br />
- <i>Set the mode of the color map. </i><br />
+<p> virtual <code>~QwtLinearColorMap</code> ()<br/>
+ <i>Destructor. </i><br/>
+ void <code>setMode</code> (<code>Mode</code>)<br/>
+ <i>Set the mode of the color map. </i><br/>
  <code>Mode</code> <code>mode</code> () const </p>
 <p> void <code>setColorInterval</code> (const QColor &amp;<code>color1</code>, const QColor &amp;<code>color2</code>) </p>
 <p> void <code>addColorStop</code> (double value, const QColor &amp;) </p>
@@ -28,7 +28,7 @@ description: "QwtLinearColorMap –"
 <p> QColor <code>color1</code> () const </p>
 <p> QColor <code>color2</code> () const </p>
 <p> virtual QRgb <code>rgb</code> (const <code>QwtInterval</code> &amp;, double value) const </p>
-<p> virtual unsigned char <code>colorIndex</code> (const <code>QwtInterval</code> &amp;, double value) const<br />
+<p> virtual unsigned char <code>colorIndex</code> (const <code>QwtInterval</code> &amp;, double value) const<br/>
  <i>Map a value of a given interval into a color index. </i></p>
 <h2>Detailed Description</h2>
 <p><code>QwtLinearColorMap</code> builds a color map from color stops. </p>
@@ -55,8 +55,8 @@ description: "QwtLinearColorMap –"
 <p>Build a color map with two stops at 0.0 and 1.0. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>color1</i> Color used for the minimum value of the value interval<br />
- <i>color2</i> Color used for the maximum value of the value interval<br />
+<dd><i>color1</i> Color used for the minimum value of the value interval<br/>
+ <i>color2</i> Color used for the maximum value of the value interval<br/>
  <i>format</i> Preferred format for the color map</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>void QwtLinearColorMap::addColorStop (doublevalue, const QColor &amp;color)</h3>
@@ -64,7 +64,7 @@ description: "QwtLinearColorMap –"
 <p> The value has to be in the range [0.0, 1.0]. F.e. a stop at position 17.0 for a range [10.0,20.0] must be passed as: (17.0 &#8211; 10.0) / (20.0 &#8211; 10.0) </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>value</i> Value between [0.0, 1.0]<br />
+<dd><i>value</i> Value between [0.0, 1.0]<br/>
  <i>color</i> Color stop</dd></dl>
 <h3>QColor QwtLinearColorMap::color1 () const</h3>
 <p><code>Returns:</code></p>
@@ -84,7 +84,7 @@ description: "QwtLinearColorMap –"
 <p>Map a value of a given interval into a color index. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>interval</i> Range for all values<br />
+<dd><i>interval</i> Range for all values<br/>
  <i>value</i> Value to map into a color index</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -105,7 +105,7 @@ description: "QwtLinearColorMap –"
 <p>Map a value of a given interval into a RGB value </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>interval</i> Range for all values<br />
+<dd><i>interval</i> Range for all values<br/>
  <i>value</i> Value to map into a RGB value</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -116,7 +116,7 @@ description: "QwtLinearColorMap –"
 <p> Add stops at 0.0 and 1.0. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>color1</i> Color used for the minimum value of the value interval<br />
+<dd><i>color1</i> Color used for the minimum value of the value interval<br/>
  <i>color2</i> Color used for the maximum value of the value interval</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>

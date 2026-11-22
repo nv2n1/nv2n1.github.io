@@ -21,16 +21,16 @@ description: "intltool-extract – generate header files which can be read by ge
 <dt><code>&#8211;update</code></dt>
 <dd>Writes header file into the same directory the source file is in. New file name is the source file name appending &quot;.h&quot; extension. This option can&#8217;t be used with <code>-l</code>/<code>&#8211;local</code> option. Besides, this option is the default option if neither <code>&#8211;local</code> nor <code>&#8211;update</code> is specified.</dd>
 <dt><code>&#8211;type</code>=<i>TYPE</i></dt>
-<dd>Specify the type of source file. Currently supported types are:<br />
- &quot;gettext/glade&quot; (.glade, .glade2)<br />
- &quot;gettext/gsettings&quot; (.gschema.xml)<br />
- &quot;gettext/ini&quot; (Generic INI file)<br />
- &quot;gettext/keys&quot; (.keys)<br />
- &quot;gettext/rfc822deb&quot; (RFC 822 format file)<br />
- &quot;gettext/quoted&quot; (all strings within &quot;&quot;)<br />
- &quot;gettext/schemas&quot; (.schemas)<br />
- &quot;gettext/scheme&quot; (.scm)<br />
- &quot;gettext/xml&quot; (Generic XML file)<br />
+<dd>Specify the type of source file. Currently supported types are:<br/>
+ &quot;gettext/glade&quot; (.glade, .glade2)<br/>
+ &quot;gettext/gsettings&quot; (.gschema.xml)<br/>
+ &quot;gettext/ini&quot; (Generic INI file)<br/>
+ &quot;gettext/keys&quot; (.keys)<br/>
+ &quot;gettext/rfc822deb&quot; (RFC 822 format file)<br/>
+ &quot;gettext/quoted&quot; (all strings within &quot;&quot;)<br/>
+ &quot;gettext/schemas&quot; (.schemas)<br/>
+ &quot;gettext/scheme&quot; (.scm)<br/>
+ &quot;gettext/xml&quot; (Generic XML file)<br/>
  &quot;gettext/qtdesigner&quot; (Qt Designer .ui files)</dd>
 <dt><code>-v</code></dt>
 <dd>
@@ -48,8 +48,8 @@ description: "intltool-extract – generate header files which can be read by ge
 <h2>Reporting Bugs</h2>
 <p>Report bugs to <a rel="nofollow" href="http://bugs.launchpad.net/intltool">http://bugs.launchpad.net/intltool</a></p>
 <h2>Author</h2>
-<p>Darin Adler &lt;darin [at] bentspoon.com&gt;<br />
- Kenneth Christiansen &lt;kenneth [at] gnu.org&gt;<br />
+<p>Darin Adler &lt;darin [at] bentspoon.com&gt;<br/>
+ Kenneth Christiansen &lt;kenneth [at] gnu.org&gt;<br/>
  Maciej Stachowiak &lt;mjs [at] eazel.com&gt;</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-intltoolize/">intltoolize</a></code>(8), <code><a href="/docs/linux/man/8-intltool-prepare/">intltool-prepare</a></code>(8), <code><a href="/docs/linux/man/8-intltool-merge/">intltool-merge</a></code>(8), <code><a href="/docs/linux/man/8-intltool-update/">intltool-update</a></code>(8), <code><a href="/docs/linux/man/1-xgettext/">xgettext</a></code>(1) </p>

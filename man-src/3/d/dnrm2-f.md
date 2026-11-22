@@ -10,7 +10,7 @@ description: "dnrm2.f –"
 <p>dnrm2.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>DOUBLE PRECISION function <code>dnrm2</code> (N, X, INCX)<br />
+<p>DOUBLE PRECISION function <code>dnrm2</code> (N, X, INCX)<br/>
  <i></i><code>DNRM2</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>DOUBLE PRECISION function dnrm2 (integerN, double precision, dimension(*)X, integerINCX)</h3>

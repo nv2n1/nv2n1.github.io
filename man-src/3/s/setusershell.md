@@ -38,7 +38,7 @@ void endusershell(void);</code></pre>
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>getusershell</code>(), <code>setusershell</code>(),<br />
+<td> <code>getusershell</code>(), <code>setusershell</code>(),<br/>
  <code>endusershell</code>() </td>
 <td>Thread safety</td>
 <td>MT-Unsafe

@@ -22,7 +22,7 @@ int setstate_r(char *statebuf, struct random_data *buf);
 <p> <code>random_r</code>(), <code>srandom_r</code>(), <code>initstate_r</code>(), <code>setstate_r</code>():</p>
 <dl>
 <dt>
-</dt><dd> /* Glibc since 2.19: */ _DEFAULT_SOURCE<br />
+</dt><dd> /* Glibc since 2.19: */ _DEFAULT_SOURCE<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_SVID_SOURCE ||&nbsp;_BSD_SOURCE</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> These functions are the reentrant equivalents of the functions described in <code><a href="/docs/linux/man/3-random/">random</a></code>(3). They are suitable for use in multithreaded programs where each thread needs to obtain an independent, reproducible sequence of random numbers. </p>
@@ -50,7 +50,7 @@ int setstate_r(char *statebuf, struct random_data *buf);
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>random_r</code>(), <code>srandom_r</code>(),<br />
+<td> <code>random_r</code>(), <code>srandom_r</code>(),<br/>
  <code>initstate_r</code>(), <code>setstate_r</code>() </td>
 <td>Thread safety</td>
 <td>MT-Safe race:buf

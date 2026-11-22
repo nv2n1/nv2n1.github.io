@@ -70,13 +70,13 @@ description: "nouveau – NVIDIA video driver"
 <dt><code>Option &#34;GLXVBlank&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
 <dd>Synchronize GLX clients to VBlank. Useful where tearing is a problem, harmful if the GPU isn&#8217;t fast enough to keep up with the monitor refresh rate. Default: on.</dd>
 <dt><code>Option &#34;ZaphodHeads&#34; &#34;</code><i>string</i><code>&#34;</code></dt>
-<dd>Specify the randr output(s) to use with zaphod mode for a particular driver instance. If you use this option you most use this option for all instances of the driver.<br />
+<dd>Specify the randr output(s) to use with zaphod mode for a particular driver instance. If you use this option you most use this option for all instances of the driver.<br/>
  For example: <code>Option &#34;ZaphodHeads&#34; &#34;LVDS,VGA-0&#34;</code> will assign xrandr outputs LVDS and VGA-0 to this instance of the driver.</dd>
 <dt><code>Option &#34;PageFlip&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
 <dd>Enable DRI2 page flipping. Default: on.</dd>
 <dt><code>Option &#34;SwapLimit&#34; &#34;</code><i>integer</i><code>&#34;</code></dt>
-<dd>Set maximum allowed number of pending OpenGL double-buffer swaps for a drawable before a client is blocked.<br />
- A value of 1 corresponds to double-buffering. A value of 2 corresponds to triple-buffering. Higher values may allow higher framerate, but also increase lag for interactive applications, e.g., games. Nouveau currently reliably supports a maximum value of 2 on XOrg 1.12+. A maximum setting of 2 on older x-servers is allowed, but it will break conformance with the OpenML OML_sync_control specification and will cause failure of software that relies on correct presentation timing behaviour as defined in that specification.<br />
+<dd>Set maximum allowed number of pending OpenGL double-buffer swaps for a drawable before a client is blocked.<br/>
+ A value of 1 corresponds to double-buffering. A value of 2 corresponds to triple-buffering. Higher values may allow higher framerate, but also increase lag for interactive applications, e.g., games. Nouveau currently reliably supports a maximum value of 2 on XOrg 1.12+. A maximum setting of 2 on older x-servers is allowed, but it will break conformance with the OpenML OML_sync_control specification and will cause failure of software that relies on correct presentation timing behaviour as defined in that specification.<br/>
  Default: 1.</dd>
 <dt><code>Option &#34;DRI&#34; &#34;</code><i>integer</i><code>&#34;</code></dt>
 <dd>Define the maximum level of DRI to enable. Valid values are 2 or 3. exa acceleration will honor the maximum level if it is supported. Default: 2.</dd></dl>

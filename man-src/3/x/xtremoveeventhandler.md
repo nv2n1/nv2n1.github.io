@@ -39,6 +39,6 @@ description: "XtAddEventHandler, XtAddRawEventHandler, XtRemoveEventHandler, XtR
 <p> <code>XtInsertEventHandler</code> is identical to <code>XtAddEventHandler</code> with the additional <i>position</i> argument. If <i>position</i> is <code>XtListHead</code>, the event handler is registered to that it will be called before any event handlers that were previously registered for the same widget. If <i>position</i> is <code>XtListTail</code>, the event handler is registered to be called after any previously registered event handlers. If the procedure is already registered with the same <i>client_data</i> value, the specified mask augments the existing mask and the procedure is repositioned in the list. </p>
 <p> <code>XtInsertRawEventHandler</code> is similar to <code>XtInsertEventHandler</code> except that it does not modify the widget&#8217;s event mask and never causes an <code>XSelectInput</code> for the specified events. If the procedure is already registered with the same <i>client_data</i> value, the specified mask augments the existing mask and the procedure is repositioned in the list.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xtappnextevent/">XtAppNextEvent</a>(3), <a href="/docs/linux/man/3-xtbuildeventmask/">XtBuildEventMask</a>(3)<br />
- <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><a href="/docs/linux/man/3-xtappnextevent/">XtAppNextEvent</a>(3), <a href="/docs/linux/man/3-xtbuildeventmask/">XtBuildEventMask</a>(3)<br/>
+ <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

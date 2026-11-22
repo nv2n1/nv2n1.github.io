@@ -12,20 +12,20 @@ description: "QwtScaleMap –"
 <h2>Synopsis</h2>
 <p>#include &lt;qwt_scale_map.h&gt;</p>
 <h3>Public Member Functions</h3>
-<p><code>QwtScaleMap</code> ()<br />
- <i>Constructor. </i><br />
- <code>QwtScaleMap</code> (const <code>QwtScaleMap</code> &amp;)<br />
- <i>Copy constructor. </i><br />
+<p><code>QwtScaleMap</code> ()<br/>
+ <i>Constructor. </i><br/>
+ <code>QwtScaleMap</code> (const <code>QwtScaleMap</code> &amp;)<br/>
+ <i>Copy constructor. </i><br/>
  <code>~QwtScaleMap</code> () </p>
-<p> <code>QwtScaleMap</code> &amp; <code>operator=</code> (const <code>QwtScaleMap</code> &amp;)<br />
- <i>Assignment operator. </i><br />
+<p> <code>QwtScaleMap</code> &amp; <code>operator=</code> (const <code>QwtScaleMap</code> &amp;)<br/>
+ <i>Assignment operator. </i><br/>
  void <code>setTransformation</code> (<code>QwtTransform</code> *) </p>
-<p> const <code>QwtTransform</code> * <code>transformation</code> () const<br />
- <i>Get the transformation. </i><br />
- void <code>setPaintInterval</code> (double <code>p1</code>, double <code>p2</code>)<br />
- <i>Specify the borders of the paint device interval. </i><br />
- void <code>setScaleInterval</code> (double <code>s1</code>, double <code>s2</code>)<br />
- <i>Specify the borders of the scale interval. </i><br />
+<p> const <code>QwtTransform</code> * <code>transformation</code> () const<br/>
+ <i>Get the transformation. </i><br/>
+ void <code>setPaintInterval</code> (double <code>p1</code>, double <code>p2</code>)<br/>
+ <i>Specify the borders of the paint device interval. </i><br/>
+ void <code>setScaleInterval</code> (double <code>s1</code>, double <code>s2</code>)<br/>
+ <i>Specify the borders of the scale interval. </i><br/>
  double <code>transform</code> (double s) const </p>
 <p> double <code>invTransform</code> (double p) const </p>
 <p> double <code>p1</code> () const </p>
@@ -64,8 +64,8 @@ description: "QwtScaleMap –"
 <p>Transform a rectangle from paint to scale coordinates </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>xMap</i> X map<br />
- <i>yMap</i> Y map<br />
+<dd><i>xMap</i> X map<br/>
+ <i>yMap</i> Y map<br/>
  <i>rect</i> Rectangle in paint coordinates</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -77,8 +77,8 @@ description: "QwtScaleMap –"
 <p>Transform a rectangle from paint to scale coordinates </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>xMap</i> X map<br />
- <i>yMap</i> Y map<br />
+<dd><i>xMap</i> X map<br/>
+ <i>yMap</i> Y map<br/>
  <i>pos</i> Position in paint coordinates</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -118,13 +118,13 @@ description: "QwtScaleMap –"
 <p>Specify the borders of the paint device interval. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>p1</i> first border<br />
+<dd><i>p1</i> first border<br/>
  <i>p2</i> second border</dd></dl>
 <h3>void QwtScaleMap::setScaleInterval (doubles1, doubles2)</h3>
 <p>Specify the borders of the scale interval. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>s1</i> first border<br />
+<dd><i>s1</i> first border<br/>
  <i>s2</i> second border</dd></dl>
 <p> <code>Warning:</code></p>
 <dl COMPACT>
@@ -146,8 +146,8 @@ description: "QwtScaleMap –"
 <p>Transform a rectangle from scale to paint coordinates </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>xMap</i> X map<br />
- <i>yMap</i> Y map<br />
+<dd><i>xMap</i> X map<br/>
+ <i>yMap</i> Y map<br/>
  <i>rect</i> Rectangle in scale coordinates</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -159,8 +159,8 @@ description: "QwtScaleMap –"
 <p>Transform a point from scale to paint coordinates </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>xMap</i> X map<br />
- <i>yMap</i> Y map<br />
+<dd><i>xMap</i> X map<br/>
+ <i>yMap</i> Y map<br/>
  <i>pos</i> Position in scale coordinates</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

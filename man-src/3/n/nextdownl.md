@@ -38,7 +38,7 @@ long double nextdownl(long double x);</code></pre>
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>nextup</code>(), <code>nextupf</code>(), <code>nextupl</code>(),<br />
+<td> <code>nextup</code>(), <code>nextupf</code>(), <code>nextupl</code>(),<br/>
  <code>nextdown</code>(), <code>nextdownf</code>(), <code>nextdownl</code>() </td>
 <td>Thread safety</td>
 <td>MT-Safe

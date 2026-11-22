@@ -41,15 +41,15 @@ echo &quot;$head&quot; &gt; &quot;$GIT_DIR/HEAD&quot;
 <dl>
 <dt>
 </dt><dd>
-update SP&lt;ref&gt; SP&lt;newvalue&gt;[SP&lt;oldvalue&gt;] LF<br />
-    create SP&lt;ref&gt;<br />
-        SP&lt;newvalue&gt; LF delete SP&lt;ref&gt;[SP&lt;oldvalue&gt;] LF<br />
-            verify SP&lt;ref&gt;[SP&lt;oldvalue&gt;] LF<br />
-                option SP&lt;opt&gt;<br />
-                    LF<br />
-                        start LF<br />
-                            prepare LF<br />
-                                commit LF<br />
+update SP&lt;ref&gt; SP&lt;newvalue&gt;[SP&lt;oldvalue&gt;] LF<br/>
+    create SP&lt;ref&gt;<br/>
+        SP&lt;newvalue&gt; LF delete SP&lt;ref&gt;[SP&lt;oldvalue&gt;] LF<br/>
+            verify SP&lt;ref&gt;[SP&lt;oldvalue&gt;] LF<br/>
+                option SP&lt;opt&gt;<br/>
+                    LF<br/>
+                        start LF<br/>
+                            prepare LF<br/>
+                                commit LF<br/>
                                     abort LF
 </dd></dl>
 <p> With <code>&#8211;create-reflog</code>, update-ref will create a reflog for each ref even if one would not ordinarily be created. </p>

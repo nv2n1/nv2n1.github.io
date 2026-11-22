@@ -11,7 +11,7 @@ description: "cgels.f –"
 <p> cgels.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cgels</code> (TRANS, M, N, NRHS, A, LDA, B, LDB, WORK, LWORK, INFO)<br />
+<p> subroutine <code>cgels</code> (TRANS, M, N, NRHS, A, LDA, B, LDB, WORK, LWORK, INFO)<br/>
  <i></i><code> CGELS solves overdetermined or underdetermined systems for GE matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cgels (characterTRANS, integerM, integerN, integerNRHS, complex, dimension( lda, * )A, integerLDA, complex, dimension( ldb, * )B, integerLDB, complex, dimension( * )WORK, integerLWORK, integerINFO)</h3>

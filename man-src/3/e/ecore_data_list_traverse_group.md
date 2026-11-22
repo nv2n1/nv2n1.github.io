@@ -9,15 +9,15 @@ description: "List Traversal Functions – Functions that can be used to travers
 
 <p>List Traversal Functions &#8211; Functions that can be used to traverse an Ecore_List. </p>
 <h3>Functions</h3>
-<p>EAPI void * <code>ecore_list_index_goto</code> (Ecore_List *list, int index)<br />
- <i>Make the current item the item with the given index number. </i><br />
- EAPI void * <code>ecore_list_goto</code> (Ecore_List *list, const void *data)<br />
- <i>Make the current item the node that contains </i>data.<br />
- EAPI void * <code>ecore_list_first_goto</code> (Ecore_List *list)<br />
- <i>Make the current item the first item in the list. </i><br />
- EAPI void * <code>ecore_list_last_goto</code> (Ecore_List *list)<br />
- <i>Make the current item the last item in the list. </i><br />
- EAPI int <code>ecore_list_for_each</code> (Ecore_List *list, Ecore_For_Each function, void *user_data)<br />
+<p>EAPI void * <code>ecore_list_index_goto</code> (Ecore_List *list, int index)<br/>
+ <i>Make the current item the item with the given index number. </i><br/>
+ EAPI void * <code>ecore_list_goto</code> (Ecore_List *list, const void *data)<br/>
+ <i>Make the current item the node that contains </i>data.<br/>
+ EAPI void * <code>ecore_list_first_goto</code> (Ecore_List *list)<br/>
+ <i>Make the current item the first item in the list. </i><br/>
+ EAPI void * <code>ecore_list_last_goto</code> (Ecore_List *list)<br/>
+ <i>Make the current item the last item in the list. </i><br/>
+ EAPI int <code>ecore_list_for_each</code> (Ecore_List *list, Ecore_For_Each function, void *user_data)<br/>
  <i>Execute function for each node in </i>list.</p>
 <h2>Detailed Description</h2>
 <p>Functions that can be used to traverse an Ecore_List.</p>
@@ -35,7 +35,7 @@ description: "List Traversal Functions – Functions that can be used to travers
 <p>Execute function for each node in list. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>list</i> The list.<br />
+<dd><i>list</i> The list.<br/>
  <i>function</i> The function to pass each node from list to.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -44,7 +44,7 @@ description: "List Traversal Functions – Functions that can be used to travers
 <p>Make the current item the node that contains data. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>list</i> The list.<br />
+<dd><i>list</i> The list.<br/>
  <i>data</i> The data to find.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -54,7 +54,7 @@ description: "List Traversal Functions – Functions that can be used to travers
 <p>Make the current item the item with the given index number. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>list</i> The list.<br />
+<dd><i>list</i> The list.<br/>
  <i>index</i> The position to move the current item.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

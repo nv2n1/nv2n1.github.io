@@ -18,7 +18,7 @@ description: "belkin – Driver for Belkin serial UPS equipment"
 <h2>Bugs</h2>
 <p>There are dragons lurking within the protocol to this UPS. I have one that essentially behaves like a glorified power strip due to some invasive probing on my part. Don&#8217;t mess with it directly.</p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  the driver doesn&#8217;t go anywhere near these character sequences, so it won&#8217;t zap your UPS. I only mention this here as yet another reminder of the perils of closed hardware. </dd>
 <h2>See Also</h2>
 <h3>The core driver:</h3>

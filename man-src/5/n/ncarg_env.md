@@ -13,6 +13,6 @@ description: "NCAR Graphics environment variables"
 <h2>See Also</h2>
 <p><code>ncarg_gks(1NCARG),</code> <code>ncargintro(5NCARG)</code></p>
 <h2>Copyright</h2>
-<p>Copyright (C) 1987-2002<br />
- University Corporation for Atmospheric Research<br />
+<p>Copyright (C) 1987-2002<br/>
+ University Corporation for Atmospheric Research<br/>
  The use of this Software is governed by a License Agreement.</p>

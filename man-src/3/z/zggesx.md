@@ -10,7 +10,7 @@ description: "zggesx.f –"
 <p>zggesx.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zggesx</code> (JOBVSL, JOBVSR, SORT, SELCTG, SENSE, N, A, LDA, B, LDB, SDIM, ALPHA, BETA, VSL, LDVSL, VSR, LDVSR, RCONDE, RCONDV, WORK, LWORK, RWORK, IWORK, LIWORK, BWORK, INFO)<br />
+<p>subroutine <code>zggesx</code> (JOBVSL, JOBVSR, SORT, SELCTG, SENSE, N, A, LDA, B, LDB, SDIM, ALPHA, BETA, VSL, LDVSL, VSR, LDVSR, RCONDE, RCONDV, WORK, LWORK, RWORK, IWORK, LIWORK, BWORK, INFO)<br/>
  <i></i><code> ZGGESX computes the eigenvalues, the Schur form, and, optionally, the matrix of Schur vectors for GE matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zggesx (characterJOBVSL, characterJOBVSR, characterSORT, logical, externalSELCTG, characterSENSE, integerN, complex*16, dimension( lda, * )A, integerLDA, complex*16, dimension( ldb, * )B, integerLDB, integerSDIM, complex*16, dimension( * )ALPHA, complex*16, dimension( * )BETA, complex*16, dimension( ldvsl, * )VSL, integerLDVSL, complex*16, dimension( ldvsr, * )VSR, integerLDVSR, double precision, dimension( 2 )RCONDE, double precision, dimension( 2 )RCONDV, complex*16, dimension( * )WORK, integerLWORK, double precision, dimension( * )RWORK, integer, dimension( * )IWORK, integerLIWORK, logical, dimension( * )BWORK, integerINFO)</h3>

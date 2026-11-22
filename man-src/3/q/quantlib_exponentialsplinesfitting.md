@@ -13,7 +13,7 @@ description: "QuantLib::ExponentialSplinesFitting – Exponential-splines fittin
 <p> Inherits <code>QuantLib::FittedBondDiscountCurve::FittingMethod</code>. </p>
 <h3>Public Member Functions</h3>
 <p><code>ExponentialSplinesFitting</code> (bool constrainAtZero=true) </p>
-<p> std::auto_ptr&lt; <code>FittedBondDiscountCurve::FittingMethod</code> &gt; <code>clone</code> () const<br />
+<p> std::auto_ptr&lt; <code>FittedBondDiscountCurve::FittingMethod</code> &gt; <code>clone</code> () const<br/>
  <i>clone of the current object </i></p>
 <h2>Detailed Description</h2>
 <p>Exponential-splines fitting method. </p>

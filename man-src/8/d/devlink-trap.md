@@ -17,12 +17,12 @@ trap
 OPTIONS := {
     -v[erbose] |
     -s[tatistics] }</code></pre>
-<p> <code>devlink trap show</code> [ <i>DEV</i> <code>trap</code> <i>TRAP</i> ]<br />
- <code>devlink trap set </code><i>DEV</i><code> trap </code><i>TRAP</i> [ <code>action</code> { <code>trap</code> | <code>drop</code> | <code>mirror</code> } ]<br />
- <code>devlink trap group show</code> [ <i>DEV</i> <code>group</code> <i>GROUP</i> ]<br />
- <code>devlink trap group set </code><i>DEV</i><code> group </code><i>GROUP</i> [ <code>action</code> { <code>trap</code> | <code>drop</code> | <code>mirror</code> } ]<br />
- [ <code>policer</code> <i>POLICER </i><code>]</code> [ <code>nopolicer</code> ]<br />
- <code>devlink trap policer set </code><i>DEV</i><code> policer </code><i>POLICER</i> [ <code>rate</code> <i>RATE </i>] [ <code>burst</code> <i>BURST </i>]<br />
+<p> <code>devlink trap show</code> [ <i>DEV</i> <code>trap</code> <i>TRAP</i> ]<br/>
+ <code>devlink trap set </code><i>DEV</i><code> trap </code><i>TRAP</i> [ <code>action</code> { <code>trap</code> | <code>drop</code> | <code>mirror</code> } ]<br/>
+ <code>devlink trap group show</code> [ <i>DEV</i> <code>group</code> <i>GROUP</i> ]<br/>
+ <code>devlink trap group set </code><i>DEV</i><code> group </code><i>GROUP</i> [ <code>action</code> { <code>trap</code> | <code>drop</code> | <code>mirror</code> } ]<br/>
+ [ <code>policer</code> <i>POLICER </i><code>]</code> [ <code>nopolicer</code> ]<br/>
+ <code>devlink trap policer set </code><i>DEV</i><code> policer </code><i>POLICER</i> [ <code>rate</code> <i>RATE </i>] [ <code>burst</code> <i>BURST </i>]<br/>
  <code>devlink trap help</code> </p>
 <h2>Description</h2>
 <h3>devlink trap show &#8211; display available packet traps and their attributes</h3>

@@ -11,7 +11,7 @@ description: "cggbak.f –"
 <p> cggbak.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cggbak</code> (JOB, SIDE, N, ILO, IHI, LSCALE, RSCALE, M, V, LDV, INFO)<br />
+<p> subroutine <code>cggbak</code> (JOB, SIDE, N, ILO, IHI, LSCALE, RSCALE, M, V, LDV, INFO)<br/>
  <i></i><code>CGGBAK</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cggbak (characterJOB, characterSIDE, integerN, integerILO, integerIHI, real, dimension( * )LSCALE, real, dimension( * )RSCALE, integerM, complex, dimension( ldv, * )V, integerLDV, integerINFO)</h3>

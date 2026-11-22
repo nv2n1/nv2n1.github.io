@@ -13,7 +13,7 @@ description: "idevicescreenshot – Gets a screenshot from the connected device.
 <p> <code>idevicescreenshot</code> [OPTIONS] </p>
 <h2>DESCRIPTION</h2>
 <p> Gets a screenshot from the connected device. </p>
-<p> NOTE: A mounted developer disk image is required on the device, otherwise<br />
+<p> NOTE: A mounted developer disk image is required on the device, otherwise<br/>
 &nbsp;<wbr>the screenshotr service is not available. </p>
 <h2>OPTIONS</h2>
 <dl>

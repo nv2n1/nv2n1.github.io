@@ -12,12 +12,12 @@ description: "docker-import – Create an empty filesystem image and import the 
 <h2>SYNOPSIS</h2>
 <p> <code>docker import</code> [<code>-c</code>|<code>&#8211;change</code>[=<i>[]</i>]] [<code>-m</code>|<code>&#8211;message</code>[=<i>MESSAGE</i>]] [<code>&#8211;help</code>] file|URL|<code>&#8211;</code>[REPOSITORY[:TAG]] </p>
 <h2>OPTIONS</h2>
-<p> <code>-c</code>, <code>&#8211;change</code>=[]<br />
-Apply specified Dockerfile instructions while importing the image<br />
+<p> <code>-c</code>, <code>&#8211;change</code>=[]<br/>
+Apply specified Dockerfile instructions while importing the image<br/>
 Supported Dockerfile instructions: CMD|ENTRYPOINT|ENV|EXPOSE|ONBUILD|USER|VOLUME|WORKDIR </p>
-<p> <code>&#8211;help</code><br />
+<p> <code>&#8211;help</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Print usage statement </p>
-<p> <code>-m</code>, <code>&#8211;message</code>=&quot;&quot;<br />
+<p> <code>-m</code>, <code>&#8211;message</code>=&quot;&quot;<br/>
 Set commit message for imported image </p>
 <h2>DESCRIPTION</h2>
 <p> Create a new filesystem image from the contents of a tarball (.tar, .tar.gz, .tgz, .bzip, .tar.xz, .txz) into it, then optionally tag it. </p>

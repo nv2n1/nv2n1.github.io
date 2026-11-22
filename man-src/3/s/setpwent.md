@@ -16,8 +16,8 @@ void setpwent(void);
 void endpwent(void);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>getpwent</code>(), <code>setpwent</code>(), <code>endpwent</code>():</p>
 <dl>
-<dd>_XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc since 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
+<dd>_XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc since 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
 <h2>Description</h2>
 <p>The <code>getpwent</code>() function returns a pointer to a structure containing the broken-out fields of a record from the password database (e.g., the local password file <i>/etc/passwd</i>, NIS, and LDAP). The first time <code>getpwent</code>() is called, it returns the first entry; thereafter, it returns successive entries. The <code>setpwent</code>() function rewinds to the beginning of the password database. The <code>endpwent</code>() function is used to close the password database after all processing has been performed. The <i>passwd</i> structure is defined in <i>&lt;pwd.h&gt;</i> as follows: </p>
@@ -64,12 +64,12 @@ void endpwent(void);</code></pre>
 <tr VALIGN=top>
 <td> <code>getpwent</code>() </td>
 <td>Thread safety</td>
-<td> MT-Unsafe race:pwent<br />
+<td> MT-Unsafe race:pwent<br/>
  race:pwentbuf locale
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>setpwent</code>(),<br />
+<td> <code>setpwent</code>(),<br/>
  <code>endpwent</code>() </td>
 <td>Thread safety</td>
 <td>MT-Unsafe race:pwent locale

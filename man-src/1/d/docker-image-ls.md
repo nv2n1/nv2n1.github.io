@@ -32,14 +32,14 @@ description: "docker-image-ls – List images"
 </dl>
 </dl>
 <h2>Format</h2>
-<p> Pretty-print images using a Go template.<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;Valid placeholders:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.ID &#8211; Image ID<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.Repository &#8211; Image repository<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.Tag &#8211; Image tag<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.Digest &#8211; Image digest<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.CreatedSince &#8211; Elapsed time since the image was created<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.CreatedAt &#8211; Time when the image was created<br />
+<p> Pretty-print images using a Go template.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;Valid placeholders:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.ID &#8211; Image ID<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.Repository &#8211; Image repository<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.Tag &#8211; Image tag<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.Digest &#8211; Image digest<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.CreatedSince &#8211; Elapsed time since the image was created<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.CreatedAt &#8211; Time when the image was created<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.Size &#8211; Image disk size </p>
 <h2>EXAMPLES</h2>
 <h2>Listing the images</h2>

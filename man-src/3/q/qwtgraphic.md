@@ -14,59 +14,59 @@ description: "QwtGraphic –"
 <p> Inherits <code>QwtNullPaintDevice</code>.</p>
 <h3>Public Types</h3>
 <p>enum <code>RenderHint</code> { <code>RenderPensUnscaled</code> = 0x1 } </p>
-<p> typedef QFlags&lt; <code>RenderHint</code> &gt; <code>RenderHints</code><br />
+<p> typedef QFlags&lt; <code>RenderHint</code> &gt; <code>RenderHints</code><br/>
  <i>Render hints. </i></p>
 <h3>Public Member Functions</h3>
-<p><code>QwtGraphic</code> ()<br />
- <i>Constructor. </i><br />
- <code>QwtGraphic</code> (const <code>QwtGraphic</code> &amp;)<br />
- <i>Copy constructor. </i><br />
- virtual <code>~QwtGraphic</code> ()<br />
- <i>Destructor. </i><br />
- <code>QwtGraphic</code> &amp; <code>operator=</code> (const <code>QwtGraphic</code> &amp;)<br />
- <i>Assignment operator. </i><br />
- void <code>reset</code> ()<br />
- <i>Clear all stored commands. </i><br />
+<p><code>QwtGraphic</code> ()<br/>
+ <i>Constructor. </i><br/>
+ <code>QwtGraphic</code> (const <code>QwtGraphic</code> &amp;)<br/>
+ <i>Copy constructor. </i><br/>
+ virtual <code>~QwtGraphic</code> ()<br/>
+ <i>Destructor. </i><br/>
+ <code>QwtGraphic</code> &amp; <code>operator=</code> (const <code>QwtGraphic</code> &amp;)<br/>
+ <i>Assignment operator. </i><br/>
+ void <code>reset</code> ()<br/>
+ <i>Clear all stored commands. </i><br/>
  bool <code>isNull</code> () const </p>
 <p> bool <code>isEmpty</code> () const </p>
-<p> void <code>render</code> (QPainter *) const<br />
- <i>Replay all recorded painter commands. </i><br />
- void <code>render</code> (QPainter *, const QSizeF &amp;, Qt::AspectRatioMode=Qt::IgnoreAspectRatio) const<br />
- <i>Replay all recorded painter commands. </i><br />
- void <code>render</code> (QPainter *, const QRectF &amp;, Qt::AspectRatioMode=Qt::IgnoreAspectRatio) const<br />
- <i>Replay all recorded painter commands. </i><br />
- void <code>render</code> (QPainter *, const QPointF &amp;, Qt::Alignment=Qt::AlignTop|Qt::AlignLeft) const<br />
- <i>Replay all recorded painter commands. </i><br />
- QPixmap <code>toPixmap</code> () const<br />
- <i>Convert the graphic to a QPixmap. </i><br />
- QPixmap <code>toPixmap</code> (const QSize &amp;, Qt::AspectRatioMode=Qt::IgnoreAspectRatio) const<br />
- <i>Convert the graphic to a QPixmap. </i><br />
- QImage <code>toImage</code> () const<br />
- <i>Convert the graphic to a QImage. </i><br />
- QImage <code>toImage</code> (const QSize &amp;, Qt::AspectRatioMode=Qt::IgnoreAspectRatio) const<br />
- <i>Convert the graphic to a QImage. </i><br />
- QRectF <code>scaledBoundingRect</code> (double sx, double sy) const<br />
- <i>Calculate the target rectangle for scaling the graphic. </i><br />
+<p> void <code>render</code> (QPainter *) const<br/>
+ <i>Replay all recorded painter commands. </i><br/>
+ void <code>render</code> (QPainter *, const QSizeF &amp;, Qt::AspectRatioMode=Qt::IgnoreAspectRatio) const<br/>
+ <i>Replay all recorded painter commands. </i><br/>
+ void <code>render</code> (QPainter *, const QRectF &amp;, Qt::AspectRatioMode=Qt::IgnoreAspectRatio) const<br/>
+ <i>Replay all recorded painter commands. </i><br/>
+ void <code>render</code> (QPainter *, const QPointF &amp;, Qt::Alignment=Qt::AlignTop|Qt::AlignLeft) const<br/>
+ <i>Replay all recorded painter commands. </i><br/>
+ QPixmap <code>toPixmap</code> () const<br/>
+ <i>Convert the graphic to a QPixmap. </i><br/>
+ QPixmap <code>toPixmap</code> (const QSize &amp;, Qt::AspectRatioMode=Qt::IgnoreAspectRatio) const<br/>
+ <i>Convert the graphic to a QPixmap. </i><br/>
+ QImage <code>toImage</code> () const<br/>
+ <i>Convert the graphic to a QImage. </i><br/>
+ QImage <code>toImage</code> (const QSize &amp;, Qt::AspectRatioMode=Qt::IgnoreAspectRatio) const<br/>
+ <i>Convert the graphic to a QImage. </i><br/>
+ QRectF <code>scaledBoundingRect</code> (double sx, double sy) const<br/>
+ <i>Calculate the target rectangle for scaling the graphic. </i><br/>
  QRectF <code>boundingRect</code> () const </p>
 <p> QRectF <code>controlPointRect</code> () const </p>
-<p> const QVector<br />
+<p> const QVector<br/>
  &lt; <code>QwtPainterCommand</code> &gt; &amp; <code>commands</code> () const &quot; </p>
-<p> void <code>setCommands</code> (QVector&lt; <code>QwtPainterCommand</code> &gt; &amp;)<br />
- <i>Append paint commands. </i><br />
- void <code>setDefaultSize</code> (const QSizeF &amp;)<br />
- <i>Set a default size. </i><br />
- QSizeF <code>defaultSize</code> () const<br />
- <i>Default size. </i><br />
+<p> void <code>setCommands</code> (QVector&lt; <code>QwtPainterCommand</code> &gt; &amp;)<br/>
+ <i>Append paint commands. </i><br/>
+ void <code>setDefaultSize</code> (const QSizeF &amp;)<br/>
+ <i>Set a default size. </i><br/>
+ QSizeF <code>defaultSize</code> () const<br/>
+ <i>Default size. </i><br/>
  void <code>setRenderHint</code> (<code>RenderHint</code>, bool on=true) </p>
 <p> bool <code>testRenderHint</code> (<code>RenderHint</code>) const </p>
 <h3>Protected Member Functions</h3>
 <p>virtual QSize <code>sizeMetrics</code> () const </p>
 <p> virtual void <code>drawPath</code> (const QPainterPath &amp;) </p>
-<p> virtual void <code>drawPixmap</code> (const QRectF &amp;, const QPixmap &amp;, const QRectF &amp;)<br />
- <i>Store a pixmap command in the command list. </i><br />
- virtual void <code>drawImage</code> (const QRectF &amp;, const QImage &amp;, const QRectF &amp;, Qt::ImageConversionFlags)<br />
- <i>Store a image command in the command list. </i><br />
- virtual void <code>updateState</code> (const QPaintEngineState &amp;state)<br />
+<p> virtual void <code>drawPixmap</code> (const QRectF &amp;, const QPixmap &amp;, const QRectF &amp;)<br/>
+ <i>Store a pixmap command in the command list. </i><br/>
+ virtual void <code>drawImage</code> (const QRectF &amp;, const QImage &amp;, const QRectF &amp;, Qt::ImageConversionFlags)<br/>
+ <i>Store a image command in the command list. </i><br/>
+ virtual void <code>updateState</code> (const QPaintEngineState &amp;state)<br/>
  <i>Store a state command in the command list. </i></p>
 <h2>Detailed Description</h2>
 <p>A paint device for scalable graphics. </p>
@@ -161,9 +161,9 @@ description: "QwtGraphic –"
 <p>Store a image command in the command list. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>rect</i> traget rectangle<br />
- <i>image</i> Image to be painted<br />
- <i>subRect</i> Reactangle of the pixmap to be painted<br />
+<dd><i>rect</i> traget rectangle<br/>
+ <i>image</i> Image to be painted<br/>
+ <i>subRect</i> Reactangle of the pixmap to be painted<br/>
  <i>flags</i> Image conversion flags</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -182,8 +182,8 @@ description: "QwtGraphic –"
 <p>Store a pixmap command in the command list. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>rect</i> target rectangle<br />
- <i>pixmap</i> Pixmap to be painted<br />
+<dd><i>rect</i> target rectangle<br/>
+ <i>pixmap</i> Pixmap to be painted<br/>
  <i>subRect</i> Reactangle of the pixmap to be painted</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -220,22 +220,22 @@ description: "QwtGraphic –"
 <p>Replay all recorded painter commands. The graphic is scaled to fit into the rectangle of the given size starting at ( 0, 0 ). </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Qt painter<br />
- <i>size</i> Size for the scaled graphic<br />
+<dd><i>painter</i> Qt painter<br/>
+ <i>size</i> Size for the scaled graphic<br/>
  <i>aspectRatioMode</i> Mode how to scale &#8211; See Qt::AspectRatioMode</dd></dl>
 <h3>void QwtGraphic::render (QPainter *painter, const QRectF &amp;rect, Qt::AspectRatioModeaspectRatioMode = Qt::IgnoreAspectRatio) const</h3>
 <p>Replay all recorded painter commands. The graphic is scaled to fit into the given rectangle </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Qt painter<br />
- <i>rect</i> Rectangle for the scaled graphic<br />
+<dd><i>painter</i> Qt painter<br/>
+ <i>rect</i> Rectangle for the scaled graphic<br/>
  <i>aspectRatioMode</i> Mode how to scale &#8211; See Qt::AspectRatioMode</dd></dl>
 <h3>void QwtGraphic::render (QPainter *painter, const QPointF &amp;pos, Qt::Alignmentalignment = Qt::AlignTop | Qt::AlignLeft) const</h3>
 <p>Replay all recorded painter commands. The graphic is scaled to the <code>defaultSize()</code> and aligned to a position. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Qt painter<br />
- <i>pos</i> Reference point, where to render<br />
+<dd><i>painter</i> Qt painter<br/>
+ <i>pos</i> Reference point, where to render<br/>
  <i>alignment</i> Flags how to align the target rectangle to pos.</dd></dl>
 <h3>void QwtGraphic::reset ()</h3>
 <p>Clear all stored commands. </p>
@@ -246,7 +246,7 @@ description: "QwtGraphic –"
 <p>Calculate the target rectangle for scaling the graphic. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>sx</i> Horizontal scaling factor<br />
+<dd><i>sx</i> Horizontal scaling factor<br/>
  <i>sy</i> Vertical scaling factor</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
@@ -278,7 +278,7 @@ description: "QwtGraphic –"
 <p>Toggle an render hint </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>hint</i> Render hint<br />
+<dd><i>hint</i> Render hint<br/>
  <i>on</i> true/false</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -314,7 +314,7 @@ description: "QwtGraphic –"
 <p> The format of the image is QImage::Format_ARGB32_Premultiplied. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>size</i> Size of the image<br />
+<dd><i>size</i> Size of the image<br/>
  <i>aspectRatioMode</i> Aspect ratio how to scale the graphic</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -335,7 +335,7 @@ description: "QwtGraphic –"
 <p>Convert the graphic to a QPixmap. All pixels of the pixmap get initialized by Qt::transparent before the graphic is scaled and rendered on it. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>size</i> Size of the image<br />
+<dd><i>size</i> Size of the image<br/>
  <i>aspectRatioMode</i> Aspect ratio how to scale the graphic</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

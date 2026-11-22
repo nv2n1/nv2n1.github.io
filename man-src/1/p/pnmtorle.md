@@ -35,6 +35,6 @@ description: "pnmtorle – convert a Netpbm image file into an RLE image file."
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-rletopnm/">rletopnm</a></code>(1), <code>urt</code>(1), <code>RLE</code>(5).</p>
 <h2>AUTHOR</h2>
-<p> Wes Barris<br />
- Army High Performance Computing Research Center (AHPCRC)<br />
+<p> Wes Barris<br/>
+ Army High Performance Computing Research Center (AHPCRC)<br/>
  Minnesota Supercomputer Center, Inc. </p>

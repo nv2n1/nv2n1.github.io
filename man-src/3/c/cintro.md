@@ -259,6 +259,6 @@ description: "C++Intro – Introduction to the GNU libstdc++ man pages"
 </dd><dt><i>libsupc++.la</i></dt>
 <dd>These are Libtool library files, and should only be used when working with that tool.</dd></dl>
 <h2>Conforming To</h2>
-<p>Almost conforming to <code>International Standard ISO/IEC 14882:1998(E), </code><i>Programming Languages &#8212; C++</i> (aka the C++ standard), in addition to corrections proposed by the Library Working Group, <font SIZE="-1">JTC1/SC22/WG21.</font></p>
+<p>Almost conforming to <code>International Standard ISO/IEC 14882:1998(E), </code><i>Programming Languages &#8212; C++</i> (aka the C++ standard), in addition to corrections proposed by the Library Working Group, JTC1/SC22/WG21.</p>
 <h2>See Also</h2>
 <p><a rel="nofollow" href="http://gcc.gnu.org/libstdc++/">http://gcc.gnu.org/libstdc++/</a> for the Frequently Asked Questions, online documentation, and much, much more!</p>

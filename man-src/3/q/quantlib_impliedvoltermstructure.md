@@ -14,19 +14,19 @@ description: "QuantLib::ImpliedVolTermStructure – Implied vol term structure a
 <h3>Public Member Functions</h3>
 <p><code>ImpliedVolTermStructure</code> (const <code>Handle</code>&lt; <code>BlackVolTermStructure</code> &gt; &amp;origTS, const <code>Date</code> &amp;referenceDate) </p>
 <p> <code>TermStructure interface</code> </p>
-<p> <code>DayCounter</code> <code>dayCounter</code> () const<br />
- <i>the day counter used for date/time conversion </i><br />
- <code>Date</code> <code>maxDate</code> () const<br />
+<p> <code>DayCounter</code> <code>dayCounter</code> () const<br/>
+ <i>the day counter used for date/time conversion </i><br/>
+ <code>Date</code> <code>maxDate</code> () const<br/>
  <i>the latest date for which the curve can return values </i> </p>
 <p> <code>VolatilityTermStructure interface</code> </p>
-<p> Real <code>minStrike</code> () const<br />
- <i>the minimum strike for which the term structure can return vols </i><br />
- Real <code>maxStrike</code> () const<br />
+<p> Real <code>minStrike</code> () const<br/>
+ <i>the minimum strike for which the term structure can return vols </i><br/>
+ Real <code>maxStrike</code> () const<br/>
  <i>the maximum strike for which the term structure can return vols </i> </p>
 <p> <code>Visitability</code> </p>
 <p> virtual void <code>accept</code> (<code>AcyclicVisitor</code> &amp;) </p>
 <h3>Protected Member Functions</h3>
-<p>virtual Real <code>blackVarianceImpl</code> (Time t, Real strike) const<br />
+<p>virtual Real <code>blackVarianceImpl</code> (Time t, Real strike) const<br/>
  <i>Black variance calculation. </i></p>
 <h2>Detailed Description</h2>
 <p>Implied vol term structure at a given date in the future. </p>

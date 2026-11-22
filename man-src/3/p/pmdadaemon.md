@@ -9,8 +9,8 @@ description: "pmdaDaemon – initialize the PMDA to run as a daemon"
 
 <p><code>pmdaDaemon</code> &#8211; initialize the PMDA to run as a daemon</p>
 <h2>C Synopsis</h2>
-<p><code> #include &lt;pcp/pmapi.h&gt;<br />
- #include &lt;pcp/impl.h&gt;<br />
+<p><code> #include &lt;pcp/pmapi.h&gt;<br/>
+ #include &lt;pcp/impl.h&gt;<br/>
  #include &lt;pcp/pmda.h&gt; </p>
 <p> void pmdaDaemon(pmdaInterface *</code><i>dispatch</i>, int <i>interface</i>, char&nbsp;<wbr>*<i>name</i>, int&nbsp;<wbr><i>domain</i>, char&nbsp;<wbr>*<i>logfile</i>, char&nbsp;<wbr>*<i>helptext</i>); </p>
 <p> cc &#8230; -lpcp_pmda -lpcp</p>

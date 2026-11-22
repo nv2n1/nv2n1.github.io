@@ -24,7 +24,7 @@ description: "vimtutor – the Vim tutor"
 <dt>/usr/share/vim/vim81/tutor/tutor.vim</dt>
 <dd> The Vim script used to copy the <code>Vimtutor</code> text file.</dd></dl>
 <h2>AUTHOR</h2>
-<p> The <code>Vimtutor</code> was originally written for Vi by Michael C. Pierce and Robert K. Ware, Colorado School of Mines using ideas supplied by Charles Smith, Colorado State University. E-mail: bware [at] mines.colorado.edu.<br />
+<p> The <code>Vimtutor</code> was originally written for Vi by Michael C. Pierce and Robert K. Ware, Colorado School of Mines using ideas supplied by Charles Smith, Colorado State University. E-mail: bware [at] mines.colorado.edu.<br/>
  It was modified for <code>Vim</code> by Bram Moolenaar. For the names of the translators see the tutor files.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-vim/">vim</a>(1) </p>

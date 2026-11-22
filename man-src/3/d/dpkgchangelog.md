@@ -10,7 +10,7 @@ description: "Dpkg::Changelog – base class to implement a changelog parser"
 <p>Dpkg::Changelog &#8211; base class to implement a changelog parser </p>
 <h2>Description</h2>
 <p>Dpkg::Changelog is a class representing a changelog file as an array of changelog entries (Dpkg::Changelog::Entry). By deriving this object and implementing its parse method, you add the ability to fill this object with changelog entries.</p>
-<h3><font SIZE="-1">FUNCTIONS</font></h3>
+<h3>FUNCTIONS</h3>
 <dl COMPACT>
 <dt>my $c = Dpkg::Changelog-&gt;new(%options)</dt>
 <dd>Creates a new changelog object.</dd>
@@ -45,7 +45,7 @@ description: "Dpkg::Changelog – base class to implement a changelog parser"
 <dt>@{$c}</dt>
 <dd>Returns all the Dpkg::Changelog::Entry objects contained in this changelog in the order in which they have been parsed.</dd>
 <dt>$c-&gt;get_range($range)</dt>
-<dd>Returns an array (if called in list context) or a reference to an array of Dpkg::Changelog::Entry objects which each represent one entry of the changelog. <tt>$range</tt> is a hash reference describing the range of entries to return. See section &#8220;<font SIZE="-1">RANGE SELECTION&#8221;</font>.</dd>
+<dd>Returns an array (if called in list context) or a reference to an array of Dpkg::Changelog::Entry objects which each represent one entry of the changelog. <tt>$range</tt> is a hash reference describing the range of entries to return. See section &#8220;RANGE SELECTION&#8221;.</dd>
 <dt>$c-&gt;<i>abort_early()</i></dt>
 <dd>Returns true if enough data have been parsed to be able to return all entries selected by the range set at creation (or with set_options).</dd>
 <dt>$c-&gt;save($filename)</dt>
@@ -57,7 +57,7 @@ description: "Dpkg::Changelog – base class to implement a changelog parser"
 <dt>$c-&gt;output($fh)</dt>
 <dd>Output the changelog to the given filehandle.</dd>
 <dt>my $control = $c-&gt;dpkg($range)</dt>
-<dd>Returns a Dpkg::Control::Changelog object representing the entries selected by the optional range specifier (see &#8220;<font SIZE="-1">RANGE SELECTION&#8221;</font> for details). Returns undef in no entries are matched. </dd>
+<dd>Returns a Dpkg::Control::Changelog object representing the entries selected by the optional range specifier (see &#8220;RANGE SELECTION&#8221; for details). Returns undef in no entries are matched. </dd>
 <p> The following fields are contained in the object:</p>
 <dl COMPACT>
 <dd>
@@ -82,7 +82,7 @@ description: "Dpkg::Changelog – base class to implement a changelog parser"
 <dl COMPACT>
 <dd></dd></dl>
 <dt>my @controls = $c-&gt;rfc822($range)</dt>
-<dd>Returns a Dpkg::Index containing Dpkg::Control::Changelog objects where each object represents one entry in the changelog that is part of the range requested (see &#8220;<font SIZE="-1">RANGE SELECTION&#8221;</font> for details). For the format of such an object see the description of the &#8220;dpkg&#8221; method (while ignoring the remarks about which values are taken from the first entry).</dd></dl>
+<dd>Returns a Dpkg::Index containing Dpkg::Control::Changelog objects where each object represents one entry in the changelog that is part of the range requested (see &#8220;RANGE SELECTION&#8221; for details). For the format of such an object see the description of the &#8220;dpkg&#8221; method (while ignoring the remarks about which values are taken from the first entry).</dd></dl>
 <h2>Range Selection</h2>
 <p>A range selection is described by a hash reference where the allowed keys and values are described below. </p>
 <p> The following options take a version number as value.</p>

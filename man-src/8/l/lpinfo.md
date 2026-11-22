@@ -9,7 +9,7 @@ description: "lpinfo – show available devices or drivers (deprecated)"
 
 <p>lpinfo &#8211; show available devices or drivers (deprecated)</p>
 <h2>Synopsis</h2>
-<p><code>lpinfo</code> [ <code>-E</code> ] [ <code>-h </code><i>server</i>[<code>:</code><i>port</i>] ] [ <code>-l</code> ] [ <code>&#8211;device-id</code> <i>device-id-string</i> ] [ <code>&#8211;exclude-schemes</code> <i>scheme-list</i> ] [ <code>&#8211;include-schemes</code> <i>scheme-list</i> ] [ <code>&#8211;language</code> <i>locale</i> ] [ <code>&#8211;make-and-model</code> <i>name</i> ] [ <code>&#8211;product</code> <i>name</i> ] <code>-m</code><br />
+<p><code>lpinfo</code> [ <code>-E</code> ] [ <code>-h </code><i>server</i>[<code>:</code><i>port</i>] ] [ <code>-l</code> ] [ <code>&#8211;device-id</code> <i>device-id-string</i> ] [ <code>&#8211;exclude-schemes</code> <i>scheme-list</i> ] [ <code>&#8211;include-schemes</code> <i>scheme-list</i> ] [ <code>&#8211;language</code> <i>locale</i> ] [ <code>&#8211;make-and-model</code> <i>name</i> ] [ <code>&#8211;product</code> <i>name</i> ] <code>-m</code><br/>
  <code>lpinfo</code> [ <code>-E</code> ] [ <code>-h </code><i>server</i>[<code>:</code><i>port</i>] ] [ <code>-l</code> ] [ <code>&#8211;exclude-schemes</code> <i>scheme-list</i> ] [ <code>&#8211;include-schemes</code> <i>scheme-list</i> ] [ <code>&#8211;timeout</code> <i>seconds</i> ] <code>-v</code></p>
 <h2>Description</h2>
 <p><code>lpinfo</code> lists the available devices or drivers known to the CUPS server. The first form (<i>-m</i>) lists the available drivers, while the second form (<i>-v</i>) lists the available devices.</p>

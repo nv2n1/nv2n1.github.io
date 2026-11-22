@@ -138,8 +138,8 @@ Latitude: -84.999991
 &quot; is returned where <i>x</i> is the Hamlib error code. </p>
 <p> Example <i>get</i> (Perl code): </p>
 <p> print $socket &quot;p
-&quot;;<br />
- &quot;135&quot;<br />
+&quot;;<br/>
+ &quot;135&quot;<br/>
  &quot;10&quot; </p>
 <p> Most <i>get</i> functions return one to three values. A notable exception is the <i>\dump_caps</i> function which returns many lines of key:value pairs. </p>
 <p> This protocol is primarily used by the <i>NET rotctl</i> (rotctl model 2) backend which allows applications already written for Hamlib&#8217;s C API to take advantage of <code>rotctld</code> without the need of rewriting application code. An application&#8217;s user can select rotor model 2 (&quot;NET rotctl&quot;) and then set rot_pathname to &quot;localhost:4533&quot; or other network host:port (set by the <i>-t</i> option above). </p>
@@ -152,15 +152,15 @@ Latitude: -84.999991
 &quot; when the command was prepended by &#8216;+&#8217;. </p>
 <p> 4. All commands received will be acknowledged by <code>rotctld</code> with records from rules 1 and 2. Records from rule 3 are only returned when data values must be returned to the client. </p>
 <p> An example response to a <i>+P</i> command command sent from the shell prompt (note the prepended &#8216;+&#8217;): </p>
-<p> $ echo &quot;+P 90 45&quot; | nc -w 1 localhost 4533<br />
- set_pos: 90 45<br />
+<p> $ echo &quot;+P 90 45&quot; | nc -w 1 localhost 4533<br/>
+ set_pos: 90 45<br/>
  RPRT 0 </p>
 <p> In this case the long command name and values are returned on the first line and the second line contains the end of block marker and the numeric rig backend return value indicating success. </p>
 <p> An example response to a <i>+\get_pos</i> query: </p>
-<p> $ echo &quot;+\get_pos&quot; | nc -w 1 localhost 4533<br />
- get_pos:<br />
- Azimuth: 90.000000<br />
- Elevation: 45.000000<br />
+<p> $ echo &quot;+\get_pos&quot; | nc -w 1 localhost 4533<br/>
+ get_pos:<br/>
+ Azimuth: 90.000000<br/>
+ Elevation: 45.000000<br/>
  RPRT 0 </p>
 <p> In this case, as no value is passed to <code>rotctld</code>, the first line consists only of the long command name. The final line shows that the command was processed successfully by the rotor backend. </p>
 <p> Invoking the Extended Response protocol requires prepending a command with a punctuation character. As shown in the examples above, prepending a &#8216;+&#8217; character to the command results in the responses being separated by a newline character (&#8216;
@@ -215,8 +215,8 @@ Latitude: -84.999991
 <p>Written by Stephane Fillod, Nate Bargmann, and the Hamlib Group </p>
 <p> &lt;<a rel="nofollow" href="http://www.hamlib.org">http://www.hamlib.org</a>&gt;.</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2000-2009 Stephane Fillod<br />
- Copyright &#169; 2011-2012 Nate Bargmann<br />
+<p>Copyright &#169; 2000-2009 Stephane Fillod<br/>
+ Copyright &#169; 2011-2012 Nate Bargmann<br/>
  Copyright &#169; 2000-2009 the Hamlib Group. </p>
 <p> This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>See Also</h2>

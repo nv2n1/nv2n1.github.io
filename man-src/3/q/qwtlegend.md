@@ -13,20 +13,20 @@ description: "QwtLegend –"
 <p>#include &lt;qwt_legend.h&gt; </p>
 <p> Inherits <code>QwtAbstractLegend</code>.</p>
 <h3>Public Slots</h3>
-<p>virtual void <code>updateLegend</code> (const QVariant &amp;, const QList&lt; <code>QwtLegendData</code> &gt; &amp;)<br />
+<p>virtual void <code>updateLegend</code> (const QVariant &amp;, const QList&lt; <code>QwtLegendData</code> &gt; &amp;)<br/>
  <i>Update the entries for an item. </i></p>
 <h3>Signals</h3>
 <p>void <code>clicked</code> (const QVariant &amp;<code>itemInfo</code>, int index) </p>
 <p> void <code>checked</code> (const QVariant &amp;<code>itemInfo</code>, bool on, int index) </p>
 <h3>Public Member Functions</h3>
 <p><code>QwtLegend</code> (QWidget *parent=NULL) </p>
-<p> virtual <code>~QwtLegend</code> ()<br />
- <i>Destructor. </i><br />
- void <code>setMaxColumns</code> (uint numColums)<br />
- <i>Set the maximum number of entries in a row. </i><br />
+<p> virtual <code>~QwtLegend</code> ()<br/>
+ <i>Destructor. </i><br/>
+ void <code>setMaxColumns</code> (uint numColums)<br/>
+ <i>Set the maximum number of entries in a row. </i><br/>
  uint <code>maxColumns</code> () const </p>
-<p> void <code>setDefaultItemMode</code> (<code>QwtLegendData::Mode</code>)<br />
- <i>Set the default mode for legend labels. </i><br />
+<p> void <code>setDefaultItemMode</code> (<code>QwtLegendData::Mode</code>)<br/>
+ <i>Set the default mode for legend labels. </i><br/>
  <code>QwtLegendData::Mode</code> <code>defaultItemMode</code> () const </p>
 <p> QWidget * <code>contentsWidget</code> () </p>
 <p> const QWidget * <code>contentsWidget</code> () const </p>
@@ -34,8 +34,8 @@ description: "QwtLegend –"
 <p> QList&lt; QWidget * &gt; <code>legendWidgets</code> (const QVariant &amp;) const </p>
 <p> QVariant <code>itemInfo</code> (const QWidget *) const </p>
 <p> virtual bool <code>eventFilter</code> (QObject *, QEvent *) </p>
-<p> virtual QSize <code>sizeHint</code> () const<br />
- <i>Return a size hint. </i><br />
+<p> virtual QSize <code>sizeHint</code> () const<br/>
+ <i>Return a size hint. </i><br/>
  virtual int <code>heightForWidth</code> (int w) const </p>
 <p> QScrollBar * <code>horizontalScrollBar</code> () const </p>
 <p> QScrollBar * <code>verticalScrollBar</code> () const </p>
@@ -47,9 +47,9 @@ description: "QwtLegend –"
 <p>void <code>itemClicked</code> () </p>
 <p> void <code>itemChecked</code> (bool) </p>
 <h3>Protected Member Functions</h3>
-<p>virtual QWidget * <code>createWidget</code> (const <code>QwtLegendData</code> &amp;) const<br />
- <i>Create a widget to be inserted into the legend. </i><br />
- virtual void <code>updateWidget</code> (QWidget *widget, const <code>QwtLegendData</code> &amp;data)<br />
+<p>virtual QWidget * <code>createWidget</code> (const <code>QwtLegendData</code> &amp;) const<br/>
+ <i>Create a widget to be inserted into the legend. </i><br/>
+ virtual void <code>updateWidget</code> (QWidget *widget, const <code>QwtLegendData</code> &amp;data)<br/>
  <i>Update the widget. </i></p>
 <h2>Detailed Description</h2>
 <p>The legend widget. </p>
@@ -68,8 +68,8 @@ description: "QwtLegend –"
 <p>A signal which is emitted when the user has clicked on a legend label, which is in <code>QwtLegendData::Checkable</code> mode </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>itemInfo</i> Info for the item of the selected legend label<br />
- <i>index</i> Index of the legend label in the list of widgets that are associated with the plot item<br />
+<dd><i>itemInfo</i> Info for the item of the selected legend label<br/>
+ <i>index</i> Index of the legend label in the list of widgets that are associated with the plot item<br/>
  <i>on</i> True when the legend label is checked</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
@@ -81,7 +81,7 @@ description: "QwtLegend –"
 <p>A signal which is emitted when the user has clicked on a legend label, which is in <code>QwtLegendData::Clickable</code> mode. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>itemInfo</i> Info for the item item of the selected legend item<br />
+<dd><i>itemInfo</i> Info for the item item of the selected legend item<br/>
  <i>index</i> Index of the legend label in the list of widgets that are associated with the plot item</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
@@ -121,7 +121,7 @@ description: "QwtLegend –"
 <p>Handle QEvent::ChildRemoved andQEvent::LayoutRequest events for the <code>contentsWidget()</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>object</i> Object to be filtered<br />
+<dd><i>object</i> Object to be filtered<br/>
  <i>event</i> Event</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -194,9 +194,9 @@ description: "QwtLegend –"
 <p>Render a legend entry into a given rectangle. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>widget</i> Widget representing a legend entry<br />
- <i>rect</i> Bounding rectangle<br />
+<dd><i>painter</i> Painter<br/>
+ <i>widget</i> Widget representing a legend entry<br/>
+ <i>rect</i> Bounding rectangle<br/>
  <i>fillBackground</i> When true, fill rect with the widget background</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
@@ -205,8 +205,8 @@ description: "QwtLegend –"
 <p>Render the legend into a given rectangle. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>rect</i> Bounding rectangle<br />
+<dd><i>painter</i> Painter<br/>
+ <i>rect</i> Bounding rectangle<br/>
  <i>fillBackground</i> When true, fill rect with the widget background</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -244,13 +244,13 @@ description: "QwtLegend –"
 <p>Update the entries for an item. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>itemInfo</i> Info for an item<br />
+<dd><i>itemInfo</i> Info for an item<br/>
  <i>data</i> List of legend entry attributes for the item</dd></dl>
 <h3>void QwtLegend::updateWidget (QWidget *widget, const <code>QwtLegendData</code> &amp;data) [protected], [virtual]</h3>
 <p>Update the widget. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>widget</i> Usually a <code>QwtLegendLabel</code><br />
+<dd><i>widget</i> Usually a <code>QwtLegendLabel</code><br/>
  <i>data</i> Attributes to be displayed</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>

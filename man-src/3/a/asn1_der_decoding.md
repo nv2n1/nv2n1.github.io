@@ -28,7 +28,7 @@ description: "asn1_der_decoding – API function"
 <h2>RETURNS</h2>
 <p> <code>ASN1_SUCCESS</code> if DER encoding OK, <code>ASN1_ELEMENT_NOT_FOUND</code> if <i>ELEMENT</i> is <code>NULL</code>, and <code>ASN1_TAG_ERROR</code> or <code>ASN1_DER_ERROR</code> if the der encoding doesn&#8217;t match the structure name (* <i>ELEMENT</i> deleted).</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2006-2015 Free Software Foundation, Inc..<br />
+<p> Copyright &#169; 2006-2015 Free Software Foundation, Inc..<br/>
  Copying and distribution of this file, with or without modification, are permitted in any medium without royalty provided the copyright notice and this notice are preserved.</p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>libtasn1</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>libtasn1</code> programs are properly installed at your site, the command</p>

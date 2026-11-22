@@ -31,10 +31,10 @@ description: "sc::PsiInput –"
 <p> void <code>write_keyword_array</code> (const char *, int, double *) </p>
 <p> void <code>write_string</code> (const char *) </p>
 <p> void <code>write_key_wq</code> (const char *, const char *) </p>
-<p> void <code>write_basis</code> (const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;)<br />
- <i>Construct the &#8216;basis&#8217; keyword for input. </i><br />
- void <code>write_basis_sets</code> (const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;)<br />
- <i>Write basis sets explicitly. </i><br />
+<p> void <code>write_basis</code> (const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;)<br/>
+ <i>Construct the &#8216;basis&#8217; keyword for input. </i><br/>
+ void <code>write_basis_sets</code> (const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;)<br/>
+ <i>Write basis sets explicitly. </i><br/>
  void <code>write_geom</code> (const <code>Ref</code>&lt; <code>Molecule</code> &gt; &amp;) </p>
 <p> void <code>write_defaults</code> (const <code>Ref</code>&lt; <code>PsiExEnv</code> &gt; &amp;, const char *dertype)</p>
 <h2>Detailed Description</h2>

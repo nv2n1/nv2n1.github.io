@@ -38,7 +38,7 @@ description: "lwres_buffer_init, lwres_buffer_invalidate, lwres_buffer_add, lwre
 <dl>
 <dt>
 </dt><dd>
-/ &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;entire length&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -\ / &#8212; &#8212; -used region&#8211; &#8212; -\/ &#8211;available&#8211;\ + &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+ | consumed | remaining | |<br />
+/ &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;entire length&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -\ / &#8212; &#8212; -used region&#8211; &#8212; -\/ &#8211;available&#8211;\ + &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+ | consumed | remaining | |<br/>
     +&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+a b c d e
 </dd></dl>
 <dl>
@@ -63,5 +63,5 @@ a - e == entire length of buffer.a - d == used region.a - b == consumed region.b
 <p> <code>lwres_buffer_getuint16()</code> and <code>lwres_buffer_getuint32()</code> are identical to <code>lwres_buffer_putuint8()</code> except that they respectively read an unsigned 16-bit or 32-bit integer in network byte order from <i>b</i>. Similarly, <code>lwres_buffer_putuint16()</code> and <code>lwres_buffer_putuint32()</code> writes the unsigned 16-bit or 32-bit integer <i>val</i> to buffer <i>b</i>, in network byte order. </p>
 <p> Arbitrary amounts of data are read or written from a lightweight resolver buffer with <code>lwres_buffer_getmem()</code> and <code>lwres_buffer_putmem()</code> respectively. <code>lwres_buffer_putmem()</code> copies <i>length</i> bytes of memory at <i>base</i> to <i>b</i>. Conversely, <code>lwres_buffer_getmem()</code> copies <i>length</i> bytes of memory from <i>b</i> to <i>base</i>.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2004, 2005, 2007 Internet Systems Consortium, Inc. (&quot;ISC&quot;)<br />
+<p> Copyright &#169; 2004, 2005, 2007 Internet Systems Consortium, Inc. (&quot;ISC&quot;)<br/>
  Copyright &#169; 2000, 2001 Internet Software Consortium. </p>

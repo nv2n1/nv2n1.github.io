@@ -9,21 +9,21 @@ description: "ipvsadm – Linux Virtual Server administration"
 
 <p>ipvsadm &#8211; Linux Virtual Server administration</p>
 <h2>Synopsis</h2>
-<p><code>ipvsadm -A|E -t|u|f </code><i>service-address</i> [-s <i>scheduler</i>]<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> <code>[-p [</code><i>timeout</i>]] [-M <i>netmask</i>] [-b <i>sched-flags</i>]<br />
- <code>ipvsadm -D -t|u|f </code><i>service-address</i><br />
- <code>ipvsadm -C</code><br />
- <code>ipvsadm -R</code><br />
- <code>ipvsadm -S [-n]</code><br />
- <code>ipvsadm -a|e -t|u|f </code><i>service-address</i> -r <i>server-address</i><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> <code>[-g|i|m] [-w </code><i>weight</i>] [-x <i>upper</i>] [-y <i>lower</i>]<br />
- <code>ipvsadm -d -t|u|f </code><i>service-address</i> -r <i>server-address</i><br />
- <code>ipvsadm -L|l [options]</code><br />
- <code>ipvsadm -Z [-t|u|f </code><i>service-address</i>]<br />
- <code>ipvsadm &#8211;set </code><i>tcp</i> <i>tcpfin</i> <i>udp</i><br />
- <code>ipvsadm &#8211;start-daemon </code><i>state</i> [&#8211;mcast-interface <i>interface</i>]<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> <code>[&#8211;syncid </code><i>syncid</i>]<br />
- <code>ipvsadm &#8211;stop-daemon </code><i>state</i><br />
+<p><code>ipvsadm -A|E -t|u|f </code><i>service-address</i> [-s <i>scheduler</i>]<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> <code>[-p [</code><i>timeout</i>]] [-M <i>netmask</i>] [-b <i>sched-flags</i>]<br/>
+ <code>ipvsadm -D -t|u|f </code><i>service-address</i><br/>
+ <code>ipvsadm -C</code><br/>
+ <code>ipvsadm -R</code><br/>
+ <code>ipvsadm -S [-n]</code><br/>
+ <code>ipvsadm -a|e -t|u|f </code><i>service-address</i> -r <i>server-address</i><br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> <code>[-g|i|m] [-w </code><i>weight</i>] [-x <i>upper</i>] [-y <i>lower</i>]<br/>
+ <code>ipvsadm -d -t|u|f </code><i>service-address</i> -r <i>server-address</i><br/>
+ <code>ipvsadm -L|l [options]</code><br/>
+ <code>ipvsadm -Z [-t|u|f </code><i>service-address</i>]<br/>
+ <code>ipvsadm &#8211;set </code><i>tcp</i> <i>tcpfin</i> <i>udp</i><br/>
+ <code>ipvsadm &#8211;start-daemon </code><i>state</i> [&#8211;mcast-interface <i>interface</i>]<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> <code>[&#8211;syncid </code><i>syncid</i>]<br/>
+ <code>ipvsadm &#8211;stop-daemon </code><i>state</i><br/>
  <code>ipvsadm -h</code></p>
 <h2>Description</h2>
 <p><code><a href="/docs/linux/man/8-ipvsadm/">Ipvsadm</a></code>(8) is used to set up, maintain or inspect the virtual server table in the Linux kernel. The Linux Virtual Server can be used to build scalable network services based on a cluster of two or more nodes. The active node of the cluster redirects service requests to a collection of server hosts that will actually perform the services. Supported features include two protocols (TCP and UDP), three packet-forwarding methods (NAT, tunneling, and direct routing), and eight load balancing algorithms (round robin, weighted round robin, least-connection, weighted least-connection, locality-based least-connection, locality-based least-connection with replication, destination-hashing, and source-hashing). </p>
@@ -32,7 +32,7 @@ description: "ipvsadm – Linux Virtual Server administration"
 <dt><code>ipvsadm </code><i>COMMAND</i> [<i>protocol</i>] <i>service-address</i></dt>
 <dd>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> <code>[</code><i>scheduling-method</i>] [<i>persistence options</i>]</dd>
 <dt><code>ipvsadm </code><i>command</i> [<i>protocol</i>] <i>service-address</i></dt>
-<dd>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> <i>server-address</i> [<i>packet-forwarding-method</i>]<br />
+<dd>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> <i>server-address</i> [<i>packet-forwarding-method</i>]<br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> <code>[</code><i>weight options</i>]</dd></dl>
 <p> The first format manipulates a virtual service and the algorithm for assigning service requests to real servers. Optionally, a persistent timeout and network mask for the granularity of a persistent service may be specified. The second format manipulates a real server that is associated with an existing virtual service. When specifying a real server, the packet-forwarding method and the weight of the real server, relative to other real servers for the virtual service, may be specified, otherwise defaults will be used.</p>
 <h3>Commands</h3>
@@ -186,30 +186,30 @@ ipvsadm -a -t [2001:db8::80]:80 -r [2001:db8::a0a0]:80 -m</pre>
 <p> Valid values for each variable are 0 through to 3. The default value is 0, which disables the respective defense strategy. 1 and 2 are automatic modes &#8211; when there is no enough available memory, the respective strategy will be enabled and the variable is automatically set to 2, otherwise the strategy is disabled and the variable is set to 1. A value of 3 denotes that the respective strategy is always enabled. The available memory threshold and secure TCP timeouts can be tuned using the sysctl variables and corresponding entries in the /proc filesystem: </p>
 <p> /proc/sys/net/ipv4/vs/amemthresh /proc/sys/net/ipv4/vs/timeout_*</p>
 <h2>Files</h2>
-<p><i>/proc/net/ip_vs</i><br />
- <i>/proc/net/ip_vs_app</i><br />
- <i>/proc/net/ip_vs_conn</i><br />
- <i>/proc/net/ip_vs_stats</i><br />
- <i>/proc/sys/net/ipv4/vs/am_droprate</i><br />
- <i>/proc/sys/net/ipv4/vs/amemthresh</i><br />
- <i>/proc/sys/net/ipv4/vs/drop_entry</i><br />
- <i>/proc/sys/net/ipv4/vs/drop_packet</i><br />
- <i>/proc/sys/net/ipv4/vs/secure_tcp</i><br />
- <i>/proc/sys/net/ipv4/vs/timeout_close</i><br />
- <i>/proc/sys/net/ipv4/vs/timeout_closewait</i><br />
- <i>/proc/sys/net/ipv4/vs/timeout_established</i><br />
- <i>/proc/sys/net/ipv4/vs/timeout_finwait</i><br />
- <i>/proc/sys/net/ipv4/vs/timeout_icmp</i><br />
- <i>/proc/sys/net/ipv4/vs/timeout_lastack</i><br />
- <i>/proc/sys/net/ipv4/vs/timeout_listen</i><br />
- <i>/proc/sys/net/ipv4/vs/timeout_synack</i><br />
- <i>/proc/sys/net/ipv4/vs/timeout_synrecv</i><br />
- <i>/proc/sys/net/ipv4/vs/timeout_synsent</i><br />
- <i>/proc/sys/net/ipv4/vs/timeout_timewait</i><br />
+<p><i>/proc/net/ip_vs</i><br/>
+ <i>/proc/net/ip_vs_app</i><br/>
+ <i>/proc/net/ip_vs_conn</i><br/>
+ <i>/proc/net/ip_vs_stats</i><br/>
+ <i>/proc/sys/net/ipv4/vs/am_droprate</i><br/>
+ <i>/proc/sys/net/ipv4/vs/amemthresh</i><br/>
+ <i>/proc/sys/net/ipv4/vs/drop_entry</i><br/>
+ <i>/proc/sys/net/ipv4/vs/drop_packet</i><br/>
+ <i>/proc/sys/net/ipv4/vs/secure_tcp</i><br/>
+ <i>/proc/sys/net/ipv4/vs/timeout_close</i><br/>
+ <i>/proc/sys/net/ipv4/vs/timeout_closewait</i><br/>
+ <i>/proc/sys/net/ipv4/vs/timeout_established</i><br/>
+ <i>/proc/sys/net/ipv4/vs/timeout_finwait</i><br/>
+ <i>/proc/sys/net/ipv4/vs/timeout_icmp</i><br/>
+ <i>/proc/sys/net/ipv4/vs/timeout_lastack</i><br/>
+ <i>/proc/sys/net/ipv4/vs/timeout_listen</i><br/>
+ <i>/proc/sys/net/ipv4/vs/timeout_synack</i><br/>
+ <i>/proc/sys/net/ipv4/vs/timeout_synrecv</i><br/>
+ <i>/proc/sys/net/ipv4/vs/timeout_synsent</i><br/>
+ <i>/proc/sys/net/ipv4/vs/timeout_timewait</i><br/>
  <i>/proc/sys/net/ipv4/vs/timeout_udp</i></p>
 <h2>See Also</h2>
 <p>The LVS web site (<a rel="nofollow" href="http://www.linuxvirtualserver.org/)">http://www.linuxvirtualserver.org/)</a> for more documentation about LVS. </p>
-<p> <code><a href="/docs/linux/man/8-ipvsadm-save/">ipvsadm-save</a></code>(8), <code><a href="/docs/linux/man/8-ipvsadm-restore/">ipvsadm-restore</a></code>(8), <code><a href="/docs/linux/man/8-iptables/">iptables</a></code>(8),<br />
+<p> <code><a href="/docs/linux/man/8-ipvsadm-save/">ipvsadm-save</a></code>(8), <code><a href="/docs/linux/man/8-ipvsadm-restore/">ipvsadm-restore</a></code>(8), <code><a href="/docs/linux/man/8-iptables/">iptables</a></code>(8),<br/>
  <code><a href="/docs/linux/man/8-insmod/">insmod</a></code>(8), <code><a href="/docs/linux/man/8-modprobe/">modprobe</a></code>(8)</p>
 <h2>Authors</h2>
 <pre>ipvsadm - Wensong Zhang &lt;wensong [at] linuxvirtualserver.org&gt;

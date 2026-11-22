@@ -17,8 +17,8 @@ description: "QuantLib::Swap – Interest rate swap."
 <p> <code>Swap</code> (const Leg &amp;firstLeg, const Leg &amp;secondLeg) </p>
 <p> <code>Swap</code> (const std::vector&lt; Leg &gt; &amp;legs, const std::vector&lt; bool &gt; &amp;payer) </p>
 <p> <code>Instrument interface</code> </p>
-<p> bool <code>isExpired</code> () const<br />
- <i>returns whether the instrument is still tradable. </i><br />
+<p> bool <code>isExpired</code> () const<br/>
+ <i>returns whether the instrument is still tradable. </i><br/>
  void <code>setupArguments</code> (PricingEngine::arguments *) const </p>
 <p> void <code>fetchResults</code> (const PricingEngine::results *) const </p>
 <p> <code>Additional interface</code> </p>

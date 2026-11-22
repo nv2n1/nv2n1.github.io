@@ -13,24 +13,24 @@ description: "QwtPlotMultiBarChart –"
 <p>#include &lt;qwt_plot_multi_barchart.h&gt; </p>
 <p> Inherits <code>QwtPlotAbstractBarChart</code>, and <code>QwtSeriesStore&lt; QwtSetSample &gt;</code>.</p>
 <h3>Public Types</h3>
-<p>enum <code>ChartStyle</code> { <code>Grouped</code>, <code>Stacked</code> }<br />
+<p>enum <code>ChartStyle</code> { <code>Grouped</code>, <code>Stacked</code> }<br/>
  <i>Chart styles. </i></p>
 <h3>Public Member Functions</h3>
 <p><code>QwtPlotMultiBarChart</code> (const QString &amp;<code>title</code>=QString::null) </p>
 <p> <code>QwtPlotMultiBarChart</code> (const <code>QwtText</code> &amp;<code>title</code>) </p>
-<p> virtual <code>~QwtPlotMultiBarChart</code> ()<br />
- <i>Destructor. </i><br />
+<p> virtual <code>~QwtPlotMultiBarChart</code> ()<br/>
+ <i>Destructor. </i><br/>
  virtual int <code>rtti</code> () const </p>
-<p> void <code>setBarTitles</code> (const QList&lt; <code>QwtText</code> &gt; &amp;)<br />
- <i>Set the titles for the bars. </i><br />
+<p> void <code>setBarTitles</code> (const QList&lt; <code>QwtText</code> &gt; &amp;)<br/>
+ <i>Set the titles for the bars. </i><br/>
  QList&lt; <code>QwtText</code> &gt; <code>barTitles</code> () const </p>
 <p> void <code>setSamples</code> (const QVector&lt; <code>QwtSetSample</code> &gt; &amp;) </p>
 <p> void <code>setSamples</code> (const QVector&lt; QVector&lt; double &gt; &gt; &amp;) </p>
 <p> void <code>setSamples</code> (<code>QwtSeriesData</code>&lt; <code>QwtSetSample</code> &gt; *) </p>
 <p> void <code>setStyle</code> (<code>ChartStyle</code> <code>style</code>) </p>
 <p> <code>ChartStyle</code> <code>style</code> () const </p>
-<p> void <code>setSymbol</code> (int barIndex, <code>QwtColumnSymbol</code> *<code>symbol</code>)<br />
- <i>Add a symbol to the symbol map. </i><br />
+<p> void <code>setSymbol</code> (int barIndex, <code>QwtColumnSymbol</code> *<code>symbol</code>)<br/>
+ <i>Add a symbol to the symbol map. </i><br/>
  const <code>QwtColumnSymbol</code> * <code>symbol</code> (int barIndex) const </p>
 <p> void <code>resetSymbolMap</code> () </p>
 <p> virtual void <code>drawSeries</code> (QPainter *painter, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;canvasRect, int from, int to) const </p>
@@ -39,8 +39,8 @@ description: "QwtPlotMultiBarChart –"
 <p> virtual <code>QwtGraphic</code> <code>legendIcon</code> (int index, const QSizeF &amp;) const </p>
 <h3>Protected Member Functions</h3>
 <p><code>QwtColumnSymbol</code> * <code>symbol</code> (int barIndex) </p>
-<p> virtual <code>QwtColumnSymbol</code> * <code>specialSymbol</code> (int sampleIndex, int valueIndex) const<br />
- <i>Create a symbol for special values. </i><br />
+<p> virtual <code>QwtColumnSymbol</code> * <code>specialSymbol</code> (int sampleIndex, int valueIndex) const<br/>
+ <i>Create a symbol for special values. </i><br/>
  virtual void <code>drawSample</code> (QPainter *painter, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;canvasRect, const <code>QwtInterval</code> &amp;boundingInterval, int index, const <code>QwtSetSample</code> &amp;<code>sample</code>) const </p>
 <p> virtual void <code>drawBar</code> (QPainter *, int sampleIndex, int barIndex, const <code>QwtColumnRect</code> &amp;) const </p>
 <p> void <code>drawStackedBars</code> (QPainter *painter, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;canvasRect, int index, double <code>sampleWidth</code>, const <code>QwtSetSample</code> &amp;<code>sample</code>) const </p>
@@ -94,9 +94,9 @@ description: "QwtPlotMultiBarChart –"
 <p>Draw a bar </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>sampleIndex</i> Index of the sample &#8211; might be -1 when the bar is painted for the legend<br />
- <i>valueIndex</i> Index of a value in a set<br />
+<dd><i>painter</i> Painter<br/>
+ <i>sampleIndex</i> Index of the sample &#8211; might be -1 when the bar is painted for the legend<br/>
+ <i>valueIndex</i> Index of a value in a set<br/>
  <i>rect</i> Directed target rectangle for the bar</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -105,12 +105,12 @@ description: "QwtPlotMultiBarChart –"
 <p>Draw a grouped sample </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>xMap</i> x map<br />
- <i>yMap</i> y map<br />
- <i>canvasRect</i> Contents rectangle of the canvas<br />
- <i>index</i> Index of the sample to be painted<br />
- <i>sampleWidth</i> Boundng width for all bars of the smaple<br />
+<dd><i>painter</i> Painter<br/>
+ <i>xMap</i> x map<br/>
+ <i>yMap</i> y map<br/>
+ <i>canvasRect</i> Contents rectangle of the canvas<br/>
+ <i>index</i> Index of the sample to be painted<br/>
+ <i>sampleWidth</i> Boundng width for all bars of the smaple<br/>
  <i>sample</i> Sample</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -119,12 +119,12 @@ description: "QwtPlotMultiBarChart –"
 <p>Draw a sample </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>xMap</i> x map<br />
- <i>yMap</i> y map<br />
- <i>canvasRect</i> Contents rectangle of the canvas<br />
- <i>boundingInterval</i> Bounding interval of sample values<br />
- <i>index</i> Index of the sample to be painted<br />
+<dd><i>painter</i> Painter<br/>
+ <i>xMap</i> x map<br/>
+ <i>yMap</i> y map<br/>
+ <i>canvasRect</i> Contents rectangle of the canvas<br/>
+ <i>boundingInterval</i> Bounding interval of sample values<br/>
+ <i>index</i> Index of the sample to be painted<br/>
  <i>sample</i> Sample value</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -133,11 +133,11 @@ description: "QwtPlotMultiBarChart –"
 <p>Draw an interval of the bar chart </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>xMap</i> Maps x-values into pixel coordinates.<br />
- <i>yMap</i> Maps y-values into pixel coordinates.<br />
- <i>canvasRect</i> Contents rectangle of the canvas<br />
- <i>from</i> Index of the first point to be painted<br />
+<dd><i>painter</i> Painter<br/>
+ <i>xMap</i> Maps x-values into pixel coordinates.<br/>
+ <i>yMap</i> Maps y-values into pixel coordinates.<br/>
+ <i>canvasRect</i> Contents rectangle of the canvas<br/>
+ <i>from</i> Index of the first point to be painted<br/>
  <i>to</i> Index of the last point to be painted. If to &lt; 0 the curve will be painted to its last point.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -147,12 +147,12 @@ description: "QwtPlotMultiBarChart –"
 <p>Draw a stacked sample </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>xMap</i> x map<br />
- <i>yMap</i> y map<br />
- <i>canvasRect</i> Contents rectangle of the canvas<br />
- <i>index</i> Index of the sample to be painted<br />
- <i>sampleWidth</i> Width of the bars<br />
+<dd><i>painter</i> Painter<br/>
+ <i>xMap</i> x map<br/>
+ <i>yMap</i> y map<br/>
+ <i>canvasRect</i> Contents rectangle of the canvas<br/>
+ <i>index</i> Index of the sample to be painted<br/>
+ <i>sampleWidth</i> Width of the bars<br/>
  <i>sample</i> Sample</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -172,7 +172,7 @@ description: "QwtPlotMultiBarChart –"
 <dd>Icon for representing a bar on the legend</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>index</i> Index of the bar<br />
+<dd><i>index</i> Index of the bar<br/>
  <i>size</i> Icon size</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -227,7 +227,7 @@ description: "QwtPlotMultiBarChart –"
 <p>Add a symbol to the symbol map. Assign a default symbol for drawing the bar representing all values with the same index in a set. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>valueIndex</i> Index of a value in a set<br />
+<dd><i>valueIndex</i> Index of a value in a set<br/>
  <i>symbol</i> Symbol used for drawing a bar</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -238,7 +238,7 @@ description: "QwtPlotMultiBarChart –"
 <p> When no symbol ( NULL ) is returned, the value will be displayed with the standard symbol that is used for all symbols with the same valueIndex. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>sampleIndex</i> Index of the sample<br />
+<dd><i>sampleIndex</i> Index of the sample<br/>
  <i>valueIndex</i> Index of the value in the set</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

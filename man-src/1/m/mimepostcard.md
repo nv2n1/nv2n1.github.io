@@ -17,11 +17,11 @@ mimepostcard - send/output a multipart/alternative message
     mimepostcard /path/to/some/graphic.jpg to [at] addr.com
 </pre> 
 
- You can point it at a .gif file as well. The special address ``-'' just causes the message to go to <font SIZE="-1">STDOUT.</font>
+ You can point it at a .gif file as well. The special address ``-'' just causes the message to go to STDOUT.
 
 <h2>DESCRIPTION</h2>
 
- This sends a mesasge both as <font SIZE="-1">HTML</font> and plain text. I use ``Data''; you would probably use ``Path''.
+ This sends a mesasge both as HTML and plain text. I use ``Data''; you would probably use ``Path''.
 
 <h2>AUTHOR</h2>
 

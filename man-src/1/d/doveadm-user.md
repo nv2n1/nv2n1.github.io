@@ -37,7 +37,7 @@ userdb {
 <dt><code>-u</code></dt>
 <dd> When this option is given, <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) will only show values from the <i>userdb</i>. Without -u parameter if any of the <i>uid</i>, <i>gid</i>, <i>home</i> or <i>mail</i> fields are missing, their defaults are taken from configuration file.</dd>
 <dt><code>-x&nbsp;<wbr></code><i>auth_info</i></dt>
-<dd> <i>auth_info</i> specifies additional conditions for the <code>user</code> command. The <i>auth_info</i> option string has to be given as <i>name</i><code>=</code><i>value</i> pair. For multiple conditions the <code>-x</code> option could be supplied multiple times.<br />
+<dd> <i>auth_info</i> specifies additional conditions for the <code>user</code> command. The <i>auth_info</i> option string has to be given as <i>name</i><code>=</code><i>value</i> pair. For multiple conditions the <code>-x</code> option could be supplied multiple times.<br/>
  Possible names for the <i>auth_info</i> are:</dd>
 <dl>
 <dl>

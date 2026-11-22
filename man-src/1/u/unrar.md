@@ -12,8 +12,8 @@ description: "unrar – extract files from rar archives"
 <h2>SYNOPSIS</h2>
 <p> <code>unrar</code> <i>command</i> [<i>-switch</i> &#8230;] <i>archive</i> [<i>file</i> &#8230;] [@<i>listfiles</i> &#8230;] [<i>path</i> &#8230;] [<i>path_to_extract</i>/]</p>
 <h2>DESCRIPTION</h2>
-<p> This manual page documents briefly the <code>unrar</code> command.<br />
- This manual page was written for the Debian GNU/Linux distribution because the original program does not have a manual page.<br />
+<p> This manual page documents briefly the <code>unrar</code> command.<br/>
+ This manual page was written for the Debian GNU/Linux distribution because the original program does not have a manual page.<br/>
  Commands and options described here are as of unrar 6.0.</p>
 <h2>USAGE</h2>
 <dl>
@@ -22,8 +22,8 @@ description: "unrar – extract files from rar archives"
 <dt><code>file &#8230;</code></dt>
 <dd> File path name to extract. You can specify more path names at one time.</dd>
 <dt><code>@listfiles &#8230;</code></dt>
-<dd> If argument starts with &quot;@&quot;, unrar uses <code>listfile</code> as file path list file. This list file includes file path list to extract from archive file. You can use 2 or more list files at one time.<br />
- File list uses one line for one file path. And blank line is ignored.<br />
+<dd> If argument starts with &quot;@&quot;, unrar uses <code>listfile</code> as file path list file. This list file includes file path list to extract from archive file. You can use 2 or more list files at one time.<br/>
+ File list uses one line for one file path. And blank line is ignored.<br/>
  This file is used to extract many file path names in one time that your shell can&#8217;t accept.</dd>
 <dt><code>path_to_extract</code></dt>
 <dd> If last argument is ended with &quot;/&quot;, unrar uses <code>path_to_extract</code> as file extraction target path.</dd></dl>
@@ -154,8 +154,8 @@ description: "unrar – extract files from rar archives"
 <dt>Syntax: (switches for specific command)</dt>
 <dd> switches_&lt;command&gt;=&lt;any RAR switches separated by spaces&gt;</dd>
 <dt>Example:</dt>
-<dd> switches=-m5 -s<br />
- switches_a=-m5 -s<br />
+<dd> switches=-m5 -s<br/>
+ switches_a=-m5 -s<br/>
  switches_x=-o+</dd></dl>
 <h2>AUTHORS</h2>
 <p> This manual page was written by Petr Cech &lt;cech [at] debian.org&gt; according to &quot;unrar&quot; for the Debian GNU/Linux system (but may be used by others). </p>

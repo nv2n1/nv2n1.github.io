@@ -46,7 +46,7 @@ description: "sg_read_long – send a SCSI READ LONG command"
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;dgilbert at interlog dot com&gt;.</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2004-2010 Douglas Gilbert<br />
+<p>Copyright &#169; 2004-2010 Douglas Gilbert<br/>
  This software is distributed under the GPL version 2. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>See Also</h2>
 <p><code>sg_reassign, sg_write_long, sg_dd</code> </p>

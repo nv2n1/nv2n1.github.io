@@ -27,7 +27,7 @@ description: "mkzonedb – Utility create a zone file for isdnlog"
 <dt><code>-o</code><i> Oz</i></dt>
 <dd>Use &quot;Oz&quot; area zone. Default is 1. (What does this mean, exactly?) </dd>
 <dt><code>-l</code><i> len</i></dt>
-<dd>&quot;len&quot; is the length of areacodes.<br />
+<dd>&quot;len&quot; is the length of areacodes.<br/>
  If 5 or more is given, then more space is allocated for the internal tables (40000 instead of 10000 numbers allowed). Other values aren&#8217;t really used. </dd>
 </dl>
 <h2>Author</h2>

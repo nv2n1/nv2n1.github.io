@@ -15,9 +15,9 @@ description: "std::filesystem::path::c_str,std::filesystem::path::native,std::fi
 (2)(since C++ 17)
 operator string_type() const;
 (3)(since C++ 17)</code></pre>
-<p>Accesses the native path name as a character string.<br />
-1) Equivalent to native().c_str().<br />
-2) Returns the native-format representation of the pathname by reference.<br />
+<p>Accesses the native path name as a character string.<br/>
+1) Equivalent to native().c_str().<br/>
+2) Returns the native-format representation of the pathname by reference.<br/>
 3) Returns the native-format representation of the pathname by value. </p>
 <h2>Parameters</h2>
 <p><i>(none)</i></p>
@@ -77,17 +77,17 @@ File name in narrow multibyte encoding: &quot; &lt;&lt; p.string() &lt;&lt; '
 }
 </code></pre>
 <h2>Output:</h2>
-<p>&nbsp;<wbr>&nbsp;File contents<br />
-&nbsp;<wbr>&nbsp;File name in narrow multibyte encoding: 要らない.txt<br />
+<p>&nbsp;<wbr>&nbsp;File contents<br/>
+&nbsp;<wbr>&nbsp;File name in narrow multibyte encoding: 要らない.txt<br/>
 &nbsp;<wbr>&nbsp;File name in wide encoding: 要らない.txt</p>
 <h2>See also</h2>
-<p>string<br />
-wstring returns the path in native pathname format converted to a string<br />
-u8string <i>(public member function)</i><br />
-u16string<br />
-u32string<br />
-generic_string<br />
-generic_wstring returns the path in generic pathname format converted to a string<br />
-generic_u8string <i>(public member function)</i><br />
-generic_u16string<br />
+<p>string<br/>
+wstring returns the path in native pathname format converted to a string<br/>
+u8string <i>(public member function)</i><br/>
+u16string<br/>
+u32string<br/>
+generic_string<br/>
+generic_wstring returns the path in generic pathname format converted to a string<br/>
+generic_u8string <i>(public member function)</i><br/>
+generic_u16string<br/>
 generic_u32string </p>

@@ -13,16 +13,16 @@ description: "QwtPlotSvgItem –"
 <p>#include &lt;qwt_plot_svgitem.h&gt; </p>
 <p> Inherits <code>QwtPlotItem</code>.</p>
 <h3>Public Member Functions</h3>
-<p><code>QwtPlotSvgItem</code> (const QString &amp;<code>title</code>=QString::null)<br />
- <i>Constructor. </i><br />
- <code>QwtPlotSvgItem</code> (const <code>QwtText</code> &amp;<code>title</code>)<br />
- <i>Constructor. </i><br />
- virtual <code>~QwtPlotSvgItem</code> ()<br />
- <i>Destructor. </i><br />
+<p><code>QwtPlotSvgItem</code> (const QString &amp;<code>title</code>=QString::null)<br/>
+ <i>Constructor. </i><br/>
+ <code>QwtPlotSvgItem</code> (const <code>QwtText</code> &amp;<code>title</code>)<br/>
+ <i>Constructor. </i><br/>
+ virtual <code>~QwtPlotSvgItem</code> ()<br/>
+ <i>Destructor. </i><br/>
  bool <code>loadFile</code> (const QRectF &amp;, const QString &amp;fileName) </p>
 <p> bool <code>loadData</code> (const QRectF &amp;, const QByteArray &amp;) </p>
-<p> virtual QRectF <code>boundingRect</code> () const<br />
- <i>Bounding rectangle of the item. </i><br />
+<p> virtual QRectF <code>boundingRect</code> () const<br/>
+ <i>Bounding rectangle of the item. </i><br/>
  virtual void <code>draw</code> (QPainter *p, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;rect) const </p>
 <p> virtual int <code>rtti</code> () const </p>
 <h3>Protected Member Functions</h3>
@@ -60,16 +60,16 @@ description: "QwtPlotSvgItem –"
 <p>Draw the SVG item </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>xMap</i> X-Scale Map<br />
- <i>yMap</i> Y-Scale Map<br />
+<dd><i>painter</i> Painter<br/>
+ <i>xMap</i> X-Scale Map<br/>
+ <i>yMap</i> Y-Scale Map<br/>
  <i>canvasRect</i> Contents rect of the plot canvas</dd></dl>
 <p> Implements <code>QwtPlotItem</code>.</p>
 <h3>bool QwtPlotSvgItem::loadData (const QRectF &amp;rect, const QByteArray &amp;data)</h3>
 <p>Load SVG data </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>rect</i> Bounding rectangle<br />
+<dd><i>rect</i> Bounding rectangle<br/>
  <i>data</i> in SVG format</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -78,7 +78,7 @@ description: "QwtPlotSvgItem –"
 <p>Load a SVG file </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>rect</i> Bounding rectangle<br />
+<dd><i>rect</i> Bounding rectangle<br/>
  <i>fileName</i> SVG file name</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -87,8 +87,8 @@ description: "QwtPlotSvgItem –"
 <p>Render the SVG data </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>viewBox</i> View Box, see QSvgRenderer::viewBox()<br />
+<dd><i>painter</i> Painter<br/>
+ <i>viewBox</i> View Box, see QSvgRenderer::viewBox()<br/>
  <i>rect</i> Target rectangle on the paint device</dd></dl>
 <h3>const QSvgRenderer &amp; QwtPlotSvgItem::renderer () const [protected]</h3>
 <p><code>Returns:</code></p>

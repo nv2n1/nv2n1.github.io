@@ -82,8 +82,8 @@ description: "smartctl – Control and Monitor Utility for SMART Disks"
 <pre><code>smartctl -a -d megaraid,0 /dev/sdb</code></pre>
 <pre><code>smartctl -a -d megaraid,0 /dev/bus/0</code></pre>
 <p>This interface will also work for Dell PERC controllers. It is possible to set RAID device name as /dev/bus/N, where N is a SCSI bus number. </p>
-<p> The following entry in /proc/devices must exist:<br />
- For PERC2/3/4 controllers: <code>megadevN</code><br />
+<p> The following entry in /proc/devices must exist:<br/>
+ For PERC2/3/4 controllers: <code>megadevN</code><br/>
  For PERC5/6 controllers: <code>megaraid_sas_ioctlN</code> </p>
 <p> <i>aacraid,H,L,ID</i> &#8211; [Linux, Windows and Cygwin only] [NEW EXPERIMENTAL SMARTCTL FEATURE] the device consists of one or more SCSI/SAS disks connected to an AacRaid controller. The non-negative integers H,L,ID (Host number, Lun, ID) denote which disk on the controller is monitored. Use syntax such as: </p>
 <pre><code>smartctl -a -d aacraid,0,0,2 /dev/sda</code></pre>
@@ -235,8 +235,8 @@ description: "smartctl – Control and Monitor Utility for SMART Disks"
  <code>UNC</code>: <code>UNC</code>orrectable Error in Data
  <code>WP</code>: Media is <code>W</code>rite <code>P</code>rotected</pre>
 <p>In addition, up to the last five commands that preceded the error are listed, along with a timestamp measured from the start of the corresponding power cycle. This is displayed in the form Dd+HH:MM:SS.msec where D is the number of days, HH is hours, MM is minutes, SS is seconds and msec is milliseconds. [Note: this time stamp wraps after 2^32 milliseconds, or 49 days 17 hours 2 minutes and 47.296 seconds.] The key ATA disk registers are also recorded in the log. The final column of the error log is a text-string description of the ATA command defined by the Command Register (CR) and Feature Register (FR) values. Commands that are obsolete in the most current spec are listed like this: <code>READ LONG (w/ retry) [OBS-4]</code>, indicating that the command became obsolete with or in the ATA-4 specification. Similarly, the notation <code>[RET-</code><i>N</i><code>]</code> is used to indicate that a command was retired in the ATA-<i>N</i> specification. Some commands are not defined in any version of the ATA specification but are in common use nonetheless; these are marked <code>[NS]</code>, meaning non-standard. </p>
-<p> The ATA Specification (ATA ACS-2 Revision 7, Section A.7.1) says: <code>&quot;Error log data structures shall include, but are not limited to, Uncorrectable errors, ID Not Found errors for which the LBA requested was valid, servo errors, and write fault errors. Error log data structures shall not include errors attributed to the receipt of faulty commands.&quot;</code> The definitions of these terms are:<br />
- <code>UNC</code> (<code>UNC</code>orrectable): data is uncorrectable. This refers to data which has been read from the disk, but for which the Error Checking and Correction (ECC) codes are inconsistent. In effect, this means that the data can not be read.<br />
+<p> The ATA Specification (ATA ACS-2 Revision 7, Section A.7.1) says: <code>&quot;Error log data structures shall include, but are not limited to, Uncorrectable errors, ID Not Found errors for which the LBA requested was valid, servo errors, and write fault errors. Error log data structures shall not include errors attributed to the receipt of faulty commands.&quot;</code> The definitions of these terms are:<br/>
+ <code>UNC</code> (<code>UNC</code>orrectable): data is uncorrectable. This refers to data which has been read from the disk, but for which the Error Checking and Correction (ECC) codes are inconsistent. In effect, this means that the data can not be read.<br/>
  <code>IDNF</code> (<code>ID N</code>ot <code>F</code>ound): user-accessible address could not be found. For READ LOG type commands, <code>IDNF</code> can also indicate that a device data log structure checksum was incorrect. </p>
 <p> If the command that caused the error was a READ or WRITE command, then the Logical Block Address (LBA) at which the error occurred will be printed in base 10 and base 16. The LBA is a linear address, which counts 512-byte sectors on the disk, starting from zero. (Because of the limitations of the SMART error log, if the LBA is greater than 0xfffffff, then either no error log entry will be made, or the error log entry will have an incorrect LBA. This may happen for drives with a capacity greater than 128 GiB or 137 GB.) On Linux systems the smartmontools web page has instructions about how to convert the LBA address to the name of the disk file containing the erroneous disk sector. </p>
 <p> Please note that some manufacturers <code>ignore</code> the ATA specifications, and make entries in the error log if the device receives a command which is not implemented or is not valid. </p>
@@ -515,22 +515,22 @@ done</pre>
 <dd>optional local drive database (see &#8216;-B&#8217; option). </dd>
 </dl>
 <h2>Authors</h2>
-<p><code>Bruce Allen</code> (project initiator),<br />
- <code>Christian Franke</code> (project manager, Windows port and all sort of things),<br />
- <code>Douglas Gilbert</code> (SCSI subsystem),<br />
- <code>Volker Kuhlmann</code> (moderator of support and database mailing list),<br />
- <code>Gabriele Pohl</code> (wiki &amp; development team support),<br />
+<p><code>Bruce Allen</code> (project initiator),<br/>
+ <code>Christian Franke</code> (project manager, Windows port and all sort of things),<br/>
+ <code>Douglas Gilbert</code> (SCSI subsystem),<br/>
+ <code>Volker Kuhlmann</code> (moderator of support and database mailing list),<br/>
+ <code>Gabriele Pohl</code> (wiki &amp; development team support),<br/>
  <code>Alex Samorukov</code> (FreeBSD port and more, new Trac wiki). </p>
 <p> Many other individuals have made contributions and corrections, see AUTHORS, ChangeLog and repository files. </p>
 <p> The first smartmontools code was derived from the smartsuite package, written by Michael Cornwell and Andre Hedrick.</p>
 <h2>Reporting Bugs</h2>
-<p>To submit a bug report, create a ticket in smartmontools wiki:<br />
- &lt;<code><a rel="nofollow" href="http://www.smartmontools.org/">http://www.smartmontools.org/</a></code>&gt;.<br />
- Alternatively send the info to the smartmontools support mailing list:<br />
+<p>To submit a bug report, create a ticket in smartmontools wiki:<br/>
+ &lt;<code><a rel="nofollow" href="http://www.smartmontools.org/">http://www.smartmontools.org/</a></code>&gt;.<br/>
+ Alternatively send the info to the smartmontools support mailing list:<br/>
  &lt;<code><a rel="nofollow" href="https://lists.sourceforge.net/lists/listinfo/smartmontools-support">https://lists.sourceforge.net/lists/listinfo/smartmontools-support</a>&gt;. </p>
 <p> </code></p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-smartd/">smartd</a></code>(8).<br />
+<p><code><a href="/docs/linux/man/8-smartd/">smartd</a></code>(8).<br/>
  <code><a href="/docs/linux/man/8-update-smart-drivedb/">update-smart-drivedb</a></code>(8). </p>
 <h2>References</h2>
 <p>Please see the following web site for more info: <code><a rel="nofollow" href="http://www.smartmontools.org/">http://www.smartmontools.org/</a></code> </p>
@@ -539,5 +539,5 @@ done</pre>
 <p> The functioning of SMART was originally defined by the SFF-8035i revision 2 and the SFF-8055i revision 1.4 specifications. These are publications of the Small Form Factors (SFF) Committee. </p>
 <p> Links to these and other documents may be found on the Links page of the <code>smartmontools</code> Wiki at <code><a rel="nofollow" href="http://www.smartmontools.org/wiki/Links">http://www.smartmontools.org/wiki/Links</a></code> .</p>
 <h2>Package Version</h2>
-<p>smartmontools-6.6 2016-05-31 r4324<br />
+<p>smartmontools-6.6 2016-05-31 r4324<br/>
  $Id: smartctl.8.in 4311 2016-04-27 21:03:01Z chrfranke $</p>

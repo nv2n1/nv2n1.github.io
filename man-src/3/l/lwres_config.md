@@ -33,5 +33,5 @@ description: "lwres_conf_init, lwres_conf_clear, lwres_conf_parse, lwres_conf_pr
 <h2>FILES</h2>
 <p> <i>/etc/resolv.conf</i></p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2004, 2005, 2007 Internet Systems Consortium, Inc. (&quot;ISC&quot;)<br />
+<p> Copyright &#169; 2004, 2005, 2007 Internet Systems Consortium, Inc. (&quot;ISC&quot;)<br/>
  Copyright &#169; 2000, 2001 Internet Software Consortium. </p>

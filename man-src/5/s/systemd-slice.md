@@ -15,7 +15,7 @@ description: "systemd.slice – Slice unit configuration"
 <p> Note that slice units cannot be templated, nor is possible to add multiple names to a slice unit by creating additional symlinks to its unit file. </p>
 <p> By default, service and scope units are placed in system.slice, virtual machines and containers registered with <code><a href="/docs/linux/man/8-systemd-machined/">systemd-machined</a></code>(8) are found in machine.slice, and user sessions handled by <code><a href="/docs/linux/man/8-systemd-logind/">systemd-logind</a></code>(8) in user.slice. See <code><a href="/docs/linux/man/7-systemd-special/">systemd.special</a></code>(7) for more information. </p>
 <p> See <code><a href="/docs/linux/man/5-systemd-unit/">systemd.unit</a></code>(5) for the common options of all unit configuration files. The common configuration items are configured in the generic [Unit] and [Install] sections. The slice specific configuration options are configured in the [Slice] section. Currently, only generic resource control settings as described in <code><a href="/docs/linux/man/5-systemd-resource-control/">systemd.resource-control</a></code>(5) are allowed. </p>
-<p> See the m[blue]<code>New Control Group Interfaces</code>m[]<font SIZE="-2">[1]</font> for an introduction on how to make use of slice units from programs.</p>
+<p> See the m[blue]<code>New Control Group Interfaces</code>m[][1] for an introduction on how to make use of slice units from programs.</p>
 <h2>Automatic Dependencies</h2>
 <h3>Implicit Dependencies</h3>
 <p>The following dependencies are implicitly added: </p>

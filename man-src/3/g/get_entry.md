@@ -47,82 +47,82 @@ typedef struct {
 </dl>
 <h3>BIT and SBIT Members</h3>
 <p> A gd_entry_t describing a <code>BIT</code> or <code>SBIT</code> entry, will also provide: </p>
-<p>typedef struct {<br />
-    &#8230; const char *in_fields[1]; /* input field code */<br />
-    const char *scalar[2];        /* parameter field codes */<br />
-    gd_bit_t bitnum;              /* first bit */<br />
-    gd_bit_t numbits;             /* bit length */<br />
-    &#8230;<br />
-} gd_entry_t;<br />
+<p>typedef struct {<br/>
+    &#8230; const char *in_fields[1]; /* input field code */<br/>
+    const char *scalar[2];        /* parameter field codes */<br/>
+    gd_bit_t bitnum;              /* first bit */<br/>
+    gd_bit_t numbits;             /* bit length */<br/>
+    &#8230;<br/>
+} gd_entry_t;<br/>
  The <i>in_fields</i> member is an array of length one containing the input field code. The <i>scalar</i> member is an array of length two containing the field codes specifying <i>bitnum</i> and <i>numbits</i>, or NULLs if numeric literal parameters were used. The <i>bitnum</i> member indicates the number of the first bit (counted from zero) extracted from the input. The <i>gd_bit_t</i> type is a signed 16-bit integer type. If this value was specified as a <code>CONST</code> field code, this will be the numerical value of that field, and <i>scalar</i>[0] will contain the field code itself, otherwise <i>scalar</i>[0] will be NULL. The <i>numbits</i> member indicates the number of bits which are extracted from the input. If this value was specified as a <code>CONST</code> field code, this will be the numerical value of that field, and <i>scalar</i>[1] will contain the field code itself, otherwise <i>scalar</i>[1] will be NULL. </p>
 <h3>CONST Members</h3>
 <p> A gd_entry_t describing a <code>CONST</code> entry, will also provide: </p>
-<p>typedef struct {<br />
-    &#8230; gd_type_t const_type; /* data type in format file */<br />
-    &#8230;<br />
-} gd_entry_t;<br />
+<p>typedef struct {<br/>
+    &#8230; gd_type_t const_type; /* data type in format file */<br/>
+    &#8230;<br/>
+} gd_entry_t;<br/>
  The <i>const_type</i> member indicates the data type of the constant value stored in the format file metadata. See <code><a href="/docs/linux/man/3-getdata/">getdata</a></code>(3) for a list of valid values that a variable of type <code>gd_type_t</code> may take. </p>
 <h3>INDEX Members</h3>
 <p> A gd_entry_t describing an <code>INDEX</code> entry, which is used only for the implicit <i>INDEX</i> field, provides no additional data. </p>
 <h3>LINCOM Members</h3>
 <p> A gd_entry_t describing a <code>LINCOM</code> entry, will also provide: </p>
-<p>typedef struct {<br />
-    &#8230; int n_fields;                      /* # of input fields */<br />
-    int comp_scal;                         /* complex scalar flag */<br />
-    const char *in_fields[GD_MAX_LINCOM];  /* input field code(s) */<br />
-    const char *scalar[2 * GD_MAX_LINCOM]; /* param. field codes */<br />
-    double complex cm[GD_MAX_LINCOM];      /* scale factor(s) */<br />
-    double m[GD_MAX_LINCOM];               /* scale factor(s) */<br />
-    double complex cb[GD_MAX_LINCOM];      /* offset terms(s) */<br />
-    double b[GD_MAX_LINCOM];               /* offset terms(s) */<br />
-    &#8230;<br />
-} gd_entry_t;<br />
+<p>typedef struct {<br/>
+    &#8230; int n_fields;                      /* # of input fields */<br/>
+    int comp_scal;                         /* complex scalar flag */<br/>
+    const char *in_fields[GD_MAX_LINCOM];  /* input field code(s) */<br/>
+    const char *scalar[2 * GD_MAX_LINCOM]; /* param. field codes */<br/>
+    double complex cm[GD_MAX_LINCOM];      /* scale factor(s) */<br/>
+    double m[GD_MAX_LINCOM];               /* scale factor(s) */<br/>
+    double complex cb[GD_MAX_LINCOM];      /* offset terms(s) */<br/>
+    double b[GD_MAX_LINCOM];               /* offset terms(s) */<br/>
+    &#8230;<br/>
+} gd_entry_t;<br/>
  The <i>n_fields</i> member indicates the number of input fields. It will be between one and <code>GD_MAX_LINCOM</code> inclusive, which is defined in getdata.h to the maximum number of input fields permitted by a <code>LINCOM</code>. The <i>comp_scal</i> member is non-zero if any of the scale factors or offset terms have a non-zero imaginary part. (That is, if comp_scal is zero, the elements of <i>cm</i>~and~<i>cb</i> equal the corresponding elements of <i>m</i>~and~<i>b</i>.) members.) The <i>in_fields</i> member is an array of length <code>GD_MAX_LINCOM</code> containing the input field code(s). Only the first <i>n_fields</i> elements of this array are initialised. The remaining elements contain uninitialised data. The <i>scalar</i> member is an array of length twice <code>GD_MAX_LINCOM</code> containing the field codes specifying the slope factors and offset terms for the field, or NULLs if numberical literal parameters were used. The first <code>GD_MAX_LINCOM</code> array elements contain the scale factors. The remaining <code>GD_MAX_LINCOM</code> array elements contain the offset terms. Array elements <i>scalar</i>[<i>i</i>] and <i>scalar</i>[<i>i</i> + <code>GD_MAX_LINCOM</code>], for <i>i</i>~&gt;=~<i>n_fields</i>, contain uninitialised data. The <i>cm</i> and <i>cb</i> members are arrays of the scale factor(s) and offset term(s) for the <code>LINCOM</code>. Only the first <i>n_fields</i> elements of these array contain meaningful data. If any of these values were specified as a <code>CONST</code> field code, this will be the numerical value of that field. The field code corresponding to <i>cm</i>[<i>i</i>] will be stored in <i>scalar</i>[<i>i</i>] and the field code associated with <i>cb</i>[<i>i</i>] will be stored in <i>scalar</i>[<i>i</i> + <code>GD_MAX_LINCOM</code>]. Otherwise the corresponding <i>scalar</i> member will be NULL. See <code>NOTES</code> below on changes to the declaration of <i>cm</i> and <i>cb</i> when using the C89 GetData API. The elements of <i>m</i> and <i>b</i> are the real parts of the corresponding elements of <i>cm</i> and <i>cb</i>. </p>
 <h3>LINTERP Members</h3>
 <p> A gd_entry_t describing a <code>LINTERP</code> entry, will also provide: </p>
-<p>typedef struct {<br />
-    &#8230; const char *table         /* linterp table filename */<br />
-        const char *in_fields[1]; /* input field code */<br />
-    &#8230;<br />
-} gd_entry_t;<br />
+<p>typedef struct {<br/>
+    &#8230; const char *table         /* linterp table filename */<br/>
+        const char *in_fields[1]; /* input field code */<br/>
+    &#8230;<br/>
+} gd_entry_t;<br/>
  The <i>table</i> member is the pathname to the look up table on disk. The <i>in_fields</i> member is an array of length one containing the input field code. </p>
 <h3>MULTIPLY Members</h3>
 <p> A gd_entry_t describing a <code>MULTIPLY</code> entry, will also provide: </p>
-<p>typedef struct {<br />
-    &#8230; const char *in_fields[2]; /* input field codes */<br />
-    &#8230;<br />
-} gd_entry_t;<br />
+<p>typedef struct {<br/>
+    &#8230; const char *in_fields[2]; /* input field codes */<br/>
+    &#8230;<br/>
+} gd_entry_t;<br/>
  The <i>in_fields</i> member is an array of length two containing the input field codes. </p>
 <h3>PHASE Members</h3>
 <p> A gd_entry_t describing a <code>PHASE</code> entry, will also provide: </p>
-<p>typedef struct {<br />
-    &#8230; const char *in_fields[1]; /* input field code */<br />
-    const char *scalar[1];        /* parameter field codes */<br />
-    gd_shift_t shift;             /* phase shift */<br />
-    &#8230;<br />
-} gd_entry_t;<br />
+<p>typedef struct {<br/>
+    &#8230; const char *in_fields[1]; /* input field code */<br/>
+    const char *scalar[1];        /* parameter field codes */<br/>
+    gd_shift_t shift;             /* phase shift */<br/>
+    &#8230;<br/>
+} gd_entry_t;<br/>
  The <i>in_fields</i> member is an array of length one containing the input field code. The <i>scalar</i> member is an array of length one containing the field code specifying <i>shift</i>, or NULL if a numeric literal parameter was used. The <i>shift</i> member indicates the shift in samples. The <i>gd_shift_t</i> type is a 64-bit signed integer type. A positive value indicates a shift forward in time (towards larger frame numbers). If this value was specified as a <code>CONST</code> field code, this will be the numerical value of that field, and <i>scalar</i>[0] will contain the field code itself, otherwise <i>scalar</i>[0] will be NULL. </p>
 <h3>POLYNOM Members</h3>
 <p> A gd_entry_t describing a <code>POLYNOM</code> entry, will also provide: </p>
-<p>typedef struct {<br />
-    &#8230; int poly_ord;         /* polynomial order */<br />
-    int comp_scal;            /* complex scalar flag */<br />
-    const char *in_fields[1]; /* input field code(s) */<br />
-    const char *scalar[GD_MAX_POLY_ORD + 1];<br />
-    /* co-eff. field codes */<br />
-    double complex ca[GD_MAX_POLY_ORD + 1]; /* co-efficients(s) */<br />
-    double a[GD_MAX_POLY_ORD + 1];          /* co-efficients(s) */<br />
-    &#8230;<br />
-} gd_entry_t;<br />
+<p>typedef struct {<br/>
+    &#8230; int poly_ord;         /* polynomial order */<br/>
+    int comp_scal;            /* complex scalar flag */<br/>
+    const char *in_fields[1]; /* input field code(s) */<br/>
+    const char *scalar[GD_MAX_POLY_ORD + 1];<br/>
+    /* co-eff. field codes */<br/>
+    double complex ca[GD_MAX_POLY_ORD + 1]; /* co-efficients(s) */<br/>
+    double a[GD_MAX_POLY_ORD + 1];          /* co-efficients(s) */<br/>
+    &#8230;<br/>
+} gd_entry_t;<br/>
  The <i>poly_ord</i> member indicates the order of the polynomial. It will be between one and <code>GD_MAX_POLY_ORD</code> inclusive, which is defined in getdata.h to the maximum order of polynomial permitted by a <code>POLYNOM</code>. The <i>comp_scal</i> member is non-zero if any of the co-efficients have a non-zero imaginary part. (That is, if comp_scal is zero, the elements of <i>ca</i> equal the corresponding elements of <i>a</i>.) The <i>in_fields</i> member is an array of length one containing the input field code. The <i>scalar</i> member is an array of length one more than <code>GD_MAX_POLYORD</code> containing the field codes specifying the co-efficients for the field, or NULLs if numberical literal parameters were used. Only the first <i>poly_ord</i> + 1 elements are initialised. The remaining elements contain uninitialised data. The <i>ca</i> members are arrays of the co-efficient(s) for the <code>POLYNOM</code>. Only the first <i>poly_ord</i> + 1 elements of this array contains meaningful data. If any of these values were specified as a <code>CONST</code> field code, this will be the numerical value of that field. The field code corresponding to <i>ca</i>[<i>i</i>] will be stored in <i>scalar</i>[<i>i</i>]. Otherwise the corresponding <i>scalar</i> member will be NULL. See <code>NOTES</code> below on changes to the declaration of <i>ca</i> when using the C89 GetData API. The elements of <i>a</i> are the real parts of the corresponding elements of <i>ca</i>. </p>
 <h3>RAW Members</h3>
 <p> A gd_entry_t describing a <code>RAW</code> entry, will also provide: </p>
-<p>typedef struct {<br />
-    &#8230; const char *scalar[1]; /* parameter field codes */<br />
-    gd_spf_t spf;              /* samples per frame on disk */<br />
-    gd_type_t data_type;       /* data type on disk */<br />
-    &#8230;<br />
-} gd_entry_t;<br />
+<p>typedef struct {<br/>
+    &#8230; const char *scalar[1]; /* parameter field codes */<br/>
+    gd_spf_t spf;              /* samples per frame on disk */<br/>
+    gd_type_t data_type;       /* data type on disk */<br/>
+    &#8230;<br/>
+} gd_entry_t;<br/>
  The <i>scalar</i> member is an array of length one containing the field code specifying <i>spf</i>, or NULL if a numeric literal parameter was used. The <i>spf</i> member contains the samples per frame of the binary data on disk. The <i>gd_spf_t</i> type is an unsigned 16-bit integer type. If this value was specified as a <code>CONST</code> field code, this will be the numerical value of that field, and <i>scalar</i>[0] will contain the field code itself, otherwise <i>scalar</i>[0] will be NULL. The <i>data_type</i> member indicates the data type of the binary data on disk. See <code><a href="/docs/linux/man/3-getdata/">getdata</a></code>(3) for a list of valid values that a variable of type <code>gd_type_t</code> may take. </p>
 <h3>STRING Members</h3>
 <p> A gd_entry_t describing a <code>STRING</code> entry provides no additional data. </p>

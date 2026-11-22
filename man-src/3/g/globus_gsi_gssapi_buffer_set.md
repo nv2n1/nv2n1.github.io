@@ -11,11 +11,11 @@ description: "Buffer Set Utilities –"
 <p> Buffer Set Utilities &#8211; </p>
 <p> Buffer Set Utilities.</p>
 <h3>Functions</h3>
-<p> OM_uint32 GSS_CALLCONV <code>gss_create_empty_buffer_set</code> (OM_uint32 *minor_status, gss_buffer_set_t *buffer_set)<br />
- <i>Create a empty buffer set. </i><br />
- OM_uint32 GSS_CALLCONV <code>gss_add_buffer_set_member</code> (OM_uint32 *minor_status, const gss_buffer_t member_buffer, gss_buffer_set_t *buffer_set)<br />
- <i>Add a buffer to a buffer set. </i><br />
- OM_uint32 GSS_CALLCONV <code>gss_release_buffer_set</code> (OM_uint32 *minor_status, gss_buffer_set_t *buffer_set)<br />
+<p> OM_uint32 GSS_CALLCONV <code>gss_create_empty_buffer_set</code> (OM_uint32 *minor_status, gss_buffer_set_t *buffer_set)<br/>
+ <i>Create a empty buffer set. </i><br/>
+ OM_uint32 GSS_CALLCONV <code>gss_add_buffer_set_member</code> (OM_uint32 *minor_status, const gss_buffer_t member_buffer, gss_buffer_set_t *buffer_set)<br/>
+ <i>Add a buffer to a buffer set. </i><br/>
+ OM_uint32 GSS_CALLCONV <code>gss_release_buffer_set</code> (OM_uint32 *minor_status, gss_buffer_set_t *buffer_set)<br/>
  <i>Free a Buffer Set. </i></p>
 <h2>Detailed Description</h2>
 <p> Buffer Set Utilities. </p>
@@ -26,13 +26,13 @@ description: "Buffer Set Utilities –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>minor_status</i> The minor status returned by this function. This parameter will be 0 upon success.<br />
- <i>member_buffer</i> Buffer to insert into the buffer set.<br />
+</dt><dd> <i>minor_status</i> The minor status returned by this function. This parameter will be 0 upon success.<br/>
+ <i>member_buffer</i> Buffer to insert into the buffer set.<br/>
  <i>buffer_set</i> Pointer to a initialized buffer set structure.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GSS_S_COMPLETE</i> Success<br />
+</dt><dd> <i>GSS_S_COMPLETE</i> Success<br/>
  <i>GSS_S_FAILURE</i> Failure</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
@@ -44,12 +44,12 @@ description: "Buffer Set Utilities –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>minor_status</i> The minor status returned by this function. This parameter will be 0 upon success.<br />
+</dt><dd> <i>minor_status</i> The minor status returned by this function. This parameter will be 0 upon success.<br/>
  <i>buffer_set</i> Pointer to a buffer set structure.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GSS_S_COMPLETE</i> Success<br />
+</dt><dd> <i>GSS_S_COMPLETE</i> Success<br/>
  <i>GSS_S_FAILURE</i> Failure</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
@@ -61,12 +61,12 @@ description: "Buffer Set Utilities –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>minor_status</i> The minor status returned by this function. This parameter will be 0 upon success.<br />
+</dt><dd> <i>minor_status</i> The minor status returned by this function. This parameter will be 0 upon success.<br/>
  <i>buffer_set</i> Pointer to a buffer set structure. This pointer will point at a NULL value upon return.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GSS_S_COMPLETE</i> Success<br />
+</dt><dd> <i>GSS_S_COMPLETE</i> Success<br/>
  <i>GSS_S_FAILURE</i> Failure</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>

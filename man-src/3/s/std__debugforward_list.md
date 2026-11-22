@@ -12,15 +12,15 @@ description: "std::__debug::forward_list< _Tp, _Alloc > –"
 <p> Inherits forward_list&lt; _Tp, _Alloc &gt;, and <code>__gnu_debug::_Safe_sequence&lt; forward_list&lt; _Tp, _Alloc &gt; &gt;</code>.</p>
 <h3>Public Types</h3>
 <p>typedef _Alloc <code>allocator_type</code> </p>
-<p> typedef<br />
- <code>__gnu_debug::_Safe_iterator</code><br />
- &lt; <code>_Base_const_iterator</code>,<br />
+<p> typedef<br/>
+ <code>__gnu_debug::_Safe_iterator</code><br/>
+ &lt; <code>_Base_const_iterator</code>,<br/>
  <code>forward_list</code> &gt; <code>const_iterator</code>&quot; </p>
 <p> typedef _Base::const_pointer <code>const_pointer</code> </p>
 <p> typedef _Base::const_reference <code>const_reference</code> </p>
 <p> typedef _Base::difference_type <code>difference_type</code> </p>
-<p> typedef<br />
- <code>__gnu_debug::_Safe_iterator</code><br />
+<p> typedef<br/>
+ <code>__gnu_debug::_Safe_iterator</code><br/>
  &lt; <code>_Base_iterator</code>, <code>forward_list</code> &gt; <code>iterator</code>&quot; </p>
 <p> typedef _Base::pointer <code>pointer</code> </p>
 <p> typedef _Base::reference <code>reference</code> </p>

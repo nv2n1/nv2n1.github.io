@@ -11,7 +11,7 @@ description: "sspgv.f –"
 <p> sspgv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>sspgv</code> (ITYPE, JOBZ, UPLO, N, AP, BP, W, Z, LDZ, WORK, INFO)<br />
+<p> subroutine <code>sspgv</code> (ITYPE, JOBZ, UPLO, N, AP, BP, W, Z, LDZ, WORK, INFO)<br/>
  <i></i><code>SSPGST</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sspgv (integerITYPE, characterJOBZ, characterUPLO, integerN, real, dimension( * )AP, real, dimension( * )BP, real, dimension( * )W, real, dimension( ldz, * )Z, integerLDZ, real, dimension( * )WORK, integerINFO)</h3>
@@ -68,14 +68,14 @@ description: "sspgv.f –"
           On exit, the contents of AP are destroyed.
 </code></pre>
 <p> <i>BP</i> </p>
-<p>          BP is REAL array, dimension (N*(N+1)/2)<br />
-          On entry, the upper or lower triangle of the symmetric matrix<br />
-          B, packed columnwise in a linear array.  The j-th column of B<br />
-          is stored in the array BP as follows:<br />
-          if UPLO = &#8216;U&#8217;, BP(i + (j-1)*j/2) = B(i,j) for 1&lt;=i&lt;=j;<br />
-          if UPLO = &#8216;L&#8217;, BP(i + (j-1)*(2*n-j)/2) = B(i,j) for j&lt;=i&lt;=n.<br />
-          On exit, the triangular factor U or L from the Cholesky<br />
-          factorization B = U**T*U or B = L*L**T, in the same storage<br />
+<p>          BP is REAL array, dimension (N*(N+1)/2)<br/>
+          On entry, the upper or lower triangle of the symmetric matrix<br/>
+          B, packed columnwise in a linear array.  The j-th column of B<br/>
+          is stored in the array BP as follows:<br/>
+          if UPLO = &#8216;U&#8217;, BP(i + (j-1)*j/2) = B(i,j) for 1&lt;=i&lt;=j;<br/>
+          if UPLO = &#8216;L&#8217;, BP(i + (j-1)*(2*n-j)/2) = B(i,j) for j&lt;=i&lt;=n.<br/>
+          On exit, the triangular factor U or L from the Cholesky<br/>
+          factorization B = U**T*U or B = L*L**T, in the same storage<br/>
           format as B.</p>
 <p> <i>W</i> </p>
 <pre>
@@ -83,8 +83,8 @@ description: "sspgv.f –"
           If INFO = 0, the eigenvalues in ascending order.
 </pre>
 <p> <i>Z</i> </p>
-<p>Z is REAL array, dimension(LDZ, N) If JOBZ = &#8216;V&#8217;, then if INFO = 0, Z contains the matrix Z of eigenvectors.The eigenvectors are normalized as follows : if ITYPE = 1 or 2, Z **T *B *Z = I;<br />
-if ITYPE<br />
+<p>Z is REAL array, dimension(LDZ, N) If JOBZ = &#8216;V&#8217;, then if INFO = 0, Z contains the matrix Z of eigenvectors.The eigenvectors are normalized as follows : if ITYPE = 1 or 2, Z **T *B *Z = I;<br/>
+if ITYPE<br/>
 = 3, Z **T *inv(B) *Z = I.If JOBZ = &#8216;N&#8217;, then Z is not referenced.</p>
 <p> <i>LDZ</i> </p>
 <pre>

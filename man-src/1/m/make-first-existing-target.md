@@ -35,7 +35,7 @@ make-first-existing-target - runs make on one of several targets
 
 <h2>LICENSE</h2>
 
- Same as <font SIZE="-1">GNU</font> make.
+ Same as GNU make.
 
 <h2>SEE ALSO</h2>
 

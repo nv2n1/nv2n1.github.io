@@ -11,15 +11,15 @@ description: "ipsec_ttoaddr, ipsec_tnatoaddr, ipsec_addrtot, ipsec_ttosubnet, ip
 <p> ipsec_ttoaddr, ipsec_tnatoaddr, ipsec_addrtot, ipsec_ttosubnet, ipsec_subnettot &#8211; convert Internet addresses and Subnet masks to and from text</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libreswan.h&gt;</code> </p>
-<p> <code>const char *ttoaddr(const char *src, size_t srclen,</code><br />
- &nbsp;<wbr> <code>int af, ip_address *addr);</code><br />
- <code>const char *tnatoaddr(const char *src, size_t srclen,</code><br />
- &nbsp;<wbr> <code>int af, ip_address *addr);</code><br />
- <code>size_t addrtot(const ip_address *addr, int format,</code><br />
+<p> <code>const char *ttoaddr(const char *src, size_t srclen,</code><br/>
+ &nbsp;<wbr> <code>int af, ip_address *addr);</code><br/>
+ <code>const char *tnatoaddr(const char *src, size_t srclen,</code><br/>
+ &nbsp;<wbr> <code>int af, ip_address *addr);</code><br/>
+ <code>size_t addrtot(const ip_address *addr, int format,</code><br/>
  &nbsp;<wbr> <code>char *dst, size_t dstlen);</code> </p>
-<p> <code>const char *ttosubnet(const char *src, size_t srclen,</code><br />
- &nbsp;<wbr> <code>int af, ip_subnet *dst);</code><br />
- <code>size_t subnettot(const ip_subnet *sub, int format,</code><br />
+<p> <code>const char *ttosubnet(const char *src, size_t srclen,</code><br/>
+ &nbsp;<wbr> <code>int af, ip_subnet *dst);</code><br/>
+ <code>size_t subnettot(const ip_subnet *sub, int format,</code><br/>
  &nbsp;<wbr> <code>char *dst, size_t dstlen);</code></p>
 <h2>DESCRIPTION</h2>
 <p> <i>Ttoaddr</i> converts a text-string name or numeric address into a binary address (in network byte order). <i>Tnatoaddr</i> does the same conversion, but the only text forms it accepts are the &#8220;official&#8221; forms of numeric address (dotted-decimal for IPv4, colon-hex for IPv6). <i>Addrtot</i> does the reverse conversion, from binary address back to a text form. <i>Ttosubnet</i> and <i>subnettot</i> do likewise for the &#8220;address/mask&#8221; form used to write a specification of a subnet. </p>

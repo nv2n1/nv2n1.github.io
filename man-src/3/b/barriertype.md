@@ -10,10 +10,10 @@ description: "ql/instruments/barriertype.hpp – Barrier type."
 
 <p> ql/instruments/barriertype.hpp &#8211; Barrier type. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/qldefines.hpp&gt;<br />
+<p> #include &lt;ql/qldefines.hpp&gt;<br/>
  #include &lt;ostream&gt; </p>
 <h3>Classes</h3>
-<p> struct <code>Barrier</code><br />
+<p> struct <code>Barrier</code><br/>
  <i>Placeholder for enumerated barrier types. </i></p>
 <h3>Functions</h3>
 <p> std::ostream &amp; <code>operator&lt;&lt;</code> (std::ostream &amp;out, Barrier::Type type) </p>

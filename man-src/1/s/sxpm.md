@@ -59,6 +59,6 @@ description: "sxpm – Show an XPM (X PixMap) file and/or convert XPM 1 or 2 fil
 <h2>KNOWN BUGS</h2>
 <p> Some window managers may not accept a pixmap which is not a bitmap as icon because this does not respect ICCCM, many of the well known ones will accept it though. </p>
 <h2>AUTHOR</h2>
-<p> Arnaud Le Hors (lehors [at] sophia.inria.fr)<br />
- Bull Research France<br />
+<p> Arnaud Le Hors (lehors [at] sophia.inria.fr)<br/>
+ Bull Research France<br/>
  Copyright (C) 1989-95 by Groupe Bull. </p>

@@ -9,7 +9,7 @@ description: "bedup – program for deduplication program with additional knowle
 
 <p>bedup &#8211; program for deduplication program with additional knowledge of burp</p>
 <h2>Synopsis</h2>
-<p><code>bedup</code> [<i>options</i>]<br />
+<p><code>bedup</code> [<i>options</i>]<br/>
  A file deduplication program with additional knowledge of burp storage directories. This program comes with the burp backup and restore package. </p>
 <h2>Options</h2>
 <dl>

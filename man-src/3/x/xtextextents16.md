@@ -50,5 +50,5 @@ description: "XTextExtents, XTextExtents16, XQueryTextExtents, XQueryTextExtents
 <dt><code>BadGC</code></dt>
 <dd>A value for a GContext argument does not name a defined GContext.</dd></dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xloadfont/">XLoadFont</a>(3), <a href="/docs/linux/man/3-xtextwidth/">XTextWidth</a>(3)<br />
+<p><a href="/docs/linux/man/3-xloadfont/">XLoadFont</a>(3), <a href="/docs/linux/man/3-xtextwidth/">XTextWidth</a>(3)<br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

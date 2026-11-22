@@ -18,8 +18,8 @@ description: "sc::ShellPairsCints –"
 <p> <code>ShellPairsCints</code> (const <code>Ref</code>&lt; <code>ShellPairsCints</code> &gt; &amp;) </p>
 <p> <code>ShellPairsCints</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;) </p>
 <p> <code>ShellPairsCints</code> (<code>StateIn</code> &amp;) </p>
-<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br />
- <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br />
+<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br/>
+ <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br/>
  <code>ShellPairCints</code> * <code>shell_pair</code> (int si, int sj) const</p>
 <h3>Friends</h3>
 <pre><code>void init_shell_pair (ShellPairsCints &amp;)</code></pre>

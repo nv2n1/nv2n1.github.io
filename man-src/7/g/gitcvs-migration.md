@@ -27,7 +27,7 @@ $ cd my-project</pre>
 </dd></dl>
 <p> which merges in any work that others might have done since the clone operation. If there are uncommitted changes in your working tree, commit them first before running git pull. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> The <i>pull</i> command knows where to get updates from because of certain configuration variables that were set by the first <i>git clone</i> command; see <code>git config -l</code> and the <code><a href="/docs/linux/man/1-git-config/">git-config</a></code>(1) man page for details. </p>
 </dl>
 <p> You can update the shared repository with your changes by first committing your changes, and then using the <i>git push</i> command: </p>
@@ -62,7 +62,7 @@ $ git --bare fetch /home/alice/myproject master:master</pre>
 <p> Make sure committers have a umask of at most 027, so that the directories they create are writable and searchable by other group members.</p>
 <h2>Importing A Cvs Archive</h2>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> These instructions use the <code>git-cvsimport</code> script which ships with git, but other importers may provide better results. See the note in <code><a href="/docs/linux/man/1-git-cvsimport/">git-cvsimport</a></code>(1) for other options. </p>
 </dl>
 <p> First, install version 2.1 or higher of cvsps from m[blue]<code><a rel="nofollow" href="https://github.com/andreyvit/cvsps">https://github.com/andreyvit/cvsps</a></code>m[] and make sure it is in your path. Then cd to a checked out CVS working directory of the project you are interested in and run <code><a href="/docs/linux/man/1-git-cvsimport/">git-cvsimport</a></code>(1): </p>
@@ -77,7 +77,7 @@ $ git --bare fetch /home/alice/myproject master:master</pre>
 <p> If you want a shared repository, you will need to make a bare clone of the imported directory, as described above. Then treat the imported directory as another development clone for purposes of merging incremental imports.</p>
 <h2>Advanced Shared Repository Management</h2>
 <p>Git allows you to specify scripts called &quot;hooks&quot; to be run at certain points. You can use these, for example, to send all commits to the shared repository to a mailing list. See <code><a href="/docs/linux/man/5-githooks/">githooks</a></code>(5). </p>
-<p> You can enforce finer grained permissions using update hooks. See m[blue]<code>Controlling access to branches using update hooks</code>m[]<font SIZE="-2">[1]</font>.</p>
+<p> You can enforce finer grained permissions using update hooks. See m[blue]<code>Controlling access to branches using update hooks</code>m[][1].</p>
 <h2>Providing Cvs Access To A Git Repository</h2>
 <p>It is also possible to provide true CVS access to a Git repository, so that developers can still use CVS; see <code><a href="/docs/linux/man/1-git-cvsserver/">git-cvsserver</a></code>(1) for details.</p>
 <h2>Alternative Development Models</h2>
@@ -85,7 +85,7 @@ $ git --bare fetch /home/alice/myproject master:master</pre>
 <p> For example, you can choose a single person to maintain the project&#8217;s primary public repository. Other developers then clone this repository and each work in their own clone. When they have a series of changes that they&#8217;re happy with, they ask the maintainer to pull from the branch containing the changes. The maintainer reviews their changes and pulls them into the primary repository, which other developers pull from as necessary to stay coordinated. The Linux kernel and other projects use variants of this model. </p>
 <p> With a small group, developers may just pull changes from each other&#8217;s repositories without the need for a central maintainer.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-gittutorial/">gittutorial</a></code>(7), <code><a href="/docs/linux/man/7-gittutorial-2/">gittutorial-2</a></code>(7), <code><a href="/docs/linux/man/7-gitcore-tutorial/">gitcore-tutorial</a></code>(7), <code><a href="/docs/linux/man/7-gitglossary/">gitglossary</a></code>(7), <code><a href="/docs/linux/man/7-giteveryday/">giteveryday</a></code>(7), m[blue]<code>The Git User&#8217;s Manual</code>m[]<font SIZE="-2">[2]</font></p>
+<p><code><a href="/docs/linux/man/7-gittutorial/">gittutorial</a></code>(7), <code><a href="/docs/linux/man/7-gittutorial-2/">gittutorial-2</a></code>(7), <code><a href="/docs/linux/man/7-gitcore-tutorial/">gitcore-tutorial</a></code>(7), <code><a href="/docs/linux/man/7-gitglossary/">gitglossary</a></code>(7), <code><a href="/docs/linux/man/7-giteveryday/">giteveryday</a></code>(7), m[blue]<code>The Git User&#8217;s Manual</code>m[][2]</p>
 <h2>Git</h2>
 <p>Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite</p>
 <h2>Notes</h2>

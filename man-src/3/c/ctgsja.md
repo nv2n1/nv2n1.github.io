@@ -11,7 +11,7 @@ description: "ctgsja.f –"
 <p> ctgsja.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>ctgsja</code> (JOBU, JOBV, JOBQ, M, P, N, K, L, A, LDA, B, LDB, TOLA, TOLB, ALPHA, BETA, U, LDU, V, LDV, Q, LDQ, WORK, NCYCLE, INFO)<br />
+<p> subroutine <code>ctgsja</code> (JOBU, JOBV, JOBQ, M, P, N, K, L, A, LDA, B, LDB, TOLA, TOLB, ALPHA, BETA, U, LDU, V, LDV, Q, LDQ, WORK, NCYCLE, INFO)<br/>
  <i></i><code>CTGSJA</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ctgsja (characterJOBU, characterJOBV, characterJOBQ, integerM, integerP, integerN, integerK, integerL, complex, dimension( lda, * )A, integerLDA, complex, dimension( ldb, * )B, integerLDB, realTOLA, realTOLB, real, dimension( * )ALPHA, real, dimension( * )BETA, complex, dimension( ldu, * )U, integerLDU, complex, dimension( ldv, * )V, integerLDV, complex, dimension( ldq, * )Q, integerLDQ, complex, dimension( * )WORK, integerNCYCLE, integerINFO)</h3>
@@ -168,50 +168,50 @@ A23 is L - by - L upper triangular if M - K - L &gt;= 0,
           ALPHA is REAL array, dimension (N)
 </pre>
 <p> <i>BETA</i> </p>
-<p>BETA is REAL array, dimension(N) On exit, ALPHA and BETA contain the generalized singular value pairs of A and B;<br />
-ALPHA(1<br />
-      : K) = 1,<br />
-        BETA(1<br />
-             : K) = 0,<br />
-        and if M &#8211; K &#8211; L &gt;= 0,<br />
-        ALPHA(K + 1<br />
-              : K + L) = diag(C),<br />
-        BETA(K + 1<br />
-             : K + L) = diag(S),<br />
-        or if M &#8211; K &#8211; L &lt; 0,<br />
-        ALPHA(K + 1<br />
-              : M) = C,<br />
-        ALPHA(M + 1<br />
-              : K + L) = 0 BETA(K + 1<br />
-                                : M) = S,<br />
-        BETA(M + 1<br />
-             : K + L) = 1. Furthermore,<br />
-        if K + L &lt; N,<br />
-        ALPHA(K + L + 1<br />
-              : N) = 0 BETA(K + L + 1<br />
+<p>BETA is REAL array, dimension(N) On exit, ALPHA and BETA contain the generalized singular value pairs of A and B;<br/>
+ALPHA(1<br/>
+      : K) = 1,<br/>
+        BETA(1<br/>
+             : K) = 0,<br/>
+        and if M &#8211; K &#8211; L &gt;= 0,<br/>
+        ALPHA(K + 1<br/>
+              : K + L) = diag(C),<br/>
+        BETA(K + 1<br/>
+             : K + L) = diag(S),<br/>
+        or if M &#8211; K &#8211; L &lt; 0,<br/>
+        ALPHA(K + 1<br/>
+              : M) = C,<br/>
+        ALPHA(M + 1<br/>
+              : K + L) = 0 BETA(K + 1<br/>
+                                : M) = S,<br/>
+        BETA(M + 1<br/>
+             : K + L) = 1. Furthermore,<br/>
+        if K + L &lt; N,<br/>
+        ALPHA(K + L + 1<br/>
+              : N) = 0 BETA(K + L + 1<br/>
                             : N) = 0.</p>
 <p> <i>U</i> </p>
-<p>U is COMPLEX array, dimension(LDU, M) On entry, if JOBU = &#8216;U&#8217;, U must contain a matrix U1(usually the unitary matrix returned by CGGSVP).On exit,<br />
-                                                   if JOBU = &#8216;I&#8217;, U contains the unitary matrix U;<br />
-if JOBU<br />
+<p>U is COMPLEX array, dimension(LDU, M) On entry, if JOBU = &#8216;U&#8217;, U must contain a matrix U1(usually the unitary matrix returned by CGGSVP).On exit,<br/>
+                                                   if JOBU = &#8216;I&#8217;, U contains the unitary matrix U;<br/>
+if JOBU<br/>
 = &#8216;U&#8217;, U contains the product U1 *U.If JOBU = &#8216;N&#8217;, U is not referenced.</p>
 <p> <i>LDU</i> </p>
-<p>LDU is INTEGER<br />
-        The leading dimension of the array U.LDU &gt;= max(1, M) if JOBU = &#8216;U&#8217;;<br />
+<p>LDU is INTEGER<br/>
+        The leading dimension of the array U.LDU &gt;= max(1, M) if JOBU = &#8216;U&#8217;;<br/>
 LDU &gt;= 1 otherwise.</p>
 <p> <i>V</i> </p>
-<p>V is COMPLEX array, dimension(LDV, P) On entry, if JOBV = &#8216;V&#8217;, V must contain a matrix V1(usually the unitary matrix returned by CGGSVP).On exit,<br />
-                                                   if JOBV = &#8216;I&#8217;, V contains the unitary matrix V;<br />
-if JOBV<br />
+<p>V is COMPLEX array, dimension(LDV, P) On entry, if JOBV = &#8216;V&#8217;, V must contain a matrix V1(usually the unitary matrix returned by CGGSVP).On exit,<br/>
+                                                   if JOBV = &#8216;I&#8217;, V contains the unitary matrix V;<br/>
+if JOBV<br/>
 = &#8216;V&#8217;, V contains the product V1 *V.If JOBV = &#8216;N&#8217;, V is not referenced.</p>
 <p> <i>LDV</i> </p>
-<p>LDV is INTEGER<br />
-        The leading dimension of the array V.LDV &gt;= max(1, P) if JOBV = &#8216;V&#8217;;<br />
+<p>LDV is INTEGER<br/>
+        The leading dimension of the array V.LDV &gt;= max(1, P) if JOBV = &#8216;V&#8217;;<br/>
 LDV &gt;= 1 otherwise.</p>
 <p> <i>Q</i> </p>
-<p>Q is COMPLEX array, dimension(LDQ, N) On entry, if JOBQ = &#8216;Q&#8217;, Q must contain a matrix Q1(usually the unitary matrix returned by CGGSVP).On exit,<br />
-                                                   if JOBQ = &#8216;I&#8217;, Q contains the unitary matrix Q;<br />
-if JOBQ<br />
+<p>Q is COMPLEX array, dimension(LDQ, N) On entry, if JOBQ = &#8216;Q&#8217;, Q must contain a matrix Q1(usually the unitary matrix returned by CGGSVP).On exit,<br/>
+                                                   if JOBQ = &#8216;I&#8217;, Q contains the unitary matrix Q;<br/>
+if JOBQ<br/>
 = &#8216;Q&#8217;, Q contains the product Q1 *Q.If JOBQ = &#8216;N&#8217;, Q is not referenced.</p>
 <p> <i>LDQ</i> </p>
 <pre><code>

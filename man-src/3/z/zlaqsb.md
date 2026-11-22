@@ -10,7 +10,7 @@ description: "zlaqsb.f –"
 <p>zlaqsb.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlaqsb</code> (UPLO, N, KD, AB, LDAB, S, SCOND, AMAX, EQUED)<br />
+<p>subroutine <code>zlaqsb</code> (UPLO, N, KD, AB, LDAB, S, SCOND, AMAX, EQUED)<br/>
  <i></i><code>ZLAQSB</code> scales a symmetric/Hermitian band matrix, using scaling factors computed by spbequ.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlaqsb (characterUPLO, integerN, integerKD, complex*16, dimension( ldab, * )AB, integerLDAB, double precision, dimension( * )S, double precisionSCOND, double precisionAMAX, characterEQUED)</h3>

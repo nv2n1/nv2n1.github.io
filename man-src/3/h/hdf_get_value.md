@@ -17,9 +17,9 @@ description: "hdf_get_value – Return the value of a node in the data set"
 char *hdf_get_value(HDF *hdf, const char *name, const char *defval);
 </code></pre>
 <h2>ARGUMENTS</h2>
-<p> hdf -&gt; the dataset node to start from<br />
- name -&gt; the name to walk the data set to<br />
- defval -&gt; the default value to return if the node doesn&#8217;t<br />
+<p> hdf -&gt; the dataset node to start from<br/>
+ name -&gt; the name to walk the data set to<br/>
+ defval -&gt; the default value to return if the node doesn&#8217;t<br/>
  exist </p>
 <h2>DESCRIPTION</h2>
 <p> hdf_get_value walks the data set pointed to by hdf via name and returns the string value located there, or defval if the node doesn&#8217;t exist </p>

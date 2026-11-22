@@ -11,7 +11,7 @@ description: "std::is_default_constructible< _Tp > –"
 <h2>Synopsis</h2>
 <p> Inherits <code>std::integral_constant&lt; bool,(__is_default_constructible_safe&lt; _Tp &gt;::value)&gt;</code>. Inherited by std::__is_constructible_impl&lt; _Tp &gt;.</p>
 <h3>Public Types</h3>
-<p>typedef <code>integral_constant</code><br />
+<p>typedef <code>integral_constant</code><br/>
  &lt; bool, __v &gt; <code>type</code>&quot; </p>
 <p> typedef bool <code>value_type</code></p>
 <h3>Public Member Functions</h3>

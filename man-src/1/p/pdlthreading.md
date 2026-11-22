@@ -9,13 +9,13 @@ description: "PDL::Threading – Tutorial for PDL’s Threading feature"
 
 <p>PDL::Threading &#8211; Tutorial for PDL&#8217;s Threading feature </p>
 <h2>Introduction</h2>
-<p>One of the most powerful features of <font SIZE="-1">PDL</font> is <code>threading</code>, which can produce very compact and very fast <font SIZE="-1">PDL</font> code by avoiding multiple nested for loops that C and <font SIZE="-1">BASIC</font> users may be familiar with. The trouble is that it can take some getting used to, and new users may not appreciate the benefits of threading. </p>
-<p> Other vector based languages, such as <font SIZE="-1">MATLAB,</font> use a subset of threading techniques, but <font SIZE="-1">PDL</font> shines by completely generalizing them for all sorts of vector-based applications.</p>
+<p>One of the most powerful features of PDL is <code>threading</code>, which can produce very compact and very fast PDL code by avoiding multiple nested for loops that C and BASIC users may be familiar with. The trouble is that it can take some getting used to, and new users may not appreciate the benefits of threading. </p>
+<p> Other vector based languages, such as MATLAB, use a subset of threading techniques, but PDL shines by completely generalizing them for all sorts of vector-based applications.</p>
 <h2>Terminology: Piddle</h2>
-<p><font SIZE="-1">MATLAB</font> typically refers to vectors, matrices, and arrays. Perl already has arrays, and the terms &#8220;vector&#8221; and &#8220;matrix&#8221; typically refer to one- and two-dimensional collections of data. Having no good term to describe their object, <font SIZE="-1">PDL</font> developers coined the term &quot;<i>piddle</i>&quot; to give a name to their data type. </p>
+<p>MATLAB typically refers to vectors, matrices, and arrays. Perl already has arrays, and the terms &#8220;vector&#8221; and &#8220;matrix&#8221; typically refer to one- and two-dimensional collections of data. Having no good term to describe their object, PDL developers coined the term &quot;<i>piddle</i>&quot; to give a name to their data type. </p>
 <p> A <i>piddle</i> consists of a series of numbers organized as an N-dimensional data set. Piddles provide efficient storage and fast computation of large N-dimensional matrices. They are highly optimized for numerical work.</p>
 <h2>Thinking In Terms Of Threading</h2>
-<p>If you have used <font SIZE="-1">PDL</font> for a little while already, you may have been using threading without realising it. Start the <font SIZE="-1">PDL</font> shell (type <tt>&quot;perldl&quot;</tt> or <tt>&quot;pdl2&quot;</tt> on a terminal). Most examples in this tutorial use the <font SIZE="-1">PDL</font> shell. Make sure that PDL::NiceSlice and PDL::AutoLoader are enabled. For example: </p>
+<p>If you have used PDL for a little while already, you may have been using threading without realising it. Start the PDL shell (type <tt>&quot;perldl&quot;</tt> or <tt>&quot;pdl2&quot;</tt> on a terminal). Most examples in this tutorial use the PDL shell. Make sure that PDL::NiceSlice and PDL::AutoLoader are enabled. For example: </p>
 <pre> % pdl2
  perlDL shell v1.352
  ...
@@ -48,8 +48,8 @@ description: "PDL::Threading – Tutorial for PDL’s Threading feature"
  a(x,y) = a(x,y) + 3
  }
  }</pre>
-<p><code>Note</code>: Notice that indices start at 0, as in Perl, C and Java (and unlike <font SIZE="-1">MATLAB</font> and <font SIZE="-1">IDL</font>). </p>
-<p> But with <font SIZE="-1">PDL,</font> we can just write: </p>
+<p><code>Note</code>: Notice that indices start at 0, as in Perl, C and Java (and unlike MATLAB and IDL). </p>
+<p> But with PDL, we can just write: </p>
 <pre> pdl&gt; $b = $a + 3
  pdl&gt; p $b
  [
@@ -80,11 +80,11 @@ description: "PDL::Threading – Tutorial for PDL’s Threading feature"
  [77 77 77 77 77 77 77 77 77 77 77]
  [88 88 88 88 88 88 88 88 88 88 88]
  ]</pre>
-<p>Two things to note here: First, the value of <tt>$a</tt> is still the same. Try <tt>&quot;p $a&quot;</tt> to check. Second, <font SIZE="-1">PDL</font> automatically subtracted <tt>$line</tt> from each row in <tt>$a</tt>. Why did it do that? Let&#8217;s look at the dimensions of <tt>$a</tt>, <tt>$line</tt> and <tt>$c</tt>: </p>
+<p>Two things to note here: First, the value of <tt>$a</tt> is still the same. Try <tt>&quot;p $a&quot;</tt> to check. Second, PDL automatically subtracted <tt>$line</tt> from each row in <tt>$a</tt>. Why did it do that? Let&#8217;s look at the dimensions of <tt>$a</tt>, <tt>$line</tt> and <tt>$c</tt>: </p>
 <pre> pdl&gt; p $line-&gt;info =&gt; PDL: Double D [11]
  pdl&gt; p $a-&gt;info =&gt; PDL: Double D [11,9]
  pdl&gt; p $c-&gt;info =&gt; PDL: Double D [11,9]</pre>
-<p>So, both <tt>$a</tt> and <tt>$line</tt> have the same number of elements in the 0th dimension! What <font SIZE="-1">PDL</font> then did was thread over the higher dimensions in <tt>$a</tt> and repeated the same operation 9 times to all the rows on <tt>$a</tt>. This is <font SIZE="-1">PDL</font> threading in action. </p>
+<p>So, both <tt>$a</tt> and <tt>$line</tt> have the same number of elements in the 0th dimension! What PDL then did was thread over the higher dimensions in <tt>$a</tt> and repeated the same operation 9 times to all the rows on <tt>$a</tt>. This is PDL threading in action. </p>
 <p> What if you want to subtract <tt>$line</tt> from the first line in <tt>$a</tt> only? You can do that by specifying the line explicitly: </p>
 <pre> pdl&gt; $a(:,0) -= $line
  pdl&gt; p $a
@@ -106,7 +106,7 @@ description: "PDL::Threading – Tutorial for PDL’s Threading feature"
 <p>Now <tt>$c</tt> is a piddle of the same dimension as <tt>$piddle_4D</tt>. </p>
 <pre> pdl&gt; p $piddle_4D-&gt;info =&gt; PDL: Double D [11,3,7,2]
  pdl&gt; p $c-&gt;info =&gt; PDL: Double D [11,3,7,2]</pre>
-<p>This time <font SIZE="-1">PDL</font> has threaded over three higher dimensions automatically, subtracting <tt>$line</tt> all the way. </p>
+<p>This time PDL has threaded over three higher dimensions automatically, subtracting <tt>$line</tt> all the way. </p>
 <p> But, maybe you don&#8217;t want to subtract from the rows (dimension 0), but from the columns (dimension 1). How do I subtract a column of numbers from each column in <tt>$a</tt>? </p>
 <pre> pdl&gt; $cols = sequence(9)
  pdl&gt; p $a-&gt;info =&gt; PDL: Double D [11,9]
@@ -115,9 +115,9 @@ description: "PDL::Threading – Tutorial for PDL’s Threading feature"
 <pre> pdl&gt; p $a - $cols
  PDL: PDL::Ops::minus(a,b,c): Parameter 'b'
  PDL: Mismatched implicit thread dimension 0: should be 11, is 9</pre>
-<p>How do we tell <font SIZE="-1">PDL</font> that we want to subtract from dimension 1 instead?</p>
+<p>How do we tell PDL that we want to subtract from dimension 1 instead?</p>
 <h2>Manipulating Dimensions</h2>
-<p>There are many <font SIZE="-1">PDL</font> functions that let you rearrange the dimensions of <font SIZE="-1">PDL</font> arrays. They are mostly covered in PDL::Slices. The three most common ones are: </p>
+<p>There are many PDL functions that let you rearrange the dimensions of PDL arrays. They are mostly covered in PDL::Slices. The three most common ones are: </p>
 <pre> xchg
  mv
  reorder</pre>
@@ -152,7 +152,7 @@ description: "PDL::Threading – Tutorial for PDL’s Threading feature"
  | | | |
  V V v V
  dimensions: 0 1 2 3</pre>
-<p>Notice what happened. When we wrote <tt>&quot;reorder(3,0,2,1)&quot;</tt> we instructed <font SIZE="-1">PDL</font> to: </p>
+<p>Notice what happened. When we wrote <tt>&quot;reorder(3,0,2,1)&quot;</tt> we instructed PDL to: </p>
 <pre> * Put dimension 3 first.
  * Put dimension 0 next.
  * Put dimension 2 next.
@@ -217,7 +217,7 @@ description: "PDL::Threading – Tutorial for PDL’s Threading feature"
  pdl&gt;
  pdl&gt; p $a-&gt;info =&gt; PDL: Double D [11,9]
  pdl&gt; p $cols-&gt;info =&gt; PDL: Double D [9]</pre>
-<p>How do we tell <font SIZE="-1">PDL</font> to subtract <tt>$cols</tt> along dimension 1 instead of dimension 0? The simplest way is to use the <tt>&quot;xchg&quot;</tt> method and rely on <font SIZE="-1">PDL</font> linking: </p>
+<p>How do we tell PDL to subtract <tt>$cols</tt> along dimension 1 instead of dimension 0? The simplest way is to use the <tt>&quot;xchg&quot;</tt> method and rely on PDL linking: </p>
 <pre> pdl&gt; p $a
  [
  [ 0 1 2 3 4 5 6 7 8 9 10]
@@ -245,16 +245,16 @@ description: "PDL::Threading – Tutorial for PDL’s Threading feature"
  ]</pre>
 <dl>
 <dt>General Strategy:</dt>
-<dd>Move the dimensions you want to operate on to the start of your piddle&#8217;s dimension list. Then let <font SIZE="-1">PDL</font> thread over the higher dimensions.</dd></dl>
+<dd>Move the dimensions you want to operate on to the start of your piddle&#8217;s dimension list. Then let PDL thread over the higher dimensions.</dd></dl>
 <h2>Example: Conway&#8217;S Game Of Life</h2>
-<p>Okay, enough theory. Let&#8217;s do something a bit more interesting: We&#8217;ll write <code>Conway&#8217;s Game of Life</code> in <font SIZE="-1">PDL</font> and see how powerful <font SIZE="-1">PDL</font> can be! </p>
+<p>Okay, enough theory. Let&#8217;s do something a bit more interesting: We&#8217;ll write <code>Conway&#8217;s Game of Life</code> in PDL and see how powerful PDL can be! </p>
 <p> The <code>Game of Life</code> is a simulation run on a big two dimensional grid. Each cell in the grid can either be alive or dead (represented by 1 or 0). The next generation of cells in the grid is calculated with simple rules according to the number of living cells in it&#8217;s immediate neighbourhood: </p>
 <p> 1) If an empty cell has exactly three neighbours, a living cell is generated. </p>
 <p> 2) If a living cell has less than two neighbours, it dies of overfeeding. </p>
 <p> 3) If a living cell has 4 or more neighbours, it dies from starvation. </p>
 <p> Only the first generation of cells is determined by the programmer. After that, the simulation runs completely according to these rules. To calculate the next generation, you need to look at each cell in the 2D field (requiring two loops), calculate the number of live cells adjacent to this cell (requiring another two loops) and then fill the next generation grid.</p>
 <h3>Classical implementation</h3>
-<p>Here&#8217;s a classic way of writing this program in Perl. We only use <font SIZE="-1">PDL</font> for addressing individual cells. </p>
+<p>Here&#8217;s a classic way of writing this program in Perl. We only use PDL for addressing individual cells. </p>
 <pre> #!/usr/bin/perl -w
  use PDL;
  use PDL::NiceSlice;
@@ -304,8 +304,8 @@ description: "PDL::Threading – Tutorial for PDL’s Threading feature"
  $a = $new_a;
  }</pre>
 <p>If you run this, you will see a small glider crawl diagonally across the grid of zeroes. On my machine, it prints out a couple of generations per second.</p>
-<h3>Threaded <font SIZE="-1">PDL</font> implementation</h3>
-<p>And here&#8217;s the threaded version in <font SIZE="-1">PDL.</font> Just four lines of <font SIZE="-1">PDL</font> code, and one of those is printing out the latest generation! </p>
+<h3>Threaded PDL implementation</h3>
+<p>And here&#8217;s the threaded version in PDL. Just four lines of PDL code, and one of those is printing out the latest generation! </p>
 <pre> #!/usr/bin/perl -w
  use PDL;
  use PDL::NiceSlice;
@@ -323,12 +323,12 @@ description: "PDL::Threading – Tutorial for PDL’s Threading feature"
  $a = ((($n == 2) + ($n == 3))* $a) + (($n==3) * !$a);
  print $a;
  }</pre>
-<p>The threaded <font SIZE="-1">PDL</font> version is much faster: </p>
+<p>The threaded PDL version is much faster: </p>
 <pre> Classical =&gt; 32.79 seconds.
  Threaded =&gt; 0.41 seconds.</pre>
 <h3>Explanation</h3>
 <p>How does the threaded version work? </p>
-<p> There are many <font SIZE="-1">PDL</font> functions designed to help you carry out <font SIZE="-1">PDL</font> threading. In this example, the key functions are: </p>
+<p> There are many PDL functions designed to help you carry out PDL threading. In this example, the key functions are: </p>
 <p> <i>Method: </i>&quot;range&quot;<i></i> </p>
 <p> At the simplest level, the <tt>&quot;range&quot;</tt> method is a different way to select a portion of a piddle. Instead of using the <tt>&quot;$a(2,3)&quot;</tt> notation, we use another piddle. </p>
 <pre> pdl&gt; $a = sequence(6,7)
@@ -348,7 +348,7 @@ description: "PDL::Threading – Tutorial for PDL’s Threading feature"
  [
  [13]
  ]</pre>
-<p>At this point, the <tt>&quot;range&quot;</tt> method looks very similar to a regular <font SIZE="-1">PDL</font> slice. But the <tt>&quot;range&quot;</tt> method is more general. For example, you can select several components at once: </p>
+<p>At this point, the <tt>&quot;range&quot;</tt> method looks very similar to a regular PDL slice. But the <tt>&quot;range&quot;</tt> method is more general. For example, you can select several components at once: </p>
 <pre> pdl&gt; $index = pdl [ [1,2],[2,3],[3,4],[4,5] ]
  pdl&gt; p $a-&gt;range( $index )
  [13 20 27 34]</pre>
@@ -361,7 +361,7 @@ description: "PDL::Threading – Tutorial for PDL’s Threading feature"
  [25 26 27]
  ]</pre>
 <p>We can use this to select one or more 3&#215;3 boxes. </p>
-<p> Finally, <tt>&quot;range&quot;</tt> can take a third parameter called the &#8220;boundary&#8221; condition. It tells <font SIZE="-1">PDL</font> what to do if the size box you request goes beyond the edge of the piddle. We won&#8217;t go over all the options. We&#8217;ll just say that the option <tt>&quot;periodic&quot;</tt> means that the piddle &#8220;wraps around&#8221;. For example: </p>
+<p> Finally, <tt>&quot;range&quot;</tt> can take a third parameter called the &#8220;boundary&#8221; condition. It tells PDL what to do if the size box you request goes beyond the edge of the piddle. We won&#8217;t go over all the options. We&#8217;ll just say that the option <tt>&quot;periodic&quot;</tt> means that the piddle &#8220;wraps around&#8221;. For example: </p>
 <pre> pdl&gt; p $a
  [
  [ 0 1 2 3 4 5]
@@ -663,8 +663,8 @@ description: "PDL::Threading – Tutorial for PDL’s Threading feature"
  usleep(100000);
  }</pre>
 <h2>Conclusion: General Strategy</h2>
-<p>The general strategy is: <i>Move the dimensions you want to operate on to the start of your piddle&#8217;s dimension list. Then let </i><font SIZE="-1"><i>PDL</i></font><i> thread over the higher dimensions.</i> </p>
-<p> Threading is a powerful tool that helps eliminate for-loops and can make your code more concise. Hopefully this tutorial has shown why it is worth getting to grips with threading in <font SIZE="-1">PDL.</font></p>
+<p>The general strategy is: <i>Move the dimensions you want to operate on to the start of your piddle&#8217;s dimension list. Then let </i><i>PDL</i><i> thread over the higher dimensions.</i> </p>
+<p> Threading is a powerful tool that helps eliminate for-loops and can make your code more concise. Hopefully this tutorial has shown why it is worth getting to grips with threading in PDL.</p>
 <h2>Copyright</h2>
 <p>Copyright 2010 Matthew Kenworthy (kenworthy [at] strw.leidenuniv.nl) and Daniel Carrera (dcarrera [at] gmail.com). You can distribute and/or modify this document under the same terms as the current Perl license. </p>
 <p> See: <a rel="nofollow" href="http://dev.perl.org/licenses/">http://dev.perl.org/licenses/</a></p>

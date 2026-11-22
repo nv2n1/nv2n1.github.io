@@ -17,20 +17,20 @@ description: "log4cpp::PatternLayout –"
 <h3>Public Member Functions</h3>
 <p><code>PatternLayout</code> () </p>
 <p> virtual <code>~PatternLayout</code> () </p>
-<p> virtual std::string <code>format</code> (const <code>LoggingEvent</code> &amp;event)<br />
- <i>Formats the </i><code>LoggingEvent</code> in the style set by the setConversionPattern call.<br />
- virtual void <code>setConversionPattern</code> (const std::string &amp;conversionPattern) throw (ConfigureFailure)<br />
- <i>Sets the format of log lines handled by this </i><code>PatternLayout</code>.<br />
+<p> virtual std::string <code>format</code> (const <code>LoggingEvent</code> &amp;event)<br/>
+ <i>Formats the </i><code>LoggingEvent</code> in the style set by the setConversionPattern call.<br/>
+ virtual void <code>setConversionPattern</code> (const std::string &amp;conversionPattern) throw (ConfigureFailure)<br/>
+ <i>Sets the format of log lines handled by this </i><code>PatternLayout</code>.<br/>
  virtual std::string <code>getConversionPattern</code> () const </p>
 <p> virtual void <code>clearConversionPattern</code> () </p>
 <h3>Static Public Attributes</h3>
-<p>static const char * <code>DEFAULT_CONVERSION_PATTERN</code> = &#8216;%m%n&#8217;<br />
- <i>The default conversion pattern. </i><br />
- static const char * <code>SIMPLE_CONVERSION_PATTERN</code> = &#8216;%p &#8211; %m%n&#8217;<br />
- <i>A conversion pattern equivalent to the </i><code>SimpleLayout</code>.<br />
- static const char * <code>BASIC_CONVERSION_PATTERN</code> = &#8216;%R %p %c %x: %m%n&#8217;<br />
- <i>A conversion pattern equivalent to the </i><code>BasicLayout</code>.<br />
- static const char * <code>TTCC_CONVERSION_PATTERN</code> = &#8216;%r [%t] %p %c %x &#8211; %m%n&#8217;<br />
+<p>static const char * <code>DEFAULT_CONVERSION_PATTERN</code> = &#8216;%m%n&#8217;<br/>
+ <i>The default conversion pattern. </i><br/>
+ static const char * <code>SIMPLE_CONVERSION_PATTERN</code> = &#8216;%p &#8211; %m%n&#8217;<br/>
+ <i>A conversion pattern equivalent to the </i><code>SimpleLayout</code>.<br/>
+ static const char * <code>BASIC_CONVERSION_PATTERN</code> = &#8216;%R %p %c %x: %m%n&#8217;<br/>
+ <i>A conversion pattern equivalent to the </i><code>BasicLayout</code>.<br/>
+ static const char * <code>TTCC_CONVERSION_PATTERN</code> = &#8216;%r [%t] %p %c %x &#8211; %m%n&#8217;<br/>
  <i>A conversion pattern equivalent to the TTCCLayout. </i></p>
 <h2>Detailed Description</h2>
 <p><code>PatternLayout</code> is a simple fixed format <code>Layout</code> implementation.</p>

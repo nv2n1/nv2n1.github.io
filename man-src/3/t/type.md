@@ -23,7 +23,7 @@ Utility methods</code></pre>
 <h3>Public Member Functions</h3>
 <p><code>Constructors</code> </p>
 <p> <code>ExchangeRate</code> () </p>
-<p> <code>ExchangeRate</code> (const <code>Currency</code> &amp;source, const <code>Currency</code> &amp;target, Decimal rate)<br />
+<p> <code>ExchangeRate</code> (const <code>Currency</code> &amp;source, const <code>Currency</code> &amp;target, Decimal rate)<br/>
  <code>Inspectors</code> </p>
 <pre><code>const Currency &amp; source () const
 the source currency.
@@ -34,9 +34,9 @@ the type
 Decimal rate () const
 the exchange rate (when available)
 Utility methods</code></pre>
-<p> <code>Money</code> <code>exchange</code> (const <code>Money</code> &amp;amount) const<br />
- <i>apply the exchange rate to a cash amount </i><br />
- static <code>ExchangeRate</code> <code>chain</code> (const <code>ExchangeRate</code> &amp;r1, const <code>ExchangeRate</code> &amp;r2)<br />
+<p> <code>Money</code> <code>exchange</code> (const <code>Money</code> &amp;amount) const<br/>
+ <i>apply the exchange rate to a cash amount </i><br/>
+ static <code>ExchangeRate</code> <code>chain</code> (const <code>ExchangeRate</code> &amp;r1, const <code>ExchangeRate</code> &amp;r2)<br/>
  <i>chain two exchange rates </i></p>
 <h2>Detailed Description</h2>
 <p>exchange rate between two currencies </p>

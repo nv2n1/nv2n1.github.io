@@ -11,14 +11,14 @@ description: "Functions –"
 <p> Functions &#8211; </p>
 <p> GRAM Functions.</p>
 <h3>Modules</h3>
-<p> <code>Error Messages</code><br />
- <i>GRAM Error Messages Functions in this section handle converting GRAM error codes to strings which can help the user diagnose GRAM problems. </i><br />
- <code>Message Framing</code><br />
- <i>Message Framing. </i><br />
- <code>Message I/O</code><br />
- <i>Mesage I/O. </i><br />
- <code>Message Packing</code><br />
- <i>Message Packing. </i><br />
+<p> <code>Error Messages</code><br/>
+ <i>GRAM Error Messages Functions in this section handle converting GRAM error codes to strings which can help the user diagnose GRAM problems. </i><br/>
+ <code>Message Framing</code><br/>
+ <i>Message Framing. </i><br/>
+ <code>Message I/O</code><br/>
+ <i>Mesage I/O. </i><br/>
+ <code>Message Packing</code><br/>
+ <i>Message Packing. </i><br/>
  <code>Message Unpacking</code> </p>
 <h2>Detailed Description</h2>
 <p> GRAM Functions. </p>

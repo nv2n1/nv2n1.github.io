@@ -9,19 +9,19 @@ description: "Idle Handlers – Callbacks that are called when the program enter
 
 <p>Idle Handlers &#8211; Callbacks that are called when the program enters or exits an idle state. </p>
 <h3>Functions</h3>
-<p>EAPI <code>Ecore_Idle_Enterer</code> * <code>ecore_idle_enterer_add</code> (int(*func)(void *data), const void *data)<br />
- <i>Add an idle enterer handler. </i><br />
- EAPI <code>Ecore_Idle_Enterer</code> * <code>ecore_idle_enterer_before_add</code> (int(*func)(void *data), const void *data)<br />
- <i>Add an idle enterer handler at the start of the list so it gets called earlier than others. </i><br />
- EAPI void * <code>ecore_idle_enterer_del</code> (<code>Ecore_Idle_Enterer</code> *idle_enterer)<br />
- <i>Delete an idle enterer callback. </i><br />
- EAPI <code>Ecore_Idle_Exiter</code> * <code>ecore_idle_exiter_add</code> (int(*func)(void *data), const void *data)<br />
- <i>Add an idle exiter handler. </i><br />
- EAPI void * <code>ecore_idle_exiter_del</code> (<code>Ecore_Idle_Exiter</code> *idle_exiter)<br />
- <i>Delete an idle exiter handler from the list to be run on exiting idle state. </i><br />
- EAPI <code>Ecore_Idler</code> * <code>ecore_idler_add</code> (int(*func)(void *data), const void *data)<br />
- <i>Add an idler handler. </i><br />
- EAPI void * <code>ecore_idler_del</code> (<code>Ecore_Idler</code> *idler)<br />
+<p>EAPI <code>Ecore_Idle_Enterer</code> * <code>ecore_idle_enterer_add</code> (int(*func)(void *data), const void *data)<br/>
+ <i>Add an idle enterer handler. </i><br/>
+ EAPI <code>Ecore_Idle_Enterer</code> * <code>ecore_idle_enterer_before_add</code> (int(*func)(void *data), const void *data)<br/>
+ <i>Add an idle enterer handler at the start of the list so it gets called earlier than others. </i><br/>
+ EAPI void * <code>ecore_idle_enterer_del</code> (<code>Ecore_Idle_Enterer</code> *idle_enterer)<br/>
+ <i>Delete an idle enterer callback. </i><br/>
+ EAPI <code>Ecore_Idle_Exiter</code> * <code>ecore_idle_exiter_add</code> (int(*func)(void *data), const void *data)<br/>
+ <i>Add an idle exiter handler. </i><br/>
+ EAPI void * <code>ecore_idle_exiter_del</code> (<code>Ecore_Idle_Exiter</code> *idle_exiter)<br/>
+ <i>Delete an idle exiter handler from the list to be run on exiting idle state. </i><br/>
+ EAPI <code>Ecore_Idler</code> * <code>ecore_idler_add</code> (int(*func)(void *data), const void *data)<br/>
+ <i>Add an idler handler. </i><br/>
+ EAPI void * <code>ecore_idler_del</code> (<code>Ecore_Idler</code> *idler)<br/>
  <i>Delete an idler callback from the list to be executed. </i></p>
 <h2>Detailed Description</h2>
 <p>Callbacks that are called when the program enters or exits an idle state. </p>
@@ -35,7 +35,7 @@ description: "Idle Handlers – Callbacks that are called when the program enter
 <p>Add an idle enterer handler. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>func</i> The function to call when entering an idle state.<br />
+<dd><i>func</i> The function to call when entering an idle state.<br/>
  <i>data</i> The data to be passed to the func call</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -44,7 +44,7 @@ description: "Idle Handlers – Callbacks that are called when the program enter
 <p>Add an idle enterer handler at the start of the list so it gets called earlier than others. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>func</i> The function to call when entering an idle state.<br />
+<dd><i>func</i> The function to call when entering an idle state.<br/>
  <i>data</i> The data to be passed to the func call</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -61,7 +61,7 @@ description: "Idle Handlers – Callbacks that are called when the program enter
 <p>Add an idle exiter handler. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>func</i> The function to call when exiting an idle state.<br />
+<dd><i>func</i> The function to call when exiting an idle state.<br/>
  <i>data</i> The data to be passed to the func call</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -78,7 +78,7 @@ description: "Idle Handlers – Callbacks that are called when the program enter
 <p>Add an idler handler. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>func</i> The function to call when idling.<br />
+<dd><i>func</i> The function to call when idling.<br/>
  <i>data</i> The data to be passed to this func call.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

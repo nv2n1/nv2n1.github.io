@@ -10,14 +10,14 @@ description: "dirfd – get directory stream file descriptor"
 
 <p> dirfd &#8211; get directory stream file descriptor </p>
 <h2>SYNOPSIS</h2>
-<p> <code>#include &lt;sys/types.h&gt;</code><br />
+<p> <code>#include &lt;sys/types.h&gt;</code><br/>
  <code>#include &lt;dirent.h&gt;</code> </p>
 <p> <code>int dirfd(DIR *</code><i>dirp</i><code>);</code> </p>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
 <p> <code>dirfd</code>(): </p>
 <dl>
 <dt>
-</dt><dd> /* Since glibc 2.10: */ _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L<br />
+</dt><dd> /* Since glibc 2.10: */ _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The function <code>dirfd</code>() returns the file descriptor associated with the directory stream <i>dirp</i>. </p>

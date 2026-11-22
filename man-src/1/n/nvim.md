@@ -10,9 +10,9 @@ description: "nvim – edit text"
 
 <p> <code>nvim</code> &#8211; edit text </p>
 <h2>SYNOPSIS</h2>
-<p> <code>nvim</code> [<i>options</i> ] [<i>file &#8230;</i> ]<br />
-<code>nvim</code> [<i>options</i> ] &#8211;<br />
-<code>nvim</code> [<i>options</i> ] &#8211;<code>t </code><i>tag</i><br />
+<p> <code>nvim</code> [<i>options</i> ] [<i>file &#8230;</i> ]<br/>
+<code>nvim</code> [<i>options</i> ] &#8211;<br/>
+<code>nvim</code> [<i>options</i> ] &#8211;<code>t </code><i>tag</i><br/>
 <code>nvim</code> [<i>options</i> ] &#8211;<code>q </code>[<i>errorfile</i> ]</p>
 <h2>DESCRIPTION</h2>
 <p> <code>nvim</code> is a text editor based on Vim. Start <code>nvim</code> followed by any number of options and/or files: </p>

@@ -10,7 +10,7 @@ description: "cunm2r.f –"
 <p>cunm2r.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>cunm2r</code> (SIDE, TRANS, M, N, K, A, LDA, TAU, C, LDC, WORK, INFO)<br />
+<p>subroutine <code>cunm2r</code> (SIDE, TRANS, M, N, K, A, LDA, TAU, C, LDC, WORK, INFO)<br/>
  <i></i><code>CUNM2R</code> multiplies a general matrix by the unitary matrix from a QR factorization determined by cgeqrf (unblocked algorithm).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cunm2r (characterSIDE, characterTRANS, integerM, integerN, integerK, complex, dimension( lda, * )A, integerLDA, complex, dimension( * )TAU, complex, dimension( ldc, * )C, integerLDC, complex, dimension( * )WORK, integerINFO)</h3>

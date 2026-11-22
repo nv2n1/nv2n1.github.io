@@ -40,7 +40,7 @@ description: "dspam_clean – perform periodic maintenance of metadata"
 <dd> Operation resulted in an error. </dd>
 </dl>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2002-2012 DSPAM Project<br />
+<p> Copyright &#169; 2002-2012 DSPAM Project<br/>
  All rights reserved. </p>
 <p> For more information, see <a rel="nofollow" href="http://dspam.sourceforge.net.">http://dspam.sourceforge.net.</a> </p>
 <h2>SEE ALSO</h2>

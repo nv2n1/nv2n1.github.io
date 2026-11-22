@@ -26,5 +26,5 @@ description: "xfce4-notifyd-config – configuration GUI for xfce4-notifyd"
 <dt><code>&#8211;display</code>=<i>DISPLAY</i></dt>
 <dd> X display to use</dd></dl>
 <h2>AUTHORS</h2>
-<p> <code>xfce4-notifyd-config</code> was written by Brian Tarricone &lt;bjt23 [at] cornell.edu&gt;.<br />
+<p> <code>xfce4-notifyd-config</code> was written by Brian Tarricone &lt;bjt23 [at] cornell.edu&gt;.<br/>
  This manual page was written by Evgeni Golov &lt;sargentd [at] die-welt.net&gt; for the Debian Project but may be used by everyone under the terms of GPL-2+. </p>

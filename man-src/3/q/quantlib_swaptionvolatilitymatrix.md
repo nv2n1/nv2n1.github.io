@@ -12,32 +12,32 @@ description: "QuantLib::SwaptionVolatilityMatrix – At-the-money swaption-volat
 <p>#include &lt;ql/termstructures/volatility/swaption/swaptionvolmatrix.hpp&gt; </p>
 <p> Inherits QuantLib::SwaptionVolatilityDiscrete, and boost::noncopyable. </p>
 <h3>Public Member Functions</h3>
-<p><code>SwaptionVolatilityMatrix</code> (const <code>Calendar</code> &amp;calendar, <code>BusinessDayConvention</code> bdc, const std::vector&lt; <code>Period</code> &gt; &amp;optionTenors, const std::vector&lt; <code>Period</code> &gt; &amp;swapTenors, const std::vector&lt; std::vector&lt; <code>Handle</code>&lt; <code>Quote</code> &gt; &gt; &gt; &amp;vols, const <code>DayCounter</code> &amp;dayCounter)<br />
- <i>floating reference date, floating market data </i><br />
- <code>SwaptionVolatilityMatrix</code> (const <code>Date</code> &amp;referenceDate, const <code>Calendar</code> &amp;calendar, <code>BusinessDayConvention</code> bdc, const std::vector&lt; <code>Period</code> &gt; &amp;optionTenors, const std::vector&lt; <code>Period</code> &gt; &amp;swapTenors, const std::vector&lt; std::vector&lt; <code>Handle</code>&lt; <code>Quote</code> &gt; &gt; &gt; &amp;vols, const <code>DayCounter</code> &amp;dayCounter)<br />
- <i>fixed reference date, floating market data </i><br />
- <code>SwaptionVolatilityMatrix</code> (const <code>Calendar</code> &amp;calendar, <code>BusinessDayConvention</code> bdc, const std::vector&lt; <code>Period</code> &gt; &amp;optionTenors, const std::vector&lt; <code>Period</code> &gt; &amp;swapTenors, const <code>Matrix</code> &amp;volatilities, const <code>DayCounter</code> &amp;dayCounter)<br />
- <i>floating reference date, fixed market data </i><br />
- <code>SwaptionVolatilityMatrix</code> (const <code>Date</code> &amp;referenceDate, const <code>Calendar</code> &amp;calendar, <code>BusinessDayConvention</code> bdc, const std::vector&lt; <code>Period</code> &gt; &amp;optionTenors, const std::vector&lt; <code>Period</code> &gt; &amp;swapTenors, const <code>Matrix</code> &amp;volatilities, const <code>DayCounter</code> &amp;dayCounter)<br />
- <i>fixed reference date, fixed market data </i><br />
+<p><code>SwaptionVolatilityMatrix</code> (const <code>Calendar</code> &amp;calendar, <code>BusinessDayConvention</code> bdc, const std::vector&lt; <code>Period</code> &gt; &amp;optionTenors, const std::vector&lt; <code>Period</code> &gt; &amp;swapTenors, const std::vector&lt; std::vector&lt; <code>Handle</code>&lt; <code>Quote</code> &gt; &gt; &gt; &amp;vols, const <code>DayCounter</code> &amp;dayCounter)<br/>
+ <i>floating reference date, floating market data </i><br/>
+ <code>SwaptionVolatilityMatrix</code> (const <code>Date</code> &amp;referenceDate, const <code>Calendar</code> &amp;calendar, <code>BusinessDayConvention</code> bdc, const std::vector&lt; <code>Period</code> &gt; &amp;optionTenors, const std::vector&lt; <code>Period</code> &gt; &amp;swapTenors, const std::vector&lt; std::vector&lt; <code>Handle</code>&lt; <code>Quote</code> &gt; &gt; &gt; &amp;vols, const <code>DayCounter</code> &amp;dayCounter)<br/>
+ <i>fixed reference date, floating market data </i><br/>
+ <code>SwaptionVolatilityMatrix</code> (const <code>Calendar</code> &amp;calendar, <code>BusinessDayConvention</code> bdc, const std::vector&lt; <code>Period</code> &gt; &amp;optionTenors, const std::vector&lt; <code>Period</code> &gt; &amp;swapTenors, const <code>Matrix</code> &amp;volatilities, const <code>DayCounter</code> &amp;dayCounter)<br/>
+ <i>floating reference date, fixed market data </i><br/>
+ <code>SwaptionVolatilityMatrix</code> (const <code>Date</code> &amp;referenceDate, const <code>Calendar</code> &amp;calendar, <code>BusinessDayConvention</code> bdc, const std::vector&lt; <code>Period</code> &gt; &amp;optionTenors, const std::vector&lt; <code>Period</code> &gt; &amp;swapTenors, const <code>Matrix</code> &amp;volatilities, const <code>DayCounter</code> &amp;dayCounter)<br/>
+ <i>fixed reference date, fixed market data </i><br/>
  <code>SwaptionVolatilityMatrix</code> (const <code>Date</code> &amp;referenceDate, const std::vector&lt; <code>Date</code> &gt; &amp;optionDates, const std::vector&lt; <code>Period</code> &gt; &amp;swapTenors, const <code>Matrix</code> &amp;volatilities, const <code>DayCounter</code> &amp;dayCounter) </p>
 <p> <code>LazyObject interface</code> </p>
 <p> void <code>performCalculations</code> () const </p>
 <p> <code>TermStructure interface</code> </p>
-<p> <code>Date</code> <code>maxDate</code> () const<br />
+<p> <code>Date</code> <code>maxDate</code> () const<br/>
  <i>the latest date for which the curve can return values </i> </p>
 <p> <code>VolatilityTermStructure interface</code> </p>
-<p> Rate <code>minStrike</code> () const<br />
- <i>the minimum strike for which the term structure can return vols </i><br />
- Rate <code>maxStrike</code> () const<br />
+<p> Rate <code>minStrike</code> () const<br/>
+ <i>the minimum strike for which the term structure can return vols </i><br/>
+ Rate <code>maxStrike</code> () const<br/>
  <i>the maximum strike for which the term structure can return vols </i> </p>
 <p> <code>SwaptionVolatilityStructure interface</code> </p>
-<p> const <code>Period</code> &amp; <code>maxSwapTenor</code> () const<br />
+<p> const <code>Period</code> &amp; <code>maxSwapTenor</code> () const<br/>
  <i>the largest length for which the term structure can return vols </i> </p>
 <p> <code>Other inspectors</code> </p>
-<p> std::pair&lt; Size, Size &gt; <code>locate</code> (const <code>Date</code> &amp;optionDate, const <code>Period</code> &amp;swapTenor) const<br />
- <i>returns the lower indexes of surrounding volatility matrix corners </i><br />
- std::pair&lt; Size, Size &gt; <code>locate</code> (Time optionTime, Time swapLength) const<br />
+<p> std::pair&lt; Size, Size &gt; <code>locate</code> (const <code>Date</code> &amp;optionDate, const <code>Period</code> &amp;swapTenor) const<br/>
+ <i>returns the lower indexes of surrounding volatility matrix corners </i><br/>
+ std::pair&lt; Size, Size &gt; <code>locate</code> (Time optionTime, Time swapLength) const<br/>
  <i>returns the lower indexes of surrounding volatility matrix corners </i></p>
 <h3>Protected Member Functions</h3>
 <p>boost::shared_ptr&lt; <code>SmileSection</code> &gt; <code>smileSectionImpl</code> (Time, Time) const </p>

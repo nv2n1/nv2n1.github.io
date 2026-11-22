@@ -18,11 +18,11 @@ description: "upssched.conf – Configuration for upssched timer program"
 <dl>
 <dd>Required. This sets the file name of the socket which will be used for interprocess communications. This should be in a directory where normal users can&#8217;t create the file, due to the possibility of symlinking and other evil.</dd></dl>
 <dl>
-<dd><font SIZE="+1"> <code>Caution</code> </font> </dd>
+<dd> <code>Caution</code>  </dd>
 <p> if you are running Solaris or similar, the permissions that upssched sets on this file <code>are not enough</code> to keep you safe. If your OS ignores the permissions on a FIFO, then you MUST put this in a protected directory! </p>
 </dl>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> by default, <code><a href="/docs/linux/man/8-upsmon/">upsmon</a></code>(8) will run upssched as whatever user you have defined with RUN_AS_USER in <code>upsmon.conf</code>(8). Make sure that user can create files and write to files in the path you use for PIPEFN and LOCKFN. </p>
 </dl>
 <p> My recommendation: create a special directory for upssched, make it owned by your upsmon user, then use it for both. </p>

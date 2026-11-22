@@ -10,7 +10,7 @@ description: "dstegr.f –"
 <p>dstegr.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dstegr</code> (JOBZ, RANGE, N, D, E, VL, VU, IL, IU, ABSTOL, M, W, Z, LDZ, ISUPPZ, WORK, LWORK, IWORK, LIWORK, INFO)<br />
+<p>subroutine <code>dstegr</code> (JOBZ, RANGE, N, D, E, VL, VU, IL, IU, ABSTOL, M, W, Z, LDZ, ISUPPZ, WORK, LWORK, IWORK, LIWORK, INFO)<br/>
  <i></i><code>DSTEGR</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dstegr (characterJOBZ, characterRANGE, integerN, double precision, dimension( * )D, double precision, dimension( * )E, double precisionVL, double precisionVU, integerIL, integerIU, double precisionABSTOL, integerM, double precision, dimension( * )W, double precision, dimension( ldz, * )Z, integerLDZ, integer, dimension( * )ISUPPZ, double precision, dimension( * )WORK, integerLWORK, integer, dimension( * )IWORK, integerLIWORK, integerINFO)</h3>

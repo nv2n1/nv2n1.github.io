@@ -50,7 +50,7 @@ description: "tripplite_usb – Driver for older Tripp Lite USB UPSes (not PDC H
 <dl>
 <dd>A regular expression to match the product string for the UPS. This would be useful if you have two different Tripp Lite UPS models connected to the system, and you want to be sure that you shut them down in the correct order.</dd></dl>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> This regex is matched against the full USB product string as seen in <a href="/docs/linux/man/8-lsusb/">lsusb</a>(8). The ups.model in the <code>upsc</code>(1) output only lists the name after TRIPP LITE, so to match a SMART2200RMXL2U, you could use the regex .*SMART2200.*. </p>
 </dl>
 <p> <code>productid</code></p>

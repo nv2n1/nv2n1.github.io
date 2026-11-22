@@ -198,49 +198,49 @@ name:
 <dd>The given <i>principal_name</i> will be mapped to the given <i>username</i> if the <i>REALM</i> is a default realm.</dd></dl>
 <p> }</p>
 <p>auth_to_local = HEIMDAL_DEFAULT</p>
-<p>Use the Heimdal default principal to username mapping.<br />
-Applies to principals from the<br />
+<p>Use the Heimdal default principal to username mapping.<br/>
+Applies to principals from the<br/>
 REALM</p>
-<p>if and only if<br />
+<p>if and only if<br/>
 REALM</p>
-<p>is a default realm.<br />
+<p>is a default realm.<br/>
 auth_to_local = DEFAULT</p>
-<p>Use the MIT default principal to username mapping.<br />
-Applies to principals from the<br />
+<p>Use the MIT default principal to username mapping.<br/>
+Applies to principals from the<br/>
 REALM</p>
-<p>if and only if<br />
+<p>if and only if<br/>
 REALM</p>
-<p>is a default realm.<br />
+<p>is a default realm.<br/>
 auth_to_local = DB:/path/to/db.txt</p>
-<p>Use a binary search of the given DB.  The DB must be a flat-text<br />
-file sortedf in the &quot;C&quot; locale, with each record being a line<br />
-(separated by either LF or CRLF) consisting of a principal name<br />
-followed by whitespace followed by a username.<br />
-Applies to principals from the<br />
+<p>Use a binary search of the given DB.  The DB must be a flat-text<br/>
+file sortedf in the &quot;C&quot; locale, with each record being a line<br/>
+(separated by either LF or CRLF) consisting of a principal name<br/>
+followed by whitespace followed by a username.<br/>
+Applies to principals from the<br/>
 REALM</p>
-<p>if and only if<br />
+<p>if and only if<br/>
 REALM</p>
-<p>is a default realm.<br />
+<p>is a default realm.<br/>
 auth_to_local = DB:/path/to/db</p>
-<p>Use the given DB, if there&#8217;s a plugin for it.<br />
-Applies to principals from the<br />
+<p>Use the given DB, if there&#8217;s a plugin for it.<br/>
+Applies to principals from the<br/>
 REALM</p>
-<p>if and only if<br />
+<p>if and only if<br/>
 REALM</p>
-<p>is a default realm.<br />
+<p>is a default realm.<br/>
 auth_to_local = RULE:&#8230;</p>
-<p>Use the given rule, if there&#8217;s a plugin for it.<br />
-Applies to principals from the<br />
+<p>Use the given rule, if there&#8217;s a plugin for it.<br/>
+Applies to principals from the<br/>
 REALM</p>
-<p>if and only if<br />
+<p>if and only if<br/>
 REALM</p>
-<p>is a default realm.<br />
+<p>is a default realm.<br/>
 auth_to_local = NONE</p>
-<p>No additional principal to username mapping is done. Note that<br />
+<p>No additional principal to username mapping is done. Note that<br/>
 auth_to_local_names</p>
-<p>and any preceding<br />
+<p>and any preceding<br/>
 auth_to_local</p>
-<p>rules have precedence.<br />
+<p>rules have precedence.<br/>
 }</p>
 <dt><code>[capaths]</code></dt>
 <dd>
@@ -274,96 +274,96 @@ auth_to_local</p>
 <dd>Use this file as the log of changes performed to the database. This file is used by <code>ipropd-master</code> for propagating changes to slaves.</dd></dl>
 <p> }</p>
 <p>max-request = SIZE</p>
-<p>Maximum size of a kdc request.<br />
+<p>Maximum size of a kdc request.<br/>
 require-preauth = BOOL</p>
-<p>If set pre-authentication is required.<br />
-Since krb4 requests are not pre-authenticated they will be rejected.<br />
+<p>If set pre-authentication is required.<br/>
+Since krb4 requests are not pre-authenticated they will be rejected.<br/>
 ports = list of ports</p>
-<p>List of ports the kdc should listen to.<br />
+<p>List of ports the kdc should listen to.<br/>
 addresses = list of interfaces</p>
-<p>List of addresses the kdc should bind to.<br />
+<p>List of addresses the kdc should bind to.<br/>
 enable-kerberos4 = BOOL</p>
-<p>Turn on Kerberos 4 support.<br />
+<p>Turn on Kerberos 4 support.<br/>
 v4-realm = REALM</p>
-<p>To what realm v4 requests should be mapped.<br />
+<p>To what realm v4 requests should be mapped.<br/>
 enable-524 = BOOL</p>
-<p>Should the Kerberos 524 converting facility be turned on.<br />
-Default is the same as<br />
+<p>Should the Kerberos 524 converting facility be turned on.<br/>
+Default is the same as<br/>
 enable-kerberos4</p>
 <p>enable-http = BOOL</p>
-<p>Should the kdc answer kdc-requests over http.<br />
+<p>Should the kdc answer kdc-requests over http.<br/>
 tgt-use-strongest-session-key = BOOL</p>
-<p>If this is TRUE then the KDC will prefer the strongest key from the<br />
-client&#8217;s AS-REQ or TGS-REQ enctype list for the ticket session key that<br />
-is supported by the KDC and the target principal when the target<br />
-principal is a krbtgt principal.  Else it will prefer the first key from<br />
-the client&#8217;s AS-REQ enctype list that is also supported by the KDC and<br />
-the target principal.  Defaults to FALSE.<br />
+<p>If this is TRUE then the KDC will prefer the strongest key from the<br/>
+client&#8217;s AS-REQ or TGS-REQ enctype list for the ticket session key that<br/>
+is supported by the KDC and the target principal when the target<br/>
+principal is a krbtgt principal.  Else it will prefer the first key from<br/>
+the client&#8217;s AS-REQ enctype list that is also supported by the KDC and<br/>
+the target principal.  Defaults to FALSE.<br/>
 svc-use-strongest-session-key = BOOL</p>
-<p>Like tgt-use-strongest-session-key, but applies to the session key<br />
-enctype of tickets for services other than krbtgt principals. Defaults<br />
-to FALSE.<br />
+<p>Like tgt-use-strongest-session-key, but applies to the session key<br/>
+enctype of tickets for services other than krbtgt principals. Defaults<br/>
+to FALSE.<br/>
 preauth-use-strongest-session-key = BOOL</p>
-<p>If TRUE then select the strongest possible enctype from the client&#8217;s<br />
-AS-REQ for PA-ETYPE-INFO2 (i.e., for password-based pre-authentication).<br />
-Else pick the first supported enctype from the client&#8217;s AS-REQ.  Defaults<br />
-to FALSE.<br />
+<p>If TRUE then select the strongest possible enctype from the client&#8217;s<br/>
+AS-REQ for PA-ETYPE-INFO2 (i.e., for password-based pre-authentication).<br/>
+Else pick the first supported enctype from the client&#8217;s AS-REQ.  Defaults<br/>
+to FALSE.<br/>
 use-strongest-server-key = BOOL</p>
-<p>If TRUE then the KDC picks, for the ticket encrypted part&#8217;s key, the<br />
-first supported enctype from the target service principal&#8217;s hdb entry&#8217;s<br />
-current keyset. Else the KDC picks the first supported enctype from the<br />
-target service principal&#8217;s hdb entry&#8217;s current keyset.  Defaults to TRUE.<br />
+<p>If TRUE then the KDC picks, for the ticket encrypted part&#8217;s key, the<br/>
+first supported enctype from the target service principal&#8217;s hdb entry&#8217;s<br/>
+current keyset. Else the KDC picks the first supported enctype from the<br/>
+target service principal&#8217;s hdb entry&#8217;s current keyset.  Defaults to TRUE.<br/>
 check-ticket-addresses = BOOL</p>
 <p>Verify the addresses in the tickets used in tgs requests.</p>
 <p>allow-null-ticket-addresses = BOOL</p>
 <p>Allow address-less tickets.</p>
 <p>allow-anonymous = BOOL</p>
-<p>If the kdc is allowed to hand out anonymous tickets.<br />
+<p>If the kdc is allowed to hand out anonymous tickets.<br/>
 encode_as_rep_as_tgs_rep = BOOL</p>
 <p>Encode as-rep as tgs-rep tobe compatible with mistakes older DCE secd did.</p>
 <p>kdc_warn_pwexpire = TIME</p>
-<p>The time before expiration that the user should be warned that her<br />
-password is about to expire.<br />
+<p>The time before expiration that the user should be warned that her<br/>
+password is about to expire.<br/>
 logging = Logging</p>
-<p>What type of logging the kdc should use, see also [logging]/kdc.<br />
-use_2b<br />
+<p>What type of logging the kdc should use, see also [logging]/kdc.<br/>
+use_2b<br/>
 principal = BOOL</p>
-<p>boolean value if the 524 daemon should return AFS 2b tokens for<br />
+<p>boolean value if the 524 daemon should return AFS 2b tokens for<br/>
 Fa principal .</p>
-<p>&#8230;<br />
+<p>&#8230;<br/>
 }</p>
 <p>hdb-ldap-structural-object structural object</p>
-<p>If the LDAP backend is used for storing principals, this is the<br />
-structural object that will be used when creating and when reading<br />
-objects.<br />
-The default value is account .<br />
+<p>If the LDAP backend is used for storing principals, this is the<br/>
+structural object that will be used when creating and when reading<br/>
+objects.<br/>
+The default value is account .<br/>
 hdb-ldap-create-base creation dn</p>
-<p>is the dn that will be appended to the principal when creating entries.<br />
-Default value is the search dn.<br />
+<p>is the dn that will be appended to the principal when creating entries.<br/>
+Default value is the search dn.<br/>
 enable-digest = BOOL</p>
-<p>Should the kdc answer digest requests. The default is FALSE.<br />
+<p>Should the kdc answer digest requests. The default is FALSE.<br/>
 digests_allowed = list of digests</p>
-<p>Specifies the digests the kdc will reply to. The default is<br />
+<p>Specifies the digests the kdc will reply to. The default is<br/>
 ntlm-v2</p>
 <p>kx509_ca = file</p>
-<p>Specifies the PEM credentials for the kx509 certification authority.<br />
+<p>Specifies the PEM credentials for the kx509 certification authority.<br/>
 require_initial_kca_tickets = boolean</p>
-<p>Specified whether to require that tickets for the<br />
+<p>Specified whether to require that tickets for the<br/>
 kca_service</p>
-<p>service principal be INITIAL.<br />
-This may be set on a per-realm basis as well as globally.<br />
-Defaults to true for the global setting.<br />
+<p>service principal be INITIAL.<br/>
+This may be set on a per-realm basis as well as globally.<br/>
+Defaults to true for the global setting.<br/>
 kx509_include_pkinit_san = boolean</p>
-<p>If true then the kx509 client principal&#8217;s name and realm will be<br />
-included in an<br />
+<p>If true then the kx509 client principal&#8217;s name and realm will be<br/>
+included in an<br/>
 id-pkinit-san</p>
-<p>certificate extension.<br />
-This can be set on a per-realm basis as well as globally.<br />
-Defaults to true for the global setting.<br />
+<p>certificate extension.<br/>
+This can be set on a per-realm basis as well as globally.<br/>
+Defaults to true for the global setting.<br/>
 kx509_template = file</p>
-<p>Specifies the PEM file with a template for the certificates to be<br />
-issued.<br />
-The following variables can be interpolated in the subject name using<br />
+<p>Specifies the PEM file with a template for the certificates to be<br/>
+issued.<br/>
+The following variables can be interpolated in the subject name using<br/>
 ${variable} syntax:</p>
 <dt><code>principal-name</code></dt>
 <dd>The full name of the kx509 client principal.</dd>
@@ -384,10 +384,10 @@ ${variable} syntax:</p>
 <dd>The Kerberos 5 salt <i>pw-salt</i></dd>
 <dt><code>v4</code></dt>
 <dd>The Kerberos 4 salt <i>des:pw-salt:</i></dd></dl>
-<p> default_key_rules = {<br />
+<p> default_key_rules = {<br/>
     globing-rule = keytypes&#8230;</p>
-<p>    a globbing rule to matching a principal, and when true, use the<br />
-    keytypes as specified the same format as [kadmin]default_keys .<br />
+<p>    a globbing rule to matching a principal, and when true, use the<br/>
+    keytypes as specified the same format as [kadmin]default_keys .<br/>
 }</p>
 <dt><code>use_v4_salt = </code><i>BOOL</i></dt>
 <dd>When true, this is the same as <i>default_keys = des3:pw-salt v4</i> and is only left for backwards compatibility.</dd>

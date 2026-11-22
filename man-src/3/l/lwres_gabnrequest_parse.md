@@ -32,17 +32,17 @@ description: "lwres_gabnrequest_render, lwres_gabnresponse_render, lwres_gabnreq
 <dl>
 <dt>
 </dt><dd>
-typedef struct lwres_addr lwres_addr_t;<br />
+typedef struct lwres_addr lwres_addr_t;<br/>
 typedef LWRES_LIST(lwres_addr_t) lwres_addrlist_t;
 </dd></dl>
 <dl>
 <dt>
 </dt><dd>
-typedef struct {<br />
-    lwres_uint32_t flags;<br />
-    lwres_uint32_t addrtypes;<br />
-    lwres_uint16_t namelen;<br />
-    char *name;<br />
+typedef struct {<br/>
+    lwres_uint32_t flags;<br/>
+    lwres_uint32_t addrtypes;<br/>
+    lwres_uint16_t namelen;<br/>
+    char *name;<br/>
 } lwres_gabnrequest_t;
 </dd></dl>
 <dl>
@@ -71,5 +71,5 @@ typedef struct {
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-lwres_packet/">lwres_packet</a></code>(3)</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2004, 2005, 2007 Internet Systems Consortium, Inc. (&quot;ISC&quot;)<br />
+<p> Copyright &#169; 2004, 2005, 2007 Internet Systems Consortium, Inc. (&quot;ISC&quot;)<br/>
  Copyright &#169; 2000, 2001 Internet Software Consortium. </p>

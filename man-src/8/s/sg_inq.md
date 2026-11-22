@@ -81,7 +81,7 @@ description: "sg_inq – issue SCSI INQUIRY command, output and decode response"
 <dt><code>-b</code></dt>
 <dd>decodes the Block Limits VPD page [0xb0]. Equivalent to &#8216;&#8211;page=bl&#8217; in the main description. This page is defined in SBC-2 (see <a rel="nofollow" href="http://www.t10.org">www.t10.org</a>).</dd>
 <dt><code>-c</code></dt>
-<dd>set the Command Support Data (CmdDt) bit (defaults to clear(0)). Used in<br />
+<dd>set the Command Support Data (CmdDt) bit (defaults to clear(0)). Used in<br/>
 &nbsp;<wbr>conjunction with the&nbsp;<wbr><i>-o=OPCODE_PG</i>&nbsp;<wbr>option to specify the SCSI command opcode to query. Equivalent to <i>&#8211;cmddt</i> in the main description.</dd>
 <dt><code>-cl</code></dt>
 <dd>lists the command data for all supported commands (followed by the command name) by looping through all 256 opcodes. This option uses the CmdDt bit which is now obsolete. See the <a href="/docs/linux/man/8-sg_opcodes/">sg_opcodes</a>(8) utility. Equivalent to &#8216;&#8211;cmddt &#8211;cmddt&#8217; in the main description.</dd>
@@ -136,7 +136,7 @@ description: "sg_inq – issue SCSI INQUIRY command, output and decode response"
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;dgilbert at interlog dot com&gt;.</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2001-2013 Douglas Gilbert<br />
+<p>Copyright &#169; 2001-2013 Douglas Gilbert<br/>
  This software is distributed under the GPL version 2. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-sg_opcodes/">sg_opcodes</a>(8), <a href="/docs/linux/man/8-sg_vpd/">sg_vpd</a>(8), <a href="/docs/linux/man/8-sdparm/">sdparm</a>(8), <a href="/docs/linux/man/8-hdparm/">hdparm</a>(8), sgdiag(scsirastools)</code> </p>

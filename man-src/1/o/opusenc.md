@@ -21,7 +21,7 @@ description: "opusenc – encode audio into the Opus format"
 <dt>-V, &#8211;version</dt>
 <dd> Show the version number</dd>
 <dt>&#8211;bitrate N.nnn</dt>
-<dd> Encoding bitrate in kbit/sec (6-256 per channel)<br />
+<dd> Encoding bitrate in kbit/sec (6-256 per channel)<br/>
  Default for &gt;=44.1kHz input is 64kbps per mono stream, 96kbps per coupled pair.</dd>
 <dt>&#8211;vbr</dt>
 <dd> Use variable bitrate encoding (default)</dd>
@@ -32,8 +32,8 @@ description: "opusenc – encode audio into the Opus format"
 <dt>&#8211;comp N</dt>
 <dd> Encoding computational complexity (0-10, default: 10). Zero gives the fastest encodes but lower quality, while 10 gives the highest quality but slower encoding.</dd>
 <dt>&#8211;framesize N</dt>
-<dd> Maximum frame size in milliseconds (2.5, 5, 10, 20, 40, 60, default: 20)<br />
- Smaller framesizes achieve lower latency but less quality at a given bitrate.<br />
+<dd> Maximum frame size in milliseconds (2.5, 5, 10, 20, 40, 60, default: 20)<br/>
+ Smaller framesizes achieve lower latency but less quality at a given bitrate.<br/>
  Sizes greater than 20ms are only interesting at fairly low bitrates.</dd>
 <dt>&#8211;expect-loss N</dt>
 <dd> Percentage packet loss to expect (default: 0)</dd>
@@ -46,7 +46,7 @@ description: "opusenc – encode audio into the Opus format"
 <dt>&#8211;save-range file</dt>
 <dd> Saves check values for every frame to a file</dd>
 <dt>&#8211;set-ctl-int x=y</dt>
-<dd> Pass the encoder control x with value y (advanced) Preface with s: to direct the ctl to multistream s<br />
+<dd> Pass the encoder control x with value y (advanced) Preface with s: to direct the ctl to multistream s<br/>
  This may be used multiple times</dd>
 <dt>&#8211;comment tag=value</dt>
 <dd> Add an extra comment. This may be used multiple times, and all instances will be added to each of the input files specified. The argument should be in the form &quot;tag=value&quot;. See the vorbis-comment specification for well known tag names: <a rel="nofollow" href="http://www.xiph.org/vorbis/doc/v-comment.html">http://www.xiph.org/vorbis/doc/v-comment.html</a></dd>
@@ -81,7 +81,7 @@ description: "opusenc – encode audio into the Opus format"
 <dt>
 </dt><dd> arecord -c 2 -r 48000 -twav &#8211; | opusenc &#8211;bitrate 96 &#8211; &#8211; | oggfwd icecast.somewhere.org 8000 password /stream.opus</dd></dl>
 <h2>NOTES</h2>
-<p> While it is possible to use opusenc for low latency streaming (e.g. with &#8211;max-delay set to 0 and netcat instead of Icecast) it&#8217;s not really designed for this, and the Ogg container and TCP transport aren&#8217;t the best tools for that application. Shell pipelines themselves will often have high buffering. The ability to set framesizes as low as 2.5 ms in opusenc mostly exists to try out the quality of the format with low latency settings, but not really for actual low latency usage.<br />
+<p> While it is possible to use opusenc for low latency streaming (e.g. with &#8211;max-delay set to 0 and netcat instead of Icecast) it&#8217;s not really designed for this, and the Ogg container and TCP transport aren&#8217;t the best tools for that application. Shell pipelines themselves will often have high buffering. The ability to set framesizes as low as 2.5 ms in opusenc mostly exists to try out the quality of the format with low latency settings, but not really for actual low latency usage.<br/>
  Interactive usage should use UDP/RTP directly. </p>
 <h2>AUTHORS</h2>
 <p> Gregory Maxwell &lt;greg [at] xiph.org&gt; </p>

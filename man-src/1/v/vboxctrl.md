@@ -10,7 +10,7 @@ description: "vboxctrl – control vbox functions"
 
 <p> vboxctrl &#8211; control vbox functions</p>
 <h2>SYNOPSIS</h2>
-<p> <code>vboxctrl</code> [{-c | -r}] {-a | -n | -p | -j} [-s spool]<br />
+<p> <code>vboxctrl</code> [{-c | -r}] {-a | -n | -p | -j} [-s spool]<br/>
  <code>vboxctrl</code> -v </p>
 <h2>DESCRIPTION</h2>
 <p> <code>vboxctrl</code> controls a number of vbox functions. The user&#8217;s password is asked before performing the requested action.</p>

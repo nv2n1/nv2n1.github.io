@@ -10,7 +10,7 @@ description: "clacn2.f –"
 <p>clacn2.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>clacn2</code> (N, V, X, EST, KASE, ISAVE)<br />
+<p>subroutine <code>clacn2</code> (N, V, X, EST, KASE, ISAVE)<br/>
  <i></i><code>CLACN2</code> estimates the 1-norm of a square matrix, using reverse communication for evaluating matrix-vector products.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine clacn2 (integerN, complex, dimension( * )V, complex, dimension( * )X, realEST, integerKASE, integer, dimension( 3 )ISAVE)</h3>
@@ -78,7 +78,7 @@ description: "clacn2.f –"
 <dd>Nick Higham, University of Manchester</dd></dl>
 <p> <code>References: </code></p>
 <dl COMPACT>
-<dd>N.J. Higham, &#8216;FORTRAN codes for estimating the one-norm of<br />
+<dd>N.J. Higham, &#8216;FORTRAN codes for estimating the one-norm of<br/>
 &nbsp;<wbr>&nbsp;<wbr>a real or complex matrix, with applications to condition estimation&#8217;, ACM Trans. Math. Soft., vol. 14, no. 4, pp. 381-396, December 1988.&nbsp;<wbr></dd></dl>
 <p> Definition at line 134 of file clacn2.f.</p>
 <h2>Author</h2>

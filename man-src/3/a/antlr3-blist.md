@@ -13,8 +13,8 @@ description: "ANTLR3_BITSET_struct –"
 <p> #include &lt;<a href="file:/usr/include/antlr3bitset.h">antlr3bitset.h</a>&gt;</p>
 <h3>Data Fields</h3>
 <p> void(* <code>add</code> )(struct <code>ANTLR3_BITSET_struct</code> *bitset, <code>ANTLR3_INT32</code> bit) </p>
-<p> <code>ANTLR3_BITSET_LIST</code> <code>blist</code><br />
- <i>The actual bits themselves. </i><br />
+<p> <code>ANTLR3_BITSET_LIST</code> <code>blist</code><br/>
+ <i>The actual bits themselves. </i><br/>
  <code>pANTLR3_BITSET</code>(* <code>bor</code> )(struct <code>ANTLR3_BITSET_struct</code> *bitset1, struct <code>ANTLR3_BITSET_struct</code> *bitset2) </p>
 <p> void(* <code>borInPlace</code> )(struct <code>ANTLR3_BITSET_struct</code> *bitset, struct <code>ANTLR3_BITSET_struct</code> *bitset2) </p>
 <p> <code>pANTLR3_BITSET</code>(* <code>clone</code> )(struct <code>ANTLR3_BITSET_struct</code> *inSet) </p>

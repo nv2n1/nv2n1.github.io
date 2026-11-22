@@ -98,16 +98,16 @@ description: "apcupsd.conf –"
 <dt><code>SLEEP [ 020 | 180 | 300 | 600 ]</code></dt>
 <dd>The time delay in seconds for which the UPS waits or &quot;sleeps&quot; after it receives a request to power off the connected system.</dd>
 <dt><code>LOTRANSFER &lt;voltage&gt;</code></dt>
-<dd>Low line voltage causing transfer to battery power or activation of SmartBoost. Allowable values depend on the last letter of the firmware or APCMODEL. Typical values are:<br />
-&nbsp;<wbr>&nbsp;<wbr>D&nbsp;<wbr>&nbsp;<wbr>106&nbsp;<wbr>&nbsp;<wbr>103&nbsp;<wbr>&nbsp;<wbr>100&nbsp;<wbr>&nbsp;<wbr>097<br />
-&nbsp;<wbr>&nbsp;<wbr>M&nbsp;<wbr>&nbsp;<wbr>177&nbsp;<wbr>&nbsp;<wbr>172&nbsp;<wbr>&nbsp;<wbr>168&nbsp;<wbr>&nbsp;<wbr>182<br />
-&nbsp;<wbr>&nbsp;<wbr>A&nbsp;<wbr>&nbsp;<wbr>092&nbsp;<wbr>&nbsp;<wbr>090&nbsp;<wbr>&nbsp;<wbr>088&nbsp;<wbr>&nbsp;<wbr>086<br />
+<dd>Low line voltage causing transfer to battery power or activation of SmartBoost. Allowable values depend on the last letter of the firmware or APCMODEL. Typical values are:<br/>
+&nbsp;<wbr>&nbsp;<wbr>D&nbsp;<wbr>&nbsp;<wbr>106&nbsp;<wbr>&nbsp;<wbr>103&nbsp;<wbr>&nbsp;<wbr>100&nbsp;<wbr>&nbsp;<wbr>097<br/>
+&nbsp;<wbr>&nbsp;<wbr>M&nbsp;<wbr>&nbsp;<wbr>177&nbsp;<wbr>&nbsp;<wbr>172&nbsp;<wbr>&nbsp;<wbr>168&nbsp;<wbr>&nbsp;<wbr>182<br/>
+&nbsp;<wbr>&nbsp;<wbr>A&nbsp;<wbr>&nbsp;<wbr>092&nbsp;<wbr>&nbsp;<wbr>090&nbsp;<wbr>&nbsp;<wbr>088&nbsp;<wbr>&nbsp;<wbr>086<br/>
 &nbsp;<wbr>&nbsp;<wbr>I&nbsp;<wbr>&nbsp;<wbr>208&nbsp;<wbr>&nbsp;<wbr>204&nbsp;<wbr>&nbsp;<wbr>200&nbsp;<wbr>&nbsp;<wbr>196 where D = domestic (USA), M = Canada, A = Asia and I = International.</dd>
 <dt><code>HITRANSFER &lt;voltage&gt;</code></dt>
-<dd>High line voltage causing transfer to battery power or activation of SmartTrim. Allowable values depend on the last letter of the firmware or APCMODEL. Typical values are:<br />
-&nbsp;<wbr>&nbsp;<wbr>D&nbsp;<wbr>&nbsp;<wbr>127&nbsp;<wbr>&nbsp;<wbr>130&nbsp;<wbr>&nbsp;<wbr>133&nbsp;<wbr>&nbsp;<wbr>136<br />
-&nbsp;<wbr>&nbsp;<wbr>M&nbsp;<wbr>&nbsp;<wbr>229&nbsp;<wbr>&nbsp;<wbr>234&nbsp;<wbr>&nbsp;<wbr>239&nbsp;<wbr>&nbsp;<wbr>224<br />
-&nbsp;<wbr>&nbsp;<wbr>A&nbsp;<wbr>&nbsp;<wbr>108&nbsp;<wbr>&nbsp;<wbr>110&nbsp;<wbr>&nbsp;<wbr>112&nbsp;<wbr>&nbsp;<wbr>114<br />
+<dd>High line voltage causing transfer to battery power or activation of SmartTrim. Allowable values depend on the last letter of the firmware or APCMODEL. Typical values are:<br/>
+&nbsp;<wbr>&nbsp;<wbr>D&nbsp;<wbr>&nbsp;<wbr>127&nbsp;<wbr>&nbsp;<wbr>130&nbsp;<wbr>&nbsp;<wbr>133&nbsp;<wbr>&nbsp;<wbr>136<br/>
+&nbsp;<wbr>&nbsp;<wbr>M&nbsp;<wbr>&nbsp;<wbr>229&nbsp;<wbr>&nbsp;<wbr>234&nbsp;<wbr>&nbsp;<wbr>239&nbsp;<wbr>&nbsp;<wbr>224<br/>
+&nbsp;<wbr>&nbsp;<wbr>A&nbsp;<wbr>&nbsp;<wbr>108&nbsp;<wbr>&nbsp;<wbr>110&nbsp;<wbr>&nbsp;<wbr>112&nbsp;<wbr>&nbsp;<wbr>114<br/>
 &nbsp;<wbr>&nbsp;<wbr>I&nbsp;<wbr>&nbsp;<wbr>253&nbsp;<wbr>&nbsp;<wbr>257&nbsp;<wbr>&nbsp;<wbr>261&nbsp;<wbr>&nbsp;<wbr>265 where D = domestic (USA), M = Canada, A = Asia and I = International.</dd>
 <dt><code>RETURNCHARGE [ 00 | 15 | 50 | 90 ]</code></dt>
 <dd>Percentage of battery charge needed for the UPS to restore power to the connected equipment.</dd>
@@ -124,35 +124,35 @@ description: "apcupsd.conf –"
 <dt><code>LOWBATT &lt;minutes&gt;</code></dt>
 <dd>Low battery warning occurs when the specified number of minutes remains before the UPS estimates battery power will be exhausted. There are four user-changeable settings: 2, 5, 7, or 10 minutes</dd>
 <dt><code>OUTPUTVOLTS &lt;voltage&gt;</code></dt>
-<dd>UPS nominal output voltage when running on battery. Allowable values depend on the last letter of the firmware or APCMODEL. Typical values are:<br />
-&nbsp;<wbr>&nbsp;<wbr>D&nbsp;<wbr>&nbsp;<wbr>115<br />
-&nbsp;<wbr>&nbsp;<wbr>M&nbsp;<wbr>&nbsp;<wbr>208<br />
-&nbsp;<wbr>&nbsp;<wbr>A&nbsp;<wbr>&nbsp;<wbr>100<br />
+<dd>UPS nominal output voltage when running on battery. Allowable values depend on the last letter of the firmware or APCMODEL. Typical values are:<br/>
+&nbsp;<wbr>&nbsp;<wbr>D&nbsp;<wbr>&nbsp;<wbr>115<br/>
+&nbsp;<wbr>&nbsp;<wbr>M&nbsp;<wbr>&nbsp;<wbr>208<br/>
+&nbsp;<wbr>&nbsp;<wbr>A&nbsp;<wbr>&nbsp;<wbr>100<br/>
 &nbsp;<wbr>&nbsp;<wbr>I&nbsp;<wbr>&nbsp;<wbr>230&nbsp;<wbr>&nbsp;<wbr>240&nbsp;<wbr>&nbsp;<wbr>220&nbsp;<wbr>&nbsp;<wbr>225 where D = domestic (USA), M = Canada, A = Asia and I = International.</dd>
 <dt><code>SELFTEST [ 336 | 168 | ON | OFF ]</code></dt>
 <dd>Self test interval in hours (336 = 2 weeks, 168 = 1 week, ON = at power on, OFF = never). </dd>
 <h2>Examples</h2>
 <p>Note that in the following examples, the device names assume that you are using Linux. Device names for serial devices in *BSD and other operating systems will be different.</p>
 <h3>Minimal USB Configuration for a USB UPS</h3>
-<p>&nbsp;<wbr>&nbsp;<wbr>UPSCABLE usb<br />
-&nbsp;<wbr>&nbsp;<wbr>UPSTYPE usb<br />
-&nbsp;<wbr>&nbsp;<wbr>DEVICE<br />
-&nbsp;<wbr>&nbsp;<wbr>LOCKFILE&nbsp;<wbr>/var/lock<br />
-&nbsp;<wbr>&nbsp;<wbr>UPSCLASS standalone<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>UPSCABLE usb<br/>
+&nbsp;<wbr>&nbsp;<wbr>UPSTYPE usb<br/>
+&nbsp;<wbr>&nbsp;<wbr>DEVICE<br/>
+&nbsp;<wbr>&nbsp;<wbr>LOCKFILE&nbsp;<wbr>/var/lock<br/>
+&nbsp;<wbr>&nbsp;<wbr>UPSCLASS standalone<br/>
 &nbsp;<wbr>&nbsp;<wbr>UPSMODE disable Notice no device name is specified. <a href="/docs/linux/man/8-apcupsd/">apcupsd</a>(8) will try all the well known USB ports. Only specify a specific USB device name if you know what you are doing. For detailed information on setting up a USB UPS, refer to the &quot;USB Configuration&quot; section of the apcupsd manual.</p>
 <h3>Minimal Serial Configuration for a Smart UPS</h3>
-<p>&nbsp;<wbr>&nbsp;<wbr>UPSCABLE smart<br />
-&nbsp;<wbr>&nbsp;<wbr>UPSTYPE apcsmart<br />
-&nbsp;<wbr>&nbsp;<wbr>DEVICE&nbsp;<wbr>/dev/ttyS0<br />
-&nbsp;<wbr>&nbsp;<wbr>LOCKFILE&nbsp;<wbr>/var/lock<br />
-&nbsp;<wbr>&nbsp;<wbr>UPSCLASS standalone<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>UPSCABLE smart<br/>
+&nbsp;<wbr>&nbsp;<wbr>UPSTYPE apcsmart<br/>
+&nbsp;<wbr>&nbsp;<wbr>DEVICE&nbsp;<wbr>/dev/ttyS0<br/>
+&nbsp;<wbr>&nbsp;<wbr>LOCKFILE&nbsp;<wbr>/var/lock<br/>
+&nbsp;<wbr>&nbsp;<wbr>UPSCLASS standalone<br/>
 &nbsp;<wbr>&nbsp;<wbr>UPSMODE disable Normally there would be more configuration directives to completely customise your installation, but this example shows the minimum required.</p>
 <h3>Minimal Serial Configuration for a Dumb UPS</h3>
-<p>&nbsp;<wbr>&nbsp;<wbr>UPSCABLE&nbsp;<wbr>&lt;number of the cable used&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>UPSTYPE dumb<br />
-&nbsp;<wbr>&nbsp;<wbr>DEVICE&nbsp;<wbr>/dev/ttyS0<br />
-&nbsp;<wbr>&nbsp;<wbr>LOCKFILE&nbsp;<wbr>/var/lock<br />
-&nbsp;<wbr>&nbsp;<wbr>UPSCLASS standalone<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>UPSCABLE&nbsp;<wbr>&lt;number of the cable used&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>UPSTYPE dumb<br/>
+&nbsp;<wbr>&nbsp;<wbr>DEVICE&nbsp;<wbr>/dev/ttyS0<br/>
+&nbsp;<wbr>&nbsp;<wbr>LOCKFILE&nbsp;<wbr>/var/lock<br/>
+&nbsp;<wbr>&nbsp;<wbr>UPSCLASS standalone<br/>
 &nbsp;<wbr>&nbsp;<wbr>UPSMODE disable If your cable does not have low battery detection (eg such cables include the APC 940-0020B and 940-0023A), you will also need to define the TIMEOUT &lt;seconds&gt; configuration directive to set the number of seconds on battery during a power failure after which apcupsd will do a system shutdown. Normally there would be more configuration directives to completely customise your installation, but this example shows the minimum required. </p>
 <h2>Files</h2>
 <p>/etc/apcupsd/apcupsd.conf default configuration file</p>

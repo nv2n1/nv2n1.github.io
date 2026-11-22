@@ -14,15 +14,15 @@ description: "sc::ShmMessageGrp –"
 #include &lt;messshm.h&gt;</code></pre>
 <p> Inherits <code>sc::intMessageGrp</code>.</p>
 <h3>Public Member Functions</h3>
-<p><code>ShmMessageGrp</code> ()<br />
- <i>Reads the number of processors from environmental variable NUMPROC. </i><br />
- <code>ShmMessageGrp</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br />
- <i>The </i><code>ShmMessageGrp</code> <code>KeyVal</code> constructor takes a single keyword that specifies the number of processors.<br />
- <code>ShmMessageGrp</code> (int nprocs)<br />
- <i>Initialize </i><code>ShmMessageGrp</code> to use nprocs processors.<br />
- void <code>sync</code> ()<br />
- <i>Synchronize all of the processors. </i><br />
- <code>Ref</code>&lt; <code>MessageGrp</code> &gt; <code>clone</code> (void)<br />
+<p><code>ShmMessageGrp</code> ()<br/>
+ <i>Reads the number of processors from environmental variable NUMPROC. </i><br/>
+ <code>ShmMessageGrp</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br/>
+ <i>The </i><code>ShmMessageGrp</code> <code>KeyVal</code> constructor takes a single keyword that specifies the number of processors.<br/>
+ <code>ShmMessageGrp</code> (int nprocs)<br/>
+ <i>Initialize </i><code>ShmMessageGrp</code> to use nprocs processors.<br/>
+ void <code>sync</code> ()<br/>
+ <i>Synchronize all of the processors. </i><br/>
+ <code>Ref</code>&lt; <code>MessageGrp</code> &gt; <code>clone</code> (void)<br/>
  <i>Returns a copy of this </i><code>MessageGrp</code> specialization that provides an independent communication context.</p>
 <h3>Protected Member Functions</h3>
 <pre><code>void basic_send (int target, int type, const void *data, int nbyte)

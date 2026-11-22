@@ -31,9 +31,9 @@ description: "ext_time_quota_acl – Squid time quota external acl helper."
 <h2>Configuration</h2>
 <p>The time quotas of the users are defined in a text file typically residing in /etc/squid/time_quota. Any line starting with &quot;#&quot; contains a comment and is ignored. Every line must start with a user followed by a time budget and a corresponding time period separated by &quot;/&quot;. Here is an example file: </p>
 <dl>
-<dd># user budget / period<br />
- <code>john 8h / 1d</code><br />
- <code>littlejoe 1h / 1d</code><br />
+<dd># user budget / period<br/>
+ <code>john 8h / 1d</code><br/>
+ <code>littlejoe 1h / 1d</code><br/>
  <code>babymary 30m / 1w</code>
 </dd></dl>
 <p> John has a time budget of 8 hours every day, littlejoe is only allowed 1 hour and the poor babymary only 30 minutes a week. </p>
@@ -42,13 +42,13 @@ description: "ext_time_quota_acl – Squid time quota external acl helper."
 <p> Here is an example. </p>
 <dl>
 <dd># Ensure that users have a valid login. We need their username. </dd>
-<p> <code>acl users proxy_auth REQUIRED</code><br />
- <code>http_access deny !users</code><br />
- # Define program and quota file<br />
+<p> <code>acl users proxy_auth REQUIRED</code><br/>
+ <code>http_access deny !users</code><br/>
+ # Define program and quota file<br/>
  <code>external_acl_type time_quota ttl=60 children-max=1 %LOGIN /usr/libexec/ext_time_quota_acl /etc/squid/time_quota</code> </p>
-<p> <code>acl noquota src all</code><br />
- <code>acl time_quota external time_quota</code><br />
- <code>deny_info ERR_ACL_TIME_QUOTA_EXCEEDED noquota</code><br />
+<p> <code>acl noquota src all</code><br/>
+ <code>acl time_quota external time_quota</code><br/>
+ <code>deny_info ERR_ACL_TIME_QUOTA_EXCEEDED noquota</code><br/>
  <code>http_access deny !time_quota noquota</code></dl>
 <p> In this example, after restarting Squid it should allow access only for users as long as they have time budget left. If the budget is exceeded the user will be presented with an error page informing them. </p>
 <p> In this example we use separate <code>users </code> access control and <code>noquota </code> ACL in order to keep the username and password prompt and the quota-exceeded messages separated. </p>
@@ -72,10 +72,10 @@ description: "ext_time_quota_acl – Squid time quota external acl helper."
 <h2>Author</h2>
 <p>This program and documentation was written by <i>Dr. Tilmann Bubeck &lt;t.bubeck [at] reinform.de&gt;</i></p>
 <h2>Copyright</h2>
-<p>&nbsp;<wbr>*&nbsp;<wbr>Copyright&nbsp;<wbr>(C)&nbsp;<wbr>1996-2016 The Squid Software Foundation and contributors<br />
-&nbsp;<wbr>*<br />
-&nbsp;<wbr>*&nbsp;<wbr>Squid software is distributed under GPLv2+&nbsp;<wbr>license and includes<br />
-&nbsp;<wbr>*&nbsp;<wbr>contributions from numerous individuals and organizations.<br />
+<p>&nbsp;<wbr>*&nbsp;<wbr>Copyright&nbsp;<wbr>(C)&nbsp;<wbr>1996-2016 The Squid Software Foundation and contributors<br/>
+&nbsp;<wbr>*<br/>
+&nbsp;<wbr>*&nbsp;<wbr>Squid software is distributed under GPLv2+&nbsp;<wbr>license and includes<br/>
+&nbsp;<wbr>*&nbsp;<wbr>contributions from numerous individuals and organizations.<br/>
 &nbsp;<wbr>*&nbsp;<wbr>Please see the COPYING and CONTRIBUTORS files for details. </p>
 <p> This program and documentation is copyright to the authors named above. </p>
 <p> Distributed under the GNU General Public License (GNU GPL) version 2 or later (GPLv2+).</p>
@@ -87,6 +87,6 @@ description: "ext_time_quota_acl – Squid time quota external acl helper."
 <p> Report serious security bugs to <i>Squid Bugs &lt;squid-bugs [at] squid-cache.org&gt;</i> </p>
 <p> Report ideas for new improvements to the <i>Squid Developers mailing list</i> &lt;squid-dev [at] squid-cache.org&gt;</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-squid/">squid</a></code>(8), <code>GPL</code>(7),<br />
- The Squid FAQ wiki <a rel="nofollow" href="http://wiki.squid-cache.org/SquidFaq">http://wiki.squid-cache.org/SquidFaq</a><br />
+<p><code><a href="/docs/linux/man/8-squid/">squid</a></code>(8), <code>GPL</code>(7),<br/>
+ The Squid FAQ wiki <a rel="nofollow" href="http://wiki.squid-cache.org/SquidFaq">http://wiki.squid-cache.org/SquidFaq</a><br/>
  The Squid Configuration Manual <a rel="nofollow" href="http://www.squid-cache.org/Doc/config/">http://www.squid-cache.org/Doc/config/</a> </p>

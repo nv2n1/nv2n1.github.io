@@ -169,33 +169,33 @@ logger-- rfc5424-- sd - id zoo @123 --sd - param tiger = "hungry" --sd - param z
 <p> The <code>logger</code> utility exits 0 on success, and &gt;0 if an error occurs.</p>
 <h2>FACILITIES AND LEVELS</h2>
 <p> Valid facility names are: </p>
-<p> <code>auth</code><br />
- <code>authpriv</code> for security information of a sensitive nature<br />
+<p> <code>auth</code><br/>
+ <code>authpriv</code> for security information of a sensitive nature<br/>
  <code>cron</code> </p>
-<p> <code>daemon</code><br />
- <code>ftp</code><br />
+<p> <code>daemon</code><br/>
+ <code>ftp</code><br/>
  <code>kern</code> cannot be generated from userspace process, automatically converted to <code>user</code> </p>
-<p> <code>lpr</code><br />
- <code>mail</code><br />
- <code>news</code><br />
- <code>syslog</code><br />
- <code>user</code><br />
- <code>uucp</code><br />
- <code>local0</code><br />
- to<br />
- <code>local7</code><br />
+<p> <code>lpr</code><br/>
+ <code>mail</code><br/>
+ <code>news</code><br/>
+ <code>syslog</code><br/>
+ <code>user</code><br/>
+ <code>uucp</code><br/>
+ <code>local0</code><br/>
+ to<br/>
+ <code>local7</code><br/>
  <code>security</code> deprecated synonym for <code>auth</code> </p>
 <p> Valid level names are: </p>
-<p> <code>emerg</code><br />
- <code>alert</code><br />
- <code>crit</code><br />
- <code>err</code><br />
- <code>warning</code><br />
- <code>notice</code><br />
- <code>info</code><br />
- <code>debug</code><br />
- <code>panic</code> deprecated synonym for <code>emerg</code><br />
- <code>error</code> deprecated synonym for <code>err</code><br />
+<p> <code>emerg</code><br/>
+ <code>alert</code><br/>
+ <code>crit</code><br/>
+ <code>err</code><br/>
+ <code>warning</code><br/>
+ <code>notice</code><br/>
+ <code>info</code><br/>
+ <code>debug</code><br/>
+ <code>panic</code> deprecated synonym for <code>emerg</code><br/>
+ <code>error</code> deprecated synonym for <code>err</code><br/>
  <code>warn</code> deprecated synonym for <code>warning</code> </p>
 <p> For the priority order and intended purposes of these facilities and levels, see <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3).</p>
 <h2>CONFORMING TO</h2>

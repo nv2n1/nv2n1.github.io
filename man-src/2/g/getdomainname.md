@@ -11,7 +11,7 @@ description: "getdomainname, setdomainname – get/set NIS domain name"
 <p> getdomainname, setdomainname &#8211; get/set NIS domain name </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>
-<p> <code>int getdomainname(char *</code><i>name</i><code>, size_t </code><i>len</i><code>);</code><br />
+<p> <code>int getdomainname(char *</code><i>name</i><code>, size_t </code><i>len</i><code>);</code><br/>
  <code>int setdomainname(const char *</code><i>name</i><code>, size_t </code><i>len</i><code>);</code> </p>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
 <p> <code>getdomainname</code>(), <code>setdomainname</code>(): </p>

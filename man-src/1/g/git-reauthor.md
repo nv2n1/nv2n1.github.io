@@ -14,9 +14,9 @@ description: "git-reauthor – Rewrite history to change author’s identity"
 <h2>DESCRIPTION</h2>
 <p> Lets you replace the author and/or committer identities in commits and tags. </p>
 <p> The command goes through all existing commits and tags in all local branches to selectively modify the identities present in those objects. All the other informations such as dates, messages,.. are preserved. </p>
-<p> You can rewrite all the identities in the commits and tags objects by using the &#8211;all flag, or only replace the identities whose email matches the value of the &#8211;old-email option. It is also possible to limit the rewrite to a certain type of identity: the author or the committer identity. By default, both of them are affected.<br />
+<p> You can rewrite all the identities in the commits and tags objects by using the &#8211;all flag, or only replace the identities whose email matches the value of the &#8211;old-email option. It is also possible to limit the rewrite to a certain type of identity: the author or the committer identity. By default, both of them are affected.<br/>
  For each of those identities to update, the command will replace the name and/or email with the new correct values as defined via the options. If the new identity name to set is not defined, the current one will be kept (and vice-versa with the email). </p>
-<p> <code>WARNING!</code> This command rewrites history and as a result you will not able to push your branch to the remote without using the &#8211;force option.<br />
+<p> <code>WARNING!</code> This command rewrites history and as a result you will not able to push your branch to the remote without using the &#8211;force option.<br/>
  See more information with <code>git help filter-branch</code>.</p>
 <h2>OPTIONS</h2>
 <p> -a, &#8211;all</p>

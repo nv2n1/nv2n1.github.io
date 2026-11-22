@@ -10,7 +10,7 @@ description: "sspgst.f –"
 <p>sspgst.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>sspgst</code> (ITYPE, UPLO, N, AP, BP, INFO)<br />
+<p>subroutine <code>sspgst</code> (ITYPE, UPLO, N, AP, BP, INFO)<br/>
  <i></i><code>SSPGST</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sspgst (integerITYPE, characterUPLO, integerN, real, dimension( * )AP, real, dimension( * )BP, integerINFO)</h3>

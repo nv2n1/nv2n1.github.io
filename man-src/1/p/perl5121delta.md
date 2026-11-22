@@ -25,11 +25,11 @@ description: "perl5121delta – what is new for perl v5.12.1"
 <h3>Updated Modules</h3>
 <dl>
 <dt>&bull;</dt>
-<dd> We upgraded <font SIZE="-1">CGI</font>.pm to version 3.49 to incorporate fixes for regressions introduced in the release we shipped with Perl 5.12.0.</dd>
+<dd> We upgraded CGI.pm to version 3.49 to incorporate fixes for regressions introduced in the release we shipped with Perl 5.12.0.</dd>
 <dt>&bull;</dt>
 <dd> We upgraded Pod::Simple to version 3.14 to get an improvement to \C\&lt;\&lt; \&gt;\&gt; parsing.</dd>
 <dt>&bull;</dt>
-<dd> We made a small fix to the <font SIZE="-1">CPANPLUS</font> test suite to fix an occasional spurious test failure.</dd>
+<dd> We made a small fix to the CPANPLUS test suite to fix an occasional spurious test failure.</dd>
 <dt>&bull;</dt>
 <dd> We upgraded Safe to version 2.27 to wrap coderefs returned by <tt>&quot;reval()&quot;</tt> and <tt>&quot;rdo()&quot;</tt>.</dd></dl>
 <h2>Changes to Existing Documentation</h2>
@@ -37,7 +37,7 @@ description: "perl5121delta – what is new for perl v5.12.1"
 <dt>&bull;</dt>
 <dd> We added the new maintenance release policy to perlpolicy.pod</dd>
 <dt>&bull;</dt>
-<dd> We&#8217;ve clarified the multiple-angle-bracket construct in the spec for <font SIZE="-1">POD</font> in perlpodspec</dd>
+<dd> We&#8217;ve clarified the multiple-angle-bracket construct in the spec for POD in perlpodspec</dd>
 <dt>&bull;</dt>
 <dd> We added a missing explanation for a warning about <tt>&quot;:=&quot;</tt> to perldiag.pod</dd>
 <dt>&bull;</dt>
@@ -69,7 +69,7 @@ description: "perl5121delta – what is new for perl v5.12.1"
 <dt>&bull;</dt>
 <dd> We improved documentation of case-changing functions in perlfunc.pod</dd>
 <dt>&bull;</dt>
-<dd> We corrected perlgpl.pod to contain the correct version of the <font SIZE="-1">GNU</font> General Public License.</dd></dl>
+<dd> We corrected perlgpl.pod to contain the correct version of the GNU General Public License.</dd></dl>
 <h2>Testing</h2>
 <h3>Testing Improvements</h3>
 <dl>
@@ -84,7 +84,7 @@ description: "perl5121delta – what is new for perl v5.12.1"
 <h3>Configuration improvements</h3>
 <dl>
 <dt>&bull;</dt>
-<dd> We updated <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> with notes about how to deal with broken <i>dbm.h</i> on OpenSUSE (and possibly other platforms)</dd></dl>
+<dd> We updated <i></i><i>INSTALL</i><i></i> with notes about how to deal with broken <i>dbm.h</i> on OpenSUSE (and possibly other platforms)</dd></dl>
 <h2>Bug Fixes</h2>
 <dl>
 <dt>&bull;</dt>
@@ -93,12 +93,12 @@ description: "perl5121delta – what is new for perl v5.12.1"
 <dt>&bull;</dt>
 <dd> When deparsing a nextstate op that has both a change of package (relative to the previous nextstate) and a label, the package declaration is now emitted first, because it is syntactically impermissible for a label to prefix a package declaration.</dd>
 <dt>&bull;</dt>
-<dd> <font SIZE="-1">XSUB</font>.h now correctly redefines fgets under <font SIZE="-1">PERL_IMPLICIT_SYS</font> </dd>
+<dd> XSUB.h now correctly redefines fgets under PERL_IMPLICIT_SYS </dd>
 <p> See also: &lt;<a rel="nofollow" href="http://rt.cpan.org/Public/Bug/Display.html?id=55049">http://rt.cpan.org/Public/Bug/Display.html?id=55049</a>&gt;</p>
 <dt>&bull;</dt>
-<dd> utf8::is_utf8 now respects <font SIZE="-1">GMAGIC</font> (e.g. <tt>$1</tt>)</dd>
+<dd> utf8::is_utf8 now respects GMAGIC (e.g. <tt>$1</tt>)</dd>
 <dt>&bull;</dt>
-<dd> <font SIZE="-1">XS</font> code using <tt>&quot;fputc()&quot;</tt> or <tt>&quot;fputs()&quot;</tt>: on Windows could cause an error due to their arguments being swapped. </dd>
+<dd> XS code using <tt>&quot;fputc()&quot;</tt> or <tt>&quot;fputs()&quot;</tt>: on Windows could cause an error due to their arguments being swapped. </dd>
 <p> See also: &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=72704">http://rt.perl.org/rt3/Public/Bug/Display.html?id=72704</a>&gt;</p>
 <dt>&bull;</dt>
 <dd> We fixed a small bug in <code>lex_stuff_pvn()</code> that caused spurious syntax errors in an obscure situation. It happened when stuffing was performed on the last line of a file and the line ended with a statement that lacked a terminating semicolon. </dd>
@@ -120,22 +120,22 @@ description: "perl5121delta – what is new for perl v5.12.1"
 <dl>
 <dt>&bull;</dt>
 <dd> Perl now allows -Duse64bitint without promoting to use64bitall on HP-UX</dd></dl>
-<h3><font SIZE="-1">AIX</font></h3>
+<h3>AIX</h3>
 <dl>
 <dt>&bull;</dt>
-<dd> Perl now builds on <font SIZE="-1">AIX 4.2</font> </dd>
-<p> The changes required work around <font SIZE="-1">AIX 4</font>.2s&#8217; lack of support for IPv6, and limited support for <font SIZE="-1">POSIX</font> <tt>&quot;sigaction()&quot;</tt>.</dl>
+<dd> Perl now builds on AIX 4.2 </dd>
+<p> The changes required work around AIX 4.2s&#8217; lack of support for IPv6, and limited support for POSIX <tt>&quot;sigaction()&quot;</tt>.</dl>
 <h3>FreeBSD 7</h3>
 <dl>
 <dt>&bull;</dt>
-<dd> FreeBSD 7 no longer contains <i>/usr/bin/objformat</i>. At build time, Perl now skips the <i>objformat</i> check for versions 7 and higher and assumes <font SIZE="-1">ELF.</font></dd></dl>
-<h3><font SIZE="-1">VMS</font></h3>
+<dd> FreeBSD 7 no longer contains <i>/usr/bin/objformat</i>. At build time, Perl now skips the <i>objformat</i> check for versions 7 and higher and assumes ELF.</dd></dl>
+<h3>VMS</h3>
 <dl>
 <dt>&bull;</dt>
-<dd> It&#8217;s now possible to build extensions on older (pre 7.3-2) <font SIZE="-1">VMS</font> systems. </dd>
-<p> <font SIZE="-1">DCL</font> symbol length was limited to 1K up until about seven years or so ago, but there was no particularly deep reason to prevent those older systems from configuring and building Perl.</p>
+<dd> It&#8217;s now possible to build extensions on older (pre 7.3-2) VMS systems. </dd>
+<p> DCL symbol length was limited to 1K up until about seven years or so ago, but there was no particularly deep reason to prevent those older systems from configuring and building Perl.</p>
 <dt>&bull;</dt>
-<dd> We fixed the previously-broken <tt>&quot;-Uuseperlio&quot;</tt> build on <font SIZE="-1">VMS.</font> </dd>
+<dd> We fixed the previously-broken <tt>&quot;-Uuseperlio&quot;</tt> build on VMS. </dd>
 <p> We were checking a variable that doesn&#8217;t exist in the non-default case of disabling perlio. Now we only look at it when it exists.</p>
 <dt>&bull;</dt>
 <dd> We fixed the -Uuseperlio command-line option in configure.com. </dd>
@@ -150,7 +150,7 @@ description: "perl5121delta – what is new for perl v5.12.1"
 </pre>
 <p> See also: &lt;<a rel="nofollow" href="http://rt.perl.org/rt3/Public/Bug/Display.html?id=67694">http://rt.perl.org/rt3/Public/Bug/Display.html?id=67694</a>&gt;</p>
 <dt>&bull;</dt>
-<dd> <tt>&quot;Module::Load::Conditional&quot;</tt> and <tt>&quot;version&quot;</tt> have an unfortunate interaction which can cause <tt>&quot;CPANPLUS&quot;</tt> to crash when it encounters an unparseable version string. Upgrading to <tt>&quot;CPANPLUS&quot;</tt> 0.9004 or <tt>&quot;Module::Load::Conditional&quot;</tt> 0.38 from <font SIZE="-1">CPAN</font> will resolve this issue.</dd></dl>
+<dd> <tt>&quot;Module::Load::Conditional&quot;</tt> and <tt>&quot;version&quot;</tt> have an unfortunate interaction which can cause <tt>&quot;CPANPLUS&quot;</tt> to crash when it encounters an unparseable version string. Upgrading to <tt>&quot;CPANPLUS&quot;</tt> 0.9004 or <tt>&quot;Module::Load::Conditional&quot;</tt> 0.38 from CPAN will resolve this issue.</dd></dl>
 <h2>Acknowledgements</h2>
 <p> Perl 5.12.1 represents approximately four weeks of development since Perl 5.12.0 and contains approximately 4,000 lines of changes across 142 files from 28 authors. </p>
 <p> Perl continues to flourish into its third decade thanks to a vibrant community of users and developers. The following people are known to have contributed the improvements that became Perl 5.12.1: </p>
@@ -158,9 +158,9 @@ description: "perl5121delta – what is new for perl v5.12.1"
 <h2>Reporting Bugs</h2>
 <p> If you find what you think is a bug, you might check the articles recently posted to the comp.lang.perl.misc newsgroup and the perl bug database at <a rel="nofollow" href="http://rt.perl.org/perlbug/">http://rt.perl.org/perlbug/</a> . There may also be information at <a rel="nofollow" href="http://www.perl.org/">http://www.perl.org/</a> , the Perl Home Page. </p>
 <p> If you believe you have an unreported bug, please run the <code>perlbug</code> program included with your release. Be sure to trim your bug down to a tiny but sufficient test case. Your bug report, along with the output of <tt>&quot;perl -V&quot;</tt>, will be sent off to perlbug [at] perl.org to be analysed by the Perl porting team. </p>
-<p> If the bug you are reporting has security implications, which make it inappropriate to send to a publicly archived mailing list, then please send it to perl5-security-report [at] perl.org. This points to a closed subscription unarchived mailing list, which includes all the core committers, who will be able to help assess the impact of issues, figure out a resolution, and help co-ordinate the release of patches to mitigate or fix the problem across all platforms on which Perl is supported. Please only use this address for security issues in the Perl core, not for modules independently distributed on <font SIZE="-1">CPAN.</font></p>
+<p> If the bug you are reporting has security implications, which make it inappropriate to send to a publicly archived mailing list, then please send it to perl5-security-report [at] perl.org. This points to a closed subscription unarchived mailing list, which includes all the core committers, who will be able to help assess the impact of issues, figure out a resolution, and help co-ordinate the release of patches to mitigate or fix the problem across all platforms on which Perl is supported. Please only use this address for security issues in the Perl core, not for modules independently distributed on CPAN.</p>
 <h2>SEE ALSO</h2>
 <p> The <i>Changes</i> file for an explanation of how to view exhaustive details on what changed. </p>
-<p> The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. </p>
-<p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
+<p> The <i></i><i>INSTALL</i><i></i> file for how to build Perl. </p>
+<p> The <i></i><i>README</i><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information. </p>

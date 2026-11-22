@@ -10,9 +10,9 @@ description: "dlamch.f –"
 <p>dlamch.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>DOUBLE PRECISION function <code>dlamch</code> (CMACH)<br />
- <i></i><code>DLAMCH</code><br />
- DOUBLE PRECISION function <code>dlamc3</code> (A, B)<br />
+<p>DOUBLE PRECISION function <code>dlamch</code> (CMACH)<br/>
+ <i></i><code>DLAMCH</code><br/>
+ DOUBLE PRECISION function <code>dlamc3</code> (A, B)<br/>
  <i></i><code>DLAMC3</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>DOUBLE PRECISION function dlamc3 (double precisionA, double precisionB)</h3>

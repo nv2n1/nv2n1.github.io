@@ -9,7 +9,7 @@ description: "pmdaCacheStore, pmdaCacheStoreKey, pmdaCacheLookup, pmdaCacheLooku
 
 <p><code>pmdaCacheStore</code>, <code>pmdaCacheStoreKey</code>, <code>pmdaCacheLookup</code>, <code>pmdaCacheLookupName</code>, <code>pmdaCacheLookupKey</code>, <code>pmdaCacheOp</code>, <code>pmdaCachePurge</code>, <code>pmdaCacheResize</code> &#8211; manage a cache of instance domain information for a PMDA</p>
 <h2>C Synopsis</h2>
-<p><code> #include &lt;pcp/pmapi.h&gt;<br />
+<p><code> #include &lt;pcp/pmapi.h&gt;<br/>
  #include &lt;pcp/pmda.h&gt; </p>
 <p> int pmdaCacheStore(pmInDom </code><i>indom</i>, int <i>flags</i>, const char&nbsp;<wbr>*<i>name</i>, void&nbsp;<wbr>*<i>private</i>); </p>
 <p> int pmdaCacheStoreKey(pmInDom <i>indom</i>, int <i>flags</i>, const char&nbsp;<wbr>*<i>name</i>, int&nbsp;<wbr><i>keylen</i>, const void&nbsp;<wbr>*<i>key</i>, void&nbsp;<wbr>*<i>private</i>); </p>

@@ -111,7 +111,7 @@ ExeContext pki_tps_t
 <h2>ADDITIONAL RESOURCES</h2>
 <p> There is a more detailed how-to article, including information on available client calls for <code>nuxwdog</code>, at m[blue]<code><a rel="nofollow" href="https://fedorahosted.org/nuxwdog/wiki/HOWTO">https://fedorahosted.org/nuxwdog/wiki/HOWTO</a></code>m[]. </p>
 <p> The <code>nuxwdog</code> server works in conjunction with the Dogtag PKI subsystems. The Dogtag PKI project wiki is at m[blue]<code><a rel="nofollow" href="http://pki.fedoraproject.org/wiki/">http://pki.fedoraproject.org/wiki/</a></code>m[]. </p>
-<p> For information specifically about <code>nuxwdog</code>, the <code>nuxwdog</code> project wiki is located at m[blue]<code><a rel="nofollow" href="https://fedorahosted.org/nuxwdog/wiki/">https://fedorahosted.org/nuxwdog/wiki/</a></code>m[]<font SIZE="-2">[1]</font>. The <code>nuxwdog</code> relates directly to <code>nuxwdog</code> code changes and releases, rather than all PKI-related updates. </p>
+<p> For information specifically about <code>nuxwdog</code>, the <code>nuxwdog</code> project wiki is located at m[blue]<code><a rel="nofollow" href="https://fedorahosted.org/nuxwdog/wiki/">https://fedorahosted.org/nuxwdog/wiki/</a></code>m[][1]. The <code>nuxwdog</code> relates directly to <code>nuxwdog</code> code changes and releases, rather than all PKI-related updates. </p>
 <p> Mailing lists: pki-devel [at] redhat.com and pki-users [at] redhat.com </p>
 <p> IRC: Freenode at #dogtag-pki</p>
 <h2>AUTHORS</h2>

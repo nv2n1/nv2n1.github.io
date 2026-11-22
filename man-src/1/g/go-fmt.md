@@ -13,7 +13,7 @@ description: "go-fmt – gofmt (reformat) package sources"
 <p> <code>go fmt</code> [<code>-n</code>] [<code>-x</code>] [<i>packages</i>]</p>
 <h2>DESCRIPTION</h2>
 <p> Fmt runs the command &#8216;gofmt -l -w&#8217; on the packages named by the import paths. It prints the names of the files that are modified. </p>
-<p> For more about gofmt, see &#8216;go doc cmd/gofmt&#8217;.<br />
+<p> For more about gofmt, see &#8216;go doc cmd/gofmt&#8217;.<br/>
  For more about specifying packages, see <code><a href="/docs/linux/man/7-go-packages/">go-packages</a></code>(7).</p>
 <dl>
 <dt><code>-n</code></dt>

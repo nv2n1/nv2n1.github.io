@@ -11,7 +11,7 @@ description: "openais.conf – openais executive configuration file"
 <h2>Synopsis</h2>
 <p>/etc/ais/openais.conf </p>
 <h2>Description</h2>
-<p>The openais.conf instructs the openais executive about various parameters needed to control the openais executive. The configuration file consists of bracketed top level directives. The possible directive choices are <i>totem { } , logging { } , event { } , and amf { }.</i><br />
+<p>The openais.conf instructs the openais executive about various parameters needed to control the openais executive. The configuration file consists of bracketed top level directives. The possible directive choices are <i>totem { } , logging { } , event { } , and amf { }.</i><br/>
 &nbsp;<wbr>These directives are described below.</p>
 <dl>
 <dt>totem { }</dt>

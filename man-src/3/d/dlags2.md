@@ -11,7 +11,7 @@ description: "dlags2.f –"
 <p> dlags2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dlags2</code> (UPPER, A1, A2, A3, B1, B2, B3, CSU, SNU, CSV, SNV, CSQ, SNQ)<br />
+<p> subroutine <code>dlags2</code> (UPPER, A1, A2, A3, B1, B2, B3, CSU, SNU, CSV, SNV, CSQ, SNQ)<br/>
  <i></i><code>DLAGS2</code> computes 2-by-2 orthogonal matrices U, V, and Q, and applies them to matrices A and B such that the rows of the transformed A and B are parallel.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlags2 (logicalUPPER, double precisionA1, double precisionA2, double precisionA3, double precisionB1, double precisionB2, double precisionB3, double precisionCSU, double precisionSNU, double precisionCSV, double precisionSNV, double precisionCSQ, double precisionSNQ)</h3>

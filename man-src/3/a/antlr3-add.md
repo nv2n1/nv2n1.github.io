@@ -13,8 +13,8 @@ description: "src/antlr3rewritestreams.c –"
 <h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3rewritestreams.h">antlr3rewritestreams.h</a>&gt; </p>
 <h3>Functions</h3>
-<p> static void * <code>_next</code> (<code>pANTLR3_REWRITE_RULE_ELEMENT_STREAM</code> stream)<br />
- <i>Do the work of getting the next element, making sure that it&#8217;s a tree node or subtree. </i><br />
+<p> static void * <code>_next</code> (<code>pANTLR3_REWRITE_RULE_ELEMENT_STREAM</code> stream)<br/>
+ <i>Do the work of getting the next element, making sure that it&#8217;s a tree node or subtree. </i><br/>
  static void <code>add</code> (<code>pANTLR3_REWRITE_RULE_ELEMENT_STREAM</code> stream, void *el, void(ANTLR3_CDECL *freePtr)(void *)) </p>
 <p> static <code>pANTLR3_REWRITE_RULE_ELEMENT_STREAM</code> <code>antlr3RewriteRuleElementStreamNewAE</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_BASE_RECOGNIZER</code> rec, <code>pANTLR3_UINT8</code> description) </p>
 <p> static <code>pANTLR3_REWRITE_RULE_ELEMENT_STREAM</code> <code>antlr3RewriteRuleElementStreamNewAEE</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_BASE_RECOGNIZER</code> rec, <code>pANTLR3_UINT8</code> description, void *oneElement) </p>
@@ -28,38 +28,38 @@ description: "src/antlr3rewritestreams.c –"
 <p> ANTLR3_API <code>pANTLR3_REWRITE_RULE_TOKEN_STREAM</code> <code>antlr3RewriteRuleTOKENStreamNewAE</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_BASE_RECOGNIZER</code> rec, <code>pANTLR3_UINT8</code> description) </p>
 <p> ANTLR3_API <code>pANTLR3_REWRITE_RULE_TOKEN_STREAM</code> <code>antlr3RewriteRuleTOKENStreamNewAEE</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_BASE_RECOGNIZER</code> rec, <code>pANTLR3_UINT8</code> description, void *oneElement) </p>
 <p> ANTLR3_API <code>pANTLR3_REWRITE_RULE_TOKEN_STREAM</code> <code>antlr3RewriteRuleTOKENStreamNewAEV</code> (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_BASE_RECOGNIZER</code> rec, <code>pANTLR3_UINT8</code> description, <code>pANTLR3_VECTOR</code> vector) </p>
-<p> static void * <code>dupTok</code> (<code>pANTLR3_REWRITE_RULE_ELEMENT_STREAM</code> stream, void *el)<br />
- <i>When constructing trees, sometimes we need to dup a token or AST subtree. </i><br />
- static void * <code>dupTree</code> (<code>pANTLR3_REWRITE_RULE_ELEMENT_STREAM</code> stream, void *element)<br />
- <i>When constructing trees, sometimes we need to dup a token or AST subtree. </i><br />
- static void * <code>dupTreeNode</code> (<code>pANTLR3_REWRITE_RULE_ELEMENT_STREAM</code> stream, void *element)<br />
- <i>When constructing trees, sometimes we need to dup a token or AST subtree. </i><br />
+<p> static void * <code>dupTok</code> (<code>pANTLR3_REWRITE_RULE_ELEMENT_STREAM</code> stream, void *el)<br/>
+ <i>When constructing trees, sometimes we need to dup a token or AST subtree. </i><br/>
+ static void * <code>dupTree</code> (<code>pANTLR3_REWRITE_RULE_ELEMENT_STREAM</code> stream, void *element)<br/>
+ <i>When constructing trees, sometimes we need to dup a token or AST subtree. </i><br/>
+ static void * <code>dupTreeNode</code> (<code>pANTLR3_REWRITE_RULE_ELEMENT_STREAM</code> stream, void *element)<br/>
+ <i>When constructing trees, sometimes we need to dup a token or AST subtree. </i><br/>
  static void <code>expungeRS</code> (<code>pANTLR3_REWRITE_RULE_ELEMENT_STREAM</code> stream) </p>
-<p> static void <code>freeNodeRS</code> (<code>pANTLR3_REWRITE_RULE_ELEMENT_STREAM</code> stream)<br />
- <i>Do special nilNode reuse detection for node streams. </i><br />
+<p> static void <code>freeNodeRS</code> (<code>pANTLR3_REWRITE_RULE_ELEMENT_STREAM</code> stream)<br/>
+ <i>Do special nilNode reuse detection for node streams. </i><br/>
  static void <code>freeRS</code> (<code>pANTLR3_REWRITE_RULE_ELEMENT_STREAM</code> stream) </p>
-<p> static void * <code>getDescription</code> (<code>pANTLR3_REWRITE_RULE_ELEMENT_STREAM</code> stream)<br />
- <i>Returns the description string if there is one available (check for NULL). </i><br />
- static <code>ANTLR3_BOOLEAN</code> <code>hasNext</code> (<code>pANTLR3_REWRITE_RULE_ELEMENT_STREAM</code> stream)<br />
- <i>Returns ANTLR3_TRUE if there is a next element available. </i><br />
- static void * <code>next</code> (<code>pANTLR3_REWRITE_RULE_ELEMENT_STREAM</code> stream)<br />
- <i>Return the next element in the stream. </i><br />
- static <code>pANTLR3_BASE_TREE</code> <code>nextNode</code> (<code>pANTLR3_REWRITE_RULE_ELEMENT_STREAM</code> stream)<br />
- <i>Treat next element as a single node even if it&#8217;s a subtree. </i><br />
+<p> static void * <code>getDescription</code> (<code>pANTLR3_REWRITE_RULE_ELEMENT_STREAM</code> stream)<br/>
+ <i>Returns the description string if there is one available (check for NULL). </i><br/>
+ static <code>ANTLR3_BOOLEAN</code> <code>hasNext</code> (<code>pANTLR3_REWRITE_RULE_ELEMENT_STREAM</code> stream)<br/>
+ <i>Returns ANTLR3_TRUE if there is a next element available. </i><br/>
+ static void * <code>next</code> (<code>pANTLR3_REWRITE_RULE_ELEMENT_STREAM</code> stream)<br/>
+ <i>Return the next element in the stream. </i><br/>
+ static <code>pANTLR3_BASE_TREE</code> <code>nextNode</code> (<code>pANTLR3_REWRITE_RULE_ELEMENT_STREAM</code> stream)<br/>
+ <i>Treat next element as a single node even if it&#8217;s a subtree. </i><br/>
  static <code>pANTLR3_BASE_TREE</code> <code>nextNodeNode</code> (<code>pANTLR3_REWRITE_RULE_ELEMENT_STREAM</code> stream) </p>
-<p> static <code>pANTLR3_BASE_TREE</code> <code>nextNodeToken</code> (<code>pANTLR3_REWRITE_RULE_ELEMENT_STREAM</code> stream)<br />
- <i>Get the next token from the list and create a node for it This is the implementation for token streams. </i><br />
- static void * <code>nextToken</code> (<code>pANTLR3_REWRITE_RULE_ELEMENT_STREAM</code> stream)<br />
- <i>Return the next element for a caller that wants just the token. </i><br />
- static <code>pANTLR3_BASE_TREE</code> <code>nextTree</code> (<code>pANTLR3_REWRITE_RULE_ELEMENT_STREAM</code> stream)<br />
- <i>Return the next element in the stream. </i><br />
- static void <code>reset</code> (<code>pANTLR3_REWRITE_RULE_ELEMENT_STREAM</code> stream)<br />
- <i>Reset the condition of this stream so that it appears we have not consumed any of its elements. </i><br />
- static <code>ANTLR3_UINT32</code> <code>size</code> (<code>pANTLR3_REWRITE_RULE_ELEMENT_STREAM</code> stream)<br />
- <i>Number of elements available in the stream. </i><br />
- static <code>pANTLR3_BASE_TREE</code> <code>toTree</code> (<code>pANTLR3_REWRITE_RULE_ELEMENT_STREAM</code> stream, void *element)<br />
- <i>We don;t explicitly convert to a tree unless the call goes to nextTree, which means rewrites are heterogeneous. </i><br />
- static <code>pANTLR3_BASE_TREE</code> <code>toTreeNode</code> (<code>pANTLR3_REWRITE_RULE_ELEMENT_STREAM</code> stream, void *element)<br />
+<p> static <code>pANTLR3_BASE_TREE</code> <code>nextNodeToken</code> (<code>pANTLR3_REWRITE_RULE_ELEMENT_STREAM</code> stream)<br/>
+ <i>Get the next token from the list and create a node for it This is the implementation for token streams. </i><br/>
+ static void * <code>nextToken</code> (<code>pANTLR3_REWRITE_RULE_ELEMENT_STREAM</code> stream)<br/>
+ <i>Return the next element for a caller that wants just the token. </i><br/>
+ static <code>pANTLR3_BASE_TREE</code> <code>nextTree</code> (<code>pANTLR3_REWRITE_RULE_ELEMENT_STREAM</code> stream)<br/>
+ <i>Return the next element in the stream. </i><br/>
+ static void <code>reset</code> (<code>pANTLR3_REWRITE_RULE_ELEMENT_STREAM</code> stream)<br/>
+ <i>Reset the condition of this stream so that it appears we have not consumed any of its elements. </i><br/>
+ static <code>ANTLR3_UINT32</code> <code>size</code> (<code>pANTLR3_REWRITE_RULE_ELEMENT_STREAM</code> stream)<br/>
+ <i>Number of elements available in the stream. </i><br/>
+ static <code>pANTLR3_BASE_TREE</code> <code>toTree</code> (<code>pANTLR3_REWRITE_RULE_ELEMENT_STREAM</code> stream, void *element)<br/>
+ <i>We don;t explicitly convert to a tree unless the call goes to nextTree, which means rewrites are heterogeneous. </i><br/>
+ static <code>pANTLR3_BASE_TREE</code> <code>toTreeNode</code> (<code>pANTLR3_REWRITE_RULE_ELEMENT_STREAM</code> stream, void *element)<br/>
  <i>Ensure stream emits trees; tokens must be converted to AST nodes. </i></p>
 <h2>Detailed Description</h2>
 <p> Implementation of token/tree streams that are used by the tree re-write rules to manipulate the tokens and trees produced by rules that are subject to rewrite directives. </p>

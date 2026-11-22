@@ -10,23 +10,23 @@ description: "ipmievd – IPMI event daemon for sending events to syslog"
 <p>ipmievd &#8211; IPMI event daemon for sending events to syslog</p>
 <h2>Synopsis</h2>
 <p>ipmievd [<code>-c</code>|<code>-h</code>|<code>-d </code><i>N</i>|<code>-v</code>|<code>-V</code>] <code>-I</code> <i>open</i> &lt;<i>open</i> | <i>sel</i>&gt; [&lt;<i>option</i>&gt;] </p>
-<p> ipmievd [<code>-c</code>|<code>-h</code>|<code>-v</code>|<code>-V</code>] <code>-I</code> <i>lan</i> <code>-H</code> &lt;<i>hostname</i>&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-p</code>&nbsp;<wbr>&lt;<i>port</i>&gt;]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-U</code>&nbsp;<wbr>&lt;<i>username</i>&gt;]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-A</code>&nbsp;<wbr>&lt;<i>authtype</i>&gt;]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-L</code>&nbsp;<wbr>&lt;<i>privlvl</i>&gt;]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-a</code>|<code>-E</code>|<code>-P</code>|<code>-f</code>&nbsp;<wbr>&lt;<i>password</i>&gt;]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-o</code>&nbsp;<wbr>&lt;<i>oemtype</i>&gt;]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-O</code>&nbsp;<wbr>&lt;<i>sel oem</i>&gt;]<br />
+<p> ipmievd [<code>-c</code>|<code>-h</code>|<code>-v</code>|<code>-V</code>] <code>-I</code> <i>lan</i> <code>-H</code> &lt;<i>hostname</i>&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-p</code>&nbsp;<wbr>&lt;<i>port</i>&gt;]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-U</code>&nbsp;<wbr>&lt;<i>username</i>&gt;]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-A</code>&nbsp;<wbr>&lt;<i>authtype</i>&gt;]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-L</code>&nbsp;<wbr>&lt;<i>privlvl</i>&gt;]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-a</code>|<code>-E</code>|<code>-P</code>|<code>-f</code>&nbsp;<wbr>&lt;<i>password</i>&gt;]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-o</code>&nbsp;<wbr>&lt;<i>oemtype</i>&gt;]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-O</code>&nbsp;<wbr>&lt;<i>sel oem</i>&gt;]<br/>
 &nbsp;<wbr>&nbsp;<wbr><i>sel</i>&nbsp;<wbr>[&lt;<i>option</i>&gt;] </p>
-<p> ipmievd [<code>-c</code>|<code>-h</code>|<code>-v</code>|<code>-V</code>] <code>-I</code> <i>lanplus</i> <code>-H</code> &lt;<i>hostname</i>&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-p</code>&nbsp;<wbr>&lt;<i>port</i>&gt;]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-U</code>&nbsp;<wbr>&lt;<i>username</i>&gt;]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-L</code>&nbsp;<wbr>&lt;<i>privlvl</i>&gt;]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-a</code>|<code>-E</code>|<code>-P</code>|<code>-f</code>&nbsp;<wbr>&lt;<i>password</i>&gt;]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-o</code>&nbsp;<wbr>&lt;<i>oemtype</i>&gt;]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-O</code>&nbsp;<wbr>&lt;<i>sel oem</i>&gt;]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-C</code>&nbsp;<wbr>&lt;<i>ciphersuite</i>&gt;]<br />
+<p> ipmievd [<code>-c</code>|<code>-h</code>|<code>-v</code>|<code>-V</code>] <code>-I</code> <i>lanplus</i> <code>-H</code> &lt;<i>hostname</i>&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-p</code>&nbsp;<wbr>&lt;<i>port</i>&gt;]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-U</code>&nbsp;<wbr>&lt;<i>username</i>&gt;]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-L</code>&nbsp;<wbr>&lt;<i>privlvl</i>&gt;]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-a</code>|<code>-E</code>|<code>-P</code>|<code>-f</code>&nbsp;<wbr>&lt;<i>password</i>&gt;]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-o</code>&nbsp;<wbr>&lt;<i>oemtype</i>&gt;]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-O</code>&nbsp;<wbr>&lt;<i>sel oem</i>&gt;]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-C</code>&nbsp;<wbr>&lt;<i>ciphersuite</i>&gt;]<br/>
 &nbsp;<wbr>&nbsp;<wbr><i>sel</i>&nbsp;<wbr>[&lt;<i>option</i>&gt;]</p>
 <h2>Description</h2>
 <p><code>ipmievd</code> is a daemon which will listen for events from the BMC that are being sent to the SEL and also log those messages to syslog. It is able to run in one of two modes: either using the Event Message Buffer and asynchronous event notification from the OpenIPMI kernel driver or actively polling the contents of the SEL for new events. Upon receipt of an event via either mechanism it will be logged to syslog with the <i>LOG_LOCAL4</i> facility. </p>
@@ -81,9 +81,9 @@ description: "ipmievd – IPMI event daemon for sending events to syslog"
 <dl>
 <dt><i>help</i></dt>
 <dd>This can be used to get command-line help. It may also be placed at the end of commands to get option usage help. </dd>
-<p> &gt; ipmievd help<br />
- Commands:<br />
-&nbsp;<wbr>open&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Use OpenIPMI for asyncronous notification of events<br />
+<p> &gt; ipmievd help<br/>
+ Commands:<br/>
+&nbsp;<wbr>open&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Use OpenIPMI for asyncronous notification of events<br/>
 &nbsp;<wbr>sel&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Poll SEL for notification of events </p>
 <dt><i>open</i></dt>
 <dd>This command starts ipmievd with the OpenIPMI event watching mechanism which relies on the Event Message Buffer feature of IPMI. This requires a properly installed and configured OpenIPMI driver on Linux and is only valid to be run through the <i>open</i> interface. See the <code>ipmitool</code> manpage and associated documentation for more information on setting up the OpenIPMI driver. </dd>
@@ -118,8 +118,8 @@ description: "ipmievd – IPMI event daemon for sending events to syslog"
 <dt><i>Example 1</i>: Daemon process watching OpenIPMI for events</dt>
 <dd>&gt; ipmievd -I open open daemon</dd>
 <dt><i>Example 2</i>: Local non-daemon process checking remote SEL every 30 seconds</dt>
-<dd>&gt; ipmievd -I lan -H 1.2.3.4 -f passfile sel nodaemon timeout=30<br />
- Reading Sensors&#8230;<br />
+<dd>&gt; ipmievd -I lan -H 1.2.3.4 -f passfile sel nodaemon timeout=30<br/>
+ Reading Sensors&#8230;<br/>
  Waiting for Events&#8230;
 </dd></dl>
 <h2>Author</h2>

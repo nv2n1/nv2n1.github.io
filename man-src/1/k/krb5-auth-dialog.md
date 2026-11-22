@@ -25,5 +25,5 @@ description: "krb5-auth-dialog – Kerberos 5 credential checking"
 <h2>BUGS</h2>
 <p> Probably, but let&#8217;s hope not. If you find any, please file them in the bug database at <a rel="nofollow" href="http://bugzilla.gnome.org/">http://bugzilla.gnome.org/</a> against the &quot;krb5-auth-dialog&quot; component. </p>
 <h2>AUTHORS</h2>
-<p> Christopher Aillon &lt;caillon [at] redhat.com&gt;<br />
+<p> Christopher Aillon &lt;caillon [at] redhat.com&gt;<br/>
  Jonathan Blandford &lt;jrb [at] redhat.com&gt; </p>

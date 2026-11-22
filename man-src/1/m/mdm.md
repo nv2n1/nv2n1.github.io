@@ -10,7 +10,7 @@ description: "MDM – The MDM Display Manager"
 
 <p> MDM &#8211; The MDM Display Manager </p>
 <h2>SYNOPSIS</h2>
-<p> <code>mdm [options]</code><br />
+<p> <code>mdm [options]</code><br/>
  <code>mdmsetup [options]</code></p>
 <h2>DESCRIPTION</h2>
 <p> MDM is a replacement for XDM, the X Display Manager. Unlike its competitors (X3DM, KDM, WDM) MDM was written from scratch and does not contain any original XDM / X Consortium code. MDM runs and manages the X servers for both local and remote logins (using XDMCP). See <a rel="nofollow" href="http://www.gnome.org/projects/mdm/">http://www.gnome.org/projects/mdm/</a> for more details. </p>

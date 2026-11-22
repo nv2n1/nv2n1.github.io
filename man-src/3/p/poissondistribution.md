@@ -13,11 +13,11 @@ description: "ql/math/distributions/poissondistribution.hpp – Poisson distribu
 #include &lt;ql/math/factorial.hpp&gt;
 #include &lt;ql/math/incompletegamma.hpp&gt;</code></pre>
 <h3>Classes</h3>
-<p>class <code>PoissonDistribution</code><br />
- <i>Normal distribution function. </i><br />
- class <code>CumulativePoissonDistribution</code><br />
- <i>Cumulative Poisson distribution function. </i><br />
- class <code>InverseCumulativePoisson</code><br />
+<p>class <code>PoissonDistribution</code><br/>
+ <i>Normal distribution function. </i><br/>
+ class <code>CumulativePoissonDistribution</code><br/>
+ <i>Cumulative Poisson distribution function. </i><br/>
+ class <code>InverseCumulativePoisson</code><br/>
  <i>Inverse cumulative Poisson distribution function. </i></p>
 <h2>Detailed Description</h2>
 <p>Poisson distribution.</p>

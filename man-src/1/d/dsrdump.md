@@ -40,12 +40,12 @@ dsrfile-in  DICOM SR input filename to be dumped
          use config file f for the logger
 </code></pre>
 <h3>input options</h3>
-<p>input file format : +f&#8211; read &#8211; file<br />
-                                    read file format or<br />
-    data set(default) + fo&#8211; read &#8211; file &#8211; only read file format only<br />
-        &#8211; f&#8211; read &#8211; dataset read data set without file meta information input transfer syntax : -t = &#8211;read &#8211; xfer &#8211; auto use TS recognition(default) &#8211; td&#8211; read &#8211; xfer &#8211; detect ignore TS specified in the file meta header<br />
-                                                                                                      &#8211; te&#8211; read &#8211; xfer &#8211; little read with explicit VR little endian TS<br />
-                                                                                                      &#8211; tb&#8211; read &#8211; xfer &#8211; big read with explicit VR big endian TS<br />
+<p>input file format : +f&#8211; read &#8211; file<br/>
+                                    read file format or<br/>
+    data set(default) + fo&#8211; read &#8211; file &#8211; only read file format only<br/>
+        &#8211; f&#8211; read &#8211; dataset read data set without file meta information input transfer syntax : -t = &#8211;read &#8211; xfer &#8211; auto use TS recognition(default) &#8211; td&#8211; read &#8211; xfer &#8211; detect ignore TS specified in the file meta header<br/>
+                                                                                                      &#8211; te&#8211; read &#8211; xfer &#8211; little read with explicit VR little endian TS<br/>
+                                                                                                      &#8211; tb&#8211; read &#8211; xfer &#8211; big read with explicit VR big endian TS<br/>
                                                                                                       &#8211; ti&#8211; read &#8211; xfer &#8211; implicit read with implicit VR little endian TS</p>
 <h3>parsing options</h3>
 <p>additional information : -Ip&#8211; processing &#8211; details show currently processed content item error handling : -Er&#8211; unknown &#8211; relationship accept unknown / missing relationship type &#8211; Ec&#8211; ignore &#8211; constraints ignore relationship content constraints &#8211; Ee&#8211; ignore &#8211; item &#8211; errors do not abort on content item errors, just warn(e.g.missing value type specific attributes) &#8211; Ei&#8211; skip &#8211; invalid &#8211; items skip invalid content items(incl.sub &#8211; tree)</p>

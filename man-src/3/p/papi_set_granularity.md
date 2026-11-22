@@ -22,12 +22,12 @@ description: "PAPI_set_granularity –"
 @arg PAPI_GRN_SYS_CPU -- Count all CPUs individually
 @arg PAPI_GRN_MIN -- The finest available granularity
 @arg PAPI_GRN_MAX -- The coarsest available granularity </pre>
-<p>&nbsp;<wbr>&nbsp;<wbr><br />
+<p>&nbsp;<wbr>&nbsp;<wbr><br/>
 &nbsp;<wbr> </p>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>PAPI_OK</i><br />
- <i>PAPI_EINVAL</i> One or more of the arguments is invalid.<br />
+<dd><i>PAPI_OK</i><br/>
+ <i>PAPI_EINVAL</i> One or more of the arguments is invalid.<br/>
 &nbsp;<wbr></dd></dl>
 <p> <code>PAPI_set_granularity</code> sets the default counting granularity for all new event sets created by <code>PAPI_create_eventset</code>. This call implicitly sets the granularity for the cpu component (component 0) and is included to preserve backward compatibility. </p>
 <p> <code>Example:</code></p>

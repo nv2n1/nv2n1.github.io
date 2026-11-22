@@ -10,7 +10,7 @@ description: "slatrs.f –"
 <p>slatrs.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>slatrs</code> (UPLO, TRANS, DIAG, NORMIN, N, A, LDA, X, SCALE, CNORM, INFO)<br />
+<p>subroutine <code>slatrs</code> (UPLO, TRANS, DIAG, NORMIN, N, A, LDA, X, SCALE, CNORM, INFO)<br/>
  <i></i><code>SLATRS</code> solves a triangular system of equations with the scale factor set to prevent overflow.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slatrs (characterUPLO, characterTRANS, characterDIAG, characterNORMIN, integerN, real, dimension( lda, * )A, integerLDA, real, dimension( * )X, realSCALE, real, dimension( * )CNORM, integerINFO)</h3>

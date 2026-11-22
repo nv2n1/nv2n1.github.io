@@ -10,7 +10,7 @@ description: "XkbAllocGeomRows – Allocate rows in a section"
 <p>XkbAllocGeomRows &#8211; Allocate rows in a section </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Status XkbAllocGeomRows</code> <code>(XkbSectionPtr </code><i>section</i><code>,</code> <code>int </code><i>num_needed</i><code>);</code><br />
+<dt> <code>Status XkbAllocGeomRows</code> <code>(XkbSectionPtr </code><i>section</i><code>,</code> <code>int </code><i>num_needed</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

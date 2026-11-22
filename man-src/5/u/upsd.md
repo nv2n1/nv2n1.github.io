@@ -33,7 +33,7 @@ description: "upsd.users – Administrative user definitions for NUT upsd"
 <dt>actions</dt>
 <dd>Allow the user to do certain things with upsd. Valid actions are: </dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>SET &#8211; change the value of certain variables in the UPS</p>
-<p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>FSD &#8211; set the forced shutdown flag in the UPS. This is<br />
+<p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>FSD &#8211; set the forced shutdown flag in the UPS. This is<br/>
  equivalent to an &quot;on battery + low battery&quot; situation for the purposes of monitoring. </p>
 <p> The list of actions is expected to grow in the future. </p>
 <dt>instcmds</dt>

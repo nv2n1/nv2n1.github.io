@@ -14,7 +14,7 @@ description: "ntop – display top network users"
 <p><code>ntop</code> shows the current network usage. It displays a list of hosts that are currently using the network and reports information concerning the (IP and non-IP) traffic generated and received by each host. <code>ntop</code> may operate as a front-end collector (sFlow and/or netFlow plugins) or as a stand-alone collector/display program. A web browser is needed to access the information captured by the <code>ntop</code> program. <code>ntop</code> is a hybrid layer 2 / layer 3 network monitor, that is by default it uses the layer 2 Media Access Control (MAC) addresses AND the layer 3 tcp/ip addresses. <code>ntop</code> is capable of associating the two, so that ip and non-ip traffic (e.g. arp, rarp) are combined for a complete picture of network activity. </p>
 <h2>Command-Line Options</h2>
 <p>@filename The text of <code>filename</code> is copied &#8211; ignoring line breaks and comment lines (anything following a #) &#8211; into the command line. <code>ntop</code> behaves as if all of the text had simply been typed directly on the command line. For example, if the command line is &quot;-t 3 @d -u ntop&quot; and file d contains just the line &#8216;-d&#8217;, then the effective command line is -t 3 -d -u ntop. Multiple @s are permitted. Nested @s (an @ inside the file) are not permitted. </p>
-<p> Remember, most <code>ntop </code> options are &quot;sticky&quot;, that is they just set an internal flag. Invoking them multiple times doesn&#8217;t change <code>ntop&#8217;s </code> behavior. However, options that set a value, such as &#8211;trace-level, will use the LAST value given: &#8211;trace-level 2 &#8211;trace-level 3 will run as &#8211;trace-level 3.<br />
+<p> Remember, most <code>ntop </code> options are &quot;sticky&quot;, that is they just set an internal flag. Invoking them multiple times doesn&#8217;t change <code>ntop&#8217;s </code> behavior. However, options that set a value, such as &#8211;trace-level, will use the LAST value given: &#8211;trace-level 2 &#8211;trace-level 3 will run as &#8211;trace-level 3.<br/>
 &nbsp;<wbr> Beginning with 3.1, many command-line options may also be set via the web browser interface. These changes take effect on the next run of and on each subsequent run until changed. </p>
 <p> 2 -a &#8211;access-log-file By default <code>ntop</code> does not maintain a log of HTTP requests to the internal web server. Use this parameter to request logging and to specify the location of the file where these HTTP requests are logged. </p>
 <p> Each log entry is in Apache-like style. The only difference between Apache and <code>ntop</code> logs is that an additional column has been added which has the time (in milliseconds) that <code>ntop </code> needed to serve the request. Log entries look like this: </p>
@@ -142,10 +142,10 @@ toolbarqueries.google.com &lt;flag&gt; 60 4.0 % 60 0 0</pre>
 <p> If -w is set to 0 the web server will not listen for http:// connections. </p>
 <p> -W operates similarly, but controls the port for the https:// connections. </p>
 <p> Some examples: </p>
-<p> <code>ntop -w 3000 -W 0 </code> (this is the default setting) HTTP requests on port 3000 and no HTTPS.<br />
-&nbsp;<wbr> <code>ntop -w 80 -W 443 </code> Both HTTP and HTTPS have been enabled on their most common ports.<br />
+<p> <code>ntop -w 3000 -W 0 </code> (this is the default setting) HTTP requests on port 3000 and no HTTPS.<br/>
+&nbsp;<wbr> <code>ntop -w 80 -W 443 </code> Both HTTP and HTTPS have been enabled on their most common ports.<br/>
 &nbsp;<wbr> <code>ntop -w 0 -W 443 </code> HTTP disabled, HTTPS enabled on the common port. </p>
-<p> Certain sensitive, configuration pages of the <code>ntop</code> web server are protected by a userid/password. By default, these are the user/URL administration, filter, shutdown and reset stats are password protected<br />
+<p> Certain sensitive, configuration pages of the <code>ntop</code> web server are protected by a userid/password. By default, these are the user/URL administration, filter, shutdown and reset stats are password protected<br/>
 &nbsp;<wbr>and are accessible initially only to user&nbsp;<wbr> <code>admin</code> with a password set during the first run of <code>ntop.</code> </p>
 <p> Users can modify/add/delete users/URLs using ntop itself &#8211; see the Admin tab. </p>
 <p> The passwords, userids and URLs to protect with passwords are stored in a database file. Passwords are stored in an encrypted form in the database for further security. Best practices call for securing that database so that only the <code>ntop</code> user can read it. </p>
@@ -205,7 +205,7 @@ toolbarqueries.google.com &lt;flag&gt; 60 4.0 % 60 0 0</pre>
 <p> 2 -V &#8211;version Prints <code>ntop </code> version information and then exits. </p>
 <p> 2 -W &#8211;https-server (See the joint documentation with the -w parameter, above) </p>
 <p> &#8211;disable-instantsessionpurge <code>ntop</code> sets completed sessions as &#8216;timed out&#8217; and then purge them almost instantly, which is not the behavior you might expect from the discussions about purge timeouts. This switch makes ntop respect the timeouts for completed sessions. It is NOT the default because a busy web server may have 100s or 1000s of completed sessions and this would significantly increase the amount of memory <code>ntop</code> uses. </p>
-<p> &#8211;disable-mutexextrainfo <code>ntop</code> stores extra information about the locks and unlocks of the protective mutexes it uses. Since <code>ntop</code> uses fine-grained locking, this information is updated frequently. On some OSes, the system calls used to collect this informatio (getpid() and gettimeofday()) are expensive. This option disables the extra information. It should have no processing impact on <code>ntop</code><br />
+<p> &#8211;disable-mutexextrainfo <code>ntop</code> stores extra information about the locks and unlocks of the protective mutexes it uses. Since <code>ntop</code> uses fine-grained locking, this information is updated frequently. On some OSes, the system calls used to collect this informatio (getpid() and gettimeofday()) are expensive. This option disables the extra information. It should have no processing impact on <code>ntop</code><br/>
 &nbsp;<wbr>&#8211; however should <code>ntop</code> actually deadlock, we would lose the information that sometimes tells us why. </p>
 <p> &#8211;disable-schedyield <code>ntop</code> uses sched_yield() calls for better interactive performance. Under some situations, primarily under RedHat Linux 8.0, this can deadlock, causing the <code>ntop</code> web server to stop responding, although <code>ntop</code> appears to still be operational according to the ps command. Use this switch to disable these calls, IF you are seeing deadlocks. </p>
 <p> &#8211;disable-stopcap Return <code>ntop </code> to the old (v2.1) behavior on a memory error. The default of stopcap enabled makes the web interface available albeit with static content until <code>ntop</code> is shutdown. </p>
@@ -214,9 +214,9 @@ toolbarqueries.google.com &lt;flag&gt; 60 4.0 % 60 0 0</pre>
 <p> &#8211;instance </p>
 <p> You can run multiple instances of <code>ntop</code> simultaneously by specifying different -P values (typically through separate ntop.conf files). If you set a value for this parameter (available only on the command line), you (1) display the &#8216;instance&#8217; name on every web page and (2) alter the log prefix from &quot;NTOP&quot; to your chosen value. </p>
 <p> If you want to make the tag more obvious, create a .instance class in style.css, e.g.: </p>
-<p>.instance&nbsp;<wbr>{<br />
-&nbsp;<wbr>&nbsp;<wbr>color:&nbsp;<wbr>#666666;<br />
-&nbsp;<wbr>&nbsp;<wbr>font-size: 18pt;<br />
+<p>.instance&nbsp;<wbr>{<br/>
+&nbsp;<wbr>&nbsp;<wbr>color:&nbsp;<wbr>#666666;<br/>
+&nbsp;<wbr>&nbsp;<wbr>font-size: 18pt;<br/>
 } </p>
 <p> Note (UNIX): To run completely different versions of the <code>ntop</code> binary, you need to compile and install into a different library (using ./configure &#8211;prefix) and then specify the LD_LIBRARY_PATH before invoking, e.g. </p>
 <p> LD_LIBRARY_PATH=/devel/lib/ntop/:&#8230; /devel/bin/ntop &#8230;args&#8230; </p>
@@ -235,7 +235,7 @@ toolbarqueries.google.com &lt;flag&gt; 60 4.0 % 60 0 0</pre>
 <p> &#8211;skip-version-check By default, <code>ntop</code> accesses a remote file to periodically check if the most current version is running. This option disables that check. Please review the privacy notice at the bottom of this page for more information. By default, the recheck period is slightly more than 15 days. This can be adjusted via a constant in globals-defines.h. If the result of the initial check indicates that the <code>ntop</code> version is a &#8216;new development&#8217; version (that is newer than the latest published development version), the recheck is disabled. This is because which fixes and enhancements were present/absent from the code. </p>
 <p> NOTE: At present, the recheck does not work under Windows. </p>
 <p> &#8211;ssl-watchdog </p>
-<p> Enable a watchdog for webserver hangs. These usually happen when connecting with older browsers. The user gets nothing back and other users can&#8217;t connect. Internally, packet processing continues but there is no way to access the data through the web server or shutdown ntop cleanly. With the watchdog, a timeout occurs after 3 seconds, and processing continues with a log message. Unfortunately, the user sees nothing &#8211; it just looks like a failed connection. (also available as a ./configure option, &#8211;enable-sslwatchdog)<br />
+<p> Enable a watchdog for webserver hangs. These usually happen when connecting with older browsers. The user gets nothing back and other users can&#8217;t connect. Internally, packet processing continues but there is no way to access the data through the web server or shutdown ntop cleanly. With the watchdog, a timeout occurs after 3 seconds, and processing continues with a log message. Unfortunately, the user sees nothing &#8211; it just looks like a failed connection. (also available as a ./configure option, &#8211;enable-sslwatchdog)<br/>
 &nbsp;<wbr> &#8211;w3c By default, <code>ntop</code> generates displayable but not great html. There are a number of tags we do not generate because they cause problems with older browsers which are still commonly used or are important to look good on real-world browsers. This flag tells <code>ntop</code> to generate &#8216;BETTER&#8217; (but not perfect) w3c compliant html 4.01 output. This in no way addresses all of the compatibility and markup issues. Over time, we would like to make <code>ntop</code> more compatible, but it will never be 100%. If you find any issues, please report them to ntop-dev. </p>
 <p> 2 -4 &#8211;ipv4 Use IPv4 connections. </p>
 <p> 2 -6 &#8211;ipv6 Use IPv6 connections</p>
@@ -254,24 +254,24 @@ toolbarqueries.google.com &lt;flag&gt; 60 4.0 % 60 0 0</pre>
 <p> You may request &#8211; via the <code>&#8211;skip-version-check</code> run-time option &#8211; that this check be eliminated. If you use this option, no individually identifiable information is transmitted or recorded, because the entire retrieval and check is skipped. </p>
 <p> We ask you to allow this retrieval and check, because it benefits both you and the <code>ntop</code> developers. It benefits you because you will be automatically notified if the <code>ntop</code> program version is obsolete, becomes unsupported or is no longer current. It benefits the developers of <code>ntop</code> because it allows us to determine the number of active <code>ntop</code> instances, and the operating system/versions that users are running <code>ntop</code> under. This allows us to focus development resources on systems like those our users are using <code>ntop</code> on. </p>
 <p> The individually identifiable information is contained in the web server log records which are automatically created each time the version file is retrieved. This is a function of the web server and not of <code>ntop</code> , but we do take advantage of it. The log record shows the IP address of the requestor (the <code>ntop</code> instance) and a User-Agent header field. We place information in the User-Agent header as follows: </p>
-<p>&nbsp;<wbr>ntop/&lt;version&gt;&nbsp;<wbr><br />
-&nbsp;<wbr>host/&lt;name from config.guess&gt;<br />
-&nbsp;<wbr>distro/&lt;if one&gt;<br />
-&nbsp;<wbr>release/&lt;of the distro, also if one&gt;&nbsp;<wbr><br />
-&nbsp;<wbr>kernrlse/&lt;kernel version or release&gt;&nbsp;<wbr><br />
-&nbsp;<wbr>GCC/&lt;version&gt;<br />
-&nbsp;<wbr>config()&nbsp;<wbr>&lt;condensed parameters from ./configure&gt;<br />
-&nbsp;<wbr>run()&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&lt;condensed flags &#8211; no data &#8211; from the execution line&gt;<br />
-&nbsp;<wbr>libpcap/&lt;version&gt;<br />
-&nbsp;<wbr>gdbm/&lt;version&gt;<br />
-&nbsp;<wbr>openssl/&lt;version&gt;<br />
-&nbsp;<wbr>zlib/&lt;version&gt;<br />
-&nbsp;<wbr>access/&lt;http, https, both or none&gt;<br />
+<p>&nbsp;<wbr>ntop/&lt;version&gt;&nbsp;<wbr><br/>
+&nbsp;<wbr>host/&lt;name from config.guess&gt;<br/>
+&nbsp;<wbr>distro/&lt;if one&gt;<br/>
+&nbsp;<wbr>release/&lt;of the distro, also if one&gt;&nbsp;<wbr><br/>
+&nbsp;<wbr>kernrlse/&lt;kernel version or release&gt;&nbsp;<wbr><br/>
+&nbsp;<wbr>GCC/&lt;version&gt;<br/>
+&nbsp;<wbr>config()&nbsp;<wbr>&lt;condensed parameters from ./configure&gt;<br/>
+&nbsp;<wbr>run()&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&lt;condensed flags &#8211; no data &#8211; from the execution line&gt;<br/>
+&nbsp;<wbr>libpcap/&lt;version&gt;<br/>
+&nbsp;<wbr>gdbm/&lt;version&gt;<br/>
+&nbsp;<wbr>openssl/&lt;version&gt;<br/>
+&nbsp;<wbr>zlib/&lt;version&gt;<br/>
+&nbsp;<wbr>access/&lt;http, https, both or none&gt;<br/>
 &nbsp;<wbr>interfaces()&nbsp;<wbr>&lt;given interface names&gt; </p>
 <p> For example: </p>
-<p>&nbsp;<wbr>ntop/2.2.98 host/i686-pc-linux-gnu distro/redhat release/9 kernrlse/2.4.20-8smp<br />
-&nbsp;<wbr>GCC/3.2.2 config(i18n)&nbsp;<wbr>run(i;&nbsp;<wbr>u;&nbsp;<wbr>P;&nbsp;<wbr>w;&nbsp;<wbr>t;&nbsp;<wbr>logextra;&nbsp;<wbr>m;&nbsp;<wbr>instantsessionpurge;&nbsp;<wbr><br />
-&nbsp;<wbr>schedyield;&nbsp;<wbr>d;&nbsp;<wbr>usesyslog=;&nbsp;<wbr>t)&nbsp;<wbr>gdbm/1.8.0 openssl/0.9.7a zlib/1.1.4<br />
+<p>&nbsp;<wbr>ntop/2.2.98 host/i686-pc-linux-gnu distro/redhat release/9 kernrlse/2.4.20-8smp<br/>
+&nbsp;<wbr>GCC/3.2.2 config(i18n)&nbsp;<wbr>run(i;&nbsp;<wbr>u;&nbsp;<wbr>P;&nbsp;<wbr>w;&nbsp;<wbr>t;&nbsp;<wbr>logextra;&nbsp;<wbr>m;&nbsp;<wbr>instantsessionpurge;&nbsp;<wbr><br/>
+&nbsp;<wbr>schedyield;&nbsp;<wbr>d;&nbsp;<wbr>usesyslog=;&nbsp;<wbr>t)&nbsp;<wbr>gdbm/1.8.0 openssl/0.9.7a zlib/1.1.4<br/>
 &nbsp;<wbr>access/http interfaces(eth0,eth1) </p>
 <p> Distro and release information is determined at compile time and consists of information typically found in the /etc/release (or similar) file. See the <code>ntop</code> tool linuxrelease for how this is determined. </p>
 <p> gcc compiler version (if available) is the internal version #s for the gcc compiler, e.g. 3.2.3. </p>
@@ -280,11 +280,11 @@ toolbarqueries.google.com &lt;flag&gt; 60 4.0 % 60 0 0</pre>
 <p> Similarly, the run time parameters are stripped of data and paths, just showing which flags are being used. </p>
 <p> The libpcap, gdbm, openssl and zlib versions come from the strings returned by the various inquiry functions (if they&#8217;re availabe). </p>
 <p> Here&#8217;s a sample log record: </p>
-<p> 67.xxx.xxx.xxx &#8211; &#8211; [28/Dec/2003:12:11:46 -0500] &quot;GET /version.xml HTTP/1.0&quot;<br />
-&nbsp;<wbr>&nbsp;<wbr>200 1568&nbsp;<wbr><a rel="nofollow" href="http://www.burtonstrauss.com">www.burtonstrauss.com</a>&nbsp;<wbr>&quot;-&quot;&nbsp;<wbr>&quot;ntop/2.2.98 host/i686-pc-linux-gnu<br />
-&nbsp;<wbr>&nbsp;<wbr>distro/redhat release/9 kernrlse/2.4.20-8smp GCC/3.2.2 config(i18n)<br />
-&nbsp;<wbr>&nbsp;<wbr>run(i;&nbsp;<wbr>u;&nbsp;<wbr>P;&nbsp;<wbr>w;&nbsp;<wbr>t;&nbsp;<wbr>logextra;&nbsp;<wbr>m;&nbsp;<wbr>instantsessionpurge;&nbsp;<wbr>schedyield;&nbsp;<wbr>d;<br />
-&nbsp;<wbr>&nbsp;<wbr>usesyslog=)&nbsp;<wbr>libpcap/0.8 gdbm/1.8.0 openssl/0.9.7a zlib/1.1.4 access/http<br />
+<p> 67.xxx.xxx.xxx &#8211; &#8211; [28/Dec/2003:12:11:46 -0500] &quot;GET /version.xml HTTP/1.0&quot;<br/>
+&nbsp;<wbr>&nbsp;<wbr>200 1568&nbsp;<wbr><a rel="nofollow" href="http://www.burtonstrauss.com">www.burtonstrauss.com</a>&nbsp;<wbr>&quot;-&quot;&nbsp;<wbr>&quot;ntop/2.2.98 host/i686-pc-linux-gnu<br/>
+&nbsp;<wbr>&nbsp;<wbr>distro/redhat release/9 kernrlse/2.4.20-8smp GCC/3.2.2 config(i18n)<br/>
+&nbsp;<wbr>&nbsp;<wbr>run(i;&nbsp;<wbr>u;&nbsp;<wbr>P;&nbsp;<wbr>w;&nbsp;<wbr>t;&nbsp;<wbr>logextra;&nbsp;<wbr>m;&nbsp;<wbr>instantsessionpurge;&nbsp;<wbr>schedyield;&nbsp;<wbr>d;<br/>
+&nbsp;<wbr>&nbsp;<wbr>usesyslog=)&nbsp;<wbr>libpcap/0.8 gdbm/1.8.0 openssl/0.9.7a zlib/1.1.4 access/http<br/>
 &nbsp;<wbr>&nbsp;<wbr>interfaces(eth0,eth1,eth2)&quot;&nbsp;<wbr>&quot;-&quot;</p>
 <h2>User Support</h2>
 <p>Please send bug reports to the ntop-dev &lt;ntop-dev [at] ntop.org&gt; mailing list. The ntop &lt;ntop [at] ntop.org&gt; mailing list is used for discussing ntop usage issues. In order to post messages on the lists a (free) subscription is required to limit/avoid spam. Please do NOT contact the author directly unless this is a personal question. </p>

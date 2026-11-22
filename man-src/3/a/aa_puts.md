@@ -11,8 +11,8 @@ description: "aa_puts – output string to AA-lib output buffers."
 <p> aa_puts &#8211; output string to AA-lib output buffers.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>
-<p> void aa_puts<br />
- (<br />
+<p> void aa_puts<br/>
+ (<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>aa_context *c,</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>int x,</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>int y,</p>

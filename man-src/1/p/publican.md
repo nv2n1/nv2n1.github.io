@@ -87,7 +87,7 @@ add_revision Add an entry to the revision history
  
 
  build 
-&nbsp;<wbr>Transform&nbsp;<wbr><font SIZE="-1">XML</font>&nbsp;<wbr>to other formats&nbsp;<wbr>(pdf, html, html-single, drupal-book, etc) 
+&nbsp;<wbr>Transform&nbsp;<wbr>XML&nbsp;<wbr>to other formats&nbsp;<wbr>(pdf, html, html-single, drupal-book, etc) 
 
  
         Options:
@@ -117,7 +117,7 @@ Options : --help Display help message-- config = s Use a nonstandard config file
  
 
  clean_ids 
-&nbsp;<wbr>Run clean ids for source&nbsp;<wbr><font SIZE="-1">XML</font> 
+&nbsp;<wbr>Run clean ids for source&nbsp;<wbr>XML 
 
  
 Options : --help Display help message-- config = s Use a nonstandard config file-- common_config = s Override path to Common_Config directory-- common_content = s Override path to Common_Content directory-- nocolours Disable ANSI colourisation of logging.--quiet Disable all logging.--brand_dir = s Directory to source brand files from.
@@ -183,7 +183,7 @@ Options : --help Display help message-- config = s Use a nonstandard config file
  
 
  lang_stats 
-&nbsp;<wbr>report&nbsp;<wbr><font SIZE="-1">PO</font>&nbsp;<wbr>statistics 
+&nbsp;<wbr>report&nbsp;<wbr>PO&nbsp;<wbr>statistics 
 
  
 Options : --help Display help message-- config = s Use a nonstandard config file-- common_config = s Override path to Common_Config directory-- common_content = s Override path to Common_Content directory-- nocolours Disable ANSI colourisation of logging.--quiet Disable all logging.--brand_dir = s Directory to source brand files from.--lang = &lt;LANG&gt; The language the XML will be written in
@@ -226,7 +226,7 @@ Options : --help Display help message-- config = s Use a nonstandard config file
  
 
  print_known 
-&nbsp;<wbr>Print a list of&nbsp;<wbr><font SIZE="-1">QA</font>'d DocBook tags 
+&nbsp;<wbr>Print a list of&nbsp;<wbr>QA'd DocBook tags 
 
  
 Options : --help Display help message-- config = s Use a nonstandard config file-- common_config = s Override path to Common_Config directory-- common_content = s Override path to Common_Content directory-- nocolours Disable ANSI colourisation of logging.--quiet Disable all logging.--brand_dir = s Directory to source brand files from.
@@ -240,7 +240,7 @@ Options : --help Display help message-- config = s Use a nonstandard config file
  
 
  print_unused 
-&nbsp;<wbr>Print a list of unused&nbsp;<wbr><font SIZE="-1">XML</font>&nbsp;<wbr>files 
+&nbsp;<wbr>Print a list of unused&nbsp;<wbr>XML&nbsp;<wbr>files 
 
  
 Options : --help Display help message-- config = s Use a nonstandard config file-- common_config = s Override path to Common_Config directory-- common_content = s Override path to Common_Content directory-- nocolours Disable ANSI colourisation of logging.--quiet Disable all logging.--brand_dir = s Directory to source brand files from.
@@ -310,7 +310,7 @@ Options : --help Display help message-- config = s Use a nonstandard config file
  
 
  update_po 
-&nbsp;<wbr>Update the&nbsp;<wbr><font SIZE="-1">PO</font>&nbsp;<wbr>files 
+&nbsp;<wbr>Update the&nbsp;<wbr>PO&nbsp;<wbr>files 
 
  
         Options:
@@ -329,7 +329,7 @@ Options : --help Display help message-- config = s Use a nonstandard config file
  
 
  update_pot 
-&nbsp;<wbr>Update the&nbsp;<wbr><font SIZE="-1">POT</font>&nbsp;<wbr>files 
+&nbsp;<wbr>Update the&nbsp;<wbr>POT&nbsp;<wbr>files 
 
  
 Options : --help Display help message-- config = s Use a nonstandard config file-- common_config = s Override path to Common_Config directory-- common_content = s Override path to Common_Content directory-- nocolours Disable ANSI colourisation of logging.--quiet Disable all logging.--brand_dir = s Directory to source brand files from.
@@ -344,11 +344,11 @@ Options : --help Display help message-- config = s Use a nonstandard config file
 
 <h2>CONFIGURATION AND ENVIRONMENT</h2>
 
- Publican requires access to Apache <font SIZE="-1">FOP</font> for creating <font SIZE="-1">PDF</font> files.
+ Publican requires access to Apache FOP for creating PDF files.
 
 <h2>DEPENDENCIES</h2>
 
- Archive::Tar Archive::Zip Carp Config::Simple Cwd <font SIZE="-1">DBI</font> DateTime DateTime::Format::DateParse Devel::Cover Encode File::Basename File::Copy::Recursive File::Find File::Find::Rule File::HomeDir File::Inplace File::Path File::Spec File::Which File::pushd Getopt::Long HTML::FormatText HTML::FormatText::WithLinks HTML::FormatText::WithLinks::AndTables HTML::TreeBuilder I18N::LangTags::List IO::String List::MoreUtils List::Util Locale::Language Locale::Maketext::Gettext Locale::PO Module::Build Pod::Usage Sort::Versions String::Similarity Syntax::Highlight::Engine::Kate Template Template::Constants Term::ANSIColor Test::More Test::Pod Test::Pod::Coverage Text::CSV_XS Text::Wrap Time::localtime XML::LibXML XML::LibXSLT XML::Simple XML::TreeBuilder
+ Archive::Tar Archive::Zip Carp Config::Simple Cwd DBI DateTime DateTime::Format::DateParse Devel::Cover Encode File::Basename File::Copy::Recursive File::Find File::Find::Rule File::HomeDir File::Inplace File::Path File::Spec File::Which File::pushd Getopt::Long HTML::FormatText HTML::FormatText::WithLinks HTML::FormatText::WithLinks::AndTables HTML::TreeBuilder I18N::LangTags::List IO::String List::MoreUtils List::Util Locale::Language Locale::Maketext::Gettext Locale::PO Module::Build Pod::Usage Sort::Versions String::Similarity Syntax::Highlight::Engine::Kate Template Template::Constants Term::ANSIColor Test::More Test::Pod Test::Pod::Coverage Text::CSV_XS Text::Wrap Time::localtime XML::LibXML XML::LibXSLT XML::Simple XML::TreeBuilder
 
 <h2>INCOMPATIBILITIES</h2>
 

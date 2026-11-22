@@ -19,15 +19,15 @@ description: "pmsocks – shell wrapper for performance monitoring across firewa
 <p> On IRIX, <code>pmsocks</code> is simply a shell wrapper that sets the appropriate environment variables and then executes the <i>path </i> program with <i>args</i> arguments (if any). <code>pmsocks</code> works by setting the <code>_RLD_LIST</code> environment variable (see <code>rld</code>(1)) to load a dynamic shared library (see <code>dso</code>(5)) containing stubs for &#8220;socksified&#8221; network library functions; This &#8220;socksified&#8221; library is installed at <i>/usr/pcp/lib/libpcp_socks.so</i>. </p>
 <p> There are a number of conditions required for this to be successful and the user is strongly advised to read this whole manual page (in particular the <code>CAVEAT</code> section below) before attempting to use <code>pmsocks</code>. </p>
 <p> When <code>pmsocks</code> is installed, the <i>/etc/pcp_socks.conf</i> configuration file is also installed with minimum default settings. These settings specify that socket connections to the local host should be made directly, without contacting any socks server daemon. This is necessary so that PCP clients will be able to establish a local connection to the <code>X</code>(1) server, and use PCP connections, possibly via a <code>sockd</code> daemon, to monitor remote hosts. In the present implementation of <code>pmsocks</code>, non-direct connections to the <code>X</code>(1) server do not work, hence if the display is remote, then the remote host must be on the same side of the firewall and <i>/etc/pcp_socks.conf</i> must be configured to connect directly to that host. </p>
-<p> The format of <i>/etc/pcp_socks.conf </i> is identical to <i>/etc/socks.conf</i> as documented in the <i>CSTC-4.2</i> socks distribution. This distribution may be obtained via information contained in the socks FAQ at <center> <a href="ftp://coast.cs.purdue.edu/pub/tools/unix/socks/">ftp://coast.cs.purdue.edu/pub/tools/unix/socks/</a><br />
+<p> The format of <i>/etc/pcp_socks.conf </i> is identical to <i>/etc/socks.conf</i> as documented in the <i>CSTC-4.2</i> socks distribution. This distribution may be obtained via information contained in the socks FAQ at <center> <a href="ftp://coast.cs.purdue.edu/pub/tools/unix/socks/">ftp://coast.cs.purdue.edu/pub/tools/unix/socks/</a><br/>
  </center> </p>
 <p> If other socks clients are being used, then it is generally safe to remove <i>/etc/pcp_socks.conf</i> and instead make a symbolic link to <i>/etc/socks.conf</i>. The file formats are identical. </p>
 <p> The default configuration should be customized to suit the local environment so that connections to hosts located on the same side of the firewall as the local host do not use the socks daemon unnecessarily. The default configuration is </p>
-<p> direct LOCALHOSTNAME 255.255.255.255 # direct localhost<br />
+<p> direct LOCALHOSTNAME 255.255.255.255 # direct localhost<br/>
  sockd 0.0.0.0 0.0.0.0 # contact sockd everywhere else </p>
 <p> Note that the string <code>LOCALHOSTNAME</code> is dynamically substituted at run time with the name of the local host, as obtained by a call to <code><a href="/docs/linux/man/2-gethostname/">gethostname</a></code>(2). Assuming the real IP address of the local host is <code>1.2.3.4</code> and that a normal class-c subnet is used locally, the most common customization would be to specify direct connections for all hosts on the local subnet, by inserting another &#8220;direct&#8221; line as follows: </p>
-<p> direct LOCALHOSTNAME 255.255.255.255 # direct localhost<br />
- direct 1.2.3.0 255.255.255.0 # direct on local subnet<br />
+<p> direct LOCALHOSTNAME 255.255.255.255 # direct localhost<br/>
+ direct 1.2.3.0 255.255.255.0 # direct on local subnet<br/>
  sockd 0.0.0.0 0.0.0.0 # contact sockd everywhere else </p>
 <p> The order of lines is important &#8211; the first line matching the requested destination IP address during a <code><a href="/docs/linux/man/2-connect/">connect</a></code>(2) call (after the requested IP address has been masked by the third parameter of the <i>/etc/pcp_socks.conf</i> line), specifies via the first parameter whether to contact the socks daemon or whether to attempt a direct connection.</p>
 <h2>IRIX ENVIRONMENT VARIABLES</h2>
@@ -44,7 +44,7 @@ description: "pmsocks – shell wrapper for performance monitoring across firewa
 <dt><code>SOCKS_BANNER</code></dt>
 <dd> If this is set, whenever a client calls <code>libpcp_socks</code> it will echo a message to <i>stdout</i> containing version information. This can be useful to check <code>libpcp_socks</code> is working in the absence of verbose logging.</dd>
 <dt><code>_RLD_LIST</code></dt>
-<dd> <code>pmsocks</code> sets this to exactly <code>/usr/pcp/lib/libpcp_socks.so:DEFAULT</code><br />
+<dd> <code>pmsocks</code> sets this to exactly <code>/usr/pcp/lib/libpcp_socks.so:DEFAULT</code><br/>
  It is strongly recommended this NOT be set in the environment of interactive shells.</dd>
 <dt><code>PMCD_CONNECT_TIMEOUT</code></dt>
 <dd> Specifies the time-out, in seconds, for connections to <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1). When using <code>pmsocks</code>, this may need to be increased from the default (5 seconds) due to the additional delays introduced as a result of using <code>sockd</code>. See <code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3) for further details about this variable.</dd></dl>

@@ -14,17 +14,17 @@ description: "sc::StateOutFile –"
 #include &lt;state_file.h&gt;</code></pre>
 <p> Inherits <code>sc::StateOut</code>. Inherited by <code>sc::StateOutBin</code>, and <code>sc::StateOutText</code>.</p>
 <h3>Public Member Functions</h3>
-<p><code>StateOutFile</code> ()<br />
- <i>State information will be written to </i><code>ExEnv::outn()</code>.<br />
- <code>StateOutFile</code> (std::ostream &amp;s)<br />
- <i>State information will be written to s. </i><br />
- <code>StateOutFile</code> (const char *name)<br />
- <i>State information will be written to name. </i><br />
- virtual int <code>open</code> (const char *name)<br />
- <i>State information will be written to name. </i><br />
- virtual void <code>flush</code> ()<br />
- <i>Flush the output stream. </i><br />
- virtual void <code>close</code> ()<br />
+<p><code>StateOutFile</code> ()<br/>
+ <i>State information will be written to </i><code>ExEnv::outn()</code>.<br/>
+ <code>StateOutFile</code> (std::ostream &amp;s)<br/>
+ <i>State information will be written to s. </i><br/>
+ <code>StateOutFile</code> (const char *name)<br/>
+ <i>State information will be written to name. </i><br/>
+ virtual int <code>open</code> (const char *name)<br/>
+ <i>State information will be written to name. </i><br/>
+ virtual void <code>flush</code> ()<br/>
+ <i>Flush the output stream. </i><br/>
+ virtual void <code>close</code> ()<br/>
  <i>Close the output stream. </i></p>
 <h3>Protected Attributes</h3>
 <pre><code>int opened_

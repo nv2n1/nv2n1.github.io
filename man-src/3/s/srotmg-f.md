@@ -10,7 +10,7 @@ description: "srotmg.f –"
 <p>srotmg.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>srotmg</code> (SD1, SD2, SX1, SY1, SPARAM)<br />
+<p>subroutine <code>srotmg</code> (SD1, SD2, SX1, SY1, SPARAM)<br/>
  <i></i><code>SROTMG</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine srotmg (realSD1, realSD2, realSX1, realSY1, real, dimension(5)SPARAM)</h3>

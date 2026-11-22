@@ -109,5 +109,5 @@ description: "rpmreaper – A tool for removing unnecessary packages from system
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-rpm/">rpm</a></code>(8) </p>
 <h2>AUTHORS</h2>
-<p> Miroslav Lichvar &lt;mlichvar [at] redhat.com&gt;<br />
+<p> Miroslav Lichvar &lt;mlichvar [at] redhat.com&gt;<br/>
  Petr Machata &lt;pmachata [at] redhat.com&gt; </p>

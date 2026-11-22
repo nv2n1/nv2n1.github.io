@@ -67,7 +67,7 @@ description: "resolv.conf – resolver configuration file"
 <h2>Files</h2>
 <p><i>/etc/resolv.conf</i>, <i>&lt;resolv.h&gt;</i></p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-gethostbyname/">gethostbyname</a></code>(3), <code><a href="/docs/linux/man/3-resolver/">resolver</a></code>(3), <code><a href="/docs/linux/man/7-hostname/">hostname</a></code>(7), <code><a href="/docs/linux/man/8-named/">named</a></code>(8)<br />
+<p><code><a href="/docs/linux/man/3-gethostbyname/">gethostbyname</a></code>(3), <code><a href="/docs/linux/man/3-resolver/">resolver</a></code>(3), <code><a href="/docs/linux/man/7-hostname/">hostname</a></code>(7), <code><a href="/docs/linux/man/8-named/">named</a></code>(8)<br/>
  Name Server Operations Guide for BIND</p>
 <h2>Colophon</h2>
 <p>This page is part of release 3.69 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="http://www.kernel.org/doc/man-pages/.">http://www.kernel.org/doc/man-pages/.</a> </p>

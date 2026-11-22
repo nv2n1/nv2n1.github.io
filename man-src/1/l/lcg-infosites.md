@@ -84,7 +84,7 @@ description: "lcg-infosites – list grid service information matching given cri
 <dt><code>wms</code></dt>
 <dd> List the matching Workload Management System endpoints.</dd></dl>
 <h2>AUTHOR</h2>
-<p> Versions &lt;= 2.6.9 by Patricia Mendez Lorenzo<br />
+<p> Versions &lt;= 2.6.9 by Patricia Mendez Lorenzo<br/>
  Versions &gt;= 3.0.0 by Maarten Litmaath</p>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs via GGUS (<a rel="nofollow" href="http://ggus.org">http://ggus.org</a>). </p>

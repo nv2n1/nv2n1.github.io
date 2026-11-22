@@ -13,57 +13,57 @@ description: "ANTLR3_STRING_struct –"
 <h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3string.h">antlr3string.h</a>&gt;</p>
 <h3>Data Fields</h3>
-<p> <code>pANTLR3_UINT8</code>(* <code>addc</code> )(struct <code>ANTLR3_STRING_struct</code> *string, <code>ANTLR3_UINT32</code> c)<br />
- <i>Pointer to function that adds a single character to the end of the string, in the encoding of the string &#8211; 8 bit, 16 bit, utf-8 etc. </i><br />
- <code>pANTLR3_UINT8</code>(* <code>addi</code> )(struct <code>ANTLR3_STRING_struct</code> *string, <code>ANTLR3_INT32</code> i)<br />
- <i>Pointer to function that adds the stringified representation of an integer to the string. </i><br />
- <code>pANTLR3_UINT8</code>(* <code>append</code> )(struct <code>ANTLR3_STRING_struct</code> *string, const char *newbit)<br />
- <i>Pointer to function adds a raw char * type pointer in the default encoding for this string. </i><br />
- <code>pANTLR3_UINT8</code>(* <code>append8</code> )(struct <code>ANTLR3_STRING_struct</code> *string, const char *newbit)<br />
- <i>Pointer to function adds a raw char * type pointer in the default encoding for this string. </i><br />
- <code>pANTLR3_UINT8</code>(* <code>appendS</code> )(struct <code>ANTLR3_STRING_struct</code> *string, struct <code>ANTLR3_STRING_struct</code> *newbit)<br />
- <i>Pointer to function appends a copy of the characters contained in another string. </i><br />
- <code>ANTLR3_UCHAR</code>(* <code>charAt</code> )(struct <code>ANTLR3_STRING_struct</code> *string, <code>ANTLR3_UINT32</code> offset)<br />
- <i>Pointer to a function that returns the character indexed at the supplied offset as a 32 bit character. </i><br />
- <code>pANTLR3_UINT8</code> <code>chars</code><br />
- <i>Pointer to the current string value (starts at NULL unless the string allocator is told to create it with a pre known size. </i><br />
- <code>ANTLR3_UINT32</code>(* <code>compare</code> )(struct <code>ANTLR3_STRING_struct</code> *string, const char *compStr)<br />
- <i>Pointer to a function that compares the text of a string with the supplied character string (which is assumed to be in the same encoding as the string itself) and returns a result a la strcmp(). </i><br />
- <code>ANTLR3_UINT32</code>(* <code>compare8</code> )(struct <code>ANTLR3_STRING_struct</code> *string, const char *compStr)<br />
- <i>Pointer to function that compares the text of a string to the supplied 8 bit character string and returns a result a la strcmp(). </i><br />
- <code>ANTLR3_UINT32</code>(* <code>compareS</code> )(struct <code>ANTLR3_STRING_struct</code> *string, struct <code>ANTLR3_STRING_struct</code> *compStr)<br />
- <i>Pointer to a function that compares the text of a string with the supplied string (which is assumed to be in the same encoding as the string itself) and returns a result a la strcmp(). </i><br />
- <code>ANTLR3_UINT8</code> <code>encoding</code><br />
- <i>Occasionally it is useful to know what the encoding of the string actually is, hence it is stored here as one the ANTLR3_ENCODING_ values. </i><br />
- <code>pANTLR3_STRING_FACTORY</code> <code>factory</code><br />
- <i>The factory that created this string. </i><br />
- <code>ANTLR3_UINT32</code> <code>index</code><br />
- <i>Index of string (allocation number) in case someone wants to explicitly release it. </i><br />
- <code>pANTLR3_UINT8</code>(* <code>insert</code> )(struct <code>ANTLR3_STRING_struct</code> *string, <code>ANTLR3_UINT32</code> point, const char *newbit)<br />
- <i>Pointer to function that inserts the supplied string at the specified offset in the current string in the default encoding for this string. </i><br />
- <code>pANTLR3_UINT8</code>(* <code>insert8</code> )(struct <code>ANTLR3_STRING_struct</code> *string, <code>ANTLR3_UINT32</code> point, const char *newbit)<br />
- <i>Pointer to function that inserts the supplied string at the specified offset in the current string in the default encoding for this string. </i><br />
- <code>pANTLR3_UINT8</code>(* <code>inserti</code> )(struct <code>ANTLR3_STRING_struct</code> *string, <code>ANTLR3_UINT32</code> point, <code>ANTLR3_INT32</code> i)<br />
- <i>Pointer to function that inserts the supplied integer in string form at the specified offset in the current string. </i><br />
- <code>pANTLR3_UINT8</code>(* <code>insertS</code> )(struct <code>ANTLR3_STRING_struct</code> *string, <code>ANTLR3_UINT32</code> point, struct <code>ANTLR3_STRING_struct</code> *newbit)<br />
- <i>Pointer to function that inserts a copy of the characters in the supplied string at the specified offset in the current string. </i><br />
- <code>ANTLR3_UINT32</code> <code>len</code><br />
- <i>Current length of the string up to and not including, the trailing &#8221; Note that the actual allocation (-&gt;size) is always at least one byte more than this to accommodate trailing &#8221;. </i><br />
- <code>pANTLR3_UINT8</code>(* <code>set</code> )(struct <code>ANTLR3_STRING_struct</code> *string, const char *<code>chars</code>)<br />
- <i>Pointer to function that sets the string value to a specific string in the default encoding for this string. </i><br />
- <code>pANTLR3_UINT8</code>(* <code>set8</code> )(struct <code>ANTLR3_STRING_struct</code> *string, const char *<code>chars</code>)<br />
- <i>Pointer to function that sets the string value to a specific 8 bit string in the default encoding for this string. </i><br />
- <code>pANTLR3_UINT8</code>(* <code>setS</code> )(struct <code>ANTLR3_STRING_struct</code> *string, struct <code>ANTLR3_STRING_struct</code> *<code>chars</code>)<br />
- <i>Pointer to function that sets the string value to a copy of the supplied string (strings must be in the same encoding. </i><br />
- <code>ANTLR3_UINT32</code> <code>size</code><br />
- <i>Current size of the string in bytes including the trailing &#8221;. </i><br />
- struct <code>ANTLR3_STRING_struct</code> *(* <code>subString</code> )(struct <code>ANTLR3_STRING_struct</code> *string, <code>ANTLR3_UINT32</code> startIndex, <code>ANTLR3_UINT32</code> endIndex)<br />
- <i>Pointer to a function that returns a substring of the supplied string a la .subString(s,e) in the Java language. </i><br />
- struct <code>ANTLR3_STRING_struct</code> *(* <code>to8</code> )(struct <code>ANTLR3_STRING_struct</code> *string)<br />
- <i>Pointer to a function that yields an 8 bit string regardless of the encoding of the supplied string. </i><br />
- <code>ANTLR3_INT32</code>(* <code>toInt32</code> )(struct <code>ANTLR3_STRING_struct</code> *string)<br />
- <i>Pointer to a function that returns the integer representation of any numeric characters at the beginning of the string. </i><br />
- struct <code>ANTLR3_STRING_struct</code> *(* <code>toUTF8</code> )(struct <code>ANTLR3_STRING_struct</code> *string)<br />
+<p> <code>pANTLR3_UINT8</code>(* <code>addc</code> )(struct <code>ANTLR3_STRING_struct</code> *string, <code>ANTLR3_UINT32</code> c)<br/>
+ <i>Pointer to function that adds a single character to the end of the string, in the encoding of the string &#8211; 8 bit, 16 bit, utf-8 etc. </i><br/>
+ <code>pANTLR3_UINT8</code>(* <code>addi</code> )(struct <code>ANTLR3_STRING_struct</code> *string, <code>ANTLR3_INT32</code> i)<br/>
+ <i>Pointer to function that adds the stringified representation of an integer to the string. </i><br/>
+ <code>pANTLR3_UINT8</code>(* <code>append</code> )(struct <code>ANTLR3_STRING_struct</code> *string, const char *newbit)<br/>
+ <i>Pointer to function adds a raw char * type pointer in the default encoding for this string. </i><br/>
+ <code>pANTLR3_UINT8</code>(* <code>append8</code> )(struct <code>ANTLR3_STRING_struct</code> *string, const char *newbit)<br/>
+ <i>Pointer to function adds a raw char * type pointer in the default encoding for this string. </i><br/>
+ <code>pANTLR3_UINT8</code>(* <code>appendS</code> )(struct <code>ANTLR3_STRING_struct</code> *string, struct <code>ANTLR3_STRING_struct</code> *newbit)<br/>
+ <i>Pointer to function appends a copy of the characters contained in another string. </i><br/>
+ <code>ANTLR3_UCHAR</code>(* <code>charAt</code> )(struct <code>ANTLR3_STRING_struct</code> *string, <code>ANTLR3_UINT32</code> offset)<br/>
+ <i>Pointer to a function that returns the character indexed at the supplied offset as a 32 bit character. </i><br/>
+ <code>pANTLR3_UINT8</code> <code>chars</code><br/>
+ <i>Pointer to the current string value (starts at NULL unless the string allocator is told to create it with a pre known size. </i><br/>
+ <code>ANTLR3_UINT32</code>(* <code>compare</code> )(struct <code>ANTLR3_STRING_struct</code> *string, const char *compStr)<br/>
+ <i>Pointer to a function that compares the text of a string with the supplied character string (which is assumed to be in the same encoding as the string itself) and returns a result a la strcmp(). </i><br/>
+ <code>ANTLR3_UINT32</code>(* <code>compare8</code> )(struct <code>ANTLR3_STRING_struct</code> *string, const char *compStr)<br/>
+ <i>Pointer to function that compares the text of a string to the supplied 8 bit character string and returns a result a la strcmp(). </i><br/>
+ <code>ANTLR3_UINT32</code>(* <code>compareS</code> )(struct <code>ANTLR3_STRING_struct</code> *string, struct <code>ANTLR3_STRING_struct</code> *compStr)<br/>
+ <i>Pointer to a function that compares the text of a string with the supplied string (which is assumed to be in the same encoding as the string itself) and returns a result a la strcmp(). </i><br/>
+ <code>ANTLR3_UINT8</code> <code>encoding</code><br/>
+ <i>Occasionally it is useful to know what the encoding of the string actually is, hence it is stored here as one the ANTLR3_ENCODING_ values. </i><br/>
+ <code>pANTLR3_STRING_FACTORY</code> <code>factory</code><br/>
+ <i>The factory that created this string. </i><br/>
+ <code>ANTLR3_UINT32</code> <code>index</code><br/>
+ <i>Index of string (allocation number) in case someone wants to explicitly release it. </i><br/>
+ <code>pANTLR3_UINT8</code>(* <code>insert</code> )(struct <code>ANTLR3_STRING_struct</code> *string, <code>ANTLR3_UINT32</code> point, const char *newbit)<br/>
+ <i>Pointer to function that inserts the supplied string at the specified offset in the current string in the default encoding for this string. </i><br/>
+ <code>pANTLR3_UINT8</code>(* <code>insert8</code> )(struct <code>ANTLR3_STRING_struct</code> *string, <code>ANTLR3_UINT32</code> point, const char *newbit)<br/>
+ <i>Pointer to function that inserts the supplied string at the specified offset in the current string in the default encoding for this string. </i><br/>
+ <code>pANTLR3_UINT8</code>(* <code>inserti</code> )(struct <code>ANTLR3_STRING_struct</code> *string, <code>ANTLR3_UINT32</code> point, <code>ANTLR3_INT32</code> i)<br/>
+ <i>Pointer to function that inserts the supplied integer in string form at the specified offset in the current string. </i><br/>
+ <code>pANTLR3_UINT8</code>(* <code>insertS</code> )(struct <code>ANTLR3_STRING_struct</code> *string, <code>ANTLR3_UINT32</code> point, struct <code>ANTLR3_STRING_struct</code> *newbit)<br/>
+ <i>Pointer to function that inserts a copy of the characters in the supplied string at the specified offset in the current string. </i><br/>
+ <code>ANTLR3_UINT32</code> <code>len</code><br/>
+ <i>Current length of the string up to and not including, the trailing &#8221; Note that the actual allocation (-&gt;size) is always at least one byte more than this to accommodate trailing &#8221;. </i><br/>
+ <code>pANTLR3_UINT8</code>(* <code>set</code> )(struct <code>ANTLR3_STRING_struct</code> *string, const char *<code>chars</code>)<br/>
+ <i>Pointer to function that sets the string value to a specific string in the default encoding for this string. </i><br/>
+ <code>pANTLR3_UINT8</code>(* <code>set8</code> )(struct <code>ANTLR3_STRING_struct</code> *string, const char *<code>chars</code>)<br/>
+ <i>Pointer to function that sets the string value to a specific 8 bit string in the default encoding for this string. </i><br/>
+ <code>pANTLR3_UINT8</code>(* <code>setS</code> )(struct <code>ANTLR3_STRING_struct</code> *string, struct <code>ANTLR3_STRING_struct</code> *<code>chars</code>)<br/>
+ <i>Pointer to function that sets the string value to a copy of the supplied string (strings must be in the same encoding. </i><br/>
+ <code>ANTLR3_UINT32</code> <code>size</code><br/>
+ <i>Current size of the string in bytes including the trailing &#8221;. </i><br/>
+ struct <code>ANTLR3_STRING_struct</code> *(* <code>subString</code> )(struct <code>ANTLR3_STRING_struct</code> *string, <code>ANTLR3_UINT32</code> startIndex, <code>ANTLR3_UINT32</code> endIndex)<br/>
+ <i>Pointer to a function that returns a substring of the supplied string a la .subString(s,e) in the Java language. </i><br/>
+ struct <code>ANTLR3_STRING_struct</code> *(* <code>to8</code> )(struct <code>ANTLR3_STRING_struct</code> *string)<br/>
+ <i>Pointer to a function that yields an 8 bit string regardless of the encoding of the supplied string. </i><br/>
+ <code>ANTLR3_INT32</code>(* <code>toInt32</code> )(struct <code>ANTLR3_STRING_struct</code> *string)<br/>
+ <i>Pointer to a function that returns the integer representation of any numeric characters at the beginning of the string. </i><br/>
+ struct <code>ANTLR3_STRING_struct</code> *(* <code>toUTF8</code> )(struct <code>ANTLR3_STRING_struct</code> *string)<br/>
  <i>Pointer to a function that yields a UT8 encoded string of the current string, regardless of the current encoding of the string. </i></p>
 <h2>Detailed Description</h2>
 <p> Base string class tracks the allocations and provides simple string tracking functions. </p>

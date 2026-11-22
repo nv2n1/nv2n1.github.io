@@ -12,26 +12,26 @@ description: "std::__debug::map< _Key, _Tp, _Compare, _Allocator > –"
 <p> Inherits map&lt; _Key, _Tp, _Compare, _Allocator &gt;, and <code>__gnu_debug::_Safe_sequence&lt; map&lt; _Key, _Tp, _Compare, _Allocator &gt; &gt;</code>.</p>
 <h3>Public Types</h3>
 <p>typedef _Allocator <code>allocator_type</code> </p>
-<p> typedef<br />
- <code>__gnu_debug::_Safe_iterator</code><br />
+<p> typedef<br/>
+ <code>__gnu_debug::_Safe_iterator</code><br/>
  &lt; <code>_Base_const_iterator</code>, <code>map</code> &gt; <code>const_iterator</code>&quot; </p>
 <p> typedef _Base::const_pointer <code>const_pointer</code> </p>
 <p> typedef _Base::const_reference <code>const_reference</code> </p>
-<p> typedef <code>std::reverse_iterator</code><br />
+<p> typedef <code>std::reverse_iterator</code><br/>
  &lt; <code>const_iterator</code> &gt; <code>const_reverse_iterator</code>&quot; </p>
 <p> typedef _Base::difference_type <code>difference_type</code> </p>
-<p> typedef<br />
- <code>__gnu_debug::_Safe_iterator</code><br />
+<p> typedef<br/>
+ <code>__gnu_debug::_Safe_iterator</code><br/>
  &lt; <code>_Base_iterator</code>, <code>map</code> &gt; <code>iterator</code>&quot; </p>
 <p> typedef _Compare <code>key_compare</code> </p>
 <p> typedef _Key <code>key_type</code> </p>
 <p> typedef _Tp <code>mapped_type</code> </p>
 <p> typedef _Base::pointer <code>pointer</code> </p>
 <p> typedef _Base::reference <code>reference</code> </p>
-<p> typedef <code>std::reverse_iterator</code><br />
+<p> typedef <code>std::reverse_iterator</code><br/>
  &lt; <code>iterator</code> &gt; <code>reverse_iterator</code>&quot; </p>
 <p> typedef _Base::size_type <code>size_type</code> </p>
-<p> typedef <code>std::pair</code>&lt; const _Key,<br />
+<p> typedef <code>std::pair</code>&lt; const _Key,<br/>
  _Tp &gt; <code>value_type</code>&quot;</p>
 <h3>Public Member Functions</h3>
 <pre><code>map (const _Compare &amp;__comp=_Compare(), const _Allocator &amp;__a=_Allocator())

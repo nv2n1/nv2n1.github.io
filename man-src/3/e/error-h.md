@@ -12,11 +12,11 @@ description: "src/error.h –"
 <h2>Synopsis</h2>
 <p>#include &lt;stddef.h&gt; </p>
 <h3>Functions</h3>
-<p>int <code>drmaa_get_errno_error</code> (char *error_diagnosis, size_t error_diag_len)<br />
- <i>Gets last system error message and returns its code. </i><br />
- int <code>drmaa_get_pbs_error</code> (char *error_diagnosis, size_t error_diag_len)<br />
- <i>Retrieves last PBS error message. </i><br />
- int <code>drmaa_map_pbs_error</code> (int pbs_errcode)<br />
+<p>int <code>drmaa_get_errno_error</code> (char *error_diagnosis, size_t error_diag_len)<br/>
+ <i>Gets last system error message and returns its code. </i><br/>
+ int <code>drmaa_get_pbs_error</code> (char *error_diagnosis, size_t error_diag_len)<br/>
+ <i>Retrieves last PBS error message. </i><br/>
+ int <code>drmaa_map_pbs_error</code> (int pbs_errcode)<br/>
  <i>Maps PBS error code into DMRAA code. </i></p>
 <h2>Detailed Description</h2>
 <p>Rasing errors. </p>

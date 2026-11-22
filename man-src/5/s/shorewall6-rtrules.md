@@ -12,7 +12,7 @@ description: "rtrules – Shorewall6 Routing Rules file"
 <dl>
 <dt> <code>/etc/shorewall6/rtrules</code></dt></dl>
 <h2>Description</h2>
-<dd>Entries in this file cause traffic to be routed to one of the providers listed in m[blue]<code>shorewall6-providers</code>m[]<font SIZE="-2">[1]</font>(5). </dd>
+<dd>Entries in this file cause traffic to be routed to one of the providers listed in m[blue]<code>shorewall6-providers</code>m[][1](5). </dd>
 <p> The columns in the file are as follows. </p>
 <p> <code>SOURCE</code> (Optional) &#8211; {<code>&#8211;</code>|<i>interface</i>|<i>address</i>|<i>interface</i>:<i>&lt;address</i>&gt;}</p>
 <dl>
@@ -56,7 +56,7 @@ description: "rtrules – Shorewall6 Routing Rules file"
 <h2>Files</h2>
 <p>/etc/shorewall6/rtrules</p>
 <h2>See Also</h2>
-<p>m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/MultiISP.html">http://www.shorewall.net/MultiISP.html</a></code>m[]<font SIZE="-2">[2]</font> </p>
+<p>m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/MultiISP.html">http://www.shorewall.net/MultiISP.html</a></code>m[][2] </p>
 <p> <a href="/docs/linux/man/8-shorewall6/">shorewall6</a>(8), <a href="/docs/linux/man/5-shorewall6-accounting/">shorewall6-accounting</a>(5), <a href="/docs/linux/man/5-shorewall6-actions/">shorewall6-actions</a>(5), shorewall6-blacklist(5), <a href="/docs/linux/man/5-shorewall6-hosts/">shorewall6-hosts</a>(5), <a href="/docs/linux/man/5-shorewall6-interfaces/">shorewall6-interfaces</a>(5), <a href="/docs/linux/man/5-shorewall6-maclist/">shorewall6-maclist</a>(5), <a href="/docs/linux/man/5-shorewall6-netmap/">shorewall6-netmap</a>(5),<a href="/docs/linux/man/5-shorewall6-params/">shorewall6-params</a>(5), <a href="/docs/linux/man/5-shorewall6-policy/">shorewall6-policy</a>(5), <a href="/docs/linux/man/5-shorewall6-providers/">shorewall6-providers</a>(5), shorewall6-routestopped(5), <a href="/docs/linux/man/5-shorewall6-rules/">shorewall6-rules</a>(5), <a href="/docs/linux/man/5-shorewall6-conf/">shorewall6.conf</a>(5), <a href="/docs/linux/man/5-shorewall6-secmarks/">shorewall6-secmarks</a>(5), <a href="/docs/linux/man/5-shorewall6-tcclasses/">shorewall6-tcclasses</a>(5), <a href="/docs/linux/man/5-shorewall6-tcdevices/">shorewall6-tcdevices</a>(5), <a href="/docs/linux/man/5-shorewall6-mangle/">shorewall6-mangle</a>(5), shorewall6-tos(5), <a href="/docs/linux/man/5-shorewall6-tunnels/">shorewall6-tunnels</a>(5), <a href="/docs/linux/man/5-shorewall6-zones/">shorewall6-zones</a>(5)</p>
 <h2>Notes</h2>
 <dl>

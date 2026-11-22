@@ -9,11 +9,11 @@ description: "Linked List General Functions – Miscellaneous functions that wor
 
 <p>Linked List General Functions &#8211; Miscellaneous functions that work on linked lists. </p>
 <h3>Functions</h3>
-<p>EAPI void * <code>evas_list_data</code> (const <code>Evas_List</code> *list)<br />
- <i>Get the list node data member. </i><br />
- EAPI int <code>evas_list_count</code> (const <code>Evas_List</code> *list)<br />
- <i>Get the count of the number of items in a list. </i><br />
- EAPI int <code>evas_list_alloc_error</code> (void)<br />
+<p>EAPI void * <code>evas_list_data</code> (const <code>Evas_List</code> *list)<br/>
+ <i>Get the list node data member. </i><br/>
+ EAPI int <code>evas_list_count</code> (const <code>Evas_List</code> *list)<br/>
+ <i>Get the count of the number of items in a list. </i><br/>
+ EAPI int <code>evas_list_alloc_error</code> (void)<br/>
  <i>Return the memory allocation failure flag after any operation needin allocation. </i></p>
 <h2>Detailed Description</h2>
 <p>Miscellaneous functions that work on linked lists.</p>

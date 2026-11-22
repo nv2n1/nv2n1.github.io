@@ -10,7 +10,7 @@ description: "dgesvx.f –"
 <p>dgesvx.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dgesvx</code> (FACT, TRANS, N, NRHS, A, LDA, AF, LDAF, IPIV, EQUED, R, C, B, LDB, X, LDX, RCOND, FERR, BERR, WORK, IWORK, INFO)<br />
+<p>subroutine <code>dgesvx</code> (FACT, TRANS, N, NRHS, A, LDA, AF, LDAF, IPIV, EQUED, R, C, B, LDB, X, LDX, RCOND, FERR, BERR, WORK, IWORK, INFO)<br/>
  <i></i><code> DGESVX computes the solution to system of linear equations A * X = B for GE matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dgesvx (characterFACT, characterTRANS, integerN, integerNRHS, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( ldaf, * )AF, integerLDAF, integer, dimension( * )IPIV, characterEQUED, double precision, dimension( * )R, double precision, dimension( * )C, double precision, dimension( ldb, * )B, integerLDB, double precision, dimension( ldx, * )X, integerLDX, double precisionRCOND, double precision, dimension( * )FERR, double precision, dimension( * )BERR, double precision, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>

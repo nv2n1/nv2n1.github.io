@@ -10,7 +10,7 @@ description: "dspmv.f –"
 <p>dspmv.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dspmv</code> (UPLO, N, ALPHA, AP, X, INCX, BETA, Y, INCY)<br />
+<p>subroutine <code>dspmv</code> (UPLO, N, ALPHA, AP, X, INCX, BETA, Y, INCY)<br/>
  <i></i><code>DSPMV</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dspmv (characterUPLO, integerN, double precisionALPHA, double precision, dimension(*)AP, double precision, dimension(*)X, integerINCX, double precisionBETA, double precision, dimension(*)Y, integerINCY)</h3>

@@ -10,7 +10,7 @@ description: "XkbGetVirtualMods – Obtain a subset of the virtual modifier bind
 <p>XkbGetVirtualMods &#8211; Obtain a subset of the virtual modifier bindings (the vmods array) in a keyboard description </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Status XkbGetVirtualMods</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>unsigned int </code><i>which</i><code>,</code> <code>XkbDescPtr </code><i>xkb</i><code>);</code><br />
+<dt> <code>Status XkbGetVirtualMods</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>unsigned int </code><i>which</i><code>,</code> <code>XkbDescPtr </code><i>xkb</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

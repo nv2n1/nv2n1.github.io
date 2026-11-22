@@ -15,8 +15,8 @@ description: "QuantLib::InverseCumulativeRsg – Inverse cumulative random seque
 <h3>Public Member Functions</h3>
 <p><code>InverseCumulativeRsg</code> (const USG &amp;uniformSequenceGenerator) </p>
 <p> <code>InverseCumulativeRsg</code> (const USG &amp;uniformSequenceGenerator, const IC &amp;inverseCumulative) </p>
-<p> const <code>sample_type</code> &amp; <code>nextSequence</code> () const<br />
- <i>returns next sample from the Gaussian distribution </i><br />
+<p> const <code>sample_type</code> &amp; <code>nextSequence</code> () const<br/>
+ <i>returns next sample from the Gaussian distribution </i><br/>
  const <code>sample_type</code> &amp; <code>lastSequence</code> () const </p>
 <p> Size <code>dimension</code> () const </p>
 <h2>Detailed Description</h2>

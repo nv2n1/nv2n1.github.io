@@ -83,34 +83,34 @@ description: "cd-paranoia – 9.8 (Paranoia release III via libcdio) – an audi
 </dl>
 <h2>OUTPUT SMILIES</h2>
 <dl>
-<dt><code><br />
+<dt><code><br/>
 &nbsp;<wbr>&nbsp;<wbr>:-)&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code></dt>
 <dd> Normal operation, low/no jitter</dd>
-<dt><code><br />
+<dt><code><br/>
 &nbsp;<wbr>&nbsp;<wbr>:-|&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code></dt>
 <dd> Normal operation, considerable jitter</dd>
-<dt><code><br />
+<dt><code><br/>
 &nbsp;<wbr>&nbsp;<wbr>:-/&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code></dt>
 <dd> Read drift</dd>
-<dt><code><br />
+<dt><code><br/>
 &nbsp;<wbr>&nbsp;<wbr>:-P&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code></dt>
 <dd> Unreported loss of streaming in atomic read operation</dd>
-<dt><code><br />
+<dt><code><br/>
 &nbsp;<wbr>&nbsp;<wbr>8-|&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code></dt>
 <dd> Finding read problems at same point during reread; hard to correct</dd>
-<dt><code><br />
+<dt><code><br/>
 &nbsp;<wbr>&nbsp;<wbr>:-0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code></dt>
 <dd> SCSI/ATAPI transport error</dd>
-<dt><code><br />
+<dt><code><br/>
 &nbsp;<wbr>&nbsp;<wbr>:-(&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code></dt>
 <dd> Scratch detected</dd>
-<dt><code><br />
+<dt><code><br/>
 &nbsp;<wbr>&nbsp;<wbr>;-(&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code></dt>
 <dd> Gave up trying to perform a correction</dd>
-<dt><code><br />
+<dt><code><br/>
 &nbsp;<wbr>&nbsp;<wbr>8-X</code></dt>
 <dd> Aborted read due to known, uncorrectable error</dd>
-<dt><code><br />
+<dt><code><br/>
 &nbsp;<wbr>&nbsp;<wbr>:^D&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code></dt>
 <dd> Finished extracting </dd>
 </dl>
@@ -118,19 +118,19 @@ description: "cd-paranoia – 9.8 (Paranoia release III via libcdio) – an audi
 <dl>
 <dt><code>&lt;space&gt; </code></dt>
 <dd> No corrections needed</dd>
-<dt><code><br />
+<dt><code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code></dt>
 <dd> Jitter correction required</dd>
-<dt><code><br />
+<dt><code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code></dt>
 <dd> Unreported loss of streaming/other error in read</dd>
-<dt><code><br />
+<dt><code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>!&nbsp;<wbr>&nbsp;<wbr></code></dt>
 <dd> Errors found after stage 1 correction; the drive is making the same error through multiple re-reads, and cd-paranoia is having trouble detecting them.</dd>
-<dt><code><br />
+<dt><code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>e&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code></dt>
 <dd> SCSI/ATAPI transport error (corrected)</dd>
-<dt><code><br />
+<dt><code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>V&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code></dt>
 <dd> Uncorrected error/skip </dd>
 </dl>

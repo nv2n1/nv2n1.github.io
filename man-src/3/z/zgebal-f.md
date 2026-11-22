@@ -10,7 +10,7 @@ description: "zgebal.f –"
 <p>zgebal.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zgebal</code> (JOB, N, A, LDA, ILO, IHI, SCALE, INFO)<br />
+<p>subroutine <code>zgebal</code> (JOB, N, A, LDA, ILO, IHI, SCALE, INFO)<br/>
  <i></i><code>ZGEBAL</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zgebal (characterJOB, integerN, complex*16, dimension( lda, * )A, integerLDA, integerILO, integerIHI, double precision, dimension( * )SCALE, integerINFO)</h3>

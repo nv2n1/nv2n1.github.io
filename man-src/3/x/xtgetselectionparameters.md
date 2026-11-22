@@ -31,6 +31,6 @@ description: "XtGetSelectionParameters – retrieve target parameters for a sele
 <h2>Description</h2>
 <p><code>XtGetSelectionParameters</code> may only be called from within an <code>XtConvertSelectionProc</code> or from within the last call to an <code>XtConvertSelectionIncrProc</code> with a new request_id.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xtsetselectionparameters/">XtSetSelectionParameters</a>(3)<br />
- <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><a href="/docs/linux/man/3-xtsetselectionparameters/">XtSetSelectionParameters</a>(3)<br/>
+ <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

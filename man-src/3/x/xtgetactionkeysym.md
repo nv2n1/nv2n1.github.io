@@ -21,5 +21,5 @@ description: "XtGetActionKeysym – obtain corresponding keysym"
 <h2>Description</h2>
 <p>If <code>XtGetActionKeysym</code> is called after an action procedure has been invoked by the Intrinsics and before that action procedure returns, and if the event pointer has the same value as the event pointer passed to that action routine, and if the event is a <code>KeyPress</code> or <code>KeyRelease</code> event, then <code>XtGetActionKeysym</code> returns the KeySym that matched the final event specification in the translation table and, if <i>modifiers_return</i> is non-NULL, the modifier state actually used to generate this KeySym; otherwise, if the event is a <code>KeyPress</code> or <code>KeyRelease</code> event, then <code>XtGetActionKeysym</code> calls <code>XtTranslateKeycode</code> and returns the results; else it returns <code>NoSymbol</code> and does not examine <i>modifiers_return</i>.</p>
 <h2>See Also</h2>
-<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

@@ -169,15 +169,15 @@ cmark_node *document = cmark_parse_document(&quot;Hello *world*&quot;, 13,
 <dl>
 <dt>
 </dt><dd>
-cmark_parser *parser = cmark_parser_new(CMARK_OPT_DEFAULT);<br />
-FILE *fp = fopen(&#8220;myfile.md&#8221;, &#8220;r&#8221;);<br />
-while ((bytes = fread(buffer, 1, sizeof(buffer), fp)) &gt; 0) {<br />
-    cmark_parser_feed(parser, buffer, bytes);<br />
-    if (bytes &lt; sizeof(buffer)) {<br />
-        break;<br />
-    }<br />
-}<br />
-document = cmark_parser_finish(parser);<br />
+cmark_parser *parser = cmark_parser_new(CMARK_OPT_DEFAULT);<br/>
+FILE *fp = fopen(&#8220;myfile.md&#8221;, &#8220;r&#8221;);<br/>
+while ((bytes = fread(buffer, 1, sizeof(buffer), fp)) &gt; 0) {<br/>
+    cmark_parser_feed(parser, buffer, bytes);<br/>
+    if (bytes &lt; sizeof(buffer)) {<br/>
+        break;<br/>
+    }<br/>
+}<br/>
+document = cmark_parser_finish(parser);<br/>
 cmark_parser_free(parser);</dd>
 </dl>
 <p> <i>cmark_parser *</i> <code>cmark_parser_new</code>(<i>int options</i>) </p>

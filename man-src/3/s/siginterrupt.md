@@ -13,8 +13,8 @@ description: "siginterrupt – allow signals to interrupt system calls"
 int siginterrupt(int sig, int flag);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>siginterrupt</code>():</p>
 <dl>
-<dd>_XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.12:&nbsp;*/&nbsp;_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L<br />
+<dd>_XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.12:&nbsp;*/&nbsp;_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE</dd></dl>
 <h2>Description</h2>
 <p>The <code>siginterrupt</code>() function changes the restart behavior when a system call is interrupted by the signal <i>sig</i>. If the <i>flag</i> argument is false (0), then system calls will be restarted if interrupted by the specified signal <i>sig</i>. This is the default behavior in Linux. </p>

@@ -56,7 +56,7 @@ description: "pamcomp – composite (overlay) two Netpbm images together"
 <dd> This option tells how opaque the overlay image is to be, i.e. how much of the composite image should be from the overlay image, as opposed to the underlying image. <i>opacity</i> is a floating point number, with 1.0 meaning the overlay image is totally opaque and 0.0 meaning it is totally transparent. The default is 1.0. </dd>
 <p> If you specify an alpha mask (the <code>-alpha</code> option), <code>pamcomp</code> uses the product of the opacity indicated by the alpha mask (as modified by the <code>-invert</code> option, as a fraction, and this opacity value. The <code>-invert</code> option does not apply to this opacity value. </p>
 <p> As a simple opacity value, the value makes sense only if it is between 0 and 1, inclusive. However, <code>pamcomp</code> accepts all values and performs the same arithmetic computation using whatever value you provide. An opacity value less than zero means the underlay image is intensified and then the overlay image is &quot;subtracted&quot; from it. An opacity value greater than unity means the overlay image is intensified and the underlaying image subtracted from it. In either case, <code>pamcomp</code> clips the resulting color component intensities so they are nonnegative and don&#8217;t exceed the output image&#8217;s maxval. </p>
-<p> This may seem like a strange thing to do, but it has uses. You can use it to brighten or darken or saturate or desaturate areas of the underlaying image. See this description (1)<br />
+<p> This may seem like a strange thing to do, but it has uses. You can use it to brighten or darken or saturate or desaturate areas of the underlaying image. See this description (1)<br/>
 &nbsp;<wbr>of the technique. </p>
 <p> This option was added in Netpbm 10.6 (July 2002). Before Netpbm 10.15 (April 2003), values less than zero or greater than unity were not allowed. </p>
 <dt><code>-mixtransparency</code></dt>
@@ -74,13 +74,13 @@ description: "pamcomp – composite (overlay) two Netpbm images together"
 <p> Another technique to consider is to convert your PNM image to the linear variation with <code>pnmgamma</code>, run <code>pamcomp</code> on it and other transformations that like linear PNM, and then convert it back to true PNM with <code>pnmgamma -ungamma</code>. <code>pnmgamma</code> is often faster than <code>pamcomp</code> in doing the conversion. </p>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-ppmmix/">ppmmix</a></code>(1)<br />
-&nbsp;<wbr>and <code><a href="/docs/linux/man/1-pnmpaste/">pnmpaste</a></code>(1)<br />
+<p> <code><a href="/docs/linux/man/1-ppmmix/">ppmmix</a></code>(1)<br/>
+&nbsp;<wbr>and <code><a href="/docs/linux/man/1-pnmpaste/">pnmpaste</a></code>(1)<br/>
 &nbsp;<wbr>are simpler, less general versions of the same tool. </p>
-<p> <code><a href="/docs/linux/man/1-ppmcolormask/">ppmcolormask</a></code>(1)<br />
-&nbsp;<wbr>and <code><a href="/docs/linux/man/1-pbmmask/">pbmmask</a></code>(1) , and <code><a href="/docs/linux/man/1-pambackground/">pambackground</a></code>(1)<br />
+<p> <code><a href="/docs/linux/man/1-ppmcolormask/">ppmcolormask</a></code>(1)<br/>
+&nbsp;<wbr>and <code><a href="/docs/linux/man/1-pbmmask/">pbmmask</a></code>(1) , and <code><a href="/docs/linux/man/1-pambackground/">pambackground</a></code>(1)<br/>
 &nbsp;<wbr>can help with generating an alpha mask. </p>
-<p> <code><a href="/docs/linux/man/1-pnmcomp/">pnmcomp</a></code>(1)<br />
+<p> <code><a href="/docs/linux/man/1-pnmcomp/">pnmcomp</a></code>(1)<br/>
 &nbsp;<wbr>is an older program that runs faster, but has less function. </p>
 <p> <code>pnm</code>(1) </p>
 <h2>HISTORY</h2>

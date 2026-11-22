@@ -41,7 +41,7 @@ description: "perl587delta – what is new for perl v5.8.7"
 <dd> <p> Carp upgraded to version 1.04 </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <font SIZE="-1">CGI</font> upgraded to version 3.10 </p>
+<dd> <p> CGI upgraded to version 3.10 </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Class::ISA upgraded to version 0.33 </p>
@@ -149,13 +149,13 @@ description: "perl587delta – what is new for perl v5.8.7"
 <h2>Selected Bug Fixes</h2>
 <dl>
 <dt>&bull;</dt>
-<dd> <p> The <code>socket()</code> function on Win32 has been fixed so that it is able to use transport providers which specify a protocol of 0 (meaning any protocol is allowed) once more. (This was broken in 5.8.6, and typically caused the use of <font SIZE="-1">ICMP</font> sockets to fail.) </p>
+<dd> <p> The <code>socket()</code> function on Win32 has been fixed so that it is able to use transport providers which specify a protocol of 0 (meaning any protocol is allowed) once more. (This was broken in 5.8.6, and typically caused the use of ICMP sockets to fail.) </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Another obscure bug involving <code>&quot;substr&quot;</code> and <font SIZE="-1">UTF-8</font> caused by bad internal offset caching has been identified and fixed. </p>
+<dd> <p> Another obscure bug involving <code>&quot;substr&quot;</code> and UTF-8 caused by bad internal offset caching has been identified and fixed. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> A bug involving the loading of <font SIZE="-1">UTF-8</font> tables by the regexp engine has been fixed - code such as <code>&quot;&quot;\x{100}&quot; =~ /[[:print:]]/&quot;</code> will no longer give corrupt results. </p>
+<dd> <p> A bug involving the loading of UTF-8 tables by the regexp engine has been fixed - code such as <code>&quot;&quot;\x{100}&quot; =~ /[[:print:]]/&quot;</code> will no longer give corrupt results. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Case conversion operations such as <code>&quot;uc&quot;</code> on a long Unicode string could exhaust memory. This has been fixed. </p>
@@ -164,7 +164,7 @@ description: "perl587delta – what is new for perl v5.8.7"
 <dd> <p> <code>&quot;index&quot;</code>/<code>&quot;rindex&quot;</code> were buggy for some combinations of Unicode and non-Unicode data. This has been fixed. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <code>&quot;read&quot;</code> (and presumably <code>&quot;sysread&quot;</code>) would expose the <font SIZE="-1">UTF-8</font> internals when reading from a byte oriented file handle into a <font SIZE="-1">UTF-8</font> scalar. This has been fixed. </p>
+<dd> <p> <code>&quot;read&quot;</code> (and presumably <code>&quot;sysread&quot;</code>) would expose the UTF-8 internals when reading from a byte oriented file handle into a UTF-8 scalar. This has been fixed. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Several <code>&quot;pack&quot;</code>/<code>&quot;unpack&quot;</code> bug fixes: </p>
@@ -194,7 +194,7 @@ description: "perl587delta – what is new for perl v5.8.7"
 <dl>
 <dd>  </dd></dl>
 <dt>&bull;</dt>
-<dd> <p> Using closures with ithreads could cause perl to crash. This was due to failure to correctly lock internal <font SIZE="-1">OP</font> structures, and has been fixed. </p>
+<dd> <p> Using closures with ithreads could cause perl to crash. This was due to failure to correctly lock internal OP structures, and has been fixed. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> The return value of <code>&quot;close&quot;</code> now correctly reflects any file errors that occur while flushing the handle&#8217;s data, instead of just giving failure if the actual underlying file close operation failed. </p>
@@ -211,16 +211,16 @@ description: "perl587delta – what is new for perl v5.8.7"
 <h2>Changed Internals</h2>
 <p> There has been a fair amount of refactoring of the <code>&quot;C&quot;</code> source code, partly to make it tidier and more maintainable. The resulting object code and the <code>&quot;perl&quot;</code> binary may well be smaller than 5.8.6, and hopefully faster in some cases, but apart from this there should be no user-detectable changes. </p>
 <p> <code>&quot;${^UTF8LOCALE}&quot;</code> has been added to give perl space access to <code>&quot;PL_utf8locale&quot;</code>. </p>
-<p> The size of the arenas used to allocate <font SIZE="-1">SV</font> heads and most <font SIZE="-1">SV</font> bodies can now be changed at compile time. The old size was 1008 bytes, the new default size is 4080 bytes.  </p>
+<p> The size of the arenas used to allocate SV heads and most SV bodies can now be changed at compile time. The old size was 1008 bytes, the new default size is 4080 bytes.  </p>
 <h2>Known Problems</h2>
 <p> Unicode strings returned from overloaded operators can be buggy. This is a long standing bug reported since 5.8.6 was released, but we do not yet have a suitable fix for it.  </p>
 <h2>Platform Specific Problems</h2>
-<p> On <font SIZE="-1">UNICOS,</font> lib/Math/BigInt/t/bigintc.t hangs burning <font SIZE="-1">CPU.</font> ext/B/t/bytecode.t and ext/Socket/t/socketpair.t both fail tests. These are unlikely to be resolved, as our valiant <font SIZE="-1">UNICOS</font> porter&#8217;s last Cray is being decommissioned.  </p>
+<p> On UNICOS, lib/Math/BigInt/t/bigintc.t hangs burning CPU. ext/B/t/bytecode.t and ext/Socket/t/socketpair.t both fail tests. These are unlikely to be resolved, as our valiant UNICOS porter&#8217;s last Cray is being decommissioned.  </p>
 <h2>Reporting Bugs</h2>
 <p> If you find what you think is a bug, you might check the articles recently posted to the comp.lang.perl.misc newsgroup and the perl bug database at <a rel="nofollow" href="http://bugs.perl.org.">http://bugs.perl.org.</a> There may also be information at <a rel="nofollow" href="http://www.perl.org,">http://www.perl.org,</a> the Perl Home Page. </p>
 <p> If you believe you have an unreported bug, please run the <code>perlbug</code> program included with your release. Be sure to trim your bug down to a tiny but sufficient test case. Your bug report, along with the output of <code>&quot;perl -V&quot;</code>, will be sent off to perlbug [at] perl.org to be analysed by the Perl porting team. You can browse and search the Perl 5 bugs at <a rel="nofollow" href="http://bugs.perl.org/">http://bugs.perl.org/</a>  </p>
 <h2>SEE ALSO</h2>
 <p> The <i>Changes</i> file for exhaustive details on what changed. </p>
-<p> The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. </p>
-<p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
+<p> The <i></i><i>INSTALL</i><i></i> file for how to build Perl. </p>
+<p> The <i></i><i>README</i><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information. </p>

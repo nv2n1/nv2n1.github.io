@@ -315,9 +315,9 @@ description: "nvidia-smi – NVIDIA System Management Interface program"
 <dd> SW Power Scaling algorithm is reducing the clocks below requested clocks because the GPU is consuming too much power. E.g. SW power cap limit can be changed with nvidia-smi &#8211;power-limit= </dd>
 <dt><code>HW Slowdown</code></dt>
 <dd> HW Slowdown (reducing the core clocks by a factor of 2 or more) is engaged. HW Thermal Slowdown and HW Power Brake will be displayed on Pascal+. </dd>
-<p> This is an indicator of:<br />
- * Temperature being too high (HW Thermal Slowdown)<br />
- * External Power Brake Assertion is triggered (e.g. by the system power supply) (HW Power Brake Slowdown)<br />
+<p> This is an indicator of:<br/>
+ * Temperature being too high (HW Thermal Slowdown)<br/>
+ * External Power Brake Assertion is triggered (e.g. by the system power supply) (HW Power Brake Slowdown)<br/>
  * Power draw is too high and Fast Trigger protection is reducing the clocks </p>
 <dt><code>SW Thermal Slowdown</code></dt>
 <dd> SW Thermal capping algorithm is reducing clocks below requested clocks because GPU temperature is higher than Max Operating Temp </dd>
@@ -817,12 +817,12 @@ description: "nvidia-smi – NVIDIA System Management Interface program"
 <dd>
 </dd><dt>
 </dt><dd> Legend: </dd>
-<p>&nbsp;<wbr>&nbsp;X&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;=&nbsp;Self<br />
-&nbsp;<wbr>&nbsp;SYS&nbsp;<wbr>&nbsp;=&nbsp;Connection traversing PCIe as well as the SMP interconnect between NUMA nodes&nbsp;(e.g., QPI/UPI)<br />
-&nbsp;<wbr>&nbsp;NODE&nbsp;=&nbsp;Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node<br />
-&nbsp;<wbr>&nbsp;PHB&nbsp;<wbr>&nbsp;=&nbsp;Connection traversing PCIe as well as a PCIe Host Bridge&nbsp;(typically the CPU)<br />
-&nbsp;<wbr>&nbsp;PXB&nbsp;<wbr>&nbsp;=&nbsp;Connection traversing multiple PCIe switches&nbsp;(without traversing the PCIe Host Bridge)<br />
-&nbsp;<wbr>&nbsp;PIX&nbsp;<wbr>&nbsp;=&nbsp;Connection traversing a single PCIe switch<br />
+<p>&nbsp;<wbr>&nbsp;X&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;=&nbsp;Self<br/>
+&nbsp;<wbr>&nbsp;SYS&nbsp;<wbr>&nbsp;=&nbsp;Connection traversing PCIe as well as the SMP interconnect between NUMA nodes&nbsp;(e.g., QPI/UPI)<br/>
+&nbsp;<wbr>&nbsp;NODE&nbsp;=&nbsp;Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node<br/>
+&nbsp;<wbr>&nbsp;PHB&nbsp;<wbr>&nbsp;=&nbsp;Connection traversing PCIe as well as a PCIe Host Bridge&nbsp;(typically the CPU)<br/>
+&nbsp;<wbr>&nbsp;PXB&nbsp;<wbr>&nbsp;=&nbsp;Connection traversing multiple PCIe switches&nbsp;(without traversing the PCIe Host Bridge)<br/>
+&nbsp;<wbr>&nbsp;PIX&nbsp;<wbr>&nbsp;=&nbsp;Connection traversing a single PCIe switch<br/>
 &nbsp;<wbr>&nbsp;NV#&nbsp;<wbr>&nbsp;=&nbsp;Connection traversing a bonded set of&nbsp;#&nbsp;NVLinks </p>
 </dl>
 <h3>vGPU Management</h3>

@@ -13,22 +13,22 @@ description: "QwtPlotGrid –"
 <p>#include &lt;qwt_plot_grid.h&gt; </p>
 <p> Inherits <code>QwtPlotItem</code>.</p>
 <h3>Public Member Functions</h3>
-<p><code>QwtPlotGrid</code> ()<br />
- <i>Enables major grid, disables minor grid. </i><br />
- virtual <code>~QwtPlotGrid</code> ()<br />
- <i>Destructor. </i><br />
+<p><code>QwtPlotGrid</code> ()<br/>
+ <i>Enables major grid, disables minor grid. </i><br/>
+ virtual <code>~QwtPlotGrid</code> ()<br/>
+ <i>Destructor. </i><br/>
  virtual int <code>rtti</code> () const </p>
-<p> void <code>enableX</code> (bool tf)<br />
- <i>Enable or disable vertical grid lines. </i><br />
+<p> void <code>enableX</code> (bool tf)<br/>
+ <i>Enable or disable vertical grid lines. </i><br/>
  bool <code>xEnabled</code> () const </p>
-<p> void <code>enableY</code> (bool tf)<br />
- <i>Enable or disable horizontal grid lines. </i><br />
+<p> void <code>enableY</code> (bool tf)<br/>
+ <i>Enable or disable horizontal grid lines. </i><br/>
  bool <code>yEnabled</code> () const </p>
-<p> void <code>enableXMin</code> (bool tf)<br />
- <i>Enable or disable minor vertical grid lines. </i><br />
+<p> void <code>enableXMin</code> (bool tf)<br/>
+ <i>Enable or disable minor vertical grid lines. </i><br/>
  bool <code>xMinEnabled</code> () const </p>
-<p> void <code>enableYMin</code> (bool tf)<br />
- <i>Enable or disable minor horizontal grid lines. </i><br />
+<p> void <code>enableYMin</code> (bool tf)<br/>
+ <i>Enable or disable minor horizontal grid lines. </i><br/>
  bool <code>yMinEnabled</code> () const </p>
 <p> void <code>setXDiv</code> (const <code>QwtScaleDiv</code> &amp;sx) </p>
 <p> const <code>QwtScaleDiv</code> &amp; <code>xScaleDiv</code> () const </p>
@@ -42,8 +42,8 @@ description: "QwtPlotGrid –"
 <p> void <code>setMinorPen</code> (const QColor &amp;, qreal width=0.0, Qt::PenStyle=Qt::SolidLine) </p>
 <p> void <code>setMinorPen</code> (const QPen &amp;p) </p>
 <p> const QPen &amp; <code>minorPen</code> () const </p>
-<p> virtual void <code>draw</code> (QPainter *p, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;rect) const<br />
- <i>Draw the grid. </i><br />
+<p> virtual void <code>draw</code> (QPainter *p, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;rect) const<br/>
+ <i>Draw the grid. </i><br/>
  virtual void <code>updateScaleDiv</code> (const <code>QwtScaleDiv</code> &amp;xMap, const <code>QwtScaleDiv</code> &amp;yMap) </p>
 <h3>Additional Inherited Members</h3>
 <h2>Detailed Description</h2>
@@ -54,9 +54,9 @@ description: "QwtPlotGrid –"
 <p>Draw the grid. The grid is drawn into the bounding rectangle such that grid lines begin and end at the rectangle&#8217;s borders. The X and Y maps are used to map the scale divisions into the drawing region screen. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>xMap</i> X axis map<br />
- <i>yMap</i> Y axis<br />
+<dd><i>painter</i> Painter<br/>
+ <i>xMap</i> X axis map<br/>
+ <i>yMap</i> Y axis<br/>
  <i>canvasRect</i> Contents rectangle of the plot canvas</dd></dl>
 <p> Implements <code>QwtPlotItem</code>.</p>
 <h3>void QwtPlotGrid::enableX (boolon)</h3>
@@ -115,8 +115,8 @@ description: "QwtPlotGrid –"
 <p> In Qt5 the default pen width is 1.0 ( 0.0 in Qt4 ) what makes it non cosmetic ( see QPen::isCosmetic() ). This method has been introduced to hide this incompatibility. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>color</i> Pen color<br />
- <i>width</i> Pen width<br />
+<dd><i>color</i> Pen color<br/>
+ <i>width</i> Pen width<br/>
  <i>style</i> Pen style</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -134,8 +134,8 @@ description: "QwtPlotGrid –"
 <p> In Qt5 the default pen width is 1.0 ( 0.0 in Qt4 ) what makes it non cosmetic ( see QPen::isCosmetic() ). This method has been introduced to hide this incompatibility. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>color</i> Pen color<br />
- <i>width</i> Pen width<br />
+<dd><i>color</i> Pen color<br/>
+ <i>width</i> Pen width<br/>
  <i>style</i> Pen style</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -153,8 +153,8 @@ description: "QwtPlotGrid –"
 <p> In Qt5 the default pen width is 1.0 ( 0.0 in Qt4 ) what makes it non cosmetic ( see QPen::isCosmetic() ). This method has been introduced to hide this incompatibility. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>color</i> Pen color<br />
- <i>width</i> Pen width<br />
+<dd><i>color</i> Pen color<br/>
+ <i>width</i> Pen width<br/>
  <i>style</i> Pen style</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -181,7 +181,7 @@ description: "QwtPlotGrid –"
 <p>Update the grid to changes of the axes scale division </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>xScaleDiv</i> Scale division of the x-axis<br />
+<dd><i>xScaleDiv</i> Scale division of the x-axis<br/>
  <i>yScaleDiv</i> Scale division of the y-axis</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>

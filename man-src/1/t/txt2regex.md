@@ -122,56 +122,56 @@ $ txt2regex-- make hour
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><br />
+<td><code><br/>
 &nbsp;<wbr><code>.</code>^Quit the program&nbsp;<wbr>(with confirmation)</code></td>
 <td ALIGN=center></td>
 <td>
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><br />
+<td><code><br/>
 &nbsp;<wbr><code>0</code>^Reset the Regular Expression</code></td>
 <td ALIGN=center></td>
 <td>
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><br />
+<td><code><br/>
 &nbsp;<wbr><code>1-9</code>^Answers the questions</code></td>
 <td ALIGN=center></td>
 <td>
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><br />
+<td><code><br/>
 &nbsp;<wbr><code>*</code>^Toggles color ON/OFF</code></td>
 <td ALIGN=center></td>
 <td>
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><br />
+<td><code><br/>
 &nbsp;<wbr><code>/</code>^Add/remove programs on/from the list</code></td>
 <td ALIGN=center></td>
 <td>
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><br />
+<td><code><br/>
 &nbsp;<wbr><code>|</code>^Insert an alternation&nbsp;<wbr>(where allowed)</code></td>
 <td ALIGN=center></td>
 <td>
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><br />
+<td><code><br/>
 &nbsp;<wbr><code>(</code>^Open a new group&nbsp;<wbr>(where allowed)</code></td>
 <td ALIGN=center></td>
 <td>
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code><br />
+<td><code><br/>
 &nbsp;<wbr><code>)</code>^Close the opened group&nbsp;<wbr>(if any)</code></td>
 <td ALIGN=center></td>
 <td>

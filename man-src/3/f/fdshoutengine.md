@@ -10,11 +10,11 @@ description: "ql/pricingengines/vanilla/fdshoutengine.hpp – Finite-differences
 
 <p> ql/pricingengines/vanilla/fdshoutengine.hpp &#8211; Finite-differences shout engine. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/pricingengines/vanilla/fdstepconditionengine.hpp&gt;<br />
- #include &lt;ql/pricingengines/vanilla/fdconditions.hpp&gt;<br />
+<p> #include &lt;ql/pricingengines/vanilla/fdstepconditionengine.hpp&gt;<br/>
+ #include &lt;ql/pricingengines/vanilla/fdconditions.hpp&gt;<br/>
  #include &lt;ql/instruments/vanillaoption.hpp&gt; </p>
 <h3>Typedefs</h3>
-<p> typedef FDEngineAdapter&lt; FDShoutCondition&lt; FDStepConditionEngine &gt;, VanillaOption::engine &gt; <code>FDShoutEngine</code><br />
+<p> typedef FDEngineAdapter&lt; FDShoutCondition&lt; FDStepConditionEngine &gt;, VanillaOption::engine &gt; <code>FDShoutEngine</code><br/>
  <i>Finite-differences pricing engine for shout vanilla options. </i></p>
 <h2>Detailed Description</h2>
 <p> Finite-differences shout engine. </p>

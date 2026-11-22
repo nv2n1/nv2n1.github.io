@@ -10,7 +10,7 @@ description: "kgb-client.conf — KGB client configuration file"
 <p>kgb-client.conf &#8212; KGB client configuration file</p>
 <h2>Description</h2>
 <p><i><a href="/docs/linux/man/1-kgb-client/">kgb-client</a></i>(1) can be configured via command line options and/or via a configuration file (via the <code>&#8211;conf</code> option). Most of the settings can use either way, with command line options overriding settings from the configuration file. </p>
-<p> The file format is <font SIZE="-1">YAML.</font> Elaborate example configuration is at the end of this document.</p>
+<p> The file format is YAML. Elaborate example configuration is at the end of this document.</p>
 <h2>Server connection configuration</h2>
 <h3>repo-id</h3>
 <p>Unique project identifier on the server. <code>Mandatory</code>.</p>
@@ -22,9 +22,9 @@ description: "kgb-client.conf — KGB client configuration file"
 <p>A list of maps, describing the servers to try to send ntifications to. Each server map can have the following members:</p>
 <dl>
 <dt><code>uri</code></dt>
-<dd>The <font SIZE="-1">URI</font> of the server. Something like <tt>&quot;<a rel="nofollow" href="http://kgb.server.org:port/">http://kgb.server.org:port/</a>&quot;</tt>.</dd>
+<dd>The URI of the server. Something like <tt>&quot;<a rel="nofollow" href="http://kgb.server.org:port/">http://kgb.server.org:port/</a>&quot;</tt>.</dd>
 <dt><code>proxy</code></dt>
-<dd><font SIZE="-1">SOAP</font> proxy to use. Mandatory if using <font SIZE="-1">SOAP</font> protocol. Defaults to to the value of the <code>uri</code> setting, with <tt>&quot;?session=KGB&quot;</tt> appended.</dd>
+<dd>SOAP proxy to use. Mandatory if using SOAP protocol. Defaults to to the value of the <code>uri</code> setting, with <tt>&quot;?session=KGB&quot;</tt> appended.</dd>
 <dt><code>password</code></dt>
 <dd>Per-server pass phrase. Defaults to the global <code>password</code> setting.</dd>
 <dt><code>timeout</code></dt>
@@ -40,10 +40,10 @@ description: "kgb-client.conf — KGB client configuration file"
 <h3><code>ignore-branch</code></h3>
 <p>A name of a branch to ignore. All changes in that branch are sent without branch info. Useful if most of the branches are made in one branch (e.g. trunk, master).</p>
 <h3><code>web-link</code></h3>
-<p><font SIZE="-1">URL</font> containing information about the commit (e.g. gitweb, viewvcs). <tt>&quot;${commit}&quot;</tt>, <tt>&quot;${branch}&quot;</tt>, <tt>&quot;${module}&quot;</tt> and <tt>&quot;${project}&quot;</tt> in that string are substituted with the commit <font SIZE="-1">ID,</font> the branch name, the module name and the project <font SIZE="-1">ID</font> respectively. </p>
+<p>URL containing information about the commit (e.g. gitweb, viewvcs). <tt>&quot;${commit}&quot;</tt>, <tt>&quot;${branch}&quot;</tt>, <tt>&quot;${module}&quot;</tt> and <tt>&quot;${project}&quot;</tt> in that string are substituted with the commit ID, the branch name, the module name and the project ID respectively. </p>
 <p> See App::KGB::Client for examples.</p>
 <h3><code>short-url-service</code></h3>
-<p>The name of the <font SIZE="-1">URL</font> shortening service to use. If given, the service is used to shorten the result of <code>web-link</code> substitution. </p>
+<p>The name of the URL shortening service to use. If given, the service is used to shorten the result of <code>web-link</code> substitution. </p>
 <p> See WWW::Shorten for the list of available services. Note that <code>kgb-client</code> comes with an additional service called <tt>&quot;Debli&quot;</tt>, which is primarily useful for clients running on Debian&#8217;s collaboration server, alioth.</p>
 <h3><code>single-line-commits</code></h3>
 <p>Send only a single line of the commit message to the channel. Possible values: auto|force|off.</p>
@@ -55,9 +55,9 @@ description: "kgb-client.conf — KGB client configuration file"
 <dt><code>off</code></dt>
 <dd>Uses the whole commit log, ignoring any empty lines.</dd></dl>
 <h3><code>use-irc-notices</code></h3>
-<p>If set to a true value will make the <font SIZE="-1">IRC</font> bot use <font SIZE="-1">IRC </font><tt>&quot;notice&quot;</tt> messages instead of the ordinary <tt>&quot;privmsg&quot;</tt> messages.</p>
+<p>If set to a true value will make the IRC bot use IRC <tt>&quot;notice&quot;</tt> messages instead of the ordinary <tt>&quot;privmsg&quot;</tt> messages.</p>
 <h3><code>use-color</code></h3>
-<p>If set to a false value will make the <font SIZE="-1">IRC</font> bot use no color in the notifications.</p>
+<p>If set to a false value will make the IRC bot use no color in the notifications.</p>
 <h2>Example Confguration</h2>
 <pre> # vim: filetype=yaml
  ---
@@ -89,6 +89,6 @@ description: "kgb-client.conf — KGB client configuration file"
 <dd></dd></dl>
 <h2>COPYRIGHT &amp; LICENSE</h2>
 <p>Copyright (C) 2012, 2013 Damyan Ivanov </p>
-<p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
-<p> This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE. </font> See the <font SIZE="-1">GNU</font> General Public License for more details. </p>
-<p> You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, <font SIZE="-1">MA 02110-1301, USA.</font></p>
+<p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
+<p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. </p>
+<p> You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.</p>

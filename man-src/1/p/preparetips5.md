@@ -8,7 +8,7 @@ url: "/docs/linux/man/1-preparetips5/"
 description: "preparetips5 – extract text from tips file"
 ---
 
-<p> preparetips5<br />
+<p> preparetips5<br/>
 &nbsp;<wbr>&#8211; extract text from tips file </p>
 <h2>SYNOPSIS</h2>
 <dl>
@@ -20,7 +20,7 @@ description: "preparetips5 – extract text from tips file"
 <h2>SEE ALSO</h2>
 <p> <code>kf5options</code>(7)</p>
 <h2>BUGS</h2>
-<p> Please use m[blue]<code>bugs.kde.org</code>m[]<font SIZE="-2">[1]</font> to report bugs, do not mail the author directly.</p>
+<p> Please use m[blue]<code>bugs.kde.org</code>m[][1] to report bugs, do not mail the author directly.</p>
 <h2>AUTHOR</h2>
 <p> <code>Matthias Kiefer</code> &lt;matthias.kiefer [at] gmx.de&gt;</p>
 <dl>

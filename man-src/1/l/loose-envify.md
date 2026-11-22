@@ -36,8 +36,8 @@ loose-envify index.js &gt; bundle.js
 <dl>
 <dt>
 </dt><dd>
-if (&#8220;production&#8221; == = &#8220;development&#8221;) {<br />
-    console.log(&#8216;development only&#8217;)<br />
+if (&#8220;production&#8221; == = &#8220;development&#8221;) {<br/>
+    console.log(&#8216;development only&#8217;)<br/>
 }
 </dd></dl>
 <p> which, when run through a minifier, would be stripped out completely. </p>

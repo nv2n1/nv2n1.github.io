@@ -11,7 +11,7 @@ description: "dlaev2.f –"
 <p> dlaev2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dlaev2</code> (A, B, C, RT1, RT2, CS1, SN1)<br />
+<p> subroutine <code>dlaev2</code> (A, B, C, RT1, RT2, CS1, SN1)<br/>
  <i></i><code>DLAEV2</code> computes the eigenvalues and eigenvectors of a 2-by-2 symmetric/Hermitian matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlaev2 (double precisionA, double precisionB, double precisionC, double precisionRT1, double precisionRT2, double precisionCS1, double precisionSN1)</h3>

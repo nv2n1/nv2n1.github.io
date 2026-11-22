@@ -30,19 +30,19 @@ description: "CoDel – Fair Queuing (FQ) with Controlled Delay (CoDel)"
 <h3>ce_threshold</h3>
 <p>sets a threshold above which all packets are marked with ECN Congestion Experienced. This is useful for DCTCP-style congestion control algorithms that require marking at very shallow queueing thresholds.</p>
 <h2>Examples</h2>
-<p>#tc qdisc add dev eth0 root fq_codel<br />
- #tc -s qdisc show<br />
- qdisc fq_codel 8002: dev eth0 root refcnt 2 limit 10240p flows 1024 quantum 1514<br />
-&nbsp;target 5.0ms interval 100.0ms ecn<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;Sent 428514 bytes 2269 pkt&nbsp;(dropped 0, overlimits 0 requeues 0)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;backlog 0b 0p requeues 0<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;maxpacket 256 drop_overlimit 0 new_flow_count 0 ecn_mark 0<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;new_flows_len 0 old_flows_len 0 #tc qdisc add dev eth0 root fq_codel limit 2000 target 3ms interval 40ms noecn<br />
- #tc -s qdisc show<br />
- qdisc fq_codel 8003: dev eth0 root refcnt 2 limit 2000p flows 1024 quantum 1514 target 3.0ms interval 40.0ms<br />
-&nbsp;Sent 2588985006 bytes 1783629 pkt&nbsp;(dropped 0, overlimits 0 requeues 34869)<br />
-&nbsp;backlog 0b 0p requeues 34869<br />
-&nbsp;<wbr>&nbsp;maxpacket 65226 drop_overlimit 0 new_flow_count 73 ecn_mark 0<br />
+<p>#tc qdisc add dev eth0 root fq_codel<br/>
+ #tc -s qdisc show<br/>
+ qdisc fq_codel 8002: dev eth0 root refcnt 2 limit 10240p flows 1024 quantum 1514<br/>
+&nbsp;target 5.0ms interval 100.0ms ecn<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;Sent 428514 bytes 2269 pkt&nbsp;(dropped 0, overlimits 0 requeues 0)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;backlog 0b 0p requeues 0<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;maxpacket 256 drop_overlimit 0 new_flow_count 0 ecn_mark 0<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;new_flows_len 0 old_flows_len 0 #tc qdisc add dev eth0 root fq_codel limit 2000 target 3ms interval 40ms noecn<br/>
+ #tc -s qdisc show<br/>
+ qdisc fq_codel 8003: dev eth0 root refcnt 2 limit 2000p flows 1024 quantum 1514 target 3.0ms interval 40.0ms<br/>
+&nbsp;Sent 2588985006 bytes 1783629 pkt&nbsp;(dropped 0, overlimits 0 requeues 34869)<br/>
+&nbsp;backlog 0b 0p requeues 34869<br/>
+&nbsp;<wbr>&nbsp;maxpacket 65226 drop_overlimit 0 new_flow_count 73 ecn_mark 0<br/>
 &nbsp;<wbr>&nbsp;new_flows_len 1 old_flows_len 3 </p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-tc/">tc</a></code>(8), <code><a href="/docs/linux/man/8-tc-codel/">tc-codel</a></code>(8), <code><a href="/docs/linux/man/8-tc-red/">tc-red</a></code>(8) </p>

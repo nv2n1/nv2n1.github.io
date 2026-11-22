@@ -11,7 +11,7 @@ description: "slatbs.f –"
 <p> slatbs.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>slatbs</code> (UPLO, TRANS, DIAG, NORMIN, N, KD, AB, LDAB, X, SCALE, CNORM, INFO)<br />
+<p> subroutine <code>slatbs</code> (UPLO, TRANS, DIAG, NORMIN, N, KD, AB, LDAB, X, SCALE, CNORM, INFO)<br/>
  <i></i><code>SLATBS</code> solves a triangular banded system of equations.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slatbs (characterUPLO, characterTRANS, characterDIAG, characterNORMIN, integerN, integerKD, real, dimension( ldab, * )AB, integerLDAB, real, dimension( * )X, realSCALE, real, dimension( * )CNORM, integerINFO)</h3>

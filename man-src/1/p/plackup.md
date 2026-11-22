@@ -28,11 +28,11 @@ plackup
 
 <h2>DESCRIPTION</h2>
 
- plackup is a command line utility to run <font SIZE="-1">PSGI</font> applications from the command line. 
+ plackup is a command line utility to run PSGI applications from the command line. 
 
- plackup automatically figures out the environment it is run in, and runs your application in that environment. FastCGI, <font SIZE="-1">CGI,</font> AnyEvent and others can all be detected. See Plack::Loader for the authoritative list. 
+ plackup automatically figures out the environment it is run in, and runs your application in that environment. FastCGI, CGI, AnyEvent and others can all be detected. See Plack::Loader for the authoritative list. 
 
- <tt>&quot;plackup&quot;</tt> assumes you have an <tt>&quot;app.psgi&quot;</tt> script in your current directory. The last statement of <tt>&quot;app.psgi&quot;</tt> should be a code reference that is a <font SIZE="-1">PSGI</font> application: 
+ <tt>&quot;plackup&quot;</tt> assumes you have an <tt>&quot;app.psgi&quot;</tt> script in your current directory. The last statement of <tt>&quot;app.psgi&quot;</tt> should be a code reference that is a PSGI application: 
 
  
 #!/ usr / bin / perl
@@ -59,17 +59,17 @@ my $app = sub
 <dt>-a, --app
 </dt><dd> Specifies the full path to a <tt>&quot;.psgi&quot;</tt> script. You may alternately provide this path as the first argument to <tt>&quot;plackup&quot;</tt>.
 </dd><dt>-e
-</dt><dd> Evaluates the given perl code as a <font SIZE="-1">PSGI</font> app, much like perl's <tt>&quot;-e&quot;</tt> option: 
+</dt><dd> Evaluates the given perl code as a PSGI app, much like perl's <tt>&quot;-e&quot;</tt> option: 
 plackup - e 'sub { my $env = shift; return [ ... ] }'
  It is also handy when you want to run a custom application like Plack::App::*. 
  <pre>
   plackup -MPlack::App::File -e 'Plack::App::File-&gt;new(...)-&gt;to_app'
 </pre> 
- You can also specify <tt>&quot;-e&quot;</tt> option with <tt>&quot;.psgi&quot;</tt> file path to wrap the application with middleware configuration from the command line. You can also use Plack::Builder <font SIZE="-1">DSL</font> syntax inside <tt>&quot;-e&quot;</tt> code. For example: 
+ You can also specify <tt>&quot;-e&quot;</tt> option with <tt>&quot;.psgi&quot;</tt> file path to wrap the application with middleware configuration from the command line. You can also use Plack::Builder DSL syntax inside <tt>&quot;-e&quot;</tt> code. For example: 
  <pre>
   plackup -e 'enable &quot;Auth::Basic&quot;, authenticator =&gt; ...;' myapp.psgi
 </pre> 
- is equivalent to the <font SIZE="-1">PSGI</font> application: 
+ is equivalent to the PSGI application: 
  <pre><code>
 use Plack::Builder;
 use Plack::Util;
@@ -87,16 +87,16 @@ builder
   plackup -e 'enable &quot;Foo&quot;; sub { ... }' # Works
 </pre>
 </dd><dt>-o, --host
-</dt><dd> Binds to a <font SIZE="-1">TCP</font> interface. Defaults to undef, which lets most server backends bind to the any (*) interface. This option is only valid for servers which support <font SIZE="-1">TCP</font> sockets.
+</dt><dd> Binds to a TCP interface. Defaults to undef, which lets most server backends bind to the any (*) interface. This option is only valid for servers which support TCP sockets.
 </dd><dt>-p, --port
-</dt><dd> Binds to a <font SIZE="-1">TCP</font> port. Defaults to 5000. This option is only valid for servers which support <font SIZE="-1">TCP</font> sockets.
+</dt><dd> Binds to a TCP port. Defaults to 5000. This option is only valid for servers which support TCP sockets.
 </dd><dt>-s, --server, the &quot;PLACK_SERVER&quot; environment variable
 </dt><dd> Selects a specific server implementation to run on. When provided, the <tt>&quot;-s&quot;</tt> or <tt>&quot;--server&quot;</tt> flag will be preferred over the environment variable. 
  If no option is given, plackup will try to detect the <i>best</i> server implementation based on the environment variables as well as modules loaded by your application in <tt>%INC</tt>. See Plack::Loader for details.
 </dd><dt>-S, --socket
-</dt><dd> Listens on a <font SIZE="-1">UNIX</font> domain socket path. Defaults to undef. This option is only valid for servers which support <font SIZE="-1">UNIX</font> sockets.
+</dt><dd> Listens on a UNIX domain socket path. Defaults to undef. This option is only valid for servers which support UNIX sockets.
 </dd><dt>-l, --listen
-</dt><dd> Listens on one or more addresses, whether ``<font SIZE="-1">HOST:PORT'', ``:PORT'',</font> or ``<font SIZE="-1">PATH'' </font>(without colons). You may use this option multiple times to listen on multiple addresses, but the server will decide whether it supports multiple interfaces.
+</dt><dd> Listens on one or more addresses, whether ``HOST:PORT'', ``:PORT'', or ``PATH'' (without colons). You may use this option multiple times to listen on multiple addresses, but the server will decide whether it supports multiple interfaces.
 </dd><dt>-D, --daemonize
 </dt><dd> Makes the process run in the background. It's up to the backend server/handler implementation whether this option is respected or not.
 </dd><dt>-I
@@ -125,9 +125,9 @@ builder
 </dt><dd> Specifies the server loading subclass that implements how to run the server. Available options are <i>Plack::Loader</i> (default), <i>Restarter</i> (automatically set when <tt>&quot;-r&quot;</tt> or <tt>&quot;-R&quot;</tt> is used), <i>Delayed</i>, and <i>Shotgun</i>. 
  See Plack::Loader::Delayed and Plack::Loader::Shotgun for more details.
 </dd><dt>--access-log
-</dt><dd> Specifies the pathname of a file where the access log should be written. By default, in the development environment access logs will go to <font SIZE="-1">STDERR.</font>
+</dt><dd> Specifies the pathname of a file where the access log should be written. By default, in the development environment access logs will go to STDERR.
 </dd><dt>--path
-</dt><dd> Specify the root path of your app (<tt>&quot;SCRIPT_NAME&quot;</tt> in <font SIZE="-1">PSGI</font> env) to run. The following two commands are roughly the same. 
+</dt><dd> Specify the root path of your app (<tt>&quot;SCRIPT_NAME&quot;</tt> in PSGI env) to run. The following two commands are roughly the same. 
  <pre>
   plackup --path /foo app.psgi
   plackup -e 'mount &quot;/foo&quot; =&gt; Plack::Util::load_psgi(&quot;app.psgi&quot;)'

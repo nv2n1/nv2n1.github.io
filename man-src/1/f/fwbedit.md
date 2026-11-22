@@ -21,7 +21,7 @@ description: "fwbedit – General purpose object tree editing tool"
 <p> -p parent: create new object as a child of this object. This parameter is mandatory. If you are adding an address to an interface, corresponding interface onkect must be specified as the parent. Similarly if you need to add an interface to a host or a firewall, corresponding host or firewall object is the parent. If you are adding an object to one of the standard folders, the parent is the library you want to add the object to or correct full path to the folder in the tree. </p>
 <p>&nbsp;<wbr>-n name: the name of the new object </p>
 <p>&nbsp;<wbr>-c txt:&nbsp;<wbr>&nbsp;<wbr>specify comment for the new object </p>
-<p>&nbsp;<wbr>-a attribute1[,attribute2&#8230;]&nbsp;<wbr>&nbsp;<wbr>:&nbsp;<wbr>&nbsp;<wbr>specify attributes that<br />
+<p>&nbsp;<wbr>-a attribute1[,attribute2&#8230;]&nbsp;<wbr>&nbsp;<wbr>:&nbsp;<wbr>&nbsp;<wbr>specify attributes that<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>define parameters of the new object&nbsp;<wbr>(see below) </p>
 <p> <code>delete -f file.fwb -o object</code> </p>
 <p> Deletes object specified by its full path in the tree or object ID. </p>
@@ -32,35 +32,35 @@ description: "fwbedit – General purpose object tree editing tool"
 <p>&nbsp;<wbr>-f file.fwb: data file </p>
 <p>&nbsp;<wbr>-o object: object to be deleted, full path or ID </p>
 <p>&nbsp;<wbr>-c txt:&nbsp;<wbr>&nbsp;<wbr>specify comment for the new object </p>
-<p>&nbsp;<wbr>-a attribute1[,attribute2&#8230;]&nbsp;<wbr>&nbsp;<wbr>:&nbsp;<wbr>&nbsp;<wbr>specify attributes that<br />
+<p>&nbsp;<wbr>-a attribute1[,attribute2&#8230;]&nbsp;<wbr>&nbsp;<wbr>:&nbsp;<wbr>&nbsp;<wbr>specify attributes that<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>define parameters of the new object&nbsp;<wbr>(see below) </p>
 <p> <code>list -f file.fwb -o object [-r|-c] [-d|-Fformat]</code> </p>
 <p> Prints name and ID of an object. </p>
 <p>&nbsp;<wbr>-f file.fwb: data file </p>
 <p>&nbsp;<wbr>-o object: object to print, full path or ID </p>
 <p> -r print specified object and all objects under it in the tree </p>
-<p> -c print only children objects of the given object but do not<br />
+<p> -c print only children objects of the given object but do not<br/>
 &nbsp;<wbr>print the object itself. </p>
 <p> -d print full dump of all object&#8217;s attributes including internal debugging information if available, this can be very verbose. </p>
 <p> -Fformat_string Program recognizes macros in the format string and replaces them with values of corresponding object&#8217;s attributes. Macro is the name of the attribute surrounded with &#8216;%&#8217;, such as &#8216;%name%&#8217; or &#8216;%address%&#8217;. Here is the list of some attribute names: &quot;id&quot;, &quot;name&quot;, &quot;path&quot;, &quot;comment&quot;, &quot;type&quot;, &quot;address&quot;, &quot;netmask&quot;, &quot;dnsname&quot;. TCP and UDP service objects provide attributes &quot;src_range_start&quot;, &quot;src_range_end&quot;, &quot;dst_range_start&quot;, &quot;dst_range_end&quot; for the source and destination port ranges. ICMP and ICMP6 service objects have attributes &quot;icmp_type&quot; and &quot;icmp_code&quot;. </p>
 <p> <code>add -f file.fwb -g group -o object</code> </p>
 <p> Adds object specified by path or ID to a group, also specified by its path or ID. </p>
 <p>&nbsp;<wbr>-f file.fwb: data file </p>
-<p>&nbsp;<wbr>-g group: group the object should be added to,&nbsp;<wbr><br />
+<p>&nbsp;<wbr>-g group: group the object should be added to,&nbsp;<wbr><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>full path or ID </p>
 <p>&nbsp;<wbr>-o object: object to be deleted, full path or ID </p>
 <p> <code>remove -f file.fwb -g group -o object</code> </p>
 <p> Removes object from a group. </p>
 <p>&nbsp;<wbr>-f file.fwb: data file </p>
-<p>&nbsp;<wbr>-g group: group the object should be removed from,<br />
+<p>&nbsp;<wbr>-g group: group the object should be removed from,<br/>
 &nbsp;<wbr>full path or ID </p>
 <p>&nbsp;<wbr>-o object: object to be deleted, full path or ID </p>
 <p> <code>upgrade -f file.fwb</code> </p>
 <p> Upgrades data file to the latest data format version. </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-f file.fwb: data file </p>
 <p> <code>checktree -f file.fwb</code> </p>
-<p> Checks consistency and correctness of the object tree in the given data file and repairs it if necessary.<br />
-&nbsp;<wbr><br />
+<p> Checks consistency and correctness of the object tree in the given data file and repairs it if necessary.<br/>
+&nbsp;<wbr><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-f file.fwb: data file </p>
 <h2>ATTRIBUTES FOR THE NEW OBJECTS, BY TYPE</h2>
 <p> -t Firewall -a platform, host OS </p>
@@ -106,15 +106,15 @@ description: "fwbedit – General purpose object tree editing tool"
 <p> Add reference to the object with ID id3D71A1BA to the group &#8216;testgroup&#8217;: </p>
 <p> fwbedit add -f x.fwb -o id3D71A1BA -g /User/Objects/Groups/testgroup </p>
 <p> The following script uses fwbedit &quot;list&quot; command to print IDs of all Address objects in the folder /User/Objects/Addresses , then cycles through the obtained list and uses fwbedit to add them to the group &quot;group1&quot;. </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>fwbedit list -f x.fwb -o&nbsp;<wbr>/User/Objects/Addresses -F&nbsp;<wbr>&quot;%id%&quot;&nbsp;<wbr>-c&nbsp;<wbr>&nbsp;<wbr>|&nbsp;<wbr>\<br />
-&nbsp;<wbr>while read id;&nbsp;<wbr>do&nbsp;<wbr>\<br />
-fwbedit add -f x.fwb -g&nbsp;<wbr>/User/Objects/Groups/group1 -o&nbsp;<wbr>$id;&nbsp;<wbr>\<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>fwbedit list -f x.fwb -o&nbsp;<wbr>/User/Objects/Addresses -F&nbsp;<wbr>&quot;%id%&quot;&nbsp;<wbr>-c&nbsp;<wbr>&nbsp;<wbr>|&nbsp;<wbr>\<br/>
+&nbsp;<wbr>while read id;&nbsp;<wbr>do&nbsp;<wbr>\<br/>
+fwbedit add -f x.fwb -g&nbsp;<wbr>/User/Objects/Groups/group1 -o&nbsp;<wbr>$id;&nbsp;<wbr>\<br/>
 &nbsp;<wbr>done </p>
 <p> Here is slightly more complex example. The following script uses fwbedit &quot;list&quot; command to print types and IDs of all Address objects in the folder /User/Objects/Addresses , then filters them using grep to get only IPv6 objects and finally cycles through the obtained list and uses fwbedit to add them to the group &quot;group1&quot;. </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>fwbedit list -f x.fwb&nbsp;<wbr>&nbsp;<wbr>-o&nbsp;<wbr>/User/Objects/Addresses -F&nbsp;<wbr>&quot;%type%&nbsp;<wbr>%id%&quot;&nbsp;<wbr>-c |&nbsp;<wbr>\<br />
-&nbsp;<wbr>grep IPv6 |&nbsp;<wbr>\<br />
-&nbsp;<wbr>while read type id;&nbsp;<wbr>do&nbsp;<wbr>\<br />
-fwbedit add -f x.fwb&nbsp;<wbr>&nbsp;<wbr>-g&nbsp;<wbr>/User/Objects/Groups/group1 -o&nbsp;<wbr>$id;&nbsp;<wbr>\<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>fwbedit list -f x.fwb&nbsp;<wbr>&nbsp;<wbr>-o&nbsp;<wbr>/User/Objects/Addresses -F&nbsp;<wbr>&quot;%type%&nbsp;<wbr>%id%&quot;&nbsp;<wbr>-c |&nbsp;<wbr>\<br/>
+&nbsp;<wbr>grep IPv6 |&nbsp;<wbr>\<br/>
+&nbsp;<wbr>while read type id;&nbsp;<wbr>do&nbsp;<wbr>\<br/>
+fwbedit add -f x.fwb&nbsp;<wbr>&nbsp;<wbr>-g&nbsp;<wbr>/User/Objects/Groups/group1 -o&nbsp;<wbr>$id;&nbsp;<wbr>\<br/>
 &nbsp;<wbr>done </p>
 <h2>URL</h2>
 <p> Firewall Builder home page is located at the following URL: <code><a rel="nofollow" href="http://www.fwbuilder.org/">http://www.fwbuilder.org/</a></code> </p>

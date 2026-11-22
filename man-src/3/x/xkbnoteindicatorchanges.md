@@ -10,7 +10,7 @@ description: "XkbNoteIndicatorChanges – Notes the changes in a changes structu
 <p>XkbNoteIndicatorChanges &#8211; Notes the changes in a changes structure </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>void XkbNoteIndicatorChanges</code> <code>(XkbIndicatorChangesPtr </code><i>old</i><code>,</code> <code>XkbIndicatorNotifyEvent *</code><i>new</i><code>,</code> <code>unsigned int </code><i>wanted</i><code>);</code><br />
+<dt> <code>void XkbNoteIndicatorChanges</code> <code>(XkbIndicatorChangesPtr </code><i>old</i><code>,</code> <code>XkbIndicatorNotifyEvent *</code><i>new</i><code>,</code> <code>unsigned int </code><i>wanted</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

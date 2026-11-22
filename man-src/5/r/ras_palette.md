@@ -46,6 +46,6 @@ palette_file.txt</pre>
 <h2><code>BUGS/CAVEATS</code></h2>
 <p>Color palettes are only useful with indexed-color imagery.</p>
 <h2>Copyright</h2>
-<p>Copyright (C) 1987-2009<br />
+<p>Copyright (C) 1987-2009<br/>
  University Corporation for Atmospheric Research </p>
 <p> The use of this Software is governed by a License Agreement.</p>

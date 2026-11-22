@@ -9,7 +9,7 @@ description: "gogoc – gogoCLIENT"
 
 <p><code>gogoc</code> &#8211; gogoCLIENT</p>
 <h2>Synopsis</h2>
-<p><code>gogoc</code> [-<code>h</code> ] [-<code>?</code> ] [-<code>y</code> ] [-<code>n</code> ] [-<code>b</code> ]<br />
+<p><code>gogoc</code> [-<code>h</code> ] [-<code>?</code> ] [-<code>y</code> ] [-<code>n</code> ] [-<code>b</code> ]<br/>
 <code>gogoc</code> [-<code>f </code><i>config_file</i> ] [-<code>i </code><i>interface_name</i> ] [-<code>u </code><i>interface_name</i> ] [-<code>s </code><i>interface_name</i> ] [-<code>r </code><i>retry_delay</i> ]</p>
 <h2>Description</h2>
 <p><code>gogoc</code> provides a means to configure a tunnel obtained from a tunnel server that supports the tunnel setup protocol (TSP). <code>gogoc</code> will connect to a tunnel server and request a tunnel according to the specifications given in the configuration file. As a background process, it will then monitor the state of the tunnel. In the event of a timeout, gogoc will establish a new tunnel. <code>gogoc</code> currently supports three types of tunnels: </p>
@@ -31,7 +31,7 @@ description: "gogoc – gogoCLIENT"
 <dt><code>-b</code></dt>
 <dd>Stop trying to reconnect upon first error received. </dd>
 <dt><code>-f </code><i>configuration_file</i></dt>
-<dd>Specifies a different configuration file.<br />
+<dd>Specifies a different configuration file.<br/>
  Default is /etc/gogoc/gogoc.conf. </dd>
 <dt><code>-s </code><i>interface_name</i></dt>
 <dd>Overrides <code>client_v4 </code> in gogoc.conf5 </dd>
@@ -43,7 +43,7 @@ description: "gogoc – gogoCLIENT"
 <dd>Overrides <code>retry_delay</code> in gogoc.conf5 </dd>
 </dl>
 <h2>See Also</h2>
-<p>gogoc.conf5<br />
+<p>gogoc.conf5<br/>
  <a rel="nofollow" href="http://www.gogo6.com">http://www.gogo6.com</a></p>
 <h2>Acknowledgment</h2>
 <p>This software uses code taken from other organizations as :</p>
@@ -53,6 +53,6 @@ description: "gogoc – gogoCLIENT"
 </dd><dt><code>&#8211; </code><i>The Apache Software Foundation for Base64 encoding and decoding.</i></dt>
 <dd></dd></dl>
 <h2>Authors</h2>
-<p>gogo6 Inc.<br />
- <a rel="nofollow" href="http://www.gogo6.com">http://www.gogo6.com</a><br />
+<p>gogo6 Inc.<br/>
+ <a rel="nofollow" href="http://www.gogo6.com">http://www.gogo6.com</a><br/>
  support [at] gogo6.com</p>

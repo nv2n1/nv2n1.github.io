@@ -11,9 +11,9 @@ po4a-gettextize - convert an original file (and its translation) to a po file
 
 <h2>SYNOPSIS</h2>
 
- po4a-gettextize -f &lt;fmt&gt; -m &lt;master.doc&gt; [-l &lt;<font SIZE="-1">XX</font>.doc&gt;] -p &lt;<font SIZE="-1">XX</font>.po&gt; 
+ po4a-gettextize -f &lt;fmt&gt; -m &lt;master.doc&gt; [-l &lt;XX.doc&gt;] -p &lt;XX.po&gt; 
 
- (<font SIZE="-1">XX</font>.po is the output, all others are inputs)
+ (XX.po is the output, all others are inputs)
 
 <h2>DESCRIPTION</h2>
 
@@ -70,6 +70,6 @@ po4a-gettextize - convert an original file (and its translation) to a po file
 
 <h2>COPYRIGHT AND LICENSE</h2>
 
- Copyright 2002, 2003, 2004 by <font SIZE="-1">SPI</font>, inc. 
+ Copyright 2002, 2003, 2004 by SPI, inc. 
 
- This program is free software; you may redistribute it and/or modify it under the terms of <font SIZE="-1">GPL</font> (see the <font SIZE="-1">COPYING</font> file).
+ This program is free software; you may redistribute it and/or modify it under the terms of GPL (see the COPYING file).

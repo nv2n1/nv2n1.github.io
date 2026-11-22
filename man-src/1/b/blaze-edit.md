@@ -49,7 +49,7 @@ description: "blaze-edit – edit a blog post or a page in the BlazeBlogger repo
 <dd> Display version information and exit.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><font SIZE="-1"><code>EDITOR</code></font></dt>
+<dt><code>EDITOR</code></dt>
 <dd> Unless the BlazeBlogger specific option <i>core.editor</i> is set, blaze-edit tries to use system wide settings to decide which editor to run. If neither of these options are supplied, the <code>vi</code> is used instead as a considerably reasonable choice.</dd></dl>
 <h2>FILES</h2>
 <dl>
@@ -61,8 +61,8 @@ description: "blaze-edit – edit a blog post or a page in the BlazeBlogger repo
 <p> To report bug or even send patch, either add new issue to the project bugtracker at &lt;<a rel="nofollow" href="http://code.google.com/p/blazeblogger/issues/">http://code.google.com/p/blazeblogger/issues/</a>&gt;, or visit the discussion group at &lt;<a rel="nofollow" href="http://groups.google.com/group/blazeblogger/">http://groups.google.com/group/blazeblogger/</a>&gt;. You can also contact the author directly via e-mail.</p>
 <h2>AUTHOR</h2>
 <p> Written by Jaromir Hradilek &lt;jhradilek [at] gmail.com&gt;. </p>
-<p> Permission is granted to copy, distribute and/or modify this document under the terms of the <font SIZE="-1">GNU</font> Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. </p>
-<p> A copy of the license is included as a file called <font SIZE="-1">FDL</font> in the main directory of the BlazeBlogger source package.</p>
+<p> Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. </p>
+<p> A copy of the license is included as a file called FDL in the main directory of the BlazeBlogger source package.</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2008, 2009 Jaromir Hradilek </p>
-<p> This program is free software; see the source for copying conditions. It is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT</font> <font SIZE="-1">ANY</font> <font SIZE="-1">WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS</font> <font SIZE="-1">FOR</font> A <font SIZE="-1">PARTICULAR</font> <font SIZE="-1">PURPOSE</font>. </p>
+<p> This program is free software; see the source for copying conditions. It is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>

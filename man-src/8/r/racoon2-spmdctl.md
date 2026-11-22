@@ -11,7 +11,7 @@ description: "spmdctl – Control spmd"
 <h2>Synopsis</h2>
 <p><code>spmdctl</code> [<i>option</i>] <i>COMMAND</i></p>
 <h2>Description</h2>
-<p><code>spmdctl</code> connects to the spmd interface which is specified in racoon2 configuration file, and requests operation<i></i> to spmd.<br />
+<p><code>spmdctl</code> connects to the spmd interface which is specified in racoon2 configuration file, and requests operation<i></i> to spmd.<br/>
  Available operations are:</p>
 <dl>
 <dd>set, get, and delete DNS server address(es) for spmd DNS proxy function.</dd>

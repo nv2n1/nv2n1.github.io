@@ -25,7 +25,7 @@ apt-mirror - apt sources mirroring tool
 &nbsp;<wbr>*&nbsp;<wbr>It can automatically remove unneeded files 
 &nbsp;<wbr>*&nbsp;<wbr>It works well on overloaded channel to internet 
 &nbsp;<wbr>*&nbsp;<wbr>It never produces an inconsistent mirror including while mirroring 
-&nbsp;<wbr>*&nbsp;<wbr>It works on all&nbsp;<wbr><font SIZE="-1">POSIX</font>&nbsp;<wbr>complied systems with perl and wget
+&nbsp;<wbr>*&nbsp;<wbr>It works on all&nbsp;<wbr>POSIX&nbsp;<wbr>complied systems with perl and wget
 
 <h2>COMMENTS</h2>
 
@@ -54,7 +54,7 @@ apt-mirror - apt sources mirroring tool
 &nbsp;<wbr>&nbsp;<wbr>Place for temporarily downloaded indexes 
 
  <i>/var/spool/apt-mirror/var</i> 
-&nbsp;<wbr>&nbsp;<wbr>Log files placed here. URLs and&nbsp;<wbr><font SIZE="-1">MD5</font>&nbsp;<wbr>summs also here.
+&nbsp;<wbr>&nbsp;<wbr>Log files placed here. URLs and&nbsp;<wbr>MD5&nbsp;<wbr>summs also here.
 
 <h2>KNOWN BUGS</h2>
 

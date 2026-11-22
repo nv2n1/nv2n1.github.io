@@ -11,8 +11,8 @@ description: "libssh2_agent_userauth – authenticate a session with a public ke
 <p> libssh2_agent_userauth &#8211; authenticate a session with a public key, with the help of ssh-agent</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>
-<p> int libssh2_agent_userauth(LIBSSH2_AGENT *agent,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>const char&nbsp;<wbr>*username,<br />
+<p> int libssh2_agent_userauth(LIBSSH2_AGENT *agent,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>const char&nbsp;<wbr>*username,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>struct libssh2_agent_publickey&nbsp;<wbr>*identity);</p>
 <h2>DESCRIPTION</h2>
 <p> <i>agent</i> &#8211; ssh-agent handle as returned by <code><a href="/docs/linux/man/3-libssh2_agent_init/">libssh2_agent_init</a>(3)</code> </p>

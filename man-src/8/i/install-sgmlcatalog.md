@@ -17,9 +17,9 @@ description: "install-sgmlcatalog – maintain transitional SGML catalog"
 <dt><code>&#8211;remove</code><i>&nbsp;package</i></dt>
 <dd>Indicates to remove the entry for the package <i>package</i>.</dd></dl>
 <h2>Author</h2>
-<p>Ardo van Rangelrooij &lt;ardo [at] debian.org&gt;<br />
+<p>Ardo van Rangelrooij &lt;ardo [at] debian.org&gt;<br/>
  Christian Schwarz (original version)</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 1997 Christian Schwarz<br />
+<p>Copyright &#169; 1997 Christian Schwarz<br/>
  Copyright &#169; 2001-2004 Ardo van Rangelrooij </p>
 <p> This is free software; see the GNU General Public Licence version 2 or later for copying conditions. There is <i>no</i> warranty.</p>

@@ -10,7 +10,7 @@ description: "dsbev.f –"
 <p>dsbev.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dsbev</code> (JOBZ, UPLO, N, KD, AB, LDAB, W, Z, LDZ, WORK, INFO)<br />
+<p>subroutine <code>dsbev</code> (JOBZ, UPLO, N, KD, AB, LDAB, W, Z, LDZ, WORK, INFO)<br/>
  <i></i><code> DSBEV computes the eigenvalues and, optionally, the left and/or right eigenvectors for OTHER matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dsbev (characterJOBZ, characterUPLO, integerN, integerKD, double precision, dimension( ldab, * )AB, integerLDAB, double precision, dimension( * )W, double precision, dimension( ldz, * )Z, integerLDZ, double precision, dimension( * )WORK, integerINFO)</h3>

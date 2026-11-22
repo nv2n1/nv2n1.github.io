@@ -19,9 +19,9 @@ description: "intro – introduction to user commands"
 <h3>The shell</h3>
 <p> One types commands to the <i>shell</i>, the command interpreter. It is not built-in, but is just a program and you can change your shell. Everybody has their own favorite one. The standard one is called <i>sh</i>. See also <code>ash</code>(1), <code><a href="/docs/linux/man/1-bash/">bash</a></code>(1), <code><a href="/docs/linux/man/1-chsh/">chsh</a></code>(1), <code><a href="/docs/linux/man/1-csh/">csh</a></code>(1), <code><a href="/docs/linux/man/1-dash/">dash</a></code>(1), <code>ksh</code>(1), <code><a href="/docs/linux/man/1-zsh/">zsh</a></code>(1). </p>
 <p> A session might go like: </p>
-<p> knuth login: <code>aeb</code> Password: <code>********</code> $ <code>date</code> Tue Aug 6 23:50:44 CEST 2002 $ <code>cal</code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;August 2002 Su Mo Tu We Th Fr Sa<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;1&nbsp;<wbr>&nbsp;2&nbsp;<wbr>&nbsp;3<br />
+<p> knuth login: <code>aeb</code> Password: <code>********</code> $ <code>date</code> Tue Aug 6 23:50:44 CEST 2002 $ <code>cal</code><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;August 2002 Su Mo Tu We Th Fr Sa<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;1&nbsp;<wbr>&nbsp;2&nbsp;<wbr>&nbsp;3<br/>
 &nbsp;4&nbsp;<wbr>&nbsp;5&nbsp;<wbr>&nbsp;6&nbsp;<wbr>&nbsp;7&nbsp;<wbr>&nbsp;8&nbsp;<wbr>&nbsp;9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 </p>
 <p> $ <code>ls</code> bin tel $ <code>ls -l</code> total 2 drwxrwxr-x 2 aeb 1024 Aug 6 23:51 bin -rw-rw-r&#8211; 1 aeb 37 Aug 6 23:52 tel $ <code>cat tel</code> maja 0501-1136285 peter 0136-7399214 $ <code>cp tel tel2</code> $ <code>ls -l</code> total 3 drwxr-xr-x 2 aeb 1024 Aug 6 23:51 bin -rw-r&#8211;r&#8211; 1 aeb 37 Aug 6 23:52 tel -rw-r&#8211;r&#8211; 1 aeb 37 Aug 6 23:53 tel2 $ <code>mv tel tel1</code> $ <code>ls -l</code> total 3 drwxr-xr-x 2 aeb 1024 Aug 6 23:51 bin -rw-r&#8211;r&#8211; 1 aeb 37 Aug 6 23:52 tel1 -rw-r&#8211;r&#8211; 1 aeb 37 Aug 6 23:53 tel2 $ <code>diff tel1 tel2</code> $ <code>rm tel1</code> $ <code>grep maja tel2</code> maja 0501-1136285 $ </p>
 <p> Here typing Control-D ended the session. </p>

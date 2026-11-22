@@ -9,9 +9,9 @@ description: "qemu-ga – QEMU Guest Agent"
 
 <p>qemu-ga &#8211; QEMU Guest Agent</p>
 <h2>Synopsis</h2>
-<p><code>qemu-ga</code> [<i></i><font SIZE="-1"><i>OPTIONS</i></font><i></i>]</p>
+<p><code>qemu-ga</code> [<i></i><i>OPTIONS</i><i></i>]</p>
 <h2>Description</h2>
-<p>The <font SIZE="-1">QEMU</font> Guest Agent is a daemon intended to be run within virtual machines. It allows the hypervisor host to perform various operations in the guest, such as:</p>
+<p>The QEMU Guest Agent is a daemon intended to be run within virtual machines. It allows the hypervisor host to perform various operations in the guest, such as:</p>
 <dl>
 <dt>&bull;</dt>
 <dd>get information from the guest</dd>

@@ -13,20 +13,20 @@ description: "log4cpp::RemoteSyslogAppender –"
 <p>#include &lt;RemoteSyslogAppender.hh&gt; </p>
 <p> Inherits <code>log4cpp::LayoutAppender</code>.</p>
 <h3>Public Member Functions</h3>
-<p><code>RemoteSyslogAppender</code> (const std::string &amp;name, const std::string &amp;syslogName, const std::string &amp;relayer, int facility=<code>LOG_USER</code>, int portNumber=514)<br />
- <i>Instantiate a </i><code>RemoteSyslogAppender</code> with given name and name and facility for syslog.<br />
+<p><code>RemoteSyslogAppender</code> (const std::string &amp;name, const std::string &amp;syslogName, const std::string &amp;relayer, int facility=<code>LOG_USER</code>, int portNumber=514)<br/>
+ <i>Instantiate a </i><code>RemoteSyslogAppender</code> with given name and name and facility for syslog.<br/>
  virtual <code>~RemoteSyslogAppender</code> () </p>
-<p> virtual bool <code>reopen</code> ()<br />
- <i>Closes and reopens the socket. </i><br />
- virtual void <code>close</code> ()<br />
+<p> virtual bool <code>reopen</code> ()<br/>
+ <i>Closes and reopens the socket. </i><br/>
+ virtual void <code>close</code> ()<br/>
  <i>Closes the socket. </i></p>
 <h3>Static Public Member Functions</h3>
-<p>static int <code>toSyslogPriority</code> (<code>Priority::Value</code> priority)<br />
+<p>static int <code>toSyslogPriority</code> (<code>Priority::Value</code> priority)<br/>
  <i>Translates a </i><code>log4cpp</code> priority to a syslog priority.</p>
 <h3>Protected Member Functions</h3>
-<p>virtual void <code>open</code> ()<br />
- <i>Just creates the socket. </i><br />
- virtual void <code>_append</code> (const <code>LoggingEvent</code> &amp;event)<br />
+<p>virtual void <code>open</code> ()<br/>
+ <i>Just creates the socket. </i><br/>
+ virtual void <code>_append</code> (const <code>LoggingEvent</code> &amp;event)<br/>
  <i>Sends a </i><code>LoggingEvent</code> to the remote syslog.</p>
 <h3>Protected Attributes</h3>
 <p>const std::string <code>_syslogName</code> </p>
@@ -44,10 +44,10 @@ description: "log4cpp::RemoteSyslogAppender –"
 <p>Instantiate a <code>RemoteSyslogAppender</code> with given name and name and facility for syslog. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>name</i> The name of the <code>Appender</code><br />
- <i>syslogName</i> The ident parameter in the openlog(3) call.<br />
- <i>relayer</i> The IP address or hostname of a standard syslog host.<br />
- <i>facility</i> The syslog facility to log to. Defaults to LOG_USER. Value &#8216;-1&#8217; implies to use the default.<br />
+<dd><i>name</i> The name of the <code>Appender</code><br/>
+ <i>syslogName</i> The ident parameter in the openlog(3) call.<br/>
+ <i>relayer</i> The IP address or hostname of a standard syslog host.<br/>
+ <i>facility</i> The syslog facility to log to. Defaults to LOG_USER. Value &#8216;-1&#8217; implies to use the default.<br/>
  <i>portNumber</i> An alternative port number. Defaults to the standard syslog port number (514). Value &#8216;-1&#8217; implies to use the default.</dd></dl>
 <h3>log4cpp::RemoteSyslogAppender::~RemoteSyslogAppender () [virtual]</h3>
 <h2>Member Function Documentation</h2>

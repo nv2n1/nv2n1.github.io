@@ -34,7 +34,7 @@ description: "chklref – manual page for chklref 3.1.2"
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to <a rel="nofollow" href="https://github.com/jlelong/chklref.">https://github.com/jlelong/chklref.</a> `chklref` is known not to work with `cleveref`. If you would like to contribute to `chklref`, feel free to open a PR on <a rel="nofollow" href="https://github.com/jlelong/chklref.">https://github.com/jlelong/chklref.</a></p>
 <h2>COPYRIGHT</h2>
-<p> Copyright 2005-2019 Jerome Lelong &lt;jerome.lelong [at] gmail.com&gt;. This program comes with ABSOLUTELY NO WARRANTY.<br />
+<p> Copyright 2005-2019 Jerome Lelong &lt;jerome.lelong [at] gmail.com&gt;. This program comes with ABSOLUTELY NO WARRANTY.<br/>
  This is free software, and you are welcome to redistribute it under GPLv3.</p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>chklref</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>chklref</code> programs are properly installed at your site, the command</p>

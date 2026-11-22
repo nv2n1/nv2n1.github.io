@@ -19,5 +19,5 @@ description: "BibTeX2HTML – A translator of bibliography databases into HTML"
 <h2>OPTIONS</h2>
 <p> A short description of available options is displayed when programs are run with option -help. For detailed explanations, please look at the HTML documentation at the URL <i><a rel="nofollow" href="http://www.lri.fr/~filliatr/bibtex2html/doc/">http://www.lri.fr/~filliatr/bibtex2html/doc/</a></i> </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-bibtex/">bibtex</a></code>(1),<br />
+<p> <code><a href="/docs/linux/man/1-bibtex/">bibtex</a></code>(1),<br/>
  <i><a rel="nofollow" href="http://www.lri.fr/~filliatr/bibtex2html/">http://www.lri.fr/~filliatr/bibtex2html/</a></i> </p>

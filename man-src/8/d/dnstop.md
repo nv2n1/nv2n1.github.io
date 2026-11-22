@@ -26,7 +26,7 @@ description: "dnstop – displays various tables of DNS traffic on your network"
 <dt><code>-a</code></dt>
 <dd>anonymize addresses</dd>
 <dt><code>-b </code><i>expression</i></dt>
-<dd>BPF filter expression<br />
+<dd>BPF filter expression<br/>
  (default: udp port 53)</dd>
 <dt><code>-i </code><i>address</i></dt>
 <dd>ignore select addresses</dd>

@@ -9,7 +9,7 @@ description: "wsgen – Java(TM) API for XML Web Services (JAX-WS) 2.0"
 ---
 
 <p> wsgen &#8211; Java(TM) API for XML Web Services (JAX-WS) 2.0 </p>
-<p> <code>Specification Version:</code> 2.1<br />
+<p> <code>Specification Version:</code> 2.1<br/>
  <code>Implementation Version:</code> 2.1.1 </p>
 <p> The <i>wsgen</i> tool generates JAX-WS portable artifacts used in JAX-WS web services. The tool reads a web service endpoint implementation class (SEI) and generates all the required artifacts for web service deployment, and invocation</p>
 <h2>Overview</h2>

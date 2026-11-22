@@ -55,7 +55,7 @@ description: "/etc/isdn/isdn.conf – config file for isdnlog"
 <dt><code>REBOOTCMD</code></dt>
 <dd>Isdnlog can use this command to reboot Linux (when all else fails). Default value is &quot;/sbin/reboot&quot;. Optional. </dd>
 <dt><code>CURRENCY</code></dt>
-<dd>Cost per charge unit and currency. Default is &quot;0.12,DM&quot;.<br />
+<dd>Cost per charge unit and currency. Default is &quot;0.12,DM&quot;.<br/>
  Note: the charge entry is not used anymore. </dd>
 <dt><code>CHARGEMAX</code></dt>
 <dd>Isdnlog can manage your isdn costs and prevent you from spending more than a maximum per day. Unit is national currency. Example: In Germany you want to set CURRENCY to &quot;0.12,DM&quot; and CHARGEMAX to &quot;15.00&quot;, so you will spend max. 15 DM per day. Required. </dd>
@@ -64,7 +64,7 @@ description: "/etc/isdn/isdn.conf – config file for isdnlog"
 <dt><code>BYTEMAX</code></dt>
 <dd>Isdnlog can also limit your transfer in bytes. Example: &quot;BYTEMAX=67108864&quot; will limit your transfer to 64 MB per month. Optional. </dd>
 <dt><code>REPOPTIONS</code></dt>
-<dd>General commandline options for isdnrep. The options noted here have the same effect as appended to each isdnrep commandline. Options are separated by <code>;</code> instead of the usual space.<br />
+<dd>General commandline options for isdnrep. The options noted here have the same effect as appended to each isdnrep commandline. Options are separated by <code>;</code> instead of the usual space.<br/>
  Example: &quot;REPOPTIONS=-LP;-E&quot; will turn off the provider summary and show failed calls. Optional. </dd>
 <dt><code>VBOXPATH</code></dt>
 <dd>Isdnrep can include information from the voice box system vbox in its report. To do this, you must specify the vbox spooldir (e.g. VBOXPATH=/var/spool/vbox/foo/incoming). Optional. </dd>
@@ -152,7 +152,7 @@ DESTFILE= /usr/share/isdn/dest.cdb</pre>
 <dd>This file. </dd>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-isdnlog/">isdnlog</a>(8) <a href="/docs/linux/man/5-callerid-conf/">callerid.conf</a>(5) <a href="/docs/linux/man/5-rate-files/">rate-files</a>(5) <a href="/docs/linux/man/1-isdnrep/">isdnrep</a>(1)</code><br />
+<p><code><a href="/docs/linux/man/8-isdnlog/">isdnlog</a>(8) <a href="/docs/linux/man/5-callerid-conf/">callerid.conf</a>(5) <a href="/docs/linux/man/5-rate-files/">rate-files</a>(5) <a href="/docs/linux/man/1-isdnrep/">isdnrep</a>(1)</code><br/>
  <code><a href="/docs/linux/man/5-isdnformat/">isdnformat</a>(5)</code> and samples/isdn.conf.* </p>
 <h2>Author</h2>
 <p>This manual page was written by Andreas Jellinghaus &lt;aj [at] dungeon.inka.de&gt;, for Debian GNU/Linux and isdn4linux. Now maintained by Paul Slootman &lt;paul [at] isdn4linux.de&gt;, updated by Leopold Toetsch &lt;lt [at] toetsch.at&gt;.</p>

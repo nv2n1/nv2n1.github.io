@@ -9,7 +9,7 @@ description: "isadump – examine ISA registers"
 
 <p>isadump &#8211; examine ISA registers</p>
 <h2>Synopsis</h2>
-<p><code>isadump</code> [<code>-y</code>] [<code>-W</code>|<code>-L</code>] [<code>-k V1,V2&#8230;</code>] <i>addrreg</i> <i>datareg</i> [<i>bank </i>[<i>bankreg</i>]] #for I2C-like access<br />
+<p><code>isadump</code> [<code>-y</code>] [<code>-W</code>|<code>-L</code>] [<code>-k V1,V2&#8230;</code>] <i>addrreg</i> <i>datareg</i> [<i>bank </i>[<i>bankreg</i>]] #for I2C-like access<br/>
  <code>isadump</code> <code>-f</code> [<code>-y</code>] [<code>-W</code>|<code>-L</code>] <i>address</i> [<i>range </i>[<i>bank </i>[<i>bankreg</i>]]] #for flat address space </p>
 <h2>Description</h2>
 <p>isadump is a small helper program to examine registers visible through the ISA bus. It is intended to probe any chip that lives on the ISA bus working with an address register and a data register (I2C-like access) or a flat range (of up to 256 bytes). </p>

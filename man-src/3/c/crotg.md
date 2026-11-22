@@ -11,7 +11,7 @@ description: "crotg.f –"
 <p> crotg.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>crotg</code> (CA, CB, C, S)<br />
+<p> subroutine <code>crotg</code> (CA, CB, C, S)<br/>
  <i></i><code>CROTG</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine crotg (complexCA, complexCB, realC, complexS)</h3>

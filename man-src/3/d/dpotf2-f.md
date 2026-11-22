@@ -10,7 +10,7 @@ description: "dpotf2.f –"
 <p>dpotf2.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dpotf2</code> (UPLO, N, A, LDA, INFO)<br />
+<p>subroutine <code>dpotf2</code> (UPLO, N, A, LDA, INFO)<br/>
  <i></i><code>DPOTF2</code> computes the Cholesky factorization of a symmetric/Hermitian positive definite matrix (unblocked algorithm).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dpotf2 (characterUPLO, integerN, double precision, dimension( lda, * )A, integerLDA, integerINFO)</h3>

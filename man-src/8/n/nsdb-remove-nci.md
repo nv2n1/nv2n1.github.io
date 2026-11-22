@@ -73,8 +73,8 @@ description: "nsdb-remove-nci – remove NSDB container information from an LDAP
 <h2>Examples</h2>
 <p>Suppose you are the FedFS administrator of the <i>example.net</i> FedFS domain and that you want to disable the NCE <i>o=fedfs</i> on the NSDB <i>nsdb.example.net</i>.</p>
 <dl>
-<dd>$ nsdb-remove-nci -l nsdb.example.net -D cn=Manager -e o=fedfs<br />
- Enter NSDB password:<br />
+<dd>$ nsdb-remove-nci -l nsdb.example.net -D cn=Manager -e o=fedfs<br/>
+ Enter NSDB password:<br/>
  Successfully removed NCI
 </dd></dl>
 <p> This action does not remove any FedFS records. It simply removes the pointer to the records.</p>

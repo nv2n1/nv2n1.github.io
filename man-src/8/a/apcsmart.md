@@ -11,7 +11,7 @@ description: "apcsmart – Driver for American Power Conversion Smart Protocol U
 <h2>Synopsis</h2>
 <p><code>apcsmart</code> -h <code>apcsmart</code> -a &#8216;UPS_NAME&#8217; [-x option=value &#8230;]</p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  This man page only documents the hardware-specific features of the apcsmart driver. For information about the core driver, see <code><a href="/docs/linux/man/8-nutupsdrv/">nutupsdrv</a></code>(8). </dd>
 <h2>Supported Hardware</h2>
 <p>The apcsmart driver should recognize (or at the very least work with) majority of Smart-UPS models &#8211; which includes Smart-UPS, Matrix-UPS and Back-UPS lineups, among few other ones. </p>
@@ -37,7 +37,7 @@ description: "apcsmart – Driver for American Power Conversion Smart Protocol U
 <p> If your 940-xx24X cable is broken or missing, use this diagram to build a clone: </p>
 <p> <a rel="nofollow" href="http://www.networkupstools.org/cables.html#_940_0024c_clone">http://www.networkupstools.org/cables.html#_940_0024c_clone</a> </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> The &quot;xx&quot; is either &quot;00&quot; for a short cable, or the number of feet of a longer cable. The &quot;X&quot; is a letter representing the minor revision of the physical cable and its connectors (&quot;C&quot; and &quot;E&quot; are commonly found revisions). All minor revisions should use the same pin-outs and wiring. </p>
 </dl>
 <p> You can specify alternate cable in <code><a href="/docs/linux/man/5-ups-conf/">ups.conf</a></code>(5): </p>
@@ -50,7 +50,7 @@ description: "apcsmart – Driver for American Power Conversion Smart Protocol U
 <p> Alternatively, you can also provide it on the command line using: </p>
 <p> -x <code>ttymode</code>=raw </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> Any other value will make the driver work in the canonical mode. </p>
 </dl>
 <h2>Explanation Of Shutdown Methods Supported By Apc Upses</h2>
@@ -119,7 +119,7 @@ description: "apcsmart – Driver for American Power Conversion Smart Protocol U
 <dl>
 <dd>issue hard hibernate (<code>@</code>)</dd></dl>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> Hard hibernate&#8217;s additional wakeup delay can be provided by <code>awd</code>. </p>
 </dl>
 <h3>Advorder</h3>
@@ -164,7 +164,7 @@ description: "apcsmart – Driver for American Power Conversion Smart Protocol U
 </tr>
 </table>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> Hard hibernate&#8217;s additional wakeup delay can be provided by <code>awd</code>. </p>
 </dl>
 <h2>Ignoring Lb State</h2>

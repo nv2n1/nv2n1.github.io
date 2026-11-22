@@ -28,5 +28,5 @@ description: "XPolygonRegion, XClipBox – generate regions"
 <p>The <code>XPolygonRegion</code> function returns a region for the polygon defined by the points array. For an explanation of fill_rule, see <code>XCreateGC</code>. </p>
 <p> The <code>XClipBox</code> function returns the smallest rectangle enclosing the specified region.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xcreategc/">XCreateGC</a>(3), <a href="/docs/linux/man/3-xdrawpoint/">XDrawPoint</a>(3), <a href="/docs/linux/man/3-xdrawrectangle/">XDrawRectangle</a>(3)<br />
+<p><a href="/docs/linux/man/3-xcreategc/">XCreateGC</a>(3), <a href="/docs/linux/man/3-xdrawpoint/">XDrawPoint</a>(3), <a href="/docs/linux/man/3-xdrawrectangle/">XDrawRectangle</a>(3)<br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

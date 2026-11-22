@@ -10,7 +10,7 @@ description: "slaswp.f –"
 <p>slaswp.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>slaswp</code> (N, A, LDA, K1, K2, IPIV, INCX)<br />
+<p>subroutine <code>slaswp</code> (N, A, LDA, K1, K2, IPIV, INCX)<br/>
  <i></i><code>SLASWP</code> performs a series of row interchanges on a general rectangular matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slaswp (integerN, real, dimension( lda, * )A, integerLDA, integerK1, integerK2, integer, dimension( * )IPIV, integerINCX)</h3>

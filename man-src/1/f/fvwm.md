@@ -256,7 +256,7 @@ XTerm*Page: 3 2 1
 </pre>
 </dd></dl>
 <p> Please note, the last 5 locations are not guaranteed to be supported in the future. </p>
-<p> If a configuration file is not found, the left mouse button, or <font SIZE="-1">Help</font> or <font SIZE="-1">F1</font> keys on the root window bring up menus and forms that can create a starting configuration file. </p>
+<p> If a configuration file is not found, the left mouse button, or Help or F1 keys on the root window bring up menus and forms that can create a starting configuration file. </p>
 <p> Fvwm sets two environment variables which are inherited by its children. These are <i>$DISPLAY</i> which describes the display on which fvwm is running. <i>$DISPLAY</i> may be <i>unix:0.0</i> or <i>:0.0</i>, which doesn&#8217;t work too well when passed through ssh to another machine, so <i>$HOSTDISPLAY</i> is set to a network-ready description of the display. <i>$HOSTDISPLAY</i> always uses the TCP/IP transport protocol (even for a local connection) so <i>$DISPLAY</i> should be used for local connections, as it may use Unix-domain sockets, which are faster. </p>
 <p> If you want to start some applications or modules with fvwm, you can simply put </p>
 <dl>
@@ -779,7 +779,7 @@ Shadow=size [offset] [directions]]:
 <p> Arabic and Hebrew text require bi-directional text support to be displayed correctly, this means that logical strings should be converted before their visual presentation, so left-to-right and right-to-left sub-strings are determined and reshuffled. In fvwm this is done automatically in window titles, menus, module labels and other places if the fonts used for displaying the text are of one of the charsets that require <i>bidi</i> (bi-directional) support. For example, this includes iso8859-6, iso8859-8 and iso10646-1 (unicode), but not other iso8859-* fonts. </p>
 <p> This bi-directional text support is done using the <i>fribidi</i> library compile time option, see <i>INSTALL.fvwm</i>.</p>
 <h2>KEYBOARD SHORTCUTS</h2>
-<p> Almost all window manager operations can be performed from the keyboard so mouse-less operation should be possible. In addition to scrolling around the virtual desktop by binding the <code>Scroll</code> command to appropriate keys, <code>Popup</code>, <code>Move</code>, <code>Resize</code>, and any other command can be bound to keys. Once a command is started the pointer is moved by using the up, down, left, and right arrows, and the action is terminated by pressing return. Holding down the <font SIZE="-1">Shift</font> key causes the pointer movement to go in larger steps and holding down the <font SIZE="-1">control</font> key causes the pointer movement to go in smaller steps. Standard emacs and vi cursor movement controls ( <font SIZE="-1">n</font> , <font SIZE="-1">p</font> , <font SIZE="-1">f</font> , <font SIZE="-1">b</font> , and <font SIZE="-1">j</font> , <font SIZE="-1">k</font> , <font SIZE="-1">h</font> , <font SIZE="-1">l</font> ) can be used instead of the arrow keys.</p>
+<p> Almost all window manager operations can be performed from the keyboard so mouse-less operation should be possible. In addition to scrolling around the virtual desktop by binding the <code>Scroll</code> command to appropriate keys, <code>Popup</code>, <code>Move</code>, <code>Resize</code>, and any other command can be bound to keys. Once a command is started the pointer is moved by using the up, down, left, and right arrows, and the action is terminated by pressing return. Holding down the Shift key causes the pointer movement to go in larger steps and holding down the control key causes the pointer movement to go in smaller steps. Standard emacs and vi cursor movement controls ( n , p , f , b , and j , k , h , l ) can be used instead of the arrow keys.</p>
 <h2>SESSION MANAGEMENT</h2>
 <p> Fvwm supports session management according to the X Session Management Protocol. It saves and restores window position, size, stacking order, desk, stickiness, shadiness, maximizedness, iconifiedness for all windows. Furthermore, some global state is saved. </p>
 <p> Fvwm doesn&#8217;t save any information regarding styles, decors, functions or menus. If you change any of these resources during a session (e.g. by issuing <code>Style</code> commands or by using various modules), these changes are lost after saving and restarting the session. To become permanent, such changes have to be added to the configuration file. </p>
@@ -814,8 +814,8 @@ Shadow=size [offset] [directions]]:
 + D <code>Lower</code>
 </pre>
 </dd></dl>
-<p> The <font SIZE="-1">Help</font> and <font SIZE="-1">F1</font> keys invoke a built-in menu that fvwm creates. This is primarily for new users that have not created their own configuration file. Either key on the root (background) window pops up an menu to help you get started. </p>
-<p> The <font SIZE="-1">Tab</font> key pressed anywhere with the <font SIZE="-1">Meta</font> key (same as the <font SIZE="-1">Alt</font> key on PC keyboards) held down pop-ups a window list. </p>
+<p> The Help and F1 keys invoke a built-in menu that fvwm creates. This is primarily for new users that have not created their own configuration file. Either key on the root (background) window pops up an menu to help you get started. </p>
+<p> The Tab key pressed anywhere with the Meta key (same as the Alt key on PC keyboards) held down pop-ups a window list. </p>
 <p> Mouse button 1 on the title-bar or side frame can move, raise or lower a window. </p>
 <p> Mouse button 1 on the window corners can resize, raise or lower a window. </p>
 <p> You can override or remove these bindings. To remove the window list binding, use this: </p>
@@ -893,8 +893,8 @@ HelpMe
 <dl>
 <dt>
 </dt><dd>
-#Print the current desk number, horizontal page number<br />
-#and the window&#8217;s class (unexpanded here, no window).<br />
+#Print the current desk number, horizontal page number<br/>
+#and the window&#8217;s class (unexpanded here, no window).<br/>
 Echo $[desk.n] $[page.nx] $[w.class]
 </dd></dl>
 <p> Note: If the command is called outside a window context, it prints &quot;$[w.class]&quot; instead of the class name. It is usually not enough to have the pointer over a window to have a context window. To force using the window with the focus, the <code>Current</code> command can be used: </p>
@@ -1183,7 +1183,7 @@ Current Echo $[desk.n] $[page.nx] $[w.class]
 <dt>
 </dt><dd> Just like with mouse navigation, the item below the pointer is selected. This is achieved by warping the pointer to the menu items when necessary. While a menu is open, all key presses are intercepted by the menu. No other application can get keyboard input (although this is not the case for tear off menus). </dd>
 <p> Items can be selected directly by pressing a hotkey that can be configured individually for each menu item. The hotkey is indicated by underlining it in the menu item label. With the <i>AutomaticHotkeys</i> menu style fvwm automatically assigns hotkeys to all menu items. </p>
-<p> The most basic keys to navigate through menus are the cursor keys (move up or down one item, enter or leave a sub menu), <font SIZE="-1">Space</font> (activate item) and <font SIZE="-1">Escape</font> (close menu). Numerous other keys can be used to navigate through menus by default: </p>
+<p> The most basic keys to navigate through menus are the cursor keys (move up or down one item, enter or leave a sub menu), Space (activate item) and Escape (close menu). Numerous other keys can be used to navigate through menus by default: </p>
 <p> <i>Enter</i>, <i>Return</i>, <i>Space</i> activate the current item. </p>
 <p> <i>Escape</i>, <i>Delete</i>, <i>Ctrl-G</i> exit the current sequence of menus or destroy a tear off menu. </p>
 <p> <i>J</i>, <i>N</i>, <i>Cursor-Down</i>, <i>Tab</i>, <i>Meta-Tab</i>, <i>Ctrl-F</i>, move to the next item. </p>
@@ -1219,7 +1219,7 @@ Current Echo $[desk.n] $[page.nx] $[w.class]
 <dd>
 </dd><dl>
 <dt>
-</dt><dd> A tear off menu is any menu that has been &quot;torn off&quot; the window it was attached to and pinned to the root window. There are three ways to tear off a menu: click on the menu title with mouse button 2, press <font SIZE="-1">Backspace</font> in the menu or activate its tear off bar (a horizontal bar with a broken line). Tear off bars must be added to the menu as any other item by assigning them the command <code>TearMenuOff</code>. </dd>
+</dt><dd> A tear off menu is any menu that has been &quot;torn off&quot; the window it was attached to and pinned to the root window. There are three ways to tear off a menu: click on the menu title with mouse button 2, press Backspace in the menu or activate its tear off bar (a horizontal bar with a broken line). Tear off bars must be added to the menu as any other item by assigning them the command <code>TearMenuOff</code>. </dd>
 <p> The builtin tear off actions can be overridden by undefining the builtin menu actions bound to tear off. To remove the builtin mouse button 2 binding, use: </p>
 <dl>
 <dt>
@@ -1259,7 +1259,7 @@ Current Echo $[desk.n] $[page.nx] $[w.class]
 <code>Style</code> fvwm_menu <i>Title</i>, <i>HandleWidth</i> 0
 </pre>
 </dd></dl>
-<p> A tear off menu is a cross breeding between a window and a menu. The menu is swallowed by a window and its title is stripped off and displayed in the window title. The main advantage is that the menu becomes permanent &#8211; activating an item does not close the menu. Therefore, it can be used multiple times without reopening it. To destroy such a menu, close its window or press the <font SIZE="-1">Escape</font> key. </p>
+<p> A tear off menu is a cross breeding between a window and a menu. The menu is swallowed by a window and its title is stripped off and displayed in the window title. The main advantage is that the menu becomes permanent &#8211; activating an item does not close the menu. Therefore, it can be used multiple times without reopening it. To destroy such a menu, close its window or press the Escape key. </p>
 <p> Tear off menus behave somewhat differently than normal menus and windows. They do not take the keyboard focus, but while the pointer is over one of them, all key presses are sent to the menu. Other fvwm key bindings are disabled as long as the pointer is inside the tear off menu or one of its sub menus. When the pointer leaves this area, all sub menus are closed immediately. Note that the window containing a tear off menu is never hilighted as if it had the focus. </p>
 <p> A tear off menu is an independent copy of the menu it originated from. As such, it is not affected by adding items to that menu or changing its menu style. </p>
 <p> To create a tear off menu without opening the normal menu first, the option <i>TearOffImmediately</i> can be added to the <code>Menu</code> or <code>Popup</code> command.</dl>
@@ -1351,14 +1351,14 @@ AddToMenu JpgMenu foo title
 <dl>
 <dt>
 </dt><dd>
-#There is another shell script fvwm_make_directory_menu.sh<br />
-#in the utils / directory of the distribution.To use it,<br />
-#define this function in your configuration file:<br />
-DestroyFunc MakeMissingDirectoryMenu<br />
-        AddToFunc MakeMissingDirectoryMenu +<br />
-    I PipeRead fvwm_make_directory_menu.sh $0<br />
-        DestroyMenu SomeMenu<br />
-            AddToMenu SomeMenu +<br />
+#There is another shell script fvwm_make_directory_menu.sh<br/>
+#in the utils / directory of the distribution.To use it,<br/>
+#define this function in your configuration file:<br/>
+DestroyFunc MakeMissingDirectoryMenu<br/>
+        AddToFunc MakeMissingDirectoryMenu +<br/>
+    I PipeRead fvwm_make_directory_menu.sh $0<br/>
+        DestroyMenu SomeMenu<br/>
+            AddToMenu SomeMenu +<br/>
     MissingSubmenuFunction MakeMissingDirectoryMenu + &#8220;Root directory&#8221; Popup /
 </dd></dl>
 <p> This is another implementation of the file browser that uses sub menus for subdirectories. </p>
@@ -1370,7 +1370,7 @@ DestroyFunc MakeMissingDirectoryMenu<br />
 AddToMenu Utilities Tools Title top
 </pre>
 </dd></dl>
-<p> All text up to the first <font SIZE="-1">Tab</font> in the menu label is aligned to the left side of the menu, all text right of the first <font SIZE="-1">Tab</font> is aligned to the left in a second column and all text thereafter is placed right aligned in the third column. All other <font SIZE="-1">Tab</font> s are replaced by spaces. Note that you can change this format with the <i>ItemFormat</i> option of the <code>MenuStyle</code> command. </p>
+<p> All text up to the first Tab in the menu label is aligned to the left side of the menu, all text right of the first Tab is aligned to the left in a second column and all text thereafter is placed right aligned in the third column. All other Tab s are replaced by spaces. Note that you can change this format with the <i>ItemFormat</i> option of the <code>MenuStyle</code> command. </p>
 <p> If the menu-label contains an ampersand (&#8216;&amp;&#8217;), the next character is taken as a hot-key for the menu item. Hot-keys are underlined in the label. To get a literal &#8216;&amp;&#8217;, insert &quot;&amp;&amp;&quot;. Pressing the hot-key moves through the list of menu items with this hot-key or selects an item that is the only one with this hot-key. </p>
 <p> If the menu-label contains a sub-string which is set off by stars, then the text between the stars is expected to be the name of an image file to insert in the menu. To get a literal &#8216;*&#8217;, insert &quot;**&quot;. For example </p>
 <dl>
@@ -1649,9 +1649,9 @@ startx -- -wm +bs
 <p> <i>SideColor</i> takes the name of an X11 color as an argument. This color is used to color the column containing the side picture (see above). The SideColor option can be overridden by a menu specific side color (see <code>AddToMenu</code>). If the color name is omitted the side color option is switched off. </p>
 <p> <i>PopupAsRootMenu</i>, <i>PopupAsSubmenu</i>, <i>PopupIgnore</i> and <i>PopupClose</i> change the behavior when you click on a menu item that opens a sub menu. With <i>PopupAsRootMenu</i> the original menu is closed before the sub menu appears, with <i>PopupAsSubmenu</i> it is not, so you can navigate back into the parent menu. Furthermore, with <i>PopupAsSubmenu</i> the sub menu is held open (posted) regardless of where you move the mouse. Depending on your menu style this may simplify navigating through the menu. <code>Any</code> keystroke while a menu is posted reverts the menu back to the normal behavior. With <i>PopupClose</i> the menu is closed when a sub menu item is activated, and the menu stays open if <i>PopupIgnore</i> is used (even if the menu was invoked with the <code>Popup</code> command). <i>PopupAsSubmenu</i> is the default. </p>
 <p> <i>RemoveSubmenus</i> instructs fvwm to remove sub menu when you move back into the parent menu. With <i>HoldSubmenus</i> the sub menu remains visible. You probably want to use <i>HoldSubmenus</i> if you are using the <i>PopupDelayed</i> style. <i>RemoveSubmenus</i> affects menu navigation with the keyboard. </p>
-<p> <i>SelectOnRelease</i> takes an optional key name as an argument. If the given key is released in a menu using this style, the current menu item is selected. This is intended for <font SIZE="-1">Alt-Tab</font> <code>WindowList</code> navigation. The key name is a standard X11 key name as defined in <i>/usr/include/X11/keysymdef.h</i>, (without the <i>XK_</i> prefix), or the keysym database <i>/usr/X11R6/lib/X11/XKeysymDB</i>. To disable this behavior, omit the key name. </p>
+<p> <i>SelectOnRelease</i> takes an optional key name as an argument. If the given key is released in a menu using this style, the current menu item is selected. This is intended for Alt-Tab <code>WindowList</code> navigation. The key name is a standard X11 key name as defined in <i>/usr/include/X11/keysymdef.h</i>, (without the <i>XK_</i> prefix), or the keysym database <i>/usr/X11R6/lib/X11/XKeysymDB</i>. To disable this behavior, omit the key name. </p>
 <p> Note: Some X servers do not support KeyRelease events. <i>SelectOnRelease</i> does not work on such a machine. </p>
-<p> <i>ItemFormat</i> takes a special string as its argument that determines the layout of the menu items. Think of the format string as if it were a menu item. All you have to do is tell fvwm where to place the different parts of the menu item (i.e. the labels, the triangle denoting a sub menu, the mini icons and the side pic) in the blank area. The string consists of spaces, <font SIZE="-1">Tab</font> characters and formatting directives beginning with &#8216;%&#8217;. Any illegal characters and formatting directives are silently ignored: </p>
+<p> <i>ItemFormat</i> takes a special string as its argument that determines the layout of the menu items. Think of the format string as if it were a menu item. All you have to do is tell fvwm where to place the different parts of the menu item (i.e. the labels, the triangle denoting a sub menu, the mini icons and the side pic) in the blank area. The string consists of spaces, Tab characters and formatting directives beginning with &#8216;%&#8217;. Any illegal characters and formatting directives are silently ignored: </p>
 <p> <code>%l</code>, <code>%c</code> and <code>%r</code></p>
 <dl>
 <dt>
@@ -2058,7 +2058,7 @@ DefaultColorset -1
 <dd>
 </dd><dl>
 <dt>
-</dt><dd> By default the key sequence <font SIZE="-1">Ctrl-Alt-Escape</font> allows for escaping from a <code>Wait</code> pause and from a locked <code>ModuleSynchronous</code> command. The <code>EscapeFunc</code> command used with the <code>Key</code> command allows for configuring this key sequence. An example: </dd>
+</dt><dd> By default the key sequence Ctrl-Alt-Escape allows for escaping from a <code>Wait</code> pause and from a locked <code>ModuleSynchronous</code> command. The <code>EscapeFunc</code> command used with the <code>Key</code> command allows for configuring this key sequence. An example: </dd>
 <dl>
 <dt>
 </dt><dd>
@@ -2067,12 +2067,12 @@ DefaultColorset -1
 <code>Key</code> Escape A  S EscapeFunc
 </pre>
 </dd></dl>
-<p> replaces the <font SIZE="-1">Ctrl-Alt-Escape</font> key sequence with <font SIZE="-1">Shift-Escape</font> for aborting a <code>Wait</code> pause and <code>ModuleSynchronous</code> command. <code>EscapeFunc</code> used outside the <code>Key</code> command does nothing.</dl>
+<p> replaces the Ctrl-Alt-Escape key sequence with Shift-Escape for aborting a <code>Wait</code> pause and <code>ModuleSynchronous</code> command. <code>EscapeFunc</code> used outside the <code>Key</code> command does nothing.</dl>
 <dt><code>FakeClick</code> [<i>command</i>&nbsp;<wbr><i>value</i>] &#8230;</dt>
 <dd>
 </dd><dl>
 <dt>
-</dt><dd> This command is mainly intended for debugging fvwm and no guarantees are made that it works for you. <i>FakeClick</i> can simulate mouse button press and release events and pass them to fvwm or the applications. The parameters are a list of commands which consist of pairs of <i>command</i> tokens and integer <i>values</i>, The <i>press</i> and <i>release</i> commands are followed by the appropriate mouse button number and generate a button press or release event on the window below the pointer. The <i>wait</i> commands pauses fvwm for the given number of milliseconds. The <i>modifiers</i> command simulates pressing or releasing modifier keys. The values 1 to 5 are mapped to <font SIZE="-1">Mod1</font> to <font SIZE="-1">Mod5</font> while 6, 7 and 8 are mapped to <font SIZE="-1">Shift</font> , <font SIZE="-1">Lock</font> and <font SIZE="-1">Control</font> . The modifier is set for any further button events. To release a modifier key, use the corresponding negative number. The <i>depth</i> command determines to which window the button events are sent. With a depth of 1, all events go to the root window, regardless of the pointer&#8217;s position. With 2, the event is passed to the top level window under the pointer which is usually the frame window. With 3, events go to the client window. Higher numbers go to successive sub windows. Zero (0) goes to the smallest window that contains the pointer. Note that events propagate upward. </dd>
+</dt><dd> This command is mainly intended for debugging fvwm and no guarantees are made that it works for you. <i>FakeClick</i> can simulate mouse button press and release events and pass them to fvwm or the applications. The parameters are a list of commands which consist of pairs of <i>command</i> tokens and integer <i>values</i>, The <i>press</i> and <i>release</i> commands are followed by the appropriate mouse button number and generate a button press or release event on the window below the pointer. The <i>wait</i> commands pauses fvwm for the given number of milliseconds. The <i>modifiers</i> command simulates pressing or releasing modifier keys. The values 1 to 5 are mapped to Mod1 to Mod5 while 6, 7 and 8 are mapped to Shift , Lock and Control . The modifier is set for any further button events. To release a modifier key, use the corresponding negative number. The <i>depth</i> command determines to which window the button events are sent. With a depth of 1, all events go to the root window, regardless of the pointer&#8217;s position. With 2, the event is passed to the top level window under the pointer which is usually the frame window. With 3, events go to the client window. Higher numbers go to successive sub windows. Zero (0) goes to the smallest window that contains the pointer. Note that events propagate upward. </dd>
 <dl>
 <dt>
 </dt><dd>
@@ -2128,45 +2128,45 @@ FakeClick depth 2 press 1 wait 250 release 1
 <dl>
 <dt>
 </dt><dd>
-GlobalOpts WindowShadeShrinks&#8211; &gt;<br />
-    Style *WindowShadeShrinks<br />
-        GlobalOpts WindowShadeScrolls&#8211; &gt;<br />
-    Style *WindowShadeScrolls<br />
-        GlobalOpts SmartPlacementIsReallySmart&#8211; &gt;<br />
-    Style *MinOverlapPlacement<br />
-        GlobalOpts SmartPlacementIsNormal&#8211; &gt;<br />
-    Style *TileCascadePlacement<br />
-        GlobalOpts ClickToFocusDoesntPassClick&#8211; &gt;<br />
-    Style *ClickToFocusPassesClickOff<br />
-        GlobalOpts ClickToFocusPassesClick&#8211; &gt;<br />
-    Style *ClickToFocusPassesClick<br />
-        GlobalOpts ClickToFocusDoesntRaise&#8211; &gt;<br />
-    Style *ClickToFocusRaisesOff<br />
-        GlobalOpts ClickToFocusRaises&#8211; &gt;<br />
-    Style *ClickToFocusRaises<br />
-        GlobalOpts MouseFocusClickDoesntRaise&#8211; &gt;<br />
-    Style *MouseFocusClickRaisesOff<br />
-        GlobalOpts MouseFocusClickRaises&#8211; &gt;<br />
-    Style *MouseFocusClickRaises<br />
-        GlobalOpts NoStipledTitles&#8211; &gt;<br />
-    Style * !StippledTitle<br />
-                GlobalOpts StipledTitles&#8211; &gt;<br />
-    Style *StippledTitle<br />
-        GlobalOpts CaptureHonorsStartsOnPage&#8211; &gt;<br />
-    Style *CaptureHonorsStartsOnPage<br />
-        GlobalOpts CaptureIgnoresStartsOnPage&#8211; &gt;<br />
-    Style *CaptureIgnoresStartsOnPage<br />
-        GlobalOpts RecaptureHonorsStartsOnPage&#8211; &gt;<br />
-    Style *RecaptureHonorsStartsOnPage<br />
-        GlobalOpts RecaptureIgnoresStartsOnPage&#8211; &gt;<br />
-    Style *RecaptureIgnoresStartsOnPage<br />
-        GlobalOpts ActivePlacementHonorsStartsOnPage&#8211; &gt;<br />
-    Style *ManualPlacementHonorsStartsOnPage<br />
-        GlobalOpts ActivePlacementIgnoresStartsOnPage&#8211; &gt;<br />
-    Style *ManualPlacementIgnoresStartsOnPage<br />
-        GlobalOpts RaiseOverNativeWindows&#8211; &gt;<br />
-    BugOpts RaiseOverNativeWindows on<br />
-        GlobalOpts IgnoreNativeWindows&#8211; &gt;<br />
+GlobalOpts WindowShadeShrinks&#8211; &gt;<br/>
+    Style *WindowShadeShrinks<br/>
+        GlobalOpts WindowShadeScrolls&#8211; &gt;<br/>
+    Style *WindowShadeScrolls<br/>
+        GlobalOpts SmartPlacementIsReallySmart&#8211; &gt;<br/>
+    Style *MinOverlapPlacement<br/>
+        GlobalOpts SmartPlacementIsNormal&#8211; &gt;<br/>
+    Style *TileCascadePlacement<br/>
+        GlobalOpts ClickToFocusDoesntPassClick&#8211; &gt;<br/>
+    Style *ClickToFocusPassesClickOff<br/>
+        GlobalOpts ClickToFocusPassesClick&#8211; &gt;<br/>
+    Style *ClickToFocusPassesClick<br/>
+        GlobalOpts ClickToFocusDoesntRaise&#8211; &gt;<br/>
+    Style *ClickToFocusRaisesOff<br/>
+        GlobalOpts ClickToFocusRaises&#8211; &gt;<br/>
+    Style *ClickToFocusRaises<br/>
+        GlobalOpts MouseFocusClickDoesntRaise&#8211; &gt;<br/>
+    Style *MouseFocusClickRaisesOff<br/>
+        GlobalOpts MouseFocusClickRaises&#8211; &gt;<br/>
+    Style *MouseFocusClickRaises<br/>
+        GlobalOpts NoStipledTitles&#8211; &gt;<br/>
+    Style * !StippledTitle<br/>
+                GlobalOpts StipledTitles&#8211; &gt;<br/>
+    Style *StippledTitle<br/>
+        GlobalOpts CaptureHonorsStartsOnPage&#8211; &gt;<br/>
+    Style *CaptureHonorsStartsOnPage<br/>
+        GlobalOpts CaptureIgnoresStartsOnPage&#8211; &gt;<br/>
+    Style *CaptureIgnoresStartsOnPage<br/>
+        GlobalOpts RecaptureHonorsStartsOnPage&#8211; &gt;<br/>
+    Style *RecaptureHonorsStartsOnPage<br/>
+        GlobalOpts RecaptureIgnoresStartsOnPage&#8211; &gt;<br/>
+    Style *RecaptureIgnoresStartsOnPage<br/>
+        GlobalOpts ActivePlacementHonorsStartsOnPage&#8211; &gt;<br/>
+    Style *ManualPlacementHonorsStartsOnPage<br/>
+        GlobalOpts ActivePlacementIgnoresStartsOnPage&#8211; &gt;<br/>
+    Style *ManualPlacementIgnoresStartsOnPage<br/>
+        GlobalOpts RaiseOverNativeWindows&#8211; &gt;<br/>
+    BugOpts RaiseOverNativeWindows on<br/>
+        GlobalOpts IgnoreNativeWindows&#8211; &gt;<br/>
     BugOpts RaiseOverNativeWindows off
 </dd></dl>
 </dl>
@@ -2274,8 +2274,8 @@ LocalePath &quot;;fvwm-themes:+&quot;
 <dl>
 <dt>
 </dt><dd>
-DestroyMenu MenuFvwmWindowOps<br />
-        AddToMenu MenuFvwmWindowOps &#8220;$[gt.Window Ops]&#8221; Title +<br />
+DestroyMenu MenuFvwmWindowOps<br/>
+        AddToMenu MenuFvwmWindowOps &#8220;$[gt.Window Ops]&#8221; Title +<br/>
     &#8220;$[gt.&amp;Move]&#8221; Move + &#8220;$[gt.&amp;Resize]&#8221; Resize + &#8220;$[gt.R&amp;aise]&#8221; Raise + &#8220;$[gt.&amp;Lower]&#8221; Lower + &#8220;$[gt.(De)&amp;Iconify]&#8221; Iconify + &#8220;$[gt.(Un)&amp;Stick]&#8221; Stick + &#8220;$[gt.(Un)Ma&amp;ximize]&#8221; Maximize + &#8220;&#8221; Nop + &#8220;$[gt.&amp;Close]&#8221; Close + &#8220;$[gt.&amp;Destroy]&#8221; Destroy
 </dd></dl>
 <p> gives a menu in the locale languages if translations are available. </p>
@@ -2393,12 +2393,12 @@ Schedule Periodic 10000 <code>PipeRead</code> '[ -N &quot;$MAIL&quot; ] &amp;&am
 <code>Key</code> Tab A M WindowList &quot;Prev SwitchToWindow&quot;
 </pre>
 </dd></dl>
-<p> Hitting <font SIZE="-1">Alt-Tab</font> once it brings up the window list, if you hit it twice the focus is flipped between the current and the last focused window. With the proper <i>SelectOnRelease</i> menu style (see example above) a window is selected as soon as you release the <font SIZE="-1">Alt</font> key. </p>
+<p> Hitting Alt-Tab once it brings up the window list, if you hit it twice the focus is flipped between the current and the last focused window. With the proper <i>SelectOnRelease</i> menu style (see example above) a window is selected as soon as you release the Alt key. </p>
 <p> The <i>options</i> passed to WindowList are separated by commas and can be <i>Geometry</i> / <i>NoGeometry</i> / <i>NoGeometryWithInfo</i>, <i>NoDeskNum,</i> <i>NoLayer,</i> <i>NoNumInDeskTitle</i>, <i>NoCurrentDeskTitle</i>, <i>MaxLabelWidth width</i>, <i>TitleForAllDesks</i>, <i>Function funcname</i>, <i>Desk desknum</i>, <i>CurrentDesk</i>, <i>NoIcons</i> / <i>Icons</i> / <i>OnlyIcons</i>, <i>NoNormal</i> / <i>Normal</i> / <i>OnlyNormal</i>, <i>NoSticky</i> / <i>Sticky</i> / <i>OnlySticky</i>, <i>NoStickyAcrossPages</i> / <i>StickyAcrossPages</i> / <i>OnlyStickyAcrossPages</i>, <i>NoStickyAcrossDesks</i> / <i>StickyAcrossDesks</i> / <i>OnlyStickyAcrossDesks</i>, <i>NoOnTop</i> / <i>OnTop</i> / <i>OnlyOnTop</i>, <i>NoOnBottom</i> / <i>OnBottom</i> / <i>OnlyOnBottom</i>, <i>Layer m [n]</i>, <i>UseSkipList</i> / <i>OnlySkipList</i>, <i>NoDeskSort</i>, <i>ReverseOrder</i>, <i>CurrentAtEnd</i>, <i>IconifiedAtEnd</i>, <i>UseIconName</i>, <i>Alphabetic</i> / <i>NotAlphabetic</i>, <i>SortByResource</i>, <i>SortByClass</i>, <i>NoHotkeys</i>, <i>SelectOnRelease</i>. </p>
 <p> (Note &#8211; normal means not iconic, sticky, or on top) </p>
 <p> With the <i>SortByResource</i> option windows are alphabetically sorted first by resource class, then by resource name and then by window name (or icon name if <i>UseIconName</i> is specified). <i>ReverseOrder</i> also works in the expected manner. </p>
 <p> With the <i>SortByClass</i> option windows are sorted just like with <i>SortByResource</i>, but the resource name is not taken into account, only the resource class. </p>
-<p> The <i>SelectOnRelease</i> option works exactly like the <code>MenuStyle</code> option with the same name, but overrides the option given in a menu style. By default, this option is set to the left <font SIZE="-1">Alt</font> key. To switch it off, use <i>SelectOnRelease</i> without a key name. </p>
+<p> The <i>SelectOnRelease</i> option works exactly like the <code>MenuStyle</code> option with the same name, but overrides the option given in a menu style. By default, this option is set to the left Alt key. To switch it off, use <i>SelectOnRelease</i> without a key name. </p>
 <p> If you pass in a function via <code>Function</code> funcname, it is called within a window context of the selected window: </p>
 <dl>
 <dt>
@@ -2477,7 +2477,7 @@ WindowList OnlyIcons, Sticky, OnTop, Geometry
 <dt>
 </dt><dd> Allows the user to move a window. If called from somewhere in a window or its border, then that window is moved. If called from the root window then the user is allowed to select the target window. By default, the EWMH working area is honoured. </dd>
 <p> If the literal option <i>screen</i> followed by a <i>screen</i> argument is specified, the coordinates are interpreted as relative to the given screen. The width and height of the screen are used for the calculations instead of the display dimensions. The <i>screen</i> as interpreted as in the <code>MoveToScreen</code> command. If the optional argument <i>Warp</i> is specified the pointer is warped with the window. If the single argument <i>pointer</i> is given, the top left corner of the window is moved to the pointer position before starting the operation; this is mainly intended for internal use by modules like <code>FvwmPager</code>. If the optional argument <i>ewmhiwa</i> is given, then the window position will ignore the working area (such as ignoring any values set via <code>EwmhBaseStruts</code>). </p>
-<p> The operation can be aborted with <font SIZE="-1">Escape</font> or any mouse button not set to place the window. By default mouse button 2 is set to cancel the move operation. To change this you may use the <code>Mouse</code> command with special context &#8216;P&#8217; for Placement. </p>
+<p> The operation can be aborted with Escape or any mouse button not set to place the window. By default mouse button 2 is set to cancel the move operation. To change this you may use the <code>Mouse</code> command with special context &#8216;P&#8217; for Placement. </p>
 <p> The window condition <i>PlacedByButton</i> can be used to check if a specific button was pressed to place the window (see <code>Current</code> command). </p>
 <p> If the optional arguments <i>x</i> and <i>y</i> are provided, then the window is moved immediately without user interaction. Each argument can specify an absolute or relative position from either the left/top or right/bottom of the screen. By default, the numeric value given is interpreted as a percentage of the screen width/height, but a trailing &#8216;<i>p</i>&#8216; changes the interpretation to mean pixels, while a trailing &#8216;<i>w</i>&#8216; means precent of the window width/height. To move the window relative to its current position, add the &#8216;<i>w</i>&#8216; (for &quot;window&quot;) prefix before the <i>x</i> and/or <i>y</i> value. To move the window to a position relative to the current location of the pointer, add the &#8216;<i>m</i>&#8216; (for &quot;mouse&quot;) prefix. To leave either coordinate unchanged, &quot;<i>keep</i>&quot; can be specified in place of <i>x</i> or <i>y</i>. </p>
 <p> For advanced uses, the arguments <i>x</i> and <i>y</i> can be used multiple times, but without the prefix &#8216;<i>m</i>&#8216; or &#8216;<i>w</i>&#8216;. (See complex examples below). </p>
@@ -2619,7 +2619,7 @@ OpaqueMoveSize 5
 </dd><dl>
 <dt>
 </dt><dd> Allows for resizing a window. If called from somewhere in a window or its border, then that window is resized. If called from the root window then the user is allowed to select the target window. </dd>
-<p> The operation can be aborted with <font SIZE="-1">Escape</font> or by pressing any mouse button (except button 1 which confirms it). </p>
+<p> The operation can be aborted with Escape or by pressing any mouse button (except button 1 which confirms it). </p>
 <p> If the optional arguments <i>width</i> and <i>height</i> are provided, then the window is resized so that its dimensions are <i>width</i> by <i>height</i>. The units of <i>width</i> and <i>height</i> are percent-of-screen, unless a letter &#8216;<i>p</i>&#8216; is appended to one or both coordinates, in which case the location is specified in pixels. With a &#8216;<i>c</i>&#8216; suffix the unit defined by the client application (hence the c) is used. With the suffix &#8216;<i>wa</i>&#8216; the value is a percentage of the width or height size of the EWMH working area, and with the suffix &#8216;<i>da</i>&#8216; it is a percentage of the width or height of the EWMH dynamic working area. So you can say </p>
 <dl>
 <dt>
@@ -2972,7 +2972,7 @@ CursorMove -10p -10p
 </dd><dl>
 <dt>
 </dt><dd> Tells fvwm which modifiers to ignore when matching Mouse or Key bindings. <code>IgnoreModifiers</code> affects the <i>ClickToFocus</i> style too. This command belongs into your <i>config</i>. If you issue it when your fvwm session is already up and running the results are unpredictable. The should appear before any applications or modules are started in your <i>config</i> file (e.g. with the <code>Exec</code> command). </dd>
-<p> <i>Modifiers</i> has the same syntax as in the <code>Mouse</code> or <code>Key</code> bindings, with the addition of &#8216;L&#8217; meaning the <font SIZE="-1">caps lock</font> key. The default is &quot;L&quot;. <i>Modifiers</i> can be omitted, meaning no modifiers are ignored. This command comes in handy if the <font SIZE="-1">num-lock</font> and <font SIZE="-1">scroll-lock</font> keys interfere with your shortcuts. With XFree86 &#8216;2&#8217; usually is the <font SIZE="-1">num-lock</font> modifier and &#8216;5&#8217; refers to the <font SIZE="-1">scroll-lock</font> key. To turn all these pesky modifiers off you can use this command: </p>
+<p> <i>Modifiers</i> has the same syntax as in the <code>Mouse</code> or <code>Key</code> bindings, with the addition of &#8216;L&#8217; meaning the caps lock key. The default is &quot;L&quot;. <i>Modifiers</i> can be omitted, meaning no modifiers are ignored. This command comes in handy if the num-lock and scroll-lock keys interfere with your shortcuts. With XFree86 &#8216;2&#8217; usually is the num-lock modifier and &#8216;5&#8217; refers to the scroll-lock key. To turn all these pesky modifiers off you can use this command: </p>
 <dl>
 <dt>
 </dt><dd>
@@ -2981,7 +2981,7 @@ IgnoreModifiers L25
 </pre>
 </dd></dl>
 <p> If the <i>Modifiers</i> argument is the string &quot;<i>default</i>&quot;, fvwm reverts back to the default value &quot;L&quot;. </p>
-<p> <code>Important</code> This command creates a lot of extra network traffic, depending on your CPU, network connection, the number of <code>Key</code> or <code>Mouse</code> commands in your configuration file and the number of modifiers you want to ignore. If you do not have a lightning fast machine or very few bindings you should not ignore more than two modifiers. I.e. do not ignore <font SIZE="-1">scroll-lock</font> if you have no problem with it. In the <i>FAQ</i> you can find a better solution of this problem.</dl>
+<p> <code>Important</code> This command creates a lot of extra network traffic, depending on your CPU, network connection, the number of <code>Key</code> or <code>Mouse</code> commands in your configuration file and the number of modifiers you want to ignore. If you do not have a lightning fast machine or very few bindings you should not ignore more than two modifiers. I.e. do not ignore scroll-lock if you have no problem with it. In the <i>FAQ</i> you can find a better solution of this problem.</dl>
 <dt><code>EdgeCommand</code> [<i>direction</i>&nbsp;<wbr>[<i>Function</i>]]</dt>
 <dd>
 </dd><dl>
@@ -3045,9 +3045,9 @@ EdgeCommand Top <code>Next</code> (FvwmButtons) <code>Focus</code>
 <dd>
 </dd><dl>
 <dt>
-</dt><dd> Binds a keyboard key to a specified fvwm command, or removes the binding if <i>Function</i> is &#8216;-&#8216;. The syntax is the same as for a <code>Mouse</code> binding except that the mouse button number is replaced with a <i>Keyname</i>. Normally, the key binding is activated when the key is pressed. <i>Keyname</i> is a standard X11 key name as defined in <i>/usr/include/X11/keysymdef.h</i>, (without the <i>XK_</i> prefix), or the keysym database <i>/usr/X11R6/lib/X11/XKeysymDB</i>. Only key names that are generated with no modifier keys or with just the <font SIZE="-1">Shift</font> key held are guaranteed to work. The <i>Context</i> and <i>Modifiers</i> fields are defined as in the <code>Mouse</code> binding. However, when you press a key the context window is the window that has the keyboard focus. That is not necessarily the same as the window the pointer is over (with <i>SloppyFocus</i> or <i>ClickToFocus</i>). Note that key bindings with the &#8216;<i>R</i>&#8216; (root window) context do not work properly with <i>SloppyFocus</i> and <i>ClickToFocus</i>. If you encounter problems, use the <code>PointerKey</code> command instead. If you want to bind keys to a window with <i>SloppyFocus</i> or <i>ClickToFocus</i> that are supposed to work when the pointer is not over the window, fvwm assumes the pointer is over the client window (i.e. you have to use the &#8216;W&#8217; context). </dd>
+</dt><dd> Binds a keyboard key to a specified fvwm command, or removes the binding if <i>Function</i> is &#8216;-&#8216;. The syntax is the same as for a <code>Mouse</code> binding except that the mouse button number is replaced with a <i>Keyname</i>. Normally, the key binding is activated when the key is pressed. <i>Keyname</i> is a standard X11 key name as defined in <i>/usr/include/X11/keysymdef.h</i>, (without the <i>XK_</i> prefix), or the keysym database <i>/usr/X11R6/lib/X11/XKeysymDB</i>. Only key names that are generated with no modifier keys or with just the Shift key held are guaranteed to work. The <i>Context</i> and <i>Modifiers</i> fields are defined as in the <code>Mouse</code> binding. However, when you press a key the context window is the window that has the keyboard focus. That is not necessarily the same as the window the pointer is over (with <i>SloppyFocus</i> or <i>ClickToFocus</i>). Note that key bindings with the &#8216;<i>R</i>&#8216; (root window) context do not work properly with <i>SloppyFocus</i> and <i>ClickToFocus</i>. If you encounter problems, use the <code>PointerKey</code> command instead. If you want to bind keys to a window with <i>SloppyFocus</i> or <i>ClickToFocus</i> that are supposed to work when the pointer is not over the window, fvwm assumes the pointer is over the client window (i.e. you have to use the &#8216;W&#8217; context). </dd>
 <p> The special context &#8216;<i>M</i>&#8216; for menus can be used to (re)define the menu controls. It be used alone or together with &#8216;T&#8217;, &#8216;S&#8217;, &#8216;I&#8217;, &#8216;[&#8216;, &#8216;]&#8217;, &#8216;-&#8216; and &#8216;_&#8217;. See the <code>Menu Bindings</code> section for details. </p>
-<p> The following example binds the built-in window list to pop up when <font SIZE="-1">Alt-Ctrl-Shift-F11</font> is hit, no matter where the mouse pointer is: </p>
+<p> The following example binds the built-in window list to pop up when Alt-Ctrl-Shift-F11 is hit, no matter where the mouse pointer is: </p>
 <dl>
 <dt>
 </dt><dd>
@@ -3106,7 +3106,7 @@ Mouse (rxvt) 3 A A <code>WindowList</code>
 XTerm*allowSendEvents:  true
 </pre>
 </dd></dl>
-<p> <i>Modifiers</i> is any combination of &#8216;<i>N</i>&#8216; for no modifiers, &#8216;<i>C</i>&#8216; for control, &#8216;<i>S</i>&#8216; for shift, &#8216;<i>M</i>&#8216; for Meta, &#8216;<i>L</i>&#8216; for Caps-Lock or &#8216;<i>A</i>&#8216; for any modifier. For example, a modifier of &quot;SM&quot; applies when both the <font SIZE="-1">Meta</font> and <font SIZE="-1">Shift</font> keys are down. X11 modifiers mod1 through mod5 are represented as the digits &#8216;1&#8217; through &#8216;5&#8217;. The modifier &#8216;L&#8217; is ignored by default. To turn it on, use the <code>IgnoreModifiers</code> command. </p>
+<p> <i>Modifiers</i> is any combination of &#8216;<i>N</i>&#8216; for no modifiers, &#8216;<i>C</i>&#8216; for control, &#8216;<i>S</i>&#8216; for shift, &#8216;<i>M</i>&#8216; for Meta, &#8216;<i>L</i>&#8216; for Caps-Lock or &#8216;<i>A</i>&#8216; for any modifier. For example, a modifier of &quot;SM&quot; applies when both the Meta and Shift keys are down. X11 modifiers mod1 through mod5 are represented as the digits &#8216;1&#8217; through &#8216;5&#8217;. The modifier &#8216;L&#8217; is ignored by default. To turn it on, use the <code>IgnoreModifiers</code> command. </p>
 <p> <i>Function</i> is one of fvwm&#8217;s commands. </p>
 <p> The title-bar buttons are numbered with odd numbered buttons on the left side of the title-bar and even numbers on the right. Smaller-numbered buttons are displayed toward the outside of the window while larger-numbered buttons appear toward the middle of the window (0 is short for 10). In summary, the buttons are numbered: </p>
 <dl>
@@ -3226,7 +3226,7 @@ Stroke N789632147  3  R  N <code>FvwmForm</code> FvwmForm-QuitVerify
 <code>Key</code> x R N StrokeFunc
 </pre>
 </dd></dl>
-<p> If you press mouse button 3 and <font SIZE="-1">Alt</font> anywhere (respectively, press the key x when the cursor is on the root window), then fvwm records the mouse motions until the mouse button 3 (respectively, the x key) is released and then check if the recorded <i>sequence</i> corresponds to a stroke binding of the form </p>
+<p> If you press mouse button 3 and Alt anywhere (respectively, press the key x when the cursor is on the root window), then fvwm records the mouse motions until the mouse button 3 (respectively, the x key) is released and then check if the recorded <i>sequence</i> corresponds to a stroke binding of the form </p>
 <dl>
 <dt>
 </dt><dd>
@@ -3235,9 +3235,9 @@ Stroke N789632147  3  R  N <code>FvwmForm</code> FvwmForm-QuitVerify
 &quot;Stroke <i>sequence</i> 0 R N <i>action</i>&quot;
 </pre>
 </dd></dl>
-<p> Note that the <i>Context</i> and <i>Modifiers</i> are taken at the beginning of the execution of the <code>StrokeFunc</code> command (so you can release the modifiers before the end of the stroke recording in the case of a mouse binding and if you used, say, a title-bar context the mouse motion can go through an application window). The keys <font SIZE="-1">Escape</font> and <font SIZE="-1">Delete</font> allow you to abort the command. </p>
+<p> Note that the <i>Context</i> and <i>Modifiers</i> are taken at the beginning of the execution of the <code>StrokeFunc</code> command (so you can release the modifiers before the end of the stroke recording in the case of a mouse binding and if you used, say, a title-bar context the mouse motion can go through an application window). The keys Escape and Delete allow you to abort the command. </p>
 <p> The <code>StrokeFunc</code> command has five options: <i>NotStayPressed</i>, <i>EchoSequence</i>, <i>DrawMotion</i>, <i>FeedBack</i> and <i>StrokeWidth</i>. These options are disabled by default. <i>EchoSequence</i> causes fvwm to Echo the recorded stroke sequence. <i>DrawMotion</i> causes fvwm to draw the mouse motion on the screen. <i>FeedBack</i> causes fvwm to display during a fraction of second the cursor of the <i>WAIT</i> context of the <code>CursorStyle</code> command if the recorded stroke sequence corresponds to a stroke binding. <i>StrokeWidth</i> takes an integer argument, which must be &gt;= 0 and &lt;= 100 and which defines the width of the line for the <i>DrawMotion</i> option. </p>
-<p> <i>NotStayPressed</i> works only if <code>StrokeFunc</code> is used via a <code>Mouse</code> or a <code>Key</code> command. This option removes the need to have a button or the key pressed during the stroke, but you have to do a mouse click or press the <font SIZE="-1">Return</font> or <font SIZE="-1">Space</font> key to finish the mouse motion recording (these keys also work without the <i>NotStayPressed</i> option). </p>
+<p> <i>NotStayPressed</i> works only if <code>StrokeFunc</code> is used via a <code>Mouse</code> or a <code>Key</code> command. This option removes the need to have a button or the key pressed during the stroke, but you have to do a mouse click or press the Return or Space key to finish the mouse motion recording (these keys also work without the <i>NotStayPressed</i> option). </p>
 <p> You can use the <code>StrokeFunc</code> &quot;alone&quot;. In this case it works as above with the <i>NotStayPressed</i> option enabled. However, <i>Modifiers</i>, in general, may not work as expected (i.e., in this case use &#8216;A&#8217; or &#8216;N&#8217; as <i>Modifiers</i> in the stroke bindings). </p>
 <p> Note that some computers do not support key release events. If that is the case the <code>StrokeFunc</code> used via a <code>Key</code> command works as if the <i>NotStayPressed</i> option is enabled.</dl>
 </dl>
@@ -3767,23 +3767,23 @@ Style * ManualPlacement
 <dl>
 <dt>
 </dt><dd>
-GlobalOpts SmartPlacementIsReallySmart<br />
-        Style *SmartPlacement&#8211; &gt;<br />
-    Style *SmartPlacement,<br />
-    CleverPlacement<br />
-            GlobalOpts SmartPlacementIsNormal<br />
-                Style *SmartPlacement&#8211; &gt;<br />
-        Style *SmartPlacement,<br />
-    CleverPlacementOff<br />
-        Style *DumbPlacement,<br />
-    RandomPlacement&#8211; &gt;<br />
-        Style *CascadePlacement<br />
-            Style *DumbPlacement,<br />
-    ActivePlacement&#8211; &gt;<br />
-        Style *ManualPlacement<br />
-            Style *SmartPlacement,<br />
-    RandomPlacement, CleverPlacementOff&#8211; &gt; Style *TileCascadePlacement Style *SmartPlacement,<br />
-    ActivePlacement, CleverPlacementOff&#8211; &gt; Style *TileManualPlacement Style *SmartPlacement, CleverPlacement&#8211; &gt; Style *MinOverlapPlacement Style *SmartPlacement,<br />
+GlobalOpts SmartPlacementIsReallySmart<br/>
+        Style *SmartPlacement&#8211; &gt;<br/>
+    Style *SmartPlacement,<br/>
+    CleverPlacement<br/>
+            GlobalOpts SmartPlacementIsNormal<br/>
+                Style *SmartPlacement&#8211; &gt;<br/>
+        Style *SmartPlacement,<br/>
+    CleverPlacementOff<br/>
+        Style *DumbPlacement,<br/>
+    RandomPlacement&#8211; &gt;<br/>
+        Style *CascadePlacement<br/>
+            Style *DumbPlacement,<br/>
+    ActivePlacement&#8211; &gt;<br/>
+        Style *ManualPlacement<br/>
+            Style *SmartPlacement,<br/>
+    RandomPlacement, CleverPlacementOff&#8211; &gt; Style *TileCascadePlacement Style *SmartPlacement,<br/>
+    ActivePlacement, CleverPlacementOff&#8211; &gt; Style *TileManualPlacement Style *SmartPlacement, CleverPlacement&#8211; &gt; Style *MinOverlapPlacement Style *SmartPlacement,<br/>
     ActivePlacement, CleverPlacement&#8211; &gt; Style *MinOverlapPercentPlacement Style *ActivePlacementsHonorsStartsOnPage&#8211; &gt; Style *ManualPlacementsHonorsStartsOnPage Style *ActivePlacementsHonorsStartsOnPageOff&#8211; &gt; Style *ManualPlacementsHonorsStartsOnPageOff
 </dd></dl>
 </dl>
@@ -3992,9 +3992,9 @@ AddButtonStyle 1 Vector 4 50x30@1 70x70@0 30x70@0 50x30@1
 <dl>
 <dt>
 </dt><dd>
-AddToDecor FlatDecor + ButtonStyle All Active(&#8211;flat) Inactive(&#8211;flat) + TitleStyle&#8211; flat<br />
-    + BorderStyle&#8211; HiddenHandles NoInset Style FlatStyle UseDecor FlatDecor,<br />
-    HandleWidth 4, ForeColor white,<br />
+AddToDecor FlatDecor + ButtonStyle All Active(&#8211;flat) Inactive(&#8211;flat) + TitleStyle&#8211; flat<br/>
+    + BorderStyle&#8211; HiddenHandles NoInset Style FlatStyle UseDecor FlatDecor,<br/>
+    HandleWidth 4, ForeColor white,<br/>
     BackColor grey40, HilightFore black, HilightBack grey70 Style xterm UseStyle FlatStyle
 </dd></dl>
 <p> An existing window&#8217;s decor may be reassigned with <code>ChangeDecor</code>. A decor can be destroyed with <code>DestroyDecor</code>. </p>
@@ -4263,14 +4263,14 @@ TitleStyle LeftJustified Height 24
 <dl>
 <dt>
 </dt><dd>
-TitleStyle ActiveUp HGradient 16 navy black<br />
-    TitleStyle<br />
-    ActiveDown(Solid red&#8211; flat)<br />
-        Inactive(TiledPixmap wood.xpm)<br />
-            TitleStyle<br />
-    ActiveUp(&#8211;Flat)<br />
-        ActiveDown(&#8211;Raised)<br />
-            InactiveUp(&#8211;Flat)<br />
+TitleStyle ActiveUp HGradient 16 navy black<br/>
+    TitleStyle<br/>
+    ActiveDown(Solid red&#8211; flat)<br/>
+        Inactive(TiledPixmap wood.xpm)<br/>
+            TitleStyle<br/>
+    ActiveUp(&#8211;Flat)<br/>
+        ActiveDown(&#8211;Raised)<br/>
+            InactiveUp(&#8211;Flat)<br/>
                 InactiveDown(&#8211;Sunk)
 </dd></dl>
 <p> This sets the &quot;ActiveUp&quot; state to a horizontal gradient, the &quot;ActiveDown&quot; state to solid red, and the &quot;Inactive&quot; states to a tiled wood pixmap. Finally, &quot;ActiveUp&quot; and &quot;InactiveUp&quot; are set to look flat, while &quot;ActiveDown&quot; set to be sunk (the <i>Raised</i> flag for the &quot;ActiveDown&quot; state causes it to appear sunk due to relief inversion), and &quot;InactiveDown&quot; is set to look raised. An example which sets flags for all states: </p>
@@ -4538,7 +4538,7 @@ Scroll 100000 0
 <code>Mouse</code> 1 A CM Scroll reverse
 </pre>
 </dd></dl>
-<p> gives an effect of grabbing and dragging the viewport with button 1 if <font SIZE="-1">Control</font> and <font SIZE="-1">Meta</font> is pressed.</dl>
+<p> gives an effect of grabbing and dragging the viewport with button 1 if Control and Meta is pressed.</dl>
 <dt><code>Xinerama</code> [bool]</dt>
 <dd>
 </dd><dl>
@@ -4734,7 +4734,7 @@ Echo Beginning style definitions...
 </dd><dl>
 <dt>
 </dt><dd> Executes <i>command</i>. You should not use an ampersand &#8216;&amp;&#8217; at the end of the command. You probably want to use an additional &quot;exec&quot; at the beginning of <i>command</i>. Without that, the shell that fvwm invokes to run your command stays until the command exits. In effect, you&#8217;ll have twice as many processes running as you need. Note that some shells are smart enough to avoid this, but it never hurts to include the &quot;exec&quot; anyway. </dd>
-<p> The following example binds function key <font SIZE="-1">F1</font> in the root window, with no modifiers, to the exec function. The program rxvt is started with an assortment of options. </p>
+<p> The following example binds function key F1 in the root window, with no modifiers, to the exec function. The program rxvt is started with an assortment of options. </p>
 <dl>
 <dt>
 </dt><dd>
@@ -4927,7 +4927,7 @@ Silent <code>Key</code> Help R A <code>Popup</code> HelpMenu
 </dd></dl>
 <p> The above function starts an xterm on the current desk, waits for it to map itself, then switches to desk 2 and starts an xmh. After the xmh window appears control moves to desk 0. </p>
 <p> Fvwm remains partially functional during a wait, but any input from the modules is queued up and processed only after the window appears or the command is aborted. For example, windows can not be focused with <code>FvwmTaskBar</code> or <code>FvwmWinList</code> during a wait. </p>
-<p> You can escape from a <code>Wait</code> pause by pressing <font SIZE="-1">Ctrl-Alt-Escape</font> (where <font SIZE="-1">Alt</font> is the first modifier). To redefine this key sequence see the <code>EscapeFunc</code> command.</dl>
+<p> You can escape from a <code>Wait</code> pause by pressing Ctrl-Alt-Escape (where Alt is the first modifier). To redefine this key sequence see the <code>EscapeFunc</code> command.</dl>
 </dl>
 <h3>Conditional Commands</h3>
 <p> Conditional commands are commands that are only executed if certain conditions are met. Most conditional commands work on windows, like <code>Next</code>, <code>ThisWindow</code> or <code>All</code>. There is one conditional command, <code>Test</code>, that works on global conditions unrelated to windows. The syntax of the conditions is described below. For readability, the list of conditions is located at the end of this section.</p>
@@ -5336,7 +5336,7 @@ ModulePath ${HOME}/lib/fvwm/modules:+
 </dd><dl>
 <dt>
 </dt><dd> The <code>ModuleSynchronous</code> command is very similar to <code>Module</code>. Fvwm stops processing any commands and user input until the module sends a string beginning with &quot;NOP FINISHED STARTUP&quot; back to fvwm. If the optional <i>Timeout</i> is given fvwm gives up if the module sent no input back to fvwm for <i>secs</i> seconds. If the <i>Expect</i> option is given, fvwm waits for the given <i>string</i> instead. <code>ModuleSynchronous</code> should only be used during fvwm startup to enforce the order in which modules are started. This command is intended for use with the (currently hypothetical) module that should be in place before other modules are started. </dd>
-<p> Warning: It is quite easy to hang fvwm with this command, even if a timeout is given. Be extra careful choosing the string to wait for. Although all modules in the fvwm distribution send back the &quot;NOP FINISHED STARTUP&quot; string once they have properly started up, this may not be the case for third party modules. Moreover, you can try to escape from a locked <code>ModuleSynchronous</code> command by using the key sequence <font SIZE="-1">Ctrl-Alt-Escape</font> (see the <code>EscapeFunc</code>).</dl>
+<p> Warning: It is quite easy to hang fvwm with this command, even if a timeout is given. Be extra careful choosing the string to wait for. Although all modules in the fvwm distribution send back the &quot;NOP FINISHED STARTUP&quot; string once they have properly started up, this may not be the case for third party modules. Moreover, you can try to escape from a locked <code>ModuleSynchronous</code> command by using the key sequence Ctrl-Alt-Escape (see the <code>EscapeFunc</code>).</dl>
 <dt><code>ModuleTimeout</code> <i>timeout</i></dt>
 <dd>
 </dd><dl>

@@ -159,8 +159,8 @@ description: "zshmisc – everything and then some"
 <dl>
 <dt>
 </dt><dd>
-if[[-o ignorebraces]] {<br />
-    print yes<br />
+if[[-o ignorebraces]] {<br/>
+    print yes<br/>
 }
 </dd></dl>
 <p> works, but </p>
@@ -416,9 +416,9 @@ func() {
 <dl>
 <dt>
 </dt><dd>
-integer myfd<br />
-        exec{myfd} &gt; ~ / logs / mylogfile.txt print This is a log message.&gt;<br />
-    &amp;$myfd<br />
+integer myfd<br/>
+        exec{myfd} &gt; ~ / logs / mylogfile.txt print This is a log message.&gt;<br/>
+    &amp;$myfd<br/>
         exec{myfd} &gt; &amp;-
 </dd></dl>
 <p> Note that the expansion of the variable in the expression <code>&gt;&amp;$myfd</code> occurs at the point the redirection is opened. This is after the expansion of command arguments and after any redirections to the left on the command line have been processed.</p>
@@ -604,8 +604,8 @@ myfunc args...</code>
 <dl>
 <dt>
 </dt><dd>
-unfunction myfunc #if myfunc was defined<br />
-    autoload myfunc<br />
+unfunction myfunc #if myfunc was defined<br/>
+    autoload myfunc<br/>
         myfunc args&#8230;
 </dd></dl>
 <p> In fact, the <code>functions</code> command outputs `<code>builtin autoload -X</code>&#8216; as the body of an autoloaded function. This is done so that </p>
@@ -678,10 +678,10 @@ I am outside</code>
 </dd><dl>
 <dt>
 </dt><dd>
-zshaddhistory()<br />
-{<br />
+zshaddhistory()<br/>
+{<br/>
     print &#8211; sr&#8211; ${1 % % $ &#8216;
-&#8217;} fc &#8211; p.zsh_local_history<br />
+&#8217;} fc &#8211; p.zsh_local_history<br/>
 }
 </dd></dl>
 </dl>
@@ -926,10 +926,10 @@ print $(( [#_] sqrt(1e7) ))</code>
 <dl>
 <dt>
 </dt><dd>
-for ((f = 0; f &lt; 1; f += 0.1))<br />
-    ;<br />
-do<br />
-#use $f<br />
+for ((f = 0; f &lt; 1; f += 0.1))<br/>
+    ;<br/>
+do<br/>
+#use $f<br/>
 done
 </dd></dl>
 <p> if <code>f</code> has not already been declared, the first assignment will cause it to be created as an integer, and consequently the operation `<code>f += 0.1</code>&#8216; will always cause the result to be truncated to zero, so that the loop will fail. A simple fix would be to turn the initialization into `<code>f = 0.0</code>&#8216;. It is therefore best to declare numeric variables with explicit types.</p>

@@ -23,7 +23,7 @@ description: "libtasn1_strerror – Returns a string with a description of an er
 <h2>DEPRECATED</h2>
 <p> Use <code>asn1_strerror()</code> instead.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2006, 2007, 2008, 2009 Free Software Foundation, Inc..<br />
+<p> Copyright &#169; 2006, 2007, 2008, 2009 Free Software Foundation, Inc..<br/>
  Copying and distribution of this file, with or without modification, are permitted in any medium without royalty provided the copyright notice and this notice are preserved.</p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>libtasn1</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>libtasn1</code> programs are properly installed at your site, the command</p>

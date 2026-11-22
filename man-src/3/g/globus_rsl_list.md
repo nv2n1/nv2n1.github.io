@@ -10,7 +10,7 @@ description: "List Functions –"
 
 <p> List Functions &#8211; </p>
 <h3>Functions</h3>
-<p> globus_list_t * <code>globus_list_copy_reverse</code> (globus_list_t *orig)<br />
+<p> globus_list_t * <code>globus_list_copy_reverse</code> (globus_list_t *orig)<br/>
  <i>Create a reverse-order copy of a list. </i></p>
 <h2>Detailed Description</h2>
 <h2>Function Documentation</h2>

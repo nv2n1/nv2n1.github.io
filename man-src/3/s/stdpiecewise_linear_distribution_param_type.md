@@ -10,8 +10,8 @@ description: "std::piecewise_linear_distribution< _RealType >::param_type –"
 <p>std::piecewise_linear_distribution&lt; _RealType &gt;::param_type &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Public Types</h3>
-<p>typedef<br />
- <code>piecewise_linear_distribution</code><br />
+<p>typedef<br/>
+ <code>piecewise_linear_distribution</code><br/>
  &lt; _RealType &gt; <code>distribution_type</code>&quot;</p>
 <h3>Public Member Functions</h3>
 <pre><code>template&lt;typename _InputIteratorB , typename _InputIteratorW &gt; param_type (_InputIteratorB __bfirst, _InputIteratorB __bend, _InputIteratorW __wbegin)

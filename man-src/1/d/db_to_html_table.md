@@ -14,9 +14,9 @@ description: "db_to_html_table – convert db to an HTML table"
     db_to_html_table [-g N] &lt;source.fsdb &gt;dest.html
 </pre>
 <h2>DESCRIPTION</h2>
-<p> Covert an existing dbtable to an <font SIZE="-1">HTML</font> table. The output is a fragment of an <font SIZE="-1">HTML</font> page; we assume the user fills in the rest (head and body, etc.). </p>
+<p> Covert an existing dbtable to an HTML table. The output is a fragment of an HTML page; we assume the user fills in the rest (head and body, etc.). </p>
 <p> Input is fsdb format. </p>
-<p> Output is <font SIZE="-1">HTML</font> code (<i>not</i> fsdb), with HTML-specific characters (less than, greater than, ampersand) are escaped. (The fsdb-1.x version assumed input was <font SIZE="-1">ISO-8859-1</font>; we now assume both input and output are unicode. This change is considered a feature of the 21st century.)</p>
+<p> Output is HTML code (<i>not</i> fsdb), with HTML-specific characters (less than, greater than, ampersand) are escaped. (The fsdb-1.x version assumed input was ISO-8859-1; we now assume both input and output are unicode. This change is considered a feature of the 21st century.)</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-g N</code> or &lt;&#8211;group-count N&gt;</dt>
@@ -62,4 +62,4 @@ description: "db_to_html_table – convert db to an HTML table"
 <p> Fsdb. dbcolneaten. dbfileadjust. html_table_to_db.</p>
 <h2>AUTHOR and COPYRIGHT</h2>
 <p> Copyright (C) 2007-2015 by John Heidemann &lt;johnh [at] isi.edu&gt; </p>
-<p> This program is distributed under terms of the <font SIZE="-1">GNU</font> general public license, version 2. See the file <font SIZE="-1">COPYING</font> with the distribution for details. </p>
+<p> This program is distributed under terms of the GNU general public license, version 2. See the file COPYING with the distribution for details. </p>

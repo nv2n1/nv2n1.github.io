@@ -9,7 +9,7 @@ description: "lsinitramfs – list content of an initramfs image"
 
 <p>lsinitramfs &#8211; list content of an initramfs image</p>
 <h2>Synopsis</h2>
-<p><code>lsinitramfs</code> [<code>-l</code>] <i>initramfs-file</i>&#8230;<br />
+<p><code>lsinitramfs</code> [<code>-l</code>] <i>initramfs-file</i>&#8230;<br/>
  <code>lsinitramfs</code> <code>-h</code> </p>
 <h2>Description</h2>
 <p>The <code>lsinitramfs</code> command lists the content of given initramfs images. It allows one to quickly check the content of one (or multiple) specified initramfs files. </p>

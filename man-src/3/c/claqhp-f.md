@@ -10,7 +10,7 @@ description: "claqhp.f –"
 <p>claqhp.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>claqhp</code> (UPLO, N, AP, S, SCOND, AMAX, EQUED)<br />
+<p>subroutine <code>claqhp</code> (UPLO, N, AP, S, SCOND, AMAX, EQUED)<br/>
  <i></i><code>CLAQHP</code> scales a Hermitian matrix stored in packed form.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine claqhp (characterUPLO, integerN, complex, dimension( * )AP, real, dimension( * )S, realSCOND, realAMAX, characterEQUED)</h3>

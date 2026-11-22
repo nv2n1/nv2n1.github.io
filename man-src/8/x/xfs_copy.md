@@ -9,7 +9,7 @@ description: "xfs_copy – copy the contents of an XFS filesystem"
 
 <p>xfs_copy &#8211; copy the contents of an XFS filesystem</p>
 <h2>Synopsis</h2>
-<p><code>xfs_copy</code> [ <code>-bd</code> ] [ <code>-L</code> <i>log</i> ] <i>source target1</i> [ <i>target2</i> &#8230; ]<br />
+<p><code>xfs_copy</code> [ <code>-bd</code> ] [ <code>-L</code> <i>log</i> ] <i>source target1</i> [ <i>target2</i> &#8230; ]<br/>
  <code>xfs_copy -V</code></p>
 <h2>Description</h2>
 <p><code>xfs_copy</code> copies an XFS filesystem to one or more targets in parallel (see <code><a href="/docs/linux/man/5-xfs/">xfs</a></code>(5)). The first (<i>source</i>) argument must be the pathname of the device or file containing the XFS filesystem. The remaining arguments specify one or more <i>target</i> devices or file names. If the pathnames specify devices, a copy of the source XFS filesystem is created on each device. The <i>target</i> can also be the name of a regular file, in which case an image of the source XFS filesystem is created in that file. If the file does not exist, <code>xfs_copy</code> creates the file. The length of the resulting file is equal to the size of the source filesystem. However, if the file is created on an XFS filesystem, the file consumes roughly the amount of space actually used in the source filesystem by the filesystem and the XFS log. The space saving is because <code>xfs_copy</code> seeks over free blocks instead of copying them and the XFS filesystem supports sparse files efficiently. </p>

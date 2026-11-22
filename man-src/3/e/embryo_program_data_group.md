@@ -9,9 +9,9 @@ description: "Program Data Functions – Functions that set and retrieve data as
 
 <p>Program Data Functions &#8211; Functions that set and retrieve data associated with the given program. </p>
 <h3>Functions</h3>
-<p>EAPI void <code>embryo_program_data_set</code> (Embryo_Program *ep, void *data)<br />
- <i>Sets the data associated to the given program. </i><br />
- EAPI void * <code>embryo_program_data_get</code> (Embryo_Program *ep)<br />
+<p>EAPI void <code>embryo_program_data_set</code> (Embryo_Program *ep, void *data)<br/>
+ <i>Sets the data associated to the given program. </i><br/>
+ EAPI void * <code>embryo_program_data_get</code> (Embryo_Program *ep)<br/>
  <i>Retrieves the data associated to the given program. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that set and retrieve data associated with the given program.</p>
@@ -25,7 +25,7 @@ description: "Program Data Functions – Functions that set and retrieve data as
 <p>Sets the data associated to the given program. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ep</i> The given program.<br />
+<dd><i>ep</i> The given program.<br/>
  <i>data</i> New bytecode data.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Embryo from the source code.</p>

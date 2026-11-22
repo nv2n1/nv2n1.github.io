@@ -11,7 +11,7 @@ description: "cptsv.f –"
 <p> cptsv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cptsv</code> (N, NRHS, D, E, B, LDB, INFO)<br />
+<p> subroutine <code>cptsv</code> (N, NRHS, D, E, B, LDB, INFO)<br/>
  <i></i><code> CPTSV computes the solution to system of linear equations A * X = B for PT matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cptsv (integerN, integerNRHS, real, dimension( * )D, complex, dimension( * )E, complex, dimension( ldb, * )B, integerLDB, integerINFO)</h3>

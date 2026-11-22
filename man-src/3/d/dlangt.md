@@ -11,7 +11,7 @@ description: "dlangt.f –"
 <p> dlangt.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> DOUBLE PRECISION function <code>dlangt</code> (NORM, N, DL, D, DU)<br />
+<p> DOUBLE PRECISION function <code>dlangt</code> (NORM, N, DL, D, DU)<br/>
  <i></i><code>DLANGT</code> returns the value of the 1-norm, Frobenius norm, infinity-norm, or the largest absolute value of any element of a general tridiagonal matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>DOUBLE PRECISION function dlangt (characterNORM, integerN, double precision, dimension( * )DL, double precision, dimension( * )D, double precision, dimension( * )DU)</h3>

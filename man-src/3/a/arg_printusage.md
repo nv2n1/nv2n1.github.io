@@ -48,16 +48,16 @@ struct getargs {
 <dt><code>Fa </code>arg_double</dt>
 <dd> argument is a double precision floating point value, and Fa value should point to a Fa double .</dd>
 <dt><code>Fa </code>arg_collect</dt>
-<dd> allows more fine-grained control of the option parsing process. Fa value should be a pointer to a Fa getarg_collect_info structure:<br />
-typedef int (*getarg_collect_func)(int short_opt,<br />
-                                   int argc,<br />
-                                   char **argv,<br />
-                                   int *optind,<br />
-                                   int *optarg,<br />
-                                   void *data);<br />
-typedef struct getarg_collect_info {<br />
-    getarg_collect_func func;<br />
-    void *data;<br />
+<dd> allows more fine-grained control of the option parsing process. Fa value should be a pointer to a Fa getarg_collect_info structure:<br/>
+typedef int (*getarg_collect_func)(int short_opt,<br/>
+                                   int argc,<br/>
+                                   char **argv,<br/>
+                                   int *optind,<br/>
+                                   int *optarg,<br/>
+                                   void *data);<br/>
+typedef struct getarg_collect_info {<br/>
+    getarg_collect_func func;<br/>
+    void *data;<br/>
 } getarg_collect_info;</dd>
 <p> With the Fa func member set to a function to call, and Fa data to some application specific data. The parameters to the collect function are:</p>
 <dl>
@@ -79,49 +79,49 @@ typedef struct getarg_collect_info {<br />
 <p> Option parsing is similar to what getopt uses. Short options without arguments can be compressed ( &#8211;<code>xyz</code> is the same as &#8211;<code>x y z )</code> and short options with arguments take these as either the rest of the argv-string or as the next option ( &#8211;<code>o </code><i>foo</i> or &#8211;<code>o </code><i>foo</i> </p>
 <p> Long option names are prefixed with &#8212; (double dash), and the value with a = (equal), &#8211;<code>-foo= </code><i>bar</i> Long option flags can either be specified as they are ( &#8211;<code>-help</code> or with an (boolean parsable) option ( &#8211;<code>-help= </code><i>yes</i> &#8211;<code>-help= </code><i>true</i> or similar), or they can also be negated ( &#8211;<code>-no-help</code> is the same as &#8211;<code>-help= no</code> and if you&#8217;re really confused you can do it multiple times ( &#8211;<code>-no-no-help= </code><i>false</i> or even &#8211;<code>-no-no-help= </code><i>maybe</i></p>
 <h2>EXAMPLE</h2>
-<p>#include &lt;getarg.h&gt;<br />
-#include &lt;stdio.h&gt;<br />
-#include &lt;string.h&gt;<br />
-char *source = &#8220;Ouagadougou&#8221;;<br />
-char *destination;<br />
-int weight;<br />
-int include_catalog = 1;<br />
-int help_flag;<br />
-struct getargs args[] = {<br />
-    {&#8220;source&#8221;, &#8216;s&#8217;, arg_string, &amp;source,<br />
-     &#8220;source of shippment&#8221;, &#8220;city&#8221;},<br />
-    {&#8220;destination&#8221;, &#8216;d&#8217;, arg_string, &amp;destination,<br />
-     &#8220;destination of shippment&#8221;, &#8220;city&#8221;},<br />
-    {&#8220;weight&#8221;, &#8216;w&#8217;, arg_integer, &amp;weight,<br />
-     &#8220;weight of shippment&#8221;, &#8220;tons&#8221;},<br />
-    {&#8220;catalog&#8221;, &#8216;c&#8217;, arg_negative_flag, &amp;include_catalog,<br />
-     &#8220;include product catalog&#8221;},<br />
-    {&#8220;help&#8221;, &#8216;h&#8217;, arg_flag, &amp;help_flag}};<br />
-int num_args = sizeof(args) / sizeof(args[0]); /* number of elements in args */<br />
-const char *progname = &#8220;ship++&#8221;;<br />
-int main(int argc, char **argv)<br />
-{<br />
-    int optind = 0;<br />
-    if (getarg(args, num_args, argc, argv, &amp;optind)) {<br />
-        arg_printusage(args, num_args, progname, &#8220;stuff&#8230;&#8221;);<br />
-        exit(1);<br />
-    }<br />
-    if (help_flag) {<br />
-        arg_printusage(args, num_args, progname, &#8220;stuff&#8230;&#8221;);<br />
-        exit(0);<br />
-    }<br />
-    if (destination == NULL) {<br />
+<p>#include &lt;getarg.h&gt;<br/>
+#include &lt;stdio.h&gt;<br/>
+#include &lt;string.h&gt;<br/>
+char *source = &#8220;Ouagadougou&#8221;;<br/>
+char *destination;<br/>
+int weight;<br/>
+int include_catalog = 1;<br/>
+int help_flag;<br/>
+struct getargs args[] = {<br/>
+    {&#8220;source&#8221;, &#8216;s&#8217;, arg_string, &amp;source,<br/>
+     &#8220;source of shippment&#8221;, &#8220;city&#8221;},<br/>
+    {&#8220;destination&#8221;, &#8216;d&#8217;, arg_string, &amp;destination,<br/>
+     &#8220;destination of shippment&#8221;, &#8220;city&#8221;},<br/>
+    {&#8220;weight&#8221;, &#8216;w&#8217;, arg_integer, &amp;weight,<br/>
+     &#8220;weight of shippment&#8221;, &#8220;tons&#8221;},<br/>
+    {&#8220;catalog&#8221;, &#8216;c&#8217;, arg_negative_flag, &amp;include_catalog,<br/>
+     &#8220;include product catalog&#8221;},<br/>
+    {&#8220;help&#8221;, &#8216;h&#8217;, arg_flag, &amp;help_flag}};<br/>
+int num_args = sizeof(args) / sizeof(args[0]); /* number of elements in args */<br/>
+const char *progname = &#8220;ship++&#8221;;<br/>
+int main(int argc, char **argv)<br/>
+{<br/>
+    int optind = 0;<br/>
+    if (getarg(args, num_args, argc, argv, &amp;optind)) {<br/>
+        arg_printusage(args, num_args, progname, &#8220;stuff&#8230;&#8221;);<br/>
+        exit(1);<br/>
+    }<br/>
+    if (help_flag) {<br/>
+        arg_printusage(args, num_args, progname, &#8220;stuff&#8230;&#8221;);<br/>
+        exit(0);<br/>
+    }<br/>
+    if (destination == NULL) {<br/>
         fprintf(stderr, &#8220;%s: must specify destination
-&#8221;, progname);<br />
-        exit(1);<br />
-    }<br />
-    if (strcmp(source, destination) == 0) {<br />
+&#8221;, progname);<br/>
+        exit(1);<br/>
+    }<br/>
+    if (strcmp(source, destination) == 0) {<br/>
         fprintf(stderr, &#8220;%s: destination must be different from source
-&#8221;);<br />
-        exit(1);<br />
-    }<br />
-    /* include more stuff here &#8230; */<br />
-    exit(2);<br />
+&#8221;);<br/>
+        exit(1);<br/>
+    }<br/>
+    /* include more stuff here &#8230; */<br/>
+    exit(2);<br/>
 }</p>
 <p> The output help output from this program looks like this: </p>
 <pre><code>

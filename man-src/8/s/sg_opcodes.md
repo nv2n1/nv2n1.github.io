@@ -86,7 +86,7 @@ Opcode=0x93
 Command_name: Write same(16)
 Command supported [conforming to SCSI standard]
 Usage data: 93 e2 00 00 00 00 ff ff ff ff 00 00 ff ff 00 00</code></pre>
-<p> The next example shows the supported task management functions:<br />
+<p> The next example shows the supported task management functions:<br/>
 #&nbsp;<wbr>sg_opcodes &#8211;tmf -n&nbsp;<wbr>/dev/sdb Task Management Functions supported by device: </p>
 <p>&nbsp;<wbr>Abort task </p>
 <p>&nbsp;<wbr>Abort task set </p>
@@ -99,7 +99,7 @@ Usage data: 93 e2 00 00 00 00 ff ff ff ff 00 00 ff ff 00 00</code></pre>
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;dgilbert at interlog dot com&gt;.</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2004-2012 Douglas Gilbert<br />
+<p>Copyright &#169; 2004-2012 Douglas Gilbert<br/>
  This software is distributed under the GPL version 2. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>See Also</h2>
 <p><code>sg_inq(sg3_utils)</code> </p>

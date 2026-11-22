@@ -20,7 +20,7 @@ description: "XvUngrabPort – release port grabbed for video operation"
 <dt><i>time</i></dt>
 <dd>Specifies the request timestamp.</dd></dl>
 <h2>Description</h2>
-<p><code><a href="/docs/linux/man/3-xvungrabport/">XvUngrabPort</a></code>(3)<br />
+<p><code><a href="/docs/linux/man/3-xvungrabport/">XvUngrabPort</a></code>(3)<br/>
 &nbsp;<wbr>releases a grabbed port.&nbsp;<wbr>&nbsp;<wbr>If&nbsp;<wbr><i>time</i>&nbsp;<wbr>specifies a time before the last <code><a href="/docs/linux/man/3-xvgrabport/">XvGrabPort</a></code>(3) was executed, the request is ignored.</p>
 <h2>Return Values</h2>
 <dl COMPACT>

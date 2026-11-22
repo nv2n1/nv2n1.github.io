@@ -10,7 +10,7 @@ description: "XkbGetNames – Obtain symbolic names from the server"
 <p>XkbGetNames &#8211; Obtain symbolic names from the server </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Status XkbGetNames</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>unsigned int </code><i>which</i><code>,</code> <code>XkbDescPtr </code><i>Xkb</i><code>);</code><br />
+<dt> <code>Status XkbGetNames</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>unsigned int </code><i>which</i><code>,</code> <code>XkbDescPtr </code><i>Xkb</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

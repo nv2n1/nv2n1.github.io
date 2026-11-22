@@ -32,7 +32,7 @@ description: "hostnamectl – Control the system hostname"
 <p> <code>icon-name</code> [<i>NAME</i>]</p>
 <dl>
 <dt>
-</dt><dd> If no argument is given, print the icon name of the system. If an optional argument <i>NAME</i> is provided then the command changes the icon name to <i>NAME</i>. The icon name is used by some graphical applications to visualize this host. The icon name should follow the m[blue]<code>Icon Naming Specification</code>m[]<font SIZE="-2">[1]</font>.</dd></dl>
+</dt><dd> If no argument is given, print the icon name of the system. If an optional argument <i>NAME</i> is provided then the command changes the icon name to <i>NAME</i>. The icon name is used by some graphical applications to visualize this host. The icon name should follow the m[blue]<code>Icon Naming Specification</code>m[][1].</dd></dl>
 <p> <code>chassis</code> [<i>TYPE</i>]</p>
 <dl>
 <dt>

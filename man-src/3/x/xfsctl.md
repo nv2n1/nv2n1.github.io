@@ -17,8 +17,8 @@ description: "xfsctl – control XFS filesystems and individual files"
 <h2>Description</h2>
 <dd>Some functionality specific to the XFS filesystem is accessible to applications through platform-specific system call interfaces. These operations can be divided into two sections &#8211; operations that operate on individual files, and operations that operate on the filesystem itself. Care should be taken when issuing <code>xfsctl</code>() calls to ensure the target path and file descriptor (both must be supplied) do indeed represent a file from an XFS filesystem. The <code><a href="/docs/linux/man/2-statfs/">statfs</a></code>(2) and <code><a href="/docs/linux/man/2-fstatfs/">fstatfs</a></code>(2) system calls can be used to determine whether or not an arbitrary path or file descriptor belong to an XFS filesystem. These are not portable however, so the routines <code>platform_test_xfs_fd</code>() and <code>platform_test_xfs_path</code>() provide a platform-independent mechanism.</dd>
 <h3>File Operations</h3>
-<p>In order to effect an operation on an individual file, the pathname and descriptor arguments passed to <code>xfsctl</code> identifies the file being operated on. The final argument described below refers to the final argument of <code>xfsctl</code>. All of the data structures and macros mentioned below are defined in the &lt;<i>xfs/xfs_fs.h</i>&gt; header file. <code>XFS_IOC_ALLOCSP</code><br />
- <code>XFS_IOC_ALLOCSP64</code><br />
+<p>In order to effect an operation on an individual file, the pathname and descriptor arguments passed to <code>xfsctl</code> identifies the file being operated on. The final argument described below refers to the final argument of <code>xfsctl</code>. All of the data structures and macros mentioned below are defined in the &lt;<i>xfs/xfs_fs.h</i>&gt; header file. <code>XFS_IOC_ALLOCSP</code><br/>
+ <code>XFS_IOC_ALLOCSP64</code><br/>
  <code>XFS_IOC_FREESP</code></p>
 <dl>
 <dt><code>XFS_IOC_FREESP64</code></dt>
@@ -32,35 +32,35 @@ description: "xfsctl – control XFS filesystems and individual files"
 <dl>
 <dd>
 </dd><dl>
-<dt><font SIZE="-1">Bit 0 (0x1) &#8211; XFS_XFLAG_REALTIME</font></dt>
+<dt>Bit 0 (0x1) &#8211; XFS_XFLAG_REALTIME</dt>
 <dd>The file is a realtime file.</dd>
-<dt><font SIZE="-1">Bit 1 (0x2) &#8211; XFS_XFLAG_PREALLOC</font></dt>
+<dt>Bit 1 (0x2) &#8211; XFS_XFLAG_PREALLOC</dt>
 <dd>The file has preallocated space.</dd>
-<dt><font SIZE="-1">Bit 3 (0x8) &#8211; XFS_XFLAG_IMMUTABLE</font></dt>
+<dt>Bit 3 (0x8) &#8211; XFS_XFLAG_IMMUTABLE</dt>
 <dd>The file is immutable &#8211; it cannot be modified, deleted or renamed, no link can be created to this file and no data can be written to the file. Only the superuser or a process possessing the CAP_LINUX_IMMUTABLE capability can set or clear this flag.</dd>
-<dt><font SIZE="-1">Bit 4 (0x10) &#8211; XFS_XFLAG_APPEND</font></dt>
+<dt>Bit 4 (0x10) &#8211; XFS_XFLAG_APPEND</dt>
 <dd>The file is append-only &#8211; it can only be open in append mode for writing. Only the superuser or a process possessing the CAP_LINUX_IMMUTABLE capability can set or clear this flag.</dd>
-<dt><font SIZE="-1">Bit 5 (0x20) &#8211; XFS_XFLAG_SYNC</font></dt>
+<dt>Bit 5 (0x20) &#8211; XFS_XFLAG_SYNC</dt>
 <dd>All writes to the file are synchronous.</dd>
-<dt><font SIZE="-1">Bit 6 (0x40) &#8211; XFS_XFLAG_NOATIME</font></dt>
+<dt>Bit 6 (0x40) &#8211; XFS_XFLAG_NOATIME</dt>
 <dd>When the file is accessed, its atime record is not modified.</dd>
-<dt><font SIZE="-1">Bit 7 (0x80) &#8211; XFS_XFLAG_NODUMP</font></dt>
+<dt>Bit 7 (0x80) &#8211; XFS_XFLAG_NODUMP</dt>
 <dd>The file should be skipped by backup utilities.</dd>
-<dt><font SIZE="-1">Bit 8 (0x100) &#8211; XFS_XFLAG_RTINHERIT</font></dt>
+<dt>Bit 8 (0x100) &#8211; XFS_XFLAG_RTINHERIT</dt>
 <dd>Realtime inheritance bit &#8211; new files created in the directory will be automatically realtime, and new directories created in the directory will inherit the inheritance bit.</dd>
-<dt><font SIZE="-1">Bit 9 (0x200) &#8211; XFS_XFLAG_PROJINHERIT</font></dt>
+<dt>Bit 9 (0x200) &#8211; XFS_XFLAG_PROJINHERIT</dt>
 <dd>Project inheritance bit &#8211; new files and directories created in the directory will inherit the parents project ID. New directories also inherit the project inheritance bit.</dd>
-<dt><font SIZE="-1">Bit 10 (0x400) &#8211; XFS_XFLAG_NOSYMLINKS</font></dt>
+<dt>Bit 10 (0x400) &#8211; XFS_XFLAG_NOSYMLINKS</dt>
 <dd>Can only be set on a directory and disallows creation of symbolic links in that directory.</dd>
-<dt><font SIZE="-1">Bit 11 (0x800) &#8211; XFS_XFLAG_EXTSIZE</font></dt>
+<dt>Bit 11 (0x800) &#8211; XFS_XFLAG_EXTSIZE</dt>
 <dd>Extent size bit &#8211; if a basic extent size value is set on the file then the allocator will allocate in multiples of the set size for this file (see <code>XFS_IOC_FSSETXATTR</code> below).</dd>
-<dt><font SIZE="-1">Bit 12 (0x1000) &#8211; XFS_XFLAG_EXTSZINHERIT</font></dt>
+<dt>Bit 12 (0x1000) &#8211; XFS_XFLAG_EXTSZINHERIT</dt>
 <dd>Extent size inheritance bit &#8211; new files and directories created in the directory will inherit the parents basic extent size value (see <code>XFS_IOC_FSSETXATTR</code> below). Can only be set on a directory.</dd>
-<dt><font SIZE="-1">Bit 13 (0x2000) &#8211; XFS_XFLAG_NODEFRAG</font></dt>
+<dt>Bit 13 (0x2000) &#8211; XFS_XFLAG_NODEFRAG</dt>
 <dd>No defragment file bit &#8211; the file should be skipped during a defragmentation operation. When applied to a directory, new files and directories created will inherit the no-defrag bit.</dd>
-<dt><font SIZE="-1">Bit 14 (0x4000) &#8211; XFS_XFLAG_FILESTREAM</font></dt>
+<dt>Bit 14 (0x4000) &#8211; XFS_XFLAG_FILESTREAM</dt>
 <dd>Filestream allocator bit &#8211; allows a directory to reserve an allocation group for exclusive use by files created within that directory. Files being written in other directories will not use the same allocation group and so files within different directories will not interleave extents on disk. The reservation is only active while files are being created and written into the directory.</dd>
-<dt><font SIZE="-1">Bit 31 (0x80000000) &#8211; XFS_XFLAG_HASATTR</font></dt>
+<dt>Bit 31 (0x80000000) &#8211; XFS_XFLAG_HASATTR</dt>
 <dd>The file has extended attributes associated with it.</dd></dl>
 </dl>
 </dl>

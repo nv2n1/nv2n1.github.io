@@ -10,8 +10,8 @@ description: "arm4_dump – dump the ARM 4 database"
 
 <p> arm4_dump &#8211; dump the ARM 4 database</p>
 <h2>SYNOPSIS</h2>
-<p> <code>arm4_dump</code> <i>&#8211;help|-h</i><br />
- <code>arm4_dump</code> <i>&#8211;version|-V</i><br />
+<p> <code>arm4_dump</code> <i>&#8211;help|-h</i><br/>
+ <code>arm4_dump</code> <i>&#8211;version|-V</i><br/>
  <code>arm4_dump</code> [<i>&#8211;config|-C config_file</i>] [<i>&#8211;archive|-a archive_directory</i>]</p>
 <h2>DESCRIPTION</h2>
 <p> The <code>arm4_dump</code> program dumps the <i>ARM 4</i> agent database in a human readable format. It is intended primarily as a debugging tool and not as a user tool.</p>

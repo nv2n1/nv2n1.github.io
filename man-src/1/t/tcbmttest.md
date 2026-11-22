@@ -42,18 +42,18 @@ description: "tcbmttest – test cases of the B+ tree database API"
 <p> Options feature the following. </p>
 <dl>
 <dt>
-</dt><dd> <code>-tl</code> : enable the option `BDBTLARGE&#8217;.<br />
- <code>-td</code> : enable the option `BDBTDEFLATE&#8217;.<br />
- <code>-tb</code> : enable the option `BDBTBZIP&#8217;.<br />
- <code>-tt</code> : enable the option `BDBTTCBS&#8217;.<br />
- <code>-tx</code> : enable the option `BDBTEXCODEC&#8217;.<br />
- <code>-xm </code><i>num</i> : specify the size of the extra mapped memory.<br />
- <code>-df </code><i>num</i> : specify the unit step number of auto defragmentation.<br />
- <code>-nl</code> : enable the option `BDBNOLCK&#8217;.<br />
- <code>-nb</code> : enable the option `BDBLCKNB&#8217;.<br />
- <code>-rnd</code> : select keys at random.<br />
- <code>-wb</code> : use the function `tchdbget3&#8242; instead of `tchdbget&#8217;.<br />
- <code>-nc</code> : omit the comparison test.<br />
+</dt><dd> <code>-tl</code> : enable the option `BDBTLARGE&#8217;.<br/>
+ <code>-td</code> : enable the option `BDBTDEFLATE&#8217;.<br/>
+ <code>-tb</code> : enable the option `BDBTBZIP&#8217;.<br/>
+ <code>-tt</code> : enable the option `BDBTTCBS&#8217;.<br/>
+ <code>-tx</code> : enable the option `BDBTEXCODEC&#8217;.<br/>
+ <code>-xm </code><i>num</i> : specify the size of the extra mapped memory.<br/>
+ <code>-df </code><i>num</i> : specify the unit step number of auto defragmentation.<br/>
+ <code>-nl</code> : enable the option `BDBNOLCK&#8217;.<br/>
+ <code>-nb</code> : enable the option `BDBLCKNB&#8217;.<br/>
+ <code>-rnd</code> : select keys at random.<br/>
+ <code>-wb</code> : use the function `tchdbget3&#8242; instead of `tchdbget&#8217;.<br/>
+ <code>-nc</code> : omit the comparison test.<br/>
  <code>-rr </code><i>num</i> : specify the ratio of reading operation by percentage.
 </dd></dl>
 <p> This command returns 0 on success, another on failure. </p>

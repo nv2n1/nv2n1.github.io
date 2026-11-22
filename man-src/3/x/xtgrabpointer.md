@@ -61,5 +61,5 @@ description: "XtGrabKey, XtUngrabKey, XtGrabKeyboard, XtUngrabKeyboard, XtGrabBu
 <p> <code>XtGrabPointer</code> calls <code>XGrabPointer</code> specifying the widget&#8217;s window as the grab window. The remaining arguments and return value are exactly as for <code>XGrabPointer</code>. If the widget is not realized, <code>XtGrabPointer</code> immediately returns <code>GrabNotViewable</code>. No future ungrab is implied by <code>XtGrabPointer</code>. </p>
 <p> <code>XtUngrabPointer</code> calls <code>XUngrabPointer</code> with the specified time.</p>
 <h2>See Also</h2>
-<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

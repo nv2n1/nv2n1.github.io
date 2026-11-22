@@ -159,7 +159,7 @@ description: "Serd –"
 <p>Sink (callback) for errors. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>handle</i> Handle for user data.<br />
+<dd><i>handle</i> Handle for user data.<br/>
  <i>error</i> Error description.</dd></dl>
 <h3>typedef <code>SerdStatus</code>(* SerdBaseSink)(void *handle, const <code>SerdNode</code> *uri)</h3>
 <p>Sink (callback) for base URI changes. Called whenever the base URI of the serialisation changes.</p>
@@ -286,8 +286,8 @@ description: "Serd –"
 <dd>Length of str in characters (except NULL).</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>str</i> A null-terminated UTF-8 string.<br />
- <i>n_bytes</i> (Output) Set to the size of str in bytes (except NULL).<br />
+<dd><i>str</i> A null-terminated UTF-8 string.<br/>
+ <i>n_bytes</i> (Output) Set to the size of str in bytes (except NULL).<br/>
  <i>flags</i> (Output) Set to the applicable flags.</dd></dl>
 <h3>double serd_strtod (const char *str, char **endptr)</h3>
 <p>Parse a string to a double. The API of this function is identical to the standard C strtod function, except this function is locale-independent and always matches the lexical format used in the Turtle grammar (the decimal point is always &#8216;.&#8217;).</p>
@@ -295,8 +295,8 @@ description: "Serd –"
 <p>Decode a base64 string. This function can be used to deserialise a blob node created with <code>serd_node_new_blob()</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>str</i> Base64 string to decode.<br />
- <i>len</i> The length of str.<br />
+<dd><i>str</i> Base64 string to decode.<br/>
+ <i>len</i> The length of str.<br/>
  <i>size</i> Set to the size of the returned blob in bytes.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -307,7 +307,7 @@ description: "Serd –"
 <p>Get the unescaped path and hostname from a file URI. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>uri</i> A file URI.<br />
+<dd><i>uri</i> A file URI.<br/>
  <i>hostname</i> If non-NULL, set to the hostname, if present.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -343,15 +343,15 @@ description: "Serd –"
 <p>Create a new node by serialising uri into a new string. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>uri</i> The URI to parse and serialise.<br />
- <i>base</i> Base URI to resolve uri against (or NULL for no resolution).<br />
+<dd><i>uri</i> The URI to parse and serialise.<br/>
+ <i>base</i> Base URI to resolve uri against (or NULL for no resolution).<br/>
  <i>out</i> Set to the parsing of the new URI (i.e. points only to memory owned by the new returned node).</dd></dl>
 <h3><code>SerdNode</code> serd_node_new_decimal (doubled, unsignedfrac_digits)</h3>
 <p>Create a new node by serialising d into an xsd:decimal string. The resulting node will always contain a `.&#8217;, start with a digit, and end with a digit (i.e. will have a leading and/or trailing `0&#8242; if necessary). It will never be in scientific notation. A maximum of frac_digits digits will be written after the decimal point, but trailing zeros will automatically be omitted (except one if d is a round integer). </p>
 <p> Note that about 16 and 8 fractional digits are required to precisely represent a double and float, respectively. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>d</i> The value for the new node.<br />
+<dd><i>d</i> The value for the new node.<br/>
  <i>frac_digits</i> The maximum number of digits after the decimal place.</dd></dl>
 <h3><code>SerdNode</code> serd_node_new_integer (int64_ti)</h3>
 <p>Create a new node by serialising i into an xsd:integer string.</p>
@@ -359,8 +359,8 @@ description: "Serd –"
 <p>Create a node by serialising buf into an xsd:base64Binary string. This function can be used to make a serialisable node out of arbitrary binary data, which can be decoded using <code>serd_base64_decode()</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>buf</i> Raw binary input data.<br />
- <i>size</i> Size of buf.<br />
+<dd><i>buf</i> Raw binary input data.<br/>
+ <i>size</i> Size of buf.<br/>
  <i>wrap_lines</i> Wrap lines at 76 characters to conform to RFC 2045.</dd></dl>
 <h3>void serd_node_free (<code>SerdNode</code> *node)</h3>
 <p>Free any data owned by node. Note that if node is itself dynamically allocated (which is not the case for nodes created internally by serd), it will not be freed.</p>

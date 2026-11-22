@@ -11,37 +11,37 @@ description: "ipmiutil – a meta-command to invoke various IPMI functions."
 <h2>Synopsis</h2>
 <p><code>ipmiutil &lt;command&gt; [-x -NUPREFJTVY] [other command options]</code> </p>
 <h2>Description</h2>
-<p>This utility performs various IPMI functions. Each of the individual commands in the ipmiutil project can be invoked via this meta-command. The &lt;command&gt; is one of the following:<br />
-alarms&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>show/set the front panel alarm LEDs and relays<br />
-leds&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>show/set the front panel alarm LEDs and relays<br />
-cmd&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>send a specified raw IPMI command to the BMC<br />
-config&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>list/save/restore BMC configuration parameters<br />
-dcmi&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>get/set DCMI parameters<br />
-discover&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>discover all IPMI servers on this LAN<br />
-ekanalyzer&nbsp;<wbr>&nbsp;<wbr>run FRU-EKeying analyzer on FRU files&nbsp;<wbr>(deprecated, see fru)<br />
-events&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>decode IPMI events and display them<br />
-firewall show/set firmware firewall functions<br />
-fru&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>show decoded FRU inventory data, write asset tag<br />
-fwum&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>OEM firmware update manager extensions<br />
-getevt&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>get IPMI events and display them, event daemon<br />
-getevent get IPMI events and display them, event daemon<br />
-health&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>check and show the basic health of the IPMI BMC<br />
-hpm&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>HPM firmware update manager extensions<br />
-lan&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>show/set IPMI LAN parameters and PEF table<br />
-picmg&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>show/set picmg extended functions<br />
-reset&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>cause the BMC to reset or power down the system<br />
-sel&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>show/clear firmware System Event Log records<br />
-sensor&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>show Sensor Data Records, readings, thresholds<br />
-serial&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>show/set IPMI Serial&nbsp;<wbr>&amp;&nbsp;<wbr>Terminal Mode parameters<br />
-sol&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>start/stop an SOL console session<br />
-smcoem&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>SuperMicro OEM functions<br />
-sunoem&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Sun OEM functions<br />
-delloem&nbsp;<wbr>&nbsp;<wbr>Dell OEM functions<br />
-tsol&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Tyan SOL console start/stop session<br />
-wdt&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>show/set/reset the watchdog timer<br />
- For help on each command (e.g. &#8216;sel&#8217;), enter:<br />
-ipmiutil sel -?<br />
- For man pages on each command, its man page is named &quot;i&lt;command&gt;&quot;, or refer to SEE ALSO below.<br />
+<p>This utility performs various IPMI functions. Each of the individual commands in the ipmiutil project can be invoked via this meta-command. The &lt;command&gt; is one of the following:<br/>
+alarms&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>show/set the front panel alarm LEDs and relays<br/>
+leds&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>show/set the front panel alarm LEDs and relays<br/>
+cmd&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>send a specified raw IPMI command to the BMC<br/>
+config&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>list/save/restore BMC configuration parameters<br/>
+dcmi&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>get/set DCMI parameters<br/>
+discover&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>discover all IPMI servers on this LAN<br/>
+ekanalyzer&nbsp;<wbr>&nbsp;<wbr>run FRU-EKeying analyzer on FRU files&nbsp;<wbr>(deprecated, see fru)<br/>
+events&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>decode IPMI events and display them<br/>
+firewall show/set firmware firewall functions<br/>
+fru&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>show decoded FRU inventory data, write asset tag<br/>
+fwum&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>OEM firmware update manager extensions<br/>
+getevt&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>get IPMI events and display them, event daemon<br/>
+getevent get IPMI events and display them, event daemon<br/>
+health&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>check and show the basic health of the IPMI BMC<br/>
+hpm&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>HPM firmware update manager extensions<br/>
+lan&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>show/set IPMI LAN parameters and PEF table<br/>
+picmg&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>show/set picmg extended functions<br/>
+reset&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>cause the BMC to reset or power down the system<br/>
+sel&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>show/clear firmware System Event Log records<br/>
+sensor&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>show Sensor Data Records, readings, thresholds<br/>
+serial&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>show/set IPMI Serial&nbsp;<wbr>&amp;&nbsp;<wbr>Terminal Mode parameters<br/>
+sol&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>start/stop an SOL console session<br/>
+smcoem&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>SuperMicro OEM functions<br/>
+sunoem&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Sun OEM functions<br/>
+delloem&nbsp;<wbr>&nbsp;<wbr>Dell OEM functions<br/>
+tsol&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Tyan SOL console start/stop session<br/>
+wdt&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>show/set/reset the watchdog timer<br/>
+ For help on each command (e.g. &#8216;sel&#8217;), enter:<br/>
+ipmiutil sel -?<br/>
+ For man pages on each command, its man page is named &quot;i&lt;command&gt;&quot;, or refer to SEE ALSO below.<br/>
  This utility can use either the /dev/ipmi0 driver from OpenIPMI, the /dev/imb driver from Intel, the /dev/ipmikcs driver from valinux, direct user-space IOs, or the IPMI LAN interface if -N is used. </p>
 <h2>Options</h2>
 <p>Command options are described in the man page for each command. Below are a few of the common options.</p>
@@ -68,8 +68,8 @@ ipmiutil sel -?<br />
 <dd>Yes, do prompt the user for the IPMI LAN remote password. Alternatives for the password are -E or -P. </dd>
 </dl>
 <h2>Examples</h2>
-<p>ipmiutil sel<br />
- Shows the IPMI System Event Log entries. ipmiutil wdt<br />
+<p>ipmiutil sel<br/>
+ Shows the IPMI System Event Log entries. ipmiutil wdt<br/>
  Shows the watchdog timer values. </p>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/8-ialarms/">ialarms</a>(8) <a href="/docs/linux/man/8-iconfig/">iconfig</a>(8) <a href="/docs/linux/man/8-icmd/">icmd</a>(8) <a href="/docs/linux/man/8-idiscover/">idiscover</a>(8) <a href="/docs/linux/man/8-ievents/">ievents</a>(8) <a href="/docs/linux/man/8-ifirewall/">ifirewall</a>(8) <a href="/docs/linux/man/8-ifru/">ifru</a>(8) ifruset(8) <a href="/docs/linux/man/8-ifwum/">ifwum</a>(8) <a href="/docs/linux/man/8-igetevent/">igetevent</a>(8) <a href="/docs/linux/man/8-ihealth/">ihealth</a>(8) <a href="/docs/linux/man/8-ihpm/">ihpm</a>(8) <a href="/docs/linux/man/8-ilan/">ilan</a>(8) <a href="/docs/linux/man/8-ipicmg/">ipicmg</a>(8) <a href="/docs/linux/man/8-ireset/">ireset</a>(8) <a href="/docs/linux/man/8-isel/">isel</a>(8) <a href="/docs/linux/man/8-isensor/">isensor</a>(8) <a href="/docs/linux/man/8-iserial/">iserial</a>(8) <a href="/docs/linux/man/8-isol/">isol</a>(8) <a href="/docs/linux/man/8-isunoem/">isunoem</a>(8) <a href="/docs/linux/man/8-iwdt/">iwdt</a>(8) <a href="/docs/linux/man/8-ipmiutil/">ipmiutil</a>(8) <a href="/docs/linux/man/8-ipmi_port/">ipmi_port</a>(8) </p>

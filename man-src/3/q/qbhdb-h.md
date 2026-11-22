@@ -18,14 +18,14 @@ description: "qbhdb.h –"
 <h3>Data Structures</h3>
 <p>struct qb_hdb_handle</p>
 <p>struct qb_hdb</p>
-<p>Macros<br />
+<p>Macros<br/>
 #define _GNU_SOURCE</p>
 <p>#define QB_HDB_D_FORMAT   &#8216;%&#8217; PRIu64</p>
 <p>#define QB_HDB_X_FORMAT   &#8216;%&#8217; PRIx64</p>
 <p>#define QB_HDB_DECLARE(database_name, destructor_function)</p>
 <p>Convience macro for declaring a file scoped handle database.</p>
-<p>Typedefs<br />
- typedef uint64_t <code>qb_handle_t</code><br />
+<p>Typedefs<br/>
+ typedef uint64_t <code>qb_handle_t</code><br/>
  <i>Generic handle type is 64 bits. </i></p>
 <h3>Functions</h3>
 <pre><code>void qb_hdb_create (struct qb_hdb *hdb)
@@ -82,8 +82,8 @@ uint64_t qb_hdb_nocheck_convert (uint32_t handle)</code></pre>
 <p>Create a new handle. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>hdb</i> the database instance<br />
- <i>instance_size</i> size of the object to malloc<br />
+<dd><i>hdb</i> the database instance<br/>
+ <i>instance_size</i> size of the object to malloc<br/>
  <i>handle_id_out</i> new handle</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -92,7 +92,7 @@ uint64_t qb_hdb_nocheck_convert (uint32_t handle)</code></pre>
 <p>Request the destruction of the object. When the refcount is 0, it will be destroyed. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>handle_in</i> the handle<br />
+<dd><i>handle_in</i> the handle<br/>
  <i>hdb</i> the database instance</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -101,8 +101,8 @@ uint64_t qb_hdb_nocheck_convert (uint32_t handle)</code></pre>
 <p>Get the instance associated with this handle and increase it&#8217;s refcount. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>handle_in</i> the handle<br />
- <i>hdb</i> the database instance<br />
+<dd><i>handle_in</i> the handle<br/>
+ <i>hdb</i> the database instance<br/>
  <i>instance</i> (out) pointer to the desired object.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -111,8 +111,8 @@ uint64_t qb_hdb_nocheck_convert (uint32_t handle)</code></pre>
 <p>Get the instance associated with this handle and increase it&#8217;s refcount. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>handle_in</i> the handle<br />
- <i>hdb</i> the database instance<br />
+<dd><i>handle_in</i> the handle<br/>
+ <i>hdb</i> the database instance<br/>
  <i>instance</i> (out) pointer to the desired object.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -121,7 +121,7 @@ uint64_t qb_hdb_nocheck_convert (uint32_t handle)</code></pre>
 <p>Put the instance associated with this handle and decrease it&#8217;s refcount. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>handle_in</i> the handle<br />
+<dd><i>handle_in</i> the handle<br/>
  <i>hdb</i> the database instance</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -130,7 +130,7 @@ uint64_t qb_hdb_nocheck_convert (uint32_t handle)</code></pre>
 <p>Get the current refcount. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>handle_in</i> the handle<br />
+<dd><i>handle_in</i> the handle<br/>
  <i>hdb</i> the database instance</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -139,8 +139,8 @@ uint64_t qb_hdb_nocheck_convert (uint32_t handle)</code></pre>
 <p>Get the next object and increament it&#8217;s refcount. Remember to call <code>qb_hdb_handle_put()</code> </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>hdb</i> the database instance<br />
- <i>handle</i> (out) the handle<br />
+<dd><i>hdb</i> the database instance<br/>
+ <i>handle</i> (out) the handle<br/>
  <i>instance</i> (out) pointer to the desired object.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

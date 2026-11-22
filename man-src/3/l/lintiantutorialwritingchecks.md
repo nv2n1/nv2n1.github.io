@@ -136,7 +136,7 @@ Lintian::Tutorial::WritingChecks -- Writing checks for Lintian
  # a file and contained within the package root.
  } else {
  # not a file or an unsafe path
- }</pre><h3>Keeping Needs-Info up to date</h3>Keeping the ``Needs-Info'' field of your <i>.desc</i> file is a bit of manual work. In the <font SIZE="-1">API</font> description for the method there will generally be a line looking something like: 
+ }</pre><h3>Keeping Needs-Info up to date</h3>Keeping the ``Needs-Info'' field of your <i>.desc</i> file is a bit of manual work. In the API description for the method there will generally be a line looking something like: 
 
  <pre> Needs-Info requirements for using methodx: Y</pre>Which means that the methodx requires Y to work. Here Y is a comma separated list and each element of Y basically falls into 3 cases.
 <dl COMPACT><dt>&bull;
@@ -151,11 +151,11 @@ Lintian::Tutorial::WritingChecks -- Writing checks for Lintian
  In this case, the method needs the given collection to be run. So to use (e.g.) control_index, you have to put ``bin-pkg-control'' in your Needs-Info.</dd></dl>
  
 
- <font SIZE="-1">CAVEAT:</font> Methods can have different requirements based on the type of package! An example of this ``changelog'', which requires ``changelog-file'' in binary packages and ``Same as debfiles'' in source packages.
+ CAVEAT: Methods can have different requirements based on the type of package! An example of this ``changelog'', which requires ``changelog-file'' in binary packages and ``Same as debfiles'' in source packages.
 <h3>Avoiding security issues</h3>Over the years a couple of security issues have been discovered in Lintian. The problem is that people can in theory create some really nasty packages. Please keep the following in mind when writing a check:
 <dl COMPACT><dt>&bull;
 </dt><dd>Avoid 2-arg open, system/exec($shellcmd), `$shellcmd` like the plague. 
- When you get any one of those wrong you introduce ``arbitrary code execution'' vulnerabilities (we learned this the hard way via <font SIZE="-1">CVE-2009-4014</font>). 
+ When you get any one of those wrong you introduce ``arbitrary code execution'' vulnerabilities (we learned this the hard way via CVE-2009-4014). 
  Usually 3-arg open and the non-shell variant of system/exec are enough. When you actually need a shell pipeline, consider using Lintian::Command. It also provides a <i>safe_qx</i> command to assist with capturing stdout as an alternative to `$cmd` (or qx/$cmd/).
 </dd><dt>&bull;
 </dt><dd>Do not trust field values. 

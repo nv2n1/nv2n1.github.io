@@ -10,7 +10,7 @@ description: "zgeequb.f –"
 <p>zgeequb.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zgeequb</code> (M, N, A, LDA, R, C, ROWCND, COLCND, AMAX, INFO)<br />
+<p>subroutine <code>zgeequb</code> (M, N, A, LDA, R, C, ROWCND, COLCND, AMAX, INFO)<br/>
  <i></i><code>ZGEEQUB</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zgeequb (integerM, integerN, complex*16, dimension( lda, * )A, integerLDA, double precision, dimension( * )R, double precision, dimension( * )C, double precisionROWCND, double precisionCOLCND, double precisionAMAX, integerINFO)</h3>

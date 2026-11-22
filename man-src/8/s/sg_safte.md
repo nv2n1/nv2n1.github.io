@@ -44,8 +44,8 @@ description: "sg_safte – access SCSI Accessed Fault-Tolerant Enclosure (SAF-TE
 <p> As the specification was never finalized this document serves as the de-facto standard. </p>
 <p> Similar functionality is provided by SPC-4 SCSI Enclosure Services devices (Peripheral device type 0xd), which can be queried with the sg_ses utility.</p>
 <h2>Examples</h2>
-<p>To view the configuration:<br />
-sg_safte&nbsp;<wbr>/dev/sg1 To view the device slot status:<br />
+<p>To view the configuration:<br/>
+sg_safte&nbsp;<wbr>/dev/sg1 To view the device slot status:<br/>
 sg_safte &#8211;devstatus&nbsp;<wbr>/dev/sg1 </p>
 <h2>Exit Status</h2>
 <p>The exit status of sg_safte is 0 when it is successful. Otherwise see the <a href="/docs/linux/man/8-sg3_utils/">sg3_utils</a>(8) man page.</p>
@@ -54,7 +54,7 @@ sg_safte &#8211;devstatus&nbsp;<wbr>/dev/sg1 </p>
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;dgilbert at interlog dot com&gt;.</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2004-2012 Hannes Reinecke and Douglas Gilbert<br />
+<p>Copyright &#169; 2004-2012 Hannes Reinecke and Douglas Gilbert<br/>
  This software is distributed under a FreeBSD license. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>See Also</h2>
 <p><code>sg_inq, sg_ses (in sg3_utils package); safte-monitor (internet)</code> </p>

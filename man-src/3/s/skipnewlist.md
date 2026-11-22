@@ -14,12 +14,12 @@ description: "skipNewList – create a skip list."
 <pre>NEOERR *skipNewList(skipList *skip, int threaded, int root, int maxLevel,
  int flushLimit, skipFreeValue freeValue, void *ctx);</pre>
 <h2>Arguments</h2>
-<p>threaded &#8211; true if list should be thread-safe.<br />
- root &#8211; performance parameter (see above).<br />
- maxLevel &#8211; performance parameter (see above).<br />
- flushLimit &#8211; max deleted items to keep cached before<br />
- forcing a flush.<br />
- freeValue &#8211; callback made whenever a value is flushed.<br />
+<p>threaded &#8211; true if list should be thread-safe.<br/>
+ root &#8211; performance parameter (see above).<br/>
+ maxLevel &#8211; performance parameter (see above).<br/>
+ flushLimit &#8211; max deleted items to keep cached before<br/>
+ forcing a flush.<br/>
+ freeValue &#8211; callback made whenever a value is flushed.<br/>
  ctx &#8211; context to pass to &lt;freeValue&gt;.</p>
 <h2>Description</h2>
 <p>Returns a new skip list. If &lt;threaded&gt; is true, list is multi-thread safe. &lt;root&gt; and &lt;maxLevel&gt; determine performance and expected size (see discussion above). &lt;flushLimit&gt; is for threaded lists and determines the maximum number of deleted items to keep cached during concurrent searches. Once the limit is reached, new concurrent reads are blocked until all deleted items are flushed. MT-Level: Safe. </p>

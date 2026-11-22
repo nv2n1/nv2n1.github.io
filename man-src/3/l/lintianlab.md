@@ -23,8 +23,8 @@ Lintian::Lab -- Interface to the Lintian Lab
  };
  $lab-&gt;visit_packages ($visitor, 'source');
  $lab-&gt;close;</pre><h2>Description</h2>This module provides an abstraction from ``How and where'' packages are placed. It handles creation and deletion of the Lintian Lab itself as well as providing access to the entries.
-<h2>Class Methods</h2><dl COMPACT><dt>new ([<font SIZE="-1">DIR</font>])
-</dt><dd>Creates a new Lab instance. If <font SIZE="-1">DIR</font> is defined it will be used as the path to the lab and the lab will be in static mode. Otherwise the lab will be in temporary mode and will point to a temporary directory.</dd></dl><h2>Instance Methods</h2><dl COMPACT><dt>dir
+<h2>Class Methods</h2><dl COMPACT><dt>new ([DIR])
+</dt><dd>Creates a new Lab instance. If DIR is defined it will be used as the path to the lab and the lab will be in static mode. Otherwise the lab will be in temporary mode and will point to a temporary directory.</dd></dl><h2>Instance Methods</h2><dl COMPACT><dt>dir
 </dt><dd>Returns the absolute path to the base of the lab. 
  Note: This may return the empty string if either the lab has been deleted or this is a temporary lab that has not been created yet. In the latter case, ``create'' or ``open'' should be run to get a non-empty value from this method.
 </dd><dt>is_open
@@ -33,15 +33,15 @@ Lintian::Lab -- Interface to the Lintian Lab
 </dd><dt>exists
 </dt><dd>Returns a truth value if the instance points to an existing lab. 
  Note: This never implies that the lab is open. Though it may imply the lab is closed (see ``is_open'').
-</dd><dt>get_package (<font SIZE="-1">NAME,</font> TYPE[, <font SIZE="-1">EXTRA</font>]), get_package (<font SIZE="-1">PROC</font>)
+</dd><dt>get_package (NAME, TYPE[, EXTRA]), get_package (PROC)
 </dt><dd>Fetches an existing package from the lab. 
  The first argument can be a processable. In that case all other arguments are ignored. 
- If the first calling convention is used then this method will search for an existing package. The <font SIZE="-1">EXTRA</font> argument can be used to narrow the search or even to add a new entry. 
- <font SIZE="-1">EXTRA</font> consists of (in order):
+ If the first calling convention is used then this method will search for an existing package. The EXTRA argument can be used to narrow the search or even to add a new entry. 
+ EXTRA consists of (in order):
 </dd><dl COMPACT><dd></dd><dl COMPACT><dt>&bull;
 </dt><dd>version
 </dd><dt>&bull;
-</dt><dd>arch (ignored if <font SIZE="-1">TYPE</font> is ``source'')</dd></dl></dl><dl COMPACT><dd>If version or arch is omitted (or if it is undef) then that search parameter is consider a wildcard for ``any''. Example: 
+</dt><dd>arch (ignored if TYPE is ``source'')</dd></dl></dl><dl COMPACT><dd>If version or arch is omitted (or if it is undef) then that search parameter is consider a wildcard for ``any''. Example: 
  <pre> # Returns all eclipse-platform packages with architecture i386 regardless
  # of their version (if any)
  @ps = $lab-&gt;get_package ('eclipse-platform', 'binary', undef, 'i386');
@@ -51,24 +51,24 @@ Lintian::Lab -- Interface to the Lintian Lab
  # Return the eclipse-platform package with version 3.5.2-11 and architecture
  # i386 (or undef)
  $pkg = $lab-&gt;get_package ('eclipse-platform', 'binary', '3.5.2-11', 'i386');</pre>In list context, this returns a list of matches. In scalar context this returns the first match (if any). Note there is no guaranteed order (e.g. the returned list is not ordered). 
- If the second calling convention is used, then this method will search for an entry matching the processable passed. If such an entry does not exists, a new ``non-existing'' entry will be returned. This entry can be created by using the create method on the entry.</dd></dl><dt>lab_query (<font SIZE="-1">QUERY</font>)
-</dt><dd>Process a given <font SIZE="-1">QUERY</font> and return the results from it. A <font SIZE="-1">QUERY</font> is a string of the format: 
+ If the second calling convention is used, then this method will search for an entry matching the processable passed. If such an entry does not exists, a new ``non-existing'' entry will be returned. This entry can be created by using the create method on the entry.</dd></dl><dt>lab_query (QUERY)
+</dt><dd>Process a given QUERY and return the results from it. A QUERY is a string of the format: 
 
- <pre> [TYPE:]NAME[/VERSION[/ARCH]]</pre><font SIZE="-1">TYPE</font> can be one of the regular package type (e.g. ``binary'') or one of the two special values ``<font SIZE="-1">ALL''</font> (default if omitted) or ``<font SIZE="-1">GROUP''.</font> If <font SIZE="-1">TYPE</font> is <font SIZE="-1">ALL,</font> then the query is one once for each of package type. 
+ <pre> [TYPE:]NAME[/VERSION[/ARCH]]</pre>TYPE can be one of the regular package type (e.g. ``binary'') or one of the two special values ``ALL'' (default if omitted) or ``GROUP''. If TYPE is ALL, then the query is one once for each of package type. 
 
- <font SIZE="-1">NAME</font> is the name of the package to request. For <font SIZE="-1">GROUP</font> queries, this is the name of the source package. It is not possible to do any kind of wildcards in <font SIZE="-1">NAME:</font> 
+ NAME is the name of the package to request. For GROUP queries, this is the name of the source package. It is not possible to do any kind of wildcards in NAME: 
 
- <font SIZE="-1">VERSION</font> is the version of the package. For <font SIZE="-1">GROUP</font> queries, this is the version of the source package. If omitted or the string '_', then any version will match. 
+ VERSION is the version of the package. For GROUP queries, this is the version of the source package. If omitted or the string '_', then any version will match. 
 
- <font SIZE="-1">ARCH</font> is the architecture of the package. For <font SIZE="-1">GROUP</font> and ``source'' queries, <font SIZE="-1">ARCH</font> is ignored (if given). If <font SIZE="-1">ARCH</font> is omitted or the string '_', then any package architecture will match. <font SIZE="-1">NB:</font> The <font SIZE="-1">ARCH</font> field should match the architecture field of the entry (which for <i>.changes</i> files usually contains spaces). 
+ ARCH is the architecture of the package. For GROUP and ``source'' queries, ARCH is ignored (if given). If ARCH is omitted or the string '_', then any package architecture will match. NB: The ARCH field should match the architecture field of the entry (which for <i>.changes</i> files usually contains spaces). 
 
  lab_query will return a list of entries matching the query. If no entries match, an empty list will be returned.
-</dd><dt>visit_packages (VISITOR[, <font SIZE="-1">TYPE</font>])
-</dt><dd>Passes each lab entry to <font SIZE="-1">VISITOR.</font> If <font SIZE="-1">TYPE</font> is passed, then only entries of that type are passed. 
+</dd><dt>visit_packages (VISITOR[, TYPE])
+</dt><dd>Passes each lab entry to VISITOR. If TYPE is passed, then only entries of that type are passed. 
 
- <font SIZE="-1">VISITOR</font> is given a reference to the entry, the package name, the package version and the package architecture (may be undef for source packages).
-</dd><dt>generate_diffs (<font SIZE="-1">LIST</font>)
-</dt><dd>Each member of <font SIZE="-1">LIST</font> must be a Lintian::Lab::Manifest. 
+ VISITOR is given a reference to the entry, the package name, the package version and the package architecture (may be undef for source packages).
+</dd><dt>generate_diffs (LIST)
+</dt><dd>Each member of LIST must be a Lintian::Lab::Manifest. 
 
  The lab will generate a diff between the given member and its state for the given package type. 
 
@@ -81,12 +81,12 @@ Lintian::Lab -- Interface to the Lintian Lab
  The method may croak if it is unable to do a full check of the lab or if it is unable to write the corrected metadata. 
 
  Note: This may (and generally will) correct ``broken'' entries by removing them.
-</dd><dt>create ([<font SIZE="-1">OPTS</font>])
+</dd><dt>create ([OPTS])
 </dt><dd>Creates a new lab. It will create ``dir'' if it does not exist. It will also create a basic empty lab. If this is a temporary lab, this method will also setup the temporary dir for the lab. 
 
  The lab will <i>not</i> be opened by this method. This should be done afterwards by invoking the ``open'' method. 
 
- <font SIZE="-1">OPTS</font> (if present) is a hashref containing options. The following options are accepted:
+ OPTS (if present) is a hashref containing options. The following options are accepted:
 </dd><dl COMPACT><dd></dd><dl COMPACT><dt>keep-lab
 </dt><dd>If ``keep-lab'' points to a truth value the temporary directory will <i>not</i> be removed by closing the lab (nor exiting the application). However, explicitly calling ``remove'' will remove the lab.
 </dd><dt>mode

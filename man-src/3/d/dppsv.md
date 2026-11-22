@@ -11,7 +11,7 @@ description: "dppsv.f –"
 <p> dppsv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dppsv</code> (UPLO, N, NRHS, AP, B, LDB, INFO)<br />
+<p> subroutine <code>dppsv</code> (UPLO, N, NRHS, AP, B, LDB, INFO)<br/>
  <i></i><code> DPPSV computes the solution to system of linear equations A * X = B for OTHER matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dppsv (characterUPLO, integerN, integerNRHS, double precision, dimension( * )AP, double precision, dimension( ldb, * )B, integerLDB, integerINFO)</h3>

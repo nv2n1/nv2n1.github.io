@@ -14,7 +14,7 @@ description: "stoppedrules – The Shorewall file that governs what traffic flow
 <h2>Description</h2>
 <dd>This file is used to define the hosts that are accessible when the firewall is stopped or is being stopped.</dd>
 <dl>
-<dd><font SIZE="+1"> <code>Warning</code> </font><br />
+<dd> <code>Warning</code> <br/>
  Changes to this file do not take effect until after the next <code>shorewall6 start</code>, <code>shorewall6 reload</code>, <code>shorewall6 restart</code>, or <code>shorewall6 compile</code> command.  The columns in the file are as follows (where the column name is followed by a different name in parentheses, the different name is used in the alternate specification syntax). <code>ACTION</code> &#8211; <code>ACCEPT|NOTRACK</code></dd>
 <dl>
 <dd>Determines the disposition of the packet. <code>ACCEPT</code> means that the packet will be accepted. <code>NOTRACK</code> indicates that no conntrack entry should be created for the packet. <code>NOTRACK</code> does not imply <code>ACCEPT</code>. <code>DROP</code> was added in Shorewall 4.6.0 and causes the packet to be dropped in the raw table&#8217;s PREROUTING chain.</dd></dl>
@@ -36,8 +36,8 @@ description: "stoppedrules – The Shorewall file that governs what traffic flow
 <h2>Files</h2>
 <p>/etc/shorewall6/stoppedrules</p>
 <h2>See Also</h2>
-<p>m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/starting_and_stopping_shorewall.htm">http://www.shorewall.net/starting_and_stopping_shorewall.htm</a></code>m[]<font SIZE="-2">[1]</font> </p>
-<p> m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/configuration_file_basics.htm#Pairs">http://www.shorewall.net/configuration_file_basics.htm#Pairs</a></code>m[]<font SIZE="-2">[2]</font> </p>
+<p>m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/starting_and_stopping_shorewall.htm">http://www.shorewall.net/starting_and_stopping_shorewall.htm</a></code>m[][1] </p>
+<p> m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/configuration_file_basics.htm#Pairs">http://www.shorewall.net/configuration_file_basics.htm#Pairs</a></code>m[][2] </p>
 <p> <a href="/docs/linux/man/8-shorewall/">shorewall</a>(8), <a href="/docs/linux/man/5-shorewall-accounting/">shorewall-accounting</a>(5), <a href="/docs/linux/man/5-shorewall-actions/">shorewall-actions</a>(5), <a href="/docs/linux/man/5-shorewall-blacklist/">shorewall-blacklist</a>(5), <a href="/docs/linux/man/5-shorewall-hosts/">shorewall-hosts</a>(5), shorewall_interfaces(5), <a href="/docs/linux/man/5-shorewall-ipsets/">shorewall-ipsets</a>(5), <a href="/docs/linux/man/5-shorewall-maclist/">shorewall-maclist</a>(5), <a href="/docs/linux/man/5-shorewall-masq/">shorewall-masq</a>(5), <a href="/docs/linux/man/5-shorewall-nat/">shorewall-nat</a>(5), <a href="/docs/linux/man/5-shorewall-netmap/">shorewall-netmap</a>(5), <a href="/docs/linux/man/5-shorewall-params/">shorewall-params</a>(5), <a href="/docs/linux/man/5-shorewall-policy/">shorewall-policy</a>(5), <a href="/docs/linux/man/5-shorewall-providers/">shorewall-providers</a>(5), <a href="/docs/linux/man/5-shorewall-proxyarp/">shorewall-proxyarp</a>(5), <a href="/docs/linux/man/5-shorewall-rtrules/">shorewall-rtrules</a>(5), <a href="/docs/linux/man/5-shorewall-rules/">shorewall-rules</a>(5), <a href="/docs/linux/man/5-shorewall-conf/">shorewall.conf</a>(5), <a href="/docs/linux/man/5-shorewall-secmarks/">shorewall-secmarks</a>(5), <a href="/docs/linux/man/5-shorewall-tcclasses/">shorewall-tcclasses</a>(5), <a href="/docs/linux/man/5-shorewall-tcdevices/">shorewall-tcdevices</a>(5), <a href="/docs/linux/man/5-shorewall-tcrules/">shorewall-tcrules</a>(5), <a href="/docs/linux/man/5-shorewall-tos/">shorewall-tos</a>(5), <a href="/docs/linux/man/5-shorewall-tunnels/">shorewall-tunnels</a>(5), <a href="/docs/linux/man/5-shorewall-zones/">shorewall-zones</a>(5)</p>
 <h2>Notes</h2>
 <dl>

@@ -46,13 +46,13 @@ create, connect, disconnect, destroy
 </pre>
 </dd></dl>
 <h2>OPTIONS</h2>
-<p> <code>&#8211;help</code><br />
+<p> <code>&#8211;help</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Print usage statement </p>
-<p> <code>-f</code>, <code>&#8211;filter</code>=[]<br />
+<p> <code>-f</code>, <code>&#8211;filter</code>=[]<br/>
 Provide filter values&nbsp;<wbr>(i.e.,&nbsp;<wbr>&#8216;event=stop&#8217;) </p>
-<p> <code>&#8211;since</code>=&quot;&quot;<br />
+<p> <code>&#8211;since</code>=&quot;&quot;<br/>
 Show all events created since timestamp </p>
-<p> <code>&#8211;until</code>=&quot;&quot;<br />
+<p> <code>&#8211;until</code>=&quot;&quot;<br/>
 Stream events until this timestamp </p>
 <p> The &#8211;since and &#8211;until parameters can be Unix timestamps, date formatted timestamps, or Go duration strings (e.g. 10m, 1h30m) computed relative to the client machine&#8217;s time. If you do not provide the &#8211;since option, the command returns only new and/or live events. Supported formats for date formatted time stamps include RFC3339Nano, RFC3339, 2006-01-02T15:04:05, 2006-01-02T15:04:05.999999999, 2006-01-02Z07:00, and 2006-01-02. The local timezone on the client will be used if you do not provide either a Z or a +-00:00 timezone offset at the end of the timestamp. When providing Unix timestamps enter seconds[.nanoseconds], where seconds is the number of seconds that have elapsed since January 1, 1970 (midnight UTC/GMT), not counting leap seconds (aka Unix epoch or Unix time), and the optional .nanoseconds field is a fraction of a second no more than nine digits long. </p>
 <h2>EXAMPLES</h2>

@@ -89,4 +89,4 @@ cfgmaint - configuration tool for Visual Builder
 
 <h2>SEE ALSO</h2>
 
- <font SIZE="-1">VB</font>, Prima::VB::CfgMaint
+ VB, Prima::VB::CfgMaint

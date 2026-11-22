@@ -11,7 +11,7 @@ description: "arm_report_transaction – report transaction statistics"
 <p> arm_report_transaction &#8211; report transaction statistics</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/arm4.h">arm4.h</a>&gt;</code> </p>
-<p> <code>arm_error_t<br />
+<p> <code>arm_error_t<br/>
  arm_report_transaction( </p>
 <p>&nbsp;<wbr>const arm_app_start_handle_t&nbsp;<wbr></code><i>app_handle</i><code>,&nbsp;<wbr> </p>
 <p>&nbsp;<wbr>const arm_id_t&nbsp;<wbr>*</code><i>tran_id</i><code>,&nbsp;<wbr> </p>
@@ -23,7 +23,7 @@ description: "arm_report_transaction – report transaction statistics"
 <p>&nbsp;<wbr>const arm_int32_t&nbsp;<wbr></code><i>flags</i><code>,&nbsp;<wbr> </p>
 <p>&nbsp;<wbr>const arm_buffer4_t&nbsp;<wbr>*</code><i>buffer4</i><code>);</code></p>
 <h2>DESCRIPTION</h2>
-<p> <code>arm_report_transaction()</code> is used to report statistics about a transaction that has already completed.<br />
+<p> <code>arm_report_transaction()</code> is used to report statistics about a transaction that has already completed.<br/>
 &nbsp;<wbr> <code>arm_report_transaction()</code> may be used instead of a paired <code>arm_start_transaction()</code> and <code>arm_stop_transaction()</code> call. The application would have measured the response time. The transaction could have executed on the local system or on a remote system. If it executes on a remote system, the system address sub-buffer passed on the <code>arm_start_application()</code> provides the addressing information for the remote system. </p>
 <p> If the transaction represented by the <code>arm_report_transaction()</code> call is the correlation parent of another transaction, <code>arm_generate_correlator()</code> must be used to get a parent correlator, prior to invoking the child transaction (because it must be passed to the child). In this case, the sequence is the following: </p>
 <dl>
@@ -32,17 +32,17 @@ description: "arm_report_transaction – report transaction statistics"
 <dt>2.</dt>
 <dd> Invoke the child transaction, passing the correlator returned in step (1) to the child.</dd>
 <dt>3.</dt>
-<dd> When this transaction is complete, invoke <code>arm_report_transaction()</code> to report the statistics about the transaction. When used, it prevents certain types of proactive management, such as monitoring for hung transactions or adjusting priorities, because the ARM implementation is not invoked when the transaction is started. Because of this, the use of <code>arm_start_transction()</code> and <code>arm_stop_transaction()</code> is preferred over <code>arm_report_transaction()</code>.<br />
+<dd> When this transaction is complete, invoke <code>arm_report_transaction()</code> to report the statistics about the transaction. When used, it prevents certain types of proactive management, such as monitoring for hung transactions or adjusting priorities, because the ARM implementation is not invoked when the transaction is started. Because of this, the use of <code>arm_start_transction()</code> and <code>arm_stop_transaction()</code> is preferred over <code>arm_report_transaction()</code>.<br/>
 &nbsp;<wbr> The intended use is to report status and response time about transactions that recently completed (typically several seconds ago) in the absence of an ARM-enabled application and/or ARM implementation on the system on which the transaction executed. </dd>
 <p> <i>app_handle</i> is a handle returned in an out parameter from an <code>arm_start_application()</code> call in the same process. </p>
 <p> <i>buffer4</i> is a pointer to the user data buffer, if any. If the pointer is null (<code>ARM_BUF4_NONE</code>), there is no buffer. The sub-buffers that may be used are <code>arm_subbuffer_diag_detail_t</code>, <code>arm_subbuffer_metric_values_t</code>, <code>arm_subbuffer_tran_context_t</code>, and <code>arm_subbuffer_user_t</code>. </p>
-<p> <i>current_correlator</i> is a pointer to the correlator for the transaction that has completed, if any. If the pointer is null (<code>ARM_CORR_NONE</code>), there is no current correlator.<br />
+<p> <i>current_correlator</i> is a pointer to the correlator for the transaction that has completed, if any. If the pointer is null (<code>ARM_CORR_NONE</code>), there is no current correlator.<br/>
 &nbsp;<wbr> <i>flags</i> contains 32-bit flags. In the least significant byte, 0x00000001 (<code>ARM_FLAG_TRACE_REQUEST</code>) is set if the application requests/suggests a trace. </p>
 <p> <i>parent_correlator</i> is a pointer to a parent correlator, if any. If the pointer is null (<code>ARM_CORR_NONE</code>), there is no parent correlator. </p>
-<p> <i>response_time</i> is the response time in nanoseconds.<br />
+<p> <i>response_time</i> is the response time in nanoseconds.<br/>
 &nbsp;<wbr> <i>stop_time</i> is an <code>arm_int64_t</code> that contains the number of milliseconds since Jan 1, 1970 using the Gregorian calendar. The time base is GMT (Greenwich Mean Time). There is one special value, -1 (<code>ARM_USE_CURRENT_TIME</code>), which means use the current time. </p>
 <p> <i>tran_id</i> is a transaction ID returned in an out parameter from an <code>arm_register_transaction()</code> call in the same process. </p>
-<p> <i>tran_status</i> indicates the status of the transaction. The following values are allowed:<br />
+<p> <i>tran_status</i> indicates the status of the transaction. The following values are allowed:<br/>
 &nbsp;<wbr></p>
 <dt>0</dt>
 <dd> (<code>ARM_STATUS_GOOD</code>) = transaction completed successfully</dd>

@@ -56,28 +56,28 @@ int utmpname(const char *file);</code></pre>
 <tr VALIGN=top>
 <td> <code>getutent</code>() </td>
 <td>Thread safety</td>
-<td> MT-Unsafe init race:utent<br />
+<td> MT-Unsafe init race:utent<br/>
  race:utentbuf sig:ALRM timer
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>getutid</code>(),<br />
+<td> <code>getutid</code>(),<br/>
  <code>getutline</code>() </td>
 <td>Thread safety</td>
-<td> MT-Unsafe init race:utent<br />
+<td> MT-Unsafe init race:utent<br/>
  sig:ALRM timer
 </td>
 </tr>
 <tr VALIGN=top>
 <td> <code>pututline</code>() </td>
 <td>Thread safety</td>
-<td> MT-Unsafe race:utent<br />
+<td> MT-Unsafe race:utent<br/>
  sig:ALRM timer
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>setutent</code>(),<br />
- <code>endutent</code>(),<br />
+<td> <code>setutent</code>(),<br/>
+ <code>endutent</code>(),<br/>
  <code>utmpname</code>() </td>
 <td>Thread safety</td>
 <td>MT-Unsafe race:utent
@@ -86,7 +86,7 @@ int utmpname(const char *file);</code></pre>
 </table>
 <p> In the above table, <i>utent</i> in <i>race:utent</i> signifies that if any of the functions <code>setutent</code>(), <code>getutent</code>(), <code>getutid</code>(), <code>getutline</code>(), <code>pututline</code>(), <code>utmpname</code>(), or <code>endutent</code>() are used in parallel in different threads of a program, then data races could occur.</p>
 <h2>Conforming To</h2>
-<p>XPG2, SVr4. In XPG2 and SVID 2 the function <code>pututline</code>() is documented to return void, and that is what it does on many systems (AIX, HP-UX). HP-UX introduces a new function <code>_pututline</code>() with the prototype given above for <code>pututline</code>(). All these functions are obsolete now on non-Linux systems. POSIX.1-2001 and POSIX.1-2008, following SUSv1, does not have any of these functions, but instead uses #include &lt;utmpx.h&gt;<br />
+<p>XPG2, SVr4. In XPG2 and SVID 2 the function <code>pututline</code>() is documented to return void, and that is what it does on many systems (AIX, HP-UX). HP-UX introduces a new function <code>_pututline</code>() with the prototype given above for <code>pututline</code>(). All these functions are obsolete now on non-Linux systems. POSIX.1-2001 and POSIX.1-2008, following SUSv1, does not have any of these functions, but instead uses #include &lt;utmpx.h&gt;<br/>
 struct utmpx *getutxent(void);</p>
 <p>struct utmpx *getutxid(const struct utmpx *);</p>
 <p>struct utmpx *getutxline(const struct utmpx *);</p>
@@ -96,10 +96,10 @@ struct utmpx *getutxent(void);</p>
 <h2>Notes</h2>
 <h3>Glibc notes</h3>
 <p>The above functions are not thread-safe. Glibc adds reentrant versions #include &lt;utmp.h&gt;</p>
-<p>int getutent_r(struct utmp *ubuf, struct utmp **ubufp);<br />
-int getutid_r(struct utmp *ut,<br />
-              struct utmp *ubuf, struct utmp **ubufp);<br />
-int getutline_r(struct utmp *ut,<br />
+<p>int getutent_r(struct utmp *ubuf, struct utmp **ubufp);<br/>
+int getutid_r(struct utmp *ut,<br/>
+              struct utmp *ubuf, struct utmp **ubufp);<br/>
+int getutline_r(struct utmp *ut,<br/>
                 struct utmp *ubuf, struct utmp **ubufp); Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>getutent_r</code>(), <code>getutid_r</code>(), <code>getutline_r</code>(): </p>
 <pre> _GNU_SOURCE
  || /* since glibc 2.19: */ _DEFAULT_SOURCE

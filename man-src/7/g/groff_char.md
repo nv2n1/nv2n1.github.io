@@ -2501,7 +2501,7 @@ description: "groff_char – groff glyph names"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="+2">{</font></td>
+<td>{</td>
 <td>\[lk]</td>
 <td>braceleftmid</td>
 <td>u23A8</td>
@@ -2557,7 +2557,7 @@ description: "groff_char – groff glyph names"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="+2">}</font></td>
+<td>}</td>
 <td>\[rk]</td>
 <td>bracerightmid</td>
 <td>u23AC</td>

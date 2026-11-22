@@ -52,6 +52,6 @@ description: "XtInsertEventTypeHandler, XtRemoveEventTypeHandler, XtRegisterExte
 <p> The <code>XtDispatchEventToWidget</code> function scans the list of registered event handlers for the specified widget and calls each handler that has been registered for the specified event type, subject to the <i>continue_to_dispatch</i> value returned by each handler. The Intrinsics behave as if event handlers were registered at the head of the list for <code>Expose</code>, <code>NoExpose</code>, <code>GraphicsExpose</code>, and <code>VisibilityNotify</code> events to invoke the widget&#8217;s expose procedure according to the exposure compression rules and to update the widget&#8217;s <i>visible</i> field if <i>visible_interest</i> is <code>True</code>. These internal event handlers never set <i>continue_to_dispatch</i> to <code>False</code>. </p>
 <p> <code>XtDispatchEventToWidget</code> returns <code>True</code> if any event handler was called and <code>False</code> otherwise. </p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xtgetkeyboardfocuswidget/">XtGetKeyboardFocusWidget</a>(3)<br />
- <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><a href="/docs/linux/man/3-xtgetkeyboardfocuswidget/">XtGetKeyboardFocusWidget</a>(3)<br/>
+ <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

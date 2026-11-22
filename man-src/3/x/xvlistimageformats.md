@@ -24,31 +24,31 @@ description: "XvListImageFormats – return list of image formats supported by a
 <p><code><a href="/docs/linux/man/3-xvlistimageformats/">XvListImageFormats</a></code>(3) returns the XvImageFormatValues supported by the specified port. This list should be freed with <code><a href="/docs/linux/man/3-xfree/">XFree</a></code>(3).</p>
 <h2>Return Values</h2>
 <p>XvImageFormatValues has the following structure: </p>
-<p>&nbsp;<wbr>typedef struct&nbsp;<wbr>{<br />
-int id;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>Unique descriptor for the format&nbsp;<wbr>*/<br />
-int type;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>XvRGB, XvYUV&nbsp;<wbr>*/<br />
-int byte_order;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>LSBFirst, MSBFirst&nbsp;<wbr>*/<br />
-char guid[16];&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>Globally Unique IDentifier&nbsp;<wbr>*/<br />
-int bits_per_pixel;<br />
-int format;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>XvPacked, XvPlanar&nbsp;<wbr>*/<br />
+<p>&nbsp;<wbr>typedef struct&nbsp;<wbr>{<br/>
+int id;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>Unique descriptor for the format&nbsp;<wbr>*/<br/>
+int type;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>XvRGB, XvYUV&nbsp;<wbr>*/<br/>
+int byte_order;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>LSBFirst, MSBFirst&nbsp;<wbr>*/<br/>
+char guid[16];&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>Globally Unique IDentifier&nbsp;<wbr>*/<br/>
+int bits_per_pixel;<br/>
+int format;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>XvPacked, XvPlanar&nbsp;<wbr>*/<br/>
 int num_planes; </p>
-<p>/*&nbsp;<wbr>for RGB formats&nbsp;<wbr>*/<br />
-int depth;<br />
-unsigned int red_mask;<br />
-unsigned int green_mask;<br />
+<p>/*&nbsp;<wbr>for RGB formats&nbsp;<wbr>*/<br/>
+int depth;<br/>
+unsigned int red_mask;<br/>
+unsigned int green_mask;<br/>
 unsigned int blue_mask; </p>
-<p>/*&nbsp;<wbr>for YUV formats&nbsp;<wbr>*/<br />
-unsigned int y_sample_bits;<br />
-unsigned int u_sample_bits;<br />
-unsigned int v_sample_bits;<br />
-unsigned int horz_y_period;<br />
-unsigned int horz_u_period;<br />
-unsigned int horz_v_period;<br />
-unsigned int vert_y_period;<br />
-unsigned int vert_u_period;<br />
-unsigned int vert_v_period;<br />
-char component_order[32];&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>eg. UYVY&nbsp;<wbr>*/<br />
-int scanline_order;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>XvTopToBottom, XvBottomToTop&nbsp;<wbr>*/<br />
+<p>/*&nbsp;<wbr>for YUV formats&nbsp;<wbr>*/<br/>
+unsigned int y_sample_bits;<br/>
+unsigned int u_sample_bits;<br/>
+unsigned int v_sample_bits;<br/>
+unsigned int horz_y_period;<br/>
+unsigned int horz_u_period;<br/>
+unsigned int horz_v_period;<br/>
+unsigned int vert_y_period;<br/>
+unsigned int vert_u_period;<br/>
+unsigned int vert_v_period;<br/>
+char component_order[32];&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>eg. UYVY&nbsp;<wbr>*/<br/>
+int scanline_order;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>XvTopToBottom, XvBottomToTop&nbsp;<wbr>*/<br/>
 &nbsp;<wbr>}&nbsp;<wbr>XvImageFormatValues; </p>
 <dl COMPACT>
 <dt><i>id</i></dt>

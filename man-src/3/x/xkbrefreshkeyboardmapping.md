@@ -10,7 +10,7 @@ description: "XkbRefreshKeyboardMapping – Update the keyboard description that
 <p>XkbRefreshKeyboardMapping &#8211; Update the keyboard description that is internal to the X library </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Status XkbRefreshKeyboardMapping</code> <code>(XkbMapNotifyEvent *</code><i>event</i><code>);</code><br />
+<dt> <code>Status XkbRefreshKeyboardMapping</code> <code>(XkbMapNotifyEvent *</code><i>event</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

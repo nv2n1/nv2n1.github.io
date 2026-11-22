@@ -10,7 +10,7 @@ description: "dgerfsx.f –"
 <p>dgerfsx.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dgerfsx</code> (TRANS, EQUED, N, NRHS, A, LDA, AF, LDAF, IPIV, R, C, B, LDB, X, LDX, RCOND, BERR, N_ERR_BNDS, ERR_BNDS_NORM, ERR_BNDS_COMP, NPARAMS, PARAMS, WORK, IWORK, INFO)<br />
+<p>subroutine <code>dgerfsx</code> (TRANS, EQUED, N, NRHS, A, LDA, AF, LDAF, IPIV, R, C, B, LDB, X, LDX, RCOND, BERR, N_ERR_BNDS, ERR_BNDS_NORM, ERR_BNDS_COMP, NPARAMS, PARAMS, WORK, IWORK, INFO)<br/>
  <i></i><code>DGERFSX</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dgerfsx (characterTRANS, characterEQUED, integerN, integerNRHS, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( ldaf, * )AF, integerLDAF, integer, dimension( * )IPIV, double precision, dimension( * )R, double precision, dimension( * )C, double precision, dimension( ldb, * )B, integerLDB, double precision, dimension( ldx , * )X, integerLDX, double precisionRCOND, double precision, dimension( * )BERR, integerN_ERR_BNDS, double precision, dimension( nrhs, * )ERR_BNDS_NORM, double precision, dimension( nrhs, * )ERR_BNDS_COMP, integerNPARAMS, double precision, dimension( * )PARAMS, double precision, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>

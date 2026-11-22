@@ -27,7 +27,7 @@ description: "hx509 name functions –"
 <p>Unparse the hx509 name in name into a string. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>name</i> the name to print<br />
+<dd><i>name</i> the name to print<br/>
  <i>str</i> an allocated string returns the name in string form</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -36,7 +36,7 @@ description: "hx509 name functions –"
 <p>Convert a hx509_name object to DER encoded name. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>name</i> name to concert<br />
+<dd><i>name</i> name to concert<br/>
  <i>os</i> data to a DER encoded name, free the resulting octet string with hx509_xfree(os-&gt;data).</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -45,7 +45,7 @@ description: "hx509 name functions –"
 <p>Compare to hx509 name object, useful for sorting. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>n1</i> a hx509 name object.<br />
+<dd><i>n1</i> a hx509 name object.<br/>
  <i>n2</i> a hx509 name object.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -54,8 +54,8 @@ description: "hx509 name functions –"
 <p>Copy a hx509 name object. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> A hx509 cotext.<br />
- <i>from</i> the name to copy from<br />
+<dd><i>context</i> A hx509 cotext.<br/>
+ <i>from</i> the name to copy from<br/>
  <i>to</i> the name to copy to</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -64,8 +64,8 @@ description: "hx509 name functions –"
 <p>Expands variables in the name using env. Variables are on the form ${name}. Useful when dealing with certificate templates. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> A hx509 cotext.<br />
- <i>name</i> the name to expand.<br />
+<dd><i>context</i> A hx509 cotext.<br/>
+ <i>name</i> the name to expand.<br/>
  <i>env</i> environment variable to expand.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -88,7 +88,7 @@ description: "hx509 name functions –"
 <p>Convert a hx509_name into a Name. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>from</i> the name to copy from<br />
+<dd><i>from</i> the name to copy from<br/>
  <i>to</i> the name to copy to</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -97,7 +97,7 @@ description: "hx509 name functions –"
 <p>Convert the hx509 name object into a printable string. The resulting string should be freed with free(). </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>name</i> name to print<br />
+<dd><i>name</i> name to print<br/>
  <i>str</i> the string to return</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -106,8 +106,8 @@ description: "hx509 name functions –"
 <p>Parse a string into a hx509 name object. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> A hx509 context.<br />
- <i>str</i> a string to parse.<br />
+<dd><i>context</i> A hx509 context.<br/>
+ <i>str</i> a string to parse.<br/>
  <i>name</i> the resulting object, NULL in case of error.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -116,8 +116,8 @@ description: "hx509 name functions –"
 <p>Convert a DER encoded name info a string. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>data</i> data to a DER/BER encoded name<br />
- <i>length</i> length of data<br />
+<dd><i>data</i> data to a DER/BER encoded name<br/>
+ <i>length</i> length of data<br/>
  <i>str</i> the resulting string, is NULL on failure.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

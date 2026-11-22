@@ -11,10 +11,10 @@ description: "include/antlr3lexer.h –"
 <p> include/antlr3lexer.h &#8211; </p>
 <p> Base interface for any ANTLR3 lexer.</p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;<a href="file:/usr/include/antlr3defs.h">antlr3defs.h</a>&gt;<br />
- #include &lt;<a href="file:/usr/include/antlr3input.h">antlr3input.h</a>&gt;<br />
- #include &lt;<a href="file:/usr/include/antlr3commontoken.h">antlr3commontoken.h</a>&gt;<br />
- #include &lt;<a href="file:/usr/include/antlr3tokenstream.h">antlr3tokenstream.h</a>&gt;<br />
+<p> #include &lt;<a href="file:/usr/include/antlr3defs.h">antlr3defs.h</a>&gt;<br/>
+ #include &lt;<a href="file:/usr/include/antlr3input.h">antlr3input.h</a>&gt;<br/>
+ #include &lt;<a href="file:/usr/include/antlr3commontoken.h">antlr3commontoken.h</a>&gt;<br/>
+ #include &lt;<a href="file:/usr/include/antlr3tokenstream.h">antlr3tokenstream.h</a>&gt;<br/>
  #include &lt;<a href="file:/usr/include/antlr3baserecognizer.h">antlr3baserecognizer.h</a>&gt; </p>
 <h3>Data Structures</h3>
 <p> struct <code>ANTLR3_LEXER_struct</code> </p>

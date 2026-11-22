@@ -10,38 +10,38 @@ description: "QuantLib::FixedRateBondHelper – fixed-coupon bond helper"
 
 <p>QuantLib::FixedRateBondHelper &#8211; fixed-coupon bond helper </p>
 
-<p> <br />
+<p> <br/>
  </p>
 <p>#include &lt;ql/termstructures/yield/bondhelpers.hpp&gt; </p>
 <p>Inherits <code>BootstrapHelper&lt; YieldTermStructure &gt;</code>. </p>
 <h3>Public Member Functions</h3>
-<p> <br />
- <code>FixedRateBondHelper</code> (const <code>Handle</code>&lt; <code>Quote</code> &gt; &amp;cleanPrice, <code>Natural</code> settlementDays, <code>Real</code> faceAmount, const <code>Schedule</code> &amp;schedule, const std::vector&lt; <code>Rate</code> &gt; &amp;coupons, const <code>DayCounter</code> &amp;dayCounter, <code>BusinessDayConvention</code> paymentConv=Following, <code>Real</code> redemption=100.0, const <code>Date</code> &amp;issueDate=<code>Date</code>()) <br />
- <br />
- <code>FixedRateBondHelper</code> (const <code>Handle</code>&lt; <code>Quote</code> &gt; &amp;cleanPrice, const boost::shared_ptr&lt; <code>FixedRateBond</code> &gt; &amp;bond) <br />
+<p> <br/>
+ <code>FixedRateBondHelper</code> (const <code>Handle</code>&lt; <code>Quote</code> &gt; &amp;cleanPrice, <code>Natural</code> settlementDays, <code>Real</code> faceAmount, const <code>Schedule</code> &amp;schedule, const std::vector&lt; <code>Rate</code> &gt; &amp;coupons, const <code>DayCounter</code> &amp;dayCounter, <code>BusinessDayConvention</code> paymentConv=Following, <code>Real</code> redemption=100.0, const <code>Date</code> &amp;issueDate=<code>Date</code>()) <br/>
+ <br/>
+ <code>FixedRateBondHelper</code> (const <code>Handle</code>&lt; <code>Quote</code> &gt; &amp;cleanPrice, const boost::shared_ptr&lt; <code>FixedRateBond</code> &gt; &amp;bond) <br/>
  </p>
-<p> <code>BootstrapHelper interface</code> <br />
+<p> <code>BootstrapHelper interface</code> <br/>
  </p>
-<p> <br />
- <code>Real</code> <code>impliedQuote</code> () const <br />
- <br />
- void <code>setTermStructure</code> (<code>YieldTermStructure</code> *) <br />
+<p> <br/>
+ <code>Real</code> <code>impliedQuote</code> () const <br/>
+ <br/>
+ void <code>setTermStructure</code> (<code>YieldTermStructure</code> *) <br/>
  <i>sets the term structure to be used for pricing </i> </p>
-<p> <code>additional inspectors</code> <br />
+<p> <code>additional inspectors</code> <br/>
  </p>
-<p> <br />
- boost::shared_ptr&lt; <code>FixedRateBond</code> &gt; <code>bond</code> () const <br />
+<p> <br/>
+ boost::shared_ptr&lt; <code>FixedRateBond</code> &gt; <code>bond</code> () const <br/>
  </p>
-<p> <code>Visitability</code> <br />
+<p> <code>Visitability</code> <br/>
  </p>
-<p> <br />
- void <code>accept</code> (<code>AcyclicVisitor</code> &amp;) <br />
+<p> <br/>
+ void <code>accept</code> (<code>AcyclicVisitor</code> &amp;) <br/>
   </p>
 <h3>Protected Attributes</h3>
-<p> <br />
- boost::shared_ptr&lt; <code>FixedRateBond</code> &gt; <code>bond_</code> <br />
- <br />
- <code>RelinkableHandle</code>&lt; <code>YieldTermStructure</code> &gt; <code>termStructureHandle_</code> <br />
+<p> <br/>
+ boost::shared_ptr&lt; <code>FixedRateBond</code> &gt; <code>bond_</code> <br/>
+ <br/>
+ <code>RelinkableHandle</code>&lt; <code>YieldTermStructure</code> &gt; <code>termStructureHandle_</code> <br/>
   </p>
 <h2>Detailed Description</h2>
 <p>fixed-coupon bond helper </p>

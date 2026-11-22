@@ -11,7 +11,7 @@ description: "dlasd1.f –"
 <p> dlasd1.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dlasd1</code> (NL, NR, SQRE, D, ALPHA, BETA, U, LDU, VT, LDVT, IDXQ, IWORK, WORK, INFO)<br />
+<p> subroutine <code>dlasd1</code> (NL, NR, SQRE, D, ALPHA, BETA, U, LDU, VT, LDVT, IDXQ, IWORK, WORK, INFO)<br/>
  <i></i><code>DLASD1</code> computes the SVD of an upper bidiagonal matrix B of the specified size. Used by sbdsdc.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlasd1 (integerNL, integerNR, integerSQRE, double precision, dimension( * )D, double precisionALPHA, double precisionBETA, double precision, dimension( ldu, * )U, integerLDU, double precision, dimension( ldvt, * )VT, integerLDVT, integer, dimension( * )IDXQ, integer, dimension( * )IWORK, double precision, dimension( * )WORK, integerINFO)</h3>

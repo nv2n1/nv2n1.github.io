@@ -10,7 +10,7 @@ description: "sladiv.f –"
 <p>sladiv.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>sladiv</code> (A, B, C, D, P, Q)<br />
+<p>subroutine <code>sladiv</code> (A, B, C, D, P, Q)<br/>
  <i></i><code>SLADIV</code> performs complex division in real arithmetic, avoiding unnecessary overflow.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sladiv (realA, realB, realC, realD, realP, realQ)</h3>

@@ -10,7 +10,7 @@ description: "dlaebz.f –"
 <p>dlaebz.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dlaebz</code> (IJOB, NITMAX, N, MMAX, MINP, NBMIN, ABSTOL, RELTOL, PIVMIN, D, E, E2, NVAL, AB, C, MOUT, NAB, WORK, IWORK, INFO)<br />
+<p>subroutine <code>dlaebz</code> (IJOB, NITMAX, N, MMAX, MINP, NBMIN, ABSTOL, RELTOL, PIVMIN, D, E, E2, NVAL, AB, C, MOUT, NAB, WORK, IWORK, INFO)<br/>
  <i></i><code>DLAEBZ</code> computes the number of eigenvalues of a real symmetric tridiagonal matrix which are less than or equal to a given value, and performs other tasks required by the routine sstebz.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlaebz (integerIJOB, integerNITMAX, integerN, integerMMAX, integerMINP, integerNBMIN, double precisionABSTOL, double precisionRELTOL, double precisionPIVMIN, double precision, dimension( * )D, double precision, dimension( * )E, double precision, dimension( * )E2, integer, dimension( * )NVAL, double precision, dimension( mmax, * )AB, double precision, dimension( * )C, integerMOUT, integer, dimension( mmax, * )NAB, double precision, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>

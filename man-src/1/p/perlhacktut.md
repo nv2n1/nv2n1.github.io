@@ -15,12 +15,12 @@ description: "perlhacktut – Walk through the creation of a simple C code patch
 <p> Once you&#8217;re done here, check out perlhacktips next.</p>
 <h2>EXAMPLE OF A SIMPLE PATCH</h2>
 <p> Let&#8217;s take a simple patch from start to finish. </p>
-<p> Here&#8217;s something Larry suggested: if a <tt>&quot;U&quot;</tt> is the first active format during a <tt>&quot;pack&quot;</tt>, (for example, <tt>&quot;pack &quot;U3C8&quot;, @stuff&quot;</tt>) then the resulting string should be treated as <font SIZE="-1">UTF-8</font> encoded. </p>
+<p> Here&#8217;s something Larry suggested: if a <tt>&quot;U&quot;</tt> is the first active format during a <tt>&quot;pack&quot;</tt>, (for example, <tt>&quot;pack &quot;U3C8&quot;, @stuff&quot;</tt>) then the resulting string should be treated as UTF-8 encoded. </p>
 <p> If you are working with a git clone of the Perl repository, you will want to create a branch for your changes. This will make creating a proper patch much simpler. See the perlgit for details on how to do this.</p>
 <h3>Writing the patch</h3>
 <p> How do we prepare to fix this up? First we locate the code in question &#8211; the <tt>&quot;pack&quot;</tt> happens at runtime, so it&#8217;s going to be in one of the <i>pp</i> files. Sure enough, <tt>&quot;pp_pack&quot;</tt> is in <i>pp.c</i>. Since we&#8217;re going to be altering this file, let&#8217;s copy it to <i>pp.c~</i>. </p>
 <p> [Well, it was in <i>pp.c</i> when this tutorial was written. It has now been split off with <tt>&quot;pp_unpack&quot;</tt> to its own file, <i>pp_pack.c</i>] </p>
-<p> Now let&#8217;s look over <tt>&quot;pp_pack&quot;</tt>: we take a pattern into <tt>&quot;pat&quot;</tt>, and then loop over the pattern, taking each format character in turn into <tt>&quot;datum_type&quot;</tt>. Then for each possible format character, we swallow up the other arguments in the pattern (a field width, an asterisk, and so on) and convert the next chunk input into the specified format, adding it onto the output <font SIZE="-1">SV</font> <tt>&quot;cat&quot;</tt>. </p>
+<p> Now let&#8217;s look over <tt>&quot;pp_pack&quot;</tt>: we take a pattern into <tt>&quot;pat&quot;</tt>, and then loop over the pattern, taking each format character in turn into <tt>&quot;datum_type&quot;</tt>. Then for each possible format character, we swallow up the other arguments in the pattern (a field width, an asterisk, and so on) and convert the next chunk input into the specified format, adding it onto the output SV <tt>&quot;cat&quot;</tt>. </p>
 <p> How do we know if the <tt>&quot;U&quot;</tt> is the first format in the <tt>&quot;pat&quot;</tt>? Well, if we have a pointer to the start of <tt>&quot;pat&quot;</tt> then, if we see a <tt>&quot;U&quot;</tt> we can test whether we&#8217;re still at the start of the string. So, here&#8217;s where <tt>&quot;pat&quot;</tt> is set up: </p>
 <pre><code>
 STRLEN fromlen;
@@ -31,24 +31,24 @@ I32 datumtype;
 SV *fromstr;
 </code></pre>
 <p> We&#8217;ll have another string pointer in there: </p>
-<p>STRLEN fromlen;<br />
-char *pat = SvPVx(*++MARK, fromlen);<br />
-char *patend = pat + fromlen;<br />
-+ char *patcopy;<br />
-I32 len;<br />
-I32 datumtype;<br />
+<p>STRLEN fromlen;<br/>
+char *pat = SvPVx(*++MARK, fromlen);<br/>
+char *patend = pat + fromlen;<br/>
++ char *patcopy;<br/>
+I32 len;<br/>
+I32 datumtype;<br/>
 SV *fromstr;</p>
 <p> And just before we start the loop, we&#8217;ll set <tt>&quot;patcopy&quot;</tt> to be the start of <tt>&quot;pat&quot;</tt>: </p>
-<p>items = SP &#8211; MARK;<br />
-MARK++;<br />
-SvPVCLEAR(cat);<br />
-+ patcopy = pat;<br />
+<p>items = SP &#8211; MARK;<br/>
+MARK++;<br/>
+SvPVCLEAR(cat);<br/>
++ patcopy = pat;<br/>
 while (pat &lt; patend) {</p>
-<p> Now if we see a <tt>&quot;U&quot;</tt> which was at the start of the string, we turn on the <tt>&quot;UTF8&quot;</tt> flag for the output <font SIZE="-1">SV,</font> <tt>&quot;cat&quot;</tt>: </p>
-<p>+ if (datumtype == &#8216;U&#8217; &amp;&amp; pat == patcopy + 1) + SvUTF8_on(cat);<br />
-if (datumtype == &#8216;#&#8217;) {<br />
+<p> Now if we see a <tt>&quot;U&quot;</tt> which was at the start of the string, we turn on the <tt>&quot;UTF8&quot;</tt> flag for the output SV, <tt>&quot;cat&quot;</tt>: </p>
+<p>+ if (datumtype == &#8216;U&#8217; &amp;&amp; pat == patcopy + 1) + SvUTF8_on(cat);<br/>
+if (datumtype == &#8216;#&#8217;) {<br/>
     while (pat &lt; patend &amp;&amp; *pat != &#8216;
-&#8217;)<br />
+&#8217;)<br/>
         pat++;</p>
 <p> Remember that it has to be <tt>&quot;patcopy+1&quot;</tt> because the first character of the string is the <tt>&quot;U&quot;</tt> which has been swallowed into <tt>&quot;datumtype!&quot;</tt> </p>
 <p> Oops, we forgot one thing: what if there are spaces at the start of the pattern? <tt>&quot;pack(&quot; U*&quot;, @stuff)&quot;</tt> will have <tt>&quot;U&quot;</tt> as the first active character, even though it&#8217;s not the first thing in the pattern. In this case, we have to advance <tt>&quot;patcopy&quot;</tt> along with <tt>&quot;pat&quot;</tt> when we see spaces: </p>
@@ -57,15 +57,15 @@ if (datumtype == &#8216;#&#8217;) {<br />
         continue;
 </pre>
 <p> needs to become </p>
-<p>if (isSPACE(datumtype)) {<br />
-    patcopy++;<br />
-    continue;<br />
+<p>if (isSPACE(datumtype)) {<br/>
+    patcopy++;<br/>
+    continue;<br/>
 }</p>
-<p> <font SIZE="-1">OK.</font> That&#8217;s the C part done. Now we must do two additional things before this patch is ready to go: we&#8217;ve changed the behaviour of Perl, and so we must document that change. We must also provide some more regression tests to make sure our patch works and doesn&#8217;t create a bug somewhere else along the line.</p>
+<p> OK. That&#8217;s the C part done. Now we must do two additional things before this patch is ready to go: we&#8217;ve changed the behaviour of Perl, and so we must document that change. We must also provide some more regression tests to make sure our patch works and doesn&#8217;t create a bug somewhere else along the line.</p>
 <h3>Testing the patch</h3>
 <p> The regression tests for each operator live in <i>t/op/</i>, and so we make a copy of <i>t/op/pack.t</i> to <i>t/op/pack.t~</i>. Now we can add our tests to the end. First, we&#8217;ll test that the <tt>&quot;U&quot;</tt> does indeed create Unicode strings. </p>
 <p> t/op/pack.t has a sensible <code>ok()</code> function, but if it didn&#8217;t we could use the one from t/test.pl. </p>
-<p>require &#8216;./test.pl&#8217;;<br />
+<p>require &#8216;./test.pl&#8217;;<br/>
 plan(tests = &gt; 159);</p>
 <p> so instead of this: </p>
 <pre><code>

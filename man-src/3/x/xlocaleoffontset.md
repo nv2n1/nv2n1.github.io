@@ -38,5 +38,5 @@ description: "XFontsOfFontSet, XBaseFontNameListOfFontSet, XLocaleOfFontSet, XCo
 <p> The <code>XContextualDrawing</code> function returns <code>True</code> if text drawn with the font set might include context-dependent drawing; otherwise, it returns <code>False</code>. </p>
 <p> The <code>XDirectionalDependentDrawing</code> function returns <code>True</code> if the drawing functions implement implicit text directionality; otherwise, it returns <code>False</code>.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xcreatefontset/">XCreateFontSet</a>(3), XCreateOM(3), <a href="/docs/linux/man/3-xcreateoc/">XCreateOC</a>(3), <a href="/docs/linux/man/3-xextentsoffontset/">XExtentsOfFontSet</a>(3), <a href="/docs/linux/man/3-xfontsetextents/">XFontSetExtents</a>(3)<br />
+<p><a href="/docs/linux/man/3-xcreatefontset/">XCreateFontSet</a>(3), XCreateOM(3), <a href="/docs/linux/man/3-xcreateoc/">XCreateOC</a>(3), <a href="/docs/linux/man/3-xextentsoffontset/">XExtentsOfFontSet</a>(3), <a href="/docs/linux/man/3-xfontsetextents/">XFontSetExtents</a>(3)<br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

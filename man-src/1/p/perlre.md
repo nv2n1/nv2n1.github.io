@@ -45,7 +45,7 @@ perlre - Perl regular expressions
 
  Any single character in a pattern matches that same character in the target string, unless the character is a <i>metacharacter</i> with a special meaning described in this document. A sequence of non-metacharacters matches the same sequence in the target string, as we saw above with <tt>&quot;m/abc/&quot;</tt>. 
 
- Only a few characters (all of them being <font SIZE="-1">ASCII</font> punctuation characters) are metacharacters. The most commonly used one is a dot <tt>&quot;.&quot;</tt>, which normally matches almost any character (including a dot itself). 
+ Only a few characters (all of them being ASCII punctuation characters) are metacharacters. The most commonly used one is a dot <tt>&quot;.&quot;</tt>, which normally matches almost any character (including a dot itself). 
 
  You can cause characters that normally function as metacharacters to be interpreted literally by prefixing them with a <tt>&quot;\&quot;</tt>, just like the pattern's delimiter must be escaped if it also occurs within the pattern. Thus, <tt>&quot;\.&quot;</tt> matches just a literal dot, <tt>&quot;.&quot;</tt> instead of its normal meaning. This means that the backslash is also a metacharacter, so <tt>&quot;\\&quot;</tt> matches a single <tt>&quot;\&quot;</tt>. And a sequence that contains an escaped metacharacter matches the same sequence (but without the escape) in the target string. So, the pattern <tt>&quot;/blur\\fl/&quot;</tt> would match any target string that contains the sequence <tt>&quot;blur\fl&quot;</tt>. 
 
@@ -55,13 +55,13 @@ perlre - Perl regular expressions
  $foo =~ m/this|that/
 </pre> 
 
- is <font SIZE="-1">TRUE</font> if and only if <tt>$foo</tt> contains either the sequence <tt>&quot;this&quot;</tt> or the sequence <tt>&quot;that&quot;</tt>. Like all metacharacters, prefixing the <tt>&quot;|&quot;</tt> with a backslash makes it match the plain punctuation character; in its case, the <font SIZE="-1">VERTICAL LINE.</font> 
+ is TRUE if and only if <tt>$foo</tt> contains either the sequence <tt>&quot;this&quot;</tt> or the sequence <tt>&quot;that&quot;</tt>. Like all metacharacters, prefixing the <tt>&quot;|&quot;</tt> with a backslash makes it match the plain punctuation character; in its case, the VERTICAL LINE. 
 
  <pre>
  $foo =~ m/this\|that/
 </pre> 
 
- is <font SIZE="-1">TRUE</font> if and only if <tt>$foo</tt> contains the sequence <tt>&quot;this|that&quot;</tt>. 
+ is TRUE if and only if <tt>$foo</tt> contains the sequence <tt>&quot;this|that&quot;</tt>. 
 
  You aren't limited to just a single <tt>&quot;|&quot;</tt>. 
 
@@ -69,7 +69,7 @@ perlre - Perl regular expressions
  $foo =~ m/fee|fie|foe|fum/
 </pre> 
 
- is <font SIZE="-1">TRUE</font> if and only if <tt>$foo</tt> contains any of those 4 sequences from the children's story ``Jack and the Beanstalk''. 
+ is TRUE if and only if <tt>$foo</tt> contains any of those 4 sequences from the children's story ``Jack and the Beanstalk''. 
 
  As you can see, the <tt>&quot;|&quot;</tt> binds less tightly than a sequence of ordinary characters. We can override this by using the grouping metacharacters, the parentheses <tt>&quot;(&quot;</tt> and <tt>&quot;)&quot;</tt>. 
 
@@ -77,7 +77,7 @@ perlre - Perl regular expressions
  $foo =~ m/th(is|at) thing/
 </pre> 
 
- is <font SIZE="-1">TRUE</font> if and only if <tt>$foo</tt> contains either the sequence <tt>&quot;this thing&quot;</tt> or the sequence <tt>&quot;that thing&quot;</tt>. The portions of the string that match the portions of the pattern enclosed in parentheses are normally made available separately for use later in the pattern, substitution, or program. This is called ``capturing'', and it can get complicated. See ``Capture groups''. 
+ is TRUE if and only if <tt>$foo</tt> contains either the sequence <tt>&quot;this thing&quot;</tt> or the sequence <tt>&quot;that thing&quot;</tt>. The portions of the string that match the portions of the pattern enclosed in parentheses are normally made available separately for use later in the pattern, substitution, or program. This is called ``capturing'', and it can get complicated. See ``Capture groups''. 
 
  The first alternative includes everything from the last pattern delimiter (<tt>&quot;(&quot;</tt>, <tt>&quot;(?:&quot;</tt> (described later), <i>etc</i>. or the beginning of the pattern) up to the first <tt>&quot;|&quot;</tt>, and the last alternative contains everything from the last <tt>&quot;|&quot;</tt> to the next closing pattern delimiter. That's why it's common practice to include alternatives in parentheses: to minimize confusion about where they start and end. 
 
@@ -91,7 +91,7 @@ perlre - Perl regular expressions
  $foo =~ m/fee|fie|foe|fum/
 </pre> 
 
- It evaluates to <font SIZE="-1">TRUE</font> if, besides those 4 words, any of the sequences ``feed'', ``field'', ``Defoe'', ``fume'', and many others are in <tt>$foo</tt>. By judicious use of <tt>&quot;\b&quot;</tt> (or better (because it is designed to handle natural language) <tt>&quot;\b{wb}&quot;</tt>), we can make sure that only the Giant's words are matched: 
+ It evaluates to TRUE if, besides those 4 words, any of the sequences ``feed'', ``field'', ``Defoe'', ``fume'', and many others are in <tt>$foo</tt>. By judicious use of <tt>&quot;\b&quot;</tt> (or better (because it is designed to handle natural language) <tt>&quot;\b{wb}&quot;</tt>), we can make sure that only the Giant's words are matched: 
 
  <pre><code>
 $foo = ~m /\b(fee | fie | foe | fum)\b /
@@ -162,7 +162,7 @@ PURPOSE WHERE
  Used together, as <tt>&quot;/ms&quot;</tt>, they let the <tt>&quot;.&quot;</tt> match any character whatsoever, while still allowing <tt>&quot;^&quot;</tt> and <tt>&quot;$&quot;</tt> to match, respectively, just after and just before newlines within the string.
 </dd><dt>&quot;i&quot;
 </dt><dd> Do case-insensitive pattern matching. For example, ``A'' will match ``a'' under <tt>&quot;/i&quot;</tt>. 
- If locale matching rules are in effect, the case map is taken from the current locale for code points less than 255, and from Unicode rules for larger code points. However, matches that would cross the Unicode rules/non-Unicode rules boundary (ords 255/256) will not succeed, unless the locale is a <font SIZE="-1">UTF-8</font> one. See perllocale. 
+ If locale matching rules are in effect, the case map is taken from the current locale for code points less than 255, and from Unicode rules for larger code points. However, matches that would cross the Unicode rules/non-Unicode rules boundary (ords 255/256) will not succeed, unless the locale is a UTF-8 one. See perllocale. 
  There are a number of Unicode characters that match a sequence of multiple characters under <tt>&quot;/i&quot;</tt>. For example, <tt>&quot;LATIN SMALL LIGATURE FI&quot;</tt> should match the sequence <tt>&quot;fi&quot;</tt>. Perl is not currently able to do this when the multiple characters are in the pattern and are split between groupings, or when one or more are quantified. Thus 
 "\N{LATIN SMALL LIGATURE FI}" = ~ / fi / i;
 #Matches
@@ -229,7 +229,7 @@ PURPOSE WHERE
 
  A common pitfall is to forget that <tt>&quot;#&quot;</tt> characters begin a comment under <tt>&quot;/x&quot;</tt> and are not matched literally. Just keep that in mind when trying to puzzle out why a particular <tt>&quot;/x&quot;</tt> pattern isn't working as expected. 
 
- Starting in Perl v5.26, if the modifier has a second <tt>&quot;x&quot;</tt> within it, it does everything that a single <tt>&quot;/x&quot;</tt> does, but additionally non-backslashed <font SIZE="-1">SPACE</font> and <font SIZE="-1">TAB</font> characters within bracketed character classes are also generally ignored, and hence can be added to make the classes more readable. 
+ Starting in Perl v5.26, if the modifier has a second <tt>&quot;x&quot;</tt> within it, it does everything that a single <tt>&quot;/x&quot;</tt> does, but additionally non-backslashed SPACE and TAB characters within bracketed character classes are also generally ignored, and hence can be added to make the classes more readable. 
 
  
     / [d-e g-i 3-7]/xx
@@ -276,13 +276,13 @@ $program = ~s{
 
  The <tt>&quot;/d&quot;</tt>, <tt>&quot;/u&quot;</tt>, and <tt>&quot;/l&quot;</tt> modifiers are not likely to be of much use to you, and so you need not worry about them very much. They exist for Perl's internal use, so that complex regular expression data structures can be automatically serialized and later exactly reconstituted, including all their nuances. But, since Perl can't keep a secret, and there may be rare instances where they are useful, they are documented here. 
 
- The <tt>&quot;/a&quot;</tt> modifier, on the other hand, may be useful. Its purpose is to allow code that is to work mostly on <font SIZE="-1">ASCII</font> data to not have to concern itself with Unicode. 
+ The <tt>&quot;/a&quot;</tt> modifier, on the other hand, may be useful. Its purpose is to allow code that is to work mostly on ASCII data to not have to concern itself with Unicode. 
 
  Briefly, <tt>&quot;/l&quot;</tt> sets the character set to that of whatever <b>L</b>ocale is in effect at the time of the execution of the pattern match. 
 
  <tt>&quot;/u&quot;</tt> sets the character set to <b>U</b>nicode. 
 
- <tt>&quot;/a&quot;</tt> also sets the character set to Unicode, <font SIZE="-1">BUT</font> adds several restrictions for <b>A</b>SCII-safe matching. 
+ <tt>&quot;/a&quot;</tt> also sets the character set to Unicode, BUT adds several restrictions for <b>A</b>SCII-safe matching. 
 
  <tt>&quot;/d&quot;</tt> is the old, problematic, pre-5.14 <b>D</b>efault character set behavior. Its only use is to force that old behavior. 
 
@@ -310,19 +310,19 @@ $program = ~s{
 
  means to use the current locale's rules (see perllocale) when pattern matching. For example, <tt>&quot;\w&quot;</tt> will match the ``word'' characters of that locale, and <tt>&quot;/i&quot;</tt> case-insensitive matching will match according to the locale's case folding rules. The locale used will be the one in effect at the time of execution of the pattern match. This may not be the same as the compilation-time locale, and can differ from one match to another if there is an intervening call of the <b>setlocale()</b> function. 
 
- Prior to v5.20, Perl did not support multi-byte locales. Starting then, <font SIZE="-1">UTF-8</font> locales are supported. No other multi byte locales are ever likely to be supported. However, in all locales, one can have code points above 255 and these will always be treated as Unicode no matter what locale is in effect. 
+ Prior to v5.20, Perl did not support multi-byte locales. Starting then, UTF-8 locales are supported. No other multi byte locales are ever likely to be supported. However, in all locales, one can have code points above 255 and these will always be treated as Unicode no matter what locale is in effect. 
 
- Under Unicode rules, there are a few case-insensitive matches that cross the 255/256 boundary. Except for <font SIZE="-1">UTF-8</font> locales in Perls v5.20 and later, these are disallowed under <tt>&quot;/l&quot;</tt>. For example, 0xFF (on <font SIZE="-1">ASCII</font> platforms) does not caselessly match the character at 0x178, <tt>&quot;LATIN CAPITAL LETTER Y WITH DIAERESIS&quot;</tt>, because 0xFF may not be <tt>&quot;LATIN SMALL LETTER Y WITH DIAERESIS&quot;</tt> in the current locale, and Perl has no way of knowing if that character even exists in the locale, much less what code point it is. 
+ Under Unicode rules, there are a few case-insensitive matches that cross the 255/256 boundary. Except for UTF-8 locales in Perls v5.20 and later, these are disallowed under <tt>&quot;/l&quot;</tt>. For example, 0xFF (on ASCII platforms) does not caselessly match the character at 0x178, <tt>&quot;LATIN CAPITAL LETTER Y WITH DIAERESIS&quot;</tt>, because 0xFF may not be <tt>&quot;LATIN SMALL LETTER Y WITH DIAERESIS&quot;</tt> in the current locale, and Perl has no way of knowing if that character even exists in the locale, much less what code point it is. 
 
- In a <font SIZE="-1">UTF-8</font> locale in v5.20 and later, the only visible difference between locale and non-locale in regular expressions should be tainting (see perlsec). 
+ In a UTF-8 locale in v5.20 and later, the only visible difference between locale and non-locale in regular expressions should be tainting (see perlsec). 
 
  This modifier may be specified to be the default by <tt>&quot;use locale&quot;</tt>, but see ``Which character set modifier is in effect?''. 
 
  /u 
 
- means to use Unicode rules when pattern matching. On <font SIZE="-1">ASCII</font> platforms, this means that the code points between 128 and 255 take on their Latin-1 (<font SIZE="-1">ISO-8859-1</font>) meanings (which are the same as Unicode's). (Otherwise Perl considers their meanings to be undefined.) Thus, under this modifier, the <font SIZE="-1">ASCII</font> platform effectively becomes a Unicode platform; and hence, for example, <tt>&quot;\w&quot;</tt> will match any of the more than 100_000 word characters in Unicode. 
+ means to use Unicode rules when pattern matching. On ASCII platforms, this means that the code points between 128 and 255 take on their Latin-1 (ISO-8859-1) meanings (which are the same as Unicode's). (Otherwise Perl considers their meanings to be undefined.) Thus, under this modifier, the ASCII platform effectively becomes a Unicode platform; and hence, for example, <tt>&quot;\w&quot;</tt> will match any of the more than 100_000 word characters in Unicode. 
 
- Unlike most locales, which are specific to a language and country pair, Unicode classifies all the characters that are letters <i>somewhere</i> in the world as <tt>&quot;\w&quot;</tt>. For example, your locale might not think that <tt>&quot;LATIN SMALL LETTER ETH&quot;</tt> is a letter (unless you happen to speak Icelandic), but Unicode does. Similarly, all the characters that are decimal digits somewhere in the world will match <tt>&quot;\d&quot;</tt>; this is hundreds, not 10, possible matches. And some of those digits look like some of the 10 <font SIZE="-1">ASCII</font> digits, but mean a different number, so a human could easily think a number is a different quantity than it really is. For example, <tt>&quot;BENGALI DIGIT FOUR&quot;</tt> (U+09EA) looks very much like an <tt>&quot;ASCII DIGIT EIGHT&quot;</tt> (U+0038), and <tt>&quot;LEPCHA DIGIT SIX&quot;</tt> (U+1C46) looks very much like an <tt>&quot;ASCII DIGIT FIVE&quot;</tt> (U+0035). And, <tt>&quot;\d+&quot;</tt>, may match strings of digits that are a mixture from different writing systems, creating a security issue. A fraudulent website, for example, could display the price of something using U+1C46, and it would appear to the user that something cost 500 units, but it really costs 600. A browser that enforced script runs (``Script Runs'') would prevent that fraudulent display. ``<b>num()</b>'' in Unicode::UCD can also be used to sort this out. Or the <tt>&quot;/a&quot;</tt> modifier can be used to force <tt>&quot;\d&quot;</tt> to match just the <font SIZE="-1">ASCII 0</font> through 9. 
+ Unlike most locales, which are specific to a language and country pair, Unicode classifies all the characters that are letters <i>somewhere</i> in the world as <tt>&quot;\w&quot;</tt>. For example, your locale might not think that <tt>&quot;LATIN SMALL LETTER ETH&quot;</tt> is a letter (unless you happen to speak Icelandic), but Unicode does. Similarly, all the characters that are decimal digits somewhere in the world will match <tt>&quot;\d&quot;</tt>; this is hundreds, not 10, possible matches. And some of those digits look like some of the 10 ASCII digits, but mean a different number, so a human could easily think a number is a different quantity than it really is. For example, <tt>&quot;BENGALI DIGIT FOUR&quot;</tt> (U+09EA) looks very much like an <tt>&quot;ASCII DIGIT EIGHT&quot;</tt> (U+0038), and <tt>&quot;LEPCHA DIGIT SIX&quot;</tt> (U+1C46) looks very much like an <tt>&quot;ASCII DIGIT FIVE&quot;</tt> (U+0035). And, <tt>&quot;\d+&quot;</tt>, may match strings of digits that are a mixture from different writing systems, creating a security issue. A fraudulent website, for example, could display the price of something using U+1C46, and it would appear to the user that something cost 500 units, but it really costs 600. A browser that enforced script runs (``Script Runs'') would prevent that fraudulent display. ``<b>num()</b>'' in Unicode::UCD can also be used to sort this out. Or the <tt>&quot;/a&quot;</tt> modifier can be used to force <tt>&quot;\d&quot;</tt> to match just the ASCII 0 through 9. 
 
  Also, under this modifier, case-insensitive matching works on the full set of Unicode characters. The <tt>&quot;KELVIN SIGN&quot;</tt>, for example matches the letters ``k'' and ``K''; and <tt>&quot;LATIN SMALL LIGATURE FF&quot;</tt> matches the sequence ``ff'', which, if you're not prepared, might make it look like a hexadecimal constant, presenting another potential security issue. See &lt;<a rel="nofollow" HREF="http://unicode.org/reports/tr36">http://unicode.org/reports/tr36</a>&gt; for a detailed discussion of Unicode security issues. 
 
@@ -333,9 +333,9 @@ $program = ~s{
  This modifier means to use the ``Default'' native rules of the platform except when there is cause to use Unicode rules instead, as follows:
 <dl>
 <dt>1.
-</dt><dd> the target string is encoded in <font SIZE="-1">UTF-8</font>; or
+</dt><dd> the target string is encoded in UTF-8; or
 </dd><dt>2.
-</dt><dd> the pattern is encoded in <font SIZE="-1">UTF-8</font>; or
+</dt><dd> the pattern is encoded in UTF-8; or
 </dd><dt>3.
 </dt><dd> the pattern explicitly mentions a code point that is above 255 (say by <tt>&quot;\x{100}&quot;</tt>); or
 </dd><dt>4.
@@ -352,9 +352,9 @@ $program = ~s{
 
  Another mnemonic for this modifier is ``Depends'', as the rules actually used depend on various things, and as a result you can get unexpected results. See ``The ''Unicode Bug&quot;&quot; in perlunicode. The Unicode Bug has become rather infamous, leading to yet another (without swearing) name for this modifier, ``Dodgy''. 
 
- Unless the pattern or string are encoded in <font SIZE="-1">UTF-8,</font> only <font SIZE="-1">ASCII</font> characters can match positively. 
+ Unless the pattern or string are encoded in UTF-8, only ASCII characters can match positively. 
 
- Here are some examples of how that works on an <font SIZE="-1">ASCII</font> platform: 
+ Here are some examples of how that works on an ASCII platform: 
 
  
 $str = "\xDF";
@@ -374,17 +374,17 @@ $str = ~ / ^\w / ;
 
  This modifier stands for ASCII-restrict (or ASCII-safe). This modifier may be doubled-up to increase its effect. 
 
- When it appears singly, it causes the sequences <tt>&quot;\d&quot;</tt>, <tt>&quot;\s&quot;</tt>, <tt>&quot;\w&quot;</tt>, and the Posix character classes to match only in the <font SIZE="-1">ASCII</font> range. They thus revert to their pre-5.6, pre-Unicode meanings. Under <tt>&quot;/a&quot;</tt>, <tt>&quot;\d&quot;</tt> always means precisely the digits <tt>&quot;0&quot;</tt> to <tt>&quot;9&quot;</tt>; <tt>&quot;\s&quot;</tt> means the five characters <tt>&quot;[ \f\n\r\t]&quot;</tt>, and starting in Perl v5.18, the vertical tab; <tt>&quot;\w&quot;</tt> means the 63 characters <tt>&quot;[A-Za-z0-9_]&quot;</tt>; and likewise, all the Posix classes such as <tt>&quot;[[:print:]]&quot;</tt> match only the appropriate ASCII-range characters. 
+ When it appears singly, it causes the sequences <tt>&quot;\d&quot;</tt>, <tt>&quot;\s&quot;</tt>, <tt>&quot;\w&quot;</tt>, and the Posix character classes to match only in the ASCII range. They thus revert to their pre-5.6, pre-Unicode meanings. Under <tt>&quot;/a&quot;</tt>, <tt>&quot;\d&quot;</tt> always means precisely the digits <tt>&quot;0&quot;</tt> to <tt>&quot;9&quot;</tt>; <tt>&quot;\s&quot;</tt> means the five characters <tt>&quot;[ \f\n\r\t]&quot;</tt>, and starting in Perl v5.18, the vertical tab; <tt>&quot;\w&quot;</tt> means the 63 characters <tt>&quot;[A-Za-z0-9_]&quot;</tt>; and likewise, all the Posix classes such as <tt>&quot;[[:print:]]&quot;</tt> match only the appropriate ASCII-range characters. 
 
  This modifier is useful for people who only incidentally use Unicode, and who do not wish to be burdened with its complexities and security concerns. 
 
- With <tt>&quot;/a&quot;</tt>, one can write <tt>&quot;\d&quot;</tt> with confidence that it will only match <font SIZE="-1">ASCII</font> characters, and should the need arise to match beyond <font SIZE="-1">ASCII,</font> you can instead use <tt>&quot;\p{Digit}&quot;</tt> (or <tt>&quot;\p{Word}&quot;</tt> for <tt>&quot;\w&quot;</tt>). There are similar <tt>&quot;\p{...}&quot;</tt> constructs that can match beyond <font SIZE="-1">ASCII</font> both white space (see ``Whitespace'' in perlrecharclass), and Posix classes (see ``<font SIZE="-1">POSIX</font> Character Classes'' in perlrecharclass). Thus, this modifier doesn't mean you can't use Unicode, it means that to get Unicode matching you must explicitly use a construct (<tt>&quot;\p{}&quot;</tt>, <tt>&quot;\P{}&quot;</tt>) that signals Unicode. 
+ With <tt>&quot;/a&quot;</tt>, one can write <tt>&quot;\d&quot;</tt> with confidence that it will only match ASCII characters, and should the need arise to match beyond ASCII, you can instead use <tt>&quot;\p{Digit}&quot;</tt> (or <tt>&quot;\p{Word}&quot;</tt> for <tt>&quot;\w&quot;</tt>). There are similar <tt>&quot;\p{...}&quot;</tt> constructs that can match beyond ASCII both white space (see ``Whitespace'' in perlrecharclass), and Posix classes (see ``POSIX Character Classes'' in perlrecharclass). Thus, this modifier doesn't mean you can't use Unicode, it means that to get Unicode matching you must explicitly use a construct (<tt>&quot;\p{}&quot;</tt>, <tt>&quot;\P{}&quot;</tt>) that signals Unicode. 
 
  As you would expect, this modifier causes, for example, <tt>&quot;\D&quot;</tt> to mean the same thing as <tt>&quot;[^0-9]&quot;</tt>; in fact, all non-ASCII characters match <tt>&quot;\D&quot;</tt>, <tt>&quot;\S&quot;</tt>, and <tt>&quot;\W&quot;</tt>. <tt>&quot;\b&quot;</tt> still means to match at the boundary between <tt>&quot;\w&quot;</tt> and <tt>&quot;\W&quot;</tt>, using the <tt>&quot;/a&quot;</tt> definitions of them (similarly for <tt>&quot;\B&quot;</tt>). 
 
- Otherwise, <tt>&quot;/a&quot;</tt> behaves like the <tt>&quot;/u&quot;</tt> modifier, in that case-insensitive matching uses Unicode rules; for example, ``k'' will match the Unicode <tt>&quot;\N{KELVIN SIGN}&quot;</tt> under <tt>&quot;/i&quot;</tt> matching, and code points in the Latin1 range, above <font SIZE="-1">ASCII</font> will have Unicode rules when it comes to case-insensitive matching. 
+ Otherwise, <tt>&quot;/a&quot;</tt> behaves like the <tt>&quot;/u&quot;</tt> modifier, in that case-insensitive matching uses Unicode rules; for example, ``k'' will match the Unicode <tt>&quot;\N{KELVIN SIGN}&quot;</tt> under <tt>&quot;/i&quot;</tt> matching, and code points in the Latin1 range, above ASCII will have Unicode rules when it comes to case-insensitive matching. 
 
- To forbid ASCII/non-ASCII matches (like ``k'' with <tt>&quot;\N{KELVIN SIGN}&quot;</tt>), specify the <tt>&quot;a&quot;</tt> twice, for example <tt>&quot;/aai&quot;</tt> or <tt>&quot;/aia&quot;</tt>. (The first occurrence of <tt>&quot;a&quot;</tt> restricts the <tt>&quot;\d&quot;</tt>, <i>etc</i>., and the second occurrence adds the <tt>&quot;/i&quot;</tt> restrictions.) But, note that code points outside the <font SIZE="-1">ASCII</font> range will use Unicode rules for <tt>&quot;/i&quot;</tt> matching, so the modifier doesn't really restrict things to just <font SIZE="-1">ASCII</font>; it just forbids the intermixing of <font SIZE="-1">ASCII</font> and non-ASCII. 
+ To forbid ASCII/non-ASCII matches (like ``k'' with <tt>&quot;\N{KELVIN SIGN}&quot;</tt>), specify the <tt>&quot;a&quot;</tt> twice, for example <tt>&quot;/aai&quot;</tt> or <tt>&quot;/aia&quot;</tt>. (The first occurrence of <tt>&quot;a&quot;</tt> restricts the <tt>&quot;\d&quot;</tt>, <i>etc</i>., and the second occurrence adds the <tt>&quot;/i&quot;</tt> restrictions.) But, note that code points outside the ASCII range will use Unicode rules for <tt>&quot;/i&quot;</tt> matching, so the modifier doesn't really restrict things to just ASCII; it just forbids the intermixing of ASCII and non-ASCII. 
 
  To summarize, this modifier provides protection for applications that don't wish to be exposed to all of Unicode. Specifying it twice gives added protection. 
 
@@ -550,7 +550,7 @@ pattern metacharacters until \E
 <dt>[1]
 </dt><dd> See ``Bracketed Character Classes'' in perlrecharclass for details.
 </dd><dt>[2]
-</dt><dd> See ``<font SIZE="-1">POSIX</font> Character Classes'' in perlrecharclass for details.
+</dt><dd> See ``POSIX Character Classes'' in perlrecharclass for details.
 </dd><dt>[3]
 </dt><dd> See ``Unicode Character Properties'' in perlunicode for details
 </dd><dt>[4]
@@ -560,7 +560,7 @@ pattern metacharacters until \E
 </dd><dt>[6]
 </dt><dd> See ``Extended Patterns'' below for details.
 </dd><dt>[7]
-</dt><dd> Note that <tt>&quot;\N&quot;</tt> has two meanings. When of the form <tt>&quot;\N{</tt>NAME<tt>}&quot;</tt>, it matches the character or character sequence whose name is <i></i><font SIZE="-1"><i>NAME</i></font><i></i>; and similarly when of the form <tt>&quot;\N{U+</tt>hex<tt>}&quot;</tt>, it matches the character whose Unicode code point is <i>hex</i>. Otherwise it matches any character but <tt>&quot;\n&quot;</tt>.
+</dt><dd> Note that <tt>&quot;\N&quot;</tt> has two meanings. When of the form <tt>&quot;\N{</tt>NAME<tt>}&quot;</tt>, it matches the character or character sequence whose name is <i></i><i>NAME</i><i></i>; and similarly when of the form <tt>&quot;\N{U+</tt>hex<tt>}&quot;</tt>, it matches the character whose Unicode code point is <i>hex</i>. Otherwise it matches any character but <tt>&quot;\n&quot;</tt>.
 </dd><dt>[8]
 </dt><dd> See ``Extended Bracketed Character Classes'' in perlrecharclass for details.</dd></dl>
  
@@ -646,7 +646,7 @@ pos = 6;
 
  Braces are required in referring to named capture groups, but are optional for absolute or relative numbered ones. Braces are safer when creating a regex by concatenating smaller strings. For example if you have <tt>&quot;qr/$a$b/&quot;</tt>, and <tt>$a</tt> contained <tt>&quot;\g1&quot;</tt>, and <tt>$b</tt> contained <tt>&quot;37&quot;</tt>, you would get <tt>&quot;/\g137/&quot;</tt> which is probably not what you intended. 
 
- The <tt>&quot;\g&quot;</tt> and <tt>&quot;\k&quot;</tt> notations were introduced in Perl 5.10.0. Prior to that there were no named nor relative numbered capture groups. Absolute numbered groups were referred to using <tt>&quot;\1&quot;</tt>, <tt>&quot;\2&quot;</tt>, <i>etc</i>., and this notation is still accepted (and likely always will be). But it leads to some ambiguities if there are more than 9 capture groups, as <tt>&quot;\10&quot;</tt> could mean either the tenth capture group, or the character whose ordinal in octal is 010 (a backspace in <font SIZE="-1">ASCII</font>). Perl resolves this ambiguity by interpreting <tt>&quot;\10&quot;</tt> as a backreference only if at least 10 left parentheses have opened before it. Likewise <tt>&quot;\11&quot;</tt> is a backreference only if at least 11 left parentheses have opened before it. And so on. <tt>&quot;\1&quot;</tt> through <tt>&quot;\9&quot;</tt> are always interpreted as backreferences. There are several examples below that illustrate these perils. You can avoid the ambiguity by always using <tt>&quot;\g{}&quot;</tt> or <tt>&quot;\g&quot;</tt> if you mean capturing groups; and for octal constants always using <tt>&quot;\o{}&quot;</tt>, or for <tt>&quot;\077&quot;</tt> and below, using 3 digits padded with leading zeros, since a leading zero implies an octal constant. 
+ The <tt>&quot;\g&quot;</tt> and <tt>&quot;\k&quot;</tt> notations were introduced in Perl 5.10.0. Prior to that there were no named nor relative numbered capture groups. Absolute numbered groups were referred to using <tt>&quot;\1&quot;</tt>, <tt>&quot;\2&quot;</tt>, <i>etc</i>., and this notation is still accepted (and likely always will be). But it leads to some ambiguities if there are more than 9 capture groups, as <tt>&quot;\10&quot;</tt> could mean either the tenth capture group, or the character whose ordinal in octal is 010 (a backspace in ASCII). Perl resolves this ambiguity by interpreting <tt>&quot;\10&quot;</tt> as a backreference only if at least 10 left parentheses have opened before it. Likewise <tt>&quot;\11&quot;</tt> is a backreference only if at least 11 left parentheses have opened before it. And so on. <tt>&quot;\1&quot;</tt> through <tt>&quot;\9&quot;</tt> are always interpreted as backreferences. There are several examples below that illustrate these perils. You can avoid the ambiguity by always using <tt>&quot;\g{}&quot;</tt> or <tt>&quot;\g&quot;</tt> if you mean capturing groups; and for octal constants always using <tt>&quot;\o{}&quot;</tt>, or for <tt>&quot;\077&quot;</tt> and below, using 3 digits padded with leading zeros, since a leading zero implies an octal constant. 
 
  The <tt>&quot;\</tt>digit<tt>&quot;</tt> notation also works in certain circumstances outside the pattern. See ``Warning on \1 Instead of <tt>$1</tt>'' below for details. 
 
@@ -705,9 +705,9 @@ s / ^([^] *)*([^] *) / $2 $1 / ;
 
  These special variables, like the <tt>&quot;%+&quot;</tt> hash and the numbered match variables (<tt>$1</tt>, <tt>$2</tt>, <tt>$3</tt>, <i>etc</i>.) are dynamically scoped until the end of the enclosing block or until the next successful match, whichever comes first. (See ``Compound Statements'' in perlsyn.) 
 
- <font SIZE="-1"><b>NOTE</b></font>: Failed matches in Perl do not reset the match variables, which makes it easier to write code that tests for a series of more specific cases and remembers the best match. 
+ <b>NOTE</b>: Failed matches in Perl do not reset the match variables, which makes it easier to write code that tests for a series of more specific cases and remembers the best match. 
 
- <font SIZE="-1"><b>WARNING</b></font>: If your code is to run on Perl 5.16 or earlier, beware that once Perl sees that you need one of <tt>$&amp;</tt>, <tt>&quot;$`&quot;</tt>, or <tt>&quot;$'&quot;</tt> anywhere in the program, it has to provide them for every pattern match. This may substantially slow your program. 
+ <b>WARNING</b>: If your code is to run on Perl 5.16 or earlier, beware that once Perl sees that you need one of <tt>$&amp;</tt>, <tt>&quot;$`&quot;</tt>, or <tt>&quot;$'&quot;</tt> anywhere in the program, it has to provide them for every pattern match. This may substantially slow your program. 
 
  Perl uses the same mechanism to produce <tt>$1</tt>, <tt>$2</tt>, <i>etc</i>, so you also pay a price for each pattern that contains capturing parentheses. (To avoid this cost while retaining the grouping behaviour, use the extended regular expression <tt>&quot;(?: ... )&quot;</tt> instead.) But if you never use <tt>$&amp;</tt>, <tt>&quot;$`&quot;</tt> or <tt>&quot;$'&quot;</tt>, then patterns <i>without</i> capturing parentheses will not be penalized. So avoid <tt>$&amp;</tt>, <tt>&quot;$'&quot;</tt>, and <tt>&quot;$`&quot;</tt> if you can, but if you can't (and some algorithms really appreciate them), once you've used them once, use them at will, because you've already paid the price. 
 
@@ -773,7 +773,7 @@ if (/ $pattern /) {
     ( (?i) blah ) \s+ \g1
 </pre> 
  will match <tt>&quot;blah&quot;</tt> in any case, some spaces, and an exact (<i>including the case</i>!) repetition of the previous word, assuming the <tt>&quot;/x&quot;</tt> modifier, and no <tt>&quot;/i&quot;</tt> modifier outside this group. 
- These modifiers do not carry over into named subpatterns called in the enclosing group. In other words, a pattern such as <tt>&quot;((?i)(?&amp;</tt>NAME<tt>))&quot;</tt> does not change the case-sensitivity of the <i></i><font SIZE="-1"><i>NAME</i></font><i></i> pattern. 
+ These modifiers do not carry over into named subpatterns called in the enclosing group. In other words, a pattern such as <tt>&quot;((?i)(?&amp;</tt>NAME<tt>))&quot;</tt> does not change the case-sensitivity of the <i></i><i>NAME</i><i></i> pattern. 
  A modifier is overridden by later occurrences of this construct in the same scope containing the same modifier, so that 
  <pre>
     /((?im)foo(?-m)bar)/
@@ -786,7 +786,7 @@ if (/ $pattern /) {
  <pre>
     /(?x)foo/x
 </pre> 
- <tt>&quot;/x&quot;</tt> but <font SIZE="-1">NOT</font> <tt>&quot;/xx&quot;</tt> is turned on for matching <tt>&quot;foo&quot;</tt>. (One might mistakenly think that since the inner <tt>&quot;(?x)&quot;</tt> is already in the scope of <tt>&quot;/x&quot;</tt>, that the result would effectively be the sum of them, yielding <tt>&quot;/xx&quot;</tt>. It doesn't work that way.) Similarly, doing something like <tt>&quot;(?xx-x)foo&quot;</tt> turns off all <tt>&quot;x&quot;</tt> behavior for matching <tt>&quot;foo&quot;</tt>, it is not that you subtract 1 <tt>&quot;x&quot;</tt> from 2 to get 1 <tt>&quot;x&quot;</tt> remaining. 
+ <tt>&quot;/x&quot;</tt> but NOT <tt>&quot;/xx&quot;</tt> is turned on for matching <tt>&quot;foo&quot;</tt>. (One might mistakenly think that since the inner <tt>&quot;(?x)&quot;</tt> is already in the scope of <tt>&quot;/x&quot;</tt>, that the result would effectively be the sum of them, yielding <tt>&quot;/xx&quot;</tt>. It doesn't work that way.) Similarly, doing something like <tt>&quot;(?xx-x)foo&quot;</tt> turns off all <tt>&quot;x&quot;</tt> behavior for matching <tt>&quot;foo&quot;</tt>, it is not that you subtract 1 <tt>&quot;x&quot;</tt> from 2 to get 1 <tt>&quot;x&quot;</tt> remaining. 
  Any of these modifiers can be set to apply globally to all regular expressions compiled within the scope of a <tt>&quot;use re&quot;</tt>. See ``'/flags' mode'' in re. 
  Starting in Perl 5.14, a <tt>&quot;^&quot;</tt> (caret or circumflex accent) immediately after the <tt>&quot;?&quot;</tt> is a shorthand equivalent to <tt>&quot;d-imnsx&quot;</tt>. Flags (except <tt>&quot;d&quot;</tt>) may follow the caret to override it. But a minus sign is not legal with it. 
  Note that the <tt>&quot;a&quot;</tt>, <tt>&quot;d&quot;</tt>, <tt>&quot;l&quot;</tt>, <tt>&quot;p&quot;</tt>, and <tt>&quot;u&quot;</tt> modifiers are special in that they can only be enabled, not disabled, and the <tt>&quot;a&quot;</tt>, <tt>&quot;d&quot;</tt>, <tt>&quot;l&quot;</tt>, and <tt>&quot;u&quot;</tt> modifiers are mutually exclusive: specifying one de-specifies the others, and a maximum of one (or two <tt>&quot;a&quot;</tt>'s) may appear in the construct. Thus, for example, <tt>&quot;(?-p)&quot;</tt> will warn when compiled under <tt>&quot;use warnings&quot;</tt>; <tt>&quot;(?-d:...)&quot;</tt> and <tt>&quot;(?dl:...)&quot;</tt> are fatal errors. 
@@ -868,7 +868,7 @@ if (/ $pattern /) {
 </dd><dt>&quot;(*nla:<i>pattern</i>)&quot;
 </dt><dd>
 </dd><dt>&quot;(*negative_lookahead:<i>pattern</i>)&quot;
-</dt><dd> A zero-width negative lookahead assertion. For example <tt>&quot;/foo(?!bar)/&quot;</tt> matches any occurrence of ``foo'' that isn't followed by ``bar''. Note however that lookahead and lookbehind are <font SIZE="-1">NOT</font> the same thing. You cannot use this for lookbehind. 
+</dt><dd> A zero-width negative lookahead assertion. For example <tt>&quot;/foo(?!bar)/&quot;</tt> matches any occurrence of ``foo'' that isn't followed by ``bar''. Note however that lookahead and lookbehind are NOT the same thing. You cannot use this for lookbehind. 
  If you are looking for a ``bar'' that isn't preceded by a ``foo'', <tt>&quot;/(?!foo)bar/&quot;</tt> will not do what you want. That's because the <tt>&quot;(?!foo)&quot;</tt> is just saying that the next thing cannot be ``foo''--and it's not, it's a ``bar'', so ``foobar'' will match. Use lookbehind instead (see below). 
  The alphabetic forms are experimental; using them yields a warning in the <tt>&quot;experimental::alpha_assertions&quot;</tt> category.
 </dd><dt>&quot;(?&lt;=<i>pattern</i>)&quot;
@@ -919,7 +919,7 @@ if (/ $pattern /) {
 
  The forms <tt>&quot;(?'</tt>NAME<tt>'</tt>pattern<tt>)&quot;</tt> and <tt>&quot;(?&lt;</tt>NAME<tt>&gt;</tt>pattern<tt>)&quot;</tt> are equivalent. 
 
- <font SIZE="-1"><b>NOTE:</b></font> While the notation of this construct is the same as the similar function in .NET regexes, the behavior is not. In Perl the groups are numbered sequentially regardless of being named or not. Thus in the pattern 
+ <b>NOTE:</b> While the notation of this construct is the same as the similar function in .NET regexes, the behavior is not. In Perl the groups are numbered sequentially regardless of being named or not. Thus in the pattern 
 
  <pre>
   /(x)(?&lt;foo&gt;y)(z)/
@@ -927,9 +927,9 @@ if (/ $pattern /) {
 
  <tt>$+{foo}</tt> will be the same as <tt>$2</tt>, and <tt>$3</tt> will contain 'z' instead of the opposite which is what a .NET regex hacker might expect. 
 
- Currently <i></i><font SIZE="-1"><i>NAME</i></font><i></i> is restricted to simple identifiers only. In other words, it must match <tt>&quot;/^[_A-Za-z][_A-Za-z0-9]*\z/&quot;</tt> or its Unicode extension (see utf8), though it isn't extended by the locale (see perllocale). 
+ Currently <i></i><i>NAME</i><i></i> is restricted to simple identifiers only. In other words, it must match <tt>&quot;/^[_A-Za-z][_A-Za-z0-9]*\z/&quot;</tt> or its Unicode extension (see utf8), though it isn't extended by the locale (see perllocale). 
 
- <font SIZE="-1"><b>NOTE:</b></font> In order to make things easier for programmers with experience with the Python or <font SIZE="-1">PCRE</font> regex engines, the pattern <tt>&quot;(?P&lt;</tt>NAME<tt>&gt;</tt>pattern<tt>)&quot;</tt> may be used instead of <tt>&quot;(?&lt;</tt>NAME<tt>&gt;</tt>pattern<tt>)&quot;</tt>; however this form does not support the use of single quotes as a delimiter for the name.
+ <b>NOTE:</b> In order to make things easier for programmers with experience with the Python or PCRE regex engines, the pattern <tt>&quot;(?P&lt;</tt>NAME<tt>&gt;</tt>pattern<tt>)&quot;</tt> may be used instead of <tt>&quot;(?&lt;</tt>NAME<tt>&gt;</tt>pattern<tt>)&quot;</tt>; however this form does not support the use of single quotes as a delimiter for the name.
 </dd><dt>&quot;\k&lt;<i>NAME</i>&gt;&quot;
 </dt><dd>
 </dd><dt>&quot;\k'<i>NAME</i>'&quot;
@@ -939,9 +939,9 @@ if (/ $pattern /) {
 
  Both forms are equivalent. 
 
- <font SIZE="-1"><b>NOTE:</b></font> In order to make things easier for programmers with experience with the Python or <font SIZE="-1">PCRE</font> regex engines, the pattern <tt>&quot;(?P=</tt>NAME<tt>)&quot;</tt> may be used instead of <tt>&quot;\k&lt;</tt>NAME<tt>&gt;&quot;</tt>.
+ <b>NOTE:</b> In order to make things easier for programmers with experience with the Python or PCRE regex engines, the pattern <tt>&quot;(?P=</tt>NAME<tt>)&quot;</tt> may be used instead of <tt>&quot;\k&lt;</tt>NAME<tt>&gt;&quot;</tt>.
 </dd><dt>&quot;(?{ <i>code</i> })&quot;
-</dt><dd> <font SIZE="-1"><b>WARNING</b></font>: Using this feature safely requires that you understand its limitations. Code executed that has side effects may not perform identically from version to version due to the effect of future optimisations in the regex engine. For more information on this, see ``Embedded Code Execution Frequency''. 
+</dt><dd> <b>WARNING</b>: Using this feature safely requires that you understand its limitations. Code executed that has side effects may not perform identically from version to version due to the effect of future optimisations in the regex engine. For more information on this, see ``Embedded Code Execution Frequency''. 
 
  This zero-width assertion executes any embedded Perl code. It always succeeds, and its return value is set as <tt>$^R</tt>. 
 
@@ -958,7 +958,7 @@ if (/ $pattern /) {
     f('{'); })/def/
  
 
- Even in a pattern that is interpolated and compiled at run-time, literal code blocks will be compiled once, at perl compile time; the following prints ``<font SIZE="-1">ABCD'':</font> 
+ Even in a pattern that is interpolated and compiled at run-time, literal code blocks will be compiled once, at perl compile time; the following prints ``ABCD'': 
 
  
 print "D";
@@ -1055,11 +1055,11 @@ $_ = "The brown fox jumps over the lazy dog";
   print "color = $color, animal = $animal\n";
 
 </dd><dt>&quot;(??{ <i>code</i> })&quot;
-</dt><dd> <font SIZE="-1"><b>WARNING</b></font>: Using this feature safely requires that you understand its limitations. Code executed that has side effects may not perform identically from version to version due to the effect of future optimisations in the regex engine. For more information on this, see ``Embedded Code Execution Frequency''. 
+</dt><dd> <b>WARNING</b>: Using this feature safely requires that you understand its limitations. Code executed that has side effects may not perform identically from version to version due to the effect of future optimisations in the regex engine. For more information on this, see ``Embedded Code Execution Frequency''. 
 
  This is a ``postponed'' regular subexpression. It behaves in <i>exactly</i> the same way as a <tt>&quot;(?{ </tt>code<tt> })&quot;</tt> code block as described above, except that its return value, rather than being assigned to <tt>$^R</tt>, is treated as a pattern, compiled if it's a string (or used as-is if its a qr// object), then matched as if it were inserted instead of this construct. 
 
- During the matching of this sub-pattern, it has its own set of captures which are valid during the sub-match, but are discarded once control returns to the main pattern. For example, the following matches, with the inner pattern capturing ``B'' and matching ``<font SIZE="-1">BB'',</font> while the outer pattern captures ``A''; 
+ During the matching of this sub-pattern, it has its own set of captures which are valid during the sub-match, but are discarded once control returns to the main pattern. For example, the following matches, with the inner pattern capturing ``B'' and matching ``BB'', while the outer pattern captures ``A''; 
 
  
 my $inner = '(.)\1';
@@ -1098,7 +1098,7 @@ my $inner = '(.)\1';
 
  Similar to <tt>&quot;(??{ </tt>code<tt> })&quot;</tt> except that it does not involve executing any code or potentially compiling a returned pattern string; instead it treats the part of the current pattern contained within a specified capture group as an independent pattern that must match at the current position. Also different is the treatment of capture buffers, unlike <tt>&quot;(??{ </tt>code<tt> })&quot;</tt> recursive patterns have access to their caller's match state, so one can use backreferences safely. 
 
- <i></i><font SIZE="-1"><i>PARNO</i></font><i></i> is a sequence of digits (not starting with 0) whose value reflects the paren-number of the capture group to recurse to. <tt>&quot;(?R)&quot;</tt> recurses to the beginning of the whole pattern. <tt>&quot;(?0)&quot;</tt> is an alternate syntax for <tt>&quot;(?R)&quot;</tt>. If <i></i><font SIZE="-1"><i>PARNO</i></font><i></i> is preceded by a plus or minus sign then it is assumed to be relative, with negative numbers indicating preceding capture groups and positive ones following. Thus <tt>&quot;(?-1)&quot;</tt> refers to the most recently declared group, and <tt>&quot;(?+1)&quot;</tt> indicates the next group to be declared. Note that the counting for relative recursion differs from that of relative backreferences, in that with recursion unclosed groups <b>are</b> included. 
+ <i></i><i>PARNO</i><i></i> is a sequence of digits (not starting with 0) whose value reflects the paren-number of the capture group to recurse to. <tt>&quot;(?R)&quot;</tt> recurses to the beginning of the whole pattern. <tt>&quot;(?0)&quot;</tt> is an alternate syntax for <tt>&quot;(?R)&quot;</tt>. If <i></i><i>PARNO</i><i></i> is preceded by a plus or minus sign then it is assumed to be relative, with negative numbers indicating preceding capture groups and positive ones following. Thus <tt>&quot;(?-1)&quot;</tt> refers to the most recently declared group, and <tt>&quot;(?+1)&quot;</tt> indicates the next group to be declared. Note that the counting for relative recursion differs from that of relative backreferences, in that with recursion unclosed groups <b>are</b> included. 
 
  The following pattern matches a function <tt>&quot;foo()&quot;</tt> which may contain balanced parentheses as the argument. 
 
@@ -1148,13 +1148,13 @@ my $inner = '(.)\1';
     }
  
 
- <b>Note</b> that this pattern does not behave the same way as the equivalent <font SIZE="-1">PCRE</font> or Python construct of the same form. In Perl you can backtrack into a recursed group, in <font SIZE="-1">PCRE</font> and Python the recursed into group is treated as atomic. Also, modifiers are resolved at compile time, so constructs like <tt>&quot;(?i:(?1))&quot;</tt> or <tt>&quot;(?:(?i)(?1))&quot;</tt> do not affect how the sub-pattern will be processed.
+ <b>Note</b> that this pattern does not behave the same way as the equivalent PCRE or Python construct of the same form. In Perl you can backtrack into a recursed group, in PCRE and Python the recursed into group is treated as atomic. Also, modifiers are resolved at compile time, so constructs like <tt>&quot;(?i:(?1))&quot;</tt> or <tt>&quot;(?:(?i)(?1))&quot;</tt> do not affect how the sub-pattern will be processed.
 </dd><dt>&quot;(?&amp;<i>NAME</i>)&quot;
 </dt><dd> Recurse to a named subpattern. Identical to <tt>&quot;(?</tt>PARNO<tt>)&quot;</tt> except that the parenthesis to recurse to is determined by name. If multiple parentheses have the same name, then it recurses to the leftmost. 
 
  It is an error to refer to a name that is not declared somewhere in the pattern. 
 
- <font SIZE="-1"><b>NOTE:</b></font> In order to make things easier for programmers with experience with the Python or <font SIZE="-1">PCRE</font> regex engines the pattern <tt>&quot;(?P&gt;</tt>NAME<tt>)&quot;</tt> may be used instead of <tt>&quot;(?&amp;</tt>NAME<tt>)&quot;</tt>.
+ <b>NOTE:</b> In order to make things easier for programmers with experience with the Python or PCRE regex engines the pattern <tt>&quot;(?P&gt;</tt>NAME<tt>)&quot;</tt> may be used instead of <tt>&quot;(?&amp;</tt>NAME<tt>)&quot;</tt>.
 </dd><dt>&quot;(?(<i>condition</i>)<i>yes-pattern</i>|<i>no-pattern</i>)&quot;
 </dt><dd>
 </dd><dt>&quot;(?(<i>condition</i>)<i>yes-pattern</i>)&quot;
@@ -1211,7 +1211,7 @@ if ((caller(0))[3] eq 'subname') {
      }x
  matches a chunk of non-parentheses, possibly included in parentheses themselves. 
  A special form is the <tt>&quot;(DEFINE)&quot;</tt> predicate, which never executes its yes-pattern directly, and does not allow a no-pattern. This allows one to define subpatterns which will be executed only by the recursion mechanism. This way, you can define a set of regular expression rules that can be bundled into any pattern you choose. 
- It is recommended that for this usage you put the <font SIZE="-1">DEFINE</font> block at the end of the pattern, and that you name any subpatterns defined within it. 
+ It is recommended that for this usage you put the DEFINE block at the end of the pattern, and that you name any subpatterns defined within it. 
  Also, it's worth noting that patterns defined this way probably will not be as efficient, as the optimizer is not very clever about handling them. 
  An example of how this might be used is as follows: 
  <pre>
@@ -1222,7 +1222,7 @@ if ((caller(0))[3] eq 'subname') {
    )/x
 </pre> 
  Note that capture groups matched inside of recursion are not accessible after the recursion returns, so the extra layer of capturing groups is necessary. Thus <tt>$+{NAME_PAT}</tt> would not be defined even though <tt>$+{NAME}</tt> would be. 
- Finally, keep in mind that subpatterns created inside a <font SIZE="-1">DEFINE</font> block count towards the absolute and relative number of captures, so this: 
+ Finally, keep in mind that subpatterns created inside a DEFINE block count towards the absolute and relative number of captures, so this: 
  <pre>
     my @captures = &quot;a&quot; =~ /(.)                  # First capture
                            (?(DEFINE)
@@ -1322,7 +1322,7 @@ m{ \(
 
 <h3>Backtracking</h3>
 
- <font SIZE="-1">NOTE:</font> This section presents an abstract approximation of regular expression behavior. For a more rigorous (and complicated) view of the rules involved in selecting a match among possible alternatives, see ``Combining <font SIZE="-1">RE</font> Pieces''. 
+ NOTE: This section presents an abstract approximation of regular expression behavior. For a more rigorous (and complicated) view of the rules involved in selecting a match among possible alternatives, see ``Combining RE Pieces''. 
 
  A fundamental feature of regular expression matching involves the notion called <i>backtracking</i>, which is currently used (when needed) by all regular non-possessive expression quantifiers, namely <tt>&quot;*&quot;</tt>, <tt>&quot;*?&quot;</tt>, <tt>&quot;+&quot;</tt>, <tt>&quot;+?&quot;</tt>, <tt>&quot;{n,m}&quot;</tt>, and <tt>&quot;{n,m}?&quot;</tt>. Backtracking is often optimized internally, but the general principle outlined here is valid. 
 
@@ -1445,11 +1445,11 @@ $y = 'ABC445';
     4: got ABC
 </pre> 
 
- You might have expected test 3 to fail because it seems to a more general purpose version of test 1. The important difference between them is that test 3 contains a quantifier (<tt>&quot;\D*&quot;</tt>) and so can use backtracking, whereas test 1 will not. What's happening is that you've asked &quot;Is it true that at the start of <tt>$x</tt>, following 0 or more non-digits, you have something that's not 123?&quot; If the pattern matcher had let <tt>&quot;\D*&quot;</tt> expand to ``<font SIZE="-1">ABC'',</font> this would have caused the whole pattern to fail. 
+ You might have expected test 3 to fail because it seems to a more general purpose version of test 1. The important difference between them is that test 3 contains a quantifier (<tt>&quot;\D*&quot;</tt>) and so can use backtracking, whereas test 1 will not. What's happening is that you've asked &quot;Is it true that at the start of <tt>$x</tt>, following 0 or more non-digits, you have something that's not 123?&quot; If the pattern matcher had let <tt>&quot;\D*&quot;</tt> expand to ``ABC'', this would have caused the whole pattern to fail. 
 
- The search engine will initially match <tt>&quot;\D*&quot;</tt> with ``<font SIZE="-1">ABC''.</font> Then it will try to match <tt>&quot;(?!123)&quot;</tt> with ``123'', which fails. But because a quantifier (<tt>&quot;\D*&quot;</tt>) has been used in the regular expression, the search engine can backtrack and retry the match differently in the hope of matching the complete regular expression. 
+ The search engine will initially match <tt>&quot;\D*&quot;</tt> with ``ABC''. Then it will try to match <tt>&quot;(?!123)&quot;</tt> with ``123'', which fails. But because a quantifier (<tt>&quot;\D*&quot;</tt>) has been used in the regular expression, the search engine can backtrack and retry the match differently in the hope of matching the complete regular expression. 
 
- The pattern really, <i>really</i> wants to succeed, so it uses the standard pattern back-off-and-retry and lets <tt>&quot;\D*&quot;</tt> expand to just ``<font SIZE="-1">AB''</font> this time. Now there's indeed something following ``<font SIZE="-1">AB''</font> that is not ``123''. It's ``C123'', which suffices. 
+ The pattern really, <i>really</i> wants to succeed, so it uses the standard pattern back-off-and-retry and lets <tt>&quot;\D*&quot;</tt> expand to just ``AB'' this time. Now there's indeed something following ``AB'' that is not ``123''. It's ``C123'', which suffices. 
 
  We can deal with this by using both an assertion and a negation. We'll say that the first part in <tt>$1</tt> must be followed both by a digit and by something that's not ``123''. Remember that the lookaheads are zero-width expressions---they only look, but don't consume any of the string in their match. So rewriting this way produces what you'd expect; that is, case 5 will fail, but case 6 succeeds: 
 
@@ -1459,9 +1459,9 @@ $y = 'ABC445';
     6 : got ABC
  
 
- In other words, the two zero-width assertions next to each other work as though they're ANDed together, just as you'd use any built-in assertions: <tt>&quot;/^$/&quot;</tt> matches only if you're at the beginning of the line <font SIZE="-1">AND</font> the end of the line simultaneously. The deeper underlying truth is that juxtaposition in regular expressions always means <font SIZE="-1">AND,</font> except when you write an explicit <font SIZE="-1">OR</font> using the vertical bar. <tt>&quot;/ab/&quot;</tt> means match ``a'' <font SIZE="-1">AND</font> (then) match ``b'', although the attempted matches are made at different positions because ``a'' is not a zero-width assertion, but a one-width assertion. 
+ In other words, the two zero-width assertions next to each other work as though they're ANDed together, just as you'd use any built-in assertions: <tt>&quot;/^$/&quot;</tt> matches only if you're at the beginning of the line AND the end of the line simultaneously. The deeper underlying truth is that juxtaposition in regular expressions always means AND, except when you write an explicit OR using the vertical bar. <tt>&quot;/ab/&quot;</tt> means match ``a'' AND (then) match ``b'', although the attempted matches are made at different positions because ``a'' is not a zero-width assertion, but a one-width assertion. 
 
- <font SIZE="-1"><b>WARNING</b></font>: Particularly complicated regular expressions can take exponential time to solve because of the immense number of possible ways they can use backtracking to try for a match. For example, without internal optimizations done by the regular expression engine, this will take a painfully long time to run: 
+ <b>WARNING</b>: Particularly complicated regular expressions can take exponential time to solve because of the immense number of possible ways they can use backtracking to try for a match. For example, without internal optimizations done by the regular expression engine, this will take a painfully long time to run: 
 
  
 'aaaaaaaaaaaa' = ~ / ((a{0, 5}){0, 5}) *[c] /
@@ -1503,7 +1503,7 @@ $y = 'ABC445';
 
  (See &quot;<tt>&quot;(?&gt;</tt>pattern<tt>)&quot;</tt>&quot;.) 
 
- In Taiwan, Japan, and Korea, it is common for text to have a mixture of characters from their native scripts and base Chinese. Perl follows Unicode's <font SIZE="-1">UTS 39</font> (&lt;<a rel="nofollow" HREF="http://unicode.org/reports/tr39/">http://unicode.org/reports/tr39/</a>&gt;) Unicode Security Mechanisms in allowing such mixtures. For example, the Japanese scripts Katakana and Hiragana are commonly mixed together in practice, along with some Chinese characters, and hence are treated as being in a single script run by Perl. 
+ In Taiwan, Japan, and Korea, it is common for text to have a mixture of characters from their native scripts and base Chinese. Perl follows Unicode's UTS 39 (&lt;<a rel="nofollow" HREF="http://unicode.org/reports/tr39/">http://unicode.org/reports/tr39/</a>&gt;) Unicode Security Mechanisms in allowing such mixtures. For example, the Japanese scripts Katakana and Hiragana are commonly mixed together in practice, along with some Chinese characters, and hence are treated as being in a single script run by Perl. 
 
  The rules used for matching decimal digits are slightly stricter. Many scripts have their own sets of digits equivalent to the Western <tt>0</tt> through <tt>9</tt> ones. A few, such as Arabic, have more than one set. For a string to be considered a script run, all digits in it must come from the same set of ten, as determined by the first digit encountered. As an example, 
 
@@ -1519,13 +1519,13 @@ $y = 'ABC445';
 
  ``Inherited'' is applied to characters that modify another, such as an accent of some type. These are considered to be in the script of the master character, and so never cause a script run to not match. 
 
- The other one is ``Common''. This consists of mostly punctuation, emoji, and characters used in mathematics and music, the <font SIZE="-1">ASCII</font> digits <tt>0</tt> through <tt>9</tt>, and full-width forms of these digits. These characters can appear intermixed in text in many of the world's scripts. These also don't cause a script run to not match. But like other scripts, all digits in a run must come from the same set of 10. 
+ The other one is ``Common''. This consists of mostly punctuation, emoji, and characters used in mathematics and music, the ASCII digits <tt>0</tt> through <tt>9</tt>, and full-width forms of these digits. These characters can appear intermixed in text in many of the world's scripts. These also don't cause a script run to not match. But like other scripts, all digits in a run must come from the same set of 10. 
 
  This construct is non-capturing. You can add parentheses to <i>pattern</i> to capture, if desired. You will have to do this if you plan to use ``(*ACCEPT) (*ACCEPT:arg)'' and not have it bypass the script run checking. 
 
  This feature is experimental, and the exact syntax and details of operation are subject to change; using it yields a warning in the <tt>&quot;experimental::script_run&quot;</tt> category. 
 
- The <tt>&quot;Script_Extensions&quot;</tt> property as modified by <font SIZE="-1">UTS 39</font> (&lt;<a rel="nofollow" HREF="http://unicode.org/reports/tr39/">http://unicode.org/reports/tr39/</a>&gt;) is used as the basis for this feature. 
+ The <tt>&quot;Script_Extensions&quot;</tt> property as modified by UTS 39 (&lt;<a rel="nofollow" HREF="http://unicode.org/reports/tr39/">http://unicode.org/reports/tr39/</a>&gt;) is used as the basis for this feature. 
 
  To summarize,
 <dl>
@@ -1540,7 +1540,7 @@ $y = 'ABC445';
  This currently means that all code points in the sequence have been assigned by Unicode to be characters that aren't private use nor surrogate code points.
 </dd><dt>2.
 </dt><dd> All characters in the sequence come from the Common script and/or the Inherited script and/or a single other script. 
- The script of a character is determined by the <tt>&quot;Script_Extensions&quot;</tt> property as modified by <font SIZE="-1">UTS 39</font> (&lt;<a rel="nofollow" HREF="http://unicode.org/reports/tr39/">http://unicode.org/reports/tr39/</a>&gt;), as described above.
+ The script of a character is determined by the <tt>&quot;Script_Extensions&quot;</tt> property as modified by UTS 39 (&lt;<a rel="nofollow" HREF="http://unicode.org/reports/tr39/">http://unicode.org/reports/tr39/</a>&gt;), as described above.
 </dd><dt>3.
 </dt><dd> All decimal digits in the sequence come from the same block of 10 consecutive digits.</dd></dl>
 </dl>
@@ -1555,11 +1555,11 @@ $y = 'ABC445';
 
  Any pattern containing a special backtracking verb that allows an argument has the special behaviour that when executed it sets the current package's <tt>$REGERROR</tt> and <tt>$REGMARK</tt> variables. When doing so the following rules apply: 
 
- On failure, the <tt>$REGERROR</tt> variable will be set to the <i>arg</i> value of the verb pattern, if the verb was involved in the failure of the match. If the <i>arg</i> part of the pattern was omitted, then <tt>$REGERROR</tt> will be set to the name of the last <tt>&quot;(*MARK:</tt>NAME<tt>)&quot;</tt> pattern executed, or to <font SIZE="-1">TRUE</font> if there was none. Also, the <tt>$REGMARK</tt> variable will be set to <font SIZE="-1">FALSE.</font> 
+ On failure, the <tt>$REGERROR</tt> variable will be set to the <i>arg</i> value of the verb pattern, if the verb was involved in the failure of the match. If the <i>arg</i> part of the pattern was omitted, then <tt>$REGERROR</tt> will be set to the name of the last <tt>&quot;(*MARK:</tt>NAME<tt>)&quot;</tt> pattern executed, or to TRUE if there was none. Also, the <tt>$REGMARK</tt> variable will be set to FALSE. 
 
- On a successful match, the <tt>$REGERROR</tt> variable will be set to <font SIZE="-1">FALSE,</font> and the <tt>$REGMARK</tt> variable will be set to the name of the last <tt>&quot;(*MARK:</tt>NAME<tt>)&quot;</tt> pattern executed. See the explanation for the <tt>&quot;(*MARK:</tt>NAME<tt>)&quot;</tt> verb below for more details. 
+ On a successful match, the <tt>$REGERROR</tt> variable will be set to FALSE, and the <tt>$REGMARK</tt> variable will be set to the name of the last <tt>&quot;(*MARK:</tt>NAME<tt>)&quot;</tt> pattern executed. See the explanation for the <tt>&quot;(*MARK:</tt>NAME<tt>)&quot;</tt> verb below for more details. 
 
- <font SIZE="-1"><b>NOTE:</b></font> <tt>$REGERROR</tt> and <tt>$REGMARK</tt> are not magic variables like <tt>$1</tt> and most other regex-related variables. They are not local to a scope, nor readonly, but instead are volatile package variables similar to <tt>$AUTOLOAD</tt>. They are set in the package containing the code that <i>executed</i> the regex (rather than the one that compiled it, where those differ). If necessary, you can use <tt>&quot;local&quot;</tt> to localize changes to these variables to a specific scope before executing a regex. 
+ <b>NOTE:</b> <tt>$REGERROR</tt> and <tt>$REGMARK</tt> are not magic variables like <tt>$1</tt> and most other regex-related variables. They are not local to a scope, nor readonly, but instead are volatile package variables similar to <tt>$AUTOLOAD</tt>. They are set in the package containing the code that <i>executed</i> the regex (rather than the one that compiled it, where those differ). If necessary, you can use <tt>&quot;local&quot;</tt> to localize changes to these variables to a specific scope before executing a regex. 
 
  If a pattern does not contain a special backtracking verb that allows an argument, then <tt>$REGERROR</tt> and <tt>$REGMARK</tt> are not touched at all.
 <dl>
@@ -1611,7 +1611,7 @@ print "Count=$count\n";
 </pre> 
  Once the 'aaab' at the start of the string has matched, and the <tt>&quot;(*SKIP)&quot;</tt> executed, the next starting point will be where the cursor was when the <tt>&quot;(*SKIP)&quot;</tt> was executed.
 </dd><dt>&quot;(*MARK:<i>NAME</i>)&quot; &quot;(*:<i>NAME</i>)&quot;
-</dt><dd> This zero-width pattern can be used to mark the point reached in a string when a certain part of the pattern has been successfully matched. This mark may be given a name. A later <tt>&quot;(*SKIP)&quot;</tt> pattern will then skip forward to that point if backtracked into on failure. Any number of <tt>&quot;(*MARK)&quot;</tt> patterns are allowed, and the <i></i><font SIZE="-1"><i>NAME</i></font><i></i> portion may be duplicated. 
+</dt><dd> This zero-width pattern can be used to mark the point reached in a string when a certain part of the pattern has been successfully matched. This mark may be given a name. A later <tt>&quot;(*SKIP)&quot;</tt> pattern will then skip forward to that point if backtracked into on failure. Any number of <tt>&quot;(*MARK)&quot;</tt> patterns are allowed, and the <i></i><i>NAME</i><i></i> portion may be duplicated. 
  In addition to interacting with the <tt>&quot;(*SKIP)&quot;</tt> pattern, <tt>&quot;(*MARK:</tt>NAME<tt>)&quot;</tt> can be used to ``label'' a pattern branch, so that after matching, the program can determine which branches of the pattern were involved in the match. 
  When a match is successful, the <tt>$REGMARK</tt> variable will be set to the name of the most recently executed <tt>&quot;(*MARK:</tt>NAME<tt>)&quot;</tt> that was involved in the match. 
  This can be used to determine which branch of a pattern was matched without using a separate capture group for each branch, which in turn can result in a performance improvement, as perl cannot optimize <tt>&quot;/(?:(x)|(y)|(z))/&quot;</tt> as efficiently as something like <tt>&quot;/(?:x(*MARK:x)|y(*MARK:y)|z(*MARK:z))/&quot;</tt>. 
@@ -1624,7 +1624,7 @@ print "Count=$count\n";
  <pre>
   ( COND (*THEN) FOO | COND2 (*THEN) BAR | COND3 (*THEN) BAZ )
 </pre> 
- Note that if this operator is used and <font SIZE="-1">NOT</font> inside of an alternation then it acts exactly like the <tt>&quot;(*PRUNE)&quot;</tt> operator. 
+ Note that if this operator is used and NOT inside of an alternation then it acts exactly like the <tt>&quot;(*PRUNE)&quot;</tt> operator. 
  <pre>
   / A (*PRUNE) B /
 </pre> 
@@ -1660,7 +1660,7 @@ print "Count=$count\n";
  <pre>
   'AB' =~ /(A (A|B(*ACCEPT)|C) D)(E)/x;
 </pre> 
- will match, and <tt>$1</tt> will be <tt>&quot;AB&quot;</tt> and <tt>$2</tt> will be <tt>&quot;B&quot;</tt>, <tt>$3</tt> will not be set. If another branch in the inner parentheses was matched, such as in the string '<font SIZE="-1">ACDE</font>', then the <tt>&quot;D&quot;</tt> and <tt>&quot;E&quot;</tt> would have to be matched as well. 
+ will match, and <tt>$1</tt> will be <tt>&quot;AB&quot;</tt> and <tt>$2</tt> will be <tt>&quot;B&quot;</tt>, <tt>$3</tt> will not be set. If another branch in the inner parentheses was matched, such as in the string 'ACDE', then the <tt>&quot;D&quot;</tt> and <tt>&quot;E&quot;</tt> would have to be matched as well. 
  You can provide an argument, which will be available in the var <tt>$REGMARK</tt> after the match completes.</dd></dl>
 </dl>
 
@@ -1676,7 +1676,7 @@ print "Count=$count\n";
     $pattern =~ s/(\W)/\\\1/g;
 </pre> 
 
- This is grandfathered (for \1 to \9) for the <font SIZE="-1">RHS</font> of a substitute to avoid shocking the <b>sed</b> addicts, but it's a dirty habit to get into. That's because in PerlThink, the righthand side of an <tt>&quot;s///&quot;</tt> is a double-quoted string. <tt>&quot;\1&quot;</tt> in the usual double-quoted string means a control-A. The customary Unix meaning of <tt>&quot;\1&quot;</tt> is kludged in for <tt>&quot;s///&quot;</tt>. However, if you get into the habit of doing that, you get yourself into trouble if you then add an <tt>&quot;/e&quot;</tt> modifier. 
+ This is grandfathered (for \1 to \9) for the RHS of a substitute to avoid shocking the <b>sed</b> addicts, but it's a dirty habit to get into. That's because in PerlThink, the righthand side of an <tt>&quot;s///&quot;</tt> is a double-quoted string. <tt>&quot;\1&quot;</tt> in the usual double-quoted string means a control-A. The customary Unix meaning of <tt>&quot;\1&quot;</tt> is kludged in for <tt>&quot;s///&quot;</tt>. However, if you get into the habit of doing that, you get yourself into trouble if you then add an <tt>&quot;/e&quot;</tt> modifier. 
 
  <pre>
     s/(\d+)/ \1 + 1 /eg;            # causes warning under -w
@@ -1692,7 +1692,7 @@ print "Count=$count\n";
 
 <h3>Repeated Patterns Matching a Zero-length Substring</h3>
 
- <font SIZE="-1"><b>WARNING</b></font>: Difficult material (and prose) ahead. This section needs a rewrite. 
+ <b>WARNING</b>: Difficult material (and prose) ahead. This section needs a rewrite. 
 
  Regular expressions provide a terse and powerful programming language. As with most other power tools, power comes together with the ability to wreak havoc. 
 
@@ -1779,7 +1779,7 @@ print "match: &lt;$&amp;&gt;\n" while 'foo' = ~m{o ? } xg;
 
  The additional state of being <i>matched with zero-length</i> is associated with the matched string, and is reset by each assignment to <tt>&quot;pos()&quot;</tt>. Zero-length matches at the end of the previous match are ignored during <tt>&quot;split&quot;</tt>.
 
-<h3>Combining <font SIZE="-1">RE</font> Pieces</h3>
+<h3>Combining RE Pieces</h3>
 
  Each of the elementary pieces of regular expressions which were described before (such as <tt>&quot;ab&quot;</tt> or <tt>&quot;\Z&quot;</tt>) could match at most one substring at the given position of the input string. However, in a typical regular expression these elementary pieces are combined into more complicated patterns using combining operators <tt>&quot;ST&quot;</tt>, <tt>&quot;S|T&quot;</tt>, <tt>&quot;S*&quot;</tt> <i>etc</i>. (in these examples <tt>&quot;S&quot;</tt> and <tt>&quot;T&quot;</tt> are regular subexpressions). 
 
@@ -1813,20 +1813,20 @@ print "match: &lt;$&amp;&gt;\n" while 'foo' = ~m{o ? } xg;
 </dd><dt>&quot;(?!S)&quot;, &quot;(?&lt;!S)&quot;
 </dt><dd> For this grouping operator there is no need to describe the ordering, since only whether or not <tt>&quot;S&quot;</tt> can match is important.
 </dd><dt>&quot;(??{ <i>EXPR</i> })&quot;, &quot;(?<i>PARNO</i>)&quot;
-</dt><dd> The ordering is the same as for the regular expression which is the result of <i></i><font SIZE="-1"><i>EXPR</i></font><i></i>, or the pattern contained by capture group <i></i><font SIZE="-1"><i>PARNO</i></font><i></i>.
+</dt><dd> The ordering is the same as for the regular expression which is the result of <i></i><i>EXPR</i><i></i>, or the pattern contained by capture group <i></i><i>PARNO</i><i></i>.
 </dd><dt>&quot;(?(<i>condition</i>)<i>yes-pattern</i>|<i>no-pattern</i>)&quot;
 </dt><dd> Recall that which of <i>yes-pattern</i> or <i>no-pattern</i> actually matches is already determined. The ordering of the matches is the same as for the chosen subexpression.</dd></dl>
  
 
  The above recipes describe the ordering of matches <i>at a given position</i>. One more rule is needed to understand how a match is determined for the whole regular expression: a match at an earlier position is always better than a match at a later position.
 
-<h3>Creating Custom <font SIZE="-1">RE</font> Engines</h3>
+<h3>Creating Custom RE Engines</h3>
 
  As of Perl 5.10.0, one can create custom regular expression engines. This is not for the faint of heart, as they have to plug in at the C level. See perlreapi for more details. 
 
- As an alternative, overloaded constants (see overload) provide a simple way to extend the functionality of the <font SIZE="-1">RE</font> engine, by substituting one pattern for another. 
+ As an alternative, overloaded constants (see overload) provide a simple way to extend the functionality of the RE engine, by substituting one pattern for another. 
 
- Suppose that we want to enable a new <font SIZE="-1">RE</font> escape-sequence <tt>&quot;\Y|&quot;</tt> which matches at a boundary between whitespace characters and non-whitespace characters. Note that <tt>&quot;(?=\S)(?&lt;!\S)|(?!\S)(?&lt;=\S)&quot;</tt> matches exactly at these positions, so we want to have each <tt>&quot;\Y|&quot;</tt> in the place of the more complicated version. We can create a module <tt>&quot;customre&quot;</tt> to do this: 
+ Suppose that we want to enable a new RE escape-sequence <tt>&quot;\Y|&quot;</tt> which matches at a boundary between whitespace characters and non-whitespace characters. Note that <tt>&quot;(?=\S)(?&lt;!\S)|(?!\S)(?&lt;=\S)&quot;</tt> matches exactly at these positions, so we want to have each <tt>&quot;\Y|&quot;</tt> in the place of the more complicated version. We can create a module <tt>&quot;customre&quot;</tt> to do this: 
 
  
 package customre;
@@ -1863,7 +1863,7 @@ $re = customre::convert $re;
 
 <h3>Embedded Code Execution Frequency</h3>
 
- The exact rules for how often <tt>&quot;(??{})&quot;</tt> and <tt>&quot;(?{})&quot;</tt> are executed in a pattern are unspecified. In the case of a successful match you can assume that they <font SIZE="-1">DWIM</font> and will be executed in left to right order the appropriate number of times in the accepting path of the pattern as would any other meta-pattern. How non-accepting pathways and match failures affect the number of times a pattern is executed is specifically unspecified and may vary depending on what optimizations can be applied to the pattern and is likely to change from version to version. 
+ The exact rules for how often <tt>&quot;(??{})&quot;</tt> and <tt>&quot;(?{})&quot;</tt> are executed in a pattern are unspecified. In the case of a successful match you can assume that they DWIM and will be executed in left to right order the appropriate number of times in the accepting path of the pattern as would any other meta-pattern. How non-accepting pathways and match failures affect the number of times a pattern is executed is specifically unspecified and may vary depending on what optimizations can be applied to the pattern and is likely to change from version to version. 
 
  For instance in 
 

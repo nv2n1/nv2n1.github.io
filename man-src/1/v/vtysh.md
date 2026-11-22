@@ -10,7 +10,7 @@ description: "vtysh – a integrated shell for Quagga routing software"
 
 <p> vtysh &#8211; a integrated shell for Quagga routing software</p>
 <h2>SYNOPSIS</h2>
-<p> <code>vtysh</code> [ <code>-b</code> ]<br />
+<p> <code>vtysh</code> [ <code>-b</code> ]<br/>
  <code>vtysh</code> [ <code>-E</code> ] [ <code>-d</code> <i>daemon</i> ] ] [ <code>-c</code> <i>command</i> ]</p>
 <h2>DESCRIPTION</h2>
 <p> <code>vtysh</code> is a integrated shell for <code>Quagga</code> routing engine.</p>

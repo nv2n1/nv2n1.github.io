@@ -15,7 +15,7 @@ description: "ql/termstructures/credit/piecewisedefaultcurve.hpp – piecewise-i
 #include &lt;ql/patterns/lazyobject.hpp&gt;
 #include &lt;ql/quote.hpp&gt;</code></pre>
 <h3>Classes</h3>
-<p>class <code>PiecewiseDefaultCurve&lt; Traits, Interpolator, Bootstrap &gt;</code><br />
+<p>class <code>PiecewiseDefaultCurve&lt; Traits, Interpolator, Bootstrap &gt;</code><br/>
  <i>Piecewise default-probability term structure. </i></p>
 <h2>Detailed Description</h2>
 <p>piecewise-interpolated default-probability structure</p>

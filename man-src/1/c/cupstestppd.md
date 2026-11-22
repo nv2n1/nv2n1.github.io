@@ -10,7 +10,7 @@ description: "cupstestppd – test conformance of ppd files (deprecated)"
 
 <p> cupstestppd &#8211; test conformance of ppd files (deprecated) </p>
 <h2>SYNOPSIS</h2>
-<p> <code>cupstestppd</code> [ <code>-I</code> <i>category</i> ] [ <code>-R</code> <i>rootdir</i> ] [ <code>-W</code> <i>category</i> ] [ <code>-q</code> ] [ <code>-r</code> ] [ <code>-v</code>[<code>v</code>] ] <i>filename.ppd[.gz]</i> [ &#8230; <i>filename.ppd[.gz]</i> ]<br />
+<p> <code>cupstestppd</code> [ <code>-I</code> <i>category</i> ] [ <code>-R</code> <i>rootdir</i> ] [ <code>-W</code> <i>category</i> ] [ <code>-q</code> ] [ <code>-r</code> ] [ <code>-v</code>[<code>v</code>] ] <i>filename.ppd[.gz]</i> [ &#8230; <i>filename.ppd[.gz]</i> ]<br/>
  <code>cupstestppd</code> [ <code>-R</code> <i>rootdir</i> ] [ <code>-W</code> <i>category</i> ] [ <code>-q</code> ] [ <code>-r</code> ] [ <code>-v</code>[<code>v</code>] ] <code>&#8211;</code></p>
 <h2>DESCRIPTION</h2>
 <p> <code>cupstestppd</code> tests the conformance of PPD files to the Adobe PostScript Printer Description file format specification version 4.3. It can also be used to list the supported options and available fonts in a PPD file. The results of testing and any other output are sent to the standard output. </p>

@@ -9,12 +9,12 @@ description: "chcat – change file SELinux security category"
 
 <p>chcat &#8211; change file SELinux security category</p>
 <h2>Synopsis</h2>
-<p><code>chcat</code> <i>category file</i>&#8230;<br />
- <code>chcat -l </code> <i>category user</i>&#8230;<br />
- <code>chcat</code> <i>[[+|-]category&#8230;] file</i>&#8230;<br />
- <code>chcat -l </code> <i>[[+|-]category&#8230;] user</i>&#8230;<br />
- <code>chcat</code> [<i>-d</i>] <i>file</i>&#8230;<br />
- <code>chcat -l </code> [<i>-d</i>] <i>user</i>&#8230;<br />
+<p><code>chcat</code> <i>category file</i>&#8230;<br/>
+ <code>chcat -l </code> <i>category user</i>&#8230;<br/>
+ <code>chcat</code> <i>[[+|-]category&#8230;] file</i>&#8230;<br/>
+ <code>chcat -l </code> <i>[[+|-]category&#8230;] user</i>&#8230;<br/>
+ <code>chcat</code> [<i>-d</i>] <i>file</i>&#8230;<br/>
+ <code>chcat -l </code> [<i>-d</i>] <i>user</i>&#8230;<br/>
  <code>chcat</code> <i>-L</i> [ -l ] [ user &#8230; ]</p>
 <h2>Description</h2>
 <p>Change/Remove the security <i>category</i> for each <i>file</i> or <i>user</i>. </p>
@@ -33,5 +33,5 @@ description: "chcat – change file SELinux security category"
 <dd></dd></dl>
 <p> When operating on files this script wraps the chcon command.</p>
 <h2>Files</h2>
-<p>/etc/selinux/{SELINUXTYPE}/setrans.conf<br />
+<p>/etc/selinux/{SELINUXTYPE}/setrans.conf<br/>
  /etc/selinux/{SELINUXTYPE}/seusers</p>

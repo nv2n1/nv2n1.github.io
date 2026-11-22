@@ -1105,78 +1105,78 @@ aria2.addUri(&quot;token:$$secret$$&quot;, [&quot;<a rel="nofollow" href="http:/
 <dd> <code>true</code> if this download is waiting for the hash check in a queue. This key exists only when this download is in the queue. </dd>
 <p> <code>JSON-RPC Example</code> </p>
 <p> The following example gets information about a download with GID#2089b05ecca3d829: </p>
-<p>&gt;&gt;&gt; import urllib2, json &gt;&gt;&gt; from pprint import pprint &gt;&gt;&gt; jsonreq = json.dumps({&#8216;jsonrpc&#8217; : &#8216;2.0&#8217;, &#8216;id&#8217; : &#8216;qwer&#8217;, &#8230; &#8216;method&#8217; : &#8216;aria2.tellStatus&#8217;, &#8230; &#8216;params&#8217; : [&#8216;2089b05ecca3d829&#8217;]}) &gt;&gt;&gt; c = urllib2.urlopen(&#8216;http://localhost:6800/jsonrpc&#8217;, jsonreq) &gt;&gt;&gt; pprint(json.loads(c.read()))<br />
-{<br />
-    u&#8217;id&#8217; : u&#8217;qwer&#8217;,<br />
-            u&#8217;jsonrpc&#8217; : u&#8217;2.0&#8242;,<br />
-                         u&#8217;result&#8217;:<br />
-    {<br />
-        u&#8217;bitfield&#8217; : u&#8217;0000000000&#8242;,<br />
-                      u&#8217;completedLength&#8217; : u&#8217;901120&#8242;,<br />
-                                           u&#8217;connections&#8217; : u&#8217;1&#8242;,<br />
-                                                            u&#8217;dir&#8217; : u&#8217;/downloads&#8217;,<br />
-                                                                     u&#8217;downloadSpeed&#8217; : u&#8217;15158&#8242;,<br />
-                                                                                        u&#8217;files&#8217; : [ {u&#8217;index&#8217; : u&#8217;1&#8242;,<br />
-                                                                                                      u&#8217;length&#8217; : u&#8217;34896138&#8242;,<br />
-                                                                                                      u&#8217;completedLength&#8217; : u&#8217;34896138&#8242;,<br />
-                                                                                                      u&#8217;path&#8217; : u&#8217;/downloads/file&#8217;,<br />
-                                                                                                      u&#8217;selected&#8217; : u&#8217;true&#8217;,<br />
-                                                                                                      u&#8217;uris&#8217; : [ {u&#8217;status&#8217; : u&#8217;used&#8217;,<br />
-                                                                                                                   u&#8217;uri&#8217; : u&#8217;http://example.org/file&#8217;} ]} ],<br />
-                                                                                                   u&#8217;gid&#8217; : u&#8217;2089b05ecca3d829&#8242;,<br />
-                                                                                                            u&#8217;numPieces&#8217; : u&#8217;34&#8217;,<br />
-                                                                                                                           u&#8217;pieceLength&#8217; : u&#8217;1048576&#8242;,<br />
-                                                                                                                                            u&#8217;status&#8217; : u&#8217;active&#8217;,<br />
-                                                                                                                                                        u&#8217;totalLength&#8217; : u&#8217;34896138&#8242;,<br />
-                                                                                                                                                                         u&#8217;uploadLength&#8217; : u&#8217;0&#8242;,<br />
-                                                                                                                                                                                           u&#8217;uploadSpeed&#8217; : u&#8217;0&#8242;<br />
-    }<br />
+<p>&gt;&gt;&gt; import urllib2, json &gt;&gt;&gt; from pprint import pprint &gt;&gt;&gt; jsonreq = json.dumps({&#8216;jsonrpc&#8217; : &#8216;2.0&#8217;, &#8216;id&#8217; : &#8216;qwer&#8217;, &#8230; &#8216;method&#8217; : &#8216;aria2.tellStatus&#8217;, &#8230; &#8216;params&#8217; : [&#8216;2089b05ecca3d829&#8217;]}) &gt;&gt;&gt; c = urllib2.urlopen(&#8216;http://localhost:6800/jsonrpc&#8217;, jsonreq) &gt;&gt;&gt; pprint(json.loads(c.read()))<br/>
+{<br/>
+    u&#8217;id&#8217; : u&#8217;qwer&#8217;,<br/>
+            u&#8217;jsonrpc&#8217; : u&#8217;2.0&#8242;,<br/>
+                         u&#8217;result&#8217;:<br/>
+    {<br/>
+        u&#8217;bitfield&#8217; : u&#8217;0000000000&#8242;,<br/>
+                      u&#8217;completedLength&#8217; : u&#8217;901120&#8242;,<br/>
+                                           u&#8217;connections&#8217; : u&#8217;1&#8242;,<br/>
+                                                            u&#8217;dir&#8217; : u&#8217;/downloads&#8217;,<br/>
+                                                                     u&#8217;downloadSpeed&#8217; : u&#8217;15158&#8242;,<br/>
+                                                                                        u&#8217;files&#8217; : [ {u&#8217;index&#8217; : u&#8217;1&#8242;,<br/>
+                                                                                                      u&#8217;length&#8217; : u&#8217;34896138&#8242;,<br/>
+                                                                                                      u&#8217;completedLength&#8217; : u&#8217;34896138&#8242;,<br/>
+                                                                                                      u&#8217;path&#8217; : u&#8217;/downloads/file&#8217;,<br/>
+                                                                                                      u&#8217;selected&#8217; : u&#8217;true&#8217;,<br/>
+                                                                                                      u&#8217;uris&#8217; : [ {u&#8217;status&#8217; : u&#8217;used&#8217;,<br/>
+                                                                                                                   u&#8217;uri&#8217; : u&#8217;http://example.org/file&#8217;} ]} ],<br/>
+                                                                                                   u&#8217;gid&#8217; : u&#8217;2089b05ecca3d829&#8242;,<br/>
+                                                                                                            u&#8217;numPieces&#8217; : u&#8217;34&#8217;,<br/>
+                                                                                                                           u&#8217;pieceLength&#8217; : u&#8217;1048576&#8242;,<br/>
+                                                                                                                                            u&#8217;status&#8217; : u&#8217;active&#8217;,<br/>
+                                                                                                                                                        u&#8217;totalLength&#8217; : u&#8217;34896138&#8242;,<br/>
+                                                                                                                                                                         u&#8217;uploadLength&#8217; : u&#8217;0&#8242;,<br/>
+                                                                                                                                                                                           u&#8217;uploadSpeed&#8217; : u&#8217;0&#8242;<br/>
+    }<br/>
 }</p>
 <p> The following example gets only specific keys: </p>
-<p>&gt;&gt;&gt; jsonreq = json.dumps({&#8216;jsonrpc&#8217; : &#8216;2.0&#8217;, &#8216;id&#8217; : &#8216;qwer&#8217;, &#8230; &#8216;method&#8217; : &#8216;aria2.tellStatus&#8217;, &#8230; &#8216;params&#8217; : [ &#8216;2089b05ecca3d829&#8217;,<br />
-                                                                                                                &#8230;[&#8216;gid&#8217;,<br />
-                                                                                                                    &#8230; &#8216;totalLength&#8217;,<br />
-                                                                                                                    &#8230; &#8216;completedLength&#8217;] ]}) &gt;&gt;&gt;<br />
-              c = urllib2.urlopen(&#8216;http://localhost:6800/jsonrpc&#8217;, jsonreq) &gt;&gt;&gt; pprint(json.loads(c.read()))<br />
-{<br />
-    u&#8217;id&#8217; : u&#8217;qwer&#8217;,<br />
-            u&#8217;jsonrpc&#8217; : u&#8217;2.0&#8242;,<br />
-                         u&#8217;result&#8217;:<br />
-    {<br />
-        u&#8217;completedLength&#8217; : u&#8217;5701632&#8242;,<br />
-                             u&#8217;gid&#8217; : u&#8217;2089b05ecca3d829&#8242;,<br />
-                                      u&#8217;totalLength&#8217; : u&#8217;34896138&#8242;<br />
-    }<br />
+<p>&gt;&gt;&gt; jsonreq = json.dumps({&#8216;jsonrpc&#8217; : &#8216;2.0&#8217;, &#8216;id&#8217; : &#8216;qwer&#8217;, &#8230; &#8216;method&#8217; : &#8216;aria2.tellStatus&#8217;, &#8230; &#8216;params&#8217; : [ &#8216;2089b05ecca3d829&#8217;,<br/>
+                                                                                                                &#8230;[&#8216;gid&#8217;,<br/>
+                                                                                                                    &#8230; &#8216;totalLength&#8217;,<br/>
+                                                                                                                    &#8230; &#8216;completedLength&#8217;] ]}) &gt;&gt;&gt;<br/>
+              c = urllib2.urlopen(&#8216;http://localhost:6800/jsonrpc&#8217;, jsonreq) &gt;&gt;&gt; pprint(json.loads(c.read()))<br/>
+{<br/>
+    u&#8217;id&#8217; : u&#8217;qwer&#8217;,<br/>
+            u&#8217;jsonrpc&#8217; : u&#8217;2.0&#8242;,<br/>
+                         u&#8217;result&#8217;:<br/>
+    {<br/>
+        u&#8217;completedLength&#8217; : u&#8217;5701632&#8242;,<br/>
+                             u&#8217;gid&#8217; : u&#8217;2089b05ecca3d829&#8242;,<br/>
+                                      u&#8217;totalLength&#8217; : u&#8217;34896138&#8242;<br/>
+    }<br/>
 }</p>
 <p> <code>XML-RPC Example</code> </p>
 <p> The following example gets information about a download with GID#2089b05ecca3d829: </p>
-<p>&gt;&gt;&gt; import xmlrpclib &gt;&gt;&gt; from pprint import pprint &gt;&gt;&gt; s = xmlrpclib.ServerProxy(&#8216;http://localhost:6800/rpc&#8217;) &gt;&gt;&gt; r = s.aria2.tellStatus(&#8216;2089b05ecca3d829&#8217;) &gt;&gt;&gt; pprint(r)<br />
-{<br />
-    &#8216;bitfield&#8217; : &#8216;ffff80&#8217;,<br />
-                 &#8216;completedLength&#8217; : &#8216;34896138&#8217;,<br />
-                                     &#8216;connections&#8217; : &#8216;0&#8217;,<br />
-                                                     &#8216;dir&#8217; : &#8216;/downloads&#8217;,<br />
-                                                             &#8216;downloadSpeed&#8217; : &#8216;0&#8217;,<br />
-                                                                               &#8216;errorCode&#8217; : &#8216;0&#8217;,<br />
-                                                                                             &#8216;files&#8217; : [ {&#8216;index&#8217; : &#8216;1&#8217;,<br />
-                                                                                                          &#8216;length&#8217; : &#8216;34896138&#8217;,<br />
-                                                                                                          &#8216;completedLength&#8217; : &#8216;34896138&#8217;,<br />
-                                                                                                          &#8216;path&#8217; : &#8216;/downloads/file&#8217;,<br />
-                                                                                                          &#8216;selected&#8217; : &#8216;true&#8217;,<br />
-                                                                                                          &#8216;uris&#8217; : [ {&#8216;status&#8217; : &#8216;used&#8217;,<br />
-                                                                                                                      &#8216;uri&#8217; : &#8216;http://example.org/file&#8217;} ]} ],<br />
-                                                                                                       &#8216;gid&#8217; : &#8216;2089b05ecca3d829&#8217;,<br />
-                                                                                                               &#8216;numPieces&#8217; : &#8217;17&#8217;,<br />
-                                                                                                                             &#8216;pieceLength&#8217; : &#8216;2097152&#8217;,<br />
-                                                                                                                                             &#8216;status&#8217; : &#8216;complete&#8217;,<br />
-                                                                                                                                                        &#8216;totalLength&#8217; : &#8216;34896138&#8217;,<br />
-                                                                                                                                                                        &#8216;uploadLength&#8217; : &#8216;0&#8217;,<br />
-                                                                                                                                                                                         &#8216;uploadSpeed&#8217; : &#8216;0&#8217;<br />
+<p>&gt;&gt;&gt; import xmlrpclib &gt;&gt;&gt; from pprint import pprint &gt;&gt;&gt; s = xmlrpclib.ServerProxy(&#8216;http://localhost:6800/rpc&#8217;) &gt;&gt;&gt; r = s.aria2.tellStatus(&#8216;2089b05ecca3d829&#8217;) &gt;&gt;&gt; pprint(r)<br/>
+{<br/>
+    &#8216;bitfield&#8217; : &#8216;ffff80&#8217;,<br/>
+                 &#8216;completedLength&#8217; : &#8216;34896138&#8217;,<br/>
+                                     &#8216;connections&#8217; : &#8216;0&#8217;,<br/>
+                                                     &#8216;dir&#8217; : &#8216;/downloads&#8217;,<br/>
+                                                             &#8216;downloadSpeed&#8217; : &#8216;0&#8217;,<br/>
+                                                                               &#8216;errorCode&#8217; : &#8216;0&#8217;,<br/>
+                                                                                             &#8216;files&#8217; : [ {&#8216;index&#8217; : &#8216;1&#8217;,<br/>
+                                                                                                          &#8216;length&#8217; : &#8216;34896138&#8217;,<br/>
+                                                                                                          &#8216;completedLength&#8217; : &#8216;34896138&#8217;,<br/>
+                                                                                                          &#8216;path&#8217; : &#8216;/downloads/file&#8217;,<br/>
+                                                                                                          &#8216;selected&#8217; : &#8216;true&#8217;,<br/>
+                                                                                                          &#8216;uris&#8217; : [ {&#8216;status&#8217; : &#8216;used&#8217;,<br/>
+                                                                                                                      &#8216;uri&#8217; : &#8216;http://example.org/file&#8217;} ]} ],<br/>
+                                                                                                       &#8216;gid&#8217; : &#8216;2089b05ecca3d829&#8217;,<br/>
+                                                                                                               &#8216;numPieces&#8217; : &#8217;17&#8217;,<br/>
+                                                                                                                             &#8216;pieceLength&#8217; : &#8216;2097152&#8217;,<br/>
+                                                                                                                                             &#8216;status&#8217; : &#8216;complete&#8217;,<br/>
+                                                                                                                                                        &#8216;totalLength&#8217; : &#8216;34896138&#8217;,<br/>
+                                                                                                                                                                        &#8216;uploadLength&#8217; : &#8216;0&#8217;,<br/>
+                                                                                                                                                                                         &#8216;uploadSpeed&#8217; : &#8216;0&#8217;<br/>
 }</p>
 <p> The following example gets only specific keys: </p>
-<p>&gt;&gt;&gt; r = s.aria2.tellStatus(&#8216;2089b05ecca3d829&#8217;, [ &#8216;gid&#8217;, &#8216;totalLength&#8217;, &#8216;completedLength&#8217; ]) &gt;&gt;&gt; pprint(r)<br />
-{<br />
-    &#8216;completedLength&#8217; : &#8216;34896138&#8217;, &#8216;gid&#8217; : &#8216;2089b05ecca3d829&#8217;, &#8216;totalLength&#8217; : &#8216;34896138&#8217;<br />
+<p>&gt;&gt;&gt; r = s.aria2.tellStatus(&#8216;2089b05ecca3d829&#8217;, [ &#8216;gid&#8217;, &#8216;totalLength&#8217;, &#8216;completedLength&#8217; ]) &gt;&gt;&gt; pprint(r)<br/>
+{<br/>
+    &#8216;completedLength&#8217; : &#8216;34896138&#8217;, &#8216;gid&#8217; : &#8216;2089b05ecca3d829&#8217;, &#8216;totalLength&#8217; : &#8216;34896138&#8217;<br/>
 }</p>
 <dt><code>aria2.getUris([secret], gid)</code></dt>
 <dd> This method returns the URIs used in the download denoted by <i>gid</i> (string). The response is an array of structs and it contains following keys. Values are string.</dd>
@@ -1185,15 +1185,15 @@ aria2.addUri(&quot;token:$$secret$$&quot;, [&quot;<a rel="nofollow" href="http:/
 <dt><code>status</code></dt>
 <dd> &#8216;used&#8217; if the URI is in use. &#8216;waiting&#8217; if the URI is still waiting in the queue. </dd>
 <p> <code>JSON-RPC Example</code> </p>
-<p>&gt;&gt;&gt; import urllib2, json &gt;&gt;&gt; from pprint import pprint &gt;&gt;&gt; jsonreq = json.dumps({&#8216;jsonrpc&#8217; : &#8216;2.0&#8217;, &#8216;id&#8217; : &#8216;qwer&#8217;, &#8230; &#8216;method&#8217; : &#8216;aria2.getUris&#8217;, &#8230; &#8216;params&#8217; : [&#8216;2089b05ecca3d829&#8217;]}) &gt;&gt;&gt; c = urllib2.urlopen(&#8216;http://localhost:6800/jsonrpc&#8217;, jsonreq) &gt;&gt;&gt; pprint(json.loads(c.read()))<br />
-{<br />
-    u&#8217;id&#8217; : u&#8217;qwer&#8217;,<br />
-            u&#8217;jsonrpc&#8217; : u&#8217;2.0&#8242;,<br />
-                         u&#8217;result&#8217; : [ {u&#8217;status&#8217; : u&#8217;used&#8217;,<br />
-                                        u&#8217;uri&#8217; : u&#8217;http://example.org/file&#8217;} ]<br />
+<p>&gt;&gt;&gt; import urllib2, json &gt;&gt;&gt; from pprint import pprint &gt;&gt;&gt; jsonreq = json.dumps({&#8216;jsonrpc&#8217; : &#8216;2.0&#8217;, &#8216;id&#8217; : &#8216;qwer&#8217;, &#8230; &#8216;method&#8217; : &#8216;aria2.getUris&#8217;, &#8230; &#8216;params&#8217; : [&#8216;2089b05ecca3d829&#8217;]}) &gt;&gt;&gt; c = urllib2.urlopen(&#8216;http://localhost:6800/jsonrpc&#8217;, jsonreq) &gt;&gt;&gt; pprint(json.loads(c.read()))<br/>
+{<br/>
+    u&#8217;id&#8217; : u&#8217;qwer&#8217;,<br/>
+            u&#8217;jsonrpc&#8217; : u&#8217;2.0&#8242;,<br/>
+                         u&#8217;result&#8217; : [ {u&#8217;status&#8217; : u&#8217;used&#8217;,<br/>
+                                        u&#8217;uri&#8217; : u&#8217;http://example.org/file&#8217;} ]<br/>
 }</p>
 <p> <code>XML-RPC Example</code> </p>
-<p>&gt;&gt;&gt; import xmlrpclib &gt;&gt;&gt; from pprint import pprint &gt;&gt;&gt; s = xmlrpclib.ServerProxy(&#8216;http://localhost:6800/rpc&#8217;) &gt;&gt;&gt; r = s.aria2.getUris(&#8216;2089b05ecca3d829&#8217;) &gt;&gt;&gt; pprint(r)<br />
+<p>&gt;&gt;&gt; import xmlrpclib &gt;&gt;&gt; from pprint import pprint &gt;&gt;&gt; s = xmlrpclib.ServerProxy(&#8216;http://localhost:6800/rpc&#8217;) &gt;&gt;&gt; r = s.aria2.getUris(&#8216;2089b05ecca3d829&#8217;) &gt;&gt;&gt; pprint(r)<br/>
                                                                                                                                                                   [{&#8216;status&#8217; : &#8216;used&#8217;, &#8216;uri&#8217; : &#8216;http://example.org/file&#8217;}]</p>
 <dt><code>aria2.getFiles([secret], gid)</code></dt>
 <dd> This method returns the file list of the download denoted by <i>gid</i> (string). The response is an array of structs which contain following keys. Values are strings.</dd>
@@ -1210,26 +1210,26 @@ aria2.addUri(&quot;token:$$secret$$&quot;, [&quot;<a rel="nofollow" href="http:/
 <dt><code>uris</code></dt>
 <dd> Returns a list of URIs for this file. The element type is the same struct used in the <i>aria2.getUris()</i> method. </dd>
 <p> <code>JSON-RPC Example</code> </p>
-<p>&gt;&gt;&gt; import urllib2, json &gt;&gt;&gt; from pprint import pprint &gt;&gt;&gt; jsonreq = json.dumps({&#8216;jsonrpc&#8217; : &#8216;2.0&#8217;, &#8216;id&#8217; : &#8216;qwer&#8217;, &#8230; &#8216;method&#8217; : &#8216;aria2.getFiles&#8217;, &#8230; &#8216;params&#8217; : [&#8216;2089b05ecca3d829&#8217;]}) &gt;&gt;&gt; c = urllib2.urlopen(&#8216;http://localhost:6800/jsonrpc&#8217;, jsonreq) &gt;&gt;&gt; pprint(json.loads(c.read()))<br />
-{<br />
-    u&#8217;id&#8217; : u&#8217;qwer&#8217;,<br />
-            u&#8217;jsonrpc&#8217; : u&#8217;2.0&#8242;,<br />
-                         u&#8217;result&#8217; : [ {u&#8217;index&#8217; : u&#8217;1&#8242;,<br />
-                                        u&#8217;length&#8217; : u&#8217;34896138&#8242;,<br />
-                                        u&#8217;completedLength&#8217; : u&#8217;34896138&#8242;,<br />
-                                        u&#8217;path&#8217; : u&#8217;/downloads/file&#8217;,<br />
-                                        u&#8217;selected&#8217; : u&#8217;true&#8217;,<br />
-                                        u&#8217;uris&#8217; : [ {u&#8217;status&#8217; : u&#8217;used&#8217;,<br />
-                                                     u&#8217;uri&#8217; : u&#8217;http://example.org/file&#8217;} ]} ]<br />
+<p>&gt;&gt;&gt; import urllib2, json &gt;&gt;&gt; from pprint import pprint &gt;&gt;&gt; jsonreq = json.dumps({&#8216;jsonrpc&#8217; : &#8216;2.0&#8217;, &#8216;id&#8217; : &#8216;qwer&#8217;, &#8230; &#8216;method&#8217; : &#8216;aria2.getFiles&#8217;, &#8230; &#8216;params&#8217; : [&#8216;2089b05ecca3d829&#8217;]}) &gt;&gt;&gt; c = urllib2.urlopen(&#8216;http://localhost:6800/jsonrpc&#8217;, jsonreq) &gt;&gt;&gt; pprint(json.loads(c.read()))<br/>
+{<br/>
+    u&#8217;id&#8217; : u&#8217;qwer&#8217;,<br/>
+            u&#8217;jsonrpc&#8217; : u&#8217;2.0&#8242;,<br/>
+                         u&#8217;result&#8217; : [ {u&#8217;index&#8217; : u&#8217;1&#8242;,<br/>
+                                        u&#8217;length&#8217; : u&#8217;34896138&#8242;,<br/>
+                                        u&#8217;completedLength&#8217; : u&#8217;34896138&#8242;,<br/>
+                                        u&#8217;path&#8217; : u&#8217;/downloads/file&#8217;,<br/>
+                                        u&#8217;selected&#8217; : u&#8217;true&#8217;,<br/>
+                                        u&#8217;uris&#8217; : [ {u&#8217;status&#8217; : u&#8217;used&#8217;,<br/>
+                                                     u&#8217;uri&#8217; : u&#8217;http://example.org/file&#8217;} ]} ]<br/>
 }</p>
 <p> <code>XML-RPC Example</code> </p>
-<p>&gt;&gt;&gt; import xmlrpclib &gt;&gt;&gt; from pprint import pprint &gt;&gt;&gt; s = xmlrpclib.ServerProxy(&#8216;http://localhost:6800/rpc&#8217;) &gt;&gt;&gt; r = s.aria2.getFiles(&#8216;2089b05ecca3d829&#8217;) &gt;&gt;&gt; pprint(r)<br />
-                                                                                                                                                                   [{&#8216;index&#8217; : &#8216;1&#8217;,<br />
-                                                                                                                                                                     &#8216;length&#8217; : &#8216;34896138&#8217;,<br />
-                                                                                                                                                                     &#8216;completedLength&#8217; : &#8216;34896138&#8217;,<br />
-                                                                                                                                                                     &#8216;path&#8217; : &#8216;/downloads/file&#8217;,<br />
-                                                                                                                                                                     &#8216;selected&#8217; : &#8216;true&#8217;,<br />
-                                                                                                                                                                     &#8216;uris&#8217; : [ {&#8216;status&#8217; : &#8216;used&#8217;,<br />
+<p>&gt;&gt;&gt; import xmlrpclib &gt;&gt;&gt; from pprint import pprint &gt;&gt;&gt; s = xmlrpclib.ServerProxy(&#8216;http://localhost:6800/rpc&#8217;) &gt;&gt;&gt; r = s.aria2.getFiles(&#8216;2089b05ecca3d829&#8217;) &gt;&gt;&gt; pprint(r)<br/>
+                                                                                                                                                                   [{&#8216;index&#8217; : &#8216;1&#8217;,<br/>
+                                                                                                                                                                     &#8216;length&#8217; : &#8216;34896138&#8217;,<br/>
+                                                                                                                                                                     &#8216;completedLength&#8217; : &#8216;34896138&#8217;,<br/>
+                                                                                                                                                                     &#8216;path&#8217; : &#8216;/downloads/file&#8217;,<br/>
+                                                                                                                                                                     &#8216;selected&#8217; : &#8216;true&#8217;,<br/>
+                                                                                                                                                                     &#8216;uris&#8217; : [ {&#8216;status&#8217; : &#8216;used&#8217;,<br/>
                                                                                                                                                                                  &#8216;uri&#8217; : &#8216;http://example.org/file&#8217;} ]}]</p>
 <dt><code>aria2.getPeers([secret], gid)</code></dt>
 <dd> This method returns a list peers of the download denoted by <i>gid</i> (string). This method is for BitTorrent only. The response is an array of structs and contains the following keys. Values are strings.</dd>
@@ -1252,47 +1252,47 @@ aria2.addUri(&quot;token:$$secret$$&quot;, [&quot;<a rel="nofollow" href="http:/
 <dt><code>seeder</code></dt>
 <dd> <code>true</code> if this peer is a seeder. Otherwise <code>false</code>. </dd>
 <p> <code>JSON-RPC Example</code> </p>
-<p>&gt;&gt;&gt; import urllib2, json &gt;&gt;&gt; from pprint import pprint &gt;&gt;&gt; jsonreq = json.dumps({&#8216;jsonrpc&#8217; : &#8216;2.0&#8217;, &#8216;id&#8217; : &#8216;qwer&#8217;, &#8230; &#8216;method&#8217; : &#8216;aria2.getPeers&#8217;, &#8230; &#8216;params&#8217; : [&#8216;2089b05ecca3d829&#8217;]}) &gt;&gt;&gt; c = urllib2.urlopen(&#8216;http://localhost:6800/jsonrpc&#8217;, jsonreq) &gt;&gt;&gt; pprint(json.loads(c.read()))<br />
-{<br />
-    u&#8217;id&#8217; : u&#8217;qwer&#8217;,<br />
-            u&#8217;jsonrpc&#8217; : u&#8217;2.0&#8242;,<br />
-                         u&#8217;result&#8217; : [ {u&#8217;amChoking&#8217; : u&#8217;true&#8217;,<br />
-                                        u&#8217;bitfield&#8217; : u&#8217;ffffffffffffffffffffffffffffffffffffffff&#8217;,<br />
-                                        u&#8217;downloadSpeed&#8217; : u&#8217;10602&#8242;,<br />
-                                        u&#8217;ip&#8217; : u&#8217;10.0.0.9&#8242;,<br />
-                                        u&#8217;peerChoking&#8217; : u&#8217;false&#8217;,<br />
-                                        u&#8217;peerId&#8217; : u&#8217;aria2%2F1%2E10%2E5%2D%87%2A%EDz%2F%F7%E6&#8242;,<br />
-                                        u&#8217;port&#8217; : u&#8217;6881&#8242;,<br />
-                                        u&#8217;seeder&#8217; : u&#8217;true&#8217;,<br />
-                                        u&#8217;uploadSpeed&#8217; : u&#8217;0&#8242;},<br />
-                                       {u&#8217;amChoking&#8217; : u&#8217;false&#8217;,<br />
-                                        u&#8217;bitfield&#8217; : u&#8217;ffffeff0fffffffbfffffff9fffffcfff7f4ffff&#8217;,<br />
-                                        u&#8217;downloadSpeed&#8217; : u&#8217;8654&#8242;,<br />
-                                        u&#8217;ip&#8217; : u&#8217;10.0.0.30&#8242;,<br />
-                                        u&#8217;peerChoking&#8217; : u&#8217;false&#8217;,<br />
-                                        u&#8217;peerId&#8217; : u&#8217;bittorrent client758&#8242;,<br />
-                                        u&#8217;port&#8217; : u&#8217;37842&#8242;,<br />
-                                        u&#8217;seeder&#8217; : u&#8217;false&#8217;,<br />
-                                        u&#8217;uploadSpeed&#8217; : u&#8217;6890&#8242;} ]<br />
+<p>&gt;&gt;&gt; import urllib2, json &gt;&gt;&gt; from pprint import pprint &gt;&gt;&gt; jsonreq = json.dumps({&#8216;jsonrpc&#8217; : &#8216;2.0&#8217;, &#8216;id&#8217; : &#8216;qwer&#8217;, &#8230; &#8216;method&#8217; : &#8216;aria2.getPeers&#8217;, &#8230; &#8216;params&#8217; : [&#8216;2089b05ecca3d829&#8217;]}) &gt;&gt;&gt; c = urllib2.urlopen(&#8216;http://localhost:6800/jsonrpc&#8217;, jsonreq) &gt;&gt;&gt; pprint(json.loads(c.read()))<br/>
+{<br/>
+    u&#8217;id&#8217; : u&#8217;qwer&#8217;,<br/>
+            u&#8217;jsonrpc&#8217; : u&#8217;2.0&#8242;,<br/>
+                         u&#8217;result&#8217; : [ {u&#8217;amChoking&#8217; : u&#8217;true&#8217;,<br/>
+                                        u&#8217;bitfield&#8217; : u&#8217;ffffffffffffffffffffffffffffffffffffffff&#8217;,<br/>
+                                        u&#8217;downloadSpeed&#8217; : u&#8217;10602&#8242;,<br/>
+                                        u&#8217;ip&#8217; : u&#8217;10.0.0.9&#8242;,<br/>
+                                        u&#8217;peerChoking&#8217; : u&#8217;false&#8217;,<br/>
+                                        u&#8217;peerId&#8217; : u&#8217;aria2%2F1%2E10%2E5%2D%87%2A%EDz%2F%F7%E6&#8242;,<br/>
+                                        u&#8217;port&#8217; : u&#8217;6881&#8242;,<br/>
+                                        u&#8217;seeder&#8217; : u&#8217;true&#8217;,<br/>
+                                        u&#8217;uploadSpeed&#8217; : u&#8217;0&#8242;},<br/>
+                                       {u&#8217;amChoking&#8217; : u&#8217;false&#8217;,<br/>
+                                        u&#8217;bitfield&#8217; : u&#8217;ffffeff0fffffffbfffffff9fffffcfff7f4ffff&#8217;,<br/>
+                                        u&#8217;downloadSpeed&#8217; : u&#8217;8654&#8242;,<br/>
+                                        u&#8217;ip&#8217; : u&#8217;10.0.0.30&#8242;,<br/>
+                                        u&#8217;peerChoking&#8217; : u&#8217;false&#8217;,<br/>
+                                        u&#8217;peerId&#8217; : u&#8217;bittorrent client758&#8242;,<br/>
+                                        u&#8217;port&#8217; : u&#8217;37842&#8242;,<br/>
+                                        u&#8217;seeder&#8217; : u&#8217;false&#8217;,<br/>
+                                        u&#8217;uploadSpeed&#8217; : u&#8217;6890&#8242;} ]<br/>
 }</p>
 <p> <code>XML-RPC Example</code> </p>
-<p>&gt;&gt;&gt; import xmlrpclib &gt;&gt;&gt; from pprint import pprint &gt;&gt;&gt; s = xmlrpclib.ServerProxy(&#8216;http://localhost:6800/rpc&#8217;) &gt;&gt;&gt; r = s.aria2.getPeers(&#8216;2089b05ecca3d829&#8217;) &gt;&gt;&gt; pprint(r)<br />
-                                                                                                                                                                   [{&#8216;amChoking&#8217; : &#8216;true&#8217;,<br />
-                                                                                                                                                                     &#8216;bitfield&#8217; : &#8216;ffffffffffffffffffffffffffffffffffffffff&#8217;,<br />
-                                                                                                                                                                     &#8216;downloadSpeed&#8217; : &#8216;10602&#8217;,<br />
-                                                                                                                                                                     &#8216;ip&#8217; : &#8216;10.0.0.9&#8217;,<br />
-                                                                                                                                                                     &#8216;peerChoking&#8217; : &#8216;false&#8217;,<br />
-                                                                                                                                                                     &#8216;peerId&#8217; : &#8216;aria2%2F1%2E10%2E5%2D%87%2A%EDz%2F%F7%E6&#8217;,<br />
-                                                                                                                                                                     &#8216;port&#8217; : &#8216;6881&#8217;,<br />
-                                                                                                                                                                     &#8216;seeder&#8217; : &#8216;true&#8217;,<br />
-                                                                                                                                                                     &#8216;uploadSpeed&#8217; : &#8216;0&#8217;},<br />
-                                                                                                                                                                    {&#8216;amChoking&#8217; : &#8216;false&#8217;,<br />
-                                                                                                                                                                     &#8216;bitfield&#8217; : &#8216;ffffeff0fffffffbfffffff9fffffcfff7f4ffff&#8217;,<br />
-                                                                                                                                                                     &#8216;downloadSpeed&#8217; : &#8216;8654&#8217;,<br />
-                                                                                                                                                                     &#8216;ip&#8217; : &#8216;10.0.0.30&#8217;,<br />
-                                                                                                                                                                     &#8216;peerChoking&#8217; : &#8216;false&#8217;,<br />
-                                                                                                                                                                     &#8216;peerId&#8217; : &#8216;bittorrent client758&#8217;,<br />
-                                                                                                                                                                     &#8216;port&#8217; : &#8216;37842&#8217;,<br />
+<p>&gt;&gt;&gt; import xmlrpclib &gt;&gt;&gt; from pprint import pprint &gt;&gt;&gt; s = xmlrpclib.ServerProxy(&#8216;http://localhost:6800/rpc&#8217;) &gt;&gt;&gt; r = s.aria2.getPeers(&#8216;2089b05ecca3d829&#8217;) &gt;&gt;&gt; pprint(r)<br/>
+                                                                                                                                                                   [{&#8216;amChoking&#8217; : &#8216;true&#8217;,<br/>
+                                                                                                                                                                     &#8216;bitfield&#8217; : &#8216;ffffffffffffffffffffffffffffffffffffffff&#8217;,<br/>
+                                                                                                                                                                     &#8216;downloadSpeed&#8217; : &#8216;10602&#8217;,<br/>
+                                                                                                                                                                     &#8216;ip&#8217; : &#8216;10.0.0.9&#8217;,<br/>
+                                                                                                                                                                     &#8216;peerChoking&#8217; : &#8216;false&#8217;,<br/>
+                                                                                                                                                                     &#8216;peerId&#8217; : &#8216;aria2%2F1%2E10%2E5%2D%87%2A%EDz%2F%F7%E6&#8217;,<br/>
+                                                                                                                                                                     &#8216;port&#8217; : &#8216;6881&#8217;,<br/>
+                                                                                                                                                                     &#8216;seeder&#8217; : &#8216;true&#8217;,<br/>
+                                                                                                                                                                     &#8216;uploadSpeed&#8217; : &#8216;0&#8217;},<br/>
+                                                                                                                                                                    {&#8216;amChoking&#8217; : &#8216;false&#8217;,<br/>
+                                                                                                                                                                     &#8216;bitfield&#8217; : &#8216;ffffeff0fffffffbfffffff9fffffcfff7f4ffff&#8217;,<br/>
+                                                                                                                                                                     &#8216;downloadSpeed&#8217; : &#8216;8654&#8217;,<br/>
+                                                                                                                                                                     &#8216;ip&#8217; : &#8216;10.0.0.30&#8217;,<br/>
+                                                                                                                                                                     &#8216;peerChoking&#8217; : &#8216;false&#8217;,<br/>
+                                                                                                                                                                     &#8216;peerId&#8217; : &#8216;bittorrent client758&#8217;,<br/>
+                                                                                                                                                                     &#8216;port&#8217; : &#8216;37842&#8217;,<br/>
                                                                                                                                                                      &#8216;seeder&#8217; : &#8216;false, &#8216;uploadSpeed&#8217; : &#8216;6890&#8217;}]</p>
 <dt><code>aria2.getServers([secret], gid)</code></dt>
 <dd> This method returns currently connected HTTP(S)/FTP/SFTP servers of the download denoted by <i>gid</i> (string). The response is an array of structs and contains the following keys. Values are strings.</dd>
@@ -1307,20 +1307,20 @@ aria2.addUri(&quot;token:$$secret$$&quot;, [&quot;<a rel="nofollow" href="http:/
 <dt><code>downloadSpeed</code></dt>
 <dd> Download speed (byte/sec) </dd>
 <p> <code>JSON-RPC Example</code> </p>
-<p>&gt;&gt;&gt; import urllib2, json &gt;&gt;&gt; from pprint import pprint &gt;&gt;&gt; jsonreq = json.dumps({&#8216;jsonrpc&#8217; : &#8216;2.0&#8217;, &#8216;id&#8217; : &#8216;qwer&#8217;, &#8230; &#8216;method&#8217; : &#8216;aria2.getServers&#8217;, &#8230; &#8216;params&#8217; : [&#8216;2089b05ecca3d829&#8217;]}) &gt;&gt;&gt; c = urllib2.urlopen(&#8216;http://localhost:6800/jsonrpc&#8217;, jsonreq) &gt;&gt;&gt; pprint(json.loads(c.read()))<br />
-{<br />
-    u&#8217;id&#8217; : u&#8217;qwer&#8217;,<br />
-            u&#8217;jsonrpc&#8217; : u&#8217;2.0&#8242;,<br />
-                         u&#8217;result&#8217; : [ {u&#8217;index&#8217; : u&#8217;1&#8242;,<br />
-                                        u&#8217;servers&#8217; : [ {u&#8217;currentUri&#8217; : u&#8217;http://example.org/file&#8217;,<br />
-                                                        u&#8217;downloadSpeed&#8217; : u&#8217;10467&#8242;,<br />
-                                                        u&#8217;uri&#8217; : u&#8217;http://example.org/file&#8217;} ]} ]<br />
+<p>&gt;&gt;&gt; import urllib2, json &gt;&gt;&gt; from pprint import pprint &gt;&gt;&gt; jsonreq = json.dumps({&#8216;jsonrpc&#8217; : &#8216;2.0&#8217;, &#8216;id&#8217; : &#8216;qwer&#8217;, &#8230; &#8216;method&#8217; : &#8216;aria2.getServers&#8217;, &#8230; &#8216;params&#8217; : [&#8216;2089b05ecca3d829&#8217;]}) &gt;&gt;&gt; c = urllib2.urlopen(&#8216;http://localhost:6800/jsonrpc&#8217;, jsonreq) &gt;&gt;&gt; pprint(json.loads(c.read()))<br/>
+{<br/>
+    u&#8217;id&#8217; : u&#8217;qwer&#8217;,<br/>
+            u&#8217;jsonrpc&#8217; : u&#8217;2.0&#8242;,<br/>
+                         u&#8217;result&#8217; : [ {u&#8217;index&#8217; : u&#8217;1&#8242;,<br/>
+                                        u&#8217;servers&#8217; : [ {u&#8217;currentUri&#8217; : u&#8217;http://example.org/file&#8217;,<br/>
+                                                        u&#8217;downloadSpeed&#8217; : u&#8217;10467&#8242;,<br/>
+                                                        u&#8217;uri&#8217; : u&#8217;http://example.org/file&#8217;} ]} ]<br/>
 }</p>
 <p> <code>XML-RPC Example</code> </p>
-<p>&gt;&gt;&gt; import xmlrpclib &gt;&gt;&gt; from pprint import pprint &gt;&gt;&gt; s = xmlrpclib.ServerProxy(&#8216;http://localhost:6800/rpc&#8217;) &gt;&gt;&gt; r = s.aria2.getServers(&#8216;2089b05ecca3d829&#8217;) &gt;&gt;&gt; pprint(r)<br />
-                                                                                                                                                                     [{&#8216;index&#8217; : &#8216;1&#8217;,<br />
-                                                                                                                                                                       &#8216;servers&#8217; : [ {&#8216;currentUri&#8217; : &#8216;http://example.org/dl/file&#8217;,<br />
-                                                                                                                                                                                      &#8216;downloadSpeed&#8217; : &#8216;20285&#8217;,<br />
+<p>&gt;&gt;&gt; import xmlrpclib &gt;&gt;&gt; from pprint import pprint &gt;&gt;&gt; s = xmlrpclib.ServerProxy(&#8216;http://localhost:6800/rpc&#8217;) &gt;&gt;&gt; r = s.aria2.getServers(&#8216;2089b05ecca3d829&#8217;) &gt;&gt;&gt; pprint(r)<br/>
+                                                                                                                                                                     [{&#8216;index&#8217; : &#8216;1&#8217;,<br/>
+                                                                                                                                                                       &#8216;servers&#8217; : [ {&#8216;currentUri&#8217; : &#8216;http://example.org/dl/file&#8217;,<br/>
+                                                                                                                                                                                      &#8216;downloadSpeed&#8217; : &#8216;20285&#8217;,<br/>
                                                                                                                                                                                       &#8216;uri&#8217; : &#8216;http://example.org/file&#8217;} ]}]</p>
 <dt><code>aria2.tellActive([secret][, keys])</code></dt>
 <dd> This method returns a list of active downloads. The response is an array of the same structs as returned by the <i>aria2.tellStatus()</i> method. For the <i>keys</i> parameter, please refer to the <i>aria2.tellStatus()</i> method.</dd>
@@ -1339,9 +1339,9 @@ aria2.addUri(&quot;token:$$secret$$&quot;, [&quot;<a rel="nofollow" href="http:/
 <p> For example, if GID#2089b05ecca3d829 is currently in position 3, <code>aria2.changePosition(&#8216;2089b05ecca3d829&#8217;, -1, &#8216;POS_CUR&#8217;)</code> will change its position to 2. Additionally <code>aria2.changePosition(&#8216;2089b05ecca3d829&#8217;, 0, &#8216;POS_SET&#8217;)</code> will change its position to 0 (the beginning of the queue). </p>
 <p> The following examples move the download GID#2089b05ecca3d829 to the front of the queue. </p>
 <p> <code>JSON-RPC Example</code> </p>
-<p>&gt;&gt;&gt; import urllib2, json &gt;&gt;&gt; from pprint import pprint &gt;&gt;&gt; jsonreq = json.dumps({&#8216;jsonrpc&#8217; : &#8216;2.0&#8217;, &#8216;id&#8217; : &#8216;qwer&#8217;, &#8230; &#8216;method&#8217; : &#8216;aria2.changePosition&#8217;, &#8230; &#8216;params&#8217; : [ &#8216;2089b05ecca3d829&#8217;, 0, &#8216;POS_SET&#8217; ]}) &gt;&gt;&gt; c = urllib2.urlopen(&#8216;http://localhost:6800/jsonrpc&#8217;, jsonreq) &gt;&gt;&gt; pprint(json.loads(c.read()))<br />
-{<br />
-    u&#8217;id&#8217; : u&#8217;qwer&#8217;, u&#8217;jsonrpc&#8217; : u&#8217;2.0&#8242;, u&#8217;result&#8217; : 0<br />
+<p>&gt;&gt;&gt; import urllib2, json &gt;&gt;&gt; from pprint import pprint &gt;&gt;&gt; jsonreq = json.dumps({&#8216;jsonrpc&#8217; : &#8216;2.0&#8217;, &#8216;id&#8217; : &#8216;qwer&#8217;, &#8230; &#8216;method&#8217; : &#8216;aria2.changePosition&#8217;, &#8230; &#8216;params&#8217; : [ &#8216;2089b05ecca3d829&#8217;, 0, &#8216;POS_SET&#8217; ]}) &gt;&gt;&gt; c = urllib2.urlopen(&#8216;http://localhost:6800/jsonrpc&#8217;, jsonreq) &gt;&gt;&gt; pprint(json.loads(c.read()))<br/>
+{<br/>
+    u&#8217;id&#8217; : u&#8217;qwer&#8217;, u&#8217;jsonrpc&#8217; : u&#8217;2.0&#8242;, u&#8217;result&#8217; : 0<br/>
 }</p>
 <p> <code>XML-RPC Example</code> </p>
 <pre>
@@ -1354,30 +1354,30 @@ aria2.addUri(&quot;token:$$secret$$&quot;, [&quot;<a rel="nofollow" href="http:/
 <dd> This method removes the URIs in <i>delUris</i> from and appends the URIs in <i>addUris</i> to download denoted by <i>gid</i>. <i>delUris</i> and <i>addUris</i> are lists of strings. A download can contain multiple files and URIs are attached to each file. <i>fileIndex</i> is used to select which file to remove/attach given URIs. <i>fileIndex</i> is 1-based. <i>position</i> is used to specify where URIs are inserted in the existing waiting URI list. <i>position</i> is 0-based. When <i>position</i> is omitted, URIs are appended to the back of the list. This method first executes the removal and then the addition. <i>position</i> is the position after URIs are removed, not the position when this method is called. When removing an URI, if the same URIs exist in download, only one of them is removed for each URI in <i>delUris</i>. In other words, if there are three URIs <code><a rel="nofollow" href="http://example.org/aria2">http://example.org/aria2</a></code> and you want remove them all, you have to specify (at least) 3 <code><a rel="nofollow" href="http://example.org/aria2">http://example.org/aria2</a></code> in <i>delUris</i>. This method returns a list which contains two integers. The first integer is the number of URIs deleted. The second integer is the number of URIs added. </dd>
 <p> The following examples add the URI <code><a rel="nofollow" href="http://example.org/file">http://example.org/file</a></code> to the file whose index is <code>1</code> and belongs to the download GID#2089b05ecca3d829. </p>
 <p> <code>JSON-RPC Example</code> </p>
-<p>&gt;&gt;&gt; import urllib2, json &gt;&gt;&gt; from pprint import pprint &gt;&gt;&gt; jsonreq = json.dumps({&#8216;jsonrpc&#8217; : &#8216;2.0&#8217;, &#8216;id&#8217; : &#8216;qwer&#8217;, &#8230; &#8216;method&#8217; : &#8216;aria2.changeUri&#8217;, &#8230; &#8216;params&#8217; : [ &#8216;2089b05ecca3d829&#8217;, 1, [],<br />
-                                                                                                                                                                      [&#8216;http://example.org/file&#8217;] ]}) &gt;&gt;&gt;<br />
-                                                                     c = urllib2.urlopen(&#8216;http://localhost:6800/jsonrpc&#8217;, jsonreq) &gt;&gt;&gt; pprint(json.loads(c.read()))<br />
-{<br />
-    u&#8217;id&#8217; : u&#8217;qwer&#8217;, u&#8217;jsonrpc&#8217; : u&#8217;2.0&#8242;, u&#8217;result&#8217; : [ 0, 1 ]<br />
+<p>&gt;&gt;&gt; import urllib2, json &gt;&gt;&gt; from pprint import pprint &gt;&gt;&gt; jsonreq = json.dumps({&#8216;jsonrpc&#8217; : &#8216;2.0&#8217;, &#8216;id&#8217; : &#8216;qwer&#8217;, &#8230; &#8216;method&#8217; : &#8216;aria2.changeUri&#8217;, &#8230; &#8216;params&#8217; : [ &#8216;2089b05ecca3d829&#8217;, 1, [],<br/>
+                                                                                                                                                                      [&#8216;http://example.org/file&#8217;] ]}) &gt;&gt;&gt;<br/>
+                                                                     c = urllib2.urlopen(&#8216;http://localhost:6800/jsonrpc&#8217;, jsonreq) &gt;&gt;&gt; pprint(json.loads(c.read()))<br/>
+{<br/>
+    u&#8217;id&#8217; : u&#8217;qwer&#8217;, u&#8217;jsonrpc&#8217; : u&#8217;2.0&#8242;, u&#8217;result&#8217; : [ 0, 1 ]<br/>
 }</p>
 <p> <code>XML-RPC Example</code> </p>
-<p>&gt;&gt;&gt; import xmlrpclib &gt;&gt;&gt; s = xmlrpclib.ServerProxy(&#8216;http://localhost:6800/rpc&#8217;) &gt;&gt;&gt; s.aria2.changeUri(&#8216;2089b05ecca3d829&#8217;, 1, [],<br />
-                                                                                                      [&#8216;http://example.org/file&#8217;])<br />
+<p>&gt;&gt;&gt; import xmlrpclib &gt;&gt;&gt; s = xmlrpclib.ServerProxy(&#8216;http://localhost:6800/rpc&#8217;) &gt;&gt;&gt; s.aria2.changeUri(&#8216;2089b05ecca3d829&#8217;, 1, [],<br/>
+                                                                                                      [&#8216;http://example.org/file&#8217;])<br/>
                                                                                         [0, 1]</p>
 <dt><code>aria2.getOption([secret], gid)</code></dt>
 <dd> This method returns options of the download denoted by <i>gid</i>. The response is a struct where keys are the names of options. The values are strings. Note that this method does not return options which have no default value and have not been set on the command-line, in configuration files or RPC methods. </dd>
 <p> The following examples get options of the download GID#2089b05ecca3d829. </p>
 <p> <code>JSON-RPC Example</code> </p>
-<p>&gt;&gt;&gt; import urllib2, json &gt;&gt;&gt; from pprint import pprint &gt;&gt;&gt; jsonreq = json.dumps({&#8216;jsonrpc&#8217; : &#8216;2.0&#8217;, &#8216;id&#8217; : &#8216;qwer&#8217;, &#8230; &#8216;method&#8217; : &#8216;aria2.getOption&#8217;, &#8230; &#8216;params&#8217; : [&#8216;2089b05ecca3d829&#8217;]}) &gt;&gt;&gt; c = urllib2.urlopen(&#8216;http://localhost:6800/jsonrpc&#8217;, jsonreq) &gt;&gt;&gt; pprint(json.loads(c.read()))<br />
-{<br />
-    u&#8217;id&#8217; : u&#8217;qwer&#8217;,<br />
-            u&#8217;jsonrpc&#8217; : u&#8217;2.0&#8242;,<br />
-                         u&#8217;result&#8217;:<br />
-    {<br />
-        u&#8217;allow-overwrite&#8217; : u&#8217;false&#8217;,<br />
-                             u&#8217;allow-piece-length-change&#8217; : u&#8217;false&#8217;,<br />
-                                                            u&#8217;always-resume&#8217; : u&#8217;true&#8217;,<br />
-                                                                               u&#8217;async-dns&#8217; : u&#8217;true&#8217;,<br />
+<p>&gt;&gt;&gt; import urllib2, json &gt;&gt;&gt; from pprint import pprint &gt;&gt;&gt; jsonreq = json.dumps({&#8216;jsonrpc&#8217; : &#8216;2.0&#8217;, &#8216;id&#8217; : &#8216;qwer&#8217;, &#8230; &#8216;method&#8217; : &#8216;aria2.getOption&#8217;, &#8230; &#8216;params&#8217; : [&#8216;2089b05ecca3d829&#8217;]}) &gt;&gt;&gt; c = urllib2.urlopen(&#8216;http://localhost:6800/jsonrpc&#8217;, jsonreq) &gt;&gt;&gt; pprint(json.loads(c.read()))<br/>
+{<br/>
+    u&#8217;id&#8217; : u&#8217;qwer&#8217;,<br/>
+            u&#8217;jsonrpc&#8217; : u&#8217;2.0&#8242;,<br/>
+                         u&#8217;result&#8217;:<br/>
+    {<br/>
+        u&#8217;allow-overwrite&#8217; : u&#8217;false&#8217;,<br/>
+                             u&#8217;allow-piece-length-change&#8217; : u&#8217;false&#8217;,<br/>
+                                                            u&#8217;always-resume&#8217; : u&#8217;true&#8217;,<br/>
+                                                                               u&#8217;async-dns&#8217; : u&#8217;true&#8217;,<br/>
                                                                                               &#8230;</p>
 <p> <code>XML-RPC Example</code> </p>
 <pre>
@@ -1422,11 +1422,11 @@ aria2.addUri(&quot;token:$$secret$$&quot;, [&quot;<a rel="nofollow" href="http:/
 <p> This method returns <code>OK</code> for success. </p>
 <p> The following examples set the <i>max-download-limit</i> option to <code>20K</code> for the download GID#2089b05ecca3d829. </p>
 <p> <code>JSON-RPC Example</code> </p>
-<p>&gt;&gt;&gt; import urllib2, json &gt;&gt;&gt; from pprint import pprint &gt;&gt;&gt; jsonreq = json.dumps({&#8216;jsonrpc&#8217; : &#8216;2.0&#8217;, &#8216;id&#8217; : &#8216;qwer&#8217;, &#8230; &#8216;method&#8217; : &#8216;aria2.changeOption&#8217;, &#8230; &#8216;params&#8217; : [ &#8216;2089b05ecca3d829&#8217;,<br />
-                                                                                                                                                                         &#8230; {&#8216;max-download-limit&#8217; : &#8217;10K&#8217;} ]}) &gt;&gt;&gt;<br />
-                                                                     c = urllib2.urlopen(&#8216;http://localhost:6800/jsonrpc&#8217;, jsonreq) &gt;&gt;&gt; pprint(json.loads(c.read()))<br />
-{<br />
-    u&#8217;id&#8217; : u&#8217;qwer&#8217;, u&#8217;jsonrpc&#8217; : u&#8217;2.0&#8242;, u&#8217;result&#8217; : u&#8217;OK&#8217;<br />
+<p>&gt;&gt;&gt; import urllib2, json &gt;&gt;&gt; from pprint import pprint &gt;&gt;&gt; jsonreq = json.dumps({&#8216;jsonrpc&#8217; : &#8216;2.0&#8217;, &#8216;id&#8217; : &#8216;qwer&#8217;, &#8230; &#8216;method&#8217; : &#8216;aria2.changeOption&#8217;, &#8230; &#8216;params&#8217; : [ &#8216;2089b05ecca3d829&#8217;,<br/>
+                                                                                                                                                                         &#8230; {&#8216;max-download-limit&#8217; : &#8217;10K&#8217;} ]}) &gt;&gt;&gt;<br/>
+                                                                     c = urllib2.urlopen(&#8216;http://localhost:6800/jsonrpc&#8217;, jsonreq) &gt;&gt;&gt; pprint(json.loads(c.read()))<br/>
+{<br/>
+    u&#8217;id&#8217; : u&#8217;qwer&#8217;, u&#8217;jsonrpc&#8217; : u&#8217;2.0&#8242;, u&#8217;result&#8217; : u&#8217;OK&#8217;<br/>
 }</p>
 <p> <code>XML-RPC Example</code> </p>
 <pre>
@@ -1482,18 +1482,18 @@ aria2.addUri(&quot;token:$$secret$$&quot;, [&quot;<a rel="nofollow" href="http:/
 <dt><code>numStoppedTotal</code></dt>
 <dd> The number of stopped downloads in the current session and <i>not</i> capped by the <i>&#8211;max-download-result</i> option. </dd>
 <p> <code>JSON-RPC Example</code> </p>
-<p>&gt;&gt;&gt; import urllib2, json &gt;&gt;&gt; from pprint import pprint &gt;&gt;&gt; jsonreq = json.dumps({&#8216;jsonrpc&#8217; : &#8216;2.0&#8217;, &#8216;id&#8217; : &#8216;qwer&#8217;, &#8230; &#8216;method&#8217; : &#8216;aria2.getGlobalStat&#8217;}) &gt;&gt;&gt; c = urllib2.urlopen(&#8216;http://localhost:6800/jsonrpc&#8217;, jsonreq) &gt;&gt;&gt; pprint(json.loads(c.read()))<br />
-{<br />
-    u&#8217;id&#8217; : u&#8217;qwer&#8217;,<br />
-            u&#8217;jsonrpc&#8217; : u&#8217;2.0&#8242;,<br />
-                         u&#8217;result&#8217;:<br />
-    {<br />
-        u&#8217;downloadSpeed&#8217; : u&#8217;21846&#8242;,<br />
-                           u&#8217;numActive&#8217; : u&#8217;2&#8242;,<br />
-                                          u&#8217;numStopped&#8217; : u&#8217;0&#8242;,<br />
-                                                          u&#8217;numWaiting&#8217; : u&#8217;0&#8242;,<br />
-                                                                          u&#8217;uploadSpeed&#8217; : u&#8217;0&#8242;<br />
-    }<br />
+<p>&gt;&gt;&gt; import urllib2, json &gt;&gt;&gt; from pprint import pprint &gt;&gt;&gt; jsonreq = json.dumps({&#8216;jsonrpc&#8217; : &#8216;2.0&#8217;, &#8216;id&#8217; : &#8216;qwer&#8217;, &#8230; &#8216;method&#8217; : &#8216;aria2.getGlobalStat&#8217;}) &gt;&gt;&gt; c = urllib2.urlopen(&#8216;http://localhost:6800/jsonrpc&#8217;, jsonreq) &gt;&gt;&gt; pprint(json.loads(c.read()))<br/>
+{<br/>
+    u&#8217;id&#8217; : u&#8217;qwer&#8217;,<br/>
+            u&#8217;jsonrpc&#8217; : u&#8217;2.0&#8242;,<br/>
+                         u&#8217;result&#8217;:<br/>
+    {<br/>
+        u&#8217;downloadSpeed&#8217; : u&#8217;21846&#8242;,<br/>
+                           u&#8217;numActive&#8217; : u&#8217;2&#8242;,<br/>
+                                          u&#8217;numStopped&#8217; : u&#8217;0&#8242;,<br/>
+                                                          u&#8217;numWaiting&#8217; : u&#8217;0&#8242;,<br/>
+                                                                          u&#8217;uploadSpeed&#8217; : u&#8217;0&#8242;<br/>
+    }<br/>
 }</p>
 <p> <code>XML-RPC Example</code> </p>
 <pre>
@@ -1514,9 +1514,9 @@ aria2.addUri(&quot;token:$$secret$$&quot;, [&quot;<a rel="nofollow" href="http:/
 <dd> This method removes a completed/error/removed download denoted by <i>gid</i> from memory. This method returns <code>OK</code> for success. </dd>
 <p> The following examples remove the download result of the download GID#2089b05ecca3d829. </p>
 <p> <code>JSON-RPC Example</code> </p>
-<p>&gt;&gt;&gt; import urllib2, json &gt;&gt;&gt; from pprint import pprint &gt;&gt;&gt; jsonreq = json.dumps({&#8216;jsonrpc&#8217; : &#8216;2.0&#8217;, &#8216;id&#8217; : &#8216;qwer&#8217;, &#8230; &#8216;method&#8217; : &#8216;aria2.removeDownloadResult&#8217;, &#8230; &#8216;params&#8217; : [&#8216;2089b05ecca3d829&#8217;]}) &gt;&gt;&gt; c = urllib2.urlopen(&#8216;http://localhost:6800/jsonrpc&#8217;, jsonreq) &gt;&gt;&gt; pprint(json.loads(c.read()))<br />
-{<br />
-    u&#8217;id&#8217; : u&#8217;qwer&#8217;, u&#8217;jsonrpc&#8217; : u&#8217;2.0&#8242;, u&#8217;result&#8217; : u&#8217;OK&#8217;<br />
+<p>&gt;&gt;&gt; import urllib2, json &gt;&gt;&gt; from pprint import pprint &gt;&gt;&gt; jsonreq = json.dumps({&#8216;jsonrpc&#8217; : &#8216;2.0&#8217;, &#8216;id&#8217; : &#8216;qwer&#8217;, &#8230; &#8216;method&#8217; : &#8216;aria2.removeDownloadResult&#8217;, &#8230; &#8216;params&#8217; : [&#8216;2089b05ecca3d829&#8217;]}) &gt;&gt;&gt; c = urllib2.urlopen(&#8216;http://localhost:6800/jsonrpc&#8217;, jsonreq) &gt;&gt;&gt; pprint(json.loads(c.read()))<br/>
+{<br/>
+    u&#8217;id&#8217; : u&#8217;qwer&#8217;, u&#8217;jsonrpc&#8217; : u&#8217;2.0&#8242;, u&#8217;result&#8217; : u&#8217;OK&#8217;<br/>
 }</p>
 <p> <code>XML-RPC Example</code> </p>
 <pre>
@@ -1532,49 +1532,49 @@ aria2.addUri(&quot;token:$$secret$$&quot;, [&quot;<a rel="nofollow" href="http:/
 <dt><code>enabledFeatures</code></dt>
 <dd> List of enabled features. Each feature is given as a string. </dd>
 <p> <code>JSON-RPC Example</code> </p>
-<p>&gt;&gt;&gt; import urllib2, json &gt;&gt;&gt; from pprint import pprint &gt;&gt;&gt; jsonreq = json.dumps({&#8216;jsonrpc&#8217; : &#8216;2.0&#8217;, &#8216;id&#8217; : &#8216;qwer&#8217;, &#8230; &#8216;method&#8217; : &#8216;aria2.getVersion&#8217;}) &gt;&gt;&gt; c = urllib2.urlopen(&#8216;http://localhost:6800/jsonrpc&#8217;, jsonreq) &gt;&gt;&gt; pprint(json.loads(c.read()))<br />
-{<br />
-    u&#8217;id&#8217; : u&#8217;qwer&#8217;,<br />
-            u&#8217;jsonrpc&#8217; : u&#8217;2.0&#8242;,<br />
-                         u&#8217;result&#8217;:<br />
-    {<br />
-        u&#8217;enabledFeatures&#8217; : [ u&#8217;Async DNS&#8217;,<br />
-                               u&#8217;BitTorrent&#8217;,<br />
-                               u&#8217;Firefox3 Cookie&#8217;,<br />
-                               u&#8217;GZip&#8217;,<br />
-                               u&#8217;HTTPS&#8217;,<br />
-                               u&#8217;Message Digest&#8217;,<br />
-                               u&#8217;Metalink&#8217;,<br />
-                               u&#8217;XML-RPC&#8217; ],<br />
-                             u&#8217;version&#8217; : u&#8217;1.11.0&#8242;<br />
-    }<br />
+<p>&gt;&gt;&gt; import urllib2, json &gt;&gt;&gt; from pprint import pprint &gt;&gt;&gt; jsonreq = json.dumps({&#8216;jsonrpc&#8217; : &#8216;2.0&#8217;, &#8216;id&#8217; : &#8216;qwer&#8217;, &#8230; &#8216;method&#8217; : &#8216;aria2.getVersion&#8217;}) &gt;&gt;&gt; c = urllib2.urlopen(&#8216;http://localhost:6800/jsonrpc&#8217;, jsonreq) &gt;&gt;&gt; pprint(json.loads(c.read()))<br/>
+{<br/>
+    u&#8217;id&#8217; : u&#8217;qwer&#8217;,<br/>
+            u&#8217;jsonrpc&#8217; : u&#8217;2.0&#8242;,<br/>
+                         u&#8217;result&#8217;:<br/>
+    {<br/>
+        u&#8217;enabledFeatures&#8217; : [ u&#8217;Async DNS&#8217;,<br/>
+                               u&#8217;BitTorrent&#8217;,<br/>
+                               u&#8217;Firefox3 Cookie&#8217;,<br/>
+                               u&#8217;GZip&#8217;,<br/>
+                               u&#8217;HTTPS&#8217;,<br/>
+                               u&#8217;Message Digest&#8217;,<br/>
+                               u&#8217;Metalink&#8217;,<br/>
+                               u&#8217;XML-RPC&#8217; ],<br/>
+                             u&#8217;version&#8217; : u&#8217;1.11.0&#8242;<br/>
+    }<br/>
 }</p>
 <p> <code>XML-RPC Example</code> </p>
-<p>&gt;&gt;&gt; import xmlrpclib &gt;&gt;&gt; from pprint import pprint &gt;&gt;&gt; s = xmlrpclib.ServerProxy(&#8216;http://localhost:6800/rpc&#8217;) &gt;&gt;&gt; r = s.aria2.getVersion() &gt;&gt;&gt; pprint(r)<br />
-{<br />
-    &#8216;enabledFeatures&#8217; : [ &#8216;Async DNS&#8217;,<br />
-                          &#8216;BitTorrent&#8217;,<br />
-                          &#8216;Firefox3 Cookie&#8217;,<br />
-                          &#8216;GZip&#8217;,<br />
-                          &#8216;HTTPS&#8217;,<br />
-                          &#8216;Message Digest&#8217;,<br />
-                          &#8216;Metalink&#8217;,<br />
-                          &#8216;XML-RPC&#8217; ],<br />
-                        &#8216;version&#8217; : &#8216;1.11.0&#8217;<br />
+<p>&gt;&gt;&gt; import xmlrpclib &gt;&gt;&gt; from pprint import pprint &gt;&gt;&gt; s = xmlrpclib.ServerProxy(&#8216;http://localhost:6800/rpc&#8217;) &gt;&gt;&gt; r = s.aria2.getVersion() &gt;&gt;&gt; pprint(r)<br/>
+{<br/>
+    &#8216;enabledFeatures&#8217; : [ &#8216;Async DNS&#8217;,<br/>
+                          &#8216;BitTorrent&#8217;,<br/>
+                          &#8216;Firefox3 Cookie&#8217;,<br/>
+                          &#8216;GZip&#8217;,<br/>
+                          &#8216;HTTPS&#8217;,<br/>
+                          &#8216;Message Digest&#8217;,<br/>
+                          &#8216;Metalink&#8217;,<br/>
+                          &#8216;XML-RPC&#8217; ],<br/>
+                        &#8216;version&#8217; : &#8216;1.11.0&#8217;<br/>
 }</p>
 <dt><code>aria2.getSessionInfo([secret])</code></dt>
 <dd> This method returns session information. The response is a struct and contains following key.</dd>
 <dt><code>sessionId</code></dt>
 <dd> Session ID, which is generated each time when aria2 is invoked. </dd>
 <p> <code>JSON-RPC Example</code> </p>
-<p>&gt;&gt;&gt; import urllib2, json &gt;&gt;&gt; from pprint import pprint &gt;&gt;&gt; jsonreq = json.dumps({&#8216;jsonrpc&#8217; : &#8216;2.0&#8217;, &#8216;id&#8217; : &#8216;qwer&#8217;, &#8230; &#8216;method&#8217; : &#8216;aria2.getSessionInfo&#8217;}) &gt;&gt;&gt; c = urllib2.urlopen(&#8216;http://localhost:6800/jsonrpc&#8217;, jsonreq) &gt;&gt;&gt; pprint(json.loads(c.read()))<br />
-{<br />
-    u&#8217;id&#8217; : u&#8217;qwer&#8217;,<br />
-            u&#8217;jsonrpc&#8217; : u&#8217;2.0&#8242;,<br />
-                         u&#8217;result&#8217;:<br />
-    {<br />
-        u&#8217;sessionId&#8217; : u&#8217;cd6a3bc6a1de28eb5bfa181e5f6b916d44af31a9&#8242;<br />
-    }<br />
+<p>&gt;&gt;&gt; import urllib2, json &gt;&gt;&gt; from pprint import pprint &gt;&gt;&gt; jsonreq = json.dumps({&#8216;jsonrpc&#8217; : &#8216;2.0&#8217;, &#8216;id&#8217; : &#8216;qwer&#8217;, &#8230; &#8216;method&#8217; : &#8216;aria2.getSessionInfo&#8217;}) &gt;&gt;&gt; c = urllib2.urlopen(&#8216;http://localhost:6800/jsonrpc&#8217;, jsonreq) &gt;&gt;&gt; pprint(json.loads(c.read()))<br/>
+{<br/>
+    u&#8217;id&#8217; : u&#8217;qwer&#8217;,<br/>
+            u&#8217;jsonrpc&#8217; : u&#8217;2.0&#8242;,<br/>
+                         u&#8217;result&#8217;:<br/>
+    {<br/>
+        u&#8217;sessionId&#8217; : u&#8217;cd6a3bc6a1de28eb5bfa181e5f6b916d44af31a9&#8242;<br/>
+    }<br/>
 }</p>
 <p> <code>XML-RPC Example</code> </p>
 <pre>
@@ -1593,19 +1593,19 @@ aria2.addUri(&quot;token:$$secret$$&quot;, [&quot;<a rel="nofollow" href="http:/
 <dd> This methods encapsulates multiple method calls in a single request. <i>methods</i> is an array of structs. The structs contain two keys: <code>methodName</code> and <code>params</code>. <code>methodName</code> is the method name to call and <code>params</code> is array containing parameters to the method call. This method returns an array of responses. The elements will be either a one-item array containing the return value of the method call or a struct of fault element if an encapsulated method call fails. </dd>
 <p> In the following examples, we add 2 downloads. The first one is <code><a rel="nofollow" href="http://example.org/file">http://example.org/file</a></code> and the second one is <code>file.torrent</code>. </p>
 <p> <code>JSON-RPC Example</code> </p>
-<p>&gt;&gt;&gt; import urllib2, json, base64 &gt;&gt;&gt; from pprint import pprint &gt;&gt;&gt; jsonreq = json.dumps({&#8216;jsonrpc&#8217; : &#8216;2.0&#8217;, &#8216;id&#8217; : &#8216;qwer&#8217;, &#8230; &#8216;method&#8217; : &#8216;system.multicall&#8217;, &#8230; &#8216;params&#8217; : [[ {&#8216;methodName&#8217; : &#8216;aria2.addUri&#8217;,<br />
-                                                                                                                                                                                 &#8230; &#8216;params&#8217; : [[&#8216;http://example.org&#8217;]]},<br />
-                                                                                                                                                                                &#8230; {&#8216;methodName&#8217; : &#8216;aria2.addTorrent&#8217;,<br />
-                                                                                                                                                                                     &#8230; &#8216;params&#8217; : [base64.b64encode(open(&#8216;file.torrent&#8217;).read())]} ]]}) &gt;&gt;&gt;<br />
-                                                                             c = urllib2.urlopen(&#8216;http://localhost:6800/jsonrpc&#8217;, jsonreq) &gt;&gt;&gt; pprint(json.loads(c.read()))<br />
-{<br />
-    u&#8217;id&#8217; : u&#8217;qwer&#8217;, u&#8217;jsonrpc&#8217; : u&#8217;2.0&#8242;, u&#8217;result&#8217; : [ [u&#8217;2089b05ecca3d829&#8242;], [u&#8217;d2703803b52216d1&#8242;] ]<br />
+<p>&gt;&gt;&gt; import urllib2, json, base64 &gt;&gt;&gt; from pprint import pprint &gt;&gt;&gt; jsonreq = json.dumps({&#8216;jsonrpc&#8217; : &#8216;2.0&#8217;, &#8216;id&#8217; : &#8216;qwer&#8217;, &#8230; &#8216;method&#8217; : &#8216;system.multicall&#8217;, &#8230; &#8216;params&#8217; : [[ {&#8216;methodName&#8217; : &#8216;aria2.addUri&#8217;,<br/>
+                                                                                                                                                                                 &#8230; &#8216;params&#8217; : [[&#8216;http://example.org&#8217;]]},<br/>
+                                                                                                                                                                                &#8230; {&#8216;methodName&#8217; : &#8216;aria2.addTorrent&#8217;,<br/>
+                                                                                                                                                                                     &#8230; &#8216;params&#8217; : [base64.b64encode(open(&#8216;file.torrent&#8217;).read())]} ]]}) &gt;&gt;&gt;<br/>
+                                                                             c = urllib2.urlopen(&#8216;http://localhost:6800/jsonrpc&#8217;, jsonreq) &gt;&gt;&gt; pprint(json.loads(c.read()))<br/>
+{<br/>
+    u&#8217;id&#8217; : u&#8217;qwer&#8217;, u&#8217;jsonrpc&#8217; : u&#8217;2.0&#8242;, u&#8217;result&#8217; : [ [u&#8217;2089b05ecca3d829&#8242;], [u&#8217;d2703803b52216d1&#8242;] ]<br/>
 }</p>
 <p> JSON-RPC additionally supports Batch requests as described in the JSON-RPC 2.0 Specification: </p>
-<p>&gt;&gt;&gt; jsonreq = json.dumps([ {&#8216;jsonrpc&#8217; : &#8216;2.0&#8217;, &#8216;id&#8217; : &#8216;qwer&#8217;, &#8230; &#8216;method&#8217; : &#8216;aria2.addUri&#8217;, &#8230; &#8216;params&#8217; : [[&#8216;http://example.org&#8217;]]},<br />
-                           &#8230; {&#8216;jsonrpc&#8217; : &#8216;2.0&#8217;, &#8216;id&#8217; : &#8216;asdf&#8217;, &#8230; &#8216;method&#8217; : &#8216;aria2.addTorrent&#8217;, &#8230; &#8216;params&#8217; : [base64.b64encode(open(&#8216;file.torrent&#8217;).read())]} ]) &gt;&gt;&gt;<br />
-              c = urllib2.urlopen(&#8216;http://localhost:6800/jsonrpc&#8217;, jsonreq) &gt;&gt;&gt; pprint(json.loads(c.read()))<br />
-                                                                                    [{u&#8217;id&#8217; : u&#8217;qwer&#8217;, u&#8217;jsonrpc&#8217; : u&#8217;2.0&#8242;, u&#8217;result&#8217; : u&#8217;2089b05ecca3d829&#8242;},<br />
+<p>&gt;&gt;&gt; jsonreq = json.dumps([ {&#8216;jsonrpc&#8217; : &#8216;2.0&#8217;, &#8216;id&#8217; : &#8216;qwer&#8217;, &#8230; &#8216;method&#8217; : &#8216;aria2.addUri&#8217;, &#8230; &#8216;params&#8217; : [[&#8216;http://example.org&#8217;]]},<br/>
+                           &#8230; {&#8216;jsonrpc&#8217; : &#8216;2.0&#8217;, &#8216;id&#8217; : &#8216;asdf&#8217;, &#8230; &#8216;method&#8217; : &#8216;aria2.addTorrent&#8217;, &#8230; &#8216;params&#8217; : [base64.b64encode(open(&#8216;file.torrent&#8217;).read())]} ]) &gt;&gt;&gt;<br/>
+              c = urllib2.urlopen(&#8216;http://localhost:6800/jsonrpc&#8217;, jsonreq) &gt;&gt;&gt; pprint(json.loads(c.read()))<br/>
+                                                                                    [{u&#8217;id&#8217; : u&#8217;qwer&#8217;, u&#8217;jsonrpc&#8217; : u&#8217;2.0&#8242;, u&#8217;result&#8217; : u&#8217;2089b05ecca3d829&#8242;},<br/>
                                                                                      {u&#8217;id&#8217; : u&#8217;asdf&#8217;, u&#8217;jsonrpc&#8217; : u&#8217;2.0&#8242;, u&#8217;result&#8217; : u&#8217;d2703803b52216d1&#8242;}]</p>
 <p> <code>XML-RPC Example</code> </p>
 <pre>
@@ -1621,11 +1621,11 @@ aria2.addUri(&quot;token:$$secret$$&quot;, [&quot;<a rel="nofollow" href="http:/
 <dt><code>system.listMethods()</code></dt>
 <dd> This method returns all the available RPC methods in an array of string. Unlike other methods, this method does not require secret token. This is safe because this method just returns the available method names. </dd>
 <p> <code>JSON-RPC Example</code> </p>
-<p>&gt;&gt;&gt; import urllib2, json &gt;&gt;&gt; from pprint import pprint &gt;&gt;&gt; jsonreq = json.dumps({&#8216;jsonrpc&#8217; : &#8216;2.0&#8217;, &#8216;id&#8217; : &#8216;qwer&#8217;, &#8230; &#8216;method&#8217; : &#8216;system.listMethods&#8217;}) &gt;&gt;&gt; c = urllib2.urlopen(&#8216;http://localhost:6800/jsonrpc&#8217;, jsonreq) &gt;&gt;&gt; pprint(json.loads(c.read()))<br />
-{u&#8217;id&#8217;: u&#8217;qwer&#8217;,<br />
- u&#8217;jsonrpc&#8217;: u&#8217;2.0&#8242;,<br />
- u&#8217;result&#8217;: [u&#8217;aria2.addUri&#8217;,<br />
-             u&#8217;aria2.addTorrent&#8217;,<br />
+<p>&gt;&gt;&gt; import urllib2, json &gt;&gt;&gt; from pprint import pprint &gt;&gt;&gt; jsonreq = json.dumps({&#8216;jsonrpc&#8217; : &#8216;2.0&#8217;, &#8216;id&#8217; : &#8216;qwer&#8217;, &#8230; &#8216;method&#8217; : &#8216;system.listMethods&#8217;}) &gt;&gt;&gt; c = urllib2.urlopen(&#8216;http://localhost:6800/jsonrpc&#8217;, jsonreq) &gt;&gt;&gt; pprint(json.loads(c.read()))<br/>
+{u&#8217;id&#8217;: u&#8217;qwer&#8217;,<br/>
+ u&#8217;jsonrpc&#8217;: u&#8217;2.0&#8242;,<br/>
+ u&#8217;result&#8217;: [u&#8217;aria2.addUri&#8217;,<br/>
+             u&#8217;aria2.addTorrent&#8217;,<br/>
 &#8230;</p>
 <p> <code>XML-RPC Example</code> </p>
 <pre>
@@ -1637,11 +1637,11 @@ aria2.addUri(&quot;token:$$secret$$&quot;, [&quot;<a rel="nofollow" href="http:/
 <dt><code>system.listNotifications()</code></dt>
 <dd> This method returns all the available RPC notifications in an array of string. Unlike other methods, this method does not require secret token. This is safe because this method just returns the available notifications names. </dd>
 <p> <code>JSON-RPC Example</code> </p>
-<p>&gt;&gt;&gt; import urllib2, json &gt;&gt;&gt; from pprint import pprint &gt;&gt;&gt; jsonreq = json.dumps({&#8216;jsonrpc&#8217; : &#8216;2.0&#8217;, &#8216;id&#8217; : &#8216;qwer&#8217;, &#8230; &#8216;method&#8217; : &#8216;system.listNotifications&#8217;}) &gt;&gt;&gt; c = urllib2.urlopen(&#8216;http://localhost:6800/jsonrpc&#8217;, jsonreq) &gt;&gt;&gt; pprint(json.loads(c.read()))<br />
-{u&#8217;id&#8217;: u&#8217;qwer&#8217;,<br />
- u&#8217;jsonrpc&#8217;: u&#8217;2.0&#8242;,<br />
- u&#8217;result&#8217;: [u&#8217;aria2.onDownloadStart&#8217;,<br />
-             u&#8217;aria2.onDownloadPause&#8217;,<br />
+<p>&gt;&gt;&gt; import urllib2, json &gt;&gt;&gt; from pprint import pprint &gt;&gt;&gt; jsonreq = json.dumps({&#8216;jsonrpc&#8217; : &#8216;2.0&#8217;, &#8216;id&#8217; : &#8216;qwer&#8217;, &#8230; &#8216;method&#8217; : &#8216;system.listNotifications&#8217;}) &gt;&gt;&gt; c = urllib2.urlopen(&#8216;http://localhost:6800/jsonrpc&#8217;, jsonreq) &gt;&gt;&gt; pprint(json.loads(c.read()))<br/>
+{u&#8217;id&#8217;: u&#8217;qwer&#8217;,<br/>
+ u&#8217;jsonrpc&#8217;: u&#8217;2.0&#8242;,<br/>
+ u&#8217;result&#8217;: [u&#8217;aria2.onDownloadStart&#8217;,<br/>
+             u&#8217;aria2.onDownloadPause&#8217;,<br/>
 &#8230;</p>
 <p> <code>XML-RPC Example</code> </p>
 <pre>
@@ -1676,8 +1676,8 @@ aria2.addUri(&quot;token:$$secret$$&quot;, [&quot;<a rel="nofollow" href="http:/
 </pre>
 <p> The <i>header</i> and <i>index-out</i> options are allowed multiple times on the command-line. Since the name should be unique in a struct (many XML-RPC library implementations use a hash or dict for struct), a single string is not enough. To overcome this limitation, you may use an array as the value as well as a string.</p>
 <h3>JSON-RPC Example</h3>
-<p>{<br />
-    &#8216;header&#8217; : [ &#8216;Accept-Language: ja&#8217;, &#8216;Accept-Charset: utf-8&#8217; ]<br />
+<p>{<br/>
+    &#8216;header&#8217; : [ &#8216;Accept-Language: ja&#8217;, &#8216;Accept-Charset: utf-8&#8217; ]<br/>
 }</p>
 <h3>XML-RPC Example</h3>
 <pre>
@@ -1696,9 +1696,9 @@ aria2.addUri(&quot;token:$$secret$$&quot;, [&quot;<a rel="nofollow" href="http:/
 &lt;/struct&gt;
 </pre>
 <p> The following example adds a download with two options: <code>dir</code> and <code>header</code>. The <code>header</code> option requires two values, so it uses a list: </p>
-<p>&gt;&gt;&gt; import xmlrpclib &gt;&gt;&gt; s = xmlrpclib.ServerProxy(&#8216;http://localhost:6800/rpc&#8217;) &gt;&gt;&gt; opts = dict(dir = &#8216;/tmp&#8217;,<br />
-                                                                                                &#8230; header = [ &#8216;Accept-Language: ja&#8217;,<br />
-                                                                                                               &#8230; &#8216;Accept-Charset: utf-8&#8217; ]) &gt;&gt;&gt;<br />
+<p>&gt;&gt;&gt; import xmlrpclib &gt;&gt;&gt; s = xmlrpclib.ServerProxy(&#8216;http://localhost:6800/rpc&#8217;) &gt;&gt;&gt; opts = dict(dir = &#8216;/tmp&#8217;,<br/>
+                                                                                                &#8230; header = [ &#8216;Accept-Language: ja&#8217;,<br/>
+                                                                                                               &#8230; &#8216;Accept-Charset: utf-8&#8217; ]) &gt;&gt;&gt;<br/>
                                                                                            s.aria2.addUri([&#8216;http://example.org/file&#8217;], opts) &#8216;1&#8217;</p>
 <h3>JSON-RPC using HTTP GET</h3>
 <p> The JSON-RPC interface also supports requests via HTTP GET. The encoding scheme in GET parameters is based on JSON-RPC over HTTP Specification [2008-1-15(RC1)]. The encoding of GET parameters are follows: </p>
@@ -1711,14 +1711,14 @@ aria2.addUri(&quot;token:$$secret$$&quot;, [&quot;<a rel="nofollow" href="http:/
 /jsonrpc?method=aria2.tellStatus&amp;id=foo&amp;params=WyIyMDg5YjA1ZWNjYTNkODI5Il0%3D
 </pre>
 <p> The <code>params</code> parameter is Base64-encoded JSON array which usually appears in <code>params</code> attribute in JSON-RPC request object. In the above example, the params is <code>[&quot;2089b05ecca3d829&quot;]</code>, therefore: </p>
-<p>[&#8220;2089b05ecca3d829&#8221;]&#8211;(Base64)&#8211; &gt; WyIyMDg5YjA1ZWNjYTNkODI5Il0 =<br />
+<p>[&#8220;2089b05ecca3d829&#8221;]&#8211;(Base64)&#8211; &gt; WyIyMDg5YjA1ZWNjYTNkODI5Il0 =<br/>
     &#8211;(Percent Encode)&#8211; &gt; WyIyMDg5YjA1ZWNjYTNkODI5Il0 % 3D</p>
 <p> The JSON-RPC interface also supports JSONP. You can specify the callback function in the <code>jsoncallback</code> parameter: </p>
 <pre>
 /jsonrpc?method=aria2.tellStatus&amp;id=foo&amp;params=WyIyMDg5YjA1ZWNjYTNkODI5Il0%3D&amp;jsoncallback=cb
 </pre>
 <p> For Batch requests, the <code>method</code> and <code>id</code> parameters must not be specified. The whole request must be specified in the <code>params</code> parameter. For example, a Batch request: </p>
-<p>[{&#8216;jsonrpc&#8217; : &#8216;2.0&#8217;, &#8216;id&#8217; : &#8216;qwer&#8217;, &#8216;method&#8217; : &#8216;aria2.getVersion&#8217;},<br />
+<p>[{&#8216;jsonrpc&#8217; : &#8216;2.0&#8217;, &#8216;id&#8217; : &#8216;qwer&#8217;, &#8216;method&#8217; : &#8216;aria2.getVersion&#8217;},<br/>
  {&#8216;jsonrpc&#8217; : &#8216;2.0&#8217;, &#8216;id&#8217; : &#8216;asdf&#8217;, &#8216;method&#8217; : &#8216;aria2.tellActive&#8217;}]</p>
 <p> must be encoded like this: </p>
 <pre>
@@ -1746,13 +1746,13 @@ aria2.addUri(&quot;token:$$secret$$&quot;, [&quot;<a rel="nofollow" href="http:/
 <dd> This notification will be sent when a torrent download is complete but seeding is still going on. The <i>event</i> is the same struct as the <i>event</i> argument of <i>aria2.onDownloadStart()</i> method.</dd></dl>
 <h3>Sample XML-RPC Client Code</h3>
 <p> The following Ruby script adds <code><a rel="nofollow" href="http://localhost/aria2.tar.bz2">http://localhost/aria2.tar.bz2</a></code> to aria2c (running on localhost) with option <i>&#8211;dir=/downloads</i> and prints the RPC response: </p>
-<p>#!/ usr / bin / env ruby<br />
-require &#8216;xmlrpc/client&#8217; require &#8216;pp&#8217; client = XMLRPC::Client.new2(&#8220;http://localhost:6800/rpc&#8221;)<br />
-                                                  options = {&#8220;dir&#8221; = &gt; &#8220;/downloads&#8221;} result = client.call(&#8220;aria2.addUri&#8221;, [&#8220;http://localhost/aria2.tar.bz2&#8221;], options)<br />
+<p>#!/ usr / bin / env ruby<br/>
+require &#8216;xmlrpc/client&#8217; require &#8216;pp&#8217; client = XMLRPC::Client.new2(&#8220;http://localhost:6800/rpc&#8221;)<br/>
+                                                  options = {&#8220;dir&#8221; = &gt; &#8220;/downloads&#8221;} result = client.call(&#8220;aria2.addUri&#8221;, [&#8220;http://localhost/aria2.tar.bz2&#8221;], options)<br/>
                                                                                                   pp result</p>
 <p> If you are a Python lover, you can use xmlrpclib (Python3 uses xmlrpc.client instead) to interact with aria2: </p>
-<p>import xmlrpclib from pprint import pprint s = xmlrpclib.ServerProxy(&#8220;http://localhost:6800/rpc&#8221;)<br />
-                                                                         r = s.aria2.addUri([&#8220;http://localhost/aria2.tar.bz2&#8221;], {&#8220;dir&#8221; : &#8220;/downloads&#8221; })<br />
+<p>import xmlrpclib from pprint import pprint s = xmlrpclib.ServerProxy(&#8220;http://localhost:6800/rpc&#8221;)<br/>
+                                                                         r = s.aria2.addUri([&#8220;http://localhost/aria2.tar.bz2&#8221;], {&#8220;dir&#8221; : &#8220;/downloads&#8221; })<br/>
                                                                                                 pprint(r)</p>
 <h2>MISC</h2>
 <h3>Console Readout</h3>
@@ -1887,7 +1887,7 @@ $ aria2c --follow-torrent=false &quot;<a rel="nofollow" href="http://host/file.t
 </pre>
 <h3>Specify the output file name</h3>
 <p> To specify the output file name for BitTorrent downloads, you need to know the index of file in the torrent (see <i>&#8211;show-files</i>). For example, the output looks like this: </p>
-<p>idx | path / length == = += == == == == == == == == == == =<br />
+<p>idx | path / length == = += == == == == == == == == == == =<br/>
                                                               1 | dist / base &#8211; 2.6.18.iso | 99.9MiB &#8212; -+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;2 | dist / driver &#8211; 2.6.18.iso | 169.0MiB &#8212; -+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212;</p>
 <p> To save &#8216;dist/base-2.6.18.iso&#8217; in &#8216;/tmp/mydir/base.iso&#8217; and &#8216;dist/driver-2.6.18.iso&#8217; in &#8216;/tmp/dir/driver.iso&#8217;, use the following command: </p>
 <pre>

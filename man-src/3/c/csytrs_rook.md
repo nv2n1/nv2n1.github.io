@@ -11,7 +11,7 @@ description: "csytrs_rook.f –"
 <p> csytrs_rook.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>csytrs_rook</code> (UPLO, N, NRHS, A, LDA, IPIV, B, LDB, INFO)<br />
+<p> subroutine <code>csytrs_rook</code> (UPLO, N, NRHS, A, LDA, IPIV, B, LDB, INFO)<br/>
  <i></i><code>CSYTRS_ROOK</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine csytrs_rook (characterUPLO, integerN, integerNRHS, complex, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, complex, dimension( ldb, * )B, integerLDB, integerINFO)</h3>

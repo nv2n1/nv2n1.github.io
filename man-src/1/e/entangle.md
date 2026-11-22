@@ -11,7 +11,7 @@ entangle - tethered camera control &amp; capture
 
 <h2>SYNOPSIS</h2>
 
- entangle [<font SIZE="-1">OPTION...</font>]
+ entangle [OPTION...]
 
 <h2>DESCRIPTION</h2>
 
@@ -28,13 +28,13 @@ entangle - tethered camera control &amp; capture
 </dd><dt>--help-all
 </dt><dd> Show all command line options
 </dd><dt>--help-gtk
-</dt><dd> Show <font SIZE="-1">GTK+</font> command line options
+</dt><dd> Show GTK+ command line options
 </dd><dt>--help-entangle
 </dt><dd> Show Entangle command line options</dd></dl>
 
 <h2>AUTHOR</h2>
 
- Entangle was initially written by Daniel P. Berrange &lt;dan [at] berrange.com&gt;. For details of subsequent contributors, see the application <font SIZE="-1">AUTHORS</font> file in the source or <font SIZE="-1">GIT</font> commit history.
+ Entangle was initially written by Daniel P. Berrange &lt;dan [at] berrange.com&gt;. For details of subsequent contributors, see the application AUTHORS file in the source or GIT commit history.
 
 <h2>COPYRIGHT</h2>
 
@@ -42,7 +42,7 @@ entangle - tethered camera control &amp; capture
 
 <h2>LICENSE</h2>
 
- Entangle is distributed under the terms of the <font SIZE="-1">GNU GPL</font> v3+. This is free software; see the source for copying conditions. There is <font SIZE="-1">NO</font> warranty; not even for <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE</font>
+ Entangle is distributed under the terms of the GNU GPL v3+. This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE
 
 <h2>SEE ALSO</h2>
 

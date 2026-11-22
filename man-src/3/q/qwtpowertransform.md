@@ -14,8 +14,8 @@ description: "QwtPowerTransform –"
 <p> Inherits <code>QwtTransform</code>.</p>
 <h3>Public Member Functions</h3>
 <p><code>QwtPowerTransform</code> (double exponent) </p>
-<p> virtual <code>~QwtPowerTransform</code> ()<br />
- <i>Destructor. </i><br />
+<p> virtual <code>~QwtPowerTransform</code> ()<br/>
+ <i>Destructor. </i><br/>
  virtual double <code>transform</code> (double value) const </p>
 <p> virtual double <code>invTransform</code> (double value) const </p>
 <p> virtual <code>QwtTransform</code> * <code>copy</code> () const </p>

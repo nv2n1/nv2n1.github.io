@@ -9,11 +9,11 @@ description: "o2cb_ctl – Control program for the O2CB cluster service."
 
 <p>o2cb_ctl &#8211; Control program for the <i>O2CB</i> cluster service.</p>
 <h2>Synopsis</h2>
-<p><code>o2cb_ctl </code> <code>-C</code> <code>-n</code> <i>object</i> <code>-t</code> type [<code>-i</code>] [<code>-a</code> <i>attribute</i> ]<br />
- <code>o2cb_ctl </code> <code>-D</code> <code>-n</code> <i>object</i> [<code>-u</code>]<br />
- <code>o2cb_ctl </code> <code>-I</code> [<code>-o-z</code>] <code>-l</code> <i>manager</i>&gt; [<code>-n</code> <i>object</i>&gt;] [<code>-t</code> <i>type</i>] [<code>-a</code> <i>attribute</i>]<br />
- <code>o2cb_ctl </code> <code>-H</code> [<code>-n</code> <i>object</i>] [<code>-t</code> <i>type</i>&gt;] [<code>-a</code> <i>attribute</i>&gt;]<br />
- <code>o2cb_ctl </code> <code>-h</code><br />
+<p><code>o2cb_ctl </code> <code>-C</code> <code>-n</code> <i>object</i> <code>-t</code> type [<code>-i</code>] [<code>-a</code> <i>attribute</i> ]<br/>
+ <code>o2cb_ctl </code> <code>-D</code> <code>-n</code> <i>object</i> [<code>-u</code>]<br/>
+ <code>o2cb_ctl </code> <code>-I</code> [<code>-o-z</code>] <code>-l</code> <i>manager</i>&gt; [<code>-n</code> <i>object</i>&gt;] [<code>-t</code> <i>type</i>] [<code>-a</code> <i>attribute</i>]<br/>
+ <code>o2cb_ctl </code> <code>-H</code> [<code>-n</code> <i>object</i>] [<code>-t</code> <i>type</i>&gt;] [<code>-a</code> <i>attribute</i>&gt;]<br/>
+ <code>o2cb_ctl </code> <code>-h</code><br/>
  <code>o2cb_ctl </code> <code>-V</code> </p>
 <h2>Description</h2>
 <p><code>o2cb_ctl</code> is the control program for the <i>O2CB</i> cluster service. Users are not advised to use this program directly but instead use the <i>O2CB</i> init service and/or <i>ocfs2console</i>. </p>
@@ -51,13 +51,13 @@ description: "o2cb_ctl – Control program for the O2CB cluster service."
 </dl>
 <h2>Examples</h2>
 <dl>
-<dd>Add node5 to an offline cluster: $ o2cb_ctl -C -n node5 -t node -a number=5<br />
+<dd>Add node5 to an offline cluster: $ o2cb_ctl -C -n node5 -t node -a number=5<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>-a ip_address=192.168.0.5 -a ip_port=7777</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>-a cluster=mycluster</p>
 <dt>Add node10 to an online cluster:</dt>
-<dd>$ o2cb_ctl -C -i -n node10 -t node -a number=10<br />
+<dd>$ o2cb_ctl -C -i -n node10 -t node -a number=10<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>-a ip_address=192.168.1.10 -a ip_port=7777</dd>
-<p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>-a cluster=mycluster<br />
+<p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>-a cluster=mycluster<br/>
  Note the -i argument.</p>
 <dt>Query the IP address of node5:</dt>
 <dd>$ o2cb_ctl -I -n node5 -a ip_address</dd>

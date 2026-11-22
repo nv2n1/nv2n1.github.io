@@ -10,7 +10,7 @@ description: "XkbChangeControls – Provides a flexible method for updating the 
 <p>XkbChangeControls &#8211; Provides a flexible method for updating the controls in a server to match those in the changed keyboard description </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Bool XkbChangeControls</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>XkbDescPtr </code><i>xkb</i><code>,</code> <code>XkbControlsChangesPtr </code><i>changes</i><code>);</code><br />
+<dt> <code>Bool XkbChangeControls</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>XkbDescPtr </code><i>xkb</i><code>,</code> <code>XkbControlsChangesPtr </code><i>changes</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
@@ -75,7 +75,7 @@ description: "XkbChangeControls – Provides a flexible method for updating the 
 <tr VALIGN=top>
 <td> AccessXFeedback </td>
 <td> XkbAccessXFeedbackMask </td>
-<td> ax_options:<br />
+<td> ax_options:<br/>
 &nbsp;<wbr>&nbsp;XkbAX_*FBMask </td>
 <td> XkbAccessXFeedbackMask </td>
 <td>10.6.3
@@ -244,8 +244,8 @@ description: "XkbChangeControls – Provides a flexible method for updating the 
 <tr VALIGN=top>
 <td> StickyKeys </td>
 <td> XkbStickyKeysMask </td>
-<td> ax_options:<br />
-&nbsp;<wbr>&nbsp;XkbAX_TwoKeysMask<br />
+<td> ax_options:<br/>
+&nbsp;<wbr>&nbsp;XkbAX_TwoKeysMask<br/>
 &nbsp;<wbr>&nbsp;XkbAX_LatchToLockMask </td>
 <td> XkbStickyKeysMask </td>
 <td>10.6.8

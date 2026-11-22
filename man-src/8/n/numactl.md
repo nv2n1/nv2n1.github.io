@@ -9,11 +9,11 @@ description: "numactl – Control NUMA policy for processes or shared memory"
 
 <p>numactl &#8211; Control NUMA policy for processes or shared memory</p>
 <h2>Synopsis</h2>
-<p><code>numactl</code> [ <code>&#8211;all</code> ] [ <code>&#8211;interleave nodes</code> ] [ <code>&#8211;preferred node </code> ] [ <code>&#8211;membind nodes</code> ] [ <code>&#8211;cpunodebind nodes</code> ] [ <code>&#8211;physcpubind cpus</code> ] [ <code>&#8211;localalloc</code> ] [&#8211;] command {arguments &#8230;}<br />
- <code>numactl &#8211;show</code><br />
- <code>numactl &#8211;hardware</code><br />
- <code>numactl </code> [ <code>&#8211;huge</code> ] [ <code>&#8211;offset offset</code> ] [ <code>&#8211;shmmode shmmode</code> ] [ <code>&#8211;length length</code> ] [ <code>&#8211;strict</code> ]<br />
- [ <code>&#8211;shmid id</code> ] <code>&#8211;shm shmkeyfile</code> | <code>&#8211;file tmpfsfile</code><br />
+<p><code>numactl</code> [ <code>&#8211;all</code> ] [ <code>&#8211;interleave nodes</code> ] [ <code>&#8211;preferred node </code> ] [ <code>&#8211;membind nodes</code> ] [ <code>&#8211;cpunodebind nodes</code> ] [ <code>&#8211;physcpubind cpus</code> ] [ <code>&#8211;localalloc</code> ] [&#8211;] command {arguments &#8230;}<br/>
+ <code>numactl &#8211;show</code><br/>
+ <code>numactl &#8211;hardware</code><br/>
+ <code>numactl </code> [ <code>&#8211;huge</code> ] [ <code>&#8211;offset offset</code> ] [ <code>&#8211;shmmode shmmode</code> ] [ <code>&#8211;length length</code> ] [ <code>&#8211;strict</code> ]<br/>
+ [ <code>&#8211;shmid id</code> ] <code>&#8211;shm shmkeyfile</code> | <code>&#8211;file tmpfsfile</code><br/>
  [ <code>&#8211;touch</code> ] [ <code>&#8211;dump</code> ] [ <code>&#8211;dump-nodes</code> ] memory policy</p>
 <h2>Description</h2>
 <p><code>numactl</code> runs processes with a specific NUMA scheduling or memory placement policy. The policy is set for command and inherited by all of its children. In addition it can set persistent policy for shared memory segments or files. </p>
@@ -131,8 +131,8 @@ description: "numactl – Control NUMA policy for processes or shared memory"
 <p> numactl &#8211;cpunodebind=netdev:eth0 &#8211;membind=netdev:eth0 network-server Run network-server on the node of network device eth0 with its memory also in the same node. </p>
 <p> numactl &#8211;preferred=1 numactl &#8211;show Set preferred node 1 and show the resulting state. </p>
 <p> numactl &#8211;interleave=all &#8211;shm /tmp/shmkey Interleave all of the sysv shared memory region specified by /tmp/shmkey over all nodes. </p>
-<p> Place a tmpfs file on 2 nodes:<br />
-&nbsp;<wbr>&nbsp;<wbr>numactl &#8211;membind=2 dd if=/dev/zero of=/dev/shm/A bs=1M count=1024<br />
+<p> Place a tmpfs file on 2 nodes:<br/>
+&nbsp;<wbr>&nbsp;<wbr>numactl &#8211;membind=2 dd if=/dev/zero of=/dev/shm/A bs=1M count=1024<br/>
 &nbsp;<wbr>&nbsp;<wbr>numactl &#8211;membind=3 dd if=/dev/zero of=/dev/shm/A seek=1024 bs=1M count=1024 </p>
 <p> numactl &#8211;localalloc /dev/shm/file Reset the policy for the shared memory file <i>file</i> to the default localalloc policy.</p>
 <h2>Notes</h2>

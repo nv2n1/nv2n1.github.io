@@ -21,8 +21,8 @@ adds an instrument to the composite
 void subtract (const boost::shared_ptr&lt; Instrument &gt; &amp;instrument, Real multiplier=1.0)
 shorts an instrument from the composite
 Instrument interface</code></pre>
-<p> bool <code>isExpired</code> () const<br />
- <i>returns whether the instrument is still tradable. </i><br />
+<p> bool <code>isExpired</code> () const<br/>
+ <i>returns whether the instrument is still tradable. </i><br/>
  void <code>performCalculations</code> () const</p>
 <h2>Detailed Description</h2>
 <p>Composite instrument </p>

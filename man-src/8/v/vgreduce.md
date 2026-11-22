@@ -47,29 +47,29 @@ description: "vgreduce – Remove physical volume(s) from a volume group"
 <p> Remove all missing PVs from a VG. </p>
 <p> <code>vgreduce</code> <code>&#8211;removemissing</code> <i>VG</i> </p>
 <dl>
-<dd>[ <code>&#8211;mirrorsonly</code> ]<br />
+<dd>[ <code>&#8211;mirrorsonly</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <p> &#8211; </p>
 <p> Common options for command:</p>
 <dl>
-<dd>[ <code>-A</code>|<code>&#8211;autobackup</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>-f</code>|<code>&#8211;force</code> ]<br />
+<dd>[ <code>-A</code>|<code>&#8211;autobackup</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>-f</code>|<code>&#8211;force</code> ]<br/>
  [ <code>&#8211;reportformat</code> <code>basic</code>|<code>json</code> ]</dd></dl>
 <p> Common options for lvm:</p>
 <dl>
-<dd>[ <code>-d</code>|<code>&#8211;debug</code> ]<br />
- [ <code>-h</code>|<code>&#8211;help</code> ]<br />
- [ <code>-q</code>|<code>&#8211;quiet</code> ]<br />
- [ <code>-t</code>|<code>&#8211;test</code> ]<br />
- [ <code>-v</code>|<code>&#8211;verbose</code> ]<br />
- [ <code>-y</code>|<code>&#8211;yes</code> ]<br />
- [ <code>&#8211;commandprofile</code> <i>String</i> ]<br />
- [ <code>&#8211;config</code> <i>String</i> ]<br />
- [ <code>&#8211;driverloaded</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;lockopt</code> <i>String</i> ]<br />
- [ <code>&#8211;longhelp</code> ]<br />
- [ <code>&#8211;nolocking</code> ]<br />
- [ <code>&#8211;profile</code> <i>String</i> ]<br />
+<dd>[ <code>-d</code>|<code>&#8211;debug</code> ]<br/>
+ [ <code>-h</code>|<code>&#8211;help</code> ]<br/>
+ [ <code>-q</code>|<code>&#8211;quiet</code> ]<br/>
+ [ <code>-t</code>|<code>&#8211;test</code> ]<br/>
+ [ <code>-v</code>|<code>&#8211;verbose</code> ]<br/>
+ [ <code>-y</code>|<code>&#8211;yes</code> ]<br/>
+ [ <code>&#8211;commandprofile</code> <i>String</i> ]<br/>
+ [ <code>&#8211;config</code> <i>String</i> ]<br/>
+ [ <code>&#8211;driverloaded</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;lockopt</code> <i>String</i> ]<br/>
+ [ <code>&#8211;longhelp</code> ]<br/>
+ [ <code>&#8211;nolocking</code> ]<br/>
+ [ <code>&#8211;profile</code> <i>String</i> ]<br/>
  [ <code>&#8211;version</code> ]</dd></dl>
 <h2>Options</h2>
 <dl>

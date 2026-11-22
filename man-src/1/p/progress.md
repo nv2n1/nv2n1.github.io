@@ -10,8 +10,8 @@ description: "progress – Coreutils Progress Viewer"
 
 <p> progress &#8211; Coreutils Progress Viewer </p>
 <h2>SYNOPSIS</h2>
-<p> <code>progress</code> [ <code>-qdwmM</code> ] [ <code>-W</code> <i>secs</i> ] [ <code>-c</code> <i>command</i> ] [ <code>-p</code> <i>pid</i> ]<br />
- <code>progress -v</code> | <code>&#8211;version</code><br />
+<p> <code>progress</code> [ <code>-qdwmM</code> ] [ <code>-W</code> <i>secs</i> ] [ <code>-c</code> <i>command</i> ] [ <code>-p</code> <i>pid</i> ]<br/>
+ <code>progress -v</code> | <code>&#8211;version</code><br/>
  <code>progress -h</code> | <code>&#8211;help</code> </p>
 <h2>DESCRIPTION</h2>
 <p> This manual page briefly documents the <code>progress</code> command. </p>

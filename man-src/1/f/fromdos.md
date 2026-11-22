@@ -10,7 +10,7 @@ description: "tofrodos – Converts text files between DOS and Unix formats."
 
 <p> tofrodos &#8211; Converts text files between DOS and Unix formats.</p>
 <h2>SYNOPSIS</h2>
-<p> <code>fromdos</code> [ <i>options</i> ] [file&#8230;]<br />
+<p> <code>fromdos</code> [ <i>options</i> ] [file&#8230;]<br/>
  <code>todos</code> [ <i>options</i> ] [file&#8230;] </p>
 <h2>DESCRIPTION</h2>
 <p> DOS text files traditionally have carriage return and line feed pairs as their newline characters while Unix text files have the line feed as their newline character. <i>fromdos</i> converts ASCII and Unicode UTF-8 text files from the DOS format to the Unix format, while <i>todos</i> converts them from the Unix format to the DOS format. </p>
@@ -46,5 +46,5 @@ description: "tofrodos – Converts text files between DOS and Unix formats."
 <p> If the program is invoked with multiple files on the command line, the default behaviour is to skip to the next file in the list if an error is encountered with any file. In such a case, the exit code returned will the status of the last file processed (ie, 0 on success, 1 on failure). If this is not desirable, use the -e option, which will force the program to abort immediately with the appropriate exit code on encountering any error.</p>
 <h2>AUTHOR</h2>
 <p> The program and its documentation are copyrighted (c) 1996-2013 by Christopher Heng. All rights reserved. They are distributed under the terms of the GNU General Public License Version 2. </p>
-<p> The latest version of tofrodos can be obtained from<br />
+<p> The latest version of tofrodos can be obtained from<br/>
  <a rel="nofollow" href="http://www.thefreecountry.com/tofrodos/index.shtml">http://www.thefreecountry.com/tofrodos/index.shtml</a> </p>

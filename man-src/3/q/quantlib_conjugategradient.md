@@ -13,7 +13,7 @@ description: "QuantLib::ConjugateGradient – Multi-dimensional Conjugate Gradie
 <p> Inherits QuantLib::LineSearchBasedMethod. </p>
 <h3>Public Member Functions</h3>
 <p><code>ConjugateGradient</code> (const boost::shared_ptr&lt; <code>LineSearch</code> &gt; &amp;lineSearch=boost::shared_ptr&lt; <code>LineSearch</code> &gt;()) </p>
-<p> virtual EndCriteria::Type <code>minimize</code> (<code>Problem</code> &amp;P, const <code>EndCriteria</code> &amp;endCriteria)<br />
+<p> virtual EndCriteria::Type <code>minimize</code> (<code>Problem</code> &amp;P, const <code>EndCriteria</code> &amp;endCriteria)<br/>
  <i>solve the optimization problem P </i></p>
 <h2>Detailed Description</h2>
 <p>Multi-dimensional Conjugate Gradient class. </p>

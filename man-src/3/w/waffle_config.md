@@ -32,11 +32,11 @@ union waffle_native_config *waffle_config_get_native(struct waffle_config *self)
 <p> For example, one quirk that Waffle is able to accommodate is that some platforms require specification of context attributes at different times. GLX requires that the context attributes be specified at time of context creation [<code>glXCreateContextAttribsARB</code>(3)] but MacOS requires the attributes to be specified when choosing a config [<code>CGLChoosePixelFormat</code>]. Therefore, Waffle is constrained by MacOS to require the attributes at time of <code>waffle_config_choose()</code>. </p>
 <p> For additional documentation on the behavior of context attributes on each platform, refer to the following:</p>
 <dl>
-<dd>For GLX, refer to the m[blue]<code>GLX 1.4 Specification</code>m[]<font SIZE="-2">[1]</font> and the specifications for extensions m[blue]<code>GLX_ARB_create_context_profile</code>m[]<font SIZE="-2">[2]</font> and m[blue]<code>GLX_EXT_create_context_es2_profile</code>m[]<font SIZE="-2">[3]</font>.</dd></dl>
+<dd>For GLX, refer to the m[blue]<code>GLX 1.4 Specification</code>m[][1] and the specifications for extensions m[blue]<code>GLX_ARB_create_context_profile</code>m[][2] and m[blue]<code>GLX_EXT_create_context_es2_profile</code>m[][3].</dd></dl>
 <dl>
-<dd>For EGL, refer to the m[blue]<code>EGL 1.4 Specification</code>m[]<font SIZE="-2">[4]</font> and the specifications for extension m[blue]<code>EGL_KHR_create_context</code>m[]<font SIZE="-2">[5]</font>.</dd></dl>
+<dd>For EGL, refer to the m[blue]<code>EGL 1.4 Specification</code>m[][4] and the specifications for extension m[blue]<code>EGL_KHR_create_context</code>m[][5].</dd></dl>
 <dl>
-<dd>For CGL, refer to the documentation of <code>kCGLPFAOpenGLProfile</code> in the m[blue]<code>CGL Reference</code>m[]<font SIZE="-2">[6]</font>.</dd></dl>
+<dd>For CGL, refer to the documentation of <code>kCGLPFAOpenGLProfile</code> in the m[blue]<code>CGL Reference</code>m[][6].</dd></dl>
 <h2>Attributes</h2>
 <p><code>WAFFLE_CONTEXT_API</code></p>
 <dl>
@@ -54,7 +54,7 @@ union waffle_native_config *waffle_config_get_native(struct waffle_config *self)
 <p> On GLX, <code>WAFFLE_CONTEXT_OPENGL</code> is always supported. The system may optionally support additional APIs. </p>
 <p> On EGL platforms other than Android, no API is guaranteed to be supported. One must use <code><a href="/docs/linux/man/3-waffle_display_supports_context_api/">waffle_display_supports_context_api</a></code>(3) to check for supported APIs. </p>
 <p> On MacOS, only <code>WAFFLE_CONTEXT_OPENGL</code> is supported. This may change in the future if Apple adds support for additional APIs.</dl>
-<p> <code>WAFFLE_CONTEXT_MAJOR_VERSION</code><br />
+<p> <code>WAFFLE_CONTEXT_MAJOR_VERSION</code><br/>
  <code>WAFFLE_CONTEXT_MINOR_VERSION</code></p>
 <dl>
 <dd>This pair of attributes is optional. They specify the context version that <code><a href="/docs/linux/man/3-waffle_context_create/">waffle_context_create</a></code>(3) will request. </dd>
@@ -82,15 +82,15 @@ union waffle_native_config *waffle_config_get_native(struct waffle_config *self)
 <p> This attribute, if true, instructs <code><a href="/docs/linux/man/3-waffle_context_create/">waffle_context_create</a></code>(3) to create a debug context. However, even if <code>waffle_config_choose()</code> successfully returns a config for a debug context, the native platform may later reject it when <code><a href="/docs/linux/man/3-waffle_context_create/">waffle_context_create</a></code>(3) is called. </p>
 <p> Debug contexts are intended for use during application development, to provide additional runtime checking, validation, and logging functionality while possibly incurring performance penalties. The additional functionality provided by debug contexts may vary according to the implementation. In some cases a debug context may be identical to a non-debug context. </p>
 <p> This attribute is optional and its default value is false(0). Valid values are <a href="/docs/linux/man/1-true/">true</a>(1), false(0), and <code>WAFFLE_DONT_CARE</code>.</dl>
-<p> <code>WAFFLE_RED_SIZE</code><br />
- <code>WAFFLE_GREEN_SIZE</code><br />
- <code>WAFFLE_BLUE_SIZE</code><br />
- <code>WAFFLE_ALPHA_SIZE</code><br />
- <code>WAFFLE_DEPTH_SIZE</code><br />
+<p> <code>WAFFLE_RED_SIZE</code><br/>
+ <code>WAFFLE_GREEN_SIZE</code><br/>
+ <code>WAFFLE_BLUE_SIZE</code><br/>
+ <code>WAFFLE_ALPHA_SIZE</code><br/>
+ <code>WAFFLE_DEPTH_SIZE</code><br/>
  <code>WAFFLE_STENCIL_SIZE</code></p>
 <dl>
 <dd>The default value for each size attribute is <code>0</code>. Valid values are the non-negative integers and <code>WAFFLE_DONT_CARE</code>. If the requested size for a channel is 0, then any surface created with the config will lack that channel. If the requested size for a channel is positive, then the number of bits in that channel for any surface created with the config will be at least the requested size.</dd></dl>
-<p> <code>WAFFLE_SAMPLE_BUFFERS</code><br />
+<p> <code>WAFFLE_SAMPLE_BUFFERS</code><br/>
  <code>WAFFLE_SAMPLES</code></p>
 <dl>
 <dd>The default value of <code>WAFFLE_SAMPLE_BUFFERS</code> is false(0). Valid values are <a href="/docs/linux/man/1-true/">true</a>(1), false(0), and <code>WAFFLE_DONT_CARE</code>. The attribute specifies if a surface created with this config is double-buffered. If false, then any surface created with the config will not be multisampled. If true, the any surface created with the config will be multisampled, where the number of samples will be at least <code>WAFFLE_SAMPLES</code>. </dd>
@@ -118,44 +118,44 @@ union waffle_native_config *waffle_config_get_native(struct waffle_config *self)
 <dd>&bull; MacOS does not support the OpenGL 3.2 Compatibility Profile, and it supports the OpenGL 3.2 Core Profile only for MacOS &gt;= 10.7 on select GPU&#8217;s.</dd></dl>
 <h2>Examples</h2>
 <h3>Example 1</h3>
-<p>Choose a config for an OpenGL legacy context that has at least 8 bits in each of the RGBA channels. #include &lt;stdlib.h&gt;<br />
+<p>Choose a config for an OpenGL legacy context that has at least 8 bits in each of the RGBA channels. #include &lt;stdlib.h&gt;<br/>
 #include &lt;waffle.h&gt;</p>
-<p>static const int32_t init_attrib_list[] = {<br />
-    WAFFLE_PLATFORM,<br />
-    WAFFLE_PLATFORM_GLX,<br />
-    0,<br />
+<p>static const int32_t init_attrib_list[] = {<br/>
+    WAFFLE_PLATFORM,<br/>
+    WAFFLE_PLATFORM_GLX,<br/>
+    0,<br/>
 };</p>
-<p>static const int32_t config_attrib_list[] = {<br />
-    WAFFLE_CONTEXT_API,<br />
+<p>static const int32_t config_attrib_list[] = {<br/>
+    WAFFLE_CONTEXT_API,<br/>
     WAFFLE_CONTEXT_OPENGL,</p>
-<p>    WAFFLE_RED_SIZE,<br />
-    8,<br />
-    WAFFLE_GREEN_SIZE,<br />
-    8,<br />
-    WAFFLE_BLUE_SIZE,<br />
-    8,<br />
-    WAFFLE_ALPHA_SIZE,<br />
+<p>    WAFFLE_RED_SIZE,<br/>
+    8,<br/>
+    WAFFLE_GREEN_SIZE,<br/>
+    8,<br/>
+    WAFFLE_BLUE_SIZE,<br/>
+    8,<br/>
+    WAFFLE_ALPHA_SIZE,<br/>
     8,</p>
-<p>    0,<br />
+<p>    0,<br/>
 };</p>
-<p>int main()<br />
-{<br />
-    struct waffle_display *display;<br />
-    struct waffle_config *config;<br />
+<p>int main()<br/>
+{<br/>
+    struct waffle_display *display;<br/>
+    struct waffle_config *config;<br/>
     bool ok;</p>
-<p>    ok = waffle_init(init_attrib_list);<br />
-    if (!ok)<br />
+<p>    ok = waffle_init(init_attrib_list);<br/>
+    if (!ok)<br/>
         exit(EXIT_FAILURE);</p>
-<p>    display = waffle_display_connect(NULL);<br />
-    if (!display)<br />
+<p>    display = waffle_display_connect(NULL);<br/>
+    if (!display)<br/>
         exit(EXIT_FAILURE);</p>
-<p>    config = waffle_config_choose(config_attrib_list);<br />
-    if (!config)<br />
+<p>    config = waffle_config_choose(config_attrib_list);<br/>
+    if (!config)<br/>
         exit(EXIT_FAILURE);</p>
-<p>    // Now clean up.<br />
-    waffle_config_destroy(config);<br />
-    waffle_display_disconnect(display);<br />
-    return EXIT_SUCCESS;<br />
+<p>    // Now clean up.<br/>
+    waffle_config_destroy(config);<br/>
+    waffle_display_disconnect(display);<br/>
+    return EXIT_SUCCESS;<br/>
 }</p>
 <h3>Example 2</h3>
 <p>An attribute list for creating an OpenGL 3.2 Core Profile context that has depth and stencil buffers and some non-zero number of bits in each of the RGB channels. Since the default value of <code>WAFFLE_ALPHA_SIZE</code> is <code>WAFFLE_DONT_CARE</code>, the config may not have an alpha channel. </p>

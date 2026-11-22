@@ -10,7 +10,7 @@ description: "dlagtm.f –"
 <p>dlagtm.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dlagtm</code> (TRANS, N, NRHS, ALPHA, DL, D, DU, X, LDX, BETA, B, LDB)<br />
+<p>subroutine <code>dlagtm</code> (TRANS, N, NRHS, ALPHA, DL, D, DU, X, LDX, BETA, B, LDB)<br/>
  <i></i><code>DLAGTM</code> performs a matrix-matrix product of the form C = αAB+βC, where A is a tridiagonal matrix, B and C are rectangular matrices, and α and β are scalars, which may be 0, 1, or -1.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlagtm (characterTRANS, integerN, integerNRHS, double precisionALPHA, double precision, dimension( * )DL, double precision, dimension( * )D, double precision, dimension( * )DU, double precision, dimension( ldx, * )X, integerLDX, double precisionBETA, double precision, dimension( ldb, * )B, integerLDB)</h3>

@@ -13,7 +13,7 @@ description: "zmq_pgm – 0MQ reliable multicast transport using PGM"
 <h2>Description</h2>
 <p>0MQ implements two variants of PGM, the standard protocol where PGM datagrams are layered directly on top of IP datagrams as defined by RFC 3208 (the <i>pgm</i> transport) and &quot;Encapsulated PGM&quot; or EPGM where PGM datagrams are encapsulated inside UDP datagrams (the <i>epgm</i> transport). The <i>pgm</i> and <i>epgm</i> transports can only be used with the <i>ZMQ_PUB</i> and <i>ZMQ_SUB</i> socket types. Further, PGM sockets are rate limited by default. For details, refer to the <i>ZMQ_RATE</i>, and <i>ZMQ_RECOVERY_IVL</i> options documented in <code><a href="/docs/linux/man/3-zmq_setsockopt/">zmq_setsockopt</a></code>(3).</p>
 <dl>
-<dd><font SIZE="+1"> <code>Caution</code> </font><br />
+<dd> <code>Caution</code> <br/>
  The <i>pgm</i> transport implementation requires access to raw IP sockets. Additional privileges may be required on some operating systems for this operation. Applications not requiring direct interoperability with other PGM implementations are encouraged to use the <i>epgm</i> transport instead which does not require any special privileges. </dd>
 <h2>Addressing</h2>
 <p>A 0MQ endpoint is a string consisting of a <i>transport</i>:// followed by an <i>address</i>. The <i>transport</i> specifies the underlying protocol to use. The <i>address</i> specifies the transport-specific address to connect to. </p>
@@ -26,7 +26,7 @@ description: "zmq_pgm – 0MQ reliable multicast transport using PGM"
 <dl>
 <dd>&bull; The primary IPv4 address assigned to the interface, in its numeric representation.</dd></dl>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> Interface names are not standardised in any way and should be assumed to be arbitrary and platform dependent. On Win32 platforms no short interface names exist, thus only the primary IPv4 address may be used to specify an <i>interface</i>. The <i>interface</i> part can be omitted, in that case the default one will be selected. </p>
 </dl>
 <p> A <i>multicast address</i> is specified by an IPv4 multicast address in its numeric representation.</p>

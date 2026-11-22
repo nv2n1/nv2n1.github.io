@@ -10,9 +10,9 @@ description: "doveadm-log – Locate, test or reopen Dovecot’s log files"
 
 <p> doveadm-log &#8211; Locate, test or reopen Dovecot&#8217;s log files</p>
 <h2>SYNOPSIS</h2>
-<p> <code>doveadm</code> [<code>-Dv</code>] <code>log errors</code> [<code>-s</code> <i>min_timestamp</i>]<br />
- <code>doveadm</code> [<code>-Dv</code>] <code>log find</code> [<i>directory</i>]<br />
- <code>doveadm</code> [<code>-Dv</code>] <code>log reopen</code><br />
+<p> <code>doveadm</code> [<code>-Dv</code>] <code>log errors</code> [<code>-s</code> <i>min_timestamp</i>]<br/>
+ <code>doveadm</code> [<code>-Dv</code>] <code>log find</code> [<i>directory</i>]<br/>
+ <code>doveadm</code> [<code>-Dv</code>] <code>log reopen</code><br/>
  <code>doveadm</code> [<code>-Dv</code>] <code>log test</code></p>
 <h2>DESCRIPTION</h2>
 <p> The <code>doveadm log</code> <i>commands</i> are used to locate and reopen the log files of <code><a href="/docs/linux/man/1-dovecot/">dovecot</a></code>(1). It&#8217;s also possible to test the configured targets of the <i>*log_path</i> settings.</p>
@@ -35,7 +35,7 @@ description: "doveadm-log – Locate, test or reopen Dovecot’s log files"
 <p> The <code>log find</code> command is used to show the location of the log files, to which <code><a href="/docs/linux/man/1-dovecot/">dovecot</a></code>(1) sends its log messages. If <code><a href="/docs/linux/man/1-dovecot/">dovecot</a></code>(1) logs its messages through <code>syslogd</code>(8) and <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) could not find any log files, you can specify the <i>directory</i> where your syslogd writes its log files.</p>
 <h3>log reopen</h3>
 <p> <code>doveadm log reopen</code> </p>
-<p> This command causes <code>doveadm</code> to reopen all log files, configured in the <i>log_path</i>, <i>info_log_path</i> and <i>debug_log_path</i> settings. These settings are configured in <i>/etc/dovecot/conf.d/10-logging.conf</i>.<br />
+<p> This command causes <code>doveadm</code> to reopen all log files, configured in the <i>log_path</i>, <i>info_log_path</i> and <i>debug_log_path</i> settings. These settings are configured in <i>/etc/dovecot/conf.d/10-logging.conf</i>.<br/>
  This is for example useful after manually rotating the log files.</p>
 <h3>log test</h3>
 <p> <code>doveadm log test</code> </p>

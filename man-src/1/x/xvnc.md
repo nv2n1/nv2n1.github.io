@@ -129,7 +129,7 @@ description: "Xvnc – the X VNC server"
 <p> 5951 stream tcp wait james /usr/local/bin/Xvnc Xvnc -inetd -query localhost -once passwordFile=/home/james/.vnc/passwd </p>
 <p> In fact typically, you would have one entry for each user who uses VNC regularly, each of whom has their own dedicated TCP port which they use. In this example, when user &quot;james&quot; connects to :51, he enters his VNC password, then gets the XDM login screen where he logs in in the normal way. However, unlike the previous example, if he disconnects, the session remains persistent, and when he reconnects he will get the same session back again. When he logs out of the X session, the Xvnc will die, but of course a new one will be created automatically the next time he connects. </p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-vncconfig/">vncconfig</a></code>(1), <code><a href="/docs/linux/man/1-vncpasswd/">vncpasswd</a></code>(1), <code><a href="/docs/linux/man/1-vncserver/">vncserver</a></code>(1), <code><a href="/docs/linux/man/1-vncviewer/">vncviewer</a></code>(1), <code><a href="/docs/linux/man/1-xserver/">Xserver</a></code>(1), <code>inetd</code>(1)<br />
+<p><code><a href="/docs/linux/man/1-vncconfig/">vncconfig</a></code>(1), <code><a href="/docs/linux/man/1-vncpasswd/">vncpasswd</a></code>(1), <code><a href="/docs/linux/man/1-vncserver/">vncserver</a></code>(1), <code><a href="/docs/linux/man/1-vncviewer/">vncviewer</a></code>(1), <code><a href="/docs/linux/man/1-xserver/">Xserver</a></code>(1), <code>inetd</code>(1)<br/>
  <a rel="nofollow" href="http://www.tigervnc.org">http://www.tigervnc.org</a> </p>
 <h2>Author</h2>
 <p>Tristan Richardson, RealVNC Ltd. and others. </p>

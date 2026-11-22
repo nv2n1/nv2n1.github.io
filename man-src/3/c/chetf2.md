@@ -11,7 +11,7 @@ description: "chetf2.f –"
 <p> chetf2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>chetf2</code> (UPLO, N, A, LDA, IPIV, INFO)<br />
+<p> subroutine <code>chetf2</code> (UPLO, N, A, LDA, IPIV, INFO)<br/>
  <i></i><code>CHETF2</code> computes the factorization of a complex Hermitian matrix, using the diagonal pivoting method (unblocked algorithm calling Level 2 BLAS).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine chetf2 (characterUPLO, integerN, complex, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, integerINFO)</h3>

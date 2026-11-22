@@ -10,7 +10,7 @@ description: "zlags2.f –"
 <p>zlags2.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlags2</code> (UPPER, A1, A2, A3, B1, B2, B3, CSU, SNU, CSV, SNV, CSQ, SNQ)<br />
+<p>subroutine <code>zlags2</code> (UPPER, A1, A2, A3, B1, B2, B3, CSU, SNU, CSV, SNV, CSQ, SNQ)<br/>
  <i></i><code>ZLAGS2</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlags2 (logicalUPPER, double precisionA1, complex*16A2, double precisionA3, double precisionB1, complex*16B2, double precisionB3, double precisionCSU, complex*16SNU, double precisionCSV, complex*16SNV, double precisionCSQ, complex*16SNQ)</h3>

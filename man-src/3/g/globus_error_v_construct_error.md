@@ -28,13 +28,13 @@ description: "Error Construction –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>base_source</i> Pointer to the originating module.<br />
- <i>base_cause</i> The error object causing the error. If this is the original error this parameter may be NULL.<br />
- <i>type</i> The error type. We may reserve part of this namespace for common errors. Errors not in this space are assumed to be local to the originating module.<br />
- <i>source_file</i> Name of file. Use <code>FILE</code><br />
- <i>source_func</i> Name of function. Use _globus_func_name and declare your func with GlobusFuncName(&lt;name&gt;)<br />
- <i>source_line</i> Line number. Use <code>LINE</code><br />
- <i>short_desc_format</i> Short format string giving a succinct description of the error. To be passed on to the user.<br />
+</dt><dd> <i>base_source</i> Pointer to the originating module.<br/>
+ <i>base_cause</i> The error object causing the error. If this is the original error this parameter may be NULL.<br/>
+ <i>type</i> The error type. We may reserve part of this namespace for common errors. Errors not in this space are assumed to be local to the originating module.<br/>
+ <i>source_file</i> Name of file. Use <code>FILE</code><br/>
+ <i>source_func</i> Name of function. Use _globus_func_name and declare your func with GlobusFuncName(&lt;name&gt;)<br/>
+ <i>source_line</i> Line number. Use <code>LINE</code><br/>
+ <i>short_desc_format</i> Short format string giving a succinct description of the error. To be passed on to the user.<br/>
  <i>&#8230;</i> Arguments for the format string.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -45,14 +45,14 @@ description: "Error Construction –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>error</i> The previously allocated error object.<br />
- <i>base_source</i> Pointer to the originating module.<br />
- <i>base_cause</i> The error object causing the error. If this is the original error this parameter may be NULL.<br />
- <i>type</i> The error type. We may reserve part of this namespace for common errors. Errors not in this space are assumed to be local to the originating module.<br />
- <i>source_file</i> Name of file. Use <code>FILE</code><br />
- <i>source_func</i> Name of function. Use _globus_func_name and declare your func with GlobusFuncName(&lt;name&gt;)<br />
- <i>source_line</i> Line number. Use <code>LINE</code><br />
- <i>short_desc_format</i> Short format string giving a succinct description of the error. To be passed on to the user.<br />
+</dt><dd> <i>error</i> The previously allocated error object.<br/>
+ <i>base_source</i> Pointer to the originating module.<br/>
+ <i>base_cause</i> The error object causing the error. If this is the original error this parameter may be NULL.<br/>
+ <i>type</i> The error type. We may reserve part of this namespace for common errors. Errors not in this space are assumed to be local to the originating module.<br/>
+ <i>source_file</i> Name of file. Use <code>FILE</code><br/>
+ <i>source_func</i> Name of function. Use _globus_func_name and declare your func with GlobusFuncName(&lt;name&gt;)<br/>
+ <i>source_line</i> Line number. Use <code>LINE</code><br/>
+ <i>short_desc_format</i> Short format string giving a succinct description of the error. To be passed on to the user.<br/>
  <i>ap</i> Arguments for the format string.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -63,13 +63,13 @@ description: "Error Construction –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>base_source</i> Pointer to the originating module.<br />
- <i>base_cause</i> The error object causing the error. If this is the original error this parameter may be NULL.<br />
- <i>type</i> The error type. We may reserve part of this namespace for common errors. Errors not in this space are assumed to be local to the originating module.<br />
- <i>source_file</i> Name of file. Use <code>FILE</code><br />
- <i>source_func</i> Name of function. Use _globus_func_name and declare your func with GlobusFuncName(&lt;name&gt;)<br />
- <i>source_line</i> Line number. Use <code>LINE</code><br />
- <i>short_desc_format</i> Short format string giving a succinct description of the error. To be passed on to the user.<br />
+</dt><dd> <i>base_source</i> Pointer to the originating module.<br/>
+ <i>base_cause</i> The error object causing the error. If this is the original error this parameter may be NULL.<br/>
+ <i>type</i> The error type. We may reserve part of this namespace for common errors. Errors not in this space are assumed to be local to the originating module.<br/>
+ <i>source_file</i> Name of file. Use <code>FILE</code><br/>
+ <i>source_func</i> Name of function. Use _globus_func_name and declare your func with GlobusFuncName(&lt;name&gt;)<br/>
+ <i>source_line</i> Line number. Use <code>LINE</code><br/>
+ <i>short_desc_format</i> Short format string giving a succinct description of the error. To be passed on to the user.<br/>
  <i>ap</i> Arguments for the format string.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

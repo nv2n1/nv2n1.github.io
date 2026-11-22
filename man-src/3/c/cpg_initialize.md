@@ -42,9 +42,9 @@ typedef void (*cpg_confchg_fn_t)(
 <dl>
 <dt>
 </dt><dd>
-typedef struct {<br />
-    cpg_deliver_fn_t cpg_deliver_fn;<br />
-    cpg_confchg_fn_t cpg_confchg_fn;<br />
+typedef struct {<br/>
+    cpg_deliver_fn_t cpg_deliver_fn;<br/>
+    cpg_confchg_fn_t cpg_confchg_fn;<br/>
 } cpg_callbacks_t;
 </dd></dl>
 </dl>

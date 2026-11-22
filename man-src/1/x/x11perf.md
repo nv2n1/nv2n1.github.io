@@ -604,9 +604,9 @@ description: "x11perf – X11 server performance test program"
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/7-x/">X</a>(7), <a href="/docs/linux/man/1-x11perfcomp/">x11perfcomp</a>(1)</p>
 <h2>AUTHORS</h2>
-<p> Joel McCormack<br />
- Phil Karlton<br />
- Susan Angebranndt<br />
- Chris Kent<br />
- Keith Packard<br />
+<p> Joel McCormack<br/>
+ Phil Karlton<br/>
+ Susan Angebranndt<br/>
+ Chris Kent<br/>
+ Keith Packard<br/>
  Graeme Gill </p>

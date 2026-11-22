@@ -12,22 +12,22 @@ description: "QuantLib::EquityFXVolSurface – Equity/FX volatility (smile) surf
 <p>#include &lt;ql/experimental/volatility/equityfxvolsurface.hpp&gt; </p>
 <p> Inherits <code>QuantLib::BlackVolSurface</code>. </p>
 <h3>Public Member Functions</h3>
-<p><code>Constructors</code><br />
+<p><code>Constructors</code><br/>
  See the <code>TermStructure</code> documentation for issues regarding constructors. </p>
-<p> <code>EquityFXVolSurface</code> (const <code>Calendar</code> &amp;cal=<code>Calendar</code>(), <code>BusinessDayConvention</code> bdc=Following, const <code>DayCounter</code> &amp;dc=<code>DayCounter</code>())<br />
- <i>default constructor </i><br />
- <code>EquityFXVolSurface</code> (const <code>Date</code> &amp;referenceDate, const <code>Calendar</code> &amp;cal=<code>Calendar</code>(), <code>BusinessDayConvention</code> bdc=Following, const <code>DayCounter</code> &amp;dc=<code>DayCounter</code>())<br />
- <i>initialize with a fixed reference date </i><br />
- <code>EquityFXVolSurface</code> (<code>Natural</code> settlementDays, const <code>Calendar</code> &amp;, <code>BusinessDayConvention</code> bdc=Following, const <code>DayCounter</code> &amp;dc=<code>DayCounter</code>())<br />
+<p> <code>EquityFXVolSurface</code> (const <code>Calendar</code> &amp;cal=<code>Calendar</code>(), <code>BusinessDayConvention</code> bdc=Following, const <code>DayCounter</code> &amp;dc=<code>DayCounter</code>())<br/>
+ <i>default constructor </i><br/>
+ <code>EquityFXVolSurface</code> (const <code>Date</code> &amp;referenceDate, const <code>Calendar</code> &amp;cal=<code>Calendar</code>(), <code>BusinessDayConvention</code> bdc=Following, const <code>DayCounter</code> &amp;dc=<code>DayCounter</code>())<br/>
+ <i>initialize with a fixed reference date </i><br/>
+ <code>EquityFXVolSurface</code> (<code>Natural</code> settlementDays, const <code>Calendar</code> &amp;, <code>BusinessDayConvention</code> bdc=Following, const <code>DayCounter</code> &amp;dc=<code>DayCounter</code>())<br/>
  <i>calculate the reference date based on the global evaluation date </i> </p>
 <p> <code>Black Volatility</code> </p>
-<p> <code>Volatility</code> <code>atmForwardVol</code> (const <code>Date</code> &amp;date1, const <code>Date</code> &amp;date2, bool extrapolate=false) const<br />
- <i>forward (at-the-money) volatility </i><br />
- <code>Volatility</code> <code>atmForwardVol</code> (<code>Time</code> time1, <code>Time</code> time2, bool extrapolate=false) const<br />
- <i>forward (at-the-money) volatility </i><br />
- <code>Real</code> <code>atmForwardVariance</code> (const <code>Date</code> &amp;date1, const <code>Date</code> &amp;date2, bool extrapolate=false) const<br />
- <i>forward (at-the-money) variance </i><br />
- <code>Real</code> <code>atmForwardVariance</code> (<code>Time</code> time1, <code>Time</code> time2, bool extrapolate=false) const<br />
+<p> <code>Volatility</code> <code>atmForwardVol</code> (const <code>Date</code> &amp;date1, const <code>Date</code> &amp;date2, bool extrapolate=false) const<br/>
+ <i>forward (at-the-money) volatility </i><br/>
+ <code>Volatility</code> <code>atmForwardVol</code> (<code>Time</code> time1, <code>Time</code> time2, bool extrapolate=false) const<br/>
+ <i>forward (at-the-money) volatility </i><br/>
+ <code>Real</code> <code>atmForwardVariance</code> (const <code>Date</code> &amp;date1, const <code>Date</code> &amp;date2, bool extrapolate=false) const<br/>
+ <i>forward (at-the-money) variance </i><br/>
+ <code>Real</code> <code>atmForwardVariance</code> (<code>Time</code> time1, <code>Time</code> time2, bool extrapolate=false) const<br/>
  <i>forward (at-the-money) variance </i> </p>
 <p> <code>Visitability</code> </p>
 <p> virtual void <code>accept</code> (<code>AcyclicVisitor</code> &amp;) </p>

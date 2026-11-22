@@ -10,7 +10,7 @@ description: "upmendex – Multilingual index processor"
 
 <p> upmendex - Multilingual index processor </p>
 <h2>SYNOPSIS</h2>
-<p> <code>upmendex</code> [-ilqrcgf] [<code>-s</code><i> sty</i>] [<code>-d</code><i> dic</i>] [<code>-o</code><i> ind</i>] [<code>-t</code><i> log</i>] [<code>-p</code><i> no</i>] [<code>--</code>] [<i> idx0 idx1 idx2 ...</i>] <br />
+<p> <code>upmendex</code> [-ilqrcgf] [<code>-s</code><i> sty</i>] [<code>-d</code><i> dic</i>] [<code>-o</code><i> ind</i>] [<code>-t</code><i> log</i>] [<code>-p</code><i> no</i>] [<code>--</code>] [<i> idx0 idx1 idx2 ...</i>] <br/>
  <code>upmendex</code> <code>--help</code>  </p>
 <h2>DESCRIPTION</h2>
 <p> The program <i>upmendex</i> is a general purpose multilingual hierarchical index generator working with upLaTeX, XeLaTeX and LuaLaTeX; it accepts one or more input files (<i>.idx</i>; often produced by a text formatter such as LaTeX families), sorts the entries, and produces an output file which can be formatted. It supports Latin (including non-English), Greek, Cyrillic, Korean Hangul and Han (Hanzi ideographs) scripts, as well as Japanese Kana. It is almost compatible with <i>makeindex</i> and <i>mendex</i>, and additional feature for handling readings of kanji words is also available. The formats of the input and output files are specified in a style file. The readings of kanji words can be specified in a dictionary file. The index can have up to three levels (0, 1, and 2) of subitem nesting.  </p>
@@ -469,46 +469,46 @@ description: "upmendex – Multilingual index processor"
 <p> <i>upmendex</i> has an additional feature to simplify the procedure of handling Japanese indexes, compared to <i>makeindex</i>. Users can save the effort of manually specifying a reading for every kanji word. Japanese kanji words are usually sorted by the syllables of their readings (<i>&#8216;Yomi&#8217;</i>), which can be represented by kana (Hiragana, Katakana) scripts. <i>upmendex</i> accepts index words specified in kana expression directly on an input file, and also accepts conversion from index words in Kanji or symbols to phonogram scripts by referring to Japanese dictionaries. </p>
 <p> Examples of internal simplification of syllables are shown below. </p>
 <dl>
-<dd> <p> <br />
- かぶしきがいしゃ <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code>かふしきかいしや<br />
- <br />
- マッキントッシュ <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code>まつきんとつしゆ<br />
- <br />
- ワープロ <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code>わあふろ<br />
+<dd> <p> <br/>
+ かぶしきがいしゃ <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code>かふしきかいしや<br/>
+ <br/>
+ マッキントッシュ <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code>まつきんとつしゆ<br/>
+ <br/>
+ ワープロ <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code>わあふろ<br/>
  </p>
  </dd></dl>
 <p> The dictionary file consists of list with &lt;&#8216;index_word&#8217; &#8216;reading&#8217;&gt;. The index word can be written in any scripts (kanji, kana, etc), and the reading can be in any phonograms such as Hiragana or Katakana scripts. The delimiter between the index word and its reading is one or more tab(s) or space(s). An example of a Japanese dictionary is shown below. </p>
 <dl>
-<dd> <p> <br />
- 漢字 <code>&nbsp;</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code>かんじ<br />
- <br />
- 読み <code>&nbsp;</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code>よみ<br />
- <br />
- 環境 <code>&nbsp;</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code>かんきょう<br />
- <br />
- ＄<code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code>ドル<br />
+<dd> <p> <br/>
+ 漢字 <code>&nbsp;</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code>かんじ<br/>
+ <br/>
+ 読み <code>&nbsp;</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code>よみ<br/>
+ <br/>
+ 環境 <code>&nbsp;</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code>かんきょう<br/>
+ <br/>
+ ＄<code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code>ドル<br/>
  </p>
  </dd></dl>
 <p> Here, each index word is allowed to have only one Yomi. Though some kanji words (ex. 「表」) may have more than one Yomi&#8217;s (ex. 「ひょう」 and 「おもて」), only one of them can be registered in the dictionary. When some different Yomi&#8217;s are needed, they should be specified explicitly in kana expression (ex. \index{ひょう@表} or \index{おもて@表}) on the input file. Moreover, a dictionary file is automatically referred by setting the file name at an environment variable <i>INDEXDEFAULTDICTIONARY</i>. The dictionary set by the environment variable can be used together with file(s) specified by <i>-d</i> option. </p>
 <h2>ABOUT SORTING PROCEDURE</h2>
 <p> <i>upmendex</i> sorts indexes as is (&#8216;sort by word order&#8217;) by default. Setting <i>-l</i> option, spaces between words in an index are truncated prior to sorting procedure (&#8216;sort by character order&#8217;). Even when sort by character order, the index at output remains the original sequence without the truncation. Follows show an example. </p>
 <dl>
-<dd> <p> <i>sort by word order <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code>sort by character order</i><br />
- <br />
- X Window <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code>Xlib<br />
- <br />
- Xlib <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code>XView<br />
- <br />
- XView <code>&nbsp;<wbr>&nbsp;</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code>X Window<br />
+<dd> <p> <i>sort by word order <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code>sort by character order</i><br/>
+ <br/>
+ X Window <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code>Xlib<br/>
+ <br/>
+ Xlib <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code>XView<br/>
+ <br/>
+ XView <code>&nbsp;<wbr>&nbsp;</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code>X Window<br/>
  </p>
  </dd></dl>
 <p> In addition, two sorting methods can be applied for indexes which contains both Japanese kana and other scripts (e.g. Latin script). By setting <i>priority</i> 0 (default) and 1 at a style file, a space between Japanese Kana and other scripts is inserted and not inserted respectively, prior to the sorting procedure. Follows show an example. </p>
 <dl>
-<dd> <p> <i>priority=0 <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code>priority=1</i><br />
- <br />
- index sort <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code>indファイル<br />
- <br />
- indファイル <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code>index sort<br />
+<dd> <p> <i>priority=0 <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code>priority=1</i><br/>
+ <br/>
+ index sort <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code>indファイル<br/>
+ <br/>
+ indファイル <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code>index sort<br/>
  </p>
  </dd></dl>
 <h2>ENVIRONMENT VARIABLES</h2>
@@ -531,7 +531,7 @@ description: "upmendex – Multilingual index processor"
 <h2>KNOWN ISSUES</h2>
 <p> When plural page number expression is used, <i>.idx</i> files should be specified along with the order of page numbers. Otherwise, wrong page numbers might be output. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-tex/">tex</a>(1),</code> <code><a href="/docs/linux/man/1-latex/">latex</a>(1),</code> <code><a href="/docs/linux/man/1-makeindex/">makeindex</a>(1),</code> <code><a href="/docs/linux/man/1-mendex/">mendex</a>(1).</code> <br />
+<p> <code><a href="/docs/linux/man/1-tex/">tex</a>(1),</code> <code><a href="/docs/linux/man/1-latex/">latex</a>(1),</code> <code><a href="/docs/linux/man/1-makeindex/">makeindex</a>(1),</code> <code><a href="/docs/linux/man/1-mendex/">mendex</a>(1).</code> <br/>
  International Components for Unicode (ICU): &lt;<a rel="nofollow" href="http://icu.unicode.org/">http://icu.unicode.org/</a>&gt;, &lt;<a rel="nofollow" href="https://unicode-org.github.io/icu/">https://unicode-org.github.io/icu/</a>&gt;  </p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Takuji Tanaka based on the mendex manual page written by Japanese TeX Development Community. </p>

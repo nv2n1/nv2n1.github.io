@@ -10,12 +10,12 @@ description: "gij – GNU interpreter for Java bytecode"
 
 <p> gij &#8211; GNU interpreter for Java bytecode </p>
 <h2>SYNOPSIS</h2>
-<p> gij [<font SIZE="-1"><code>OPTION</code></font>] &#8230; <i></i><font SIZE="-1"><i>JARFILE</i></font><i></i> [<i></i><font SIZE="-1"><i>ARGS</i></font><i></i>&#8230;] </p>
-<p> gij [<code>-jar</code>] [<font SIZE="-1"><code>OPTION</code></font>] &#8230; <i></i><font SIZE="-1"><i>CLASS</i></font><i></i> [<i></i><font SIZE="-1"><i>ARGS</i></font><i></i>&#8230;]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-cp</code>&nbsp;<wbr><i>path</i>]&nbsp;<wbr>[<code>-classpath</code>&nbsp;<wbr><i>path</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-D</code><i>name</i>[=<i>value</i>]&#8230;]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-ms=</code><i>number</i>]&nbsp;<wbr>[<code>-mx=</code><i>number</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-X</code><i>argument</i>]&nbsp;<wbr>[<code>-verbose</code>]&nbsp;<wbr>[<code>-verbose:class</code>]<br />
+<p> gij [<code>OPTION</code>] &#8230; <i></i><i>JARFILE</i><i></i> [<i></i><i>ARGS</i><i></i>&#8230;] </p>
+<p> gij [<code>-jar</code>] [<code>OPTION</code>] &#8230; <i></i><i>CLASS</i><i></i> [<i></i><i>ARGS</i><i></i>&#8230;]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-cp</code>&nbsp;<wbr><i>path</i>]&nbsp;<wbr>[<code>-classpath</code>&nbsp;<wbr><i>path</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-D</code><i>name</i>[=<i>value</i>]&#8230;]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-ms=</code><i>number</i>]&nbsp;<wbr>[<code>-mx=</code><i>number</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-X</code><i>argument</i>]&nbsp;<wbr>[<code>-verbose</code>]&nbsp;<wbr>[<code>-verbose:class</code>]<br/>
 &nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;showversion</code>]&nbsp;<wbr>[<code>&#8211;version</code>]&nbsp;<wbr>[<code>&#8211;help</code>][<code>-?</code>]</p>
 <h2>DESCRIPTION</h2>
 <p> <tt>&quot;gij&quot;</tt> is a Java bytecode interpreter included with <tt>&quot;libgcj&quot;</tt>. <tt>&quot;gij&quot;</tt> is not available on every platform; porting it requires a small amount of assembly programming which has not been done for all the targets supported by <code>gcj</code>. </p>
@@ -37,7 +37,7 @@ description: "gij – GNU interpreter for Java bytecode"
 <dt><code>-mx=</code><i>number</i></dt>
 <dd> Equivalent to <tt>&quot;-Xmx&quot;</tt>.</dd>
 <dt><code>-noverify</code></dt>
-<dd> Do not verify compliance of bytecode with the <font SIZE="-1">VM</font> specification. In addition, this option disables type verification which is otherwise performed on BC-ABI compiled code.</dd>
+<dd> Do not verify compliance of bytecode with the VM specification. In addition, this option disables type verification which is otherwise performed on BC-ABI compiled code.</dd>
 <dt><code>-X</code></dt>
 <dd>
 </dd><dt><code>-X</code><i>argument</i></dt>
@@ -76,12 +76,12 @@ description: "gij – GNU interpreter for Java bytecode"
 <p> <i><a href="/docs/linux/man/1-gcc/">gcc</a></i>(1), <i><a href="/docs/linux/man/1-gcj/">gcj</a></i>(1), <i><a href="/docs/linux/man/1-gcjh/">gcjh</a></i>(1), <i><a href="/docs/linux/man/1-jcf-dump/">jcf-dump</a></i>(1), <i>gfdl</i>(7), and the Info entries for <i>gcj</i> and <i>gcc</i>.</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008 Free Software Foundation, Inc. </p>
-<p> Permission is granted to copy, distribute and/or modify this document under the terms of the <font SIZE="-1">GNU</font> Free Documentation License, Version 1.2 or any later version published by the Free Software Foundation; with no Invariant Sections, the Front-Cover Texts being (a) (see below), and with the Back-Cover Texts being (b) (see below). A copy of the license is included in the man page <i>gfdl</i>(7). </p>
-<p> (a) The <font SIZE="-1">FSF</font>&#8216;s Front-Cover Text is: </p>
+<p> Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.2 or any later version published by the Free Software Foundation; with no Invariant Sections, the Front-Cover Texts being (a) (see below), and with the Back-Cover Texts being (b) (see below). A copy of the license is included in the man page <i>gfdl</i>(7). </p>
+<p> (a) The FSF&#8216;s Front-Cover Text is: </p>
 <pre>
      A GNU Manual
 </pre>
-<p> (b) The <font SIZE="-1">FSF</font>&#8216;s Back-Cover Text is: </p>
+<p> (b) The FSF&#8216;s Back-Cover Text is: </p>
 <pre>
      You have freedom to copy and modify this GNU Manual, like GNU
      software.  Copies published by the Free Software Foundation raise

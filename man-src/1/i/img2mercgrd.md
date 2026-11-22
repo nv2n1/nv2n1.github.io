@@ -42,7 +42,7 @@ description: "img2mercgrd – Extract region of img, preserving Mercator, save a
 <p> To extract data in the region <code>-R</code>-40/40/-70/-30 from <i>world_grav.img.7.2</i>, run </p>
 <p> <code>img2mercgrd</code> world_grav.img.7.2 <code>-G</code>merc_grav.grd <code>-R</code>-40/40/-70/-30 <code>-T</code>1 <code>-V</code> </p>
 <p> Note that the <code>-V</code> option tells us that the range was adjusted to <code>-R</code>-40/40/-70.0004681551/-29.9945810754. We can also use <code>grdinfo</code> to find that the grid file header shows its region to be <code>-R</code>0/80/0/67.9666667 This is the range of x,y we will get from a Spherical Mercator projection using <code>-R</code>-40/40/-70.0004681551/-29.9945810754 and <code>-Jm</code>1. Thus, to take ship.lonlatgrav and use it to sample the merc_grav.grd, we can do this: </p>
-<p> <code>gmtset</code> <code>ELLIPSOID</code> Sphere<br />
+<p> <code>gmtset</code> <code>ELLIPSOID</code> Sphere<br/>
  <code>mapproject</code> <code>-R</code>-40/40/-70.0004681551/-29.9945810754 <code>-Jm</code>1 ship.lonlatgrav | <code>grdtrack</code> <code>-G</code>merc_grav.grd | <code>mapproject</code> <code>-R</code>-40/40/-70.0004681551/-29.9945810754 <code>-Jm</code>1 <code>-I</code> &gt; ship.lonlatgravsat </p>
 <p> It is recommended to use the above method of projecting and unprojecting the data in such an application, because then there is only one interpolation step (in <code>grdtrack</code>). If one first tries to convert the grid file to lon,lat and then sample it, there are two interpolation steps (in conversion and in sampling). </p>
 <p> To make a lon,lat grid from the above grid we can use </p>
@@ -55,7 +55,7 @@ description: "img2mercgrd – Extract region of img, preserving Mercator, save a
 <p> This time we find the adjusted region is <code>-R</code>-40/40/-70.023256525/-29.9368261101 and the output is 800 by 601 pixels, a better size for us. Now we can create an artificial illumination file for this using <code>grdgradient</code>: </p>
 <p> <code>grdgradient</code> merc_grav_2.grd <code>-G</code>illum.grd <code>-A</code>0/270 <code>-N</code>e0.6 </p>
 <p> and if we also have a cpt file called &quot;grav.cpt&quot; we can create a color shaded relief map like this: </p>
-<p> <code>grdimage</code> merc_grav_2.grd <code>-I</code>illum.grd <code>-C</code>grav.cpt <code>-Jx</code>0.1 <code>-K</code> &gt; map.ps<br />
+<p> <code>grdimage</code> merc_grav_2.grd <code>-I</code>illum.grd <code>-C</code>grav.cpt <code>-Jx</code>0.1 <code>-K</code> &gt; map.ps<br/>
  <code>psbasemap</code> <code>-R</code>-40/40/-70.023256525/-29.9368261101 <code>-Jm</code>0.1 <code>-B</code>a10 <code>-O</code> &gt;&gt; map.ps </p>
 <p> Suppose you want to obtain only the constrained data values from an img file, in lat/lon coordinates. Then run <code>img2mercgrd</code> with the <code>-T</code>2 option, use <code>grd2xyz</code> to dump the values, pipe through grep -v NaN to eliminate NaNs, and pipe through <code>mapproject</code> with the inverse projection as above.</p>
 <h2>SEE ALSO</h2>

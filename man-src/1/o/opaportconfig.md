@@ -11,8 +11,8 @@ description: "opaportconfig"
 <p> opaportconfig </p>
 <p> <code>(Host or Switch)</code> Controls the configuration and state of a specified Intel(R) Omni-Path Host Fabric Interface (HFI) port on the local host or a remote switch.</p>
 <h2>Syntax</h2>
-<p> opaportconfig [-l <i>lid</i>[-m <i>dest_port</i>]] [-h <i>hfi</i>] [-p <i>port</i>] [-r <i>secs</i>] [-z]<br />
- [-S <i>state</i>] [-P <i>physstate</i>] [-s <i>speed</i>] [-w <i>width</i>] [-c <i>LTPCRC</i>] [-K <i>mkey</i>]<br />
+<p> opaportconfig [-l <i>lid</i>[-m <i>dest_port</i>]] [-h <i>hfi</i>] [-p <i>port</i>] [-r <i>secs</i>] [-z]<br/>
+ [-S <i>state</i>] [-P <i>physstate</i>] [-s <i>speed</i>] [-w <i>width</i>] [-c <i>LTPCRC</i>] [-K <i>mkey</i>]<br/>
  [-v] [-x] [-L <i>lid</i>] [#8217lt; <i>sub command</i>&gt;]</p>
 <h2>Options</h2>
 <dl>
@@ -251,7 +251,7 @@ description: "opaportconfig"
 <dd> Sets PortInfo.LID = lid. </dd>
 </dl>
 <h2>Examples</h2>
-<p> opaportconfig -w 1<br />
+<p> opaportconfig -w 1<br/>
  opaportconfig -p 1 -h 2 -w 3</p>
 <h2>Description</h2>
 <p> Port configuration is transient in nature. If the given host is rebooted or its Intel(R) Omni-Path Fabric Stack is restarted, the port reverts to its default configuration and state. Typically, the default state is to have the port enabled with all speeds and widths supported by the given HFI port. </p>

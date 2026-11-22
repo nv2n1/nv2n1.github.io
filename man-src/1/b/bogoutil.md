@@ -62,7 +62,7 @@ description: "bogoutil – Dumps, loads, and maintains bogofilter database files
 <p> Gyepi Sam gyepi [at] praxis-sw.com. </p>
 <p> Matthias Andree matthias.andree [at] gmx.de. </p>
 <p> David Relson relson [at] osagesoftware.com. </p>
-<p> For updates, see m[blue]<code>the bogofilter project page</code>m[]<font SIZE="-2">[1]</font>.</p>
+<p> For updates, see m[blue]<code>the bogofilter project page</code>m[][1].</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-bogofilter/">bogofilter</a>(1), <a href="/docs/linux/man/1-bogolexer/">bogolexer</a>(1), <a href="/docs/linux/man/1-bogotune/">bogotune</a>(1), <a href="/docs/linux/man/1-bogoupgrade/">bogoupgrade</a>(1)</p>
 <h2>NOTES</h2>

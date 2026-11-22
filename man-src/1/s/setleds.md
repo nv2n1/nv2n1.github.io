@@ -17,10 +17,10 @@ description: "setleds – set the keyboard leds"
 <p> By default (or with option -F), <code>setleds</code> will only change the VT flags (and their setting may be reflected by the keyboard leds). </p>
 <p> With option -D, <code>setleds</code> will change both the VT flags and their default settings (so that a subsequent reset will not undo the change). This might be useful for people who always want to have numlock set. </p>
 <p> With option -L, <code>setleds</code> will not touch the VT flags, but only change the leds. From this moment on, the leds will no longer reflect the VT flags (but display whatever is put into them). The command <code>setleds -L</code> (without further arguments) will restore the situation in which the leds reflect the VT flags. </p>
-<p> One might use <code>setleds</code> in /etc/rc to define the initial and default state of NumLock, e.g. by<br />
- INITTY=/dev/tty[1-8]<br />
- for tty in $INITTY; do<br />
- setleds -D +num &lt; $tty<br />
+<p> One might use <code>setleds</code> in /etc/rc to define the initial and default state of NumLock, e.g. by<br/>
+ INITTY=/dev/tty[1-8]<br/>
+ for tty in $INITTY; do<br/>
+ setleds -D +num &lt; $tty<br/>
  done</p>
 <h2>OPTIONS</h2>
 <dl>

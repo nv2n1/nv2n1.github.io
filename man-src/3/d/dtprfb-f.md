@@ -10,7 +10,7 @@ description: "dtprfb.f –"
 <p>dtprfb.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dtprfb</code> (SIDE, TRANS, DIRECT, STOREV, M, N, K, L, V, LDV, T, LDT, A, LDA, B, LDB, WORK, LDWORK)<br />
+<p>subroutine <code>dtprfb</code> (SIDE, TRANS, DIRECT, STOREV, M, N, K, L, V, LDV, T, LDT, A, LDA, B, LDB, WORK, LDWORK)<br/>
  <i></i><code>DTPRFB</code> applies a real or complex &#8216;triangular-pentagonal&#8217; blocked reflector to a real or complex matrix, which is composed of two blocks.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dtprfb (characterSIDE, characterTRANS, characterDIRECT, characterSTOREV, integerM, integerN, integerK, integerL, double precision, dimension( ldv, * )V, integerLDV, double precision, dimension( ldt, * )T, integerLDT, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( ldb, * )B, integerLDB, double precision, dimension( ldwork, * )WORK, integerLDWORK)</h3>

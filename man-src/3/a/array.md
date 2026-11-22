@@ -10,17 +10,17 @@ description: "ql/math/array.hpp – 1-D array used in linear algebra."
 
 <p> ql/math/array.hpp &#8211; 1-D array used in linear algebra. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/types.hpp&gt;<br />
- #include &lt;ql/errors.hpp&gt;<br />
- #include &lt;ql/utilities/disposable.hpp&gt;<br />
- #include &lt;boost/iterator/reverse_iterator.hpp&gt;<br />
- #include &lt;boost/scoped_array.hpp&gt;<br />
- #include &lt;functional&gt;<br />
- #include &lt;numeric&gt;<br />
- #include &lt;vector&gt;<br />
+<p> #include &lt;ql/types.hpp&gt;<br/>
+ #include &lt;ql/errors.hpp&gt;<br/>
+ #include &lt;ql/utilities/disposable.hpp&gt;<br/>
+ #include &lt;boost/iterator/reverse_iterator.hpp&gt;<br/>
+ #include &lt;boost/scoped_array.hpp&gt;<br/>
+ #include &lt;functional&gt;<br/>
+ #include &lt;numeric&gt;<br/>
+ #include &lt;vector&gt;<br/>
  #include &lt;iomanip&gt; </p>
 <h3>Classes</h3>
-<p> class <code>Array</code><br />
+<p> class <code>Array</code><br/>
  <i>1-D array used in linear algebra. </i></p>
 <h2>Detailed Description</h2>
 <p> 1-D array used in linear algebra. </p>

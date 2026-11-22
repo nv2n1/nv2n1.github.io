@@ -15,7 +15,7 @@ description: "std::__profile::multimap< _Key, _Tp, _Compare, _Allocator > –"
 <p> typedef _Base::const_iterator <code>const_iterator</code> </p>
 <p> typedef _Base::const_pointer <code>const_pointer</code> </p>
 <p> typedef _Base::const_reference <code>const_reference</code> </p>
-<p> typedef<br />
+<p> typedef<br/>
  _Base::const_reverse_iterator <code>const_reverse_iterator</code>&quot; </p>
 <p> typedef _Base::difference_type <code>difference_type</code> </p>
 <p> typedef _Base::iterator <code>iterator</code> </p>
@@ -26,7 +26,7 @@ description: "std::__profile::multimap< _Key, _Tp, _Compare, _Allocator > –"
 <p> typedef _Base::reference <code>reference</code> </p>
 <p> typedef _Base::reverse_iterator <code>reverse_iterator</code> </p>
 <p> typedef _Base::size_type <code>size_type</code> </p>
-<p> typedef <code>std::pair</code>&lt; const _Key,<br />
+<p> typedef <code>std::pair</code>&lt; const _Key,<br/>
  _Tp &gt; <code>value_type</code>&quot;</p>
 <h3>Public Member Functions</h3>
 <pre><code>multimap (const _Compare &amp;__comp=_Compare(), const _Allocator &amp;__a=_Allocator())

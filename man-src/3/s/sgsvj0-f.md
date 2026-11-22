@@ -10,7 +10,7 @@ description: "sgsvj0.f –"
 <p>sgsvj0.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>sgsvj0</code> (JOBV, M, N, A, LDA, D, SVA, MV, V, LDV, EPS, SFMIN, TOL, NSWEEP, WORK, LWORK, INFO)<br />
+<p>subroutine <code>sgsvj0</code> (JOBV, M, N, A, LDA, D, SVA, MV, V, LDV, EPS, SFMIN, TOL, NSWEEP, WORK, LWORK, INFO)<br/>
  <i></i><code>SGSVJ0</code> pre-processor for the routine sgesvj.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sgsvj0 (character*1JOBV, integerM, integerN, real, dimension( lda, * )A, integerLDA, real, dimension( n )D, real, dimension( n )SVA, integerMV, real, dimension( ldv, * )V, integerLDV, realEPS, realSFMIN, realTOL, integerNSWEEP, real, dimension( lwork )WORK, integerLWORK, integerINFO)</h3>

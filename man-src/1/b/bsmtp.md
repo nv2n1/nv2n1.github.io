@@ -49,15 +49,15 @@ description: "bsmtp – Bacula’s SMTP client (mail submission program)"
 <p> Interactive use of <code>bsmtp</code> is pertinent to manually test and ensure these configuration bits are valid. This is highly recommended. </p>
 <h2>CONFIGURATION</h2>
 <p> These commands should each appear on a single line in the configuration file. </p>
-<p> Messages {<br />
-&nbsp;<wbr>&nbsp;<wbr>Name&nbsp;<wbr>=&nbsp;<wbr>Standard<br />
-&nbsp;<wbr>&nbsp;<wbr>mailcommand&nbsp;<wbr>=&nbsp;<wbr>&quot;/home/bacula/bin/bsmtp -h mail.domain.com -f&nbsp;<wbr>\&quot;\(Bacula\)&nbsp;<wbr>\&lt;%r\&gt;\&quot;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-s&nbsp;<wbr>\&quot;Bacula:&nbsp;<wbr>%t&nbsp;<wbr>%e of&nbsp;<wbr>%c&nbsp;<wbr>%l\&quot;&nbsp;<wbr>%r&quot;<br />
-&nbsp;<wbr>&nbsp;<wbr>operatorcommand&nbsp;<wbr>=&nbsp;<wbr>&quot;/home/bacula/bin/bsmtp -h mail.domain.com -f&nbsp;<wbr>\&quot;\(Bacula\)&nbsp;<wbr>\&lt;%r\&gt;\&quot;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-s&nbsp;<wbr>\&quot;Bacula: Intervention needed for&nbsp;<wbr>%j\&quot;&nbsp;<wbr>%r&quot;<br />
-&nbsp;<wbr>&nbsp;<wbr>mail&nbsp;<wbr>=&nbsp;<wbr>sysadmin [at] site.domain.com&nbsp;<wbr>=&nbsp;<wbr>all,&nbsp;<wbr>!skipped<br />
-&nbsp;<wbr>&nbsp;<wbr>operator&nbsp;<wbr>=&nbsp;<wbr>sysop [at] site.domain.com&nbsp;<wbr>=&nbsp;<wbr>mount<br />
-&nbsp;<wbr>&nbsp;<wbr>console&nbsp;<wbr>=&nbsp;<wbr>all,&nbsp;<wbr>!skipped,&nbsp;<wbr>!saved<br />
+<p> Messages {<br/>
+&nbsp;<wbr>&nbsp;<wbr>Name&nbsp;<wbr>=&nbsp;<wbr>Standard<br/>
+&nbsp;<wbr>&nbsp;<wbr>mailcommand&nbsp;<wbr>=&nbsp;<wbr>&quot;/home/bacula/bin/bsmtp -h mail.domain.com -f&nbsp;<wbr>\&quot;\(Bacula\)&nbsp;<wbr>\&lt;%r\&gt;\&quot;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-s&nbsp;<wbr>\&quot;Bacula:&nbsp;<wbr>%t&nbsp;<wbr>%e of&nbsp;<wbr>%c&nbsp;<wbr>%l\&quot;&nbsp;<wbr>%r&quot;<br/>
+&nbsp;<wbr>&nbsp;<wbr>operatorcommand&nbsp;<wbr>=&nbsp;<wbr>&quot;/home/bacula/bin/bsmtp -h mail.domain.com -f&nbsp;<wbr>\&quot;\(Bacula\)&nbsp;<wbr>\&lt;%r\&gt;\&quot;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-s&nbsp;<wbr>\&quot;Bacula: Intervention needed for&nbsp;<wbr>%j\&quot;&nbsp;<wbr>%r&quot;<br/>
+&nbsp;<wbr>&nbsp;<wbr>mail&nbsp;<wbr>=&nbsp;<wbr>sysadmin [at] site.domain.com&nbsp;<wbr>=&nbsp;<wbr>all,&nbsp;<wbr>!skipped<br/>
+&nbsp;<wbr>&nbsp;<wbr>operator&nbsp;<wbr>=&nbsp;<wbr>sysop [at] site.domain.com&nbsp;<wbr>=&nbsp;<wbr>mount<br/>
+&nbsp;<wbr>&nbsp;<wbr>console&nbsp;<wbr>=&nbsp;<wbr>all,&nbsp;<wbr>!skipped,&nbsp;<wbr>!saved<br/>
 &nbsp;<wbr>} </p>
 <p> <i>home/bacula/bin</i> is replaced with the path to the Bacula binary directory, and mail.domain.com is replaced with the fully qualified name of an SMTP server, which usually listen on port 25. </p>
 <h2>ENVIRONMENT</h2>

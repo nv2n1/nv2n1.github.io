@@ -11,23 +11,23 @@ description: "logb, logbf, logbl – get exponent of a floating-point value"
 <p> logb, logbf, logbl &#8211; get exponent of a floating-point value </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;math.h&gt;</code> </p>
-<p> <code>double logb(double </code><i>x</i><code>);</code><br />
- <code>float logbf(float </code><i>x</i><code>);</code><br />
+<p> <code>double logb(double </code><i>x</i><code>);</code><br/>
+ <code>float logbf(float </code><i>x</i><code>);</code><br/>
  <code>long double logbl(long double </code><i>x</i><code>);</code> </p>
 <p> Link with <i>-lm</i>. </p>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
 <p> <code>logb</code>():</p>
 <dl>
 <dt>
-</dt><dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;_XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
+</dt><dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;_XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
 <p> <code>logbf</code>(), <code>logbl</code>():</p>
 <dl>
 <dt>
-</dt><dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
+</dt><dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> These functions extract the exponent from the internal floating-point representation of <i>x</i> and return it as a floating-point value. The integer constant <code>FLT_RADIX</code>, defined in <i>&lt;float.h&gt;</i>, indicates the radix used for the system&#8217;s floating-point representation. If <code>FLT_RADIX</code> is 2, <code>logb(</code><i>x</i><code>)</code> is equal to <code>floor(log2(</code><i>x</i><code>))</code>, except that it is probably faster. </p>

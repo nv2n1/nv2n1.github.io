@@ -81,7 +81,7 @@ description: "Reading key presses –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>ranges</i> key ranges, which are inclusive<br />
+</dt><dd> <i>ranges</i> key ranges, which are inclusive<br/>
  <i>count</i> number of ranges</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
@@ -93,8 +93,8 @@ description: "Reading key presses –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>type</i> type of keys to be ignored<br />
- <i>keys</i> array of keys to be ignored<br />
+</dt><dd> <i>type</i> type of keys to be ignored<br/>
+ <i>keys</i> array of keys to be ignored<br/>
  <i>count</i> number of keys</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
@@ -105,7 +105,7 @@ description: "Reading key presses –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>code</i> the keycode to be described<br />
+</dt><dd> <i>code</i> the keycode to be described<br/>
  <i>description</i> pointer to the structure that receives the description</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -116,7 +116,7 @@ description: "Reading key presses –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>code</i> the key code to be expanded<br />
+</dt><dd> <i>code</i> the key code to be expanded<br/>
  <i>expansion</i> pointer to the structure that receives the components</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -128,7 +128,7 @@ description: "Reading key presses –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>ranges</i> key ranges, which are inclusive<br />
+</dt><dd> <i>ranges</i> key ranges, which are inclusive<br/>
  <i>count</i> number of ranges</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
@@ -140,8 +140,8 @@ description: "Reading key presses –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>type</i> type of keys to be ignored<br />
- <i>keys</i> array of keys to be ignored<br />
+</dt><dd> <i>type</i> type of keys to be ignored<br/>
+ <i>keys</i> array of keys to be ignored<br/>
  <i>count</i> number of keys</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
@@ -157,7 +157,7 @@ description: "Reading key presses –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>wait</i> tells whether the call should block until a key is pressed (1) or should only probe key presses (0);<br />
+</dt><dd> <i>wait</i> tells whether the call should block until a key is pressed (1) or should only probe key presses (0);<br/>
  <i>code</i> holds the key code if a key press is indeed read.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

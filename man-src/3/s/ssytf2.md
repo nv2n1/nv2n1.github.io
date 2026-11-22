@@ -11,7 +11,7 @@ description: "ssytf2.f –"
 <p> ssytf2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>ssytf2</code> (UPLO, N, A, LDA, IPIV, INFO)<br />
+<p> subroutine <code>ssytf2</code> (UPLO, N, A, LDA, IPIV, INFO)<br/>
  <i></i><code>SSYTF2</code> computes the factorization of a real symmetric indefinite matrix, using the diagonal pivoting method (unblocked algorithm).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ssytf2 (characterUPLO, integerN, real, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, integerINFO)</h3>

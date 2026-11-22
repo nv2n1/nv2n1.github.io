@@ -17,8 +17,8 @@ void selinux_restorecon_set_sehandle(struct selabel_handle *handle);</code></pre
 <p><code>selinux_restorecon_set_sehandle</code>() sets the <i>handle</i> to be use by <code><a href="/docs/linux/man/3-selinux_restorecon/">selinux_restorecon</a></code>(3) when relabeling files. </p>
 <p> <code>selinux_restorecon_set_sehandle</code>() is generally used when customised <code><a href="/docs/linux/man/3-selabel_open/">selabel_open</a></code>(3) parameters are required to perform relabeling operations with <code><a href="/docs/linux/man/3-selinux_restorecon/">selinux_restorecon</a></code>(3).</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-selinux_restorecon/">selinux_restorecon</a></code>(3),<br />
- <code><a href="/docs/linux/man/3-selinux_restorecon_set_exclude_list/">selinux_restorecon_set_exclude_list</a></code>(3),<br />
- <code><a href="/docs/linux/man/3-selinux_restorecon_default_handle/">selinux_restorecon_default_handle</a></code>(3),<br />
- <code><a href="/docs/linux/man/3-selinux_restorecon_set_alt_rootpath/">selinux_restorecon_set_alt_rootpath</a></code>(3),<br />
+<p><code><a href="/docs/linux/man/3-selinux_restorecon/">selinux_restorecon</a></code>(3),<br/>
+ <code><a href="/docs/linux/man/3-selinux_restorecon_set_exclude_list/">selinux_restorecon_set_exclude_list</a></code>(3),<br/>
+ <code><a href="/docs/linux/man/3-selinux_restorecon_default_handle/">selinux_restorecon_default_handle</a></code>(3),<br/>
+ <code><a href="/docs/linux/man/3-selinux_restorecon_set_alt_rootpath/">selinux_restorecon_set_alt_rootpath</a></code>(3),<br/>
  <code><a href="/docs/linux/man/3-selinux_restorecon_xattr/">selinux_restorecon_xattr</a></code>(3) </p>

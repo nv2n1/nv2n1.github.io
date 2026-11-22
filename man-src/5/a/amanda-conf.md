@@ -67,7 +67,7 @@ define dumptype &quot;dt&quot; { # optional insensitive sensitive
 <dl>
 <dd>Some number of weeks (days*7). </dd>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  The value <code>inf</code> may be used in most places where an integer is expected to mean an infinite amount. </dd>
 <p> Boolean arguments may have any of the values <code>1</code>, <code>y</code>, <code>yes</code>, <code>t</code>, <code>true</code> or <code>on</code> to indicate a true state, or <code>0</code>, <code>n</code>, <code>no</code>, <code>f</code>, <code>false</code> or <code>off</code> to indicate a false state. If no argument is given, <code>true</code> is assumed. </p>
 </dl>
@@ -157,7 +157,7 @@ define tapetype child {
 <dl>
 <dd>Default: <i>10 days</i>. The number of days in the backup cycle. Each disk will get a full backup at least this often. Setting this to zero tries to do a full backup each run. </dd>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  This parameter may also be set in a specific <code>dumptype</code> (see below). This value sets the default for all <code>dumptype</code>s so must appear in <code>amanda.conf</code> before any <code>dumptype</code>s are defined. </dd>
 </dl>
 </dl>
@@ -668,7 +668,7 @@ B: largest bandwidth</pre>
 <p> All include expressions are expanded by Amanda, concatenated in one file and passed to <code>GNU-tar</code> as a <code>&#8211;files-from</code> argument. They must start with &quot;./&quot; and contain no other &quot;/&quot;. </p>
 <p> Include expressions must always be specified as relative to the head directory of the DLE. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  For globbing to work at all, even the limited single level, the top level directory of the DLE must be readable by the Amanda user. </dd>
 </dl>
 <p> With the <code>append</code> keyword, the <i>string</i> is appended to the current list, without it, the <i>string</i> overwrites the list. </p>

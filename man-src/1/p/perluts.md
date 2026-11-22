@@ -11,17 +11,17 @@ perluts - Perl under UTS
 
 <h2>SYNOPSIS</h2>
 
- This document can be read <i>as is</i>: as <i></i><font SIZE="-1"><i>README</i></font><i>.uts</i>, or you can read it after you build your package using ``man perluts''. 
+ This document can be read <i>as is</i>: as <i></i><i>README</i><i>.uts</i>, or you can read it after you build your package using ``man perluts''. 
 
- The purpose is to help you build Perl for <font SIZE="-1">UTS</font>, which, if you follow these instructions, should be easy, and result in a solidly working installation.
+ The purpose is to help you build Perl for UTS, which, if you follow these instructions, should be easy, and result in a solidly working installation.
 
 <h2>DESCRIPTION</h2>
 
- Perl 5.7.2 (Developmental) or Perl 5.8.x (forthcoming) for <font SIZE="-1">UTS</font>
+ Perl 5.7.2 (Developmental) or Perl 5.8.x (forthcoming) for UTS
 
 <h2>BUILDING PERL ON UTS</h2>
 
- <font SIZE="-1">NOTE:</font> Some sites have redefined the way uname works, and if yours does this, special steps must be taken so that Configure can recognize your system as a <font SIZE="-1">UTS</font> system. To see if you are in this category, issue the command ``uname -a''. It should look something like: 
+ NOTE: Some sites have redefined the way uname works, and if yours does this, special steps must be taken so that Configure can recognize your system as a UTS system. To see if you are in this category, issue the command ``uname -a''. It should look something like: 
 
  <pre>
   uts juno 4 4.4 9672 370
@@ -43,9 +43,9 @@ perluts - Perl under UTS
 ./ Configure - de[-Dusedevel][-Doptimize = -g] 2 &gt; &amp;1 | tee Conf.out
 </code></pre> 
 
- ``-Dusedevel'' may be required to configure Perl 5.7.2 non-interactively. Use -Doptimize=-g if you want to run Perl under sdb or gdb, <font SIZE="-1">OR</font> if you want to be able to use the -D command line flags to perl, which are occasionally useful in debugging perl scripts. 
+ ``-Dusedevel'' may be required to configure Perl 5.7.2 non-interactively. Use -Doptimize=-g if you want to run Perl under sdb or gdb, OR if you want to be able to use the -D command line flags to perl, which are occasionally useful in debugging perl scripts. 
 
- In this and the following steps, the ``2&gt;&amp;1 | tee <font SIZE="-1">XXX</font>.out'' records all output from the process, which will be useful if anything unexpected goes wrong. 
+ In this and the following steps, the ``2&gt;&amp;1 | tee XXX.out'' records all output from the process, which will be useful if anything unexpected goes wrong. 
 
  Then do the compilation with 
 

@@ -10,12 +10,12 @@ description: "ql/legacy/libormarketmodels/lmcorrmodel.hpp – correlation model 
 
 <p> ql/legacy/libormarketmodels/lmcorrmodel.hpp &#8211; correlation model for libor market models </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/math/array.hpp&gt;<br />
- #include &lt;ql/math/matrix.hpp&gt;<br />
- #include &lt;ql/models/parameter.hpp&gt;<br />
+<p> #include &lt;ql/math/array.hpp&gt;<br/>
+ #include &lt;ql/math/matrix.hpp&gt;<br/>
+ #include &lt;ql/models/parameter.hpp&gt;<br/>
  #include &lt;ql/utilities/null.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>LmCorrelationModel</code><br />
+<p> class <code>LmCorrelationModel</code><br/>
  <i>libor forward correlation model </i></p>
 <h2>Detailed Description</h2>
 <p> correlation model for libor market models </p>

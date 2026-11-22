@@ -25,5 +25,5 @@ description: "system-config-selinux – SELinux Management tool"
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;<a rel="nofollow" href="http://bugzilla.redhat.com">http://bugzilla.redhat.com</a>&gt;.</p>
 <h2>License And Authors</h2>
-<p><code>system-config-selinux</code> is licensed under the GNU General Public License and is copyrighted by Red Hat, Inc.<br />
+<p><code>system-config-selinux</code> is licensed under the GNU General Public License and is copyrighted by Red Hat, Inc.<br/>
  This man page was written by Daniel Walsh &lt;dwalsh [at] redhat.com&gt;</p>

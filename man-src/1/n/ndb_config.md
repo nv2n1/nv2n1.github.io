@@ -94,7 +94,7 @@ description: "ndb_config – extract MySQL Cluster configuration information"
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  If a given parameter is not applicable to a certain type of node, than an empty string is returned for the corresponding value. See the examples later in this section for more information. </dd>
 </dl>
 </dl>
@@ -125,7 +125,7 @@ description: "ndb_config – extract MySQL Cluster configuration information"
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  While the hostname localhost usually resolves to the IP address 127.0.0.1, this may not necessarily be true for all operating platforms and configurations. This means that it is possible, when localhost is used in config.ini, for <code>ndb_config </code><code>&#8211;host=localhost</code> to fail if <code>ndb_config</code> is run on a different host where localhost resolves to a different address (for example, on some versions of SUSE Linux, this is 127.0.0.2). In general, for best results, you should use numeric IP addresses for all MySQL Clustewr configuration values relating to hosts, or verify that all MySQL Cluster hosts handle localhost in the same fashion. </dd>
 </dl>
 </dl>
@@ -212,7 +212,7 @@ description: "ndb_config – extract MySQL Cluster configuration information"
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  If the <i>delimiter</i> contains spaces or escapes (such as 
  for the linefeed character), then it must be quoted. </dd>
 </dl>
@@ -244,7 +244,7 @@ description: "ndb_config – extract MySQL Cluster configuration information"
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  If the <i>separator</i> contains spaces or escapes (such as 
  for the linefeed character), then it must be quoted. </dd>
 </dl>
@@ -344,7 +344,7 @@ shell &gt; ndb_config-- configinfo-- xml&lt;configvariables protocolversion = "1
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  Normally, the XML output produced by <code>ndb_config</code> <code>&#8211;configinfo</code> <code>&#8211;xml</code> is formatted using one line per element; we have added extra whitespace in the previous example, as well as the next one, for reasons of legibility. This should not make any difference to applications using this output, since most XML processors either ignore nonessential whitespace as a matter of course, or can be instructed to do so. </dd>
 </dl>
 <p> Beginning with MySQL Cluster NDB 6.3.29 and MySQL Cluster NDB 7.0.10, the XML output also indicates when changing a given parameter requires that nodes be restarted using the <code>&#8211;initial</code> option. This is shown by the presence of an initial=&quot;true&quot; attribute in the corresponding &lt;param&gt; element. In addition (also beginning with MySQL Cluster NDB 6.3.29 and MySQL Cluster NDB 7.0.10), the restart type (system or node) is also shown; if a given parameter requires a system restart, this is indicated by the presence of a restart=&quot;system&quot; attribute in the corresponding &lt;param&gt; element. For example, the Diskless parameter requires a system initial restart, as shown here (with the restart and initial attributes highlighted for visibility): </p>
@@ -360,7 +360,7 @@ shell &gt; ndb_config-- configinfo-- xml&lt;configvariables protocolversion = "1
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Important</code> </font><br />
+  <code>Important</code> <br/>
  The <code>&#8211;xml</code> option can be used only with the <code>&#8211;configinfo</code> option. Using <code>&#8211;xml</code> without <code>&#8211;configinfo</code> fails with an error. </dd>
 </dl>
 <p> Unlike the options used with this program to obtain current configuration data, <code>&#8211;configinfo</code> and <code>&#8211;xml</code> use information obtained from the MySQL Cluster sources when <code>ndb_config</code> was compiled. For this reason, no connection to a running MySQL Cluster or access to a config.ini or my.cnf file is required for these two options. </p>

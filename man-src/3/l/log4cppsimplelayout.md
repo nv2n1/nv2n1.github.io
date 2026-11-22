@@ -15,7 +15,7 @@ description: "log4cpp::SimpleLayout –"
 <h3>Public Member Functions</h3>
 <p><code>SimpleLayout</code> () </p>
 <p> virtual <code>~SimpleLayout</code> () </p>
-<p> virtual std::string <code>format</code> (const <code>LoggingEvent</code> &amp;event)<br />
+<p> virtual std::string <code>format</code> (const <code>LoggingEvent</code> &amp;event)<br/>
  <i>Formats the </i><code>LoggingEvent</code> in <code>SimpleLayout</code> style: </p>
 <p>&nbsp;<wbr>&#8216;priority &#8211; message&#8217;.&nbsp;<wbr>&quot;</p>
 <h2>Detailed Description</h2>

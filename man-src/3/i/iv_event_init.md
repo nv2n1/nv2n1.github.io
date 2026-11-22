@@ -14,9 +14,9 @@ description: "IV_EVENT_INIT, iv_event_register, iv_event_unregister, iv_event_po
  void *cookie;
  void (*handler)(void *);
 };</pre>
-<p><code>int IV_EVENT_INIT(struct iv_event *</code><i>this</i><code>);</code><br />
- <code>int iv_event_register(struct iv_event *</code><i>this</i><code>);</code><br />
- <code>void iv_event_unregister(struct iv_event *</code><i>this</i><code>);</code><br />
+<p><code>int IV_EVENT_INIT(struct iv_event *</code><i>this</i><code>);</code><br/>
+ <code>int iv_event_register(struct iv_event *</code><i>this</i><code>);</code><br/>
+ <code>void iv_event_unregister(struct iv_event *</code><i>this</i><code>);</code><br/>
  <code>void iv_event_post(struct iv_event *</code><i>this</i><code>);</code> </p>
 <h2>Description</h2>
 <p><code>iv_event</code> provides a way for delivering events to <code>ivykis</code>(3) recipients across thread boundaries. </p>

@@ -63,15 +63,15 @@ description: "hwloc-info – Show some information about some objects or about a
 <p> <code>NOTE:</code> It is highly recommended that you read the <a href="/docs/linux/man/7-hwloc/">hwloc</a>(7) overview page before reading this man page. Most of the concepts described in <a href="/docs/linux/man/7-hwloc/">hwloc</a>(7) directly apply to the hwloc-calc utility.</p>
 <h2>EXAMPLES</h2>
 <p> To display information about each package: </p>
-<p>&nbsp;<wbr>$&nbsp;<wbr>hwloc-info package:all<br />
-&nbsp;<wbr>Package L#0<br />
-&nbsp;<wbr>&nbsp;<wbr>logical index&nbsp;<wbr>=&nbsp;<wbr>0<br />
+<p>&nbsp;<wbr>$&nbsp;<wbr>hwloc-info package:all<br/>
+&nbsp;<wbr>Package L#0<br/>
+&nbsp;<wbr>&nbsp;<wbr>logical index&nbsp;<wbr>=&nbsp;<wbr>0<br/>
 &nbsp;<wbr>&#8230; </p>
 <p> To display information about the core whose physical index is 2: </p>
-<p>&nbsp;<wbr>$&nbsp;<wbr>utils/hwloc-info -p core:2<br />
-&nbsp;<wbr>Core L#1<br />
-&nbsp;<wbr>&nbsp;<wbr>logical index&nbsp;<wbr>=&nbsp;<wbr>1<br />
-&nbsp;<wbr>&nbsp;<wbr>os index&nbsp;<wbr>=&nbsp;<wbr>2<br />
+<p>&nbsp;<wbr>$&nbsp;<wbr>utils/hwloc-info -p core:2<br/>
+&nbsp;<wbr>Core L#1<br/>
+&nbsp;<wbr>&nbsp;<wbr>logical index&nbsp;<wbr>=&nbsp;<wbr>1<br/>
+&nbsp;<wbr>&nbsp;<wbr>os index&nbsp;<wbr>=&nbsp;<wbr>2<br/>
 &#8230;</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/7-hwloc/">hwloc</a>(7), lstopo(1), <a href="/docs/linux/man/1-hwloc-calc/">hwloc-calc</a>(1), <a href="/docs/linux/man/1-hwloc-bind/">hwloc-bind</a>(1), <a href="/docs/linux/man/1-hwloc-ps/">hwloc-ps</a>(1), <a href="/docs/linux/man/1-hwloc-gather-topology/">hwloc-gather-topology</a>(1) </p>

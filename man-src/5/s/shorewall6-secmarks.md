@@ -14,9 +14,9 @@ description: "secmarks – Shorewall6 file"
 <h2>Description</h2>
 <dl>
 <dd>
-</dd><dd><font SIZE="+1"> <code>Important</code> </font></dd>
+</dd><dd> <code>Important</code> </dd>
 <dd>
-</dd><dd>Unlike rules in the m[blue]<code>shorewall6-rules</code>m[]<font SIZE="-2">[1]</font>(5) file, evaluation of rules in this file will continue after a match. So the final secmark for each packet will be the one assigned by the LAST rule that matches.  The secmarks file is used to associate an SELinux context with packets. It was added in Shorewall6 version 4.4.13. The columns in the file are as follows (where the column name is followed by a different name in parentheses, the different name is used in the alternate specification syntax). <code>SECMARK &#8211; {SAVE|RESTORE|</code><i>context</i><code>|?COMMENT}</code></dd>
+</dd><dd>Unlike rules in the m[blue]<code>shorewall6-rules</code>m[][1](5) file, evaluation of rules in this file will continue after a match. So the final secmark for each packet will be the one assigned by the LAST rule that matches.  The secmarks file is used to associate an SELinux context with packets. It was added in Shorewall6 version 4.4.13. The columns in the file are as follows (where the column name is followed by a different name in parentheses, the different name is used in the alternate specification syntax). <code>SECMARK &#8211; {SAVE|RESTORE|</code><i>context</i><code>|?COMMENT}</code></dd>
 <dl>
 <dd><code>SAVE</code></dd>
 <dl>
@@ -74,7 +74,7 @@ description: "secmarks – Shorewall6 file"
 <dd>2. A comma-separated list of host or network IP addresses or MAC addresses.</dd></dl>
 <dl>
 <dd>3. An interface name followed by a colon (&quot;:&quot;) followed by a comma-separated list of host or network IP addresses or MAC addresses.</dd></dl>
-<p> MAC addresses must be prefixed with &quot;~&quot; and use &quot;-&quot; as a separator. Example: ~00-A0-C9-15-39-78 You may exclude certain hosts from the set already defined through use of an <i>exclusion</i> (see m[blue]<code>shorewall6-exclusion</code>m[]<font SIZE="-2">[2]</font>(5)).</dl>
+<p> MAC addresses must be prefixed with &quot;~&quot; and use &quot;-&quot; as a separator. Example: ~00-A0-C9-15-39-78 You may exclude certain hosts from the set already defined through use of an <i>exclusion</i> (see m[blue]<code>shorewall6-exclusion</code>m[][2](5)).</dl>
 <p> <code>DEST</code> &#8211; {<code>&#8211;</code>|{<i>interface</i>|[<i>interface</i>:]<i>address-or-range</i>[<code>,</code><i>address-or-range</i>]&#8230;}[<i>exclusion</i>]</p>
 <dl>
 <dd>May be:</dd>
@@ -82,13 +82,13 @@ description: "secmarks – Shorewall6 file"
 <dd>1. An interface name. May not be used in the PREROUTING or INPUT chains. The interface name may be optionally followed by a colon (&quot;:&quot;) and an IP address list.</dd></dl>
 <dl>
 <dd>2. A comma-separated list of host or network IP addresses. The list may include ip address ranges if your kernel and iptables include iprange support.</dd></dl>
-<p> You may exclude certain hosts from the set already defined through use of an <i>exclusion</i> (see m[blue]<code>shorewall6-exclusion</code>m[]<font SIZE="-2">[2]</font>(5)).</dl>
+<p> You may exclude certain hosts from the set already defined through use of an <i>exclusion</i> (see m[blue]<code>shorewall6-exclusion</code>m[][2](5)).</dl>
 <p> <code>PROTO</code> &#8211; {<code>&#8211;</code>|<code>tcp:syn</code>|<code>ipp2p</code>|<code>ipp2p:udp</code>|<code>ipp2p:all</code>|<i>protocol-number</i>|<i>protocol-name</i>|<code>all}</code></p>
 <dl>
 <dd>Protocol &#8211; <code>ipp2p</code> requires ipp2p match support in your kernel and iptables. Beginning with Shorewall 4.5.12, this column can accept a comma-separated list of protocols.</dd></dl>
 <p> <code>DPORT</code> &#8211; [<code>&#8211;</code>|<i>port-name-number-or-range</i>[<code>,</code><i>port-name-number-or-range</i>]&#8230;]</p>
 <dl>
-<dd>Optional destination Ports. A comma-separated list of Port names (from <a href="/docs/linux/man/5-services/">services</a>(5)), <i>port number</i>s or <i>port range</i>s; if the protocol is <code>icmp</code>, this column is interpreted as the destination icmp-type(s). ICMP types may be specified as a numeric type, a numeric type and code separated by a slash (e.g., 3/4), or a typename. See m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/configuration_file_basics.htm#ICMP">http://www.shorewall.net/configuration_file_basics.htm#ICMP</a></code>m[]<font SIZE="-2">[3]</font>. If the protocol is <code>ipp2p</code>, this column is interpreted as an ipp2p option without the leading &quot;&#8211;&quot; (example <code>bit</code> for bit-torrent). If no PORT is given, <code>ipp2p</code> is assumed. This column is ignored if PROTO = all but must be entered if any of the following field is supplied. In that case, it is suggested that this field contain &quot;-&quot;</dd></dl>
+<dd>Optional destination Ports. A comma-separated list of Port names (from <a href="/docs/linux/man/5-services/">services</a>(5)), <i>port number</i>s or <i>port range</i>s; if the protocol is <code>icmp</code>, this column is interpreted as the destination icmp-type(s). ICMP types may be specified as a numeric type, a numeric type and code separated by a slash (e.g., 3/4), or a typename. See m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/configuration_file_basics.htm#ICMP">http://www.shorewall.net/configuration_file_basics.htm#ICMP</a></code>m[][3]. If the protocol is <code>ipp2p</code>, this column is interpreted as an ipp2p option without the leading &quot;&#8211;&quot; (example <code>bit</code> for bit-torrent). If no PORT is given, <code>ipp2p</code> is assumed. This column is ignored if PROTO = all but must be entered if any of the following field is supplied. In that case, it is suggested that this field contain &quot;-&quot;</dd></dl>
 <p> <code>SPORT</code> &#8211; [<code>&#8211;</code>|<i>port-name-number-or-range</i>[<code>,</code><i>port-name-number-or-range</i>]&#8230;]</p>
 <dl>
 <dd>Optional source port(s). If omitted, any source port is acceptable. Specified as a comma-separated list of port names, port numbers or port ranges. Beginning with Shorewall 4.5.15, you may place &#8216;=&#8217; in this column, provided that the DPORT column is non-empty. This causes the rule to match when either the source port or the destination port in a packet matches one of the ports specified in DPORT. Use of &#8216;=&#8217; requires multi-port match in your iptables and kernel.</dd></dl>
@@ -139,7 +139,7 @@ RESTORE I:ER</pre>
 <p>/etc/shorewall6/secmarks</p>
 <h2>See Also</h2>
 <p>m[blue]<code><a rel="nofollow" href="http://james-morris.livejournal.com/11010.html">http://james-morris.livejournal.com/11010.html</a></code>m[] </p>
-<p> m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/configuration_file_basics.htm#Pairs">http://www.shorewall.net/configuration_file_basics.htm#Pairs</a></code>m[]<font SIZE="-2">[4]</font> </p>
+<p> m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/configuration_file_basics.htm#Pairs">http://www.shorewall.net/configuration_file_basics.htm#Pairs</a></code>m[][4] </p>
 <p> <a href="/docs/linux/man/8-shorewall6/">shorewall6</a>(8), <a href="/docs/linux/man/5-shorewall6-actions/">shorewall6-actions</a>(5), shorewall6-blacklist(5), <a href="/docs/linux/man/5-shorewall6-hosts/">shorewall6-hosts</a>(5), <a href="/docs/linux/man/5-shorewall6-interfaces/">shorewall6-interfaces</a>(5), <a href="/docs/linux/man/5-shorewall6-maclist/">shorewall6-maclist</a>(5), <a href="/docs/linux/man/5-shorewall6-netmap/">shorewall6-netmap</a>(5),<a href="/docs/linux/man/5-shorewall6-params/">shorewall6-params</a>(5), <a href="/docs/linux/man/5-shorewall6-policy/">shorewall6-policy</a>(5), <a href="/docs/linux/man/5-shorewall6-providers/">shorewall6-providers</a>(5), <a href="/docs/linux/man/5-shorewall6-rtrules/">shorewall6-rtrules</a>(5), shorewall6-routestopped(5), <a href="/docs/linux/man/5-shorewall6-rules/">shorewall6-rules</a>(5), <a href="/docs/linux/man/5-shorewall6-conf/">shorewall6.conf</a>(5), <a href="/docs/linux/man/5-shorewall6-tcclasses/">shorewall6-tcclasses</a>(5), <a href="/docs/linux/man/5-shorewall6-tcdevices/">shorewall6-tcdevices</a>(5), <a href="/docs/linux/man/5-shorewall6-mangle/">shorewall6-mangle</a>(5), shorewall6-tos(5), <a href="/docs/linux/man/5-shorewall6-tunnels/">shorewall6-tunnels</a>(5), <a href="/docs/linux/man/5-shorewall6-zones/">shorewall6-zones</a>(5)</p>
 <h2>Notes</h2>
 <dl>

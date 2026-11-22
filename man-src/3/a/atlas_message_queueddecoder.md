@@ -12,16 +12,16 @@ description: "Atlas::Message::QueuedDecoder – Decoder that presents a queue of
 <p>#include &lt;<a href="file:/usr/include/QueuedDecoder.h">QueuedDecoder.h</a>&gt; </p>
 <p> Inherits <code>Atlas::Message::DecoderBase</code>. </p>
 <h3>Public Member Functions</h3>
-<p>size_t <code>queueSize</code> ()<br />
- <i>Retrieve the current size of the message queue. </i><br />
- const MapType <code>popMessage</code> ()<br />
- <i>Pop an object from the front of the message queue. </i><br />
- const MapType <code>frontMessage</code> ()<br />
- <i>Peek at the object at the front of the queue. </i><br />
- void <code>clearQueue</code> ()<br />
+<p>size_t <code>queueSize</code> ()<br/>
+ <i>Retrieve the current size of the message queue. </i><br/>
+ const MapType <code>popMessage</code> ()<br/>
+ <i>Pop an object from the front of the message queue. </i><br/>
+ const MapType <code>frontMessage</code> ()<br/>
+ <i>Peek at the object at the front of the queue. </i><br/>
+ void <code>clearQueue</code> ()<br/>
  <i>Clear the message queue. </i></p>
 <h3>Protected Member Functions</h3>
-<p>void <code>messageArrived</code> (const MapType &amp;obj)<br />
+<p>void <code>messageArrived</code> (const MapType &amp;obj)<br/>
  <i>This adds a message to the queue. </i></p>
 <h2>Detailed Description</h2>
 <p>Decoder that presents a queue of <code>Atlas::Message::Element</code>. </p>

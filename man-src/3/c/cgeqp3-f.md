@@ -10,7 +10,7 @@ description: "cgeqp3.f –"
 <p>cgeqp3.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>cgeqp3</code> (M, N, A, LDA, JPVT, TAU, WORK, LWORK, RWORK, INFO)<br />
+<p>subroutine <code>cgeqp3</code> (M, N, A, LDA, JPVT, TAU, WORK, LWORK, RWORK, INFO)<br/>
  <i></i><code>CGEQP3</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cgeqp3 (integerM, integerN, complex, dimension( lda, * )A, integerLDA, integer, dimension( * )JPVT, complex, dimension( * )TAU, complex, dimension( * )WORK, integerLWORK, real, dimension( * )RWORK, integerINFO)</h3>

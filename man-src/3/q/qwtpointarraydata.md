@@ -15,8 +15,8 @@ description: "QwtPointArrayData –"
 <h3>Public Member Functions</h3>
 <p><code>QwtPointArrayData</code> (const QVector&lt; double &gt; &amp;x, const QVector&lt; double &gt; &amp;y) </p>
 <p> <code>QwtPointArrayData</code> (const double *x, const double *y, size_t <code>size</code>) </p>
-<p> virtual QRectF <code>boundingRect</code> () const<br />
- <i>Calculate the bounding rectangle. </i><br />
+<p> virtual QRectF <code>boundingRect</code> () const<br/>
+ <i>Calculate the bounding rectangle. </i><br/>
  virtual size_t <code>size</code> () const </p>
 <p> virtual QPointF <code>sample</code> (size_t i) const </p>
 <p> const QVector&lt; double &gt; &amp; <code>xData</code> () const </p>
@@ -29,7 +29,7 @@ description: "QwtPointArrayData –"
 <p>Constructor </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>x</i> Array of x values<br />
+<dd><i>x</i> Array of x values<br/>
  <i>y</i> Array of y values</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -38,8 +38,8 @@ description: "QwtPointArrayData –"
 <p>Constructor </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>x</i> Array of x values<br />
- <i>y</i> Array of y values<br />
+<dd><i>x</i> Array of x values<br/>
+ <i>y</i> Array of y values<br/>
  <i>size</i> Size of the x and y arrays</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>

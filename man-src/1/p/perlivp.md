@@ -66,7 +66,7 @@ perlivp - Perl Installation Verification Procedure
  One or more files turned up missing according to a run of <tt>&quot;ExtUtils::Installed -&gt; validate()&quot;</tt> over your installation. Correct by conducting a proper installation.</dd></dl>
  
 
- For further information on how to conduct a proper installation consult the <font SIZE="-1">INSTALL</font> file that comes with the perl source and the <font SIZE="-1">README</font> file for your platform.
+ For further information on how to conduct a proper installation consult the INSTALL file that comes with the perl source and the README file for your platform.
 
 <h2>AUTHOR</h2>
 

@@ -15,10 +15,10 @@ int sigmask(int signum);
 int sigblock(int mask);
 int sigsetmask(int mask);
 int siggetmask(void);</code></pre>
-<p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): All functions shown above:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Since glibc 2.19:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.19 and earlier:<br />
+<p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): All functions shown above:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Since glibc 2.19:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.19 and earlier:<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_BSD_SOURCE</p>
 <h2>Description</h2>
 <p>These functions are provided in glibc as a compatibility interface for programs that make use of the historical BSD signal API. This API is obsolete: new applications should use the POSIX signal API (<code><a href="/docs/linux/man/2-sigaction/">sigaction</a></code>(2), <code><a href="/docs/linux/man/2-sigprocmask/">sigprocmask</a></code>(2), etc.). The <code>sigvec</code>() function sets and/or gets the disposition of the signal <i>sig</i> (like the POSIX <code><a href="/docs/linux/man/2-sigaction/">sigaction</a></code>(2)). If <i>vec</i> is not NULL, it points to a <i>sigvec</i> structure that defines the new disposition for <i>sig</i>. If <i>ovec</i> is not NULL, it points to a <i>sigvec</i> structure that is used to return the previous disposition of <i>sig</i>. To obtain the current disposition of <i>sig</i> without changing it, specify NULL for <i>vec</i>, and a non-null pointer for <i>ovec</i>. The dispositions for <code>SIGKILL</code> and <code>SIGSTOP</code> cannot be changed. The <i>sigvec</i> structure has the following form: </p>
@@ -35,8 +35,8 @@ int siggetmask(void);</code></pre>
 <dd>Reset the disposition of the signal to the default before calling the signal handler. If this flag is not specified, then the handler remains established until explicitly removed by a later call to <code>sigvec</code>() or until the process performs an <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2).</dd>
 <dt><code>SV_ONSTACK</code></dt>
 <dd>Handle the signal on the alternate signal stack (historically established under BSD using the obsolete <code>sigstack</code>() function; the POSIX replacement is <code><a href="/docs/linux/man/2-sigaltstack/">sigaltstack</a></code>(2)).</dd></dl>
-<p> The <code>sigmask</code>() macro constructs and returns a &quot;signal mask&quot; for <i>signum</i>. For example, we can initialize the <i>vec.sv_mask</i> field given to <code>sigvec</code>() using code such as the following: vec.sv_mask = sigmask(SIGQUIT) | sigmask(SIGABRT);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Block SIGQUIT and SIGABRT during<br />
+<p> The <code>sigmask</code>() macro constructs and returns a &quot;signal mask&quot; for <i>signum</i>. For example, we can initialize the <i>vec.sv_mask</i> field given to <code>sigvec</code>() using code such as the following: vec.sv_mask = sigmask(SIGQUIT) | sigmask(SIGABRT);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Block SIGQUIT and SIGABRT during<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;handler execution&nbsp;*/ The <code>sigblock</code>() function adds the signals in <i>mask</i> to the process&#8217;s signal mask (like POSIX <i>sigprocmask(SIG_BLOCK)</i>), and returns the process&#8217;s previous signal mask. Attempts to block <code>SIGKILL</code> or <code>SIGSTOP</code> are silently ignored. The <code>sigsetmask</code>() function sets the process&#8217;s signal mask to the value given in <i>mask</i> (like POSIX <i>sigprocmask(SIG_SETMASK)</i>), and returns the process&#8217;s previous signal mask. The <code>siggetmask</code>() function returns the process&#8217;s current signal mask. This call is equivalent to <i>sigblock(0)</i>.</p>
 <h2>Return Value</h2>
 <p>The <code>sigvec</code>() function returns 0 on success; on error, it returns -1 and sets <i>errno</i> to indicate the error. </p>

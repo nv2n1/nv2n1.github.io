@@ -13,17 +13,17 @@ description: "QwtPixelMatrix –"
 <p>#include &lt;qwt_pixel_matrix.h&gt; </p>
 <p> Inherits QBitArray.</p>
 <h3>Public Member Functions</h3>
-<p><code>QwtPixelMatrix</code> (const QRect &amp;<code>rect</code>)<br />
- <i>Constructor. </i><br />
- <code>~QwtPixelMatrix</code> ()<br />
- <i>Destructor. </i><br />
+<p><code>QwtPixelMatrix</code> (const QRect &amp;<code>rect</code>)<br/>
+ <i>Constructor. </i><br/>
+ <code>~QwtPixelMatrix</code> ()<br/>
+ <i>Destructor. </i><br/>
  void <code>setRect</code> (const QRect &amp;<code>rect</code>) </p>
 <p> QRect <code>rect</code> () const </p>
-<p> bool <code>testPixel</code> (int x, int y) const<br />
- <i>Test if a pixel has been set. </i><br />
- bool <code>testAndSetPixel</code> (int x, int y, bool on)<br />
- <i>Set a pixel and test if a pixel has been set before. </i><br />
- int <code>index</code> (int x, int y) const<br />
+<p> bool <code>testPixel</code> (int x, int y) const<br/>
+ <i>Test if a pixel has been set. </i><br/>
+ bool <code>testAndSetPixel</code> (int x, int y, bool on)<br/>
+ <i>Set a pixel and test if a pixel has been set before. </i><br/>
+ int <code>index</code> (int x, int y) const<br/>
  <i>Calculate the index in the bit field corresponding to a position. </i></p>
 <h2>Detailed Description</h2>
 <p>A bit field corresponding to the pixels of a rectangle. </p>
@@ -39,7 +39,7 @@ description: "QwtPixelMatrix –"
 <p>Calculate the index in the bit field corresponding to a position. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>x</i> X-coordinate<br />
+<dd><i>x</i> X-coordinate<br/>
  <i>y</i> Y-coordinate</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -60,8 +60,8 @@ description: "QwtPixelMatrix –"
 <p>Set a pixel and test if a pixel has been set before. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>x</i> X-coordinate<br />
- <i>y</i> Y-coordinate<br />
+<dd><i>x</i> X-coordinate<br/>
+ <i>y</i> Y-coordinate<br/>
  <i>on</i> Set/Clear the pixel</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -70,7 +70,7 @@ description: "QwtPixelMatrix –"
 <p>Test if a pixel has been set. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>x</i> X-coordinate<br />
+<dd><i>x</i> X-coordinate<br/>
  <i>y</i> Y-coordinate</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

@@ -81,7 +81,7 @@ background - manage terminal background
 
  For example, an expression such as <tt>&quot;scale keep { load &quot;$HOME/mybg.png&quot; }&quot;</tt> scales the image to the window size, so it relies on the window size and will be reevaluated each time it is changed, but not when it moves for example. That ensures that the picture always fills the terminal, even after its size changes.
 
-<h3><font SIZE="-1">EXPRESSIONS</font></h3>
+<h3>EXPRESSIONS</h3>
 
  Expressions are normal Perl expressions, in fact, they are Perl blocks - which means you could use multiple lines and statements: 
 
@@ -133,7 +133,7 @@ scale keep
    scale 0.5, 2, load &quot;$HOME/mypic.png&quot;
 </pre> 
 
- <font SIZE="-1">IF</font> you try out these expressions, you might suffer from some sluggishness, because each time the terminal is resized, it loads the <font SIZE="-1">PNG</font> image again and scales it. Scaling is usually fast (and unavoidable), but loading the image can be quite time consuming. This is where <tt>&quot;keep&quot;</tt> comes in handy: 
+ IF you try out these expressions, you might suffer from some sluggishness, because each time the terminal is resized, it loads the PNG image again and scales it. Scaling is usually fast (and unavoidable), but loading the image can be quite time consuming. This is where <tt>&quot;keep&quot;</tt> comes in handy: 
 
  <pre>
    scale 0.5, 2, keep { load &quot;$HOME/mypic.png&quot; }
@@ -165,7 +165,7 @@ scale keep
 
  This one first takes a snapshot of the screen background image, and then moves it to the upper left corner of the screen (as opposed to the upper left corner of the terminal window)- the result is pseudo-transparency: the image seems to be static while the window is moved around.
 
-<h3><font SIZE="-1">COLOUR SPECIFICATIONS</font></h3>
+<h3>COLOUR SPECIFICATIONS</h3>
 
  Whenever an operator expects a ``colour'', then this can be specified in one of two ways: Either as string with an X11 colour specification, such as: 
 
@@ -176,13 +176,13 @@ scale keep
    &quot;TekHVC:300/50/50&quot;  # anything goes
 </pre> 
 
- <font SIZE="-1">OR</font> as an array reference with one, three or four components: 
+ OR as an array reference with one, three or four components: 
 
  
 [0.5] #50 % gray, 100 % alpha[0.5, 0, 0] #dark red, no green or blur, 100 % alpha[0.5, 0, 0, 0.7] #same with explicit 70 % alpha
 
 
-<h3><font SIZE="-1">CACHING AND SENSITIVITY</font></h3>
+<h3>CACHING AND SENSITIVITY</h3>
 
  Since some operations (such as <tt>&quot;load&quot;</tt> and <tt>&quot;blur&quot;</tt>) can take a long time, caching results can be very important for a smooth operation. Caching can also be useful to reduce memory usage, though, for example, when an image is cached by <tt>&quot;load&quot;</tt>, it could be shared by multiple terminal windows running inside urxvtd. 
 
@@ -216,7 +216,7 @@ scale keep
 
 <h2>REFERENCE</h2>
 
-<h3><font SIZE="-1">COMMAND LINE SWITCHES</font></h3>
+<h3>COMMAND LINE SWITCHES</h3>
 
 <dl>
 <dt>--background-expr perl-expression
@@ -228,7 +228,7 @@ scale keep
 </dt><dd> Since some operations in the underlying XRender extension can effectively freeze your X-server for prolonged time, this extension enforces a minimum time between updates, which is normally about 0.1 seconds. 
  If you want to do updates more often, you can decrease this safety interval with this switch.</dd></dl>
 
-<h3><font SIZE="-1">PROVIDERS/GENERATORS</font></h3>
+<h3>PROVIDERS/GENERATORS</h3>
 
  These functions provide an image, by loading it from disk, grabbing it from the root screen or by simply generating it. They are used as starting points to get an image you can play with.
 <dl>
@@ -251,7 +251,7 @@ scale keep
 </dt><dd> Takes any number of images and merges them together, creating a single image containing them all. The tiling mode of the first image is used as the tiling mode of the resulting image. 
  This function is called automatically when an expression returns multiple images.</dd></dl>
 
-<h3><font SIZE="-1">TILING MODES</font></h3>
+<h3>TILING MODES</h3>
 
  The following operators modify the tiling mode of an image, that is, the way that pixels outside the image area are painted when the image is used.
 <dl>
@@ -280,13 +280,13 @@ scale keep
    extend move 50, 50, load &quot;mybg.png&quot;
 </pre></dd></dl>
 
-<h3><font SIZE="-1">VARIABLE VALUES</font></h3>
+<h3>VARIABLE VALUES</h3>
 
  The following functions provide variable data such as the terminal window dimensions. They are not (Perl-) variables, they just return stuff that varies. Most of them make your expression sensitive to some events, for example using <tt>&quot;TW&quot;</tt> (terminal width) means your expression is evaluated again when the terminal is resized.
 <dl>
-<dt><font SIZE="-1">TX</font>
+<dt>TX
 </dt><dd>
-</dd><dt><font SIZE="-1">TY</font>
+</dd><dt>TY
 </dt><dd> Return the X and Y coordinates of the terminal window (the terminal window is the full window by default, and the character area only when in border-respect mode). 
  Using these functions makes your expression sensitive to window moves. 
  These functions are mainly useful to align images to the root window. 
@@ -294,9 +294,9 @@ scale keep
  <pre>
    move -TX, -TY, keep { load &quot;mybg.png&quot; }
 </pre>
-</dd><dt><font SIZE="-1">TW</font>
+</dd><dt>TW
 </dt><dd>
-</dd><dt><font SIZE="-1">TH</font>
+</dd><dt>TH
 </dt><dd> Return the width (<tt>&quot;TW&quot;</tt>) and height (<tt>&quot;TH&quot;</tt>) of the terminal window (the terminal window is the full window by default, and the character area only when in border-respect mode). 
  Using these functions makes your expression sensitive to window resizes. 
  These functions are mainly useful to scale images, or to clip images to the window size to conserve memory. 
@@ -304,7 +304,7 @@ scale keep
  <pre>
    clip move -TX, -TY, keep { blur 5, root }
 </pre>
-</dd><dt><font SIZE="-1">FOCUS</font>
+</dd><dt>FOCUS
 </dt><dd> Returns a boolean indicating whether the terminal window has keyboard focus, in which case it returns true. 
  Using this function makes your expression sensitive to focus changes. 
  A common use case is to fade the background image when the terminal loses focus, often together with the <tt>&quot;-fade&quot;</tt> command line option. In fact, there is a special function for just that use case: <tt>&quot;focus_fade&quot;</tt>. 
@@ -328,7 +328,7 @@ FOCUS ? keep{load "has_focus.jpg"} : keep
 </dd><dt>counter $seconds
 </dt><dd> Like <tt>&quot;again&quot;</tt>, but also returns an increasing counter value, starting at 0, which might be useful for some simple animation effects.</dd></dl>
 
-<h3><font SIZE="-1">SHAPE CHANGING OPERATORS</font></h3>
+<h3>SHAPE CHANGING OPERATORS</h3>
 
  The following operators modify the shape, size or position of the image.
 <dl>
@@ -399,7 +399,7 @@ FOCUS ? keep{load "has_focus.jpg"} : keep
    rotate 0.5, 0.5, 90, keep { load &quot;$HOME/mybg.png&quot; }
 </pre></dd></dl>
 
-<h3><font SIZE="-1">COLOUR MODIFICATIONS</font></h3>
+<h3>COLOUR MODIFICATIONS</h3>
 
  The following operators change the pixels of the image.
 <dl>
@@ -434,7 +434,7 @@ FOCUS ? keep{load "has_focus.jpg"} : keep
  Values less than 0 reduce brightness, while values larger than 0 increase it. Useful range is from -1 to 1 - the former results in a black, the latter in a white picture. 
  Due to idiosyncrasies in the underlying XRender extension, biases less than zero can be <i>very</i> slow. 
  You can also try the experimental(!) <tt>&quot;muladd&quot;</tt> operator.
-</dd><dt>muladd $mul, $add, $img # <font SIZE="-1">EXPERIMENTAL</font>
+</dd><dt>muladd $mul, $add, $img # EXPERIMENTAL
 </dt><dd> First multiplies the pixels by <tt>$mul</tt>, then adds <tt>$add</tt>. This can be used to implement brightness and contrast at the same time, with a wider value range than contrast and brightness operators. 
  Due to numerous bugs in XRender implementations, it can also introduce a number of visual artifacts. 
  Example: increase contrast by a factor of <tt>$c</tt> without changing image brightness too much. 
@@ -457,7 +457,7 @@ FOCUS ? keep{load "has_focus.jpg"} : keep
    focus_fade load &quot;mybg.jpg&quot;;
 </pre></dd></dl>
 
-<h3><font SIZE="-1">OTHER STUFF</font></h3>
+<h3>OTHER STUFF</h3>
 
  Anything that didn't fit any of the other categories, even after applying force and closing our eyes.
 <dl>

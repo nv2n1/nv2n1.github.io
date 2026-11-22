@@ -10,14 +10,14 @@ description: "ql/methods/montecarlo/mctraits.hpp – Monte Carlo policies."
 
 <p> ql/methods/montecarlo/mctraits.hpp &#8211; Monte Carlo policies. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/methods/montecarlo/pathgenerator.hpp&gt;<br />
- #include &lt;ql/methods/montecarlo/multipathgenerator.hpp&gt;<br />
- #include &lt;ql/methods/montecarlo/pathpricer.hpp&gt;<br />
+<p> #include &lt;ql/methods/montecarlo/pathgenerator.hpp&gt;<br/>
+ #include &lt;ql/methods/montecarlo/multipathgenerator.hpp&gt;<br/>
+ #include &lt;ql/methods/montecarlo/pathpricer.hpp&gt;<br/>
  #include &lt;ql/math/randomnumbers/rngtraits.hpp&gt; </p>
 <h3>Classes</h3>
-<p> struct <code>SingleVariate&lt; RNG &gt;</code><br />
- <i>default Monte Carlo traits for single-variate models </i><br />
- struct <code>MultiVariate&lt; RNG &gt;</code><br />
+<p> struct <code>SingleVariate&lt; RNG &gt;</code><br/>
+ <i>default Monte Carlo traits for single-variate models </i><br/>
+ struct <code>MultiVariate&lt; RNG &gt;</code><br/>
  <i>default Monte Carlo traits for multi-variate models </i></p>
 <h2>Detailed Description</h2>
 <p> Monte Carlo policies. </p>

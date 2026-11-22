@@ -93,8 +93,8 @@ sudo ln -sf /usr/bin/xscreensaver-command \
 </pre>
 <p> That doesn&#8217;t work under Unity, though. Apparently it has its own built-in screen locker which is not gnome-screensaver, and cannot be removed, and yet still manages to be bug-addled and insecure. Keep reinventing that wheel, guys! (If you have figured out how to replace Unity&#8217;s locking &quot;feature&quot; with xscreensaver, let me know.)</p>
 </dd><dt><code>4: Turn off Unity&#8217;s built-in blanking.</code></dt>
-<dd> Open &quot;<i>System Settings / Brightness &amp; Lock</i>&quot;;<br />
- Un-check &quot;<i>Start Automatically</i>&quot;;<br />
+<dd> Open &quot;<i>System Settings / Brightness &amp; Lock</i>&quot;;<br/>
+ Un-check &quot;<i>Start Automatically</i>&quot;;<br/>
  Set <i>&quot;Turn screen off when inactive for&quot;</i> to <i>&quot;Never&quot;.</i></dd></dl>
 </dl>
 <h2>USING KDE</h2>

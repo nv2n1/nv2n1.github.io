@@ -30,82 +30,82 @@ description: "g_analyze – analyzes data sets"
 <p> Option <code> -power</code> fits the data to b ta, which is accomplished by fitting to a t + b on log-log scale. All points after the first zero or negative value are ignored. </p>
 <p> Option <code> -luzar</code> performs a Luzar &amp; Chandler kinetics analysis on output from <code> g_hbond</code>. The input file can be taken directly from <code> g_hbond -ac</code>, and then the same result should be produced.</p>
 <h2>FILES</h2>
-<p> <code>-f</code><i> graph.xvg</i> <code>Input</code><br />
+<p> <code>-f</code><i> graph.xvg</i> <code>Input</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-ac</code><i> autocorr.xvg</i> <code>Output, Opt.</code><br />
+<p> <code>-ac</code><i> autocorr.xvg</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-msd</code><i> msd.xvg</i> <code>Output, Opt.</code><br />
+<p> <code>-msd</code><i> msd.xvg</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-cc</code><i> coscont.xvg</i> <code>Output, Opt.</code><br />
+<p> <code>-cc</code><i> coscont.xvg</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-dist</code><i> distr.xvg</i> <code>Output, Opt.</code><br />
+<p> <code>-dist</code><i> distr.xvg</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-av</code><i> average.xvg</i> <code>Output, Opt.</code><br />
+<p> <code>-av</code><i> average.xvg</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-ee</code><i> errest.xvg</i> <code>Output, Opt.</code><br />
+<p> <code>-ee</code><i> errest.xvg</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-g</code><i> fitlog.log</i> <code>Output, Opt.</code><br />
+<p> <code>-g</code><i> fitlog.log</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>Log file&nbsp;<wbr> </p>
 <h2>OTHER OPTIONS</h2>
-<p> <code>-[no]h</code><i>no </i><br />
+<p> <code>-[no]h</code><i>no </i><br/>
 &nbsp;<wbr>Print help info and quit </p>
-<p> <code>-nice</code><i> int</i><code> 0</code><br />
+<p> <code>-nice</code><i> int</i><code> 0</code><br/>
 &nbsp;<wbr>Set the nicelevel </p>
-<p> <code>-[no]w</code><i>no </i><br />
+<p> <code>-[no]w</code><i>no </i><br/>
 &nbsp;<wbr>View output xvg, xpm, eps and pdb files </p>
-<p> <code>-[no]xvgr</code><i>yes </i><br />
+<p> <code>-[no]xvgr</code><i>yes </i><br/>
 &nbsp;<wbr>Add specific codes&nbsp;<wbr>(legends etc.)&nbsp;<wbr>in the output xvg files for the xmgrace program </p>
-<p> <code>-[no]time</code><i>yes </i><br />
+<p> <code>-[no]time</code><i>yes </i><br/>
 &nbsp;<wbr>Expect a time in the input </p>
-<p> <code>-b</code><i> real</i><code> -1 </code><br />
+<p> <code>-b</code><i> real</i><code> -1 </code><br/>
 &nbsp;<wbr>First time to read from set </p>
-<p> <code>-e</code><i> real</i><code> -1 </code><br />
+<p> <code>-e</code><i> real</i><code> -1 </code><br/>
 &nbsp;<wbr>Last time to read from set </p>
-<p> <code>-n</code><i> int</i><code> 1</code><br />
+<p> <code>-n</code><i> int</i><code> 1</code><br/>
 &nbsp;<wbr>Read&nbsp;<wbr>&nbsp;<wbr>sets seperated by&nbsp;<wbr>&amp; </p>
-<p> <code>-[no]d</code><i>no </i><br />
+<p> <code>-[no]d</code><i>no </i><br/>
 &nbsp;<wbr>Use the derivative </p>
-<p> <code>-bw</code><i> real</i><code> 0.1 </code><br />
+<p> <code>-bw</code><i> real</i><code> 0.1 </code><br/>
 &nbsp;<wbr>Binwidth for the distribution </p>
-<p> <code>-errbar</code><i> enum</i><code> none</code><br />
+<p> <code>-errbar</code><i> enum</i><code> none</code><br/>
 &nbsp;<wbr>Error bars for -av:&nbsp;<wbr><code>&nbsp;<wbr>none</code>,&nbsp;<wbr><code>&nbsp;<wbr>stddev</code>,&nbsp;<wbr><code>&nbsp;<wbr>error</code>&nbsp;<wbr>or&nbsp;<wbr><code>&nbsp;<wbr>90</code> </p>
-<p> <code>-[no]integrate</code><i>no </i><br />
+<p> <code>-[no]integrate</code><i>no </i><br/>
 &nbsp;<wbr>Integrate data function(s)&nbsp;<wbr>numerically using trapezium rule </p>
-<p> <code>-aver_start</code><i> real</i><code> 0 </code><br />
+<p> <code>-aver_start</code><i> real</i><code> 0 </code><br/>
 &nbsp;<wbr>Start averaging the integral from here </p>
-<p> <code>-[no]xydy</code><i>no </i><br />
+<p> <code>-[no]xydy</code><i>no </i><br/>
 &nbsp;<wbr>Interpret second data set as error in the y values for integrating </p>
-<p> <code>-[no]regression</code><i>no </i><br />
+<p> <code>-[no]regression</code><i>no </i><br/>
 &nbsp;<wbr>Perform a linear regression analysis on the data </p>
-<p> <code>-[no]luzar</code><i>no </i><br />
+<p> <code>-[no]luzar</code><i>no </i><br/>
 &nbsp;<wbr>Do a Luzar and Chandler analysis on a correlation function and related as produced by g_hbond. When in addition the -xydy flag is given the second and fourth column will be interpreted as errors in c(t)&nbsp;<wbr>and n(t). </p>
-<p> <code>-temp</code><i> real</i><code> 298.15</code><br />
+<p> <code>-temp</code><i> real</i><code> 298.15</code><br/>
 &nbsp;<wbr>Temperature for the Luzar hydrogen bonding kinetics analysis </p>
-<p> <code>-fitstart</code><i> real</i><code> 1 </code><br />
+<p> <code>-fitstart</code><i> real</i><code> 1 </code><br/>
 &nbsp;<wbr>Time&nbsp;<wbr>(ps)&nbsp;<wbr>from which to start fitting the correlation functions in order to obtain the forward and backward rate constants for HB breaking and formation </p>
-<p> <code>-smooth</code><i> real</i><code> -1 </code><br />
+<p> <code>-smooth</code><i> real</i><code> -1 </code><br/>
 &nbsp;<wbr>If&nbsp;<wbr>=&nbsp;<wbr>0, the tail of the ACF will be smoothed by fitting it to an exponential function: y&nbsp;<wbr>=&nbsp;<wbr>A exp(-x/tau) </p>
-<p> <code>-filter</code><i> real</i><code> 0 </code><br />
+<p> <code>-filter</code><i> real</i><code> 0 </code><br/>
 &nbsp;<wbr>Print the high-frequency fluctuation after filtering with a cosine filter of length&nbsp;<wbr> </p>
-<p> <code>-[no]power</code><i>no </i><br />
+<p> <code>-[no]power</code><i>no </i><br/>
 &nbsp;<wbr>Fit data to: b ta </p>
-<p> <code>-[no]subav</code><i>yes </i><br />
+<p> <code>-[no]subav</code><i>yes </i><br/>
 &nbsp;<wbr>Subtract the average before autocorrelating </p>
-<p> <code>-[no]oneacf</code><i>no </i><br />
+<p> <code>-[no]oneacf</code><i>no </i><br/>
 &nbsp;<wbr>Calculate one ACF over all sets </p>
-<p> <code>-acflen</code><i> int</i><code> -1</code><br />
+<p> <code>-acflen</code><i> int</i><code> -1</code><br/>
 &nbsp;<wbr>Length of the ACF, default is half the number of frames </p>
-<p> <code>-[no]normalize</code><i>yes </i><br />
+<p> <code>-[no]normalize</code><i>yes </i><br/>
 &nbsp;<wbr>Normalize ACF </p>
-<p> <code>-P</code><i> enum</i><code> 0</code><br />
+<p> <code>-P</code><i> enum</i><code> 0</code><br/>
 &nbsp;<wbr>Order of Legendre polynomial for ACF&nbsp;<wbr>(0 indicates none):&nbsp;<wbr><code>&nbsp;<wbr>0</code>,&nbsp;<wbr><code>&nbsp;<wbr>1</code>,&nbsp;<wbr><code>&nbsp;<wbr>2</code>&nbsp;<wbr>or&nbsp;<wbr><code>&nbsp;<wbr>3</code> </p>
-<p> <code>-fitfn</code><i> enum</i><code> none</code><br />
+<p> <code>-fitfn</code><i> enum</i><code> none</code><br/>
 &nbsp;<wbr>Fit function:&nbsp;<wbr><code>&nbsp;<wbr>none</code>,&nbsp;<wbr><code>&nbsp;<wbr>exp</code>,&nbsp;<wbr><code>&nbsp;<wbr>aexp</code>,&nbsp;<wbr><code>&nbsp;<wbr>exp_exp</code>,&nbsp;<wbr><code>&nbsp;<wbr>vac</code>,&nbsp;<wbr><code>&nbsp;<wbr>exp5</code>,&nbsp;<wbr><code>&nbsp;<wbr>exp7</code>&nbsp;<wbr>or&nbsp;<wbr><code>&nbsp;<wbr>exp9</code> </p>
-<p> <code>-ncskip</code><i> int</i><code> 0</code><br />
+<p> <code>-ncskip</code><i> int</i><code> 0</code><br/>
 &nbsp;<wbr>Skip N points in the output file of correlation functions </p>
-<p> <code>-beginfit</code><i> real</i><code> 0 </code><br />
+<p> <code>-beginfit</code><i> real</i><code> 0 </code><br/>
 &nbsp;<wbr>Time where to begin the exponential fit of the correlation function </p>
-<p> <code>-endfit</code><i> real</i><code> -1 </code><br />
+<p> <code>-endfit</code><i> real</i><code> -1 </code><br/>
 &nbsp;<wbr>Time where to end the exponential fit of the correlation function, -1 is till the end </p>
 <h2>SEE ALSO</h2>
 <p> <code>gromacs(7)</code> </p>

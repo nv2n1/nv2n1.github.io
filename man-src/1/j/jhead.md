@@ -52,20 +52,20 @@ description: "jhead – Digicam JPEG Exif header manipulation tool"
 <dt><code>-dsft</code></dt>
 <dd> Sets the Exif timestamp to the file&#8217;s timestamp. Requires an Exif header to pre-exist. Use -mkexif option to create one if needed.</dd>
 <dt><code>-n</code><i>[format_string]</i></dt>
-<dd> This option causes files to be renamed and/ or mmoved using the date information from the Exif header &quot;DateTimeOriginal&quot; field. If the file is not an Exif file, or the DateTimeOriginal does not contain a valid value, the file date is used. Renaming is by default restricted to files whose names consist largely of digits. This effectively restricts renaming to files that have not already been manually renamed, as the default sequential names from digital cameras consist largely of digits. Use the <code>-n</code> option to force renaming of all files. If the new name contains a &#8216;/&#8217;, this will be interpreted as a new path, and the file will be moved accordingly.<br />
+<dd> This option causes files to be renamed and/ or mmoved using the date information from the Exif header &quot;DateTimeOriginal&quot; field. If the file is not an Exif file, or the DateTimeOriginal does not contain a valid value, the file date is used. Renaming is by default restricted to files whose names consist largely of digits. This effectively restricts renaming to files that have not already been manually renamed, as the default sequential names from digital cameras consist largely of digits. Use the <code>-n</code> option to force renaming of all files. If the new name contains a &#8216;/&#8217;, this will be interpreted as a new path, and the file will be moved accordingly.<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> If the <i>format_string</i> is omitted, the file will be renamed to MMDD-HHMMSS. Note that this scheme doesn&#8217;t include the year (I never have photos from different years together anyway). </dd>
 <p> If a <i>format_string</i> is provided, it will be passed to the strftime function as the format string. In addition, if the format string contains &#8216;%f&#8217;, this will substitute the original name of the file (minus extension). &#8216;%i&#8217; will substitute a sequence number. Leading zeros can be specified like with printf &#8211; i.e. &#8216;%04i&#8217; pads the number to 4 digits using leading zeros. </p>
 <p> If the name includes &#8216;/&#8217;, this is interpreted as a new path for the file. If the new path does not exist, the path will be created. </p>
 <p> If the target name already exists, the name will be appended with &quot;a&quot;, &quot;b&quot;, &quot;c&quot;, etc, unless the name ends with a letter, in which case it will be appended with &quot;0&quot;, &quot;1&quot;, &quot;2&quot;, etc. </p>
 <p> This feature is especially useful if more than one digital camera was used to take pictures of an event. By renaming them to a scheme according to date, they will automatically appear in order of taking in most directory listings and image browsers. Alternatively, if your image browser supports listing by file time, you can use the -ft option to set the file time to the time the photo was taken. </p>
 <p> Some of the more useful arguments for strftime are: </p>
-<p> <code>%H</code>&nbsp;<wbr>Hour in 24-hour format&nbsp;<wbr>(00 &#8211; 23)<br />
- <code>%j</code>&nbsp;<wbr>Day of year as decimal number&nbsp;<wbr>(001 &#8211; 366)<br />
- <code>%m</code>&nbsp;<wbr>Month as decimal number&nbsp;<wbr>(01 &#8211; 12)<br />
- <code>%M</code>&nbsp;<wbr>Minute as decimal number&nbsp;<wbr>(00 &#8211; 59)<br />
- <code>%S</code>&nbsp;<wbr>Second as decimal number&nbsp;<wbr>(00 &#8211; 59)<br />
- <code>%w</code>&nbsp;<wbr>Weekday as decimal number&nbsp;<wbr>(0 &#8211; 6;&nbsp;<wbr>Sunday is 0)<br />
- <code>%y</code>&nbsp;<wbr>Year without century, as decimal number&nbsp;<wbr>(00 &#8211; 99)<br />
+<p> <code>%H</code>&nbsp;<wbr>Hour in 24-hour format&nbsp;<wbr>(00 &#8211; 23)<br/>
+ <code>%j</code>&nbsp;<wbr>Day of year as decimal number&nbsp;<wbr>(001 &#8211; 366)<br/>
+ <code>%m</code>&nbsp;<wbr>Month as decimal number&nbsp;<wbr>(01 &#8211; 12)<br/>
+ <code>%M</code>&nbsp;<wbr>Minute as decimal number&nbsp;<wbr>(00 &#8211; 59)<br/>
+ <code>%S</code>&nbsp;<wbr>Second as decimal number&nbsp;<wbr>(00 &#8211; 59)<br/>
+ <code>%w</code>&nbsp;<wbr>Weekday as decimal number&nbsp;<wbr>(0 &#8211; 6;&nbsp;<wbr>Sunday is 0)<br/>
+ <code>%y</code>&nbsp;<wbr>Year without century, as decimal number&nbsp;<wbr>(00 &#8211; 99)<br/>
  <code>%Y</code>&nbsp;<wbr>Year with century, as decimal number </p>
 <p> Example: </p>
 <p> <i>jhead -n%Y%m%d-%H%M%S *.jpg</i> </p>
@@ -74,9 +74,9 @@ description: "jhead – Digicam JPEG Exif header manipulation tool"
 <dt><code>-ta&lt;+|-&gt;&lt;timediff&gt;</code></dt>
 <dd> Adjust time stored in the Exif header by h:mm forwards or backwards. Useful when having taken pictures with the wrong time set on the camera, such as after travelling across time zones, or when daylight savings time has changed. </dd>
 <p> Examples: </p>
-<p> Add 1 hourand 5 minutes to the time<br />
+<p> Add 1 hourand 5 minutes to the time<br/>
  jhead -ta+1:05 </p>
-<p> Decrease time by one second:<br />
+<p> Decrease time by one second:<br/>
  jhead -ta-0:0:1 </p>
 <p> This option changes all Date/time fields in the exif header, including &quot;DateTimeOriginal&quot; (tag 0x9003) and &quot;DateTimeDigitized&quot; (tag 0x9004).</p>
 <dt><code>-da&lt;newdate&gt;-&lt;olddate&gt;</code></dt>
@@ -84,9 +84,9 @@ description: "jhead – Digicam JPEG Exif header manipulation tool"
 <p> Works like -ta, but for specifying large date offsets, to be used when fixing dates from cameras where the date was set incorrectly, such as having date and time reset by battery removal on some cameras </p>
 <p> Because different months and years have different numbers of days in them, a simple offset for months, days, years would lead to unexpected results at times. The time offset is thus specified as a difference between two dates, so that jhead can figure out exactly how many days the timestamp needs to be adjusted by, including leap years and daylight savings time changes. The dates are specified as yyyy:mm:dd. For sub-day adjustments, a time of day can also be included, by specifying yyyy:nn:dd/hh:mm or yyyy:mm:dd/hh:mm:ss </p>
 <p> Examples: </p>
-<p> Year on camera was set to 2005 instead of 2004 for pictures taken in April<br />
+<p> Year on camera was set to 2005 instead of 2004 for pictures taken in April<br/>
  jhead -da2004:03:01-2005:03:01 </p>
-<p> Default camera date is 2002:01:01, and date was reset on 2005:05:29 at 11:21 am<br />
+<p> Default camera date is 2002:01:01, and date was reset on 2005:05:29 at 11:21 am<br/>
  jhead -da2005:05:29/11:21-2002:01:01</p>
 </dd><dt><code>-ts</code></dt>
 <dd> Sets the time stored in the Exif header to what is specified on the command line. Time must be specified as: <i>yyyy:mm:dd-hh:mm:ss</i></dd>
@@ -145,7 +145,7 @@ description: "jhead – Digicam JPEG Exif header manipulation tool"
 <p> The specified command invoked separately for each JPEG that is processed, even if multiple files are specified (explicitly or by wild card). </p>
 <p> Example use: </p>
 <p> Having a whole directory of photos from my S100, I run the following commands: </p>
-<p> <i>jhead -cmd mogrify -quality 80 &amp;i -model S100 *.jpg</i><br />
+<p> <i>jhead -cmd mogrify -quality 80 &amp;i -model S100 *.jpg</i><br/>
  <i>jhead -cmd jpegtran -progressive &amp;i &gt; &amp;o *.jpg</i> </p>
 <p> The first command mogrifies all JPEGs in the tree that indicate that they are from a Canon S100 in their Exif header to 80% quality at the same resolution. This is a &#8216;lossy&#8217; process, so I only run it on files that are from the Canon, and only run it once. The next command then takes a JPEGs and converts them to progressive JPEGs. The result is the same images, with no discernible differences, stored in half the space. This produces substantial savings on some cameras. </p>
 </dl>

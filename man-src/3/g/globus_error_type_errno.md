@@ -25,8 +25,8 @@ description: "Error Construction –"
 <p>Allocate and initialize an error of type GLOBUS_ERROR_TYPE_ERRNO </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>base_source</i> Pointer to the originating module.<br />
- <i>base_cause</i> The error object causing the error. If this is the original error, this parameter may be NULL.<br />
+<dd><i>base_source</i> Pointer to the originating module.<br/>
+ <i>base_cause</i> The error object causing the error. If this is the original error, this parameter may be NULL.<br/>
  <i>system_errno</i> The system errno.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -35,9 +35,9 @@ description: "Error Construction –"
 <p>Initialize a previously allocated error of type GLOBUS_ERROR_TYPE_ERRNO </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>error</i> The previously allocated error object.<br />
- <i>base_source</i> Pointer to the originating module.<br />
- <i>base_cause</i> The error object causing the error. If this is the original error this parameter may be NULL.<br />
+<dd><i>error</i> The previously allocated error object.<br/>
+ <i>base_source</i> Pointer to the originating module.<br/>
+ <i>base_cause</i> The error object causing the error. If this is the original error this parameter may be NULL.<br/>
  <i>system_errno</i> The system errno.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

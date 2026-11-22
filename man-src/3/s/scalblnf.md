@@ -18,12 +18,12 @@ float scalbnf(float x, int exp);
 long double scalbnl(long double x, int exp);</code></pre>
 <p> Link with <i>-lm</i>. Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>scalbln</code>(), <code>scalblnf</code>(), <code>scalblnl</code>():</p>
 <dl>
-<dd>_ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br />
+<dd>_ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE</dd></dl>
 <p> <code>scalbn</code>(), <code>scalbnf</code>(), <code>scalbnl</code>():</p>
 <dl>
-<dd>_ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
+<dd>_ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
 <h2>Description</h2>
 <p>These functions multiply their first argument <i>x</i> by <code>FLT_RADIX</code> (probably 2) to the power of <i>exp</i>, that is: </p>
@@ -56,7 +56,7 @@ long double scalbnl(long double x, int exp);</code></pre>
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>scalbn</code>(), <code>scalbnf</code>(), <code>scalbnl</code>(),<br />
+<td> <code>scalbn</code>(), <code>scalbnf</code>(), <code>scalbnl</code>(),<br/>
  <code>scalbln</code>(), <code>scalblnf</code>(), <code>scalblnl</code>() </td>
 <td>Thread safety</td>
 <td>MT-Safe

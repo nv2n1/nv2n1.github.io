@@ -48,22 +48,22 @@ description: "pbs_resources_hpux11 – pbs resources on HP UX"
 <dt>.</dt>
 <dd>To ask for 12 nodes of any type: -l nodes=12</dd>
 <dt>.</dt>
-<dd>To ask for 2 &quot;server&quot; nodes and 14 other nodes (a total of 16): -l nodes=2:server+14<br />
+<dd>To ask for 2 &quot;server&quot; nodes and 14 other nodes (a total of 16): -l nodes=2:server+14<br/>
  The above consist of two node_specs &quot;2:server&quot; and &quot;14&quot;.</dd>
 <dt>.</dt>
-<dd>To ask for (a) 1 node that is a &quot;server&quot; and has a &quot;hippi&quot; interface, (b) 10 nodes that are not servers, and (c) 3 nodes that have a large amount of memory an have hippi:<br />
+<dd>To ask for (a) 1 node that is a &quot;server&quot; and has a &quot;hippi&quot; interface, (b) 10 nodes that are not servers, and (c) 3 nodes that have a large amount of memory an have hippi:<br/>
  -l nodes=server:hippi+10:noserver+3:bigmem:hippi</dd>
 <dt>.</dt>
-<dd>To ask for three nodes by name:<br />
+<dd>To ask for three nodes by name:<br/>
  -l nodes=b2005+b1803+b1813</dd>
 <dt>.</dt>
-<dd>To ask for 2 processors on each of four nodes:<br />
+<dd>To ask for 2 processors on each of four nodes:<br/>
  -l nodes=4:ppn=2</dd>
 <dt>.</dt>
-<dd>To ask for 4 processors on one node:<br />
+<dd>To ask for 4 processors on one node:<br/>
  -l nodes=1:ppn=4</dd>
 <dt>.</dt>
-<dd>To ask for 2 processors on each of two blue nodes and three processors on one red node:<br />
+<dd>To ask for 2 processors on each of two blue nodes and three processors on one red node:<br/>
  -l nodes=2:blue:ppn=2+red:ppn=3</dd></dl>
 </dl>
 <dt>host</dt>
@@ -73,13 +73,13 @@ description: "pbs_resources_hpux11 – pbs resources on HP UX"
 <dt>software</dt>
 <dd>Allows a user to specify software required by the job. This is useful if certain software packages are only available on certain systems in the site. This resource is provided for use by the site&#8217;s scheduling policy. The allowable values and effect on job placement is site dependent. Units: string.</dd></dl>
 <h2>Examples</h2>
-<p>qsub -l nodes=15,walltime=2:00:00 script or in a qsub script as a directive: #PBS -l nodes=15,walltime=2:00:00 qsub -l cput=1:00:00,walltime=2:00:00,file=50gb,mem=15mb script<br />
+<p>qsub -l nodes=15,walltime=2:00:00 script or in a qsub script as a directive: #PBS -l nodes=15,walltime=2:00:00 qsub -l cput=1:00:00,walltime=2:00:00,file=50gb,mem=15mb script<br/>
  qalter -lcput=30:00,pmem=8mb 123.jobid or in a qsub script as a directive: #PBS -l cput=1:00:00,walltime=2:00:00,file=50gb,mem=15mb </p>
 <h2>Resource Units</h2>
 <p>The resource values take the following units:</p>
 <dl>
 <dt>time</dt>
-<dd>specifies a maximum time period the resource can be used. Time is expressed in seconds as an integer, or in the form:<br />
+<dd>specifies a maximum time period the resource can be used. Time is expressed in seconds as an integer, or in the form:<br/>
  <code></dd>
 <dt>size</dt>
 <dd>specifies the maximum amount in terms of bytes or words. It is expressed in the form The suffix is a multiplier defined in the following table, The size of a word is the word size on the execution host.</dd>

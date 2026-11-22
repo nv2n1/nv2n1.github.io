@@ -55,6 +55,6 @@ description: "XtPopdown, XtCallbackPopdown – unmap a pop-up"
 <p> <code>XtCallbackPopdown</code> calls <code>XtPopdown</code> with the specified shell_widget and then calls <code>XtSetSensitive</code> to resensitize the enable_widget. </p>
 <p> If a shell name is not given, <code>XtMenuPopdown</code> calls <code>XtPopdown</code> with the widget for which the translation is specified. If a shell_name is specified in the translation table, <code>XtMenuPopdown</code> tries to find the shell by looking up the widget tree starting at the parent of the widget in which it is invoked. If it finds a shell with the specified name in the pop-up children of that parent, it pops down the shell; otherwise, it moves up the parent chain as needed. If <code>XtMenuPopdown</code> gets to the application top-level shell widget and cannot find a matching shell, it generates an error.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xtcreatepopupshell/">XtCreatePopupShell</a>(3), <a href="/docs/linux/man/3-xtpopup/">XtPopup</a>(3)<br />
- <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><a href="/docs/linux/man/3-xtcreatepopupshell/">XtCreatePopupShell</a>(3), <a href="/docs/linux/man/3-xtpopup/">XtPopup</a>(3)<br/>
+ <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

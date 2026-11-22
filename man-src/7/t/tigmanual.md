@@ -28,7 +28,7 @@ tig &lt; [Git command output]</pre>
 <h3>Git Command Options</h3>
 <p>All Git command options specified on the command line will be passed to the given command and all will be shell quoted before they are passed to the shell. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> If you specify options for the main view, you should not use the &#8211;pretty option as this option will be set automatically to the format expected by the main view. </p>
 </dl>
 <p> Example on how to view a commit and show both author and committer information: </p>
@@ -1026,7 +1026,7 @@ tig &lt; [Git command output]</pre>
 <pre>$ tig --after=&quot;May 5th&quot; --before=&quot;2006-05-16 15:44&quot;</pre>
 </dd></dl>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> If you want to avoid having to quote dates containing spaces you can use &quot;.&quot; instead, e.g. &#8211;after=May.5th. </p>
 </dl>
 <h3>Limiting by Commit Ranges</h3>
@@ -1062,9 +1062,9 @@ tig &lt; [Git command output]</pre>
 <pre>$ tig --all --since=1.week -- Makefile</pre>
 </dd></dl>
 <h2>More Information</h2>
-<p>Please visit Tig&#8217;s m[blue]<code>home page</code>m[]<font SIZE="-2">[1]</font> or m[blue]<code>main Git repository</code>m[]<font SIZE="-2">[2]</font> for information about new releases and how to report bugs and feature requests.</p>
+<p>Please visit Tig&#8217;s m[blue]<code>home page</code>m[][1] or m[blue]<code>main Git repository</code>m[][2] for information about new releases and how to report bugs and feature requests.</p>
 <h2>Copyright</h2>
-<p>Copyright (c) 2006-2014 Jonas Fonseca &lt;m[blue]<code>jonas.fonseca [at] gmail.com</code>m[]<font SIZE="-2">[3]</font>&gt; </p>
+<p>Copyright (c) 2006-2014 Jonas Fonseca &lt;m[blue]<code>jonas.fonseca [at] gmail.com</code>m[][3]&gt; </p>
 <p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
 <h2>See Also</h2>
 <p>Manpages: </p>

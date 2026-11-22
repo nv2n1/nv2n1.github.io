@@ -10,7 +10,7 @@ description: "dggsvp.f –"
 <p>dggsvp.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dggsvp</code> (JOBU, JOBV, JOBQ, M, P, N, A, LDA, B, LDB, TOLA, TOLB, K, L, U, LDU, V, LDV, Q, LDQ, IWORK, TAU, WORK, INFO)<br />
+<p> subroutine <code>dggsvp</code> (JOBU, JOBV, JOBQ, M, P, N, A, LDA, B, LDB, TOLA, TOLB, K, L, U, LDU, V, LDV, Q, LDQ, IWORK, TAU, WORK, INFO)<br/>
  <i></i><code>DGGSVP</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dggsvp (characterJOBU, characterJOBV, characterJOBQ, integerM, integerP, integerN, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( ldb, * )B, integerLDB, double precisionTOLA, double precisionTOLB, integerK, integerL, double precision, dimension( ldu, * )U, integerLDU, double precision, dimension( ldv, * )V, integerLDV, double precision, dimension( ldq, * )Q, integerLDQ, integer, dimension( * )IWORK, double precision, dimension( * )TAU, double precision, dimension( * )WORK, integerINFO)</h3>

@@ -142,7 +142,7 @@ description: "Attributes and Cntls –"
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Reposition read/write file offset. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>in_out_offset</i> Specify the desired offset (according to whence). On success, the actual file offset will be stored here.<br />
+<dd><i>in_out_offset</i> Specify the desired offset (according to whence). On success, the actual file offset will be stored here.<br/>
  <i>whence</i> Specify how offset should be interpreted.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>

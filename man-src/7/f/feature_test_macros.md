@@ -15,9 +15,9 @@ description: "feature_test_macros – feature test macros"
 #include &lt;xyz.h&gt;</code></pre>
 <p> Some feature test macros are useful for creating portable applications, by preventing nonstandard definitions from being exposed. Other macros can be used to expose nonstandard definitions that are not exposed by default. The precise effects of each of the feature test macros described below can be ascertained by inspecting the <i>&lt;features.h&gt;</i> header file. <code>Note</code>: applications do <i>not</i> need to directly include <i>&lt;features.h&gt;</i>; indeed, doing so is actively discouraged. See NOTES.</p>
 <h3>Specification of feature test macro requirements in manual pages</h3>
-<p>When a function requires that a feature test macro is defined, the manual page SYNOPSIS typically includes a note of the following form (this example from the <code><a href="/docs/linux/man/2-acct/">acct</a></code>(2) manual page): #include &lt;unistd.h&gt;<br />
+<p>When a function requires that a feature test macro is defined, the manual page SYNOPSIS typically includes a note of the following form (this example from the <code><a href="/docs/linux/man/2-acct/">acct</a></code>(2) manual page): #include &lt;unistd.h&gt;<br/>
 int acct(const char *filename);</dl>
-<p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>acct</code>(): _BSD_SOURCE || (_XOPEN_SOURCE &amp;&amp; _XOPEN_SOURCE&nbsp;&lt;&nbsp;500) The <code>||</code> means that in order to obtain the declaration of <code><a href="/docs/linux/man/2-acct/">acct</a></code>(2) from <i>&lt;unistd.h&gt;</i>, <i>either</i> of the following macro definitions must be made before including any header files: #define _BSD_SOURCE<br />
+<p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>acct</code>(): _BSD_SOURCE || (_XOPEN_SOURCE &amp;&amp; _XOPEN_SOURCE&nbsp;&lt;&nbsp;500) The <code>||</code> means that in order to obtain the declaration of <code><a href="/docs/linux/man/2-acct/">acct</a></code>(2) from <i>&lt;unistd.h&gt;</i>, <i>either</i> of the following macro definitions must be made before including any header files: #define _BSD_SOURCE<br/>
 #define _XOPEN_SOURCE        /* or any value &lt; 500 */ Alternatively, equivalent definitions can be included in the compilation command: cc -D_BSD_SOURCE cc -D_XOPEN_SOURCE # Or any value &lt; 500 Note that, as described below, <code>some feature test macros are defined by default</code>, so that it may not always be necessary to explicitly specify the feature test macro(s) shown in the SYNOPSIS. In a few cases, manual pages use a shorthand for expressing the feature test macro requirements (this example from <code><a href="/docs/linux/man/2-readahead/">readahead</a></code>(2)): #define _GNU_SOURCE</p>
 <p>#include &lt;fcntl.h&gt; <code>ssize_t readahead(int </code><i>fd</i><code>, off64_t *</code><i>offset</i><code>, size_t </code><i>count</i><code>);</code></dl>
 <p> This format is employed in cases where only a single feature test macro can be used to expose the function declaration, and that macro is not defined by default.</p>
@@ -181,41 +181,41 @@ int acct(const char *filename);</dl>
 <h2>Examples</h2>
 <p>The program below can be used to explore how the various feature test macros are set depending on the glibc version and what feature test macros are explicitly set. The following shell session, on a system with glibc 2.10, shows some examples of what we would see: $ <code>cc ftm.c</code> $ <code>./a.out</code> _POSIX_SOURCE defined _POSIX_C_SOURCE defined: 200809L _BSD_SOURCE defined _SVID_SOURCE defined _ATFILE_SOURCE defined $ <code>cc -D_XOPEN_SOURCE=500 ftm.c</code> $ <code>./a.out</code> _POSIX_SOURCE defined _POSIX_C_SOURCE defined: 199506L _XOPEN_SOURCE defined: 500 $ <code>cc -D_GNU_SOURCE ftm.c</code> $ <code>./a.out</code> _POSIX_SOURCE defined _POSIX_C_SOURCE defined: 200809L _ISOC99_SOURCE defined _XOPEN_SOURCE defined: 700 _XOPEN_SOURCE_EXTENDED defined _LARGEFILE64_SOURCE defined _BSD_SOURCE defined _SVID_SOURCE defined _ATFILE_SOURCE defined _GNU_SOURCE defined</p>
 <h3>Program source</h3>
-<p>/* ftm.c */ #include &lt;stdint.h&gt;<br />
-#include &lt;stdio.h&gt;<br />
-#include &lt;unistd.h&gt;<br />
-#include &lt;stdlib.h&gt; int main(int argc, char *argv[]) { #ifdef _POSIX_SOURCE<br />
+<p>/* ftm.c */ #include &lt;stdint.h&gt;<br/>
+#include &lt;stdio.h&gt;<br/>
+#include &lt;unistd.h&gt;<br/>
+#include &lt;stdlib.h&gt; int main(int argc, char *argv[]) { #ifdef _POSIX_SOURCE<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;_POSIX_SOURCE defined
-&quot;); #endif #ifdef _POSIX_C_SOURCE<br />
+&quot;); #endif #ifdef _POSIX_C_SOURCE<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;_POSIX_C_SOURCE defined:&nbsp;%jdL
-&quot;,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(intmax_t)&nbsp;_POSIX_C_SOURCE); #endif #ifdef _ISOC99_SOURCE<br />
+&quot;,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(intmax_t)&nbsp;_POSIX_C_SOURCE); #endif #ifdef _ISOC99_SOURCE<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;_ISOC99_SOURCE defined
-&quot;); #endif #ifdef _ISOC11_SOURCE<br />
+&quot;); #endif #ifdef _ISOC11_SOURCE<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;_ISOC11_SOURCE defined
-&quot;); #endif #ifdef _XOPEN_SOURCE<br />
+&quot;); #endif #ifdef _XOPEN_SOURCE<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;_XOPEN_SOURCE defined:&nbsp;%d
-&quot;,&nbsp;_XOPEN_SOURCE); #endif #ifdef _XOPEN_SOURCE_EXTENDED<br />
+&quot;,&nbsp;_XOPEN_SOURCE); #endif #ifdef _XOPEN_SOURCE_EXTENDED<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;_XOPEN_SOURCE_EXTENDED defined
-&quot;); #endif #ifdef _LARGEFILE64_SOURCE<br />
+&quot;); #endif #ifdef _LARGEFILE64_SOURCE<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;_LARGEFILE64_SOURCE defined
-&quot;); #endif #ifdef _FILE_OFFSET_BITS<br />
+&quot;); #endif #ifdef _FILE_OFFSET_BITS<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;_FILE_OFFSET_BITS defined:&nbsp;%d
-&quot;,&nbsp;_FILE_OFFSET_BITS); #endif #ifdef _BSD_SOURCE<br />
+&quot;,&nbsp;_FILE_OFFSET_BITS); #endif #ifdef _BSD_SOURCE<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;_BSD_SOURCE defined
-&quot;); #endif #ifdef _SVID_SOURCE<br />
+&quot;); #endif #ifdef _SVID_SOURCE<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;_SVID_SOURCE defined
-&quot;); #endif #ifdef _DEFAULT_SOURCE<br />
+&quot;); #endif #ifdef _DEFAULT_SOURCE<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;_DEFAULT_SOURCE defined
-&quot;); #endif #ifdef _ATFILE_SOURCE<br />
+&quot;); #endif #ifdef _ATFILE_SOURCE<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;_ATFILE_SOURCE defined
-&quot;); #endif #ifdef _GNU_SOURCE<br />
+&quot;); #endif #ifdef _GNU_SOURCE<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;_GNU_SOURCE defined
-&quot;); #endif #ifdef _REENTRANT<br />
+&quot;); #endif #ifdef _REENTRANT<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;_REENTRANT defined
-&quot;); #endif #ifdef _THREAD_SAFE<br />
+&quot;); #endif #ifdef _THREAD_SAFE<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;_THREAD_SAFE defined
-&quot;); #endif #ifdef _FORTIFY_SOURCE<br />
+&quot;); #endif #ifdef _FORTIFY_SOURCE<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;_FORTIFY_SOURCE defined
 &quot;); #endif </p>
 <pre><code>exit(EXIT_SUCCESS);

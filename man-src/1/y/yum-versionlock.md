@@ -13,7 +13,7 @@ description: "yum-versionlock – Version lock rpm packages"
 <p> <code>yum-versionlock</code> [ package-name [ package-name]] &#8230;</p>
 <h2>DESCRIPTION</h2>
 <p> <code><a href="/docs/linux/man/1-yum-versionlock/">yum-versionlock</a>(1)</code> is a Yum plugin that takes a set of name/versions for packages and excludes all other versions of those packages (including optionally following obsoletes). This allows you to protect packages from being updated by newer versions. </p>
-<p> The plugin provides a command &quot;versionlock&quot; which allows you to view and edit the list of locked packages easily.<br />
+<p> The plugin provides a command &quot;versionlock&quot; which allows you to view and edit the list of locked packages easily.<br/>
  <i></i> yum versionlock add &lt;package-wildcard&gt;&#8230; </p>
 <p> Add a versionlock for all of the packages in the rpmdb matching the given wildcards. <i></i> yum versionlock exclude &lt;package-wildcard&gt;&#8230; </p>
 <p> Add a exclude (within versionlock) for the latest versions of the packages in the available repos. matching the given wildcards. <i></i> yum versionlock list </p>
@@ -37,9 +37,9 @@ description: "yum-versionlock – Version lock rpm packages"
 # yum install yum-versionlock
 </pre>
 <h2>AUTHORS</h2>
-<p> Panu Matilainen &lt;pmatilai [at] laiskiainen.org&gt;<br />
- James Antill &lt;james [at] and.org&gt;<br />
- Documentation modified by:<br />
+<p> Panu Matilainen &lt;pmatilai [at] laiskiainen.org&gt;<br/>
+ James Antill &lt;james [at] and.org&gt;<br/>
+ Documentation modified by:<br/>
  Gerhardus Geldenhuis &lt;gerhardus.geldenhuis [at] gmail.com&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <code>yum(1)</code> </p>

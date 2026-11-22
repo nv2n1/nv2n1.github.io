@@ -39,10 +39,10 @@ description: "f2c – Convert Fortran 77 to C or C++"
 <p> The following options are peculiar to <i>f2c</i>. </p>
 <dl>
 <dt><code>-A</code></dt>
-<dd> <p> Produce <font SIZE="-1">ANSI</font> C (default, starting 20020621). For old-style C, use option <code>-K</code>. </p>
+<dd> <p> Produce ANSI C (default, starting 20020621). For old-style C, use option <code>-K</code>. </p>
  </dd>
 <dt><code>-a</code></dt>
-<dd> <p> Make local variables automatic rather than static unless they appear in a <font SIZE="-1">DATA, EQUIVALENCE, NAMELIST,</font> or <font SIZE="-1">SAVE</font> statement. </p>
+<dd> <p> Make local variables automatic rather than static unless they appear in a DATA, EQUIVALENCE, NAMELIST, or SAVE statement. </p>
  </dd>
 <dt><code>-C++</code></dt>
 <dd> <p> Output C++ code. </p>
@@ -57,10 +57,10 @@ description: "f2c – Convert Fortran 77 to C or C++"
 <dd> <p> Write files in directory <i>dir</i> instead of the current directory. </p>
  </dd>
 <dt><code>-E</code></dt>
-<dd> <p> Declare uninitialized <font SIZE="-1">COMMON</font> to be <code>Extern</code> (overridably defined in as <code>extern).</code> </p>
+<dd> <p> Declare uninitialized COMMON to be <code>Extern</code> (overridably defined in as <code>extern).</code> </p>
  </dd>
 <dt><code>-ec</code></dt>
-<dd> <p> Place uninitialized <font SIZE="-1">COMMON</font> blocks in separate files: <code>COMMON /ABC/</code> appears in file <code>abc_com.c</code>. Option `-e1c&#8217; bundles the separate files into the output file, with comments that give an unbundling <i><a href="/docs/linux/man/1-sed/">sed</a></i>(1) script. </p>
+<dd> <p> Place uninitialized COMMON blocks in separate files: <code>COMMON /ABC/</code> appears in file <code>abc_com.c</code>. Option `-e1c&#8217; bundles the separate files into the output file, with comments that give an unbundling <i><a href="/docs/linux/man/1-sed/">sed</a></i>(1) script. </p>
  </dd>
 <dt><code>-ext</code></dt>
 <dd> <p> Complain about <i><a href="/docs/linux/man/1-f77/">f77</a></i>(1) extensions. </p>
@@ -78,7 +78,7 @@ description: "f2c – Convert Fortran 77 to C or C++"
 <dd> <p> Emulate Fortran 66&#8217;s treatment of Hollerith: try to align character strings on word (or, if the option is `-hd&#8217;, on double-word) boundaries. </p>
  </dd>
 <dt><code>-i2</code></dt>
-<dd> <p> Similar to <code>-I2</code>, but assume a modified <i>libF77</i> and <i>libI77</i> (compiled with <code>-Df2c_i2</code>), so <font SIZE="-1">INTEGER</font> and <font SIZE="-1">LOGICAL</font> variables may be assigned by <font SIZE="-1">INQUIRE</font> and array lengths are stored in short ints. </p>
+<dd> <p> Similar to <code>-I2</code>, but assume a modified <i>libF77</i> and <i>libI77</i> (compiled with <code>-Df2c_i2</code>), so INTEGER and LOGICAL variables may be assigned by INQUIRE and array lengths are stored in short ints. </p>
  </dd>
 <dt><code>-i90</code></dt>
 <dd> <p> Do not recognize the Fortran 90 bit-manipulation intrinsics btest, iand, ibclr, ibits, ibset, ieor, ior, ishft, and ishftc. </p>
@@ -93,13 +93,13 @@ description: "f2c – Convert Fortran 77 to C or C++"
 <dd> <p> Supply preprocessor definitions to make common-block members look like local variables. </p>
  </dd>
 <dt><code>-R</code></dt>
-<dd> <p> Do not promote <font SIZE="-1">REAL</font> functions and operations to <font SIZE="-1">DOUBLE PRECISION.</font> Option confirms the default, which imitates <i>f77</i>. </p>
+<dd> <p> Do not promote REAL functions and operations to DOUBLE PRECISION. Option confirms the default, which imitates <i>f77</i>. </p>
  </dd>
 <dt><code>-r</code></dt>
 <dd> <p> Cast REAL arguments of intrinsic functions and values of REAL functions (including intrinsics) to REAL. </p>
  </dd>
 <dt><code>-r8</code></dt>
-<dd> <p> Promote <font SIZE="-1">REAL</font> to <font SIZE="-1">DOUBLE PRECISION, COMPLEX</font> to <font SIZE="-1">DOUBLE COMPLEX.</font> </p>
+<dd> <p> Promote REAL to DOUBLE PRECISION, COMPLEX to DOUBLE COMPLEX. </p>
  </dd>
 <dt><code>-s</code></dt>
 <dd> <p> Preserve multidimensional subscripts. Suppressed by option . </p>
@@ -108,16 +108,16 @@ description: "f2c – Convert Fortran 77 to C or C++"
 <dd> <p> Put temporary files in directory <i>dir.</i> </p>
  </dd>
 <dt><code>-trapuv</code></dt>
-<dd> <p> Dynamically initialize local variables, except those appearing in <font SIZE="-1">SAVE</font> or <font SIZE="-1">DATA</font> statements, with values that may help find references to uninitialized variables. For example, with IEEE arithmetic, initialize local floating-point variables to signaling NaNs. </p>
+<dd> <p> Dynamically initialize local variables, except those appearing in SAVE or DATA statements, with values that may help find references to uninitialized variables. For example, with IEEE arithmetic, initialize local floating-point variables to signaling NaNs. </p>
  </dd>
 <dt><code>-w8</code></dt>
-<dd> <p> Suppress warnings when <font SIZE="-1">COMMON</font> or <font SIZE="-1">EQUIVALENCE</font> forces odd-word alignment of doubles. </p>
+<dd> <p> Suppress warnings when COMMON or EQUIVALENCE forces odd-word alignment of doubles. </p>
  </dd>
 <dt><code>-W</code><i>n</i></dt>
 <dd> <p> Assume <i>n</i> characters/word (default 4) when initializing numeric variables with character data. </p>
  </dd>
 <dt><code>-z</code></dt>
-<dd> <p> Do not implicitly recognize <font SIZE="-1">DOUBLE COMPLEX.</font> </p>
+<dd> <p> Do not implicitly recognize DOUBLE COMPLEX. </p>
  </dd>
 <dt><code>-!bs</code></dt>
 <dd> <p> Do not recognize <i>b</i>ack <i>s</i>lash escapes (\&quot;, \&#8216;, \0, \\, \b, \f, \n, \r, \t, \v) in character strings. </p>
@@ -129,15 +129,15 @@ description: "f2c – Convert Fortran 77 to C or C++"
 <dd> <p> Reject <code>include</code> statements. </p>
  </dd>
 <dt><code>-!i8</code></dt>
-<dd> <p> Disallow <font SIZE="-1">INTEGER*8 ,</font> or, if the option is `-!i8const&#8217;, permit <font SIZE="-1">INTEGER*8</font> but do not promote integer constants to <font SIZE="-1">INTEGER*8</font> when they involve more than 32 bits. </p>
+<dd> <p> Disallow INTEGER*8 , or, if the option is `-!i8const&#8217;, permit INTEGER*8 but do not promote integer constants to INTEGER*8 when they involve more than 32 bits. </p>
  </dd>
 <dt><code>-!it</code></dt>
-<dd> <p> Don&#8217;t infer types of untyped <font SIZE="-1">EXTERNAL</font> procedures from use as parameters to previously defined or prototyped procedures. </p>
+<dd> <p> Don&#8217;t infer types of untyped EXTERNAL procedures from use as parameters to previously defined or prototyped procedures. </p>
  </dd>
 <dt><code>-!P</code></dt>
-<dd> <p> Do not attempt to infer <font SIZE="-1">ANSI</font> or C++ prototypes from usage. </p>
+<dd> <p> Do not attempt to infer ANSI or C++ prototypes from usage. </p>
  </dd></dl>
-<p> The resulting C invokes the support routines of <i>f77</i>; object code should be loaded by <i>f77</i> or with <i><a href="/docs/linux/man/1-ld/">ld</a></i>(1) or <i><a href="/docs/linux/man/1-cc/">cc</a></i>(1) options <code>-lF77 -lI77 -lm</code>. Calling conventions are those of <i>f77</i>: see the reference below. <br />
+<p> The resulting C invokes the support routines of <i>f77</i>; object code should be loaded by <i>f77</i> or with <i><a href="/docs/linux/man/1-ld/">ld</a></i>(1) or <i><a href="/docs/linux/man/1-cc/">cc</a></i>(1) options <code>-lF77 -lI77 -lm</code>. Calling conventions are those of <i>f77</i>: see the reference below. <br/>
   </p>
 <h2>FILES</h2>
 <dl>
@@ -159,7 +159,7 @@ description: "f2c – Convert Fortran 77 to C or C++"
 <h2>DIAGNOSTICS</h2>
 <p> The diagnostics produced by <i>f2c</i> are intended to be self-explanatory.  </p>
 <h2>BUGS</h2>
-<p> Floating-point constant expressions are simplified in the floating-point arithmetic of the machine running <i>f2c</i>, so they are typically accurate to at most 16 or 17 decimal places. <br />
- Untypable <font SIZE="-1">EXTERNAL</font> functions are declared <code>int</code>. <br />
- There is no notation for <font SIZE="-1">INTEGER*8</font> constants. <br />
- Some intrinsic functions do not yet work with <font SIZE="-1">INTEGER*8 .</font> </p>
+<p> Floating-point constant expressions are simplified in the floating-point arithmetic of the machine running <i>f2c</i>, so they are typically accurate to at most 16 or 17 decimal places. <br/>
+ Untypable EXTERNAL functions are declared <code>int</code>. <br/>
+ There is no notation for INTEGER*8 constants. <br/>
+ Some intrinsic functions do not yet work with INTEGER*8 . </p>

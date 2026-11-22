@@ -14,21 +14,21 @@ description: "docker-image-tag – Create a tag TARGET_IMAGE that refers to SOUR
 <h2>DESCRIPTION</h2>
 <p> Assigns a new alias to an image in a registry. An alias refers to the entire image name including the optional TAG after the &#8216;:&#8217;. </p>
 <h2>OPTIONS</h2>
-<p> <code>NAME</code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;The image name which is made up of slash-separated name components,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;optionally prefixed by a registry hostname. The hostname must comply with<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;standard DNS rules, but may not contain underscores. If a hostname is<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;present, it may optionally be followed by a port number in the format<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;:8080. If not present, the command uses Docker&#8217;s public registry located at<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;registry-1.docker.io by default. Name components may contain lowercase<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;letters, digits and separators. A separator is defined as a period, one or<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;two underscores, or one or more dashes. A name component may not start or end<br />
+<p> <code>NAME</code><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;The image name which is made up of slash-separated name components,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;optionally prefixed by a registry hostname. The hostname must comply with<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;standard DNS rules, but may not contain underscores. If a hostname is<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;present, it may optionally be followed by a port number in the format<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;:8080. If not present, the command uses Docker&#8217;s public registry located at<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;registry-1.docker.io by default. Name components may contain lowercase<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;letters, digits and separators. A separator is defined as a period, one or<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;two underscores, or one or more dashes. A name component may not start or end<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;with a separator. </p>
-<p> <code>TAG</code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;The tag assigned to the image to version and distinguish images with the same<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;name. The tag name must be valid ASCII and may contain lowercase and<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;uppercase letters, digits, underscores, periods and hyphens. A tag name<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;may not start with a period or a hyphen and may contain a maximum of 128<br />
+<p> <code>TAG</code><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;The tag assigned to the image to version and distinguish images with the same<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;name. The tag name must be valid ASCII and may contain lowercase and<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;uppercase letters, digits, underscores, periods and hyphens. A tag name<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;may not start with a period or a hyphen and may contain a maximum of 128<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;characters. </p>
 <h2>EXAMPLES</h2>
 <h2>Tagging an image referenced by ID</h2>

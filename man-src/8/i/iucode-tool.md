@@ -111,7 +111,7 @@ description: "iucode_tool – Tool to manipulate Intel® IA-32/X86-64 microcode 
 <h2>Examples</h2>
 <h3>Updating files in <i>/lib/firmware/intel-ucode</i>:</h3>
 <dl>
-<dd>iucode_tool -K/lib/firmware/intel-ucode \<br />
+<dd>iucode_tool -K/lib/firmware/intel-ucode \<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>/lib/firmware/intel-ucode \</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>/tmp/file-with-new-microcodes.bin
 </dl>
@@ -121,14 +121,14 @@ description: "iucode_tool – Tool to manipulate Intel® IA-32/X86-64 microcode 
 <dd>zcat intel-microcode*.bin.gz | iucode_tool -l -tb &#8211;</dd></dl>
 <h3>Selecting microcodes and creating an early initramfs:</h3>
 <dl>
-<dd>iucode_tool &#8211;scan-system \<br />
+<dd>iucode_tool &#8211;scan-system \<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>&#8211;write-earlyfw=/tmp/early.cpio \</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>/lib/firmware/intel-ucode</p>
 <dd>iucode_tool -s 0x106a5 -s 0x106a4 -l /lib/firmware/intel-ucode</dd></dl>
 <h3>Using the recovery loader to load and to update microcode in an early initramfs:</h3>
 <dl>
 <dd>iucode_tool -L -tr /boot/intel-ucode.img</dd>
-<dd>iucode_tool -Ll -S &#8211;write-earlyfw=/boot/intel-ucode.img.new \<br />
+<dd>iucode_tool -Ll -S &#8211;write-earlyfw=/boot/intel-ucode.img.new \<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>-tr /boot/intel-ucode.img -tb /lib/firmware/intel-ucode &amp;&amp; \</dd>
 <p> mv /boot/intel-ucode.img.new /boot/intel-ucode.img </p>
 <h2>Bugs</h2>

@@ -13,7 +13,7 @@ description: "dbfilediff – compare two fsdb tables"
 <pre><code>
 dbfilediff[-Eq][-N diff_column_name]-- input table1.fsdb-- input table2.fsdb
 </code></pre>
-<p> <font SIZE="-1">OR</font> </p>
+<p> OR </p>
 <pre>
     cat table1.fsdb  | dbfilediff [-sq] --input table2.fsdb
 </pre>
@@ -87,4 +87,4 @@ dbfilediff[-Eq][-N diff_column_name]-- input table1.fsdb-- input table2.fsdb
 <p> dbrowdiff, dbrowuniq, and dbfilediff are similar but different. dbrowdiff computes row-by-row differences for a column, dbrowuniq eliminates rows that have no differences, and dbfilediff compares fields of two files.</p>
 <h2>AUTHOR and COPYRIGHT</h2>
 <p> Copyright (C) 2012-2015 by John Heidemann &lt;johnh [at] isi.edu&gt; </p>
-<p> This program is distributed under terms of the <font SIZE="-1">GNU</font> general public license, version 2. See the file <font SIZE="-1">COPYING</font> with the distribution for details. </p>
+<p> This program is distributed under terms of the GNU general public license, version 2. See the file COPYING with the distribution for details. </p>

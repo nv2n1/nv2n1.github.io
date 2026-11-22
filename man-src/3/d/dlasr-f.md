@@ -10,7 +10,7 @@ description: "dlasr.f –"
 <p>dlasr.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dlasr</code> (SIDE, PIVOT, DIRECT, M, N, C, S, A, LDA)<br />
+<p>subroutine <code>dlasr</code> (SIDE, PIVOT, DIRECT, M, N, C, S, A, LDA)<br/>
  <i></i><code>DLASR</code> applies a sequence of plane rotations to a general rectangular matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlasr (characterSIDE, characterPIVOT, characterDIRECT, integerM, integerN, double precision, dimension( * )C, double precision, dimension( * )S, double precision, dimension( lda, * )A, integerLDA)</h3>

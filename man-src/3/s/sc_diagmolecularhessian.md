@@ -14,12 +14,12 @@ description: "sc::DiagMolecularHessian –"
 #include &lt;hess.h&gt;</code></pre>
 <p> Inherits <code>sc::MolecularHessian</code>.</p>
 <h3>Public Member Functions</h3>
-<p><code>DiagMolecularHessian</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br />
- <i>The </i><code>DiagMolecularHessian</code> <code>KeyVal</code> constructor is used to generate a <code>DiagMolecularHessian</code> object from the input.<br />
+<p><code>DiagMolecularHessian</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br/>
+ <i>The </i><code>DiagMolecularHessian</code> <code>KeyVal</code> constructor is used to generate a <code>DiagMolecularHessian</code> object from the input.<br/>
  <code>DiagMolecularHessian</code> (<code>StateIn</code> &amp;) </p>
-<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br />
- <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br />
- <code>RefSymmSCMatrix</code> <code>cartesian_hessian</code> ()<br />
+<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br/>
+ <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br/>
+ <code>RefSymmSCMatrix</code> <code>cartesian_hessian</code> ()<br/>
  <i>Return the hessian in cartesian coordinates. </i></p>
 <h3>Protected Attributes</h3>
 <pre><code>double diag_</code></pre>

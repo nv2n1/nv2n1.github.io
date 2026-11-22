@@ -39,6 +39,6 @@ description: "readnsstate – interpret the contents of cn=replica’s nsState v
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to <a rel="nofollow" href="https://fedorahosted.org/389/newticket.">https://fedorahosted.org/389/newticket.</a></p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2016 Red Hat, Inc.<br />
- This manual page was written by William Brown &lt;wibrown [at] redhat.com&gt;, for the 389 Directory Server Project.<br />
+<p> Copyright &#169; 2016 Red Hat, Inc.<br/>
+ This manual page was written by William Brown &lt;wibrown [at] redhat.com&gt;, for the 389 Directory Server Project.<br/>
  This is free software. You may redistribute copies of it under the terms of the Directory Server license found in the LICENSE file of this software distribution. </p>

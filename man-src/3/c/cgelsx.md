@@ -11,7 +11,7 @@ description: "cgelsx.f –"
 <p> cgelsx.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cgelsx</code> (M, N, NRHS, A, LDA, B, LDB, JPVT, RCOND, RANK, WORK, RWORK, INFO)<br />
+<p> subroutine <code>cgelsx</code> (M, N, NRHS, A, LDA, B, LDB, JPVT, RCOND, RANK, WORK, RWORK, INFO)<br/>
  <i></i><code> CGELSX solves overdetermined or underdetermined systems for GE matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cgelsx (integerM, integerN, integerNRHS, complex, dimension( lda, * )A, integerLDA, complex, dimension( ldb, * )B, integerLDB, integer, dimension( * )JPVT, realRCOND, integerRANK, complex, dimension( * )WORK, real, dimension( * )RWORK, integerINFO)</h3>

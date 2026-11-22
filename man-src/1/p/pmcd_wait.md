@@ -36,7 +36,7 @@ description: "pmcd_wait – wait for PMCD to accept client connections"
 <dt><code>2</code></dt>
 <dd> No connection was made in the timeout interval. This will happen if <code>pmcd</code> is running but takes too long to complete the client connection, or if <code>pmcd</code> is not running and all connection attempts in the timeout interval failed with the error ECONNREFUSED.</dd>
 <dt><code>3</code></dt>
-<dd> A U<font SIZE="-2">NIX</font> error occurred, use <code>-v</code> for more details.</dd>
+<dd> A UNIX error occurred, use <code>-v</code> for more details.</dd>
 <dt><code>4</code></dt>
 <dd> A PCP error occurred, use <code>-v</code> for more details. </dd>
 </dl>

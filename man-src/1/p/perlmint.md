@@ -17,17 +17,17 @@ README.mint - Perl version 5 on Atari MiNT
 
  If you want to build perl yourself on MiNT (or maybe on an Atari without MiNT) you may want to accept some advice from somebody who already did it... 
 
- There was a perl port for Atari <font SIZE="-1">ST</font> done by ++jrb bammi [at] cadence.com. This port tried very hard to build on non-MiNT-systems. For the sake of efficiency I've left this way. Yet, I haven't removed bammi's patches but left them intact. Unfortunately some of the files that bammi contributed to the perl distribution seem to have vanished? 
+ There was a perl port for Atari ST done by ++jrb bammi [at] cadence.com. This port tried very hard to build on non-MiNT-systems. For the sake of efficiency I've left this way. Yet, I haven't removed bammi's patches but left them intact. Unfortunately some of the files that bammi contributed to the perl distribution seem to have vanished? 
 
  So, how can you distinguish my patches from bammi's patches? All of bammi's stuff is embedded in ``#ifdef atarist'' preprocessor macros. My MiNT port uses ``#ifdef __MINT__'' instead (and unconditionally undefines ``atarist''. If you want to continue on bammi's port, all you have to do is to swap the ``-D'' and ``-U'' switches for ``__MINT__'' and ``atarist'' in the variable ccflags. 
 
- However, I think that my version will still run on non-MiNT-systems provided that the user has a Eunuchs-like environment (i.e. the standard envariables like <tt>$PATH</tt>, <tt>$HOME</tt>, ... are set, there is a <font SIZE="-1">POSIX</font> compliant shell in /bin/sh, and...)
+ However, I think that my version will still run on non-MiNT-systems provided that the user has a Eunuchs-like environment (i.e. the standard envariables like <tt>$PATH</tt>, <tt>$HOME</tt>, ... are set, there is a POSIX compliant shell in /bin/sh, and...)
 
 <h2>Known problems with Perl on MiNT</h2>
 
  The problems you may encounter when building perl on your machine are most probably due to deficiencies in MiNT resp. the Atari platform in general. 
 
- First of all, if you have less than 8 <font SIZE="-1">MB</font> of <font SIZE="-1">RAM</font> you shouldn't even try to build Perl yourself. Better grab a binary pre-compiled version somewhere. Even if you have more memory you should take some care. Try to run in a fresh environment (without memory fragmented too much) with as few daemons, accessories, xcontrol modules etc. as possible. If you run some <font SIZE="-1">AES</font> you should consider to start a console based environment instead. 
+ First of all, if you have less than 8 MB of RAM you shouldn't even try to build Perl yourself. Better grab a binary pre-compiled version somewhere. Even if you have more memory you should take some care. Try to run in a fresh environment (without memory fragmented too much) with as few daemons, accessories, xcontrol modules etc. as possible. If you run some AES you should consider to start a console based environment instead. 
 
  A problem has been reported with sed. Sed is used to create some configuration files based on the answers you have given to the Configure script. Unfortunately the Perl Configure script shows sed on MiNT its limits. I have sed 2.05 with a stacksize of 64k and I have encountered no problems. If sed crashes during your configuration process you should first try to augment sed's stacksize: 
 
@@ -35,7 +35,7 @@ README.mint - Perl version 5 on Atari MiNT
         fixstk 64k /usr/bin/sed
 </pre> 
 
- (or similar). If it still doesn't help you may have a look which other versions of sed are installed on your system. If you have a <font SIZE="-1">KGMD</font> 1.0 installation you will find three in /usr/bin. Have a look there. 
+ (or similar). If it still doesn't help you may have a look which other versions of sed are installed on your system. If you have a KGMD 1.0 installation you will find three in /usr/bin. Have a look there. 
 
  Perl has some ``mammut'' C files. If gcc reports ``internal compiler error: program cc1 got fatal signal 10'' this is very likely due to a stack overflow in program cc1. Find cc1 and fix its stack. I have made good experiences with 
 
@@ -103,9 +103,9 @@ Failed Test Status Wstat Total Fail Failed List of failed-- -- -- -- -- -- -- --
 
  Just in case you want to go the hard way: perl won't even build with a broken pwd! You will have to fix the library modules (ext/POSIX/POSIX.pm, lib/Cwd.pm, lib/pwd.pl) at last after building miniperl. 
 
- A major nuisance of current MiNTLib versions is the implementation of <i>system()</i> which is far from being <font SIZE="-1">POSIX</font> compliant. A real <i>system()</i> should fork and then exec /bin/sh with its argument as a command line to the shell. The MiNTLib <i>system()</i> however doesn't expect that every user has a <font SIZE="-1">POSIX</font> shell in /bin/sh. It tries to work around the problem by forking and exec'ing the first token in its argument string. To get a little bit of compliance to <font SIZE="-1">POSIX</font> <i>system()</i> it tries to handle at least redirection (``&lt;'' or ``&gt;'') on its own behalf. 
+ A major nuisance of current MiNTLib versions is the implementation of <i>system()</i> which is far from being POSIX compliant. A real <i>system()</i> should fork and then exec /bin/sh with its argument as a command line to the shell. The MiNTLib <i>system()</i> however doesn't expect that every user has a POSIX shell in /bin/sh. It tries to work around the problem by forking and exec'ing the first token in its argument string. To get a little bit of compliance to POSIX <i>system()</i> it tries to handle at least redirection (``&lt;'' or ``&gt;'') on its own behalf. 
 
- This isn't a good idea since many programs expect that they can pass a command line to <i>system()</i> that exploits all features of a <font SIZE="-1">POSIX</font> shell. If you use the MiNTLib version of <i>system()</i> with perl the Perl function <i>system()</i> will suffer from the same deficiencies. 
+ This isn't a good idea since many programs expect that they can pass a command line to <i>system()</i> that exploits all features of a POSIX shell. If you use the MiNTLib version of <i>system()</i> with perl the Perl function <i>system()</i> will suffer from the same deficiencies. 
 
  You will find a fixed version of <i>system()</i> in the mint subdirectory. You can easily insert this version into your system libc: 
 
@@ -138,7 +138,7 @@ and(7) to believe your
     Maggid of Mezeritch
 </code></pre> 
 
- <font SIZE="-1">OK</font>, this was my motto while working on Perl for MiNT, especially rule (1)... 
+ OK, this was my motto while working on Perl for MiNT, especially rule (1)... 
 
  Have fun with Perl!
 

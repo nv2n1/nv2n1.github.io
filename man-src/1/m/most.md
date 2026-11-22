@@ -15,7 +15,7 @@ description: "most – browse or page through a text file"
 <p> <i>most</i> is a paging program that displays, one windowful at a time, the contents of a file on a terminal. It pauses after each windowful and prints on the window status line the screen the file name, current line number, and the percentage of the file so far displayed. </p>
 <p> Unlike other paging programs, <i>most</i> is capable of displaying an arbitrary number of windows as long as each window occupies at least two screen lines. Each window may contain the same file or a different file. In addition, each window has its own mode. For example, one window may display a file with its lines wrapped while another may be truncating the lines. Windows may be `locked&#8217; together in the sense that if one of the locked windows scrolls, all locked windows will scroll. <i>most</i> is also capable of ignoring lines that are indented beyond a user specified value. This is useful when viewing computer programs to pick out gross features of the code. See the `<code>:o</code>&#8216; command for a description of this feature. </p>
 <p> In addition to displaying ordinary text files, <i>most</i> can also display binary files as well as files with arbitrary ascii characters. When a file is read into a buffer, <i>most</i> examines the first 32 bytes of the file to determine if the file is a binary file and then switches to the appropriate mode. However, this feature may be disabled with the <code>-k</code> option. See the description of the <code>-b</code>, <code>-k</code>, <code>-v</code>, and <code>-t</code> options for further details. </p>
-<p> Text files may contain combinations of underscore and backspace characters causing a printer to underline or overstrike. When <i>most</i> recognizes this, it inserts the appropriate escape sequences to achieve the desired effect. In addition, some files cause the printer to overstrike some characters by embedding carriage return characters in the middle of a line. When this occurs, <i>most</i> displays the overstruck character with a bold attribute. This feature facilitates the reading of <font SIZE="-1">UNIX</font> man pages or a document produced by <i>runoff</i>. In particular, viewing this document with <i>most</i> should illustrate this behavior provided that the underline characters have not been stripped. This may be turned off with the <code>-v</code> option. </p>
+<p> Text files may contain combinations of underscore and backspace characters causing a printer to underline or overstrike. When <i>most</i> recognizes this, it inserts the appropriate escape sequences to achieve the desired effect. In addition, some files cause the printer to overstrike some characters by embedding carriage return characters in the middle of a line. When this occurs, <i>most</i> displays the overstruck character with a bold attribute. This feature facilitates the reading of UNIX man pages or a document produced by <i>runoff</i>. In particular, viewing this document with <i>most</i> should illustrate this behavior provided that the underline characters have not been stripped. This may be turned off with the <code>-v</code> option. </p>
 <p> By default, lines with more characters than the terminal width are not wrapped but are instead truncated. When truncation occurs, this is indicated by a `$&#8217; in the far right column of the terminal screen. The RIGHT and LEFT arrow keys may be used to view lines which extend past the margins of the screen. The <code>-w</code> option may be used to override this feature. When a window is wrapped, the character `\&#8217; will appear at the right edge of the window. </p>
 <p> Commands are listed below.</p>
 <h2>OPTIONS</h2>
@@ -119,7 +119,7 @@ description: "most – browse or page through a text file"
 <dt><code>E</code>, <code>e</code></dt>
 <dd> Edit this file.</dd>
 <dt><code>$</code>, <code>ESC $</code></dt>
-<dd> This is system dependent. On VMS, this causes <i>most</i> to spawn a subprocess. When the user exits the process, <i>most</i> is resumed. On <font SIZE="-1">UNIX</font> systems, <i>most</i> simply suspends itself.</dd>
+<dd> This is system dependent. On VMS, this causes <i>most</i> to spawn a subprocess. When the user exits the process, <i>most</i> is resumed. On UNIX systems, <i>most</i> simply suspends itself.</dd>
 <dt><code>:n</code></dt>
 <dd> Skip to the next filename given in the command line. Use the arrow keys to scroll forward or backward through the file list. `<code>Q</code>&#8216; quits <i>most</i> and any other key selects the given file.</dd>
 <dt><code>:c</code></dt>
@@ -147,7 +147,7 @@ int main(int argc, char **argv)
 </dt><dd> The key sequence `<code>1:od</code>&#8216; will cause <i>most</i> to display the file ignoring all lines indented beyond the first column. So for the example above, <i>most</i> would display:</dd>
 <dt>
 </dt><dd>
-int main(int argc, char **argv)&#8230;<br />
+int main(int argc, char **argv)&#8230;<br/>
 }</dd>
 <dt>
 </dt><dd> where the `&#8230;&#8217; indicates lines follow are not displayed.</dd></dl>
@@ -191,7 +191,7 @@ status-- the status line
 <h2>BUGS</h2>
 <p> Almost all of the known bugs or limitations of <i>most</i> are due to a desire to read and interpret control characters in files. One problem concerns the use of backspace characters to underscore or overstrike other characters. <i>most</i> makes an attempt to use terminal escape sequences to simulate this behavior. One side effect is the one does not always get what one expects when scrolling right and left through a file. When in doubt, use the <code>-v</code> and <code>-b</code> options of <i>most</i>. </p>
 <h2>AUTHOR</h2>
-<p> John E. Davis<br />
+<p> John E. Davis<br/>
  davis [at] space.mit.edu</p>
 <h2>ACKNOWLEDGEMENTS</h2>
 <p> I would like to thank the users of <i>most</i> for valuable comments and criticisms. I would especially like to thank those individuals who have contributed code to <i>most.</i> </p>

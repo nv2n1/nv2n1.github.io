@@ -13,16 +13,16 @@ description: "lvmvdo — EXPERIMENTAL LVM Virtual Data Optimizer support"
 <h2>VDO Terms</h2>
 <dl>
 <dt>VDODataLV</dt>
-<dd>VDO data LV<br />
- large hidden LV with suffix _vdata created in a VG.<br />
+<dd>VDO data LV<br/>
+ large hidden LV with suffix _vdata created in a VG.<br/>
  used by VDO target to store all data and metadata blocks. </dd>
 <dt>VDOPoolLV</dt>
-<dd>VDO pool LV<br />
- maintains virtual for LV(s) stored in attached VDO data LV and it has same size.<br />
+<dd>VDO pool LV<br/>
+ maintains virtual for LV(s) stored in attached VDO data LV and it has same size.<br/>
  contains VDOLV(s) (currently supports only a single VDOLV). </dd>
 <dt>VDOLV</dt>
-<dd>VDO LV<br />
- created from VDOPoolLV<br />
+<dd>VDO LV<br/>
+ created from VDOPoolLV<br/>
  appears blank after creation </dd>
 </dl>
 <h2>VDO Usage</h2>

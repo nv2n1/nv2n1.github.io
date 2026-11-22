@@ -10,7 +10,7 @@ description: "mosh-client – client-side helper for mosh"
 
 <p> mosh-client &#8211; client-side helper for mosh </p>
 <h2>SYNOPSIS</h2>
-<p> MOSH_KEY=KEY <code>mosh-client </code> IP PORT<br />
+<p> MOSH_KEY=KEY <code>mosh-client </code> IP PORT<br/>
  <code>mosh-client </code> -c </p>
 <h2>DESCRIPTION</h2>
 <p> <code>mosh-client</code> is a helper program for the <code><a href="/docs/linux/man/1-mosh/">mosh</a></code>(1) remote terminal application. </p>
@@ -36,5 +36,5 @@ description: "mosh-client – client-side helper for mosh"
 <h2>AUTHOR</h2>
 <p> mosh was written by Keith Winstein &lt;mosh-devel [at] mit.edu&gt;.</p>
 <h2>BUGS</h2>
-<p> Please report bugs to <i>mosh-devel [at] mit.edu</i>. Users may also subscribe to the <i>mosh-users [at] mit.edu</i> mailing list, at<br />
+<p> Please report bugs to <i>mosh-devel [at] mit.edu</i>. Users may also subscribe to the <i>mosh-users [at] mit.edu</i> mailing list, at<br/>
  <i><a rel="nofollow" href="http://mailman.mit.edu/mailman/listinfo/mosh-users">http://mailman.mit.edu/mailman/listinfo/mosh-users</a></i> </p>

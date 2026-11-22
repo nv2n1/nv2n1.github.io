@@ -22,22 +22,22 @@ port  tcp/ip port number to listen on
 </pre>
 <h2>OPTIONS</h2>
 <h3>general options</h3>
-<p>&#8211; h&#8211; help<br />
-        print this help text and exit&#8211; version<br />
-            print version information and exit&#8211; arguments<br />
-                print expanded command line arguments &#8211;<br />
-    q&#8211; quiet<br />
-        quiet mode,<br />
-    print no warnings and errors &#8211; v&#8211; verbose<br />
-                                       verbose mode,<br />
-    print processing details &#8211; d&#8211; debug<br />
-                                   debug mode,<br />
-    print debug information &#8211; ll&#8211; log &#8211; level[l] evel:string<br />
-                                                       constant(fatal, error, warn, info, debug, trace)<br />
-          use level l for the logger<br />
-  -lc   &#8211;log-config  [f]ilename: string<br />
-          use config file f for the logger<br />
-  +v    &#8211;verbose-pc<br />
+<p>&#8211; h&#8211; help<br/>
+        print this help text and exit&#8211; version<br/>
+            print version information and exit&#8211; arguments<br/>
+                print expanded command line arguments &#8211;<br/>
+    q&#8211; quiet<br/>
+        quiet mode,<br/>
+    print no warnings and errors &#8211; v&#8211; verbose<br/>
+                                       verbose mode,<br/>
+    print processing details &#8211; d&#8211; debug<br/>
+                                   debug mode,<br/>
+    print debug information &#8211; ll&#8211; log &#8211; level[l] evel:string<br/>
+                                                       constant(fatal, error, warn, info, debug, trace)<br/>
+          use level l for the logger<br/>
+  -lc   &#8211;log-config  [f]ilename: string<br/>
+          use config file f for the logger<br/>
+  +v    &#8211;verbose-pc<br/>
           show presentation contexts in verbose mode</p>
 <h3>multi-process options</h3>
 <pre>
@@ -47,207 +47,207 @@ port  tcp/ip port number to listen on
           fork child process for each association
 </pre>
 <h3>network options</h3>
-<p>association negotiation profile from configuration file:<br />
-  -xf   &#8211;config-file  [f]ilename [p]rofile: string<br />
-          use profile p from config file f<br />
-preferred network transfer syntaxes (not with &#8211;config-file):<br />
-  +x=   &#8211;prefer-uncompr<br />
-          prefer explicit VR local byte order (default)<br />
-  +xe   &#8211;prefer-little<br />
-          prefer explicit VR little endian TS<br />
-  +xb   &#8211;prefer-big<br />
-          prefer explicit VR big endian TS<br />
-  +xs   &#8211;prefer-lossless<br />
-          prefer default JPEG lossless TS<br />
-  +xy   &#8211;prefer-jpeg8<br />
-          prefer default JPEG lossy TS for 8 bit data<br />
-  +xx   &#8211;prefer-jpeg12<br />
-          prefer default JPEG lossy TS for 12 bit data<br />
-  +xv   &#8211;prefer-j2k-lossless<br />
-          prefer JPEG 2000 lossless TS<br />
-  +xw   &#8211;prefer-j2k-lossy<br />
-          prefer JPEG 2000 lossy TS<br />
-  +xt   &#8211;prefer-jls-lossless<br />
-          prefer JPEG-LS lossless TS<br />
-  +xu   &#8211;prefer-jls-lossy<br />
-          prefer JPEG-LS lossy TS<br />
-  +xm   &#8211;prefer-mpeg2<br />
-          prefer MPEG2 Main Profile @ Main Level TS<br />
-  +xh   &#8211;prefer-mpeg2-high<br />
-          prefer MPEG2 Main Profile @ High Level TS<br />
-  +xr   &#8211;prefer-rle<br />
-          prefer RLE lossless TS<br />
-  +xd   &#8211;prefer-deflated<br />
-          prefer deflated explicit VR little endian TS<br />
-  +xi   &#8211;implicit<br />
-          accept implicit VR little endian TS only<br />
-  +xa   &#8211;accept-all<br />
-          accept all supported transfer syntaxes<br />
-network host access control (tcp wrapper):<br />
-  -ac   &#8211;access-full<br />
-          accept connections from any host (default)<br />
-  +ac   &#8211;access-control<br />
-          enforce host access control rules<br />
-other network options:<br />
-  -id   &#8211;inetd<br />
-          run from inetd super server (not with &#8211;fork)<br />
-          (this option is available only on Posix platforms)<br />
-  -ta   &#8211;acse-timeout  [s]econds: integer (default: 30)<br />
-          timeout for ACSE messages<br />
-  -td   &#8211;dimse-timeout  [s]econds: integer (default: unlimited)<br />
-          timeout for DIMSE messages<br />
-  -aet  &#8211;aetitle  [a]etitle: string<br />
-          set my AE title (default: STORESCP)<br />
-  -pdu  &#8211;max-pdu  [n]umber of bytes: integer (4096..131072)<br />
-          set max receive pdu to n bytes (default: 16384)<br />
-  -dhl  &#8211;disable-host-lookup<br />
-          disable hostname lookup<br />
-        &#8211;refuse<br />
-          refuse association<br />
-        &#8211;reject<br />
-          reject association if no implementation class UID<br />
-        &#8211;ignore<br />
-          ignore store data, receive but do not store<br />
-        &#8211;sleep-after  [s]econds: integer<br />
-          sleep s seconds after store (default: 0)<br />
-        &#8211;sleep-during  [s]econds: integer<br />
-          sleep s seconds during store (default: 0)<br />
-        &#8211;abort-after<br />
-          abort association after receipt of C-STORE-RQ<br />
-          (but before sending response)<br />
-        &#8211;abort-during<br />
-          abort association during receipt of C-STORE-RQ<br />
-  -pm   &#8211;promiscuous<br />
-          promiscuous mode, accept unknown SOP classes<br />
-          (not with &#8211;config-file)<br />
-  -up   &#8211;uid-padding<br />
+<p>association negotiation profile from configuration file:<br/>
+  -xf   &#8211;config-file  [f]ilename [p]rofile: string<br/>
+          use profile p from config file f<br/>
+preferred network transfer syntaxes (not with &#8211;config-file):<br/>
+  +x=   &#8211;prefer-uncompr<br/>
+          prefer explicit VR local byte order (default)<br/>
+  +xe   &#8211;prefer-little<br/>
+          prefer explicit VR little endian TS<br/>
+  +xb   &#8211;prefer-big<br/>
+          prefer explicit VR big endian TS<br/>
+  +xs   &#8211;prefer-lossless<br/>
+          prefer default JPEG lossless TS<br/>
+  +xy   &#8211;prefer-jpeg8<br/>
+          prefer default JPEG lossy TS for 8 bit data<br/>
+  +xx   &#8211;prefer-jpeg12<br/>
+          prefer default JPEG lossy TS for 12 bit data<br/>
+  +xv   &#8211;prefer-j2k-lossless<br/>
+          prefer JPEG 2000 lossless TS<br/>
+  +xw   &#8211;prefer-j2k-lossy<br/>
+          prefer JPEG 2000 lossy TS<br/>
+  +xt   &#8211;prefer-jls-lossless<br/>
+          prefer JPEG-LS lossless TS<br/>
+  +xu   &#8211;prefer-jls-lossy<br/>
+          prefer JPEG-LS lossy TS<br/>
+  +xm   &#8211;prefer-mpeg2<br/>
+          prefer MPEG2 Main Profile @ Main Level TS<br/>
+  +xh   &#8211;prefer-mpeg2-high<br/>
+          prefer MPEG2 Main Profile @ High Level TS<br/>
+  +xr   &#8211;prefer-rle<br/>
+          prefer RLE lossless TS<br/>
+  +xd   &#8211;prefer-deflated<br/>
+          prefer deflated explicit VR little endian TS<br/>
+  +xi   &#8211;implicit<br/>
+          accept implicit VR little endian TS only<br/>
+  +xa   &#8211;accept-all<br/>
+          accept all supported transfer syntaxes<br/>
+network host access control (tcp wrapper):<br/>
+  -ac   &#8211;access-full<br/>
+          accept connections from any host (default)<br/>
+  +ac   &#8211;access-control<br/>
+          enforce host access control rules<br/>
+other network options:<br/>
+  -id   &#8211;inetd<br/>
+          run from inetd super server (not with &#8211;fork)<br/>
+          (this option is available only on Posix platforms)<br/>
+  -ta   &#8211;acse-timeout  [s]econds: integer (default: 30)<br/>
+          timeout for ACSE messages<br/>
+  -td   &#8211;dimse-timeout  [s]econds: integer (default: unlimited)<br/>
+          timeout for DIMSE messages<br/>
+  -aet  &#8211;aetitle  [a]etitle: string<br/>
+          set my AE title (default: STORESCP)<br/>
+  -pdu  &#8211;max-pdu  [n]umber of bytes: integer (4096..131072)<br/>
+          set max receive pdu to n bytes (default: 16384)<br/>
+  -dhl  &#8211;disable-host-lookup<br/>
+          disable hostname lookup<br/>
+        &#8211;refuse<br/>
+          refuse association<br/>
+        &#8211;reject<br/>
+          reject association if no implementation class UID<br/>
+        &#8211;ignore<br/>
+          ignore store data, receive but do not store<br/>
+        &#8211;sleep-after  [s]econds: integer<br/>
+          sleep s seconds after store (default: 0)<br/>
+        &#8211;sleep-during  [s]econds: integer<br/>
+          sleep s seconds during store (default: 0)<br/>
+        &#8211;abort-after<br/>
+          abort association after receipt of C-STORE-RQ<br/>
+          (but before sending response)<br/>
+        &#8211;abort-during<br/>
+          abort association during receipt of C-STORE-RQ<br/>
+  -pm   &#8211;promiscuous<br/>
+          promiscuous mode, accept unknown SOP classes<br/>
+          (not with &#8211;config-file)<br/>
+  -up   &#8211;uid-padding<br/>
           silently correct space-padded UIDs</p>
 <h2>output options</h2>
-<p>general:<br />
-  -od   &#8211;output-directory  [d]irectory: string (default: &#8220;.&#8221;)<br />
-          write received objects to existing directory d<br />
-bit preserving mode:<br />
-  -B    &#8211;normal<br />
-          allow implicit format conversions (default)<br />
-  +B    &#8211;bit-preserving<br />
-          write data exactly as read<br />
-output file format:<br />
-  +F    &#8211;write-file<br />
-          write file format (default)<br />
-  -F    &#8211;write-dataset<br />
-          write data set without file meta information<br />
-output transfer syntax<br />
-(not with &#8211;bit-preserving or compressed transmission):<br />
-  +t=   &#8211;write-xfer-same<br />
-          write with same TS as input (default)<br />
-  +te   &#8211;write-xfer-little<br />
-          write with explicit VR little endian TS<br />
-  +tb   &#8211;write-xfer-big<br />
-          write with explicit VR big endian TS<br />
-  +ti   &#8211;write-xfer-implicit<br />
-          write with implicit VR little endian TS<br />
-  +td   &#8211;write-xfer-deflated<br />
-          write with deflated explicit VR little endian TS<br />
-post-1993 value representations (not with &#8211;bit-preserving):<br />
-  +u    &#8211;enable-new-vr<br />
-          enable support for new VRs (UN/UT) (default)<br />
-  -u    &#8211;disable-new-vr<br />
-          disable support for new VRs, convert to OB<br />
-group length encoding (not with &#8211;bit-preserving):<br />
-  +g=   &#8211;group-length-recalc<br />
-          recalculate group lengths if present (default)<br />
-  +g    &#8211;group-length-create<br />
-          always write with group length elements<br />
-  -g    &#8211;group-length-remove<br />
-          always write without group length elements<br />
-length encoding in sequences and items (not with &#8211;bit-preserving):<br />
-  +e    &#8211;length-explicit<br />
-          write with explicit lengths (default)<br />
-  -e    &#8211;length-undefined<br />
-          write with undefined lengths<br />
-data set trailing padding<br />
-(not with &#8211;write-dataset or &#8211;bit-preserving):<br />
-  -p    &#8211;padding-off<br />
-          no padding (default)<br />
-  +p    &#8211;padding-create  [f]ile-pad [i]tem-pad: integer<br />
-          align file on multiple of f bytes and items on<br />
-          multiple of i bytes<br />
-deflate compression level (only with &#8211;write-xfer-deflated/same):<br />
-  +cl   &#8211;compression-level  [l]evel: integer (default: 6)<br />
-          0=uncompressed, 1=fastest, 9=best compression<br />
-sorting into subdirectories (not with &#8211;bit-preserving):<br />
-  -ss   &#8211;sort-conc-studies  [p]refix: string<br />
-          sort studies using prefix p and a timestamp<br />
-  -su   &#8211;sort-on-study-uid  [p]refix: string<br />
-          sort studies using prefix p and the Study Instance UID<br />
-  -sp   &#8211;sort-on-patientname<br />
-          sort studies using the Patient&#8217;s Name and a timestamp<br />
-filename generation:<br />
-  -uf   &#8211;default-filenames<br />
-          generate filename from instance UID (default)<br />
-  +uf   &#8211;unique-filenames<br />
-          generate unique filenames<br />
-  -tn   &#8211;timenames<br />
-          generate filename from creation time<br />
-  -fe   &#8211;filename-extension  [e]xtension: string<br />
+<p>general:<br/>
+  -od   &#8211;output-directory  [d]irectory: string (default: &#8220;.&#8221;)<br/>
+          write received objects to existing directory d<br/>
+bit preserving mode:<br/>
+  -B    &#8211;normal<br/>
+          allow implicit format conversions (default)<br/>
+  +B    &#8211;bit-preserving<br/>
+          write data exactly as read<br/>
+output file format:<br/>
+  +F    &#8211;write-file<br/>
+          write file format (default)<br/>
+  -F    &#8211;write-dataset<br/>
+          write data set without file meta information<br/>
+output transfer syntax<br/>
+(not with &#8211;bit-preserving or compressed transmission):<br/>
+  +t=   &#8211;write-xfer-same<br/>
+          write with same TS as input (default)<br/>
+  +te   &#8211;write-xfer-little<br/>
+          write with explicit VR little endian TS<br/>
+  +tb   &#8211;write-xfer-big<br/>
+          write with explicit VR big endian TS<br/>
+  +ti   &#8211;write-xfer-implicit<br/>
+          write with implicit VR little endian TS<br/>
+  +td   &#8211;write-xfer-deflated<br/>
+          write with deflated explicit VR little endian TS<br/>
+post-1993 value representations (not with &#8211;bit-preserving):<br/>
+  +u    &#8211;enable-new-vr<br/>
+          enable support for new VRs (UN/UT) (default)<br/>
+  -u    &#8211;disable-new-vr<br/>
+          disable support for new VRs, convert to OB<br/>
+group length encoding (not with &#8211;bit-preserving):<br/>
+  +g=   &#8211;group-length-recalc<br/>
+          recalculate group lengths if present (default)<br/>
+  +g    &#8211;group-length-create<br/>
+          always write with group length elements<br/>
+  -g    &#8211;group-length-remove<br/>
+          always write without group length elements<br/>
+length encoding in sequences and items (not with &#8211;bit-preserving):<br/>
+  +e    &#8211;length-explicit<br/>
+          write with explicit lengths (default)<br/>
+  -e    &#8211;length-undefined<br/>
+          write with undefined lengths<br/>
+data set trailing padding<br/>
+(not with &#8211;write-dataset or &#8211;bit-preserving):<br/>
+  -p    &#8211;padding-off<br/>
+          no padding (default)<br/>
+  +p    &#8211;padding-create  [f]ile-pad [i]tem-pad: integer<br/>
+          align file on multiple of f bytes and items on<br/>
+          multiple of i bytes<br/>
+deflate compression level (only with &#8211;write-xfer-deflated/same):<br/>
+  +cl   &#8211;compression-level  [l]evel: integer (default: 6)<br/>
+          0=uncompressed, 1=fastest, 9=best compression<br/>
+sorting into subdirectories (not with &#8211;bit-preserving):<br/>
+  -ss   &#8211;sort-conc-studies  [p]refix: string<br/>
+          sort studies using prefix p and a timestamp<br/>
+  -su   &#8211;sort-on-study-uid  [p]refix: string<br/>
+          sort studies using prefix p and the Study Instance UID<br/>
+  -sp   &#8211;sort-on-patientname<br/>
+          sort studies using the Patient&#8217;s Name and a timestamp<br/>
+filename generation:<br/>
+  -uf   &#8211;default-filenames<br/>
+          generate filename from instance UID (default)<br/>
+  +uf   &#8211;unique-filenames<br/>
+          generate unique filenames<br/>
+  -tn   &#8211;timenames<br/>
+          generate filename from creation time<br/>
+  -fe   &#8211;filename-extension  [e]xtension: string<br/>
           append e to all filenames</p>
 <h3>event options</h3>
-<p>  -xcr  &#8211;exec-on-reception  [c]ommand: string<br />
-          execute command c after having received and processed<br />
-          one C-STORE-RQ message<br />
-  -xcs  &#8211;exec-on-eostudy  [c]ommand: string<br />
-          execute command c after having received and processed<br />
-          all C-STORE-RQ messages that belong to one study<br />
-  -rns  &#8211;rename-on-eostudy<br />
-          having received and processed all C-STORE-RQ messages<br />
-          that belong to one study, rename output files according<br />
-          to a certain pattern<br />
-  -tos  &#8211;eostudy-timeout  [t]imeout: integer<br />
-          specifies a timeout of t seconds for end-of-study<br />
-          determination<br />
-  -xs   &#8211;exec-sync<br />
+<p>  -xcr  &#8211;exec-on-reception  [c]ommand: string<br/>
+          execute command c after having received and processed<br/>
+          one C-STORE-RQ message<br/>
+  -xcs  &#8211;exec-on-eostudy  [c]ommand: string<br/>
+          execute command c after having received and processed<br/>
+          all C-STORE-RQ messages that belong to one study<br/>
+  -rns  &#8211;rename-on-eostudy<br/>
+          having received and processed all C-STORE-RQ messages<br/>
+          that belong to one study, rename output files according<br/>
+          to a certain pattern<br/>
+  -tos  &#8211;eostudy-timeout  [t]imeout: integer<br/>
+          specifies a timeout of t seconds for end-of-study<br/>
+          determination<br/>
+  -xs   &#8211;exec-sync<br/>
           execute command synchronously in foreground</p>
 <h3>transport layer security (TLS) options</h3>
-<p>transport protocol stack:<br />
-  -tls  &#8211;disable-tls<br />
-          use normal TCP/IP connection (default)<br />
-  +tls  &#8211;enable-tls  [p]rivate key file, [c]ertificate file: string<br />
-          use authenticated secure TLS connection<br />
-private key password (only with &#8211;enable-tls):<br />
-  +ps   &#8211;std-passwd<br />
-          prompt user to type password on stdin (default)<br />
-  +pw   &#8211;use-passwd  [p]assword: string<br />
-          use specified password<br />
-  -pw   &#8211;null-passwd<br />
-          use empty string as password<br />
-key and certificate file format:<br />
-  -pem  &#8211;pem-keys<br />
-          read keys and certificates as PEM file (default)<br />
-  -der  &#8211;der-keys<br />
-          read keys and certificates as DER file<br />
-certification authority:<br />
-  +cf   &#8211;add-cert-file  [c]ertificate filename: string<br />
-          add certificate file to list of certificates<br />
-  +cd   &#8211;add-cert-dir  [c]ertificate directory: string<br />
-          add certificates in d to list of certificates<br />
-ciphersuite:<br />
-  +cs   &#8211;cipher  [c]iphersuite name: string<br />
-          add ciphersuite to list of negotiated suites<br />
-  +dp   &#8211;dhparam  [f]ilename: string<br />
-          read DH parameters for DH/DSS ciphersuites<br />
-pseudo random generator:<br />
-  +rs   &#8211;seed  [f]ilename: string<br />
-          seed random generator with contents of f<br />
-  +ws   &#8211;write-seed<br />
-          write back modified seed (only with &#8211;seed)<br />
-  +wf   &#8211;write-seed-file  [f]ilename: string (only with &#8211;seed)<br />
-          write modified seed to file f<br />
-peer authentication:<br />
-  -rc   &#8211;require-peer-cert<br />
-          verify peer certificate, fail if absent (default)<br />
-  -vc   &#8211;verify-peer-cert<br />
-          verify peer certificate if present<br />
-  -ic   &#8211;ignore-peer-cert<br />
+<p>transport protocol stack:<br/>
+  -tls  &#8211;disable-tls<br/>
+          use normal TCP/IP connection (default)<br/>
+  +tls  &#8211;enable-tls  [p]rivate key file, [c]ertificate file: string<br/>
+          use authenticated secure TLS connection<br/>
+private key password (only with &#8211;enable-tls):<br/>
+  +ps   &#8211;std-passwd<br/>
+          prompt user to type password on stdin (default)<br/>
+  +pw   &#8211;use-passwd  [p]assword: string<br/>
+          use specified password<br/>
+  -pw   &#8211;null-passwd<br/>
+          use empty string as password<br/>
+key and certificate file format:<br/>
+  -pem  &#8211;pem-keys<br/>
+          read keys and certificates as PEM file (default)<br/>
+  -der  &#8211;der-keys<br/>
+          read keys and certificates as DER file<br/>
+certification authority:<br/>
+  +cf   &#8211;add-cert-file  [c]ertificate filename: string<br/>
+          add certificate file to list of certificates<br/>
+  +cd   &#8211;add-cert-dir  [c]ertificate directory: string<br/>
+          add certificates in d to list of certificates<br/>
+ciphersuite:<br/>
+  +cs   &#8211;cipher  [c]iphersuite name: string<br/>
+          add ciphersuite to list of negotiated suites<br/>
+  +dp   &#8211;dhparam  [f]ilename: string<br/>
+          read DH parameters for DH/DSS ciphersuites<br/>
+pseudo random generator:<br/>
+  +rs   &#8211;seed  [f]ilename: string<br/>
+          seed random generator with contents of f<br/>
+  +ws   &#8211;write-seed<br/>
+          write back modified seed (only with &#8211;seed)<br/>
+  +wf   &#8211;write-seed-file  [f]ilename: string (only with &#8211;seed)<br/>
+          write modified seed to file f<br/>
+peer authentication:<br/>
+  -rc   &#8211;require-peer-cert<br/>
+          verify peer certificate, fail if absent (default)<br/>
+  -vc   &#8211;verify-peer-cert<br/>
+          verify peer certificate if present<br/>
+  -ic   &#8211;ignore-peer-cert<br/>
           don&#8217;t verify peer certificate</p>
 <h2>NOTES</h2>
 <p> The semantic impacts of the above mentioned options is clear for the majority of options. Some particular options, however, are so specific that they need detailed descriptions which will be given in this passage. </p>
@@ -454,7 +454,7 @@ acr-nema stream tcp nowait root /usr/sbin/storescp -id +ac -od /tmp/storescp
 <p> The <code>storescp</code> utility will attempt to load DICOM data dictionaries specified in the <i>DCMDICTPATH</i> environment variable. By default, i.e. if the <i>DCMDICTPATH</i> environment variable is not set, the file <i>&lt;datadir&gt;/dicom.dic</i> will be loaded unless the dictionary is built into the application (default for Windows). </p>
 <p> The default behaviour should be preferred and the <i>DCMDICTPATH</i> environment variable only used when alternative data dictionaries are required. The <i>DCMDICTPATH</i> environment variable has the same format as the Unix shell <i>PATH</i> variable in that a colon (&#8216;:&#8217;) separates entries. On Windows systems, a semicolon (&#8216;;&#8217;) is used as a separator. The data dictionary code will attempt to load each file specified in the <i>DCMDICTPATH</i> environment variable. It is an error if no data dictionary can be loaded.</p>
 <h2>FILES</h2>
-<p> <i>&lt;docdir&gt;/asconfig.txt</i> &#8211; configuration file documentation<br />
+<p> <i>&lt;docdir&gt;/asconfig.txt</i> &#8211; configuration file documentation<br/>
  <i>&lt;etcdir&gt;/storescp.cfg</i> &#8211; example association negotiation profile</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-storescu/">storescu</a></code>(1)</p>

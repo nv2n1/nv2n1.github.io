@@ -10,7 +10,7 @@ description: "XkbGetKeyExplicitComponents – Obtain the explicit components (th
 <p>XkbGetKeyExplicitComponents &#8211; Obtain the explicit components (the explicit array) for a subset of the keys in a keyboard description </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Status XkbGetKeyExplicitComponents</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>unsigned int </code><i>first</i><code>,</code> <code>unsigned int </code><i>num</i><code>,</code> <code>XkbDescPtr </code><i>xkb</i><code>);</code><br />
+<dt> <code>Status XkbGetKeyExplicitComponents</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>unsigned int </code><i>first</i><code>,</code> <code>unsigned int </code><i>num</i><code>,</code> <code>XkbDescPtr </code><i>xkb</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
@@ -26,7 +26,7 @@ description: "XkbGetKeyExplicitComponents – Obtain the explicit components (th
 <h2>Description</h2>
 <p>Whenever a client remaps the keyboard using core protocol requests, Xkb examines the map to determine likely default values for the components that cannot be specified using the core protocol (see Core Keyboard Mapping to Xkb Keyboard Mapping Transformation for more information on how Xkb chooses the default values). </p>
 <p> DO THE FOUR PAGES OF &quot;CORE KEYBOARD MAPPING TO XKB KEYBOARD MAPPING TRANSFORMATION&quot; NEED TO BE ADDED HERE? </p>
-<p> This automatic remapping might replace definitions explicitly requested by an application, so the Xkb keyboard description defines an explicit components mask for each key. Any aspects of the automatic remapping listed in the explicit components mask for a key are not changed by the automatic keyboard mapping.<br />
+<p> This automatic remapping might replace definitions explicitly requested by an application, so the Xkb keyboard description defines an explicit components mask for each key. Any aspects of the automatic remapping listed in the explicit components mask for a key are not changed by the automatic keyboard mapping.<br/>
 &nbsp; The explicit components masks are held in the <i>explicit </i> field of the server map, which is an array indexed by keycode. Each entry in this array is a mask that is a bitwise inclusive OR of the values shown in Table 1. </p>
 <table>
 <tr VALIGN=top>

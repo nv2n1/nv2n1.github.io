@@ -113,7 +113,7 @@ description: "ldb – A light-weight database library"
 <dt>
 </dt><dd> &bull; <code>ldb_set_debug_stderr(3)</code> &#8211; set a debug handler for stderr output</dd></dl>
 <h2>AUTHOR</h2>
-<p> ldb was written by m[blue]<code>Andrew Tridgell</code>m[]<font SIZE="-2">[1]</font>. </p>
+<p> ldb was written by m[blue]<code>Andrew Tridgell</code>m[][1]. </p>
 <p> If you wish to report a problem or make a suggestion then please see the m[blue]<code><a rel="nofollow" href="http://ldb.samba.org/">http://ldb.samba.org/</a></code>m[] web site for current contact and maintainer information. </p>
 <p> ldb is released under the GNU Lesser General Public License version 2 or later. Please see the file COPYING for license details.</p>
 <h2>NOTES</h2>

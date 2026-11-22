@@ -13,13 +13,13 @@ description: "ubuntu-report – Report metrics from your system, install and upg
 <h2>Description</h2>
 <p>This tool will collect and report metrics from current hardware, partition and session information. This information can&#8217;t be used to identify a single machine and is presented before being sent to the server. </p>
 <h2>Options</h2>
-<p><code>-f</code>, <code>&#8211;force</code>[=false]<br />
+<p><code>-f</code>, <code>&#8211;force</code>[=false]<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;collect and send new report even if already reported </p>
-<p> <code>-h</code>, <code>&#8211;help</code>[=false]<br />
+<p> <code>-h</code>, <code>&#8211;help</code>[=false]<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;help for ubuntu-report </p>
-<p> <code>-u</code>, <code>&#8211;url</code>=&quot; &lt;<a rel="nofollow" href="https://metrics.ubuntu.com">https://metrics.ubuntu.com</a>&quot;&gt;<br />
+<p> <code>-u</code>, <code>&#8211;url</code>=&quot; &lt;<a rel="nofollow" href="https://metrics.ubuntu.com">https://metrics.ubuntu.com</a>&quot;&gt;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;server url to send report to. Leave empty for default. </p>
-<p> <code>-v</code>, <code>&#8211;verbose</code>[=0]<br />
+<p> <code>-v</code>, <code>&#8211;verbose</code>[=0]<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;issue INFO&nbsp;(-v)&nbsp;and DEBUG&nbsp;(-vv)&nbsp;output</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-ubuntu-report-interactive/">ubuntu-report-interactive</a>(3)</code>, <code><a href="/docs/linux/man/3-ubuntu-report-send/">ubuntu-report-send</a>(3)</code>, <code><a href="/docs/linux/man/3-ubuntu-report-show/">ubuntu-report-show</a>(3)</code> </p>

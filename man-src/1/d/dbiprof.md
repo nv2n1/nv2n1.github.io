@@ -81,7 +81,7 @@ dbiprof - command-line client for DBI::ProfileData
 
  Your report would only show execute queries, leaving out prepares, fetches, etc. 
 
- If the value given starts and ends with slashes (<tt>&quot;/&quot;</tt>) then it will be treated as a regular expression. For example, to only include <font SIZE="-1">SELECT</font> queries where key1 is the statement: 
+ If the value given starts and ends with slashes (<tt>&quot;/&quot;</tt>) then it will be treated as a regular expression. For example, to only include SELECT queries where key1 is the statement: 
 
  <pre>
   dbiprof --match key1=/^SELECT/
@@ -95,7 +95,7 @@ dbiprof - command-line client for DBI::ProfileData
   dbiprof --exclude key2=prepare
 </pre> 
 
- Like <tt>&quot;--match&quot;</tt>, If the value given starts and ends with slashes (<tt>&quot;/&quot;</tt>) then it will be treated as a regular expression. For example, to exclude <font SIZE="-1">UPDATE</font> queries where key1 is the statement: 
+ Like <tt>&quot;--match&quot;</tt>, If the value given starts and ends with slashes (<tt>&quot;/&quot;</tt>) then it will be treated as a regular expression. For example, to exclude UPDATE queries where key1 is the statement: 
 
  <pre>
   dbiprof --match key1=/^UPDATE/
@@ -123,4 +123,4 @@ dbiprof - command-line client for DBI::ProfileData
 
 <h2>SEE ALSO</h2>
 
- DBI::ProfileDumper, DBI::Profile, <font SIZE="-1">DBI</font>.
+ DBI::ProfileDumper, DBI::Profile, DBI.

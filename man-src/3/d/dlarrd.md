@@ -11,7 +11,7 @@ description: "dlarrd.f –"
 <p> dlarrd.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dlarrd</code> (RANGE, ORDER, N, VL, VU, IL, IU, GERS, RELTOL, D, E, E2, PIVMIN, NSPLIT, ISPLIT, M, W, WERR, WL, WU, IBLOCK, INDEXW, WORK, IWORK, INFO)<br />
+<p> subroutine <code>dlarrd</code> (RANGE, ORDER, N, VL, VU, IL, IU, GERS, RELTOL, D, E, E2, PIVMIN, NSPLIT, ISPLIT, M, W, WERR, WL, WU, IBLOCK, INDEXW, WORK, IWORK, INFO)<br/>
  <i></i><code>DLARRD</code> computes the eigenvalues of a symmetric tridiagonal matrix to suitable accuracy.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlarrd (characterRANGE, characterORDER, integerN, double precisionVL, double precisionVU, integerIL, integerIU, double precision, dimension( * )GERS, double precisionRELTOL, double precision, dimension( * )D, double precision, dimension( * )E, double precision, dimension( * )E2, double precisionPIVMIN, integerNSPLIT, integer, dimension( * )ISPLIT, integerM, double precision, dimension( * )W, double precision, dimension( * )WERR, double precisionWL, double precisionWU, integer, dimension( * )IBLOCK, integer, dimension( * )INDEXW, double precision, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>

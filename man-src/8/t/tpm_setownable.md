@@ -7,7 +7,7 @@ url: "/docs/linux/man/8-tpm_setownable/"
 description: "tpm_setownable – change whether the TPM allows tpm_takeownership operations"
 ---
 
-<p>TPM Management &#8211; tpm_setownable<br />
+<p>TPM Management &#8211; tpm_setownable<br/>
  </center></p>
 <h2>Name</h2>
 <p>tpm_setownable &#8211; change whether the TPM allows tpm_takeownership operations</p>

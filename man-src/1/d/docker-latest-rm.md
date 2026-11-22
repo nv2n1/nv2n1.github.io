@@ -14,13 +14,13 @@ description: "docker-rm – Remove one or more containers"
 <h2>DESCRIPTION</h2>
 <p> <code>docker rm</code> will remove one or more containers from the host node. The container name or ID can be used. This does not remove images. You cannot remove a running container unless you use the <code>-f</code> option. To see all containers on a host use the <code>docker ps -a</code> command. </p>
 <h2>OPTIONS</h2>
-<p> <code>&#8211;help</code><br />
+<p> <code>&#8211;help</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Print usage statement </p>
-<p> <code>-f</code>, <code>&#8211;force</code>=<i>true</i>|<i>false</i><br />
+<p> <code>-f</code>, <code>&#8211;force</code>=<i>true</i>|<i>false</i><br/>
 Force the removal of a running container&nbsp;<wbr>(uses SIGKILL). The default is&nbsp;<wbr><i>false</i>. </p>
-<p> <code>-l</code>, <code>&#8211;link</code>=<i>true</i>|<i>false</i><br />
+<p> <code>-l</code>, <code>&#8211;link</code>=<i>true</i>|<i>false</i><br/>
 Remove the specified link and not the underlying container. The default is&nbsp;<wbr><i>false</i>. </p>
-<p> <code>-v</code>, <code>&#8211;volumes</code>=<i>true</i>|<i>false</i><br />
+<p> <code>-v</code>, <code>&#8211;volumes</code>=<i>true</i>|<i>false</i><br/>
 Remove the volumes associated with the container. The default is&nbsp;<wbr><i>false</i>. </p>
 <h2>EXAMPLES</h2>
 <h2>Removing a container using its ID</h2>

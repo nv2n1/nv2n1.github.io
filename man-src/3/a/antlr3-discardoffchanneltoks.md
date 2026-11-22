@@ -13,37 +13,37 @@ description: "ANTLR3_COMMON_TOKEN_STREAM_struct –"
 <p>#include &lt;<a href="file:/usr/include/antlr3tokenstream.h">antlr3tokenstream.h</a>&gt;</p>
 <h3>Data Fields</h3>
 <p><code>ANTLR3_UINT32</code> <code>channel</code> </p>
-<p> <code>pANTLR3_LIST</code> <code>channelOverrides</code><br />
- <i>Override map of tokens. </i><br />
- <code>ANTLR3_BOOLEAN</code> <code>discardOffChannel</code><br />
- <i>If this flag is set to ANTLR3_TRUE, then tokens that the stream sees that are not in the channel that this stream is tuned to, are not tracked in the tokens table. </i><br />
- void(* <code>discardOffChannelToks</code> )(struct <code>ANTLR3_COMMON_TOKEN_STREAM_struct</code> *tokenStream, <code>ANTLR3_BOOLEAN</code> discard)<br />
- <i>Signal to discard off channel tokens from here on in. </i><br />
- <code>pANTLR3_LIST</code> <code>discardSet</code><br />
- <i>Discared set. </i><br />
- void(* <code>discardTokenType</code> )(struct <code>ANTLR3_COMMON_TOKEN_STREAM_struct</code> *tokenStream, <code>ANTLR3_INT32</code> ttype)<br />
- <i>Add a particular token type to the discard set. </i><br />
- void(* <code>free</code> )(struct <code>ANTLR3_COMMON_TOKEN_STREAM_struct</code> *tokenStream)<br />
- <i>Function that knows how to free an ANTLR3_COMMON_TOKEN_STREAM. </i><br />
- <code>pANTLR3_LIST</code>(* <code>getTokenRange</code> )(struct <code>ANTLR3_COMMON_TOKEN_STREAM_struct</code> *tokenStream, <code>ANTLR3_UINT32</code> start, <code>ANTLR3_UINT32</code> stop)<br />
- <i>Function that returns all the tokens between a start and a stop index. </i><br />
- <code>pANTLR3_VECTOR</code>(* <code>getTokens</code> )(struct <code>ANTLR3_COMMON_TOKEN_STREAM_struct</code> *tokenStream)<br />
- <i>Function that returns a pointer to the ANTLR3_LIST of all tokens in the stream (this causes the buffer to fill if we have not get any yet). </i><br />
- <code>pANTLR3_LIST</code>(* <code>getTokensList</code> )(struct <code>ANTLR3_COMMON_TOKEN_STREAM_struct</code> *tokenStream, <code>ANTLR3_UINT32</code> start, <code>ANTLR3_UINT32</code> stop, <code>pANTLR3_LIST</code> list)<br />
- <i>Function that returns all the tokens indicated by being a member of the supplied List. </i><br />
- <code>pANTLR3_LIST</code>(* <code>getTokensSet</code> )(struct <code>ANTLR3_COMMON_TOKEN_STREAM_struct</code> *tokenStream, <code>ANTLR3_UINT32</code> start, <code>ANTLR3_UINT32</code> stop, <code>pANTLR3_BITSET</code> types)<br />
- <i>Function that returns all the tokens indicated by the specified bitset, within a range of tokens. </i><br />
- <code>pANTLR3_LIST</code>(* <code>getTokensType</code> )(struct <code>ANTLR3_COMMON_TOKEN_STREAM_struct</code> *tokenStream, <code>ANTLR3_UINT32</code> start, <code>ANTLR3_UINT32</code> stop, <code>ANTLR3_UINT32</code> type)<br />
- <i>Function that returns all tokens of a certain type within a range. </i><br />
- <code>ANTLR3_INT32</code> <code>p</code><br />
- <i>The index into the tokens list of the current token (the next one that will be consumed. </i><br />
- void(* <code>setTokenTypeChannel</code> )(struct <code>ANTLR3_COMMON_TOKEN_STREAM_struct</code> *tokenStream, <code>ANTLR3_UINT32</code> ttype, <code>ANTLR3_UINT32</code> <code>channel</code>)<br />
- <i>A simple filter mechanism whereby you can tell this token stream to force all tokens of type ttype to be on channel. </i><br />
- void * <code>super</code><br />
- <i>Whatever is supplying the COMMON_TOKEN_STREAM needs a pointer to itself so that this can be accessed by any of the API functions which it implements. </i><br />
- <code>pANTLR3_VECTOR</code> <code>tokens</code><br />
- <i>Records every single token pulled from the source indexed by the token index. </i><br />
- <code>pANTLR3_TOKEN_STREAM</code> <code>tstream</code><br />
+<p> <code>pANTLR3_LIST</code> <code>channelOverrides</code><br/>
+ <i>Override map of tokens. </i><br/>
+ <code>ANTLR3_BOOLEAN</code> <code>discardOffChannel</code><br/>
+ <i>If this flag is set to ANTLR3_TRUE, then tokens that the stream sees that are not in the channel that this stream is tuned to, are not tracked in the tokens table. </i><br/>
+ void(* <code>discardOffChannelToks</code> )(struct <code>ANTLR3_COMMON_TOKEN_STREAM_struct</code> *tokenStream, <code>ANTLR3_BOOLEAN</code> discard)<br/>
+ <i>Signal to discard off channel tokens from here on in. </i><br/>
+ <code>pANTLR3_LIST</code> <code>discardSet</code><br/>
+ <i>Discared set. </i><br/>
+ void(* <code>discardTokenType</code> )(struct <code>ANTLR3_COMMON_TOKEN_STREAM_struct</code> *tokenStream, <code>ANTLR3_INT32</code> ttype)<br/>
+ <i>Add a particular token type to the discard set. </i><br/>
+ void(* <code>free</code> )(struct <code>ANTLR3_COMMON_TOKEN_STREAM_struct</code> *tokenStream)<br/>
+ <i>Function that knows how to free an ANTLR3_COMMON_TOKEN_STREAM. </i><br/>
+ <code>pANTLR3_LIST</code>(* <code>getTokenRange</code> )(struct <code>ANTLR3_COMMON_TOKEN_STREAM_struct</code> *tokenStream, <code>ANTLR3_UINT32</code> start, <code>ANTLR3_UINT32</code> stop)<br/>
+ <i>Function that returns all the tokens between a start and a stop index. </i><br/>
+ <code>pANTLR3_VECTOR</code>(* <code>getTokens</code> )(struct <code>ANTLR3_COMMON_TOKEN_STREAM_struct</code> *tokenStream)<br/>
+ <i>Function that returns a pointer to the ANTLR3_LIST of all tokens in the stream (this causes the buffer to fill if we have not get any yet). </i><br/>
+ <code>pANTLR3_LIST</code>(* <code>getTokensList</code> )(struct <code>ANTLR3_COMMON_TOKEN_STREAM_struct</code> *tokenStream, <code>ANTLR3_UINT32</code> start, <code>ANTLR3_UINT32</code> stop, <code>pANTLR3_LIST</code> list)<br/>
+ <i>Function that returns all the tokens indicated by being a member of the supplied List. </i><br/>
+ <code>pANTLR3_LIST</code>(* <code>getTokensSet</code> )(struct <code>ANTLR3_COMMON_TOKEN_STREAM_struct</code> *tokenStream, <code>ANTLR3_UINT32</code> start, <code>ANTLR3_UINT32</code> stop, <code>pANTLR3_BITSET</code> types)<br/>
+ <i>Function that returns all the tokens indicated by the specified bitset, within a range of tokens. </i><br/>
+ <code>pANTLR3_LIST</code>(* <code>getTokensType</code> )(struct <code>ANTLR3_COMMON_TOKEN_STREAM_struct</code> *tokenStream, <code>ANTLR3_UINT32</code> start, <code>ANTLR3_UINT32</code> stop, <code>ANTLR3_UINT32</code> type)<br/>
+ <i>Function that returns all tokens of a certain type within a range. </i><br/>
+ <code>ANTLR3_INT32</code> <code>p</code><br/>
+ <i>The index into the tokens list of the current token (the next one that will be consumed. </i><br/>
+ void(* <code>setTokenTypeChannel</code> )(struct <code>ANTLR3_COMMON_TOKEN_STREAM_struct</code> *tokenStream, <code>ANTLR3_UINT32</code> ttype, <code>ANTLR3_UINT32</code> <code>channel</code>)<br/>
+ <i>A simple filter mechanism whereby you can tell this token stream to force all tokens of type ttype to be on channel. </i><br/>
+ void * <code>super</code><br/>
+ <i>Whatever is supplying the COMMON_TOKEN_STREAM needs a pointer to itself so that this can be accessed by any of the API functions which it implements. </i><br/>
+ <code>pANTLR3_VECTOR</code> <code>tokens</code><br/>
+ <i>Records every single token pulled from the source indexed by the token index. </i><br/>
+ <code>pANTLR3_TOKEN_STREAM</code> <code>tstream</code><br/>
  <i>The ANTLR3_TOKEN_STREAM interface implementation, which also includes the intstream implementation. </i></p>
 <h2>Detailed Description</h2>
 <p>Common token stream is an implementation of ANTLR_TOKEN_STREAM for the default parsers and recognizers. </p>

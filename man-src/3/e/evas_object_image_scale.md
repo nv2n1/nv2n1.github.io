@@ -9,9 +9,9 @@ description: "Image Object Image Scaling Functions – Functions that change the
 
 <p>Image Object Image Scaling Functions &#8211; Functions that change the scaling quality of an image object. </p>
 <h3>Functions</h3>
-<p>EAPI void <code>evas_object_image_smooth_scale_set</code> (<code>Evas_Object</code> *obj, Evas_Bool smooth_scale)<br />
- <i>Sets whether to use of high-quality image scaling algorithm of the given image object. </i><br />
- EAPI Evas_Bool <code>evas_object_image_smooth_scale_get</code> (const <code>Evas_Object</code> *obj)<br />
+<p>EAPI void <code>evas_object_image_smooth_scale_set</code> (<code>Evas_Object</code> *obj, Evas_Bool smooth_scale)<br/>
+ <i>Sets whether to use of high-quality image scaling algorithm of the given image object. </i><br/>
+ EAPI Evas_Bool <code>evas_object_image_smooth_scale_get</code> (const <code>Evas_Object</code> *obj)<br/>
  <i>Retrieves whether the given image object is using use a high-quality image scaling algorithm. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that change the scaling quality of an image object.</p>
@@ -30,7 +30,7 @@ description: "Image Object Image Scaling Functions – Functions that change the
 <p> When enabled, a higher quality image scaling algorithm is used when scaling images to sizes other than the source image. This gives better results but is more computationally expensive. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>obj</i> The given image object.<br />
+<dd><i>obj</i> The given image object.<br/>
  <i>smooth_scale</i> Whether to use smooth scale or not.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Evas from the source code.</p>

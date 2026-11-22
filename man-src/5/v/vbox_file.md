@@ -11,11 +11,11 @@ description: "vbox_file – file format"
 <h2>Format</h2>
 <p>With version 2.0.0 of vbox the recorded files have a new header, that does not only include compression mode and connection information, but also information about the caller. </p>
 <p> The current headers hold this information: </p>
-<p> <code>time</code> of recording the message,<br />
- <code>compression</code> mode,<br />
- <code>CALLER</code> ID,<br />
- <code>name</code>,<br />
- <code>telephone</code> number,<br />
+<p> <code>time</code> of recording the message,<br/>
+ <code>compression</code> mode,<br/>
+ <code>CALLER</code> ID,<br/>
+ <code>name</code>,<br/>
+ <code>telephone</code> number,<br/>
  <code>city</code> </p>
 <p> With this information it&#8217;s possible for other programs to get the information about a message. The detailed format is described in the file libvbox.h as structure vaheader_t (this file is not included in debian gnu/linux; if you want to develop isdn programs you should get the source code).</p>
 <h2>See Also</h2>

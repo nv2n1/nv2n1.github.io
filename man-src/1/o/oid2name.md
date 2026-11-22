@@ -17,7 +17,7 @@ description: "oid2name – resolve OIDs and file nodes in a PostgreSQL data dire
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> The name &#8220;oid2name&#8221; is historical, and is actually rather misleading, since most of the time when you use it, you will really be concerned with tables&#8217; filenode numbers (which are the file names visible in the database directories). Be sure you understand the difference between table OIDs and table filenodes! </p>
 </dl>
 <p> oid2name connects to a target database and extracts OID, filenode, and/or table name information. You can also have it show database OIDs or tablespace OIDs.</p>

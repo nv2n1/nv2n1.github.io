@@ -10,7 +10,7 @@ description: "ldns_dane_create_tlsa_owner, ldns_dane_cert2rdf, ldns_dane_select_
 
 <p> ldns_dane_create_tlsa_owner, ldns_dane_cert2rdf, ldns_dane_select_certificate, ldns_dane_create_tlsa_rr </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ldns_status ldns_dane_create_tlsa_owner(ldns_rdf** tlsa_owner, const ldns_rdf* name, uint16_t port, ldns_dane_transport transport); </p>

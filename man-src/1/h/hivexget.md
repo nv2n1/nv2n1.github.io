@@ -30,7 +30,7 @@ hivexget - Get subkey from a Windows Registry binary &quot;hive&quot; file
  hivexget hivefile '\Path\To\SubKey'
 </pre> 
 
- <tt>&quot;hivefile&quot;</tt> is some Windows Registry binary hive, and <tt>&quot;\Path\To\Subkey&quot;</tt> is a path within that hive. <i></i><font SIZE="-1"><i>NB</i></font><i></i> the path is relative to the top of this hive, and is <i>not</i> the full path as you would use in Windows (eg. <tt>&quot;HKEY_LOCAL_MACHINE\SYSTEM&quot;</tt> is not a valid path). 
+ <tt>&quot;hivefile&quot;</tt> is some Windows Registry binary hive, and <tt>&quot;\Path\To\Subkey&quot;</tt> is a path within that hive. <i></i><i>NB</i><i></i> the path is relative to the top of this hive, and is <i>not</i> the full path as you would use in Windows (eg. <tt>&quot;HKEY_LOCAL_MACHINE\SYSTEM&quot;</tt> is not a valid path). 
 
  If the subkey exists, then the output lists all data pairs under this subkey, in a format similar to <tt>&quot;regedit&quot;</tt> in Windows. 
 
@@ -45,7 +45,7 @@ hivexget - Get subkey from a Windows Registry binary &quot;hive&quot; file
  The corresponding data item is printed ``raw'' (ie. no processing or escaping) except:
 <dl>
 <dt>1.
-</dt><dd> If it's a string we will convert it from Windows <font SIZE="-1">UTF-16</font> to <font SIZE="-1">UTF-8,</font> if this conversion is possible. The string is printed with a single trailing newline.
+</dt><dd> If it's a string we will convert it from Windows UTF-16 to UTF-8, if this conversion is possible. The string is printed with a single trailing newline.
 </dd><dt>2.
 </dt><dd> If it's a multiple-string value, each string is printed on a separate line.
 </dd><dt>3.
@@ -63,8 +63,8 @@ hivexget - Get subkey from a Windows Registry binary &quot;hive&quot; file
 
  Copyright (C) 2009 Red Hat Inc. 
 
- This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. 
+ This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. 
 
- This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE. </font> See the <font SIZE="-1">GNU</font> General Public License for more details. 
+ This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. 
 
- You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, <font SIZE="-1">MA 02110-1301 USA.</font>
+ You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.

@@ -362,7 +362,7 @@ GIT_COMMITTER_DATE
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  In addition, the date part is accepted in the following formats: <code>YYYY.MM.DD</code>, <code>MM/DD/YYYY</code> and <code>DD.MM.YYYY</code>. </dd>
 </dl>
 </dl>

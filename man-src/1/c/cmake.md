@@ -163,13 +163,13 @@ $ make install
 <dd> Prints each line as a separate JSON document. Each document is separated by a newline ( <code>
 </code> ). It is guaranteed that no newline characters will be present inside a JSON document. </dd>
 <p> JSON trace format: </p>
-<p>{<br />
-    &#8220;file&#8221; : &#8220;/full/path/to/the/CMake/file.txt&#8221;,<br />
-             &#8220;line&#8221; : 0,<br />
-             &#8220;cmd&#8221; : &#8220;add_executable&#8221;,<br />
-                     &#8220;args&#8221; : [ &#8220;foo&#8221;, &#8220;bar&#8221; ],<br />
-                              &#8220;time&#8221; : 1579512535.9687231,<br />
-                              &#8220;frame&#8221; : 2<br />
+<p>{<br/>
+    &#8220;file&#8221; : &#8220;/full/path/to/the/CMake/file.txt&#8221;,<br/>
+             &#8220;line&#8221; : 0,<br/>
+             &#8220;cmd&#8221; : &#8220;add_executable&#8221;,<br/>
+                     &#8220;args&#8221; : [ &#8220;foo&#8221;, &#8220;bar&#8221; ],<br/>
+                              &#8220;time&#8221; : 1579512535.9687231,<br/>
+                              &#8220;frame&#8221; : 2<br/>
 }</p>
 <p> The members are:</p>
 <dt><code>file</code></dt>
@@ -188,12 +188,12 @@ $ make install
 <dd> Stack frame depth of the function that was called. </dd>
 <p> Additionally, the first JSON document outputted contains the <code>version</code> key for the current major and minor version of the </p>
 <p> JSON trace format: </p>
-<p>{<br />
-    &#8220;version&#8221;:<br />
-    {<br />
-        &#8220;major&#8221; : 1,<br />
-            &#8220;minor&#8221; : 1<br />
-    }<br />
+<p>{<br/>
+    &#8220;version&#8221;:<br/>
+    {<br/>
+        &#8220;major&#8221; : 1,<br/>
+            &#8220;minor&#8221; : 1<br/>
+    }<br/>
 }</p>
 <p> The members are:</p>
 <dt><code>version</code></dt>

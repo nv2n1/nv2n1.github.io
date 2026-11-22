@@ -29,15 +29,15 @@ description: "SNMP – The Perl5 ‘SNMP’ Extension Module for the Net-SNMP SN
  print &quot;$SNMP::MIB{sysDescr}{description}
 &quot;;</pre>
 <h2>Description</h2>
-<p>Note: The perl <font SIZE="-1">SNMP 5.0</font> module which comes with net-snmp 5.0 and higher is different than previous versions in a number of ways. Most importantly, it behaves like a proper net-snmp application and calls init_snmp properly, which means it will read configuration files and use those defaults where appropriate automatically parse <font SIZE="-1">MIB</font> files, etc. This will likely affect your perl applications if you have, for instance, default values set up in your snmp.conf file (as the perl module will now make use of those defaults). The documentation, however, has sadly not been updated yet (aside from this note), nor is the read_config default usage implementation fully complete. </p>
-<p> The basic operations of the <font SIZE="-1">SNMP</font> protocol are provided by this module through an object oriented interface for modularity and ease of use. The primary class is SNMP::Session which encapsulates the persistent aspects of a connection between the management application and the managed agent. Internally the class is implemented as a blessed hash reference. This class supplies &#8216;get&#8217;, &#8216;getnext&#8217;, &#8216;set&#8217;, &#8216;fget&#8217;, and &#8216;fgetnext&#8217; method calls. The methods take a variety of input argument formats and support both synchronous and asynchronous operation through a polymorphic <font SIZE="-1">API </font>(i.e., method behaviour varies dependent on args passed &#8211; see below).</p>
+<p>Note: The perl SNMP 5.0 module which comes with net-snmp 5.0 and higher is different than previous versions in a number of ways. Most importantly, it behaves like a proper net-snmp application and calls init_snmp properly, which means it will read configuration files and use those defaults where appropriate automatically parse MIB files, etc. This will likely affect your perl applications if you have, for instance, default values set up in your snmp.conf file (as the perl module will now make use of those defaults). The documentation, however, has sadly not been updated yet (aside from this note), nor is the read_config default usage implementation fully complete. </p>
+<p> The basic operations of the SNMP protocol are provided by this module through an object oriented interface for modularity and ease of use. The primary class is SNMP::Session which encapsulates the persistent aspects of a connection between the management application and the managed agent. Internally the class is implemented as a blessed hash reference. This class supplies &#8216;get&#8217;, &#8216;getnext&#8217;, &#8216;set&#8217;, &#8216;fget&#8217;, and &#8216;fgetnext&#8217; method calls. The methods take a variety of input argument formats and support both synchronous and asynchronous operation through a polymorphic API (i.e., method behaviour varies dependent on args passed &#8211; see below).</p>
 <h2>SNMP::Session</h2>
 <p><tt>$sess</tt> = new SNMP::Session(DestHost =&gt; &#8216;host&#8217;, &#8230;) </p>
 <p> The following arguments may be passed to new as a hash.</p>
 <h3>Basic Options</h3>
 <dl COMPACT>
 <dt>DestHost</dt>
-<dd>Hostname or <font SIZE="-1">IP</font> address of the <font SIZE="-1">SNMP</font> agent you want to talk to. Specified in Net-SNMP formatted agent addresses. These addresses typically look like one of the following: </dd>
+<dd>Hostname or IP address of the SNMP agent you want to talk to. Specified in Net-SNMP formatted agent addresses. These addresses typically look like one of the following: </dd>
 <pre> localhost
  tcp:localhost
  tls:localhost
@@ -46,7 +46,7 @@ description: "SNMP – The Perl5 ‘SNMP’ Extension Module for the Net-SNMP SN
  unix:/some/path/to/file/socket</pre>
 <p>Defaults to &#8216;localhost&#8217;.</p>
 <dt>Version</dt>
-<dd><font SIZE="-1">SNMP</font> version to use. </dd>
+<dd>SNMP version to use. </dd>
 <p> The default is taken from library configuration &#8211; probably 3 [1, 2 (same as 2c), 2c, 3].</p>
 <dt>Timeout</dt>
 <dd>The number of micro-seconds to wait before resending a request. </dd>
@@ -55,7 +55,7 @@ description: "SNMP – The Perl5 ‘SNMP’ Extension Module for the Net-SNMP SN
 <dd>The number of times to retry a request. </dd>
 <p> The default is &#8216;5&#8217;</p>
 <dt>RetryNoSuch</dt>
-<dd>If enabled <font SIZE="-1">NOSUCH</font> errors in &#8216;get&#8217; pdus will be repaired, removing the varbind in error, and resent &#8211; undef will be returned for all <font SIZE="-1">NOSUCH</font> varbinds, when set to &#8216;0&#8217; this feature is disabled and the entire get request will fail on any <font SIZE="-1">NOSUCH</font> error (applies to v1 only) </dd>
+<dd>If enabled NOSUCH errors in &#8216;get&#8217; pdus will be repaired, removing the varbind in error, and resent &#8211; undef will be returned for all NOSUCH varbinds, when set to &#8216;0&#8217; this feature is disabled and the entire get request will fail on any NOSUCH error (applies to v1 only) </dd>
 <p> The default is &#8216;0&#8217;.</dl>
 <h3>SNMPv3/TLS Options</h3>
 <dl COMPACT>
@@ -64,35 +64,35 @@ description: "SNMP – The Perl5 ‘SNMP’ Extension Module for the Net-SNMP SN
 <dt>TheirIdentity</dt>
 <dd>The remote server&#8217;s identity to connect to, specified as eihter a fingerprint or a file name. Either this must be specified, or the hostname below along with a trust anchor.</dd>
 <dt>TheirHostname</dt>
-<dd>The remote server&#8217;s hostname that is expected. If their certificate was signed by a <font SIZE="-1">CA</font> then their hostname presented in the certificate must match this value or the connection fails to be established (to avoid man-in-the-middle attacks).</dd>
+<dd>The remote server&#8217;s hostname that is expected. If their certificate was signed by a CA then their hostname presented in the certificate must match this value or the connection fails to be established (to avoid man-in-the-middle attacks).</dd>
 <dt>TrustCert</dt>
-<dd>A trusted certificate to use a trust anchor (like a <font SIZE="-1">CA</font> certificate) for verifying a remote server&#8217;s certificate. If a <font SIZE="-1">CA</font> certificate is used to validate a certificate then the TheirHostname parameter must also be specified to ensure their presente hostname in the certificate matches.</dd></dl>
+<dd>A trusted certificate to use a trust anchor (like a CA certificate) for verifying a remote server&#8217;s certificate. If a CA certificate is used to validate a certificate then the TheirHostname parameter must also be specified to ensure their presente hostname in the certificate matches.</dd></dl>
 <h3>SNMPv3/USM Options</h3>
 <dl COMPACT>
 <dt>SecName</dt>
-<dd>The SNMPv3 security name to use (most for SNMPv3 with <font SIZE="-1">USM</font>). </dd>
+<dd>The SNMPv3 security name to use (most for SNMPv3 with USM). </dd>
 <p> The default is &#8216;initial&#8217;.</p>
 <dt>SecLevel</dt>
 <dd>The SNMPv3 security level to use [noAuthNoPriv, authNoPriv, authPriv] (v3) </dd>
 <p> The default is &#8216;noAuthNoPriv&#8217;.</p>
 <dt>SecEngineId</dt>
-<dd>The SNMPv3 security engineID to use (if the snmpv3 security model needs it; for example <font SIZE="-1">USM</font>). </dd>
+<dd>The SNMPv3 security engineID to use (if the snmpv3 security model needs it; for example USM). </dd>
 <p> The default is &lt;none&gt;, security engineID and it will be probed if not supplied (v3)</p>
 <dt>ContextEngineId</dt>
 <dd>The SNMPv3 context engineID to use. </dd>
-<p> The default is the &lt;none&gt; and will be set either to the SecEngineId value if set or discovered or will be discovered in other ways if using <font SIZE="-1">TLS </font>(<font SIZE="-1">RFC5343</font> based discovery).</p>
+<p> The default is the &lt;none&gt; and will be set either to the SecEngineId value if set or discovered or will be discovered in other ways if using TLS (RFC5343 based discovery).</p>
 <dt>Context</dt>
 <dd>The SNMPv3 context name to use. </dd>
 <p> The default is &#8221; (an empty string)</p>
 <dt>AuthProto</dt>
-<dd>The SNMPv3/USM authentication protocol to use [<font SIZE="-1">MD5, SHA</font>]. </dd>
-<p> The default is &#8216;<font SIZE="-1">MD5</font>&#8216;.</p>
+<dd>The SNMPv3/USM authentication protocol to use [MD5, SHA]. </dd>
+<p> The default is &#8216;MD5&#8216;.</p>
 <dt>AuthPass</dt>
 <dd>The SNMPv3/USM authentication passphrase to use. </dd>
 <p> default &lt;none&gt;, authentication passphrase</p>
 <dt>PrivProto</dt>
-<dd>The SNMPv3/USM privacy protocol to use [<font SIZE="-1">DES, AES</font>]. </dd>
-<p> The default is &#8216;<font SIZE="-1">DES</font>&#8216;.</p>
+<dd>The SNMPv3/USM privacy protocol to use [DES, AES]. </dd>
+<p> The default is &#8216;DES&#8216;.</p>
 <dt>PrivPass</dt>
 <dd>The SNMPv3/USM privacy passphrase to use. </dd>
 <p> default &lt;none&gt;, privacy passphrase (v3)</p>
@@ -103,7 +103,7 @@ description: "SNMP – The Perl5 ‘SNMP’ Extension Module for the Net-SNMP SN
 </dd><dt>AuthLocalizedKey</dt>
 <dd>
 </dd><dt>PrivLocalizedKey</dt>
-<dd>Directly specified SNMPv3 <font SIZE="-1">USM</font> user keys (used if you want to specify the keys instead of deriving them from a password as above).</dd></dl>
+<dd>Directly specified SNMPv3 USM user keys (used if you want to specify the keys instead of deriving them from a password as above).</dd></dl>
 <h3>SNMPv1 and SNMPv2c Options</h3>
 <dl COMPACT>
 <dt>Community</dt>
@@ -114,7 +114,7 @@ description: "SNMP – The Perl5 ‘SNMP’ Extension Module for the Net-SNMP SN
 <dt>VarFormats</dt>
 <dd>default &#8216;undef&#8217;, used by &#8216;fget[next]&#8217;, holds an hash reference of output value formatters, (e.g., {&lt;obj&gt; =&gt; &lt;sub-ref&gt;, &#8230; }, &lt;obj&gt; must match the &lt;obj&gt; and format used in the get operation. A special &lt;obj&gt;, &#8216;*&#8217;, may be used to apply all &lt;obj&gt;s, the supplied sub is called to translate the value to a new format. The sub is called passing the Varbind as the arg</dd>
 <dt>TypeFormats</dt>
-<dd>default &#8216;undef&#8217;, used by &#8216;fget[next]&#8217;, holds an hash reference of output value formatters, (e.g., {&lt;type&gt; =&gt; &lt;sub-ref&gt;, &#8230; }, the supplied sub is called to translate the value to a new format, unless a VarFormat mathces first (e.g., <tt>$sess</tt>-&gt;{TypeFormats}{<font SIZE="-1">INTEGER</font>} = \&amp;<i>mapEnum()</i>; although this can be done more efficiently by enabling <tt>$SNMP::use_enums</tt> or session creation param &#8216;UseEnums&#8217;)</dd>
+<dd>default &#8216;undef&#8217;, used by &#8216;fget[next]&#8217;, holds an hash reference of output value formatters, (e.g., {&lt;type&gt; =&gt; &lt;sub-ref&gt;, &#8230; }, the supplied sub is called to translate the value to a new format, unless a VarFormat mathces first (e.g., <tt>$sess</tt>-&gt;{TypeFormats}{INTEGER} = \&amp;<i>mapEnum()</i>; although this can be done more efficiently by enabling <tt>$SNMP::use_enums</tt> or session creation param &#8216;UseEnums&#8217;)</dd>
 <dt>UseLongNames</dt>
 <dd>defaults to the value of SNMP::use_long_names at time of session creation. set to non-zero to have &lt;tags&gt; for &#8216;getnext&#8217; methods generated preferring longer Mib name convention (e.g., system.sysDescr vs just sysDescr)</dd>
 <dt>UseSprintValue</dt>
@@ -122,11 +122,11 @@ description: "SNMP – The Perl5 ‘SNMP’ Extension Module for the Net-SNMP SN
 <dt>UseEnums</dt>
 <dd>defaults to the value of SNMP::use_enums at time of session creation. set to non-zero to have integer return values converted to enumeration identifiers if possible, these values will also be acceptable when supplied to &#8216;set&#8217; operations</dd>
 <dt>UseNumeric</dt>
-<dd>defaults to the value of SNMP::use_numeric at time of session creation. set to non-zero to have &lt;tags&gt; for get methods returned as numeric <font SIZE="-1">OID</font>&#8216;s rather than descriptions. UseLongNames will be set so that the full <font SIZE="-1">OID</font> is returned to the caller.</dd>
+<dd>defaults to the value of SNMP::use_numeric at time of session creation. set to non-zero to have &lt;tags&gt; for get methods returned as numeric OID&#8216;s rather than descriptions. UseLongNames will be set so that the full OID is returned to the caller.</dd>
 <dt>BestGuess</dt>
 <dd>defaults to the value of SNMP::best_guess at time of session creation. this setting controls how &lt;tags&gt; are parsed. setting to 0 causes a regular lookup. setting to 1 causes a regular expression match (defined as -Ib in snmpcmd) and setting to 2 causes a random access lookup (defined as -IR in snmpcmd).</dd>
 <dt>NonIncreasing</dt>
-<dd>defaults to the value of SNMP::non_increasing at time of session creation. this setting controls if a non-increasing <font SIZE="-1">OID</font> during bulkwalk will causes an error. setting to 0 causes the default behaviour (which may, in very badly performing agents, result in a never-ending loop). setting to 1 causes an error (<font SIZE="-1">OID</font> not increasing) when this error occur.</dd>
+<dd>defaults to the value of SNMP::non_increasing at time of session creation. this setting controls if a non-increasing OID during bulkwalk will causes an error. setting to 0 causes the default behaviour (which may, in very badly performing agents, result in a never-ending loop). setting to 1 causes an error (OID not increasing) when this error occur.</dd>
 <dt>ErrorStr</dt>
 <dd>read-only, holds the error message assoc. w/ last request</dd>
 <dt>ErrorNum</dt>
@@ -144,24 +144,24 @@ description: "SNMP – The Perl5 ‘SNMP’ Extension Module for the Net-SNMP SN
 <h3>SNMP::Session methods</h3>
 <dl COMPACT>
 <dt>$sess-&gt;update(&lt;fields&gt;)</dt>
-<dd>Updates the SNMP::Session object with the values fields passed in as a hash list (similar to new(&lt;fields&gt;)) <code>(</code><font SIZE="-1"><code>WARNING</code></font><code>! not fully implemented)</code></dd>
+<dd>Updates the SNMP::Session object with the values fields passed in as a hash list (similar to new(&lt;fields&gt;)) <code>(</code><code>WARNING</code><code>! not fully implemented)</code></dd>
 <dt>$sess-&gt;get(&lt;vars&gt; [,&lt;callback&gt;])</dt>
-<dd>do <font SIZE="-1">SNMP GET,</font> multiple &lt;vars&gt; formats accepted. for syncronous operation &lt;vars&gt; will be updated with value(s) and type(s) and will also return retrieved value(s). If &lt;callback&gt; supplied method will operate asynchronously</dd>
+<dd>do SNMP GET, multiple &lt;vars&gt; formats accepted. for syncronous operation &lt;vars&gt; will be updated with value(s) and type(s) and will also return retrieved value(s). If &lt;callback&gt; supplied method will operate asynchronously</dd>
 <dt>$sess-&gt;fget(&lt;vars&gt; [,&lt;callback&gt;])</dt>
-<dd>do <font SIZE="-1">SNMP GET</font> like &#8216;get&#8217; and format the values according the handlers specified in <tt>$sess</tt>-&gt;{VarFormats} and <tt>$sess</tt>-&gt;{TypeFormats}</dd>
+<dd>do SNMP GET like &#8216;get&#8217; and format the values according the handlers specified in <tt>$sess</tt>-&gt;{VarFormats} and <tt>$sess</tt>-&gt;{TypeFormats}</dd>
 <dt>$sess-&gt;getnext(&lt;vars&gt; [,&lt;callback&gt;])</dt>
-<dd>do <font SIZE="-1">SNMP GETNEXT,</font> multiple &lt;vars&gt; formats accepted, returns retrieved value(s), &lt;vars&gt; passed as arguments are updated to indicate next lexicographical &lt;obj&gt;,&lt;iid&gt;,&lt;val&gt;, and &lt;type&gt; </dd>
+<dd>do SNMP GETNEXT, multiple &lt;vars&gt; formats accepted, returns retrieved value(s), &lt;vars&gt; passed as arguments are updated to indicate next lexicographical &lt;obj&gt;,&lt;iid&gt;,&lt;val&gt;, and &lt;type&gt; </dd>
 <p> Note: simple string &lt;vars&gt;,(e.g., &#8216;sysDescr.0&#8217;) form is not updated. If &lt;callback&gt; supplied method will operate asynchronously</p>
 <dt>$sess-&gt;fgetnext(&lt;vars&gt; [,&lt;callback&gt;])</dt>
-<dd>do <font SIZE="-1">SNMP GETNEXT</font> like getnext and format the values according the handlers specified in <tt>$sess</tt>-&gt;{VarFormats} and <tt>$sess</tt>-&gt;{TypeFormats}</dd>
+<dd>do SNMP GETNEXT like getnext and format the values according the handlers specified in <tt>$sess</tt>-&gt;{VarFormats} and <tt>$sess</tt>-&gt;{TypeFormats}</dd>
 <dt>$sess-&gt;set(&lt;vars&gt; [,&lt;callback&gt;])</dt>
-<dd>do <font SIZE="-1">SNMP SET,</font> multiple &lt;vars&gt; formats accepted. the value field in all &lt;vars&gt; formats must be in a canonical format (i.e., well known format) to ensure unambiguous translation to <font SIZE="-1">SNMP MIB</font> data value (see discussion of canonical value format &lt;vars&gt; description section), returns snmp_errno. If &lt;callback&gt; supplied method will operate asynchronously</dd>
+<dd>do SNMP SET, multiple &lt;vars&gt; formats accepted. the value field in all &lt;vars&gt; formats must be in a canonical format (i.e., well known format) to ensure unambiguous translation to SNMP MIB data value (see discussion of canonical value format &lt;vars&gt; description section), returns snmp_errno. If &lt;callback&gt; supplied method will operate asynchronously</dd>
 <dt>$sess-&gt;getbulk(&lt;non-repeaters&gt;, &lt;max-repeaters&gt;, &lt;vars&gt;)</dt>
-<dd>do an <font SIZE="-1">SNMP GETBULK,</font> from the list of Varbinds, the single next lexico instance is fetched for the first n Varbinds as defined by &lt;non-repeaters&gt;. For remaining Varbinds, the m lexico instances are retrieved each of the remaining Varbinds, where m is &lt;max-repeaters&gt;.</dd>
+<dd>do an SNMP GETBULK, from the list of Varbinds, the single next lexico instance is fetched for the first n Varbinds as defined by &lt;non-repeaters&gt;. For remaining Varbinds, the m lexico instances are retrieved each of the remaining Varbinds, where m is &lt;max-repeaters&gt;.</dd>
 <dt>$sess-&gt;bulkwalk(&lt;non-repeaters&gt;, &lt;max-repeaters&gt;, &lt;vars&gt; [,&lt;callback&gt;])</dt>
-<dd>Do a &#8220;bulkwalk&#8221; of the list of Varbinds. This is done by sending a <font SIZE="-1">GETBULK</font> request (see <i>getbulk()</i> above) for the Varbinds. For each requested variable, the response is examined to see if the next lexico instance has left the requested sub-tree. Any further instances returned for this variable are ignored, and the walk for that sub-tree is considered complete. </dd>
+<dd>Do a &#8220;bulkwalk&#8221; of the list of Varbinds. This is done by sending a GETBULK request (see <i>getbulk()</i> above) for the Varbinds. For each requested variable, the response is examined to see if the next lexico instance has left the requested sub-tree. Any further instances returned for this variable are ignored, and the walk for that sub-tree is considered complete. </dd>
 <p> If any sub-trees were not completed when the end of the responses is reached, another request is composed, consisting of the remaining variables. This process is repeated until all sub-trees have been completed, or too many packets have been exchanged (to avoid loops). </p>
-<p> The <i>bulkwalk()</i> method returns an array containing an array of Varbinds, one for each requested variable, in the order of the variable requests. Upon error, <i>bulkwalk()</i> returns undef and sets <tt>$sess</tt>-&gt;ErrorStr and <tt>$sess</tt>-&gt;ErrorNum. If a callback is supplied, <i>bulkwalk()</i> returns the <font SIZE="-1">SNMP</font> request id, and returns immediately. The callback will be called with the supplied argument list and the returned variables list. </p>
+<p> The <i>bulkwalk()</i> method returns an array containing an array of Varbinds, one for each requested variable, in the order of the variable requests. Upon error, <i>bulkwalk()</i> returns undef and sets <tt>$sess</tt>-&gt;ErrorStr and <tt>$sess</tt>-&gt;ErrorNum. If a callback is supplied, <i>bulkwalk()</i> returns the SNMP request id, and returns immediately. The callback will be called with the supplied argument list and the returned variables list. </p>
 <p> Note: Because the client must &#8220;discover&#8221; that the tree is complete by comparing the returned variables with those that were requested, there is a potential &#8220;gotcha&#8221; when using the max-repeaters value. Consider the following code to print a list of interfaces and byte counts: </p>
 <pre> $numInts = $sess-&gt;get('ifNumber.0');
  ($desc, $in, $out) = $sess-&gt;bulkwalk(0, $numInts,
@@ -172,8 +172,8 @@ description: "SNMP – The Perl5 ‘SNMP’ Extension Module for the Net-SNMP SN
  $$desc[$i]-&gt;val, $$in[$i]-&gt;val, $$out[$i]-&gt;val;
  }</pre>
 <p>This code will produce *two* requests to the agent &#8212; the first to get the interface values, and the second to discover that all the information was in the first packet. To get around this, use &#8216;$numInts + 1&#8217; for the max_repeaters value. This asks the agent to include one additional (unrelated) variable that signals the end of the sub-tree, allowing <i>bulkwalk()</i> to determine that the request is complete.</p>
-<dt>$results = $sess-&gt;gettable(&lt;<font SIZE="-1">TABLE OID</font>&gt;, &lt;OPTIONgt)</dt>
-<dd>This will retrieve an entire table of data and return a hash reference to that data. The returned hash reference will have indexes of the <font SIZE="-1">OID</font> suffixes for the index data as the key. The value for each entry will be another hash containing the data for a given row. The keys to that hash will be the column names, and the values will be the data. </dd>
+<dt>$results = $sess-&gt;gettable(&lt;TABLE OID&gt;, &lt;OPTIONgt)</dt>
+<dd>This will retrieve an entire table of data and return a hash reference to that data. The returned hash reference will have indexes of the OID suffixes for the index data as the key. The value for each entry will be another hash containing the data for a given row. The keys to that hash will be the column names, and the values will be the data. </dd>
 <p> Example: </p>
 <pre> #!/usr/bin/perl
  use SNMP;
@@ -196,24 +196,24 @@ description: "SNMP – The Perl5 ‘SNMP’ Extension Module for the Net-SNMP SN
  },
  # ...
  };</pre>
-<p>By default, it will try to do as optimized retrieval as possible. It&#8217;ll request multiple columns at once, and use <font SIZE="-1">GETBULK</font> if possible. A few options may be specified by passing in an <i></i><font SIZE="-1"><i>OPTIONS</i></font><i></i> hash containing various parameters:</p>
+<p>By default, it will try to do as optimized retrieval as possible. It&#8217;ll request multiple columns at once, and use GETBULK if possible. A few options may be specified by passing in an <i></i><i>OPTIONS</i><i></i> hash containing various parameters:</p>
 <dl COMPACT>
 <dd>
 </dd><dl COMPACT>
 <dt>noindexes =&gt; 1</dt>
 <dd>Instructs the code not to parse the indexes and place the results in the second hash. If you don&#8217;t need the index data, this will be faster.</dd>
 <dt>columns =&gt; [ colname1, &#8230; ]</dt>
-<dd>This specifies which columns to collect. By default, it will try to collect all the columns defined in the <font SIZE="-1">MIB</font> table.</dd>
-<dt>repeat =&gt; <i></i><font SIZE="-1"><i>COUNT</i></font><i></i></dt>
-<dd>Specifies a <font SIZE="-1">GETBULK</font> repeat <i></i><font SIZE="-1"><i>COUNT</i></font><i></i>. <font SIZE="-1">IE,</font> it will request this many varbinds back per column when using the <font SIZE="-1">GETBULK</font> operation. Shortening this will mean smaller packets which may help going through some systems. By default, this value is calculated and attempts to guess at what will fit all the results into 1000 bytes. This calculation is fairly safe, hopefully, but you can either raise or lower the number using this option if desired. In lossy networks, you want to make sure that the packets don&#8217;t get fragmented and lowering this value is one way to help that.</dd>
+<dd>This specifies which columns to collect. By default, it will try to collect all the columns defined in the MIB table.</dd>
+<dt>repeat =&gt; <i></i><i>COUNT</i><i></i></dt>
+<dd>Specifies a GETBULK repeat <i></i><i>COUNT</i><i></i>. IE, it will request this many varbinds back per column when using the GETBULK operation. Shortening this will mean smaller packets which may help going through some systems. By default, this value is calculated and attempts to guess at what will fit all the results into 1000 bytes. This calculation is fairly safe, hopefully, but you can either raise or lower the number using this option if desired. In lossy networks, you want to make sure that the packets don&#8217;t get fragmented and lowering this value is one way to help that.</dd>
 <dt>nogetbulk =&gt; 1</dt>
-<dd>Force the use of <font SIZE="-1">GETNEXT</font> rather than <font SIZE="-1">GETBULK. </font>(always true for SNMPv1, as it doesn&#8217;t have <font SIZE="-1">GETBULK</font> anyway). Some agents are great implementers of <font SIZE="-1">GETBULK</font> and this allows you to force the use of <font SIZE="-1">GETNEXT</font> operations instead.</dd>
+<dd>Force the use of GETNEXT rather than GETBULK. (always true for SNMPv1, as it doesn&#8217;t have GETBULK anyway). Some agents are great implementers of GETBULK and this allows you to force the use of GETNEXT operations instead.</dd>
 <dt>callback =&gt; \&amp;subroutine</dt>
 <dd>
 </dd><dt>callback =&gt; [\&amp;subroutine, optarg1, optarg2, &#8230;]</dt>
 <dd>If a callback is specified, gettable will return quickly without returning results. When the results are finally retrieved the callback subroutine will be called (see the other sections defining callback behaviour and how to make use of SNMP::MainLoop which is required fro this to work). An additional argument of the normal hash result will be added to the callback subroutine arguments. </dd>
 <p> Note 1: internally, the gettable function uses it&#8217;s own callbacks which are passed to getnext/getbulk as appropriate. </p>
-<p> Note 2: callback support is only available in the <font SIZE="-1">SNMP</font> module version 5.04 and above. To test for this in code intending to support both versions prior to 5.04 and 5.04 and up, the following should work: </p>
+<p> Note 2: callback support is only available in the SNMP module version 5.04 and above. To test for this in code intending to support both versions prior to 5.04 and 5.04 and up, the following should work: </p>
 <pre> if ($response = $sess-&gt;gettable('ifTable', callback =&gt; \&amp;my_sub)) {
  # got a response, gettable doesn't support callback
  my_sub($response);
@@ -249,9 +249,9 @@ description: "SNMP – The Perl5 ‘SNMP’ Extension Module for the Net-SNMP SN
 <p>&lt;vars&gt; may be one of the following forms:</p>
 <dl COMPACT>
 <dt>SNMP::VarList</dt>
-<dd>represents an array of <font SIZE="-1">MIB</font> objects to get or set, implemented as a blessed reference to an array of SNMP::Varbinds, (e.g., [&lt;varbind1&gt;, &lt;varbind2&gt;, &#8230;])</dd>
+<dd>represents an array of MIB objects to get or set, implemented as a blessed reference to an array of SNMP::Varbinds, (e.g., [&lt;varbind1&gt;, &lt;varbind2&gt;, &#8230;])</dd>
 <dt>SNMP::Varbind</dt>
-<dd>represents a single <font SIZE="-1">MIB</font> object to get or set, implemented as a blessed reference to a 4 element array; [&lt;obj&gt;, &lt;iid&gt;, &lt;val&gt;, &lt;type&gt;].</dd>
+<dd>represents a single MIB object to get or set, implemented as a blessed reference to a 4 element array; [&lt;obj&gt;, &lt;iid&gt;, &lt;val&gt;, &lt;type&gt;].</dd>
 <dl COMPACT>
 <dd>
 </dd><dl COMPACT>
@@ -265,46 +265,46 @@ description: "SNMP – The Perl5 ‘SNMP’ Extension Module for the Net-SNMP SN
 <dt>2)</dt>
 <dd>fully qualified identifier (e.g., &#8216;.iso.org.dod.internet.mgmt.mib-2.system.sysDescr&#8217;)</dd>
 <dt>3)</dt>
-<dd>fully qualified, dotted-decimal, numeric <font SIZE="-1">OID </font>(e.g., &#8216;.1.3.6.1.2.1.1.1&#8217;)</dd></dl>
+<dd>fully qualified, dotted-decimal, numeric OID (e.g., &#8216;.1.3.6.1.2.1.1.1&#8217;)</dd></dl>
 </dl>
 <dl COMPACT>
 <dd></dd></dl>
 <dt>&lt;iid&gt;</dt>
-<dd>the dotted-decimal, instance identifier. for scalar <font SIZE="-1">MIB</font> objects use &#8216;0&#8217;</dd>
+<dd>the dotted-decimal, instance identifier. for scalar MIB objects use &#8216;0&#8217;</dd>
 <dt>&lt;val&gt;</dt>
-<dd>the <font SIZE="-1">SNMP</font> data value retrieved from or being set to the agents <font SIZE="-1">MIB.</font> for (f)get(next) operations &lt;val&gt; may have a variety of formats as determined by session and package settings. However for set operations the &lt;val&gt; format must be canonical to ensure unambiguous translation. The canonical forms are as follows:</dd>
+<dd>the SNMP data value retrieved from or being set to the agents MIB. for (f)get(next) operations &lt;val&gt; may have a variety of formats as determined by session and package settings. However for set operations the &lt;val&gt; format must be canonical to ensure unambiguous translation. The canonical forms are as follows:</dd>
 <dl COMPACT>
 <dd>
 </dd><dl COMPACT>
-<dt><font SIZE="-1">OBJECTID</font></dt>
+<dt>OBJECTID</dt>
 <dd>dotted-decimal (e.g., .1.3.6.1.2.1.1.1)</dd>
-<dt><font SIZE="-1">OCTETSTR</font></dt>
+<dt>OCTETSTR</dt>
 <dd>perl scalar containing octets</dd>
-<dt><font SIZE="-1">INTEGER</font></dt>
+<dt>INTEGER</dt>
 <dd>decimal signed integer (or enum)</dd>
-<dt><font SIZE="-1">NETADDR</font></dt>
+<dt>NETADDR</dt>
 <dd>dotted-decimal</dd>
-<dt><font SIZE="-1">IPADDR</font></dt>
+<dt>IPADDR</dt>
 <dd>dotted-decimal</dd>
-<dt><font SIZE="-1">COUNTER</font></dt>
+<dt>COUNTER</dt>
 <dd>decimal unsigned integer</dd>
-<dt><font SIZE="-1">COUNTER64</font></dt>
+<dt>COUNTER64</dt>
 <dd>decimal unsigned integer</dd>
-<dt><font SIZE="-1">GAUGE</font></dt>
+<dt>GAUGE</dt>
 <dd>decimal unsigned integer</dd>
-<dt><font SIZE="-1">UINTEGER</font></dt>
+<dt>UINTEGER</dt>
 <dd>decimal unsigned integer</dd>
-<dt><font SIZE="-1">TICKS</font></dt>
+<dt>TICKS</dt>
 <dd>decimal unsigned integer</dd>
-<dt><font SIZE="-1">OPAQUE</font></dt>
+<dt>OPAQUE</dt>
 <dd>perl scalar containing octets</dd>
-<dt><font SIZE="-1">NULL</font></dt>
+<dt>NULL</dt>
 <dd>perl scalar containing nothing</dd></dl>
 </dl>
 <dl COMPACT>
 <dd></dd></dl>
 <dt>&lt;type&gt;</dt>
-<dd><font SIZE="-1">SNMP</font> data type (see list above), this field is populated by &#8216;get&#8217; and &#8216;getnext&#8217; operations. In some cases the programmer needs to populate this field when passing to a &#8216;set&#8217; operation. this field need not be supplied when the attribute indicated by &lt;tag&gt; is already described by loaded Mib modules. for &#8216;set&#8217;s, if a numeric <font SIZE="-1">OID</font> is used and the object is not currently in the loaded Mib, the &lt;type&gt; field must be supplied</dd></dl>
+<dd>SNMP data type (see list above), this field is populated by &#8216;get&#8217; and &#8216;getnext&#8217; operations. In some cases the programmer needs to populate this field when passing to a &#8216;set&#8217; operation. this field need not be supplied when the attribute indicated by &lt;tag&gt; is already described by loaded Mib modules. for &#8216;set&#8217;s, if a numeric OID is used and the object is not currently in the loaded Mib, the &lt;type&gt; field must be supplied</dd></dl>
 </dl>
 <dl COMPACT>
 <dd></dd></dl>
@@ -351,9 +351,9 @@ description: "SNMP – The Perl5 ‘SNMP’ Extension Module for the Net-SNMP SN
 <dt>$SNMP::VERSION</dt>
 <dd>the current version specifier (e.g., 3.1.0)</dd>
 <dt>$SNMP::auto_init_mib</dt>
-<dd>default &#8216;1&#8217;, set to 0 to disable automatic reading of the <font SIZE="-1">MIB</font> upon session creation. set to non-zero to call initMib at session creation which will result in <font SIZE="-1">MIB</font> loading according to Net-SNMP env. variables (see man mib_api)</dd>
+<dd>default &#8216;1&#8217;, set to 0 to disable automatic reading of the MIB upon session creation. set to non-zero to call initMib at session creation which will result in MIB loading according to Net-SNMP env. variables (see man mib_api)</dd>
 <dt>$SNMP::verbose</dt>
-<dd>default &#8216;0&#8217;, controls warning/info output of <font SIZE="-1">SNMP</font> module, 0 =&gt; no output, 1 =&gt; enables warning/info output from <font SIZE="-1">SNMP</font> module itself (is also controlled by SNMP::debugging &#8211; see below)</dd>
+<dd>default &#8216;0&#8217;, controls warning/info output of SNMP module, 0 =&gt; no output, 1 =&gt; enables warning/info output from SNMP module itself (is also controlled by SNMP::debugging &#8211; see below)</dd>
 <dt>$SNMP::use_long_names</dt>
 <dd>default &#8216;0&#8217;, set to non-zero to enable the use of longer Mib identifiers. see translateObj. will also influence the formatting of &lt;tag&gt; in varbinds returned from &#8216;getnext&#8217; operations. Can be set on a per session basis (UseLongNames)</dd>
 <dt>$SNMP::use_sprint_value</dt>
@@ -361,13 +361,13 @@ description: "SNMP – The Perl5 ‘SNMP’ Extension Module for the Net-SNMP SN
 <dt>$SNMP::use_enums</dt>
 <dd>default &#8216;0&#8217;,set non-zero to return values as enums and allow sets using enums where appropriate. integer data will still be accepted for set operations. can also be set on a per session basis (see UseEnums)</dd>
 <dt>$SNMP::use_numeric</dt>
-<dd>default to &#8216;0&#8217;,set to non-zero to have &lt;tags&gt; for &#8216;get&#8217; methods returned as numeric <font SIZE="-1">OID</font>&#8216;s rather than descriptions. UseLongNames will be set so that the entire <font SIZE="-1">OID</font> will be returned. Set on a per-session basis (see UseNumeric).</dd>
+<dd>default to &#8216;0&#8217;,set to non-zero to have &lt;tags&gt; for &#8216;get&#8217; methods returned as numeric OID&#8216;s rather than descriptions. UseLongNames will be set so that the entire OID will be returned. Set on a per-session basis (see UseNumeric).</dd>
 <dt>$SNMP::best_guess</dt>
 <dd>default &#8216;0&#8217;. This setting controls how &lt;tags&gt; are parsed. Setting to 0 causes a regular lookup. Setting to 1 causes a regular expression match (defined as -Ib in snmpcmd) and setting to 2 causes a random access lookup (defined as -IR in snmpcmd). Can also be set on a per session basis (see BestGuess)</dd>
 <dt>$SNMP::save_descriptions</dt>
 <dd>default &#8216;0&#8217;,set non-zero to have mib parser save attribute descriptions. must be set prior to mib initialization</dd>
 <dt>$SNMP::debugging</dt>
-<dd>default &#8216;0&#8217;, controls debugging output level within <font SIZE="-1">SNMP</font> module and libsnmp</dd>
+<dd>default &#8216;0&#8217;, controls debugging output level within SNMP module and libsnmp</dd>
 <dl COMPACT>
 <dd>
 </dd><dl COMPACT>
@@ -385,70 +385,70 @@ description: "SNMP – The Perl5 ‘SNMP’ Extension Module for the Net-SNMP SN
 <dt><i>SNMP::register_debug_tokens()</i></dt>
 <dd>Allows to register one or more debug tokens, just like the -D option of snmpd. Each debug token enables a group of debug statements. An example: SNMP::register_debug_tokens(&#8220;tdomain,netsnmp_unix&#8221;);</dd></dl>
 <h2>%Snmp::Mib</h2>
-<p>a tied hash to access parsed <font SIZE="-1">MIB</font> information. After the <font SIZE="-1">MIB</font> has been loaded this hash allows access to to the parsed in <font SIZE="-1">MIB</font> meta-data(the structure of the <font SIZE="-1">MIB </font>(i.e., schema)). The hash returns blessed references to <font SIZE="-1">SNMP::MIB::NODE</font> objects which represent a single <font SIZE="-1">MIB</font> attribute. The nodes can be fetched with multiple &#8216;key&#8217; formats &#8211; the leaf name (e.g.,sysDescr) or fully/partially qualified name (e.g., system.sysDescr) or fully qualified numeric <font SIZE="-1">OID.</font> The returned node object supports the following fields:</p>
+<p>a tied hash to access parsed MIB information. After the MIB has been loaded this hash allows access to to the parsed in MIB meta-data(the structure of the MIB (i.e., schema)). The hash returns blessed references to SNMP::MIB::NODE objects which represent a single MIB attribute. The nodes can be fetched with multiple &#8216;key&#8217; formats &#8211; the leaf name (e.g.,sysDescr) or fully/partially qualified name (e.g., system.sysDescr) or fully qualified numeric OID. The returned node object supports the following fields:</p>
 <dl COMPACT>
 <dt>objectID</dt>
-<dd>dotted decimal fully qualified <font SIZE="-1">OID</font></dd>
+<dd>dotted decimal fully qualified OID</dd>
 <dt>label</dt>
 <dd>leaf textual identifier (e.g., &#8216;sysDescr&#8217;)</dd>
 <dt>subID</dt>
-<dd>leaf numeric <font SIZE="-1">OID</font> component of objectID (e.g., &#8216;1&#8217;)</dd>
+<dd>leaf numeric OID component of objectID (e.g., &#8216;1&#8217;)</dd>
 <dt>moduleID</dt>
-<dd>textual identifier for module (e.g., &#8216;<font SIZE="-1">RFC1213-MIB</font>&#8216;)</dd>
+<dd>textual identifier for module (e.g., &#8216;RFC1213-MIB&#8216;)</dd>
 <dt>parent</dt>
 <dd>parent node</dd>
 <dt>children</dt>
 <dd>array reference of children nodes</dd>
 <dt>nextNode</dt>
-<dd>next lexico node <code>(</code><font SIZE="-1"><code>BUG</code></font><code>!does not return in lexico order)</code></dd>
+<dd>next lexico node <code>(</code><code>BUG</code><code>!does not return in lexico order)</code></dd>
 <dt>type</dt>
 <dd>returns application type (see getType for values)</dd>
 <dt>access</dt>
-<dd>returns <font SIZE="-1">ACCESS </font>(ReadOnly, ReadWrite, WriteOnly, NoAccess, Notify, Create)</dd>
+<dd>returns ACCESS (ReadOnly, ReadWrite, WriteOnly, NoAccess, Notify, Create)</dd>
 <dt>status</dt>
-<dd>returns <font SIZE="-1">STATUS </font>(Mandatory, Optional, Obsolete, Deprecated)</dd>
+<dd>returns STATUS (Mandatory, Optional, Obsolete, Deprecated)</dd>
 <dt>syntax</dt>
 <dd>returns &#8216;textualConvention&#8217; if defined else &#8216;type&#8217;</dd>
 <dt>textualConvention</dt>
 <dd>returns TEXTUAL-CONVENTION</dd>
 <dt>TCDescription</dt>
-<dd>returns the TEXTUAL-CONVENTION&#8217;s <font SIZE="-1">DESCRIPTION</font> field.</dd>
+<dd>returns the TEXTUAL-CONVENTION&#8217;s DESCRIPTION field.</dd>
 <dt>units</dt>
-<dd>returns <font SIZE="-1">UNITS</font></dd>
+<dd>returns UNITS</dd>
 <dt>hint</dt>
-<dd>returns <font SIZE="-1">HINT</font></dd>
+<dd>returns HINT</dd>
 <dt>enums</dt>
 <dd>returns hash ref {tag =&gt; num, &#8230;}</dd>
 <dt>ranges</dt>
 <dd>returns array ref of hash ref [{low =&gt; num, high =&gt; num}, &#8230;]</dd>
 <dt>description</dt>
-<dd>returns <font SIZE="-1">DESCRIPTION </font>($SNMP::save_descriptions must be set prior to <font SIZE="-1">MIB</font> initialization/parsing)</dd>
+<dd>returns DESCRIPTION ($SNMP::save_descriptions must be set prior to MIB initialization/parsing)</dd>
 <dt>reference</dt>
-<dd>returns the <font SIZE="-1">REFERENCE</font> clause</dd>
+<dd>returns the REFERENCE clause</dd>
 <dt>indexes</dt>
-<dd>returns the objects in the <font SIZE="-1">INDEX</font> clause</dd>
+<dd>returns the objects in the INDEX clause</dd>
 <dt>implied</dt>
-<dd>returns true if the last object in the <font SIZE="-1">INDEX</font> is <font SIZE="-1">IMPLIED</font></dd></dl>
+<dd>returns true if the last object in the INDEX is IMPLIED</dd></dl>
 <h2>MIB Functions</h2>
 <dl COMPACT>
 <dt>&amp;SNMP::setMib(&lt;file&gt;)</dt>
 <dd>allows dynamic parsing of the mib and explicit specification of mib file independent of environment variables. called with no args acts like initMib, loading MIBs indicated by environment variables (see Net-SNMP mib_api docs). passing non-zero second arg forces previous mib to be freed and replaced <code>(Note: second arg not working since freeing previous Mib is more involved than before)</code>.</dd>
 <dt>&amp;<i>SNMP::initMib()</i></dt>
-<dd>calls library init_mib function if Mib not already loaded &#8211; does nothing if Mib already loaded. will parse directories and load modules according to environment variables described in Net-SNMP documentations. (see man mib_api, <font SIZE="-1">MIBDIRS, MIBS, MIBFILE</font>(S), etc.)</dd>
+<dd>calls library init_mib function if Mib not already loaded &#8211; does nothing if Mib already loaded. will parse directories and load modules according to environment variables described in Net-SNMP documentations. (see man mib_api, MIBDIRS, MIBS, MIBFILE(S), etc.)</dd>
 <dt>&amp;SNMP::addMibDirs(&lt;dir&gt;,&#8230;)</dt>
 <dd>calls library add_mibdir for each directory supplied. will cause directory(s) to be added to internal list and made available for searching in subsequent loadModules calls</dd>
 <dt>&amp;SNMP::addMibFiles(&lt;file&gt;,&#8230;)</dt>
 <dd>calls library read_mib function. The file(s) supplied will be read and all Mib module definitions contained therein will be added to internal mib tree structure</dd>
 <dt>&amp;SNMP::loadModules(&lt;mod&gt;,&#8230;)</dt>
-<dd>calls library read_module function. The module(s) supplied will be searched for in the current mibdirs and and added to internal mib tree structure. Passing special &lt;mod&gt;, &#8216;<font SIZE="-1">ALL</font>&#8216;, will cause all known modules to be loaded.</dd>
+<dd>calls library read_module function. The module(s) supplied will be searched for in the current mibdirs and and added to internal mib tree structure. Passing special &lt;mod&gt;, &#8216;ALL&#8216;, will cause all known modules to be loaded.</dd>
 <dt>&amp;SNMP::unloadModules(&lt;mod&gt;,&#8230;)</dt>
 <dd><code>*Not Implemented*</code></dd>
 <dt>&amp;SNMP::translateObj(&lt;var&gt;[,arg,[arg]])</dt>
-<dd>will convert a text obj tag to an <font SIZE="-1">OID</font> and vice-versa. Any iid suffix is retained numerically. Default behaviour when converting a numeric <font SIZE="-1">OID</font> to text form is to return leaf identifier only (e.g.,&#8217;sysDescr&#8217;) but when <tt>$SNMP::use_long_names</tt> is non-zero or a non-zero second arg is supplied it will return a longer textual identifier. An optional third argument of non-zero will cause the module name to be prepended to the text name (e.g. &#8216;SNMPv2-MIB::sysDescr&#8217;). When converting a text obj, the <tt>$SNMP::best_guess</tt> option is used. If no Mib is loaded when called and <tt>$SNMP::auto_init_mib</tt> is enabled then the Mib will be loaded. Will return &#8216;undef&#8217; upon failure.</dd>
+<dd>will convert a text obj tag to an OID and vice-versa. Any iid suffix is retained numerically. Default behaviour when converting a numeric OID to text form is to return leaf identifier only (e.g.,&#8217;sysDescr&#8217;) but when <tt>$SNMP::use_long_names</tt> is non-zero or a non-zero second arg is supplied it will return a longer textual identifier. An optional third argument of non-zero will cause the module name to be prepended to the text name (e.g. &#8216;SNMPv2-MIB::sysDescr&#8217;). When converting a text obj, the <tt>$SNMP::best_guess</tt> option is used. If no Mib is loaded when called and <tt>$SNMP::auto_init_mib</tt> is enabled then the Mib will be loaded. Will return &#8216;undef&#8217; upon failure.</dd>
 <dt>&amp;SNMP::getType(&lt;var&gt;)</dt>
-<dd>return <font SIZE="-1">SNMP</font> data type for given textual identifier <font SIZE="-1">OBJECTID, OCTETSTR, INTEGER, NETADDR, IPADDR, COUNTER GAUGE, TIMETICKS, OPAQUE,</font> or undef</dd>
+<dd>return SNMP data type for given textual identifier OBJECTID, OCTETSTR, INTEGER, NETADDR, IPADDR, COUNTER GAUGE, TIMETICKS, OPAQUE, or undef</dd>
 <dt>&amp;SNMP::mapEnum(&lt;var&gt;)</dt>
-<dd>converts integer value to enumertion tag defined in Mib or converts tag to integer depending on input. the function will return the corresponding integer value *or* tag for a given <font SIZE="-1">MIB</font> attribute and value. The function will sense which direction to perform the conversion. Various arg formats are supported</dd>
+<dd>converts integer value to enumertion tag defined in Mib or converts tag to integer depending on input. the function will return the corresponding integer value *or* tag for a given MIB attribute and value. The function will sense which direction to perform the conversion. Various arg formats are supported</dd>
 <dl COMPACT>
 <dd>
 </dd><dl COMPACT>
@@ -475,16 +475,16 @@ description: "SNMP – The Perl5 ‘SNMP’ Extension Module for the Net-SNMP SN
 <dd>takes args of SNMP::TrapSession::new followed by those of SNMP::TrapSession::trap</dd></dl>
 <h2>Trouble Shooting</h2>
 <p>If problems occur there are number areas to look at to narrow down the possibilities. </p>
-<p> The first step should be to test the Net-SNMP installation independently from the Perl5 <font SIZE="-1">SNMP</font> interface. </p>
+<p> The first step should be to test the Net-SNMP installation independently from the Perl5 SNMP interface. </p>
 <p> Try running the apps from the Net-SNMP distribution. </p>
 <p> Make sure your agent (snmpd) is running and properly configured with read-write access for the community you are using. </p>
 <p> Ensure that your MIBs are installed and enviroment variables are set appropriately (see man mib_api) </p>
-<p> Be sure to remove old net-snmp installations and ensure headers and libraries from old <font SIZE="-1">CMU</font> installations are not being used by mistake. </p>
+<p> Be sure to remove old net-snmp installations and ensure headers and libraries from old CMU installations are not being used by mistake. </p>
 <p> If the problem occurs during compilation/linking check that the snmp library being linked is actually the Net-SNMP library (there have been name conflicts with existing snmp libs). </p>
 <p> Also check that the header files are correct and up to date. </p>
-<p> Sometimes compiling the Net-SNMP library with &#8216;position-independent-code&#8217; enabled is required (<font SIZE="-1">HPUX</font> specifically). </p>
+<p> Sometimes compiling the Net-SNMP library with &#8216;position-independent-code&#8217; enabled is required (HPUX specifically). </p>
 <p> If you cannot resolve the problem you can post to comp.lang.perl.modules or net-snmp-users [at] net-snmp-users@lists.sourceforge.net </p>
-<p> please give sufficient information to analyze the problem (<font SIZE="-1">OS</font> type, versions for OS/Perl/Net-SNMP/compiler, complete error output, etc.)</p>
+<p> please give sufficient information to analyze the problem (OS type, versions for OS/Perl/Net-SNMP/compiler, complete error output, etc.)</p>
 <h2>Acknowledgements</h2>
 <p>Many thanks to all those who supplied patches, suggestions and feedback. </p>
 <pre> Joe Marzot (the original author)

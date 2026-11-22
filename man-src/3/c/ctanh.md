@@ -11,8 +11,8 @@ description: "ctanh, ctanhf, ctanhl – complex hyperbolic tangent"
 <p> ctanh, ctanhf, ctanhl &#8211; complex hyperbolic tangent </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>
-<p> <code>double complex ctanh(double complex </code><i>z</i><code>);</code><br />
- <code>float complex ctanhf(float complex </code><i>z</i><code>);</code><br />
+<p> <code>double complex ctanh(double complex </code><i>z</i><code>);</code><br/>
+ <code>float complex ctanhf(float complex </code><i>z</i><code>);</code><br/>
  <code>long double complex ctanhl(long double complex </code><i>z</i><code>);</code> </p>
 <p> Link with <i>-lm</i>.</p>
 <h2>DESCRIPTION</h2>

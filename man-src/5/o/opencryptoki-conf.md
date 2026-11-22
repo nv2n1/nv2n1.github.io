@@ -12,10 +12,10 @@ description: "opencryptoki.conf – Configuration file for pkcsslotd."
 <p>pkcsslotd uses a configuration file at &quot;/etc&quot;/opencryptoki/opencryptoki.conf This is a text file that contains information used to configure pkcs#11 slots. At startup, the pkcsslotd daemon parses this file to determine which slots will be made available. </p>
 <h2>Syntax</h2>
 <p>This file is made up of slot descriptions. Each slot description is composed of a slot number, brackets and key-value pairs. </p>
-<p>&nbsp;<wbr>slot number<br />
-&nbsp;<wbr>{<br />
-&nbsp;<wbr>&nbsp;<wbr>key&nbsp;<wbr>=&nbsp;<wbr>value<br />
-&nbsp;<wbr>&nbsp;<wbr>&#8230;<br />
+<p>&nbsp;<wbr>slot number<br/>
+&nbsp;<wbr>{<br/>
+&nbsp;<wbr>&nbsp;<wbr>key&nbsp;<wbr>=&nbsp;<wbr>value<br/>
+&nbsp;<wbr>&nbsp;<wbr>&#8230;<br/>
 &nbsp;<wbr>} </p>
 <p> More than one key-value pair may be used within a slot description. </p>
 <p> A key-value pair is composed of, <code>keyword = value.</code> </p>

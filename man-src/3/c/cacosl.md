@@ -11,8 +11,8 @@ description: "cacos, cacosf, cacosl – complex arc cosine"
 <p> cacos, cacosf, cacosl &#8211; complex arc cosine </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>
-<p> <code>double complex cacos(double complex </code><i>z</i><code>);</code><br />
- <code>float complex cacosf(float complex </code><i>z</i><code>);</code><br />
+<p> <code>double complex cacos(double complex </code><i>z</i><code>);</code><br/>
+ <code>float complex cacosf(float complex </code><i>z</i><code>);</code><br/>
  <code>long double complex cacosl(long double complex </code><i>z</i><code>);</code> </p>
 <p> Link with <i>-lm</i>.</p>
 <h2>DESCRIPTION</h2>
@@ -44,13 +44,13 @@ description: "cacos, cacosf, cacosl – complex arc cosine"
 <h2>EXAMPLES</h2>
 <p> /* Link with &quot;-lm&quot; */ </p>
 <p> #include &lt;complex.h&gt; #include &lt;stdlib.h&gt; #include &lt;unistd.h&gt; #include &lt;stdio.h&gt; </p>
-<p> int main(int argc, char *argv[]) {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;double complex z, c, f;<br />
+<p> int main(int argc, char *argv[]) {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;double complex z, c, f;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;double complex i&nbsp;=&nbsp;I; </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(argc&nbsp;!=&nbsp;3)&nbsp;{<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(argc&nbsp;!=&nbsp;3)&nbsp;{<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;fprintf(stderr,&nbsp;&quot;Usage:&nbsp;%s&nbsp;&lt;real&gt;&nbsp;&lt;imag&gt;
-&quot;, argv[0]);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_FAILURE);<br />
+&quot;, argv[0]);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_FAILURE);<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;} </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;z&nbsp;=&nbsp;atof(argv[1])&nbsp;+&nbsp;atof(argv[2])&nbsp;*&nbsp;I; </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;c&nbsp;=&nbsp;cacos(z); </p>

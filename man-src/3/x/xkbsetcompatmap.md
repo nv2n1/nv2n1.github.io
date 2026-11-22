@@ -10,7 +10,7 @@ description: "XkbSetCompatMap – Modify the server’s compatibility map"
 <p>XkbSetCompatMap &#8211; Modify the server&#8217;s compatibility map </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Bool XkbSetCompatMap</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned int </code><i>which</i><code>,</code> <code>XkbDescPtr </code><i>xkb</i><code>,</code> <code>Bool </code><i>update_actions</i><code>);</code><br />
+<dt> <code>Bool XkbSetCompatMap</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned int </code><i>which</i><code>,</code> <code>XkbDescPtr </code><i>xkb</i><code>,</code> <code>Bool </code><i>update_actions</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

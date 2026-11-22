@@ -160,7 +160,7 @@ http_only - Restricts cookie access from other non-HTTP APIs.</pre>
 <dt><code>mime_type(Scope, FileName)</code></dt>
 <dd>Returns the MIME type as defined by the extension of <i>FileName</i>. <i>Scope</i> can have following values: </dd>
 <dl>
-<dd><code>global</code> &#8211; returns the result obtained from the global context.<br />
+<dd><code>global</code> &#8211; returns the result obtained from the global context.<br/>
  <code>#sconf{} | {ServerName, Port}</code> &#8211; returns the result obtained from the virtual server&#8217;s context. If no MIME type is found in this scope, it falls back on the global one.</dd></dl>
 <dt><code>mime_type(FileName)</code></dt>
 <dd>Tries to determine the right <i>Scope</i> before calling mime_type/2. </dd>
@@ -183,12 +183,12 @@ http_only - Restricts cookie access from other non-HTTP APIs.</pre>
 <dt><code>parse_query(Arg)</code></dt>
 <dd>This function will parse the query part of the URL. It will return a {Key, Value} list of the items supplied in the query part of the URL. </dd>
 <dt><code>queryvar(Arg, VarName)</code></dt>
-<dd>This function is automatically included from yaws_api in all<br />
+<dd>This function is automatically included from yaws_api in all<br/>
 &nbsp;<wbr>.yaws pages. It is used to search for a variable in the querypart of the url. Returns {ok, Val} or undefined. If a variable is defined multiple times, the function may also return <i>{Val1, &#8230;.}</i>. </dd>
 <dt><code>parse_post(Arg)</code></dt>
 <dd>This function will parse the POST data as supplied from the browser. It will return a {Key, Value} list of the items set by the browser. </dd>
 <dt><code>postvar(Arg, VarName)</code></dt>
-<dd>This function is automatically included from yaws_api in all<br />
+<dd>This function is automatically included from yaws_api in all<br/>
 &nbsp;<wbr>.yaws pages. It is used to search for a variable in the POSTed data from the client. Returns {ok, Val} or undefined. If a variable is defined multiple times, the function may also return <i>{Val1, &#8230;.}</i>. </dd>
 <dt><code>getvar(Arg, VarName)</code></dt>
 <dd>This function looks at the HTTP request method from the client and invokes postvar/2 if it is a POST from the client and queryvar/2 if it is a GET request from the client. </dd>

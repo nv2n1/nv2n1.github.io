@@ -10,7 +10,7 @@ description: "clatrs.f –"
 <p>clatrs.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>clatrs</code> (UPLO, TRANS, DIAG, NORMIN, N, A, LDA, X, SCALE, CNORM, INFO)<br />
+<p>subroutine <code>clatrs</code> (UPLO, TRANS, DIAG, NORMIN, N, A, LDA, X, SCALE, CNORM, INFO)<br/>
  <i></i><code>CLATRS</code> solves a triangular system of equations with the scale factor set to prevent overflow.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine clatrs (characterUPLO, characterTRANS, characterDIAG, characterNORMIN, integerN, complex, dimension( lda, * )A, integerLDA, complex, dimension( * )X, realSCALE, real, dimension( * )CNORM, integerINFO)</h3>

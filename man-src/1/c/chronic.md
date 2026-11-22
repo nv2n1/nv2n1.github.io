@@ -11,7 +11,7 @@ chronic - runs a command quietly unless it fails
 
 <h2>SYNOPSIS</h2>
 
- chronic [-ev] <font SIZE="-1">COMMAND...</font>
+ chronic [-ev] COMMAND...
 
 <h2>DESCRIPTION</h2>
 
@@ -28,7 +28,7 @@ chronic - runs a command quietly unless it fails
 
 <dl>
 <dt>-v
-</dt><dd> Verbose output (distinguishes between <font SIZE="-1">STDOUT</font> and <font SIZE="-1">STDERR,</font> also reports <font SIZE="-1">RETVAL</font>)
+</dt><dd> Verbose output (distinguishes between STDOUT and STDERR, also reports RETVAL)
 </dd><dt>-e
 </dt><dd> Stderr triggering. Triggers output when stderr output length is non-zero. Without -e chronic needs non-zero return value to trigger output. 
  In this mode, chronic's return value will be <tt>2</tt> if the command's return value is <tt>0</tt> but the command printed to stderr.</dd></dl>
@@ -39,4 +39,4 @@ chronic - runs a command quietly unless it fails
 
  Original concept and ``chronic'' name by Chuck Houpt. Code for verbose and stderr trigger by Tomas 'Harvie' Mudrunka 2016. 
 
- Licensed under the <font SIZE="-1">GNU GPL</font> version 2 or higher.
+ Licensed under the GNU GPL version 2 or higher.

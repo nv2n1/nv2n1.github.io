@@ -12,7 +12,7 @@ description: "perldebguts – Guts of Perl debugging"
 <h2>DESCRIPTION</h2>
 <p> This is not perldebug, which tells you how to use the debugger. This manpage describes low-level details concerning the debugger&#8217;s internals, which range from difficult to impossible to understand for anyone who isn&#8217;t incredibly intimate with Perl&#8217;s guts. Caveat lector.  </p>
 <h2>Debugger Internals</h2>
-<p> Perl has special debugging hooks at compile-time and run-time used to create debugging environments. These hooks are not to be confused with the <i>perl -Dxxx</i> command described in perlrun, which is usable only if a special Perl is built per the instructions in the <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> podpage in the Perl source tree. </p>
+<p> Perl has special debugging hooks at compile-time and run-time used to create debugging environments. These hooks are not to be confused with the <i>perl -Dxxx</i> command described in perlrun, which is usable only if a special Perl is built per the instructions in the <i></i><i>INSTALL</i><i></i> podpage in the Perl source tree. </p>
 <p> For example, whenever you call Perl&#8217;s built-in <code>&quot;caller&quot;</code> function from the package <code>&quot;DB&quot;</code>, the arguments that the corresponding stack frame was called with are copied to the <code>@DB::args</code> array. These mechanisms are enabled by calling Perl with the <code>-d</code> switch. Specifically, the following additional features are enabled (cf. ``$^P&#8217;&#8216; in perlvar): </p>
 <dl>
 <dt>&bull;</dt>
@@ -70,7 +70,7 @@ description: "perldebguts – Guts of Perl debugging"
 </code></pre>
 <p> It prints the sequence number of each subroutine call and the name of the called subroutine. Note that <code>&amp;DB::sub</code> is being compiled into the package <code>&quot;DB&quot;</code> through the use of the <code>&quot;package&quot;</code> directive. </p>
 <p> When it starts, the debugger reads your rc file (<i>./.perldb</i> or <i>~/.perldb</i> under Unix), which can set important options. (A subroutine (<code>&amp;afterinit</code>) can be defined here as well; it is executed after the debugger completes its own initialization.) </p>
-<p> After the rc file is read, the debugger reads the <font SIZE="-1">PERLDB_OPTS</font> environment variable and uses it to set debugger options. The contents of this variable are treated as if they were the argument of an <code>&quot;o ...&quot;</code> debugger command (q.v. in ``Configurable Options&#8217;&#8216; in perldebug). </p>
+<p> After the rc file is read, the debugger reads the PERLDB_OPTS environment variable and uses it to set debugger options. The contents of this variable are treated as if they were the argument of an <code>&quot;o ...&quot;</code> debugger command (q.v. in ``Configurable Options&#8217;&#8216; in perldebug). </p>
 <p> <i>Debugger Internal Variables</i> </p>
 <p> In addition to the file and subroutine-related variables mentioned above, the debugger also maintains various magical internal variables. </p>
 <dl>
@@ -294,9 +294,9 @@ description: "perldebguts – Guts of Perl debugging"
 <p> line (split into two lines above) contains optimizer information. In the example shown, the optimizer found that the match should contain a substring <code>&quot;de&quot;</code> at offset 1, plus substring <code>&quot;gh&quot;</code> at some offset between 3 and infinity. Moreover, when checking for these substrings (to abandon impossible matches quickly), Perl will check for the substring <code>&quot;gh&quot;</code> before checking for the substring <code>&quot;de&quot;</code>. The optimizer may also use the knowledge that the match starts (at the <code>&quot;first&quot;</code> <i>id</i>) with a character class, and no string shorter than 7 characters can possibly match. </p>
 <p> The fields of interest which may appear in this line are </p>
 <dl>
-<dt>&quot;anchored&quot; <i></i><font SIZE="-1"><i>STRING</i></font><i></i> &quot;at&quot; <i></i><font SIZE="-1"><i>POS</i></font><i></i></dt>
+<dt>&quot;anchored&quot; <i></i><i>STRING</i><i></i> &quot;at&quot; <i></i><i>POS</i><i></i></dt>
 <dd>  </dd>
-<dt>&quot;floating&quot; <i></i><font SIZE="-1"><i>STRING</i></font><i></i> &quot;at&quot; <i></i><font SIZE="-1"><i>POS1..POS2</i></font><i></i></dt>
+<dt>&quot;floating&quot; <i></i><i>STRING</i><i></i> &quot;at&quot; <i></i><i>POS1..POS2</i><i></i></dt>
 <dd> <p> See above. </p>
  </dd>
 <dt>&quot;matching floating/anchored&quot;</dt>
@@ -305,7 +305,7 @@ description: "perldebguts – Guts of Perl debugging"
 <dt>&quot;minlen&quot;</dt>
 <dd> <p> The minimal length of the match. </p>
  </dd>
-<dt>&quot;stclass&quot; <i></i><font SIZE="-1"><i>TYPE</i></font><i></i></dt>
+<dt>&quot;stclass&quot; <i></i><i>TYPE</i><i></i></dt>
 <dd> <p> Type of first matching node. </p>
  </dd>
 <dt>&quot;noscan&quot;</dt>
@@ -332,7 +332,7 @@ description: "perldebguts – Guts of Perl debugging"
 <p> If a substring is known to match at end-of-line only, it may be followed by <code>&quot;$&quot;</code>, as in <code>&quot;floating &#8216;k&#8217;$&quot;</code>. </p>
 <p> The optimizer-specific information is used to avoid entering (a slow) regex engine on strings that will not definitely match. If the <code>&quot;isall&quot;</code> flag is set, a call to the regex engine may be avoided even when the optimizer found an appropriate place for the match. </p>
 <p> Above the optimizer section is the list of <i>nodes</i> of the compiled form of the regex. Each line has format </p>
-<p> <code>&quot; &quot;</code><i>id</i>: <i></i><font SIZE="-1"><i>TYPE</i></font><i></i> <i>OPTIONAL-INFO</i> (<i>next-id</i>)  </p>
+<p> <code>&quot; &quot;</code><i>id</i>: <i></i><i>TYPE</i><i></i> <i>OPTIONAL-INFO</i> (<i>next-id</i>)  </p>
 <h3>Types of Nodes</h3>
 <p> Here are the current possible types, with short descriptions: </p>
 <pre><code> # TYPE arg-description [num-args] [longjump-len] DESCRIPTION
@@ -598,8 +598,8 @@ description: "perldebguts – Guts of Perl debugging"
                                 failed...
 </code></pre>
 <p> The most significant information in the output is about the particular <i>node</i> of the compiled regex that is currently being tested against the target string. The format of these lines is </p>
-<p> <code>&quot; &quot;</code><i>STRING-OFFSET</i> &lt;<i>PRE-STRING</i>&gt; &lt;<i>POST-STRING</i>&gt; |<i></i><font SIZE="-1"><i>ID</i></font><i></i>: <i></i><font SIZE="-1"><i>TYPE</i></font><i></i> </p>
-<p> The <i></i><font SIZE="-1"><i>TYPE</i></font><i></i> info is indented with respect to the backtracking level. Other incidental information appears interspersed within.  </p>
+<p> <code>&quot; &quot;</code><i>STRING-OFFSET</i> &lt;<i>PRE-STRING</i>&gt; &lt;<i>POST-STRING</i>&gt; |<i></i><i>ID</i><i></i>: <i></i><i>TYPE</i><i></i> </p>
+<p> The <i></i><i>TYPE</i><i></i> info is indented with respect to the backtracking level. Other incidental information appears interspersed within.  </p>
 <h2>Debugging Perl Memory Usage</h2>
 <p> Perl is a profligate wastrel when it comes to memory use. There is a saying that to estimate memory usage of Perl, assume a reasonable algorithm for memory allocation, multiply that estimate by 10, and while you still may miss the mark, at least you won&#8217;t be quite so astonished. This is not absolutely true, but may provide a good grasp of what happens. </p>
 <p> Assume that an integer cannot take less than 20 bytes of memory, a float cannot take less than 24 bytes, a string cannot take less than 32 bytes (all these examples assume 32-bit architectures, the result are quite a bit worse on 64-bit architectures). If a variable is accessed in two of three different ways (which require an integer, a float, or a string), the memory footprint may increase yet another 20 bytes. A sloppy <code><a href="/docs/linux/man/3-malloc/">malloc</a></code>(3) implementation can inflate these numbers dramatically. </p>
@@ -608,9 +608,9 @@ description: "perldebguts – Guts of Perl debugging"
 </code></pre>
 <p> may take up to 500 bytes of memory, depending on which release of Perl you&#8217;re running. </p>
 <p> Anecdotal estimates of source-to-compiled code bloat suggest an eightfold increase. This means that the compiled form of reasonable (normally commented, properly indented etc.) code will take about eight times more space in memory than the code took on disk. </p>
-<p> The <code>-DL</code> command-line switch is obsolete since circa Perl 5.6.0 (it was available only if Perl was built with <code>&quot;-DDEBUGGING&quot;</code>). The switch was used to track Perl&#8217;s memory allocations and possible memory leaks. These days the use of malloc debugging tools like <i>Purify</i> or <i>valgrind</i> is suggested instead. See also ``<font SIZE="-1">PERL_MEM_LOG&#8217;&#8216;</font> in perlhacktips. </p>
-<p> One way to find out how much memory is being used by Perl data structures is to install the Devel::Size module from <font SIZE="-1">CPAN:</font> it gives you the minimum number of bytes required to store a particular data structure. Please be mindful of the difference between the <code>size()</code> and <code>total_size()</code>. </p>
-<p> If Perl has been compiled using Perl&#8217;s malloc you can analyze Perl memory usage by setting <code>$ENV</code>{<font SIZE="-1">PERL_DEBUG_MSTATS</font>}.  </p>
+<p> The <code>-DL</code> command-line switch is obsolete since circa Perl 5.6.0 (it was available only if Perl was built with <code>&quot;-DDEBUGGING&quot;</code>). The switch was used to track Perl&#8217;s memory allocations and possible memory leaks. These days the use of malloc debugging tools like <i>Purify</i> or <i>valgrind</i> is suggested instead. See also ``PERL_MEM_LOG&#8217;&#8216; in perlhacktips. </p>
+<p> One way to find out how much memory is being used by Perl data structures is to install the Devel::Size module from CPAN: it gives you the minimum number of bytes required to store a particular data structure. Please be mindful of the difference between the <code>size()</code> and <code>total_size()</code>. </p>
+<p> If Perl has been compiled using Perl&#8217;s malloc you can analyze Perl memory usage by setting <code>$ENV</code>{PERL_DEBUG_MSTATS}.  </p>
 <h3>Using $ENV{PERL_DEBUG_MSTATS}</h3>
 <p> If your perl is using Perl&#8217;s <code>malloc()</code> and was compiled with the necessary switches (this is the default), then it will print memory usage statistics after compiling your code when <code>&quot;$ENV{PERL_DEBUG_MSTATS} &gt; 1&quot;</code>, and before termination of the program when <code>&quot;$ENV{PERL_DEBUG_MSTATS} &gt;= 1&quot;</code>. The report format is similar to the following example: </p>
 <pre><code> $ PERL_DEBUG_MSTATS=2 perl -e &quot;require Carp&quot;

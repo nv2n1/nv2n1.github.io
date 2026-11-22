@@ -10,7 +10,7 @@ description: "dgetri.f –"
 <p>dgetri.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dgetri</code> (N, A, LDA, IPIV, WORK, LWORK, INFO)<br />
+<p>subroutine <code>dgetri</code> (N, A, LDA, IPIV, WORK, LWORK, INFO)<br/>
  <i></i><code>DGETRI</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dgetri (integerN, double precision, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, double precision, dimension( * )WORK, integerLWORK, integerINFO)</h3>

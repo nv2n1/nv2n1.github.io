@@ -13,8 +13,8 @@ description: "glutShowWindow – Request that the <i>current window</i> be visib
 <h2>Synopsis</h2>
 <p>In openglut.h Ft void Fn glutShowWindow void</p>
 <h2>Description</h2>
-<p>glutShowWindow() requests that the window system make the Bf Li<br />
-&nbsp;<wbr>current window Ef<br />
+<p>glutShowWindow() requests that the window system make the Bf Li<br/>
+&nbsp;<wbr>current window Ef<br/>
 &nbsp;<wbr>&nbsp;<wbr>visible. </p>
 <p> This is generally not necessary. When you create a window, it will normally become visible. Unless you specifically hide it, it will remain visible. Though visible, of course, it may be covered by other windows; that would be an issue for window stacking order not visibility. </p>
 <p> When, and if, your window&#8217;s visibility status changes, you may find out via a glutWindowStatusFunc() callback. </p>

@@ -29,9 +29,9 @@ void
 <h2>Arguments</h2>
 <dl COMPACT>
 <dd>Tcl_Interp <i>*interp</i> (in) Interpreter in which to record information.</dd>
-<dd>int<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><i>code</i><br />
+<dd>int<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><i>code</i><br/>
  The code returned from script evaluation.</dd>
-<dd>Tcl_Obj<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><i>*options</i><br />
+<dd>Tcl_Obj<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><i>*options</i><br/>
  A dictionary of return options.</dd>
 <dd>char <i>*message</i> (in) For <code>Tcl_AddErrorInfo</code>, this is a conventional C string to append to the <code>-errorinfo</code> return option. For <code>Tcl_AddObjErrorInfo</code>, this points to the first byte of an array of <i>length</i> bytes containing a string to append to the <code>-errorinfo</code> return option. This byte array may contain embedded null bytes unless <i>length</i> is negative.</dd>
 <dd>Tcl_Obj <i>*objPtr</i> (in) A message to be appended to the <code>-errorinfo</code> return option in the form of a Tcl_Obj value.</dd>
@@ -39,7 +39,7 @@ void
 <dd>Tcl_Obj <i>*errorObjPtr</i> (in) The <code>-errorcode</code> return option will be set to this value.</dd>
 <dd>char <i>*element</i> (in) String to record as one element of the <code>-errorcode</code> return option. Last <i>element</i> argument must be NULL.</dd>
 <dd>va_list <i>argList</i> (in) An argument list which must have been initialized using <code>va_start</code>, and cleared using <code>va_end</code>.</dd>
-<dd>int<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><i>lineNum</i><br />
+<dd>int<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><i>lineNum</i><br/>
  The line number of a script where an error occurred.</dd>
 <dd>const char <i>*script</i> (in) Pointer to first character in script containing command (must be &lt;= command)</dd>
 <dd>const char <i>*command</i> (in) Pointer to first character in command that generated the error</dd>

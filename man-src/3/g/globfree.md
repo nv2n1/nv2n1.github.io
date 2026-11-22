@@ -21,9 +21,9 @@ void globfree(glob_t *pglob);
 <p> The <code>glob</code>() function searches for all the pathnames matching <i>pattern</i> according to the rules used by the shell (see <code><a href="/docs/linux/man/7-glob/">glob</a></code>(7)). No tilde expansion or parameter substitution is done; if you want these, use <code><a href="/docs/linux/man/3-wordexp/">wordexp</a></code>(3). </p>
 <p> The <code>globfree</code>() function frees the dynamically allocated storage from an earlier call to <code>glob</code>(). </p>
 <p> The results of a <code>glob</code>() call are stored in the structure pointed to by <i>pglob</i>. This structure is of type <i>glob_t</i> (declared in <i>&lt;glob.h&gt;</i>) and includes the following elements defined by POSIX.2 (more may be present as an extension): </p>
-<p> typedef struct {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;size_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;gl_pathc;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Count of paths matched so far&nbsp;<wbr>&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;<wbr>&nbsp;<wbr>&nbsp;**gl_pathv;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;List of matched pathnames.&nbsp;<wbr>&nbsp;*/<br />
+<p> typedef struct {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;size_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;gl_pathc;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Count of paths matched so far&nbsp;<wbr>&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;<wbr>&nbsp;<wbr>&nbsp;**gl_pathv;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;List of matched pathnames.&nbsp;<wbr>&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;size_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;gl_offs;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Slots to reserve in&nbsp;<i>gl_pathv</i>.&nbsp;<wbr>&nbsp;*/ } glob_t; </p>
 <p> Results are stored in dynamically allocated storage. </p>
 <p> The argument <i>flags</i> is made up of the bitwise OR of zero or more the following symbolic constants, which modify the behavior of <code>glob</code>():</p>
@@ -83,7 +83,7 @@ void globfree(glob_t *pglob);
 <tr VALIGN=top>
 <td> <code>glob</code>() </td>
 <td>Thread safety</td>
-<td> MT-Unsafe race:utent env<br />
+<td> MT-Unsafe race:utent env<br/>
  sig:ALRM timer locale
 </td>
 </tr>

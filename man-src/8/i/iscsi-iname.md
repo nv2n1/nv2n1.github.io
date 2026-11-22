@@ -20,5 +20,5 @@ description: "iscsi-iname – iSCSI initiator name generation tool"
 <dd>Use the prefix passed in instead of the default &quot;iqn.2005-03.org.open-iscsi&quot; </dd>
 </dl>
 <h2>Authors</h2>
-<p>Open-iSCSI project &lt;<a rel="nofollow" href="http://www.open-iscsi.com/">http://www.open-iscsi.com/</a>&gt;<br />
+<p>Open-iSCSI project &lt;<a rel="nofollow" href="http://www.open-iscsi.com/">http://www.open-iscsi.com/</a>&gt;<br/>
  Mike Christie &lt;mchristi [at] redhat.com&gt;</p>

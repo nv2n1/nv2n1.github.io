@@ -9,9 +9,9 @@ description: "Ecore Jobs – You can queue jobs that are to be done by the main 
 
 <p>Ecore Jobs &#8211; You can queue jobs that are to be done by the main loop when the current event is dealt with. </p>
 <h3>Functions</h3>
-<p>EAPI <code>Ecore_Job</code> * <code>ecore_job_add</code> (void(*func)(void *data), const void *data)<br />
- <i>Add a job to the event queue. </i><br />
- EAPI void * <code>ecore_job_del</code> (<code>Ecore_Job</code> *job)<br />
+<p>EAPI <code>Ecore_Job</code> * <code>ecore_job_add</code> (void(*func)(void *data), const void *data)<br/>
+ <i>Add a job to the event queue. </i><br/>
+ EAPI void * <code>ecore_job_del</code> (<code>Ecore_Job</code> *job)<br/>
  <i>Delete a queued job that has not yet been executed. </i></p>
 <h2>Detailed Description</h2>
 <p>You can queue jobs that are to be done by the main loop when the current event is dealt with.</p>
@@ -20,7 +20,7 @@ description: "Ecore Jobs – You can queue jobs that are to be done by the main 
 <p>Add a job to the event queue. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>func</i> The function to call when the job gets handled.<br />
+<dd><i>func</i> The function to call when the job gets handled.<br/>
  <i>data</i> Data pointer to be passed to the job function when the job is handled.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

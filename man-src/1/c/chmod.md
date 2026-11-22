@@ -10,8 +10,8 @@ description: "chmod – change file mode bits"
 
 <p> chmod &#8211; change file mode bits </p>
 <h2>SYNOPSIS</h2>
-<p> <code>chmod</code> [<i>,OPTION/</i>]&#8230; <i>,MODE/</i>[<i>,,MODE/</i>]&#8230; <i>,FILE/</i>&#8230;<br />
- <code>chmod</code> [<i>,OPTION/</i>]&#8230; <i>,OCTAL-MODE FILE/</i>&#8230;<br />
+<p> <code>chmod</code> [<i>,OPTION/</i>]&#8230; <i>,MODE/</i>[<i>,,MODE/</i>]&#8230; <i>,FILE/</i>&#8230;<br/>
+ <code>chmod</code> [<i>,OPTION/</i>]&#8230; <i>,OCTAL-MODE FILE/</i>&#8230;<br/>
  <code>chmod</code> [<i>,OPTION/</i>]&#8230; <i>,&#8211;reference=RFILE FILE/</i>&#8230;</p>
 <h2>DESCRIPTION</h2>
 <p> This manual page documents the GNU version of <code>chmod</code>. <code>chmod</code> changes the file mode bits of each given file according to <i>mode</i>, which can be either a symbolic representation of changes to make, or an octal number representing the bit pattern for the new mode bits. </p>
@@ -51,12 +51,12 @@ description: "chmod – change file mode bits"
 <h2>AUTHOR</h2>
 <p> Written by David MacKenzie and Jim Meyering.</p>
 <h2>REPORTING BUGS</h2>
-<p> GNU coreutils online help: &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/">https://www.gnu.org/software/coreutils/</a>&gt;<br />
+<p> GNU coreutils online help: &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/">https://www.gnu.org/software/coreutils/</a>&gt;<br/>
  Report any translation bugs to &lt;<a rel="nofollow" href="https://translationproject.org/team/">https://translationproject.org/team/</a>&gt;</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2020 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="https://gnu.org/licenses/gpl.html">https://gnu.org/licenses/gpl.html</a>&gt;.<br />
+<p> Copyright &#169; 2020 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="https://gnu.org/licenses/gpl.html">https://gnu.org/licenses/gpl.html</a>&gt;.<br/>
  This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/2-chmod/">chmod</a>(2) </p>
-<p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/chmod">https://www.gnu.org/software/coreutils/chmod</a>&gt;<br />
+<p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/chmod">https://www.gnu.org/software/coreutils/chmod</a>&gt;<br/>
  or available locally via: info &#8216;(coreutils) chmod invocation&#8217; </p>

@@ -10,7 +10,7 @@ description: "cupgtr.f –"
 <p>cupgtr.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>cupgtr</code> (UPLO, N, AP, TAU, Q, LDQ, WORK, INFO)<br />
+<p>subroutine <code>cupgtr</code> (UPLO, N, AP, TAU, Q, LDQ, WORK, INFO)<br/>
  <i></i><code>CUPGTR</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cupgtr (characterUPLO, integerN, complex, dimension( * )AP, complex, dimension( * )TAU, complex, dimension( ldq, * )Q, integerLDQ, complex, dimension( * )WORK, integerINFO)</h3>

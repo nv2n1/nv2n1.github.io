@@ -11,7 +11,7 @@ description: "iv_fatal, iv_set_fatal_msg_handler – ivykis fatal error conditio
 <p> iv_fatal, iv_set_fatal_msg_handler &#8211; ivykis fatal error condition handling</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;iv.h&gt;</code> </p>
-<p> <code>void iv_fatal(const char *</code><i>fmt</i><code>, &#8230;);</code><br />
+<p> <code>void iv_fatal(const char *</code><i>fmt</i><code>, &#8230;);</code><br/>
  <code>void iv_set_fatal_msg_handler(void (*</code><i>handler</i><code>)(const char *</code><i>msg</i><code>));</code> </p>
 <h2>DESCRIPTION</h2>
 <p> <code>iv_fatal</code> aborts the running program, after possibly emitting an error message. The <code>fmt</code> parameter is a <code><a href="/docs/linux/man/3-printf/">printf</a></code>(3)-style format string, the message to be logged. </p>

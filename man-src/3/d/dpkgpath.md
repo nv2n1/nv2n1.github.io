@@ -10,8 +10,8 @@ Dpkg::Path - some common path handling functions
 
 <h2>Description</h2>It provides some functions to handle various path.
 <h2>Methods</h2><dl COMPACT><dt>get_pkg_root_dir($file)
-</dt><dd>This function will scan upwards the hierarchy of directory to find out the directory which contains the ``<font SIZE="-1">DEBIAN''</font> sub-directory and it will return its path. This directory is the root directory of a package being built. 
- If no <font SIZE="-1">DEBIAN</font> subdirectory is found, it will return undef.
+</dt><dd>This function will scan upwards the hierarchy of directory to find out the directory which contains the ``DEBIAN'' sub-directory and it will return its path. This directory is the root directory of a package being built. 
+ If no DEBIAN subdirectory is found, it will return undef.
 </dd><dt>relative_to_pkg_root($file)
 </dt><dd>Returns the filename relative to get_pkg_root_dir($file).
 </dd><dt>guess_pkg_root_dir($file)

@@ -11,7 +11,7 @@ description: "sbbcsd.f –"
 <p> sbbcsd.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>sbbcsd</code> (JOBU1, JOBU2, JOBV1T, JOBV2T, TRANS, M, P, Q, THETA, PHI, U1, LDU1, U2, LDU2, V1T, LDV1T, V2T, LDV2T, B11D, B11E, B12D, B12E, B21D, B21E, B22D, B22E, WORK, LWORK, INFO)<br />
+<p> subroutine <code>sbbcsd</code> (JOBU1, JOBU2, JOBV1T, JOBV2T, TRANS, M, P, Q, THETA, PHI, U1, LDU1, U2, LDU2, V1T, LDV1T, V2T, LDV2T, B11D, B11E, B12D, B12E, B21D, B21E, B22D, B22E, WORK, LWORK, INFO)<br/>
  <i></i><code>SBBCSD</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sbbcsd (characterJOBU1, characterJOBU2, characterJOBV1T, characterJOBV2T, characterTRANS, integerM, integerP, integerQ, real, dimension( * )THETA, real, dimension( * )PHI, real, dimension( ldu1, * )U1, integerLDU1, real, dimension( ldu2, * )U2, integerLDU2, real, dimension( ldv1t, * )V1T, integerLDV1T, real, dimension( ldv2t, * )V2T, integerLDV2T, real, dimension( * )B11D, real, dimension( * )B11E, real, dimension( * )B12D, real, dimension( * )B12E, real, dimension( * )B21D, real, dimension( * )B21E, real, dimension( * )B22D, real, dimension( * )B22E, real, dimension( * )WORK, integerLWORK, integerINFO)</h3>

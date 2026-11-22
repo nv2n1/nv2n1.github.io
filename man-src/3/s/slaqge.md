@@ -11,7 +11,7 @@ description: "slaqge.f –"
 <p> slaqge.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>slaqge</code> (M, N, A, LDA, R, C, ROWCND, COLCND, AMAX, EQUED)<br />
+<p> subroutine <code>slaqge</code> (M, N, A, LDA, R, C, ROWCND, COLCND, AMAX, EQUED)<br/>
  <i></i><code>SLAQGE</code> scales a general rectangular matrix, using row and column scaling factors computed by sgeequ.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slaqge (integerM, integerN, real, dimension( lda, * )A, integerLDA, real, dimension( * )R, real, dimension( * )C, realROWCND, realCOLCND, realAMAX, characterEQUED)</h3>

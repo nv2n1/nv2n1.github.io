@@ -12,16 +12,16 @@ description: "pto_gen – Generate a Hugin project file from a list of images."
 <h2>SYNOPSIS</h2>
 <p> <code>pto_gen</code> [options] <i>image</i> [&#8230;]</p>
 <h2>DESCRIPTION</h2>
-<p> <code>pto_gen</code> assembles a Hugin .pto project file that is suitable as input for further tools such as the <code>cpfind</code> control-point generator, or for opening with the Hugin panorama <font SIZE="-1">GUI</font> itself. Functionality is similar to <code>match-n-shift</code>.</p>
+<p> <code>pto_gen</code> assembles a Hugin .pto project file that is suitable as input for further tools such as the <code>cpfind</code> control-point generator, or for opening with the Hugin panorama GUI itself. Functionality is similar to <code>match-n-shift</code>.</p>
 <h2>USAGE</h2>
 <pre>
    pto_gen *.jpg
 </pre>
-<p> This creates a project file from all jpg images, in the same folder as the first photo. The project file is named first_file-last_file.pto using the same convention as the Hugin <font SIZE="-1">GUI. </font></p>
+<p> This creates a project file from all jpg images, in the same folder as the first photo. The project file is named first_file-last_file.pto using the same convention as the Hugin GUI. </p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-o|&#8211;output</code> <i>file</i></dt>
-<dd> Output Hugin <font SIZE="-1">PTO</font> file.</dd>
+<dd> Output Hugin PTO file.</dd>
 <dt><code>-p|&#8211;projection</code> <i>num</i></dt>
 <dd> Projection type (default: 0)</dd>
 <dt><code>-f|&#8211;fov</code> <i>float</i></dt>

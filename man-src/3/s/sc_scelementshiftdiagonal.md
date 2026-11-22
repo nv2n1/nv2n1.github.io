@@ -13,11 +13,11 @@ description: "sc::SCElementShiftDiagonal –"
 <h3>Public Member Functions</h3>
 <p><code>SCElementShiftDiagonal</code> (double a) </p>
 <p> <code>SCElementShiftDiagonal</code> (<code>StateIn</code> &amp;) </p>
-<p> int <code>has_side_effects</code> ()<br />
- <i>By default this returns nonzero. </i><br />
- void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br />
- <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br />
- void <code>process</code> (<code>SCMatrixBlockIter</code> &amp;)<br />
+<p> int <code>has_side_effects</code> ()<br/>
+ <i>By default this returns nonzero. </i><br/>
+ void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br/>
+ <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br/>
+ void <code>process</code> (<code>SCMatrixBlockIter</code> &amp;)<br/>
  <i>This is the fallback routine to process blocks and is called by process_spec members that are not overridden. </i></p>
 <h2>Member Function Documentation</h2>
 <h3>int sc::SCElementShiftDiagonal::has_side_effects () [virtual]</h3>

@@ -151,7 +151,7 @@ Evaluate the END clause, if any.
 </tr>
 </table>
 </dd></dl>
-<p> <font SIZE="-1">Items in brackets are optional.</font> </p>
+<p> Items in brackets are optional. </p>
 <p> In the second form of the <code>for</code> statement and the <code>forr</code> statement, the variable <i>var</i> is set to each value used as an index in the specified array and then the associated <i>statement</i> is evaluated. For numeric and string indices, the indices are returned in increasing (decreasing) numeric or lexicographic order for <code>for</code> (<code>forr</code>, respectively). This can be used for sorting. </p>
 <p> Function definitions can only appear in the <code>BEGIN</code> clause. </p>
 <p> Expressions include the usual C expressions. String comparisons using <code>==</code> and <code>!=</code> treat the right hand operand as a pattern for the purpose of regular expression matching. Patterns use <i>ksh</i>(1) file match pattern syntax. (For simple string equality, use the <code>strcmp</code> function. </p>
@@ -522,25 +522,25 @@ gvpr &#8211; c &#8216;N[color==&#8221;blue&#8221;]{color = &#8220;red&#8221;}&#8
 <dl>
 <dt>
 </dt><dd>
-BEGIN<br />
-{<br />
-    int n, e;<br />
-    int tot_n = 0;<br />
-    int tot_e = 0;<br />
-}<br />
-BEG_G<br />
-{<br />
-    n = nNodes($G);<br />
-    e = nEdges($G);<br />
+BEGIN<br/>
+{<br/>
+    int n, e;<br/>
+    int tot_n = 0;<br/>
+    int tot_e = 0;<br/>
+}<br/>
+BEG_G<br/>
+{<br/>
+    n = nNodes($G);<br/>
+    e = nEdges($G);<br/>
     printf(&#8220;%d nodes %d edges %s
-&#8221;, n, e, $G.name);<br />
-    tot_n += n;<br />
-    tot_e += e;<br />
-}<br />
-END<br />
-{<br />
+&#8221;, n, e, $G.name);<br/>
+    tot_n += n;<br/>
+    tot_e += e;<br/>
+}<br/>
+END<br/>
+{<br/>
     printf(&#8220;%d nodes %d edges total
-&#8221;, tot_n, tot_e)<br />
+&#8221;, tot_n, tot_e)<br/>
 }
 </dd></dl>
 <p> Version of the program <code>gc</code>. </p>
@@ -555,42 +555,42 @@ END<br />
 <dl>
 <dt>
 </dt><dd>
-BEG_G<br />
-{<br />
-    graph_t g = graph(&#8220;merge&#8221;, &#8220;S&#8221;);<br />
-}<br />
-E<br />
-{<br />
-    node_t h = clone(g, $.head);<br />
-    node_t t = clone(g, $.tail);<br />
-    edge_t e = edge(t, h, &#8220;&#8221;);<br />
-    e.weight = e.weight + 1;<br />
-}<br />
-END_G<br />
-{<br />
-    $O = g;<br />
+BEG_G<br/>
+{<br/>
+    graph_t g = graph(&#8220;merge&#8221;, &#8220;S&#8221;);<br/>
+}<br/>
+E<br/>
+{<br/>
+    node_t h = clone(g, $.head);<br/>
+    node_t t = clone(g, $.tail);<br/>
+    edge_t e = edge(t, h, &#8220;&#8221;);<br/>
+    e.weight = e.weight + 1;<br/>
+}<br/>
+END_G<br/>
+{<br/>
+    $O = g;<br/>
 }
 </dd></dl>
 <p> Produces a strict version of the input graph, where the weight attribute of an edge indicates how many edges from the input graph the edge represents. </p>
 <dl>
 <dt>
 </dt><dd>
-BEGIN<br />
-{<br />
-    node_t n;<br />
-    int deg[]<br />
-}<br />
-E<br />
-{<br />
-    deg[head]++;<br />
-    deg[tail]++;<br />
-}<br />
-END_G<br />
-{<br />
-    for (deg[n]) {<br />
+BEGIN<br/>
+{<br/>
+    node_t n;<br/>
+    int deg[]<br/>
+}<br/>
+E<br/>
+{<br/>
+    deg[head]++;<br/>
+    deg[tail]++;<br/>
+}<br/>
+END_G<br/>
+{<br/>
+    for (deg[n]) {<br/>
         printf(&#8220;deg[%s] = %d
-&#8221;, n.name, deg[n]);<br />
-    }<br />
+&#8221;, n.name, deg[n]);<br/>
+    }<br/>
 }
 </dd></dl>
 <p> Computes the degrees of nodes with edges. </p>

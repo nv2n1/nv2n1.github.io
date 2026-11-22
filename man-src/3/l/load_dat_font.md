@@ -30,10 +30,10 @@ char *names[] = {"FONT_1_DATA", "FONT_1_PALETTE"}
 f = load_dat_font("fonts.dat", pal, names);
 </code></pre>
 <p> If instead you want to load the second font, FONT_2, from the datafile, you would use: </p>
-<p>FONT *f;<br />
-PALETTE pal;<br />
+<p>FONT *f;<br/>
+PALETTE pal;<br/>
 char *names[] = {&#8220;FONT_2_DATA&#8221;, &#8220;FONT_2_PALETTE&#8221;}</p>
-<p>f = load_dat_font(&#8220;fonts.dat&#8221;, pal, names);<br />
+<p>f = load_dat_font(&#8220;fonts.dat&#8221;, pal, names);<br/>
  If you want to load the third font, but not bother with a palette, use: </p>
 <pre><code>
 FONT *f;

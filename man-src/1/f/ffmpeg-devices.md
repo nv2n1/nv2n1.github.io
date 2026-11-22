@@ -14,25 +14,25 @@ description: "ffmpeg-devices – FFmpeg devices"
 <h2>DEVICE OPTIONS</h2>
 <p> The libavdevice library provides the same interface as libavformat. Namely, an input device is considered like a demuxer, and an output device like a muxer, and the interface and generic device options are the same provided by libavformat (see the ffmpeg-formats manual). </p>
 <p> In addition each input or output device may support so-called private options, which are specific for that component. </p>
-<p> Options may be set by specifying &#8211;<i>option</i> <i>value</i> in the FFmpeg tools, or by setting the value explicitly in the device <tt>&quot;AVFormatContext&quot;</tt> options or using the <i>libavutil/opt.h</i> <font SIZE="-1">API</font> for programmatic use.</p>
+<p> Options may be set by specifying &#8211;<i>option</i> <i>value</i> in the FFmpeg tools, or by setting the value explicitly in the device <tt>&quot;AVFormatContext&quot;</tt> options or using the <i>libavutil/opt.h</i> API for programmatic use.</p>
 <h2>INPUT DEVICES</h2>
 <p> Input devices are configured elements in FFmpeg which enable accessing the data coming from a multimedia device attached to your system. </p>
 <p> When you configure your FFmpeg build, all the supported input devices are enabled by default. You can list all available ones using the configure option &#8220;&#8211;list-indevs&#8221;. </p>
-<p> You can disable all the input devices using the configure option &#8220;&#8211;disable-indevs&#8221;, and selectively enable an input device using the option &quot;&#8211;enable-indev=<i></i><font SIZE="-1"><i>INDEV</i></font><i></i>&#8220;, or you can disable a particular input device using the option &#8221;&#8211;disable-indev=<i></i><font SIZE="-1"><i>INDEV</i></font><i></i>&quot;. </p>
+<p> You can disable all the input devices using the configure option &#8220;&#8211;disable-indevs&#8221;, and selectively enable an input device using the option &quot;&#8211;enable-indev=<i></i><i>INDEV</i><i></i>&#8220;, or you can disable a particular input device using the option &#8221;&#8211;disable-indev=<i></i><i>INDEV</i><i></i>&quot;. </p>
 <p> The option &#8220;-devices&#8221; of the ff* tools will display the list of supported input devices. </p>
 <p> A description of the currently available input devices follows.</p>
 <h3>alsa</h3>
-<p> <font SIZE="-1">ALSA</font> (Advanced Linux Sound Architecture) input device. </p>
+<p> ALSA (Advanced Linux Sound Architecture) input device. </p>
 <p> To enable this input device during configuration you need libasound installed on your system. </p>
-<p> This device allows capturing from an <font SIZE="-1">ALSA</font> device. The name of the device to capture has to be an <font SIZE="-1">ALSA</font> card identifier. </p>
-<p> An <font SIZE="-1">ALSA</font> identifier has the syntax: </p>
+<p> This device allows capturing from an ALSA device. The name of the device to capture has to be an ALSA card identifier. </p>
+<p> An ALSA identifier has the syntax: </p>
 <pre><code>
 hw : &lt;CARD&gt;[, &lt;DEV&gt;[, &lt;SUBDEV&gt;]]
 </code></pre>
-<p> where the <i></i><font SIZE="-1"><i>DEV</i></font><i></i> and <i></i><font SIZE="-1"><i>SUBDEV</i></font><i></i> components are optional. </p>
-<p> The three arguments (in order: <i></i><font SIZE="-1"><i>CARD</i></font><i></i>,<i></i><font SIZE="-1"><i>DEV</i></font><i></i>,<i></i><font SIZE="-1"><i>SUBDEV</i></font><i></i>) specify card number or identifier, device number and subdevice number (-1 means any). </p>
+<p> where the <i></i><i>DEV</i><i></i> and <i></i><i>SUBDEV</i><i></i> components are optional. </p>
+<p> The three arguments (in order: <i></i><i>CARD</i><i></i>,<i></i><i>DEV</i><i></i>,<i></i><i>SUBDEV</i><i></i>) specify card number or identifier, device number and subdevice number (-1 means any). </p>
 <p> To see the list of cards currently recognized by your system check the files <i>/proc/asound/cards</i> and <i>/proc/asound/devices</i>. </p>
-<p> For example to capture with <code>ffmpeg</code> from an <font SIZE="-1">ALSA</font> device with card id 0, you may run the command: </p>
+<p> For example to capture with <code>ffmpeg</code> from an ALSA device with card id 0, you may run the command: </p>
 <pre>
         ffmpeg -f alsa -i hw:0 alsaout.wav
 </pre>
@@ -45,8 +45,8 @@ hw : &lt;CARD&gt;[, &lt;DEV&gt;[, &lt;SUBDEV&gt;]]
 <dd> Set the number of channels. Default is 2.</dd></dl>
 <h3>android_camera</h3>
 <p> Android camera input device. </p>
-<p> This input devices uses the Android Camera2 <font SIZE="-1">NDK API</font> which is available on devices with <font SIZE="-1">API</font> level 24+. The availability of android_camera is autodetected during configuration. </p>
-<p> This device allows capturing from all cameras on an Android device, which are integrated into the Camera2 <font SIZE="-1">NDK API.</font> </p>
+<p> This input devices uses the Android Camera2 NDK API which is available on devices with API level 24+. The availability of android_camera is autodetected during configuration. </p>
+<p> This device allows capturing from all cameras on an Android device, which are integrated into the Camera2 NDK API. </p>
 <p> The available cameras are enumerated internally and can be selected with the <i>camera_index</i> parameter. The input file string is discarded. </p>
 <p> Generally the back facing camera has index 0 while the front facing camera has index 1. </p>
 <p> <i>Options</i></p>
@@ -61,7 +61,7 @@ hw : &lt;CARD&gt;[, &lt;DEV&gt;[, &lt;SUBDEV&gt;]]
 <dd> Set the maximum number of frames to buffer. Default is 5.</dd></dl>
 <h3>avfoundation</h3>
 <p> AVFoundation input device. </p>
-<p> AVFoundation is the currently recommended framework by Apple for streamgrabbing on <font SIZE="-1">OSX</font> &gt;= 10.7 as well as on iOS. </p>
+<p> AVFoundation is the currently recommended framework by Apple for streamgrabbing on OSX &gt;= 10.7 as well as on iOS. </p>
 <p> The input filename has to be given in the following syntax: </p>
 <p>&#8211; i &#8220;[[VIDEO]:[AUDIO]]&#8221;</p>
 <p> The first entry selects the video input while the latter selects the audio input. The stream has to be specified by the device name or the device index as shown by the device list. Alternatively, the video and/or audio input device can be chosen by index using the </p>
@@ -85,13 +85,13 @@ hw : &lt;CARD&gt;[, &lt;DEV&gt;[, &lt;SUBDEV&gt;]]
 <dl>
 <dt><code>-list_devices &lt;TRUE|FALSE&gt;</code></dt>
 <dd> If set to true, a list of all available input devices is given showing all device names and indices.</dd>
-<dt><code>-video_device_index &lt;</code><font SIZE="-1"><code>INDEX</code></font><code>&gt;</code></dt>
+<dt><code>-video_device_index &lt;</code><code>INDEX</code><code>&gt;</code></dt>
 <dd> Specify the video device by its index. Overrides anything given in the input filename.</dd>
-<dt><code>-audio_device_index &lt;</code><font SIZE="-1"><code>INDEX</code></font><code>&gt;</code></dt>
+<dt><code>-audio_device_index &lt;</code><code>INDEX</code><code>&gt;</code></dt>
 <dd> Specify the audio device by its index. Overrides anything given in the input filename.</dd>
-<dt><code>-pixel_format &lt;</code><font SIZE="-1"><code>FORMAT</code></font><code>&gt;</code></dt>
-<dd> Request the video device to use a specific pixel format. If the specified format is not supported, a list of available formats is given and the first one in this list is used instead. Available pixel formats are: <tt>&quot;monob, rgb555be, rgb555le, rgb565be, rgb565le, rgb24, bgr24, 0rgb, bgr0, 0bgr, rgb0,<br />
-&nbsp;bgr48be, uyvy422, yuva444p, yuva444p16le, yuv444p, yuv422p16, yuv422p10, yuv444p10,<br />
+<dt><code>-pixel_format &lt;</code><code>FORMAT</code><code>&gt;</code></dt>
+<dd> Request the video device to use a specific pixel format. If the specified format is not supported, a list of available formats is given and the first one in this list is used instead. Available pixel formats are: <tt>&quot;monob, rgb555be, rgb555le, rgb565be, rgb565le, rgb24, bgr24, 0rgb, bgr0, 0bgr, rgb0,<br/>
+&nbsp;bgr48be, uyvy422, yuva444p, yuva444p16le, yuv444p, yuv422p16, yuv422p10, yuv444p10,<br/>
 &nbsp;yuv420p, nv12, yuyv422, gray&quot;</tt></dd>
 <dt><code>-framerate</code></dt>
 <dd> Set the grabbing frame rate. Default is <tt>&quot;ntsc&quot;</tt>, corresponding to a frame rate of <tt>&quot;30000/1001&quot;</tt>.</dd>
@@ -102,7 +102,7 @@ hw : &lt;CARD&gt;[, &lt;DEV&gt;[, &lt;SUBDEV&gt;]]
 <dt><code>-capture_mouse_clicks</code></dt>
 <dd> Capture the screen mouse clicks. Default is 0.</dd>
 <dt><code>-capture_raw_data</code></dt>
-<dd> Capture the raw device data. Default is 0. Using this option may result in receiving the underlying data delivered to the AVFoundation framework. E.g. for muxed devices that sends raw <font SIZE="-1">DV</font> data to the framework (like tape-based camcorders), setting this option to false results in extracted video frames captured in the designated pixel format only. Setting this option to true results in receiving the raw <font SIZE="-1">DV</font> stream untouched.</dd></dl>
+<dd> Capture the raw device data. Default is 0. Using this option may result in receiving the underlying data delivered to the AVFoundation framework. E.g. for muxed devices that sends raw DV data to the framework (like tape-based camcorders), setting this option to false results in extracted video frames captured in the designated pixel format only. Setting this option to true results in receiving the raw DV stream untouched.</dd></dl>
 <p> <i>Examples</i></p>
 <dl>
 <dt>&bull;</dt>
@@ -126,13 +126,13 @@ hw : &lt;CARD&gt;[, &lt;DEV&gt;[, &lt;SUBDEV&gt;]]
         $ ffmpeg -f avfoundation -pixel_format bgr0 -i &quot;default:none&quot; out.avi
 </pre>
 <dt>&bull;</dt>
-<dd> Record raw <font SIZE="-1">DV</font> data from a suitable input device and write the output into out.dv: </dd>
+<dd> Record raw DV data from a suitable input device and write the output into out.dv: </dd>
 <pre>
         $ ffmpeg -f avfoundation -capture_raw_data true -i &quot;zr100:none&quot; out.dv
 </pre>
 </dl>
 <h3>bktr</h3>
-<p> <font SIZE="-1">BSD</font> video input device. </p>
+<p> BSD video input device. </p>
 <p> <i>Options</i></p>
 <dl>
 <dt><code>framerate</code></dt>
@@ -161,7 +161,7 @@ hw : &lt;CARD&gt;[, &lt;DEV&gt;[, &lt;SUBDEV&gt;]]
 </dl>
 <h3>decklink</h3>
 <p> The decklink input device provides capture capabilities for Blackmagic DeckLink devices. </p>
-<p> To enable this input device, you need the Blackmagic DeckLink <font SIZE="-1">SDK</font> and you need to configure with the appropriate <tt>&quot;--extra-cflags&quot;</tt> and <tt>&quot;--extra-ldflags&quot;</tt>. On Windows, you need to run the <font SIZE="-1">IDL</font> files through <code>widl</code>. </p>
+<p> To enable this input device, you need the Blackmagic DeckLink SDK and you need to configure with the appropriate <tt>&quot;--extra-cflags&quot;</tt> and <tt>&quot;--extra-ldflags&quot;</tt>. On Windows, you need to run the IDL files through <code>widl</code>. </p>
 <p> DeckLink is very picky about the formats it supports. Pixel format of the input can be set with <code>raw_format</code>. Framerate and video size must be determined for your device with <code>-list_formats 1</code>. Audio sample rate is always 48 kHz and the number of channels can be 2, 8 or 16. Note that all audio channels are bundled in one single audio track. </p>
 <p> <i>Options</i></p>
 <dl>
@@ -176,31 +176,31 @@ hw : &lt;CARD&gt;[, &lt;DEV&gt;[, &lt;SUBDEV&gt;]]
 <dl>
 <dl>
 <dt><code>auto</code></dt>
-<dd> This is the default which means 8-bit <font SIZE="-1">YUV 422</font> or 8-bit <font SIZE="-1">ARGB</font> if format autodetection is used, 8-bit <font SIZE="-1">YUV 422</font> otherwise.</dd>
+<dd> This is the default which means 8-bit YUV 422 or 8-bit ARGB if format autodetection is used, 8-bit YUV 422 otherwise.</dd>
 <dt><code>uyvy422</code></dt>
-<dd> 8-bit <font SIZE="-1">YUV 422.</font></dd>
+<dd> 8-bit YUV 422.</dd>
 <dt><code>yuv422p10</code></dt>
-<dd> 10-bit <font SIZE="-1">YUV 422.</font></dd>
+<dd> 10-bit YUV 422.</dd>
 <dt><code>argb</code></dt>
-<dd> 8-bit <font SIZE="-1">RGB.</font></dd>
+<dd> 8-bit RGB.</dd>
 <dt><code>bgra</code></dt>
-<dd> 8-bit <font SIZE="-1">RGB.</font></dd>
+<dd> 8-bit RGB.</dd>
 <dt><code>rgb10</code></dt>
-<dd> 10-bit <font SIZE="-1">RGB.</font></dd></dl>
+<dd> 10-bit RGB.</dd></dl>
 </dl>
 <dl>
 </dl>
 <dt><code>teletext_lines</code></dt>
-<dd> If set to nonzero, an additional teletext stream will be captured from the vertical ancillary data. Both <font SIZE="-1">SD PAL</font> (576i) and <font SIZE="-1">HD</font> (1080i or 1080p) sources are supported. In case of <font SIZE="-1">HD</font> sources, <font SIZE="-1">OP47</font> packets are decoded. </dd>
-<p> This option is a bitmask of the <font SIZE="-1">SD PAL VBI</font> lines captured, specifically lines 6 to 22, and lines 318 to 335. Line 6 is the <font SIZE="-1">LSB</font> in the mask. Selected lines which do not contain teletext information will be ignored. You can use the special <code>all</code> constant to select all possible lines, or <code>standard</code> to skip lines 6, 318 and 319, which are not compatible with all receivers. </p>
-<p> For <font SIZE="-1">SD</font> sources, ffmpeg needs to be compiled with <tt>&quot;--enable-libzvbi&quot;</tt>. For <font SIZE="-1">HD</font> sources, on older (pre-4K) DeckLink card models you have to capture in 10 bit mode.</p>
+<dd> If set to nonzero, an additional teletext stream will be captured from the vertical ancillary data. Both SD PAL (576i) and HD (1080i or 1080p) sources are supported. In case of HD sources, OP47 packets are decoded. </dd>
+<p> This option is a bitmask of the SD PAL VBI lines captured, specifically lines 6 to 22, and lines 318 to 335. Line 6 is the LSB in the mask. Selected lines which do not contain teletext information will be ignored. You can use the special <code>all</code> constant to select all possible lines, or <code>standard</code> to skip lines 6, 318 and 319, which are not compatible with all receivers. </p>
+<p> For SD sources, ffmpeg needs to be compiled with <tt>&quot;--enable-libzvbi&quot;</tt>. For HD sources, on older (pre-4K) DeckLink card models you have to capture in 10 bit mode.</p>
 <dt><code>channels</code></dt>
 <dd> Defines number of audio channels to capture. Must be <code>2</code>, <code>8</code> or <code>16</code>. Defaults to <code>2</code>.</dd>
 <dt><code>duplex_mode</code></dt>
 <dd> Sets the decklink device duplex mode. Must be <code>unset</code>, <code>half</code> or <code>full</code>. Defaults to <code>unset</code>.</dd>
 <dt><code>timecode_format</code></dt>
 <dd> Timecode type to include in the frame and video stream metadata. Must be <code>none</code>, <code>rp188vitc</code>, <code>rp188vitc2</code>, <code>rp188ltc</code>, <code>rp188hfr</code>, <code>rp188any</code>, <code>vitc</code>, <code>vitc2</code>, or <code>serial</code>. Defaults to <code>none</code> (not included). </dd>
-<p> In order to properly support 50/60 fps timecodes, the ordering of the queried timecode types for <code>rp188any</code> is <font SIZE="-1">HFR, VITC1, VITC2</font> and <font SIZE="-1">LTC</font> for &gt;30 fps content. Note that this is slightly different to the ordering used by the DeckLink <font SIZE="-1">API,</font> which is <font SIZE="-1">HFR, VITC1, LTC, VITC2.</font></p>
+<p> In order to properly support 50/60 fps timecodes, the ordering of the queried timecode types for <code>rp188any</code> is HFR, VITC1, VITC2 and LTC for &gt;30 fps content. Note that this is slightly different to the ordering used by the DeckLink API, which is HFR, VITC1, LTC, VITC2.</p>
 <dt><code>video_input</code></dt>
 <dd> Sets the video input source. Must be <code>unset</code>, <code>sdi</code>, <code>hdmi</code>, <code>optical_sdi</code>, <code>component</code>, <code>composite</code> or <code>s_video</code>. Defaults to <code>unset</code>.</dd>
 <dt><code>audio_input</code></dt>
@@ -218,11 +218,11 @@ hw : &lt;CARD&gt;[, &lt;DEV&gt;[, &lt;SUBDEV&gt;]]
 <dt><code>decklink_copyts</code></dt>
 <dd> If set to <code>true</code>, timestamps are forwarded as they are without removing the initial offset. Defaults to <code>false</code>.</dd>
 <dt><code>timestamp_align</code></dt>
-<dd> Capture start time alignment in seconds. If set to nonzero, input frames are dropped till the system timestamp aligns with configured value. Alignment difference of up to one frame duration is tolerated. This is useful for maintaining input synchronization across N different hardware devices deployed for &#8216;N-way&#8217; redundancy. The system time of different hardware devices should be synchronized with protocols such as <font SIZE="-1">NTP</font> or <font SIZE="-1">PTP,</font> before using this option. Note that this method is not foolproof. In some border cases input synchronization may not happen due to thread scheduling jitters in the <font SIZE="-1">OS.</font> Either sync could go wrong by 1 frame or in a rarer case <code>timestamp_align</code> seconds. Defaults to <code>0</code>.</dd>
+<dd> Capture start time alignment in seconds. If set to nonzero, input frames are dropped till the system timestamp aligns with configured value. Alignment difference of up to one frame duration is tolerated. This is useful for maintaining input synchronization across N different hardware devices deployed for &#8216;N-way&#8217; redundancy. The system time of different hardware devices should be synchronized with protocols such as NTP or PTP, before using this option. Note that this method is not foolproof. In some border cases input synchronization may not happen due to thread scheduling jitters in the OS. Either sync could go wrong by 1 frame or in a rarer case <code>timestamp_align</code> seconds. Defaults to <code>0</code>.</dd>
 <dt><code>wait_for_tc (</code><i>bool</i><code>)</code></dt>
 <dd> Drop frames till a frame with timecode is received. Sometimes serial timecode isn&#8217;t received with the first input frame. If that happens, the stored stream timecode will be inaccurate. If this option is set to <code>true</code>, input frames are dropped till a frame with timecode is received. Option <i>timecode_format</i> must be specified. Defaults to <code>false</code>.</dd>
 <dt><code>enable_klv(</code><i>bool</i><code>)</code></dt>
-<dd> If set to <code>true</code>, extracts <font SIZE="-1">KLV</font> data from <font SIZE="-1">VANC</font> and outputs <font SIZE="-1">KLV</font> packets. <font SIZE="-1">KLV VANC</font> packets are joined based on <font SIZE="-1">MID</font> and <font SIZE="-1">PSC</font> fields and aggregated into one <font SIZE="-1">KLV</font> packet. Defaults to <code>false</code>.</dd></dl>
+<dd> If set to <code>true</code>, extracts KLV data from VANC and outputs KLV packets. KLV VANC packets are joined based on MID and PSC fields and aggregated into one KLV packet. Defaults to <code>false</code>.</dd></dl>
 <p> <i>Examples</i></p>
 <dl>
 <dt>&bull;</dt>
@@ -257,7 +257,7 @@ hw : &lt;CARD&gt;[, &lt;DEV&gt;[, &lt;SUBDEV&gt;]]
 <p> Multiple devices may be opened as separate inputs, but they may also be opened on the same input, which should improve synchronism between them. </p>
 <p> The input name should be in the format: </p>
 <p>        &lt;TYPE&gt;=&lt;NAME&gt;[:&lt;TYPE&gt;=&lt;NAME&gt;]</p>
-<p> where <i></i><font SIZE="-1"><i>TYPE</i></font><i></i> can be either <i>audio</i> or <i>video</i>, and <i></i><font SIZE="-1"><i>NAME</i></font><i></i> is the device&#8217;s name or alternative name.. </p>
+<p> where <i></i><i>TYPE</i><i></i> can be either <i>audio</i> or <i>video</i>, and <i></i><i>NAME</i><i></i> is the device&#8217;s name or alternative name.. </p>
 <p> <i>Options</i> </p>
 <p> If no options are specified, the device&#8217;s defaults are used. If the device does not support the requested options, it will fail to open.</p>
 <dl>
@@ -292,7 +292,7 @@ hw : &lt;CARD&gt;[, &lt;DEV&gt;[, &lt;SUBDEV&gt;]]
 <dt><code>crossbar_audio_input_pin_number</code></dt>
 <dd> Select audio input pin number for crossbar device. This will be routed to the crossbar device&#8217;s Audio Decoder output pin. Note that changing this value can affect future invocations (sets a new default) until system reboot occurs.</dd>
 <dt><code>show_video_device_dialog</code></dt>
-<dd> If set to <code>true</code>, before capture starts, popup a display dialog to the end user, allowing them to change video filter properties and configurations manually. Note that for crossbar devices, adjusting values in this dialog may be needed at times to toggle between <font SIZE="-1">PAL</font> (25 fps) and <font SIZE="-1">NTSC</font> (29.97) input frame rates, sizes, interlacing, etc. Changing these values can enable different scan rates/frame rates and avoiding green bars at the bottom, flickering scan lines, etc. Note that with some devices, changing these properties can also affect future invocations (sets new defaults) until system reboot occurs.</dd>
+<dd> If set to <code>true</code>, before capture starts, popup a display dialog to the end user, allowing them to change video filter properties and configurations manually. Note that for crossbar devices, adjusting values in this dialog may be needed at times to toggle between PAL (25 fps) and NTSC (29.97) input frame rates, sizes, interlacing, etc. Changing these values can enable different scan rates/frame rates and avoiding green bars at the bottom, flickering scan lines, etc. Note that with some devices, changing these properties can also affect future invocations (sets new defaults) until system reboot occurs.</dd>
 <dt><code>show_audio_device_dialog</code></dt>
 <dd> If set to <code>true</code>, before capture starts, popup a display dialog to the end user, allowing them to change audio filter properties and configurations manually.</dd>
 <dt><code>show_video_crossbar_connection_dialog</code></dt>
@@ -300,9 +300,9 @@ hw : &lt;CARD&gt;[, &lt;DEV&gt;[, &lt;SUBDEV&gt;]]
 <dt><code>show_audio_crossbar_connection_dialog</code></dt>
 <dd> If set to <code>true</code>, before capture starts, popup a display dialog to the end user, allowing them to manually modify crossbar pin routings, when it opens an audio device.</dd>
 <dt><code>show_analog_tv_tuner_dialog</code></dt>
-<dd> If set to <code>true</code>, before capture starts, popup a display dialog to the end user, allowing them to manually modify <font SIZE="-1">TV</font> channels and frequencies.</dd>
+<dd> If set to <code>true</code>, before capture starts, popup a display dialog to the end user, allowing them to manually modify TV channels and frequencies.</dd>
 <dt><code>show_analog_tv_tuner_audio_dialog</code></dt>
-<dd> If set to <code>true</code>, before capture starts, popup a display dialog to the end user, allowing them to manually modify <font SIZE="-1">TV</font> audio (like mono vs. stereo, Language A,B or C).</dd>
+<dd> If set to <code>true</code>, before capture starts, popup a display dialog to the end user, allowing them to manually modify TV audio (like mono vs. stereo, Language A,B or C).</dd>
 <dt><code>audio_device_load</code></dt>
 <dd> Load an audio capture filter device from file instead of searching it by name. It may load additional parameters too, if the filter supports the serialization of its properties to. To use this an audio capture source has to be specified, but it can be anything even fake one.</dd>
 <dt><code>audio_device_save</code></dt>
@@ -412,39 +412,39 @@ hw : &lt;CARD&gt;[, &lt;DEV&gt;[, &lt;SUBDEV&gt;]]
 <dd> When capturing a region with <i>video_size</i>, set the distance from the top edge of the screen or desktop. </dd>
 <p> Note that the offset calculation is from the top left corner of the primary monitor on Windows. If you have a monitor positioned above your primary monitor, you will need to use a negative <i>offset_y</i> value to move the region to that monitor.</dl>
 <h3>iec61883</h3>
-<p> FireWire <font SIZE="-1">DV/HDV</font> input device using libiec61883. </p>
+<p> FireWire DV/HDV input device using libiec61883. </p>
 <p> To enable this input device, you need libiec61883, libraw1394 and libavc1394 installed on your system. Use the configure option <tt>&quot;--enable-libiec61883&quot;</tt> to compile with the device enabled. </p>
-<p> The iec61883 capture device supports capturing from a video device connected via <font SIZE="-1">IEEE1394</font> (FireWire), using libiec61883 and the new Linux FireWire stack (juju). This is the default <font SIZE="-1">DV/HDV</font> input method in Linux Kernel 2.6.37 and later, since the old FireWire stack was removed. </p>
+<p> The iec61883 capture device supports capturing from a video device connected via IEEE1394 (FireWire), using libiec61883 and the new Linux FireWire stack (juju). This is the default DV/HDV input method in Linux Kernel 2.6.37 and later, since the old FireWire stack was removed. </p>
 <p> Specify the FireWire port to be used as input file, or &#8220;auto&#8221; to choose the first port connected. </p>
 <p> <i>Options</i></p>
 <dl>
 <dt><code>dvtype</code></dt>
-<dd> Override autodetection of <font SIZE="-1">DV/HDV.</font> This should only be used if auto detection does not work, or if usage of a different device type should be prohibited. Treating a <font SIZE="-1">DV</font> device as <font SIZE="-1">HDV</font> (or vice versa) will not work and result in undefined behavior. The values <code>auto</code>, <code>dv</code> and <code>hdv</code> are supported.</dd>
+<dd> Override autodetection of DV/HDV. This should only be used if auto detection does not work, or if usage of a different device type should be prohibited. Treating a DV device as HDV (or vice versa) will not work and result in undefined behavior. The values <code>auto</code>, <code>dv</code> and <code>hdv</code> are supported.</dd>
 <dt><code>dvbuffer</code></dt>
-<dd> Set maximum size of buffer for incoming data, in frames. For <font SIZE="-1">DV,</font> this is an exact value. For <font SIZE="-1">HDV,</font> it is not frame exact, since <font SIZE="-1">HDV</font> does not have a fixed frame size.</dd>
+<dd> Set maximum size of buffer for incoming data, in frames. For DV, this is an exact value. For HDV, it is not frame exact, since HDV does not have a fixed frame size.</dd>
 <dt><code>dvguid</code></dt>
-<dd> Select the capture device by specifying its <font SIZE="-1">GUID.</font> Capturing will only be performed from the specified device and fails if no device with the given <font SIZE="-1">GUID</font> is found. This is useful to select the input if multiple devices are connected at the same time. Look at /sys/bus/firewire/devices to find out the GUIDs.</dd></dl>
+<dd> Select the capture device by specifying its GUID. Capturing will only be performed from the specified device and fails if no device with the given GUID is found. This is useful to select the input if multiple devices are connected at the same time. Look at /sys/bus/firewire/devices to find out the GUIDs.</dd></dl>
 <p> <i>Examples</i></p>
 <dl>
 <dt>&bull;</dt>
-<dd> Grab and show the input of a FireWire <font SIZE="-1">DV/HDV</font> device. </dd>
+<dd> Grab and show the input of a FireWire DV/HDV device. </dd>
 <pre>
         ffplay -f iec61883 -i auto
 </pre>
 <dt>&bull;</dt>
-<dd> Grab and record the input of a FireWire <font SIZE="-1">DV/HDV</font> device, using a packet buffer of 100000 packets if the source is <font SIZE="-1">HDV.</font> </dd>
+<dd> Grab and record the input of a FireWire DV/HDV device, using a packet buffer of 100000 packets if the source is HDV. </dd>
 <pre>
         ffmpeg -f iec61883 -i auto -dvbuffer 100000 out.mpg
 </pre>
 </dl>
 <h3>jack</h3>
-<p> <font SIZE="-1">JACK</font> input device. </p>
+<p> JACK input device. </p>
 <p> To enable this input device during configuration you need libjack installed on your system. </p>
-<p> A <font SIZE="-1">JACK</font> input device creates one or more <font SIZE="-1">JACK</font> writable clients, one for each audio channel, with name <i>client_name</i>:input_<i>N</i>, where <i>client_name</i> is the name provided by the application, and <i>N</i> is a number which identifies the channel. Each writable client will send the acquired data to the FFmpeg input device. </p>
-<p> Once you have created one or more <font SIZE="-1">JACK</font> readable clients, you need to connect them to one or more <font SIZE="-1">JACK</font> writable clients. </p>
-<p> To connect or disconnect <font SIZE="-1">JACK</font> clients you can use the <code>jack_connect</code> and <code>jack_disconnect</code> programs, or do it through a graphical interface, for example with <code>qjackctl</code>. </p>
-<p> To list the <font SIZE="-1">JACK</font> clients and their properties you can invoke the command <code>jack_lsp</code>. </p>
-<p> Follows an example which shows how to capture a <font SIZE="-1">JACK</font> readable client with <code>ffmpeg</code>. </p>
+<p> A JACK input device creates one or more JACK writable clients, one for each audio channel, with name <i>client_name</i>:input_<i>N</i>, where <i>client_name</i> is the name provided by the application, and <i>N</i> is a number which identifies the channel. Each writable client will send the acquired data to the FFmpeg input device. </p>
+<p> Once you have created one or more JACK readable clients, you need to connect them to one or more JACK writable clients. </p>
+<p> To connect or disconnect JACK clients you can use the <code>jack_connect</code> and <code>jack_disconnect</code> programs, or do it through a graphical interface, for example with <code>qjackctl</code>. </p>
+<p> To list the JACK clients and their properties you can invoke the command <code>jack_lsp</code>. </p>
+<p> Follows an example which shows how to capture a JACK readable client with <code>ffmpeg</code>. </p>
 <pre>
         # Create a JACK writable client with name &quot;ffmpeg&quot;.
         $ ffmpeg -f jack -i ffmpeg -y out.wav
@@ -467,22 +467,22 @@ hw : &lt;CARD&gt;[, &lt;DEV&gt;[, &lt;SUBDEV&gt;]]
 <dt><code>channels</code></dt>
 <dd> Set the number of channels. Default is 2.</dd></dl>
 <h3>kmsgrab</h3>
-<p> <font SIZE="-1">KMS</font> video input device. </p>
-<p> Captures the <font SIZE="-1">KMS</font> scanout framebuffer associated with a specified <font SIZE="-1">CRTC</font> or plane as a <font SIZE="-1">DRM</font> object that can be passed to other hardware functions. </p>
-<p> Requires either <font SIZE="-1">DRM</font> master or <font SIZE="-1">CAP_SYS_ADMIN</font> to run. </p>
+<p> KMS video input device. </p>
+<p> Captures the KMS scanout framebuffer associated with a specified CRTC or plane as a DRM object that can be passed to other hardware functions. </p>
+<p> Requires either DRM master or CAP_SYS_ADMIN to run. </p>
 <p> If you don&#8217;t understand what all of that means, you probably don&#8217;t want this. Look at <code>x11grab</code> instead. </p>
 <p> <i>Options</i></p>
 <dl>
 <dt><code>device</code></dt>
-<dd> <font SIZE="-1">DRM</font> device to capture on. Defaults to <code>/dev/dri/card0</code>.</dd>
+<dd> DRM device to capture on. Defaults to <code>/dev/dri/card0</code>.</dd>
 <dt><code>format</code></dt>
 <dd> Pixel format of the framebuffer. This can be autodetected if you are running Linux 5.7 or later, but needs to be provided for earlier versions. Defaults to <code>bgr0</code>, which is the most common format used by the Linux console and Xorg X server.</dd>
 <dt><code>format_modifier</code></dt>
 <dd> Format modifier to signal on output frames. This is necessary to import correctly into some APIs. It can be autodetected if you are running Linux 5.7 or later, but will need to be provided explicitly when needed in earlier versions. See the libdrm documentation for possible values.</dd>
 <dt><code>crtc_id</code></dt>
-<dd> <font SIZE="-1">KMS CRTC ID</font> to define the capture source. The first active plane on the given <font SIZE="-1">CRTC</font> will be used.</dd>
+<dd> KMS CRTC ID to define the capture source. The first active plane on the given CRTC will be used.</dd>
 <dt><code>plane_id</code></dt>
-<dd> <font SIZE="-1">KMS</font> plane <font SIZE="-1">ID</font> to define the capture source. Defaults to the first active plane found if neither <code>crtc_id</code> nor <code>plane_id</code> are specified.</dd>
+<dd> KMS plane ID to define the capture source. Defaults to the first active plane found if neither <code>crtc_id</code> nor <code>plane_id</code> are specified.</dd>
 <dt><code>framerate</code></dt>
 <dd> Framerate to capture at. This is not synchronised to any page flipping or framebuffer changes &#8211; it just defines the interval at which the framebuffer is sampled. Sampling faster than the framebuffer update rate will generate independent frames with the same content. Defaults to <tt>30</tt>.</dd></dl>
 <p> <i>Examples</i></p>
@@ -493,7 +493,7 @@ hw : &lt;CARD&gt;[, &lt;DEV&gt;[, &lt;SUBDEV&gt;]]
         ffmpeg -f kmsgrab -i - -vf 'hwdownload,format=bgr0' output.mp4
 </pre>
 <dt>&bull;</dt>
-<dd> Capture from <font SIZE="-1">CRTC ID 42</font> at 60fps, map the result to <font SIZE="-1">VAAPI,</font> convert to <font SIZE="-1">NV12</font> and encode as H.264. </dd>
+<dd> Capture from CRTC ID 42 at 60fps, map the result to VAAPI, convert to NV12 and encode as H.264. </dd>
 <pre>
         ffmpeg -crtc_id 42 -framerate 60 -f kmsgrab -i - -vf 'hwmap=derive_device=vaapi,scale_vaapi=w=1920:h=1080:format=nv12' -c:v h264_vaapi output.mp4
 </pre>
@@ -511,7 +511,7 @@ hw : &lt;CARD&gt;[, &lt;DEV&gt;[, &lt;SUBDEV&gt;]]
 <dl>
 <dt><code>graph</code></dt>
 <dd> Specify the filtergraph to use as input. Each video open output must be labelled by a unique string of the form &quot;out<i>N</i>&quot;, where <i>N</i> is a number starting from 0 corresponding to the mapped input stream generated by the device. The first unlabelled output is automatically assigned to the &#8220;out0&#8221; label, but all the others need to be specified explicitly. </dd>
-<p> The suffix &#8220;+subcc&#8221; can be appended to the output label to create an extra stream with the closed captions packets attached to that output (experimental; only for <font SIZE="-1">EIA-608 / CEA-708</font> for now). The subcc streams are created after all the normal streams, in the order of the corresponding stream. For example, if there is &#8220;out19+subcc&#8221;, &#8220;out7+subcc&#8221; and up to &#8220;out42&#8221;, the stream #43 is subcc for stream #7 and stream #44 is subcc for stream #19. </p>
+<p> The suffix &#8220;+subcc&#8221; can be appended to the output label to create an extra stream with the closed captions packets attached to that output (experimental; only for EIA-608 / CEA-708 for now). The subcc streams are created after all the normal streams, in the order of the corresponding stream. For example, if there is &#8220;out19+subcc&#8221;, &#8220;out7+subcc&#8221; and up to &#8220;out42&#8221;, the stream #43 is subcc for stream #7 and stream #44 is subcc for stream #19. </p>
 <p> If not specified defaults to the filename specified for the input device.</p>
 <dt><code>graph_file</code></dt>
 <dd> Set the filename of the filtergraph to be read and sent to the other filters. Syntax of the filtergraph is the same as the one specified by the option <i>graph</i>.</dd>
@@ -581,7 +581,7 @@ hw : &lt;CARD&gt;[, &lt;DEV&gt;[, &lt;SUBDEV&gt;]]
 <p> For more information about the available recovery modes, consult the paranoia project documentation.</dd></dl>
 </dl>
 <h3>libdc1394</h3>
-<p> <font SIZE="-1">IIDC1394</font> input device, based on libdc1394 and libraw1394. </p>
+<p> IIDC1394 input device, based on libdc1394 and libraw1394. </p>
 <p> Requires the configure option <tt>&quot;--enable-libdc1394&quot;</tt>. </p>
 <p> <i>Options</i></p>
 <dl>
@@ -594,15 +594,15 @@ hw : &lt;CARD&gt;[, &lt;DEV&gt;[, &lt;SUBDEV&gt;]]
 <h3>openal</h3>
 <p> The OpenAL input device provides audio capture on all systems with a working OpenAL 1.1 implementation. </p>
 <p> To enable this input device during configuration, you need OpenAL headers and libraries installed on your system, and need to configure FFmpeg with <tt>&quot;--enable-openal&quot;</tt>. </p>
-<p> OpenAL headers and libraries should be provided as part of your OpenAL implementation, or as an additional download (an <font SIZE="-1">SDK</font>). Depending on your installation you may need to specify additional flags via the <tt>&quot;--extra-cflags&quot;</tt> and <tt>&quot;--extra-ldflags&quot;</tt> for allowing the build system to locate the OpenAL headers and libraries. </p>
+<p> OpenAL headers and libraries should be provided as part of your OpenAL implementation, or as an additional download (an SDK). Depending on your installation you may need to specify additional flags via the <tt>&quot;--extra-cflags&quot;</tt> and <tt>&quot;--extra-ldflags&quot;</tt> for allowing the build system to locate the OpenAL headers and libraries. </p>
 <p> An incomplete list of OpenAL implementations follows:</p>
 <dl>
 <dt><code>Creative</code></dt>
 <dd> The official Windows implementation, providing hardware acceleration with supported devices and software fallback. See &lt;<code><a rel="nofollow" href="http://openal.org/">http://openal.org/</a></code>&gt;.</dd>
 <dt><code>OpenAL Soft</code></dt>
-<dd> Portable, open source (<font SIZE="-1">LGPL</font>) software implementation. Includes backends for the most common sound APIs on the Windows, Linux, Solaris, and <font SIZE="-1">BSD</font> operating systems. See &lt;<code><a rel="nofollow" href="http://kcat.strangesoft.net/openal.html">http://kcat.strangesoft.net/openal.html</a></code>&gt;.</dd>
+<dd> Portable, open source (LGPL) software implementation. Includes backends for the most common sound APIs on the Windows, Linux, Solaris, and BSD operating systems. See &lt;<code><a rel="nofollow" href="http://kcat.strangesoft.net/openal.html">http://kcat.strangesoft.net/openal.html</a></code>&gt;.</dd>
 <dt><code>Apple</code></dt>
-<dd> OpenAL is part of Core Audio, the official Mac <font SIZE="-1">OS X</font> Audio interface. See &lt;<code><a rel="nofollow" href="http://developer.apple.com/technologies/mac/audio-and-video.html">http://developer.apple.com/technologies/mac/audio-and-video.html</a></code>&gt;</dd></dl>
+<dd> OpenAL is part of Core Audio, the official Mac OS X Audio interface. See &lt;<code><a rel="nofollow" href="http://developer.apple.com/technologies/mac/audio-and-video.html">http://developer.apple.com/technologies/mac/audio-and-video.html</a></code>&gt;</dd></dl>
 <p> This device allows one to capture from an audio input device handled through OpenAL. </p>
 <p> You need to specify the name of the device to capture in the provided filename. If the empty string is provided, the device will automatically select the default device. You can get the list of the supported devices by using the option <i>list_devices</i>. </p>
 <p> <i>Options</i></p>
@@ -620,7 +620,7 @@ hw : &lt;CARD&gt;[, &lt;DEV&gt;[, &lt;SUBDEV&gt;]]
 <pre>
         $ ffmpeg -list_devices true -f openal -i dummy out.ogg
 </pre>
-<p> Capture from the OpenAL device <i></i><font SIZE="-1"><i>DR-BT101</i></font><i> via PulseAudio</i>: </p>
+<p> Capture from the OpenAL device <i></i><i>DR-BT101</i><i> via PulseAudio</i>: </p>
 <pre>
         $ ffmpeg -f openal -i 'DR-BT101 via PulseAudio' out.ogg
 </pre>
@@ -635,12 +635,12 @@ hw : &lt;CARD&gt;[, &lt;DEV&gt;[, &lt;SUBDEV&gt;]]
 <p> Note: not all OpenAL implementations support multiple simultaneous capture &#8211; try the latest OpenAL Soft if the above does not work.</p>
 <h3>oss</h3>
 <p> Open Sound System input device. </p>
-<p> The filename to provide to the input device is the device node representing the <font SIZE="-1">OSS</font> input device, and is usually set to <i>/dev/dsp</i>. </p>
+<p> The filename to provide to the input device is the device node representing the OSS input device, and is usually set to <i>/dev/dsp</i>. </p>
 <p> For example to grab from <i>/dev/dsp</i> using <code>ffmpeg</code> use the command: </p>
 <pre>
         ffmpeg -f oss -i /dev/dsp /tmp/oss.wav
 </pre>
-<p> For more information about <font SIZE="-1">OSS</font> see: &lt;<code><a rel="nofollow" href="http://manuals.opensound.com/usersguide/dsp.html">http://manuals.opensound.com/usersguide/dsp.html</a></code>&gt; </p>
+<p> For more information about OSS see: &lt;<code><a rel="nofollow" href="http://manuals.opensound.com/usersguide/dsp.html">http://manuals.opensound.com/usersguide/dsp.html</a></code>&gt; </p>
 <p> <i>Options</i></p>
 <dl>
 <dt><code>sample_rate</code></dt>
@@ -656,7 +656,7 @@ hw : &lt;CARD&gt;[, &lt;DEV&gt;[, &lt;SUBDEV&gt;]]
 <p> <i>Options</i></p>
 <dl>
 <dt><code>server</code></dt>
-<dd> Connect to a specific PulseAudio server, specified by an <font SIZE="-1">IP</font> address. Default server is used when not provided.</dd>
+<dd> Connect to a specific PulseAudio server, specified by an IP address. Default server is used when not provided.</dd>
 <dt><code>name</code></dt>
 <dd> Specify the application name PulseAudio will use when showing active clients, by default it is the <tt>&quot;LIBAVFORMAT_IDENT&quot;</tt> string.</dd>
 <dt><code>stream_name</code></dt>
@@ -670,7 +670,7 @@ hw : &lt;CARD&gt;[, &lt;DEV&gt;[, &lt;SUBDEV&gt;]]
 <dt><code>fragment_size</code></dt>
 <dd> Specify the minimal buffering fragment in PulseAudio, it will affect the audio latency. By default it is unset.</dd>
 <dt><code>wallclock</code></dt>
-<dd> Set the initial <font SIZE="-1">PTS</font> using the current time. Default is 1.</dd></dl>
+<dd> Set the initial PTS using the current time. Default is 1.</dd></dl>
 <p> <i>Examples</i> </p>
 <p> Record a stream from default device: </p>
 <pre>
@@ -694,9 +694,9 @@ hw : &lt;CARD&gt;[, &lt;DEV&gt;[, &lt;SUBDEV&gt;]]
 <p> Video4Linux2 input video device. </p>
 <p> &#8220;v4l2&#8221; can be used as alias for &#8220;video4linux2&#8221;. </p>
 <p> If FFmpeg is built with v4l-utils support (by using the <tt>&quot;--enable-libv4l2&quot;</tt> configure option), it is possible to use it with the <tt>&quot;-use_libv4l2&quot;</tt> input device option. </p>
-<p> The name of the device to grab is a file device node, usually Linux systems tend to automatically create such nodes when the device (e.g. an <font SIZE="-1">USB</font> webcam) is plugged into the system, and has a name of the kind <i>/dev/videoN</i>, where <i>N</i> is a number associated to the device. </p>
-<p> Video4Linux2 devices usually support a limited set of <i>width</i>x<i>height</i> sizes and frame rates. You can check which are supported using <code>-list_formats all</code> for Video4Linux2 devices. Some devices, like <font SIZE="-1">TV</font> cards, support one or more standards. It is possible to list all the supported standards using <code>-list_standards all</code>. </p>
-<p> The time base for the timestamps is 1 microsecond. Depending on the kernel version and configuration, the timestamps may be derived from the real time clock (origin at the Unix Epoch) or the monotonic clock (origin usually at boot time, unaffected by <font SIZE="-1">NTP</font> or manual changes to the clock). The <code>-timestamps abs</code> or <code>-ts abs</code> option can be used to force conversion into the real time clock. </p>
+<p> The name of the device to grab is a file device node, usually Linux systems tend to automatically create such nodes when the device (e.g. an USB webcam) is plugged into the system, and has a name of the kind <i>/dev/videoN</i>, where <i>N</i> is a number associated to the device. </p>
+<p> Video4Linux2 devices usually support a limited set of <i>width</i>x<i>height</i> sizes and frame rates. You can check which are supported using <code>-list_formats all</code> for Video4Linux2 devices. Some devices, like TV cards, support one or more standards. It is possible to list all the supported standards using <code>-list_standards all</code>. </p>
+<p> The time base for the timestamps is 1 microsecond. Depending on the kernel version and configuration, the timestamps may be derived from the real time clock (origin at the Unix Epoch) or the monotonic clock (origin usually at boot time, unaffected by NTP or manual changes to the clock). The <code>-timestamps abs</code> or <code>-ts abs</code> option can be used to force conversion into the real time clock. </p>
 <p> Some usage examples of the video4linux2 device with <code>ffmpeg</code> and <code>ffplay</code>:</p>
 <dl>
 <dt>&bull;</dt>
@@ -723,7 +723,7 @@ hw : &lt;CARD&gt;[, &lt;DEV&gt;[, &lt;SUBDEV&gt;]]
 <dt><code>channel</code></dt>
 <dd> Set the input channel number. Default to -1, which means using the previously selected channel.</dd>
 <dt><code>video_size</code></dt>
-<dd> Set the video frame size. The argument must be a string in the form <i></i><font SIZE="-1"><i>WIDTH</i></font><i></i>x<i></i><font SIZE="-1"><i>HEIGHT</i></font><i></i> or a valid size abbreviation.</dd>
+<dd> Set the video frame size. The argument must be a string in the form <i></i><i>WIDTH</i><i></i>x<i></i><i>HEIGHT</i><i></i> or a valid size abbreviation.</dd>
 <dt><code>pixel_format</code></dt>
 <dd> Select the pixel format (only valid for raw video input).</dd>
 <dt><code>input_format</code></dt>
@@ -789,7 +789,7 @@ hw : &lt;CARD&gt;[, &lt;DEV&gt;[, &lt;SUBDEV&gt;]]
 <pre><code>
 [&lt;hostname&gt;] : &lt;display_number&gt;.&lt;screen_number&gt;[+&lt;x_offset&gt;, &lt;y_offset&gt;]
 </code></pre>
-<p> <i>hostname</i>:<i>display_number</i>.<i>screen_number</i> specifies the X11 display name of the screen to grab from. <i>hostname</i> can be omitted, and defaults to &#8220;localhost&#8221;. The environment variable <font SIZE="-1"><code>DISPLAY</code></font> contains the default display name. </p>
+<p> <i>hostname</i>:<i>display_number</i>.<i>screen_number</i> specifies the X11 display name of the screen to grab from. <i>hostname</i> can be omitted, and defaults to &#8220;localhost&#8221;. The environment variable <code>DISPLAY</code> contains the default display name. </p>
 <p> <i>x_offset</i> and <i>y_offset</i> specify the offsets of the grabbed area with respect to the top-left border of the X11 screen. They default to 0. </p>
 <p> Check the X11 documentation (e.g. <code>man X</code>) for more detailed information. </p>
 <p> Use the <code>xdpyinfo</code> program for getting basic information about the properties of your X11 display (e.g. grep for &#8220;name&#8221; or &#8220;dimensions&#8221;). </p>
@@ -808,8 +808,8 @@ hw : &lt;CARD&gt;[, &lt;DEV&gt;[, &lt;SUBDEV&gt;]]
 <dt><code>draw_mouse</code></dt>
 <dd> Specify whether to draw the mouse pointer. A value of <tt>0</tt> specifies not to draw the pointer. Default value is <tt>1</tt>.</dd>
 <dt><code>follow_mouse</code></dt>
-<dd> Make the grabbed area follow the mouse. The argument can be <tt>&quot;centered&quot;</tt> or a number of pixels <i></i><font SIZE="-1"><i>PIXELS</i></font><i></i>. </dd>
-<p> When it is specified with &#8220;centered&#8221;, the grabbing region follows the mouse pointer and keeps the pointer at the center of region; otherwise, the region follows only when the mouse pointer reaches within <i></i><font SIZE="-1"><i>PIXELS</i></font><i></i> (greater than zero) to the edge of region. </p>
+<dd> Make the grabbed area follow the mouse. The argument can be <tt>&quot;centered&quot;</tt> or a number of pixels <i></i><i>PIXELS</i><i></i>. </dd>
+<p> When it is specified with &#8220;centered&#8221;, the grabbing region follows the mouse pointer and keeps the pointer at the center of region; otherwise, the region follows only when the mouse pointer reaches within <i></i><i>PIXELS</i><i></i> (greater than zero) to the edge of region. </p>
 <p> For example: </p>
 <pre>
         ffmpeg -f x11grab -follow_mouse centered -framerate 25 -video_size cif -i :0.0 out.mpg
@@ -847,15 +847,15 @@ hw : &lt;CARD&gt;[, &lt;DEV&gt;[, &lt;SUBDEV&gt;]]
 <h2>OUTPUT DEVICES</h2>
 <p> Output devices are configured elements in FFmpeg that can write multimedia data to an output device attached to your system. </p>
 <p> When you configure your FFmpeg build, all the supported output devices are enabled by default. You can list all available ones using the configure option &#8220;&#8211;list-outdevs&#8221;. </p>
-<p> You can disable all the output devices using the configure option &#8220;&#8211;disable-outdevs&#8221;, and selectively enable an output device using the option &quot;&#8211;enable-outdev=<i></i><font SIZE="-1"><i>OUTDEV</i></font><i></i>&#8220;, or you can disable a particular input device using the option &#8221;&#8211;disable-outdev=<i></i><font SIZE="-1"><i>OUTDEV</i></font><i></i>&quot;. </p>
+<p> You can disable all the output devices using the configure option &#8220;&#8211;disable-outdevs&#8221;, and selectively enable an output device using the option &quot;&#8211;enable-outdev=<i></i><i>OUTDEV</i><i></i>&#8220;, or you can disable a particular input device using the option &#8221;&#8211;disable-outdev=<i></i><i>OUTDEV</i><i></i>&quot;. </p>
 <p> The option &#8220;-devices&#8221; of the ff* tools will display the list of enabled output devices. </p>
 <p> A description of the currently available output devices follows.</p>
 <h3>alsa</h3>
-<p> <font SIZE="-1">ALSA</font> (Advanced Linux Sound Architecture) output device. </p>
+<p> ALSA (Advanced Linux Sound Architecture) output device. </p>
 <p> <i>Examples</i></p>
 <dl>
 <dt>&bull;</dt>
-<dd> Play a file on default <font SIZE="-1">ALSA</font> device: </dd>
+<dd> Play a file on default ALSA device: </dd>
 <pre>
         ffmpeg -i INPUT -f alsa default
 </pre>
@@ -867,7 +867,7 @@ hw : &lt;CARD&gt;[, &lt;DEV&gt;[, &lt;SUBDEV&gt;]]
 </dl>
 <h3>AudioToolbox</h3>
 <p> AudioToolbox output device. </p>
-<p> Allows native output to CoreAudio devices on <font SIZE="-1">OSX.</font> </p>
+<p> Allows native output to CoreAudio devices on OSX. </p>
 <p> The output filename can be empty (or <tt>&quot;-&quot;</tt>) to refer to the default system output device or a number that refers to the device index as shown using: <tt>&quot;-list_devices true&quot;</tt>. </p>
 <p> Alternatively, the audio input device can be chosen by index using the </p>
 <pre>
@@ -878,7 +878,7 @@ hw : &lt;CARD&gt;[, &lt;DEV&gt;[, &lt;SUBDEV&gt;]]
 <p> <i>Options</i> </p>
 <p> AudioToolbox supports the following options:</p>
 <dl>
-<dt><code>-audio_device_index &lt;</code><font SIZE="-1"><code>INDEX</code></font><code>&gt;</code></dt>
+<dt><code>-audio_device_index &lt;</code><code>INDEX</code><code>&gt;</code></dt>
 <dd> Specify the audio device by its index. Overrides anything given in the output filename.</dd></dl>
 <p> <i>Examples</i></p>
 <dl>
@@ -894,16 +894,16 @@ hw : &lt;CARD&gt;[, &lt;DEV&gt;[, &lt;SUBDEV&gt;]]
 </pre>
 </dl>
 <h3>caca</h3>
-<p> <font SIZE="-1">CACA</font> output device. </p>
-<p> This output device allows one to show a video stream in <font SIZE="-1">CACA</font> window. Only one <font SIZE="-1">CACA</font> window is allowed per application, so you can have only one instance of this output device in an application. </p>
+<p> CACA output device. </p>
+<p> This output device allows one to show a video stream in CACA window. Only one CACA window is allowed per application, so you can have only one instance of this output device in an application. </p>
 <p> To enable this output device you need to configure FFmpeg with <tt>&quot;--enable-libcaca&quot;</tt>. libcaca is a graphics library that outputs text instead of pixels. </p>
 <p> For more information about libcaca, check: &lt;<code><a rel="nofollow" href="http://caca.zoy.org/wiki/libcaca">http://caca.zoy.org/wiki/libcaca</a></code>&gt; </p>
 <p> <i>Options</i></p>
 <dl>
 <dt><code>window_title</code></dt>
-<dd> Set the <font SIZE="-1">CACA</font> window title, if not specified default to the filename specified for the output device.</dd>
+<dd> Set the CACA window title, if not specified default to the filename specified for the output device.</dd>
 <dt><code>window_size</code></dt>
-<dd> Set the <font SIZE="-1">CACA</font> window size, can be a string of the form <i>width</i>x<i>height</i> or a video size abbreviation. If not specified it defaults to the size of the input video.</dd>
+<dd> Set the CACA window size, can be a string of the form <i>width</i>x<i>height</i> or a video size abbreviation. If not specified it defaults to the size of the input video.</dd>
 <dt><code>driver</code></dt>
 <dd> Set display driver.</dd>
 <dt><code>algorithm</code></dt>
@@ -921,7 +921,7 @@ hw : &lt;CARD&gt;[, &lt;DEV&gt;[, &lt;SUBDEV&gt;]]
 <p> <i>Examples</i></p>
 <dl>
 <dt>&bull;</dt>
-<dd> The following command shows the <code>ffmpeg</code> output is an <font SIZE="-1">CACA</font> window, forcing its size to 80&#215;25: </dd>
+<dd> The following command shows the <code>ffmpeg</code> output is an CACA window, forcing its size to 80&#215;25: </dd>
 <pre>
         ffmpeg -i INPUT -c:v rawvideo -pix_fmt rgb24 -window_size 80x25 -f caca -
 </pre>
@@ -938,7 +938,7 @@ hw : &lt;CARD&gt;[, &lt;DEV&gt;[, &lt;SUBDEV&gt;]]
 </dl>
 <h3>decklink</h3>
 <p> The decklink output device provides playback capabilities for Blackmagic DeckLink devices. </p>
-<p> To enable this output device, you need the Blackmagic DeckLink <font SIZE="-1">SDK</font> and you need to configure with the appropriate <tt>&quot;--extra-cflags&quot;</tt> and <tt>&quot;--extra-ldflags&quot;</tt>. On Windows, you need to run the <font SIZE="-1">IDL</font> files through <code>widl</code>. </p>
+<p> To enable this output device, you need the Blackmagic DeckLink SDK and you need to configure with the appropriate <tt>&quot;--extra-cflags&quot;</tt> and <tt>&quot;--extra-ldflags&quot;</tt>. On Windows, you need to run the IDL files through <code>widl</code>. </p>
 <p> DeckLink is very picky about the formats it supports. Pixel format is always uyvy422, framerate, field order and video size must be determined for your device with <code>-list_formats 1</code>. Audio sample rate is always 48 kHz. </p>
 <p> <i>Options</i></p>
 <dl>
@@ -994,25 +994,25 @@ hw : &lt;CARD&gt;[, &lt;DEV&gt;[, &lt;SUBDEV&gt;]]
 <h3>opengl</h3>
 <p> OpenGL output device. </p>
 <p> To enable this output device you need to configure FFmpeg with <tt>&quot;--enable-opengl&quot;</tt>. </p>
-<p> This output device allows one to render to OpenGL context. Context may be provided by application or default <font SIZE="-1">SDL</font> window is created. </p>
+<p> This output device allows one to render to OpenGL context. Context may be provided by application or default SDL window is created. </p>
 <p> When device renders to external context, application must implement handlers for following messages: <tt>&quot;AV_DEV_TO_APP_CREATE_WINDOW_BUFFER&quot;</tt> &#8211; create OpenGL context on current thread. <tt>&quot;AV_DEV_TO_APP_PREPARE_WINDOW_BUFFER&quot;</tt> &#8211; make OpenGL context current. <tt>&quot;AV_DEV_TO_APP_DISPLAY_WINDOW_BUFFER&quot;</tt> &#8211; swap buffers. <tt>&quot;AV_DEV_TO_APP_DESTROY_WINDOW_BUFFER&quot;</tt> &#8211; destroy OpenGL context. Application is also required to inform a device about current resolution by sending <tt>&quot;AV_APP_TO_DEV_WINDOW_SIZE&quot;</tt> message. </p>
 <p> <i>Options</i></p>
 <dl>
 <dt><code>background</code></dt>
 <dd> Set background color. Black is a default.</dd>
 <dt><code>no_window</code></dt>
-<dd> Disables default <font SIZE="-1">SDL</font> window when set to non-zero value. Application must provide OpenGL context and both <tt>&quot;window_size_cb&quot;</tt> and <tt>&quot;window_swap_buffers_cb&quot;</tt> callbacks when set.</dd>
+<dd> Disables default SDL window when set to non-zero value. Application must provide OpenGL context and both <tt>&quot;window_size_cb&quot;</tt> and <tt>&quot;window_swap_buffers_cb&quot;</tt> callbacks when set.</dd>
 <dt><code>window_title</code></dt>
-<dd> Set the <font SIZE="-1">SDL</font> window title, if not specified default to the filename specified for the output device. Ignored when <code>no_window</code> is set.</dd>
+<dd> Set the SDL window title, if not specified default to the filename specified for the output device. Ignored when <code>no_window</code> is set.</dd>
 <dt><code>window_size</code></dt>
 <dd> Set preferred window size, can be a string of the form widthxheight or a video size abbreviation. If not specified it defaults to the size of the input video, downscaled according to the aspect ratio. Mostly usable when <code>no_window</code> is not set.</dd></dl>
 <p> <i>Examples</i> </p>
-<p> Play a file on <font SIZE="-1">SDL</font> window using OpenGL rendering: </p>
+<p> Play a file on SDL window using OpenGL rendering: </p>
 <pre>
         ffmpeg  -i INPUT -f opengl &quot;window title&quot;
 </pre>
 <h3>oss</h3>
-<p> <font SIZE="-1">OSS</font> (Open Sound System) output device.</p>
+<p> OSS (Open Sound System) output device.</p>
 <h3>pulse</h3>
 <p> PulseAudio output device. </p>
 <p> To enable this output device you need to configure FFmpeg with <tt>&quot;--enable-libpulse&quot;</tt>. </p>
@@ -1020,7 +1020,7 @@ hw : &lt;CARD&gt;[, &lt;DEV&gt;[, &lt;SUBDEV&gt;]]
 <p> <i>Options</i></p>
 <dl>
 <dt><code>server</code></dt>
-<dd> Connect to a specific PulseAudio server, specified by an <font SIZE="-1">IP</font> address. Default server is used when not provided.</dd>
+<dd> Connect to a specific PulseAudio server, specified by an IP address. Default server is used when not provided.</dd>
 <dt><code>name</code></dt>
 <dd> Specify the application name PulseAudio will use when showing active clients, by default it is the <tt>&quot;LIBAVFORMAT_IDENT&quot;</tt> string.</dd>
 <dt><code>stream_name</code></dt>
@@ -1043,19 +1043,19 @@ hw : &lt;CARD&gt;[, &lt;DEV&gt;[, &lt;SUBDEV&gt;]]
         ffmpeg  -i INPUT -f pulse &quot;stream name&quot;
 </pre>
 <h3>sdl</h3>
-<p> <font SIZE="-1">SDL</font> (Simple DirectMedia Layer) output device. </p>
+<p> SDL (Simple DirectMedia Layer) output device. </p>
 <p> &#8220;sdl2&#8221; can be used as alias for &#8220;sdl&#8221;. </p>
-<p> This output device allows one to show a video stream in an <font SIZE="-1">SDL</font> window. Only one <font SIZE="-1">SDL</font> window is allowed per application, so you can have only one instance of this output device in an application. </p>
+<p> This output device allows one to show a video stream in an SDL window. Only one SDL window is allowed per application, so you can have only one instance of this output device in an application. </p>
 <p> To enable this output device you need libsdl installed on your system when configuring your build. </p>
-<p> For more information about <font SIZE="-1">SDL,</font> check: &lt;<code><a rel="nofollow" href="http://www.libsdl.org/">http://www.libsdl.org/</a></code>&gt; </p>
+<p> For more information about SDL, check: &lt;<code><a rel="nofollow" href="http://www.libsdl.org/">http://www.libsdl.org/</a></code>&gt; </p>
 <p> <i>Options</i></p>
 <dl>
 <dt><code>window_title</code></dt>
-<dd> Set the <font SIZE="-1">SDL</font> window title, if not specified default to the filename specified for the output device.</dd>
+<dd> Set the SDL window title, if not specified default to the filename specified for the output device.</dd>
 <dt><code>icon_title</code></dt>
-<dd> Set the name of the iconified <font SIZE="-1">SDL</font> window, if not specified it is set to the same value of <i>window_title</i>.</dd>
+<dd> Set the name of the iconified SDL window, if not specified it is set to the same value of <i>window_title</i>.</dd>
 <dt><code>window_size</code></dt>
-<dd> Set the <font SIZE="-1">SDL</font> window size, can be a string of the form <i>width</i>x<i>height</i> or a video size abbreviation. If not specified it defaults to the size of the input video, downscaled according to the aspect ratio.</dd>
+<dd> Set the SDL window size, can be a string of the form <i>width</i>x<i>height</i> or a video size abbreviation. If not specified it defaults to the size of the input video, downscaled according to the aspect ratio.</dd>
 <dt><code>window_x</code></dt>
 <dd>
 </dd><dt><code>window_y</code></dt>
@@ -1067,10 +1067,10 @@ hw : &lt;CARD&gt;[, &lt;DEV&gt;[, &lt;SUBDEV&gt;]]
 <p> <i>Interactive commands</i> </p>
 <p> The window created by the device can be controlled through the following interactive commands.</p>
 <dl>
-<dt><code>q, </code><font SIZE="-1"><code>ESC</code></font></dt>
+<dt><code>q, </code><code>ESC</code></dt>
 <dd> Quit the device immediately.</dd></dl>
 <p> <i>Examples</i> </p>
-<p> The following command shows the <code>ffmpeg</code> output is an <font SIZE="-1">SDL</font> window, forcing its size to the qcif format: </p>
+<p> The following command shows the <code>ffmpeg</code> output is an SDL window, forcing its size to the qcif format: </p>
 <pre>
         ffmpeg -i INPUT -c:v rawvideo -pix_fmt yuv420p -window_size qcif -f sdl &quot;SDL output&quot;
 </pre>
@@ -1079,15 +1079,15 @@ hw : &lt;CARD&gt;[, &lt;DEV&gt;[, &lt;SUBDEV&gt;]]
 <h3>v4l2</h3>
 <p> Video4Linux2 output device.</p>
 <h3>xv</h3>
-<p> <font SIZE="-1">XV</font> (XVideo) output device. </p>
+<p> XV (XVideo) output device. </p>
 <p> This output device allows one to show a video stream in a X Window System window. </p>
 <p> <i>Options</i></p>
 <dl>
 <dt><code>display_name</code></dt>
 <dd> Specify the hardware display name, which determines the display and communications domain to be used. </dd>
-<p> The display name or <font SIZE="-1">DISPLAY</font> environment variable can be a string in the format <i>hostname</i>[:<i>number</i>[.<i>screen_number</i>]]. </p>
+<p> The display name or DISPLAY environment variable can be a string in the format <i>hostname</i>[:<i>number</i>[.<i>screen_number</i>]]. </p>
 <p> <i>hostname</i> specifies the name of the host machine on which the display is physically attached. <i>number</i> specifies the number of the display server on that host machine. <i>screen_number</i> specifies the screen to be used on that server. </p>
-<p> If unspecified, it defaults to the value of the <font SIZE="-1">DISPLAY</font> environment variable. </p>
+<p> If unspecified, it defaults to the value of the DISPLAY environment variable. </p>
 <p> For example, <tt>&quot;dual-headed:0.1&quot;</tt> would specify screen 1 of display 0 on the machine named &#8220;dual-headed&#8221;. </p>
 <p> Check the X11 specification for more detailed information about the display name format.</p>
 <dt><code>window_id</code></dt>
@@ -1119,4 +1119,4 @@ hw : &lt;CARD&gt;[, &lt;DEV&gt;[, &lt;SUBDEV&gt;]]
 <h2>AUTHORS</h2>
 <p> The FFmpeg developers. </p>
 <p> For details about the authorship, see the Git history of the project (<a href="git://source.ffmpeg.org/ffmpeg">git://source.ffmpeg.org/ffmpeg</a>), e.g. by typing the command <code>git log</code> in the FFmpeg source directory, or browsing the online repository at &lt;<code><a rel="nofollow" href="http://source.ffmpeg.org">http://source.ffmpeg.org</a></code>&gt;. </p>
-<p> Maintainers for the specific components are listed in the file <i></i><font SIZE="-1"><i>MAINTAINERS</i></font><i></i> in the source code tree. </p>
+<p> Maintainers for the specific components are listed in the file <i></i><i>MAINTAINERS</i><i></i> in the source code tree. </p>

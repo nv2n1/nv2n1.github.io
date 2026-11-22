@@ -44,5 +44,5 @@ description: "XOpenOM, XCloseOM, XSetOMValues, XGetOMValues, XDisplayOfOM, XLoca
 <p> The <code>XDisplayOfOM</code> function returns the display associated with the specified output method. </p>
 <p> The <code>XLocaleOfOM</code> returns the locale associated with the specified output method.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xcreateoc/">XCreateOC</a>(3), <a href="/docs/linux/man/3-xcreatefontset/">XCreateFontSet</a>(3)<br />
+<p><a href="/docs/linux/man/3-xcreateoc/">XCreateOC</a>(3), <a href="/docs/linux/man/3-xcreatefontset/">XCreateFontSet</a>(3)<br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

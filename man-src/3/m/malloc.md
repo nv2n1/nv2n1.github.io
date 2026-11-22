@@ -54,7 +54,7 @@ Glibc 2.28 and earlier:
 <th>Value</th>
 </tr>
 <tr>
-<td><code>malloc</code>(), <code>free</code>(),<br />
+<td><code>malloc</code>(), <code>free</code>(),<br/>
 <code>calloc</code>(), <code>realloc</code>()</td>
 <td>Thread safety</td>
 <td>MT-Safe</td>

@@ -15,7 +15,7 @@ description: "QuantLib::InverseCumulativeRng – Inverse cumulative random numbe
 <p> typedef RNG <code>urng_type</code> </p>
 <h3>Public Member Functions</h3>
 <p><code>InverseCumulativeRng</code> (const RNG &amp;uniformGenerator) </p>
-<p> <code>sample_type</code> <code>next</code> () const<br />
+<p> <code>sample_type</code> <code>next</code> () const<br/>
  <i>returns a sample from a Gaussian distribution </i></p>
 <h2>Detailed Description</h2>
 <h3>template&lt;class RNG, class IC&gt; class QuantLib::InverseCumulativeRng&lt; RNG, IC &gt;</h3>

@@ -21,5 +21,5 @@ void ares_free_hostent(struct hostent *host)
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-ares_parse_a_reply/">ares_parse_a_reply</a></code>(3), <code><a href="/docs/linux/man/3-ares_parse_aaaa_reply/">ares_parse_aaaa_reply</a></code>(3), <code><a href="/docs/linux/man/3-ares_parse_ptr_reply/">ares_parse_ptr_reply</a></code>(3), <code><a href="/docs/linux/man/3-ares_parse_ns_reply/">ares_parse_ns_reply</a></code>(3)</p>
 <h2>AUTHOR</h2>
-<p> Greg Hudson, MIT Information Systems<br />
+<p> Greg Hudson, MIT Information Systems<br/>
  Copyright 1998 by the Massachusetts Institute of Technology. </p>

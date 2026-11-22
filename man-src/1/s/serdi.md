@@ -39,9 +39,9 @@ description: "serdi – Read and write RDF syntax"
 <h2>AUTHOR</h2>
 <p> Serdi was written by David Robillard &lt;d@drobilla.net&gt; </p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2011-2012 David Robillard.<br />
- License: &lt;<a rel="nofollow" href="http://www.opensource.org/licenses/isc">http://www.opensource.org/licenses/isc</a>&gt;<br />
- This is free software; you are free to change and redistribute it.<br />
+<p> Copyright &#169; 2011-2012 David Robillard.<br/>
+ License: &lt;<a rel="nofollow" href="http://www.opensource.org/licenses/isc">http://www.opensource.org/licenses/isc</a>&gt;<br/>
+ This is free software; you are free to change and redistribute it.<br/>
  There is NO WARRANTY, to the extent permitted by law. </p>
 <h2>SEE ALSO</h2>
 <p> &lt;<a rel="nofollow" href="http://drobilla.net/software/serd">http://drobilla.net/software/serd</a>&gt; </p>

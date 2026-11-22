@@ -13,11 +13,11 @@ description: "sc::R12IntsAcc_MPIIOFile_Ind –"
 <h3>Public Member Functions</h3>
 <p><code>R12IntsAcc_MPIIOFile_Ind</code> (<code>Ref</code>&lt; <code>MemoryGrp</code> &gt; &amp;mem, const char *filename, int num_te_types, int ni, int nj, int nx, int ny) </p>
 <p> <code>R12IntsAcc_MPIIOFile_Ind</code> (<code>StateIn</code> &amp;) </p>
-<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br />
- <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br />
- void <code>store_memorygrp</code> (<code>Ref</code>&lt; <code>MemoryGrp</code> &gt; &amp;mem, int ni, const size_t blksize=0)<br />
- <i>Stores all pair block of integrals held in mem. </i><br />
- double * <code>retrieve_pair_block</code> (int i, int j, <code>tbint_type</code> oper_type)<br />
+<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br/>
+ <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br/>
+ void <code>store_memorygrp</code> (<code>Ref</code>&lt; <code>MemoryGrp</code> &gt; &amp;mem, int ni, const size_t blksize=0)<br/>
+ <i>Stores all pair block of integrals held in mem. </i><br/>
+ double * <code>retrieve_pair_block</code> (int i, int j, <code>tbint_type</code> oper_type)<br/>
  <i>Retrieves an ij pair block of integrals from the file. </i></p>
 <h2>Member Function Documentation</h2>
 <h3>void sc::R12IntsAcc_MPIIOFile_Ind::save_data_state (<code>StateOut</code> &amp;) [virtual]</h3>

@@ -10,16 +10,16 @@ description: "ql/math/interpolation.hpp – base class for 1-D interpolations"
 
 <p> ql/math/interpolation.hpp &#8211; base class for 1-D interpolations </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/math/interpolations/extrapolation.hpp&gt;<br />
- #include &lt;ql/math/comparison.hpp&gt;<br />
- #include &lt;ql/errors.hpp&gt;<br />
+<p> #include &lt;ql/math/interpolations/extrapolation.hpp&gt;<br/>
+ #include &lt;ql/math/comparison.hpp&gt;<br/>
+ #include &lt;ql/errors.hpp&gt;<br/>
  #include &lt;vector&gt; </p>
 <h3>Classes</h3>
-<p> class <code>Interpolation</code><br />
- <i>base class for 1-D interpolations. </i><br />
- class <code>Impl</code><br />
- <i>abstract base class for interpolation implementations </i><br />
- class <code>templateImpl&lt; I1, I2 &gt;</code><br />
+<p> class <code>Interpolation</code><br/>
+ <i>base class for 1-D interpolations. </i><br/>
+ class <code>Impl</code><br/>
+ <i>abstract base class for interpolation implementations </i><br/>
+ class <code>templateImpl&lt; I1, I2 &gt;</code><br/>
  <i>basic template implementation </i></p>
 <h2>Detailed Description</h2>
 <p> base class for 1-D interpolations </p>

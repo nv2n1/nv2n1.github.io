@@ -10,7 +10,7 @@ description: "slapll.f –"
 <p>slapll.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>slapll</code> (N, X, INCX, Y, INCY, SSMIN)<br />
+<p>subroutine <code>slapll</code> (N, X, INCX, Y, INCY, SSMIN)<br/>
  <i></i><code>SLAPLL</code> measures the linear dependence of two vectors.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slapll (integerN, real, dimension( * )X, integerINCX, real, dimension( * )Y, integerINCY, realSSMIN)</h3>

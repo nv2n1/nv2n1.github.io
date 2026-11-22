@@ -13,7 +13,7 @@ description: "slice2cpp – The Slice to C++ compiler."
 <p> slice2cpp [options] [files] </p>
 <h2>DESCRIPTION</h2>
 <p> slice2cpp compiles Slice files to C++. </p>
-<p> Full documentation for slice2cpp is available online at:<br />
+<p> Full documentation for slice2cpp is available online at:<br/>
  &quot;<a rel="nofollow" href="http://doc.zeroc.com/display/Ice/slice2cpp+Command-Line+Options">http://doc.zeroc.com/display/Ice/slice2cpp+Command-Line+Options</a>&quot;. </p>
 <h2>OPTIONS</h2>
 <dl>

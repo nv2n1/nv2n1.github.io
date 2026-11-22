@@ -57,33 +57,33 @@ description: "whatsup – list up and/or down nodes in a cluster"
 <p> As noted in sections above, <code>whatsup</code> accepts ranges of hostnames in the general form: prefix[n-m,l-k,&#8230;], where n &lt; m and l &lt; k, etc., as an alternative to explicit lists of hosts. This form should not be confused with regular expression character classes (also denoted by &#8220;[]&#8221;). For example, foo[19] does not represent foo1 or foo9, but rather represents a degenerate range: foo19. </p>
 <p> This range syntax is meant only as a convenience on clusters with a prefixNN naming convention and specification of ranges should not be considered necessary &#8212; the list foo1,foo9 could be specified as such, or by the range foo[1,9]. </p>
 <p> Some examples of range usage follow: </p>
-<p> List all nodes among foo01,foo02,&#8230;,foo05 that are up and down<br />
+<p> List all nodes among foo01,foo02,&#8230;,foo05 that are up and down<br/>
 &nbsp;<wbr>whatsup foo[01-05] </p>
-<p> List all nodes among foo7,foo9,foo10 that are up and down<br />
+<p> List all nodes among foo7,foo9,foo10 that are up and down<br/>
 &nbsp;<wbr>whatsup foo[7,9-10] </p>
 <p> As a reminder to the reader, some shells will interpret brackets (&#8216;[&#8216; and &#8216;]&#8217;) for pattern matching. Depending on your shell, it may be necessary to enclose ranged lists within quotes. For example, in tcsh, the above two examples should be executed as: </p>
-<p>&nbsp;<wbr>whatsup&nbsp;<wbr>&quot;foo[01-05]&quot;<br />
+<p>&nbsp;<wbr>whatsup&nbsp;<wbr>&quot;foo[01-05]&quot;<br/>
 &nbsp;<wbr>whatsup&nbsp;<wbr>&quot;foo[7,9-10]&quot; </p>
 <h2>EXAMPLES</h2>
-<p> List all nodes that are up and down.<br />
+<p> List all nodes that are up and down.<br/>
 &nbsp;<wbr>&nbsp;<wbr>whatsup </p>
-<p> List all nodes that are down<br />
+<p> List all nodes that are down<br/>
 &nbsp;<wbr>&nbsp;<wbr>whatsup -d </p>
-<p> List all nodes among foo[0-20] that are down<br />
+<p> List all nodes among foo[0-20] that are down<br/>
 &nbsp;<wbr>&nbsp;<wbr>whatsup -d foo[0-20] </p>
-<p> List all nodes that are up and down by their alternate names<br />
+<p> List all nodes that are up and down by their alternate names<br/>
 &nbsp;<wbr>&nbsp;<wbr>whatsup -a </p>
-<p> List all nodes among foo[5-25] that are up by their alternate names<br />
+<p> List all nodes among foo[5-25] that are up by their alternate names<br/>
 &nbsp;<wbr>&nbsp;<wbr>whatsup -u -a foo[5-25] </p>
 <p> List all nodes that are up in comma separated lists.<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></p>
 <p>&nbsp;<wbr>&nbsp;<wbr>whatsup -u -c </p>
-<p> List all nodes that are up among the nodes foo2, foo4, and foo8<br />
+<p> List all nodes that are up among the nodes foo2, foo4, and foo8<br/>
 &nbsp;<wbr>&nbsp;<wbr>whatsup -u foo2,foo4,foo8 </p>
-<p> Only output the number of nodes that are up and down<br />
+<p> Only output the number of nodes that are up and down<br/>
 &nbsp;<wbr>&nbsp;<wbr>whatsup -t </p>
-<p> Only output the number of up nodes<br />
+<p> Only output the number of up nodes<br/>
 &nbsp;<wbr>&nbsp;<wbr>whatsup -u -t </p>
-<p> Only output the number of up nodes among foo[5-25]<br />
+<p> Only output the number of up nodes among foo[5-25]<br/>
 &nbsp;<wbr>&nbsp;<wbr>whatsup -u -t foo[5-25]</p>
 <h2>FILES</h2>
 <p> /usr/bin/whatsup</p>

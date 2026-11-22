@@ -10,7 +10,7 @@ description: "XkbAllocGeomOverlayKeys – Allocate keys in an overlay row"
 <p>XkbAllocGeomOverlayKeys &#8211; Allocate keys in an overlay row </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Status XkbAllocGeomOverlayKeys</code> <code>(XkbOverlayRowPtr </code><i>row</i><code>,</code> <code>int </code><i>num_needed</i><code>);</code><br />
+<dt> <code>Status XkbAllocGeomOverlayKeys</code> <code>(XkbOverlayRowPtr </code><i>row</i><code>,</code> <code>int </code><i>num_needed</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

@@ -13,19 +13,19 @@ description: "QuantLib::CapletVarianceCurve –"
 <p> Inherits <code>QuantLib::OptionletVolatilityStructure</code>. </p>
 <h3>Public Member Functions</h3>
 <p><code>CapletVarianceCurve</code> (const <code>Date</code> &amp;referenceDate, const std::vector&lt; <code>Date</code> &gt; &amp;dates, const std::vector&lt; Volatility &gt; &amp;capletVolCurve, const <code>DayCounter</code> &amp;dayCounter) </p>
-<p> <code>Real</code> <code>minStrike</code> () const<br />
- <i>the minimum strike for which the term structure can return vols </i><br />
- <code>Real</code> <code>maxStrike</code> () const<br />
+<p> <code>Real</code> <code>minStrike</code> () const<br/>
+ <i>the minimum strike for which the term structure can return vols </i><br/>
+ <code>Real</code> <code>maxStrike</code> () const<br/>
  <i>the maximum strike for which the term structure can return vols </i> </p>
 <p> <code>TermStructure interface</code> </p>
-<p> <code>DayCounter</code> <code>dayCounter</code> () const<br />
- <i>the day counter used for date/time conversion </i><br />
- <code>Date</code> <code>maxDate</code> () const<br />
+<p> <code>DayCounter</code> <code>dayCounter</code> () const<br/>
+ <i>the day counter used for date/time conversion </i><br/>
+ <code>Date</code> <code>maxDate</code> () const<br/>
  <i>the latest date for which the curve can return values </i></p>
 <h3>Protected Member Functions</h3>
-<p>boost::shared_ptr&lt; <code>SmileSection</code> &gt; <code>smileSectionImpl</code> (Time t) const<br />
- <i>implements the actual smile calculation in derived classes </i><br />
- Volatility <code>volatilityImpl</code> (Time t, Rate) const<br />
+<p>boost::shared_ptr&lt; <code>SmileSection</code> &gt; <code>smileSectionImpl</code> (Time t) const<br/>
+ <i>implements the actual smile calculation in derived classes </i><br/>
+ Volatility <code>volatilityImpl</code> (Time t, Rate) const<br/>
  <i>implements the actual volatility calculation in derived classes </i></p>
 <h2>Detailed Description</h2>
 <p><code>Deprecated</code></p>

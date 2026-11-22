@@ -11,7 +11,7 @@ description: "cunm2l.f –"
 <p> cunm2l.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cunm2l</code> (SIDE, TRANS, M, N, K, A, LDA, TAU, C, LDC, WORK, INFO)<br />
+<p> subroutine <code>cunm2l</code> (SIDE, TRANS, M, N, K, A, LDA, TAU, C, LDC, WORK, INFO)<br/>
  <i></i><code>CUNM2L</code> multiplies a general matrix by the unitary matrix from a QL factorization determined by cgeqlf (unblocked algorithm).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cunm2l (characterSIDE, characterTRANS, integerM, integerN, integerK, complex, dimension( lda, * )A, integerLDA, complex, dimension( * )TAU, complex, dimension( ldc, * )C, integerLDC, complex, dimension( * )WORK, integerINFO)</h3>
@@ -59,11 +59,11 @@ CUNM2L overwrites the general complex m - by - n matrix C with Q *C if SIDE = 'L
           The number of columns of the matrix C. N &gt;= 0.
 </pre>
 <p> <i>K</i> </p>
-<p>K is INTEGER<br />
-    The number of elementary reflectors whose product defines<br />
-        the matrix Q.If SIDE = &#8216;L&#8217;,<br />
-                        M &gt;= K &gt;= 0;<br />
-if SIDE<br />
+<p>K is INTEGER<br/>
+    The number of elementary reflectors whose product defines<br/>
+        the matrix Q.If SIDE = &#8216;L&#8217;,<br/>
+                        M &gt;= K &gt;= 0;<br/>
+if SIDE<br/>
 = &#8216;R&#8217;, N &gt;= K &gt;= 0.</p>
 <p> <i>A</i> </p>
 <pre>

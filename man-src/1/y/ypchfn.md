@@ -10,8 +10,8 @@ description: "yppasswd, ypchfn, ypchsh – change your password in the NIS datab
 
 <p> yppasswd, ypchfn, ypchsh &#8211; change your password in the NIS database</p>
 <h2>SYNOPSIS</h2>
-<p> <code>yppasswd [-f] [-l] [-p] [user]</code><br />
- <code>ypchfn [user]</code><br />
+<p> <code>yppasswd [-f] [-l] [-p] [user]</code><br/>
+ <code>ypchfn [user]</code><br/>
  <code>ypchsh [user]</code></p>
 <h2>DESCRIPTION</h2>
 <p> In the old days, the standard <code><a href="/docs/linux/man/1-passwd/">passwd</a></code>(1), <code><a href="/docs/linux/man/1-chfn/">chfn</a></code>(1) and <code><a href="/docs/linux/man/1-chsh/">chsh</a></code>(1) tools could not be used under Linux to change the users NIS password, shell and GECOS information. For changing the NIS information, they were replaced by their NIS counterparts, <code>yppasswd</code>, <code>ypchfn</code> and <code>ypchsh</code>. </p>
@@ -22,7 +22,7 @@ description: "yppasswd, ypchfn, ypchsh – change your password in the NIS datab
 <p> If we use shadowing passwords using passwd.adjunct, SHA-512 will be used for hashing a new password by default. If we want to use MD5, SHA_256 or older DES, we need to set the environment variable YP_PASSWD_HASH. Possible values are &quot;DES&quot;, &quot;MD5&quot;, &quot;SHA-256&quot; and &quot;SHA-512&quot; (value is case-insensitive).</p>
 <dl>
 <dt><code>yppasswd</code> or <code>-p</code></dt>
-<dd> Change the user&#8217;s NIS password.<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>The user is prompted for the new password.<br />
+<dd> Change the user&#8217;s NIS password.<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>The user is prompted for the new password.<br/>
  While typing the password, echoing is turned off, so the password does not appear on the screen. An empty password is rejected, as are passwords shorter than six characters. The user will then be requested to retype the password to make sure it wasn&#8217;t<tt>&nbsp;<wbr></tt>misspelled the first time.</dd>
 <dt><code>ypchsh</code> or <code>-l</code></dt>
 <dd> Change the user&#8217;s login shell. The user is prompted for a new shell, offering the old one as default:</dd>

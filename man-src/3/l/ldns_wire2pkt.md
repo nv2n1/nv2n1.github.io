@@ -10,7 +10,7 @@ description: "ldns_wire2rr, ldns_wire2pkt, ldns_wire2rdf, ldns_wire2dname"
 
 <p> ldns_wire2rr, ldns_wire2pkt, ldns_wire2rdf, ldns_wire2dname </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ldns_status ldns_wire2rr(ldns_rr **rr, const uint8_t *wire, size_t max, size_t *pos, ldns_pkt_section section); </p>

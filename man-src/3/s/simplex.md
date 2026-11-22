@@ -13,7 +13,7 @@ description: "QuantLib::Simplex – Multi-dimensional simplex class."
 <p> Inherits <code>QuantLib::OptimizationMethod</code>. </p>
 <h3>Public Member Functions</h3>
 <p><code>Simplex</code> (<code>Real</code> lambda) </p>
-<p> virtual EndCriteria::Type <code>minimize</code> (<code>Problem</code> &amp;P, const <code>EndCriteria</code> &amp;endCriteria)<br />
+<p> virtual EndCriteria::Type <code>minimize</code> (<code>Problem</code> &amp;P, const <code>EndCriteria</code> &amp;endCriteria)<br/>
  <i>minimize the optimization problem P </i></p>
 <h2>Detailed Description</h2>
 <p>Multi-dimensional simplex class.</p>

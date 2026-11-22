@@ -13,16 +13,16 @@ description: "glutMenuDestroyFunc – Destruction callback for menus."
 <h2>Synopsis</h2>
 <p>In openglut.h Ft void Fn glutMenuDestroyFunc void( *callback )( void )</p>
 <h2>Parameters</h2>
-<p>Bf Em<br />
-&nbsp;<wbr>callback Ef<br />
+<p>Bf Em<br/>
+&nbsp;<wbr>callback Ef<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Client menu destruction hook.</p>
 <h2>Description</h2>
 <p>When a menu is destroyed, OpenGLUT will call this hook, if defined on that menu. </p>
-<p> This callback is Bf Em<br />
-&nbsp;<wbr>not Ef<br />
+<p> This callback is Bf Em<br/>
+&nbsp;<wbr>not Ef<br/>
 &nbsp;<wbr>&nbsp;<wbr>bound to any window. </p>
-<p> This callback Bf Em<br />
-&nbsp;<wbr>is Ef<br />
+<p> This callback Bf Em<br/>
+&nbsp;<wbr>is Ef<br/>
 &nbsp;<wbr>&nbsp;<wbr>bound to a specific menu. </p>
 <h2>Caveats</h2>
 <p>For emphasis, we repeat: This callback does not bind to any window. </p>

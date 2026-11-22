@@ -18,12 +18,12 @@ description: "hcrypto miscellaneous functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>password</i> Password.<br />
- <i>password_len</i> Length of password.<br />
- <i>salt</i> Salt<br />
- <i>salt_len</i> Length of salt.<br />
- <i>iter</i> iteration counter.<br />
- <i>keylen</i> the output key length.<br />
+</dt><dd> <i>password</i> Password.<br/>
+ <i>password_len</i> Length of password.<br/>
+ <i>salt</i> Salt<br/>
+ <i>salt_len</i> Length of salt.<br/>
+ <i>iter</i> iteration counter.<br/>
+ <i>keylen</i> the output key length.<br/>
  <i>key</i> the output key.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

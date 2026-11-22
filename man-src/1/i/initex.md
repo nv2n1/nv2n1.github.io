@@ -161,7 +161,7 @@ description: "tex, initex – text formatting and typesetting"
 <dd> <p> Predigested TeX format (.fmt) files. </p>
  </dd>
 <dt><i>$TEXMFMAIN/tex/plain/base/plain.tex</i></dt>
-<dd> <p> The basic macro package described in the TeXbook. <br />
+<dd> <p> The basic macro package described in the TeXbook. <br/>
  </p>
  </dd></dl>
 <h2>NOTES</h2>
@@ -170,11 +170,11 @@ description: "tex, initex – text formatting and typesetting"
 <p> This version of TeX implements a number of optional extensions. In fact, many of these extensions conflict to a greater or lesser extent with the definition of TeX. When such extensions are enabled, the banner printed when TeX starts is changed to print <code>TeXk</code> instead of <code>TeX</code>. </p>
 <p> This version of TeX fails to trap arithmetic overflow when dimensions are added or subtracted. Cases where this occurs are rare, but when it does the generated <i>DVI</i> file will be invalid.  </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-mf/">mf</a></code>(1), <br />
- Donald E. Knuth, <i>The TeXbook</i>, Addison-Wesley, 1986, ISBN 0-201-13447-0. <br />
- Leslie Lamport, <i>LaTeX &#8211; A Document Preparation System</i>, Addison-Wesley, 1985, ISBN 0-201-15790-X. <br />
- K. Berry, <i>Eplain: Expanded plain TeX</i>, <a rel="nofollow" href="https://tug.org/eplain">https://tug.org/eplain</a> <br />
- Michael Spivak, <i>The Joy of TeX</i>, 2nd edition, Addison-Wesley, 1990, ISBN 0-8218-2997-1. <br />
+<p> <code><a href="/docs/linux/man/1-mf/">mf</a></code>(1), <br/>
+ Donald E. Knuth, <i>The TeXbook</i>, Addison-Wesley, 1986, ISBN 0-201-13447-0. <br/>
+ Leslie Lamport, <i>LaTeX &#8211; A Document Preparation System</i>, Addison-Wesley, 1985, ISBN 0-201-15790-X. <br/>
+ K. Berry, <i>Eplain: Expanded plain TeX</i>, <a rel="nofollow" href="https://tug.org/eplain">https://tug.org/eplain</a> <br/>
+ Michael Spivak, <i>The Joy of TeX</i>, 2nd edition, Addison-Wesley, 1990, ISBN 0-8218-2997-1. <br/>
  <i>TUGboat</i> (the journal of the TeX Users Group). <a rel="nofollow" href="https://tug.org/TUGboat">https://tug.org/TUGboat</a>  </p>
 <h2>TRIVIA</h2>
 <p> TeX, pronounced properly, rhymes with ``blecchhh.&#8216;&#8216; The proper spelling in typewriter-like fonts is ``TeX&#8217;&#8216; and not ``TEX&#8217;&#8216; or ``tex.&#8216;&#8216;  </p>

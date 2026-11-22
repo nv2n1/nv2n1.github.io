@@ -11,19 +11,19 @@ description: "libexslt – extension library for XSLT"
 <p> libexslt &#8211; extension library for XSLT</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libexslt/exslt.h&gt;</code> </p>
-<p> <code>void exsltCommonRegister(void);</code><br />
- <code>void exsltDateRegister(void);</code><br />
- <code>void exsltDynRegister(void);</code><br />
- <code>void exsltFuncRegister(void);</code><br />
- <code>void exsltMathRegister(void);</code><br />
- <code>void exsltSetsRegister(void);</code><br />
- <code>void exsltStrRegister(void);</code><br />
- <code>void exsltRegisterAll(void);</code><br />
+<p> <code>void exsltCommonRegister(void);</code><br/>
+ <code>void exsltDateRegister(void);</code><br/>
+ <code>void exsltDynRegister(void);</code><br/>
+ <code>void exsltFuncRegister(void);</code><br/>
+ <code>void exsltMathRegister(void);</code><br/>
+ <code>void exsltSetsRegister(void);</code><br/>
+ <code>void exsltStrRegister(void);</code><br/>
+ <code>void exsltRegisterAll(void);</code><br/>
  <code>void exsltSaxonRegister(void);</code></p>
 <h2>DESCRIPTION</h2>
-<p> The <code>libexslt</code> library is used to provide extensions to <font SIZE="-1">XSLT</font> functions. These extensions come from the <font SIZE="-1">EXSLT</font> project &lt;<a rel="nofollow" href="http://www.exslt.org/">http://www.exslt.org/</a>&gt; </p>
+<p> The <code>libexslt</code> library is used to provide extensions to XSLT functions. These extensions come from the EXSLT project &lt;<a rel="nofollow" href="http://www.exslt.org/">http://www.exslt.org/</a>&gt; </p>
 <h2>USAGE</h2>
-<p> To make use of these functions in <font SIZE="-1">XSLT</font> the appropriate namespace must be defined on the <code>xsl:stylesheet</code> element. To enable support for them in <code><a href="/docs/linux/man/3-libxslt/">libxslt</a></code>(3) you must call the appropriate functions (listed in the <code>SYNOPSIS</code> section) to register the extensions. The <i>xslt-config</i> shell script can be used to obtain the necessary flags for the pre-processor and linker. The supported extensions are:</p>
+<p> To make use of these functions in XSLT the appropriate namespace must be defined on the <code>xsl:stylesheet</code> element. To enable support for them in <code><a href="/docs/linux/man/3-libxslt/">libxslt</a></code>(3) you must call the appropriate functions (listed in the <code>SYNOPSIS</code> section) to register the extensions. The <i>xslt-config</i> shell script can be used to obtain the necessary flags for the pre-processor and linker. The supported extensions are:</p>
 <h3>COMMON</h3>
 <dl>
 <dt>Namespace: <a rel="nofollow" href="http://exslt.org/common">http://exslt.org/common</a></dt>

@@ -213,7 +213,7 @@ integer, dimension(:), optional, intent(in) :: stride
 integer, dimension(:), optional, intent(in) :: imap
 integer :: nf90_get_var</pre>
 <p>(Replaces <code>ncvgt()</code> in version 2) </p>
-<p> Reads a value or values from a netCDF variable. The netCDF dataset must be open and in data mode. <i>values</i> will receive the value(s) what will be read from the netCDF<br />
+<p> Reads a value or values from a netCDF variable. The netCDF dataset must be open and in data mode. <i>values</i> will receive the value(s) what will be read from the netCDF<br/>
 &nbsp;<wbr>variable identified by <i>ncid</i> and <i>varid</i>; it may be a scalar or an array and must be of type <code>character</code>, <code>integer(kind=OneByteInt)</code>, <code>integer(kind=TwoByteInt)</code>, <code>integer(kind=FourByteInt)</code>, <code>integer(kind=EightByteInt)</code>, <code>real(kind=FourByteReal)</code>, or <code>real(kind=EightByteReal)</code>. All values are converted from the external type of the netCDF variable, if possible; otherwise, an <code>nf90_erange</code> error is returned. The optional argument <i>start</i> specifies the starting index in the netCDF variable for reading for each dimension of the netCDF variable. The optional argument <i>stride</i> specifies the sampling stride (the interval between accessed values in the netCDF variable) for each dimension of the netCDF variable (see COMMON ARGUMENT DESCRIPTIONS below). The optional argument <i>imap</i> specifies the in-memory arrangement of the data values (see COMMON ARGUMENT DESCRIPTIONS below).</dd></dl>
 <dt> <code>function nf90_inquire_attribute(</code><i>ncid</i>, <i>varid</i>, <i>name</i>, <i>xtype</i>, <i>len</i>, <i>attnum</i>)</dt>
 <dl>

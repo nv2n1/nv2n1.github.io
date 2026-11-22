@@ -11,7 +11,7 @@ description: "dtgsy2.f –"
 <p> dtgsy2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dtgsy2</code> (TRANS, IJOB, M, N, A, LDA, B, LDB, C, LDC, D, LDD, E, LDE, F, LDF, SCALE, RDSUM, RDSCAL, IWORK, PQ, INFO)<br />
+<p> subroutine <code>dtgsy2</code> (TRANS, IJOB, M, N, A, LDA, B, LDB, C, LDC, D, LDD, E, LDE, F, LDF, SCALE, RDSUM, RDSCAL, IWORK, PQ, INFO)<br/>
  <i></i><code>DTGSY2</code> solves the generalized Sylvester equation (unblocked algorithm).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dtgsy2 (characterTRANS, integerIJOB, integerM, integerN, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( ldb, * )B, integerLDB, double precision, dimension( ldc, * )C, integerLDC, double precision, dimension( ldd, * )D, integerLDD, double precision, dimension( lde, * )E, integerLDE, double precision, dimension( ldf, * )F, integerLDF, double precisionSCALE, double precisionRDSUM, double precisionRDSCAL, integer, dimension( * )IWORK, integerPQ, integerINFO)</h3>

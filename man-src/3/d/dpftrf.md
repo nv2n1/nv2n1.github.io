@@ -11,7 +11,7 @@ description: "dpftrf.f –"
 <p> dpftrf.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dpftrf</code> (TRANSR, UPLO, N, A, INFO)<br />
+<p> subroutine <code>dpftrf</code> (TRANSR, UPLO, N, A, INFO)<br/>
  <i></i><code>DPFTRF</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dpftrf (characterTRANSR, characterUPLO, integerN, double precision, dimension( 0: * )A, integerINFO)</h3>

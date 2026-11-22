@@ -10,17 +10,17 @@ description: "vlmgr – administration utility for QDBM Villa"
 
 <p> vlmgr &#8211; administration utility for QDBM Villa </p>
 <h2>SYNOPSIS</h2>
-<p> <code>vlmgr create</code> [-cz|-cy|-cx] <i>name</i><br />
- <code>vlmgr put</code> [-kx|-ki] [-vx|-vi|-vf] [-keep|-cat|-dup] <i>name</i> <i>key</i> <i>val</i><br />
- <code>vlmgr out</code> [-l] [-kx|-ki] <i>name</i> <i>key</i><br />
- <code>vlmgr get</code> [-nl] [-l] [-kx|-ki] [-ox] [-n] <i>name</i> <i>key</i><br />
- <code>vlmgr list</code> [-nl] [-k|-v] [-kx|-ki] [-ox] [-top <i>key</i>] [-bot <i>key</i>] [-gt] [-lt] [-max <i>num</i>] [-desc] <i>name</i><br />
- <code>vlmgr optimize</code> <i>name</i><br />
- <code>vlmgr inform</code> [-nl] <i>name</i><br />
- <code>vlmgr remove</code> <i>name</i><br />
- <code>vlmgr repair</code> [-ki] <i>name</i><br />
- <code>vlmgr exportdb</code> [-ki] <i>name</i> <i>file</i><br />
- <code>vlmgr importdb</code> [-ki] <i>name</i> <i>file</i><br />
+<p> <code>vlmgr create</code> [-cz|-cy|-cx] <i>name</i><br/>
+ <code>vlmgr put</code> [-kx|-ki] [-vx|-vi|-vf] [-keep|-cat|-dup] <i>name</i> <i>key</i> <i>val</i><br/>
+ <code>vlmgr out</code> [-l] [-kx|-ki] <i>name</i> <i>key</i><br/>
+ <code>vlmgr get</code> [-nl] [-l] [-kx|-ki] [-ox] [-n] <i>name</i> <i>key</i><br/>
+ <code>vlmgr list</code> [-nl] [-k|-v] [-kx|-ki] [-ox] [-top <i>key</i>] [-bot <i>key</i>] [-gt] [-lt] [-max <i>num</i>] [-desc] <i>name</i><br/>
+ <code>vlmgr optimize</code> <i>name</i><br/>
+ <code>vlmgr inform</code> [-nl] <i>name</i><br/>
+ <code>vlmgr remove</code> <i>name</i><br/>
+ <code>vlmgr repair</code> [-ki] <i>name</i><br/>
+ <code>vlmgr exportdb</code> [-ki] <i>name</i> <i>file</i><br/>
+ <code>vlmgr importdb</code> [-ki] <i>name</i> <i>file</i><br/>
  <code>vlmgr version</code></p>
 <h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>vlmgr</code> commands. </p>

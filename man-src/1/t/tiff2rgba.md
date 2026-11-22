@@ -8,7 +8,7 @@ url: "/docs/linux/man/1-tiff2rgba/"
 description: "tiff2rgba – convert a TIFF image to RGBA color space"
 ---
 
-<p> tiff2rgba &#8211; convert a <font SIZE="-1">TIFF</font> image to RGBA color space</p>
+<p> tiff2rgba &#8211; convert a TIFF image to RGBA color space</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tiff2rgba</code> [ <i>options</i> ] <i>input.tif</i> <i>output.tif</i></p>
 <h2>DESCRIPTION</h2>

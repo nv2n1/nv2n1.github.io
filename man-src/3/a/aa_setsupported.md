@@ -11,8 +11,8 @@ description: "aa_setsupported – alter the \"supported\" field of hardware_para
 <p> aa_setsupported &#8211; alter the &quot;supported&quot; field of hardware_params structure used by AA-lib</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>
-<p> void aa_setsupported<br />
- (<br />
+<p> void aa_setsupported<br/>
+ (<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>aa_context *c,</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>int supported</p>
 <p> ); </code></p>

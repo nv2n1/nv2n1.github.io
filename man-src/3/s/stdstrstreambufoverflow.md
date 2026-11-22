@@ -48,23 +48,23 @@ int main()
 }
 </code></pre>
 <h2>Possible output:</h2>
-<p>&nbsp;<wbr>&nbsp;Before overflow(): size of the put area is 16 with 0 write positions available<br />
-&nbsp;<wbr>&nbsp;After overflow(): size of the put area is 32 with 15 write positions available<br />
-&nbsp;<wbr>&nbsp;Before overflow(): size of the put area is 32 with 0 write positions available<br />
-&nbsp;<wbr>&nbsp;After overflow(): size of the put area is 64 with 31 write positions available<br />
-&nbsp;<wbr>&nbsp;Before overflow(): size of the put area is 64 with 0 write positions available<br />
+<p>&nbsp;<wbr>&nbsp;Before overflow(): size of the put area is 16 with 0 write positions available<br/>
+&nbsp;<wbr>&nbsp;After overflow(): size of the put area is 32 with 15 write positions available<br/>
+&nbsp;<wbr>&nbsp;Before overflow(): size of the put area is 32 with 0 write positions available<br/>
+&nbsp;<wbr>&nbsp;After overflow(): size of the put area is 64 with 31 write positions available<br/>
+&nbsp;<wbr>&nbsp;Before overflow(): size of the put area is 64 with 0 write positions available<br/>
 &nbsp;<wbr>&nbsp;After overflow(): size of the put area is 128 with 63 write positions available</p>
 <h2>See also</h2>
-<p>overflow writes characters to the associated output sequence from the put area<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(virtual protected member function of std::basic_streambuf&lt;CharT,Traits&gt;)</i><br />
-<code>[virtual]</code><br />
-overflow appends a character to the output sequence<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(virtual protected member function of std::basic_stringbuf&lt;CharT,Traits,Allocator&gt;)</i><br />
-<code>[virtual]</code><br />
-overflow writes characters to the associated file from the put area<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(virtual protected member function of std::basic_filebuf&lt;CharT,Traits&gt;)</i><br />
-<code>[virtual]</code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;writes one character to the put area and advances the next pointer<br />
-sputc <i>(public member function of std::basic_streambuf&lt;CharT,Traits&gt;)</i><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;inserts a character<br />
+<p>overflow writes characters to the associated output sequence from the put area<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(virtual protected member function of std::basic_streambuf&lt;CharT,Traits&gt;)</i><br/>
+<code>[virtual]</code><br/>
+overflow appends a character to the output sequence<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(virtual protected member function of std::basic_stringbuf&lt;CharT,Traits,Allocator&gt;)</i><br/>
+<code>[virtual]</code><br/>
+overflow writes characters to the associated file from the put area<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(virtual protected member function of std::basic_filebuf&lt;CharT,Traits&gt;)</i><br/>
+<code>[virtual]</code><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;writes one character to the put area and advances the next pointer<br/>
+sputc <i>(public member function of std::basic_streambuf&lt;CharT,Traits&gt;)</i><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;inserts a character<br/>
 put <i>(public member function of std::basic_ostream&lt;CharT,Traits&gt;)</i> </p>

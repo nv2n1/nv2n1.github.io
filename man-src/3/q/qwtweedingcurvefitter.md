@@ -14,8 +14,8 @@ description: "QwtWeedingCurveFitter –"
 <p> Inherits <code>QwtCurveFitter</code>.</p>
 <h3>Public Member Functions</h3>
 <p><code>QwtWeedingCurveFitter</code> (double <code>tolerance</code>=1.0) </p>
-<p> virtual <code>~QwtWeedingCurveFitter</code> ()<br />
- <i>Destructor. </i><br />
+<p> virtual <code>~QwtWeedingCurveFitter</code> ()<br/>
+ <i>Destructor. </i><br/>
  void <code>setTolerance</code> (double) </p>
 <p> double <code>tolerance</code> () const </p>
 <p> void <code>setChunkSize</code> (uint) </p>

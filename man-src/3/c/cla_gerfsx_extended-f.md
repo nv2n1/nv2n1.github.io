@@ -10,7 +10,7 @@ description: "cla_gerfsx_extended.f –"
 <p>cla_gerfsx_extended.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>cla_gerfsx_extended</code> (PREC_TYPE, TRANS_TYPE, N, NRHS, A, LDA, AF, LDAF, IPIV, COLEQU, C, B, LDB, Y, LDY, BERR_OUT, N_NORMS, ERRS_N, ERRS_C, RES, AYB, DY, Y_TAIL, RCOND, ITHRESH, RTHRESH, DZ_UB, IGNORE_CWISE, INFO)<br />
+<p>subroutine <code>cla_gerfsx_extended</code> (PREC_TYPE, TRANS_TYPE, N, NRHS, A, LDA, AF, LDAF, IPIV, COLEQU, C, B, LDB, Y, LDY, BERR_OUT, N_NORMS, ERRS_N, ERRS_C, RES, AYB, DY, Y_TAIL, RCOND, ITHRESH, RTHRESH, DZ_UB, IGNORE_CWISE, INFO)<br/>
  <i></i><code>CLA_GERFSX_EXTENDED</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cla_gerfsx_extended (integerPREC_TYPE, integerTRANS_TYPE, integerN, integerNRHS, complex, dimension( lda, * )A, integerLDA, complex, dimension( ldaf, * )AF, integerLDAF, integer, dimension( * )IPIV, logicalCOLEQU, real, dimension( * )C, complex, dimension( ldb, * )B, integerLDB, complex, dimension( ldy, * )Y, integerLDY, real, dimension( * )BERR_OUT, integerN_NORMS, real, dimension( nrhs, * )ERRS_N, real, dimension( nrhs, * )ERRS_C, complex, dimension( * )RES, real, dimension( * )AYB, complex, dimension( * )DY, complex, dimension( * )Y_TAIL, realRCOND, integerITHRESH, realRTHRESH, realDZ_UB, logicalIGNORE_CWISE, integerINFO)</h3>

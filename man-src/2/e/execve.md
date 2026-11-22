@@ -11,7 +11,7 @@ description: "execve – execute program"
 <p> execve &#8211; execute program </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>
-<p> <code>int execve(const char *</code><i>pathname</i><code>, char *const </code><i>argv</i><code>[],</code><br />
+<p> <code>int execve(const char *</code><i>pathname</i><code>, char *const </code><i>argv</i><code>[],</code><br/>
  <code> char *const </code><i>envp</i><code>[]);</code></p>
 <h2>DESCRIPTION</h2>
 <p> <code>execve</code>() executes the program referred to by <i>pathname</i>. This causes the program that is currently being run by the calling process to be replaced with a new program, with newly initialized stack, heap, and (initialized and uninitialized) data segments. </p>
@@ -185,25 +185,25 @@ description: "execve – execute program"
 <p> The following program is designed to be execed by the second program below. It just echoes its command-line arguments, one per line. </p>
 <p> /* myecho.c */ </p>
 <p> #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; </p>
-<p> int main(int argc, char *argv[]) {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;for&nbsp;(int j&nbsp;=&nbsp;0;&nbsp;j&nbsp;&lt;&nbsp;argc;&nbsp;j++)<br />
+<p> int main(int argc, char *argv[]) {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;for&nbsp;(int j&nbsp;=&nbsp;0;&nbsp;j&nbsp;&lt;&nbsp;argc;&nbsp;j++)<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;argv[%d]:&nbsp;%s
 &quot;, j, argv[j]); </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_SUCCESS); } </p>
 <p> This program can be used to exec the program named in its command-line argument: </p>
 <p> /* execve.c */ </p>
 <p> #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; #include &lt;unistd.h&gt; </p>
-<p> int main(int argc, char *argv[]) {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;*newargv[]&nbsp;=&nbsp;{&nbsp;NULL,&nbsp;&quot;hello&quot;,&nbsp;&quot;world&quot;, NULL&nbsp;};<br />
+<p> int main(int argc, char *argv[]) {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;*newargv[]&nbsp;=&nbsp;{&nbsp;NULL,&nbsp;&quot;hello&quot;,&nbsp;&quot;world&quot;, NULL&nbsp;};<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;*newenviron[]&nbsp;=&nbsp;{&nbsp;NULL&nbsp;}; </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(argc&nbsp;!=&nbsp;2)&nbsp;{<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(argc&nbsp;!=&nbsp;2)&nbsp;{<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;fprintf(stderr,&nbsp;&quot;Usage:&nbsp;%s&nbsp;&lt;file-to-exec&gt;
-&quot;, argv[0]);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_FAILURE);<br />
+&quot;, argv[0]);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_FAILURE);<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;} </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;newargv[0]&nbsp;=&nbsp;argv[1]; </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;execve(argv[1], newargv, newenviron);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;perror(&quot;execve&quot;);&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;execve()&nbsp;returns only on error&nbsp;*/<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;execve(argv[1], newargv, newenviron);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;perror(&quot;execve&quot;);&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;execve()&nbsp;returns only on error&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_FAILURE); } </p>
 <p> We can use the second program to exec the first as follows: </p>
 <p> $<code> cc myecho.c -o myecho</code> $<code> cc execve.c -o execve</code> $<code> ./execve ./myecho</code> argv[0]: ./myecho argv[1]: hello argv[2]: world </p>

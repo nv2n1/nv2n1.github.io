@@ -16,8 +16,8 @@ description: "QuantLib::GeneralizedBlackScholesProcess – Generalized Black-Sch
 <p><code>GeneralizedBlackScholesProcess</code> (const <code>Handle</code>&lt; <code>Quote</code> &gt; &amp;x0, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;dividendTS, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;riskFreeTS, const <code>Handle</code>&lt; <code>BlackVolTermStructure</code> &gt; &amp;blackVolTS, const boost::shared_ptr&lt; <code>discretization</code> &gt; &amp;d=boost::shared_ptr&lt; <code>discretization</code> &gt;(new <code>EulerDiscretization</code>)) </p>
 <p> Time <code>time</code> (const <code>Date</code> &amp;) const </p>
 <p> <code>StochasticProcess1D interface</code> </p>
-<p> Real <code>x0</code> () const<br />
- <i>returns the initial value of the state variable </i><br />
+<p> Real <code>x0</code> () const<br/>
+ <i>returns the initial value of the state variable </i><br/>
  Real <code>drift</code> (Time t, Real x) const </p>
 <p> Real <code>diffusion</code> (Time t, Real x) const </p>
 <p> Real <code>apply</code> (Real x0, Real dx) const </p>

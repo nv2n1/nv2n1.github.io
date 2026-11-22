@@ -17,23 +17,23 @@ long double laguerre(unsigned int n, long double x);
 long double laguerrel(unsigned int n, long double x);
 double laguerre(unsigned int n, IntegralType x);
 (2)(since C++ 17)</code></pre>
-<p>1) Computes the non-associated Laguerre_polynomials of the degree n and argument x<br />
+<p>1) Computes the non-associated Laguerre_polynomials of the degree n and argument x<br/>
 2) A set of overloads or a function template accepting an argument of any integral_type. Equivalent to <code>(1)</code> after casting the argument to double. </p>
 <h2>Parameters</h2>
-<p>n &#8211; the degree of the polymonial, a value of unsigned integer type<br />
+<p>n &#8211; the degree of the polymonial, a value of unsigned integer type<br/>
 x &#8211; the argument, a value of a floating-point or integral type</p>
 <h2>Return value</h2>
-<p>If no errors occur, value of the nonassociated Laguerre polynomial of x, that is<br />
-ex<br />
-n!<br />
-dn<br />
-dxn<br />
-(xn<br />
+<p>If no errors occur, value of the nonassociated Laguerre polynomial of x, that is<br/>
+ex<br/>
+n!<br/>
+dn<br/>
+dxn<br/>
+(xn<br/>
 e-x), is returned. </p>
 <h2>Error handling</h2>
 <p>Errors may be reported as specified in math_errhandling </p>
-<p>* If the argument is NaN, NaN is returned and domain error is not reported<br />
-* If x is negative, a domain error may occur<br />
+<p>* If the argument is NaN, NaN is returned and domain error is not reported<br/>
+* If x is negative, a domain error may occur<br/>
 * If n is greater or equal than 128, the behavior is implementation-defined</p>
 <h2>Notes</h2>
 <p>Implementations that do not support C++17, but support ISO_29124:2010, provide this function if __STDCPP_MATH_SPEC_FUNCS__ is defined by the implementation to a value at least 201003L and if the user defines __STDCPP_WANT_MATH_SPEC_FUNCS__ before including any standard library headers.</p>
@@ -42,19 +42,19 @@ e-x), is returned. </p>
 <p>The Laguerre polynomials are the polynomial solutions of the equation xy,,</p>
 <p>+(1-x)y,</p>
 <p>+ny = 0</p>
-<p>The first few are:<br />
+<p>The first few are:<br/>
 * laguerre(0, x) = 1</p>
 <p>* laguerre(1, x) = -x + 1</p>
-<p>* laguerre(2, x) =<br />
-&nbsp;<wbr>&nbsp;1<br />
-&nbsp;<wbr>&nbsp;2<br />
-&nbsp;<wbr>&nbsp;[x2<br />
-&nbsp;<wbr>&nbsp;-4x+2]<br />
-* laguerre(3, x) =<br />
-&nbsp;<wbr>&nbsp;1<br />
-&nbsp;<wbr>&nbsp;6<br />
-&nbsp;<wbr>&nbsp;[-x3<br />
-&nbsp;<wbr>&nbsp;-9&#215;2<br />
+<p>* laguerre(2, x) =<br/>
+&nbsp;<wbr>&nbsp;1<br/>
+&nbsp;<wbr>&nbsp;2<br/>
+&nbsp;<wbr>&nbsp;[x2<br/>
+&nbsp;<wbr>&nbsp;-4x+2]<br/>
+* laguerre(3, x) =<br/>
+&nbsp;<wbr>&nbsp;1<br/>
+&nbsp;<wbr>&nbsp;6<br/>
+&nbsp;<wbr>&nbsp;[-x3<br/>
+&nbsp;<wbr>&nbsp;-9&#215;2<br/>
 &nbsp;<wbr>&nbsp;-18x+6] </p>
 <h2>Example</h2>
 <p>// Run this code </p>
@@ -79,15 +79,15 @@ int main()
 }
 </code></pre>
 <h2>Output:</h2>
-<p>&nbsp;<wbr>&nbsp;0.5=0.5<br />
+<p>&nbsp;<wbr>&nbsp;0.5=0.5<br/>
 &nbsp;<wbr>&nbsp;0.125=0.125</p>
 <h2>See also</h2>
-<p>assoc_laguerre<br />
-assoc_laguerref<br />
-assoc_laguerrel associated Laguerre polynomials<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(function)</i><br />
-<i>(C++17)</i><br />
-<i>(C++17)</i><br />
+<p>assoc_laguerre<br/>
+assoc_laguerref<br/>
+assoc_laguerrel associated Laguerre polynomials<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(function)</i><br/>
+<i>(C++17)</i><br/>
+<i>(C++17)</i><br/>
 <i>(C++17)</i> </p>
 <h2>External links</h2>
 <p>Weisstein,_Eric_W._&quot;Laguerre_Polynomial.&quot; From MathWorld&#8211;A Wolfram Web Resource.</p>

@@ -56,7 +56,7 @@ description: "Driver-Specific modes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>buffer</i> points on a buffer where the function will store the received data;<br />
+</dt><dd> <i>buffer</i> points on a buffer where the function will store the received data;<br/>
  <i>size</i> holds the buffer size.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -73,7 +73,7 @@ description: "Driver-Specific modes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>buffer</i> points on the data;<br />
+</dt><dd> <i>buffer</i> points on the data;<br/>
  <i>size</i> holds the packet size.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

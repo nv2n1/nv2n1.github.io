@@ -11,12 +11,12 @@ description: "ql/math/distributions/bivariatenormaldistribution.hpp – bivariat
 <h2>Synopsis</h2>
 <p>#include &lt;ql/math/distributions/normaldistribution.hpp&gt; </p>
 <h3>Classes</h3>
-<p>class <code>BivariateCumulativeNormalDistributionDr78</code><br />
- <i>Cumulative bivariate normal distribution function. </i><br />
- class <code>BivariateCumulativeNormalDistributionWe04DP</code><br />
+<p>class <code>BivariateCumulativeNormalDistributionDr78</code><br/>
+ <i>Cumulative bivariate normal distribution function. </i><br/>
+ class <code>BivariateCumulativeNormalDistributionWe04DP</code><br/>
  <i>Cumulative bivariate normal distibution function (West 2004). </i></p>
 <h3>Typedefs</h3>
-<p>typedef BivariateCumulativeNormalDistributionWe04DP <code>BivariateCumulativeNormalDistribution</code><br />
+<p>typedef BivariateCumulativeNormalDistributionWe04DP <code>BivariateCumulativeNormalDistribution</code><br/>
  <i>default bivariate implementation </i></p>
 <h2>Detailed Description</h2>
 <p>bivariate cumulative normal distribution </p>

@@ -10,9 +10,9 @@ description: "ipq_errstr, ipq_perror — libipq error handling routines"
 
 <p> ipq_errstr, ipq_perror &#8212; libipq error handling routines </p>
 <h2>SYNOPSIS</h2>
-<p> <code>#include &lt;<a href="file:/usr/include/linux/netfilter.h">linux/netfilter.h</a>&gt;</code><br />
+<p> <code>#include &lt;<a href="file:/usr/include/linux/netfilter.h">linux/netfilter.h</a>&gt;</code><br/>
  <code>#include &lt;<a href="file:/usr/include/libipq.h">libipq.h</a>&gt;</code> </p>
-<p> <code>char *ipq_errstr(</code><i>void</i><code>);</code><br />
+<p> <code>char *ipq_errstr(</code><i>void</i><code>);</code><br/>
  <code>void ipq_perror(const char *</code><i>s</i><code>);</code></p>
 <h2>DESCRIPTION</h2>
 <p> The <code>ipq_errstr</code> function returns a descriptive error message based on the current value of the internal <code>ipq_errno</code> variable. All libipq API functions set this internal variable upon failure. </p>

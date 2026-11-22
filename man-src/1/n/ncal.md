@@ -10,11 +10,11 @@ description: "cal ncal – displays a calendar and the date of Easter"
 
 <p> <code>cal</code> <code>ncal</code> &#8211; displays a calendar and the date of Easter </p>
 <h2>SYNOPSIS</h2>
-<p> [-<code>31jy</code> ] [-<code>A </code><i>number</i> ] [-<code>B </code><i>number</i> ] [-<code>d </code><i>yyyy-mm</i> ] [[<i>month</i> ] <i>year</i> ]<br />
- [-<code>31j</code> ] [-<code>A </code><i>number</i> ] [-<code>B </code><i>number</i> ] [-<code>d </code><i>yyyy-mm</i> ] &#8211;<code>m </code><i>month</i> [<i>year</i> ]<br />
-<code>ncal</code> [-<code>C</code> ] [-<code>31jy</code> ] [-<code>A </code><i>number</i> ] [-<code>B </code><i>number</i> ] [-<code>d </code><i>yyyy-mm</i> ] [[<i>month</i> ] <i>year</i> ]<br />
-<code>ncal</code> [-<code>C</code> ] [-<code>31j</code> ] [-<code>A </code><i>number</i> ] [-<code>B </code><i>number</i> ] [-<code>d </code><i>yyyy-mm</i> ] &#8211;<code>m </code><i>month</i> [<i>year</i> ]<br />
-<code>ncal</code> [-<code>31bhjJpwySM</code> ] [-<code>A </code><i>number</i> ] [-<code>B </code><i>number</i> ] [-<code>H </code><i>yyyy-mm-dd</i> ] [-<code>d </code><i>yyyy-mm</i> ] [-<code>s </code><i>country_code</i> ] [[<i>month</i> ] <i>year</i> ]<br />
+<p> [-<code>31jy</code> ] [-<code>A </code><i>number</i> ] [-<code>B </code><i>number</i> ] [-<code>d </code><i>yyyy-mm</i> ] [[<i>month</i> ] <i>year</i> ]<br/>
+ [-<code>31j</code> ] [-<code>A </code><i>number</i> ] [-<code>B </code><i>number</i> ] [-<code>d </code><i>yyyy-mm</i> ] &#8211;<code>m </code><i>month</i> [<i>year</i> ]<br/>
+<code>ncal</code> [-<code>C</code> ] [-<code>31jy</code> ] [-<code>A </code><i>number</i> ] [-<code>B </code><i>number</i> ] [-<code>d </code><i>yyyy-mm</i> ] [[<i>month</i> ] <i>year</i> ]<br/>
+<code>ncal</code> [-<code>C</code> ] [-<code>31j</code> ] [-<code>A </code><i>number</i> ] [-<code>B </code><i>number</i> ] [-<code>d </code><i>yyyy-mm</i> ] &#8211;<code>m </code><i>month</i> [<i>year</i> ]<br/>
+<code>ncal</code> [-<code>31bhjJpwySM</code> ] [-<code>A </code><i>number</i> ] [-<code>B </code><i>number</i> ] [-<code>H </code><i>yyyy-mm-dd</i> ] [-<code>d </code><i>yyyy-mm</i> ] [-<code>s </code><i>country_code</i> ] [[<i>month</i> ] <i>year</i> ]<br/>
 <code>ncal</code> [-<code>31bhJeoSM</code> ] [-<code>A </code><i>number</i> ] [-<code>B </code><i>number</i> ] [-<code>d </code><i>yyyy-mm</i> ] [<i>year</i> ]</p>
 <h2>DESCRIPTION</h2>
 <p> The utility displays a simple calendar in traditional format and <code>ncal</code> offers an alternative layout, more options and the date of Easter. The new format is a little cramped but it makes a year fit on a 25&#215;80 terminal. If arguments are not specified, the current month is displayed. </p>

@@ -58,7 +58,7 @@ description: "org.freedesktop.timedate1 – The D-Bus interface of systemd-timed
 <p> Whenever the <i>Timezone</i> and <i>LocalRTC</i> settings are changed via the daemon, <code>PropertyChanged</code> signals are sent out to which clients can subscribe. </p>
 <p> Note that this service will not inform you about system time changes. Use <code>timerfd</code>(3) with <code>CLOCK_REALTIME</code> and <code>TFD_TIMER_CANCEL_ON_SET</code> for that.</p>
 <h3>Security</h3>
-<p>The <i>interactive</i> boolean parameters can be used to control whether m[blue]<code>polkit</code>m[]<font SIZE="-2">[1]</font> should interactively ask the user for authentication credentials if required. </p>
+<p>The <i>interactive</i> boolean parameters can be used to control whether m[blue]<code>polkit</code>m[][1] should interactively ask the user for authentication credentials if required. </p>
 <p> The polkit action for <code>SetTimezone()</code> is org.freedesktop.timedate1.set-timezone. For <code>SetLocalRTC()</code> it is org.freedesktop.timedate1.set-local-rtc, for <code>SetTime()</code> it is org.freedesktop.timedate1.set-time and for <code>SetNTP()</code> it is org.freedesktop.timedate1.set-ntp. <code>ListTimezones()</code> does not require any privileges.</p>
 <h2>Examples</h2>
 <p><code>Example 1. Introspect org.freedesktop.timedate1 on the bus</code> </p>
@@ -69,9 +69,9 @@ description: "org.freedesktop.timedate1 – The D-Bus interface of systemd-timed
  --object-path /org/freedesktop/timedate1</pre>
 </dd></dl>
 <h2>Versioning</h2>
-<p>These D-Bus interfaces follow m[blue]<code>the usual interface versioning guidelines</code>m[]<font SIZE="-2">[2]</font>.</p>
+<p>These D-Bus interfaces follow m[blue]<code>the usual interface versioning guidelines</code>m[][2].</p>
 <h2>See Also</h2>
-<p>m[blue]<code>More information on how the system clock and RTC interact</code>m[]<font SIZE="-2">[3]</font></p>
+<p>m[blue]<code>More information on how the system clock and RTC interact</code>m[][3]</p>
 <h2>Notes</h2>
 <dl>
 <dt> 1.</dt>

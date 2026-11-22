@@ -22,10 +22,10 @@ description: "infokey – compile customizations for Info"
 <dt><code>&#8211;version</code></dt>
 <dd> display version information and exit.</dd></dl>
 <h2>REPORTING BUGS</h2>
-<p> Email bug reports to bug-texinfo [at] gnu.org, general questions and discussion to help-texinfo [at] gnu.org.<br />
+<p> Email bug reports to bug-texinfo [at] gnu.org, general questions and discussion to help-texinfo [at] gnu.org.<br/>
  Texinfo home page: <a rel="nofollow" href="http://www.gnu.org/software/texinfo/">http://www.gnu.org/software/texinfo/</a></p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2013 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt;<br />
+<p> Copyright &#169; 2013 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt;<br/>
  This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.</p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>infokey</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>infokey</code> programs are properly installed at your site, the command</p>

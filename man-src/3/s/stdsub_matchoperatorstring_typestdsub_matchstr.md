@@ -9,9 +9,9 @@ description: "std::sub_match<BidirIt>::operatorstring_type,std::sub_match<BidirI
 
 <p>std::sub_match&lt;BidirIt&gt;::operatorstring_type,std::sub_match&lt;BidirIt&gt;::str &#8211; std::sub_match&lt;BidirIt&gt;::operatorstring_type,std::sub_match&lt;BidirIt&gt;::str</p>
 <h2>Synopsis</h2>
-<p>operator string_type() const; <code>(1)</code><br />
-string_type str() const; <code>(2)</code><br />
-Converts to an object of the underlying std::basic_string type.<br />
+<p>operator string_type() const; <code>(1)</code><br/>
+string_type str() const; <code>(2)</code><br/>
+Converts to an object of the underlying std::basic_string type.<br/>
 The first version is an implicit conversion, the second one is explicit. </p>
 <h2>Parameters</h2>
 <p><i>(none)</i></p>

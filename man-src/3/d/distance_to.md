@@ -21,8 +21,8 @@ description: "QuantLib::step_iterator – Iterator advancing in constant steps."
 <p> void <code>advance</code> (typename super_t::difference_type n) </p>
 <p> super_t::difference_type <code>distance_to</code> (const <code>step_iterator</code> &amp;i) const </p>
 <h3>Related Functions</h3>
-<p> (Note that these are not member functions.)<br />
- template&lt;class Iterator &gt; <code>step_iterator</code>&lt; Iterator &gt; <code>make_step_iterator</code> (Iterator it, Size step)<br />
+<p> (Note that these are not member functions.)<br/>
+ template&lt;class Iterator &gt; <code>step_iterator</code>&lt; Iterator &gt; <code>make_step_iterator</code> (Iterator it, Size step)<br/>
  <i>helper function to create step iterators </i></p>
 <h2>Detailed Description</h2>
 <h3>template&lt;class Iterator&gt; class QuantLib::step_iterator&lt; Iterator &gt;</h3>

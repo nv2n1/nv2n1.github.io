@@ -268,36 +268,36 @@ description: "ncmpcpp – An ncurses Music Player Daemon (MPD) client."
 <p> You can view current ncmpcpp&#8217;s keybindings by pressing &#8216;1&#8217; (Help).</p>
 <h2>SONG FORMAT</h2>
 <p> For song format you can use: </p>
-<p>&nbsp;<wbr>%l &#8211; length<br />
-&nbsp;<wbr>%f &#8211; filename<br />
-&nbsp;<wbr>%D &#8211; directory<br />
-&nbsp;<wbr>%a &#8211; artist<br />
-&nbsp;<wbr>%A &#8211; album artist<br />
-&nbsp;<wbr>%t &#8211; title<br />
-&nbsp;<wbr>%b &#8211; album<br />
-&nbsp;<wbr>%y &#8211; year<br />
-&nbsp;<wbr>%n &#8211; track number&nbsp;<wbr>(01/12 -&gt;&nbsp;<wbr>01)<br />
-&nbsp;<wbr>%N &#8211; full track info&nbsp;<wbr>(01/12 -&gt;&nbsp;<wbr>01/12)<br />
-&nbsp;<wbr>%g &#8211; genre<br />
-&nbsp;<wbr>%c &#8211; composer<br />
-&nbsp;<wbr>%p &#8211; performer<br />
-&nbsp;<wbr>%d &#8211; disc<br />
-&nbsp;<wbr>%C &#8211; comment<br />
+<p>&nbsp;<wbr>%l &#8211; length<br/>
+&nbsp;<wbr>%f &#8211; filename<br/>
+&nbsp;<wbr>%D &#8211; directory<br/>
+&nbsp;<wbr>%a &#8211; artist<br/>
+&nbsp;<wbr>%A &#8211; album artist<br/>
+&nbsp;<wbr>%t &#8211; title<br/>
+&nbsp;<wbr>%b &#8211; album<br/>
+&nbsp;<wbr>%y &#8211; year<br/>
+&nbsp;<wbr>%n &#8211; track number&nbsp;<wbr>(01/12 -&gt;&nbsp;<wbr>01)<br/>
+&nbsp;<wbr>%N &#8211; full track info&nbsp;<wbr>(01/12 -&gt;&nbsp;<wbr>01/12)<br/>
+&nbsp;<wbr>%g &#8211; genre<br/>
+&nbsp;<wbr>%c &#8211; composer<br/>
+&nbsp;<wbr>%p &#8211; performer<br/>
+&nbsp;<wbr>%d &#8211; disc<br/>
+&nbsp;<wbr>%C &#8211; comment<br/>
 &nbsp;<wbr>$R &#8211; begin right alignment </p>
 <p> You can also put them in { } and then they will be displayed only if all requested values are available and/or define alternate value with { }|{ } e.g. {%a &#8211; %t}|{%f} will check if artist and title tags are available and if they are, display them. Otherwise it&#8217;ll display filename. </p>
 <p> <code>Note</code>: If you want to set limit on maximal length of a tag, just put the appropriate number between % and character that defines tag type, e.g. to make album take max. 20 terminal cells, use &#8216;%20b&#8217;. </p>
 <p> <code>Note</code>: Format that is similar to &quot;%a &#8211; %t&quot; (i.e. without any additional braces) is equal to &quot;{%a &#8211; %t}&quot;, so if one of the tags is missing, you&#8217;ll get nothing. </p>
 <p> Text can have different color than the main window, e.g. if you want length to be green, write $3%l$9. </p>
 <p> Available values for colors: </p>
-<p>&nbsp;<wbr>&#8211; 0 &#8211; default window color&nbsp;<wbr>(discards all other colors)<br />
-&nbsp;<wbr>&#8211; 1 &#8211; black<br />
-&nbsp;<wbr>&#8211; 2 &#8211; red<br />
-&nbsp;<wbr>&#8211; 3 &#8211; green<br />
-&nbsp;<wbr>&#8211; 4 &#8211; yellow<br />
-&nbsp;<wbr>&#8211; 5 &#8211; blue<br />
-&nbsp;<wbr>&#8211; 6 &#8211; magenta<br />
-&nbsp;<wbr>&#8211; 7 &#8211; cyan<br />
-&nbsp;<wbr>&#8211; 8 &#8211; white<br />
+<p>&nbsp;<wbr>&#8211; 0 &#8211; default window color&nbsp;<wbr>(discards all other colors)<br/>
+&nbsp;<wbr>&#8211; 1 &#8211; black<br/>
+&nbsp;<wbr>&#8211; 2 &#8211; red<br/>
+&nbsp;<wbr>&#8211; 3 &#8211; green<br/>
+&nbsp;<wbr>&#8211; 4 &#8211; yellow<br/>
+&nbsp;<wbr>&#8211; 5 &#8211; blue<br/>
+&nbsp;<wbr>&#8211; 6 &#8211; magenta<br/>
+&nbsp;<wbr>&#8211; 7 &#8211; cyan<br/>
+&nbsp;<wbr>&#8211; 8 &#8211; white<br/>
 &nbsp;<wbr>&#8211; 9 &#8211; end of current color </p>
 <p> <code>Note</code>: colors can be nested, so if you write $2some$5text$9, it&#8217;ll disable only usage of blue color and make red the current one. </p>
 <h2>BUGS</h2>

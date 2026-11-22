@@ -10,7 +10,7 @@ description: "zppcon.f –"
 <p>zppcon.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zppcon</code> (UPLO, N, AP, ANORM, RCOND, WORK, RWORK, INFO)<br />
+<p>subroutine <code>zppcon</code> (UPLO, N, AP, ANORM, RCOND, WORK, RWORK, INFO)<br/>
  <i></i><code>ZPPCON</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zppcon (characterUPLO, integerN, complex*16, dimension( * )AP, double precisionANORM, double precisionRCOND, complex*16, dimension( * )WORK, double precision, dimension( * )RWORK, integerINFO)</h3>

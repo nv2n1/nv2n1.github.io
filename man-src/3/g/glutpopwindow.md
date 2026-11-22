@@ -13,8 +13,8 @@ description: "glutPopWindow – Request to raise the current window to the top"
 <h2>Synopsis</h2>
 <p>In openglut.h Ft void Fn glutPopWindow void</p>
 <h2>Description</h2>
-<p>Request that the Bf Li<br />
-&nbsp;<wbr>current window Ef<br />
+<p>Request that the Bf Li<br/>
+&nbsp;<wbr>current window Ef<br/>
 &nbsp;<wbr>&nbsp;<wbr>be brought to the top. </p>
 <p> A window can be in front of or behind other windows, as determined by the z-order from front to back. Top-level OpenGLUT windows can be placed at the front or back of the z-order by means of the glutPopWindow() and glutPushWindow() API functions. </p>
 <p> A z-order also applies to the subwindows of a top-level window. While the z-order of top-level windows can usually be adjusted by the user, subwindow z-order is controlled entirely by the application. </p>

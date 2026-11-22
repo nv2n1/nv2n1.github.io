@@ -13,9 +13,9 @@ description: "cairo-dock – A dock to launch your programs easily."
 <p> <code>cairo-dock</code> [options] </p>
 <h2>DESCRIPTION</h2>
 <p> <code>Cairo-Dock</code> is a pretty, light and convenient interface to your desktop, able to replace advantageously your system panel! </p>
-<p> It features <code>multi-docks, taskbar, launchers</code> and a lot of useful <code>applets.</code><br />
- <code>Applets</code> can be detached from the dock to act as desktop <code>widgets.</code><br />
- Numerous ready-to-use <code>themes</code> are downloadable in 1 click, and can be easily customized at your convenience.<br />
+<p> It features <code>multi-docks, taskbar, launchers</code> and a lot of useful <code>applets.</code><br/>
+ <code>Applets</code> can be detached from the dock to act as desktop <code>widgets.</code><br/>
+ Numerous ready-to-use <code>themes</code> are downloadable in 1 click, and can be easily customized at your convenience.<br/>
  It can use <code>hardware acceleration</code> (OpenGL) to be very fast and low on CPU. </p>
 <p> It&#8217;s recommended to install the PLUG-INS package ( <code>cairo-dock-plug-ins</code> ) to have access to more views, dialogues and many plug-ins and applets. </p>
 <p> Some <code>screenshots</code> are available : </p>
@@ -23,7 +23,7 @@ description: "cairo-dock – A dock to launch your programs easily."
 <p> <code>Development site:</code> </p>
 <p>&nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="https://launchpad.net/cairo-dock">https://launchpad.net/cairo-dock</a> </p>
 <h2>OPTIONS</h2>
-<p> You can launch <code>Cairo-Dock</code> with several options :<br />
+<p> You can launch <code>Cairo-Dock</code> with several options :<br/>
  (Note : you can use these options in one block. For example : cairo-dock -oia )</p>
 <dl>
 <dt><code>-c, &#8211;cairo</code></dt>
@@ -35,7 +35,7 @@ description: "cairo-dock – A dock to launch your programs easily."
 <dt><code>-A, &#8211;ask-backend</code></dt>
 <dd> Ask again on startup which backend to use.</dd>
 <dt><code>-l, &#8211;log [option]</code></dt>
-<dd> Log verbosity (options : debug, message, warning, critical, error &#8211; default is &#8216;warning&#8217;).<br />
+<dd> Log verbosity (options : debug, message, warning, critical, error &#8211; default is &#8216;warning&#8217;).<br/>
  For example : cairo-dock -l debug</dd>
 <dt><code>-F, &#8211;colors</code></dt>
 <dd> Force to display some output messages with colors even if these messages are not displayed into a tty.</dd>
@@ -89,20 +89,20 @@ description: "cairo-dock – A dock to launch your programs easily."
 </dl>
 <h2>AUTHOR</h2>
 <p> Most of the <code>Cairo-Dock</code> project was written by <code>Fabrice Rey</code> (fabounet) &lt;fabounet [at] glx-dock.org&gt;. </p>
-<p> The <code>Cairo-Dock Team</code> is currently formed by <code>Fabounet</code> (Fabrice Rey) and <code>Matttbe</code> (Matthieu Baerts).<br />
+<p> The <code>Cairo-Dock Team</code> is currently formed by <code>Fabounet</code> (Fabrice Rey) and <code>Matttbe</code> (Matthieu Baerts).<br/>
  With the help of <code>Eduardo Mucelli</code> for our third-party applets. </p>
 <p> Thanks to our former developers: <code>Mav</code> (Yann Sladek), <code>Tofe</code> (Christophe Chapuis), <code>Nochka85</code> (Yann Dulieu), <code>ChanGFu</code> (Rémy Robertson), <code>Paradoxxx Zero</code> (Florian Mounier), <code>Necropotame</code> (Adrien Pilleboue), <code>Rom1</code> (Romain Perol), <code>Ctaf</code> , <code>Augur</code> and <code>SQP</code> as well as numerous beta testers and contributors: lylambda, taiebot65, Franksuse64, ppmt, etc. see the &#8216;About&#8217; menu in the dock and this web page. </p>
 <p>&nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="http://glx-dock.org/userlist_messages.php">http://glx-dock.org/userlist_messages.php</a> </p>
-<p> Don&#8217;t hesitate to contribute to this project ;)<br />
+<p> Don&#8217;t hesitate to contribute to this project ;)<br/>
  Please have a look at this wiki page: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="http://glx-dock.org/ww_page.php?p=How%20to%20help%20us">http://glx-dock.org/ww_page.php?p=How%20to%20help%20us</a> </p>
-<p> This manual page was started by Julien Lavergne &lt;julien.lavergne [at] gmail.com&gt;, for the Debian project (but may be used by others).<br />
+<p> This manual page was started by Julien Lavergne &lt;julien.lavergne [at] gmail.com&gt;, for the Debian project (but may be used by others).<br/>
  Updated by Matthieu Baerts (matttbe) &lt;matttbe [at] gmail.com&gt;. </p>
 <h2>BUGS</h2>
 <p> Your bug is maybe a <code>recurrent problem</code> (black background, window at startup (use -c or -o), problem with OpenGL, etc.). Please go to: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="http://www.glx-dock.org/ww_page.php?p=Recurrents%20problems">http://www.glx-dock.org/ww_page.php?p=Recurrents%20problems</a> </p>
 <p> For any other bugs, you can post them on Cairo-Dock forum: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="http://forum.glx-dock.org">http://forum.glx-dock.org</a><br />
+<p>&nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="http://forum.glx-dock.org">http://forum.glx-dock.org</a><br/>
  or on Launchpad </p>
 <p>&nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="https://bugs.launchpad.net/cairo-dock">https://bugs.launchpad.net/cairo-dock</a> </p>
 <h2>WEBSITE</h2>

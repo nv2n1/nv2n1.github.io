@@ -10,7 +10,7 @@ description: "cupmtr.f –"
 <p>cupmtr.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>cupmtr</code> (SIDE, UPLO, TRANS, M, N, AP, TAU, C, LDC, WORK, INFO)<br />
+<p>subroutine <code>cupmtr</code> (SIDE, UPLO, TRANS, M, N, AP, TAU, C, LDC, WORK, INFO)<br/>
  <i></i><code>CUPMTR</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cupmtr (characterSIDE, characterUPLO, characterTRANS, integerM, integerN, complex, dimension( * )AP, complex, dimension( * )TAU, complex, dimension( ldc, * )C, integerLDC, complex, dimension( * )WORK, integerINFO)</h3>

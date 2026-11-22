@@ -9,11 +9,11 @@ description: "Plugin Functions – Functions that load modules of compiled code 
 
 <p>Plugin Functions &#8211; Functions that load modules of compiled code into memory. </p>
 <h3>Functions</h3>
-<p>EAPI Ecore_Plugin * <code>ecore_plugin_load</code> (Ecore_Path_Group *group, const char *plugin_name, const char *version)<br />
- <i>Loads the specified plugin from the specified path group. </i><br />
- EAPI void <code>ecore_plugin_unload</code> (Ecore_Plugin *plugin)<br />
- <i>Unloads the given plugin from memory. </i><br />
- EAPI Ecore_List * <code>ecore_plugin_available_get</code> (Ecore_Path_Group *group)<br />
+<p>EAPI Ecore_Plugin * <code>ecore_plugin_load</code> (Ecore_Path_Group *group, const char *plugin_name, const char *version)<br/>
+ <i>Loads the specified plugin from the specified path group. </i><br/>
+ EAPI void <code>ecore_plugin_unload</code> (Ecore_Plugin *plugin)<br/>
+ <i>Unloads the given plugin from memory. </i><br/>
+ EAPI Ecore_List * <code>ecore_plugin_available_get</code> (Ecore_Path_Group *group)<br/>
  <i>Retrieves a list of all available plugins in the given path. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that load modules of compiled code into memory.</p>
@@ -31,8 +31,8 @@ description: "Plugin Functions – Functions that load modules of compiled code 
 <p>Loads the specified plugin from the specified path group. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>group</i> The path group to search for the plugin to load<br />
- <i>plugin_name</i> The name of the plugin to load.<br />
+<dd><i>group</i> The path group to search for the plugin to load<br/>
+ <i>plugin_name</i> The name of the plugin to load.<br/>
  <i>version</i> The interface version of the plugin. With version equal to NULL the default will be loaded.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

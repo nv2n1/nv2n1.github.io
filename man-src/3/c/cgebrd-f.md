@@ -10,7 +10,7 @@ description: "cgebrd.f –"
 <p>cgebrd.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>cgebrd</code> (M, N, A, LDA, D, E, TAUQ, TAUP, WORK, LWORK, INFO)<br />
+<p>subroutine <code>cgebrd</code> (M, N, A, LDA, D, E, TAUQ, TAUP, WORK, LWORK, INFO)<br/>
  <i></i><code>CGEBRD</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cgebrd (integerM, integerN, complex, dimension( lda, * )A, integerLDA, real, dimension( * )D, real, dimension( * )E, complex, dimension( * )TAUQ, complex, dimension( * )TAUP, complex, dimension( * )WORK, integerLWORK, integerINFO)</h3>

@@ -11,7 +11,7 @@ description: "slangt.f –"
 <p> slangt.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> REAL function <code>slangt</code> (NORM, N, DL, D, DU)<br />
+<p> REAL function <code>slangt</code> (NORM, N, DL, D, DU)<br/>
  <i></i><code>SLANGT</code> returns the value of the 1-norm, Frobenius norm, infinity-norm, or the largest absolute value of any element of a general tridiagonal matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>REAL function slangt (characterNORM, integerN, real, dimension( * )DL, real, dimension( * )D, real, dimension( * )DU)</h3>

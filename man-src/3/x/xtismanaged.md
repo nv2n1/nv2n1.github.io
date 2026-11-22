@@ -124,6 +124,6 @@ description: "XtManageChildren, XtManageChild, XtUnmanageChildren, XtUnmanageChi
 </dl>
 <p> The <code>XtIsManaged</code> function returns <code>True</code> if the specified widget is of class RectObj or any subclass thereof and is managed, or <code>False</code> otherwise.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xtmapwidget/">XtMapWidget</a>(3), <a href="/docs/linux/man/3-xtrealizewidget/">XtRealizeWidget</a>(3)<br />
- <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><a href="/docs/linux/man/3-xtmapwidget/">XtMapWidget</a>(3), <a href="/docs/linux/man/3-xtrealizewidget/">XtRealizeWidget</a>(3)<br/>
+ <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

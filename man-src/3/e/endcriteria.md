@@ -10,10 +10,10 @@ description: "ql/math/optimization/endcriteria.hpp – Optimization criteria cla
 
 <p> ql/math/optimization/endcriteria.hpp &#8211; Optimization criteria class. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/utilities/null.hpp&gt;<br />
+<p> #include &lt;ql/utilities/null.hpp&gt;<br/>
  #include &lt;iostream&gt; </p>
 <h3>Classes</h3>
-<p> class <code>EndCriteria</code><br />
+<p> class <code>EndCriteria</code><br/>
  <i>Criteria to end optimization process:. </i></p>
 <h3>Functions</h3>
 <p> std::ostream &amp; <code>operator&lt;&lt;</code> (std::ostream &amp;out, EndCriteria::Type ecType) </p>

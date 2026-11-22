@@ -31,9 +31,9 @@ description: "Enchant – a spellchecker"
 <h2>ENCHANT ORDERING FILE</h2>
 <p> Enchant uses global and per-user ordering files named <i>enchant.ordering</i> to decide which spelling provider to use for particular languages. The per-user file takes precedence. </p>
 <p> The ordering file takes the form <i>language_tag:&lt;comma-separated list of spelling providers&gt;</i>. The language tag is an IETF BCP 47 language tag, typically of the form <i>COUNTRY_LANGUAGE</i>. To see what dictionaries are available, run <i>enchant-lsmod-2</i>. &#8216;*&#8217; is used to mean &quot;use this ordering for all languages, unless instructed otherwise.&quot; For example: </p>
-<p> *:aspell,hunspell,nuspell<br />
- en:aspell,hunspell,nuspell<br />
- en_GB:hunspell,nuspell,aspell<br />
+<p> *:aspell,hunspell,nuspell<br/>
+ en:aspell,hunspell,nuspell<br/>
+ en_GB:hunspell,nuspell,aspell<br/>
  fr:hunspell,nuspell,aspell</p>
 <h2>FILES AND DIRECTORIES</h2>
 <p> Enchant looks in the following places for files, in decreasing order of precedence:</p>

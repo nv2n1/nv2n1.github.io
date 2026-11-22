@@ -13,7 +13,7 @@ description: "zmq_msg_size – retrieve message content size in bytes"
 <h2>Description</h2>
 <p>The <i>zmq_msg_size()</i> function shall return the size in bytes of the content of the message object referenced by <i>msg</i>.</p>
 <dl>
-<dd><font SIZE="+1"> <code>Caution</code> </font><br />
+<dd> <code>Caution</code> <br/>
  Never access <i>zmq_msg_t</i> members directly, instead always use the <i>zmq_msg</i> family of functions. </dd>
 <h2>Return Value</h2>
 <p>Upon successful completion, <i>zmq_msg_size()</i> shall return the size of the message content in bytes.</p>

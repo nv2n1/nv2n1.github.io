@@ -8,7 +8,7 @@ url: "/docs/linux/man/3-dpkgipc/"
 
 Dpkg::IPC - helper functions for IPC 
 
-<h2>Description</h2>Dpkg::IPC offers helper functions to allow you to execute other programs in an easy, yet flexible way, while hiding all the gory details of <font SIZE="-1">IPC </font>(Inter-Process Communication) from you.
+<h2>Description</h2>Dpkg::IPC offers helper functions to allow you to execute other programs in an easy, yet flexible way, while hiding all the gory details of IPC (Inter-Process Communication) from you.
 <h2>Methods</h2><dl COMPACT><dt>spawn
 </dt><dd>Creates a child process and executes another program in it. The arguments are interpreted as a hash of options, specifying how to handle the in and output of the program to execute. Returns the pid of the child process (unless the wait_child option was given). 
  Any error will cause the function to exit with one of the Dpkg::ErrorHandling functions. 

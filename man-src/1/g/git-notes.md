@@ -135,7 +135,7 @@ git notes[list[&lt;object&gt;]] git notes add[-f][--allow - empty][-F&lt;file&gt
 <dt>
 </dt><dd> When merging notes, be more verbose. When pruning notes, report all object names whose notes are removed.</dd></dl>
 <h2>DISCUSSION</h2>
-<p> Commit notes are blobs containing extra information about an object (usually information to supplement a commit&#8217;s message). These blobs are taken from notes refs. A notes ref is usually a branch which contains &quot;files&quot; whose paths are the object names for the objects they describe, with some directory separators included for performance reasons <font SIZE="-2">[1]</font>. </p>
+<p> Commit notes are blobs containing extra information about an object (usually information to supplement a commit&#8217;s message). These blobs are taken from notes refs. A notes ref is usually a branch which contains &quot;files&quot; whose paths are the object names for the objects they describe, with some directory separators included for performance reasons [1]. </p>
 <p> Every notes change creates a new commit at the specified notes ref. You can therefore inspect the history of the notes by invoking, e.g., <code>git log -p notes/commits</code>. Currently the commit message only records which operation triggered the update, and the commit authorship is determined according to the usual rules (see <code><a href="/docs/linux/man/1-git-commit/">git-commit</a></code>(1)). These details may change in the future. </p>
 <p> It is also permitted for a notes ref to point directly to a tree object, in which case the history of the notes can be read with <code>git log -p -g &lt;refname&gt;</code>.</p>
 <h2>NOTES MERGE STRATEGIES</h2>

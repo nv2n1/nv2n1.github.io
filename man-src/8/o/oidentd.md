@@ -9,18 +9,18 @@ description: "oidentd – TCP/IP IDENT protocol server"
 
 <p>oidentd &#8211; TCP/IP IDENT protocol server</p>
 <h2>Synopsis</h2>
-<p><code>oidentd [options]</code> <code>[ -dehiImoqSv ]</code><br />
- <code>[ -a &lt;host&gt; ]</code><br />
- <code>[ -c &lt;charset&gt; ]</code><br />
- <code>[ -C &lt;config file&gt; ]</code><br />
- <code>[ -f &lt;port&gt; ]</code><br />
- <code>[ -p &lt;port&gt; ]</code><br />
- <code>[ -P &lt;host&gt; ]</code><br />
- <code>[ -o or &#8211;other=[&lt;OS string&gt;] ]</code><br />
- <code>[ -t or &#8211;timeout=&lt;seconds&gt; ]</code><br />
- <code>[ -g or &#8211;group=&lt;group|GID&gt; ]</code><br />
- <code>[ -l or &#8211;limit=&lt;number&gt;]</code><br />
- <code>[ -r or &#8211;reply=&lt;string&gt; ]</code><br />
+<p><code>oidentd [options]</code> <code>[ -dehiImoqSv ]</code><br/>
+ <code>[ -a &lt;host&gt; ]</code><br/>
+ <code>[ -c &lt;charset&gt; ]</code><br/>
+ <code>[ -C &lt;config file&gt; ]</code><br/>
+ <code>[ -f &lt;port&gt; ]</code><br/>
+ <code>[ -p &lt;port&gt; ]</code><br/>
+ <code>[ -P &lt;host&gt; ]</code><br/>
+ <code>[ -o or &#8211;other=[&lt;OS string&gt;] ]</code><br/>
+ <code>[ -t or &#8211;timeout=&lt;seconds&gt; ]</code><br/>
+ <code>[ -g or &#8211;group=&lt;group|GID&gt; ]</code><br/>
+ <code>[ -l or &#8211;limit=&lt;number&gt;]</code><br/>
+ <code>[ -r or &#8211;reply=&lt;string&gt; ]</code><br/>
  <code>[ -u or &#8211;user=&lt;username|UID&gt; ]</code> </p>
 <h2>Description</h2>
 <p><code>oidentd</code> is a server that implements the TCP/IP standard IDENT user identification protocol as specified in the RFC 1413 document. <code>oidentd</code> operates by looking up specific TCP connections and returning the user name of the process owning the connection. </p>
@@ -81,7 +81,7 @@ description: "oidentd – TCP/IP IDENT protocol server"
 <dd>Per-user configuration file. </dd>
 </dl>
 <h2>Author</h2>
-<p>Ryan McCabe &lt;ryan [at] numb.org&gt;<br />
+<p>Ryan McCabe &lt;ryan [at] numb.org&gt;<br/>
  <a rel="nofollow" href="http://dev.ojnk.net">http://dev.ojnk.net</a></p>
 <h2>Bugs</h2>
 <p>Solaris lacks IPv6 support and NAT support. </p>

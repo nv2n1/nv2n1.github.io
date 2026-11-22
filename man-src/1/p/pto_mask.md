@@ -20,7 +20,7 @@ description: "pto_mask – Apply a mask"
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-o</code> | &#8211;output=file.pto</dt>
-<dd> Output Hugin <font SIZE="-1">PTO</font> file. Default: &lt;filename&gt;_mask.pto</dd>
+<dd> Output Hugin PTO file. Default: &lt;filename&gt;_mask.pto</dd>
 <dt><code>&#8211;mask=filename [at] imgNr</code></dt>
 <dd> Read the mask from the file and assign to given image</dd>
 <dt><code>&#8211;rotate=CLOCKWISE|90|COUNTERCLOCKWISE|-90</code></dt>

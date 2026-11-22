@@ -10,14 +10,14 @@ description: "avc_add_callback – additional event notification for SELinux use
 
 <p> avc_add_callback &#8211; additional event notification for SELinux userspace object managers </p>
 <h2>SYNOPSIS</h2>
-<p> <code>#include &lt;selinux/selinux.h&gt;</code><br />
+<p> <code>#include &lt;selinux/selinux.h&gt;</code><br/>
  <code>#include &lt;selinux/avc.h&gt;</code> </p>
-<p> <code>int avc_add_callback(int (*</code><i>callback</i><code>)(uint32_t </code><i>event</i><code>,</code> <code>security_id_t </code><i>ssid</i><code>,</code><br />
- <code>security_id_t </code><i>tsid</i><code>,</code><br />
- <code>security_class_t </code><i>tclass</i><code>,</code><br />
- <code>access_vector_t </code><i>perms</i><code>,</code><br />
- <code>access_vector_t *</code><i>out_retained</i><code>),</code> <code>uint32_t </code><i>events</i><code>, security_id_t </code><i>ssid</i><code>,</code><br />
- <code>security_id_t </code><i>tsid</i><code>, security_class_t </code><i>tclass</i><code>,</code><br />
+<p> <code>int avc_add_callback(int (*</code><i>callback</i><code>)(uint32_t </code><i>event</i><code>,</code> <code>security_id_t </code><i>ssid</i><code>,</code><br/>
+ <code>security_id_t </code><i>tsid</i><code>,</code><br/>
+ <code>security_class_t </code><i>tclass</i><code>,</code><br/>
+ <code>access_vector_t </code><i>perms</i><code>,</code><br/>
+ <code>access_vector_t *</code><i>out_retained</i><code>),</code> <code>uint32_t </code><i>events</i><code>, security_id_t </code><i>ssid</i><code>,</code><br/>
+ <code>security_id_t </code><i>tsid</i><code>, security_class_t </code><i>tclass</i><code>,</code><br/>
  <code>access_vector_t </code><i>perms</i><code>);</code></p>
 <h2>DESCRIPTION</h2>
 <p> <code>avc_add_callback</code>() is used to register callback functions on security events. The purpose of this functionality is to allow userspace object managers to take additional action when a policy change, usually a policy reload, causes permissions to be granted or revoked. </p>

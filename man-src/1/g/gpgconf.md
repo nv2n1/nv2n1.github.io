@@ -10,8 +10,8 @@ description: "gpgconf – Modify .gnupg home directories"
 
 <p> <code>gpgconf</code> &#8211; Modify .gnupg home directories </p>
 <h2>SYNOPSIS</h2>
-<p> <code>gpgconf</code> [<i>options</i>] <code>&#8211;list-components</code><br />
- <code>gpgconf</code> [<i>options</i>] <code>&#8211;list-options</code> <i>component</i><br />
+<p> <code>gpgconf</code> [<i>options</i>] <code>&#8211;list-components</code><br/>
+ <code>gpgconf</code> [<i>options</i>] <code>&#8211;list-options</code> <i>component</i><br/>
  <code>gpgconf</code> [<i>options</i>] <code>&#8211;change-options</code> <i>component</i> </p>
 <h2>DESCRIPTION</h2>
 <p> The <code>gpgconf</code> is a utility to automatically and reasonable safely query and modify configuration files in the &#8216;<i>.gnupg</i>&#8216; home directory. It is designed not to be invoked manually by the user, but automatically by graphical user interfaces (GUI). ([Please note that currently no locking is done, so concurrent access should be avoided. There are some precautions to avoid corruption with concurrent usage, but results may be inconsistent and some changes may get lost. The stateless design makes it difficult to provide more guarantees.]) </p>
@@ -350,12 +350,12 @@ $ echo 'force:16:' | gpgconf --change-options dirmngr
 <dl>
 <dt><code>/etc/gnupg/gpgconf.conf</code></dt>
 <dd>
-&nbsp;<wbr>&nbsp;If this file exists, it is processed as a global configuration file.<br />
-&nbsp;<wbr>&nbsp;A commented example can be found in the&nbsp;&#8216;<i>examples</i>&#8216;&nbsp;directory of<br />
+&nbsp;<wbr>&nbsp;If this file exists, it is processed as a global configuration file.<br/>
+&nbsp;<wbr>&nbsp;A commented example can be found in the&nbsp;&#8216;<i>examples</i>&#8216;&nbsp;directory of<br/>
 &nbsp;<wbr>&nbsp;the distribution. </dd>
 <dt><i>GNUPGHOME</i>/swdb.lst</dt>
 <dd>
-&nbsp;<wbr>&nbsp;A file with current software versions.&nbsp;<wbr>&nbsp;<code>dirmngr</code>&nbsp;creates<br />
+&nbsp;<wbr>&nbsp;A file with current software versions.&nbsp;<wbr>&nbsp;<code>dirmngr</code>&nbsp;creates<br/>
 &nbsp;<wbr>&nbsp;this file on demand from an online resource. </dd>
 </dl>
 <h2>SEE ALSO</h2>

@@ -14,18 +14,18 @@ description: "QuantLib::CappedFlooredCoupon – Capped and/or floored floating-r
 <p> Inherited by CappedFlooredCmsCoupon, and CappedFlooredIborCoupon. </p>
 <h3>Public Member Functions</h3>
 <p><code>CappedFlooredCoupon</code> (const boost::shared_ptr&lt; <code>FloatingRateCoupon</code> &gt; &amp;underlying, <code>Rate</code> cap=<code>Null</code>&lt; <code>Rate</code> &gt;(), <code>Rate</code> floor=<code>Null</code>&lt; <code>Rate</code> &gt;()) </p>
-<p> <code>Rate</code> <code>cap</code> () const<br />
- <i>cap </i><br />
- <code>Rate</code> <code>floor</code> () const<br />
- <i>floor </i><br />
- <code>Rate</code> <code>effectiveCap</code> () const<br />
- <i>effective cap of fixing </i><br />
- <code>Rate</code> <code>effectiveFloor</code> () const<br />
+<p> <code>Rate</code> <code>cap</code> () const<br/>
+ <i>cap </i><br/>
+ <code>Rate</code> <code>floor</code> () const<br/>
+ <i>floor </i><br/>
+ <code>Rate</code> <code>effectiveCap</code> () const<br/>
+ <i>effective cap of fixing </i><br/>
+ <code>Rate</code> <code>effectiveFloor</code> () const<br/>
  <i>effective floor of fixing </i> </p>
 <p> <code>Coupon interface</code> </p>
-<p> <code>Rate</code> <code>rate</code> () const<br />
- <i>accrued rate </i><br />
- <code>Rate</code> <code>convexityAdjustment</code> () const<br />
+<p> <code>Rate</code> <code>rate</code> () const<br/>
+ <i>accrued rate </i><br/>
+ <code>Rate</code> <code>convexityAdjustment</code> () const<br/>
  <i>convexity adjustment </i> </p>
 <p> <code>Observer interface</code> </p>
 <p> void <code>update</code> () </p>

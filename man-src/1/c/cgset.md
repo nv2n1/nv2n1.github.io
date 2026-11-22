@@ -10,7 +10,7 @@ description: "cgset – set the parameters of given cgroup(s)"
 
 <p> cgset &#8211; set the parameters of given cgroup(s) </p>
 <h2>SYNOPSIS</h2>
-<p> <code>cgset</code> [<code>-r</code> &lt;<i>name=value</i>&gt;] &lt;<code>cgroup_path</code>&gt; &#8230;<br />
+<p> <code>cgset</code> [<code>-r</code> &lt;<i>name=value</i>&gt;] &lt;<code>cgroup_path</code>&gt; &#8230;<br/>
  <code>cgset</code> <code>&#8211;copy-from</code> &lt;<i>source_cgroup_path</i>&gt; &lt;<code>cgroup_path</code>&gt; &#8230; </p>
 <h2>DESCRIPTION</h2>
 <p> Set the parameters of input cgroups. </p>

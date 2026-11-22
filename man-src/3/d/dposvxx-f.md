@@ -10,7 +10,7 @@ description: "dposvxx.f –"
 <p>dposvxx.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dposvxx</code> (FACT, UPLO, N, NRHS, A, LDA, AF, LDAF, EQUED, S, B, LDB, X, LDX, RCOND, RPVGRW, BERR, N_ERR_BNDS, ERR_BNDS_NORM, ERR_BNDS_COMP, NPARAMS, PARAMS, WORK, IWORK, INFO)<br />
+<p>subroutine <code>dposvxx</code> (FACT, UPLO, N, NRHS, A, LDA, AF, LDAF, EQUED, S, B, LDB, X, LDX, RCOND, RPVGRW, BERR, N_ERR_BNDS, ERR_BNDS_NORM, ERR_BNDS_COMP, NPARAMS, PARAMS, WORK, IWORK, INFO)<br/>
  <i></i><code> DPOSVXX computes the solution to system of linear equations A * X = B for PO matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dposvxx (characterFACT, characterUPLO, integerN, integerNRHS, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( ldaf, * )AF, integerLDAF, characterEQUED, double precision, dimension( * )S, double precision, dimension( ldb, * )B, integerLDB, double precision, dimension( ldx, * )X, integerLDX, double precisionRCOND, double precisionRPVGRW, double precision, dimension( * )BERR, integerN_ERR_BNDS, double precision, dimension( nrhs, * )ERR_BNDS_NORM, double precision, dimension( nrhs, * )ERR_BNDS_COMP, integerNPARAMS, double precision, dimension( * )PARAMS, double precision, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>

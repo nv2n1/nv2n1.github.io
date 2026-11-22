@@ -10,7 +10,7 @@ description: "chpgvx.f –"
 <p>chpgvx.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>chpgvx</code> (ITYPE, JOBZ, RANGE, UPLO, N, AP, BP, VL, VU, IL, IU, ABSTOL, M, W, Z, LDZ, WORK, RWORK, IWORK, IFAIL, INFO)<br />
+<p>subroutine <code>chpgvx</code> (ITYPE, JOBZ, RANGE, UPLO, N, AP, BP, VL, VU, IL, IU, ABSTOL, M, W, Z, LDZ, WORK, RWORK, IWORK, IFAIL, INFO)<br/>
  <i></i><code>CHPGST</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine chpgvx (integerITYPE, characterJOBZ, characterRANGE, characterUPLO, integerN, complex, dimension( * )AP, complex, dimension( * )BP, realVL, realVU, integerIL, integerIU, realABSTOL, integerM, real, dimension( * )W, complex, dimension( ldz, * )Z, integerLDZ, complex, dimension( * )WORK, real, dimension( * )RWORK, integer, dimension( * )IWORK, integer, dimension( * )IFAIL, integerINFO)</h3>

@@ -10,9 +10,9 @@ description: "setresuid, setresgid – set real, effective and saved user or gro
 
 <p> setresuid, setresgid &#8211; set real, effective and saved user or group ID </p>
 <h2>SYNOPSIS</h2>
-<p> <code>#define _GNU_SOURCE</code> /* See <a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a>(7) */<br />
+<p> <code>#define _GNU_SOURCE</code> /* See <a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a>(7) */<br/>
  <code>#include &lt;unistd.h&gt;</code> </p>
-<p> <code>int setresuid(uid_t </code><i>ruid</i><code>, uid_t </code><i>euid</i><code>, uid_t </code><i>suid</i><code>);</code><br />
+<p> <code>int setresuid(uid_t </code><i>ruid</i><code>, uid_t </code><i>euid</i><code>, uid_t </code><i>suid</i><code>);</code><br/>
  <code>int setresgid(gid_t </code><i>rgid</i><code>, gid_t </code><i>egid</i><code>, gid_t </code><i>sgid</i><code>);</code></p>
 <h2>DESCRIPTION</h2>
 <p> <code>setresuid</code>() sets the real user ID, the effective user ID, and the saved set-user-ID of the calling process. </p>

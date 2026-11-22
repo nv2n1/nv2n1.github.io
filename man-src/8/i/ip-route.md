@@ -15,10 +15,10 @@ route
 { COMMAND |
     help }
 </code></pre>
-<p> <code>ip route</code> { <code>show</code> | <code>flush</code> } <i>SELECTOR</i><br />
- <code>ip route save</code> <i>SELECTOR</i><br />
- <code>ip route restore</code><br />
- <code>ip route get</code> <i>ROUTE_GET_FLAGS</i> <i>ADDRESS</i> [ <code>from</code><i> ADDRESS </i><code>iif</code><i> STRING</i> ] [ <code>oif</code> <i>STRING</i> ] [ <code>mark</code> <i>MARK</i> ] [ <code>tos</code> <i>TOS</i> ] [ <code>vrf</code> <i>NAME</i> ] [ <code>ipproto</code> <i>PROTOCOL</i> ] [ <code>sport</code> <i>NUMBER</i> ] [ <code>dport</code> <i>NUMBER</i> ]<br />
+<p> <code>ip route</code> { <code>show</code> | <code>flush</code> } <i>SELECTOR</i><br/>
+ <code>ip route save</code> <i>SELECTOR</i><br/>
+ <code>ip route restore</code><br/>
+ <code>ip route get</code> <i>ROUTE_GET_FLAGS</i> <i>ADDRESS</i> [ <code>from</code><i> ADDRESS </i><code>iif</code><i> STRING</i> ] [ <code>oif</code> <i>STRING</i> ] [ <code>mark</code> <i>MARK</i> ] [ <code>tos</code> <i>TOS</i> ] [ <code>vrf</code> <i>NAME</i> ] [ <code>ipproto</code> <i>PROTOCOL</i> ] [ <code>sport</code> <i>NUMBER</i> ] [ <code>dport</code> <i>NUMBER</i> ]<br/>
  <code>ip route</code> { <code>add</code> | <code>del</code> | <code>change</code> | <code>append</code> | replace<code> } </code> <i>ROUTE</i> </p>
 <pre><code>SELECTOR :=
 [ root

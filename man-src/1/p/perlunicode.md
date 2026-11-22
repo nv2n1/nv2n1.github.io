@@ -11,7 +11,7 @@ description: "perlunicode – Unicode support in Perl"
 <p> perlunicode &#8211; Unicode support in Perl </p>
 <h2>DESCRIPTION</h2>
 <p> If you haven&#8217;t already, before reading this document, you should become familiar with both perlunitut and perluniintro. </p>
-<p> Unicode aims to <font SIZE="-1"><code>UNI</code></font>-fy the en-<font SIZE="-1"><code>CODE</code></font>-ings of all the world&#8217;s character sets into a single Standard. For quite a few of the various coding standards that existed when Unicode was first created, converting from each to Unicode essentially meant adding a constant to each code point in the original standard, and converting back meant just subtracting that same constant. For <font SIZE="-1">ASCII</font> and <font SIZE="-1">ISO-8859-1,</font> the constant is 0. For <font SIZE="-1">ISO-8859-5,</font> (Cyrillic) the constant is 864; for Hebrew (<font SIZE="-1">ISO-8859-8</font>), it&#8217;s 1488; Thai (<font SIZE="-1">ISO-8859-11</font>), 3424; and so forth. This made it easy to do the conversions, and facilitated the adoption of Unicode. </p>
+<p> Unicode aims to <code>UNI</code>-fy the en-<code>CODE</code>-ings of all the world&#8217;s character sets into a single Standard. For quite a few of the various coding standards that existed when Unicode was first created, converting from each to Unicode essentially meant adding a constant to each code point in the original standard, and converting back meant just subtracting that same constant. For ASCII and ISO-8859-1, the constant is 0. For ISO-8859-5, (Cyrillic) the constant is 864; for Hebrew (ISO-8859-8), it&#8217;s 1488; Thai (ISO-8859-11), 3424; and so forth. This made it easy to do the conversions, and facilitated the adoption of Unicode. </p>
 <p> And it worked; nowadays, those legacy standards are rarely used. Most everyone uses Unicode. </p>
 <p> Unicode is a comprehensive standard. It specifies many things outside the scope of Perl, such as how to display sequences of characters. For a full discussion of all aspects of Unicode, see &lt;<a rel="nofollow" href="http://www.unicode.org">http://www.unicode.org</a>&gt;.</p>
 <h3>Important Caveats</h3>
@@ -24,13 +24,13 @@ description: "perlunicode – Unicode support in Perl"
 <p> This pragma doesn&#8217;t affect I/O. Nor does it change the internal representation of strings, only their interpretation. There are still several places where Unicode isn&#8217;t fully supported, such as in filenames.</p>
 <dt>Input and Output Layers</dt>
 <dd> Use the <tt>&quot;:encoding(...)&quot;</tt> layer to read from and write to filehandles using the specified encoding. (See open.)</dd>
-<dt>You must convert your non-ASCII, non-UTF-8 Perl scripts to be <font SIZE="-1">UTF-8.</font></dt>
+<dt>You must convert your non-ASCII, non-UTF-8 Perl scripts to be UTF-8.</dt>
 <dd> The encoding module has been deprecated since perl 5.18 and the perl internals it requires have been removed with perl 5.26.</dd>
-<dt>&quot;use utf8&quot; still needed to enable <font SIZE="-1">UTF-8</font> in scripts</dt>
-<dd> If your Perl script is itself encoded in <font SIZE="-1">UTF-8</font>, the <tt>&quot;use utf8&quot;</tt> pragma must be explicitly included to enable recognition of that (in string or regular expression literals, or in identifier names). <code>This is the only time when an explicit </code>&quot;use utf8&quot;<code> is needed.</code> (See utf8). </dd>
-<p> If a Perl script begins with the bytes that form the <font SIZE="-1">UTF-8</font> encoding of the Unicode <font SIZE="-1">BYTE ORDER MARK</font> (<tt>&quot;BOM&quot;</tt>, see &#8220;Unicode Encodings&#8221;), those bytes are completely ignored.</p>
-<dt><font SIZE="-1">UTF-16</font> scripts autodetected</dt>
-<dd> If a Perl script begins with the Unicode <tt>&quot;BOM&quot;</tt> (<font SIZE="-1">UTF-16LE, UTF16-BE</font>), or if the script looks like non-<tt>&quot;BOM&quot;</tt>-marked <font SIZE="-1">UTF-16</font> of either endianness, Perl will correctly read in the script as the appropriate Unicode encoding.</dd></dl>
+<dt>&quot;use utf8&quot; still needed to enable UTF-8 in scripts</dt>
+<dd> If your Perl script is itself encoded in UTF-8, the <tt>&quot;use utf8&quot;</tt> pragma must be explicitly included to enable recognition of that (in string or regular expression literals, or in identifier names). <code>This is the only time when an explicit </code>&quot;use utf8&quot;<code> is needed.</code> (See utf8). </dd>
+<p> If a Perl script begins with the bytes that form the UTF-8 encoding of the Unicode BYTE ORDER MARK (<tt>&quot;BOM&quot;</tt>, see &#8220;Unicode Encodings&#8221;), those bytes are completely ignored.</p>
+<dt>UTF-16 scripts autodetected</dt>
+<dd> If a Perl script begins with the Unicode <tt>&quot;BOM&quot;</tt> (UTF-16LE, UTF16-BE), or if the script looks like non-<tt>&quot;BOM&quot;</tt>-marked UTF-16 of either endianness, Perl will correctly read in the script as the appropriate Unicode encoding.</dd></dl>
 <h3>Byte and Character Semantics</h3>
 <p> Before Unicode, most encodings used 8 bits (a single byte) to encode each character. Thus a character was a byte, and a byte was a character, and there could be only 256 or fewer possible characters. &#8220;Byte Semantics&#8221; in the title of this section refers to this behavior. There was no need to distinguish between &#8220;Byte&#8221; and &#8220;Character&#8221;. </p>
 <p> Then along comes Unicode which has room for over a million characters (and Perl allows for even more). This means that a character may require more than a single byte to represent it, and so the two terms are no longer equivalent. What matter are the characters as whole entities, and not usually the bytes that comprise them. That&#8217;s what the term &#8220;Character Semantics&#8221; in the title of this section refers to. </p>
@@ -59,7 +59,7 @@ description: "perlunicode – Unicode support in Perl"
 </dl>
 <dt>&bull;</dt>
 <dd> Strings&#8212;including hash keys&#8212;and regular expression patterns may contain characters that have ordinal values larger than 255. </dd>
-<p> If you use a Unicode editor to edit your program, Unicode characters may occur directly within the literal strings in <font SIZE="-1">UTF-8</font> encoding, or <font SIZE="-1">UTF-16.</font> (The former requires a <tt>&quot;use utf8&quot;</tt>, the latter may require a <tt>&quot;BOM&quot;</tt>.) </p>
+<p> If you use a Unicode editor to edit your program, Unicode characters may occur directly within the literal strings in UTF-8 encoding, or UTF-16. (The former requires a <tt>&quot;use utf8&quot;</tt>, the latter may require a <tt>&quot;BOM&quot;</tt>.) </p>
 <p> &#8220;Creating Unicode&#8221; in perluniintro gives other ways to place non-ASCII characters in your strings.</p>
 <dt>&bull;</dt>
 <dd> The <tt>&quot;chr()&quot;</tt> and <tt>&quot;ord()&quot;</tt> functions work on whole characters.</dd>
@@ -70,10 +70,10 @@ description: "perlunicode – Unicode support in Perl"
 <dt>&bull;</dt>
 <dd> <tt>&quot;scalar reverse()&quot;</tt> reverses by character rather than by byte.</dd>
 <dt>&bull;</dt>
-<dd> The bit string operators, <tt>&quot;&amp; | ^ ~&quot;</tt> and (starting in v5.22) <tt>&quot;&amp;. |. ^. ~.&quot;</tt> can operate on bit strings encoded in <font SIZE="-1">UTF-8,</font> but this can give unexpected results if any of the strings contain code points above 0xFF. Starting in v5.28, it is a fatal error to have such an operand. Otherwise, the operation is performed on a non-UTF-8 copy of the operand. If you&#8217;re not sure about the encoding of a string, downgrade it before using any of these operators; you can use <tt>&quot;utf8::utf8_downgrade()&quot;</tt>.</dd></dl>
+<dd> The bit string operators, <tt>&quot;&amp; | ^ ~&quot;</tt> and (starting in v5.22) <tt>&quot;&amp;. |. ^. ~.&quot;</tt> can operate on bit strings encoded in UTF-8, but this can give unexpected results if any of the strings contain code points above 0xFF. Starting in v5.28, it is a fatal error to have such an operand. Otherwise, the operation is performed on a non-UTF-8 copy of the operand. If you&#8217;re not sure about the encoding of a string, downgrade it before using any of these operators; you can use <tt>&quot;utf8::utf8_downgrade()&quot;</tt>.</dd></dl>
 <p> The bottom line is that Perl has always practiced &#8220;Character Semantics&#8221;, but with the advent of Unicode, that is now different than &#8220;Byte Semantics&#8221;.</p>
-<h3><font SIZE="-1">ASCII</font> Rules versus Unicode Rules</h3>
-<p> Before Unicode, when a character was a byte was a character, Perl knew only about the 128 characters defined by <font SIZE="-1">ASCII,</font> code points 0 through 127 (except for under <tt>&quot;use locale&quot;</tt>). That left the code points 128 to 255 as unassigned, and available for whatever use a program might want. The only semantics they have is their ordinal numbers, and that they are members of none of the non-negative character classes. None are considered to match <tt>&quot;\w&quot;</tt> for example, but all match <tt>&quot;\W&quot;</tt>. </p>
+<h3>ASCII Rules versus Unicode Rules</h3>
+<p> Before Unicode, when a character was a byte was a character, Perl knew only about the 128 characters defined by ASCII, code points 0 through 127 (except for under <tt>&quot;use locale&quot;</tt>). That left the code points 128 to 255 as unassigned, and available for whatever use a program might want. The only semantics they have is their ordinal numbers, and that they are members of none of the non-negative character classes. None are considered to match <tt>&quot;\w&quot;</tt> for example, but all match <tt>&quot;\W&quot;</tt>. </p>
 <p> Unicode, of course, assigns each of those code points a particular meaning (along with ones above 255). To preserve backward compatibility, Perl only uses the Unicode meanings when there is some indication that Unicode is what is intended; otherwise the non-ASCII code points remain treated as if they are unassigned. </p>
 <p> Here are the ways that Perl knows that a string should be treated as Unicode:</p>
 <dl>
@@ -87,19 +87,19 @@ description: "perlunicode – Unicode support in Perl"
 <dd> Within the scope of <tt>&quot;use 5.012&quot;</tt> or higher </dd>
 <p> This implicitly turns on <tt>&quot;use feature 'unicode_strings'&quot;</tt>.</p>
 <dt>&bull;</dt>
-<dd> Within the scope of <tt>&quot;use locale 'not_characters'&quot;</tt>, or <tt>&quot;use locale&quot;</tt> and the current locale is a <font SIZE="-1">UTF-8</font> locale. </dd>
+<dd> Within the scope of <tt>&quot;use locale 'not_characters'&quot;</tt>, or <tt>&quot;use locale&quot;</tt> and the current locale is a UTF-8 locale. </dd>
 <p> The former is defined to imply Unicode handling; and the latter indicates a Unicode locale, hence a Unicode interpretation of all strings within it.</p>
 <dt>&bull;</dt>
 <dd> When the string contains a Unicode-only code point </dd>
 <p> Perl has never accepted code points above 255 without them being Unicode, so their use implies Unicode for the whole string.</p>
 <dt>&bull;</dt>
 <dd> When the string contains a Unicode named code point <tt>&quot;\N{...}&quot;</tt> </dd>
-<p> The <tt>&quot;\N{...}&quot;</tt> construct explicitly refers to a Unicode code point, even if it is one that is also in <font SIZE="-1">ASCII.</font> Therefore the string containing it must be Unicode.</p>
+<p> The <tt>&quot;\N{...}&quot;</tt> construct explicitly refers to a Unicode code point, even if it is one that is also in ASCII. Therefore the string containing it must be Unicode.</p>
 <dt>&bull;</dt>
 <dd> When the string has come from an external source marked as Unicode </dd>
 <p> The <tt>&quot;-C&quot;</tt> command line option can specify that certain inputs to the program are Unicode, and the values of this can be read by your Perl code, see &#8220;${^UNICODE}&#8221; in perlvar.</p>
 <dt>&bull;</dt>
-<dd> When the string has been upgraded to <font SIZE="-1">UTF-8</font> </dd>
+<dd> When the string has been upgraded to UTF-8 </dd>
 <p> The function <tt>&quot;utf8::utf8_upgrade()&quot;</tt> can be explicitly used to permanently (unless a subsequent <tt>&quot;utf8::utf8_downgrade()&quot;</tt> is called) cause a string to be treated as Unicode.</p>
 <dt>&bull;</dt>
 <dd> There are additional methods for regular expression patterns </dd>
@@ -111,7 +111,7 @@ description: "perlunicode – Unicode support in Perl"
 <dt>&bull;</dt>
 <dd> Case translation operators use the Unicode case translation tables. </dd>
 <p> Note that <tt>&quot;uc()&quot;</tt>, or <tt>&quot;</tt>\U&quot;</code> in interpolated strings, translates to uppercase, while <code>&quot;ucfirst&quot;</code>, or <code>&quot;\u&quot;</code> in interpolated strings, translates to titlecase in languages that make the distinction (which is equivalent to uppercase in languages without the distinction). </p>
-<p> There is a <font SIZE="-1">CPAN</font> module, <code>&quot;Unicode::Casing&quot;</code>, which allows you to define your own mappings to be used in <code>&quot;lc()&quot;</code>, <code>&quot;lcfirst()&quot;</code>, <code>&quot;uc()&quot;</code>, <code>&quot;ucfirst()&quot;</code>, and <code>&quot;fc&quot;</code> (or their double-quoted string inlined versions such as <code>&quot;\U&quot;</code>). (Prior to Perl 5.16, this functionality was partially provided in the Perl core, but suffered from a number of insurmountable drawbacks, so the <font SIZE="-1">CPAN</font> module was written instead.) </p>
+<p> There is a CPAN module, <code>&quot;Unicode::Casing&quot;</code>, which allows you to define your own mappings to be used in <code>&quot;lc()&quot;</code>, <code>&quot;lcfirst()&quot;</code>, <code>&quot;uc()&quot;</code>, <code>&quot;ucfirst()&quot;</code>, and <code>&quot;fc&quot;</code> (or their double-quoted string inlined versions such as <code>&quot;\U&quot;</code>). (Prior to Perl 5.16, this functionality was partially provided in the Perl core, but suffered from a number of insurmountable drawbacks, so the CPAN module was written instead.) </p>
 <dt>&bull;</dt>
 <dd> <p> Character classes in regular expressions match based on the character properties specified in the Unicode properties database. </p>
 <p> <code>&quot;\w&quot;</code> can be used to match a Japanese ideograph, for instance; and <code>&quot;[[:digit:]]&quot;</code> a Bengali number. </p>
@@ -123,8 +123,8 @@ description: "perlunicode – Unicode support in Perl"
  </dd></dl>
 <h3>Extended Grapheme Clusters (Logical characters)</h3>
 <p> Consider a character, say <code>&quot;H&quot;</code>. It could appear with various marks around it, such as an acute accent, or a circumflex, or various hooks, circles, arrows, <i>etc.</i>, above, below, to one side or the other, <i>etc</i>. There are many possibilities among the world&#8217;s languages. The number of combinations is astronomical, and if there were a character for each combination, it would soon exhaust Unicode&#8217;s more than a million possible characters. So Unicode took a different approach: there is a character for the base <code>&quot;H&quot;</code>, and a character for each of the possible marks, and these can be variously combined to get a final logical character. So a logical character---what appears to be a single character---can be a sequence of more than one individual characters. The Unicode standard calls these ``extended grapheme clusters&#8217;&#8216; (which is an improved version of the no-longer much used ``grapheme cluster&#8217;&#8216;); Perl furnishes the <code>&quot;\X&quot;</code> regular expression construct to match such sequences in their entirety. </p>
-<p> But Unicode&#8217;s intent is to unify the existing character set standards and practices, and several pre-existing standards have single characters that mean the same thing as some of these combinations, like <font SIZE="-1">ISO-8859-1,</font> which has quite a few of them. For example, <code>&quot;LATIN CAPITAL LETTER E WITH ACUTE&quot;</code> was already in this standard when Unicode came along. Unicode therefore added it to its repertoire as that single character. But this character is considered by Unicode to be equivalent to the sequence consisting of the character <code>&quot;LATIN CAPITAL LETTER E&quot;</code> followed by the character <code>&quot;COMBINING ACUTE ACCENT&quot;</code>. </p>
-<p> <code>&quot;LATIN CAPITAL LETTER E WITH ACUTE&quot;</code> is called a ``pre-composed&#8217;&#8216; character, and its equivalence with the ``E&#8217;&#8216; and the ``<font SIZE="-1">COMBINING ACCENT&#8217;&#8216;</font> sequence is called canonical equivalence. All pre-composed characters are said to have a decomposition (into the equivalent sequence), and the decomposition type is also called canonical. A string may be comprised as much as possible of precomposed characters, or it may be comprised of entirely decomposed characters. Unicode calls these respectively, ``Normalization Form Composed&#8217;&#8216; (<font SIZE="-1">NFC</font>) and ``Normalization Form Decomposed&#8217;&#8216;. The <code>&quot;Unicode::Normalize&quot;</code> module contains functions that convert between the two. A string may also have both composed characters and decomposed characters; this module can be used to make it all one or the other. </p>
+<p> But Unicode&#8217;s intent is to unify the existing character set standards and practices, and several pre-existing standards have single characters that mean the same thing as some of these combinations, like ISO-8859-1, which has quite a few of them. For example, <code>&quot;LATIN CAPITAL LETTER E WITH ACUTE&quot;</code> was already in this standard when Unicode came along. Unicode therefore added it to its repertoire as that single character. But this character is considered by Unicode to be equivalent to the sequence consisting of the character <code>&quot;LATIN CAPITAL LETTER E&quot;</code> followed by the character <code>&quot;COMBINING ACUTE ACCENT&quot;</code>. </p>
+<p> <code>&quot;LATIN CAPITAL LETTER E WITH ACUTE&quot;</code> is called a ``pre-composed&#8217;&#8216; character, and its equivalence with the ``E&#8217;&#8216; and the ``COMBINING ACCENT&#8217;&#8216; sequence is called canonical equivalence. All pre-composed characters are said to have a decomposition (into the equivalent sequence), and the decomposition type is also called canonical. A string may be comprised as much as possible of precomposed characters, or it may be comprised of entirely decomposed characters. Unicode calls these respectively, ``Normalization Form Composed&#8217;&#8216; (NFC) and ``Normalization Form Decomposed&#8217;&#8216;. The <code>&quot;Unicode::Normalize&quot;</code> module contains functions that convert between the two. A string may also have both composed characters and decomposed characters; this module can be used to make it all one or the other. </p>
 <p> You may be presented with strings in any of these equivalent forms. There is currently nothing in Perl 5 that ignores the differences. So you&#8217;ll have to specially handle it. The usual advice is to convert your inputs to <code>&quot;NFD&quot;</code> before processing further. </p>
 <p> For more detailed information, see &lt;<a rel="nofollow" href="http://unicode.org/reports/tr15/">http://unicode.org/reports/tr15/</a>&gt;.  </p>
 <h3>Unicode Character Properties</h3>
@@ -132,7 +132,7 @@ description: "perlunicode – Unicode support in Perl"
 <p> Very nearly all Unicode character properties are accessible through regular expressions by using the <code>&quot;\p{}&quot;</code> ``matches property&#8217;&#8216; construct and the <code>&quot;\P{}&quot;</code> ``doesn&#8217;t match property&#8217;&#8216; for its negation. </p>
 <p> For instance, <code>&quot;\p{Uppercase}&quot;</code> matches any single character with the Unicode <code>&quot;Uppercase&quot;</code> property, while <code>&quot;\p{L}&quot;</code> matches any character with a <code>&quot;General_Category&quot;</code> of <code>&quot;L&quot;</code> (letter) property (see ``General_Category&#8217;&#8216; below). Brackets are not required for single letter property names, so <code>&quot;\p{L}&quot;</code> is equivalent to <code>&quot;\pL&quot;</code>. </p>
 <p> More formally, <code>&quot;\p{Uppercase}&quot;</code> matches any single character whose Unicode <code>&quot;Uppercase&quot;</code> property value is <code>&quot;True&quot;</code>, and <code>&quot;\P{Uppercase}&quot;</code> matches any character whose <code>&quot;Uppercase&quot;</code> property value is <code>&quot;False&quot;</code>, and they could have been written as <code>&quot;\p{Uppercase=True}&quot;</code> and <code>&quot;\p{Uppercase=False}&quot;</code>, respectively. </p>
-<p> This formality is needed when properties are not binary; that is, if they can take on more values than just <code>&quot;True&quot;</code> and <code>&quot;False&quot;</code>. For example, the <code>&quot;Bidi_Class&quot;</code> property (see ``Bidirectional Character Types&#8217;&#8216; below), can take on several different values, such as <code>&quot;Left&quot;</code>, <code>&quot;Right&quot;</code>, <code>&quot;Whitespace&quot;</code>, and others. To match these, one needs to specify both the property name (<code>&quot;Bidi_Class&quot;</code>), <font SIZE="-1">AND</font> the value being matched against (<code>&quot;Left&quot;</code>, <code>&quot;Right&quot;</code>, <i>etc.</i>). This is done, as in the examples above, by having the two components separated by an equal sign (or interchangeably, a colon), like <code>&quot;\p{Bidi_Class: Left}&quot;</code>. </p>
+<p> This formality is needed when properties are not binary; that is, if they can take on more values than just <code>&quot;True&quot;</code> and <code>&quot;False&quot;</code>. For example, the <code>&quot;Bidi_Class&quot;</code> property (see ``Bidirectional Character Types&#8217;&#8216; below), can take on several different values, such as <code>&quot;Left&quot;</code>, <code>&quot;Right&quot;</code>, <code>&quot;Whitespace&quot;</code>, and others. To match these, one needs to specify both the property name (<code>&quot;Bidi_Class&quot;</code>), AND the value being matched against (<code>&quot;Left&quot;</code>, <code>&quot;Right&quot;</code>, <i>etc.</i>). This is done, as in the examples above, by having the two components separated by an equal sign (or interchangeably, a colon), like <code>&quot;\p{Bidi_Class: Left}&quot;</code>. </p>
 <p> All Unicode-defined character properties may be written in these compound forms of <code>&quot;\p{</code>property <code>=</code>value <code>}&quot;</code> or <code>&quot;\p{</code>property <code>:</code>value <code>}&quot;</code>, but Perl provides some additional properties that are written only in the single form, as well as single-form short-cuts for all binary properties and certain others described below, in which you may omit the property name and the equals or colon separator. </p>
 <p> Most Unicode character properties have at least two synonyms (or aliases if you prefer): a short one that is easier to type and a longer one that is more descriptive and hence easier to understand. Thus the <code>&quot;L&quot;</code> and <code>&quot;Letter&quot;</code> properties above are equivalent and can be used interchangeably. Likewise, <code>&quot;Upper&quot;</code> is a synonym for <code>&quot;Uppercase&quot;</code>, and we could have written <code>&quot;\p{Uppercase}&quot;</code> equivalently as <code>&quot;\p{Upper}&quot;</code>. Also, there are typically various synonyms for the values the property can be. For binary properties, <code>&quot;True&quot;</code> has 3 synonyms: <code>&quot;T&quot;</code>, <code>&quot;Yes&quot;</code>, and <code>&quot;Y&quot;</code>; and <code>&quot;False&quot;</code> has correspondingly <code>&quot;F&quot;</code>, <code>&quot;No&quot;</code>, and <code>&quot;N&quot;</code>. But be careful. A short form of a value for one property may not mean the same thing as the same short form for another. Thus, for the <code>&quot;General_Category&quot;</code> property, <code>&quot;L&quot;</code> means <code>&quot;Letter&quot;</code>, but for the <code>&quot;Bidi_Class&quot;</code> property, <code>&quot;L&quot;</code> means <code>&quot;Left&quot;</code>. A complete list of properties and synonyms is in perluniprops. </p>
 <p> Upper/lower case differences in property names and values are irrelevant; thus <code>&quot;\p{Upper}&quot;</code> means the same thing as <code>&quot;\p{upper}&quot;</code> or even <code>&quot;\p{UpPeR}&quot;</code>. Similarly, you can add or subtract underscores anywhere in the middle of a word, so that these are also equivalent to <code>&quot;\p{U_p_p_e_r}&quot;</code>. And white space is irrelevant adjacent to non-word characters, such as the braces and the equals or colon separators, so <code>&quot;\p{ Upper }&quot;</code> and <code>&quot;\p{ Upper_case : Y }&quot;</code> are equivalent to these as well. In fact, white space and even hyphens can usually be added or deleted anywhere. So even <code>&quot;\p{ Up-per case = Yes}&quot;</code> is equivalent. All this is called ``loose-matching&#8217;&#8216; by Unicode. The few places where stricter matching is used is in the middle of numbers, and in the Perl extension properties that begin or end with an underscore. Stricter matching cares about white space (except adjacent to non-word characters), hyphens, and non-interior underscores. </p>
@@ -235,11 +235,11 @@ description: "perlunicode – Unicode support in Perl"
 <p> <i></i>Use of the &quot;Is&quot; Prefix <i></i> </p>
 <p> For backward compatibility (with ancient Perl 5.6), all properties writable without using the compound form mentioned so far may have <code>&quot;Is&quot;</code> or <code>&quot;Is_&quot;</code> prepended to their name, so <code>&quot;\P{Is_Lu}&quot;</code>, for example, is equal to <code>&quot;\P{Lu}&quot;</code>, and <code>&quot;\p{IsScript:Arabic}&quot;</code> is equal to <code>&quot;\p{Arabic}&quot;</code>. </p>
 <p> <i></i>Blocks <i></i> </p>
-<p> In addition to <code>scripts</code>, Unicode also defines <code>blocks</code> of characters. The difference between scripts and blocks is that the concept of scripts is closer to natural languages, while the concept of blocks is more of an artificial grouping based on groups of Unicode characters with consecutive ordinal values. For example, the <code>&quot;Basic Latin&quot;</code> block is all the characters whose ordinals are between 0 and 127, inclusive; in other words, the <font SIZE="-1">ASCII</font> characters. The <code>&quot;Latin&quot;</code> script contains some letters from this as well as several other blocks, like <code>&quot;Latin-1 Supplement&quot;</code>, <code>&quot;Latin Extended-A&quot;</code>, <i>etc.</i>, but it does not contain all the characters from those blocks. It does not, for example, contain the digits 0-9, because those digits are shared across many scripts, and hence are in the <code>&quot;Common&quot;</code> script. </p>
+<p> In addition to <code>scripts</code>, Unicode also defines <code>blocks</code> of characters. The difference between scripts and blocks is that the concept of scripts is closer to natural languages, while the concept of blocks is more of an artificial grouping based on groups of Unicode characters with consecutive ordinal values. For example, the <code>&quot;Basic Latin&quot;</code> block is all the characters whose ordinals are between 0 and 127, inclusive; in other words, the ASCII characters. The <code>&quot;Latin&quot;</code> script contains some letters from this as well as several other blocks, like <code>&quot;Latin-1 Supplement&quot;</code>, <code>&quot;Latin Extended-A&quot;</code>, <i>etc.</i>, but it does not contain all the characters from those blocks. It does not, for example, contain the digits 0-9, because those digits are shared across many scripts, and hence are in the <code>&quot;Common&quot;</code> script. </p>
 <p> For more about scripts versus blocks, see UAX#24 ``Unicode Script Property&#8217;&#8216;: &lt;<a rel="nofollow" href="http://www.unicode.org/reports/tr24">http://www.unicode.org/reports/tr24</a>&gt; </p>
 <p> The <code>&quot;Script_Extensions&quot;</code> or <code>&quot;Script&quot;</code> properties are likely to be the ones you want to use when processing natural language; the <code>&quot;Block&quot;</code> property may occasionally be useful in working with the nuts and bolts of Unicode. </p>
 <p> Block names are matched in the compound form, like <code>&quot;\p{Block: Arrows}&quot;</code> or <code>&quot;\p{Blk=Hebrew}&quot;</code>. Unlike most other properties, only a few block names have a Unicode-defined short name. </p>
-<p> Perl also defines single form synonyms for the block property in cases where these do not conflict with something else. But don&#8217;t use any of these, because they are unstable. Since these are Perl extensions, they are subordinate to official Unicode property names; Unicode doesn&#8217;t know nor care about Perl&#8217;s extensions. It may happen that a name that currently means the Perl extension will later be changed without warning to mean a different Unicode property in a future version of the perl interpreter that uses a later Unicode release, and your code would no longer work. The extensions are mentioned here for completeness: Take the block name and prefix it with one of: <code>&quot;In&quot;</code> (for example <code>&quot;\p{Blk=Arrows}&quot;</code> can currently be written as <code>&quot;\p{In_Arrows}&quot;</code>); or sometimes <code>&quot;Is&quot;</code> (like <code>&quot;\p{Is_Arrows}&quot;</code>); or sometimes no prefix at all (<code>&quot;\p{Arrows}&quot;</code>). As of this writing (Unicode 9.0) there are no conflicts with using the <code>&quot;In_&quot;</code> prefix, but there are plenty with the other two forms. For example, <code>&quot;\p{Is_Hebrew}&quot;</code> and <code>&quot;\p{Hebrew}&quot;</code> mean <code>&quot;\p{Script_Extensions=Hebrew}&quot;</code> which is <font SIZE="-1">NOT</font> the same thing as <code>&quot;\p{Blk=Hebrew}&quot;</code>. Our advice used to be to use the <code>&quot;In_&quot;</code> prefix as a single form way of specifying a block. But Unicode 8.0 added properties whose names begin with <code>&quot;In&quot;</code>, and it&#8217;s now clear that it&#8217;s only luck that&#8217;s so far prevented a conflict. Using <code>&quot;In&quot;</code> is only marginally less typing than <code>&quot;Blk:&quot;</code>, and the latter&#8217;s meaning is clearer anyway, and guaranteed to never conflict. So don&#8217;t take chances. Use <code>&quot;\p{Blk=foo}&quot;</code> for new code. And be sure that block is what you really really want to do. In most cases scripts are what you want instead. </p>
+<p> Perl also defines single form synonyms for the block property in cases where these do not conflict with something else. But don&#8217;t use any of these, because they are unstable. Since these are Perl extensions, they are subordinate to official Unicode property names; Unicode doesn&#8217;t know nor care about Perl&#8217;s extensions. It may happen that a name that currently means the Perl extension will later be changed without warning to mean a different Unicode property in a future version of the perl interpreter that uses a later Unicode release, and your code would no longer work. The extensions are mentioned here for completeness: Take the block name and prefix it with one of: <code>&quot;In&quot;</code> (for example <code>&quot;\p{Blk=Arrows}&quot;</code> can currently be written as <code>&quot;\p{In_Arrows}&quot;</code>); or sometimes <code>&quot;Is&quot;</code> (like <code>&quot;\p{Is_Arrows}&quot;</code>); or sometimes no prefix at all (<code>&quot;\p{Arrows}&quot;</code>). As of this writing (Unicode 9.0) there are no conflicts with using the <code>&quot;In_&quot;</code> prefix, but there are plenty with the other two forms. For example, <code>&quot;\p{Is_Hebrew}&quot;</code> and <code>&quot;\p{Hebrew}&quot;</code> mean <code>&quot;\p{Script_Extensions=Hebrew}&quot;</code> which is NOT the same thing as <code>&quot;\p{Blk=Hebrew}&quot;</code>. Our advice used to be to use the <code>&quot;In_&quot;</code> prefix as a single form way of specifying a block. But Unicode 8.0 added properties whose names begin with <code>&quot;In&quot;</code>, and it&#8217;s now clear that it&#8217;s only luck that&#8217;s so far prevented a conflict. Using <code>&quot;In&quot;</code> is only marginally less typing than <code>&quot;Blk:&quot;</code>, and the latter&#8217;s meaning is clearer anyway, and guaranteed to never conflict. So don&#8217;t take chances. Use <code>&quot;\p{Blk=foo}&quot;</code> for new code. And be sure that block is what you really really want to do. In most cases scripts are what you want instead. </p>
 <p> A complete list of blocks is in perluniprops. </p>
 <p> <i></i>Other Properties <i></i> </p>
 <p> There are many more properties than the very basic ones described here. A complete list is in perluniprops. </p>
@@ -280,15 +280,15 @@ description: "perlunicode – Unicode support in Perl"
 <dd> <p> This is a synonym for <code>&quot;\p{Present_In=*}&quot;</code> </p>
  </dd>
 <dt>&quot;\p{PerlSpace}&quot;</dt>
-<dd> <p> This is the same as <code>&quot;\s&quot;</code>, restricted to <font SIZE="-1">ASCII,</font> namely <code>&quot;[ \f\n\r\t]&quot;</code> and starting in Perl v5.18, a vertical tab. </p>
+<dd> <p> This is the same as <code>&quot;\s&quot;</code>, restricted to ASCII, namely <code>&quot;[ \f\n\r\t]&quot;</code> and starting in Perl v5.18, a vertical tab. </p>
 <p> Mnemonic: Perl&#8217;s (original) space </p>
  </dd>
 <dt>&quot;\p{PerlWord}&quot;</dt>
-<dd> <p> This is the same as <code>&quot;\w&quot;</code>, restricted to <font SIZE="-1">ASCII,</font> namely <code>&quot;[A-Za-z0-9_]&quot;</code> </p>
+<dd> <p> This is the same as <code>&quot;\w&quot;</code>, restricted to ASCII, namely <code>&quot;[A-Za-z0-9_]&quot;</code> </p>
 <p> Mnemonic: Perl&#8217;s (original) word. </p>
  </dd>
 <dt>&quot;\p{Posix...}&quot;</dt>
-<dd> <p> There are several of these, which are equivalents, using the <code>&quot;\p{}&quot;</code> notation, for Posix classes and are described in ``<font SIZE="-1">POSIX</font> Character Classes&#8217;&#8216; in perlrecharclass. </p>
+<dd> <p> There are several of these, which are equivalents, using the <code>&quot;\p{}&quot;</code> notation, for Posix classes and are described in ``POSIX Character Classes&#8217;&#8216; in perlrecharclass. </p>
  </dd>
 <dt>&quot;\p{Present_In: *}&quot; (Short: &quot;\p{In=*}&quot;)</dt>
 <dd> <p> This property is used when you need to know in what Unicode version(s) a character is. </p>
@@ -302,7 +302,7 @@ description: "perlunicode – Unicode support in Perl"
 <dd> <p> This matches any character that is graphical or blank, except controls. </p>
  </dd>
 <dt>&quot;\p{SpacePerl}&quot;</dt>
-<dd> <p> This is the same as <code>&quot;\s&quot;</code>, including beyond <font SIZE="-1">ASCII.</font> </p>
+<dd> <p> This is the same as <code>&quot;\s&quot;</code>, including beyond ASCII. </p>
 <p> Mnemonic: Space, as modified by Perl. (It doesn&#8217;t include the vertical tab until v5.18, which both the Posix standard and Unicode consider white space.) </p>
  </dd>
 <dt>&quot;\p{Title}&quot; and &quot;\p{Titlecase}&quot;</dt>
@@ -315,10 +315,10 @@ description: "perlunicode – Unicode support in Perl"
 <dd> <p> This is the same as <code>&quot;\v&quot;</code>: A character that changes the spacing vertically. </p>
  </dd>
 <dt>&quot;\p{Word}&quot;</dt>
-<dd> <p> This is the same as <code>&quot;\w&quot;</code>, including over 100_000 characters beyond <font SIZE="-1">ASCII.</font> </p>
+<dd> <p> This is the same as <code>&quot;\w&quot;</code>, including over 100_000 characters beyond ASCII. </p>
  </dd>
 <dt>&quot;\p{XPosix...}&quot;</dt>
-<dd> <p> There are several of these, which are the standard Posix classes extended to the full Unicode range. They are described in ``<font SIZE="-1">POSIX</font> Character Classes&#8217;&#8216; in perlrecharclass. </p>
+<dd> <p> There are several of these, which are the standard Posix classes extended to the full Unicode range. They are described in ``POSIX Character Classes&#8217;&#8216; in perlrecharclass. </p>
  </dd></dl>
 <h3>Wildcards in Property Values</h3>
 <p> Starting in Perl 5.30, it is possible to do do something like this: </p>
@@ -334,11 +334,11 @@ description: "perlunicode – Unicode support in Perl"
 <pre><code> qr! (?[ \d &amp; \p{nv=/[0-5]/ ]) }!x
 </code></pre>
 <p> The <code>&quot;\d&quot;</code> gets rid of needing to anchor the pattern, since it forces the result to only match <code>&quot;[0-9]&quot;</code>, and the <code>&quot;[0-5]&quot;</code> further restricts it. </p>
-<p> The text in the above examples enclosed between the <code>&quot;/&quot;</code> characters can be just about any regular expression. It is independent of the main pattern, so doesn&#8217;t share any capturing groups, <i>etc</i>. The delimiters for it must be <font SIZE="-1">ASCII</font> punctuation, but it may <font SIZE="-1">NOT</font> be delimited by <code>&quot;{&quot;</code>, nor <code>&quot;}&quot;</code> nor contain a literal <code>&quot;}&quot;</code>, as that delimits the end of the enclosing <code>&quot;\p{}&quot;</code>. Like any pattern, certain other delimiters are terminated by their mirror images. These are <code>&quot;(&quot;</code>, <code>&quot;&quot;[&quot;</code>&quot;, and <code>&quot;&lt;&quot;</code>. If the delimiter is any of <code>&quot;-&quot;</code>, <code>&quot;_&quot;</code>, <code>&quot;+&quot;</code>, or <code>&quot;\&quot;</code>, or is the same delimiter as is used for the enclosing pattern, it must be be preceded by a backslash escape, both fore and aft. </p>
+<p> The text in the above examples enclosed between the <code>&quot;/&quot;</code> characters can be just about any regular expression. It is independent of the main pattern, so doesn&#8217;t share any capturing groups, <i>etc</i>. The delimiters for it must be ASCII punctuation, but it may NOT be delimited by <code>&quot;{&quot;</code>, nor <code>&quot;}&quot;</code> nor contain a literal <code>&quot;}&quot;</code>, as that delimits the end of the enclosing <code>&quot;\p{}&quot;</code>. Like any pattern, certain other delimiters are terminated by their mirror images. These are <code>&quot;(&quot;</code>, <code>&quot;&quot;[&quot;</code>&quot;, and <code>&quot;&lt;&quot;</code>. If the delimiter is any of <code>&quot;-&quot;</code>, <code>&quot;_&quot;</code>, <code>&quot;+&quot;</code>, or <code>&quot;\&quot;</code>, or is the same delimiter as is used for the enclosing pattern, it must be be preceded by a backslash escape, both fore and aft. </p>
 <p> Beware of using <code>&quot;$&quot;</code> to indicate to match the end of the string. It can too easily be interpreted as being a punctuation variable, like <code>$/</code>. </p>
 <p> No modifiers may follow the final delimiter. Instead, use ``(?adlupimnsx-imnsx)&#8216;&#8216; in perlre and/or ``(?adluimnsx-imnsx:pattern)&#8216;&#8216; in perlre to specify modifiers. </p>
 <p> This feature is not available when the left-hand side is prefixed by <code>&quot;Is_&quot;</code>, nor for any form that is marked as ``Discouraged&#8217;&#8216; in ``Discouraged&#8217;&#8216; in perluniprops. </p>
-<p> Perl wraps your pattern with <code>&quot;(?iaa: ... )&quot;</code>. This is because nothing outside <font SIZE="-1">ASCII</font> can match the Unicode property values available in this release, and they should match caselessly. If your pattern has a syntax error, this wrapping will be shown in the error message, even though you didn&#8217;t specify it yourself. This could be confusing if you don&#8217;t know about this. </p>
+<p> Perl wraps your pattern with <code>&quot;(?iaa: ... )&quot;</code>. This is because nothing outside ASCII can match the Unicode property values available in this release, and they should match caselessly. If your pattern has a syntax error, this wrapping will be shown in the error message, even though you didn&#8217;t specify it yourself. This could be confusing if you don&#8217;t know about this. </p>
 <p> This experimental feature has been added to begin to implement &lt;<a rel="nofollow" href="https://www.unicode.org/reports/tr18/#Wildcard_Properties">https://www.unicode.org/reports/tr18/#Wildcard_Properties</a>&gt;. Using it will raise a (default-on) warning in the <code>&quot;experimental::uniprop_wildcards&quot;</code> category. We reserve the right to change its operation as we gain experience. </p>
 <p> Your subpattern can be just about anything, but for it to have some utility, it should match when called with either or both of a) the full name of the property value with underscores (and/or spaces in the Block property) and some things uppercase; or b) the property value in all lowercase with spaces and underscores squeezed out. For example, </p>
 <pre><code> qr!\p{Blk=/Old I.*/}!
@@ -364,7 +364,7 @@ description: "perlunicode – Unicode support in Perl"
  Uppercase Mapping
 </code></pre>
 <p> Nor is the <code>&quot;@</code>unicode_property <code>@&quot;</code> form implemented. </p>
-<p> Here&#8217;s a complete example of matching <font SIZE="-1">IPV4</font> internet protocol addresses in any (single) script </p>
+<p> Here&#8217;s a complete example of matching IPV4 internet protocol addresses in any (single) script </p>
 <pre><code> no warnings 'experimental::script_run';
  no warnings 'experimental::regex_sets';
  no warnings 'experimental::uniprop_wildcards';
@@ -472,7 +472,7 @@ description: "perlunicode – Unicode support in Perl"
 <p> Intersection is used generally for getting the common characters matched by two (or more) classes. It&#8217;s important to remember not to use <code>&quot;&amp;&quot;</code> for the first set; that would be intersecting with nothing, resulting in an empty set. (Similarly using <code>&quot;-&quot;</code> for the first set does nothing). </p>
 <p> Unlike non-user-defined <code>&quot;\p{}&quot;</code> property matches, no warning is ever generated if these properties are matched against a non-Unicode code point (see ``Beyond Unicode code points&#8217;&#8216; below).  </p>
 <h3>User-Defined Case Mappings (for serious hackers only)</h3>
-<p> <code>This feature has been removed as of Perl 5.16.</code> The <font SIZE="-1">CPAN</font> module <code>&quot;Unicode::Casing&quot;</code> provides better functionality without the drawbacks that this feature had. If you are using a Perl earlier than 5.16, this feature was most fully documented in the 5.14 version of this pod: &lt;<a rel="nofollow" href="http://perldoc.perl.org/5.14.0/perlunicode.html#User-Defined-Case-Mappings-%28for-serious-hackers-only%29">http://perldoc.perl.org/5.14.0/perlunicode.html#User-Defined-Case-Mappings-%28for-serious-hackers-only%29</a>&gt;  </p>
+<p> <code>This feature has been removed as of Perl 5.16.</code> The CPAN module <code>&quot;Unicode::Casing&quot;</code> provides better functionality without the drawbacks that this feature had. If you are using a Perl earlier than 5.16, this feature was most fully documented in the 5.14 version of this pod: &lt;<a rel="nofollow" href="http://perldoc.perl.org/5.14.0/perlunicode.html#User-Defined-Case-Mappings-%28for-serious-hackers-only%29">http://perldoc.perl.org/5.14.0/perlunicode.html#User-Defined-Case-Mappings-%28for-serious-hackers-only%29</a>&gt;  </p>
 <h3>Character Encodings for Input and Output</h3>
 <p> See Encode.  </p>
 <h3>Unicode Regular Expression Support Level</h3>
@@ -516,7 +516,7 @@ description: "perlunicode – Unicode support in Perl"
 <p> which will match assigned characters known to be part of the Greek script. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <font SIZE="-1">CPAN</font> module <code>&quot;Unicode::Regex::Set&quot;</code> </p>
+<dd> <p> CPAN module <code>&quot;Unicode::Regex::Set&quot;</code> </p>
 <p> It does implement the full UTS#18 grouping, intersection, union, and removal (subtraction) syntax. </p>
  </dd>
 <dt>&bull;</dt>
@@ -546,7 +546,7 @@ description: "perlunicode – Unicode support in Perl"
 <p> <code>&quot;^&quot;</code> and <code>&quot;$&quot;</code> in regular expression patterns are supposed to match all these, but don&#8217;t. These characters also don&#8217;t, but should, affect <code>&quot;&lt;&gt;&quot;</code> <code>$.</code>, and script line numbers. </p>
 <p> Also, lines should not be split within <code>&quot;CRLF&quot;</code> (i.e. there is no empty line between <code>&quot;\r&quot;</code> and <code>&quot;\n&quot;</code>). For <code>&quot;CRLF&quot;</code>, try the <code>&quot;:crlf&quot;</code> layer (see PerlIO). </p>
  </dd>
-<dt>[8] <font SIZE="-1">UTF-8/UTF-EBDDIC</font> used in Perl allows not only &quot;U+10000&quot; to &quot;U+10FFFF&quot; but also beyond &quot;U+10FFFF&quot;</dt>
+<dt>[8] UTF-8/UTF-EBDDIC used in Perl allows not only &quot;U+10000&quot; to &quot;U+10FFFF&quot; but also beyond &quot;U+10FFFF&quot;</dt>
 <dd>  </dd></dl>
 <p> <i>Level 2 &#8211; Extended Unicode Support</i> </p>
 <pre><code> RL2.1 Canonical Equivalents - Retracted [9]
@@ -559,7 +559,7 @@ description: "perlunicode – Unicode support in Perl"
  RL2.7 Full Properties - Done
 </code></pre>
 <dl>
-<dt>[9] Unicode has rewritten this portion of UTS#18 to say that getting canonical equivalence (see UAX#15 &quot;Unicode Normalization Forms&quot; &lt;<a rel="nofollow" href="http://www.unicode.org/reports/tr15">http://www.unicode.org/reports/tr15</a>&gt;) is basically to be done at the programmer level. Use <font SIZE="-1">NFD</font> to write both your regular expressions and text to match them against (you can use Unicode::Normalize).</dt>
+<dt>[9] Unicode has rewritten this portion of UTS#18 to say that getting canonical equivalence (see UAX#15 &quot;Unicode Normalization Forms&quot; &lt;<a rel="nofollow" href="http://www.unicode.org/reports/tr15">http://www.unicode.org/reports/tr15</a>&gt;) is basically to be done at the programmer level. Use NFD to write both your regular expressions and text to match them against (you can use Unicode::Normalize).</dt>
 <dd>  </dd>
 <dt>[10] Perl has &quot;\X&quot; and &quot;\b{gcb}&quot; but we don&#8217;t have a &quot;Grapheme Cluster Mode&quot;.</dt>
 <dd>  </dd>
@@ -591,8 +591,8 @@ description: "perlunicode – Unicode support in Perl"
 <p> Unicode characters are assigned to <i>code points</i>, which are abstract numbers. To use these numbers, various encodings are needed. </p>
 <dl>
 <dt>&bull;</dt>
-<dd> <p> <font SIZE="-1">UTF-8</font> </p>
-<p> <font SIZE="-1">UTF-8</font> is a variable-length (1 to 4 bytes), byte-order independent encoding. In most of Perl&#8217;s documentation, including elsewhere in this document, the term ``<font SIZE="-1">UTF-8&#8217;&#8216;</font> means also ``UTF-EBCDIC&#8217;&#8216;. But in this section, ``<font SIZE="-1">UTF-8&#8217;&#8216;</font> refers only to the encoding used on <font SIZE="-1">ASCII</font> platforms. It is a superset of 7-bit US-ASCII, so anything encoded in <font SIZE="-1">ASCII</font> has the identical representation when encoded in <font SIZE="-1">UTF-8.</font> </p>
+<dd> <p> UTF-8 </p>
+<p> UTF-8 is a variable-length (1 to 4 bytes), byte-order independent encoding. In most of Perl&#8217;s documentation, including elsewhere in this document, the term ``UTF-8&#8217;&#8216; means also ``UTF-EBCDIC&#8217;&#8216;. But in this section, ``UTF-8&#8217;&#8216; refers only to the encoding used on ASCII platforms. It is a superset of 7-bit US-ASCII, so anything encoded in ASCII has the identical representation when encoded in UTF-8. </p>
 <p> The following table is from Unicode 3.2. </p>
 <pre><code> Code Points 1st Byte 2nd Byte 3rd Byte 4th Byte
    U+0000..U+007F 00..7F
@@ -606,7 +606,7 @@ description: "perlunicode – Unicode support in Perl"
   U+40000..U+FFFFF F1..F3 80..BF 80..BF 80..BF
  U+100000..U+10FFFF F4 80..8F 80..BF 80..BF
 </code></pre>
-<p> Note the gaps marked by ``*&#8216;&#8216; before several of the byte entries above. These are caused by legal <font SIZE="-1">UTF-8</font> avoiding non-shortest encodings: it is technically possible to UTF-8-encode a single code point in different ways, but that is explicitly forbidden, and the shortest possible encoding should always be used (and that is what Perl does). </p>
+<p> Note the gaps marked by ``*&#8216;&#8216; before several of the byte entries above. These are caused by legal UTF-8 avoiding non-shortest encodings: it is technically possible to UTF-8-encode a single code point in different ways, but that is explicitly forbidden, and the shortest possible encoding should always be used (and that is what Perl does). </p>
 <p> Another way to look at it is via bits: </p>
 <pre><code>                Code Points 1st Byte 2nd Byte 3rd Byte 4th Byte
                    0aaaaaaa 0aaaaaaa
@@ -615,17 +615,17 @@ description: "perlunicode – Unicode support in Perl"
  00000dddccccccbbbbbbaaaaaa 11110ddd 10cccccc 10bbbbbb 10aaaaaa
 </code></pre>
 <p> As you can see, the continuation bytes all begin with <code>&quot;10&quot;</code>, and the leading bits of the start byte tell how many bytes there are in the encoded character. </p>
-<p> The original <font SIZE="-1">UTF-8</font> specification allowed up to 6 bytes, to allow encoding of numbers up to <code>&quot;0x7FFF_FFFF&quot;</code>. Perl continues to allow those, and has extended that up to 13 bytes to encode code points up to what can fit in a 64-bit word. However, Perl will warn if you output any of these as being non-portable; and under strict <font SIZE="-1">UTF-8</font> input protocols, they are forbidden. In addition, it is now illegal to use a code point larger than what a signed integer variable on your system can hold. On 32-bit <font SIZE="-1">ASCII</font> systems, this means <code>&quot;0x7FFF_FFFF&quot;</code> is the legal maximum (much higher on 64-bit systems). </p>
+<p> The original UTF-8 specification allowed up to 6 bytes, to allow encoding of numbers up to <code>&quot;0x7FFF_FFFF&quot;</code>. Perl continues to allow those, and has extended that up to 13 bytes to encode code points up to what can fit in a 64-bit word. However, Perl will warn if you output any of these as being non-portable; and under strict UTF-8 input protocols, they are forbidden. In addition, it is now illegal to use a code point larger than what a signed integer variable on your system can hold. On 32-bit ASCII systems, this means <code>&quot;0x7FFF_FFFF&quot;</code> is the legal maximum (much higher on 64-bit systems). </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> UTF-EBCDIC </p>
-<p> Like <font SIZE="-1">UTF-8,</font> but EBCDIC-safe, in the way that <font SIZE="-1">UTF-8</font> is ASCII-safe. This means that all the basic characters (which includes all those that have <font SIZE="-1">ASCII</font> equivalents (like <code>&quot;A&quot;</code>, <code>&quot;0&quot;</code>, <code>&quot;%&quot;</code>, <i>etc.</i>) are the same in both <font SIZE="-1">EBCDIC</font> and UTF-EBCDIC.) </p>
-<p> UTF-EBCDIC is used on <font SIZE="-1">EBCDIC</font> platforms. It generally requires more bytes to represent a given code point than <font SIZE="-1">UTF-8</font> does; the largest Unicode code points take 5 bytes to represent (instead of 4 in <font SIZE="-1">UTF-8</font>), and, extended for 64-bit words, it uses 14 bytes instead of 13 bytes in <font SIZE="-1">UTF-8.</font> </p>
+<p> Like UTF-8, but EBCDIC-safe, in the way that UTF-8 is ASCII-safe. This means that all the basic characters (which includes all those that have ASCII equivalents (like <code>&quot;A&quot;</code>, <code>&quot;0&quot;</code>, <code>&quot;%&quot;</code>, <i>etc.</i>) are the same in both EBCDIC and UTF-EBCDIC.) </p>
+<p> UTF-EBCDIC is used on EBCDIC platforms. It generally requires more bytes to represent a given code point than UTF-8 does; the largest Unicode code points take 5 bytes to represent (instead of 4 in UTF-8), and, extended for 64-bit words, it uses 14 bytes instead of 13 bytes in UTF-8. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <font SIZE="-1">UTF-16, UTF-16BE, UTF-16LE,</font> Surrogates, and <code>&quot;BOM&quot;</code>&#8216;s (Byte Order Marks) </p>
+<dd> <p> UTF-16, UTF-16BE, UTF-16LE, Surrogates, and <code>&quot;BOM&quot;</code>&#8216;s (Byte Order Marks) </p>
 <p> The followings items are mostly for reference and general Unicode knowledge, Perl doesn&#8217;t use these constructs internally. </p>
-<p> Like <font SIZE="-1">UTF-8, UTF-16</font> is a variable-width encoding, but where <font SIZE="-1">UTF-8</font> uses 8-bit code units, <font SIZE="-1">UTF-16</font> uses 16-bit code units. All code points occupy either 2 or 4 bytes in <font SIZE="-1">UTF-16:</font> code points <code>&quot;U+0000..U+FFFF&quot;</code> are stored in a single 16-bit unit, and code points <code>&quot;U+10000..U+10FFFF&quot;</code> in two 16-bit units. The latter case is using <i>surrogates</i>, the first 16-bit unit being the <i>high surrogate</i>, and the second being the <i>low surrogate</i>. </p>
+<p> Like UTF-8, UTF-16 is a variable-width encoding, but where UTF-8 uses 8-bit code units, UTF-16 uses 16-bit code units. All code points occupy either 2 or 4 bytes in UTF-16: code points <code>&quot;U+0000..U+FFFF&quot;</code> are stored in a single 16-bit unit, and code points <code>&quot;U+10000..U+10FFFF&quot;</code> in two 16-bit units. The latter case is using <i>surrogates</i>, the first 16-bit unit being the <i>high surrogate</i>, and the second being the <i>low surrogate</i>. </p>
 <p> Surrogates are code points set aside to encode the <code>&quot;U+10000..U+10FFFF&quot;</code> range of Unicode code points in pairs of 16-bit units. The <i>high surrogates</i> are the range <code>&quot;U+D800..U+DBFF&quot;</code> and the <i>low surrogates</i> are the range <code>&quot;U+DC00..U+DFFF&quot;</code>. The surrogate encoding is </p>
 <pre><code>    $hi = ($uni - 0x10000) / 0x400 + 0xD800;
     $lo = ($uni - 0x10000) % 0x400 + 0xDC00;
@@ -633,23 +633,23 @@ description: "perlunicode – Unicode support in Perl"
 <p> and the decoding is </p>
 <pre><code>    $uni = 0x10000 + ($hi - 0xD800) * 0x400 + ($lo - 0xDC00);
 </code></pre>
-<p> Because of the 16-bitness, <font SIZE="-1">UTF-16</font> is byte-order dependent. <font SIZE="-1">UTF-16</font> itself can be used for in-memory computations, but if storage or transfer is required either <font SIZE="-1">UTF-16BE</font> (big-endian) or <font SIZE="-1">UTF-16LE</font> (little-endian) encodings must be chosen. </p>
-<p> This introduces another problem: what if you just know that your data is <font SIZE="-1">UTF-16,</font> but you don&#8217;t know which endianness? Byte Order Marks, or <code>&quot;BOM&quot;</code>&#8216;s, are a solution to this. A special character has been reserved in Unicode to function as a byte order marker: the character with the code point <code>&quot;U+FEFF&quot;</code> is the <code>&quot;BOM&quot;</code>. </p>
-<p> The trick is that if you read a <code>&quot;BOM&quot;</code>, you will know the byte order, since if it was written on a big-endian platform, you will read the bytes <code>&quot;0xFE 0xFF&quot;</code>, but if it was written on a little-endian platform, you will read the bytes <code>&quot;0xFF 0xFE&quot;</code>. (And if the originating platform was writing in <font SIZE="-1">ASCII</font> platform <font SIZE="-1">UTF-8,</font> you will read the bytes <code>&quot;0xEF 0xBB 0xBF&quot;</code>.) </p>
+<p> Because of the 16-bitness, UTF-16 is byte-order dependent. UTF-16 itself can be used for in-memory computations, but if storage or transfer is required either UTF-16BE (big-endian) or UTF-16LE (little-endian) encodings must be chosen. </p>
+<p> This introduces another problem: what if you just know that your data is UTF-16, but you don&#8217;t know which endianness? Byte Order Marks, or <code>&quot;BOM&quot;</code>&#8216;s, are a solution to this. A special character has been reserved in Unicode to function as a byte order marker: the character with the code point <code>&quot;U+FEFF&quot;</code> is the <code>&quot;BOM&quot;</code>. </p>
+<p> The trick is that if you read a <code>&quot;BOM&quot;</code>, you will know the byte order, since if it was written on a big-endian platform, you will read the bytes <code>&quot;0xFE 0xFF&quot;</code>, but if it was written on a little-endian platform, you will read the bytes <code>&quot;0xFF 0xFE&quot;</code>. (And if the originating platform was writing in ASCII platform UTF-8, you will read the bytes <code>&quot;0xEF 0xBB 0xBF&quot;</code>.) </p>
 <p> The way this trick works is that the character with the code point <code>&quot;U+FFFE&quot;</code> is not supposed to be in input streams, so the sequence of bytes <code>&quot;0xFF 0xFE&quot;</code> is unambiguously &quot;<code>&quot;BOM&quot;</code>, represented in little-endian format&quot; and cannot be <code>&quot;U+FFFE&quot;</code>, represented in big-endian format&quot;. </p>
 <p> Surrogates have no meaning in Unicode outside their use in pairs to represent other code points. However, Perl allows them to be represented individually internally, for example by saying <code>&quot;chr(0xD801)&quot;</code>, so that all code points, not just those valid for open interchange, are representable. Unicode does define semantics for them, such as their <code>&quot;General_Category&quot;</code> is <code>&quot;Cs&quot;</code>. But because their use is somewhat dangerous, Perl will warn (using the warning category <code>&quot;surrogate&quot;</code>, which is a sub-category of <code>&quot;utf8&quot;</code>) if an attempt is made to do things like take the lower case of one, or match case-insensitively, or to output them. (But don&#8217;t try this on Perls before 5.14.) </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <font SIZE="-1">UTF-32, UTF-32BE, UTF-32LE</font> </p>
-<p> The <font SIZE="-1">UTF-32</font> family is pretty much like the <font SIZE="-1">UTF-16</font> family, except that the units are 32-bit, and therefore the surrogate scheme is not needed. <font SIZE="-1">UTF-32</font> is a fixed-width encoding. The <code>&quot;BOM&quot;</code> signatures are <code>&quot;0x00 0x00 0xFE 0xFF&quot;</code> for <font SIZE="-1">BE</font> and <code>&quot;0xFF 0xFE 0x00 0x00&quot;</code> for <font SIZE="-1">LE.</font> </p>
+<dd> <p> UTF-32, UTF-32BE, UTF-32LE </p>
+<p> The UTF-32 family is pretty much like the UTF-16 family, except that the units are 32-bit, and therefore the surrogate scheme is not needed. UTF-32 is a fixed-width encoding. The <code>&quot;BOM&quot;</code> signatures are <code>&quot;0x00 0x00 0xFE 0xFF&quot;</code> for BE and <code>&quot;0xFF 0xFE 0x00 0x00&quot;</code> for LE. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <font SIZE="-1">UCS-2, UCS-4</font> </p>
-<p> Legacy, fixed-width encodings defined by the <font SIZE="-1">ISO 10646</font> standard. <font SIZE="-1">UCS-2</font> is a 16-bit encoding. Unlike <font SIZE="-1">UTF-16, UCS-2</font> is not extensible beyond <code>&quot;U+FFFF&quot;</code>, because it does not use surrogates. <font SIZE="-1">UCS-4</font> is a 32-bit encoding, functionally identical to <font SIZE="-1">UTF-32</font> (the difference being that <font SIZE="-1">UCS-4</font> forbids neither surrogates nor code points larger than <code>&quot;0x10_FFFF&quot;</code>). </p>
+<dd> <p> UCS-2, UCS-4 </p>
+<p> Legacy, fixed-width encodings defined by the ISO 10646 standard. UCS-2 is a 16-bit encoding. Unlike UTF-16, UCS-2 is not extensible beyond <code>&quot;U+FFFF&quot;</code>, because it does not use surrogates. UCS-4 is a 32-bit encoding, functionally identical to UTF-32 (the difference being that UCS-4 forbids neither surrogates nor code points larger than <code>&quot;0x10_FFFF&quot;</code>). </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <font SIZE="-1">UTF-7</font> </p>
-<p> A seven-bit safe (non-eight-bit) encoding, which is useful if the transport or storage is not eight-bit safe. Defined by <font SIZE="-1">RFC 2152.</font> </p>
+<dd> <p> UTF-7 </p>
+<p> A seven-bit safe (non-eight-bit) encoding, which is useful if the transport or storage is not eight-bit safe. Defined by RFC 2152. </p>
  </dd></dl>
 <h3>Noncharacter code points</h3>
 <p> 66 code points are set aside in Unicode as ``noncharacter code points&#8217;&#8216;. These all have the <code>&quot;Unassigned&quot;</code> (<code>&quot;Cn&quot;</code>) <code>&quot;General_Category&quot;</code>, and no character will ever be assigned to any of them. They are the 32 code points between <code>&quot;U+FDD0&quot;</code> and <code>&quot;U+FDEF&quot;</code> inclusive, and the 34 code points: </p>
@@ -667,7 +667,7 @@ description: "perlunicode – Unicode support in Perl"
 <dd> <p> &quot;If a noncharacter is received in open interchange, an application is not required to interpret it in any way. It is good practice, however, to recognize it as a noncharacter and to take appropriate action, such as replacing it with <code>&quot;U+FFFD&quot;</code> replacement character, to indicate the problem in the text. It is not recommended to simply delete noncharacter code points from such text, because of the potential security issues caused by deleting uninterpreted characters. (See conformance clause C7 in Section 3.2, Conformance Requirements, and Unicode Technical Report #36, ``Unicode Security Considerations&#8217;&#8216; &lt;<a rel="nofollow" href="http://www.unicode.org/reports/tr36/#Substituting_for_Ill_Formed_Subsequences">http://www.unicode.org/reports/tr36/#Substituting_for_Ill_Formed_Subsequences</a>&gt;).&quot; </p>
  </dd></dl>
 <p> This change was made because it was found that various commercial tools like editors, or for things like source code control, had been written so that they would not handle program files that used these code points, effectively precluding their use almost entirely! And that was never the intent. They&#8217;ve always been meant to be usable within an application, or cooperating set of applications, at will. </p>
-<p> If you&#8217;re writing code, such as an editor, that is supposed to be able to handle any Unicode text data, then you shouldn&#8217;t be using these code points yourself, and instead allow them in the input. If you need sentinels, they should instead be something that isn&#8217;t legal Unicode. For <font SIZE="-1">UTF-8</font> data, you can use the bytes 0xC1 and 0xC2 as sentinels, as they never appear in well-formed <font SIZE="-1">UTF-8.</font> (There are equivalents for UTF-EBCDIC). You can also store your Unicode code points in integer variables and use negative values as sentinels. </p>
+<p> If you&#8217;re writing code, such as an editor, that is supposed to be able to handle any Unicode text data, then you shouldn&#8217;t be using these code points yourself, and instead allow them in the input. If you need sentinels, they should instead be something that isn&#8217;t legal Unicode. For UTF-8 data, you can use the bytes 0xC1 and 0xC2 as sentinels, as they never appear in well-formed UTF-8. (There are equivalents for UTF-EBCDIC). You can also store your Unicode code points in integer variables and use negative values as sentinels. </p>
 <p> If you&#8217;re not writing such a tool, then whether you accept noncharacters as input is up to you (though the Standard recommends that you not). If you do strict input stream checking with Perl, these code points continue to be forbidden. This is to maintain backward compatibility (otherwise potential security holes could open up, as an unsuspecting application that was written assuming the noncharacters would be filtered out before getting to it, could now, without warning, start getting them). To do strict checking, you can use the layer <code>&quot;:encoding(&#8216;UTF-8&#8217;)&quot;</code>. </p>
 <p> Perl continues to warn (using the warning category <code>&quot;nonchar&quot;</code>, which is a sub-category of <code>&quot;utf8&quot;</code>) if an attempt is made to output noncharacters.  </p>
 <h3>Beyond Unicode code points</h3>
@@ -685,7 +685,7 @@ description: "perlunicode – Unicode support in Perl"
 <pre><code> chr(0x110000) =~ \p{ASCII_Hex_Digit=True} # Fails, no warning
  chr(0x110000) =~ \p{ASCII_Hex_Digit=False} # Succeeds, with warning
 </code></pre>
-<p> In both these examples, the character being matched is non-Unicode, so Unicode doesn&#8217;t define how it should match. It clearly isn&#8217;t an <font SIZE="-1">ASCII</font> hex digit, so the first example clearly should fail, and so it does, with no warning. But it is arguable that the second example should have an undefined, hence <code>&quot;FALSE&quot;</code>, result. So a warning is raised for it. </p>
+<p> In both these examples, the character being matched is non-Unicode, so Unicode doesn&#8217;t define how it should match. It clearly isn&#8217;t an ASCII hex digit, so the first example clearly should fail, and so it does, with no warning. But it is arguable that the second example should have an undefined, hence <code>&quot;FALSE&quot;</code>, result. So a warning is raised for it. </p>
 <p> Thus the warning is raised for many fewer cases than in earlier Perls, and only when what the result is could be arguable. It turns out that none of the optimizations made by Perl (or are ever likely to be made) cause the warning to be skipped, so it solves both problems of Perl&#8217;s earlier approach. The most commonly used property that is affected by this change is <code>&quot;\p{Unassigned}&quot;</code> which is a short form for <code>&quot;\p{General_Category=Unassigned}&quot;</code>. Starting in v5.20, all non-Unicode code points are considered <code>&quot;Unassigned&quot;</code>. In earlier releases the matches failed because the result was considered undefined. </p>
 <p> The only place where the warning is not raised when it might ought to have been is if optimizations cause the whole pattern match to not even be attempted. For example, Perl may figure out that for a string to match a certain regular expression pattern, the string has to contain the substring <code>&quot;foobar&quot;</code>. Before attempting the match, Perl may look for that substring, and if not found, immediately fail the match without actually trying it; so no warning gets generated even if the string contains an above-Unicode code point. </p>
 <p> This behavior is more ``Do what I mean&#8217;&#8216; than in earlier Perls for most applications. But it catches fewer issues for code that needs to be strictly Unicode compliant. Therefore there is an additional mode of operation available to accommodate such code. This mode is enabled if a regular expression pattern is compiled within the lexical scope where the <code>&quot;non_unicode&quot;</code> warning class has been made fatal, say by: </p>
@@ -699,24 +699,24 @@ description: "perlunicode – Unicode support in Perl"
 <p> Also, note the following: </p>
 <dl>
 <dt>&bull;</dt>
-<dd> <p> Malformed <font SIZE="-1">UTF-8</font> </p>
-<p> <font SIZE="-1">UTF-8</font> is very structured, so many combinations of bytes are invalid. In the past, Perl tried to soldier on and make some sense of invalid combinations, but this can lead to security holes, so now, if the Perl core needs to process an invalid combination, it will either raise a fatal error, or will replace those bytes by the sequence that forms the Unicode <font SIZE="-1">REPLACEMENT CHARACTER,</font> for which purpose Unicode created it. </p>
-<p> Every code point can be represented by more than one possible syntactically valid <font SIZE="-1">UTF-8</font> sequence. Early on, both Unicode and Perl considered any of these to be valid, but now, all sequences longer than the shortest possible one are considered to be malformed. </p>
-<p> Unicode considers many code points to be illegal, or to be avoided. Perl generally accepts them, once they have passed through any input filters that may try to exclude them. These have been discussed above (see ``Surrogates&#8217;&#8216; under <font SIZE="-1">UTF-16</font> in ``Unicode Encodings&#8217;&#8216;, ``Noncharacter code points&#8217;&#8216;, and ``Beyond Unicode code points&#8217;&#8216;). </p>
+<dd> <p> Malformed UTF-8 </p>
+<p> UTF-8 is very structured, so many combinations of bytes are invalid. In the past, Perl tried to soldier on and make some sense of invalid combinations, but this can lead to security holes, so now, if the Perl core needs to process an invalid combination, it will either raise a fatal error, or will replace those bytes by the sequence that forms the Unicode REPLACEMENT CHARACTER, for which purpose Unicode created it. </p>
+<p> Every code point can be represented by more than one possible syntactically valid UTF-8 sequence. Early on, both Unicode and Perl considered any of these to be valid, but now, all sequences longer than the shortest possible one are considered to be malformed. </p>
+<p> Unicode considers many code points to be illegal, or to be avoided. Perl generally accepts them, once they have passed through any input filters that may try to exclude them. These have been discussed above (see ``Surrogates&#8217;&#8216; under UTF-16 in ``Unicode Encodings&#8217;&#8216;, ``Noncharacter code points&#8217;&#8216;, and ``Beyond Unicode code points&#8217;&#8216;). </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Regular expression pattern matching may surprise you if you&#8217;re not accustomed to Unicode. Starting in Perl 5.14, several pattern modifiers are available to control this, called the character set modifiers. Details are given in ``Character set modifiers&#8217;&#8216; in perlre. </p>
  </dd></dl>
-<p> As discussed elsewhere, Perl has one foot (two hooves?) planted in each of two worlds: the old world of <font SIZE="-1">ASCII</font> and single-byte locales, and the new world of Unicode, upgrading when necessary. If your legacy code does not explicitly use Unicode, no automatic switch-over to Unicode should happen.  </p>
-<font SIZE="-1"></font><h3>Unicode in Perl on EBCDIC</h3>
-<p> Unicode is supported on <font SIZE="-1">EBCDIC</font> platforms. See perlebcdic. </p>
-<p> Unless <font SIZE="-1">ASCII</font> vs. <font SIZE="-1">EBCDIC</font> issues are specifically being discussed, references to <font SIZE="-1">UTF-8</font> encoding in this document and elsewhere should be read as meaning UTF-EBCDIC on <font SIZE="-1">EBCDIC</font> platforms. See ``Unicode and <font SIZE="-1">UTF&#8217;&#8216;</font> in perlebcdic. </p>
-<p> Because UTF-EBCDIC is so similar to <font SIZE="-1">UTF-8,</font> the differences are mostly hidden from you; <code>&quot;use utf8&quot;</code> (and <font SIZE="-1">NOT</font> something like <code>&quot;use utfebcdic&quot;</code>) declares the script is in the platform&#8217;s ``native&#8217;&#8216; 8-bit encoding of Unicode. (Similarly for the <code>&quot;:utf8&quot;</code> layer.)  </p>
+<p> As discussed elsewhere, Perl has one foot (two hooves?) planted in each of two worlds: the old world of ASCII and single-byte locales, and the new world of Unicode, upgrading when necessary. If your legacy code does not explicitly use Unicode, no automatic switch-over to Unicode should happen.  </p>
+<h3>Unicode in Perl on EBCDIC</h3>
+<p> Unicode is supported on EBCDIC platforms. See perlebcdic. </p>
+<p> Unless ASCII vs. EBCDIC issues are specifically being discussed, references to UTF-8 encoding in this document and elsewhere should be read as meaning UTF-EBCDIC on EBCDIC platforms. See ``Unicode and UTF&#8217;&#8216; in perlebcdic. </p>
+<p> Because UTF-EBCDIC is so similar to UTF-8, the differences are mostly hidden from you; <code>&quot;use utf8&quot;</code> (and NOT something like <code>&quot;use utfebcdic&quot;</code>) declares the script is in the platform&#8217;s ``native&#8217;&#8216; 8-bit encoding of Unicode. (Similarly for the <code>&quot;:utf8&quot;</code> layer.)  </p>
 <h3>Locales</h3>
-<p> See ``Unicode and <font SIZE="-1">UTF-8&#8217;&#8216;</font> in perllocale  </p>
+<p> See ``Unicode and UTF-8&#8217;&#8216; in perllocale  </p>
 <h3>When Unicode Does Not Happen</h3>
-<p> There are still many places where Unicode (in some encoding or another) could be given as arguments or received as results, or both in Perl, but it is not, in spite of Perl having extensive ways to input and output in Unicode, and a few other ``entry points&#8217;&#8216; like the <code>@ARGV</code> array (which can sometimes be interpreted as <font SIZE="-1">UTF-8</font>). </p>
-<p> The following are such interfaces. Also, see ``The &#8216;&#8216;Unicode Bug&quot;&quot;. For all of these interfaces Perl currently (as of v5.16.0) simply assumes byte strings both as arguments and results, or <font SIZE="-1">UTF-8</font> strings if the (deprecated) <code>&quot;encoding&quot;</code> pragma has been used. </p>
+<p> There are still many places where Unicode (in some encoding or another) could be given as arguments or received as results, or both in Perl, but it is not, in spite of Perl having extensive ways to input and output in Unicode, and a few other ``entry points&#8217;&#8216; like the <code>@ARGV</code> array (which can sometimes be interpreted as UTF-8). </p>
+<p> The following are such interfaces. Also, see ``The &#8216;&#8216;Unicode Bug&quot;&quot;. For all of these interfaces Perl currently (as of v5.16.0) simply assumes byte strings both as arguments and results, or UTF-8 strings if the (deprecated) <code>&quot;encoding&quot;</code> pragma has been used. </p>
 <p> One reason that Perl does not attempt to resolve the role of Unicode in these situations is that the answers are highly dependent on the operating system and the file system(s). For example, whether filenames can be in Unicode and in exactly what kind of encoding, is not exactly a portable concept. Similarly for <code>&quot;qx&quot;</code> and <code>&quot;system&quot;</code>: how well will the ``command-line interface&#8217;&#8216; (and which of them?) handle Unicode? </p>
 <dl>
 <dt>&bull;</dt>
@@ -738,10 +738,10 @@ description: "perlunicode – Unicode support in Perl"
 <dd> <p> <code>&quot;readdir&quot;</code>, <code>&quot;readlink&quot;</code> </p>
  </dd></dl>
 <h3>The Unicode Bug</h3>
-<p> The term, ``Unicode bug&#8217;&#8216; has been applied to an inconsistency with the code points in the <code>&quot;Latin-1 Supplement&quot;</code> block, that is, between 128 and 255. Without a locale specified, unlike all other characters or code points, these characters can have very different semantics depending on the rules in effect. (Characters whose code points are above 255 force Unicode rules; whereas the rules for <font SIZE="-1">ASCII</font> characters are the same under both <font SIZE="-1">ASCII</font> and Unicode rules.) </p>
-<p> Under Unicode rules, these upper-Latin1 characters are interpreted as Unicode code points, which means they have the same semantics as Latin-1 (<font SIZE="-1">ISO-8859-1</font>) and C1 controls. </p>
-<p> As explained in ``<font SIZE="-1">ASCII</font> Rules versus Unicode Rules&#8217;&#8216;, under <font SIZE="-1">ASCII</font> rules, they are considered to be unassigned characters. </p>
-<p> This can lead to unexpected results. For example, a string&#8217;s semantics can suddenly change if a code point above 255 is appended to it, which changes the rules from <font SIZE="-1">ASCII</font> to Unicode. As an example, consider the following program and its output: </p>
+<p> The term, ``Unicode bug&#8217;&#8216; has been applied to an inconsistency with the code points in the <code>&quot;Latin-1 Supplement&quot;</code> block, that is, between 128 and 255. Without a locale specified, unlike all other characters or code points, these characters can have very different semantics depending on the rules in effect. (Characters whose code points are above 255 force Unicode rules; whereas the rules for ASCII characters are the same under both ASCII and Unicode rules.) </p>
+<p> Under Unicode rules, these upper-Latin1 characters are interpreted as Unicode code points, which means they have the same semantics as Latin-1 (ISO-8859-1) and C1 controls. </p>
+<p> As explained in ``ASCII Rules versus Unicode Rules&#8217;&#8216;, under ASCII rules, they are considered to be unassigned characters. </p>
+<p> This can lead to unexpected results. For example, a string&#8217;s semantics can suddenly change if a code point above 255 is appended to it, which changes the rules from ASCII to Unicode. As an example, consider the following program and its output: </p>
 <pre><code> $ perl -le'
      no feature &quot;unicode_strings&quot;;
      $s1 = &quot;\xC2&quot;;
@@ -773,7 +773,7 @@ description: "perlunicode – Unicode support in Perl"
  </dd>
 <dt>&bull;</dt>
 <dd> <p> In <code>&quot;quotemeta&quot;</code> or its inline equivalent <code>&quot;\Q&quot;</code>. </p>
-<p> Starting in Perl 5.16.0, consistent quoting rules are used within the scope of <code>&quot;unicode_strings&quot;</code>, as described in ``quotemeta&#8217;&#8216; in perlfunc. Prior to that, or outside its scope, no code points above 127 are quoted in <font SIZE="-1">UTF-8</font> encoded strings, but in byte encoded strings, code points between 128-255 are always quoted. </p>
+<p> Starting in Perl 5.16.0, consistent quoting rules are used within the scope of <code>&quot;unicode_strings&quot;</code>, as described in ``quotemeta&#8217;&#8216; in perlfunc. Prior to that, or outside its scope, no code points above 127 are quoted in UTF-8 encoded strings, but in byte encoded strings, code points between 128-255 are always quoted. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> In the <code>&quot;..&quot;</code> or range operator. </p>
@@ -781,25 +781,25 @@ description: "perlunicode – Unicode support in Perl"
  </dd>
 <dt>&bull;</dt>
 <dd> <p> In <code>&quot;split&quot;</code>&#8216;s special-case whitespace splitting. </p>
-<p> Starting in Perl 5.28.0, the <code>&quot;split&quot;</code> function with a pattern specified as a string containing a single space handles whitespace characters consistently within the scope of of <code>&quot;unicode_strings&quot;</code>. Prior to that, or outside its scope, characters that are whitespace according to Unicode rules but not according to <font SIZE="-1">ASCII</font> rules were treated as field contents rather than field separators when they appear in byte-encoded strings. </p>
+<p> Starting in Perl 5.28.0, the <code>&quot;split&quot;</code> function with a pattern specified as a string containing a single space handles whitespace characters consistently within the scope of of <code>&quot;unicode_strings&quot;</code>. Prior to that, or outside its scope, characters that are whitespace according to Unicode rules but not according to ASCII rules were treated as field contents rather than field separators when they appear in byte-encoded strings. </p>
  </dd></dl>
 <p> You can see from the above that the effect of <code>&quot;unicode_strings&quot;</code> increased over several Perl releases. (And Perl&#8217;s support for Unicode continues to improve; it&#8217;s best to use the latest available release in order to get the most complete and accurate results possible.) Note that <code>&quot;unicode_strings&quot;</code> is automatically chosen if you <code>&quot;use 5.012&quot;</code> or higher. </p>
 <p> For Perls earlier than those described above, or when a string is passed to a function outside the scope of <code>&quot;unicode_strings&quot;</code>, see the next section.  </p>
 <h3>Forcing Unicode in Perl (Or Unforcing Unicode in Perl)</h3>
-<p> Sometimes (see ``When Unicode Does Not Happen&#8217;&#8216; or ``The &#8216;&#8216;Unicode Bug&quot;&quot;) there are situations where you simply need to force a byte string into <font SIZE="-1">UTF-8,</font> or vice versa. The standard module Encode can be used for this, or the low-level calls <code>&quot;utf8::upgrade($bytestring)&quot;</code> and <code>&quot;utf8::downgrade($utf8string[, FAIL_OK])&quot;</code>. </p>
+<p> Sometimes (see ``When Unicode Does Not Happen&#8217;&#8216; or ``The &#8216;&#8216;Unicode Bug&quot;&quot;) there are situations where you simply need to force a byte string into UTF-8, or vice versa. The standard module Encode can be used for this, or the low-level calls <code>&quot;utf8::upgrade($bytestring)&quot;</code> and <code>&quot;utf8::downgrade($utf8string[, FAIL_OK])&quot;</code>. </p>
 <p> Note that <code>&quot;utf8::downgrade()&quot;</code> can fail if the string contains characters that don&#8217;t fit into a byte. </p>
 <p> Calling either function on a string that already is in the desired state is a no-op. </p>
-<p> ``<font SIZE="-1">ASCII</font> Rules versus Unicode Rules&#8217;&#8216; gives all the ways that a string is made to use Unicode rules.  </p>
-<font SIZE="-1"></font><h3>Using Unicode in XS</h3>
-<p> See ``Unicode Support&#8217;&#8216; in perlguts for an introduction to Unicode at the <font SIZE="-1">XS</font> level, and ``Unicode Support&#8217;&#8216; in perlapi for the <font SIZE="-1">API</font> details.  </p>
+<p> ``ASCII Rules versus Unicode Rules&#8217;&#8216; gives all the ways that a string is made to use Unicode rules.  </p>
+<h3>Using Unicode in XS</h3>
+<p> See ``Unicode Support&#8217;&#8216; in perlguts for an introduction to Unicode at the XS level, and ``Unicode Support&#8217;&#8216; in perlapi for the API details.  </p>
 <h3>Hacking Perl to work on earlier Unicode versions (for very serious hackers only)</h3>
 <p> Perl by default comes with the latest supported Unicode version built-in, but the goal is to allow you to change to use any earlier one. In Perls v5.20 and v5.22, however, the earliest usable version is Unicode 5.1. Perl v5.18 and v5.24 are able to handle all earlier versions. </p>
-<p> Download the files in the desired version of Unicode from the Unicode web site &lt;<a rel="nofollow" href="http://www.unicode.org">http://www.unicode.org</a>&gt;). These should replace the existing files in <i>lib/unicore</i> in the Perl source tree. Follow the instructions in <i></i><font SIZE="-1"><i>README</i></font><i>.perl</i> in that directory to change some of their names, and then build perl (see <font SIZE="-1">INSTALL</font>).  </p>
+<p> Download the files in the desired version of Unicode from the Unicode web site &lt;<a rel="nofollow" href="http://www.unicode.org">http://www.unicode.org</a>&gt;). These should replace the existing files in <i>lib/unicore</i> in the Perl source tree. Follow the instructions in <i></i><i>README</i><i>.perl</i> in that directory to change some of their names, and then build perl (see INSTALL).  </p>
 <h3>Porting code from perl-5.6.X</h3>
 <p> Perls starting in 5.8 have a different Unicode model from 5.6. In 5.6 the programmer was required to use the <code>&quot;utf8&quot;</code> pragma to declare that a given scope expected to deal with Unicode data and had to make sure that only Unicode data were reaching that scope. If you have code that is working with 5.6, you will need some of the following adjustments to your code. The examples are written such that the code will continue to work under 5.6, so you should be safe to try them out. </p>
 <dl>
 <dt>&bull;</dt>
-<dd> <p> A filehandle that should read or write <font SIZE="-1">UTF-8</font> </p>
+<dd> <p> A filehandle that should read or write UTF-8 </p>
 <pre><code>  if ($] &gt; 5.008) {
     binmode $fh, &quot;:encoding(UTF-8)&quot;;
   }
@@ -807,7 +807,7 @@ description: "perlunicode – Unicode support in Perl"
  </dd>
 <dt>&bull;</dt>
 <dd> <p> A scalar that is going to be passed to some extension </p>
-<p> Be it <code>&quot;Compress::Zlib&quot;</code>, <code>&quot;Apache::Request&quot;</code> or any extension that has no mention of Unicode in the manpage, you need to make sure that the <font SIZE="-1">UTF8</font> flag is stripped off. Note that at the time of this writing (January 2012) the mentioned modules are not UTF-8-aware. Please check the documentation to verify if this is still true. </p>
+<p> Be it <code>&quot;Compress::Zlib&quot;</code>, <code>&quot;Apache::Request&quot;</code> or any extension that has no mention of Unicode in the manpage, you need to make sure that the UTF8 flag is stripped off. Note that at the time of this writing (January 2012) the mentioned modules are not UTF-8-aware. Please check the documentation to verify if this is still true. </p>
 <pre><code>  if ($] &gt; 5.008) {
     require Encode;
     $val = Encode::encode(&quot;UTF-8&quot;, $val); # make octets
@@ -816,7 +816,7 @@ description: "perlunicode – Unicode support in Perl"
  </dd>
 <dt>&bull;</dt>
 <dd> <p> A scalar we got back from an extension </p>
-<p> If you believe the scalar comes back as <font SIZE="-1">UTF-8,</font> you will most likely want the <font SIZE="-1">UTF8</font> flag restored: </p>
+<p> If you believe the scalar comes back as UTF-8, you will most likely want the UTF8 flag restored: </p>
 <pre><code>  if ($] &gt; 5.008) {
     require Encode;
     $val = Encode::decode(&quot;UTF-8&quot;, $val);
@@ -824,7 +824,7 @@ description: "perlunicode – Unicode support in Perl"
 </code></pre>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Same thing, if you are really sure it is <font SIZE="-1">UTF-8</font> </p>
+<dd> <p> Same thing, if you are really sure it is UTF-8 </p>
 <pre><code>  if ($] &gt; 5.008) {
     require Encode;
     Encode::_utf8_on($val);
@@ -832,8 +832,8 @@ description: "perlunicode – Unicode support in Perl"
 </code></pre>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> A wrapper for <font SIZE="-1">DBI</font> <code>&quot;fetchrow_array&quot;</code> and <code>&quot;fetchrow_hashref&quot;</code> </p>
-<p> When the database contains only <font SIZE="-1">UTF-8,</font> a wrapper function or method is a convenient way to replace all your <code>&quot;fetchrow_array&quot;</code> and <code>&quot;fetchrow_hashref&quot;</code> calls. A wrapper function will also make it easier to adapt to future enhancements in your database driver. Note that at the time of this writing (January 2012), the <font SIZE="-1">DBI</font> has no standardized way to deal with <font SIZE="-1">UTF-8</font> data. Please check the <font SIZE="-1">DBI</font> documentation to verify if that is still true. </p>
+<dd> <p> A wrapper for DBI <code>&quot;fetchrow_array&quot;</code> and <code>&quot;fetchrow_hashref&quot;</code> </p>
+<p> When the database contains only UTF-8, a wrapper function or method is a convenient way to replace all your <code>&quot;fetchrow_array&quot;</code> and <code>&quot;fetchrow_hashref&quot;</code> calls. A wrapper function will also make it easier to adapt to future enhancements in your database driver. Note that at the time of this writing (January 2012), the DBI has no standardized way to deal with UTF-8 data. Please check the DBI documentation to verify if that is still true. </p>
 <pre><code>  sub fetchrow {
     # $what is one of fetchrow_{array,hashref}
     my($self, $sth, $what) = @_;
@@ -866,18 +866,18 @@ description: "perlunicode – Unicode support in Perl"
 </code></pre>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> A large scalar that you know can only contain <font SIZE="-1">ASCII</font> </p>
-<p> Scalars that contain only <font SIZE="-1">ASCII</font> and are marked as <font SIZE="-1">UTF-8</font> are sometimes a drag to your program. If you recognize such a situation, just remove the <font SIZE="-1">UTF8</font> flag: </p>
+<dd> <p> A large scalar that you know can only contain ASCII </p>
+<p> Scalars that contain only ASCII and are marked as UTF-8 are sometimes a drag to your program. If you recognize such a situation, just remove the UTF8 flag: </p>
 <pre><code>  utf8::downgrade($val) if $] &gt; 5.008;
 </code></pre>
  </dd></dl>
 <h2>BUGS</h2>
 <p> See also ``The &#8216;&#8216;Unicode Bug&quot;&quot; above.  </p>
 <h3>Interaction with Extensions</h3>
-<p> When Perl exchanges data with an extension, the extension should be able to understand the <font SIZE="-1">UTF8</font> flag and act accordingly. If the extension doesn&#8217;t recognize that flag, it&#8217;s likely that the extension will return incorrectly-flagged data. </p>
+<p> When Perl exchanges data with an extension, the extension should be able to understand the UTF8 flag and act accordingly. If the extension doesn&#8217;t recognize that flag, it&#8217;s likely that the extension will return incorrectly-flagged data. </p>
 <p> So if you&#8217;re working with Unicode data, consult the documentation of every module you&#8217;re using if there are any issues with Unicode data exchange. If the documentation does not talk about Unicode at all, suspect the worst and probably look at the source to learn how the module is implemented. Modules written completely in Perl shouldn&#8217;t cause problems. Modules that directly or indirectly access code written in other programming languages are at risk. </p>
 <p> For affected functions, the simple strategy to avoid data corruption is to always make the encoding of the exchanged data explicit. Choose an encoding that you know the extension can handle. Convert arguments passed to the extensions to that encoding and convert results back from that encoding. Write wrapper functions that do the conversions for you, so you can later change the functions when the extension catches up. </p>
-<p> To provide an example, let&#8217;s say the popular <code>&quot;Foo::Bar::escape_html&quot;</code> function doesn&#8217;t deal with Unicode data yet. The wrapper function would convert the argument to raw <font SIZE="-1">UTF-8</font> and convert the result back to Perl&#8217;s internal representation like so: </p>
+<p> To provide an example, let&#8217;s say the popular <code>&quot;Foo::Bar::escape_html&quot;</code> function doesn&#8217;t deal with Unicode data yet. The wrapper function would convert the argument to raw UTF-8 and convert the result back to Perl&#8217;s internal representation like so: </p>
 <pre><code>    sub my_escape_html ($) {
         my($what) = shift;
         return unless defined $what;
@@ -905,7 +905,7 @@ description: "perlunicode – Unicode support in Perl"
 </code></pre>
 <p> Some extensions provide filters on data entry/exit points, such as <code>&quot;DB_File::filter_store_key&quot;</code> and family. Look out for such filters in the documentation of your extensions; they can make the transition to Unicode data much easier.  </p>
 <h3>Speed</h3>
-<p> Some functions are slower when working on <font SIZE="-1">UTF-8</font> encoded strings than on byte encoded strings. All functions that need to hop over characters such as <code>&quot;length()&quot;</code>, <code>&quot;substr()&quot;</code> or <code>&quot;index()&quot;</code>, or matching regular expressions can work <code>much</code> faster when the underlying data are byte-encoded. </p>
-<p> In Perl 5.8.0 the slowness was often quite spectacular; in Perl 5.8.1 a caching scheme was introduced which improved the situation. In general, operations with <font SIZE="-1">UTF-8</font> encoded strings are still slower. As an example, the Unicode properties (character classes) like <code>&quot;\p{Nd}&quot;</code> are known to be quite a bit slower (5-20 times) than their simpler counterparts like <code>&quot;[0-9]&quot;</code> (then again, there are hundreds of Unicode characters matching <code>&quot;Nd&quot;</code> compared with the 10 <font SIZE="-1">ASCII</font> characters matching <code>&quot;[0-9]&quot;</code>).  </p>
+<p> Some functions are slower when working on UTF-8 encoded strings than on byte encoded strings. All functions that need to hop over characters such as <code>&quot;length()&quot;</code>, <code>&quot;substr()&quot;</code> or <code>&quot;index()&quot;</code>, or matching regular expressions can work <code>much</code> faster when the underlying data are byte-encoded. </p>
+<p> In Perl 5.8.0 the slowness was often quite spectacular; in Perl 5.8.1 a caching scheme was introduced which improved the situation. In general, operations with UTF-8 encoded strings are still slower. As an example, the Unicode properties (character classes) like <code>&quot;\p{Nd}&quot;</code> are known to be quite a bit slower (5-20 times) than their simpler counterparts like <code>&quot;[0-9]&quot;</code> (then again, there are hundreds of Unicode characters matching <code>&quot;Nd&quot;</code> compared with the 10 ASCII characters matching <code>&quot;[0-9]&quot;</code>).  </p>
 <h2>SEE ALSO</h2>
 <p> perlunitut, perluniintro, perluniprops, Encode, open, utf8, bytes, perlretut, ``${^UNICODE}&#8216;&#8216; in perlvar, &lt;<a rel="nofollow" href="http://www.unicode.org/reports/tr44">http://www.unicode.org/reports/tr44</a>&gt;). </p>

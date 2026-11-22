@@ -17,21 +17,21 @@ description: "dhcping – send a DHCP request to DHCP server to see if it’s up
 <dt><code>-v</code></dt>
 <dd>Verbose, print some information. </dd>
 <dt><code>-i</code></dt>
-<dd>Use <font SIZE="-1">DHCPINFORM</font> packets. </dd>
+<dd>Use DHCPINFORM packets. </dd>
 <dt><code>-r</code></dt>
-<dd>Use <font SIZE="-1">DHCPREQUEST</font> packets (default behaviour). </dd>
+<dd>Use DHCPREQUEST packets (default behaviour). </dd>
 <dt><code>-q</code></dt>
 <dd>Quiet, print nothing on the screen. </dd>
 <dt><code>-t</code> <i>maxwait</i></dt>
 <dd>Maximum time to wait for an answer from the server in seconds. Default is 3 seconds. </dd>
-<dt><code>-c</code> <i>client-</i><font SIZE="-1"><i>IP</i></font><i>-address</i></dt>
-<dd>Request this <font SIZE="-1">IP</font> address. Note that this is also the <font SIZE="-1">IP</font> address the answer will be sent to. </dd>
-<dt><code>-s</code> <i>server-</i><font SIZE="-1"><i>IP</i></font><i>-address</i></dt>
-<dd>Send the <font SIZE="-1">DHCP</font> packet to this <font SIZE="-1">IP</font> address. </dd>
+<dt><code>-c</code> <i>client-</i><i>IP</i><i>-address</i></dt>
+<dd>Request this IP address. Note that this is also the IP address the answer will be sent to. </dd>
+<dt><code>-s</code> <i>server-</i><i>IP</i><i>-address</i></dt>
+<dd>Send the DHCP packet to this IP address. </dd>
 <dt><code>-h</code> <i>client-hardware-address</i></dt>
-<dd>Use this hardware-address in the <font SIZE="-1">DHCP</font> request. It can be up to sixteen octets seperated by colons (i.e. 01:02:03:04) </dd>
-<dt><code>-g</code> <i>gateway-</i><font SIZE="-1"><i>IP</i></font><i>-address</i></dt>
-<dd>Use this <font SIZE="-1">IP</font> address for the gateway <font SIZE="-1">IP</font> address in the <font SIZE="-1">DHCP</font> packet. This option is currently broken.</dd></dl>
+<dd>Use this hardware-address in the DHCP request. It can be up to sixteen octets seperated by colons (i.e. 01:02:03:04) </dd>
+<dt><code>-g</code> <i>gateway-</i><i>IP</i><i>-address</i></dt>
+<dd>Use this IP address for the gateway IP address in the DHCP packet. This option is currently broken.</dd></dl>
 <h2>Return Values</h2>
 <p>If everything goes okay, it returns 0. If there went something wrong, it returns 1.</p>
 <h2>Setup</h2>
@@ -42,13 +42,13 @@ description: "dhcping – send a DHCP request to DHCP server to see if it’s up
  fixed-address &lt;your monitoring host IP address&gt;;
  }</pre>
 <p>Then try it: </p>
-<p> $ dhcping -c <i>your monitoring host IP address</i> \<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-s&nbsp;<wbr><i>your DHCP server IP address</i>&nbsp;<wbr>\<br />
+<p> $ dhcping -c <i>your monitoring host IP address</i> \<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-s&nbsp;<wbr><i>your DHCP server IP address</i>&nbsp;<wbr>\<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-h&nbsp;<wbr><i>your monitor host mac address</i> </p>
 <p> It will either respond with &#8220;no answer&#8221; or &#8220;Got answer from: <i>your DHCP server IP address</i>&#8221; </p>
-<p> The DHCP server logfile will give:<br />
-&nbsp;<wbr>DHCPREQUEST for 192.168.1.1 from 00:20:18:56:29:8f via ed0<br />
-&nbsp;<wbr>DHCPACK on 192.168.1.1 to 00:20:18:56:29:8f via ed0<br />
+<p> The DHCP server logfile will give:<br/>
+&nbsp;<wbr>DHCPREQUEST for 192.168.1.1 from 00:20:18:56:29:8f via ed0<br/>
+&nbsp;<wbr>DHCPACK on 192.168.1.1 to 00:20:18:56:29:8f via ed0<br/>
 &nbsp;<wbr>DHCPRELEASE of 192.168.1.1 from 00:20:18:56:29:8f via ed0&nbsp;<wbr>(found) </p>
 <p> Running in DHCPINFORM mode with <code>-i</code>: </p>
 <p> If you see &#8220;DHCPINFORM from 192.168.1.1 via xl0: not authoritative for subnet 192.168.1.0&#8221;, you should add the authoritative statement to the subnet, See dhcpd.<i>conf</i>(5) for details. </p>

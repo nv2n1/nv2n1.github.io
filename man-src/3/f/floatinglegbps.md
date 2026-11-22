@@ -12,9 +12,9 @@ description: "QuantLib::AssetSwap – Bullet bond vs Libor swap."
 <p>#include &lt;ql/instruments/assetswap.hpp&gt; </p>
 <p> Inherits <code>QuantLib::Swap</code>. </p>
 <h3>Classes</h3>
-<p>class <code>arguments</code><br />
- <i>Arguments for asset swap calculation </i><br />
- class <code>results</code><br />
+<p>class <code>arguments</code><br/>
+ <i>Arguments for asset swap calculation </i><br/>
+ class <code>results</code><br/>
  <i>Results from simple swap calculation </i></p>
 <h3>Public Member Functions</h3>
 <p><code>AssetSwap</code> (bool payFixedRate, const boost::shared_ptr&lt; <code>Bond</code> &gt; &amp;bond, Real bondCleanPrice, const boost::shared_ptr&lt; <code>IborIndex</code> &gt; &amp;index, <code>Spread</code> spread, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;discountCurve, const <code>Schedule</code> &amp;floatSchedule=<code>Schedule</code>(), const <code>DayCounter</code> &amp;floatingDayCount=<code>DayCounter</code>(), bool parAssetSwap=true) </p>

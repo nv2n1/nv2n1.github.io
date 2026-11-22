@@ -10,7 +10,7 @@ description: "widl – Wine Interface Definition Language (IDL) compiler"
 
 <p> widl &#8211; Wine Interface Definition Language (IDL) compiler</p>
 <h2>SYNOPSIS</h2>
-<p> <code>widl</code> [<i>options</i>] <i>IDL_file</i><br />
+<p> <code>widl</code> [<i>options</i>] <i>IDL_file</i><br/>
  <code>widl</code> [<i>options</i>] <code>&#8211;dlldata-only</code> <i>name1</i> [<i>name2</i>&#8230;]</p>
 <h2>DESCRIPTION</h2>
 <p> When no options are used the program will generate a header file, and possibly client and server stubs, proxy and dlldata files, a typelib, and a UUID file, depending on the contents of the IDL file. If any of the options <code>-c</code>, <code>-h</code>, <code>-p</code>, <code>-s</code>, <code>-t</code>, <code>-u</code> or <code>&#8211;local-stubs</code> is given, <code>widl</code> will only generate the requested files, and no others. When run with <code>&#8211;dlldata-only</code>, widl will only generate a dlldata file, and it will contain a list of the names passed as arguments. Usually the way this file is updated is that each time <code>widl</code> is run, it reads any existing dlldata file, and if necessary regenerates it with the same list of names, but with the present proxy file included. </p>
@@ -98,12 +98,12 @@ description: "widl – Wine Interface Definition Language (IDL) compiler"
 <dt><code>&#8211;local-stubs=</code><i>file</i></dt>
 <dd> Generate empty stubs for call_as/local methods in an object interface and write them to <i>file</i>.</dd></dl>
 <h2>DEBUG</h2>
-<p> Debug level <i>n</i> is a bitmask with the following meaning:<br />
-&nbsp;<wbr>*&nbsp;<wbr>0x01 Tell which resource is parsed&nbsp;<wbr>(verbose mode)<br />
-&nbsp;<wbr>*&nbsp;<wbr>0x02 Dump internal structures<br />
-&nbsp;<wbr>*&nbsp;<wbr>0x04 Create a parser trace&nbsp;<wbr>(yydebug=1)<br />
-&nbsp;<wbr>*&nbsp;<wbr>0x08 Preprocessor messages<br />
-&nbsp;<wbr>*&nbsp;<wbr>0x10 Preprocessor lex messages<br />
+<p> Debug level <i>n</i> is a bitmask with the following meaning:<br/>
+&nbsp;<wbr>*&nbsp;<wbr>0x01 Tell which resource is parsed&nbsp;<wbr>(verbose mode)<br/>
+&nbsp;<wbr>*&nbsp;<wbr>0x02 Dump internal structures<br/>
+&nbsp;<wbr>*&nbsp;<wbr>0x04 Create a parser trace&nbsp;<wbr>(yydebug=1)<br/>
+&nbsp;<wbr>*&nbsp;<wbr>0x08 Preprocessor messages<br/>
+&nbsp;<wbr>*&nbsp;<wbr>0x10 Preprocessor lex messages<br/>
 &nbsp;<wbr>*&nbsp;<wbr>0x20 Preprocessor yacc trace</p>
 <h2>BUGS</h2>
 <p> Bugs can be reported on the <code>Wine bug tracker</code></p>

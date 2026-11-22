@@ -75,18 +75,18 @@ description: "popt – Parse command line options"
 </td>
 <td>
 </td>
-<td><font SIZE="-9"><i></i></font>
+<td><i></i>
 </td>
 <td>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>
 </td>
 <td>
 </td>
-<td><font SIZE="-9"></font>
+<td>
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9"><hr />
-</font></td>
+<td><hr />
+</td>
 <td></td>
 <td>
 </td>
@@ -102,7 +102,7 @@ description: "popt – Parse command line options"
 </td>
 <td>
 </td>
-<td><font SIZE="-9">&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></font>
+<td>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>
 </td>
 <td><i></i>
 </td>
@@ -110,8 +110,8 @@ description: "popt – Parse command line options"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9"><hr />
-</font></td>
+<td><hr />
+</td>
 <td></td>
 <td>
 </td>
@@ -121,13 +121,13 @@ description: "popt – Parse command line options"
 </td>
 <td>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>
 </td>
-<td><font SIZE="-9">&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></font>
+<td>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>
 </td>
 <td>
 </td>
 <td><i></i>
 </td>
-<td><font SIZE="-9"><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code></font>
+<td><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>
 </td>
 <td>
 </td>
@@ -139,8 +139,8 @@ description: "popt – Parse command line options"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9"><hr />
-</font></td>
+<td><hr />
+</td>
 <td></td>
 <td>
 </td>
@@ -168,8 +168,8 @@ description: "popt – Parse command line options"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9"><hr />
-</font></td>
+<td><hr />
+</td>
 <td></td>
 <td>
 </td>
@@ -197,8 +197,8 @@ description: "popt – Parse command line options"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9"><hr />
-</font></td>
+<td><hr />
+</td>
 <td></td>
 <td>
 </td>
@@ -228,8 +228,8 @@ description: "popt – Parse command line options"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9"><hr />
-</font></td>
+<td><hr />
+</td>
 <td></td>
 <td>
 </td>
@@ -255,8 +255,8 @@ description: "popt – Parse command line options"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9"><hr />
-</font></td>
+<td><hr />
+</td>
 <td></td>
 <td>
 </td>

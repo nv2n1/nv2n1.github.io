@@ -10,7 +10,7 @@ description: "zpttrf.f –"
 <p>zpttrf.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zpttrf</code> (N, D, E, INFO)<br />
+<p>subroutine <code>zpttrf</code> (N, D, E, INFO)<br/>
  <i></i><code>ZPTTRF</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zpttrf (integerN, double precision, dimension( * )D, complex*16, dimension( * )E, integerINFO)</h3>

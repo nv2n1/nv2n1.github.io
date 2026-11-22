@@ -267,7 +267,7 @@ description: "plowdown – Simple download manager for file sharing websites"
 <h2>EXAMPLES</h2>
 <h3>1) Download one or several files</h3>
 <p> $ plowdown <a rel="nofollow" href="http://www.rapidshare.com/files/12345678/foo.rar">http://www.rapidshare.com/files/12345678/foo.rar</a> </p>
-<p> # Downloads are successive (not parallel) $ plowdown <a rel="nofollow" href="http://depositfiles.com/files/fv2u9xqya">http://depositfiles.com/files/fv2u9xqya</a> \<br />
+<p> # Downloads are successive (not parallel) $ plowdown <a rel="nofollow" href="http://depositfiles.com/files/fv2u9xqya">http://depositfiles.com/files/fv2u9xqya</a> \<br/>
 &nbsp;<wbr><a rel="nofollow" href="http://rapidgator.net/file/49b1b874">http://rapidgator.net/file/49b1b874</a> </p>
 <p> # Download a password-protected file from mediafire $ plowdown -p somepassword <a rel="nofollow" href="http://www.mediafire.com/?mt0egmhietj60iy">http://www.mediafire.com/?mt0egmhietj60iy</a> </p>
 <p> # Download using an account (free or premium, not supported by all modules) $ plowdown -a &#8216;myuser:mypassword&#8217; <a rel="nofollow" href="http://rapidgator.net/file/49b1b874">http://rapidgator.net/file/49b1b874</a></p>
@@ -278,7 +278,7 @@ description: "plowdown – Simple download manager for file sharing websites"
 <h3>4) Download with a proxy (3128 is the default port)</h3>
 <p> $ export http_proxy=<a rel="nofollow" href="http://192.168.0.20:80">http://192.168.0.20:80</a> $ plowdown <a rel="nofollow" href="http://www.rapidshare.com/files/12345678/foo.rar">http://www.rapidshare.com/files/12345678/foo.rar</a></p>
 <h3>5) Don&#8217;t download file but only display final download URL (alternative HTTP retriever can be used).</h3>
-<p> # Depending hosters, cookie file might be required. $ plowdown -v1 &#8211;skip-final &#8211;printf &#8216;# %f%n%d%n&#8217; \<br />
+<p> # Depending hosters, cookie file might be required. $ plowdown -v1 &#8211;skip-final &#8211;printf &#8216;# %f%n%d%n&#8217; \<br/>
 &nbsp;<wbr><a rel="nofollow" href="http://uploading.com/files/39267me4/foo.zip/">http://uploading.com/files/39267me4/foo.zip/</a></p>
 <h3>6) Safe download. Each URL will be limited in the number of tries and wait delays.</h3>
 <p> $ alias plowdown=&#8217;plowdown &#8211;no-overwrite &#8211;max-retries=10 &#8211;timeout=3600&#8242; $ plowdown -m file_with_links.txt </p>

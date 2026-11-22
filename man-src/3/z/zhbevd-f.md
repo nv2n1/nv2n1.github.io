@@ -10,7 +10,7 @@ description: "zhbevd.f –"
 <p>zhbevd.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zhbevd</code> (JOBZ, UPLO, N, KD, AB, LDAB, W, Z, LDZ, WORK, LWORK, RWORK, LRWORK, IWORK, LIWORK, INFO)<br />
+<p>subroutine <code>zhbevd</code> (JOBZ, UPLO, N, KD, AB, LDAB, W, Z, LDZ, WORK, LWORK, RWORK, LRWORK, IWORK, LIWORK, INFO)<br/>
  <i></i><code> ZHBEVD computes the eigenvalues and, optionally, the left and/or right eigenvectors for OTHER matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zhbevd (characterJOBZ, characterUPLO, integerN, integerKD, complex*16, dimension( ldab, * )AB, integerLDAB, double precision, dimension( * )W, complex*16, dimension( ldz, * )Z, integerLDZ, complex*16, dimension( * )WORK, integerLWORK, double precision, dimension( * )RWORK, integerLRWORK, integer, dimension( * )IWORK, integerLIWORK, integerINFO)</h3>

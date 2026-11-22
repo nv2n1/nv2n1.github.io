@@ -51,23 +51,23 @@ Link with - lnftables.
 <dl>
 <dt>
 </dt><dd>
-enum {<br />
-    NFT_CTX_OUTPUT_REVERSEDNS = (1 &lt;&lt; 0),<br />
-    NFT_CTX_OUTPUT_SERVICE = (1 &lt;&lt; 1),<br />
-    NFT_CTX_OUTPUT_STATELESS = (1 &lt;&lt; 2),<br />
-    NFT_CTX_OUTPUT_HANDLE = (1 &lt;&lt; 3),<br />
-    NFT_CTX_OUTPUT_JSON = (1 &lt;&lt; 4),<br />
-    NFT_CTX_OUTPUT_ECHO = (1 &lt;&lt; 5),<br />
-    NFT_CTX_OUTPUT_GUID = (1 &lt;&lt; 6),<br />
-    NFT_CTX_OUTPUT_NUMERIC_PROTO = (1 &lt;&lt; 7),<br />
-    NFT_CTX_OUTPUT_NUMERIC_PRIO = (1 &lt;&lt; 8),<br />
-    NFT_CTX_OUTPUT_NUMERIC_SYMBOL = (1 &lt;&lt; 9),<br />
-    NFT_CTX_OUTPUT_NUMERIC_TIME = (1 &lt;&lt; 10),<br />
-    NFT_CTX_OUTPUT_NUMERIC_ALL = (NFT_CTX_OUTPUT_NUMERIC_PROTO |<br />
-                                  NFT_CTX_OUTPUT_NUMERIC_PRIO |<br />
-                                  NFT_CTX_OUTPUT_NUMERIC_SYMBOL |<br />
-                                  NFT_CTX_OUTPUT_NUMERIC_TIME),<br />
-    NFT_CTX_OUTPUT_TERSE = (1 &lt;&lt; 11),<br />
+enum {<br/>
+    NFT_CTX_OUTPUT_REVERSEDNS = (1 &lt;&lt; 0),<br/>
+    NFT_CTX_OUTPUT_SERVICE = (1 &lt;&lt; 1),<br/>
+    NFT_CTX_OUTPUT_STATELESS = (1 &lt;&lt; 2),<br/>
+    NFT_CTX_OUTPUT_HANDLE = (1 &lt;&lt; 3),<br/>
+    NFT_CTX_OUTPUT_JSON = (1 &lt;&lt; 4),<br/>
+    NFT_CTX_OUTPUT_ECHO = (1 &lt;&lt; 5),<br/>
+    NFT_CTX_OUTPUT_GUID = (1 &lt;&lt; 6),<br/>
+    NFT_CTX_OUTPUT_NUMERIC_PROTO = (1 &lt;&lt; 7),<br/>
+    NFT_CTX_OUTPUT_NUMERIC_PRIO = (1 &lt;&lt; 8),<br/>
+    NFT_CTX_OUTPUT_NUMERIC_SYMBOL = (1 &lt;&lt; 9),<br/>
+    NFT_CTX_OUTPUT_NUMERIC_TIME = (1 &lt;&lt; 10),<br/>
+    NFT_CTX_OUTPUT_NUMERIC_ALL = (NFT_CTX_OUTPUT_NUMERIC_PROTO |<br/>
+                                  NFT_CTX_OUTPUT_NUMERIC_PRIO |<br/>
+                                  NFT_CTX_OUTPUT_NUMERIC_SYMBOL |<br/>
+                                  NFT_CTX_OUTPUT_NUMERIC_TIME),<br/>
+    NFT_CTX_OUTPUT_TERSE = (1 &lt;&lt; 11),<br/>
 };
 </dd></dl>
 <p> NFT_CTX_OUTPUT_REVERSEDNS</p>
@@ -129,14 +129,14 @@ enum {<br />
 <dl>
 <dt>
 </dt><dd>
-enum nft_debug_level {<br />
-    NFT_DEBUG_SCANNER = 0x1,<br />
-    NFT_DEBUG_PARSER = 0x2,<br />
-    NFT_DEBUG_EVALUATION = 0x4,<br />
-    NFT_DEBUG_NETLINK = 0x8,<br />
-    NFT_DEBUG_MNL = 0x10,<br />
-    NFT_DEBUG_PROTO_CTX = 0x20,<br />
-    NFT_DEBUG_SEGTREE = 0x40,<br />
+enum nft_debug_level {<br/>
+    NFT_DEBUG_SCANNER = 0x1,<br/>
+    NFT_DEBUG_PARSER = 0x2,<br/>
+    NFT_DEBUG_EVALUATION = 0x4,<br/>
+    NFT_DEBUG_NETLINK = 0x8,<br/>
+    NFT_DEBUG_MNL = 0x10,<br/>
+    NFT_DEBUG_PROTO_CTX = 0x20,<br/>
+    NFT_DEBUG_SEGTREE = 0x40,<br/>
 };
 </dd></dl>
 <p> NFT_DEBUG_SCANNER</p>

@@ -13,7 +13,7 @@ description: "dvipdf – Convert TeX DVI file to PDF using ghostscript and dvips
 <p> <code>dvipdf</code> [ <i>options</i> ] <i>input.dvi</i> [ <i>output.pdf</i> ] &#8230;</p>
 <h2>DESCRIPTION</h2>
 <p> This script invokes <code><a href="/docs/linux/man/1-dvips/">dvips</a></code>(1) with the <code>-q</code> option, and pipes its output into <code><a href="/docs/linux/man/1-gs/">gs</a></code>(1) with the following options: </p>
-<p> <center> <code>-q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite</code><br />
+<p> <center> <code>-q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite</code><br/>
  </center> </p>
 <p> as well as <code>-sOutputFile</code> and any options from the command-line.</p>
 <h2>SEE ALSO</h2>

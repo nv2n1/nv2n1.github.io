@@ -12,82 +12,82 @@ description: "ANTLR3_COMMON_TOKEN_struct –"
 <h2>Synopsis</h2>
 <p>#include &lt;<a href="file:/usr/include/antlr3commontoken.h">antlr3commontoken.h</a>&gt;</p>
 <h3>Data Fields</h3>
-<p><code>ANTLR3_UINT32</code> <code>channel</code><br />
- <i>The virtual channel that this token exists in. </i><br />
- <code>ANTLR3_INT32</code> <code>charPosition</code><br />
- <i>The character position in the line that this token was derived from. </i><br />
- void * <code>custom</code><br />
- <i>Pointer to a custom element that the ANTLR3 programmer may define and install. </i><br />
- <code>ANTLR3_BOOLEAN</code> <code>factoryMade</code><br />
- <i>Indicates that a token was produced from the token factory and therefore the the freeToken() method should not do anything itself because token factory is responsible for deleting it. </i><br />
- void(* <code>freeCustom</code> )(void *<code>custom</code>)<br />
- <i>Pointer to a function that knows how to free the custom structure when the token is destroyed. </i><br />
- <code>ANTLR3_UINT32</code>(* <code>getChannel</code> )(struct <code>ANTLR3_COMMON_TOKEN_struct</code> *token)<br />
- <i>Pointer to a function that gets the channel that this token was placed in (parsers can &#8216;tune&#8217; to these channels. </i><br />
- <code>ANTLR3_INT32</code>(* <code>getCharPositionInLine</code> )(struct <code>ANTLR3_COMMON_TOKEN_struct</code> *token)<br />
- <i>Pointer to a function that gets the offset in the line where this token exists. </i><br />
- <code>ANTLR3_UINT32</code>(* <code>getLine</code> )(struct <code>ANTLR3_COMMON_TOKEN_struct</code> *token)<br />
- <i>Pointer to a function that gets the &#8216;line&#8217; number where this token resides. </i><br />
- <code>ANTLR3_MARKER</code>(* <code>getStartIndex</code> )(struct <code>ANTLR3_COMMON_TOKEN_struct</code> *token)<br />
- <i>Pointer to a function that gets the start index in the input stream for this token. </i><br />
- <code>ANTLR3_MARKER</code>(* <code>getStopIndex</code> )(struct <code>ANTLR3_COMMON_TOKEN_struct</code> *token)<br />
- <i>Pointer to a function that gets the stop index in the input stream for this token. </i><br />
- <code>pANTLR3_STRING</code>(* <code>getText</code> )(struct <code>ANTLR3_COMMON_TOKEN_struct</code> *token)<br />
- <i>Pointer to function that returns the text pointer of a token, use </i><code>toString()</code> if you want a pANTLR3_STRING version of the token.<br />
- <code>ANTLR3_MARKER</code>(* <code>getTokenIndex</code> )(struct <code>ANTLR3_COMMON_TOKEN_struct</code> *token)<br />
- <i>Pointer to a function that returns an index 0&#8230;n-1 of the token in the token input stream. </i><br />
- <code>ANTLR3_UINT32</code>(* <code>getType</code> )(struct <code>ANTLR3_COMMON_TOKEN_struct</code> *token)<br />
- <i>Pointer to a function that returns the token type of this token. </i><br />
- <code>ANTLR3_MARKER</code> <code>index</code><br />
- <i>What the index of this token is, 0, 1, . </i><br />
- <code>pANTLR3_INPUT_STREAM</code> <code>input</code><br />
- <i>Pointer to the input stream that this token originated in. </i><br />
- <code>ANTLR3_UINT32</code> <code>line</code><br />
- <i>The line number in the input stream where this token was derived from. </i><br />
- void * <code>lineStart</code><br />
- <i>The offset into the input stream that the line in which this token resides starts. </i><br />
- void(* <code>setChannel</code> )(struct <code>ANTLR3_COMMON_TOKEN_struct</code> *token, <code>ANTLR3_UINT32</code> <code>channel</code>)<br />
- <i>Pointer to a function that sets the channel that this token should belong to. </i><br />
- void(* <code>setCharPositionInLine</code> )(struct <code>ANTLR3_COMMON_TOKEN_struct</code> *token, <code>ANTLR3_INT32</code> pos)<br />
- <i>Pointer to a function that sets the offset in the line where this token exists. </i><br />
- void(* <code>setLine</code> )(struct <code>ANTLR3_COMMON_TOKEN_struct</code> *token, <code>ANTLR3_UINT32</code> <code>line</code>)<br />
- <i>Pointer to a function that sets the &#8216;line&#8217; number where this token reside. </i><br />
- void(* <code>setStartIndex</code> )(struct <code>ANTLR3_COMMON_TOKEN_struct</code> *token, <code>ANTLR3_MARKER</code> <code>index</code>)<br />
- <i>Pointer to a function that sets the start index in the input stream for this token. </i><br />
- void(* <code>setStopIndex</code> )(struct <code>ANTLR3_COMMON_TOKEN_struct</code> *token, <code>ANTLR3_MARKER</code> <code>index</code>)<br />
- <i>Pointer to a function that sets the stop index in the input stream for this token. </i><br />
- void(* <code>setText</code> )(struct <code>ANTLR3_COMMON_TOKEN_struct</code> *token, <code>pANTLR3_STRING</code> <code>text</code>)<br />
- <i>Pointer to a function that &#8216;might&#8217; be able to set the text associated with a token. </i><br />
- void(* <code>setText8</code> )(struct <code>ANTLR3_COMMON_TOKEN_struct</code> *token, <code>pANTLR3_UINT8</code> <code>text</code>)<br />
- <i>Pointer to a function that &#8216;might&#8217; be able to set the text associated with a token. </i><br />
- void(* <code>setTokenIndex</code> )(struct <code>ANTLR3_COMMON_TOKEN_struct</code> *token, <code>ANTLR3_MARKER</code>)<br />
- <i>Pointer to a function that can set the token index of this token in the token input stream. </i><br />
- void(* <code>setType</code> )(struct <code>ANTLR3_COMMON_TOKEN_struct</code> *token, <code>ANTLR3_UINT32</code> ttype)<br />
- <i>Pointer to a function that sets the type of this token. </i><br />
- <code>ANTLR3_MARKER</code> <code>start</code><br />
- <i>The character offset in the input stream where the text for this token starts. </i><br />
- <code>ANTLR3_MARKER</code> <code>stop</code><br />
- <i>The character offset in the input stream where the text for this token stops. </i><br />
- <code>pANTLR3_STRING_FACTORY</code> <code>strFactory</code><br />
- <i>A string factory that we can use if we ever need the text of a token and need to manufacture a pANTLR3_STRING. </i><br />
- <code>ANTLR3_UINT32</code> <code>textState</code><br />
- <i>Indicates whether this token is carrying:. </i><br />
+<p><code>ANTLR3_UINT32</code> <code>channel</code><br/>
+ <i>The virtual channel that this token exists in. </i><br/>
+ <code>ANTLR3_INT32</code> <code>charPosition</code><br/>
+ <i>The character position in the line that this token was derived from. </i><br/>
+ void * <code>custom</code><br/>
+ <i>Pointer to a custom element that the ANTLR3 programmer may define and install. </i><br/>
+ <code>ANTLR3_BOOLEAN</code> <code>factoryMade</code><br/>
+ <i>Indicates that a token was produced from the token factory and therefore the the freeToken() method should not do anything itself because token factory is responsible for deleting it. </i><br/>
+ void(* <code>freeCustom</code> )(void *<code>custom</code>)<br/>
+ <i>Pointer to a function that knows how to free the custom structure when the token is destroyed. </i><br/>
+ <code>ANTLR3_UINT32</code>(* <code>getChannel</code> )(struct <code>ANTLR3_COMMON_TOKEN_struct</code> *token)<br/>
+ <i>Pointer to a function that gets the channel that this token was placed in (parsers can &#8216;tune&#8217; to these channels. </i><br/>
+ <code>ANTLR3_INT32</code>(* <code>getCharPositionInLine</code> )(struct <code>ANTLR3_COMMON_TOKEN_struct</code> *token)<br/>
+ <i>Pointer to a function that gets the offset in the line where this token exists. </i><br/>
+ <code>ANTLR3_UINT32</code>(* <code>getLine</code> )(struct <code>ANTLR3_COMMON_TOKEN_struct</code> *token)<br/>
+ <i>Pointer to a function that gets the &#8216;line&#8217; number where this token resides. </i><br/>
+ <code>ANTLR3_MARKER</code>(* <code>getStartIndex</code> )(struct <code>ANTLR3_COMMON_TOKEN_struct</code> *token)<br/>
+ <i>Pointer to a function that gets the start index in the input stream for this token. </i><br/>
+ <code>ANTLR3_MARKER</code>(* <code>getStopIndex</code> )(struct <code>ANTLR3_COMMON_TOKEN_struct</code> *token)<br/>
+ <i>Pointer to a function that gets the stop index in the input stream for this token. </i><br/>
+ <code>pANTLR3_STRING</code>(* <code>getText</code> )(struct <code>ANTLR3_COMMON_TOKEN_struct</code> *token)<br/>
+ <i>Pointer to function that returns the text pointer of a token, use </i><code>toString()</code> if you want a pANTLR3_STRING version of the token.<br/>
+ <code>ANTLR3_MARKER</code>(* <code>getTokenIndex</code> )(struct <code>ANTLR3_COMMON_TOKEN_struct</code> *token)<br/>
+ <i>Pointer to a function that returns an index 0&#8230;n-1 of the token in the token input stream. </i><br/>
+ <code>ANTLR3_UINT32</code>(* <code>getType</code> )(struct <code>ANTLR3_COMMON_TOKEN_struct</code> *token)<br/>
+ <i>Pointer to a function that returns the token type of this token. </i><br/>
+ <code>ANTLR3_MARKER</code> <code>index</code><br/>
+ <i>What the index of this token is, 0, 1, . </i><br/>
+ <code>pANTLR3_INPUT_STREAM</code> <code>input</code><br/>
+ <i>Pointer to the input stream that this token originated in. </i><br/>
+ <code>ANTLR3_UINT32</code> <code>line</code><br/>
+ <i>The line number in the input stream where this token was derived from. </i><br/>
+ void * <code>lineStart</code><br/>
+ <i>The offset into the input stream that the line in which this token resides starts. </i><br/>
+ void(* <code>setChannel</code> )(struct <code>ANTLR3_COMMON_TOKEN_struct</code> *token, <code>ANTLR3_UINT32</code> <code>channel</code>)<br/>
+ <i>Pointer to a function that sets the channel that this token should belong to. </i><br/>
+ void(* <code>setCharPositionInLine</code> )(struct <code>ANTLR3_COMMON_TOKEN_struct</code> *token, <code>ANTLR3_INT32</code> pos)<br/>
+ <i>Pointer to a function that sets the offset in the line where this token exists. </i><br/>
+ void(* <code>setLine</code> )(struct <code>ANTLR3_COMMON_TOKEN_struct</code> *token, <code>ANTLR3_UINT32</code> <code>line</code>)<br/>
+ <i>Pointer to a function that sets the &#8216;line&#8217; number where this token reside. </i><br/>
+ void(* <code>setStartIndex</code> )(struct <code>ANTLR3_COMMON_TOKEN_struct</code> *token, <code>ANTLR3_MARKER</code> <code>index</code>)<br/>
+ <i>Pointer to a function that sets the start index in the input stream for this token. </i><br/>
+ void(* <code>setStopIndex</code> )(struct <code>ANTLR3_COMMON_TOKEN_struct</code> *token, <code>ANTLR3_MARKER</code> <code>index</code>)<br/>
+ <i>Pointer to a function that sets the stop index in the input stream for this token. </i><br/>
+ void(* <code>setText</code> )(struct <code>ANTLR3_COMMON_TOKEN_struct</code> *token, <code>pANTLR3_STRING</code> <code>text</code>)<br/>
+ <i>Pointer to a function that &#8216;might&#8217; be able to set the text associated with a token. </i><br/>
+ void(* <code>setText8</code> )(struct <code>ANTLR3_COMMON_TOKEN_struct</code> *token, <code>pANTLR3_UINT8</code> <code>text</code>)<br/>
+ <i>Pointer to a function that &#8216;might&#8217; be able to set the text associated with a token. </i><br/>
+ void(* <code>setTokenIndex</code> )(struct <code>ANTLR3_COMMON_TOKEN_struct</code> *token, <code>ANTLR3_MARKER</code>)<br/>
+ <i>Pointer to a function that can set the token index of this token in the token input stream. </i><br/>
+ void(* <code>setType</code> )(struct <code>ANTLR3_COMMON_TOKEN_struct</code> *token, <code>ANTLR3_UINT32</code> ttype)<br/>
+ <i>Pointer to a function that sets the type of this token. </i><br/>
+ <code>ANTLR3_MARKER</code> <code>start</code><br/>
+ <i>The character offset in the input stream where the text for this token starts. </i><br/>
+ <code>ANTLR3_MARKER</code> <code>stop</code><br/>
+ <i>The character offset in the input stream where the text for this token stops. </i><br/>
+ <code>pANTLR3_STRING_FACTORY</code> <code>strFactory</code><br/>
+ <i>A string factory that we can use if we ever need the text of a token and need to manufacture a pANTLR3_STRING. </i><br/>
+ <code>ANTLR3_UINT32</code> <code>textState</code><br/>
+ <i>Indicates whether this token is carrying:. </i><br/>
  union { </p>
-<p> <code>pANTLR3_UCHAR</code> <code>chars</code><br />
- <i>Pointer that is used when the token just has a pointer to a char *, such as when a rewrite of an imaginary token supplies a string in the grammar. </i><br />
- <code>pANTLR3_STRING</code> <code>text</code><br />
- <i>Some token types actually do carry around their associated text, hence (*getText)() will return this pointer if it is not NULL. </i><br />
+<p> <code>pANTLR3_UCHAR</code> <code>chars</code><br/>
+ <i>Pointer that is used when the token just has a pointer to a char *, such as when a rewrite of an imaginary token supplies a string in the grammar. </i><br/>
+ <code>pANTLR3_STRING</code> <code>text</code><br/>
+ <i>Some token types actually do carry around their associated text, hence (*getText)() will return this pointer if it is not NULL. </i><br/>
  } <code>tokText</code> </p>
-<p> <code>pANTLR3_STRING</code>(* <code>toString</code> )(struct <code>ANTLR3_COMMON_TOKEN_struct</code> *token)<br />
+<p> <code>pANTLR3_STRING</code>(* <code>toString</code> )(struct <code>ANTLR3_COMMON_TOKEN_struct</code> *token)<br/>
  <i>Pointer to a function that returns this token as a text representation that can be printed with embedded control codes such as </i> </p>
-<p>&nbsp;<wbr>replaced with the printable sequence&nbsp;<wbr>&#8216;\n&#8217;&nbsp;<wbr>This also yields a string structure that can be used more easily than the pointer to the input stream in certain situations.&nbsp;<wbr>&quot;<br />
- <code>ANTLR3_UINT32</code> <code>type</code><br />
- <i>The actual type of this token. </i><br />
- <code>ANTLR3_UINT32</code> <code>user1</code><br />
- <i>Because it is a bit more of a hassle to override an ANTLR3_COMMON_TOKEN as the standard structure for a token, a number of user programmable elements are allowed in a token. </i><br />
- <code>ANTLR3_UINT32</code> <code>user2</code><br />
- <i>Because it is a bit more of a hassle to override an ANTLR3_COMMON_TOKEN as the standard structure for a token, a number of user programmable elements are allowed in a token. </i><br />
- <code>ANTLR3_UINT32</code> <code>user3</code><br />
+<p>&nbsp;<wbr>replaced with the printable sequence&nbsp;<wbr>&#8216;\n&#8217;&nbsp;<wbr>This also yields a string structure that can be used more easily than the pointer to the input stream in certain situations.&nbsp;<wbr>&quot;<br/>
+ <code>ANTLR3_UINT32</code> <code>type</code><br/>
+ <i>The actual type of this token. </i><br/>
+ <code>ANTLR3_UINT32</code> <code>user1</code><br/>
+ <i>Because it is a bit more of a hassle to override an ANTLR3_COMMON_TOKEN as the standard structure for a token, a number of user programmable elements are allowed in a token. </i><br/>
+ <code>ANTLR3_UINT32</code> <code>user2</code><br/>
+ <i>Because it is a bit more of a hassle to override an ANTLR3_COMMON_TOKEN as the standard structure for a token, a number of user programmable elements are allowed in a token. </i><br/>
+ <code>ANTLR3_UINT32</code> <code>user3</code><br/>
  <i>Because it is a bit more of a hassle to override an ANTLR3_COMMON_TOKEN as the standard structure for a token, a number of user programmable elements are allowed in a token. </i></p>
 <h2>Detailed Description</h2>
 <p>The definition of an ANTLR3 common token structure, which all implementations of a token stream should provide, installing any further structures in the custom pointer element of this structure. </p>

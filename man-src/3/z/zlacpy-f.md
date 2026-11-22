@@ -10,7 +10,7 @@ description: "zlacpy.f –"
 <p>zlacpy.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlacpy</code> (UPLO, M, N, A, LDA, B, LDB)<br />
+<p>subroutine <code>zlacpy</code> (UPLO, M, N, A, LDA, B, LDB)<br/>
  <i></i><code>ZLACPY</code> copies all or part of one two-dimensional array to another.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlacpy (characterUPLO, integerM, integerN, complex*16, dimension( lda, * )A, integerLDA, complex*16, dimension( ldb, * )B, integerLDB)</h3>

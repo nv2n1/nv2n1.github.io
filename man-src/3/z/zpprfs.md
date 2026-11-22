@@ -10,7 +10,7 @@ description: "zpprfs.f –"
 <p>zpprfs.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zpprfs</code> (UPLO, N, NRHS, AP, AFP, B, LDB, X, LDX, FERR, BERR, WORK, RWORK, INFO)<br />
+<p>subroutine <code>zpprfs</code> (UPLO, N, NRHS, AP, AFP, B, LDB, X, LDX, FERR, BERR, WORK, RWORK, INFO)<br/>
  <i></i><code>ZPPRFS</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zpprfs (characterUPLO, integerN, integerNRHS, complex*16, dimension( * )AP, complex*16, dimension( * )AFP, complex*16, dimension( ldb, * )B, integerLDB, complex*16, dimension( ldx, * )X, integerLDX, double precision, dimension( * )FERR, double precision, dimension( * )BERR, complex*16, dimension( * )WORK, double precision, dimension( * )RWORK, integerINFO)</h3>

@@ -21,23 +21,23 @@ lwp - rget[--verbose] [--auth = USER:PASS][--depth = N][--hier][--iis][--keepext
 
  This program is useful if you want to make a local copy of a collection of documents or want to do web reading off-line. 
 
- All documents are stored as plain files in the current directory. The file names chosen are derived from the last component of <font SIZE="-1">URL</font> paths. 
+ All documents are stored as plain files in the current directory. The file names chosen are derived from the last component of URL paths. 
 
  The options are:
 <dl>
 <dt>--auth=USER:PASn
-</dt><dd> Set the authentication credentials to user ``<font SIZE="-1">USER</font>'' and password ``<font SIZE="-1">PASS</font>'' if any restricted parts of the web site are hit. If there are restricted parts of the web site and authentication credentials are not available, those pages will not be downloaded.
+</dt><dd> Set the authentication credentials to user ``USER'' and password ``PASS'' if any restricted parts of the web site are hit. If there are restricted parts of the web site and authentication credentials are not available, those pages will not be downloaded.
 </dd><dt>--depth=<i>n</i>
 </dt><dd> Limit the recursive level. Embedded images are always loaded, even if they fall outside the <i>--depth</i>. This means that one can use <i>--depth=0</i> in order to fetch a single document together with all inline graphics. 
  The default depth is 5.
 </dd><dt>--hier
 </dt><dd> Download files into a hierarchy that mimics the web site structure. The default is to put all files in the current directory.
-</dd><dt>--referer=<i></i><font SIZE="-1"><i>URI</i></font><i></i>
-</dt><dd> Set the value of the Referer header for the initial request. The special value <tt>&quot;NONE&quot;</tt> can be used to suppress the Referer header in any of subsequent requests. The Referer header will always be suppressed in all normal <tt>&quot;http&quot;</tt> requests if the referring page was transmitted over <tt>&quot;https&quot;</tt> as recommended in <font SIZE="-1">RFC</font> 2616.
+</dd><dt>--referer=<i></i><i>URI</i><i></i>
+</dt><dd> Set the value of the Referer header for the initial request. The special value <tt>&quot;NONE&quot;</tt> can be used to suppress the Referer header in any of subsequent requests. The Referer header will always be suppressed in all normal <tt>&quot;http&quot;</tt> requests if the referring page was transmitted over <tt>&quot;https&quot;</tt> as recommended in RFC 2616.
 </dd><dt>--iis
-</dt><dd> Sends an ``Accept: */*'' on all <font SIZE="-1">URL</font> requests as a workaround for a bug in <font SIZE="-1">IIS</font> 2.0. If no Accept <font SIZE="-1">MIME</font> header is present, <font SIZE="-1">IIS</font> 2.0 returns with a ``406 No acceptable objects were found'' error. Also converts any back slashes (\\) in URLs to forward slashes (/).
+</dt><dd> Sends an ``Accept: */*'' on all URL requests as a workaround for a bug in IIS 2.0. If no Accept MIME header is present, IIS 2.0 returns with a ``406 No acceptable objects were found'' error. Also converts any back slashes (\\) in URLs to forward slashes (/).
 </dd><dt>--keepext=<i>mime/type[,mime/type]</i>
-</dt><dd> Keeps the current extension for the list <font SIZE="-1">MIME</font> types. Useful when downloading text/plain documents that shouldn't all be translated to *.txt files.
+</dt><dd> Keeps the current extension for the list MIME types. Useful when downloading text/plain documents that shouldn't all be translated to *.txt files.
 </dd><dt>--limit=<i>n</i>
 </dt><dd> Limit the number of documents to get. The default limit is 50.
 </dd><dt>--nospace
@@ -45,13 +45,13 @@ lwp - rget[--verbose] [--auth = USER:PASS][--depth = N][--hier][--iis][--keepext
  remove spaces from fragments, e.g., ``file.html#somewhere in here''.
 </dd><dt>--prefix=<i>url_prefix</i>
 </dt><dd> Limit the links to follow. Only URLs that start the prefix string are followed. 
- The default prefix is set as the ``directory'' of the initial <font SIZE="-1">URL</font> to follow.<tt>&nbsp;<wbr></tt> For instance if we start lwp-rget with the <font SIZE="-1">URL</font>
+ The default prefix is set as the ``directory'' of the initial URL to follow.<tt>&nbsp;<wbr></tt> For instance if we start lwp-rget with the URL
  <tt>&quot;<a rel="nofollow" HREF="http://www.sn.no/foo/bar.html">http://www.sn.no/foo/bar.html</a>&quot;</tt>, then prefix will be set to <tt>&quot;<a rel="nofollow" HREF="http://www.sn.no/foo/">http://www.sn.no/foo/</a>&quot;</tt>. 
  Use <tt>&quot;--prefix=''&quot;</tt> if you don't want the fetching to be limited by any prefix.
 </dd><dt>--sleep=<i>n</i>
 </dt><dd> Sleep <i>n</i> seconds before retrieving each document. This options allows you to go slowly, not loading the server you visiting too much.
 </dd><dt>--tolower
-</dt><dd> Translates all links to lowercase. Useful when downloading files from <font SIZE="-1">IIS</font> since it does not serve files in a case sensitive manner.
+</dt><dd> Translates all links to lowercase. Useful when downloading files from IIS since it does not serve files in a case sensitive manner.
 </dd><dt>--verbose
 </dt><dd> Make more noise while running.
 </dd><dt>--quiet
@@ -62,11 +62,11 @@ lwp - rget[--verbose] [--auth = USER:PASS][--depth = N][--hier][--iis][--keepext
 </dt><dd> Print the usage message and quit.</dd></dl>
  
 
- Before the program exits the name of the file, where the initial <font SIZE="-1">URL</font> is stored, is printed on stdout. All used filenames are also printed on stderr as they are loaded. This printing can be suppressed with the <i>--quiet</i> option.
+ Before the program exits the name of the file, where the initial URL is stored, is printed on stdout. All used filenames are also printed on stderr as they are loaded. This printing can be suppressed with the <i>--quiet</i> option.
 
 <h2>SEE ALSO</h2>
 
- lwp-request, <font SIZE="-1">LWP</font>
+ lwp-request, LWP
 
 <h2>AUTHOR</h2>
 

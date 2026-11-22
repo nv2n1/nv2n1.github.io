@@ -49,11 +49,11 @@ description: "llmk – Light LaTeX Make"
 <dt>4</dt>
 <dd> Type error.</dd></dl>
 <h2>REPORTING BUGS</h2>
-<p> Report bugs to <i><a rel="nofollow" href="https://github.com/wtsnjp/llmk/issues">https://github.com/wtsnjp/llmk/issues</a></i>.<br />
+<p> Report bugs to <i><a rel="nofollow" href="https://github.com/wtsnjp/llmk/issues">https://github.com/wtsnjp/llmk/issues</a></i>.<br/>
  Source: <i><a rel="nofollow" href="https://github.com/wtsnjp/llmk">https://github.com/wtsnjp/llmk</a></i></p>
 <h2>COPYRIGHT</h2>
-<p> Copyright 2018-2021 Takuto ASAKURA (wtsnjp).<br />
- License: The MIT License <i><a rel="nofollow" href="https://opensource.org/licenses/mit-license">https://opensource.org/licenses/mit-license</a></i>.<br />
+<p> Copyright 2018-2021 Takuto ASAKURA (wtsnjp).<br/>
+ License: The MIT License <i><a rel="nofollow" href="https://opensource.org/licenses/mit-license">https://opensource.org/licenses/mit-license</a></i>.<br/>
  This is free software: you are free to change and redistribute it.</p>
 <h2>SEE ALSO</h2>
 <p> The full documentation is maintained as a PDF manual. The command</p>

@@ -10,7 +10,7 @@ description: "XkbSARedirectSetVModsMask – Sets the vmods_mask0 and vmods_mask1
 <p>XkbSARedirectSetVModsMask &#8211; Sets the vmods_mask0 and vmods_mask1 fields of act from vm </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>void XkbSARedirectSetVModsMask</code> <code>(XkbRedirectKeyAction </code><i>act</i><code>,</code> <code>unsigned int </code><i>vm</i><code>);</code><br />
+<dt> <code>void XkbSARedirectSetVModsMask</code> <code>(XkbRedirectKeyAction </code><i>act</i><code>,</code> <code>unsigned int </code><i>vm</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

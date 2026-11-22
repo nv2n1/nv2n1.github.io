@@ -10,9 +10,9 @@ description: "fmio – small utility to manipulate fm radio card"
 
 <p> <code>fmio</code> &#8211; small utility to manipulate fm radio card</p>
 <h2>SYNOPSIS</h2>
-<p> <code>fmio</code> [-<code>d </code><i>driver</i> ] [-<code>f </code><i>freq</i> ] [-<code>i</code> ] [-<code>m</code> ] [-<code>s</code> ] [-<code>v </code><i>vol</i> ] [-<code>x </code><i>vol</i> ] [-<code>X </code><i>vol</i> ]<br />
-<code>fmio</code> [-<code>d </code><i>driver</i> ] &#8211;<code>S</code> [-<code>c </code><i>count</i> ] [-<code>l </code><i>begin</i> ] [-<code>h </code><i>end</i> ]<br />
-<code>fmio</code> [-<code>d </code><i>driver</i> ] &#8211;<code>W </code><i>frequency</i><br />
+<p> <code>fmio</code> [-<code>d </code><i>driver</i> ] [-<code>f </code><i>freq</i> ] [-<code>i</code> ] [-<code>m</code> ] [-<code>s</code> ] [-<code>v </code><i>vol</i> ] [-<code>x </code><i>vol</i> ] [-<code>X </code><i>vol</i> ]<br/>
+<code>fmio</code> [-<code>d </code><i>driver</i> ] &#8211;<code>S</code> [-<code>c </code><i>count</i> ] [-<code>l </code><i>begin</i> ] [-<code>h </code><i>end</i> ]<br/>
+<code>fmio</code> [-<code>d </code><i>driver</i> ] &#8211;<code>W </code><i>frequency</i><br/>
 <code>fmio</code> &#8211;<code>D</code></p>
 <h2>DESCRIPTION</h2>
 <p> The <code>fmio</code> is a small program to set and change fm radio card parameters. </p>

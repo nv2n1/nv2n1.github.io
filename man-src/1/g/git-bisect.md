@@ -322,21 +322,21 @@ $ git bisect reset                   # quit the bisect session
 <dl>
 <dt>
 </dt><dd>
-$ cat ~ / test.sh<br />
-#!/ bin / sh<br />
-#tweak the working tree by merging the hot &#8211; fix branch<br />
-#and then attempt a build<br />
-          if git merge&#8211; no &#8211;<br />
-    commit&#8211; no &#8211; ff hot &#8211; fix &amp;&amp;make then<br />
-#run project specific test and report its status<br />
-                               ~ /<br />
-                               check_test_case.sh status = $<br />
-    ? else<br />
-#tell the caller this is untestable<br />
-      status = 125 fi<br />
-#undo the tweak to allow clean flipping to the next commit<br />
-          git reset&#8211; hard<br />
-#return control<br />
+$ cat ~ / test.sh<br/>
+#!/ bin / sh<br/>
+#tweak the working tree by merging the hot &#8211; fix branch<br/>
+#and then attempt a build<br/>
+          if git merge&#8211; no &#8211;<br/>
+    commit&#8211; no &#8211; ff hot &#8211; fix &amp;&amp;make then<br/>
+#run project specific test and report its status<br/>
+                               ~ /<br/>
+                               check_test_case.sh status = $<br/>
+    ? else<br/>
+#tell the caller this is untestable<br/>
+      status = 125 fi<br/>
+#undo the tweak to allow clean flipping to the next commit<br/>
+          git reset&#8211; hard<br/>
+#return control<br/>
               exit $status
 </dd></dl>
 <p> This applies modifications from a hot-fix branch before each test run, e.g. in case your build or test environment changed so that older revisions may need a fix which newer ones have already. (Make sure the hot-fix branch is based off a commit which is contained in all revisions which you are bisecting, so that the merge does not pull in too much, or use <code>git cherry-pick</code> instead of <code>git merge</code>.)</dl>
@@ -397,7 +397,7 @@ $ git bisect broken HEAD~10
 <h3>Getting help</h3>
 <p> Use <code>git bisect</code> to get a short usage description, and <code>git bisect help</code> or <code>git bisect -h</code> to get a long usage description.</p>
 <h2>SEE ALSO</h2>
-<p> m[blue]<code>Fighting regressions with git bisect</code>m[]<font SIZE="-2">[1]</font>, <code><a href="/docs/linux/man/1-git-blame/">git-blame</a></code>(1).</p>
+<p> m[blue]<code>Fighting regressions with git bisect</code>m[][1], <code><a href="/docs/linux/man/1-git-blame/">git-blame</a></code>(1).</p>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite</p>
 <h2>NOTES</h2>

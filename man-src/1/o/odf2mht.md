@@ -34,12 +34,12 @@ description: "odf2mht – Convert ODF to HTML archive"
 <h2>Example</h2>
 <dl>
 <dt>
-</dt><dd> <font SIZE="-1"> </font></dd>
+</dt><dd>  </dd>
 <pre>
 odf2mht example.odt &gt;example.mht
 </pre>
-<p> <font SIZE="+1"></dl>
-<p> </font></p>
+<p> </dl>
+<p> </p>
 <h2>Bugs</h2>
 <p> IE6 seems to have problems with large MHT files.</p>
 <h2>See Also</h2>

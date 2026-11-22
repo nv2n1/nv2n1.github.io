@@ -10,13 +10,13 @@ description: "grmid – – RMI activation system daemon"
 
 <p> grmid &#8211; &#8211; RMI activation system daemon </p>
 <h2>SYNOPSIS</h2>
-<p> grmid [<i></i><font SIZE="-1"><i>OPTIONS</i></font><i></i>]&#8230;</p>
+<p> grmid [<i></i><i>OPTIONS</i><i></i>]&#8230;</p>
 <h2>DESCRIPTION</h2>
 <p> <code>rmiregistry</code> starts a remote object registry on the current host. If no port number is specified, then port 1099 is used.</p>
 <h2>OPTIONS</h2>
 <p> Activation process control:</p>
 <dl>
-<dt><code>-port</code> <i></i><font SIZE="-1"><i>PORT</i></font><i></i></dt>
+<dt><code>-port</code> <i></i><i>PORT</i><i></i></dt>
 <dd> Port on which activation system is to be started.</dd>
 <dt><code>-restart</code></dt>
 <dd> Restart activation system, clearing persistent naming database, if any.</dd>
@@ -26,7 +26,7 @@ description: "grmid – – RMI activation system daemon"
 <dl>
 <dt><code>-persistent</code></dt>
 <dd> Make activation system persistent.</dd>
-<dt><code>-directory</code> <i></i><font SIZE="-1"><i>DIR</i></font><i></i></dt>
+<dt><code>-directory</code> <i></i><i>DIR</i><i></i></dt>
 <dd> Directory in which to store persistent data.</dd></dl>
 <p> Debugging:</p>
 <dl>
@@ -38,7 +38,7 @@ description: "grmid – – RMI activation system daemon"
 <dd> Print help text, then exit.</dd>
 <dt><code>-version</code></dt>
 <dd> Print version number, then exit.</dd>
-<dt><code>-J</code><i></i><font SIZE="-1"><i>OPTION</i></font><i></i></dt>
+<dt><code>-J</code><i></i><i>OPTION</i><i></i></dt>
 <dd> Pass argument to the Java runtime.</dd></dl>
 <h2>BUGS</h2>
 <h2>SEE ALSO</h2>

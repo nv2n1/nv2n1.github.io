@@ -10,10 +10,10 @@ description: "pmgetopt_r, pmGetOptions, pmGetContextOptions, pmFreeOptions, pmUs
 <p><code>pmgetopt_r</code>, <code>pmGetOptions</code>, <code>pmGetContextOptions</code>, <code>pmFreeOptions</code>, <code>pmUsageMessage</code> &#8211; command line handling for PMAPI tools</p>
 <h2>C Synopsis</h2>
 <p><code> #include &lt;pcp/pmapi.h&gt; </p>
-<p> int pmgetopt_r(int </code><i>argc</i>, char *const *<i>argv</i>, pmOptions *<i>opts</i>);<br />
- int pmGetOptions(int <i>argc</i>, char *const *<i>argv</i>, pmOptions *<i>opts</i>);<br />
- int pmGetContextOptions(int <i>ctx</i>, pmOptions *<i>opts</i>);<br />
- void pmUsageMessage(pmOptions *<i>opts</i>);<br />
+<p> int pmgetopt_r(int </code><i>argc</i>, char *const *<i>argv</i>, pmOptions *<i>opts</i>);<br/>
+ int pmGetOptions(int <i>argc</i>, char *const *<i>argv</i>, pmOptions *<i>opts</i>);<br/>
+ int pmGetContextOptions(int <i>ctx</i>, pmOptions *<i>opts</i>);<br/>
+ void pmUsageMessage(pmOptions *<i>opts</i>);<br/>
  void pmFreeOptions(pmOptions *<i>opts</i>); </p>
 <p> cc &#8230; -lpcp</p>
 <h2>Description</h2>

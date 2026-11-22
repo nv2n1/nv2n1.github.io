@@ -52,7 +52,7 @@ description: "pamflip – flip or rotate a PAM or PNM image"
 <dd> Rotate counterclockwise 270 degrees (clockwise 90 degrees) </dd>
 <dt><code>-null</code></dt>
 <dd> No change. (The purpose of this option is the convenience of programs that invoke <code>pamflip</code> after computing the kind of transformation desired, including none at all). </dd>
-<p> This option was new in Netpbm 10.13 (December 2002).<br />
+<p> This option was new in Netpbm 10.13 (December 2002).<br/>
 &nbsp;<wbr>&nbsp;<wbr></p>
 <dt><code>-xform=</code><i>xform1</i><code>,</code><i>xform2</i>&#8230;</dt>
 <dd> Apply all the transforms listed, in order. The valid values for the transforms are as follows and have the same meanings as the identically named options above. </dd>
@@ -77,7 +77,7 @@ description: "pamflip – flip or rotate a PAM or PNM image"
 <p> Doing the entire transformation &#8216;in memory&#8217; doesn&#8217;t speed things up as much as you might think, because even with the temporary files, the data is just as likely to be in memory. Virtual memory gets paged to disk and disk files get cached in memory. In fact, the pixels fit much more compactly into memory when stored in a temporary file than when stored &#8216;in memory&#8217; because <code>pamflip</code> uses a more efficient format. So you&#8217;re likely to have <i>less</i> disk I/O when you allow <code>pamflip</code> less memory. </p>
 <p> If you do not specify <code>-memsize</code>, <code>pamflip</code> assumes infinity. </p>
 <p> This option did not exist before Netpbm 10.7 (August 2002). </p>
-<p> Before Netpbm 10.42 (March 2008), this option applied only to real memory. <code>pamflip</code> would always keep the entire image in virtual memory and if it could not get enough virtual memory, it failed. <code>pamflip</code> accessed the pixels in an order designed to keep real memory use within the specified amount.<br />
+<p> Before Netpbm 10.42 (March 2008), this option applied only to real memory. <code>pamflip</code> would always keep the entire image in virtual memory and if it could not get enough virtual memory, it failed. <code>pamflip</code> accessed the pixels in an order designed to keep real memory use within the specified amount.<br/>
 &nbsp;<wbr>&nbsp;<wbr></p>
 <dt><code>-pagesize=</code><i>bytes</i></dt>
 <dd> <i>bytes</i> is the size in bytes of a paging unit &#8212; the amount of memory that gets paged in or out as an indivisible unit &#8212; in your system. The default is 4KiB. </dd>

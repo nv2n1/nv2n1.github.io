@@ -10,7 +10,7 @@ description: "XkbChangeEnabledControls – Manipulates the EnabledControls contr
 <p>XkbChangeEnabledControls &#8211; Manipulates the EnabledControls control </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Bool XkbChangeEnabledControls</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>,</code> <code>unsigned int </code><i>mask</i><code>,</code> <code>unsigned int </code><i>values</i><code>);</code><br />
+<dt> <code>Bool XkbChangeEnabledControls</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>,</code> <code>unsigned int </code><i>mask</i><code>,</code> <code>unsigned int </code><i>values</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

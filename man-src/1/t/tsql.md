@@ -10,7 +10,7 @@ description: "tsql – utility to test FreeTDS connections and queries"
 
 <p> <code>tsql</code> &#8211; utility to test FreeTDS connections and queries</p>
 <h2>SYNOPSIS</h2>
-<p> Br o &#8211;<code>S </code><i>servername</i> [-<code>I </code><i>interface</i> ] | &#8211;<code>H </code><i>hostname</i> [-<code>L</code> ] [-<code>p </code><i>port</i> ] Br c [-<code>D </code><i>dbname</i> ] [-<code>U </code><i>username</i> ] [-<code>P </code><i>password</i> ] [-<code>o </code><i>options</i> ]<br />
+<p> Br o &#8211;<code>S </code><i>servername</i> [-<code>I </code><i>interface</i> ] | &#8211;<code>H </code><i>hostname</i> [-<code>L</code> ] [-<code>p </code><i>port</i> ] Br c [-<code>D </code><i>dbname</i> ] [-<code>U </code><i>username</i> ] [-<code>P </code><i>password</i> ] [-<code>o </code><i>options</i> ]<br/>
  &#8211;<code>C</code></p>
 <h2>DESCRIPTION</h2>
 <p> is a FreeTDS diagnostic tool. It uses the TDS protocol to connect to a Sybase or Microsoft SQL Server, and lets the user issue queries. does not use the FreeTDS client libraries. Instead, it uses only the lowest level library, libtds, to test the protocol implementation. </p>

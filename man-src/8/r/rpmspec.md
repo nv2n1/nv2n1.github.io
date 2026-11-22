@@ -12,17 +12,17 @@ description: "rpmspec – RPM Spec Tool"
 <h3>Querying Spec Files:</h3>
 <p><code>rpmspec</code> {<code>-q|&#8211;query</code>} [<code>select-options</code>] [<code>query-options</code>] <i>SPEC_FILE</i><i> &#8230;</i></p>
 <h3>select-options</h3>
-<p>&nbsp;<wbr>[<code>&#8211;rpms</code>]<br />
+<p>&nbsp;<wbr>[<code>&#8211;rpms</code>]<br/>
 &nbsp;<wbr>[<code>&#8211;srpms</code>]</p>
 <h3>query-options</h3>
-<p>&nbsp;<wbr>[<code>&#8211;qf,&#8211;queryformat&nbsp;<wbr></code><i>QUERYFMT</i>]<br />
-&nbsp;<wbr>[<code>&#8211;target&nbsp;<wbr></code><i>TARGET_PLATFORM</i>]<br />
+<p>&nbsp;<wbr>[<code>&#8211;qf,&#8211;queryformat&nbsp;<wbr></code><i>QUERYFMT</i>]<br/>
+&nbsp;<wbr>[<code>&#8211;target&nbsp;<wbr></code><i>TARGET_PLATFORM</i>]<br/>
 &nbsp;<wbr></p>
 <h3>Query Options</h3>
-<p>The general form of an rpm spec query command is <code>rpm</code> {<code>-q|&#8211;query</code>} [<code>select-options</code>] [<code>query-options</code>] You may specify the format that the information should be printed in. To do this, you use the<br />
+<p>The general form of an rpm spec query command is <code>rpm</code> {<code>-q|&#8211;query</code>} [<code>select-options</code>] [<code>query-options</code>] You may specify the format that the information should be printed in. To do this, you use the<br/>
 &nbsp;<wbr><code>&#8211;qf|&#8211;queryformat</code>&nbsp;<wbr><i>QUERYFMT</i> option, followed by the <i>QUERYFMT</i> format string. See <code><a href="/docs/linux/man/8-rpm/">rpm</a>(8)</code> for details.</p>
 <h3>Select Options</h3>
-<p>&nbsp;<wbr><code>&#8211;rpms</code> Operate on the binary package header(s).<br />
+<p>&nbsp;<wbr><code>&#8211;rpms</code> Operate on the binary package header(s).<br/>
 &nbsp;<wbr><code>&#8211;srpm</code> Operate on the source package header(s). </p>
 <h2>See Also</h2>
 <pre><code><a href="//www.systutorials.com/docs/linux/man/3-popt/">popt</a></code>(3),

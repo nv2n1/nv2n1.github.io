@@ -89,7 +89,7 @@ description: "perf-trace – strace inspired tool"
 </dt><dd> Trace system calls. This options is enabled by default.</dd></dl>
 <h2>PAGEFAULTS</h2>
 <p> When tracing pagefaults, the format of the trace is as follows: </p>
-<p> &lt;min|maj&gt;fault [&lt;ip.symbol&gt;+&lt;ip.offset&gt;] &rArr; &lt;m[blue]<code>addr.dso [at] addr.offset</code>m[]<font SIZE="-2">[1]</font>&gt; (&lt;map type&gt;&lt;addr level&gt;). </p>
+<p> &lt;min|maj&gt;fault [&lt;ip.symbol&gt;+&lt;ip.offset&gt;] &rArr; &lt;m[blue]<code>addr.dso [at] addr.offset</code>m[][1]&gt; (&lt;map type&gt;&lt;addr level&gt;). </p>
 <dl>
 <dt>
 </dt><dd> &bull; min/maj indicates whether fault event is minor or major;</dd></dl>
@@ -107,7 +107,7 @@ description: "perf-trace – strace inspired tool"
 </dt><dd> &bull; addr level is either <i>k</i> for kernel dso or <i>.</i> for user dso.</dd></dl>
 <p> For symbols resolution you may need to install debugging symbols. </p>
 <p> Please be aware that duration is currently always 0 and doesn&#8217;t reflect actual time it took for fault to be handled! </p>
-<p> When &#8211;verbose specified, perf trace tries to print all available information for both IP and fault address in the form of m[blue]<code>dso [at] symbol</code>m[]<font SIZE="-2">[2]</font>+offset.</p>
+<p> When &#8211;verbose specified, perf trace tries to print all available information for both IP and fault address in the form of m[blue]<code>dso [at] symbol</code>m[][2]+offset.</p>
 <h2>EXAMPLES</h2>
 <p> Trace only major pagefaults: </p>
 <dl>

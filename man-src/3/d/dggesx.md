@@ -11,7 +11,7 @@ description: "dggesx.f –"
 <p> dggesx.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dggesx</code> (JOBVSL, JOBVSR, SORT, SELCTG, SENSE, N, A, LDA, B, LDB, SDIM, ALPHAR, ALPHAI, BETA, VSL, LDVSL, VSR, LDVSR, RCONDE, RCONDV, WORK, LWORK, IWORK, LIWORK, BWORK, INFO)<br />
+<p> subroutine <code>dggesx</code> (JOBVSL, JOBVSR, SORT, SELCTG, SENSE, N, A, LDA, B, LDB, SDIM, ALPHAR, ALPHAI, BETA, VSL, LDVSL, VSR, LDVSR, RCONDE, RCONDV, WORK, LWORK, IWORK, LIWORK, BWORK, INFO)<br/>
  <i></i><code> DGGESX computes the eigenvalues, the Schur form, and, optionally, the matrix of Schur vectors for GE matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dggesx (characterJOBVSL, characterJOBVSR, characterSORT, logical, externalSELCTG, characterSENSE, integerN, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( ldb, * )B, integerLDB, integerSDIM, double precision, dimension( * )ALPHAR, double precision, dimension( * )ALPHAI, double precision, dimension( * )BETA, double precision, dimension( ldvsl, * )VSL, integerLDVSL, double precision, dimension( ldvsr, * )VSR, integerLDVSR, double precision, dimension( 2 )RCONDE, double precision, dimension( 2 )RCONDV, double precision, dimension( * )WORK, integerLWORK, integer, dimension( * )IWORK, integerLIWORK, logical, dimension( * )BWORK, integerINFO)</h3>
@@ -73,23 +73,23 @@ description: "dggesx.f –"
           = 'S':  Eigenvalues are ordered (see SELCTG).
 </pre>
 <p> <i>SELCTG</i> </p>
-<p>          SELCTG is procedure) LOGICAL FUNCTION of three DOUBLE PRECISION arguments<br />
-          SELCTG must be declared EXTERNAL in the calling subroutine.<br />
-          If SORT = &#8216;N&#8217;, SELCTG is not referenced.<br />
-          If SORT = &#8216;S&#8217;, SELCTG is used to select eigenvalues to sort<br />
-          to the top left of the Schur form.<br />
-          An eigenvalue (ALPHAR(j)+ALPHAI(j))/BETA(j) is selected if<br />
-          SELCTG(ALPHAR(j),ALPHAI(j),BETA(j)) is true;<br />
-          i.e.if either<br />
-              one of a complex conjugate pair of eigenvalues is selected,<br />
-              then both complex eigenvalues are selected.Note that a selected complex eigenvalue may no longer satisfy<br />
-              SELCTG(ALPHAR(j), ALPHAI(j), BETA(j)) =.TRUE.after ordering,<br />
+<p>          SELCTG is procedure) LOGICAL FUNCTION of three DOUBLE PRECISION arguments<br/>
+          SELCTG must be declared EXTERNAL in the calling subroutine.<br/>
+          If SORT = &#8216;N&#8217;, SELCTG is not referenced.<br/>
+          If SORT = &#8216;S&#8217;, SELCTG is used to select eigenvalues to sort<br/>
+          to the top left of the Schur form.<br/>
+          An eigenvalue (ALPHAR(j)+ALPHAI(j))/BETA(j) is selected if<br/>
+          SELCTG(ALPHAR(j),ALPHAI(j),BETA(j)) is true;<br/>
+          i.e.if either<br/>
+              one of a complex conjugate pair of eigenvalues is selected,<br/>
+              then both complex eigenvalues are selected.Note that a selected complex eigenvalue may no longer satisfy<br/>
+              SELCTG(ALPHAR(j), ALPHAI(j), BETA(j)) =.TRUE.after ordering,<br/>
                                            since ordering may change the value of complex eigenvalues(especially if the eigenvalue is ill &#8211; conditioned), in this case INFO is set to N + 3.</p>
 <p> <i>SENSE</i> </p>
-<p>SENSE is CHARACTER * 1 Determines which reciprocal condition numbers are computed.= &#8216;N&#8217; : None are computed;<br />
-          = &#8216;E&#8217; : Computed for average of selected eigenvalues only;<br />
-          = &#8216;V&#8217; : Computed for selected deflating subspaces only;<br />
-          = &#8216;B&#8217; : Computed for both.<br />
+<p>SENSE is CHARACTER * 1 Determines which reciprocal condition numbers are computed.= &#8216;N&#8217; : None are computed;<br/>
+          = &#8216;E&#8217; : Computed for average of selected eigenvalues only;<br/>
+          = &#8216;V&#8217; : Computed for selected deflating subspaces only;<br/>
+          = &#8216;B&#8217; : Computed for both.<br/>
           If SENSE = &#8216;E&#8217;, &#8216;V&#8217;, or &#8216;B&#8217;, SORT must equal &#8216;S&#8217;.</p>
 <p> <i>N</i> </p>
 <pre>
@@ -137,13 +137,13 @@ description: "dggesx.f –"
           ALPHAI is DOUBLE PRECISION array, dimension (N)
 </pre>
 <p> <i>BETA</i> </p>
-<p>BETA is DOUBLE PRECISION array, dimension(N) On exit, (ALPHAR(j) + ALPHAI(j) * i) / BETA(j), j = 1, &#8230;, N, will be the generalized eigenvalues.ALPHAR(j) + ALPHAI(j) * i and BETA(j), j = 1, &#8230;, N are the diagonals of the complex Schur form(S, T)<br />
-that would result if the 2 &#8211; by &#8211; 2 diagonal blocks of the real Schur form of(A, B)<br />
-were further reduced to<br />
-        triangular form using 2 &#8211;<br />
-    by &#8211; 2 complex unitary transformations.If ALPHAI(j)<br />
-is zero, then the j &#8211; th eigenvalue is real;<br />
-if positive<br />
+<p>BETA is DOUBLE PRECISION array, dimension(N) On exit, (ALPHAR(j) + ALPHAI(j) * i) / BETA(j), j = 1, &#8230;, N, will be the generalized eigenvalues.ALPHAR(j) + ALPHAI(j) * i and BETA(j), j = 1, &#8230;, N are the diagonals of the complex Schur form(S, T)<br/>
+that would result if the 2 &#8211; by &#8211; 2 diagonal blocks of the real Schur form of(A, B)<br/>
+were further reduced to<br/>
+        triangular form using 2 &#8211;<br/>
+    by &#8211; 2 complex unitary transformations.If ALPHAI(j)<br/>
+is zero, then the j &#8211; th eigenvalue is real;<br/>
+if positive<br/>
 , then the j &#8211; th and (j + 1) &#8211; st eigenvalues are a complex conjugate pair, with ALPHAI(j + 1) negative.Note : the quotients ALPHAR(j) / BETA(j) and ALPHAI(j) / BETA(j) may easily over &#8211; or underflow, and BETA(j) may even be zero.Thus, the user should avoid naively computing the ratio.However, ALPHAR and ALPHAI will be always less than and usually comparable with norm(A) in magnitude, and BETA always less than and usually comparable with norm(B).</p>
 <p> <i>VSL</i> </p>
 <pre>

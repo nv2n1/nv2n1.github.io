@@ -15,9 +15,9 @@ make_method-- name = system.identification-- helptext = 'System ID string' --sig
                                                                                                                                  make_method-- base = methods / identification
 </code></pre>
 <h2>DESCRIPTION</h2>
-<p> This is a simple tool to create the <font SIZE="-1">XML</font> descriptive files for specifying methods to be published by an <code>RPC::XML::Server</code>-based server. </p>
-<p> If a server is written such that the methods it exports (or <i>publishes</i>) are a part of the running code, then there is no need for this tool. However, in cases where the server may be separate and distinct from the code (such as an Apache-based <font SIZE="-1">RPC</font> server), specifying the routines and filling in the supporting information can be cumbersome. </p>
-<p> One solution that the <code>RPC::XML::Server</code> package offers is the means to load publishable code from an external file. The file is in a simple <font SIZE="-1">XML</font> dialect that clearly delinates the externally-visible name, the method signatures, the help text and the code itself. These files may be created manually, or this tool may be used as an aide.</p>
+<p> This is a simple tool to create the XML descriptive files for specifying methods to be published by an <code>RPC::XML::Server</code>-based server. </p>
+<p> If a server is written such that the methods it exports (or <i>publishes</i>) are a part of the running code, then there is no need for this tool. However, in cases where the server may be separate and distinct from the code (such as an Apache-based RPC server), specifying the routines and filling in the supporting information can be cumbersome. </p>
+<p> One solution that the <code>RPC::XML::Server</code> package offers is the means to load publishable code from an external file. The file is in a simple XML dialect that clearly delinates the externally-visible name, the method signatures, the help text and the code itself. These files may be created manually, or this tool may be used as an aide.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <p> There are no required arguments, but if there are not sufficient options passed you will be told by an error message.</p>
 <h2>OPTIONS</h2>
@@ -28,15 +28,15 @@ make_method-- name = system.identification-- helptext = 'System ID string' --sig
 <dt>&#8211;name=STRING</dt>
 <dd> Specifies the published name of the method being encoded. This is the name by which it will be visible to clients of the server.</dd>
 <dt>&#8211;namespace=STRING</dt>
-<dd> Specifies a namespace that the code of the method will be evaluated in, when the <font SIZE="-1">XPL</font> file is loaded by a server instance.</dd>
+<dd> Specifies a namespace that the code of the method will be evaluated in, when the XPL file is loaded by a server instance.</dd>
 <dt>&#8211;type=STRING</dt>
-<dd> Specify the type for the resulting file. &#8220;Type&#8221; here refers to whether the container tag used in the resulting <font SIZE="-1">XML</font> will specify a <code>procedure</code> or a <code>method</code>. The default is <code>method</code>. The string is treated case-independant, and only the first character (<tt>&quot;m&quot;</tt> or <tt>&quot;p&quot;</tt>) is actually regarded.</dd>
+<dd> Specify the type for the resulting file. &#8220;Type&#8221; here refers to whether the container tag used in the resulting XML will specify a <code>procedure</code> or a <code>method</code>. The default is <code>method</code>. The string is treated case-independant, and only the first character (<tt>&quot;m&quot;</tt> or <tt>&quot;p&quot;</tt>) is actually regarded.</dd>
 <dt>&#8211;version=STRING</dt>
 <dd> Specify a version stamp for the code routine.</dd>
 <dt>&#8211;hidden</dt>
 <dd> If this is passe, the resulting file will include a tag that tells the server daemon to not make the routine visible through any introspection interfaces.</dd>
 <dt>&#8211;signature=STRING [ &#8211;signature=STRING &#8230; ]</dt>
-<dd> Specify one or more signatures for the method. Signatures should be the type names as laid out in the documentation in <font SIZE="-1">RPC::XML</font>, with the elements separated by a colon. You may also separate them with spaces, if you quote the argument. This option may be specified more than once, as some methods may have several signatures.</dd>
+<dd> Specify one or more signatures for the method. Signatures should be the type names as laid out in the documentation in RPC::XML, with the elements separated by a colon. You may also separate them with spaces, if you quote the argument. This option may be specified more than once, as some methods may have several signatures.</dd>
 <dt>&#8211;helptext=STRING</dt>
 <dd> Specify the help text for the method as a simple string on the command line. Not suited for terribly long help strings.</dd>
 <dt>&#8211;helpfile=FILE</dt>
@@ -44,40 +44,40 @@ make_method-- name = system.identification-- helptext = 'System ID string' --sig
 <dt>&#8211;code=FILE</dt>
 <dd> Read the actual code for the routine from the file specified. If this option is not given, the code is read from the standard input file descriptor.</dd>
 <dt>&#8211;output=FILE</dt>
-<dd> Write the resulting <font SIZE="-1">XML</font> representation to the specified file. If this option is not given, then the output goes to the standard output file descriptor.</dd>
+<dd> Write the resulting XML representation to the specified file. If this option is not given, then the output goes to the standard output file descriptor.</dd>
 <dt>&#8211;base=NAME</dt>
 <dd> This is a special, &#8220;all-in-one&#8221; option. If passed, all other options are ignored. </dd>
-<p> The value is used as the base element for reading information from a file named <font SIZE="-1"><code>BASE</code></font>.base. This file will contain specification of the name, version, hidden status, signatures and other method information. Each line of the file should look like one of the following:</p>
+<p> The value is used as the base element for reading information from a file named <code>BASE</code>.base. This file will contain specification of the name, version, hidden status, signatures and other method information. Each line of the file should look like one of the following:</p>
 <dl>
 <dl>
-<dt><code>Name: </code><font SIZE="-1">STRING</font></dt>
+<dt><code>Name: </code>STRING</dt>
 <dd> Specify the name of the routine being published. If this line does not appear, then the value of the <code>&#8211;base</code> argument with all directory elements removed will be used.</dd>
-<dt><code>Version: </code><font SIZE="-1">STRING</font></dt>
+<dt><code>Version: </code>STRING</dt>
 <dd> Provide a version stamp for the function. If no line matching this pattern is present, no version tag will be written.</dd>
-<dt><code>Hidden: </code><font SIZE="-1">STRING</font></dt>
-<dd> If present, <i></i><font SIZE="-1"><i>STRING</i></font><i></i> should be either <tt>&quot;yes&quot;</tt> or <tt>&quot;no&quot;</tt> (case not important). If it is <tt>&quot;yes&quot;</tt>, then the method is marked to be hidden from any introspection <font SIZE="-1">API.</font></dd>
-<dt><code>Signature: </code><font SIZE="-1">STRING</font></dt>
+<dt><code>Hidden: </code>STRING</dt>
+<dd> If present, <i></i><i>STRING</i><i></i> should be either <tt>&quot;yes&quot;</tt> or <tt>&quot;no&quot;</tt> (case not important). If it is <tt>&quot;yes&quot;</tt>, then the method is marked to be hidden from any introspection API.</dd>
+<dt><code>Signature: </code>STRING</dt>
 <dd> This line may appear more than once, and is treated cumulatively. Other options override previous values if they appear more than once. The portion following the <tt>&quot;Signature:&quot;</tt> part is taken to be a published signature for the method, with elements separated by whitespace. Each method must have at least one signature, so a lack of any will cause an error.</dd>
-<dt><code>Helpfile: </code><font SIZE="-1">STRING</font></dt>
+<dt><code>Helpfile: </code>STRING</dt>
 <dd> Specifies the file from which to read the help text. It is not an error if no help text is specified.</dd>
-<dt><code>Codefile: </code><font SIZE="-1">STRING</font></dt>
+<dt><code>Codefile: </code>STRING</dt>
 <dd> Specifies the file from which to read the code. Code is assumed to be Perl, and will be tagged as such in the resulting file.</dd>
 <dt><code>Codefile[lang]: </code>string</dt>
-<dd> Specifies the file from which to read code, while also identifying the language that the code is in. This allows for the creation of a <font SIZE="-1"><code>XPL</code></font> file that includes multiple language implementations of the given method or procedure.</dd></dl>
+<dd> Specifies the file from which to read code, while also identifying the language that the code is in. This allows for the creation of a <code>XPL</code> file that includes multiple language implementations of the given method or procedure.</dd></dl>
 </dl>
 <dl>
 <dt>
 </dt><dd>
 <p> Any other lines than the above patterns are ignored. </p>
 <p> If no code has been read, then the tool will exit with an error message. </p>
-<p> The output is written to <font SIZE="-1"><code>BASE</code></font>.xpl, preserving the path information so that the resulting file is right alongside the source files. This allows constructs such as: </p>
+<p> The output is written to <code>BASE</code>.xpl, preserving the path information so that the resulting file is right alongside the source files. This allows constructs such as: </p>
 <pre>
     make_method --base=methods/introspection
 </pre>
 </dd></dl>
 </dl>
 <h2>FILE FORMAT AND DTD</h2>
-<p> The file format for these published routines is a very simple <font SIZE="-1">XML</font> dialect. This is less due to <font SIZE="-1">XML</font> being an ideal format than it is the availability of the parser, given that the <code>RPC::XML::Server</code> class will already have the parser code in core. Writing a completely new format would not have gained anything. </p>
+<p> The file format for these published routines is a very simple XML dialect. This is less due to XML being an ideal format than it is the availability of the parser, given that the <code>RPC::XML::Server</code> class will already have the parser code in core. Writing a completely new format would not have gained anything. </p>
 <p> The Document Type Declaration for the format can be summarized by: </p>
 <pre>
     &lt;!ELEMENT  proceduredef (name, namespace?, version?, hidden?,
@@ -105,14 +105,14 @@ make_method-- name = system.identification-- helptext = 'System ID string' --sig
 <p> The parsing process within the server class will decode the entities. To make things easier, the tool scans all text elements and encodes the above entities before writing the file.</p>
 <h3>The Specification of Code</h3>
 <p> This is not <i>&#8220;Programming 101&#8221;</i>, nor is it <i>&#8220;Perl for the Somewhat Dim&#8221;</i>. The code that is passed in via one of the <tt>&quot;*.xpl&quot;</tt> files gets passed to <tt>&quot;eval&quot;</tt> with next to no modification (see below). Thus, badly-written or malicious code can very well wreak havoc on your server. This is not the fault of the server code. The price of the flexibility this system offers is the responsibility on the part of the developer to ensure that the code is tested and safe. </p>
-<p> Code itself is treated as verbatim as possible. Some edits may occur on the server-side, as it make the code suitable for creating an anonymous subroutine from. The <code>make_method</code> tool will attempt to use a <tt>&quot;CDATA&quot;</tt> section to embed the code within the <font SIZE="-1">XML</font> document, so that there is no need to encode entities or such. This allows for the resulting <i>*.xpl</i> files to be syntax-testable with <tt>&quot;perl -cx&quot;</tt>. You can aid this by ensuring that the code does not contain either of the two following character sequences: </p>
+<p> Code itself is treated as verbatim as possible. Some edits may occur on the server-side, as it make the code suitable for creating an anonymous subroutine from. The <code>make_method</code> tool will attempt to use a <tt>&quot;CDATA&quot;</tt> section to embed the code within the XML document, so that there is no need to encode entities or such. This allows for the resulting <i>*.xpl</i> files to be syntax-testable with <tt>&quot;perl -cx&quot;</tt>. You can aid this by ensuring that the code does not contain either of the two following character sequences: </p>
 <pre>
     ]]&gt;
     __DATA__
 </pre>
-<p> The first is the <tt>&quot;CDATA&quot;</tt> terminator. If it occurs naturally in the code, it would trigger the end-of-section in the parser. The second is the familiar Perl token, which is inserted so that the remainder of the <font SIZE="-1">XML</font> document does not clutter up the Perl parser.</p>
+<p> The first is the <tt>&quot;CDATA&quot;</tt> terminator. If it occurs naturally in the code, it would trigger the end-of-section in the parser. The second is the familiar Perl token, which is inserted so that the remainder of the XML document does not clutter up the Perl parser.</p>
 <h2>EXAMPLES</h2>
-<p> The <font SIZE="-1"><code>RPC::XML</code></font> distribution comes with a number of default methods in a subdirectory called (cryptically enough) <tt>&quot;methods&quot;</tt>. Each of these is expressed as a set of (<tt>&quot;*.base&quot;</tt>, <tt>&quot;*.code&quot;</tt>, <tt>&quot;*.help&quot;</tt>) files. The Makefile.PL file configures the resulting Makefile such that these are used to create <tt>&quot;*.xpl&quot;</tt> files using this tool, and then install them.</p>
+<p> The <code>RPC::XML</code> distribution comes with a number of default methods in a subdirectory called (cryptically enough) <tt>&quot;methods&quot;</tt>. Each of these is expressed as a set of (<tt>&quot;*.base&quot;</tt>, <tt>&quot;*.code&quot;</tt>, <tt>&quot;*.help&quot;</tt>) files. The Makefile.PL file configures the resulting Makefile such that these are used to create <tt>&quot;*.xpl&quot;</tt> files using this tool, and then install them.</p>
 <h2>DIAGNOSTICS</h2>
 <p> Most problems come out in the form of error messages followed by an abrupt exit.</p>
 <h2>EXIT STATUS</h2>
@@ -124,24 +124,24 @@ make_method-- name = system.identification-- helptext = 'System ID string' --sig
 <h2>SUPPORT</h2>
 <dl>
 <dt>&bull;</dt>
-<dd> <font SIZE="-1">RT: CPAN</font>&#8216;s request tracker </dd>
+<dd> RT: CPAN&#8216;s request tracker </dd>
 <p> &lt;<a rel="nofollow" href="http://rt.cpan.org/NoAuth/Bugs.html?Dist=RPC-XML">http://rt.cpan.org/NoAuth/Bugs.html?Dist=RPC-XML</a>&gt;</p>
 <dt>&bull;</dt>
-<dd> AnnoCPAN: Annotated <font SIZE="-1">CPAN</font> documentation </dd>
+<dd> AnnoCPAN: Annotated CPAN documentation </dd>
 <p> &lt;<a rel="nofollow" href="http://annocpan.org/dist/RPC-XML">http://annocpan.org/dist/RPC-XML</a>&gt;</p>
 <dt>&bull;</dt>
-<dd> <font SIZE="-1">CPAN</font> Ratings </dd>
+<dd> CPAN Ratings </dd>
 <p> &lt;<a rel="nofollow" href="http://cpanratings.perl.org/d/RPC-XML">http://cpanratings.perl.org/d/RPC-XML</a>&gt;</p>
 <dt>&bull;</dt>
-<dd> Search <font SIZE="-1">CPAN</font> </dd>
+<dd> Search CPAN </dd>
 <p> &lt;<a rel="nofollow" href="http://search.cpan.org/dist/RPC-XML">http://search.cpan.org/dist/RPC-XML</a>&gt;</p>
 <dt>&bull;</dt>
 <dd> Source code on GitHub </dd>
 <p> &lt;<a rel="nofollow" href="http://github.com/rjray/rpc-xml">http://github.com/rjray/rpc-xml</a>&gt;</dl>
 <h2>LICENSE AND COPYRIGHT</h2>
-<p> This module and the code within are released under the terms of the Artistic License 2.0 (<a rel="nofollow" href="http://www.opensource.org/licenses/artistic-license-2.0.php">http://www.opensource.org/licenses/artistic-license-2.0.php</a>). This code may be redistributed under either the Artistic License or the <font SIZE="-1">GNU</font> Lesser General Public License (<font SIZE="-1">LGPL</font>) version 2.1 (<a rel="nofollow" href="http://www.opensource.org/licenses/lgpl-2.1.php">http://www.opensource.org/licenses/lgpl-2.1.php</a>).</p>
+<p> This module and the code within are released under the terms of the Artistic License 2.0 (<a rel="nofollow" href="http://www.opensource.org/licenses/artistic-license-2.0.php">http://www.opensource.org/licenses/artistic-license-2.0.php</a>). This code may be redistributed under either the Artistic License or the GNU Lesser General Public License (LGPL) version 2.1 (<a rel="nofollow" href="http://www.opensource.org/licenses/lgpl-2.1.php">http://www.opensource.org/licenses/lgpl-2.1.php</a>).</p>
 <h2>SEE ALSO</h2>
-<p> <font SIZE="-1">RPC::XML</font>, RPC::XML::Server</p>
+<p> RPC::XML, RPC::XML::Server</p>
 <h2>CREDITS</h2>
 <p> The <code>XML-RPC</code> standard is Copyright (c) 1998-2001, UserLand Software, Inc. See &lt;<a rel="nofollow" href="http://www.xmlrpc.com">http://www.xmlrpc.com</a>&gt; for more information about the <code>XML-RPC</code> specification.</p>
 <h2>AUTHOR</h2>

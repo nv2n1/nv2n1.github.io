@@ -17,14 +17,14 @@ description: "monitorix – a lightweight system monitoring tool"
 <dt><code>-c</code> <i>configfile</i></dt>
 <dd>The default location of the main configuration file varies depending on the operating system:</dd></dl>
 <dl>
-<dd>Linux: <i>/etc/monitorix/monitorix.conf</i><br />
+<dd>Linux: <i>/etc/monitorix/monitorix.conf</i><br/>
  FreeBSD: <i>/usr/local/etc/monitorix.conf</i> </dd>
 <p> Extra configuration files can be placed in <i>/etc/monitorix/conf.d</i>, they will be loaded right after the main configuration file (overriding previous options).</dl>
 <dl>
 <dt><code>-p</code> <i>pidfile</i></dt>
 <dd>Stores the daemon&#8217;s process ID into the specified file.</dd>
 <dt><code>-d</code> none | graph[,graph] | all</dt>
-<dd>Logs more information about what <code>monitorix</code> is doing internally. The keys reflect if the data collected must be displayed on each case. If <code>all</code> is defined, the data collected of all enabled graphs will be shown. If <code>none</code> is defined no data collected will be shown. Finally it is also possible to define a comma-separated list of graph names from which show their data collected.<br />
+<dd>Logs more information about what <code>monitorix</code> is doing internally. The keys reflect if the data collected must be displayed on each case. If <code>all</code> is defined, the data collected of all enabled graphs will be shown. If <code>none</code> is defined no data collected will be shown. Finally it is also possible to define a comma-separated list of graph names from which show their data collected.<br/>
  For a reference of all graph names check the option <code>graph_name</code> in the <i>monitorix.conf</i> configuration file.</dd>
 <dt><code>-v</code></dt>
 <dd>Displays version information.</dd>
@@ -45,7 +45,7 @@ description: "monitorix – a lightweight system monitoring tool"
 <h2>Author</h2>
 <p>Monitorix is written by Jordi Sanfeliu &lt;jordi [at] fibranet.cat&gt;</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2005-2015 Jordi Sanfeliu<br />
+<p>Copyright &#169; 2005-2015 Jordi Sanfeliu<br/>
  Licensed under the GNU General Public License version 2 (GPLv2).</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-monitorix-conf/">monitorix.conf</a></code>(5) </p>

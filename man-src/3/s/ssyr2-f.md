@@ -10,7 +10,7 @@ description: "ssyr2.f –"
 <p>ssyr2.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>ssyr2</code> (UPLO, N, ALPHA, X, INCX, Y, INCY, A, LDA)<br />
+<p>subroutine <code>ssyr2</code> (UPLO, N, ALPHA, X, INCX, Y, INCY, A, LDA)<br/>
  <i></i><code>SSYR2</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ssyr2 (characterUPLO, integerN, realALPHA, real, dimension(*)X, integerINCX, real, dimension(*)Y, integerINCY, real, dimension(lda,*)A, integerLDA)</h3>

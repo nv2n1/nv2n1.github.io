@@ -11,11 +11,11 @@ description: "yum-langpacks – Plugin for yum"
 <h2>Synopsis</h2>
 <p><code>yum</code> [command] [package &#8230;]</p>
 <h2>Description</h2>
-<p><code>yum-langpacks</code> is a plugin for yum to install language packs. This plugin allows user various commands. <i>command</i> is one of:<br />
- <i></i> * langavailable [language1] [language2] [&#8230;]<br />
- <i></i> * langinfo [language1] [language2] [&#8230;]<br />
- <i></i> * langinstall [language1] [language2] [&#8230;]<br />
- <i></i> * langlist [language1] [language2] [&#8230;]<br />
+<p><code>yum-langpacks</code> is a plugin for yum to install language packs. This plugin allows user various commands. <i>command</i> is one of:<br/>
+ <i></i> * langavailable [language1] [language2] [&#8230;]<br/>
+ <i></i> * langinfo [language1] [language2] [&#8230;]<br/>
+ <i></i> * langinstall [language1] [language2] [&#8230;]<br/>
+ <i></i> * langlist [language1] [language2] [&#8230;]<br/>
  <i></i> * langremove [language1] [language2] [&#8230;] </p>
 <dl>
 <dt><code>langavailable</code></dt>
@@ -33,7 +33,7 @@ description: "yum-langpacks – Plugin for yum"
 </dd><dt><code>langremove</code></dt>
 <dd>This command allows user to remove the installed language packs for a given input languages. </dd>
 <h2>Examples</h2>
-<p><code>To check what packages get installed for language codes es_ES, hi_IN and language names Japanese and Portuguese&nbsp;<wbr>(Brazil).</code><br />
+<p><code>To check what packages get installed for language codes es_ES, hi_IN and language names Japanese and Portuguese&nbsp;<wbr>(Brazil).</code><br/>
 yum langinfo es_ES&nbsp;<wbr>&quot;Japanese&quot;&nbsp;<wbr>hi_IN&nbsp;<wbr>&quot;Portuguese&nbsp;<wbr>(Brazil)&quot; </p>
 <h2>Notes</h2>
 <p>These commands accept language codes or language names or mix of them as a input. </p>

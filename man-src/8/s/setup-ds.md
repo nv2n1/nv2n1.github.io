@@ -56,6 +56,6 @@ description: "setup-ds.pl – Set up an instance of Directory Server"
 <h2>Reporting Bugs</h2>
 <p>Report bugs to <a rel="nofollow" href="http://bugzilla.redhat.com.">http://bugzilla.redhat.com.</a></p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2008 Red Hat, Inc.<br />
- This manual page was written by Michele Baldessari &lt;michele [at] pupazzo.org&gt;, for the Debian project (but may be used by others).<br />
+<p>Copyright &#169; 2008 Red Hat, Inc.<br/>
+ This manual page was written by Michele Baldessari &lt;michele [at] pupazzo.org&gt;, for the Debian project (but may be used by others).<br/>
  This is free software. You may redistribute copies of it under the terms of the Directory Server license found in the LICENSE file of this software distribution. This license is essentially the GNU General Public License version 2 with an exception for plug-in distribution.</p>

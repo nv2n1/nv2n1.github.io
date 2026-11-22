@@ -10,7 +10,7 @@ description: "dla_gbrcond.f –"
 <p>dla_gbrcond.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>DOUBLE PRECISION function <code>dla_gbrcond</code> (TRANS, N, KL, KU, AB, LDAB, AFB, LDAFB, IPIV, CMODE, C, INFO, WORK, IWORK)<br />
+<p>DOUBLE PRECISION function <code>dla_gbrcond</code> (TRANS, N, KL, KU, AB, LDAB, AFB, LDAFB, IPIV, CMODE, C, INFO, WORK, IWORK)<br/>
  <i></i><code>DLA_GBRCOND</code> estimates the Skeel condition number for a general banded matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>DOUBLE PRECISION function dla_gbrcond (characterTRANS, integerN, integerKL, integerKU, double precision, dimension( ldab, * )AB, integerLDAB, double precision, dimension( ldafb, * )AFB, integerLDAFB, integer, dimension( * )IPIV, integerCMODE, double precision, dimension( * )C, integerINFO, double precision, dimension( * )WORK, integer, dimension( * )IWORK)</h3>

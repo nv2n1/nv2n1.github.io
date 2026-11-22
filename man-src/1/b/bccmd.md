@@ -10,8 +10,8 @@ description: "bccmd – Utility for the CSR BCCMD interface"
 
 <p> bccmd &#8211; Utility for the CSR BCCMD interface </p>
 <h2>SYNOPSIS</h2>
-<p> <code>bccmd</code><br />
- <code>bccmd [-t &lt;transport&gt;] [-d &lt;device&gt;] &lt;command&gt; [&lt;args&gt;]</code><br />
+<p> <code>bccmd</code><br/>
+ <code>bccmd [-t &lt;transport&gt;] [-d &lt;device&gt;] &lt;command&gt; [&lt;args&gt;]</code><br/>
  <code>bccmd [-h &#8211;help]</code> </p>
 <h2>DESCRIPTION</h2>
 <p> <code>bccmd</code> issues BlueCore commands to <code>Cambridge Silicon Radio</code> devices. If run without the &lt;command&gt; argument, a short help page will be displayed.</p>

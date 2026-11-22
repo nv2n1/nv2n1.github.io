@@ -9,9 +9,9 @@ description: "IPC Library Functions – Functions that set up and shut down the 
 
 <p>IPC Library Functions &#8211; Functions that set up and shut down the Ecore IPC Library. </p>
 <h3>Functions</h3>
-<p>EAPI int <code>ecore_ipc_init</code> (void)<br />
- <i>Initialises the Ecore IPC library. </i><br />
- EAPI int <code>ecore_ipc_shutdown</code> (void)<br />
+<p>EAPI int <code>ecore_ipc_init</code> (void)<br/>
+ <i>Initialises the Ecore IPC library. </i><br/>
+ EAPI int <code>ecore_ipc_shutdown</code> (void)<br/>
  <i>Shuts down the Ecore IPC library. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that set up and shut down the Ecore IPC Library.</p>

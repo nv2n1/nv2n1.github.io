@@ -13,10 +13,10 @@ description: "QwtCompassRose –"
 <p>#include &lt;qwt_compass_rose.h&gt; </p>
 <p> Inherited by <code>QwtSimpleCompassRose</code>.</p>
 <h3>Public Member Functions</h3>
-<p>virtual <code>~QwtCompassRose</code> ()<br />
- <i>Destructor. </i><br />
- virtual void <code>setPalette</code> (const QPalette &amp;p)<br />
- <i>Assign a palette. </i><br />
+<p>virtual <code>~QwtCompassRose</code> ()<br/>
+ <i>Destructor. </i><br/>
+ virtual void <code>setPalette</code> (const QPalette &amp;p)<br/>
+ <i>Assign a palette. </i><br/>
  const QPalette &amp; <code>palette</code> () const </p>
 <p> virtual void <code>draw</code> (QPainter *painter, const QPointF &amp;center, double radius, double north, QPalette::ColorGroup colorGroup=QPalette::Active) const =0 </p>
 <h2>Detailed Description</h2>
@@ -26,10 +26,10 @@ description: "QwtCompassRose –"
 <p>Draw the rose </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>center</i> Center point<br />
- <i>radius</i> Radius of the rose<br />
- <i>north</i> Position<br />
+<dd><i>painter</i> Painter<br/>
+ <i>center</i> Center point<br/>
+ <i>radius</i> Radius of the rose<br/>
+ <i>north</i> Position<br/>
  <i>colorGroup</i> Color group</dd></dl>
 <p> Implemented in <code>QwtSimpleCompassRose</code>.</p>
 <h3>const QPalette&amp; QwtCompassRose::palette () const [inline]</h3>

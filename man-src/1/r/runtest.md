@@ -75,7 +75,7 @@ description: "runtest – DejaGnu test driver"
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;bug-dejagnu [at] gnu.org&gt;.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2005, 2007, 2008 Free Software Foundation, Inc.<br />
+<p> Copyright &#169; 2005, 2007, 2008 Free Software Foundation, Inc.<br/>
  This is free software. You may redistribute copies of it under the terms of the GNU General Public License &lt;<a rel="nofollow" href="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</a>&gt;. There is NO WARRANTY, to the extent permitted by law.</p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>DejaGnu</code> is maintained as a Docbook manual. If the <code>info</code> program is properly installed at your site, the command</p>

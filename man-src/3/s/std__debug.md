@@ -45,7 +45,7 @@ description: "std::__debug –"
 <p> template&lt;typename _Tp , typename _Alloc &gt; bool <code>operator&lt;</code> (const <code>vector</code>&lt; _Tp, _Alloc &gt; &amp;__lhs, const <code>vector</code>&lt; _Tp, _Alloc &gt; &amp;__rhs) </p>
 <p> template&lt;typename _Tp , typename _Alloc &gt; bool <code>operator&lt;</code> (const <code>list</code>&lt; _Tp, _Alloc &gt; &amp;__lhs, const <code>list</code>&lt; _Tp, _Alloc &gt; &amp;__rhs) </p>
 <p> template&lt;typename _Tp , typename _Alloc &gt; bool <code>operator&lt;</code> (const <code>forward_list</code>&lt; _Tp, _Alloc &gt; &amp;__lx, const <code>forward_list</code>&lt; _Tp, _Alloc &gt; &amp;__ly) </p>
-<p> template&lt;typename _CharT , typename _Traits , size_t _Nb&gt; <code>std::basic_ostream</code>&lt; _CharT,<br />
+<p> template&lt;typename _CharT , typename _Traits , size_t _Nb&gt; <code>std::basic_ostream</code>&lt; _CharT,<br/>
  _Traits &gt; &amp; <code>operator&lt;&lt;</code> (<code>std::basic_ostream</code>&lt; _CharT, _Traits &gt; &amp;__os, const <code>bitset</code>&lt; _Nb &gt; &amp;__x)&quot; </p>
 <p> template&lt;typename _Key , typename _Compare , typename _Allocator &gt; bool <code>operator&lt;=</code> (const <code>multiset</code>&lt; _Key, _Compare, _Allocator &gt; &amp;__lhs, const <code>multiset</code>&lt; _Key, _Compare, _Allocator &gt; &amp;__rhs) </p>
 <p> template&lt;typename _Key , typename _Compare , typename _Allocator &gt; bool <code>operator&lt;=</code> (const <code>set</code>&lt; _Key, _Compare, _Allocator &gt; &amp;__lhs, const <code>set</code>&lt; _Key, _Compare, _Allocator &gt; &amp;__rhs) </p>
@@ -83,7 +83,7 @@ description: "std::__debug –"
 <p> template&lt;typename _Tp , typename _Alloc &gt; bool <code>operator&gt;=</code> (const <code>vector</code>&lt; _Tp, _Alloc &gt; &amp;__lhs, const <code>vector</code>&lt; _Tp, _Alloc &gt; &amp;__rhs) </p>
 <p> template&lt;typename _Tp , typename _Alloc &gt; bool <code>operator&gt;=</code> (const <code>list</code>&lt; _Tp, _Alloc &gt; &amp;__lhs, const <code>list</code>&lt; _Tp, _Alloc &gt; &amp;__rhs) </p>
 <p> template&lt;typename _Tp , typename _Alloc &gt; bool <code>operator&gt;=</code> (const <code>forward_list</code>&lt; _Tp, _Alloc &gt; &amp;__lx, const <code>forward_list</code>&lt; _Tp, _Alloc &gt; &amp;__ly) </p>
-<p> template&lt;typename _CharT , typename _Traits , size_t _Nb&gt; <code>std::basic_istream</code>&lt; _CharT,<br />
+<p> template&lt;typename _CharT , typename _Traits , size_t _Nb&gt; <code>std::basic_istream</code>&lt; _CharT,<br/>
  _Traits &gt; &amp; <code>operator&gt;&gt;</code> (<code>std::basic_istream</code>&lt; _CharT, _Traits &gt; &amp;__is, <code>bitset</code>&lt; _Nb &gt; &amp;__x)&quot; </p>
 <p> template&lt;size_t _Nb&gt; <code>bitset</code>&lt; _Nb &gt; <code>operator^</code> (const <code>bitset</code>&lt; _Nb &gt; &amp;__x, const <code>bitset</code>&lt; _Nb &gt; &amp;__y) noexcept </p>
 <p> template&lt;size_t _Nb&gt; <code>bitset</code>&lt; _Nb &gt; <code>operator|</code> (const <code>bitset</code>&lt; _Nb &gt; &amp;__x, const <code>bitset</code>&lt; _Nb &gt; &amp;__y) noexcept </p>

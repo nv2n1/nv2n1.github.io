@@ -10,35 +10,35 @@ description: "dlltool – Create files needed to build and use DLLs."
 
 <p> dlltool &#8211; Create files needed to build and use DLLs. </p>
 <h2>SYNOPSIS</h2>
-<p> dlltool [<code>-d</code>|<code>&#8211;input-def</code> <i>def-file-name</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-b</code>|<code>&#8211;base-file</code>&nbsp;<wbr><i>base-file-name</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-e</code>|<code>&#8211;output-exp</code>&nbsp;<wbr><i>exports-file-name</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-z</code>|<code>&#8211;output-def</code>&nbsp;<wbr><i>def-file-name</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-l</code>|<code>&#8211;output-lib</code>&nbsp;<wbr><i>library-file-name</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-y</code>|<code>&#8211;output-delaylib</code>&nbsp;<wbr><i>library-file-name</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;export-all-symbols</code>]&nbsp;<wbr>[<code>&#8211;no-export-all-symbols</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;exclude-symbols</code>&nbsp;<wbr><i>list</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;no-default-excludes</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-S</code>|<code>&#8211;as</code>&nbsp;<wbr><i>path-to-assembler</i>]&nbsp;<wbr>[<code>-f</code>|<code>&#8211;as-flags</code>&nbsp;<wbr><i>options</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-D</code>|<code>&#8211;dllname</code>&nbsp;<wbr><i>name</i>]&nbsp;<wbr>[<code>-m</code>|<code>&#8211;machine</code>&nbsp;<wbr><i>machine</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-a</code>|<code>&#8211;add-indirect</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-U</code>|<code>&#8211;add-underscore</code>]&nbsp;<wbr>[<code>&#8211;add-stdcall-underscore</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-k</code>|<code>&#8211;kill-at</code>]&nbsp;<wbr>[<code>-A</code>|<code>&#8211;add-stdcall-alias</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-p</code>|<code>&#8211;ext-prefix-alias</code>&nbsp;<wbr><i>prefix</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-x</code>|<code>&#8211;no-idata4</code>]&nbsp;<wbr>[<code>-c</code>|<code>&#8211;no-idata5</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;use-nul-prefixed-import-tables</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-I</code>|<code>&#8211;identify</code>&nbsp;<wbr><i>library-file-name</i>]&nbsp;<wbr>[<code>&#8211;identify-strict</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-i</code>|<code>&#8211;interwork</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-n</code>|<code>&#8211;nodelete</code>]&nbsp;<wbr>[<code>-t</code>|<code>&#8211;temp-prefix</code>&nbsp;<wbr><i>prefix</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-v</code>|<code>&#8211;verbose</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-h</code>|<code>&#8211;help</code>]&nbsp;<wbr>[<code>-V</code>|<code>&#8211;version</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;no-leading-underscore</code>]&nbsp;<wbr>[<code>&#8211;leading-underscore</code>]<br />
+<p> dlltool [<code>-d</code>|<code>&#8211;input-def</code> <i>def-file-name</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-b</code>|<code>&#8211;base-file</code>&nbsp;<wbr><i>base-file-name</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-e</code>|<code>&#8211;output-exp</code>&nbsp;<wbr><i>exports-file-name</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-z</code>|<code>&#8211;output-def</code>&nbsp;<wbr><i>def-file-name</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-l</code>|<code>&#8211;output-lib</code>&nbsp;<wbr><i>library-file-name</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-y</code>|<code>&#8211;output-delaylib</code>&nbsp;<wbr><i>library-file-name</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;export-all-symbols</code>]&nbsp;<wbr>[<code>&#8211;no-export-all-symbols</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;exclude-symbols</code>&nbsp;<wbr><i>list</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;no-default-excludes</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-S</code>|<code>&#8211;as</code>&nbsp;<wbr><i>path-to-assembler</i>]&nbsp;<wbr>[<code>-f</code>|<code>&#8211;as-flags</code>&nbsp;<wbr><i>options</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-D</code>|<code>&#8211;dllname</code>&nbsp;<wbr><i>name</i>]&nbsp;<wbr>[<code>-m</code>|<code>&#8211;machine</code>&nbsp;<wbr><i>machine</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-a</code>|<code>&#8211;add-indirect</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-U</code>|<code>&#8211;add-underscore</code>]&nbsp;<wbr>[<code>&#8211;add-stdcall-underscore</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-k</code>|<code>&#8211;kill-at</code>]&nbsp;<wbr>[<code>-A</code>|<code>&#8211;add-stdcall-alias</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-p</code>|<code>&#8211;ext-prefix-alias</code>&nbsp;<wbr><i>prefix</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-x</code>|<code>&#8211;no-idata4</code>]&nbsp;<wbr>[<code>-c</code>|<code>&#8211;no-idata5</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;use-nul-prefixed-import-tables</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-I</code>|<code>&#8211;identify</code>&nbsp;<wbr><i>library-file-name</i>]&nbsp;<wbr>[<code>&#8211;identify-strict</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-i</code>|<code>&#8211;interwork</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-n</code>|<code>&#8211;nodelete</code>]&nbsp;<wbr>[<code>-t</code>|<code>&#8211;temp-prefix</code>&nbsp;<wbr><i>prefix</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-v</code>|<code>&#8211;verbose</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-h</code>|<code>&#8211;help</code>]&nbsp;<wbr>[<code>-V</code>|<code>&#8211;version</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;no-leading-underscore</code>]&nbsp;<wbr>[<code>&#8211;leading-underscore</code>]<br/>
 &nbsp;<wbr>&nbsp;<wbr>[object-file &#8230;]</p>
 <h2>DESCRIPTION</h2>
 <p> <code>dlltool</code> reads its inputs, which can come from the <code>-d</code> and <code>-b</code> options as well as object files specified on the command line. It then processes these inputs and if the <code>-e</code> option has been specified it creates a exports file. If the <code>-l</code> option has been specified it creates a library file and if the <code>-z</code> option has been specified it creates a def file. Any or all of the <code>-e</code>, <code>-l</code> and <code>-z</code> options can be present in one invocation of dlltool. </p>
-<p> When creating a <font SIZE="-1">DLL,</font> along with the source for the <font SIZE="-1">DLL,</font> it is necessary to have three other files. <code>dlltool</code> can help with the creation of these files. </p>
-<p> The first file is a <i>.def</i> file which specifies which functions are exported from the <font SIZE="-1">DLL,</font> which functions the <font SIZE="-1">DLL</font> imports, and so on. This is a text file and can be created by hand, or <code>dlltool</code> can be used to create it using the <code>-z</code> option. In this case <code>dlltool</code> will scan the object files specified on its command line looking for those functions which have been specially marked as being exported and put entries for them in the <i>.def</i> file it creates. </p>
-<p> In order to mark a function as being exported from a <font SIZE="-1">DLL,</font> it needs to have an <code>-export:&lt;name_of_function&gt;</code> entry in the <code>.drectve</code> section of the object file. This can be done in C by using the <i>asm()</i> operator: </p>
+<p> When creating a DLL, along with the source for the DLL, it is necessary to have three other files. <code>dlltool</code> can help with the creation of these files. </p>
+<p> The first file is a <i>.def</i> file which specifies which functions are exported from the DLL, which functions the DLL imports, and so on. This is a text file and can be created by hand, or <code>dlltool</code> can be used to create it using the <code>-z</code> option. In this case <code>dlltool</code> will scan the object files specified on its command line looking for those functions which have been specially marked as being exported and put entries for them in the <i>.def</i> file it creates. </p>
+<p> In order to mark a function as being exported from a DLL, it needs to have an <code>-export:&lt;name_of_function&gt;</code> entry in the <code>.drectve</code> section of the object file. This can be done in C by using the <i>asm()</i> operator: </p>
 <pre><code>
 asm(".section .drectve");
 asm(".ascii \"-export:my_func\"");
@@ -47,18 +47,18 @@ int my_func(void)
     ...
 }
 </code></pre>
-<p> The second file needed for <font SIZE="-1">DLL</font> creation is an exports file. This file is linked with the object files that make up the body of the <font SIZE="-1">DLL</font> and it handles the interface between the <font SIZE="-1">DLL</font> and the outside world. This is a binary file and it can be created by giving the <code>-e</code> option to <code>dlltool</code> when it is creating or reading in a <i>.def</i> file. </p>
-<p> The third file needed for <font SIZE="-1">DLL</font> creation is the library file that programs will link with in order to access the functions in the <font SIZE="-1">DLL </font>(an `import library&#8217;). This file can be created by giving the <code>-l</code> option to dlltool when it is creating or reading in a <i>.def</i> file. </p>
+<p> The second file needed for DLL creation is an exports file. This file is linked with the object files that make up the body of the DLL and it handles the interface between the DLL and the outside world. This is a binary file and it can be created by giving the <code>-e</code> option to <code>dlltool</code> when it is creating or reading in a <i>.def</i> file. </p>
+<p> The third file needed for DLL creation is the library file that programs will link with in order to access the functions in the DLL (an `import library&#8217;). This file can be created by giving the <code>-l</code> option to dlltool when it is creating or reading in a <i>.def</i> file. </p>
 <p> If the <code>-y</code> option is specified, dlltool generates a delay-import library that can be used instead of the normal import library to allow a program to link to the dll only as soon as an imported function is called for the first time. The resulting executable will need to be linked to the static delayimp library containing _<i>_delayLoadHelper2()</i>, which in turn will import LoadLibraryA and GetProcAddress from kernel32. </p>
 <p> <code>dlltool</code> builds the library file by hand, but it builds the exports file by creating temporary files containing assembler statements and then assembling these. The <code>-S</code> command line option can be used to specify the path to the assembler that dlltool will use, and the <code>-f</code> option can be used to pass specific flags to that assembler. The <code>-n</code> can be used to prevent dlltool from deleting these temporary assembler files when it is done, and if <code>-n</code> is specified twice then this will prevent dlltool from deleting the temporary object files it used to build the library. </p>
-<p> Here is an example of creating a <font SIZE="-1">DLL</font> from a source file <code>dll.c</code> and also creating a program (from an object file called <code>program.o</code>) that uses that <font SIZE="-1">DLL:</font> </p>
+<p> Here is an example of creating a DLL from a source file <code>dll.c</code> and also creating a program (from an object file called <code>program.o</code>) that uses that DLL: </p>
 <pre>
           gcc -c dll.c
           dlltool -e exports.o -l dll.lib dll.o
           gcc dll.o exports.o -o dll.dll
           gcc program.o dll.lib -o program
 </pre>
-<p> <code>dlltool</code> may also be used to query an existing import library to determine the name of the <font SIZE="-1">DLL</font> to which it is associated. See the description of the <code>-I</code> or <code>&#8211;identify</code> option.</p>
+<p> <code>dlltool</code> may also be used to query an existing import library to determine the name of the DLL to which it is associated. See the description of the <code>-I</code> or <code>&#8211;identify</code> option.</p>
 <h2>OPTIONS</h2>
 <p> The command line options have the following meanings:</p>
 <dl>
@@ -105,11 +105,11 @@ int my_func(void)
 <dt><code>-D</code> <i>name</i></dt>
 <dd>
 </dd><dt><code>&#8211;dll-name</code> <i>name</i></dt>
-<dd> Specifies the name to be stored in the <i>.def</i> file as the name of the <font SIZE="-1">DLL</font> when the <code>-e</code> option is used. If this option is not present, then the filename given to the <code>-e</code> option will be used as the name of the <font SIZE="-1">DLL.</font></dd>
+<dd> Specifies the name to be stored in the <i>.def</i> file as the name of the DLL when the <code>-e</code> option is used. If this option is not present, then the filename given to the <code>-e</code> option will be used as the name of the DLL.</dd>
 <dt><code>-m</code> <i>machine</i></dt>
 <dd>
 </dd><dt><code>-machine</code> <i>machine</i></dt>
-<dd> Specifies the type of machine for which the library file should be built. <code>dlltool</code> has a built in default type, depending upon how it was created, but this option can be used to override that. This is normally only useful when creating DLLs for an <font SIZE="-1">ARM</font> processor, when the contents of the <font SIZE="-1">DLL</font> are actually encode using Thumb instructions.</dd>
+<dd> Specifies the type of machine for which the library file should be built. <code>dlltool</code> has a built in default type, depending upon how it was created, but this option can be used to override that. This is normally only useful when creating DLLs for an ARM processor, when the contents of the DLL are actually encode using Thumb instructions.</dd>
 <dt><code>-a</code></dt>
 <dd>
 </dd><dt><code>&#8211;add-indirect</code></dt>
@@ -127,7 +127,7 @@ int my_func(void)
 <dt><code>-k</code></dt>
 <dd>
 </dd><dt><code>&#8211;kill-at</code></dt>
-<dd> Specifies that when <code>dlltool</code> is creating the exports file it should not append the string <code>@ &lt;number&gt;</code>. These numbers are called ordinal numbers and they represent another way of accessing the function in a <font SIZE="-1">DLL,</font> other than by name.</dd>
+<dd> Specifies that when <code>dlltool</code> is creating the exports file it should not append the string <code>@ &lt;number&gt;</code>. These numbers are called ordinal numbers and they represent another way of accessing the function in a DLL, other than by name.</dd>
 <dt><code>-A</code></dt>
 <dd>
 </dd><dt><code>&#8211;add-stdcall-alias</code></dt>
@@ -135,7 +135,7 @@ int my_func(void)
 <dt><code>-p</code></dt>
 <dd>
 </dd><dt><code>&#8211;ext-prefix-alias</code> <i>prefix</i></dt>
-<dd> Causes <code>dlltool</code> to create external aliases for all <font SIZE="-1">DLL</font> imports with the specified prefix. The aliases are created for both external and import symbols with no leading underscore.</dd>
+<dd> Causes <code>dlltool</code> to create external aliases for all DLL imports with the specified prefix. The aliases are created for both external and import symbols with no leading underscore.</dd>
 <dt><code>-x</code></dt>
 <dd>
 </dd><dt><code>&#8211;no-idata4</code></dt>
@@ -149,13 +149,13 @@ int my_func(void)
 <dt><code>-I</code> <i>filename</i></dt>
 <dd>
 </dd><dt><code>&#8211;identify</code> <i>filename</i></dt>
-<dd> Specifies that <code>dlltool</code> should inspect the import library indicated by <i>filename</i> and report, on <tt>&quot;stdout&quot;</tt>, the name(s) of the associated <font SIZE="-1">DLL</font>(s). This can be performed in addition to any other operations indicated by the other options and arguments. <code>dlltool</code> fails if the import library does not exist or is not actually an import library. See also <code>&#8211;identify-strict</code>.</dd>
+<dd> Specifies that <code>dlltool</code> should inspect the import library indicated by <i>filename</i> and report, on <tt>&quot;stdout&quot;</tt>, the name(s) of the associated DLL(s). This can be performed in addition to any other operations indicated by the other options and arguments. <code>dlltool</code> fails if the import library does not exist or is not actually an import library. See also <code>&#8211;identify-strict</code>.</dd>
 <dt><code>&#8211;identify-strict</code></dt>
-<dd> Modifies the behavior of the <code>&#8211;identify</code> option, such that an error is reported if <i>filename</i> is associated with more than one <font SIZE="-1">DLL.</font></dd>
+<dd> Modifies the behavior of the <code>&#8211;identify</code> option, such that an error is reported if <i>filename</i> is associated with more than one DLL.</dd>
 <dt><code>-i</code></dt>
 <dd>
 </dd><dt><code>&#8211;interwork</code></dt>
-<dd> Specifies that <code>dlltool</code> should mark the objects in the library file and exports file that it produces as supporting interworking between <font SIZE="-1">ARM</font> and Thumb code.</dd>
+<dd> Specifies that <code>dlltool</code> should mark the objects in the library file and exports file that it produces as supporting interworking between ARM and Thumb code.</dd>
 <dt><code>-n</code></dt>
 <dd>
 </dd><dt><code>&#8211;nodelete</code></dt>
@@ -183,4 +183,4 @@ int my_func(void)
 <p> The Info pages for <i>binutils</i>.</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 1991-2014 Free Software Foundation, Inc. </p>
-<p> Permission is granted to copy, distribute and/or modify this document under the terms of the <font SIZE="-1">GNU</font> Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts. A copy of the license is included in the section entitled &#8220;<font SIZE="-1">GNU</font> Free Documentation License&#8221;. </p>
+<p> Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts. A copy of the license is included in the section entitled &#8220;GNU Free Documentation License&#8221;. </p>

@@ -13,7 +13,7 @@ description: "qchkpt – checkpoint pbs batch jobs"
 <p> qchkpt job_identifier &#8230;</p>
 <h2>DESCRIPTION</h2>
 <p> The <code>qchkpt </code> command requests that the PBS Mom generate a checkpoint file for a running job. </p>
-<p> <font SIZE="-1">This is an extension to POSIX.2d.</font> </p>
+<p> This is an extension to POSIX.2d. </p>
 <p> The qchkpt command sends a <i>Chkpt Job</i> batch request to the server as described in the general section.</p>
 <h2>OPTIONS</h2>
 <p> None </p>

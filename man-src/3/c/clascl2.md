@@ -11,7 +11,7 @@ description: "clascl2.f –"
 <p> clascl2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>clascl2</code> (M, N, D, X, LDX)<br />
+<p> subroutine <code>clascl2</code> (M, N, D, X, LDX)<br/>
  <i></i><code>CLASCL2</code> performs diagonal scaling on a vector.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine clascl2 (integerM, integerN, real, dimension( * )D, complex, dimension( ldx, * )X, integerLDX)</h3>

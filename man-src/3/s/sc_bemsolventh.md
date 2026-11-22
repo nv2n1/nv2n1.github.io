@@ -13,8 +13,8 @@ description: "sc::BEMSolventH –"
 <h3>Public Member Functions</h3>
 <p><code>BEMSolventH</code> (<code>StateIn</code> &amp;) </p>
 <p> <code>BEMSolventH</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;) </p>
-<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br />
- <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br />
+<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br/>
+ <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br/>
  void <code>init</code> (const <code>Ref</code>&lt; <code>Wavefunction</code> &gt; &amp;) </p>
 <p> void <code>accum</code> (const <code>RefSymmSCMatrix</code> &amp;h) </p>
 <p> void <code>done</code> () </p>

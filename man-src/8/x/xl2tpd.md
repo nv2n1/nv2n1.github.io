@@ -9,9 +9,9 @@ description: "xl2tpd – Layer 2 Tunnelling Protocol Daemon"
 
 <p>xl2tpd &#8211; Layer 2 Tunnelling Protocol Daemon</p>
 <h2>Description</h2>
-<p>A Layer 2 Tunneling Protocol VPN client/daemon for Linux and other POSIX-based OSs. Based off of L2TPd 0.61 from<br />
-&nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="http://www.marko.net/l2tp">http://www.marko.net/l2tp</a>&nbsp;<wbr> and patches collected by Jacco de Leeuw at<br />
-&nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="http://www.jacco2.dds.nl/networking/openswan-l2tp.html">http://www.jacco2.dds.nl/networking/openswan-l2tp.html</a> Currently maintained by Xelerance<br />
+<p>A Layer 2 Tunneling Protocol VPN client/daemon for Linux and other POSIX-based OSs. Based off of L2TPd 0.61 from<br/>
+&nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="http://www.marko.net/l2tp">http://www.marko.net/l2tp</a>&nbsp;<wbr> and patches collected by Jacco de Leeuw at<br/>
+&nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="http://www.jacco2.dds.nl/networking/openswan-l2tp.html">http://www.jacco2.dds.nl/networking/openswan-l2tp.html</a> Currently maintained by Xelerance<br/>
 &nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="http://www.xelerance.com/software/xl2tpd/">http://www.xelerance.com/software/xl2tpd/</a> xl2tpd implements the Layer 2 Tunnelling Protocol, defined by RFC 2661. </p>
 <h2>Options</h2>
 <dl>
@@ -39,9 +39,9 @@ description: "xl2tpd – Layer 2 Tunnelling Protocol Daemon"
 <p> Michael Richardson &lt;mcr [at] xelerance.com&gt; Paul Wouters &lt;paul [at] xelerance.com&gt; </p>
 <p> Many thanks to Jacco de Leeuw &lt;jacco2 [at] dds.nl&gt; for maintaining l2tpd. </p>
 <p> Previous development was hosted at sourceforge (<a rel="nofollow" href="http://www.sourceforge.net/projects/l2tpd)">http://www.sourceforge.net/projects/l2tpd)</a> by: </p>
-<p> Scott Balmos &lt;sbalmos [at] iglou.com&gt;<br />
- David Stipp &lt;dstipp [at] one.net&gt;<br />
+<p> Scott Balmos &lt;sbalmos [at] iglou.com&gt;<br/>
+ David Stipp &lt;dstipp [at] one.net&gt;<br/>
  Jeff McAdams &lt;jeffm [at] iglou.com&gt; </p>
-<p> Based off of l2tpd version 0.60<br />
- Copyright (C)1998 Adtran, Inc.<br />
+<p> Based off of l2tpd version 0.60<br/>
+ Copyright (C)1998 Adtran, Inc.<br/>
  Mark Spencer &lt;markster [at] marko.net&gt;</p>

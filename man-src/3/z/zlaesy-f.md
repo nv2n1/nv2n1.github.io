@@ -10,7 +10,7 @@ description: "zlaesy.f –"
 <p>zlaesy.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlaesy</code> (A, B, C, RT1, RT2, EVSCAL, CS1, SN1)<br />
+<p>subroutine <code>zlaesy</code> (A, B, C, RT1, RT2, EVSCAL, CS1, SN1)<br/>
  <i></i><code>ZLAESY</code> computes the eigenvalues and eigenvectors of a 2-by-2 complex symmetric matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlaesy (complex*16A, complex*16B, complex*16C, complex*16RT1, complex*16RT2, complex*16EVSCAL, complex*16CS1, complex*16SN1)</h3>

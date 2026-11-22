@@ -13,15 +13,15 @@ description: "glutReshapeWindow – Request changing the size of the current win
 <h2>Synopsis</h2>
 <p>In openglut.h Ft void Fn glutReshapeWindow int width int height</p>
 <h2>Parameters</h2>
-<p>Bf Em<br />
-&nbsp;<wbr>width Ef<br />
+<p>Bf Em<br/>
+&nbsp;<wbr>width Ef<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Requested width of the current window </p>
-<p> Bf Em<br />
-&nbsp;<wbr>height Ef<br />
+<p> Bf Em<br/>
+&nbsp;<wbr>height Ef<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Requested height of the current window</p>
 <h2>Description</h2>
-<p>The glutReshapeWindow() function adjusts the width and height of the Bf Li<br />
-&nbsp;<wbr>current window Ef<br />
+<p>The glutReshapeWindow() function adjusts the width and height of the Bf Li<br/>
+&nbsp;<wbr>current window Ef<br/>
 &nbsp;<wbr>, if it is an onscreen top-level or subwindow. Subwindows are typically resized and repositioned in response to window resize events. </p>
 <p> The window system may delay or even alter your request. Use the glutReshapeFunc() callback registration for the window if you want </p>
 <p> If you try to make a subwindow smaller than its parent, the parent will not grow to accomodate the child. </p>

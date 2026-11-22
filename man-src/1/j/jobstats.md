@@ -26,11 +26,11 @@ description: "jobstats – print historic job information or timeline view"
 <dd>
  Do not show the timing window (start and end times) for each job.</dd>
 <dt><code>-tformat&nbsp;</code><i>fmt</i></dt>
-<dd> Set time format for timing windows. Can be one of:<br />
+<dd> Set time format for timing windows. Can be one of:<br/>
  <code>epoch</code>: use Unix epoch time <code>fmt</code>: Specify format string. <code>-timeline</code> Produce a table with job timeline info showing visually where jobs ran. This forces HTML output.</dd>
 <dt><code>-tsort&nbsp;</code><i>method</i></dt>
-<dd> Define a method to sort the timeline:<br />
- <code>jid</code>: Sort by job id (default)<br />
+<dd> Define a method to sort the timeline:<br/>
+ <code>jid</code>: Sort by job id (default)<br/>
  <code>start</code>: Sort by start time</dd>
 <dt><code>-table_width&nbsp;</code><i>w</i></dt>
 <dd> Define width of timeline table as <i>w</i> pixels (default 1100)</dd>
@@ -42,10 +42,10 @@ description: "jobstats – print historic job information or timeline view"
 <dt><i>file</i></dt>
 <dd> Job accounting file. If no file is given then <i>$SGE_ROOT/$SGE_CELL/common/accounting</i> will be used.</dd></dl>
 <h2>EXAMPLES</h2>
-<p>&nbsp;<wbr>&nbsp;jobstats -start_jid 1070 sge_runs.acct<br />
-&nbsp;<wbr>&nbsp;jobstats -start_jid -10<br />
-&nbsp;<wbr>&nbsp;jobstats -html<br />
-&nbsp;<wbr>&nbsp;jobstats -timeline -start_jid 1080<br />
+<p>&nbsp;<wbr>&nbsp;jobstats -start_jid 1070 sge_runs.acct<br/>
+&nbsp;<wbr>&nbsp;jobstats -start_jid -10<br/>
+&nbsp;<wbr>&nbsp;jobstats -html<br/>
+&nbsp;<wbr>&nbsp;jobstats -timeline -start_jid 1080<br/>
 &nbsp;<wbr>&nbsp;jobstats -tformat&nbsp;&#8216;%b_%e_%H:%M:%S&#8217;</p>
 <h2>FILES</h2>
 <p> <i>$SGE_ROOT/$SGE_CELL/common/accounting</i> </p>

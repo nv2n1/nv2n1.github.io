@@ -14,13 +14,13 @@ description: "QuantLib::SimpleQuote – market element returning a stored value"
 <h3>Public Member Functions</h3>
 <p><code>SimpleQuote</code> (Real value=<code>Null</code>&lt; Real &gt;()) </p>
 <p> <code>Quote interface</code> </p>
-<p> Real <code>value</code> () const<br />
- <i>returns the current value </i><br />
- bool <code>isValid</code> () const<br />
+<p> Real <code>value</code> () const<br/>
+ <i>returns the current value </i><br/>
+ bool <code>isValid</code> () const<br/>
  <i>returns true if the </i><code>Quote</code> holds a valid value </p>
 <p> <code>Modifiers</code> </p>
-<p> Real <code>setValue</code> (Real value=<code>Null</code>&lt; Real &gt;())<br />
- <i>returns the difference between the new value and the old value </i><br />
+<p> Real <code>setValue</code> (Real value=<code>Null</code>&lt; Real &gt;())<br/>
+ <i>returns the difference between the new value and the old value </i><br/>
  void <code>reset</code> () </p>
 <h2>Detailed Description</h2>
 <p>market element returning a stored value </p>

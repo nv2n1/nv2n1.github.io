@@ -25,10 +25,10 @@ description: "asn1_read_tag – API function"
 <h2>DESCRIPTION</h2>
 <p> Returns the TAG and the CLASS of one element inside a structure. CLASS can have one of these constants: <code>ASN1_CLASS_APPLICATION</code>, <code>ASN1_CLASS_UNIVERSAL</code>, <code>ASN1_CLASS_PRIVATE</code> or <code>ASN1_CLASS_CONTEXT_SPECIFIC</code>.</p>
 <h2>RETURNS</h2>
-<p> <code>ASN1_SUCCESS</code> if successful, <code>ASN1_ELEMENT_NOT_FOUND</code> if<br />
+<p> <code>ASN1_SUCCESS</code> if successful, <code>ASN1_ELEMENT_NOT_FOUND</code> if<br/>
 &nbsp;<wbr><i>name</i>&nbsp;<wbr>is not a valid element.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2006-2015 Free Software Foundation, Inc..<br />
+<p> Copyright &#169; 2006-2015 Free Software Foundation, Inc..<br/>
  Copying and distribution of this file, with or without modification, are permitted in any medium without royalty provided the copyright notice and this notice are preserved.</p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>libtasn1</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>libtasn1</code> programs are properly installed at your site, the command</p>

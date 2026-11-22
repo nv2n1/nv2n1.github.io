@@ -11,7 +11,7 @@ description: "dlarrb.f –"
 <p> dlarrb.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dlarrb</code> (N, D, LLD, IFIRST, ILAST, RTOL1, RTOL2, OFFSET, W, WGAP, WERR, WORK, IWORK, PIVMIN, SPDIAM, TWIST, INFO)<br />
+<p> subroutine <code>dlarrb</code> (N, D, LLD, IFIRST, ILAST, RTOL1, RTOL2, OFFSET, W, WGAP, WERR, WORK, IWORK, PIVMIN, SPDIAM, TWIST, INFO)<br/>
  <i></i><code>DLARRB</code> provides limited bisection to locate eigenvalues for more accuracy.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlarrb (integerN, double precision, dimension( * )D, double precision, dimension( * )LLD, integerIFIRST, integerILAST, double precisionRTOL1, double precisionRTOL2, integerOFFSET, double precision, dimension( * )W, double precision, dimension( * )WGAP, double precision, dimension( * )WERR, double precision, dimension( * )WORK, integer, dimension( * )IWORK, double precisionPIVMIN, double precisionSPDIAM, integerTWIST, integerINFO)</h3>

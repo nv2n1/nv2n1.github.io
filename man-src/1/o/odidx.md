@@ -10,8 +10,8 @@ description: "odidx – indexer of document files"
 
 <p> odidx &#8211; indexer of document files </p>
 <h2>SYNOPSIS</h2>
-<p> <code>odidx register</code> [-l <i>file</i>] [-wmax <i>num</i>] [-tsuf <i>sufs</i>] [-hsuf <i>sufs</i>] <i>name</i>[<i>dir</i>]<br />
- <code>odidx relate</code> <i>name</i><br />
+<p> <code>odidx register</code> [-l <i>file</i>] [-wmax <i>num</i>] [-tsuf <i>sufs</i>] [-hsuf <i>sufs</i>] <i>name</i>[<i>dir</i>]<br/>
+ <code>odidx relate</code> <i>name</i><br/>
  <code>odidx purge</code> <i>name</i></p>
 <h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>odidx</code> commands. </p>
@@ -28,9 +28,9 @@ description: "odidx – indexer of document files"
 <dt><code>-hsuf </code><i>sufs</i></dt>
 <dd> specify suffixes of HTML files in comma separated format. The default is `-hsuf .html,.htm&#8217;.</dd></dl>
 <h2>EXAMPLES</h2>
-<p> For example, to register files which are under `/home/mikio&#8217; and whose suffix are `.txt&#8217;, `.c&#8217;, or `.h&#8217;, perform the following command.<br />
+<p> For example, to register files which are under `/home/mikio&#8217; and whose suffix are `.txt&#8217;, `.c&#8217;, or `.h&#8217;, perform the following command.<br/>
  <code> odidx register -tsuf &quot;.txt,.c,.h&quot; -hsuf &quot;&quot; casket /home/mikio</code> </p>
-<p> Thus, to retrieve documents which include `unix&#8217; and `posix&#8217; and show the top 8 terms, perform the following command.<br />
+<p> Thus, to retrieve documents which include `unix&#8217; and `posix&#8217; and show the top 8 terms, perform the following command.<br/>
  <code> odmgr search -max 8 -h casket &quot;unix posix&quot;</code> </p>
 <h2>SEE ALSO</h2>
 <p> <code>qdbm</code>(3), <code><a href="/docs/linux/man/1-odmgr/">odmgr</a></code>(1), <code>odeum</code>(3), <code>odopen</code>(3).</p>

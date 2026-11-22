@@ -10,7 +10,7 @@ description: "claev2.f –"
 <p>claev2.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>claev2</code> (A, B, C, RT1, RT2, CS1, SN1)<br />
+<p>subroutine <code>claev2</code> (A, B, C, RT1, RT2, CS1, SN1)<br/>
  <i></i><code>CLAEV2</code> computes the eigenvalues and eigenvectors of a 2-by-2 symmetric/Hermitian matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine claev2 (complexA, complexB, complexC, realRT1, realRT2, realCS1, complexSN1)</h3>

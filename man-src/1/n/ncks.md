@@ -35,34 +35,34 @@ description: "ncks – netCDF Kitchen Sink"
 <dd> Print data to screen. The default behavior is to print data to screen if no netCDF output file is specified. Use <code>-H </code> to print data to screen if a netCDF output is specified (the same behavior applies to <code>-m</code> ). Unless otherwise specified (with <code>-s</code>), each element of the data hyperslab is printed on a separate line containing the names, indices, and, values, if any, of all of the variables dimensions. The dimension and variable indices refer to the location of the corresponding data element with respect to the variable as stored on disk (i.e., not the hyperslab).</dd>
 <dl>
 <dt>
-</dt><dd> % ncks -H -C -v three_dmn_var in.nc<br />
- lat[0]=-90 lev[0]=100 lon[0]=0 three_dmn_var[0]=0<br />
- lat[0]=-90 lev[0]=100 lon[1]=90 three_dmn_var[1]=1<br />
- lat[0]=-90 lev[0]=100 lon[2]=180 three_dmn_var[2]=2<br />
- &nbsp;<wbr>&#8230;&nbsp;<wbr><br />
- lat[1]=90 lev[2]=1000 lon[1]=90 three_dmn_var[21]=21<br />
- lat[1]=90 lev[2]=1000 lon[2]=180 three_dmn_var[22]=22<br />
+</dt><dd> % ncks -H -C -v three_dmn_var in.nc<br/>
+ lat[0]=-90 lev[0]=100 lon[0]=0 three_dmn_var[0]=0<br/>
+ lat[0]=-90 lev[0]=100 lon[1]=90 three_dmn_var[1]=1<br/>
+ lat[0]=-90 lev[0]=100 lon[2]=180 three_dmn_var[2]=2<br/>
+ &nbsp;<wbr>&#8230;&nbsp;<wbr><br/>
+ lat[1]=90 lev[2]=1000 lon[1]=90 three_dmn_var[21]=21<br/>
+ lat[1]=90 lev[2]=1000 lon[2]=180 three_dmn_var[22]=22<br/>
  lat[1]=90 lev[2]=1000 lon[3]=270 three_dmn_var[23]=23</dd></dl>
 <p> Printing the same variable with the <code>-F</code> option shows the same variable indexed with Fortran conventions</p>
 <dl>
 <dt>
-</dt><dd> % ncks -F -H -C -v three_dmn_var in.nc<br />
- lon(1)=0 lev(1)=100 lat(1)=-90 three_dmn_var(1)=0<br />
- lon(2)=90 lev(1)=100 lat(1)=-90 three_dmn_var(2)=1<br />
- lon(3)=180 lev(1)=100 lat(1)=-90 three_dmn_var(3)=2<br />
+</dt><dd> % ncks -F -H -C -v three_dmn_var in.nc<br/>
+ lon(1)=0 lev(1)=100 lat(1)=-90 three_dmn_var(1)=0<br/>
+ lon(2)=90 lev(1)=100 lat(1)=-90 three_dmn_var(2)=1<br/>
+ lon(3)=180 lev(1)=100 lat(1)=-90 three_dmn_var(3)=2<br/>
  &nbsp;<wbr>&#8230;&nbsp;<wbr></dd></dl>
 <p> Printing a hyperslab does not affect the variable or dimension indices since these indices are relative to the full variable (as stored in the input file), and the input file has not changed. However, if the hypserslab is saved to an output file and those values are printed, the indices will change:</p>
 <dl>
 <dt>
-</dt><dd> % ncks -H -d lat,90.0 -d lev,1000.0 -v three_dmn_var in.nc out.nc<br />
- lat[1]=90 lev[2]=1000 lon[0]=0 three_dmn_var[20]=20<br />
- lat[1]=90 lev[2]=1000 lon[1]=90 three_dmn_var[21]=21<br />
- lat[1]=90 lev[2]=1000 lon[2]=180 three_dmn_var[22]=22<br />
- lat[1]=90 lev[2]=1000 lon[3]=270 three_dmn_var[23]=23<br />
- % ncks -H out.nc<br />
- lat[0]=90 lev[0]=1000 lon[0]=0 three_dmn_var[0]=20<br />
- lat[0]=90 lev[0]=1000 lon[1]=90 three_dmn_var[1]=21<br />
- lat[0]=90 lev[0]=1000 lon[2]=180 three_dmn_var[2]=22<br />
+</dt><dd> % ncks -H -d lat,90.0 -d lev,1000.0 -v three_dmn_var in.nc out.nc<br/>
+ lat[1]=90 lev[2]=1000 lon[0]=0 three_dmn_var[20]=20<br/>
+ lat[1]=90 lev[2]=1000 lon[1]=90 three_dmn_var[21]=21<br/>
+ lat[1]=90 lev[2]=1000 lon[2]=180 three_dmn_var[22]=22<br/>
+ lat[1]=90 lev[2]=1000 lon[3]=270 three_dmn_var[23]=23<br/>
+ % ncks -H out.nc<br/>
+ lat[0]=90 lev[0]=1000 lon[0]=0 three_dmn_var[0]=20<br/>
+ lat[0]=90 lev[0]=1000 lon[1]=90 three_dmn_var[1]=21<br/>
+ lat[0]=90 lev[0]=1000 lon[2]=180 three_dmn_var[2]=22<br/>
  lat[0]=90 lev[0]=1000 lon[3]=270 three_dmn_var[3]=23</dd></dl>
 </dl>
 <dl>
@@ -93,24 +93,24 @@ description: "ncks – netCDF Kitchen Sink"
 <p> Print variable <code>three_dmn_var</code> from file <code>in.nc</code> with default notations. Next print <code>three_dmn_var</code> as an un-annotated text column. Then print <code>three_dmn_var</code> signed with very high precision. Finally, print <code>three_dmn_var</code> as a comma-separated list.</p>
 <dl>
 <dt>
-</dt><dd> % ncks -H -C -v three_dmn_var in.nc<br />
- lat[0]=-90 lev[0]=100 lon[0]=0 three_dmn_var[0]=0<br />
- lat[0]=-90 lev[0]=100 lon[1]=90 three_dmn_var[1]=1<br />
- &nbsp;<wbr>&#8230;&nbsp;<wbr><br />
- lat[1]=90 lev[2]=1000 lon[3]=270 three_dmn_var[23]=23<br />
+</dt><dd> % ncks -H -C -v three_dmn_var in.nc<br/>
+ lat[0]=-90 lev[0]=100 lon[0]=0 three_dmn_var[0]=0<br/>
+ lat[0]=-90 lev[0]=100 lon[1]=90 three_dmn_var[1]=1<br/>
+ &nbsp;<wbr>&#8230;&nbsp;<wbr><br/>
+ lat[1]=90 lev[2]=1000 lon[3]=270 three_dmn_var[23]=23<br/>
  % ncks -s &quot;%f
-&quot; -H -C -v three_dmn_var in.nc<br />
- 0.000000<br />
- 1.000000<br />
- &nbsp;<wbr>&#8230;&nbsp;<wbr><br />
- 23.000000<br />
+&quot; -H -C -v three_dmn_var in.nc<br/>
+ 0.000000<br/>
+ 1.000000<br/>
+ &nbsp;<wbr>&#8230;&nbsp;<wbr><br/>
+ 23.000000<br/>
  % ncks -s &quot;%+16.10f
 &quot; -H -C -v three_dmn_var in.nc </dd>
 <p>+0.0000000000 </p>
-<p>+1.0000000000<br />
+<p>+1.0000000000<br/>
  &nbsp;<wbr>&#8230;&nbsp;<wbr> </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>+23.0000000000<br />
- % ncks -s &quot;%f, &quot; -H -C -v three_dmn_var in.nc<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>+23.0000000000<br/>
+ % ncks -s &quot;%f, &quot; -H -C -v three_dmn_var in.nc<br/>
  0.000000, 1.000000, &nbsp;<wbr>&#8230; , 23.000000,</dl>
 <p> The second and third options are useful when pasting data into text files like reports or papers. </p>
 <p> One dimensional arrays of characters stored as netCDF variables are automatically printed as strings, whether or not they are NUL-terminated, e.g.,</p>
@@ -129,7 +129,7 @@ description: "ncks – netCDF Kitchen Sink"
 <p> Extract variables <code>time</code> and <code>pressure</code> from netCDF <code>in.nc</code>. If <code>out.nc</code> does not exist it will be created. Otherwise the you will be prompted whether to append to or to overwrite <code>out.nc</code>:</p>
 <dl>
 <dt>
-</dt><dd> ncks -v time,pressure in.nc out.nc<br />
+</dt><dd> ncks -v time,pressure in.nc out.nc<br/>
  ncks -C -v time,pressure in.nc out.nc</dd></dl>
 <p> The first version of the command creates an <code>out.nc</code> which contains <code>time</code>, <code>pressure</code>, and any coordinate variables associated with <i>pressure</i>. The <code>out.nc</code> from the second version is guaranteed to contain only two variables <code>time</code> and <code>pressure</code>. </p>
 <p> Create netCDF <code>out.nc</code> containing all variables from file <code>in.nc</code>. Restrict the dimensions of these variables to a hyperslab. Print (with <code>-H</code>) the hyperslabs to the screen for good measure. The specified hyperslab is: the sixth value in dimension <code>time</code>; the half-open range <i>lat</i> &lt;= 0.0 in coordinate <code>lat</code>; the half-open range <i>lon</i> &gt;= 330.0 in coordinate <code>lon</code>; the closed interval 0.3 &lt;= <i>band</i> &lt;= 0.5 in coordinate <code>band</code>; and cross-section closest to 1000.0 in coordinate <code>lev</code>. Note that limits applied to coordinate values are specified with a decimal point, and limits applied to dimension indices do not have a decimal point.</p>
@@ -145,7 +145,7 @@ description: "ncks – netCDF Kitchen Sink"
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;<a rel="nofollow" href="http://sf.net/bugs/?group_id=3331">http://sf.net/bugs/?group_id=3331</a>&gt;. </p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 1995-2014 Charlie Zender<br />
+<p> Copyright &#169; 1995-2014 Charlie Zender<br/>
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>NCO</code> is maintained as a Texinfo manual called the <code>NCO User&#8217;s Guide.</code> Because <code>NCO</code> is mathematical in nature, the documentation includes TeX-intensive portions not viewable on character-based displays. Hence the only complete and authoritative versions of the <code>NCO User&#8217;s Guide </code> are the PDF (recommended), DVI, and Postscript versions at &lt;<a rel="nofollow" href="http://nco.sf.net/nco.pdf">http://nco.sf.net/nco.pdf</a>&gt;, &lt;<a href="http://nco.sf.net/nco.dvi">http://nco.sf.net/nco.dvi</a>&gt;, and &lt;<a rel="nofollow" href="http://nco.sf.net/nco.ps">http://nco.sf.net/nco.ps</a>&gt;, respectively. HTML and XML versions are available at &lt;<a rel="nofollow" href="http://nco.sf.net/nco.html">http://nco.sf.net/nco.html</a>&gt; and &lt;<a rel="nofollow" href="http://nco.sf.net/nco.xml">http://nco.sf.net/nco.xml</a>&gt;, respectively. </p>

@@ -20,8 +20,8 @@ description: "QuantLib::CDO – collateralized debt obligation"
 <p> <code>Real</code> <code>detachment</code> () </p>
 <p> std::vector&lt; <code>Real</code> &gt; <code>nominals</code> () </p>
 <p> Size <code>size</code> () </p>
-<p> bool <code>isExpired</code> () const<br />
- <i>returns whether the instrument is still tradable. </i><br />
+<p> bool <code>isExpired</code> () const<br/>
+ <i>returns whether the instrument is still tradable. </i><br/>
  <code>Rate</code> <code>fairPremium</code> () const </p>
 <p> <code>Rate</code> <code>premiumValue</code> () const </p>
 <p> <code>Rate</code> <code>protectionValue</code> () const </p>
@@ -56,16 +56,16 @@ description: "QuantLib::CDO – collateralized debt obligation"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>attachment</i> fraction of the LGD where protection starts<br />
- <i>detachment</i> fraction of the LGD where protection ends<br />
- <i>nominals</i> vector of basket nominal amounts<br />
- <i>basket</i> default basket represented by a vector of default term structures that allow computing single name default probabilities depending on time<br />
- <i>protectionSeller</i> sold protection if set to true, purchased otherwise<br />
- <i>premiumSchedule</i> schedule for premium payments<br />
- <i>premiumRate</i> annual premium rate, e.g. 0.05 for 5% p.a.<br />
- <i>dayCounter</i> day count convention for the premium rate<br />
- <i>upfrontPremiumRate</i> premium as a tranche notional fraction<br />
- <i>yieldTS</i> yield term structure handle<br />
+</dt><dd> <i>attachment</i> fraction of the LGD where protection starts<br/>
+ <i>detachment</i> fraction of the LGD where protection ends<br/>
+ <i>nominals</i> vector of basket nominal amounts<br/>
+ <i>basket</i> default basket represented by a vector of default term structures that allow computing single name default probabilities depending on time<br/>
+ <i>protectionSeller</i> sold protection if set to true, purchased otherwise<br/>
+ <i>premiumSchedule</i> schedule for premium payments<br/>
+ <i>premiumRate</i> annual premium rate, e.g. 0.05 for 5% p.a.<br/>
+ <i>dayCounter</i> day count convention for the premium rate<br/>
+ <i>upfrontPremiumRate</i> premium as a tranche notional fraction<br/>
+ <i>yieldTS</i> yield term structure handle<br/>
  <i>integrationStep</i> time step for integrating over one premium period; if larger than premium period length, a single step is taken</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>

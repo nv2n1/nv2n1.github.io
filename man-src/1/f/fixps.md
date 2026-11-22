@@ -43,7 +43,7 @@ description: "fixps – sanitize PostScript files"
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;bug-a2ps [at] gnu.org&gt;</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 1998-2000 Akim Demaille, Miguel Santana<br />
+<p> Copyright &#169; 1998-2000 Akim Demaille, Miguel Santana<br/>
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-a2ps/">a2ps</a></code>(1), <code><a href="/docs/linux/man/1-card/">card</a></code>(1), <code><a href="/docs/linux/man/1-fixps/">fixps</a></code>(1), <code><a href="/docs/linux/man/1-pdiff/">pdiff</a></code>(1), <code><a href="/docs/linux/man/1-psset/">psset</a></code>(1), <code><a href="/docs/linux/man/1-texi2dvi4a2ps/">texi2dvi4a2ps</a></code>(1). </p>

@@ -16,23 +16,23 @@ description: "xterm – terminal emulator for X"
 <p> The VT <i>xxx</i> and Tektronix 4014 terminals each have their own window so that you can edit text in one and look at graphics in the other at the same time. To maintain the correct aspect ratio (height/width), Tektronix graphics will be restricted to the largest box with a 4014&#8217;s aspect ratio that will fit in the window. This box is located in the upper left area of the window. </p>
 <p> Although both windows may be displayed at the same time, one of them is considered the ``active&#8217;&#8216; window for receiving keyboard input and terminal output. This is the window that contains the text cursor. The active window can be chosen through escape sequences, the <code>VT Options</code> menu in the VT <i>xxx</i> window, and the <code>Tek Options</code> menu in the 4014 window.  </p>
 <h2>EMULATIONS</h2>
-<p> <i>Xterm</i> provides usable emulations of related DEC terminals: <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 VT52 emulation is complete. <br />
+<p> <i>Xterm</i> provides usable emulations of related DEC terminals: <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 VT52 emulation is complete. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 VT102 emulation is fairly complete, but does not support autorepeat (because that would affect the keyboard used by other X clients). </p>
 <dl>
-<dd> <p> Double-size characters are displayed properly if your font server supports scalable bitmap fonts. <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 VT220 emulation does not support soft fonts, it is otherwise complete. <br />
+<dd> <p> Double-size characters are displayed properly if your font server supports scalable bitmap fonts. <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 VT220 emulation does not support soft fonts, it is otherwise complete. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 VT420 emulation (the default) supports controls for manipulating rectangles of characters as well as left/right margins. </p>
  </dd>
 <dd> <p> <i>Xterm</i> does not support some other features which are not suitable for emulation, e.g., two-sessions. </p>
  </dd></dl>
 <p> Terminal database (<i>terminfo</i> (5) or <i>termcap</i> (5)) entries that work with <i>xterm</i> include </p>
 <dl>
-<dd> <p> an optional platform-specific entry (``xterm&#8217;&#8216;), <br />
- ``xterm&#8217;&#8216;, <br />
- ``vt102&#8217;&#8216;, <br />
- ``vt100&#8217;&#8216;, <br />
- ``ansi&#8217;&#8216; and <br />
+<dd> <p> an optional platform-specific entry (``xterm&#8217;&#8216;), <br/>
+ ``xterm&#8217;&#8216;, <br/>
+ ``vt102&#8217;&#8216;, <br/>
+ ``vt100&#8217;&#8216;, <br/>
+ ``ansi&#8217;&#8216; and <br/>
  ``dumb&#8217;&#8216; </p>
  </dd></dl>
 <p> <i>Xterm</i> automatically searches the terminal database in this order for these entries and then sets the ``TERM&#8217;&#8216; variable (and the ``TERMCAP&#8217;&#8216; environment variable on a few older systems). The alternatives after ``xterm&#8217;&#8216; are very old, from the late 1980s. </p>
@@ -40,23 +40,23 @@ description: "xterm – terminal emulator for X"
 <p> Similarly, ``ansi&#8217;&#8216; and ``vt100&#8217;&#8216; are often equated. These are not really the same. For instance, they use different controls for scrolling (but <i>xterm</i> supports both). These features differ in an ``ansi&#8217;&#8216; terminal description from <i>xterm</i>: </p>
 <dl>
 <dt><code>acsc</code></dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  Pseudo-graphics (line-drawing) uses a different mapping. </p>
  </dd>
 <dt><code>xenl</code></dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  <i>Xterm</i> wraps text at the right margin using the VT100 ``newline glitch&#8217;&#8216; behavior. </p>
  </dd></dl>
 <p> Because of the wrapping behavior, you would occasionally have to repaint the screen when using a text editor with the ``ansi&#8217;&#8216; description. </p>
 <p> You may also use descriptions corresponding to the various supported emulations such as ``vt220&#8217;&#8216; or ``vt420&#8217;&#8216;, but should set the terminal emulation level with the <code>decTerminalID</code> resource. </p>
 <p> On most systems, <i>xterm</i> will use the terminfo database. Some older systems use termcap. (The ``TERMCAP&#8217;&#8216; environment variable is not set if <i>xterm</i> is linked against a terminfo library, since the requisite information is not provided by the termcap emulation of terminfo libraries). </p>
 <p> Many of the special <i>xterm</i> features may be modified under program control through a set of escape sequences different from the standard VT <i>xxx</i> escape sequences (see <i>Xterm Control Sequences</i>). </p>
-<p> The Tektronix 4014 emulation is also fairly good. It supports 12-bit graphics addressing, scaled to the window size. Four different font sizes and five different lines types are supported. There is no write-through or defocused mode support. The Tektronix text and graphics commands are recorded internally by <i>xterm</i> and may be written to a file by sending the COPY escape sequence (or through the <code>Tektronix</code> menu; see below). The name of the file will be <br />
-&nbsp;.sp <br />
+<p> The Tektronix 4014 emulation is also fairly good. It supports 12-bit graphics addressing, scaled to the window size. Four different font sizes and five different lines types are supported. There is no write-through or defocused mode support. The Tektronix text and graphics commands are recorded internally by <i>xterm</i> and may be written to a file by sending the COPY escape sequence (or through the <code>Tektronix</code> menu; see below). The name of the file will be <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>``COPY yyyy - MM - dd . hh : mm : ss ''
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4 </p>
 <p> where <i>yyyy</i>, <i>MM</i>, <i>dd</i>, <i>hh</i>, <i>mm</i> and <i>ss</i> are the year, month, day, hour, minute and second when the COPY was performed (the file is created in the directory <i>xterm</i> is started in, or the home directory for a login <i>xterm</i>). </p>
 <p> Not all of the features described in this manual are necessarily available in this version of <i>xterm</i>. Some (e.g., the non-VT220 extensions) are available only if they were compiled in, though the most commonly-used are in the default configuration.  </p>
@@ -75,28 +75,28 @@ description: "xterm – terminal emulator for X"
 <dd> <p> This causes <i>xterm</i> to print a version number to the standard output, and then exit. </p>
  </dd>
 <dt><code>-help</code></dt>
-<dd> <p> This causes <i>xterm</i> to print out a verbose message describing its options, one per line. The message is written to the standard output. After printing the message, <i>xterm</i> exits. <i>Xterm</i> generates this message, sorting it and noting whether a ``<code>-</code><i>option</i>&#8216;&#8216; or a ``<code>+</code><i>option</i>&#8216;&#8216; turns the feature on or off, since some features historically have been one or the other. <i>Xterm</i> generates a concise help message (multiple options per line) when an unknown option is used, e.g., <br />
-&nbsp;.sp <br />
+<dd> <p> This causes <i>xterm</i> to print out a verbose message describing its options, one per line. The message is written to the standard output. After printing the message, <i>xterm</i> exits. <i>Xterm</i> generates this message, sorting it and noting whether a ``<code>-</code><i>option</i>&#8216;&#8216; or a ``<code>+</code><i>option</i>&#8216;&#8216; turns the feature on or off, since some features historically have been one or the other. <i>Xterm</i> generates a concise help message (multiple options per line) when an unknown option is used, e.g., <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>xterm -z
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4 </p>
  </dd>
 <dd> <p> If the logic for a particular option such as logging is not compiled into <i>xterm</i>, the help text for that option also is not displayed by the <code>-help</code> option. </p>
  </dd></dl>
 <p> The <code>-version</code> and <code>-help</code> options are interpreted even if <i>xterm</i> cannot open the display, and are useful for testing and configuration scripts. Along with <code>-class</code>, they are checked before other options. To do this, <i>xterm</i> has its own (much simpler) argument parser, along with a table of the X Toolkit&#8217;s built-in list of options. </p>
-<p> Relying upon the X Toolkit to parse the options and associated values has the advantages of simplicity and good integration with the X resource mechanism. There are a few drawbacks <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 <i>Xterm</i> cannot tell easily whether a resource value was set by one of the external resource- or application-defaults files, whether it was set using <code><a href="/docs/linux/man/1-xrdb/">xrdb</a></code>(1), or if it was set through the <code>-xrm</code> option or via some directly relevant command-line option. <i>Xterm</i> sees only the end-result: a value supplied when creating its widgets. <br />
+<p> Relying upon the X Toolkit to parse the options and associated values has the advantages of simplicity and good integration with the X resource mechanism. There are a few drawbacks <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 <i>Xterm</i> cannot tell easily whether a resource value was set by one of the external resource- or application-defaults files, whether it was set using <code><a href="/docs/linux/man/1-xrdb/">xrdb</a></code>(1), or if it was set through the <code>-xrm</code> option or via some directly relevant command-line option. <i>Xterm</i> sees only the end-result: a value supplied when creating its widgets. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 <i>Xterm</i> does not know the order in which particular options and items in resource files are evaluated. Rather, it sees all of the values for a given widget at the same time. In the design of these options, some are deemed more important, and can override other options. </p>
 <dl>
-<dd> <p> The X Toolkit uses patterns (constants and wildcards) to match resources. Once a particular pattern has been used, it will not modify it. To override a given setting, a more-specific pattern must be used, e.g., replacing ``*&#8216;&#8216; with ``.&#8216;&#8216;. Some poorly-designed resource files are too specific to allow the command-line options to affect the relevant widget values. <br />
+<dd> <p> The X Toolkit uses patterns (constants and wildcards) to match resources. Once a particular pattern has been used, it will not modify it. To override a given setting, a more-specific pattern must be used, e.g., replacing ``*&#8216;&#8216; with ``.&#8216;&#8216;. Some poorly-designed resource files are too specific to allow the command-line options to affect the relevant widget values. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 In a few cases, the X Toolkit combines its standard options in ways which do not work well with <i>xterm</i>. This happens with the color (<code>-fg</code>, <code>-bg</code>) and reverse (<code>-rv</code>) options. <i>Xterm</i> makes a special case of these and adjusts its sense of ``reverse&#8217;&#8216; to lessen user surprise. </p>
  </dd></dl>
-<p> One parameter (after all options) may be given. That overrides <i>xterm</i>&#8216;s built-in choice of shell program: <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 If the parameter is not a relative path, i.e., beginning with ``./&#8216;&#8216; or ``../&#8216;&#8216;, <i>xterm</i> looks for the file in the user&#8217;s PATH. In either case, this check fails if <i>xterm</i> cannot construct an absolute path. <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 If that check fails (or if no such parameter is given), <i>xterm</i> next checks the ``SHELL&#8217;&#8216; variable. If that specifies an executable file, <i>xterm</i> will attempt to start that. However, <i>xterm</i> additionally checks if it is a valid shell, and will unset ``SHELL&#8217;&#8216; if it is not. <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 If ``SHELL&#8217;&#8216; is not set to an executable file, <i>xterm</i> tries to use the shell program specified in the user&#8217;s password file entry. As before, <i>xterm</i> verifies if this is a valid shell. <br />
+<p> One parameter (after all options) may be given. That overrides <i>xterm</i>&#8216;s built-in choice of shell program: <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 If the parameter is not a relative path, i.e., beginning with ``./&#8216;&#8216; or ``../&#8216;&#8216;, <i>xterm</i> looks for the file in the user&#8217;s PATH. In either case, this check fails if <i>xterm</i> cannot construct an absolute path. <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 If that check fails (or if no such parameter is given), <i>xterm</i> next checks the ``SHELL&#8217;&#8216; variable. If that specifies an executable file, <i>xterm</i> will attempt to start that. However, <i>xterm</i> additionally checks if it is a valid shell, and will unset ``SHELL&#8217;&#8216; if it is not. <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 If ``SHELL&#8217;&#8216; is not set to an executable file, <i>xterm</i> tries to use the shell program specified in the user&#8217;s password file entry. As before, <i>xterm</i> verifies if this is a valid shell. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 Finally, if the password file entry does not specify a valid shell, <i>xterm</i> uses <i>/bin/sh</i>. </p>
 <p> The <code>-e</code> option cannot be used with this parameter since it uses all parameters following the option. </p>
 <p> <i>Xterm</i> validates shell programs by finding their pathname in the text file <code>/etc/shells</code>. It treats the environment variable ``SHELL&#8217;&#8216; specially because (like ``TERM&#8217;&#8216;), <i>xterm</i> both reads and updates the variable, and because the program started by <i>xterm</i> is not necessarily a shell. </p>
@@ -324,11 +324,11 @@ description: "xterm – terminal emulator for X"
  </dd>
 <dd> <p> The value ``default&#8217;&#8216;, suppresses the associated resources </p>
  </dd>
-<dd> <p> <code>hpFunctionKeys</code>, <br />
- <code>scoFunctionKeys</code>, <br />
- <code>sunFunctionKeys</code>, <br />
- <code>tcapFunctionKeys</code>, <br />
- <code>oldXtermFKeys</code> and <br />
+<dd> <p> <code>hpFunctionKeys</code>, <br/>
+ <code>scoFunctionKeys</code>, <br/>
+ <code>sunFunctionKeys</code>, <br/>
+ <code>tcapFunctionKeys</code>, <br/>
+ <code>oldXtermFKeys</code> and <br/>
  <code>sunKeyboard</code>, </p>
  </dd>
 <dd> <p> using the Sun/PC keyboard layout. </p>
@@ -341,24 +341,24 @@ description: "xterm – terminal emulator for X"
 <dd> <p> Unless overridden by the <code>-lf</code> option or the <code>logFile</code> resource: </p>
  </dd>
 <dl>
-<dd> <p> <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 If the filename is ``-&#8216;&#8216;, then logging is sent to the standard output. <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 Otherwise a filename is generated, and the log file is written to the directory from which <i>xterm</i> is invoked. <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 The generated filename is of the form <br />
-&nbsp;.sp <br />
+<dd> <p> <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 If the filename is ``-&#8216;&#8216;, then logging is sent to the standard output. <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 Otherwise a filename is generated, and the log file is written to the directory from which <i>xterm</i> is invoked. <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 The generated filename is of the form <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>XtermLog. XXXXXX 
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4 </p>
  </dd>
 <dl>
-<dd> <p> or <br />
-&nbsp;.sp <br />
+<dd> <p> or <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>Xterm.log. hostname.yyyy.mm.dd.hh.mm.ss.XXXXXX 
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4 </p>
  </dd>
 <dd> <p> depending on how <i>xterm</i> was built. </p>
@@ -391,12 +391,12 @@ description: "xterm – terminal emulator for X"
  </dd>
 <dd> <p> The <code>-ls</code> flag and the <code>loginShell</code> resource are ignored if <code>-e</code> is also given, because <i>xterm</i> does not know how to make the shell start the given command after whatever it does when it is a login shell - the user&#8217;s shell of choice need not be a Bourne shell after all. Also, <i>xterm -e</i> is supposed to provide a consistent functionality for other applications that need to start text-mode programs in a window, and if <code>loginShell</code> were not ignored, the result of ~/.profile might interfere with that. </p>
  </dd>
-<dd> <p> If you do want the effect of <code>-ls</code> and <code>-e</code> simultaneously, you may get away with something like <br />
-&nbsp;.sp <br />
+<dd> <p> If you do want the effect of <code>-ls</code> and <code>-e</code> simultaneously, you may get away with something like <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>xterm -e /bin/bash -l -c &quot;my command here&quot;
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4 </p>
  </dd>
 <dd> <p> Finally, <code>-ls</code> is not completely ignored, because <i>xterm -ls -e</i> does write a <i>/var/log/wtmp</i> entry (if configured to do so), whereas <i>xterm -e</i> does not. </p>
@@ -555,11 +555,11 @@ description: "xterm – terminal emulator for X"
  </dd>
 <dd> <p> Terminal database (<i>terminfo</i> (5) or <i>termcap</i> (5)) entries that work with <i>xterm</i> are: </p>
  </dd>
-<dd> <p> ``tek4014&#8217;&#8216;, <br />
- ``tek4015&#8217;&#8216;, <br />
- ``tek4012&#8217;&#8216;, <br />
- ``tek4013&#8217;&#8216;, <br />
- ``tek4010&#8217;&#8216;, and <br />
+<dd> <p> ``tek4014&#8217;&#8216;, <br/>
+ ``tek4015&#8217;&#8216;, <br/>
+ ``tek4012&#8217;&#8216;, <br/>
+ ``tek4013&#8217;&#8216;, <br/>
+ ``tek4010&#8217;&#8216;, and <br/>
  ``dumb&#8217;&#8216;. </p>
  </dd>
 <dd> <p> <i>Xterm</i> automatically searches the terminal database in this order for these entries and then sets the ``TERM&#8217;&#8216; variable (and the ``TERMCAP&#8217;&#8216; environment variable, if relevant). </p>
@@ -643,14 +643,14 @@ description: "xterm – terminal emulator for X"
 <dd> <p> This option indicates that this window should receive console output. This is not supported on all systems. To obtain console output, you must be the owner of the console device, and you must have read and write permission for it. If you are running X under <i>xdm</i> on the console screen you may need to have the session startup and reset programs explicitly change the ownership of the console device in order to get this option to work. </p>
  </dd>
 <dt><code>-S</code><i>ccn</i></dt>
-<dd> <p> This option allows <i>xterm</i> to be used as an input and output channel for an existing program and is sometimes used in specialized applications. The option value specifies the last few letters of the name of a pseudo-terminal to use in slave mode, plus the number of the inherited file descriptor. If the option contains a ``/&#8216;&#8216; character, that delimits the characters used for the pseudo-terminal name from the file descriptor. Otherwise, exactly two characters are used from the option for the pseudo-terminal name, the remainder is the file descriptor. Examples (the first two are equivalent since the descriptor follows the last ``/&#8216;&#8216;): <br />
-&nbsp;.sp <br />
+<dd> <p> This option allows <i>xterm</i> to be used as an input and output channel for an existing program and is sometimes used in specialized applications. The option value specifies the last few letters of the name of a pseudo-terminal to use in slave mode, plus the number of the inherited file descriptor. If the option contains a ``/&#8216;&#8216; character, that delimits the characters used for the pseudo-terminal name from the file descriptor. Otherwise, exactly two characters are used from the option for the pseudo-terminal name, the remainder is the file descriptor. Examples (the first two are equivalent since the descriptor follows the last ``/&#8216;&#8216;): <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>-S/dev/pts/123/45
 -S123/45
 -Sab34
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4 </p>
  </dd>
 <dd> <p> Note that <i>xterm</i> does not close any file descriptor which it did not open for its own use. It is possible (though probably not portable) to have an application which passes an open file descriptor down to <i>xterm</i> past the initialization or the <code>-S</code> option to a process running in the <i>xterm</i>. </p>
@@ -716,7 +716,7 @@ description: "xterm – terminal emulator for X"
 <dd> <p> The normal geometry specification can be suffixed with <code>@</code> followed by a Xinerama screen specification; it can be either <code>g</code> for the global screen (default), <code>c</code> for the current screen or a screen number. </p>
  </dd>
 <dt><code>-iconic</code></dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  This option indicates that <i>xterm</i> should ask the window manager to start it as an icon rather than as the normal window. The corresponding resource name is <i>iconic</i>. </p>
  </dd>
 <dt><code>-name </code><i>name</i></dt>
@@ -736,16 +736,16 @@ description: "xterm – terminal emulator for X"
 <dt><code>-xrm </code><i>resourcestring</i></dt>
 <dd> <p> This option specifies a resource string to be used. This is especially useful for setting resources that do not have separate command line options. </p>
  </dd></dl>
-<p> X Toolkit accepts alternate names for a few of these options, e.g., <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 ``<code>-background</code>&#8216;&#8216; for ``<code>-bg</code>&#8216;&#8216; <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 ``<code>-font</code>&#8216;&#8216; for ``<code>-fn</code>&#8216;&#8216; <br />
+<p> X Toolkit accepts alternate names for a few of these options, e.g., <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 ``<code>-background</code>&#8216;&#8216; for ``<code>-bg</code>&#8216;&#8216; <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 ``<code>-font</code>&#8216;&#8216; for ``<code>-fn</code>&#8216;&#8216; <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 ``<code>-foreground</code>&#8216;&#8216; for ``<code>-fg</code>&#8216;&#8216; </p>
 <p> Abbreviated options also are supported, e.g., ``<code>-v</code>&#8216;&#8216; for ``<code>-version</code>.&#8216;&#8216;  </p>
 <h2>RESOURCES</h2>
-<p> <i>Xterm</i> understands all of the core X Toolkit resource names and classes. It also uses the X Toolkit resource types (such as booleans, colors, fonts, integers, and strings) along with their respective converters. Those resource types are not always sufficient: <br />
+<p> <i>Xterm</i> understands all of the core X Toolkit resource names and classes. It also uses the X Toolkit resource types (such as booleans, colors, fonts, integers, and strings) along with their respective converters. Those resource types are not always sufficient: <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 <i>Xterm</i>&#8216;s resource values may be lists of names. X Toolkit resource types do not include lists. <i>Xterm</i> uses a string for the resource, and parses it. </p>
 <dl>
-<dd> <p> Comma-separated lists of names ignore case. <br />
+<dd> <p> Comma-separated lists of names ignore case. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 <i>Xterm</i> may defer processing a resource until it is needed. For example, <code>font2</code> through <code>font7</code> are loaded as needed, to start faster. Again, the actual resource type is a string, parsed and used when needed. </p>
  </dd></dl>
 <p> Application specific resources (e.g., ``<code>XTerm.</code><i>NAME</i>&#8216;&#8216;) follow:  </p>
@@ -757,19 +757,19 @@ description: "xterm – terminal emulator for X"
 <dd> <p> Here are tables showing how the initial settings for </p>
  </dd>
 <dl>
-<dd> <p> <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>backarrowKeyIsErase</code> (BKIE), <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>backarrowKey</code> (BK), and <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>ptyInitialErase</code> (PIE), along with the <br />
+<dd> <p> <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>backarrowKeyIsErase</code> (BKIE), <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>backarrowKey</code> (BK), and <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>ptyInitialErase</code> (PIE), along with the <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 <i>stty</i> erase character (^H for backspace, ^? for delete) </p>
  </dd></dl>
 <dd> <p> will affect DECBKM. First, <i>xterm</i> obtains the initial <i>erase</i> character: </p>
  </dd>
 <dl>
-<dd> <p> <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 <i>xterm</i>&#8216;s internal value is ^H <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 <i>xterm</i> asks the operating system for the value which <code>stty</code> shows <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 the <code>ttyModes</code> resource may override <i>erase</i> <br />
+<dd> <p> <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 <i>xterm</i>&#8216;s internal value is ^H <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 <i>xterm</i> asks the operating system for the value which <code>stty</code> shows <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 the <code>ttyModes</code> resource may override <i>erase</i> <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 if <code>ptyInitialErase</code> is false, <i>xterm</i> will look in the terminal database </p>
  </dd></dl>
 <dd> <p> Summarizing that as a table: </p>
@@ -845,10 +845,10 @@ description: "xterm – terminal emulator for X"
 <dd> <p> Using that <i>erase</i> character, <i>xterm</i> allows further choices: </p>
  </dd>
 <dl>
-<dd> <p> <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 if <code>backarrowKeyIsErase</code> is true, <i>xterm</i> uses the <i>erase</i> character for the initial state of <code>DECBKM</code> <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 if <code>backarrowKeyIsErase</code> is false, <i>xterm</i> sets <code>DECBKM</code> to 2 (internal). This ties together <code>backarrowKey</code> and the control sequence for <code>DECBKM</code>. <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 applications can send a control sequence to set/reset <code>DECBKM</code> control set <br />
+<dd> <p> <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 if <code>backarrowKeyIsErase</code> is true, <i>xterm</i> uses the <i>erase</i> character for the initial state of <code>DECBKM</code> <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 if <code>backarrowKeyIsErase</code> is false, <i>xterm</i> sets <code>DECBKM</code> to 2 (internal). This ties together <code>backarrowKey</code> and the control sequence for <code>DECBKM</code>. <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 applications can send a control sequence to set/reset <code>DECBKM</code> control set <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 the ``Backarrow Key (BS/DEL)&#8216;&#8216; menu entry toggles <code>DECBKM</code> </p>
  </dd></dl>
 <dd> <p> Summarizing the initialization details: </p>
@@ -945,8 +945,8 @@ description: "xterm – terminal emulator for X"
 <dd> <p> The cursor theme feature can be useful because X cursors are not scalable and on a high-resolution display, the cursors are hard to find. Some of the cursor themes include larger cursors to work around this limitation: </p>
  </dd>
 <dl>
-<dd> <p> <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 The default core cursors are 8x8 pixels; <br />
+<dd> <p> <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 The default core cursors are 8x8 pixels; <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 Some cursor themes include cursors up to the X server limit of 64x64 pixels. </p>
  </dd></dl>
 <dd> <p> At startup, <i>xterm</i> sets the <code>XCURSOR_THEME</code> environment variable to enable or disable the cursor theme feature. The default value is ``none&#8217;&#8216;. Other values (including ``default&#8217;&#8216;) are passed to the Xcursor library to select a cursor theme. </p>
@@ -991,10 +991,10 @@ description: "xterm – terminal emulator for X"
 <dd> <p> If the <code>iconHint</code> resource is given (or is set via the <code>-n</code> option) <i>xterm</i> searches for a pixmap file with that name, in the current directory as well as in /usr/share/pixmaps. if the resource does not specify an absolute pathname. In each case, <i>xterm</i> adds ``_48x48&#8217;&#8216; and/or ``.xpm&#8217;&#8216; to the filename after trying without those suffixes. If it is able to load the file, <i>xterm</i> sets the window manager hint for the icon-pixmap. These pixmaps are distributed with <i>xterm</i>, and can optionally be compiled-in: </p>
  </dd>
 <dl>
-<dd> <p> <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 mini.xterm_16x16, mini.xterm_32x32, mini.xterm_48x48 <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 filled-xterm_16x16, filled-xterm_32x32, filled-xterm_48x48 <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 xterm_16x16, xterm_32x32, xterm_48x48 <br />
+<dd> <p> <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 mini.xterm_16x16, mini.xterm_32x32, mini.xterm_48x48 <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 filled-xterm_16x16, filled-xterm_32x32, filled-xterm_48x48 <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 xterm_16x16, xterm_32x32, xterm_48x48 <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 xterm-color_16x16, xterm-color_32x32, xterm-color_48x48 </p>
  </dd></dl>
 <dd> <p> In either case, <i>xterm</i> allows for adding a ``_48x48&#8217;&#8216; to specify the largest of the pixmaps as a default. That is, ``mini.xterm&#8217;&#8216; is the same as ``mini.xterm_48x48&#8217;&#8216;. </p>
@@ -1384,8 +1384,8 @@ description: "xterm – terminal emulator for X"
 <dd> <p> A few programs, e.g., <i>vim</i>, use this feature to get an accurate description of the terminal&#8217;s capabilities, independent of the termcap/terminfo setting: </p>
  </dd>
 <dl>
-<dd> <p> <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 <i>Xterm</i> can tell the querying program how many colors it supports. This is a constant, depending on how it is compiled, typically 16. It does not change if you alter resource settings, e.g., the <code>boldColors</code> resource. <br />
+<dd> <p> <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 <i>Xterm</i> can tell the querying program how many colors it supports. This is a constant, depending on how it is compiled, typically 16. It does not change if you alter resource settings, e.g., the <code>boldColors</code> resource. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 <i>Xterm</i> can tell the querying program what strings are sent by modified (shift-, control-, alt-) function- and keypad-keys. Reporting control- and alt-modifiers is a feature that relies on the <i>ncurses</i> extended naming. </p>
  </dd></dl>
 <dt><code>allowTitleOps</code> (class <code> AllowTitleOps</code>) </dt>
@@ -1401,8 +1401,8 @@ description: "xterm – terminal emulator for X"
 <dd> <p> This is an additional keyboard operation that may be processed after the logic for <code>metaSendsEscape</code>. It is only available if the <code>altIsNotMeta</code> resource is set. </p>
  </dd>
 <dl>
-<dd> <p> <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 If ``true&#8217;&#8216;, Alt characters (a character combined with the modifier associated with left/right Alt-keys) are converted into a two-character sequence with the character itself preceded by ESC. This applies as well to function key control sequences, unless <i>xterm</i> sees that <code>Alt</code> is used in your key translations. <br />
+<dd> <p> <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 If ``true&#8217;&#8216;, Alt characters (a character combined with the modifier associated with left/right Alt-keys) are converted into a two-character sequence with the character itself preceded by ESC. This applies as well to function key control sequences, unless <i>xterm</i> sees that <code>Alt</code> is used in your key translations. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 If ``false&#8217;&#8216;, Alt characters input from the keyboard cause a shift to 8-bit characters (just like <code>metaSendsEscape</code>). By combining the Alt- and Meta-modifiers, you can create corresponding combinations of ESC-prefix and 8-bit characters. </p>
  </dd></dl>
 <dd> <p> The default is ``False&#8217;&#8216;. <i>Xterm</i> provides a menu option for toggling this resource. </p>
@@ -1463,8 +1463,8 @@ description: "xterm – terminal emulator for X"
 </table>
  </dd>
 <dl>
-<dd> <p> This resource is used only for bitmap fonts: <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 When using bitmap fonts, it is possible that the font server will approximate the bold font by rescaling it from a different font size than expected. The <code>alwaysBoldMode</code> resource allows the user to override the (sometimes poor) resulting bold font with overstriking (which is at least consistent). <br />
+<dd> <p> This resource is used only for bitmap fonts: <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 When using bitmap fonts, it is possible that the font server will approximate the bold font by rescaling it from a different font size than expected. The <code>alwaysBoldMode</code> resource allows the user to override the (sometimes poor) resulting bold font with overstriking (which is at least consistent). <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 The problem does not occur with TrueType fonts (though there can be other unnecessary issues such as different coverage of the normal and bold fonts). </p>
  </dd></dl>
 <dd> <p> As an alternative, setting the <code>allowBoldFonts</code> resource to false overrides both the <code>alwaysBoldMode</code> and the <code>boldMode</code> resources. </p>
@@ -1530,20 +1530,20 @@ description: "xterm – terminal emulator for X"
  </dd>
 <dd> <p> See the <code>alwaysBoldMode</code> resource which can modify the behavior of this resource. </p>
  </dd>
-<dd> <p> Although <i>xterm</i> attempts to derive a bold font for other font selections, the font server may not cooperate. Since X11R6, bitmap fonts have been scaled. The font server claims to provide the bold font that <i>xterm</i> requests, but the result is not always readable. XFree86 introduced a feature which can be used to suppress the scaling. In the X server&#8217;s configuration file (e.g., ``/etc/X11/XFree86&#8217;&#8216; or ``/etc/X11/xorg.conf&#8217;&#8216;), you can add ``:unscaled&#8217;&#8216; to the end of the directory specification for the ``misc&#8217;&#8216; fonts, which comprise the fixed-pitch fonts that are used by <i>xterm</i>. For example <br />
-&nbsp;.sp <br />
+<dd> <p> Although <i>xterm</i> attempts to derive a bold font for other font selections, the font server may not cooperate. Since X11R6, bitmap fonts have been scaled. The font server claims to provide the bold font that <i>xterm</i> requests, but the result is not always readable. XFree86 introduced a feature which can be used to suppress the scaling. In the X server&#8217;s configuration file (e.g., ``/etc/X11/XFree86&#8217;&#8216; or ``/etc/X11/xorg.conf&#8217;&#8216;), you can add ``:unscaled&#8217;&#8216; to the end of the directory specification for the ``misc&#8217;&#8216; fonts, which comprise the fixed-pitch fonts that are used by <i>xterm</i>. For example <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>FontPath &quot;/usr/lib/X11/fonts/misc/&quot;
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4 </p>
  </dd>
-<dd> <p> would become <br />
-&nbsp;.sp <br />
+<dd> <p> would become <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>FontPath &quot;/usr/lib/X11/fonts/misc/:unscaled&quot;
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4 </p>
  </dd>
 <dd> <p> Depending on your configuration, the font server may have its own configuration file. The same ``:unscaled&#8217;&#8216; can be added to its configuration file at the end of the directory specification for ``misc&#8217;&#8216;. </p>
@@ -1562,10 +1562,10 @@ description: "xterm – terminal emulator for X"
 <dd> <p> <i>Xterm</i>&#8216;s state parser recognizes several types of control strings which can contain text, e.g., </p>
  </dd>
 <dl>
-<dd> <p> <code>APC</code> (Application Program Command), <br />
- <code>DCS</code> (Device Control String), <br />
- <code>OSC</code> (Operating System Command), <br />
- <code>PM</code> (Privacy Message), and <br />
+<dd> <p> <code>APC</code> (Application Program Command), <br/>
+ <code>DCS</code> (Device Control String), <br/>
+ <code>OSC</code> (Operating System Command), <br/>
+ <code>PM</code> (Privacy Message), and <br/>
  <code>SOS</code> (Start of String), </p>
  </dd></dl>
 <dd> <p> Each should end with a string-terminator (a special character which cannot appear in these strings). Ordinary control characters found within the string are not ignored; they are processed without interfering with the process of accumulating the control string&#8217;s content. <i>Xterm</i> recognizes these controls in all modes, although some of the functions may be suppressed after parsing the control. </p>
@@ -1573,16 +1573,16 @@ description: "xterm – terminal emulator for X"
 <dd> <p> When enabled, this feature allows the user to exit from an unterminated control string when any of these ordinary control characters are found: </p>
  </dd>
 <dl>
-<dd> <p> control/D (used as an end of file in many shells), <br />
- control/H (backspace), <br />
- control/I (tab-feed), <br />
- control/J (line feed aka newline), <br />
- control/K (vertical tab), <br />
- control/L (form feed), <br />
- control/M (carriage return), <br />
- control/N (shift-out), <br />
- control/O (shift-in), <br />
- control/Q (XOFF), <br />
+<dd> <p> control/D (used as an end of file in many shells), <br/>
+ control/H (backspace), <br/>
+ control/I (tab-feed), <br/>
+ control/J (line feed aka newline), <br/>
+ control/K (vertical tab), <br/>
+ control/L (form feed), <br/>
+ control/M (carriage return), <br/>
+ control/N (shift-out), <br/>
+ control/O (shift-in), <br/>
+ control/Q (XOFF), <br/>
  control/X (cancel) </p>
  </dd></dl>
 <dt><code>c132</code> (class <code> C132</code>) </dt>
@@ -1612,13 +1612,13 @@ description: "xterm – terminal emulator for X"
 <dd> <p> The default for this resource is ``false&#8217;&#8216;. </p>
  </dd>
 <dt><code>charClass</code> (class <code> CharClass</code>) </dt>
-<dd> <p> Specifies comma-separated lists of character class bindings of the form <br />
-&nbsp;.sp <br />
+<dd> <p> Specifies comma-separated lists of character class bindings of the form <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>
  low [- high] [: value ].
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4 </p>
  </dd>
 <dd> <p> These are used in determining which sets of characters should be treated the same when doing cut and paste. See the <code>CHARACTER CLASSES</code> section. </p>
@@ -1695,8 +1695,8 @@ description: "xterm – terminal emulator for X"
 <dd> <p> These specify the colors for the 256-color extension. The default resource values are for </p>
  </dd>
 <dl>
-<dd> <p> <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 colors 16 through 231 to make a 6x6x6 color cube, and <br />
+<dd> <p> <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 colors 16 through 231 to make a 6x6x6 color cube, and <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 colors 232 through 255 to make a grayscale ramp. </p>
  </dd></dl>
 <dd> <p> Resources past <code>color15</code> are available as a compile-time option. Due to a hardcoded limit in the X libraries on the total number of resources (to 400), the resources for 256-colors are omitted when wide-character support and <i>luit</i> are enabled. Besides inconsistent behavior if only part of the resources were allowed, determining the exact cutoff is difficult, and the X libraries tend to crash if the number of resources exceeds the limit. The color palette is still initialized to the same default values, and can be modified via control sequences. </p>
@@ -1733,8 +1733,8 @@ description: "xterm – terminal emulator for X"
 <dd> <p> Note that: </p>
  </dd>
 <dl>
-<dd> <p> <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 Setting <code>colorMode</code> off disables all colors, including italic. <br />
+<dd> <p> <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 Setting <code>colorMode</code> off disables all colors, including italic. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 The <code>italicULMode</code> resource overrides <code>colorITMode</code>. </p>
  </dd></dl>
 <dt><code>colorInnerBorder</code> (class <code> ColorInnerBorder</code>) </dt>
@@ -1797,8 +1797,8 @@ description: "xterm – terminal emulator for X"
 <dd> <p> <i>Xterm</i> uses two inputs to determine whether the cursor blinks: </p>
  </dd>
 <dl>
-<dd> <p> <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 The <code>cursorBlink</code> resource (which can be altered with a menu entry). <br />
+<dd> <p> <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 The <code>cursorBlink</code> resource (which can be altered with a menu entry). <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 Control sequences (private mode 12 and DECSCUSR). </p>
  </dd></dl>
 <dd> <p> The <code>cursorBlinkXOR</code> resource determines how those inputs are combined: </p>
@@ -1807,11 +1807,11 @@ description: "xterm – terminal emulator for X"
 <dd>  </dd>
 <dl>
 <dt>false</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  <i>Xterm</i> uses the logical-OR of the two variables. If either is set, <i>xterm</i> makes the cursor blink. </p>
  </dd>
 <dt>true</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  <i>Xterm</i> uses the logical-XOR of the two variables. If only one is set, <i>xterm</i> makes the cursor blink. </p>
  </dd></dl>
 </dl>
@@ -1856,9 +1856,9 @@ description: "xterm – terminal emulator for X"
 <dd> <p> Specifies what the <i>Delete</i> key on the editing keypad should send when pressed. The resource value is a string, evaluated as a boolean after startup. <i>Xterm</i> uses it in conjunction with the <code>keyboardType</code> resource: </p>
  </dd>
 <dl>
-<dd> <p> <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 If the keyboard type is ``default&#8217;&#8216;, or ``vt220&#8217;&#8216; and the resource is either ``true&#8217;&#8216; or ``maybe&#8217;&#8216; send the VT220-style <i>Remove</i> escape sequence. Otherwise, send DEL (127). <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 If the keyboard type is ``legacy&#8217;&#8216;, and the resource is ``true&#8217;&#8216; send DEL. Otherwise, send the <i>Remove</i> sequence. <br />
+<dd> <p> <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 If the keyboard type is ``default&#8217;&#8216;, or ``vt220&#8217;&#8216; and the resource is either ``true&#8217;&#8216; or ``maybe&#8217;&#8216; send the VT220-style <i>Remove</i> escape sequence. Otherwise, send DEL (127). <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 If the keyboard type is ``legacy&#8217;&#8216;, and the resource is ``true&#8217;&#8216; send DEL. Otherwise, send the <i>Remove</i> sequence. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 Otherwise, if the keyboard type is none of these special cases, send DEL (127). </p>
  </dd></dl>
 <dd> <p> The default is ``Maybe&#8217;&#8216;. The resource is allowed to be a non-boolean ``maybe&#8217;&#8216; so that the popup menu <code>Delete is DEL</code> entry does not override the keyboard type. </p>
@@ -1888,12 +1888,12 @@ description: "xterm – terminal emulator for X"
  </dd></dl>
 </dl>
 <dt><code>disallowedFontOps</code> (class <code> DisallowedFontOps</code>) </dt>
-<dd> <p> Specify which features will be disabled if <code>allowFontOps</code> is false. This is a comma-separated list of names. The default value is <br />
-&nbsp;.sp <br />
+<dd> <p> Specify which features will be disabled if <code>allowFontOps</code> is false. This is a comma-separated list of names. The default value is <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>SetFont,GetFont
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4 </p>
  </dd>
 <dd> <p> The names are listed below. <i>Xterm</i> ignores capitalization, but they are shown in mixed-case for clarity. </p>
@@ -1951,12 +1951,12 @@ description: "xterm – terminal emulator for X"
 <dt><code>disallowedPasteControls</code> (class <code> DisallowedPasteControls</code>) </dt>
 <dd> <p> The <code>allowPasteControls</code> resource is normally used to prevent pasting C1 controls, as well as non-formatting C0 controls such as the ASCII escape character. Those characters are simply ignored. This resource further extends the set of control characters which cannot be pasted, converting each into a space. </p>
  </dd>
-<dd> <p> The resource value is a comma-separated list of names. <i>Xterm</i> ignores capitalization. The default value is <br />
-&nbsp;.sp <br />
+<dd> <p> The resource value is a comma-separated list of names. <i>Xterm</i> ignores capitalization. The default value is <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>BS,DEL,ENQ,EOT,ESC,NUL
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4 </p>
  </dd>
 <dd> <p> The names are listed below: </p>
@@ -1978,12 +1978,12 @@ description: "xterm – terminal emulator for X"
  </dd></dl>
 </dl>
 <dt><code>disallowedTcapOps</code> (class <code> DisallowedTcapOps</code>) </dt>
-<dd> <p> Specify which features will be disabled if <code>allowTcapOps</code> is false. This is a comma-separated list of names. The default value is <br />
-&nbsp;.sp <br />
+<dd> <p> Specify which features will be disabled if <code>allowTcapOps</code> is false. This is a comma-separated list of names. The default value is <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>SetTcap,GetTcap
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4 </p>
  </dd>
 <dd> <p> The names are listed below. <i>Xterm</i> ignores capitalization, but they are shown in mixed-case for clarity. </p>
@@ -1999,13 +1999,13 @@ description: "xterm – terminal emulator for X"
  </dd></dl>
 </dl>
 <dt><code>disallowedWindowOps</code> (class <code> DisallowedWindowOps</code>) </dt>
-<dd> <p> Specify which features will be disabled if <code>allowWindowOps</code> is false. This is a comma-separated list of names, or (for the controls adapted from <i>dtterm</i> the operation number). The default value is <br />
-&nbsp;.sp <br />
+<dd> <p> Specify which features will be disabled if <code>allowWindowOps</code> is false. This is a comma-separated list of names, or (for the controls adapted from <i>dtterm</i> the operation number). The default value is <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>1,2,3,4,5,6,7,8,9,11,13,14,18,19,20,21,GetSelection,SetSelection,SetWinLines,SetXprop
 (i.e., no operations are allowed).
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4 </p>
  </dd>
 <dd> <p> The names are listed below. <i>Xterm</i> ignores capitalization, but they are shown in mixed-case for clarity. Where a number can be used as an alternative, it is given in parentheses after the name. </p>
@@ -2145,32 +2145,32 @@ description: "xterm – terminal emulator for X"
 <dt><code>faceName</code> (class <code> FaceName</code>) </dt>
 <dd> <p> Specify the pattern for scalable fonts selected from the FreeType library if support for that library was compiled into <i>xterm</i>. There is no default value. </p>
  </dd>
-<dd> <p> One or more fonts can be specified, separated by commas. If prefixed with ``x:&#8216;&#8216; or ``x11:&#8216;&#8216; the specification applies to the XLFD <code>font</code> resource. A ``xft:&#8216;&#8216; prefix is accepted but unnecessary since a missing prefix for <code>faceName</code> means that it will be used for TrueType. For example, <br />
-&nbsp;.sp <br />
+<dd> <p> One or more fonts can be specified, separated by commas. If prefixed with ``x:&#8216;&#8216; or ``x11:&#8216;&#8216; the specification applies to the XLFD <code>font</code> resource. A ``xft:&#8216;&#8216; prefix is accepted but unnecessary since a missing prefix for <code>faceName</code> means that it will be used for TrueType. For example, <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>XTerm*faceName: x:fixed,xft:Bitstream Vera Sans Mono
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4 </p>
  </dd>
 <dd> <p> If no <code>faceName</code> resource is specified, or if there is no match for both TrueType normal and bold fonts, <i>xterm</i> uses the XLFD (bitmap) <code>font</code> and related resources. </p>
  </dd>
-<dd> <p> It is possible to select suitable bitmap fonts using a script such as this: <br />
-&nbsp;.sp <br />
+<dd> <p> It is possible to select suitable bitmap fonts using a script such as this: <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>#!/bin/sh
 FONT=`xfontsel -print`
 test -n &quot;$FONT&quot; &amp;&amp; xfd -fn &quot;$FONT&quot;
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4 </p>
  </dd>
-<dd> <p> However (even though <i>xfd</i> accepts a ``<code>-fa</code>&#8216;&#8216; option to denote FreeType fonts), <i>xfontsel</i> has not been similarly extended. As a workaround, you may try <br />
-&nbsp;.sp <br />
+<dd> <p> However (even though <i>xfd</i> accepts a ``<code>-fa</code>&#8216;&#8216; option to denote FreeType fonts), <i>xfontsel</i> has not been similarly extended. As a workaround, you may try <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>fc-list :scalable=true:spacing=mono: family
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4 </p>
  </dd>
 <dd> <p> to find a list of scalable fixed-pitch fonts which may be used for the <code>faceName</code> resource value. </p>
@@ -2220,28 +2220,28 @@ test -n &quot;$FONT&quot; &amp;&amp; xfd -fn &quot;$FONT&quot;
  </dd>
 <dd> <p> See the discussion of the <code>locale</code> resource, which describes how this font may be overridden. </p>
  </dd>
-<dd> <p> NOTE: some resource files use patterns such as <br />
-&nbsp;.sp <br />
+<dd> <p> NOTE: some resource files use patterns such as <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>*font: fixed
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4 </p>
  </dd>
-<dd> <p> which are overly broad, affecting both <br />
-&nbsp;.sp <br />
+<dd> <p> which are overly broad, affecting both <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>xterm.vt100.font
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4 </p>
  </dd>
-<dd> <p> and <br />
-&nbsp;.sp <br />
+<dd> <p> and <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>xterm.vt100.utf8Fonts.font
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4 </p>
  </dd>
 <dd> <p> which is probably not what you intended. </p>
@@ -2292,8 +2292,8 @@ test -n &quot;$FONT&quot; &amp;&amp; xfd -fn &quot;$FONT&quot;
 <dd> <p> Specifies whether <i>xterm</i> should assume the normal and bold fonts have VT100 line-drawing characters: </p>
  </dd>
 <dl>
-<dd> <p> <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 The fixed-pitch ISO-8859-*-encoded fonts used by <i>xterm</i> normally have the VT100 line-drawing glyphs in cells 1-31. Other fixed-pitch fonts may be more attractive, but lack these glyphs. <br />
+<dd> <p> <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 The fixed-pitch ISO-8859-*-encoded fonts used by <i>xterm</i> normally have the VT100 line-drawing glyphs in cells 1-31. Other fixed-pitch fonts may be more attractive, but lack these glyphs. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 When using an ISO-10646-1 font and the <code>wideChars</code> resource is true, <i>xterm</i> uses the Unicode glyphs which match the VT100 line-drawing glyphs. </p>
  </dd></dl>
 <dd> <p> If ``false&#8217;&#8216;, <i>xterm</i> checks for missing glyphs in the font and makes line-drawing characters directly as needed. If ``true&#8217;&#8216;, <i>xterm</i> assumes the font does not contain the line-drawing characters, and draws them directly. The default is ``false&#8217;&#8216;. </p>
@@ -2802,8 +2802,8 @@ test -n &quot;$FONT&quot; &amp;&amp; xfd -fn &quot;$FONT&quot;
 <dd> <p> Tells <i>xterm</i> whether to highlight all of the selected positions, or only the selected text: </p>
  </dd>
 <dl>
-<dd> <p> <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 If ``false&#8217;&#8216;, selecting with the mouse highlights all positions on the screen between the beginning of the selection and the current position. <br />
+<dd> <p> <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 If ``false&#8217;&#8216;, selecting with the mouse highlights all positions on the screen between the beginning of the selection and the current position. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 If ``true&#8217;&#8216;, <i>xterm</i> highlights only the positions that contain text that can be selected. </p>
  </dd></dl>
 <dd> <p> The default is ``false&#8217;&#8216;. </p>
@@ -2831,12 +2831,12 @@ test -n &quot;$FONT&quot; &amp;&amp; xfd -fn &quot;$FONT&quot;
 <dt><code>indicatorFormat</code> (class <code> IndicatorFormat</code>) </dt>
 <dd> <p> When displaying the status line using the <i>indicator</i> mode (i.e., selecting DECSSDT line type 1), format the status using this resource. </p>
  </dd>
-<dd> <p> The default value of the resource displays the version of <i>xterm</i>, the cursor position and the time/date: <br />
-&nbsp;.sp <br />
+<dd> <p> The default value of the resource displays the version of <i>xterm</i>, the cursor position and the time/date: <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>``%{version%}&nbsp;<wbr>&nbsp;%{position%}&nbsp;<wbr>&nbsp;%{unixtime%}''
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4 </p>
  </dd>
 <dd> <p> If a ``%&#8216;&#8216; marker does not match any of the three special tokens used in the default resource setting, <i>xterm</i> uses <code>strftime</code> to interpret it. </p>
@@ -2907,13 +2907,13 @@ test -n &quot;$FONT&quot; &amp;&amp; xfd -fn &quot;$FONT&quot;
  </dd>
 <dd> <p> At startup, <i>xterm</i> uses a mechanism equivalent to the <code>load-vt-fonts(utf8Fonts, Utf8Fonts)</code> action to load font name subresources of the VT100 widget. That is, resource patterns such as ``<code>*vt100.utf8Fonts.font</code>&#8216;&#8216; will be loaded, and (if this resource is enabled), override the normal fonts. If no subresources are found, the normal fonts such as ``<code>*vt100.font</code>&#8216;&#8216;, etc., are used. </p>
  </dd>
-<dd> <p> For instance, you could have this in your resource file: <br />
-&nbsp;.sp <br />
+<dd> <p> For instance, you could have this in your resource file: <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>*VT100.font: 12x24
 *VT100.utf8Fonts.font:9x15
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4 </p>
  </dd>
 <dd> <p> When started with a UTF-8 locale, <i>xterm</i> would use 9x15, but allow you to switch to the 12x24 font using the menu entry ``<code>UTF-8 Fonts</code>&#8216;&#8216;. </p>
@@ -2923,12 +2923,12 @@ test -n &quot;$FONT&quot; &amp;&amp; xfd -fn &quot;$FONT&quot;
 <dt><code>localeFilter</code> (class <code> LocaleFilter</code>) </dt>
 <dd> <p> Specifies the file name for the encoding converter from/to locale encodings and UTF-8 which is used with the <code>-lc</code> option or <code>locale</code> resource. The help message shown by ``xterm -help&#8217;&#8216; lists the default value, which depends on your system configuration. </p>
  </dd>
-<dd> <p> If the encoding converter requires command-line parameters, you can add those after the command, e.g., <br />
-&nbsp;.sp <br />
+<dd> <p> If the encoding converter requires command-line parameters, you can add those after the command, e.g., <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>*localeFilter: xterm-filter -p
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4 </p>
  </dd>
 <dd> <p> Alternatively, you may put those parameter within a shell script to execute the converter, and set this resource to point to the shell script. </p>
@@ -3004,8 +3004,8 @@ test -n &quot;$FONT&quot; &amp;&amp; xfd -fn &quot;$FONT&quot;
 <dd> <p> Tells <i>xterm</i> what to do with input-characters modified by <i>Meta</i>: </p>
  </dd>
 <dl>
-<dd> <p> <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 If ``true&#8217;&#8216;, Meta characters (a character combined with the <i>Meta</i> modifier key) are converted into a two-character sequence with the character itself preceded by ESC. This applies as well to function key control sequences, unless <i>xterm</i> sees that <code>Meta</code> is used in your key translations. <br />
+<dd> <p> <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 If ``true&#8217;&#8216;, Meta characters (a character combined with the <i>Meta</i> modifier key) are converted into a two-character sequence with the character itself preceded by ESC. This applies as well to function key control sequences, unless <i>xterm</i> sees that <code>Meta</code> is used in your key translations. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 If ``false&#8217;&#8216;, Meta characters input from the keyboard are handled according to the <code>eightBitInput</code> resource. </p>
  </dd></dl>
 <dd> <p> The default is ``False&#8217;&#8216;. </p>
@@ -3270,20 +3270,20 @@ test -n &quot;$FONT&quot; &amp;&amp; xfd -fn &quot;$FONT&quot;
 <dd> <p> Select all visible lines, i.e., the page. </p>
  </dd>
 <dt><code>all</code></dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  Select all lines, i.e., including the saved lines. </p>
  </dd>
 <dt><code>regex</code></dt>
 <dd> <p> Select the best match for the POSIX extended regular expression (ERE) which follows in the resource value: </p>
  </dd>
 <dl>
-<dd> <p> <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 <i>Xterm</i> matches the regular expression against a byte array for the entire (possibly wrapped) line. That byte array may be UTF-8 or ISO-8859-1, depending on the mode in which <i>xterm</i> is running. <br />
+<dd> <p> <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 <i>Xterm</i> matches the regular expression against a byte array for the entire (possibly wrapped) line. That byte array may be UTF-8 or ISO-8859-1, depending on the mode in which <i>xterm</i> is running. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 <i>Xterm</i> steps through each byte-offset in this array, keeping track of the best (longest) match. If more than one match ties for the longest length, the first is used. </p>
  </dd>
 <dl>
-<dd> <p> <i>Xterm</i> does this to make it convenient to click anywhere in the area of interest and cause the regular expression to match the entire word, etc. <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 The ``^&#8216;&#8216; and ``$&#8216;&#8216; anchors in a regular expression denote the ends of the entire line. <br />
+<dd> <p> <i>Xterm</i> does this to make it convenient to click anywhere in the area of interest and cause the regular expression to match the entire word, etc. <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 The ``^&#8216;&#8216; and ``$&#8216;&#8216; anchors in a regular expression denote the ends of the entire line. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 If the regular expression contains backslashes ``\&#8216;&#8216; those should be escaped ``\\&#8216;&#8216; because the X libraries interpret backslashes in resource strings. </p>
  </dd></dl>
 </dl>
@@ -3349,9 +3349,9 @@ test -n &quot;$FONT&quot; &amp;&amp; xfd -fn &quot;$FONT&quot;
 <dd> <p> Specifies whether to print graphic attributes along with the text. A real DEC VT <i>xxx</i> terminal will print the underline, highlighting codes but your printer may not handle these. </p>
  </dd>
 <dl>
-<dd> <p> <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 ``0&#8217;&#8216; disables the attributes. <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 ``1&#8217;&#8216; prints the normal set of attributes (bold, underline, inverse and blink) as VT100-style control sequences. <br />
+<dd> <p> <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 ``0&#8217;&#8216; disables the attributes. <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 ``1&#8217;&#8216; prints the normal set of attributes (bold, underline, inverse and blink) as VT100-style control sequences. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 ``2&#8217;&#8216; prints ANSI color attributes as well. </p>
  </dd></dl>
 <dd> <p> The default is ``1&#8217;&#8216;. </p>
@@ -3378,8 +3378,8 @@ test -n &quot;$FONT&quot; &amp;&amp; xfd -fn &quot;$FONT&quot;
 <dd> <p> Specify the range of text which is printed to a file when the <code>print-immediate</code> action is invoked. </p>
  </dd>
 <dl>
-<dd> <p> <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 If zero (0), then this selects the current (visible screen) plus the saved lines, except if the alternate screen is being used. In that case, only the alternate screen is selected. <br />
+<dd> <p> <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 If zero (0), then this selects the current (visible screen) plus the saved lines, except if the alternate screen is being used. In that case, only the alternate screen is selected. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 If nonzero, the bits of this resource value (checked in descending order) select the range: </p>
  </dd>
 <dl>
@@ -3416,8 +3416,8 @@ test -n &quot;$FONT&quot; &amp;&amp; xfd -fn &quot;$FONT&quot;
 <dd> <p> Specifies the printer control mode. A ``1&#8217;&#8216; selects autoprint mode, which causes <i>xterm</i> to print a line from the screen when </p>
  </dd>
 <dl>
-<dd> <p> <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 you move the cursor off that line with a line feed, form feed or vertical tab character, or <br />
+<dd> <p> <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 you move the cursor off that line with a line feed, form feed or vertical tab character, or <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 an autowrap occurs. </p>
  </dd></dl>
 <dd> <p> Autoprint mode is overridden by printer controller mode (a ``2&#8217;&#8216;), which causes all of the output to be directed to the printer. The default is ``0&#8217;&#8216;. </p>
@@ -3460,26 +3460,26 @@ test -n &quot;$FONT&quot; &amp;&amp; xfd -fn &quot;$FONT&quot;
 <dd>  </dd>
 <dl>
 <dt>false</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  disable the feature and use the normal (bitmap) font. </p>
  </dd>
 <dt>true</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  startup using the TrueType font specified by the <code>faceName</code> and <code>faceSize</code> resource settings. If there is no value for <code>faceName</code>, disable the feature and use the normal (bitmap) font. </p>
  </dd>
 <dd> <p> After startup, you can still switch to/from the bitmap font using the ``TrueType Fonts&#8217;&#8216; menu entry. </p>
  </dd>
 <dt>default</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  Enable the ``TrueType Fonts&#8217;&#8216; menu entry to allow runtime switching to/from TrueType fonts. The initial font used depends upon whether the <code>faceName</code> resource is set: </p>
  </dd>
 <dl>
-<dd> <p> <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 If the <code>faceName</code> resource is not set, start by using the normal (bitmap) font. <i>Xterm</i> has a separate compiled-in value for <code>faceName</code> for this special case. That is normally ``mono&#8217;&#8216;. <br />
+<dd> <p> <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 If the <code>faceName</code> resource is not set, start by using the normal (bitmap) font. <i>Xterm</i> has a separate compiled-in value for <code>faceName</code> for this special case. That is normally ``mono&#8217;&#8216;. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 If the <code>faceName</code> resource is set, then start by using the TrueType font rather than the bitmap font. </p>
  </dd></dl>
 <dt>defaultOff</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  Enable the ``TrueType Fonts&#8217;&#8216; menu entry to allow runtime switching to/from TrueType fonts, but allow it to be initially unselected if no <code>faceName</code> resource was given. </p>
  </dd></dl>
 </dl>
@@ -3502,9 +3502,9 @@ test -n &quot;$FONT&quot; &amp;&amp; xfd -fn &quot;$FONT&quot;
 <dd> <p> There are several aspects to reverse video in <i>xterm</i>: </p>
  </dd>
 <dl>
-<dd> <p> <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 The command-line <code>-rv</code> option tells the X libraries to reverse the foreground and background colors. <i>Xterm</i>&#8216;s command-line options set resource values. In particular, the X Toolkit sets the <code>reverseVideo</code> resource when the <code>-rv</code> option is used. <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 If the user has also used command-line options <code>-fg</code> or <code>-bg</code> to set the foreground and background colors, <i>xterm</i> does not see these options directly. Instead, it examines the resource values to reconstruct the command-line options, and determine which of the colors is the user&#8217;s intended foreground, etc. Their actual values are irrelevant to the reverse video function; some users prefer the X defaults (black text on a white background), others prefer white text on a black background. <br />
+<dd> <p> <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 The command-line <code>-rv</code> option tells the X libraries to reverse the foreground and background colors. <i>Xterm</i>&#8216;s command-line options set resource values. In particular, the X Toolkit sets the <code>reverseVideo</code> resource when the <code>-rv</code> option is used. <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 If the user has also used command-line options <code>-fg</code> or <code>-bg</code> to set the foreground and background colors, <i>xterm</i> does not see these options directly. Instead, it examines the resource values to reconstruct the command-line options, and determine which of the colors is the user&#8217;s intended foreground, etc. Their actual values are irrelevant to the reverse video function; some users prefer the X defaults (black text on a white background), others prefer white text on a black background. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 After startup, the user can toggle the ``Enable Reverse Video&#8217;&#8216; menu entry. This exchanges the current foreground and background colors of the VT100 widget, and repaints the screen. Because of the X resource hierarchy, the <code>reverseVideo</code> resource applies to more than the VT100 widget. </p>
  </dd></dl>
 <dd> <p> Programs running in an <i>xterm</i> can also use control sequences to enable the VT100 reverse video mode. These are independent of the <code>reverseVideo</code> resource and the menu entry. <i>Xterm</i> exchanges the current foreground and background colors when drawing text affected by these control sequences. </p>
@@ -3512,9 +3512,9 @@ test -n &quot;$FONT&quot; &amp;&amp; xfd -fn &quot;$FONT&quot;
 <dd> <p> Other control sequences can alter the foreground and background colors which are used: </p>
  </dd>
 <dl>
-<dd> <p> <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 Programs can also use the ANSI color control sequences to set the foreground and background colors. <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 Extensions to the ANSI color controls (such as 16-, 88- or 256-colors) are treated similarly to the ANSI control. <br />
+<dd> <p> <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 Programs can also use the ANSI color control sequences to set the foreground and background colors. <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 Extensions to the ANSI color controls (such as 16-, 88- or 256-colors) are treated similarly to the ANSI control. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 Using other control sequences (the ``<i>dynamic colors</i>&#8216;&#8216; feature), a program can change the foreground and background colors. </p>
  </dd></dl>
 <dt><code>reverseWrap</code> (class <code> ReverseWrap</code>) </dt>
@@ -3646,8 +3646,8 @@ test -n &quot;$FONT&quot; &amp;&amp; xfd -fn &quot;$FONT&quot;
 <dd> <p> TERMCAP is used rarely now, but <i>xterm</i> supports the feature on modern systems: </p>
  </dd>
 <dl>
-<dd> <p> <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 If set, <i>xterm</i> also ignores the escape sequence to switch to the alternate screen. <br />
+<dd> <p> <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 If set, <i>xterm</i> also ignores the escape sequence to switch to the alternate screen. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 <i>Xterm</i> supports terminfo in a different way, supporting composite control sequences (also known as private modes) 1047, 1048 and 1049 which have the same effect as the original 47 control sequence. </p>
  </dd></dl>
 <dd> <p> The default for this resource is ``false&#8217;&#8216;. </p>
@@ -3656,8 +3656,8 @@ test -n &quot;$FONT&quot; &amp;&amp; xfd -fn &quot;$FONT&quot;
 <dd> <p> Tells <i>xterm</i> whether to accept or return window- and icon-labels in ISO-8859-1 (the default) or UTF-8. Either can be encoded in hexadecimal: </p>
  </dd>
 <dl>
-<dd> <p> <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 UTF-8 titles require special treatment, because they may contain bytes which can be mistaken for control characters. Hexadecimal-encoding is supported to eliminate that possibility. <br />
+<dd> <p> <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 UTF-8 titles require special treatment, because they may contain bytes which can be mistaken for control characters. Hexadecimal-encoding is supported to eliminate that possibility. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 As an alternative, you could use the <code>allowC1Printable</code> resource, which suppresses <i>xterm</i>&#8216;s parsing of the relevant control characters (and as a result, treats those bytes as data). </p>
  </dd></dl>
 <dd> <p> The default for this resource is ``0&#8217;&#8216;. </p>
@@ -4154,8 +4154,8 @@ test -n &quot;$FONT&quot; &amp;&amp; xfd -fn &quot;$FONT&quot;
  </dd></dl>
 <h2>POINTER USAGE</h2>
 <p> Once the VT <i>xxx</i> window is created, <i>xterm</i> allows you to select text and copy it within the same or other windows using the <i>pointer</i> or the keyboard. </p>
-<p> A ``pointer&#8217;&#8216; could be a mouse, touchpad or similar device. X applications generally do not care, since they see only <i>button events</i> which have <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 position and <br />
+<p> A ``pointer&#8217;&#8216; could be a mouse, touchpad or similar device. X applications generally do not care, since they see only <i>button events</i> which have <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 position and <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 button up/down state </p>
 <p> <i>Xterm</i> can see these events as long as it has <i>focus</i>. </p>
 <p> The keyboard also supplies events, but it is less flexible than the pointer for selecting/copying text. </p>
@@ -4166,48 +4166,48 @@ test -n &quot;$FONT&quot; &amp;&amp; xfd -fn &quot;$FONT&quot;
 <p> The assignment of the functions described below to keys and buttons may be changed through the resource database; see <code>Actions</code> below. </p>
 <dl>
 <dt>Pointer button one (usually left)</dt>
-<dd> <p> is used to save text into the cut buffer: <br />
-&nbsp;.sp <br />
+<dd> <p> is used to save text into the cut buffer: <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>~Meta &lt;Btn1Down&gt;: select-start ()
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4 </p>
  </dd>
-<dd> <p> Move the cursor to beginning of the text, and then hold the button down while moving the cursor to the end of the region and releasing the button. The selected text is highlighted and is saved in the global <i>cut buffer</i> and made the selection when the button is released: <br />
-&nbsp;.sp <br />
+<dd> <p> Move the cursor to beginning of the text, and then hold the button down while moving the cursor to the end of the region and releasing the button. The selected text is highlighted and is saved in the global <i>cut buffer</i> and made the selection when the button is released: <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>&lt;BtnUp&gt;: select-end ( SELECT , CUT_BUFFER0 ) \n
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4 </p>
  </dd>
 <dd> <p> Normally (but see the discussion of <code>on2Clicks</code>, etc): </p>
  </dd>
 <dl>
-<dd> <p> <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 Double-clicking selects by words. <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 Triple-clicking selects by lines. <br />
+<dd> <p> <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 Double-clicking selects by words. <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 Triple-clicking selects by lines. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 Quadruple-clicking goes back to characters, etc. </p>
  </dd></dl>
 <dd> <p> Multiple-click is determined by the time from button up to button down, so you can change the selection unit in the middle of a selection. Logical words and lines selected by double- or triple-clicking may wrap across more than one screen line if lines were wrapped by <i>xterm</i> itself rather than by the application running in the window. If the key/button bindings specify that an X selection is to be made, <i>xterm</i> will leave the selected text highlighted for as long as it is the selection owner. </p>
  </dd>
 <dt>Pointer button two (usually middle)</dt>
-<dd> <p> ``types&#8217;&#8216; (<i>pastes</i>) the text from the given selection, if any, otherwise from the cut buffer, inserting it as keyboard input: <br />
-&nbsp;.sp <br />
+<dd> <p> ``types&#8217;&#8216; (<i>pastes</i>) the text from the given selection, if any, otherwise from the cut buffer, inserting it as keyboard input: <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>~Ctrl ~Meta &lt;Btn2Up&gt;: insert-selection ( SELECT , CUT_BUFFER0 )
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4 </p>
  </dd>
 <dt>Pointer button three (usually right)</dt>
-<dd> <p> <i>extends</i> the current selection. <br />
-&nbsp;.sp <br />
+<dd> <p> <i>extends</i> the current selection. <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>~Ctrl ~Meta &lt;Btn3Down&gt;: start-extend ()
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4 </p>
  </dd>
 <dd> <p> (Without loss of generality, you can swap ``right&#8217;&#8216; and ``left&#8217;&#8216; everywhere in the rest of this paragraph.) If pressed while closer to the right edge of the selection than the left, it extends/contracts the right edge of the selection. If you contract the selection past the left edge of the selection, <i>xterm</i> assumes you really meant the left edge, restores the original selection, then extends/contracts the left edge of the selection. Extension starts in the selection unit mode that the last selection or extension was performed in; you can multiple-click to cycle through them. </p>
@@ -4234,16 +4234,16 @@ test -n &quot;$FONT&quot; &amp;&amp; xfd -fn &quot;$FONT&quot;
 <p> When configured to use the clipboard (using the <code>selectToClipboard</code> resource), the problem with persistence of ownership is bypassed. Otherwise, there is no difference regarding the data which can be passed via selection. </p>
 <p> The <code>selectToClipboard</code> resource is a compromise, allowing <code>CLIPBOARD</code> to be treated almost like <code>PRIMARY</code>, unlike the ICCCM, which describes <code>CLIPBOARD</code> in different terms than <code>PRIMARY</code> or <code>SECONDARY</code>. Its lengthy explanation begins with the essential points: </p>
 <dl>
-<dd> <p> The selection named by the atom CLIPBOARD is used to hold data that is being transferred between clients, that is, data that usually is being cut and then pasted or copied and then pasted. Whenever a client wants to transfer data to the clipboard: <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 It should assert ownership of the CLIPBOARD. <br />
+<dd> <p> The selection named by the atom CLIPBOARD is used to hold data that is being transferred between clients, that is, data that usually is being cut and then pasted or copied and then pasted. Whenever a client wants to transfer data to the clipboard: <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 It should assert ownership of the CLIPBOARD. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 If it succeeds in acquiring ownership, it should be prepared to respond to a request for the contents of the CLIPBOARD in the usual way (retaining the data to be able to return it). The request may be generated by the clipboard client described below. </p>
  </dd></dl>
 <h3>SELECT</h3>
 <p> However, many applications use <code>CLIPBOARD</code> in imitation of other windowing systems. The <code>selectToClipboard</code> resource (and corresponding menu entry <code>Select to Clipboard</code>) introduce the <code>SELECT</code> token (known only to <i>xterm</i>) which chooses between the <code>PRIMARY</code> and <code>CLIPBOARD</code> tokens. </p>
 <p> Without using this feature, one can use workarounds such as the <i>xclip</i> program to show the contents of the X clipboard within an <i>xterm</i> window.  </p>
 <h3>SECONDARY</h3>
-<p> This is used less often than <code>PRIMARY</code> or <code>CLIPBOARD</code>. According to the ICCCM, it is used <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 As the second argument to commands taking two arguments (for example, ``exchange primary and secondary selections&#8217;&#8216;) <br />
+<p> This is used less often than <code>PRIMARY</code> or <code>CLIPBOARD</code>. According to the ICCCM, it is used <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 As the second argument to commands taking two arguments (for example, ``exchange primary and secondary selections&#8217;&#8216;) <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 As a means of obtaining data when there is a primary selection and the user does not want to disturb it  </p>
 <h3>Selection Targets</h3>
 <p> The different types of data which are passed depend on what the receiving client asks for. These are termed <i>selection targets</i>. </p>
@@ -4327,57 +4327,57 @@ u,i,s
  </dd>
 <dl>
 <dd> <p> The following CSS selectors are used with the expected default behavior in the XHTML file: </p>
-<p> <i>.ul</i> for underline, <br />
- <i>.bd</i> for bold, <br />
- <i>.it</i> for italic, <br />
- <i>.st</i> for strikeout, <br />
+<p> <i>.ul</i> for underline, <br/>
+ <i>.bd</i> for bold, <br/>
+ <i>.it</i> for italic, <br/>
+ <i>.st</i> for strikeout, <br/>
  <i>.lu</i> for strikeout combined with underline. </p>
 <p> In addition you may use </p>
-<p> <i>.ev</i> to affect even numbered lines and <br />
+<p> <i>.ev</i> to affect even numbered lines and <br/>
  <i>.od</i> to affect odd numbered lines. </p>
  </dd></dl>
 <dd> <p> Attributes faint, reverse and blink are implemented as <i>style</i> attributes setting color properties. All colors are specified as RGB percentages in order to support displays with 10 bits per RGB. </p>
  </dd>
-<dd> <p> The name of the file will be <br />
-&nbsp;.sp <br />
+<dd> <p> The name of the file will be <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>
  xterm.  yyyy  .  MM  .  dd  .  hh  .  mm  .  ss .xhtml
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4 </p>
  </dd>
 <dd> <p> where <i>yyyy</i>, <i>MM</i>, <i>dd</i>, <i>hh</i>, <i>mm</i> and <i>ss</i> are the year, month, day, hour, minute and second when the screen dump was performed (the file is created in the directory <i>xterm</i> is started in, or the home directory for a login <i>xterm</i>). </p>
  </dd>
-<dd> <p> The <code>dump-html</code> action can also be triggered using the Media Copy control sequence CSI 1 0 i, for example from a shell script with <br />
-&nbsp;.sp <br />
+<dd> <p> The <code>dump-html</code> action can also be triggered using the Media Copy control sequence CSI 1 0 i, for example from a shell script with <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>printf '\033[10i'
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4 </p>
 <p> Only the UTF-8 encoding is supported. </p>
  </dd>
 <dt><code>SVG Screen Dump</code> (resource <code>dump-svg</code>) </dt>
 <dd> <p> Available only when compiled with screen dump support. Invokes the <code>dump-svg</code> action. This creates a Scalable Vector Graphics (SVG) file matching the contents of the current screen, including the border, internal border, colors and most attributes: bold, italic, underline, double underline, faint, strikeout, reverse; blink is rendered as white-on-red. The font is whatever your renderer uses for the <i>monospace</i> font-family. All colors are specified as RGB percentages in order to support displays with 10 bits per RGB. </p>
  </dd>
-<dd> <p> The name of the file will be <br />
-&nbsp;.sp <br />
+<dd> <p> The name of the file will be <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>
  xterm.  yyyy  .  MM  .  dd  .  hh  .  mm  .  ss .svg
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4 </p>
  </dd>
 <dd> <p> where <i>yyyy</i>, <i>MM</i>, <i>dd</i>, <i>hh</i>, <i>mm</i> and <i>ss</i> are the year, month, day, hour, minute and second when the screen dump was performed (the file is created in the directory <i>xterm</i> is started in, or the home directory for a login <i>xterm</i>). </p>
  </dd>
-<dd> <p> The <code>dump-svg</code> action can also be triggered using the Media Copy control sequence CSI 1 1 i, for example from a shell script with <br />
-&nbsp;.sp <br />
+<dd> <p> The <code>dump-svg</code> action can also be triggered using the Media Copy control sequence CSI 1 1 i, for example from a shell script with <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>printf '\033[11i'
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4 </p>
 <p> Only the UTF-8 encoding is supported. </p>
  </dd></dl>
@@ -4511,8 +4511,8 @@ u,i,s
 <dd> <p> Enable (or disable) the blinking-cursor feature. This corresponds to the <code>-bc</code> option and the <code>cursorBlink</code> resource. There are also escape sequences (see <i>Xterm Control Sequences</i>): </p>
  </dd>
 <dl>
-<dd> <p> <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 If the <code>cursorBlinkXOR</code> resource is set, the menu entry and the escape sequence states will be XOR&#8217;d: if both are enabled, the cursor will not blink, if only one is enabled, the cursor will blink. <br />
+<dd> <p> <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 If the <code>cursorBlinkXOR</code> resource is set, the menu entry and the escape sequence states will be XOR&#8217;d: if both are enabled, the cursor will not blink, if only one is enabled, the cursor will blink. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 If the <code>cursorBlinkXOR</code> is not set; if either the menu entry or the escape sequence states are set, the cursor will blink. </p>
  </dd></dl>
 <dd> <p> In either case, the checkbox for the menu shows the state of the <code>cursorBlink</code> resource, which may not correspond to what the cursor is actually doing. </p>
@@ -4640,12 +4640,12 @@ u,i,s
  </dd>
 <dd> <p> Initially the checkmark is set according to both the <code>utf8</code> and <code>utf8Fonts</code> resource values. If the latter is set to ``always&#8217;&#8216;, the checkmark is disabled. Likewise, if there are no fonts given in the <code>utf8Fonts</code> subresources, then the checkmark also is disabled. </p>
  </dd>
-<dd> <p> The standard <code>XTerm</code> app-defaults file defines both sets of fonts, while the <code>UXTerm</code> app-defaults file defines only one set. Assuming the standard app-defaults files, this command will launch <i>xterm</i> able to switch between UTF-8 and ISO-8859-1 encoded fonts: <br />
-&nbsp;.sp <br />
+<dd> <p> The standard <code>XTerm</code> app-defaults file defines both sets of fonts, while the <code>UXTerm</code> app-defaults file defines only one set. Assuming the standard app-defaults files, this command will launch <i>xterm</i> able to switch between UTF-8 and ISO-8859-1 encoded fonts: <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>uxterm -class XTerm
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4 </p>
  </dd></dl>
 </dl>
@@ -4694,9 +4694,9 @@ u,i,s
 <dd> <p> Simulates the Tektronix ``PAGE&#8217;&#8216; button by </p>
  </dd>
 <dl>
-<dd> <p> <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 clearing the window, <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 cancelling the graphics input-mode, and <br />
+<dd> <p> <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 clearing the window, <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 cancelling the graphics input-mode, and <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 moving the cursor to the <i>home</i> position. </p>
  </dd></dl>
 <dt><code>RESET</code> (resource <code>tekreset</code>) </dt>
@@ -4718,24 +4718,24 @@ u,i,s
 <dd>  </dd></dl>
 </dl>
 <h2>SECURITY</h2>
-<p> X environments differ in their security consciousness. <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 Most servers, run under <i>xdm</i>, are capable of using a ``magic cookie&#8217;&#8216; authorization scheme that can provide a reasonable level of security for many people. If your server is only using a host-based mechanism to control access to the server (see <code><a href="/docs/linux/man/1-xhost/">xhost</a>(1)</code>), then if you enable access for a host and other users are also permitted to run clients on that same host, it is possible that someone can run an application which uses the basic services of the X protocol to snoop on your activities, potentially capturing a transcript of everything you type at the keyboard. <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 Any process which has access to your X display can manipulate it in ways that you might not anticipate, even redirecting your keyboard to itself and sending events to your application&#8217;s windows. This is true even with the ``magic cookie&#8217;&#8216; authorization scheme. While the <code>allowSendEvents</code> provides some protection against rogue applications tampering with your programs, guarding against a snooper is harder. <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 The X input extension for instance allows an application to bypass all of the other (limited) authorization and security features, including the GrabKeyboard protocol. <br />
+<p> X environments differ in their security consciousness. <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 Most servers, run under <i>xdm</i>, are capable of using a ``magic cookie&#8217;&#8216; authorization scheme that can provide a reasonable level of security for many people. If your server is only using a host-based mechanism to control access to the server (see <code><a href="/docs/linux/man/1-xhost/">xhost</a>(1)</code>), then if you enable access for a host and other users are also permitted to run clients on that same host, it is possible that someone can run an application which uses the basic services of the X protocol to snoop on your activities, potentially capturing a transcript of everything you type at the keyboard. <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 Any process which has access to your X display can manipulate it in ways that you might not anticipate, even redirecting your keyboard to itself and sending events to your application&#8217;s windows. This is true even with the ``magic cookie&#8217;&#8216; authorization scheme. While the <code>allowSendEvents</code> provides some protection against rogue applications tampering with your programs, guarding against a snooper is harder. <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 The X input extension for instance allows an application to bypass all of the other (limited) authorization and security features, including the GrabKeyboard protocol. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 The possibility of an application spying on your keystrokes is of particular concern when you want to type in a password or other sensitive data. The best solution to this problem is to use a better authorization mechanism than is provided by X. </p>
 <p> Subject to all of these caveats, a simple mechanism exists for protecting keyboard input in <i>xterm</i>. </p>
-<p> The <i>xterm</i> menu (see <code>MENUS</code> above) contains a <code>Secure Keyboard</code> entry which, when enabled, attempts to ensure that all keyboard input is directed <i>only</i> to <i>xterm</i> (using the GrabKeyboard protocol request). When an application prompts you for a password (or other sensitive data), you can enable <code>Secure Keyboard</code> using the menu, type in the data, and then disable <code>Secure Keyboard</code> using the menu again. <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 This ensures that you know which window is accepting your keystrokes. <br />
+<p> The <i>xterm</i> menu (see <code>MENUS</code> above) contains a <code>Secure Keyboard</code> entry which, when enabled, attempts to ensure that all keyboard input is directed <i>only</i> to <i>xterm</i> (using the GrabKeyboard protocol request). When an application prompts you for a password (or other sensitive data), you can enable <code>Secure Keyboard</code> using the menu, type in the data, and then disable <code>Secure Keyboard</code> using the menu again. <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 This ensures that you know which window is accepting your keystrokes. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 It cannot ensure that there are no processes which have access to your X display that might be observing the keystrokes as well. </p>
 <p> Only one X client at a time can grab the keyboard, so when you attempt to enable <code>Secure Keyboard</code> it may fail. In this case, the bell will sound. If the <code>Secure Keyboard</code> succeeds, the foreground and background colors will be exchanged (as if you selected the <code>Enable Reverse Video</code> entry in the <code>Modes</code> menu); they will be exchanged again when you exit secure mode. If the colors do <i>not</i> switch, then you should be <i>very</i> suspicious that you are being spoofed. If the application you are running displays a prompt before asking for the password, it is safest to enter secure mode <i>before</i> the prompt gets displayed, and to make sure that the prompt gets displayed correctly (in the new colors), to minimize the probability of spoofing. You can also bring up the menu again and make sure that a check mark appears next to the entry. </p>
 <p> <code>Secure Keyboard</code> mode will be disabled automatically if your <i>xterm</i> window becomes iconified (or otherwise unmapped), or if you start up a reparenting window manager (that places a title bar or other decoration around the window) while in <code>Secure Keyboard</code> mode. (This is a feature of the X protocol not easily overcome.) When this happens, the foreground and background colors will be switched back and the bell will sound in warning.  </p>
 <h2>CHARACTER CLASSES</h2>
 <p> Clicking the left pointer button twice in rapid succession (double-clicking) causes all characters of the same class (e.g., letters, white space, punctuation) to be selected as a ``word&#8217;&#8216;. Since different people have different preferences for what should be selected (for example, should filenames be selected as a whole or only the separate subnames), the default mapping can be overridden through the use of the <code>charClass</code> (class <i>CharClass</i>) resource. </p>
-<p> This resource is a series of comma-separated <i>range</i>:<i>value</i> pairs. <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 The <i>range</i> is either a single number or <i>low</i>-<i>high</i> in the range of 0 to 65535, corresponding to the code for the character or characters to be set. <br />
+<p> This resource is a series of comma-separated <i>range</i>:<i>value</i> pairs. <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 The <i>range</i> is either a single number or <i>low</i>-<i>high</i> in the range of 0 to 65535, corresponding to the code for the character or characters to be set. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 The <i>value</i> is arbitrary. For example, the default table uses the character number of the first character occurring in the set. When not in UTF-8 mode, only the first 256 entries of this table will be used. </p>
-<p> The default table starts as follows - <br />
-&nbsp;.sp <br />
+<p> The default table starts as follows - <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>static int charClass[256] = {
 /* NUL SOH STX ETX EOT ENQ ACK BEL */
@@ -4803,7 +4803,7 @@ u,i,s
 /* o/ u` u' u^ u: y' P y: */
     48, 48, 48, 48, 48, 48, 48, 48};
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4 </p>
 <dl>
 <dd> <p> For example, the string ``33:48,37:48,45-47:48,38:48&#8217;&#8216; indicates that the exclamation mark, percent sign, dash, period, slash, and ampersand characters should be treated the same way as characters and numbers. This is useful for cutting and pasting electronic mailing addresses and filenames. </p>
@@ -4853,13 +4853,13 @@ u,i,s
 <dd> <p> This action creates one of the menus used by <i>xterm</i>, if it has not been previously created. The parameter values are the menu names: <i>mainMenu</i>, <i>vtMenu</i>, <i>fontMenu</i>, <i>tekMenu</i>, respectively. </p>
  </dd>
 <dt><code>dabbrev-expand()</code></dt>
-<dd> <p> Expands the word before cursor by searching in the preceding text on the screen and in the scrollback buffer for words starting with that abbreviation. Repeating <code>dabbrev-expand()</code> several times in sequence searches for an alternative expansion by looking farther back. Lack of more matches is signaled by a bell. Attempts to expand an empty word (i.e., when cursor is preceded by a space) yield successively all previous words. Consecutive identical expansions are ignored. The word here is defined as a sequence of non-whitespace characters. This feature partially emulates the behavior of ``dynamic abbreviation&#8217;&#8216; expansion in Emacs (bound there to M-/). Here is a resource setting for <i>xterm</i> which will do the same thing: <br />
-&nbsp;.sp <br />
+<dd> <p> Expands the word before cursor by searching in the preceding text on the screen and in the scrollback buffer for words starting with that abbreviation. Repeating <code>dabbrev-expand()</code> several times in sequence searches for an alternative expansion by looking farther back. Lack of more matches is signaled by a bell. Attempts to expand an empty word (i.e., when cursor is preceded by a space) yield successively all previous words. Consecutive identical expansions are ignored. The word here is defined as a sequence of non-whitespace characters. This feature partially emulates the behavior of ``dynamic abbreviation&#8217;&#8216; expansion in Emacs (bound there to M-/). Here is a resource setting for <i>xterm</i> which will do the same thing: <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>*VT100*translations: #override \n\
         Meta &lt;KeyPress&gt; /: dabbrev-expand ()
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4 </p>
  </dd>
 <dt><code>deiconify()</code></dt>
@@ -4869,12 +4869,12 @@ u,i,s
 <dd> <p> This action toggles the state of the <code>deleteIsDEL</code> resource. </p>
  </dd>
 <dt><code>dired-button()</code></dt>
-<dd> <p> Handles a button event (other than press and release) by echoing the event&#8217;s position (i.e., character line and column) in the following format: <br />
-&nbsp;.sp <br />
+<dd> <p> Handles a button event (other than press and release) by echoing the event&#8217;s position (i.e., character line and column) in the following format: <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>^X ESC G &lt;line+`` ''&gt; &lt;col+`` ''&gt;
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4 </p>
  </dd>
 <dt><code>dump-html()</code></dt>
@@ -4927,13 +4927,13 @@ u,i,s
 </dl>
 <dd> <p> After constructing the command-string, <i>xterm</i> forks a subprocess and executes the command, which completes independently of <i>xterm</i>. </p>
  </dd>
-<dd> <p> For example, this translation would invoke a new <i>xterm</i> process to view a file whose name is selected while holding the shift key down. The new process is started when the mouse button is released: <br />
-&nbsp;.sp <br />
+<dd> <p> For example, this translation would invoke a new <i>xterm</i> process to view a file whose name is selected while holding the shift key down. The new process is started when the mouse button is released: <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>*VT100*translations: #override Shift \
     &lt;Btn1Up&gt;: exec-formatted (&quot;xterm -e view '%t'&quot;, SELECT )
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4 </p>
  </dd>
 <dt><code>exec-selectable(</code><i>format</i>, <i>onClicks</i>) </dt>
@@ -4960,9 +4960,9 @@ u,i,s
 <dd> <p> The term ``eight-bit&#8217;&#8216; is misleading: <i>xterm</i> checks if the key is in the range 128 to 255 (the eighth bit is set). If the value is in that range, depending on the resource values, <i>xterm</i> may then do one of the following: </p>
  </dd>
 <dl>
-<dd> <p> <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 add 128 to the value, setting its eighth bit, <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 send an ESC byte before the key, or <br />
+<dd> <p> <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 add 128 to the value, setting its eighth bit, <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 send an ESC byte before the key, or <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 send the key unaltered. </p>
  </dd></dl>
 <dt><code>insert-formatted(</code><i>format</i>, <i>sourcename</i> [, ...]) </dt>
@@ -5049,7 +5049,7 @@ u,i,s
 <dd> <p> This action toggles the <code>printerControlMode</code> between 0 and 2. The corresponding popup menu entry is useful for switching the printer off if you happen to change your mind after deciding to print random binary files on the terminal. </p>
  </dd>
 <dt><code>quit()</code></dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  This action sends a SIGHUP to the subprogram and exits. It is also invoked by the <code>quit</code> entry in <i>mainMenu</i>. </p>
  </dd>
 <dt><code>readline-button()</code></dt>
@@ -5321,20 +5321,20 @@ u,i,s
 <dd> <p> This action resets the Tektronix window. It is also invoked by the <code>tekreset</code> entry in <i>tekMenu</i>. </p>
  </dd>
 <dt><code>vi-button()</code></dt>
-<dd> <p> Handles a button event (other than press and release) by echoing a control sequence computed from the event&#8217;s line number in the screen relative to the current line: <br />
-&nbsp;.sp <br />
+<dd> <p> Handles a button event (other than press and release) by echoing a control sequence computed from the event&#8217;s line number in the screen relative to the current line: <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>ESC ^P
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4 </p>
  </dd>
-<dd> <p> or <br />
-&nbsp;.sp <br />
+<dd> <p> or <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>ESC ^N
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4 </p>
  </dd>
 <dd> <p> according to whether the event is before, or after the current line, respectively. The ^N (or ^P) is repeated once for each line that the event differs from the current line. The control sequence is omitted altogether if the button event is on the current line. </p>
@@ -5348,8 +5348,8 @@ u,i,s
 <dd> <p> This action sends the indicated graphics input code. </p>
  </dd></dl>
 <h3>Default Key Bindings</h3>
-<p> The default bindings in the VT <i>xxx</i> window use the <code>SELECT</code> token, which is set by the <code>selectToClipboard</code> resource. These are for the <i>vt100</i> widget: <br />
-&nbsp;.sp <br />
+<p> The default bindings in the VT <i>xxx</i> window use the <code>SELECT</code> token, which is set by the <code>selectToClipboard</code> resource. These are for the <i>vt100</i> widget: <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>          Shift &lt;KeyPress&gt; Prior: scroll-back (1,halfpage) \n\
            Shift &lt;KeyPress&gt; Next: scroll-forw (1,halfpage) \n\
@@ -5397,10 +5397,10 @@ u,i,s
                          &lt;BtnUp&gt;: pointer-button () \n\
                        &lt;BtnDown&gt;: ignore ()
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4 </p>
-<p> The default bindings in the Tektronix window are analogous but less extensive. These are for the <i>tek4014</i> widget: <br />
-&nbsp;.sp <br />
+<p> The default bindings in the Tektronix window are analogous but less extensive. These are for the <i>tek4014</i> widget: <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>                 ~Meta&lt;KeyPress&gt;: insert-seven-bit () \n\
                   Meta&lt;KeyPress&gt;: insert-eight-bit () \n\
@@ -5419,12 +5419,12 @@ u,i,s
            Shift ~Meta&lt;Btn3Down&gt;: gin-press (R) \n\
                  ~Meta&lt;Btn3Down&gt;: gin-press (r)
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4  </p>
 <h3>Custom Key Bindings</h3>
 <p> You can modify the <code>translations</code> resource by overriding parts of it, or merging your resources with it. </p>
-<p> Here is an example which uses shifted select/paste to copy to the clipboard, and unshifted select/paste for the primary selection. In each case, a (different) cut buffer is also a target or source of the select/paste operation. It is important to remember however, that cut buffers store data in ISO-8859-1 encoding, while selections can store data in a variety of formats and encodings. While <i>xterm</i> owns the selection, it highlights it. When it loses the selection, it removes the corresponding highlight. But you can still paste from the corresponding cut buffer. <br />
-&nbsp;.sp <br />
+<p> Here is an example which uses shifted select/paste to copy to the clipboard, and unshifted select/paste for the primary selection. In each case, a (different) cut buffer is also a target or source of the select/paste operation. It is important to remember however, that cut buffers store data in ISO-8859-1 encoding, while selections can store data in a variety of formats and encodings. While <i>xterm</i> owns the selection, it highlights it. When it loses the selection, it removes the corresponding highlight. But you can still paste from the corresponding cut buffer. <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>*VT100*translations: #override \n\
    ~Shift~Ctrl&lt;Btn2Up&gt;: insert-selection ( PRIMARY , CUT_BUFFER0 ) \n\
@@ -5432,28 +5432,28 @@ u,i,s
    ~Shift &lt;BtnUp&gt; : select-end ( PRIMARY , CUT_BUFFER0 ) \n\
     Shift &lt;BtnUp&gt; : select-end ( CLIPBOARD , CUT_BUFFER1 )
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4 </p>
 <p> In the example, the class name <code>VT100</code> is used rather than the widget name. These are different; a class name could apply to more than one widget. A leading ``*&#8216;&#8216; is used because the widget hierarchy above the <i>vt100</i> widget depends on whether the toolbar support is compiled into <i>xterm</i>. </p>
-<p> Most of the predefined translations are related to the mouse, with a few that use some of the special keys on the keyboard. Applications use special keys (function-keys, cursor-keys, keypad-keys) with modifiers (shift, control, alt). If <i>xterm</i> defines a translation for a given combination of special key and modifier, that makes it unavailable for use by applications within the terminal. For instance, one might extend the use of <i>Page Up</i> and <i>Page Down</i> keys seen here: <br />
-&nbsp;.sp <br />
+<p> Most of the predefined translations are related to the mouse, with a few that use some of the special keys on the keyboard. Applications use special keys (function-keys, cursor-keys, keypad-keys) with modifiers (shift, control, alt). If <i>xterm</i> defines a translation for a given combination of special key and modifier, that makes it unavailable for use by applications within the terminal. For instance, one might extend the use of <i>Page Up</i> and <i>Page Down</i> keys seen here: <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>    Shift &lt;KeyPress&gt; Prior : scroll-back (1,halfpage) \n\
     Shift &lt;KeyPress&gt; Next : scroll-forw (1,halfpage) \n\
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4 </p>
-<p> to the <i>Home</i> and <i>End</i> keys: <br />
-&nbsp;.sp <br />
+<p> to the <i>Home</i> and <i>End</i> keys: <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>    Shift &lt;KeyPress&gt; Home : scroll-to (begin) \n\
     Shift &lt;KeyPress&gt; End : scroll-to (end)
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4 </p>
 <p> but then shift-<i>Home</i> and shift-<i>End</i> would then be unavailable to applications. </p>
-<p> Not everyone finds the three-button mouse bindings easy to use. In a wheel mouse, the middle button might be the wheel. As an alternative, you could add a binding using shifted keys: <br />
-&nbsp;.sp <br />
+<p> Not everyone finds the three-button mouse bindings easy to use. In a wheel mouse, the middle button might be the wheel. As an alternative, you could add a binding using shifted keys: <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>*VT100*translations: #override \n\
     Shift &lt;Key&gt;Home: copy-selection ( SELECT ) \n\
@@ -5461,20 +5461,20 @@ u,i,s
     Ctrl Shift &lt;Key&gt;C: copy-selection ( SELECT ) \n\
     Ctrl Shift &lt;Key&gt;V: insert-selection ( SELECT )
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4 </p>
 <p> You would still use the left- and right-mouse buttons (typically 1 and 3) for beginning and extending selections. </p>
-<p> Besides mouse problems, there are also keyboards with inconvenient layouts. Some lack a numeric keypad, making it hard to use the shifted keypad plus and minus bindings for switching between font sizes. You can work around that by assigning the actions to more readily accessed keys: <br />
-&nbsp;.sp <br />
+<p> Besides mouse problems, there are also keyboards with inconvenient layouts. Some lack a numeric keypad, making it hard to use the shifted keypad plus and minus bindings for switching between font sizes. You can work around that by assigning the actions to more readily accessed keys: <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>*VT100*translations: #override \n\
     Ctrl &lt;Key&gt; +: larger-vt-font () \n\
     Ctrl &lt;Key&gt; -: smaller-vt-font ()
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4 </p>
-<p> The keymap feature allows you to switch between sets of translations. The sample below shows how the <code>keymap()</code> action may be used to add special keys for entering commonly-typed words: <br />
-&nbsp;.sp <br />
+<p> The keymap feature allows you to switch between sets of translations. The sample below shows how the <code>keymap()</code> action may be used to add special keys for entering commonly-typed words: <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>*VT100.Translations: #override &lt;Key&gt;F13: keymap(dbx)
 *VT100.dbxKeymap.translations: \
@@ -5484,13 +5484,13 @@ u,i,s
         &lt;Key&gt;F19: string (&quot;continue&quot;) \n\ string (0x0d) \n\
         &lt;Key&gt;F20: string (&quot;print &quot;) \n\ insert-selection ( PRIMARY , CUT_BUFFER0 )
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4  </p>
 <h3>Default Scrollbar Bindings</h3>
 <p> Key bindings are normally associated with the <i>vt100</i> or <i>tek4014</i> widgets which act as terminal emulators. <i>Xterm</i>&#8216;s scrollbar (and toolbar if it is configured) are separate widgets. Because all of these use the X Toolkit, they have corresponding <code>translations</code> resources. Those resources are distinct, and match different patterns, e.g., the differences in widget-name and number of levels of widgets which they may contain. </p>
 <p> The <i>scrollbar</i> widget is a child of the <i>vt100</i> widget. It is positioned on top of the <i>vt100</i> widget. Toggling the scrollbar on and off causes the <i>vt100</i> widget to resize. </p>
-<p> The default bindings for the scrollbar widget use only mouse-button events: <br />
-&nbsp;.sp <br />
+<p> The default bindings for the scrollbar widget use only mouse-button events: <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>   &lt;Btn5Down&gt;: StartScroll(Forward) \n\
    &lt;Btn1Down&gt;: StartScroll(Forward) \n\
@@ -5500,16 +5500,16 @@ u,i,s
    &lt;Btn2Motion&gt;: MoveThumb() NotifyThumb() \n\
    &lt;BtnUp&gt;: NotifyScroll(Proportional) EndScroll()
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4 </p>
 <p> Events which the <i>scrollbar</i> widget does not recognize at all are lost. </p>
 <p> However, at startup, <i>xterm</i> augments these translations with the default translations used for the <i>vt100</i> widget, together with the resource ``actions&#8217;&#8216; which those translations use. Because the <i>scrollbar</i> (or <i>menubar</i>) widgets do not recognize these actions (but because it has a corresponding translation), they are passed on to the <i>vt100</i> widget. </p>
-<p> This augmenting of the scrollbar&#8217;s translations has a few limitations: <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 <i>Xterm</i> knows what the default translations are, but there is no suitable library interface for determining what customizations a user may have added to the <i>vt100</i> widget. All that <i>xterm</i> can do is augment the <i>scrollbar</i> widget to give it the same starting point for further customization by the user. <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 Events in the gap between the widgets may be lost. <br />
+<p> This augmenting of the scrollbar&#8217;s translations has a few limitations: <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 <i>Xterm</i> knows what the default translations are, but there is no suitable library interface for determining what customizations a user may have added to the <i>vt100</i> widget. All that <i>xterm</i> can do is augment the <i>scrollbar</i> widget to give it the same starting point for further customization by the user. <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 Events in the gap between the widgets may be lost. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 Compose sequences begun in one widget cannot be completed in the other, because the input methods for each widget do not share context information. </p>
-<p> Most customizations of the scrollbar translations do not concern key bindings. Rather, users are generally more interested in changing the bindings of the mouse buttons. For example, some people prefer using the left pointer button for dragging the scrollbar thumb. That can be set up by altering the translations resource, e.g., <br />
-&nbsp;.sp <br />
+<p> Most customizations of the scrollbar translations do not concern key bindings. Rather, users are generally more interested in changing the bindings of the mouse buttons. For example, some people prefer using the left pointer button for dragging the scrollbar thumb. That can be set up by altering the translations resource, e.g., <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>*VT100.scrollbar.translations: #override \n\
    &lt;Btn5Down&gt;: StartScroll(Forward) \n\
@@ -5518,85 +5518,85 @@ u,i,s
    &lt;Btn1Motion&gt;: MoveThumb() NotifyThumb() \n\
    &lt;BtnUp&gt;: NotifyScroll(Proportional) EndScroll()
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4  </p>
 <h2>CONTROL SEQUENCES AND KEYBOARD</h2>
-<p> Applications can send sequences of characters to the terminal to change its behavior. Often they are referred to as ``ANSI escape sequences&#8217;&#8216; or just plain ``escape sequences&#8217;&#8216; but both terms are misleading: <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 ANSI x3.64 (obsolete) which was replaced by ISO 6429 (ECMA-48) gave rules for the <i>format</i> of these sequences of characters. <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 While the original VT100 was claimed to be ANSI-compatible (against x3.64), there is no freely available version of the ANSI standard to show where the VT100 differs. Most of the documents which mention the ANSI standard have additions not found in the original (such as those based on <code>ansi.sys</code>). So this discussion focuses on the ISO standards. <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 The standard describes only sequences sent from the host to the terminal. There is no standard for sequences sent by special keys from the terminal to the host. By convention (and referring to existing terminals), the format of those sequences usually conforms to the host-to-terminal standard. <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 Some of <i>xterm</i>&#8216;s sequences do not fit into the standard scheme. Technically those are ``unspecified&#8217;&#8216;. As an example, DEC Screen Alignment Test (DECALN) is this three-character sequence: <br />
-&nbsp;.sp <br />
+<p> Applications can send sequences of characters to the terminal to change its behavior. Often they are referred to as ``ANSI escape sequences&#8217;&#8216; or just plain ``escape sequences&#8217;&#8216; but both terms are misleading: <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 ANSI x3.64 (obsolete) which was replaced by ISO 6429 (ECMA-48) gave rules for the <i>format</i> of these sequences of characters. <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 While the original VT100 was claimed to be ANSI-compatible (against x3.64), there is no freely available version of the ANSI standard to show where the VT100 differs. Most of the documents which mention the ANSI standard have additions not found in the original (such as those based on <code>ansi.sys</code>). So this discussion focuses on the ISO standards. <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 The standard describes only sequences sent from the host to the terminal. There is no standard for sequences sent by special keys from the terminal to the host. By convention (and referring to existing terminals), the format of those sequences usually conforms to the host-to-terminal standard. <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 Some of <i>xterm</i>&#8216;s sequences do not fit into the standard scheme. Technically those are ``unspecified&#8217;&#8216;. As an example, DEC Screen Alignment Test (DECALN) is this three-character sequence: <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>
  ESC  # 8
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4 </p>
-<p> <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 Some sequences fit into the standard format, but are not listed in the standard. These include the sequences used for setting up scrolling margins and doing forward/reverse scrolling. <br />
+<p> <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 Some sequences fit into the standard format, but are not listed in the standard. These include the sequences used for setting up scrolling margins and doing forward/reverse scrolling. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 Some of the sequences (in particular, the single-character functions such as tab and backspace) do not include the <i>escape</i> character. </p>
 <p> With all of that in mind, the standard refers to these sequences of characters as ``control sequences&#8217;&#8216;. </p>
 <p> <i>Xterm Control Sequences</i> lists the control sequences which an application can send <i>xterm</i> to make it perform various operations. Most of these operations are standardized, from either the DEC or Tektronix terminals, or from more widely used standards such as ISO-6429. </p>
 <p> A few examples of usage are given in this section.  </p>
 <h3>Window and Icon Titles</h3>
 <p> Some scripts use <code>echo</code> with options <code>-e</code> and <code>-n</code> to tell the shell to interpret the string ``\e&#8217;&#8216; as the <i>escape</i> character and to suppress a trailing newline on output. Those are not portable, nor recommended. Instead, use <code>printf</code> (POSIX). </p>
-<p> For example, to set the <i>window title</i> to ``Hello world!&#8216;&#8216;, you could use one of these commands in a script: <br />
-&nbsp;.sp <br />
+<p> For example, to set the <i>window title</i> to ``Hello world!&#8216;&#8216;, you could use one of these commands in a script: <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>printf '\033]2;Hello world!\033\\'
 printf '\033]2;Hello world!\007'
 printf '\033]2;%s\033\\' &quot;Hello world!&quot;
 printf '\033]2;%s\007' &quot;Hello world!&quot;
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4 </p>
 <p> The <code>printf</code> command interprets the octal value ``\033&#8217;&#8216; for <i>escape</i>, and (since it was not given in the format) omits a trailing newline from the output. </p>
-<p> Some programs (such as <code><a href="/docs/linux/man/1-screen/">screen</a></code>(1)) set both window- and icon-titles at the same time, using a slightly different control sequence: <br />
-&nbsp;.sp <br />
+<p> Some programs (such as <code><a href="/docs/linux/man/1-screen/">screen</a></code>(1)) set both window- and icon-titles at the same time, using a slightly different control sequence: <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>printf '\033]0;Hello world!\033\\'
 printf '\033]0;Hello world!\007'
 printf '\033]0;%s\033\\' &quot;Hello world!&quot;
 printf '\033]0;%s\007' &quot;Hello world!&quot;
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4 </p>
-<p> The difference is the <i>parameter</i> ``0&#8217;&#8216; in each command. Most window managers will honor either window title or icon title. Some will make a distinction and allow you to set just the icon title. You can tell <i>xterm</i> to ask for this with a different parameter in the control sequence: <br />
-&nbsp;.sp <br />
+<p> The difference is the <i>parameter</i> ``0&#8217;&#8216; in each command. Most window managers will honor either window title or icon title. Some will make a distinction and allow you to set just the icon title. You can tell <i>xterm</i> to ask for this with a different parameter in the control sequence: <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>printf '\033]1;Hello world!\033\\'
 printf '\033]1;Hello world!\007'
 printf '\033]1;%s\033\\' &quot;Hello world!&quot;
 printf '\033]1;%s\007' &quot;Hello world!&quot;
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4  </p>
 <h3>Special Keys</h3>
-<p> <i>Xterm</i>, like any VT100-compatible terminal emulator, has two modes for the <i>special keys</i> (cursor-keys, numeric keypad, and certain function-keys): <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 <i>normal mode</i>, which makes the special keys transmit ``useful&#8217;&#8216; sequences such as the control sequence for cursor-up when pressing the up-arrow, and <br />
+<p> <i>Xterm</i>, like any VT100-compatible terminal emulator, has two modes for the <i>special keys</i> (cursor-keys, numeric keypad, and certain function-keys): <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 <i>normal mode</i>, which makes the special keys transmit ``useful&#8217;&#8216; sequences such as the control sequence for cursor-up when pressing the up-arrow, and <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 <i>application mode</i>, which uses a different control sequence that cannot be mistaken for the ``useful&#8217;&#8216; sequences. </p>
 <p> The main difference between the two modes is that normal mode sequences start with <i>CSI</i> (<i>escape&nbsp;[</i>) and application mode sequences start with <i>SS3</i> (<i>escape O</i>). </p>
 <p> The terminal is initialized into one of these two modes (usually the normal mode), based on the terminal description (termcap or terminfo). The terminal description also has capabilities (strings) defined for the keypad mode used in curses applications. </p>
-<p> There is a problem in using the terminal description for applications that are not intended to be full-screen curses applications: the definitions of special keys are only correct for this keypad mode. For example, some shells (unlike <code>ksh</code>(1), which appears to be hard-coded, not even using termcap) allow their users to customize key-bindings, assigning shell actions to special keys. <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 <code><a href="/docs/linux/man/1-bash/">bash</a></code>(1) allows <i>constant</i> strings to be assigned to functions. This is only successful if the terminal is initialized to application mode by default, because <code>bash</code> lacks flexibility in this area. It uses a (less expressive than <code>bash</code>&#8216;s) <code>readline</code> scripting language for setting up key bindings, which relies upon the user to statically enumerate the possible bindings for given values of <code>$TERM</code>. <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 <code><a href="/docs/linux/man/1-zsh/">zsh</a></code>(1) provides an analogous feature, but it accepts runtime expressions, as well as providing a <code>$terminfo</code> array for scripts. In particular, one can use the terminal database, transforming when defining a key-binding. By transforming the output so that <i>CSI</i> and <i>SS3</i> are equated, <code>zsh</code> can use the terminal database to obtain useful definitions for its command-line use regardless of whether the terminal uses normal or application mode initially. Here is an example: <br />
-&nbsp;.sp <br />
+<p> There is a problem in using the terminal description for applications that are not intended to be full-screen curses applications: the definitions of special keys are only correct for this keypad mode. For example, some shells (unlike <code>ksh</code>(1), which appears to be hard-coded, not even using termcap) allow their users to customize key-bindings, assigning shell actions to special keys. <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 <code><a href="/docs/linux/man/1-bash/">bash</a></code>(1) allows <i>constant</i> strings to be assigned to functions. This is only successful if the terminal is initialized to application mode by default, because <code>bash</code> lacks flexibility in this area. It uses a (less expressive than <code>bash</code>&#8216;s) <code>readline</code> scripting language for setting up key bindings, which relies upon the user to statically enumerate the possible bindings for given values of <code>$TERM</code>. <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 <code><a href="/docs/linux/man/1-zsh/">zsh</a></code>(1) provides an analogous feature, but it accepts runtime expressions, as well as providing a <code>$terminfo</code> array for scripts. In particular, one can use the terminal database, transforming when defining a key-binding. By transforming the output so that <i>CSI</i> and <i>SS3</i> are equated, <code>zsh</code> can use the terminal database to obtain useful definitions for its command-line use regardless of whether the terminal uses normal or application mode initially. Here is an example: <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>[[ &quot;$terminfo[kcuu1]&quot; == &quot;^[O&quot;* ]] &amp;&amp; \
 bindkey -M viins &quot;${terminfo[kcuu1]/O/[}&quot; \
 vi-up-line-or-history
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4  </p>
 <h3>Changing Colors</h3>
-<p> A few shell programs provide the ability for users to add color and other video attributes to the shell prompt strings. Users can do this by setting <code>$PS1</code> (the primary prompt string). Again, <code>bash</code> and <code>zsh</code> have provided features not found in <code>ksh</code>. There is a problem, however: the prompt&#8217;s width on the screen will not necessarily be the same as the number of characters. Because there is no guidance in the POSIX standard, each shell addresses the problem in a different way: <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>bash</code> treats characters within ``\[&#8216;&#8216; and ``\]&#8216;&#8216; as nonprinting (using no width on the screen). <br />
+<p> A few shell programs provide the ability for users to add color and other video attributes to the shell prompt strings. Users can do this by setting <code>$PS1</code> (the primary prompt string). Again, <code>bash</code> and <code>zsh</code> have provided features not found in <code>ksh</code>. There is a problem, however: the prompt&#8217;s width on the screen will not necessarily be the same as the number of characters. Because there is no guidance in the POSIX standard, each shell addresses the problem in a different way: <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>bash</code> treats characters within ``\[&#8216;&#8216; and ``\]&#8216;&#8216; as nonprinting (using no width on the screen). <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 <code>zsh</code> treats characters within ``%{&#8216;&#8216; and ``%}&#8216;&#8216; as nonprinting. </p>
-<p> In addition to the difference in syntax, the shells provide different methods for obtaining useful escape sequences: <br />
+<p> In addition to the difference in syntax, the shells provide different methods for obtaining useful escape sequences: <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 As noted in <code>Special Keys</code>, <code>zsh</code> initializes the $terminfo array with the terminal capabilities. </p>
 <dl>
-<dd> <p> It also provides a function <code>echoti</code> which works like <code><a href="/docs/linux/man/1-tput/">tput</a></code>(1) to convert a terminal capability with its parameters into a string that can be written to the terminal. <br />
+<dd> <p> It also provides a function <code>echoti</code> which works like <code><a href="/docs/linux/man/1-tput/">tput</a></code>(1) to convert a terminal capability with its parameters into a string that can be written to the terminal. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 Shells lacking a comparable feature (such as <code>bash</code>) can always use the program <code>tput</code> to do this transformation. </p>
  </dd></dl>
 <p> Hard-coded escape sequences are supported by each shell, but are not recommended because those rely upon particular configurations and cannot be easily moved between different user environments.  </p>
@@ -5609,7 +5609,7 @@ vi-up-line-or-history
 <dd> <p> is the display name, pointing to the X server (see <i>DISPLAY NAMES</i> in <a href="/docs/linux/man/7-X/">X</a>(7)). </p>
  </dd>
 <dt><code>TERM</code></dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  is set according to the terminfo (or termcap) entry which it is using as a reference. </p>
  </dd>
 <dd> <p> On some systems, you may encounter situations where the shell which you use and <i>xterm</i> are built using libraries with different terminal databases. In that situation, <i>xterm</i> may choose a terminal description not known to the shell. </p>
@@ -5640,7 +5640,7 @@ vi-up-line-or-history
 <dd> <p> <i>Xterm</i> would do this for systems which have no ability to tell the size of the terminal. Those are very rare, none newer than the mid 1990s when SVR4 became prevalent. </p>
  </dd>
 <dt><code>HOME</code></dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  when <i>xterm</i> is configured (at build-time) to update utmp. </p>
  </dd>
 <dt><code>LINES</code></dt>
@@ -5675,42 +5675,42 @@ vi-up-line-or-history
 <h3>Properties set by X Toolkit</h3>
 <dl>
 <dt><code>WM_CLASS</code></dt>
-<dd> <p> This shows the <i>instance name</i> and the X resource <i>class</i>, passed to X Toolkit during initialization of <i>xterm</i>, e.g., <br />
-&nbsp;.sp <br />
+<dd> <p> This shows the <i>instance name</i> and the X resource <i>class</i>, passed to X Toolkit during initialization of <i>xterm</i>, e.g., <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>WM_CLASS(STRING) = &quot;xterm&quot;, &quot;UXTerm&quot;
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4 </p>
  </dd>
 <dt><code>WM_CLIENT_LEADER</code></dt>
-<dd> <p> This shows the window-id which <i>xterm</i> provides with an environment variable (<code>WINDOWID</code>), e.g., <br />
-&nbsp;.sp <br />
+<dd> <p> This shows the window-id which <i>xterm</i> provides with an environment variable (<code>WINDOWID</code>), e.g., <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>WM_CLIENT_LEADER(WINDOW): window id # 0x800023
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4 </p>
  </dd>
 <dt><code>WM_COMMAND</code></dt>
-<dd> <p> This shows the command-line arguments for <i>xterm</i> which are passed to X Toolkit during initialization, e.g., <br />
-&nbsp;.sp <br />
+<dd> <p> This shows the command-line arguments for <i>xterm</i> which are passed to X Toolkit during initialization, e.g., <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>WM_COMMAND(STRING) = { &quot;xterm&quot;, &quot;-class&quot;, &quot;UXTerm&quot;, &quot;-title&quot;, &quot;uxterm&quot;, &quot;-u8&quot; }
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4 </p>
  </dd>
 <dt><code>WM_ICON_NAME</code></dt>
 <dd> <p> This holds the icon title, which different window managers handle in various ways. It is set via the <code>iconName</code> resource. Applications can change this using control sequences. </p>
  </dd>
 <dt><code>WM_LOCALE_NAME</code></dt>
-<dd> <p> This shows the result from the <code><a href="/docs/linux/man/3-setlocale/">setlocale</a></code>(3) function for the <i>LC_CTYPE</i> category, e.g., <br />
-&nbsp;.sp <br />
+<dd> <p> This shows the result from the <code><a href="/docs/linux/man/3-setlocale/">setlocale</a></code>(3) function for the <i>LC_CTYPE</i> category, e.g., <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>WM_LOCALE_NAME(STRING) = &quot;en_US.UTF-8&quot;
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4 </p>
  </dd>
 <dt><code>WM_NAME</code></dt>
@@ -5768,12 +5768,12 @@ vi-up-line-or-history
 <dd> <p> the <i>xterm</i> default application resources. </p>
  </dd>
 <dt><i>/etc/X11/app-defaults/XTerm-color</i></dt>
-<dd> <p> the <i>xterm</i> color application resources. If your display supports color, use this <br />
-&nbsp;.sp <br />
+<dd> <p> the <i>xterm</i> color application resources. If your display supports color, use this <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>*customization: -color
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4 </p>
  </dd>
 <dd> <p> in your .Xdefaults file to automatically use this resource file rather than <i>/etc/X11/app-defaults/XTerm</i>. If you do not do this, <i>xterm</i> uses its compiled-in default resource settings for colors. </p>
@@ -5782,12 +5782,12 @@ vi-up-line-or-history
 <dd> <p> the directory in which <i>xterm</i>&#8216;s pixmap icon files are installed. </p>
  </dd></dl>
 <h2>ERROR MESSAGES</h2>
-<p> Most of the fatal error messages from <i>xterm</i> use the following format: <br />
-&nbsp;.sp <br />
+<p> Most of the fatal error messages from <i>xterm</i> use the following format: <br/>
+&nbsp;.sp <br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>xterm: Error XXX , errno YYY : ZZZ 
 </code></pre>
-<p> <br />
+<p> <br/>
 &nbsp;.in -4 </p>
 <p> The <i>XXX</i> codes (which are used by <i>xterm</i> as its exit-code) are listed below, with a brief explanation. </p>
 <dl>
@@ -5795,159 +5795,159 @@ vi-up-line-or-history
 <dd> <p> is used for miscellaneous errors, usually accompanied by a specific message, </p>
  </dd>
 <dt>11</dt>
-<dd> <p> ERROR_FIONBIO <br />
+<dd> <p> ERROR_FIONBIO <br/>
  main: ioctl() failed on FIONBIO </p>
  </dd>
 <dt>12</dt>
-<dd> <p> ERROR_F_GETFL <br />
+<dd> <p> ERROR_F_GETFL <br/>
  main: ioctl() failed on F_GETFL </p>
  </dd>
 <dt>13</dt>
-<dd> <p> ERROR_F_SETFL <br />
+<dd> <p> ERROR_F_SETFL <br/>
  main: ioctl() failed on F_SETFL </p>
  </dd>
 <dt>14</dt>
-<dd> <p> ERROR_OPDEVTTY <br />
+<dd> <p> ERROR_OPDEVTTY <br/>
  spawn: open() failed on /dev/tty </p>
  </dd>
 <dt>15</dt>
-<dd> <p> ERROR_TIOCGETP <br />
+<dd> <p> ERROR_TIOCGETP <br/>
  spawn: ioctl() failed on TIOCGETP </p>
  </dd>
 <dt>17</dt>
-<dd> <p> ERROR_PTSNAME <br />
+<dd> <p> ERROR_PTSNAME <br/>
  spawn: ptsname() failed </p>
  </dd>
 <dt>18</dt>
-<dd> <p> ERROR_OPPTSNAME <br />
+<dd> <p> ERROR_OPPTSNAME <br/>
  spawn: open() failed on ptsname </p>
  </dd>
 <dt>19</dt>
-<dd> <p> ERROR_PTEM <br />
+<dd> <p> ERROR_PTEM <br/>
  spawn: ioctl() failed on I_PUSH/&quot;ptem&quot; </p>
  </dd>
 <dt>20</dt>
-<dd> <p> ERROR_CONSEM <br />
+<dd> <p> ERROR_CONSEM <br/>
  spawn: ioctl() failed on I_PUSH/&quot;consem&quot; </p>
  </dd>
 <dt>21</dt>
-<dd> <p> ERROR_LDTERM <br />
+<dd> <p> ERROR_LDTERM <br/>
  spawn: ioctl() failed on I_PUSH/&quot;ldterm&quot; </p>
  </dd>
 <dt>22</dt>
-<dd> <p> ERROR_TTCOMPAT <br />
+<dd> <p> ERROR_TTCOMPAT <br/>
  spawn: ioctl() failed on I_PUSH/&quot;ttcompat&quot; </p>
  </dd>
 <dt>23</dt>
-<dd> <p> ERROR_TIOCSETP <br />
+<dd> <p> ERROR_TIOCSETP <br/>
  spawn: ioctl() failed on TIOCSETP </p>
  </dd>
 <dt>24</dt>
-<dd> <p> ERROR_TIOCSETC <br />
+<dd> <p> ERROR_TIOCSETC <br/>
  spawn: ioctl() failed on TIOCSETC </p>
  </dd>
 <dt>25</dt>
-<dd> <p> ERROR_TIOCSETD <br />
+<dd> <p> ERROR_TIOCSETD <br/>
  spawn: ioctl() failed on TIOCSETD </p>
  </dd>
 <dt>26</dt>
-<dd> <p> ERROR_TIOCSLTC <br />
+<dd> <p> ERROR_TIOCSLTC <br/>
  spawn: ioctl() failed on TIOCSLTC </p>
  </dd>
 <dt>27</dt>
-<dd> <p> ERROR_TIOCLSET <br />
+<dd> <p> ERROR_TIOCLSET <br/>
  spawn: ioctl() failed on TIOCLSET </p>
  </dd>
 <dt>28</dt>
-<dd> <p> ERROR_INIGROUPS <br />
+<dd> <p> ERROR_INIGROUPS <br/>
  spawn: initgroups() failed </p>
  </dd>
 <dt>29</dt>
-<dd> <p> ERROR_FORK <br />
+<dd> <p> ERROR_FORK <br/>
  spawn: fork() failed </p>
  </dd>
 <dt>30</dt>
-<dd> <p> ERROR_EXEC <br />
+<dd> <p> ERROR_EXEC <br/>
  spawn: exec() failed </p>
  </dd>
 <dt>32</dt>
-<dd> <p> ERROR_PTYS <br />
+<dd> <p> ERROR_PTYS <br/>
  get_pty: not enough ptys </p>
  </dd>
 <dt>34</dt>
-<dd> <p> ERROR_PTY_EXEC <br />
+<dd> <p> ERROR_PTY_EXEC <br/>
  waiting for initial map </p>
  </dd>
 <dt>35</dt>
-<dd> <p> ERROR_SETUID <br />
+<dd> <p> ERROR_SETUID <br/>
  spawn: setuid() failed </p>
  </dd>
 <dt>36</dt>
-<dd> <p> ERROR_INIT <br />
+<dd> <p> ERROR_INIT <br/>
  spawn: can&#8217;t initialize window </p>
  </dd>
 <dt>46</dt>
-<dd> <p> ERROR_TIOCKSET <br />
+<dd> <p> ERROR_TIOCKSET <br/>
  spawn: ioctl() failed on TIOCKSET </p>
  </dd>
 <dt>47</dt>
-<dd> <p> ERROR_TIOCKSETC <br />
+<dd> <p> ERROR_TIOCKSETC <br/>
  spawn: ioctl() failed on TIOCKSETC </p>
  </dd>
 <dt>49</dt>
-<dd> <p> ERROR_LUMALLOC <br />
+<dd> <p> ERROR_LUMALLOC <br/>
  luit: command-line malloc failed </p>
  </dd>
 <dt>50</dt>
-<dd> <p> ERROR_SELECT <br />
+<dd> <p> ERROR_SELECT <br/>
  in_put: select() failed </p>
  </dd>
 <dt>54</dt>
-<dd> <p> ERROR_VINIT <br />
+<dd> <p> ERROR_VINIT <br/>
  VTInit: can&#8217;t initialize window </p>
  </dd>
 <dt>57</dt>
-<dd> <p> ERROR_KMMALLOC1 <br />
+<dd> <p> ERROR_KMMALLOC1 <br/>
  HandleKeymapChange: malloc failed </p>
  </dd>
 <dt>60</dt>
-<dd> <p> ERROR_TSELECT <br />
+<dd> <p> ERROR_TSELECT <br/>
  Tinput: select() failed </p>
  </dd>
 <dt>64</dt>
-<dd> <p> ERROR_TINIT <br />
+<dd> <p> ERROR_TINIT <br/>
  TekInit: can&#8217;t initialize window </p>
  </dd>
 <dt>71</dt>
-<dd> <p> ERROR_BMALLOC2 <br />
+<dd> <p> ERROR_BMALLOC2 <br/>
  SaltTextAway: malloc() failed </p>
  </dd>
 <dt>80</dt>
-<dd> <p> ERROR_LOGEXEC <br />
+<dd> <p> ERROR_LOGEXEC <br/>
  StartLog: exec() failed </p>
  </dd>
 <dt>83</dt>
-<dd> <p> ERROR_XERROR <br />
+<dd> <p> ERROR_XERROR <br/>
  xerror: XError event </p>
  </dd>
 <dt>84</dt>
-<dd> <p> ERROR_XIOERROR <br />
+<dd> <p> ERROR_XIOERROR <br/>
  xioerror: X I/O error </p>
  </dd>
 <dt>85</dt>
-<dd> <p> ERROR_ICEERROR <br />
+<dd> <p> ERROR_ICEERROR <br/>
  ICE I/O error </p>
  </dd>
 <dt>90</dt>
-<dd> <p> ERROR_SCALLOC <br />
+<dd> <p> ERROR_SCALLOC <br/>
  Alloc: calloc() failed on base </p>
  </dd>
 <dt>91</dt>
-<dd> <p> ERROR_SCALLOC2 <br />
+<dd> <p> ERROR_SCALLOC2 <br/>
  Alloc: calloc() failed on rows </p>
  </dd>
 <dt>102</dt>
-<dd> <p> ERROR_SAVE_PTR <br />
+<dd> <p> ERROR_SAVE_PTR <br/>
  ScrnPointers: malloc/realloc() failed </p>
  </dd></dl>
 <h2>BUGS</h2>
@@ -5960,23 +5960,23 @@ vi-up-line-or-history
 <p> <a href="/docs/linux/man/1-resize/">resize</a>(1), <a href="/docs/linux/man/1-luit/">luit</a>(1), <a href="/docs/linux/man/1-uxterm/">uxterm</a>(1), <a href="/docs/linux/man/7-X/">X</a>(7), Xcursor(7), pty(4), <a href="/docs/linux/man/4-tty/">tty</a>(4) </p>
 <p> <i>Xterm Control Sequences</i> (this is the file ctlseqs.ms). </p>
 <dl>
-<dd> <p> <a rel="nofollow" href="https://invisible-island.net/xterm/xterm.html">https://invisible-island.net/xterm/xterm.html</a> <br />
- <a rel="nofollow" href="https://invisible-island.net/xterm/manpage/xterm.html">https://invisible-island.net/xterm/manpage/xterm.html</a> <br />
- <a rel="nofollow" href="https://invisible-island.net/xterm/ctlseqs/ctlseqs.html">https://invisible-island.net/xterm/ctlseqs/ctlseqs.html</a> <br />
- <a rel="nofollow" href="https://invisible-island.net/xterm/xterm.faq.html">https://invisible-island.net/xterm/xterm.faq.html</a> <br />
+<dd> <p> <a rel="nofollow" href="https://invisible-island.net/xterm/xterm.html">https://invisible-island.net/xterm/xterm.html</a> <br/>
+ <a rel="nofollow" href="https://invisible-island.net/xterm/manpage/xterm.html">https://invisible-island.net/xterm/manpage/xterm.html</a> <br/>
+ <a rel="nofollow" href="https://invisible-island.net/xterm/ctlseqs/ctlseqs.html">https://invisible-island.net/xterm/ctlseqs/ctlseqs.html</a> <br/>
+ <a rel="nofollow" href="https://invisible-island.net/xterm/xterm.faq.html">https://invisible-island.net/xterm/xterm.faq.html</a> <br/>
  <a rel="nofollow" href="https://invisible-island.net/xterm/xterm.log.html">https://invisible-island.net/xterm/xterm.log.html</a> </p>
  </dd></dl>
-<p> <i>X Toolkit Intrinsics - C Language Interface</i> (Xt), <br />
- Joel McCormack, Paul Asente, Ralph R. Swick (1994), <br />
+<p> <i>X Toolkit Intrinsics - C Language Interface</i> (Xt), <br/>
+ Joel McCormack, Paul Asente, Ralph R. Swick (1994), <br/>
  Thomas E. Dickey (2019). </p>
-<p> <i>Inter-Client Communication Conventions Manual</i> (ICCCM), <br />
+<p> <i>Inter-Client Communication Conventions Manual</i> (ICCCM), <br/>
  David Rosenthal and Stuart W. Marks (version 2.0, 1994). </p>
-<p> <i>Extended Window Manager Hints</i> (EWMH), <br />
+<p> <i>Extended Window Manager Hints</i> (EWMH), <br/>
  X Desktop Group (version 1.3, 2005). </p>
-<p> EWMH uses <i>UTF8_STRING</i> pervasively without defining it, but does mention the ICCCM. Version 2.0 of the ICCCM does not address UTF-8. That is an extension added in XFree86. <br />
+<p> EWMH uses <i>UTF8_STRING</i> pervasively without defining it, but does mention the ICCCM. Version 2.0 of the ICCCM does not address UTF-8. That is an extension added in XFree86. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 Markus Kuhn summarized this in <i>UTF-8 and Unicode FAQ for Unix/Linux</i> (2001), in the section ``Is X11 ready for Unicode?&#8216;&#8216; </p>
 <dl>
-<dd> <p> <a rel="nofollow" href="https://www.cl.cam.ac.uk/~mgk25/unicode.html">https://www.cl.cam.ac.uk/~mgk25/unicode.html</a> <br />
+<dd> <p> <a rel="nofollow" href="https://www.cl.cam.ac.uk/~mgk25/unicode.html">https://www.cl.cam.ac.uk/~mgk25/unicode.html</a> <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 Juliusz Chroboczek proposed the UTF8_STRING selection atom in 1999/2000, which became part of the ICCCM in XFree86. </p>
  </dd>
 <dd> <p> <a rel="nofollow" href="https://www.irif.fr/~jch/software/UTF8_STRING/">https://www.irif.fr/~jch/software/UTF8_STRING/</a> </p>

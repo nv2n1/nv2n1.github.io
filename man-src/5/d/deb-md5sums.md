@@ -11,8 +11,8 @@ description: "deb-md5sums – package MD5 file digests"
 <h2>Synopsis</h2>
 <p><code>DEBIAN/md5sums</code></p>
 <h2>Description</h2>
-<p>A package declares the <font SIZE="-1">MD5</font> digests for the package file contents by including an <i>md5sums</i> file in its control archive (i.e. <i>DEBIAN/md5sums</i> during package creation). This file is used for integrity verification and deduplication purposes, and not for any kind of security purpose. </p>
-<p> This file contains a list of <font SIZE="-1">MD5</font> digests (as 32 case-insensitive hexadecimal characters) followed by two spaces (U+0020 <font SIZE="-1"><code>SPACE</code></font>) and the absolute pathname of a plain file, one per line. </p>
+<p>A package declares the MD5 digests for the package file contents by including an <i>md5sums</i> file in its control archive (i.e. <i>DEBIAN/md5sums</i> during package creation). This file is used for integrity verification and deduplication purposes, and not for any kind of security purpose. </p>
+<p> This file contains a list of MD5 digests (as 32 case-insensitive hexadecimal characters) followed by two spaces (U+0020 <code>SPACE</code>) and the absolute pathname of a plain file, one per line. </p>
 <p> Trailing slashes (U+002F <code>/</code>) in the pathname will be trimmed. Neither trailing whitespace nor empty or whitespace-only lines are accepted. </p>
 <p> If the control file does not exist in the binary package, <code><a href="/docs/linux/man/1-dpkg/">dpkg</a></code>(1) will generate the matching information at unpack time (since <code>dpkg</code> 1.16.3).</p>
 <h2>Example</h2>

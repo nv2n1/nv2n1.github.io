@@ -27,12 +27,12 @@ description: "dropbearkey – create private keys for the use with dropbear(8) o
 <p> The program <a href="/docs/linux/man/1-dropbearconvert/">dropbearconvert</a>(1) can be used to convert between Dropbear and OpenSSH key formats. </p>
 <p> Dropbear does not support encrypted keys.</p>
 <h2>EXAMPLE</h2>
-<p> generate a host-key:<br />
+<p> generate a host-key:<br/>
 &nbsp;<wbr>#&nbsp;<wbr>dropbearkey -t rsa -f&nbsp;<wbr>/etc/dropbear/dropbear_rsa_host_key </p>
-<p> extract a public key suitable for authorized_keys from private key:<br />
+<p> extract a public key suitable for authorized_keys from private key:<br/>
 &nbsp;<wbr>#&nbsp;<wbr>dropbearkey -y -f id_rsa | grep&nbsp;<wbr>&quot;^ssh-rsa&nbsp;<wbr>&quot;&nbsp;<wbr>&gt;&gt;&nbsp;<wbr>authorized_keys</p>
 <h2>AUTHOR</h2>
-<p> Matt Johnston (matt [at] ucc.asn.au).<br />
+<p> Matt Johnston (matt [at] ucc.asn.au).<br/>
  Gerrit Pape (pape [at] smarden.org) wrote this manual page.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/8-dropbear/">dropbear</a>(8), <a href="/docs/linux/man/1-dbclient/">dbclient</a>(1), <a href="/docs/linux/man/1-dropbearconvert/">dropbearconvert</a>(1) </p>

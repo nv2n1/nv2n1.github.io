@@ -18,7 +18,7 @@ int sched_getcpu(void);</code></pre>
 <dt>Since glibc 2.14:</dt>
 <dd>_GNU_SOURCE</dd>
 <dt>Before glibc 2.14:</dt>
-<dd>_BSD_SOURCE || _SVID_SOURCE<br />
+<dd>_BSD_SOURCE || _SVID_SOURCE<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;_GNU_SOURCE also suffices&nbsp;*/</dd></dl>
 </dl>
 <h2>Description</h2>
@@ -50,8 +50,8 @@ int sched_getcpu(void);</code></pre>
 <h2>Conforming To</h2>
 <p><code>sched_getcpu</code>() is glibc-specific.</p>
 <h2>Notes</h2>
-<p>The call int c, s;<br />
-s = getcpu(&amp;c, NULL, NULL);<br />
+<p>The call int c, s;<br/>
+s = getcpu(&amp;c, NULL, NULL);<br/>
 cpu = (s == -1) ? s : c; is equivalent to the following <code><a href="/docs/linux/man/2-getcpu/">getcpu</a></code>(2) call: </p>
 <pre><code>int c, s;
 s = getcpu(&amp;c, NULL, NULL);

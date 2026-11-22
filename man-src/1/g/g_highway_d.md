@@ -15,12 +15,12 @@ description: "highway – X-windows gadget for highway simulations"
 <h2>DESCRIPTION</h2>
 <p> highway is the gromacs highway simulator. It is an X-windows gadget that shows a (periodic) Autobahn with a user defined number of cars. Fog can be turned on or off to increase the number of crashes. Nice for a background CPU-eater. A sample input file is in $GMXDATA/top/highway.dat</p>
 <h2>FILES</h2>
-<p> <code>-f</code><i> highway.dat</i> <code>Input</code><br />
+<p> <code>-f</code><i> highway.dat</i> <code>Input</code><br/>
 &nbsp;<wbr>Generic data file&nbsp;<wbr> </p>
 <h2>OTHER OPTIONS</h2>
-<p> <code>-[no]h</code><i>no </i><br />
+<p> <code>-[no]h</code><i>no </i><br/>
 &nbsp;<wbr>Print help info and quit </p>
-<p> <code>-nice</code><i> int</i><code> 0</code><br />
+<p> <code>-nice</code><i> int</i><code> 0</code><br/>
 &nbsp;<wbr>Set the nicelevel </p>
 <h2>SEE ALSO</h2>
 <p> <code>gromacs(7)</code> </p>

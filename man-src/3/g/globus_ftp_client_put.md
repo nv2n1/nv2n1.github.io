@@ -11,8 +11,8 @@ description: "FTP Operations –"
 <p> FTP Operations &#8211; </p>
 <h3>Typedefs</h3>
 <p> typedef void(* <code>globus_ftp_client_complete_callback_t</code> )(void *user_arg, <code>globus_ftp_client_handle_t</code> *handle, globus_object_t *error) </p>
-<p> typedef struct<br />
- <code>globus_i_ftp_client_features_s</code> * <code>globus_ftp_client_features_t</code>&quot;<br />
+<p> typedef struct<br/>
+ <code>globus_i_ftp_client_features_s</code> * <code>globus_ftp_client_features_t</code>&quot;<br/>
  <i>Feature Handle</i> </p>
 <p> Handle used to associate state with feature operations. &quot;</p>
 <h3>Enumerations</h3>
@@ -83,8 +83,8 @@ description: "FTP Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>user_arg</i> The user_arg parameter passed to the operation.<br />
- <i>handle</i> The handle on which the operation was done.<br />
+</dt><dd> <i>user_arg</i> The user_arg parameter passed to the operation.<br/>
+ <i>handle</i> The handle on which the operation was done.<br/>
  <i>error</i> A Globus error object indicating any problem which occurred, or GLOBUS_SUCCESS, if the operation completed successfully.</dd></dl>
 <h3>typedef struct <code>globus_i_ftp_client_features_s</code>* <code>globus_ftp_client_features_t</code></h3>
 <p> Feature Handle </p>
@@ -113,11 +113,11 @@ description: "FTP Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>u_handle</i> An FTP Client handle to use for the change operation.<br />
- <i>url</i> The URL of the file to modify group membership.<br />
- <i>group</i> The group name or numeric identifier for the group that the file should become a member of.<br />
- <i>attr</i> Attributes for this operation.<br />
- <i>complete_callback</i> Callback to be invoked once the change is completed.<br />
+</dt><dd> <i>u_handle</i> An FTP Client handle to use for the change operation.<br/>
+ <i>url</i> The URL of the file to modify group membership.<br/>
+ <i>group</i> The group name or numeric identifier for the group that the file should become a member of.<br/>
+ <i>attr</i> Attributes for this operation.<br/>
+ <i>complete_callback</i> Callback to be invoked once the change is completed.<br/>
  <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -144,11 +144,11 @@ description: "FTP Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>u_handle</i> An FTP Client handle to use for the move operation.<br />
- <i>url</i> The URL of the file to modify permissions.<br />
- <i>mode</i> The integer file mode to change to. Be sure that the integer is in the proper base, i.e. 0777 (octal) vs 777 (decimal).<br />
- <i>attr</i> Attributes for this operation.<br />
- <i>complete_callback</i> Callback to be invoked once the move is completed.<br />
+</dt><dd> <i>u_handle</i> An FTP Client handle to use for the move operation.<br/>
+ <i>url</i> The URL of the file to modify permissions.<br/>
+ <i>mode</i> The integer file mode to change to. Be sure that the integer is in the proper base, i.e. 0777 (octal) vs 777 (decimal).<br/>
+ <i>attr</i> Attributes for this operation.<br/>
+ <i>complete_callback</i> Callback to be invoked once the move is completed.<br/>
  <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -175,14 +175,14 @@ description: "FTP Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>u_handle</i> An FTP Client handle to use for the list operation.<br />
- <i>url</i> The URL to list. The URL may be an ftp or gsiftp URL.<br />
- <i>attr</i> Attributes for this file transfer.<br />
- <i>cksm</i> A pointer to a buffer to be filled with the checksum of the file. On error the buffer contents are undefined.<br />
- <i>offset</i> File offset to start calculating checksum.<br />
- <i>length</i> Length of data to read from the starting offset. Use -1 to read the entire file.<br />
- <i>algorithm</i> A pointer to a string to specifying the desired algorithm Currently, GridFTP servers only support the MD5 algorithm.<br />
- <i>complete_callback</i> Callback to be invoked once the checksum is completed.<br />
+</dt><dd> <i>u_handle</i> An FTP Client handle to use for the list operation.<br/>
+ <i>url</i> The URL to list. The URL may be an ftp or gsiftp URL.<br/>
+ <i>attr</i> Attributes for this file transfer.<br/>
+ <i>cksm</i> A pointer to a buffer to be filled with the checksum of the file. On error the buffer contents are undefined.<br/>
+ <i>offset</i> File offset to start calculating checksum.<br/>
+ <i>length</i> Length of data to read from the starting offset. Use -1 to read the entire file.<br/>
+ <i>algorithm</i> A pointer to a string to specifying the desired algorithm Currently, GridFTP servers only support the MD5 algorithm.<br/>
+ <i>complete_callback</i> Callback to be invoked once the checksum is completed.<br/>
  <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -211,12 +211,12 @@ description: "FTP Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>u_handle</i> An FTP Client handle to use for the cwd operation.<br />
- <i>url</i> The URL for the directory to cd into. The URL may be an ftp or gsiftp URL.<br />
- <i>attr</i> Attributes for this operation.<br />
- <i>cwd_buffer</i> A pointer to a globus_byte_t * to be allocated and filled with the directory name returned by the CWD, if it succeeds. Otherwise, the value pointed to by it is undefined. It is up the user to free this memory.<br />
- <i>cwd_buffer_length</i> A pointer to a globus_size_t to be filled with the length of the data in cwd_buffer.<br />
- <i>complete_callback</i> Callback to be invoked once the cwd is completed.<br />
+</dt><dd> <i>u_handle</i> An FTP Client handle to use for the cwd operation.<br/>
+ <i>url</i> The URL for the directory to cd into. The URL may be an ftp or gsiftp URL.<br/>
+ <i>attr</i> Attributes for this operation.<br/>
+ <i>cwd_buffer</i> A pointer to a globus_byte_t * to be allocated and filled with the directory name returned by the CWD, if it succeeds. Otherwise, the value pointed to by it is undefined. It is up the user to free this memory.<br/>
+ <i>cwd_buffer_length</i> A pointer to a globus_size_t to be filled with the length of the data in cwd_buffer.<br/>
+ <i>complete_callback</i> Callback to be invoked once the cwd is completed.<br/>
  <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -247,10 +247,10 @@ description: "FTP Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>u_handle</i> An FTP Client handle to use for the delete operation.<br />
- <i>url</i> The URL for the file to delete. The URL may be an ftp or gsiftp URL.<br />
- <i>attr</i> Attributes for this file transfer.<br />
- <i>complete_callback</i> Callback to be invoked once the delete is completed.<br />
+</dt><dd> <i>u_handle</i> An FTP Client handle to use for the delete operation.<br/>
+ <i>url</i> The URL for the file to delete. The URL may be an ftp or gsiftp URL.<br/>
+ <i>attr</i> Attributes for this file transfer.<br/>
+ <i>complete_callback</i> Callback to be invoked once the delete is completed.<br/>
  <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -276,10 +276,10 @@ description: "FTP Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>u_handle</i> An FTP Client handle to use for the existence check operation.<br />
- <i>url</i> The URL of the directory or file to check. The URL may be an ftp or gsiftp URL.<br />
- <i>attr</i> Attributes to use for this operation.<br />
- <i>complete_callback</i> Callback to be invoked once the existence operation is completed.<br />
+</dt><dd> <i>u_handle</i> An FTP Client handle to use for the existence check operation.<br/>
+ <i>url</i> The URL of the directory or file to check. The URL may be an ftp or gsiftp URL.<br/>
+ <i>attr</i> Attributes to use for this operation.<br/>
+ <i>complete_callback</i> Callback to be invoked once the existence operation is completed.<br/>
  <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -307,12 +307,12 @@ description: "FTP Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> An FTP Client handle to use for the get operation.<br />
- <i>url</i> The URL to download. The URL may be an ftp or gsiftp URL.<br />
- <i>attr</i> Attributes for this file transfer.<br />
- <i>restart</i> Pointer to a restart marker.<br />
- <i>eret_alg_str</i> The ERET algorithm string. This string contains information needed to invoke a server-specific data reduction algorithm on the file being retrieved.<br />
- <i>complete_callback</i> Callback to be invoked once the &#8216;get&#8217; is completed.<br />
+</dt><dd> <i>handle</i> An FTP Client handle to use for the get operation.<br/>
+ <i>url</i> The URL to download. The URL may be an ftp or gsiftp URL.<br/>
+ <i>attr</i> Attributes for this file transfer.<br/>
+ <i>restart</i> Pointer to a restart marker.<br/>
+ <i>eret_alg_str</i> The ERET algorithm string. This string contains information needed to invoke a server-specific data reduction algorithm on the file being retrieved.<br/>
+ <i>complete_callback</i> Callback to be invoked once the &#8216;get&#8217; is completed.<br/>
  <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -344,12 +344,12 @@ description: "FTP Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> An FTP Client handle to use for the put operation.<br />
- <i>url</i> The URL to store the data to. The URL may be an ftp or gsiftp URL.<br />
- <i>attr</i> Attributes for this file transfer.<br />
- <i>restart</i> Pointer to a restart marker.<br />
- <i>esto_alg_str</i><br />
- <i>complete_callback</i> Callback to be invoked once the &#8216;put&#8217; is completed.<br />
+</dt><dd> <i>handle</i> An FTP Client handle to use for the put operation.<br/>
+ <i>url</i> The URL to store the data to. The URL may be an ftp or gsiftp URL.<br/>
+ <i>attr</i> Attributes for this file transfer.<br/>
+ <i>restart</i> Pointer to a restart marker.<br/>
+ <i>esto_alg_str</i><br/>
+ <i>complete_callback</i> Callback to be invoked once the &#8216;put&#8217; is completed.<br/>
  <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
@@ -363,15 +363,15 @@ description: "FTP Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> An FTP Client handle to use for the get operation.<br />
- <i>source_url</i> The URL to transfer. The URL may be an ftp or gsiftp URL.<br />
- <i>source_attr</i> Attributes for the souce URL.<br />
- <i>eret_alg_str</i><br />
- <i>dest_url</i> The destination URL for the transfer. The URL may be an ftp or gsiftp URL.<br />
- <i>dest_attr</i> Attributes for the destination URL.<br />
- <i>esto_alg_str</i><br />
- <i>restart</i> Pointer to a restart marker.<br />
- <i>complete_callback</i> Callback to be invoked once the &#8216;put&#8217; is completed.<br />
+</dt><dd> <i>handle</i> An FTP Client handle to use for the get operation.<br/>
+ <i>source_url</i> The URL to transfer. The URL may be an ftp or gsiftp URL.<br/>
+ <i>source_attr</i> Attributes for the souce URL.<br/>
+ <i>eret_alg_str</i><br/>
+ <i>dest_url</i> The destination URL for the transfer. The URL may be an ftp or gsiftp URL.<br/>
+ <i>dest_attr</i> Attributes for the destination URL.<br/>
+ <i>esto_alg_str</i><br/>
+ <i>restart</i> Pointer to a restart marker.<br/>
+ <i>complete_callback</i> Callback to be invoked once the &#8216;put&#8217; is completed.<br/>
  <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
@@ -382,11 +382,11 @@ description: "FTP Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>u_handle</i> An FTP Client handle to use for the list operation.<br />
- <i>url</i> The URL to list. The URL may be an ftp or gsiftp URL.<br />
- <i>attr</i> Attributes for this file transfer.<br />
- <i>u_features</i> A pointer to a globus_ftp_client_features_t to be filled with the feature set supported by the server.<br />
- <i>complete_callback</i> Callback to be invoked once the size check is completed.<br />
+</dt><dd> <i>u_handle</i> An FTP Client handle to use for the list operation.<br/>
+ <i>url</i> The URL to list. The URL may be an ftp or gsiftp URL.<br/>
+ <i>attr</i> Attributes for this file transfer.<br/>
+ <i>u_features</i> A pointer to a globus_ftp_client_features_t to be filled with the feature set supported by the server.<br/>
+ <i>complete_callback</i> Callback to be invoked once the size check is completed.<br/>
  <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -435,11 +435,11 @@ description: "FTP Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> An FTP Client handle to use for the get operation.<br />
- <i>url</i> The URL to download. The URL may be an ftp or gsiftp URL.<br />
- <i>attr</i> Attributes for this file transfer.<br />
- <i>restart</i> Pointer to a restart marker.<br />
- <i>complete_callback</i> Callback to be invoked once the &#8216;get&#8217; is completed.<br />
+</dt><dd> <i>handle</i> An FTP Client handle to use for the get operation.<br/>
+ <i>url</i> The URL to download. The URL may be an ftp or gsiftp URL.<br/>
+ <i>attr</i> Attributes for this file transfer.<br/>
+ <i>restart</i> Pointer to a restart marker.<br/>
+ <i>complete_callback</i> Callback to be invoked once the &#8216;get&#8217; is completed.<br/>
  <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -469,8 +469,8 @@ description: "FTP Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>u_features</i> list of features, as returned by <code>globus_ftp_client_feat()</code><br />
- <i>answer</i> this variable will contain the answer<br />
+</dt><dd> <i>u_features</i> list of features, as returned by <code>globus_ftp_client_feat()</code><br/>
+ <i>answer</i> this variable will contain the answer<br/>
  <i>feature</i> feature number, 0 &lt;= feature &lt; GLOBUS_FTP_CLIENT_FEATURE_MAX</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -483,10 +483,10 @@ description: "FTP Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>u_handle</i> An FTP Client handle to use for the list operation.<br />
- <i>url</i> The URL to list. The URL may be an ftp or gsiftp URL.<br />
- <i>attr</i> Attributes for this file transfer.<br />
- <i>complete_callback</i> Callback to be invoked once the &#8216;list&#8217; is completed.<br />
+</dt><dd> <i>u_handle</i> An FTP Client handle to use for the list operation.<br/>
+ <i>url</i> The URL to list. The URL may be an ftp or gsiftp URL.<br/>
+ <i>attr</i> Attributes for this file transfer.<br/>
+ <i>complete_callback</i> Callback to be invoked once the &#8216;list&#8217; is completed.<br/>
  <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -517,10 +517,10 @@ description: "FTP Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>u_handle</i> An FTP Client handle to use for the list operation.<br />
- <i>url</i> The URL to list. The URL may be an ftp or gsiftp URL.<br />
- <i>attr</i> Attributes for this file transfer.<br />
- <i>complete_callback</i> Callback to be invoked once the &#8216;list&#8217; is completed.<br />
+</dt><dd> <i>u_handle</i> An FTP Client handle to use for the list operation.<br/>
+ <i>url</i> The URL to list. The URL may be an ftp or gsiftp URL.<br/>
+ <i>attr</i> Attributes for this file transfer.<br/>
+ <i>complete_callback</i> Callback to be invoked once the &#8216;list&#8217; is completed.<br/>
  <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -551,10 +551,10 @@ description: "FTP Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>u_handle</i> An FTP Client handle to use for the mkdir operation.<br />
- <i>url</i> The URL for the directory to create. The URL may be an ftp or gsiftp URL.<br />
- <i>attr</i> Attributes for this operation.<br />
- <i>complete_callback</i> Callback to be invoked once the mkdir is completed.<br />
+</dt><dd> <i>u_handle</i> An FTP Client handle to use for the mkdir operation.<br/>
+ <i>url</i> The URL for the directory to create. The URL may be an ftp or gsiftp URL.<br/>
+ <i>attr</i> Attributes for this operation.<br/>
+ <i>complete_callback</i> Callback to be invoked once the mkdir is completed.<br/>
  <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -581,12 +581,12 @@ description: "FTP Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>u_handle</i> An FTP Client handle to use for the list operation.<br />
- <i>url</i> The URL of a file or directory to list. The URL may be an ftp or gsiftp URL.<br />
- <i>attr</i> Attributes for this file transfer.<br />
- <i>mlst_buffer</i> A pointer to a globus_byte_t * to be allocated and filled with the MLST fact string of the file, if it exists. Otherwise, the value pointed to by it is undefined. It is up to the user to free this memory.<br />
- <i>mlst_buffer_length</i> A pointer to a globus_size_t to be filled with the length of the data in mlst_buffer.<br />
- <i>complete_callback</i> Callback to be invoked once the MLST command is completed.<br />
+</dt><dd> <i>u_handle</i> An FTP Client handle to use for the list operation.<br/>
+ <i>url</i> The URL of a file or directory to list. The URL may be an ftp or gsiftp URL.<br/>
+ <i>attr</i> Attributes for this file transfer.<br/>
+ <i>mlst_buffer</i> A pointer to a globus_byte_t * to be allocated and filled with the MLST fact string of the file, if it exists. Otherwise, the value pointed to by it is undefined. It is up to the user to free this memory.<br/>
+ <i>mlst_buffer_length</i> A pointer to a globus_size_t to be filled with the length of the data in mlst_buffer.<br/>
+ <i>complete_callback</i> Callback to be invoked once the MLST command is completed.<br/>
  <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -617,11 +617,11 @@ description: "FTP Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>u_handle</i> An FTP Client handle to use for the list operation.<br />
- <i>url</i> The URL to list. The URL may be an ftp or gsiftp URL.<br />
- <i>attr</i> Attributes for this file transfer.<br />
- <i>modification_time</i> A pointer to a globus_abstime_t to be filled with the modification time of the file, if it exists. Otherwise, the value pointed to by it is undefined.<br />
- <i>complete_callback</i> Callback to be invoked once the modification time check is completed.<br />
+</dt><dd> <i>u_handle</i> An FTP Client handle to use for the list operation.<br/>
+ <i>url</i> The URL to list. The URL may be an ftp or gsiftp URL.<br/>
+ <i>attr</i> Attributes for this file transfer.<br/>
+ <i>modification_time</i> A pointer to a globus_abstime_t to be filled with the modification time of the file, if it exists. Otherwise, the value pointed to by it is undefined.<br/>
+ <i>complete_callback</i> Callback to be invoked once the modification time check is completed.<br/>
  <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -650,11 +650,11 @@ description: "FTP Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>u_handle</i> An FTP Client handle to use for the move operation.<br />
- <i>source_url</i> The URL for the file to move.<br />
- <i>dest_url</i> The URL for the target of the move. The host:port part of this URL is ignored.<br />
- <i>attr</i> Attributes for this operation.<br />
- <i>complete_callback</i> Callback to be invoked once the move is completed.<br />
+</dt><dd> <i>u_handle</i> An FTP Client handle to use for the move operation.<br/>
+ <i>source_url</i> The URL for the file to move.<br/>
+ <i>dest_url</i> The URL for the target of the move. The host:port part of this URL is ignored.<br/>
+ <i>attr</i> Attributes for this operation.<br/>
+ <i>complete_callback</i> Callback to be invoked once the move is completed.<br/>
  <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -681,13 +681,13 @@ description: "FTP Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> An FTP Client handle to use for the get operation.<br />
- <i>url</i> The URL to download. The URL may be an ftp or gsiftp URL.<br />
- <i>attr</i> Attributes for this file transfer.<br />
- <i>restart</i> Pointer to a restart marker.<br />
- <i>partial_offset</i> Starting offset for a partial file get.<br />
- <i>partial_end_offset</i> Ending offset for a partial file get. Use -1 for EOF.<br />
- <i>complete_callback</i> Callback to be invoked once the &#8216;get&#8217; is completed.<br />
+</dt><dd> <i>handle</i> An FTP Client handle to use for the get operation.<br/>
+ <i>url</i> The URL to download. The URL may be an ftp or gsiftp URL.<br/>
+ <i>attr</i> Attributes for this file transfer.<br/>
+ <i>restart</i> Pointer to a restart marker.<br/>
+ <i>partial_offset</i> Starting offset for a partial file get.<br/>
+ <i>partial_end_offset</i> Ending offset for a partial file get. Use -1 for EOF.<br/>
+ <i>complete_callback</i> Callback to be invoked once the &#8216;get&#8217; is completed.<br/>
  <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -714,13 +714,13 @@ description: "FTP Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> An FTP Client handle to use for the put operation.<br />
- <i>url</i> The URL to store the data to. The URL may be an ftp or gsiftp URL.<br />
- <i>attr</i> Attributes for this file transfer.<br />
- <i>restart</i> Pointer to a restart marker.<br />
- <i>partial_offset</i> Starting offset for a partial file put.<br />
- <i>partial_end_offset</i> Ending offset for a partial file put.<br />
- <i>complete_callback</i> Callback to be invoked once the &#8216;put&#8217; is completed.<br />
+</dt><dd> <i>handle</i> An FTP Client handle to use for the put operation.<br/>
+ <i>url</i> The URL to store the data to. The URL may be an ftp or gsiftp URL.<br/>
+ <i>attr</i> Attributes for this file transfer.<br/>
+ <i>restart</i> Pointer to a restart marker.<br/>
+ <i>partial_offset</i> Starting offset for a partial file put.<br/>
+ <i>partial_end_offset</i> Ending offset for a partial file put.<br/>
+ <i>complete_callback</i> Callback to be invoked once the &#8216;put&#8217; is completed.<br/>
  <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
@@ -733,15 +733,15 @@ description: "FTP Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> An FTP Client handle to use for the get operation.<br />
- <i>source_url</i> The URL to transfer. The URL may be an ftp or gsiftp URL.<br />
- <i>source_attr</i> Attributes for the souce URL.<br />
- <i>dest_url</i> The destination URL for the transfer. The URL may be an ftp or gsiftp URL.<br />
- <i>dest_attr</i> Attributes for the destination URL.<br />
- <i>restart</i> Pointer to a restart marker.<br />
- <i>partial_offset</i> Starting offset for a partial file get.<br />
- <i>partial_end_offset</i> Ending offset for a partial file get. Use -1 for EOF.<br />
- <i>complete_callback</i> Callback to be invoked once the &#8216;put&#8217; is completed.<br />
+</dt><dd> <i>handle</i> An FTP Client handle to use for the get operation.<br/>
+ <i>source_url</i> The URL to transfer. The URL may be an ftp or gsiftp URL.<br/>
+ <i>source_attr</i> Attributes for the souce URL.<br/>
+ <i>dest_url</i> The destination URL for the transfer. The URL may be an ftp or gsiftp URL.<br/>
+ <i>dest_attr</i> Attributes for the destination URL.<br/>
+ <i>restart</i> Pointer to a restart marker.<br/>
+ <i>partial_offset</i> Starting offset for a partial file get.<br/>
+ <i>partial_end_offset</i> Ending offset for a partial file get. Use -1 for EOF.<br/>
+ <i>complete_callback</i> Callback to be invoked once the &#8216;put&#8217; is completed.<br/>
  <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
@@ -754,11 +754,11 @@ description: "FTP Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> An FTP Client handle to use for the put operation.<br />
- <i>url</i> The URL to store the data to. The URL may be an ftp or gsiftp URL.<br />
- <i>attr</i> Attributes for this file transfer.<br />
- <i>restart</i> Pointer to a restart marker.<br />
- <i>complete_callback</i> Callback to be invoked once the &#8216;put&#8217; is completed.<br />
+</dt><dd> <i>handle</i> An FTP Client handle to use for the put operation.<br/>
+ <i>url</i> The URL to store the data to. The URL may be an ftp or gsiftp URL.<br/>
+ <i>attr</i> Attributes for this file transfer.<br/>
+ <i>restart</i> Pointer to a restart marker.<br/>
+ <i>complete_callback</i> Callback to be invoked once the &#8216;put&#8217; is completed.<br/>
  <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
@@ -771,10 +771,10 @@ description: "FTP Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>u_handle</i> An FTP Client handle to use for the list operation.<br />
- <i>url</i> The URL to list. The URL may be an ftp or gsiftp URL.<br />
- <i>attr</i> Attributes for this file transfer.<br />
- <i>complete_callback</i> Callback to be invoked once the &#8216;list&#8217; is completed.<br />
+</dt><dd> <i>u_handle</i> An FTP Client handle to use for the list operation.<br/>
+ <i>url</i> The URL to list. The URL may be an ftp or gsiftp URL.<br/>
+ <i>attr</i> Attributes for this file transfer.<br/>
+ <i>complete_callback</i> Callback to be invoked once the &#8216;list&#8217; is completed.<br/>
  <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -805,10 +805,10 @@ description: "FTP Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>u_handle</i> An FTP Client handle to use for the rmdir operation.<br />
- <i>url</i> The URL for the directory to create. The URL may be an ftp or gsiftp URL.<br />
- <i>attr</i> Attributes for this operation.<br />
- <i>complete_callback</i> Callback to be invoked once the rmdir is completed.<br />
+</dt><dd> <i>u_handle</i> An FTP Client handle to use for the rmdir operation.<br/>
+ <i>url</i> The URL for the directory to create. The URL may be an ftp or gsiftp URL.<br/>
+ <i>attr</i> Attributes for this operation.<br/>
+ <i>complete_callback</i> Callback to be invoked once the rmdir is completed.<br/>
  <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -839,11 +839,11 @@ description: "FTP Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>u_handle</i> An FTP Client handle to use for the list operation.<br />
- <i>url</i> The URL to list. The URL may be an ftp or gsiftp URL.<br />
- <i>attr</i> Attributes for this file transfer.<br />
- <i>size</i> A pointer to a globus_off_t to be filled with the total size of the file, if it exists. Otherwise, the value pointed to by it is undefined.<br />
- <i>complete_callback</i> Callback to be invoked once the size check is completed.<br />
+</dt><dd> <i>u_handle</i> An FTP Client handle to use for the list operation.<br/>
+ <i>url</i> The URL to list. The URL may be an ftp or gsiftp URL.<br/>
+ <i>attr</i> Attributes for this file transfer.<br/>
+ <i>size</i> A pointer to a globus_off_t to be filled with the total size of the file, if it exists. Otherwise, the value pointed to by it is undefined.<br/>
+ <i>complete_callback</i> Callback to be invoked once the size check is completed.<br/>
  <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -872,12 +872,12 @@ description: "FTP Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>u_handle</i> An FTP Client handle to use for the list operation.<br />
- <i>url</i> The URL of a file or directory to list. The URL may be an ftp or gsiftp URL.<br />
- <i>attr</i> Attributes for this file transfer.<br />
- <i>stat_buffer</i> A pointer to a globus_byte_t * to be allocated and filled with the STAT listing of the file, if it exists. Otherwise, the value pointed to by it is undefined. It is up to the user to free this memory.<br />
- <i>stat_buffer_length</i> A pointer to a globus_size_t to be filled with the length of the data in stat_buffer.<br />
- <i>complete_callback</i> Callback to be invoked once the STAT command is completed.<br />
+</dt><dd> <i>u_handle</i> An FTP Client handle to use for the list operation.<br/>
+ <i>url</i> The URL of a file or directory to list. The URL may be an ftp or gsiftp URL.<br/>
+ <i>attr</i> Attributes for this file transfer.<br/>
+ <i>stat_buffer</i> A pointer to a globus_byte_t * to be allocated and filled with the STAT listing of the file, if it exists. Otherwise, the value pointed to by it is undefined. It is up to the user to free this memory.<br/>
+ <i>stat_buffer_length</i> A pointer to a globus_size_t to be filled with the length of the data in stat_buffer.<br/>
+ <i>complete_callback</i> Callback to be invoked once the STAT command is completed.<br/>
  <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -908,11 +908,11 @@ description: "FTP Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>u_handle</i> An FTP Client handle to use for the move operation.<br />
- <i>source_url</i> The URL for the symbolic link to create.<br />
- <i>link_url</i> The URL for the target of the link. The host:port part of this URL is ignored.<br />
- <i>attr</i> Attributes for this operation.<br />
- <i>complete_callback</i> Callback to be invoked once the symlink is completed.<br />
+</dt><dd> <i>u_handle</i> An FTP Client handle to use for the move operation.<br/>
+ <i>source_url</i> The URL for the symbolic link to create.<br/>
+ <i>link_url</i> The URL for the target of the link. The host:port part of this URL is ignored.<br/>
+ <i>attr</i> Attributes for this operation.<br/>
+ <i>complete_callback</i> Callback to be invoked once the symlink is completed.<br/>
  <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -939,13 +939,13 @@ description: "FTP Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> An FTP Client handle to use for the get operation.<br />
- <i>source_url</i> The URL to transfer. The URL may be an ftp or gsiftp URL.<br />
- <i>source_attr</i> Attributes for the souce URL.<br />
- <i>dest_url</i> The destination URL for the transfer. The URL may be an ftp or gsiftp URL.<br />
- <i>dest_attr</i> Attributes for the destination URL.<br />
- <i>restart</i> Pointer to a restart marker.<br />
- <i>complete_callback</i> Callback to be invoked once the &#8216;put&#8217; is completed.<br />
+</dt><dd> <i>handle</i> An FTP Client handle to use for the get operation.<br/>
+ <i>source_url</i> The URL to transfer. The URL may be an ftp or gsiftp URL.<br/>
+ <i>source_attr</i> Attributes for the souce URL.<br/>
+ <i>dest_url</i> The destination URL for the transfer. The URL may be an ftp or gsiftp URL.<br/>
+ <i>dest_attr</i> Attributes for the destination URL.<br/>
+ <i>restart</i> Pointer to a restart marker.<br/>
+ <i>complete_callback</i> Callback to be invoked once the &#8216;put&#8217; is completed.<br/>
  <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
@@ -958,11 +958,11 @@ description: "FTP Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>u_handle</i> An FTP Client handle to use for the change operation.<br />
- <i>url</i> The URL of the file to modify group membership.<br />
- <i>utime_time</i> The absolute time to which the file&#8217;s modification time should be set.<br />
- <i>attr</i> Attributes for this operation.<br />
- <i>complete_callback</i> Callback to be invoked once the change is completed.<br />
+</dt><dd> <i>u_handle</i> An FTP Client handle to use for the change operation.<br/>
+ <i>url</i> The URL of the file to modify group membership.<br/>
+ <i>utime_time</i> The absolute time to which the file&#8217;s modification time should be set.<br/>
+ <i>attr</i> Attributes for this operation.<br/>
+ <i>complete_callback</i> Callback to be invoked once the change is completed.<br/>
  <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -989,10 +989,10 @@ description: "FTP Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>u_handle</i> An FTP Client handle to use for the list operation.<br />
- <i>url</i> The URL to list. The URL may be an ftp or gsiftp URL.<br />
- <i>attr</i> Attributes for this file transfer.<br />
- <i>complete_callback</i> Callback to be invoked once the &#8216;list&#8217; is completed.<br />
+</dt><dd> <i>u_handle</i> An FTP Client handle to use for the list operation.<br/>
+ <i>url</i> The URL to list. The URL may be an ftp or gsiftp URL.<br/>
+ <i>attr</i> Attributes for this file transfer.<br/>
+ <i>complete_callback</i> Callback to be invoked once the &#8216;list&#8217; is completed.<br/>
  <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

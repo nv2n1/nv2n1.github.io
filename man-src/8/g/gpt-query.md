@@ -20,11 +20,11 @@ description: "gpt-query – Queries an installation for packages"
 <dd>
 <pre> Returns all of the packages matching NAME.</pre>
 </dd><dt><code>-flavor=FLAVOR</code></dt>
-<dd>Returns all of the packages matching <font SIZE="-1">FLAVOR</font>.</dd>
+<dd>Returns all of the packages matching FLAVOR.</dd>
 <dt><code>-pkgtype=TYPE</code></dt>
-<dd>Returns all of the packages matching <font SIZE="-1">TYPE</font>.</dd>
+<dd>Returns all of the packages matching TYPE.</dd>
 <dt><code>-file=FILE</code></dt>
-<dd>Returns the package owning the <font SIZE="-1">FILE</font>. <font SIZE="-1">FILE</font> needs to be either an absolute path or referenced to <tt>$GLOBUS_LOCATION</tt>.</dd>
+<dd>Returns the package owning the FILE. FILE needs to be either an absolute path or referenced to <tt>$GLOBUS_LOCATION</tt>.</dd>
 <dt><code>-deps=run|sdk</code></dt>
 <dd>Returns the runtime or build dependencies of a package.</dd>
 <dt><code>-help</code></dt>
@@ -32,14 +32,14 @@ description: "gpt-query – Queries an installation for packages"
 <dt><code>-man</code></dt>
 <dd>Prints the manual page and exits.</dd>
 <dt><code>-version</code></dt>
-<dd>Prints the version of <font SIZE="-1">GPT</font> and exits.</dd>
+<dd>Prints the version of GPT and exits.</dd>
 <dt><code>-what-bundles</code></dt>
 <dd>Prints a list of the installed bundles.</dd>
 <dt><code>-verify-bundle=BUNDLE</code></dt>
 <dd>Takes a bundle defintion and checks to see if it matches the installation.</dd>
 <dt><code>-bundle-packages=BUNDLE</code></dt>
 <dd>List the packages that belong to the desired bundle.</dd>
-<dt><code>-bundle </code><font SIZE="-1"><code>BUNDLE</code></font><code> 1 [</code><font SIZE="-1"><code>BUNDLE</code></font><code> 2]</code></dt>
+<dt><code>-bundle </code><code>BUNDLE</code><code> 1 [</code><code>BUNDLE</code><code> 2]</code></dt>
 <dd>If two bundles are given, the bundles will be compared to one another for equality. If only one bundle is given, the bundle will be checked against the installation. This command works on tar bundles.</dd></dl>
 <h2>Examples</h2>
 <pre> gpt-query</pre>

@@ -442,10 +442,10 @@ description: "xcalc – scientific calculator for X"
 <p> The foreground and background colors of each calculator key can be individually specified. For the TI calculator, a classical color resource specification might be: </p>
 <p> XCalc.ti.Command.background:<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>gray50</p>
 <p> XCalc.ti.Command.foreground:<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>white</p>
-<p> For each of buttons 20, 25, 30, 35, and 40, specify:<br />
+<p> For each of buttons 20, 25, 30, 35, and 40, specify:<br/>
  XCalc.ti.button20.background:<tt>&nbsp;<wbr>&nbsp;</tt>black</p>
 <p> XCalc.ti.button20.foreground:<tt>&nbsp;<wbr>&nbsp;</tt>white</p>
-<p> For each of buttons 22, 23, 24, 27, 28, 29, 32, 33, 34, 37, 38, and 39:<br />
+<p> For each of buttons 22, 23, 24, 27, 28, 29, 32, 33, 34, 37, 38, and 39:<br/>
  XCalc.ti.button22.background:<tt>&nbsp;<wbr>&nbsp;</tt>white</p>
 <p> XCalc.ti.button22.foreground:<tt>&nbsp;<wbr>&nbsp;</tt>black</p>
 <h2>WIDGET HIERARCHY</h2>
@@ -487,9 +487,9 @@ XCalc xcalc
 <h2>BUGS</h2>
 <p> HP mode is not completely debugged. In particular, the stack is not handled properly after errors.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright 1994 X Consortium<br />
+<p> Copyright 1994 X Consortium<br/>
  See <i><a href="/docs/linux/man/7-x/">X</a>(7)</i> for a full statement of rights and permissions.</p>
 <h2>AUTHORS</h2>
-<p> John Bradley, University of Pennsylvania<br />
- Mark Rosenstein, MIT Project Athena<br />
+<p> John Bradley, University of Pennsylvania<br/>
+ Mark Rosenstein, MIT Project Athena<br/>
  Donna Converse, MIT X Consortium </p>

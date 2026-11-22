@@ -27,20 +27,20 @@ description: "PAPI_sprofil –"
 <dd>offset &#8212; the start address of the region to be profiled.</dd>
 <dt>&bull;</dt>
 <dd>scale &#8212; broadly and historically speaking, a contraction factor that indicates how much smaller the histogram buffer is than the region to be profiled. More precisely, scale is interpreted as an unsigned 16-bit fixed-point fraction with the decimal point implied on the left. Its value is the reciprocal of the number of addresses in a subdivision, per counter of histogram buffer.</dd></dl>
-<p> <i>profcnt</i> number of structures in the prof array for hardware profiling.<br />
- <i>EventSet</i> The PAPI EventSet to profile. This EventSet is marked as profiling-ready, but profiling doesn&#8217;t actually start until a <code>PAPI_start()</code> call is issued.<br />
- <i>EventCode</i> Code of the Event in the EventSet to profile. This event must already be a member of the EventSet.<br />
- <i>threshold</i> minimum number of events that must occur before the PC is sampled. If hardware overflow is supported for your component, this threshold will trigger an interrupt when reached. Otherwise, the counters will be sampled periodically and the PC will be recorded for the first sample that exceeds the threshold. If the value of threshold is 0, profiling will be disabled for this event.<br />
- <i>flags</i> bit pattern to control profiling behavior. Defined values are given in a table in the documentation for PAPI_pofil<br />
-&nbsp;<wbr><br />
+<p> <i>profcnt</i> number of structures in the prof array for hardware profiling.<br/>
+ <i>EventSet</i> The PAPI EventSet to profile. This EventSet is marked as profiling-ready, but profiling doesn&#8217;t actually start until a <code>PAPI_start()</code> call is issued.<br/>
+ <i>EventCode</i> Code of the Event in the EventSet to profile. This event must already be a member of the EventSet.<br/>
+ <i>threshold</i> minimum number of events that must occur before the PC is sampled. If hardware overflow is supported for your component, this threshold will trigger an interrupt when reached. Otherwise, the counters will be sampled periodically and the PC will be recorded for the first sample that exceeds the threshold. If the value of threshold is 0, profiling will be disabled for this event.<br/>
+ <i>flags</i> bit pattern to control profiling behavior. Defined values are given in a table in the documentation for PAPI_pofil<br/>
+&nbsp;<wbr><br/>
 &nbsp;<wbr></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>Return</i> values for <code>PAPI_sprofil()</code> are identical to those for <code>PAPI_profil</code>. Please refer to that page for further details.<br />
-&nbsp;<wbr><br />
+<dd><i>Return</i> values for <code>PAPI_sprofil()</code> are identical to those for <code>PAPI_profil</code>. Please refer to that page for further details.<br/>
+&nbsp;<wbr><br/>
 &nbsp;<wbr></dd></dl>
-<p> <code>PAPI_sprofil()</code> is a structure driven profiler that profiles one or more disjoint regions of code in a single call. It accepts a pointer to a preinitialized array of sprofil structures, and initiates profiling based on the values contained in the array. Each structure in the array defines the profiling parameters that are normally passed to <code>PAPI_profil()</code>. For more information on profiling, <code>PAPI_profil</code><br />
-&nbsp;<wbr><br />
+<p> <code>PAPI_sprofil()</code> is a structure driven profiler that profiles one or more disjoint regions of code in a single call. It accepts a pointer to a preinitialized array of sprofil structures, and initiates profiling based on the values contained in the array. Each structure in the array defines the profiling parameters that are normally passed to <code>PAPI_profil()</code>. For more information on profiling, <code>PAPI_profil</code><br/>
+&nbsp;<wbr><br/>
 &nbsp;<wbr> </p>
 <p> <code>Example:</code></p>
 <dl COMPACT>

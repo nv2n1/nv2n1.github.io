@@ -10,9 +10,9 @@ description: "arm4_report – report on ARM 4 transactions"
 
 <p> arm4_report &#8211; report on ARM 4 transactions</p>
 <h2>SYNOPSIS</h2>
-<p> <code>arm4_report</code> <i>&#8211;help|-h</i><br />
- <code>arm4_report</code> <i>&#8211;version|-V</i><br />
- <code>arm4_report</code> [[<i>&#8211;summary|-s</i>] | [<i>&#8211;detailed|-d</i>]]<br />
+<p> <code>arm4_report</code> <i>&#8211;help|-h</i><br/>
+ <code>arm4_report</code> <i>&#8211;version|-V</i><br/>
+ <code>arm4_report</code> [[<i>&#8211;summary|-s</i>] | [<i>&#8211;detailed|-d</i>]]<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<i>&#8211;config|-C config_file</i>]&nbsp;<wbr>[<i>&#8211;archive|-a archive_directory</i>]</p>
 <h2>WARNING</h2>
 <p> <code>This program is deprecated and may not exist in a future release</code></p>

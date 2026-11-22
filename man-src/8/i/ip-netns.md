@@ -14,16 +14,16 @@ description: "ip-netns – process network namespace management"
 netns
 { COMMAND |
     help }</code></pre>
-<p> <code>ip netns</code> [ <code>list</code> ]<br />
- <code>ip netns add</code> <i>NETNSNAME</i><br />
- <code>ip netns attach</code> <i>NETNSNAME PID</i><br />
- <code>ip [-all] netns del</code> [ <i>NETNSNAME</i> ]<br />
+<p> <code>ip netns</code> [ <code>list</code> ]<br/>
+ <code>ip netns add</code> <i>NETNSNAME</i><br/>
+ <code>ip netns attach</code> <i>NETNSNAME PID</i><br/>
+ <code>ip [-all] netns del</code> [ <i>NETNSNAME</i> ]<br/>
  <code>ip netns set</code> <i>NETNSNAME NETNSID</i> </p>
 <pre><code>NETNSID := auto | POSITIVE-INT</code></pre>
-<p> <code>ip netns identify</code> [ <i>PID</i> ]<br />
- <code>ip netns pids</code> <i>NETNSNAME</i><br />
- <code>ip [-all] netns exec </code> [ <i>NETNSNAME</i> ] <i>command</i>&#8230;<br />
- <code>ip netns monitor</code><br />
+<p> <code>ip netns identify</code> [ <i>PID</i> ]<br/>
+ <code>ip netns pids</code> <i>NETNSNAME</i><br/>
+ <code>ip [-all] netns exec </code> [ <i>NETNSNAME</i> ] <i>command</i>&#8230;<br/>
+ <code>ip netns monitor</code><br/>
  <code>ip netns list-id</code> [ target-nsid <i>POSITIVE-INT</i> ] [ nsid <i>POSITIVE-INT</i> ] </p>
 <h2>Description</h2>
 <p>A network namespace is logically another copy of the network stack, with its own routes, firewall rules, and network devices. By default a process inherits its network namespace from its parent. Initially all the processes share the same default network namespace from the init process. By convention a named network namespace is an object at <code>/run/netns/</code>NAME that can be opened. The file descriptor resulting from opening <code>/run/netns/</code>NAME refers to the specified network namespace. Holding that file descriptor open keeps the network namespace alive. The file descriptor can be used with the <code><a href="/docs/linux/man/2-setns/">setns</a>(2)</code> system call to change the network namespace associated with a task. For applications that are aware of network namespaces, the convention is to look for global network configuration files first in <code>/etc/netns/</code>NAME<code>/</code> then in <code>/etc/.</code> For example, if you want a different version of <code>/etc/resolv.conf</code> for a network namespace used to isolate your vpn you would name it <code>/etc/netns/myvpn/resolv.conf.</code> <code>ip netns exec</code> automates handling of this configuration, file convention for network namespace unaware applications, by creating a mount namespace and bind mounting all of the per network namespace configure files into their traditional location in /etc.</p>
@@ -72,14 +72,14 @@ netns
 <p> ip netns exec vpn ip link set lo up</p>
 <dl>
 <dd>Bring up the loopback interface in the vpn network namespace.</dd></dl>
-<p> ip netns add foo<br />
- ip netns add bar<br />
- ip netns set foo 12<br />
- ip netns set bar 13<br />
- ip -n foo netns set foo 22<br />
- ip -n foo netns set bar 23<br />
- ip -n bar netns set foo 32<br />
- ip -n bar netns set bar 33<br />
+<p> ip netns add foo<br/>
+ ip netns add bar<br/>
+ ip netns set foo 12<br/>
+ ip netns set bar 13<br/>
+ ip -n foo netns set foo 22<br/>
+ ip -n foo netns set bar 23<br/>
+ ip -n bar netns set foo 32<br/>
+ ip -n bar netns set bar 33<br/>
  ip netns list-id target-nsid 12</p>
 <dl>
 <dd>Shows the list of nsids from the network namespace foo.</dd></dl>
@@ -89,6 +89,6 @@ netns
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-ip/">ip</a></code>(8) </p>
 <h2>Author</h2>
-<p>Original Manpage by Eric W. Biederman<br />
+<p>Original Manpage by Eric W. Biederman<br/>
  Manpage revised by Nicolas Dichtel &lt;nicolas.dichtel [at] 6wind.com&gt;</p>
 </dl>

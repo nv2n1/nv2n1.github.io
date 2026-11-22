@@ -19,10 +19,10 @@ description: "hdifftopam – convert horizontal difference image to original PAM
 <dl>
 <dt><code>-pnm</code></dt>
 <dd>
-&nbsp;<wbr>&nbsp;<wbr>This option tells&nbsp;<wbr><code>hdifftopam</code>&nbsp;<wbr>to create a PNM image&nbsp;<wbr>(i.e. PGM or<br />
-&nbsp;<wbr>&nbsp;<wbr>PPM).&nbsp;<wbr>&nbsp;<wbr>Without it,&nbsp;<wbr><code>hdifftopam</code>&nbsp;<wbr>creates a PAM image&nbsp;<wbr>(with a<br />
-&nbsp;<wbr>&nbsp;<wbr>tuple type of&nbsp;<wbr>&quot;unhdiff&quot;).&nbsp;<wbr>&nbsp;<wbr>If the PAM does not have the proper depth<br />
-&nbsp;<wbr>&nbsp;<wbr>to be a PGM or PPM&nbsp;<wbr>(i.e. 1 or 3)&nbsp;<wbr>and you specify&nbsp;<wbr><code>-pnm</code>,<br />
+&nbsp;<wbr>&nbsp;<wbr>This option tells&nbsp;<wbr><code>hdifftopam</code>&nbsp;<wbr>to create a PNM image&nbsp;<wbr>(i.e. PGM or<br/>
+&nbsp;<wbr>&nbsp;<wbr>PPM).&nbsp;<wbr>&nbsp;<wbr>Without it,&nbsp;<wbr><code>hdifftopam</code>&nbsp;<wbr>creates a PAM image&nbsp;<wbr>(with a<br/>
+&nbsp;<wbr>&nbsp;<wbr>tuple type of&nbsp;<wbr>&quot;unhdiff&quot;).&nbsp;<wbr>&nbsp;<wbr>If the PAM does not have the proper depth<br/>
+&nbsp;<wbr>&nbsp;<wbr>to be a PGM or PPM&nbsp;<wbr>(i.e. 1 or 3)&nbsp;<wbr>and you specify&nbsp;<wbr><code>-pnm</code>,<br/>
 &nbsp;<wbr>&nbsp;<wbr><code>hdifftopam</code>&nbsp;<wbr>fails. </dd>
 </dl>
 <h2>SEE ALSO</h2>

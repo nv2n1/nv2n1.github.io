@@ -10,7 +10,7 @@ description: "xzless, lzless – view xz or lzma compressed (text) files"
 
 <p> xzless, lzless &#8211; view xz or lzma compressed (text) files </p>
 <h2>SYNOPSIS</h2>
-<p> <code>xzless</code> [<i>file</i>&#8230;]<br />
+<p> <code>xzless</code> [<i>file</i>&#8230;]<br/>
  <code>lzless</code> [<i>file</i>&#8230;]</p>
 <h2>DESCRIPTION</h2>
 <p> <code>xzless</code> is a filter that displays text from compressed files to a terminal. It works on files compressed with <code><a href="/docs/linux/man/1-xz/">xz</a></code>(1) or <code><a href="/docs/linux/man/1-lzma/">lzma</a></code>(1). If no <i>files</i> are given, <code>xzless</code> reads from standard input. </p>

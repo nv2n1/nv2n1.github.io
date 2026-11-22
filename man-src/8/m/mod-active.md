@@ -18,6 +18,6 @@ description: "mod-active – Batch processing of newsgroups creation and removal
 <h2>Bugs</h2>
 <p>Though <code>innd</code> is paused while <code>mod-active</code> works, it is not inconceivable that there could be a conflict if something else tries to update the <i>active</i> file during the relatively short time that <code>mod-active</code> is working. The two most realistic ways for this to happen are either by an administrator concurrently doing a manual <code>ctlinnd</code> command, or by <code>innd</code> receiving a control message, then <code>mod-active</code> pausing the server, then the control message handler script that <code>innd</code> forked running its own <code>ctlinnd</code> command while <code>mod-active</code> is working. Note that such scenarios are <i>very</i> unlikely to happen.</p>
 <h2>History</h2>
-<p>Written by David C Lawrence &lt;tale [at] isc.org&gt; for InterNetNews. Converted to <font SIZE="-1">POD</font> by Julien Elie.</p>
+<p>Written by David C Lawrence &lt;tale [at] isc.org&gt; for InterNetNews. Converted to POD by Julien Elie.</p>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/5-active/">active</a></i>(5), <i><a href="/docs/linux/man/5-active-times/">active.times</a></i>(5), <i><a href="/docs/linux/man/8-actsync/">actsync</a></i>(8), <i><a href="/docs/linux/man/8-ctlinnd/">ctlinnd</a></i>(8), <i><a href="/docs/linux/man/8-docheckgroups/">docheckgroups</a></i>(8), <i><a href="/docs/linux/man/8-innd/">innd</a></i>(8). </p>

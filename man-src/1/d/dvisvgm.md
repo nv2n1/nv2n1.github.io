@@ -76,7 +76,7 @@ description: "dvisvgm – converts DVI and EPS files to the XML-based SVG format
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  Option <code>-b, &#8211;bbox</code> only affects the bounding box and does not transform the page content. Hence, if you choose a landscape format, the page won&#8217;t be rotated. </dd>
 </dl>
 </dl>
@@ -357,7 +357,7 @@ description: "dvisvgm – converts DVI and EPS files to the XML-based SVG format
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  This option only takes effect if font caching is active. Therefore, <code>&#8211;trace-all</code> cannot be combined with option <code>&#8211;cache=none</code>. </dd>
 </dl>
 </dl>
@@ -400,7 +400,7 @@ description: "dvisvgm – converts DVI and EPS files to the XML-based SVG format
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  All transformation commands of option <code>-T, &#8211;transform</code> are applied in the order of their appearance. Multiple commands can optionally be separated by spaces. In this case the whole transformation string has to be enclosed in double quotes to keep them together. All parameters are expressions of floating point type. You can either give plain numbers or arithmetic terms combined by the operators <code>+</code> (addition), <code>&#8211;</code> (subtraction), <code>*</code> (multiplication), <code>/</code> (division) or <code>%</code> (modulo) with common associativity and precedence rules. Parentheses may be used as well. </dd>
 <p> Additionally, some pre-defined constants are provided: </p>
 <table>
@@ -463,7 +463,7 @@ description: "dvisvgm – converts DVI and EPS files to the XML-based SVG format
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  By adding these values you can combine the categories. The default level is 7, i.e. all messages are printed. </dd>
 </dl>
 </dl>

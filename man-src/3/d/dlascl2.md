@@ -11,7 +11,7 @@ description: "dlascl2.f –"
 <p> dlascl2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dlascl2</code> (M, N, D, X, LDX)<br />
+<p> subroutine <code>dlascl2</code> (M, N, D, X, LDX)<br/>
  <i></i><code>DLASCL2</code> performs diagonal scaling on a vector.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlascl2 (integerM, integerN, double precision, dimension( * )D, double precision, dimension( ldx, * )X, integerLDX)</h3>

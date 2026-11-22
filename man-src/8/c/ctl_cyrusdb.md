@@ -12,7 +12,7 @@ description: "ctl_cyrusdb – perform operations common to all Cyrus databases"
 
 <p>ctl_cyrusdb &#8211; perform operations common to all Cyrus databases</p>
 <h2>Synopsis</h2>
-<p><code>ctl_cyrusdb</code> [ <code>-C</code> <i>config-file</i> ] <code>-r</code> [ <code>-x</code> ]<br />
+<p><code>ctl_cyrusdb</code> [ <code>-C</code> <i>config-file</i> ] <code>-r</code> [ <code>-x</code> ]<br/>
  <code>ctl_cyrusdb</code> [ <code>-C</code> <i>config-file</i> ] <code>-c</code></p>
 <h2>Description</h2>
 <p><i>Ctl_cyrusdb</i> is used to perform various administrative operations on the Cyrus databases. </p>

@@ -51,8 +51,8 @@ description: "opaenableports"
 <dd>Input file listing the ports to enable. The list is of the form: NodeGUID;PortNum;NodeType;NodeDesc;Ignored. </dd>
 <dd>An input file like this is generated in /etc/sysconfig/opa/disabled* by opadisableports.</dd></dl>
 <h2>Examples</h2>
-<p>opaenableports #8217lt; disabled.csv<br />
- opaenableports #8217lt; /etc/sysconfig/opa/disabled:0:0.csv<br />
+<p>opaenableports #8217lt; disabled.csv<br/>
+ opaenableports #8217lt; /etc/sysconfig/opa/disabled:0:0.csv<br/>
  opaenableports -p &#8216;1:1 1:2 2:1 2:2&#8217; #8217lt; disabled.csv</p>
 <h2>Environment Variables</h2>
 <p>The following environment variables are also used by this command:</p>

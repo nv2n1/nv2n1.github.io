@@ -62,7 +62,7 @@ description: "perlreapi – Perl regular expression plugin interface"
 <h3>comp</h3>
 <pre><code>    REGEXP* comp(pTHX_ const SV * const pattern, const U32 flags);
 </code></pre>
-<p> Compile the pattern stored in <code>&quot;pattern&quot;</code> using the given <code>&quot;flags&quot;</code> and return a pointer to a prepared <code>&quot;REGEXP&quot;</code> structure that can perform the match. See ``The <font SIZE="-1">REGEXP</font> structure&#8217;&#8216; below for an explanation of the individual fields in the <font SIZE="-1">REGEXP</font> struct. </p>
+<p> Compile the pattern stored in <code>&quot;pattern&quot;</code> using the given <code>&quot;flags&quot;</code> and return a pointer to a prepared <code>&quot;REGEXP&quot;</code> structure that can perform the match. See ``The REGEXP structure&#8217;&#8216; below for an explanation of the individual fields in the REGEXP struct. </p>
 <p> The <code>&quot;pattern&quot;</code> parameter is the scalar that was used as the pattern. Previous versions of Perl would pass two <code>&quot;char*&quot;</code> indicating the start and end of the stringified pattern; the following snippet can be used to get the old parameters: </p>
 <pre><code>    STRLEN plen;
     char* exp = SvPV(pattern, plen);
@@ -84,19 +84,19 @@ description: "perlreapi – Perl regular expression plugin interface"
 <dd>  </dd>
 <dt>&quot;/x&quot; - RXf_PMf_EXTENDED</dt>
 <dd> <p> If present on a regex, <code>&quot;#&quot;</code> comments will be handled differently by the tokenizer in some cases. </p>
-<p> <font SIZE="-1">TODO:</font> Document those cases. </p>
+<p> TODO: Document those cases. </p>
  </dd>
 <dt>&quot;/p&quot; - RXf_PMf_KEEPCOPY</dt>
-<dd> <p> <font SIZE="-1">TODO:</font> Document this </p>
+<dd> <p> TODO: Document this </p>
  </dd>
 <dt>Character set</dt>
-<dd> <p> The character set rules are determined by an enum that is contained in this field. This is still experimental and subject to change, but the current interface returns the rules by use of the in-line function <code>&quot;get_regex_charset(const U32 flags)&quot;</code>. The only currently documented value returned from it is <font SIZE="-1">REGEX_LOCALE_CHARSET,</font> which is set if <code>&quot;use locale&quot;</code> is in effect. If present in <code>&quot;rx-&gt;extflags&quot;</code>, <code>&quot;split&quot;</code> will use the locale dependent definition of whitespace when RXf_SKIPWHITE or RXf_WHITE is in effect. <font SIZE="-1">ASCII</font> whitespace is defined as per isSPACE, and by the internal macros <code>&quot;is_utf8_space&quot;</code> under <font SIZE="-1">UTF-8,</font> and <code>&quot;isSPACE_LC&quot;</code> under <code>&quot;use locale&quot;</code>. </p>
+<dd> <p> The character set rules are determined by an enum that is contained in this field. This is still experimental and subject to change, but the current interface returns the rules by use of the in-line function <code>&quot;get_regex_charset(const U32 flags)&quot;</code>. The only currently documented value returned from it is REGEX_LOCALE_CHARSET, which is set if <code>&quot;use locale&quot;</code> is in effect. If present in <code>&quot;rx-&gt;extflags&quot;</code>, <code>&quot;split&quot;</code> will use the locale dependent definition of whitespace when RXf_SKIPWHITE or RXf_WHITE is in effect. ASCII whitespace is defined as per isSPACE, and by the internal macros <code>&quot;is_utf8_space&quot;</code> under UTF-8, and <code>&quot;isSPACE_LC&quot;</code> under <code>&quot;use locale&quot;</code>. </p>
  </dd></dl>
 <p> Additional flags: </p>
 <dl>
 <dt>RXf_SPLIT</dt>
 <dd> <p> This flag was removed in perl 5.18.0. <code>&quot;split &#8216; &#8216;&quot;</code> is now special-cased solely in the parser. RXf_SPLIT is still #defined, so you can test for it. This is how it used to work: </p>
-<p> If <code>&quot;split&quot;</code> is invoked as <code>&quot;split &#8216; &#8216;&quot;</code> or with no arguments (which really means <code>&quot;split(&#8216; &#8216;, $_)&quot;</code>, see split), Perl will set this flag. The regex engine can then check for it and set the <font SIZE="-1">SKIPWHITE</font> and <font SIZE="-1">WHITE</font> extflags. To do this, the Perl engine does: </p>
+<p> If <code>&quot;split&quot;</code> is invoked as <code>&quot;split &#8216; &#8216;&quot;</code> or with no arguments (which really means <code>&quot;split(&#8216; &#8216;, $_)&quot;</code>, see split), Perl will set this flag. The regex engine can then check for it and set the SKIPWHITE and WHITE extflags. To do this, the Perl engine does: </p>
 <pre><code>    if (flags &amp; RXf_SPLIT &amp;&amp; r-&gt;prelen == 1 &amp;&amp; r-&gt;precomp[0] == ' ')
         r-&gt;extflags |= (RXf_SKIPWHITE|RXf_WHITE);
 </code></pre>
@@ -105,7 +105,7 @@ description: "perlreapi – Perl regular expression plugin interface"
 <dl>
 <dt>RXf_SKIPWHITE</dt>
 <dd> <p> This flag was removed in perl 5.18.0. It is still #defined, so you can set it, but doing so will have no effect. This is how it used to work: </p>
-<p> If the flag is present in <code>&quot;rx-&gt;extflags&quot;</code> <code>&quot;split&quot;</code> will delete whitespace from the start of the subject string before it&#8217;s operated on. What is considered whitespace depends on if the subject is a <font SIZE="-1">UTF-8</font> string and if the <code>&quot;RXf_PMf_LOCALE&quot;</code> flag is set. </p>
+<p> If the flag is present in <code>&quot;rx-&gt;extflags&quot;</code> <code>&quot;split&quot;</code> will delete whitespace from the start of the subject string before it&#8217;s operated on. What is considered whitespace depends on if the subject is a UTF-8 string and if the <code>&quot;RXf_PMf_LOCALE&quot;</code> flag is set. </p>
 <p> If RXf_WHITE is set in addition to this flag, <code>&quot;split&quot;</code> will behave like <code>&quot;split &quot; &quot;&quot;</code> under the Perl engine. </p>
  </dd>
 <dt>RXf_START_ONLY</dt>
@@ -113,11 +113,11 @@ description: "perlreapi – Perl regular expression plugin interface"
 <p> Perl&#8217;s engine sets this if the pattern is <code>&quot;/^/&quot;</code> (<code>&quot;plen == 1 &amp;&amp; *exp == &#8216;^&#8216;&quot;</code>), even under <code>&quot;/^/s&quot;</code>; see split. Of course a different regex engine might want to use the same optimizations with a different syntax. </p>
  </dd>
 <dt>RXf_WHITE</dt>
-<dd> <p> Tells the split operator to split the target string on whitespace without invoking the regex engine. The definition of whitespace varies depending on if the target string is a <font SIZE="-1">UTF-8</font> string and on if RXf_PMf_LOCALE is set. </p>
+<dd> <p> Tells the split operator to split the target string on whitespace without invoking the regex engine. The definition of whitespace varies depending on if the target string is a UTF-8 string and on if RXf_PMf_LOCALE is set. </p>
 <p> Perl&#8217;s engine sets this flag if the pattern is <code>&quot;\s+&quot;</code>. </p>
  </dd>
 <dt>RXf_NULL</dt>
-<dd> <p> Tells the split operator to split the target string on characters. The definition of character varies depending on if the target string is a <font SIZE="-1">UTF-8</font> string. </p>
+<dd> <p> Tells the split operator to split the target string on characters. The definition of character varies depending on if the target string is a UTF-8 string. </p>
 <p> Perl&#8217;s engine sets this flag on empty patterns, this optimization makes <code>&quot;split //&quot;</code> much faster than it would otherwise be. It&#8217;s even faster than <code>&quot;unpack&quot;</code>. </p>
  </dd>
 <dt>RXf_NO_INPLACE_SUBST</dt>
@@ -135,7 +135,7 @@ description: "perlreapi – Perl regular expression plugin interface"
 <dd> <p> The regular expression to execute. </p>
  </dd>
 <dt>sv</dt>
-<dd> <p> This is the <font SIZE="-1">SV</font> to be matched against. Note that the actual char array to be matched against is supplied by the arguments described below; the <font SIZE="-1">SV</font> is just used to determine UTF8ness, <code>&quot;pos()&quot;</code> etc. </p>
+<dd> <p> This is the SV to be matched against. Note that the actual char array to be matched against is supplied by the arguments described below; the SV is just used to determine UTF8ness, <code>&quot;pos()&quot;</code> etc. </p>
  </dd>
 <dt>strbeg</dt>
 <dd> <p> Pointer to the physical start of the string. </p>
@@ -182,7 +182,7 @@ description: "perlreapi – Perl regular expression plugin interface"
 <h3>checkstr</h3>
 <pre><code>    SV* checkstr(pTHX_ REGEXP * const rx);
 </code></pre>
-<p> Return a <font SIZE="-1">SV</font> containing a string that must appear in the pattern. Used by <code>&quot;split&quot;</code> for optimising matches.  </p>
+<p> Return a SV containing a string that must appear in the pattern. Used by <code>&quot;split&quot;</code> for optimising matches.  </p>
 <h3>free</h3>
 <pre><code>    void free(pTHX_ REGEXP * const rx);
 </code></pre>
@@ -198,7 +198,7 @@ description: "perlreapi – Perl regular expression plugin interface"
     $&amp; RX_BUFF_IDX_FULLMATCH
 </code></pre>
 <p> Note that in Perl 5.17.3 and earlier, the last three constants were also used for the caret variants of the variables. </p>
-<p> The names have been chosen by analogy with Tie::Scalar methods names with an additional <font SIZE="-1"><code>LENGTH</code></font> callback for efficiency. However named capture variables are currently not tied internally but implemented via magic. </p>
+<p> The names have been chosen by analogy with Tie::Scalar methods names with an additional <code>LENGTH</code> callback for efficiency. However named capture variables are currently not tied internally but implemented via magic. </p>
 <p> <i>numbered_buff_FETCH</i> </p>
 <pre><code>    void numbered_buff_FETCH(pTHX_ REGEXP * const rx, const I32 paren,
                              SV * const sv);
@@ -232,7 +232,7 @@ description: "perlreapi – Perl regular expression plugin interface"
             Perl_croak(aTHX_ PL_no_modify);
     }
 </code></pre>
-<p> Actually Perl will not <i>always</i> croak in a statement that looks like it would modify a numbered capture variable. This is because the <font SIZE="-1">STORE</font> callback will not be called if Perl can determine that it doesn&#8217;t have to modify the value. This is exactly how tied variables behave in the same situation: </p>
+<p> Actually Perl will not <i>always</i> croak in a statement that looks like it would modify a numbered capture variable. This is because the STORE callback will not be called if Perl can determine that it doesn&#8217;t have to modify the value. This is exactly how tied variables behave in the same situation: </p>
 <pre><code>    package CaptureVar;
     use parent 'Tie::Scalar';
     sub TIESCALAR { bless [] }
@@ -242,22 +242,22 @@ description: "perlreapi – Perl regular expression plugin interface"
     tie my $sv =&gt; &quot;CaptureVar&quot;;
     $sv =~ y/a/b/;
 </code></pre>
-<p> Because <code>$sv</code> is <code>&quot;undef&quot;</code> when the <code>&quot;y///&quot;</code> operator is applied to it, the transliteration won&#8217;t actually execute and the program won&#8217;t <code>&quot;die&quot;</code>. This is different to how 5.8 and earlier versions behaved since the capture variables were <font SIZE="-1">READONLY</font> variables then; now they&#8217;ll just die when assigned to in the default engine. </p>
+<p> Because <code>$sv</code> is <code>&quot;undef&quot;</code> when the <code>&quot;y///&quot;</code> operator is applied to it, the transliteration won&#8217;t actually execute and the program won&#8217;t <code>&quot;die&quot;</code>. This is different to how 5.8 and earlier versions behaved since the capture variables were READONLY variables then; now they&#8217;ll just die when assigned to in the default engine. </p>
 <p> <i>numbered_buff_LENGTH</i> </p>
 <pre><code>    I32 numbered_buff_LENGTH (pTHX_
                               REGEXP * const rx,
                               const SV * const sv,
                               const I32 paren);
 </code></pre>
-<p> Get the <code>&quot;length&quot;</code> of a capture variable. There&#8217;s a special callback for this so that Perl doesn&#8217;t have to do a <font SIZE="-1">FETCH</font> and run <code>&quot;length&quot;</code> on the result, since the length is (in Perl&#8217;s case) known from an offset stored in <code>&quot;rx-&gt;offs&quot;</code>, this is much more efficient: </p>
+<p> Get the <code>&quot;length&quot;</code> of a capture variable. There&#8217;s a special callback for this so that Perl doesn&#8217;t have to do a FETCH and run <code>&quot;length&quot;</code> on the result, since the length is (in Perl&#8217;s case) known from an offset stored in <code>&quot;rx-&gt;offs&quot;</code>, this is much more efficient: </p>
 <pre><code>    I32 s1 = rx-&gt;offs[paren].start;
     I32 s2 = rx-&gt;offs[paren].end;
     I32 len = t1 - s1;
 </code></pre>
-<p> This is a little bit more complex in the case of <font SIZE="-1">UTF-8,</font> see what <code>&quot;Perl_reg_numbered_buff_length&quot;</code> does with is_utf8_string_loclen.  </p>
+<p> This is a little bit more complex in the case of UTF-8, see what <code>&quot;Perl_reg_numbered_buff_length&quot;</code> does with is_utf8_string_loclen.  </p>
 <h3>Named capture callbacks</h3>
 <p> Called to get/set the value of <code>&quot;%+&quot;</code> and <code>&quot;%-&quot;</code>, as well as by some utility functions in re. </p>
-<p> There are two callbacks, <code>&quot;named_buff&quot;</code> is called in all the cases the <font SIZE="-1">FETCH, STORE, DELETE, CLEAR, EXISTS</font> and <font SIZE="-1">SCALAR</font> Tie::Hash callbacks would be on changes to <code>&quot;%+&quot;</code> and <code>&quot;%-&quot;</code> and <code>&quot;named_buff_iter&quot;</code> in the same cases as <font SIZE="-1">FIRSTKEY</font> and <font SIZE="-1">NEXTKEY.</font> </p>
+<p> There are two callbacks, <code>&quot;named_buff&quot;</code> is called in all the cases the FETCH, STORE, DELETE, CLEAR, EXISTS and SCALAR Tie::Hash callbacks would be on changes to <code>&quot;%+&quot;</code> and <code>&quot;%-&quot;</code> and <code>&quot;named_buff_iter&quot;</code> in the same cases as FIRSTKEY and NEXTKEY. </p>
 <p> The <code>&quot;flags&quot;</code> parameter can be used to determine which of these operations the callbacks should respond to. The following flags are currently defined: </p>
 <p> Which Tie::Hash operation is being performed from the Perl level on <code>&quot;%+&quot;</code> or <code>&quot;%+&quot;</code>, if any: </p>
 <pre><code>    RXapif_FETCH
@@ -307,7 +307,7 @@ description: "perlreapi – Perl regular expression plugin interface"
     my $re = qr//;
     $re-&gt;meth; # dispatched to re::engine::Example::meth()
 </code></pre>
-<p> To retrieve the <code>&quot;REGEXP&quot;</code> object from the scalar in an <font SIZE="-1">XS</font> function use the <code>&quot;SvRX&quot;</code> macro, see ``<font SIZE="-1">REGEXP</font> Functions&#8217;&#8216; in perlapi. </p>
+<p> To retrieve the <code>&quot;REGEXP&quot;</code> object from the scalar in an XS function use the <code>&quot;SvRX&quot;</code> macro, see ``REGEXP Functions&#8217;&#8216; in perlapi. </p>
 <pre><code>    void meth(SV * rv)
     PPCODE:
         REGEXP * re = SvRX(sv);
@@ -321,8 +321,8 @@ description: "perlreapi – Perl regular expression plugin interface"
 <h3>op_comp</h3>
 <p> This is private to the Perl core and subject to change. Should be left null.  </p>
 <h2>The REGEXP structure</h2>
-<p> The <font SIZE="-1">REGEXP</font> struct is defined in <i>regexp.h</i>. All regex engines must be able to correctly build such a structure in their ``comp&#8217;&#8216; routine. </p>
-<p> The <font SIZE="-1">REGEXP</font> structure contains all the data that Perl needs to be aware of to properly work with the regular expression. It includes data about optimisations that Perl can use to determine if the regex engine should really be used, and various other control info that is needed to properly execute patterns in various contexts, such as if the pattern anchored in some way, or what flags were used during the compile, or if the program contains special constructs that Perl needs to be aware of. </p>
+<p> The REGEXP struct is defined in <i>regexp.h</i>. All regex engines must be able to correctly build such a structure in their ``comp&#8217;&#8216; routine. </p>
+<p> The REGEXP structure contains all the data that Perl needs to be aware of to properly work with the regular expression. It includes data about optimisations that Perl can use to determine if the regex engine should really be used, and various other control info that is needed to properly execute patterns in various contexts, such as if the pattern anchored in some way, or what flags were used during the compile, or if the program contains special constructs that Perl needs to be aware of. </p>
 <p> In addition it contains two fields that are intended for the private use of the regex engine that compiled the pattern. These are the <code>&quot;intflags&quot;</code> and <code>&quot;pprivate&quot;</code> members. <code>&quot;pprivate&quot;</code> is a void pointer to an arbitrary structure, whose use and management is the responsibility of the compiling engine. Perl will never modify either of these values. </p>
 <pre><code>    typedef struct regexp {
         /* what engine created this regexp? */
@@ -374,7 +374,7 @@ description: "perlreapi – Perl regular expression plugin interface"
 <p> This field points at a <code>&quot;regexp_engine&quot;</code> structure which contains pointers to the subroutines that are to be used for performing a match. It is the compiling routine&#8217;s responsibility to populate this field before returning the regexp object. </p>
 <p> Internally this is set to <code>&quot;NULL&quot;</code> unless a custom engine is specified in <code>$^H{regcomp}</code>, Perl&#8217;s own set of callbacks can be accessed in the struct pointed to by <code>&quot;RE_ENGINE_PTR&quot;</code>.  </p>
 <h3>mother_re</h3>
-<p> <font SIZE="-1">TODO,</font> see &lt;<a rel="nofollow" href="http://www.mail-archive.com/perl5-changes@perl.org/msg17328.html">http://www.mail-archive.com/perl5-changes@perl.org/msg17328.html</a>&gt;  </p>
+<p> TODO, see &lt;<a rel="nofollow" href="http://www.mail-archive.com/perl5-changes@perl.org/msg17328.html">http://www.mail-archive.com/perl5-changes@perl.org/msg17328.html</a>&gt;  </p>
 <h3>extflags</h3>
 <p> This will be used by Perl to see what flags the regexp was compiled with, this will normally be set to the value of the flags parameter by the comp callback. See the comp documentation for valid flags.  </p>
 <h3>minlen minlenret</h3>
@@ -410,7 +410,7 @@ description: "perlreapi – Perl regular expression plugin interface"
         /* Compile a new pattern */
 </code></pre>
 <h3>paren_names</h3>
-<p> This is a hash used internally to track named capture groups and their offsets. The keys are the names of the buffers the values are dualvars, with the <font SIZE="-1">IV</font> slot holding the number of buffers with the given name and the pv being an embedded array of I32. The values may also be contained independently in the data array in cases where named backreferences are used.  </p>
+<p> This is a hash used internally to track named capture groups and their offsets. The keys are the names of the buffers the values are dualvars, with the IV slot holding the number of buffers with the given name and the pv being an embedded array of I32. The values may also be contained independently in the data array in cases where named backreferences are used.  </p>
 <h3>substrs</h3>
 <p> Holds information on the longest string that must occur at a fixed offset from the start of the pattern, and the longest string that must occur at a floating offset from the start of the pattern. Used to do Fast-Boyer-Moore searches on the string to find out if its worth using the regex engine at all, and if so where in the string to search.  </p>
 <h3>subbeg sublen saved_copy suboffset subcoffset</h3>

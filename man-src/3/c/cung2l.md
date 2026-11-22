@@ -11,7 +11,7 @@ description: "cung2l.f –"
 <p> cung2l.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cung2l</code> (M, N, K, A, LDA, TAU, WORK, INFO)<br />
+<p> subroutine <code>cung2l</code> (M, N, K, A, LDA, TAU, WORK, INFO)<br/>
  <i></i><code>CUNG2L</code> generates all or part of the unitary matrix Q from a QL factorization determined by cgeqlf (unblocked algorithm).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cung2l (integerM, integerN, integerK, complex, dimension( lda, * )A, integerLDA, complex, dimension( * )TAU, complex, dimension( * )WORK, integerINFO)</h3>

@@ -10,7 +10,7 @@ description: "ldns_update_set_zocount, ldns_update_set_prcount, ldns_update_set_
 
 <p> ldns_update_set_zocount, ldns_update_set_prcount, ldns_update_set_upcount, ldns_update_set_adcount </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p>&nbsp;<wbr>ldns_update_set_zocount(); </p>

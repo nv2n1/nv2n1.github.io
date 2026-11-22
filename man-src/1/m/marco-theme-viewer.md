@@ -15,8 +15,8 @@ description: "marco-theme-viewer – Marco Theme Previewer"
 <p> <code>marco-theme-viewer</code> allows you to preview any installed Marco theme. </p>
 <p> When designing a new Marco theme, you can use <code>marco-theme-viewer</code> to benchmark the performance of a window frame, and to preview it around different types of windows in various mock scenarios.</p>
 <h2>USAGE</h2>
-<p> Usage of <code>marco-theme-viewer</code> is fairly simple.<br />
- Just call <code>marco-theme-viewer</code> followed by the Name of any valid Marco or Metacity theme installed in &quot;~/.themes&quot; or &quot;/usr/share/themes&quot;.<br />
+<p> Usage of <code>marco-theme-viewer</code> is fairly simple.<br/>
+ Just call <code>marco-theme-viewer</code> followed by the Name of any valid Marco or Metacity theme installed in &quot;~/.themes&quot; or &quot;/usr/share/themes&quot;.<br/>
  It is case-sensitive.</p>
 <h2>EXAMPLE</h2>
 <p> <code>marco-theme-viewer Crux</code></p>

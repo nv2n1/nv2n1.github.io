@@ -21,7 +21,7 @@ description: "smartpqi – Microsemi Smart Family SCSI driver"
 <dd>This operation Returns the PCI domain, bus, device and function and &quot;board ID&quot; (PCI subsystem ID).</dd>
 <dt><code>CCISS_GETDRIVVER</code></dt>
 <dd>This operation returns the driver version in four bytes, encoded as:</dd>
-<dd>(major_version &lt;&lt; 28) | (minor_version &lt;&lt; 24) |<br />
+<dd>(major_version &lt;&lt; 28) | (minor_version &lt;&lt; 24) |<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(release&nbsp;&lt;&lt;&nbsp;16)&nbsp;| revision</dd>
 <dt><code>CCISS_PASSTHRU</code></dt>
 <dd>Allows BMIC and CISS commands to be passed through to the controller.</dd></dl>

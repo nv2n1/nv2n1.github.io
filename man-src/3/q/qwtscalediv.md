@@ -12,17 +12,17 @@ description: "QwtScaleDiv –"
 <h2>Synopsis</h2>
 <p>#include &lt;qwt_scale_div.h&gt;</p>
 <h3>Public Types</h3>
-<p>enum <code>TickType</code> { <code>NoTick</code> = -1, <code>MinorTick</code>, <code>MediumTick</code>, <code>MajorTick</code>, <code>NTickTypes</code> }<br />
+<p>enum <code>TickType</code> { <code>NoTick</code> = -1, <code>MinorTick</code>, <code>MediumTick</code>, <code>MajorTick</code>, <code>NTickTypes</code> }<br/>
  <i>Scale tick types. </i></p>
 <h3>Public Member Functions</h3>
 <p><code>QwtScaleDiv</code> (double <code>lowerBound</code>=0.0, double <code>upperBound</code>=0.0) </p>
 <p> <code>QwtScaleDiv</code> (const <code>QwtInterval</code> &amp;, QList&lt; double &gt;[<code>NTickTypes</code>]) </p>
 <p> <code>QwtScaleDiv</code> (double <code>lowerBound</code>, double <code>upperBound</code>, QList&lt; double &gt;[<code>NTickTypes</code>]) </p>
 <p> <code>QwtScaleDiv</code> (double <code>lowerBound</code>, double <code>upperBound</code>, const QList&lt; double &gt; &amp;minorTicks, const QList&lt; double &gt; &amp;mediumTicks, const QList&lt; double &gt; &amp;majorTicks) </p>
-<p> bool <code>operator==</code> (const <code>QwtScaleDiv</code> &amp;) const<br />
- <i>Equality operator. </i><br />
- bool <code>operator!=</code> (const <code>QwtScaleDiv</code> &amp;) const<br />
- <i>Inequality. </i><br />
+<p> bool <code>operator==</code> (const <code>QwtScaleDiv</code> &amp;) const<br/>
+ <i>Equality operator. </i><br/>
+ bool <code>operator!=</code> (const <code>QwtScaleDiv</code> &amp;) const<br/>
+ <i>Inequality. </i><br/>
  void <code>setInterval</code> (double <code>lowerBound</code>, double <code>upperBound</code>) </p>
 <p> void <code>setInterval</code> (const <code>QwtInterval</code> &amp;) </p>
 <p> <code>QwtInterval</code> <code>interval</code> () const </p>
@@ -34,10 +34,10 @@ description: "QwtScaleDiv –"
 <p> bool <code>contains</code> (double value) const </p>
 <p> void <code>setTicks</code> (int tickType, const QList&lt; double &gt; &amp;) </p>
 <p> QList&lt; double &gt; <code>ticks</code> (int tickType) const </p>
-<p> bool <code>isEmpty</code> () const<br />
- <i>Check if the scale division is empty( </i><code>lowerBound()</code> == <code>upperBound()</code> )<br />
- bool <code>isIncreasing</code> () const<br />
- <i>Check if the scale division is increasing( </i><code>lowerBound()</code> &lt;= <code>upperBound()</code> )<br />
+<p> bool <code>isEmpty</code> () const<br/>
+ <i>Check if the scale division is empty( </i><code>lowerBound()</code> == <code>upperBound()</code> )<br/>
+ bool <code>isIncreasing</code> () const<br/>
+ <i>Check if the scale division is increasing( </i><code>lowerBound()</code> &lt;= <code>upperBound()</code> )<br/>
  void <code>invert</code> () </p>
 <p> <code>QwtScaleDiv</code> <code>inverted</code> () const </p>
 <p> <code>QwtScaleDiv</code> <code>bounded</code> (double <code>lowerBound</code>, double <code>upperBound</code>) const </p>
@@ -69,7 +69,7 @@ description: "QwtScaleDiv –"
 <p>Construct a division without ticks </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>lowerBound</i> First boundary<br />
+<dd><i>lowerBound</i> First boundary<br/>
  <i>upperBound</i> Second boundary</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
@@ -78,14 +78,14 @@ description: "QwtScaleDiv –"
 <p>Construct a scale division </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>interval</i> Interval<br />
+<dd><i>interval</i> Interval<br/>
  <i>ticks</i> List of major, medium and minor ticks</dd></dl>
 <h3>QwtScaleDiv::QwtScaleDiv (doublelowerBound, doubleupperBound, QList&lt; double &gt;ticks[NTickTypes]) [explicit]</h3>
 <p>Construct a scale division </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>lowerBound</i> First boundary<br />
- <i>upperBound</i> Second boundary<br />
+<dd><i>lowerBound</i> First boundary<br/>
+ <i>upperBound</i> Second boundary<br/>
  <i>ticks</i> List of major, medium and minor ticks</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
@@ -94,10 +94,10 @@ description: "QwtScaleDiv –"
 <p>Construct a scale division </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>lowerBound</i> First boundary<br />
- <i>upperBound</i> Second boundary<br />
- <i>minorTicks</i> List of minor ticks<br />
- <i>mediumTicks</i> List medium ticks<br />
+<dd><i>lowerBound</i> First boundary<br/>
+ <i>upperBound</i> Second boundary<br/>
+ <i>minorTicks</i> List of minor ticks<br/>
+ <i>mediumTicks</i> List medium ticks<br/>
  <i>majorTicks</i> List of major ticks</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
@@ -107,7 +107,7 @@ description: "QwtScaleDiv –"
 <p>Return a scale division with an interval [lowerBound, upperBound] where all ticks outside this interval are removed </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>lowerBound</i> Lower bound<br />
+<dd><i>lowerBound</i> Lower bound<br/>
  <i>upperBound</i> Upper bound</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -164,7 +164,7 @@ description: "QwtScaleDiv –"
 <p>Change the interval </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>lowerBound</i> First boundary<br />
+<dd><i>lowerBound</i> First boundary<br/>
  <i>upperBound</i> Second boundary</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
@@ -186,7 +186,7 @@ description: "QwtScaleDiv –"
 <p>Assign ticks </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>type</i> MinorTick, MediumTick or MajorTick<br />
+<dd><i>type</i> MinorTick, MediumTick or MajorTick<br/>
  <i>ticks</i> Values of the tick positions</dd></dl>
 <h3>void QwtScaleDiv::setUpperBound (doubleupperBound)</h3>
 <p>Set the second boundary </p>

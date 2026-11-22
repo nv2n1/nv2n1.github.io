@@ -11,7 +11,7 @@ description: "cunmhr.f –"
 <p> cunmhr.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cunmhr</code> (SIDE, TRANS, M, N, ILO, IHI, A, LDA, TAU, C, LDC, WORK, LWORK, INFO)<br />
+<p> subroutine <code>cunmhr</code> (SIDE, TRANS, M, N, ILO, IHI, A, LDA, TAU, C, LDC, WORK, LWORK, INFO)<br/>
  <i></i><code>CUNMHR</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cunmhr (characterSIDE, characterTRANS, integerM, integerN, integerILO, integerIHI, complex, dimension( lda, * )A, integerLDA, complex, dimension( * )TAU, complex, dimension( ldc, * )C, integerLDC, complex, dimension( * )WORK, integerLWORK, integerINFO)</h3>
@@ -82,8 +82,8 @@ if SIDE
           returned by CGEHRD.
 </pre>
 <p> <i>LDA</i> </p>
-<p>LDA is INTEGER<br />
-        The leading dimension of the array A.LDA &gt;= max(1, M) if SIDE = &#8216;L&#8217;;<br />
+<p>LDA is INTEGER<br/>
+        The leading dimension of the array A.LDA &gt;= max(1, M) if SIDE = &#8216;L&#8217;;<br/>
 LDA &gt;= max(1, N) if SIDE = &#8216;R&#8217;.</p>
 <p> <i>TAU</i> </p>
 <pre>

@@ -65,13 +65,13 @@ OR
 <h2>Capabilities</h2>
 <dl>
 <dt><code>spoof</code></dt>
-<dd>Allow spoofed ident responses; allow the user to specify a string of her choosing as the ident reply. The only restriction on the spoofed response is that it must not be the username of another user. When a user spoofs her ident reply, the login name of the user is recorded along with the forged reply.<br />
+<dd>Allow spoofed ident responses; allow the user to specify a string of her choosing as the ident reply. The only restriction on the spoofed response is that it must not be the username of another user. When a user spoofs her ident reply, the login name of the user is recorded along with the forged reply.<br/>
  This capability does not apply to the <i>force</i> action.</dd>
 <dt><code>spoof_all</code></dt>
-<dd>Allow the usernames of other users to be used as ident responses.<br />
+<dd>Allow the usernames of other users to be used as ident responses.<br/>
  This capability does not apply to the <i>force</i> action.</dd>
 <dt><code>spoof_privport</code></dt>
-<dd>Allow ident replies to be spoofed on privileged ports (ports lower than 1024).<br />
+<dd>Allow ident replies to be spoofed on privileged ports (ports lower than 1024).<br/>
  This capability does not apply to the <i>force</i> action.</dd>
 <dt><code>reply</code> &lt;string&gt; [&lt;string1&gt; &#8230; &lt;stringN&gt;]</dt>
 <dd>Reply to successful ident lookups with the ident response specified in &lt;string&gt;. If more than one string parameter is given, one of the strings will be selected randomly. </dd>

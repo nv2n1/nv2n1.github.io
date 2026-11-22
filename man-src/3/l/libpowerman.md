@@ -126,8 +126,8 @@ int main(int argc, char *argv[])
 }
 </code></pre>
 <h2>FILES</h2>
-<p> /usr/lib/libpowerman.*<br />
- /usr/lib64/libpowerman.*<br />
+<p> /usr/lib/libpowerman.*<br/>
+ /usr/lib64/libpowerman.*<br/>
  /usr/include/libpowerman.h </p>
 <h2>ORIGIN</h2>
 <p> PowerMan was originally developed by Andrew Uselton on LLNL&#8217;s Linux clusters. This software is open source and distributed under the terms of the GNU GPL. </p>

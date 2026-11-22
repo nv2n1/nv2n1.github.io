@@ -27,10 +27,10 @@ description: "Lintian::Index – access to collected data about the upstream (or
 <dd>
 </dd><dt>sorted_list</dt>
 <dd>
-</dd><dt>lookup (<font SIZE="-1">FILE</font>)</dt>
+</dd><dt>lookup (FILE)</dt>
 <dd>Like &#8220;index&#8221; except orig_index is based on the &#8220;orig tarballs&#8221; of the source packages. </dd>
 <p> For native packages &#8220;index&#8221; and &#8220;orig_index&#8221; are generally identical. </p>
-<p> <font SIZE="-1">NB:</font> If sorted_index includes a debian packaging, it is was contained in upstream part of the source package (or the package is native). </p>
+<p> NB: If sorted_index includes a debian packaging, it is was contained in upstream part of the source package (or the package is native). </p>
 <p> Needs-Info requirements for using <i>orig_index</i>: src-orig-index</p>
 <dt>resolve_path</dt>
 <dd>

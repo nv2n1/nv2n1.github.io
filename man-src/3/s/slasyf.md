@@ -11,7 +11,7 @@ description: "slasyf.f –"
 <p> slasyf.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>slasyf</code> (UPLO, N, NB, KB, A, LDA, IPIV, W, LDW, INFO)<br />
+<p> subroutine <code>slasyf</code> (UPLO, N, NB, KB, A, LDA, IPIV, W, LDW, INFO)<br/>
  <i></i><code>SLASYF</code> computes a partial factorization of a real symmetric matrix using the Bunch-Kaufman diagonal pivoting method.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slasyf (characterUPLO, integerN, integerNB, integerKB, real, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, real, dimension( ldw, * )W, integerLDW, integerINFO)</h3>

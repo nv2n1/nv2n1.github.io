@@ -83,7 +83,7 @@ description: "sane-test – SANE backend for testing frontends"
 <p> Example: export SANE_DEBUG_TEST=4 </p>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1), <code>xscanimage</code>(1)<br />
+<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1), <code>xscanimage</code>(1)<br/>
  <i><a rel="nofollow" href="http://www.meier-geinitz.de/sane/test-backend/">http://www.meier-geinitz.de/sane/test-backend/</a></i> </p>
 <h2>Author</h2>
 <p>Henning Meier-Geinitz &lt;<i>henning [at] meier-geinitz.de</i>&gt;</p>

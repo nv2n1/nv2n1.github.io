@@ -25,9 +25,9 @@ void endprotoent(void);
 <p> The <code>setprotoent</code>() function opens a connection to the database, and sets the next entry to the first entry. If <i>stayopen</i> is nonzero, then the connection to the database will not be closed between calls to one of the <code>getproto*</code>() functions. </p>
 <p> The <code>endprotoent</code>() function closes the connection to the database. </p>
 <p> The <i>protoent</i> structure is defined in <i>&lt;netdb.h&gt;</i> as follows: </p>
-<p> struct protoent {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;<wbr>&nbsp;*p_name;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;official protocol name&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;**p_aliases;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;alias list&nbsp;*/<br />
+<p> struct protoent {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;<wbr>&nbsp;*p_name;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;official protocol name&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;**p_aliases;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;alias list&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;p_proto;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;protocol number&nbsp;*/ } </p>
 <p> The members of the <i>protoent</i> structure are:</p>
 <dl>
@@ -55,29 +55,29 @@ void endprotoent(void);
 <tr VALIGN=top>
 <td> <code>getprotoent</code>() </td>
 <td>Thread safety</td>
-<td> MT-Unsafe race:protoent<br />
+<td> MT-Unsafe race:protoent<br/>
  race:protoentbuf locale
 </td>
 </tr>
 <tr VALIGN=top>
 <td> <code>getprotobyname</code>() </td>
 <td>Thread safety</td>
-<td> MT-Unsafe race:protobyname<br />
+<td> MT-Unsafe race:protobyname<br/>
  locale
 </td>
 </tr>
 <tr VALIGN=top>
 <td> <code>getprotobynumber</code>() </td>
 <td>Thread safety</td>
-<td> MT-Unsafe race:protobynumber<br />
+<td> MT-Unsafe race:protobynumber<br/>
  locale
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>setprotoent</code>(),<br />
+<td> <code>setprotoent</code>(),<br/>
  <code>endprotoent</code>() </td>
 <td>Thread safety</td>
-<td> MT-Unsafe race:protoent<br />
+<td> MT-Unsafe race:protoent<br/>
  locale
 </td>
 </tr>

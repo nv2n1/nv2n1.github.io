@@ -72,8 +72,8 @@ description: "ext_ldap_group_acl – Squid LDAP external acl group helper"
 <h2>Configuration</h2>
 <p>This helper is intended to be used as an <code>external_acl_type</code> helper in <code>squid.conf .</code></p>
 <dl>
-<dd><code>external_acl_type ldap_group %LOGIN /path/to/ext_ldap_group_acl &#8230;</code><br />
- <code>acl group1 external ldap_group Group1</code><br />
+<dd><code>external_acl_type ldap_group %LOGIN /path/to/ext_ldap_group_acl &#8230;</code><br/>
+ <code>acl group1 external ldap_group Group1</code><br/>
  <code>acl group2 external ldap_group Group2</code></dd></dl>
 <p> <code>NOTE:</code> When constructing search filters it is recommended to first test the filter using <code>ldapsearch</code> to verify that the filter matches what you expect before you attempt to use <code>ext_ldap_group_acl</code></p>
 <h2>Author</h2>
@@ -81,10 +81,10 @@ description: "ext_ldap_group_acl – Squid LDAP external acl group helper"
 <p> Based on prior work in <code>squid_ldap_auth</code> by <i>Glen Newton &lt;glen.newton [at] nrc.ca&gt;</i> </p>
 <p> This manual was written by <i>Henrik Nordstrom &lt;hno [at] marasystems.com&gt;</i></p>
 <h2>Copyright</h2>
-<p>&nbsp;<wbr>*&nbsp;<wbr>Copyright&nbsp;<wbr>(C)&nbsp;<wbr>1996-2016 The Squid Software Foundation and contributors<br />
-&nbsp;<wbr>*<br />
-&nbsp;<wbr>*&nbsp;<wbr>Squid software is distributed under GPLv2+&nbsp;<wbr>license and includes<br />
-&nbsp;<wbr>*&nbsp;<wbr>contributions from numerous individuals and organizations.<br />
+<p>&nbsp;<wbr>*&nbsp;<wbr>Copyright&nbsp;<wbr>(C)&nbsp;<wbr>1996-2016 The Squid Software Foundation and contributors<br/>
+&nbsp;<wbr>*<br/>
+&nbsp;<wbr>*&nbsp;<wbr>Squid software is distributed under GPLv2+&nbsp;<wbr>license and includes<br/>
+&nbsp;<wbr>*&nbsp;<wbr>contributions from numerous individuals and organizations.<br/>
 &nbsp;<wbr>*&nbsp;<wbr>Please see the COPYING and CONTRIBUTORS files for details. </p>
 <p> This program and documentation is copyright to the authors named above. </p>
 <p> Distributed under the GNU General Public License (GNU GPL) version 2 or later (GPLv2+).</p>
@@ -97,8 +97,8 @@ description: "ext_ldap_group_acl – Squid LDAP external acl group helper"
 <p> Report serious security bugs to <i>Squid Bugs &lt;squid-bugs [at] squid-cache.org&gt;</i> </p>
 <p> Report ideas for new improvements to the <i>Squid Developers mailing list</i> &lt;squid-dev [at] squid-cache.org&gt;</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-squid/">squid</a></code>(8), <code><a href="/docs/linux/man/8-basic_ldap_auth/">basic_ldap_auth</a></code>(8), <code><a href="/docs/linux/man/1-ldapsearch/">ldapsearch</a></code>(1), <code>GPL</code>(7),<br />
- Your favorite LDAP documentation<br />
- <code>RFC2254</code> &#8211; The String Representation of LDAP Search Filters,<br />
- The Squid FAQ wiki <a rel="nofollow" href="http://wiki.squid-cache.org/SquidFaq">http://wiki.squid-cache.org/SquidFaq</a><br />
+<p><code><a href="/docs/linux/man/8-squid/">squid</a></code>(8), <code><a href="/docs/linux/man/8-basic_ldap_auth/">basic_ldap_auth</a></code>(8), <code><a href="/docs/linux/man/1-ldapsearch/">ldapsearch</a></code>(1), <code>GPL</code>(7),<br/>
+ Your favorite LDAP documentation<br/>
+ <code>RFC2254</code> &#8211; The String Representation of LDAP Search Filters,<br/>
+ The Squid FAQ wiki <a rel="nofollow" href="http://wiki.squid-cache.org/SquidFaq">http://wiki.squid-cache.org/SquidFaq</a><br/>
  The Squid Configuration Manual <a rel="nofollow" href="http://www.squid-cache.org/Doc/config/">http://www.squid-cache.org/Doc/config/</a> </p>

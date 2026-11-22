@@ -33,7 +33,7 @@ description: "perl5111delta – what is new for perl v5.11.1"
 <dt>&bull;</dt>
 <dd> Eliminates <tt>&quot;$VERSION = ...&quot;</tt> and <tt>&quot;eval $VERSION&quot;</tt> clutter</dd>
 <dt>&bull;</dt>
-<dd> As it requires <font SIZE="-1">VERSION</font> to be a numeric literal or v-string literal, it can be statically parsed by toolchain modules without <tt>&quot;eval&quot;</tt> the way <font SIZE="-1">MM-</font>&gt;parse_version does for <tt>&quot;$VERSION = ...&quot;</tt></dd>
+<dd> As it requires VERSION to be a numeric literal or v-string literal, it can be statically parsed by toolchain modules without <tt>&quot;eval&quot;</tt> the way MM-&gt;parse_version does for <tt>&quot;$VERSION = ...&quot;</tt></dd>
 <dt>&bull;</dt>
 <dd> Alpha versions with underscores do not need to be quoted; static parsing will preserve the underscore, but during compilation, Perl will remove underscores as it does for all numeric literals </dd>
 <p> It does not break old code with only <tt>&quot;package NAME&quot;</tt>, but code that uses <tt>&quot;package NAME VERSION&quot;</tt> will need to be restricted to perl 5.11.X or newer This is analogous to the change to <tt>&quot;open&quot;</tt> from two-args to three-args. Users requiring the latest Perl will benefit, and perhaps N years from now it will become standard practice when Perl 5.12 is targeted the way that 5.6 is today.</dl>
@@ -53,9 +53,9 @@ description: "perl5111delta – what is new for perl v5.11.1"
 <dt>&bull;</dt>
 <dd> Upgrade to ExtUtils-CBuilder 0.260301</dd>
 <dt>&bull;</dt>
-<dd> Upgrade to <font SIZE="-1">CGI</font>.pm-3.48</dd>
+<dd> Upgrade to CGI.pm-3.48</dd>
 <dt>&bull;</dt>
-<dd> Upgrade <font SIZE="-1">CPANPLUS</font> to <font SIZE="-1">CPAN</font> version 0.89_02</dd>
+<dd> Upgrade CPANPLUS to CPAN version 0.89_02</dd>
 <dt>&bull;</dt>
 <dd> Upgrade to threads::shared 1.32</dd>
 <dt>&bull;</dt>
@@ -80,18 +80,18 @@ description: "perl5111delta – what is new for perl v5.11.1"
 <dd></dd></dl>
 <h2>Platform Specific Notes</h2>
 <dl>
-<dt>Darwin (Mac <font SIZE="-1">OS</font> X)</dt>
+<dt>Darwin (Mac OS X)</dt>
 <dd>
 </dd><dl>
 <dl>
 <dt>&bull;</dt>
-<dd> Skip testing the be_BY.CP1131 locale on Darwin 10 (Mac <font SIZE="-1">OS</font> X 10.6), as it&#8217;s still buggy.</dd>
+<dd> Skip testing the be_BY.CP1131 locale on Darwin 10 (Mac OS X 10.6), as it&#8217;s still buggy.</dd>
 <dt>&bull;</dt>
-<dd> Correct infelicities in the regexp used to identify buggy locales on Darwin 8 and 9 (Mac <font SIZE="-1">OS</font> X 10.4 and 10.5, respectively).</dd></dl>
+<dd> Correct infelicities in the regexp used to identify buggy locales on Darwin 8 and 9 (Mac OS X 10.4 and 10.5, respectively).</dd></dl>
 </dl>
 <dl>
 </dl>
-<dt>DragonFly <font SIZE="-1">BSD</font></dt>
+<dt>DragonFly BSD</dt>
 <dd>
 </dd><dl>
 <dl>
@@ -144,15 +144,15 @@ description: "perl5111delta – what is new for perl v5.11.1"
 <dt>&bull;</dt>
 <dd> <tt>&quot;make test_porting&quot;</tt> now runs a number of important pre-commit checks which might be of use to anyone working on the Perl core.</dd>
 <dt>&bull;</dt>
-<dd> <i>t/porting/podcheck.t</i> automatically checks the well-formedness of <font SIZE="-1">POD</font> found in all .pl, .pm and .pod files in the <i></i><font SIZE="-1"><i>MANIFEST</i></font><i></i>, other than in dual-lifed modules which are primarily maintained outside the Perl core.</dd>
+<dd> <i>t/porting/podcheck.t</i> automatically checks the well-formedness of POD found in all .pl, .pm and .pod files in the <i></i><i>MANIFEST</i><i></i>, other than in dual-lifed modules which are primarily maintained outside the Perl core.</dd>
 <dt>&bull;</dt>
-<dd> <i>t/porting/manifest.t</i> now tests that all files listed in <font SIZE="-1">MANIFEST</font> are present.</dd></dl>
+<dd> <i>t/porting/manifest.t</i> now tests that all files listed in MANIFEST are present.</dd></dl>
 <h2>Known Problems</h2>
 <dl>
 <dt>Untriaged test crashes on Windows 2000</dt>
 <dd> Several porters have reported mysterious crashes when Perl&#8217;s entire test suite is run after a build on certain Windows 2000 systems. When run by hand, the individual tests reportedly work fine.</dd>
-<dt>Known test failures on <font SIZE="-1">VMS</font></dt>
-<dd> Perl 5.11.1 fails a small set of core and <font SIZE="-1">CPAN</font> tests as of this release. With luck, that&#8217;ll be sorted out for 5.11.2</dd></dl>
+<dt>Known test failures on VMS</dt>
+<dd> Perl 5.11.1 fails a small set of core and CPAN tests as of this release. With luck, that&#8217;ll be sorted out for 5.11.2</dd></dl>
 <h2>Errata for 5.11.0</h2>
 <dl>
 <dt>The Perl 5.11.0 release notes incorrectly described &#8216;delete local&#8217;</dt>
@@ -160,13 +160,13 @@ description: "perl5111delta – what is new for perl v5.11.1"
 <h2>Acknowledgements</h2>
 <p> Perl 5.11.1 represents approximately 3 weeks development since Perl 5.11.0 contains 22,000 lines of changes across 396 files from 26 authors and committers: </p>
 <p> Abigail, Alex Vandiver, brian d foy, Chris Williams, Craig A. Berry, David Fifield, David Golden, demerphq, Eric Brine, Geoffrey T. Dairiki, George Greer, H.Merijn Brand, Jan Dubois, Jerry D. Hedden, Jesse Vincent, Josh ben Jore, Max Maischein, Nicholas Clark, Rafael Garcia-Suarez, Simon Schubert, Sisyphus, Smylers, Steve Hay, Steve Peters, Vincent Pit and Yves Orton. </p>
-<p> Many of the changes included in this version originated in the <font SIZE="-1">CPAN</font> modules included in Perl&#8217;s core. We&#8217;re grateful to the entire <font SIZE="-1">CPAN</font> community for helping Perl to flourish.</p>
+<p> Many of the changes included in this version originated in the CPAN modules included in Perl&#8217;s core. We&#8217;re grateful to the entire CPAN community for helping Perl to flourish.</p>
 <h2>Reporting Bugs</h2>
 <p> If you find what you think is a bug, you might check the articles recently posted to the comp.lang.perl.misc newsgroup and the perl bug database at <a rel="nofollow" href="http://rt.perl.org/perlbug/">http://rt.perl.org/perlbug/</a> . There may also be information at <a rel="nofollow" href="http://www.perl.org/">http://www.perl.org/</a> , the Perl Home Page. </p>
 <p> If you believe you have an unreported bug, please run the <code>perlbug</code> program included with your release. Be sure to trim your bug down to a tiny but sufficient test case. Your bug report, along with the output of <tt>&quot;perl -V&quot;</tt>, will be sent off to perlbug [at] perl.org to be analysed by the Perl porting team. </p>
-<p> If the bug you are reporting has security implications, which make it inappropriate to send to a publicly archived mailing list, then please send it to perl5-security-report [at] perl.org. This points to a closed subscription unarchived mailing list, which includes all the core committers, who be able to help assess the impact of issues, figure out a resolution, and help co-ordinate the release of patches to mitigate or fix the problem across all platforms on which Perl is supported. Please only use this address for security issues in the Perl core, not for modules independently distributed on <font SIZE="-1">CPAN</font>.</p>
+<p> If the bug you are reporting has security implications, which make it inappropriate to send to a publicly archived mailing list, then please send it to perl5-security-report [at] perl.org. This points to a closed subscription unarchived mailing list, which includes all the core committers, who be able to help assess the impact of issues, figure out a resolution, and help co-ordinate the release of patches to mitigate or fix the problem across all platforms on which Perl is supported. Please only use this address for security issues in the Perl core, not for modules independently distributed on CPAN.</p>
 <h2>SEE ALSO</h2>
 <p> The <i>Changes</i> file for an explanation of how to view exhaustive details on what changed. </p>
-<p> The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. </p>
-<p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
+<p> The <i></i><i>INSTALL</i><i></i> file for how to build Perl. </p>
+<p> The <i></i><i>README</i><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information. </p>

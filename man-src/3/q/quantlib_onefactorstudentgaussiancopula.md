@@ -13,9 +13,9 @@ description: "QuantLib::OneFactorStudentGaussianCopula – One-factor Student t 
 <p> Inherits <code>QuantLib::OneFactorCopula</code>. </p>
 <h3>Public Member Functions</h3>
 <p><code>OneFactorStudentGaussianCopula</code> (const <code>Handle</code>&lt; <code>Quote</code> &gt; &amp;correlation, int nm, Real maximum=10, Size integrationSteps=200) </p>
-<p> Real <code>density</code> (Real m) const<br />
- <i>Density function of M. </i><br />
- Real <code>cumulativeZ</code> (Real z) const<br />
+<p> Real <code>density</code> (Real m) const<br/>
+ <i>Density function of M. </i><br/>
+ Real <code>cumulativeZ</code> (Real z) const<br/>
  <i>Cumulative distribution of Z. </i></p>
 <h2>Detailed Description</h2>
 <p>One-factor Student t &#8211; Gaussian Copula. </p>

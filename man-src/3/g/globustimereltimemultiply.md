@@ -10,7 +10,7 @@ description: "globus_time.h –"
 <p>globus_time.h &#8211; </p>
 <p> Time Types and Macros.</p>
 <h2>Synopsis</h2>
-<p>#include &#8216;globus_types.h&#8217;<br />
+<p>#include &#8216;globus_types.h&#8217;<br/>
  #include &lt;time.h&gt; </p>
 <h3>Macros</h3>
 <p>#define <code>GlobusTimeAbstimeSet</code>(Abstime, Sec, USec) </p>

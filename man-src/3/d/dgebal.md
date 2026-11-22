@@ -11,7 +11,7 @@ description: "dgebal.f –"
 <p> dgebal.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dgebal</code> (JOB, N, A, LDA, ILO, IHI, SCALE, INFO)<br />
+<p> subroutine <code>dgebal</code> (JOB, N, A, LDA, ILO, IHI, SCALE, INFO)<br/>
  <i></i><code>DGEBAL</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dgebal (characterJOB, integerN, double precision, dimension( lda, * )A, integerLDA, integerILO, integerIHI, double precision, dimension( * )SCALE, integerINFO)</h3>
@@ -66,7 +66,7 @@ description: "dgebal.f –"
 <pre>
           ILO is INTEGER
 </pre>
-<p>&nbsp;<wbr><br />
+<p>&nbsp;<wbr><br/>
  <i>IHI</i> </p>
 <pre>
           IHI is INTEGER

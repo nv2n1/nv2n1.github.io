@@ -10,7 +10,7 @@ description: "cpotf2.f –"
 <p>cpotf2.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>cpotf2</code> (UPLO, N, A, LDA, INFO)<br />
+<p>subroutine <code>cpotf2</code> (UPLO, N, A, LDA, INFO)<br/>
  <i></i><code>CPOTF2</code> computes the Cholesky factorization of a symmetric/Hermitian positive definite matrix (unblocked algorithm).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cpotf2 (characterUPLO, integerN, complex, dimension( lda, * )A, integerLDA, integerINFO)</h3>

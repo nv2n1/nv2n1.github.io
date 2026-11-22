@@ -52,7 +52,7 @@ description: "XtResolvePathname – search for a file using standard substitutio
 <dd>The customization string retrieved from the resource database associated with <i>display</i>.</dd>
 <dt>%D</dt>
 <dd>The value of the implementation-specific default path.</dd></dl>
-<p> If a path is passed to <code>XtResolvePathname</code>, it will be passed along to <code>XtFindFile</code>. If the <i>path</i> argument is NULL, the value of the <font SIZE="-1"><code>XFILESEARCHPATH</code></font> environment variable will be passed to <code>XtFindFile</code>. If <font SIZE="-1"><code>XFILESEARCHPATH</code></font> is not defined, an implementation-specific default path will be used which contains at least 6 entries. These entries must contain the following substitutions: </p>
+<p> If a path is passed to <code>XtResolvePathname</code>, it will be passed along to <code>XtFindFile</code>. If the <i>path</i> argument is NULL, the value of the <code>XFILESEARCHPATH</code> environment variable will be passed to <code>XtFindFile</code>. If <code>XFILESEARCHPATH</code> is not defined, an implementation-specific default path will be used which contains at least 6 entries. These entries must contain the following substitutions: </p>
 <pre>1. %C, %N, %S, %T, %L or %C, %N, %S, %T, %l, %t, %c
 2. %C, %N, %S, %T, %l
 3. %C, %N, %S, %T
@@ -64,15 +64,15 @@ description: "XtResolvePathname – search for a file using standard substitutio
 <p> The <i>suffix</i> parameter is intended to be appended to the file name. Possible values might include &#8220;.txt&#8221;, &#8220;.dat&#8221;, and &#8220;.bm&#8221;. </p>
 <p> A suggested value for the default path on POSIX-based systems is</p>
 <dl COMPACT>
-<dd>/usr/lib/X11/%L/%T/%N%C%S:/usr/lib/X11/%l/%T/%N%C%S:\<br />
- /usr/lib/X11/%T/%N%C%S:/usr/lib/X11/%L/%T/%N%S:\<br />
+<dd>/usr/lib/X11/%L/%T/%N%C%S:/usr/lib/X11/%l/%T/%N%C%S:\<br/>
+ /usr/lib/X11/%T/%N%C%S:/usr/lib/X11/%L/%T/%N%S:\<br/>
  /usr/lib/X11/%l/%T/%N%S:/usr/lib/X11/%T/%N%S</dd></dl>
 <p> Using this example, if the user has specified a language, it will be used as a subdirectory of /usr/lib/X11 that will be searched for other files. If the desired file is not found there, the lookup will be tried again using just the language part of the specification. If the file is not there, it will be looked for in /usr/lib/X11. The <i>type</i> parameter is used as a subdirectory of the language directory or of /usr/lib/X11, and <i>suffix</i> is appended to the file name. </p>
-<p> The %D substitution allows the addition of path elements to the implementation-specific default path, typically to allow additional directories to be searched without preventing resources in the system directories from being found. For example, a user installing resource files under a directory called &#8220;ourdir&#8221; might set <font SIZE="-1"><code>XFILESEARCHPATH</code></font> to</p>
+<p> The %D substitution allows the addition of path elements to the implementation-specific default path, typically to allow additional directories to be searched without preventing resources in the system directories from being found. For example, a user installing resource files under a directory called &#8220;ourdir&#8221; might set <code>XFILESEARCHPATH</code> to</p>
 <dl COMPACT>
 <dd>%D:ourdir/%T/%N%C:ourdir/%T/%N</dd></dl>
 <p> The customization string is obtained by querying the resource database currently associated with the display (the database returned by <code>XrmGetDatabase</code>) for the resource <i>application_name</i>.customization, class <i>application_class</i>.Customization where <i>application_name</i> and <i>application_class</i> are the values returned by <code>XtGetApplicationNameAndClass</code>. If no value is specified in the database, the empty string is used. </p>
 <p> It is the responsibility of the caller to free the returned string using <code>XtFree</code> when it is no longer needed.</p>
 <h2>See Also</h2>
-<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

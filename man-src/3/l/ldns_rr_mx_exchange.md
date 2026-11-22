@@ -10,7 +10,7 @@ description: "ldns_rr_mx_preference, ldns_rr_mx_exchange"
 
 <p> ldns_rr_mx_preference, ldns_rr_mx_exchange </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ldns_rdf* ldns_rr_mx_preference(const ldns_rr *r); </p>

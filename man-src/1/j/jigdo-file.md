@@ -10,7 +10,7 @@ description: "jigdo-file – Prepare files for Jigsaw Download (distribution of 
 
 <p> jigdo-file &#8211; Prepare files for Jigsaw Download (distribution of huge files, e.g. CD images). </p>
 <h2>SYNOPSIS</h2>
-<p> <code>jigdo-file</code> <i> COMMAND</i> [ <code>&#8211;image=</code><i>cdrom.iso</i> ] [ <code>&#8211;jigdo=</code><i>cdrom.jigdo</i> ] [ <code>&#8211;template=</code><i>cdrom.template</i> ] [ <code>&#8211;force</code> ] [ <code>MORE OPTIONS</code> ] [ <i>FILES</i><i> &#8230;</i> | <code>&#8211;files-from=</code><i>f</i> ]<br />
+<p> <code>jigdo-file</code> <i> COMMAND</i> [ <code>&#8211;image=</code><i>cdrom.iso</i> ] [ <code>&#8211;jigdo=</code><i>cdrom.jigdo</i> ] [ <code>&#8211;template=</code><i>cdrom.template</i> ] [ <code>&#8211;force</code> ] [ <code>MORE OPTIONS</code> ] [ <i>FILES</i><i> &#8230;</i> | <code>&#8211;files-from=</code><i>f</i> ]<br/>
 &nbsp;<wbr><code>Common COMMANDs: make-template, make-image, verify</code> </p>
 <h2>DESCRIPTION</h2>
 <p> Jigsaw Download, or short jigdo, is a scheme developed primarily to make it easy to distribute huge filesystem images (e.g. CD (ISO9660) or DVD (UDF) images) over the internet, but it could also be used for other data which is awkward to handle due to its size, like audio/video files or large software packages. </p>

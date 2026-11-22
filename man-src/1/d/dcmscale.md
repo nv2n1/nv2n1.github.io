@@ -40,22 +40,22 @@ dcmfile-out  DICOM output filename to be written
           use config file f for the logger
 </code></pre>
 <h3>input options</h3>
-<p>input file format : +f&#8211; read &#8211; file<br />
-                                    read file format or<br />
-    data set(default) + fo&#8211; read &#8211; file &#8211; only read file format only<br />
-        &#8211; f&#8211; read &#8211; dataset read data set without file meta information input transfer syntax : -t = &#8211;read &#8211; xfer &#8211; auto use TS recognition(default) &#8211; td&#8211; read &#8211; xfer &#8211; detect ignore TS specified in the file meta header<br />
-                                                                                                      &#8211; te&#8211; read &#8211; xfer &#8211; little read with explicit VR little endian TS<br />
-                                                                                                      &#8211; tb&#8211; read &#8211; xfer &#8211; big read with explicit VR big endian TS<br />
+<p>input file format : +f&#8211; read &#8211; file<br/>
+                                    read file format or<br/>
+    data set(default) + fo&#8211; read &#8211; file &#8211; only read file format only<br/>
+        &#8211; f&#8211; read &#8211; dataset read data set without file meta information input transfer syntax : -t = &#8211;read &#8211; xfer &#8211; auto use TS recognition(default) &#8211; td&#8211; read &#8211; xfer &#8211; detect ignore TS specified in the file meta header<br/>
+                                                                                                      &#8211; te&#8211; read &#8211; xfer &#8211; little read with explicit VR little endian TS<br/>
+                                                                                                      &#8211; tb&#8211; read &#8211; xfer &#8211; big read with explicit VR big endian TS<br/>
                                                                                                       &#8211; ti&#8211; read &#8211; xfer &#8211; implicit read with implicit VR little endian TS</p>
 <h3>processing options</h3>
-<p>scaling : +a&#8211; recognize &#8211; aspect recognize pixel aspect ratio(default) &#8211; a&#8211; ignore &#8211; aspect ignore pixel aspect ratio when scaling<br />
-          +<br />
-          i&#8211; interpolate[n] umber of algorithm : integer<br />
-                                                  use interpolation when scaling(1..4, default : 1) &#8211;<br />
-                                                  i&#8211; no &#8211; interpolation no interpolation when scaling<br />
-                                                  &#8211;<br />
-                                                  S&#8211; no &#8211; scaling no scaling,<br />
-    ignore pixel aspect ratio(default) + Sxf&#8211; scale &#8211; x &#8211; factor[f] actor : float scale x axis by factor, auto &#8211; compute y axis + Syf&#8211; scale &#8211; y &#8211; factor[f] actor : float scale y axis by factor, auto &#8211; compute x axis + Sxv&#8211; scale &#8211; x &#8211; size[n] umber : integer scale x axis to n pixels, auto &#8211; compute y axis + Syv&#8211; scale &#8211; y &#8211; size[n] umber : integer scale y axis to n pixels, auto &#8211; compute x axis other transformations : +C&#8211; clip &#8211; region[l] eft[t] op[w] idth[h] eight : integer clip rectangular image region(l, t, w, h)<br />
+<p>scaling : +a&#8211; recognize &#8211; aspect recognize pixel aspect ratio(default) &#8211; a&#8211; ignore &#8211; aspect ignore pixel aspect ratio when scaling<br/>
+          +<br/>
+          i&#8211; interpolate[n] umber of algorithm : integer<br/>
+                                                  use interpolation when scaling(1..4, default : 1) &#8211;<br/>
+                                                  i&#8211; no &#8211; interpolation no interpolation when scaling<br/>
+                                                  &#8211;<br/>
+                                                  S&#8211; no &#8211; scaling no scaling,<br/>
+    ignore pixel aspect ratio(default) + Sxf&#8211; scale &#8211; x &#8211; factor[f] actor : float scale x axis by factor, auto &#8211; compute y axis + Syf&#8211; scale &#8211; y &#8211; factor[f] actor : float scale y axis by factor, auto &#8211; compute x axis + Sxv&#8211; scale &#8211; x &#8211; size[n] umber : integer scale x axis to n pixels, auto &#8211; compute y axis + Syv&#8211; scale &#8211; y &#8211; size[n] umber : integer scale y axis to n pixels, auto &#8211; compute x axis other transformations : +C&#8211; clip &#8211; region[l] eft[t] op[w] idth[h] eight : integer clip rectangular image region(l, t, w, h)<br/>
 SOP Instance UID : +ua&#8211; uid &#8211; always always assign new SOP Instance UID(default) + un&#8211; uid &#8211; never never assign new SOP Instance UID</p>
 <h3>output options</h3>
 <pre><code>

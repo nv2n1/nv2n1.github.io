@@ -27,7 +27,7 @@ description: "hspell – Hebrew spellchecker (C API)"
 <h2>DESCRIPTION</h2>
 <p> This manual describes the C API of the Hspell Hebrew spellchecker. Please refer to <code><a href="/docs/linux/man/1-hspell/">hspell</a></code>(1) for a description of the Hspell project, its spelling standard, and how it works. </p>
 <p> The <code>hspell_init()</code> function must be called first to initialize the Hspell library. It sets up some global structures (see CAVEATS section) and then reads the necessary dictionary files (whose places are fixed when the library is built). The <i>&#8216;dictp&#8217;</i> parameter is a pointer to a <i>struct dict_radix*</i> object, which is modified to point to a newly allocated dictionary. A typical <code>hspell_init()</code> call therefore looks like </p>
-<p>struct dict_radix&nbsp;<wbr>*dict;<br />
+<p>struct dict_radix&nbsp;<wbr>*dict;<br/>
 hspell_init(&amp;dict, flags); </p>
 <p> Note that the (struct dict_radix*) type is an opaque pointer &#8211; the library user has no access to the separate fields in this structure. </p>
 <p> The <i>&#8216;flags&#8217;</i> parameter can contain a bitwise or&#8217;ing of several flags that modify Hspell&#8217;s default behavior; Turning on HSPELL_OPT_HE_SHEELA allows Hspell to recognize the interrogative He prefix (he ha-she&#8217;ela). HSPELL_OPT_DEFAULT is a synonym for turning on no special flag, i.e., it evaluates to 0. </p>
@@ -39,14 +39,14 @@ hspell_init(&amp;dict, flags); </p>
 <p> The <code>hspell_enum_splits()</code> function provides a way to get all possible splitting of the given <i>&#8216;word&#8217;</i> into an optional prefix particle and a stand-alone word. For each possible (and legal, as some words cannot accept certain prefixes) split, a user-defined callback function is called. This callback function is given the whole word, the length of the prefix, the stand-alone word, and a bitfield which describes what types of words this prefix can get. Note that in some cases, a word beginning with the letter waw gets this waw doubled before a prefix, so sometimes strlen(word)!=strlen(baseword)+preflen. </p>
 <p> The <code>hspell_trycorrect()</code> tries to find a list of possible corrections for an incorrect word. Because in Hebrew the word density is high (a random string of letters, especially if short, has a high probability of being a correct word), this function attempts to try corrections based on the assumption of a spelling error (replacement of letters that sound alike, missing or spurious immot qri&#8217;a), not typo (slipped finger on the keyboard, etc.) &#8211; see also CAVEATS. </p>
 <p> <code>hspell_trycorrect()</code> returns the correction list into a structure of type <i>struct corlist</i>. This structure must be first allocated with a call to <code>corlist_init()</code> and subsequently freed with <code>corlist_free()</code>. The <code>corlist_n()</code> macro returns the number of words held in an allocated corlist, and <code>corlist_str()</code> returns the i&#8217;th word. Accordingly, here is an example usage of <code>hspell_trycorrect()</code>: </p>
-<p>struct corlist cl;<br />
+<p>struct corlist cl;<br/>
 printf&nbsp;<wbr>(&quot;Found misspelled word&nbsp;<wbr>%s. Possible corrections:
-&quot;, w);<br />
-corlist_init&nbsp;<wbr>(&amp;cl);<br />
-hspell_trycorrect&nbsp;<wbr>(dict, w,&nbsp;<wbr>&amp;cl);<br />
-for&nbsp;<wbr>(i=0;&nbsp;<wbr>i&lt;corlist_n(&amp;cl);&nbsp;<wbr>i++)&nbsp;<wbr>{<br />
+&quot;, w);<br/>
+corlist_init&nbsp;<wbr>(&amp;cl);<br/>
+hspell_trycorrect&nbsp;<wbr>(dict, w,&nbsp;<wbr>&amp;cl);<br/>
+for&nbsp;<wbr>(i=0;&nbsp;<wbr>i&lt;corlist_n(&amp;cl);&nbsp;<wbr>i++)&nbsp;<wbr>{<br/>
 &nbsp;<wbr>printf&nbsp;<wbr>(&quot;%s
-&quot;, corlist_str(&amp;cl, i));<br />
+&quot;, corlist_str(&amp;cl, i));<br/>
 } </p>
 <p> The <code>hspell_is_canonic_gimatria()</code> function checks whether the given word is a <i>canonic</i> gimatria &#8211; i.e., the proper way to write in gimatria the number it represents. The caller might want to accept canonic gimatria as proper Hebrew words, even if <code>hspell_check_word()</code> previously reported such word to be a non-existent word. <code>hspell_is_canonic_gimatria()</code> returns the number represented as gimatria in &#8216;word&#8217; if it is indeed proper gimatria (in canonic form), or 0 otherwise. </p>
 <p> <code>hspell_init()</code> normally reads the dictionary files from a path compiled into the library. This makes sense when the library&#8217;s code and the dictionaries are distributed together, but in some scenarios the library user might want to use the Hspell dictionaries that are already present on the system in an arbitrary path. The function <code>hspell_set_dictionary_path()</code> can be used to set this path, and should be used before calling <code>hspell_init()</code>. The given path is that of the word list, and other input files have that path with an appended prefix. <code>hspell_get_dictionary_path()</code> can be used to find the current path. On many installations, this defaults to &quot;/usr/local/share/hspell/hebrew.wgz&quot;. </p>
@@ -57,10 +57,10 @@ for&nbsp;<wbr>(i=0;&nbsp;<wbr>i&lt;corlist_n(&amp;cl);&nbsp;<wbr>i++)&nbsp;<wbr>
 <p> While the API described here has been stable for years, it may change in the future. Users are encouraged to compare the values of the integer macros <code>HSPELL_VERSION_MAJOR</code> and <code>HSPELL_VERSION_MINOR</code> to those expected by the writer of the program. A third macro, <code>HSPELL_VERSION_EXTRA</code> contains a string which can describe subrelease modifications (e.g., beta versions). </p>
 <p> The current Hspell C API is very low-level, in the sense that it leaves the user to implement many features that some users take for granted that a spell-checker should provide. For example it doesn&#8217;t provide any facilities for a user-defined personal dictionary. It also has separate functions for checking valid Hebrew words and valid gimatria, and no function to do both. It is assumed that the caller &#8211; a bigger spell-checking library or word processor (for example), will already have these facilities. If not, you may wish to look at the sources of <code><a href="/docs/linux/man/1-hspell/">hspell</a></code>(1) for an example implementation. </p>
 <p> Currently there is no concept of separate Hspell &quot;contexts&quot; in an application. Some of the context is now global for the entire application: currently, a single list of legal prefix-particles is kept, and the dictionary read by <code>hspell_init()</code> is always read from the global default place. This may be solved in a later version, e.g., by switching to an API like: </p>
-<p>context&nbsp;<wbr>=&nbsp;<wbr>hspell_new_context();<br />
-hspell_set_dictionary_path(context,&nbsp;<wbr>&quot;/some/path/hebrew.wgz&quot;);<br />
-hspell_init(context, flags);<br />
-&#8230;<br />
+<p>context&nbsp;<wbr>=&nbsp;<wbr>hspell_new_context();<br/>
+hspell_set_dictionary_path(context,&nbsp;<wbr>&quot;/some/path/hebrew.wgz&quot;);<br/>
+hspell_init(context, flags);<br/>
+&#8230;<br/>
 hspell_check_word(context, word, preflenp); </p>
 <p> Note that despite the global context mentioned above, after initialization all functions described here are <i>thread-safe</i>, because they only read the dictionary data, not write to it. </p>
 <p> <code>hspell_trycorrect()</code> is not as powerful as it could have been, with typos or certain kinds of spelling mistakes not giving useful correction suggestions. Along with more types of corrections, <code>hspell_trycorrect()</code> needs a better way to order the likelihood of the corrections, as an unordered list of 100 corrections would be just as useful (or rather, useless) as none. </p>

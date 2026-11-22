@@ -29,5 +29,5 @@ description: "x11perfcomp – X11 server performance comparison program"
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/7-x/">X</a>(7), <a href="/docs/linux/man/1-x11perf/">x11perf</a>(1)</p>
 <h2>AUTHORS</h2>
-<p> Mark Moraes wrote the original scripts to compare servers.<br />
+<p> Mark Moraes wrote the original scripts to compare servers.<br/>
  Joel McCormack just munged them together a bit. </p>

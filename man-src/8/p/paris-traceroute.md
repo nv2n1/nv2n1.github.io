@@ -21,15 +21,15 @@ description: "paris-traceroute – print the IP-level routes between two Interne
 <dl>
 <dt><code>-a</code></dt>
 <dd>Set the probing algorithm:</dd>
-<dt><font SIZE="-1"><code>hopbyhop</code> </font></dt>
+<dt><code>hopbyhop</code> </dt>
 <dd>Send q (configured with the <code>-q</code> flag) probes with the same TTL, then wait for all the replies or a timeout. Increment the TTL and reiter the operation until we reach the destination. All packets hold the same flow identifier.</dd>
-<dt><font SIZE="-1"><code>packetbypacket</code> </font></dt>
+<dt><code>packetbypacket</code> </dt>
 <dd>It is the classic <i><a href="/docs/linux/man/8-traceroute/">traceroute</a></i>(8) algorithm: send one probe at a time, then wait for a reply or a timeout. Reiter the operation until we reach the destination.</dd>
-<dt><font SIZE="-1"><code>concurrent</code> </font></dt>
+<dt><code>concurrent</code> </dt>
 <dd>Send all the probes from min_ttl to max_ttl and wait for all replies or a timeout.</dd>
-<dt><font SIZE="-1"><code>scout</code> </font></dt>
+<dt><code>scout</code> </dt>
 <dd>Send a scout probe with a ttl max to the destination. If the destination can be reached, compute the number of hops used to reach the destination and start the concurrent algorithm with a max_ttl equal to this number of hops. If the destination cannot be reached, the hopbyhop algorithm will be used instead. This algorithm is only usable with UDP probes.</dd>
-<dt><font SIZE="-1"><code>exhaustive</code> </font></dt>
+<dt><code>exhaustive</code> </dt>
 <dd>Print all the possible &quot;load balanced&quot; paths to the destination. (See section <code>EXHAUSTIVE ALGORITHM</code> )</dd>
 <dt><code>-b</code></dt>
 <dd>Set the initial probe identifier.</dd>

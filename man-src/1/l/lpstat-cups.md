@@ -72,7 +72,7 @@ description: "lpstat – print cups status information"
 <p> The &quot;-h&quot;, &quot;-E&quot;, &quot;-U&quot;, and &quot;-W&quot; options are unique to CUPS. </p>
 <p> The Solaris &quot;-f&quot;, &quot;-P&quot;, and &quot;-S&quot; options are silently ignored.</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-cancel/">cancel</a>(1)</i>, <i><a href="/docs/linux/man/1-lp/">lp</a>(1)</i>,<br />
+<p> <i><a href="/docs/linux/man/1-cancel/">cancel</a>(1)</i>, <i><a href="/docs/linux/man/1-lp/">lp</a>(1)</i>,<br/>
  <a rel="nofollow" href="http://localhost:631/help">http://localhost:631/help</a></p>
 <h2>COPYRIGHT</h2>
 <p> Copyright 2007-2013 by Apple Inc. </p>

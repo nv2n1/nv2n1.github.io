@@ -18,37 +18,37 @@ template&lt; class T &gt;                                                       
 T&amp;&amp; forward( typename std::remove_reference&lt;T&gt;::type&amp;&amp; t ) noexcept;               (until C++14)
 template&lt; class T &gt;                                                            (2) (since C++14)
 constexpr T&amp;&amp; forward( typename std::remove_reference&lt;T&gt;::type&amp;&amp; t ) noexcept;</code></pre>
-<p>1) Forwards lvalues as either lvalues or as rvalues, depending on T<br />
-When t is a forwarding_reference (a function argument that is declared as an rvalue reference to a cv-unqualified function template parameter), this overload forwards the argument to another function with the value_category it had when passed to the calling function.<br />
+<p>1) Forwards lvalues as either lvalues or as rvalues, depending on T<br/>
+When t is a forwarding_reference (a function argument that is declared as an rvalue reference to a cv-unqualified function template parameter), this overload forwards the argument to another function with the value_category it had when passed to the calling function.<br/>
 For example, if used in wrapper such as the following, the template behaves as described below: template &lt;class T&gt;</p>
 <p>void wrapper(T &amp;&amp;arg)</p>
-<p>{<br />
-    // arg is always lvalue<br />
-    foo(std::forward&lt;T&gt;(arg)); // Forward as lvalue or as rvalue, depending on T<br />
+<p>{<br/>
+    // arg is always lvalue<br/>
+    foo(std::forward&lt;T&gt;(arg)); // Forward as lvalue or as rvalue, depending on T<br/>
 }</p>
-<p>* If a call to wrapper() passes an rvalue std::string, then T is deduced to std::string (not std::string&amp;, const std::string&amp;, or std::string&amp;&amp;), and std::forward ensures that an rvalue reference is passed to foo.<br />
-* If a call to wrapper() passes a const lvalue std::string, then T is deduced to const std::string&amp;, and std::forward ensures that a const lvalue reference is passed to foo.<br />
-* If a call to wrapper() passes a non-const lvalue std::string, then T is deduced to std::string&amp;, and std::forward ensures that a non-const lvalue reference is passed to foo.<br />
-2) Forwards rvalues as rvalues and prohibits forwarding of rvalues as lvalues<br />
-This overload makes it possible to forward a result of an expression (such as function call), which may be rvalue or lvalue, as the original value category of a forwarding reference argument.<br />
+<p>* If a call to wrapper() passes an rvalue std::string, then T is deduced to std::string (not std::string&amp;, const std::string&amp;, or std::string&amp;&amp;), and std::forward ensures that an rvalue reference is passed to foo.<br/>
+* If a call to wrapper() passes a const lvalue std::string, then T is deduced to const std::string&amp;, and std::forward ensures that a const lvalue reference is passed to foo.<br/>
+* If a call to wrapper() passes a non-const lvalue std::string, then T is deduced to std::string&amp;, and std::forward ensures that a non-const lvalue reference is passed to foo.<br/>
+2) Forwards rvalues as rvalues and prohibits forwarding of rvalues as lvalues<br/>
+This overload makes it possible to forward a result of an expression (such as function call), which may be rvalue or lvalue, as the original value category of a forwarding reference argument.<br/>
 For example, if a wrapper does not just forward its argument, but calls a member function on the argument, and forwards its result: // transforming wrapper</p>
 <p>template &lt;class T&gt;</p>
 <p>void wrapper(T &amp;&amp;arg)</p>
-<p>{<br />
-    foo(forward&lt;decltype(forward&lt;T&gt;(arg).get())&gt;(forward&lt;T&gt;(arg).get()));<br />
-}<br />
+<p>{<br/>
+    foo(forward&lt;decltype(forward&lt;T&gt;(arg).get())&gt;(forward&lt;T&gt;(arg).get()));<br/>
+}<br/>
 where the type of arg may be struct Arg</p>
-<p>{<br />
-    int i = 1;<br />
-    int get() &amp;&amp;<br />
-    {<br />
-        return i;<br />
-    } // call to this overload is rvalue<br />
-    int &amp;get() &amp;<br />
-    {<br />
-        return i;<br />
-    } // call to this overload is lvalue<br />
-};<br />
+<p>{<br/>
+    int i = 1;<br/>
+    int get() &amp;&amp;<br/>
+    {<br/>
+        return i;<br/>
+    } // call to this overload is rvalue<br/>
+    int &amp;get() &amp;<br/>
+    {<br/>
+        return i;<br/>
+    } // call to this overload is lvalue<br/>
+};<br/>
 Attempting to forward an rvalue as an lvalue, such as by instantiating the form <code>(2)</code> with lvalue reference type T, is a compile-time error. </p>
 <h2>Notes</h2>
 <p>See template_argument_deduction for the special rules behind forwarding references (T&amp;&amp; used as a function parameter) and forwarding_references for other detail. </p>
@@ -57,7 +57,7 @@ Attempting to forward an rvalue as an lvalue, such as by instantiating the form 
 <h2>Return value</h2>
 <p>static_cast&lt;T&amp;&amp;&gt;(t) </p>
 <h2>Example</h2>
-<p>This example demonstrates perfect forwarding of the parameter(s) to the argument of the constructor of class T. Also, perfect forwarding of parameter packs is demonstrated.<br />
+<p>This example demonstrates perfect forwarding of the parameter(s) to the argument of the constructor of class T. Also, perfect forwarding of parameter packs is demonstrated.<br/>
  // Run this code </p>
 <pre><code>#include &lt;iostream&gt;
 #include &lt;memory&gt;
@@ -108,18 +108,18 @@ int main()
 }
 </code></pre>
 <h2>Output:</h2>
-<p>&nbsp;<wbr>&nbsp;rvalue overload, n=2<br />
-&nbsp;<wbr>&nbsp;lvalue overload, n=1<br />
-&nbsp;<wbr>&nbsp;B<br />
-&nbsp;<wbr>&nbsp;rvalue overload, n=2<br />
-&nbsp;<wbr>&nbsp;lvalue overload, n=1<br />
+<p>&nbsp;<wbr>&nbsp;rvalue overload, n=2<br/>
+&nbsp;<wbr>&nbsp;lvalue overload, n=1<br/>
+&nbsp;<wbr>&nbsp;B<br/>
+&nbsp;<wbr>&nbsp;rvalue overload, n=2<br/>
+&nbsp;<wbr>&nbsp;lvalue overload, n=1<br/>
 &nbsp;<wbr>&nbsp;rvalue overload, n=3</p>
 <h2>Complexity</h2>
 <p>Constant</p>
 <h2>See also</h2>
-<p>move obtains an rvalue reference<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(function template)</i><br />
-<i>(C++11)</i><br />
-move_if_noexcept obtains an rvalue reference if the move constructor does not throw<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(function template)</i><br />
+<p>move obtains an rvalue reference<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(function template)</i><br/>
+<i>(C++11)</i><br/>
+move_if_noexcept obtains an rvalue reference if the move constructor does not throw<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(function template)</i><br/>
 <i>(C++11)</i> </p>

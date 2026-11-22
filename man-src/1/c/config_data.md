@@ -44,7 +44,7 @@ config_data-- module Foo::Bar-- feature bazzable
 </dd><dt>set_config
 </dt><dd> Sets the given <tt>&quot;config&quot;</tt> entry to the given value.
 </dd><dt>eval
-</dt><dd> If the <tt>&quot;--eval&quot;</tt> option is used, the values in <tt>&quot;set_config&quot;</tt> will be evaluated as perl code before being stored. This allows moderately complicated data structures to be stored. For really complicated structures, you probably shouldn't use this command-line interface, just use the Perl <font SIZE="-1">API</font> instead.
+</dt><dd> If the <tt>&quot;--eval&quot;</tt> option is used, the values in <tt>&quot;set_config&quot;</tt> will be evaluated as perl code before being stored. This allows moderately complicated data structures to be stored. For really complicated structures, you probably shouldn't use this command-line interface, just use the Perl API instead.
 </dd><dt>help
 </dt><dd> Prints a help message, including a few examples, and exits.</dd></dl>
 

@@ -10,7 +10,7 @@ description: "zpbcon.f –"
 <p>zpbcon.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zpbcon</code> (UPLO, N, KD, AB, LDAB, ANORM, RCOND, WORK, RWORK, INFO)<br />
+<p>subroutine <code>zpbcon</code> (UPLO, N, KD, AB, LDAB, ANORM, RCOND, WORK, RWORK, INFO)<br/>
  <i></i><code>ZPBCON</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zpbcon (characterUPLO, integerN, integerKD, complex*16, dimension( ldab, * )AB, integerLDAB, double precisionANORM, double precisionRCOND, complex*16, dimension( * )WORK, double precision, dimension( * )RWORK, integerINFO)</h3>

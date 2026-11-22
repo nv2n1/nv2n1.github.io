@@ -10,108 +10,108 @@ description: "hwlocality_bitmap – The bitmap API"
 
 <p> hwlocality_bitmap - The bitmap API </p>
 <h3>Macros</h3>
-<p> <br />
- #define <code>hwloc_bitmap_foreach_begin</code>(id, bitmap) <br />
- <br />
- #define <code>hwloc_bitmap_foreach_end</code>() <br />
+<p> <br/>
+ #define <code>hwloc_bitmap_foreach_begin</code>(id, bitmap) <br/>
+ <br/>
+ #define <code>hwloc_bitmap_foreach_end</code>() <br/>
   </p>
 <h3>Typedefs</h3>
-<p> <br />
- typedef struct hwloc_bitmap_s * <code>hwloc_bitmap_t</code> <br />
- <br />
- typedef const struct hwloc_bitmap_s * <code>hwloc_const_bitmap_t</code> <br />
+<p> <br/>
+ typedef struct hwloc_bitmap_s * <code>hwloc_bitmap_t</code> <br/>
+ <br/>
+ typedef const struct hwloc_bitmap_s * <code>hwloc_const_bitmap_t</code> <br/>
   </p>
 <h3>Functions</h3>
-<p> <br />
- <code>hwloc_bitmap_t</code> <code>hwloc_bitmap_alloc</code> (void) <br />
- <br />
- <code>hwloc_bitmap_t</code> <code>hwloc_bitmap_alloc_full</code> (void) <br />
- <br />
- void <code>hwloc_bitmap_free</code> (<code>hwloc_bitmap_t</code> bitmap) <br />
- <br />
- <code>hwloc_bitmap_t</code> <code>hwloc_bitmap_dup</code> (<code>hwloc_const_bitmap_t</code> bitmap) <br />
- <br />
- void <code>hwloc_bitmap_copy</code> (<code>hwloc_bitmap_t</code> dst, <code>hwloc_const_bitmap_t</code> src) <br />
- <br />
- int <code>hwloc_bitmap_snprintf</code> (char *restrict buf, size_t buflen, <code>hwloc_const_bitmap_t</code> bitmap) <br />
- <br />
- int <code>hwloc_bitmap_asprintf</code> (char **strp, <code>hwloc_const_bitmap_t</code> bitmap) <br />
- <br />
- int <code>hwloc_bitmap_sscanf</code> (<code>hwloc_bitmap_t</code> bitmap, const char *restrict string) <br />
- <br />
- int <code>hwloc_bitmap_list_snprintf</code> (char *restrict buf, size_t buflen, <code>hwloc_const_bitmap_t</code> bitmap) <br />
- <br />
- int <code>hwloc_bitmap_list_asprintf</code> (char **strp, <code>hwloc_const_bitmap_t</code> bitmap) <br />
- <br />
- int <code>hwloc_bitmap_list_sscanf</code> (<code>hwloc_bitmap_t</code> bitmap, const char *restrict string) <br />
- <br />
- int <code>hwloc_bitmap_taskset_snprintf</code> (char *restrict buf, size_t buflen, <code>hwloc_const_bitmap_t</code> bitmap) <br />
- <br />
- int <code>hwloc_bitmap_taskset_asprintf</code> (char **strp, <code>hwloc_const_bitmap_t</code> bitmap) <br />
- <br />
- int <code>hwloc_bitmap_taskset_sscanf</code> (<code>hwloc_bitmap_t</code> bitmap, const char *restrict string) <br />
- <br />
- void <code>hwloc_bitmap_zero</code> (<code>hwloc_bitmap_t</code> bitmap) <br />
- <br />
- void <code>hwloc_bitmap_fill</code> (<code>hwloc_bitmap_t</code> bitmap) <br />
- <br />
- void <code>hwloc_bitmap_only</code> (<code>hwloc_bitmap_t</code> bitmap, unsigned id) <br />
- <br />
- void <code>hwloc_bitmap_allbut</code> (<code>hwloc_bitmap_t</code> bitmap, unsigned id) <br />
- <br />
- void <code>hwloc_bitmap_from_ulong</code> (<code>hwloc_bitmap_t</code> bitmap, unsigned long mask) <br />
- <br />
- void <code>hwloc_bitmap_from_ith_ulong</code> (<code>hwloc_bitmap_t</code> bitmap, unsigned i, unsigned long mask) <br />
- <br />
- void <code>hwloc_bitmap_set</code> (<code>hwloc_bitmap_t</code> bitmap, unsigned id) <br />
- <br />
- void <code>hwloc_bitmap_set_range</code> (<code>hwloc_bitmap_t</code> bitmap, unsigned begin, int end) <br />
- <br />
- void <code>hwloc_bitmap_set_ith_ulong</code> (<code>hwloc_bitmap_t</code> bitmap, unsigned i, unsigned long mask) <br />
- <br />
- void <code>hwloc_bitmap_clr</code> (<code>hwloc_bitmap_t</code> bitmap, unsigned id) <br />
- <br />
- void <code>hwloc_bitmap_clr_range</code> (<code>hwloc_bitmap_t</code> bitmap, unsigned begin, int end) <br />
- <br />
- void <code>hwloc_bitmap_singlify</code> (<code>hwloc_bitmap_t</code> bitmap) <br />
- <br />
- unsigned long <code>hwloc_bitmap_to_ulong</code> (<code>hwloc_const_bitmap_t</code> bitmap) <br />
- <br />
- unsigned long <code>hwloc_bitmap_to_ith_ulong</code> (<code>hwloc_const_bitmap_t</code> bitmap, unsigned i) <br />
- <br />
- int <code>hwloc_bitmap_isset</code> (<code>hwloc_const_bitmap_t</code> bitmap, unsigned id) <br />
- <br />
- int <code>hwloc_bitmap_iszero</code> (<code>hwloc_const_bitmap_t</code> bitmap) <br />
- <br />
- int <code>hwloc_bitmap_isfull</code> (<code>hwloc_const_bitmap_t</code> bitmap) <br />
- <br />
- int <code>hwloc_bitmap_first</code> (<code>hwloc_const_bitmap_t</code> bitmap) <br />
- <br />
- int <code>hwloc_bitmap_next</code> (<code>hwloc_const_bitmap_t</code> bitmap, int prev) <br />
- <br />
- int <code>hwloc_bitmap_last</code> (<code>hwloc_const_bitmap_t</code> bitmap) <br />
- <br />
- int <code>hwloc_bitmap_weight</code> (<code>hwloc_const_bitmap_t</code> bitmap) <br />
- <br />
- void <code>hwloc_bitmap_or</code> (<code>hwloc_bitmap_t</code> res, <code>hwloc_const_bitmap_t</code> bitmap1, <code>hwloc_const_bitmap_t</code> bitmap2) <br />
- <br />
- void <code>hwloc_bitmap_and</code> (<code>hwloc_bitmap_t</code> res, <code>hwloc_const_bitmap_t</code> bitmap1, <code>hwloc_const_bitmap_t</code> bitmap2) <br />
- <br />
- void <code>hwloc_bitmap_andnot</code> (<code>hwloc_bitmap_t</code> res, <code>hwloc_const_bitmap_t</code> bitmap1, <code>hwloc_const_bitmap_t</code> bitmap2) <br />
- <br />
- void <code>hwloc_bitmap_xor</code> (<code>hwloc_bitmap_t</code> res, <code>hwloc_const_bitmap_t</code> bitmap1, <code>hwloc_const_bitmap_t</code> bitmap2) <br />
- <br />
- void <code>hwloc_bitmap_not</code> (<code>hwloc_bitmap_t</code> res, <code>hwloc_const_bitmap_t</code> bitmap) <br />
- <br />
- int <code>hwloc_bitmap_intersects</code> (<code>hwloc_const_bitmap_t</code> bitmap1, <code>hwloc_const_bitmap_t</code> bitmap2) <br />
- <br />
- int <code>hwloc_bitmap_isincluded</code> (<code>hwloc_const_bitmap_t</code> sub_bitmap, <code>hwloc_const_bitmap_t</code> super_bitmap) <br />
- <br />
- int <code>hwloc_bitmap_isequal</code> (<code>hwloc_const_bitmap_t</code> bitmap1, <code>hwloc_const_bitmap_t</code> bitmap2) <br />
- <br />
- int <code>hwloc_bitmap_compare_first</code> (<code>hwloc_const_bitmap_t</code> bitmap1, <code>hwloc_const_bitmap_t</code> bitmap2) <br />
- <br />
- int <code>hwloc_bitmap_compare</code> (<code>hwloc_const_bitmap_t</code> bitmap1, <code>hwloc_const_bitmap_t</code> bitmap2) <br />
+<p> <br/>
+ <code>hwloc_bitmap_t</code> <code>hwloc_bitmap_alloc</code> (void) <br/>
+ <br/>
+ <code>hwloc_bitmap_t</code> <code>hwloc_bitmap_alloc_full</code> (void) <br/>
+ <br/>
+ void <code>hwloc_bitmap_free</code> (<code>hwloc_bitmap_t</code> bitmap) <br/>
+ <br/>
+ <code>hwloc_bitmap_t</code> <code>hwloc_bitmap_dup</code> (<code>hwloc_const_bitmap_t</code> bitmap) <br/>
+ <br/>
+ void <code>hwloc_bitmap_copy</code> (<code>hwloc_bitmap_t</code> dst, <code>hwloc_const_bitmap_t</code> src) <br/>
+ <br/>
+ int <code>hwloc_bitmap_snprintf</code> (char *restrict buf, size_t buflen, <code>hwloc_const_bitmap_t</code> bitmap) <br/>
+ <br/>
+ int <code>hwloc_bitmap_asprintf</code> (char **strp, <code>hwloc_const_bitmap_t</code> bitmap) <br/>
+ <br/>
+ int <code>hwloc_bitmap_sscanf</code> (<code>hwloc_bitmap_t</code> bitmap, const char *restrict string) <br/>
+ <br/>
+ int <code>hwloc_bitmap_list_snprintf</code> (char *restrict buf, size_t buflen, <code>hwloc_const_bitmap_t</code> bitmap) <br/>
+ <br/>
+ int <code>hwloc_bitmap_list_asprintf</code> (char **strp, <code>hwloc_const_bitmap_t</code> bitmap) <br/>
+ <br/>
+ int <code>hwloc_bitmap_list_sscanf</code> (<code>hwloc_bitmap_t</code> bitmap, const char *restrict string) <br/>
+ <br/>
+ int <code>hwloc_bitmap_taskset_snprintf</code> (char *restrict buf, size_t buflen, <code>hwloc_const_bitmap_t</code> bitmap) <br/>
+ <br/>
+ int <code>hwloc_bitmap_taskset_asprintf</code> (char **strp, <code>hwloc_const_bitmap_t</code> bitmap) <br/>
+ <br/>
+ int <code>hwloc_bitmap_taskset_sscanf</code> (<code>hwloc_bitmap_t</code> bitmap, const char *restrict string) <br/>
+ <br/>
+ void <code>hwloc_bitmap_zero</code> (<code>hwloc_bitmap_t</code> bitmap) <br/>
+ <br/>
+ void <code>hwloc_bitmap_fill</code> (<code>hwloc_bitmap_t</code> bitmap) <br/>
+ <br/>
+ void <code>hwloc_bitmap_only</code> (<code>hwloc_bitmap_t</code> bitmap, unsigned id) <br/>
+ <br/>
+ void <code>hwloc_bitmap_allbut</code> (<code>hwloc_bitmap_t</code> bitmap, unsigned id) <br/>
+ <br/>
+ void <code>hwloc_bitmap_from_ulong</code> (<code>hwloc_bitmap_t</code> bitmap, unsigned long mask) <br/>
+ <br/>
+ void <code>hwloc_bitmap_from_ith_ulong</code> (<code>hwloc_bitmap_t</code> bitmap, unsigned i, unsigned long mask) <br/>
+ <br/>
+ void <code>hwloc_bitmap_set</code> (<code>hwloc_bitmap_t</code> bitmap, unsigned id) <br/>
+ <br/>
+ void <code>hwloc_bitmap_set_range</code> (<code>hwloc_bitmap_t</code> bitmap, unsigned begin, int end) <br/>
+ <br/>
+ void <code>hwloc_bitmap_set_ith_ulong</code> (<code>hwloc_bitmap_t</code> bitmap, unsigned i, unsigned long mask) <br/>
+ <br/>
+ void <code>hwloc_bitmap_clr</code> (<code>hwloc_bitmap_t</code> bitmap, unsigned id) <br/>
+ <br/>
+ void <code>hwloc_bitmap_clr_range</code> (<code>hwloc_bitmap_t</code> bitmap, unsigned begin, int end) <br/>
+ <br/>
+ void <code>hwloc_bitmap_singlify</code> (<code>hwloc_bitmap_t</code> bitmap) <br/>
+ <br/>
+ unsigned long <code>hwloc_bitmap_to_ulong</code> (<code>hwloc_const_bitmap_t</code> bitmap) <br/>
+ <br/>
+ unsigned long <code>hwloc_bitmap_to_ith_ulong</code> (<code>hwloc_const_bitmap_t</code> bitmap, unsigned i) <br/>
+ <br/>
+ int <code>hwloc_bitmap_isset</code> (<code>hwloc_const_bitmap_t</code> bitmap, unsigned id) <br/>
+ <br/>
+ int <code>hwloc_bitmap_iszero</code> (<code>hwloc_const_bitmap_t</code> bitmap) <br/>
+ <br/>
+ int <code>hwloc_bitmap_isfull</code> (<code>hwloc_const_bitmap_t</code> bitmap) <br/>
+ <br/>
+ int <code>hwloc_bitmap_first</code> (<code>hwloc_const_bitmap_t</code> bitmap) <br/>
+ <br/>
+ int <code>hwloc_bitmap_next</code> (<code>hwloc_const_bitmap_t</code> bitmap, int prev) <br/>
+ <br/>
+ int <code>hwloc_bitmap_last</code> (<code>hwloc_const_bitmap_t</code> bitmap) <br/>
+ <br/>
+ int <code>hwloc_bitmap_weight</code> (<code>hwloc_const_bitmap_t</code> bitmap) <br/>
+ <br/>
+ void <code>hwloc_bitmap_or</code> (<code>hwloc_bitmap_t</code> res, <code>hwloc_const_bitmap_t</code> bitmap1, <code>hwloc_const_bitmap_t</code> bitmap2) <br/>
+ <br/>
+ void <code>hwloc_bitmap_and</code> (<code>hwloc_bitmap_t</code> res, <code>hwloc_const_bitmap_t</code> bitmap1, <code>hwloc_const_bitmap_t</code> bitmap2) <br/>
+ <br/>
+ void <code>hwloc_bitmap_andnot</code> (<code>hwloc_bitmap_t</code> res, <code>hwloc_const_bitmap_t</code> bitmap1, <code>hwloc_const_bitmap_t</code> bitmap2) <br/>
+ <br/>
+ void <code>hwloc_bitmap_xor</code> (<code>hwloc_bitmap_t</code> res, <code>hwloc_const_bitmap_t</code> bitmap1, <code>hwloc_const_bitmap_t</code> bitmap2) <br/>
+ <br/>
+ void <code>hwloc_bitmap_not</code> (<code>hwloc_bitmap_t</code> res, <code>hwloc_const_bitmap_t</code> bitmap) <br/>
+ <br/>
+ int <code>hwloc_bitmap_intersects</code> (<code>hwloc_const_bitmap_t</code> bitmap1, <code>hwloc_const_bitmap_t</code> bitmap2) <br/>
+ <br/>
+ int <code>hwloc_bitmap_isincluded</code> (<code>hwloc_const_bitmap_t</code> sub_bitmap, <code>hwloc_const_bitmap_t</code> super_bitmap) <br/>
+ <br/>
+ int <code>hwloc_bitmap_isequal</code> (<code>hwloc_const_bitmap_t</code> bitmap1, <code>hwloc_const_bitmap_t</code> bitmap2) <br/>
+ <br/>
+ int <code>hwloc_bitmap_compare_first</code> (<code>hwloc_const_bitmap_t</code> bitmap1, <code>hwloc_const_bitmap_t</code> bitmap2) <br/>
+ <br/>
+ int <code>hwloc_bitmap_compare</code> (<code>hwloc_const_bitmap_t</code> bitmap1, <code>hwloc_const_bitmap_t</code> bitmap2) <br/>
   </p>
 <h2>Detailed Description</h2>
 <p> The <code>hwloc_bitmap_t</code> type represents a set of objects, typically OS processors -- which may actually be hardware threads (represented by <code>hwloc_cpuset_t</code>, which is a typedef for <code>hwloc_bitmap_t</code>) -- or memory nodes (represented by <code>hwloc_nodeset_t</code>, which is also a typedef for <code>hwloc_bitmap_t</code>). </p>

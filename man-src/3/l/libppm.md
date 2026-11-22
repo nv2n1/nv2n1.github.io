@@ -11,56 +11,56 @@ description: "libppm – functions for PPM programs"
 <p> libppm &#8211; functions for PPM programs</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;netpbm/ppm.h&gt;</code> </p>
-<p> <code>void ppm_init(</code><code>int *</code> <i>argcP</i><code>,</code><br />
+<p> <code>void ppm_init(</code><code>int *</code> <i>argcP</i><code>,</code><br/>
 &nbsp;<wbr>&nbsp;<wbr><code>char&nbsp;<wbr>*</code>&nbsp;<wbr><i>argv</i><code>[]</code><code>);</code> </p>
 <p> <code>pixel ** ppm_allocarray(</code> </p>
 <p> <code>int </code><i>cols</i><code>,</code><code>int</code> <i>rows</i><code>);</code> </p>
 <p> <code>pixel * ppm_allocrow(</code><code>int</code> <i>cols</i><code>);</code> </p>
-<p> <code>void ppm_freearray(</code><code>pixel **</code> <i>pixels</i><code>,</code><br />
+<p> <code>void ppm_freearray(</code><code>pixel **</code> <i>pixels</i><code>,</code><br/>
 &nbsp;<wbr>&nbsp;<wbr><code>int</code>&nbsp;<wbr><i>rows</i><code>);</code> </p>
 <p> <code>void ppm_freerow(</code><code>pixel *</code> <i>pixelrow</i><code>);</code> </p>
-<p> <code>void ppm_readppminit(</code><code>FILE *</code> <i>fp</i><code>,</code><br />
-&nbsp;<wbr>&nbsp;<wbr><code>int&nbsp;<wbr>*</code>&nbsp;<wbr><i>colsP</i><code>,</code><br />
+<p> <code>void ppm_readppminit(</code><code>FILE *</code> <i>fp</i><code>,</code><br/>
+&nbsp;<wbr>&nbsp;<wbr><code>int&nbsp;<wbr>*</code>&nbsp;<wbr><i>colsP</i><code>,</code><br/>
 &nbsp;<wbr>&nbsp;<wbr><code>int&nbsp;<wbr>*</code>&nbsp;<wbr><i>rowsP</i><code>,</code> </p>
 <p> <code>pixval *</code> <i>maxvalP</i><code>,</code><code>int *</code> <i>formatP</i><code> );</code> </p>
-<p> <code>void ppm_readppmrow(</code><code>FILE *</code><i>fp</i><code>,</code><br />
-&nbsp;<wbr>&nbsp;<wbr><code>pixel&nbsp;<wbr>*</code>&nbsp;<wbr><i>pixelrow</i><code>,</code><br />
-&nbsp;<wbr>&nbsp;<wbr><code>int&nbsp;<wbr></code><i>cols</i><code>,</code><br />
-&nbsp;<wbr>&nbsp;<wbr><code>pixval&nbsp;<wbr></code><i>maxval</i><code>,</code><br />
+<p> <code>void ppm_readppmrow(</code><code>FILE *</code><i>fp</i><code>,</code><br/>
+&nbsp;<wbr>&nbsp;<wbr><code>pixel&nbsp;<wbr>*</code>&nbsp;<wbr><i>pixelrow</i><code>,</code><br/>
+&nbsp;<wbr>&nbsp;<wbr><code>int&nbsp;<wbr></code><i>cols</i><code>,</code><br/>
+&nbsp;<wbr>&nbsp;<wbr><code>pixval&nbsp;<wbr></code><i>maxval</i><code>,</code><br/>
 &nbsp;<wbr>&nbsp;<wbr><code>int&nbsp;<wbr></code><i>format</i><code>);</code> </p>
-<p> <code>pixel ** ppm_readppm(</code><code>FILE *</code> <i>fp</i><code>,</code><br />
-&nbsp;<wbr>&nbsp;<wbr><code>int&nbsp;<wbr>*</code>&nbsp;<wbr><i>colsP</i><code>,</code><br />
-&nbsp;<wbr>&nbsp;<wbr><code>int&nbsp;<wbr>*</code>&nbsp;<wbr><i>rowsP</i><code>,</code><br />
+<p> <code>pixel ** ppm_readppm(</code><code>FILE *</code> <i>fp</i><code>,</code><br/>
+&nbsp;<wbr>&nbsp;<wbr><code>int&nbsp;<wbr>*</code>&nbsp;<wbr><i>colsP</i><code>,</code><br/>
+&nbsp;<wbr>&nbsp;<wbr><code>int&nbsp;<wbr>*</code>&nbsp;<wbr><i>rowsP</i><code>,</code><br/>
 &nbsp;<wbr>&nbsp;<wbr><code>pixvalP&nbsp;<wbr>*</code>&nbsp;<wbr><i>maxvalP</i><code>);</code> </p>
-<p> <code>void ppm_writeppminit(</code><code>FILE * </code><i>fp</i>,<br />
-&nbsp;<wbr>&nbsp;<wbr><code>int</code>&nbsp;<wbr><i>cols</i><code>,</code><br />
-&nbsp;<wbr>&nbsp;<wbr><code>int</code>&nbsp;<wbr><i>rows</i><code>,</code><br />
-&nbsp;<wbr>&nbsp;<wbr><code>pixval</code>&nbsp;<wbr><i>maxval</i><code>,</code><br />
+<p> <code>void ppm_writeppminit(</code><code>FILE * </code><i>fp</i>,<br/>
+&nbsp;<wbr>&nbsp;<wbr><code>int</code>&nbsp;<wbr><i>cols</i><code>,</code><br/>
+&nbsp;<wbr>&nbsp;<wbr><code>int</code>&nbsp;<wbr><i>rows</i><code>,</code><br/>
+&nbsp;<wbr>&nbsp;<wbr><code>pixval</code>&nbsp;<wbr><i>maxval</i><code>,</code><br/>
 &nbsp;<wbr>&nbsp;<wbr><code>int</code>&nbsp;<wbr><i>forceplain</i><code>);</code> </p>
-<p> <code>void ppm_writeppmrow(</code><code>FILE *</code> <i>fp</i><code>,</code><br />
-&nbsp;<wbr>&nbsp;<wbr><code>pixel&nbsp;<wbr>*</code>&nbsp;<wbr><i>pixelrow</i><code>,</code><br />
-&nbsp;<wbr>&nbsp;<wbr><code>int</code>&nbsp;<wbr><i>cols</i><code>,</code><br />
-&nbsp;<wbr>&nbsp;<wbr><code>pixval</code>&nbsp;<wbr><i>maxval</i><code>,</code><br />
+<p> <code>void ppm_writeppmrow(</code><code>FILE *</code> <i>fp</i><code>,</code><br/>
+&nbsp;<wbr>&nbsp;<wbr><code>pixel&nbsp;<wbr>*</code>&nbsp;<wbr><i>pixelrow</i><code>,</code><br/>
+&nbsp;<wbr>&nbsp;<wbr><code>int</code>&nbsp;<wbr><i>cols</i><code>,</code><br/>
+&nbsp;<wbr>&nbsp;<wbr><code>pixval</code>&nbsp;<wbr><i>maxval</i><code>,</code><br/>
 &nbsp;<wbr>&nbsp;<wbr><code>int</code>&nbsp;<wbr><i>forceplain</i><code>);</code> </p>
-<p> <code>void ppm_writeppm(</code><code>FILE *</code> <i>fp</i><code>,</code><br />
-&nbsp;<wbr>&nbsp;<wbr><code>pixel&nbsp;<wbr>**</code>&nbsp;<wbr><i>pixels</i><code>,</code><br />
-&nbsp;<wbr>&nbsp;<wbr><code>int</code>&nbsp;<wbr><i>cols</i><code>,</code><br />
-&nbsp;<wbr>&nbsp;<wbr><code>int</code>&nbsp;<wbr><i>rows</i><code>,</code><br />
-&nbsp;<wbr>&nbsp;<wbr><code>pixval</code>&nbsp;<wbr><i>maxval</i><code>,</code><br />
+<p> <code>void ppm_writeppm(</code><code>FILE *</code> <i>fp</i><code>,</code><br/>
+&nbsp;<wbr>&nbsp;<wbr><code>pixel&nbsp;<wbr>**</code>&nbsp;<wbr><i>pixels</i><code>,</code><br/>
+&nbsp;<wbr>&nbsp;<wbr><code>int</code>&nbsp;<wbr><i>cols</i><code>,</code><br/>
+&nbsp;<wbr>&nbsp;<wbr><code>int</code>&nbsp;<wbr><i>rows</i><code>,</code><br/>
+&nbsp;<wbr>&nbsp;<wbr><code>pixval</code>&nbsp;<wbr><i>maxval</i><code>,</code><br/>
 &nbsp;<wbr>&nbsp;<wbr><code>int</code>&nbsp;<wbr><i>forceplain</i><code>);</code> </p>
-<p> <code>void ppm_writeppm(</code><code>FILE *</code> <i>fp</i><code>,</code><br />
-&nbsp;<wbr>&nbsp;<wbr><code>pixel&nbsp;<wbr>**</code>&nbsp;<wbr><i>pixels</i><code>,</code><br />
-&nbsp;<wbr>&nbsp;<wbr><code>int</code>&nbsp;<wbr><i>cols</i><code>,</code><br />
-&nbsp;<wbr>&nbsp;<wbr><code>int</code>&nbsp;<wbr><i>rows</i><code>,</code><br />
-&nbsp;<wbr>&nbsp;<wbr><code>pixval</code>&nbsp;<wbr><i>maxval</i><code>,</code><br />
+<p> <code>void ppm_writeppm(</code><code>FILE *</code> <i>fp</i><code>,</code><br/>
+&nbsp;<wbr>&nbsp;<wbr><code>pixel&nbsp;<wbr>**</code>&nbsp;<wbr><i>pixels</i><code>,</code><br/>
+&nbsp;<wbr>&nbsp;<wbr><code>int</code>&nbsp;<wbr><i>cols</i><code>,</code><br/>
+&nbsp;<wbr>&nbsp;<wbr><code>int</code>&nbsp;<wbr><i>rows</i><code>,</code><br/>
+&nbsp;<wbr>&nbsp;<wbr><code>pixval</code>&nbsp;<wbr><i>maxval</i><code>,</code><br/>
 &nbsp;<wbr>&nbsp;<wbr><code>int</code>&nbsp;<wbr><i>forceplain</i><code>);</code> </p>
-<p> <code>void ppm_nextimage(</code><code>FILE *</code> <i>file</i><code>,</code><br />
+<p> <code>void ppm_nextimage(</code><code>FILE *</code> <i>file</i><code>,</code><br/>
 &nbsp;<wbr>&nbsp;<wbr><code>int&nbsp;<wbr>*&nbsp;<wbr>const</code>&nbsp;<wbr><i>eofP</i><code>);</code> </p>
-<p> <code>void ppm_check(</code><code>FILE *</code> <i>file</i><code>,</code><br />
-&nbsp;<wbr>&nbsp;<wbr><code>const enum pm_check_type</code>&nbsp;<wbr><i>check_type</i><code>,</code><br />
-&nbsp;<wbr>&nbsp;<wbr><code>const int</code>&nbsp;<wbr><i>format</i><code>,</code><br />
-&nbsp;<wbr>&nbsp;<wbr><code>const int</code>&nbsp;<wbr><i>cols</i><code>,</code><br />
-&nbsp;<wbr>&nbsp;<wbr><code>const int</code>&nbsp;<wbr><i>rows</i><code>,</code><br />
+<p> <code>void ppm_check(</code><code>FILE *</code> <i>file</i><code>,</code><br/>
+&nbsp;<wbr>&nbsp;<wbr><code>const enum pm_check_type</code>&nbsp;<wbr><i>check_type</i><code>,</code><br/>
+&nbsp;<wbr>&nbsp;<wbr><code>const int</code>&nbsp;<wbr><i>format</i><code>,</code><br/>
+&nbsp;<wbr>&nbsp;<wbr><code>const int</code>&nbsp;<wbr><i>cols</i><code>,</code><br/>
+&nbsp;<wbr>&nbsp;<wbr><code>const int</code>&nbsp;<wbr><i>rows</i><code>,</code><br/>
 &nbsp;<wbr>&nbsp;<wbr><code>const int</code>&nbsp;<wbr><i>maxval</i><code>,</code> <code>enum pm_check_code * const</code> <i>retval</i><code>);</code> </p>
 <p> <code>typedef &#8230; pixel;</code> </p>
 <p> <code>typedef &#8230; pixval;</code> </p>
@@ -73,28 +73,28 @@ description: "libppm – functions for PPM programs"
 <p> <code>pixval PPM_GETR(pixel</code> <i>p</i><code>)</code> </p>
 <p> <code>pixval PPM_GETG(pixel</code> <i>p</i><code>)</code> </p>
 <p> <code>pixval PPM_GETB(pixel</code> <i>p</i><code>)</code> </p>
-<p> <code>void PPM_ASSIGN(pixel</code> <i>p</i><code>,</code><br />
-&nbsp;<wbr>&nbsp;<wbr><code>pixval</code>&nbsp;<wbr><i>red</i><code>,</code><br />
-&nbsp;<wbr>&nbsp;<wbr><code>pixval</code>&nbsp;<wbr><i>grn</i><code>,</code><br />
+<p> <code>void PPM_ASSIGN(pixel</code> <i>p</i><code>,</code><br/>
+&nbsp;<wbr>&nbsp;<wbr><code>pixval</code>&nbsp;<wbr><i>red</i><code>,</code><br/>
+&nbsp;<wbr>&nbsp;<wbr><code>pixval</code>&nbsp;<wbr><i>grn</i><code>,</code><br/>
 &nbsp;<wbr>&nbsp;<wbr><code>pixval</code>&nbsp;<wbr><i>blu</i><code>)</code> </p>
-<p> <code>int PPM_EQUAL(pixel</code> <i>p</i><code>,</code><br />
+<p> <code>int PPM_EQUAL(pixel</code> <i>p</i><code>,</code><br/>
 &nbsp;<wbr>&nbsp;<wbr><code>pixel</code>&nbsp;<wbr><i>q</i><code>)</code> </p>
 <p> <code>int PPM_ISGRAY(pixel</code> <i>p</i><code>)</code> </p>
-<p> <code>void</code><br />
-&nbsp;<wbr>&nbsp;<wbr><code>PPM_DEPTH(pixel</code>&nbsp;<wbr><i>newp</i><code>,</code><br />
-&nbsp;<wbr>&nbsp;<wbr><code>pixel</code>&nbsp;<wbr><i>p</i><code>,</code><br />
-&nbsp;<wbr>&nbsp;<wbr><code>pixval</code>&nbsp;<wbr><i>oldmaxval</i><code>,</code><br />
+<p> <code>void</code><br/>
+&nbsp;<wbr>&nbsp;<wbr><code>PPM_DEPTH(pixel</code>&nbsp;<wbr><i>newp</i><code>,</code><br/>
+&nbsp;<wbr>&nbsp;<wbr><code>pixel</code>&nbsp;<wbr><i>p</i><code>,</code><br/>
+&nbsp;<wbr>&nbsp;<wbr><code>pixval</code>&nbsp;<wbr><i>oldmaxval</i><code>,</code><br/>
 &nbsp;<wbr>&nbsp;<wbr><code>pixval</code>&nbsp;<wbr><i>newmaxval</i><code>)</code> </p>
-<p> <code>pixel ppm_parsecolor(char *</code> <i>colorname</i><code>,</code><br />
+<p> <code>pixel ppm_parsecolor(char *</code> <i>colorname</i><code>,</code><br/>
 <code>pixval</code>&nbsp;<wbr><i>maxval</i><code>)</code> </p>
-<p> <code>char * ppm_colorname(pixel *</code> <i>colorP</i><code>,</code><br />
-&nbsp;<wbr>&nbsp;<wbr><code>pixval</code>&nbsp;<wbr><i>maxval</i><code>,</code><br />
+<p> <code>char * ppm_colorname(pixel *</code> <i>colorP</i><code>,</code><br/>
+&nbsp;<wbr>&nbsp;<wbr><code>pixval</code>&nbsp;<wbr><i>maxval</i><code>,</code><br/>
 &nbsp;<wbr>&nbsp;<wbr><code>int</code>&nbsp;<wbr><i>hexok</i><code>)</code> </p>
-<p> <code>void ppm_readcolornamefile(</code><br />
-&nbsp;<wbr>&nbsp;<wbr><code>const char&nbsp;<wbr>*</code><i>fileName</i>,&nbsp;<wbr><br />
-&nbsp;<wbr>&nbsp;<wbr><code>int</code>&nbsp;<wbr><i>mustOpen</i>,<br />
-&nbsp;<wbr>&nbsp;<wbr><code>colorhash_table&nbsp;<wbr>*</code>&nbsp;<wbr><i>chtP</i>,&nbsp;<wbr><br />
-&nbsp;<wbr>&nbsp;<wbr><code>const char&nbsp;<wbr>***</code>&nbsp;<wbr><i>colornamesP</i><br />
+<p> <code>void ppm_readcolornamefile(</code><br/>
+&nbsp;<wbr>&nbsp;<wbr><code>const char&nbsp;<wbr>*</code><i>fileName</i>,&nbsp;<wbr><br/>
+&nbsp;<wbr>&nbsp;<wbr><code>int</code>&nbsp;<wbr><i>mustOpen</i>,<br/>
+&nbsp;<wbr>&nbsp;<wbr><code>colorhash_table&nbsp;<wbr>*</code>&nbsp;<wbr><i>chtP</i>,&nbsp;<wbr><br/>
+&nbsp;<wbr>&nbsp;<wbr><code>const char&nbsp;<wbr>***</code>&nbsp;<wbr><i>colornamesP</i><br/>
 &nbsp;<wbr>&nbsp;<wbr><code>)</code> </p>
 <h2>DESCRIPTION</h2>
 <p> These library functions are part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
@@ -140,24 +140,24 @@ float PPM_CHROM_R(pixel p);
 </code></pre>
 <p> <code>PPM_LUMIN</code> takes a <code>pixel</code> as an argument and returns the luminance of that pixel, with the same maxval as the pixel (e.g. if the pixel&#8217;s maxval is 255, a <code>PPM_LUMIN</code> value of 255 means fully luminant). </p>
 <p> <code>PPM_CHROM_B</code> and <code>PPM_CHROM_R</code> are similar, for the red and blue chrominance values. </p>
-<p>pixel ppm_color_from_ycbcr(unsigned int y,<br />
-                           int cb,<br />
+<p>pixel ppm_color_from_ycbcr(unsigned int y,<br/>
+                           int cb,<br/>
                            int cr);</p>
 <p> <code>ppm_color_from_ycbcr()</code> converts in the other direction. Given luminance and chrominance, it returns a pixel value. </p>
 <p> <code>Hue, Saturation, Value (HSV)</code> </p>
-<p>struct hsv {<br />
-    double h; /* hue (degrees)  0..360 */<br />
-    double s; /* saturation (0-1) */<br />
-    double v; /* value (0-1) */<br />
+<p>struct hsv {<br/>
+    double h; /* hue (degrees)  0..360 */<br/>
+    double s; /* saturation (0-1) */<br/>
+    double v; /* value (0-1) */<br/>
 };</p>
-<p>pixel ppm_color_from_hsv(struct hsv const hsv,<br />
+<p>pixel ppm_color_from_hsv(struct hsv const hsv,<br/>
                          pixval const maxval);</p>
-<p>struct hsv<br />
-ppm_hsv_from_color(pixel const color,<br />
+<p>struct hsv<br/>
+ppm_hsv_from_color(pixel const color,<br/>
                    pixval const maxval);</p>
 <p> These convert a color between from <code>pixel</code> (RGB) form and HSV. </p>
-<p>pixval<br />
-ppm_saturation(pixel const p,<br />
+<p>pixval<br/>
+ppm_saturation(pixel const p,<br/>
                pixval const maxval);</p>
 <p> This gives you the saturation of a color, as a pixval. (e.g. if the saturation of <i>p</i> is 50% and <i>maxval</i> is 100, <code>ppm_saturation()</code> returns 50). </p>
 <p> <code>Berlin-Kay Color</code> </p>
@@ -187,18 +187,18 @@ ppm_saturation(pixel const p,<br />
 <dd> brown </dd>
 </dl>
 <p> The <code>bk_color</code> type represents a color from this set: </p>
-<p>typedef enum {<br />
-    BKCOLOR_BLACK = 0,<br />
-    BKCOLOR_GRAY,<br />
-    BKCOLOR_WHITE,<br />
-    BKCOLOR_RED,<br />
-    BKCOLOR_ORANGE,<br />
-    BKCOLOR_YELLOW,<br />
-    BKCOLOR_GREEN,<br />
-    BKCOLOR_BLUE,<br />
-    BKCOLOR_VIOLET,<br />
-    BKCOLOR_PURPLE,<br />
-    BKCOLOR_BROWN<br />
+<p>typedef enum {<br/>
+    BKCOLOR_BLACK = 0,<br/>
+    BKCOLOR_GRAY,<br/>
+    BKCOLOR_WHITE,<br/>
+    BKCOLOR_RED,<br/>
+    BKCOLOR_ORANGE,<br/>
+    BKCOLOR_YELLOW,<br/>
+    BKCOLOR_GREEN,<br/>
+    BKCOLOR_BLUE,<br/>
+    BKCOLOR_VIOLET,<br/>
+    BKCOLOR_PURPLE,<br/>
+    BKCOLOR_BROWN<br/>
 } bk_color;</p>
 <p> You can use this as an index of an array, in which case you might also want macro <code>BKCOLOR_COUNT</code>, which is the number of colors in the set (11). </p>
 <p> To translate between the <code>bk_color</code> type and the English names of the colors, use <code>ppm_bk_color_from_name()</code> and <code>ppm_name_from_bk_color()</code>: </p>
@@ -239,7 +239,7 @@ ppm_name_from_bk_color(bk_color bkColor);
 <dt>&bull;</dt>
 <dd> <code>/usr/X11R6/lib/X11/rgb.txt</code> </dd>
 </dl>
-<p> You can see the color names from a typical X11 color dictionary, which is probably very close to what is on your system, along with the colors, here . <code>This</code> website (1)<br />
+<p> You can see the color names from a typical X11 color dictionary, which is probably very close to what is on your system, along with the colors, here . <code>This</code> website (1)<br/>
 &nbsp;<wbr>shows a bunch of other versions you could use. </p>
 <p> Netpbm is packaged with a color dictionary. A standard Netpbm installation installs this file as &quot;misc/rgb.txt&quot; in the Netpbm directory. This color dictionary has colors from everywhere the Netpbm maintainer could find them, and is a superset of XFree 86&#8217;s color dictionary. </p>
 <p> <code>ppm_parsecolor</code> </p>

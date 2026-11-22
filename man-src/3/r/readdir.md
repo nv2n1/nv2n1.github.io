@@ -91,7 +91,7 @@ struct dirent *readdir(DIR *dirp);</code></pre>
 <p> <i>Warning</i>: applications should avoid any dependence on the size of the <i>d_name</i> field. POSIX defines it as <i>char d_name[],</i> a character array of unspecified size, with at most <code>NAME_MAX</code> characters preceding the terminating null byte (&#8216;\0&#8217;). </p>
 <p> POSIX.1 explicitly notes that this field should not be used as an lvalue. The standard also notes that the use of <i>sizeof(d_name)</i> is incorrect; use <i>strlen(d_name)</i> instead. (On some systems, this field is defined as <i>char d_name[1]</i>!) By implication, the use <i>sizeof(struct dirent)</i> to capture the size of the record including the size of <i>d_name</i> is also incorrect. </p>
 <p> Note that while the call </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;fpathconf(fd,&nbsp;_PC_NAME_MAX) </p>
 <p> returns the value 255 for most filesystems, on some filesystems (e.g., CIFS, Windows SMB servers), the null-terminated filename that is (correctly) returned in <i>d_name</i> can actually exceed this size. In such cases, the <i>d_reclen</i> field will contain a value that exceeds the size of the glibc <i>dirent</i> structure shown above.  </p>
 <h2>SEE ALSO</h2>

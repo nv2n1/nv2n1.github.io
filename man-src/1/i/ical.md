@@ -41,7 +41,7 @@ description: "ical – A Hijri/Islamic calendar (and converter)"
 <h2>AUTHOR</h2>
 <p> Written by Nadim Shaikli as part of the Arabeyes.org project.</p>
 <h2>COPYRIGHT</h2>
-<p> <code>ical</code> is subject to the GNU General Public License (GPL).<br />
+<p> <code>ical</code> is subject to the GNU General Public License (GPL).<br/>
  Copyright &#169; 2005, Arabeyes, Nadim Shaikli.</p>
 <h2>SEE ALSO</h2>
 <p> The ITL (Islamic Tools Library). It is the underlying requirement for <code>ical</code> to function. The ITL library was created and is hosted at <code><a rel="nofollow" href="http://www.arabeyes.org">www.arabeyes.org</a></code>. </p>

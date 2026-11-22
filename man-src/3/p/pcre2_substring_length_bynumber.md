@@ -17,9 +17,9 @@ description: "PCRE2 – Perl-compatible regular expressions (revised API)"
 </code></pre>
 <h2>DESCRIPTION</h2>
 <p>This function returns the length of a matched substring, identified by number. The arguments are: </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;<i>match_data</i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;The match data block for the match <br />
-&nbsp;<wbr>&nbsp;<i>number</i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;The substring number <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;<i>match_data</i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;The match data block for the match <br/>
+&nbsp;<wbr>&nbsp;<i>number</i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;The substring number <br/>
 &nbsp;<wbr>&nbsp;<i>length</i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Where to return the length, or NULL </p>
 <p>The third argument may be NULL if all you want to know is whether or not a substring is set. The yield is zero on success, or a negative error code otherwise. After a partial match, only substring 0 is available. </p>
 <p>There is a complete description of the PCRE2 native API in the <code>pcre2api</code> page and a description of the POSIX API in the <code>pcre2posix</code> page. </p>

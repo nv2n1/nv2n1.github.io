@@ -22,7 +22,7 @@ virt - log[--options] - d domname virt - log[--options] - a disk.img[-a disk.img
 <pre>
  virt-log -d mydomain | less
 </pre>
-<p> Find out what <font SIZE="-1">DHCP IP</font> address a <font SIZE="-1">VM</font> acquired: </p>
+<p> Find out what DHCP IP address a VM acquired: </p>
 <pre>
  virt-log -d mydomain | grep 'dhclient.*bound to'
 </pre>
@@ -35,14 +35,14 @@ virt - log[--options] - d domname virt - log[--options] - a disk.img[-a disk.img
 </dd><dt><code>&#8211;add</code> file</dt>
 <dd> Add <i>file</i> which should be a disk image from a virtual machine. If the virtual machine has multiple block devices, you must supply all of them with separate <i>-a</i> options. </dd>
 <p> The format of the disk image is auto-detected. To override this and force a particular format use the <i>&#8211;format=..</i> option.</p>
-<dt><code>-a </code><font SIZE="-1"><code>URI</code></font></dt>
+<dt><code>-a </code><code>URI</code></dt>
 <dd>
-</dd><dt><code>&#8211;add </code><font SIZE="-1"><code>URI</code></font></dt>
-<dd> Add a remote disk. See &#8220;<font SIZE="-1">ADDING REMOTE STORAGE&#8221;</font> in <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1).</dd>
-<dt><code>-c</code> <font SIZE="-1">URI</font></dt>
+</dd><dt><code>&#8211;add </code><code>URI</code></dt>
+<dd> Add a remote disk. See &#8220;ADDING REMOTE STORAGE&#8221; in <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1).</dd>
+<dt><code>-c</code> URI</dt>
 <dd>
-</dd><dt><code>&#8211;connect</code> <font SIZE="-1">URI</font></dt>
-<dd> If using libvirt, connect to the given <i></i><font SIZE="-1"><i>URI</i></font><i></i>. If omitted, then we connect to the default libvirt hypervisor. </dd>
+</dd><dt><code>&#8211;connect</code> URI</dt>
+<dd> If using libvirt, connect to the given <i></i><i>URI</i><i></i>. If omitted, then we connect to the default libvirt hypervisor. </dd>
 <p> If you specify guest block devices directly (<i>-a</i>), then libvirt is not used at all.</p>
 <dt><code>-d</code> guest</dt>
 <dd>
@@ -63,7 +63,7 @@ virt - log[--options] - d domname virt - log[--options] - a disk.img[-a disk.img
  virt-log --format=raw -a disk.img --format -a another.img
 </pre>
 <p> forces raw format (no auto-detection) for <i>disk.img</i> and reverts to auto-detection for <i>another.img</i>. </p>
-<p> If you have untrusted raw-format guest disk images, you should use this option to specify the disk format. This avoids a possible security problem with malicious guests (<font SIZE="-1">CVE-2010-3851</font>).</p>
+<p> If you have untrusted raw-format guest disk images, you should use this option to specify the disk format. This avoids a possible security problem with malicious guests (CVE-2010-3851).</p>
 <dt><code>&#8211;keys-from-stdin</code></dt>
 <dd> Read key or passphrase parameters from stdin. The default is to try to read passphrases from the user by opening <i>/dev/tty</i>.</dd>
 <dt><code>-v</code></dt>
@@ -75,7 +75,7 @@ virt - log[--options] - d domname virt - log[--options] - a disk.img[-a disk.img
 </dd><dt><code>&#8211;version</code></dt>
 <dd> Display version number and exit.</dd>
 <dt><code>-x</code></dt>
-<dd> Enable tracing of libguestfs <font SIZE="-1">API</font> calls.</dd></dl>
+<dd> Enable tracing of libguestfs API calls.</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> This program returns 0 if successful, or non-zero if there was an error.</p>
 <h2>SEE ALSO</h2>
@@ -85,9 +85,9 @@ virt - log[--options] - d domname virt - log[--options] - a disk.img[-a disk.img
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2010-2016 Red Hat Inc.</p>
 <h2>LICENSE</h2>
-<p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
-<p> This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE. </font> See the <font SIZE="-1">GNU</font> General Public License for more details. </p>
-<p> You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, <font SIZE="-1">MA 02110-1301 USA.</font></p>
+<p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
+<p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. </p>
+<p> You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.</p>
 <h2>BUGS</h2>
 <p> To get a list of bugs against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/buglist.cgi?component=libguestfs">https://bugzilla.redhat.com/buglist.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>
 <p> To report a new bug against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs">https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>

@@ -99,5 +99,5 @@ description: "lshw – list hardware"
 <h2>AUTHOR</h2>
 <p> <code>lshw</code> is maintained by Lyonel Vincent &lt;lyonel [at] ezix.org&gt;.</p>
 <h2>OTHER INFO</h2>
-<p> The webpage for <code>lshw</code> is at<br />
+<p> The webpage for <code>lshw</code> is at<br/>
 &nbsp;&lt;URL:<a rel="nofollow" href="http://lshw.ezix.org/">http://lshw.ezix.org/</a>&gt; </p>

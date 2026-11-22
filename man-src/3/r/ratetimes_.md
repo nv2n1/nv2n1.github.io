@@ -26,7 +26,7 @@ virtual std::auto_ptr&lt; CurveState &gt; clone () const =0
 Protected Attributes</code></pre>
 <p> Inherited by <code>CMSwapCurveState</code>, <code>CoterminalSwapCurveState</code>, and <code>LMMCurveState</code>.</p>
 <h3>Public Member Functions</h3>
-<p><code>CurveState</code> (const std::vector&lt; <code>Time</code> &gt; &amp;rateTimes)<br />
+<p><code>CurveState</code> (const std::vector&lt; <code>Time</code> &gt; &amp;rateTimes)<br/>
  <code>Inspectors</code> </p>
 <pre><code>Size numberOfRates () const
 const std::vector&lt; Time &gt; &amp; rateTimes () const

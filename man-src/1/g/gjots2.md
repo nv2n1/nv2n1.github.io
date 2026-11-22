@@ -68,7 +68,7 @@ title 3's stuff
 <h2>AUTHOR</h2>
 <p> Written by Bob Hepple &lt;bhepple [at] freeshell.org&gt; <a rel="nofollow" href="http://bhepple.freeshell.org/gjots">http://bhepple.freeshell.org/gjots</a></p>
 <h2>COPYRIGHT</h2>
-<p> Copyright (c) 2002 Robert Hepple<br />
+<p> Copyright (c) 2002 Robert Hepple<br/>
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gjots2html/">gjots2html</a></code>(1), <code><a href="/docs/linux/man/1-gjots2docbook/">gjots2docbook</a></code>(1), <code><a href="/docs/linux/man/1-docbook2gjots/">docbook2gjots</a></code>(1). Also, see the <code><a href="/docs/linux/man/1-gjots2/">gjots2</a></code>(1) README, probably as something like:</p>

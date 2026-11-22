@@ -8,16 +8,16 @@ url: "/docs/linux/man/1-oggz-info/"
 description: "oggz-info — Display information about one or more Ogg files and their bitstreams."
 ---
 
-<p> oggz-info &#8212; Display information about one or more Ogg files and their bitstreams.<br />
+<p> oggz-info &#8212; Display information about one or more Ogg files and their bitstreams.<br/>
 &nbsp;<wbr></p>
 <h2>SYNOPSIS</h2>
 <p> <code>oggz-info</code> [-l | &#8211;length ] [-b | &#8211;bitrate ] [-g | &#8211;page-stats ] [-p | &#8211;packet-stats ] [-k | &#8211;skeleton ] [-a | &#8211;all ] filename &#8230; </p>
 <p> <code>oggz-info</code> [-h | &#8211;help ] [-v | &#8211;version ]</p>
 <h2>Description</h2>
-<p> <code>oggz-info</code> displays information about one or more Ogg files and their bitstreams.<br />
+<p> <code>oggz-info</code> displays information about one or more Ogg files and their bitstreams.<br/>
 &nbsp;<wbr></p>
 <h2>Options</h2>
-<p> <code>oggz-info</code> accepts the following options:<br />
+<p> <code>oggz-info</code> accepts the following options:<br/>
 &nbsp;<wbr></p>
 <h3>Display options</h3>
 <dl>
@@ -40,7 +40,7 @@ description: "oggz-info — Display information about one or more Ogg files and 
 <dt>-v, &#8211;version</dt>
 <dd> Output version information and exit.</dd></dl>
 <h2>Units of measurement</h2>
-<p> <code>oggz-info</code> displays information using the following units:<br />
+<p> <code>oggz-info</code> displays information using the following units:<br/>
 &nbsp;<wbr></p>
 <h3>Byte lengths</h3>
 <dl>
@@ -75,7 +75,7 @@ description: "oggz-info — Display information about one or more Ogg files and 
 <h2>AUTHOR</h2>
 <p> Conrad Parker March 10, 2005;</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2005 CSIRO Australia<br />
+<p> Copyright &#169; 2005 CSIRO Australia<br/>
 &nbsp;<wbr></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-oggz-dump/">oggz-dump</a></code><code>(1)</code>, <code><a href="/docs/linux/man/1-oggz-rip/">oggz-rip</a></code><code>(1)</code>, <code><a href="/docs/linux/man/1-oggz-diff/">oggz-diff</a></code><code>(1)</code> <code>hogg</code><code>(1)</code> </p>

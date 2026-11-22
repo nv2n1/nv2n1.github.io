@@ -15,7 +15,7 @@ perlfreebsd - Perl version 5 on FreeBSD systems
 
 <h3>FreeBSD core dumps from readdir_r with ithreads</h3>
 
- When perl is configured to use ithreads, it will use re-entrant library calls in preference to non-re-entrant versions. There is a bug in FreeBSD's <tt>&quot;readdir_r&quot;</tt> function in versions 4.5 and earlier that can cause a <font SIZE="-1">SEGV</font> when reading large directories. A patch for FreeBSD libc is available (see &lt;<a rel="nofollow" HREF="http://www.freebsd.org/cgi/query-pr.cgi?pr=misc/30631">http://www.freebsd.org/cgi/query-pr.cgi?pr=misc/30631</a>&gt; ) which has been integrated into FreeBSD 4.6.
+ When perl is configured to use ithreads, it will use re-entrant library calls in preference to non-re-entrant versions. There is a bug in FreeBSD's <tt>&quot;readdir_r&quot;</tt> function in versions 4.5 and earlier that can cause a SEGV when reading large directories. A patch for FreeBSD libc is available (see &lt;<a rel="nofollow" HREF="http://www.freebsd.org/cgi/query-pr.cgi?pr=misc/30631">http://www.freebsd.org/cgi/query-pr.cgi?pr=misc/30631</a>&gt; ) which has been integrated into FreeBSD 4.6.
 
 <h3>$^X doesn't always contain a full path in FreeBSD</h3>
 

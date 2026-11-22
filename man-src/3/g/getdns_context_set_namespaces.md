@@ -13,70 +13,70 @@ description: "getdns_context_set_append_name, getdns_context_set_context_update_
 <p> DNS Resolver library (libgetdns, -lgetdns) </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;getdns.h&gt; </p>
-<p> getdns_return_t<br />
+<p> getdns_return_t<br/>
  <code>getdns_context_set_append_name</code> (getdns_context_t context,</p>
 <dl>
 <dt>
 </dt><dd>
  getdns_append_name_t when_to_append)</dd></dl>
-<p> getdns_return_t<br />
+<p> getdns_return_t<br/>
  <code>getdns_context_set_context_update_callback</code> (getdns_context_t context,</p>
 <dl>
 <dt>
 </dt><dd>
  (*callback)(struct getdns_context *context, uint16_t changed_item))</dd></dl>
-<p> getdns_return_t<br />
+<p> getdns_return_t<br/>
  <code>getdns_context_set_dns_root_servers</code> (getdns_context_t context,</p>
 <dl>
 <dt>
 </dt><dd>
  getdns_list *root_addresses)</dd></dl>
-<p> getdns_return_t<br />
+<p> getdns_return_t<br/>
  <code>getdns_context_set_dns_transport</code> (getdns_context_t context,</p>
 <dl>
 <dt>
 </dt><dd>
  uint16_t transport)</dd></dl>
-<p> getdns_return_t<br />
+<p> getdns_return_t<br/>
  <code>getdns_contet_set_dnssec_allowed_skew</code> (getdns_context *context,</p>
 <dl>
 <dt>
 </dt><dd> uint32_t skew_seconds)</dd></dl>
-<p> getdns_return_t<br />
+<p> getdns_return_t<br/>
  <code>getdns_contet_set_dnssec_trust_anchors</code> (getdns_context *context,</p>
 <dl>
 <dt>
 </dt><dd> getdns_list *trust_anchors)</dd></dl>
-<p> getdns_return_t<br />
+<p> getdns_return_t<br/>
  <code>getdns_context_set_follow_redirects</code> (getdns_context_t context,</p>
 <dl>
 <dt>
 </dt><dd>
  getdns_redirects_t followredir)</dd></dl>
-<p> getdns_return_t<br />
+<p> getdns_return_t<br/>
  <code>getdns_context_set_limit_outstanding_queries</code> (getdns_context_t context,</p>
 <dl>
 <dt>
 </dt><dd>
  uint16_t limit)</dd></dl>
-<p> getdns_return_t<br />
+<p> getdns_return_t<br/>
  <code>getdns_context_set_namespaces</code> (getdns_context_t context,</p>
 <dl>
 <dt>
 </dt><dd>
- size_t namespace_count,<br />
+ size_t namespace_count,<br/>
  uint16_t *namespaces)</dd></dl>
-<p> getdns_return_t<br />
+<p> getdns_return_t<br/>
  <code>getdns_context_set_resolution_type</code> (getdns_context_t context,</p>
 <dl>
 <dt>
 </dt><dd> uint16_t restype)</dd></dl>
-<p> getdns_return_t<br />
+<p> getdns_return_t<br/>
  <code>getdns_context_set_suffix</code> (getdns_context *context,</p>
 <dl>
 <dt>
 </dt><dd> getdns_list *suffixes)</dd></dl>
-<p> getdns_return_t<br />
+<p> getdns_return_t<br/>
  <code>getdns_context_set_timeout</code> (getdns_context_t context,</p>
 <dl>
 <dt>
@@ -141,7 +141,7 @@ description: "getdns_context_set_append_name, getdns_context_set_context_update_
 <h2>EXAMPLES</h2>
 <p> TBD </p>
 <h2>FILES</h2>
-<p> /etc/hosts<br />
+<p> /etc/hosts<br/>
  /etc/resolv.conf </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libgetdns/">libgetdns</a></code>(3), <code><a href="/docs/linux/man/3-getdns_address/">getdns_address</a></code>(3), <code><a href="/docs/linux/man/3-getdns_address_sync/">getdns_address_sync</a></code>(3), <code><a href="/docs/linux/man/3-getdns_context/">getdns_context</a></code>(3), <code><a href="/docs/linux/man/3-getdns_general/">getdns_general</a></code>(3), <code><a href="/docs/linux/man/3-getdns_general_sync/">getdns_general_sync</a></code>(3), <code><a href="/docs/linux/man/3-getdns_hostname/">getdns_hostname</a></code>(3), <code><a href="/docs/linux/man/3-getdns_hostname_sync/">getdns_hostname_sync</a></code>(3), <code><a href="/docs/linux/man/3-getdns_service/">getdns_service</a></code>(3), <code><a href="/docs/linux/man/3-getdns_service_sync/">getdns_service_sync</a></code>(3). </p>

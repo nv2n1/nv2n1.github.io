@@ -19,7 +19,7 @@ description: "mcheck – verify all files on an MS-DOS formatted disk"
 <p> The author requires that any copies or derived works include this copyright notice; no other restrictions are placed on its use. </p>
 <h2>AUTHOR</h2>
 <p> mcheck was written by David C. Niemi &lt;niemi [at] tuxers.net&gt; </p>
-<p> This manual page was written by Rabin Vincent &lt;r.vincent [at] iu-bremen.de&gt; for the Debian GNU/Linux system (but may be used by others).<br />
+<p> This manual page was written by Rabin Vincent &lt;r.vincent [at] iu-bremen.de&gt; for the Debian GNU/Linux system (but may be used by others).<br/>
 &nbsp;</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mtools/">mtools</a></code>(1), <code><a href="/docs/linux/man/1-mdir/">mdir</a></code>(1), <code><a href="/docs/linux/man/1-mtype/">mtype</a></code>(1) </p>

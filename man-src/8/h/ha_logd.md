@@ -23,7 +23,7 @@ description: "ha_logd – Logging Daemon for High-Availability Linux"
 <dt>-h</dt>
 <dd>Show help message</dd>
 <dt>-c configure file</dt>
-<dd>Configure file for ha_logd. User can configure log file, debuf file, log facility, entity and useapphbd.<br />
+<dd>Configure file for ha_logd. User can configure log file, debuf file, log facility, entity and useapphbd.<br/>
 &nbsp;<wbr>For details, see sample configure file ha_logd.cf.</dd></dl>
 <h2>Files</h2>
 <p><i>/var/run/ha_logd.pid </i> Default PID file. </p>

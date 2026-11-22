@@ -16,14 +16,14 @@ description: "sc::SCException –"
 <h3>Public Member Functions</h3>
 <p><code>SCException</code> (const char *description=0, const char *file=0, int line=0, const <code>ClassDesc</code> *class_desc=0, const char *exception_type=&#8217;SCException&#8217;) throw () </p>
 <p> <code>SCException</code> (const <code>SCException</code> &amp;) throw () </p>
-<p> const char * <code>what</code> () const throw ()<br />
- <i>Reimplementation of std::exception::what(). </i><br />
+<p> const char * <code>what</code> () const throw ()<br/>
+ <i>Reimplementation of std::exception::what(). </i><br/>
  const char * <code>description</code> () const throw () </p>
 <p> const char * <code>file</code> () const throw () </p>
 <p> int <code>line</code> () const throw () </p>
 <p> const <code>ClassDesc</code> * <code>class_desc</code> () const throw () </p>
 <p> const char * <code>exception_type</code> () const throw () </p>
-<p> std::ostream &amp; <code>elaborate</code> ()<br />
+<p> std::ostream &amp; <code>elaborate</code> ()<br/>
  <i>Returns a stream where addition information about the exception can be written. </i></p>
 <h2>Detailed Description</h2>
 <p>This is a std::exception specialization that records information about where an exception took place.</p>

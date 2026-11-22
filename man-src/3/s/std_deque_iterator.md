@@ -12,12 +12,12 @@ description: "std::_Deque_iterator< _Tp, _Ref, _Ptr > –"
 <h3>Public Types</h3>
 <p>typedef _Tp ** <code>_Map_pointer</code> </p>
 <p> typedef <code>_Deque_iterator</code> <code>_Self</code> </p>
-<p> typedef <code>_Deque_iterator</code>&lt; _Tp,<br />
+<p> typedef <code>_Deque_iterator</code>&lt; _Tp,<br/>
  const _Tp &amp;, const _Tp * &gt; <code>const_iterator</code>&quot; </p>
 <p> typedef ptrdiff_t <code>difference_type</code> </p>
-<p> typedef <code>_Deque_iterator</code>&lt; _Tp,<br />
+<p> typedef <code>_Deque_iterator</code>&lt; _Tp,<br/>
  _Tp &amp;, _Tp * &gt; <code>iterator</code>&quot; </p>
-<p> typedef<br />
+<p> typedef<br/>
  <code>std::random_access_iterator_tag</code> <code>iterator_category</code>&quot; </p>
 <p> typedef _Ptr <code>pointer</code> </p>
 <p> typedef _Ref <code>reference</code> </p>

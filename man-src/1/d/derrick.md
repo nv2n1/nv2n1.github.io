@@ -12,32 +12,32 @@ description: "derrick — a simple network stream recorder"
 <h2>SYNOPSIS</h2>
 <p> <code>derrick</code> [<code>-mvVh</code>] [<code>-i</code> <i>interface</i>] [<code>-r</code> <i>file</i>] [<code>-f</code> <i>expression</i>] [<code>-l</code> <i>file</i>] [<code>-b</code> <i>bytes</i>] [<code>-t</code> <i>lines</i>]</p>
 <h2>DESCRIPTION</h2>
-<p> <code>derrick</code> is a simple tool for recording data streams of <font SIZE="-1">TCP</font> and <font SIZE="-1">UDP</font> traffic. It shares similarities with other network recorders, such as tcpflow and wireshark, where it is more advanced than the first and clearly inferior to the latter. </p>
-<p> <code>derrick</code> has been specifically designed to monitor application-layer communication. In contrast to other tools the application data is logged in a line-based text format. Common <font SIZE="-1">UNIX</font> tools, such as grep, sed &amp; awk, can be directly applied. Even replay of recorded communication is straight forward using netcat. </p>
-<p> <code>derrick</code> supports on-the-fly compression and rotation of log files. Payloads of <font SIZE="-1">TCP</font> sessions are re-assembled using libnids and can be merged or truncated. <font SIZE="-1">UDP</font> payloads are logged as-is. Details of lower network layers are omitted.</p>
+<p> <code>derrick</code> is a simple tool for recording data streams of TCP and UDP traffic. It shares similarities with other network recorders, such as tcpflow and wireshark, where it is more advanced than the first and clearly inferior to the latter. </p>
+<p> <code>derrick</code> has been specifically designed to monitor application-layer communication. In contrast to other tools the application data is logged in a line-based text format. Common UNIX tools, such as grep, sed &amp; awk, can be directly applied. Even replay of recorded communication is straight forward using netcat. </p>
+<p> <code>derrick</code> supports on-the-fly compression and rotation of log files. Payloads of TCP sessions are re-assembled using libnids and can be merged or truncated. UDP payloads are logged as-is. Details of lower network layers are omitted.</p>
 <h2>OUTPUT FORMAT</h2>
-<p> <code>derrick</code> outputs the monitored network traffic in a line-based text format, where each line corresponds to one recorded <font SIZE="-1">TCP</font> or <font SIZE="-1">UDP</font> payload. Note that <font SIZE="-1">TCP</font> payloads are re-assembled and thus not necessary match the corresponding <font SIZE="-1">TCP</font> datagrams. </p>
+<p> <code>derrick</code> outputs the monitored network traffic in a line-based text format, where each line corresponds to one recorded TCP or UDP payload. Note that TCP payloads are re-assembled and thus not necessary match the corresponding TCP datagrams. </p>
 <p> Each line of the output has the following format: </p>
 <pre>
    &lt;TIME&gt; &lt;FLAG&gt; &lt;SRC&gt; &lt;DST&gt; &lt;PAYLOAD&gt;
 </pre>
 <p> The different fields of the output are defined as follows</p>
 <dl>
-<dt>&lt;<font SIZE="-1">TIME</font>&gt;</dt>
-<dd> This field specifies the time at which the payload has been monitored. The time is given as standard <font SIZE="-1">UNIX</font> time and encoded as a floating-point number of seconds.</dd>
-<dt>&lt;<font SIZE="-1">FLAG</font>&gt;</dt>
-<dd> This field indicates the type of payload that has been recorded. <code>U</code> refers to a <font SIZE="-1">UDP</font> payload and <code>T</code> refers to a <font SIZE="-1">TCP</font> payload. Additionally, the beginning and end of <font SIZE="-1">TCP</font> streams are marked by <code>T+</code> and <code>T-</code>, respectively.</dd>
-<dt>&lt;<font SIZE="-1">SRC</font>&gt;</dt>
-<dd> This field specifies the source of the payload. It is a tuple of an <font SIZE="-1">IP</font> address and a port number in form of <font SIZE="-1"><code>IP:PORT</code></font>.</dd>
-<dt>&lt;<font SIZE="-1">DST</font>&gt;</dt>
-<dd> This field specifies the destination of the payload. It is a tuple of an <font SIZE="-1">IP</font> address and a port number in form of <font SIZE="-1"><code>IP:PORT</code></font>.</dd>
-<dt>&lt;<font SIZE="-1">PAYLOAD</font>&gt;</dt>
-<dd> The last field is the monitored payload. Non-printable characters are escaped using standard <font SIZE="-1">URI</font> encoding. Each non-printable characters is replaced by <tt>%XX</tt> where <font SIZE="-1">XX</font> is the character&#8217;s hexadecimal <font SIZE="-1">ASCII</font> number.</dd></dl>
+<dt>&lt;TIME&gt;</dt>
+<dd> This field specifies the time at which the payload has been monitored. The time is given as standard UNIX time and encoded as a floating-point number of seconds.</dd>
+<dt>&lt;FLAG&gt;</dt>
+<dd> This field indicates the type of payload that has been recorded. <code>U</code> refers to a UDP payload and <code>T</code> refers to a TCP payload. Additionally, the beginning and end of TCP streams are marked by <code>T+</code> and <code>T-</code>, respectively.</dd>
+<dt>&lt;SRC&gt;</dt>
+<dd> This field specifies the source of the payload. It is a tuple of an IP address and a port number in form of <code>IP:PORT</code>.</dd>
+<dt>&lt;DST&gt;</dt>
+<dd> This field specifies the destination of the payload. It is a tuple of an IP address and a port number in form of <code>IP:PORT</code>.</dd>
+<dt>&lt;PAYLOAD&gt;</dt>
+<dd> The last field is the monitored payload. Non-printable characters are escaped using standard URI encoding. Each non-printable characters is replaced by <tt>%XX</tt> where XX is the character&#8217;s hexadecimal ASCII number.</dd></dl>
 <p> An example output of <code>derrick</code> looks as follows </p>
 <pre>
   05.80 T 10.100.163.103:58445 91.198.174.233:80 GET /index.html ...
 </pre>
-<p> The line shows a <font SIZE="-1">TCP</font> payload recorded at time 05.80, that is, 5.8 seconds after new year&#8217;s eve of 1970 ;). The payload is directed to port 80 (<font SIZE="-1">HTTP</font>) and shows the beginning of a typical <font SIZE="-1">HTTP GET</font> request. Note that whitespaces are not escaped in the payload and thus each line may seemingly have more than 5 fields. However, starting from the 5th field all following white-spaces are part of the payload.</p>
+<p> The line shows a TCP payload recorded at time 05.80, that is, 5.8 seconds after new year&#8217;s eve of 1970 ;). The payload is directed to port 80 (HTTP) and shows the beginning of a typical HTTP GET request. Note that whitespaces are not escaped in the payload and thus each line may seemingly have more than 5 fields. However, starting from the 5th field all following white-spaces are part of the payload.</p>
 <h2>OPTIONS</h2>
 <p> <code>derrick</code> supports the following command-line <i>options</i> which can be used to control the recording of network traffic.</p>
 <dl>
@@ -50,9 +50,9 @@ description: "derrick — a simple network stream recorder"
 <dt><code>-l</code> <i>file</i></dt>
 <dd> Write output to a compressed log <i>file</i> instead of stdout. This option can be used when <code>derrick</code> runs in the background. The log file will be rotated if a certain number of lines have been logged, see <code>-t</code>.</dd>
 <dt><code>-b</code> <i>bytes</i></dt>
-<dd> Record only the first <i>bytes</i> of each <font SIZE="-1">TCP</font> stream. The number of bytes is computed from incoming and outgoing <font SIZE="-1">TCP</font> payloads.</dd>
+<dd> Record only the first <i>bytes</i> of each TCP stream. The number of bytes is computed from incoming and outgoing TCP payloads.</dd>
 <dt><code>-m</code></dt>
-<dd> Merge consecutive <font SIZE="-1">TCP</font> payloads in the same direction. This options comes handy if protocol messages are split over multiple <font SIZE="-1">TCP</font> payloads.</dd>
+<dd> Merge consecutive TCP payloads in the same direction. This options comes handy if protocol messages are split over multiple TCP payloads.</dd>
 <dt><code>-t</code> <i>lines</i></dt>
 <dd> Rotate the log file after the given number of <i>lines</i>.</dd>
 <dt><code>-v</code></dt>
@@ -63,4 +63,4 @@ description: "derrick — a simple network stream recorder"
 <dd> Print a version and copyright string.</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 2011-2012 Konrad Rieck (konrad [at] mlsec.org) </p>
-<p> Derrick is licensed under the new <font SIZE="-1">BSD</font> License. See the file <i></i><font SIZE="-1"><i>COPYING</i></font><i></i> in the source distribution for more information. </p>
+<p> Derrick is licensed under the new BSD License. See the file <i></i><i>COPYING</i><i></i> in the source distribution for more information. </p>

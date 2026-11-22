@@ -39,7 +39,7 @@ description: "pnmmercator – transform a worldmap from rectangular projection t
 <p> This parameter outputs some additional information. If you double the &#8216;v&#8217;, it will output debug data about the lat/long degree and Mercator conversions. </p>
 </dd></dl>
 <h2>SEE ALSO</h2>
-<p> <code>pnm</code>(1)<br />
+<p> <code>pnm</code>(1)<br/>
 &nbsp;<wbr>and <code><a href="/docs/linux/man/1-pamscale/">pamscale</a></code>(1) </p>
 <p> <code><a href="/docs/linux/man/1-ppmglobe/">ppmglobe</a></code>(1) </p>
 <h2>HISTORY</h2>

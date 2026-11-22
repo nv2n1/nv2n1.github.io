@@ -313,7 +313,7 @@ description: "Eterm – the Enlightened terminal emulator for the X Window Syste
 <p> <code>scrollbar_width</code><i> num</i></p>
 <dl>
 <dd>Use a scrollbar that is <i>num</i> pixels wide.</dd></dl>
-<p> <code>font</code><i> num</i><i>font</i><br />
+<p> <code>font</code><i> num</i><i>font</i><br/>
  <code>font bold </code><i>font</i></p>
 <dl>
 <dd>Set the <i>num</i>th font, or the <code>bold</code> font, to <i>font</i>.</dd></dl>
@@ -379,7 +379,7 @@ description: "Eterm – the Enlightened terminal emulator for the X Window Syste
 <dd>Specifies the geometry and geometry-related operations which are to be applied to the image. This attribute only applies to image classes using the <code>image</code> mode. Image geometry is specified as <i>w</i><code>x</code><i>h</i><code>+</code><i>x</i><code>+</code><i>y</i><code>:</code><i>ops</i> where <i>w</i> and <i>h</i> are the horizontal/vertical scaling percentages, <i>x</i> and <i>y</i> are the horizontal/vertical alignment percentages, and <i>ops</i> is a colon-delimited list of operations: <code>tiled</code> (to tile the image), <code>propscaled</code> (for proportional scaling). Note that these operations can be combined for various effects.</dd></dl>
 </dl>
 <dl>
-<dd><code>cmod</code> { <code>image</code> | <code>red</code> | <code>green</code> | <code>blue</code> } <i>brightness</i> [ <i>contrast</i> [ <i>gamma</i> ] ]<br />
+<dd><code>cmod</code> { <code>image</code> | <code>red</code> | <code>green</code> | <code>blue</code> } <i>brightness</i> [ <i>contrast</i> [ <i>gamma</i> ] ]<br/>
  <code>colormod</code> { <code>image</code> | <code>red</code> | <code>green</code> | <code>blue</code> } <i>brightness</i> [ <i>contrast</i> [ <i>gamma</i> ] ]</dd>
 <dl>
 <dd>Specifies a color modifier to apply to the image. The second keyword determines whether the modifier will be applied to the image overall, the red values, the green values, or the blue values. Each of the three parameters is a number greater than or equal to 0. The numbers can be specified as decimal, octal (if preceded by &quot;0&quot;), or hexadecimal (if preceded by &quot;0x&quot;). A value of 256 (0x100) represents 100%, or &quot;leave that value unchanged.&quot; 0 represents 0%, 512 (0x200) is 200%, etc. However, be aware that overflow can occur with excessively high values. Only the <i>brightness</i> value is required for this option. Keep in mind, though, that you must specify <i>brightness</i> with <i>contrast</i>, and both of these with <i>gamma</i>.</dd></dl>
@@ -429,7 +429,7 @@ description: "Eterm – the Enlightened terminal emulator for the X Window Syste
 <dd>This is text which is right-justified next to the menuitem text. This is generally used to show what keystrokes correspond to a particular menu item, like &quot;C-x C-c&quot; for the &quot;Exit&quot; menuitem in an Emacs menu.</dd></dl>
 </dl>
 <dl>
-<dd><code>action</code> { <code>string</code> | <code>echo</code> | <code>submenu</code> | <code>script</code> } <i>param<br />
+<dd><code>action</code> { <code>string</code> | <code>echo</code> | <code>submenu</code> | <code>script</code> } <i>param<br/>
  </i><code>action separator</code></dd>
 <dl>
 <dd>Specifies the action to occur when the menuitem is chosen. If you specify <code>separator</code>, nothing else is needed. The other action types require a parameter, <i>param</i>. <code>string</code> specifies a string to be sent to Eterm for handling (escape codes, for example). <code>echo</code> specifies a string to be sent to the client program (for sending commands to a shell, or keystrokes to an application like emacs or mutt). If you use either of these action types, <i>param</i> will be parsed for escape codes (, C-, and the like) before being sent. <code>submenu</code> specifies a submenu which should be displayed when this item is selected, and <i>param</i> is the title of the submenu to show. The submenu must have already been defined. The <code>script</code> action type executes the Eterm-builtin script contained in <i>param</i>. See the section below for more details on the builtin Eterm functions allowed for this action type.</dd></dl>
@@ -575,7 +575,7 @@ description: "Eterm – the Enlightened terminal emulator for the X Window Syste
 <p> <code>report_as_keysyms</code><i> boolean</i></p>
 <dl>
 <dd>Reports certain keystrokes as keysyms and modifiers rather than escape sequences. <code>NOTE:</code> This option is intended for use only with programs that support this special Eterm mode. Do not enable it unless you are executing a program which uses this mode.</dd></dl>
-<p> <code>itrans</code><i> boolean</i><br />
+<p> <code>itrans</code><i> boolean</i><br/>
  <code>immotile_trans</code><i> boolean</i></p>
 <dl>
 <dd>Toggles the immotile transparency optimization for transparent Eterm windows. Note that this does NOT activate transparency; you must still activate &quot;trans&quot; mode for the background image. This option should be used on transparent windows which are shaded or tinted and which do not move around on the desktop much. See the <code>Mon Mar 6 21:11:13 PST 2000</code> ChangeLog entry for a more detailed explanation.</dd></dl>
@@ -700,49 +700,49 @@ description: "Eterm – the Enlightened terminal emulator for the X Window Syste
 <p> <code>echo(</code><i>string</i><code>)</code></p>
 <dl>
 <dd>Send the specified <i>string</i> to the subcommand. Exactly equivalent to the <code>echo</code> action.</dd></dl>
-<p> <code>es_display(</code><i>cmd</i><code>, </code><i>params</i><code>)</code><br />
+<p> <code>es_display(</code><i>cmd</i><code>, </code><i>params</i><code>)</code><br/>
  Aliases: <code>es_disp</code></p>
 <dl>
 <dd>This is a master function which permits manipulation of Escreen displays through the use of a series of subcommands. The specified <i>cmd</i> determines what, if any, <i>params</i> are permitted. Available subcommands are:</dd>
 <dl>
-<dd><code>goto</code> &#8211; Switch to the specified display (0-9)<br />
- <code>prev</code> &#8211; Switch to the previous display<br />
- <code>next</code> &#8211; Switch to the next display<br />
- <code>toggle</code> &#8211; Toggle display<br />
- <code>new</code> &#8211; Create a new display. A name for the new display may be passed as a parameter, or <code>ask</code> to prompt the user for the name.<br />
- <code>rename</code> &#8211; Change the name of the current display. A name for the new display may be passed as a parameter, or <code>ask</code> to prompt the user for the name.<br />
- <code>kill</code> &#8211; Terminate the current (or specified) display.<br />
- <code>watch</code> &#8211; Toggle monitoring of the current/specified display for activity.<br />
+<dd><code>goto</code> &#8211; Switch to the specified display (0-9)<br/>
+ <code>prev</code> &#8211; Switch to the previous display<br/>
+ <code>next</code> &#8211; Switch to the next display<br/>
+ <code>toggle</code> &#8211; Toggle display<br/>
+ <code>new</code> &#8211; Create a new display. A name for the new display may be passed as a parameter, or <code>ask</code> to prompt the user for the name.<br/>
+ <code>rename</code> &#8211; Change the name of the current display. A name for the new display may be passed as a parameter, or <code>ask</code> to prompt the user for the name.<br/>
+ <code>kill</code> &#8211; Terminate the current (or specified) display.<br/>
+ <code>watch</code> &#8211; Toggle monitoring of the current/specified display for activity.<br/>
  <code>scrollback</code> &#8211; View the scrollback for the current/specified display.</dd></dl>
 </dl>
-<p> <code>es_region(</code><i>cmd</i><code>, </code><i>params</i><code>)</code><br />
+<p> <code>es_region(</code><i>cmd</i><code>, </code><i>params</i><code>)</code><br/>
  Aliases: <code>es_reg es_win es_window</code></p>
 <dl>
 <dd>This is a master function which permits manipulation of Escreen display regions through the use of a series of subcommands. The specified <i>cmd</i> determines what, if any, <i>params</i> are permitted. Available subcommands are:</dd>
 <dl>
-<dd><code>goto</code> &#8211; Switch to the specified region (0-9)<br />
- <code>prev</code> &#8211; Switch to the previous region<br />
- <code>next</code> &#8211; Switch to the next region<br />
- <code>toggle</code> &#8211; Toggle region<br />
- <code>new</code> &#8211; Create a new region. A name for the new region may be passed as a parameter, or <code>ask</code> to prompt the user for the name.<br />
- <code>rename</code> &#8211; Change the name of the current region. A name for the new region may be passed as a parameter, or <code>ask</code> to prompt the user for the name.<br />
- <code>kill</code> &#8211; Terminate the current (or specified) region.<br />
- <code>only</code> &#8211; Maximize the current/specified region to the full display.<br />
- <code>watch</code> &#8211; Toggle monitoring of the current/specified region for activity.<br />
+<dd><code>goto</code> &#8211; Switch to the specified region (0-9)<br/>
+ <code>prev</code> &#8211; Switch to the previous region<br/>
+ <code>next</code> &#8211; Switch to the next region<br/>
+ <code>toggle</code> &#8211; Toggle region<br/>
+ <code>new</code> &#8211; Create a new region. A name for the new region may be passed as a parameter, or <code>ask</code> to prompt the user for the name.<br/>
+ <code>rename</code> &#8211; Change the name of the current region. A name for the new region may be passed as a parameter, or <code>ask</code> to prompt the user for the name.<br/>
+ <code>kill</code> &#8211; Terminate the current (or specified) region.<br/>
+ <code>only</code> &#8211; Maximize the current/specified region to the full display.<br/>
+ <code>watch</code> &#8211; Toggle monitoring of the current/specified region for activity.<br/>
  <code>scrollback</code> &#8211; View the scrollback for the current/specified region.</dd></dl>
 </dl>
 <p> <code>es_statement(</code><i>statement</i><code>)</code></p>
 <dl>
 <dd>Execute an Escreen (screen/twin) command directly.</dd></dl>
-<p> <code>es_reset()</code><br />
+<p> <code>es_reset()</code><br/>
  Aliases: <code>es_rst</code></p>
 <dl>
 <dd>Reset the Escreen session</dd></dl>
 <p> <code>exec_dialog(</code><i>command</i><code>)</code></p>
 <dl>
 <dd>The same as <code>exec</code>/<code>spawn</code>, but this function presents the user with a dialog box in which she can edit/confirm the command to be run and specify additional parameters if needed.</dd></dl>
-<p> <code>exit(</code><i>message</i><code>)</code><br />
- <code>exit(</code><i>code</i><code>)</code><br />
+<p> <code>exit(</code><i>message</i><code>)</code><br/>
+ <code>exit(</code><i>code</i><code>)</code><br/>
  Aliases: <code>die quit</code></p>
 <dl>
 <dd>Exit Eterm with an optional <i>message</i> or an integer return <i>code</i>. Either parameter may be specified, but not both. If neither is specified, a <i>code</i> of <code>0</code> (zero) is the default.</dd></dl>
@@ -770,7 +770,7 @@ description: "Eterm – the Enlightened terminal emulator for the X Window Syste
 <p> <code>search(</code><i>str</i><code>)</code></p>
 <dl>
 <dd>Presents a dialog box into which the user may enter a search term. The default value is set to <i>str</i>. All occurances of the specified search string are highlighted in the scrollback buffer, and Eterm jumps back to the most recent one. Searching again with the same keyword will clear the previous highlighting.</dd></dl>
-<p> <code>spawn(</code><i>command</i><code>)</code><br />
+<p> <code>spawn(</code><i>command</i><code>)</code><br/>
  Aliases: <code>exec</code></p>
 <dl>
 <dd>Spawns a secondary child process to execute <i>command</i>, or <code>Eterm</code> if no value is passed.</dd></dl>
@@ -787,5 +787,5 @@ description: "Eterm – the Enlightened terminal emulator for the X Window Syste
 <h2>Authors</h2>
 <p>Michael Jennings (mej [at] eterm.org) </p>
 <h2>URL(s)</h2>
-<p>Eterm Home Page &#8212; <a rel="nofollow" href="http://www.eterm.org/">http://www.eterm.org/</a><br />
+<p>Eterm Home Page &#8212; <a rel="nofollow" href="http://www.eterm.org/">http://www.eterm.org/</a><br/>
  Author&#8217;s Home Page &#8212; <a rel="nofollow" href="http://www.kainx.org/">http://www.kainx.org/</a></p>

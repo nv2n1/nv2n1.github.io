@@ -93,7 +93,7 @@ description: "dropbear – lightweight SSH server"
 <h2>Notes</h2>
 <p>Dropbear only supports SSH protocol version 2. </p>
 <h2>Author</h2>
-<p>Matt Johnston (matt [at] ucc.asn.au).<br />
+<p>Matt Johnston (matt [at] ucc.asn.au).<br/>
  Gerrit Pape (pape [at] smarden.org) wrote this manual page.</p>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/1-dropbearkey/">dropbearkey</a>(1), <a href="/docs/linux/man/1-dbclient/">dbclient</a>(1), <a href="/docs/linux/man/1-dropbearconvert/">dropbearconvert</a>(1) <a rel="nofollow" href="https://matt.ucc.asn.au/dropbear/dropbear.html">https://matt.ucc.asn.au/dropbear/dropbear.html</a> </p>

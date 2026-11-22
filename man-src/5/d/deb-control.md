@@ -109,7 +109,7 @@ description: "deb-control – Debian binary packages’ master control file form
 <dt><code>Auto-Built-Package:</code> <i>reason-list</i></dt>
 <dd>This field specifies a whitespace separated list of reasons why this package was auto-generated. Binary packages marked with this field will not appear in the <i>debian/control</i> master source control file. The only currently used reason is <code>debug-symbols</code>.</dd>
 <dt><code>Build-Ids:</code> <i>elf-build-id-list</i></dt>
-<dd>This field specifies a whitespace separated list of <font SIZE="-1">ELF</font> build-ids. These are unique identifiers for semantically identical <font SIZE="-1">ELF</font> objects, for each of these within the package. </dd>
+<dd>This field specifies a whitespace separated list of ELF build-ids. These are unique identifiers for semantically identical ELF objects, for each of these within the package. </dd>
 <p> The format or the way to compute each build-id is not defined by design.</dl>
 <h2>Example</h2>
 <pre> Package: grep
@@ -132,7 +132,7 @@ description: "deb-control – Debian binary packages’ master control file form
  than Unix grep or egrep. (Regular expressions containing backreferencing
  will run more slowly, however).</pre>
 <h2>Bugs</h2>
-<p>The <code>Build-Ids</code> field uses a rather generic name out of its original context within an <font SIZE="-1">ELF</font> object, which serves a very specific purpose and executable format.</p>
+<p>The <code>Build-Ids</code> field uses a rather generic name out of its original context within an ELF object, which serves a very specific purpose and executable format.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-deb822/">deb822</a></code>(5), <code><a href="/docs/linux/man/5-deb-src-control/">deb-src-control</a></code>(5), <code><a href="/docs/linux/man/5-deb/">deb</a></code>(5), <code><a href="/docs/linux/man/7-deb-version/">deb-version</a></code>(7), <code>debtags</code>(1), <code><a href="/docs/linux/man/1-dpkg/">dpkg</a></code>(1), <code><a href="/docs/linux/man/1-dpkg-deb/">dpkg-deb</a></code>(1). </p>
 </p>

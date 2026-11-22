@@ -12,7 +12,7 @@ description: "ot2kpx – extract kerning information from OpenType fonts"
 <h2>SYNOPSIS</h2>
 <p> <code>ot2kpx</code> [ <i>-afm</i> | <i>-kpx</i> | <i>-lua</i> ] <code>&lt;fontfile&gt;</code></p>
 <h2>DESCRIPTION</h2>
-<p> <code>ot2kpx</code> extract the kerning data from OpenType fonts and prints it to <tt>&quot;stdout&quot;</tt>, either in Adobe&#8217;s <font SIZE="-1">KPX</font> format (for adding to an <i>afm</i> file) or as a Luatex custom feature, for use with the <tt>&quot;\directlua&quot;</tt> command.</p>
+<p> <code>ot2kpx</code> extract the kerning data from OpenType fonts and prints it to <tt>&quot;stdout&quot;</tt>, either in Adobe&#8217;s KPX format (for adding to an <i>afm</i> file) or as a Luatex custom feature, for use with the <tt>&quot;\directlua&quot;</tt> command.</p>
 <h2>OPTIONS AND ARGUMENTS</h2>
 <dl>
 <dt><code>-help</code></dt>
@@ -20,7 +20,7 @@ description: "ot2kpx – extract kerning information from OpenType fonts"
 <dt><code>-version</code></dt>
 <dd> Print <code>ot2kpx</code>&#8216;s version and exit.</dd>
 <dt><code>-afm</code>, <code>-kpx</code></dt>
-<dd> Output the kerning data in Adobe&#8217;s <font SIZE="-1">KPX</font> format, as used in <i>afm</i> files. This is the default output format.</dd>
+<dd> Output the kerning data in Adobe&#8217;s KPX format, as used in <i>afm</i> files. This is the default output format.</dd>
 <dt><code>-lua</code></dt>
 <dd> Output the kerning data as a Luatex custom font feature, to be included in a <tt>&quot;\directlua&quot;</tt> command.</dd>
 <dt><code>&lt;fontfile&gt;</code></dt>
@@ -35,7 +35,7 @@ description: "ot2kpx – extract kerning information from OpenType fonts"
 <dl>
 <dl>
 <dt>&#8211;</dt>
-<dd> The OpenType specification says that fonts in <i>otf</i> format shouldn&#8217;t use the &#8220;kern&#8221; table at all, just the lookups from the &#8220;<font SIZE="-1">GPOS&#8221;</font> table. Many such fonts do, however, contain a &#8220;kern&#8221; table, but no &#8220;<font SIZE="-1">GPOS&#8221;</font> table; so we use the &#8220;kern&#8221; table anyway.</dd>
+<dd> The OpenType specification says that fonts in <i>otf</i> format shouldn&#8217;t use the &#8220;kern&#8221; table at all, just the lookups from the &#8220;GPOS&#8221; table. Many such fonts do, however, contain a &#8220;kern&#8221; table, but no &#8220;GPOS&#8221; table; so we use the &#8220;kern&#8221; table anyway.</dd>
 <dt>&#8211;</dt>
 <dd> Instead of reading all LookupTables, it might be better to let the user specify a script and language and process only the LookupTables for those values. However, at least in the fonts I checked, all script/language combinations eventually point to the <i>same</i> &#8220;kern&#8221; LookupTables, so this approach wouldn&#8217;t make any difference (apart from further complicating the code).</dd></dl>
 </dl>
@@ -47,9 +47,9 @@ description: "ot2kpx – extract kerning information from OpenType fonts"
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2005-2022 Marc Penninga.</p>
 <h2>LICENSE</h2>
-<p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation, either version 2 of the License, or (at your option) any later version. A copy of the <font SIZE="-1">GNU</font> General Public License is included with <code>ot2kpx</code>; see the file <i>GPLv2.txt</i>.</p>
+<p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 2 of the License, or (at your option) any later version. A copy of the GNU General Public License is included with <code>ot2kpx</code>; see the file <i>GPLv2.txt</i>.</p>
 <h2>DISCLAIMER</h2>
-<p> This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE.</font> See the <font SIZE="-1">GNU</font> General Public License for more details.</p>
+<p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
 <h2>VERSION</h2>
 <p> This document describes <code>ot2kpx</code> version 20220124.</p>
 <h2>RECENT CHANGES</h2>

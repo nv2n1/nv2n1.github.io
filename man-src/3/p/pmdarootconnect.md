@@ -9,7 +9,7 @@ description: "pmdaRootConnect, pmdaRootShutdown, pmdaRootContainerHostName, pmda
 
 <p><code>pmdaRootConnect</code>, <code>pmdaRootShutdown</code>, <code>pmdaRootContainerHostName</code>, <code>pmdaRootContainerProcessID</code>, <code>pmdaRootContainerCGroupName</code>, <code>pmdaRootProcessStart</code>, <code>pmdaRootProcessWait</code>, <code>pmdaRootProcessTerminate</code> &#8211; privileged PCP collector services</p>
 <h2>C Synopsis</h2>
-<p><code> #include &lt;pcp/pmapi.h&gt;<br />
+<p><code> #include &lt;pcp/pmapi.h&gt;<br/>
  #include &lt;pcp/pmda.h&gt; </p>
 <p> int pmdaRootConnect(void); </p>
 <p> void pmdaRootShutdown(int </code><i>fd</i>); </p>

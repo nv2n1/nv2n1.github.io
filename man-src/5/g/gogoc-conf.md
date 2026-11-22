@@ -143,7 +143,7 @@ description: "gogoc.conf – gogoCLIENT Configuration File"
 <p> Default: gogoc.log </p>
 <dt><code>log_rotation</code></dt>
 <dd>When logging to file is requested via the &#8216;log_file&#8217; directive, log file rotation may be enabled using the &#8216;log_rotation&#8217; directive. </dd>
-<p> When enabled, the contents of the log file will be moved to a backup file just before it reaches the maximum log file size specified via the<br />
+<p> When enabled, the contents of the log file will be moved to a backup file just before it reaches the maximum log file size specified via the<br/>
 &nbsp;<wbr>`log_rotation_size&#8217;&nbsp;<wbr>directive. </p>
 <p> The name of the backup file is the name of the original log file with `.&lt;timestamp&gt;&#8217; inserted before the file extension. If the file does not have an extension, `.&lt;timestamp&gt;&#8217; is appended to the name of the original log file. The timestamp specifies when the rotation occurred. </p>
 <p> After the contents of the log file have been moved to the backup file, the original file is cleared, and logging resumes at the beginning of the file. </p>

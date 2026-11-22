@@ -15,33 +15,33 @@ description: "sc::SetIntCoor –"
 <p> Inherits <code>sc::SavableState</code>.</p>
 <h3>Public Member Functions</h3>
 <p><code>SetIntCoor</code> (<code>StateIn</code> &amp;) </p>
-<p> <code>SetIntCoor</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br />
- <i>The </i><code>KeyVal</code> constructor.<br />
- void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br />
- <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br />
- void <code>add</code> (const <code>Ref</code>&lt; <code>IntCoor</code> &gt; &amp;)<br />
- <i>Adds an internal coordinate to the set. </i><br />
- void <code>add</code> (const <code>Ref</code>&lt; <code>SetIntCoor</code> &gt; &amp;)<br />
- <i>Adds all the elements of another set to this one. </i><br />
- void <code>pop</code> ()<br />
- <i>Removes the last coordinate from this set. </i><br />
- void <code>clear</code> ()<br />
- <i>Removes all coordinates from the set. </i><br />
- int <code>n</code> () const<br />
- <i>Returns the number of coordinates in the set. </i><br />
- <code>Ref</code>&lt; <code>IntCoor</code> &gt; <code>coor</code> (int i) const<br />
- <i>Returns a reference to the i&#8217;th coordinate in the set. </i><br />
- virtual void <code>fd_bmat</code> (const <code>Ref</code>&lt; <code>Molecule</code> &gt; &amp;, <code>RefSCMatrix</code> &amp;)<br />
- <i></i><code>Compute</code> the B matrix by finite displacements.<br />
- virtual void <code>bmat</code> (const <code>Ref</code>&lt; <code>Molecule</code> &gt; &amp;, <code>RefSCMatrix</code> &amp;)<br />
- <i></i><code>Compute</code> the B matrix the old-fashioned way.<br />
- virtual void <code>guess_hessian</code> (<code>Ref</code>&lt; <code>Molecule</code> &gt; &amp;, <code>RefSymmSCMatrix</code> &amp;)<br />
- <i>Create an approximate Hessian for this set of coordinates. </i><br />
- virtual void <code>print_details</code> (const <code>Ref</code>&lt; <code>Molecule</code> &gt; &amp;, std::ostream &amp;=ExEnv::out0()) const<br />
- <i>Print the coordinates in the set. </i><br />
- virtual void <code>update_values</code> (const <code>Ref</code>&lt; <code>Molecule</code> &gt; &amp;)<br />
- <i>Recalculate the values of the internal coordinates in the set. </i><br />
- virtual void <code>values_to_vector</code> (const <code>RefSCVector</code> &amp;)<br />
+<p> <code>SetIntCoor</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br/>
+ <i>The </i><code>KeyVal</code> constructor.<br/>
+ void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br/>
+ <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br/>
+ void <code>add</code> (const <code>Ref</code>&lt; <code>IntCoor</code> &gt; &amp;)<br/>
+ <i>Adds an internal coordinate to the set. </i><br/>
+ void <code>add</code> (const <code>Ref</code>&lt; <code>SetIntCoor</code> &gt; &amp;)<br/>
+ <i>Adds all the elements of another set to this one. </i><br/>
+ void <code>pop</code> ()<br/>
+ <i>Removes the last coordinate from this set. </i><br/>
+ void <code>clear</code> ()<br/>
+ <i>Removes all coordinates from the set. </i><br/>
+ int <code>n</code> () const<br/>
+ <i>Returns the number of coordinates in the set. </i><br/>
+ <code>Ref</code>&lt; <code>IntCoor</code> &gt; <code>coor</code> (int i) const<br/>
+ <i>Returns a reference to the i&#8217;th coordinate in the set. </i><br/>
+ virtual void <code>fd_bmat</code> (const <code>Ref</code>&lt; <code>Molecule</code> &gt; &amp;, <code>RefSCMatrix</code> &amp;)<br/>
+ <i></i><code>Compute</code> the B matrix by finite displacements.<br/>
+ virtual void <code>bmat</code> (const <code>Ref</code>&lt; <code>Molecule</code> &gt; &amp;, <code>RefSCMatrix</code> &amp;)<br/>
+ <i></i><code>Compute</code> the B matrix the old-fashioned way.<br/>
+ virtual void <code>guess_hessian</code> (<code>Ref</code>&lt; <code>Molecule</code> &gt; &amp;, <code>RefSymmSCMatrix</code> &amp;)<br/>
+ <i>Create an approximate Hessian for this set of coordinates. </i><br/>
+ virtual void <code>print_details</code> (const <code>Ref</code>&lt; <code>Molecule</code> &gt; &amp;, std::ostream &amp;=ExEnv::out0()) const<br/>
+ <i>Print the coordinates in the set. </i><br/>
+ virtual void <code>update_values</code> (const <code>Ref</code>&lt; <code>Molecule</code> &gt; &amp;)<br/>
+ <i>Recalculate the values of the internal coordinates in the set. </i><br/>
+ virtual void <code>values_to_vector</code> (const <code>RefSCVector</code> &amp;)<br/>
  <i>Copy the values of the internal coordinates to a vector. </i></p>
 <h2>Detailed Description</h2>
 <p>The <code>SetIntCoor</code> class describes a set of internal coordinates. </p>

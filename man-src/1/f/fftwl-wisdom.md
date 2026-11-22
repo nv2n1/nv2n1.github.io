@@ -14,7 +14,7 @@ description: "fftwl-wisdom – create wisdom (pre-optimized FFTs)"
 <h2>DESCRIPTION</h2>
 <p> <i>fftwl-wisdom</i> is a utility to generate FFTW <code>wisdom</code> files, which contain saved information about how to optimally compute (Fourier) transforms of various sizes. FFTW is a free library to compute discrete Fourier transforms in one or more dimensions, for arbitrary sizes, and of both real and complex data, among other related operations. More information on FFTW can be found at the FFTW home page: <i><a rel="nofollow" href="http://www.fftw.org">http://www.fftw.org</a></i> </p>
 <p> Programs using FFTW can be written to load wisdom from an arbitrary file, string, or other source. Moreover, it is likely that many FFTW-using programs will load the <code>system wisdom</code> file, which is stored in <i>/etc/fftw/wisdoml</i> by default. <i>fftwl-wisdom</i> can be used to create or add to such wisdom files. In its most typical usage, the wisdom file can be created to pre-plan a canonical set of sizes (see below) via: </p>
-<p> <center> fftwl-wisdom -v -c -o wisdoml<br />
+<p> <center> fftwl-wisdom -v -c -o wisdoml<br/>
  </center> </p>
 <p> (this will take many hours, which can be limited by the <code>-t</code> option) and the output <i>wisdoml</i> file can then be copied (as root) to <i>/etc/fftw/</i> or whatever. </p>
 <p> The <i>fftwl-wisdom</i> program normally writes the wisdom directly to standard output, but this can be changed via the <code>-o</code> option, as in the example above. </p>
@@ -22,7 +22,7 @@ description: "fftwl-wisdom – create wisdom (pre-optimized FFTs)"
 <h2>SPECIFYING SIZES</h2>
 <p> Although a canonical set of sizes to optimize is specified by the <code>-c</code> option, the user can also specify zero or more non-canonical transform sizes and types to optimize, via the <i>SIZE</i> arguments following the option flags. Alternatively, the sizes to optimize can be read from standard input (whitespace-separated), if a <i>SIZE</i> argument of &quot;-&quot; is supplied. </p>
 <p> Sizes are specified by the syntax: </p>
-<p> <center> &lt;<i>type</i>&gt;&lt;<i>inplace</i>&gt;&lt;<i>direction</i>&gt;&lt;<i>geometry</i>&gt;<br />
+<p> <center> &lt;<i>type</i>&gt;&lt;<i>inplace</i>&gt;&lt;<i>direction</i>&gt;&lt;<i>geometry</i>&gt;<br/>
  </center> </p>
 <p> &lt;<i>type</i>&gt; is either &#8216;c&#8217; (complex), &#8216;r&#8217; (real, r2c/c2r), or &#8216;k&#8217; (r2r, per-dimension kinds, specified in the geometry, below). </p>
 <p> &lt;<i>inplace</i>&gt; is either &#8216;i&#8217; (in place) or &#8216;o&#8217; (out of place). </p>
@@ -54,7 +54,7 @@ description: "fftwl-wisdom – create wisdom (pre-optimized FFTs)"
 <p> Send bug reports to fftw [at] fftw.org.</p>
 <h2>AUTHORS</h2>
 <p> Written by Steven G. Johnson and Matteo Frigo. </p>
-<p> Copyright (c) 2003, 2007-11 Matteo Frigo<br />
+<p> Copyright (c) 2003, 2007-11 Matteo Frigo<br/>
  Copyright (c) 2003, 2007-11 Massachusetts Institute of Technology</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-fftw-wisdom-to-conf/">fftw-wisdom-to-conf</a>(1) </p>

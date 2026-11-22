@@ -32,7 +32,7 @@ description: "djvused – Multi-purpose DjVu document editor."
 <h2>DJVUSED EXAMPLES</h2>
 <p> There are many ways to use program <code>djvused</code>. The following examples illustrate some common uses of this program. </p>
 <h2>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Obtaining the size of a page</h2>
-<p> Command <code>size </code> outputs the width and height of the selected pages using a <font SIZE="-1">HTML</font> friendly syntax. For instance, the following command prints the size of page <i>3</i> of document <i>myfile.djvu</i>.</p>
+<p> Command <code>size </code> outputs the width and height of the selected pages using a HTML friendly syntax. For instance, the following command prints the size of page <i>3</i> of document <i>myfile.djvu</i>.</p>
 <dl>
 <dt>
 </dt><dd> <code>djvused </code><i>myfile.djvu</i><code> -e &#8216;select 3; size&#8217;</code></dd></dl>
@@ -50,7 +50,7 @@ description: "djvused – Multi-purpose DjVu document editor."
 <dl>
 <dt>
 </dt><dd> <code>djvused </code><i>myfile.djvu</i><code> -e &#8216;select 1; print-ant&#8217;</code></dd></dl>
-<p> Command <code>print-ant</code> only prints the annotations stored in the selected component file. Command <code>print-merged-ant</code> also retrieves annotations from all the component files referenced by the current page (using <font SIZE="-1">INCL</font> chunks) and prints the merged information. </p>
+<p> Command <code>print-ant</code> only prints the annotations stored in the selected component file. Command <code>print-merged-ant</code> also retrieves annotations from all the component files referenced by the current page (using INCL chunks) and prints the merged information. </p>
 <h2>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Dumping/restoring annotations and text</h2>
 <p> Three commands, <code>output-txt</code>, <code>output-ant</code>, and <code>output-all</code>, produce djvused scripts. For instance, the following shell command produces a djvused script, <i>myfile.dsed</i>, that recreates all the text and annotation data in document <i>myfile.djvu</i>.</p>
 <dl>
@@ -66,7 +66,7 @@ description: "djvused – Multi-purpose DjVu document editor."
 <dl>
 <dt>
 </dt><dd> <code>djvused </code><i>myfile.djvu</i><code> -e &#8216;select 5; save-page </code><i>p05.djvu</i><code>&#8216;</code></dd></dl>
-<p> Each page of a document might import data from another component file using the so-called inclusion ( <font SIZE="-1">INCL</font> ) chunks. Command <code>save-page</code> then produces a file with unresolved references to imported data. Such a file should then be made part of a multi-page document containing the required data in other component files. On the other hand, command <code>save-page-with</code> copies all the imported data into the output file. This file is directly usable. Yet collecting several such files into a multi-page document might lead to useless data replication. </p>
+<p> Each page of a document might import data from another component file using the so-called inclusion ( INCL ) chunks. Command <code>save-page</code> then produces a file with unresolved references to imported data. Such a file should then be made part of a multi-page document containing the required data in other component files. On the other hand, command <code>save-page-with</code> copies all the imported data into the output file. This file is directly usable. Yet collecting several such files into a multi-page document might lead to useless data replication. </p>
 <h2>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Pre-computing thumbnails</h2>
 <p> Commands <code>set-thumbnails</code> constructs thumbnails that can be later displayed by DjVu viewers. The following shell command, for instance, computes thumbnails of size <i>64</i>x<i>64</i> pixels for all pages of file <i>myfile.djvu</i>.</p>
 <dl>
@@ -115,7 +115,7 @@ description: "djvused – Multi-purpose DjVu document editor."
 <dt><code>output-ant</code></dt>
 <dd> Print a djvused script that reconstructs the annotation information for the selected pages. This script can later be edited and executed by invoking program <code>djvused</code> with option <code>-f</code>.</dd>
 <dt><code>print-meta</code></dt>
-<dd> Print the meta-data part of the annotations for the selected component file. This command displays a subset of the information printed by command <code>print-ant</code> using a different syntax. Meta-data are organized as key-value pairs. Each printed line contains the key name such as <code>author</code>, <code>title</code>,etc., followed by a tab character (&quot;	&quot;) and a double-quoted string representing the <font SIZE="-1">UTF-8</font> encoded meta-data value.</dd>
+<dd> Print the meta-data part of the annotations for the selected component file. This command displays a subset of the information printed by command <code>print-ant</code> using a different syntax. Meta-data are organized as key-value pairs. Each printed line contains the key name such as <code>author</code>, <code>title</code>,etc., followed by a tab character (&quot;	&quot;) and a double-quoted string representing the UTF-8 encoded meta-data value.</dd>
 <dt><code>remove-meta</code></dt>
 <dd> Remove the meta-data part of the annotations of the selected component files.</dd>
 <dt><code>set-meta [</code><i>djvusedmetafile</i><code>]</code></dt>
@@ -153,7 +153,7 @@ description: "djvused – Multi-purpose DjVu document editor."
 <dt><code>save-indirect </code><i>filename</i></dt>
 <dd> Save the current DjVu document as an indirect multi-page DjVu document. The index file of the indirect document will be named <code>filename</code>. All other files composing the indirect document will be saved into the same directory as the index file. A similar capability is offered by program <code>djvmcvt</code>.</dd>
 <dt><code>save-page </code><i>filename</i></dt>
-<dd> Save the selected component file into DjVu file <i>filename</i>. The selected component file might import data from another component file using the so-called inclusion ( <font SIZE="-1">INCL</font> ) chunks. This command then produces a file with unresolved references to imported data. Such a file should then be made part of a multi-page document containing the required data in other component files.</dd>
+<dd> Save the selected component file into DjVu file <i>filename</i>. The selected component file might import data from another component file using the so-called inclusion ( INCL ) chunks. This command then produces a file with unresolved references to imported data. Such a file should then be made part of a multi-page document containing the required data in other component files.</dd>
 <dt><code>save-page-with </code><i>filename</i></dt>
 <dd> Save the selected component file into DjVu file <i>filename</i>. All data imported from other component files is copied into the output file as well. This command always produces a usable DjVu file. On the other hand, collecting several such files into a multi-page document might lead to useless data replication. </dd>
 </dl>
@@ -162,9 +162,9 @@ description: "djvused – Multi-purpose DjVu document editor."
 <dt><code>help</code></dt>
 <dd> Display a help message listing all commands supported by <code>djvused</code>.</dd>
 <dt><code>dump</code></dt>
-<dd> Display the <font SIZE="-1">EA IFF 85</font> structure of the document or of the selected component file. A similar capability is offered by program <code>djvudump</code>.</dd>
+<dd> Display the EA IFF 85 structure of the document or of the selected component file. A similar capability is offered by program <code>djvudump</code>.</dd>
 <dt><code>size</code></dt>
-<dd> Display the width and the height of the selected pages. The dimensions of each page are displayed using a syntax suitable for direct insertion into the <font SIZE="-1">&lt;EMBED&#8230;&gt;&lt;/EMBED&gt;</font> tags.</dd>
+<dd> Display the width and the height of the selected pages. The dimensions of each page are displayed using a syntax suitable for direct insertion into the &lt;EMBED&#8230;&gt;&lt;/EMBED&gt; tags.</dd>
 <dt><code>set-page-title </code><i>title</i></dt>
 <dd> Sets a page title for the selected page. When page titles are available, recent versions of the DjVuLibre viewers display these page titles instead of page numbers and also accept them in page selection options. Command <code>ls</code> can be used to see both the page titles and page identifiers. To unset a page title, simply make it equal to the page identifier. </dd>
 </dl>
@@ -176,7 +176,7 @@ description: "djvused – Multi-purpose DjVu document editor."
 <dt>*</dt>
 <dd> This syntax differs from the native syntax used by DjVu for storing the hidden text. Program <code>djvused</code> performs the translations between the compact binary representation used by DjVu and the easily modifiable parenthesized syntax.</dd></dl>
 <h2>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>General syntax</h2>
-<p> Djvused files are <font SIZE="-1">ASCII</font> text files. The legal characters in djvused files are the printable <font SIZE="-1">ASCII </font> characters and the space, tab, cr, and nl characters. Using other characters has undefined results. </p>
+<p> Djvused files are ASCII text files. The legal characters in djvused files are the printable ASCII  characters and the space, tab, cr, and nl characters. Using other characters has undefined results. </p>
 <p> Djvused files are composed of a sequence of expressions separated by blank characters (space, tab, cr, or nl). There are four kind of expressions, namely integers, symbols, strings and lists.</p>
 <dl>
 <dt>Integers:</dt>
@@ -184,7 +184,7 @@ description: "djvused – Multi-purpose DjVu document editor."
 <dt>Symbols:</dt>
 <dd> Symbols, or identifiers, are sequences of printable ascii characters representing a name or a keyword. Acceptable characters are the alpha-numeric characters, the underscore &quot;_&quot;, the minus character &quot;-&quot;, and the hash character &quot;#&quot;. Names should not begin with a digit or a minus character.</dd>
 <dt>Strings:</dt>
-<dd> Strings denote an arbitrary sequence of bytes, usually interpreted as a sequence of <font SIZE="-1">UTF-8</font> encoded characters. Strings in djvused files are similar to strings in the C language. They are surrounded by double quote characters. Certain sequences of characters starting with a backslash (&quot;\&quot;) have a special meaning. A backslash followed by letter &quot;a&quot;, &quot;b&quot;, &quot;t&quot;, &quot;n&quot;, &quot;v&quot;, &quot;f&quot;, &quot;r&quot;, &quot;\&quot;, and stands for the ascii character BEL(007), BS(008), HT(009), LF(010), VT(011), FF(012), CR(013), BACKSLASH(134) and DOUBLEQUOTE(042) respectively. A backslash followed by one to three digits stands for the byte whose octal code is expressed by the digits. All other backslash sequences are illegal. All non printable ascii characters must be escaped.</dd>
+<dd> Strings denote an arbitrary sequence of bytes, usually interpreted as a sequence of UTF-8 encoded characters. Strings in djvused files are similar to strings in the C language. They are surrounded by double quote characters. Certain sequences of characters starting with a backslash (&quot;\&quot;) have a special meaning. A backslash followed by letter &quot;a&quot;, &quot;b&quot;, &quot;t&quot;, &quot;n&quot;, &quot;v&quot;, &quot;f&quot;, &quot;r&quot;, &quot;\&quot;, and stands for the ascii character BEL(007), BS(008), HT(009), LF(010), VT(011), FF(012), CR(013), BACKSLASH(134) and DOUBLEQUOTE(042) respectively. A backslash followed by one to three digits stands for the byte whose octal code is expressed by the digits. All other backslash sequences are illegal. All non printable ascii characters must be escaped.</dd>
 <dt>Lists:</dt>
 <dd> Lists are sequence of expressions separated by blanks and surrounded by parentheses. All expressions types are acceptable within a list, including sub-lists. </dd>
 </dl>
@@ -204,7 +204,7 @@ description: "djvused – Multi-purpose DjVu document editor."
 <dl>
 <dt>
 </dt><dd> <code>(</code><i>title</i><i>url</i><code> &#8230; )</code></dd></dl>
-<p> The string <i>title</i> is the title of the outline entry. The destination string <i>url</i> can be either an arbitrary percent encoded <font SIZE="-1">URL,</font> or composed of the hash character (&quot;#&quot;) followed by a page name or number, or composed of the question mark character (&quot;?&quot;) followed by cgi-style arguments interpreted by the djvu viewer. The remaining expressions in the list describe subentries of this outline entry. </p>
+<p> The string <i>title</i> is the title of the outline entry. The destination string <i>url</i> can be either an arbitrary percent encoded URL, or composed of the hash character (&quot;#&quot;) followed by a page name or number, or composed of the question mark character (&quot;?&quot;) followed by cgi-style arguments interpreted by the djvu viewer. The remaining expressions in the list describe subentries of this outline entry. </p>
 <h2>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Annotation syntax</h2>
 <p> Annotations are represented by a sequence of annotation expressions. The following annotation expressions are recognized:</p>
 <dl>
@@ -224,30 +224,30 @@ description: "djvused – Multi-purpose DjVu document editor."
 <p> Argument <i>url</i> can have one of the following forms:</p>
 </dd><dl>
 <dt>
-</dt><dd> <i>href</i><br />
+</dt><dd> <i>href</i><br/>
  <code>(url </code><i>href</i><i>target</i><code>)</code>
 </dd></dl>
-<p> where <i>href</i> is a string representing the destination and <i>target </i> is a string representing the target frame for the hyper-link, as defined by the <font SIZE="-1">HTML</font> anchor tag <font SIZE="-1">&lt;A&gt;.</font> The destination string <i>href</i> can be either an arbitrary percent encoded <font SIZE="-1">URL,</font> or composed of the hash character (&quot;#&quot;) followed by a page name or number, or composed of the question mark character (&quot;?&quot;) followed by cgi-style arguments interpreted by the djvu viewer. Page numbers may be prefixed with an optional sign to represent a page displacement. For instance the strings <code>#-1 </code> and <code>#+1</code> can be used to access the previous page and the next page. </p>
+<p> where <i>href</i> is a string representing the destination and <i>target </i> is a string representing the target frame for the hyper-link, as defined by the HTML anchor tag &lt;A&gt;. The destination string <i>href</i> can be either an arbitrary percent encoded URL, or composed of the hash character (&quot;#&quot;) followed by a page name or number, or composed of the question mark character (&quot;?&quot;) followed by cgi-style arguments interpreted by the djvu viewer. Page numbers may be prefixed with an optional sign to represent a page displacement. For instance the strings <code>#-1 </code> and <code>#+1</code> can be used to access the previous page and the next page. </p>
 <p> Argument <i>comment </i> is a string that might be displayed by the viewer when the user moves the mouse over the hyper-link. </p>
 <p> Argument <i>area</i> defines the shape and the location of the hyperlink. The following forms are recognized:</p>
 <dl>
 <dt>
-</dt><dd> <code>(rect </code><i>xmin</i><i>ymin</i><i>width</i><i>height</i><code>)</code><br />
- <code>(oval </code><i>xmin</i><i>ymin</i><i>width</i><i>height</i><code>)</code><br />
- <code>(poly </code><i>x0</i><i>y0</i><i>x1</i><i>y1</i><code> &#8230; )</code><br />
- <code>(text </code><i>xmin</i><i>ymin</i><i>width</i><i>height</i><code>)</code><br />
+</dt><dd> <code>(rect </code><i>xmin</i><i>ymin</i><i>width</i><i>height</i><code>)</code><br/>
+ <code>(oval </code><i>xmin</i><i>ymin</i><i>width</i><i>height</i><code>)</code><br/>
+ <code>(poly </code><i>x0</i><i>y0</i><i>x1</i><i>y1</i><code> &#8230; )</code><br/>
+ <code>(text </code><i>xmin</i><i>ymin</i><i>width</i><i>height</i><code>)</code><br/>
  <code>(line </code><i>x0</i><i>y0</i><i>x1</i><i>y1</i><code>)</code></dd></dl>
 <p> All parameters are numbers representing coordinates. Coordinates are measured in pixels and have their origin at the bottom left corner of the page. </p>
 <p> The remaining expressions in the <code>maparea</code> list represent the visual effect associated with the hyper-link. </p>
 <p> A first set of options defines how borders are drawn for <code>rect</code>, <code>oval</code>, <code>polygon</code>, or <code>text</code> hyperlink areas.</p>
 <dl>
 <dt>
-</dt><dd> <code>(none)</code><br />
- <code>(xor)</code><br />
- <code>(border </code><i>color</i><code>)</code><br />
- <code>(shadow_in [</code><i>thickness</i><code>])</code><br />
- <code>(shadow_out [</code><i>thickness</i><code>])</code><br />
- <code>(shadow_ein [</code><i>thickness</i><code>])</code><br />
+</dt><dd> <code>(none)</code><br/>
+ <code>(xor)</code><br/>
+ <code>(border </code><i>color</i><code>)</code><br/>
+ <code>(shadow_in [</code><i>thickness</i><code>])</code><br/>
+ <code>(shadow_out [</code><i>thickness</i><code>])</code><br/>
+ <code>(shadow_ein [</code><i>thickness</i><code>])</code><br/>
  <code>(shadow_eout [</code><i>thickness</i><code>])</code></dd></dl>
 <p> where parameter <i>color</i> has syntax <code>#RRGGBB</code> as described above, and parameter thickness is an integer in range 1 to 32. The last four border options are only supported for <code>rect</code> hyperlink areas. The default border is a simple black line. Border options do not apply to <code>line </code> areas. </p>
 <p> When a border option is specified, the border becomes visible when the user moves the mouse over the hyperlink. The border may be made always visible by using the following option:</p>
@@ -257,20 +257,20 @@ description: "djvused – Multi-purpose DjVu document editor."
 <p> The following two options may be used with <code>rect</code> hyperlink areas. The complete area will be highlighted using the specified color at the specified opacity (0-100, default 50).</p>
 <dl>
 <dt>
-</dt><dd> <code>(hilite </code><i>color</i><code>)</code><br />
+</dt><dd> <code>(hilite </code><i>color</i><code>)</code><br/>
  <code>(opacity </code><i>op</i><code>)</code></dd></dl>
-<p> This is often used with an empty <font SIZE="-1">URL </font> for simply emphasizing a specific segment of an image. </p>
+<p> This is often used with an empty URL  for simply emphasizing a specific segment of an image. </p>
 <p> The following three options may be used with line areas to specify an optional ending arrow, the line width and color. The default is a black line with width 1 and without arrow.</p>
 <dl>
 <dt>
-</dt><dd> <code>(arrow)</code><br />
- <code>(width </code><i>w</i><code>)</code><br />
+</dt><dd> <code>(arrow)</code><br/>
+ <code>(width </code><i>w</i><code>)</code><br/>
  <code>(lineclr </code><i>color</i><code>)</code></dd></dl>
 <p> Finally the following three options can be used with text areas. The default background color is transparent. The default text color is black. The <code>pushpin</code> option indicates that the text is symbolized by a small pushpin icon. Clicking the icon reveals the text.</p>
 <dl>
 <dt>
-</dt><dd> <code>(backclr </code><i>bkcolor</i><code>)</code><br />
- <code>(textclr </code><i>txtcolor</i><code>)</code><br />
+</dt><dd> <code>(backclr </code><i>bkcolor</i><code>)</code><br/>
+ <code>(textclr </code><i>txtcolor</i><code>)</code><br/>
  <code>(pushpin)</code></dd></dl>
 </dl>
 <dt><code>(metadata &#8230; (</code><i>key</i><i>value</i><code>) &#8230; )</code></dt>
@@ -281,4 +281,4 @@ description: "djvused – Multi-purpose DjVu document editor."
 <h2>CREDITS</h2>
 <p> This program was initially written by L&eacute;on Bottou &lt;leonb [at] users.sourceforge.net&gt; and was improved by Yann Le Cun &lt;profshadoko [at] users.sourceforge.net&gt;, Florin Nicsa, Bill Riemers &lt;docbill [at] sourceforge.net&gt; and many others. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-djvu/">djvu</a></code>(1), <code><a href="/docs/linux/man/1-djvutxt/">djvutxt</a></code>(1), <code><a href="/docs/linux/man/1-djvmcvt/">djvmcvt</a></code>(1), <code><a href="/docs/linux/man/1-djvudump/">djvudump</a></code>(1), <code><a href="/docs/linux/man/1-bzz/">bzz</a></code>(1), Emacs djvused front end <code>djvu.el</code> on <font SIZE="-1">GNU Elpa</font> repository. </p>
+<p> <code><a href="/docs/linux/man/1-djvu/">djvu</a></code>(1), <code><a href="/docs/linux/man/1-djvutxt/">djvutxt</a></code>(1), <code><a href="/docs/linux/man/1-djvmcvt/">djvmcvt</a></code>(1), <code><a href="/docs/linux/man/1-djvudump/">djvudump</a></code>(1), <code><a href="/docs/linux/man/1-bzz/">bzz</a></code>(1), Emacs djvused front end <code>djvu.el</code> on GNU Elpa repository. </p>

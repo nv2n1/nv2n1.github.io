@@ -7,7 +7,7 @@ url: "/docs/linux/man/8-tpm_changeownerauth/"
 description: "tpm_changeownerauth – change the authorization data associated with the owner or SRK"
 ---
 
-<p>TPM Management &#8211; tpm_changeownerauth<br />
+<p>TPM Management &#8211; tpm_changeownerauth<br/>
  </center></p>
 <h2>Name</h2>
 <p>tpm_changeownerauth &#8211; change the authorization data associated with the owner or SRK</p>

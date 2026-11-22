@@ -17,8 +17,8 @@ description: "dbmultistats – run dbcolstats over each group of inputs identifi
 <p> By default, data can be provided in arbitrary order and the program consumes O(number of unique tags) memory, and O(size of data) disk space. </p>
 <p> With the -S option, data must arrive group by tags (not necessarily sorted), and the program consumes O(number of tags) memory and no disk space. The program will check and abort if this precondition is not met. </p>
 <p> With two -S&#8217;s, program consumes O(1) memory, but doesn&#8217;t verify that the data-arrival precondition is met. </p>
-<p> (Note that these semantics are exactly like<br />
-&nbsp;<wbr>dbmapreduce -k KeyField &#8212; dbcolstats ValueField dbmultistats provides a simpler <font SIZE="-1">API</font> that passes through statistics-specific arguments and is optimized when data is pre-sorted and there are no quarties or medians.)</p>
+<p> (Note that these semantics are exactly like<br/>
+&nbsp;<wbr>dbmapreduce -k KeyField &#8212; dbcolstats ValueField dbmultistats provides a simpler API that passes through statistics-specific arguments and is optimized when data is pre-sorted and there are no quarties or medians.)</p>
 <h2>OPTIONS</h2>
 <p> Options are the same as dbcolstats.</p>
 <dl>
@@ -26,9 +26,9 @@ description: "dbmultistats – run dbcolstats over each group of inputs identifi
 <dd> specify which column is the key for grouping (default: the first column)</dd>
 <dt><code>-a</code> or <code>&#8211;include-non-numeric</code></dt>
 <dd> Compute stats over all records (treat non-numeric records as zero rather than just ignoring them).</dd>
-<dt><code>-c </code><font SIZE="-1"><code>FRACTION</code></font> or <code>&#8211;confidence </code><font SIZE="-1"><code>FRACTION</code></font></dt>
-<dd> Specify <font SIZE="-1">FRACTION</font> for the confidence interval. Defaults to 0.95 for a 95% confidence factor.</dd>
-<dt><code>-f </code><font SIZE="-1"><code>FORMAT</code></font> or <code>&#8211;format </code><font SIZE="-1"><code>FORMAT</code></font></dt>
+<dt><code>-c </code><code>FRACTION</code> or <code>&#8211;confidence </code><code>FRACTION</code></dt>
+<dd> Specify FRACTION for the confidence interval. Defaults to 0.95 for a 95% confidence factor.</dd>
+<dt><code>-f </code><code>FORMAT</code> or <code>&#8211;format </code><code>FORMAT</code></dt>
 <dd> Specify a <i><a href="/docs/linux/man/3-printf/">printf</a></i>(3)-style format for output statistics. Defaults to <tt>&quot;%.5g&quot;</tt>.</dd>
 <dt><code>-m</code> or <code>&#8211;median</code></dt>
 <dd> Compute median value. (Will sort data if necessary.) (Median is the quantitle for N=2.)</dd>
@@ -37,7 +37,7 @@ description: "dbmultistats – run dbcolstats over each group of inputs identifi
 <dt><code>-S</code> or <code>&#8211;pre-sorted</code></dt>
 <dd> Assume data is already sorted. With one -S, we check and confirm this precondition. When repeated, we skip the check.</dd>
 <dt>&lt;-T TmpDir&gt;</dt>
-<dd> where to put temporary data. Only used if median or quantiles are requested. Also uses environment variable <font SIZE="-1">TMPDIR,</font> if -T is not specified. Default is /tmp.</dd>
+<dd> where to put temporary data. Only used if median or quantiles are requested. Also uses environment variable TMPDIR, if -T is not specified. Default is /tmp.</dd>
 <dt>&lt;&#8211;parallelism=N&gt;</dt>
 <dd> Allow up to N reducers to run in parallel. Default is the number of CPUs in the machine.</dd></dl>
 <p> This module also supports the standard fsdb options:</p>
@@ -78,4 +78,4 @@ description: "dbmultistats – run dbcolstats over each group of inputs identifi
 <p> Fsdb. dbmapreduce. dbcolstats.</p>
 <h2>AUTHOR and COPYRIGHT</h2>
 <p> Copyright (C) 1991-2015 by John Heidemann &lt;johnh [at] isi.edu&gt; </p>
-<p> This program is distributed under terms of the <font SIZE="-1">GNU</font> general public license, version 2. See the file <font SIZE="-1">COPYING</font> with the distribution for details. </p>
+<p> This program is distributed under terms of the GNU general public license, version 2. See the file COPYING with the distribution for details. </p>

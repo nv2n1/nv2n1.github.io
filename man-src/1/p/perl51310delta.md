@@ -19,13 +19,13 @@ description: "perl51310delta – what is new for perl v5.13.10"
 <h3>Add \p{Titlecase} as a synonym for \p{Title}</h3>
 <p> This synonym is added for symmetry with the Unicode property names <tt>&quot;\p{Uppercase}&quot;</tt> and <tt>&quot;\p{Lowercase}&quot;</tt>.</p>
 <h3>New regular expression modifier option /aa</h3>
-<p> Doubling the <tt>&quot;/a&quot;</tt> regular expression modifier increases its effect, so that in case-insensitive matching, no <font SIZE="-1">ASCII</font> character will match a non-ASCII character. For example, normally, </p>
+<p> Doubling the <tt>&quot;/a&quot;</tt> regular expression modifier increases its effect, so that in case-insensitive matching, no ASCII character will match a non-ASCII character. For example, normally, </p>
 <pre>
     'k' =~ /\N{KELVIN SIGN}/i
 </pre>
 <p> will match; it won&#8217;t under <tt>&quot;/aa&quot;</tt>.</p>
 <h3>New warnings categories for problematic (non-)Unicode code points.</h3>
-<p> Three new warnings subcategories of &lt;utf8&gt; have been added. These allow you to turn off warnings for their covered events, while allowing the other <font SIZE="-1">UTF-8</font> warnings to remain on. The three categories are: <tt>&quot;surrogate&quot;</tt> when <font SIZE="-1">UTF-16</font> surrogates are encountered; <tt>&quot;nonchar&quot;</tt> when Unicode non-character code points are encountered; and <tt>&quot;non_unicode&quot;</tt> when code points that are above the legal Unicode maximum of 0x10FFFF are encountered.</p>
+<p> Three new warnings subcategories of &lt;utf8&gt; have been added. These allow you to turn off warnings for their covered events, while allowing the other UTF-8 warnings to remain on. The three categories are: <tt>&quot;surrogate&quot;</tt> when UTF-16 surrogates are encountered; <tt>&quot;nonchar&quot;</tt> when Unicode non-character code points are encountered; and <tt>&quot;non_unicode&quot;</tt> when code points that are above the legal Unicode maximum of 0x10FFFF are encountered.</p>
 <h2>Incompatible Changes</h2>
 <h3>Most \p{} properties are now immune from case-insensitive matching</h3>
 <p> For most Unicode properties, it doesn&#8217;t make sense to have them match differently under <tt>&quot;/i&quot;</tt> case-insensitive matching than not. And doing so leads to unexpected results and potential security holes. For example </p>
@@ -37,12 +37,12 @@ description: "perl51310delta – what is new for perl v5.13.10"
 <h3>regex: \p{} in pattern implies Unicode semantics</h3>
 <p> Now, a Unicode property match specified in the pattern will indicate that the pattern is meant for matching according to Unicode rules (e40e74f)</p>
 <h3>add <i>GvCV_set()</i> and <i>GvGP_set()</i> macros and change <i>GvGP()</i></h3>
-<p> This allows a future commit to eliminate some backref magic between <font SIZE="-1">GV</font> and CVs, which will require complete control over assignment to the gp_cv slot. </p>
+<p> This allows a future commit to eliminate some backref magic between GV and CVs, which will require complete control over assignment to the gp_cv slot. </p>
 <p> If you&#8217;ve been using <i>GvGP()</i> in lvalue context this change will break your code, you should use <i>GvGP_set()</i> instead. (c43ae56)</p>
-<h3>_swash_inversion_hash is no longer exported as part of the <font SIZE="-1">API</font></h3>
-<p> This function shouldn&#8217;t be called from <font SIZE="-1">XS</font> code. (4c2e113)</p>
+<h3>_swash_inversion_hash is no longer exported as part of the API</h3>
+<p> This function shouldn&#8217;t be called from XS code. (4c2e113)</p>
 <h3>Unreferenced objects in global destruction</h3>
-<p> The fix for [perl #36347], which made sure that destructors were called on unreferenced objects, broke the tests for three <font SIZE="-1">CPAN</font> modules, which apparently rely on the bug. </p>
+<p> The fix for [perl #36347], which made sure that destructors were called on unreferenced objects, broke the tests for three CPAN modules, which apparently rely on the bug. </p>
 <p> To provide more time for fixing them (as this is such a minor bug), we have reverted the fix until after perl 5.14.0. </p>
 <p> This resolves [perl #82542] and other related tickets.</p>
 <h3>close on shared pipes</h3>
@@ -50,10 +50,10 @@ description: "perl51310delta – what is new for perl v5.13.10"
 <h2>Deprecations</h2>
 <dl>
 <dt>Deprecated Modules</dt>
-<dd> The following modules will be removed from the core distribution in a future release, and should be installed from <font SIZE="-1">CPAN</font> instead. Distributions on <font SIZE="-1">CPAN</font> which require these should add them to their prerequisites. The core versions of these modules warnings will issue a deprecation warning. </dd>
+<dd> The following modules will be removed from the core distribution in a future release, and should be installed from CPAN instead. Distributions on CPAN which require these should add them to their prerequisites. The core versions of these modules warnings will issue a deprecation warning. </dd>
 <p> If you ship a packaged version of Perl, either alone or as part of a larger system, then you should carefully consider the repercussions of core module deprecations. You may want to consider shipping your default build of Perl with packages for some or all deprecated modules which install into <tt>&quot;vendor&quot;</tt> or <tt>&quot;site&quot;</tt> perl library directories. This will inhibit the deprecation warnings. </p>
 <p> Alternatively, you may want to consider patching <i>lib/deprecate.pm</i> to provide deprecation warnings specific to your packaging system or distribution of Perl, consistent with how your packaging system or distribution manages a staged transition from a release where the installation of a single package provides the given functionality, to a later release where the system administrator needs to know to install multiple packages to get that same functionality. </p>
-<p> You can silence these deprecation warnings by installing the modules in question from <font SIZE="-1">CPAN</font>. To install the latest version of all of them, just install <tt>&quot;Task::Deprecations::5_14&quot;</tt>.</p>
+<p> You can silence these deprecation warnings by installing the modules in question from CPAN. To install the latest version of all of them, just install <tt>&quot;Task::Deprecations::5_14&quot;</tt>.</p>
 <dl>
 <dl>
 <dt>Devel::DProf</dt>
@@ -63,12 +63,12 @@ description: "perl51310delta – what is new for perl v5.13.10"
 </dl>
 </dl>
 <h3>User-defined case-mapping</h3>
-<p> This feature is being deprecated due to its many issues, as documented in &#8220;User-Defined Case Mappings (for serious hackers only)&#8221; in perlunicode. It is planned to remove this feature in Perl 5.16. A <font SIZE="-1">CPAN</font> module providing improved functionality is being prepared for release by the time 5.14 is.</p>
+<p> This feature is being deprecated due to its many issues, as documented in &#8220;User-Defined Case Mappings (for serious hackers only)&#8221; in perlunicode. It is planned to remove this feature in Perl 5.16. A CPAN module providing improved functionality is being prepared for release by the time 5.14 is.</p>
 <h2>Modules and Pragmata</h2>
 <h3>New Modules and Pragmata</h3>
 <dl>
 <dt>&bull;</dt>
-<dd> <tt>&quot;CPAN::Meta&quot;</tt> version 2.110440 has been added as a dual-life module. It provides a standard library to read, interpret and write <font SIZE="-1">CPAN</font> distribution metadata files (e.g. <font SIZE="-1">META</font>.json and <font SIZE="-1">META</font>.yml) which describes a distribution, its contents, and the requirements for building it and installing it. The latest <font SIZE="-1">CPAN</font> distribution metadata specification is included as <tt>&quot;CPAN::Meta::Spec&quot;</tt> and notes on changes in the specification over time are given in <tt>&quot;CPAN::Meta::History&quot;</tt>.</dd>
+<dd> <tt>&quot;CPAN::Meta&quot;</tt> version 2.110440 has been added as a dual-life module. It provides a standard library to read, interpret and write CPAN distribution metadata files (e.g. META.json and META.yml) which describes a distribution, its contents, and the requirements for building it and installing it. The latest CPAN distribution metadata specification is included as <tt>&quot;CPAN::Meta::Spec&quot;</tt> and notes on changes in the specification over time are given in <tt>&quot;CPAN::Meta::History&quot;</tt>.</dd>
 <dt>&bull;</dt>
 <dd> <tt>&quot;Version::Requirements&quot;</tt> version 0.101020 has been added as a dual-life module. It provides a standard library to model and manipulates module prerequisites and version constraints as defined in the CPAN::Meta::Spec.</dd></dl>
 <h3>Updated Modules and Pragmata</h3>
@@ -77,15 +77,15 @@ description: "perl51310delta – what is new for perl v5.13.10"
 <dd> <tt>&quot;B&quot;</tt> has been upgraded from version 1.27 to 1.28.</dd>
 <dt>&bull;</dt>
 <dd> <tt>&quot;Carp&quot;</tt> has been upgraded from version 1.19 to 1.20. </dd>
-<p> [perl #82854] It now avoids using regular expressions that cause perl to load its Unicode tables, in order to avoid the &#8216;<font SIZE="-1">BEGIN</font> not safe after errors&#8217; error that will ensue if there has been a syntax error.</p>
+<p> [perl #82854] It now avoids using regular expressions that cause perl to load its Unicode tables, in order to avoid the &#8216;BEGIN not safe after errors&#8217; error that will ensue if there has been a syntax error.</p>
 <dt>&bull;</dt>
 <dd> <tt>&quot;CGI&quot;</tt> has been upgraded from version 3.51 to 3.52</dd>
 <dt>&bull;</dt>
 <dd> <tt>&quot;CPAN&quot;</tt> has been upgraded from version 1.94_64 to 1.94_65 </dd>
-<p> Includes support for <font SIZE="-1">META</font>.json and <font SIZE="-1">MYMETA</font>.json.</p>
+<p> Includes support for META.json and MYMETA.json.</p>
 <dt>&bull;</dt>
 <dd> <tt>&quot;CPANPLUS&quot;</tt> has been upgraded from version 0.9011 to 0.9101 </dd>
-<p> Includes support for <font SIZE="-1">META</font>.json and <font SIZE="-1">MYMETA</font>.json and a change to using Digest::SHA for <font SIZE="-1">CPAN</font> checksums.</p>
+<p> Includes support for META.json and MYMETA.json and a change to using Digest::SHA for CPAN checksums.</p>
 <dt>&bull;</dt>
 <dd> <tt>&quot;deprecate&quot;</tt> has been upgraded from version 0.01 to 0.02.</dd>
 <dt>&bull;</dt>
@@ -94,7 +94,7 @@ description: "perl51310delta – what is new for perl v5.13.10"
 <dt>&bull;</dt>
 <dd> <tt>&quot;Devel::DProf&quot;</tt> has been upgraded from version 20080331.00 to 20110217.00. </dd>
 <p> Merely loading <tt>&quot;Devel::DProf&quot;</tt> now no longer triggers profiling to start. <tt>&quot;use Devel::DProf&quot;</tt> and <tt>&quot;perl -d:DProf ...&quot;</tt> still behave as before and start the profiler. </p>
-<p> <font SIZE="-1">NOTE:</font> <tt>&quot;Devel::DProf&quot;</tt> is deprecated and will be removed from a future version of Perl. We strongly recommend that you install and use Devel::NYTProf instead, as it offers significantly improved profiling and reporting.</p>
+<p> NOTE: <tt>&quot;Devel::DProf&quot;</tt> is deprecated and will be removed from a future version of Perl. We strongly recommend that you install and use Devel::NYTProf instead, as it offers significantly improved profiling and reporting.</p>
 <dt>&bull;</dt>
 <dd> <tt>&quot;DynaLoader&quot;</tt> has been upgraded from version 1.12 to 1.13. </dd>
 <p> [perl #84358] It no longer inherits from AutoLoader; hence it no longer produces weird error messages for unsuccessful method calls on classes that inherit from DynaLoader.</p>
@@ -110,7 +110,7 @@ description: "perl51310delta – what is new for perl v5.13.10"
 <dt>&bull;</dt>
 <dd> <tt>&quot;Module::Build&quot;</tt> has been upgraded from version 0.3607 to 0.37_05. </dd>
 <p> A notable change is the deprecation of several modules. Module::Build::Version has been deprecated and Module::Build now relies directly upon version. Module::Build::ModuleInfo has been deprecated in favor of a standalone copy of it called Module::Metadata. Module::Build::YAML has been deprecated in favor of CPAN::Meta::YAML. </p>
-<p> Module::Build now also generates <font SIZE="-1">META</font>.json and <font SIZE="-1">MYMETA</font>.json files in accordance with version 2 of the <font SIZE="-1">CPAN</font> distribution metadata specification, CPAN::Meta::Spec. The older format <font SIZE="-1">META</font>.yml and <font SIZE="-1">MYMETA</font>.yml files are still generated, as well.</p>
+<p> Module::Build now also generates META.json and MYMETA.json files in accordance with version 2 of the CPAN distribution metadata specification, CPAN::Meta::Spec. The older format META.yml and MYMETA.yml files are still generated, as well.</p>
 <dt>&bull;</dt>
 <dd> <tt>&quot;Module::Load::Conditional&quot;</tt> has been upgraded from version 0.40 to 0.44</dd>
 <dt>&bull;</dt>
@@ -120,7 +120,7 @@ description: "perl51310delta – what is new for perl v5.13.10"
 <p> The documentation has greatly improved. See &#8220;Documentation&#8221; below.</p>
 <dt>&bull;</dt>
 <dd> <tt>&quot;Parse::CPAN::Meta&quot;</tt> has been upgraded from version 1.40 to 1.4401. </dd>
-<p> The latest Parse::CPAN::Meta can now read <font SIZE="-1">YAML</font> or <font SIZE="-1">JSON</font> files using CPAN::Meta::YAML and <font SIZE="-1">JSON::PP</font>, which are now part of the Perl core.</p>
+<p> The latest Parse::CPAN::Meta can now read YAML or JSON files using CPAN::Meta::YAML and JSON::PP, which are now part of the Perl core.</p>
 <dt>&bull;</dt>
 <dd> <tt>&quot;re&quot;</tt> has been upgraded from version 0.16 to 0.17. </dd>
 <p> It now supports the double-a flag: <tt>&quot;use re '/aa';&quot;</tt> </p>
@@ -130,7 +130,7 @@ description: "perl51310delta – what is new for perl v5.13.10"
 <dd> <tt>&quot;Term::UI&quot;</tt> has been upgraded from version 0.24 to 0.26</dd>
 <dt>&bull;</dt>
 <dd> <tt>&quot;Unicode::Collate&quot;</tt> has been upgraded from version 0.68 to 0.72 </dd>
-<p> This also sees the switch from using the pure-perl version of this module to the <font SIZE="-1">XS</font> version.`</p>
+<p> This also sees the switch from using the pure-perl version of this module to the XS version.`</p>
 <dt>&bull;</dt>
 <dd> <tt>&quot;VMS::DCLsym&quot;</tt> has been upgraded from version 1.04 to 1.05. </dd>
 <p> Two bugs have been fixed [perl #84086]: </p>
@@ -164,7 +164,7 @@ description: "perl51310delta – what is new for perl v5.13.10"
 <p> <i>Miscellaneous</i></p>
 <dl>
 <dt>&bull;</dt>
-<dd> Many <font SIZE="-1">POD</font> related <font SIZE="-1">RT</font> bugs and other issues which are too numerous to enumerate have been solved by Michael Stevens.</dd></dl>
+<dd> Many POD related RT bugs and other issues which are too numerous to enumerate have been solved by Michael Stevens.</dd></dl>
 <h2>Diagnostics</h2>
 <p> The following additions or changes have been made to diagnostic output, including warnings and fatal error messages. For the complete list of diagnostic messages, see perldiag.</p>
 <h3>New Diagnostics</h3>
@@ -201,7 +201,7 @@ description: "perl51310delta – what is new for perl v5.13.10"
 <dl>
 <dt>&bull;</dt>
 <dd> make reg_eval_scope.t TODOs consistently fail (daaf7ac) </dd>
-<p> Some of the <font SIZE="-1">TODO</font> tests in reg_eval_scope.t spuriously passed under non-threaded builds. Make the tests harder so they always fail. </p>
+<p> Some of the TODO tests in reg_eval_scope.t spuriously passed under non-threaded builds. Make the tests harder so they always fail. </p>
 <p> Since one of the key bugs in (?{..}) is the trashing of the parent pad, add some extra lexical vars to the parent scope and check they&#8217;re still there at the end.</p>
 <dt>&bull;</dt>
 <dd> Stop EU::CBuilder&#8217;s tests from failing in parallel (cbf59d5) </dd>
@@ -232,7 +232,7 @@ description: "perl51310delta – what is new for perl v5.13.10"
 <dd> [perl #82988] Skip hanging taint.t test on MirBSD 10 (1fb83d0) </dd>
 <p> Skip a hanging test under MirBSD that was already being skipped under OpenBSD.</p>
 <dt>&bull;</dt>
-<dd> Previously if you build perl with a shared libperl.so on MirBSD (the default config), it will work up to the installation; however, once installed, it will be unable to find libperl. Treat path handling like in the other <font SIZE="-1">BSD</font> dialects.</dd></dl>
+<dd> Previously if you build perl with a shared libperl.so on MirBSD (the default config), it will work up to the installation; however, once installed, it will be unable to find libperl. Treat path handling like in the other BSD dialects.</dd></dl>
 </dl>
 <dl>
 </dl>
@@ -242,17 +242,17 @@ description: "perl51310delta – what is new for perl v5.13.10"
 <dt>&bull;</dt>
 <dd> Fix harmless invalid read in <i>Perl_re_compile()</i> (f6d9469) </dd>
 <p> [perl #2460] described a case where electric fence reported an invalid read. This could be reproduced under valgrind with blead and -e&#8217;/x/&#8217;, but only on a non-debugging build. </p>
-<p> This was because it was checking for certain pairs of nodes (e.g. <font SIZE="-1">BOL</font> + <font SIZE="-1">END</font>) and wasn&#8217;t allowing for <font SIZE="-1">EXACT</font> nodes, which have the string at the next node position when using a naive <font SIZE="-1">NEXTOPER</font>(first). In the non-debugging build, the nodes aren&#8217;t initialised to zero, and a 1-char <font SIZE="-1">EXACT</font> node isn&#8217;t long enough to spill into the type field of the &#8220;next node&#8221;. </p>
-<p> Fix this by only using <font SIZE="-1">NEXTOPER</font>(first) when we know the first node is kosher.</p>
+<p> This was because it was checking for certain pairs of nodes (e.g. BOL + END) and wasn&#8217;t allowing for EXACT nodes, which have the string at the next node position when using a naive NEXTOPER(first). In the non-debugging build, the nodes aren&#8217;t initialised to zero, and a 1-char EXACT node isn&#8217;t long enough to spill into the type field of the &#8220;next node&#8221;. </p>
+<p> Fix this by only using NEXTOPER(first) when we know the first node is kosher.</p>
 <dt>&bull;</dt>
 <dd> Break out the generated function <i>Perl_keywords()</i> into <i>keywords.c</i>, a new file. (26ea9e1) </dd>
-<p> As it and <i>Perl_yylex()</i> both need <font SIZE="-1">FEATURE_IS_ENABLED</font>, <i>feature_is_enabled()</i> is no longer static, and the two macro definitions move from toke.c to perl.h </p>
+<p> As it and <i>Perl_yylex()</i> both need FEATURE_IS_ENABLED, <i>feature_is_enabled()</i> is no longer static, and the two macro definitions move from toke.c to perl.h </p>
 <p> Previously, one had to cut and paste the output of perl_keywords.pl into the middle of toke.c, and it was not clear that it was generated code.</p>
 <dt>&bull;</dt>
 <dd> A lot of tests have been ported from Test to Test::More, e.g. in 3842ad6.</dd>
 <dt>&bull;</dt>
 <dd> Increase default PerlIO buffer size. (b83080d) </dd>
-<p> The previous default size of a PerlIO buffer (4096 bytes) has been increased to the larger of 8192 bytes and your local <font SIZE="-1">BUFSIZ</font>. Benchmarks show that doubling this decade-old default increases read and write performance in the neighborhood of 25% to 50% when using the default layers of perlio on top of unix. To choose a non-default size, such as to get back the old value or to obtain and even larger value, configure with: </p>
+<p> The previous default size of a PerlIO buffer (4096 bytes) has been increased to the larger of 8192 bytes and your local BUFSIZ. Benchmarks show that doubling this decade-old default increases read and write performance in the neighborhood of 25% to 50% when using the default layers of perlio on top of unix. To choose a non-default size, such as to get back the old value or to obtain and even larger value, configure with: </p>
 <pre>
      ./Configure -Accflags=-DPERLIOBUF_DEFAULT_BUFSIZ=N
 </pre>
@@ -262,10 +262,10 @@ description: "perl51310delta – what is new for perl v5.13.10"
 <dt>&bull;</dt>
 <dd> A Unicode <tt>&quot;\p{}&quot;</tt> property match in a regular expression pattern will now force Unicode rules for the rest of the regular expression</dd>
 <dt>&bull;</dt>
-<dd> [perl #38456] binmode <font SIZE="-1">FH</font>, &#8220;:crlf&#8221; only modifies top crlf layer (7826b36) </dd>
+<dd> [perl #38456] binmode FH, &#8220;:crlf&#8221; only modifies top crlf layer (7826b36) </dd>
 <p> When pushed on top of the stack, crlf will no longer enable crlf layers lower in the stack. This will prevent unexpected results.</p>
 <dt>&bull;</dt>
-<dd> Fix &#8216;raw&#8217; layer for <font SIZE="-1">RT</font> #80764 (ecfd064) </dd>
+<dd> Fix &#8216;raw&#8217; layer for RT #80764 (ecfd064) </dd>
 <p> Made a &#8216;:raw&#8217; open do what it advertises to do (first open the file, then binmode it), instead of leaving off the top layer.</p>
 <dt>&bull;</dt>
 <dd> Use PerlIOBase_open for pop, utf8 and bytes layers (c0888ac) </dd>
@@ -283,7 +283,7 @@ description: "perl51310delta – what is new for perl v5.13.10"
 <dt>&bull;</dt>
 <dd> [perl #83194] Combining the vector (%v) flag and dynamic precision would cause sprintf to confuse the order of its arguments, making it treat the string as the precision and vice versa.</dd>
 <dt>&bull;</dt>
-<dd> [perl #77692] Sometimes the <font SIZE="-1">UTF8</font> length cache would not be reset on a value returned by substr, causing <tt>&quot;length(substr($uni_string,...))&quot;</tt> to give wrong answers. With <tt>&quot;${^UTF8CACHE}&quot;</tt> set to -1, it would produce a &#8216;panic&#8217; error message, too.</dd>
+<dd> [perl #77692] Sometimes the UTF8 length cache would not be reset on a value returned by substr, causing <tt>&quot;length(substr($uni_string,...))&quot;</tt> to give wrong answers. With <tt>&quot;${^UTF8CACHE}&quot;</tt> set to -1, it would produce a &#8216;panic&#8217; error message, too.</dd>
 <dt>&bull;</dt>
 <dd> During the restoration of a localised typeglob on scope exit, any destructors called as a result would be able to see the typeglob in an inconsistent state, containing freed entries, which could result in a crash. This would affect code like this: </dd>
 <pre><code>
@@ -301,16 +301,16 @@ eval{die bless[]};
 <dt>&bull;</dt>
 <dd> Several contexts no longer allow a Unicode character to begin a word that should never begin words, for an example an accent that must follow another character previously could precede all other characters.</dd>
 <dt>&bull;</dt>
-<dd> Case insensitive matching in regular expressions compiled under <tt>&quot;use locale&quot;</tt> now works much more sanely when the pattern and/or target string are encoded in <font SIZE="-1">UTF-8</font>. Previously, under these conditions the localeness was completely lost. Now, code points above 255 are treated as Unicode, but code points between 0 and 255 are treated using the current locale rules, regardless of whether the pattern or string are encoded in <font SIZE="-1">UTF-8</font>. The few case insensitive matches that cross the 255/256 boundary are not allowed. For example, 0xFF does not caselessly match the character at 0x178, <font SIZE="-1">LATIN</font> <font SIZE="-1">CAPITAL</font> <font SIZE="-1">LETTER</font> Y <font SIZE="-1">WITH</font> <font SIZE="-1">DIAERESIS</font>, because 0xFF may not be <font SIZE="-1">LATIN</font> <font SIZE="-1">SMALL</font> <font SIZE="-1">LETTER</font> Y in the current locale, and Perl has no way of knowing if that character even exists in the locale, much less what code point it is.</dd></dl>
+<dd> Case insensitive matching in regular expressions compiled under <tt>&quot;use locale&quot;</tt> now works much more sanely when the pattern and/or target string are encoded in UTF-8. Previously, under these conditions the localeness was completely lost. Now, code points above 255 are treated as Unicode, but code points between 0 and 255 are treated using the current locale rules, regardless of whether the pattern or string are encoded in UTF-8. The few case insensitive matches that cross the 255/256 boundary are not allowed. For example, 0xFF does not caselessly match the character at 0x178, LATIN CAPITAL LETTER Y WITH DIAERESIS, because 0xFF may not be LATIN SMALL LETTER Y in the current locale, and Perl has no way of knowing if that character even exists in the locale, much less what code point it is.</dd></dl>
 <h2>Acknowledgements</h2>
 <p> Perl 5.13.10 represents approximately one month of development since Perl 5.13.9 and contains approximately 63000 lines of changes across 609 files from 38 authors and committers: </p>
 <p> Abigail, Alexander Hartmaier, brian d foy, Charles Bailey, Chip Salzenberg, Chris &#8216;BinGOs&#8217; Williams, Craig A. Berry, Curtis Jewell, Dave Rolsky, David Golden, David Leadbeater, David Mitchell, David Wheeler, Father Chrysostomos, Florian Ragwitz, Franz Fasching, George Greer, H.Merijn Brand, Hongwen Qiu, Hugo van der Sanden, Jay Hannah, Jesse Vincent, Karl Williamson, Larwan Berke, Leon Timmermans, Michael Breen, Michael Stevens, Nicholas Clark, Noirin Shirley, Paul Evans, Peter John Acklam, Ricardo Signes, Robin Barker, Steven Schubiger, Tom Christiansen, Tony Cook, Zsban Ambrus and var Arnfjo.rd<i>&#8211;</i> Bjarmason</p>
 <h2>Reporting Bugs</h2>
 <p> If you find what you think is a bug, you might check the articles recently posted to the comp.lang.perl.misc newsgroup and the perl bug database at <a rel="nofollow" href="http://rt.perl.org/perlbug/">http://rt.perl.org/perlbug/</a> . There may also be information at <a rel="nofollow" href="http://www.perl.org/">http://www.perl.org/</a> , the Perl Home Page. </p>
 <p> If you believe you have an unreported bug, please run the perlbug program included with your release. Be sure to trim your bug down to a tiny but sufficient test case. Your bug report, along with the output of <tt>&quot;perl -V&quot;</tt>, will be sent off to perlbug [at] perl.org to be analysed by the Perl porting team. </p>
-<p> If the bug you are reporting has security implications, which make it inappropriate to send to a publicly archived mailing list, then please send it to perl5-security-report [at] perl.org. This points to a closed subscription unarchived mailing list, which includes all the core committers, who be able to help assess the impact of issues, figure out a resolution, and help co-ordinate the release of patches to mitigate or fix the problem across all platforms on which Perl is supported. Please only use this address for security issues in the Perl core, not for modules independently distributed on <font SIZE="-1">CPAN</font>.</p>
+<p> If the bug you are reporting has security implications, which make it inappropriate to send to a publicly archived mailing list, then please send it to perl5-security-report [at] perl.org. This points to a closed subscription unarchived mailing list, which includes all the core committers, who be able to help assess the impact of issues, figure out a resolution, and help co-ordinate the release of patches to mitigate or fix the problem across all platforms on which Perl is supported. Please only use this address for security issues in the Perl core, not for modules independently distributed on CPAN.</p>
 <h2>SEE ALSO</h2>
 <p> The <i>Changes</i> file for an explanation of how to view exhaustive details on what changed. </p>
-<p> The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. </p>
-<p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
+<p> The <i></i><i>INSTALL</i><i></i> file for how to build Perl. </p>
+<p> The <i></i><i>README</i><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information. </p>

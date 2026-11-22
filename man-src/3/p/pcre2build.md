@@ -18,14 +18,14 @@ description: "PCRE2 – Perl-compatible regular expressions (revised API)"
 <p> The following sections include descriptions of &quot;on/off&quot; options whose names begin with &#8211;enable or &#8211;disable. Because of the way that <code>configure</code> works, &#8211;enable and &#8211;disable always come in pairs, so the complementary option always exists as well, but as it specifies the default, it is not described. Options that specify values have names that start with &#8211;with. At the end of a <code>configure</code> run, a summary of the configuration is output.</p>
 <h2>Building 8-Bit, 16-Bit And 32-Bit Libraries</h2>
 <p>By default, a library called <code>libpcre2-8</code> is built, containing functions that take string arguments contained in arrays of bytes, interpreted either as single-byte characters, or UTF-8 strings. You can also build two other libraries, called <code>libpcre2-16</code> and <code>libpcre2-32</code>, which process strings that are contained in arrays of 16-bit and 32-bit code units, respectively. These can be interpreted either as single-unit characters or UTF-16/UTF-32 strings. To build these additional libraries, add one or both of the following to the <code>configure</code> command: </p>
-<p>&nbsp;<wbr>&nbsp;&#8211;enable-pcre2-16<br />
+<p>&nbsp;<wbr>&nbsp;&#8211;enable-pcre2-16<br/>
 &nbsp;<wbr>&nbsp;&#8211;enable-pcre2-32 </p>
 <p> If you do not want the 8-bit library, add </p>
 <p>&nbsp;<wbr>&nbsp;&#8211;disable-pcre2-8 </p>
 <p> as well. At least one of the three libraries must be built. Note that the POSIX wrapper is for the 8-bit library only, and that <code>pcre2grep</code> is an 8-bit program. Neither of these are built if you select only the 16-bit or 32-bit libraries.</p>
 <h2>Building Shared And Static Libraries</h2>
 <p>The Autotools PCRE2 building process uses <code>libtool</code> to build both shared and static libraries by default. You can suppress an unwanted library by adding one of </p>
-<p>&nbsp;<wbr>&nbsp;&#8211;disable-shared<br />
+<p>&nbsp;<wbr>&nbsp;&#8211;disable-shared<br/>
 &nbsp;<wbr>&nbsp;&#8211;disable-static </p>
 <p> to the <code>configure</code> command.</p>
 <h2>Unicode And Utf Support</h2>
@@ -99,22 +99,22 @@ description: "PCRE2 – Perl-compatible regular expressions (revised API)"
 <p>By default <code>pcre2grep</code> supports the use of callouts with string arguments within the patterns it is matching. There are two kinds: one that generates output using local code, and another that calls an external program or script. If &#8211;disable-pcre2grep-callout-fork is added to the <code>configure</code> command, only the first kind of callout is supported; if &#8211;disable-pcre2grep-callout is used, all callouts are completely ignored. For more details of <code>pcre2grep</code> callouts, see the <code>pcre2grep</code> documentation.</p>
 <h2>Pcre2Grep Options For Compressed File Support</h2>
 <p>By default, <code>pcre2grep</code> reads all files as plain text. You can build it so that it recognizes files whose names end in <code>.gz</code> or <code>.bz2</code>, and reads them with <code>libz</code> or <code>libbz2</code>, respectively, by adding one or both of </p>
-<p>&nbsp;<wbr>&nbsp;&#8211;enable-pcre2grep-libz<br />
+<p>&nbsp;<wbr>&nbsp;&#8211;enable-pcre2grep-libz<br/>
 &nbsp;<wbr>&nbsp;&#8211;enable-pcre2grep-libbz2 </p>
 <p> to the <code>configure</code> command. These options naturally require that the relevant libraries are installed on your system. Configuration will fail if they are not.</p>
 <h2>Pcre2Grep Buffer Size</h2>
 <p><code>pcre2grep</code> uses an internal buffer to hold a &quot;window&quot; on the file it is scanning, in order to be able to output &quot;before&quot; and &quot;after&quot; lines when it finds a match. The default starting size of the buffer is 20KiB. The buffer itself is three times this size, but because of the way it is used for holding &quot;before&quot; lines, the longest line that is guaranteed to be processable is the notional buffer size. If a longer line is encountered, <code>pcre2grep</code> automatically expands the buffer, up to a specified maximum size, whose default is 1MiB or the starting size, whichever is the larger. You can change the default parameter values by adding, for example, </p>
-<p>&nbsp;<wbr>&nbsp;&#8211;with-pcre2grep-bufsize=51200<br />
+<p>&nbsp;<wbr>&nbsp;&#8211;with-pcre2grep-bufsize=51200<br/>
 &nbsp;<wbr>&nbsp;&#8211;with-pcre2grep-max-bufsize=2097152 </p>
 <p> to the <code>configure</code> command. The caller of pcre2grep can override these values by using &#8211;buffer-size and &#8211;max-buffer-size on the command line.</p>
 <h2>Pcre2Test Option For Libreadline Support</h2>
 <p>If you add one of </p>
-<p>&nbsp;<wbr>&nbsp;&#8211;enable-pcre2test-libreadline<br />
+<p>&nbsp;<wbr>&nbsp;&#8211;enable-pcre2test-libreadline<br/>
 &nbsp;<wbr>&nbsp;&#8211;enable-pcre2test-libedit </p>
 <p> to the <code>configure</code> command, <code>pcre2test</code> is linked with the <code>libreadline</code> or<code>libedit</code> library, respectively, and when its input is from a terminal, it reads it using the <code>readline()</code> function. This provides line-editing and history facilities. Note that <code>libreadline</code> is GPL-licensed, so if you distribute a binary of <code>pcre2test</code> linked in this way, there may be licensing issues. These can be avoided by linking instead with <code>libedit</code>, which has a BSD licence. </p>
 <p> Setting &#8211;enable-pcre2test-libreadline causes the <code>-lreadline</code> option to be added to the <code>pcre2test</code> build. In many operating environments with a sytem-installed readline library this is sufficient. However, in some environments (e.g. if an unmodified distribution version of readline is in use), some extra configuration may be necessary. The INSTALL file for <code>libreadline</code> says this: </p>
-<p>&nbsp;<wbr>&nbsp;&quot;Readline uses the termcap functions, but does not link with<br />
-&nbsp;<wbr>&nbsp;the termcap or curses library itself, allowing applications<br />
+<p>&nbsp;<wbr>&nbsp;&quot;Readline uses the termcap functions, but does not link with<br/>
+&nbsp;<wbr>&nbsp;the termcap or curses library itself, allowing applications<br/>
 &nbsp;<wbr>&nbsp;which link with readline the to choose an appropriate library.&quot; </p>
 <p> If your environment has not been set up so that an appropriate library is automatically included, you may need to add something like </p>
 <p>&nbsp;<wbr>&nbsp;LIBS=&quot;-ncurses&quot; </p>

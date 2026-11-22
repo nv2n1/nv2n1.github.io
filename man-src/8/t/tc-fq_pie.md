@@ -49,18 +49,18 @@ description: "FQ-PIE – Flow Queue Proportional Integral controller Enhanced"
 <h3>[<code>no_</code>]<code>dq_rate_estimator</code></h3>
 <p><code>dq_rate_estimator</code> can be used to calculate queue delay using Little&#8217;s Law, <code>no_dq_rate_estimator</code> can be used to calculate queue delay using timestamp. By default, <code>dq_rate_estimator</code> is turned off.</p>
 <h2>Examples</h2>
-<p># tc qdisc add dev eth0 root fq_pie<br />
- # tc -s qdisc show dev eth0<br />
- qdisc fq_pie 8001: root refcnt 2 limit 10240p flows 1024 target 15.0ms tupdate 16.0ms alpha 2 beta 20 quantum 1514b memory_limit 32Mb ecn_prob 10<br />
-&nbsp;Sent 159173586 bytes 105261 pkt&nbsp;(dropped 24, overlimits 0 requeues 0)<br />
-&nbsp;backlog 75700b 50p requeues 0<br />
-&nbsp;<wbr>&nbsp;pkts_in 105311 overlimit 0 overmemory 0 dropped 24 ecn_mark 0<br />
-&nbsp;<wbr>&nbsp;new_flow_count 7332 new_flows_len 0 old_flows_len 4 memory_used 108800 # tc qdisc add dev eth0 root fq_pie dq_rate_estimator<br />
- # tc -s qdisc show dev eth0<br />
- qdisc fq_pie 8001: root refcnt 2 limit 10240p flows 1024 target 15.0ms tupdate 16.0ms alpha 2 beta 20 quantum 1514b memory_limit 32Mb ecn_prob 10 dq_rate_estimator<br />
-&nbsp;Sent 8263620 bytes 5550 pkt&nbsp;(dropped 4, overlimits 0 requeues 0)<br />
-&nbsp;backlog 805448b 532p requeues 0<br />
-&nbsp;<wbr>&nbsp;pkts_in 6082 overlimit 0 overmemory 0 dropped 4 ecn_mark 0<br />
+<p># tc qdisc add dev eth0 root fq_pie<br/>
+ # tc -s qdisc show dev eth0<br/>
+ qdisc fq_pie 8001: root refcnt 2 limit 10240p flows 1024 target 15.0ms tupdate 16.0ms alpha 2 beta 20 quantum 1514b memory_limit 32Mb ecn_prob 10<br/>
+&nbsp;Sent 159173586 bytes 105261 pkt&nbsp;(dropped 24, overlimits 0 requeues 0)<br/>
+&nbsp;backlog 75700b 50p requeues 0<br/>
+&nbsp;<wbr>&nbsp;pkts_in 105311 overlimit 0 overmemory 0 dropped 24 ecn_mark 0<br/>
+&nbsp;<wbr>&nbsp;new_flow_count 7332 new_flows_len 0 old_flows_len 4 memory_used 108800 # tc qdisc add dev eth0 root fq_pie dq_rate_estimator<br/>
+ # tc -s qdisc show dev eth0<br/>
+ qdisc fq_pie 8001: root refcnt 2 limit 10240p flows 1024 target 15.0ms tupdate 16.0ms alpha 2 beta 20 quantum 1514b memory_limit 32Mb ecn_prob 10 dq_rate_estimator<br/>
+&nbsp;Sent 8263620 bytes 5550 pkt&nbsp;(dropped 4, overlimits 0 requeues 0)<br/>
+&nbsp;backlog 805448b 532p requeues 0<br/>
+&nbsp;<wbr>&nbsp;pkts_in 6082 overlimit 0 overmemory 0 dropped 4 ecn_mark 0<br/>
 &nbsp;<wbr>&nbsp;new_flow_count 94 new_flows_len 0 old_flows_len 8 memory_used 1157632 </p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-tc/">tc</a></code>(8), <code><a href="/docs/linux/man/8-tc-pie/">tc-pie</a></code>(8), <code><a href="/docs/linux/man/8-tc-fq_codel/">tc-fq_codel</a></code>(8) </p>

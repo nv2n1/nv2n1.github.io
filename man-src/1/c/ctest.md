@@ -316,8 +316,8 @@ ctest[&lt;options&gt;] ctest-- build - and-test&lt;path - to - source&gt;&lt;pat
 <p> New in version 3.22: Labels added dynamically during test execution are also reported in the timing summary. See Additional Labels. </p>
 <p> When the <code>PROCESSORS</code> test property is set, CTest will display a weighted test timing result in label and subproject summaries. The time is reported with <i>sec*proc</i> instead of just <i>sec</i>. </p>
 <p> The weighted time summary reported for each label or subproject <code>j</code> is computed as: </p>
-<p>Weighted Time Summary for Label/Subproject j =<br />
-    sum(raw_test_time[j,i] * num_processors[j,i], i=1&#8230;num_tests[j])<br />
+<p>Weighted Time Summary for Label/Subproject j =<br/>
+    sum(raw_test_time[j,i] * num_processors[j,i], i=1&#8230;num_tests[j])<br/>
 for labels/subprojects j=1&#8230;total</p>
 <p> where:</p>
 <dl>

@@ -15,15 +15,15 @@ description: "lxqt-session – Session manager of LXQt: The Lightweight Qt Deskt
 <p> This module handles session autostart application over <code>LXQt</code> desktop environment startup. </p>
 <p> The <code>LXQt modules</code> are desktop independent tools, and operate as daemons for the local user on desktop specific operations. </p>
 <p> <code>LXQt</code> is an advanced, easy-to-use, and fast desktop environment based on the Qt framework. It has been tailored for users who value simplicity, speed, and an intuitive interface, with minimal resource requirements. It comprises several optional desktop components: </p>
-<p>&nbsp;<wbr>*&nbsp;<wbr>Session module&nbsp;<wbr>(<i>this</i>, normally invoked with&nbsp;<wbr><code>startlxqt</code>)<br />
-&nbsp;<wbr>*&nbsp;<wbr>Settings configuration center<br />
-&nbsp;<wbr>*&nbsp;<wbr>Application launcher<br />
-&nbsp;<wbr>*&nbsp;<wbr>Desktop<br />
-&nbsp;<wbr>*&nbsp;<wbr>Panel with optional plugins<br />
-&nbsp;<wbr>*&nbsp;<wbr>Polkit authorization agent<br />
-&nbsp;<wbr>*&nbsp;<wbr>SSH password access<br />
-&nbsp;<wbr>*&nbsp;<wbr>Display manager module<br />
-&nbsp;<wbr>*&nbsp;<wbr>Power management module<br />
+<p>&nbsp;<wbr>*&nbsp;<wbr>Session module&nbsp;<wbr>(<i>this</i>, normally invoked with&nbsp;<wbr><code>startlxqt</code>)<br/>
+&nbsp;<wbr>*&nbsp;<wbr>Settings configuration center<br/>
+&nbsp;<wbr>*&nbsp;<wbr>Application launcher<br/>
+&nbsp;<wbr>*&nbsp;<wbr>Desktop<br/>
+&nbsp;<wbr>*&nbsp;<wbr>Panel with optional plugins<br/>
+&nbsp;<wbr>*&nbsp;<wbr>Polkit authorization agent<br/>
+&nbsp;<wbr>*&nbsp;<wbr>SSH password access<br/>
+&nbsp;<wbr>*&nbsp;<wbr>Display manager module<br/>
+&nbsp;<wbr>*&nbsp;<wbr>Power management module<br/>
 &nbsp;<wbr>*&nbsp;<wbr>Sudo/su module&nbsp;<wbr>(privilege elevation) </p>
 <p> These components perform similar actions to those available in other desktop environments, and their name is self-descriptive. They are usually launched automatically, when choosing a <code>LXQt</code> session in the Display Manager.</p>
 <h2>BEHAVIOR</h2>

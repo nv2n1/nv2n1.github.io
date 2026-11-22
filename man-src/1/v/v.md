@@ -12,8 +12,8 @@ description: "v.what.vect – Uploads vector values at positions of vector point
 <h2>KEYWORDS</h2>
 <p> vector, database, attribute table</p>
 <h2>SYNOPSIS</h2>
-<p> <code>v.what.vect</code><br />
- <code>v.what.vect help</code><br />
+<p> <code>v.what.vect</code><br/>
+ <code>v.what.vect help</code><br/>
  <code>v.what.vect vector</code>=<i>name</i> [<code>layer</code>=<i>integer</i>] <code>column</code>=<i>string</i> <code>qvector</code>=<i>name</i> [<code>qlayer</code>=<i>integer</i>] <code>qcolumn</code>=<i>string</i> [&#8211;<code>verbose</code>] [&#8211;<code>quiet</code>]</p>
 <h3>Parameters:</h3>
 <dl>
@@ -22,7 +22,7 @@ description: "v.what.vect – Uploads vector values at positions of vector point
  Points vector map to modify</dd>
 <dt><code>layer</code>=<i>integer</i></dt>
 <dd>
- Layer in the vector to be modified<br />
+ Layer in the vector to be modified<br/>
  Default: <i>1</i></dd>
 <dt><code>column</code>=<i>string</i></dt>
 <dd>
@@ -32,7 +32,7 @@ description: "v.what.vect – Uploads vector values at positions of vector point
  Vector map to be queried</dd>
 <dt><code>qlayer</code>=<i>integer</i></dt>
 <dd>
- Layer of the query vector containg data<br />
+ Layer of the query vector containg data<br/>
  Default: <i>1</i></dd>
 <dt><code>qcolumn</code>=<i>string</i></dt>
 <dd>
@@ -44,11 +44,11 @@ description: "v.what.vect – Uploads vector values at positions of vector point
 <p> This module only uploads attributes which exist at the exact positions of the input&#8217;s <code>vector</code> points. For a &quot;nearest feature&quot; fit, use <i>v.distance</i> instead. </p>
 <p> In case of a multipoint input <code>vector</code> map, with several points having the same category number, it can happen, that the query result is NULL, if the same category number falls into different <code>qvector</code> polygons.</p>
 <h2>EXAMPLE</h2>
-<p> In this example, the &#8216;archsites&#8217; point map in the Spearfish location is copied to the current mapset, a new attribute column is added and the owner names from the &#8216;fields&#8217; polygon map are transferred to the &#8216;myarchsites&#8217; map at points&#8217; locations:<br />
- g.copy vect=archsites,myarchsites<br />
- v.db.addcol myarchsites col=&quot;owner varchar(25)&quot;<br />
- v.what.vect myarchsites qvect=fields column=owner qcolumn=label<br />
- # verification:<br />
+<p> In this example, the &#8216;archsites&#8217; point map in the Spearfish location is copied to the current mapset, a new attribute column is added and the owner names from the &#8216;fields&#8217; polygon map are transferred to the &#8216;myarchsites&#8217; map at points&#8217; locations:<br/>
+ g.copy vect=archsites,myarchsites<br/>
+ v.db.addcol myarchsites col=&quot;owner varchar(25)&quot;<br/>
+ v.what.vect myarchsites qvect=fields column=owner qcolumn=label<br/>
+ # verification:<br/>
  v.db.select myarchsites </p>
 <h2>SEE ALSO</h2>
 <p> <i> v.db.addcol, v.db.select, v.distance, v.rast.stats, v.what.rast </i></p>

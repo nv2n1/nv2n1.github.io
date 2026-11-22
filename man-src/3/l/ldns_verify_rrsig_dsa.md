@@ -10,7 +10,7 @@ description: "ldns_verify_rrsig_dsa, ldns_verify_rrsig_rsasha1, ldns_verify_rrsi
 
 <p> ldns_verify_rrsig_dsa, ldns_verify_rrsig_rsasha1, ldns_verify_rrsig_rsamd5 </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ldns_status ldns_verify_rrsig_dsa(ldns_buffer *sig, ldns_buffer *rrset, ldns_buffer *key); </p>

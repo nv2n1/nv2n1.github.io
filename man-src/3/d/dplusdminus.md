@@ -15,8 +15,8 @@ description: "QuantLib::DPlusDMinus – $ D_{+}D_{-} $ matricial representation"
 <p><code>DPlusDMinus</code> (Size gridPoints, Real h) </p>
 <h2>Detailed Description</h2>
 <p>$ D_{+}D_{-} $ matricial representation </p>
-<p> The differential operator $ D_{+}D_{-} $ discretizes the second derivative with the second-order formula [ ac{<br />
- artial^2 u_{i}}{<br />
+<p> The differential operator $ D_{+}D_{-} $ discretizes the second derivative with the second-order formula [ ac{<br/>
+ artial^2 u_{i}}{<br/>
  artial x^2} pprox ac{u_{i+1}-2u_{i}+u_{i-1}}{h^2} = D_{+}D_{-} u_{i} ] </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>

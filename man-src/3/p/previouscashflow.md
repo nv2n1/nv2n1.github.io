@@ -18,25 +18,25 @@ description: "QuantLib::CashFlows – cashflow-analysis functions"
 <p> static <code>Rate</code> <code>nextCouponRate</code> (const Leg &amp;leg, const <code>Date</code> &amp;refDate=<code>Date</code>()) </p>
 <p> static <code>Date</code> <code>startDate</code> (const Leg &amp;leg) </p>
 <p> static <code>Date</code> <code>maturityDate</code> (const Leg &amp;leg) </p>
-<p> static <code>Real</code> <code>npv</code> (const Leg &amp;leg, const <code>YieldTermStructure</code> &amp;discountCurve, <code>Date</code> settlementDate=<code>Date</code>(), const <code>Date</code> &amp;npvDate=<code>Date</code>(), <code>Natural</code> exDividendDays=0)<br />
- <i>NPV of the cash flows. </i><br />
- static <code>Real</code> <code>npv</code> (const Leg &amp;leg, const <code>InterestRate</code> &amp;, <code>Date</code> settlementDate=<code>Date</code>())<br />
- <i>NPV of the cash flows. </i><br />
- static <code>Real</code> <code>bps</code> (const Leg &amp;leg, const <code>YieldTermStructure</code> &amp;discountCurve, <code>Date</code> settlementDate=<code>Date</code>(), const <code>Date</code> &amp;npvDate=<code>Date</code>(), <code>Natural</code> exDividendDays=0)<br />
- <i>Basis-point sensitivity of the cash flows. </i><br />
- static <code>Real</code> <code>bps</code> (const Leg &amp;leg, const <code>InterestRate</code> &amp;, <code>Date</code> settlementDate=<code>Date</code>())<br />
- <i>Basis-point sensitivity of the cash flows. </i><br />
- static <code>Rate</code> <code>atmRate</code> (const Leg &amp;leg, const <code>YieldTermStructure</code> &amp;discountCurve, const <code>Date</code> &amp;settlementDate=<code>Date</code>(), const <code>Date</code> &amp;npvDate=<code>Date</code>(), <code>Natural</code> exDividendDays=0, <code>Real</code> npv=<code>Null</code>&lt; <code>Real</code> &gt;())<br />
- <i>At-the-money rate of the cash flows. </i><br />
- static <code>Rate</code> <code>irr</code> (const Leg &amp;leg, <code>Real</code> marketPrice, const <code>DayCounter</code> &amp;dayCounter, Compounding compounding, <code>Frequency</code> frequency=NoFrequency, <code>Date</code> settlementDate=<code>Date</code>(), <code>Real</code> accuracy=1.0e-10, Size maxIterations=100, Rate guess=0.05)<br />
- <i>Internal rate of return. </i><br />
- static <code>Time</code> <code>duration</code> (const Leg &amp;leg, const <code>InterestRate</code> &amp;y, Duration::Type type=Duration::Modified, <code>Date</code> settlementDate=<code>Date</code>())<br />
- <i>Cash-flow duration. </i><br />
- static <code>Real</code> <code>convexity</code> (const Leg &amp;leg, const <code>InterestRate</code> &amp;y, <code>Date</code> settlementDate=<code>Date</code>())<br />
- <i>Cash-flow convexity. </i><br />
- static <code>Real</code> <code>basisPointValue</code> (const Leg &amp;leg, const <code>InterestRate</code> &amp;y, <code>Date</code> settlementDate=<code>Date</code>())<br />
- <i>Basis-point value. </i><br />
- static <code>Real</code> <code>yieldValueBasisPoint</code> (const Leg &amp;leg, const <code>InterestRate</code> &amp;y, <code>Date</code> settlementDate=<code>Date</code>())<br />
+<p> static <code>Real</code> <code>npv</code> (const Leg &amp;leg, const <code>YieldTermStructure</code> &amp;discountCurve, <code>Date</code> settlementDate=<code>Date</code>(), const <code>Date</code> &amp;npvDate=<code>Date</code>(), <code>Natural</code> exDividendDays=0)<br/>
+ <i>NPV of the cash flows. </i><br/>
+ static <code>Real</code> <code>npv</code> (const Leg &amp;leg, const <code>InterestRate</code> &amp;, <code>Date</code> settlementDate=<code>Date</code>())<br/>
+ <i>NPV of the cash flows. </i><br/>
+ static <code>Real</code> <code>bps</code> (const Leg &amp;leg, const <code>YieldTermStructure</code> &amp;discountCurve, <code>Date</code> settlementDate=<code>Date</code>(), const <code>Date</code> &amp;npvDate=<code>Date</code>(), <code>Natural</code> exDividendDays=0)<br/>
+ <i>Basis-point sensitivity of the cash flows. </i><br/>
+ static <code>Real</code> <code>bps</code> (const Leg &amp;leg, const <code>InterestRate</code> &amp;, <code>Date</code> settlementDate=<code>Date</code>())<br/>
+ <i>Basis-point sensitivity of the cash flows. </i><br/>
+ static <code>Rate</code> <code>atmRate</code> (const Leg &amp;leg, const <code>YieldTermStructure</code> &amp;discountCurve, const <code>Date</code> &amp;settlementDate=<code>Date</code>(), const <code>Date</code> &amp;npvDate=<code>Date</code>(), <code>Natural</code> exDividendDays=0, <code>Real</code> npv=<code>Null</code>&lt; <code>Real</code> &gt;())<br/>
+ <i>At-the-money rate of the cash flows. </i><br/>
+ static <code>Rate</code> <code>irr</code> (const Leg &amp;leg, <code>Real</code> marketPrice, const <code>DayCounter</code> &amp;dayCounter, Compounding compounding, <code>Frequency</code> frequency=NoFrequency, <code>Date</code> settlementDate=<code>Date</code>(), <code>Real</code> accuracy=1.0e-10, Size maxIterations=100, Rate guess=0.05)<br/>
+ <i>Internal rate of return. </i><br/>
+ static <code>Time</code> <code>duration</code> (const Leg &amp;leg, const <code>InterestRate</code> &amp;y, Duration::Type type=Duration::Modified, <code>Date</code> settlementDate=<code>Date</code>())<br/>
+ <i>Cash-flow duration. </i><br/>
+ static <code>Real</code> <code>convexity</code> (const Leg &amp;leg, const <code>InterestRate</code> &amp;y, <code>Date</code> settlementDate=<code>Date</code>())<br/>
+ <i>Cash-flow convexity. </i><br/>
+ static <code>Real</code> <code>basisPointValue</code> (const Leg &amp;leg, const <code>InterestRate</code> &amp;y, <code>Date</code> settlementDate=<code>Date</code>())<br/>
+ <i>Basis-point value. </i><br/>
+ static <code>Real</code> <code>yieldValueBasisPoint</code> (const Leg &amp;leg, const <code>InterestRate</code> &amp;y, <code>Date</code> settlementDate=<code>Date</code>())<br/>
  <i>Yield value of a basis point. </i></p>
 <h2>Detailed Description</h2>
 <p>cashflow-analysis functions </p>
@@ -65,16 +65,16 @@ description: "QuantLib::CashFlows – cashflow-analysis functions"
 <h3>static <code>Time</code> duration (const Leg &amp; leg, const <code>InterestRate</code> &amp; y, Duration::Type type = Duration::Modified, <code>Date</code> settlementDate = <code>Date</code>()) [static]</h3>
 <p>Cash-flow duration. </p>
 <p> The simple duration of a string of cash flows is defined as [ D_{mathrm{simple}} = ac{um t_i c_i B(t_i)}{um c_i B(t_i)} ] where $ c_i $ is the amount of the $ i $-th cash flow, $ t_i $ is its payment time, and $ B(t_i) $ is the corresponding discount according to the passed yield. </p>
-<p> The modified duration is defined as [ D_{mathrm{modified}} = -ac{1}{P} ac{<br />
- artial P}{<br />
+<p> The modified duration is defined as [ D_{mathrm{modified}} = -ac{1}{P} ac{<br/>
+ artial P}{<br/>
  artial y} ] where $ P $ is the present value of the cash flows according to the given IRR $ y $. </p>
 <p> The Macaulay duration is defined for a compounded IRR as [ D_{mathrm{Macaulay}} = </p>
 <hr>
 <p>d}} ] where $ y $ is the IRR and $ N $ is the number of cash flows per year.</p>
 <h3>static <code>Real</code> convexity (const Leg &amp; leg, const <code>InterestRate</code> &amp; y, <code>Date</code> settlementDate = <code>Date</code>()) [static]</h3>
 <p>Cash-flow convexity. </p>
-<p> The convexity of a string of cash flows is defined as [ C = ac{1}{P} ac{<br />
- artial^2 P}{<br />
+<p> The convexity of a string of cash flows is defined as [ C = ac{1}{P} ac{<br/>
+ artial^2 P}{<br/>
  artial y^2} ] where $ P $ is the present value of the cash flows according to the given IRR $ y $.</p>
 <h3>static <code>Real</code> basisPointValue (const Leg &amp; leg, const <code>InterestRate</code> &amp; y, <code>Date</code> settlementDate = <code>Date</code>()) [static]</h3>
 <p>Basis-point value. </p>

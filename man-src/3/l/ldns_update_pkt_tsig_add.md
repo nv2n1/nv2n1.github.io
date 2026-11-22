@@ -10,7 +10,7 @@ description: "ldns_update_pkt_tsig_add"
 
 <p> ldns_update_pkt_tsig_add </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ldns_status ldns_update_pkt_tsig_add(ldns_pkt *p, ldns_resolver *r); </p>

@@ -16,23 +16,23 @@ const char *drmaa_strerror(
 int&amp;nbsp;drmaa_errno
 </code></pre>
 <p> <code>);</code> </p>
-<p>int drmaa_get_contact(<br />
-char *contact,<br />
-size_t&amp;nbsp;contact_len,<br />
-char *error_diagnosis,<br />
-size_t&amp;nbsp;error_diag_len<br />
+<p>int drmaa_get_contact(<br/>
+char *contact,<br/>
+size_t&amp;nbsp;contact_len,<br/>
+char *error_diagnosis,<br/>
+size_t&amp;nbsp;error_diag_len<br/>
  <code>);</code> </p>
-<p>int drmaa_version(<br />
-unsigned int *major,<br />
-unsigned int *minor,<br />
-char *error_diagnosis,<br />
-size_t&amp;nbsp;error_diag_len<br />
+<p>int drmaa_version(<br/>
+unsigned int *major,<br/>
+unsigned int *minor,<br/>
+char *error_diagnosis,<br/>
+size_t&amp;nbsp;error_diag_len<br/>
  <code>);</code> </p>
-<p>int drmaa_get_DRM_system(<br />
-char *drm_system,<br />
-size_t&amp;nbsp;drm_system_len,<br />
-char *error_diagnosis,<br />
-size_t&amp;nbsp;error_diag_len<br />
+<p>int drmaa_get_DRM_system(<br/>
+char *drm_system,<br/>
+size_t&amp;nbsp;drm_system_len,<br/>
+char *error_diagnosis,<br/>
+size_t&amp;nbsp;error_diag_len<br/>
  <code>);</code> </p>
 <pre><code>
 int drmaa_get_DRMAA_implementation(

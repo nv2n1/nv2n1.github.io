@@ -12,13 +12,13 @@ description: "ac – print statistics about users’ connect time"
 <h2>SYNOPSIS</h2>
 <dl>
 <dt><code>ac</code></dt>
-<dd> [ <code>-d</code> | <code>&#8211;daily-totals</code> ] [ <code>-y</code> | <code>&#8211;print-year</code> ]<br />
- [ <code>-p</code> | <code>&#8211;individual-totals</code> ] [ <i>people</i> ]<br />
- [ <code>-f</code> | <code>&#8211;file</code> <i>filename</i> ] [ <code>-a</code> | <code>&#8211;all-days</code> ]<br />
- [ <code>&#8211;complain </code> ] [ <code>&#8211;reboots </code> ] [ <code>&#8211;supplants</code> ]<br />
- [ <code>&#8211;timewarps </code> ] [ <code>&#8211;compatibility</code> ]<br />
- [ <code>&#8211;tw-leniency</code> <i>num</i> ] [ <code>&#8211;tw-suspicious</code> <i>num</i> ]<br />
- [ <code>-z</code> | <code>&#8211;print-zeros</code> ] [ <code>&#8211;debug</code> ]<br />
+<dd> [ <code>-d</code> | <code>&#8211;daily-totals</code> ] [ <code>-y</code> | <code>&#8211;print-year</code> ]<br/>
+ [ <code>-p</code> | <code>&#8211;individual-totals</code> ] [ <i>people</i> ]<br/>
+ [ <code>-f</code> | <code>&#8211;file</code> <i>filename</i> ] [ <code>-a</code> | <code>&#8211;all-days</code> ]<br/>
+ [ <code>&#8211;complain </code> ] [ <code>&#8211;reboots </code> ] [ <code>&#8211;supplants</code> ]<br/>
+ [ <code>&#8211;timewarps </code> ] [ <code>&#8211;compatibility</code> ]<br/>
+ [ <code>&#8211;tw-leniency</code> <i>num</i> ] [ <code>&#8211;tw-suspicious</code> <i>num</i> ]<br/>
+ [ <code>-z</code> | <code>&#8211;print-zeros</code> ] [ <code>&#8211;debug</code> ]<br/>
  [ <code>-V</code> | <code>&#8211;version </code> ] [ <code>-h</code> | <code>&#8211;help </code> ]</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>ac </code> prints out a report of connect time (in hours) based on the logins/logouts in the current <i>wtmp</i> file. A total is also printed out. </p>
@@ -28,18 +28,18 @@ description: "ac – print statistics about users’ connect time"
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-d, &#8211;daily-totals</code></dt>
-<dd> Print totals for each day rather than just one big total at the end. The output looks like this:<br />
-&nbsp;<wbr>&nbsp;<wbr>Jul&nbsp;<wbr>&nbsp;<wbr>3&nbsp;<wbr>&nbsp;<wbr>total&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1.17<br />
-&nbsp;<wbr>&nbsp;<wbr>Jul&nbsp;<wbr>&nbsp;<wbr>4&nbsp;<wbr>&nbsp;<wbr>total&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>2.10<br />
-&nbsp;<wbr>&nbsp;<wbr>Jul&nbsp;<wbr>&nbsp;<wbr>5&nbsp;<wbr>&nbsp;<wbr>total&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>8.23<br />
-&nbsp;<wbr>&nbsp;<wbr>Jul&nbsp;<wbr>&nbsp;<wbr>6&nbsp;<wbr>&nbsp;<wbr>total&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>2.10<br />
+<dd> Print totals for each day rather than just one big total at the end. The output looks like this:<br/>
+&nbsp;<wbr>&nbsp;<wbr>Jul&nbsp;<wbr>&nbsp;<wbr>3&nbsp;<wbr>&nbsp;<wbr>total&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1.17<br/>
+&nbsp;<wbr>&nbsp;<wbr>Jul&nbsp;<wbr>&nbsp;<wbr>4&nbsp;<wbr>&nbsp;<wbr>total&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>2.10<br/>
+&nbsp;<wbr>&nbsp;<wbr>Jul&nbsp;<wbr>&nbsp;<wbr>5&nbsp;<wbr>&nbsp;<wbr>total&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>8.23<br/>
+&nbsp;<wbr>&nbsp;<wbr>Jul&nbsp;<wbr>&nbsp;<wbr>6&nbsp;<wbr>&nbsp;<wbr>total&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>2.10<br/>
 &nbsp;<wbr>&nbsp;<wbr>Jul&nbsp;<wbr>&nbsp;<wbr>7&nbsp;<wbr>&nbsp;<wbr>total&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0.30</dd>
 <dt><code>-p, &#8211;individual-totals</code></dt>
-<dd> Print time totals for each user in addition to the usual everything-lumped-into-one value. It looks like:<br />
-&nbsp;<wbr>&nbsp;<wbr>bob&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>8.06<br />
-&nbsp;<wbr>&nbsp;<wbr>goff&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0.60<br />
-&nbsp;<wbr>&nbsp;<wbr>maley&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>7.37<br />
-&nbsp;<wbr>&nbsp;<wbr>root&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0.12<br />
+<dd> Print time totals for each user in addition to the usual everything-lumped-into-one value. It looks like:<br/>
+&nbsp;<wbr>&nbsp;<wbr>bob&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>8.06<br/>
+&nbsp;<wbr>&nbsp;<wbr>goff&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0.60<br/>
+&nbsp;<wbr>&nbsp;<wbr>maley&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>7.37<br/>
+&nbsp;<wbr>&nbsp;<wbr>root&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0.12<br/>
 &nbsp;<wbr>&nbsp;<wbr>total&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>16.15</dd>
 <dt><i>people</i></dt>
 <dd> Print out the sum total of the connect time used by all of the users included in <i>people. </i> Note that <i>people</i> is a space separated list of valid user names; wildcards are not allowed.</dd>

@@ -134,8 +134,8 @@ description: "opaswitchadmin"
 </dl>
 <p> For more information on operations, see <i>opachassisadmin Operation Details</i></p>
 <h2>Example</h2>
-<p>opaswitchadmin -c reboot<br />
- opaswitchadmin -P /root/ChassisFw <i>X.X.X.X.X</i> upgrade<br />
+<p>opaswitchadmin -c reboot<br/>
+ opaswitchadmin -P /root/ChassisFw <i>X.X.X.X.X</i> upgrade<br/>
  opaswitchadmin -a run -P &#8216;*.emfw&#8217; upgrade</p>
 <h2>Environment Variables</h2>
 <p>The following environment variables are also used by this command:</p>

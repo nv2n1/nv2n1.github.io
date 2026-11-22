@@ -11,8 +11,8 @@ description: "cexp, cexpf, cexpl – complex exponential function"
 <p> cexp, cexpf, cexpl &#8211; complex exponential function </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>
-<p> <code>double complex cexp(double complex </code><i>z</i><code>);</code><br />
- <code>float complex cexpf(float complex </code><i>z</i><code>);</code><br />
+<p> <code>double complex cexp(double complex </code><i>z</i><code>);</code><br/>
+ <code>float complex cexpf(float complex </code><i>z</i><code>);</code><br/>
  <code>long double complex cexpl(long double complex </code><i>z</i><code>);</code> </p>
 <p> Link with <i>-lm</i>.</p>
 <h2>DESCRIPTION</h2>

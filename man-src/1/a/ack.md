@@ -15,8 +15,8 @@ ack[options] PATTERN[FILE...] ack - f[options][DIRECTORY...]
 </code></pre>
 <h2>DESCRIPTION</h2>
 <p> Ack is designed as a replacement for 99% of the uses of <i>grep</i>. </p>
-<p> Ack searches the named input FILEs (or standard input if no files are named, or the file name &#8211; is given) for lines containing a match to the given <font SIZE="-1">PATTERN. </font> By default, ack prints the matching lines. </p>
-<p> <font SIZE="-1">PATTERN</font> is a Perl regular expression. Perl regular expressions are commonly found in other programming languages, but for the particulars of their behavior, please consult &lt;<a rel="nofollow" href="http://perldoc.perl.org/perlreref.html|perlreref">http://perldoc.perl.org/perlreref.html|perlreref</a>&gt;. If you don&#8217;t know how to use regular expression but are interested in learning, you may consult &lt;<a rel="nofollow" href="http://perldoc.perl.org/perlretut.html|perlretut">http://perldoc.perl.org/perlretut.html|perlretut</a>&gt;. If you do not need or want ack to use regular expressions, please see the <tt>&quot;-Q&quot;</tt>/<tt>&quot;--literal&quot;</tt> option. </p>
+<p> Ack searches the named input FILEs (or standard input if no files are named, or the file name &#8211; is given) for lines containing a match to the given PATTERN.  By default, ack prints the matching lines. </p>
+<p> PATTERN is a Perl regular expression. Perl regular expressions are commonly found in other programming languages, but for the particulars of their behavior, please consult &lt;<a rel="nofollow" href="http://perldoc.perl.org/perlreref.html|perlreref">http://perldoc.perl.org/perlreref.html|perlreref</a>&gt;. If you don&#8217;t know how to use regular expression but are interested in learning, you may consult &lt;<a rel="nofollow" href="http://perldoc.perl.org/perlretut.html|perlretut">http://perldoc.perl.org/perlretut.html|perlretut</a>&gt;. If you do not need or want ack to use regular expressions, please see the <tt>&quot;-Q&quot;</tt>/<tt>&quot;--literal&quot;</tt> option. </p>
 <p> Ack can also list files that would be searched, without actually searching them, to let you take advantage of ack&#8217;s file-type filtering capabilities.</p>
 <h2>FILE SELECTION</h2>
 <p> If files are not specified for searching, either on the command line or piped in with the <tt>&quot;-x&quot;</tt> option, <i>ack</i> delves into subdirectories selecting files for searching. </p>
@@ -38,19 +38,19 @@ ack[options] PATTERN[FILE...] ack - f[options][DIRECTORY...]
 <h2>WHEN TO USE GREP</h2>
 <p> <i>ack</i> trumps <i>grep</i> as an everyday tool 99% of the time, but don&#8217;t throw <i>grep</i> away, because there are times you&#8217;ll still need it. </p>
 <p> E.g., searching through huge files looking for regexes that can be expressed with <i>grep</i> syntax should be quicker with <i>grep</i>. </p>
-<p> If your script or parent program uses <i>grep</i> <tt>&quot;--quiet&quot;</tt> or <tt>&quot;--silent&quot;</tt> or needs exit 2 on <font SIZE="-1">IO</font> error, use <i>grep</i>.</p>
+<p> If your script or parent program uses <i>grep</i> <tt>&quot;--quiet&quot;</tt> or <tt>&quot;--silent&quot;</tt> or needs exit 2 on IO error, use <i>grep</i>.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>&#8211;ackrc</code></dt>
-<dd> Specifies an ackrc file to load after all others; see &#8220;<font SIZE="-1">ACKRC LOCATION SEMANTICS&#8221;</font>.</dd>
-<dt><code>-A </code><font SIZE="-1">NUM</font>, <code>&#8211;after-context=</code><font SIZE="-1">NUM</font></dt>
-<dd> Print <i></i><font SIZE="-1"><i>NUM</i></font><i></i> lines of trailing context after matching lines.</dd>
-<dt><code>-B </code><font SIZE="-1">NUM</font>, <code>&#8211;before-context=</code><font SIZE="-1">NUM</font></dt>
-<dd> Print <i></i><font SIZE="-1"><i>NUM</i></font><i></i> lines of leading context before matching lines.</dd>
+<dd> Specifies an ackrc file to load after all others; see &#8220;ACKRC LOCATION SEMANTICS&#8221;.</dd>
+<dt><code>-A </code>NUM, <code>&#8211;after-context=</code>NUM</dt>
+<dd> Print <i></i><i>NUM</i><i></i> lines of trailing context after matching lines.</dd>
+<dt><code>-B </code>NUM, <code>&#8211;before-context=</code>NUM</dt>
+<dd> Print <i></i><i>NUM</i><i></i> lines of leading context before matching lines.</dd>
 <dt><code>&#8211;[no]break</code></dt>
 <dd> Print a break between results from different files. On by default when used interactively.</dd>
-<dt><code>-C [</code><font SIZE="-1">NUM</font><code>]</code>, <code>&#8211;context[=</code><font SIZE="-1">NUM</font><code>]</code></dt>
-<dd> Print <i></i><font SIZE="-1"><i>NUM</i></font><i></i> lines (default 2) of context around matching lines.</dd>
+<dt><code>-C [</code>NUM<code>]</code>, <code>&#8211;context[=</code>NUM<code>]</code></dt>
+<dd> Print <i></i><i>NUM</i><i></i> lines (default 2) of context around matching lines.</dd>
 <dt><code>-c</code>, <code>&#8211;count</code></dt>
 <dd> Suppress normal output; instead print a count of matching lines for each input file. If <code>-l</code> is in effect, it will only show the number of lines for each file that has lines matching. Without <code>-l</code>, some line counts may be zeroes. </dd>
 <p> If combined with <code>-h</code> (<code>&#8211;no-filename</code>) ack outputs only one total count.</p>
@@ -74,16 +74,16 @@ ack[options] PATTERN[FILE...] ack - f[options][DIRECTORY...]
 <dt><code>&#8211;flush</code></dt>
 <dd> <code>&#8211;flush</code> flushes output immediately. This is off by default unless ack is running interactively (when output goes to a pipe or file).</dd>
 <dt><code>-f</code></dt>
-<dd> Only print the files that would be searched, without actually doing any searching. <font SIZE="-1">PATTERN</font> must not be specified, or it will be taken as a path to search.</dd>
-<dt><code>&#8211;files-from=</code><font SIZE="-1">FILE</font></dt>
-<dd> The list of files to be searched is specified in <i></i><font SIZE="-1"><i>FILE</i></font><i></i>. The list of files are separated by newlines. If <i></i><font SIZE="-1"><i>FILE</i></font><i></i> is <tt>&quot;-&quot;</tt>, the list is loaded from standard input.</dd>
+<dd> Only print the files that would be searched, without actually doing any searching. PATTERN must not be specified, or it will be taken as a path to search.</dd>
+<dt><code>&#8211;files-from=</code>FILE</dt>
+<dd> The list of files to be searched is specified in <i></i><i>FILE</i><i></i>. The list of files are separated by newlines. If <i></i><i>FILE</i><i></i> is <tt>&quot;-&quot;</tt>, the list is loaded from standard input.</dd>
 <dt><code>&#8211;[no]filter</code></dt>
 <dd> Forces ack to act as if it were receiving input via a pipe.</dd>
 <dt><code>&#8211;[no]follow</code></dt>
 <dd> Follow or don&#8217;t follow symlinks, other than whatever starting files or directories were specified on the command line. </dd>
 <p> This is off by default.</p>
-<dt><code>-g </code><font SIZE="-1">PATTERN</font></dt>
-<dd> Print files where the relative path + filename matches <i></i><font SIZE="-1"><i>PATTERN</i></font><i></i>. This option can be combined with <code>&#8211;color</code> to make it easier to spot the match.</dd>
+<dt><code>-g </code>PATTERN</dt>
+<dd> Print files where the relative path + filename matches <i></i><i>PATTERN</i><i></i>. This option can be combined with <code>&#8211;color</code> to make it easier to spot the match.</dd>
 <dt><code>&#8211;[no]group</code></dt>
 <dd> <code>&#8211;group</code> groups matches by file name. This is the default when used interactively. </dd>
 <p> <code>&#8211;nogroup</code> prints one result per line, like grep. This is the default when output is redirected.</p>
@@ -98,39 +98,39 @@ ack[options] PATTERN[FILE...] ack - f[options][DIRECTORY...]
 <dt><code>&#8211;help-types</code>, <code>&#8211;help=types</code></dt>
 <dd> Print all known types.</dd>
 <dt><code>-i</code>, <code>&#8211;ignore-case</code></dt>
-<dd> Ignore case distinctions in <font SIZE="-1">PATTERN</font></dd>
+<dd> Ignore case distinctions in PATTERN</dd>
 <dt><code>&#8211;ignore-ack-defaults</code></dt>
 <dd> Tells ack to completely ignore the default definitions provided with ack. This is useful in combination with <code>&#8211;create-ackrc</code> if you <i>really</i> want to customize ack.</dd>
-<dt><code>&#8211;[no]ignore-dir=</code><font SIZE="-1">DIRNAME</font>, <code>&#8211;[no]ignore-directory=</code><font SIZE="-1">DIRNAME</font></dt>
-<dd> Ignore directory (as <font SIZE="-1">CVS, </font>.svn, etc are ignored). May be used multiple times to ignore multiple directories. For example, mason users may wish to include <code>&#8211;ignore-dir=data</code>. The <code>&#8211;noignore-dir</code> option allows users to search directories which would normally be ignored (perhaps to research the contents of <i>.svn/props</i> directories). </dd>
-<p> The <i></i><font SIZE="-1"><i>DIRNAME</i></font><i></i> must always be a simple directory name. Nested directories like <i>foo/bar</i> are <font SIZE="-1">NOT</font> supported. You would need to specify <code>&#8211;ignore-dir=foo</code> and then no files from any foo directory are taken into account by ack unless given explicitly on the command line.</p>
-<dt><code>&#8211;ignore-file=</code><font SIZE="-1">FILTERTYPE:FILTERARGS</font></dt>
-<dd> Ignore files matching <i></i><font SIZE="-1"><i>FILTERTYPE:FILTERARGS</i></font><i></i>. The filters are specified identically to file type filters as seen in &#8220;Defining your own types&#8221;.</dd>
+<dt><code>&#8211;[no]ignore-dir=</code>DIRNAME, <code>&#8211;[no]ignore-directory=</code>DIRNAME</dt>
+<dd> Ignore directory (as CVS, .svn, etc are ignored). May be used multiple times to ignore multiple directories. For example, mason users may wish to include <code>&#8211;ignore-dir=data</code>. The <code>&#8211;noignore-dir</code> option allows users to search directories which would normally be ignored (perhaps to research the contents of <i>.svn/props</i> directories). </dd>
+<p> The <i></i><i>DIRNAME</i><i></i> must always be a simple directory name. Nested directories like <i>foo/bar</i> are NOT supported. You would need to specify <code>&#8211;ignore-dir=foo</code> and then no files from any foo directory are taken into account by ack unless given explicitly on the command line.</p>
+<dt><code>&#8211;ignore-file=</code>FILTERTYPE:FILTERARGS</dt>
+<dd> Ignore files matching <i></i><i>FILTERTYPE:FILTERARGS</i><i></i>. The filters are specified identically to file type filters as seen in &#8220;Defining your own types&#8221;.</dd>
 <dt><code>-k</code>, <code>&#8211;known-types</code></dt>
 <dd> Limit selected files to those with types that ack knows about. This is equivalent to the default behavior found in ack 1.</dd>
-<dt><code>&#8211;lines=</code><font SIZE="-1">NUM</font></dt>
-<dd> Only print line <i></i><font SIZE="-1"><i>NUM</i></font><i></i> of each file. Multiple lines can be given with multiple <code>&#8211;lines</code> options or as a comma separated list (<code>&#8211;lines=3,5,7</code>). <code>&#8211;lines=4-7</code> also works. The lines are always output in ascending order, no matter the order given on the command line.</dd>
+<dt><code>&#8211;lines=</code>NUM</dt>
+<dd> Only print line <i></i><i>NUM</i><i></i> of each file. Multiple lines can be given with multiple <code>&#8211;lines</code> options or as a comma separated list (<code>&#8211;lines=3,5,7</code>). <code>&#8211;lines=4-7</code> also works. The lines are always output in ascending order, no matter the order given on the command line.</dd>
 <dt><code>-l</code>, <code>&#8211;files-with-matches</code></dt>
 <dd> Only print the filenames of matching files, instead of the matching text.</dd>
 <dt><code>-L</code>, <code>&#8211;files-without-matches</code></dt>
-<dd> Only print the filenames of files that do <i></i><font SIZE="-1"><i>NOT</i></font><i></i> match.</dd>
-<dt><code>&#8211;match </code><font SIZE="-1">PATTERN</font></dt>
-<dd> Specify the <i></i><font SIZE="-1"><i>PATTERN</i></font><i></i> explicitly. This is helpful if you don&#8217;t want to put the regex as your first argument, e.g. when executing multiple searches over the same set of files. </dd>
+<dd> Only print the filenames of files that do <i></i><i>NOT</i><i></i> match.</dd>
+<dt><code>&#8211;match </code>PATTERN</dt>
+<dd> Specify the <i></i><i>PATTERN</i><i></i> explicitly. This is helpful if you don&#8217;t want to put the regex as your first argument, e.g. when executing multiple searches over the same set of files. </dd>
 <pre>
     # search for foo and bar in given files
     ack file1 t/file* --match foo
     ack file1 t/file* --match bar
 </pre>
-<dt><code>-m=</code><font SIZE="-1">NUM</font>, <code>&#8211;max-count=</code><font SIZE="-1">NUM</font></dt>
-<dd> Stop reading a file after <i></i><font SIZE="-1"><i>NUM</i></font><i></i> matches.</dd>
+<dt><code>-m=</code>NUM, <code>&#8211;max-count=</code>NUM</dt>
+<dd> Stop reading a file after <i></i><i>NUM</i><i></i> matches.</dd>
 <dt><code>&#8211;man</code></dt>
 <dd> Print this manual page.</dd>
 <dt><code>-n</code>, <code>&#8211;no-recurse</code></dt>
 <dd> No descending into subdirectories.</dd>
 <dt><code>-o</code></dt>
-<dd> Show only the part of each line matching <font SIZE="-1">PATTERN </font>(turns off text highlighting)</dd>
+<dd> Show only the part of each line matching PATTERN (turns off text highlighting)</dd>
 <dt><code>&#8211;output=</code>expr</dt>
-<dd> Output the evaluation of <i>expr</i> for each line (turns off text highlighting) If <font SIZE="-1">PATTERN</font> matches more than once then a line is output for each non-overlapping match. For more information please see the section &quot;Examples of <i>&#8211;output</i>&quot;.</dd>
+<dd> Output the evaluation of <i>expr</i> for each line (turns off text highlighting) If PATTERN matches more than once then a line is output for each non-overlapping match. For more information please see the section &quot;Examples of <i>&#8211;output</i>&quot;.</dd>
 <dt><code>&#8211;pager=</code>program, <code>&#8211;nopager</code></dt>
 <dd> <code>&#8211;pager</code> directs ack&#8217;s output through <i>program</i>. This can also be specified via the <tt>&quot;ACK_PAGER&quot;</tt> and <tt>&quot;ACK_PAGER_COLOR&quot;</tt> environment variables. </dd>
 <p> Using &#8211;pager does not suppress grouping and coloring like piping output on the command-line does. </p>
@@ -148,13 +148,13 @@ ack[options] PATTERN[FILE...] ack - f[options][DIRECTORY...]
     ack -f --html --print0 | xargs -0 rm -f
 </pre>
 <dt><code>-Q</code>, <code>&#8211;literal</code></dt>
-<dd> Quote all metacharacters in <font SIZE="-1">PATTERN,</font> it is treated as a literal.</dd>
+<dd> Quote all metacharacters in PATTERN, it is treated as a literal.</dd>
 <dt><code>-r</code>, <code>-R</code>, <code>&#8211;recurse</code></dt>
 <dd> Recurse into sub-directories. This is the default and just here for compatibility with grep. You can also use it for turning <code>&#8211;no-recurse</code> off.</dd>
 <dt><code>-s</code></dt>
 <dd> Suppress error messages about nonexistent or unreadable files. This is taken from fgrep.</dd>
 <dt><code>&#8211;[no]smart-case</code>, <code>&#8211;no-smart-case</code></dt>
-<dd> Ignore case in the search strings if <font SIZE="-1">PATTERN</font> contains no uppercase characters. This is similar to <tt>&quot;smartcase&quot;</tt> in vim. This option is off by default, and ignored if <tt>&quot;-i&quot;</tt> is specified. </dd>
+<dd> Ignore case in the search strings if PATTERN contains no uppercase characters. This is similar to <tt>&quot;smartcase&quot;</tt> in vim. This option is off by default, and ignored if <tt>&quot;-i&quot;</tt> is specified. </dd>
 <p> <code>-i</code> always overrides this option.</p>
 <dt><code>&#8211;sort-files</code></dt>
 <dd> Sorts the found files lexicographically. Use this if you want your file listings to be deterministic between runs of <i>ack</i>.</dd>
@@ -162,22 +162,22 @@ ack[options] PATTERN[FILE...] ack - f[options][DIRECTORY...]
 <dd> Outputs the filetypes that ack associates with each file. </dd>
 <p> Works with <code>-f</code> and <code>-g</code> options.</p>
 <dt><code>&#8211;type=[no]TYPE</code></dt>
-<dd> Specify the types of files to include or exclude from a search. <font SIZE="-1">TYPE</font> is a filetype, like <i>perl</i> or <i>xml</i>. <code>&#8211;type=perl</code> can also be specified as <code>&#8211;perl</code>, and <code>&#8211;type=noperl</code> can be done as <code>&#8211;noperl</code>. </dd>
+<dd> Specify the types of files to include or exclude from a search. TYPE is a filetype, like <i>perl</i> or <i>xml</i>. <code>&#8211;type=perl</code> can also be specified as <code>&#8211;perl</code>, and <code>&#8211;type=noperl</code> can be done as <code>&#8211;noperl</code>. </dd>
 <p> If a file is of both type &#8220;foo&#8221; and &#8220;bar&#8221;, specifying &#8211;foo and &#8211;nobar will exclude the file, because an exclusion takes precedence over an inclusion. </p>
 <p> Type specifications can be repeated and are ORed together. </p>
 <p> See <i>ack &#8211;help=types</i> for a list of valid types.</p>
-<dt><code>&#8211;type-add </code><font SIZE="-1">TYPE</font><code>:</code><font SIZE="-1">FILTER</font><code>:</code><font SIZE="-1">FILTERARGS</font></dt>
-<dd> Files with the given <font SIZE="-1">FILTERARGS</font> applied to the given <font SIZE="-1">FILTER</font> are recognized as being of (the existing) type <font SIZE="-1">TYPE.</font> See also &#8220;Defining your own types&#8221;.</dd>
-<dt><code>&#8211;type-set </code><font SIZE="-1">TYPE</font><code>:</code><font SIZE="-1">FILTER</font><code>:</code><font SIZE="-1">FILTERARGS</font></dt>
-<dd> Files with the given <font SIZE="-1">FILTERARGS</font> applied to the given <font SIZE="-1">FILTER</font> are recognized as being of type <font SIZE="-1">TYPE.</font> This replaces an existing definition for type <font SIZE="-1">TYPE. </font> See also &#8220;Defining your own types&#8221;.</dd>
-<dt><code>&#8211;type-del </code><font SIZE="-1">TYPE</font></dt>
-<dd> The filters associated with <font SIZE="-1">TYPE</font> are removed from Ack, and are no longer considered for searches.</dd>
+<dt><code>&#8211;type-add </code>TYPE<code>:</code>FILTER<code>:</code>FILTERARGS</dt>
+<dd> Files with the given FILTERARGS applied to the given FILTER are recognized as being of (the existing) type TYPE. See also &#8220;Defining your own types&#8221;.</dd>
+<dt><code>&#8211;type-set </code>TYPE<code>:</code>FILTER<code>:</code>FILTERARGS</dt>
+<dd> Files with the given FILTERARGS applied to the given FILTER are recognized as being of type TYPE. This replaces an existing definition for type TYPE.  See also &#8220;Defining your own types&#8221;.</dd>
+<dt><code>&#8211;type-del </code>TYPE</dt>
+<dd> The filters associated with TYPE are removed from Ack, and are no longer considered for searches.</dd>
 <dt><code>-v</code>, <code>&#8211;invert-match</code></dt>
 <dd> Invert match: select non-matching lines</dd>
 <dt><code>&#8211;version</code></dt>
 <dd> Display version and copyright information.</dd>
 <dt><code>-w</code>, <code>&#8211;word-regexp</code></dt>
-<dd> Force <font SIZE="-1">PATTERN</font> to match only whole words. The <font SIZE="-1">PATTERN</font> is wrapped with <tt>&quot;&quot;</tt> metacharacters.</dd>
+<dd> Force PATTERN to match only whole words. The PATTERN is wrapped with <tt>&quot;&quot;</tt> metacharacters.</dd>
 <dt><code>-x</code></dt>
 <dd> An abbreviation for <code>&#8211;files-from=-</code>; the list of files to search are read from standard input, with one line per file.</dd>
 <dt><code>-1</code></dt>
@@ -199,7 +199,7 @@ ack[options] PATTERN[FILE...] ack - f[options][DIRECTORY...]
     -- pager = less - r
 </code></pre>
 <p> Note that arguments with spaces in them do not need to be quoted, as they are not interpreted by the shell. Basically, each <i>line</i> in the <i>.ackrc</i> file is interpreted as one element of <tt>@ARGV</tt>. </p>
-<p> <i>ack</i> looks in several locations for <i>.ackrc</i> files; the searching process is detailed in &#8220;<font SIZE="-1">ACKRC LOCATION SEMANTICS&#8221;</font>. These files are not considered if <code>&#8211;noenv</code> is specified on the command line.</p>
+<p> <i>ack</i> looks in several locations for <i>.ackrc</i> files; the searching process is detailed in &#8220;ACKRC LOCATION SEMANTICS&#8221;. These files are not considered if <code>&#8211;noenv</code> is specified on the command line.</p>
 <h2>Defining your own types</h2>
 <p> ack allows you to define your own types in addition to the predefined types. This is done with command line options that are best put into an <i>.ackrc</i> file &#8211; then you do not have to define your types over and over again. In the following examples the options will always be shown on one command line so that they can be easily copy &amp; pasted. </p>
 <p> <i>ack &#8211;perl foo</i> searches for foo in all perl files. <i>ack &#8211;help=types</i> tells you, that perl files are files ending in .pl, .pm, .pod or .t. So what if you would like to include .xs files as well when searching for &#8211;perl files? <i>ack &#8211;type-add perl:ext:xs &#8211;perl foo</i> does this for you. <code>&#8211;type-add</code> appends additional extensions to an existing type. </p>
@@ -213,32 +213,32 @@ ack[options] PATTERN[FILE...] ack - f[options][DIRECTORY...]
   --type-set
   eiffel:ext:e,eiffel
 </pre>
-<p> The following does <font SIZE="-1"><code>NOT</code></font> work in the <i>.ackrc</i> file: </p>
+<p> The following does <code>NOT</code> work in the <i>.ackrc</i> file: </p>
 <pre>
   --type-set eiffel:ext:e,eiffel
 </pre>
 <p> In order to see all currently defined types, use <i>&#8211;help-types</i>, e.g. <i>ack &#8211;type-set backup:ext:bak &#8211;type-add perl:ext:perl &#8211;help-types</i> </p>
-<p> In addition to filtering based on extension (like ack 1.x allowed), ack 2 offers additional filter types. The generic syntax is <i>&#8211;type-set </i><font SIZE="-1"><i>TYPE:FILTER:FILTERARGS</i></font><i></i>; <i></i><font SIZE="-1"><i>FILTERARGS</i></font><i></i> depends on the value of <i></i><font SIZE="-1"><i>FILTER</i></font><i></i>.</p>
+<p> In addition to filtering based on extension (like ack 1.x allowed), ack 2 offers additional filter types. The generic syntax is <i>&#8211;type-set </i><i>TYPE:FILTER:FILTERARGS</i><i></i>; <i></i><i>FILTERARGS</i><i></i> depends on the value of <i></i><i>FILTER</i><i></i>.</p>
 <dl>
-<dt>is:<i></i><font SIZE="-1"><i>FILENAME</i></font><i></i></dt>
+<dt>is:<i></i><i>FILENAME</i><i></i></dt>
 <dd> <i>is</i> filters match the target filename exactly. It takes exactly one argument, which is the name of the file to match. </dd>
 <p> Example: </p>
 <pre>
     --type-set make:is:Makefile
 </pre>
-<dt>ext:<i></i><font SIZE="-1"><i>EXTENSION</i></font><i></i>[,<i></i><font SIZE="-1"><i>EXTENSION2</i></font><i></i>[,&#8230;]]</dt>
+<dt>ext:<i></i><i>EXTENSION</i><i></i>[,<i></i><i>EXTENSION2</i><i></i>[,&#8230;]]</dt>
 <dd> <i>ext</i> filters match the extension of the target file against a list of extensions. No leading dot is needed for the extensions. </dd>
 <p> Example: </p>
 <pre>
     --type-set perl:ext:pl,pm,t
 </pre>
-<dt>match:<i></i><font SIZE="-1"><i>PATTERN</i></font><i></i></dt>
+<dt>match:<i></i><i>PATTERN</i><i></i></dt>
 <dd> <i>match</i> filters match the target filename against a regular expression. The regular expression is made case insensitive for the search. </dd>
 <p> Example: </p>
 <pre>
     --type-set make:match:/(gnu)?makefile/
 </pre>
-<dt>firstlinematch:<i></i><font SIZE="-1"><i>PATTERN</i></font><i></i></dt>
+<dt>firstlinematch:<i></i><i>PATTERN</i><i></i></dt>
 <dd> <i>firstlinematch</i> matches the first line of the target file against a regular expression. Like <i>match</i>, the regular expression is made case insensitive. </dd>
 <p> Example: </p>
 <pre>
@@ -249,28 +249,28 @@ ack[options] PATTERN[FILE...] ack - f[options][DIRECTORY...]
 <h2>ENVIRONMENT VARIABLES</h2>
 <p> For commonly-used ack options, environment variables can make life much easier. These variables are ignored if <code>&#8211;noenv</code> is specified on the command line.</p>
 <dl>
-<dt><font SIZE="-1">ACKRC</font></dt>
+<dt>ACKRC</dt>
 <dd> Specifies the location of the user&#8217;s <i>.ackrc</i> file. If this file doesn&#8217;t exist, <i>ack</i> looks in the default location.</dd>
-<dt><font SIZE="-1">ACK_OPTIONS</font></dt>
+<dt>ACK_OPTIONS</dt>
 <dd> This variable specifies default options to be placed in front of any explicit options on the command line.</dd>
-<dt><font SIZE="-1">ACK_COLOR_FILENAME</font></dt>
+<dt>ACK_COLOR_FILENAME</dt>
 <dd> Specifies the color of the filename when it&#8217;s printed in <code>&#8211;group</code> mode. By default, it&#8217;s &#8220;bold green&#8221;. </dd>
 <p> The recognized attributes are clear, reset, dark, bold, underline, underscore, blink, reverse, concealed black, red, green, yellow, blue, magenta, on_black, on_red, on_green, on_yellow, on_blue, on_magenta, on_cyan, and on_white. Case is not significant. Underline and underscore are equivalent, as are clear and reset. The color alone sets the foreground color, and on_color sets the background color. </p>
 <p> This option can also be set with <code>&#8211;color-filename</code>.</p>
-<dt><font SIZE="-1">ACK_COLOR_MATCH</font></dt>
+<dt>ACK_COLOR_MATCH</dt>
 <dd> Specifies the color of the matching text when printed in <code>&#8211;color</code> mode. By default, it&#8217;s &#8220;black on_yellow&#8221;. </dd>
 <p> This option can also be set with <code>&#8211;color-match</code>. </p>
-<p> See <font SIZE="-1"><code>ACK_COLOR_FILENAME</code></font> for the color specifications.</p>
-<dt><font SIZE="-1">ACK_COLOR_LINENO</font></dt>
+<p> See <code>ACK_COLOR_FILENAME</code> for the color specifications.</p>
+<dt>ACK_COLOR_LINENO</dt>
 <dd> Specifies the color of the line number when printed in <code>&#8211;color</code> mode. By default, it&#8217;s &#8220;bold yellow&#8221;. </dd>
 <p> This option can also be set with <code>&#8211;color-lineno</code>. </p>
-<p> See <font SIZE="-1"><code>ACK_COLOR_FILENAME</code></font> for the color specifications.</p>
-<dt><font SIZE="-1">ACK_PAGER</font></dt>
+<p> See <code>ACK_COLOR_FILENAME</code> for the color specifications.</p>
+<dt>ACK_PAGER</dt>
 <dd> Specifies a pager program, such as <tt>&quot;more&quot;</tt>, <tt>&quot;less&quot;</tt> or <tt>&quot;most&quot;</tt>, to which ack will send its output. </dd>
 <p> Using <tt>&quot;ACK_PAGER&quot;</tt> does not suppress grouping and coloring like piping output on the command-line does, except that on Windows ack will assume that <tt>&quot;ACK_PAGER&quot;</tt> does not support color. </p>
 <p> <tt>&quot;ACK_PAGER_COLOR&quot;</tt> overrides <tt>&quot;ACK_PAGER&quot;</tt> if both are specified.</p>
-<dt><font SIZE="-1">ACK_PAGER_COLOR</font></dt>
-<dd> Specifies a pager program that understands <font SIZE="-1">ANSI</font> color sequences. Using <tt>&quot;ACK_PAGER_COLOR&quot;</tt> does not suppress grouping and coloring like piping output on the command-line does. </dd>
+<dt>ACK_PAGER_COLOR</dt>
+<dd> Specifies a pager program that understands ANSI color sequences. Using <tt>&quot;ACK_PAGER_COLOR&quot;</tt> does not suppress grouping and coloring like piping output on the command-line does. </dd>
 <p> If you are not on Windows, you never need to use <tt>&quot;ACK_PAGER_COLOR&quot;</tt>.</dl>
 <h2>ACK &amp; OTHER TOOLS</h2>
 <h3>Vim integration</h3>
@@ -316,20 +316,20 @@ ack[options] PATTERN[FILE...] ack - f[options][DIRECTORY...]
     perl -p -i -e's/this/that/g' $(ack -f --perl)
 </pre>
 <h3>Use <i>-Q</i> when in doubt about metacharacters</h3>
-<p> If you&#8217;re searching for something with a regular expression metacharacter, most often a period in a filename or <font SIZE="-1">IP</font> address, add the -Q to avoid false positives without all the backslashing. See the following example for more&#8230;</p>
+<p> If you&#8217;re searching for something with a regular expression metacharacter, most often a period in a filename or IP address, add the -Q to avoid false positives without all the backslashing. See the following example for more&#8230;</p>
 <h3>Use ack to watch log files</h3>
 <p> Here&#8217;s one I used the other day to find trouble spots for a website visitor. The user had a problem loading <i>troublesome.gif</i>, so I took the access log and scanned it with ack twice. </p>
 <pre>
     ack -Q aa.bb.cc.dd /path/to/access.log | ack -Q -B5 troublesome.gif
 </pre>
-<p> The first ack finds only the lines in the Apache log for the given <font SIZE="-1">IP. </font> The second finds the match on my troublesome <font SIZE="-1">GIF,</font> and shows the previous five lines from the log in each case.</p>
+<p> The first ack finds only the lines in the Apache log for the given IP.  The second finds the match on my troublesome GIF, and shows the previous five lines from the log in each case.</p>
 <h3>Examples of <i>&#8211;output</i></h3>
 <p> Following variables are useful in the expansion string:</p>
 <dl>
 <dt>$&amp;</dt>
-<dd> The whole string matched by <font SIZE="-1">PATTERN.</font></dd>
+<dd> The whole string matched by PATTERN.</dd>
 <dt>$1, $2, &#8230;</dt>
-<dd> The contents of the 1st, 2nd &#8230; bracketed group in <font SIZE="-1">PATTERN.</font></dd>
+<dd> The contents of the 1st, 2nd &#8230; bracketed group in PATTERN.</dd>
 <dt>&quot;$`&quot;</dt>
 <dd> The string before the match.</dd>
 <dt>&quot;$&#8217;&quot;</dt>
@@ -356,12 +356,12 @@ ack[options] PATTERN[FILE...] ack - f[options][DIRECTORY...]
 <p> Use the <tt>&quot;-f&quot;</tt> switch to see a list of files that ack will search for you. You can use the <tt>&quot;--show-types&quot;</tt> switch to show which type ack thinks each file is.</p>
 <h3>Wouldn&#8217;t it be great if <i>ack</i> did search &amp; replace?</h3>
 <p> No, ack will always be read-only. Perl has a perfectly good way to do search &amp; replace in files, using the <tt>&quot;-i&quot;</tt>, <tt>&quot;-p&quot;</tt> and <tt>&quot;-n&quot;</tt> switches. </p>
-<p> You can certainly use ack to select your files to update. For example, to change all &#8220;foo&#8221; to &#8220;bar&#8221; in all <font SIZE="-1">PHP</font> files, you can do this from the Unix shell: </p>
+<p> You can certainly use ack to select your files to update. For example, to change all &#8220;foo&#8221; to &#8220;bar&#8221; in all PHP files, you can do this from the Unix shell: </p>
 <pre>
     $ perl -i -p -e's/foo/bar/g' $(ack -f --php)
 </pre>
 <h3>Can I make ack recognize <i>.xyz</i> files?</h3>
-<p> Yes! Please see &#8220;Defining your own types&#8221;. If you think that <i>ack</i> should recognize a type by default, please see &#8220;<font SIZE="-1">ENHANCEMENTS&#8221;</font>.</p>
+<p> Yes! Please see &#8220;Defining your own types&#8221;. If you think that <i>ack</i> should recognize a type by default, please see &#8220;ENHANCEMENTS&#8221;.</p>
 <h3>There&#8217;s already a program/package called ack.</h3>
 <p> Yes, I know.</p>
 <h3>Why is it called ack if it&#8217;s called ack-grep?</h3>
@@ -405,24 +405,24 @@ ack[options] PATTERN[FILE...] ack - f[options][DIRECTORY...]
 <dd> &#8211;ackrc </dd>
 <p> The <tt>&quot;--ackrc&quot;</tt> option may be included on the command line to specify an ackrc file that can override all others. It is consulted even if <tt>&quot;--noenv&quot;</tt> is present.</p>
 <dt>&bull;</dt>
-<dd> <font SIZE="-1">ACK_OPTIONS</font> </dd>
+<dd> ACK_OPTIONS </dd>
 <p> Options are then loaded from the environment variable <tt>&quot;ACK_OPTIONS&quot;</tt>. This can be omitted using <tt>&quot;--noenv&quot;</tt>.</p>
 <dt>&bull;</dt>
 <dd> Command line </dd>
 <p> Options are then loaded from the command line.</dl>
 <h2>DIFFERENCES BETWEEN ACK 1.X AND ACK 2.X</h2>
 <p> A lot of changes were made for ack 2; here is a list of them.</p>
-<h3><font SIZE="-1">GENERAL CHANGES</font></h3>
+<h3>GENERAL CHANGES</h3>
 <dl>
 <dt>&bull;</dt>
 <dd> When no selectors are specified, ack 1.x only searches through files that it can map to a file type. ack 2.x, by contrast, will search through every regular, non-binary file that is not explicitly ignored via <code>&#8211;ignore-file</code> or <code>&#8211;ignore-dir</code>. This is similar to the behavior of the <code>-a/&#8211;all</code> option in ack 1.x.</dd>
 <dt>&bull;</dt>
 <dd> A more flexible filter system has been added, so that more powerful file types may be created by the user. For details, please consult &#8220;Defining your own types&#8221;.</dd>
 <dt>&bull;</dt>
-<dd> ack now loads multiple ackrc files; see &#8220;<font SIZE="-1">ACKRC LOCATION SEMANTICS&#8221;</font> for details.</dd>
+<dd> ack now loads multiple ackrc files; see &#8220;ACKRC LOCATION SEMANTICS&#8221; for details.</dd>
 <dt>&bull;</dt>
 <dd> ack&#8217;s default filter definitions aren&#8217;t special; you may tell ack to completely disregard them if you don&#8217;t like them.</dd></dl>
-<h3><font SIZE="-1">REMOVED OPTIONS</font></h3>
+<h3>REMOVED OPTIONS</h3>
 <dl>
 <dt>&bull;</dt>
 <dd> Because of the change in default search behavior, the <code>-a/&#8211;all</code> and <code>-u/&#8211;unrestricted</code> options have been removed. In addition, the <code>-k/&#8211;known-types</code> option was added to cause ack to behave with the default search behavior of ack 1.x.</dd>
@@ -436,11 +436,11 @@ ack[options] PATTERN[FILE...] ack - f[options][DIRECTORY...]
 <dd> The <code>&#8211;text</code> option has been removed.</dd>
 <dt>&bull;</dt>
 <dd> The <code>&#8211;invert-file-match</code> option has been removed. Instead, you may use <code>-v</code> with <code>-g</code>.</dd></dl>
-<h3><font SIZE="-1">CHANGED OPTIONS</font></h3>
+<h3>CHANGED OPTIONS</h3>
 <dl>
 <dt>&bull;</dt>
 <dd> The options that modify the regular expression&#8217;s behavior (<code>-i</code>, <code>-w</code>, <code>-Q</code>, and <code>-v</code>) may now be used with <code>-g</code>.</dd></dl>
-<h3><font SIZE="-1">ADDED OPTIONS</font></h3>
+<h3>ADDED OPTIONS</h3>
 <dl>
 <dt>&bull;</dt>
 <dd> <code>&#8211;files-from</code> was added so that a user may submit a list of filenames as a list of files to search.</dd>
@@ -467,7 +467,7 @@ ack[options] PATTERN[FILE...] ack - f[options][DIRECTORY...]
 <h2>BUGS</h2>
 <p> Please report any bugs or feature requests to the issues list at Github: &lt;<a rel="nofollow" href="https://github.com/petdance/ack2/issues">https://github.com/petdance/ack2/issues</a>&gt;</p>
 <h2>ENHANCEMENTS</h2>
-<p> All enhancement requests <font SIZE="-1">MUST</font> first be posted to the ack-users mailing list at &lt;<a rel="nofollow" href="http://groups.google.com/group/ack-users">http://groups.google.com/group/ack-users</a>&gt;. I will not consider a request without it first getting seen by other ack users. This includes requests for new filetypes. </p>
+<p> All enhancement requests MUST first be posted to the ack-users mailing list at &lt;<a rel="nofollow" href="http://groups.google.com/group/ack-users">http://groups.google.com/group/ack-users</a>&gt;. I will not consider a request without it first getting seen by other ack users. This includes requests for new filetypes. </p>
 <p> There is a list of enhancements I want to make to <i>ack</i> in the ack issues list at Github: &lt;<a rel="nofollow" href="https://github.com/petdance/ack2/issues">https://github.com/petdance/ack2/issues</a>&gt; </p>
 <p> Patches are always welcome, but patches with tests get the most attention.</p>
 <h2>SUPPORT</h2>
@@ -483,21 +483,21 @@ ack[options] PATTERN[FILE...] ack - f[options][DIRECTORY...]
 <dd> The ack issues list at Github </dd>
 <p> &lt;<a rel="nofollow" href="https://github.com/petdance/ack2/issues">https://github.com/petdance/ack2/issues</a>&gt;</p>
 <dt>&bull;</dt>
-<dd> AnnoCPAN: Annotated <font SIZE="-1">CPAN</font> documentation </dd>
+<dd> AnnoCPAN: Annotated CPAN documentation </dd>
 <p> &lt;<a rel="nofollow" href="http://annocpan.org/dist/ack">http://annocpan.org/dist/ack</a>&gt;</p>
 <dt>&bull;</dt>
-<dd> <font SIZE="-1">CPAN</font> Ratings </dd>
+<dd> CPAN Ratings </dd>
 <p> &lt;<a rel="nofollow" href="http://cpanratings.perl.org/d/ack">http://cpanratings.perl.org/d/ack</a>&gt;</p>
 <dt>&bull;</dt>
-<dd> Search <font SIZE="-1">CPAN</font> </dd>
+<dd> Search CPAN </dd>
 <p> &lt;<a rel="nofollow" href="http://search.cpan.org/dist/ack">http://search.cpan.org/dist/ack</a>&gt;</p>
 <dt>&bull;</dt>
 <dd> Git source repository </dd>
 <p> &lt;<a rel="nofollow" href="https://github.com/petdance/ack2">https://github.com/petdance/ack2</a>&gt;</dl>
 <h2>ACKNOWLEDGEMENTS</h2>
 <p> How appropriate to have <i>ack</i>nowledgements! </p>
-<p> Thanks to everyone who has contributed to ack in any way, including Fraser Tweedale, Raal Gundan, Steffen Jaeckel, Stephan Hohe, Michael Beijen, Alexandr Ciornii, Christian Walde, Charles Lee, Joe McMahon, John Warwick, David Steinbrunner, Kara Martens, Volodymyr Medvid, Ron Savage, Konrad Borowski, Dale Sedivic, Michael McClimon, Andrew Black, Ralph Bodenner, Shaun Patterson, Ryan Olson, Shlomi Fish, Karen Etheridge, Olivier Mengue, Matthew Wild, Scott Kyle, Nick Hooey, Bo Borgerson, Mark Szymanski, Marq Schneider, Packy Anderson, <font SIZE="-1">JR</font> Boyens, Dan Sully, Ryan Niebur, Kent Fredric, Mike Morearty, Ingmar Vanhassel, Eric Van Dewoestine, Sitaram Chamarty, Adam James, Richard Carlsson, Pedro Melo, <font SIZE="-1">AJ</font> Schuster, Phil Jackson, Michael Schwern, Jan Dubois, Christopher J. Madsen, Matthew Wickline, David Dyck, Jason Porritt, Jjgod Jiang, Thomas Klausner, Uri Guttman, Peter Lewis, Kevin Riggle, Ori Avtalion, Torsten Blix, Nigel Metheringham, Gabor Szabo, Tod Hagan, Michael Hendricks, AEvar Arnfjo.rd<i>&#8211;</i> Bjarmason, Piers Cawley, Stephen Steneker, Elias Lutfallah, Mark Leighton Fisher, Matt Diephouse, Christian Jaeger, Bill Sully, Bill Ricker, David Golden, Nilson Santos F. Jr, Elliot Shank, Merijn Broeren, Uwe Voelker, Rick Scott, Ask Bjorn Hansen, Jerry Gay, Will Coleda, Mike O&#8217;Regan, Slaven ReziX, Mark Stosberg, David Alan Pisoni, Adriano Ferreira, James Keenan, Leland Johnson, Ricardo Signes, Pete Krawczyk and Rob Hoelz.</p>
+<p> Thanks to everyone who has contributed to ack in any way, including Fraser Tweedale, Raal Gundan, Steffen Jaeckel, Stephan Hohe, Michael Beijen, Alexandr Ciornii, Christian Walde, Charles Lee, Joe McMahon, John Warwick, David Steinbrunner, Kara Martens, Volodymyr Medvid, Ron Savage, Konrad Borowski, Dale Sedivic, Michael McClimon, Andrew Black, Ralph Bodenner, Shaun Patterson, Ryan Olson, Shlomi Fish, Karen Etheridge, Olivier Mengue, Matthew Wild, Scott Kyle, Nick Hooey, Bo Borgerson, Mark Szymanski, Marq Schneider, Packy Anderson, JR Boyens, Dan Sully, Ryan Niebur, Kent Fredric, Mike Morearty, Ingmar Vanhassel, Eric Van Dewoestine, Sitaram Chamarty, Adam James, Richard Carlsson, Pedro Melo, AJ Schuster, Phil Jackson, Michael Schwern, Jan Dubois, Christopher J. Madsen, Matthew Wickline, David Dyck, Jason Porritt, Jjgod Jiang, Thomas Klausner, Uri Guttman, Peter Lewis, Kevin Riggle, Ori Avtalion, Torsten Blix, Nigel Metheringham, Gabor Szabo, Tod Hagan, Michael Hendricks, AEvar Arnfjo.rd<i>&#8211;</i> Bjarmason, Piers Cawley, Stephen Steneker, Elias Lutfallah, Mark Leighton Fisher, Matt Diephouse, Christian Jaeger, Bill Sully, Bill Ricker, David Golden, Nilson Santos F. Jr, Elliot Shank, Merijn Broeren, Uwe Voelker, Rick Scott, Ask Bjorn Hansen, Jerry Gay, Will Coleda, Mike O&#8217;Regan, Slaven ReziX, Mark Stosberg, David Alan Pisoni, Adriano Ferreira, James Keenan, Leland Johnson, Ricardo Signes, Pete Krawczyk and Rob Hoelz.</p>
 <h2>COPYRIGHT &amp; LICENSE</h2>
 <p> Copyright 2005-2013 Andy Lester. </p>
 <p> This program is free software; you can redistribute it and/or modify it under the terms of the Artistic License v2.0. </p>
-<p> See <a rel="nofollow" href="http://www.perlfoundation.org/artistic_license_2_0">http://www.perlfoundation.org/artistic_license_2_0</a> or the <font SIZE="-1">LICENSE</font>.md file that comes with the ack distribution. </p>
+<p> See <a rel="nofollow" href="http://www.perlfoundation.org/artistic_license_2_0">http://www.perlfoundation.org/artistic_license_2_0</a> or the LICENSE.md file that comes with the ack distribution. </p>

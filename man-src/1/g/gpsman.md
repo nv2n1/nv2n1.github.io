@@ -10,7 +10,7 @@ description: "gpsman – a (graphical) manager of GPS data"
 
 <p> gpsman &#8211; a (graphical) manager of GPS data</p>
 <h2>SYNOPSIS</h2>
-<p> <code>gpsman</code> [<code>-dev</code> <i>[usb=]DEVICE</i>]<br />
+<p> <code>gpsman</code> [<code>-dev</code> <i>[usb=]DEVICE</i>]<br/>
  <code>gpsman</code> [<i>OPTIONS</i>] <i>COMMAND</i> [<i>COMMAND_ARGS</i>]</p>
 <h2>DESCRIPTION</h2>
 <p> <code>gpsman</code> GPS Manager (GPSMan) is a graphical manager of GPS data that makes possible the preparation, inspection and edition of GPS data in a friendly environment. GPSMan supports communication and real-time logging with Garmin, Lowrance and Magellan receivers and accepts real-time logging information in NMEA 0183 from any GPS receiver. </p>
@@ -78,9 +78,9 @@ description: "gpsman – a (graphical) manager of GPS data"
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;mig_AT_ncc.up.pt&gt;.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright (C) 1998-2008 Miguel Filgueiras and Rogerio Reis<br />
+<p> Copyright (C) 1998-2008 Miguel Filgueiras and Rogerio Reis<br/>
  LIACC &amp; DCC Faculdade de Ciencias/ University of Porto </p>
 <p> This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>SEE ALSO</h2>
-<p> Miguel Filgueiras, <code>GPSMan User Manual</code>, Version 6.4, September 2008<br />
+<p> Miguel Filgueiras, <code>GPSMan User Manual</code>, Version 6.4, September 2008<br/>
  This manual, in both PDF and HTML, is part of the distribution of GPSMan and can be retrieved from the GPSMan site at <code><a rel="nofollow" href="http://www.ncc.up.pt/gpsman">http://www.ncc.up.pt/gpsman</a></code>. </p>

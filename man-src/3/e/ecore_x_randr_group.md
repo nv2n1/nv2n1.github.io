@@ -9,31 +9,31 @@ description: "X RandR Extension Functions – Functions related to the X RandR e
 
 <p>X RandR Extension Functions &#8211; Functions related to the X RandR extension. </p>
 <h3>Functions</h3>
-<p>EAPI int <code>ecore_x_randr_query</code> (void)<br />
- <i>Return whether the X server supports the RandR Extension. </i><br />
- EAPI int <code>ecore_x_randr_events_select</code> (Ecore_X_Window window, int on)<br />
- <i>Select if the ScreenChangeNotify events will be sent. </i><br />
- EAPI void <code>ecore_x_randr_get_screen_info_prefetch</code> (Ecore_X_Window window)<br />
- <i>Sends the GetScreenInfo request. </i><br />
- EAPI void <code>ecore_x_randr_get_screen_info_fetch</code> (void)<br />
- <i>Gets the reply of the GetScreenInfo request sent by </i><code>ecore_x_randr_get_screen_info_prefetch()</code>.<br />
- EAPI Ecore_X_Randr_Rotation <code>ecore_x_randr_screen_rotations_get</code> (Ecore_X_Window root __UNUSED__)<br />
- <i>Get the set of rotations and reflections. </i><br />
- EAPI Ecore_X_Randr_Rotation <code>ecore_x_randr_screen_rotation_get</code> (Ecore_X_Window root __UNUSED__)<br />
- <i>Get the rotation. </i><br />
- EAPI Ecore_X_Screen_Size * <code>ecore_x_randr_screen_sizes_get</code> (Ecore_X_Window root __UNUSED__, int *num)<br />
- <i>Get the frame buffer sizes. </i><br />
- EAPI Ecore_X_Screen_Size <code>ecore_x_randr_current_screen_size_get</code> (Ecore_X_Window root __UNUSED__)<br />
- <i>Get the current frame buffer size. </i><br />
- EAPI Ecore_X_Screen_Refresh_Rate <code>ecore_x_randr_current_screen_refresh_rate_get</code> (Ecore_X_Window root __UNUSED__)<br />
- <i>Get the current refresh rate. </i><br />
- EAPI Ecore_X_Screen_Refresh_Rate * <code>ecore_x_randr_screen_refresh_rates_get</code> (Ecore_X_Window root __UNUSED__, int size_id __UNUSED__, int *num)<br />
- <i>Get the refresh rates. </i><br />
- EAPI void <code>ecore_x_randr_screen_rotation_set</code> (Ecore_X_Window root, Ecore_X_Randr_Rotation rot)<br />
- <i>Set the screen rotation. </i><br />
- EAPI int <code>ecore_x_randr_screen_size_set</code> (Ecore_X_Window root, Ecore_X_Screen_Size size)<br />
- <i>Set the screen size. </i><br />
- EAPI int <code>ecore_x_randr_screen_refresh_rate_set</code> (Ecore_X_Window root, Ecore_X_Screen_Size size, Ecore_X_Screen_Refresh_Rate rate)<br />
+<p>EAPI int <code>ecore_x_randr_query</code> (void)<br/>
+ <i>Return whether the X server supports the RandR Extension. </i><br/>
+ EAPI int <code>ecore_x_randr_events_select</code> (Ecore_X_Window window, int on)<br/>
+ <i>Select if the ScreenChangeNotify events will be sent. </i><br/>
+ EAPI void <code>ecore_x_randr_get_screen_info_prefetch</code> (Ecore_X_Window window)<br/>
+ <i>Sends the GetScreenInfo request. </i><br/>
+ EAPI void <code>ecore_x_randr_get_screen_info_fetch</code> (void)<br/>
+ <i>Gets the reply of the GetScreenInfo request sent by </i><code>ecore_x_randr_get_screen_info_prefetch()</code>.<br/>
+ EAPI Ecore_X_Randr_Rotation <code>ecore_x_randr_screen_rotations_get</code> (Ecore_X_Window root __UNUSED__)<br/>
+ <i>Get the set of rotations and reflections. </i><br/>
+ EAPI Ecore_X_Randr_Rotation <code>ecore_x_randr_screen_rotation_get</code> (Ecore_X_Window root __UNUSED__)<br/>
+ <i>Get the rotation. </i><br/>
+ EAPI Ecore_X_Screen_Size * <code>ecore_x_randr_screen_sizes_get</code> (Ecore_X_Window root __UNUSED__, int *num)<br/>
+ <i>Get the frame buffer sizes. </i><br/>
+ EAPI Ecore_X_Screen_Size <code>ecore_x_randr_current_screen_size_get</code> (Ecore_X_Window root __UNUSED__)<br/>
+ <i>Get the current frame buffer size. </i><br/>
+ EAPI Ecore_X_Screen_Refresh_Rate <code>ecore_x_randr_current_screen_refresh_rate_get</code> (Ecore_X_Window root __UNUSED__)<br/>
+ <i>Get the current refresh rate. </i><br/>
+ EAPI Ecore_X_Screen_Refresh_Rate * <code>ecore_x_randr_screen_refresh_rates_get</code> (Ecore_X_Window root __UNUSED__, int size_id __UNUSED__, int *num)<br/>
+ <i>Get the refresh rates. </i><br/>
+ EAPI void <code>ecore_x_randr_screen_rotation_set</code> (Ecore_X_Window root, Ecore_X_Randr_Rotation rot)<br/>
+ <i>Set the screen rotation. </i><br/>
+ EAPI int <code>ecore_x_randr_screen_size_set</code> (Ecore_X_Window root, Ecore_X_Screen_Size size)<br/>
+ <i>Set the screen size. </i><br/>
+ EAPI int <code>ecore_x_randr_screen_refresh_rate_set</code> (Ecore_X_Window root, Ecore_X_Screen_Size size, Ecore_X_Screen_Refresh_Rate rate)<br/>
  <i>Set the screen refresh rate. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions related to the X RandR extension.</p>
@@ -62,7 +62,7 @@ description: "X RandR Extension Functions – Functions related to the X RandR e
 <p>Select if the ScreenChangeNotify events will be sent. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>window</i> The window.<br />
+<dd><i>window</i> The window.<br/>
  <i>on</i> 1 to enable, 0 to disable.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -83,8 +83,8 @@ description: "X RandR Extension Functions – Functions related to the X RandR e
 <p>Set the screen refresh rate. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>root</i> The root window.<br />
- <i>size</i> The size.<br />
+<dd><i>root</i> The root window.<br/>
+ <i>size</i> The size.<br/>
  <i>rate</i> The refresh rate.</dd></dl>
 <p> Set the size and the refresh rate of the screen associated to root. </p>
 <p> Note that that function is blocking.</p>
@@ -92,7 +92,7 @@ description: "X RandR Extension Functions – Functions related to the X RandR e
 <p>Get the refresh rates. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>root</i> The window (Unused).<br />
+<dd><i>root</i> The window (Unused).<br/>
  <i>num</i> The number of refresh rates.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -113,7 +113,7 @@ description: "X RandR Extension Functions – Functions related to the X RandR e
 <p>Set the screen rotation. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>root</i> The root window.<br />
+<dd><i>root</i> The root window.<br/>
  <i>rot</i> The rotation.</dd></dl>
 <p> Set the rotation of the screen associated to root. </p>
 <p> Note that that function is blocking.</p>
@@ -131,7 +131,7 @@ description: "X RandR Extension Functions – Functions related to the X RandR e
 <p>Set the screen size. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>root</i> The root window.<br />
+<dd><i>root</i> The root window.<br/>
  <i>size</i> The size.</dd></dl>
 <p> Set the size of the screen associated to root. </p>
 <p> Note that that function is blocking.</p>
@@ -139,7 +139,7 @@ description: "X RandR Extension Functions – Functions related to the X RandR e
 <p>Get the frame buffer sizes. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>root</i> The window (Unused).<br />
+<dd><i>root</i> The window (Unused).<br/>
  <i>num</i> The number of sizes.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

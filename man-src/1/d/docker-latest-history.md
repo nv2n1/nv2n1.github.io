@@ -14,13 +14,13 @@ description: "docker-history – Show the history of an image"
 <h2>DESCRIPTION</h2>
 <p> Show the history of when and how an image was created. </p>
 <h2>OPTIONS</h2>
-<p> <code>&#8211;help</code><br />
+<p> <code>&#8211;help</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Print usage statement </p>
-<p> <code>-H</code>, <code>&#8211;human</code>=<i>true</i>|<i>false</i><br />
+<p> <code>-H</code>, <code>&#8211;human</code>=<i>true</i>|<i>false</i><br/>
 &nbsp;<wbr>Print sizes and dates in human readable format. The default is&nbsp;<wbr><i>true</i>. </p>
-<p> <code>&#8211;no-trunc</code>=<i>true</i>|<i>false</i><br />
+<p> <code>&#8211;no-trunc</code>=<i>true</i>|<i>false</i><br/>
 Don&#8217;t truncate output. The default is&nbsp;<wbr><i>false</i>. </p>
-<p> <code>-q</code>, <code>&#8211;quiet</code>=<i>true</i>|<i>false</i><br />
+<p> <code>-q</code>, <code>&#8211;quiet</code>=<i>true</i>|<i>false</i><br/>
 Only show numeric IDs. The default is&nbsp;<wbr><i>false</i>. </p>
 <h2>EXAMPLES</h2>
 <dl>

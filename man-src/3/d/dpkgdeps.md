@@ -13,7 +13,7 @@ Dpkg::Deps - parse and manipulate dependencies of Debian packages
  The most important function is <i>deps_parse()</i>, it turns a dependency line in a set of Dpkg::Deps::{Simple,AND,OR,Union} objects depending on the case.
 <h2>Functions</h2>All the deps_* functions are exported by default.
 <dl COMPACT><dt>deps_eval_implication($rel_p, $v_p, $rel_q, $v_q)
-</dt><dd>($rel_p, <tt>$v_p</tt>) and ($rel_q, <tt>$v_q</tt>) express two dependencies as (relation, version). The relation variable can have the following values that are exported by Dpkg::Version: <font SIZE="-1">REL_EQ, REL_LT, REL_LE, REL_GT, REL_GT.</font> 
+</dt><dd>($rel_p, <tt>$v_p</tt>) and ($rel_q, <tt>$v_q</tt>) express two dependencies as (relation, version). The relation variable can have the following values that are exported by Dpkg::Version: REL_EQ, REL_LT, REL_LE, REL_GT, REL_GT. 
  This functions returns 1 if the ``p'' dependency implies the ``q'' dependency. It returns 0 if the ``p'' dependency implies that ``q'' is not satisfied. It returns undef when there's no implication. 
  The <tt>$v_p</tt> and <tt>$v_q</tt> parameter should be Dpkg::Version objects.
 </dd><dt>my $dep = deps_concat(@dep_list)
@@ -46,12 +46,12 @@ Dpkg::Deps - parse and manipulate dependencies of Debian packages
 
  Return the same value as the callback function.
 </dd><dt>deps_compare($a, $b)
-</dt><dd>Implements a comparison operator between two dependency objects. This function is mainly used to implement the <i>sort()</i> method.</dd></dl><h2>OBJECTS - Dpkg::Deps::*</h2>There are several kind of dependencies. A Dpkg::Deps::Simple dependency represents a single dependency statement (it relates to one package only). Dpkg::Deps::Multiple dependencies are built on top of this object and combine several dependencies in a different manners. Dpkg::Deps::AND represents the logical ``<font SIZE="-1">AND''</font> between dependencies while Dpkg::Deps::OR represents the logical ``<font SIZE="-1">OR''.</font> Dpkg::Deps::Multiple objects can contain Dpkg::Deps::Simple object as well as other Dpkg::Deps::Multiple objects. 
+</dt><dd>Implements a comparison operator between two dependency objects. This function is mainly used to implement the <i>sort()</i> method.</dd></dl><h2>OBJECTS - Dpkg::Deps::*</h2>There are several kind of dependencies. A Dpkg::Deps::Simple dependency represents a single dependency statement (it relates to one package only). Dpkg::Deps::Multiple dependencies are built on top of this object and combine several dependencies in a different manners. Dpkg::Deps::AND represents the logical ``AND'' between dependencies while Dpkg::Deps::OR represents the logical ``OR''. Dpkg::Deps::Multiple objects can contain Dpkg::Deps::Simple object as well as other Dpkg::Deps::Multiple objects. 
 
- In practice, the code is only meant to handle the realistic cases which, given Debian's dependencies structure, imply those restrictions: <font SIZE="-1">AND</font> can contain Simple or <font SIZE="-1">OR</font> objects, <font SIZE="-1">OR</font> can only contain Simple objects. 
+ In practice, the code is only meant to handle the realistic cases which, given Debian's dependencies structure, imply those restrictions: AND can contain Simple or OR objects, OR can only contain Simple objects. 
 
  Dpkg::Deps::KnownFacts is a special object that is used while evaluating dependencies and while trying to simplify them. It represents a set of installed packages along with the virtual packages that they might provide.
-<h3><font SIZE="-1">COMMON FUNCTIONS</font></h3><dl COMPACT><dt>$dep-&gt;<i>is_empty()</i>
+<h3>COMMON FUNCTIONS</h3><dl COMPACT><dt>$dep-&gt;<i>is_empty()</i>
 </dt><dd>Returns true if the dependency is empty and doesn't contain any useful information. This is true when a Dpkg::Deps::Simple object has not yet been initialized or when a (descendant of) Dpkg::Deps::Multiple contains an empty list of dependencies.
 </dd><dt>$dep-&gt;<i>get_deps()</i>
 </dt><dd>Returns a list of sub-dependencies. For Dpkg::Deps::Simple it returns itself.
@@ -59,7 +59,7 @@ Dpkg::Deps - parse and manipulate dependencies of Debian packages
 </dt><dd></dd><dt>&quot;$dep&quot;
 </dt><dd>Returns a string representing the dependency. If <tt>$fh</tt> is set, it prints the string to the filehandle.
 </dd><dt>$dep-&gt;implies($other_dep)
-</dt><dd>Returns 1 when <tt>$dep</tt> implies <tt>$other_dep</tt>. Returns 0 when <tt>$dep</tt> implies <font SIZE="-1">NOT</font>($other_dep). Returns undef when there's no implication. <tt>$dep</tt> and <tt>$other_dep</tt> do not need to be of the same type.
+</dt><dd>Returns 1 when <tt>$dep</tt> implies <tt>$other_dep</tt>. Returns 0 when <tt>$dep</tt> implies NOT($other_dep). Returns undef when there's no implication. <tt>$dep</tt> and <tt>$other_dep</tt> do not need to be of the same type.
 </dd><dt>$dep-&gt;<i>sort()</i>
 </dt><dd>Sorts alphabetically the internal list of dependencies. It's a no-op for Dpkg::Deps::Simple objects.
 </dd><dt>$dep-&gt;arch_is_concerned($arch)
@@ -88,11 +88,11 @@ Dpkg::Deps - parse and manipulate dependencies of Debian packages
 </dt><dd>The arch qualifier of the dependency (can be undef if there's none). In the dependency ``python:any (&gt;= 2.6)'', the arch qualifier is ``any''.</dd></dl>
  
 
- <i></i><font SIZE="-1"><i>METHODS</i></font><i></i>
+ <i></i><i>METHODS</i><i></i>
 <dl COMPACT><dt>$simple_dep-&gt;parse_string('dpkg-dev (&gt;= 1.14.8) [!hurd-i386]')
 </dt><dd>Parses the dependency and modifies internal properties to match the parsed dependency.
 </dd><dt>$simple_dep-&gt;merge_union($other_dep)
-</dt><dd>Returns true if <tt>$simple_dep</tt> could be modified to represent the union of both dependencies. Otherwise returns false.</dd></dl><h3>Dpkg::Deps::Multiple</h3>This is the base class for Dpkg::Deps::{<font SIZE="-1">AND,OR</font>,Union}. It implements the following methods:
+</dt><dd>Returns true if <tt>$simple_dep</tt> could be modified to represent the union of both dependencies. Otherwise returns false.</dd></dl><h3>Dpkg::Deps::Multiple</h3>This is the base class for Dpkg::Deps::{AND,OR,Union}. It implements the following methods:
 <dl COMPACT><dt>$mul-&gt;add($dep)
 </dt><dd>Adds a new dependency object at the end of the list.</dd></dl><h3>Dpkg::Deps::AND</h3>This object represents a list of dependencies who must be met at the same time.
 <dl COMPACT><dt>$and-&gt;output([$fh])
@@ -127,5 +127,5 @@ Dpkg::Deps - parse and manipulate dependencies of Debian packages
 
  New option: Dpkg::Deps::KnownFacts-&gt;<i>add_installed_package()</i> now accepts 2 supplementary parameters ($arch and <tt>$multiarch</tt>). 
 
- Deprecated method: Dpkg::Deps::KnownFacts-&gt;<i>check_package()</i> is obsolete, it should not have been part of the public <font SIZE="-1">API.</font>
+ Deprecated method: Dpkg::Deps::KnownFacts-&gt;<i>check_package()</i> is obsolete, it should not have been part of the public API.
 <h3>Version 1.00</h3>Mark the module as public.

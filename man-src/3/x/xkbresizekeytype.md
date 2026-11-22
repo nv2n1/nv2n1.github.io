@@ -10,7 +10,7 @@ description: "XkbResizeKeyType – Change the number of levels in a key type"
 <p>XkbResizeKeyType &#8211; Change the number of levels in a key type </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Status XkbResizeKeyType</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>int </code><i>type_ndx</i><code>,</code> <code>int </code><i>map_count</i><code>,</code> <code>Bool </code><i>want_preserve</i><code>,</code> <code>int </code><i>new_num_lvls</i><code>);</code><br />
+<dt> <code>Status XkbResizeKeyType</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>int </code><i>type_ndx</i><code>,</code> <code>int </code><i>map_count</i><code>,</code> <code>Bool </code><i>want_preserve</i><code>,</code> <code>int </code><i>new_num_lvls</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

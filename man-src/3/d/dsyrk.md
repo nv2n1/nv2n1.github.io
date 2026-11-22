@@ -11,7 +11,7 @@ description: "dsyrk.f –"
 <p> dsyrk.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dsyrk</code> (UPLO, TRANS, N, K, ALPHA, A, LDA, BETA, C, LDC)<br />
+<p> subroutine <code>dsyrk</code> (UPLO, TRANS, N, K, ALPHA, A, LDA, BETA, C, LDC)<br/>
  <i></i><code>DSYRK</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dsyrk (characterUPLO, characterTRANS, integerN, integerK, double precisionALPHA, double precision, dimension(lda,*)A, integerLDA, double precisionBETA, double precision, dimension(ldc,*)C, integerLDC)</h3>

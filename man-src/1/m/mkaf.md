@@ -30,8 +30,8 @@ description: "mkaf – create a Performance Co-Pilot archive folio"
 <dd> The line beginning with the tag <code>Creator:</code> identifies the tool which created the folio (and is assumed to know how to replay the archive folio). If present, the second argument is the name of a configuration file that the creator tool could use to replay the archive folio, e.g. with the <code>replay</code> command for <code><a href="/docs/linux/man/1-pmafm/">pmafm</a></code>(1). In the case of <code>mkaf</code> (unlike <code><a href="/docs/linux/man/1-pmchart/">pmchart</a></code>(1) or <code><a href="/docs/linux/man/1-pmview/">pmview</a></code>(1)) there is no knowledge of the contents of the archives, so the &#8220;creator&#8221; cannot replay the archive, however <code><a href="/docs/linux/man/1-pmchart/">pmchart</a></code>(1) is able to replay any archive, and so this tool is identified as the <code>Creator:</code> for archive folios created by <code><a href="/docs/linux/man/1-mkaf/">mkaf</a></code>(1).</dd>
 <dt>6.</dt>
 <dd> This is then followed by one or more lines beginning with the tag <code>Archive:</code> followed by the hostname and base name of the archive.</dd></dl>
-<p> For example<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> $ mkaf mydir/gonzo<br />
+<p> For example<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> $ mkaf mydir/gonzo<br/>
  might produce the following folio control file. </p>
 <pre>
 PCPFolio

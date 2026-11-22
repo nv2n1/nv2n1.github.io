@@ -119,23 +119,23 @@ description: "sensors.conf – libsensors configuration file"
 <p>Most voltage sensors in sensor chips have a range of 0 to 4.08 V. This is generally sufficient for the +3.3V and CPU supply voltages, so the sensor chip reading is the actual voltage. </p>
 <p> Other supply voltages must be scaled with an external resistor network. The driver reports the value at the chip&#8217;s pin (0 &#8211; 4.08 V), and the userspace application must convert this raw value to an actual voltage. The <i>compute</i> statements provide this facility. </p>
 <p> Unfortunately the resistor values vary among motherboard types. Therefore you have to figure out the correct resistor values for your own motherboard. </p>
-<p> For positive voltages (typically +5V and +12V), two resistors are used, with the following formula:<br />
+<p> For positive voltages (typically +5V and +12V), two resistors are used, with the following formula:<br/>
 &nbsp;<wbr>&nbsp;<wbr>R1&nbsp;<wbr>=&nbsp;<wbr>R2&nbsp;<wbr>*&nbsp;<wbr>(Vs/Vin &#8211; 1) </p>
-<p> where:<br />
-&nbsp;<wbr>&nbsp;<wbr>R1 and R2 are the resistor values<br />
-&nbsp;<wbr>&nbsp;<wbr>Vs is the actual voltage being monitored<br />
+<p> where:<br/>
+&nbsp;<wbr>&nbsp;<wbr>R1 and R2 are the resistor values<br/>
+&nbsp;<wbr>&nbsp;<wbr>Vs is the actual voltage being monitored<br/>
 &nbsp;<wbr>&nbsp;<wbr>Vin is the voltage at the pin </p>
-<p> This leads to the following compute formula:<br />
+<p> This leads to the following compute formula:<br/>
 &nbsp;<wbr>&nbsp;<wbr>compute inX&nbsp;<wbr>@*((R1/R2)+1),&nbsp;<wbr>&nbsp;<wbr>@/(((R1/R2)+1) </p>
-<p> Real-world formula for +5V and +12V would look like:<br />
-&nbsp;<wbr>&nbsp;<wbr>compute in3&nbsp;<wbr>@*((6.8/10)+1),&nbsp;<wbr>@/((6.8/10)+1)<br />
+<p> Real-world formula for +5V and +12V would look like:<br/>
+&nbsp;<wbr>&nbsp;<wbr>compute in3&nbsp;<wbr>@*((6.8/10)+1),&nbsp;<wbr>@/((6.8/10)+1)<br/>
 &nbsp;<wbr>&nbsp;<wbr>compute in4&nbsp;<wbr>@*((28/10)+1),&nbsp;<wbr>&nbsp;<wbr>@/((28/10)+1) </p>
 <p> For negative voltages (typically -5V and -12V), two resistors are used as well, but different boards use different strategies to bring the voltage value into the 0 &#8211; 4.08 V range. Some use an inverting amplifier, others use a positive reference voltage. This leads to different computation formulas. Note that most users won&#8217;t have to care because most modern motherboards make little use of -12V and no use of -5V so they do not bother monitoring these voltage inputs. </p>
-<p> Real-world examples for the inverting amplifier case:<br />
-&nbsp;<wbr>&nbsp;<wbr>compute in5 -@*(240/60), -@/(240/60)<br />
+<p> Real-world examples for the inverting amplifier case:<br/>
+&nbsp;<wbr>&nbsp;<wbr>compute in5 -@*(240/60), -@/(240/60)<br/>
 &nbsp;<wbr>&nbsp;<wbr>compute in6 -@*(100/60), -@/(100/60) </p>
-<p> Real-world examples for the positive voltage reference case:<br />
-&nbsp;<wbr>&nbsp;<wbr>compute in5&nbsp;<wbr>@*(1+232/56)&nbsp;<wbr>&#8211; 4.096*232/56,&nbsp;<wbr>(@&nbsp;<wbr>+&nbsp;<wbr>4.096*232/56)/(1+232/56)<br />
+<p> Real-world examples for the positive voltage reference case:<br/>
+&nbsp;<wbr>&nbsp;<wbr>compute in5&nbsp;<wbr>@*(1+232/56)&nbsp;<wbr>&#8211; 4.096*232/56,&nbsp;<wbr>(@&nbsp;<wbr>+&nbsp;<wbr>4.096*232/56)/(1+232/56)<br/>
 &nbsp;<wbr>&nbsp;<wbr>compute in6&nbsp;<wbr>@*(1+120/56)&nbsp;<wbr>&#8211; 4.096*120/56,&nbsp;<wbr>(@&nbsp;<wbr>+&nbsp;<wbr>4.096*120/56)/(1+120/56) </p>
 <p> Many recent monitoring chips have a 0 &#8211; 2.04 V range, so scaling resistors are even more needed, and resistor values are different. </p>
 <p> There are also a few chips out there which have internal scaling resistors, meaning that their value is known and doesn&#8217;t change from one motherboard to the next. For these chips, the driver usually handles the scaling so it is transparent to the user and no <i>compute</i> statements are needed.</p>
@@ -224,7 +224,7 @@ description: "sensors.conf – libsensors configuration file"
 <p> ( <code>EXPR</code> )</dl>
 <p> A <code>NUMBER</code> is a floating-point number. `10&#8242;, `10.4&#8242; and `.4&#8242; are examples of valid floating-point numbers; `10.&#8217; or `10E4&#8242; are not valid.</p>
 <h2>Files</h2>
-<p><i>/etc/sensors3.conf</i><br />
+<p><i>/etc/sensors3.conf</i><br/>
  <i>/etc/sensors.conf</i></p>
 <dl>
 <dd>The system-wide <code><a href="/docs/linux/man/3-libsensors/">libsensors</a></code>(3) configuration file. /etc/sensors3.conf is tried first, and if it doesn&#8217;t exist, /etc/sensors.conf is used instead.</dd></dl>

@@ -16,8 +16,8 @@ description: "QMapShack – GPS mapping (GeoTiff and vector) and GPSr management
 <dl>
 <dt>Main features:</dt>
 <dd>
-&nbsp;<wbr>&nbsp;<wbr>&#8211; Use of several workspaces.<br />
-&nbsp;<wbr>&nbsp;<wbr>&#8211; Use several maps on a workspace.<br />
+&nbsp;<wbr>&nbsp;<wbr>&#8211; Use of several workspaces.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&#8211; Use several maps on a workspace.<br/>
 &nbsp;<wbr>&nbsp;<wbr>&#8211; Handle data project-oriented.</dd></dl>
 <h2>OPTIONS</h2>
 <dl>

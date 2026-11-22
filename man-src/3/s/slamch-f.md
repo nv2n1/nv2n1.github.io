@@ -10,9 +10,9 @@ description: "slamch.f –"
 <p>slamch.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>REAL function <code>slamch</code> (CMACH)<br />
- <i></i><code>SLAMCH</code><br />
- REAL function <code>slamc3</code> (A, B)<br />
+<p>REAL function <code>slamch</code> (CMACH)<br/>
+ <i></i><code>SLAMCH</code><br/>
+ REAL function <code>slamc3</code> (A, B)<br/>
  <i></i><code>SLAMC3</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>REAL function slamc3 (realA, realB)</h3>

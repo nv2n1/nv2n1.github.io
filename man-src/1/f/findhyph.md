@@ -10,7 +10,7 @@ description: "findhyph – find words hyphenated by TeX in a document"
 
 <p> findhyph – find words hyphenated by TeX in a document </p>
 <h2>INSTALLATION</h2>
-<p> Copy <code>findhyph</code> or <code>findhyph.bat</code> (depending on <font SIZE="-1">OS</font> used) to a directory included in system <font SIZE="-1">PATH.</font> Perl interpreter is required to be in <code>&quot;/usr/bin/&quot;</code> for Unix-like systems or in <font SIZE="-1">PATH</font> when using <code>findhyph.bat</code>.  </p>
+<p> Copy <code>findhyph</code> or <code>findhyph.bat</code> (depending on OS used) to a directory included in system PATH. Perl interpreter is required to be in <code>&quot;/usr/bin/&quot;</code> for Unix-like systems or in PATH when using <code>findhyph.bat</code>.  </p>
 <h2>SYNOPSIS</h2>
 <p> <code>findhyph [options]</code> <i>foo.log</i>  </p>
 <h2>DESCRIPTION</h2>
@@ -41,13 +41,13 @@ description: "findhyph – find words hyphenated by TeX in a document"
 <dd> <p> generate file containing information about one-letter prepositions and conjunctions left at the end of line </p>
  </dd>
 <dt><code>-l=STRING</code></dt>
-<dd> <p> use prepositions/conjunctions listed in <font SIZE="-1">STRING</font> instead of default list of prepositions and conjunctions <code>&quot;kKsSvVzZoOuUiIA&quot;</code> used for Slovak and Czech language </p>
+<dd> <p> use prepositions/conjunctions listed in STRING instead of default list of prepositions and conjunctions <code>&quot;kKsSvVzZoOuUiIA&quot;</code> used for Slovak and Czech language </p>
  </dd></dl>
 <h2>OUTPUT FILES</h2>
 <dl>
 <dt><i>foo.hyph</i></dt>
 <dd> <p> List of hyphenated words. All punctuation characters, parentheses and other character immediately preceding or following displayed words are included in this list. TeX constructs which are too difficult to display (<code>&quot;\hbox{}&quot;</code>, <code>&quot;\mark{}&quot;</code> etc.) are shown as <code>&quot;[]&quot;</code>. Math mode is indicated by <code>&quot;$&quot;</code> sign. </p>
-<p> Page numbers in square brackets refer to <font SIZE="-1">LOG</font> file and may occasionally differ from the typeset document. The reason is that TeX may need to break more paragraphs than it would eventually fit on the page in order to find a page break. </p>
+<p> Page numbers in square brackets refer to LOG file and may occasionally differ from the typeset document. The reason is that TeX may need to break more paragraphs than it would eventually fit on the page in order to find a page break. </p>
 <p> Words hyphenated in footnotes are listed before the words hyphenated in the paragraph in which the footnote is referenced. </p>
  </dd>
 <dt><i>foo.prep</i></dt>
@@ -108,6 +108,6 @@ description: "findhyph – find words hyphenated by TeX in a document"
 <dd> <p> fixed cross-platform handling of linebreaks in the input file </p>
  </dd></dl>
 <h2>LICENSE</h2>
-<p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or any later version.  </p>
+<p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or any later version.  </p>
 <h2>AUTHOR</h2>
 <p> Copyright (c) Martin Budaj &lt;m.b [at] speleo.sk&gt; 2000, 2001, 2009, 2012, 2015 </p>

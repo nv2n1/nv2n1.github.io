@@ -27,13 +27,13 @@ description: "providers – Shorewall6 Providers file"
 <dd>The provider number &#8212; a number between 1 and 15. Each provider must be assigned a unique value.</dd></dl>
 <p> <code>MARK</code> (Optional) &#8211; <i>value</i></p>
 <dl>
-<dd>A FWMARK <i>value</i> used in your m[blue]<code>shorewall6-mangle</code>m[]<font SIZE="-2">[1]</font>(5) file to direct packets to this provider. If HIGH_ROUTE_MARKS=Yes in m[blue]<code>shorewall6.conf</code>m[]<font SIZE="-2">[2]</font>(5), then the value must be a multiple of 256 between 256 and 65280 or their hexadecimal equivalents (0x0100 and 0xff00 with the low-order byte of the value being zero). Otherwise, the value must be between 1 and 255. Each provider must be assigned a unique mark value. This column may be omitted if you don&#8217;t use packet marking to direct connections to a particular provider.</dd></dl>
+<dd>A FWMARK <i>value</i> used in your m[blue]<code>shorewall6-mangle</code>m[][1](5) file to direct packets to this provider. If HIGH_ROUTE_MARKS=Yes in m[blue]<code>shorewall6.conf</code>m[][2](5), then the value must be a multiple of 256 between 256 and 65280 or their hexadecimal equivalents (0x0100 and 0xff00 with the low-order byte of the value being zero). Otherwise, the value must be between 1 and 255. Each provider must be assigned a unique mark value. This column may be omitted if you don&#8217;t use packet marking to direct connections to a particular provider.</dd></dl>
 <p> <code>DUPLICATE</code> &#8211; <i>routing-table-name</i></p>
 <dl>
 <dd>The name of an existing table to duplicate to create this routing table. May be <code>main</code> or the name of a previously listed provider. You may select only certain entries from the table to copy by using the COPY column below.</dd></dl>
 <p> <code>INTERFACE</code> &#8211; <i>interface</i></p>
 <dl>
-<dd>The name of the network interface to the provider. Must be listed in m[blue]<code>shorewall6-interfaces</code>m[]<font SIZE="-2">[3]</font>(5).</dd></dl>
+<dd>The name of the network interface to the provider. Must be listed in m[blue]<code>shorewall6-interfaces</code>m[][3](5).</dd></dl>
 <p> <code>GATEWAY</code> &#8211; {<code>&#8211;</code>|<i>address</i>|<code>detect|none</code>}</p>
 <dl>
 <dd>The IP address of the provider&#8217;s gateway router. You can enter <code>detect</code> here and Shorewall6 will attempt to detect the gateway automatically. Beginning with Shorewall 5.0.6, you may also enter <code>none</code>. This causes creation of a routing table with no default route in it. For PPP devices, you may omit this column.</dd></dl>
@@ -50,7 +50,7 @@ description: "providers – Shorewall6 Providers file"
 <dd>Added in Shorewall 4.4.25. Indicates that a default route through the provider should be added to the default routing table (table 253). If a <i>weight</i> is given, a balanced route is added with the weight of this provider equal to the specified <i>weight</i>. If the option is given without a <i>weight</i>, an separate default route is added through the provider&#8217;s gateway; the route has a metric equal to the provider&#8217;s NUMBER. Prior to Shorewall 5.0.13, at most one provider can specify this option and a <i>weight</i> may not be given.</dd></dl>
 <p> <code>track</code></p>
 <dl>
-<dd>If specified, inbound connections on this interface are to be tracked so that responses may be routed back out this same interface. You want to specify <code>track</code> if internet hosts will be connecting to local servers through this provider. Beginning with Shorewall 4.4.3, <code>track</code> defaults to the setting of the TRACK_PROVIDERS option in m[blue]<code>shorewall6.conf</code>m[]<font SIZE="-2">[4]</font> (5). If you set TRACK_PROVIDERS=Yes and want to override that setting for an individual provider, then specify <code>notrack</code> (see below).</dd></dl>
+<dd>If specified, inbound connections on this interface are to be tracked so that responses may be routed back out this same interface. You want to specify <code>track</code> if internet hosts will be connecting to local servers through this provider. Beginning with Shorewall 4.4.3, <code>track</code> defaults to the setting of the TRACK_PROVIDERS option in m[blue]<code>shorewall6.conf</code>m[][4] (5). If you set TRACK_PROVIDERS=Yes and want to override that setting for an individual provider, then specify <code>notrack</code> (see below).</dd></dl>
 <p> <code>loose</code></p>
 <dl>
 <dd>Shorewall6 normally adds a routing rule for each IP address on an interface which forces traffic whose source is that IP address to be sent using the routing table for that interface. Setting <code>loose</code> prevents creation of such rules on this interface.</dd></dl>
@@ -65,7 +65,7 @@ description: "providers – Shorewall6 Providers file"
 <dd>Added in Shorewall 4.4.3. When specified, turns off <code>track</code>.</dd></dl>
 <p> <code>optional</code> (deprecated for use with providers that do not share an interface)</p>
 <dl>
-<dd>If the interface named in the INTERFACE column is not up and configured with an IPv4 address then ignore this provider. If not specified, the value of the <code>optional</code> option for the INTERFACE in m[blue]<code><a href="/docs/linux/man/5-shorewall6-interfaces/">shorewall6-interfaces</a>(5)</code>m[]<font SIZE="-2">[3]</font> is assumed. Use of that option is preferred to this one, unless an <i>address</i> is provider in the INTERFACE column.</dd></dl>
+<dd>If the interface named in the INTERFACE column is not up and configured with an IPv4 address then ignore this provider. If not specified, the value of the <code>optional</code> option for the INTERFACE in m[blue]<code><a href="/docs/linux/man/5-shorewall6-interfaces/">shorewall6-interfaces</a>(5)</code>m[][3] is assumed. Use of that option is preferred to this one, unless an <i>address</i> is provider in the INTERFACE column.</dd></dl>
 <p> <code>primary</code></p>
 <dl>
 <dd>Added in Shorewall 4.6.6, <code>primary</code> is a synonym for <code>balance</code> (see above) and is preferred when the remaining providers specify <code>fallback</code> or <code>tproxy</code>.</dd></dl>
@@ -77,7 +77,7 @@ description: "providers – Shorewall6 Providers file"
 <dd>Specifies the MTU when forwarding through this provider. If not given, the MTU of the interface named in the INTERFACE column is assumed.</dd></dl>
 <p> <code>tproxy</code></p>
 <dl>
-<dd>Added in Shorewall 4.5.4. Used for supporting the TPROXY action in <a href="/docs/linux/man/5-shorewall-tcrules/">shorewall-tcrules</a>(5). See m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/Shorewall_Squid_Usage.html">http://www.shorewall.net/Shorewall_Squid_Usage.html</a></code>m[]<font SIZE="-2">[5]</font>. When specified, the MARK, DUPLICATE and GATEWAY columns should be empty, INTERFACE should be set to &#8216;lo&#8217; and <code>tproxy</code> should be the only OPTION. Only one <code>tproxy</code> provider is allowed.</dd></dl>
+<dd>Added in Shorewall 4.5.4. Used for supporting the TPROXY action in <a href="/docs/linux/man/5-shorewall-tcrules/">shorewall-tcrules</a>(5). See m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/Shorewall_Squid_Usage.html">http://www.shorewall.net/Shorewall_Squid_Usage.html</a></code>m[][5]. When specified, the MARK, DUPLICATE and GATEWAY columns should be empty, INTERFACE should be set to &#8216;lo&#8217; and <code>tproxy</code> should be the only OPTION. Only one <code>tproxy</code> provider is allowed.</dd></dl>
 <p> <code>hostroute</code></p>
 <dl>
 <dd>Added in Shorewall 4.5.21. This is the default behavior that results in a host route to the defined <code>GATEWAY</code> being inserted into the main routing table and into the provider&#8217;s routing table. <code>hostroute</code> is required for older distributions but <code>nohostroute</code> (below) is appropriate for recent distributions. <code>hostroute</code> may interfere with Zebra&#8217;s ability to add routes on some distributions such as Debian 7.</dd></dl>
@@ -92,9 +92,9 @@ description: "providers – Shorewall6 Providers file"
 <dl>
 <dd>&bull; Unless the <code>noautosrc</code> option is specified, routing rules are generated to route traffic from the interfaces address(es) out of the provider&#8217;s routing table.</dd></dl>
 <dl>
-<dd>&bull; Persistent routing rules in m[blue]<code><a href="/docs/linux/man/5-shorewall6-rtrules/">shorewall6-rtrules</a>(5)</code>m[]<font SIZE="-2">[6]</font> are present.</dd></dl>
+<dd>&bull; Persistent routing rules in m[blue]<code><a href="/docs/linux/man/5-shorewall6-rtrules/">shorewall6-rtrules</a>(5)</code>m[][6] are present.</dd></dl>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  The generated script will attempt to reenable a disabled persistent provider during execution of the <code>start</code>, <code>restart</code> and <code>reload</code> commands. When <code>persistent</code> is not specified, only the <code>enable</code> and <code>reenable</code> commands can reenable the provider.  <code>COPY</code> &#8211; [{<code>none</code>|<i>interface</i><code>[,</code><i>interface</i>]&#8230;}]</dd>
 <dl>
 <dd>A comma-separated list of other interfaces on your firewall. Wildcards specified using an asterisk (&quot;*&quot;) are permitted (e.g., tun* ). Usually used only when DUPLICATE is <code>main</code>. Only copy routes through INTERFACE and through interfaces listed here. If you only wish to copy routes through INTERFACE, enter <code>none</code> in this column. Beginning with Shorewall 4.5.17, blackhole, unreachable and prohibit routes are no longer copied by default but may be copied by including <code>blackhole</code>,<code>unreachable</code> and <code>prohibit</code> respectively in the COPY list.</dd></dl>
@@ -123,8 +123,8 @@ description: "providers – Shorewall6 Providers file"
 <h2>Files</h2>
 <p>/etc/shorewall6/providers</p>
 <h2>See Also</h2>
-<p>m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/MultiISP.html">http://www.shorewall.net/MultiISP.html</a></code>m[]<font SIZE="-2">[7]</font> </p>
-<p> m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/configuration_file_basics.htm#Pairs">http://www.shorewall.net/configuration_file_basics.htm#Pairs</a></code>m[]<font SIZE="-2">[8]</font> </p>
+<p>m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/MultiISP.html">http://www.shorewall.net/MultiISP.html</a></code>m[][7] </p>
+<p> m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/configuration_file_basics.htm#Pairs">http://www.shorewall.net/configuration_file_basics.htm#Pairs</a></code>m[][8] </p>
 <p> <a href="/docs/linux/man/8-shorewall6/">shorewall6</a>(8), <a href="/docs/linux/man/5-shorewall6-accounting/">shorewall6-accounting</a>(5), <a href="/docs/linux/man/5-shorewall6-actions/">shorewall6-actions</a>(5), shorewall6-blacklist(5), <a href="/docs/linux/man/5-shorewall6-hosts/">shorewall6-hosts</a>(5), <a href="/docs/linux/man/5-shorewall6-interfaces/">shorewall6-interfaces</a>(5), <a href="/docs/linux/man/5-shorewall6-maclist/">shorewall6-maclist</a>(5), <a href="/docs/linux/man/5-shorewall6-netmap/">shorewall6-netmap</a>(5),<a href="/docs/linux/man/5-shorewall6-params/">shorewall6-params</a>(5), <a href="/docs/linux/man/5-shorewall6-policy/">shorewall6-policy</a>(5), <a href="/docs/linux/man/5-shorewall6-rtrules/">shorewall6-rtrules</a>(5), shorewall6-routestopped(5), <a href="/docs/linux/man/5-shorewall6-rules/">shorewall6-rules</a>(5), <a href="/docs/linux/man/5-shorewall6-conf/">shorewall6.conf</a>(5), <a href="/docs/linux/man/5-shorewall6-secmarks/">shorewall6-secmarks</a>(5), <a href="/docs/linux/man/5-shorewall6-tcclasses/">shorewall6-tcclasses</a>(5), <a href="/docs/linux/man/5-shorewall6-tcdevices/">shorewall6-tcdevices</a>(5), <a href="/docs/linux/man/5-shorewall6-mangle/">shorewall6-mangle</a>(5), shorewall6-tos(5), <a href="/docs/linux/man/5-shorewall6-tunnels/">shorewall6-tunnels</a>(5), <a href="/docs/linux/man/5-shorewall6-zones/">shorewall6-zones</a>(5)</p>
 <h2>Notes</h2>
 <dl>

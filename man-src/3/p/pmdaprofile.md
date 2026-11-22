@@ -9,8 +9,8 @@ description: "pmdaProfile – update instance profile for PMDA in preparation fo
 
 <p><code>pmdaProfile</code> &#8211; update instance profile for PMDA in preparation for the next fetch from PMCD</p>
 <h2>C Synopsis</h2>
-<p><code> #include &lt;pcp/pmapi.h&gt;<br />
- #include &lt;pcp/impl.h&gt;<br />
+<p><code> #include &lt;pcp/pmapi.h&gt;<br/>
+ #include &lt;pcp/impl.h&gt;<br/>
  #include &lt;pcp/pmda.h&gt; </p>
 <p> int pmdaProfile(__pmProfile *</code><i>prof</i>, pmdaExt *<i>pmda</i>); </p>
 <p> cc &#8230; -lpcp_pmda -lpcp</p>

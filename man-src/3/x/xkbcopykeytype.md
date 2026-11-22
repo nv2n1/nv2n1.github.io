@@ -10,7 +10,7 @@ description: "XkbCopyKeyType – Copy one XkbKeyTypeRec structures"
 <p>XkbCopyKeyType &#8211; Copy one XkbKeyTypeRec structures </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Status XkbCopyKeyType</code> <code>(XkbKeyTypePtr </code><i>from</i><code>,</code> <code>XkbKeyTypePtr </code><i>into</i><code>);</code><br />
+<dt> <code>Status XkbCopyKeyType</code> <code>(XkbKeyTypePtr </code><i>from</i><code>,</code> <code>XkbKeyTypePtr </code><i>into</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

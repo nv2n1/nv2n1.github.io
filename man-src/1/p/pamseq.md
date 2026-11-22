@@ -36,7 +36,7 @@ description: "pamseq – generate PAM image of all possible tuple values, in seq
 </tt>
 </pre>
 <p> Again, with a modern program based on the Netpbm library, you don&#8217;t need the <code>pamtopnm</code> because a PAM RGB image is equivalent to a PPM image. </p>
-<p> You can use such a color map with <code><a href="/docs/linux/man/1-pnmremap/">pnmremap</a></code>(1)<br />
+<p> You can use such a color map with <code><a href="/docs/linux/man/1-pnmremap/">pnmremap</a></code>(1)<br/>
 &nbsp;<wbr>to quantize the colors in an image. With the maxval of 5 given in the example, you get a color map of the set of &quot;web safe&quot; colors as defined by Netscape. Most web browsers guarantee that they can produce at least these 216 colors (215 plus black). </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pnmremap/">pnmremap</a></code>(1) , <code><a href="/docs/linux/man/1-pamtopnm/">pamtopnm</a></code>(1) , <code>pam</code>(1) </p>

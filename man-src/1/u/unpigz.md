@@ -10,7 +10,7 @@ description: "pigz, unpigz – compress or expand files"
 
 <p> pigz, unpigz &#8211; compress or expand files </p>
 <h2>SYNOPSIS</h2>
-<p> <code>pigz</code> [<code> -cdfhikKlLmMnNqrRtz0..9,11 </code>] [ <code>-b</code> <i>blocksize</i> ] [ <code>-p</code> <i>threads</i> ] [ <code>-S</code> <i>suffix</i> ] [ <i>name &#8230;</i> ]<br />
+<p> <code>pigz</code> [<code> -cdfhikKlLmMnNqrRtz0..9,11 </code>] [ <code>-b</code> <i>blocksize</i> ] [ <code>-p</code> <i>threads</i> ] [ <code>-S</code> <i>suffix</i> ] [ <i>name &#8230;</i> ]<br/>
  <code>unpigz</code> [<code> -cfhikKlLmMnNqrRtz </code>] [ <code>-b</code> <i>blocksize</i> ] [ <code>-p</code> <i>threads</i> ] [ <code>-S</code> <i>suffix</i> ] [ <i>name &#8230;</i> ]</p>
 <h2>DESCRIPTION</h2>
 <p> <i>Pigz</i> compresses using threads to make use of multiple processors and cores. The input is broken up into 128 KB chunks with each compressed in parallel. The individual check value for each chunk is also calculated in parallel. The compressed data is written in order to the output, and a combined check value is calculated from the individual check values. </p>

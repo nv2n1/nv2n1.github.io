@@ -10,7 +10,7 @@ description: "cgglse.f –"
 <p>cgglse.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>cgglse</code> (M, N, P, A, LDA, B, LDB, C, D, X, WORK, LWORK, INFO)<br />
+<p>subroutine <code>cgglse</code> (M, N, P, A, LDA, B, LDB, C, D, X, WORK, LWORK, INFO)<br/>
  <i></i><code> CGGLSE solves overdetermined or underdetermined systems for OTHER matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cgglse (integerM, integerN, integerP, complex, dimension( lda, * )A, integerLDA, complex, dimension( ldb, * )B, integerLDB, complex, dimension( * )C, complex, dimension( * )D, complex, dimension( * )X, complex, dimension( * )WORK, integerLWORK, integerINFO)</h3>

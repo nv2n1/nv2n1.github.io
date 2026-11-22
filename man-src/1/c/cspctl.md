@@ -48,10 +48,10 @@ Creative Signal Processor[v1 .0] State : -x-- L
 <dl>
 <dt>
 </dt><dd>
-Creative Signal Processor[v1 .0] State : Qx &#8211; RL<br />
-                                                  Codec : QSound[func #2] Sample rates : 22050Hz QSound decoder enabled<br />
-                                                              Processing 16bit mono PCM samples<br />
-                                                                  Qsound position : left = 0x9,<br />
+Creative Signal Processor[v1 .0] State : Qx &#8211; RL<br/>
+                                                  Codec : QSound[func #2] Sample rates : 22050Hz QSound decoder enabled<br/>
+                                                              Processing 16bit mono PCM samples<br/>
+                                                                  Qsound position : left = 0x9,<br/>
                                                                                     right = 0x9
 </dd></dl>
 <p> Driver supports autoloading of u-Law, A-Law and Ima-ADPCM hardware codecs. Autoloading is active only when there is no microcode loaded to CSP, and there is no need to preload appropriate *.csp files. To unload manually loaded microcode, you should run</p>

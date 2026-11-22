@@ -9,7 +9,7 @@ description: "intltool-update – updates PO template file and merge translation
 
 <p>intltool-update &#8211; updates PO template file and merge translations with it</p>
 <h2>Synopsis</h2>
-<p><code>intltool-update</code><i> [option]&#8230;</i><br />
+<p><code>intltool-update</code><i> [option]&#8230;</i><br/>
  <code>intltool-update</code><i> LANGCODE</i> </p>
 <h2>Description</h2>
 <p><code>intltool-update</code> generates new po file templates from source code, and merges existing translations with these new po templates. You must change working directory to the subdirectory containing translations (usually &quot;<i>po/</i>&quot;) before running <code>intltool-update</code>. </p>
@@ -84,8 +84,8 @@ description: "intltool-update – updates PO template file and merge translation
 <h2>Reporting Bugs</h2>
 <p>Report bugs to <a rel="nofollow" href="http://bugs.launchpad.net/intltool">http://bugs.launchpad.net/intltool</a></p>
 <h2>Author</h2>
-<p>Darin Adler &lt;darin [at] bentspoon.com&gt;<br />
- Kenneth Christiansen &lt;kenneth [at] gnu.org&gt;<br />
+<p>Darin Adler &lt;darin [at] bentspoon.com&gt;<br/>
+ Kenneth Christiansen &lt;kenneth [at] gnu.org&gt;<br/>
  Maciej Stachowiak &lt;mjs [at] eazel.com&gt;</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-intltoolize/">intltoolize</a></code>(8), <code><a href="/docs/linux/man/8-intltool-prepare/">intltool-prepare</a></code>(8), <code><a href="/docs/linux/man/8-intltool-extract/">intltool-extract</a></code>(8), <code><a href="/docs/linux/man/8-intltool-merge/">intltool-merge</a></code>(8), <code><a href="/docs/linux/man/1-xgettext/">xgettext</a></code>(1) </p>

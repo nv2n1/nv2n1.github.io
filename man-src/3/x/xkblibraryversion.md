@@ -10,7 +10,7 @@ description: "XkbLibraryVersion – Determines the compatibility of a library at
 <p>XkbLibraryVersion &#8211; Determines the compatibility of a library at runtime. </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Bool XkbLibraryVersion</code> <code>(int *</code><i>lib_major_in_out</i><code>,</code> <code>int *</code><i>lib_minor_in_out</i><code>);</code><br />
+<dt> <code>Bool XkbLibraryVersion</code> <code>(int *</code><i>lib_major_in_out</i><code>,</code> <code>int *</code><i>lib_minor_in_out</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

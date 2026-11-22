@@ -14,9 +14,9 @@ description: "QuantLib::SwaptionHelper – calibration helper for ATM swaption"
 <h3>Public Member Functions</h3>
 <p><code>SwaptionHelper</code> (const <code>Period</code> &amp;maturity, const <code>Period</code> &amp;length, const <code>Handle</code>&lt; <code>Quote</code> &gt; &amp;volatility, const boost::shared_ptr&lt; <code>IborIndex</code> &gt; &amp;index, const <code>Period</code> &amp;fixedLegTenor, const <code>DayCounter</code> &amp;fixedLegDayCounter, const <code>DayCounter</code> &amp;floatingLegDayCounter, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;termStructure, bool calibrateVolatility=false) </p>
 <p> virtual void <code>addTimesTo</code> (std::list&lt; Time &gt; &amp;times) const </p>
-<p> virtual Real <code>modelValue</code> () const<br />
- <i>returns the price of the instrument according to the model </i><br />
- virtual Real <code>blackPrice</code> (Volatility volatility) const<br />
+<p> virtual Real <code>modelValue</code> () const<br/>
+ <i>returns the price of the instrument according to the model </i><br/>
+ virtual Real <code>blackPrice</code> (Volatility volatility) const<br/>
  <i>Black price given a volatility. </i></p>
 <h2>Detailed Description</h2>
 <p>calibration helper for ATM swaption </p>

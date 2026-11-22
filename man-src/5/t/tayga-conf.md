@@ -45,6 +45,6 @@ description: "tayga.conf – configuration file of the TAYGA stateless NAT64 dae
 <dd>When <code>strict-frag-hdr</code> is set to <code>false, off,</code> or <code>0,</code> fragmentation headers will be suppressed when the translated packet fits entirely within the IPv6 network MTU (1280 bytes). This is the default behavior.</dd>
 <dd>This setting does not affect packets that arrive at TAYGA already fragmented, or packets that must be fragmented to fit within the IPv6 network MTU. </dd>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-tayga/">tayga</a></code>(8)<br />
+<p><code><a href="/docs/linux/man/8-tayga/">tayga</a></code>(8)<br/>
  <code>&lt;<a rel="nofollow" href="http://www.litech.org/tayga/">http://www.litech.org/tayga/</a>&gt;</code> </p>
 </dl>

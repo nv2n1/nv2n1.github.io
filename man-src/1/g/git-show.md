@@ -586,7 +586,7 @@ The title was &gt;&gt;t4119: test autocomputing -p&lt;n&gt; for traditional diff
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> Some placeholders may depend on other options given to the revision traversal engine. For example, the <code>%g*</code> reflog options will insert an empty string unless we are traversing reflog entries (e.g., by <code>git log -g</code>). The <code>%d</code> and <code>%D</code> placeholders will use the &quot;short&quot; decoration format if <code>&#8211;decorate</code> was not already provided on the command line. </p>
 </dl>
 <p> If you add a <code>+</code> (plus sign) after <i>%</i> of a placeholder, a line-feed is inserted immediately before the expansion if and only if the placeholder expands to a non-empty string. </p>
@@ -982,7 +982,7 @@ $ git log -2 --pretty=%h 4da45bef
 <dl>
 <dt>
 </dt><dd>
-+ return frotz(nitfol, two-&gt;ptr, 1, 0);<br />
++ return frotz(nitfol, two-&gt;ptr, 1, 0);<br/>
 &#8230; &#8211; hit = frotz(nitfol, mf2.ptr, 1, 0);
 </dd></dl>
 <p> While <code>git log -G&quot;frotz\(nitfol&quot;</code> will show this commit, <code>git log -S&quot;frotz\(nitfol&quot; &#8211;pickaxe-regex</code> will not (because the number of occurrences of that string did not change). </p>
@@ -1169,26 +1169,26 @@ rename to a
 <dl>
 <dt>
 </dt><dd>
-diff&#8211; combined describe.c<br />
-    index fabadb8,<br />
-    cc95eb0..4866510 &#8212; -a / describe.c++ + b / describe.c<br />
-                                                @ @ @-98,<br />
-    20 &#8211; 98, 12 + 98, 20 @ @ @ return (a_date &gt; b_date) ? -1 : (a_date == b_date) ? 0<br />
-                                                                                  : 1;<br />
-}<br />
-&#8211; static void describe(char *arg) &#8211; static void describe(struct commit *cmit, int last_one)++ static void describe(char *arg, int last_one)<br />
-{<br />
-    +unsigned char sha1[20];<br />
-    +struct commit *cmit;<br />
-    struct commit_list *list;<br />
-    static int initialized = 0;<br />
-    struct commit_name *n;<br />
-    +if (get_sha1(arg, sha1) &lt; 0) + usage(describe_usage);<br />
-    +cmit = lookup_commit_reference(sha1);<br />
-    +if (!cmit) + usage(describe_usage);<br />
-    +if (!initialized)<br />
-    {<br />
-        initialized = 1;<br />
+diff&#8211; combined describe.c<br/>
+    index fabadb8,<br/>
+    cc95eb0..4866510 &#8212; -a / describe.c++ + b / describe.c<br/>
+                                                @ @ @-98,<br/>
+    20 &#8211; 98, 12 + 98, 20 @ @ @ return (a_date &gt; b_date) ? -1 : (a_date == b_date) ? 0<br/>
+                                                                                  : 1;<br/>
+}<br/>
+&#8211; static void describe(char *arg) &#8211; static void describe(struct commit *cmit, int last_one)++ static void describe(char *arg, int last_one)<br/>
+{<br/>
+    +unsigned char sha1[20];<br/>
+    +struct commit *cmit;<br/>
+    struct commit_list *list;<br/>
+    static int initialized = 0;<br/>
+    struct commit_name *n;<br/>
+    +if (get_sha1(arg, sha1) &lt; 0) + usage(describe_usage);<br/>
+    +cmit = lookup_commit_reference(sha1);<br/>
+    +if (!cmit) + usage(describe_usage);<br/>
+    +if (!initialized)<br/>
+    {<br/>
+        initialized = 1;<br/>
         for_each_ref(get_name);
 </dd></dl>
 <dl>

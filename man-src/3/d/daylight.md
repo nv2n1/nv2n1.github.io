@@ -18,10 +18,10 @@ extern long timezone;
 extern int daylight;
 </code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
-<p> <code>tzset</code>(): _POSIX_C_SOURCE<br />
- <i>tzname</i>: _POSIX_C_SOURCE<br />
- <i>timezone</i>, <i>daylight</i>: _XOPEN_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc since 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
+<p> <code>tzset</code>(): _POSIX_C_SOURCE<br/>
+ <i>tzname</i>: _POSIX_C_SOURCE<br/>
+ <i>timezone</i>, <i>daylight</i>: _XOPEN_SOURCE<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc since 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_SVID_SOURCE</p>
 <h2>DESCRIPTION</h2>
 <p> The <code>tzset</code>() function initializes the <i>tzname</i> variable from the <code>TZ</code> environment variable. This function is automatically called by the other time conversion functions that depend on the timezone. In a System-V-like environment, it will also set the variables <i>timezone</i> (seconds West of UTC) and <i>daylight</i> (to 0 if this timezone does not have any daylight saving time rules, or to nonzero if there is a time, past, present or future when daylight saving time applies). </p>

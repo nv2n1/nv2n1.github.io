@@ -35,9 +35,9 @@ description: "tayga – stateless NAT64 daemon"
 <h2>Author</h2>
 <p>Written by Nathan Lutchansky &lt;lutchann [at] litech.org&gt;</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2010 Nathan Lutchansky<br />
- License GPLv2+: GNU GPL version 2 or later<br />
+<p>Copyright &#169; 2010 Nathan Lutchansky<br/>
+ License GPLv2+: GNU GPL version 2 or later<br/>
  This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/5-tayga-conf/">tayga.conf</a></code>(5)<br />
+<p><code><a href="/docs/linux/man/5-tayga-conf/">tayga.conf</a></code>(5)<br/>
  <code>&lt;<a rel="nofollow" href="http://www.litech.org/tayga/">http://www.litech.org/tayga/</a>&gt;</code> </p>

@@ -9,7 +9,7 @@ description: "ANTLR3_STRING_FACTORY – String Factory Class Definition –"
 
 <p>ANTLR3_STRING_FACTORY &#8211; String Factory Class Definition &#8211; </p>
 <h3>Typedefs</h3>
-<p>typedef struct <code>ANTLR3_STRING_FACTORY_struct</code> * <code>pANTLR3_STRING_FACTORY</code><br />
+<p>typedef struct <code>ANTLR3_STRING_FACTORY_struct</code> * <code>pANTLR3_STRING_FACTORY</code><br/>
  <i>Pointer to an instantiation of &#8216;class&#8217; </i><code>ANTLR3_STRING_FACTORY</code>.</p>
 <h2>Typedef Documentation</h2>
 <h3>typedef struct <code>ANTLR3_STRING_FACTORY_struct</code>* <code>pANTLR3_STRING_FACTORY</code></h3>

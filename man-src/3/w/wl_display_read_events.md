@@ -61,7 +61,7 @@ struct wl_array additional_shm_formats</code></pre>
 <p>Create a client for the given file descriptor </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>display</i> The display object<br />
+<dd><i>display</i> The display object<br/>
  <i>fd</i> The file descriptor for the socket to the client</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -73,7 +73,7 @@ struct wl_array additional_shm_formats</code></pre>
 <p>Add support for a wl_shm pixel format </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>display</i> The display object<br />
+<dd><i>display</i> The display object<br/>
  <i>format</i> The wl_shm pixel format to advertise</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -166,7 +166,7 @@ struct wl_array additional_shm_formats</code></pre>
 <p>Dispatch events in an event queue </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>display</i> The display context object<br />
+<dd><i>display</i> The display context object<br/>
  <i>queue</i> The event queue to dispatch</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -177,7 +177,7 @@ struct wl_array additional_shm_formats</code></pre>
 <p>Dispatch pending events in an event queue </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>display</i> The display context object<br />
+<dd><i>display</i> The display context object<br/>
  <i>queue</i> The event queue to dispatch</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

@@ -31,7 +31,7 @@ description: "heif-convert – convert HEIC/HEIF image"
 <h2>BUGS</h2>
 <p> Please reports bugs or issues at <a rel="nofollow" href="https://github.com/strukturag/libheif">https://github.com/strukturag/libheif</a></p>
 <h2>AUTHORS</h2>
-<p> Joachim Bauch, struktur AG<br />
+<p> Joachim Bauch, struktur AG<br/>
  Dirk Farin, struktur AG</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2017 struktur AG </p>

@@ -12,11 +12,11 @@ description: "src/lookup3.h –"
 <h2>Synopsis</h2>
 <p>#include &lt;pbs_config.h&gt; </p>
 <h3>Functions</h3>
-<p>uint32_t <code>hashword</code> (const uint32_t *k, size_t length, uint32_t initval)<br />
- <i>This works on all machines. </i><br />
- uint32_t <code>hashlittle</code> (const void *key, size_t length, uint32_t initval)<br />
- <i></i><code>hashlittle()</code> &#8212; hash a variable-length key into a 32-bit value<br />
- uint32_t <code>hashbig</code> (const void *key, size_t length, uint32_t initval)<br />
+<p>uint32_t <code>hashword</code> (const uint32_t *k, size_t length, uint32_t initval)<br/>
+ <i>This works on all machines. </i><br/>
+ uint32_t <code>hashlittle</code> (const void *key, size_t length, uint32_t initval)<br/>
+ <i></i><code>hashlittle()</code> &#8212; hash a variable-length key into a 32-bit value<br/>
+ uint32_t <code>hashbig</code> (const void *key, size_t length, uint32_t initval)<br/>
  <i></i><code>hashbig()</code>: This is the same as <code>hashword()</code> on big-endian machines.</p>
 <h2>Detailed Description</h2>
 <p>32bit hash function implementation. </p>
@@ -27,15 +27,15 @@ description: "src/lookup3.h –"
 <p> The function <code>hashword()</code> is identical to <code>hashlittle()</code> on little-endian machines, and identical to <code>hashbig()</code> on big-endian machines, except that the length has to be measured in uint32s rather than in bytes. <code>hashlittle()</code> is more complicated than <code>hashword()</code> only because <code>hashlittle()</code> has to dance around fitting the key bytes into registers. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>k</i> the key, an array of uint32 values<br />
- <i>length</i> the length of the key, in uint32s<br />
+<dd><i>k</i> the key, an array of uint32 values<br/>
+ <i>length</i> the length of the key, in uint32s<br/>
  <i>initval</i> the previous hash, or an arbitrary value</dd></dl>
 <h3>uint32_t hashlittle (const void *key, size_tlength, uint32initval)</h3>
 <p><code>hashlittle()</code> &#8212; hash a variable-length key into a 32-bit value </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>key</i> the key (the unaligned variable-length array of bytes)<br />
- <i>length</i> the length of the key, counting by bytes<br />
+<dd><i>key</i> the key (the unaligned variable-length array of bytes)<br/>
+ <i>length</i> the length of the key, counting by bytes<br/>
  <i>initval</i> can be any 4-byte value</dd></dl>
 <p> Returns a 32-bit value. Every bit of the key affects every bit of the return value. Two keys differing by one or two bits will have totally different hash values. </p>
 <p> The best hash table sizes are powers of 2. There is no need to do mod a prime (mod is sooo slow!). If you need less than 32 bits, use a bitmask. For example, if you need only 10 bits, do h = (h &amp; hashmask(10)); In which case, the hash table should have hashsize(10) elements. </p>

@@ -42,13 +42,13 @@ description: "opasetupssh"
 </dl>
 <h2>Examples</h2>
 <h2>Operations on Hosts</h2>
-<p>opasetupssh -S -i&#8221;<br />
- opasetupssh -U<br />
- opasetupssh -h &#8216;arwen elrond&#8217; -U<br />
+<p>opasetupssh -S -i&#8221;<br/>
+ opasetupssh -U<br/>
+ opasetupssh -h &#8216;arwen elrond&#8217; -U<br/>
  HOSTS=&#8217;arwen elrond&#8217; opasetupssh -U</p>
 <h2>Operations on Chassis</h2>
-<p>opasetupssh -C<br />
- opasetupssh -C -H &#8216;chassis1 chassis2&#8242;<br />
+<p>opasetupssh -C<br/>
+ opasetupssh -C -H &#8216;chassis1 chassis2&#8242;<br/>
  CHASSIS=&#8217;chassis1 chassis2&#8217; opasetupssh -C</p>
 <h2>Environment Variables</h2>
 <p>The following environment variables are also used by this command:</p>

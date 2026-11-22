@@ -12,9 +12,9 @@ description: "QuantLib::DividendVanillaOption – Single-asset vanilla option (n
 <p>#include &lt;ql/instruments/dividendvanillaoption.hpp&gt; </p>
 <p> Inherits <code>QuantLib::OneAssetOption</code>. </p>
 <h3>Classes</h3>
-<p>class <code>arguments</code><br />
- <i>Arguments for dividend vanilla option calculation </i><br />
- class <code>engine</code><br />
+<p>class <code>arguments</code><br/>
+ <i>Arguments for dividend vanilla option calculation </i><br/>
+ class <code>engine</code><br/>
  <i>Dividend-vanilla-option engine base class </i></p>
 <h3>Public Member Functions</h3>
 <p><code>DividendVanillaOption</code> (const boost::shared_ptr&lt; <code>StrikedTypePayoff</code> &gt; &amp;payoff, const boost::shared_ptr&lt; <code>Exercise</code> &gt; &amp;exercise, const std::vector&lt; <code>Date</code> &gt; &amp;dividendDates, const std::vector&lt; <code>Real</code> &gt; &amp;dividends) </p>

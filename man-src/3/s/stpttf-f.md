@@ -10,7 +10,7 @@ description: "stpttf.f –"
 <p>stpttf.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>stpttf</code> (TRANSR, UPLO, N, AP, ARF, INFO)<br />
+<p>subroutine <code>stpttf</code> (TRANSR, UPLO, N, AP, ARF, INFO)<br/>
  <i></i><code>STPTTF</code> copies a triangular matrix from the standard packed format (TP) to the rectangular full packed format (TF).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine stpttf (characterTRANSR, characterUPLO, integerN, real, dimension( 0: * )AP, real, dimension( 0: * )ARF, integerINFO)</h3>

@@ -13,7 +13,7 @@ description: "sendxmpp – send xmpp messages from the commandline."
 <p> sendxmpp [options] &lt;recipient1&gt; [&lt;recipient2&gt; &#8230;] </p>
 <p> sendxmpp &#8211;raw [options]</p>
 <h2>DESCRIPTION</h2>
-<p> sendxmpp is a program to send <font SIZE="-1">XMPP </font>(Jabber) messages from the commandline, not unlike <i><a href="/docs/linux/man/1-mail/">mail</a></i>(1). Messages can be sent both to individual recipients and chatrooms.</p>
+<p> sendxmpp is a program to send XMPP (Jabber) messages from the commandline, not unlike <i><a href="/docs/linux/man/1-mail/">mail</a></i>(1). Messages can be sent both to individual recipients and chatrooms.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-f</code>,<code>&#8211;file</code> <i>file</i></dt>
@@ -23,7 +23,7 @@ description: "sendxmpp – send xmpp messages from the commandline."
 <dt><code>-p</code>,<code>&#8211;password</code> <i>password</i></dt>
 <dd> Use <i>password</i> instead of the one in the configuration file</dd>
 <dt><code>&#8211;sso</code></dt>
-<dd> Instead of specifying username or password, attempt to use system level <font SIZE="-1">SSO </font>(e.g. kerberos) if supported.</dd>
+<dd> Instead of specifying username or password, attempt to use system level SSO (e.g. kerberos) if supported.</dd>
 <dt><code>-j</code>,<code>&#8211;jserver</code> <i>server</i></dt>
 <dd> Use jabber <i>server</i> instead of the one in the configuration file.</dd>
 <dt><code>-o</code>,<code>&#8211;component</code> <i>componentname</i></dt>
@@ -31,13 +31,13 @@ description: "sendxmpp – send xmpp messages from the commandline."
 <dt><code>-r</code>,<code>&#8211;resource</code> <i>res</i></dt>
 <dd> Use resource <i>res</i> for the sender [default: &#8216;sendxmpp&#8217;]; when sending to a chatroom, this determines the &#8216;alias&#8217;</dd>
 <dt><code>-t</code>,<code>&#8211;tls</code></dt>
-<dd> Connect securely, using <font SIZE="-1">TLS</font></dd>
+<dd> Connect securely, using TLS</dd>
 <dt><code>-e</code>,<code>&#8211;ssl</code></dt>
-<dd> Connect securely, using <font SIZE="-1">SSL</font></dd>
+<dd> Connect securely, using SSL</dd>
 <dt><code>-n</code>,<code>&#8211;no-tls-verify</code></dt>
-<dd> Deactivate the verification of <font SIZE="-1">SSL</font> certificates. Better way is to use parameter <code>&#8211;tls-ca-path</code> with the needed path to <font SIZE="-1">CA</font> certificates.</dd>
+<dd> Deactivate the verification of SSL certificates. Better way is to use parameter <code>&#8211;tls-ca-path</code> with the needed path to CA certificates.</dd>
 <dt><code>-a</code>,<code>&#8211;tls-ca-path</code></dt>
-<dd> Path to your custom <font SIZE="-1">CA</font> certificates, so you can verificate <font SIZE="-1">SSL</font> certificates during connecting.</dd>
+<dd> Path to your custom CA certificates, so you can verificate SSL certificates during connecting.</dd>
 <dt><code>-l</code>,<code>&#8211;headline</code></dt>
 <dd> Backward compatibility option. You should use <code>&#8211;message-type=headline</code> instead. Send a headline type message (not stored in offline messages)</dd>
 <dt><code>&#8211;messages-type</code></dt>
@@ -51,13 +51,13 @@ description: "sendxmpp – send xmpp messages from the commandline."
 <dt><code>-i</code>,<code>&#8211;interactive</code></dt>
 <dd> Work in interactive mode, reading lines from stdin and sending the one-at-time</dd>
 <dt><code>-w</code>,<code>&#8211;raw</code></dt>
-<dd> Send raw <font SIZE="-1">XML</font> message to jabber server</dd>
+<dd> Send raw XML message to jabber server</dd>
 <dt><code>-v</code>,<code>&#8211;verbose</code></dt>
 <dd> Give verbose output about what is happening</dd>
 <dt><code>-h</code>,<code>&#8211;help</code>,<code>&#8211;usage</code></dt>
 <dd> Show a &#8216;Usage&#8217; message</dd>
 <dt><code>-d</code>,<code>&#8211;debug</code></dt>
-<dd> Show debugging info while running. <font SIZE="-1"><code>WARNING</code></font>: This will include passwords etc. so be careful with the output! Specify multiple times to increase debug level.</dd></dl>
+<dd> Show debugging info while running. <code>WARNING</code>: This will include passwords etc. so be careful with the output! Specify multiple times to increase debug level.</dd></dl>
 <h2>CONFIGURATION FILE</h2>
 <p> You may define a &#8216;<i>~/.sendxmpprc</i>&#8216; file with the necessary data for your xmpp-account. Since version 1.24 the following format is supported: </p>
 <pre>
@@ -83,12 +83,12 @@ description: "sendxmpp – send xmpp messages from the commandline."
     # my account
     alice [at] jabber.org  secret
 </pre>
-<p> (&#8216;#&#8217; and newlines are allowed like in shellscripts). You can add a <i>host</i> (or <font SIZE="-1">IP</font> address) if it is different from the <i>server</i> part of your <font SIZE="-1">JID:</font> </p>
+<p> (&#8216;#&#8217; and newlines are allowed like in shellscripts). You can add a <i>host</i> (or IP address) if it is different from the <i>server</i> part of your JID: </p>
 <pre>
     # account with specific connection host
     alice [at] myjabberserver.com;foo.com secret
 </pre>
-<p> You can also add a <i>port</i> if it is not the standard <font SIZE="-1">XMPP</font> port: </p>
+<p> You can also add a <i>port</i> if it is not the standard XMPP port: </p>
 <pre>
     # account with weird port number
     alice [at] myjabberserver.com:1234 secret
@@ -98,7 +98,7 @@ description: "sendxmpp – send xmpp messages from the commandline."
     # account with a specific host and port
     alice [at] myjabberserver.com;foo.com:1234 secret
 </pre>
-<p> <font SIZE="-1"><code>NOTE</code></font>: for your security, sendxmpp demands that the configuration file is owned by you and readable only to you (permissions 600).</p>
+<p> <code>NOTE</code>: for your security, sendxmpp demands that the configuration file is owned by you and readable only to you (permissions 600).</p>
 <h2>EXAMPLE</h2>
 <pre><code>
 $ echo "hello bob!" | sendxmpp - s hello someone[at] jabber.org or to send to a chatroom : $ echo "Dinner Time" | sendxmpp - r TheCook-- chatroom test2[at] conference.jabber.org or to send your system logs somewhere, as new lines appear : $ tail - f / var / log / syslog | sendxmpp - i sysadmin[at] myjabberserver.com

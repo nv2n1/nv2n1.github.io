@@ -60,7 +60,7 @@ struct wl_array additional_shm_formats</code></pre>
 <p>Create a client for the given file descriptor </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>display</i> The display object<br />
+<dd><i>display</i> The display object<br/>
  <i>fd</i> The file descriptor for the socket to the client</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -72,7 +72,7 @@ struct wl_array additional_shm_formats</code></pre>
 <p>Add support for a wl_shm pixel format </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>display</i> The display object<br />
+<dd><i>display</i> The display object<br/>
  <i>format</i> The wl_shm pixel format to advertise</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -83,7 +83,7 @@ struct wl_array additional_shm_formats</code></pre>
 <p>Add a socket to Wayland display for the clients to connect. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>display</i> Wayland display to which the socket should be added.<br />
+<dd><i>display</i> Wayland display to which the socket should be added.<br/>
  <i>name</i> Name of the Unix socket.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -219,8 +219,8 @@ struct wl_array additional_shm_formats</code></pre>
 <p>Retrieves the information about a protocol error: </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>display</i> The Wayland display<br />
- <i>interface</i> if not NULL, stores the interface where the error occurred<br />
+<dd><i>display</i> The Wayland display<br/>
+ <i>interface</i> if not NULL, stores the interface where the error occurred<br/>
  <i>id</i> if not NULL, stores the object id that generated the error. There&#8217;s no guarantee the object is still valid; the client must know if it deleted the object.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

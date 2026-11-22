@@ -47,7 +47,7 @@ fuser -v /dev/input/eventX
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-evemu-device/">evemu-device</a>(1) <a href="/docs/linux/man/1-evemu-play/">evemu-play</a>(1)</p>
 <h2>AUTHOR</h2>
-<p> evemu was written by Henrik Rydberg &lt;m[blue]<code>rydberg [at] euromail.se</code>m[]<font SIZE="-2">[1]</font>&gt;</p>
+<p> evemu was written by Henrik Rydberg &lt;m[blue]<code>rydberg [at] euromail.se</code>m[][1]&gt;</p>
 <h2>NOTES</h2>
 <dl>
 <dt> 1.</dt>

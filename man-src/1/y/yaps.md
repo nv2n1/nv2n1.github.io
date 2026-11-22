@@ -28,7 +28,7 @@ description: "YAPS – converts an abc file to a PostScript file"
 <dt><code>-o </code>filename</dt>
 <dd> Specifies the output postscript file name.</dd>
 <dt><code>-P </code>ss</dt>
-<dd> Specifies the paper size where 0 is A4 and 1 is US Letter or XXXxYYY sets the paper size in point units.<br />
+<dd> Specifies the paper size where 0 is A4 and 1 is US Letter or XXXxYYY sets the paper size in point units.<br/>
 &nbsp;<wbr>units.</dd>
 <dt><code>-s </code>XX</dt>
 <dd> Specifies the scaling factor (default is 0.7)</dd>
@@ -63,48 +63,48 @@ description: "YAPS – converts an abc file to a PostScript file"
 <p> * Supports the !red! and !black! instructions for switching from black to red or vice-versa. </p>
 <p> * Supports the following abc2ps extensions to abc : </p>
 <p>%%newpage&nbsp;<wbr>&nbsp;<wbr>&#8211; start a new page, </p>
-<p>%%vskip N&nbsp;<wbr>&nbsp;<wbr>&#8211; adds vertical space of N points. If N is followed by<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8216;cm&#8217;&nbsp;<wbr>or&nbsp;<wbr>&#8216;in&#8217;&nbsp;<wbr>the units are taken as centimetres or<br />
+<p>%%vskip N&nbsp;<wbr>&nbsp;<wbr>&#8211; adds vertical space of N points. If N is followed by<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8216;cm&#8217;&nbsp;<wbr>or&nbsp;<wbr>&#8216;in&#8217;&nbsp;<wbr>the units are taken as centimetres or<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>inches instead of points e.g. 4cm. </p>
 <p>%%text&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; print text </p>
 <p>%%centre&nbsp;<wbr>(or&nbsp;<wbr>%%center for Americans)&nbsp;<wbr>&#8211; print centred text. </p>
-<p>If&nbsp;<wbr>%%text or&nbsp;<wbr>%%centre appear in the header, the text appears above<br />
+<p>If&nbsp;<wbr>%%text or&nbsp;<wbr>%%centre appear in the header, the text appears above<br/>
 the tune. </p>
-<p>%%staffsep SIZE &#8211; set the vertical blank space between 2 consecutive<br />
+<p>%%staffsep SIZE &#8211; set the vertical blank space between 2 consecutive<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>music staves. </p>
-<p>%%titleleft N &#8211; select title placed to the left or centred. N&nbsp;<wbr>=&nbsp;<wbr>1<br />
+<p>%%titleleft N &#8211; select title placed to the left or centred. N&nbsp;<wbr>=&nbsp;<wbr>1<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>places the title on the left while N&nbsp;<wbr>=&nbsp;<wbr>0 centres it. </p>
 <p>%%titlecaps &#8211; title is displayed in upper case&nbsp;<wbr>(capital)&nbsp;<wbr>letters. </p>
-<p>%%textfont NAME SIZE &#8211; select font called NAME and point size SIZE<br />
-for text produced by&nbsp;<wbr>%%text or&nbsp;<wbr>%%centre. If only NAME is given, the<br />
-font stays the same size. Likewise, if&nbsp;<wbr>&#8216;-&#8216;&nbsp;<wbr>is given as the NAME,<br />
+<p>%%textfont NAME SIZE &#8211; select font called NAME and point size SIZE<br/>
+for text produced by&nbsp;<wbr>%%text or&nbsp;<wbr>%%centre. If only NAME is given, the<br/>
+font stays the same size. Likewise, if&nbsp;<wbr>&#8216;-&#8216;&nbsp;<wbr>is given as the NAME,<br/>
 only the font size changes. </p>
 <p>%%titlefont NAME SIZE &#8211; select font for title. </p>
-<p>%%subtitlefont NAME SIZE &#8211; select font for titles after the first<br />
+<p>%%subtitlefont NAME SIZE &#8211; select font for titles after the first<br/>
 title. </p>
-<p>%%composerfont NAME SIZE &#8211; select font for words in C: and O: fields<br />
+<p>%%composerfont NAME SIZE &#8211; select font for words in C: and O: fields<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>and part specifier&nbsp;<wbr>(P: in header). </p>
 <p>%%wordsfont NAME SIZE &#8211; select font for words in W: fields. </p>
-<p>%%partsfont NAME SIZE &#8211; select font for boxed parts and<br />
+<p>%%partsfont NAME SIZE &#8211; select font for boxed parts and<br/>
 !instruction!&nbsp;<wbr>. </p>
 <p>%%vocalfont NAME SIZE &#8211; select font for words in w: fields. </p>
-<p>%%gchordfont NAME SIZE &#8211; select font for guitar chords in the music.<br />
-(It is advisable not to change the font name for the last two, since<br />
+<p>%%gchordfont NAME SIZE &#8211; select font for guitar chords in the music.<br/>
+(It is advisable not to change the font name for the last two, since<br/>
 &nbsp;<wbr>the program calculates the width of strings using default fonts) </p>
-<p>%%titlespace,&nbsp;<wbr>%%subtitlespace,&nbsp;<wbr>%%textspace,&nbsp;<wbr>%%composerspace,<br />
-%%wordsspace,&nbsp;<wbr>%%partsspace,&nbsp;<wbr>%%vocalspace and&nbsp;<wbr>%%gchordspace<br />
-determine the amount of space left above the relevant type&nbsp;<wbr><br />
-of text. Each of these should be followed by a size in points<br />
+<p>%%titlespace,&nbsp;<wbr>%%subtitlespace,&nbsp;<wbr>%%textspace,&nbsp;<wbr>%%composerspace,<br/>
+%%wordsspace,&nbsp;<wbr>%%partsspace,&nbsp;<wbr>%%vocalspace and&nbsp;<wbr>%%gchordspace<br/>
+determine the amount of space left above the relevant type&nbsp;<wbr><br/>
+of text. Each of these should be followed by a size in points<br/>
 or value in centrimetres or inches. </p>
-<p>e.g.&nbsp;<wbr>%%composerfont 3<br />
+<p>e.g.&nbsp;<wbr>%%composerfont 3<br/>
 &nbsp;<wbr>&nbsp;<wbr>%%titlefont 2cm </p>
-<p> * Supports placing of accompaniment chords either above or below the<br />
+<p> * Supports placing of accompaniment chords either above or below the<br/>
 &nbsp;<wbr>&nbsp;<wbr>stave. </p>
-<p>%%chordsabove &#8211; places accompaniment chords above the stave<br />
+<p>%%chordsabove &#8211; places accompaniment chords above the stave<br/>
 (default). </p>
 <p>%%chordsbelow &#8211; places accompaniment chords below the stave. </p>
-<p> * Supports optional text enclosed in quotes before and after the<br />
-&nbsp;<wbr>&nbsp;<wbr>tempo specification in the Q: field. This extension comes from<br />
+<p> * Supports optional text enclosed in quotes before and after the<br/>
+&nbsp;<wbr>&nbsp;<wbr>tempo specification in the Q: field. This extension comes from<br/>
 &nbsp;<wbr>&nbsp;<wbr>abc2ps. </p>
 <h2>AUTHOR</h2>
 <p> James Allwright &lt;J.R.Allwright [at] westminster.ac.uk&gt;</p>

@@ -36,10 +36,10 @@ description: "XCreateColormap, XCopyColormapAndFree, XFreeColormap, XColor – c
 <p> <code>XFreeColormap</code> can generate a <code>BadColor</code> error.</p>
 <h2>Structures</h2>
 <p>The <code>XColor</code> structure contains: </p>
-<p> typedef struct {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long pixel;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;pixel value&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short red, green, blue;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;rgb values&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char flags;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;DoRed, DoGreen, DoBlue&nbsp;*/<br />
+<p> typedef struct {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long pixel;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;pixel value&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short red, green, blue;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;rgb values&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char flags;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;DoRed, DoGreen, DoBlue&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char pad; } XColor; </p>
 <p> The red, green, and blue values are always in the range 0 to 65535 inclusive, independent of the number of bits actually used in the display hardware. The server scales these values down to the range used by the hardware. Black is represented by (0,0,0), and white is represented by (65535,65535,65535). In some functions, the flags member controls which of the red, green, and blue members is used and can be the inclusive OR of zero or more of <code>DoRed</code>, <code>DoGreen</code>, and <code>DoBlue</code>.</p>
 <h2>Diagnostics</h2>
@@ -57,5 +57,5 @@ description: "XCreateColormap, XCopyColormapAndFree, XFreeColormap, XColor – c
 <dt><code>BadWindow</code></dt>
 <dd>A value for a Window argument does not name a defined Window.</dd></dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xalloccolor/">XAllocColor</a>(3), <a href="/docs/linux/man/3-xchangewindowattributes/">XChangeWindowAttributes</a>(3), <a href="/docs/linux/man/3-xcreatewindow/">XCreateWindow</a>(3), <a href="/docs/linux/man/3-xquerycolor/">XQueryColor</a>(3), <a href="/docs/linux/man/3-xstorecolors/">XStoreColors</a>(3)<br />
+<p><a href="/docs/linux/man/3-xalloccolor/">XAllocColor</a>(3), <a href="/docs/linux/man/3-xchangewindowattributes/">XChangeWindowAttributes</a>(3), <a href="/docs/linux/man/3-xcreatewindow/">XCreateWindow</a>(3), <a href="/docs/linux/man/3-xquerycolor/">XQueryColor</a>(3), <a href="/docs/linux/man/3-xstorecolors/">XStoreColors</a>(3)<br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

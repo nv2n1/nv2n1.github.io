@@ -11,9 +11,9 @@ description: "sane-ricoh2 – SANE backend for Ricoh flatbed scanners"
 <h2>Description</h2>
 <p>The <code>sane-ricoh2</code> library implements a SANE (Scanner Access Now Easy) backend that provides access to the following Ricoh flatbed scanners:</p>
 <dl>
-<dd>SG-3110SFNw<br />
- SG-3100SNw<br />
- SP-100SU<br />
+<dd>SG-3110SFNw<br/>
+ SG-3100SNw<br/>
+ SP-100SU<br/>
  SP-111SU (SP-112SU)</dd></dl>
 <h2>Files</h2>
 <dl>

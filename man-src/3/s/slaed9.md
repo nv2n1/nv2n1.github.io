@@ -11,7 +11,7 @@ description: "slaed9.f –"
 <p> slaed9.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>slaed9</code> (K, KSTART, KSTOP, N, D, Q, LDQ, RHO, DLAMDA, W, S, LDS, INFO)<br />
+<p> subroutine <code>slaed9</code> (K, KSTART, KSTOP, N, D, Q, LDQ, RHO, DLAMDA, W, S, LDS, INFO)<br/>
  <i></i><code>SLAED9</code> used by sstedc. Finds the roots of the secular equation and updates the eigenvectors. Used when the original matrix is dense.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slaed9 (integerK, integerKSTART, integerKSTOP, integerN, real, dimension( * )D, real, dimension( ldq, * )Q, integerLDQ, realRHO, real, dimension( * )DLAMDA, real, dimension( * )W, real, dimension( lds, * )S, integerLDS, integerINFO)</h3>

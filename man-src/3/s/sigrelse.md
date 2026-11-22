@@ -50,7 +50,7 @@ int sigignore(int sig);</code></pre>
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>sigset</code>(), <code>sighold</code>(),<br />
+<td> <code>sigset</code>(), <code>sighold</code>(),<br/>
  <code>sigrelse</code>(), <code>sigignore</code>() </td>
 <td>Thread safety</td>
 <td>MT-Safe

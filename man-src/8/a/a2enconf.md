@@ -27,7 +27,7 @@ description: "a2enconf, a2disconf – enable or disable an apache2 configuration
 <p><code>a2enconf</code> and <code>a2disconf</code> exit with status 0 if all <i>configuration</i>s are processed successfully, 1 if errors occur, 2 if an invalid option was used.</p>
 <h2>Examples</h2>
 <dl>
-<dd><code>a2enconf security</code><br />
+<dd><code>a2enconf security</code><br/>
  <code>a2disconf charset</code></dd></dl>
 <p> Enables Apache security directives stored in the <code>security</code> configuration files, and disables the <code>charset</code> configuration.</p>
 <h2>Files</h2>

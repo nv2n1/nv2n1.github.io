@@ -85,7 +85,7 @@ description: "mysqlreplicate – Set Up and Start Replication Between Two Server
 <p> The server IDs on the master and slave must be nonzero and unique. The utility reports an error if the server ID is 0 on either server or the same on the master and slave. Set these values before starting this utility. </p>
 <p> Mixing IP and hostnames is not recommended. The replication-specific utilities will attempt to compare hostnames and IP addresses as aliases for checking slave connectivity to the master. However, if your installation does not support reverse name lookup, the comparison could fail. Without the ability to do a reverse name lookup, the replication utilities could report a false negative that the slave is (not) connected to the master. </p>
 <p> For example, if you setup replication using MASTER_HOST=ubuntu.net on the slave and later connect to the slave with mysqlrplcheck and have the master specified as &#8211;master=192.168.0.6 using the valid IP address for ubuntu.net, you must have the ability to do a reverse name lookup to compare the IP (192.168.0.6) and the hostname (ubuntu.net) to determine if they are the same machine. </p>
-<p> The path to the MySQL client tools should be included in the PATH environment variable in order to use the authentication mechanism with login-paths. This will allow the utility to use the my_print_defaults tools which is required to read the login-path values from the login configuration file (.mylogin.cnf).<br />
+<p> The path to the MySQL client tools should be included in the PATH environment variable in order to use the authentication mechanism with login-paths. This will allow the utility to use the my_print_defaults tools which is required to read the login-path values from the login configuration file (.mylogin.cnf).<br/>
 EXAMPLES </p>
 <p> To set up replication between two MySQL instances running on different ports of the same host using the default settings, use this command: </p>
 <dl>
@@ -104,55 +104,55 @@ $ mysqlreplicate-- master = root[at] localhost : 3306 --slave = root[at] localho
 <dl>
 <dt>
 </dt><dd>
-$ mysqlreplicate&#8211; master = root[at] localhost : 3306 &#8211;slave = root[at] localhost : 3307 &#8211;rpl &#8211; user = rpl : rpl &#8211; vv&#8211; pedantic<br />
-#master on localhost : &#8230; connected.<br />
-#slave on localhost : &#8230; connected.<br />
-#master id = 2<br />
-#slave id = 99<br />
-#Checking InnoDB statistics for type and version conflicts.<br />
-#Checking storage engines&#8230;<br />
-#Checking for binary logging on master&#8230;<br />
-#Setting up replication&#8230;<br />
-#Flushing tables on master with read lock&#8230;<br />
-#Connecting slave to master&#8230;<br />
-#CHANGE MASTER TO MASTER_HOST = [&#8230; omitted&#8230;]<br />
-#Starting slave&#8230;<br />
-#status : Waiting for master to send event<br />
-#error : 0:<br />
-#Unlocking tables on master&#8230;<br />
+$ mysqlreplicate&#8211; master = root[at] localhost : 3306 &#8211;slave = root[at] localhost : 3307 &#8211;rpl &#8211; user = rpl : rpl &#8211; vv&#8211; pedantic<br/>
+#master on localhost : &#8230; connected.<br/>
+#slave on localhost : &#8230; connected.<br/>
+#master id = 2<br/>
+#slave id = 99<br/>
+#Checking InnoDB statistics for type and version conflicts.<br/>
+#Checking storage engines&#8230;<br/>
+#Checking for binary logging on master&#8230;<br/>
+#Setting up replication&#8230;<br/>
+#Flushing tables on master with read lock&#8230;<br/>
+#Connecting slave to master&#8230;<br/>
+#CHANGE MASTER TO MASTER_HOST = [&#8230; omitted&#8230;]<br/>
+#Starting slave&#8230;<br/>
+#status : Waiting for master to send event<br/>
+#error : 0:<br/>
+#Unlocking tables on master&#8230;<br/>
 #&#8230; done.
 </dd></dl>
 <p> The following command starts replication from the current position of the master (which is the default): </p>
 <dl>
 <dt>
 </dt><dd>
-$ mysqlreplicate&#8211; master = root[at] localhost : 3306 &#8211;slave = root[at] localhost : 3307 &#8211;rpl &#8211; user = rpl : rpl<br />
-#master on localhost : &#8230; connected.<br />
-#slave on localhost : &#8230; connected.<br />
-#Checking for binary logging on master&#8230;<br />
-#Setting up replication&#8230;<br />
+$ mysqlreplicate&#8211; master = root[at] localhost : 3306 &#8211;slave = root[at] localhost : 3307 &#8211;rpl &#8211; user = rpl : rpl<br/>
+#master on localhost : &#8230; connected.<br/>
+#slave on localhost : &#8230; connected.<br/>
+#Checking for binary logging on master&#8230;<br/>
+#Setting up replication&#8230;<br/>
 #&#8230; done.
 </dd></dl>
 <p> The following command starts replication from the beginning of recorded events on the master: </p>
 <dl>
 <dt>
 </dt><dd>
-$ mysqlreplicate&#8211; master = root[at] localhost : 3306 &#8211;slave = root[at] localhost : 3307 &#8211;rpl &#8211; user = rpl : rpl&#8211; start &#8211; from &#8211; beginning<br />
-#master on localhost : &#8230; connected.<br />
-#slave on localhost : &#8230; connected.<br />
-#Checking for binary logging on master&#8230;<br />
-#Setting up replication&#8230;<br />
+$ mysqlreplicate&#8211; master = root[at] localhost : 3306 &#8211;slave = root[at] localhost : 3307 &#8211;rpl &#8211; user = rpl : rpl&#8211; start &#8211; from &#8211; beginning<br/>
+#master on localhost : &#8230; connected.<br/>
+#slave on localhost : &#8230; connected.<br/>
+#Checking for binary logging on master&#8230;<br/>
+#Setting up replication&#8230;<br/>
 #&#8230; done.
 </dd></dl>
 <p> The following command starts replication from the beginning of a specific master binary log file: </p>
 <dl>
 <dt>
 </dt><dd>
-$ mysqlreplicate&#8211; master = root[at] localhost : 3306 &#8211;slave = root[at] localhost : 3307 &#8211;rpl &#8211; user = rpl : rpl&#8211; master &#8211; log &#8211; file = my_log .000003<br />
-#master on localhost : &#8230; connected.<br />
-#slave on localhost : &#8230; connected.<br />
-#Checking for binary logging on master&#8230;<br />
-#Setting up replication&#8230;<br />
+$ mysqlreplicate&#8211; master = root[at] localhost : 3306 &#8211;slave = root[at] localhost : 3307 &#8211;rpl &#8211; user = rpl : rpl&#8211; master &#8211; log &#8211; file = my_log .000003<br/>
+#master on localhost : &#8230; connected.<br/>
+#slave on localhost : &#8230; connected.<br/>
+#Checking for binary logging on master&#8230;<br/>
+#Setting up replication&#8230;<br/>
 #&#8230; done.
 </dd></dl>
 <p> The following command starts replication from specific master binary log coordinates (specific log file and position): </p>

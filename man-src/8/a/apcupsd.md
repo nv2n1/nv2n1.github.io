@@ -9,9 +9,9 @@ description: "apcupsd – a daemon for controlling most APC UPSes"
 
 <p><code>apcupsd </code> &#8211; a daemon for controlling most APC UPSes</p>
 <h2>Synopsis</h2>
-<p>[-<code>b </code> ] [-<code>d </code><i>level | &#8211;</i><code>-debug </code><i>level</i> ] [-<code>f </code><i>file | &#8211;</i><code>-config-file </code><i>file</i> ] [-<code>P </code><i>file | &#8211;</i><code>-pid-file </code><i>file</i> ] [-<code>p | -kill-on-powerfail | t | -term-on-powerfail</code> ] [-<code>R</code> ]<br />
- [-<code>k | -killpower | -hibernate | o | -power-off </code> ]<br />
- [-<code>h | -help</code> ]<br />
+<p>[-<code>b </code> ] [-<code>d </code><i>level | &#8211;</i><code>-debug </code><i>level</i> ] [-<code>f </code><i>file | &#8211;</i><code>-config-file </code><i>file</i> ] [-<code>P </code><i>file | &#8211;</i><code>-pid-file </code><i>file</i> ] [-<code>p | -kill-on-powerfail | t | -term-on-powerfail</code> ] [-<code>R</code> ]<br/>
+ [-<code>k | -killpower | -hibernate | o | -power-off </code> ]<br/>
+ [-<code>h | -help</code> ]<br/>
  [-<code>V | -version</code> ] </p>
 <h2>Description</h2>
 <p>The daemon controls the operation of most American Power Conversion Corp (APC) UPSes. During a power failure, informs users about the loss of utility power and that a shutdown may occur. If utility power is not restored, a system shutdown will follow when the battery is exhausted, a specified timeout expires, a specified battery charge percentage is reached, or a specified battery runtime (based on internal UPS calculations and determined by power consumption rates) expires. If the utility power is restored before one of the these shutdown conditions is met, will inform users of this and the shutdown will generally be cancelled. Refer to the Implementation Notes section below for situations in which the shutdown may not be cancelled. The meaning of the command line options is as follows:</p>

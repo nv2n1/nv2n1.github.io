@@ -15,7 +15,7 @@ description: "atomic-images – operations on container images"
 <h2>COMMANDS</h2>
 <p> <code>delete</code> </p>
 <p> Delete the specified container image(s). If you use the <code>&#8211;remote option</code> remote disk space will not be freed until the <code>registry garbage-collection</code> command is invoked for the remote registry. </p>
-<p> <code>generate</code><br />
+<p> <code>generate</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Generates a gomtree validation manifest for all images. Gomtree is required for this feature to be available. </p>
 <p> <code>help</code> </p>
 <p> Displays a help file associated with a container or image. </p>
@@ -41,69 +41,69 @@ go-md2man -in image_help.1.md -out image_help.1
 <p> <code>update</code> </p>
 <p> Pulls the latest update of the image from the repository. If a container based on this image exists, the container will continue to use the old image. Use &#8211;force to remove the container. </p>
 <p> <code>verify</code> </p>
-<p> Checks whether there is a newer image available. If the image differs, it will capture any of its relevant information like version (where applicable).<br />
-&nbsp;<wbr>&nbsp;<wbr>Verify will always attempt to use the&nbsp;<wbr><code>Version</code>&nbsp;<wbr>and&nbsp;<wbr><code>Release</code>&nbsp;<wbr>labels to determine if there is a newer version.&nbsp;<wbr>&nbsp;<wbr>If that information is not<br />
-&nbsp;<wbr>&nbsp;<wbr>available, then for&nbsp;<wbr>&#8216;ostree&#8217;&nbsp;<wbr>images, verify will compare using the manifest digests.&nbsp;<wbr>&nbsp;<wbr>In the case of docker images, it will use the image&#8217;s ID<br />
+<p> Checks whether there is a newer image available. If the image differs, it will capture any of its relevant information like version (where applicable).<br/>
+&nbsp;<wbr>&nbsp;<wbr>Verify will always attempt to use the&nbsp;<wbr><code>Version</code>&nbsp;<wbr>and&nbsp;<wbr><code>Release</code>&nbsp;<wbr>labels to determine if there is a newer version.&nbsp;<wbr>&nbsp;<wbr>If that information is not<br/>
+&nbsp;<wbr>&nbsp;<wbr>available, then for&nbsp;<wbr>&#8216;ostree&#8217;&nbsp;<wbr>images, verify will compare using the manifest digests.&nbsp;<wbr>&nbsp;<wbr>In the case of docker images, it will use the image&#8217;s ID<br/>
 &nbsp;<wbr>&nbsp;<wbr>for comparison. </p>
 <p> <code>version</code> </p>
 <p> Display image &#8216;Id Name:Version:Release RepoTag&#8217; label </p>
 <h2>delete OPTIONS</h2>
-<p> [<code>-h|&#8211;help</code>]<br />
+<p> [<code>-h|&#8211;help</code>]<br/>
 &nbsp;<wbr>&nbsp;<wbr>Print usage statement </p>
-<p> [<code>-f|&#8211;force</code>]<br />
+<p> [<code>-f|&#8211;force</code>]<br/>
 &nbsp;<wbr>&nbsp;<wbr>Force the deletion of specified local images, even if they are in use. </p>
-<p> [<code>&#8211;remote</code>]<br />
+<p> [<code>&#8211;remote</code>]<br/>
 &nbsp;<wbr>&nbsp;<wbr>Delete images in remote registry.&nbsp;<wbr>&nbsp;<wbr><i>&#8211;force</i>&nbsp;<wbr>is not supported with this option. </p>
-<p> [<code>&#8211;storage=[ostree|docker]</code>]<br />
+<p> [<code>&#8211;storage=[ostree|docker]</code>]<br/>
 &nbsp;<wbr>&nbsp;<wbr>Optionally specify the storage from which to delete the image from. Will prompt user to specify if the same image name exists in both ostree and docker, and the user did not specify. </p>
 <h2>Note:</h2>
 <p> Atomic &#8211;assumeyes option can be used </p>
-<p> [<code>-y|&#8211;assumeyes</code>]<br />
+<p> [<code>-y|&#8211;assumeyes</code>]<br/>
 &nbsp;<wbr>&nbsp;<wbr>Delete image(s)&nbsp;<wbr>without conformation from the user </p>
 <h2>info OPTIONS</h2>
-<p> [<code>-h|&#8211;help</code>]<br />
+<p> [<code>-h|&#8211;help</code>]<br/>
 &nbsp;<wbr>&nbsp;<wbr>Print usage statement </p>
-<p> [<code>&#8211;remote</code>]<br />
+<p> [<code>&#8211;remote</code>]<br/>
 &nbsp;<wbr>&nbsp;<wbr>Ignore all local images, only search configured registries. </p>
-<p> [<code>&#8211;storage=[ostree|docker]</code>]<br />
+<p> [<code>&#8211;storage=[ostree|docker]</code>]<br/>
 &nbsp;<wbr>&nbsp;<wbr>Optionally specify the storage of the image. Will prompt user to specify if the same image name exists in both ostree and docker, and the user did not specify. </p>
 <h2>list OPTIONS</h2>
-<p> [<code>-h|&#8211;help</code>]<br />
+<p> [<code>-h|&#8211;help</code>]<br/>
 &nbsp;<wbr>&nbsp;<wbr>Print usage statement </p>
-<p> [<code>-a|&#8211;all</code>]<br />
+<p> [<code>-a|&#8211;all</code>]<br/>
 &nbsp;<wbr>&nbsp;<wbr>Show all images, including intermediate images </p>
-<p> [<code>-f|&#8211;filter</code>]<br />
+<p> [<code>-f|&#8211;filter</code>]<br/>
 &nbsp;<wbr>&nbsp;<wbr>Filter output based on given filters, example usage:&nbsp;<wbr>&#8216;&#8211;filter repo=foo&#8217; will list all images that has &quot;foo&quot; as part of their repository name. </p>
-<p> [<code>-n|&#8211;noheading</code>]<br />
+<p> [<code>-n|&#8211;noheading</code>]<br/>
 &nbsp;<wbr>&nbsp;<wbr>Do not print heading when listing the images </p>
-<p> [<code>&#8211;no-trunc</code>]<br />
+<p> [<code>&#8211;no-trunc</code>]<br/>
 &nbsp;<wbr>&nbsp;<wbr>Do not truncate output </p>
-<p> [<code>-q|&#8211;quiet</code>]<br />
+<p> [<code>-q|&#8211;quiet</code>]<br/>
 &nbsp;<wbr>&nbsp;<wbr>Only display image IDs </p>
-<p> [<code>&#8211;json</code>]<br />
+<p> [<code>&#8211;json</code>]<br/>
 &nbsp;<wbr>&nbsp;<wbr>Output in the form of JSON. </p>
 <h2>update OPTIONS</h2>
-<p> [<code>-f</code>|<code>&#8211;force</code>]<br />
+<p> [<code>-f</code>|<code>&#8211;force</code>]<br/>
 &nbsp;<wbr>&nbsp;<wbr>Remove all containers based on this image </p>
-<p> [<code>-h</code>|<code>&#8211;help</code>]<br />
+<p> [<code>-h</code>|<code>&#8211;help</code>]<br/>
 &nbsp;<wbr>&nbsp;<wbr>Print usage statement </p>
-<p> [<code>&#8211;storage=[ostree|docker]</code>]<br />
+<p> [<code>&#8211;storage=[ostree|docker]</code>]<br/>
 &nbsp;<wbr>&nbsp;<wbr>Optionally specify the storage of the image. Defaults to docker. </p>
 <h2>verify OPTIONS</h2>
-<p> [<code>-h|&#8211;help</code>]<br />
+<p> [<code>-h|&#8211;help</code>]<br/>
 &nbsp;<wbr>&nbsp;<wbr>Print usage statement </p>
-<p> [<code>&#8211;no-validate</code>]<br />
+<p> [<code>&#8211;no-validate</code>]<br/>
 &nbsp;<wbr>&nbsp;<wbr>Skip validation of the files contained inside the image. </p>
-<p> [<code>&#8211;storage=[ostree|docker]</code>]<br />
+<p> [<code>&#8211;storage=[ostree|docker]</code>]<br/>
 &nbsp;<wbr>&nbsp;<wbr>Optionally specify the storage of the image. Will prompt user to specify if the same image name exists in both ostree and docker, and the user did not specify. </p>
-<p> [<code>-v|&#8211;verbose</code>]<br />
+<p> [<code>-v|&#8211;verbose</code>]<br/>
 Will output the status of each base image that makes up the image being verified. </p>
 <h2>version OPTIONS</h2>
-<p> [<code>-h|&#8211;help</code>]<br />
+<p> [<code>-h|&#8211;help</code>]<br/>
 &nbsp;<wbr>&nbsp;<wbr>Print usage statement </p>
-<p> [<code>-r|&#8211;recurse</code>]<br />
+<p> [<code>-r|&#8211;recurse</code>]<br/>
 &nbsp;<wbr>&nbsp;<wbr>Recurse through all layers of the specified image. </p>
-<p> [<code>&#8211;storage=[ostree|docker]</code>]<br />
+<p> [<code>&#8211;storage=[ostree|docker]</code>]<br/>
 &nbsp;<wbr>&nbsp;<wbr>Optionally specify the storage of the image. Will prompt user to specify if the same image name exists in both ostree and docker, and the user did not specify. </p>
 <h2>EXAMPLES</h2>
 <p> Verify the Red Hat rsyslog image </p>

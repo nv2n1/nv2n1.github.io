@@ -17,7 +17,7 @@ description: "collectd-tg – Traffic generator for collectd."
 <p> The following options are understood by <i>collectd-tg</i>. The order of the arguments generally doesn&#8217;t matter, as long as no argument is passed more than once.</p>
 <dl>
 <dt><code>-n</code> <i>num_vl</i></dt>
-<dd> Sets the number of unique <i>value lists</i> (<font SIZE="-1">VL</font>) to generate. Defaults to 10000.</dd>
+<dd> Sets the number of unique <i>value lists</i> (VL) to generate. Defaults to 10000.</dd>
 <dt><code>-H</code> <i>num_hosts</i></dt>
 <dd> Sets the number of unique hosts to simulate. Defaults to 1000.</dd>
 <dt><code>-p</code> <i>num_plugins</i></dt>

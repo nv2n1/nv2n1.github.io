@@ -10,7 +10,7 @@ description: "zlat2c.f –"
 <p>zlat2c.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlat2c</code> (UPLO, N, A, LDA, SA, LDSA, INFO)<br />
+<p>subroutine <code>zlat2c</code> (UPLO, N, A, LDA, SA, LDSA, INFO)<br/>
  <i></i><code>ZLAT2C</code> converts a double complex triangular matrix to a complex triangular matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlat2c (characterUPLO, integerN, complex*16, dimension( lda, * )A, integerLDA, complex, dimension( ldsa, * )SA, integerLDSA, integerINFO)</h3>

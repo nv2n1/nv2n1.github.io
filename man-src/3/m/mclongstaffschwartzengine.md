@@ -10,10 +10,10 @@ description: "ql/pricingengines/mclongstaffschwartzengine.hpp – Longstaff Schw
 
 <p> ql/pricingengines/mclongstaffschwartzengine.hpp &#8211; Longstaff Schwartz Monte Carlo engine for early exercise options. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/pricingengines/mcsimulation.hpp&gt;<br />
+<p> #include &lt;ql/pricingengines/mcsimulation.hpp&gt;<br/>
  #include &lt;ql/methods/montecarlo/longstaffschwartzpathpricer.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>MCLongstaffSchwartzEngine&lt; GenericEngine, MC, RNG, S &gt;</code><br />
+<p> class <code>MCLongstaffSchwartzEngine&lt; GenericEngine, MC, RNG, S &gt;</code><br/>
  <i>Longstaff-Schwarz Monte Carlo engine for early exercise options. </i></p>
 <h2>Detailed Description</h2>
 <p> Longstaff Schwartz Monte Carlo engine for early exercise options. </p>

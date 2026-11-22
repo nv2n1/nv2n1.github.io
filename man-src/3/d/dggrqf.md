@@ -11,7 +11,7 @@ description: "dggrqf.f –"
 <p> dggrqf.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dggrqf</code> (M, P, N, A, LDA, TAUA, B, LDB, TAUB, WORK, LWORK, INFO)<br />
+<p> subroutine <code>dggrqf</code> (M, P, N, A, LDA, TAUA, B, LDB, TAUB, WORK, LWORK, INFO)<br/>
  <i></i><code>DGGRQF</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dggrqf (integerM, integerP, integerN, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( * )TAUA, double precision, dimension( ldb, * )B, integerLDB, double precision, dimension( * )TAUB, double precision, dimension( * )WORK, integerLWORK, integerINFO)</h3>
@@ -54,14 +54,14 @@ denotes the inverse of the matrix B, and Z **T denotes the
           The number of columns of the matrices A and B. N &gt;= 0.
 </pre>
 <p> <i>A</i> </p>
-<p>A is DOUBLE PRECISION array, dimension(LDA, N) On entry, the M &#8211; by &#8211; N matrix A.On exit, if M &lt;= N, the upper triangle of the subarray A(1<br />
-                                                                                                                                          : M, N &#8211; M + 1<br />
-                                                                                                                                          : N) contains the M<br />
-                                                                                                         &#8211; by &#8211; M upper triangular matrix R;<br />
-if M<br />
-    &gt; N, the elements on and above the(M &#8211; N) &#8211; th subdiagonal contain the M &#8211; by &#8211; N upper trapezoidal matrix R;<br />
-the remaining<br />
-    elements,<br />
+<p>A is DOUBLE PRECISION array, dimension(LDA, N) On entry, the M &#8211; by &#8211; N matrix A.On exit, if M &lt;= N, the upper triangle of the subarray A(1<br/>
+                                                                                                                                          : M, N &#8211; M + 1<br/>
+                                                                                                                                          : N) contains the M<br/>
+                                                                                                         &#8211; by &#8211; M upper triangular matrix R;<br/>
+if M<br/>
+    &gt; N, the elements on and above the(M &#8211; N) &#8211; th subdiagonal contain the M &#8211; by &#8211; N upper trapezoidal matrix R;<br/>
+the remaining<br/>
+    elements,<br/>
     with the array TAUA, represent the orthogonal matrix Q as a product of elementary reflectors(see Further Details).</p>
 <p> <i>LDA</i> </p>
 <pre>
@@ -75,8 +75,8 @@ the remaining<br />
           represent the orthogonal matrix Q (see Further Details).
 </pre>
 <p> <i>B</i> </p>
-<p>B is DOUBLE PRECISION array, dimension(LDB, N) On entry, the P &#8211; by &#8211; N matrix B.On exit, the elements on and above the diagonal of the array contain the min(P, N) &#8211; by &#8211; N upper trapezoidal matrix T(T is upper triangular if P &gt;= N);<br />
-the elements below the diagonal,<br />
+<p>B is DOUBLE PRECISION array, dimension(LDB, N) On entry, the P &#8211; by &#8211; N matrix B.On exit, the elements on and above the diagonal of the array contain the min(P, N) &#8211; by &#8211; N upper trapezoidal matrix T(T is upper triangular if P &gt;= N);<br/>
+the elements below the diagonal,<br/>
     with the array TAUB, represent the orthogonal matrix Z as a product of elementary reflectors(see Further Details).</p>
 <p> <i>LDB</i> </p>
 <pre>
@@ -95,16 +95,16 @@ the elements below the diagonal,<br />
           On exit, if INFO = 0, WORK(1) returns the optimal LWORK.
 </pre>
 <p> <i>LWORK</i> </p>
-<p>          LWORK is INTEGER<br />
-          The dimension of the array WORK. LWORK &gt;= max(1,N,M,P).<br />
-          For optimum performance LWORK &gt;= max(N,M,P)*max(NB1,NB2,NB3),<br />
-          where NB1 is the optimal blocksize for the RQ factorization<br />
-          of an M-by-N matrix, NB2 is the optimal blocksize for the<br />
-          QR factorization of a P-by-N matrix, and NB3 is the optimal<br />
-          blocksize for a call of DORMRQ.<br />
-          If LWORK = -1, then a workspace query is assumed;<br />
-          the routine<br />
-              only calculates the optimal size of the WORK array,<br />
+<p>          LWORK is INTEGER<br/>
+          The dimension of the array WORK. LWORK &gt;= max(1,N,M,P).<br/>
+          For optimum performance LWORK &gt;= max(N,M,P)*max(NB1,NB2,NB3),<br/>
+          where NB1 is the optimal blocksize for the RQ factorization<br/>
+          of an M-by-N matrix, NB2 is the optimal blocksize for the<br/>
+          QR factorization of a P-by-N matrix, and NB3 is the optimal<br/>
+          blocksize for a call of DORMRQ.<br/>
+          If LWORK = -1, then a workspace query is assumed;<br/>
+          the routine<br/>
+              only calculates the optimal size of the WORK array,<br/>
               returns this value as the first entry of the WORK array, and no error message related to LWORK is issued by XERBLA.</p>
 <p> <i>INFO</i> </p>
 <pre>

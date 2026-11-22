@@ -10,9 +10,9 @@ description: "lesskey – specify key bindings for less"
 
 <p> lesskey &#8211; specify key bindings for less </p>
 <h2>SYNOPSIS (deprecated)</h2>
-<p> <code>lesskey [-o output] [&#8211;] [input]</code><br />
- <code>lesskey [&#8211;output=output] [&#8211;] [input]</code><br />
- <code>lesskey -V</code><br />
+<p> <code>lesskey [-o output] [&#8211;] [input]</code><br/>
+ <code>lesskey [&#8211;output=output] [&#8211;] [input]</code><br/>
+ <code>lesskey -V</code><br/>
  <code>lesskey &#8211;version</code></p>
 <h2>SCOPE</h2>
 <p> This document describes the format of the <i>lesskey</i> source file, which is used by <i>less</i> version 582 and later. In previous versions of <i>less</i>, a separate program called <i>lesskey</i> was used to compile the <i>lesskey </i> source file into a format understood by <i>less</i>. This compilation step is no longer required and the <i>lesskey</i> program is therefore deprecated although the file format remains supported by <i>less</i> itself. </p>
@@ -852,5 +852,5 @@ description: "lesskey – specify key bindings for less"
 <p> less is part of the GNU project and is free software. You can redistribute it and/or modify it under the terms of either (1) the GNU General Public License as published by the Free Software Foundation; or (2) the Less License. See the file README in the less distribution for more details regarding redistribution. You should have received a copy of the GNU General Public License along with the source for less; see the file COPYING. If not, write to the Free Software Foundation, 59 Temple Place, Suite 330, Boston, MA 02111-1307, USA. You should also have received a copy of the Less License; see the file LICENSE. </p>
 <p> less is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
 <h2>AUTHOR</h2>
-<p> Mark Nudelman<br />
+<p> Mark Nudelman<br/>
  Report bugs at <a rel="nofollow" href="https://github.com/gwsw/less/issues.">https://github.com/gwsw/less/issues.</a> </p>

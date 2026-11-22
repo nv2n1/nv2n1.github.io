@@ -29,7 +29,7 @@ ColorPage HR6 V1 0x0458 0x2004</pre>
 <h2>Configuration</h2>
 <p>To use your scanner with this backend, you need at least two entries in the configuration file <i>/etc/sane.d/u12.conf</i> </p>
 <dl>
-<dd><i>[usb] vendor-id product-id</i><br />
+<dd><i>[usb] vendor-id product-id</i><br/>
  <i>device /dev/usbscanner</i></dd></dl>
 <p> <i>[usb]</i> tells the backend, that the following devicename (here <i>/dev/usbscanner</i>) has to be interpreted as USB scanner device. If vendor- and product-id has not been specified, the backend tries to detect this by its own. If device is set to <i>auto</i> then the next matching device is used. </p>
 <p> <code>The Options:</code> </p>
@@ -44,7 +44,7 @@ ColorPage HR6 V1 0x0458 0x2004</pre>
 <dd><i>b</i> specifies the behaviour when closing the backend, 1 &#8211;&gt; switch lamps off, 0 &#8211;&gt; do not change lamp status</dd></dl>
 <p> See the <i>u12.conf</i> file for examples. </p>
 <p> <code>Note:</code> You have to make sure, that the USB subsystem is loaded correctly and you have access to the device-node. For more details see <code><a href="/docs/linux/man/5-sane-usb/">sane-usb</a></code>(5) manpage. You might use <code><a href="/docs/linux/man/1-sane-find-scanner/">sane-find-scanner</a></code>(1) to check that you have access to your device. </p>
-<p> <code>Note:</code><br />
+<p> <code>Note:</code><br/>
  If there&#8217;s no configuration file, the backend defaults to <code>device auto</code></p>
 <h2>Files</h2>
 <dl>
@@ -64,13 +64,13 @@ ColorPage HR6 V1 0x0458 0x2004</pre>
 <p> Example: export SANE_DEBUG_U12=10 </p>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/5-sane-usb/">sane-usb</a></code>(5), <code><a href="/docs/linux/man/5-sane-plustek/">sane-plustek</a></code>(5), <code><a href="/docs/linux/man/1-sane-find-scanner/">sane-find-scanner</a></code>(1), <code>xscanimage</code>(1), <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1)<br />
+<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/5-sane-usb/">sane-usb</a></code>(5), <code><a href="/docs/linux/man/5-sane-plustek/">sane-plustek</a></code>(5), <code><a href="/docs/linux/man/1-sane-find-scanner/">sane-find-scanner</a></code>(1), <code>xscanimage</code>(1), <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1)<br/>
  <i>/usr/share/doc/libsane/u12/U12.changes</i> </p>
 <h2>Contact And Bug-Reports</h2>
-<p>Please send any information and bug-reports to:<br />
+<p>Please send any information and bug-reports to:<br/>
  <code>SANE Mailing List</code> </p>
-<p> Additional info and hints can be obtained from our<br />
- Mailing-List archive at:<br />
+<p> Additional info and hints can be obtained from our<br/>
+ Mailing-List archive at:<br/>
  <i><a rel="nofollow" href="http://www.sane-project.org/mailing-lists.html">http://www.sane-project.org/mailing-lists.html</a></i> </p>
 <p> To obtain debug messages from the backend, please set the environment-variable <code>SANE_DEBUG_U12</code> before calling your favorite scan-frontend (i.e. <code>xscanimage</code>(1)), i.e.: </p>
 <p> <i>export SANE_DEBUG_U12=20 ; xscanimage</i> </p>

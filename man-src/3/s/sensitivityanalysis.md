@@ -22,7 +22,7 @@ bucket sensitivity analysis for a SimpleQuote vector
 std::pair&lt; std::vector&lt; std::vector&lt; Real &gt; &gt;, std::vector&lt; std::vector&lt; Real &gt; &gt; &gt; bucketAnalysis (const std::vector&lt; std::vector&lt; Handle&lt; SimpleQuote &gt; &gt; &gt; &amp;, const std::vector&lt; boost::shared_ptr&lt; Instrument &gt; &gt; &amp;, const std::vector&lt; Real &gt; &amp;quantities, Real shift=0.0001, SensitivityAnalysis type=Centered)
 bucket sensitivity analysis for a SimpleQuote matrix</code></pre>
 <h3>Enumerations</h3>
-<p>enum <code>SensitivityAnalysis</code> { <code>OneSide</code>, <code>Centered</code> }<br />
+<p>enum <code>SensitivityAnalysis</code> { <code>OneSide</code>, <code>Centered</code> }<br/>
  <i>Finite differences calculation. </i></p>
 <h3>Functions</h3>
 <pre><code>Real aggregateNPV (const std::vector&lt; boost::shared_ptr&lt; Instrument &gt; &gt; &amp;, const std::vector&lt; Real &gt; &amp;quantities)

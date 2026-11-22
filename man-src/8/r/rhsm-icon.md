@@ -11,7 +11,7 @@ description: "rhsm-icon – Periodically checks installed products against activ
 <h2>Synopsis</h2>
 <p>rhsm-icon [&#8211;check-period] [&#8211;force-icon=warning|expired|partial] [&#8211;check-immediately] </p>
 <h2>Description</h2>
-<p>Red Hat provides content updates and support by issuing <i>subscriptions</i> for its products. These subscriptions are applied to systems (machines) and apply to the installed software products. On graphical X systems (systems with a GUI interface), a product status daemon runs every 4 hours to check the currently installed software against the applied subscriptions. If software is installed without a valid and applied subscription (such as a subscription expires or no subscription is available for the product), then the daemon triggers an icon and warning message to display in the notification area of the menu. <code>rhsm-icon</code><br />
+<p>Red Hat provides content updates and support by issuing <i>subscriptions</i> for its products. These subscriptions are applied to systems (machines) and apply to the installed software products. On graphical X systems (systems with a GUI interface), a product status daemon runs every 4 hours to check the currently installed software against the applied subscriptions. If software is installed without a valid and applied subscription (such as a subscription expires or no subscription is available for the product), then the daemon triggers an icon and warning message to display in the notification area of the menu. <code>rhsm-icon</code><br/>
 &nbsp;<wbr>only runs on graphical&nbsp;<wbr>(X-based)&nbsp;<wbr>systems. Servers which do not have a GUI interface do not run or require the <code>rhsm-icon</code> daemon. </p>
 <h2>Options</h2>
 <dl>

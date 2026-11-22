@@ -13,8 +13,8 @@ description: "glutRemoveOverlay – Removes an overlay."
 <h2>Synopsis</h2>
 <p>In openglut.h Ft void Fn glutRemoveOverlay void</p>
 <h2>Description</h2>
-<p>Removes the overlay associated with the Bf Li<br />
-&nbsp;<wbr>current window Ef<br />
+<p>Removes the overlay associated with the Bf Li<br/>
+&nbsp;<wbr>current window Ef<br/>
 &nbsp;<wbr>. </p>
 <h2>Caveats</h2>
 <p>Unimplemented. </p>

@@ -9,11 +9,11 @@ description: "Object Name Function – Functions that retrieve and set the name 
 
 <p>Object Name Function &#8211; Functions that retrieve and set the name of an evas object. </p>
 <h3>Functions</h3>
-<p>EAPI void <code>evas_object_name_set</code> (<code>Evas_Object</code> *obj, const char *name)<br />
- <i>Sets the name of the given evas object to the given name. </i><br />
- EAPI const char * <code>evas_object_name_get</code> (const <code>Evas_Object</code> *obj)<br />
- <i>Retrieves the name of the given evas object. </i><br />
- EAPI <code>Evas_Object</code> * <code>evas_object_name_find</code> (const <code>Evas</code> *e, const char *name)<br />
+<p>EAPI void <code>evas_object_name_set</code> (<code>Evas_Object</code> *obj, const char *name)<br/>
+ <i>Sets the name of the given evas object to the given name. </i><br/>
+ EAPI const char * <code>evas_object_name_get</code> (const <code>Evas_Object</code> *obj)<br/>
+ <i>Retrieves the name of the given evas object. </i><br/>
+ EAPI <code>Evas_Object</code> * <code>evas_object_name_find</code> (const <code>Evas</code> *e, const char *name)<br/>
  <i>Retrieves the object on the given evas with the given name. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that retrieve and set the name of an evas object.</p>
@@ -22,7 +22,7 @@ description: "Object Name Function – Functions that retrieve and set the name 
 <p>Retrieves the object on the given evas with the given name. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>e</i> The given evas.<br />
+<dd><i>e</i> The given evas.<br/>
  <i>name</i> The given name.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -40,7 +40,7 @@ description: "Object Name Function – Functions that retrieve and set the name 
 <p>Sets the name of the given evas object to the given name. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>obj</i> The given object.<br />
+<dd><i>obj</i> The given object.<br/>
  <i>name</i> The given name.</dd></dl>
 <p> References evas_hash_add(), and evas_hash_del(). </p>
 <p> Referenced by evas_object_del().</p>

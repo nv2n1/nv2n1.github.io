@@ -12,13 +12,13 @@ description: "isql — Firebird Interactive SQL shell"
 <h2>SYNOPSIS</h2>
 <p> <code>isql</code> [-a] [-cache <i>number</i>] [-database <i>path</i>] [-echo] [-input <i>file</i>] [-merge_stderr] [-noautocommit] [-nowarnings] [-output <i>file</i>] [-password <i>string</i>] [-page <i>number</i>] [-role <i>string</i>] [-s <i>number</i>] [-terminator <i>string</i>] [-user <i>name</i>] [-x] [-z]</p>
 <h2>DESCRIPTION</h2>
-<p> <code>isql</code> is a program that allows the user to issue arbitrary <font SIZE="-1">SQL</font> commands as well as exctacting the metadata. </p>
+<p> <code>isql</code> is a program that allows the user to issue arbitrary SQL commands as well as exctacting the metadata. </p>
 <p> <code>isql</code> in <code>Debian</code> is available under the <code>isql-fb</code> name due to filename conflict with an executable from another package.</p>
 <h2>OPTIONS</h2>
 <p> <code>isql</code> can handle various command line options. Most options can be abbreviated. Below are given the shortest abbreviations as well as the full versions.</p>
 <dl>
 <dt><code>-a</code></dt>
-<dd> Extract <font SIZE="-1">DDL</font> (Data definition language) statements necessary to re-create database&#8217;s structure, triggers and other metadata. The <tt>&quot;CREATE DATABASE&quot;</tt> statement is in a comment. Statements are printed to standard output unless -output is used. See also -extract.</dd>
+<dd> Extract DDL (Data definition language) statements necessary to re-create database&#8217;s structure, triggers and other metadata. The <tt>&quot;CREATE DATABASE&quot;</tt> statement is in a comment. Statements are printed to standard output unless -output is used. See also -extract.</dd>
 <dt><code>-c</code> <i>buffers</i></dt>
 <dd>
 </dd><dt><code>-cache</code> <i>number</i></dt>
@@ -36,7 +36,7 @@ description: "isql — Firebird Interactive SQL shell"
 </dd><dt><code>-ex</code></dt>
 <dd>
 </dd><dt><code>-extract</code></dt>
-<dd> Extracts <font SIZE="-1">DDL</font> statements to recreate database metadata. </dd>
+<dd> Extracts DDL statements to recreate database metadata. </dd>
 <p> If no -database option is given, <code>-extract</code> behaves exactly as -a. If -database is given, the <tt>&quot;CREATE DATABASE&quot;</tt> statement is not commented and the database name is replaced with <i>path</i>.</p>
 <dt><code>-i</code> <i>file</i></dt>
 <dd>
@@ -49,9 +49,9 @@ description: "isql — Firebird Interactive SQL shell"
 <dt><code>-n</code></dt>
 <dd>
 </dd><dt><code>-noautocommit</code></dt>
-<dd> Normally, all <font SIZE="-1">DDL</font> statements like <tt>&quot;CREATE TABLE&quot;</tt> are automatically committed in a separate transaction. This option disables the automatic commit of <font SIZE="-1">DDL</font> statements.</dd>
+<dd> Normally, all DDL statements like <tt>&quot;CREATE TABLE&quot;</tt> are automatically committed in a separate transaction. This option disables the automatic commit of DDL statements.</dd>
 <dt><code>-nowarnings</code></dt>
-<dd> Disables displaying of <font SIZE="-1">SQL</font> warnings.</dd>
+<dd> Disables displaying of SQL warnings.</dd>
 <dt><code>-o</code> <i>file</i></dt>
 <dd>
 </dd><dt><code>-output</code> <i>file</i></dt>
@@ -67,11 +67,11 @@ description: "isql — Firebird Interactive SQL shell"
 <dt><code>-r</code> <i>string</i></dt>
 <dd>
 </dd><dt><code>-role</code> <i>string</i></dt>
-<dd> Uses given <font SIZE="-1">SQL</font> role as a default when connecting to databases.</dd>
+<dd> Uses given SQL role as a default when connecting to databases.</dd>
 <dt><code>-s</code> <i>number</i></dt>
 <dd>
 </dd><dt><code>-sqldialect</code> <i>number</i></dt>
-<dd> Uses given <font SIZE="-1">SQL</font> dialect as a default when connecting to databases. The default is <tt>1</tt>.</dd>
+<dd> Uses given SQL dialect as a default when connecting to databases. The default is <tt>1</tt>.</dd>
 <dt><code>-t</code> <i>string</i></dt>
 <dd>
 </dd><dt><code>-terminator</code> <i>string</i></dt>
@@ -84,11 +84,11 @@ description: "isql — Firebird Interactive SQL shell"
 <dd> Prints program version string before doing anything else. Prints server version after connecting to a database.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><font SIZE="-1"><code>ISC_USER</code></font></dt>
+<dt><code>ISC_USER</code></dt>
 <dd> Default value for the -user option.</dd>
-<dt><font SIZE="-1"><code>ISC_ROLE</code></font></dt>
+<dt><code>ISC_ROLE</code></dt>
 <dd> Default value for the -role option.</dd>
-<dt><font SIZE="-1"><code>ISC_PASSWORD</code></font></dt>
+<dt><code>ISC_PASSWORD</code></dt>
 <dd> Default value for the -password option.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gbak/">gbak</a></code>(1), <code><a href="/docs/linux/man/1-gfix/">gfix</a></code>(1), <code><a href="/docs/linux/man/1-fbstat/">fbstat</a></code>(1). </p>

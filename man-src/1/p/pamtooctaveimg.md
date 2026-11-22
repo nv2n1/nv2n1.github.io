@@ -24,7 +24,7 @@ description: "pamtooctaveimg – convert a Netpbm image to a GNU Octave image"
 <dd> the corresponding colormap as a list of {red, green, blue} triplets. </dd>
 </dl>
 <p> An Octave data file is an ASCII text file that you use to import data to Octave. </p>
-<p> See the<br />
+<p> See the<br/>
 &nbsp;<wbr>Image Processing chapter of the GNU Octave manual for details. </p>
 <p> <code>pamtooctaveimg</code> writes the output Octave image to Standard Output. </p>
 <h2>Arguments</h2>

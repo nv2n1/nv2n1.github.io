@@ -10,7 +10,7 @@ description: "opaxlattopology_cust"
 <p>opaxlattopology_cust </p>
 <p> Customizable script for documenting cluster topology. Provides an alternative to the standard script (see <i>opaxlattopology</i> ). Edit the sample topology_cust.xlsx to represent each external link in a cluster, then modify opaxlattopology_cust to translate the alternate CSV form to the standard CSV form used by opaxlattopology.</p>
 <h2>Syntax</h2>
-<p>opaxlattopology_cust -t <i>topology_prime</i>[-s <i>topology_second</i>] -T <i>topology_out</i><br />
+<p>opaxlattopology_cust -t <i>topology_prime</i>[-s <i>topology_second</i>] -T <i>topology_out</i><br/>
  [-v <i>level</i>] [-i <i>level</i>] [-c <i>char</i>] [-K] [-?]</p>
 <h2>Options</h2>
 <dl>

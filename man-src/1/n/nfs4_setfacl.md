@@ -10,7 +10,7 @@ description: "nfs4_setfacl, nfs4_editfacl – manipulate NFSv4 file/directory ac
 
 <p> nfs4_setfacl, nfs4_editfacl &#8211; manipulate NFSv4 file/directory access control lists</p>
 <h2>SYNOPSIS</h2>
-<p> <code>nfs4_setfacl</code> [OPTIONS] COMMAND <i>file</i>&#8230;<br />
+<p> <code>nfs4_setfacl</code> [OPTIONS] COMMAND <i>file</i>&#8230;<br/>
  <code>nfs4_editfacl</code> [OPTIONS] <i>file</i>&#8230;</p>
 <h2>DESCRIPTION</h2>
 <p> <code>nfs4_setfacl </code> manipulates the NFSv4 Access Control List (ACL) of one or more <i>files </i> (or directories), provided they are on a mounted NFSv4 filesystem which supports ACLs. </p>
@@ -70,31 +70,31 @@ D::EVERYONE@:waxTC
 </dd></dl>
 <dl>
 <dt>&#8211;</dt>
-<dd> add ACE granting `alice [at] nfsdomain.org&#8217; generic &quot;read&quot; and &quot;execute&quot; access (defaults to prepending ACE to ACL):<br />
+<dd> add ACE granting `alice [at] nfsdomain.org&#8217; generic &quot;read&quot; and &quot;execute&quot; access (defaults to prepending ACE to ACL):<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>$ nfs4_setfacl -a A::alice [at] nfsdomain.org:rxtncy foo</dd>
 <dt>&#8211;</dt>
-<dd> add the same ACE as above, but using aliases:<br />
+<dd> add the same ACE as above, but using aliases:<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>$ nfs4_setfacl -a A::alice [at] nfsdomain.org:RX foo</dd>
 <dt>&#8211;</dt>
-<dd> edit existing ACL in a text editor and set modified ACL on clean save/exit:<br />
+<dd> edit existing ACL in a text editor and set modified ACL on clean save/exit:<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>$ nfs4_setfacl -e foo</dd>
 <dt>&#8211;</dt>
-<dd> set ACL (overwrites original) to contents of a <i>spec_file</i> named `newacl.txt&#8217;:<br />
+<dd> set ACL (overwrites original) to contents of a <i>spec_file</i> named `newacl.txt&#8217;:<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>$ nfs4_setfacl -S newacl.txt foo</dd>
 <dt>&#8211;</dt>
-<dd> recursively set the ACLs of all files and subdirectories in the current directory, skipping all symlinks encountered, to the ACL contained in the <i>spec_file</i> named `newacl.txt&#8217;:<br />
+<dd> recursively set the ACLs of all files and subdirectories in the current directory, skipping all symlinks encountered, to the ACL contained in the <i>spec_file</i> named `newacl.txt&#8217;:<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>$ nfs4_setfacl -R -P -S newacl.txt *</dd>
 <dt>&#8211;</dt>
-<dd> delete the first ACE, but only print the resulting ACL (does not save changes):<br />
+<dd> delete the first ACE, but only print the resulting ACL (does not save changes):<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>$ nfs4_setfacl &#8211;test -x 1 foo</dd>
 <dt>&#8211;</dt>
-<dd> delete the last two ACEs above:<br />
+<dd> delete the last two ACEs above:<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>$ nfs4_setfacl -x A::EVERYONE [at] rtncy,D::EVERYONE@:waxTC foo</dd>
 <dt>&#8211;</dt>
-<dd> modify (in-place) the second ACE above:<br />
+<dd> modify (in-place) the second ACE above:<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>$ nfs4_setfacl -m D::OWNER@:x D::OWNER@:xo foo</dd>
 <dt>&#8211;</dt>
-<dd> set ACLs of `bar&#8217; and `frobaz&#8217; to ACL of `foo&#8217;:<br />
+<dd> set ACLs of `bar&#8217; and `frobaz&#8217; to ACL of `foo&#8217;:<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>$ nfs4_getfacl foo | nfs4_setfacl -S &#8211; bar frobaz
 </dd></dl>
 <h2>AUTHORS</h2>

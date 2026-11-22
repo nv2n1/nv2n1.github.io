@@ -158,5 +158,5 @@ description: "ocamlopt – The OCaml native-code compiler"
 <dd>Generate SPARC version 9 code.</dd></dl>
 <p> The default is to generate code for SPARC version 7, which runs on all SPARC processors. </p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-ocamlc/">ocamlc</a></code>(1).<br />
+<p><code><a href="/docs/linux/man/1-ocamlc/">ocamlc</a></code>(1).<br/>
  <i>The OCaml user&#8217;s manual</i>, chapter &quot;Native-code compilation&quot;.</p>

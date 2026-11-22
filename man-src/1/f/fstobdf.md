@@ -26,6 +26,6 @@ description: "fstobdf – generate BDF font from X font server"
 <h2>SEE ALSO</h2>
 <p> xfs(1), <a href="/docs/linux/man/1-bdftopcf/">bdftopcf</a>(1), <a href="/docs/linux/man/1-showfont/">showfont</a>(1), <a href="/docs/linux/man/1-fslsfonts/">fslsfonts</a>(1), <a href="/docs/linux/man/7-x/">X</a>(7).</p>
 <h2>AUTHOR</h2>
-<p> Olaf Brandt, Network Computing Devices<br />
+<p> Olaf Brandt, Network Computing Devices<br/>
  Dave Lemke, Network Computing Devices </p>
 <p> Jim Fulton, MIT X Consortium </p>

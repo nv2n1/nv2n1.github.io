@@ -11,7 +11,7 @@ description: "xrdp-chansrv – xrdp channel server"
 <h2>Syntax</h2>
 <p><code>xrdp-chansrv</code></p>
 <h2>Description</h2>
-<p><code>xrdp-chansrv</code> is the <code><a href="/docs/linux/man/8-xrdp/">xrdp</a></code>(8) channel server, which manages the Remote Desktop Protocol (RDP) sub-channels. This program is only forked internally by <code><a href="/docs/linux/man/8-xrdp-sesman/">xrdp-sesman</a></code>(8).<br />
+<p><code>xrdp-chansrv</code> is the <code><a href="/docs/linux/man/8-xrdp/">xrdp</a></code>(8) channel server, which manages the Remote Desktop Protocol (RDP) sub-channels. This program is only forked internally by <code><a href="/docs/linux/man/8-xrdp-sesman/">xrdp-sesman</a></code>(8).<br/>
  Currently <code>xrdp-chansrv</code> knows about the following channels:</p>
 <dl>
 <dt><code>cliprdr</code></dt>

@@ -11,7 +11,7 @@ description: "chbmv.f –"
 <p> chbmv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>chbmv</code> (UPLO, N, K, ALPHA, A, LDA, X, INCX, BETA, Y, INCY)<br />
+<p> subroutine <code>chbmv</code> (UPLO, N, K, ALPHA, A, LDA, X, INCX, BETA, Y, INCY)<br/>
  <i></i><code>CHBMV</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine chbmv (characterUPLO, integerN, integerK, complexALPHA, complex, dimension(lda,*)A, integerLDA, complex, dimension(*)X, integerINCX, complexBETA, complex, dimension(*)Y, integerINCY)</h3>

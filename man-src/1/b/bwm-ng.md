@@ -175,8 +175,8 @@ OUTPUT=plain
 <h2>OTHER FILES</h2>
 <p> <code>bwm-ng.css</code> the CSS file used for html output. </p>
 <h2>SEE ALSO</h2>
-<p> bwm-ng.conf-example for an example of the configfile, README for other comments and hints about bwm-ng.<br />
+<p> bwm-ng.conf-example for an example of the configfile, README for other comments and hints about bwm-ng.<br/>
  <i><a rel="nofollow" href="http://www.gropp.org/">http://www.gropp.org/</a></i> for new version or further help and links.</p>
 <h2>AUTHORS</h2>
-<p> Volker Gropp &lt;bwmng [at] gropp.org&gt; wrote bwm-ng and is current maintainer.<br />
+<p> Volker Gropp &lt;bwmng [at] gropp.org&gt; wrote bwm-ng and is current maintainer.<br/>
  For further Authors please refer to AUTHORS file which should come with <code>bwm-ng</code>. </p>

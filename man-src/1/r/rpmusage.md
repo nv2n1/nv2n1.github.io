@@ -136,7 +136,7 @@ description: "rpmusage – display rpm packages last use"
 <h2>EXIT STATUS</h2>
 <p> should be allways 0</p>
 <h2>LICENSE AND COPYRIGHT</h2>
-<p> Copyright (C) 2006 by Eric Gerbier This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
+<p> Copyright (C) 2006 by Eric Gerbier This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
 <h2>AUTHOR</h2>
 <p> Eric Gerbier </p>
 <p> you can report any bug or suggest to gerbier [at] users.sourceforge.net </p>

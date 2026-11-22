@@ -15,16 +15,16 @@ description: "qb-blackbox – Display \"flight data\" from the \"blackbox\"."
 <h2>Examples</h2>
 <dl>
 <dt>Get info to help developers diagnose a crash.</dt>
-<dd>$ qb-blackbox /var/lib/corosync/fdata<br />
- Dumping the contents of /var/lib/corosync/fdata<br />
- Mar 23 20:58:57 message_handler_orf_token():3677 install seq 0 aru 0 high seq received 0<br />
- Mar 23 20:58:57 message_handler_orf_token():3696 retrans flag count 4 token aru 0 install seq 0 aru 0 0<br />
- Mar 23 20:58:57 old_ring_state_reset():1487 Resetting old ring state<br />
- Mar 23 20:58:57 deliver_messages_from_recovery_to_regular():1693 recovery to regular 1-0<br />
- Mar 23 20:58:57 memb_state_operational_enter():1779 Delivering to app 1 to 0<br />
- Mar 23 20:58:57 sync_abort():594 ENTERING sync_abort()<br />
- Mar 23 20:58:57 sync_save_transitional():586 ENTERING sync_save_transitional()<br />
- Mar 23 20:58:57 member_object_joined():301 Member joined: r(0) ip(192.168.122.1)<br />
+<dd>$ qb-blackbox /var/lib/corosync/fdata<br/>
+ Dumping the contents of /var/lib/corosync/fdata<br/>
+ Mar 23 20:58:57 message_handler_orf_token():3677 install seq 0 aru 0 high seq received 0<br/>
+ Mar 23 20:58:57 message_handler_orf_token():3696 retrans flag count 4 token aru 0 install seq 0 aru 0 0<br/>
+ Mar 23 20:58:57 old_ring_state_reset():1487 Resetting old ring state<br/>
+ Mar 23 20:58:57 deliver_messages_from_recovery_to_regular():1693 recovery to regular 1-0<br/>
+ Mar 23 20:58:57 memb_state_operational_enter():1779 Delivering to app 1 to 0<br/>
+ Mar 23 20:58:57 sync_abort():594 ENTERING sync_abort()<br/>
+ Mar 23 20:58:57 sync_save_transitional():586 ENTERING sync_save_transitional()<br/>
+ Mar 23 20:58:57 member_object_joined():301 Member joined: r(0) ip(192.168.122.1)<br/>
  Mar 23 20:58:57 sync_abort():594 ENTERING sync_abort()
 </dd></dl>
 <h2>See Also</h2>

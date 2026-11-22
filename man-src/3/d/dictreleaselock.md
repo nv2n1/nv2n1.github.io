@@ -16,7 +16,7 @@ description: "dictReleaseLock – release lock on value."
 void dictReleaseLock(dictCtx dict, void *lock);
 </pre>
 <h2>Arguments</h2>
-<p> dict &#8211; dictionary containing value to release.<br />
+<p> dict &#8211; dictionary containing value to release.<br/>
  lock &#8211; lock to release. </p>
 <h2>Description</h2>
 <p> Releases the lock on the value associated with &lt;lock&gt;. Once the lock is released, the dictCleanupFunc callback can be called for the value (see dictCleanup()). </p>

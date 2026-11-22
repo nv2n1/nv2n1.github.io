@@ -99,10 +99,10 @@ description: "sg_persist – use SCSI PERSISTENT RESERVE command to access regis
 <p> Most errors with the PROUT sub-commands (e.g. missing or mismatched <i>&#8211;prout-type=TYPE</i>) will result in a RESERVATION CONFLICT status. This can be a bit confusing when you know there is only one (active) initiator: the &quot;conflict&quot; is with the SPC standard, not another initiator. </p>
 <p> Some recent disks accept some PRIN and PROUT sub-commands when the media is stopped. One exception was setting the APTPL flag (with the <i>&#8211;param-aptpl</i> option) during a key register operation, it complained if the disk one stopped. The error indicated it wanted the disk spun up and when that happened, the registration was successful.</p>
 <h2>Examples</h2>
-<p>These examples use Linux device names. For suitable device names in other supported Operating Systems see the <a href="/docs/linux/man/8-sg3_utils/">sg3_utils</a>(8) man page. Due to the various option defaults the simplest example executes the &#8216;read keys&#8217; sub-command of the PRIN command:<br />
+<p>These examples use Linux device names. For suitable device names in other supported Operating Systems see the <a href="/docs/linux/man/8-sg3_utils/">sg3_utils</a>(8) man page. Due to the various option defaults the simplest example executes the &#8216;read keys&#8217; sub-command of the PRIN command:<br/>
 sg_persist&nbsp;<wbr>/dev/sdb This is the same as the following (long-winded) command: </p>
 <pre><code>sg_persist --in --read-keys --device=/dev/sdb</code></pre>
-<p> To read the current reservation either the &#8216;&#8211;read-reservation&#8217; form or the shorter &#8216;-r&#8217; can be used:<br />
+<p> To read the current reservation either the &#8216;&#8211;read-reservation&#8217; form or the shorter &#8216;-r&#8217; can be used:<br/>
 sg_persist -r&nbsp;<wbr>/dev/sdb To <code>register</code> the new reservation key 0x123abc the following could be used: sg_persist &#8211;out &#8211;register &#8211;param-sark=123abc /dev/sdb Given the above registration succeeds, to <code>reserve</code> the <i>DEVICE</i> (with type &#8216;write exclusive&#8217;) the following could be used: sg_persist &#8211;out &#8211;reserve &#8211;param-rk=123abc</p>
 <p>&#8211;prout-type=1 /dev/sdb To <code>release</code> the reservation the following can be given (note that the &#8211;param-rk and &#8211;prout-type arguments must match those of the reservation): sg_persist &#8211;out &#8211;release &#8211;param-rk=123abc</p>
 <p>&#8211;prout-type=1 /dev/sdb Finally to <code>unregister</code> a reservation key (and not effect other registrations which is what &#8216;&#8211;clear&#8217; would do) the command is a little surprising: </p>
@@ -115,7 +115,7 @@ sg_persist -r&nbsp;<wbr>/dev/sdb To <code>register</code> the new reservation ke
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;dgilbert at interlog dot com&gt;.</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2004-2012 Douglas Gilbert<br />
+<p>Copyright &#169; 2004-2012 Douglas Gilbert<br/>
  This software is distributed under the GPL version 2. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>See Also</h2>
 <p><code>sg3_utils(sg3_utils), scsires(internet)</code> </p>

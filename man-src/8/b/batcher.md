@@ -11,8 +11,8 @@ description: "batcher – Article batching for InterNetNews"
 <h2>Synopsis</h2>
 <p><code>batcher</code> [<code>-rv</code>] [<code>-a</code> <i>articles</i>] [<code>-A</code> <i>total-articles</i>] [<code>-b</code> <i>size</i>] [<code>-B</code> <i>total-size</i>] [<code>-i</code> <i>string</i>] [<code>-N</code> <i>batches</i>] [<code>-p</code> <i>process</i>] [<code>-s</code> <i>separator</i>] <i>host</i> [<i>input</i>]</p>
 <h2>Description</h2>
-<p><code>batcher</code> reads a list of files and prepares news batches for the specified host. It is generally used to prepare <font SIZE="-1">UUCP</font> feeds, but the resulting batches can be used by any application that uses <i>rnews</i>(8) to inject the articles. It is normally invoked by a script run out of cron that uses <code>shlock</code> to lock the host, followed by <code>ctlinnd</code> to flush the batch file. See <i><a href="/docs/linux/man/8-send-uucp/">send-uucp</a></i>(8) for a front-end for <code>batcher</code>. </p>
-<p> <code>batcher</code> reads the file <i>input</i>, or standard input if no file is given. If <i>input</i> is a relative file name, it is assumed to be in <i>pathoutgoing</i> as set in <i>inn.conf</i>. Blank lines and lines starting with a number sign (<tt>&quot;#&quot;</tt>) are ignored. All other lines in the input should consist of one or two fields separated by a single space. The first field is the storage <font SIZE="-1">API</font> token of an article. The second field, if present, specifies the size of the article in bytes. </p>
+<p><code>batcher</code> reads a list of files and prepares news batches for the specified host. It is generally used to prepare UUCP feeds, but the resulting batches can be used by any application that uses <i>rnews</i>(8) to inject the articles. It is normally invoked by a script run out of cron that uses <code>shlock</code> to lock the host, followed by <code>ctlinnd</code> to flush the batch file. See <i><a href="/docs/linux/man/8-send-uucp/">send-uucp</a></i>(8) for a front-end for <code>batcher</code>. </p>
+<p> <code>batcher</code> reads the file <i>input</i>, or standard input if no file is given. If <i>input</i> is a relative file name, it is assumed to be in <i>pathoutgoing</i> as set in <i>inn.conf</i>. Blank lines and lines starting with a number sign (<tt>&quot;#&quot;</tt>) are ignored. All other lines in the input should consist of one or two fields separated by a single space. The first field is the storage API token of an article. The second field, if present, specifies the size of the article in bytes. </p>
 <p> By default, batches are written to standard output (which isn&#8217;t very useful if more than one batch is output), but see the <code>-p</code> option.</p>
 <h2>Options</h2>
 <dl>
@@ -21,7 +21,7 @@ description: "batcher – Article batching for InterNetNews"
 <dt><code>-A</code> <i>total-articles</i></dt>
 <dd>Limits the total number of articles written for all batches. As soon as the total number of articles written to batches reaches or exceeds <i>total-articles</i>, all additional articles in the input will be deferred. The default is no limit.</dd>
 <dt><code>-b</code> <i>size</i></dt>
-<dd>This flag sets the size limit for each batch; as soon as at least this much data has been written out, a new batch will be started. The default size is 60&nbsp;<wbr><font SIZE="-1">KB</font>. Using <tt>&quot;-b 0&quot;</tt> will allow unlimited batch sizes.</dd>
+<dd>This flag sets the size limit for each batch; as soon as at least this much data has been written out, a new batch will be started. The default size is 60&nbsp;<wbr>KB. Using <tt>&quot;-b 0&quot;</tt> will allow unlimited batch sizes.</dd>
 <dt><code>-B</code> <i>total-size</i></dt>
 <dd>Limits the total number of bytes written for all batches. As soon as the total bytes written to batches reaches or exceeds <i>total-size</i>, all additional articles in the input will be deferred. The default is no limit.</dd>
 <dt><code>-i</code> <i>string</i></dt>
@@ -52,7 +52,7 @@ description: "batcher – Article batching for InterNetNews"
 <dd>If an input filename was given, the remaining input will be copied to a temporary file named by appending <tt>&quot;.bch&quot;</tt> to the end of <i>input</i> (and qualified by adding <i>pathoutgoing</i> if <i>input</i> was not a fully qualified path). If this happens successfully, <code>batcher</code> will then try to rename this temporary file to <i>input</i> (thus replacing <i>input</i> with a copy of itself with all of lines for the successfully batched articles removed).</dd></dl>
 <p> Upon receipt of an interrupt or termination signal, <code>batcher</code> will finish batching the current article, close the batch, and then rewrite the batch file as described above.</p>
 <h2>History</h2>
-<p>Written by Rich <tt>$alz</tt> &lt;rsalz [at] uunet.uu.net&gt; for InterNetNews. Rewritten by Russ Allbery &lt;eagle [at] eyrie.org&gt; in <font SIZE="-1">POD</font>. </p>
+<p>Written by Rich <tt>$alz</tt> &lt;rsalz [at] uunet.uu.net&gt; for InterNetNews. Rewritten by Russ Allbery &lt;eagle [at] eyrie.org&gt; in POD. </p>
 <p> <tt>$Id:</tt> batcher.pod 9768 2014-12-07 21:22:57Z iulius $</p>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/8-ctlinnd/">ctlinnd</a></i>(8), <i><a href="/docs/linux/man/5-inn-conf/">inn.conf</a></i>(5), <i><a href="/docs/linux/man/5-newsfeeds/">newsfeeds</a></i>(5), <i>rnews</i>(8), <i><a href="/docs/linux/man/8-send-uucp/">send-uucp</a></i>(8), <i><a href="/docs/linux/man/1-shlock/">shlock</a></i>(1). </p>

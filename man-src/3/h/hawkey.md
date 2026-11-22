@@ -401,9 +401,9 @@ obsoleted_pkg = obsoleted[0]
 <h3>Python bindings</h3>
 <p> In Python&#8217;s <code>Query</code> option <code>latest</code> in <code>Query.filter()</code> now filter only the latest packages ignoring architecture. The original semantics for filtering latest packages for each arch is now available via <code>latest_per_arch</code> option. </p>
 <p> For example there are these packages in sack: </p>
-<p>glibc &#8211; 2.17 &#8211; 4.fc19.x86_64 glibc &#8211; 2.16 &#8211; 24.fc18.x86_64 glibc &#8211; 2.16 &#8211; 24.fc18.i686 &gt;&gt;&gt; q = hawkey.Query(self.sack).filter(name = &#8220;glibc&#8221;) &gt;&gt;&gt; map(str, q.filter(latest = True))<br />
-                                                                                                                                                      [&#8216;glibc-2.17-4.fc19.x86_64&#8217;] &gt;&gt;&gt;<br />
-                                                                                               map(str, q.filter(latest_per_arch = True))<br />
+<p>glibc &#8211; 2.17 &#8211; 4.fc19.x86_64 glibc &#8211; 2.16 &#8211; 24.fc18.x86_64 glibc &#8211; 2.16 &#8211; 24.fc18.i686 &gt;&gt;&gt; q = hawkey.Query(self.sack).filter(name = &#8220;glibc&#8221;) &gt;&gt;&gt; map(str, q.filter(latest = True))<br/>
+                                                                                                                                                      [&#8216;glibc-2.17-4.fc19.x86_64&#8217;] &gt;&gt;&gt;<br/>
+                                                                                               map(str, q.filter(latest_per_arch = True))<br/>
                                                                                                    [&#8216;glibc-2.17-4.fc19.x86_64&#8217;, &#8216;glibc-2.16-24.fc18.i686&#8217;]</p>
 <h3>Changes in 0.4.13</h3>
 <h3>Core</h3>
@@ -714,11 +714,11 @@ True
 </pre>
 <p> <code>True</code> as a return value here indicates that libsolv could find a solution to our goal. This is not always the case, there are plenty of situations when there is no solution, the most common one being a package should be installed but one of its dependencies is missing from the sack. </p>
 <p> The three methods <code>Goal.list_installs()</code>, <code>Goal.list_upgrades()</code> and <code>Goal.list_erasures()</code> can show which packages should be installed/upgraded/erased to satisfy the packaging goal we set out to achieve (the mapping of <code>str()</code> over the results below ensures human readable package names instead of numbers are presented): </p>
-<p>&gt;&gt;&gt; map(str, g.list_installs())<br />
-        [&#8216;spring-88.0-2.fc17.x86_64&#8217;, &#8216;spring-installer-20090316-10.fc17.x86_64&#8217;, &#8216;springlobby-0.139-3.fc17.x86_64&#8217;, &#8216;spring-maps-default-0.1-8.fc17.noarch&#8217;, &#8216;wxBase-2.8.12-4.fc17.x86_64&#8217;, &#8216;wxGTK-2.8.12-4.fc17.x86_64&#8217;, &#8216;rb_libtorrent-0.15.9-1.fc17.x86_64&#8217;, &#8216;GeoIP-1.4.8-2.1.fc17.x86_64&#8217;] &gt;&gt;&gt;<br />
-    map(str, g.list_upgrades())<br />
-        [] &gt;&gt;&gt;<br />
-    map(str, g.list_erasures())<br />
+<p>&gt;&gt;&gt; map(str, g.list_installs())<br/>
+        [&#8216;spring-88.0-2.fc17.x86_64&#8217;, &#8216;spring-installer-20090316-10.fc17.x86_64&#8217;, &#8216;springlobby-0.139-3.fc17.x86_64&#8217;, &#8216;spring-maps-default-0.1-8.fc17.noarch&#8217;, &#8216;wxBase-2.8.12-4.fc17.x86_64&#8217;, &#8216;wxGTK-2.8.12-4.fc17.x86_64&#8217;, &#8216;rb_libtorrent-0.15.9-1.fc17.x86_64&#8217;, &#8216;GeoIP-1.4.8-2.1.fc17.x86_64&#8217;] &gt;&gt;&gt;<br/>
+    map(str, g.list_upgrades())<br/>
+        [] &gt;&gt;&gt;<br/>
+    map(str, g.list_erasures())<br/>
         []</p>
 <p> So what does it tell us? That given the state of the given system and the given repository we used, 8 packages need to be installed, <code>spring-88.0-2.fc17.x86_64</code> itself included. No packages need to be upgraded or erased.</p>
 <h3>Selector Installs</h3>

@@ -10,7 +10,7 @@ description: "sla_gbrfsx_extended.f –"
 <p>sla_gbrfsx_extended.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>sla_gbrfsx_extended</code> (PREC_TYPE, TRANS_TYPE, N, KL, KU, NRHS, AB, LDAB, AFB, LDAFB, IPIV, COLEQU, C, B, LDB, Y, LDY, BERR_OUT, N_NORMS, ERR_BNDS_NORM, ERR_BNDS_COMP, RES, AYB, DY, Y_TAIL, RCOND, ITHRESH, RTHRESH, DZ_UB, IGNORE_CWISE, INFO)<br />
+<p>subroutine <code>sla_gbrfsx_extended</code> (PREC_TYPE, TRANS_TYPE, N, KL, KU, NRHS, AB, LDAB, AFB, LDAFB, IPIV, COLEQU, C, B, LDB, Y, LDY, BERR_OUT, N_NORMS, ERR_BNDS_NORM, ERR_BNDS_COMP, RES, AYB, DY, Y_TAIL, RCOND, ITHRESH, RTHRESH, DZ_UB, IGNORE_CWISE, INFO)<br/>
  <i></i><code>SLA_GBRFSX_EXTENDED</code> improves the computed solution to a system of linear equations for general banded matrices by performing extra-precise iterative refinement and provides error bounds and backward error estimates for the solution.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sla_gbrfsx_extended (integerPREC_TYPE, integerTRANS_TYPE, integerN, integerKL, integerKU, integerNRHS, real, dimension( ldab, * )AB, integerLDAB, real, dimension( ldafb, * )AFB, integerLDAFB, integer, dimension( * )IPIV, logicalCOLEQU, real, dimension( * )C, real, dimension( ldb, * )B, integerLDB, real, dimension( ldy, * )Y, integerLDY, real, dimension(*)BERR_OUT, integerN_NORMS, real, dimension( nrhs, * )ERR_BNDS_NORM, real, dimension( nrhs, * )ERR_BNDS_COMP, real, dimension(*)RES, real, dimension(*)AYB, real, dimension(*)DY, real, dimension(*)Y_TAIL, realRCOND, integerITHRESH, realRTHRESH, realDZ_UB, logicalIGNORE_CWISE, integerINFO)</h3>

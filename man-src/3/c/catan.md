@@ -11,8 +11,8 @@ description: "catan, catanf, catanl – complex arc tangents"
 <p> catan, catanf, catanl &#8211; complex arc tangents </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>
-<p> <code>double complex catan(double complex </code><i>z</i><code>);</code><br />
- <code>float complex catanf(float complex </code><i>z</i><code>);</code><br />
+<p> <code>double complex catan(double complex </code><i>z</i><code>);</code><br/>
+ <code>float complex catanf(float complex </code><i>z</i><code>);</code><br/>
  <code>long double complex catanl(long double complex </code><i>z</i><code>);</code> </p>
 <p> Link with <i>-lm</i>.</p>
 <h2>DESCRIPTION</h2>
@@ -44,19 +44,19 @@ description: "catan, catanf, catanl – complex arc tangents"
 <h2>EXAMPLES</h2>
 <p> /* Link with &quot;-lm&quot; */ </p>
 <p> #include &lt;complex.h&gt; #include &lt;stdlib.h&gt; #include &lt;unistd.h&gt; #include &lt;stdio.h&gt; </p>
-<p> int main(int argc, char *argv[]) {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;double complex z, c, f;<br />
+<p> int main(int argc, char *argv[]) {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;double complex z, c, f;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;double complex i&nbsp;=&nbsp;I; </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(argc&nbsp;!=&nbsp;3)&nbsp;{<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(argc&nbsp;!=&nbsp;3)&nbsp;{<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;fprintf(stderr,&nbsp;&quot;Usage:&nbsp;%s&nbsp;&lt;real&gt;&nbsp;&lt;imag&gt;
-&quot;, argv[0]);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_FAILURE);<br />
+&quot;, argv[0]);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_FAILURE);<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;} </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;z&nbsp;=&nbsp;atof(argv[1])&nbsp;+&nbsp;atof(argv[2])&nbsp;*&nbsp;I; </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;c&nbsp;=&nbsp;catan(z);<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;c&nbsp;=&nbsp;catan(z);<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;catan()&nbsp;=&nbsp;%6.3f&nbsp;%6.3f*i
 &quot;, creal(c), cimag(c)); </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;f&nbsp;=&nbsp;(clog(1&nbsp;+&nbsp;i&nbsp;*&nbsp;z)&nbsp;&#8211; clog(1 &#8211; i&nbsp;*&nbsp;z))&nbsp;/&nbsp;(2&nbsp;*&nbsp;i);<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;f&nbsp;=&nbsp;(clog(1&nbsp;+&nbsp;i&nbsp;*&nbsp;z)&nbsp;&#8211; clog(1 &#8211; i&nbsp;*&nbsp;z))&nbsp;/&nbsp;(2&nbsp;*&nbsp;i);<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;formula&nbsp;=&nbsp;%6.3f&nbsp;%6.3f*i
 &quot;, creal(f2), cimag(f2)); </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_SUCCESS); }</p>

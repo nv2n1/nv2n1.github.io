@@ -11,7 +11,7 @@ description: "bscan – Bacula’s ‘Scan tape’"
 <h2>Synopsis</h2>
 <p><code>bscan</code> [<i>options</i>] <i>bacula-archive</i></p>
 <h2>Description</h2>
-<p>The purpose of bscan is to read (scan) a Bacula Volume and to recreate or update the database contents with the information found on the Volume. This is done in a non-destructive way. This permits restoring database entries that have been lost by pruning, purging, deleting, or a database corruption problem.<br />
+<p>The purpose of bscan is to read (scan) a Bacula Volume and to recreate or update the database contents with the information found on the Volume. This is done in a non-destructive way. This permits restoring database entries that have been lost by pruning, purging, deleting, or a database corruption problem.<br/>
 &nbsp;<wbr> Normally, it should not be necessary to run the bscan command because the database is self maintaining, and most corrupted databases can be repaired by the tools provided by the database vendors. In addition, if you have maintained bootstrap files during backups, you should be able to recover all your data from the bootstrap file without needed an up to date catalog. <code>bscan</code> command. </p>
 <h2>Options</h2>
 <p>A summary of options is included below.</p>
@@ -57,5 +57,5 @@ description: "bscan – Bacula’s ‘Scan tape’"
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-bls/">bls</a></code>(8), <code><a href="/docs/linux/man/8-bextract/">bextract</a></code>(8).</p>
 <h2>Author</h2>
-<p>This manual page was written by Jose Luis Tallon &lt;jltallon [at] adv-solutions.net&gt;, for the Debian GNU/Linux system (but may be used by others).<br />
+<p>This manual page was written by Jose Luis Tallon &lt;jltallon [at] adv-solutions.net&gt;, for the Debian GNU/Linux system (but may be used by others).<br/>
 &nbsp;<wbr></p>

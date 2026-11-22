@@ -10,7 +10,7 @@ description: "prtstat – print statistics of a process"
 
 <p> prtstat &#8211; print statistics of a process </p>
 <h2>SYNOPSIS</h2>
-<p> <code>prtstat</code> [<code>-r</code>|<code>&#8211;raw</code>] <i>pid</i><br />
+<p> <code>prtstat</code> [<code>-r</code>|<code>&#8211;raw</code>] <i>pid</i><br/>
  <code>prtstat</code> <code>-V</code>|<code>&#8211;version</code></p>
 <h2>DESCRIPTION</h2>
 <p> <code>prtstat</code> prints the statistics of the specified process. This information comes from the <code>/proc/</code><i>pid</i><code>/stat</code> file.</p>

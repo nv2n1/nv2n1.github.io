@@ -19,8 +19,8 @@ description: "QuantLib::FlatForward – Flat interest-rate curve."
 <p> Compounding <code>compounding</code> () const </p>
 <p> <code>Frequency</code> <code>compoundingFrequency</code> () const </p>
 <p> virtual void <code>performCalculations</code> () const </p>
-<p> <code>Date</code> <code>maxDate</code> () const<br />
- <i>the latest date for which the curve can return values </i><br />
+<p> <code>Date</code> <code>maxDate</code> () const<br/>
+ <i>the latest date for which the curve can return values </i><br/>
  void <code>update</code> () </p>
 <h2>Detailed Description</h2>
 <p>Flat interest-rate curve. </p>

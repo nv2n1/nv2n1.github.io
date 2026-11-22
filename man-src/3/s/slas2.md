@@ -11,7 +11,7 @@ description: "slas2.f –"
 <p> slas2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>slas2</code> (F, G, H, SSMIN, SSMAX)<br />
+<p> subroutine <code>slas2</code> (F, G, H, SSMIN, SSMAX)<br/>
  <i></i><code>SLAS2</code> computes singular values of a 2-by-2 triangular matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slas2 (realF, realG, realH, realSSMIN, realSSMAX)</h3>

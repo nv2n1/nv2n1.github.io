@@ -10,7 +10,7 @@ description: "cggsvd.f –"
 <p>cggsvd.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>cggsvd</code> (JOBU, JOBV, JOBQ, M, N, P, K, L, A, LDA, B, LDB, ALPHA, BETA, U, LDU, V, LDV, Q, LDQ, WORK, RWORK, IWORK, INFO)<br />
+<p>subroutine <code>cggsvd</code> (JOBU, JOBV, JOBQ, M, N, P, K, L, A, LDA, B, LDB, ALPHA, BETA, U, LDU, V, LDV, Q, LDQ, WORK, RWORK, IWORK, INFO)<br/>
  <i></i><code> CGGSVD computes the singular value decomposition (SVD) for OTHER matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cggsvd (characterJOBU, characterJOBV, characterJOBQ, integerM, integerN, integerP, integerK, integerL, complex, dimension( lda, * )A, integerLDA, complex, dimension( ldb, * )B, integerLDB, real, dimension( * )ALPHA, real, dimension( * )BETA, complex, dimension( ldu, * )U, integerLDU, complex, dimension( ldv, * )V, integerLDV, complex, dimension( ldq, * )Q, integerLDQ, complex, dimension( * )WORK, real, dimension( * )RWORK, integer, dimension( * )IWORK, integerINFO)</h3>

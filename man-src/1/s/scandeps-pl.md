@@ -17,13 +17,13 @@ description: "scandeps.pl – Scan file prerequisites"
  % scandeps.pl -C CACHEFILE # use CACHEFILE to cache dependencies</pre>
 <h2>Description</h2>
 <p><i>scandeps.pl</i> is a simple-minded utility that prints out the <tt>&quot;PREREQ_PM&quot;</tt> section needed by modules. </p>
-<p> If you have <font SIZE="-1"><code>CPANPLUS</code></font> installed, modules that are part of an earlier module&#8217;s distribution with be denoted with <tt>&quot;S&quot;</tt>; modules without a distribution name on <font SIZE="-1">CPAN</font> are marked with <tt>&quot;?&quot;</tt>. </p>
-<p> Also, if the <tt>&quot;-B&quot;</tt> option is specified, module belongs to a perl distribution on <font SIZE="-1">CPAN </font>(and thus uninstallable by <tt>&quot;CPAN.pm&quot;</tt> or <tt>&quot;CPANPLUS.pm&quot;</tt>) are marked with <tt>&quot;C&quot;</tt>. </p>
+<p> If you have <code>CPANPLUS</code> installed, modules that are part of an earlier module&#8217;s distribution with be denoted with <tt>&quot;S&quot;</tt>; modules without a distribution name on CPAN are marked with <tt>&quot;?&quot;</tt>. </p>
+<p> Also, if the <tt>&quot;-B&quot;</tt> option is specified, module belongs to a perl distribution on CPAN (and thus uninstallable by <tt>&quot;CPAN.pm&quot;</tt> or <tt>&quot;CPANPLUS.pm&quot;</tt>) are marked with <tt>&quot;C&quot;</tt>. </p>
 <p> Finally, modules that has loadable shared object files (usually needing a compiler to install) are marked with <tt>&quot;X&quot;</tt>; with the <tt>&quot;-V&quot;</tt> flag, those files (and all other files found) will be listed before the main output. Additionally, all module files that the scanned code depends on but were not found (and thus not scanned recursively) are listed. These may include genuinely missing modules or false positives. That means, modules your code does not depend on (on this particular platform) but that were picked up by the heuristic anyway.</p>
 <h2>Options</h2>
 <dl COMPACT>
-<dt>-e <font SIZE="-1">STRING</font></dt>
-<dd>Scan <i></i><font SIZE="-1"><i>STRING</i></font><i></i> as a string containing perl code.</dd>
+<dt>-e STRING</dt>
+<dd>Scan <i></i><i>STRING</i><i></i> as a string containing perl code.</dd>
 <dt>-c</dt>
 <dd>Compiles the code and inspects its <tt>%INC</tt>, in addition to static scanning.</dd>
 <dt>-x</dt>
@@ -35,10 +35,10 @@ description: "scandeps.pl – Scan file prerequisites"
 <dt>-V</dt>
 <dd>Verbose mode: Output all files found during the process; show dependencies between modules and availability. </dd>
 <p> Additionally, warns of any missing dependencies. If you find missing dependencies that aren&#8217;t really dependencies, you have probably found false positives.</p>
-<dt>-C <font SIZE="-1">CACHEFILE</font></dt>
-<dd>Use <font SIZE="-1">CACHEFILE</font> to speed up the scanning process by caching dependencies. Creates <font SIZE="-1">CACHEFILE</font> if it does not exist yet.</dd></dl>
+<dt>-C CACHEFILE</dt>
+<dd>Use CACHEFILE to speed up the scanning process by caching dependencies. Creates CACHEFILE if it does not exist yet.</dd></dl>
 <h2>See Also</h2>
-<p>Module::ScanDeps, CPANPLUS::Backend, <font SIZE="-1">PAR</font></p>
+<p>Module::ScanDeps, CPANPLUS::Backend, PAR</p>
 <h2>Acknowledgments</h2>
 <p>Simon Cozens, for suggesting this script to be written.</p>
 <h2>Authors</h2>

@@ -51,15 +51,15 @@ const Array &amp; searchDirection () const
 current value of the search direction
 Array &amp; searchDirection ()
 Protected Attributes</code></pre>
-<p> <code>Array</code> <code>searchDirection_</code><br />
- <i>current values of the search direction </i><br />
- <code>Array</code> <code>xtd_</code><br />
- <i>new x and its gradient </i><br />
+<p> <code>Array</code> <code>searchDirection_</code><br/>
+ <i>current values of the search direction </i><br/>
+ <code>Array</code> <code>xtd_</code><br/>
+ <i>new x and its gradient </i><br/>
  <code>Array</code> <code>gradient_</code> </p>
-<p> Real <code>qt_</code><br />
- <i>cost function value and gradient norm corresponding to xtd_ </i><br />
+<p> Real <code>qt_</code><br/>
+ <i>cost function value and gradient norm corresponding to xtd_ </i><br/>
  Real <code>qpt_</code> </p>
-<p> bool <code>succeed_</code><br />
+<p> bool <code>succeed_</code><br/>
  <i>flag to know if linesearch succeed </i></p>
 <h2>Detailed Description</h2>
 <p>Base class for line search.</p>

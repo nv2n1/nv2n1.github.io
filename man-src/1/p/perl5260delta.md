@@ -43,15 +43,15 @@ description: "perl5260delta – what is new for perl v5.26.0"
 <p> The <tt>&quot;~&quot;</tt> modifier will strip, from each line in the here-doc, the same whitespace that appears before the delimiter. </p>
 <p> Newlines will be copied as-is, and lines that don&#8217;t include the proper beginning whitespace will cause perl to croak. </p>
 <p> For example: </p>
-<p>if (1) {<br />
-    print &lt;&lt; ~EOF;<br />
-    Hello there<br />
-        EOF<br />
+<p>if (1) {<br/>
+    print &lt;&lt; ~EOF;<br/>
+    Hello there<br/>
+        EOF<br/>
 }</p>
 <p> prints &#8220;Hello there
 &#8221; with no leading whitespace.</p>
 <h3>New regular expression modifier /xx</h3>
-<p> Specifying two <tt>&quot;x&quot;</tt> characters to modify a regular expression pattern does everything that a single one does, but additionally <font SIZE="-1">TAB</font> and <font SIZE="-1">SPACE</font> characters within a bracketed character class are generally ignored and can be added to improve readability, like <tt>&quot;/[ ^ A-Z d-f p-x ]/xx&quot;</tt>. Details are at &#8220;/x and /xx&#8221; in perlre.</p>
+<p> Specifying two <tt>&quot;x&quot;</tt> characters to modify a regular expression pattern does everything that a single one does, but additionally TAB and SPACE characters within a bracketed character class are generally ignored and can be added to improve readability, like <tt>&quot;/[ ^ A-Z d-f p-x ]/xx&quot;</tt>. Details are at &#8220;/x and /xx&#8221; in perlre.</p>
 <h3>@{^CAPTURE}, %{^CAPTURE}, and %{^CAPTURE_ALL}</h3>
 <p> <tt>&quot;@{^CAPTURE}&quot;</tt> exposes the capture buffers of the last match as an array. So <tt>$1</tt> is <tt>&quot;${^CAPTURE}[0]&quot;</tt>. This is a more efficient equivalent to code like <tt>&quot;substr($matched_string,$-[0],$+[0]-$-[0])&quot;</tt>, and you don&#8217;t have to keep track of the <tt>$matched_string</tt> either. This variable has no single character equivalent. Note that, like the other regex magic variables, the contents of this variable is dynamic; if you wish to store it beyond the lifetime of the match you must copy it to another array. </p>
 <p> <tt>&quot;%{^CAPTURE}&quot;</tt> is equivalent to <tt>&quot;%+&quot;</tt> (<i>i.e.</i>, named captures). Other than being more self-documenting there is no difference between the two forms. </p>
@@ -67,8 +67,8 @@ description: "perl5260delta – what is new for perl v5.26.0"
 <p> A list of changes is at &lt;<a rel="nofollow" href="http://www.unicode.org/versions/Unicode9.0.0/">http://www.unicode.org/versions/Unicode9.0.0/</a>&gt;. Modules that are shipped with core Perl but not maintained by p5p do not necessarily support Unicode 9.0. Unicode::Normalize does work on 9.0.</p>
 <h3>Use of \p{script} uses the improved Script_Extensions property</h3>
 <p> Unicode 6.0 introduced an improved form of the Script (<tt>&quot;sc&quot;</tt>) property, and called it Script_Extensions (<tt>&quot;scx&quot;</tt>). Perl now uses this improved version when a property is specified as just <tt>&quot;\p{</tt>script<tt>}&quot;</tt>. This should make programs more accurate when determining if a character is used in a given script, but there is a slight chance of breakage for programs that very specifically needed the old behavior. The meaning of compound forms, like <tt>&quot;\p{sc=</tt>script<tt>}&quot;</tt> are unchanged. See &#8220;Scripts&#8221; in perlunicode.</p>
-<h3>Perl can now do default collation in <font SIZE="-1">UTF-8</font> locales on platforms that support it</h3>
-<p> Some platforms natively do a reasonable job of collating and sorting in <font SIZE="-1">UTF-8</font> locales. Perl now works with those. For portability and full control, Unicode::Collate is still recommended, but now you may not need to do anything special to get good-enough results, depending on your application. See &quot;Category <tt>&quot;LC_COLLATE&quot;</tt>: Collation: Text Comparisons and Sorting&quot; in perllocale.</p>
+<h3>Perl can now do default collation in UTF-8 locales on platforms that support it</h3>
+<p> Some platforms natively do a reasonable job of collating and sorting in UTF-8 locales. Perl now works with those. For portability and full control, Unicode::Collate is still recommended, but now you may not need to do anything special to get good-enough results, depending on your application. See &quot;Category <tt>&quot;LC_COLLATE&quot;</tt>: Collation: Text Comparisons and Sorting&quot; in perllocale.</p>
 <h3>Better locale collation of strings containing embedded NUL characters</h3>
 <p> In locales that have multi-level character weights, <tt>&quot;NUL&quot;</tt>s are now ignored at the higher priority ones. There are still some gotchas in some strings, though. See &quot;Collation of strings containing embedded <tt>&quot;NUL&quot;</tt> characters&quot; in perllocale.</p>
 <h3>CORE subroutines for hash and array functions callable via reference</h3>
@@ -88,7 +88,7 @@ description: "perl5260delta – what is new for perl v5.26.0"
 <dt>&bull;</dt>
 <dd> <tt>&quot;PERL_USE_UNSAFE_INC&quot;</tt> </dd>
 <p> There is a new environment variable recognised by the perl interpreter. If this variable has the value 1 when the perl interpreter starts up, then <tt>&quot;.&quot;</tt> will be automatically appended to <tt>@INC</tt> (except under tainting). </p>
-<p> This allows you restore the old perl interpreter behaviour on a case-by-case basis. But note that this is intended to be a temporary crutch, and this feature will likely be removed in some future perl version. It is currently set by the <tt>&quot;cpan&quot;</tt> utility and <tt>&quot;Test::Harness&quot;</tt> to ease installation of <font SIZE="-1">CPAN</font> modules which have not been updated to handle the lack of dot. Once again, don&#8217;t use this unless you are sure that this will not reintroduce any security concerns.</p>
+<p> This allows you restore the old perl interpreter behaviour on a case-by-case basis. But note that this is intended to be a temporary crutch, and this feature will likely be removed in some future perl version. It is currently set by the <tt>&quot;cpan&quot;</tt> utility and <tt>&quot;Test::Harness&quot;</tt> to ease installation of CPAN modules which have not been updated to handle the lack of dot. Once again, don&#8217;t use this unless you are sure that this will not reintroduce any security concerns.</p>
 <dt>&bull;</dt>
 <dd> A new deprecation warning issued by <tt>&quot;do&quot;</tt>. </dd>
 <p> While it is well-known that <tt>&quot;use&quot;</tt> and <tt>&quot;require&quot;</tt> use <tt>@INC</tt> to search for the file to load, many people don&#8217;t realise that <tt>&quot;do &quot;file&quot;&quot;</tt> also searches <tt>@INC</tt> if the file is a relative path. With the removal of <tt>&quot;.&quot;</tt>, a simple <tt>&quot;do &quot;file.pl&quot;&quot;</tt> will fail to read in and execute <tt>&quot;file.pl&quot;</tt> from the current directory. Since this is commonly expected behaviour, a new deprecation warning is now issued whenever <tt>&quot;do&quot;</tt> fails to load a file which it otherwise would have found if a dot had been in <tt>@INC</tt>.</dl>
@@ -97,16 +97,16 @@ description: "perl5260delta – what is new for perl v5.26.0"
 <dt>&bull;</dt>
 <dd> Script authors </dd>
 <p> If the issue is within your own code (rather than within included modules), then you have two main options. Firstly, if you are confident that your script will only be run within a trusted directory (under which you expect to find trusted files and modules), then add <tt>&quot;.&quot;</tt> back into the path; <i>e.g.</i>: </p>
-<p>BEGIN<br />
-{<br />
-    my $dir = &#8220;/some/trusted/directory&#8221;;<br />
+<p>BEGIN<br/>
+{<br/>
+    my $dir = &#8220;/some/trusted/directory&#8221;;<br/>
     chdir $dir or die &#8220;Can&#8217;t chdir to $dir: $!
-&#8221;;<br />
-#safe now<br />
-    push @INC, &#8216;.&#8217;;<br />
-}<br />
-use &#8220;Foo::Bar&#8221;;<br />
-#may load / some / trusted / directory / Foo / Bar.pm do &#8220;config.pl&#8221;;<br />
+&#8221;;<br/>
+#safe now<br/>
+    push @INC, &#8216;.&#8217;;<br/>
+}<br/>
+use &#8220;Foo::Bar&#8221;;<br/>
+#may load / some / trusted / directory / Foo / Bar.pm do &#8220;config.pl&#8221;;<br/>
 #may load / some / trusted / directory / config.pl</p>
 <p> On the other hand, if your script is intended to be run from within untrusted directories (such as <i>/tmp</i>), then your script suddenly failing to load files may be indicative of a security issue. You most likely want to replace any relative paths with full paths; for example, </p>
 <pre>
@@ -121,35 +121,35 @@ use &#8220;Foo::Bar&#8221;;<br />
     do &quot;./foo_config.pl&quot;
 </pre>
 <dt>&bull;</dt>
-<dd> Installing and using <font SIZE="-1">CPAN</font> modules </dd>
-<p> If you install a <font SIZE="-1">CPAN</font> module using an automatic tool like <tt>&quot;cpan&quot;</tt>, then this tool will itself set the <tt>&quot;PERL_USE_UNSAFE_INC&quot;</tt> environment variable while building and testing the module, which may be sufficient to install a distribution which hasn&#8217;t been updated to be dot-aware. If you want to install such a module manually, then you&#8217;ll need to replace the traditional invocation: </p>
+<dd> Installing and using CPAN modules </dd>
+<p> If you install a CPAN module using an automatic tool like <tt>&quot;cpan&quot;</tt>, then this tool will itself set the <tt>&quot;PERL_USE_UNSAFE_INC&quot;</tt> environment variable while building and testing the module, which may be sufficient to install a distribution which hasn&#8217;t been updated to be dot-aware. If you want to install such a module manually, then you&#8217;ll need to replace the traditional invocation: </p>
 <pre>
     perl Makefile.PL &amp;&amp; make &amp;&amp; make test &amp;&amp; make install
 </pre>
 <p> with something like </p>
-<p>(export PERL_USE_UNSAFE_INC = 1;<br />
+<p>(export PERL_USE_UNSAFE_INC = 1;<br/>
  perl Makefile.PL &amp;&amp; make &amp;&amp; make test &amp;&amp; make install)</p>
 <p> Note that this only helps build and install an unfixed module. It&#8217;s possible for the tests to pass (since they were run under <tt>&quot;PERL_USE_UNSAFE_INC=1&quot;</tt>), but for the module itself to fail to perform correctly in production. In this case, you may have to temporarily modify your script until a fixed version of the module is released. For example: </p>
-<p>use Foo::Bar;<br />
-{<br />
-    local @INC = (@INC, &#8216;.&#8217;);<br />
-#assuming read_config() needs &#8216;.&#8217; in @INC<br />
-    $config = Foo::Bar-&gt;read_config();<br />
+<p>use Foo::Bar;<br/>
+{<br/>
+    local @INC = (@INC, &#8216;.&#8217;);<br/>
+#assuming read_config() needs &#8216;.&#8217; in @INC<br/>
+    $config = Foo::Bar-&gt;read_config();<br/>
 }</p>
 <p> This is only rarely expected to be necessary. Again, if doing this, assess the resultant risks first.</p>
 <dt>&bull;</dt>
 <dd> Module Authors </dd>
-<p> If you maintain a <font SIZE="-1">CPAN</font> distribution, it may need updating to run in a dotless environment. Although <tt>&quot;cpan&quot;</tt> and other such tools will currently set the <tt>&quot;PERL_USE_UNSAFE_INC&quot;</tt> during module build, this is a temporary workaround for the set of modules which rely on <tt>&quot;.&quot;</tt> being in <tt>@INC</tt> for installation and testing, and this may mask deeper issues. It could result in a module which passes tests and installs, but which fails at run time. </p>
+<p> If you maintain a CPAN distribution, it may need updating to run in a dotless environment. Although <tt>&quot;cpan&quot;</tt> and other such tools will currently set the <tt>&quot;PERL_USE_UNSAFE_INC&quot;</tt> during module build, this is a temporary workaround for the set of modules which rely on <tt>&quot;.&quot;</tt> being in <tt>@INC</tt> for installation and testing, and this may mask deeper issues. It could result in a module which passes tests and installs, but which fails at run time. </p>
 <p> During build, test, and install, it will normally be the case that any perl processes will be executing directly within the root directory of the untarred distribution, or a known subdirectory of that, such as <i>t/</i>. It may well be that <i>Makefile.PL</i> or <i>t/foo.t</i> will attempt to include local modules and configuration files using their direct relative filenames, which will now fail. </p>
 <p> However, as described above, automatic tools like <i>cpan</i> will (for now) set the <tt>&quot;PERL_USE_UNSAFE_INC&quot;</tt> environment variable, which introduces dot during a build. </p>
 <p> This makes it likely that your existing build and test code will work, but this may mask issues with your code which only manifest when used after install. It is prudent to try and run your build process with that variable explicitly disabled: </p>
-<p>(export PERL_USE_UNSAFE_INC = 0;<br />
+<p>(export PERL_USE_UNSAFE_INC = 0;<br/>
  perl Makefile.PL &amp;&amp; make &amp;&amp; make test &amp;&amp; make install)</p>
 <p> This is more likely to show up any potential problems with your module&#8217;s build process, or even with the module itself. Fixing such issues will ensure both that your module can again be installed manually, and that it will still build once the <tt>&quot;PERL_USE_UNSAFE_INC&quot;</tt> crutch goes away. </p>
 <p> When fixing issues in tests due to the removal of dot from <tt>@INC</tt>, reinsertion of dot into <tt>@INC</tt> should be performed with caution, for this too may suppress real errors in your runtime code. You are encouraged wherever possible to apply the aforementioned approaches with explicit absolute/relative paths, or to relocate your needed files into a subdirectory and insert that subdirectory into <tt>@INC</tt> instead. </p>
 <p> If your runtime code has problems under the dotless <tt>@INC</tt>, then the comments above on how to fix for script authors will mostly apply here too. Bear in mind though that it is considered bad form for a module to globally add a dot to <tt>@INC</tt>, since it introduces both a security risk and hides issues of accidentally requiring dot in <tt>@INC</tt>, as explained above.</dl>
-<h3>Escaped colons and relative paths in <font SIZE="-1">PATH</font></h3>
-<p> On Unix systems, Perl treats any relative paths in the <tt>&quot;PATH&quot;</tt> environment variable as tainted when starting a new process. Previously, it was allowing a backslash to escape a colon (unlike the <font SIZE="-1">OS</font>), consequently allowing relative paths to be considered safe if the <font SIZE="-1">PATH</font> was set to something like <tt>&quot;/\:.&quot;</tt>. The check has been fixed to treat <tt>&quot;.&quot;</tt> as tainted in that example.</p>
+<h3>Escaped colons and relative paths in PATH</h3>
+<p> On Unix systems, Perl treats any relative paths in the <tt>&quot;PATH&quot;</tt> environment variable as tainted when starting a new process. Previously, it was allowing a backslash to escape a colon (unlike the OS), consequently allowing relative paths to be considered safe if the PATH was set to something like <tt>&quot;/\:.&quot;</tt>. The check has been fixed to treat <tt>&quot;.&quot;</tt> as tainted in that example.</p>
 <h3>New -Di switch is now required for PerlIO debugging output</h3>
 <p> This is used for debugging of code within PerlIO to avoid recursive calls. Previously this output would be sent to the file specified by the <tt>&quot;PERLIO_DEBUG&quot;</tt> environment variable if perl wasn&#8217;t running setuid and the <tt>&quot;-T&quot;</tt> or <tt>&quot;-t&quot;</tt> switches hadn&#8217;t been parsed yet. </p>
 <p> If perl performed output at a point where it hadn&#8217;t yet parsed its switches this could result in perl creating or overwriting the file named by <tt>&quot;PERLIO_DEBUG&quot;</tt> even when the <tt>&quot;-T&quot;</tt> switch had been supplied. </p>
@@ -157,7 +157,7 @@ use &#8220;Foo::Bar&#8221;;<br />
 <p> If perl is running setuid or the <tt>&quot;-T&quot;</tt> switch was supplied, <tt>&quot;PERLIO_DEBUG&quot;</tt> is ignored and the debugging output is sent to <tt>&quot;stderr&quot;</tt> as for any other <tt>&quot;-D&quot;</tt> switch.</p>
 <h2>Incompatible Changes</h2>
 <h3>Unescaped literal { characters in regular expression patterns are no longer permissible</h3>
-<p> You have to now say something like <tt>&quot;\{&quot;</tt> or <tt>&quot;[{]&quot;</tt> to specify to match a <font SIZE="-1">LEFT CURLY BRACKET</font>; otherwise, it is a fatal pattern compilation error. This change will allow future extensions to the language. </p>
+<p> You have to now say something like <tt>&quot;\{&quot;</tt> or <tt>&quot;[{]&quot;</tt> to specify to match a LEFT CURLY BRACKET; otherwise, it is a fatal pattern compilation error. This change will allow future extensions to the language. </p>
 <p> These have been deprecated since v5.16, with a deprecation message raised for some uses starting in v5.22. Unfortunately, the code added to raise the message was buggy and failed to warn in some cases where it should have. Therefore, enforcement of this ban for these cases is deferred until Perl 5.30, but the code has been fixed to raise a default-on deprecation message for them in the meantime. </p>
 <p> Some uses of literal <tt>&quot;{&quot;</tt> occur in contexts where we do not foresee the meaning ever being anything but the literal, such as the very first character in the pattern, or after a <tt>&quot;|&quot;</tt> meaning alternation. Thus </p>
 <pre>
@@ -171,22 +171,22 @@ use &#8220;Foo::Bar&#8221;;<br />
 <p> A form of backward compatibility is provided via <tt>&quot;Hash::Util::bucket_ratio()&quot;</tt> which provides the same behavior as <tt>&quot;scalar(%hash)&quot;</tt> provided in Perl 5.24 and earlier.</p>
 <h3>keys returned from an lvalue subroutine</h3>
 <p> <tt>&quot;keys&quot;</tt> returned from an lvalue subroutine can no longer be assigned to in list context. </p>
-<p>sub foo : lvalue{keys(% INC)}(foo) = 3;<br />
-#death sub bar : lvalue<br />
-{<br />
-    keys(@_)<br />
-}<br />
-(bar) = 3;<br />
+<p>sub foo : lvalue{keys(% INC)}(foo) = 3;<br/>
+#death sub bar : lvalue<br/>
+{<br/>
+    keys(@_)<br/>
+}<br/>
+(bar) = 3;<br/>
 #also an error</p>
 <p> This makes the lvalue sub case consistent with <tt>&quot;(keys %hash) = ...&quot;</tt> and <tt>&quot;(keys @_) = ...&quot;</tt>, which are also errors. [perl #128187] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128187">https://rt.perl.org/Public/Bug/Display.html?id=128187</a>&gt;</p>
 <h3>The ${^ENCODING} facility has been removed</h3>
-<p> The special behaviour associated with assigning a value to this variable has been removed. As a consequence, the encoding pragma&#8217;s default mode is no longer supported. If you still need to write your source code in encodings other than <font SIZE="-1">UTF-8,</font> use a source filter such as Filter::Encoding on <font SIZE="-1">CPAN</font> or encoding&#8217;s <tt>&quot;Filter&quot;</tt> option.</p>
+<p> The special behaviour associated with assigning a value to this variable has been removed. As a consequence, the encoding pragma&#8217;s default mode is no longer supported. If you still need to write your source code in encodings other than UTF-8, use a source filter such as Filter::Encoding on CPAN or encoding&#8217;s <tt>&quot;Filter&quot;</tt> option.</p>
 <h3>POSIX::tmpnam() has been removed</h3>
 <p> The fundamentally unsafe <tt>&quot;tmpnam()&quot;</tt> interface was deprecated in Perl 5.22 and has now been removed. In its place, you can use, for example, the File::Temp interfaces.</p>
 <h3>require ::Foo::Bar is now illegal.</h3>
 <p> Formerly, <tt>&quot;require ::Foo::Bar&quot;</tt> would try to read <i>/Foo/Bar.pm</i>. Now any bareword require which starts with a double colon dies instead.</p>
 <h3>Literal control character variable names are no longer permissible</h3>
-<p> A variable name may no longer contain a literal control character under any circumstances. These previously were allowed in single-character names on <font SIZE="-1">ASCII</font> platforms, but have been deprecated there since Perl 5.20. This affects things like <tt>&quot;$</tt></code>\cT <code>&quot;</code>, where <i>\cT</i> is a literal control (such as a <code>&quot;NAK&quot;</code> or <code>&quot;NEGATIVE ACKNOWLEDGE&quot;</code> character) in the source code.  </p>
+<p> A variable name may no longer contain a literal control character under any circumstances. These previously were allowed in single-character names on ASCII platforms, but have been deprecated there since Perl 5.20. This affects things like <tt>&quot;$</tt></code>\cT <code>&quot;</code>, where <i>\cT</i> is a literal control (such as a <code>&quot;NAK&quot;</code> or <code>&quot;NEGATIVE ACKNOWLEDGE&quot;</code> character) in the source code.  </p>
 <h3>NBSP is no longer permissible in \N{...}</h3>
 <p> The name of a character may no longer contain non-breaking spaces. It has been deprecated to do so since Perl 5.22.  </p>
 <h2>Deprecations</h2>
@@ -217,7 +217,7 @@ use &#8220;Foo::Bar&#8221;;<br />
 <dd> <p> Remove some exceptions to creating Copy-on-Write strings. The string buffer growth algorithm has been slightly altered so that you&#8217;re less likely to encounter a string which can&#8217;t be COWed. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Better optimise array and hash assignment: where an array or hash appears in the <font SIZE="-1">LHS</font> of a list assignment, such as <code>&quot;(..., @a) = (...);&quot;</code>, it&#8217;s likely to be considerably faster, especially if it involves emptying the array/hash. For example, this code runs about a third faster compared to Perl 5.24.0: </p>
+<dd> <p> Better optimise array and hash assignment: where an array or hash appears in the LHS of a list assignment, such as <code>&quot;(..., @a) = (...);&quot;</code>, it&#8217;s likely to be considerably faster, especially if it involves emptying the array/hash. For example, this code runs about a third faster compared to Perl 5.24.0: </p>
 <pre><code>    my @a;
     for my $i (1..10_000_000) {
         @a = (1,2,3);
@@ -296,14 +296,14 @@ use &#8220;Foo::Bar&#8221;;<br />
 <dd> <p> Config::Perl::V has been upgraded from version 0.25 to 0.28. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <font SIZE="-1">CPAN</font> has been upgraded from version 2.11 to 2.18. </p>
+<dd> <p> CPAN has been upgraded from version 2.11 to 2.18. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> CPAN::Meta has been upgraded from version 2.150005 to 2.150010. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Data::Dumper has been upgraded from version 2.160 to 2.167. </p>
-<p> The <font SIZE="-1">XS</font> implementation now supports Deparse. </p>
+<p> The XS implementation now supports Deparse. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> DB_File has been upgraded from version 1.835 to 1.840. </p>
@@ -407,7 +407,7 @@ use &#8220;Foo::Bar&#8221;;<br />
 <p> It now uses 3-arg <code>&quot;open()&quot;</code> instead of 2-arg <code>&quot;open()&quot;</code>. [perl #130122] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=130122">https://rt.perl.org/Public/Bug/Display.html?id=130122</a>&gt; </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <font SIZE="-1">IO</font> has been upgraded from version 1.36 to 1.38. </p>
+<dd> <p> IO has been upgraded from version 1.36 to 1.38. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> IO::Socket::IP has been upgraded from version 0.37 to 0.38. </p>
@@ -419,7 +419,7 @@ use &#8220;Foo::Bar&#8221;;<br />
 <dd> <p> IPC::SysV has been upgraded from version 2.06_01 to 2.07. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <font SIZE="-1">JSON::PP</font> has been upgraded from version 2.27300 to 2.27400_02. </p>
+<dd> <p> JSON::PP has been upgraded from version 2.27300 to 2.27400_02. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> lib has been upgraded from version 0.63 to 0.64. </p>
@@ -469,7 +469,7 @@ use &#8220;Foo::Bar&#8221;;<br />
 <p> IPv6 addresses and <code>&quot;AF_INET6&quot;</code> sockets are now supported, along with several other enhancements. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <font SIZE="-1">NEXT</font> has been upgraded from version 0.65 to 0.67. </p>
+<dd> <p> NEXT has been upgraded from version 0.65 to 0.67. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Opcode has been upgraded from version 1.34 to 1.39. </p>
@@ -526,7 +526,7 @@ use &#8220;Foo::Bar&#8221;;<br />
 <dd> <p> Pod::Usage has been upgraded from version 1.68 to 1.69. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <font SIZE="-1">POSIX</font> has been upgraded from version 1.65 to 1.76. </p>
+<dd> <p> POSIX has been upgraded from version 1.65 to 1.76. </p>
 <p> This remedies several defects in making its symbols exportable. [perl #127821] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=127821">https://rt.perl.org/Public/Bug/Display.html?id=127821</a>&gt; </p>
 <p> The <code>&quot;POSIX::tmpnam()&quot;</code> interface has been removed, see ``<code>POSIX::tmpnam()</code> has been removed&#8217;&#8216;. </p>
 <p> The following deprecated functions have been removed: </p>
@@ -544,7 +544,7 @@ use &#8220;Foo::Bar&#8221;;<br />
     POSIX::tolower
     POSIX::toupper
 </code></pre>
-<p> Trying to import <font SIZE="-1">POSIX</font> subs that have no real implementations (like <code>&quot;POSIX::atend()&quot;</code>) now fails at import time, instead of waiting until runtime. </p>
+<p> Trying to import POSIX subs that have no real implementations (like <code>&quot;POSIX::atend()&quot;</code>) now fails at import time, instead of waiting until runtime. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> re has been upgraded from version 0.32 to 0.34 </p>
@@ -601,7 +601,7 @@ use &#8220;Foo::Bar&#8221;;<br />
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Time::HiRes has been upgraded from version 1.9733 to 1.9741. </p>
-<p> It now builds on systems with C<font SIZE="-2">++</font>11 compilers (such as G++ 6 and Clang++ 3.9). </p>
+<p> It now builds on systems with C++11 compilers (such as G++ 6 and Clang++ 3.9). </p>
 <p> Now uses <code>&quot;clockid_t&quot;</code>. </p>
  </dd>
 <dt>&bull;</dt>
@@ -670,7 +670,7 @@ use &#8220;Foo::Bar&#8221;;<br />
 <p> <i>perlhack</i> </p>
 <dl>
 <dt>&bull;</dt>
-<dd> <p> Clarify what editor tab stop rules to use, and note that we are migrating away from using tabs, replacing them with sequences of <font SIZE="-1">SPACE</font> characters. </p>
+<dd> <p> Clarify what editor tab stop rules to use, and note that we are migrating away from using tabs, replacing them with sequences of SPACE characters. </p>
  </dd></dl>
 <p> <i>perlhacktips</i> </p>
 <dl>
@@ -740,7 +740,7 @@ use &#8220;Foo::Bar&#8221;;<br />
 <p> <i>perlunicode</i> </p>
 <dl>
 <dt>&bull;</dt>
-<dd> <p> Corrected the text about Unicode <font SIZE="-1">BYTE ORDER MARK</font> handling. </p>
+<dd> <p> Corrected the text about Unicode BYTE ORDER MARK handling. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Updated the text to correspond with changes in Unicode UTS#18, concerning regular expressions, and Perl compatibility with what it says. </p>
@@ -800,7 +800,7 @@ use &#8220;Foo::Bar&#8221;;<br />
 <p> Using the empty pattern (which re-executes the last successfully-matched pattern) inside a code block in another regex, as in <code>&quot;/(?{ s!!new! })/&quot;</code>, has always previously yielded a segfault. It now produces this error. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Malformed <font SIZE="-1">UTF-8</font> string in ``%s&#8217;&#8216; </p>
+<dd> <p> Malformed UTF-8 string in ``%s&#8217;&#8216; </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Multiple slurpy parameters not allowed </p>
@@ -841,7 +841,7 @@ use &#8220;Foo::Bar&#8221;;<br />
 <dd> <p> <code>&quot;File::Glob::glob()&quot;</code> will disappear in perl 5.30. Use <code>&quot;File::Glob::bsd_glob()&quot;</code> instead. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Unescaped literal &#8216;%c&#8217; in regex; marked by &lt;-- <font SIZE="-1">HERE</font> in m/%s/ </p>
+<dd> <p> Unescaped literal &#8216;%c&#8217; in regex; marked by &lt;-- HERE in m/%s/ </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Use of unassigned code point or non-standalone grapheme for a delimiter will be a fatal error starting in Perl 5.30 </p>
@@ -865,7 +865,7 @@ use &#8220;Foo::Bar&#8221;;<br />
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Calling POSIX::%s() is deprecated </p>
-<p> This warning has been removed, as the deprecated functions have been removed from <font SIZE="-1">POSIX.</font> </p>
+<p> This warning has been removed, as the deprecated functions have been removed from POSIX. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Constants from lexical variables potentially modified elsewhere are deprecated. This will not be allowed in Perl 5.32 </p>
@@ -906,7 +906,7 @@ use &#8220;Foo::Bar&#8221;;<br />
 <p> This existing warning has had the <i>its use will be fatal</i> text added in this release. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Malformed <font SIZE="-1">UTF-8</font> character%s </p>
+<dd> <p> Malformed UTF-8 character%s </p>
 <p> Details as to the exact problem have been added at the end of this message </p>
  </dd>
 <dt>&bull;</dt>
@@ -914,7 +914,7 @@ use &#8220;Foo::Bar&#8221;;<br />
 <p> This warning used to warn about <code>&quot;require&quot;</code>, even if it was actually <code>&quot;do&quot;</code> which being executed. It now gets the operation name right. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> NO-BREAK <font SIZE="-1">SPACE</font> in a charnames alias definition is deprecated </p>
+<dd> <p> NO-BREAK SPACE in a charnames alias definition is deprecated </p>
 <p> This warning has been removed as the behavior is now an error. </p>
  </dd>
 <dt>&bull;</dt>
@@ -935,8 +935,8 @@ use &#8220;Foo::Bar&#8221;;<br />
 <p> These panic errors have been removed. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Passing malformed <font SIZE="-1">UTF-8</font> to ``%s&#8217;&#8216; is deprecated </p>
-<p> This warning has been changed to the fatal Malformed <font SIZE="-1">UTF-8</font> string in ``%s&#8217;&#8216; </p>
+<dd> <p> Passing malformed UTF-8 to ``%s&#8217;&#8216; is deprecated </p>
+<p> This warning has been changed to the fatal Malformed UTF-8 string in ``%s&#8217;&#8216; </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Setting <code>$/</code> to a reference to <code>%s</code> as a form of slurp is deprecated, treating as undef. This will be fatal in Perl 5.28 </p>
@@ -956,7 +956,7 @@ use &#8220;Foo::Bar&#8221;;<br />
 <p> This warning now includes the name of the offending subroutine. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Unescaped left brace in regex is deprecated here (and will be fatal in Perl 5.30), passed through in regex; marked by &lt;-- <font SIZE="-1">HERE</font> in m/%s/ </p>
+<dd> <p> Unescaped left brace in regex is deprecated here (and will be fatal in Perl 5.30), passed through in regex; marked by &lt;-- HERE in m/%s/ </p>
 <p> This existing warning has had the <i>here (and will be fatal...)</i> text added in this release. </p>
  </dd>
 <dt>&bull;</dt>
@@ -995,7 +995,7 @@ use &#8220;Foo::Bar&#8221;;<br />
 <dd> <p> Removed spurious executable bit. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Account for the possibility of <font SIZE="-1">DOS</font> file endings. </p>
+<dd> <p> Account for the possibility of DOS file endings. </p>
  </dd></dl>
 <i></i><h3>Porting/sync-with-cpan</h3>
 <dl>
@@ -1025,7 +1025,7 @@ use &#8220;Foo::Bar&#8221;;<br />
 <h3>perlbug</h3>
 <dl>
 <dt>&bull;</dt>
-<dd> <p> Long lines in the message body are now wrapped at 900 characters, to stay well within the 1000-character limit imposed by <font SIZE="-1">SMTP</font> mail transfer agents. This is particularly likely to be important for the list of arguments to <i>Configure</i>, which can readily exceed the limit if, for example, it names several non-default installation paths. This change also adds the first unit tests for perlbug. [perl #128020] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128020">https://rt.perl.org/Public/Bug/Display.html?id=128020</a>&gt; </p>
+<dd> <p> Long lines in the message body are now wrapped at 900 characters, to stay well within the 1000-character limit imposed by SMTP mail transfer agents. This is particularly likely to be important for the list of arguments to <i>Configure</i>, which can readily exceed the limit if, for example, it names several non-default installation paths. This change also adds the first unit tests for perlbug. [perl #128020] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128020">https://rt.perl.org/Public/Bug/Display.html?id=128020</a>&gt; </p>
  </dd></dl>
 <h2>Configuration and Compilation</h2>
 <dl>
@@ -1076,7 +1076,7 @@ use &#8220;Foo::Bar&#8221;;<br />
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Remove ``Warning: perl appears in your path&#8217;&#8216; </p>
-<p> This install warning is more or less obsolete, since most platforms already <code>will</code> have a <i>/usr/bin/perl</i> or similar provided by the <font SIZE="-1">OS.</font> </p>
+<p> This install warning is more or less obsolete, since most platforms already <code>will</code> have a <i>/usr/bin/perl</i> or similar provided by the OS. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Reduce verbosity of <code>&quot;make install.man&quot;</code> </p>
@@ -1092,7 +1092,7 @@ use &#8220;Foo::Bar&#8221;;<br />
 <dd> <p> Various compiler warnings have been silenced. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Several smaller changes have been made to remove impediments to compiling under C<font SIZE="-2">++</font>11. </p>
+<dd> <p> Several smaller changes have been made to remove impediments to compiling under C++11. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Builds using <code>&quot;USE_PAD_RESET&quot;</code> now work again; this configuration had bit-rotted. </p>
@@ -1122,10 +1122,10 @@ use &#8220;Foo::Bar&#8221;;<br />
 <dd> <p> Perl built with <code>&quot;-Accflags=-DPERL_TRACE_OPS&quot;</code> now only dumps the operator counts when the environment variable <code>&quot;PERL_TRACE_OPS&quot;</code> is set to a non-zero integer. This allows <code>&quot;make test&quot;</code> to pass on such a build. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> When building with <font SIZE="-1">GCC 6</font> and link-time optimization (the <code>&quot;-flto&quot;</code> option to <code>&quot;gcc&quot;</code>), <i>Configure</i> was treating all probed symbols as present on the system, regardless of whether they actually exist. This has been fixed. [perl #128131] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128131">https://rt.perl.org/Public/Bug/Display.html?id=128131</a>&gt; </p>
+<dd> <p> When building with GCC 6 and link-time optimization (the <code>&quot;-flto&quot;</code> option to <code>&quot;gcc&quot;</code>), <i>Configure</i> was treating all probed symbols as present on the system, regardless of whether they actually exist. This has been fixed. [perl #128131] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128131">https://rt.perl.org/Public/Bug/Display.html?id=128131</a>&gt; </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> The <i>t/test.pl</i> library is used for internal testing of Perl itself, and also copied by several <font SIZE="-1">CPAN</font> modules. Some of those modules must work on older versions of Perl, so <i>t/test.pl</i> must in turn avoid newer Perl features. Compatibility with Perl 5.8 was inadvertently removed some time ago; it has now been restored. [perl #128052] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128052">https://rt.perl.org/Public/Bug/Display.html?id=128052</a>&gt; </p>
+<dd> <p> The <i>t/test.pl</i> library is used for internal testing of Perl itself, and also copied by several CPAN modules. Some of those modules must work on older versions of Perl, so <i>t/test.pl</i> must in turn avoid newer Perl features. Compatibility with Perl 5.8 was inadvertently removed some time ago; it has now been restored. [perl #128052] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128052">https://rt.perl.org/Public/Bug/Display.html?id=128052</a>&gt; </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> The build process no longer emits an extra blank line before building each ``simple&#8217;&#8216; extension (those with only <i>*.pm</i> and <i>*.pod</i> files). </p>
@@ -1155,13 +1155,13 @@ use &#8220;Foo::Bar&#8221;;<br />
 <dd> <p> A new test script, <i>t/re/keep_tabs.t</i> has been added to contain tests where <code>&quot;\t&quot;</code> characters should not be expanded into spaces. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> A new test script, <i>t/re/anyof.t</i>, has been added to test that the <font SIZE="-1">ANYOF</font> nodes generated by bracketed character classes are as expected. </p>
+<dd> <p> A new test script, <i>t/re/anyof.t</i>, has been added to test that the ANYOF nodes generated by bracketed character classes are as expected. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> There is now more extensive testing of the Unicode-related <font SIZE="-1">API</font> macros and functions. </p>
+<dd> <p> There is now more extensive testing of the Unicode-related API macros and functions. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Several of the longer running <font SIZE="-1">API</font> test files have been split into multiple test files so that they can be run in parallel. </p>
+<dd> <p> Several of the longer running API test files have been split into multiple test files so that they can be run in parallel. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> <i>t/harness</i> now tries really hard not to run tests which are located outside of the Perl source tree. [perl #124050] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=124050">https://rt.perl.org/Public/Bug/Display.html?id=124050</a>&gt; </p>
@@ -1173,7 +1173,7 @@ use &#8220;Foo::Bar&#8221;;<br />
 <h3>New Platforms</h3>
 <dl>
 <dt>NetBSD/VAX</dt>
-<dd> <p> Perl now compiles under NetBSD on <font SIZE="-1">VAX</font> machines. However, it&#8217;s not possible for that platform to implement floating-point infinities and NaNs compatible with most modern systems, which implement the <font SIZE="-1">IEEE-754</font> floating point standard. The hexadecimal floating point (<code>&quot;0x...p[+-]n&quot;</code> literals, <code>&quot;printf %a&quot;</code>) is not implemented, either. The <code>&quot;make test&quot;</code> passes 98% of tests. </p>
+<dd> <p> Perl now compiles under NetBSD on VAX machines. However, it&#8217;s not possible for that platform to implement floating-point infinities and NaNs compatible with most modern systems, which implement the IEEE-754 floating point standard. The hexadecimal floating point (<code>&quot;0x...p[+-]n&quot;</code> literals, <code>&quot;printf %a&quot;</code>) is not implemented, either. The <code>&quot;make test&quot;</code> passes 98% of tests. </p>
  </dd>
 <dl>
 <dd>  </dd>
@@ -1199,7 +1199,7 @@ use &#8220;Foo::Bar&#8221;;<br />
 <dd> <p> Don&#8217;t treat <code>&quot;-Dprefix=/usr&quot;</code> as special: instead require an extra option <code>&quot;-Ddarwin_distribution&quot;</code> to produce the same results. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <font SIZE="-1">OS X</font> El Capitan doesn&#8217;t implement the <code>&quot;clock_gettime()&quot;</code> or <code>&quot;clock_getres()&quot;</code> APIs; emulate them as necessary. </p>
+<dd> <p> OS X El Capitan doesn&#8217;t implement the <code>&quot;clock_gettime()&quot;</code> or <code>&quot;clock_getres()&quot;</code> APIs; emulate them as necessary. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Deprecated <code><a href="/docs/linux/man/2-syscall/">syscall</a>(2)</code> on macOS 10.12. </p>
@@ -1207,28 +1207,28 @@ use &#8220;Foo::Bar&#8221;;<br />
 </dl>
 <dl>
 <dd>  </dd></dl>
-<dt><font SIZE="-1">EBCDIC</font></dt>
-<dd> <p> Several tests have been updated to work (or be skipped) on <font SIZE="-1">EBCDIC</font> platforms. </p>
+<dt>EBCDIC</dt>
+<dd> <p> Several tests have been updated to work (or be skipped) on EBCDIC platforms. </p>
  </dd>
 <dt>HP-UX</dt>
-<dd> <p> The Net::Ping <font SIZE="-1">UDP</font> test is now skipped on HP-UX. </p>
+<dd> <p> The Net::Ping UDP test is now skipped on HP-UX. </p>
  </dd>
 <dt>Hurd</dt>
-<dd> <p> The hints for Hurd have been improved, enabling malloc wrap and reporting the <font SIZE="-1">GNU</font> libc used (previously it was an empty string when reported). </p>
+<dd> <p> The hints for Hurd have been improved, enabling malloc wrap and reporting the GNU libc used (previously it was an empty string when reported). </p>
  </dd>
-<dt><font SIZE="-1">VAX</font></dt>
-<dd> <p> <font SIZE="-1">VAX</font> floating point formats are now supported on NetBSD. </p>
+<dt>VAX</dt>
+<dd> <p> VAX floating point formats are now supported on NetBSD. </p>
  </dd>
-<dt><font SIZE="-1">VMS</font></dt>
+<dt>VMS</dt>
 <dd>  </dd>
 <dl>
 <dd>  </dd>
 <dl>
 <dt>&bull;</dt>
-<dd> <p> The path separator for the <code>&quot;PERL5LIB&quot;</code> and <code>&quot;PERLLIB&quot;</code> environment entries is now a colon (<code>&quot;:&quot;</code>) when running under a Unix shell. There is no change when running under <font SIZE="-1">DCL</font> (it&#8217;s still <code>&quot;|&quot;</code>). </p>
+<dd> <p> The path separator for the <code>&quot;PERL5LIB&quot;</code> and <code>&quot;PERLLIB&quot;</code> environment entries is now a colon (<code>&quot;:&quot;</code>) when running under a Unix shell. There is no change when running under DCL (it&#8217;s still <code>&quot;|&quot;</code>). </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <i>configure.com</i> now recognizes the VSI-branded C compiler and no longer recognizes the ``<font SIZE="-1">DEC</font>&#8216;&#8216;-branded C compiler (as there hasn&#8217;t been such a thing for 15 or more years). </p>
+<dd> <p> <i>configure.com</i> now recognizes the VSI-branded C compiler and no longer recognizes the ``DEC&#8216;&#8216;-branded C compiler (as there hasn&#8217;t been such a thing for 15 or more years). </p>
  </dd></dl>
 </dl>
 <dl>
@@ -1239,19 +1239,19 @@ use &#8220;Foo::Bar&#8221;;<br />
 <dd>  </dd>
 <dl>
 <dt>&bull;</dt>
-<dd> <p> Support for compiling perl on Windows using Microsoft Visual Studio 2015 (containing Visual C<font SIZE="-2">++</font> 14.0) has been added. </p>
-<p> This version of <font SIZE="-1">VC++</font> includes a completely rewritten C run-time library, some of the changes in which mean that work done to resolve a socket <code>&quot;close()&quot;</code> bug in perl #120091 and perl #118059 is not workable in its current state with this version of <font SIZE="-1">VC++.</font> Therefore, we have effectively reverted that bug fix for <font SIZE="-1">VS2015</font> onwards on the basis that being able to build with <font SIZE="-1">VS2015</font> onwards is more important than keeping the bug fix. We may revisit this in the future to attempt to fix the bug again in a way that is compatible with <font SIZE="-1">VS2015.</font> </p>
-<p> These changes do not affect compilation with <font SIZE="-1">GCC</font> or with Visual Studio versions up to and including <font SIZE="-1">VS2013,</font> <i>i.e.</i>, the bug fix is retained (unchanged) for those compilers. </p>
-<p> Note that you may experience compatibility problems if you mix a perl built with <font SIZE="-1">GCC</font> or <font SIZE="-1">VS</font> &lt;= <font SIZE="-1">VS2013</font> with <font SIZE="-1">XS</font> modules built with <font SIZE="-1">VS2015,</font> or if you mix a perl built with <font SIZE="-1">VS2015</font> with <font SIZE="-1">XS</font> modules built with <font SIZE="-1">GCC</font> or <font SIZE="-1">VS</font> &lt;= <font SIZE="-1">VS2013.</font> Some incompatibility may arise because of the bug fix that has been reverted for <font SIZE="-1">VS2015</font> builds of perl, but there may well be incompatibility anyway because of the rewritten <font SIZE="-1">CRT</font> in <font SIZE="-1">VS2015</font> (<i>e.g.</i>, see discussion at &lt;<a rel="nofollow" href="http://stackoverflow.com/questions/30412951">http://stackoverflow.com/questions/30412951</a>&gt;). </p>
+<dd> <p> Support for compiling perl on Windows using Microsoft Visual Studio 2015 (containing Visual C++ 14.0) has been added. </p>
+<p> This version of VC++ includes a completely rewritten C run-time library, some of the changes in which mean that work done to resolve a socket <code>&quot;close()&quot;</code> bug in perl #120091 and perl #118059 is not workable in its current state with this version of VC++. Therefore, we have effectively reverted that bug fix for VS2015 onwards on the basis that being able to build with VS2015 onwards is more important than keeping the bug fix. We may revisit this in the future to attempt to fix the bug again in a way that is compatible with VS2015. </p>
+<p> These changes do not affect compilation with GCC or with Visual Studio versions up to and including VS2013, <i>i.e.</i>, the bug fix is retained (unchanged) for those compilers. </p>
+<p> Note that you may experience compatibility problems if you mix a perl built with GCC or VS &lt;= VS2013 with XS modules built with VS2015, or if you mix a perl built with VS2015 with XS modules built with GCC or VS &lt;= VS2013. Some incompatibility may arise because of the bug fix that has been reverted for VS2015 builds of perl, but there may well be incompatibility anyway because of the rewritten CRT in VS2015 (<i>e.g.</i>, see discussion at &lt;<a rel="nofollow" href="http://stackoverflow.com/questions/30412951">http://stackoverflow.com/questions/30412951</a>&gt;). </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> It now automatically detects <font SIZE="-1">GCC</font> versus Visual C and sets the <font SIZE="-1">VC</font> version number on Win32. </p>
+<dd> <p> It now automatically detects GCC versus Visual C and sets the VC version number on Win32. </p>
  </dd></dl>
 </dl>
 <dl>
 <dd>  </dd></dl>
 <dt>Linux</dt>
-<dd> <p> Drop support for Linux <i>a.out</i> executable format. Linux has used <font SIZE="-1">ELF</font> for over twenty years. </p>
+<dd> <p> Drop support for Linux <i>a.out</i> executable format. Linux has used ELF for over twenty years. </p>
  </dd>
 <dt>OpenBSD 6</dt>
 <dd> <p> OpenBSD 6 still does not support returning <code>&quot;pid&quot;</code>, <code>&quot;gid&quot;</code>, or <code>&quot;uid&quot;</code> with <code>&quot;SA_SIGINFO&quot;</code>. Make sure to account for it. </p>
@@ -1259,35 +1259,35 @@ use &#8220;Foo::Bar&#8221;;<br />
 <dt>FreeBSD</dt>
 <dd> <p> <i>t/uni/overload.t</i>: Skip hanging test on FreeBSD. </p>
  </dd>
-<dt>DragonFly <font SIZE="-1">BSD</font></dt>
-<dd> <p> DragonFly <font SIZE="-1">BSD</font> now has support for <code>&quot;setproctitle()&quot;</code>. [perl #130068] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=130068">https://rt.perl.org/Public/Bug/Display.html?id=130068</a>&gt;. </p>
+<dt>DragonFly BSD</dt>
+<dd> <p> DragonFly BSD now has support for <code>&quot;setproctitle()&quot;</code>. [perl #130068] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=130068">https://rt.perl.org/Public/Bug/Display.html?id=130068</a>&gt;. </p>
  </dd></dl>
 <h2>Internal Changes</h2>
 <dl>
 <dt>&bull;</dt>
-<dd> <p> A new <font SIZE="-1">API</font> function <code>&quot;sv_setpv_bufsize()&quot;</code> allows simultaneously setting the length and the allocated size of the buffer in an <code>&quot;SV&quot;</code>, growing the buffer if necessary. </p>
+<dd> <p> A new API function <code>&quot;sv_setpv_bufsize()&quot;</code> allows simultaneously setting the length and the allocated size of the buffer in an <code>&quot;SV&quot;</code>, growing the buffer if necessary. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> A new <font SIZE="-1">API</font> macro <code>&quot;SvPVCLEAR()&quot;</code> sets its <code>&quot;SV&quot;</code> argument to an empty string, like Perl-space <code>&quot;$x = &#8216;&#8216;&quot;</code>, but with several optimisations. </p>
+<dd> <p> A new API macro <code>&quot;SvPVCLEAR()&quot;</code> sets its <code>&quot;SV&quot;</code> argument to an empty string, like Perl-space <code>&quot;$x = &#8216;&#8216;&quot;</code>, but with several optimisations. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Several new macros and functions for dealing with Unicode and UTF-8-encoded strings have been added to the <font SIZE="-1">API,</font> as well as some changes in the functionality of existing functions (see ``Unicode Support&#8217;&#8216; in perlapi for more details): </p>
+<dd> <p> Several new macros and functions for dealing with Unicode and UTF-8-encoded strings have been added to the API, as well as some changes in the functionality of existing functions (see ``Unicode Support&#8217;&#8216; in perlapi for more details): </p>
  </dd>
 <dl>
 <dd>  </dd>
 <dl>
 <dt>&bull;</dt>
-<dd> <p> New versions of the <font SIZE="-1">API</font> macros like <code>&quot;isALPHA_utf8&quot;</code> and <code>&quot;toLOWER_utf8&quot;</code> have been added, each with the suffix <code>&quot;_safe&quot;</code>, like <code>&quot;isSPACE_utf8_safe&quot;</code>. These take an extra parameter, giving an upper limit of how far into the string it is safe to read. Using the old versions could cause attempts to read beyond the end of the input buffer if the <font SIZE="-1">UTF-8</font> is not well-formed, and their use now raises a deprecation warning. Details are at ``Character classification&#8217;&#8216; in perlapi. </p>
+<dd> <p> New versions of the API macros like <code>&quot;isALPHA_utf8&quot;</code> and <code>&quot;toLOWER_utf8&quot;</code> have been added, each with the suffix <code>&quot;_safe&quot;</code>, like <code>&quot;isSPACE_utf8_safe&quot;</code>. These take an extra parameter, giving an upper limit of how far into the string it is safe to read. Using the old versions could cause attempts to read beyond the end of the input buffer if the UTF-8 is not well-formed, and their use now raises a deprecation warning. Details are at ``Character classification&#8217;&#8216; in perlapi. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Macros like <code>&quot;isALPHA_utf8&quot;</code> and <code>&quot;toLOWER_utf8&quot;</code> now die if they detect that their input <font SIZE="-1">UTF-8</font> is malformed. A deprecation warning had been issued since Perl 5.18. </p>
+<dd> <p> Macros like <code>&quot;isALPHA_utf8&quot;</code> and <code>&quot;toLOWER_utf8&quot;</code> now die if they detect that their input UTF-8 is malformed. A deprecation warning had been issued since Perl 5.18. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Several new macros for analysing the validity of utf8 sequences. These are: </p>
 <p> <code>&quot;UTF8_GOT_ABOVE_31_BIT&quot;</code> <code>&quot;UTF8_GOT_CONTINUATION&quot;</code> <code>&quot;UTF8_GOT_EMPTY&quot;</code> <code>&quot;UTF8_GOT_LONG&quot;</code> <code>&quot;UTF8_GOT_NONCHAR&quot;</code> <code>&quot;UTF8_GOT_NON_CONTINUATION&quot;</code> <code>&quot;UTF8_GOT_OVERFLOW&quot;</code> <code>&quot;UTF8_GOT_SHORT&quot;</code> <code>&quot;UTF8_GOT_SUPER&quot;</code> <code>&quot;UTF8_GOT_SURROGATE&quot;</code> <code>&quot;UTF8_IS_INVARIANT&quot;</code> <code>&quot;UTF8_IS_NONCHAR&quot;</code> <code>&quot;UTF8_IS_SUPER&quot;</code> <code>&quot;UTF8_IS_SURROGATE&quot;</code> <code>&quot;UVCHR_IS_INVARIANT&quot;</code> <code>&quot;isUTF8_CHAR_flags&quot;</code> <code>&quot;isSTRICT_UTF8_CHAR&quot;</code> <code>&quot;isC9_STRICT_UTF8_CHAR&quot;</code> </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Functions that are all extensions of the <code>&quot;is_utf8_string_</code>*<code>()&quot;</code> functions, that apply various restrictions to the <font SIZE="-1">UTF-8</font> recognized as valid: </p>
+<dd> <p> Functions that are all extensions of the <code>&quot;is_utf8_string_</code>*<code>()&quot;</code> functions, that apply various restrictions to the UTF-8 recognized as valid: </p>
 <p> <code>&quot;is_strict_utf8_string&quot;</code>, <code>&quot;is_strict_utf8_string_loc&quot;</code>, <code>&quot;is_strict_utf8_string_loclen&quot;</code>, </p>
 <p> <code>&quot;is_c9strict_utf8_string&quot;</code>, <code>&quot;is_c9strict_utf8_string_loc&quot;</code>, <code>&quot;is_c9strict_utf8_string_loclen&quot;</code>, </p>
 <p> <code>&quot;is_utf8_string_flags&quot;</code>, <code>&quot;is_utf8_string_loc_flags&quot;</code>, <code>&quot;is_utf8_string_loclen_flags&quot;</code>, </p>
@@ -1296,16 +1296,16 @@ use &#8220;Foo::Bar&#8221;;<br />
  </dd>
 <dt>&bull;</dt>
 <dd> <p> The functions <code>&quot;utf8n_to_uvchr&quot;</code> and its derivatives have had several changes of behaviour. </p>
-<p> Calling them, while passing a string length of 0 is now asserted against in <font SIZE="-1">DEBUGGING</font> builds, and otherwise, returns the Unicode <font SIZE="-1">REPLACEMENT CHARACTER.</font> If you have nothing to decode, you shouldn&#8217;t call the decode function. </p>
-<p> They now return the Unicode <font SIZE="-1">REPLACEMENT CHARACTER</font> if called with <font SIZE="-1">UTF-8</font> that has the overlong malformation and that malformation is allowed by the input parameters. This malformation is where the <font SIZE="-1">UTF-8</font> looks valid syntactically, but there is a shorter sequence that yields the same code point. This has been forbidden since Unicode version 3.1. </p>
-<p> They now accept an input flag to allow the overflow malformation. This malformation is when the <font SIZE="-1">UTF-8</font> may be syntactically valid, but the code point it represents is not capable of being represented in the word length on the platform. What ``allowed&#8217;&#8216; means, in this case, is that the function doesn&#8217;t return an error, and it advances the parse pointer to beyond the <font SIZE="-1">UTF-8</font> in question, but it returns the Unicode <font SIZE="-1">REPLACEMENT CHARACTER</font> as the value of the code point (since the real value is not representable). </p>
+<p> Calling them, while passing a string length of 0 is now asserted against in DEBUGGING builds, and otherwise, returns the Unicode REPLACEMENT CHARACTER. If you have nothing to decode, you shouldn&#8217;t call the decode function. </p>
+<p> They now return the Unicode REPLACEMENT CHARACTER if called with UTF-8 that has the overlong malformation and that malformation is allowed by the input parameters. This malformation is where the UTF-8 looks valid syntactically, but there is a shorter sequence that yields the same code point. This has been forbidden since Unicode version 3.1. </p>
+<p> They now accept an input flag to allow the overflow malformation. This malformation is when the UTF-8 may be syntactically valid, but the code point it represents is not capable of being represented in the word length on the platform. What ``allowed&#8217;&#8216; means, in this case, is that the function doesn&#8217;t return an error, and it advances the parse pointer to beyond the UTF-8 in question, but it returns the Unicode REPLACEMENT CHARACTER as the value of the code point (since the real value is not representable). </p>
 <p> They no longer abandon searching for other malformations when the first one is encountered. A call to one of these functions thus can generate multiple diagnostics, instead of just one. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <code>&quot;valid_utf8_to_uvchr()&quot;</code> has been added to the <font SIZE="-1">API</font> (although it was present in core earlier). Like <code>&quot;utf8_to_uvchr_buf()&quot;</code>, but assumes that the next character is well-formed. Use with caution. </p>
+<dd> <p> <code>&quot;valid_utf8_to_uvchr()&quot;</code> has been added to the API (although it was present in core earlier). Like <code>&quot;utf8_to_uvchr_buf()&quot;</code>, but assumes that the next character is well-formed. Use with caution. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> A new function, <code>&quot;utf8n_to_uvchr_error&quot;</code>, has been added for use by modules that need to know the details of <font SIZE="-1">UTF-8</font> malformations beyond pass/fail. Previously, the only ways to know why a sequence was ill-formed was to capture and parse the generated diagnostics or to do your own analysis. </p>
+<dd> <p> A new function, <code>&quot;utf8n_to_uvchr_error&quot;</code>, has been added for use by modules that need to know the details of UTF-8 malformations beyond pass/fail. Previously, the only ways to know why a sequence was ill-formed was to capture and parse the generated diagnostics or to do your own analysis. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> There is now a safer version of <code>utf8_hop()</code>, called <code>&quot;utf8_hop_safe()&quot;</code>. Unlike <code>utf8_hop()</code>, <code>utf8_hop_safe()</code> won&#8217;t navigate before the beginning or after the end of the supplied buffer. </p>
@@ -1333,7 +1333,7 @@ use &#8220;Foo::Bar&#8221;;<br />
 <p> Formerly the first child of a split would be a <code>&quot;pushre&quot;</code>, which would have the <code>&quot;split&quot;</code>&#8216;s regex attached to it. Now the regex is attached directly to the <code>&quot;split&quot;</code> op, and the <code>&quot;pushre&quot;</code> has been eliminated. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> The <code>&quot;op_class()&quot;</code> <font SIZE="-1">API</font> function has been added. This is like the existing <code>&quot;OP_CLASS()&quot;</code> macro, but can more accurately determine what struct an op has been allocated as. For example <code>&quot;OP_CLASS()&quot;</code> might return <code>&quot;OA_BASEOP_OR_UNOP&quot;</code> indicating that ops of this type are usually allocated as an <code>&quot;OP&quot;</code> or <code>&quot;UNOP&quot;</code>; while <code>&quot;op_class()&quot;</code> will return <code>&quot;OPclass_BASEOP&quot;</code> or <code>&quot;OPclass_UNOP&quot;</code> as appropriate. </p>
+<dd> <p> The <code>&quot;op_class()&quot;</code> API function has been added. This is like the existing <code>&quot;OP_CLASS()&quot;</code> macro, but can more accurately determine what struct an op has been allocated as. For example <code>&quot;OP_CLASS()&quot;</code> might return <code>&quot;OA_BASEOP_OR_UNOP&quot;</code> indicating that ops of this type are usually allocated as an <code>&quot;OP&quot;</code> or <code>&quot;UNOP&quot;</code>; while <code>&quot;op_class()&quot;</code> will return <code>&quot;OPclass_BASEOP&quot;</code> or <code>&quot;OPclass_UNOP&quot;</code> as appropriate. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> All parts of the internals now agree that the <code>&quot;sassign&quot;</code> op is a <code>&quot;BINOP&quot;</code>; previously it was listed as a <code>&quot;BASEOP&quot;</code> in <i>regen/opcodes</i>, which meant that several parts of the internals had to be special-cased to accommodate it. This oddity&#8217;s original motivation was to handle code like <code>&quot;$x ||= 1&quot;</code>; that is now handled in a simpler way. </p>
@@ -1348,10 +1348,10 @@ use &#8220;Foo::Bar&#8221;;<br />
 <dd> <p> The <code>&quot;DEBUGGING&quot;</code>-mode output for regex compilation and execution has been enhanced. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Several obscure <font SIZE="-1">SV</font> flags have been eliminated, sometimes along with the macros which manipulate them: <code>&quot;SVpbm_VALID&quot;</code>, <code>&quot;SVpbm_TAIL&quot;</code>, <code>&quot;SvTAIL_on&quot;</code>, <code>&quot;SvTAIL_off&quot;</code>, <code>&quot;SVrepl_EVAL&quot;</code>, <code>&quot;SvEVALED&quot;</code>. </p>
+<dd> <p> Several obscure SV flags have been eliminated, sometimes along with the macros which manipulate them: <code>&quot;SVpbm_VALID&quot;</code>, <code>&quot;SVpbm_TAIL&quot;</code>, <code>&quot;SvTAIL_on&quot;</code>, <code>&quot;SvTAIL_off&quot;</code>, <code>&quot;SVrepl_EVAL&quot;</code>, <code>&quot;SvEVALED&quot;</code>. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> An <font SIZE="-1">OP</font> <code>&quot;op_private&quot;</code> flag has been eliminated: <code>&quot;OPpRUNTIME&quot;</code>. This used to often get set on <code>&quot;PMOP&quot;</code> ops, but had become meaningless over time. </p>
+<dd> <p> An OP <code>&quot;op_private&quot;</code> flag has been eliminated: <code>&quot;OPpRUNTIME&quot;</code>. This used to often get set on <code>&quot;PMOP&quot;</code> ops, but had become meaningless over time. </p>
  </dd></dl>
 <h2>Selected Bug Fixes</h2>
 <dl>
@@ -1383,7 +1383,7 @@ use &#8220;Foo::Bar&#8221;;<br />
 <dd> <p> Using <code>&quot;substr()&quot;</code> to modify a magic variable could access freed memory in some cases. [perl #129340] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=129340">https://rt.perl.org/Public/Bug/Display.html?id=129340</a>&gt; </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Under <code>&quot;use utf8&quot;</code>, the entire source code is now checked for being <font SIZE="-1">UTF-8</font> well formed, not just quoted strings as before. [perl #126310] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=126310">https://rt.perl.org/Public/Bug/Display.html?id=126310</a>&gt;. </p>
+<dd> <p> Under <code>&quot;use utf8&quot;</code>, the entire source code is now checked for being UTF-8 well formed, not just quoted strings as before. [perl #126310] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=126310">https://rt.perl.org/Public/Bug/Display.html?id=126310</a>&gt;. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> The range operator <code>&quot;..&quot;</code> on strings now handles its arguments correctly when in the scope of the <code>&quot;unicode_strings&quot;</code> feature. The previous behaviour was sufficiently unexpected that we believe no correct program could have made use of it. </p>
@@ -1407,7 +1407,7 @@ use &#8220;Foo::Bar&#8221;;<br />
 <dd> <p> Fixed an assertion failure with <code>&quot;chop&quot;</code> and <code>&quot;chomp&quot;</code>, which could be triggered by <code>&quot;chop(@x =~ tr/1/1/)&quot;</code>. [perl #130198] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=130198">https://rt.perl.org/Public/Bug/Display.html?id=130198</a>&gt;. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Fixed a comment skipping error in patterns under <code>&quot;/x&quot;</code>; it could stop skipping a byte early, which could be in the middle of a <font SIZE="-1">UTF-8</font> character. [perl #130495] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=130495">https://rt.perl.org/Public/Bug/Display.html?id=130495</a>&gt;. </p>
+<dd> <p> Fixed a comment skipping error in patterns under <code>&quot;/x&quot;</code>; it could stop skipping a byte early, which could be in the middle of a UTF-8 character. [perl #130495] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=130495">https://rt.perl.org/Public/Bug/Display.html?id=130495</a>&gt;. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> <i>perldb</i> now ignores <i>/dev/tty</i> on non-Unix systems. [perl #113960] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=113960">https://rt.perl.org/Public/Bug/Display.html?id=113960</a>&gt;; </p>
@@ -1434,7 +1434,7 @@ use &#8220;Foo::Bar&#8221;;<br />
 <dd> <p> A sub containing a ``forward&#8217;&#8216; declaration with the same name (<i>e.g.</i>, <code>&quot;sub c { sub c; }&quot;</code>) could sometimes crash or loop infinitely. [perl #129090] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=129090">https://rt.perl.org/Public/Bug/Display.html?id=129090</a>&gt; </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> A crash in executing a regex with a non-anchored <font SIZE="-1">UTF-8</font> substring against a target string that also used <font SIZE="-1">UTF-8</font> has been fixed. [perl #129350] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=129350">https://rt.perl.org/Public/Bug/Display.html?id=129350</a>&gt; </p>
+<dd> <p> A crash in executing a regex with a non-anchored UTF-8 substring against a target string that also used UTF-8 has been fixed. [perl #129350] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=129350">https://rt.perl.org/Public/Bug/Display.html?id=129350</a>&gt; </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Previously, a shebang line like <code>&quot;#!perl -i u&quot;</code> could be erroneously interpreted as requesting the <code>&quot;-u&quot;</code> option. This has been fixed. [perl #129336] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=129336">https://rt.perl.org/Public/Bug/Display.html?id=129336</a>&gt; </p>
@@ -1452,7 +1452,7 @@ use &#8220;Foo::Bar&#8221;;<br />
 <dd> <p> The parser could sometimes crash if a bareword came after <code>&quot;evalbytes&quot;</code>. [perl #129196] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=129196">https://rt.perl.org/Public/Bug/Display.html?id=129196</a>&gt; </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Autoloading via a method call would warn erroneously (``Use of inherited <font SIZE="-1">AUTOLOAD</font> for non-method&#8217;&#8216;) if there was a stub present in the package into which the invocant had been blessed. The warning is no longer emitted in such circumstances. [perl #47047] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=47047">https://rt.perl.org/Public/Bug/Display.html?id=47047</a>&gt; </p>
+<dd> <p> Autoloading via a method call would warn erroneously (``Use of inherited AUTOLOAD for non-method&#8217;&#8216;) if there was a stub present in the package into which the invocant had been blessed. The warning is no longer emitted in such circumstances. [perl #47047] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=47047">https://rt.perl.org/Public/Bug/Display.html?id=47047</a>&gt; </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> The use of <code>&quot;splice&quot;</code> on arrays with non-existent elements could cause other operators to crash. [perl #129164] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=129164">https://rt.perl.org/Public/Bug/Display.html?id=129164</a>&gt; </p>
@@ -1464,7 +1464,7 @@ use &#8220;Foo::Bar&#8221;;<br />
 <dd> <p> Fixed two possible use-after-free bugs in perl&#8217;s lexer. [perl #129069] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=129069">https://rt.perl.org/Public/Bug/Display.html?id=129069</a>&gt; </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Fixed a crash with <code>&quot;s///l&quot;</code> where it thought it was dealing with <font SIZE="-1">UTF-8</font> when it wasn&#8217;t. [perl #129038] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=129038">https://rt.perl.org/Public/Bug/Display.html?id=129038</a>&gt; </p>
+<dd> <p> Fixed a crash with <code>&quot;s///l&quot;</code> where it thought it was dealing with UTF-8 when it wasn&#8217;t. [perl #129038] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=129038">https://rt.perl.org/Public/Bug/Display.html?id=129038</a>&gt; </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Fixed a place where the regex parser was not setting the syntax error correctly on a syntactically incorrect pattern. [perl #129122] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=129122">https://rt.perl.org/Public/Bug/Display.html?id=129122</a>&gt; </p>
@@ -1476,7 +1476,7 @@ use &#8220;Foo::Bar&#8221;;<br />
 <dd> <p> Avoid a heap-after-use error in the parser when creating an error messge for a syntactically invalid heredoc. [perl #128988] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128988">https://rt.perl.org/Public/Bug/Display.html?id=128988</a>&gt; </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Fix a segfault when run with <code>&quot;-DC&quot;</code> options on <font SIZE="-1">DEBUGGING</font> builds. [perl #129106] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=129106">https://rt.perl.org/Public/Bug/Display.html?id=129106</a>&gt; </p>
+<dd> <p> Fix a segfault when run with <code>&quot;-DC&quot;</code> options on DEBUGGING builds. [perl #129106] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=129106">https://rt.perl.org/Public/Bug/Display.html?id=129106</a>&gt; </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Fixed the parser error handling in subroutine attributes for an &#8216;<code>&quot;:attr(foo&quot;</code>&#8216; that does not have an ending &#8216;<code>&quot;)&quot;</code>&#8216;. </p>
@@ -1485,7 +1485,7 @@ use &#8220;Foo::Bar&#8221;;<br />
 <dd> <p> Fix the perl lexer to correctly handle a backslash as the last char in quoted-string context. This actually fixed two bugs, [perl #129064] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=129064">https://rt.perl.org/Public/Bug/Display.html?id=129064</a>&gt; and [perl #129176] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=129176">https://rt.perl.org/Public/Bug/Display.html?id=129176</a>&gt;. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> In the <font SIZE="-1">API</font> function <code>&quot;gv_fetchmethod_pvn_flags&quot;</code>, rework separator parsing to prevent possible string overrun with an invalid <code>&quot;len&quot;</code> argument. [perl #129267] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=129267">https://rt.perl.org/Public/Bug/Display.html?id=129267</a>&gt; </p>
+<dd> <p> In the API function <code>&quot;gv_fetchmethod_pvn_flags&quot;</code>, rework separator parsing to prevent possible string overrun with an invalid <code>&quot;len&quot;</code> argument. [perl #129267] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=129267">https://rt.perl.org/Public/Bug/Display.html?id=129267</a>&gt; </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Problems with in-place array sorts: code like <code>&quot;@a = sort { ... } @a&quot;</code>, where the source and destination of the sort are the same plain array, are optimised to do less copying around. Two side-effects of this optimisation were that the contents of <code>@a</code> as seen by sort routines were partially sorted; and under some circumstances accessing <code>@a</code> during the sort could crash the interpreter. Both these issues have been fixed, and Sort functions see the original value of <code>@a</code>. [perl #128340] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128340">https://rt.perl.org/Public/Bug/Display.html?id=128340</a>&gt; </p>
@@ -1512,13 +1512,13 @@ use &#8220;Foo::Bar&#8221;;<br />
 <dd> <p> Mentioning the same constant twice in a row (which is a syntax error) no longer fails an assertion under debugging builds. This was a regression from v5.20. [perl #126482] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=126482">https://rt.perl.org/Public/Bug/Display.html?id=126482</a>&gt; </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Many issues relating to <code>&quot;printf &quot;%a&quot;&quot;</code> of hexadecimal floating point were fixed. In addition, the ``subnormals&#8217;&#8216; (formerly known as ``denormals&#8217;&#8216;) floating point numbers are now supported both with the plain <font SIZE="-1">IEEE 754</font> floating point numbers (64-bit or 128-bit) and the x86 80-bit ``extended precision&#8217;&#8216;. Note that subnormal hexadecimal floating point literals will give a warning about ``exponent underflow&#8217;&#8216;. [perl #128843] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128843">https://rt.perl.org/Public/Bug/Display.html?id=128843</a>&gt; [perl #128889] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128889">https://rt.perl.org/Public/Bug/Display.html?id=128889</a>&gt; [perl #128890] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128890">https://rt.perl.org/Public/Bug/Display.html?id=128890</a>&gt; [perl #128893] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128893">https://rt.perl.org/Public/Bug/Display.html?id=128893</a>&gt; [perl #128909] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128909">https://rt.perl.org/Public/Bug/Display.html?id=128909</a>&gt; [perl #128919] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128919">https://rt.perl.org/Public/Bug/Display.html?id=128919</a>&gt; </p>
+<dd> <p> Many issues relating to <code>&quot;printf &quot;%a&quot;&quot;</code> of hexadecimal floating point were fixed. In addition, the ``subnormals&#8217;&#8216; (formerly known as ``denormals&#8217;&#8216;) floating point numbers are now supported both with the plain IEEE 754 floating point numbers (64-bit or 128-bit) and the x86 80-bit ``extended precision&#8217;&#8216;. Note that subnormal hexadecimal floating point literals will give a warning about ``exponent underflow&#8217;&#8216;. [perl #128843] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128843">https://rt.perl.org/Public/Bug/Display.html?id=128843</a>&gt; [perl #128889] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128889">https://rt.perl.org/Public/Bug/Display.html?id=128889</a>&gt; [perl #128890] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128890">https://rt.perl.org/Public/Bug/Display.html?id=128890</a>&gt; [perl #128893] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128893">https://rt.perl.org/Public/Bug/Display.html?id=128893</a>&gt; [perl #128909] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128909">https://rt.perl.org/Public/Bug/Display.html?id=128909</a>&gt; [perl #128919] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128919">https://rt.perl.org/Public/Bug/Display.html?id=128919</a>&gt; </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> A regression in v5.24 with <code>&quot;tr/\N{U+...}/foo/&quot;</code> when the code point was between 128 and 255 has been fixed. [perl #128734] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128734">https://rt.perl.org/Public/Bug/Display.html?id=128734</a>&gt;. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Use of a string delimiter whose code point is above 2**31 now works correctly on platforms that allow this. Previously, certain characters, due to truncation, would be confused with other delimiter characters with special meaning (such as <code>&quot;?&quot;</code> in <code>&quot;m?...?&quot;</code>), resulting in inconsistent behaviour. Note that this is non-portable, and is based on Perl&#8217;s extension to <font SIZE="-1">UTF-8,</font> and is probably not displayable nor enterable by any editor. [perl #128738] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128738">https://rt.perl.org/Public/Bug/Display.html?id=128738</a>&gt; </p>
+<dd> <p> Use of a string delimiter whose code point is above 2**31 now works correctly on platforms that allow this. Previously, certain characters, due to truncation, would be confused with other delimiter characters with special meaning (such as <code>&quot;?&quot;</code> in <code>&quot;m?...?&quot;</code>), resulting in inconsistent behaviour. Note that this is non-portable, and is based on Perl&#8217;s extension to UTF-8, and is probably not displayable nor enterable by any editor. [perl #128738] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128738">https://rt.perl.org/Public/Bug/Display.html?id=128738</a>&gt; </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> <code>&quot;@{x&quot;</code> followed by a newline where <code>&quot;x&quot;</code> represents a control or non-ASCII character no longer produces a garbled syntax error message or a crash. [perl #128951] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128951">https://rt.perl.org/Public/Bug/Display.html?id=128951</a>&gt; </p>
@@ -1542,7 +1542,7 @@ use &#8220;Foo::Bar&#8221;;<br />
 <dd> <p> Code that looks for a variable name associated with an uninitialized value could cause an assertion failure in cases where magic is involved, such as <code>$ISA[0][0]</code>. This has now been fixed. [perl #128253] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128253">https://rt.perl.org/Public/Bug/Display.html?id=128253</a>&gt; </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> A crash caused by code generating the warning ``Subroutine <font SIZE="-1">STASH::NAME</font> redefined&#8217;&#8216; in cases such as <code>&quot;sub P::f{} undef *P::; *P::f =sub{};&quot;</code> has been fixed. In these cases, where the <font SIZE="-1">STASH</font> is missing, the warning will now appear as ``Subroutine <font SIZE="-1">NAME</font> redefined&#8217;&#8216;. [perl #128257] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128257">https://rt.perl.org/Public/Bug/Display.html?id=128257</a>&gt; </p>
+<dd> <p> A crash caused by code generating the warning ``Subroutine STASH::NAME redefined&#8217;&#8216; in cases such as <code>&quot;sub P::f{} undef *P::; *P::f =sub{};&quot;</code> has been fixed. In these cases, where the STASH is missing, the warning will now appear as ``Subroutine NAME redefined&#8217;&#8216;. [perl #128257] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128257">https://rt.perl.org/Public/Bug/Display.html?id=128257</a>&gt; </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Fixed an assertion triggered by some code that handles deprecated behavior in formats, <i>e.g.</i>, in cases like this: </p>
@@ -1586,7 +1586,7 @@ use &#8220;Foo::Bar&#8221;;<br />
 <dd> <p> Assignment of hashes to, and deletion of, typeglobs named <code>*::::::</code> no longer causes crashes. [perl #128086] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128086">https://rt.perl.org/Public/Bug/Display.html?id=128086</a>&gt; </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Perl wasn&#8217;t correctly handling true/false values in the <font SIZE="-1">LHS</font> of a list assign; specifically the truth values returned by boolean operators. This could trigger an assertion failure in something like the following: </p>
+<dd> <p> Perl wasn&#8217;t correctly handling true/false values in the LHS of a list assign; specifically the truth values returned by boolean operators. This could trigger an assertion failure in something like the following: </p>
 <pre><code>    for ($x &gt; $y) {
         ($_, ...) = (...); # here $_ is aliased to a truth value
     }
@@ -1600,7 +1600,7 @@ use &#8220;Foo::Bar&#8221;;<br />
 <dd> <p> Fix error message for unclosed <code>&quot;\N{&quot;</code> in a regex. An unclosed <code>&quot;\N{&quot;</code> could give the wrong error message: <code>&quot;\N{NAME} must be resolved by the lexer&quot;</code>. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> List assignment in list context where the <font SIZE="-1">LHS</font> contained aggregates and where there were not enough <font SIZE="-1">RHS</font> elements, used to skip scalar lvalues. Previously, <code>&quot;(($a,$b,@c,$d) = (1))&quot;</code> in list context returned <code>&quot;($a)&quot;</code>; now it returns <code>&quot;($a,$b,$d)&quot;</code>. <code>&quot;(($a,$b,$c) = (1))&quot;</code> is unchanged: it still returns <code>&quot;($a,$b,$c)&quot;</code>. This can be seen in the following: </p>
+<dd> <p> List assignment in list context where the LHS contained aggregates and where there were not enough RHS elements, used to skip scalar lvalues. Previously, <code>&quot;(($a,$b,@c,$d) = (1))&quot;</code> in list context returned <code>&quot;($a)&quot;</code>; now it returns <code>&quot;($a,$b,$d)&quot;</code>. <code>&quot;(($a,$b,$c) = (1))&quot;</code> is unchanged: it still returns <code>&quot;($a,$b,$c)&quot;</code>. This can be seen in the following: </p>
 <pre><code>    sub inc { $_++ for @_ }
     inc(($a,$b,@c,$d) = (10))
 </code></pre>
@@ -1610,7 +1610,7 @@ use &#8220;Foo::Bar&#8221;;<br />
 <dd> <p> Code like this: <code>&quot;/(?{ s!!! })/&quot;</code> could trigger infinite recursion on the C stack (not the normal perl stack) when the last successful pattern in scope is itself. We avoid the segfault by simply forbidding the use of the empty pattern when it would resolve to the currently executing pattern. [perl #129903] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=129903">https://rt.perl.org/Public/Bug/Display.html?id=129903</a>&gt; </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Avoid reading beyond the end of the line buffer in perl&#8217;s lexer when there&#8217;s a short <font SIZE="-1">UTF-8</font> character at the end. [perl #128997] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128997">https://rt.perl.org/Public/Bug/Display.html?id=128997</a>&gt; </p>
+<dd> <p> Avoid reading beyond the end of the line buffer in perl&#8217;s lexer when there&#8217;s a short UTF-8 character at the end. [perl #128997] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128997">https://rt.perl.org/Public/Bug/Display.html?id=128997</a>&gt; </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Alternations in regular expressions were sometimes failing to match a utf8 string against a utf8 alternate. [perl #129950] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=129950">https://rt.perl.org/Public/Bug/Display.html?id=129950</a>&gt; </p>
@@ -1646,7 +1646,7 @@ use &#8220;Foo::Bar&#8221;;<br />
 <dd> <p> Improve the error message for a missing <code>&quot;tie()&quot;</code> package/method. This brings the error messages in line with the ones used for normal method calls. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Parsing bad <font SIZE="-1">POSIX</font> charclasses no longer leaks memory. [perl #128313] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128313">https://rt.perl.org/Public/Bug/Display.html?id=128313</a>&gt; </p>
+<dd> <p> Parsing bad POSIX charclasses no longer leaks memory. [perl #128313] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=128313">https://rt.perl.org/Public/Bug/Display.html?id=128313</a>&gt; </p>
  </dd></dl>
 <h2>Known Problems</h2>
 <dl>
@@ -1659,8 +1659,8 @@ use &#8220;Foo::Bar&#8221;;<br />
 <dd> <p> Fixed issues with recursive regexes. The behavior was fixed in Perl 5.24. [perl #126182] &lt;<a rel="nofollow" href="https://rt.perl.org/Public/Bug/Display.html?id=126182">https://rt.perl.org/Public/Bug/Display.html?id=126182</a>&gt; </p>
  </dd></dl>
 <h2>Obituary</h2>
-<p> Jon Portnoy (<font SIZE="-1">AVENJ</font>), a prolific Perl author and admired Gentoo community member, has passed away on August 10, 2016. He will be remembered and missed by all those who he came in contact with, and enriched with his intellect, wit, and spirit. </p>
-<p> It is with great sadness that we also note Kip Hampton&#8217;s passing. Probably best known as the author of the Perl &amp; <font SIZE="-1">XML</font> column on <font SIZE="-1">XML</font>.com, he was a core contributor to AxKit, an <font SIZE="-1">XML</font> server platform that became an Apache Foundation project. He was a frequent speaker in the early days at <font SIZE="-1">OSCON,</font> and most recently at <font SIZE="-1">YAPC::NA</font> in Madison. He was frequently on irc.perl.org as ubu, generally in the #axkit-dahut community, the group responsible for <font SIZE="-1">YAPC::NA</font> Asheville in 2011. </p>
+<p> Jon Portnoy (AVENJ), a prolific Perl author and admired Gentoo community member, has passed away on August 10, 2016. He will be remembered and missed by all those who he came in contact with, and enriched with his intellect, wit, and spirit. </p>
+<p> It is with great sadness that we also note Kip Hampton&#8217;s passing. Probably best known as the author of the Perl &amp; XML column on XML.com, he was a core contributor to AxKit, an XML server platform that became an Apache Foundation project. He was a frequent speaker in the early days at OSCON, and most recently at YAPC::NA in Madison. He was frequently on irc.perl.org as ubu, generally in the #axkit-dahut community, the group responsible for YAPC::NA Asheville in 2011. </p>
 <p> Kip and his constant contributions to the community will be greatly missed.  </p>
 <h2>Acknowledgements</h2>
 <p> Perl 5.26.0 represents approximately 13 months of development since Perl 5.24.0 and contains approximately 360,000 lines of changes across 2,600 files from 86 authors. </p>
@@ -1668,12 +1668,12 @@ use &#8220;Foo::Bar&#8221;;<br />
 <p> Perl continues to flourish into its third decade thanks to a vibrant community of users and developers. The following people are known to have contributed the improvements that became Perl 5.26.0: </p>
 <p> Aaron Crane, Abigail, Ævar Arnfjörð Bjarmason, Alex Vandiver, Andreas König, Andreas Voegele, Andrew Fresh, Andy Lester, Aristotle Pagaltzis, Chad Granum, Chase Whitener, Chris &#8216;BinGOs&#8217; Williams, Chris Lamb, Christian Hansen, Christian Millour, Colin Newell, Craig A. Berry, Dagfinn Ilmari Mannsåker, Dan Collins, Daniel Dragan, Dave Cross, Dave Rolsky, David Golden, David H. Gutteridge, David Mitchell, Dominic Hargreaves, Doug Bell, E. Choroba, Ed Avis, Father Chrysostomos, François Perrad, Hauke D, H.Merijn Brand, Hugo van der Sanden, Ivan Pozdeev, James E Keenan, James Raspass, Jarkko Hietaniemi, Jerry D. Hedden, Jim Cromie, J. Nick Koston, John Lightsey, Karen Etheridge, Karl Williamson, Leon Timmermans, Lukas Mai, Matthew Horsfall, Maxwell Carey, Misty De Meo, Neil Bowers, Nicholas Clark, Nicolas R., Niko Tyni, Pali, Paul Marquess, Peter Avalos, Petr Písař, Pino Toscano, Rafael Garcia-Suarez, Reini Urban, Renee Baecker, Ricardo Signes, Richard Levitte, Rick Delaney, Salvador Fandiño, Samuel Thibault, Sawyer X, Sébastien Aperghis-Tramoni, Sergey Aleynikov, Shlomi Fish, Smylers, Stefan Seifert, Steffen Müller, Stevan Little, Steve Hay, Steven Humphrey, Sullivan Beck, Theo Buehler, Thomas Sibley, Todd Rinaldo, Tomasz Konojacki, Tony Cook, Unicode Consortium, Yaroslav Kuzmin, Yves Orton, Zefram. </p>
 <p> The list above is almost certainly incomplete as it is automatically generated from version control history. In particular, it does not include the names of the (very much appreciated) contributors who reported issues to the Perl bug tracker. </p>
-<p> Many of the changes included in this version originated in the <font SIZE="-1">CPAN</font> modules included in Perl&#8217;s core. We&#8217;re grateful to the entire <font SIZE="-1">CPAN</font> community for helping Perl to flourish. </p>
-<p> For a more complete list of all of Perl&#8217;s historical contributors, please see the <i></i><font SIZE="-1"><i>AUTHORS</i></font><i></i> file in the Perl source distribution.  </p>
+<p> Many of the changes included in this version originated in the CPAN modules included in Perl&#8217;s core. We&#8217;re grateful to the entire CPAN community for helping Perl to flourish. </p>
+<p> For a more complete list of all of Perl&#8217;s historical contributors, please see the <i></i><i>AUTHORS</i><i></i> file in the Perl source distribution.  </p>
 <h2>Reporting Bugs</h2>
 <p> If you find what you think is a bug, you might check the perl bug database at &lt;<a rel="nofollow" href="https://rt.perl.org/">https://rt.perl.org/</a>&gt;. There may also be information at &lt;<a rel="nofollow" href="http://www.perl.org/">http://www.perl.org/</a>&gt;, the Perl Home Page. </p>
 <p> If you believe you have an unreported bug, please run the perlbug program included with your release. Be sure to trim your bug down to a tiny but sufficient test case. Your bug report, along with the output of <code>&quot;perl -V&quot;</code>, will be sent off to <code>&quot;perlbug [at] perl.org&quot;</code> to be analysed by the Perl porting team. </p>
-<p> If the bug you are reporting has security implications which make it inappropriate to send to a publicly archived mailing list, then see ``<font SIZE="-1">SECURITY VULNERABILITY CONTACT INFORMATION&#8217;&#8216;</font> in perlsec for details of how to report the issue.  </p>
+<p> If the bug you are reporting has security implications which make it inappropriate to send to a publicly archived mailing list, then see ``SECURITY VULNERABILITY CONTACT INFORMATION&#8217;&#8216; in perlsec for details of how to report the issue.  </p>
 <h2>Give Thanks</h2>
 <p> If you wish to thank the Perl 5 Porters for the work we had done in Perl 5, you can do so by running the <code>&quot;perlthanks&quot;</code> program: </p>
 <pre><code>    perlthanks
@@ -1681,6 +1681,6 @@ use &#8220;Foo::Bar&#8221;;<br />
 <p> This will send an email to the Perl 5 Porters list with your show of thanks.  </p>
 <h2>SEE ALSO</h2>
 <p> The <i>Changes</i> file for an explanation of how to view exhaustive details on what changed. </p>
-<p> The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. </p>
-<p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
+<p> The <i></i><i>INSTALL</i><i></i> file for how to build Perl. </p>
+<p> The <i></i><i>README</i><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information. </p>

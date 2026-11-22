@@ -17,7 +17,7 @@ description: "cpanp – The CPANPLUS launcher"
 <p> <code>cpanp</code> [-]<code>xb</code> [&nbsp;<wbr>&#8211;[<code>no</code>-]<i>option</i>&#8230;&nbsp;<wbr>] </p>
 <p> <code>cpanp</code> [-]<code>o</code> [&nbsp;<wbr>&#8211;[<code>no</code>-]<i>option</i>&#8230;&nbsp;<wbr>] [&nbsp;<wbr><i>module</i>&#8230;&nbsp;<wbr>]</p>
 <h2>DESCRIPTION</h2>
-<p> This script launches the <font SIZE="-1"><code>CPANPLUS</code></font> utility to perform various operations from the command line. If it&#8217;s invoked without arguments, an interactive shell is executed by default. </p>
+<p> This script launches the <code>CPANPLUS</code> utility to perform various operations from the command line. If it&#8217;s invoked without arguments, an interactive shell is executed by default. </p>
 <p> Optionally, it can take a single-letter switch and one or more argument, to perform the associated action on each arguments. A summary of the available commands is listed below; <tt>&quot;cpanp -h&quot;</tt> provides a detailed list. </p>
 <pre><code>
 h #help information

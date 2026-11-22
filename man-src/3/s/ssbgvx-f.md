@@ -10,7 +10,7 @@ description: "ssbgvx.f –"
 <p>ssbgvx.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>ssbgvx</code> (JOBZ, RANGE, UPLO, N, KA, KB, AB, LDAB, BB, LDBB, Q, LDQ, VL, VU, IL, IU, ABSTOL, M, W, Z, LDZ, WORK, IWORK, IFAIL, INFO)<br />
+<p>subroutine <code>ssbgvx</code> (JOBZ, RANGE, UPLO, N, KA, KB, AB, LDAB, BB, LDBB, Q, LDQ, VL, VU, IL, IU, ABSTOL, M, W, Z, LDZ, WORK, IWORK, IFAIL, INFO)<br/>
  <i></i><code>SSBGST</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ssbgvx (characterJOBZ, characterRANGE, characterUPLO, integerN, integerKA, integerKB, real, dimension( ldab, * )AB, integerLDAB, real, dimension( ldbb, * )BB, integerLDBB, real, dimension( ldq, * )Q, integerLDQ, realVL, realVU, integerIL, integerIU, realABSTOL, integerM, real, dimension( * )W, real, dimension( ldz, * )Z, integerLDZ, real, dimension( * )WORK, integer, dimension( * )IWORK, integer, dimension( * )IFAIL, integerINFO)</h3>

@@ -82,7 +82,7 @@ description: "mkfs.jffs2 – Create a JFFS2 file system image from directory"
 <p> JFFS2 limits device major and minor numbers to 8 bits each. Some consider this a bug. </p>
 <p> <code>mkfs.jffs2</code> does not properly handle hard links in the input directory structure. Currently, hard linked files will be expanded to multiple identical files in the output image.</p>
 <h2>AUTHORS</h2>
-<p> David Woodhouse<br />
+<p> David Woodhouse<br/>
  Manual page written by David Schleef &lt;ds [at] schleef.org&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-mkfs/">mkfs</a></code>(8), <code>mkfs.jffs</code>(1), <code><a href="/docs/linux/man/1-fakeroot/">fakeroot</a></code>(1) </p>

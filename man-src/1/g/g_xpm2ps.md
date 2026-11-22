@@ -21,56 +21,56 @@ description: "xpm2ps – convert XPM (XPixelMap) file to postscript"
 <p> With the <code> -rainbow</code> option dull grey-scale matrices can be turned into attractive color pictures. </p>
 <p> Merged or rainbowed matrices can be written to an XPixelMap file with the <code> -xpm</code> option.</p>
 <h2>FILES</h2>
-<p> <code>-f</code><i> root.xpm</i> <code>Input</code><br />
+<p> <code>-f</code><i> root.xpm</i> <code>Input</code><br/>
 &nbsp;<wbr>X PixMap compatible matrix file&nbsp;<wbr> </p>
-<p> <code>-f2</code><i> root2.xpm</i> <code>Input, Opt.</code><br />
+<p> <code>-f2</code><i> root2.xpm</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>X PixMap compatible matrix file&nbsp;<wbr> </p>
-<p> <code>-di</code><i> ps.m2p</i> <code>Input, Opt., Lib.</code><br />
+<p> <code>-di</code><i> ps.m2p</i> <code>Input, Opt., Lib.</code><br/>
 &nbsp;<wbr>Input file for mat2ps&nbsp;<wbr> </p>
-<p> <code>-do</code><i> out.m2p</i> <code>Output, Opt.</code><br />
+<p> <code>-do</code><i> out.m2p</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>Input file for mat2ps&nbsp;<wbr> </p>
-<p> <code>-o</code><i> plot.eps</i> <code>Output, Opt.</code><br />
+<p> <code>-o</code><i> plot.eps</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>Encapsulated PostScript&nbsp;<wbr>(tm)&nbsp;<wbr>file&nbsp;<wbr> </p>
-<p> <code>-xpm</code><i> root.xpm</i> <code>Output, Opt.</code><br />
+<p> <code>-xpm</code><i> root.xpm</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>X PixMap compatible matrix file&nbsp;<wbr> </p>
 <h2>OTHER OPTIONS</h2>
-<p> <code>-[no]h</code><i>no </i><br />
+<p> <code>-[no]h</code><i>no </i><br/>
 &nbsp;<wbr>Print help info and quit </p>
-<p> <code>-nice</code><i> int</i><code> 0</code><br />
+<p> <code>-nice</code><i> int</i><code> 0</code><br/>
 &nbsp;<wbr>Set the nicelevel </p>
-<p> <code>-[no]w</code><i>no </i><br />
+<p> <code>-[no]w</code><i>no </i><br/>
 &nbsp;<wbr>View output xvg, xpm, eps and pdb files </p>
-<p> <code>-[no]frame</code><i>yes </i><br />
+<p> <code>-[no]frame</code><i>yes </i><br/>
 &nbsp;<wbr>Display frame, ticks, labels, title and legend </p>
-<p> <code>-title</code><i> enum</i><code> top</code><br />
+<p> <code>-title</code><i> enum</i><code> top</code><br/>
 &nbsp;<wbr>Show title at:&nbsp;<wbr><code>&nbsp;<wbr>top</code>,&nbsp;<wbr><code>&nbsp;<wbr>once</code>,&nbsp;<wbr><code>&nbsp;<wbr>ylabel</code>&nbsp;<wbr>or&nbsp;<wbr><code>&nbsp;<wbr>none</code> </p>
-<p> <code>-[no]yonce</code><i>no </i><br />
+<p> <code>-[no]yonce</code><i>no </i><br/>
 &nbsp;<wbr>Show y-label only once </p>
-<p> <code>-legend</code><i> enum</i><code> both</code><br />
+<p> <code>-legend</code><i> enum</i><code> both</code><br/>
 &nbsp;<wbr>Show legend:&nbsp;<wbr><code>&nbsp;<wbr>both</code>,&nbsp;<wbr><code>&nbsp;<wbr>first</code>,&nbsp;<wbr><code>&nbsp;<wbr>second</code>&nbsp;<wbr>or&nbsp;<wbr><code>&nbsp;<wbr>none</code> </p>
-<p> <code>-diag</code><i> enum</i><code> first</code><br />
+<p> <code>-diag</code><i> enum</i><code> first</code><br/>
 &nbsp;<wbr>Diagonal:&nbsp;<wbr><code>&nbsp;<wbr>first</code>,&nbsp;<wbr><code>&nbsp;<wbr>second</code>&nbsp;<wbr>or&nbsp;<wbr><code>&nbsp;<wbr>none</code> </p>
-<p> <code>-size</code><i> real</i><code> 400 </code><br />
+<p> <code>-size</code><i> real</i><code> 400 </code><br/>
 &nbsp;<wbr>Horizontal size of the matrix in ps units </p>
-<p> <code>-bx</code><i> real</i><code> 0 </code><br />
+<p> <code>-bx</code><i> real</i><code> 0 </code><br/>
 &nbsp;<wbr>Element x-size, overrides -size&nbsp;<wbr>(also y-size when -by is not set) </p>
-<p> <code>-by</code><i> real</i><code> 0 </code><br />
+<p> <code>-by</code><i> real</i><code> 0 </code><br/>
 &nbsp;<wbr>Element y-size </p>
-<p> <code>-rainbow</code><i> enum</i><code> no</code><br />
+<p> <code>-rainbow</code><i> enum</i><code> no</code><br/>
 &nbsp;<wbr>Rainbow colors, convert white to:&nbsp;<wbr><code>&nbsp;<wbr>no</code>,&nbsp;<wbr><code>&nbsp;<wbr>blue</code>&nbsp;<wbr>or&nbsp;<wbr><code>&nbsp;<wbr>red</code> </p>
-<p> <code>-gradient</code><i> vector</i><code> 0 0 0</code><br />
+<p> <code>-gradient</code><i> vector</i><code> 0 0 0</code><br/>
 &nbsp;<wbr>Re-scale colormap to a smooth gradient from white&nbsp;<wbr>{1,1,1}&nbsp;<wbr>to&nbsp;<wbr>{r,g,b} </p>
-<p> <code>-skip</code><i> int</i><code> 1</code><br />
+<p> <code>-skip</code><i> int</i><code> 1</code><br/>
 &nbsp;<wbr>only write out every nr-th row and column </p>
-<p> <code>-[no]zeroline</code><i>no </i><br />
+<p> <code>-[no]zeroline</code><i>no </i><br/>
 &nbsp;<wbr>insert line in xpm matrix where axis label is zero </p>
-<p> <code>-legoffset</code><i> int</i><code> 0</code><br />
+<p> <code>-legoffset</code><i> int</i><code> 0</code><br/>
 &nbsp;<wbr>Skip first N colors from xpm file for the legend </p>
-<p> <code>-combine</code><i> enum</i><code> halves</code><br />
+<p> <code>-combine</code><i> enum</i><code> halves</code><br/>
 &nbsp;<wbr>Combine two matrices:&nbsp;<wbr><code>&nbsp;<wbr>halves</code>,&nbsp;<wbr><code>&nbsp;<wbr>add</code>,&nbsp;<wbr><code>&nbsp;<wbr>sub</code>,&nbsp;<wbr><code>&nbsp;<wbr>mult</code>&nbsp;<wbr>or&nbsp;<wbr><code>&nbsp;<wbr>div</code> </p>
-<p> <code>-cmin</code><i> real</i><code> 0 </code><br />
+<p> <code>-cmin</code><i> real</i><code> 0 </code><br/>
 &nbsp;<wbr>Minimum for combination output </p>
-<p> <code>-cmax</code><i> real</i><code> 0 </code><br />
+<p> <code>-cmax</code><i> real</i><code> 0 </code><br/>
 &nbsp;<wbr>Maximum for combination output </p>
 <h2>SEE ALSO</h2>
 <p> <code>gromacs(7)</code> </p>

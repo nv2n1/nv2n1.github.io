@@ -11,33 +11,33 @@ description: "Balsa – the GNOME email client."
 <p>&nbsp;<wbr>Balsa &#8211; the GNOME email client. </p>
 <h2>DESCRIPTION</h2>
 <p> You can use Balsa to fetch, read, write and send e-mails. </p>
-<p> It supports<br />
-&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>local mailboxes in maildir, mbox and/or mh format,<br />
-&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>nested mailboxes,<br />
-&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>protocols POP3, IMAP and SMTP,<br />
-&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>multithreaded mail retrieval,<br />
-&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>GnuPG/GPG encryption, LDAP, Kerberos and SSL,<br />
-&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>MIME&nbsp;<wbr>(view images, save parts),<br />
-&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>multiple character sets,<br />
-&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>GPE address book,<br />
-&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>printing and spell-checking.&nbsp;<wbr>&nbsp;<wbr><br />
-&nbsp;<wbr>&nbsp;<wbr> Balsa is an integral part of the GNOME desktop environment, but it can<br />
+<p> It supports<br/>
+&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>local mailboxes in maildir, mbox and/or mh format,<br/>
+&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>nested mailboxes,<br/>
+&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>protocols POP3, IMAP and SMTP,<br/>
+&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>multithreaded mail retrieval,<br/>
+&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>GnuPG/GPG encryption, LDAP, Kerberos and SSL,<br/>
+&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>MIME&nbsp;<wbr>(view images, save parts),<br/>
+&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>multiple character sets,<br/>
+&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>GPE address book,<br/>
+&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>printing and spell-checking.&nbsp;<wbr>&nbsp;<wbr><br/>
+&nbsp;<wbr>&nbsp;<wbr> Balsa is an integral part of the GNOME desktop environment, but it can<br/>
 &nbsp;<wbr>&nbsp;<wbr>also be used standalone though it may print some error messages then. </p>
-<p> For help on using Balsa, see the documentation in its help menu using<br />
+<p> For help on using Balsa, see the documentation in its help menu using<br/>
 &nbsp;<wbr>&nbsp;<wbr>Yelp Gnome 2 help/documentation browser. </p>
-<p> This man page tells about the options of the &#8216;<code>balsa</code>&#8216; command,<br />
+<p> This man page tells about the options of the &#8216;<code>balsa</code>&#8216; command,<br/>
 &nbsp;<wbr>&nbsp;<wbr>which is used to start Balsa.</p>
 <dl>
 </dl>
-<p> Most of these options let you tell Balsa that when it starts<br />
-&nbsp;<wbr>&nbsp;<wbr>it should immediately open a mailbox, or the composer ,<br />
+<p> Most of these options let you tell Balsa that when it starts<br/>
+&nbsp;<wbr>&nbsp;<wbr>it should immediately open a mailbox, or the composer ,<br/>
 &nbsp;<wbr>&nbsp;<wbr>and things like that.</p>
 <dl>
 </dl>
 <p> There is also an option to debug POP connections. </p>
-<p> When you start Balsa from the command line of an (x)terminal,<br />
-&nbsp;<wbr>&nbsp;<wbr>not only can you use the command line options described below,<br />
-&nbsp;<wbr>&nbsp;<wbr>any error messages are printed to that terminal too<br />
+<p> When you start Balsa from the command line of an (x)terminal,<br/>
+&nbsp;<wbr>&nbsp;<wbr>not only can you use the command line options described below,<br/>
+&nbsp;<wbr>&nbsp;<wbr>any error messages are printed to that terminal too<br/>
 &nbsp;<wbr>&nbsp;<wbr>(whether you execute that command in the background or not). </p>
 <h2>SYNTAX</h2>
 <p> <code>balsa </code>[ <code>&nbsp;<wbr> </code> <code>&#8211;help </code>] [ <code>&nbsp;<wbr> </code> <code>&#8211;version </code>] [ <code>-c </code>| <code>&#8211;check-mail </code>] [( <code>-m </code>| <code>&#8211;compose=</code>)<i>email-address </i>] [( <code>-a </code>| <code>&#8211;attach=</code>)<i>filename </i>] [( <code>-o </code>| <code>&#8211;open-mailbox=)</code><i>mailbox</i>[<i>:mailbox</i>]&#8230; ] [ <code>-u </code>| <code>&#8211;open-unread-mailbox </code>] [ <code>-d </code>| <code>&#8211;debug-pop </code>] [ <code>-D </code>| <code>&#8211;debug-imap </code>]</p>
@@ -45,14 +45,14 @@ description: "Balsa – the GNOME email client."
 <p> <code>-? </code>, <code>&#8211;help</code></p>
 <dl>
 <dt>
-</dt><dd> Displays a message describing command line syntax of Balsa,<br />
-&nbsp;<wbr>&nbsp;<wbr>giving many more options than are presented in this man page;<br />
+</dt><dd> Displays a message describing command line syntax of Balsa,<br/>
+&nbsp;<wbr>&nbsp;<wbr>giving many more options than are presented in this man page;<br/>
 &nbsp;<wbr>&nbsp;<wbr>Balsa exits immediately after that.</dd>
 <dl>
 </dl>
-<p> Some of these options work (and thus should be in this man page)<br />
-&nbsp;<wbr>&nbsp;<wbr>for example &#8211;display ,<br />
-&nbsp;<wbr>&nbsp;<wbr>others may not &#8211;<br />
+<p> Some of these options work (and thus should be in this man page)<br/>
+&nbsp;<wbr>&nbsp;<wbr>for example &#8211;display ,<br/>
+&nbsp;<wbr>&nbsp;<wbr>others may not &#8211;<br/>
 &nbsp;<wbr>&nbsp;<wbr>for example &#8211;disable-crash-dialog which is provided by GNOME GUI Library.</p>
 <dl>
 </dl>
@@ -71,24 +71,24 @@ description: "Balsa – the GNOME email client."
 <p> -m </code><i>email-address </i>, <code>&#8211;compose=</code><i>email-address</i></p>
 <dl>
 <dt>
-</dt><dd> When invoked with this option,<br />
-&nbsp;<wbr>&nbsp;<wbr>Balsa will open its email-composer for a new message<br />
+</dt><dd> When invoked with this option,<br/>
+&nbsp;<wbr>&nbsp;<wbr>Balsa will open its email-composer for a new message<br/>
 &nbsp;<wbr>&nbsp;<wbr>with the specified address in the To: field.</dd>
 <dl>
 </dl>
-<p> The email-address parameter can be specified<br />
-&nbsp;<wbr>&nbsp;<wbr>as user [at] host, e.g.&nbsp;<wbr><code>balsa-list [at] gnome.org&nbsp;<wbr></code>,<br />
+<p> The email-address parameter can be specified<br/>
+&nbsp;<wbr>&nbsp;<wbr>as user [at] host, e.g.&nbsp;<wbr><code>balsa-list [at] gnome.org&nbsp;<wbr></code>,<br/>
 &nbsp;<wbr>&nbsp;<wbr>or in URL format, e.g.&nbsp;<wbr><code>&quot;Balsa List&nbsp;<wbr>&lt;balsa-list [at] gnome.org&gt;&quot;&nbsp;<wbr></code>.</p>
 <dl>
 </dl>
-<p> You can use Balsa as mailto protocol handler<br />
-&nbsp;<wbr>&nbsp;<wbr>by, in the URL handlers section of the GNOME control center,<br />
+<p> You can use Balsa as mailto protocol handler<br/>
+&nbsp;<wbr>&nbsp;<wbr>by, in the URL handlers section of the GNOME control center,<br/>
 &nbsp;<wbr>&nbsp;<wbr>setting the mailto protocol command to :&nbsp;<wbr><code>balsa -m&nbsp;<wbr>&quot;%s&quot;</code></dl>
 <p> <code>-a </code><i>FILENAME </i>, <code>&#8211;attach=</code><i>FILENAME</i></p>
 <dl>
 <dt>
-</dt><dd> When invoked with this option,<br />
-&nbsp;<wbr>&nbsp;<wbr>Balsa will open its email-composer for a new message<br />
+</dt><dd> When invoked with this option,<br/>
+&nbsp;<wbr>&nbsp;<wbr>Balsa will open its email-composer for a new message<br/>
 &nbsp;<wbr>&nbsp;<wbr>with the specified file already attached to the message.</dd>
 <dl>
 </dl>
@@ -107,7 +107,7 @@ description: "Balsa – the GNOME email client."
 <p> <code>-d </code>, <code>&#8211;debug-pop</code></p>
 <dl>
 <dt>
-</dt><dd> Makes Balsa print the POP3 communication to stderr,<br />
+</dt><dd> Makes Balsa print the POP3 communication to stderr,<br/>
 &nbsp;<wbr>&nbsp;<wbr>including the full text of every message.</dd>
 <dl>
 </dl>
@@ -123,17 +123,17 @@ description: "Balsa – the GNOME email client."
 <h2>WEBSITE</h2>
 <p> Balsa&#8217;s website is <i> <a rel="nofollow" href="http://balsa.gnome.org">http://balsa.gnome.org</a></i> </p>
 <h2>SUGGESTIONS AND BUG REPORTS</h2>
-<p> Any bugs found in Balsa can be reported through<br />
-&nbsp;<wbr>&nbsp;<wbr>the Balsa Developer mailing list at&nbsp;<wbr><code>balsa-list [at] gnome.org&nbsp;<wbr></code>,<br />
+<p> Any bugs found in Balsa can be reported through<br/>
+&nbsp;<wbr>&nbsp;<wbr>the Balsa Developer mailing list at&nbsp;<wbr><code>balsa-list [at] gnome.org&nbsp;<wbr></code>,<br/>
 &nbsp;<wbr>&nbsp;<wbr>or the online bug-tracking system at&nbsp;<wbr><code><a rel="nofollow" href="http://bugzilla.gnome.org/">http://bugzilla.gnome.org/</a>&nbsp;<wbr></code>.</p>
 <dl>
 </dl>
 <p> See <a rel="nofollow" href="http://balsa.gnome.org/bugs.html">http://balsa.gnome.org/bugs.html</a> for more information on reporting Balsa bugs. </p>
 <p> Before reporting bugs, please check to see if the bug is mentioned in the FAQ&#8217;s or the mailing list archive <i> <a rel="nofollow" href="http://mail.gnome.org/mailman/listinfo/balsa-list">http://mail.gnome.org/mailman/listinfo/balsa-list</a></i> </p>
-<p> When reporting Balsa bugs, it is important to include<br />
-&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>a reliable way to reproduce the bug,<br />
-&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>version number of Balsa&nbsp;<wbr>(as well as GTK and GNOME),<br />
-&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>OS name and version,<br />
+<p> When reporting Balsa bugs, it is important to include<br/>
+&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>a reliable way to reproduce the bug,<br/>
+&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>version number of Balsa&nbsp;<wbr>(as well as GTK and GNOME),<br/>
+&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>OS name and version,<br/>
 &nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>any relevant hardware specs. </p>
 <p> If a bug is causing a crash, it is very useful if a stack trace can be provided.</p>
 <dl>
@@ -148,7 +148,7 @@ description: "Balsa – the GNOME email client."
 <p> <code>mailcap </code>(5) &#8211; metamail capabilities file (package: mime-support)</p>
 <dl>
 </dl>
-<p> <code>metamail </code>(1) &#8211; infrastructure for mailcap-based multimedia mail<br />
+<p> <code>metamail </code>(1) &#8211; infrastructure for mailcap-based multimedia mail<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(package: metamail)</p>
 <dl>
 </dl>

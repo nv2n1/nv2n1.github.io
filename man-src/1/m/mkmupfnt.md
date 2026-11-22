@@ -17,10 +17,10 @@ description: "mkmupfnt – create fontfile for overriding Mup fonts"
 <p> The <i>Mup_font_name</i> is the name of the Mup font you want to override, either an abbreviated name, like &quot;PR&quot; or a full name, like &quot;palatino rom&quot;. </p>
 <p> The <i>outfile</i> is the file that will be generated, which will contain character size and other information, to use with Mup&#8217;s &quot;fontfile&quot; statement. </p>
 <p> The final optional <i>file</i> argument is the name of a file that contains PostScript to be placed at the end of the Mup PostScript prolog. This might be useful if you have a font whose implementation PostScript could not find on its own. For example, if you&#8217;ve written your own font implementation, you could put it in the given <i>file</i>. The actual characters produced by the font need not be similar to those in the font being replaced; they could be in some other alphabet, or hieroglyphics or whatever you wish. However, see the CAVEATS section for limitations. </p>
-<p> An an example, suppose you want Mup to use the Helvetica-Narrow font rather than the plain Helvetica font. You could use:<br />
- mkmupfnt Helvetica-Narrow HR helvnarr<br />
- to generate a Mup fontfile, then in your Mup program put:<br />
- fontfile &quot;helvnarr&quot;<br />
+<p> An an example, suppose you want Mup to use the Helvetica-Narrow font rather than the plain Helvetica font. You could use:<br/>
+ mkmupfnt Helvetica-Narrow HR helvnarr<br/>
+ to generate a Mup fontfile, then in your Mup program put:<br/>
+ fontfile &quot;helvnarr&quot;<br/>
  Then anything that would normally be printed in Helvetica will come out in Helvetica-Narrow instead.</p>
 <h2>FILE FORMAT</h2>
 <p> Mup requires a <i>fontfile</i> to be in a fairly rigid format. This section describes the format of the file that is produced by mkmupfnt. The file can contain comment lines, which have a &#8216;#&#8217; in column 1. Otherwise the format is: </p>
@@ -41,7 +41,7 @@ description: "mkmupfnt – create fontfile for overriding Mup fonts"
 <h2>FILES</h2>
 <p> mkmupfnt.ps PostScript program that extracts font size information</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-gs/">gs</a>(1), <a href="/docs/linux/man/1-mup/">mup</a>(1).<br />
+<p> <a href="/docs/linux/man/1-gs/">gs</a>(1), <a href="/docs/linux/man/1-mup/">mup</a>(1).<br/>
  Mup &#8212; Music Publisher User&#8217;s Guide</p>
 <h2>CAVEATS</h2>
 <p> You must have ghostscript (gs or gs386.exe) in your PATH and it must be built to include the &quot;bit&quot; device. </p>

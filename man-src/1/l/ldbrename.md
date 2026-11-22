@@ -37,7 +37,7 @@ description: "ldbrename – Edit LDB databases using your favorite editor"
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/3-ldb/">ldb</a>(3), ldbmodify, ldbdel, <a href="/docs/linux/man/5-ldif/">ldif</a>(5)</p>
 <h2>AUTHOR</h2>
-<p> ldb was written by m[blue]<code>Andrew Tridgell</code>m[]<font SIZE="-2">[1]</font>. </p>
+<p> ldb was written by m[blue]<code>Andrew Tridgell</code>m[][1]. </p>
 <p> If you wish to report a problem or make a suggestion then please see the m[blue]<code><a rel="nofollow" href="http://ldb.samba.org/">http://ldb.samba.org/</a></code>m[] web site for current contact and maintainer information. </p>
 <p> This manpage was written by Jelmer Vernooij.</p>
 <h2>NOTES</h2>

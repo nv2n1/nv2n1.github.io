@@ -13,21 +13,21 @@ description: "sc::ExtendedHuckelWfn –"
 <h3>Public Member Functions</h3>
 <p><code>ExtendedHuckelWfn</code> (<code>StateIn</code> &amp;) </p>
 <p> <code>ExtendedHuckelWfn</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;) </p>
-<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br />
- <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br />
- double <code>occupation</code> (int irrep, int vectornum)<br />
- <i>Returns the occupation. </i><br />
- <code>RefSCMatrix</code> <code>oso_eigenvectors</code> ()<br />
- <i>Returns the orthogonal MO (columns) to orthogonal-SO (rows) transformation matrix. </i><br />
- <code>RefDiagSCMatrix</code> <code>eigenvalues</code> ()<br />
- <i>Returns the MO basis eigenvalues. </i><br />
- <code>RefSymmSCMatrix</code> <code>density</code> ()<br />
- <i>Returns the </i><code>SO</code> density.<br />
- int <code>spin_polarized</code> ()<br />
- <i>Return 1 if the alpha density is not equal to the beta density. </i><br />
- int <code>spin_unrestricted</code> ()<br />
- <i>Return 1 if the alpha orbitals are not equal to the beta orbitals. </i><br />
- int <code>value_implemented</code> () const<br />
+<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br/>
+ <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br/>
+ double <code>occupation</code> (int irrep, int vectornum)<br/>
+ <i>Returns the occupation. </i><br/>
+ <code>RefSCMatrix</code> <code>oso_eigenvectors</code> ()<br/>
+ <i>Returns the orthogonal MO (columns) to orthogonal-SO (rows) transformation matrix. </i><br/>
+ <code>RefDiagSCMatrix</code> <code>eigenvalues</code> ()<br/>
+ <i>Returns the MO basis eigenvalues. </i><br/>
+ <code>RefSymmSCMatrix</code> <code>density</code> ()<br/>
+ <i>Returns the </i><code>SO</code> density.<br/>
+ int <code>spin_polarized</code> ()<br/>
+ <i>Return 1 if the alpha density is not equal to the beta density. </i><br/>
+ int <code>spin_unrestricted</code> ()<br/>
+ <i>Return 1 if the alpha orbitals are not equal to the beta orbitals. </i><br/>
+ int <code>value_implemented</code> () const<br/>
  <i>Information about the availability of values, gradients, and hessians. </i></p>
 <h2>Member Function Documentation</h2>
 <h3><code>RefDiagSCMatrix</code> sc::ExtendedHuckelWfn::eigenvalues () [virtual]</h3>

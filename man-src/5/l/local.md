@@ -47,7 +47,7 @@ description: "local.users – The SELinux local users configuration file"
 <dd>The current and clearance levels that the user can run. These are separated by a hyphen &#8216;<code>&#8211;</code>&#8216; as shown in the <code>EXAMPLE</code> section.</dd></dl>
 </dl>
 <h2>Example</h2>
-<p># ./users/local.users<br />
+<p># ./users/local.users<br/>
  user test_u roles staff_r level s0 range s0 &#8211; s15:c0.c1023;</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-selinux/">selinux</a></code>(8), <code><a href="/docs/linux/man/8-semanage/">semanage</a></code>(8), <code>selinux_users_path</code>(3), <code><a href="/docs/linux/man/5-selinux_config/">selinux_config</a></code>(5), <code><a href="/docs/linux/man/3-selinux_mkload_policy/">selinux_mkload_policy</a></code>(3) </p>

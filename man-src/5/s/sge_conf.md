@@ -100,7 +100,7 @@ description: "xxqs_name_sxx_conf – xxQS_NAMExx configuration files"
 <p> The same considerations (above) apply as for a prolog when an epilog is written in shell script. </p>
 <p> See for the significance of exit codes returned by the epilog.</p>
 <h3><code>shell_start_mode</code></h3>
-<p><code>Note:</code> Deprecated, may be removed in future release.<br />
+<p><code>Note:</code> Deprecated, may be removed in future release.<br/>
  This parameter defines the mechanisms which are used to actually invoke the job scripts on the execution hosts. The following values are recognized:</p>
 <dl>
 <dt><i>unix_behavior</i></dt>
@@ -108,8 +108,8 @@ description: "xxqs_name_sxx_conf – xxQS_NAMExx configuration files"
 <dt><i>posix_compliant</i></dt>
 <dd>POSIX does not consider first script line comments such a `#!/bin/csh&#8217; as significant. The POSIX standard for batch queueing systems (P1003.2d) therefore requires a compliant queueing system to ignore such lines, but to use user-specified or configured default command interpreters instead. Thus, if <code>shell_start_mode</code> is set to <i>posix_compliant</i> xxQS_NAMExx will either use the command interpreter indicated by the <code>-S</code> option of the command or the <code>shell</code> parameter of the queue to be used (see for details).</dd>
 <dt><i>script_from_stdin</i></dt>
-<dd>Setting the <code>shell_start_mode</code> parameter either to <i>posix_compliant</i> or <i>unix_behavior</i> requires you to set the umask in use for such that every user has read access to the active_jobs directory in the spool directory of the corresponding execution daemon. In case you have <code>prolog</code> and <code>epilog</code> scripts configured, they also need to be readable by any user who may execute jobs.<br />
- If this violates your site&#8217;s security policies you may want to set <code>shell_start_mode</code> to <i>script_from_stdin</i>. This will force xxQS_NAMExx to open the job script as well as the epilog and prolog scripts for reading into STDIN as root (if was started as root) before changing to the job owner&#8217;s user account. The script is then fed into the STDIN stream of the command interpreter indicated by the <code>-S</code> option of the command or the <code>shell</code> parameter of the queue to be used (see for details).<br />
+<dd>Setting the <code>shell_start_mode</code> parameter either to <i>posix_compliant</i> or <i>unix_behavior</i> requires you to set the umask in use for such that every user has read access to the active_jobs directory in the spool directory of the corresponding execution daemon. In case you have <code>prolog</code> and <code>epilog</code> scripts configured, they also need to be readable by any user who may execute jobs.<br/>
+ If this violates your site&#8217;s security policies you may want to set <code>shell_start_mode</code> to <i>script_from_stdin</i>. This will force xxQS_NAMExx to open the job script as well as the epilog and prolog scripts for reading into STDIN as root (if was started as root) before changing to the job owner&#8217;s user account. The script is then fed into the STDIN stream of the command interpreter indicated by the <code>-S</code> option of the command or the <code>shell</code> parameter of the queue to be used (see for details).<br/>
  Thus setting <code>shell_start_mode</code> to <i>script_from_stdin</i> also implies <i>posix_compliant</i> behavior. <code>Note</code>, however, that feeding scripts into the STDIN stream of a command interpreter may cause trouble if commands like <i><a href="/docs/linux/man/1-rsh/">rsh</a></i>(1) are invoked inside a job script as they also process the STDIN stream of the command interpreter. These problems can usually be resolved by redirecting the STDIN channel of those commands to come from /dev/null (e.g. rsh host date &lt; /dev/null). <code>Note also</code>, that any command-line options associated with the job are passed to the executing shell. The shell will only forward them to the job if they are not recognized as valid shell options.</dd></dl>
 <p> Changes to <code>shell_start_mode</code> will take immediate effect. The default for <code>shell_start_mode</code> is <i>posix_compliant</i>. </p>
 <p> This value is a global configuration parameter only. It cannot be overwritten by the execution host local configuration.</p>
@@ -220,7 +220,7 @@ description: "xxqs_name_sxx_conf – xxQS_NAMExx configuration files"
 <p> Changing <code>auto_user_delete_time</code> will affect the deletion time for all users with active jobs. </p>
 <p> This value is a global configuration parameter only. It cannot be overwritten by the execution host local configuration.</p>
 <h3><code>set_token_cmd</code></h3>
-<p><code>NB. If the qmaster spool area is world-readable for non-admin users, you must take steps to encrypt the credentials, since they are stored there after job submission.</code><br />
+<p><code>NB. If the qmaster spool area is world-readable for non-admin users, you must take steps to encrypt the credentials, since they are stored there after job submission.</code><br/>
  <code>Set_token_cmd</code> points to a command which sets and extends AFS tokens for xxQS_NAMExx jobs. It is run by It expects two command line parameters: </p>
 <dl>
 <dd>
@@ -281,7 +281,7 @@ forge -u $1 -t $2 | SetToken
 <dd>If this parameter is set, the application cannot set itself to the error state. Without this parameter jobs returning the value 100 are set to the error state (and therefore can be manually rescheduled by clearing the error state). This can be used to set the job to the error state when a starting condition of the application is not fulfilled before the application itself has been started, or when a clean up procedure (e.g. in the epilog) decides that it is necessary to run the job again. To do so, return 100 in the prolog, pe_start, job script, pe_stop or epilog script.</dd></dl>
 <dl>
 <dt><i>DISABLE_AUTO_RESCHEDULING</i></dt>
-<dd><code>Note:</code> Deprecated, may be removed in future release.<br />
+<dd><code>Note:</code> Deprecated, may be removed in future release.<br/>
  If set to &quot;true&quot; or &quot;1&quot;, the <i>reschedule_unknown</i> parameter is not taken into account.</dd></dl>
 <dl>
 <dt><i>ENABLE_RESCHEDULE_KILL</i></dt>
@@ -365,7 +365,7 @@ forge -u $1 -t $2 | SetToken
 <p>This is used for passing additional parameters to the xxQS_NAMExx execution daemon. The following values are recognized:</p>
 <dl>
 <dt><i>ACCT_RESERVED_USAGE</i></dt>
-<dd>If this parameter is set to true, the usage of &quot;reserved&quot; (allocated) resources is reported in the accounting entries <code>cpu</code>, <code>mem</code>, and <code>maxvmem</code> instead of the measured usage. The live usage values reported by are affected similarly. This means that the &quot;wall clock&quot; time (end-start) is reported instead of CPU time, memory usage is memory allocation times wall clock time (which is only computable if the job requests h_vmem or s_vmem), and maxvmem is the requested h_vmem or s_vmem; the same scaling by slots is done as without this option.<br />
+<dd>If this parameter is set to true, the usage of &quot;reserved&quot; (allocated) resources is reported in the accounting entries <code>cpu</code>, <code>mem</code>, and <code>maxvmem</code> instead of the measured usage. The live usage values reported by are affected similarly. This means that the &quot;wall clock&quot; time (end-start) is reported instead of CPU time, memory usage is memory allocation times wall clock time (which is only computable if the job requests h_vmem or s_vmem), and maxvmem is the requested h_vmem or s_vmem; the same scaling by slots is done as without this option.<br/>
  Note that both the wall clock and CPU times are normally available (see so this option loses information, and &quot;reserved&quot; here has nothing to do with advance/resource reservation. See also <i>SHARETREE_RESERVED_USAGE</i> below.</dd></dl>
 <dl>
 <dt><i>ENABLE_WINDOMACC</i></dt>
@@ -378,8 +378,8 @@ forge -u $1 -t $2 | SetToken
 <dd>This value should only be set for debugging purposes. If set to true, the execution daemon will not remove the spool directory maintained by for a job, or cgroup directories if cgroups are in use under Linux.</dd></dl>
 <dl>
 <dt><i>PTF_MIN_PRIORITY</i>, <i>PTF_MAX_PRIORITY</i></dt>
-<dd>The maximum/minimum priority which xxQS_NAMExx will assign to a job. Typically this is a negative/positive value in the range of -20 (maximum) to 19 (minimum) for systems which allow setting of priorities with the <i><a href="/docs/linux/man/2-nice/">nice</a></i>(2) system call. Other systems may provide different ranges.<br />
- The default priority range (which varies from system to system) is installed either by removing the parameters, or by setting a value of -999.<br />
+<dd>The maximum/minimum priority which xxQS_NAMExx will assign to a job. Typically this is a negative/positive value in the range of -20 (maximum) to 19 (minimum) for systems which allow setting of priorities with the <i><a href="/docs/linux/man/2-nice/">nice</a></i>(2) system call. Other systems may provide different ranges.<br/>
+ The default priority range (which varies from system to system) is installed either by removing the parameters, or by setting a value of -999.<br/>
  See the &quot;messages&quot; file of the execution daemon for the predefined default value on your hosts. The values are logged during the startup of the execution daemon.</dd></dl>
 <dl>
 <dt><i>PROF_EXECD</i></dt>
@@ -392,19 +392,19 @@ forge -u $1 -t $2 | SetToken
 <dd>With this parameter it is possible to modify the notification signal for the signal SIGSTOP (see the <i>-notify</i> parameter of The parameter either accepts signal names (use the <i>-l</i> option of <i><a href="/docs/linux/man/1-kill/">kill</a></i>(1)) or the special value <i>none</i>. If set to <i>none</i>, no notification signal will be sent. If it is set to <i>TSTP</i>, for instance, or another signal name, then this signal will be sent as notification signal.</dd></dl>
 <dl>
 <dt><i>SHARETREE_RESERVED_USAGE</i></dt>
-<dd>If this parameter is set to true, the usage of &quot;reserved&quot; resources is taken for the xxQS_NAMExx share tree consumption instead of measured usage. See the description of <i>ACCT_RESERVED_USAGE</i> above for details.<br />
+<dd>If this parameter is set to true, the usage of &quot;reserved&quot; resources is taken for the xxQS_NAMExx share tree consumption instead of measured usage. See the description of <i>ACCT_RESERVED_USAGE</i> above for details.<br/>
  <code>Note:</code> When running tightly integrated jobs with <i>SHARETREE_RESERVED_USAGE</i> set, and with <i>accounting_summary</i> enabled in the parallel environment, reserved usage will only be reported by the master task of the parallel job. No per-parallel task usage records will be sent from execd to qmaster, which can significantly reduce load on qmaster when running large tightly integrated parallel jobs.</dd></dl>
 <dl>
 <dt><i>USE_QSUB_GID</i></dt>
-<dd>If this parameter is set to true, the primary group id active when a job was submitted will be set to become the primary group id for job execution. If the parameter is not set, the primary group id as defined for the job owner in the execution host passwd database is used.<br />
+<dd>If this parameter is set to true, the primary group id active when a job was submitted will be set to become the primary group id for job execution. If the parameter is not set, the primary group id as defined for the job owner in the execution host passwd database is used.<br/>
  The feature is only available for jobs submitted via and Also, it only works for jobs (and thus also for and if builtin communication is used, or the rsh and rshd components which are provided with xxQS_NAMExx (see</dd></dl>
 <dl>
 <dt><i>S_DESCRIPTORS</i>, <i>H_DESCRIPTORS</i>, <i>S_MAXPROC</i>, <i>H_MAXPROC</i>, <i>S_MEMORYLOCKED</i>, <i>H_MEMORYLOCKED</i>, <i>S_LOCKS</i>, <i>H_LOCKS</i></dt>
-<dd>Specifies soft and hard resource limits as implemented by the <i><a href="/docs/linux/man/2-setrlimit/">setrlimit</a></i>(2) system call. See that manual page on your system for more information. These parameters complete the list of limits set by the RESOURCE LIMITS parameter of the queue configuration as described in Unlike the resource limits in the queue configuration, these resource limits are set for every job on this execution host. If a value is not specified, the resource limit is inherited from the execution daemon process. Because this would lead to unpredictable results if only one limit of a resource is set (soft or hard), the corresponding other limit is set to the same value.<br />
- <i>S_DESCRIPTORS</i> and <i>H_DESCRIPTORS</i> specify a value one greater than the maximum file descriptor number that can be opened by any process of a job.<br />
- <i>S_MAXPROC</i> and <i>H_MAXPROC</i> specify the maximum number of processes that can be created by the job user on this execution host.<br />
- <i>S_MEMORYLOCKED</i> and <i>H_MEMORYLOCKED</i> specify the maximum number of bytes of virtual memory that may be locked into RAM. This typically needs to be set to &quot;unlimited&quot; for use with openib Infiniband, and possibly similar transports.<br />
- <i>S_LOCKS</i> and <i>H_LOCKS</i> specify the maximum number of file locks any process of a job may establish.<br />
+<dd>Specifies soft and hard resource limits as implemented by the <i><a href="/docs/linux/man/2-setrlimit/">setrlimit</a></i>(2) system call. See that manual page on your system for more information. These parameters complete the list of limits set by the RESOURCE LIMITS parameter of the queue configuration as described in Unlike the resource limits in the queue configuration, these resource limits are set for every job on this execution host. If a value is not specified, the resource limit is inherited from the execution daemon process. Because this would lead to unpredictable results if only one limit of a resource is set (soft or hard), the corresponding other limit is set to the same value.<br/>
+ <i>S_DESCRIPTORS</i> and <i>H_DESCRIPTORS</i> specify a value one greater than the maximum file descriptor number that can be opened by any process of a job.<br/>
+ <i>S_MAXPROC</i> and <i>H_MAXPROC</i> specify the maximum number of processes that can be created by the job user on this execution host.<br/>
+ <i>S_MEMORYLOCKED</i> and <i>H_MEMORYLOCKED</i> specify the maximum number of bytes of virtual memory that may be locked into RAM. This typically needs to be set to &quot;unlimited&quot; for use with openib Infiniband, and possibly similar transports.<br/>
+ <i>S_LOCKS</i> and <i>H_LOCKS</i> specify the maximum number of file locks any process of a job may establish.<br/>
  All of these values can be specified using the multiplier letters k, K, m, M, g and G; see for details. Limits can be specified as &quot;infinity&quot; to remove limits (if possible), per <i><a href="/docs/linux/man/2-setrlimit/">setrlimit</a></i>(2).</dd>
 <dt><i>INHERIT_ENV</i></dt>
 <dd>This parameter indicates whether the shepherd should allow the environment inherited by the execution daemon from the shell that started it to be inherited by the job it&#8217;s starting. When true, any environment variable that is set in the shell which starts the execution daemon at the time the execution daemon is started will be set in the environment of any jobs run by that execution daemon, unless the environment variable is explicitly overridden, such as PATH or LOGNAME. If set to false, each job starts with only the environment variables that are explicitly passed on by the execution daemon, such as PATH and LOGNAME. The default value is true.</dd></dl>
@@ -416,8 +416,8 @@ forge -u $1 -t $2 | SetToken
 <dd>If this parameter is set then xxQS_NAMExx uses the supplementary group ids (see <i>gid_range</i>) to identify all processes which are to be terminated when a job is deleted, or when cleans up after job termination. This currently only works under GNU/Linux, Solaris, Tru64, FreeBSD, and Darwin. The default value is on. Irrelevant with cpuset support (see USE_CGROUPS below).</dd></dl>
 <dl>
 <dt><i>PDC_INTERVAL</i></dt>
-<dd>This parameter defines the interval (default 1s) between runs of the PDC (Portable Data Collector) by the execution daemon. The PDC is responsible for enforcing the resource limits s_cpu, h_cpu, s_vmem and h_vmem (see and job usage collection. The parameter can be set to a time_specifier (see to <code>PER_LOAD_REPORT</code> or to <code>NEVER</code>.<br />
- If this parameter is set to <code>PER_LOAD_REPORT</code> the PDC is triggered in the same interval as <code>load_report_time</code> (see above). If this parameter is set to <code>NEVER</code> the PDC run is never triggered. The default is 1 second.<br />
+<dd>This parameter defines the interval (default 1s) between runs of the PDC (Portable Data Collector) by the execution daemon. The PDC is responsible for enforcing the resource limits s_cpu, h_cpu, s_vmem and h_vmem (see and job usage collection. The parameter can be set to a time_specifier (see to <code>PER_LOAD_REPORT</code> or to <code>NEVER</code>.<br/>
+ If this parameter is set to <code>PER_LOAD_REPORT</code> the PDC is triggered in the same interval as <code>load_report_time</code> (see above). If this parameter is set to <code>NEVER</code> the PDC run is never triggered. The default is 1 second.<br/>
  <code>Note:</code> A PDC run is quite compute intensive, and may degrade the performance of the running jobs. However, if the PDC runs less often, or never, the online usage can be incomplete or totally missing (for example online usage of very short running jobs might be missing) and the resource limit enforcement is less accurate or would not happen if PDC is turned off completely.</dd></dl>
 <dl>
 <dt><i>ENABLE_BINDING</i></dt>
@@ -471,7 +471,7 @@ forge -u $1 -t $2 | SetToken
 <dt><i>log_consumables</i></dt>
 <dd>This parameter controls writing of consumable resources to the reporting file. When set to <code>log_consumables=true</code> information about all consumable resources (their current usage and their capacity) will be written to the reporting file, whenever a consumable resource changes either in definition, or in capacity, or when the usage of an arbitrary consumable resource changes. When <code>log_consumables</code> is set to <code>false</code> (default), only those variables will be written to the reporting file that are configured in the <code>report_variables</code> in the exec host configuration and whose definition or value actually changed. This parameter is deprecated and will get removed in the next major release. See for further information about <code>report_variables</code>.</dd></dl>
 <h3><code>finished_jobs</code></h3>
-<p><code>Note:</code> Deprecated, may be removed in a future release.<br />
+<p><code>Note:</code> Deprecated, may be removed in a future release.<br/>
  xxQS_NAMExx stores a certain number of <i>just finished</i> jobs to provide post mortem status information via <i>qstat -s z</i>. The <code>finished_jobs</code> parameter defines the number of finished (&quot;zombie&quot;) jobs stored. If this maximum number is reached, the eldest finished job will be discarded for every new job added to the finished job list. (The zombie list is not spooled, and so will be lost by a qmaster re-start.) </p>
 <p> Changing <code>finished_jobs</code> will take immediate effect. The default for <code>finished_jobs</code> is 100. </p>
 <p> This value is a global configuration parameter only. It cannot be overwritten by the execution host local configuration.</p>
@@ -489,7 +489,7 @@ forge -u $1 -t $2 | SetToken
 <h3><code>delegated_file_staging</code></h3>
 <p>This flag must be set to &quot;true&quot; when the prolog and epilog are ready for delegated file staging, so that the DRMAA attribute &#8216;drmaa_transfer_files&#8217; is supported. To establish delegated file staging, use the variables beginning with &quot;$fs_&#8230;&quot; in prolog and epilog to move the input, output and error files from one host to the other. When this flag is set to &quot;false&quot;, no file staging is available for the DRMAA interface. File staging is currently implemented only via the DRMAA interface. When an error occurs while moving the input, output and error files, return error code 100 so that the error handling mechanism can handle the error correctly. (See also FORBID_APPERROR.)</p>
 <h3><code>reprioritize</code></h3>
-<p><code>Note:</code> Deprecated, may be removed in future release.<br />
+<p><code>Note:</code> Deprecated, may be removed in future release.<br/>
  This flag enables or disables the reprioritization of jobs based on their ticket amount. The <code>reprioritize_interval</code> in takes effect only if <code>reprioritize</code> is set to true. To turn off job reprioritization, the <code>reprioritize</code> flag must be set to false and the <code>reprioritize_interval</code> to 0, which is the default. </p>
 <p> This value is a global configuration parameter only. It cannot be overridden by the execution host local configuration.</p>
 <h3><code>jsv_url</code></h3>

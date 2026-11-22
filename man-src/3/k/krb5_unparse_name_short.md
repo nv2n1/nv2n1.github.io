@@ -10,58 +10,58 @@ description: "Heimdal Kerberos 5 principal functions –"
 
 <p> Heimdal Kerberos 5 principal functions &#8211; </p>
 <h3>Functions</h3>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_build_principal</code> (krb5_context, krb5_principal *, int, krb5_const_realm,&#8230;)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_copy_principal</code> (krb5_context, krb5_const_principal, krb5_principal *)&quot; </p>
-<p> KRB5_LIB_FUNCTION void<br />
+<p> KRB5_LIB_FUNCTION void<br/>
  KRB5_LIB_CALL <code>krb5_free_principal</code> (krb5_context, krb5_principal)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_make_principal</code> (krb5_context, krb5_principal *, krb5_const_realm,&#8230;)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_parse_name</code> (krb5_context, const char *, krb5_principal *)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_parse_name_flags</code> (krb5_context, const char *, int, krb5_principal *)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_parse_nametype</code> (krb5_context, const char *, int32_t *)&quot; </p>
-<p> KRB5_LIB_FUNCTION krb5_boolean<br />
+<p> KRB5_LIB_FUNCTION krb5_boolean<br/>
  KRB5_LIB_CALL <code>krb5_principal_compare</code> (krb5_context, krb5_const_principal, krb5_const_principal)&quot; </p>
-<p> KRB5_LIB_FUNCTION krb5_boolean<br />
+<p> KRB5_LIB_FUNCTION krb5_boolean<br/>
  KRB5_LIB_CALL <code>krb5_principal_compare_any_realm</code> (krb5_context, krb5_const_principal, krb5_const_principal)&quot; </p>
-<p> KRB5_LIB_FUNCTION unsigned int<br />
+<p> KRB5_LIB_FUNCTION unsigned int<br/>
  KRB5_LIB_CALL <code>krb5_principal_get_num_comp</code> (krb5_context, krb5_const_principal)&quot; </p>
-<p> KRB5_LIB_FUNCTION const char<br />
+<p> KRB5_LIB_FUNCTION const char<br/>
  *KRB5_LIB_CALL <code>krb5_principal_get_realm</code> (krb5_context, krb5_const_principal)&quot; </p>
 <p> KRB5_LIB_FUNCTION int KRB5_LIB_CALL <code>krb5_principal_get_type</code> (krb5_context, krb5_const_principal) </p>
 <p> krb5_boolean KRB5_LIB_FUNCTION <code>krb5_principal_is_gss_hostbased_service</code> (krb5_context, krb5_const_principal) </p>
-<p> KRB5_LIB_FUNCTION krb5_boolean<br />
+<p> KRB5_LIB_FUNCTION krb5_boolean<br/>
  KRB5_LIB_CALL <code>krb5_principal_is_krbtgt</code> (krb5_context, krb5_const_principal)&quot; </p>
 <p> krb5_boolean KRB5_LIB_FUNCTION <code>krb5_principal_is_lkdc</code> (krb5_context, krb5_const_principal) </p>
 <p> krb5_boolean KRB5_LIB_FUNCTION <code>krb5_principal_is_null</code> (krb5_context, krb5_const_principal) </p>
 <p> krb5_boolean KRB5_LIB_FUNCTION <code>krb5_principal_is_pku2u</code> (krb5_context, krb5_const_principal) </p>
 <p> krb5_boolean KRB5_LIB_FUNCTION <code>krb5_principal_is_root_krbtgt</code> (krb5_context, krb5_const_principal) </p>
-<p> KRB5_LIB_FUNCTION krb5_boolean<br />
+<p> KRB5_LIB_FUNCTION krb5_boolean<br/>
  KRB5_LIB_CALL <code>krb5_principal_match</code> (krb5_context, krb5_const_principal, krb5_const_principal)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_principal_set_realm</code> (krb5_context, krb5_principal, krb5_const_realm)&quot; </p>
-<p> KRB5_LIB_FUNCTION void<br />
+<p> KRB5_LIB_FUNCTION void<br/>
  KRB5_LIB_CALL <code>krb5_principal_set_type</code> (krb5_context, krb5_principal, int)&quot; </p>
-<p> KRB5_LIB_FUNCTION krb5_boolean<br />
+<p> KRB5_LIB_FUNCTION krb5_boolean<br/>
  KRB5_LIB_CALL <code>krb5_realm_compare</code> (krb5_context, krb5_const_principal, krb5_const_principal)&quot; </p>
 <p> krb5_boolean KRB5_LIB_FUNCTION <code>krb5_realm_is_lkdc</code> (const char *) </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_sname_to_principal</code> (krb5_context, const char *, const char *, int32_t, krb5_principal *)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_unparse_name</code> (krb5_context, krb5_const_principal, char **)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_unparse_name_fixed</code> (krb5_context, krb5_const_principal, char *, size_t)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_unparse_name_fixed_flags</code> (krb5_context, krb5_const_principal, int, char *, size_t)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_unparse_name_fixed_short</code> (krb5_context, krb5_const_principal, char *, size_t)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_unparse_name_flags</code> (krb5_context, krb5_const_principal, int, char **)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_unparse_name_short</code> (krb5_context, krb5_const_principal, char **)&quot; </p>
 <h2>Detailed Description</h2>
 <h2>Function Documentation</h2>
@@ -70,10 +70,10 @@ description: "Heimdal Kerberos 5 principal functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A Kerberos context.<br />
- <i>principal</i> returned principal<br />
- <i>rlen</i> length of realm<br />
- <i>realm</i> realm name<br />
+</dt><dd> <i>context</i> A Kerberos context.<br/>
+ <i>principal</i> returned principal<br/>
+ <i>rlen</i> length of realm<br/>
+ <i>realm</i> realm name<br/>
  <i>&#8230;</i> a list of components ended with NULL.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -84,8 +84,8 @@ description: "Heimdal Kerberos 5 principal functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A Kerberos context.<br />
- <i>inprinc</i> principal to copy<br />
+</dt><dd> <i>context</i> A Kerberos context.<br/>
+ <i>inprinc</i> principal to copy<br/>
  <i>outprinc</i> copied principal, free with <code>krb5_free_principal()</code></dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -96,7 +96,7 @@ description: "Heimdal Kerberos 5 principal functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A Kerberos context.<br />
+</dt><dd> <i>context</i> A Kerberos context.<br/>
  <i>p</i> a principal to free.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -107,9 +107,9 @@ description: "Heimdal Kerberos 5 principal functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A Kerberos context.<br />
- <i>principal</i> returned principal<br />
- <i>realm</i> realm name<br />
+</dt><dd> <i>context</i> A Kerberos context.<br/>
+ <i>principal</i> returned principal<br/>
+ <i>realm</i> realm name<br/>
  <i>&#8230;</i> a list of components ended with NULL.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -120,8 +120,8 @@ description: "Heimdal Kerberos 5 principal functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> Kerberos 5 context<br />
- <i>name</i> name to parse into a Kerberos principal<br />
+</dt><dd> <i>context</i> Kerberos 5 context<br/>
+ <i>name</i> name to parse into a Kerberos principal<br/>
  <i>principal</i> returned principal, free with <code>krb5_free_principal()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -132,9 +132,9 @@ description: "Heimdal Kerberos 5 principal functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> Kerberos 5 context<br />
- <i>name</i> name to parse into a Kerberos principal<br />
- <i>flags</i> flags to control the behavior<br />
+</dt><dd> <i>context</i> Kerberos 5 context<br/>
+ <i>name</i> name to parse into a Kerberos principal<br/>
+ <i>flags</i> flags to control the behavior<br/>
  <i>principal</i> returned principal, free with <code>krb5_free_principal()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -147,8 +147,8 @@ description: "Heimdal Kerberos 5 principal functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> Kerberos 5 context<br />
- <i>princ1</i> first principal to compare<br />
+</dt><dd> <i>context</i> Kerberos 5 context<br/>
+ <i>princ1</i> first principal to compare<br/>
  <i>princ2</i> second principal to compare</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
@@ -160,8 +160,8 @@ description: "Heimdal Kerberos 5 principal functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> Kerberos 5 context<br />
- <i>princ1</i> first principal to compare<br />
+</dt><dd> <i>context</i> Kerberos 5 context<br/>
+ <i>princ1</i> first principal to compare<br/>
  <i>princ2</i> second principal to compare</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -177,7 +177,7 @@ description: "Heimdal Kerberos 5 principal functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> Kerberos 5 context<br />
+</dt><dd> <i>context</i> Kerberos 5 context<br/>
  <i>principal</i> principal to query</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -188,7 +188,7 @@ description: "Heimdal Kerberos 5 principal functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A Kerberos context.<br />
+</dt><dd> <i>context</i> A Kerberos context.<br/>
  <i>principal</i> principal to get the realm for</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -199,7 +199,7 @@ description: "Heimdal Kerberos 5 principal functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A Kerberos context.<br />
+</dt><dd> <i>context</i> A Kerberos context.<br/>
  <i>principal</i> principal to get the type for</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -224,8 +224,8 @@ description: "Heimdal Kerberos 5 principal functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A Kerberos context.<br />
- <i>principal</i> principal set the realm for<br />
+</dt><dd> <i>context</i> A Kerberos context.<br/>
+ <i>principal</i> principal set the realm for<br/>
  <i>realm</i> the new realm to set</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -236,8 +236,8 @@ description: "Heimdal Kerberos 5 principal functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A Kerberos context.<br />
- <i>principal</i> principal to set the type for<br />
+</dt><dd> <i>context</i> A Kerberos context.<br/>
+ <i>principal</i> principal to set the type for<br/>
  <i>type</i> the new type</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -248,8 +248,8 @@ description: "Heimdal Kerberos 5 principal functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> Kerberos 5 context<br />
- <i>princ1</i> first principal to compare<br />
+</dt><dd> <i>context</i> Kerberos 5 context<br/>
+ <i>princ1</i> first principal to compare<br/>
  <i>princ2</i> second principal to compare</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
@@ -264,10 +264,10 @@ description: "Heimdal Kerberos 5 principal functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A Kerberos context.<br />
- <i>hostname</i> hostname to use<br />
- <i>sname</i> Service name to use<br />
- <i>type</i> name type of pricipal, use KRB5_NT_SRV_HST or KRB5_NT_UNKNOWN.<br />
+</dt><dd> <i>context</i> A Kerberos context.<br/>
+ <i>hostname</i> hostname to use<br/>
+ <i>sname</i> Service name to use<br/>
+ <i>type</i> name type of pricipal, use KRB5_NT_SRV_HST or KRB5_NT_UNKNOWN.<br/>
  <i>ret_princ</i> return principal, free with <code>krb5_free_principal()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -278,8 +278,8 @@ description: "Heimdal Kerberos 5 principal functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> Kerberos 5 context<br />
- <i>principal</i> principal to query<br />
+</dt><dd> <i>context</i> Kerberos 5 context<br/>
+ <i>principal</i> principal to query<br/>
  <i>name</i> resulting string, free with krb5_xfree()</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -290,9 +290,9 @@ description: "Heimdal Kerberos 5 principal functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A Kerberos context.<br />
- <i>principal</i> principal to unparse<br />
- <i>name</i> buffer to write name to<br />
+</dt><dd> <i>context</i> A Kerberos context.<br/>
+ <i>principal</i> principal to unparse<br/>
+ <i>name</i> buffer to write name to<br/>
  <i>len</i> length of buffer</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -303,10 +303,10 @@ description: "Heimdal Kerberos 5 principal functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A Kerberos context.<br />
- <i>principal</i> principal to unparse<br />
- <i>flags</i> unparse flags<br />
- <i>name</i> buffer to write name to<br />
+</dt><dd> <i>context</i> A Kerberos context.<br/>
+ <i>principal</i> principal to unparse<br/>
+ <i>flags</i> unparse flags<br/>
+ <i>name</i> buffer to write name to<br/>
  <i>len</i> length of buffer</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -317,9 +317,9 @@ description: "Heimdal Kerberos 5 principal functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A Kerberos context.<br />
- <i>principal</i> principal to unparse<br />
- <i>name</i> buffer to write name to<br />
+</dt><dd> <i>context</i> A Kerberos context.<br/>
+ <i>principal</i> principal to unparse<br/>
+ <i>name</i> buffer to write name to<br/>
  <i>len</i> length of buffer</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -330,9 +330,9 @@ description: "Heimdal Kerberos 5 principal functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> Kerberos 5 context<br />
- <i>principal</i> principal to query<br />
- <i>flags</i> flag to determine the behavior<br />
+</dt><dd> <i>context</i> Kerberos 5 context<br/>
+ <i>principal</i> principal to query<br/>
+ <i>flags</i> flag to determine the behavior<br/>
  <i>name</i> resulting string, free with krb5_xfree()</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -343,8 +343,8 @@ description: "Heimdal Kerberos 5 principal functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A Kerberos context.<br />
- <i>principal</i> principal to unparse<br />
+</dt><dd> <i>context</i> A Kerberos context.<br/>
+ <i>principal</i> principal to unparse<br/>
  <i>name</i> returned buffer, free with krb5_xfree()</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

@@ -32,84 +32,84 @@ description: "g_spatial – calculates the spatial distribution function (more c
 <p> <code> -clid</code> writes the cluster number as a function of time. </p>
 <p> <code> -cl</code> writes average (with option <code> -av</code>) or central structure of each cluster or writes numbered files with cluster members for a selected set of clusters (with option <code> -wcl</code>, depends on <code> -nst</code> and <code> -rmsmin</code>). </p>
 <h2>FILES</h2>
-<p> <code>-f</code><i> traj.xtc</i> <code>Input, Opt.</code><br />
+<p> <code>-f</code><i> traj.xtc</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Trajectory: xtc trr trj gro g96 pdb cpt&nbsp;<wbr> </p>
-<p> <code>-s</code><i> topol.tpr</i> <code>Input, Opt.</code><br />
+<p> <code>-s</code><i> topol.tpr</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Structure+mass(db): tpr tpb tpa gro g96 pdb&nbsp;<wbr> </p>
-<p> <code>-n</code><i> index.ndx</i> <code>Input, Opt.</code><br />
+<p> <code>-n</code><i> index.ndx</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Index file&nbsp;<wbr> </p>
-<p> <code>-dm</code><i> rmsd.xpm</i> <code>Input, Opt.</code><br />
+<p> <code>-dm</code><i> rmsd.xpm</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>X PixMap compatible matrix file&nbsp;<wbr> </p>
-<p> <code>-o</code><i> rmsd-clust.xpm</i> <code>Output</code><br />
+<p> <code>-o</code><i> rmsd-clust.xpm</i> <code>Output</code><br/>
 &nbsp;<wbr>X PixMap compatible matrix file&nbsp;<wbr> </p>
-<p> <code>-g</code><i> cluster.log</i> <code>Output</code><br />
+<p> <code>-g</code><i> cluster.log</i> <code>Output</code><br/>
 &nbsp;<wbr>Log file&nbsp;<wbr> </p>
-<p> <code>-dist</code><i> rmsd-dist.xvg</i> <code>Output, Opt.</code><br />
+<p> <code>-dist</code><i> rmsd-dist.xvg</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-ev</code><i> rmsd-eig.xvg</i> <code>Output, Opt.</code><br />
+<p> <code>-ev</code><i> rmsd-eig.xvg</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-sz</code><i> clust-size.xvg</i> <code>Output, Opt.</code><br />
+<p> <code>-sz</code><i> clust-size.xvg</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-tr</code><i> clust-trans.xpm</i> <code>Output, Opt.</code><br />
+<p> <code>-tr</code><i> clust-trans.xpm</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>X PixMap compatible matrix file&nbsp;<wbr> </p>
-<p> <code>-ntr</code><i> clust-trans.xvg</i> <code>Output, Opt.</code><br />
+<p> <code>-ntr</code><i> clust-trans.xvg</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-clid</code><i> clust-id.xvg</i> <code>Output, Opt.</code><br />
+<p> <code>-clid</code><i> clust-id.xvg</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-cl</code><i> clusters.pdb</i> <code>Output, Opt.</code><br />
+<p> <code>-cl</code><i> clusters.pdb</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>Trajectory: xtc trr trj gro g96 pdb cpt&nbsp;<wbr> </p>
 <h2>OTHER OPTIONS</h2>
-<p> <code>-[no]h</code><i>no </i><br />
+<p> <code>-[no]h</code><i>no </i><br/>
 &nbsp;<wbr>Print help info and quit </p>
-<p> <code>-nice</code><i> int</i><code> 19</code><br />
+<p> <code>-nice</code><i> int</i><code> 19</code><br/>
 &nbsp;<wbr>Set the nicelevel </p>
-<p> <code>-b</code><i> time</i><code> 0 </code><br />
+<p> <code>-b</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>First frame&nbsp;<wbr>(ps)&nbsp;<wbr>to read from trajectory </p>
-<p> <code>-e</code><i> time</i><code> 0 </code><br />
+<p> <code>-e</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>Last frame&nbsp;<wbr>(ps)&nbsp;<wbr>to read from trajectory </p>
-<p> <code>-dt</code><i> time</i><code> 0 </code><br />
+<p> <code>-dt</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>Only use frame when t MOD dt&nbsp;<wbr>=&nbsp;<wbr>first time&nbsp;<wbr>(ps) </p>
-<p> <code>-tu</code><i> enum</i><code> ps</code><br />
+<p> <code>-tu</code><i> enum</i><code> ps</code><br/>
 &nbsp;<wbr>Time unit:&nbsp;<wbr><code>&nbsp;<wbr>ps</code>,&nbsp;<wbr><code>&nbsp;<wbr>fs</code>,&nbsp;<wbr><code>&nbsp;<wbr>ns</code>,&nbsp;<wbr><code>&nbsp;<wbr>us</code>,&nbsp;<wbr><code>&nbsp;<wbr>ms</code>&nbsp;<wbr>or&nbsp;<wbr><code>&nbsp;<wbr>s</code> </p>
-<p> <code>-[no]w</code><i>no </i><br />
+<p> <code>-[no]w</code><i>no </i><br/>
 &nbsp;<wbr>View output xvg, xpm, eps and pdb files </p>
-<p> <code>-[no]xvgr</code><i>yes </i><br />
+<p> <code>-[no]xvgr</code><i>yes </i><br/>
 &nbsp;<wbr>Add specific codes&nbsp;<wbr>(legends etc.)&nbsp;<wbr>in the output xvg files for the xmgrace program </p>
-<p> <code>-[no]dista</code><i>no </i><br />
+<p> <code>-[no]dista</code><i>no </i><br/>
 &nbsp;<wbr>Use RMSD of distances instead of RMS deviation </p>
-<p> <code>-nlevels</code><i> int</i><code> 40</code><br />
+<p> <code>-nlevels</code><i> int</i><code> 40</code><br/>
 &nbsp;<wbr>Discretize RMSD matrix in&nbsp;<wbr>&nbsp;<wbr>levels </p>
-<p> <code>-cutoff</code><i> real</i><code> 0.1 </code><br />
+<p> <code>-cutoff</code><i> real</i><code> 0.1 </code><br/>
 &nbsp;<wbr>RMSD cut-off&nbsp;<wbr>(nm)&nbsp;<wbr>for two structures to be neighbor </p>
-<p> <code>-[no]fit</code><i>yes </i><br />
+<p> <code>-[no]fit</code><i>yes </i><br/>
 &nbsp;<wbr>Use least squares fitting before RMSD calculation </p>
-<p> <code>-max</code><i> real</i><code> -1 </code><br />
+<p> <code>-max</code><i> real</i><code> -1 </code><br/>
 &nbsp;<wbr>Maximum level in RMSD matrix </p>
-<p> <code>-skip</code><i> int</i><code> 1</code><br />
+<p> <code>-skip</code><i> int</i><code> 1</code><br/>
 &nbsp;<wbr>Only analyze every nr-th frame </p>
-<p> <code>-[no]av</code><i>no </i><br />
+<p> <code>-[no]av</code><i>no </i><br/>
 &nbsp;<wbr>Write average iso middle structure for each cluster </p>
-<p> <code>-wcl</code><i> int</i><code> 0</code><br />
+<p> <code>-wcl</code><i> int</i><code> 0</code><br/>
 &nbsp;<wbr>Write all structures for first&nbsp;<wbr>&nbsp;<wbr>clusters to numbered files </p>
-<p> <code>-nst</code><i> int</i><code> 1</code><br />
+<p> <code>-nst</code><i> int</i><code> 1</code><br/>
 &nbsp;<wbr>Only write all structures if more than&nbsp;<wbr>&nbsp;<wbr>per cluster </p>
-<p> <code>-rmsmin</code><i> real</i><code> 0 </code><br />
+<p> <code>-rmsmin</code><i> real</i><code> 0 </code><br/>
 &nbsp;<wbr>minimum rms difference with rest of cluster for writing structures </p>
-<p> <code>-method</code><i> enum</i><code> linkage</code><br />
+<p> <code>-method</code><i> enum</i><code> linkage</code><br/>
 &nbsp;<wbr>Method for cluster determination:&nbsp;<wbr><code>&nbsp;<wbr>linkage</code>,&nbsp;<wbr><code>&nbsp;<wbr>jarvis-patrick</code>,&nbsp;<wbr><code>&nbsp;<wbr>monte-carlo</code>,&nbsp;<wbr><code>&nbsp;<wbr>diagonalization</code>&nbsp;<wbr>or&nbsp;<wbr><code>&nbsp;<wbr>gromos</code> </p>
-<p> <code>-minstruct</code><i> int</i><code> 1</code><br />
+<p> <code>-minstruct</code><i> int</i><code> 1</code><br/>
 &nbsp;<wbr>Minimum number of structures in cluster for coloring in the xpm file </p>
-<p> <code>-[no]binary</code><i>no </i><br />
+<p> <code>-[no]binary</code><i>no </i><br/>
 &nbsp;<wbr>Treat the RMSD matrix as consisting of 0 and 1, where the cut-off is given by -cutoff </p>
-<p> <code>-M</code><i> int</i><code> 10</code><br />
+<p> <code>-M</code><i> int</i><code> 10</code><br/>
 &nbsp;<wbr>Number of nearest neighbors considered for Jarvis-Patrick algorithm, 0 is use cutoff </p>
-<p> <code>-P</code><i> int</i><code> 3</code><br />
+<p> <code>-P</code><i> int</i><code> 3</code><br/>
 &nbsp;<wbr>Number of identical nearest neighbors required to form a cluster </p>
-<p> <code>-seed</code><i> int</i><code> 1993</code><br />
+<p> <code>-seed</code><i> int</i><code> 1993</code><br/>
 &nbsp;<wbr>Random number seed for Monte Carlo clustering algorithm </p>
-<p> <code>-niter</code><i> int</i><code> 10000</code><br />
+<p> <code>-niter</code><i> int</i><code> 10000</code><br/>
 &nbsp;<wbr>Number of iterations for MC </p>
-<p> <code>-kT</code><i> real</i><code> 0.001 </code><br />
+<p> <code>-kT</code><i> real</i><code> 0.001 </code><br/>
 &nbsp;<wbr>Boltzmann weighting factor for Monte Carlo optimization&nbsp;<wbr>(zero turns off uphill steps) </p>
 <h2>SEE ALSO</h2>
 <p> <code>gromacs(7)</code> </p>

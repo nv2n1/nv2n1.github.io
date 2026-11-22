@@ -32,7 +32,7 @@ ndb_delete_all -c <i>connect_string</i> <i>tbl_name</i> -d <i>db_name</i>
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Warning</code> </font><br />
+  <code>Warning</code> <br/>
  With very large tables, using this option may cause the number of operations available to the cluster to be exceeded. </dd>
 </dl>
 </dl>

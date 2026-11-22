@@ -17,7 +17,7 @@ description: "cgiwrap_putenv – wrap the putenv call"
 NEOERR *cgiwrap_putenv(const char *k, const char *v);
 </code></pre>
 <h2>ARGUMENTS</h2>
-<p> k &#8211; the env var name<br />
+<p> k &#8211; the env var name<br/>
  v &#8211; the new value for env var k </p>
 <h2>DESCRIPTION</h2>
 <p> cgiwrap_putenv wraps the putenv call. This is mostly used by the cgi_debug_init function to create an artificial environment. This version differs from the system version by having separate arguments for the variable name and value, which makes life easier for the caller (usually), and keeps most wrapping callbacks from having to implement a parser to separate them. </p>

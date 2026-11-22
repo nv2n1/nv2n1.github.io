@@ -20,7 +20,7 @@ description: "atomic-stop – Execute container image stop method"
 <p> If this field does not exist, atomic stop will just stop the container, if the container is running. </p>
 <p> Any additional arguments will be appended to the command. </p>
 <h2>OPTIONS:</h2>
-<p> <code>-h</code> <code>&#8211;help</code><br />
+<p> <code>-h</code> <code>&#8211;help</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Print usage statement </p>
 <h2>HISTORY</h2>
 <p> March 2015, Originally compiled by Daniel Walsh (dwalsh at redhat dot com) </p>

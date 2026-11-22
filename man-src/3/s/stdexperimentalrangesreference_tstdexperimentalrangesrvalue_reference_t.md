@@ -23,10 +23,10 @@ template&lt; Readable T &gt;
 using iter_common_reference_t =                                      (3) (ranges TS)
 ranges::common_reference_t&lt;ranges::reference_t&lt;T&gt;,
 ranges::value_type_t&lt;T&gt;&amp;&gt;;</code></pre>
-<p>1)&nbsp;<wbr>Obtain the reference type of a dereferenceable type T.<br />
-2)&nbsp;<wbr>Obtain the rvalue reference type of a dereferenceable type T, that is, the return<br />
-type of ranges::iter_move.<br />
-3)&nbsp;<wbr>Compute a Readable type&#8217;s common reference type. This is the common reference<br />
+<p>1)&nbsp;<wbr>Obtain the reference type of a dereferenceable type T.<br/>
+2)&nbsp;<wbr>Obtain the rvalue reference type of a dereferenceable type T, that is, the return<br/>
+type of ranges::iter_move.<br/>
+3)&nbsp;<wbr>Compute a Readable type&#8217;s common reference type. This is the common reference<br/>
 type of its reference type and an lvalue reference to its value type. </p>
 <h2>Notes</h2>
 <p>The -&gt;&nbsp;<wbr>auto&amp;&amp;&nbsp;<wbr>constraint checks that the type of the expression is not void. </p>

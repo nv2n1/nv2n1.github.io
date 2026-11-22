@@ -13,10 +13,10 @@ description: "QuantLib::BatesProcess – Square-root stochastic-volatility Bates
 <p> Inherits <code>QuantLib::HestonProcess</code>. </p>
 <h3>Public Member Functions</h3>
 <p><code>BatesProcess</code> (const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;riskFreeRate, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;dividendYield, const <code>Handle</code>&lt; <code>Quote</code> &gt; &amp;s0, <code>Real</code> v0, <code>Real</code> kappa, <code>Real</code> theta, <code>Real</code> sigma, <code>Real</code> rho, <code>Real</code> lambda, <code>Real</code> nu, <code>Real</code> delta, HestonProcess::Discretization d=HestonProcess::FullTruncation) </p>
-<p> Size <code>factors</code> () const<br />
- <i>returns the number of independent factors of the process </i><br />
- <code>Disposable</code>&lt; <code>Array</code> &gt; <code>drift</code> (Time t, const <code>Array</code> &amp;x) const<br />
- <i>returns the drift part of the equation, i.e., $ mu(t, mathrm{x}_t) $ </i><br />
+<p> Size <code>factors</code> () const<br/>
+ <i>returns the number of independent factors of the process </i><br/>
+ <code>Disposable</code>&lt; <code>Array</code> &gt; <code>drift</code> (Time t, const <code>Array</code> &amp;x) const<br/>
+ <i>returns the drift part of the equation, i.e., $ mu(t, mathrm{x}_t) $ </i><br/>
  <code>Disposable</code>&lt; <code>Array</code> &gt; <code>evolve</code> (Time t0, const <code>Array</code> &amp;x0, Time dt, const <code>Array</code> &amp;dw) const </p>
 <p> <code>Real</code> <code>lambda</code> () const </p>
 <p> <code>Real</code> <code>nu</code> () const </p>

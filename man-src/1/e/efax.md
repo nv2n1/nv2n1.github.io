@@ -9,7 +9,7 @@ description: "efax – send/receive faxes with Class 1, 2 or 2.0 fax modem"
 ---
 
 <p> efax &#8211; send/receive faxes with Class 1, 2 or 2.0 fax modem </p>
-<p> <center> (Please read the <code>fax</code> man page first.)<br />
+<p> <center> (Please read the <code>fax</code> man page first.)<br/>
  </center> </p>
 <h2>SYNOPSIS</h2>
 <p> <code>efax</code> [ <i>options</i> ] [ <code>-t</code> <i>num</i> [ <i>file</i>&#8230; ] ] </p>
@@ -38,40 +38,40 @@ description: "efax – send/receive faxes with Class 1, 2 or 2.0 fax modem"
 <dd> set the local identification string to <i>id</i>. <i>id</i> should be the local telephone number in international format (for example &quot;+1 800 555 1212&quot;). This is passed to the remote fax machine. Some fax machines may not accept characters other than numbers, space, and &#8216;+&#8217;. </dd>
 <dt><code>-o </code><i>opt</i></dt>
 <dd> use option <i>opt</i> to accommodate a non-standard fax modem protocol. See the MODEM REQUIREMENTS section below for more details. The <i>opt</i>ions are: </dd>
-<dt><code><br />
+<dt><code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0</code></dt>
 <dd> Force use of Class 2.0 fax modem commands. The modem must support Class 2.0. </dd>
-<dt><code><br />
+<dt><code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>2</code></dt>
 <dd> Force use of Class 2 fax modem commands. The modem must support Class 2. </dd>
-<dt><code><br />
+<dt><code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1&nbsp;<wbr></code></dt>
 <dd> Force use of Class 1 fax modem commands. The modem must support Class 1. By default efax queries the modem and uses the first of the three above classes which is supported by the modem. </dd>
-<dt><code><br />
+<dt><code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>a</code></dt>
 <dd> use software adaptive answer method. If the first attempt to answer the call does not result in a data connection within 8 seconds the phone is hung up temporarily and answered again in fax mode (see &quot;Accepting both fax and data calls&quot; below). </dd>
-<dt><code><br />
+<dt><code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>e&nbsp;<wbr></code></dt>
 <dd> ignore errors in modem initialization commands. </dd>
-<dt><code><br />
+<dt><code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>f</code></dt>
 <dd> use &quot;virtual flow control&quot;. efax tries to estimate the number of bytes in the modem&#8217;s transmit buffer and pauses as necessary to avoid filling it. The modem&#8217;s buffer is assumed to hold at least 96 bytes. This feature does not work properly with Class 2 modems that add redundant padding to scan lines. Use this option only if you have problems configuring flow control. </dd>
-<dt><code><br />
+<dt><code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>h&nbsp;<wbr></code></dt>
 <dd> use hardware (RTS/CTS) in addition to software (XON/XOFF) flow control. Many modems will stop responding if this option is used. See the section `Resolving Problems&#8217; before using this option. </dd>
-<dt><code><br />
+<dt><code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>l</code></dt>
 <dd> halve the time between testing lock files when waiting for other programs to complete. By default this is 8 seconds. For example -olll sets the interval to 1 second. </dd>
-<dt><code><br />
+<dt><code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>n</code></dt>
 <dd> ignore requests for pages to be retransmitted. Use this option if you don&#8217;t care about the quality of the received fax or if the receiving machine is too fussy. Otherwise each page may be retransmitted up to 3 times. </dd>
-<dt><code><br />
+<dt><code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r</code></dt>
 <dd> do not reverse bit order during data reception for Class 2 modems. Only Multitech modems require this option. Not normally required since efax detects these modems. </dd>
-<dt><code><br />
+<dt><code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>x</code></dt>
 <dd> send XON (DC1) instead of DC2 to start data reception. Applies to a very few Class 2 modems only. </dd>
-<dt><code><br />
+<dt><code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>z</code></dt>
 <dd> delay an additional 100 milliseconds before each modem initialization or reset command. The initial delay is 100 ms. For example, -ozzz produces a 400 ms delay. Use with modems that get confused when commands arrive too quickly. </dd>
 <dt><code>-q </code><i>n</i></dt>
@@ -86,17 +86,17 @@ description: "efax – send/receive faxes with Class 1, 2 or 2.0 fax modem"
 <dd> select types of messages to be printed. Each <i>lower-case</i> letter in <i>strng</i> enables one type of message: </dd>
 <dl>
 <dt>
-</dt><dd> <code>e &#8211; </code> errors<br />
- <code>w &#8211; </code> warnings<br />
- <code>i &#8211; </code> session progress information<br />
- <code>n &#8211; </code> capability negotiation information<br />
- <code>c &#8211; </code> modem (AT) commands and responses<br />
- <code>h &#8211; </code> HDLC frame data (Class 1 only)<br />
- <code>m &#8211; </code> modem output<br />
- <code>a &#8211; </code> program arguments<br />
- <code>r &#8211;</code> reception error details<br />
- <code>t &#8211;</code> transmission details<br />
- <code>f &#8211;</code> image file details<br />
+</dt><dd> <code>e &#8211; </code> errors<br/>
+ <code>w &#8211; </code> warnings<br/>
+ <code>i &#8211; </code> session progress information<br/>
+ <code>n &#8211; </code> capability negotiation information<br/>
+ <code>c &#8211; </code> modem (AT) commands and responses<br/>
+ <code>h &#8211; </code> HDLC frame data (Class 1 only)<br/>
+ <code>m &#8211; </code> modem output<br/>
+ <code>a &#8211; </code> program arguments<br/>
+ <code>r &#8211;</code> reception error details<br/>
+ <code>t &#8211;</code> transmission details<br/>
+ <code>f &#8211;</code> image file details<br/>
  <code>x &#8211;</code> lock file processing </dd>
 </dl>
 <dl>
@@ -153,35 +153,35 @@ description: "efax – send/receive faxes with Class 1, 2 or 2.0 fax modem"
 <p> where: </p>
 <dl>
 <dt><i>vr </i> (vertical resolution) =</dt>
-<dd> 0 for 98 lines per inch<br />
+<dd> 0 for 98 lines per inch<br/>
  1 for 196 lpi </dd>
 <dt><i>br </i> (bit rate) =</dt>
-<dd> 0 for 2400 bps<br />
- 1 for 4800<br />
- 2 for 7200<br />
- 3 for 9600<br />
- 4 for 12000 (V.17)<br />
+<dd> 0 for 2400 bps<br/>
+ 1 for 4800<br/>
+ 2 for 7200<br/>
+ 3 for 9600<br/>
+ 4 for 12000 (V.17)<br/>
  5 for 14400 (V.17) </dd>
 <dt><i>wd </i> (width) =</dt>
-<dd> 0 for 8.5&quot; (21.5 cm) page width<br />
- 1 for 10&quot; (25.5 cm)<br />
+<dd> 0 for 8.5&quot; (21.5 cm) page width<br/>
+ 1 for 10&quot; (25.5 cm)<br/>
  2 for 12&quot; (30.3 cm) </dd>
 <dt><i>ln </i> (length) =</dt>
-<dd> 0 for 11&quot; (A4: 29.7 cm) page length<br />
- 1 for 14&quot; (B4: 36.4 cm)<br />
+<dd> 0 for 11&quot; (A4: 29.7 cm) page length<br/>
+ 1 for 14&quot; (B4: 36.4 cm)<br/>
  2 for unlimited page length </dd>
 <dt><i>df </i> (data format) =</dt>
-<dd> 0 for 1-D coding<br />
+<dd> 0 for 1-D coding<br/>
  1 for 2-D coding (not supported) </dd>
 <dt><i>ec </i> (error correction) =</dt>
 <dd> 0 for no error correction </dd>
 <dt><i>bf </i> (binary file) =</dt>
 <dd> 0 for no binary file transfer </dd>
 <dt><i>st </i> (minimum scan time) =</dt>
-<dd> 0 for zero delay per line<br />
- 1 for 5 ms per line<br />
- 3 for 10 ms per line<br />
- 5 for 20 ms per line<br />
+<dd> 0 for zero delay per line<br/>
+ 1 for 5 ms per line<br/>
+ 3 for 10 ms per line<br/>
+ 5 for 20 ms per line<br/>
  7 for 40 ms per line </dd>
 </dl>
 <p> When <i>receiving</i> a fax the <i>vr</i>, <i>wd</i>, and <i>ln</i> fields of the capability string should be set to the maximum values that your display software supports. The default is 196 lpi, standard (8.5&quot;/21.5cm) width and unlimited length. </p>

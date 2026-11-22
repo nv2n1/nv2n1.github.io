@@ -107,7 +107,7 @@ ndctl create-namespace -f -e namespace0.0 --mode=sector
 <dt>
 </dt><dd> Enforce that the operation only be carried on devices that are attached to the given bus. Where <i>bus</i> can be a provider name or a bus id number.</dd></dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-ndctl-zero-labels/">ndctl-zero-labels</a></code>(1), <code><a href="/docs/linux/man/1-ndctl-disable-namespace/">ndctl-disable-namespace</a></code>(1), <code><a href="/docs/linux/man/1-ndctl-enable-namespace/">ndctl-enable-namespace</a></code>(1), m[blue]<code>NVDIMM Namespace Specification</code>m[]<font SIZE="-2">[1]</font></p>
+<p> <code><a href="/docs/linux/man/1-ndctl-zero-labels/">ndctl-zero-labels</a></code>(1), <code><a href="/docs/linux/man/1-ndctl-disable-namespace/">ndctl-disable-namespace</a></code>(1), <code><a href="/docs/linux/man/1-ndctl-enable-namespace/">ndctl-enable-namespace</a></code>(1), m[blue]<code>NVDIMM Namespace Specification</code>m[][1]</p>
 <h2>NOTES</h2>
 <dl>
 <dt> 1.</dt>

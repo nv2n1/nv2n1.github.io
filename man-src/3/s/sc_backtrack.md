@@ -12,7 +12,7 @@ description: "sc::Backtrack –"
 <p> Inherits <code>sc::LineOpt</code>.</p>
 <h3>Public Member Functions</h3>
 <p><code>Backtrack</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;) </p>
-<p> int <code>update</code> ()<br />
+<p> int <code>update</code> ()<br/>
  <i>Take a step. </i></p>
 <h3>Protected Attributes</h3>
 <pre><code>double backtrack_factor_</code></pre>

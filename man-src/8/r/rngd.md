@@ -46,7 +46,7 @@ description: "rngd – Check and feed random data from hardware device to kernel
 <dd>Print program version </dd>
 </dl>
 <h2>Authors</h2>
-<p>Philipp Rumpf<br />
- Jeff Garzik &#8211; jgarzik [at] pobox.com<br />
- Matt Sottek<br />
+<p>Philipp Rumpf<br/>
+ Jeff Garzik &#8211; jgarzik [at] pobox.com<br/>
+ Matt Sottek<br/>
  Brad Hill</p>

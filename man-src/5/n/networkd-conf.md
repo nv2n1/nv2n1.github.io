@@ -41,7 +41,7 @@ description: "networkd.conf, networkd.conf.d – Global Network configuration fi
 <p> The following options are understood: </p>
 <p> <i>DUIDType=</i></p>
 <dl>
-<dd>Specifies how the DUID should be generated. See m[blue]<code>RFC 3315</code>m[]<font SIZE="-2">[1]</font> for a description of all the options. </dd>
+<dd>Specifies how the DUID should be generated. See m[blue]<code>RFC 3315</code>m[][1] for a description of all the options. </dd>
 <p> The following values are understood: </p>
 <p> <code>vendor</code></p>
 <dl>
@@ -56,7 +56,7 @@ description: "networkd.conf, networkd.conf.d – Global Network configuration fi
 <p> <i>DUIDRawData=</i></p>
 <dl>
 <dd>Specifies the DHCP DUID value as a single newline-terminated, hexadecimal string, with each byte separated by &quot;:&quot;. The DUID that is sent is composed of the DUID type specified by <i>DUIDType=</i> and the value configured here. </dd>
-<p> The DUID value specified here overrides the DUID that <code><a href="/docs/linux/man/8-systemd-networkd-service/">systemd-networkd.service</a></code>(8) generates from the machine ID. To configure DUID per-network, see <code><a href="/docs/linux/man/5-systemd-network/">systemd.network</a></code>(5). The configured DHCP DUID should conform to the specification in m[blue]<code>RFC 3315</code>m[]<font SIZE="-2">[2]</font>, m[blue]<code>RFC 6355</code>m[]<font SIZE="-2">[3]</font>. To configure IAID, see <code><a href="/docs/linux/man/5-systemd-network/">systemd.network</a></code>(5). </p>
+<p> The DUID value specified here overrides the DUID that <code><a href="/docs/linux/man/8-systemd-networkd-service/">systemd-networkd.service</a></code>(8) generates from the machine ID. To configure DUID per-network, see <code><a href="/docs/linux/man/5-systemd-network/">systemd.network</a></code>(5). The configured DHCP DUID should conform to the specification in m[blue]<code>RFC 3315</code>m[][2], m[blue]<code>RFC 6355</code>m[][3]. To configure IAID, see <code><a href="/docs/linux/man/5-systemd-network/">systemd.network</a></code>(5). </p>
 <p> <code>Example 1. A DUIDType=vendor with a custom value</code> </p>
 <dl>
 <dd>

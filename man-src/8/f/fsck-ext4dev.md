@@ -77,15 +77,15 @@ description: "e2fsck – check a Linux ext2/ext3/ext4 file system"
 <dt><code>-y</code></dt>
 <dd>Assume an answer of `yes&#8217; to all questions; allows <code>e2fsck</code> to be used non-interactively. This option may not be specified at the same time as the <code>-n</code> or <code>-p</code> options.</dd></dl>
 <h2>Exit Code</h2>
-<p>The exit code returned by <code>e2fsck</code> is the sum of the following conditions:<br />
- 0 &#8211; No errors<br />
- 1 &#8211; File system errors corrected<br />
- 2 &#8211; File system errors corrected, system should<br />
- &nbsp;<wbr>&nbsp;<wbr>be rebooted<br />
- 4 &#8211; File system errors left uncorrected<br />
- 8 &#8211; Operational error<br />
- 16 &#8211; Usage or syntax error<br />
- 32 &#8211; E2fsck canceled by user request<br />
+<p>The exit code returned by <code>e2fsck</code> is the sum of the following conditions:<br/>
+ 0 &#8211; No errors<br/>
+ 1 &#8211; File system errors corrected<br/>
+ 2 &#8211; File system errors corrected, system should<br/>
+ &nbsp;<wbr>&nbsp;<wbr>be rebooted<br/>
+ 4 &#8211; File system errors left uncorrected<br/>
+ 8 &#8211; Operational error<br/>
+ 16 &#8211; Usage or syntax error<br/>
+ 32 &#8211; E2fsck canceled by user request<br/>
  128 &#8211; Shared library error</p>
 <h2>Signals</h2>
 <p>The following signals have the following effect when sent to <code>e2fsck</code>.</p>

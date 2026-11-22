@@ -14,8 +14,8 @@ description: "QuantLib::FixedDividend – Predetermined cash flow."
 <h3>Public Member Functions</h3>
 <p><code>FixedDividend</code> (Real amount, const <code>Date</code> &amp;date) </p>
 <p> <code>Dividend interface</code> </p>
-<p> virtual Real <code>amount</code> () const<br />
- <i>returns the amount of the cash flow </i><br />
+<p> virtual Real <code>amount</code> () const<br/>
+ <i>returns the amount of the cash flow </i><br/>
  virtual Real <code>amount</code> (Real) const </p>
 <h3>Protected Attributes</h3>
 <p>Real <code>amount_</code> </p>

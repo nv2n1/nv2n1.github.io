@@ -10,15 +10,15 @@ description: "ql/discretizedasset.hpp – Discretized asset classes."
 
 <p> ql/discretizedasset.hpp &#8211; Discretized asset classes. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/numericalmethod.hpp&gt;<br />
- #include &lt;ql/math/comparison.hpp&gt;<br />
+<p> #include &lt;ql/numericalmethod.hpp&gt;<br/>
+ #include &lt;ql/math/comparison.hpp&gt;<br/>
  #include &lt;ql/exercise.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>DiscretizedAsset</code><br />
- <i>Discretized asset class used by numerical methods. </i><br />
- class <code>DiscretizedDiscountBond</code><br />
- <i>Useful discretized discount bond asset. </i><br />
- class <code>DiscretizedOption</code><br />
+<p> class <code>DiscretizedAsset</code><br/>
+ <i>Discretized asset class used by numerical methods. </i><br/>
+ class <code>DiscretizedDiscountBond</code><br/>
+ <i>Useful discretized discount bond asset. </i><br/>
+ class <code>DiscretizedOption</code><br/>
  <i>Discretized option on a given asset. </i></p>
 <h2>Detailed Description</h2>
 <p> Discretized asset classes. </p>

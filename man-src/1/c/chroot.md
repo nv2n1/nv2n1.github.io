@@ -10,7 +10,7 @@ description: "chroot – run command or interactive shell with special root dire
 
 <p> chroot &#8211; run command or interactive shell with special root directory</p>
 <h2>SYNOPSIS</h2>
-<p> <code>chroot</code> [<i>OPTION</i>] <i>NEWROOT </i>[<i>COMMAND </i>[<i>ARG</i>]&#8230;]<br />
+<p> <code>chroot</code> [<i>OPTION</i>] <i>NEWROOT </i>[<i>COMMAND </i>[<i>ARG</i>]&#8230;]<br/>
  <code>chroot</code> <i>OPTION</i></p>
 <h2>DESCRIPTION</h2>
 <p> Run COMMAND with root directory set to NEWROOT.</p>
@@ -28,7 +28,7 @@ description: "chroot – run command or interactive shell with special root dire
 <h2>AUTHOR</h2>
 <p> Written by Roland McGrath.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2013 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt;.<br />
+<p> Copyright &#169; 2013 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt;.<br/>
  This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/2-chroot/">chroot</a>(2) </p>

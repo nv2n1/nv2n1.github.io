@@ -10,12 +10,12 @@ description: "ql/quotes/compositequote.hpp – purely virtual base class for mar
 
 <p> ql/quotes/compositequote.hpp &#8211; purely virtual base class for market observables </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/quote.hpp&gt;<br />
- #include &lt;ql/types.hpp&gt;<br />
- #include &lt;ql/handle.hpp&gt;<br />
+<p> #include &lt;ql/quote.hpp&gt;<br/>
+ #include &lt;ql/types.hpp&gt;<br/>
+ #include &lt;ql/handle.hpp&gt;<br/>
  #include &lt;ql/errors.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>CompositeQuote&lt; BinaryFunction &gt;</code><br />
+<p> class <code>CompositeQuote&lt; BinaryFunction &gt;</code><br/>
  <i>market element whose value depends on two other market element </i></p>
 <h2>Detailed Description</h2>
 <p> purely virtual base class for market observables </p>

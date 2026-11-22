@@ -45,9 +45,9 @@ description: "pilot – simple file system browser in the style of the Alpine Co
 <dt><code>-no_setlocale_collate</code></dt>
 <dd> Do not do setlocale(LC_COLLATE). Default is to do this setlocale.</dd></dl>
 <h2>Authors</h2>
-<p> Michael Seibel &lt;mikes [at] cac.washington.edu&gt;<br />
+<p> Michael Seibel &lt;mikes [at] cac.washington.edu&gt;<br/>
  Copyright 1994-2007 by the University of Washington.</p>
 <h2>See Also</h2>
-<p> <a href="/docs/linux/man/1-alpine/">alpine</a>(1)<br />
+<p> <a href="/docs/linux/man/1-alpine/">alpine</a>(1)<br/>
  Source distribution (part of the Alpine Message System): </p>
 <p> $Date: 2005/01/14 20:40:14 $ </p>

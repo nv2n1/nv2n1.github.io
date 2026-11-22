@@ -17,19 +17,19 @@ description: "restorefont – save or restore the SVGA font for textmode."
 <p> The VGA font file <i>filename</i> has the following format: </p>
 <dl>
 <dt>
-</dt><dd> <code>Offset:</code><br />
- <code> 0 &#8211; 31 </code>Character 0<br />
- <code> &#8230; </code> &#8230;<br />
+</dt><dd> <code>Offset:</code><br/>
+ <code> 0 &#8211; 31 </code>Character 0<br/>
+ <code> &#8230; </code> &#8230;<br/>
  <code>8164 &#8211; 8195 </code>Character 255</dd></dl>
 <p> Each row of a character bitmap is stored as a byte (8 pixels). The space that is left from the 32-byte buffer for each character is ignored, e.g. a 16 line font uses only offsets 0 &#8211; 15 of each character. </p>
 <p> Linux textmode screen resolutions: </p>
-<p> <code>80&#215;25</code> 16 line font 400 scanlines<br />
- <code>80&#215;28</code> 14 line font 400 scanlines<br />
+<p> <code>80&#215;25</code> 16 line font 400 scanlines<br/>
+ <code>80&#215;28</code> 14 line font 400 scanlines<br/>
  <code>80&#215;50</code> 8 line font 400 scanlines </p>
 <p> The font sizes and resolutions of extended textmodes depend on the video card type and BIOS: </p>
-<p> <code>132&#215;25</code> 14 line font 350 scanlines (ugly)<br />
- <code>132&#215;25</code> 16 line font 400 scanlines<br />
- <code>132&#215;43</code> 8 line font 350 scanlines (use fix132x43 to fix/improve)<br />
+<p> <code>132&#215;25</code> 14 line font 350 scanlines (ugly)<br/>
+ <code>132&#215;25</code> 16 line font 400 scanlines<br/>
+ <code>132&#215;43</code> 8 line font 350 scanlines (use fix132x43 to fix/improve)<br/>
  <code>132&#215;50</code> 8 line font 400 scanlines </p>
 <p> Using a font that has less lines per character than the textmode works, but the characters are smaller. Using a font that is bigger than the textmode font results in the bottom part of characters being cut off. </p>
 <p> The svgalib distribution contains sample fonts with 8, 14 and 16 line characters in the files <i>utils/font8</i>, <i>utils/font14</i>, and <i>utils/font16</i>. </p>

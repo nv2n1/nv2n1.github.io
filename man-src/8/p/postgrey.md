@@ -49,8 +49,8 @@ description: "postgrey – Postfix Greylisting Policy Server"
     and that per default / etc / postfix / postgrey_whitelist_clients.local is also read, so that you can put there local entries.</code></pre>
 <h2>Description</h2>
 <p>Postgrey is a Postfix policy server implementing greylisting. </p>
-<p> When a request for delivery of a mail is received by Postfix via <font SIZE="-1">SMTP,</font> the triplet <tt>&quot;CLIENT_IP&quot;</tt> / <tt>&quot;SENDER&quot;</tt> / <tt>&quot;RECIPIENT&quot;</tt> is built. If it is the first time that this triplet is seen, or if the triplet was first seen less than <i>delay</i> seconds (300 is the default), then the mail gets rejected with a temporary error. Hopefully spammers or viruses will not try again later, as it is however required per <font SIZE="-1">RFC.</font> </p>
-<p> Note that you shouldn&#8217;t use the &#8211;lookup-by-host option unless you know what you are doing: there are a lot of mail servers that use a pool of addresses to send emails, so that they can change <font SIZE="-1">IP</font> every time they try again. That&#8217;s why without this option postgrey will strip the last byte of the <font SIZE="-1">IP</font> address when doing lookups in the database.</p>
+<p> When a request for delivery of a mail is received by Postfix via SMTP, the triplet <tt>&quot;CLIENT_IP&quot;</tt> / <tt>&quot;SENDER&quot;</tt> / <tt>&quot;RECIPIENT&quot;</tt> is built. If it is the first time that this triplet is seen, or if the triplet was first seen less than <i>delay</i> seconds (300 is the default), then the mail gets rejected with a temporary error. Hopefully spammers or viruses will not try again later, as it is however required per RFC. </p>
+<p> Note that you shouldn&#8217;t use the &#8211;lookup-by-host option unless you know what you are doing: there are a lot of mail servers that use a pool of addresses to send emails, so that they can change IP every time they try again. That&#8217;s why without this option postgrey will strip the last byte of the IP address when doing lookups in the database.</p>
 <h3>Installation</h3>
 <dl>
 <dt>&bull;</dt>
@@ -90,14 +90,14 @@ description: "postgrey – Postfix Greylisting Policy Server"
 <dl>
 <dt>domain.addr</dt>
 <dd><tt>&quot;domain.addr&quot;</tt> domain and subdomains.</dd>
-<dt><font SIZE="-1">IP1.IP2.IP3.IP4</font></dt>
-<dd><font SIZE="-1">IP</font> address <font SIZE="-1">IP1.IP2.IP3.IP4.</font> You can also leave off one number, in which case only the first specified numbers will be checked.</dd>
-<dt><font SIZE="-1">IP1.IP2.IP3.IP4/MASK</font></dt>
+<dt>IP1.IP2.IP3.IP4</dt>
+<dd>IP address IP1.IP2.IP3.IP4. You can also leave off one number, in which case only the first specified numbers will be checked.</dd>
+<dt>IP1.IP2.IP3.IP4/MASK</dt>
 <dd>CIDR-syle network. Example: 192.168.1.0/24</dd>
 <dt>/regexp/</dt>
 <dd>anything that matches <tt>&quot;regexp&quot;</tt> (the full address is matched).</dd></dl>
 <h3>Auto-whitelisting clients</h3>
-<p>With the option &#8211;auto-whitelist-clients a client <font SIZE="-1">IP</font> address will be automatically whitelisted if the following conditions are met:</p>
+<p>With the option &#8211;auto-whitelist-clients a client IP address will be automatically whitelisted if the following conditions are met:</p>
 <dl>
 <dt>&bull;</dt>
 <dd>At least 5 successfull attempts of delivering a mail (after greylisting was done). That number can be changed by specifying a number after the &#8211;auto-whitelist-clients argument. Only one attempt per hour counts.</dd>
@@ -105,13 +105,13 @@ description: "postgrey – Postfix Greylisting Policy Server"
 <dd>The client was last seen before &#8211;max-age days (35 per default).</dd></dl>
 <h3>Greylist Action</h3>
 <p>To set the action to be returned to postfix when a message fails postgrey&#8217;s tests and should be deferred, use the &#8211;greylist-action=ACTION option. </p>
-<p> By default, postgrey returns <font SIZE="-1">DEFER_IF_PERMIT,</font> which causes postfix to check the rest of the restrictions and defer the message only if it would otherwise be accepted. A delay action of 451 causes postfix to always defer the message with an <font SIZE="-1">SMTP</font> reply code of 451 (temp fail). </p>
+<p> By default, postgrey returns DEFER_IF_PERMIT, which causes postfix to check the rest of the restrictions and defer the message only if it would otherwise be accepted. A delay action of 451 causes postfix to always defer the message with an SMTP reply code of 451 (temp fail). </p>
 <p> See the postfix manual page <i><a href="/docs/linux/man/5-access/">access</a></i>(5) for a discussion of the actions allowed.</p>
 <h3>Greylist Text</h3>
 <p>When a message is greylisted, an error message like this will be sent at the SMTP-level: </p>
 <pre> Greylisted, see <a rel="nofollow" href="http://postgrey.schweikert.ch/help/example.com.html">http://postgrey.schweikert.ch/help/example.com.html</a></pre>
-<p>Usually no user should see that error message and the idea of that <font SIZE="-1">URL</font> is to provide some help to system administrators seeing that message or users of broken mail clients which try to send mails directly and get a greylisting error. Note that the default help-URL contains the original recipient domain (example.com), so that domain-specific help can be presented to the user (on the default page it is said to contact postmaster [at] example.com) </p>
-<p> You can change the text (and <font SIZE="-1">URL</font>) with the <code>&#8211;greylist-text</code> parameter. The following special variables will be replaced in the text:</p>
+<p>Usually no user should see that error message and the idea of that URL is to provide some help to system administrators seeing that message or users of broken mail clients which try to send mails directly and get a greylisting error. Note that the default help-URL contains the original recipient domain (example.com), so that domain-specific help can be presented to the user (on the default page it is said to contact postmaster [at] example.com) </p>
+<p> You can change the text (and URL) with the <code>&#8211;greylist-text</code> parameter. The following special variables will be replaced in the text:</p>
 <dl>
 <dt>%s</dt>
 <dd>How many seconds left until the greylisting is over (300).</dd>
@@ -131,14 +131,14 @@ description: "postgrey – Postfix Greylisting Policy Server"
 <dt>%h</dt>
 <dd>The host.</dd></dl>
 <h3>Privacy</h3>
-<p>The &#8211;privacy option enable the use of a <font SIZE="-1">SHA1</font> hash function to store IPs and emails in the greylisting database. This will defeat straight forward attempts to retrieve mail user behaviours.</p>
-<h3><font SIZE="-1">SEE ALSO</font></h3>
+<p>The &#8211;privacy option enable the use of a SHA1 hash function to store IPs and emails in the greylisting database. This will defeat straight forward attempts to retrieve mail user behaviours.</p>
+<h3>SEE ALSO</h3>
 <p>See &lt;<a rel="nofollow" href="http://www.greylisting.org/">http://www.greylisting.org/</a>&gt; for a description of what greylisting is and &lt;<a rel="nofollow" href="http://www.postfix.org/SMTPD_POLICY_README.html">http://www.postfix.org/SMTPD_POLICY_README.html</a>&gt; for a description of how Postfix policy servers work.</p>
 <h2>Copyright</h2>
-<p>Copyright (c) 2004-2007 by <font SIZE="-1">ETH</font> Zurich. All rights reserved. Copyright (c) 2007 by Open Systems <font SIZE="-1">AG.</font> All rights reserved.</p>
+<p>Copyright (c) 2004-2007 by ETH Zurich. All rights reserved. Copyright (c) 2007 by Open Systems AG. All rights reserved.</p>
 <h2>License</h2>
-<p>This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
-<p> This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE. </font> See the <font SIZE="-1">GNU</font> General Public License for more details. </p>
-<p> You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, <font SIZE="-1">MA 02139, USA.</font></p>
+<p>This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
+<p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. </p>
+<p> You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.</p>
 <h2>Author</h2>
 <p>David Schweikert&nbsp;<wbr>&lt;david [at] schweikert.ch&gt;</p>

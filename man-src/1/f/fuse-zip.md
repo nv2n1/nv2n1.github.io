@@ -65,5 +65,5 @@ description: "fuse-zip – a FUSE filesystem for zip archives with write support
 <h2>LICENSE</h2>
 <p> This is Free Software; this software is licensed under the LGPL version 2, as published by the Free Software Foundation, or later. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>AUTHORS</h2>
-<p> Alexander Galanin &lt;gaa.nnov [at] mail.ru&gt;.<br />
+<p> Alexander Galanin &lt;gaa.nnov [at] mail.ru&gt;.<br/>
  This manual page was originally written by Kirill Zaitsev &lt;teferiincub [at] gmail.com&gt;. Updated by Alexander Galanin. </p>

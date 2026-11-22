@@ -42,5 +42,5 @@ description: "rawtopgm – convert raw grayscale bytes into a portable graymap"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-pgm/">pgm</a></code>(5), <code><a href="/docs/linux/man/1-rawtoppm/">rawtoppm</a></code>(1), <code><a href="/docs/linux/man/1-pnmflip/">pnmflip</a></code>(1) </p>
 <h2>AUTHORS</h2>
-<p> Copyright (C) 1989 by Jef Poskanzer.<br />
+<p> Copyright (C) 1989 by Jef Poskanzer.<br/>
  Modified June 1993 by Oliver Trepte, oliver [at] fysik4.kth.se </p>

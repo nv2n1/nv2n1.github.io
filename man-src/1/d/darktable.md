@@ -24,13 +24,13 @@ darktable[options][IMG_1234.{RAW, ...} | image_folder / ]
 --disable - opencl-- library&lt;library file&gt; --datadir&lt;data directory&gt; --moduledir&lt;module directory&gt; --tmpdir&lt;tmp directory&gt; --configdir&lt;user config directory&gt; --cachedir&lt;user cache directory&gt; --localedir&lt;locale directory&gt; --luacmd&lt;lua command&gt; --conf &lt; key &gt;= &lt;value&gt; --noiseprofiles&lt;noiseprofiles json file&gt; --help-- version
 </code></pre>
 <h2>DESCRIPTION</h2>
-<p> <code>darktable</code> is a digital photography workflow application for <code>Linux</code>, <code>Mac </code><font SIZE="-1"><code>OS X</code></font> and several other <code>Unices</code>. </p>
+<p> <code>darktable</code> is a digital photography workflow application for <code>Linux</code>, <code>Mac </code><code>OS X</code> and several other <code>Unices</code>. </p>
 <p> The application is designed to ease editing and consistent processing of large photo sessions and provides an easy to use digital light-table and a set of sophisticated post-processing tools. </p>
-<p> Most processing is done in 32-bit floating point per channel mode in device independent <font SIZE="-1"><code>CIE</code></font><code> L*a*b*</code> color space. <code>darktable</code> is also fully color managed, which gives you full control over the look of the photos. </p>
+<p> Most processing is done in 32-bit floating point per channel mode in device independent <code>CIE</code><code> L*a*b*</code> color space. <code>darktable</code> is also fully color managed, which gives you full control over the look of the photos. </p>
 <p> The application relies on a modern plug-in architecture thus making it easy for 3rd party developers to extend the existing capabilities of the application. All lighttable and darkroom features are implemented as plug-ins, so you can create your plug-ins reusing existing code. Most workflow specific things can also be scripted in <code>Lua</code>.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><font SIZE="-1"><code>IMG_1234.RAW</code></font><code> or image_folder/</code></dt>
+<dt><code>IMG_1234.RAW</code><code> or image_folder/</code></dt>
 <dd> You may optionally supply the filename of an image or the name of a folder containing image files. If a filename is given darktable starts in darkroom view with that file opened. If a folder is given darktable starts in lighttable view with the content of that folder as the current collection. If there is already an instance of darktable running (using the same library) the image or folder will be opened there, using <code>D-Bus</code> to communicate between the two processes.</dd>
 <dt><code>-d &lt;debug option&gt;</code></dt>
 <dd> This option enables debug output to the terminal. There are several subsystems of darktable and debugging of each of them can be activated separately. You can use this option multiple times if you want debugging output of more than one subsystem. </dd>
@@ -70,7 +70,7 @@ darktable[options][IMG_1234.{RAW, ...} | image_folder / ]
 <dt><code>&#8211;conf &lt;key&gt;=&lt;value&gt;</code></dt>
 <dd> darktable supports a rich set of configuration parameters which the user defines in <tt>&quot;darktablerc&quot;</tt> &#8211; darktable&#8217;s configuration file in the user config directory. You may temporarily overwrite individual settings on the command line with this option &#8211; however, these settings will not be stored in <tt>&quot;darktablerc&quot;</tt>.</dd>
 <dt><code>&#8211;noiseprofiles &lt;noiseprofiles json file&gt;</code></dt>
-<dd> darktable&#8217;s profiled denoise module uses camera specific profile data that gets loaded from an external <font SIZE="-1">JSON</font> file. With this option the file to be loaded can be changed to allow testing alternative profiles. The default profile file is <tt>&quot;noiseprofiles.json&quot;</tt> and is typically found in <tt>&quot;/opt/darktable/share/darktable/&quot;</tt> or <tt>&quot;/usr/share/darktable/&quot;</tt>.</dd></dl>
+<dd> darktable&#8217;s profiled denoise module uses camera specific profile data that gets loaded from an external JSON file. With this option the file to be loaded can be changed to allow testing alternative profiles. The default profile file is <tt>&quot;noiseprofiles.json&quot;</tt> and is typically found in <tt>&quot;/opt/darktable/share/darktable/&quot;</tt> or <tt>&quot;/usr/share/darktable/&quot;</tt>.</dd></dl>
 <h2>DEFAULT KEYBINDINGS</h2>
 <p> <i>All modes</i></p>
 <dl>
@@ -253,4 +253,4 @@ darktable[options][IMG_1234.{RAW, ...} | image_folder / ]
 <p> The project was started by Johannes Hanika in early 2009 to fill the gap (or, rather, a black hole) of a digital photography workflow tool on Linux.</p>
 <h2>COPYRIGHT AND LICENSE</h2>
 <p> <code>Copyright (C)</code> 2009-2015 by Authors. </p>
-<p> <code>darktable</code> is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GPL</font> v3 or (at your option) any later version. </p>
+<p> <code>darktable</code> is free software; you can redistribute it and/or modify it under the terms of the GPL v3 or (at your option) any later version. </p>

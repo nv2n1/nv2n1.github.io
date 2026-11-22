@@ -36,11 +36,11 @@ description: "Tspi_Context_UnregisterKey – unregister a key from the persisten
 <h2>Return Codes</h2>
 <p><code>Tspi_Context_UnregisterKey</code> returns TSS_SUCCESS on success, otherwise one of the following values are returned:</p>
 <dl COMPACT>
-<dt><font SIZE="-1">TSS_E_INVALID_HANDLE &#8211; the parameter <i>hContext</i> is an invalid parameter.</font></dt>
+<dt>TSS_E_INVALID_HANDLE &#8211; the parameter <i>hContext</i> is an invalid parameter.</dt>
 <dd>
-</dd><dt><font SIZE="-1">TSS_E_PS_KEY_NOTFOUND &#8211; the parameter <i>uuidKey</i> is an invalid UUID.</font></dt>
+</dd><dt>TSS_E_PS_KEY_NOTFOUND &#8211; the parameter <i>uuidKey</i> is an invalid UUID.</dt>
 <dd>
-</dd><dt><font SIZE="-1">TSS_E_INTERNAL_ERROR &#8211; An error occurred internal to the TSS.</font></dt>
+</dd><dt>TSS_E_INTERNAL_ERROR &#8211; An error occurred internal to the TSS.</dt>
 <dd></dd></dl>
 <h2>Example</h2>
 <pre>#include &lt;trousers/tss.h&gt;

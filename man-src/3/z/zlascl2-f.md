@@ -10,7 +10,7 @@ description: "zlascl2.f –"
 <p>zlascl2.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlascl2</code> (M, N, D, X, LDX)<br />
+<p>subroutine <code>zlascl2</code> (M, N, D, X, LDX)<br/>
  <i></i><code>ZLASCL2</code> performs diagonal scaling on a vector.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlascl2 (integerM, integerN, double precision, dimension( * )D, complex*16, dimension( ldx, * )X, integerLDX)</h3>

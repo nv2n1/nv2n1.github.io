@@ -18,7 +18,7 @@ description: "lbzless – file perusal filter for crt viewing of compressed text
 <h2>BUGS</h2>
 <p> <i>Zless</i> does not work with compressed data that is piped to it via standard input; it requires that input files be specified as arguments. To read compressed data from a pipe, you can use &#8230;<code>|bunzip2|less</code> instead of &#8230;<code>|lbzless</code>.</p>
 <h2>COPYRIGHT NOTICE</h2>
-<p> Copyright &#169; 2006, 2007 Free Software Foundation, Inc.<br />
+<p> Copyright &#169; 2006, 2007 Free Software Foundation, Inc.<br/>
  Copyright &#169; 1992, 1993 Jean-loup Gailly </p>
 <p> Permission is granted to make and distribute verbatim copies of this manual provided the copyright notice and this permission notice are preserved on all copies. </p>
 <p> Permission is granted to copy and distribute modified versions of this manual under the conditions for verbatim copying, provided that the entire resulting derived work is distributed under the terms of a permission notice identical to this one. </p>

@@ -22,7 +22,7 @@ description: "systemd-sysusers, systemd-sysusers.service – Allocate system use
 <dd>Takes a directory path as an argument. All paths will be prefixed with the given alternate <i>root</i> path, including config search paths.</dd></dl>
 <p> <code>&#8211;image=</code><i>image</i></p>
 <dl>
-<dd>Takes a path to a disk image file or block device node. If specified all operations are applied to file system in the indicated disk image. This is similar to <code>&#8211;root=</code> but operates on file systems stored in disk images or block devices. The disk image should either contain just a file system or a set of file systems within a GPT partition table, following the m[blue]<code>Discoverable Partitions Specification</code>m[]<font SIZE="-2">[1]</font>. For further information on supported disk images, see <code><a href="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></code>(1)&#8217;s switch of the same name.</dd></dl>
+<dd>Takes a path to a disk image file or block device node. If specified all operations are applied to file system in the indicated disk image. This is similar to <code>&#8211;root=</code> but operates on file systems stored in disk images or block devices. The disk image should either contain just a file system or a set of file systems within a GPT partition table, following the m[blue]<code>Discoverable Partitions Specification</code>m[][1]. For further information on supported disk images, see <code><a href="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></code>(1)&#8217;s switch of the same name.</dd></dl>
 <p> <code>&#8211;replace=</code><i>PATH</i></p>
 <dl>
 <dd>When this option is given, one ore more positional arguments must be specified. All configuration files found in the directories listed in <code><a href="/docs/linux/man/5-sysusers-d/">sysusers.d</a></code>(5) will be read, and the configuration given on the command line will be handled instead of and with the same priority as the configuration file <i>PATH</i>. </dd>
@@ -71,7 +71,7 @@ description: "systemd-sysusers, systemd-sysusers.service – Allocate system use
 <h2>Exit Status</h2>
 <p>On success, 0 is returned, a non-zero failure code otherwise.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/5-sysusers-d/">sysusers.d</a></code>(5), m[blue]<code>Users, Groups, UIDs and GIDs on systemd systems</code>m[]<font SIZE="-2">[2]</font>, <code>systemd.exec</code>(1), <code><a href="/docs/linux/man/1-mkpasswd/">mkpasswd</a></code>(1)</p>
+<p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/5-sysusers-d/">sysusers.d</a></code>(5), m[blue]<code>Users, Groups, UIDs and GIDs on systemd systems</code>m[][2], <code>systemd.exec</code>(1), <code><a href="/docs/linux/man/1-mkpasswd/">mkpasswd</a></code>(1)</p>
 <h2>Notes</h2>
 <dl>
 <dt> 1.</dt>

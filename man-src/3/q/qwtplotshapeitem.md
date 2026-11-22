@@ -14,39 +14,39 @@ description: "QwtPlotShapeItem –"
 <p> Inherits <code>QwtPlotItem</code>.</p>
 <h3>Public Types</h3>
 <p>enum <code>PaintAttribute</code> { <code>ClipPolygons</code> = 0x01 } </p>
-<p> enum <code>LegendMode</code> { <code>LegendShape</code>, <code>LegendColor</code> }<br />
- <i>Mode how to display the item on the legend. </i><br />
- typedef QFlags&lt; <code>PaintAttribute</code> &gt; <code>PaintAttributes</code><br />
+<p> enum <code>LegendMode</code> { <code>LegendShape</code>, <code>LegendColor</code> }<br/>
+ <i>Mode how to display the item on the legend. </i><br/>
+ typedef QFlags&lt; <code>PaintAttribute</code> &gt; <code>PaintAttributes</code><br/>
  <i>Paint attributes. </i></p>
 <h3>Public Member Functions</h3>
-<p><code>QwtPlotShapeItem</code> (const QString &amp;<code>title</code>=QString::null)<br />
- <i>Constructor. </i><br />
- <code>QwtPlotShapeItem</code> (const <code>QwtText</code> &amp;<code>title</code>)<br />
- <i>Constructor. </i><br />
- virtual <code>~QwtPlotShapeItem</code> ()<br />
- <i>Destructor. </i><br />
+<p><code>QwtPlotShapeItem</code> (const QString &amp;<code>title</code>=QString::null)<br/>
+ <i>Constructor. </i><br/>
+ <code>QwtPlotShapeItem</code> (const <code>QwtText</code> &amp;<code>title</code>)<br/>
+ <i>Constructor. </i><br/>
+ virtual <code>~QwtPlotShapeItem</code> ()<br/>
+ <i>Destructor. </i><br/>
  void <code>setPaintAttribute</code> (<code>PaintAttribute</code>, bool on=true) </p>
 <p> bool <code>testPaintAttribute</code> (<code>PaintAttribute</code>) const </p>
 <p> void <code>setLegendMode</code> (<code>LegendMode</code>) </p>
 <p> <code>LegendMode</code> <code>legendMode</code> () const </p>
-<p> void <code>setRect</code> (const QRectF &amp;)<br />
- <i>Set a path built from a rectangle. </i><br />
- void <code>setPolygon</code> (const QPolygonF &amp;)<br />
- <i>Set a path built from a polygon. </i><br />
- void <code>setShape</code> (const QPainterPath &amp;)<br />
- <i>Set the shape to be displayed. </i><br />
+<p> void <code>setRect</code> (const QRectF &amp;)<br/>
+ <i>Set a path built from a rectangle. </i><br/>
+ void <code>setPolygon</code> (const QPolygonF &amp;)<br/>
+ <i>Set a path built from a polygon. </i><br/>
+ void <code>setShape</code> (const QPainterPath &amp;)<br/>
+ <i>Set the shape to be displayed. </i><br/>
  QPainterPath <code>shape</code> () const </p>
 <p> void <code>setPen</code> (const QColor &amp;, qreal width=0.0, Qt::PenStyle=Qt::SolidLine) </p>
-<p> void <code>setPen</code> (const QPen &amp;)<br />
- <i>Assign a pen. </i><br />
+<p> void <code>setPen</code> (const QPen &amp;)<br/>
+ <i>Assign a pen. </i><br/>
  QPen <code>pen</code> () const </p>
 <p> void <code>setBrush</code> (const QBrush &amp;) </p>
 <p> QBrush <code>brush</code> () const </p>
-<p> void <code>setRenderTolerance</code> (double)<br />
- <i>Set the tolerance for the weeding optimization. </i><br />
+<p> void <code>setRenderTolerance</code> (double)<br/>
+ <i>Set the tolerance for the weeding optimization. </i><br/>
  double <code>renderTolerance</code> () const </p>
-<p> virtual QRectF <code>boundingRect</code> () const<br />
- <i>Bounding rectangle of the shape. </i><br />
+<p> virtual QRectF <code>boundingRect</code> () const<br/>
+ <i>Bounding rectangle of the shape. </i><br/>
  virtual void <code>draw</code> (QPainter *p, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;rect) const </p>
 <p> virtual <code>QwtGraphic</code> <code>legendIcon</code> (int index, const QSizeF &amp;) const </p>
 <p> virtual int <code>rtti</code> () const </p>
@@ -110,9 +110,9 @@ description: "QwtPlotShapeItem –"
 <p>Draw the shape item </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>xMap</i> X-Scale Map<br />
- <i>yMap</i> Y-Scale Map<br />
+<dd><i>painter</i> Painter<br/>
+ <i>xMap</i> X-Scale Map<br/>
+ <i>yMap</i> Y-Scale Map<br/>
  <i>canvasRect</i> Contents rect of the plot canvas</dd></dl>
 <p> Implements <code>QwtPlotItem</code>.</p>
 <h3><code>QwtGraphic</code> QwtPlotShapeItem::legendIcon (intindex, const QSizeF &amp;size) const [virtual]</h3>
@@ -121,7 +121,7 @@ description: "QwtPlotShapeItem –"
 <dd>A rectangle filled with the color of the brush ( or the pen )</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>index</i> Index of the legend entry ( usually there is only one )<br />
+<dd><i>index</i> Index of the legend entry ( usually there is only one )<br/>
  <i>size</i> Icon size</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -174,7 +174,7 @@ description: "QwtPlotShapeItem –"
 <p>Specify an attribute how to draw the shape </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>attribute</i> Paint attribute<br />
+<dd><i>attribute</i> Paint attribute<br/>
  <i>on</i> On/Off</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -184,8 +184,8 @@ description: "QwtPlotShapeItem –"
 <p> In Qt5 the default pen width is 1.0 ( 0.0 in Qt4 ) what makes it non cosmetic ( see QPen::isCosmetic() ). This method has been introduced to hide this incompatibility. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>color</i> Pen color<br />
- <i>width</i> Pen width<br />
+<dd><i>color</i> Pen color<br/>
+ <i>width</i> Pen width<br/>
  <i>style</i> Pen style</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>

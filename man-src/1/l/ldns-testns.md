@@ -39,10 +39,10 @@ description: "ldns-testns – simple fake nameserver tool"
 <p> ; first give MATCH lines, that say what queries are matched ; by this entry. ; &#8216;opcode&#8217; makes the query match the opcode from the reply ; if you leave it out, any opcode matches this entry. ; &#8216;qtype&#8217; makes the query match the qtype from the reply ; &#8216;qname&#8217; makes the query match the qname from the reply ; &#8216;serial=1023&#8217; makes the query match if ixfr serial is 1023. </p>
 <p> MATCH [opcode] [qtype] [qname] [serial=&lt;value&gt;] MATCH [UDP|TCP] MATCH &#8230; </p>
 <p> ; Then the REPLY header is specified. </p>
-<p> REPLY opcode, rcode or flags.<br />
-&nbsp;<wbr>&nbsp;<wbr>(opcode)&nbsp;<wbr>&nbsp;<wbr>QUERY IQUERY STATUS NOTIFY UPDATE<br />
-&nbsp;<wbr>&nbsp;<wbr>(rcode)&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>NOERROR FORMERR SERVFAIL NXDOMAIN NOTIMPL YXDOMAIN<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>YXRRSET NXRRSET NOTAUTH NOTZONE<br />
+<p> REPLY opcode, rcode or flags.<br/>
+&nbsp;<wbr>&nbsp;<wbr>(opcode)&nbsp;<wbr>&nbsp;<wbr>QUERY IQUERY STATUS NOTIFY UPDATE<br/>
+&nbsp;<wbr>&nbsp;<wbr>(rcode)&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>NOERROR FORMERR SERVFAIL NXDOMAIN NOTIMPL YXDOMAIN<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>YXRRSET NXRRSET NOTAUTH NOTZONE<br/>
 &nbsp;<wbr>&nbsp;<wbr>(flags)&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>QR AA TC RD CD RA AD </p>
 <p> REPLY &#8230; </p>
 <p> ; any additional actions to do. </p>
@@ -53,11 +53,11 @@ description: "ldns-testns – simple fake nameserver tool"
 <p> SECTION ANSWER &lt;RRs, one per line&gt; </p>
 <p> SECTION AUTHORITY &lt;RRs, one per line&gt; </p>
 <p> SECTION ADDITIONAL &lt;RRs, one per line&gt; </p>
-<p> EXTRA_PACKET ; follow with SECTION, REPLY for more packets. HEX_ANSWER_BEGIN ; follow with hex data<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>;&nbsp;<wbr>this replaces any answer packet constructed<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>;&nbsp;<wbr>with the SECTION keywords&nbsp;<wbr>(only SECTION QUERY<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>;&nbsp;<wbr>is used to match queries). If the data cannot<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>;&nbsp;<wbr>be parsed, ADJUST rules for the answer packet<br />
+<p> EXTRA_PACKET ; follow with SECTION, REPLY for more packets. HEX_ANSWER_BEGIN ; follow with hex data<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>;&nbsp;<wbr>this replaces any answer packet constructed<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>;&nbsp;<wbr>with the SECTION keywords&nbsp;<wbr>(only SECTION QUERY<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>;&nbsp;<wbr>is used to match queries). If the data cannot<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>;&nbsp;<wbr>be parsed, ADJUST rules for the answer packet<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>;&nbsp;<wbr>are ignored </p>
 <p> HEX_ANSWER_END </p>
 <p> ENTRY_END </p>

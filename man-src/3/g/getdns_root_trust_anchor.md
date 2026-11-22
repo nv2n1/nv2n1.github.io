@@ -13,7 +13,7 @@ description: "getdns_root_trust_anchor — return the getdns list of default roo
 <p> DNS Resolver library (libgetdns, -lgetdns) </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;getdns.h&gt; </p>
-<p> getdns_list *<br />
+<p> getdns_list *<br/>
  <code>getdns_root_trust_anchor</code> (time_t *utc_date_of_anchor) </p>
 <h2>DESCRIPTION</h2>
 <p> If an application wants the API to perform DNSSEC validation without using the extensions, it can use the getdns_validate_dnssec() helper function. The API will use the resource records in bundle_of_support_records to construct the validation chain and the DNSKEY or DS records in trust_anchor_records as trust anchors. The default list of trust anchor records that is used by the library to validate DNSSEC can be retrieved by using the getdns_root_trust_anchor helper function. </p>

@@ -10,7 +10,7 @@ description: "ssysvxx.f –"
 <p>ssysvxx.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>ssysvxx</code> (FACT, UPLO, N, NRHS, A, LDA, AF, LDAF, IPIV, EQUED, S, B, LDB, X, LDX, RCOND, RPVGRW, BERR, N_ERR_BNDS, ERR_BNDS_NORM, ERR_BNDS_COMP, NPARAMS, PARAMS, WORK, IWORK, INFO)<br />
+<p>subroutine <code>ssysvxx</code> (FACT, UPLO, N, NRHS, A, LDA, AF, LDAF, IPIV, EQUED, S, B, LDB, X, LDX, RCOND, RPVGRW, BERR, N_ERR_BNDS, ERR_BNDS_NORM, ERR_BNDS_COMP, NPARAMS, PARAMS, WORK, IWORK, INFO)<br/>
  <i></i><code>SSYSVXX</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ssysvxx (characterFACT, characterUPLO, integerN, integerNRHS, real, dimension( lda, * )A, integerLDA, real, dimension( ldaf, * )AF, integerLDAF, integer, dimension( * )IPIV, characterEQUED, real, dimension( * )S, real, dimension( ldb, * )B, integerLDB, real, dimension( ldx, * )X, integerLDX, realRCOND, realRPVGRW, real, dimension( * )BERR, integerN_ERR_BNDS, real, dimension( nrhs, * )ERR_BNDS_NORM, real, dimension( nrhs, * )ERR_BNDS_COMP, integerNPARAMS, real, dimension( * )PARAMS, real, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>

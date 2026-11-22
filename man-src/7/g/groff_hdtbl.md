@@ -87,16 +87,16 @@ description: "groff_hdtbl – Heidelberger table macros for GNU roff"
 <dd>Begin a new table.</dd>
 <dd>
 </dd><dl>
-<dd><code>predecessor:</code><br />
- <code>successor:</code><br />
+<dd><code>predecessor:</code><br/>
+ <code>successor:</code><br/>
  <code>arguments:</code> </dd>
 <dl>
-<dd>Thickness of the surrounding box border. (no value) means neither a surrounding box border nor any horizontal or vertical separator lines between the table rows and cells. suppresses the surrounding box border, but still allows separator lines between cells and rows.<br />
- <code>Default:</code> Border color.<br />
- <code>Default:</code> Number of table columns. This argument is necessary if more than one column is in the table and no arguments are present.<br />
- <code>Default:</code> Cell padding, i.e., the extra space between the cell space border and the cell contents.<br />
- <code>Default:</code> Cell spacing, i.e., the extra space between the table border or vertical or horizontal lines between cells and the cellspace.<br />
- <code>Default:</code> Horizontal alignment of the table, if it is smaller than the line width. : left alignment. : centered alignment. : right alignment.<br />
+<dd>Thickness of the surrounding box border. (no value) means neither a surrounding box border nor any horizontal or vertical separator lines between the table rows and cells. suppresses the surrounding box border, but still allows separator lines between cells and rows.<br/>
+ <code>Default:</code> Border color.<br/>
+ <code>Default:</code> Number of table columns. This argument is necessary if more than one column is in the table and no arguments are present.<br/>
+ <code>Default:</code> Cell padding, i.e., the extra space between the cell space border and the cell contents.<br/>
+ <code>Default:</code> Cell spacing, i.e., the extra space between the table border or vertical or horizontal lines between cells and the cellspace.<br/>
+ <code>Default:</code> Horizontal alignment of the table, if it is smaller than the line width. : left alignment. : centered alignment. : right alignment.<br/>
  <code>Default:</code> Widths of table cells. ,<i></i> ,<i></i> ll are either numbers of type~ or natural numbers with the pseudo-scaling indicator , with the meaning &#8220;percent of the actual line length (or column length for inner tables, respectively)&#8221;. If there are less width values than table columns, the last width value is used for the remaining cells. The argument</dd>
 <dl>
 <dd>
@@ -104,7 +104,7 @@ description: "groff_hdtbl – Heidelberger table macros for GNU roff"
 <dd></dd></dl>
 </dl>
 <dl>
-<dd>for example indicates that the first column is 1.5~inches wide; the remaining columns take 1/10 of the column length each.<br />
+<dd>for example indicates that the first column is 1.5~inches wide; the remaining columns take 1/10 of the column length each.<br/>
  <code>Default:</code> The table width equals the outer line length or column length; the columns have equal widths. Height of the table. If the table with its contents is lower than~ ,<i></i> the last row is stretched to this value.</dd></dl>
 </dl>
 </dl>
@@ -112,18 +112,18 @@ description: "groff_hdtbl – Heidelberger table macros for GNU roff"
 <dd>The (optionally numbered) table caption. is optional.</dd>
 <dd>
 </dd><dl>
-<dd><code>predecessor:</code><br />
- <code>successor:</code><br />
+<dd><code>predecessor:</code><br/>
+ <code>successor:</code><br/>
  <code>arguments:</code> </dd>
 <dl>
-<dd>Vertical alignment of the table caption. : The caption is placed above the table. : The caption is placed below the table.<br />
+<dd>Vertical alignment of the table caption. : The caption is placed above the table. : The caption is placed below the table.<br/>
  <code>Default:</code></dd></dl>
 </dl>
 <dd>Begin a new table row.</dd>
 <dd>
 </dd><dl>
-<dd><code>predecessor:</code><br />
- <code>successor:</code><br />
+<dd><code>predecessor:</code><br/>
+ <code>successor:</code><br/>
  <code>arguments:</code> </dd>
 <dl>
 <dd>The height of the row. If a cell in the row is higher than~ ,<i></i> this value is ignored; otherwise the row height is stretched to~ .<i></i></dd></dl>
@@ -132,8 +132,8 @@ description: "groff_hdtbl – Heidelberger table macros for GNU roff"
 <dd>Arguments and cell contents can be mixed. The macro is not really necessary and differs from only in three default settings, similar to the and HTML tags: The contents of is horizontally and vertically centered and typeset in boldface.</dd>
 <dd>
 </dd><dl>
-<dd><code>predecessor:</code><br />
- <code>successor:</code><br />
+<dd><code>predecessor:</code><br/>
+ <code>successor:</code><br/>
  <code>arguments:</code> </dd>
 <dl>
 <dd>The width of this cell is the sum of the widths of the~ cells above and below this row. The height of this cell is the sum of the heights of the cells left and right of this column.</dd>
@@ -187,8 +187,8 @@ description: "groff_hdtbl – Heidelberger table macros for GNU roff"
 </dl>
 <dd>
 </dd><dl>
-<dd><code>predecessor:</code><br />
- <code>successor:</code><br />
+<dd><code>predecessor:</code><br/>
+ <code>successor:</code><br/>
  <code>arguments:</code> </dd>
 <dl>
 <dd>Prevent the table from being printed until it is freed by calling the macro . This argument is ignored for inner (nested) tables.</dd></dl>
@@ -197,17 +197,17 @@ description: "groff_hdtbl – Heidelberger table macros for GNU roff"
 <h3>Arguments common to .TBL, .TR, .TD, and .TH</h3>
 <p>The arguments described in this section can be specified with the and macros, but they are eventually passed on to the table cells. If omitted, the defaults take place, which the user can change by setting the corresponding default registers or strings, as documented below. Setting an argument with the macro has the same effect as setting it for all rows in the table. Setting an argument with a macro has the same effect as setting it for all the or macro in this row.</p>
 <dl>
-<dd>The background color of the table cells. This includes the area specified with the argument. The argument (no value) suppresses a background color; this makes the background transparent.<br />
- <code>Default:</code> The foreground color of the cell contents.<br />
- <code>Default:</code> The font family for the table. is one of the groff font families, for example for the AvantGarde fonts or for Helvetica-Narrow.<br />
- <code>Default:</code> The font family found before the table (string ). The font style for the table. One of , , , or for roman, <code>bold</code>, <i>italic</i>, or bold italic, respectively. As with <code>roff</code>&#8216;s request the argument can be used to specify the font family and font style together, for example instead of and .<br />
- <code>Default:</code> The font style in use right before the table (string ). A decimal or fractional factor ,<i></i> by which the point size for the table is changed, and ,<i></i> by which the vertical line spacing is changed. If is omitted, value is taken for both.<br />
- <code>Default:</code> Horizontal alignment of the cell contents in the table. : left alignment. : centered alignment. : both (left and right) alignment. : right alignment.<br />
- <code>Default:</code> Vertical alignment of the cell contents in the table for cells lower than the current row. : alignment below the top of the cell. : alignment in the middle of the cell. : alignment above the cell bottom.<br />
+<dd>The background color of the table cells. This includes the area specified with the argument. The argument (no value) suppresses a background color; this makes the background transparent.<br/>
+ <code>Default:</code> The foreground color of the cell contents.<br/>
+ <code>Default:</code> The font family for the table. is one of the groff font families, for example for the AvantGarde fonts or for Helvetica-Narrow.<br/>
+ <code>Default:</code> The font family found before the table (string ). The font style for the table. One of , , , or for roman, <code>bold</code>, <i>italic</i>, or bold italic, respectively. As with <code>roff</code>&#8216;s request the argument can be used to specify the font family and font style together, for example instead of and .<br/>
+ <code>Default:</code> The font style in use right before the table (string ). A decimal or fractional factor ,<i></i> by which the point size for the table is changed, and ,<i></i> by which the vertical line spacing is changed. If is omitted, value is taken for both.<br/>
+ <code>Default:</code> Horizontal alignment of the cell contents in the table. : left alignment. : centered alignment. : both (left and right) alignment. : right alignment.<br/>
+ <code>Default:</code> Vertical alignment of the cell contents in the table for cells lower than the current row. : alignment below the top of the cell. : alignment in the middle of the cell. : alignment above the cell bottom.<br/>
  <code>Default:</code> Horizontal line between the rows. If specified with or this is a separator line to the cell below. (no value): no separator line. : a single separator line between the rows. : a double separator line.</dd>
 <dd>The thickness of the separator lines is the half of the border thickness, but at least 0.1~inches. The distance between the double lines is equal to the line thickness.</dd>
-<dd><code>Remark:</code> Together with for proper formatting the value of must be at least .05~inches for single separator lines and .15~inches for double separator lines.<br />
- <code>Default:</code> Vertical separator line between the cells. If specified with or this is a separator line to the cell on the right. : a single separator line between the cells. : a double separator line. (no value): no vertical cell separator lines. For more information see the documentation of the argument above.<br />
+<dd><code>Remark:</code> Together with for proper formatting the value of must be at least .05~inches for single separator lines and .15~inches for double separator lines.<br/>
+ <code>Default:</code> Vertical separator line between the cells. If specified with or this is a separator line to the cell on the right. : a single separator line between the cells. : a double separator line. (no value): no vertical cell separator lines. For more information see the documentation of the argument above.<br/>
  <code>Default:</code></dd></dl>
 <h2>Hdtbl Customization</h2>
 <p>Before creating the first table, you should configure default values to minimize the markup needed in each table. The following example sets up defaults suitable for typical papers: </p>

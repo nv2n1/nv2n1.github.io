@@ -171,7 +171,7 @@ Authors</pre>
 <dt>*</dt>
 <dd>Edit the file in question, e.g: vi MaraDNS.c</dd>
 <dt>*</dt>
-<dd>After editing, do something like this:<br />
+<dd>After editing, do something like this:<br/>
  diff -u MaraDNS.c.orig MaraDNS.c &gt; maradns.patch</dd>
 <dt>*</dt>
 <dd>Make sure the modified version compiles cleanly</dd></dl>

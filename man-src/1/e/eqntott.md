@@ -74,15 +74,15 @@ description: "eqntott – generate truth table from Boolean equations"
 <dt><code>e</code></dt>
 <dd> <code>.e</code> </dd>
 <dt><code>f</code></dt>
-<dd> <code>.f</code><i> output-number input-number</i><br />
- (one line for each feedback path, numbers refer to Or- and And-plane truth table column numbers) <i><br />
+<dd> <code>.f</code><i> output-number input-number</i><br/>
+ (one line for each feedback path, numbers refer to Or- and And-plane truth table column numbers) <i><br/>
  </i></dd>
 <dt><code>h</code></dt>
 <dd> a human readable version of the truth table (q.v.) </dd>
 <dt><code>i</code></dt>
 <dd> <code>.i</code><i> number-of-inputs</i> </dd>
 <dt><code>I</code></dt>
-<dd> <code>.I</code><i> input-name</i><br />
+<dd> <code>.I</code><i> input-name</i><br/>
  (one line for each input, in order) </dd>
 <dt><code>l</code></dt>
 <dd> a truth table with the name of the pla, its inputs and its outputs </dd>
@@ -93,7 +93,7 @@ description: "eqntott – generate truth table from Boolean equations"
 <dt><code>o</code></dt>
 <dd> <code>.o</code><i> number-of-outputs</i> </dd>
 <dt><code>O</code></dt>
-<dd> <code>.O</code><i> output-name</i><br />
+<dd> <code>.O</code><i> output-name</i><br/>
  (one line for each output, in order) </dd>
 <dt><code>S</code></dt>
 <dd> PLA connectivity summary </dd>
@@ -111,5 +111,5 @@ description: "eqntott – generate truth table from Boolean equations"
 <h2>BUGS</h2>
 <p> -l should be the default, but some pla tools can&#8217;t handle the full format. Eqntott likes its options separately; i.e. -f -l works but -fl doesn&#8217;t.</p>
 <h2>AUTHOR</h2>
-<p> Bob Cmelik.<br />
+<p> Bob Cmelik.<br/>
  -l option added by Jeff Deutsch. </p>

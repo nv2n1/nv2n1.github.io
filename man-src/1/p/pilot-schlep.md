@@ -18,14 +18,14 @@ description: "pilot-schlep – Pack an arbitrary file and install it on your Pal
 <p> You must take care to remember what type of file you are installing and fetching. This will be updated in a later release to handle this type of capability, as well as handle multiple &#8216;Schlep&#8217; files. </p>
 <h2>OPTIONS</h2>
 <h3>pilot-schlep options</h3>
-<p> <code>-i</code>, <code>&#8211;install</code><br />
+<p> <code>-i</code>, <code>&#8211;install</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><i>file</i> </p>
-<p> Pack and install <i>file</i> to your Palm <code>-f</code>, <code>&#8211;fetch</code><br />
+<p> Pack and install <i>file</i> to your Palm <code>-f</code>, <code>&#8211;fetch</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><i>file</i> </p>
 <p> Unpack the file from your Palm device <code>-d</code>, <code>&#8211;delete</code> </p>
 <p> Delete the packaged file from your Palm device </p>
 <h3>Conduit Options</h3>
-<p> <code>-p</code>, <code>&#8211;port</code><br />
+<p> <code>-p</code>, <code>&#8211;port</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><i>port</i> </p>
 <p> Use device file <i>port</i> to communicate with the Palm handheld. If this is not specified, <i>pilot-schlep</i> will look for the <i>$PILOTPORT</i> environment variable. If neither are found or supplied, <i> pilot-schlep </i> will print the usage information. <code>-q</code>, <code>&#8211;quiet</code> </p>
 <p> Suppress &#8216;Hit HotSync button&#8217; message <code>-v</code>, <code>&#8211;version</code> </p>

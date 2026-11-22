@@ -52,7 +52,7 @@ perldoc[-h][-D][-t][-u][-m][-l][-U][-F]
 <dd> Display on<code>l</code>y the file name of the module found.</dd>
 <dt><code>-U</code></dt>
 <dd> When running as the superuser, don&#8217;t attempt drop privileges for security. This option is implied with <code>-F</code>. </dd>
-<p> <font SIZE="-1"><code>NOTE</code></font>: Please see the heading <font SIZE="-1">SECURITY</font> below for more information.</p>
+<p> <code>NOTE</code>: Please see the heading SECURITY below for more information.</p>
 <dt><code>-F</code></dt>
 <dd> Consider arguments as file names; no search in directories will be performed. Implies <code>-U</code> if run as the superuser.</dd>
 <dt><code>-f</code> <i>perlfunc</i></dt>
@@ -82,9 +82,9 @@ perldoc[-h][-D][-t][-u][-m][-l][-U][-F]
      perldoc -v DATA
 </pre>
 <dt><code>-T</code></dt>
-<dd> This specifies that the output is not to be sent to a pager, but is to be sent directly to <font SIZE="-1">STDOUT.</font></dd>
+<dd> This specifies that the output is not to be sent to a pager, but is to be sent directly to STDOUT.</dd>
 <dt><code>-d</code> <i>destination-filename</i></dt>
-<dd> This specifies that the output is to be sent neither to a pager nor to <font SIZE="-1">STDOUT,</font> but is to be saved to the specified filename. Example: <tt>&quot;perldoc -oLaTeX -dtextwrapdocs.tex Text::Wrap&quot;</tt></dd>
+<dd> This specifies that the output is to be sent neither to a pager nor to STDOUT, but is to be saved to the specified filename. Example: <tt>&quot;perldoc -oLaTeX -dtextwrapdocs.tex Text::Wrap&quot;</tt></dd>
 <dt><code>-o</code> <i>output-formatname</i></dt>
 <dd> This specifies that you want Perldoc to try using a Pod-formatting class for the output format that you specify. For example: <tt>&quot;-oman&quot;</tt>. This is actually just a wrapper around the <tt>&quot;-M&quot;</tt> switch; using <tt>&quot;-o</tt>formatname<tt>&quot;</tt> just looks for a loadable class by adding that format name (with different capitalizations) to the end of different classname prefixes. </dd>
 <p> For example, <tt>&quot;-oLaTeX&quot;</tt> currently tries all of the following classes: Pod::Perldoc::ToLaTeX Pod::Perldoc::Tolatex Pod::Perldoc::ToLatex Pod::Perldoc::ToLATEX Pod::Simple::LaTeX Pod::Simple::latex Pod::Simple::Latex Pod::Simple::LATEX Pod::LaTeX Pod::latex Pod::Latex Pod::LATEX.</p>
@@ -98,9 +98,9 @@ perldoc[-h][-D][-t][-u][-m][-l][-U][-F]
 <dt><code>-X</code></dt>
 <dd> Use an index if it is present. The <code>-X</code> option looks for an entry whose basename matches the name given on the command line in the file <tt>&quot;$Config{archlib}/pod.idx&quot;</tt>. The <i>pod.idx</i> file should contain fully qualified filenames, one per line.</dd>
 <dt><code>-L</code> <i>language_code</i></dt>
-<dd> This allows one to specify the <i>language code</i> for the desired language translation. If the <tt>&quot;POD2::&lt;language_code&gt;&quot;</tt> package isn&#8217;t installed in your system, the switch is ignored. All available translation packages are to be found under the <tt>&quot;POD2::&quot;</tt> namespace. See <font SIZE="-1">POD2::IT</font> (or <font SIZE="-1">POD2::FR</font>) to see how to create new localized <tt>&quot;POD2::*&quot;</tt> documentation packages and integrate them into Pod::Perldoc.</dd>
+<dd> This allows one to specify the <i>language code</i> for the desired language translation. If the <tt>&quot;POD2::&lt;language_code&gt;&quot;</tt> package isn&#8217;t installed in your system, the switch is ignored. All available translation packages are to be found under the <tt>&quot;POD2::&quot;</tt> namespace. See POD2::IT (or POD2::FR) to see how to create new localized <tt>&quot;POD2::*&quot;</tt> documentation packages and integrate them into Pod::Perldoc.</dd>
 <dt><code>PageName|ModuleName|ProgramName|URL</code></dt>
-<dd> The item you want to look up. Nested modules (such as <tt>&quot;File::Basename&quot;</tt>) are specified either as <tt>&quot;File::Basename&quot;</tt> or <tt>&quot;File/Basename&quot;</tt>. You may also give a descriptive name of a page, such as <tt>&quot;perlfunc&quot;</tt>. For URLs, <font SIZE="-1">HTTP</font> and <font SIZE="-1">HTTPS</font> are the only kind currently supported. </dd>
+<dd> The item you want to look up. Nested modules (such as <tt>&quot;File::Basename&quot;</tt>) are specified either as <tt>&quot;File::Basename&quot;</tt> or <tt>&quot;File/Basename&quot;</tt>. You may also give a descriptive name of a page, such as <tt>&quot;perlfunc&quot;</tt>. For URLs, HTTP and HTTPS are the only kind currently supported. </dd>
 <p> For simple names like &#8216;foo&#8217;, when the normal search fails to find a matching page, a search with the &#8220;perl&#8221; prefix is tried as well. So &#8220;perldoc intro&#8221; is enough to find/render &#8220;perlintro.pod&#8221;.</p>
 <dt><code>-n</code> <i>some-formatter</i></dt>
 <dd> Specify replacement for groff</dd>
@@ -122,7 +122,7 @@ perldoc[-h][-D][-t][-u][-m][-l][-U][-F]
 <p> <tt>&quot;perldoc&quot;</tt> will use, in order of preference, the pager defined in <tt>&quot;PERLDOC_PAGER&quot;</tt>, <tt>&quot;MANPAGER&quot;</tt>, or <tt>&quot;PAGER&quot;</tt> before trying to find a pager on its own. (<tt>&quot;MANPAGER&quot;</tt> is not used if <tt>&quot;perldoc&quot;</tt> was told to display plain text or unformatted pod.) </p>
 <p> When using perldoc in it&#8217;s <tt>&quot;-m&quot;</tt> mode (display module source code), <tt>&quot;perldoc&quot;</tt> will attempt to use the pager set in <tt>&quot;PERLDOC_SRC_PAGER&quot;</tt>. A useful setting for this command is your favorite editor as in <tt>&quot;/usr/bin/nano&quot;</tt>. (Don&#8217;t judge me.) </p>
 <p> One useful value for <tt>&quot;PERLDOC_PAGER&quot;</tt> is <tt>&quot;less -+C -E&quot;</tt>. </p>
-<p> Having <font SIZE="-1">PERLDOCDEBUG</font> set to a positive integer will make perldoc emit even more descriptive output than the <tt>&quot;-D&quot;</tt> switch does; the higher the number, the more it emits.</p>
+<p> Having PERLDOCDEBUG set to a positive integer will make perldoc emit even more descriptive output than the <tt>&quot;-D&quot;</tt> switch does; the higher the number, the more it emits.</p>
 <h2>CHANGES</h2>
 <p> Up to 3.14_05, the switch <code>-v</code> was used to produce verbose messages of <code>perldoc</code> operation, which is now enabled by <code>-D</code>.</p>
 <h2>SEE ALSO</h2>

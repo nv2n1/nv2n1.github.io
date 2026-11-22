@@ -32,7 +32,7 @@ description: "lockmail – create mail lock files"
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> A race condition exists where a C-Client process is killed after it creates a lock file, but before saving its process ID in the lock file. The race window is very small, but it exists. The C-Client library does not appear to ever clear out the lock file. </p>
 <p> <code>lockmail</code> attempts to resolve this race condition by deleting zero-length lock files that are at least five minutes old. </p>
 </dl>
@@ -41,7 +41,7 @@ description: "lockmail – create mail lock files"
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> A failure to create a dot-lock file is silently ignored if the reason for the failure is because <code>lockmail</code> does not have the write permission in the dot-lock file&#8217;s directory. The incoming mail spool directory (usually /var/mail) typically does not have global write permissions, so the attempt to create the dot-lock file in the spool directory will fail, and <code>lockmail</code> will be content with using file-locking only. </p>
 </dl>
 <h3>File locks</h3>
@@ -50,7 +50,7 @@ description: "lockmail – create mail lock files"
 <h2>EXIT STATUS</h2>
 <p> <code>lockmail</code> terminates with the same exit status as <i>program</i><code>lockmail</code> terminates with the EX_TEMPFAIL exit status if it was unable to obtain a lock, or if <i>program</i> was killed by a signal.</p>
 <h2>SEE ALSO</h2>
-<p> m[blue]<code><a href="/docs/linux/man/1-maildrop/">maildrop</a></code>(1)m[]<font SIZE="-2">[1]</font>, <code>sendmail</code>(8).</p>
+<p> m[blue]<code><a href="/docs/linux/man/1-maildrop/">maildrop</a></code>(1)m[][1], <code>sendmail</code>(8).</p>
 <h2>AUTHOR</h2>
 <p> <code>Sam Varshavchik</code></p>
 <dl>

@@ -29,7 +29,7 @@ description: "idevicediagnostics – Interact with the diagnostics interface of 
 <dt><code>mobilegestalt KEY [&#8230;]</code></dt>
 <dd> print values of mobilegestalt keys passed as arguments after the command and seperated by a space.</dd>
 <dt><code>ioreg [PLANE]</code></dt>
-<dd> print IORegistry of device, optionally by PLANE like &quot;IODeviceTree&quot;, &quot;IOPower&quot;<br />
+<dd> print IORegistry of device, optionally by PLANE like &quot;IODeviceTree&quot;, &quot;IOPower&quot;<br/>
 &nbsp;<wbr>or&nbsp;<wbr>&quot;IOService&quot;. Only available on iOS 5 and later.</dd>
 <dt><code>shutdown</code></dt>
 <dd> shutdown device</dd>

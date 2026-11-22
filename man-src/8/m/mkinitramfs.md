@@ -9,7 +9,7 @@ description: "mkinitramfs – low-level tool for generating an initramfs image"
 
 <p>mkinitramfs &#8211; low-level tool for generating an initramfs image</p>
 <h2>Synopsis</h2>
-<p><code>mkinitramfs</code> [<i>option</i>]&#8230; <code>-o</code> <i>outfile</i> [<i>version</i>]<br />
+<p><code>mkinitramfs</code> [<i>option</i>]&#8230; <code>-o</code> <i>outfile</i> [<i>version</i>]<br/>
  <code>mkinitramfs</code> <code>-h</code> </p>
 <h2>Description</h2>
 <p>The <code>mkinitramfs</code> script generates an initramfs image. The initramfs is a compressed cpio archive. The archive can be used on a different box of the same arch with the corresponding Linux kernel. <code>mkinitramfs</code> is meant for advanced usage. On your local box <code>update-initramfs</code> calls <code>mkinitramfs</code> with the relevant parameters. <code>update-initramfs</code> keeps sha1sum of generated initramfs. It takes care to generate backups and eventually runs the bootloader. At boot time, the kernel unpacks that archive into RAM disk, mounts and uses it as initial root file system. All finding of the root device happens in this early userspace. </p>

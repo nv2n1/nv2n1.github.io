@@ -51,7 +51,7 @@ description: "cernlib – print CERN library dependencies"
 <dt><code>Monte Carlo and GEANT libraries</code></dt>
 <dd> cojets, eurodec, geant321, herwig59, isajet758, pdflib804, photos202, phtools</dd>
 <dt><code>Additional Monte Carlo libraries</code></dt>
-<dd> (to obtain these, see /usr/share/doc/montecarlo-base/README.Debian)<br />
+<dd> (to obtain these, see /usr/share/doc/montecarlo-base/README.Debian)<br/>
  ariadne, ariadne-p5, fritiof, jetset, lepto, pythia5, pythia6</dd>
 <dt><code>Aliases</code></dt>
 <dd> The numerals at the end may be left off most of the library names above.</dd>

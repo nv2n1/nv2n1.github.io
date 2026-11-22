@@ -24,7 +24,7 @@ description: "a2ps-lpr-wrapper — lp/lpr wrapper script for GNU a2ps on Debian"
 <p> a2ps (1). </p>
 <p> The programs are documented fully by the a2ps documentation available via the <code>Info</code> system.</p>
 <h2>AUTHOR</h2>
-<p> This manual page was written by Michael Tautschnig tautschn [at] model.in.tum.de for the <code>Debian</code> system (but may be used by others). Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 any later version published by the Free Software Foundation.<br />
+<p> This manual page was written by Michael Tautschnig tautschn [at] model.in.tum.de for the <code>Debian</code> system (but may be used by others). Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 any later version published by the Free Software Foundation.<br/>
 &nbsp; </p>
-<p> On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL.<br />
+<p> On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL.<br/>
 &nbsp; </p>

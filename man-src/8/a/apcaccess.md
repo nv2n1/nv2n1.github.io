@@ -29,10 +29,10 @@ description: "apcaccess – retrieve status information from"
 <dt><code>:&lt;port&gt;</code></dt>
 <dd>An optional port number where a hostname argument has been specified. The default is 3551, the official port number assigned by <code>IANA </code> for the apcupsd NIS server. The default hostname and port are obtained from the configuration file.</dd></dl>
 <p> uses apcupsd&#8217;s inbuilt Network Information Server (NIS) &#8212; no relation to Sun&#8217;s NIS/YP service &#8212; to obtain the current status information from the UPS on the local or remote computer. It is therefore necessary to have the following configuration directives: </p>
-<dt><code><br />
+<dt><code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>NETSERVER on</code></dt>
 <dd>
-</dd><dt><code><br />
+</dd><dt><code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>NISPORT 3551</code></dt>
 <dd></dd></dl>
 <p> in the /etc/apcupsd/apcupsd.conf configuration file so that the Network Information Server will be accessible. Firewall rules for appropriate network access may also be needed.</p>
@@ -61,10 +61,10 @@ description: "apcaccess – retrieve status information from"
 <dt><code>STARTTIME</code></dt>
 <dd>: Date and time apcupsd was started</dd>
 <dt><code>STATUS</code></dt>
-<dd>: UPS status. One or more of the following (space-separated): CAL TRIM BOOST ONLINE ONBATT OVERLOAD LOWBATT REPLACEBATT NOBATT SLAVE SLAVEDOWN<br />
- or<br />
- COMMLOST<br />
- or<br />
+<dd>: UPS status. One or more of the following (space-separated): CAL TRIM BOOST ONLINE ONBATT OVERLOAD LOWBATT REPLACEBATT NOBATT SLAVE SLAVEDOWN<br/>
+ or<br/>
+ COMMLOST<br/>
+ or<br/>
  SHUTTING DOWN</dd>
 <dt><code>MASTERUPD</code></dt>
 <dd>: Last time the master sent an update to the slave</dd>

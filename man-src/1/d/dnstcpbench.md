@@ -55,7 +55,7 @@ description: "dnstcpbench – tool to perform TCP benchmarking of nameservers"
 <p> Currently the timeout code does not actually perform non-blocking connects or writes. So a slow connect or slow writes will still cause low performance and delays. </p>
 <p> Median queries per second statistics are reported as 0 for sub-second runs.</p>
 <h2>AUTHOR</h2>
-<p> Written by PowerDNS.COM BV, bert hubert, &lt;m[blue]<code>bert.hubert [at] netherlabs.nl</code>m[]<font SIZE="-2">[1]</font>&gt;</p>
+<p> Written by PowerDNS.COM BV, bert hubert, &lt;m[blue]<code>bert.hubert [at] netherlabs.nl</code>m[][1]&gt;</p>
 <h2>RESOURCES</h2>
 <p> Website: m[blue]<code><a rel="nofollow" href="http://www.powerdns.com">http://www.powerdns.com</a></code>m[]</p>
 <h2>COPYING</h2>

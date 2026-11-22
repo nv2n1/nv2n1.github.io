@@ -42,10 +42,10 @@ description: "asymmetric – Kernel key type for holding asymmetric keys"
 <h2>Userspace Api</h2>
 <p>In addition to the standard keyutils library functions, such as <i>keyctl_update</i>(), there are five calls specific to the asymmetric key type (though they are open to being used by other key types also): </p>
 <dl>
-<dd><i>keyctl_pkey_query</i>()<br />
- <i>keyctl_pkey_encrypt</i>()<br />
- <i>keyctl_pkey_decrypt</i>()<br />
- <i>keyctl_pkey_sign</i>()<br />
+<dd><i>keyctl_pkey_query</i>()<br/>
+ <i>keyctl_pkey_encrypt</i>()<br/>
+ <i>keyctl_pkey_decrypt</i>()<br/>
+ <i>keyctl_pkey_sign</i>()<br/>
  <i>keyctl_pkey_verify</i>()</dd></dl>
 <p> The query function can be used to retrieve information about an asymmetric key, such as the key size, the amount of space required by buffers for the other operations and which operations are actually supported. </p>
 <p> The other operations form two pairs: encrypt/decrypt and create/verify signature. Not all of these operations will necessarily be available; typically, encrypt and verify only require the public key to be available whereas decrypt and sign require the private key as well. </p>
@@ -59,7 +59,7 @@ description: "asymmetric – Kernel key type for holding asymmetric keys"
 <p> Note that not all parameters are used by all subtypes.</p>
 <h2>Restricted Keyrings</h2>
 <p>An additional keyutils function, <i>keyctl_restrict_keyring</i>(), can be used to gate a keyring so that a new key can only be added to the affected keyring if (a) it&#8217;s an asymmetric key, (b) it&#8217;s validly signed by a key in some appropriate keyring and (c) it&#8217;s not blacklisted. </p>
-<p>&nbsp;keyctl_restrict_keyring(keyring,&nbsp;&quot;asymmetric&quot;,<br />
+<p>&nbsp;keyctl_restrict_keyring(keyring,&nbsp;&quot;asymmetric&quot;,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&quot;key_or_keyring:&lt;signing-key&gt;[:chain]&quot;); </p>
 <p> Where <i>&lt;signing-key&gt;</i> is the ID of a key or a ring of keys that act as the authority to permit a new key to be added to the keyring. The <i>chain</i> flag indicates that keys that have been added to the keyring may also be used to verify new keys. Authorising keys must themselves be asymmetric-type keys that can be used to do a signature verification on the key being added. </p>
 <p> Note that there are various system keyrings visible to the root user that may permit additional keys to be added. These are typically gated by keys that already exist, preventing unauthorised keys from being used for such things as module verification.</p>

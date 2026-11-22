@@ -13,16 +13,16 @@ description: "Atlas::Objects::ObjectsDecoder – Objects hierarchy decoder."
 <p> Inherits <code>Atlas::Message::DecoderBase</code>. </p>
 <p> Inherited by <code>Atlas::Objects::Dispatcher</code>. </p>
 <h3>Public Member Functions</h3>
-<p><code>ObjectsDecoder</code> (Factories *f=0)<br />
- <i>Constructor. </i><br />
- virtual <code>~ObjectsDecoder</code> ()<br />
- <i>Default destructor. </i><br />
- Factories * <code>factories</code> () const<br />
+<p><code>ObjectsDecoder</code> (Factories *f=0)<br/>
+ <i>Constructor. </i><br/>
+ virtual <code>~ObjectsDecoder</code> ()<br/>
+ <i>Default destructor. </i><br/>
+ Factories * <code>factories</code> () const<br/>
  <i>Factories accessor. </i></p>
 <h3>Protected Member Functions</h3>
-<p>virtual void <code>messageArrived</code> (const Atlas::Message::MapType &amp;)<br />
- <i>Overridden by to retrieve the message from DecoderBase. </i><br />
- virtual void <code>objectArrived</code> (const Root &amp;obj)=0<br />
+<p>virtual void <code>messageArrived</code> (const Atlas::Message::MapType &amp;)<br/>
+ <i>Overridden by to retrieve the message from DecoderBase. </i><br/>
+ virtual void <code>objectArrived</code> (const Root &amp;obj)=0<br/>
  <i>call right object*Arrived method </i></p>
 <h3>Protected Attributes</h3>
 <p>Factories * <code>m_factories</code> </p>

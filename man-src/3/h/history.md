@@ -32,7 +32,7 @@ description: "history – GNU History Library"
 <dd> Refer to the most recent command preceding the current position in the history list starting with <i>string</i>.</dd>
 <dt><code>!?</code><i>string</i><code>[?]</code></dt>
 <dd> Refer to the most recent command preceding the current postition in the history list containing <i>string</i>. The trailing <code>?</code> may be omitted if <i>string</i> is followed immediately by a newline.</dd>
-<dt><font SIZE="+2"><code>^</code></font><i>string1</i><font SIZE="+2">^</font><i>string2</i><font SIZE="+2">^</font></dt>
+<dt><code>^</code><i>string1</i>^<i>string2</i>^</dt>
 <dd> Quick substitution. Repeat the last command, replacing <i>string1</i> with <i>string2</i>. Equivalent to &#8220;!!:s/<i>string1</i>/<i>string2</i>/&#8221; (see <code>Modifiers</code> below).</dd>
 <dt><code>!#</code></dt>
 <dd> The entire command line typed so far.</dd></dl>
@@ -120,77 +120,77 @@ typedef struct _hist_state {
 <p> This section describes the calling sequence for the various functions exported by the GNU History library.</p>
 <h3>Initializing History and State Management</h3>
 <p> This section describes functions used to initialize and manage the state of the History library when you want to use the history functions in your program. </p>
-<p> <i>void</i> <code>using_history</code> (<i>void</i>)<br />
+<p> <i>void</i> <code>using_history</code> (<i>void</i>)<br/>
  Begin a session in which the history functions might be used. This initializes the interactive variables. </p>
-<p> <i>HISTORY_STATE *</i> <code>history_get_history_state</code> (<i>void</i>)<br />
+<p> <i>HISTORY_STATE *</i> <code>history_get_history_state</code> (<i>void</i>)<br/>
  Return a structure describing the current state of the input history. </p>
-<p> <i>void</i> <code>history_set_history_state</code> (<i>HISTORY_STATE *state</i>)<br />
+<p> <i>void</i> <code>history_set_history_state</code> (<i>HISTORY_STATE *state</i>)<br/>
  Set the state of the history list according to <i>state</i>. </p>
 <h3>History List Management</h3>
 <p> These functions manage individual entries on the history list, or set parameters managing the list itself. </p>
-<p> <i>void</i> <code>add_history</code> (<i>const char *string</i>)<br />
+<p> <i>void</i> <code>add_history</code> (<i>const char *string</i>)<br/>
  Place <i>string</i> at the end of the history list. The associated data field (if any) is set to <code>NULL</code>. </p>
-<p> <i>void</i> <code>add_history_time</code> (<i>const char *string</i>)<br />
+<p> <i>void</i> <code>add_history_time</code> (<i>const char *string</i>)<br/>
  Change the time stamp associated with the most recent history entry to <i>string</i>. </p>
-<p> <i>HIST_ENTRY *</i> <code>remove_history</code> (<i>int which</i>)<br />
+<p> <i>HIST_ENTRY *</i> <code>remove_history</code> (<i>int which</i>)<br/>
  Remove history entry at offset <i>which</i> from the history. The removed element is returned so you can free the line, data, and containing structure. </p>
-<p> <i>histdata_t</i> <code>free_history_entry</code> (<i>HIST_ENTRY *histent</i>)<br />
+<p> <i>histdata_t</i> <code>free_history_entry</code> (<i>HIST_ENTRY *histent</i>)<br/>
  Free the history entry <i>histent</i> and any history library private data associated with it. Returns the application-specific data so the caller can dispose of it. </p>
-<p> <i>HIST_ENTRY *</i> <code>replace_history_entry</code> (<i>int which, const char *line, histdata_t data</i>)<br />
+<p> <i>HIST_ENTRY *</i> <code>replace_history_entry</code> (<i>int which, const char *line, histdata_t data</i>)<br/>
  Make the history entry at offset <i>which</i> have <i>line</i> and <i>data</i>. This returns the old entry so the caller can dispose of any application-specific data. In the case of an invalid <i>which</i>, a <code>NULL</code> pointer is returned. </p>
-<p> <i>void</i> <code>clear_history</code> (<i>void</i>)<br />
+<p> <i>void</i> <code>clear_history</code> (<i>void</i>)<br/>
  Clear the history list by deleting all the entries. </p>
-<p> <i>void</i> <code>stifle_history</code> (<i>int max</i>)<br />
+<p> <i>void</i> <code>stifle_history</code> (<i>int max</i>)<br/>
  Stifle the history list, remembering only the last <i>max</i> entries. </p>
-<p> <i>int</i> <code>unstifle_history</code> (<i>void</i>)<br />
+<p> <i>int</i> <code>unstifle_history</code> (<i>void</i>)<br/>
  Stop stifling the history. This returns the previously-set maximum number of history entries (as set by <code>stifle_history()</code>). history was stifled. The value is positive if the history was stifled, negative if it wasn&#8217;t. </p>
-<p> <i>int</i> <code>history_is_stifled</code> (<i>void</i>)<br />
+<p> <i>int</i> <code>history_is_stifled</code> (<i>void</i>)<br/>
  Returns non-zero if the history is stifled, zero if it is not. </p>
 <h3>Information About the History List</h3>
 <p> These functions return information about the entire history list or individual list entries. </p>
-<p> <i>HIST_ENTRY **</i> <code>history_list</code> (<i>void</i>)<br />
+<p> <i>HIST_ENTRY **</i> <code>history_list</code> (<i>void</i>)<br/>
  Return a <code>NULL</code> terminated array of <i>HIST_ENTRY *</i> which is the current input history. Element 0 of this list is the beginning of time. If there is no history, return <code>NULL</code>. </p>
-<p> <i>int</i> <code>where_history</code> (<i>void</i>)<br />
+<p> <i>int</i> <code>where_history</code> (<i>void</i>)<br/>
  Returns the offset of the current history element. </p>
-<p> <i>HIST_ENTRY *</i> <code>current_history</code> (<i>void</i>)<br />
+<p> <i>HIST_ENTRY *</i> <code>current_history</code> (<i>void</i>)<br/>
  Return the history entry at the current position, as determined by <code>where_history()</code>. If there is no entry there, return a <code>NULL</code> pointer. </p>
-<p> <i>HIST_ENTRY *</i> <code>history_get</code> (<i>int offset</i>)<br />
+<p> <i>HIST_ENTRY *</i> <code>history_get</code> (<i>int offset</i>)<br/>
  Return the history entry at position <i>offset</i>, starting from <code>history_base</code>. If there is no entry there, or if <i>offset</i> is greater than the history length, return a <code>NULL</code> pointer. </p>
-<p> <i>time_t</i> <code>history_get_time</code> (<i>HIST_ENTRY *</i>)<br />
+<p> <i>time_t</i> <code>history_get_time</code> (<i>HIST_ENTRY *</i>)<br/>
  Return the time stamp associated with the history entry passed as the argument. </p>
-<p> <i>int</i> <code>history_total_bytes</code> (<i>void</i>)<br />
+<p> <i>int</i> <code>history_total_bytes</code> (<i>void</i>)<br/>
  Return the number of bytes that the primary history entries are using. This function returns the sum of the lengths of all the lines in the history. </p>
 <h3>Moving Around the History List</h3>
 <p> These functions allow the current index into the history list to be set or changed. </p>
-<p> <i>int</i> <code>history_set_pos</code> (<i>int pos</i>)<br />
+<p> <i>int</i> <code>history_set_pos</code> (<i>int pos</i>)<br/>
  Set the current history offset to <i>pos</i>, an absolute index into the list. Returns 1 on success, 0 if <i>pos</i> is less than zero or greater than the number of history entries. </p>
-<p> <i>HIST_ENTRY *</i> <code>previous_history</code> (<i>void</i>)<br />
+<p> <i>HIST_ENTRY *</i> <code>previous_history</code> (<i>void</i>)<br/>
  Back up the current history offset to the previous history entry, and return a pointer to that entry. If there is no previous entry, return a <code>NULL</code> pointer. </p>
-<p> <i>HIST_ENTRY *</i> <code>next_history</code> (<i>void</i>)<br />
+<p> <i>HIST_ENTRY *</i> <code>next_history</code> (<i>void</i>)<br/>
  Move the current history offset forward to the next history entry, and return the a pointer to that entry. If there is no next entry, return a <code>NULL</code> pointer. </p>
 <h3>Searching the History List</h3>
 <p> These functions allow searching of the history list for entries containing a specific string. Searching may be performed both forward and backward from the current history position. The search may be <i>anchored</i>, meaning that the string must match at the beginning of the history entry. </p>
-<p> <i>int</i> <code>history_search</code> (<i>const char *string, int direction</i>)<br />
+<p> <i>int</i> <code>history_search</code> (<i>const char *string, int direction</i>)<br/>
  Search the history for <i>string</i>, starting at the current history offset. If <i>direction</i> is less than 0, then the search is through previous entries, otherwise through subsequent entries. If <i>string</i> is found, then the current history index is set to that history entry, and the value returned is the offset in the line of the entry where <i>string</i> was found. Otherwise, nothing is changed, and a -1 is returned. </p>
-<p> <i>int</i> <code>history_search_prefix</code> (<i>const char *string, int direction</i>)<br />
+<p> <i>int</i> <code>history_search_prefix</code> (<i>const char *string, int direction</i>)<br/>
  Search the history for <i>string</i>, starting at the current history offset. The search is anchored: matching lines must begin with <i>string</i>. If <i>direction</i> is less than 0, then the search is through previous entries, otherwise through subsequent entries. If <i>string</i> is found, then the current history index is set to that entry, and the return value is 0. Otherwise, nothing is changed, and a -1 is returned. </p>
-<p> <i>int</i> <code>history_search_pos</code> (<i>const char *string, int direction, int pos</i>)<br />
+<p> <i>int</i> <code>history_search_pos</code> (<i>const char *string, int direction, int pos</i>)<br/>
  Search for <i>string</i> in the history list, starting at <i>pos</i>, an absolute index into the list. If <i>direction</i> is negative, the search proceeds backward from <i>pos</i>, otherwise forward. Returns the absolute index of the history element where <i>string</i> was found, or -1 otherwise. </p>
 <h3>Managing the History File</h3>
 <p> The History library can read the history from and write it to a file. This section documents the functions for managing a history file. </p>
-<p> <i>int</i> <code>read_history</code> (<i>const char *filename</i>)<br />
+<p> <i>int</i> <code>read_history</code> (<i>const char *filename</i>)<br/>
  Add the contents of <i>filename</i> to the history list, a line at a time. If <i>filename</i> is <code>NULL</code>, then read from <i>~/.history</i>. Returns 0 if successful, or <code>errno</code> if not. </p>
-<p> <i>int</i> <code>read_history_range</code> (<i>const char *filename, int from, int to</i>)<br />
+<p> <i>int</i> <code>read_history_range</code> (<i>const char *filename, int from, int to</i>)<br/>
  Read a range of lines from <i>filename</i>, adding them to the history list. Start reading at line <i>from</i> and end at <i>to</i>. If <i>from</i> is zero, start at the beginning. If <i>to</i> is less than <i>from</i>, then read until the end of the file. If <i>filename</i> is <code>NULL</code>, then read from <i>~/.history</i>. Returns 0 if successful, or <code>errno</code> if not. </p>
-<p> <i>int</i> <code>write_history</code> (<i>const char *filename</i>)<br />
+<p> <i>int</i> <code>write_history</code> (<i>const char *filename</i>)<br/>
  Write the current history to <i>filename</i>, overwriting <i>filename</i> if necessary. If <i>filename</i> is <code>NULL</code>, then write the history list to <i>~/.history</i>. Returns 0 on success, or <code>errno</code> on a read or write error. </p>
-<p> <i>int</i> <code>append_history</code> (<i>int nelements, const char *filename</i>)<br />
+<p> <i>int</i> <code>append_history</code> (<i>int nelements, const char *filename</i>)<br/>
  Append the last <i>nelements</i> of the history list to <i>filename</i>. If <i>filename</i> is <code>NULL</code>, then append to <i>~/.history</i>. Returns 0 on success, or <code>errno</code> on a read or write error. </p>
-<p> <i>int</i> <code>history_truncate_file</code> (<i>const char *filename, int nlines</i>)<br />
+<p> <i>int</i> <code>history_truncate_file</code> (<i>const char *filename, int nlines</i>)<br/>
  Truncate the history file <i>filename</i>, leaving only the last <i>nlines</i> lines. If <i>filename</i> is <code>NULL</code>, then <i>~/.history</i> is truncated. Returns 0 on success, or <code>errno</code> on failure. </p>
 <h3>History Expansion</h3>
 <p> These functions implement history expansion. </p>
-<p> <i>int</i> <code>history_expand</code> (<i>char *string, char **output</i>)<br />
+<p> <i>int</i> <code>history_expand</code> (<i>char *string, char **output</i>)<br/>
  Expand <i>string</i>, placing the result into <i>output</i>, a pointer to a string. Returns:</p>
 <dl>
 <dl>
@@ -204,39 +204,39 @@ typedef struct _hist_state {
 <dd> if the returned line should be displayed, but not executed, as with the <code>:p</code> modifier.</dd></dl>
 </dl>
 <p> If an error ocurred in expansion, then <i>output</i> contains a descriptive error message. </p>
-<p> <i>char *</i> <code>get_history_event</code> (<i>const char *string, int *cindex, int qchar</i>)<br />
+<p> <i>char *</i> <code>get_history_event</code> (<i>const char *string, int *cindex, int qchar</i>)<br/>
  Returns the text of the history event beginning at <i>string</i> + <i>*cindex</i>. <i>*cindex</i> is modified to point to after the event specifier. At function entry, <i>cindex</i> points to the index into <i>string</i> where the history event specification begins. <i>qchar</i> is a character that is allowed to end the event specification in addition to the &#8220;normal&#8221; terminating characters. </p>
-<p> <i>char **</i> <code>history_tokenize</code> (<i>const char *string</i>)<br />
+<p> <i>char **</i> <code>history_tokenize</code> (<i>const char *string</i>)<br/>
  Return an array of tokens parsed out of <i>string</i>, much as the shell might. The tokens are split on the characters in the <code>history_word_delimiters</code> variable, and shell quoting conventions are obeyed. </p>
-<p> <i>char *</i> <code>history_arg_extract</code> (<i>int first, int last, const char *string</i>)<br />
+<p> <i>char *</i> <code>history_arg_extract</code> (<i>int first, int last, const char *string</i>)<br/>
  Extract a string segment consisting of the <i>first</i> through <i>last</i> arguments present in <i>string</i>. Arguments are split using <code>history_tokenize()</code>. </p>
 <h3>History Variables</h3>
 <p> This section describes the externally-visible variables exported by the GNU History Library. </p>
-<p> <i>int</i> <code>history_base</code><br />
+<p> <i>int</i> <code>history_base</code><br/>
  The logical offset of the first entry in the history list. </p>
-<p> <i>int</i> <code>history_length</code><br />
+<p> <i>int</i> <code>history_length</code><br/>
  The number of entries currently stored in the history list. </p>
-<p> <i>int</i> <code>history_max_entries</code><br />
+<p> <i>int</i> <code>history_max_entries</code><br/>
  The maximum number of history entries. This must be changed using <code>stifle_history()</code>. </p>
-<p> <i>int</i> <code>history_wite_timestamps</code><br />
+<p> <i>int</i> <code>history_wite_timestamps</code><br/>
  If non-zero, timestamps are written to the history file, so they can be preserved between sessions. The default value is 0, meaning that timestamps are not saved. The current timestamp format uses the value of <i>history_comment_char</i> to delimit timestamp entries in the history file. If that variable does not have a value (the default), timestamps will not be written. </p>
-<p> <i>char</i> <code>history_expansion_char</code><br />
+<p> <i>char</i> <code>history_expansion_char</code><br/>
  The character that introduces a history event. The default is <code>!</code>. Setting this to 0 inhibits history expansion. </p>
-<p> <i>char</i> <code>history_subst_char</code><br />
+<p> <i>char</i> <code>history_subst_char</code><br/>
  The character that invokes word substitution if found at the start of a line. The default is <code>^</code>. </p>
-<p> <i>char</i> <code>history_comment_char</code><br />
+<p> <i>char</i> <code>history_comment_char</code><br/>
  During tokenization, if this character is seen as the first character of a word, then it and all subsequent characters up to a newline are ignored, suppressing history expansion for the remainder of the line. This is disabled by default. </p>
-<p> <i>char *</i> <code>history_word_delimiters</code><br />
+<p> <i>char *</i> <code>history_word_delimiters</code><br/>
  The characters that separate tokens for <code>history_tokenize()</code>. The default value is <code>&quot;&nbsp;<wbr>	
 ()&lt;&gt;;&amp;|&quot;</code>. </p>
-<p> <i>char *</i> <code>history_no_expand_chars</code><br />
+<p> <i>char *</i> <code>history_no_expand_chars</code><br/>
  The list of characters which inhibit history expansion if found immediately following <code>history_expansion_char</code>. The default is space, tab, newline, <code>
 </code>, and <code>=</code>. </p>
-<p> <i>char *</i> <code>history_search_delimiter_chars</code><br />
+<p> <i>char *</i> <code>history_search_delimiter_chars</code><br/>
  The list of additional characters which can delimit a history search string, in addition to space, tab, <i>:</i> and <i>?</i> in the case of a substring search. The default is empty. </p>
-<p> <i>int</i> <code>history_quotes_inhibit_expansion</code><br />
+<p> <i>int</i> <code>history_quotes_inhibit_expansion</code><br/>
  If non-zero, single-quoted words are not scanned for the history expansion character. The default value is 0. </p>
-<p> <i>rl_linebuf_func_t *</i> <code>history_inhibit_expansion_function</code><br />
+<p> <i>rl_linebuf_func_t *</i> <code>history_inhibit_expansion_function</code><br/>
  This should be set to the address of a function that takes two arguments: a <code>char *</code> (<i>string</i>) and an <code>int</code> index into that string (<i>i</i>). It should return a non-zero value if the history expansion starting at <i>string[i]</i> should not be performed; zero if the expansion should be done. It is intended for use by applications like <code>bash</code> that use the history expansion character for additional purposes. By default, this variable is set to <code>NULL</code>.</p>
 <h2>FILES</h2>
 <dl>
@@ -253,9 +253,9 @@ typedef struct _hist_state {
 </dd><dt><i><a href="/docs/linux/man/3-readline/">readline</a></i>(3)</dt>
 <dd></dd></dl>
 <h2>AUTHORS</h2>
-<p> Brian Fox, Free Software Foundation<br />
+<p> Brian Fox, Free Software Foundation<br/>
  bfox [at] gnu.org </p>
-<p> Chet Ramey, Case Western Reserve University<br />
+<p> Chet Ramey, Case Western Reserve University<br/>
  chet [at] ins.CWRU.Edu</p>
 <h2>BUG REPORTS</h2>
 <p> If you find a bug in the <code>history</code> library, you should report it. But first, you should make sure that it really is a bug, and that it appears in the latest version of the <code>history</code> library that you have. </p>

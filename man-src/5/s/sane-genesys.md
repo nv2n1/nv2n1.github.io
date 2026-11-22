@@ -11,14 +11,14 @@ description: "sane-genesys – SANE backend for GL646, GL841, GL843, GL847 and G
 <h2>Description</h2>
 <p>The <code>sane-genesys</code> library implements a SANE (Scanner Access Now Easy) backend that provides access to USB flatbed scanners based on the Genesys GL646, GL841, GL843, GL847 and GL124 chips. At present, the following scanners are known to work with this backend:</p>
 <dl>
-<dd>Canon LiDE 35/40/50/60/100/110/120/200/210/220/700<br />
- Hewlett-Packard HP2300C/HP2400/HP3670/HP3690/G4010/G4050<br />
- Medion MD5345/MD6228/MD6274<br />
- Panasonic KV-SS080<br />
- Plustek OpticBook 3600<br />
- Pentax DSmobile 600<br />
- Syscan/Ambir DocketPORT 467/485/487/665/685<br />
- Visioneer OneTouch 7100/Strobe XP100 (rev3)/XP200/XP300/Roadwarrior<br />
+<dd>Canon LiDE 35/40/50/60/100/110/120/200/210/220/700<br/>
+ Hewlett-Packard HP2300C/HP2400/HP3670/HP3690/G4010/G4050<br/>
+ Medion MD5345/MD6228/MD6274<br/>
+ Panasonic KV-SS080<br/>
+ Plustek OpticBook 3600<br/>
+ Pentax DSmobile 600<br/>
+ Syscan/Ambir DocketPORT 467/485/487/665/685<br/>
+ Visioneer OneTouch 7100/Strobe XP100 (rev3)/XP200/XP300/Roadwarrior<br/>
  Xerox Travel Scanner 100, OneTouch 2400</dd></dl>
 <p> This is stable software for supported models. But if you test new or untested scanners, keep your hand at the scanner&#8217;s plug and unplug it, if the head bumps at the end of the scan area. If you own a scanner other than the ones listed above that works with this backend, please let me know this by sending the scanner&#8217;s exact model name and the USB vendor and device ids (e.g. from <i>/proc/bus/usb/devices</i>, <i>sane-find-scanner</i> or syslog) to the sane-devel mailing list. Even if the scanner&#8217;s name is only slightly different from the models mentioned above, please let me know. If you own a scanner that isn&#8217;t detected by the genesys backend but has a GL646, GL841, GL843, GL847 or GL124 chipset, you can try to add it to the backend. </p>
 <h2>Calibration</h2>
@@ -81,17 +81,17 @@ description: "sane-genesys – SANE backend for GL646, GL841, GL843, GL847 and G
 <dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend. Higher debug levels increase the verbosity of the output. If the debug level is set to 1 or higher, some debug options become available that are normally hidden. Handle them with care. This will print messages related to core genesys functions.</dd>
 <dt><code>SANE_DEBUG_GENESYS_IMAGE</code></dt>
 <dd>If the library was compiled with debug support enabled, this environment variable enables logging of intermediate image data. To enable this mode, set the environmental variable to 1. </dd>
-<p> Example (full and highly verbose output for gl646):<br />
+<p> Example (full and highly verbose output for gl646):<br/>
  export SANE_DEBUG_GENESYS=255 </p>
 </dl>
 <h2>Credits</h2>
 <p>Jack McGill for donating several sheetfed and flatbed scanners, which made possible to add support for them in the genesys backend:</p>
 <dl>
-<dd>Hewlett-Packard HP3670<br />
- Visioneer Strobe XP100 (rev3)/XP200/XP300/Roadwarrior<br />
- Canon LiDE 200<br />
- Pentax DSmobile 600<br />
- Syscan/Ambir DocketPORT 467/485/487/665/685<br />
+<dd>Hewlett-Packard HP3670<br/>
+ Visioneer Strobe XP100 (rev3)/XP200/XP300/Roadwarrior<br/>
+ Canon LiDE 200<br/>
+ Pentax DSmobile 600<br/>
+ Syscan/Ambir DocketPORT 467/485/487/665/685<br/>
  Xerox Travel Scanner 100, Onetouch 2400</dd></dl>
 <dl>
 <dt>cncsolutions</dt>
@@ -105,12 +105,12 @@ description: "sane-genesys – SANE backend for GL646, GL841, GL843, GL847 and G
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/5-sane-usb/">sane-usb</a></code>(5) </p>
 <h2>Author</h2>
-<p>Oliver Rauch<br />
- Henning Meier-Geinitz &lt;<i>henning [at] meier-geinitz.de</i>&gt;<br />
- Gerhard Jaeger &lt;<i>gerhard [at] gjaeger.de</i>&gt;<br />
- St&eacute;phane Voltz &lt;<i>stef.dev [at] free.fr</i>&gt;<br />
- Philipp Schmid &lt;<i>philipp8288 [at] web.de</i>&gt;<br />
- Pierre Willenbrock &lt;<i>pierre [at] pirsoft.dnsalias.org</i>&gt;<br />
+<p>Oliver Rauch<br/>
+ Henning Meier-Geinitz &lt;<i>henning [at] meier-geinitz.de</i>&gt;<br/>
+ Gerhard Jaeger &lt;<i>gerhard [at] gjaeger.de</i>&gt;<br/>
+ St&eacute;phane Voltz &lt;<i>stef.dev [at] free.fr</i>&gt;<br/>
+ Philipp Schmid &lt;<i>philipp8288 [at] web.de</i>&gt;<br/>
+ Pierre Willenbrock &lt;<i>pierre [at] pirsoft.dnsalias.org</i>&gt;<br/>
  Alexey Osipov &lt;<i>simba [at] lerlan.ru</i>&gt; for HP2400 final support</p>
 <h2>Limitations</h2>
 <p>Powersaving isn&#8217;t implemented for gl646 based scanner. Dynamic (emulated from gray data and with dithering) isn&#8217;t enabled for gl646 scanners. Hardware lineart is limited up to 600 dpi for gl847 based scanners, due to the way image sensors are built. </p>

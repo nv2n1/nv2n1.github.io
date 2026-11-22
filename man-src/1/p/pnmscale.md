@@ -10,12 +10,12 @@ description: "pnmscale – scale a portable anymap"
 
 <p> pnmscale &#8211; scale a portable anymap </p>
 <h2>SYNOPSIS</h2>
-<p> <code>pnmscale</code> <i>scale_factor</i> [<i>pnmfile</i>]<br />
- <code>pnmscale -reduce</code> <i>reduction_factor</i> [<i>pnmfile</i>]<br />
- <code>pnmscale</code> [{<code>-xsize=</code><i>cols</i> | <code>-width=</code><i>cols</i> | <code>-xscale=</code><i>factor</i>}] [{<code>-ysize=</code><i>rows</i> | <code>-height=</code><i>rows</i> | <code>-yscale=</code><i>factor</i>}] [<i>pnmfile</i>]<br />
- <code>pnmscale -xysize</code> <i>cols rows</i> [<i>pnmfile</i>]<br />
+<p> <code>pnmscale</code> <i>scale_factor</i> [<i>pnmfile</i>]<br/>
+ <code>pnmscale -reduce</code> <i>reduction_factor</i> [<i>pnmfile</i>]<br/>
+ <code>pnmscale</code> [{<code>-xsize=</code><i>cols</i> | <code>-width=</code><i>cols</i> | <code>-xscale=</code><i>factor</i>}] [{<code>-ysize=</code><i>rows</i> | <code>-height=</code><i>rows</i> | <code>-yscale=</code><i>factor</i>}] [<i>pnmfile</i>]<br/>
+ <code>pnmscale -xysize</code> <i>cols rows</i> [<i>pnmfile</i>]<br/>
  <code>pnmscale -pixels</code> <i>n</i> [<i>pnmfile</i>] </p>
-<p> Miscellaneous options:<br />
+<p> Miscellaneous options:<br/>
  <code>-verbose -nomix</code> </p>
 <p> Minimum unique abbreviation of option is acceptable. You may use double hypens instead of single hyphen to denote options. You may use white space in place of the equals sign to separate an option name from its value. </p>
 <h2>DESCRIPTION</h2>

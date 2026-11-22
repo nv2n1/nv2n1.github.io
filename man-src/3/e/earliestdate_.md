@@ -20,11 +20,11 @@ description: "QuantLib::BootstrapHelper – Base helper class for bootstrapping.
 <p> Real <code>quoteValue</code> () const </p>
 <p> bool <code>quoteIsValid</code> () const </p>
 <p> virtual Real <code>impliedQuote</code> () const =0 </p>
-<p> virtual void <code>setTermStructure</code> (TS *)<br />
- <i>sets the term structure to be used for pricing </i><br />
- virtual <code>Date</code> <code>earliestDate</code> () const<br />
- <i>earliest relevant date </i><br />
- virtual <code>Date</code> <code>latestDate</code> () const<br />
+<p> virtual void <code>setTermStructure</code> (TS *)<br/>
+ <i>sets the term structure to be used for pricing </i><br/>
+ virtual <code>Date</code> <code>earliestDate</code> () const<br/>
+ <i>earliest relevant date </i><br/>
+ virtual <code>Date</code> <code>latestDate</code> () const<br/>
  <i>latest relevant date </i> </p>
 <p> <code>Observer interface</code> </p>
 <p> virtual void <code>update</code> () </p>

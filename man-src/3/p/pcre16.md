@@ -107,9 +107,9 @@ pcre.h&gt;</code></pre>
 <h2>Error Names</h2>
 <p>The errors PCRE_ERROR_BADUTF16_OFFSET and PCRE_ERROR_SHORTUTF16 correspond to their 8-bit counterparts. The error PCRE_ERROR_BADMODE is given when a compiled pattern is passed to a function that processes patterns in the other mode, for example, if a pattern compiled with <code>pcre_compile()</code> is passed to <code>pcre16_exec()</code>. </p>
 <p> There are new error codes whose names begin with PCRE_UTF16_ERR for invalid UTF-16 strings, corresponding to the PCRE_UTF8_ERR codes for UTF-8 strings that are described in the section entitled &quot;Reason codes for invalid UTF-8 strings&quot; in the main <code>pcreapi</code> page. The UTF-16 errors are: </p>
-<p>&nbsp;<wbr>&nbsp;PCRE_UTF16_ERR1&nbsp;<wbr>&nbsp;Missing low surrogate at end of string<br />
-&nbsp;<wbr>&nbsp;PCRE_UTF16_ERR2&nbsp;<wbr>&nbsp;Invalid low surrogate follows high surrogate<br />
-&nbsp;<wbr>&nbsp;PCRE_UTF16_ERR3&nbsp;<wbr>&nbsp;Isolated low surrogate<br />
+<p>&nbsp;<wbr>&nbsp;PCRE_UTF16_ERR1&nbsp;<wbr>&nbsp;Missing low surrogate at end of string<br/>
+&nbsp;<wbr>&nbsp;PCRE_UTF16_ERR2&nbsp;<wbr>&nbsp;Invalid low surrogate follows high surrogate<br/>
+&nbsp;<wbr>&nbsp;PCRE_UTF16_ERR3&nbsp;<wbr>&nbsp;Isolated low surrogate<br/>
 &nbsp;<wbr>&nbsp;PCRE_UTF16_ERR4&nbsp;<wbr>&nbsp;Non-character</p>
 <h2>Error Texts</h2>
 <p>If there is an error while compiling a pattern, the error text that is passed back by <code>pcre16_compile()</code> or <code>pcre16_compile2()</code> is still an 8-bit character string, zero-terminated.</p>

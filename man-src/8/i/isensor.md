@@ -44,8 +44,8 @@ description: "ipmiutil_sensor – show Sensor Data Records"
 <dt>-n snum</dt>
 <dd>Number of the sensor to set. This num can be in decimal, or of the form 0x1a, to match the value shown by sensor following the &quot;snum&quot; tag. This is required if setting hi/lo thresholds via -h/-l.</dd>
 <dt>-o</dt>
-<dd>Output the memory DIMM information from SMBIOS, including size. Not available if using IPMI LAN via -N. Sample output:<br />
- Memory Device (0,0): DIMM_A1 : size=2048MB<br />
+<dd>Output the memory DIMM information from SMBIOS, including size. Not available if using IPMI LAN via -N. Sample output:<br/>
+ Memory Device (0,0): DIMM_A1 : size=2048MB<br/>
  Memory Device (0,1): DIMM_A2 : not present</dd>
 <dt>-p</dt>
 <dd>Persist the threshold being set (as specified via -l or -h). This writes a &quot;sensor -i&quot; script line to the file /usr/share/ipmiutil/thresholds.sh, which can then be executed at each reboot by starting the /etc/init.d/ipmi_port service for the desired runlevels. For Windows, the filename is thresholds.cmd.</dd>
@@ -58,9 +58,9 @@ description: "ipmiutil_sensor – show Sensor Data Records"
 <dt>-t</dt>
 <dd>Show any Thresholds for each sensor also, in text format.</dd>
 <dt>-u</dt>
-<dd>Set unique threshold values. The values are specified in a string of threshold values. It can be in raw hex characters or in float values. All 6 possible thresholds must be specified, but only the ones that are valid for this sensor will be applied. These values are validated for ordering. For example:<br />
-&nbsp;<wbr>&nbsp;<wbr>-u 6:5:4:60:65:69&nbsp;<wbr>(float)&nbsp;<wbr>or<br />
-&nbsp;<wbr>&nbsp;<wbr>-u 0x0605043c4145&nbsp;<wbr>(raw hex)<br />
+<dd>Set unique threshold values. The values are specified in a string of threshold values. It can be in raw hex characters or in float values. All 6 possible thresholds must be specified, but only the ones that are valid for this sensor will be applied. These values are validated for ordering. For example:<br/>
+&nbsp;<wbr>&nbsp;<wbr>-u 6:5:4:60:65:69&nbsp;<wbr>(float)&nbsp;<wbr>or<br/>
+&nbsp;<wbr>&nbsp;<wbr>-u 0x0605043c4145&nbsp;<wbr>(raw hex)<br/>
 &nbsp;<wbr>would mean 0x06=noncrit_lo, 0x05=crit_lo, 0x04=nonrec_lo, 0x3c=noncrit_hi, 0x41=crit_hi, 0x45=nonrec_hi.</dd>
 <dt>-v</dt>
 <dd>Show Verbose output, including volatile thresholds, SDR thresholds, max/min, hysteresis, and BMC_TAM decoding.</dd>
@@ -90,27 +90,27 @@ description: "ipmiutil_sensor – show Sensor Data Records"
 <dd>Yes, do prompt the user for the IPMI LAN remote password. Alternatives for the password are -E or -P. </dd>
 </dl>
 <h2>Examples</h2>
-<p>ipmiutil sensor sample output is below.<br />
- ipmiutil ver 2.21<br />
- sensor: version 2.21<br />
- &#8212; BMC version 0.17, IPMI version 2.0<br />
- _ID_ SDR_Type_xx ET Own Typ S_Num Sens_Description Hex &amp; Interp Reading<br />
- 000b SDR Full 01 01 20 a 01 snum 30 Baseboard Temp = 2e OK 46.00 degrees C<br />
- 000e SDR Full 01 01 20 m 04 snum 50 Fan 1A = 6f OK 7659.00 RPM<br />
- 0042 SDR Comp 02 6f 20 a 21 snum e0 DIMM 1A = 00 c0 04 00 Present<br />
- 004e SDR FRU 11 1b dev: 20 03 80 00 0a 01 Pwr Supply 1 FRU<br />
- 0050 SDR IPMB 12 1b dev: 20 00 bf 07 01 Basbrd Mgmt Ctlr<br />
- 0051 SDR OEM c0 09 Intel: 02 02 00 01 70 71<br />
- 0065 SDR OEM c0 11 Intel: SDR Package 17<br />
- [&#8230;] Output Columns:<br />
- _ID_: This is an SDR ID or index number, in hex. This may vary from chassis to chassis.<br />
- SDR_Type_xx: This shows the SDR Type and its hex representation. Some SDR types have a custom display. The OEM SDRs only show the OEM vendor by IANA number and then usually the data is listed in hex.<br />
- ET: For Full or Comp SDRs, this shows the Event Type. For other SDRs, this shows the size of the SDR entry in hex (Sz).<br />
- Own: This is the hex slave address of the SDR Owner, usually 20 if BMC.<br />
- a/m: This indicates whether this sensor is either automatically or manually rearmed, respectively.<br />
- Typ: This is the Sensor Type as defined in Table 42-3 of the IPMI 2.0 spec. (01 = Temperature, 02 = Voltage, 03 = Current, 04 = Fan, etc.)<br />
- S_Num: This is the sensor number in hex. This remains consistent across baseboards of the same type. The output can be parsed with the &quot;snum&quot; delimiter to extract this value.<br />
- Sens_Description: This is the text description of this SDR, which is stored within the SDR on the BMC.<br />
+<p>ipmiutil sensor sample output is below.<br/>
+ ipmiutil ver 2.21<br/>
+ sensor: version 2.21<br/>
+ &#8212; BMC version 0.17, IPMI version 2.0<br/>
+ _ID_ SDR_Type_xx ET Own Typ S_Num Sens_Description Hex &amp; Interp Reading<br/>
+ 000b SDR Full 01 01 20 a 01 snum 30 Baseboard Temp = 2e OK 46.00 degrees C<br/>
+ 000e SDR Full 01 01 20 m 04 snum 50 Fan 1A = 6f OK 7659.00 RPM<br/>
+ 0042 SDR Comp 02 6f 20 a 21 snum e0 DIMM 1A = 00 c0 04 00 Present<br/>
+ 004e SDR FRU 11 1b dev: 20 03 80 00 0a 01 Pwr Supply 1 FRU<br/>
+ 0050 SDR IPMB 12 1b dev: 20 00 bf 07 01 Basbrd Mgmt Ctlr<br/>
+ 0051 SDR OEM c0 09 Intel: 02 02 00 01 70 71<br/>
+ 0065 SDR OEM c0 11 Intel: SDR Package 17<br/>
+ [&#8230;] Output Columns:<br/>
+ _ID_: This is an SDR ID or index number, in hex. This may vary from chassis to chassis.<br/>
+ SDR_Type_xx: This shows the SDR Type and its hex representation. Some SDR types have a custom display. The OEM SDRs only show the OEM vendor by IANA number and then usually the data is listed in hex.<br/>
+ ET: For Full or Comp SDRs, this shows the Event Type. For other SDRs, this shows the size of the SDR entry in hex (Sz).<br/>
+ Own: This is the hex slave address of the SDR Owner, usually 20 if BMC.<br/>
+ a/m: This indicates whether this sensor is either automatically or manually rearmed, respectively.<br/>
+ Typ: This is the Sensor Type as defined in Table 42-3 of the IPMI 2.0 spec. (01 = Temperature, 02 = Voltage, 03 = Current, 04 = Fan, etc.)<br/>
+ S_Num: This is the sensor number in hex. This remains consistent across baseboards of the same type. The output can be parsed with the &quot;snum&quot; delimiter to extract this value.<br/>
+ Sens_Description: This is the text description of this SDR, which is stored within the SDR on the BMC.<br/>
  Hex &amp; Interp Reading: This is the raw hex value returned by GetSensorReading, and its interpreted meaning. </p>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/8-ipmiutil/">ipmiutil</a>(8) <a href="/docs/linux/man/8-ialarms/">ialarms</a>(8) <a href="/docs/linux/man/8-iconfig/">iconfig</a>(8) <a href="/docs/linux/man/8-icmd/">icmd</a>(8) <a href="/docs/linux/man/8-idiscover/">idiscover</a>(8) <a href="/docs/linux/man/8-ievents/">ievents</a>(8) <a href="/docs/linux/man/8-ifru/">ifru</a>(8) <a href="/docs/linux/man/8-igetevent/">igetevent</a>(8) <a href="/docs/linux/man/8-ihealth/">ihealth</a>(8) <a href="/docs/linux/man/8-ilan/">ilan</a>(8) <a href="/docs/linux/man/8-ireset/">ireset</a>(8) <a href="/docs/linux/man/8-isel/">isel</a>(8) <a href="/docs/linux/man/8-iserial/">iserial</a>(8) <a href="/docs/linux/man/8-isol/">isol</a>(8) <a href="/docs/linux/man/8-iwdt/">iwdt</a>(8) </p>

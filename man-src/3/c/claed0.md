@@ -11,7 +11,7 @@ description: "claed0.f –"
 <p> claed0.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>claed0</code> (QSIZ, N, D, E, Q, LDQ, QSTORE, LDQS, RWORK, IWORK, INFO)<br />
+<p> subroutine <code>claed0</code> (QSIZ, N, D, E, Q, LDQ, QSTORE, LDQS, RWORK, IWORK, INFO)<br/>
  <i></i><code>CLAED0</code> used by sstedc. Computes all eigenvalues and corresponding eigenvectors of an unreduced symmetric tridiagonal matrix using the divide and conquer method.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine claed0 (integerQSIZ, integerN, real, dimension( * )D, real, dimension( * )E, complex, dimension( ldq, * )Q, integerLDQ, complex, dimension( ldqs, * )QSTORE, integerLDQS, real, dimension( * )RWORK, integer, dimension( * )IWORK, integerINFO)</h3>

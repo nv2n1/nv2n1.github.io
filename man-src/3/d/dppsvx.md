@@ -11,7 +11,7 @@ description: "dppsvx.f –"
 <p> dppsvx.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dppsvx</code> (FACT, UPLO, N, NRHS, AP, AFP, EQUED, S, B, LDB, X, LDX, RCOND, FERR, BERR, WORK, IWORK, INFO)<br />
+<p> subroutine <code>dppsvx</code> (FACT, UPLO, N, NRHS, AP, AFP, EQUED, S, B, LDB, X, LDX, RCOND, FERR, BERR, WORK, IWORK, INFO)<br/>
  <i></i><code> DPPSVX computes the solution to system of linear equations A * X = B for OTHER matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dppsvx (characterFACT, characterUPLO, integerN, integerNRHS, double precision, dimension( * )AP, double precision, dimension( * )AFP, characterEQUED, double precision, dimension( * )S, double precision, dimension( ldb, * )B, integerLDB, double precision, dimension( ldx, * )X, integerLDX, double precisionRCOND, double precision, dimension( * )FERR, double precision, dimension( * )BERR, double precision, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>
@@ -102,17 +102,17 @@ description: "dppsvx.f –"
           of the matrices B and X.  NRHS &gt;= 0.
 </pre>
 <p> <i>AP</i> </p>
-<p>          AP is DOUBLE PRECISION array, dimension (N*(N+1)/2)<br />
-          On entry, the upper or lower triangle of the symmetric matrix<br />
-          A, packed columnwise in a linear array, except if FACT = &#8216;F&#8217;<br />
-          and EQUED = &#8216;Y&#8217;, then A must contain the equilibrated matrix<br />
-          diag(S)*A*diag(S).  The j-th column of A is stored in the<br />
-          array AP as follows:<br />
-          if UPLO = &#8216;U&#8217;, AP(i + (j-1)*j/2) = A(i,j) for 1&lt;=i&lt;=j;<br />
-          if UPLO = &#8216;L&#8217;, AP(i + (j-1)*(2n-j)/2) = A(i,j) for j&lt;=i&lt;=n.<br />
-          See below for further details.  A is not modified if<br />
-          FACT = &#8216;F&#8217; or &#8216;N&#8217;, or if FACT = &#8216;E&#8217; and EQUED = &#8216;N&#8217; on exit.<br />
-          On exit, if FACT = &#8216;E&#8217; and EQUED = &#8216;Y&#8217;, A is overwritten by<br />
+<p>          AP is DOUBLE PRECISION array, dimension (N*(N+1)/2)<br/>
+          On entry, the upper or lower triangle of the symmetric matrix<br/>
+          A, packed columnwise in a linear array, except if FACT = &#8216;F&#8217;<br/>
+          and EQUED = &#8216;Y&#8217;, then A must contain the equilibrated matrix<br/>
+          diag(S)*A*diag(S).  The j-th column of A is stored in the<br/>
+          array AP as follows:<br/>
+          if UPLO = &#8216;U&#8217;, AP(i + (j-1)*j/2) = A(i,j) for 1&lt;=i&lt;=j;<br/>
+          if UPLO = &#8216;L&#8217;, AP(i + (j-1)*(2n-j)/2) = A(i,j) for j&lt;=i&lt;=n.<br/>
+          See below for further details.  A is not modified if<br/>
+          FACT = &#8216;F&#8217; or &#8216;N&#8217;, or if FACT = &#8216;E&#8217; and EQUED = &#8216;N&#8217; on exit.<br/>
+          On exit, if FACT = &#8216;E&#8217; and EQUED = &#8216;Y&#8217;, A is overwritten by<br/>
           diag(S)*A*diag(S).</p>
 <p> <i>AFP</i> </p>
 <pre>

@@ -11,7 +11,7 @@ description: "arm_register_metric – describe metrics"
 <p> arm_register_metric &#8211; describe metrics</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/arm4.h">arm4.h</a>&gt;</code> </p>
-<p> <code>arm_error_t<br />
+<p> <code>arm_error_t<br/>
  arm_register_metric( </p>
 <p>&nbsp;<wbr>const arm_id_t&nbsp;<wbr>*</code><i>app_id</i><code>,&nbsp;<wbr> </p>
 <p>&nbsp;<wbr>const arm_char_t&nbsp;<wbr>*</code><i>name</i><code>,&nbsp;<wbr> </p>
@@ -27,9 +27,9 @@ description: "arm_register_metric – describe metrics"
 <p> The application uses <code>arm_register_metric()</code> to inform the ARM library of metadata about each metric the application provides. </p>
 <p> ARM generates an ID that is passed in the metric binding sub-buffer to <code>arm_register_transaction()</code>. </p>
 <p> <i>app_id</i> is an application ID returned from an <code>arm_register_application()</code> call in the same process. </p>
-<p> <i>buffer4</i> is a pointer to the user data buffer, if any. If the pointer is null, there is no buffer. No sub-buffer types are currently valid with this function call, so the pointer should be null (<code>ARM_BUF4_NONE</code>).<br />
-&nbsp;<wbr> <i>flags</i> contains 32-bit flags. No values are currently defined. The field should be zero (<code>ARM_FLAG_NONE</code>).<br />
-&nbsp;<wbr> <i>format</i> describes the data type. The value must be one of the following values:<br />
+<p> <i>buffer4</i> is a pointer to the user data buffer, if any. If the pointer is null, there is no buffer. No sub-buffer types are currently valid with this function call, so the pointer should be null (<code>ARM_BUF4_NONE</code>).<br/>
+&nbsp;<wbr> <i>flags</i> contains 32-bit flags. No values are currently defined. The field should be zero (<code>ARM_FLAG_NONE</code>).<br/>
+&nbsp;<wbr> <i>format</i> describes the data type. The value must be one of the following values:<br/>
 &nbsp;<wbr></p>
 <dl>
 <dt>1</dt>
@@ -51,19 +51,19 @@ description: "arm_register_metric – describe metrics"
 <dt>9</dt>
 <dd> deprecated</dd>
 <dt>10</dt>
-<dd> (<code>ARM_METRIC_FORMAT_STRING32</code>) = string (null-terminated) of a maximum length of 32 characters (33 including the null termination character) <i>input_metric_id</i> is a pointer to an optional 128-bit ID (16 bytes) that is unique and that can be treated as an alias for the other metadata. It can be any value except all zeros or all ones. If the pointer is null (<code>ARM_ID_NONE</code>), no ID is provided.<br />
-&nbsp;<wbr> An ID is unique if the probability of the ID being associated with more than one set of metadata is vanishingly small. The selection of 128-bit IDs yields 3.4 x 10**38 unique IDs, so the objective is to select an ID that makes use of all 128 bits and is reasonably likely to not be selected by another person creating an ID of the same form. Two suggested algorithms that generate 128-bit values with these characteristics are:<br />
+<dd> (<code>ARM_METRIC_FORMAT_STRING32</code>) = string (null-terminated) of a maximum length of 32 characters (33 including the null termination character) <i>input_metric_id</i> is a pointer to an optional 128-bit ID (16 bytes) that is unique and that can be treated as an alias for the other metadata. It can be any value except all zeros or all ones. If the pointer is null (<code>ARM_ID_NONE</code>), no ID is provided.<br/>
+&nbsp;<wbr> An ID is unique if the probability of the ID being associated with more than one set of metadata is vanishingly small. The selection of 128-bit IDs yields 3.4 x 10**38 unique IDs, so the objective is to select an ID that makes use of all 128 bits and is reasonably likely to not be selected by another person creating an ID of the same form. Two suggested algorithms that generate 128-bit values with these characteristics are:<br/>
 &nbsp;<wbr></dd>
 <dt>1.</dt>
-<dd> The Universal Unique Identifier (UUID) algorithm that is part of The Open Group specification: DCE 1.1: Remote Procedure Call. A developer could use the algorithm at the time the application is developed using a utility on his or her system, and be reasonably certain that nobody else would generate the same 128-bit ID.<br />
+<dd> The Universal Unique Identifier (UUID) algorithm that is part of The Open Group specification: DCE 1.1: Remote Procedure Call. A developer could use the algorithm at the time the application is developed using a utility on his or her system, and be reasonably certain that nobody else would generate the same 128-bit ID.<br/>
 &nbsp;<wbr></dd>
 <dt>2.</dt>
-<dd> The MD5 Message-Digest Algorithm, described in IETF RFC 1321. Applying this algorithm to a concatenation of all the metadata properties would almost certainly result in a value that would not collide with any other ID created with a different set of metadata properties. If an ARM implementation is passed an ID that was previously registered within this process, the implementation can ignore the other metadata parameters and assume they are identical to the previously registered metadata. The metric metadata consists of the following fields: <i>app_id</i>, <i>name</i>, <i>format</i>, <i>usage</i>, and <i>unit</i>.<br />
-&nbsp;<wbr> <i>name</i> is a pointer to a null-terminated string containing the name of the metric. The maximum length of the string is 128 characters, including the termination character. It serves no purpose and is illegal to make this call if the pointer is null. The name should not contain trailing blank characters or consist of only blank characters.<br />
+<dd> The MD5 Message-Digest Algorithm, described in IETF RFC 1321. Applying this algorithm to a concatenation of all the metadata properties would almost certainly result in a value that would not collide with any other ID created with a different set of metadata properties. If an ARM implementation is passed an ID that was previously registered within this process, the implementation can ignore the other metadata parameters and assume they are identical to the previously registered metadata. The metric metadata consists of the following fields: <i>app_id</i>, <i>name</i>, <i>format</i>, <i>usage</i>, and <i>unit</i>.<br/>
+&nbsp;<wbr> <i>name</i> is a pointer to a null-terminated string containing the name of the metric. The maximum length of the string is 128 characters, including the termination character. It serves no purpose and is illegal to make this call if the pointer is null. The name should not contain trailing blank characters or consist of only blank characters.<br/>
 &nbsp;<wbr> The name can be any string, with one exception. Strings beginning with the four characters &quot;ARM:&quot; are reserved for the ARM specification. The specification will define names with known semantics using this prefix. One name format is currently defined. Any name beginning with the eight character prefix &quot;ARM:CIM:&quot; represents a name defined using the DMTF CIM (Distributed Management Task Force Common Information Model) naming rules. For example, &quot;ARM:CIM:CIM_SoftwareElement.Name&quot; indicates that the metric value has the semantics of the Name property of the CIM_SoftwareElement class. It is anticipated that additional naming semantics are likely to be added in the future. </dd>
 <p> <i>output_metric_id</i> is a pointer to a 16-byte field. ARM will store a 16-byte value. There are no requirements on the value it is set to, except that it must be possible to pass it in the metric binding sub-buffer on the <code>arm_register_transaction()</code> call, without the application needing to do any error checking. </p>
 <p> <i>unit</i> is a pointer to a null-terminated string containing the units (such as &quot;files transferred&quot;) of the metric. The maximum length of the string is 128 characters, including the termination character. The pointer may be null. </p>
-<p> <i>usage</i> describes how the metric is used. The value must be one of the following values, or a negative value (any negative value is specific to the application; the negative values are not expected to be widely used).<br />
+<p> <i>usage</i> describes how the metric is used. The value must be one of the following values, or a negative value (any negative value is specific to the application; the negative values are not expected to be widely used).<br/>
 &nbsp;<wbr></p>
 <dt>0</dt>
 <dd> (<code>ARM_METRIC_USE_GENERAL</code>) = a metric without a specified usage. Most metrics are described with a GENERAL usage.</dd>

@@ -10,7 +10,7 @@ description: "setsid – creates a session and sets the process group ID"
 
 <p> setsid &#8211; creates a session and sets the process group ID </p>
 <h2>SYNOPSIS</h2>
-<p> <code>#include &lt;sys/types.h&gt;</code><br />
+<p> <code>#include &lt;sys/types.h&gt;</code><br/>
  <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>pid_t setsid(void);</code> </p>
 <h2>DESCRIPTION</h2>

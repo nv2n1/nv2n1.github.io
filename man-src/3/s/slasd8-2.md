@@ -10,7 +10,7 @@ description: "slasd8.f –"
 <p>slasd8.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>slasd8</code> (ICOMPQ, K, D, Z, VF, VL, DIFL, DIFR, LDDIFR, DSIGMA, WORK, INFO)<br />
+<p>subroutine <code>slasd8</code> (ICOMPQ, K, D, Z, VF, VL, DIFL, DIFR, LDDIFR, DSIGMA, WORK, INFO)<br/>
  <i></i><code>SLASD8</code> finds the square roots of the roots of the secular equation, and stores, for each element in D, the distance to its two nearest poles. Used by sbdsdc.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slasd8 (integerICOMPQ, integerK, real, dimension( * )D, real, dimension( * )Z, real, dimension( * )VF, real, dimension( * )VL, real, dimension( * )DIFL, real, dimension( lddifr, * )DIFR, integerLDDIFR, real, dimension( * )DSIGMA, real, dimension( * )WORK, integerINFO)</h3>

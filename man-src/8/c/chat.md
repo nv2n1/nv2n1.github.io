@@ -75,7 +75,7 @@ description: "chat – Automated conversational script with a modem"
 <h2>COMMENTS</h2>
 <p> Comments can be embedded in the chat script. A comment is a line which starts with the <code>#</code> (hash) character in column 1. Such comment lines are just ignored by the chat program. If a &#8216;#&#8216; character is to be expected as the first character of the expect sequence, you should quote the expect string. If you want to wait for a prompt that starts with a # (hash) character, you would have to write something like this: </p>
 <dl>
-<dd> <p> # Now wait for the prompt and send logout string <br />
+<dd> <p> # Now wait for the prompt and send logout string <br/>
  &#8216;# &#8216; logout </p>
  </dd></dl>
 <h2>SENDING DATA FROM A FILE</h2>
@@ -94,23 +94,23 @@ description: "chat – Automated conversational script with a modem"
 <p> <code>SAY</code> strings must be enclosed in single or double quotes. If carriage return and line feed are needed in the string to be output, you must explicitly add them to your string. </p>
 <p>The SAY strings could be used to give progress messages in sections of the script where you want to have &#8216;ECHO OFF&#8217; but still let the user know what is happening. An example is: </p>
 <dl>
-<dd> <p> ABORT BUSY <br />
- ECHO OFF <br />
- SAY &quot;Dialling your ISP...\n&quot; <br />
- &#8216;&#8216; ATDT5551212 <br />
- TIMEOUT 120 <br />
- SAY &quot;Waiting up to 2 minutes for connection ... &quot; <br />
- CONNECT &#8216;&#8216; <br />
- SAY &quot;Connected, now logging in ...\n&quot; <br />
- ogin: account <br />
- ssword: pass <br />
- $ \c <br />
+<dd> <p> ABORT BUSY <br/>
+ ECHO OFF <br/>
+ SAY &quot;Dialling your ISP...\n&quot; <br/>
+ &#8216;&#8216; ATDT5551212 <br/>
+ TIMEOUT 120 <br/>
+ SAY &quot;Waiting up to 2 minutes for connection ... &quot; <br/>
+ CONNECT &#8216;&#8216; <br/>
+ SAY &quot;Connected, now logging in ...\n&quot; <br/>
+ ogin: account <br/>
+ ssword: pass <br/>
+ $ \c <br/>
  SAY &quot;Logged in OK ...\n&quot; <i>etc ...</i> </p>
  </dd></dl>
 <p>This sequence will only present the SAY strings to the user and all the details of the script will remain hidden. For example, if the above script works, the user will see: </p>
 <dl>
-<dd> <p> Dialling your ISP... <br />
- Waiting up to 2 minutes for connection ... Connected, now logging in ... <br />
+<dd> <p> Dialling your ISP... <br/>
+ Waiting up to 2 minutes for connection ... Connected, now logging in ... <br/>
  Logged in OK ... </p>
  </dd></dl>
 <h2>REPORT STRINGS</h2>
@@ -127,34 +127,34 @@ description: "chat – Automated conversational script with a modem"
 <h2>ECHO</h2>
 <p> The echo options controls whether the output from the modem is echoed to <i>stderr</i>. This option may be set with the <i>-e</i> option, but it can also be controlled by the <i>ECHO</i> keyword. The &quot;expect-send&quot; pair <i>ECHO</i> <i>ON</i> enables echoing, and <i>ECHO</i> <i>OFF</i> disables it. With this keyword you can select which parts of the conversation should be visible. For instance, with the following script: </p>
 <dl>
-<dd> <p> ABORT &#8216;BUSY&#8217; <br />
- ABORT &#8216;NO CARRIER&#8217; <br />
- &#8216;&#8216; ATZ <br />
- OK\r\n ATD1234567 <br />
- \r\n \c <br />
- ECHO ON <br />
- CONNECT \c <br />
+<dd> <p> ABORT &#8216;BUSY&#8217; <br/>
+ ABORT &#8216;NO CARRIER&#8217; <br/>
+ &#8216;&#8216; ATZ <br/>
+ OK\r\n ATD1234567 <br/>
+ \r\n \c <br/>
+ ECHO ON <br/>
+ CONNECT \c <br/>
  ogin: account </p>
  </dd></dl>
 <p>all output resulting from modem configuration and dialing is not visible, but starting with the <i>CONNECT</i> (or <i>BUSY</i>) message, everything will be echoed.  </p>
 <h2>HANGUP</h2>
-<p> The HANGUP options control whether a modem hangup should be considered as an error or not. This option is useful in scripts for dialling systems which will hang up and call your system back. The HANGUP options can be <code>ON</code> or <code>OFF</code>. <br />
+<p> The HANGUP options control whether a modem hangup should be considered as an error or not. This option is useful in scripts for dialling systems which will hang up and call your system back. The HANGUP options can be <code>ON</code> or <code>OFF</code>. <br/>
  When HANGUP is set OFF and the modem hangs up (e.g., after the first stage of logging in to a callback system), <code>chat</code> will continue running the script (e.g., waiting for the incoming call and second stage login prompt). As soon as the incoming call is connected, you should use the <code>HANGUP ON</code> directive to reinstall normal hang up signal behavior. Here is an (simple) example script: </p>
 <dl>
-<dd> <p> ABORT &#8216;BUSY&#8217; <br />
- &#8216;&#8216; ATZ <br />
- OK\r\n ATD1234567 <br />
- \r\n \c <br />
- CONNECT \c <br />
- &#8216;Callback login:&#8216; call_back_ID <br />
- HANGUP OFF <br />
- ABORT &quot;Bad Login&quot; <br />
- &#8216;Callback Password:&#8216; Call_back_password <br />
- TIMEOUT 120 <br />
- CONNECT \c <br />
- HANGUP ON <br />
- ABORT &quot;NO CARRIER&quot; <br />
- ogin:--BREAK--ogin: real_account <br />
+<dd> <p> ABORT &#8216;BUSY&#8217; <br/>
+ &#8216;&#8216; ATZ <br/>
+ OK\r\n ATD1234567 <br/>
+ \r\n \c <br/>
+ CONNECT \c <br/>
+ &#8216;Callback login:&#8216; call_back_ID <br/>
+ HANGUP OFF <br/>
+ ABORT &quot;Bad Login&quot; <br/>
+ &#8216;Callback Password:&#8216; Call_back_password <br/>
+ TIMEOUT 120 <br/>
+ CONNECT \c <br/>
+ HANGUP ON <br/>
+ ABORT &quot;NO CARRIER&quot; <br/>
+ ogin:--BREAK--ogin: real_account <br/>
  <i>etc ...</i> </p>
  </dd></dl>
 <h2>TIMEOUT</h2>

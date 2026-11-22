@@ -10,7 +10,7 @@ description: "XkbAllocCompatMap – Allocate a new compatibility map if you do n
 <p>XkbAllocCompatMap &#8211; Allocate a new compatibility map if you do not already have one available </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Status XkbAllocCompatMap</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>unsigned int </code><i>which</i><code>,</code> <code>unsigned int </code><i>num_si</i><code>);</code><br />
+<dt> <code>Status XkbAllocCompatMap</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>unsigned int </code><i>which</i><code>,</code> <code>unsigned int </code><i>num_si</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

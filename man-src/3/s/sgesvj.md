@@ -11,7 +11,7 @@ description: "sgesvj.f –"
 <p> sgesvj.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>sgesvj</code> (JOBA, JOBU, JOBV, M, N, A, LDA, SVA, MV, V, LDV, WORK, LWORK, INFO)<br />
+<p> subroutine <code>sgesvj</code> (JOBA, JOBU, JOBV, M, N, A, LDA, SVA, MV, V, LDV, WORK, LWORK, INFO)<br/>
  <i></i><code>SGESVJ</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sgesvj (character*1JOBA, character*1JOBU, character*1JOBV, integerM, integerN, real, dimension( lda, * )A, integerLDA, real, dimension( n )SVA, integerMV, real, dimension( ldv, * )V, integerLDV, real, dimension( lwork )WORK, integerLWORK, integerINFO)</h3>
@@ -93,43 +93,43 @@ of a real
           M &gt;= N &gt;= 0.
 </pre>
 <p> <i>A</i> </p>
-<p>A is REAL array, dimension(LDA, N) On entry, the M &#8211; by &#8211; N matrix A.On exit,<br />
-    If JOBU.EQ.&#8217;U&#8217;.OR.JOBU.EQ.&#8217;C&#8217; : If INFO.EQ.0 : RANKA orthonormal columns of U are returned in the<br />
-                                                   leading RANKA columns of the array A.Here RANKA<br />
-            &lt;= N<br />
-               is the number of computed singular values of A that are<br />
-               above the underflow threshold SLAMCH(&#8216;S&#8217;)<br />
-                   .The singular<br />
-               vectors corresponding to underflowed<br />
-        or zero singular<br />
-           values are not computed.The value of RANKA is returned<br />
-           in the array WORK as RANKA = NINT(WORK(2)).Also see the<br />
-                                        descriptions of SVA and WORK.The computed columns of U<br />
-                                        are mutually numerically orthogonal up to approximately<br />
-                                        TOL = SQRT(M) * EPS(default);<br />
-or TOL = CTOL * EPS(JOBU.EQ.&#8217;C&#8217;),<br />
-   see the description of JOBU.If INFO.GT.0,<br />
-   the procedure SGESVJ did not converge in the given number<br />
-       of<br />
-       iterations(sweeps)<br />
-           .In that case,<br />
-   the computed<br />
-       columns of U may not be orthogonal up to TOL.The output<br />
-       U(stored in A),<br />
-   SIGMA(given by the computed singular<br />
-             values in SVA(1<br />
-                           : N)) and<br />
-           V is still a decomposition of the<br />
-           input matrix A in the sense that the residual<br />
-       || A &#8211; SCALE *U *SIGMA *V ^ T || _2 / || A || _2 is small.If JOBU.EQ.&#8217;N&#8217; : If INFO.EQ.0 : Note that the left singular vectors are &#8216;for free&#8217; in the one &#8211; sided Jacobi SVD algorithm.However,<br />
-   if only the<br />
-    singular values are needed,<br />
-   the level of numerical<br />
-       orthogonality of U is not an issue<br />
-       and iterations are<br />
-               stopped when the columns of the iterated matrix are<br />
-               numerically orthogonal up to approximately M<br />
-               * EPS.Thus,<br />
+<p>A is REAL array, dimension(LDA, N) On entry, the M &#8211; by &#8211; N matrix A.On exit,<br/>
+    If JOBU.EQ.&#8217;U&#8217;.OR.JOBU.EQ.&#8217;C&#8217; : If INFO.EQ.0 : RANKA orthonormal columns of U are returned in the<br/>
+                                                   leading RANKA columns of the array A.Here RANKA<br/>
+            &lt;= N<br/>
+               is the number of computed singular values of A that are<br/>
+               above the underflow threshold SLAMCH(&#8216;S&#8217;)<br/>
+                   .The singular<br/>
+               vectors corresponding to underflowed<br/>
+        or zero singular<br/>
+           values are not computed.The value of RANKA is returned<br/>
+           in the array WORK as RANKA = NINT(WORK(2)).Also see the<br/>
+                                        descriptions of SVA and WORK.The computed columns of U<br/>
+                                        are mutually numerically orthogonal up to approximately<br/>
+                                        TOL = SQRT(M) * EPS(default);<br/>
+or TOL = CTOL * EPS(JOBU.EQ.&#8217;C&#8217;),<br/>
+   see the description of JOBU.If INFO.GT.0,<br/>
+   the procedure SGESVJ did not converge in the given number<br/>
+       of<br/>
+       iterations(sweeps)<br/>
+           .In that case,<br/>
+   the computed<br/>
+       columns of U may not be orthogonal up to TOL.The output<br/>
+       U(stored in A),<br/>
+   SIGMA(given by the computed singular<br/>
+             values in SVA(1<br/>
+                           : N)) and<br/>
+           V is still a decomposition of the<br/>
+           input matrix A in the sense that the residual<br/>
+       || A &#8211; SCALE *U *SIGMA *V ^ T || _2 / || A || _2 is small.If JOBU.EQ.&#8217;N&#8217; : If INFO.EQ.0 : Note that the left singular vectors are &#8216;for free&#8217; in the one &#8211; sided Jacobi SVD algorithm.However,<br/>
+   if only the<br/>
+    singular values are needed,<br/>
+   the level of numerical<br/>
+       orthogonality of U is not an issue<br/>
+       and iterations are<br/>
+               stopped when the columns of the iterated matrix are<br/>
+               numerically orthogonal up to approximately M<br/>
+               * EPS.Thus,<br/>
    on exit, A contains the columns of U scaled with the corresponding singular values.If INFO.GT.0 : the procedure SGESVJ did not converge in the given number of iterations(sweeps).</p>
 <p> <i>LDA</i> </p>
 <pre>

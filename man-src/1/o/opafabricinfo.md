@@ -83,16 +83,16 @@ description: "opafabricinfo"
 <dt>
 </dt><dd> If the specified port does not exist or is empty, the first active port on the local system is used. In more complex configurations, you must specify the exact ports to use for all fabrics to be analyzed.</dd></dl>
 <h2>Example</h2>
-<p> opafabricinfo<br />
+<p> opafabricinfo<br/>
  opafabricinfo -p &#8216;1:1 1:2 2:1 2:2&#8217; </p>
 <p> <code>Output example</code> </p>
-<p> # opafabricinfo<br />
- Fabric 0:0 Information:<br />
- SM: hds1fnb6241 hfi1_0 Guid: 0x0011750101575ffe State: Master<br />
- Number of HFIs: 8<br />
- Number of Switches: 1<br />
- Number of Links: 8<br />
- Number of HFI Links: 8 (Internal: 0 External: 8)<br />
- Number of ISLs: 0 (Internal: 0 External: 0)<br />
- Number of Degraded Links: 0 (HFI Links: 0 ISLs: 0)<br />
+<p> # opafabricinfo<br/>
+ Fabric 0:0 Information:<br/>
+ SM: hds1fnb6241 hfi1_0 Guid: 0x0011750101575ffe State: Master<br/>
+ Number of HFIs: 8<br/>
+ Number of Switches: 1<br/>
+ Number of Links: 8<br/>
+ Number of HFI Links: 8 (Internal: 0 External: 8)<br/>
+ Number of ISLs: 0 (Internal: 0 External: 0)<br/>
+ Number of Degraded Links: 0 (HFI Links: 0 ISLs: 0)<br/>
  Number of Omitted Links: 0 (HFI Links: 0 ISLs: 0) </p>

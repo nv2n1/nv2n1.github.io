@@ -9,7 +9,7 @@ description: "PFC – Show / manipulate PFC TLV configuration"
 
 <p>PFC &#8211; Show / manipulate PFC TLV configuration</p>
 <h2>Synopsis</h2>
-<p><code>lldptool -t -i ethx -V PFC [ -c [ enableTx | willing | enabled | delay ] ]</code> <code>lldptool -T -i ethx -V PFC</code> &lt;<i>CONFIG_ARG=value</i> <i>&#8230;</i>&gt;<br />
+<p><code>lldptool -t -i ethx -V PFC [ -c [ enableTx | willing | enabled | delay ] ]</code> <code>lldptool -T -i ethx -V PFC</code> &lt;<i>CONFIG_ARG=value</i> <i>&#8230;</i>&gt;<br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> <i>CONFIG_ARG</i>:= <code>enableTx=</code>&lt;<code>yes</code>|<code>no</code>&gt; <code>willing=</code>&lt;<code>yes</code>|<code>no</code>|<code>0</code>|<code>1</code>&gt; <code>enabled=</code>&lt;<code>none</code>|[<code>0</code>..<code>7</code>]<code>,</code>[<code>0</code>..<code>7</code>]<code>,</code>&#8230;&gt; <code>delay=</code>&lt;integer value&gt; </p>
 <h2>Description</h2>
 <p>The PFC TLV is used to display and set current PFC TLV attributes. </p>

@@ -76,16 +76,16 @@ description: "condor_ssh_to_job create an ssh session to a running job"
 </dt><dd> Enable X11 forwarding. Does not apply to EC2 jobs.</dd>
 </dl>
 <h2>Examples</h2>
-<p> % condor_ssh_to_job 32.0<br />
- Welcome to slot2 [at] tonic.cs.wisc.edu!<br />
- Your condor job is running with pid(s) 65881.<br />
- % gdb -p 65881<br />
+<p> % condor_ssh_to_job 32.0<br/>
+ Welcome to slot2 [at] tonic.cs.wisc.edu!<br/>
+ Your condor job is running with pid(s) 65881.<br/>
+ % gdb -p 65881<br/>
  (gdb) where </p>
-<p> % logout<br />
+<p> % logout<br/>
  Connection to condor-job.tonic.cs.wisc.edu closed. </p>
 <p> To upload or download files interactively with <i>sftp</i> : </p>
-<p> % condor_ssh_to_job -ssh sftp 32.0<br />
- Connecting to condor-job.tonic.cs.wisc.edu&#8230;<br />
+<p> % condor_ssh_to_job -ssh sftp 32.0<br/>
+ Connecting to condor-job.tonic.cs.wisc.edu&#8230;<br/>
  sftp&gt; ls </p>
 <p> sftp&gt; get outputfile.dat </p>
 <p> This example shows downloading a file from the job with <i>scp</i> . The string &quot;remote&quot; is used in place of a host name in this example. It is not necessary to insert the correct remote host name, or even a valid one, because the connection to the job is created automatically. Therefore, the placeholder string &quot;remote&quot; is perfectly fine. </p>

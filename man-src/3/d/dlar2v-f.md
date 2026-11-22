@@ -10,7 +10,7 @@ description: "dlar2v.f –"
 <p>dlar2v.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dlar2v</code> (N, X, Y, Z, INCX, C, S, INCC)<br />
+<p>subroutine <code>dlar2v</code> (N, X, Y, Z, INCX, C, S, INCC)<br/>
  <i></i><code>DLAR2V</code> applies a vector of plane rotations with real cosines and real sines from both sides to a sequence of 2-by-2 symmetric/Hermitian matrices.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlar2v (integerN, double precision, dimension( * )X, double precision, dimension( * )Y, double precision, dimension( * )Z, integerINCX, double precision, dimension( * )C, double precision, dimension( * )S, integerINCC)</h3>

@@ -10,7 +10,7 @@ description: "slaqp2.f –"
 <p>slaqp2.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>slaqp2</code> (M, N, OFFSET, A, LDA, JPVT, TAU, VN1, VN2, WORK)<br />
+<p>subroutine <code>slaqp2</code> (M, N, OFFSET, A, LDA, JPVT, TAU, VN1, VN2, WORK)<br/>
  <i></i><code>SLAQP2</code> computes a QR factorization with column pivoting of the matrix block.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slaqp2 (integerM, integerN, integerOFFSET, real, dimension( lda, * )A, integerLDA, integer, dimension( * )JPVT, real, dimension( * )TAU, real, dimension( * )VN1, real, dimension( * )VN2, real, dimension( * )WORK)</h3>

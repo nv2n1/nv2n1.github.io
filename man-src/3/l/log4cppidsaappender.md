@@ -13,21 +13,21 @@ description: "log4cpp::IdsaAppender –"
 <p>#include &lt;IdsaAppender.hh&gt; </p>
 <p> Inherits <code>log4cpp::AppenderSkeleton</code>.</p>
 <h3>Public Member Functions</h3>
-<p><code>IdsaAppender</code> (const std::string &amp;name, const std::string &amp;idsaName)<br />
- <i>Instantiate an </i><code>IdsaAppender</code> with given name and name.<br />
+<p><code>IdsaAppender</code> (const std::string &amp;name, const std::string &amp;idsaName)<br/>
+ <i>Instantiate an </i><code>IdsaAppender</code> with given name and name.<br/>
  virtual <code>~IdsaAppender</code> () </p>
-<p> virtual bool <code>reopen</code> ()<br />
- <i>Calls idsa_open() and idsa_close() </i><br />
- virtual void <code>close</code> ()<br />
- <i>Calls idsa_close() </i><br />
- virtual bool <code>requiresLayout</code> () const<br />
- <i>The </i><code>IdsaAppender</code> does its own <code>Layout</code>.<br />
- virtual void <code>setLayout</code> (<code>Layout</code> *layout)<br />
+<p> virtual bool <code>reopen</code> ()<br/>
+ <i>Calls idsa_open() and idsa_close() </i><br/>
+ virtual void <code>close</code> ()<br/>
+ <i>Calls idsa_close() </i><br/>
+ virtual bool <code>requiresLayout</code> () const<br/>
+ <i>The </i><code>IdsaAppender</code> does its own <code>Layout</code>.<br/>
+ virtual void <code>setLayout</code> (<code>Layout</code> *layout)<br/>
  <i>Set the </i><code>Layout</code> for this appender.</p>
 <h3>Protected Member Functions</h3>
-<p>virtual void <code>open</code> ()<br />
- <i>Calls idsa_open(). </i><br />
- virtual void <code>_append</code> (const <code>LoggingEvent</code> &amp;event)<br />
+<p>virtual void <code>open</code> ()<br/>
+ <i>Calls idsa_open(). </i><br/>
+ virtual void <code>_append</code> (const <code>LoggingEvent</code> &amp;event)<br/>
  <i>Sends a </i><code>LoggingEvent</code> to idsa.</p>
 <h3>Protected Attributes</h3>
 <p>const std::string <code>_idsaName</code> </p>
@@ -41,7 +41,7 @@ description: "log4cpp::IdsaAppender –"
 <p>Instantiate an <code>IdsaAppender</code> with given name and name. Unlike the syslog API, idsa allows multiple connections. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>name</i> The name of the <code>Appender</code><br />
+<dd><i>name</i> The name of the <code>Appender</code><br/>
  <i>idsaName</i> The service parameter of idsa</dd></dl>
 <h3>virtual log4cpp::IdsaAppender::~IdsaAppender () [virtual]</h3>
 <h2>Member Function Documentation</h2>

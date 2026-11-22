@@ -10,7 +10,7 @@ description: "slaqtr.f –"
 <p>slaqtr.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>slaqtr</code> (LTRAN, LREAL, N, T, LDT, B, W, SCALE, X, WORK, INFO)<br />
+<p>subroutine <code>slaqtr</code> (LTRAN, LREAL, N, T, LDT, B, W, SCALE, X, WORK, INFO)<br/>
  <i></i><code>SLAQTR</code> solves a real quasi-triangular system of equations, or a complex quasi-triangular system of special form, in real arithmetic.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slaqtr (logicalLTRAN, logicalLREAL, integerN, real, dimension( ldt, * )T, integerLDT, real, dimension( * )B, realW, realSCALE, real, dimension( * )X, real, dimension( * )WORK, integerINFO)</h3>

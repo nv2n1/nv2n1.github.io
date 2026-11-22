@@ -76,10 +76,10 @@ description: "ppmtoilbm – convert a portable pixmap into an ILBM file"
 <h2>BUGS</h2>
 <p> HAM pictures will always get a grayscale colormap; a real color selection algorithm might give better results. On the other hand, this allows row-by-row operation on HAM images, and all HAM images of the same depth (no. of planes) share a common colormap, which is useful for building HAM animations.</p>
 <h2>REFERENCES</h2>
-<p> Amiga ROM Kernel Reference Manual &#8211; Devices (3rd Ed.)<br />
+<p> Amiga ROM Kernel Reference Manual &#8211; Devices (3rd Ed.)<br/>
  Addison Wesley, ISBN 0-201-56775-X</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/5-ppm/">ppm</a>(5), <a href="/docs/linux/man/1-ilbmtoppm/">ilbmtoppm</a>(1)</p>
 <h2>AUTHORS</h2>
-<p> Copyright (C) 1989 by Jef Poskanzer.<br />
+<p> Copyright (C) 1989 by Jef Poskanzer.<br/>
  Modified October 1993 by Ingo Wilken (Ingo.Wilken [at] informatik.uni-oldenburg.de) </p>

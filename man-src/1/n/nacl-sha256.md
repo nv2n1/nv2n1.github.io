@@ -20,7 +20,7 @@ description: "nacl-sha256 — program to calculate the sha256 hash"
 <h2>SEE ALSO</h2>
 <p> nacl-sha512 (1).</p>
 <h2>AUTHOR</h2>
-<p> This manual page was written by Sergiusz Pawlowicz debian [at] pawlowicz.name for the <code>Debian</code> system (and may be used by others). Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 any later version published by the Free Software Foundation.<br />
+<p> This manual page was written by Sergiusz Pawlowicz debian [at] pawlowicz.name for the <code>Debian</code> system (and may be used by others). Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 any later version published by the Free Software Foundation.<br/>
 &nbsp;<wbr> </p>
-<p> On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL.<br />
+<p> On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL.<br/>
 &nbsp;<wbr> </p>

@@ -10,7 +10,7 @@ description: "ldns_rdf_address_reverse"
 
 <p> ldns_rdf_address_reverse </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ldns_rdf* ldns_rdf_address_reverse(ldns_rdf *rd); </p>

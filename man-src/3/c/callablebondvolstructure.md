@@ -10,11 +10,11 @@ description: "ql/experimental/callablebonds/callablebondvolstructure.hpp – Cal
 
 <p> ql/experimental/callablebonds/callablebondvolstructure.hpp &#8211; Callable-bond volatility structure. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/termstructure.hpp&gt;<br />
- #include &lt;ql/math/interpolations/linearinterpolation.hpp&gt;<br />
+<p> #include &lt;ql/termstructure.hpp&gt;<br/>
+ #include &lt;ql/math/interpolations/linearinterpolation.hpp&gt;<br/>
  #include &lt;ql/termstructures/volatility/smilesection.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>CallableBondVolatilityStructure</code><br />
+<p> class <code>CallableBondVolatilityStructure</code><br/>
  <i>Callable-bond volatility structure. </i></p>
 <h2>Detailed Description</h2>
 <p> Callable-bond volatility structure. </p>

@@ -10,7 +10,7 @@ description: "XkbFreeKeyboard – Destroys either an entire XkbDescRec or just s
 <p>XkbFreeKeyboard &#8211; Destroys either an entire XkbDescRec or just some of its members </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>void XkbFreeKeyboard</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>unsigned int </code><i>which</i><code>,</code> <code>Bool </code><i>free_all</i><code>);</code><br />
+<dt> <code>void XkbFreeKeyboard</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>unsigned int </code><i>which</i><code>,</code> <code>Bool </code><i>free_all</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

@@ -15,9 +15,9 @@ description: "sc::GRTCints –"
 <p> Inherits <code>sc::Int2eCints</code>.</p>
 <h3>Public Member Functions</h3>
 <p><code>GRTCints</code> (<code>Integral</code> *, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;, size_t storage) </p>
-<p> double * <code>buffer</code> (<code>TwoBodyInt::tbint_type</code> te_type) const<br />
- <i>Returns the location of the buffer with target integrals. </i><br />
- void <code>compute_quartet</code> (int *, int *, int *, int *)<br />
+<p> double * <code>buffer</code> (<code>TwoBodyInt::tbint_type</code> te_type) const<br/>
+ <i>Returns the location of the buffer with target integrals. </i><br/>
+ void <code>compute_quartet</code> (int *, int *, int *, int *)<br/>
  <i>Evaluate the target quartet of integrals. </i></p>
 <h3>Static Public Member Functions</h3>
 <pre><code>static size_t storage_required (const Ref&lt; GaussianBasisSet &gt; &amp;b1, const Ref&lt; GaussianBasisSet &gt; &amp;b2=0, const Ref&lt; GaussianBasisSet &gt; &amp;b3=0, const Ref&lt; GaussianBasisSet &gt; &amp;b4=0)</code></pre>

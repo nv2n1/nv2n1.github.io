@@ -106,8 +106,8 @@ Instead Of : Use : fprintf(stream, fmt, ...) PerlIO_printf(perlio, fmt, ...)
  Poison(dst, n, t)           equal to PoisonFree(dst, n, t)
 </pre>
 <h3>Character Class Tests</h3>
-<p> There are several types of character class tests that Perl implements. The only ones described here are those that directly correspond to C library functions that operate on 8-bit characters, but there are equivalents that operate on wide characters, and <font SIZE="-1">UTF-8</font> encoded strings. All are more fully described in &#8220;Character classification&#8221; in perlapi and &#8220;Character case changing&#8221; in perlapi. </p>
-<p> The C library routines listed in the table below return values based on the current locale. Use the entries in the final column for that functionality. The other two columns always assume a <font SIZE="-1">POSIX</font> (or C) locale. The entries in the <font SIZE="-1">ASCII</font> column are only meaningful for <font SIZE="-1">ASCII</font> inputs, returning <font SIZE="-1">FALSE</font> for anything else. Use these only when you <code>know</code> that is what you want. The entries in the Latin1 column assume that the non-ASCII 8-bit characters are as Unicode defines, them, the same as <font SIZE="-1">ISO-8859-1,</font> often called Latin 1. </p>
+<p> There are several types of character class tests that Perl implements. The only ones described here are those that directly correspond to C library functions that operate on 8-bit characters, but there are equivalents that operate on wide characters, and UTF-8 encoded strings. All are more fully described in &#8220;Character classification&#8221; in perlapi and &#8220;Character case changing&#8221; in perlapi. </p>
+<p> The C library routines listed in the table below return values based on the current locale. Use the entries in the final column for that functionality. The other two columns always assume a POSIX (or C) locale. The entries in the ASCII column are only meaningful for ASCII inputs, returning FALSE for anything else. Use these only when you <code>know</code> that is what you want. The entries in the Latin1 column assume that the non-ASCII 8-bit characters are as Unicode defines, them, the same as ISO-8859-1, often called Latin 1. </p>
 <pre>
  Instead Of:  Use for ASCII:   Use for Latin1:      Use for locale:
  isalnum(c)  isALPHANUMERIC(c) isALPHANUMERIC_L1(c) isALPHANUMERIC_LC(c)
@@ -126,7 +126,7 @@ Instead Of : Use : fprintf(stream, fmt, ...) PerlIO_printf(perlio, fmt, ...)
  tolower(c)  toLOWER(c)        toLOWER_L1(c)        toLOWER_LC(c)
  toupper(c)  toUPPER(c)                             toUPPER_LC(c)
 </pre>
-<p> To emphasize that you are operating only on <font SIZE="-1">ASCII</font> characters, you can append <tt>&quot;_A&quot;</tt> to each of the macros in the <font SIZE="-1">ASCII</font> column: <tt>&quot;isALPHA_A&quot;</tt>, <tt>&quot;isDIGIT_A&quot;</tt>, and so on. </p>
+<p> To emphasize that you are operating only on ASCII characters, you can append <tt>&quot;_A&quot;</tt> to each of the macros in the ASCII column: <tt>&quot;isALPHA_A&quot;</tt>, <tt>&quot;isDIGIT_A&quot;</tt>, and so on. </p>
 <p> (There is no entry in the Latin1 column for <tt>&quot;isascii&quot;</tt> even though there is an <tt>&quot;isASCII_L1&quot;</tt>, which is identical to <tt>&quot;isASCII&quot;</tt>; the latter name is clearer. There is no entry in the Latin1 column for <tt>&quot;toupper&quot;</tt> because the result can be non-Latin1. You have to use <tt>&quot;toUPPER_uni&quot;</tt>, as described in &#8220;Character case changing&#8221; in perlapi.)</p>
 <h3><i>stdlib.h</i> functions</h3>
 <pre>
@@ -139,20 +139,20 @@ Instead Of : Use : fprintf(stream, fmt, ...) PerlIO_printf(perlio, fmt, ...)
  strtoul(s, &amp;p, n)           grok_atoUV(s, &amp;uv, &amp;e)
 </pre>
 <p> Typical use is to do range checks on <tt>&quot;uv&quot;</tt> before casting: </p>
-<p>int i;<br />
-UV uv;<br />
-char *end_ptr = input_end;<br />
-if (grok_atoUV(input, &amp;uv, &amp;end_ptr) &amp;&amp; uv &lt;= INT_MAX)<br />
-    i = (int)uv;<br />
-&#8230; /* continue parsing from end_ptr */<br />
-}<br />
-else<br />
-{<br />
-    &#8230; /* parse error: not a decimal integer in range 0 .. MAX_IV */<br />
+<p>int i;<br/>
+UV uv;<br/>
+char *end_ptr = input_end;<br/>
+if (grok_atoUV(input, &amp;uv, &amp;end_ptr) &amp;&amp; uv &lt;= INT_MAX)<br/>
+    i = (int)uv;<br/>
+&#8230; /* continue parsing from end_ptr */<br/>
+}<br/>
+else<br/>
+{<br/>
+    &#8230; /* parse error: not a decimal integer in range 0 .. MAX_IV */<br/>
 }</p>
 <p> Notice also the <tt>&quot;grok_bin&quot;</tt>, <tt>&quot;grok_hex&quot;</tt>, and <tt>&quot;grok_oct&quot;</tt> functions in <i>numeric.c</i> for converting strings representing numbers in the respective bases into <tt>&quot;NV&quot;</tt>s. Note that <code>grok_atoUV()</code> doesn&#8217;t handle negative inputs, or leading whitespace (being purposefully strict). </p>
 <p> Note that <code>strtol()</code> and <code>strtoul()</code> may be disguised as <code>Strtol()</code>, <code>Strtoul()</code>, <code>Atol()</code>, <code>Atoul()</code>. Avoid those, too. </p>
-<p> In theory <tt>&quot;Strtol&quot;</tt> and <tt>&quot;Strtoul&quot;</tt> may not be defined if the machine perl is built on doesn&#8217;t actually have strtol and strtoul. But as those 2 functions are part of the 1989 <font SIZE="-1">ANSI C</font> spec we suspect you&#8217;ll find them everywhere by now. </p>
+<p> In theory <tt>&quot;Strtol&quot;</tt> and <tt>&quot;Strtoul&quot;</tt> may not be defined if the machine perl is built on doesn&#8217;t actually have strtol and strtoul. But as those 2 functions are part of the 1989 ANSI C spec we suspect you&#8217;ll find them everywhere by now. </p>
 <pre><code>
 int rand() double Drand01()
     srand(n)

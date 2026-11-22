@@ -44,12 +44,12 @@ description: "odfuserfield – List or change the user-field declarations in an 
 <h2>Example</h2>
 <dl>
 <dt>
-</dt><dd> <font SIZE="-1"> </font></dd>
+</dt><dd>  </dd>
 <pre>
 odfuserfield -L odf-file
 </pre>
-<p> <font SIZE="+1"></dl>
-<p> </font></p>
+<p> </dl>
+<p> </p>
 <h2>See Also</h2>
 <p> <code><a href="/docs/linux/man/1-formail/">formail</a></code>(1), <code><a href="/docs/linux/man/1-id3tag/">id3tag</a></code>(1)</p>
 <h2>Todo</h2>
@@ -59,7 +59,7 @@ odfuserfield -L odf-file
 <dl>
 <dt>
 </dt><dd> Original author</dd></dl>
-<p> <code>Michael Howitz</code><br />
+<p> <code>Michael Howitz</code><br/>
  gocept gmbh &amp; co. kg</p>
 <dl>
 <dt>

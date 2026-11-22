@@ -10,7 +10,7 @@ description: "std::student_t_distribution< _RealType >::param_type –"
 <p>std::student_t_distribution&lt; _RealType &gt;::param_type &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Public Types</h3>
-<p>typedef <code>student_t_distribution</code><br />
+<p>typedef <code>student_t_distribution</code><br/>
  &lt; _RealType &gt; <code>distribution_type</code>&quot;</p>
 <h3>Public Attributes</h3>
 <pre><code>__pad0__ : _M_n(__n)

@@ -13,12 +13,12 @@ description: "QwtCompassScaleDraw –"
 <p>#include &lt;qwt_compass.h&gt; </p>
 <p> Inherits <code>QwtRoundScaleDraw</code>.</p>
 <h3>Public Member Functions</h3>
-<p><code>QwtCompassScaleDraw</code> ()<br />
- <i>Constructor. </i><br />
- <code>QwtCompassScaleDraw</code> (const QMap&lt; double, QString &gt; &amp;map)<br />
- <i>Constructor. </i><br />
- void <code>setLabelMap</code> (const QMap&lt; double, QString &gt; &amp;map)<br />
- <i>Set a map, mapping values to labels. </i><br />
+<p><code>QwtCompassScaleDraw</code> ()<br/>
+ <i>Constructor. </i><br/>
+ <code>QwtCompassScaleDraw</code> (const QMap&lt; double, QString &gt; &amp;map)<br/>
+ <i>Constructor. </i><br/>
+ void <code>setLabelMap</code> (const QMap&lt; double, QString &gt; &amp;map)<br/>
+ <i>Set a map, mapping values to labels. </i><br/>
  QMap&lt; double, QString &gt; <code>labelMap</code> () const </p>
 <p> virtual <code>QwtText</code> <code>label</code> (double value) const </p>
 <h3>Additional Inherited Members</h3>

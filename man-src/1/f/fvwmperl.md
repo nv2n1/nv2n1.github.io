@@ -172,7 +172,7 @@ description: "FvwmPerl – the fvwm perl manipulator and preprocessor"
 <h2>Messages</h2>
 <p>FvwmPerl may receive messages using the fvwm command SendToModule. The names, meanings and parameters of the messages are the same as the corresponding actions, described above. </p>
 <p> Additionally, a message <code>stop</code> causes a module to quit. </p>
-<p> A message <code>unexport</code> [<i>func-names</i>] undoes the effect of <code>export</code>, described in the <font SIZE="-1">ACTIONS</font> section. </p>
+<p> A message <code>unexport</code> [<i>func-names</i>] undoes the effect of <code>export</code>, described in the ACTIONS section. </p>
 <p> A message <code>dump</code> dumps the contents of the changed variables (not yet).</p>
 <h2>Examples</h2>
 <p>A simple test: </p>

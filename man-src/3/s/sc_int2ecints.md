@@ -15,24 +15,24 @@ description: "sc::Int2eCints –"
 <p> Inherited by <code>sc::EriCints</code>, and <code>sc::GRTCints</code>.</p>
 <h3>Public Member Functions</h3>
 <p> <code>Int2eCints</code> (<code>Integral</code> *, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;, size_t storage) </p>
-<p> void <code>init_storage</code> (size_t)<br />
- <i>Sets storage limit and starts storage tracking. </i><br />
- void <code>done_storage</code> ()<br />
- <i>Finishes storage tracking. </i><br />
- size_t <code>storage_used</code> () const<br />
- <i>Reports how much storage is actually used at a given time. </i><br />
- int <code>redundant</code> () const<br />
- <i>Whether redundant integrals are returned. </i><br />
- void <code>set_redundant</code> (int flag)<br />
- <i>Set redundant flag. </i><br />
- int <code>permute</code> () const<br />
- <i>Whether shells can be permuted. </i><br />
- void <code>set_permute</code> (int flag)<br />
- <i>Set shell permutation flag. </i><br />
- virtual void <code>compute_quartet</code> (int *, int *, int *, int *)=0<br />
- <i>Evaluate the target quartet of integrals. </i><br />
- virtual double * <code>buffer</code> (<code>TwoBodyInt::tbint_type</code>=TwoBodyInt::eri) const =0<br />
- <i>Returns the location of the buffer with target integrals. </i><br />
+<p> void <code>init_storage</code> (size_t)<br/>
+ <i>Sets storage limit and starts storage tracking. </i><br/>
+ void <code>done_storage</code> ()<br/>
+ <i>Finishes storage tracking. </i><br/>
+ size_t <code>storage_used</code> () const<br/>
+ <i>Reports how much storage is actually used at a given time. </i><br/>
+ int <code>redundant</code> () const<br/>
+ <i>Whether redundant integrals are returned. </i><br/>
+ void <code>set_redundant</code> (int flag)<br/>
+ <i>Set redundant flag. </i><br/>
+ int <code>permute</code> () const<br/>
+ <i>Whether shells can be permuted. </i><br/>
+ void <code>set_permute</code> (int flag)<br/>
+ <i>Set shell permutation flag. </i><br/>
+ virtual void <code>compute_quartet</code> (int *, int *, int *, int *)=0<br/>
+ <i>Evaluate the target quartet of integrals. </i><br/>
+ virtual double * <code>buffer</code> (<code>TwoBodyInt::tbint_type</code>=TwoBodyInt::eri) const =0<br/>
+ <i>Returns the location of the buffer with target integrals. </i><br/>
  <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; <code>basis</code> () </p>
 <p> <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; <code>basis1</code> () </p>
 <p> <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; <code>basis2</code> () </p>

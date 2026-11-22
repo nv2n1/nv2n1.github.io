@@ -10,7 +10,7 @@ description: "pkcs11.txt – NSS PKCS #11 module configuration file"
 <p>pkcs11.txt &#8211; NSS PKCS #11 module configuration file</p>
 <h2>Description</h2>
 <p>The pkcs11.txt file is used to configure initialization parameters for the nss security module and optionally other pkcs #11 modules. </p>
-<p> For full documentation visit m[blue]<code>PKCS #11 Module Specs</code>m[]<font SIZE="-2">[1]</font>.</p>
+<p> For full documentation visit m[blue]<code>PKCS #11 Module Specs</code>m[][1].</p>
 <h2>Files</h2>
 <p>/etc/pki/nssdb/pkcs11.txt</p>
 <h2>Authors</h2>

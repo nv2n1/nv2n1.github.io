@@ -12,9 +12,9 @@ description: "QuantLib::ContinuousAveragingAsianOption – Continuous-averaging 
 <p>#include &lt;ql/instruments/asianoption.hpp&gt; </p>
 <p> Inherits <code>QuantLib::OneAssetOption</code>. </p>
 <h3>Classes</h3>
-<p>class <code>arguments</code><br />
- <i>Extra arguments for single-asset continuous-average Asian option. </i><br />
- class <code>engine</code><br />
+<p>class <code>arguments</code><br/>
+ <i>Extra arguments for single-asset continuous-average Asian option. </i><br/>
+ class <code>engine</code><br/>
  <i>Continuous-averaging Asian engine base class. </i></p>
 <h3>Public Member Functions</h3>
 <p><code>ContinuousAveragingAsianOption</code> (Average::Type averageType, const boost::shared_ptr&lt; <code>StrikedTypePayoff</code> &gt; &amp;payoff, const boost::shared_ptr&lt; <code>Exercise</code> &gt; &amp;exercise) </p>

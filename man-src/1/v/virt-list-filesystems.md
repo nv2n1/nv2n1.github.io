@@ -22,8 +22,8 @@ virt - list - filesystems[--options] domname virt - list - filesystems[--options
 <dd> Display brief help.</dd>
 <dt><code>&#8211;version</code></dt>
 <dd> Display version number and exit.</dd>
-<dt><code>&#8211;connect </code><font SIZE="-1"><code>URI</code></font> | <code>-c </code><font SIZE="-1"><code>URI</code></font></dt>
-<dd> If using libvirt, connect to the given <i></i><font SIZE="-1"><i>URI</i></font><i></i>. If omitted, then we connect to the default libvirt hypervisor. </dd>
+<dt><code>&#8211;connect </code><code>URI</code> | <code>-c </code><code>URI</code></dt>
+<dd> If using libvirt, connect to the given <i></i><i>URI</i><i></i>. If omitted, then we connect to the default libvirt hypervisor. </dd>
 <p> If you specify guest block devices directly, then libvirt is not used at all.</p>
 <dt><code>-l</code> | <code>&#8211;long</code></dt>
 <dd> With this option, <tt>&quot;virt-list-filesystems&quot;</tt> displays the type of each filesystem too (where &#8220;type&#8221; means <tt>&quot;ext3&quot;</tt>, <tt>&quot;xfs&quot;</tt> etc.)</dd>
@@ -35,6 +35,6 @@ virt - list - filesystems[--options] domname virt - list - filesystems[--options
 <p> Richard W.M. Jones &lt;<a rel="nofollow" href="http://people.redhat.com/~rjones/">http://people.redhat.com/~rjones/</a>&gt;</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2009 Red Hat Inc. </p>
-<p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
-<p> This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT</font> <font SIZE="-1">ANY</font> <font SIZE="-1">WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS</font> <font SIZE="-1">FOR</font> A <font SIZE="-1">PARTICULAR</font> <font SIZE="-1">PURPOSE</font>. See the <font SIZE="-1">GNU</font> General Public License for more details. </p>
-<p> You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, <font SIZE="-1">MA</font> 02139, <font SIZE="-1">USA</font>. </p>
+<p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
+<p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. </p>
+<p> You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA. </p>

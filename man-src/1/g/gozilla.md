@@ -10,14 +10,14 @@ description: "gozilla – force mozilla to display specified source file."
 
 <p> gozilla &#8211; force mozilla to display specified source file.</p>
 <h2>SYNOPSIS</h2>
-<p> <code>gozilla</code> [-b browser][-p][+no] file<br />
+<p> <code>gozilla</code> [-b browser][-p][+no] file<br/>
  <code>gozilla</code> [-b browser][-p] -d name </p>
 <h2>DESCRIPTION</h2>
 <p> <code>Gozilla</code> force mozilla to display specified source file as a hypertext. <code>Gozilla</code> can be used with other browsers like firefox and epiphany. </p>
 <p> In advance of using this command, you must execute <code><a href="/docs/linux/man/1-gtags/">gtags</a></code>(1) and <code><a href="/docs/linux/man/1-htags/">htags</a></code>(1) at the root directory of the source tree to make tag files. Then you can execute gozilla at anywhere in the source tree. </p>
-<p> First form:<br />
+<p> First form:<br/>
  You can specify source file and the line number optionally. </p>
-<p> Second form:<br />
+<p> Second form:<br/>
  You can specify definition name directly. Definition name must exist in &#8216;GTAGS&#8217; tag file. </p>
 <p> Some browsers require you to load it before executing <code>gozilla</code>. Whether or not <code>gozilla</code> waits for exiting of browser depends on browser.</p>
 <h2>OPTIONS</h2>
@@ -75,7 +75,7 @@ description: "gozilla – force mozilla to display specified source file."
 <p> <code>Gozilla</code> exits with a non 0 value if an error occurred, 0 otherwise.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-global/">global</a></code>(1), <code><a href="/docs/linux/man/1-gtags/">gtags</a></code>(1), <code><a href="/docs/linux/man/1-htags/">htags</a></code>(1), <code><a href="/docs/linux/man/1-firefox/">firefox</a></code>(1), <code><a href="/docs/linux/man/1-epiphany/">epiphany</a></code>(1), <code>mozilla</code>(1). </p>
-<p> GNU GLOBAL source code tag system<br />
+<p> GNU GLOBAL source code tag system<br/>
  (<a rel="nofollow" href="http://www.gnu.org/software/global/">http://www.gnu.org/software/global/</a>).</p>
 <h2>NOTES</h2>
 <p> <code>Gozilla</code> means &#8216;Global for mozilla&#8217;.</p>

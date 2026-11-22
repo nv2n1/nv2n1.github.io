@@ -791,15 +791,15 @@ print $(( rand48(seed) ))</code>
 </dd><dl>
 <dt>
 </dt><dd>
-string=&#8221;The following zip codes: 78884 90210 99513&#8243;<br />
-pcre_compile -m &#8220;\d{5}&#8221;<br />
-accum=()<br />
-pcre_match -b &#8212; $string<br />
-while [[ $? -eq 0 ]] do<br />
-    b=($=ZPCRE_OP)<br />
-    accum+=$MATCH<br />
-    pcre_match -b -n $b[2] &#8212; $string<br />
-done<br />
+string=&#8221;The following zip codes: 78884 90210 99513&#8243;<br/>
+pcre_compile -m &#8220;\d{5}&#8221;<br/>
+accum=()<br/>
+pcre_match -b &#8212; $string<br/>
+while [[ $? -eq 0 ]] do<br/>
+    b=($=ZPCRE_OP)<br/>
+    accum+=$MATCH<br/>
+    pcre_match -b -n $b[2] &#8212; $string<br/>
+done<br/>
 print -l $accum
 </dd></dl>
 </dl>
@@ -815,7 +815,7 @@ print -l $accum
 </dd><dl>
 <dt>
 </dt><dd>
-[[&#8220;$text&#8221; &#8211; pcre &#8211; match ^ d + $]] &amp;&amp;<br />
+[[&#8220;$text&#8221; &#8211; pcre &#8211; match ^ d + $]] &amp;&amp;<br/>
     print text variable contains only &#8220;d&#8217;s&#8221;.
 </dd></dl>
 <p> If the <code>REMATCH_PCRE</code> option is set, the <code>=~</code> operator is equivalent to <code>-pcre-match</code>, and the <code>NO_CASE_MATCH</code> option may be used. Note that <code>NO_CASE_MATCH</code> never applies to the <code>pcre_match</code> builtin, instead use the <code>-i</code> switch of <code>pcre_compile</code>.</dl>
@@ -890,7 +890,7 @@ iffy_declaration() {
 </dd><dl>
 <dt>
 </dt><dd>
-[[alphabetical &#8211; regex &#8211; match ^ a([^a] +) a([^a] +) a]] &amp;&amp;<br />
+[[alphabetical &#8211; regex &#8211; match ^ a([^a] +) a([^a] +) a]] &amp;&amp;<br/>
     print &#8211; l $MATCH X $match
 </dd></dl>
 <p> If the option <code>REMATCH_PCRE</code> is not set, then the <code>=~</code> operator will automatically load this module as needed and will invoke the <code>-regex-match</code> operator. </p>
@@ -1528,12 +1528,12 @@ ztcp -c $fd</code>
 <dt>
 </dt><dd> <code>keymaps</code> This array contains the names of the keymaps currently defined.</dd>
 <dt><code>widgets</code></dt>
-<dd> This associative array contains one entry per widget. The name of the widget is the key and the value gives information about the widget. It is either<br />
-&nbsp;<wbr>&nbsp;the string&nbsp;`<code>builtin</code>&#8216;&nbsp;for builtin widgets,<br />
-&nbsp;<wbr>&nbsp;a string of the form&nbsp;`<code>user:</code><i>name</i>&#8216;&nbsp;for user-defined widgets,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;where&nbsp;<i>name</i>&nbsp;is the name of the shell function implementing the widget,<br />
-&nbsp;<wbr>&nbsp;a string of the form&nbsp;`<code>completion:</code><i>type</i><code>:</code><i>name</i>&#8216;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;for completion widgets,<br />
+<dd> This associative array contains one entry per widget. The name of the widget is the key and the value gives information about the widget. It is either<br/>
+&nbsp;<wbr>&nbsp;the string&nbsp;`<code>builtin</code>&#8216;&nbsp;for builtin widgets,<br/>
+&nbsp;<wbr>&nbsp;a string of the form&nbsp;`<code>user:</code><i>name</i>&#8216;&nbsp;for user-defined widgets,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;where&nbsp;<i>name</i>&nbsp;is the name of the shell function implementing the widget,<br/>
+&nbsp;<wbr>&nbsp;a string of the form&nbsp;`<code>completion:</code><i>type</i><code>:</code><i>name</i>&#8216;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;for completion widgets,<br/>
 &nbsp;<wbr>&nbsp;or a null value if the widget is not yet fully defined. In the penultimate case, <i>type</i> is the name of the builtin widget the completion widget imitates in its behavior and <i>name</i> is the name of the shell function implementing the completion widget.</dd></dl>
 <h2>THE ZSH/ZPROF MODULE</h2>
 <p> When loaded, the <code>zsh/zprof</code> causes shell functions to be profiled. The profiling results can be obtained with the <code>zprof</code> builtin command made available by this module. There is no way to turn profiling off other than unloading the module. </p>

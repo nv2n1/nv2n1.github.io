@@ -10,7 +10,7 @@ description: "ztpttr.f –"
 <p>ztpttr.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>ztpttr</code> (UPLO, N, AP, A, LDA, INFO)<br />
+<p>subroutine <code>ztpttr</code> (UPLO, N, AP, A, LDA, INFO)<br/>
  <i></i><code>ZTPTTR</code> copies a triangular matrix from the standard packed format (TP) to the standard full format (TR).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ztpttr (characterUPLO, integerN, complex*16, dimension( * )AP, complex*16, dimension( lda, * )A, integerLDA, integerINFO)</h3>

@@ -11,7 +11,7 @@ description: "dlasdt.f –"
 <p> dlasdt.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dlasdt</code> (N, LVL, ND, INODE, NDIML, NDIMR, MSUB)<br />
+<p> subroutine <code>dlasdt</code> (N, LVL, ND, INODE, NDIML, NDIMR, MSUB)<br/>
  <i></i><code>DLASDT</code> creates a tree of subproblems for bidiagonal divide and conquer. Used by sbdsdc.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlasdt (integerN, integerLVL, integerND, integer, dimension( * )INODE, integer, dimension( * )NDIML, integer, dimension( * )NDIMR, integerMSUB)</h3>

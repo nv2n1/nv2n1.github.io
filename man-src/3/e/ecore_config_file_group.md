@@ -9,13 +9,13 @@ description: "Ecore Config File Functions – Functions that are used to load an
 
 <p>Ecore Config File Functions &#8211; Functions that are used to load and save properties from and to files. </p>
 <h3>Functions</h3>
-<p>EAPI int <code>ecore_config_load</code> (void)<br />
- <i>Loads the default configuration. </i><br />
- EAPI int <code>ecore_config_save</code> (void)<br />
- <i>Saves the current configuration to the default file. </i><br />
- EAPI int <code>ecore_config_file_load</code> (const char *file)<br />
- <i>Load the given configuration file to the local configuration. </i><br />
- EAPI int <code>ecore_config_file_save</code> (const char *file)<br />
+<p>EAPI int <code>ecore_config_load</code> (void)<br/>
+ <i>Loads the default configuration. </i><br/>
+ EAPI int <code>ecore_config_save</code> (void)<br/>
+ <i>Saves the current configuration to the default file. </i><br/>
+ EAPI int <code>ecore_config_file_load</code> (const char *file)<br/>
+ <i>Load the given configuration file to the local configuration. </i><br/>
+ EAPI int <code>ecore_config_file_save</code> (const char *file)<br/>
  <i>Saves the local configuration to the given file. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that are used to load and save properties from and to files.</p>

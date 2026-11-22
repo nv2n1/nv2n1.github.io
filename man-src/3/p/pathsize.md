@@ -15,10 +15,10 @@ Path &amp; operator[] (Size j)
 Path &amp; at (Size j)</code></pre>
 <h3>Public Member Functions</h3>
 <p><code>MultiPath</code> (Size nAsset, const <code>TimeGrid</code> &amp;timeGrid) </p>
-<p> <code>MultiPath</code> (const std::vector&lt; <code>Path</code> &gt; &amp;multiPath)<br />
+<p> <code>MultiPath</code> (const std::vector&lt; <code>Path</code> &gt; &amp;multiPath)<br/>
  <code>inspectors</code> </p>
 <p> Size <code>assetNumber</code> () const </p>
-<p> Size <code>pathSize</code> () const<br />
+<p> Size <code>pathSize</code> () const<br/>
  <code>read/write access to components</code> </p>
 <pre><code>const Path &amp; operator[] (Size j) const
 const Path &amp; at (Size j) const

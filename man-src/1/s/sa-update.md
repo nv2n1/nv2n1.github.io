@@ -39,7 +39,7 @@ description: "sa-update – automate SpamAssassin rule updates"
 </code></pre>
 <h2>DESCRIPTION</h2>
 <p> sa-update automates the process of downloading and installing new rules and configuration, based on channels. The default channel is <i>updates.spamassassin.org</i>, which has updated rules since the previous release. </p>
-<p> Update archives are verified using <font SIZE="-1">SHA1</font> hashes and <font SIZE="-1">GPG</font> signatures, by default. </p>
+<p> Update archives are verified using SHA1 hashes and GPG signatures, by default. </p>
 <p> Note that <tt>&quot;sa-update&quot;</tt> will not restart <tt>&quot;spamd&quot;</tt> or otherwise cause a scanner to reload the now-updated ruleset automatically. Instead, <tt>&quot;sa-update&quot;</tt> is typically used in something like the following manner: </p>
 <pre>
         sa-update &amp;&amp; /etc/init.d/spamassassin reload
@@ -63,8 +63,8 @@ description: "sa-update – automate SpamAssassin rule updates"
 <dt><code>&#8211;checkonly</code></dt>
 <dd> Only check if an update is available, don&#8217;t actually download and install it. The exit code will be <tt>0</tt> or <tt>1</tt> as described below.</dd>
 <dt><code>&#8211;install</code></dt>
-<dd> Install updates &#8220;offline&#8221;, from the named tar.gz file, instead of performing <font SIZE="-1">DNS</font> lookups and <font SIZE="-1">HTTP</font> invocations. </dd>
-<p> Files named <code>file</code>.sha1 and <code>file</code>.asc will be used for the <font SIZE="-1">SHA-1</font> and <font SIZE="-1">GPG</font> signature, respectively. The filename provided must contain a version number of at least 3 digits, which will be used as the channel&#8217;s update version number. </p>
+<dd> Install updates &#8220;offline&#8221;, from the named tar.gz file, instead of performing DNS lookups and HTTP invocations. </dd>
+<p> Files named <code>file</code>.sha1 and <code>file</code>.asc will be used for the SHA-1 and GPG signature, respectively. The filename provided must contain a version number of at least 3 digits, which will be used as the channel&#8217;s update version number. </p>
 <p> Multiple <code>&#8211;channel</code> switches cannot be used with <code>&#8211;install</code>. To install multiple channels from tarballs, run <tt>&quot;sa-update&quot;</tt> multiple times with different <code>&#8211;channel</code> and <code>&#8211;install</code> switches, e.g.: </p>
 <pre><code>
 sa - update-- channel foo.example.com-- install foo - 34958.tgz sa - update-- channel bar.example.com-- install bar - 938455.tgz
@@ -72,33 +72,33 @@ sa - update-- channel foo.example.com-- install foo - 34958.tgz sa - update-- ch
 <dt><code>&#8211;allowplugins</code></dt>
 <dd> Allow downloaded updates to activate plugins. The default is not to activate plugins; any <tt>&quot;loadplugin&quot;</tt> or <tt>&quot;tryplugin&quot;</tt> lines will be commented in the downloaded update rules files.</dd>
 <dt><code>&#8211;gpg</code>, <code>&#8211;nogpg</code></dt>
-<dd> sa-update by default will verify update archives by use of a <font SIZE="-1">SHA1</font> checksum and <font SIZE="-1">GPG</font> signature. <font SIZE="-1">SHA1</font> hashes can verify whether or not the downloaded archive has been corrupted, but it does not offer any form of security regarding whether or not the downloaded archive is legitimate (aka: non-modifed by evildoers). <font SIZE="-1">GPG</font> verification of the archive is used to solve that problem. </dd>
-<p> If you wish to skip <font SIZE="-1">GPG</font> verification, you can use the <code>&#8211;nogpg</code> option to disable its use. Use of the following gpgkey-related options will override <code>&#8211;nogpg</code> and keep <font SIZE="-1">GPG</font> verification enabled. </p>
-<p> Note: Currently, only <font SIZE="-1">GPG</font> itself is supported (ie: not <font SIZE="-1">PGP</font>). v1.2 has been tested, although later versions ought to work as well.</p>
+<dd> sa-update by default will verify update archives by use of a SHA1 checksum and GPG signature. SHA1 hashes can verify whether or not the downloaded archive has been corrupted, but it does not offer any form of security regarding whether or not the downloaded archive is legitimate (aka: non-modifed by evildoers). GPG verification of the archive is used to solve that problem. </dd>
+<p> If you wish to skip GPG verification, you can use the <code>&#8211;nogpg</code> option to disable its use. Use of the following gpgkey-related options will override <code>&#8211;nogpg</code> and keep GPG verification enabled. </p>
+<p> Note: Currently, only GPG itself is supported (ie: not PGP). v1.2 has been tested, although later versions ought to work as well.</p>
 <dt><code>&#8211;gpgkey</code></dt>
-<dd> sa-update has the concept of &#8220;release trusted&#8221; <font SIZE="-1">GPG</font> keys. When an archive is downloaded and the signature verified, sa-update requires that the signature be from one of these &#8220;release trusted&#8221; keys or else verification fails. This prevents third parties from manipulating the files on a mirror, for instance, and signing with their own key. </dd>
+<dd> sa-update has the concept of &#8220;release trusted&#8221; GPG keys. When an archive is downloaded and the signature verified, sa-update requires that the signature be from one of these &#8220;release trusted&#8221; keys or else verification fails. This prevents third parties from manipulating the files on a mirror, for instance, and signing with their own key. </dd>
 <p> By default, sa-update trusts key ids <tt>&quot;24F434CE&quot;</tt> and <tt>&quot;5244EC45&quot;</tt>, which are the standard SpamAssassin release key and its sub-key. Use this option to trust additional keys. See the <code>&#8211;import</code> option for how to add keys to sa-update&#8217;s keyring. For sa-update to use a key it must be in sa-update&#8217;s keyring and trusted. </p>
 <p> For multiple keys, use the option multiple times. i.e.: </p>
 <pre>
         sa-update --gpgkey E580B363 --gpgkey 298BC7D0
 </pre>
-<p> Note: use of this option automatically enables <font SIZE="-1">GPG</font> verification.</p>
+<p> Note: use of this option automatically enables GPG verification.</p>
 <dt><code>&#8211;gpgkeyfile</code></dt>
 <dd> Similar to the <code>&#8211;gpgkey</code> option, except specify the additional keys in a file instead of on the commandline. This is extremely useful when there are a lot of additional keys that you wish to trust.</dd>
 <dt><code>&#8211;gpghomedir</code></dt>
-<dd> Specify a directory path to use as a storage area for the <tt>&quot;sa-update&quot;</tt> <font SIZE="-1">GPG</font> keyring. By default, this is </dd>
+<dd> Specify a directory path to use as a storage area for the <tt>&quot;sa-update&quot;</tt> GPG keyring. By default, this is </dd>
 <pre>
         /etc/mail/spamassassin/sa-update-keys
 </pre>
 <dt><code>&#8211;import</code></dt>
-<dd> Use to import <font SIZE="-1">GPG</font> key(s) from a file into the sa-update keyring which is located in the directory specified by <code>&#8211;gpghomedir</code>. Before using channels from third party sources, you should use this option to import the <font SIZE="-1">GPG</font> key(s) used by those channels. You must still use the <code>&#8211;gpgkey</code> or <code>&#8211;gpgkeyfile</code> options above to get sa-update to trust imported keys. </dd>
+<dd> Use to import GPG key(s) from a file into the sa-update keyring which is located in the directory specified by <code>&#8211;gpghomedir</code>. Before using channels from third party sources, you should use this option to import the GPG key(s) used by those channels. You must still use the <code>&#8211;gpgkey</code> or <code>&#8211;gpgkeyfile</code> options above to get sa-update to trust imported keys. </dd>
 <p> To import multiple keys, use the option multiple times. i.e.: </p>
 <pre>
         sa-update --import channel1-GPG.KEY --import channel2-GPG.KEY
 </pre>
-<p> Note: use of this option automatically enables <font SIZE="-1">GPG</font> verification.</p>
+<p> Note: use of this option automatically enables GPG verification.</p>
 <dt><code>&#8211;refreshmirrors</code></dt>
-<dd> Force the list of sa-update mirrors for each channel, stored in the <font SIZE="-1">MIRRORED.BY</font> file, to be updated. By default, the <font SIZE="-1">MIRRORED.BY</font> file will be cached for up to 7 days after each time it is downloaded.</dd>
+<dd> Force the list of sa-update mirrors for each channel, stored in the MIRRORED.BY file, to be updated. By default, the MIRRORED.BY file will be cached for up to 7 days after each time it is downloaded.</dd>
 <dt><code>&#8211;updatedir</code></dt>
 <dd> By default, <tt>&quot;sa-update&quot;</tt> will use the system-wide rules update directory: </dd>
 <pre>

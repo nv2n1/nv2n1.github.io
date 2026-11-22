@@ -10,17 +10,17 @@ description: "ip – Linux IPv4 protocol implementation"
 
 <p>ip &#8211; Linux IPv4 protocol implementation </p>
 
-<p> <code>#include &lt;sys/socket.h&gt;</code> <br />
- <code>#include &lt;netinet/in.h&gt;</code> <br />
+<p> <code>#include &lt;sys/socket.h&gt;</code> <br/>
+ <code>#include &lt;netinet/in.h&gt;</code> <br/>
  <code>#include &lt;netinet/ip.h&gt; </code>/* superset of previous */ </p>
-<p> <i>tcp_socket</i><code> = socket(AF_INET, SOCK_STREAM, 0);</code> <br />
- <i>udp_socket</i><code> = socket(AF_INET, SOCK_DGRAM, 0);</code> <br />
+<p> <i>tcp_socket</i><code> = socket(AF_INET, SOCK_STREAM, 0);</code> <br/>
+ <i>udp_socket</i><code> = socket(AF_INET, SOCK_DGRAM, 0);</code> <br/>
  <i>raw_socket</i><code> = socket(AF_INET, SOCK_RAW, </code><i>protocol</i><code>);</code>  </p>
 <h2>DESCRIPTION</h2>
 <p> Linux implements the Internet Protocol, version 4, described in RFC 791 and RFC 1122. <code>ip</code> contains a level 2 multicasting implementation conforming to RFC 1112. It also contains an IP router including a packet filter. </p>
 <p>The programming interface is BSD-sockets compatible. For more information on sockets, see <code><a href="/docs/linux/man/7-socket/">socket</a></code>(7). </p>
 <p>An IP socket is created using <code><a href="/docs/linux/man/2-socket/">socket</a></code>(2): </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;socket(AF_INET, socket_type, protocol); </p>
 <p>Valid socket types include <code>SOCK_STREAM</code> to open a stream socket, <code>SOCK_DGRAM</code> to open a datagram socket, and <code>SOCK_RAW</code> to open a <code><a href="/docs/linux/man/7-raw/">raw</a></code>(7) socket to access the IP protocol directly. </p>
 <p> <i>protocol</i> is the IP protocol in the IP header to be received or sent. Valid values for <i>protocol</i> include: </p>
@@ -42,11 +42,11 @@ description: "ip – Linux IPv4 protocol implementation"
 <p>A TCP local socket address that has been bound is unavailable for some time after closing, unless the <code>SO_REUSEADDR</code> flag has been set. Care should be taken when using this flag as it makes TCP less reliable.  </p>
 <h3>Address format</h3>
 <p> An IP socket address is defined as a combination of an IP interface address and a 16-bit port number. The basic IP protocol does not supply port numbers, they are implemented by higher level protocols like <code><a href="/docs/linux/man/7-udp/">udp</a></code>(7) and <code><a href="/docs/linux/man/7-tcp/">tcp</a></code>(7). On raw sockets <i>sin_port</i> is set to the IP protocol. </p>
-<p>struct sockaddr_in { <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sa_family_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sin_family;&nbsp;/*&nbsp;address family: AF_INET&nbsp;*/ <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;in_port_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sin_port;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;port in network byte order&nbsp;*/ <br />
+<p>struct sockaddr_in { <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sa_family_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sin_family;&nbsp;/*&nbsp;address family: AF_INET&nbsp;*/ <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;in_port_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sin_port;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;port in network byte order&nbsp;*/ <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct in_addr sin_addr;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;internet address&nbsp;*/ }; </p>
-<p>/* Internet address. */ struct in_addr { <br />
+<p>/* Internet address. */ struct in_addr { <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint32_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;s_addr;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;address in network byte order&nbsp;*/ }; </p>
 <p> <i>sin_family</i> is always set to <code>AF_INET</code>. This is required; in Linux 2.2 most networking functions return <code>EINVAL</code> when this setting is missing. <i>sin_port</i> contains the port in network byte order. The port numbers below 1024 are called <i>privileged ports</i> (or sometimes: <i>reserved ports</i>). Only a privileged process (on Linux: a process that has the <code>CAP_NET_BIND_SERVICE</code> capability in the user namespace governing its network namespace) may <code><a href="/docs/linux/man/2-bind/">bind</a></code>(2) to these sockets. Note that the raw IPv4 protocol as such has no concept of a port, they are implemented only by higher protocols like <code><a href="/docs/linux/man/7-tcp/">tcp</a></code>(7) and <code><a href="/docs/linux/man/7-udp/">udp</a></code>(7). </p>
 <p> <i>sin_addr</i> is the IP host address. The <i>s_addr</i> member of <i>struct in_addr</i> contains the host interface address in network byte order. <i>in_addr</i> should be assigned one of the <code>INADDR_*</code> values (e.g., <code>INADDR_LOOPBACK</code>) using <code><a href="/docs/linux/man/3-htonl/">htonl</a></code>(3) or set using the <code><a href="/docs/linux/man/3-inet_aton/">inet_aton</a></code>(3), <code><a href="/docs/linux/man/3-inet_addr/">inet_addr</a></code>(3), <code><a href="/docs/linux/man/3-inet_makeaddr/">inet_makeaddr</a></code>(3) library functions or directly with the name resolver (see <code><a href="/docs/linux/man/3-gethostbyname/">gethostbyname</a></code>(3)). </p>
@@ -60,11 +60,11 @@ description: "ip – Linux IPv4 protocol implementation"
 <dt><code>IP_ADD_MEMBERSHIP</code> (since Linux 1.2) </dt>
 <dd> <p> Join a multicast group. Argument is an <i>ip_mreqn</i> structure. </p>
  </dd></dl>
-<p>struct ip_mreqn { <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct in_addr imr_multiaddr;&nbsp;/*&nbsp;IP multicast group <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;address&nbsp;*/ <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct in_addr imr_address;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;IP address of local <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;interface&nbsp;*/ <br />
+<p>struct ip_mreqn { <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct in_addr imr_multiaddr;&nbsp;/*&nbsp;IP multicast group <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;address&nbsp;*/ <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct in_addr imr_address;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;IP address of local <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;interface&nbsp;*/ <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;imr_ifindex;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;interface index&nbsp;*/ }; </p>
 <p> <i>imr_multiaddr</i> contains the address of the multicast group the application wants to join or leave. It must be a valid multicast address (or <code><a href="/docs/linux/man/2-setsockopt/">setsockopt</a></code>(2) fails with the error <code>EINVAL</code>). <i>imr_address</i> is the address of the local interface with which the system should join the multicast group; if it is equal to <code>INADDR_ANY</code>, an appropriate interface is chosen by the system. <i>imr_ifindex</i> is the interface index of the interface that should join/leave the <i>imr_multiaddr</i> group, or 0 to indicate any interface. </p>
 <dl>
@@ -75,12 +75,12 @@ description: "ip – Linux IPv4 protocol implementation"
 <dt><code>IP_ADD_SOURCE_MEMBERSHIP</code> (since Linux 2.4.22 / 2.5.68) </dt>
 <dd> <p> Join a multicast group and allow receiving data only from a specified source. Argument is an <i>ip_mreq_source</i> structure. </p>
  </dd></dl>
-<p>struct ip_mreq_source { <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct in_addr imr_multiaddr;&nbsp;<wbr>&nbsp;/*&nbsp;IP multicast group <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;address&nbsp;*/ <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct in_addr imr_interface;&nbsp;<wbr>&nbsp;/*&nbsp;IP address of local <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;interface&nbsp;*/ <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct in_addr imr_sourceaddr;&nbsp;/*&nbsp;IP address of <br />
+<p>struct ip_mreq_source { <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct in_addr imr_multiaddr;&nbsp;<wbr>&nbsp;/*&nbsp;IP multicast group <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;address&nbsp;*/ <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct in_addr imr_interface;&nbsp;<wbr>&nbsp;/*&nbsp;IP address of local <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;interface&nbsp;*/ <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct in_addr imr_sourceaddr;&nbsp;/*&nbsp;IP address of <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;multicast source&nbsp;*/ }; </p>
 <p>The <i>ip_mreq_source</i> structure is similar to <i>ip_mreqn</i> described under <code>IP_ADD_MEMBERSHIP</code>. The <i>imr_multiaddr</i> field contains the address of the multicast group the application wants to join or leave. The <i>imr_interface</i> field is the address of the local interface with which the system should join the multicast group. Finally, the <i>imr_sourceaddr</i> field contains the address of the source the application wants to receive data from. </p>
 <dl>
@@ -111,16 +111,16 @@ description: "ip – Linux IPv4 protocol implementation"
 <dt><code>IP_MSFILTER</code> (since Linux 2.4.22 / 2.5.68) </dt>
 <dd> <p> This option provides access to the advanced full-state filtering API. Argument is an <i>ip_msfilter</i> structure. </p>
  </dd></dl>
-<p>struct ip_msfilter { <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct in_addr imsf_multiaddr;&nbsp;/*&nbsp;IP multicast group <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;address&nbsp;*/ <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct in_addr imsf_interface;&nbsp;/*&nbsp;IP address of local <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;interface&nbsp;*/ <br />
+<p>struct ip_msfilter { <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct in_addr imsf_multiaddr;&nbsp;/*&nbsp;IP multicast group <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;address&nbsp;*/ <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct in_addr imsf_interface;&nbsp;/*&nbsp;IP address of local <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;interface&nbsp;*/ <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint32_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;imsf_fmode;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Filter-mode&nbsp;*/ </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint32_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;imsf_numsrc;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Number of sources in <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;the following array&nbsp;*/ <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct in_addr imsf_slist[1];&nbsp;<wbr>&nbsp;/*&nbsp;Array of source <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint32_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;imsf_numsrc;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Number of sources in <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;the following array&nbsp;*/ <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct in_addr imsf_slist[1];&nbsp;<wbr>&nbsp;/*&nbsp;Array of source <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;addresses&nbsp;*/ }; </p>
 <p>There are two macros, <code>MCAST_INCLUDE</code> and <code>MCAST_EXCLUDE</code>, which can be used to specify the filtering mode. Additionally, the <code>IP_MSFILTER_SIZE</code>(n) macro exists to determine how much memory is needed to store <i>ip_msfilter</i> structure with <i>n</i> sources in the source list. </p>
 <dl>
@@ -204,10 +204,10 @@ description: "ip – Linux IPv4 protocol implementation"
 <dt><code>IP_PKTINFO</code> (since Linux 2.2) </dt>
 <dd> <p> Pass an <code>IP_PKTINFO</code> ancillary message that contains a <i>pktinfo</i> structure that supplies some information about the incoming packet. This works only for datagram oriented sockets. The argument is a flag that tells the socket whether the <code>IP_PKTINFO</code> message should be passed or not. The message itself can be sent/retrieved only as a control message with a packet using <code><a href="/docs/linux/man/2-recvmsg/">recvmsg</a></code>(2) or <code><a href="/docs/linux/man/2-sendmsg/">sendmsg</a></code>(2). </p>
  </dd>
-<dd> <p> struct in_pktinfo { <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned int&nbsp;<wbr>&nbsp;<wbr>&nbsp;ipi_ifindex;&nbsp;<wbr>&nbsp;/*&nbsp;Interface index&nbsp;*/ <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct in_addr ipi_spec_dst;&nbsp;/*&nbsp;Local address&nbsp;*/ <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct in_addr ipi_addr;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Header Destination <br />
+<dd> <p> struct in_pktinfo { <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned int&nbsp;<wbr>&nbsp;<wbr>&nbsp;ipi_ifindex;&nbsp;<wbr>&nbsp;/*&nbsp;Interface index&nbsp;*/ <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct in_addr ipi_spec_dst;&nbsp;/*&nbsp;Local address&nbsp;*/ <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct in_addr ipi_addr;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Header Destination <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;address&nbsp;*/ }; </p>
  </dd>
 <dd> <p> <i>ipi_ifindex</i> is the unique index of the interface the packet was received on. <i>ipi_spec_dst</i> is the local address of the packet and <i>ipi_addr</i> is the destination address in the packet header. If <code>IP_PKTINFO</code> is passed to <code><a href="/docs/linux/man/2-sendmsg/">sendmsg</a></code>(2) and <i>ipi_spec_dst</i> is not zero, then it is used as the local source address for the routing table lookup and for setting up IP source route options. When <i>ipi_ifindex</i> is not zero, the primary local address of the interface specified by the index overwrites <i>ipi_spec_dst</i> for the routing table lookup. </p>
@@ -218,14 +218,14 @@ description: "ip – Linux IPv4 protocol implementation"
 <dd> <p> The <code>IP_RECVERR</code> control message contains a <i>sock_extended_err</i> structure: </p>
  </dd>
 <dd> <p> #define SO_EE_ORIGIN_NONE 0 #define SO_EE_ORIGIN_LOCAL 1 #define SO_EE_ORIGIN_ICMP 2 #define SO_EE_ORIGIN_ICMP6 3 </p>
-<p>struct sock_extended_err { <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint32_t ee_errno;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;error number&nbsp;*/ <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint8_t&nbsp;<wbr>&nbsp;ee_origin;&nbsp;<wbr>&nbsp;/*&nbsp;where the error originated&nbsp;*/ <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint8_t&nbsp;<wbr>&nbsp;ee_type;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;type&nbsp;*/ <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint8_t&nbsp;<wbr>&nbsp;ee_code;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;code&nbsp;*/ <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint8_t&nbsp;<wbr>&nbsp;ee_pad; <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint32_t ee_info;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;additional information&nbsp;*/ <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint32_t ee_data;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;other data&nbsp;*/ <br />
+<p>struct sock_extended_err { <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint32_t ee_errno;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;error number&nbsp;*/ <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint8_t&nbsp;<wbr>&nbsp;ee_origin;&nbsp;<wbr>&nbsp;/*&nbsp;where the error originated&nbsp;*/ <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint8_t&nbsp;<wbr>&nbsp;ee_type;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;type&nbsp;*/ <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint8_t&nbsp;<wbr>&nbsp;ee_code;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;code&nbsp;*/ <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint8_t&nbsp;<wbr>&nbsp;ee_pad; <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint32_t ee_info;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;additional information&nbsp;*/ <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint32_t ee_data;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;other data&nbsp;*/ <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;More data may follow&nbsp;*/ }; </p>
 <p>struct sockaddr *SO_EE_OFFENDER(struct sock_extended_err *); </p>
  </dd>
@@ -413,7 +413,7 @@ description: "ip – Linux IPv4 protocol implementation"
 <p>Some other BSD sockets implementations provide <code>IP_RCVDSTADDR</code> and <code>IP_RECVIF</code> socket options to get the destination address and the interface of received datagrams. Linux has the more general <code>IP_PKTINFO</code> for the same task. </p>
 <p>Some BSD sockets implementations also provide an <code>IP_RECVTTL</code> option, but an ancillary message with type <code>IP_RECVTTL</code> is passed with the incoming packet. This is different from the <code>IP_TTL</code> option used in Linux. </p>
 <p>Using the <code>SOL_IP</code> socket options level isn&#8217;t portable; BSD-based stacks use the <code>IPPROTO_IP</code> level. </p>
-<p> <code>INADDR_ANY</code> (0.0.0.0) and <code>INADDR_BROADCAST</code> (255.255.255.255) are byte-order-neutral. <br />
+<p> <code>INADDR_ANY</code> (0.0.0.0) and <code>INADDR_BROADCAST</code> (255.255.255.255) are byte-order-neutral. <br/>
 &nbsp;This means <code><a href="/docs/linux/man/3-htonl/">htonl</a></code>(3) has no effect on them.  </p>
 <h3>Compatibility</h3>
 <p> For compatibility with Linux 2.0, the obsolete <code>socket(AF_INET, SOCK_PACKET, </code><i>protocol</i><code>)</code> syntax is still supported to open a <code><a href="/docs/linux/man/7-packet/">packet</a></code>(7) socket. This is deprecated and should be replaced by <code>socket(AF_PACKET, SOCK_RAW, </code><i>protocol</i><code>)</code> instead. The main difference is the new <i>sockaddr_ll</i> address structure for generic link layer information instead of the old <code>sockaddr_pkt</code>.  </p>

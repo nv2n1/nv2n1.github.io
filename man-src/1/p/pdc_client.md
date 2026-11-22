@@ -39,5 +39,5 @@ description: "pdc_client – work with a PDC instance"
 <dt>
 </dt><dd> Personal host configuration file which overrides identical keys from site-wide configuration file.</dd></dl>
 <h2>BUGS</h2>
-<p> If you find a bug in the client, report at<br />
+<p> If you find a bug in the client, report at<br/>
  <a rel="nofollow" href="https://github.com/product-definition-center/pdc-client/issues/.">https://github.com/product-definition-center/pdc-client/issues/.</a> </p>

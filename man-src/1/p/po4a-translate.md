@@ -11,9 +11,9 @@ po4a-translate - convert a po file back to documentation format
 
 <h2>SYNOPSIS</h2>
 
- po4a-translate -f &lt;fmt&gt; -m &lt;master.doc&gt; -p &lt;<font SIZE="-1">XX</font>.po&gt; -l &lt;<font SIZE="-1">XX</font>.doc&gt; 
+ po4a-translate -f &lt;fmt&gt; -m &lt;master.doc&gt; -p &lt;XX.po&gt; -l &lt;XX.doc&gt; 
 
- (<font SIZE="-1">XX</font>.doc is the output, all others are inputs)
+ (XX.doc is the output, all others are inputs)
 
 <h2>DESCRIPTION</h2>
 
@@ -27,7 +27,7 @@ po4a-translate - convert a po file back to documentation format
 <dt>-f, --format
 </dt><dd> Format of the documentation you want to handle. Use the --help-format option to see the list of available formats.
 </dd><dt>-a, --addendum
-</dt><dd> Add a file to the resulting file (to put translator's name or a section ``About this translation'', for example). The first line of the file to insert should be a <font SIZE="-1">PO4A</font> header indicating where it should be added (see section <i></i><font SIZE="-1"><i>HOWTO</i></font><i> add extra text to translations</i> in <i><a HREF="/docs/linux/man/7-po4a/">po4a</a></i>(7)).
+</dt><dd> Add a file to the resulting file (to put translator's name or a section ``About this translation'', for example). The first line of the file to insert should be a PO4A header indicating where it should be added (see section <i></i><i>HOWTO</i><i> add extra text to translations</i> in <i><a HREF="/docs/linux/man/7-po4a/">po4a</a></i>(7)).
 </dd><dt>-A, --addendum-charset
 </dt><dd> Charset of the addenda. Note that all the addenda should be in the same charset.
 </dd><dt>-m, --master
@@ -80,6 +80,6 @@ po4a-translate - convert a po file back to documentation format
 
 <h2>COPYRIGHT AND LICENSE</h2>
 
- Copyright 2002, 2003, 2004 by <font SIZE="-1">SPI</font>, inc. 
+ Copyright 2002, 2003, 2004 by SPI, inc. 
 
- This program is free software; you may redistribute it and/or modify it under the terms of <font SIZE="-1">GPL</font> (see the <font SIZE="-1">COPYING</font> file).
+ This program is free software; you may redistribute it and/or modify it under the terms of GPL (see the COPYING file).

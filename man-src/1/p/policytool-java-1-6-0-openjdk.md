@@ -43,8 +43,8 @@ description: "policytool – PolicyTool Administration GUI Utility"
 <dd>Loads <i>filename</i>.</dd></dl>
 </dl>
 <h2>See Also</h2>
-<p><i>Default Policy Implementation and Syntax</i> @ <a rel="nofollow" href="http://java.sun.com/javase/6/docs/technotes/guides/security/PolicyFiles.html">http://java.sun.com/javase/6/docs/technotes/guides/security/PolicyFiles.html</a><br />
- <i>Policy Tool Users&#8217; Guide</i> @ <a rel="nofollow" href="http://java.sun.com/javase/6/docs/technotes/guides/security/PolicyGuide.html">http://java.sun.com/javase/6/docs/technotes/guides/security/PolicyGuide.html</a><br />
- <i>Security Permissions</i> @ <a rel="nofollow" href="http://java.sun.com/javase/6/docs/technotes/guides/security/permissions.html">http://java.sun.com/javase/6/docs/technotes/guides/security/permissions.html</a><br />
+<p><i>Default Policy Implementation and Syntax</i> @ <a rel="nofollow" href="http://java.sun.com/javase/6/docs/technotes/guides/security/PolicyFiles.html">http://java.sun.com/javase/6/docs/technotes/guides/security/PolicyFiles.html</a><br/>
+ <i>Policy Tool Users&#8217; Guide</i> @ <a rel="nofollow" href="http://java.sun.com/javase/6/docs/technotes/guides/security/PolicyGuide.html">http://java.sun.com/javase/6/docs/technotes/guides/security/PolicyGuide.html</a><br/>
+ <i>Security Permissions</i> @ <a rel="nofollow" href="http://java.sun.com/javase/6/docs/technotes/guides/security/permissions.html">http://java.sun.com/javase/6/docs/technotes/guides/security/permissions.html</a><br/>
  <i>Security Overview</i> @ <a rel="nofollow" href="http://java.sun.com/javase/6/docs/technotes/guides/security/overview/jsoverview.html">http://java.sun.com/javase/6/docs/technotes/guides/security/overview/jsoverview.html</a> </p>
 <p>&nbsp;<wbr></p>

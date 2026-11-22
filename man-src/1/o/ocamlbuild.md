@@ -129,5 +129,5 @@ description: "ocamlbuild – The OCaml project compilation tool"
 <dt><code>&#8211;help</code></dt>
 <dd> Display the list of options</dd></dl>
 <h2>SEE ALSO</h2>
-<p> The <code>ocamlbuild</code> manual, <code><a href="/docs/linux/man/1-ocaml/">ocaml</a></code>(1), <code><a href="/docs/linux/man/1-make/">make</a></code>(1).<br />
+<p> The <code>ocamlbuild</code> manual, <code><a href="/docs/linux/man/1-ocaml/">ocaml</a></code>(1), <code><a href="/docs/linux/man/1-make/">make</a></code>(1).<br/>
  <i>The OCaml user&#8217;s manual, chapter Batch compilation.</i> </p>

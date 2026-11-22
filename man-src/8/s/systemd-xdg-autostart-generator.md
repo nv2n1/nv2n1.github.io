@@ -11,7 +11,7 @@ description: "systemd-xdg-autostart-generator – User unit generator for XDG au
 <h2>Synopsis</h2>
 <p>/usr/lib/systemd/user-generators/systemd-xdg-autostart-generator</p>
 <h2>Description</h2>
-<p>systemd-xdg-autostart-generator is a generator that creates .service units for m[blue]<code>XDG autostart</code>m[]<font SIZE="-2">[1]</font> files. This permits desktop environments to delegate startup of these applications to <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1) . </p>
+<p>systemd-xdg-autostart-generator is a generator that creates .service units for m[blue]<code>XDG autostart</code>m[][1] files. This permits desktop environments to delegate startup of these applications to <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1) . </p>
 <p> Units created by systemd-xdg-autostart-generator can be started by the desktop environment using &quot;xdg-desktop-autostart.target&quot;. See <code><a href="/docs/linux/man/7-systemd-special/">systemd.special</a></code>(7) for more details. </p>
 <p> systemd-xdg-autostart-generator implements <code><a href="/docs/linux/man/7-systemd-generator/">systemd.generator</a></code>(7).</p>
 <h2>See Also</h2>

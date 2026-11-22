@@ -70,26 +70,26 @@ description: "std::__detail –"
 <p> struct <code>_State</code> </p>
 <p> class <code>_StateSeq</code></p>
 <h3>Typedefs</h3>
-<p>typedef <code>std::shared_ptr</code><br />
+<p>typedef <code>std::shared_ptr</code><br/>
  &lt; <code>_Automaton</code> &gt; <code>_AutomatonPtr</code>&quot; </p>
-<p> typedef std::function&lt; bool(const<br />
+<p> typedef std::function&lt; bool(const<br/>
  <code>_PatternCursor</code> &amp;)&gt; <code>_Matcher</code>&quot; </p>
 <p> typedef int <code>_StateIdT</code> </p>
 <p> typedef <code>std::set</code>&lt; <code>_StateIdT</code> &gt; <code>_StateSet</code> </p>
-<p> typedef <code>std::stack</code>&lt; <code>_StateIdT</code>,<br />
+<p> typedef <code>std::stack</code>&lt; <code>_StateIdT</code>,<br/>
  <code>std::vector</code>&lt; <code>_StateIdT</code> &gt; &gt; <code>_StateStack</code>&quot; </p>
-<p> typedef std::function&lt; void(const<br />
+<p> typedef std::function&lt; void(const<br/>
  <code>_PatternCursor</code> &amp;, <code>_Results</code> &amp;)&gt; <code>_Tagger</code>&quot;</p>
 <h3>Enumerations</h3>
 <p>enum <code>_Opcode</code> { <code>_S_opcode_unknown</code>, <code>_S_opcode_alternative</code>, <code>_S_opcode_subexpr_begin</code>, <code>_S_opcode_subexpr_end</code>, <code>_S_opcode_match</code>, <code>_S_opcode_accept</code> }</p>
 <h3>Functions</h3>
 <p>template&lt;typename _InIter , typename _TraitsT &gt; <code>_AutomatonPtr</code> <code>__compile</code> (const _InIter &amp;__b, const _InIter &amp;__e, _TraitsT &amp;__t, <code>regex_constants::syntax_option_type</code> __f) </p>
 <p> template&lt;typename _FwdIterT &gt; <code>_SpecializedCursor</code>&lt; _FwdIterT &gt; <code>__cursor</code> (const _FwdIterT &amp;__b, const _FwdIterT __e) </p>
-<p> template&lt;class _Iterator &gt; std::iterator_traits<br />
+<p> template&lt;class _Iterator &gt; std::iterator_traits<br/>
  &lt; _Iterator &gt;::difference_type <code>__distance_fw</code> (_Iterator __first, _Iterator __last, <code>std::input_iterator_tag</code>)&quot; </p>
-<p> template&lt;class _Iterator &gt; std::iterator_traits<br />
+<p> template&lt;class _Iterator &gt; std::iterator_traits<br/>
  &lt; _Iterator &gt;::difference_type <code>__distance_fw</code> (_Iterator __first, _Iterator __last, <code>std::forward_iterator_tag</code>)&quot; </p>
-<p> template&lt;class _Iterator &gt; std::iterator_traits<br />
+<p> template&lt;class _Iterator &gt; std::iterator_traits<br/>
  &lt; _Iterator &gt;::difference_type <code>__distance_fw</code> (_Iterator __first, _Iterator __last)&quot; </p>
 <p> template&lt;typename _InputIterator , typename _OutputIterator , typename _Tp &gt; _OutputIterator <code>__normalize</code> (_InputIterator __first, _InputIterator __last, _OutputIterator __result, const _Tp &amp;__factor) </p>
 <p> bool <code>_AnyMatcher</code> (const <code>_PatternCursor</code> &amp;) </p>

@@ -67,7 +67,7 @@ description: "kid3, kid3-qt, kid3-cli – Kid3 ID3 Tagger"
 <p> Kid3 is an application to edit the ID3v1 and ID3v2 tags in MP3 files in an efficient way. These tags can be edited by most MP3 players, but not in a very comfortable and efficient way. Moreover the tags in Ogg/Vorbis, FLAC, MPC, APE, MP4/AAC, MP2, Speex, TrueAudio, WavPack, WMA, WAV, AIFF files and tracker modules (MOD, S3M, IT, XM) are supported too. </p>
 <p> Kid3 does not grab nor encode MP3 files, but it is targeted to edit the ID3 tags of all files of an album in an efficient way, i.e. with as few mouse clicks and key strokes as possible. Where most other programs can edit either ID3v1 or ID3v2 tags, Kid3 has full control over both versions, can convert tags between the two formats and has access to all ID3v2 tags. Tags of multiple files can be set to the same value, e.g. the artist, album, year and genre of all files of an album typically have the same values and can be set together. If the information for the tags is contained in the file name, the tags can be automatically set from the file name. It is also possible to set the file name according to the tags found in the file in arbitrary formats. </p>
 <p> The editing task is further supported by automatic replacement of characters or substrings, for instance to remove illegal characters from filenames. Automatic control of upper and lower case characters makes it easy to use a consistent naming scheme in all tags. </p>
-<p> The tag information for full albums can be taken from m[blue]<code>gnudb.org</code>m[]<font SIZE="-2">[1]</font>, m[blue]<code>TrackType.org</code>m[]<font SIZE="-2">[2]</font>, m[blue]<code>MusicBrainz</code>m[]<font SIZE="-2">[3]</font>, m[blue]<code>Discogs</code>m[]<font SIZE="-2">[4]</font>, m[blue]<code>Amazon</code>m[]<font SIZE="-2">[5]</font> or other sources of track lists. The import format is freely configurable by regular expressions. </p>
+<p> The tag information for full albums can be taken from m[blue]<code>gnudb.org</code>m[][1], m[blue]<code>TrackType.org</code>m[][2], m[blue]<code>MusicBrainz</code>m[][3], m[blue]<code>Discogs</code>m[][4], m[blue]<code>Amazon</code>m[][5] or other sources of track lists. The import format is freely configurable by regular expressions. </p>
 <p> Please report any problems or feature requests to the author.</p>
 <h2>USING KID3</h2>
 <h3>Kid3 features</h3>
@@ -106,7 +106,7 @@ description: "kid3, kid3-qt, kid3-cli – Kid3 ID3 Tagger"
 </dt><dd> &bull; Automatic case conversion and string translation</dd></dl>
 <dl>
 <dt>
-</dt><dd> &bull; Import from m[blue]<code>gnudb.org</code>m[]<font SIZE="-2">[1]</font>, m[blue]<code>TrackType.org</code>m[]<font SIZE="-2">[2]</font>, m[blue]<code>MusicBrainz</code>m[]<font SIZE="-2">[3]</font>, m[blue]<code>Discogs</code>m[]<font SIZE="-2">[4]</font>, m[blue]<code>Amazon</code>m[]<font SIZE="-2">[5]</font> and other data sources</dd></dl>
+</dt><dd> &bull; Import from m[blue]<code>gnudb.org</code>m[][1], m[blue]<code>TrackType.org</code>m[][2], m[blue]<code>MusicBrainz</code>m[][3], m[blue]<code>Discogs</code>m[][4], m[blue]<code>Amazon</code>m[][5] and other data sources</dd></dl>
 <dl>
 <dt>
 </dt><dd> &bull; Export as CSV, HTML, playlist, Kover XML and other formats. Exported CSV files can be imported again.</dd></dl>
@@ -119,7 +119,7 @@ description: "kid3, kid3-qt, kid3-cli – Kid3 ID3 Tagger"
 <h2>COMMAND REFERENCE</h2>
 <h3>The GUI Elements</h3>
 <p> The Kid3 GUI is separated in five sections: At the left are the file and directory listboxes, the right side contains the File, Tag 1 and Tag 2 sections. </p>
-<p> <font SIZE="+1"> <code>File List</code></p>
+<p>  <code>File List</code></p>
 <dl>
 <dt>
 </dt><dd>
@@ -146,12 +146,12 @@ description: "kid3, kid3-qt, kid3-cli – Kid3 ID3 Tagger"
 <dt>
 </dt><dd> &bull; The subsequent entries are user commands, which can be defined in the User Actions tab of Configure Kid3. The playback on double click can also be activated there.</dd></dl>
 </dl>
-<p> </font><font SIZE="+2"> <code>Directory List</code></p>
+<p>  <code>Directory List</code></p>
 <dl>
 <dt>
 </dt><dd>
 <p> The directory list contains the names of the directories in the opened directory, as well as the current (.) and the parent (..) directory. It allows to quickly change the directory without using the Open&#8230; command or drag and drop.</dd></dl>
-<p> </font><font SIZE="+3"> <code>File</code></p>
+<p>  <code>File</code></p>
 <dl>
 <dt>
 </dt><dd>
@@ -212,7 +212,7 @@ description: "kid3, kid3-qt, kid3-cli – Kid3 ID3 Tagger"
 <dt>
 </dt><dd> &bull; Artist/Album/Track Song</dd></dl>
 <p> If a single file is selected, the GUI controls are filled with the values extracted from the filename. If multiple files are selected, the tags of the files are directly set according to the filenames.</dl>
-<p> </font><font SIZE="+4"> <code>Tag 1</code></p>
+<p>  <code>Tag 1</code></p>
 <dl>
 <dt>
 </dt><dd>
@@ -224,7 +224,7 @@ description: "kid3, kid3-qt, kid3-cli – Kid3 ID3 Tagger"
 <p> Copy: The copy buffer is filled with the Tag 1 values. Only values with checked checkbox will be used in subsequent Paste commands. </p>
 <p> Paste: Pastes the values from the copy buffer into the GUI controls. </p>
 <p> Remove: This will set all GUI controls to their empty values which results in removing all values. The saved file will then contain no tag 1.</dd></dl>
-<p> </font><font SIZE="+5"> <code>Tag 2</code></p>
+<p>  <code>Tag 2</code></p>
 <dl>
 <dt>
 </dt><dd>
@@ -235,7 +235,7 @@ description: "kid3, kid3-qt, kid3-cli – Kid3 ID3 Tagger"
 <p> Add: A requester to select the frame type will appear and a frame of the selected type can be edited and added to the file. This works also to add a frame to multiple selected files. </p>
 <p> Delete: Deletes the selected frame in the selected files. </p>
 <p> Drag album artwork here is shown if the file does not contain embedded cover art. A picture can be added using drag and drop from a browser or file manager and will be displayed here. Picture frames can be edited or added by double clicking on this control.</dd></dl>
-<p> </font></p>
+<p> </p>
 <h3>The File Menu</h3>
 <p> File → Open&#8230; (Ctrl+O)</p>
 <dl>
@@ -261,13 +261,13 @@ description: "kid3, kid3-qt, kid3-cli – Kid3 ID3 Tagger"
 <dl>
 <dt>
 </dt><dd> The Import dialog can be used to import data directly from a freedb.org server, from a MusicBrainz server, from Discogs, Amazon or other sources of album track lists in textual format. </dd>
-<p> Import from a freedb.org server is possible using a dialog which appears when From Server:gnudb.org or TrackType.org is selected. The artist and album name to search for can be entered in the two topmost fields, the albums which match the query will be displayed when Find is clicked and the results from m[blue]<code><a rel="nofollow" href="http://www.gnudb.org">www.gnudb.org</a></code>m[]<font SIZE="-2">[6]</font> are received. Importing the track data for an album is done by double-clicking the album in the list. The freedb.org server to import from can be selected as well as the CGI path. The imported data is displayed in the preview table of the import dialog. When satisfied with the displayed tracks, they can be imported by terminating the import dialog with OK. </p>
+<p> Import from a freedb.org server is possible using a dialog which appears when From Server:gnudb.org or TrackType.org is selected. The artist and album name to search for can be entered in the two topmost fields, the albums which match the query will be displayed when Find is clicked and the results from m[blue]<code><a rel="nofollow" href="http://www.gnudb.org">www.gnudb.org</a></code>m[][6] are received. Importing the track data for an album is done by double-clicking the album in the list. The freedb.org server to import from can be selected as well as the CGI path. The imported data is displayed in the preview table of the import dialog. When satisfied with the displayed tracks, they can be imported by terminating the import dialog with OK. </p>
 <p> A search on the Discogs server can be performed using Discogs. As in the gnudb.org dialog, you can enter artist and album and then choose from a list of releases. If Standard Tags is marked, the standard information is imported, e.g. artist, album, and title. If Additional Tags is marked, more information is imported if available, e.g. performers, arrangers, or the publisher. If Cover Art is marked, cover art will be downloaded if available. </p>
 <p> A search on Amazon can be performed using Amazon. As in the gnudb.org dialog, you can enter artist and album and then choose from a list of releases. If Additional Tags is marked, more information is imported if available, e.g. performers, arrangers, or the publisher. If Cover Art is marked, cover art will be downloaded if available. </p>
 <p> You can search in the same way in the release database of MusicBrainz using From MusicBrainz Release. The workflow is the same as described for From gnudb.org. </p>
 <p> Import from a MusicBrainz server is possible using the dialog which appears when From MusicBrainz Fingerprint is selected. The Server can be selected as in the freedb import dialog. Below is a table displaying the imported track data. The right column shows the state of the MusicBrainz query, which starts with &quot;Pending&quot; when the dialog is opened. Then the fingerprint is looked up and if it does not yield a result, another lookup using the tags in the file is tried. Thus it can be helpful for a successful MusicBrainz query to store known information (e.g. artist and album) in the tags before the import. If a result was found, the search ends in the state &quot;Recognized&quot;, otherwise nothing was found or multiple ambiguous results and one of them has to be selected by the user. OK and Apply use the imported data, Cancel closes the dialog. The closing can take a while since the whole MusicBrainz machinery has to be shut down. </p>
 <p> For the import of textual data, From File/Clipboard opens a subdialog, where several preconfigured import formats are available. The first two, &quot;CSV unquoted&quot; and &quot;CSV quoted&quot; can be used to import data which was exported by the Export dialog. The CSV data can be edited with a spreadsheet, and shall be written using tabs as delimiters. Import should then be possible using &quot;CSV quoted&quot;, which is more flexible than &quot;CSV unquoted&quot;. However, its fields cannot contain any double quotes. If you only export from Kid3 and import later, &quot;CSV unquoted&quot; can be used as a simple format for this purpose. </p>
-<p> The next format, &quot;freedb HTML text&quot;, can be used to copy information from an HTML page of m[blue]<code>freedb.org</code>m[]<font SIZE="-2">[7]</font>. Search an album in freedb and if the desired information is displayed in the web browser, copy the contents to the clipboard. Then click the From Clipboard button and the imported tracks will be displayed in the preview table at the top of the dialog. If you are satisfied with the imported data, terminate the dialog with OK, which will insert the data into the tags of the current directory. The destination (Tag 1, Tag 2 or Tag 1 and Tag 2) can be selected with a combo box. The files in the current directory should be in the correct track order to get their tags assigned. This is the case if they are numbered. </p>
+<p> The next format, &quot;freedb HTML text&quot;, can be used to copy information from an HTML page of m[blue]<code>freedb.org</code>m[][7]. Search an album in freedb and if the desired information is displayed in the web browser, copy the contents to the clipboard. Then click the From Clipboard button and the imported tracks will be displayed in the preview table at the top of the dialog. If you are satisfied with the imported data, terminate the dialog with OK, which will insert the data into the tags of the current directory. The destination (Tag 1, Tag 2 or Tag 1 and Tag 2) can be selected with a combo box. The files in the current directory should be in the correct track order to get their tags assigned. This is the case if they are numbered. </p>
 <p> The next preconfigured import format, &quot;freedb HTML source&quot;, can be used, if the data is available as an HTML document. Import is possible using the From File button, which opens a file selector, or copying its contents from an editor and then importing from clipboard. This format can be useful for offline import, although the HTML document could also be opened in a browser and then be imported in the first format via the clipboard. </p>
 <p> More preconfigured formats, e.g. &quot;Track Title Time&quot;, are available. An empty custom format can be created with Add to be set by the user. Two lines below the format name can be set with a regular expression to capture the fields from the import text. The first regular expression will be parsed once per document to gather per-album data such as artist, album, year and genre. The second line is tried to match from the start of the document to the end to get track data, usually number and title. The regular expressions include all the features offered by Qt, which is most of the what Perl offers. Bracketing constructs &quot;(..)&quot; create capture buffers for the fields to import and are preceded by Kid3 specific codes to specify which field to capture. The codes are the same as used for the filename format, besides the codes listed below, any frame name is possible: </p>
 <dl>
@@ -767,7 +767,7 @@ description: "kid3, kid3-qt, kid3-cli – Kid3 ID3 Tagger"
 % {browser} http: // lyricwiki.org/%u{artist}:%u{title}
 </code></pre>
 </dd></dl>
-<p> will query the lyrics for the current song in m[blue]<code>LyricWiki</code>m[]<font SIZE="-2">[8]</font>. The &quot;u&quot; in %u{artist} and %u{title} is used to URL-encode the artist %{artist} and song %{title} information. It is easy to define your own queries in the same way, e.g. an image search with m[blue]<code>Google</code>m[]<font SIZE="-2">[9]</font>: </p>
+<p> will query the lyrics for the current song in m[blue]<code>LyricWiki</code>m[][8]. The &quot;u&quot; in %u{artist} and %u{title} is used to URL-encode the artist %{artist} and song %{title} information. It is easy to define your own queries in the same way, e.g. an image search with m[blue]<code>Google</code>m[][9]: </p>
 <dl>
 <dt>
 </dt><dd>
@@ -779,16 +779,16 @@ description: "kid3, kid3-qt, kid3-cli – Kid3 ID3 Tagger"
 <p> In the Plugins page, available plugins can be enabled or disabled. The plugins are separated into two sections. The Metadata Plugins &amp; Priority list contains plugins which support audio file formats. The order of the plugins is important because they are tried from top to bottom. Some formats are supported by multiple plugins, so files will be opened with the first plugin supporting them. The TaglibMetadata supports most formats, if it is at the top of the list, it will open most of the files. If you want to use a different plugin for a file format, make sure that it is listed before the TaglibMetadata plugin. Details about the metadata plugin and why you may want to use them instead of TagLib are listed below. </p>
 <dl>
 <dt>
-</dt><dd> &bull; Id3libMetadata: Uses m[blue]<code>id3lib</code>m[]<font SIZE="-2">[10]</font> for ID3v1.1 and ID3v2.3 tags in MP3, MP2, AAC files. Supports a few more frame types than TagLib. Another reason to use it is that TagLib only supports ID3v2.3 since version 1.8.</dd></dl>
+</dt><dd> &bull; Id3libMetadata: Uses m[blue]<code>id3lib</code>m[][10] for ID3v1.1 and ID3v2.3 tags in MP3, MP2, AAC files. Supports a few more frame types than TagLib. Another reason to use it is that TagLib only supports ID3v2.3 since version 1.8.</dd></dl>
 <dl>
 <dt>
-</dt><dd> &bull; OggFlacMetadata: Uses m[blue]<code>libogg</code>m[]<font SIZE="-2">[11]</font>, m[blue]<code>libvorbis, libvorbisfile</code>m[]<font SIZE="-2">[12]</font> for Ogg files, and additionally m[blue]<code>libFLAC++ and libFLAC</code>m[]<font SIZE="-2">[13]</font> for FLAC files. Reasons to use them are pictures in Ogg files, which are not supported by TagLib and that these are the official libraries for these formats.</dd></dl>
+</dt><dd> &bull; OggFlacMetadata: Uses m[blue]<code>libogg</code>m[][11], m[blue]<code>libvorbis, libvorbisfile</code>m[][12] for Ogg files, and additionally m[blue]<code>libFLAC++ and libFLAC</code>m[][13] for FLAC files. Reasons to use them are pictures in Ogg files, which are not supported by TagLib and that these are the official libraries for these formats.</dd></dl>
 <dl>
 <dt>
-</dt><dd> &bull; TaglibMetadata: Uses m[blue]<code>TagLib</code>m[]<font SIZE="-2">[14]</font> which supports a lot of audio file formats. Since version 1.8, it also supports ID3v2.3, so it can be used for all audio files supported by Kid3.</dd></dl>
+</dt><dd> &bull; TaglibMetadata: Uses m[blue]<code>TagLib</code>m[][14] which supports a lot of audio file formats. Since version 1.8, it also supports ID3v2.3, so it can be used for all audio files supported by Kid3.</dd></dl>
 <dl>
 <dt>
-</dt><dd> &bull; Mp4v2Metadata: m[blue]<code>mp4v2</code>m[]<font SIZE="-2">[15]</font> was originally used by Kid3 to support M4A files. However, newer versions of TagLib provide good M4A support, so this plugin is not built by default.</dd></dl>
+</dt><dd> &bull; Mp4v2Metadata: m[blue]<code>mp4v2</code>m[][15] was originally used by Kid3 to support M4A files. However, newer versions of TagLib provide good M4A support, so this plugin is not built by default.</dd></dl>
 <p> The Available Plugins section lists the remaining plugins. Their order is not important, but they can be enabled or disabled using the check boxes. </p>
 <dl>
 <dt>
@@ -804,7 +804,7 @@ description: "kid3, kid3-qt, kid3-cli – Kid3 ID3 Tagger"
 </dt><dd> &bull; MusicBrainzImport: Used for the Import from MusicBrainz Release&#8230; function.</dd></dl>
 <dl>
 <dt>
-</dt><dd> &bull; AcoustidImport: Used for the Import from MusicBrainz Fingerprint&#8230; function, which depends on the m[blue]<code>Chromaprint</code>m[]<font SIZE="-2">[16]</font> and m[blue]<code>libav</code>m[]<font SIZE="-2">[17]</font> libraries.</dd></dl>
+</dt><dd> &bull; AcoustidImport: Used for the Import from MusicBrainz Fingerprint&#8230; function, which depends on the m[blue]<code>Chromaprint</code>m[][16] and m[blue]<code>libav</code>m[][17] libraries.</dd></dl>
 <p> Plugins which are disabled will not be loaded. This can be used to optimize resource usage and startup time. The settings on this page take only effect after a restart of Kid3.</dl>
 <p> Settings → Configure Shortcuts&#8230;</p>
 <dl>
@@ -823,27 +823,27 @@ description: "kid3, kid3-qt, kid3-cli – Kid3 ID3 Tagger"
 <h2>KID3-CLI</h2>
 <h3>Commands</h3>
 <p> <code>kid3-cli</code> offers a command-line-interface for Kid3. If a directory path is used, the directory is opened. If one or more file paths are given, the common directory is opened and the files are selected. Subsequent commands will then work on these files. Commands are specified using <code>-c</code> options. If multiple commands are passed, they are executed in the given order. If files are modified by the commands, they will be saved at the end. If no command options are passed, <code>kid3-cli</code> starts in interactive mode. Commands can be entered and will operate on the current selection. The following sections list all available commands. </p>
-<p> <font SIZE="+1"> <code>Help</code></p>
+<p>  <code>Help</code></p>
 <dl>
 <dl>
 <dt> <code>help</code> [<i>COMMAND-NAME</i>]</dt></dl>
 <dd>Displays help about the parameters of <i>COMMAND-NAME</i> or about all commands if no command name is given.</dd></dl>
-<p> </font><font SIZE="+2"> <code>Quit application</code></p>
+<p>  <code>Quit application</code></p>
 <dl>
 <dl>
 <dt> <code>exit</code> [force]</dt></dl>
 <dd>Exit application. If there are modified unsaved files, the <i>force</i> parameter is required.</dd></dl>
-<p> </font><font SIZE="+3"> <code>Change directory</code></p>
+<p>  <code>Change directory</code></p>
 <dl>
 <dl>
 <dt> <code>cd</code> [<i>DIRECTORY</i>]</dt></dl>
 <dd>If no <i>DIRECTORY</i> is given, change to the home directory. If a directory is given, change into the directory. If one or more file paths are given, change to their common directory and select the files.</dd></dl>
-<p> </font><font SIZE="+4"> <code>Print the current working directory</code></p>
+<p>  <code>Print the current working directory</code></p>
 <dl>
 <dl>
 <dt> <code>pwd</code></dt></dl>
 <dd>Print the filename of the current working directory.</dd></dl>
-<p> </font><font SIZE="+5"> <code>Directory list</code></p>
+<p>  <code>Directory list</code></p>
 <dl>
 <dl>
 <dt> <code>ls</code></dt></dl>
@@ -862,7 +862,7 @@ description: "kid3, kid3-qt, kid3-cli – Kid3 ID3 Tagger"
 </dt><dd> &bull; 2 File has a tag 2, otherwise &#8216;-&#8216; is displayed.</dd></dl>
 <dl>
 <dt>
-</dt><dd> </font></dd>
+</dt><dd> </dd>
 <pre>
 kid3-cli&gt; <code>ls</code>
   1- 01 Intro.mp3
@@ -871,19 +871,19 @@ kid3-cli&gt; <code>ls</code>
 </pre>
 </dl>
 <p> In this example, all files have a tag 1, the second file also has a tag 2 and it is selected. The third file is modified.</dl>
-<p> <font SIZE="+1"> <code>Save the changed files</code></p>
+<p>  <code>Save the changed files</code></p>
 <dl>
 <dl>
 <dt> <code>save</code></dt></dl>
 </dl>
-<dd> </font><font SIZE="+2"> <code>Select file</code></dd>
+<dd>  <code>Select file</code></dd>
 <dl>
 <dl>
 <dt> <code>select</code> [all | none | first | previous | next | <i>FILE</i>&#8230;]</dt></dl>
 <dd>To select all files, enter <code>select all</code>, to deselect all files, enter <code>select none</code>. To traverse the files in the current directory start with <code>select first</code>, then go forward using <code>select next</code> or backward using <code>select previous</code>. Specific files can be added to the current selection by giving their file names. Wildcards are possible, so <code>select *.mp3</code> will select all MP3 files in the current directory. </dd>
 <dl>
 <dt>
-</dt><dd> </font></dd>
+</dt><dd> </dd>
 <pre>
 kid3-cli&gt; <code>select first</code>
 kid3-cli&gt; <code>ls</code>
@@ -903,19 +903,19 @@ kid3-cli&gt; <code>ls</code>
 </pre>
 </dl>
 </dl>
-<p> <font SIZE="+1"> <code>Select tag</code></p>
+<p>  <code>Select tag</code></p>
 <dl>
 <dl>
 <dt> <code>tag</code> [<i>TAG-NUMBERS</i>]</dt></dl>
 <dd>Many commands have an optional <i>TAG-NUMBERS</i> parameter, which specifies whether the command operates on tag 1 or tag 2. If this parameter is omitted, the default tag numbers are used, which can be set by this command. At startup, is is set to 12 which means that information is read from tag 2 if available, else from tag 1; modifications are done on tag 2. The <i>TAG-NUMBERS</i> can be set to <code>1</code> or <code>2</code> to operate only on the corresponding tag. If the parameter is omitted, the current setting is displayed.</dd></dl>
-<p> </font><font SIZE="+2"> <code>Get tag frame</code></p>
+<p>  <code>Get tag frame</code></p>
 <dl>
 <dl>
 <dt> <code>get</code> [all | <i>FRAME-NAME</i>] [<i>TAG-NUMBERS</i>]</dt></dl>
 <dd>This command can be used to read the value of a specific tag frame or get information about all tag frames (if the argument is omitted or <code>all</code> is used). Modified frames are marked with a &#8216;*&#8217;. </dd>
 <dl>
 <dt>
-</dt><dd> </font></dd>
+</dt><dd> </dd>
 <pre>
 kid3-cli&gt; <code>get</code>
 File: MPEG 1 Layer 3 192 kbps 44100 Hz Joint Stereo
@@ -932,14 +932,14 @@ Intro
 </pre>
 </dl>
 </dl>
-<p> <font SIZE="+1"> <code>Set tag frame</code></p>
+<p>  <code>Set tag frame</code></p>
 <dl>
 <dl>
 <dt> <code>set</code> {<i>FRAME-NAME</i>} {<i>FRAME-VALUE</i>} [<i>TAG-NUMBERS</i>]</dt></dl>
 <dd>This command sets the value of a specific tag frame. </dd>
 <dl>
 <dt>
-</dt><dd> </font></dd>
+</dt><dd> </dd>
 <pre>
 kid3-cli&gt; <code>set remixer &quot;O.H. Wonder&quot;</code>
 </pre>
@@ -953,78 +953,78 @@ kid3-cli&gt; <code>set remixer &quot;O.H. Wonder&quot;</code>
 </pre>
 </dd></dl>
 </dl>
-<p> <font SIZE="+1"> <code>Revert</code></p>
+<p>  <code>Revert</code></p>
 <dl>
 <dl>
 <dt> <code>revert</code></dt></dl>
 <dd>Revert all modifications in the selected files (or all files if no files are selected).</dd></dl>
-<p> </font><font SIZE="+2"> <code>Import from file or clipboard</code></p>
+<p>  <code>Import from file or clipboard</code></p>
 <dl>
 <dl>
 <dt> <code>import</code> {<i>FILE</i>} {<i>FORMAT-NAME</i>} [<i>TAG-NUMBERS</i>]</dt></dl>
 <dd>Tags are imported from the file <i>FILE</i> (or from the clipboard if <code>clipboard</code> is used for <i>FILE</i>) in the format with the name <i>FORMAT-NAME</i> (e.g. <code>&quot;CSV unquoted&quot;</code>, see Import).</dd></dl>
-<p> </font><font SIZE="+3"> <code>Automatic import</code></p>
+<p>  <code>Automatic import</code></p>
 <dl>
 <dl>
 <dt> <code>autoimport</code> [<i>PROFILE-NAME</i>] [<i>TAG-NUMBERS</i>]</dt></dl>
 <dd>Batch import using profile <i>PROFILE-NAME</i> (see Automatic Import, <code>&quot;All&quot;</code> is used if omitted).</dd></dl>
-<p> </font><font SIZE="+4"> <code>Download album cover artwork</code></p>
+<p>  <code>Download album cover artwork</code></p>
 <dl>
 <dl>
 <dt> <code>albumart</code> {<i>URL</i>} [all]</dt></dl>
 <dd>Set the album artwork by downloading a picture from <i>URL</i>. The rules defined in the Browse Cover Art dialog are used to transform general URLs (e.g. from Amazon) to a picture URL. To set the album cover from a local picture file, use the set command. </dd>
 <dl>
 <dt>
-</dt><dd> </font></dd>
+</dt><dd> </dd>
 <pre>
 kid3-cli&gt; <code>albumart
 <a rel="nofollow" href="http://www.amazon.com/Versus-World-Amon-Amarth/dp/B000078DOC">http://www.amazon.com/Versus-World-Amon-Amarth/dp/B000078DOC</a></code>
 </pre>
 </dl>
 </dl>
-<p> <font SIZE="+1"> <code>Export to file or clipboard</code></p>
+<p>  <code>Export to file or clipboard</code></p>
 <dl>
 <dl>
 <dt> <code>export</code> {<i>FILE</i>} {<i>FORMAT-NAME</i>} [<i>TAG-NUMBERS</i>]</dt></dl>
 <dd>Tags are exported to file <i>FILE</i> (or to the clipboard if <code>clipboard</code> is used for <i>FILE</i>) in the format with the name <i>FORMAT-NAME</i> (e.g. <code>&quot;CSV unquoted&quot;</code>, see Export).</dd></dl>
-<p> </font><font SIZE="+2"> <code>Create playlist</code></p>
+<p>  <code>Create playlist</code></p>
 <dl>
 <dl>
 <dt> <code>playlist</code></dt></dl>
 <dd>Create playlist in the format set in the configuration, see Create Playlist.</dd></dl>
-<p> </font><font SIZE="+3"> <code>Apply filename format</code></p>
+<p>  <code>Apply filename format</code></p>
 <dl>
 <dl>
 <dt> <code>filenameformat</code></dt></dl>
 <dd>Apply file name format set in the configuration, see Apply Filename Format.</dd></dl>
-<p> </font><font SIZE="+4"> <code>Apply tag format</code></p>
+<p>  <code>Apply tag format</code></p>
 <dl>
 <dl>
 <dt> <code>tagformat</code></dt></dl>
 <dd>Apply tag name format set in the configuration, see Apply Tag Format.</dd></dl>
-<p> </font><font SIZE="+5"> <code>Apply text encoding</code></p>
+<p>  <code>Apply text encoding</code></p>
 <dl>
 <dl>
 <dt> <code>textencoding</code></dt></dl>
 <dd>Apply text encoding set in the configuration, see Apply Text Encoding.</dd></dl>
-<p> </font><font SIZE="+6"> <code>Rename directory</code></p>
+<p>  <code>Rename directory</code></p>
 <dl>
 <dl>
 <dt> <code>renamedir</code> [<i>FORMAT</i>] [create | rename | dryrun] [<i>TAG-NUMBERS</i>]</dt></dl>
 <dd>Rename or create directories from the values in the tags according to a given <i>FORMAT</i> (e.g. <code>%{artist} &#8211; %{album}</code>, see Rename Directory), if no format is given, the format defined in the Rename directory dialog is used. The default mode is <code>rename</code>; to create directories, <code>create</code> must be given explicitly. The rename actions will be performed immediately, to just see what would be done, use the <code>dryrun</code> option.</dd></dl>
-<p> </font><font SIZE="+7"> <code>Number tracks</code></p>
+<p>  <code>Number tracks</code></p>
 <dl>
 <dl>
 <dt> <code>numbertracks</code> [<i>TRACK-NUMBER</i>] [<i>TAG-NUMBERS</i>]</dt></dl>
 <dd>Number the selected tracks starting with <i>TRACK-NUMBER</i> (1 if omitted).</dd></dl>
-<p> </font><font SIZE="+8"> <code>Filter</code></p>
+<p>  <code>Filter</code></p>
 <dl>
 <dl>
 <dt> <code>filter</code> [<i>FILTER-NAME</i> | <i>FILTER-FORMAT</i>]</dt></dl>
 <dd>Filter the files so that only the files matching the <i>FILTER-FORMAT</i> are visible. The name of a predefined filter expression (e.g. <code>&quot;Filename Tag Mismatch&quot;</code>) can be used instead of a filter expression, see Filter. </dd>
 <dl>
 <dt>
-</dt><dd> </font></dd>
+</dt><dd> </dd>
 <pre>
 kid3-cli&gt; <code>filter '%{title} contains &quot;tro&quot;'</code>
 Started
@@ -1050,52 +1050,52 @@ kid3-cli&gt; <code>ls</code>
 </pre>
 </dl>
 </dl>
-<p> <font SIZE="+1"> <code>Convert ID3v2.3 to ID3v2.4</code></p>
+<p>  <code>Convert ID3v2.3 to ID3v2.4</code></p>
 <dl>
 <dl>
 <dt> <code>to24</code></dt></dl>
 </dl>
-<dd> </font><font SIZE="+2"> <code>Convert ID3v2.4 to ID3v2.3</code></dd>
+<dd>  <code>Convert ID3v2.4 to ID3v2.3</code></dd>
 <dl>
 <dl>
 <dt> <code>to23</code></dt></dl>
 </dl>
-<dd> </font><font SIZE="+3"> <code>Filename from tag</code></dd>
+<dd>  <code>Filename from tag</code></dd>
 <dl>
 <dl>
 <dt> <code>fromtag</code> [<i>FORMAT</i>] [<i>TAG-NUMBERS</i>]</dt></dl>
 <dd>Set the file names of the selected files from values in the tags, for example <code>fromtag &quot;%{track} &#8211; %{title}&quot; 1</code>. If no format is specified, the format set in the GUI is used.</dd></dl>
-<p> </font><font SIZE="+4"> <code>Tag from filename</code></p>
+<p>  <code>Tag from filename</code></p>
 <dl>
 <dl>
 <dt> <code>totag</code> [<i>FORMAT</i>] [<i>TAG-NUMBERS</i>]</dt></dl>
 <dd>Set the tag frames from the file names, for example <code>totag &quot;%{albumartist} &#8211; %{album}/%{track} %{title}&quot; 2</code>. If no format is specified, the format set in the GUI is used. If the format of the filename does not match this pattern, a few other commonly used formats are tried.</dd></dl>
-<p> </font><font SIZE="+5"> <code>Tag to other tag</code></p>
+<p>  <code>Tag to other tag</code></p>
 <dl>
 <dl>
 <dt> <code>syncto</code> {<i>TAG-NUMBER</i>}</dt></dl>
 <dd>Copy the tag frames from one tag to the other tag, e.g. to set the ID3v2 tag from the ID3v1 tag, use <code>syncto 2</code>.</dd></dl>
-<p> </font><font SIZE="+6"> <code>Copy</code></p>
+<p>  <code>Copy</code></p>
 <dl>
 <dl>
 <dt> <code>copy</code> [<i>TAG-NUMBER</i>]</dt></dl>
 <dd>Copy the tag frames of the selected file to the internal copy buffer. They can then be set on another file using the <code>paste</code> command.</dd></dl>
-<p> </font><font SIZE="+7"> <code>Paste</code></p>
+<p>  <code>Paste</code></p>
 <dl>
 <dl>
 <dt> <code>paste</code> [<i>TAG-NUMBER</i>]</dt></dl>
 <dd>Set tag frames from the contents of the <code>copy</code> buffer in the selected files.</dd></dl>
-<p> </font><font SIZE="+8"> <code>Remove</code></p>
+<p>  <code>Remove</code></p>
 <dl>
 <dl>
 <dt> <code>remove</code> [<i>TAG-NUMBER</i>]</dt></dl>
 <dd>Remove a tag.</dd></dl>
-<p> </font><font SIZE="+9"> <code>Play</code></p>
+<p>  <code>Play</code></p>
 <dl>
 <dl>
 <dt> <code>play</code> [pause | stop | previous | next]</dt></dl>
 <dd>Start audio playback. Once it has been started, it can be controlled with the <code>pause</code> (to pause and resume), <code>stop</code>, <code>previous</code> and <code>next</code> options.</dd></dl>
-<p> </font></p>
+<p> </p>
 <h3>Examples</h3>
 <p> Set album cover in all files of a directory using the batch import function: </p>
 <dl>
@@ -1135,13 +1135,13 @@ kid3-cli&gt; <code>ls</code>
 <h2>CREDITS AND LICENSE</h2>
 <p> Kid3 </p>
 <p> Program written by Urs Fleisch &lt;ufleisch at users.sourceforge.net&gt; </p>
-<p> m[blue]<code>FDL</code>m[]<font SIZE="-2">[18]</font> </p>
-<p> m[blue]<code>GPL</code>m[]<font SIZE="-2">[19]</font></p>
+<p> m[blue]<code>FDL</code>m[][18] </p>
+<p> m[blue]<code>GPL</code>m[][19]</p>
 <h2>INSTALLATION</h2>
 <h3>How to obtain Kid3</h3>
 <p> Kid3 can be found at m[blue]<code><a rel="nofollow" href="http://kid3.sourceforge.net">http://kid3.sourceforge.net</a></code>m[].</p>
 <h3>Requirements</h3>
-<p> Kid3 needs m[blue]<code>Qt</code>m[]<font SIZE="-2">[20]</font>. m[blue]<code>KDE</code>m[]<font SIZE="-2">[21]</font> is recommended but not necessary, as Kid3 can also be compiled as a Qt application. Kid3 can be compiled for systems where these libraries are available, e.g. for GNU/Linux, Windows and Mac OS X. To tag Ogg/Vorbis files, m[blue]<code>libogg</code>m[]<font SIZE="-2">[11]</font>, m[blue]<code>libvorbis and libvorbisfile</code>m[]<font SIZE="-2">[12]</font> are required, for FLAC files m[blue]<code>libFLAC++ and libFLAC</code>m[]<font SIZE="-2">[13]</font>. m[blue]<code>id3lib</code>m[]<font SIZE="-2">[10]</font> is used for MP3 files. These four formats are also supported by m[blue]<code>TagLib</code>m[]<font SIZE="-2">[14]</font>, which can also handle MPC, APE, MP2, Speex, TrueAudio, WavPack, WMA, WAV, AIFF files and tracker modules. To import from acoustic fingerprints, m[blue]<code>Chromaprint</code>m[]<font SIZE="-2">[16]</font> and m[blue]<code>libav</code>m[]<font SIZE="-2">[17]</font> are used. </p>
+<p> Kid3 needs m[blue]<code>Qt</code>m[][20]. m[blue]<code>KDE</code>m[][21] is recommended but not necessary, as Kid3 can also be compiled as a Qt application. Kid3 can be compiled for systems where these libraries are available, e.g. for GNU/Linux, Windows and Mac OS X. To tag Ogg/Vorbis files, m[blue]<code>libogg</code>m[][11], m[blue]<code>libvorbis and libvorbisfile</code>m[][12] are required, for FLAC files m[blue]<code>libFLAC++ and libFLAC</code>m[][13]. m[blue]<code>id3lib</code>m[][10] is used for MP3 files. These four formats are also supported by m[blue]<code>TagLib</code>m[][14], which can also handle MPC, APE, MP2, Speex, TrueAudio, WavPack, WMA, WAV, AIFF files and tracker modules. To import from acoustic fingerprints, m[blue]<code>Chromaprint</code>m[][16] and m[blue]<code>libav</code>m[][17] are used. </p>
 <p> Kid3 is available for most Linux distributions, Windows and Mac OS X. Links can be found on m[blue]<code><a rel="nofollow" href="http://kid3.sourceforge.net">http://kid3.sourceforge.net</a></code>m[].</p>
 <h3>Compilation and Installation</h3>
 <p> You can compile Kid3 with or without KDE. Without KDE, Kid3 is a simple Qt application and lacks some configuration and session features. </p>
@@ -1218,7 +1218,7 @@ $kid3-&gt;setFrame(2, "Artist", "One Hit Wonder");
 </dl>
 <h3>D-Bus API</h3>
 <p> The D-Bus API is specified in net.sourceforge.Kid3.xml. The Kid3 interface has the following methods: </p>
-<p> <font SIZE="+1"> <code>Open file or directory</code></p>
+<p>  <code>Open file or directory</code></p>
 <dl>
 <dl>
 <dt> <code>boolean openDirectory(string&nbsp;<wbr></code><i>path</i><code>);</code></dt></dl>
@@ -1226,22 +1226,22 @@ $kid3-&gt;setFrame(2, "Artist", "One Hit Wonder");
 <dl>
 <dd>path to file or directory</dd></dl>
 <p> Returns true if OK.</dl>
-<p> </font><font SIZE="+2"> <code>Save all modified files</code></p>
+<p>  <code>Save all modified files</code></p>
 <dl>
 <dl>
 <dt> <code>boolean save(void);</code></dt></dl>
 <dd>Returns true if OK.</dd></dl>
-<p> </font><font SIZE="+3"> <code>Get a detailed error message provided by some methods</code></p>
+<p>  <code>Get a detailed error message provided by some methods</code></p>
 <dl>
 <dl>
 <dt> <code>string getErrorMessage(void);</code></dt></dl>
 <dd>Returns detailed error message.</dd></dl>
-<p> </font><font SIZE="+4"> <code>Revert changes in the selected files</code></p>
+<p>  <code>Revert changes in the selected files</code></p>
 <dl>
 <dl>
 <dt> <code>revert(void);</code></dt></dl>
 </dl>
-<dd> </font><font SIZE="+5"> <code>Start an automatic batch import</code></dd>
+<dd>  <code>Start an automatic batch import</code></dd>
 <dl>
 <dl>
 <dt> <code>boolean batchImport(int32&nbsp;<wbr></code><i>tagMask</i><code>, string&nbsp;<wbr></code><i>profileName</i><code>);</code></dt></dl>
@@ -1253,7 +1253,7 @@ $kid3-&gt;setFrame(2, "Artist", "One Hit Wonder");
 <dt>
 </dt><dd> name of batch import profile to use</dd></dl>
 </dl>
-<p> </font><font SIZE="+6"> <code>Import tags from a file</code></p>
+<p>  <code>Import tags from a file</code></p>
 <dl>
 <dl>
 <dt> <code>boolean importFromFile(int32&nbsp;<wbr></code><i>tagMask</i><code>, string&nbsp;<wbr></code><i>path</i><code>, int32&nbsp;<wbr></code><i>fmtIdx</i><code>);</code></dt></dl>
@@ -1269,7 +1269,7 @@ $kid3-&gt;setFrame(2, "Artist", "One Hit Wonder");
 <dt>
 </dt><dd> index of format</dd></dl>
 <p> Returns true if OK.</dl>
-<p> </font><font SIZE="+7"> <code>Download album cover art</code></p>
+<p>  <code>Download album cover art</code></p>
 <dl>
 <dl>
 <dt> <code>downloadAlbumArt(string&nbsp;<wbr></code><i>url</i><code>, boolean&nbsp;<wbr></code><i>allFilesInDir</i><code>);</code></dt></dl>
@@ -1281,7 +1281,7 @@ $kid3-&gt;setFrame(2, "Artist", "One Hit Wonder");
 <dt>
 </dt><dd> true to add the image to all files in the directory</dd></dl>
 </dl>
-<p> </font><font SIZE="+8"> <code>Export tags to a file</code></p>
+<p>  <code>Export tags to a file</code></p>
 <dl>
 <dl>
 <dt> <code>boolean exportToFile(int32&nbsp;<wbr></code><i>tagMask</i><code>, string&nbsp;<wbr></code><i>path</i><code>, int32&nbsp;<wbr></code><i>fmtIdx</i><code>);</code></dt></dl>
@@ -1297,7 +1297,7 @@ $kid3-&gt;setFrame(2, "Artist", "One Hit Wonder");
 <dt>
 </dt><dd> index of format</dd></dl>
 <p> Returns true if OK.</dl>
-<p> </font><font SIZE="+9"> <code>Create a playlist</code></p>
+<p>  <code>Create a playlist</code></p>
 <dl>
 <dl>
 <dt> <code>boolean createPlaylist(void);</code></dt></dl>
@@ -1547,7 +1547,7 @@ $kid3-&gt;setFrame(2, "Artist", "One Hit Wonder");
 <dl>
 <dt> <code>playAudio(void);</code></dt></dl>
 </dl>
-<p> </font></p>
+<p> </p>
 <h2>AUTHOR</h2>
 <p> <code>Urs Fleisch</code> &lt;ufleisch at users.sourceforge.net&gt;</p>
 <dl>

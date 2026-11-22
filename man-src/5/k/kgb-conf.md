@@ -9,38 +9,38 @@ description: "kgb.conf — KGB bot configuration file"
 
 <p>kgb.conf &#8212; KGB bot configuration file</p>
 <h2>Description</h2>
-<p><i>kgb.conf</i> is the main configuration file of the <font SIZE="-1">KGB</font> bot. Its location is in <i>/etc/kgb-bot/</i> unless changed with the <code>&#8211;conf</code> command line option. See <i><a href="/docs/linux/man/1-kgb-bot/">kgb-bot</a></i>(1). </p>
-<p> The file format is <font SIZE="-1">YAML.</font> Elaborate example configuration is at the end of this document.</p>
+<p><i>kgb.conf</i> is the main configuration file of the KGB bot. Its location is in <i>/etc/kgb-bot/</i> unless changed with the <code>&#8211;conf</code> command line option. See <i><a href="/docs/linux/man/1-kgb-bot/">kgb-bot</a></i>(1). </p>
+<p> The file format is YAML. Elaborate example configuration is at the end of this document.</p>
 <h2>Settings</h2>
 <h3>soap</h3>
 <p>A map with the following possible keys:</p>
 <dl>
 <dt><code>server_addr</code></dt>
-<dd><font SIZE="-1">IP</font> address to listen to.</dd>
+<dd>IP address to listen to.</dd>
 <dt><code>server_port</code></dt>
 <dd>Port to listen to.</dd>
 <dt><code>service_name</code></dt>
-<dd><font SIZE="-1">SOAP</font> service name. Defaults to <tt>&quot;KGB&quot;</tt>.</dd></dl>
+<dd>SOAP service name. Defaults to <tt>&quot;KGB&quot;</tt>.</dd></dl>
 <h3>pid_dir</h3>
-<p>Directory to store <font SIZE="-1">PID</font> file to. Defautls to <i>/var/run/kgb-bot/</i>.</p>
+<p>Directory to store PID file to. Defautls to <i>/var/run/kgb-bot/</i>.</p>
 <h3>include</h3>
 <p>Path to file with additional configuration. May be a path to a directory, in which case all files in it ending with <tt>&quot;.conf&quot;</tt> are loaded, in alphabetical order.</p>
 <h3>min_protocol_version</h3>
 <p>Minimum version of the protocol that will be supported by the server. Defaults to <tt>1</tt>. Protocol version 0 has no authentication.</p>
 <h3>queue_limit</h3>
-<p>When messages are sent to <font SIZE="-1">IRC,</font> there is certain rate limitting, which may prevent the message to be sent right away. In this case messages are enqueued, and this parameter configures the size of the queue. When the queue is full client requests are rejected.</p>
+<p>When messages are sent to IRC, there is certain rate limitting, which may prevent the message to be sent right away. In this case messages are enqueued, and this parameter configures the size of the queue. When the queue is full client requests are rejected.</p>
 <h3>repositories</h3>
 <p>A map with keys project names and values maps with project details:</p>
 <dl>
 <dt>password</dt>
 <dd>Password used for authenticating all requests from this project.</dd>
 <dt>private</dt>
-<dd>If true, disables commit announces to &#8216;broadcast&#8217; <font SIZE="-1">IRC</font> channels.</dd></dl>
+<dd>If true, disables commit announces to &#8216;broadcast&#8217; IRC channels.</dd></dl>
 <h3>networks</h3>
 <p>A map with keys network names and values map of network configuration, containing the following items:</p>
 <dl>
 <dt>server</dt>
-<dd><font SIZE="-1">IP</font> address/hostname of the <font SIZE="-1">IRC</font> server to connect to.</dd>
+<dd>IP address/hostname of the IRC server to connect to.</dd>
 <dt>port</dt>
 <dd>Port number to connect to.</dd>
 <dt>nick</dt>
@@ -54,7 +54,7 @@ description: "kgb.conf — KGB bot configuration file"
 <dt>nickserv_password</dt>
 <dd>A password for Nick server identification.</dd>
 <dt>flood</dt>
-<dd>If defined to a true value, the built-in rate-limitting feature of the <font SIZE="-1">IRC</font> component will be turned off. <font SIZE="-1"><code>WARNING</code></font>: this may cause the bot to be kicked off the <font SIZE="-1">IRC</font> network. Use only when you control both the bot and the <font SIZE="-1">IRC</font> network (e.g. when testing).</dd></dl>
+<dd>If defined to a true value, the built-in rate-limitting feature of the IRC component will be turned off. <code>WARNING</code>: this may cause the bot to be kicked off the IRC network. Use only when you control both the bot and the IRC network (e.g. when testing).</dd></dl>
 <h3>channels</h3>
 <p>A list of channels. Each element is a map and represents the channel&#8217;s configuration:</p>
 <dl>
@@ -69,18 +69,18 @@ description: "kgb.conf — KGB bot configuration file"
 <dt>smart_answers</dt>
 <dd>Each channel can contain separate list of smart answers, see below.</dd></dl>
 <h3>smart_answers</h3>
-<p>A list of strings to be used as replies when the bot is addressed on <font SIZE="-1">IRC.</font></p>
+<p>A list of strings to be used as replies when the bot is addressed on IRC.</p>
 <h3>smart_answers_polygen</h3>
-<p>If set to a true value, <i>polygen</i>(1) will be used to generate replies when the bot is addressed on <font SIZE="-1">IRC.</font></p>
+<p>If set to a true value, <i>polygen</i>(1) will be used to generate replies when the bot is addressed on IRC.</p>
 <h3>debug</h3>
 <p>Enables logging of additional diagnostic information.</p>
 <h3>admins</h3>
-<p>A list of <font SIZE="-1">IRC</font> masks, used to determine if a given <font SIZE="-1">IRC</font> nick is bot administrator. Note that currently these nicks have no additional power.</p>
+<p>A list of IRC masks, used to determine if a given IRC nick is bot administrator. Note that currently these nicks have no additional power.</p>
 <h3>colors</h3>
 <p>A map of colors to be used when painting commit messages. The following keys are recognized:</p>
 <dl>
 <dt>revision</dt>
-<dd>Commit <font SIZE="-1">ID.</font> Default: none.</dd>
+<dd>Commit ID. Default: none.</dd>
 <dt>path</dt>
 <dd>Changed path. Default: teal. </dd>
 <p> Depending on the action performed to the path, additional coloring is made:</p>
@@ -107,7 +107,7 @@ description: "kgb.conf — KGB bot configuration file"
 <dt>module</dt>
 <dd>Project module. Default: purple.</dd>
 <dt>web</dt>
-<dd><font SIZE="-1">URL</font> to commit information. Default: silver.</dd>
+<dd>URL to commit information. Default: silver.</dd>
 <dt>separator</dt>
 <dd>The separator before the commit log. Default: none.</dd></dl>
 <h2>Example Confguration</h2>
@@ -189,6 +189,6 @@ description: "kgb.conf — KGB bot configuration file"
 <dd></dd></dl>
 <h2>COPYRIGHT &amp; LICENSE</h2>
 <p>Copyright (C) 2012, 2013 Damyan Ivanov </p>
-<p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
-<p> This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE. </font> See the <font SIZE="-1">GNU</font> General Public License for more details. </p>
-<p> You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, <font SIZE="-1">MA 02110-1301, USA.</font></p>
+<p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
+<p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. </p>
+<p> You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.</p>

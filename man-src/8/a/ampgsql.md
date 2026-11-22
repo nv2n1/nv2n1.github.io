@@ -11,10 +11,10 @@ description: "ampgsql – Amanda Application to interface with PostgreSQL"
 <h2>Description</h2>
 <p>Ampgsql is an Amanda Application API script. It should not be run by users directly. It implements on-line backups of PostgreSQL databases in conjunction with WAL archiving.</p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  Tablespaces are not currently supported. </dd>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  On versions of PostgreSQL earlier than 8.2, if the database is quiet during a full backup, then the backup may not complete until enough database activity takes place to trigger the archiving of the current WAL file. Consider adjusting the PG-MAX-WAL-WAIT property from its default (60s) to compensate. Note that you will need to increase <code>dtimeout</code> on the server accordingly. </dd>
 <h2>Operation</h2>
 <p>This application implements the backup strategy described in <a rel="nofollow" href="http://www.postgresql.org/docs/current/static/continuous-archiving.html.">http://www.postgresql.org/docs/current/static/continuous-archiving.html.</a> For a level zero (full) backup, ampgsql: </p>

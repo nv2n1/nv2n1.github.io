@@ -25,10 +25,10 @@ void endservent(void);
 <p> The <code>setservent</code>() function opens a connection to the database, and sets the next entry to the first entry. If <i>stayopen</i> is nonzero, then the connection to the database will not be closed between calls to one of the <code>getserv*</code>() functions. </p>
 <p> The <code>endservent</code>() function closes the connection to the database. </p>
 <p> The <i>servent</i> structure is defined in <i>&lt;netdb.h&gt;</i> as follows: </p>
-<p> struct servent {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;<wbr>&nbsp;*s_name;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;official service name&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;**s_aliases;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;alias list&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;s_port;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;port number&nbsp;*/<br />
+<p> struct servent {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;<wbr>&nbsp;*s_name;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;official service name&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;**s_aliases;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;alias list&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;s_port;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;port number&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;<wbr>&nbsp;*s_proto;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;protocol to use&nbsp;*/ } </p>
 <p> The members of the <i>servent</i> structure are:</p>
 <dl>
@@ -58,29 +58,29 @@ void endservent(void);
 <tr VALIGN=top>
 <td> <code>getservent</code>() </td>
 <td>Thread safety</td>
-<td> MT-Unsafe race:servent<br />
+<td> MT-Unsafe race:servent<br/>
  race:serventbuf locale
 </td>
 </tr>
 <tr VALIGN=top>
 <td> <code>getservbyname</code>() </td>
 <td>Thread safety</td>
-<td> MT-Unsafe race:servbyname<br />
+<td> MT-Unsafe race:servbyname<br/>
  locale
 </td>
 </tr>
 <tr VALIGN=top>
 <td> <code>getservbyport</code>() </td>
 <td>Thread safety</td>
-<td> MT-Unsafe race:servbyport<br />
+<td> MT-Unsafe race:servbyport<br/>
  locale
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>setservent</code>(),<br />
+<td> <code>setservent</code>(),<br/>
  <code>endservent</code>() </td>
 <td>Thread safety</td>
-<td> MT-Unsafe race:servent<br />
+<td> MT-Unsafe race:servent<br/>
  locale
 </td>
 </tr>

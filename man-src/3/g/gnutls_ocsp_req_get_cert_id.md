@@ -27,17 +27,17 @@ description: "gnutls_ocsp_req_get_cert_id – API function"
 <dt>gnutls_datum_t * serial_number</dt>
 <dd> output buffer with serial number of certificate to check</dd></dl>
 <h2>DESCRIPTION</h2>
-<p> This function will return the certificate information of the<br />
+<p> This function will return the certificate information of the<br/>
 &nbsp;<wbr><i>indx</i>&nbsp;<wbr>&#8216;ed request in the OCSP request.&nbsp;<wbr>&nbsp;<wbr>The information returned corresponds to the CertID structure: </p>
 <p> &lt;informalexample&gt;&lt;programlisting&gt; CertID ::= SEQUENCE { hashAlgorithm AlgorithmIdentifier, issuerNameHash OCTET STRING, &#8212; Hash of Issuer&#8217;s DN issuerKeyHash OCTET STRING, &#8212; Hash of Issuers public key serialNumber CertificateSerialNumber } &lt;/programlisting&gt;&lt;/informalexample&gt; </p>
 <p> Each of the pointers to output variables may be NULL to indicate that the caller is not interested in that value.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error code is returned. If you have reached the last CertID available <code>GNUTLS_E_REQUESTED_DATA_NOT_AVAILABLE</code> will be returned.</p>
 <h2>REPORTING BUGS</h2>
-<p> Report bugs to &lt;bugs [at] gnutls.org&gt;.<br />
+<p> Report bugs to &lt;bugs [at] gnutls.org&gt;.<br/>
  Home page: <a rel="nofollow" href="http://www.gnutls.org">http://www.gnutls.org</a> </p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2001-2014 Free Software Foundation, Inc..<br />
+<p> Copyright &#169; 2001-2014 Free Software Foundation, Inc..<br/>
  Copying and distribution of this file, with or without modification, are permitted in any medium without royalty provided the copyright notice and this notice are preserved.</p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>

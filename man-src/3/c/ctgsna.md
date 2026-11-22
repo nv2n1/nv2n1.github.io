@@ -11,7 +11,7 @@ description: "ctgsna.f –"
 <p> ctgsna.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>ctgsna</code> (JOB, HOWMNY, SELECT, N, A, LDA, B, LDB, VL, LDVL, VR, LDVR, S, DIF, MM, M, WORK, LWORK, IWORK, INFO)<br />
+<p> subroutine <code>ctgsna</code> (JOB, HOWMNY, SELECT, N, A, LDA, B, LDB, VL, LDVL, VR, LDVR, S, DIF, MM, M, WORK, LWORK, IWORK, INFO)<br/>
  <i></i><code>CTGSNA</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ctgsna (characterJOB, characterHOWMNY, logical, dimension( * )SELECT, integerN, complex, dimension( lda, * )A, integerLDA, complex, dimension( ldb, * )B, integerLDB, complex, dimension( ldvl, * )VL, integerLDVL, complex, dimension( ldvr, * )VR, integerLDVR, real, dimension( * )S, real, dimension( * )DIF, integerMM, integerM, complex, dimension( * )WORK, integerLWORK, integer, dimension( * )IWORK, integerINFO)</h3>
@@ -181,37 +181,37 @@ description: "ctgsna.f –"
 <dl>
 <dt>
 </dt><dd>
-<p>The reciprocal of the condition number of the i &#8211; th generalized<br />
-                                                      eigenvalue w = (a, b)is defined as S(I) = (| v * *HAu | **2 + | v * *HBu | **2) * *(1 / 2) / (norm(u) * norm(v)) where u and v are the right and left eigenvectors of(A, B)<br />
-corresponding to w;<br />
-| z | denotes the absolute value of the complex number, and norm(u) denotes the 2 &#8211; norm of the vector u.The pair(a, b)<br />
-corresponds to an eigenvalue w = a / b(= v * *HAu / v * *HBu) of the<br />
-                                         matrix<br />
-                                         pair(A, B)<br />
-                                             .If both a and<br />
-                                 b equal zero,<br />
-                             then(A, B) is<br />
-                             singular and S(I) = -1 is returned.An approximate error bound on the chordal distance between the i &#8211; th<br />
-                                                     computed generalized eigenvalue w<br />
-                                                 and the corresponding exact<br />
-                                                         eigenvalue lambda is<br />
-                                                         chord(w, lambda) &lt;= EPS * norm(A, B) / S(I),<br />
-                             where EPS is the machine precision.The reciprocal of the condition number of the right eigenvector u<br />
-                                 and left eigenvector v corresponding to the generalized eigenvalue w<br />
-                             is defined as follows.Suppose(A, B) = (a *)(b *)1(0 A22),<br />
-                             (0 B22)n &#8211; 1 1 n &#8211; 1 1 n &#8211; 1 Then the reciprocal condition number DIF(I) is<br />
-          Difl[(a, b), (A22, B22)]  = sigma-min( Zl )<br />
-  where sigma-min(Zl) denotes the smallest singular value of<br />
-         Zl = [ kron(a, In-1) -kron(1, A22) ]<br />
-              [ kron(b, In-1) -kron(1, B22) ].<br />
-  Here In-1 is the identity matrix of size n-1 and X**H is the conjugate<br />
-  transpose of X. kron(X, Y) is the Kronecker product between the<br />
-  matrices X and Y.<br />
-  We approximate the smallest singular value of Zl with an upper<br />
-  bound. This is done by CLATDF.<br />
-  An approximate error bound for a computed eigenvector VL(i) or<br />
-  VR(i) is given by<br />
-                      EPS * norm(A, B) / DIF(i).<br />
+<p>The reciprocal of the condition number of the i &#8211; th generalized<br/>
+                                                      eigenvalue w = (a, b)is defined as S(I) = (| v * *HAu | **2 + | v * *HBu | **2) * *(1 / 2) / (norm(u) * norm(v)) where u and v are the right and left eigenvectors of(A, B)<br/>
+corresponding to w;<br/>
+| z | denotes the absolute value of the complex number, and norm(u) denotes the 2 &#8211; norm of the vector u.The pair(a, b)<br/>
+corresponds to an eigenvalue w = a / b(= v * *HAu / v * *HBu) of the<br/>
+                                         matrix<br/>
+                                         pair(A, B)<br/>
+                                             .If both a and<br/>
+                                 b equal zero,<br/>
+                             then(A, B) is<br/>
+                             singular and S(I) = -1 is returned.An approximate error bound on the chordal distance between the i &#8211; th<br/>
+                                                     computed generalized eigenvalue w<br/>
+                                                 and the corresponding exact<br/>
+                                                         eigenvalue lambda is<br/>
+                                                         chord(w, lambda) &lt;= EPS * norm(A, B) / S(I),<br/>
+                             where EPS is the machine precision.The reciprocal of the condition number of the right eigenvector u<br/>
+                                 and left eigenvector v corresponding to the generalized eigenvalue w<br/>
+                             is defined as follows.Suppose(A, B) = (a *)(b *)1(0 A22),<br/>
+                             (0 B22)n &#8211; 1 1 n &#8211; 1 1 n &#8211; 1 Then the reciprocal condition number DIF(I) is<br/>
+          Difl[(a, b), (A22, B22)]  = sigma-min( Zl )<br/>
+  where sigma-min(Zl) denotes the smallest singular value of<br/>
+         Zl = [ kron(a, In-1) -kron(1, A22) ]<br/>
+              [ kron(b, In-1) -kron(1, B22) ].<br/>
+  Here In-1 is the identity matrix of size n-1 and X**H is the conjugate<br/>
+  transpose of X. kron(X, Y) is the Kronecker product between the<br/>
+  matrices X and Y.<br/>
+  We approximate the smallest singular value of Zl with an upper<br/>
+  bound. This is done by CLATDF.<br/>
+  An approximate error bound for a computed eigenvector VL(i) or<br/>
+  VR(i) is given by<br/>
+                      EPS * norm(A, B) / DIF(i).<br/>
   See ref. [2-3] for more details and further references.</p>
 <p>&nbsp;<wbr></dd></dl>
 <p> <code>Contributors: </code></p>

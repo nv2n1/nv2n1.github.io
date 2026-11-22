@@ -14,8 +14,8 @@ description: "ipa-server-upgrade – upgrade IPA server"
 <h2>DESCRIPTION</h2>
 <p> ipa-server-upgrade is used to upgrade IPA server when the IPA packages are being updated. It is not intended to be executed by end-users. </p>
 <p> ipa-server-upgrade will: </p>
-<p>&nbsp;<wbr>*&nbsp;<wbr>update LDAP schema<br />
-&nbsp;<wbr>*&nbsp;<wbr>process all files with the extension .update in&nbsp;<wbr>/usr/share/ipa/updates&nbsp;<wbr>(including update plugins).<br />
+<p>&nbsp;<wbr>*&nbsp;<wbr>update LDAP schema<br/>
+&nbsp;<wbr>*&nbsp;<wbr>process all files with the extension .update in&nbsp;<wbr>/usr/share/ipa/updates&nbsp;<wbr>(including update plugins).<br/>
 &nbsp;<wbr>*&nbsp;<wbr>upgrade local configurations of IPA services </p>
 <h2>OPTIONS</h2>
 <dl>

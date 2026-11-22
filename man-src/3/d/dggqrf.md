@@ -11,7 +11,7 @@ description: "dggqrf.f –"
 <p> dggqrf.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dggqrf</code> (N, M, P, A, LDA, TAUA, B, LDB, TAUB, WORK, LWORK, INFO)<br />
+<p> subroutine <code>dggqrf</code> (N, M, P, A, LDA, TAUA, B, LDB, TAUB, WORK, LWORK, INFO)<br/>
  <i></i><code>DGGQRF</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dggqrf (integerN, integerM, integerP, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( * )TAUA, double precision, dimension( ldb, * )B, integerLDB, double precision, dimension( * )TAUB, double precision, dimension( * )WORK, integerLWORK, integerINFO)</h3>
@@ -77,14 +77,14 @@ denotes the inverse of the matrix B, and Z **T denotes the
           represent the orthogonal matrix Q (see Further Details).
 </pre>
 <p> <i>B</i> </p>
-<p>B is DOUBLE PRECISION array, dimension(LDB, P) On entry, the N &#8211; by &#8211; P matrix B.On exit, if N &lt;= P, the upper triangle of the subarray B(1<br />
-                                                                                                                                          : N, P &#8211; N + 1<br />
-                                                                                                                                          : P) contains the N<br />
-                                                                                                         &#8211; by &#8211; N upper triangular matrix T;<br />
-if N<br />
-    &gt; P, the elements on and above the(N &#8211; P) &#8211; th subdiagonal contain the N &#8211; by &#8211; P upper trapezoidal matrix T;<br />
-the remaining<br />
-    elements,<br />
+<p>B is DOUBLE PRECISION array, dimension(LDB, P) On entry, the N &#8211; by &#8211; P matrix B.On exit, if N &lt;= P, the upper triangle of the subarray B(1<br/>
+                                                                                                                                          : N, P &#8211; N + 1<br/>
+                                                                                                                                          : P) contains the N<br/>
+                                                                                                         &#8211; by &#8211; N upper triangular matrix T;<br/>
+if N<br/>
+    &gt; P, the elements on and above the(N &#8211; P) &#8211; th subdiagonal contain the N &#8211; by &#8211; P upper trapezoidal matrix T;<br/>
+the remaining<br/>
+    elements,<br/>
     with the array TAUB, represent the orthogonal matrix Z as a product of elementary reflectors(see Further Details).</p>
 <p> <i>LDB</i> </p>
 <pre>
@@ -103,16 +103,16 @@ the remaining<br />
           On exit, if INFO = 0, WORK(1) returns the optimal LWORK.
 </pre>
 <p> <i>LWORK</i> </p>
-<p>          LWORK is INTEGER<br />
-          The dimension of the array WORK. LWORK &gt;= max(1,N,M,P).<br />
-          For optimum performance LWORK &gt;= max(N,M,P)*max(NB1,NB2,NB3),<br />
-          where NB1 is the optimal blocksize for the QR factorization<br />
-          of an N-by-M matrix, NB2 is the optimal blocksize for the<br />
-          RQ factorization of an N-by-P matrix, and NB3 is the optimal<br />
-          blocksize for a call of DORMQR.<br />
-          If LWORK = -1, then a workspace query is assumed;<br />
-          the routine<br />
-              only calculates the optimal size of the WORK array,<br />
+<p>          LWORK is INTEGER<br/>
+          The dimension of the array WORK. LWORK &gt;= max(1,N,M,P).<br/>
+          For optimum performance LWORK &gt;= max(N,M,P)*max(NB1,NB2,NB3),<br/>
+          where NB1 is the optimal blocksize for the QR factorization<br/>
+          of an N-by-M matrix, NB2 is the optimal blocksize for the<br/>
+          RQ factorization of an N-by-P matrix, and NB3 is the optimal<br/>
+          blocksize for a call of DORMQR.<br/>
+          If LWORK = -1, then a workspace query is assumed;<br/>
+          the routine<br/>
+              only calculates the optimal size of the WORK array,<br/>
               returns this value as the first entry of the WORK array, and no error message related to LWORK is issued by XERBLA.</p>
 <p> <i>INFO</i> </p>
 <pre>

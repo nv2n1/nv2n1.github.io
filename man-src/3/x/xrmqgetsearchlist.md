@@ -69,5 +69,5 @@ description: "XrmGetResource, XrmQGetResource, XrmQGetSearchList, XrmQGetSearchR
 <dt>3.</dt>
 <dd>An entry preceded by a tight binding takes precedence over entries preceded by a loose binding.</dd></dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xrminitialize/">XrmInitialize</a>(3), <a href="/docs/linux/man/3-xrmmergedatabases/">XrmMergeDatabases</a>(3), <a href="/docs/linux/man/3-xrmputresource/">XrmPutResource</a>(3), <a href="/docs/linux/man/3-xrmuniquequark/">XrmUniqueQuark</a>(3)<br />
+<p><a href="/docs/linux/man/3-xrminitialize/">XrmInitialize</a>(3), <a href="/docs/linux/man/3-xrmmergedatabases/">XrmMergeDatabases</a>(3), <a href="/docs/linux/man/3-xrmputresource/">XrmPutResource</a>(3), <a href="/docs/linux/man/3-xrmuniquequark/">XrmUniqueQuark</a>(3)<br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

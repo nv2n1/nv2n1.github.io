@@ -10,7 +10,7 @@ description: "cgerq2.f –"
 <p>cgerq2.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>cgerq2</code> (M, N, A, LDA, TAU, WORK, INFO)<br />
+<p>subroutine <code>cgerq2</code> (M, N, A, LDA, TAU, WORK, INFO)<br/>
  <i></i><code>CGERQ2</code> computes the RQ factorization of a general rectangular matrix using an unblocked algorithm.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cgerq2 (integerM, integerN, complex, dimension( lda, * )A, integerLDA, complex, dimension( * )TAU, complex, dimension( * )WORK, integerINFO)</h3>

@@ -20,17 +20,17 @@ int io_submit(aio_context_t ctx_id, long nr, struct iocb **iocbpp);
 <p> The <code>io_submit</code>() system call queues <i>nr</i> I/O request blocks for processing in the AIO context <i>ctx_id</i>. The <i>iocbpp</i> argument should be an array of <i>nr</i> AIO control blocks, which will be submitted to context <i>ctx_id</i>. </p>
 <p> The <i>iocb</i> (I/O control block) structure defined in <i>linux/aio_abi.h</i> defines the parameters that control the I/O operation. </p>
 <p> #include &lt;linux/aio_abi.h&gt; </p>
-<p> struct iocb {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u64&nbsp;<wbr>&nbsp;<wbr>&nbsp;aio_data;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u32&nbsp;<wbr>&nbsp;<wbr>&nbsp;PADDED(aio_key, aio_rw_flags);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u16&nbsp;<wbr>&nbsp;<wbr>&nbsp;aio_lio_opcode;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__s16&nbsp;<wbr>&nbsp;<wbr>&nbsp;aio_reqprio;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u32&nbsp;<wbr>&nbsp;<wbr>&nbsp;aio_fildes;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u64&nbsp;<wbr>&nbsp;<wbr>&nbsp;aio_buf;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u64&nbsp;<wbr>&nbsp;<wbr>&nbsp;aio_nbytes;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__s64&nbsp;<wbr>&nbsp;<wbr>&nbsp;aio_offset;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u64&nbsp;<wbr>&nbsp;<wbr>&nbsp;aio_reserved2;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u32&nbsp;<wbr>&nbsp;<wbr>&nbsp;aio_flags;<br />
+<p> struct iocb {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u64&nbsp;<wbr>&nbsp;<wbr>&nbsp;aio_data;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u32&nbsp;<wbr>&nbsp;<wbr>&nbsp;PADDED(aio_key, aio_rw_flags);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u16&nbsp;<wbr>&nbsp;<wbr>&nbsp;aio_lio_opcode;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__s16&nbsp;<wbr>&nbsp;<wbr>&nbsp;aio_reqprio;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u32&nbsp;<wbr>&nbsp;<wbr>&nbsp;aio_fildes;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u64&nbsp;<wbr>&nbsp;<wbr>&nbsp;aio_buf;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u64&nbsp;<wbr>&nbsp;<wbr>&nbsp;aio_nbytes;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__s64&nbsp;<wbr>&nbsp;<wbr>&nbsp;aio_offset;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u64&nbsp;<wbr>&nbsp;<wbr>&nbsp;aio_reserved2;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u32&nbsp;<wbr>&nbsp;<wbr>&nbsp;aio_flags;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u32&nbsp;<wbr>&nbsp;<wbr>&nbsp;aio_resfd; }; </p>
 <p> The fields of this structure are as follows:</p>
 <dl>
@@ -56,14 +56,14 @@ int io_submit(aio_context_t ctx_id, long nr, struct iocb **iocbpp);
 <dt><i>aio_lio_opcode</i></dt>
 <dd> This defines the type of I/O to be performed by the <i>iocb</i> structure. The valid values are defined by the enum defined in <i>linux/aio_abi.h</i>:</dd>
 <dt>
-</dt><dd> enum {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;IOCB_CMD_PREAD&nbsp;=&nbsp;0,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;IOCB_CMD_PWRITE&nbsp;=&nbsp;1,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;IOCB_CMD_FSYNC&nbsp;=&nbsp;2,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;IOCB_CMD_FDSYNC&nbsp;=&nbsp;3,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;IOCB_CMD_POLL&nbsp;=&nbsp;5,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;IOCB_CMD_NOOP&nbsp;=&nbsp;6,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;IOCB_CMD_PREADV&nbsp;=&nbsp;7,<br />
+</dt><dd> enum {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;IOCB_CMD_PREAD&nbsp;=&nbsp;0,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;IOCB_CMD_PWRITE&nbsp;=&nbsp;1,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;IOCB_CMD_FSYNC&nbsp;=&nbsp;2,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;IOCB_CMD_FDSYNC&nbsp;=&nbsp;3,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;IOCB_CMD_POLL&nbsp;=&nbsp;5,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;IOCB_CMD_NOOP&nbsp;=&nbsp;6,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;IOCB_CMD_PREADV&nbsp;=&nbsp;7,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;IOCB_CMD_PWRITEV&nbsp;=&nbsp;8, };</dd>
 <dt><i>aio_reqprio</i></dt>
 <dd> This defines the requests priority.</dd>

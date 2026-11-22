@@ -27,7 +27,7 @@ description: "perlfaq – Frequently asked questions about Perl"
 <h3>How to contribute to the perlfaq</h3>
 <p> Review &lt;<a rel="nofollow" href="https://github.com/perl-doc-cats/perlfaq/wiki">https://github.com/perl-doc-cats/perlfaq/wiki</a>&gt;. If you don&#8217;t find your suggestion create an issue or pull request against &lt;<a rel="nofollow" href="https://github.com/perl-doc-cats/perlfaq">https://github.com/perl-doc-cats/perlfaq</a>&gt;. </p>
 <p> Once approved, changes are merged into &lt;<a rel="nofollow" href="https://github.com/tpf/perlfaq">https://github.com/tpf/perlfaq</a>&gt;, the repository which drives &lt;<a rel="nofollow" href="http://learn.perl.org/faq/">http://learn.perl.org/faq/</a>&gt;, and they are distributed with the next Perl 5 release.</p>
-<h3>What if my question isn&#8217;t answered in the <font SIZE="-1">FAQ</font>?</h3>
+<h3>What if my question isn&#8217;t answered in the FAQ?</h3>
 <p> Try the resources in perlfaq2.</p>
 <h2>TABLE OF CONTENTS</h2>
 <dl>
@@ -51,7 +51,7 @@ description: "perlfaq – Frequently asked questions about Perl"
 <dd></dd></dl>
 <h2>THE QUESTIONS</h2>
 <h3>perlfaq1: General Questions About Perl</h3>
-<p> This section of the <font SIZE="-1">FAQ</font> answers very general, high-level questions about Perl.</p>
+<p> This section of the FAQ answers very general, high-level questions about Perl.</p>
 <dl>
 <dt>&bull;</dt>
 <dd> What is Perl?</dd>
@@ -70,7 +70,7 @@ description: "perlfaq – Frequently asked questions about Perl"
 <dt>&bull;</dt>
 <dd> Is Perl difficult to learn?</dd>
 <dt>&bull;</dt>
-<dd> How does Perl compare with other languages like Java, Python, <font SIZE="-1">REXX,</font> Scheme, or Tcl?</dd>
+<dd> How does Perl compare with other languages like Java, Python, REXX, Scheme, or Tcl?</dd>
 <dt>&bull;</dt>
 <dd> Can I do [task] in Perl?</dd>
 <dt>&bull;</dt>
@@ -78,11 +78,11 @@ description: "perlfaq – Frequently asked questions about Perl"
 <dt>&bull;</dt>
 <dd> What&#8217;s the difference between &#8220;perl&#8221; and &#8220;Perl&#8221;?</dd>
 <dt>&bull;</dt>
-<dd> What is a <font SIZE="-1">JAPH</font>?</dd>
+<dd> What is a JAPH?</dd>
 <dt>&bull;</dt>
 <dd> How can I convince others to use Perl?</dd></dl>
 <h3>perlfaq2: Obtaining and Learning about Perl</h3>
-<p> This section of the <font SIZE="-1">FAQ</font> answers questions about where to find source and documentation for Perl, support, and related matters.</p>
+<p> This section of the FAQ answers questions about where to find source and documentation for Perl, support, and related matters.</p>
 <dl>
 <dt>&bull;</dt>
 <dd> What machines support Perl? Where do I get it?</dd>
@@ -95,7 +95,7 @@ description: "perlfaq – Frequently asked questions about Perl"
 <dt>&bull;</dt>
 <dd> I grabbed the sources and tried to compile but gdbm/dynamic loading/malloc/linking/&#8230; failed. How do I make it work?</dd>
 <dt>&bull;</dt>
-<dd> What modules and extensions are available for Perl? What is <font SIZE="-1">CPAN</font>?</dd>
+<dd> What modules and extensions are available for Perl? What is CPAN?</dd>
 <dt>&bull;</dt>
 <dd> Where can I get information on Perl?</dd>
 <dt>&bull;</dt>
@@ -115,7 +115,7 @@ description: "perlfaq – Frequently asked questions about Perl"
 <dt>&bull;</dt>
 <dd> Where do I send bug reports?</dd></dl>
 <h3>perlfaq3: Programming Tools</h3>
-<p> This section of the <font SIZE="-1">FAQ</font> answers questions related to programmer tools and programming support.</p>
+<p> This section of the FAQ answers questions related to programmer tools and programming support.</p>
 <dl>
 <dt>&bull;</dt>
 <dd> How do I do (anything)?</dd>
@@ -132,7 +132,7 @@ description: "perlfaq – Frequently asked questions about Perl"
 <dt>&bull;</dt>
 <dd> Is there a pretty-printer (formatter) for Perl?</dd>
 <dt>&bull;</dt>
-<dd> Is there an <font SIZE="-1">IDE</font> or Windows Perl Editor?</dd>
+<dd> Is there an IDE or Windows Perl Editor?</dd>
 <dt>&bull;</dt>
 <dd> Where can I get Perl macros for vi?</dd>
 <dt>&bull;</dt>
@@ -140,7 +140,7 @@ description: "perlfaq – Frequently asked questions about Perl"
 <dt>&bull;</dt>
 <dd> How can I use curses with Perl?</dd>
 <dt>&bull;</dt>
-<dd> How can I write a <font SIZE="-1">GUI</font> (X, Tk, Gtk, etc.) in Perl?</dd>
+<dd> How can I write a GUI (X, Tk, Gtk, etc.) in Perl?</dd>
 <dt>&bull;</dt>
 <dd> How can I make my Perl program run faster?</dd>
 <dt>&bull;</dt>
@@ -150,19 +150,19 @@ description: "perlfaq – Frequently asked questions about Perl"
 <dt>&bull;</dt>
 <dd> How can I free an array or hash so my program shrinks?</dd>
 <dt>&bull;</dt>
-<dd> How can I make my <font SIZE="-1">CGI</font> script more efficient?</dd>
+<dd> How can I make my CGI script more efficient?</dd>
 <dt>&bull;</dt>
 <dd> How can I hide the source for my Perl program?</dd>
 <dt>&bull;</dt>
 <dd> How can I compile my Perl program into byte code or C?</dd>
 <dt>&bull;</dt>
-<dd> How can I get <tt>&quot;#!perl&quot;</tt> to work on [<font SIZE="-1">MS-DOS,NT,&#8230;</font>]?</dd>
+<dd> How can I get <tt>&quot;#!perl&quot;</tt> to work on [MS-DOS,NT,&#8230;]?</dd>
 <dt>&bull;</dt>
 <dd> Can I write useful Perl programs on the command line?</dd>
 <dt>&bull;</dt>
 <dd> Why don&#8217;t Perl one-liners work on my DOS/Mac/VMS system?</dd>
 <dt>&bull;</dt>
-<dd> Where can I learn about <font SIZE="-1">CGI</font> or Web programming in Perl?</dd>
+<dd> Where can I learn about CGI or Web programming in Perl?</dd>
 <dt>&bull;</dt>
 <dd> Where can I learn about object-oriented Perl programming?</dd>
 <dt>&bull;</dt>
@@ -174,7 +174,7 @@ description: "perlfaq – Frequently asked questions about Perl"
 <dt>&bull;</dt>
 <dd> What&#8217;s MakeMaker?</dd></dl>
 <h3>perlfaq4: Data Manipulation</h3>
-<p> This section of the <font SIZE="-1">FAQ</font> answers questions related to manipulating numbers, dates, strings, arrays, hashes, and miscellaneous data issues.</p>
+<p> This section of the FAQ answers questions related to manipulating numbers, dates, strings, arrays, hashes, and miscellaneous data issues.</p>
 <dl>
 <dt>&bull;</dt>
 <dd> Why am I getting long decimals (eg, 19.9499999999999) instead of the numbers I should be getting (eg, 19.95)?</dd>
@@ -251,7 +251,7 @@ description: "perlfaq – Frequently asked questions about Perl"
 <dt>&bull;</dt>
 <dd> What&#8217;s wrong with always quoting &#8220;$vars&#8221;?</dd>
 <dt>&bull;</dt>
-<dd> Why don&#8217;t my &lt;&lt;<font SIZE="-1">HERE</font> documents work?</dd>
+<dd> Why don&#8217;t my &lt;&lt;HERE documents work?</dd>
 <dt>&bull;</dt>
 <dd> What is the difference between a list and an array?</dd>
 <dt>&bull;</dt>
@@ -307,13 +307,13 @@ description: "perlfaq – Frequently asked questions about Perl"
 <dt>&bull;</dt>
 <dd> How can I get the unique keys from two hashes?</dd>
 <dt>&bull;</dt>
-<dd> How can I store a multidimensional array in a <font SIZE="-1">DBM</font> file?</dd>
+<dd> How can I store a multidimensional array in a DBM file?</dd>
 <dt>&bull;</dt>
 <dd> How can I make my hash remember the order I put elements into it?</dd>
 <dt>&bull;</dt>
 <dd> Why does passing a subroutine an undefined element in a hash create it?</dd>
 <dt>&bull;</dt>
-<dd> How can I make the Perl equivalent of a C structure/C<font SIZE="-2">++</font> class/hash or array of hashes or arrays?</dd>
+<dd> How can I make the Perl equivalent of a C structure/C++ class/hash or array of hashes or arrays?</dd>
 <dt>&bull;</dt>
 <dd> How can I use a reference as a hash key?</dd>
 <dt>&bull;</dt>
@@ -333,7 +333,7 @@ description: "perlfaq – Frequently asked questions about Perl"
 <dt>&bull;</dt>
 <dd> How do I verify a credit card checksum?</dd>
 <dt>&bull;</dt>
-<dd> How do I pack arrays of doubles or floats for <font SIZE="-1">XS</font> code?</dd></dl>
+<dd> How do I pack arrays of doubles or floats for XS code?</dd></dl>
 <h3>perlfaq5: Files and Formats</h3>
 <p> This section deals with I/O and the &#8220;f&#8221; issues: filehandles, flushing, formats, and footers.</p>
 <dl>
@@ -378,7 +378,7 @@ description: "perlfaq – Frequently asked questions about Perl"
 <dt>&bull;</dt>
 <dd> How can I lock a file?</dd>
 <dt>&bull;</dt>
-<dd> Why can&#8217;t I just open(<font SIZE="-1">FH, &#8220;</font>&gt;file.lock&#8221;)?</dd>
+<dd> Why can&#8217;t I just open(FH, &#8220;&gt;file.lock&#8221;)?</dd>
 <dt>&bull;</dt>
 <dd> I still don&#8217;t get locking. I just want to increment the number in the file. How can I do this?</dd>
 <dt>&bull;</dt>
@@ -406,7 +406,7 @@ description: "perlfaq – Frequently asked questions about Perl"
 <dt>&bull;</dt>
 <dd> How do I close a file descriptor by number?</dd>
 <dt>&bull;</dt>
-<dd> Why can&#8217;t I use &#8220;C:	empoo&#8221; in <font SIZE="-1">DOS</font> paths? Why doesn&#8217;t `C:	empoo.exe` work?</dd>
+<dd> Why can&#8217;t I use &#8220;C:	empoo&#8221; in DOS paths? Why doesn&#8217;t `C:	empoo.exe` work?</dd>
 <dt>&bull;</dt>
 <dd> Why doesn&#8217;t glob(&#8220;*.*&#8221;) get all the files?</dd>
 <dt>&bull;</dt>
@@ -422,7 +422,7 @@ description: "perlfaq – Frequently asked questions about Perl"
 <dt>&bull;</dt>
 <dd> How do I copy an entire directory?</dd></dl>
 <h3>perlfaq6: Regular Expressions</h3>
-<p> This section is surprisingly small because the rest of the <font SIZE="-1">FAQ</font> is littered with answers involving regular expressions. For example, decoding a <font SIZE="-1">URL</font> and checking whether something is a number can be handled with regular expressions, but those answers are found elsewhere in this document (in perlfaq9 : &#8220;How do I decode or create those %-encodings on the web&#8221; and perlfaq4 : &#8220;How do I determine whether a scalar is a number/whole/integer/float&#8221;, to be precise).</p>
+<p> This section is surprisingly small because the rest of the FAQ is littered with answers involving regular expressions. For example, decoding a URL and checking whether something is a number can be handled with regular expressions, but those answers are found elsewhere in this document (in perlfaq9 : &#8220;How do I decode or create those %-encodings on the web&#8221; and perlfaq4 : &#8220;How do I determine whether a scalar is a number/whole/integer/float&#8221;, to be precise).</p>
 <dl>
 <dt>&bull;</dt>
 <dd> How can I hope to use regular expressions without creating illegible and unmaintainable code?</dd>
@@ -431,11 +431,11 @@ description: "perlfaq – Frequently asked questions about Perl"
 <dt>&bull;</dt>
 <dd> How can I pull out lines between two patterns that are themselves on different lines?</dd>
 <dt>&bull;</dt>
-<dd> How do I match <font SIZE="-1">XML, HTML,</font> or other nasty, ugly things with a regex?</dd>
+<dd> How do I match XML, HTML, or other nasty, ugly things with a regex?</dd>
 <dt>&bull;</dt>
 <dd> I put a regular expression into $/ but it didn&#8217;t work. What&#8217;s wrong?</dd>
 <dt>&bull;</dt>
-<dd> How do I substitute case-insensitively on the <font SIZE="-1">LHS</font> while preserving case on the <font SIZE="-1">RHS</font>?</dd>
+<dd> How do I substitute case-insensitively on the LHS while preserving case on the RHS?</dd>
 <dt>&bull;</dt>
 <dd> How can I make <tt>&quot;\w&quot;</tt> match national character sets?</dd>
 <dt>&bull;</dt>
@@ -465,7 +465,7 @@ description: "perlfaq – Frequently asked questions about Perl"
 <dt>&bull;</dt>
 <dd> What good is <tt>&quot;\G&quot;</tt> in a regular expression?</dd>
 <dt>&bull;</dt>
-<dd> Are Perl regexes DFAs or NFAs? Are they <font SIZE="-1">POSIX</font> compliant?</dd>
+<dd> Are Perl regexes DFAs or NFAs? Are they POSIX compliant?</dd>
 <dt>&bull;</dt>
 <dd> What&#8217;s wrong with using grep in a void context?</dd>
 <dt>&bull;</dt>
@@ -494,7 +494,7 @@ description: "perlfaq – Frequently asked questions about Perl"
 <dt>&bull;</dt>
 <dd> How do I create a module?</dd>
 <dt>&bull;</dt>
-<dd> How do I adopt or take over a module already on <font SIZE="-1">CPAN</font>?</dd>
+<dd> How do I adopt or take over a module already on CPAN?</dd>
 <dt>&bull;</dt>
 <dd> How do I create a class?</dd>
 <dt>&bull;</dt>
@@ -536,9 +536,9 @@ description: "perlfaq – Frequently asked questions about Perl"
 <dt>&bull;</dt>
 <dd> What does &#8220;bad interpreter&#8221; mean?</dd>
 <dt>&bull;</dt>
-<dd> Do I need to recompile <font SIZE="-1">XS</font> modules when there is a change in the C library?</dd></dl>
+<dd> Do I need to recompile XS modules when there is a change in the C library?</dd></dl>
 <h3>perlfaq8: System Interaction</h3>
-<p> This section of the Perl <font SIZE="-1">FAQ</font> covers questions involving operating system interaction. Topics include interprocess communication (<font SIZE="-1">IPC</font>), control over the user-interface (keyboard, screen and pointing devices), and most anything else not related to data manipulation.</p>
+<p> This section of the Perl FAQ covers questions involving operating system interaction. Topics include interprocess communication (IPC), control over the user-interface (keyboard, screen and pointing devices), and most anything else not related to data manipulation.</p>
 <dl>
 <dt>&bull;</dt>
 <dd> How do I find out which operating system I&#8217;m running under?</dd>
@@ -589,7 +589,7 @@ description: "perlfaq – Frequently asked questions about Perl"
 <dt>&bull;</dt>
 <dd> Why can&#8217;t I get the output of a command with <code>system()</code>?</dd>
 <dt>&bull;</dt>
-<dd> How can I capture <font SIZE="-1">STDERR</font> from an external command?</dd>
+<dd> How can I capture STDERR from an external command?</dd>
 <dt>&bull;</dt>
 <dd> Why doesn&#8217;t <code>open()</code> return an error when a pipe open fails?</dd>
 <dt>&bull;</dt>
@@ -597,7 +597,7 @@ description: "perlfaq – Frequently asked questions about Perl"
 <dt>&bull;</dt>
 <dd> How can I call backticks without shell processing?</dd>
 <dt>&bull;</dt>
-<dd> Why can&#8217;t my script read from <font SIZE="-1">STDIN</font> after I gave it <font SIZE="-1">EOF</font> (^D on Unix, ^Z on MS-DOS)?</dd>
+<dd> Why can&#8217;t my script read from STDIN after I gave it EOF (^D on Unix, ^Z on MS-DOS)?</dd>
 <dt>&bull;</dt>
 <dd> How can I convert my shell script to perl?</dd>
 <dt>&bull;</dt>
@@ -617,11 +617,11 @@ description: "perlfaq – Frequently asked questions about Perl"
 <dt>&bull;</dt>
 <dd> How do I timeout a slow event?</dd>
 <dt>&bull;</dt>
-<dd> How do I set <font SIZE="-1">CPU</font> limits?</dd>
+<dd> How do I set CPU limits?</dd>
 <dt>&bull;</dt>
 <dd> How do I avoid zombies on a Unix system?</dd>
 <dt>&bull;</dt>
-<dd> How do I use an <font SIZE="-1">SQL</font> database?</dd>
+<dd> How do I use an SQL database?</dd>
 <dt>&bull;</dt>
 <dd> How do I make a <code>system()</code> exit on control-C?</dd>
 <dt>&bull;</dt>
@@ -629,7 +629,7 @@ description: "perlfaq – Frequently asked questions about Perl"
 <dt>&bull;</dt>
 <dd> How do I tell the difference between errors from the shell and perl?</dd>
 <dt>&bull;</dt>
-<dd> How do I install a module from <font SIZE="-1">CPAN</font>?</dd>
+<dd> How do I install a module from CPAN?</dd>
 <dt>&bull;</dt>
 <dd> What&#8217;s the difference between require and use?</dd>
 <dt>&bull;</dt>
@@ -650,15 +650,15 @@ description: "perlfaq – Frequently asked questions about Perl"
 <dt>&bull;</dt>
 <dd> Which web framework should I use?</dd>
 <dt>&bull;</dt>
-<dd> What is Plack and <font SIZE="-1">PSGI</font>?</dd>
+<dd> What is Plack and PSGI?</dd>
 <dt>&bull;</dt>
-<dd> How do I remove <font SIZE="-1">HTML</font> from a string?</dd>
+<dd> How do I remove HTML from a string?</dd>
 <dt>&bull;</dt>
 <dd> How do I extract URLs?</dd>
 <dt>&bull;</dt>
-<dd> How do I fetch an <font SIZE="-1">HTML</font> file?</dd>
+<dd> How do I fetch an HTML file?</dd>
 <dt>&bull;</dt>
-<dd> How do I automate an <font SIZE="-1">HTML</font> form submission?</dd>
+<dd> How do I automate an HTML form submission?</dd>
 <dt>&bull;</dt>
 <dd> How do I decode or create those %-encodings on the web?</dd>
 <dt>&bull;</dt>
@@ -666,27 +666,27 @@ description: "perlfaq – Frequently asked questions about Perl"
 <dt>&bull;</dt>
 <dd> How do I put a password on my web pages?</dd>
 <dt>&bull;</dt>
-<dd> How do I make sure users can&#8217;t enter values into a form that causes my <font SIZE="-1">CGI</font> script to do bad things?</dd>
+<dd> How do I make sure users can&#8217;t enter values into a form that causes my CGI script to do bad things?</dd>
 <dt>&bull;</dt>
 <dd> How do I parse a mail header?</dd>
 <dt>&bull;</dt>
 <dd> How do I check a valid mail address?</dd>
 <dt>&bull;</dt>
-<dd> How do I decode a <font SIZE="-1">MIME/BASE64</font> string?</dd>
+<dd> How do I decode a MIME/BASE64 string?</dd>
 <dt>&bull;</dt>
 <dd> How do I find the user&#8217;s mail address?</dd>
 <dt>&bull;</dt>
 <dd> How do I send email?</dd>
 <dt>&bull;</dt>
-<dd> How do I use <font SIZE="-1">MIME</font> to make an attachment to a mail message?</dd>
+<dd> How do I use MIME to make an attachment to a mail message?</dd>
 <dt>&bull;</dt>
 <dd> How do I read email?</dd>
 <dt>&bull;</dt>
-<dd> How do I find out my hostname, domainname, or <font SIZE="-1">IP</font> address?</dd>
+<dd> How do I find out my hostname, domainname, or IP address?</dd>
 <dt>&bull;</dt>
 <dd> How do I fetch/put an (S)FTP file?</dd>
 <dt>&bull;</dt>
-<dd> How can I do <font SIZE="-1">RPC</font> in Perl?</dd></dl>
+<dd> How can I do RPC in Perl?</dd></dl>
 <h2>CREDITS</h2>
 <p> Tom Christiansen wrote the original perlfaq then expanded it with the help of Nat Torkington. brian d foy substantially edited and expanded the perlfaq. perlfaq-workers and others have also supplied feedback, patches and corrections over the years.</p>
 <h2>AUTHOR AND COPYRIGHT</h2>

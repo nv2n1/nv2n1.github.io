@@ -67,7 +67,7 @@ nis [NOTFOUND=return] files</code></pre>
 <dd>Optional actions to perform if a particular result is obtained from the preceding service, for example, &quot;[NOTFOUND=return]&quot;.</dd></dl>
 <p> The service specifications supported on your system depend on the presence of shared libraries, and are therefore extensible. Libraries called <i>/lib/libnss_SERVICE.so.</i><code>X</code> will provide the named <i>SERVICE</i>. On a standard installation, you can use &quot;files&quot;, &quot;db&quot;, &quot;nis&quot;, and &quot;nisplus&quot;. For the <code>hosts</code> database, you can additionally specify &quot;dns&quot;. For the <code>passwd</code>, <code>group</code>, and <code>shadow</code> databases, you can additionally specify &quot;compat&quot; (see <code>Compatibility mode</code> below). The version number <code>X</code> may be 1 for glibc 2.0, or 2 for glibc 2.1 and later. On systems with additional libraries installed, you may have access to further services such as &quot;hesiod&quot;, &quot;ldap&quot;, &quot;winbind&quot; and &quot;wins&quot;. An action may also be specified following a service specification. The action modifies the behavior following a result obtained from the preceding data source. Action items take the general form:</p>
 <dl>
-<dd>[<i>STATUS</i>=<i>ACTION</i>]<br />
+<dd>[<i>STATUS</i>=<i>ACTION</i>]<br/>
  [!<i>STATUS</i>=<i>ACTION</i>]</dd></dl>
 <p> where </p>
 <pre><code>STATUS

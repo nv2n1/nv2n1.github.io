@@ -26,17 +26,17 @@ description: "mailutil – mail utility program"
 <p> <code>mailutil</code> replaces the old chkmail, imapcopy, imapmove, imapxfer, mbxcopy, mbxcreat, and mbxcvt programs. </p>
 <p> <code>mailutil check</code> determines whether new mail exists in the given mailbox (the default is INBOX). The number of new messages is defined as the number of messages that have &quot;Recent&quot; status set. If the mailbox contains no new messages, <code>mailutil check</code> will indicate that no new mail is present; otherwise, it will report the number of new messages. In either case, it will also indicate the canonical form of the name of the mailbox. </p>
 <p> <code>mailutil create</code> creates a new <i>mailbox</i> with the given name. The mailbox name must not already exist. A mailbox can be created in a particular format by prefixing the name with <i>#driver.</i> followed by the format name and a <i>/</i> character. For example, the command </p>
-<p>mailutil create&nbsp;<wbr>#driver.mbx/junkmail<br />
+<p>mailutil create&nbsp;<wbr>#driver.mbx/junkmail<br/>
  will create a new mailbox named &quot;junkmail&quot; in mbx format. </p>
 <p> <code>mailutil delete</code> deletes an existing <i>mailbox</i> with the given name. </p>
 <p> <code>mailutil rename</code> renames an existing mailbox to a new name (which must not already exist). This only works if the old and new names are in the same mail store. A more general means to rename a mailbox is to do a <code>mailutil copy</code> of the old name to the new name, followed by a <code>mailutil delete</code> of the old name. </p>
 <p> <code>mailutil copy</code> creates a new mailbox and copies messages from the old mailbox to the new mailbox. As in <code>mailutil create</code> a mailbox format can be specified with the new mailbox. For example, the command </p>
-<p>mailutil copy INBOX&nbsp;<wbr>#driver.mbx/INBOX<br />
+<p>mailutil copy INBOX&nbsp;<wbr>#driver.mbx/INBOX<br/>
  will copy messages from your existing INBOX to an mbx-format INBOX. </p>
 <p> <code>mailutil move</code> is similar to <code>mailutil copy</code> but in addition will also remove (delete and expunge) the messages from the old mailbox after copying them to the new mailbox. </p>
 <p> <code>mailutil append</code> and <code>mailutil appenddelete</code> are similar to <code>mailutil copy</code> and <code>mailutil move</code> respectively except that they do not create the destination mailbox. </p>
 <p> <code>mailutil prune</code> prunes the mailbox of messages which match certain criteria, which are in the form of IMAP2 (RFC 1176) SEARCH arguments. For example, the command. </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>mailutil prune INBOX&nbsp;<wbr>&quot;before 1-jan-2004&quot;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>mailutil prune INBOX&nbsp;<wbr>&quot;before 1-jan-2004&quot;<br/>
  will delete and expunge all messages written before January 1, 2004. </p>
 <p> Note that mailutil implements pruning by deleting the matching messages, and then expunging the mailbox. Consequently, mailutil will also expunge any messages which were deleted at the time of the pruning. </p>
 <p> <code>mailutil transfer</code> copies an entire hierarchy of mailboxes from the named source to the named destination. Mailboxes are created on the destination as needed. Any error in copying messages will cause the transfer to stop. </p>
@@ -45,9 +45,9 @@ description: "mailutil – mail utility program"
 <p> <code>-m[erge] append</code> indicates that it&#8217;s alright to copy the messages into an existing mailbox with that name. If the mailbox does not exist, the user will be prompted for an alternative name. </p>
 <p> <code>-m[erge] suffix=XXXX</code> where XXXX is any string, indicates that an alternative name should be built by appending the given suffix to the name. It that alternative name can&#8217;t be created, then the user will be prompted for an alternative name. </p>
 <p> The source hierarchy consists of all mailboxes which start with the given source name. With the exception of a remote system specification (within &quot;{}&quot; braces), the source name is used as the name of the destination. The destination hierarchy is a prefix applied to any new names being created. For example, </p>
-<p>mailutil transfer foo bar<br />
+<p>mailutil transfer foo bar<br/>
  will copy all mailboxes with names beginning with &quot;foo&quot; to names beginning with &quot;bar&quot; (hence &quot;foobar&quot; will be copied to &quot;barfoobar&quot;). Similarly, </p>
-<p>mailutil transfer&nbsp;<wbr>&quot;{imap.foo.com}&quot;&nbsp;<wbr>&quot;{imap.bar.com}old/&quot;<br />
+<p>mailutil transfer&nbsp;<wbr>&quot;{imap.foo.com}&quot;&nbsp;<wbr>&quot;{imap.bar.com}old/&quot;<br/>
  will copy all mailboxes from the imap.foo.com IMAP server to equivalent names starting with &quot;old/&quot; on the imap.bar.com IMAP server.</p>
 <h2>FLAGS</h2>
 <p> The <code>-d</code> or <code>-debug</code> flag prints full debugging telemetry including protocol operations. </p>

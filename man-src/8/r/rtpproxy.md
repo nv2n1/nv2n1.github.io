@@ -48,7 +48,7 @@ description: "rtpproxy – RTP (Real-time Transport Protocol) Proxy Server"
 <p> Example: -s udp:127.0.0.1:9000 </p>
 <p> IP address can be &#8216;*&#8217; in which case rtpproxy will listen on all local interfaces. If omitted port 22222 is used. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  RTPProxy control protocol has no built-in security mechanisms. Make sure that you protect the listening IP and port properly when using RTPProxy with UDP control socket. </dd>
 </dl>
 </dl>

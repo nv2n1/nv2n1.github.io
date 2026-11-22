@@ -12,10 +12,10 @@ description: "dbcolstatscores – compute z-scores or t-scores for each value in
 <h2>SYNOPSIS</h2>
 <p> dbcolstatscores [-t] [&#8211;tmean=MEAN] [&#8211;tstddev=STDDEV] column</p>
 <h2>DESCRIPTION</h2>
-<p> Compute statistics (z-score and optionally t-score) over a <font SIZE="-1">COLUMN</font> of numbers. Creates new columns called &#8220;zscore&#8221;, &#8220;tscore&#8221;. T-scores are only computed if requested with the <tt>&quot;-t&quot;</tt> option, or if <tt>&quot;--tmean&quot;</tt> or <tt>&quot;--tstddev&quot;</tt> are explicitly specified (defaults are mean of 50, standard deviation of 10). </p>
+<p> Compute statistics (z-score and optionally t-score) over a COLUMN of numbers. Creates new columns called &#8220;zscore&#8221;, &#8220;tscore&#8221;. T-scores are only computed if requested with the <tt>&quot;-t&quot;</tt> option, or if <tt>&quot;--tmean&quot;</tt> or <tt>&quot;--tstddev&quot;</tt> are explicitly specified (defaults are mean of 50, standard deviation of 10). </p>
 <p> You may recall from your statistics class that a z-score is simply the value normalized by mean and standard deviation, so that 0.0 is the mean and positive or negative values are multiples of the standard deviation. It assumes data follows a normal (Gaussian) distribution. </p>
 <p> T-score scales the z-score to match a mean of 50 and a standard deviation of 10. This program allows generalized t-scores that use any mean and standard deviation. </p>
-<p> Other scales are sometimes used as well. The Wechsler Adult Intelligence Scale (one type of <font SIZE="-1">IQ</font> test) is adjusted to a mean of 100 and a standard deviation of 15. Other tests scale to other standard deviations. </p>
+<p> Other scales are sometimes used as well. The Wechsler Adult Intelligence Scale (one type of IQ test) is adjusted to a mean of 100 and a standard deviation of 15. Other tests scale to other standard deviations. </p>
 <p> This program requires two passes over the data, and consumes O(1) memory and O(number of rows) disk space.</p>
 <h2>OPTIONS</h2>
 <dl>
@@ -23,14 +23,14 @@ description: "dbcolstatscores – compute z-scores or t-scores for each value in
 <dd> Compute stats over all records (treat non-numeric records as zero rather than just ignoring them).</dd>
 <dt><code>-t</code></dt>
 <dd> Compute t-scores in addition to z-scores.</dd>
-<dt><code>&#8211;tmean </code><font SIZE="-1"><code>MEAN</code></font></dt>
-<dd> Use the given <font SIZE="-1">MEAN</font> for t-scores.</dd>
-<dt><code>&#8211;tstddev </code><font SIZE="-1"><code>STDDEV</code></font> or <code>&#8211;tsd </code><font SIZE="-1"><code>STDDEV</code></font></dt>
-<dd> Use the given <font SIZE="-1">STDDEV</font> for the standard deviation of the t-scores.</dd>
-<dt><code>-f </code><font SIZE="-1"><code>FORMAT</code></font> or <code>&#8211;format </code><font SIZE="-1"><code>FORMAT</code></font></dt>
+<dt><code>&#8211;tmean </code><code>MEAN</code></dt>
+<dd> Use the given MEAN for t-scores.</dd>
+<dt><code>&#8211;tstddev </code><code>STDDEV</code> or <code>&#8211;tsd </code><code>STDDEV</code></dt>
+<dd> Use the given STDDEV for the standard deviation of the t-scores.</dd>
+<dt><code>-f </code><code>FORMAT</code> or <code>&#8211;format </code><code>FORMAT</code></dt>
 <dd> Specify a <i><a href="/docs/linux/man/3-printf/">printf</a></i>(3)-style format for output statistics. Defaults to <tt>&quot;%.5g&quot;</tt>.</dd>
 <dt><code>-T TmpDir</code></dt>
-<dd> where to put tmp files. Also uses environment variable <font SIZE="-1">TMPDIR,</font> if -T is not specified. Default is /tmp.</dd></dl>
+<dd> where to put tmp files. Also uses environment variable TMPDIR, if -T is not specified. Default is /tmp.</dd></dl>
 <p> This module also supports the standard fsdb options:</p>
 <dl>
 <dt><code>-d</code></dt>
@@ -76,4 +76,4 @@ description: "dbcolstatscores – compute z-scores or t-scores for each value in
 <p> <i><a href="/docs/linux/man/1-dbcolpercentile/">dbcolpercentile</a></i>(1), <i><a href="/docs/linux/man/1-dbcolstats/">dbcolstats</a></i>(1), Fsdb, dbcolscorrelate</p>
 <h2>AUTHOR and COPYRIGHT</h2>
 <p> Copyright (C) 1991-2007 by John Heidemann &lt;johnh [at] isi.edu&gt; </p>
-<p> This program is distributed under terms of the <font SIZE="-1">GNU</font> general public license, version 2. See the file <font SIZE="-1">COPYING</font> with the distribution for details. </p>
+<p> This program is distributed under terms of the GNU general public license, version 2. See the file COPYING with the distribution for details. </p>

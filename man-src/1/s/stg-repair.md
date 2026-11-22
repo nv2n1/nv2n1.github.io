@@ -46,7 +46,7 @@ convenient to make commits with a graphical tool and then have
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  If using git commands on the stack was a mistake, running &quot;stg repair&quot; is <i>not</i> what you want. In that case, what you want is option (1) above. </dd>
 </dl>
 <h2>STGIT</h2>

@@ -17,19 +17,19 @@ description: "yuvdenoise – Motion-Compensating-YUV4MPEG2-frame-denoiser"
 <p> <code>yuvdenoise</code> accepts the following options:</p>
 <dl>
 <dt><code>-g</code><i> y,u,v [0..255] Gaussian filter thresholds</i></dt>
-<dd> This sets the thresholds for the gaussian filter. A value of 0 disables filtering for a specific component and 0,0,0 completely disables/bypasses the filter. This filter is applied <code>before</code> the temporal (-t) filter.<br />
+<dd> This sets the thresholds for the gaussian filter. A value of 0 disables filtering for a specific component and 0,0,0 completely disables/bypasses the filter. This filter is applied <code>before</code> the temporal (-t) filter.<br/>
  (default=0,0,0) </dd>
 <dt><code>-m</code><i> y,u,v [0..255] Pre 3D Median filter thresholds</i></dt>
-<dd> This sets the thresholds for the pre-processing 3D median filter. A value of 0 disables median filtering for a specific component and 0,0,0 completely disables/bypasses the filter. This filter is applied <code>before</code> the temporal (-t) filter.<br />
+<dd> This sets the thresholds for the pre-processing 3D median filter. A value of 0 disables median filtering for a specific component and 0,0,0 completely disables/bypasses the filter. This filter is applied <code>before</code> the temporal (-t) filter.<br/>
  (default=0,0,0) </dd>
 <dt><code>-r</code><i> y,u,v [0..255] Renoising filter thresholds</i></dt>
-<dd> This sets the thresholds for adding random &quot;noise&quot; back into the video stream. Default is disabled (not adding random noise). This filter, if enabled, is run as the Blast filter (after the median and temporal filters). Reasonable value is 4,8,8 but if you are working with monochrome (black and white movie) then 4,0,0 will speed things up by not processing the chroma planes.<br />
+<dd> This sets the thresholds for adding random &quot;noise&quot; back into the video stream. Default is disabled (not adding random noise). This filter, if enabled, is run as the Blast filter (after the median and temporal filters). Reasonable value is 4,8,8 but if you are working with monochrome (black and white movie) then 4,0,0 will speed things up by not processing the chroma planes.<br/>
  (default=0,0,0) </dd>
 <dt><code>-t</code><i> y,u,v [0..255] Temporal noise-filter thresholds</i></dt>
-<dd> This sets the thresholds for the temporal noise-filter. Values above 12 may introduce ghosting. The default value for Y&#8217; (y) is often a little high and reducing it to 4 or 5 may be necessary. If the chroma smears or ghosts try using values of 5 or 6 instead of the default (12). A value of 0 disables temporal filtering for the specified component (0,0,0 disables/bypasses all temporal filtering). Thus for black and white movies 4,0,0 will be faster by not denoising the chroma planes.<br />
+<dd> This sets the thresholds for the temporal noise-filter. Values above 12 may introduce ghosting. The default value for Y&#8217; (y) is often a little high and reducing it to 4 or 5 may be necessary. If the chroma smears or ghosts try using values of 5 or 6 instead of the default (12). A value of 0 disables temporal filtering for the specified component (0,0,0 disables/bypasses all temporal filtering). Thus for black and white movies 4,0,0 will be faster by not denoising the chroma planes.<br/>
  (default=4,8,8) </dd>
 <dt><code>-M</code><i> y,u,v [0..255] Post 3D Median filter thresholds</i></dt>
-<dd> This sets the thresholds for the post-processing 3D median filter. A value of 0 disables median filtering for a specific component and 0,0,0 completely disables/bypasses the filter. This filter is applied <code>after</code> the temporal (-t) filter. Reasonable value is 4,8,8 but if you are working with monochrome (black and white movie) then 4,0,0 will speed things up by not processing the chroma planes.<br />
+<dd> This sets the thresholds for the post-processing 3D median filter. A value of 0 disables median filtering for a specific component and 0,0,0 completely disables/bypasses the filter. This filter is applied <code>after</code> the temporal (-t) filter. Reasonable value is 4,8,8 but if you are working with monochrome (black and white movie) then 4,0,0 will speed things up by not processing the chroma planes.<br/>
  (default=0,0,0) </dd>
 </dl>
 <h2>HOW IT WORKS</h2>

@@ -85,12 +85,12 @@ description: "ngspice – circuit simulator derived from spice]3f5"
 <dt><i>.spiceinit</i> or <i>$HOME/.spiceinit</i></dt>
 <dd> The User&#8217;s Initialisation File.</dd></dl>
 <h2>SEE ALSO</h2>
-<p> sconvert(1), <a href="/docs/linux/man/1-ngnutmeg/">ngnutmeg</a>(1), mfb(3), writedata(3), and<br />
+<p> sconvert(1), <a href="/docs/linux/man/1-ngnutmeg/">ngnutmeg</a>(1), mfb(3), writedata(3), and<br/>
  ngspice] User&#8217;s Manual at <code><a rel="nofollow" href="http://ngspice.sourceforge.net/docs.html">http://ngspice.sourceforge.net/docs.html</a></code></p>
 <h2>BUGS</h2>
-<p> Please report bugs to the ngspice project via<br />
+<p> Please report bugs to the ngspice project via<br/>
  <code><a rel="nofollow" href="http://ngspice.sourceforge.net/bugrep.html">http://ngspice.sourceforge.net/bugrep.html</a></code></p>
 <h2>AUTHORS</h2>
-<p> <code>spice3</code>: Tom Quarles (quarles [at] cad.berkeley.edu)<br />
- <code>nutmeg</code>: User interface: Wayne Christopher (faustus [at] cad.berkeley.edu)<br />
+<p> <code>spice3</code>: Tom Quarles (quarles [at] cad.berkeley.edu)<br/>
+ <code>nutmeg</code>: User interface: Wayne Christopher (faustus [at] cad.berkeley.edu)<br/>
  <code>ngspice</code>: various authors (see <code><a rel="nofollow" href="http://sourceforge.net/projects/ngspice/">http://sourceforge.net/projects/ngspice/</a></code>) </p>

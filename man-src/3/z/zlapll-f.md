@@ -10,7 +10,7 @@ description: "zlapll.f –"
 <p>zlapll.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlapll</code> (N, X, INCX, Y, INCY, SSMIN)<br />
+<p>subroutine <code>zlapll</code> (N, X, INCX, Y, INCY, SSMIN)<br/>
  <i></i><code>ZLAPLL</code> measures the linear dependence of two vectors.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlapll (integerN, complex*16, dimension( * )X, integerINCX, complex*16, dimension( * )Y, integerINCY, double precisionSSMIN)</h3>

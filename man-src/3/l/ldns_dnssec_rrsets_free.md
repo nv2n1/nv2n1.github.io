@@ -10,7 +10,7 @@ description: "ldns_dnssec_rrsets_new, ldns_dnssec_rrsets_free, ldns_dnssec_rrset
 
 <p> ldns_dnssec_rrsets_new, ldns_dnssec_rrsets_free, ldns_dnssec_rrsets_type, ldns_dnssec_rrsets_set_type, ldns_dnssec_rrsets_add_rr, ldns_dnssec_rrsets_print </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ldns_dnssec_rrsets* ldns_dnssec_rrsets_new(); </p>

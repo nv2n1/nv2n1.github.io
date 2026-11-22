@@ -10,15 +10,15 @@ description: "getumask – get file creation mask"
 
 <p> getumask &#8211; get file creation mask </p>
 <h2>SYNOPSIS</h2>
-<p> <code>#define _GNU_SOURCE</code> /* See <a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a>(7) */<br />
- <code>#include &lt;sys/types.h&gt;</code><br />
+<p> <code>#define _GNU_SOURCE</code> /* See <a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a>(7) */<br/>
+ <code>#include &lt;sys/types.h&gt;</code><br/>
  <code>#include &lt;sys/stat.h&gt;</code> </p>
 <p> <code>mode_t getumask(void);</code></p>
 <h2>DESCRIPTION</h2>
 <p> This function returns the current file creation mask. It is equivalent to </p>
-<p> mode_t getumask(void) {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;mode_t mask&nbsp;=&nbsp;umask(&nbsp;0&nbsp;);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;umask(mask);<br />
+<p> mode_t getumask(void) {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;mode_t mask&nbsp;=&nbsp;umask(&nbsp;0&nbsp;);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;umask(mask);<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;return mask; } </p>
 <p> except that it is documented to be thread-safe (that is, shares a lock with the <code><a href="/docs/linux/man/2-umask/">umask</a></code>(2) library call).</p>
 <h2>CONFORMING TO</h2>

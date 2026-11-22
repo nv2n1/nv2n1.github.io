@@ -10,9 +10,9 @@ description: "fence_virt – Fencing agent for virtual machines using VM Channel
 <p>fence_virt &#8211; Fencing agent for virtual machines using VM Channel </p>
 <p> fence_xvm &#8211; Fencing agent for virtual machines using multicast</p>
 <h2>Description</h2>
-<p>fence_virt and fence_xvm are an I/O Fencing agents which can be used with virtual machines. Fence_xvm is backward compatible with fence_xvmd. Fence_virt and fence_xvm talk to fence_virtd, which supports multiple backend plugins, including:<br />
-&nbsp;<wbr>&#8211; libvirt for single-node operation<br />
-&nbsp;<wbr>&#8211; Cluster Checkpoints when using Linux-cluster release 3.0.0 or later<br />
+<p>fence_virt and fence_xvm are an I/O Fencing agents which can be used with virtual machines. Fence_xvm is backward compatible with fence_xvmd. Fence_virt and fence_xvm talk to fence_virtd, which supports multiple backend plugins, including:<br/>
+&nbsp;<wbr>&#8211; libvirt for single-node operation<br/>
+&nbsp;<wbr>&#8211; Cluster Checkpoints when using Linux-cluster release 3.0.0 or later<br/>
 &nbsp;<wbr>&#8211; libvirt-qpid for multi-node, non-cluster operation For compatibility, fence_xvm may talk to fence_xvmd from linux-cluster release 2 or later. fence_virt and fence_xvm accept options on the command line as well as from stdin. The fencing daemon sends parameters through stdin when it execs the agent. The agent may be run by itself with command line options, which is useful for testing or turning on or off virtual machines from scripts. </p>
 <h2>General Parameters</h2>
 <p><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></p>

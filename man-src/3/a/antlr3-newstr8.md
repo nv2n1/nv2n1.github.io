@@ -17,16 +17,16 @@ description: "src/antlr3string.c –"
 <p> static <code>pANTLR3_UINT8</code> <code>addi16</code> (<code>pANTLR3_STRING</code> string, <code>ANTLR3_INT32</code> i) </p>
 <p> static <code>pANTLR3_UINT8</code> <code>addi8</code> (<code>pANTLR3_STRING</code> string, <code>ANTLR3_INT32</code> i) </p>
 <p> ANTLR3_API <code>pANTLR3_STRING_FACTORY</code> <code>antlr3StringFactoryNew</code> () </p>
-<p> ANTLR3_API <code>pANTLR3_STRING_FACTORY</code> <code>antlr3UCS2StringFactoryNew</code> ()<br />
- <i>Create a string factory that is UCS2 (16 bit) encoding based. </i><br />
+<p> ANTLR3_API <code>pANTLR3_STRING_FACTORY</code> <code>antlr3UCS2StringFactoryNew</code> ()<br/>
+ <i>Create a string factory that is UCS2 (16 bit) encoding based. </i><br/>
  static <code>pANTLR3_UINT8</code> <code>append16_16</code> (<code>pANTLR3_STRING</code> string, const char *newbit) </p>
 <p> static <code>pANTLR3_UINT8</code> <code>append16_8</code> (<code>pANTLR3_STRING</code> string, const char *newbit) </p>
 <p> static <code>pANTLR3_UINT8</code> <code>append8</code> (<code>pANTLR3_STRING</code> string, const char *newbit) </p>
 <p> static <code>pANTLR3_UINT8</code> <code>appendS</code> (<code>pANTLR3_STRING</code> string, <code>pANTLR3_STRING</code> newbit) </p>
 <p> static <code>ANTLR3_UCHAR</code> <code>charAt16</code> (<code>pANTLR3_STRING</code> string, <code>ANTLR3_UINT32</code> offset) </p>
 <p> static <code>ANTLR3_UCHAR</code> <code>charAt8</code> (<code>pANTLR3_STRING</code> string, <code>ANTLR3_UINT32</code> offset) </p>
-<p> static void <code>closeFactory</code> (<code>pANTLR3_STRING_FACTORY</code> factory)<br />
- <i>Fascist Capitalist Pig function created to oppress the workers comrade. </i><br />
+<p> static void <code>closeFactory</code> (<code>pANTLR3_STRING_FACTORY</code> factory)<br/>
+ <i>Fascist Capitalist Pig function created to oppress the workers comrade. </i><br/>
  static <code>ANTLR3_UINT32</code> <code>compare16_16</code> (<code>pANTLR3_STRING</code> string, const char *compStr) </p>
 <p> static <code>ANTLR3_UINT32</code> <code>compare16_8</code> (<code>pANTLR3_STRING</code> string, const char *compStr) </p>
 <p> static <code>ANTLR3_UINT32</code> <code>compare8</code> (<code>pANTLR3_STRING</code> string, const char *compStr) </p>
@@ -38,24 +38,24 @@ description: "src/antlr3string.c –"
 <p> static <code>pANTLR3_UINT8</code> <code>inserti16</code> (<code>pANTLR3_STRING</code> string, <code>ANTLR3_UINT32</code> point, <code>ANTLR3_INT32</code> i) </p>
 <p> static <code>pANTLR3_UINT8</code> <code>inserti8</code> (<code>pANTLR3_STRING</code> string, <code>ANTLR3_UINT32</code> point, <code>ANTLR3_INT32</code> i) </p>
 <p> static <code>pANTLR3_UINT8</code> <code>insertS</code> (<code>pANTLR3_STRING</code> string, <code>ANTLR3_UINT32</code> point, <code>pANTLR3_STRING</code> newbit) </p>
-<p> static <code>pANTLR3_STRING</code> <code>newPtr16_16</code> (<code>pANTLR3_STRING_FACTORY</code> factory, <code>pANTLR3_UINT8</code> ptr, <code>ANTLR3_UINT32</code> size)<br />
- <i>Creates a new 16 bit string initialized with the 16 bit characters at the supplied ptr, of pre-determined size. </i><br />
- static <code>pANTLR3_STRING</code> <code>newPtr16_8</code> (<code>pANTLR3_STRING_FACTORY</code> factory, <code>pANTLR3_UINT8</code> ptr, <code>ANTLR3_UINT32</code> size)<br />
- <i>Creates a new 16 bit string initialized with the 8 bit characters at the supplied 8 bit character ptr, of pre-determined size. </i><br />
- static <code>pANTLR3_STRING</code> <code>newPtr8</code> (<code>pANTLR3_STRING_FACTORY</code> factory, <code>pANTLR3_UINT8</code> ptr, <code>ANTLR3_UINT32</code> size)<br />
- <i>Creates a new 8 bit string initialized with the 8 bit characters at the supplied ptr, of pre-determined size. </i><br />
+<p> static <code>pANTLR3_STRING</code> <code>newPtr16_16</code> (<code>pANTLR3_STRING_FACTORY</code> factory, <code>pANTLR3_UINT8</code> ptr, <code>ANTLR3_UINT32</code> size)<br/>
+ <i>Creates a new 16 bit string initialized with the 16 bit characters at the supplied ptr, of pre-determined size. </i><br/>
+ static <code>pANTLR3_STRING</code> <code>newPtr16_8</code> (<code>pANTLR3_STRING_FACTORY</code> factory, <code>pANTLR3_UINT8</code> ptr, <code>ANTLR3_UINT32</code> size)<br/>
+ <i>Creates a new 16 bit string initialized with the 8 bit characters at the supplied 8 bit character ptr, of pre-determined size. </i><br/>
+ static <code>pANTLR3_STRING</code> <code>newPtr8</code> (<code>pANTLR3_STRING_FACTORY</code> factory, <code>pANTLR3_UINT8</code> ptr, <code>ANTLR3_UINT32</code> size)<br/>
+ <i>Creates a new 8 bit string initialized with the 8 bit characters at the supplied ptr, of pre-determined size. </i><br/>
  static <code>pANTLR3_STRING</code> <code>newRaw16</code> (<code>pANTLR3_STRING_FACTORY</code> factory) </p>
 <p> static <code>pANTLR3_STRING</code> <code>newRaw8</code> (<code>pANTLR3_STRING_FACTORY</code> factory) </p>
-<p> static <code>pANTLR3_STRING</code> <code>newSize16</code> (<code>pANTLR3_STRING_FACTORY</code> factory, <code>ANTLR3_UINT32</code> size)<br />
- <i>Creates a new string with enough capacity for size 16 bit characters plus a terminator. </i><br />
- static <code>pANTLR3_STRING</code> <code>newSize8</code> (<code>pANTLR3_STRING_FACTORY</code> factory, <code>ANTLR3_UINT32</code> size)<br />
- <i>Creates a new string with enough capacity for size 8 bit characters plus a terminator. </i><br />
- static <code>pANTLR3_STRING</code> <code>newStr16_16</code> (<code>pANTLR3_STRING_FACTORY</code> factory, <code>pANTLR3_UINT8</code> ptr)<br />
- <i>Create a new 16 bit string from the supplied, null terminated, 16 bit string pointer. </i><br />
- static <code>pANTLR3_STRING</code> <code>newStr16_8</code> (<code>pANTLR3_STRING_FACTORY</code> factory, <code>pANTLR3_UINT8</code> ptr)<br />
- <i>Create a new 16 bit string from the supplied, null terminated, 8 bit string pointer. </i><br />
- static <code>pANTLR3_STRING</code> <code>newStr8</code> (<code>pANTLR3_STRING_FACTORY</code> factory, <code>pANTLR3_UINT8</code> ptr)<br />
- <i>Create a new 8 bit string from the supplied, null terminated, 8 bit string pointer. </i><br />
+<p> static <code>pANTLR3_STRING</code> <code>newSize16</code> (<code>pANTLR3_STRING_FACTORY</code> factory, <code>ANTLR3_UINT32</code> size)<br/>
+ <i>Creates a new string with enough capacity for size 16 bit characters plus a terminator. </i><br/>
+ static <code>pANTLR3_STRING</code> <code>newSize8</code> (<code>pANTLR3_STRING_FACTORY</code> factory, <code>ANTLR3_UINT32</code> size)<br/>
+ <i>Creates a new string with enough capacity for size 8 bit characters plus a terminator. </i><br/>
+ static <code>pANTLR3_STRING</code> <code>newStr16_16</code> (<code>pANTLR3_STRING_FACTORY</code> factory, <code>pANTLR3_UINT8</code> ptr)<br/>
+ <i>Create a new 16 bit string from the supplied, null terminated, 16 bit string pointer. </i><br/>
+ static <code>pANTLR3_STRING</code> <code>newStr16_8</code> (<code>pANTLR3_STRING_FACTORY</code> factory, <code>pANTLR3_UINT8</code> ptr)<br/>
+ <i>Create a new 16 bit string from the supplied, null terminated, 8 bit string pointer. </i><br/>
+ static <code>pANTLR3_STRING</code> <code>newStr8</code> (<code>pANTLR3_STRING_FACTORY</code> factory, <code>pANTLR3_UINT8</code> ptr)<br/>
+ <i>Create a new 8 bit string from the supplied, null terminated, 8 bit string pointer. </i><br/>
  static <code>pANTLR3_STRING</code> <code>printable16</code> (<code>pANTLR3_STRING_FACTORY</code> factory, <code>pANTLR3_STRING</code> string) </p>
 <p> static <code>pANTLR3_STRING</code> <code>printable8</code> (<code>pANTLR3_STRING_FACTORY</code> factory, <code>pANTLR3_STRING</code> string) </p>
 <p> static <code>pANTLR3_UINT8</code> <code>set16_16</code> (<code>pANTLR3_STRING</code> string, const char *chars) </p>
@@ -154,7 +154,7 @@ description: "src/antlr3string.c –"
 <h3>static <code>pANTLR3_STRING</code> newPtr16_16 (<code>pANTLR3_STRING_FACTORY</code> factory, <code>pANTLR3_UINT8</code> ptr, <code>ANTLR3_UINT32</code> size) [static]</h3>
 <p>Creates a new 16 bit string initialized with the 16 bit characters at the supplied ptr, of pre-determined size. <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>factory</i> &#8211; Pointer to the string factory that owns the strings<br />
+<dd><i>factory</i> &#8211; Pointer to the string factory that owns the strings<br/>
  <i>ptr</i> &#8211; Pointer to 16 bit encoded characters</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -164,7 +164,7 @@ description: "src/antlr3string.c –"
 <h3>static <code>pANTLR3_STRING</code> newPtr16_8 (<code>pANTLR3_STRING_FACTORY</code> factory, <code>pANTLR3_UINT8</code> ptr, <code>ANTLR3_UINT32</code> size) [static]</h3>
 <p>Creates a new 16 bit string initialized with the 8 bit characters at the supplied 8 bit character ptr, of pre-determined size. <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>factory</i> &#8211; Pointer to the string factory that owns the strings<br />
+<dd><i>factory</i> &#8211; Pointer to the string factory that owns the strings<br/>
  <i>ptr</i> &#8211; Pointer to 8 bit encoded characters</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -174,7 +174,7 @@ description: "src/antlr3string.c –"
 <h3>static <code>pANTLR3_STRING</code> newPtr8 (<code>pANTLR3_STRING_FACTORY</code> factory, <code>pANTLR3_UINT8</code> ptr, <code>ANTLR3_UINT32</code> size) [static]</h3>
 <p>Creates a new 8 bit string initialized with the 8 bit characters at the supplied ptr, of pre-determined size. <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>factory</i> &#8211; Pointer to the string factory that owns the strings<br />
+<dd><i>factory</i> &#8211; Pointer to the string factory that owns the strings<br/>
  <i>ptr</i> &#8211; Pointer to 8 bit encoded characters</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -200,7 +200,7 @@ description: "src/antlr3string.c –"
 <h3>static <code>pANTLR3_STRING</code> newSize16 (<code>pANTLR3_STRING_FACTORY</code> factory, <code>ANTLR3_UINT32</code> size) [static]</h3>
 <p>Creates a new string with enough capacity for size 16 bit characters plus a terminator. <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>factory</i> &#8211; POitner to the string factory that owns strings<br />
+<dd><i>factory</i> &#8211; POitner to the string factory that owns strings<br/>
  <i>size</i> &#8211; In characters</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -210,7 +210,7 @@ description: "src/antlr3string.c –"
 <h3>static <code>pANTLR3_STRING</code> newSize8 (<code>pANTLR3_STRING_FACTORY</code> factory, <code>ANTLR3_UINT32</code> size) [static]</h3>
 <p>Creates a new string with enough capacity for size 8 bit characters plus a terminator. <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>factory</i> &#8211; Pointer to the string factory that owns strings<br />
+<dd><i>factory</i> &#8211; Pointer to the string factory that owns strings<br/>
  <i>size</i> &#8211; In characters</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -220,7 +220,7 @@ description: "src/antlr3string.c –"
 <h3>static <code>pANTLR3_STRING</code> newStr16_16 (<code>pANTLR3_STRING_FACTORY</code> factory, <code>pANTLR3_UINT8</code> ptr) [static]</h3>
 <p>Create a new 16 bit string from the supplied, null terminated, 16 bit string pointer. <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>factory</i> &#8211; Pointer to the string factory that owns strings.<br />
+<dd><i>factory</i> &#8211; Pointer to the string factory that owns strings.<br/>
  <i>ptr</i> &#8211; Pointer to the 16 bit encoded string</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -231,7 +231,7 @@ description: "src/antlr3string.c –"
 <h3>static <code>pANTLR3_STRING</code> newStr16_8 (<code>pANTLR3_STRING_FACTORY</code> factory, <code>pANTLR3_UINT8</code> ptr) [static]</h3>
 <p>Create a new 16 bit string from the supplied, null terminated, 8 bit string pointer. <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>factory</i> &#8211; Pointer to the string factory that owns strings.<br />
+<dd><i>factory</i> &#8211; Pointer to the string factory that owns strings.<br/>
  <i>ptr</i> &#8211; Pointer to the 8 bit encoded string</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -241,7 +241,7 @@ description: "src/antlr3string.c –"
 <h3>static <code>pANTLR3_STRING</code> newStr8 (<code>pANTLR3_STRING_FACTORY</code> factory, <code>pANTLR3_UINT8</code> ptr) [static]</h3>
 <p>Create a new 8 bit string from the supplied, null terminated, 8 bit string pointer. <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>factory</i> &#8211; Pointer to the string factory that owns strings.<br />
+<dd><i>factory</i> &#8211; Pointer to the string factory that owns strings.<br/>
  <i>ptr</i> &#8211; Pointer to the 8 bit encoded string</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

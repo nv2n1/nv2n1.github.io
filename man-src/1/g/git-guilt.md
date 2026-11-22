@@ -10,7 +10,7 @@ description: "git-guilt – calculate change between two revisions"
 
 <p> <code>git-guilt</code> &#8211; calculate change between two revisions</p>
 <h2>SYNOPSIS</h2>
-<p> <code>git guilt</code> [&lt;option&gt;]<br />
+<p> <code>git guilt</code> [&lt;option&gt;]<br/>
  <code>git guilt</code> [&lt;option&gt;] &lt;since&gt; [&lt;until&gt;]</p>
 <h2>DESCRIPTION</h2>
 <p> In the first form, shows total blame count for files with unstaged changes. </p>
@@ -51,9 +51,9 @@ $ git guilt HEAD ~3 HEAD ^
 <dl>
 <dt>
 </dt><dd>
-$ git guilt `git log&#8211; until = &#8220;3 weeks ago&#8221; &#8211;format = &#8220;%H&#8221; &#8211; n 1` Paul Schreiber++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ +(349)spacewander++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ +(113)Mark Eissler++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++CJ++ ++ +nickl &#8211; -Jesse Sipprell &#8211;<br />
-                                                        Evan Grim &#8211;<br />
-                                                        Ben Parnell &#8211;<br />
+$ git guilt `git log&#8211; until = &#8220;3 weeks ago&#8221; &#8211;format = &#8220;%H&#8221; &#8211; n 1` Paul Schreiber++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ +(349)spacewander++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ +(113)Mark Eissler++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++CJ++ ++ +nickl &#8211; -Jesse Sipprell &#8211;<br/>
+                                                        Evan Grim &#8211;<br/>
+                                                        Ben Parnell &#8211;<br/>
                                                         hemanth.hm&#8211;</dd>
 </dl>
 <p> Since git 1.8.5, the above can also be written as: </p>

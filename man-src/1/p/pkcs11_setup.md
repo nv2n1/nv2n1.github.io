@@ -24,5 +24,5 @@ description: "pkcs11_setup – SmartCard PKCS#11 setup"
 <h2>AUTHORS</h2>
 <p> Juan Antonio Martinez &lt;jonsito [at] teleline.es&gt;</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/8-pam_pkcs11/">pam_pkcs11</a>(8)<br />
+<p> <a href="/docs/linux/man/8-pam_pkcs11/">pam_pkcs11</a>(8)<br/>
  PAM-PKCS11 User Manual </p>

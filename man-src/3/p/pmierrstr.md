@@ -9,9 +9,9 @@ description: "pmiErrStr – convert a LOGIMPORT error code into a string"
 
 <p><code>pmiErrStr</code> &#8211; convert a LOGIMPORT error code into a string</p>
 <h2>C Synopsis</h2>
-<p><code> #include &lt;pcp/pmapi.h&gt;<br />
+<p><code> #include &lt;pcp/pmapi.h&gt;<br/>
  #include &lt;pcp/import.h&gt; </p>
-<p> const char *pmiErrStr(int </code><i>code</i>);<br />
+<p> const char *pmiErrStr(int </code><i>code</i>);<br/>
  char *pmiErrStr_r(int <i>code</i>, char <i>buf</i>, int <i>buflen</i>); </p>
 <p> cc &#8230; -lpcp_import -lpcp</p>
 <h2>Perl SYNOPSIS</h2>

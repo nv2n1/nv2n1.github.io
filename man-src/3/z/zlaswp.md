@@ -10,7 +10,7 @@ description: "zlaswp.f –"
 <p>zlaswp.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlaswp</code> (N, A, LDA, K1, K2, IPIV, INCX)<br />
+<p>subroutine <code>zlaswp</code> (N, A, LDA, K1, K2, IPIV, INCX)<br/>
  <i></i><code>ZLASWP</code> performs a series of row interchanges on a general rectangular matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlaswp (integerN, complex*16, dimension( lda, * )A, integerLDA, integerK1, integerK2, integer, dimension( * )IPIV, integerINCX)</h3>

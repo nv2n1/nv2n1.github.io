@@ -10,26 +10,26 @@ description: "livemedia-creator – Create live install media"
 
 <p> livemedia-creator &#8211; Create live install media </p>
 <h2>SYNOPSIS</h2>
-<p> livemedia-creator [-h]<br />
-&nbsp;<wbr>(&#8211;make-iso | &#8211;make-disk | &#8211;make-fsimage | &#8211;make-appliance | &#8211;make-ami | &#8211;make-tar | &#8211;make-pxe-live | &#8211;make-ostree-live)<br />
-&nbsp;<wbr>[&#8211;iso ISO]&nbsp;<wbr>[&#8211;disk-image DISK_IMAGE]<br />
-&nbsp;<wbr>[&#8211;fs-image FS_IMAGE]&nbsp;<wbr>[&#8211;ks KS]<br />
-&nbsp;<wbr>[&#8211;image-name IMAGE_NAME]&nbsp;<wbr>[&#8211;image-only]<br />
-&nbsp;<wbr>[&#8211;fs-label FS_LABEL]<br />
-&nbsp;<wbr>[&#8211;compression]&nbsp;<wbr>[&#8211;compress-arg]<br />
-&nbsp;<wbr>[&#8211;live-rootfs-size LIVE_ROOTFS_SIZE]<br />
-&nbsp;<wbr>[&#8211;live-rootfs-keep-size LIVE_ROOTFS_KEEP_SIZE]<br />
-&nbsp;<wbr>[&#8211;keep-image]&nbsp;<wbr>[&#8211;no-virt]&nbsp;<wbr>[&#8211;proxy PROXY]<br />
-&nbsp;<wbr>[&#8211;anaconda-arg ANACONDA_ARGS]<br />
-&nbsp;<wbr>[&#8211;armplatform ARMPLATFORM]&nbsp;<wbr>[&#8211;location LOCATION]<br />
-&nbsp;<wbr>[&#8211;logfile LOGFILE]<br />
-&nbsp;<wbr>[&#8211;lorax-templates LORAX_TEMPLATES]&nbsp;<wbr>[&#8211;tmp TMP]<br />
-&nbsp;<wbr>[&#8211;resultdir RESULT_DIR]&nbsp;<wbr>[&#8211;app-name APP_NAME]<br />
-&nbsp;<wbr>[&#8211;app-template APP_TEMPLATE]&nbsp;<wbr>[&#8211;app-file APP_FILE]<br />
-&nbsp;<wbr>[&#8211;ram MEMORY]&nbsp;<wbr>[&#8211;vcpus VCPUS]&nbsp;<wbr>[&#8211;vnc VNC]<br />
-&nbsp;<wbr>[&#8211;arch ARCH]&nbsp;<wbr>[&#8211;kernel-args KERNEL_ARGS]<br />
-&nbsp;<wbr>[&#8211;dracut-arg DRACUT_ARGS]&nbsp;<wbr>[&#8211;title TITLE]<br />
-&nbsp;<wbr>[&#8211;project PROJECT]&nbsp;<wbr>[&#8211;releasever RELEASEVER]<br />
+<p> livemedia-creator [-h]<br/>
+&nbsp;<wbr>(&#8211;make-iso | &#8211;make-disk | &#8211;make-fsimage | &#8211;make-appliance | &#8211;make-ami | &#8211;make-tar | &#8211;make-pxe-live | &#8211;make-ostree-live)<br/>
+&nbsp;<wbr>[&#8211;iso ISO]&nbsp;<wbr>[&#8211;disk-image DISK_IMAGE]<br/>
+&nbsp;<wbr>[&#8211;fs-image FS_IMAGE]&nbsp;<wbr>[&#8211;ks KS]<br/>
+&nbsp;<wbr>[&#8211;image-name IMAGE_NAME]&nbsp;<wbr>[&#8211;image-only]<br/>
+&nbsp;<wbr>[&#8211;fs-label FS_LABEL]<br/>
+&nbsp;<wbr>[&#8211;compression]&nbsp;<wbr>[&#8211;compress-arg]<br/>
+&nbsp;<wbr>[&#8211;live-rootfs-size LIVE_ROOTFS_SIZE]<br/>
+&nbsp;<wbr>[&#8211;live-rootfs-keep-size LIVE_ROOTFS_KEEP_SIZE]<br/>
+&nbsp;<wbr>[&#8211;keep-image]&nbsp;<wbr>[&#8211;no-virt]&nbsp;<wbr>[&#8211;proxy PROXY]<br/>
+&nbsp;<wbr>[&#8211;anaconda-arg ANACONDA_ARGS]<br/>
+&nbsp;<wbr>[&#8211;armplatform ARMPLATFORM]&nbsp;<wbr>[&#8211;location LOCATION]<br/>
+&nbsp;<wbr>[&#8211;logfile LOGFILE]<br/>
+&nbsp;<wbr>[&#8211;lorax-templates LORAX_TEMPLATES]&nbsp;<wbr>[&#8211;tmp TMP]<br/>
+&nbsp;<wbr>[&#8211;resultdir RESULT_DIR]&nbsp;<wbr>[&#8211;app-name APP_NAME]<br/>
+&nbsp;<wbr>[&#8211;app-template APP_TEMPLATE]&nbsp;<wbr>[&#8211;app-file APP_FILE]<br/>
+&nbsp;<wbr>[&#8211;ram MEMORY]&nbsp;<wbr>[&#8211;vcpus VCPUS]&nbsp;<wbr>[&#8211;vnc VNC]<br/>
+&nbsp;<wbr>[&#8211;arch ARCH]&nbsp;<wbr>[&#8211;kernel-args KERNEL_ARGS]<br/>
+&nbsp;<wbr>[&#8211;dracut-arg DRACUT_ARGS]&nbsp;<wbr>[&#8211;title TITLE]<br/>
+&nbsp;<wbr>[&#8211;project PROJECT]&nbsp;<wbr>[&#8211;releasever RELEASEVER]<br/>
 &nbsp;<wbr>[&#8211;volid VOLID]&nbsp;<wbr>[&#8211;squashfs_args SQUASHFS_ARGS] </p>
 <h2>DESCRIPTION</h2>
 <p> livemedia-creator uses Anaconda, kickstart and Lorax to create bootable media that use the same install path as a normal system install. It can be used to make live isos, bootable (partitioned) disk images and filesystem images for use with virtualization. </p>

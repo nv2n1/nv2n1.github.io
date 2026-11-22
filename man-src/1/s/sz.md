@@ -10,11 +10,11 @@ description: "sx, sb, sz – XMODEM, YMODEM, ZMODEM file send"
 
 <p> sx, sb, sz &#8211; XMODEM, YMODEM, ZMODEM file send</p>
 <h2>SYNOPSIS</h2>
-<p> sz [-<code>+8abdefkLlNnopqTtuvyY</code>] <i>file &#8230;</i><br />
- sb [-<code>adfkqtuv</code>] <i>file &#8230;</i><br />
- sx [-<code>akqtuv</code>] <i>file</i><br />
- sz [-<code>oqtv</code>] <code>-c COMMAND</code><br />
- sz [-<code>oqtv</code>] <code>-i COMMAND</code><br />
+<p> sz [-<code>+8abdefkLlNnopqTtuvyY</code>] <i>file &#8230;</i><br/>
+ sb [-<code>adfkqtuv</code>] <i>file &#8230;</i><br/>
+ sx [-<code>akqtuv</code>] <i>file</i><br/>
+ sz [-<code>oqtv</code>] <code>-c COMMAND</code><br/>
+ sz [-<code>oqtv</code>] <code>-i COMMAND</code><br/>
  sz -TT</p>
 <h2>DESCRIPTION</h2>
 <p> <code>Sz</code> uses the ZMODEM, YMODEM or XMODEM error correcting protocol to send one or more files over a dial-in serial port to a variety of programs running under PC-DOS, CP/M, Unix, VMS, and other operating systems. </p>
@@ -23,11 +23,11 @@ description: "sx, sb, sz – XMODEM, YMODEM, ZMODEM file send"
 <p> ZMODEM greatly simplifies file transfers compared to XMODEM. In addition to a friendly user interface, ZMODEM provides Personal Computer and other users an efficient, accurate, and robust file transfer method. </p>
 <p> ZMODEM provides complete <code>END-TO-END</code> data integrity between application programs. ZMODEM&#8217;s 32 bit CRC catches errors that sneak into even the most advanced networks. </p>
 <p> Advanced file management features include AutoDownload (Automatic file Download initiated without user intervention), Display of individual and total file lengths and transmission time estimates, Crash Recovery, selective file transfers, and preservation of exact file date and length. </p>
-<p> Output from another program may be piped to <code>sz</code> for transmission by denoting standard input with &quot;-&quot;: <center> ls -l | sz &#8211;<br />
- </center> The program output is transmitted with the filename sPID.sz where PID is the process ID of the <code>sz</code> program. If the environment variable <code>ONAME</code> is set, that is used instead. In this case, the Unix command: <center> ls -l | ONAME=con sz -ay &#8211;<br />
+<p> Output from another program may be piped to <code>sz</code> for transmission by denoting standard input with &quot;-&quot;: <center> ls -l | sz &#8211;<br/>
+ </center> The program output is transmitted with the filename sPID.sz where PID is the process ID of the <code>sz</code> program. If the environment variable <code>ONAME</code> is set, that is used instead. In this case, the Unix command: <center> ls -l | ONAME=con sz -ay &#8211;<br/>
  </center> will send a &quot;file&quot; to the PC-DOS console display. The <code>-y</code> option instructs the receiver to open the file for writing unconditionally. The <code>-a</code> option causes the receiver to convert Unix newlines to PC-DOS carriage returns and linefeeds. </p>
 <p> <code>Sb</code> batch sends one or more files with YMODEM or ZMODEM protocol. The initial ZMODEM initialization is not sent. When requested by the receiver, <code>sb</code> supports <code>YMODEM-g</code> with &quot;cbreak&quot; tty mode, XON/XOFF flow control, and interrupt character set to CAN (^X). <code>YMODEM-g</code> (Professional-YAM <code>g</code> option) increases throughput over error free channels (direct connection, X.PC, etc.) by not acknowledging each transmitted sector. </p>
-<p> On <font SIZE="-1">Unix</font> systems, additional information about the file is transmitted. If the receiving program uses this information, the transmitted file length controls the exact number of bytes written to the output dataset, and the modify time and file mode are set accordingly. </p>
+<p> On Unix systems, additional information about the file is transmitted. If the receiving program uses this information, the transmitted file length controls the exact number of bytes written to the output dataset, and the modify time and file mode are set accordingly. </p>
 <p> <code>Sx</code> sends a single <i>file</i> with <code>XMODEM</code> or <code>XMODEM-1k</code> protocol (sometimes incorrectly called &quot;ymodem&quot;). The user must supply the file name to both sending and receiving programs. </p>
 <p> If <code>sz</code> is invoked with $SHELL set and if that variable contains the string <i>rsh</i> , <i>rbash</i> or <i>rksh</i> (restricted shell), <code>sz</code> operates in restricted mode. Restricted mode restricts pathnames to the current directory and PUBDIR (usually /usr/spool/uucppublic) and/or subdirectories thereof. </p>
 <p> The fourth form sends a single COMMAND to a ZMODEM receiver for execution. <code>Sz</code> exits with the COMMAND return value. If COMMAND includes spaces or characters special to the shell, it must be quoted. </p>
@@ -158,24 +158,24 @@ description: "sx, sb, sz – XMODEM, YMODEM, ZMODEM file send"
 <dt><code>TMPDIR</code></dt>
 <dd> If this environment variable is set its content is used as the directory to place in the answer file to a <code>timesync </code> request. <code>TMP</code> Used instead of TMPDIR if TMPDIR is not set. If neither TMPDIR nor TMP is set /tmp will be used.</dd></dl>
 <h2>EXAMPLES</h2>
-<p> <code>ZMODEM File Transfer</code> (Unix to DSZ/ZCOMM/Professional-YAM)<br />
- <code>% sz -a *.c</code><br />
+<p> <code>ZMODEM File Transfer</code> (Unix to DSZ/ZCOMM/Professional-YAM)<br/>
+ <code>% sz -a *.c</code><br/>
  This single command transfers all .c files in the current Unix directory with conversion (<code>-a</code>) to end of line conventions appropriate to the receiving environment. With ZMODEM AutoDownload enabled, Professional-YAM and ZCOMM will automatically receive the files after performing a security check. </p>
-<p> <code>% sz -Yan *.c *.h</code><br />
- Send only the .c and .h files that exist on both systems, and are newer on the sending system than the corresponding version on the receiving system, converting Unix to DOS text format.<br />
+<p> <code>% sz -Yan *.c *.h</code><br/>
+ Send only the .c and .h files that exist on both systems, and are newer on the sending system than the corresponding version on the receiving system, converting Unix to DOS text format.<br/>
  <code>$ sz -\Yan file1.c file2.c file3.c foo.h baz.h</code> (for VMS) </p>
 <p> <code>ZMODEM Command Download</code> (Unix to Professional-YAM) </p>
-<p>&nbsp;<wbr>cpszall:all<br />
-&nbsp;<wbr>sz -c&nbsp;<wbr>&quot;c:;cd&nbsp;<wbr>/yam/dist&quot;<br />
-&nbsp;<wbr>sz -ya&nbsp;<wbr>$(YD)/*.me<br />
-&nbsp;<wbr>sz -yqb y*.exe<br />
-&nbsp;<wbr>sz -c&nbsp;<wbr>&quot;cd&nbsp;<wbr>/yam&quot;<br />
-&nbsp;<wbr>sz -i&nbsp;<wbr>&quot;!insms&quot;<br />
+<p>&nbsp;<wbr>cpszall:all<br/>
+&nbsp;<wbr>sz -c&nbsp;<wbr>&quot;c:;cd&nbsp;<wbr>/yam/dist&quot;<br/>
+&nbsp;<wbr>sz -ya&nbsp;<wbr>$(YD)/*.me<br/>
+&nbsp;<wbr>sz -yqb y*.exe<br/>
+&nbsp;<wbr>sz -c&nbsp;<wbr>&quot;cd&nbsp;<wbr>/yam&quot;<br/>
+&nbsp;<wbr>sz -i&nbsp;<wbr>&quot;!insms&quot;<br/>
  This Makefile fragment uses <code>sz</code> to issue commands to Professional-YAM to change current disk and directory. Next, <code>sz</code> transfers the <i>.me</i> files from the $YD directory, commanding the receiver to overwrite the old files and to convert from Unix end of line conventions to PC-DOS conventions. The third line transfers some <i>.exe</i> files. The fourth and fifth lines command Pro-YAM to change directory and execute a PC-DOS batch file <i>insms .</i> Since the batch file takes considerable time, the <code>-i</code> form is used to allow <code>sz</code> to exit immediately. </p>
-<p> <code>XMODEM File Transfer</code> (Unix to Crosstalk)<br />
- % <code>sx -a foo.c</code><br />
- <code>ESC</code><br />
- <code>rx foo.c</code><br />
+<p> <code>XMODEM File Transfer</code> (Unix to Crosstalk)<br/>
+ % <code>sx -a foo.c</code><br/>
+ <code>ESC</code><br/>
+ <code>rx foo.c</code><br/>
  The above three commands transfer a single file from Unix to a PC and Crosstalk with <i>sz</i> translating Unix newlines to DOS CR/LF. This combination is much slower and far less reliable than ZMODEM.</p>
 <h2>ERROR MESSAGES</h2>
 <p> &quot;Caught signal 99&quot; indicates the program was not properly compiled, refer to &quot;bibi(99)&quot; in rbsb.c for details.</p>

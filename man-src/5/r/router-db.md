@@ -65,9 +65,9 @@ description: "router.db – rancid group configuration file"
 </dl>
 <dt><code>&lt;state&gt;</code></dt>
 <dd>The state is either &quot;up&quot;, or some other arbitrary value, e.g. &quot;down&quot;. If the device is not marked &quot;up&quot; the device&#8217;s configuration will not be collected. It is highly recommended that comments are made for any router not listed as up, so as to indicate the reason a router is not to be polled, e.g.: </dd>
-<p> dial1.paris;cisco;up;<br />
- core1.paris;cisco;down;in testing until 5/5/2001.<br />
- core2.paris;cisco;ticketed;Ticket 6054234, 5/3/2001<br />
+<p> dial1.paris;cisco;up;<br/>
+ core1.paris;cisco;down;in testing until 5/5/2001.<br/>
+ core2.paris;cisco;ticketed;Ticket 6054234, 5/3/2001<br/>
  border1.paris;juniper;up; </p>
 <p> The script &quot;downreport&quot; in util/ can be used to produce a report of routers in router.db that are not marked &quot;up&quot;.</dl>
 <dl>

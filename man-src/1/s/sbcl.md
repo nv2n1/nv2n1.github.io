@@ -15,10 +15,10 @@ description: "SBCL — Steel Bank Common Lisp"
 <p> For more information about license issues, see the COPYING file in the distribution. For more information about history, see the CREDITS file in the distribution. </p>
 <h2>RUNNING SBCL</h2>
 <p> To run SBCL, type &quot;sbcl&quot;. After startup messages a prompt (&quot;*&quot;) appears. Enter a Lisp expression, and SBCL will read and execute it, print any values returned, give you another prompt, and wait for your next input. </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>$&nbsp;<wbr>sbcl<br />
-&nbsp;<wbr>&nbsp;<wbr>&#8230;[startup messages elided]&#8230;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>$&nbsp;<wbr>sbcl<br/>
+&nbsp;<wbr>&nbsp;<wbr>&#8230;[startup messages elided]&#8230;<br/>
 &nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>(+&nbsp;<wbr>1 2 3) </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>6<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>6<br/>
 &nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>(exit) </p>
 <p> Most people like to run SBCL as a subprocess under Emacs. The Emacs &quot;Slime&quot; mode provides many convenient features, like command line editing, tab completion, and various kinds of coupling between Common Lisp source files and the interactive SBCL subprocess. </p>
 <p> For information on creating &quot;standalone executables&quot; using SBCL, see SB-EXT:SAVE-LISP-AND-DIE in the User Manual. </p>
@@ -101,8 +101,8 @@ description: "SBCL — Steel Bank Common Lisp"
 <p> SBCL is derived from the CMU CL. (The name is intended to acknowledge the connection: steel and banking are the industries where Carnegie and Mellon made the big bucks.) </p>
 <p> SBCL compiles by default: even functions entered in the read-eval-print loop are compiled to native code, unless the evaluator has been explicitly turned on. (Even today, some 40 years after the MacLisp compiler, people will tell you that Lisp is an interpreted language. Ignore them.) </p>
 <p> SBCL aims for but has not completely achieved compliance with the ANSI standard for Common Lisp. More information about this is available in the BUGS section below. </p>
-<p> SBCL also includes various non-ANSI extensions, described more fully in the User Manual. Some of these are in the base system and others are &quot;contrib&quot; modules loaded on request using REQUIRE. For example, to load the SB-BSD-SOCKETS module that provides TCP/IP connectivity,<br />
-*&nbsp;<wbr>(require&nbsp;<wbr>&#8216;asdf)<br />
+<p> SBCL also includes various non-ANSI extensions, described more fully in the User Manual. Some of these are in the base system and others are &quot;contrib&quot; modules loaded on request using REQUIRE. For example, to load the SB-BSD-SOCKETS module that provides TCP/IP connectivity,<br/>
+*&nbsp;<wbr>(require&nbsp;<wbr>&#8216;asdf)<br/>
 *&nbsp;<wbr>(require&nbsp;<wbr>&#8216;sb-bsd-sockets) </p>
 <p> For more information, see the User Manual. </p>
 <h2>THE COMPILER</h2>
@@ -115,10 +115,10 @@ description: "SBCL — Steel Bank Common Lisp"
 <h2>KNOWN BUGS</h2>
 <p> This section attempts to list the most serious and long-standing bugs. For more detailed and current information on bugs, see the BUGS file in the distribution. </p>
 <p> It is possible to get in deep trouble by exhausting heap memory. The SBCL system overcommits memory at startup, so, on typical Unix-alikes like Linux and FreeBSD, this means that if the SBCL system turns out to use more virtual memory than the system has available for it, other processes tend to be killed randomly (!). </p>
-<p> The compiler&#8217;s handling of function return values unnecessarily violates the &quot;declarations are assertions&quot; principle that it otherwise adheres to. Using PROCLAIM or DECLAIM to specify the return type of a function causes the compiler to believe you without checking. Thus compiling a file containing<br />
-&nbsp;<wbr>&nbsp;<wbr>(DECLAIM&nbsp;<wbr>(FTYPE&nbsp;<wbr>(FUNCTION&nbsp;<wbr>(T)&nbsp;<wbr>NULL)&nbsp;<wbr>SOMETIMES))<br />
-&nbsp;<wbr>&nbsp;<wbr>(DEFUN SOMETIMES&nbsp;<wbr>(X)&nbsp;<wbr>(ODDP X))<br />
-&nbsp;<wbr>&nbsp;<wbr>(DEFUN FOO&nbsp;<wbr>(X)&nbsp;<wbr>(IF&nbsp;<wbr>(SOMETIMES X)&nbsp;<wbr>&#8216;THIS-TIME&nbsp;<wbr>&#8216;NOT-THIS-TIME))<br />
+<p> The compiler&#8217;s handling of function return values unnecessarily violates the &quot;declarations are assertions&quot; principle that it otherwise adheres to. Using PROCLAIM or DECLAIM to specify the return type of a function causes the compiler to believe you without checking. Thus compiling a file containing<br/>
+&nbsp;<wbr>&nbsp;<wbr>(DECLAIM&nbsp;<wbr>(FTYPE&nbsp;<wbr>(FUNCTION&nbsp;<wbr>(T)&nbsp;<wbr>NULL)&nbsp;<wbr>SOMETIMES))<br/>
+&nbsp;<wbr>&nbsp;<wbr>(DEFUN SOMETIMES&nbsp;<wbr>(X)&nbsp;<wbr>(ODDP X))<br/>
+&nbsp;<wbr>&nbsp;<wbr>(DEFUN FOO&nbsp;<wbr>(X)&nbsp;<wbr>(IF&nbsp;<wbr>(SOMETIMES X)&nbsp;<wbr>&#8216;THIS-TIME&nbsp;<wbr>&#8216;NOT-THIS-TIME))<br/>
  then running (FOO 1) gives NOT-THIS-TIME, because the compiler relied on the truth of the DECLAIM without checking it. </p>
 <p> Some things are implemented very inefficiently.</p>
 <dl>

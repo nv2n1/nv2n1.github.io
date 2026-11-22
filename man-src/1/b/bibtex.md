@@ -45,7 +45,7 @@ description: "bibtex – make a bibliography for (La)TeX"
 <p> All those files should be available somewhere on your system. </p>
 <p> The host math.utah.edu has a vast collection of <code>.bib</code> files available for anonymous ftp, including references for all the standard TeX books and a complete bibliography for TUGboat.  </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-latex/">latex</a></code>(1), <code><a href="/docs/linux/man/1-tex/">tex</a></code>(1). <br />
+<p> <code><a href="/docs/linux/man/1-latex/">latex</a></code>(1), <code><a href="/docs/linux/man/1-tex/">tex</a></code>(1). <br/>
  Leslie Lamport, <i>LaTeX - A Document Preparation System</i>, Addison-Wesley, 1985, ISBN 0-201-15790-X.  </p>
 <h2>AUTHOR</h2>
 <p> Oren Patashnik, Stanford University. This man page describes the web2c version of BibTeX. Other ports of BibTeX, such as Donald Knuth&#8217;s version using the Sun Pascal compiler, do not have the same path searching implementation, or the command-line options. </p>

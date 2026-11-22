@@ -179,13 +179,13 @@ optional arguments:
 <h3>Description</h3>
 <p> This command initializes an empty repository. A repository is a filesystem directory containing the deduplicated data from zero or more archives. Encryption can be enabled at repository init time.</p>
 <h3>Examples</h3>
-<p>#Local repository(default is to use encryption in repokey mode)<br />
-$ borg init / path / to / repo<br />
-#Local repository(no encryption)<br />
-                              $ borg init&#8211; encryption = none / path / to / repo<br />
-#Remote repository(accesses a remote borg via ssh)<br />
-                                                                                $ borg init user[at] hostname : backup<br />
-#Remote repository(store the key your home dir)<br />
+<p>#Local repository(default is to use encryption in repokey mode)<br/>
+$ borg init / path / to / repo<br/>
+#Local repository(no encryption)<br/>
+                              $ borg init&#8211; encryption = none / path / to / repo<br/>
+#Remote repository(accesses a remote borg via ssh)<br/>
+                                                                                $ borg init user[at] hostname : backup<br/>
+#Remote repository(store the key your home dir)<br/>
                                                                                                                     $ borg init&#8211; encryption = keyfile user[at] hostname : backup</p>
 <p> Important notes about encryption: </p>
 <p> It is not recommended to disable encryption. Repository encryption protects you e.g. against the case that an attacker has access to your backup repository. </p>
@@ -203,75 +203,75 @@ $ borg init / path / to / repo<br />
 <p> So better use a long passphrase made from simple ascii chars than one that includes non-ascii stuff or characters that are hard/impossible to enter on a different keyboard layout. </p>
 <p> You can change your passphrase for existing repos at any time, it won&#8217;t affect the encryption/decryption key or other secrets.</dl>
 <h2>BORG CREATE</h2>
-<p>usage: borg create [-h] [&#8211;critical] [&#8211;error] [&#8211;warning] [&#8211;info] [&#8211;debug]<br />
-                   [&#8211;lock-wait N] [&#8211;show-rc] [&#8211;no-files-cache] [&#8211;umask M]<br />
-                   [&#8211;remote-path PATH] [-s] [-p] [&#8211;list]<br />
-                   [&#8211;filter STATUSCHARS] [-e PATTERN]<br />
-                   [&#8211;exclude-from EXCLUDEFILE] [&#8211;exclude-caches]<br />
-                   [&#8211;exclude-if-present FILENAME] [&#8211;keep-tag-files]<br />
-                   [-c SECONDS] [-x] [&#8211;numeric-owner] [&#8211;noatime] [&#8211;noctime]<br />
-                   [&#8211;timestamp yyyy-mm-ddThh:mm:ss]<br />
-                   [&#8211;chunker-params CHUNK_MIN_EXP,CHUNK_MAX_EXP,HASH_MASK_BITS,HASH_WINDOW_SIZE]<br />
-                   [&#8211;ignore-inode] [-C COMPRESSION] [&#8211;read-special] [-n]<br />
-                   ARCHIVE PATH [PATH &#8230;]<br />
-Create new archive<br />
-positional arguments:<br />
-  ARCHIVE               name of archive to create (must be also a valid<br />
-                        directory name)<br />
-  PATH                  paths to archive<br />
-optional arguments:<br />
-  -h, &#8211;help            show this help message and exit<br />
-  &#8211;critical            work on log level CRITICAL<br />
-  &#8211;error               work on log level ERROR<br />
-  &#8211;warning             work on log level WARNING (default)<br />
-  &#8211;info, -v, &#8211;verbose<br />
-                        work on log level INFO<br />
-  &#8211;debug               work on log level DEBUG<br />
-  &#8211;lock-wait N         wait for the lock, but max. N seconds (default: 1).<br />
-  &#8211;show-rc             show/log the return code (rc)<br />
-  &#8211;no-files-cache      do not load/update the file metadata cache used to<br />
-                        detect unchanged files<br />
-  &#8211;umask M             set umask to M (local and remote, default: 0077)<br />
-  &#8211;remote-path PATH    set remote path to executable (default: &#8220;borg&#8221;)<br />
-  -s, &#8211;stats           print statistics for the created archive<br />
-  -p, &#8211;progress        show progress display while creating the archive,<br />
-                        showing Original, Compressed and Deduplicated sizes,<br />
-                        followed by the Number of files seen and the path<br />
-                        being processed, default: False<br />
-  &#8211;list                output verbose list of items (files, dirs, &#8230;)<br />
-  &#8211;filter STATUSCHARS  only display items with the given status characters<br />
-  -e PATTERN, &#8211;exclude PATTERN<br />
-                        exclude paths matching PATTERN<br />
-  &#8211;exclude-from EXCLUDEFILE<br />
-                        read exclude patterns from EXCLUDEFILE, one per line<br />
-  &#8211;exclude-caches      exclude directories that contain a CACHEDIR.TAG file<br />
-                        (http://www.brynosaurus.com/cachedir/spec.html)<br />
-  &#8211;exclude-if-present FILENAME<br />
-                        exclude directories that contain the specified file<br />
-  &#8211;keep-tag-files      keep tag files of excluded caches/directories<br />
-  -c SECONDS, &#8211;checkpoint-interval SECONDS<br />
-                        write checkpoint every SECONDS seconds (Default: 300)<br />
-  -x, &#8211;one-file-system<br />
-                        stay in same file system<br />
-  &#8211;numeric-owner       only store numeric user and group identifiers<br />
-  &#8211;noatime             do not store atime into archive<br />
-  &#8211;noctime             do not store ctime into archive<br />
-  &#8211;timestamp yyyy-mm-ddThh:mm:ss<br />
-                        manually specify the archive creation date/time (UTC).<br />
-                        alternatively, give a reference file/directory.<br />
-  &#8211;chunker-params CHUNK_MIN_EXP,CHUNK_MAX_EXP,HASH_MASK_BITS,HASH_WINDOW_SIZE<br />
-                        specify the chunker parameters. default: 19,23,21,4095<br />
-  &#8211;ignore-inode        ignore inode data in the file metadata cache used to<br />
-                        detect unchanged files.<br />
-  -C COMPRESSION, &#8211;compression COMPRESSION<br />
-                        select compression algorithm (and level): none == no<br />
-                        compression (default), lz4 == lz4, zlib == zlib<br />
-                        (default level 6), zlib,0 .. zlib,9 == zlib (with<br />
-                        level 0..9), lzma == lzma (default level 6), lzma,0 ..<br />
-                        lzma,9 == lzma (with level 0..9).<br />
-  &#8211;read-special        open and read block and char device files as well as<br />
-                        FIFOs as if they were regular files. Also follows<br />
-                        symlinks pointing to these kinds of files.<br />
+<p>usage: borg create [-h] [&#8211;critical] [&#8211;error] [&#8211;warning] [&#8211;info] [&#8211;debug]<br/>
+                   [&#8211;lock-wait N] [&#8211;show-rc] [&#8211;no-files-cache] [&#8211;umask M]<br/>
+                   [&#8211;remote-path PATH] [-s] [-p] [&#8211;list]<br/>
+                   [&#8211;filter STATUSCHARS] [-e PATTERN]<br/>
+                   [&#8211;exclude-from EXCLUDEFILE] [&#8211;exclude-caches]<br/>
+                   [&#8211;exclude-if-present FILENAME] [&#8211;keep-tag-files]<br/>
+                   [-c SECONDS] [-x] [&#8211;numeric-owner] [&#8211;noatime] [&#8211;noctime]<br/>
+                   [&#8211;timestamp yyyy-mm-ddThh:mm:ss]<br/>
+                   [&#8211;chunker-params CHUNK_MIN_EXP,CHUNK_MAX_EXP,HASH_MASK_BITS,HASH_WINDOW_SIZE]<br/>
+                   [&#8211;ignore-inode] [-C COMPRESSION] [&#8211;read-special] [-n]<br/>
+                   ARCHIVE PATH [PATH &#8230;]<br/>
+Create new archive<br/>
+positional arguments:<br/>
+  ARCHIVE               name of archive to create (must be also a valid<br/>
+                        directory name)<br/>
+  PATH                  paths to archive<br/>
+optional arguments:<br/>
+  -h, &#8211;help            show this help message and exit<br/>
+  &#8211;critical            work on log level CRITICAL<br/>
+  &#8211;error               work on log level ERROR<br/>
+  &#8211;warning             work on log level WARNING (default)<br/>
+  &#8211;info, -v, &#8211;verbose<br/>
+                        work on log level INFO<br/>
+  &#8211;debug               work on log level DEBUG<br/>
+  &#8211;lock-wait N         wait for the lock, but max. N seconds (default: 1).<br/>
+  &#8211;show-rc             show/log the return code (rc)<br/>
+  &#8211;no-files-cache      do not load/update the file metadata cache used to<br/>
+                        detect unchanged files<br/>
+  &#8211;umask M             set umask to M (local and remote, default: 0077)<br/>
+  &#8211;remote-path PATH    set remote path to executable (default: &#8220;borg&#8221;)<br/>
+  -s, &#8211;stats           print statistics for the created archive<br/>
+  -p, &#8211;progress        show progress display while creating the archive,<br/>
+                        showing Original, Compressed and Deduplicated sizes,<br/>
+                        followed by the Number of files seen and the path<br/>
+                        being processed, default: False<br/>
+  &#8211;list                output verbose list of items (files, dirs, &#8230;)<br/>
+  &#8211;filter STATUSCHARS  only display items with the given status characters<br/>
+  -e PATTERN, &#8211;exclude PATTERN<br/>
+                        exclude paths matching PATTERN<br/>
+  &#8211;exclude-from EXCLUDEFILE<br/>
+                        read exclude patterns from EXCLUDEFILE, one per line<br/>
+  &#8211;exclude-caches      exclude directories that contain a CACHEDIR.TAG file<br/>
+                        (http://www.brynosaurus.com/cachedir/spec.html)<br/>
+  &#8211;exclude-if-present FILENAME<br/>
+                        exclude directories that contain the specified file<br/>
+  &#8211;keep-tag-files      keep tag files of excluded caches/directories<br/>
+  -c SECONDS, &#8211;checkpoint-interval SECONDS<br/>
+                        write checkpoint every SECONDS seconds (Default: 300)<br/>
+  -x, &#8211;one-file-system<br/>
+                        stay in same file system<br/>
+  &#8211;numeric-owner       only store numeric user and group identifiers<br/>
+  &#8211;noatime             do not store atime into archive<br/>
+  &#8211;noctime             do not store ctime into archive<br/>
+  &#8211;timestamp yyyy-mm-ddThh:mm:ss<br/>
+                        manually specify the archive creation date/time (UTC).<br/>
+                        alternatively, give a reference file/directory.<br/>
+  &#8211;chunker-params CHUNK_MIN_EXP,CHUNK_MAX_EXP,HASH_MASK_BITS,HASH_WINDOW_SIZE<br/>
+                        specify the chunker parameters. default: 19,23,21,4095<br/>
+  &#8211;ignore-inode        ignore inode data in the file metadata cache used to<br/>
+                        detect unchanged files.<br/>
+  -C COMPRESSION, &#8211;compression COMPRESSION<br/>
+                        select compression algorithm (and level): none == no<br/>
+                        compression (default), lz4 == lz4, zlib == zlib<br/>
+                        (default level 6), zlib,0 .. zlib,9 == zlib (with<br/>
+                        level 0..9), lzma == lzma (default level 6), lzma,0 ..<br/>
+                        lzma,9 == lzma (with level 0..9).<br/>
+  &#8211;read-special        open and read block and char device files as well as<br/>
+                        FIFOs as if they were regular files. Also follows<br/>
+                        symlinks pointing to these kinds of files.<br/>
   -n, &#8211;dry-run         do not create a backup archive</p>
 <h3>Description</h3>
 <p> This command creates a backup archive containing all files found while recursively traversing all paths specified. When giving &#8216;-&#8216; as path, borg will read data from standard input and create a file &#8216;stdin&#8217; in the created archive from that data. </p>
@@ -281,169 +281,169 @@ optional arguments:<br />
 <p> To speed up pulling backups over sshfs and similar network file systems which do not provide correct inode information the &#8211;ignore-inode flag can be used. This potentially decreases reliability of change detection, while avoiding always reading all files on these file systems. </p>
 <p> See the output of the &quot;borg help patterns&quot; command for more help on exclude patterns. See the output of the &quot;borg help placeholders&quot; command for more help on placeholders.</p>
 <h3>Examples</h3>
-<p>#Backup ~ / Documents into an archive named &#8220;my-documents&#8221;<br />
-$ borg create / path / to / repo::my &#8211; documents ~ / Documents<br />
-#same, but verbosely list all files as we process them<br />
-                                                         $ borg create &#8211;<br />
-    v&#8211; list / path / to / repo::my &#8211; documents ~ / Documents<br />
-#Backup ~ / Documents and ~ / src but exclude pyc files<br />
-                                                        $ borg create /<br />
-                                          path / to / repo::my &#8211;<br />
-    files ~ / Documents ~ / src&#8211; exclude &#8216;*.pyc&#8217;<br />
-#Backup home directories excluding image thumbnails(i.e.only<br />
-#/ home /*/.thumbnails is excluded, not /home/*/ * /.thumbnails)<br />
-        $ borg create /<br />
-        path / to / repo::my &#8211;<br />
-    files / home&#8211; exclude &#8216;re:^/home/[^/]+/\.thumbnails/&#8217;<br />
-#Do the same using a shell &#8211; style pattern<br />
-        $ borg create /<br />
-        path / to / repo::my &#8211;<br />
-    files / home&#8211; exclude &#8216;sh:/home/*/.thumbnails&#8217;<br />
-#Backup the root filesystem into an archive named &#8220;root-YYYY-MM-DD&#8221;<br />
-#use zlib compression(good, but slow) &#8211; default is no compression<br />
-        $ borg create &#8211;<br />
-    C zlib,<br />
-    6 / path / to / repo::root &#8211; {now : % Y &#8211; % m &#8211; % d} / &#8211;one &#8211; file &#8211; system<br />
-#Make a big effort in fine granular deduplication(big chunk management<br />
-#overhead, needs a lot of RAM and disk space, see formula in internals<br />
-#docs &#8211; same parameters as borg &lt; 1.0 or attic):<br />
-                                                                              $ borg create&#8211; chunker &#8211;<br />
-        params 10,<br />
-    23, 16, 4095 / path / to / repo::small / smallstuff<br />
-#Backup a raw device(must not be active / in use / mounted at that time)<br />
-                                                 $ dd if = / dev / sdx bs = 10M | borg create / path / to / repo::my &#8211; sdx &#8211;<br />
-#No compression(default)<br />
-                                                                                      $ borg create / path / to / repo::arch ~<br />
-#Super fast, low compression<br />
-                                                                                          $ borg create&#8211; compression lz4 /<br />
-                                                                                          path / to / repo::arch ~<br />
-#Less fast, higher compression(N = 0..9)<br />
-                                                                                          $ borg create&#8211; compression zlib,<br />
-                                                      N / path / to / repo::arch ~<br />
-#Even slower, even higher compression(N = 0..9)<br />
-                                                          $ borg create&#8211; compression lzma,<br />
-                                                      N / path / to / repo::arch ~<br />
-#Use short hostname, user name and current time in archive name<br />
-                                                              $ borg create /<br />
-                                                              path / to / repo::{hostname} &#8211;<br />
-                                                          {user} &#8211;<br />
-{<br />
-    now<br />
-}<br />
-~<br />
-#Similar, use the same datetime format as borg 1.1 will have as default<br />
-        $ borg create /<br />
-        path / to / repo::{hostname} &#8211;<br />
-    {user} &#8211;<br />
-{<br />
-now:<br />
-    % Y &#8211; % m &#8211; % dT % H : % M : % S<br />
-}<br />
-~<br />
-#As above, but add nanoseconds<br />
-        $ borg create /<br />
-        path / to / repo::{hostname} &#8211;<br />
-    {user} &#8211;<br />
-{<br />
-now:<br />
-    % Y &#8211; % m &#8211; % dT % H : % M : % S.% f<br />
-}<br />
+<p>#Backup ~ / Documents into an archive named &#8220;my-documents&#8221;<br/>
+$ borg create / path / to / repo::my &#8211; documents ~ / Documents<br/>
+#same, but verbosely list all files as we process them<br/>
+                                                         $ borg create &#8211;<br/>
+    v&#8211; list / path / to / repo::my &#8211; documents ~ / Documents<br/>
+#Backup ~ / Documents and ~ / src but exclude pyc files<br/>
+                                                        $ borg create /<br/>
+                                          path / to / repo::my &#8211;<br/>
+    files ~ / Documents ~ / src&#8211; exclude &#8216;*.pyc&#8217;<br/>
+#Backup home directories excluding image thumbnails(i.e.only<br/>
+#/ home /*/.thumbnails is excluded, not /home/*/ * /.thumbnails)<br/>
+        $ borg create /<br/>
+        path / to / repo::my &#8211;<br/>
+    files / home&#8211; exclude &#8216;re:^/home/[^/]+/\.thumbnails/&#8217;<br/>
+#Do the same using a shell &#8211; style pattern<br/>
+        $ borg create /<br/>
+        path / to / repo::my &#8211;<br/>
+    files / home&#8211; exclude &#8216;sh:/home/*/.thumbnails&#8217;<br/>
+#Backup the root filesystem into an archive named &#8220;root-YYYY-MM-DD&#8221;<br/>
+#use zlib compression(good, but slow) &#8211; default is no compression<br/>
+        $ borg create &#8211;<br/>
+    C zlib,<br/>
+    6 / path / to / repo::root &#8211; {now : % Y &#8211; % m &#8211; % d} / &#8211;one &#8211; file &#8211; system<br/>
+#Make a big effort in fine granular deduplication(big chunk management<br/>
+#overhead, needs a lot of RAM and disk space, see formula in internals<br/>
+#docs &#8211; same parameters as borg &lt; 1.0 or attic):<br/>
+                                                                              $ borg create&#8211; chunker &#8211;<br/>
+        params 10,<br/>
+    23, 16, 4095 / path / to / repo::small / smallstuff<br/>
+#Backup a raw device(must not be active / in use / mounted at that time)<br/>
+                                                 $ dd if = / dev / sdx bs = 10M | borg create / path / to / repo::my &#8211; sdx &#8211;<br/>
+#No compression(default)<br/>
+                                                                                      $ borg create / path / to / repo::arch ~<br/>
+#Super fast, low compression<br/>
+                                                                                          $ borg create&#8211; compression lz4 /<br/>
+                                                                                          path / to / repo::arch ~<br/>
+#Less fast, higher compression(N = 0..9)<br/>
+                                                                                          $ borg create&#8211; compression zlib,<br/>
+                                                      N / path / to / repo::arch ~<br/>
+#Even slower, even higher compression(N = 0..9)<br/>
+                                                          $ borg create&#8211; compression lzma,<br/>
+                                                      N / path / to / repo::arch ~<br/>
+#Use short hostname, user name and current time in archive name<br/>
+                                                              $ borg create /<br/>
+                                                              path / to / repo::{hostname} &#8211;<br/>
+                                                          {user} &#8211;<br/>
+{<br/>
+    now<br/>
+}<br/>
+~<br/>
+#Similar, use the same datetime format as borg 1.1 will have as default<br/>
+        $ borg create /<br/>
+        path / to / repo::{hostname} &#8211;<br/>
+    {user} &#8211;<br/>
+{<br/>
+now:<br/>
+    % Y &#8211; % m &#8211; % dT % H : % M : % S<br/>
+}<br/>
+~<br/>
+#As above, but add nanoseconds<br/>
+        $ borg create /<br/>
+        path / to / repo::{hostname} &#8211;<br/>
+    {user} &#8211;<br/>
+{<br/>
+now:<br/>
+    % Y &#8211; % m &#8211; % dT % H : % M : % S.% f<br/>
+}<br/>
 ~</p>
 <h3>Notes</h3>
 <dl>
 <dt>&bull;</dt>
 <dd> the &#8211;exclude patterns are not like tar. In tar &#8211;exclude .bundler/gems will exclude foo/.bundler/gems. In borg it will not, you need to use &#8211;exclude &#8216;*/.bundler/gems&#8217; to get the same effect. See <code>borg help patterns</code> for more information.</dd></dl>
 <h2>BORG EXTRACT</h2>
-<p>usage : borg extract[-h][&#8211;critical][&#8211;error][&#8211;warning][&#8211;info][&#8211;debug]<br />
-                    [&#8211;lock &#8211; wait N][&#8211;show &#8211; rc][&#8211;no &#8211; files &#8211; cache][&#8211;umask M]<br />
-                    [&#8211;remote &#8211; path PATH][&#8211;list][-n][-e PATTERN]<br />
-                    [&#8211;exclude &#8211; from EXCLUDEFILE][&#8211;numeric &#8211; owner]<br />
-                    [&#8211;strip &#8211; components NUMBER][&#8211;stdout][&#8211;sparse] ARCHIVE[PATH[PATH&#8230;]] Extract archive contents<br />
-                        positional arguments : ARCHIVE archive to extract<br />
-                                                   PATH paths to extract; patterns are supported<br />
-optional arguments:<br />
-  -h, &#8211;help            show this help message and exit<br />
-  &#8211;critical            work on log level CRITICAL<br />
-  &#8211;error               work on log level ERROR<br />
-  &#8211;warning             work on log level WARNING (default)<br />
-  &#8211;info, -v, &#8211;verbose<br />
-                        work on log level INFO<br />
-  &#8211;debug               work on log level DEBUG<br />
-  &#8211;lock-wait N         wait for the lock, but max. N seconds (default: 1).<br />
-  &#8211;show-rc             show/log the return code (rc)<br />
-  &#8211;no-files-cache      do not load/update the file metadata cache used to<br />
-                        detect unchanged files<br />
-  &#8211;umask M             set umask to M (local and remote, default: 0077)<br />
-  &#8211;remote-path PATH    set remote path to executable (default: &#8220;borg&#8221;)<br />
-  &#8211;list                output verbose list of items (files, dirs, &#8230;)<br />
-  -n, &#8211;dry-run         do not actually change any files<br />
-  -e PATTERN, &#8211;exclude PATTERN<br />
-                        exclude paths matching PATTERN<br />
-  &#8211;exclude-from EXCLUDEFILE<br />
-                        read exclude patterns from EXCLUDEFILE, one per line<br />
-  &#8211;numeric-owner       only obey numeric user and group identifiers<br />
-  &#8211;strip-components NUMBER<br />
-                        Remove the specified number of leading path elements.<br />
-                        Pathnames with fewer elements will be silently<br />
-                        skipped.<br />
-  &#8211;stdout              write all extracted data to stdout<br />
-  &#8211;sparse              create holes in output sparse file from all-zero<br />
+<p>usage : borg extract[-h][&#8211;critical][&#8211;error][&#8211;warning][&#8211;info][&#8211;debug]<br/>
+                    [&#8211;lock &#8211; wait N][&#8211;show &#8211; rc][&#8211;no &#8211; files &#8211; cache][&#8211;umask M]<br/>
+                    [&#8211;remote &#8211; path PATH][&#8211;list][-n][-e PATTERN]<br/>
+                    [&#8211;exclude &#8211; from EXCLUDEFILE][&#8211;numeric &#8211; owner]<br/>
+                    [&#8211;strip &#8211; components NUMBER][&#8211;stdout][&#8211;sparse] ARCHIVE[PATH[PATH&#8230;]] Extract archive contents<br/>
+                        positional arguments : ARCHIVE archive to extract<br/>
+                                                   PATH paths to extract; patterns are supported<br/>
+optional arguments:<br/>
+  -h, &#8211;help            show this help message and exit<br/>
+  &#8211;critical            work on log level CRITICAL<br/>
+  &#8211;error               work on log level ERROR<br/>
+  &#8211;warning             work on log level WARNING (default)<br/>
+  &#8211;info, -v, &#8211;verbose<br/>
+                        work on log level INFO<br/>
+  &#8211;debug               work on log level DEBUG<br/>
+  &#8211;lock-wait N         wait for the lock, but max. N seconds (default: 1).<br/>
+  &#8211;show-rc             show/log the return code (rc)<br/>
+  &#8211;no-files-cache      do not load/update the file metadata cache used to<br/>
+                        detect unchanged files<br/>
+  &#8211;umask M             set umask to M (local and remote, default: 0077)<br/>
+  &#8211;remote-path PATH    set remote path to executable (default: &#8220;borg&#8221;)<br/>
+  &#8211;list                output verbose list of items (files, dirs, &#8230;)<br/>
+  -n, &#8211;dry-run         do not actually change any files<br/>
+  -e PATTERN, &#8211;exclude PATTERN<br/>
+                        exclude paths matching PATTERN<br/>
+  &#8211;exclude-from EXCLUDEFILE<br/>
+                        read exclude patterns from EXCLUDEFILE, one per line<br/>
+  &#8211;numeric-owner       only obey numeric user and group identifiers<br/>
+  &#8211;strip-components NUMBER<br/>
+                        Remove the specified number of leading path elements.<br/>
+                        Pathnames with fewer elements will be silently<br/>
+                        skipped.<br/>
+  &#8211;stdout              write all extracted data to stdout<br/>
+  &#8211;sparse              create holes in output sparse file from all-zero<br/>
                         chunks</p>
 <h3>Description</h3>
 <p> This command extracts the contents of an archive. By default the entire archive is extracted but a subset of files and directories can be selected by passing a list of <code>PATHs</code> as arguments. The file selection can further be restricted by using the <code>&#8211;exclude</code> option. </p>
 <p> See the output of the &quot;borg help patterns&quot; command for more help on exclude patterns.</p>
 <h3>Examples</h3>
-<p>#Extract entire archive<br />
-$ borg extract / path / to / repo::my &#8211; files<br />
-#Extract entire archive and list files while processing<br />
-                                            $ borg extract &#8211;<br />
-        v&#8211; list / path / to / repo::my &#8211; files<br />
-#Extract the &#8220;src&#8221; directory<br />
-                                                  $ borg extract /<br />
-                                              path / to / repo::my &#8211;<br />
-        files home / USERNAME / src<br />
-#Extract the &#8220;src&#8221; directory but exclude object files<br />
-                                    $ borg extract /<br />
-            path / to / repo::my &#8211;<br />
-        files home / USERNAME / src&#8211; exclude &#8216;*.o&#8217;<br />
-#Restore a raw device(must not be active / in use / mounted at that time)<br />
-            $ borg extract&#8211; stdout /<br />
-            path / to / repo::my &#8211;<br />
-        sdx |<br />
+<p>#Extract entire archive<br/>
+$ borg extract / path / to / repo::my &#8211; files<br/>
+#Extract entire archive and list files while processing<br/>
+                                            $ borg extract &#8211;<br/>
+        v&#8211; list / path / to / repo::my &#8211; files<br/>
+#Extract the &#8220;src&#8221; directory<br/>
+                                                  $ borg extract /<br/>
+                                              path / to / repo::my &#8211;<br/>
+        files home / USERNAME / src<br/>
+#Extract the &#8220;src&#8221; directory but exclude object files<br/>
+                                    $ borg extract /<br/>
+            path / to / repo::my &#8211;<br/>
+        files home / USERNAME / src&#8211; exclude &#8216;*.o&#8217;<br/>
+#Restore a raw device(must not be active / in use / mounted at that time)<br/>
+            $ borg extract&#8211; stdout /<br/>
+            path / to / repo::my &#8211;<br/>
+        sdx |<br/>
     dd of = / dev / sdx bs = 10M</p>
 <dl>
 <dt><code>Note: currently, extract always writes into the current working directory (.),</code></dt>
 <dd> so make sure you <code>cd</code> to the right place before calling <code>borg extract</code>.</dd></dl>
 <h2>BORG CHECK</h2>
-<p>usage: borg check [-h] [&#8211;critical] [&#8211;error] [&#8211;warning] [&#8211;info] [&#8211;debug]<br />
-                  [&#8211;lock-wait N] [&#8211;show-rc] [&#8211;no-files-cache] [&#8211;umask M]<br />
-                  [&#8211;remote-path PATH] [&#8211;repository-only] [&#8211;archives-only]<br />
-                  [&#8211;repair] [&#8211;save-space] [&#8211;last N] [-P PREFIX]<br />
-                  [REPOSITORY_OR_ARCHIVE]<br />
-Check repository consistency<br />
-positional arguments:<br />
-  REPOSITORY_OR_ARCHIVE<br />
-                        repository or archive to check consistency of<br />
-optional arguments:<br />
-  -h, &#8211;help            show this help message and exit<br />
-  &#8211;critical            work on log level CRITICAL<br />
-  &#8211;error               work on log level ERROR<br />
-  &#8211;warning             work on log level WARNING (default)<br />
-  &#8211;info, -v, &#8211;verbose<br />
-                        work on log level INFO<br />
-  &#8211;debug               work on log level DEBUG<br />
-  &#8211;lock-wait N         wait for the lock, but max. N seconds (default: 1).<br />
-  &#8211;show-rc             show/log the return code (rc)<br />
-  &#8211;no-files-cache      do not load/update the file metadata cache used to<br />
-                        detect unchanged files<br />
-  &#8211;umask M             set umask to M (local and remote, default: 0077)<br />
-  &#8211;remote-path PATH    set remote path to executable (default: &#8220;borg&#8221;)<br />
-  &#8211;repository-only     only perform repository checks<br />
-  &#8211;archives-only       only perform archives checks<br />
-  &#8211;repair              attempt to repair any inconsistencies found<br />
-  &#8211;save-space          work slower, but using less space<br />
-  &#8211;last N              only check last N archives (Default: all)<br />
-  -P PREFIX, &#8211;prefix PREFIX<br />
+<p>usage: borg check [-h] [&#8211;critical] [&#8211;error] [&#8211;warning] [&#8211;info] [&#8211;debug]<br/>
+                  [&#8211;lock-wait N] [&#8211;show-rc] [&#8211;no-files-cache] [&#8211;umask M]<br/>
+                  [&#8211;remote-path PATH] [&#8211;repository-only] [&#8211;archives-only]<br/>
+                  [&#8211;repair] [&#8211;save-space] [&#8211;last N] [-P PREFIX]<br/>
+                  [REPOSITORY_OR_ARCHIVE]<br/>
+Check repository consistency<br/>
+positional arguments:<br/>
+  REPOSITORY_OR_ARCHIVE<br/>
+                        repository or archive to check consistency of<br/>
+optional arguments:<br/>
+  -h, &#8211;help            show this help message and exit<br/>
+  &#8211;critical            work on log level CRITICAL<br/>
+  &#8211;error               work on log level ERROR<br/>
+  &#8211;warning             work on log level WARNING (default)<br/>
+  &#8211;info, -v, &#8211;verbose<br/>
+                        work on log level INFO<br/>
+  &#8211;debug               work on log level DEBUG<br/>
+  &#8211;lock-wait N         wait for the lock, but max. N seconds (default: 1).<br/>
+  &#8211;show-rc             show/log the return code (rc)<br/>
+  &#8211;no-files-cache      do not load/update the file metadata cache used to<br/>
+                        detect unchanged files<br/>
+  &#8211;umask M             set umask to M (local and remote, default: 0077)<br/>
+  &#8211;remote-path PATH    set remote path to executable (default: &#8220;borg&#8221;)<br/>
+  &#8211;repository-only     only perform repository checks<br/>
+  &#8211;archives-only       only perform archives checks<br/>
+  &#8211;repair              attempt to repair any inconsistencies found<br/>
+  &#8211;save-space          work slower, but using less space<br/>
+  &#8211;last N              only check last N archives (Default: all)<br/>
+  -P PREFIX, &#8211;prefix PREFIX<br/>
                         only consider archive names starting with this prefix</p>
 <h3>Description</h3>
 <p> The check command verifies the consistency of a repository and the corresponding archives. </p>
@@ -475,27 +475,27 @@ optional arguments:<br />
 <dt>&bull;</dt>
 <dd> The archive checks can be time consuming, they can be skipped using the &#8211;repository-only option.</dd></dl>
 <h2>BORG RENAME</h2>
-<p>usage: borg rename [-h] [&#8211;critical] [&#8211;error] [&#8211;warning] [&#8211;info] [&#8211;debug]<br />
-                   [&#8211;lock-wait N] [&#8211;show-rc] [&#8211;no-files-cache] [&#8211;umask M]<br />
-                   [&#8211;remote-path PATH]<br />
-                   ARCHIVE NEWNAME<br />
-Rename an existing archive<br />
-positional arguments:<br />
-  ARCHIVE               archive to rename<br />
-  NEWNAME               the new archive name to use<br />
-optional arguments:<br />
-  -h, &#8211;help            show this help message and exit<br />
-  &#8211;critical            work on log level CRITICAL<br />
-  &#8211;error               work on log level ERROR<br />
-  &#8211;warning             work on log level WARNING (default)<br />
-  &#8211;info, -v, &#8211;verbose<br />
-                        work on log level INFO<br />
-  &#8211;debug               work on log level DEBUG<br />
-  &#8211;lock-wait N         wait for the lock, but max. N seconds (default: 1).<br />
-  &#8211;show-rc             show/log the return code (rc)<br />
-  &#8211;no-files-cache      do not load/update the file metadata cache used to<br />
-                        detect unchanged files<br />
-  &#8211;umask M             set umask to M (local and remote, default: 0077)<br />
+<p>usage: borg rename [-h] [&#8211;critical] [&#8211;error] [&#8211;warning] [&#8211;info] [&#8211;debug]<br/>
+                   [&#8211;lock-wait N] [&#8211;show-rc] [&#8211;no-files-cache] [&#8211;umask M]<br/>
+                   [&#8211;remote-path PATH]<br/>
+                   ARCHIVE NEWNAME<br/>
+Rename an existing archive<br/>
+positional arguments:<br/>
+  ARCHIVE               archive to rename<br/>
+  NEWNAME               the new archive name to use<br/>
+optional arguments:<br/>
+  -h, &#8211;help            show this help message and exit<br/>
+  &#8211;critical            work on log level CRITICAL<br/>
+  &#8211;error               work on log level ERROR<br/>
+  &#8211;warning             work on log level WARNING (default)<br/>
+  &#8211;info, -v, &#8211;verbose<br/>
+                        work on log level INFO<br/>
+  &#8211;debug               work on log level DEBUG<br/>
+  &#8211;lock-wait N         wait for the lock, but max. N seconds (default: 1).<br/>
+  &#8211;show-rc             show/log the return code (rc)<br/>
+  &#8211;no-files-cache      do not load/update the file metadata cache used to<br/>
+                        detect unchanged files<br/>
+  &#8211;umask M             set umask to M (local and remote, default: 0077)<br/>
   &#8211;remote-path PATH    set remote path to executable (default: &#8220;borg&#8221;)</p>
 <h3>Description</h3>
 <p> This command renames an archive in the repository.</p>
@@ -509,74 +509,74 @@ $ borg list /path/to/repo
 newname                              Mon, 2016-02-15 19:50:19
 </pre>
 <h2>BORG LIST</h2>
-<p>usage: borg list [-h] [&#8211;critical] [&#8211;error] [&#8211;warning] [&#8211;info] [&#8211;debug]<br />
-                 [&#8211;lock-wait N] [&#8211;show-rc] [&#8211;no-files-cache] [&#8211;umask M]<br />
-                 [&#8211;remote-path PATH] [&#8211;short] [&#8211;list-format LISTFORMAT]<br />
-                 [-P PREFIX]<br />
-                 [REPOSITORY_OR_ARCHIVE]<br />
-List archive or repository contents<br />
-positional arguments:<br />
-  REPOSITORY_OR_ARCHIVE<br />
-                        repository/archive to list contents of<br />
-optional arguments:<br />
-  -h, &#8211;help            show this help message and exit<br />
-  &#8211;critical            work on log level CRITICAL<br />
-  &#8211;error               work on log level ERROR<br />
-  &#8211;warning             work on log level WARNING (default)<br />
-  &#8211;info, -v, &#8211;verbose<br />
-                        work on log level INFO<br />
-  &#8211;debug               work on log level DEBUG<br />
-  &#8211;lock-wait N         wait for the lock, but max. N seconds (default: 1).<br />
-  &#8211;show-rc             show/log the return code (rc)<br />
-  &#8211;no-files-cache      do not load/update the file metadata cache used to<br />
-                        detect unchanged files<br />
-  &#8211;umask M             set umask to M (local and remote, default: 0077)<br />
-  &#8211;remote-path PATH    set remote path to executable (default: &#8220;borg&#8221;)<br />
-  &#8211;short               only print file/directory names, nothing else<br />
-  &#8211;list-format LISTFORMAT<br />
-                        specify format for archive file listing (default:<br />
-                        &#8220;{mode} {user:6} {group:6} {size:8d} {isomtime}<br />
-                        {path}{extra}{<br />
-    NEWLINE}&#8221;) Special &#8220;{<br />
-    formatkeys}&#8221; exists<br />
-                        to list available keys<br />
-  -P PREFIX, &#8211;prefix PREFIX<br />
+<p>usage: borg list [-h] [&#8211;critical] [&#8211;error] [&#8211;warning] [&#8211;info] [&#8211;debug]<br/>
+                 [&#8211;lock-wait N] [&#8211;show-rc] [&#8211;no-files-cache] [&#8211;umask M]<br/>
+                 [&#8211;remote-path PATH] [&#8211;short] [&#8211;list-format LISTFORMAT]<br/>
+                 [-P PREFIX]<br/>
+                 [REPOSITORY_OR_ARCHIVE]<br/>
+List archive or repository contents<br/>
+positional arguments:<br/>
+  REPOSITORY_OR_ARCHIVE<br/>
+                        repository/archive to list contents of<br/>
+optional arguments:<br/>
+  -h, &#8211;help            show this help message and exit<br/>
+  &#8211;critical            work on log level CRITICAL<br/>
+  &#8211;error               work on log level ERROR<br/>
+  &#8211;warning             work on log level WARNING (default)<br/>
+  &#8211;info, -v, &#8211;verbose<br/>
+                        work on log level INFO<br/>
+  &#8211;debug               work on log level DEBUG<br/>
+  &#8211;lock-wait N         wait for the lock, but max. N seconds (default: 1).<br/>
+  &#8211;show-rc             show/log the return code (rc)<br/>
+  &#8211;no-files-cache      do not load/update the file metadata cache used to<br/>
+                        detect unchanged files<br/>
+  &#8211;umask M             set umask to M (local and remote, default: 0077)<br/>
+  &#8211;remote-path PATH    set remote path to executable (default: &#8220;borg&#8221;)<br/>
+  &#8211;short               only print file/directory names, nothing else<br/>
+  &#8211;list-format LISTFORMAT<br/>
+                        specify format for archive file listing (default:<br/>
+                        &#8220;{mode} {user:6} {group:6} {size:8d} {isomtime}<br/>
+                        {path}{extra}{<br/>
+    NEWLINE}&#8221;) Special &#8220;{<br/>
+    formatkeys}&#8221; exists<br/>
+                        to list available keys<br/>
+  -P PREFIX, &#8211;prefix PREFIX<br/>
                         only consider archive names starting with this prefix</p>
 <h3>Description</h3>
 <p> This command lists the contents of a repository or an archive.</p>
 <h3>Examples</h3>
-<p>$ borg list / path / to / repo Monday Mon, 2016 &#8211; 02 &#8211; 15 19 : 15 : 11 repo Mon, 2016 &#8211; 02 &#8211; 15 19 : 26 : 54 root &#8211; 2016 &#8211; 02 &#8211; 15 Mon, 2016 &#8211; 02 &#8211; 15 19 : 36 : 29 newname Mon, 2016 &#8211; 02 &#8211; 15 19 : 50 : 19 &#8230; $ borg list / path / to / repo::root &#8211; 2016 &#8211; 02 &#8211; 15 drwxr &#8211; xr &#8211; x root root 0 Mon, 2016 &#8211; 02 &#8211; 15 17 : 44 : 27.drwxrwxr &#8211; x root root 0 Mon, 2016 &#8211; 02 &#8211; 15 19 : 04 : 49 bin &#8211; rwxr &#8211; xr &#8211; x root root 1029624 Thu, 2014 &#8211; 11 &#8211; 13 00 : 08 : 51 bin / bash lrwxrwxrwx root root 0 Fri, 2015 &#8211; 03 &#8211; 27 20 : 24 : 26 bin / bzcmp-&gt;bzdiff &#8211; rwxr &#8211; xr &#8211; x root root 2140 Fri, 2015 &#8211; 03 &#8211; 27 20 : 24 : 22 bin / bzdiff&#8230; $ borg list / path / to / repo::archiveA&#8211; list &#8211; format = &#8220;{mode} {user:6} {group:6} {size:8d} {isomtime} {path}{extra}{NEWLINE}&#8221; drwxrwxr &#8211; x user user 0 Sun, 2015 &#8211; 02 &#8211; 01 11 : 00 : 00.drwxrwxr &#8211; x user user 0 Sun, 2015 &#8211; 02 &#8211; 01 11 : 00 : 00 code drwxrwxr &#8211; x user user 0 Sun, 2015 &#8211; 02 &#8211; 01 11 : 00 : 00 code / myproject &#8211; rw &#8211; rw &#8211; r&#8211; user user 1416192 Sun, 2015 &#8211; 02 &#8211; 01 11 : 00 : 00 code / myproject / file.ext&#8230;<br />
-#see what is changed between archives, based on file modification time, size and file path<br />
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        $ borg list /<br />
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         path / to / repo::archiveA&#8211; list &#8211;<br />
+<p>$ borg list / path / to / repo Monday Mon, 2016 &#8211; 02 &#8211; 15 19 : 15 : 11 repo Mon, 2016 &#8211; 02 &#8211; 15 19 : 26 : 54 root &#8211; 2016 &#8211; 02 &#8211; 15 Mon, 2016 &#8211; 02 &#8211; 15 19 : 36 : 29 newname Mon, 2016 &#8211; 02 &#8211; 15 19 : 50 : 19 &#8230; $ borg list / path / to / repo::root &#8211; 2016 &#8211; 02 &#8211; 15 drwxr &#8211; xr &#8211; x root root 0 Mon, 2016 &#8211; 02 &#8211; 15 17 : 44 : 27.drwxrwxr &#8211; x root root 0 Mon, 2016 &#8211; 02 &#8211; 15 19 : 04 : 49 bin &#8211; rwxr &#8211; xr &#8211; x root root 1029624 Thu, 2014 &#8211; 11 &#8211; 13 00 : 08 : 51 bin / bash lrwxrwxrwx root root 0 Fri, 2015 &#8211; 03 &#8211; 27 20 : 24 : 26 bin / bzcmp-&gt;bzdiff &#8211; rwxr &#8211; xr &#8211; x root root 2140 Fri, 2015 &#8211; 03 &#8211; 27 20 : 24 : 22 bin / bzdiff&#8230; $ borg list / path / to / repo::archiveA&#8211; list &#8211; format = &#8220;{mode} {user:6} {group:6} {size:8d} {isomtime} {path}{extra}{NEWLINE}&#8221; drwxrwxr &#8211; x user user 0 Sun, 2015 &#8211; 02 &#8211; 01 11 : 00 : 00.drwxrwxr &#8211; x user user 0 Sun, 2015 &#8211; 02 &#8211; 01 11 : 00 : 00 code drwxrwxr &#8211; x user user 0 Sun, 2015 &#8211; 02 &#8211; 01 11 : 00 : 00 code / myproject &#8211; rw &#8211; rw &#8211; r&#8211; user user 1416192 Sun, 2015 &#8211; 02 &#8211; 01 11 : 00 : 00 code / myproject / file.ext&#8230;<br/>
+#see what is changed between archives, based on file modification time, size and file path<br/>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        $ borg list /<br/>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         path / to / repo::archiveA&#8211; list &#8211;<br/>
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              format = &#8220;{mtime:%s}{TAB}{size}{TAB}{path}{LF}&#8221; | sort &#8211; n &gt; / tmp / list.archiveA $ borg list / path / to / repo::archiveB&#8211; list &#8211; format = &#8220;{mtime:%s}{TAB}{size}{TAB}{path}{LF}&#8221; | sort &#8211; n &gt; / tmp / list.archiveB $ diff &#8211; y / tmp / list.archiveA / tmp / list.archiveB 1422781200 0.1422781200 0.1422781200 0 code 1422781200 0 code 1422781200 0 code / myproject 1422781200 0 code / myproject 1422781200 1416192 code / myproject / file.ext | 1454664653 1416192 code / myproject / file.ext&#8230;</p>
 <h2>BORG DELETE</h2>
-<p>usage: borg delete [-h] [&#8211;critical] [&#8211;error] [&#8211;warning] [&#8211;info] [&#8211;debug]<br />
-                   [&#8211;lock-wait N] [&#8211;show-rc] [&#8211;no-files-cache] [&#8211;umask M]<br />
-                   [&#8211;remote-path PATH] [-p] [-s] [-c] [&#8211;force]<br />
-                   [&#8211;save-space]<br />
-                   [TARGET]<br />
-Delete an existing repository or archive<br />
-positional arguments:<br />
-  TARGET                archive or repository to delete<br />
-optional arguments:<br />
-  -h, &#8211;help            show this help message and exit<br />
-  &#8211;critical            work on log level CRITICAL<br />
-  &#8211;error               work on log level ERROR<br />
-  &#8211;warning             work on log level WARNING (default)<br />
-  &#8211;info, -v, &#8211;verbose<br />
-                        work on log level INFO<br />
-  &#8211;debug               work on log level DEBUG<br />
-  &#8211;lock-wait N         wait for the lock, but max. N seconds (default: 1).<br />
-  &#8211;show-rc             show/log the return code (rc)<br />
-  &#8211;no-files-cache      do not load/update the file metadata cache used to<br />
-                        detect unchanged files<br />
-  &#8211;umask M             set umask to M (local and remote, default: 0077)<br />
-  &#8211;remote-path PATH    set remote path to executable (default: &#8220;borg&#8221;)<br />
-  -p, &#8211;progress        show progress display while deleting a single archive<br />
-  -s, &#8211;stats           print statistics for the deleted archive<br />
-  -c, &#8211;cache-only      delete only the local cache for the given repository<br />
-  &#8211;force               force deletion of corrupted archives<br />
+<p>usage: borg delete [-h] [&#8211;critical] [&#8211;error] [&#8211;warning] [&#8211;info] [&#8211;debug]<br/>
+                   [&#8211;lock-wait N] [&#8211;show-rc] [&#8211;no-files-cache] [&#8211;umask M]<br/>
+                   [&#8211;remote-path PATH] [-p] [-s] [-c] [&#8211;force]<br/>
+                   [&#8211;save-space]<br/>
+                   [TARGET]<br/>
+Delete an existing repository or archive<br/>
+positional arguments:<br/>
+  TARGET                archive or repository to delete<br/>
+optional arguments:<br/>
+  -h, &#8211;help            show this help message and exit<br/>
+  &#8211;critical            work on log level CRITICAL<br/>
+  &#8211;error               work on log level ERROR<br/>
+  &#8211;warning             work on log level WARNING (default)<br/>
+  &#8211;info, -v, &#8211;verbose<br/>
+                        work on log level INFO<br/>
+  &#8211;debug               work on log level DEBUG<br/>
+  &#8211;lock-wait N         wait for the lock, but max. N seconds (default: 1).<br/>
+  &#8211;show-rc             show/log the return code (rc)<br/>
+  &#8211;no-files-cache      do not load/update the file metadata cache used to<br/>
+                        detect unchanged files<br/>
+  &#8211;umask M             set umask to M (local and remote, default: 0077)<br/>
+  &#8211;remote-path PATH    set remote path to executable (default: &#8220;borg&#8221;)<br/>
+  -p, &#8211;progress        show progress display while deleting a single archive<br/>
+  -s, &#8211;stats           print statistics for the deleted archive<br/>
+  -c, &#8211;cache-only      delete only the local cache for the given repository<br/>
+  &#8211;force               force deletion of corrupted archives<br/>
   &#8211;save-space          work slower, but using less space</p>
 <h3>Description</h3>
 <p> This command deletes an archive from the repository or the complete repository. Disk space is reclaimed accordingly. If you delete the complete repository, the local cache for it (if any) is also deleted.</p>
@@ -593,46 +593,46 @@ newname                              Mon, 2016-02-15 19:50:19
 Type 'YES' if you understand this and want to continue: YES
 </pre>
 <h2>BORG PRUNE</h2>
-<p>usage: borg prune [-h] [&#8211;critical] [&#8211;error] [&#8211;warning] [&#8211;info] [&#8211;debug]<br />
-                  [&#8211;lock-wait N] [&#8211;show-rc] [&#8211;no-files-cache] [&#8211;umask M]<br />
-                  [&#8211;remote-path PATH] [-n] [&#8211;force] [-s] [&#8211;list]<br />
-                  [&#8211;keep-within WITHIN] [-H HOURLY] [-d DAILY] [-w WEEKLY]<br />
-                  [-m MONTHLY] [-y YEARLY] [-P PREFIX] [&#8211;save-space]<br />
-                  [REPOSITORY]<br />
-Prune repository archives according to specified rules<br />
-positional arguments:<br />
-  REPOSITORY            repository to prune<br />
-optional arguments:<br />
-  -h, &#8211;help            show this help message and exit<br />
-  &#8211;critical            work on log level CRITICAL<br />
-  &#8211;error               work on log level ERROR<br />
-  &#8211;warning             work on log level WARNING (default)<br />
-  &#8211;info, -v, &#8211;verbose<br />
-                        work on log level INFO<br />
-  &#8211;debug               work on log level DEBUG<br />
-  &#8211;lock-wait N         wait for the lock, but max. N seconds (default: 1).<br />
-  &#8211;show-rc             show/log the return code (rc)<br />
-  &#8211;no-files-cache      do not load/update the file metadata cache used to<br />
-                        detect unchanged files<br />
-  &#8211;umask M             set umask to M (local and remote, default: 0077)<br />
-  &#8211;remote-path PATH    set remote path to executable (default: &#8220;borg&#8221;)<br />
-  -n, &#8211;dry-run         do not change repository<br />
-  &#8211;force               force pruning of corrupted archives<br />
-  -s, &#8211;stats           print statistics for the deleted archive<br />
-  &#8211;list                output verbose list of archives it keeps/prunes<br />
-  &#8211;keep-within WITHIN  keep all archives within this time interval<br />
-  -H HOURLY, &#8211;keep-hourly HOURLY<br />
-                        number of hourly archives to keep<br />
-  -d DAILY, &#8211;keep-daily DAILY<br />
-                        number of daily archives to keep<br />
-  -w WEEKLY, &#8211;keep-weekly WEEKLY<br />
-                        number of weekly archives to keep<br />
-  -m MONTHLY, &#8211;keep-monthly MONTHLY<br />
-                        number of monthly archives to keep<br />
-  -y YEARLY, &#8211;keep-yearly YEARLY<br />
-                        number of yearly archives to keep<br />
-  -P PREFIX, &#8211;prefix PREFIX<br />
-                        only consider archive names starting with this prefix<br />
+<p>usage: borg prune [-h] [&#8211;critical] [&#8211;error] [&#8211;warning] [&#8211;info] [&#8211;debug]<br/>
+                  [&#8211;lock-wait N] [&#8211;show-rc] [&#8211;no-files-cache] [&#8211;umask M]<br/>
+                  [&#8211;remote-path PATH] [-n] [&#8211;force] [-s] [&#8211;list]<br/>
+                  [&#8211;keep-within WITHIN] [-H HOURLY] [-d DAILY] [-w WEEKLY]<br/>
+                  [-m MONTHLY] [-y YEARLY] [-P PREFIX] [&#8211;save-space]<br/>
+                  [REPOSITORY]<br/>
+Prune repository archives according to specified rules<br/>
+positional arguments:<br/>
+  REPOSITORY            repository to prune<br/>
+optional arguments:<br/>
+  -h, &#8211;help            show this help message and exit<br/>
+  &#8211;critical            work on log level CRITICAL<br/>
+  &#8211;error               work on log level ERROR<br/>
+  &#8211;warning             work on log level WARNING (default)<br/>
+  &#8211;info, -v, &#8211;verbose<br/>
+                        work on log level INFO<br/>
+  &#8211;debug               work on log level DEBUG<br/>
+  &#8211;lock-wait N         wait for the lock, but max. N seconds (default: 1).<br/>
+  &#8211;show-rc             show/log the return code (rc)<br/>
+  &#8211;no-files-cache      do not load/update the file metadata cache used to<br/>
+                        detect unchanged files<br/>
+  &#8211;umask M             set umask to M (local and remote, default: 0077)<br/>
+  &#8211;remote-path PATH    set remote path to executable (default: &#8220;borg&#8221;)<br/>
+  -n, &#8211;dry-run         do not change repository<br/>
+  &#8211;force               force pruning of corrupted archives<br/>
+  -s, &#8211;stats           print statistics for the deleted archive<br/>
+  &#8211;list                output verbose list of archives it keeps/prunes<br/>
+  &#8211;keep-within WITHIN  keep all archives within this time interval<br/>
+  -H HOURLY, &#8211;keep-hourly HOURLY<br/>
+                        number of hourly archives to keep<br/>
+  -d DAILY, &#8211;keep-daily DAILY<br/>
+                        number of daily archives to keep<br/>
+  -w WEEKLY, &#8211;keep-weekly WEEKLY<br/>
+                        number of weekly archives to keep<br/>
+  -m MONTHLY, &#8211;keep-monthly MONTHLY<br/>
+                        number of monthly archives to keep<br/>
+  -y YEARLY, &#8211;keep-yearly YEARLY<br/>
+                        number of yearly archives to keep<br/>
+  -P PREFIX, &#8211;prefix PREFIX<br/>
+                        only consider archive names starting with this prefix<br/>
   &#8211;save-space          work slower, but using less space</p>
 <h3>Description</h3>
 <p> The prune command prunes a repository by deleting all archives not matching any of the specified retention options. This command is normally used by automated backup scripts wanting to keep a certain number of historic backups. </p>
@@ -644,42 +644,42 @@ optional arguments:<br />
 <p> The default of prune is to apply to <code>all archives in the repository</code> unless you restrict its operation to a subset of the archives using <code>&#8211;prefix</code>. When using <code>&#8211;prefix</code>, be careful to choose a good prefix &#8211; e.g. do not use a prefix &quot;foo&quot; if you do not also want to match &quot;foobar&quot;. </p>
 <p> It is strongly recommended to always run <code>prune -v &#8211;list &#8211;dry-run &#8230;</code> first so you will see what it would do without it actually doing anything. </p>
 <p> There is also a visualized prune example in <code>docs/misc/prune-example.txt</code>. </p>
-<p>#Keep 7 end of day and 4 additional end of week archives.<br />
-#Do a dry &#8211; run without actually deleting anything.<br />
-$ borg prune &#8211; v&#8211; list&#8211; dry &#8211; run&#8211; keep &#8211; daily = 7 &#8211;keep &#8211; weekly = 4 / path / to / repo<br />
-#Same as above but only apply to archive names starting with the hostname<br />
-#of the machine followed by a &#8220;-&#8221; character:<br />
-                                                                                             $ borg prune &#8211;<br />
-                                                                         v&#8211; list&#8211; keep &#8211; daily = 7 &#8211;keep &#8211; weekly = 4 &#8211;prefix = &#8216;{hostname}-&#8216; / path / to / repo<br />
-#Keep 7 end of day, 4 additional end of week archives,<br />
-#and an end of month archive for every month:<br />
-                                                                                                                                                                    $ borg prune &#8211;<br />
-                                                                                                                                    v&#8211; list&#8211; keep &#8211; daily = 7 &#8211;keep &#8211; weekly = 4 &#8211;keep &#8211; monthly = -1 / path / to / repo<br />
-#Keep all backups in the last 10 days, 4 additional end of week archives,<br />
-#and an end of month archive for every month:<br />
-                                                                                                                                                                                                                            $ borg prune &#8211;<br />
+<p>#Keep 7 end of day and 4 additional end of week archives.<br/>
+#Do a dry &#8211; run without actually deleting anything.<br/>
+$ borg prune &#8211; v&#8211; list&#8211; dry &#8211; run&#8211; keep &#8211; daily = 7 &#8211;keep &#8211; weekly = 4 / path / to / repo<br/>
+#Same as above but only apply to archive names starting with the hostname<br/>
+#of the machine followed by a &#8220;-&#8221; character:<br/>
+                                                                                             $ borg prune &#8211;<br/>
+                                                                         v&#8211; list&#8211; keep &#8211; daily = 7 &#8211;keep &#8211; weekly = 4 &#8211;prefix = &#8216;{hostname}-&#8216; / path / to / repo<br/>
+#Keep 7 end of day, 4 additional end of week archives,<br/>
+#and an end of month archive for every month:<br/>
+                                                                                                                                                                    $ borg prune &#8211;<br/>
+                                                                                                                                    v&#8211; list&#8211; keep &#8211; daily = 7 &#8211;keep &#8211; weekly = 4 &#8211;keep &#8211; monthly = -1 / path / to / repo<br/>
+#Keep all backups in the last 10 days, 4 additional end of week archives,<br/>
+#and an end of month archive for every month:<br/>
+                                                                                                                                                                                                                            $ borg prune &#8211;<br/>
                                                                                                                                                                                                        v&#8211; list&#8211; keep &#8211; within = 10d &#8211;keep &#8211; weekly = 4 &#8211;keep &#8211; monthly = -1 / path / to / repo</p>
 <h2>BORG INFO</h2>
-<p>usage: borg info [-h] [&#8211;critical] [&#8211;error] [&#8211;warning] [&#8211;info] [&#8211;debug]<br />
-                 [&#8211;lock-wait N] [&#8211;show-rc] [&#8211;no-files-cache] [&#8211;umask M]<br />
-                 [&#8211;remote-path PATH]<br />
-                 ARCHIVE<br />
-Show archive details such as disk space used<br />
-positional arguments:<br />
-  ARCHIVE               archive to display information about<br />
-optional arguments:<br />
-  -h, &#8211;help            show this help message and exit<br />
-  &#8211;critical            work on log level CRITICAL<br />
-  &#8211;error               work on log level ERROR<br />
-  &#8211;warning             work on log level WARNING (default)<br />
-  &#8211;info, -v, &#8211;verbose<br />
-                        work on log level INFO<br />
-  &#8211;debug               work on log level DEBUG<br />
-  &#8211;lock-wait N         wait for the lock, but max. N seconds (default: 1).<br />
-  &#8211;show-rc             show/log the return code (rc)<br />
-  &#8211;no-files-cache      do not load/update the file metadata cache used to<br />
-                        detect unchanged files<br />
-  &#8211;umask M             set umask to M (local and remote, default: 0077)<br />
+<p>usage: borg info [-h] [&#8211;critical] [&#8211;error] [&#8211;warning] [&#8211;info] [&#8211;debug]<br/>
+                 [&#8211;lock-wait N] [&#8211;show-rc] [&#8211;no-files-cache] [&#8211;umask M]<br/>
+                 [&#8211;remote-path PATH]<br/>
+                 ARCHIVE<br/>
+Show archive details such as disk space used<br/>
+positional arguments:<br/>
+  ARCHIVE               archive to display information about<br/>
+optional arguments:<br/>
+  -h, &#8211;help            show this help message and exit<br/>
+  &#8211;critical            work on log level CRITICAL<br/>
+  &#8211;error               work on log level ERROR<br/>
+  &#8211;warning             work on log level WARNING (default)<br/>
+  &#8211;info, -v, &#8211;verbose<br/>
+                        work on log level INFO<br/>
+  &#8211;debug               work on log level DEBUG<br/>
+  &#8211;lock-wait N         wait for the lock, but max. N seconds (default: 1).<br/>
+  &#8211;show-rc             show/log the return code (rc)<br/>
+  &#8211;no-files-cache      do not load/update the file metadata cache used to<br/>
+                        detect unchanged files<br/>
+  &#8211;umask M             set umask to M (local and remote, default: 0077)<br/>
   &#8211;remote-path PATH    set remote path to executable (default: &#8220;borg&#8221;)</p>
 <h3>Description</h3>
 <p> This command displays some detailed information about the specified archive. </p>
@@ -707,30 +707,30 @@ All archives:                1.63 GB            853.66 MB            584.12 MB
 Chunk index:                   36858                48844
 </pre>
 <h2>BORG MOUNT</h2>
-<p>usage: borg mount [-h] [&#8211;critical] [&#8211;error] [&#8211;warning] [&#8211;info] [&#8211;debug]<br />
-                  [&#8211;lock-wait N] [&#8211;show-rc] [&#8211;no-files-cache] [&#8211;umask M]<br />
-                  [&#8211;remote-path PATH] [-f] [-o OPTIONS]<br />
-                  REPOSITORY_OR_ARCHIVE MOUNTPOINT<br />
-Mount archive or an entire repository as a FUSE filesystem<br />
-positional arguments:<br />
-  REPOSITORY_OR_ARCHIVE<br />
-                        repository/archive to mount<br />
-  MOUNTPOINT            where to mount filesystem<br />
-optional arguments:<br />
-  -h, &#8211;help            show this help message and exit<br />
-  &#8211;critical            work on log level CRITICAL<br />
-  &#8211;error               work on log level ERROR<br />
-  &#8211;warning             work on log level WARNING (default)<br />
-  &#8211;info, -v, &#8211;verbose<br />
-                        work on log level INFO<br />
-  &#8211;debug               work on log level DEBUG<br />
-  &#8211;lock-wait N         wait for the lock, but max. N seconds (default: 1).<br />
-  &#8211;show-rc             show/log the return code (rc)<br />
-  &#8211;no-files-cache      do not load/update the file metadata cache used to<br />
-                        detect unchanged files<br />
-  &#8211;umask M             set umask to M (local and remote, default: 0077)<br />
-  &#8211;remote-path PATH    set remote path to executable (default: &#8220;borg&#8221;)<br />
-  -f, &#8211;foreground      stay in foreground, do not daemonize<br />
+<p>usage: borg mount [-h] [&#8211;critical] [&#8211;error] [&#8211;warning] [&#8211;info] [&#8211;debug]<br/>
+                  [&#8211;lock-wait N] [&#8211;show-rc] [&#8211;no-files-cache] [&#8211;umask M]<br/>
+                  [&#8211;remote-path PATH] [-f] [-o OPTIONS]<br/>
+                  REPOSITORY_OR_ARCHIVE MOUNTPOINT<br/>
+Mount archive or an entire repository as a FUSE filesystem<br/>
+positional arguments:<br/>
+  REPOSITORY_OR_ARCHIVE<br/>
+                        repository/archive to mount<br/>
+  MOUNTPOINT            where to mount filesystem<br/>
+optional arguments:<br/>
+  -h, &#8211;help            show this help message and exit<br/>
+  &#8211;critical            work on log level CRITICAL<br/>
+  &#8211;error               work on log level ERROR<br/>
+  &#8211;warning             work on log level WARNING (default)<br/>
+  &#8211;info, -v, &#8211;verbose<br/>
+                        work on log level INFO<br/>
+  &#8211;debug               work on log level DEBUG<br/>
+  &#8211;lock-wait N         wait for the lock, but max. N seconds (default: 1).<br/>
+  &#8211;show-rc             show/log the return code (rc)<br/>
+  &#8211;no-files-cache      do not load/update the file metadata cache used to<br/>
+                        detect unchanged files<br/>
+  &#8211;umask M             set umask to M (local and remote, default: 0077)<br/>
+  &#8211;remote-path PATH    set remote path to executable (default: &#8220;borg&#8221;)<br/>
+  -f, &#8211;foreground      stay in foreground, do not daemonize<br/>
   -o OPTIONS            Extra mount options</p>
 <h3>Description</h3>
 <p> This command mounts an archive as a FUSE filesystem. This can be useful for browsing an archive or restoring individual files. Unless the <code>&#8211;foreground</code> option is given the command will run in the background until the filesystem is <code>umounted</code>. </p>
@@ -742,26 +742,26 @@ optional arguments:<br />
 <p> When the daemonized process receives a signal or crashes, it does not unmount. Unmounting in these cases could cause an active rsync or similar process to unintentionally delete data. </p>
 <p> When running in the foreground ^C/SIGINT unmounts cleanly, but other signals or crashes do not.</dl>
 <h2>BORG UMOUNT</h2>
-<p>usage: borg umount [-h] [&#8211;critical] [&#8211;error] [&#8211;warning] [&#8211;info] [&#8211;debug]<br />
-                   [&#8211;lock-wait N] [&#8211;show-rc] [&#8211;no-files-cache] [&#8211;umask M]<br />
-                   [&#8211;remote-path PATH]<br />
-                   MOUNTPOINT<br />
-un-mount the FUSE filesystem<br />
-positional arguments:<br />
-  MOUNTPOINT            mountpoint of the filesystem to umount<br />
-optional arguments:<br />
-  -h, &#8211;help            show this help message and exit<br />
-  &#8211;critical            work on log level CRITICAL<br />
-  &#8211;error               work on log level ERROR<br />
-  &#8211;warning             work on log level WARNING (default)<br />
-  &#8211;info, -v, &#8211;verbose<br />
-                        work on log level INFO<br />
-  &#8211;debug               work on log level DEBUG<br />
-  &#8211;lock-wait N         wait for the lock, but max. N seconds (default: 1).<br />
-  &#8211;show-rc             show/log the return code (rc)<br />
-  &#8211;no-files-cache      do not load/update the file metadata cache used to<br />
-                        detect unchanged files<br />
-  &#8211;umask M             set umask to M (local and remote, default: 0077)<br />
+<p>usage: borg umount [-h] [&#8211;critical] [&#8211;error] [&#8211;warning] [&#8211;info] [&#8211;debug]<br/>
+                   [&#8211;lock-wait N] [&#8211;show-rc] [&#8211;no-files-cache] [&#8211;umask M]<br/>
+                   [&#8211;remote-path PATH]<br/>
+                   MOUNTPOINT<br/>
+un-mount the FUSE filesystem<br/>
+positional arguments:<br/>
+  MOUNTPOINT            mountpoint of the filesystem to umount<br/>
+optional arguments:<br/>
+  -h, &#8211;help            show this help message and exit<br/>
+  &#8211;critical            work on log level CRITICAL<br/>
+  &#8211;error               work on log level ERROR<br/>
+  &#8211;warning             work on log level WARNING (default)<br/>
+  &#8211;info, -v, &#8211;verbose<br/>
+                        work on log level INFO<br/>
+  &#8211;debug               work on log level DEBUG<br/>
+  &#8211;lock-wait N         wait for the lock, but max. N seconds (default: 1).<br/>
+  &#8211;show-rc             show/log the return code (rc)<br/>
+  &#8211;no-files-cache      do not load/update the file metadata cache used to<br/>
+                        detect unchanged files<br/>
+  &#8211;umask M             set umask to M (local and remote, default: 0077)<br/>
   &#8211;remote-path PATH    set remote path to executable (default: &#8220;borg&#8221;)</p>
 <h3>Description</h3>
 <p> This command un-mounts a FUSE filesystem that was mounted with <code>borg mount</code>. </p>
@@ -774,32 +774,32 @@ bin  boot  etc      home  lib  lib64  lost+found  media  mnt  opt  root  sbin  s
 $ borg umount /tmp/mymountpoint
 </pre>
 <h2>BORG KEY EXPORT</h2>
-<p>usage: borg key export [-h] [&#8211;critical] [&#8211;error] [&#8211;warning] [&#8211;info]<br />
-                       [&#8211;debug] [&#8211;lock-wait N] [&#8211;show-rc]<br />
-                       [&#8211;no-files-cache] [&#8211;umask M] [&#8211;remote-path PATH]<br />
-                       [&#8211;paper] [&#8211;qr-html]<br />
-                       [REPOSITORY] [PATH]<br />
-Export the repository key for backup<br />
-positional arguments:<br />
-  REPOSITORY<br />
-  PATH                  where to store the backup<br />
-optional arguments:<br />
-  -h, &#8211;help            show this help message and exit<br />
-  &#8211;critical            work on log level CRITICAL<br />
-  &#8211;error               work on log level ERROR<br />
-  &#8211;warning             work on log level WARNING (default)<br />
-  &#8211;info, -v, &#8211;verbose<br />
-                        work on log level INFO<br />
-  &#8211;debug               work on log level DEBUG<br />
-  &#8211;lock-wait N         wait for the lock, but max. N seconds (default: 1).<br />
-  &#8211;show-rc             show/log the return code (rc)<br />
-  &#8211;no-files-cache      do not load/update the file metadata cache used to<br />
-                        detect unchanged files<br />
-  &#8211;umask M             set umask to M (local and remote, default: 0077)<br />
-  &#8211;remote-path PATH    set remote path to executable (default: &#8220;borg&#8221;)<br />
-  &#8211;paper               Create an export suitable for printing and later type-<br />
-                        in<br />
-  &#8211;qr-html             Create an html file suitable for printing and later<br />
+<p>usage: borg key export [-h] [&#8211;critical] [&#8211;error] [&#8211;warning] [&#8211;info]<br/>
+                       [&#8211;debug] [&#8211;lock-wait N] [&#8211;show-rc]<br/>
+                       [&#8211;no-files-cache] [&#8211;umask M] [&#8211;remote-path PATH]<br/>
+                       [&#8211;paper] [&#8211;qr-html]<br/>
+                       [REPOSITORY] [PATH]<br/>
+Export the repository key for backup<br/>
+positional arguments:<br/>
+  REPOSITORY<br/>
+  PATH                  where to store the backup<br/>
+optional arguments:<br/>
+  -h, &#8211;help            show this help message and exit<br/>
+  &#8211;critical            work on log level CRITICAL<br/>
+  &#8211;error               work on log level ERROR<br/>
+  &#8211;warning             work on log level WARNING (default)<br/>
+  &#8211;info, -v, &#8211;verbose<br/>
+                        work on log level INFO<br/>
+  &#8211;debug               work on log level DEBUG<br/>
+  &#8211;lock-wait N         wait for the lock, but max. N seconds (default: 1).<br/>
+  &#8211;show-rc             show/log the return code (rc)<br/>
+  &#8211;no-files-cache      do not load/update the file metadata cache used to<br/>
+                        detect unchanged files<br/>
+  &#8211;umask M             set umask to M (local and remote, default: 0077)<br/>
+  &#8211;remote-path PATH    set remote path to executable (default: &#8220;borg&#8221;)<br/>
+  &#8211;paper               Create an export suitable for printing and later type-<br/>
+                        in<br/>
+  &#8211;qr-html             Create an html file suitable for printing and later<br/>
                         type-in or qr scan</p>
 <h3>Description</h3>
 <p> If repository encryption is used, the repository is inaccessible without the key. This command allows to backup this essential key. </p>
@@ -807,55 +807,55 @@ optional arguments:<br />
 <p> For repositories using keyfile encryption the key is saved locally on the system that is capable of doing backups. To guard against loss of this key, the key needs to be backed up independently of the main data backup. </p>
 <p> For repositories using the repokey encryption the key is saved in the repository in the config file. A backup is thus not strictly needed, but guards against the repository becoming inaccessible if the file is damaged for some reason.</p>
 <h2>BORG KEY IMPORT</h2>
-<p>usage: borg key import [-h] [&#8211;critical] [&#8211;error] [&#8211;warning] [&#8211;info]<br />
-                       [&#8211;debug] [&#8211;lock-wait N] [&#8211;show-rc]<br />
-                       [&#8211;no-files-cache] [&#8211;umask M] [&#8211;remote-path PATH]<br />
-                       [&#8211;paper]<br />
-                       [REPOSITORY] [PATH]<br />
-Import the repository key from backup<br />
-positional arguments:<br />
-  REPOSITORY<br />
-  PATH                  path to the backup<br />
-optional arguments:<br />
-  -h, &#8211;help            show this help message and exit<br />
-  &#8211;critical            work on log level CRITICAL<br />
-  &#8211;error               work on log level ERROR<br />
-  &#8211;warning             work on log level WARNING (default)<br />
-  &#8211;info, -v, &#8211;verbose<br />
-                        work on log level INFO<br />
-  &#8211;debug               work on log level DEBUG<br />
-  &#8211;lock-wait N         wait for the lock, but max. N seconds (default: 1).<br />
-  &#8211;show-rc             show/log the return code (rc)<br />
-  &#8211;no-files-cache      do not load/update the file metadata cache used to<br />
-                        detect unchanged files<br />
-  &#8211;umask M             set umask to M (local and remote, default: 0077)<br />
-  &#8211;remote-path PATH    set remote path to executable (default: &#8220;borg&#8221;)<br />
+<p>usage: borg key import [-h] [&#8211;critical] [&#8211;error] [&#8211;warning] [&#8211;info]<br/>
+                       [&#8211;debug] [&#8211;lock-wait N] [&#8211;show-rc]<br/>
+                       [&#8211;no-files-cache] [&#8211;umask M] [&#8211;remote-path PATH]<br/>
+                       [&#8211;paper]<br/>
+                       [REPOSITORY] [PATH]<br/>
+Import the repository key from backup<br/>
+positional arguments:<br/>
+  REPOSITORY<br/>
+  PATH                  path to the backup<br/>
+optional arguments:<br/>
+  -h, &#8211;help            show this help message and exit<br/>
+  &#8211;critical            work on log level CRITICAL<br/>
+  &#8211;error               work on log level ERROR<br/>
+  &#8211;warning             work on log level WARNING (default)<br/>
+  &#8211;info, -v, &#8211;verbose<br/>
+                        work on log level INFO<br/>
+  &#8211;debug               work on log level DEBUG<br/>
+  &#8211;lock-wait N         wait for the lock, but max. N seconds (default: 1).<br/>
+  &#8211;show-rc             show/log the return code (rc)<br/>
+  &#8211;no-files-cache      do not load/update the file metadata cache used to<br/>
+                        detect unchanged files<br/>
+  &#8211;umask M             set umask to M (local and remote, default: 0077)<br/>
+  &#8211;remote-path PATH    set remote path to executable (default: &#8220;borg&#8221;)<br/>
   &#8211;paper               interactively import from a backup done with &#8211;paper</p>
 <h3>Description</h3>
 <p> This command allows to restore a key previously backed up with the export command. </p>
 <p> If the <code>&#8211;paper</code> option is given, the import will be an interactive process in which each line is checked for plausibility before proceeding to the next line. For this format PATH must not be given.</p>
 <h2>BORG CHANGE-PASSPHRASE</h2>
-<p>usage: borg change-passphrase [-h] [&#8211;critical] [&#8211;error] [&#8211;warning] [&#8211;info]<br />
-                              [&#8211;debug] [&#8211;lock-wait N] [&#8211;show-rc]<br />
-                              [&#8211;no-files-cache] [&#8211;umask M]<br />
-                              [&#8211;remote-path PATH]<br />
-                              [REPOSITORY]<br />
-Change repository key file passphrase<br />
-positional arguments:<br />
-  REPOSITORY<br />
-optional arguments:<br />
-  -h, &#8211;help            show this help message and exit<br />
-  &#8211;critical            work on log level CRITICAL<br />
-  &#8211;error               work on log level ERROR<br />
-  &#8211;warning             work on log level WARNING (default)<br />
-  &#8211;info, -v, &#8211;verbose<br />
-                        work on log level INFO<br />
-  &#8211;debug               work on log level DEBUG<br />
-  &#8211;lock-wait N         wait for the lock, but max. N seconds (default: 1).<br />
-  &#8211;show-rc             show/log the return code (rc)<br />
-  &#8211;no-files-cache      do not load/update the file metadata cache used to<br />
-                        detect unchanged files<br />
-  &#8211;umask M             set umask to M (local and remote, default: 0077)<br />
+<p>usage: borg change-passphrase [-h] [&#8211;critical] [&#8211;error] [&#8211;warning] [&#8211;info]<br/>
+                              [&#8211;debug] [&#8211;lock-wait N] [&#8211;show-rc]<br/>
+                              [&#8211;no-files-cache] [&#8211;umask M]<br/>
+                              [&#8211;remote-path PATH]<br/>
+                              [REPOSITORY]<br/>
+Change repository key file passphrase<br/>
+positional arguments:<br/>
+  REPOSITORY<br/>
+optional arguments:<br/>
+  -h, &#8211;help            show this help message and exit<br/>
+  &#8211;critical            work on log level CRITICAL<br/>
+  &#8211;error               work on log level ERROR<br/>
+  &#8211;warning             work on log level WARNING (default)<br/>
+  &#8211;info, -v, &#8211;verbose<br/>
+                        work on log level INFO<br/>
+  &#8211;debug               work on log level DEBUG<br/>
+  &#8211;lock-wait N         wait for the lock, but max. N seconds (default: 1).<br/>
+  &#8211;show-rc             show/log the return code (rc)<br/>
+  &#8211;no-files-cache      do not load/update the file metadata cache used to<br/>
+                        detect unchanged files<br/>
+  &#8211;umask M             set umask to M (local and remote, default: 0077)<br/>
   &#8211;remote-path PATH    set remote path to executable (default: &#8220;borg&#8221;)</p>
 <h3>Description</h3>
 <p> The key files used for repository encryption are optionally passphrase protected. This command can be used to change this passphrase.</p>
@@ -881,30 +881,30 @@ Remember your passphrase. Your data will be inaccessible without it.
 Key updated
 </pre>
 <h2>BORG SERVE</h2>
-<p>usage: borg serve [-h] [&#8211;critical] [&#8211;error] [&#8211;warning] [&#8211;info] [&#8211;debug]<br />
-                  [&#8211;lock-wait N] [&#8211;show-rc] [&#8211;no-files-cache] [&#8211;umask M]<br />
-                  [&#8211;remote-path PATH] [&#8211;restrict-to-path PATH]<br />
-                  [&#8211;append-only]<br />
-Start in server mode. This command is usually not used manually.<br />
-optional arguments:<br />
-  -h, &#8211;help            show this help message and exit<br />
-  &#8211;critical            work on log level CRITICAL<br />
-  &#8211;error               work on log level ERROR<br />
-  &#8211;warning             work on log level WARNING (default)<br />
-  &#8211;info, -v, &#8211;verbose<br />
-                        work on log level INFO<br />
-  &#8211;debug               work on log level DEBUG<br />
-  &#8211;lock-wait N         wait for the lock, but max. N seconds (default: 1).<br />
-  &#8211;show-rc             show/log the return code (rc)<br />
-  &#8211;no-files-cache      do not load/update the file metadata cache used to<br />
-                        detect unchanged files<br />
-  &#8211;umask M             set umask to M (local and remote, default: 0077)<br />
-  &#8211;remote-path PATH    set remote path to executable (default: &#8220;borg&#8221;)<br />
-  &#8211;restrict-to-path PATH<br />
-                        restrict repository access to PATH. Can be specified<br />
-                        multiple times to allow the client access to several<br />
-                        directories. Access to all sub-directories is granted<br />
-                        implicitly;<br />
+<p>usage: borg serve [-h] [&#8211;critical] [&#8211;error] [&#8211;warning] [&#8211;info] [&#8211;debug]<br/>
+                  [&#8211;lock-wait N] [&#8211;show-rc] [&#8211;no-files-cache] [&#8211;umask M]<br/>
+                  [&#8211;remote-path PATH] [&#8211;restrict-to-path PATH]<br/>
+                  [&#8211;append-only]<br/>
+Start in server mode. This command is usually not used manually.<br/>
+optional arguments:<br/>
+  -h, &#8211;help            show this help message and exit<br/>
+  &#8211;critical            work on log level CRITICAL<br/>
+  &#8211;error               work on log level ERROR<br/>
+  &#8211;warning             work on log level WARNING (default)<br/>
+  &#8211;info, -v, &#8211;verbose<br/>
+                        work on log level INFO<br/>
+  &#8211;debug               work on log level DEBUG<br/>
+  &#8211;lock-wait N         wait for the lock, but max. N seconds (default: 1).<br/>
+  &#8211;show-rc             show/log the return code (rc)<br/>
+  &#8211;no-files-cache      do not load/update the file metadata cache used to<br/>
+                        detect unchanged files<br/>
+  &#8211;umask M             set umask to M (local and remote, default: 0077)<br/>
+  &#8211;remote-path PATH    set remote path to executable (default: &#8220;borg&#8221;)<br/>
+  &#8211;restrict-to-path PATH<br/>
+                        restrict repository access to PATH. Can be specified<br/>
+                        multiple times to allow the client access to several<br/>
+                        directories. Access to all sub-directories is granted<br/>
+                        implicitly;<br/>
 PATH doesn&#8217;t need to directly point to a repository.&#8211;append &#8211; only only allow appending to repository segment files</p>
 <h3>Description</h3>
 <p> This command starts a repository server process. This command is usually not used manually.</p>
@@ -918,35 +918,35 @@ $ cat ~/.ssh/authorized_keys
 command=&quot;borg serve --restrict-to-path /path/to/repo&quot;,no-pty,no-agent-forwarding,no-port-forwarding,no-X11-forwarding,no-user-rc ssh-rsa AAAAB3[...]
 </pre>
 <h2>BORG UPGRADE</h2>
-<p>usage: borg upgrade [-h] [&#8211;critical] [&#8211;error] [&#8211;warning] [&#8211;info] [&#8211;debug]<br />
-                    [&#8211;lock-wait N] [&#8211;show-rc] [&#8211;no-files-cache] [&#8211;umask M]<br />
-                    [&#8211;remote-path PATH] [-p] [-n] [-i] [&#8211;force] [&#8211;tam]<br />
-                    [&#8211;disable-tam]<br />
-                    [REPOSITORY]<br />
-upgrade a repository from a previous version<br />
-positional arguments:<br />
-  REPOSITORY            path to the repository to be upgraded<br />
-optional arguments:<br />
-  -h, &#8211;help            show this help message and exit<br />
-  &#8211;critical            work on log level CRITICAL<br />
-  &#8211;error               work on log level ERROR<br />
-  &#8211;warning             work on log level WARNING (default)<br />
-  &#8211;info, -v, &#8211;verbose<br />
-                        work on log level INFO<br />
-  &#8211;debug               work on log level DEBUG<br />
-  &#8211;lock-wait N         wait for the lock, but max. N seconds (default: 1).<br />
-  &#8211;show-rc             show/log the return code (rc)<br />
-  &#8211;no-files-cache      do not load/update the file metadata cache used to<br />
-                        detect unchanged files<br />
-  &#8211;umask M             set umask to M (local and remote, default: 0077)<br />
-  &#8211;remote-path PATH    set remote path to executable (default: &#8220;borg&#8221;)<br />
-  -p, &#8211;progress        show progress display while upgrading the repository<br />
-  -n, &#8211;dry-run         do not change repository<br />
-  -i, &#8211;inplace         rewrite repository in place, with no chance of going<br />
-                        back to older versions of the repository.<br />
-  &#8211;force               Force upgrade<br />
-  &#8211;tam                 Enable manifest authentication (in key and cache)<br />
-                        (Borg 1.0.9 and later)<br />
+<p>usage: borg upgrade [-h] [&#8211;critical] [&#8211;error] [&#8211;warning] [&#8211;info] [&#8211;debug]<br/>
+                    [&#8211;lock-wait N] [&#8211;show-rc] [&#8211;no-files-cache] [&#8211;umask M]<br/>
+                    [&#8211;remote-path PATH] [-p] [-n] [-i] [&#8211;force] [&#8211;tam]<br/>
+                    [&#8211;disable-tam]<br/>
+                    [REPOSITORY]<br/>
+upgrade a repository from a previous version<br/>
+positional arguments:<br/>
+  REPOSITORY            path to the repository to be upgraded<br/>
+optional arguments:<br/>
+  -h, &#8211;help            show this help message and exit<br/>
+  &#8211;critical            work on log level CRITICAL<br/>
+  &#8211;error               work on log level ERROR<br/>
+  &#8211;warning             work on log level WARNING (default)<br/>
+  &#8211;info, -v, &#8211;verbose<br/>
+                        work on log level INFO<br/>
+  &#8211;debug               work on log level DEBUG<br/>
+  &#8211;lock-wait N         wait for the lock, but max. N seconds (default: 1).<br/>
+  &#8211;show-rc             show/log the return code (rc)<br/>
+  &#8211;no-files-cache      do not load/update the file metadata cache used to<br/>
+                        detect unchanged files<br/>
+  &#8211;umask M             set umask to M (local and remote, default: 0077)<br/>
+  &#8211;remote-path PATH    set remote path to executable (default: &#8220;borg&#8221;)<br/>
+  -p, &#8211;progress        show progress display while upgrading the repository<br/>
+  -n, &#8211;dry-run         do not change repository<br/>
+  -i, &#8211;inplace         rewrite repository in place, with no chance of going<br/>
+                        back to older versions of the repository.<br/>
+  &#8211;force               Force upgrade<br/>
+  &#8211;tam                 Enable manifest authentication (in key and cache)<br/>
+                        (Borg 1.0.9 and later)<br/>
   &#8211;disable-tam         Disable manifest authentication (in key and cache)</p>
 <h3>Description</h3>
 <p> Upgrade an existing Borg repository.</p>
@@ -985,26 +985,26 @@ no key file found for repository
 <dt>&bull;</dt>
 <dd> borg migrate-to-repokey repo</dd></dl>
 <h2>BORG BREAK-LOCK</h2>
-<p>usage: borg break-lock [-h] [&#8211;critical] [&#8211;error] [&#8211;warning] [&#8211;info]<br />
-                       [&#8211;debug] [&#8211;lock-wait N] [&#8211;show-rc]<br />
-                       [&#8211;no-files-cache] [&#8211;umask M] [&#8211;remote-path PATH]<br />
-                       [REPOSITORY]<br />
-Break the repository lock (e.g. in case it was left by a dead borg.<br />
-positional arguments:<br />
-  REPOSITORY            repository for which to break the locks<br />
-optional arguments:<br />
-  -h, &#8211;help            show this help message and exit<br />
-  &#8211;critical            work on log level CRITICAL<br />
-  &#8211;error               work on log level ERROR<br />
-  &#8211;warning             work on log level WARNING (default)<br />
-  &#8211;info, -v, &#8211;verbose<br />
-                        work on log level INFO<br />
-  &#8211;debug               work on log level DEBUG<br />
-  &#8211;lock-wait N         wait for the lock, but max. N seconds (default: 1).<br />
-  &#8211;show-rc             show/log the return code (rc)<br />
-  &#8211;no-files-cache      do not load/update the file metadata cache used to<br />
-                        detect unchanged files<br />
-  &#8211;umask M             set umask to M (local and remote, default: 0077)<br />
+<p>usage: borg break-lock [-h] [&#8211;critical] [&#8211;error] [&#8211;warning] [&#8211;info]<br/>
+                       [&#8211;debug] [&#8211;lock-wait N] [&#8211;show-rc]<br/>
+                       [&#8211;no-files-cache] [&#8211;umask M] [&#8211;remote-path PATH]<br/>
+                       [REPOSITORY]<br/>
+Break the repository lock (e.g. in case it was left by a dead borg.<br/>
+positional arguments:<br/>
+  REPOSITORY            repository for which to break the locks<br/>
+optional arguments:<br/>
+  -h, &#8211;help            show this help message and exit<br/>
+  &#8211;critical            work on log level CRITICAL<br/>
+  &#8211;error               work on log level ERROR<br/>
+  &#8211;warning             work on log level WARNING (default)<br/>
+  &#8211;info, -v, &#8211;verbose<br/>
+                        work on log level INFO<br/>
+  &#8211;debug               work on log level DEBUG<br/>
+  &#8211;lock-wait N         wait for the lock, but max. N seconds (default: 1).<br/>
+  &#8211;show-rc             show/log the return code (rc)<br/>
+  &#8211;no-files-cache      do not load/update the file metadata cache used to<br/>
+                        detect unchanged files<br/>
+  &#8211;umask M             set umask to M (local and remote, default: 0077)<br/>
   &#8211;remote-path PATH    set remote path to executable (default: &#8220;borg&#8221;)</p>
 <h3>Description</h3>
 <p> This command breaks the repository and cache locks. Please use carefully and only while no borg process (on any machine) is trying to access the Cache or the Repository.</p>
@@ -1018,33 +1018,33 @@ optional arguments:<br />
 <p> Exclusions can be passed via the command line option <i>&#8211;exclude</i>. When used from within a shell the patterns should be quoted to protect them from expansion. </p>
 <p> The <i>&#8211;exclude-from</i> option permits loading exclusion patterns from a text file with one pattern per line. Lines empty or starting with the number sign (&#8216;#&#8217;) after removing whitespace on both ends are ignored. The optional style selector prefix is also supported for patterns loaded from a file. Due to whitespace removal paths with whitespace at the beginning or end can only be excluded using regular expressions. </p>
 <p> Examples: </p>
-<p>#Exclude &#8216;/home/user/file.o&#8217; but not &#8216;/home/user/file.odt&#8217;:<br />
-$ borg create &#8211; e &#8216;*.o&#8217; backup /<br />
-#Exclude &#8216;/home/user/junk&#8217; and &#8216;/home/user/subdir/junk&#8217; but<br />
-#not &#8216;/home/user/importantjunk&#8217; or &#8216;/etc/junk&#8217;:<br />
-                    $ borg create &#8211;<br />
-        e &#8216;/home/*/junk&#8217; backup /<br />
-#Exclude the contents of &#8216;/home/user/cache&#8217; but not the directory itself:<br />
-            $ borg create &#8211;<br />
-        e / home / user / cache / backup /<br />
-#The file &#8216;/home/user/cache/important&#8217; is * not *backed up:<br />
-            $ borg create &#8211;<br />
-        e / home / user / cache / backup / / home / user / cache / important<br />
-#The contents of directories in &#8216;/home&#8217; are not backed up when their name<br />
-#ends in &#8216;.tmp&#8217;<br />
-                                                                       $ borg create&#8211; exclude &#8216;re:^/home/[^/]+\.tmp/&#8217; backup /<br />
-#Load exclusions from file<br />
-            $ cat &gt;<br />
-    exclude.txt &lt;&lt; EOF<br />
-#Comment line<br />
-                           / home /*/junk<br />
-                             *.tmp<br />
-                             fm:aa:something/*<br />
-                             re:^/home/[^/]\.tmp/<br />
-                             sh:/home/*/<br />
-                                 .thumbnails<br />
-                                     EOF<br />
-                                         $ borg create&#8211; exclude &#8211;<br />
+<p>#Exclude &#8216;/home/user/file.o&#8217; but not &#8216;/home/user/file.odt&#8217;:<br/>
+$ borg create &#8211; e &#8216;*.o&#8217; backup /<br/>
+#Exclude &#8216;/home/user/junk&#8217; and &#8216;/home/user/subdir/junk&#8217; but<br/>
+#not &#8216;/home/user/importantjunk&#8217; or &#8216;/etc/junk&#8217;:<br/>
+                    $ borg create &#8211;<br/>
+        e &#8216;/home/*/junk&#8217; backup /<br/>
+#Exclude the contents of &#8216;/home/user/cache&#8217; but not the directory itself:<br/>
+            $ borg create &#8211;<br/>
+        e / home / user / cache / backup /<br/>
+#The file &#8216;/home/user/cache/important&#8217; is * not *backed up:<br/>
+            $ borg create &#8211;<br/>
+        e / home / user / cache / backup / / home / user / cache / important<br/>
+#The contents of directories in &#8216;/home&#8217; are not backed up when their name<br/>
+#ends in &#8216;.tmp&#8217;<br/>
+                                                                       $ borg create&#8211; exclude &#8216;re:^/home/[^/]+\.tmp/&#8217; backup /<br/>
+#Load exclusions from file<br/>
+            $ cat &gt;<br/>
+    exclude.txt &lt;&lt; EOF<br/>
+#Comment line<br/>
+                           / home /*/junk<br/>
+                             *.tmp<br/>
+                             fm:aa:something/*<br/>
+                             re:^/home/[^/]\.tmp/<br/>
+                             sh:/home/*/<br/>
+                                 .thumbnails<br/>
+                                     EOF<br/>
+                                         $ borg create&#8211; exclude &#8211;<br/>
                        from exclude.txt backup /</p>
 <h3>borg help placeholders</h3>
 <p> Repository (or Archive) URLs, &#8211;prefix and &#8211;remote-path values support these placeholders: </p>

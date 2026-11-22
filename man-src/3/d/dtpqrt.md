@@ -11,7 +11,7 @@ description: "dtpqrt.f –"
 <p> dtpqrt.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dtpqrt</code> (M, N, L, NB, A, LDA, B, LDB, T, LDT, WORK, INFO)<br />
+<p> subroutine <code>dtpqrt</code> (M, N, L, NB, A, LDA, B, LDB, T, LDT, WORK, INFO)<br/>
  <i></i><code>DTPQRT</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dtpqrt (integerM, integerN, integerL, integerNB, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( ldb, * )B, integerLDB, double precision, dimension( ldt, * )T, integerLDT, double precision, dimension( * )WORK, integerINFO)</h3>

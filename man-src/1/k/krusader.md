@@ -108,9 +108,9 @@ description: "krusader – advanced twin-panel file manager and FTP client for K
 <h2>I18N</h2>
 <p> Krusader is translated into many languages. </p>
 <p> m[blue]<code><a rel="nofollow" href="http://l10n.kde.org/stats/gui/trunk-kde4/po/krusader.po/">http://l10n.kde.org/stats/gui/trunk-kde4/po/krusader.po/</a></code>m[] </p>
-<p> Read the m[blue]<code>KDE translation howto</code>m[]<font SIZE="-2">[1]</font> if you want translate Krusader in your native language.</p>
+<p> Read the m[blue]<code>KDE translation howto</code>m[][1] if you want translate Krusader in your native language.</p>
 <h2>FAQ</h2>
-<p> The latest version of the KRUSADER FAQ can be found m[blue]<code>here</code>m[]<font SIZE="-2">[2]</font>.</p>
+<p> The latest version of the KRUSADER FAQ can be found m[blue]<code>here</code>m[][2].</p>
 <h2>SEE ALSO</h2>
 <p> The Krusader Handbook, at the krusader help menu. </p>
 <p> The Krusader homepage on the World Wide Web: </p>

@@ -10,9 +10,9 @@ description: "dzen2 – general-purpose messaging and notification for X11"
 
 <p> dzen2 &#8211; general-purpose messaging and notification for X11</p>
 <h2>SYNOPSIS</h2>
-<p> <code>dzen2</code> [-v] [-p [seconds]] [-m [v|h]] [-ta &lt;l|c|r&gt;] [-sa &lt;l|c|r&gt;]<br />
-[-x&nbsp;<wbr>&lt;pixel&gt;]&nbsp;<wbr>[-y&nbsp;<wbr>&lt;pixel&gt;]&nbsp;<wbr>[-w&nbsp;<wbr>&lt;pixel&gt;]&nbsp;<wbr>[-tw&nbsp;<wbr>&lt;pixel&gt;]&nbsp;<wbr>[-u]&nbsp;<wbr><br />
-[-e&nbsp;<wbr>&lt;string&gt;]&nbsp;<wbr>[-l&nbsp;<wbr>&lt;lines&gt;]&nbsp;<wbr>&nbsp;<wbr>[-fn&nbsp;<wbr>&lt;font&gt;]&nbsp;<wbr>[-bg&nbsp;<wbr>&lt;color&gt;]<br />
+<p> <code>dzen2</code> [-v] [-p [seconds]] [-m [v|h]] [-ta &lt;l|c|r&gt;] [-sa &lt;l|c|r&gt;]<br/>
+[-x&nbsp;<wbr>&lt;pixel&gt;]&nbsp;<wbr>[-y&nbsp;<wbr>&lt;pixel&gt;]&nbsp;<wbr>[-w&nbsp;<wbr>&lt;pixel&gt;]&nbsp;<wbr>[-tw&nbsp;<wbr>&lt;pixel&gt;]&nbsp;<wbr>[-u]&nbsp;<wbr><br/>
+[-e&nbsp;<wbr>&lt;string&gt;]&nbsp;<wbr>[-l&nbsp;<wbr>&lt;lines&gt;]&nbsp;<wbr>&nbsp;<wbr>[-fn&nbsp;<wbr>&lt;font&gt;]&nbsp;<wbr>[-bg&nbsp;<wbr>&lt;color&gt;]<br/>
 [-fg&nbsp;<wbr>&lt;color&gt;]&nbsp;<wbr>[-xs&nbsp;<wbr>&lt;screen&gt;]</p>
 <h2>DESCRIPTION</h2>
 <p> <code>Dzen</code> is a general-purpose messaging and notification program for X11, desigend to be scriptable in any language and integrate well with window managers like dwm, wmii and xmonad though it will work with any windowmanger. </p>

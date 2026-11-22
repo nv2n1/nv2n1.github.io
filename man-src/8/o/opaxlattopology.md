@@ -9,7 +9,7 @@ description: "opaxlattopology Generates a topology XML file of a cluster using t
 
 <p>opaxlattopology Generates a topology XML file of a cluster using topology.csv, linksum_swd06.csv, and linksum_swd24.csv as input. The topology file can be used to bring up and verify the cluster. <code>NOTE:</code> The topology.csv input file must be present in the same directory from which the script operates, but the linksum CSV files are read from the /usr/lib/opa-ff/samples directory. </p>
 <h2>Syntax</h2>
-<p>opaxlattopology [-d <i>level</i>-v <i>level</i>-i <i>level</i>-c <i>char</i>-K -?]<br />
+<p>opaxlattopology [-d <i>level</i>-v <i>level</i>-i <i>level</i>-c <i>char</i>-K -?]<br/>
  [source [dest]]</p>
 <h2>Options</h2>
 <dl>
@@ -79,10 +79,10 @@ description: "opaxlattopology Generates a topology XML file of a cluster using t
 <p>The opaxlattopology script reads the topology.csv file from the local directory, and reads the other files from /usr/lib/opa-ff/samples/linksum_swd06.csv and /usr/lib/opa-ff/samples/linksum_swd24.csv. The topology.csv file is created from the topology.xlsx spreadsheet by saving the Fabric Links tab as a .CSV file to topology.csv. A sample topology.xlsx is located in the /usr/lib/opa-ff/samples/ directory. Inspect the topology.csv file to ensure that each row contains the correct and same number of comma separators. Any extraneous entries in the spreadsheet can cause the CSV output to have extra fields. </p>
 <p> The script outputs one or more topology files starting with topology.0:0.xml. The topology.csv input file must be present in the same directory from which the script operates, but the linksum CSV files are read from the /usr/lib/opa-ff/samples directory.</p>
 <h2>Example</h2>
-<p>opaxlattopology<br />
- # reads default input &#8216;topology.csv&#8217; and creates default<br />
+<p>opaxlattopology<br/>
+ # reads default input &#8216;topology.csv&#8217; and creates default<br/>
  # output &#8216;topology.0:0.xml&#8217; </p>
-<p> opaxlattopology fabric_2.csv<br />
+<p> opaxlattopology fabric_2.csv<br/>
  # reads input &#8216;fabric_2.csv&#8217; and creates default output </p>
 <p> See topology.xlsx for examples of links between HFI and Edge SW (rows 4-7), HFI and Core SW (rows 8-11), and Edge SW and Core SW (rows 12-15).</p>
 <h2>Environment Variables</h2>
@@ -110,45 +110,45 @@ description: "opaxlattopology Generates a topology XML file of a cluster using t
 <dd>Upon completion of the script, save the top level linksum.csv file as linksum_swd06.csv or linksum_swd24.csv as appropriate. </dd>
 </dl>
 <h2>Including SM Blocks in Topology</h2>
-<p>You must manually edit the /etc/sysconfig/opa/topology.0:0.xml file to include SM blocks for each SM in your fabric. opaxlattopology translates the topology.csv file which does not include SM blocks in the xml file by default. If manual edits are not completed, then the command opareport -o verifyall -T topology.0:0.xml fails with errors similar to the following:# opareport -o verifyall -T topology.0:0.xml<br />
+<p>You must manually edit the /etc/sysconfig/opa/topology.0:0.xml file to include SM blocks for each SM in your fabric. opaxlattopology translates the topology.csv file which does not include SM blocks in the xml file by default. If manual edits are not completed, then the command opareport -o verifyall -T topology.0:0.xml fails with errors similar to the following:# opareport -o verifyall -T topology.0:0.xml<br/>
  SMs Topology Verification </p>
-<p> SMs Found with incorrect configuration:<br />
- NodeGUID Port PortGUID Type Name<br />
- 0x0011750101671ed9 1 0x0011750101671ed9 FI phkp3un86 hfi1_0<br />
- NodeDetails: koplab<br />
+<p> SMs Found with incorrect configuration:<br/>
+ NodeGUID Port PortGUID Type Name<br/>
+ 0x0011750101671ed9 1 0x0011750101671ed9 FI phkp3un86 hfi1_0<br/>
+ NodeDetails: koplab<br/>
  Unexpected SM </p>
 <p> 1 of 1 Fabric SMs Checked </p>
-<p> SMs Expected but Missing or Duplicate in input:<br />
+<p> SMs Expected but Missing or Duplicate in input:<br/>
  0 of 0 Input SMs Checked </p>
-<p> Total of 1 Incorrect SMs found<br />
+<p> Total of 1 Incorrect SMs found<br/>
  0 Missing, 1 Unexpected, 0 Duplicate, 0 Different </p>
-<p> To retrieve the info for the SM block, use the command opareport -o nodes -F sm as shown in the following example.<br />
- # opareport -o nodes -F sm<br />
- Getting All Node Records&#8230;<br />
- Done Getting All Node Records<br />
- Done Getting All Link Records<br />
- Done Getting All Cable Info Records<br />
- Done Getting All SM Info Records<br />
- Node Type Summary<br />
- Focused on:<br />
- Port: 1 0x0011750101671ed9<br />
+<p> To retrieve the info for the SM block, use the command opareport -o nodes -F sm as shown in the following example.<br/>
+ # opareport -o nodes -F sm<br/>
+ Getting All Node Records&#8230;<br/>
+ Done Getting All Node Records<br/>
+ Done Getting All Link Records<br/>
+ Done Getting All Cable Info Records<br/>
+ Done Getting All SM Info Records<br/>
+ Node Type Summary<br/>
+ Focused on:<br/>
+ Port: 1 0x0011750101671ed9<br/>
  in Node: 0x0011750101671ed9 FI phkp3un86 hfi1_0 </p>
-<p> 3 Connected FIs in Fabric:<br />
- Name: phkp3un86 hfi1_0<br />
- NodeGUID: 0x0011750101671ed9 Type: FI<br />
- Ports: 1 PartitionCap: 16 SystemImageGuid: 0x0011750101671ed9<br />
- BaseVer: 128 SmaVer: 128 VendorID: 0x1175 DeviceID: 0x24f0 Rev: 0x10<br />
- 1 Connected Ports:<br />
- PortNum: 1 LID: 0x0001 GUID: 0x0011750101671ed9<br />
- Neighbor: Name: phedfim20<br />
- NodeGUID: 0x0011750102648205 Type: SW PortNum: 46<br />
- Width: 4 Speed: 25Gb Downgraded? No<br />
+<p> 3 Connected FIs in Fabric:<br/>
+ Name: phkp3un86 hfi1_0<br/>
+ NodeGUID: 0x0011750101671ed9 Type: FI<br/>
+ Ports: 1 PartitionCap: 16 SystemImageGuid: 0x0011750101671ed9<br/>
+ BaseVer: 128 SmaVer: 128 VendorID: 0x1175 DeviceID: 0x24f0 Rev: 0x10<br/>
+ 1 Connected Ports:<br/>
+ PortNum: 1 LID: 0x0001 GUID: 0x0011750101671ed9<br/>
+ Neighbor: Name: phedfim20<br/>
+ NodeGUID: 0x0011750102648205 Type: SW PortNum: 46<br/>
+ Width: 4 Speed: 25Gb Downgraded? No<br/>
  1 Matching FIs Found </p>
-<p> 1 Connected Switches in Fabric:<br />
+<p> 1 Connected Switches in Fabric:<br/>
  0 Matching Switches Found </p>
-<p> 1 Connected SMs in Fabric:<br />
- State: Master Name: phkp3un86 hfi1_0<br />
- NodeGUID: 0x0011750101671ed9 Type: FI<br />
- PortNum: 1 LID: 0x0001 PortGUID: 0x0011750101671ed9<br />
- SM_Key: 0x0000000000000000 Priority: 0 ActCount: 0x0000bcb2<br />
+<p> 1 Connected SMs in Fabric:<br/>
+ State: Master Name: phkp3un86 hfi1_0<br/>
+ NodeGUID: 0x0011750101671ed9 Type: FI<br/>
+ PortNum: 1 LID: 0x0001 PortGUID: 0x0011750101671ed9<br/>
+ SM_Key: 0x0000000000000000 Priority: 0 ActCount: 0x0000bcb2<br/>
  1 Matching SMs Found</p>

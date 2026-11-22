@@ -10,7 +10,7 @@ description: "freecad – An extensible Open Source CAx program for Unix/X11"
 
 <p> freecad &#8211; An extensible Open Source CAx program for Unix/X11 </p>
 <h2>SYNOPSIS</h2>
-<p> <code>freecad</code> [<i>options</i>]<i> files</i><br />
+<p> <code>freecad</code> [<i>options</i>]<i> files</i><br/>
  <code>freecadcmd</code> [<i>options</i>]<i> files</i></p>
 <h2>DESCRIPTION</h2>
 <p> <code>FreeCAD</code> is an Open Source CAx RAD based on OpenCasCade, Qt and Python. It features some key concepts like macro recording, workbenches, ability to run as a server and dynamically loadable application extensions and it is designed to be platform independent.</p>

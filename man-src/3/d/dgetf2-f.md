@@ -10,7 +10,7 @@ description: "dgetf2.f –"
 <p>dgetf2.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dgetf2</code> (M, N, A, LDA, IPIV, INFO)<br />
+<p>subroutine <code>dgetf2</code> (M, N, A, LDA, IPIV, INFO)<br/>
  <i></i><code>DGETF2</code> computes the LU factorization of a general m-by-n matrix using partial pivoting with row interchanges (unblocked algorithm).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dgetf2 (integerM, integerN, double precision, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, integerINFO)</h3>

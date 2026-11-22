@@ -32,9 +32,9 @@ description: "lwres_gnbarequest_render, lwres_gnbaresponse_render, lwres_gnbareq
 <dl>
 <dt>
 </dt><dd>
-typedef struct {<br />
-    lwres_uint32_t flags;<br />
-    lwres_addr_t addr;<br />
+typedef struct {<br/>
+    lwres_uint32_t flags;<br/>
+    lwres_addr_t addr;<br/>
 } lwres_gnbarequest_t;
 </dd></dl>
 <dl>
@@ -61,5 +61,5 @@ typedef struct {
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-lwres_packet/">lwres_packet</a></code>(3).</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2004, 2005, 2007 Internet Systems Consortium, Inc. (&quot;ISC&quot;)<br />
+<p> Copyright &#169; 2004, 2005, 2007 Internet Systems Consortium, Inc. (&quot;ISC&quot;)<br/>
  Copyright &#169; 2000, 2001 Internet Software Consortium. </p>

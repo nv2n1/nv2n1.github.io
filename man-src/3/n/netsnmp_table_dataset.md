@@ -10,58 +10,58 @@ description: "table_dataset – Helps you implement a table with automatted stor
 <p>table_dataset &#8211; Helps you implement a table with automatted storage.</p>
 <h3>Functions</h3>
 <p>void <code>netsnmp_init_table_dataset</code> (void) </p>
-<p> <code>netsnmp_table_data_set</code> * <code>netsnmp_create_table_data_set</code> (const char *table_name)<br />
- <i>Create a netsnmp_table_data_set structure given a table_data definition. </i><br />
- <code>netsnmp_table_row</code> * <code>netsnmp_table_data_set_clone_row</code> (<code>netsnmp_table_row</code> *row)<br />
- <i>clones a dataset row, including all data. </i><br />
- NETSNMP_INLINE <code>netsnmp_table_data_set_storage</code> * <code>netsnmp_table_dataset_delete_data</code> (<code>netsnmp_table_data_set_storage</code> *data)<br />
- <i>deletes a single dataset table data. </i><br />
- NETSNMP_INLINE void <code>netsnmp_table_dataset_delete_all_data</code> (<code>netsnmp_table_data_set_storage</code> *data)<br />
- <i>deletes all the data from this node and beyond in the linked list </i><br />
- NETSNMP_INLINE void <code>netsnmp_table_dataset_delete_row</code> (<code>netsnmp_table_row</code> *row)<br />
- <i>deletes all the data from this node and beyond in the linked list </i><br />
- NETSNMP_INLINE void <code>netsnmp_table_dataset_add_row</code> (<code>netsnmp_table_data_set</code> *table, <code>netsnmp_table_row</code> *row)<br />
- <i>adds a new row to a dataset table </i><br />
- NETSNMP_INLINE void <code>netsnmp_table_dataset_replace_row</code> (<code>netsnmp_table_data_set</code> *table, <code>netsnmp_table_row</code> *origrow, <code>netsnmp_table_row</code> *newrow)<br />
- <i>adds a new row to a dataset table </i><br />
- NETSNMP_INLINE void <code>netsnmp_table_dataset_remove_row</code> (<code>netsnmp_table_data_set</code> *table, <code>netsnmp_table_row</code> *row)<br />
- <i>removes a row from the table, but doesn&#8217;t delete/free the column values </i><br />
- NETSNMP_INLINE void <code>netsnmp_table_dataset_remove_and_delete_row</code> (<code>netsnmp_table_data_set</code> *table, <code>netsnmp_table_row</code> *row)<br />
- <i>removes a row from the table and then deletes it (and all its data) </i><br />
- <code>netsnmp_table_row</code> * <code>netsnmp_table_data_set_create_row_from_defaults</code> (<code>netsnmp_table_data_set_storage</code> *defrow)<br />
- <i>creates a new row from an existing defined default set </i><br />
- int <code>netsnmp_table_set_add_default_row</code> (<code>netsnmp_table_data_set</code> *table_set, unsigned int column, int type, int writable, void *default_value, size_t default_value_len)<br />
- <i>adds a new default row to a table_set. </i><br />
- void <code>netsnmp_table_set_multi_add_default_row</code> (<code>netsnmp_table_data_set</code> *tset,&#8230;)<br />
- <i>adds multiple data column definitions to each row. </i><br />
- <code>netsnmp_mib_handler</code> * <code>netsnmp_get_table_data_set_handler</code> (<code>netsnmp_table_data_set</code> *data_set)<br />
- <i>Given a netsnmp_table_data_set definition, create a handler for it. </i><br />
- int <code>netsnmp_register_table_data_set</code> (<code>netsnmp_handler_registration</code> *reginfo, <code>netsnmp_table_data_set</code> *data_set, <code>netsnmp_table_registration_info</code> *table_info)<br />
- <i>register a given data_set at a given oid (specified in the netsnmp_handler_registration pointer). </i><br />
+<p> <code>netsnmp_table_data_set</code> * <code>netsnmp_create_table_data_set</code> (const char *table_name)<br/>
+ <i>Create a netsnmp_table_data_set structure given a table_data definition. </i><br/>
+ <code>netsnmp_table_row</code> * <code>netsnmp_table_data_set_clone_row</code> (<code>netsnmp_table_row</code> *row)<br/>
+ <i>clones a dataset row, including all data. </i><br/>
+ NETSNMP_INLINE <code>netsnmp_table_data_set_storage</code> * <code>netsnmp_table_dataset_delete_data</code> (<code>netsnmp_table_data_set_storage</code> *data)<br/>
+ <i>deletes a single dataset table data. </i><br/>
+ NETSNMP_INLINE void <code>netsnmp_table_dataset_delete_all_data</code> (<code>netsnmp_table_data_set_storage</code> *data)<br/>
+ <i>deletes all the data from this node and beyond in the linked list </i><br/>
+ NETSNMP_INLINE void <code>netsnmp_table_dataset_delete_row</code> (<code>netsnmp_table_row</code> *row)<br/>
+ <i>deletes all the data from this node and beyond in the linked list </i><br/>
+ NETSNMP_INLINE void <code>netsnmp_table_dataset_add_row</code> (<code>netsnmp_table_data_set</code> *table, <code>netsnmp_table_row</code> *row)<br/>
+ <i>adds a new row to a dataset table </i><br/>
+ NETSNMP_INLINE void <code>netsnmp_table_dataset_replace_row</code> (<code>netsnmp_table_data_set</code> *table, <code>netsnmp_table_row</code> *origrow, <code>netsnmp_table_row</code> *newrow)<br/>
+ <i>adds a new row to a dataset table </i><br/>
+ NETSNMP_INLINE void <code>netsnmp_table_dataset_remove_row</code> (<code>netsnmp_table_data_set</code> *table, <code>netsnmp_table_row</code> *row)<br/>
+ <i>removes a row from the table, but doesn&#8217;t delete/free the column values </i><br/>
+ NETSNMP_INLINE void <code>netsnmp_table_dataset_remove_and_delete_row</code> (<code>netsnmp_table_data_set</code> *table, <code>netsnmp_table_row</code> *row)<br/>
+ <i>removes a row from the table and then deletes it (and all its data) </i><br/>
+ <code>netsnmp_table_row</code> * <code>netsnmp_table_data_set_create_row_from_defaults</code> (<code>netsnmp_table_data_set_storage</code> *defrow)<br/>
+ <i>creates a new row from an existing defined default set </i><br/>
+ int <code>netsnmp_table_set_add_default_row</code> (<code>netsnmp_table_data_set</code> *table_set, unsigned int column, int type, int writable, void *default_value, size_t default_value_len)<br/>
+ <i>adds a new default row to a table_set. </i><br/>
+ void <code>netsnmp_table_set_multi_add_default_row</code> (<code>netsnmp_table_data_set</code> *tset,&#8230;)<br/>
+ <i>adds multiple data column definitions to each row. </i><br/>
+ <code>netsnmp_mib_handler</code> * <code>netsnmp_get_table_data_set_handler</code> (<code>netsnmp_table_data_set</code> *data_set)<br/>
+ <i>Given a netsnmp_table_data_set definition, create a handler for it. </i><br/>
+ int <code>netsnmp_register_table_data_set</code> (<code>netsnmp_handler_registration</code> *reginfo, <code>netsnmp_table_data_set</code> *data_set, <code>netsnmp_table_registration_info</code> *table_info)<br/>
+ <i>register a given data_set at a given oid (specified in the netsnmp_handler_registration pointer). </i><br/>
  <code>newrow_stash</code> * <code>netsnmp_table_data_set_create_newrowstash</code> (<code>netsnmp_table_data_set</code> *datatable, <code>netsnmp_table_request_info</code> *table_info) </p>
 <p> int <code>netsnmp_table_data_set_helper_handler</code> (<code>netsnmp_mib_handler</code> *handler, <code>netsnmp_handler_registration</code> *reginfo, <code>netsnmp_agent_request_info</code> *reqinfo, <code>netsnmp_request_info</code> *requests) </p>
-<p> NETSNMP_INLINE <code>netsnmp_table_data_set</code> * <code>netsnmp_extract_table_data_set</code> (<code>netsnmp_request_info</code> *request)<br />
- <i>extracts a netsnmp_table_data_set pointer from a given request </i><br />
- <code>netsnmp_table_data_set_storage</code> * <code>netsnmp_extract_table_data_set_column</code> (<code>netsnmp_request_info</code> *request, unsigned int column)<br />
- <i>extracts a netsnmp_table_data_set pointer from a given request </i><br />
- void <code>netsnmp_register_auto_data_table</code> (<code>netsnmp_table_data_set</code> *table_set, char *registration_name)<br />
- <i>registers a table_dataset so that the &#8216;add_row&#8217; snmpd.conf token can be used to add data to this table. </i><br />
+<p> NETSNMP_INLINE <code>netsnmp_table_data_set</code> * <code>netsnmp_extract_table_data_set</code> (<code>netsnmp_request_info</code> *request)<br/>
+ <i>extracts a netsnmp_table_data_set pointer from a given request </i><br/>
+ <code>netsnmp_table_data_set_storage</code> * <code>netsnmp_extract_table_data_set_column</code> (<code>netsnmp_request_info</code> *request, unsigned int column)<br/>
+ <i>extracts a netsnmp_table_data_set pointer from a given request </i><br/>
+ void <code>netsnmp_register_auto_data_table</code> (<code>netsnmp_table_data_set</code> *table_set, char *registration_name)<br/>
+ <i>registers a table_dataset so that the &#8216;add_row&#8217; snmpd.conf token can be used to add data to this table. </i><br/>
  void <code>netsnmp_config_parse_table_set</code> (const char *token, char *line) </p>
 <p> void <code>netsnmp_config_parse_add_row</code> (const char *token, char *line) </p>
-<p> <code>netsnmp_table_row</code> * <code>netsnmp_table_data_set_get_first_row</code> (<code>netsnmp_table_data_set</code> *table)<br />
- <i>returns the first row in the table </i><br />
- <code>netsnmp_table_row</code> * <code>netsnmp_table_data_set_get_next_row</code> (<code>netsnmp_table_data_set</code> *table, <code>netsnmp_table_row</code> *row)<br />
- <i>returns the next row in the table </i><br />
+<p> <code>netsnmp_table_row</code> * <code>netsnmp_table_data_set_get_first_row</code> (<code>netsnmp_table_data_set</code> *table)<br/>
+ <i>returns the first row in the table </i><br/>
+ <code>netsnmp_table_row</code> * <code>netsnmp_table_data_set_get_next_row</code> (<code>netsnmp_table_data_set</code> *table, <code>netsnmp_table_row</code> *row)<br/>
+ <i>returns the next row in the table </i><br/>
  int <code>netsnmp_table_set_num_rows</code> (<code>netsnmp_table_data_set</code> *table) </p>
-<p> <code>netsnmp_table_data_set_storage</code> * <code>netsnmp_table_data_set_find_column</code> (<code>netsnmp_table_data_set_storage</code> *start, unsigned int column)<br />
- <i>Finds a column within a given storage set, given the pointer to the start of the storage set list. </i><br />
- int <code>netsnmp_mark_row_column_writable</code> (<code>netsnmp_table_row</code> *row, int column, int writable)<br />
- <i>marks a given column in a row as writable or not. </i><br />
- int <code>netsnmp_set_row_column</code> (<code>netsnmp_table_row</code> *row, unsigned int column, int type, const char *value, size_t value_len)<br />
- <i>sets a given column in a row with data given a type, value, and length. </i><br />
- NETSNMP_INLINE void <code>netsnmp_table_dataset_add_index</code> (<code>netsnmp_table_data_set</code> *table, u_char type)<br />
- <i>adds an index to the table. </i><br />
- void <code>netsnmp_table_set_add_indexes</code> (<code>netsnmp_table_data_set</code> *tset,&#8230;)<br />
+<p> <code>netsnmp_table_data_set_storage</code> * <code>netsnmp_table_data_set_find_column</code> (<code>netsnmp_table_data_set_storage</code> *start, unsigned int column)<br/>
+ <i>Finds a column within a given storage set, given the pointer to the start of the storage set list. </i><br/>
+ int <code>netsnmp_mark_row_column_writable</code> (<code>netsnmp_table_row</code> *row, int column, int writable)<br/>
+ <i>marks a given column in a row as writable or not. </i><br/>
+ int <code>netsnmp_set_row_column</code> (<code>netsnmp_table_row</code> *row, unsigned int column, int type, const char *value, size_t value_len)<br/>
+ <i>sets a given column in a row with data given a type, value, and length. </i><br/>
+ NETSNMP_INLINE void <code>netsnmp_table_dataset_add_index</code> (<code>netsnmp_table_data_set</code> *table, u_char type)<br/>
+ <i>adds an index to the table. </i><br/>
+ void <code>netsnmp_table_set_add_indexes</code> (<code>netsnmp_table_data_set</code> *tset,&#8230;)<br/>
  <i>adds multiple indexes to a table_dataset helper object. </i></p>
 <h2>Detailed Description</h2>
 <p>Helps you implement a table with automatted storage. </p>

@@ -15,20 +15,20 @@ description: "heketi-cli – Command line program for Heketi"
 <h2>Commands</h2>
 <h3>Cluster Commands</h3>
 <dl>
-<dd><code>heketi-cli cluster create</code> Create a cluster<br />
-&nbsp;<wbr><code>Example</code><br />
+<dd><code>heketi-cli cluster create</code> Create a cluster<br/>
+&nbsp;<wbr><code>Example</code><br/>
 &nbsp;<wbr>$&nbsp;<wbr>heketi-cli cluster create</dd></dl>
 <dl>
-<dd><code>heketi-cli cluster delete &lt;CLUSTER-ID&gt;</code> Delete a cluster<br />
-&nbsp;<wbr><code>Example</code><br />
+<dd><code>heketi-cli cluster delete &lt;CLUSTER-ID&gt;</code> Delete a cluster<br/>
+&nbsp;<wbr><code>Example</code><br/>
 &nbsp;<wbr>$&nbsp;<wbr>heketi-cli cluster delete 886a86a868711bef83001</dd></dl>
 <dl>
 <dd><code>heketi-cli cluster info &lt;CLUSTER-ID&gt;</code> Retrieves information about cluster </dd>
-<p>&nbsp;<wbr><code>Example</code><br />
+<p>&nbsp;<wbr><code>Example</code><br/>
 &nbsp;<wbr>$&nbsp;<wbr>heketi-cli cluster info 886a86a868711bef83001</dl>
 <dl>
 <dd><code>heketi-cli cluster list</code> Lists the clusters managed by Heketi </dd>
-<p>&nbsp;<wbr><code>Example</code><br />
+<p>&nbsp;<wbr><code>Example</code><br/>
 &nbsp;<wbr>$&nbsp;<wbr>heketi-cli cluster list </p>
 </dl>
 <h3>Device Commands</h3>
@@ -36,29 +36,29 @@ description: "heketi-cli – Command line program for Heketi"
 <dd><code>heketi-cli device add &#8211;name=&lt;DEVICE-NAME&gt; &#8211;node=&lt;NODE-ID&gt;</code> Add new device to node to be managed by Heketi</dd>
 <dt><code> Options</code></dt>
 <dd></dd></dl>
-<p> <code> &#8211;name</code>=&quot;&quot;<br />
+<p> <code> &#8211;name</code>=&quot;&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Name of device to add </p>
-<p> <code> &#8211;node</code>=&quot;&quot;<br />
+<p> <code> &#8211;node</code>=&quot;&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Id of the node which has this device </p>
-<p>&nbsp;<wbr><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Example</code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>$&nbsp;<wbr>heketi-cli device add&nbsp;<wbr>\<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;name=/dev/sdb<br />
+<p>&nbsp;<wbr><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Example</code><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>$&nbsp;<wbr>heketi-cli device add&nbsp;<wbr>\<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;name=/dev/sdb<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;node=3e098cb4407d7109806bb196d9e8f095 </p>
 <dl>
 <dd><code>heketi-cli device delete &lt;DEVICE-ID&gt;</code> Deletes a device from Heketi node </dd>
-<p>&nbsp;<wbr><code>Example</code><br />
+<p>&nbsp;<wbr><code>Example</code><br/>
 &nbsp;<wbr>$&nbsp;<wbr>heketi-cli device delete 886a86a868711bef83001</dl>
 <dl>
 <dd><code>heketi-cli device disable &lt;DEVICE-ID&gt;</code> Disallow usage of a device by placing it offline </dd>
-<p>&nbsp;<wbr><code>Example</code><br />
+<p>&nbsp;<wbr><code>Example</code><br/>
 &nbsp;<wbr>$&nbsp;<wbr>heketi-cli device disable 886a86a868711bef83001</dl>
 <dl>
 <dd><code>heketi-cli device enable &lt;DEVICE-ID&gt;</code> Allows device to go online </dd>
-<p>&nbsp;<wbr><code>Example</code><br />
+<p>&nbsp;<wbr><code>Example</code><br/>
 &nbsp;<wbr>$&nbsp;<wbr>heketi-cli device enable 886a86a868711bef83001</dl>
 <dl>
 <dd><code>heketi-cli device info &lt;DEVICE-ID&gt;</code> Retrieves information about device </dd>
-<p>&nbsp;<wbr><code>Example</code><br />
+<p>&nbsp;<wbr><code>Example</code><br/>
 &nbsp;<wbr>$&nbsp;<wbr>heketi-cli device info 886a86a868711bef83001 </p>
 </dl>
 <h3>Node Commands</h3>
@@ -66,39 +66,39 @@ description: "heketi-cli – Command line program for Heketi"
 <dd><code>heketi-cli node add &#8211;zone=&lt;ZONE-NUMBER&gt; &#8211;cluster=&lt;CLUSTER-ID&gt; &#8211;management-host-name=&lt;MANAGEMENT-HOSTNAME&gt; &#8211;storage-host-name=&lt;STORAGE-HOSTNAME&gt;</code> Add new node to be managed by Heketi</dd>
 <dt><code> Options</code></dt>
 <dd></dd></dl>
-<p> <code> &#8211;cluster</code>=&quot;&quot;<br />
+<p> <code> &#8211;cluster</code>=&quot;&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>The cluster in which the node should reside </p>
-<p> <code> &#8211;management-host-name</code>=&quot;&quot;<br />
+<p> <code> &#8211;management-host-name</code>=&quot;&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Management host name </p>
-<p> <code> &#8211;storage-host-name</code>=&quot;&quot;<br />
+<p> <code> &#8211;storage-host-name</code>=&quot;&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Storage host name </p>
-<p> <code> &#8211;zone</code>=-1<br />
+<p> <code> &#8211;zone</code>=-1<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>The zone in which the node should reside </p>
-<p>&nbsp;<wbr><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Example</code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>$&nbsp;<wbr>heketi-cli node add&nbsp;<wbr>\<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;zone=3&nbsp;<wbr>\<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;cluster=3e098cb4407d7109806bb196d9e8f095&nbsp;<wbr>\<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;management-host-name=node1-manage.gluster.lab.com&nbsp;<wbr>\<br />
+<p>&nbsp;<wbr><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Example</code><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>$&nbsp;<wbr>heketi-cli node add&nbsp;<wbr>\<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;zone=3&nbsp;<wbr>\<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;cluster=3e098cb4407d7109806bb196d9e8f095&nbsp;<wbr>\<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;management-host-name=node1-manage.gluster.lab.com&nbsp;<wbr>\<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;storage-host-name=node1-storage.gluster.lab.com </p>
 <dl>
 <dd><code>heketi-cli node delete &lt;NODE-ID&gt;</code> Deletes a node from Heketi management </dd>
-<p>&nbsp;<wbr><code>Example</code><br />
+<p>&nbsp;<wbr><code>Example</code><br/>
 &nbsp;<wbr>$&nbsp;<wbr>heketi-cli node delete 886a86a868711bef83001</dl>
 <dl>
 <dd><code>heketi-cli node disable &lt;NODE-ID&gt;</code> Disallow usage of a node by placing it offline </dd>
-<p>&nbsp;<wbr><code>Example</code><br />
+<p>&nbsp;<wbr><code>Example</code><br/>
 &nbsp;<wbr>$&nbsp;<wbr>heketi-cli node disable 886a86a868711bef83001</dl>
 <dl>
 <dd><code>heketi-cli node enable &lt;NODE-ID&gt;</code> Allows node to go online </dd>
-<p>&nbsp;<wbr><code>Example</code><br />
+<p>&nbsp;<wbr><code>Example</code><br/>
 &nbsp;<wbr>$&nbsp;<wbr>heketi-cli node enable 886a86a868711bef83001</dl>
 <dl>
 <dd><code>heketi-cli node info &lt;NODE-ID&gt;</code> Retrieves information about node </dd>
-<p>&nbsp;<wbr><code>Example</code><br />
+<p>&nbsp;<wbr><code>Example</code><br/>
 &nbsp;<wbr>$&nbsp;<wbr>heketi-cli node info 886a86a868711bef83001</dl>
 <dl>
 <dd><code>heketi-cli node list</code> List all nodes in cluster </dd>
-<p>&nbsp;<wbr><code>Example</code><br />
+<p>&nbsp;<wbr><code>Example</code><br/>
 &nbsp;<wbr>$&nbsp;<wbr>heketi-cli node list </p>
 </dl>
 <h3>Setup OpenShift/Kubernetes persistent storage for Heketi</h3>
@@ -106,22 +106,22 @@ description: "heketi-cli – Command line program for Heketi"
 <dd><code>heketi-cli setup-openshift-heketi-storage</code> Creates a dedicated GlusterFS volume for Heketi. Once the volume is created, a Kubernetes/OpenShift list object is created to configure the volume.</dd>
 <dt><code> Options</code></dt>
 <dd></dd></dl>
-<p> <code> &#8211;listfile</code>=&quot;heketi-storage.json&quot;<br />
+<p> <code> &#8211;listfile</code>=&quot;heketi-storage.json&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Filename to contain list of objects </p>
-<p>&nbsp;<wbr><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Example</code><br />
+<p>&nbsp;<wbr><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Example</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>$&nbsp;<wbr>heketi-cli setup-openshift-heketi-storage</p>
 <h3>Topology Commands</h3>
 <dl>
 <dd><code>heketi-cli topology load &#8211;json=&lt;JSON-FILENAME&gt;</code> Add devices to Heketi from a configuration file</dd>
 <dt><code> Options</code></dt>
 <dd></dd></dl>
-<p> <code> -j, &#8211;json</code>=&quot;&quot;<br />
+<p> <code> -j, &#8211;json</code>=&quot;&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Configuration containing devices, nodes, and clusters, in JSON format </p>
-<p>&nbsp;<wbr><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Example</code><br />
+<p>&nbsp;<wbr><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Example</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>$&nbsp;<wbr>heketi-cli topology load &#8211;json=topo.json </p>
 <dl>
 <dd><code>heketi-cli topology info </code> Retreives information about the current Topology </dd>
-<p>&nbsp;<wbr><code>Example</code><br />
+<p>&nbsp;<wbr><code>Example</code><br/>
 &nbsp;<wbr>$&nbsp;<wbr>heketi-cli topology info </p>
 </dl>
 <h3>Volume Commands</h3>
@@ -206,44 +206,44 @@ description: "heketi-cli – Command line program for Heketi"
  snapshot storage, then snapshot-factor would be set to 1.5. If the
  value is set to 1, then snapshots will not be enabled for this volume</pre>
 </dd></dl>
-<p>&nbsp;<wbr><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Example</code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>Create a 100GB replica 3 volume:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>$&nbsp;<wbr>heketi-cli volume create &#8211;size=100<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>Create a 100GB replica 3 volume specifying two specific clusters:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>$&nbsp;<wbr>heketi-cli volume create &#8211;size=100&nbsp;<wbr>\<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;clusters=0995098e1284ddccb46c7752d142c832,60d46d518074b13a04ce1022c8c7193c<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>Create a 100GB replica 2 volume with 50GB of snapshot storage:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>$&nbsp;<wbr>heketi-cli volume create &#8211;size=100 &#8211;snapshot-factor=1.5 &#8211;replica=2<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>Create a 100GB distributed volume<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>$&nbsp;<wbr>heketi-cli volume create &#8211;size=100 &#8211;durability=none<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>Create a 100GB erasure coded 4+2 volume with 25GB snapshot storage:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>$&nbsp;<wbr>heketi-cli volume create &#8211;size=100 &#8211;durability=disperse &#8211;snapshot-factor=1.25<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>Create a 100GB erasure coded 8+3 volume with 25GB snapshot storage:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>$&nbsp;<wbr>heketi-cli volume create &#8211;size=100 &#8211;durability=disperse &#8211;snapshot-factor=1.25&nbsp;<wbr>\<br />
+<p>&nbsp;<wbr><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Example</code><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>Create a 100GB replica 3 volume:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>$&nbsp;<wbr>heketi-cli volume create &#8211;size=100<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>Create a 100GB replica 3 volume specifying two specific clusters:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>$&nbsp;<wbr>heketi-cli volume create &#8211;size=100&nbsp;<wbr>\<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;clusters=0995098e1284ddccb46c7752d142c832,60d46d518074b13a04ce1022c8c7193c<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>Create a 100GB replica 2 volume with 50GB of snapshot storage:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>$&nbsp;<wbr>heketi-cli volume create &#8211;size=100 &#8211;snapshot-factor=1.5 &#8211;replica=2<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>Create a 100GB distributed volume<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>$&nbsp;<wbr>heketi-cli volume create &#8211;size=100 &#8211;durability=none<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>Create a 100GB erasure coded 4+2 volume with 25GB snapshot storage:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>$&nbsp;<wbr>heketi-cli volume create &#8211;size=100 &#8211;durability=disperse &#8211;snapshot-factor=1.25<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>Create a 100GB erasure coded 8+3 volume with 25GB snapshot storage:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>$&nbsp;<wbr>heketi-cli volume create &#8211;size=100 &#8211;durability=disperse &#8211;snapshot-factor=1.25&nbsp;<wbr>\<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;disperse-data=8 &#8211;redundancy=3 </p>
 <dl>
 <dd><code>heketi-cli volume delete &lt;VOLUME-ID&gt;</code> Deletes the volume </dd>
-<p>&nbsp;<wbr><code>Example</code><br />
+<p>&nbsp;<wbr><code>Example</code><br/>
 &nbsp;<wbr>$&nbsp;<wbr>heketi-cli volume delete 886a86a868711bef83001</dl>
 <dl>
 <dd><code>heketi-cli volume expand &#8211;expand-size=&lt;SIZE&gt; &#8211;volume=&lt;VOLUME-ID&gt;</code> Expand a volume</dd>
 <dt><code> Options</code></dt>
 <dd></dd></dl>
-<p> <code> &#8211;expand</code>=&quot;&quot;<br />
+<p> <code> &#8211;expand</code>=&quot;&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Amount in GB to add to the volume </p>
-<p> <code> &#8211;volume</code>=&quot;&quot;<br />
+<p> <code> &#8211;volume</code>=&quot;&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Id of volume to expand </p>
-<p> <code> Example</code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>Add 10GB to a volume<br />
+<p> <code> Example</code><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>Add 10GB to a volume<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>$&nbsp;<wbr>heketi-cli volume expand &#8211;volume=60d46d518074b13a04ce1022c8c7193c &#8211;expand-size=10 </p>
 <dl>
 <dd><code>heketi-cli volume info &lt;VOLUME-ID&gt;</code> Retrieves information about volume </dd>
-<p>&nbsp;<wbr><code>Example</code><br />
+<p>&nbsp;<wbr><code>Example</code><br/>
 &nbsp;<wbr>$&nbsp;<wbr>heketi-cli volume info 886a86a868711bef83001 </p>
 </dl>
 <dl>
 <dd><code>heketi-cli volume list</code> Lists the volumes managed by Heketi </dd>
-<p>&nbsp;<wbr><code>Example</code><br />
+<p>&nbsp;<wbr><code>Example</code><br/>
 &nbsp;<wbr>$&nbsp;<wbr>heketi-cli volume list </p>
 </dl>
 <h2>Global Options</h2>

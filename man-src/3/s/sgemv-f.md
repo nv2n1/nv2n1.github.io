@@ -10,7 +10,7 @@ description: "sgemv.f –"
 <p>sgemv.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>sgemv</code> (TRANS, M, N, ALPHA, A, LDA, X, INCX, BETA, Y, INCY)<br />
+<p>subroutine <code>sgemv</code> (TRANS, M, N, ALPHA, A, LDA, X, INCX, BETA, Y, INCY)<br/>
  <i></i><code>SGEMV</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sgemv (characterTRANS, integerM, integerN, realALPHA, real, dimension(lda,*)A, integerLDA, real, dimension(*)X, integerINCX, realBETA, real, dimension(*)Y, integerINCY)</h3>

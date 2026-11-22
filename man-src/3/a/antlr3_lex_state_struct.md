@@ -12,13 +12,13 @@ description: "ANTLR3_LEX_STATE_struct –"
 <h2>Synopsis</h2>
 <p>#include &lt;<a href="file:/usr/include/antlr3input.h">antlr3input.h</a>&gt;</p>
 <h3>Data Fields</h3>
-<p><code>ANTLR3_INT32</code> <code>charPositionInLine</code><br />
- <i>The offset within the current line of the current character. </i><br />
- void * <code>currentLine</code><br />
- <i>Pointer into the input buffer where the current line started. </i><br />
- <code>ANTLR3_UINT32</code> <code>line</code><br />
- <i>The line number we are traversing in the input file. </i><br />
- void * <code>nextChar</code><br />
+<p><code>ANTLR3_INT32</code> <code>charPositionInLine</code><br/>
+ <i>The offset within the current line of the current character. </i><br/>
+ void * <code>currentLine</code><br/>
+ <i>Pointer into the input buffer where the current line started. </i><br/>
+ <code>ANTLR3_UINT32</code> <code>line</code><br/>
+ <i>The line number we are traversing in the input file. </i><br/>
+ void * <code>nextChar</code><br/>
  <i>Pointer to the next character to be consumed from the input data This is cast to point at the encoding of the original file that was read by the functions installed as pointer in this input stream context instance at file/string/whatever load time. </i></p>
 <h2>Detailed Description</h2>
 <p>Structure for track lex input states as part of <code>mark()</code> and rewind() of lexer.</p>

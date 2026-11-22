@@ -12,10 +12,10 @@ description: "makedumpfile.conf – The filter configuration file for makedumpfi
 <p>The makedumpfile.conf is a configuration file for makedumpfile tool. makedumpfile.conf file contains the erase commands to filter out desired kernel data from the vmcore while creating <i>DUMPFILE</i> using makedumpfile tool. makedumpfile reads the filter config and builds the list of memory addresses and its sizes after processing filter commands. The memory locations that require to be filtered out are then poisoned with character <i>X</i> (58 in Hex).</p>
 <h2>File Format</h2>
 <p>The file consists of module sections that contains filter commands. A section begins with the name of the section in square brackets and continues until the next section begins. </p>
-<p> &quot;[&quot;&lt;<i>ModuleName</i>&gt;&quot;]&quot;<br />
+<p> &quot;[&quot;&lt;<i>ModuleName</i>&gt;&quot;]&quot;<br/>
  &lt;<i>FilterCommands</i>&gt; </p>
-<p> where<br />
- &quot;[&quot; is the character <code>[</code><br />
+<p> where<br/>
+ &quot;[&quot; is the character <code>[</code><br/>
  &quot;]&quot; is the character <code>]</code></p>
 <dl>
 <dt>&lt;<i>ModuleName</i>&gt;</dt>
@@ -35,8 +35,8 @@ description: "makedumpfile.conf – The filter configuration file for makedumpfi
 <dd>Described in the subsection <code>Loop construct</code> of this manual page.</dd></dl>
 <h3>erase command</h3>
 <p>Erase specified size of a kernel data referred by specified kernel/module symbol or its member component. The erase command syntax is: </p>
-<p> <code>erase</code> &lt;<i>Symbol</i>&gt;[.<i>member</i>[&#8230;]] [<code>size</code> &lt;<i>SizeValue</i>&gt;[K|M]]<br />
- <code>erase</code> &lt;<i>Symbol</i>&gt;[.<i>member</i>[&#8230;]] [<code>size</code> &lt;<i>SizeSymbol</i>&gt;]<br />
+<p> <code>erase</code> &lt;<i>Symbol</i>&gt;[.<i>member</i>[&#8230;]] [<code>size</code> &lt;<i>SizeValue</i>&gt;[K|M]]<br/>
+ <code>erase</code> &lt;<i>Symbol</i>&gt;[.<i>member</i>[&#8230;]] [<code>size</code> &lt;<i>SizeSymbol</i>&gt;]<br/>
  <code>erase</code> &lt;<i>Symbol</i>&gt;[.<i>member</i>[&#8230;]] [<code>nullify</code>] </p>
 <p> where </p>
 <dl>
@@ -56,44 +56,44 @@ description: "makedumpfile.conf – The filter configuration file for makedumpfi
 <p> Let us look at the makedumpfile.conf file from the example below which was configured to erase desired kernel data from the kernel module with name <code>mymodule</code>. At line 1 and 3, the user has not specified size option while erasing &#8216;array_var&#8217; and &#8216;mystruct1.name&#8217; symbols. Instead the user depends on makedumpfile to automatically determine the sizes to be erased <code>i.e</code> 100 bytes for &#8216;array_var&#8217; and 11 bytes for &#8216;mystruct1.name&#8217;. At line 2, while erasing the &#8216;mystruct1.buffer&#8217; member the user has specified the size value 25 against the actual size of 50. In this case the user specified <code>size</code> takes the precedence and makedumpfile erases only 25 bytes from &#8216;mystruct1.buffer&#8217;. At line 4, the size of the data pointed by <code>void *</code> pointer &#8216;mystruct1.addr&#8217; is unknown. Hence the <code>nullify</code> option has been specified to reset the pointer value to NULL. At line 5, the &#8216;mystruct2.addr_size&#8217; is specified as <code>size</code> argument to determine the size of the data pointed by <code>void *</code> pointer &#8216;mystruct2.addr&#8217;. </p>
 <p> <code>Example:</code> </p>
 <p> Assuming the following piece of code is from kernel module &#8216;mymodule&#8217;: </p>
-<p> struct s1 {<br />
+<p> struct s1 {<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>char *name;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>void *addr1;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>void *addr2;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>char buffer[50];</p>
-<p> };<br />
- struct s2 {<br />
+<p> };<br/>
+ struct s2 {<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>void *addr;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>long addr_size;</p>
 <p> }; </p>
-<p> /* Global symbols */<br />
- char array_var[100];<br />
- struct s1 mystruct1;<br />
+<p> /* Global symbols */<br/>
+ char array_var[100];<br/>
+ struct s1 mystruct1;<br/>
  struct s2 *mystruct2; </p>
-<p> int foo()<br />
- {<br />
+<p> int foo()<br/>
+ {<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>&#8230;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>s1.name = &quot;Hello World&quot;;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>&#8230;</p>
 <p> } </p>
-<p> <code>makedumpfile.conf:</code><br />
- [mymodule]<br />
- erase array_var<br />
- erase mystruct1.buffer size 25<br />
- erase mystruct1.name<br />
- erase mystruct1.addr1 nullify<br />
- # Assuming addr2 points to 1024 bytes<br />
- erase mystruct1.addr2 size 1K<br />
- erase mystruct2.addr size mystruct2.addr_size<br />
+<p> <code>makedumpfile.conf:</code><br/>
+ [mymodule]<br/>
+ erase array_var<br/>
+ erase mystruct1.buffer size 25<br/>
+ erase mystruct1.name<br/>
+ erase mystruct1.addr1 nullify<br/>
+ # Assuming addr2 points to 1024 bytes<br/>
+ erase mystruct1.addr2 size 1K<br/>
+ erase mystruct2.addr size mystruct2.addr_size<br/>
  <code>EOF</code></p>
 <h3>Loop construct</h3>
 <p>A Loop construct allows the user to traverse the linked list or array elements and erase the data contents referred by each element. </p>
-<p> <code>for</code> &lt;<i>id</i>&gt; <code>in</code> {&lt;<i>ArrayVar</i>&gt; |<br />
+<p> <code>for</code> &lt;<i>id</i>&gt; <code>in</code> {&lt;<i>ArrayVar</i>&gt; |<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &lt;<i>StructVar</i>&gt; <code>via</code> &lt;<i>NextMember</i>&gt; |</p>
-<p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &lt;<i>ListHeadVar</i>&gt; <code>within</code><br />
- &lt;<i>StructName</i>&gt;<code>:</code>&lt;<i>ListHeadMember</i>&gt;}<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><code>erase</code> &lt;<i>id</i>&gt;[.<i>MemberExpression</i>]<br />
- [<code>size</code> &lt;<i>SizeExpression</i>&gt;|<code>nullify</code>]<br />
+<p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &lt;<i>ListHeadVar</i>&gt; <code>within</code><br/>
+ &lt;<i>StructName</i>&gt;<code>:</code>&lt;<i>ListHeadMember</i>&gt;}<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><code>erase</code> &lt;<i>id</i>&gt;[.<i>MemberExpression</i>]<br/>
+ [<code>size</code> &lt;<i>SizeExpression</i>&gt;|<code>nullify</code>]<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>[<code>erase</code> &lt;<i>id</i>&gt;&#8230;]</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>[&#8230;]</p>
 <p> <code>endfor</code> </p>
@@ -124,19 +124,19 @@ description: "makedumpfile.conf – The filter configuration file for makedumpfi
 <p> The below example illustrates how to use loop construct for traversing Array, linked list via next member and list_head. </p>
 <p> <code>Example:</code> </p>
 <p> Assuming following piece of code is from kernel module &#8216;mymodule&#8217;: </p>
-<p> struct s1 {<br />
+<p> struct s1 {<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>struct *next;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>struct list_head list;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>char private[100];</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>void *key;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>long key_size;</p>
 <p> }; </p>
-<p> /* Global symbols */<br />
- struct s1 mystruct1;<br />
- static LIST_HEAD(s1_list_head);<br />
+<p> /* Global symbols */<br/>
+ struct s1 mystruct1;<br/>
+ static LIST_HEAD(s1_list_head);<br/>
  struct s1 myarray[100]; </p>
-<p> void foo()<br />
- {<br />
+<p> void foo()<br/>
+ {<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>struct s1 *s1_ptr;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>&#8230;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>&#8230;</p>
@@ -146,25 +146,25 @@ description: "makedumpfile.conf – The filter configuration file for makedumpfi
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>list_add(&amp;s1_ptr-&gt;list, &amp;s1_list_head);</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>&#8230;</p>
 <p> } </p>
-<p> <code>makedumpfile.conf:</code><br />
- [mymodule]<br />
- # erase private fields from list starting with mystruct1 connected via<br />
- # &#8216;next&#8217; member:<br />
- for mys1 in mystruct1 via next<br />
+<p> <code>makedumpfile.conf:</code><br/>
+ [mymodule]<br/>
+ # erase private fields from list starting with mystruct1 connected via<br/>
+ # &#8216;next&#8217; member:<br/>
+ for mys1 in mystruct1 via next<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>erase mys1.private</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>erase mys1.key size mys1.key_size</p>
 <p> endfor </p>
-<p> # erase private fields from list starting with list_head variable<br />
- # s1_list_head.<br />
- for mys1 in s1_list_head.next within s1:list<br />
+<p> # erase private fields from list starting with list_head variable<br/>
+ # s1_list_head.<br/>
+ for mys1 in s1_list_head.next within s1:list<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>erase mys1.private</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>erase mys1.key size mys1.key_size</p>
 <p> endfor </p>
-<p> # erase private fields from all elements of the array myarray:<br />
- for mys1 in myarray<br />
+<p> # erase private fields from all elements of the array myarray:<br/>
+ for mys1 in myarray<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>erase mys1.private</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>erase mys1.key size mys1.key_size</p>
-<p> endfor<br />
+<p> endfor<br/>
  <code>EOF</code> </p>
 <p> In the above example, the first <code>for</code> construct traverses the linked list through a specified structure variable <code>mystruct1</code> of type <code>struct s1</code>. The linked list can be traversed using &#8216;<code>next</code>&#8216; member of <code>mystruct1</code>. Hence a <code>via</code> terminal has been used to specify the traversal member name &#8216;<code>next</code>&#8216;. </p>
 <p> The second <code>for</code> construct traverses the linked list through a specified struct list_head variable <code>s1_list_head.next</code>. The global symbol <code>s1_list_head</code> is a start address of the linked list and its <code>next</code> member points to the address of struct list_head type member &#8216;<code>list</code>&#8216; from <code>struct s1</code>. Hence a <code>within</code> terminal is used to specify the structure name &#8216;<code>s1</code>&#8216; that can be traversed using <code>s1_list_head.next</code> variable along with the name of struct list_head type member &#8216;<code>list</code>&#8216; which is part of the linked list that starts from <code>s1_list_head</code> global symbol. </p>

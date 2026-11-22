@@ -53,9 +53,9 @@ description: "setfiles – set SELinux file security contexts."
 <dd>the separator for the input items is assumed to be the null character (instead of the white space). The quotes and the backslash characters are also treated as normal characters that can form valid input. This option finally also disables the end of file string, which is treated like any other argument. Useful when input items might contain white space, quote marks or backslashes. The <code>-print0</code> option of GNU <code>find</code> produces input suitable for this mode. </dd>
 </dl>
 <h2>Arguments</h2>
-<p><code>spec_file</code> The specification file which contains lines of the following form<br />
- <code>regexp [ -type ] ( context | &lt;&lt;none&gt;&gt; )</code><br />
- The regular expression is anchored at both ends. The optional type field specifies the file type as shown in the mode field by the <code><a href="/docs/linux/man/1-ls/">ls</a>(1)</code> program, e.g. &#8212; to match only regular files or -d to match only directories. The context can be an ordinary security context or the string &lt;&lt;none&gt;&gt; to specify that the file is not to have its context changed.<br />
+<p><code>spec_file</code> The specification file which contains lines of the following form<br/>
+ <code>regexp [ -type ] ( context | &lt;&lt;none&gt;&gt; )</code><br/>
+ The regular expression is anchored at both ends. The optional type field specifies the file type as shown in the mode field by the <code><a href="/docs/linux/man/1-ls/">ls</a>(1)</code> program, e.g. &#8212; to match only regular files or -d to match only directories. The context can be an ordinary security context or the string &lt;&lt;none&gt;&gt; to specify that the file is not to have its context changed.<br/>
  The last matching specification is used. If there are multiple hard links to a file that match different specifications and those specifications indicate different security contexts, then a warning is displayed but the file is still labeled based on the last matching specification other than &lt;&lt;none&gt;&gt;.</p>
 <dl>
 <dt><code>pathname&#8230;</code></dt>

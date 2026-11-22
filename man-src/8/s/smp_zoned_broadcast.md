@@ -39,15 +39,15 @@ description: "smp_zoned_broadcast – invoke ZONED BROADCAST SMP function"
 <dt><code>-V</code>, <code>&#8211;version</code></dt>
 <dd>print the version string and then exit.</dd></dl>
 <h2>Notes</h2>
-<p>The following is a list of broadcast types:<br />
- 0 Broadcast (Change)<br />
- 1 Broadcast (Reserved change 0)<br />
- 2 Broadcast (Reserved change 1)<br />
- 3 Broadcast (SES)<br />
- 4 Broadcast (Expander)<br />
- 5 Broadcast (Asynchronous event)<br />
- 6 Broadcast (Reserved 3)<br />
- 7 Broadcast (Reserved 4)<br />
+<p>The following is a list of broadcast types:<br/>
+ 0 Broadcast (Change)<br/>
+ 1 Broadcast (Reserved change 0)<br/>
+ 2 Broadcast (Reserved change 1)<br/>
+ 3 Broadcast (SES)<br/>
+ 4 Broadcast (Expander)<br/>
+ 5 Broadcast (Asynchronous event)<br/>
+ 6 Broadcast (Reserved 3)<br/>
+ 7 Broadcast (Reserved 4)<br/>
  8 Broadcast (Zone activate) </p>
 <p> The remaining zone types (9 to 15) may be issued by the ZONED BROADCAST function.</p>
 <h2>Conforming To</h2>
@@ -57,7 +57,7 @@ description: "smp_zoned_broadcast – invoke ZONED BROADCAST SMP function"
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;dgilbert at interlog dot com&gt;.</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2011 Douglas Gilbert<br />
+<p>Copyright &#169; 2011 Douglas Gilbert<br/>
  This software is distributed under a FreeBSD license. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>See Also</h2>
 <p><code>smp_utils, smp_zone_lock, smp_zone_unlock, smp_ena_dis_zoning(smp_utils)</code> </p>

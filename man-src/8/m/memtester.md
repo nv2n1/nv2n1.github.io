@@ -38,5 +38,5 @@ description: "memtester – stress test to find memory subsystem faults."
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;charlesc-memtester-bugs [at] pyropus.ca&gt;.</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2001-2020 Charles Cazabon<br />
+<p>Copyright &#169; 2001-2020 Charles Cazabon<br/>
  This is free software; see the file COPYING for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>

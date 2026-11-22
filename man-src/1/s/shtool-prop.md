@@ -26,6 +26,6 @@ description: "shtool prop – GNU shtool propeller processing indication"
      shtool prop -p &quot;Configuring sources&quot;
 </pre>
 <h2>HISTORY</h2>
-<p> The <font SIZE="-1"><code>GNU</code></font><code> shtool</code> <code>prop</code> command was originally written by Ralf S. Engelschall &lt;rse [at] engelschall.com&gt; in 1998 for <code>mod_ssl</code>. It was later taken over into <font SIZE="-1"><code>GNU</code></font><code> shtool</code>.</p>
+<p> The <code>GNU</code><code> shtool</code> <code>prop</code> command was originally written by Ralf S. Engelschall &lt;rse [at] engelschall.com&gt; in 1998 for <code>mod_ssl</code>. It was later taken over into <code>GNU</code><code> shtool</code>.</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-shtool/">shtool</a></i>(1). </p>

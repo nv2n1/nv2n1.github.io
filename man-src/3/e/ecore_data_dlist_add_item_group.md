@@ -9,15 +9,15 @@ description: "Doubly Linked List Adding Functions – Functions that are used to
 
 <p>Doubly Linked List Adding Functions &#8211; Functions that are used to add nodes to an Ecore_DList. </p>
 <h3>Functions</h3>
-<p>EAPI int <code>ecore_dlist_append</code> (Ecore_DList *list, void *data)<br />
- <i>Appends data to the given doubly linked list. </i><br />
- EAPI int <code>ecore_dlist_prepend</code> (Ecore_DList *list, void *data)<br />
- <i>Adds data to the very beginning of the given doubly linked list. </i><br />
- EAPI int <code>ecore_dlist_insert</code> (Ecore_DList *list, void *data)<br />
- <i>Inserts data at the current point in the given doubly linked list. </i><br />
- EAPI int <code>ecore_dlist_append_list</code> (Ecore_DList *list, Ecore_DList *append)<br />
- <i>Appends a list to the given doubly linked list. </i><br />
- EAPI int <code>ecore_dlist_prepend_list</code> (Ecore_DList *list, Ecore_DList *prepend)<br />
+<p>EAPI int <code>ecore_dlist_append</code> (Ecore_DList *list, void *data)<br/>
+ <i>Appends data to the given doubly linked list. </i><br/>
+ EAPI int <code>ecore_dlist_prepend</code> (Ecore_DList *list, void *data)<br/>
+ <i>Adds data to the very beginning of the given doubly linked list. </i><br/>
+ EAPI int <code>ecore_dlist_insert</code> (Ecore_DList *list, void *data)<br/>
+ <i>Inserts data at the current point in the given doubly linked list. </i><br/>
+ EAPI int <code>ecore_dlist_append_list</code> (Ecore_DList *list, Ecore_DList *append)<br/>
+ <i>Appends a list to the given doubly linked list. </i><br/>
+ EAPI int <code>ecore_dlist_prepend_list</code> (Ecore_DList *list, Ecore_DList *prepend)<br/>
  <i>Adds a list to the very beginning of the given doubly linked list. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that are used to add nodes to an Ecore_DList.</p>
@@ -26,7 +26,7 @@ description: "Doubly Linked List Adding Functions – Functions that are used to
 <p>Appends data to the given doubly linked list. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>list</i> The given doubly linked list.<br />
+<dd><i>list</i> The given doubly linked list.<br/>
  <i>data</i> The data to append.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -36,7 +36,7 @@ description: "Doubly Linked List Adding Functions – Functions that are used to
 <p>Appends a list to the given doubly linked list. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>list</i> The given doubly linked list.<br />
+<dd><i>list</i> The given doubly linked list.<br/>
  <i>append</i> The list to append.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -47,7 +47,7 @@ description: "Doubly Linked List Adding Functions – Functions that are used to
 <p>Inserts data at the current point in the given doubly linked list. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>list</i> The given doubly linked list.<br />
+<dd><i>list</i> The given doubly linked list.<br/>
  <i>data</i> The data to be inserted.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -57,7 +57,7 @@ description: "Doubly Linked List Adding Functions – Functions that are used to
 <p>Adds data to the very beginning of the given doubly linked list. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>list</i> The given doubly linked list.<br />
+<dd><i>list</i> The given doubly linked list.<br/>
  <i>data</i> The data to prepend.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -67,7 +67,7 @@ description: "Doubly Linked List Adding Functions – Functions that are used to
 <p>Adds a list to the very beginning of the given doubly linked list. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>list</i> The given doubly linked list.<br />
+<dd><i>list</i> The given doubly linked list.<br/>
  <i>prepend</i> The list to prepend.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

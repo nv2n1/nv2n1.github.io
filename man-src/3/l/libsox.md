@@ -126,7 +126,7 @@ LOOP (invocations with different parameters)
 <p> <code><a href="/docs/linux/man/1-sox/">sox</a></code>(1), <code><a href="/docs/linux/man/7-soxformat/">soxformat</a></code>(7) </p>
 <p> example*.c in the SoX source distribution.</p>
 <h2>LICENSE</h2>
-<p> Copyright 1998-2011 by Chris Bagwell and SoX Contributors.<br />
+<p> Copyright 1998-2011 by Chris Bagwell and SoX Contributors.<br/>
  Copyright 1991 Lance Norskog and Sundry Contributors. </p>
 <p> This library is free software; you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation; either version 2.1, or (at your option) any later version. </p>
 <p> This library is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details.</p>

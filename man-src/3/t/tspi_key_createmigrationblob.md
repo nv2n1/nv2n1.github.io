@@ -42,13 +42,13 @@ description: "Tspi_Key_CreateMigrationBlob – create a key blob suitable for mi
 <h2>Return Codes</h2>
 <p><code>Tspi_Key_CreateMigrationBlob</code> returns TSS_SUCCESS on success, otherwise one of the following values are returned:</p>
 <dl COMPACT>
-<dt><font SIZE="-1">TSS_E_INVALID_HANDLE &#8211; Either <i>hKeyToMigrate</i>, <i>hParentKey</i> or <i>rgbMigTicket</i> are invalid parameters.</font></dt>
+<dt>TSS_E_INVALID_HANDLE &#8211; Either <i>hKeyToMigrate</i>, <i>hParentKey</i> or <i>rgbMigTicket</i> are invalid parameters.</dt>
 <dd>
-</dd><dt><font SIZE="-1">TSS_E_BAD_PARAMETER &#8211; One of the passed parameters is wrong. </font></dt>
+</dd><dt>TSS_E_BAD_PARAMETER &#8211; One of the passed parameters is wrong. </dt>
 <dd>
-</dd><dt><font SIZE="-1">TSS_E_KEY_NO_MIGRATION_POLICY &#8211; No migration policy picked.</font></dt>
+</dd><dt>TSS_E_KEY_NO_MIGRATION_POLICY &#8211; No migration policy picked.</dt>
 <dd>
-</dd><dt><font SIZE="-1">TSS_E_INTERNAL_ERROR &#8211; An error occurred internal to the TSS.</font></dt>
+</dd><dt>TSS_E_INTERNAL_ERROR &#8211; An error occurred internal to the TSS.</dt>
 <dd></dd></dl>
 <h2>Conforming To</h2>
 <p><code>Tspi_Key_CreateMigrationBlob</code> conforms to the Trusted Computing Group Software Specification version 1.1 Golden</p>

@@ -37,7 +37,7 @@ description: "bashdb – bash debugger script"
 </pre>
 <p> inside the debugger. </p>
 <dt>-n | nx</dt>
-<dd> Normally the debugger will read debugger commands in <tt>&quot;~/.bashdbinit&quot;</tt> if that file exists before accepting user interaction. <tt>&quot;.bashdbinit&quot;</tt> is analogus to Perl&#8217;s <tt>&quot;.perldb&quot;</tt> or <font SIZE="-1">GNU</font> gdb&#8217;s <tt>&quot;.gdbinit&quot;</tt>: a user might want to create such a debugger profile to add various user-specific customizations. </dd>
+<dd> Normally the debugger will read debugger commands in <tt>&quot;~/.bashdbinit&quot;</tt> if that file exists before accepting user interaction. <tt>&quot;.bashdbinit&quot;</tt> is analogus to Perl&#8217;s <tt>&quot;.perldb&quot;</tt> or GNU gdb&#8217;s <tt>&quot;.gdbinit&quot;</tt>: a user might want to create such a debugger profile to add various user-specific customizations. </dd>
 <p> Using the <tt>&quot;-n&quot;</tt> option this initialization file will not be read. This is useful in regression testing or in tracking down a problem with one&#8217;s <tt>&quot;.bashdbinit&quot;</tt> profile. </p>
 <dt>-c <i>command-string</i></dt>
 <dd> Instead of specifying the name of a script file, one can give an execution string that is to be debugged. Use this option to do that. </dd>
@@ -67,7 +67,7 @@ export PS4 = '(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]}
 <pre>
   Sorry, you need to use a debugger-enabled version of bash.
 </pre>
-<p> Debugging startup time can be slow especially on large bash scripts. Scripts created by <font SIZE="-1">GNU</font> autoconf are at thousands of lines line and it is not uncommon for them to be tens of thousands of lines. </p>
+<p> Debugging startup time can be slow especially on large bash scripts. Scripts created by GNU autoconf are at thousands of lines line and it is not uncommon for them to be tens of thousands of lines. </p>
 <p> There is a provision to address this problem by including a fast file-to-array read routine (readarray), but the bashdb package has to be compiled in a special way which needs access to the bash source code and objects. </p>
 <p> Another reason of the debugger slowness is that the debugger has to intercept every line and check to see if some action is to be taken for this and this is all in bash code. A better and faster architecture would be for the debugger to register a list of conditions or stopping places inside the bash code itself and have it arrange to call the debugger only when a condition requiring the debugger arises. Checks would be faster as this would be done in C code and access to internal structures would make this more efficient.</p>
 <h2>SEE ALSO</h2>

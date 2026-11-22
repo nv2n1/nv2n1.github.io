@@ -11,7 +11,7 @@ description: "rc.news – Start or stop INN daemons"
 <h2>Synopsis</h2>
 <p><code>rc.news</code> [start | stop]</p>
 <h2>Description</h2>
-<p><code>rc.news</code> can be used to start or stop <code>innd</code> and supporting programs. It checks to make sure <font SIZE="-1">INN</font> is not already running, handles cases of unclean shutdown, finishes up tasks which might have been interrupted by the preceeding shutdown, e-mails certain boot-time warnings to <i>newsmaster</i> (as set in <i>inn.conf</i>), and is generally safer and easier than starting and stopping everything directly. It needs to be run as the news user so that files in <i>pathrun</i> are created with the right ownership (though this is less important for <tt>&quot;rc.news stop&quot;</tt>). </p>
+<p><code>rc.news</code> can be used to start or stop <code>innd</code> and supporting programs. It checks to make sure INN is not already running, handles cases of unclean shutdown, finishes up tasks which might have been interrupted by the preceeding shutdown, e-mails certain boot-time warnings to <i>newsmaster</i> (as set in <i>inn.conf</i>), and is generally safer and easier than starting and stopping everything directly. It needs to be run as the news user so that files in <i>pathrun</i> are created with the right ownership (though this is less important for <tt>&quot;rc.news stop&quot;</tt>). </p>
 <p> Programs run and stopped by this script include:</p>
 <dl>
 <dt>*</dt>
@@ -25,21 +25,21 @@ description: "rc.news – Start or stop INN daemons"
 <h2>Options</h2>
 <dl>
 <dt>start</dt>
-<dd>If the first argument is <tt>&quot;start&quot;</tt>, or no first argument is given, <code>rc.news</code> initiates <font SIZE="-1">INN</font> startup.</dd>
+<dd>If the first argument is <tt>&quot;start&quot;</tt>, or no first argument is given, <code>rc.news</code> initiates INN startup.</dd>
 <dt>stop</dt>
-<dd>If the first argument is <tt>&quot;stop&quot;</tt>, <code>rc.news</code> initiates <font SIZE="-1">INN</font> shutdown. It is recommended to throttle the server first as described in <i><a href="/docs/linux/man/8-ctlinnd/">ctlinnd</a></i>(8).</dd></dl>
+<dd>If the first argument is <tt>&quot;stop&quot;</tt>, <code>rc.news</code> initiates INN shutdown. It is recommended to throttle the server first as described in <i><a href="/docs/linux/man/8-ctlinnd/">ctlinnd</a></i>(8).</dd></dl>
 <h2>Examples</h2>
-<p>To start <font SIZE="-1">INN</font> and leave certain error messages going to the terminal: </p>
+<p>To start INN and leave certain error messages going to the terminal: </p>
 <pre> su -m news -c /etc/rc.news</pre>
-<p>To run <font SIZE="-1">INN</font> at startup time from appropriate system boot scripts: </p>
+<p>To run INN at startup time from appropriate system boot scripts: </p>
 <pre> su -m news -c /etc/rc.news &gt;/dev/console</pre>
-<p>To stop <font SIZE="-1">INN</font> (throttling first): </p>
+<p>To stop INN (throttling first): </p>
 <pre> &lt;pathbin&gt;/ctlinnd throttle reason
  su -m news -c '/etc/rc.news stop'</pre>
 <h2>Bugs</h2>
-<p>Running <tt>&quot;rc.news start&quot;</tt> as root is never the right thing to do, so we should at minimum check for this and error, or perhaps change effective user <font SIZE="-1">ID</font>.</p>
+<p>Running <tt>&quot;rc.news start&quot;</tt> as root is never the right thing to do, so we should at minimum check for this and error, or perhaps change effective user ID.</p>
 <h2>History</h2>
-<p>// <font SIZE="-1">FIXME:</font> any attribution for <i>rc.news</i> itself? </p>
+<p>// FIXME: any attribution for <i>rc.news</i> itself? </p>
 <p> This manual page written by Jeffrey M. Vinocur &lt;jeff [at] litech.org&gt; for InterNetNews. </p>
 <p> $Id: rc.news.pod 8200 2008-11-30 13:31:30Z iulius $</p>
 <h2>See Also</h2>

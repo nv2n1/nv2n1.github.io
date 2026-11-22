@@ -20,7 +20,7 @@ description: "gconf-editor – an editor for the GConf configuration system"
 <h2>NOTES</h2>
 <p> This tool allows you to directly edit your configuration database. This is not the recommended way of setting desktop preferences. Use this tool at your own risk.</p>
 <h2>AUTHOR</h2>
-<p> Anders Carlsson &lt;andersca [at] gnu.org&gt;.<br />
+<p> Anders Carlsson &lt;andersca [at] gnu.org&gt;.<br/>
  This manual page was written by G&ouml;ran Weinholt for the Debian project, but may be used by others.</p>
 <h2>REPORTING BUGS</h2>
 <p> Please report bugs at <a rel="nofollow" href="http://bugzilla.gnome.org/.">http://bugzilla.gnome.org/.</a></p>

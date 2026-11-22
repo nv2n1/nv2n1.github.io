@@ -7,7 +7,7 @@ url: "/docs/linux/man/8-tpm_revokeek/"
 description: "tpm_revokeek – revokes the Endorsement Key Pair of the TPM"
 ---
 
-<p>TPM Management &#8211; tpm_revokeek<br />
+<p>TPM Management &#8211; tpm_revokeek<br/>
  </center></p>
 <h2>Name</h2>
 <p>tpm_revokeek &#8211; revokes the Endorsement Key Pair of the TPM</p>

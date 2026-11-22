@@ -28,7 +28,7 @@ description: "scsi_mandat – check SCSI device support for mandatory commands"
 <h2>Authors</h2>
 <p>Written by D. Gilbert</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2011-2013 Douglas Gilbert<br />
+<p>Copyright &#169; 2011-2013 Douglas Gilbert<br/>
  This software is distributed under a FreeBSD license. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>See Also</h2>
 <p><code>sg_inq,sg_luns,sg_turs,sg_requests,sg_vpd,sg_senddiag (sg3_utils)</code> </p>

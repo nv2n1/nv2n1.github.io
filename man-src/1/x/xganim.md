@@ -16,12 +16,12 @@ description: "xganim"
 <p> UNIX &#8211; style wild cards may be used with the command line version in place of a raster map name, but it must be quoted. </p>
 <p> If the number of files differs for each view, the view with the fewest files will determine the number of frames in the animation.</p>
 <h2>EXAMPLE</h2>
-<p> export XGANIM_SIZE=800<br />
+<p> export XGANIM_SIZE=800<br/>
  xganim view1=&quot;rain[1-9]&quot;,&quot;rain1[0-2]&quot; view2=&quot;temp*&quot; </p>
 <h2>NOTES</h2>
-<p> For wildcard matching, <i>xganim</i> understands whatever the shell understands (as it invokes &quot;ls&quot; via the shell to expand wildcards). E.g., a user can use &quot;rast[0-9][0-9]&quot; to match &quot;rast00&quot; through &quot;rast99&quot; inclusive. If the maps if interest have varying numbers of digits, multiple patterns can be combined, e.g.:<br />
- export XGANIM_SIZE=1000<br />
- xganim view1=rast[0-9],rast[1-9][0-9]<br />
+<p> For wildcard matching, <i>xganim</i> understands whatever the shell understands (as it invokes &quot;ls&quot; via the shell to expand wildcards). E.g., a user can use &quot;rast[0-9][0-9]&quot; to match &quot;rast00&quot; through &quot;rast99&quot; inclusive. If the maps if interest have varying numbers of digits, multiple patterns can be combined, e.g.:<br/>
+ export XGANIM_SIZE=1000<br/>
+ xganim view1=rast[0-9],rast[1-9][0-9]<br/>
  to match rast0 through rast99 inclusive.</p>
 <h2>BUGS</h2>
 <p> On some displays that need to use private colormaps, the interface buttons may become difficult to see.</p>

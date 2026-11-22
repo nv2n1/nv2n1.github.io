@@ -15,11 +15,11 @@ description: "kismet – Wireless sniffing and monitoring"
 <p> <i>kismet_client</i> [-<code>qr</code> ] [-<code>f </code><i>config-file</i> ] [-<code>s </code><i>serverhost:port</i> ] [-<code>g </code><i>gui-type</i> ] [-<code>c </code><i>display-columns</i> ]</p>
 <h2>DESCRIPTION</h2>
 <p> <code>Kismet</code> is an 802.11 layer2 wireless network detector, sniffer, and intrusion detection system. Kismet will work with any wireless card which supports raw monitoring (rfmon) mode, and can sniff 802.11b, 802.11a, and 802.11g traffic. </p>
-<p> Kismet identifies networks by passively collecting packets and detecting standard named networks, detecting (and given time, decloaking) hidden networks, and inferring the presence of nonbeaconing networks via data traffic.<br />
+<p> Kismet identifies networks by passively collecting packets and detecting standard named networks, detecting (and given time, decloaking) hidden networks, and inferring the presence of nonbeaconing networks via data traffic.<br/>
  <code>kismet</code> supports logging to the wtapfile packet format (readable by tcpdump and ethereal) and saves detected network informat as plaintext, CSV, and XML. <code>kismet</code> is capable of using any GPS supported by <code>gpsd</code> and logs and plots network data. </p>
 <p> <code>kismet</code> is divided into three basic programs, <code>kismet_server</code> <code>kismet_client</code> and <code>gpsmap</code></p>
 <h2>USAGE</h2>
-<p> <code>kismet</code> handles automatically starting kismet_server and kismet_client.<br />
+<p> <code>kismet</code> handles automatically starting kismet_server and kismet_client.<br/>
  <code>kismet</code> is installed as suid-root by default. It will drop privs to the user specified in <code>kismet.conf</code> immediately after binding and configuring the capture source. </p>
 <h2>KISMET_SERVER</h2>
 <p> <code>kismet_server</code> captures, dissects, and logs packets and GPS data. It is capable of running in `headless&#8217; mode with no display. Multiple clients (on multiple computers) can be connected to a single server.</p>

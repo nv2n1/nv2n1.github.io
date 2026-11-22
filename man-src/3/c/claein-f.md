@@ -10,7 +10,7 @@ description: "claein.f –"
 <p>claein.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>claein</code> (RIGHTV, NOINIT, N, H, LDH, W, V, B, LDB, RWORK, EPS3, SMLNUM, INFO)<br />
+<p>subroutine <code>claein</code> (RIGHTV, NOINIT, N, H, LDH, W, V, B, LDB, RWORK, EPS3, SMLNUM, INFO)<br/>
  <i></i><code>CLAEIN</code> computes a specified right or left eigenvector of an upper Hessenberg matrix by inverse iteration.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine claein (logicalRIGHTV, logicalNOINIT, integerN, complex, dimension( ldh, * )H, integerLDH, complexW, complex, dimension( * )V, complex, dimension( ldb, * )B, integerLDB, real, dimension( * )RWORK, realEPS3, realSMLNUM, integerINFO)</h3>

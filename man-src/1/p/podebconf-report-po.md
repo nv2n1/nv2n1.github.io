@@ -12,68 +12,68 @@ description: "podebconf-report-po – send outdated debconf PO files to the last
 <h2>SYNOPSIS</h2>
 <p> <code>podebconf-report-po</code> [options]</p>
 <h2>DESCRIPTION</h2>
-<p> This program reads a directory with po files to determine which files contain fuzzy or missing translations, launches an editor to allow modifications of mail body and headers, asks confirmation to send mails, and sends them to the last translator requesting updates. The mail will contain the <font SIZE="-1">PO</font> file which has to be updated. <code>podebconf-report-po</code> can be called either in the top-level directory, or in <i>debian</i> or <i>debian/po</i> subdirectories (or, for non debconf translations, from the <code>po</code> directory itself or its parent directory). </p>
-<p> <code>podebconf-report-po</code> can also be used to send a call for translations to a mailing list. In that case, the <font SIZE="-1">POT</font> file will be attached. </p>
-<p> Different templates exist for translation update requests, request to send updated <font SIZE="-1">PO</font> files to a bug report (<code>&#8211;submit</code>) or for calls for translations (<code>&#8211;call</code>). The template can also be provided by the user. See the <font SIZE="-1"><code>TEMPLATES</code></font> section for more information on the templates.</p>
+<p> This program reads a directory with po files to determine which files contain fuzzy or missing translations, launches an editor to allow modifications of mail body and headers, asks confirmation to send mails, and sends them to the last translator requesting updates. The mail will contain the PO file which has to be updated. <code>podebconf-report-po</code> can be called either in the top-level directory, or in <i>debian</i> or <i>debian/po</i> subdirectories (or, for non debconf translations, from the <code>po</code> directory itself or its parent directory). </p>
+<p> <code>podebconf-report-po</code> can also be used to send a call for translations to a mailing list. In that case, the POT file will be attached. </p>
+<p> Different templates exist for translation update requests, request to send updated PO files to a bug report (<code>&#8211;submit</code>) or for calls for translations (<code>&#8211;call</code>). The template can also be provided by the user. See the <code>TEMPLATES</code> section for more information on the templates.</p>
 <h2>OPTIONS</h2>
-<p> Many options can be set in a configuration file. See section <font SIZE="-1"><code>CONFIGURATION FILE</code></font>.</p>
+<p> Many options can be set in a configuration file. See section <code>CONFIGURATION FILE</code>.</p>
 <dl>
-<dt><code>&#8211;addlanguageteam=</code><font SIZE="-1">LANGUAGE</font><code>:</code><font SIZE="-1">LIST</font></dt>
-<dd> Specify a mailing list for a given language. This mailing list will be added to the <font SIZE="-1">CC</font> list for the <font SIZE="-1">PO</font> files of this language when <code>&#8211;languageteam</code> is used, in addition to the language team specified in the <font SIZE="-1">PO</font> file (if these mailing lists differ). </dd>
+<dt><code>&#8211;addlanguageteam=</code>LANGUAGE<code>:</code>LIST</dt>
+<dd> Specify a mailing list for a given language. This mailing list will be added to the CC list for the PO files of this language when <code>&#8211;languageteam</code> is used, in addition to the language team specified in the PO file (if these mailing lists differ). </dd>
 <p> This is useful to keep the specified team informed, and allow a faster reaction when a translator is known to be inactive. </p>
 <p> This option can be specified more than once. The language code and language mailing list are separated by a colon. </p>
-<p> This option can be specified in the configuration file to define default behavior of <code>podebconf-report-po</code>. See section <font SIZE="-1"><code>CONFIGURATION FILE</code></font> below.</p>
-<dt><code>&#8211;bts=</code><font SIZE="-1">NUMBER</font></dt>
-<dd> After a bug report has been filed (either manually or with the <code>&#8211;submit</code> flag) to track down translations, <code>podebconf-report-po</code> can be run again, but this time with the <code>&#8211;bts=</code><font SIZE="-1">NUMBER</font> flag. Translators are then requested to respect the <code>Reply-To:</code> header field which is set to this bug report, so that all translations are gathered into a single location.</dd>
-<dt><code>&#8211;call[=</code><font SIZE="-1">MAILING_LIST</font><code>]</code></dt>
-<dd> Send a call for translations. If the optional <i></i><font SIZE="-1"><i>MAILING_LIST</i></font><i></i> argument is not specified, the call for translations is sent to the Debian Internationalization list (<i>debian-i18n [at] lists.debian.org</i>). </dd>
+<p> This option can be specified in the configuration file to define default behavior of <code>podebconf-report-po</code>. See section <code>CONFIGURATION FILE</code> below.</p>
+<dt><code>&#8211;bts=</code>NUMBER</dt>
+<dd> After a bug report has been filed (either manually or with the <code>&#8211;submit</code> flag) to track down translations, <code>podebconf-report-po</code> can be run again, but this time with the <code>&#8211;bts=</code>NUMBER flag. Translators are then requested to respect the <code>Reply-To:</code> header field which is set to this bug report, so that all translations are gathered into a single location.</dd>
+<dt><code>&#8211;call[=</code>MAILING_LIST<code>]</code></dt>
+<dd> Send a call for translations. If the optional <i></i><i>MAILING_LIST</i><i></i> argument is not specified, the call for translations is sent to the Debian Internationalization list (<i>debian-i18n [at] lists.debian.org</i>). </dd>
 <p> Calls for translations are useful to receive translations in new languages. </p>
 <p> By default, calls for translation are combined with regular requests for updates sent to translators, for the existing translations. You can disable this default behavior with the <code>&#8211;withouttranslators</code> option.</p>
-<dt><code>&#8211;conf=</code><font SIZE="-1">FILE</font></dt>
+<dt><code>&#8211;conf=</code>FILE</dt>
 <dd> Specify the configuration file. By default, <code>podebconf-report-po</code> reads <i></i>$HOME<i>/.podebconf-report-po.conf</i>.</dd>
 <dt><code>&#8211;noconf</code></dt>
 <dd> Do not read any configuration file.</dd>
-<dt><code>&#8211;deadline=</code><font SIZE="-1">DEADLINE</font></dt>
+<dt><code>&#8211;deadline=</code>DEADLINE</dt>
 <dd> Specify the deadline for receiving the updated translations (default is no deadline). </dd>
-<p> This should be a date, which will be prefixed by:<br />
-&nbsp;The deadline for receiving the updated translation is<br />
-&nbsp;<i></i><font SIZE="-1"><i>DEADLINE</i></font><i></i>. </p>
-<p> If the specified string starts with a &#8216;+&#8217;, it will be interpreted by:<br />
-&nbsp;LC_ALL=C date -R -d&nbsp;<i></i><font SIZE="-1"><i>DEADLINE</i></font><i></i> </p>
+<p> This should be a date, which will be prefixed by:<br/>
+&nbsp;The deadline for receiving the updated translation is<br/>
+&nbsp;<i></i><i>DEADLINE</i><i></i>. </p>
+<p> If the specified string starts with a &#8216;+&#8217;, it will be interpreted by:<br/>
+&nbsp;LC_ALL=C date -R -d&nbsp;<i></i><i>DEADLINE</i><i></i> </p>
 <p> If no deadline is specified (and the <code>&#8211;nodeadline</code> option is not used), a deadline will be prompted to the user, proposing a default deadline set to +10days. </p>
-<p> This option can be specified in the configuration file to define default behavior of <code>podebconf-report-po</code>. See section <font SIZE="-1"><code>CONFIGURATION FILE</code></font> below.</p>
+<p> This option can be specified in the configuration file to define default behavior of <code>podebconf-report-po</code>. See section <code>CONFIGURATION FILE</code> below.</p>
 <dt><code>&#8211;nodeadline</code></dt>
 <dd> Deactivate the deadline indication to translators, and avoid the deadline prompts. </dd>
-<p> This option can be specified in the configuration file to define default behavior of <code>podebconf-report-po</code>. See section <font SIZE="-1"><code>CONFIGURATION FILE</code></font> below.</p>
+<p> This option can be specified in the configuration file to define default behavior of <code>podebconf-report-po</code>. See section <code>CONFIGURATION FILE</code> below.</p>
 <dt><code>&#8211;default</code></dt>
 <dd> Do not open the editor and use the template as is. </dd>
-<p> This option can be specified in the configuration file to define default behavior of <code>podebconf-report-po</code>. See section <font SIZE="-1"><code>CONFIGURATION FILE</code></font> below.</p>
+<p> This option can be specified in the configuration file to define default behavior of <code>podebconf-report-po</code>. See section <code>CONFIGURATION FILE</code> below.</p>
 <dt><code>&#8211;nodefault</code></dt>
 <dd> Open an editor before sending the email(s).</dd>
 <dt><code>-f</code>, <code>&#8211;force</code></dt>
 <dd> Send the email(s) without confirmation. </dd>
-<p> This option can be specified in the configuration file to define default behavior of <code>podebconf-report-po</code>. See section <font SIZE="-1"><code>CONFIGURATION FILE</code></font> below.</p>
+<p> This option can be specified in the configuration file to define default behavior of <code>podebconf-report-po</code>. See section <code>CONFIGURATION FILE</code> below.</p>
 <dt><code>&#8211;noforce</code></dt>
 <dd> Ask for confirmation before sending email(s).</dd>
-<dt><code>&#8211;from=</code><font SIZE="-1">FROM</font></dt>
-<dd> Specify the name and the email address of the sender (default is taken from the <font SIZE="-1"><code>DEBEMAIL</code></font> and <font SIZE="-1"><code>DEBFULLNAME</code></font> environment variables, or from the <font SIZE="-1"><code>EMAIL</code></font> environment variable, or is set to the package maintainer if these variables are not set). </dd>
-<p> This option can be specified in the configuration file to define default behavior of <code>podebconf-report-po</code>. See section <font SIZE="-1"><code>CONFIGURATION FILE</code></font> below.</p>
+<dt><code>&#8211;from=</code>FROM</dt>
+<dd> Specify the name and the email address of the sender (default is taken from the <code>DEBEMAIL</code> and <code>DEBFULLNAME</code> environment variables, or from the <code>EMAIL</code> environment variable, or is set to the package maintainer if these variables are not set). </dd>
+<p> This option can be specified in the configuration file to define default behavior of <code>podebconf-report-po</code>. See section <code>CONFIGURATION FILE</code> below.</p>
 <dt><code>&#8211;gzip</code></dt>
-<dd> Compress <font SIZE="-1">PO</font> files in attachment with <tt>&quot;gzip&quot;</tt>. </dd>
-<p> This option can be specified in the configuration file to define default behavior of <code>podebconf-report-po</code>. See section <font SIZE="-1"><code>CONFIGURATION FILE</code></font> below.</p>
+<dd> Compress PO files in attachment with <tt>&quot;gzip&quot;</tt>. </dd>
+<p> This option can be specified in the configuration file to define default behavior of <code>podebconf-report-po</code>. See section <code>CONFIGURATION FILE</code> below.</p>
 <dt><code>&#8211;nogzip</code></dt>
-<dd> Do not compress <font SIZE="-1">PO</font> files.</dd>
+<dd> Do not compress PO files.</dd>
 <dt><code>-h</code>, <code>&#8211;help</code></dt>
 <dd> Print usage information and exit.</dd>
-<dt><code>&#8211;langs=</code><font SIZE="-1">LANGUAGES</font></dt>
-<dd> Specify a list of languages to restrict sending the notification only for these languages. The list of languages is comma separated. The <font SIZE="-1">PO</font> files must be named according to these languages, with the .po extension.</dd>
+<dt><code>&#8211;langs=</code>LANGUAGES</dt>
+<dd> Specify a list of languages to restrict sending the notification only for these languages. The list of languages is comma separated. The PO files must be named according to these languages, with the .po extension.</dd>
 <dt><code>&#8211;languageteam</code></dt>
 <dd> Send the email also to the Language Team as carbon copy. </dd>
 <p> It is enabled by default. </p>
-<p> This option can be specified in the configuration file to define default behavior of <code>podebconf-report-po</code>. See section <font SIZE="-1"><code>CONFIGURATION FILE</code></font> below.</p>
+<p> This option can be specified in the configuration file to define default behavior of <code>podebconf-report-po</code>. See section <code>CONFIGURATION FILE</code> below.</p>
 <dt><code>&#8211;nolanguageteam</code></dt>
 <dd> Do not send the email(s) to the language teams. </dd>
-<p> This option can be specified in the configuration file to define default behavior of <code>podebconf-report-po</code>. See section <font SIZE="-1"><code>CONFIGURATION FILE</code></font> below.</p>
+<p> This option can be specified in the configuration file to define default behavior of <code>podebconf-report-po</code>. See section <code>CONFIGURATION FILE</code> below.</p>
 <dt><code>&#8211;mutt</code></dt>
 <dd> Send the mails with mutt. This set the <code>&#8211;postpone</code> argument to <i></i>$HOME<i>/postponed</i>.</dd>
 <dt><code>&#8211;notdebconf</code></dt>
@@ -81,68 +81,68 @@ description: "podebconf-report-po – send outdated debconf PO files to the last
 <p> This option also changes the default <i>po</i> directory used by <code>podebconf-report-po</code> (i.e. the <code>&#8211;podir</code> option is not needed when the call is done from the <i>po</i> directory itself or from its parent directory). </p>
 <p> By default, a <i>debian/po</i> directory is preferred over a <i>po</i> directory. With this option, only the <i>po</i> directory will be considered. </p>
 <p> This option is usually not necessary. <code>podebconf-report-po</code> tries to determine the type of translation based on the current directory and the existence of a <i>debian/po</i> or <i>po</i> directory.</p>
-<dt><code>&#8211;package=</code><font SIZE="-1">PACKAGE</font></dt>
+<dt><code>&#8211;package=</code>PACKAGE</dt>
 <dd> Specify the name of the package (default is the source package name).</dd>
-<dt><code>&#8211;podir=</code><font SIZE="-1">DIR</font></dt>
-<dd> Specify where the <font SIZE="-1">PO</font> files are located. By default, <code>podebconf-report-po</code> checks if it is called from a <i>po</i> directory, or it searches for a <i>debian/po</i> directory (this can be disabled with the <code>&#8211;notdebconf</code> option), or for a <i>po</i> directory.</dd>
-<dt><code>&#8211;postpone=</code><font SIZE="-1">MBOX</font></dt>
-<dd> Do not send emails, append them in <i></i><font SIZE="-1"><i>MBOX</i></font><i></i>. This file can be used as a postponed mailbox with <code>mutt -p</code>.</dd>
-<dt><code>&#8211;potfile=</code><font SIZE="-1">POTFILE</font></dt>
-<dd> Specify the <font SIZE="-1">POT</font> file to send to a call for translations (<code>&#8211;call</code>). By default, <code>podebconf-report-po</code> uses the <font SIZE="-1">POT</font> file of the <font SIZE="-1">PO</font> files directory, if there is only one. </dd>
+<dt><code>&#8211;podir=</code>DIR</dt>
+<dd> Specify where the PO files are located. By default, <code>podebconf-report-po</code> checks if it is called from a <i>po</i> directory, or it searches for a <i>debian/po</i> directory (this can be disabled with the <code>&#8211;notdebconf</code> option), or for a <i>po</i> directory.</dd>
+<dt><code>&#8211;postpone=</code>MBOX</dt>
+<dd> Do not send emails, append them in <i></i><i>MBOX</i><i></i>. This file can be used as a postponed mailbox with <code>mutt -p</code>.</dd>
+<dt><code>&#8211;potfile=</code>POTFILE</dt>
+<dd> Specify the POT file to send to a call for translations (<code>&#8211;call</code>). By default, <code>podebconf-report-po</code> uses the POT file of the PO files directory, if there is only one. </dd>
 <p> This file is also used to find the package&#8217;s name and version, if none were specified with an option, and if no <i>debian/changelog</i> files were found.</p>
 <dt><code>&#8211;sendmessage</code></dt>
 <dd> Only send a message, with no attachments. This can be useful when the translators have a commit access to the package repository.</dd>
-<dt><code>&#8211;smtp=</code><font SIZE="-1">SERVER</font></dt>
-<dd> Specify <font SIZE="-1">SMTP</font> server for mailing (default is <tt>&quot;localhost&quot;</tt>). </dd>
-<p> This option can be specified in the configuration file to define default behavior of <code>podebconf-report-po</code>. See section <font SIZE="-1"><code>CONFIGURATION FILE</code></font> below.</p>
+<dt><code>&#8211;smtp=</code>SERVER</dt>
+<dd> Specify SMTP server for mailing (default is <tt>&quot;localhost&quot;</tt>). </dd>
+<p> This option can be specified in the configuration file to define default behavior of <code>podebconf-report-po</code>. See section <code>CONFIGURATION FILE</code> below.</p>
 <dt><code>&#8211;submit</code></dt>
 <dd> Instead of sending mails to translators, file a bug report against this package to request for translations. This is useful e.g. when preparing non-maintainer uploads to make sure that translations do not get lost.</dd>
 <dt><code>&#8211;summary</code></dt>
 <dd> Send a status report to the maintainer with the list of emails sent to translators. </dd>
-<p> This option can be specified in the configuration file to define default behavior of <code>podebconf-report-po</code>. See section <font SIZE="-1"><code>CONFIGURATION FILE</code></font> below.</p>
+<p> This option can be specified in the configuration file to define default behavior of <code>podebconf-report-po</code>. See section <code>CONFIGURATION FILE</code> below.</p>
 <dt><code>&#8211;nosummary</code></dt>
 <dd> Do not send any status report to the maintainer.</dd>
 <dt><code>&#8211;utf8</code></dt>
-<dd> Send the email in <font SIZE="-1">UTF-8.</font> This allow non-ascii characters in the mail body and mail header. The editor must support <font SIZE="-1">UTF-8.</font> </dd>
-<p> This option can be specified in the configuration file to define default behavior of <code>podebconf-report-po</code>. See section <font SIZE="-1"><code>CONFIGURATION FILE</code></font> below.</p>
+<dd> Send the email in UTF-8. This allow non-ascii characters in the mail body and mail header. The editor must support UTF-8. </dd>
+<p> This option can be specified in the configuration file to define default behavior of <code>podebconf-report-po</code>. See section <code>CONFIGURATION FILE</code> below.</p>
 <dt><code>&#8211;noutf8</code></dt>
 <dd> Send the email(s) in us-ascii. Non-ascii characters are replaced by a question mark.</dd>
 <dt><code>&#8211;version</code></dt>
 <dd> Print version information and exit.</dd>
 <dt><code>-v</code>, <code>&#8211;verbose</code></dt>
 <dd> Display additional information while running. </dd>
-<p> This option can be specified in the configuration file to define default behavior of <code>podebconf-report-po</code>. See section <font SIZE="-1"><code>CONFIGURATION FILE</code></font> below.</p>
+<p> This option can be specified in the configuration file to define default behavior of <code>podebconf-report-po</code>. See section <code>CONFIGURATION FILE</code> below.</p>
 <dt><code>&#8211;noverbose</code></dt>
 <dd> Do not use the verbose mode.</dd>
-<dt><code>&#8211;templatecall=</code><font SIZE="-1">TEMPLATE</font></dt>
+<dt><code>&#8211;templatecall=</code>TEMPLATE</dt>
 <dd> Specify a file to use as a template for the call for translations email(s). The default template is <i>/usr/share/po-debconf/templates/call</i>. </dd>
-<p> This option can be specified in the configuration file to define default behavior of <code>podebconf-report-po</code>. See section <font SIZE="-1"><code>CONFIGURATION FILE</code></font> below.</p>
-<dt><code>&#8211;templatesubmit=</code><font SIZE="-1">TEMPLATE</font></dt>
+<p> This option can be specified in the configuration file to define default behavior of <code>podebconf-report-po</code>. See section <code>CONFIGURATION FILE</code> below.</p>
+<dt><code>&#8211;templatesubmit=</code>TEMPLATE</dt>
 <dd> Specify a file to use as a template for the email(s) sent to translators when the <code>&#8211;submit</code> option is used. The default template is <i>/usr/share/po-debconf/templates/submit</i>. </dd>
-<p> This option can be specified in the configuration file to define default behavior of <code>podebconf-report-po</code>. See section <font SIZE="-1"><code>CONFIGURATION FILE</code></font> below.</p>
-<dt><code>&#8211;templatetranslators=</code><font SIZE="-1">TEMPLATE</font></dt>
+<p> This option can be specified in the configuration file to define default behavior of <code>podebconf-report-po</code>. See section <code>CONFIGURATION FILE</code> below.</p>
+<dt><code>&#8211;templatetranslators=</code>TEMPLATE</dt>
 <dd> Specify a file to use as a template for the email(s) sent to translators. The default template is <i>/usr/share/po-debconf/templates/translators</i>. </dd>
-<p> This option can be specified in the configuration file to define default behavior of <code>podebconf-report-po</code>. See section <font SIZE="-1"><code>CONFIGURATION FILE</code></font> below.</p>
-<dt><code>&#8211;template=</code><font SIZE="-1">TEMPLATE</font></dt>
+<p> This option can be specified in the configuration file to define default behavior of <code>podebconf-report-po</code>. See section <code>CONFIGURATION FILE</code> below.</p>
+<dt><code>&#8211;template=</code>TEMPLATE</dt>
 <dd> Specify file to use it as template for the email(s). If a template is specified with this option, this template will be used rather than a template specified with any of the <code>&#8211;templatetranslators</code>, <code>&#8211;templatesubmit</code>, or <code>&#8211;templatecall</code> options. </dd>
-<p> This option can be specified in the configuration file to define default behavior of <code>podebconf-report-po</code>. See section <font SIZE="-1"><code>CONFIGURATION FILE</code></font> below.</p>
+<p> This option can be specified in the configuration file to define default behavior of <code>podebconf-report-po</code>. See section <code>CONFIGURATION FILE</code> below.</p>
 <dt><code>&#8211;notemplate</code></dt>
 <dd> Use the default template.</dd>
 <dt><code>&#8211;withtranslators</code></dt>
 <dd> Send requests for updates to the translators after sending the call for translation. </dd>
 <p> This option is ignored when the <code>&#8211;call</code> option is not specified. It is enabled by default. </p>
-<p> This option can be specified in the configuration file to define default behavior of <code>podebconf-report-po</code>. See section <font SIZE="-1"><code>CONFIGURATION FILE</code></font> below.</p>
+<p> This option can be specified in the configuration file to define default behavior of <code>podebconf-report-po</code>. See section <code>CONFIGURATION FILE</code> below.</p>
 <dt><code>&#8211;withouttranslators</code></dt>
 <dd> Do not send requests for translation update to the translators after a call for translations. </dd>
-<p> This option can be specified in the configuration file to define default behavior of <code>podebconf-report-po</code>. See section <font SIZE="-1"><code>CONFIGURATION FILE</code></font> below.</dl>
+<p> This option can be specified in the configuration file to define default behavior of <code>podebconf-report-po</code>. See section <code>CONFIGURATION FILE</code> below.</dl>
 <h2>CONFIGURATION FILE</h2>
 <p> By default, <code>podebconf-report-po</code> reads <i></i>$HOME<i>/.podebconf-report-po.conf</i>. The configuration file can be set with the <code>&#8211;conf</code> option. You can also ignore any configuration file by specifying the <code>&#8211;noconf</code> option. Command line options can be used to override configuration file settings. </p>
 <p> The configuration files accept most of the command line options, without the leading <code>&#8212;</code>: <code>deadline</code>, <code>nodeadline</code>, <code>smtp</code>, <code>from</code>, <code>verbose</code>, <code>force</code>, <code>templatetranslators</code>, <code>templatesubmit</code>, <code>templatecall</code>, <code>template</code>, <code>default</code>, <code>gzip</code>, <code>languageteam</code>, <code>nolanguageteam</code>, <code>addlanguageteam</code>, <code>summary</code>, <code>utf8</code>, <code>withouttranslators</code>, <code>withtranslators</code>. </p>
 <p> Lines starting by a number sign (possibly preceded by spaces) are comments and are ignored. </p>
-<p> Here is an example:<br />
-&nbsp;#&nbsp;This is a comment<br />
-&nbsp;smtp smtp.mydomain<br />
-&nbsp;from&nbsp;=&nbsp;Me Myself&nbsp;&lt;me [at] mydomain&gt;<br />
+<p> Here is an example:<br/>
+&nbsp;#&nbsp;This is a comment<br/>
+&nbsp;smtp smtp.mydomain<br/>
+&nbsp;from&nbsp;=&nbsp;Me Myself&nbsp;&lt;me [at] mydomain&gt;<br/>
 &nbsp;utf8</p>
 <h2>TEMPLATES</h2>
 <p> The templates specified with the <code>&#8211;template</code>, <code>&#8211;templatetranslators</code>, <code>&#8211;templatesubmit</code>, or <code>&#8211;templatecall</code> options can contain the following tags:</p>
@@ -151,21 +151,21 @@ description: "podebconf-report-po – send outdated debconf PO files to the last
 <dd> Replaced by the corresponding headers of the email(s).</dd>
 <dt><code>&lt;filelist</code>&gt;</dt>
 <dd> In the default mode, it is replaced by comments showing the list of translators with outdated translations. </dd>
-<p> In the <code>&#8211;submit</code> mode, it is replaced by the list of <font SIZE="-1">PO</font> files with outdated translations. </p>
-<p> And in the <code>&#8211;call</code> mode, it is replaced by the list of <font SIZE="-1">PO</font> files found in the <font SIZE="-1">PO</font> directory.</p>
+<p> In the <code>&#8211;submit</code> mode, it is replaced by the list of PO files with outdated translations. </p>
+<p> And in the <code>&#8211;call</code> mode, it is replaced by the list of PO files found in the PO directory.</p>
 <dt><code>&lt;reply</code>&gt;</dt>
-<dd> Replaced by a string that indicates how the translators have to reply (e.g. follow the <i>Reply-To</i> tag or sending the <font SIZE="-1">PO</font> to a given bug report).</dd>
+<dd> Replaced by a string that indicates how the translators have to reply (e.g. follow the <i>Reply-To</i> tag or sending the PO to a given bug report).</dd>
 <dt><code>&lt;deadline</code>&gt;</dt>
 <dd> Replaced by a string indicating the deadline for the translation (see <code>&#8211;deadline</code>).</dd>
 <dt><code>&lt;package</code>&gt;</dt>
 <dd> Replaced by the name of the package (if it was detected).</dd>
 <dt><code>&lt;statistics</code>&gt;</dt>
-<dd> Replaced by the statistics of the <font SIZE="-1">PO</font> files found in the <font SIZE="-1">PO</font> directory (in the <code>&#8211;call</code> mode only).</dd></dl>
+<dd> Replaced by the statistics of the PO files found in the PO directory (in the <code>&#8211;call</code> mode only).</dd></dl>
 <p> The <i>/usr/share/po-debconf/templates</i> directory contains the default templates.</p>
 <h2>EXAMPLES</h2>
 <p> The recommended usage is to call <code>podebconf-report-po</code> from the <i>po</i> directory to be updated: </p>
 <p> podebconf-report-po &#8211;call </p>
-<p> This will send a call for new translations to the &lt;debian-i18n [at] lists.debian.org&gt; mailing list and will ask translation updates to the previous translators. The language teams will also be notified and should be able to react if the assigned translator is known to be <font SIZE="-1">MIA.</font> </p>
+<p> This will send a call for new translations to the &lt;debian-i18n [at] lists.debian.org&gt; mailing list and will ask translation updates to the previous translators. The language teams will also be notified and should be able to react if the assigned translator is known to be MIA. </p>
 <p> A prompt will ask a deadline to the user (the default is to request translations and updates within 10 days). </p>
 <p> Then an editor will display the message to be sent to the mailing list. When this editor exits, <code>podebconf-report-po</code> will ask confirmation to send the mail to the mailing list. </p>
 <p> If confirmed, another editor will display the message to be sent to the translators and language teams. <code>podebconf-report-po</code> will ask for another confirmation to send the mails to translators and language teams. </p>

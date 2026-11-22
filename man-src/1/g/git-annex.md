@@ -16,30 +16,30 @@ description: "git-annex – manage files with git, without checking their conten
 <p> Even without file content tracking, being able to manage files with git, move files around and delete files with versioned directory trees, and use branches and distributed clones, are all very handy reasons to use git. And annexed files can co-exist in the same git repository with regularly versioned files, which is convenient for maintaining documents, Makefiles, etc that are associated with annexed files but that benefit from full revision control. </p>
 <p> When a file is annexed, its content is moved into a key-value store, and a symlink is made that points to the content. These symlinks are checked into git and versioned like regular files. You can move them around, delete them, and so on. Pushing to another git repository will make git-annex there aware of the annexed file, and it can be used to retrieve its content from the key-value store. </p>
 <h2>EXAMPLES</h2>
-<p> <br />
-&nbsp;<wbr>#&nbsp;<wbr>git annex get video/hackity_hack_and_kaxxt.mov <br />
-&nbsp;<wbr>get video/_why_hackity_hack_and_kaxxt.mov&nbsp;<wbr>(not available) <br />
-I was unable to access these remotes: server <br />
-Try making some of these repositories available: <br />
-<code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>5863d8c0-d9a9-11df-adb2-af51e6559a49&nbsp;<wbr>&nbsp;<wbr>-- my home file server<br />
- <br />
-&nbsp;<wbr><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>58d84e8a-d9ae-11df-a1aa-ab9aa8c00826&nbsp;<wbr>&nbsp;<wbr>-- portable USB drive<br />
- <br />
-&nbsp;<wbr><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>ca20064c-dbb5-11df-b2fe-002170d25c55&nbsp;<wbr>&nbsp;<wbr>-- backup SATA drive<br />
- <br />
-&nbsp;<wbr>failed <br />
-&nbsp;<wbr>#&nbsp;<wbr>sudo mount&nbsp;<wbr>/media/usb <br />
-&nbsp;<wbr>#&nbsp;<wbr>git remote add usbdrive&nbsp;<wbr>/media/usb <br />
-&nbsp;<wbr>#&nbsp;<wbr>git annex get video/hackity_hack_and_kaxxt.mov <br />
-&nbsp;<wbr>get video/hackity_hack_and_kaxxt.mov&nbsp;<wbr>(from usbdrive...)&nbsp;<wbr>ok <br />
-&nbsp;<wbr> <br />
-&nbsp;<wbr>#&nbsp;<wbr>git annex add iso <br />
-&nbsp;<wbr>add iso/Debian_5.0.iso ok <br />
-&nbsp;<wbr> <br />
-&nbsp;<wbr>#&nbsp;<wbr>git annex drop iso/Debian_4.0.iso <br />
-&nbsp;<wbr>drop iso/Debian_4.0.iso ok <br />
-&nbsp;<wbr> <br />
-&nbsp;<wbr>#&nbsp;<wbr>git annex move iso --to=usbdrive <br />
+<p> <br/>
+&nbsp;<wbr>#&nbsp;<wbr>git annex get video/hackity_hack_and_kaxxt.mov <br/>
+&nbsp;<wbr>get video/_why_hackity_hack_and_kaxxt.mov&nbsp;<wbr>(not available) <br/>
+I was unable to access these remotes: server <br/>
+Try making some of these repositories available: <br/>
+<code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>5863d8c0-d9a9-11df-adb2-af51e6559a49&nbsp;<wbr>&nbsp;<wbr>-- my home file server<br/>
+ <br/>
+&nbsp;<wbr><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>58d84e8a-d9ae-11df-a1aa-ab9aa8c00826&nbsp;<wbr>&nbsp;<wbr>-- portable USB drive<br/>
+ <br/>
+&nbsp;<wbr><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>ca20064c-dbb5-11df-b2fe-002170d25c55&nbsp;<wbr>&nbsp;<wbr>-- backup SATA drive<br/>
+ <br/>
+&nbsp;<wbr>failed <br/>
+&nbsp;<wbr>#&nbsp;<wbr>sudo mount&nbsp;<wbr>/media/usb <br/>
+&nbsp;<wbr>#&nbsp;<wbr>git remote add usbdrive&nbsp;<wbr>/media/usb <br/>
+&nbsp;<wbr>#&nbsp;<wbr>git annex get video/hackity_hack_and_kaxxt.mov <br/>
+&nbsp;<wbr>get video/hackity_hack_and_kaxxt.mov&nbsp;<wbr>(from usbdrive...)&nbsp;<wbr>ok <br/>
+&nbsp;<wbr> <br/>
+&nbsp;<wbr>#&nbsp;<wbr>git annex add iso <br/>
+&nbsp;<wbr>add iso/Debian_5.0.iso ok <br/>
+&nbsp;<wbr> <br/>
+&nbsp;<wbr>#&nbsp;<wbr>git annex drop iso/Debian_4.0.iso <br/>
+&nbsp;<wbr>drop iso/Debian_4.0.iso ok <br/>
+&nbsp;<wbr> <br/>
+&nbsp;<wbr>#&nbsp;<wbr>git annex move iso --to=usbdrive <br/>
 &nbsp;<wbr>move iso/Debian_5.0.iso&nbsp;<wbr>(moving to usbdrive...)&nbsp;<wbr>ok </p>
 <h2>COMMONLY USED COMMANDS</h2>
 <p> Like many git commands, git-annex can be passed a path that is either a file or a directory. In the latter case it acts on all relevant files in the directory. When no path is specified, most git-annex commands default to acting on all relevant files in the current directory (and subdirectories). </p>
@@ -147,7 +147,7 @@ Try making some of these repositories available: <br />
 <dt><code>import [path ...]</code></dt>
 <dd> <p> Moves files from somewhere outside the git working copy, and adds them to the annex. Individual files to import can be specified. If a directory is specified, the entire directory is imported. </p>
  </dd>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;<wbr>git annex import&nbsp;<wbr>/media/camera/DCIM/* </p>
  </dd>
 <dd> <p> By default, importing two files with the same contents from two different locations will result in both files being added to the repository. (With all checksumming backends, including the default SHA256E, only one copy of the data will be stored.) </p>
@@ -225,7 +225,7 @@ Try making some of these repositories available: <br />
  </dd>
 <dd> <p> Example Amazon S3 remote: </p>
  </dd>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;<wbr>git annex initremote mys3 type=S3 encryption=hybrid keyid=me [at] example.com datacenter=EU </p>
  </dd>
 <dd>  </dd>
@@ -242,7 +242,7 @@ Try making some of these repositories available: <br />
  </dd>
 <dd> <p> One use-case of keyid-= is to replace a revoked key with a new key: </p>
  </dd>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;<wbr>git annex enableremote mys3 keyid-=revokedkey keyid+=newkey </p>
  </dd>
 <dd> <p> Also, note that for encrypted special remotes using plain public-key encryption (encryption=pubkey), adding or removing a key has NO effect on files that have already been copied to the remote. Hence using keyid+= and keyid-= with such remotes should be used with care, and make little sense except in cases like the revoked key example above. </p>
@@ -289,7 +289,7 @@ Try making some of these repositories available: <br />
  </dd>
 <dd> <p> For example: </p>
  </dd>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;<wbr>git annex wanted .&nbsp;<wbr>&quot;include=*.mp3 or include=*.ogg&quot; </p>
  </dd>
 <dd> <p> Without an expression, displays the current preferred content setting of the repository. </p>
@@ -335,7 +335,7 @@ Try making some of these repositories available: <br />
  </dd>
 <dd> <p> Maybe you&#8217;d like to run a fsck for 5 hours at night, picking up each night where it left off. You&#8217;d like this to continue until all files have been fscked. And once it&#8217;s done, you&#8217;d like a new fsck pass to start, but no more often than once a month. Then put this in a nightly cron job: </p>
  </dd>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;<wbr>git annex fsck --incremental-schedule 30d --time-limit 5h </p>
  </dd>
 <dd> <p> To verify data integrity only while disregarding required number of copies, use <code>--numcopies=1</code>. </p>
@@ -350,7 +350,7 @@ Try making some of these repositories available: <br />
  </dd>
 <dd> <p> After running this command, you can use the <code>--unused</code> option to operate on all the unused data that was found. For example, to move all unused data to origin: </p>
  </dd>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;<wbr>git annex unused;&nbsp;<wbr>git annex move --unused --to origin </p>
  </dd>
 <dd>  </dd>
@@ -434,7 +434,7 @@ Try making some of these repositories available: <br />
  </dd>
 <dd> <p> For example, suppose you want to run &quot;git annex get .&quot;, but would first like to see how much disk space that will use. Then run: </p>
  </dd>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;<wbr>git annex info --fast . --not --in here </p>
  </dd>
 <dd>  </dd>
@@ -468,7 +468,7 @@ Try making some of these repositories available: <br />
  </dd>
 <dd> <p> For example, to set some tags on a file and also its author: </p>
  </dd>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;<wbr>git annex metadata annexscreencast.ogv -t video -t screencast -s author+=Alice </p>
  </dd>
 <dd>  </dd>
@@ -522,7 +522,7 @@ Try making some of these repositories available: <br />
  </dd>
 <dd> <p> Example: </p>
  </dd>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;<wbr>git annex reinject&nbsp;<wbr>/tmp/foo.iso foo.iso </p>
  </dd>
 <dd>  </dd>
@@ -562,7 +562,7 @@ Try making some of these repositories available: <br />
  </dd>
 <dd> <p> For example, the location a key&#8217;s value is stored (in indirect mode) can be looked up by running: </p>
  </dd>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;<wbr>git annex examinekey --format=&#8216;.git/annex/objects/${hashdirmixed}${key}/${key}&#8216; </p>
  </dd>
 <dd>  </dd>
@@ -710,14 +710,14 @@ Try making some of these repositories available: <br />
 <h2>MATCHING OPTIONS</h2>
 <p> These options can all be specified multiple times, and can be combined to limit which files git-annex acts on. </p>
 <p> Arbitrarily complicated expressions can be built using these options. For example: </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>--exclude&nbsp;<wbr>&#8216;*.mp3&#8217;&nbsp;<wbr>--and --not -(&nbsp;<wbr>--in=usbdrive --or --in=archive -) </p>
 <p> The above example prevents git-annex from working on mp3 files whose file contents are present at either of two repositories. </p>
 <dl>
 <dt><code>--exclude=glob</code></dt>
 <dd> <p> Skips files matching the glob pattern. The glob is matched relative to the current directory. For example: </p>
  </dd>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;<wbr>--exclude=&#8216;*.mp3&#8217;&nbsp;<wbr>--exclude=&#8216;subdir/*&#8216; </p>
  </dd>
 <dd> <p> Note that this will not match anything when using --all or --unused. </p>
@@ -726,7 +726,7 @@ Try making some of these repositories available: <br />
 <dt><code>--include=glob</code></dt>
 <dd> <p> Skips files not matching the glob pattern. (Same as <code>--not --exclude</code>.) For example, to include only mp3 and ogg files: </p>
  </dd>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;<wbr>--include=&#8216;*.mp3&#8217;&nbsp;<wbr>--or --include=&#8216;*.ogg&#8217; </p>
  </dd>
 <dd> <p> Note that this will not skip anything when using --all or --unused. </p>
@@ -823,7 +823,7 @@ Try making some of these repositories available: <br />
 <h2>PREFERRED CONTENT</h2>
 <p> Each repository has a preferred content setting, which specifies content that the repository wants to have present. These settings can be configured using <code>git annex vicfg</code> or <code>git annex wanted</code>. They are used by the <code>--auto</code> option, and by the git-annex assistant. </p>
 <p> The preferred content settings are similar, but not identical to the matching options specified above, just without the dashes. For example: </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>exclude=archive/*&nbsp;<wbr>and&nbsp;<wbr>(include=*.mp3 or smallerthan=1mb) </p>
 <p> The main differences are that <code>exclude=</code> and <code>include=</code> always match relative to the top of the git repository, and that there is no equivilant to <code>--in</code>. </p>
 <p> When a repository is in one of the standard predefined groups, like &quot;backup&quot; and &quot;client&quot;, setting its preferred content to &quot;standard&quot; will use a built-in preferred content expression developed for that group. </p>
@@ -833,10 +833,10 @@ Try making some of these repositories available: <br />
 <p> These actions are available: &quot;fsck self&quot;, &quot;fsck UUID&quot; (where UUID is the UUID of a remote to fsck). After the action comes the duration to allow the action to run, and finally the schedule of when to run it. </p>
 <p> To schedule multiple jobs, separate them with &quot;; &quot;. </p>
 <p> Some examples: </p>
-<p> <br />
-&nbsp;<wbr>fsck self 30m every day at any time <br />
-&nbsp;<wbr>fsck self 1h every month at 3 AM <br />
-&nbsp;<wbr>fsck self 1h on day 1 of every month at any time <br />
+<p> <br/>
+&nbsp;<wbr>fsck self 30m every day at any time <br/>
+&nbsp;<wbr>fsck self 1h every month at 3 AM <br/>
+&nbsp;<wbr>fsck self 1h on day 1 of every month at any time <br/>
 &nbsp;<wbr>fsck self 1h every week divisible by 2 at any time </p>
 <h2>CONFIGURATION VIA .git/config</h2>
 <p> Like other git commands, git-annex is configured via <code>.git/config</code>. Here are all the supported configuration settings. </p>
@@ -862,7 +862,7 @@ Try making some of these repositories available: <br />
  </dd>
 <dd> <p> Example: </p>
  </dd>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;<wbr>annex.largefiles&nbsp;<wbr>=&nbsp;<wbr>largerthan=100kb and not&nbsp;<wbr>(include=*.c or include=*.h) </p>
  </dd>
 <dd>  </dd>
@@ -1106,12 +1106,12 @@ Try making some of these repositories available: <br />
 <dd>  </dd></dl>
 <h2>CONFIGURATION VIA .gitattributes</h2>
 <p> The key-value backend used when adding a new file to the annex can be configured on a per-file-type basis via <code>.gitattributes</code> files. In the file, the <code>annex.backend</code> attribute can be set to the name of the backend to use. For example, this here&#8217;s how to use the WORM backend by default, but the SHA256E backend for ogg files: </p>
-<p> <br />
-&nbsp;<wbr>*&nbsp;<wbr>annex.backend=WORM <br />
+<p> <br/>
+&nbsp;<wbr>*&nbsp;<wbr>annex.backend=WORM <br/>
 &nbsp;<wbr>*.ogg annex.backend=SHA256E </p>
 <p> The numcopies setting can also be configured on a per-file-type basis via the <code>annex.numcopies</code> attribute in <code>.gitattributes</code> files. This overrides other numcopies settings. For example, this makes two copies be needed for wav files and 3 copies for flac files: </p>
-<p> <br />
-&nbsp;<wbr>*.wav annex.numcopies=2 <br />
+<p> <br/>
+&nbsp;<wbr>*.wav annex.numcopies=2 <br/>
 &nbsp;<wbr>*.flac annex.numcopies=3 </p>
 <p> Note that setting numcopies to 0 is very unsafe. </p>
 <p> These settings are honored by git-annex whenever it&#8217;s operating on a matching file. However, when using --all, --unused, or --key to specify keys to operate on, git-annex is operating on keys and not files, so will not honor the settings from .gitattributes. </p>

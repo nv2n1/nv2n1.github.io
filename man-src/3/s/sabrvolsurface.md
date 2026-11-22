@@ -16,7 +16,7 @@ description: "ql/experimental/volatility/sabrvolsurface.hpp – SABR volatility 
 #include &lt;ql/termstructures/volatility/sabrinterpolatedsmilesection.hpp&gt;
 #include &lt;boost/array.hpp&gt;</code></pre>
 <h3>Classes</h3>
-<p>class <code>SabrVolSurface</code><br />
+<p>class <code>SabrVolSurface</code><br/>
  <i></i><code>SABR</code> volatility (smile) surface.</p>
 <h2>Detailed Description</h2>
 <p>SABR volatility (smile) surface.</p>

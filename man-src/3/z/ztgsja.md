@@ -10,7 +10,7 @@ description: "ztgsja.f –"
 <p>ztgsja.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>ztgsja</code> (JOBU, JOBV, JOBQ, M, P, N, K, L, A, LDA, B, LDB, TOLA, TOLB, ALPHA, BETA, U, LDU, V, LDV, Q, LDQ, WORK, NCYCLE, INFO)<br />
+<p>subroutine <code>ztgsja</code> (JOBU, JOBV, JOBQ, M, P, N, K, L, A, LDA, B, LDB, TOLA, TOLB, ALPHA, BETA, U, LDU, V, LDV, Q, LDQ, WORK, NCYCLE, INFO)<br/>
  <i></i><code>ZTGSJA</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ztgsja (characterJOBU, characterJOBV, characterJOBQ, integerM, integerP, integerN, integerK, integerL, complex*16, dimension( lda, * )A, integerLDA, complex*16, dimension( ldb, * )B, integerLDB, double precisionTOLA, double precisionTOLB, double precision, dimension( * )ALPHA, double precision, dimension( * )BETA, complex*16, dimension( ldu, * )U, integerLDU, complex*16, dimension( ldv, * )V, integerLDV, complex*16, dimension( ldq, * )Q, integerLDQ, complex*16, dimension( * )WORK, integerNCYCLE, integerINFO)</h3>

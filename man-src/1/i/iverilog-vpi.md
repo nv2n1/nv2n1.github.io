@@ -51,12 +51,12 @@ description: "iverilog-vpi – Compile front end for VPI modules"
 <dd> On 64bit systems that support it (and support vvp32) this flag requests a 32bit vpi binary instead of the default 64bit binary. </dd>
 <p> Example GNU makefile that takes advantage of these flags:</p>
 <dt>
-</dt><dd> CFLAGS = -Wall -O $(CFLAGS_$@)<br />
- VPI_CFLAGS := $(shell iverilog-vpi &#8211;cflags)<br />
- CFLAGS_messagev.o = $(VPI_CFLAGS)<br />
- CFLAGS_fifo.o = $(VPI_CFLAGS)<br />
- messagev.o fifo.o: transport.h<br />
- messagev.vpi: messagev.o fifo.o<br />
+</dt><dd> CFLAGS = -Wall -O $(CFLAGS_$@)<br/>
+ VPI_CFLAGS := $(shell iverilog-vpi &#8211;cflags)<br/>
+ CFLAGS_messagev.o = $(VPI_CFLAGS)<br/>
+ CFLAGS_fifo.o = $(VPI_CFLAGS)<br/>
+ messagev.o fifo.o: transport.h<br/>
+ messagev.vpi: messagev.o fifo.o<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>iverilog-vpi $^</dd>
 </dl>
 <h2>AUTHOR</h2>

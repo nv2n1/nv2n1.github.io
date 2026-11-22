@@ -17,7 +17,7 @@ description: "inadyn.conf – configuration for the inadyn client for open DNS s
 <dd>a \ can be used as an escape character.</dd></dl>
 <h2>Examples</h2>
 <h3>1.</h3>
-<p>#Some comment about inadyn cfg file &#8211;username test &#8211;password test &#8211;update_period 60000 &#8211;alias test.homeip.net &#8211;alias my.second.domain<br />
+<p>#Some comment about inadyn cfg file &#8211;username test &#8211;password test &#8211;update_period 60000 &#8211;alias test.homeip.net &#8211;alias my.second.domain<br/>
 &nbsp;<wbr></p>
 <h3>2.</h3>
 <p>&#8211;username test # user &#8211;password test update_period 60000 # some other param without &#8216;&#8211;&#8216; alias test.homeip.net </p>

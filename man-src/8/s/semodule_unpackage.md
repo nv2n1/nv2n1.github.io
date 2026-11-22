@@ -11,7 +11,7 @@ description: "semodule_unpackage – Extract policy module and file context file
 <h2>Synopsis</h2>
 <p><code>semodule_unpackage &lt;module&gt; [&lt;file contexts&gt;]</code></p>
 <h2>Description</h2>
-<p>semodule_unpackage is the tool used to extract the SELinux policy module<br />
+<p>semodule_unpackage is the tool used to extract the SELinux policy module<br/>
 &nbsp;<wbr>and file context file from an SELinux Policy Package. </p>
 <h2>Example</h2>
 <pre># Extract the httpd module file from httpd policy package.

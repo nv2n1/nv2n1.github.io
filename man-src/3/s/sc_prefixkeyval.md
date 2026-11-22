@@ -14,11 +14,11 @@ description: "sc::PrefixKeyVal –"
 #include &lt;keyval.h&gt;</code></pre>
 <p> Inherits <code>sc::KeyVal</code>.</p>
 <h3>Public Member Functions</h3>
-<p>void <code>errortrace</code> (std::ostream &amp;fp=ExEnv::err0())<br />
- <i>Write a message to fp describing the error. </i><br />
- void <code>dump</code> (std::ostream &amp;fp=ExEnv::err0())<br />
- <i>Write a message to fp describing the error. </i> <code>Constructors.</code><br />
- Construct a <code>PrefixKeyVal</code>, using the given prefix and indices.<br />
+<p>void <code>errortrace</code> (std::ostream &amp;fp=ExEnv::err0())<br/>
+ <i>Write a message to fp describing the error. </i><br/>
+ void <code>dump</code> (std::ostream &amp;fp=ExEnv::err0())<br/>
+ <i>Write a message to fp describing the error. </i> <code>Constructors.</code><br/>
+ Construct a <code>PrefixKeyVal</code>, using the given prefix and indices.<br/>
  <code>PrefixKeyVal</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;, int i) </p>
 <p> <code>PrefixKeyVal</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;, int i, int j) </p>
 <p> <code>PrefixKeyVal</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;, int i, int j, int k) </p>

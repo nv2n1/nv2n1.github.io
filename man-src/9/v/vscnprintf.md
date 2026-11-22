@@ -36,5 +36,5 @@ description: "vscnprintf – Format a string and place it in a buffer"
 <p>If you&#8217;re not already dealing with a va_list consider using <code>scnprintf</code>. </p>
 <p>See the <code>vsnprintf</code> documentation for format string extensions over C99.  </p>
 <h2>COPYRIGHT</h2>
-<p> <br />
+<p> <br/>
  </p>

@@ -9,14 +9,14 @@ description: "ocfs2_hb_ctl – Starts and stops the OCFS2 heartbeat on a given d
 
 <p>ocfs2_hb_ctl &#8211; Starts and stops the <i>OCFS2</i> heartbeat on a given device.</p>
 <h2>Synopsis</h2>
-<p><code>ocfs2_hb_ctl</code> <code>-S</code> <code>-d</code> <i>device</i> <i>service</i><br />
- <code>ocfs2_hb_ctl</code> <code>-S</code> <code>-u</code> <i>uuid</i> <i>service</i><br />
- <code>ocfs2_hb_ctl</code> <code>-K</code> <code>-d</code> <i>device</i> <i>service</i><br />
- <code>ocfs2_hb_ctl</code> <code>-K</code> <code>-u</code> <i>uuid</i> <i>service</i><br />
- <code>ocfs2_hb_ctl</code> <code>-I</code> <code>-d</code> <i>device</i><br />
- <code>ocfs2_hb_ctl</code> <code>-I</code> <code>-u</code> <i>uuid</i><br />
- <code>ocfs2_hb_ctl</code> <code>-P</code> <code>-d</code> <i>device</i> [<code>-n</code> <i>io_priority</i>]<br />
- <code>ocfs2_hb_ctl</code> <code>-P</code> <code>-u</code> <i>uuid</i> [<code>-n</code> <i>io_priority</i>]<br />
+<p><code>ocfs2_hb_ctl</code> <code>-S</code> <code>-d</code> <i>device</i> <i>service</i><br/>
+ <code>ocfs2_hb_ctl</code> <code>-S</code> <code>-u</code> <i>uuid</i> <i>service</i><br/>
+ <code>ocfs2_hb_ctl</code> <code>-K</code> <code>-d</code> <i>device</i> <i>service</i><br/>
+ <code>ocfs2_hb_ctl</code> <code>-K</code> <code>-u</code> <i>uuid</i> <i>service</i><br/>
+ <code>ocfs2_hb_ctl</code> <code>-I</code> <code>-d</code> <i>device</i><br/>
+ <code>ocfs2_hb_ctl</code> <code>-I</code> <code>-u</code> <i>uuid</i><br/>
+ <code>ocfs2_hb_ctl</code> <code>-P</code> <code>-d</code> <i>device</i> [<code>-n</code> <i>io_priority</i>]<br/>
+ <code>ocfs2_hb_ctl</code> <code>-P</code> <code>-u</code> <i>uuid</i> [<code>-n</code> <i>io_priority</i>]<br/>
  <code>ocfs2_hb_ctl</code> <code>-h</code><i> </p>
 <h2>Description</h2>
 <p><code>ocfs2_hb_ctl</code> starts and stops the heartbeat on a <i>OCFS2</i> device. <code>Users are strongly urged not to use this tool directly</code>. It is automatically invoked by <i>mount.ocfs2</i> and other tools that require heartbeat notifications. The tools accepts devices to be specified by its name or its uuid. Service denotes the application that is requesting the heartbeat notification. </p>

@@ -11,7 +11,7 @@ description: "dlasq5.f –"
 <p> dlasq5.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dlasq5</code> (I0, N0, Z, PP, TAU, SIGMA, DMIN, DMIN1, DMIN2, DN, DNM1, DNM2, IEEE, EPS)<br />
+<p> subroutine <code>dlasq5</code> (I0, N0, Z, PP, TAU, SIGMA, DMIN, DMIN1, DMIN2, DN, DNM1, DNM2, IEEE, EPS)<br/>
  <i></i><code>DLASQ5</code> computes one dqds transform in ping-pong form. Used by sbdsqr and sstegr.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlasq5 (integerI0, integerN0, double precision, dimension( * )Z, integerPP, double precisionTAU, double precisionSIGMA, double precisionDMIN, double precisionDMIN1, double precisionDMIN2, double precisionDN, double precisionDNM1, double precisionDNM2, logicalIEEE, double precisionEPS)</h3>
@@ -94,7 +94,7 @@ description: "dlasq5.f –"
           IEEE is LOGICAL
         Flag for IEEE or non IEEE arithmetic.
 </pre>
-<p>&nbsp;<wbr><br />
+<p>&nbsp;<wbr><br/>
  <i>EPS</i> </p>
 <pre>
           EPS is DOUBLE PRECISION

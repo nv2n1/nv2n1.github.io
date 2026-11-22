@@ -69,7 +69,7 @@ description: "sge_types – xxQS_NAMExx type descriptions"
 <i>hh</i> denotes the hour in 2 digits.
 <i>mm</i> denotes the minute in 2 digits.
 <i>ss</i> denotes the seconds in 2 digits (default 00).</pre>
-<p>If any of the optional date fields are omitted, the corresponding value of the current date is assumed. If <i>CC</i> is not specified, a <i>YY</i> of &lt;70 means 20<i>YY</i>.<br />
+<p>If any of the optional date fields are omitted, the corresponding value of the current date is assumed. If <i>CC</i> is not specified, a <i>YY</i> of &lt;70 means 20<i>YY</i>.<br/>
  Use of this option may cause unexpected results if the clocks of the hosts in the xxQS_NAMExx pool are out of sync. Also, the proper behavior of this option very much depends on the correct setting of the appropriate timezone, e.g. in the TZ environment variable (see <i><a href="/docs/linux/man/1-date/">date</a></i>(1) for details), when the xxQS_NAMExx daemons and are invoked.</dd></dl>
 <h3><code>time</code></h3>
 <p>A <i>time</i> value must conform to <i>hh</i><code>:</code><i>mm</i><code>:</code><i>ss</i>, or <i>seconds</i> where: </p>

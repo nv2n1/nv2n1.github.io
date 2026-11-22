@@ -8,28 +8,28 @@ url: "/docs/linux/man/1-mplayer/"
 description: "mplayer – movie player mencoder – movie encoder"
 ---
 
-<p> mplayer &#8211; movie player<br />
+<p> mplayer &#8211; movie player<br/>
  mencoder &#8211; movie encoder </p>
 <h2>SYNOPSIS</h2>
-<p> <code>mplayer</code> [options] [file|URL|playlist|-]<br />
- <code>mplayer</code> [options] file1 [specific options] [file2] [specific options]<br />
- <code>mplayer</code> [options] {group of files and options} [group-specific options]<br />
- <code>mplayer</code> [br]://[title][/device] [options]<br />
- <code>mplayer</code> [dvd|dvdnav]://[title|[start_title]-end_title][/device] [options]<br />
- <code>mplayer</code> <a href="vcd://track[/device]">vcd://track[/device]</a><br />
- <code>mplayer</code> tv://[channel][/input_id] [options]<br />
- <code>mplayer</code> <a href="radio://[channel|frequency][/capture]">radio://[channel|frequency][/capture]</a> [options]<br />
- <code>mplayer</code> pvr:// [options]<br />
- <code>mplayer</code> <a href="dvb://[card_number@]channel">dvb://[card_number@]channel</a> [options]<br />
- <code>mplayer</code> mf://[filemask|@listfile] [-mf options] [options]<br />
- <code>mplayer</code> [cdda|cddb]://track[-endtrack][:speed][/device] [options]<br />
- <code>mplayer</code> <a href="cue://file[:track]">cue://file[:track]</a> [options]<br />
- <code>mplayer</code> [file|mms[t]|http|http_proxy|rt[s]p|ftp|udp|unsv|icyx|noicyx|smb]:// [user:pass@]URL[:port] [options]<br />
- <code>mplayer</code> <a href="sdp://file">sdp://file</a> [options]<br />
- <code>mplayer</code> <a href="mpst://host[:port]/URL">mpst://host[:port]/URL</a> [options]<br />
- <code>mplayer</code> <a href="tivo://host/[list|llist|fsid]">tivo://host/[list|llist|fsid]</a> [options]<br />
- <code>gmplayer</code> [options] [file|URL|playlist] [-skin skin]<br />
- <code>mencoder</code> [options] file [file|URL|-] [-o file | file://file | <a href="smb://[user:pass@]host/filepath]">smb://[user:pass@]host/filepath]</a><br />
+<p> <code>mplayer</code> [options] [file|URL|playlist|-]<br/>
+ <code>mplayer</code> [options] file1 [specific options] [file2] [specific options]<br/>
+ <code>mplayer</code> [options] {group of files and options} [group-specific options]<br/>
+ <code>mplayer</code> [br]://[title][/device] [options]<br/>
+ <code>mplayer</code> [dvd|dvdnav]://[title|[start_title]-end_title][/device] [options]<br/>
+ <code>mplayer</code> <a href="vcd://track[/device]">vcd://track[/device]</a><br/>
+ <code>mplayer</code> tv://[channel][/input_id] [options]<br/>
+ <code>mplayer</code> <a href="radio://[channel|frequency][/capture]">radio://[channel|frequency][/capture]</a> [options]<br/>
+ <code>mplayer</code> pvr:// [options]<br/>
+ <code>mplayer</code> <a href="dvb://[card_number@]channel">dvb://[card_number@]channel</a> [options]<br/>
+ <code>mplayer</code> mf://[filemask|@listfile] [-mf options] [options]<br/>
+ <code>mplayer</code> [cdda|cddb]://track[-endtrack][:speed][/device] [options]<br/>
+ <code>mplayer</code> <a href="cue://file[:track]">cue://file[:track]</a> [options]<br/>
+ <code>mplayer</code> [file|mms[t]|http|http_proxy|rt[s]p|ftp|udp|unsv|icyx|noicyx|smb]:// [user:pass@]URL[:port] [options]<br/>
+ <code>mplayer</code> <a href="sdp://file">sdp://file</a> [options]<br/>
+ <code>mplayer</code> <a href="mpst://host[:port]/URL">mpst://host[:port]/URL</a> [options]<br/>
+ <code>mplayer</code> <a href="tivo://host/[list|llist|fsid]">tivo://host/[list|llist|fsid]</a> [options]<br/>
+ <code>gmplayer</code> [options] [file|URL|playlist] [-skin skin]<br/>
+ <code>mencoder</code> [options] file [file|URL|-] [-o file | file://file | <a href="smb://[user:pass@]host/filepath]">smb://[user:pass@]host/filepath]</a><br/>
  <code>mencoder</code> [options] file1 [specific options] [file2] [specific options]</p>
 <h2>DESCRIPTION</h2>
 <p> <code>mplayer</code> is a movie player for Linux (runs on many other platforms and CPU architectures, see the documentation). It plays most MPEG/VOB, AVI, ASF/WMA/WMV, RM, QT/MOV/MP4, Ogg/OGM, MKV, VIVO, FLI, NuppelVideo, yuv4mpeg, FILM and RoQ files, supported by many native and binary codecs. You can watch VCD, SVCD, DVD, Blu-ray, 3ivx, DivX 3/4/5, WMV and even H.264 movies, too. </p>
@@ -257,12 +257,12 @@ description: "mplayer – movie player mencoder – movie encoder"
 <h2>USAGE</h2>
 <p> Every &#8216;flag&#8217; option has a &#8216;noflag&#8217; counterpart, e.g. the opposite of the -fs option is -nofs. </p>
 <p> If an option is marked as (XXX only), it will only work in combination with the XXX option or if XXX is compiled in. </p>
-<p> <i>NOTE:</i> The suboption parser (used for example for -ao pcm suboptions) supports a special kind of string-escaping intended for use with external GUIs.<br />
- It has the following format:<br />
- %n%string_of_length_n<br />
- <i>EXAMPLES:</i><br />
- mplayer -ao pcm:file=%10%C:test.wav test.avi<br />
- Or in a script:<br />
+<p> <i>NOTE:</i> The suboption parser (used for example for -ao pcm suboptions) supports a special kind of string-escaping intended for use with external GUIs.<br/>
+ It has the following format:<br/>
+ %n%string_of_length_n<br/>
+ <i>EXAMPLES:</i><br/>
+ mplayer -ao pcm:file=%10%C:test.wav test.avi<br/>
+ Or in a script:<br/>
  mplayer -ao pcm:file=%`expr length &quot;$NAME&quot;`%&quot;$NAME&quot; test.avi </p>
 <h2>CONFIGURATION FILES</h2>
 <p> You can put all of the options in configuration files which will be read every time MPlayer/MEncoder is run. The system-wide configuration file &#8216;mplayer.conf&#8217; is in your configuration directory (e.g. /etc/mplayer or /usr/local/etc/mplayer), the user specific one is &#8216;~/.mplayer/config&#8217;. The configuration file for MEncoder is &#8216;mencoder.conf&#8217; in your configuration directory (e.g. /etc/mplayer or /usr/local/etc/mplayer), the user specific one is &#8216;~/.mplayer/mencoder.conf&#8217;. User specific options override system-wide options (in case of <code>gmplayer</code>, gui.conf options override user specific options) and options given on the command line override all. The syntax of the configuration files is &#8216;option=&lt;value&gt;&#8217;, everything after a &#8216;#&#8217; is considered a comment. Options that work without values can be enabled by setting them to &#8216;yes&#8217; or &#8216;1&#8217; or &#8216;true&#8217; and disabled by setting them to &#8216;no&#8217; or &#8216;0&#8217; or &#8216;false&#8217;. Even suboptions can be specified in this way. </p>
@@ -323,10 +323,10 @@ spuaa=20
                                                                                                                                                                                                  [ao.alsa] device = spdif
 </code></pre>
 <p> <i>EXAMPLE MENCODER PROFILE:</i> </p>
-<p>[mpeg4] profile &#8211; desc = &#8220;MPEG4 encoding&#8221; ovc = lacv = yes<br />
-    lavcopts = vcodec = mpeg4 : vbitrate = 1200<br />
-                                               [mpeg4 &#8211; hq] profile &#8211;<br />
-                                           desc = &#8220;HQ MPEG4 encoding&#8221; profile = mpeg4<br />
+<p>[mpeg4] profile &#8211; desc = &#8220;MPEG4 encoding&#8221; ovc = lacv = yes<br/>
+    lavcopts = vcodec = mpeg4 : vbitrate = 1200<br/>
+                                               [mpeg4 &#8211; hq] profile &#8211;<br/>
+                                           desc = &#8220;HQ MPEG4 encoding&#8221; profile = mpeg4<br/>
                                                lavcopts = mbd = 2 : trell = yes : v4mv = yes</p>
 <h2>GENERAL OPTIONS</h2>
 <dl>
@@ -339,13 +339,13 @@ spuaa=20
 <dt><code>-list-options</code></dt>
 <dd> Prints all available options.</dd>
 <dt><code>-msgcharset &lt;charset&gt;</code></dt>
-<dd> Convert console messages to the specified character set (default: autodetect). Text will be in the encoding specified with the &#8211;charset configure option. Set this to &quot;noconv&quot; to disable conversion (for e.g. iconv problems).<br />
+<dd> Convert console messages to the specified character set (default: autodetect). Text will be in the encoding specified with the &#8211;charset configure option. Set this to &quot;noconv&quot; to disable conversion (for e.g. iconv problems).<br/>
  <i>NOTE:</i> The option takes effect after command line parsing has finished. The MPLAYER_CHARSET environment variable can help you get rid of the first lines of garbled output.</dd>
 <dt><code>-msgcolor</code></dt>
 <dd> Enable colorful console output on terminals that support ANSI color.</dd>
 <dt><code>-msglevel &lt;all=&lt;level&gt;:&lt;module&gt;=&lt;level&gt;:&#8230;&gt;</code></dt>
-<dd> Control verbosity directly for each module. The &#8216;all&#8217; module changes the verbosity of all the modules not explicitly specified on the command line. See &#8216;-msglevel help&#8217; for a list of all modules.<br />
- <i>NOTE:</i> Some messages are printed before the command line is parsed and are therefore not affected by -msglevel. To control these messages you have to use the MPLAYER_VERBOSE environment variable, see its description below for details.<br />
+<dd> Control verbosity directly for each module. The &#8216;all&#8217; module changes the verbosity of all the modules not explicitly specified on the command line. See &#8216;-msglevel help&#8217; for a list of all modules.<br/>
+ <i>NOTE:</i> Some messages are printed before the command line is parsed and are therefore not affected by -msglevel. To control these messages you have to use the MPLAYER_VERBOSE environment variable, see its description below for details.<br/>
  Available levels:</dd>
 <dl>
 <dl>
@@ -375,7 +375,7 @@ spuaa=20
 <dt><code>-msgmodule</code></dt>
 <dd> Prepend module name in front of each console message.</dd>
 <dt><code>-noconfig &lt;options&gt;</code></dt>
-<dd> Do not parse selected configuration files.<br />
+<dd> Do not parse selected configuration files.<br/>
  <i>NOTE:</i> If -include or -use-filedir-conf options are specified at the command line, they will be honoured. </dd>
 <p> Available options are:</p>
 <dl>
@@ -407,7 +407,7 @@ spuaa=20
 <dt><code>-show-profile &lt;profile&gt;</code></dt>
 <dd> Show the description and content of a profile.</dd>
 <dt><code>-use-filedir-conf</code></dt>
-<dd> Look for a file-specific configuration file in the same directory as the file that is being played.<br />
+<dd> Look for a file-specific configuration file in the same directory as the file that is being played.<br/>
  <i>WARNING:</i> May be dangerous if playing from untrusted media.</dd>
 <dt><code>-v&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code></dt>
 <dd> Increment verbosity level, one level for each -v found on the command line.</dd></dl>
@@ -418,7 +418,7 @@ spuaa=20
 <dt><code>-autosync &lt;factor&gt;</code></dt>
 <dd> Gradually adjusts the A/V sync based on audio delay measurements. Specifying -autosync 0, the default, will cause frame timing to be based entirely on audio delay measurements. Specifying -autosync 1 will do the same, but will subtly change the A/V correction algorithm. An uneven video framerate in a movie which plays fine with -nosound can often be helped by setting this to an integer value greater than 1. The higher the value, the closer the timing will be to -nosound. Try -autosync 30 to smooth out problems with sound drivers which do not implement a perfect audio delay measurement. With this value, if large A/V sync offsets occur, they will only take about 1 or 2 seconds to settle out. This delay in reaction time to sudden A/V offsets should be the only side-effect of turning this option on, for all sound drivers.</dd>
 <dt><code>-benchmark</code></dt>
-<dd> Prints some statistics on CPU usage and dropped frames at the end of playback. Use in combination with -nosound and -vo null for benchmarking only the video codec.<br />
+<dd> Prints some statistics on CPU usage and dropped frames at the end of playback. Use in combination with -nosound and -vo null for benchmarking only the video codec.<br/>
  <i>NOTE:</i> With this option MPlayer will also ignore frame duration when playing only video (you can think of that as infinite fps).</dd>
 <dt><code>-colorkey &lt;number&gt;</code></dt>
 <dd> Changes the colorkey to an RGB value of your choice. 0x000000 is black and 0xffffff is white. Only supported by the cvidix, fbdev, svga, vesa, winvidix, xmga, xvidix, xover, xv (see -vo xv:ck), xvmc (see -vo xv:ck) and directx video output drivers.</dd>
@@ -429,7 +429,7 @@ spuaa=20
 <dt><code>-crash-debug (DEBUG CODE)</code></dt>
 <dd> Automatically attaches gdb upon crash or SIGTRAP. Support must be compiled in by configuring with &#8211;enable-crash-debug.</dd>
 <dt><code>-doubleclick-time</code></dt>
-<dd> Time in milliseconds to recognize two consecutive button presses as a double-click (default: 300). Set to 0 to let your windowing system decide what a double-click is (-vo directx only).<br />
+<dd> Time in milliseconds to recognize two consecutive button presses as a double-click (default: 300). Set to 0 to let your windowing system decide what a double-click is (-vo directx only).<br/>
  <i>NOTE:</i> You will get slightly different behaviour depending on whether you bind MOUSE_BTN0_DBL or MOUSE_BTN0-MOUSE_BTN0_DBL.</dd>
 <dt><code>-edlout &lt;filename&gt;</code></dt>
 <dd> Creates a new file and writes edit decision list (EDL) records to it. During playback, the user hits &#8216;i&#8217; to mark the start or end of a skip block. This provides a starting point from which the user can fine-tune EDL entries later. See <a rel="nofollow" href="http://www.mplayerhq.hu/DOCS/HTML/en/edl.html">http://www.mplayerhq.hu/DOCS/HTML/en/edl.html</a> for details.</dd>
@@ -464,10 +464,10 @@ spuaa=20
 <dt><code>-identify</code></dt>
 <dd> Shorthand for -msglevel identify=4. Show file parameters in an easily parseable format. Also prints more detailed information about subtitle and audio track languages and IDs. In some cases you can get more information by using -msglevel identify=6. For example, for a DVD or Blu-ray it will list the chapters and time length of each title, as well as a disk ID. Combine this with -frames 0 to suppress all video output. The wrapper script TOOLS/midentify.sh suppresses the other MPlayer output and (hopefully) shellescapes the filenames.</dd>
 <dt><code>-idle (also see -slave)</code></dt>
-<dd> Makes MPlayer wait idly instead of quitting when there is no file to play. Mostly useful in slave mode where MPlayer can be controlled through input commands.<br />
+<dd> Makes MPlayer wait idly instead of quitting when there is no file to play. Mostly useful in slave mode where MPlayer can be controlled through input commands.<br/>
  For <code>gmplayer</code> -idle is the default, -noidle will quit the GUI after all files have been played.</dd>
 <dt><code>-input &lt;commands&gt;</code></dt>
-<dd> This option can be used to configure certain parts of the input system. Paths are relative to ~/.mplayer/.<br />
+<dd> This option can be used to configure certain parts of the input system. Paths are relative to ~/.mplayer/.<br/>
  <i>NOTE:</i> Autorepeat is currently only supported by joysticks. </dd>
 <p> Available commands are: </p>
 <dl>
@@ -489,7 +489,7 @@ spuaa=20
 <dt>js-dev</dt>
 <dd> Specifies the joystick device to use (default: /dev/input/js0).</dd>
 <dt>file=&lt;filename&gt;</dt>
-<dd> Read commands from the given file. Mostly useful with a FIFO.<br />
+<dd> Read commands from the given file. Mostly useful with a FIFO.<br/>
  <i>NOTE:</i> When the given file is a FIFO MPlayer opens both ends so you can do several &#8216;echo &quot;seek 10&quot; &gt; mp_pipe&#8217; and the pipe will stay valid.</dd></dl>
 </dl>
 <dt><code>-key-fifo-size &lt;2-65000&gt;</code></dt>
@@ -559,9 +559,9 @@ spuaa=20
 <dd> Expand TEXT only if the property NAME is not available.</dd></dl>
 </dl>
 <dt><code>-playlist &lt;filename&gt;</code></dt>
-<dd> Play files according to a playlist file (ASX, Winamp, SMIL, or one-file-per-line format).<br />
- <i>WARNING:</i> The way MPlayer parses and uses playlist files is not safe against maliciously constructed files. Such files may trigger harmful actions. This has been the case for all MPlayer versions, but unfortunately this fact was not well documented earlier, and some people have even misguidedly recommended use of -playlist with untrusted sources. Do NOT use -playlist with random internet sources or files you don&#8217;t trust!<br />
- <i>NOTE:</i> This option is considered an entry so options found after it will apply only to the elements of this playlist.<br />
+<dd> Play files according to a playlist file (ASX, Winamp, SMIL, or one-file-per-line format).<br/>
+ <i>WARNING:</i> The way MPlayer parses and uses playlist files is not safe against maliciously constructed files. Such files may trigger harmful actions. This has been the case for all MPlayer versions, but unfortunately this fact was not well documented earlier, and some people have even misguidedly recommended use of -playlist with untrusted sources. Do NOT use -playlist with random internet sources or files you don&#8217;t trust!<br/>
+ <i>NOTE:</i> This option is considered an entry so options found after it will apply only to the elements of this playlist.<br/>
  FIXME: This needs to be clarified and documented thoroughly.</dd>
 <dt><code>-allow-dangerous-playlist-parsing</code></dt>
 <dd> This enables parsing any file as a playlist if e.g. a server advertises a file as playlist. Only enable if you know all servers involved are trustworthy. MPlayer&#8217;s playlist code is not designed to handle malicious playlist files.</dd>
@@ -579,7 +579,7 @@ spuaa=20
 </dl>
 <dt><code>-slave (also see -input)</code></dt>
 <dd> Switches on slave mode, in which MPlayer works as a backend for other programs. Instead of intercepting keyboard events, MPlayer will read commands separated by a newline (
-) from stdin.<br />
+) from stdin.<br/>
  <i>NOTE:</i> See -input cmdlist for a list of slave commands and DOCS/tech/slave.txt for their description. Also, this is not intended to disable other inputs, e.g. via the video window, use some other method like -input nodefault-bindings:conf=/dev/null for that.</dd>
 <dt><code>-softsleep</code></dt>
 <dd> Time frames by repeatedly checking the current time instead of asking the kernel to wake up MPlayer at the correct time. Useful if your kernel timing is imprecise and you cannot use the RTC either. Comes at the price of higher CPU consumption.</dd>
@@ -648,8 +648,8 @@ spuaa=20
 <dd> Set paranoia level. Values other than 0 seem to break playback of anything but the first track.</dd>
 <dl>
 <dt>
-</dt><dd> 0: disable checking (default)<br />
- 1: overlap checking only<br />
+</dt><dd> 0: disable checking (default)<br/>
+ 1: overlap checking only<br/>
  2: full data correction and verification</dd></dl>
 <dt>generic-dev=&lt;value&gt;</dt>
 <dd> Use specified generic SCSI device.</dd>
@@ -667,7 +667,7 @@ spuaa=20
 <dt><code>-cdrom-device &lt;path to device&gt;</code></dt>
 <dd> Specify the CD-ROM device (default: /dev/cdrom).</dd>
 <dt><code>-channels &lt;number&gt; (also see -af channels)</code></dt>
-<dd> Request the number of playback channels (default: 2). MPlayer asks the decoder to decode the audio into as many channels as specified. Then it is up to the decoder to fulfill the requirement. This is usually only important when playing videos with AC-3 audio (like DVDs). In that case liba52 does the decoding by default and correctly downmixes the audio into the requested number of channels. To directly control the number of output channels independently of how many channels are decoded, use the channels filter.<br />
+<dd> Request the number of playback channels (default: 2). MPlayer asks the decoder to decode the audio into as many channels as specified. Then it is up to the decoder to fulfill the requirement. This is usually only important when playing videos with AC-3 audio (like DVDs). In that case liba52 does the decoding by default and correctly downmixes the audio into the requested number of channels. To directly control the number of output channels independently of how many channels are decoded, use the channels filter.<br/>
  <i>NOTE:</i> This option is honored by codecs (AC-3 only), filters (surround) and audio output drivers (OSS at least). </dd>
 <p> Available options are: </p>
 <dl>
@@ -688,8 +688,8 @@ spuaa=20
 <dt><code>-cookies-file &lt;filename&gt; (network only)</code></dt>
 <dd> Read HTTP cookies from &lt;filename&gt; (default: ~/.mozilla/ and ~/.netscape/) and skip reading from default locations. The file is assumed to be in Netscape format.</dd>
 <dt><code>-delay &lt;sec&gt;</code></dt>
-<dd> audio delay in seconds (positive or negative float value)<br />
- Negative values delay the audio, and positive values delay the video. Note that this is the exact opposite of the -audio-delay MEncoder option.<br />
+<dd> audio delay in seconds (positive or negative float value)<br/>
+ Negative values delay the audio, and positive values delay the video. Note that this is the exact opposite of the -audio-delay MEncoder option.<br/>
  <i>NOTE:</i> When used with MEncoder, this is not guaranteed to work correctly with -ovc copy; use -audio-delay instead.</dd>
 <dt><code>-ignore-start</code></dt>
 <dd> Ignore the specified starting time for streams in AVI files. In MPlayer, this nullifies stream delays in files encoded with the -audio-delay option. During encoding, this option prevents MEncoder from transferring original stream start times to the new file; the -audio-delay option is not affected. Note that MEncoder sometimes adjusts stream starting times automatically to compensate for anticipated decoding delays, so do not use this option for encoding without testing it first.</dd>
@@ -717,14 +717,14 @@ spuaa=20
 <dt><code>-dvd-device &lt;path to device&gt; (DVD only)</code></dt>
 <dd> Specify the DVD device or .iso filename (default: /dev/dvd). You can also specify a directory that contains files previously copied directly from a DVD (with e.g. vobcopy).</dd>
 <dt><code>-dvd-speed &lt;factor or speed in KB/s&gt; (DVD only)</code></dt>
-<dd> Try to limit DVD speed (default: 0, no change). DVD base speed is about 1350KB/s, so a 8x drive can read at speeds up to 10800KB/s. Slower speeds make the drive more quiet, for watching DVDs 2700KB/s should be quiet and fast enough. MPlayer resets the speed to the drive default value on close. Values less than 100 mean multiples of 1350KB/s, i.e. -dvd-speed 8 selects 10800KB/s.<br />
+<dd> Try to limit DVD speed (default: 0, no change). DVD base speed is about 1350KB/s, so a 8x drive can read at speeds up to 10800KB/s. Slower speeds make the drive more quiet, for watching DVDs 2700KB/s should be quiet and fast enough. MPlayer resets the speed to the drive default value on close. Values less than 100 mean multiples of 1350KB/s, i.e. -dvd-speed 8 selects 10800KB/s.<br/>
  <i>NOTE:</i> You need write access to the DVD device to change the speed.</dd>
 <dt><code>-dvdangle &lt;angle ID&gt; (DVD only)</code></dt>
 <dd> Some DVD discs contain scenes that can be viewed from multiple angles. Here you can tell MPlayer which angles to use (default: 1).</dd>
 <dt><code>-edl &lt;filename&gt;</code></dt>
 <dd> Enables edit decision list (EDL) actions during playback. Video will be skipped over and audio will be muted and unmuted according to the entries in the given file. See <a rel="nofollow" href="http://www.mplayerhq.hu/DOCS/HTML/en/edl.html">http://www.mplayerhq.hu/DOCS/HTML/en/edl.html</a> for details on how to use this.</dd>
 <dt><code>-endpos &lt;[[hh:]mm:]ss[.ms]|size[b|kb|mb]&gt; (also see -ss and -sb)</code></dt>
-<dd> Stop at given time or byte position.<br />
+<dd> Stop at given time or byte position.<br/>
  <i>NOTE:</i> Byte position may not be accurate, as it can only stop at a frame boundary. When used in conjunction with -ss option, -endpos time will shift forward by seconds specified with -ss if not a byte position. In addition it may not work well or not at all when used with any of the -dump options. </dd>
 <p> <i>EXAMPLE:</i></p>
 <dl>
@@ -741,7 +741,7 @@ spuaa=20
 <dd> Encode only 100 MB.</dd></dl>
 </dl>
 <dt><code>-forceidx</code></dt>
-<dd> Force index rebuilding. Useful for files with broken index (A/V desync, etc). This will enable seeking in files where seeking was not possible. You can fix the index permanently with MEncoder (see the documentation).<br />
+<dd> Force index rebuilding. Useful for files with broken index (A/V desync, etc). This will enable seeking in files where seeking was not possible. You can fix the index permanently with MEncoder (see the documentation).<br/>
  <i>NOTE:</i> This option only works if the underlying media supports seeking (i.e. not with stdin, pipe, etc).</dd>
 <dt><code>-fps &lt;float value&gt;</code></dt>
 <dd> Override video framerate. Useful if the original value is wrong or missing.</dd>
@@ -755,32 +755,32 @@ spuaa=20
 <dl>
 <dl>
 <dt>
-</dt><dd> mplayer -http-header-fields &#8216;Field1: value1&#8242;,&#8217;Field2: value2&#8217; <a rel="nofollow" href="http://localhost:1234">http://localhost:1234</a><br />
+</dt><dd> mplayer -http-header-fields &#8216;Field1: value1&#8242;,&#8217;Field2: value2&#8217; <a rel="nofollow" href="http://localhost:1234">http://localhost:1234</a><br/>
  Will generate HTTP request:</dd>
 <dl>
 <dt>
 </dt><dd>
- GET / HTTP/1.0<br />
- Host: localhost:1234<br />
- User-Agent: MPlayer<br />
- Icy-MetaData: 1<br />
- Field1: value1<br />
- Field2: value2<br />
+ GET / HTTP/1.0<br/>
+ Host: localhost:1234<br/>
+ User-Agent: MPlayer<br/>
+ Icy-MetaData: 1<br/>
+ Field1: value1<br/>
+ Field2: value2<br/>
  Connection: close</dd></dl>
 </dl>
 </dl>
 <dt><code>-idx (also see -forceidx)</code></dt>
-<dd> Rebuilds index of files if no index was found, allowing seeking. Useful with broken/incomplete downloads, or badly created files.<br />
+<dd> Rebuilds index of files if no index was found, allowing seeking. Useful with broken/incomplete downloads, or badly created files.<br/>
  <i>NOTE:</i> This option only works if the underlying media supports seeking (i.e. not with stdin, pipe, etc).</dd>
 <dt><code>-noidx</code></dt>
 <dd> Skip rebuilding index file. MEncoder skips writing the index with this option.</dd>
 <dt><code>-ipv4-only-proxy (network only)</code></dt>
 <dd> Skip the proxy for IPv6 addresses. It will still be used for IPv4 connections.</dd>
 <dt><code>-loadidx &lt;index file&gt;</code></dt>
-<dd> The file from which to read the video index data saved by -saveidx. This index will be used for seeking, overriding any index data contained in the AVI itself. MPlayer will not prevent you from loading an index file generated from a different AVI, but this is sure to cause unfavorable results.<br />
+<dd> The file from which to read the video index data saved by -saveidx. This index will be used for seeking, overriding any index data contained in the AVI itself. MPlayer will not prevent you from loading an index file generated from a different AVI, but this is sure to cause unfavorable results.<br/>
  <i>NOTE:</i> This option is obsolete now that MPlayer has OpenDML support.</dd>
 <dt><code>-mc &lt;seconds/frame&gt;</code></dt>
-<dd> maximum A-V sync correction per frame (in seconds)<br />
+<dd> maximum A-V sync correction per frame (in seconds)<br/>
  -mc 0 should always be combined with -noskip for mencoder, otherwise it will almost certainly cause A-V desync.</dd>
 <dt><code>-mf &lt;option1:option2:&#8230;&gt;</code></dt>
 <dd> Used when decoding from multiple PNG or JPEG files. </dd>
@@ -819,9 +819,9 @@ spuaa=20
 <dd> Specify input aspect ratio:</dd>
 <dl>
 <dt>
-</dt><dd> 0: 1:1<br />
- 1: 4:3 (default)<br />
- 2: 16:9<br />
+</dt><dd> 0: 1:1<br/>
+ 1: 4:3 (default)<br/>
+ 2: 16:9<br/>
  3: 2.21:1</dd></dl>
 <dt>arate=&lt;32000-48000&gt;</dt>
 <dd> Specify encoding audio rate (default: 48000 Hz, available: 32000, 44100 and 48000 Hz).</dd>
@@ -837,7 +837,7 @@ spuaa=20
 <dd> Specify video encoding mode:</dd>
 <dl>
 <dt>
-</dt><dd> vbr: Variable BitRate (default)<br />
+</dt><dd> vbr: Variable BitRate (default)<br/>
  cbr: Constant BitRate</dd></dl>
 <dt>vpeak=&lt;value&gt;</dt>
 <dd> Specify peak video bitrate encoding in Mbps (only useful for VBR encoding, default: 9.6).</dd>
@@ -845,11 +845,11 @@ spuaa=20
 <dd> Choose an MPEG format for encoding:</dd>
 <dl>
 <dt>
-</dt><dd> ps: MPEG-2 Program Stream (default)<br />
- ts: MPEG-2 Transport Stream<br />
- mpeg1: MPEG-1 System Stream<br />
- vcd: Video CD compatible stream<br />
- svcd: Super Video CD compatible stream<br />
+</dt><dd> ps: MPEG-2 Program Stream (default)<br/>
+ ts: MPEG-2 Transport Stream<br/>
+ mpeg1: MPEG-1 System Stream<br/>
+ vcd: Video CD compatible stream<br/>
+ svcd: Super Video CD compatible stream<br/>
  dvd: DVD compatible stream</dd></dl>
 </dl>
 </dl>
@@ -869,12 +869,12 @@ spuaa=20
 <dt>freq_max=&lt;value&gt; (*BSD BT848 only)</dt>
 <dd> maximum allowed frequency (default: 108.00)</dd>
 <dt>channels=&lt;frequency&gt;-&lt;name&gt;,&lt;frequency&gt;-&lt;name&gt;,&#8230;</dt>
-<dd> Set channel list. Use _ for spaces in names (or play with quoting ;-). The channel names will then be written using OSD and the slave commands radio_step_channel and radio_set_channel will be usable for a remote control (see LIRC). If given, number in movie URL will be treated as channel position in channel list.<br />
+<dd> Set channel list. Use _ for spaces in names (or play with quoting ;-). The channel names will then be written using OSD and the slave commands radio_step_channel and radio_set_channel will be usable for a remote control (see LIRC). If given, number in movie URL will be treated as channel position in channel list.<br/>
  <i>EXAMPLE:</i> <a href="radio://1,">radio://1,</a> <a href="radio://104.4,">radio://104.4,</a> radio_set_channel 1</dd>
 <dt>adevice=&lt;value&gt; (radio capture only)</dt>
 <dd> Name of device to capture sound from. Without such a name capture will be disabled, even if the capture keyword appears in the URL. For ALSA devices use it in the form hw=&lt;card&gt;.&lt;device&gt;. If the device name contains a &#8216;=&#8217;, the module will use ALSA to capture, otherwise OSS.</dd>
 <dt>arate=&lt;value&gt; (radio capture only)</dt>
-<dd> Rate in samples per second (default: 44100).<br />
+<dd> Rate in samples per second (default: 44100).<br/>
  <i>NOTE:</i> When using audio capture set also -rawaudio rate=&lt;value&gt; option with the same value as arate. If you have problems with sound speed (runs too quickly), try to play with different rate values (e.g. 48000,44100,32000,&#8230;).</dd>
 <dt>achannels=&lt;value&gt; (radio capture only)</dt>
 <dd> Number of audio channels to capture.</dd></dl>
@@ -936,7 +936,7 @@ spuaa=20
 <dt><code>-rtsp-stream-over-http (LIVE555 only)</code></dt>
 <dd> Used with &#8216;<a rel="nofollow" href="http://'">http://&#8217;</a> URLs to specify that the resulting incoming RTP and RTCP packets be streamed over HTTP.</dd>
 <dt><code>-saveidx &lt;filename&gt;</code></dt>
-<dd> Force index rebuilding and dump the index to &lt;filename&gt;. Currently this only works with AVI files.<br />
+<dd> Force index rebuilding and dump the index to &lt;filename&gt;. Currently this only works with AVI files.<br/>
  <i>NOTE:</i> This option is obsolete now that MPlayer has OpenDML support.</dd>
 <dt><code>-sb &lt;byte position&gt; (also see -ss)</code></dt>
 <dd> Seek to byte position. Useful for playback from CD-ROM images or VOB files with junk at the beginning.</dd>
@@ -996,9 +996,9 @@ spuaa=20
 <dt>chanlist=&lt;value&gt;</dt>
 <dd> available: argentina, australia, china-bcast, europe-east, europe-west, france, ireland, italy, japan-bcast, japan-cable, newzealand, russia, southafrica, us-bcast, us-cable, us-cable-hrc</dd>
 <dt>channels=&lt;chan&gt;-&lt;name&gt;[=&lt;norm&gt;],&lt;chan&gt;-&lt;name&gt;[=&lt;norm&gt;],&#8230;</dt>
-<dd> Set names for channels. <i>NOTE:</i> If &lt;chan&gt; is an integer greater than 1000, it will be treated as frequency (in kHz) rather than channel name from frequency table.<br />
- Use _ for spaces in names (or play with quoting ;-). The channel names will then be written using OSD, and the slave commands tv_step_channel, tv_set_channel and tv_last_channel will be usable for a remote control (see LIRC). Not compatible with the frequency parameter.<br />
- <i>NOTE:</i> The channel number will then be the position in the &#8216;channels&#8217; list, beginning with 1.<br />
+<dd> Set names for channels. <i>NOTE:</i> If &lt;chan&gt; is an integer greater than 1000, it will be treated as frequency (in kHz) rather than channel name from frequency table.<br/>
+ Use _ for spaces in names (or play with quoting ;-). The channel names will then be written using OSD, and the slave commands tv_step_channel, tv_set_channel and tv_last_channel will be usable for a remote control (see LIRC). Not compatible with the frequency parameter.<br/>
+ <i>NOTE:</i> The channel number will then be the position in the &#8216;channels&#8217; list, beginning with 1.<br/>
  <i>EXAMPLE:</i> tv://1, tv://TV1, tv_set_channel 1, tv_set_channel TV1</dd>
 <dt>[brightness|contrast|hue|saturation]=&lt;-100-100&gt;</dt>
 <dd> Set the image equalizer on the card.</dd>
@@ -1012,9 +1012,9 @@ spuaa=20
 <dd> Choose an audio mode:</dd>
 <dl>
 <dt>
-</dt><dd> 0: mono<br />
- 1: stereo<br />
- 2: language 1<br />
+</dt><dd> 0: mono<br/>
+ 1: stereo<br/>
+ 2: language 1<br/>
  3: language 2</dd></dl>
 <dt>forcechan=&lt;1-2&gt;</dt>
 <dd> By default, the count of recorded audio channels is determined automatically by querying the audio mode from the TV card. This option allows forcing stereo/mono recording regardless of the amode option and the values returned by v4l. This can be used for troubleshooting when the TV card is unable to report the current audio mode.</dd>
@@ -1036,14 +1036,14 @@ spuaa=20
 <dd> choose the size of the picture that will be compressed by hardware MJPEG compression:</dd>
 <dl>
 <dt>
-</dt><dd> 1: full size<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;704&#215;576&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;PAL<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;704&#215;480&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;NTSC<br />
- 2: medium size<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;352&#215;288&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;PAL<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;352&#215;240&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;NTSC<br />
- 4: small size<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;176&#215;144&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;PAL<br />
+</dt><dd> 1: full size<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;704&#215;576&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;PAL<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;704&#215;480&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;NTSC<br/>
+ 2: medium size<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;352&#215;288&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;PAL<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;352&#215;240&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;NTSC<br/>
+ 4: small size<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;176&#215;144&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;PAL<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;176&#215;120&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;NTSC</dd></dl>
 <dt>quality=&lt;0-100&gt;</dt>
 <dd> Choose the quality of the JPEG compression (&lt; 60 recommended for full size).</dd>
@@ -1053,9 +1053,9 @@ spuaa=20
 <dd> Specify TV teletext display format (default: 0):</dd>
 <dl>
 <dt>
-</dt><dd> 0: opaque<br />
- 1: transparent<br />
- 2: opaque with inverted colors<br />
+</dt><dd> 0: opaque<br/>
+ 1: transparent<br/>
+ 2: opaque with inverted colors<br/>
  3: transparent with inverted colors</dd></dl>
 <dt>tpage=&lt;100-899&gt;</dt>
 <dd> Specify initial TV teletext page number (default: 100).</dd>
@@ -1094,7 +1094,7 @@ spuaa=20
 <p> <i>NOTE:</i> Also see -vf expand.</p>
 <dl>
 <dt><code>-ass (FreeType only)</code></dt>
-<dd> Turn on SSA/ASS subtitle rendering. With this option, libass will be used for SSA/ASS external subtitles and Matroska tracks. You may also want to use -embeddedfonts.<br />
+<dd> Turn on SSA/ASS subtitle rendering. With this option, libass will be used for SSA/ASS external subtitles and Matroska tracks. You may also want to use -embeddedfonts.<br/>
  <i>NOTE:</i> Unlike normal OSD, libass uses fontconfig by default. To disable it, use -nofontconfig.</dd>
 <dt><code>-ass-border-color &lt;value&gt;</code></dt>
 <dd> Sets the border (outline) color for text subtitles. The color format is RRGGBBAA.</dd>
@@ -1109,7 +1109,7 @@ spuaa=20
 <p> <i>EXAMPLE:</i></p>
 <dl>
 <dt>
-</dt><dd> -ass-force-style FontName=Arial,Default.Bold=1<br />
+</dt><dd> -ass-force-style FontName=Arial,Default.Bold=1<br/>
  -ass-force-style PlayResY=768</dd></dl>
 <dt><code>-ass-hinting &lt;type&gt;</code></dt>
 <dd> Set hinting type. &lt;type&gt; can be:</dd>
@@ -1146,12 +1146,12 @@ spuaa=20
 <dt><code>-dumpsami (MPlayer only)</code></dt>
 <dd> Convert the given subtitle (specified with the -sub option) to the time-based SAMI subtitle format. Creates a dumpsub.smi file in the current directory.</dd>
 <dt><code>-dumpsrtsub (MPlayer only)</code></dt>
-<dd> Convert the given subtitle (specified with the -sub option) to the time-based SubViewer (SRT) subtitle format. Creates a dumpsub.srt file in the current directory.<br />
+<dd> Convert the given subtitle (specified with the -sub option) to the time-based SubViewer (SRT) subtitle format. Creates a dumpsub.srt file in the current directory.<br/>
  <i>NOTE:</i> Some broken hardware players choke on SRT subtitle files with Unix line endings. If you are unlucky enough to have such a box, pass your subtitle files through unix2dos or a similar program to replace Unix line endings with DOS/Windows line endings.</dd>
 <dt><code>-dumpsub (MPlayer only) (BETA CODE)</code></dt>
 <dd> Dumps the subtitle substream from VOB streams. Also see the -dump*sub and -vobsubout* options.</dd>
 <dt><code>-embeddedfonts (FreeType only)</code></dt>
-<dd> Enables extraction of Matroska embedded fonts (default: disabled). These fonts can be used for SSA/ASS subtitle rendering (-ass option). Font files are created in the ~/.mplayer/fonts directory.<br />
+<dd> Enables extraction of Matroska embedded fonts (default: disabled). These fonts can be used for SSA/ASS subtitle rendering (-ass option). Font files are created in the ~/.mplayer/fonts directory.<br/>
  <i>NOTE:</i> With FontConfig 2.4.2 or newer, embedded fonts are opened directly from memory, and this option is enabled by default.</dd>
 <dt><code>-ffactor &lt;number&gt;</code></dt>
 <dd> Resample the font alphamap. Can be:</dd>
@@ -1171,17 +1171,17 @@ spuaa=20
 <dt><code>-noflip-hebrew-commas</code></dt>
 <dd> Change FriBiDi&#8217;s assumptions about the placements of commas in subtitles. Use this if commas in subtitles are shown at the start of a sentence instead of at the end.</dd>
 <dt><code>-font &lt;path to font.desc file, path to font (FreeType), font pattern (Fontconfig)&gt;</code></dt>
-<dd> Search for the OSD/subtitle fonts in an alternative directory (default for normal fonts: ~/.mplayer/font/font.desc, default for FreeType fonts: ~/.mplayer/subfont.ttf, default for Fontconfig: &quot;sans-serif&quot;).<br />
+<dd> Search for the OSD/subtitle fonts in an alternative directory (default for normal fonts: ~/.mplayer/font/font.desc, default for FreeType fonts: ~/.mplayer/subfont.ttf, default for Fontconfig: &quot;sans-serif&quot;).<br/>
  <i>NOTE:</i> With FreeType, this option determines the path to the font file. With Fontconfig, this option determines the Fontconfig font pattern. </dd>
 <p> <i>EXAMPLE:</i></p>
 <dl>
 <dt>
-</dt><dd> -font ~/.mplayer/arial-14/font.desc<br />
- -font ~/.mplayer/arialuni.ttf<br />
- -font &#8216;Bitstream Vera Sans&#8217;<br />
+</dt><dd> -font ~/.mplayer/arial-14/font.desc<br/>
+ -font ~/.mplayer/arialuni.ttf<br/>
+ -font &#8216;Bitstream Vera Sans&#8217;<br/>
  -font &#8216;Bitstream Vera Sans:style=Bold&#8217;</dd></dl>
 <dt><code>-fontconfig (fontconfig only)</code></dt>
-<dd> Enables the usage of fontconfig managed fonts (default: autodetect).<br />
+<dd> Enables the usage of fontconfig managed fonts (default: autodetect).<br/>
  <i>NOTE:</i> By default fontconfig is used for libass-rendered subtitles and not used for OSD. With -fontconfig it is used for both libass and OSD, with -nofontconfig it is not used at all, i.e. only then -font and -subfont will work with a given path to font.</dd>
 <dt><code>-forcedsubsonly</code></dt>
 <dd> Display only forced subtitles for the DVD subtitle stream selected by e.g. -slang.</dd>
@@ -1304,7 +1304,7 @@ spuaa=20
 <p> <i>EXAMPLE:</i></p>
 <dl>
 <dt>
-</dt><dd> -subcp latin2<br />
+</dt><dd> -subcp latin2<br/>
  -subcp cp1250</dd></dl>
 <dt><code>-subcp enca:&lt;language&gt;:&lt;fallback codepage&gt; (ENCA only)</code></dt>
 <dd> You can specify your language using a two letter language code to make ENCA detect the codepage automatically. If unsure, enter anything and watch mplayer -v output for available languages. Use __ (two underscores) if your language is not supported. Fallback codepage specifies the codepage to use, when autodetection fails. </dd>
@@ -1323,10 +1323,10 @@ spuaa=20
 <p> <i>EXAMPLE:</i> Assuming that /path/to/movie/movie.avi is played and -sub-paths sub,subtitles,/tmp/subs is specified, MPlayer searches for subtitle files in these directories:</p>
 <dl>
 <dt>
-</dt><dd> /path/to/movie/<br />
- /path/to/movie/sub/<br />
- /path/to/movie/subtitles/<br />
- /tmp/subs/<br />
+</dt><dd> /path/to/movie/<br/>
+ /path/to/movie/sub/<br/>
+ /path/to/movie/subtitles/<br/>
+ /tmp/subs/<br/>
  ~/.mplayer/sub/</dd></dl>
 <dt><code>-subdelay &lt;sec&gt;</code></dt>
 <dd> Delays subtitles by &lt;sec&gt; seconds. Can be negative.</dd>
@@ -1335,7 +1335,7 @@ spuaa=20
 <dt><code>-subfont &lt;path to font (FreeType), font pattern (Fontconfig)&gt; (FreeType only)</code></dt>
 <dd> Sets the subtitle font (see -font). If no -subfont is given, -font is used.</dd>
 <dt><code>-subfont-autoscale &lt;0-3&gt; (FreeType only)</code></dt>
-<dd> Sets the autoscale mode.<br />
+<dd> Sets the autoscale mode.<br/>
  <i>NOTE:</i> 0 means that text scale and OSD scale are font heights in points. </dd>
 <p> The mode can be: </p>
 <dl>
@@ -1360,7 +1360,7 @@ spuaa=20
 <dt><code>-subfont-text-scale &lt;0-100&gt; (FreeType only)</code></dt>
 <dd> Sets the subtitle text autoscale coefficient as percentage of the screen size (default: 5).</dd>
 <dt><code>-subfps &lt;rate&gt;</code></dt>
-<dd> Specify the framerate of the subtitle file (default: movie fps).<br />
+<dd> Specify the framerate of the subtitle file (default: movie fps).<br/>
  <i>NOTE:</i> &lt;rate&gt; &gt; movie fps speeds the subtitles up for frame-based subtitle files and slows them down for time-based ones.</dd>
 <dt><code>-subpos &lt;0-150&gt; (useful with -vf expand)</code></dt>
 <dd> Specify the position of subtitles on the screen. The value is the vertical position of the subtitle in % of the screen height. Values larger than 100 allow part of the subtitle to be cut off.</dd>
@@ -1390,7 +1390,7 @@ spuaa=20
 <dt><code>-mixer &lt;device&gt;</code></dt>
 <dd> Use a mixer device different from the default /dev/mixer. For ALSA this is the mixer name.</dd>
 <dt><code>-mixer-channel &lt;mixer line&gt;[,mixer index] (-ao oss and -ao alsa only)</code></dt>
-<dd> This option will tell MPlayer to use a different channel for controlling volume than the default PCM. Options for OSS include <code>vol, pcm, line.</code> For a complete list of options look for SOUND_DEVICE_NAMES in /usr/include/linux/soundcard.h. For ALSA you can use the names e.g. alsamixer displays, like <code>Master, Line, PCM.</code><br />
+<dd> This option will tell MPlayer to use a different channel for controlling volume than the default PCM. Options for OSS include <code>vol, pcm, line.</code> For a complete list of options look for SOUND_DEVICE_NAMES in /usr/include/linux/soundcard.h. For ALSA you can use the names e.g. alsamixer displays, like <code>Master, Line, PCM.</code><br/>
  <i>NOTE:</i> ALSA mixer channel names followed by a number must be specified in the &lt;name,number&gt; format, i.e. a channel labeled &#8216;PCM 1&#8217; in alsamixer must be converted to <code>PCM,1</code>.</dd>
 <dt><code>-softvol</code></dt>
 <dd> Force the use of the software mixer, instead of using the sound card mixer.</dd>
@@ -1405,7 +1405,7 @@ spuaa=20
 <dl>
 <dt><code>-ao &lt;driver1[:suboption1[=value]:&#8230;],driver2,&#8230;[,]&gt;</code></dt>
 <dd> Specify a priority list of audio output drivers to be used.</dd></dl>
-<p> If the list has a trailing &#8216;,&#8217; MPlayer will fall back on drivers not contained in the list. Suboptions are optional and can mostly be omitted.<br />
+<p> If the list has a trailing &#8216;,&#8217; MPlayer will fall back on drivers not contained in the list. Suboptions are optional and can mostly be omitted.<br/>
  <i>NOTE:</i> See -ao help for a list of compiled-in audio output drivers. </p>
 <p> <i>EXAMPLE:</i></p>
 <dl>
@@ -1582,7 +1582,7 @@ spuaa=20
 <dt>
 </dt><dd> -display xtest.localdomain:0</dd></dl>
 <dt><code>-dr &nbsp;<wbr>&nbsp;<wbr>&nbsp;</code></dt>
-<dd> Turns on direct rendering (not supported by all codecs and video outputs). This can result in significantly faster blitting on some systems, on most the difference will be minimal. In some cases, particularly with decoders specifying their buffer requirements badly, it can be vastly slower.<br />
+<dd> Turns on direct rendering (not supported by all codecs and video outputs). This can result in significantly faster blitting on some systems, on most the difference will be minimal. In some cases, particularly with decoders specifying their buffer requirements badly, it can be vastly slower.<br/>
  <i>WARNING:</i> May cause OSD/SUB corruption!</dd>
 <dt><code>-dxr2 &lt;option1:option2:&#8230;&gt;</code></dt>
 <dd> This option is used to control the dxr2 video output driver.</dd>
@@ -1666,7 +1666,7 @@ spuaa=20
 <dd> Tune the overlay (default: 1000).</dd></dl>
 </dl>
 <dt><code>-fbmode &lt;modename&gt; (-vo fbdev only)</code></dt>
-<dd> Change video mode to the one that is labeled as &lt;modename&gt; in /etc/fb.modes.<br />
+<dd> Change video mode to the one that is labeled as &lt;modename&gt; in /etc/fb.modes.<br/>
  <i>NOTE:</i> VESA framebuffer does not support mode changing.</dd>
 <dt><code>-fbmodeconfig &lt;filename&gt; (-vo fbdev only)</code></dt>
 <dd> Override framebuffer mode configuration file (default: /etc/fb.modes).</dd>
@@ -1675,7 +1675,7 @@ spuaa=20
 <dt><code>-fsmode-dontuse &lt;0-31&gt; (OBSOLETE, use the -fs option)</code></dt>
 <dd> Try this option if you still experience fullscreen problems.</dd>
 <dt><code>-fstype &lt;type1,type2,&#8230;&gt; (X11 only)</code></dt>
-<dd> Specify a priority list of fullscreen modes to be used. You can negate the modes by prefixing them with &#8216;-&#8216;. If you experience problems like the fullscreen window being covered by other windows try using a different order.<br />
+<dd> Specify a priority list of fullscreen modes to be used. You can negate the modes by prefixing them with &#8216;-&#8216;. If you experience problems like the fullscreen window being covered by other windows try using a different order.<br/>
  <i>NOTE:</i> See -fstype help for a full list of available modes. </dd>
 <p> The available types are: </p>
 <dl>
@@ -1718,7 +1718,7 @@ spuaa=20
 <dt><code>-gamma &lt;-100-100&gt;</code></dt>
 <dd> Adjust the gamma of the video signal (default: 0). Not supported by all video output drivers.</dd>
 <dt><code>-geometry x[%][:y[%]] or [WxH][+-x+-y]</code></dt>
-<dd> Adjust where the output is on the screen initially. The x and y specifications are in pixels measured from the top-left of the screen to the top-left of the image being displayed, however if a percentage sign is given after the argument it turns the value into a percentage of the screen size in that direction. It also supports the standard X11 -geometry option format, in which e.g. +10-50 means &quot;place 10 pixels from the left border and 50 pixels from the lower border&quot; and &quot;&#8211;20+-10&quot; means &quot;place 20 pixels beyond the right and 10 pixels beyond the top border&quot;. If an external window is specified using the -wid option, then the x and y coordinates are relative to the top-left corner of the window rather than the screen. The coordinates are relative to the screen given with -screen for the video output drivers that fully support -screen (direct3d, gl, gl_tiled, vdpau, x11, xv, xvmc, corevideo).<br />
+<dd> Adjust where the output is on the screen initially. The x and y specifications are in pixels measured from the top-left of the screen to the top-left of the image being displayed, however if a percentage sign is given after the argument it turns the value into a percentage of the screen size in that direction. It also supports the standard X11 -geometry option format, in which e.g. +10-50 means &quot;place 10 pixels from the left border and 50 pixels from the lower border&quot; and &quot;&#8211;20+-10&quot; means &quot;place 20 pixels beyond the right and 10 pixels beyond the top border&quot;. If an external window is specified using the -wid option, then the x and y coordinates are relative to the top-left corner of the window rather than the screen. The coordinates are relative to the screen given with -screen for the video output drivers that fully support -screen (direct3d, gl, gl_tiled, vdpau, x11, xv, xvmc, corevideo).<br/>
  <i>NOTE:</i> This option is only supported by the x11, xmga, xv, xvmc, xvidix, gl, gl_tiled, direct3d, directx, fbdev, sdl, dfxfb and corevideo video output drivers. </dd>
 <p> <i>EXAMPLE:</i></p>
 <dl>
@@ -1747,7 +1747,7 @@ spuaa=20
 <p> <i>EXAMPLE:</i></p>
 <dl>
 <dt>
-</dt><dd> -monitoraspect 4:3 or 1.3333<br />
+</dt><dd> -monitoraspect 4:3 or 1.3333<br/>
  -monitoraspect 16:9 or 1.7777</dd></dl>
 <dt><code>-monitorpixelaspect &lt;ratio&gt; (also see -aspect)</code></dt>
 <dd> Set the aspect of a single pixel of your monitor or TV screen (default: 1). A value of 1 means square pixels (correct for (almost?) all LCDs).</dd>
@@ -1762,7 +1762,7 @@ spuaa=20
 <dt><code>-ontop&nbsp;</code></dt>
 <dd> Makes the player window stay on top of other windows. Supported by video output drivers which use X11, except SDL, as well as directx, corevideo, quartz, ggi and gl_tiled.</dd>
 <dt><code>-panscan &lt;0.0-1.0&gt;</code></dt>
-<dd> Enables pan-and-scan functionality (cropping the sides of e.g. a 16:9 movie to make it fit a 4:3 display without black bands). The range controls how much of the image is cropped. Only works with the directx, xv, xmga, mga, gl, gl_tiled, quartz, corevideo and xvidix video output drivers.<br />
+<dd> Enables pan-and-scan functionality (cropping the sides of e.g. a 16:9 movie to make it fit a 4:3 display without black bands). The range controls how much of the image is cropped. Only works with the directx, xv, xmga, mga, gl, gl_tiled, quartz, corevideo and xvidix video output drivers.<br/>
  <i>NOTE:</i> Values between -1 and 0 are allowed as well, but highly experimental and may crash or worse. Use at your own risk!</dd>
 <dt><code>-panscanrange &lt;-19.0-99.0&gt; (experimental)</code></dt>
 <dd> Change the range of the pan-and-scan functionality (default: 1). Positive values mean multiples of the default range. Negative numbers mean you can zoom in up to a factor of -panscanrange+1. E.g. -panscanrange -3 allows a zoom factor of up to 4. This feature is experimental.</dd>
@@ -1823,7 +1823,7 @@ spuaa=20
 <dl>
 <dt><code>-vo &lt;driver1[:suboption1[=value]:&#8230;],driver2,&#8230;[,]&gt;</code></dt>
 <dd> Specify a priority list of video output drivers to be used.</dd></dl>
-<p> If the list has a trailing &#8216;,&#8217; MPlayer will fall back on drivers not contained in the list. Suboptions are optional and can mostly be omitted.<br />
+<p> If the list has a trailing &#8216;,&#8217; MPlayer will fall back on drivers not contained in the list. Suboptions are optional and can mostly be omitted.<br/>
  <i>NOTE:</i> See -vo help for a list of compiled-in video output drivers. </p>
 <p> <i>EXAMPLE:</i></p>
 <dl>
@@ -2079,8 +2079,8 @@ spuaa=20
 <dd> Use svga with VIDIX.</dd></dl>
 </dl>
 <dt><code>gl&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code></dt>
-<dd> OpenGL video output driver, simple version. Video size must be smaller than the maximum texture size of your OpenGL implementation. Intended to work even with the most basic OpenGL implementations, but also makes use of newer extensions, which allow support for more colorspaces and direct rendering. For optimal speed try adding the options<br />
- -dr -noslices<br />
+<dd> OpenGL video output driver, simple version. Video size must be smaller than the maximum texture size of your OpenGL implementation. Intended to work even with the most basic OpenGL implementations, but also makes use of newer extensions, which allow support for more colorspaces and direct rendering. For optimal speed try adding the options<br/>
+ -dr -noslices<br/>
  The code performs very few checks, so if a feature does not work, this might be because it is not supported by your card/OpenGL implementation even if you do not get any error message. Use glxinfo or a similar tool to display the supported OpenGL extensions.</dd>
 <dl>
 <dl>
@@ -2088,12 +2088,12 @@ spuaa=20
 <dd> Select the backend/OpenGL implementation to use (default: -1).</dd>
 <dl>
 <dt>
-</dt><dd> -1: Autoselect<br />
- 0: Win32/WGL<br />
- 1: X11/GLX<br />
- 2: SDL<br />
- 3: X11/EGL (highly experimental)<br />
- 4: OSX/Cocoa<br />
+</dt><dd> -1: Autoselect<br/>
+ 0: Win32/WGL<br/>
+ 1: X11/GLX<br/>
+ 2: SDL<br/>
+ 3: X11/EGL (highly experimental)<br/>
+ 4: OSX/Cocoa<br/>
  5: Android (very bad hack, only for testing)</dd></dl>
 <dt>(no)ati-hack</dt>
 <dd> ATI drivers may give a corrupted image when PBOs are used (when using -dr or force-pbo). This option fixes this, at the expense of using a bit more memory.</dd>
@@ -2107,8 +2107,8 @@ spuaa=20
 <dd> Select usage of rectangular textures which saves video RAM, but often is slower (default: 0).</dd>
 <dl>
 <dt>
-</dt><dd> 0: Use power-of-two textures (default).<br />
- 1: Use the GL_ARB_texture_rectangle extension.<br />
+</dt><dd> 0: Use power-of-two textures (default).<br/>
+ 1: Use the GL_ARB_texture_rectangle extension.<br/>
  2: Use the GL_ARB_texture_non_power_of_two extension. In some cases only supported in software and thus very slow.</dd></dl>
 <dt>swapinterval=&lt;n&gt;</dt>
 <dd> Minimum interval between two buffer swaps, counted in displayed frames (default: 1). 1 is equivalent to enabling VSYNC, 0 to disabling VSYNC. Values below 0 will leave it at the system default. This limits the framerate to (horizontal refresh rate / n). Requires GLX_SGI_swap_control support to work. With some (most/all?) implementations this only works in fullscreen mode.</dd>
@@ -2118,12 +2118,12 @@ spuaa=20
 <dd> Select the type of YUV to RGB conversion. The default is auto-detection deciding between values 0 and 2.</dd>
 <dl>
 <dt>
-</dt><dd> 0: Use software conversion. Compatible with all OpenGL versions. Provides brightness, contrast and saturation control.<br />
- 1: Use register combiners. This uses an nVidia-specific extension (GL_NV_register_combiners). At least three texture units are needed. Provides saturation and hue control. This method is fast but inexact.<br />
- 2: Use a fragment program using the POW instruction. Needs the GL_ARB_fragment_program extension and at least three texture units. Provides brightness, contrast, saturation, hue and gamma control. Gamma can also be set independently for red, green and blue. Method 4 is usually faster.<br />
- 3: Same as 2. They exist as distinct values for legacy reasons, MPlayer now inserts the extra instructions for gamma control on-demand.<br />
- 4: Use a fragment program with additional lookup. Needs the GL_ARB_fragment_program extension and at least four texture units. Provides brightness, contrast, saturation, hue and gamma control. Gamma can also be set independently for red, green and blue.<br />
- 5: Use ATI-specific method (for older cards). This uses an ATI-specific extension (GL_ATI_fragment_shader &#8211; not GL_ARB_fragment_shader!). At least three texture units are needed. Provides saturation and hue control. This method is fast but inexact.<br />
+</dt><dd> 0: Use software conversion. Compatible with all OpenGL versions. Provides brightness, contrast and saturation control.<br/>
+ 1: Use register combiners. This uses an nVidia-specific extension (GL_NV_register_combiners). At least three texture units are needed. Provides saturation and hue control. This method is fast but inexact.<br/>
+ 2: Use a fragment program using the POW instruction. Needs the GL_ARB_fragment_program extension and at least three texture units. Provides brightness, contrast, saturation, hue and gamma control. Gamma can also be set independently for red, green and blue. Method 4 is usually faster.<br/>
+ 3: Same as 2. They exist as distinct values for legacy reasons, MPlayer now inserts the extra instructions for gamma control on-demand.<br/>
+ 4: Use a fragment program with additional lookup. Needs the GL_ARB_fragment_program extension and at least four texture units. Provides brightness, contrast, saturation, hue and gamma control. Gamma can also be set independently for red, green and blue.<br/>
+ 5: Use ATI-specific method (for older cards). This uses an ATI-specific extension (GL_ATI_fragment_shader &#8211; not GL_ARB_fragment_shader!). At least three texture units are needed. Provides saturation and hue control. This method is fast but inexact.<br/>
  6: Use a 3D texture to do conversion via lookup. Needs the GL_ARB_fragment_program extension and at least four texture units. Extremely slow (software emulation) on some (all?) ATI cards since it uses a texture with border pixels. Provides brightness, contrast, saturation, hue and gamma control. Gamma can also be set independently for red, green and blue. Speed depends more on GPU memory bandwidth than other methods.</dd></dl>
 <dt>colorspace</dt>
 <dd> Select the color space for YUV to RGB conversion.</dd>
@@ -2218,11 +2218,11 @@ spuaa=20
 <dt>(no)manyfmts</dt>
 <dd> Enables support for more (RGB and BGR) color formats (default: enabled). Needs OpenGL version &gt;= 1.2.</dd>
 <dt>slice-height=&lt;0-&#8230;&gt;</dt>
-<dd> Number of lines copied to texture in one piece (default: 0). 0 for whole image.<br />
+<dd> Number of lines copied to texture in one piece (default: 0). 0 for whole image.<br/>
  <i>NOTE:</i> If YUV colorspace is used (see yuv suboption), special rules apply:</dd>
 <dl>
 <dt>
-</dt><dd> If the decoder uses slice rendering (see -noslices), this setting has no effect, the size of the slices as provided by the decoder is used.<br />
+</dt><dd> If the decoder uses slice rendering (see -noslices), this setting has no effect, the size of the slices as provided by the decoder is used.<br/>
  If the decoder does not use slice rendering, the default is 16.</dd></dl>
 <dt>(no)osd</dt>
 <dd> Enable or disable support for OSD rendering via OpenGL (default: enabled). This option is for testing; to disable the OSD use -osdlevel 0 instead.</dd>
@@ -2250,8 +2250,8 @@ spuaa=20
 <dt><code>null&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code></dt>
 <dd> Produces no video output. Useful for benchmarking.</dd>
 <dt><code>aa&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code></dt>
-<dd> ASCII art video output driver that works on a text console.<br />
- <i>NOTE:</i> The driver does not handle -aspect correctly.<br />
+<dd> ASCII art video output driver that works on a text console.<br/>
+ <i>NOTE:</i> The driver does not handle -aspect correctly.<br/>
  <i>HINT:</i> You probably have to specify -monitorpixelaspect. Try &#8216;mplayer -vo aa -monitorpixelaspect 0.5&#8217;.</dd>
 <dt><code>caca&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code></dt>
 <dd> Color ASCII art video output driver that works on a text console.</dd>
@@ -2363,11 +2363,11 @@ spuaa=20
 <dd> Specifies the TV norm.</dd>
 <dl>
 <dt>
-</dt><dd> 0: Does not change current norm (default).<br />
- 1: Auto-adjust using PAL/NTSC.<br />
- 2: Auto-adjust using PAL/PAL-60.<br />
- 3: PAL<br />
- 4: PAL-60<br />
+</dt><dd> 0: Does not change current norm (default).<br/>
+ 1: Auto-adjust using PAL/NTSC.<br/>
+ 2: Auto-adjust using PAL/PAL-60.<br/>
+ 3: PAL<br/>
+ 4: PAL-60<br/>
  5: NTSC</dd></dl>
 <dt>&lt;0-3&gt;</dt>
 <dd> Specifies the device number to use if you have more than one em8300 card.</dd></dl>
@@ -2530,7 +2530,7 @@ spuaa=20
 <h2>DECODING/FILTERING OPTIONS</h2>
 <dl>
 <dt><code>-ac &lt;[-|+]codec1,[-|+]codec2,&#8230;[,]&gt;</code></dt>
-<dd> Specify a priority list of audio codecs to be used, according to their codec name in codecs.conf. Use a &#8216;-&#8216; before the codec name to omit it. Use a &#8216;+&#8217; before the codec name to force it, this will likely crash! If the list has a trailing &#8216;,&#8217; MPlayer will fall back on codecs not contained in the list.<br />
+<dd> Specify a priority list of audio codecs to be used, according to their codec name in codecs.conf. Use a &#8216;-&#8216; before the codec name to omit it. Use a &#8216;+&#8217; before the codec name to force it, this will likely crash! If the list has a trailing &#8216;,&#8217; MPlayer will fall back on codecs not contained in the list.<br/>
  <i>NOTE:</i> See -ac help for a full list of available codecs. </dd>
 <p> <i>EXAMPLE:</i></p>
 <dl>
@@ -2554,19 +2554,19 @@ spuaa=20
 <dd> Forces the insertion of audio filters to one of the following:</dd>
 <dl>
 <dt>
-</dt><dd> 0: Use completely automatic filter insertion (currently identical to 1).<br />
- 1: Optimize for accuracy (default).<br />
- 2: Optimize for speed. <i>Warning:</i> Some features in the audio filters may silently fail, and the sound quality may drop.<br />
- 3: Use no automatic insertion of filters and no optimization. <i>Warning:</i> It may be possible to crash MPlayer using this setting.<br />
- 4: Use automatic insertion of filters according to 0 above, but use floating point processing when possible.<br />
- 5: Use automatic insertion of filters according to 1 above, but use floating point processing when possible.<br />
- 6: Use automatic insertion of filters according to 2 above, but use floating point processing when possible.<br />
+</dt><dd> 0: Use completely automatic filter insertion (currently identical to 1).<br/>
+ 1: Optimize for accuracy (default).<br/>
+ 2: Optimize for speed. <i>Warning:</i> Some features in the audio filters may silently fail, and the sound quality may drop.<br/>
+ 3: Use no automatic insertion of filters and no optimization. <i>Warning:</i> It may be possible to crash MPlayer using this setting.<br/>
+ 4: Use automatic insertion of filters according to 0 above, but use floating point processing when possible.<br/>
+ 5: Use automatic insertion of filters according to 1 above, but use floating point processing when possible.<br/>
+ 6: Use automatic insertion of filters according to 2 above, but use floating point processing when possible.<br/>
  7: Use no automatic insertion of filters according to 3 above, and use floating point processing when possible.</dd></dl>
 <dt>list=&lt;filters&gt;</dt>
 <dd> Same as -af.</dd></dl>
 </dl>
 <dt><code>-afm &lt;driver1,driver2,&#8230;&gt;</code></dt>
-<dd> Specify a priority list of audio codec families to be used, according to their codec name in codecs.conf. Falls back on the default codecs if none of the given codec families work.<br />
+<dd> Specify a priority list of audio codec families to be used, according to their codec name in codecs.conf. Falls back on the default codecs if none of the given codec families work.<br/>
  <i>NOTE:</i> See -afm help for a full list of available codec families. </dd>
 <p> <i>EXAMPLE:</i></p>
 <dl>
@@ -2581,7 +2581,7 @@ spuaa=20
 <p> <i>EXAMPLE:</i></p>
 <dl>
 <dt>
-</dt><dd> -aspect 4:3 or -aspect 1.3333<br />
+</dt><dd> -aspect 4:3 or -aspect 1.3333<br/>
  -aspect 16:9 or -aspect 1.7777</dd></dl>
 <dt><code>-noaspect</code></dt>
 <dd> Disable automatic movie aspect ratio compensation.</dd>
@@ -2615,55 +2615,55 @@ spuaa=20
 <dd> Manually work around encoder bugs.</dd>
 <dl>
 <dt>
-</dt><dd> 0: nothing<br />
- 1: autodetect bugs (default)<br />
- 2 (msmpeg4v3): some old lavc generated msmpeg4v3 files (no autodetection)<br />
- 4 (mpeg4): Xvid interlacing bug (autodetected if fourcc==XVIX)<br />
- 8 (mpeg4): UMP4 (autodetected if fourcc==UMP4)<br />
- 16 (mpeg4): padding bug (autodetected)<br />
- 32 (mpeg4): illegal vlc bug (autodetected per fourcc)<br />
- 64 (mpeg4): Xvid and DivX qpel bug (autodetected per fourcc/version)<br />
- 128 (mpeg4): old standard qpel (autodetected per fourcc/version)<br />
- 256 (mpeg4): another qpel bug (autodetected per fourcc/version)<br />
- 512 (mpeg4): direct-qpel-blocksize bug (autodetected per fourcc/version)<br />
+</dt><dd> 0: nothing<br/>
+ 1: autodetect bugs (default)<br/>
+ 2 (msmpeg4v3): some old lavc generated msmpeg4v3 files (no autodetection)<br/>
+ 4 (mpeg4): Xvid interlacing bug (autodetected if fourcc==XVIX)<br/>
+ 8 (mpeg4): UMP4 (autodetected if fourcc==UMP4)<br/>
+ 16 (mpeg4): padding bug (autodetected)<br/>
+ 32 (mpeg4): illegal vlc bug (autodetected per fourcc)<br/>
+ 64 (mpeg4): Xvid and DivX qpel bug (autodetected per fourcc/version)<br/>
+ 128 (mpeg4): old standard qpel (autodetected per fourcc/version)<br/>
+ 256 (mpeg4): another qpel bug (autodetected per fourcc/version)<br/>
+ 512 (mpeg4): direct-qpel-blocksize bug (autodetected per fourcc/version)<br/>
  1024 (mpeg4): edge padding bug (autodetected per fourcc/version)</dd></dl>
 <dt>debug=&lt;value&gt;</dt>
 <dd> Display debugging information.</dd>
 <dl>
 <dt>
 </dt><dd>
- 0: disabled<br />
- 1: picture info<br />
- 2: rate control<br />
- 4: bitstream<br />
- 8: macroblock (MB) type<br />
- 16: per-block quantization parameter (QP)<br />
- 32: motion vector<br />
- 0x0040: motion vector visualization (use -noslices)<br />
- 0x0080: macroblock (MB) skip<br />
- 0x0100: startcode<br />
- 0x0200: PTS<br />
- 0x0400: error resilience<br />
- 0x0800: memory management control operations (H.264)<br />
- 0x1000: bugs<br />
- 0x2000: Visualize quantization parameter (QP), lower QP are tinted greener.<br />
+ 0: disabled<br/>
+ 1: picture info<br/>
+ 2: rate control<br/>
+ 4: bitstream<br/>
+ 8: macroblock (MB) type<br/>
+ 16: per-block quantization parameter (QP)<br/>
+ 32: motion vector<br/>
+ 0x0040: motion vector visualization (use -noslices)<br/>
+ 0x0080: macroblock (MB) skip<br/>
+ 0x0100: startcode<br/>
+ 0x0200: PTS<br/>
+ 0x0400: error resilience<br/>
+ 0x0800: memory management control operations (H.264)<br/>
+ 0x1000: bugs<br/>
+ 0x2000: Visualize quantization parameter (QP), lower QP are tinted greener.<br/>
  0x4000: Visualize block types.</dd></dl>
 <dt>ec=&lt;value&gt;</dt>
 <dd> Set error concealment strategy.</dd>
 <dl>
 <dt>
-</dt><dd> 1: Use strong deblock filter for damaged MBs.<br />
- 2: iterative motion vector (MV) search (slow)<br />
+</dt><dd> 1: Use strong deblock filter for damaged MBs.<br/>
+ 2: iterative motion vector (MV) search (slow)<br/>
  3: all (default)</dd></dl>
 <dt>er=&lt;value&gt;</dt>
 <dd> Set error resilience strategy.</dd>
 <dl>
 <dt>
 </dt><dd>
- 0: disabled<br />
- 1: careful (Should work with broken encoders.)<br />
- 2: normal (default) (Works with compliant encoders.)<br />
- 3: aggressive (More checks, but might cause problems even for valid bitstreams.)<br />
+ 0: disabled<br/>
+ 1: careful (Should work with broken encoders.)<br/>
+ 2: normal (default) (Works with compliant encoders.)<br/>
+ 3: aggressive (More checks, but might cause problems even for valid bitstreams.)<br/>
  4: very aggressive</dd></dl>
 <dt>fast (MPEG-2, MPEG-4, and H.264 only)</dt>
 <dd> Enable optimizations which do not comply to the specification and might potentially cause problems, like simpler dequantization, simpler motion compensation, assuming use of the default quantization matrix, assuming YUV 4:2:0 and skipping a few checks to detect damaged bitstreams.</dd>
@@ -2676,9 +2676,9 @@ spuaa=20
 <dl>
 <dt>
 </dt><dd>
- 0: disabled<br />
- 1: 1/2 resolution<br />
- 2: 1/4 resolution<br />
+ 0: disabled<br/>
+ 1: 1/2 resolution<br/>
+ 2: 1/4 resolution<br/>
  3: 1/8 resolution</dd></dl>
 <dl>
 <dt>
@@ -2702,11 +2702,11 @@ spuaa=20
 <dl>
 <dt>
 </dt><dd>
- none: Never skip.<br />
- default: Skip useless processing steps (e.g. 0 size packets in AVI).<br />
- nonref: Skip frames that are not referenced (i.e. not used for decoding other frames, the error cannot &quot;build up&quot;).<br />
- bidir: Skip B-Frames.<br />
- nonkey: Skip all frames except keyframes.<br />
+ none: Never skip.<br/>
+ default: Skip useless processing steps (e.g. 0 size packets in AVI).<br/>
+ nonref: Skip frames that are not referenced (i.e. not used for decoding other frames, the error cannot &quot;build up&quot;).<br/>
+ bidir: Skip B-Frames.<br/>
+ nonkey: Skip all frames except keyframes.<br/>
  all: Skip all frames.</dd></dl>
 <dt>skipidct=&lt;skipvalue&gt; (MPEG-1/2 only)</dt>
 <dd> Skips the IDCT step. This degrades quality a lot of in almost all cases (see skiploopfilter for available skip values).</dd>
@@ -2719,9 +2719,9 @@ spuaa=20
 <dl>
 <dt>
 </dt><dd>
- 0: disabled<br />
- 1: Visualize forward predicted MVs of P-frames.<br />
- 2: Visualize forward predicted MVs of B-frames.<br />
+ 0: disabled<br/>
+ 1: Visualize forward predicted MVs of P-frames.<br/>
+ 2: Visualize forward predicted MVs of B-frames.<br/>
  4: Visualize backward predicted MVs of B-frames.</dd></dl>
 <dt>vstats</dt>
 <dd> Prints some statistics and stores them in ./vstats_*.log.</dd>
@@ -2802,7 +2802,7 @@ spuaa=20
 <dt>
 </dt><dd> <i>NOTE:</i> Some -sws options are tunable. The description of the scale video filter has further information.</dd></dl>
 <dt><code>-vc &lt;[-|+]codec1,[-|+]codec2,&#8230;[,]&gt;</code></dt>
-<dd> Specify a priority list of video codecs to be used, according to their codec name in codecs.conf. Use a &#8216;-&#8216; before the codec name to omit it. Use a &#8216;+&#8217; before the codec name to force it, this will likely crash! If the list has a trailing &#8216;,&#8217; MPlayer will fall back on codecs not contained in the list.<br />
+<dd> Specify a priority list of video codecs to be used, according to their codec name in codecs.conf. Use a &#8216;-&#8216; before the codec name to omit it. Use a &#8216;+&#8217; before the codec name to force it, this will likely crash! If the list has a trailing &#8216;,&#8217; MPlayer will fall back on codecs not contained in the list.<br/>
  <i>NOTE:</i> See -vc help for a full list of available codecs. </dd>
 <p> <i>EXAMPLE:</i></p>
 <dl>
@@ -2815,7 +2815,7 @@ spuaa=20
 <dd> Try libavcodec&#8217;s MPEG-1/2 codec, then libmpeg2, then others.</dd></dl>
 </dl>
 <dt><code>-vfm &lt;driver1,driver2,&#8230;&gt;</code></dt>
-<dd> Specify a priority list of video codec families to be used, according to their names in codecs.conf. Falls back on the default codecs if none of the given codec families work.<br />
+<dd> Specify a priority list of video codec families to be used, according to their names in codecs.conf. Falls back on the default codecs if none of the given codec families work.<br/>
  <i>NOTE:</i> See -vfm help for a full list of available codec families. </dd>
 <p> <i>EXAMPLE:</i></p>
 <dl>
@@ -2828,7 +2828,7 @@ spuaa=20
 <dt><code>-x &lt;x&gt; (also see -zoom) (MPlayer only)</code></dt>
 <dd> Scale image to width &lt;x&gt; (if software/hardware scaling is available). Disables aspect calculations.</dd>
 <dt><code>-xvidopts &lt;option1:option2:&#8230;&gt;</code></dt>
-<dd> Specify additional parameters when decoding with Xvid.<br />
+<dd> Specify additional parameters when decoding with Xvid.<br/>
  <i>NOTE:</i> Since libavcodec is faster than Xvid you might want to use the libavcodec postprocessing filter (-vf pp) and decoder (-vfm ffmpeg) instead. </dd>
 <p> Xvid&#8217;s internal postprocessing filters:</p>
 <dl>
@@ -2886,7 +2886,7 @@ spuaa=20
 <p> Available filters are:</p>
 <dl>
 <dt><code>resample[=srate[:sloppy[:type]]]</code></dt>
-<dd> Changes the sample rate of the audio stream. Can be used if you have a fixed frequency sound card or if you are stuck with an old sound card that is only capable of max 44.1kHz. This filter is automatically enabled if necessary. It only supports 16-bit integer and float in native-endian format as input.<br />
+<dd> Changes the sample rate of the audio stream. Can be used if you have a fixed frequency sound card or if you are stuck with an old sound card that is only capable of max 44.1kHz. This filter is automatically enabled if necessary. It only supports 16-bit integer and float in native-endian format as input.<br/>
  <i>NOTE:</i> With MEncoder, you need to also use -srate &lt;srate&gt;.</dd>
 <dl>
 <dl>
@@ -2898,8 +2898,8 @@ spuaa=20
 <dd> Select which resampling method to use.</dd>
 <dl>
 <dt>
-</dt><dd> 0: linear interpolation (fast, poor quality especially when upsampling)<br />
- 1: polyphase filterbank and integer processing<br />
+</dt><dd> 0: linear interpolation (fast, poor quality especially when upsampling)<br/>
+ 1: polyphase filterbank and integer processing<br/>
  2: polyphase filterbank and floating point processing (slow, best quality)</dd></dl>
 </dl>
 </dl>
@@ -2912,7 +2912,7 @@ spuaa=20
 <dd> would set the output frequency of the resample filter to 44100Hz using exact output frequency scaling and linear interpolation.</dd></dl>
 </dl>
 <dt><code>lavcresample[=srate[:length[:linear[:count[:cutoff]]]]]</code></dt>
-<dd> Changes the sample rate of the audio stream to an integer &lt;srate&gt; in Hz. It only supports the 16-bit native-endian format.<br />
+<dd> Changes the sample rate of the audio stream to an integer &lt;srate&gt; in Hz. It only supports the 16-bit native-endian format.<br/>
  <i>NOTE:</i> With MEncoder, you need to also use -srate &lt;srate&gt;.</dd>
 <dl>
 <dl>
@@ -2934,7 +2934,7 @@ spuaa=20
 <dt>&lt;tospdif&gt;</dt>
 <dd> Output raw AC-3 stream if zero or not set, output to S/PDIF for passthrough when &lt;tospdif&gt; is set non-zero.</dd>
 <dt>&lt;bitrate&gt;</dt>
-<dd> The bitrate to encode the AC-3 stream. Set it to either 384 or 384000 to get 384kbits. Valid values: 32, 40, 48, 56, 64, 80, 96, 112, 128, 160, 192, 224, 256,<br />
+<dd> The bitrate to encode the AC-3 stream. Set it to either 384 or 384000 to get 384kbits. Valid values: 32, 40, 48, 56, 64, 80, 96, 112, 128, 160, 192, 224, 256,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;320, 384, 448, 512, 576, 640 Default bitrate is based on the input channel number: 1ch: 96, 2ch: 192, 3ch: 224, 4ch: 384, 5ch: 448, 6ch: 448</dd>
 <dt>&lt;minchn&gt;</dt>
 <dd> If the input channel number is less than &lt;minchn&gt;, the filter will detach itself (default: 5).</dd></dl>
@@ -3064,15 +3064,15 @@ spuaa=20
 <dd> Sets the desired format. The general form is &#8216;sbe&#8217;, where &#8216;s&#8217; denotes the sign (either &#8216;s&#8217; for signed or &#8216;u&#8217; for unsigned), &#8216;b&#8217; denotes the number of bits per sample (16, 24 or 32) and &#8216;e&#8217; denotes the endianness (&#8216;le&#8217; means little-endian, &#8216;be&#8217; big-endian and &#8216;ne&#8217; the endianness of the computer MPlayer is running on). Valid values (amongst others) are: &#8216;s16le&#8217;, &#8216;u32be&#8217; and &#8216;u24ne&#8217;. Exceptions to this rule that are also valid format specifiers: u8, s8, floatle, floatbe, floatne, mulaw, alaw, mpeg2, ac3 and imaadpcm.</dd></dl>
 </dl>
 <dt><code>volume[=v[:sc]]</code></dt>
-<dd> Implements software volume control. Use this filter with caution since it can reduce the signal to noise ratio of the sound. In most cases it is best to set the level for the PCM sound to max, leave this filter out and control the output level to your speakers with the master volume control of the mixer. In case your sound card has a digital PCM mixer instead of an analog one, and you hear distortion, use the MASTER mixer instead. If there is an external amplifier connected to the computer (this is almost always the case), the noise level can be minimized by adjusting the master level and the volume knob on the amplifier until the hissing noise in the background is gone.<br />
- This filter has a second feature: It measures the overall maximum sound level and prints out that level when MPlayer exits. This volume estimate can be used for setting the sound level in MEncoder such that the maximum dynamic range is utilized. This feature currently only works with floating-point data, use e.g. -af-adv force=5, or use -af stats.<br />
+<dd> Implements software volume control. Use this filter with caution since it can reduce the signal to noise ratio of the sound. In most cases it is best to set the level for the PCM sound to max, leave this filter out and control the output level to your speakers with the master volume control of the mixer. In case your sound card has a digital PCM mixer instead of an analog one, and you hear distortion, use the MASTER mixer instead. If there is an external amplifier connected to the computer (this is almost always the case), the noise level can be minimized by adjusting the master level and the volume knob on the amplifier until the hissing noise in the background is gone.<br/>
+ This filter has a second feature: It measures the overall maximum sound level and prints out that level when MPlayer exits. This volume estimate can be used for setting the sound level in MEncoder such that the maximum dynamic range is utilized. This feature currently only works with floating-point data, use e.g. -af-adv force=5, or use -af stats.<br/>
  <i>NOTE:</i> This filter is not reentrant and can therefore only be enabled once for every audio stream.</dd>
 <dl>
 <dl>
 <dt>&lt;v&gt;&nbsp;<wbr>&nbsp;</dt>
 <dd> Sets the desired gain in dB for all channels in the stream from -200dB to +60dB, where -200dB mutes the sound completely and +60dB equals a gain of 1000 (default: 0).</dd>
 <dt>&lt;sc&gt;&nbsp;</dt>
-<dd> Turns soft clipping on (1) or off (0). Soft-clipping can make the sound more smooth if very high volume levels are used. Enable this option if the dynamic range of the loudspeakers is very low.<br />
+<dd> Turns soft clipping on (1) or off (0). Soft-clipping can make the sound more smooth if very high volume levels are used. Enable this option if the dynamic range of the loudspeakers is very low.<br/>
  <i>WARNING:</i> This feature creates distortion and should be considered a last resort.</dd></dl>
 </dl>
 <dl>
@@ -3103,7 +3103,7 @@ spuaa=20
 <dd> Would give 3 channel output leaving channels 0 and 1 intact, and mix channels 0 and 1 into output channel 2 (which could be sent to a subwoofer for example).</dd></dl>
 </dl>
 <dt><code>sub[=fc:ch]</code></dt>
-<dd> Adds a subwoofer channel to the audio stream. The audio data used for creating the subwoofer channel is an average of the sound in channel 0 and channel 1. The resulting sound is then low-pass filtered by a 4th order Butterworth filter with a default cutoff frequency of 60Hz and added to a separate channel in the audio stream.<br />
+<dd> Adds a subwoofer channel to the audio stream. The audio data used for creating the subwoofer channel is an average of the sound in channel 0 and channel 1. The resulting sound is then low-pass filtered by a 4th order Butterworth filter with a default cutoff frequency of 60Hz and added to a separate channel in the audio stream.<br/>
  <i>Warning:</i> Disable this filter when you are playing DVDs with Dolby Digital 5.1 sound, otherwise this filter will disrupt the sound to the subwoofer.</dd>
 <dl>
 <dl>
@@ -3207,7 +3207,7 @@ int nch                        /*number of channels*/
 <dd> Sets the used method.</dd>
 <dl>
 <dt>
-</dt><dd> 1: Use a single sample to smooth the variations via the standard weighted mean over past samples (default).<br />
+</dt><dd> 1: Use a single sample to smooth the variations via the standard weighted mean over past samples (default).<br/>
  2: Use several samples to smooth the variations via the standard weighted mean over past samples.</dd></dl>
 <dt>&lt;target&gt;</dt>
 <dd> Sets the target amplitude as a fraction of the maximum for the sample type (default: 0.25).</dd></dl>
@@ -3230,7 +3230,7 @@ int nch                        /*number of channels*/
 <dt><code>karaoke</code></dt>
 <dd> Simple voice removal filter exploiting the fact that voice is usually recorded with mono gear and later &#8216;center&#8217; mixed onto the final audio stream. Beware that this filter will turn your signal into mono. Works well for 2 channel tracks; do not bother trying it on anything but 2 channel stereo.</dd>
 <dt><code>scaletempo[=option1:option2:&#8230;]</code></dt>
-<dd> Scales audio tempo without altering pitch, optionally synced to playback speed (default).<br />
+<dd> Scales audio tempo without altering pitch, optionally synced to playback speed (default).<br/>
  This works by playing &#8216;stride&#8217; ms of audio at normal speed then consuming &#8216;stride*scale&#8217; ms of input audio. It pieces the strides together by blending &#8216;overlap&#8217;% of stride with audio following the previous stride. It optionally performs a short statistical analysis on the next &#8216;search&#8217; ms of audio to determine the best overlap position.</dd>
 <dl>
 <dl>
@@ -3282,7 +3282,7 @@ int nch                        /*number of channels*/
 <dl>
 <dt><code>-vf &lt;filter1[=parameter1:parameter2:&#8230;],filter2,&#8230;&gt;</code></dt>
 <dd> Setup a chain of video filters.</dd></dl>
-<p> Many parameters are optional and set to default values if omitted. To explicitly use a default value set a parameter to &#8216;-1&#8217;. Parameters w:h means width x height in pixels, x:y means x;y position counted from the upper left corner of the bigger image.<br />
+<p> Many parameters are optional and set to default values if omitted. To explicitly use a default value set a parameter to &#8216;-1&#8217;. Parameters w:h means width x height in pixels, x:y means x;y position counted from the upper left corner of the bigger image.<br/>
  <i>NOTE:</i> To get a full list of available video filters, see -vf help. </p>
 <p> Video filters are managed in lists. There are a few commands to manage the filter list.</p>
 <dl>
@@ -3349,7 +3349,7 @@ int nch                        /*number of channels*/
 <dd> OSD/subtitle rendering</dd>
 <dl>
 <dt>
-</dt><dd> 0: disable (default)<br />
+</dt><dd> 0: disable (default)<br/>
  1: enable</dd></dl>
 <dt>&lt;a&gt;&nbsp;<wbr>&nbsp;</dt>
 <dd> Expands to fit an aspect instead of a resolution (default: 0). </dd>
@@ -3384,64 +3384,64 @@ int nch                        /*number of channels*/
 <dl>
 <dl>
 <dt>&lt;w&gt;,&lt;h&gt;</dt>
-<dd> scaled width/height (default: original width/height)<br />
+<dd> scaled width/height (default: original width/height)<br/>
  <i>NOTE:</i> If -zoom is used, and underlying filters (including libvo) are incapable of scaling, it defaults to d_width/d_height!</dd>
 <dl>
 <dt>
 </dt><dd>
-&nbsp;0:&nbsp;<wbr>&nbsp;<wbr>&nbsp;scaled d_width/d_height<br />
- -1: original width/height<br />
- -2: Calculate w/h using the other dimension and the prescaled aspect ratio.<br />
- -3: Calculate w/h using the other dimension and the original aspect ratio.<br />
+&nbsp;0:&nbsp;<wbr>&nbsp;<wbr>&nbsp;scaled d_width/d_height<br/>
+ -1: original width/height<br/>
+ -2: Calculate w/h using the other dimension and the prescaled aspect ratio.<br/>
+ -3: Calculate w/h using the other dimension and the original aspect ratio.<br/>
  -(n+8): Like -n above, but rounding the dimension to the closest multiple of 16.</dd></dl>
 <dt>&lt;interlaced&gt;</dt>
 <dd> Toggle interlaced scaling.</dd>
 <dl>
 <dt>
-</dt><dd> 0: off (default)<br />
+</dt><dd> 0: off (default)<br/>
  1: on</dd></dl>
 <dt>&lt;chr_drop&gt;</dt>
 <dd> chroma skipping</dd>
 <dl>
 <dt>
-</dt><dd> 0: Use all available input lines for chroma.<br />
- 1: Use only every 2. input line for chroma.<br />
- 2: Use only every 4. input line for chroma.<br />
+</dt><dd> 0: Use all available input lines for chroma.<br/>
+ 1: Use only every 2. input line for chroma.<br/>
+ 2: Use only every 4. input line for chroma.<br/>
  3: Use only every 8. input line for chroma.</dd></dl>
 <dt>&lt;par&gt;[:&lt;par2&gt;] (also see -sws)</dt>
 <dd> Set some scaling parameters depending on the type of scaler selected with -sws.</dd>
 <dl>
 <dt>
-</dt><dd> -sws 2 (bicubic): B (blurring) and C (ringing)<br />
- 0.00:0.60 default<br />
- 0.00:0.75 VirtualDub&#8217;s &quot;precise bicubic&quot;<br />
- 0.00:0.50 Catmull-Rom spline<br />
- 0.33:0.33 Mitchell-Netravali spline<br />
- 1.00:0.00 cubic B-spline<br />
- -sws 7 (gaussian): sharpness (0 (soft) &#8211; 100 (sharp))<br />
+</dt><dd> -sws 2 (bicubic): B (blurring) and C (ringing)<br/>
+ 0.00:0.60 default<br/>
+ 0.00:0.75 VirtualDub&#8217;s &quot;precise bicubic&quot;<br/>
+ 0.00:0.50 Catmull-Rom spline<br/>
+ 0.33:0.33 Mitchell-Netravali spline<br/>
+ 1.00:0.00 cubic B-spline<br/>
+ -sws 7 (gaussian): sharpness (0 (soft) &#8211; 100 (sharp))<br/>
  -sws 9 (lanczos): filter length (1-10)</dd></dl>
 <dt>&lt;presize&gt;</dt>
 <dd> Scale to preset sizes.</dd>
 <dl>
 <dt>
-</dt><dd> qntsc: 352&#215;240 (NTSC quarter screen)<br />
- qpal: 352&#215;288 (PAL quarter screen)<br />
- ntsc: 720&#215;480 (standard NTSC)<br />
- pal: 720&#215;576 (standard PAL)<br />
- sntsc: 640&#215;480 (square pixel NTSC)<br />
+</dt><dd> qntsc: 352&#215;240 (NTSC quarter screen)<br/>
+ qpal: 352&#215;288 (PAL quarter screen)<br/>
+ ntsc: 720&#215;480 (standard NTSC)<br/>
+ pal: 720&#215;576 (standard PAL)<br/>
+ sntsc: 640&#215;480 (square pixel NTSC)<br/>
  spal: 768&#215;576 (square pixel PAL)</dd></dl>
 <dt>&lt;noup&gt;</dt>
 <dd> Disallow upscaling past the original dimensions.</dd>
 <dl>
 <dt>
-</dt><dd> 0: Allow upscaling (default).<br />
- 1: Disallow upscaling if one dimension exceeds its original value.<br />
+</dt><dd> 0: Allow upscaling (default).<br/>
+ 1: Disallow upscaling if one dimension exceeds its original value.<br/>
  2: Disallow upscaling if both dimensions exceed their original values.</dd></dl>
 <dt>&lt;arnd&gt;</dt>
 <dd> Accurate rounding for the vertical scaler, which may be faster or slower than the default rounding.</dd>
 <dl>
 <dt>
-</dt><dd> 0: Disable accurate rounding (default).<br />
+</dt><dd> 0: Disable accurate rounding (default).<br/>
  1: Enable accurate rounding.</dd></dl>
 </dl>
 </dl>
@@ -3454,9 +3454,9 @@ int nch                        /*number of channels*/
 <dl>
 <dt>
 </dt><dd>
-&nbsp;0:&nbsp;<wbr>&nbsp;<wbr>&nbsp;original display width and height<br />
- -1: original video width and height (default)<br />
- -2: Calculate w/h using the other dimension and the original display aspect ratio.<br />
+&nbsp;0:&nbsp;<wbr>&nbsp;<wbr>&nbsp;original display width and height<br/>
+ -1: original video width and height (default)<br/>
+ -2: Calculate w/h using the other dimension and the original display aspect ratio.<br/>
  -3: Calculate w/h using the other dimension and the original video aspect ratio.</dd></dl>
 <p> <i>EXAMPLE:</i></p>
 <dl>
@@ -3489,21 +3489,21 @@ int nch                        /*number of channels*/
 <dt><code>palette</code></dt>
 <dd> RGB/BGR 8 -&gt; 15/16/24/32bpp colorspace conversion using palette.</dd>
 <dt><code>format[=fourcc[:outfourcc]]</code></dt>
-<dd> Restricts the colorspace for the next filter without doing any conversion. Use together with the scale filter for a real conversion.<br />
+<dd> Restricts the colorspace for the next filter without doing any conversion. Use together with the scale filter for a real conversion.<br/>
  <i>NOTE:</i> For a list of available formats see format=fmt=help.</dd>
 <dl>
 <dl>
 <dt>&lt;fourcc&gt;</dt>
 <dd> format name like rgb15, bgr24, yv12, etc (default: yuy2)</dd>
 <dt>&lt;outfourcc&gt;</dt>
-<dd> Format name that should be substituted for the output. If this is not 100% compatible with the &lt;fourcc&gt; value it will crash.<br />
- Valid examples:<br />
- format=rgb24:bgr24 format=yuyv:yuy2<br />
- Invalid examples (will crash):<br />
+<dd> Format name that should be substituted for the output. If this is not 100% compatible with the &lt;fourcc&gt; value it will crash.<br/>
+ Valid examples:<br/>
+ format=rgb24:bgr24 format=yuyv:yuy2<br/>
+ Invalid examples (will crash):<br/>
  format=rgb24:yv12</dd></dl>
 </dl>
 <dt><code>noformat[=fourcc]</code></dt>
-<dd> Restricts the colorspace for the next filter without doing any conversion. Unlike the format filter, this will allow any colorspace <code>except</code> the one you specify.<br />
+<dd> Restricts the colorspace for the next filter without doing any conversion. Unlike the format filter, this will allow any colorspace <code>except</code> the one you specify.<br/>
  <i>NOTE:</i> For a list of available formats see noformat=fmt=help.</dd>
 <dl>
 <dl>
@@ -3534,25 +3534,25 @@ int nch                        /*number of channels*/
 <dd> horizontal deblocking filter</dd>
 <dl>
 <dt>
-</dt><dd> &lt;difference&gt;: Difference factor where higher values mean more deblocking (default: 32).<br />
+</dt><dd> &lt;difference&gt;: Difference factor where higher values mean more deblocking (default: 32).<br/>
  &lt;flatness&gt;: Flatness threshold where lower values mean more deblocking (default: 39).</dd></dl>
 <dt>vb/vdeblock[:difference[:flatness]]</dt>
 <dd> vertical deblocking filter</dd>
 <dl>
 <dt>
-</dt><dd> &lt;difference&gt;: Difference factor where higher values mean more deblocking (default: 32).<br />
+</dt><dd> &lt;difference&gt;: Difference factor where higher values mean more deblocking (default: 32).<br/>
  &lt;flatness&gt;: Flatness threshold where lower values mean more deblocking (default: 39).</dd></dl>
 <dt>ha/hadeblock[:difference[:flatness]]</dt>
 <dd> accurate horizontal deblocking filter</dd>
 <dl>
 <dt>
-</dt><dd> &lt;difference&gt;: Difference factor where higher values mean more deblocking (default: 32).<br />
+</dt><dd> &lt;difference&gt;: Difference factor where higher values mean more deblocking (default: 32).<br/>
  &lt;flatness&gt;: Flatness threshold where lower values mean more deblocking (default: 39).</dd></dl>
 <dt>va/vadeblock[:difference[:flatness]]</dt>
 <dd> accurate vertical deblocking filter</dd>
 <dl>
 <dt>
-</dt><dd> &lt;difference&gt;: Difference factor where higher values mean more deblocking (default: 32).<br />
+</dt><dd> &lt;difference&gt;: Difference factor where higher values mean more deblocking (default: 32).<br/>
  &lt;flatness&gt;: Flatness threshold where lower values mean more deblocking (default: 39).</dd></dl>
 <p> The horizontal and vertical deblocking filters share the difference and flatness values so you cannot set different horizontal and vertical thresholds. </p>
 <dt>h1/x1hdeblock</dt>
@@ -3565,8 +3565,8 @@ int nch                        /*number of channels*/
 <dd> temporal noise reducer</dd>
 <dl>
 <dt>
-</dt><dd> &lt;threshold1&gt;: larger -&gt; stronger filtering<br />
- &lt;threshold2&gt;: larger -&gt; stronger filtering<br />
+</dt><dd> &lt;threshold1&gt;: larger -&gt; stronger filtering<br/>
+ &lt;threshold2&gt;: larger -&gt; stronger filtering<br/>
  &lt;threshold3&gt;: larger -&gt; stronger filtering</dd></dl>
 <dt>al/autolevels[:f/fullyrange]</dt>
 <dd> automatic brightness / contrast correction</dd>
@@ -3621,9 +3621,9 @@ int nch                        /*number of channels*/
 <dt>&lt;qp&gt;&nbsp;</dt>
 <dd> Force quantization parameter (default: 0, use QP from video).</dd>
 <dt>&lt;mode&gt;</dt>
-<dd> 0: hard thresholding (default)<br />
- 1: soft thresholding (better deringing, but blurrier)<br />
- 4: like 0, but also use B-frames&#8217; QP (may cause flicker)<br />
+<dd> 0: hard thresholding (default)<br/>
+ 1: soft thresholding (better deringing, but blurrier)<br/>
+ 4: like 0, but also use B-frames&#8217; QP (may cause flicker)<br/>
  5: like 1, but also use B-frames&#8217; QP (may cause flicker)</dd></dl>
 </dl>
 <dt><code>uspp[=quality[:qp]]</code></dt>
@@ -3646,7 +3646,7 @@ int nch                        /*number of channels*/
 <dt>&lt;-15-32&gt;</dt>
 <dd> Filter strength, lower values mean more details but also more artifacts, while higher values make the image smoother but also blurrier (default: 0 &#8211; PSNR optimal).</dd>
 <dt>&lt;bframes&gt;</dt>
-<dd> 0: do not use QP from B-frames (default)<br />
+<dd> 0: do not use QP from B-frames (default)<br/>
  1: use QP from B-frames too (may cause flicker)</dd></dl>
 </dl>
 <dt><code>pp7[=qp[:mode]]</code></dt>
@@ -3656,8 +3656,8 @@ int nch                        /*number of channels*/
 <dt>&lt;qp&gt;&nbsp;</dt>
 <dd> Force quantization parameter (default: 0, use QP from video).</dd>
 <dt>&lt;mode&gt;</dt>
-<dd> 0: hard thresholding<br />
- 1: soft thresholding (better deringing, but blurrier)<br />
+<dd> 0: hard thresholding<br/>
+ 1: soft thresholding (better deringing, but blurrier)<br/>
  2: medium thresholding (default, good results)</dd></dl>
 </dl>
 <dt><code>qp=equation</code></dt>
@@ -3675,11 +3675,11 @@ int nch                        /*number of channels*/
 <dd> Some equation, e.g. &#8216;p(W-X\,Y)&#8217; to flip the image horizontally. You can use whitespace to make the equation more readable. There are a couple of constants that can be used in the equation:</dd>
 <dl>
 <dt>
-</dt><dd> PI: the number pi<br />
- E: the number e<br />
- X / Y: the coordinates of the current sample<br />
- W / H: width and height of the image<br />
- SW / SH: width/height scale depending on the currently filtered plane, e.g. 1,1 and 0.5,0.5 for YUV 4:2:0.<br />
+</dt><dd> PI: the number pi<br/>
+ E: the number e<br/>
+ X / Y: the coordinates of the current sample<br/>
+ W / H: width and height of the image<br/>
+ SW / SH: width/height scale depending on the currently filtered plane, e.g. 1,1 and 0.5,0.5 for YUV 4:2:0.<br/>
  p(x,y): returns the value of the pixel at location x/y of the current plane.</dd></dl>
 </dl>
 </dl>
@@ -3699,7 +3699,7 @@ int nch                        /*number of channels*/
 <dl>
 <dl>
 <dt>&lt;quality&gt;</dt>
-<dd> 1-31: fixed qscale<br />
+<dd> 1-31: fixed qscale<br/>
  32-: fixed bitrate in kbits</dd>
 <dt>&lt;fps&gt;</dt>
 <dd> force output fps (float value) (default: 0, autodetect based on height)</dd></dl>
@@ -3811,7 +3811,7 @@ int nch                        /*number of channels*/
 <dd> By default, halfpack averages pairs of lines when downsampling. Any value different from 0 or 1 gives the default (averaging) behavior.</dd>
 <dl>
 <dt>
-</dt><dd> 0: Only use even lines when downsampling.<br />
+</dt><dd> 0: Only use even lines when downsampling.<br/>
  1: Only use odd lines when downsampling.</dd></dl>
 </dl>
 </dl>
@@ -3823,7 +3823,7 @@ int nch                        /*number of channels*/
 <dd> Select the sampling mode.</dd>
 <dl>
 <dt>
-</dt><dd> 0: nearest-neighbor sampling, fast but incorrect<br />
+</dt><dd> 0: nearest-neighbor sampling, fast but incorrect<br/>
  1: linear interpolation (default)</dd></dl>
 </dl>
 </dl>
@@ -3855,7 +3855,7 @@ int nch                        /*number of channels*/
 <dd> FFmpeg libavfilter wrapper. <i>filtergraph</i> defines a whole libavfilter graph with one input and one output. See <a rel="nofollow" href="http://www.ffmpeg.org/libavfilter.html#SEC4">http://www.ffmpeg.org/libavfilter.html#SEC4</a> for details. </dd>
 <p> As a special case, if <i>filtergraph</i> is <code>$</code><i>word</i> then the value of the <i>word</i> environment variable is used; this is necessary if commas are present in the graph description, as mplayer uses them as a delimiter between filters. </p>
 <p> <i>NOTE:</i> This filter is considered experimental, it may interact strangely with other filters. </p>
-<p> <i>EXAMPLE:</i><br />
+<p> <i>EXAMPLE:</i><br/>
  overlay=&quot;movie=$small_video, scale=160:120 [ca]; [in] [ca] overlay=16:8&quot; mplayer -vf lavfi=&#8217;$overlay&#8217; $big_video</p>
 <dt><code>kerndeint[=thresh[:map[:order[:sharp[:twoway]]]]]</code></dt>
 <dd> Donald Graft&#8217;s adaptive kernel deinterlacer. Deinterlaces parts of a video if a configurable threshold is exceeded.</dd>
@@ -3867,25 +3867,25 @@ int nch                        /*number of channels*/
 <dd>
 </dd><dl>
 <dt>
-</dt><dd> 0: Ignore pixels exceeding the threshold (default).<br />
+</dt><dd> 0: Ignore pixels exceeding the threshold (default).<br/>
  1: Paint pixels exceeding the threshold white.</dd></dl>
 <dt>&lt;order&gt;</dt>
 <dd>
 </dd><dl>
 <dt>
-</dt><dd> 0: Leave fields alone (default).<br />
+</dt><dd> 0: Leave fields alone (default).<br/>
  1: Swap fields.</dd></dl>
 <dt>&lt;sharp&gt;</dt>
 <dd>
 </dd><dl>
 <dt>
-</dt><dd> 0: Disable additional sharpening (default).<br />
+</dt><dd> 0: Disable additional sharpening (default).<br/>
  1: Enable additional sharpening.</dd></dl>
 <dt>&lt;twoway&gt;</dt>
 <dd>
 </dd><dl>
 <dt>
-</dt><dd> 0: Disable twoway sharpening (default).<br />
+</dt><dd> 0: Disable twoway sharpening (default).<br/>
  1: Enable twoway sharpening.</dd></dl>
 </dl>
 </dl>
@@ -3903,7 +3903,7 @@ int nch                        /*number of channels*/
 <dd> Relative amount of sharpness/blur to add to the image (a sane range should be -1.5-1.5).</dd>
 <dl>
 <dt>
-</dt><dd> &lt;0: blur<br />
+</dt><dd> &lt;0: blur<br/>
  &gt;0: sharpen</dd></dl>
 </dl>
 </dl>
@@ -3939,15 +3939,15 @@ int nch                        /*number of channels*/
 <dd> Set the frame dropping mode.</dd>
 <dl>
 <dt>
-</dt><dd> 0: Do not drop frames to maintain fixed output framerate (default).<br />
- 1: Always drop a frame when there have been no drops or telecine merges in the past 5 frames.<br />
- 2: Always maintain exact 5:4 input to output frame ratio.<br />
+</dt><dd> 0: Do not drop frames to maintain fixed output framerate (default).<br/>
+ 1: Always drop a frame when there have been no drops or telecine merges in the past 5 frames.<br/>
+ 2: Always maintain exact 5:4 input to output frame ratio.<br/>
  <i>NOTE:</i> Use mode 1 or 2 with MEncoder.</dd></dl>
 <dt>&lt;am&gt;&nbsp;</dt>
 <dd> Analysis mode.</dd>
 <dl>
 <dt>
-</dt><dd> 0: Fixed pattern with initial frame number specified by &lt;fr&gt;.<br />
+</dt><dd> 0: Fixed pattern with initial frame number specified by &lt;fr&gt;.<br/>
  1: aggressive search for telecine pattern (default)</dd></dl>
 <dt>&lt;fr&gt;&nbsp;</dt>
 <dd> Set initial frame number in sequence. 0-2 are the three clean progressive frames; 3 and 4 are the two interlaced frames. The default, -1, means &#8216;not in telecine sequence&#8217;. The number specified here is the type for the imaginary previous frame before the movie starts.</dd>
@@ -4062,14 +4062,14 @@ int nch                        /*number of channels*/
 <dl>
 <dl>
 <dt>&lt;mode&gt;</dt>
-<dd> 0: Leave fields unchanged (will jump/flicker).<br />
- 1: Interpolate missing lines. (The algorithm used might not be so good.)<br />
- 2: Translate fields by 1/4 pixel with linear interpolation (no jump).<br />
+<dd> 0: Leave fields unchanged (will jump/flicker).<br/>
+ 1: Interpolate missing lines. (The algorithm used might not be so good.)<br/>
+ 2: Translate fields by 1/4 pixel with linear interpolation (no jump).<br/>
  4: Translate fields by 1/4 pixel with 4tap filter (higher quality) (default).</dd>
 <dt>&lt;field_dominance&gt;&nbsp;(DEPRECATED)</dt>
-<dd> -1: auto (default) Only works if the decoder exports the appropriate information and no other filters which discard that information come before tfields in the filter chain, otherwise it falls back to 0 (top field first).<br />
- 0: top field first<br />
- 1: bottom field first<br />
+<dd> -1: auto (default) Only works if the decoder exports the appropriate information and no other filters which discard that information come before tfields in the filter chain, otherwise it falls back to 0 (top field first).<br/>
+ 0: top field first<br/>
+ 1: bottom field first<br/>
  <i>NOTE:</i> This option will possibly be removed in a future version. Use -field-dominance instead.</dd></dl>
 </dl>
 <dt><code>yadif=[mode[:field_dominance]]</code></dt>
@@ -4077,12 +4077,12 @@ int nch                        /*number of channels*/
 <dl>
 <dl>
 <dt>&lt;mode&gt;</dt>
-<dd> 0: Output 1 frame for each frame.<br />
- 1: Output 1 frame for each field.<br />
- 2: Like 0 but skips spatial interlacing check.<br />
+<dd> 0: Output 1 frame for each frame.<br/>
+ 1: Output 1 frame for each field.<br/>
+ 2: Like 0 but skips spatial interlacing check.<br/>
  3: Like 1 but skips spatial interlacing check.</dd>
 <dt>&lt;field_dominance&gt;&nbsp;(DEPRECATED)</dt>
-<dd> Operates like tfields.<br />
+<dd> Operates like tfields.<br/>
  <i>NOTE:</i> This option will possibly be removed in a future version. Use -field-dominance instead.</dd></dl>
 </dl>
 <dt><code>mcdeint=[mode[:parity[:qp]]]</code></dt>
@@ -4090,9 +4090,9 @@ int nch                        /*number of channels*/
 <dl>
 <dl>
 <dt>&lt;mode&gt;</dt>
-<dd> 0: fast<br />
- 1: medium<br />
- 2: slow, iterative motion estimation<br />
+<dd> 0: fast<br/>
+ 1: medium<br/>
+ 2: slow, iterative motion estimation<br/>
  3: extra slow, like 2 plus multiple reference frames</dd>
 <dt>&lt;parity&gt;</dt>
 <dd> 0 or 1 selects which field to use (note: no autodetection yet!).</dd>
@@ -4198,14 +4198,14 @@ int nch                        /*number of channels*/
 <dd> Set alpha difference. If you set this to -255 you can then send a sequence of ALPHA-commands to set the area to -225, -200, -175 etc for a nice fade-in-effect! ;)</dd>
 <dl>
 <dt>
-</dt><dd> 0: same as original<br />
- 255: Make everything opaque.<br />
+</dt><dd> 0: same as original<br/>
+ 255: Make everything opaque.<br/>
  -255: Make everything transparent.</dd></dl>
 <dt>&lt;clear&gt;</dt>
 <dd> Clear the framebuffer before blitting.</dd>
 <dl>
 <dt>
-</dt><dd> 0: The image will just be blitted on top of the old one, so you do not need to send 1.8MB of RGBA32 data every time a small part of the screen is updated.<br />
+</dt><dd> 0: The image will just be blitted on top of the old one, so you do not need to send 1.8MB of RGBA32 data every time a small part of the screen is updated.<br/>
  1: clear</dd></dl>
 </dl>
 </dl>
@@ -4437,7 +4437,7 @@ int nch                        /*number of channels*/
 <dd> Delays either audio or video by setting a delay field in the header (default: 0.0). This does not delay either stream while encoding, but the player will see the delay field and compensate accordingly. Positive values delay the audio, and negative values delay the video. Note that this is the exact opposite of the -delay option. For example, if a video plays correctly with -delay 0.2, you can fix the video with MEncoder by using -audio-delay -0.2. </dd>
 <p> Currently, this option only works with the default muxer (-of avi). If you are using a different muxer, then you must use -delay instead.</p>
 <dt><code>-audio-density &lt;1-50&gt;</code></dt>
-<dd> Number of audio chunks per second (default is 2 for 0.5s long audio chunks).<br />
+<dd> Number of audio chunks per second (default is 2 for 0.5s long audio chunks).<br/>
  <i>NOTE:</i> CBR only, VBR ignores this as it puts each packet in a new chunk.</dd>
 <dt><code>-audio-preload &lt;0.0-2.0&gt;</code></dt>
 <dd> Sets up the audio buffering time interval (default: 0.5s).</dd>
@@ -4460,10 +4460,10 @@ int nch                        /*number of channels*/
 <dt><code>-force-avi-aspect &lt;0.2-3.0&gt;</code></dt>
 <dd> Override the aspect stored in the AVI OpenDML vprp header. This can be used to change the aspect ratio with &#8216;-ovc copy&#8217;.</dd>
 <dt><code>-frameno-file &lt;filename&gt; (DEPRECATED)</code></dt>
-<dd> Specify the name of the audio file with framenumber mappings created in the first (audio only) pass of a special three pass encoding mode.<br />
+<dd> Specify the name of the audio file with framenumber mappings created in the first (audio only) pass of a special three pass encoding mode.<br/>
  <i>NOTE:</i> Using this mode will most likely give you A-V desync. Do not use it. It is kept for backwards compatibility only and will possibly be removed in a future version.</dd>
 <dt><code>-hr-edl-seek</code></dt>
-<dd> Use a more precise, but much slower method for skipping areas. Areas marked for skipping are not seeked over, instead all frames are decoded, but only the necessary frames are encoded. This allows starting at non-keyframe boundaries.<br />
+<dd> Use a more precise, but much slower method for skipping areas. Areas marked for skipping are not seeked over, instead all frames are decoded, but only the necessary frames are encoded. This allows starting at non-keyframe boundaries.<br/>
  <i>NOTE:</i> Not guaranteed to work right with &#8216;-ovc copy&#8217;.</dd>
 <dt><code>-info &lt;option1:option2:&#8230;&gt; (AVI only)</code></dt>
 <dd> Specify the info header of the resulting AVI file. </dd>
@@ -4496,10 +4496,10 @@ int nch                        /*number of channels*/
 <dt><code>-noskip</code></dt>
 <dd> Do not skip frames.</dd>
 <dt><code>-o &lt;filename&gt;</code></dt>
-<dd> Outputs to the given filename.<br />
+<dd> Outputs to the given filename.<br/>
  If you want a default output filename, you can put this option in the MEncoder config file.</dd>
 <dt><code>-oac &lt;codec name&gt;</code></dt>
-<dd> Encode with the given audio codec (no default set).<br />
+<dd> Encode with the given audio codec (no default set).<br/>
  <i>NOTE:</i> Use -oac help to get a list of available audio codecs. </dd>
 <p> <i>EXAMPLE:</i></p>
 <dl>
@@ -4514,7 +4514,7 @@ int nch                        /*number of channels*/
 <dd> Encode with a libavcodec codec.</dd></dl>
 </dl>
 <dt><code>-of &lt;format&gt; (BETA CODE!)</code></dt>
-<dd> Encode to the specified container format (default: AVI).<br />
+<dd> Encode to the specified container format (default: AVI).<br/>
  <i>NOTE:</i> Use -of help to get a list of available container formats. </dd>
 <p> <i>EXAMPLE:</i></p>
 <dl>
@@ -4533,7 +4533,7 @@ int nch                        /*number of channels*/
 <dt><code>-ofps &lt;fps&gt;</code></dt>
 <dd> Specify a frames per second (fps) value for the output file, which can be different from that of the source material. Must be set for variable fps (ASF, some MOV) and progressive (30000/1001 fps telecined MPEG) files.</dd>
 <dt><code>-ovc &lt;codec name&gt;</code></dt>
-<dd> Encode with the given video codec (no default set).<br />
+<dd> Encode with the given video codec (no default set).<br/>
  <i>NOTE:</i> Use -ovc help to get a list of available video codecs. </dd>
 <p> <i>EXAMPLE:</i></p>
 <dl>
@@ -4943,12 +4943,12 @@ int nch                        /*number of channels*/
 </dl>
 <dl>
 <dt>
-</dt><dd> Here is how it works, and how to use it:<br />
- The first pass (vpass=1) writes the statistics file. You might want to deactivate some CPU-hungry options, like &quot;turbo&quot; mode does.<br />
- In two pass mode, the second pass (vpass=2) reads the statistics file and bases ratecontrol decisions on it.<br />
- In N-pass mode, the second pass (vpass=3, that is not a typo) does both: It first reads the statistics, then overwrites them. You might want to backup divx2pass.log before doing this if there is any possibility that you will have to cancel MEncoder. You can use all encoding options, except very CPU-hungry options like &quot;qns&quot;.<br />
- You can run this same pass over and over to refine the encode. Each subsequent pass will use the statistics from the previous pass to improve. The final pass can include any CPU-hungry encoding options.<br />
- If you want a 2 pass encode, use first vpass=1, and then vpass=2.<br />
+</dt><dd> Here is how it works, and how to use it:<br/>
+ The first pass (vpass=1) writes the statistics file. You might want to deactivate some CPU-hungry options, like &quot;turbo&quot; mode does.<br/>
+ In two pass mode, the second pass (vpass=2) reads the statistics file and bases ratecontrol decisions on it.<br/>
+ In N-pass mode, the second pass (vpass=3, that is not a typo) does both: It first reads the statistics, then overwrites them. You might want to backup divx2pass.log before doing this if there is any possibility that you will have to cancel MEncoder. You can use all encoding options, except very CPU-hungry options like &quot;qns&quot;.<br/>
+ You can run this same pass over and over to refine the encode. Each subsequent pass will use the statistics from the previous pass to improve. The final pass can include any CPU-hungry encoding options.<br/>
+ If you want a 2 pass encode, use first vpass=1, and then vpass=2.<br/>
  If you want a 3 or more pass encode, use vpass=1 for the first pass and then vpass=3 and then vpass=3 again and again until you are satisfied with the encode.</dd></dl>
 <dl>
 <dt>
@@ -4975,7 +4975,7 @@ int nch                        /*number of channels*/
 <dt><code>autoaspect</code></dt>
 <dd> Same as the aspect option, but automatically computes aspect, taking into account all the adjustments (crop/expand/scale/etc.) made in the filter chain. Does not incur a performance penalty, so you can safely leave it always on.</dd>
 <dt><code>vbitrate=&lt;value&gt;</code></dt>
-<dd> Specify bitrate (default: 800).<br />
+<dd> Specify bitrate (default: 800).<br/>
  <i>WARNING:</i> 1kbit = 1000 bits</dd>
 <dl>
 <dl>
@@ -4985,7 +4985,7 @@ int nch                        /*number of channels*/
 <dd> (in bit)</dd></dl>
 </dl>
 <dt><code>vratetol=&lt;value&gt;</code></dt>
-<dd> approximated file size tolerance in kbit. 1000-100000 is a sane range. (warning: 1kbit = 1000 bits) (default: 8000)<br />
+<dd> approximated file size tolerance in kbit. 1000-100000 is a sane range. (warning: 1kbit = 1000 bits) (default: 8000)<br/>
  <i>NOTE:</i> vratetol should not be too large during the second pass or there might be problems if vrc_(min|max)rate is used.</dd>
 <dt><code>vrc_maxrate=&lt;value&gt;</code></dt>
 <dd> maximum bitrate in kbit/sec (default: 0, unlimited)</dd>
@@ -5011,11 +5011,11 @@ int nch                        /*number of channels*/
 <dt><code>vb_qoffset=&lt;-31.0-31.0&gt;</code></dt>
 <dd> quantizer offset between B- and non-B-frames (default: 1.25)</dd>
 <dt><code>vi_qoffset=&lt;-31.0-31.0&gt;</code></dt>
-<dd> (default: 0.0)<br />
- if v{b|i}_qfactor &gt; 0<br />
- I/B-frame quantizer = P-frame quantizer * v{b|i}_qfactor + v{b|i}_qoffset<br />
- else<br />
- do normal ratecontrol (do not lock to next P-frame quantizer) and set q= -q * v{b|i}_qfactor + v{b|i}_qoffset<br />
+<dd> (default: 0.0)<br/>
+ if v{b|i}_qfactor &gt; 0<br/>
+ I/B-frame quantizer = P-frame quantizer * v{b|i}_qfactor + v{b|i}_qoffset<br/>
+ else<br/>
+ do normal ratecontrol (do not lock to next P-frame quantizer) and set q= -q * v{b|i}_qfactor + v{b|i}_qoffset<br/>
  <i>HINT:</i> To do constant quantizer encoding with different quantizers for I/P- and B-frames you can use: lmin= &lt;ip_quant&gt;:lmax= &lt;ip_quant&gt;:vb_qfactor= &lt;b_quant/ip_quant&gt;.</dd>
 <dt><code>vqblur=&lt;0.0-1.0&gt; (pass one)</code></dt>
 <dd> Quantizer blur (default: 0.5), larger values will average the quantizer more over time (slower change).</dd>
@@ -5201,7 +5201,7 @@ int nch                        /*number of channels*/
 <dd> floating point AAN</dd></dl>
 </dl>
 <dt><code>idct=&lt;0-99&gt;</code></dt>
-<dd> IDCT algorithm<br />
+<dd> IDCT algorithm<br/>
  <i>NOTE:</i> To the best of our knowledge all these IDCTs do pass the IEEE1180 tests.</dd>
 <dl>
 <dl>
@@ -5243,8 +5243,8 @@ int nch                        /*number of channels*/
 <dd> simplearmv6</dd></dl>
 </dl>
 <dt><code>lumi_mask=&lt;0.0-1.0&gt;</code></dt>
-<dd> Luminance masking is a &#8216;psychosensory&#8217; setting that is supposed to make use of the fact that the human eye tends to notice fewer details in very bright parts of the picture. Luminance masking compresses bright areas stronger than medium ones, so it will save bits that can be spent again on other frames, raising overall subjective quality, while possibly reducing PSNR.<br />
- <i>WARNING:</i> Be careful, overly large values can cause disastrous things.<br />
+<dd> Luminance masking is a &#8216;psychosensory&#8217; setting that is supposed to make use of the fact that the human eye tends to notice fewer details in very bright parts of the picture. Luminance masking compresses bright areas stronger than medium ones, so it will save bits that can be spent again on other frames, raising overall subjective quality, while possibly reducing PSNR.<br/>
+ <i>WARNING:</i> Be careful, overly large values can cause disastrous things.<br/>
  <i>WARNING:</i> Large values might look good on some monitors but may look horrible on other monitors.</dd>
 <dl>
 <dl>
@@ -5254,8 +5254,8 @@ int nch                        /*number of channels*/
 <dd> sane range</dd></dl>
 </dl>
 <dt><code>dark_mask=&lt;0.0-1.0&gt;</code></dt>
-<dd> Darkness masking is a &#8216;psychosensory&#8217; setting that is supposed to make use of the fact that the human eye tends to notice fewer details in very dark parts of the picture. Darkness masking compresses dark areas stronger than medium ones, so it will save bits that can be spent again on other frames, raising overall subjective quality, while possibly reducing PSNR.<br />
- <i>WARNING:</i> Be careful, overly large values can cause disastrous things.<br />
+<dd> Darkness masking is a &#8216;psychosensory&#8217; setting that is supposed to make use of the fact that the human eye tends to notice fewer details in very dark parts of the picture. Darkness masking compresses dark areas stronger than medium ones, so it will save bits that can be spent again on other frames, raising overall subjective quality, while possibly reducing PSNR.<br/>
+ <i>WARNING:</i> Be careful, overly large values can cause disastrous things.<br/>
  <i>WARNING:</i> Large values might look good on some monitors but may look horrible on other monitors / TV / TFT.</dd>
 <dl>
 <dl>
@@ -5267,8 +5267,8 @@ int nch                        /*number of channels*/
 <dt><code>tcplx_mask=&lt;0.0-1.0&gt;</code></dt>
 <dd> Temporal complexity masking (default: 0.0 (disabled)). Imagine a scene with a bird flying across the whole scene; tcplx_mask will raise the quantizers of the bird&#8217;s macroblocks (thus decreasing their quality), as the human eye usually does not have time to see all the bird&#8217;s details. Be warned that if the masked object stops (e.g. the bird lands) it is likely to look horrible for a short period of time, until the encoder figures out that the object is not moving and needs refined blocks. The saved bits will be spent on other parts of the video, which may increase subjective quality, provided that tcplx_mask is carefully chosen.</dd>
 <dt><code>scplx_mask=&lt;0.0-1.0&gt;</code></dt>
-<dd> Spatial complexity masking. Larger values help against blockiness, if no deblocking filter is used for decoding, which is maybe not a good idea.<br />
- Imagine a scene with grass (which usually has great spatial complexity), a blue sky and a house; scplx_mask will raise the quantizers of the grass&#8217; macroblocks, thus decreasing its quality, in order to spend more bits on the sky and the house.<br />
+<dd> Spatial complexity masking. Larger values help against blockiness, if no deblocking filter is used for decoding, which is maybe not a good idea.<br/>
+ Imagine a scene with grass (which usually has great spatial complexity), a blue sky and a house; scplx_mask will raise the quantizers of the grass&#8217; macroblocks, thus decreasing its quality, in order to spend more bits on the sky and the house.<br/>
  <i>HINT:</i> Crop any black borders completely as they will reduce the quality of the macroblocks (also applies without scplx_mask).</dd>
 <dl>
 <dl>
@@ -5375,7 +5375,7 @@ int nch                        /*number of channels*/
 <dd> adaptive Huffman tables</dd></dl>
 </dl>
 <dt><code>qpel&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code></dt>
-<dd> Use quarter pel motion compensation (mutually exclusive with ilme).<br />
+<dd> Use quarter pel motion compensation (mutually exclusive with ilme).<br/>
  <i>HINT:</i> This seems only useful for high bitrate encodings.</dd>
 <dt><code>mbcmp=&lt;0-2000&gt;</code></dt>
 <dd> Sets the comparison function for the macroblock decision, has only an effect if mbd=0. This is also used for some motion search functions, in which case it has an effect regardless of mbd setting.</dd>
@@ -5425,9 +5425,9 @@ int nch                        /*number of channels*/
 <dt><code>predia=&lt;-99-6&gt;</code></dt>
 <dd> diamond type and size for motion estimation pre-pass</dd>
 <dt><code>dia=&lt;-99-6&gt;</code></dt>
-<dd> Diamond type &amp; size for motion estimation. Motion search is an iterative process. Using a small diamond does not limit the search to finding only small motion vectors. It is just somewhat more likely to stop before finding the very best motion vector, especially when noise is involved. Bigger diamonds allow a wider search for the best motion vector, thus are slower but result in better quality.<br />
- Big normal diamonds are better quality than shape-adaptive diamonds.<br />
- Shape-adaptive diamonds are a good tradeoff between speed and quality.<br />
+<dd> Diamond type &amp; size for motion estimation. Motion search is an iterative process. Using a small diamond does not limit the search to finding only small motion vectors. It is just somewhat more likely to stop before finding the very best motion vector, especially when noise is involved. Bigger diamonds allow a wider search for the best motion vector, thus are slower but result in better quality.<br/>
+ Big normal diamonds are better quality than shape-adaptive diamonds.<br/>
+ Shape-adaptive diamonds are a good tradeoff between speed and quality.<br/>
  <i>NOTE:</i> The sizes of the normal diamonds and shape adaptive ones do not have the same meaning.</dd>
 <dl>
 <dl>
@@ -5471,7 +5471,7 @@ int nch                        /*number of channels*/
 <dt><code>mv0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code></dt>
 <dd> Try to encode each MB with MV=&lt;0,0&gt; and choose the better one. This has no effect if mbd=0.</dd>
 <dt><code>mv0_threshold=&lt;any non-negative integer&gt;</code></dt>
-<dd> When surrounding motion vectors are &lt;0,0&gt; and the motion estimation score of the current block is less than mv0_threshold, &lt;0,0&gt; is used for the motion vector and further motion estimation is skipped (default: 256). Lowering mv0_threshold to 0 can give a slight (0.01dB) PSNR increase and possibly make the encoded video look slightly better; raising mv0_threshold past 320 results in diminished PSNR and visual quality. Higher values speed up encoding very slightly (usually less than 1%, depending on the other options used).<br />
+<dd> When surrounding motion vectors are &lt;0,0&gt; and the motion estimation score of the current block is less than mv0_threshold, &lt;0,0&gt; is used for the motion vector and further motion estimation is skipped (default: 256). Lowering mv0_threshold to 0 can give a slight (0.01dB) PSNR increase and possibly make the encoded video look slightly better; raising mv0_threshold past 320 results in diminished PSNR and visual quality. Higher values speed up encoding very slightly (usually less than 1%, depending on the other options used).<br/>
  <i>NOTE:</i> This option does not require mv0 to be enabled.</dd>
 <dt><code>qprd (mbd=2 only)</code></dt>
 <dd> rate distorted optimal quantization parameter (QP) for the given lambda of each macroblock</dd>
@@ -5496,7 +5496,7 @@ int nch                        /*number of channels*/
 <dd> always</dd></dl>
 </dl>
 <dt><code>subq=&lt;1-8&gt;</code></dt>
-<dd> subpel refinement quality (for qpel) (default: 8 (high quality))<br />
+<dd> subpel refinement quality (for qpel) (default: 8 (high quality))<br/>
  <i>NOTE:</i> This has a significant effect on speed.</dd>
 <dt><code>refs=&lt;1-8&gt;</code></dt>
 <dd> number of reference frames to consider for motion compensation (Snow only) (default: 1)</dd>
@@ -5505,18 +5505,18 @@ int nch                        /*number of channels*/
 <dt><code>mpeg_quant</code></dt>
 <dd> Use MPEG quantizers instead of H.263.</dd>
 <dt><code>aic&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code></dt>
-<dd> Enable AC prediction for MPEG-4 or advanced intra prediction for H.263+. This will improve quality very slightly (around 0.02 dB PSNR) and slow down encoding very slightly (about 1%).<br />
+<dd> Enable AC prediction for MPEG-4 or advanced intra prediction for H.263+. This will improve quality very slightly (around 0.02 dB PSNR) and slow down encoding very slightly (about 1%).<br/>
  <i>NOTE:</i> vqmin should be 8 or larger for H.263+ AIC.</dd>
 <dt><code>aiv&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code></dt>
 <dd> alternative inter vlc for H.263+</dd>
 <dt><code>umv&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code></dt>
 <dd> unlimited MVs (H.263+ only) Allows encoding of arbitrarily long MVs.</dd>
 <dt><code>ibias=&lt;-256-256&gt;</code></dt>
-<dd> intra quantizer bias (256 equals 1.0, MPEG style quantizer default: 96, H.263 style quantizer default: 0)<br />
+<dd> intra quantizer bias (256 equals 1.0, MPEG style quantizer default: 96, H.263 style quantizer default: 0)<br/>
  <i>NOTE:</i> The H.263 MMX quantizer cannot handle positive biases (set vfdct=1 or 2), the MPEG MMX quantizer cannot handle negative biases (set vfdct=1 or 2).</dd>
 <dt><code>pbias=&lt;-256-256&gt;</code></dt>
-<dd> inter quantizer bias (256 equals 1.0, MPEG style quantizer default: 0, H.263 style quantizer default: -64)<br />
- <i>NOTE:</i> The H.263 MMX quantizer cannot handle positive biases (set vfdct=1 or 2), the MPEG MMX quantizer cannot handle negative biases (set vfdct=1 or 2).<br />
+<dd> inter quantizer bias (256 equals 1.0, MPEG style quantizer default: 0, H.263 style quantizer default: -64)<br/>
+ <i>NOTE:</i> The H.263 MMX quantizer cannot handle positive biases (set vfdct=1 or 2), the MPEG MMX quantizer cannot handle negative biases (set vfdct=1 or 2).<br/>
  <i>HINT:</i> A more positive bias (-32 &#8211; -16 instead of -64) seems to improve the PSNR.</dd>
 <dt><code>nr=&lt;0-100000&gt;</code></dt>
 <dd> Noise reduction, 0 means disabled. 0-600 is a useful range for typical content, but you may want to turn it up a bit more for very noisy content (default: 0). Given its small impact on speed, you might want to prefer to use this over filtering noise away with video filters like denoise3d or hqdn3d.</dd>
@@ -5573,7 +5573,7 @@ int nch                        /*number of channels*/
 <dt><code>skip_threshold=&lt;0-1000000&gt;</code></dt>
 <dd> FIXME: Document this.</dd></dl>
 <h3>nuv (-nuvopts)</h3>
-<p> Nuppel video is based on RTJPEG and LZO. By default frames are first encoded with RTJPEG and then compressed with LZO, but it is possible to disable either or both of the two passes. As a result, you can in fact output raw i420, LZO compressed i420, RTJPEG, or the default LZO compressed RTJPEG.<br />
+<p> Nuppel video is based on RTJPEG and LZO. By default frames are first encoded with RTJPEG and then compressed with LZO, but it is possible to disable either or both of the two passes. As a result, you can in fact output raw i420, LZO compressed i420, RTJPEG, or the default LZO compressed RTJPEG.<br/>
  <i>NOTE:</i> The nuvrec documentation contains some advice and examples about the settings to use for the most common TV encodings.</p>
 <dl>
 <dt><code>c=&lt;0-20&gt;</code></dt>
@@ -5656,7 +5656,7 @@ int nch                        /*number of channels*/
 <dt><code>(no)grayscale</code></dt>
 <dd> Make Xvid discard chroma planes so the encoded video is grayscale only. Note that this does not speed up encoding, it just prevents chroma data from being written in the last stage of encoding.</dd>
 <dt><code>(no)interlacing</code></dt>
-<dd> Encode the fields of interlaced video material. Turn this option on for interlaced content.<br />
+<dd> Encode the fields of interlaced video material. Turn this option on for interlaced content.<br/>
  <i>NOTE:</i> Should you rescale the video, you would need an interlace-aware resizer, which you can activate with -vf scale=&lt;width&gt;:&lt;height&gt;:1.</dd>
 <dt><code>min_iquant=&lt;0-31&gt;</code></dt>
 <dd> minimum I-frame quantizer (default: 2)</dd>
@@ -5697,11 +5697,11 @@ int nch                        /*number of channels*/
 <dt><code>(no)closed_gop</code></dt>
 <dd> This option tells Xvid to close every GOP (Group Of Pictures bounded by two I-frames), which makes GOPs independent from each other. This just implies that the last frame of the GOP is either a P-frame or a N-frame but not a B-frame. It is usually a good idea to turn this option on (default: on).</dd>
 <dt><code>(no)packed</code></dt>
-<dd> This option is meant to solve frame-order issues when encoding to container formats like AVI that cannot cope with out-of-order frames. In practice, most decoders (both software and hardware) are able to deal with frame-order themselves, and may get confused when this option is turned on, so you can safely leave if off, unless you really know what you are doing.<br />
- <i>WARNING:</i> This will generate an illegal bitstream, and will not be decodable by ISO-MPEG-4 decoders except DivX/libavcodec/Xvid.<br />
+<dd> This option is meant to solve frame-order issues when encoding to container formats like AVI that cannot cope with out-of-order frames. In practice, most decoders (both software and hardware) are able to deal with frame-order themselves, and may get confused when this option is turned on, so you can safely leave if off, unless you really know what you are doing.<br/>
+ <i>WARNING:</i> This will generate an illegal bitstream, and will not be decodable by ISO-MPEG-4 decoders except DivX/libavcodec/Xvid.<br/>
  <i>WARNING:</i> This will also store a fake DivX version in the file so the bug autodetection of some decoders might be confused.</dd>
 <dt><code>frame_drop_ratio=&lt;0-100&gt; (max_bframes=0 only)</code></dt>
-<dd> This setting allows the creation of variable framerate video streams. The value of the setting specifies a threshold under which, if the difference of the following frame to the previous frame is below or equal to this threshold, a frame gets not coded (a so called n-vop is placed in the stream). On playback, when reaching an n-vop the previous frame will be displayed.<br />
+<dd> This setting allows the creation of variable framerate video streams. The value of the setting specifies a threshold under which, if the difference of the following frame to the previous frame is below or equal to this threshold, a frame gets not coded (a so called n-vop is placed in the stream). On playback, when reaching an n-vop the previous frame will be displayed.<br/>
  <i>WARNING:</i> Playing with this setting may result in a jerky video, so use it at your own risks!</dd>
 <dt><code>rc_reaction_delay_factor=&lt;value&gt;</code></dt>
 <dd> This parameter controls the number of frames the CBR rate controller will wait before reacting to bitrate changes and compensating for them to obtain a constant bitrate over an averaging range of frames.</dd>
@@ -5714,7 +5714,7 @@ int nch                        /*number of channels*/
 <dt><code>curve_compression_low=&lt;0-100&gt;</code></dt>
 <dd> This setting allows Xvid to give a certain percentage of extra bits to the low bitrate scenes, taking a few bits from the entire clip. This might come in handy if you have a few low-bitrate scenes that are still blocky (default: 0).</dd>
 <dt><code>overflow_control_strength=&lt;0-100&gt;</code></dt>
-<dd> During pass one of two pass encoding, a scaled bitrate curve is computed. The difference between that expected curve and the result obtained during encoding is called overflow. Obviously, the two pass rate controller tries to compensate for that overflow, distributing it over the next frames. This setting controls how much of the overflow is distributed every time there is a new frame. Low values allow lazy overflow control, big rate bursts are compensated for more slowly (could lead to lack of precision for small clips). Higher values will make changes in bit redistribution more abrupt, possibly too abrupt if you set it too high, creating artifacts (default: 5).<br />
+<dd> During pass one of two pass encoding, a scaled bitrate curve is computed. The difference between that expected curve and the result obtained during encoding is called overflow. Obviously, the two pass rate controller tries to compensate for that overflow, distributing it over the next frames. This setting controls how much of the overflow is distributed every time there is a new frame. Low values allow lazy overflow control, big rate bursts are compensated for more slowly (could lead to lack of precision for small clips). Higher values will make changes in bit redistribution more abrupt, possibly too abrupt if you set it too high, creating artifacts (default: 5).<br/>
  <i>NOTE:</i> This setting impacts quality a lot, play with it carefully!</dd>
 <dt><code>max_overflow_improvement=&lt;0-100&gt;</code></dt>
 <dd> During the frame bit allocation, overflow control may increase the frame size. This parameter specifies the maximum percentage by which the overflow control is allowed to increase the frame size, compared to the ideal curve allocation (default: 5).</dd>
@@ -5771,7 +5771,7 @@ int nch                        /*number of channels*/
 <dt>
 </dt><dd> <i>NOTE:</i> These profiles should be used in conjunction with an appropriate -ffourcc. Generally DX50 is applicable, as some players do not recognize Xvid but most recognize DivX.</dd></dl>
 <dt><code>par=&lt;mode&gt;</code></dt>
-<dd> Specifies the Pixel Aspect Ratio mode (not to be confused with DAR, the Display Aspect Ratio). PAR is the ratio of the width and height of a single pixel. So both are related like this: DAR = PAR * (width/height).<br />
+<dd> Specifies the Pixel Aspect Ratio mode (not to be confused with DAR, the Display Aspect Ratio). PAR is the ratio of the width and height of a single pixel. So both are related like this: DAR = PAR * (width/height).<br/>
  MPEG-4 defines 5 pixel aspect ratios and one extended one, giving the opportunity to specify a specific pixel aspect ratio. 5 standard modes can be specified:</dd>
 <dl>
 <dl>
@@ -5840,11 +5840,11 @@ int nch                        /*number of channels*/
 </dl>
 <dl>
 <dt>
-</dt><dd> Here is how it works, and how to use it:<br />
- The first pass (pass=1) collects statistics on the video and writes them to a file. You might want to deactivate some CPU-hungry options, apart from the ones that are on by default.<br />
- In two pass mode, the second pass (pass=2) reads the statistics file and bases ratecontrol decisions on it.<br />
- In three pass mode, the second pass (pass=3, that is not a typo) does both: It first reads the statistics, then overwrites them. You can use all encoding options, except very CPU-hungry options.<br />
- The third pass (pass=3) is the same as the second pass, except that it has the second pass&#8217; statistics to work from. You can use all encoding options, including CPU-hungry ones.<br />
+</dt><dd> Here is how it works, and how to use it:<br/>
+ The first pass (pass=1) collects statistics on the video and writes them to a file. You might want to deactivate some CPU-hungry options, apart from the ones that are on by default.<br/>
+ In two pass mode, the second pass (pass=2) reads the statistics file and bases ratecontrol decisions on it.<br/>
+ In three pass mode, the second pass (pass=3, that is not a typo) does both: It first reads the statistics, then overwrites them. You can use all encoding options, except very CPU-hungry options.<br/>
+ The third pass (pass=3) is the same as the second pass, except that it has the second pass&#8217; statistics to work from. You can use all encoding options, including CPU-hungry ones.<br/>
  The first pass may use either average bitrate or constant quantizer. ABR is recommended, since it does not require guessing a quantizer. Subsequent passes are ABR, and must specify bitrate.</dd></dl>
 <dt><code>profile=&lt;name&gt;</code></dt>
 <dd> Constrain options to be compatible with an H.264 profile.</dd>
@@ -5904,7 +5904,7 @@ int nch                        /*number of channels*/
 <dd> bframes=0 force_cfr rc_lookahead=0 sync_lookahead=0 sliced_threads</dd></dl>
 </dl>
 <dt><code>slow_firstpass</code></dt>
-<dd> Disables the following faster options with pass=1: no_8x8dct me=dia partitions=none ref=1 subq={2 if &gt;2 else unchanged} trellis=0 fast_pskip. These settings significantly improve encoding speed while having little or no impact on the quality of the final pass.<br />
+<dd> Disables the following faster options with pass=1: no_8x8dct me=dia partitions=none ref=1 subq={2 if &gt;2 else unchanged} trellis=0 fast_pskip. These settings significantly improve encoding speed while having little or no impact on the quality of the final pass.<br/>
  This option is implied with preset=placebo.</dd>
 <dt><code>keyint=&lt;value&gt;</code></dt>
 <dd> Sets maximum interval between IDR-frames (default: 250). Larger values save bits, thus improve quality, at the cost of seeking precision. Unlike MPEG-1/2/4, H.264 does not suffer from DCT drift with large values of keyint.</dd>
@@ -5959,8 +5959,8 @@ int nch                        /*number of channels*/
 <dt><code>(no)deblock</code></dt>
 <dd> Use deblocking filter (default: on). As it takes very little time compared to its quality gain, it is not recommended to disable it.</dd>
 <dt><code>deblock=&lt;-6-6&gt;,&lt;-6-6&gt;</code></dt>
-<dd> The first parameter is AlphaC0 (default: 0). This adjusts thresholds for the H.264 in-loop deblocking filter. First, this parameter adjusts the maximum amount of change that the filter is allowed to cause on any one pixel. Secondly, this parameter affects the threshold for difference across the edge being filtered. A positive value reduces blocking artifacts more, but will also smear details.<br />
- The second parameter is Beta (default: 0). This affects the detail threshold. Very detailed blocks are not filtered, since the smoothing caused by the filter would be more noticeable than the original blocking.<br />
+<dd> The first parameter is AlphaC0 (default: 0). This adjusts thresholds for the H.264 in-loop deblocking filter. First, this parameter adjusts the maximum amount of change that the filter is allowed to cause on any one pixel. Secondly, this parameter affects the threshold for difference across the edge being filtered. A positive value reduces blocking artifacts more, but will also smear details.<br/>
+ The second parameter is Beta (default: 0). This affects the detail threshold. Very detailed blocks are not filtered, since the smoothing caused by the filter would be more noticeable than the original blocking.<br/>
  The default behavior of the filter almost always achieves optimal quality, so it is best to either leave it alone, or make only small adjustments. However, if your source material already has some blocking or noise which you would like to remove, it may be a good idea to turn it up a little bit.</dd>
 <dt><code>(no)cabac</code></dt>
 <dd> Use CABAC (Context-Adaptive Binary Arithmetic Coding) (default: on). Slightly slows down encoding and decoding, but should save 10-15% bitrate. Unless you are looking for decoding speed, you should not disable it.</dd>
@@ -6054,7 +6054,7 @@ int nch                        /*number of channels*/
 </dl>
 <dl>
 <dt>
-</dt><dd> Regardless of this option, macroblock types p16x16, b16x16, and i16x16 are always enabled.<br />
+</dt><dd> Regardless of this option, macroblock types p16x16, b16x16, and i16x16 are always enabled.<br/>
  The idea is to find the type and size that best describe a certain area of the picture. For example, a global pan is better represented by 16&#215;16 blocks, while small moving objects are better represented by smaller blocks.</dd></dl>
 <dt><code>(no)8x8dct</code></dt>
 <dd> Adaptive spatial transform size: allows macroblocks to choose between 4&#215;4 and 8&#215;8 DCT. Also allows the i8x8 macroblock type. Without this option, only 4&#215;4 DCT is used.</dd>
@@ -6246,7 +6246,7 @@ int nch                        /*number of channels*/
 <dd> PSNR, QP, frametype, size, and other statistics for every frame</dd></dl>
 </dl>
 <dt><code>(no)psnr</code></dt>
-<dd> Print signal-to-noise ratio statistics.<br />
+<dd> Print signal-to-noise ratio statistics.<br/>
  <i>NOTE:</i> The &#8216;Y&#8217;, &#8216;U&#8217;, &#8216;V&#8217;, and &#8216;Avg&#8217; PSNR fields in the summary are not mathematically sound (they are simply the average of per-frame PSNRs). They are kept only for comparison to the JM reference codec. For all other purposes, please use either the &#8216;Global&#8217; PSNR, or the per-frame PSNRs printed by log=3.</dd>
 <dt><code>(no)ssim</code></dt>
 <dd> Print the Structural Similarity Metric results. This is an alternative to PSNR, and may be better correlated with the perceived quality of the compressed video.</dd>

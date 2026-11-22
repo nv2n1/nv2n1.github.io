@@ -12,9 +12,9 @@ description: "API Implementation functions –"
 <p> API implementation functions are the default implementation of each of the methods in a particular typedef structure.</p>
 <h3>Modules</h3>
 <p> <code>pANTLR3_BASE_RECOGNIZER Base Recognizer Implementation</code> </p>
-<p> <i>The base recognizer interface is implemented by all higher level recognizers such as </i><code>pANTLR3_PARSER</code> and provides methods common to all recognizers.<br />
+<p> <i>The base recognizer interface is implemented by all higher level recognizers such as </i><code>pANTLR3_PARSER</code> and provides methods common to all recognizers.<br/>
  <code>pANTLR3_RECOGNIZER_SHARED_STATE &#8211; Recognizer Shared State Implementation</code> </p>
-<p> <i>The recognizer shared state class does not have an implementation because it contains only data fields, documented at </i><code>ANTLR3_RECOGNIZER_SHARED_STATE</code>.<br />
+<p> <i>The recognizer shared state class does not have an implementation because it contains only data fields, documented at </i><code>ANTLR3_RECOGNIZER_SHARED_STATE</code>.<br/>
  <code>pANTLR3_BITSET &#8211; Bitset Implementation</code> </p>
 <p> <code>pANTLR3_TOKEN_FACTORY &#8211; Token Factory Implementation</code> </p>
 <p> <code>pANTLR3_COMMON_TOKEN &#8211; Common Token Implementation</code> </p>

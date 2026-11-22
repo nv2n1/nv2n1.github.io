@@ -10,7 +10,7 @@ description: "ldns_dname_left_chop, ldns_dname_label_count"
 
 <p> ldns_dname_left_chop, ldns_dname_label_count </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ldns_rdf* ldns_dname_left_chop(const ldns_rdf *d); </p>

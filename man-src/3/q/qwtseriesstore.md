@@ -13,10 +13,10 @@ description: "QwtSeriesStore< T > –"
 <p>#include &lt;qwt_series_store.h&gt; </p>
 <p> Inherits <code>QwtAbstractSeriesStore</code>.</p>
 <h3>Public Member Functions</h3>
-<p><code>QwtSeriesStore</code> ()<br />
- <i>Constructor The store contains no series. </i><br />
- <code>~QwtSeriesStore</code> ()<br />
- <i>Destructor. </i><br />
+<p><code>QwtSeriesStore</code> ()<br/>
+ <i>Constructor The store contains no series. </i><br/>
+ <code>~QwtSeriesStore</code> ()<br/>
+ <i>Destructor. </i><br/>
  void <code>setData</code> (<code>QwtSeriesData</code>&lt; T &gt; *series) </p>
 <p> <code>QwtSeriesData</code>&lt; T &gt; * <code>data</code> () </p>
 <p> const <code>QwtSeriesData</code>&lt; T &gt; * <code>data</code> () const </p>

@@ -9,15 +9,15 @@ description: "X Xinerama Extension Functions – Functions related to the X Xine
 
 <p>X Xinerama Extension Functions &#8211; Functions related to the X Xinerama extension. </p>
 <h3>Functions</h3>
-<p>EAPI int <code>ecore_x_xinerama_query</code> (void)<br />
- <i>Return whether the X server supports the Xinerama Extension. </i><br />
- EAPI void <code>ecore_x_xinerama_query_screens_prefetch</code> (void)<br />
- <i>Sends the XineramaQueryScreens request. </i><br />
- EAPI void <code>ecore_x_xinerama_query_screens_fetch</code> (void)<br />
- <i>Gets the reply of the XineramaQueryScreens request sent by </i><code>ecore_x_xinerama_query_screens_prefetch()</code>.<br />
- EAPI int <code>ecore_x_xinerama_screen_count_get</code> (void)<br />
- <i>Return the number of screens. </i><br />
- EAPI int <code>ecore_x_xinerama_screen_geometry_get</code> (int screen, int *x, int *y, int *width, int *height)<br />
+<p>EAPI int <code>ecore_x_xinerama_query</code> (void)<br/>
+ <i>Return whether the X server supports the Xinerama Extension. </i><br/>
+ EAPI void <code>ecore_x_xinerama_query_screens_prefetch</code> (void)<br/>
+ <i>Sends the XineramaQueryScreens request. </i><br/>
+ EAPI void <code>ecore_x_xinerama_query_screens_fetch</code> (void)<br/>
+ <i>Gets the reply of the XineramaQueryScreens request sent by </i><code>ecore_x_xinerama_query_screens_prefetch()</code>.<br/>
+ EAPI int <code>ecore_x_xinerama_screen_count_get</code> (void)<br/>
+ <i>Return the number of screens. </i><br/>
+ EAPI int <code>ecore_x_xinerama_screen_geometry_get</code> (int screen, int *x, int *y, int *width, int *height)<br/>
  <i>Get the geometry of the screen. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions related to the X Xinerama extension.</p>
@@ -39,10 +39,10 @@ description: "X Xinerama Extension Functions – Functions related to the X Xine
 <p>Get the geometry of the screen. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>screen</i> The screen (Unused).<br />
- <i>x</i> The X coordinate of the screen.<br />
- <i>y</i> The Y coordinate of the screen<br />
- <i>width</i> The width of the screen<br />
+<dd><i>screen</i> The screen (Unused).<br/>
+ <i>x</i> The X coordinate of the screen.<br/>
+ <i>y</i> The Y coordinate of the screen<br/>
+ <i>width</i> The width of the screen<br/>
  <i>height</i> The height of the screen</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

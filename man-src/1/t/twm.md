@@ -396,9 +396,9 @@ Button2  =  : iconmgr: f.iconify
 </pre>
 <p> <i>Twm</i> provides many more window manipulation primitives than can be conveniently stored in a titlebar, menu, or set of key bindings. Although a small set of defaults are supplied (unless the <code>NoDefaults</code> is specified), most users will want to have their most common operations bound to key and button strokes. To do this, <i>twm</i> associates names with each of the primitives and provides <i>user-defined functions</i> for building higher level primitives and <i>menus</i> for interactively selecting among groups of functions. </p>
 <p> User-defined functions contain the name by which they are referenced in calls to <code>f.function</code> and a list of other functions to execute. For example: </p>
-<p>Function &#8220;move-or-lower&#8221; {f.move f.deltastop f.lower} Function &#8220;move-or-raise&#8221; {f.move f.deltastop f.raise} Function &#8220;move-or-iconify&#8221; {f.move f.deltastop f.iconify} Function &#8220;restore-colormap&#8221;<br />
-{<br />
-    f.colormap &#8220;default&#8221; f.lower<br />
+<p>Function &#8220;move-or-lower&#8221; {f.move f.deltastop f.lower} Function &#8220;move-or-raise&#8221; {f.move f.deltastop f.raise} Function &#8220;move-or-iconify&#8221; {f.move f.deltastop f.iconify} Function &#8220;restore-colormap&#8221;<br/>
+{<br/>
+    f.colormap &#8220;default&#8221; f.lower<br/>
 }</p>
 <p> The function name must be used in <code>f.function</code> exactly as it appears in the function specification. </p>
 <p> In the descriptions below, if the function is said to operate on the selected window, but is invoked from a root menu, the cursor will be changed to the <code>Select</code> cursor and the next window to receive a button press will be chosen:</p>

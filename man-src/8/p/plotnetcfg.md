@@ -34,7 +34,7 @@ description: "plotnetcfg – plot diagram of network configuration"
 <dd><code>plotnetcfg &gt;</code> <i>file</i></dd></dl>
 <p> Create PDF with network configuration of a remote machine:</p>
 <dl>
-<dd><code>scp /usr/sbin/plotnetcfg</code> <code>root@</code><i>target</i><code>:</code><br />
+<dd><code>scp /usr/sbin/plotnetcfg</code> <code>root@</code><i>target</i><code>:</code><br/>
  <code>ssh</code> <code>root@</code><i>target</i> <code>./plotnetcfg | dot -Tpdf &gt;</code> <i>file.pdf</i> </dd>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-dot/">dot</a></code>(1), <code><a href="/docs/linux/man/7-graphviz/">graphviz</a></code>(7), <code><a href="/docs/linux/man/5-plotnetcfg-json/">plotnetcfg-json</a></code>(5) </p>

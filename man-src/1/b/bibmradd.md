@@ -18,7 +18,7 @@ description: "bibmradd.pl – add MR numbers to papers in a given bib file"
 <dt><code>-e</code></dt>
 <dd> If 1 (default), add an empty mrnumber if a mr cannot be found. This prevents repeated searches for the same entries if you add new entries to the file. Calling <tt>&quot;-e 0&quot;</tt> suppresses this behavior.</dd>
 <dt><code>-f</code></dt>
-<dd> Force searching for <font SIZE="-1">MR</font> numbers even if the entry already has one.</dd>
+<dd> Force searching for MR numbers even if the entry already has one.</dd>
 <dt><code>-o</code> <i>output</i></dt>
 <dd> Output file. If this option is not used, the name for the output file is formed by adding <tt>&quot;_mr&quot;</tt> to the input file</dd></dl>
 <h2>DESCRIPTION</h2>
@@ -28,4 +28,4 @@ description: "bibmradd.pl – add MR numbers to papers in a given bib file"
 <p> Boris Veytsman</p>
 <h2>COPYRIGHT AND LICENSE</h2>
 <p> Copyright (C) 2014-2021 Boris Veytsman </p>
-<p> This is free software. You may redistribute copies of it under the terms of the <font SIZE="-1">GNU</font> General Public License &lt;<a rel="nofollow" href="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</a>&gt;. There is <font SIZE="-1">NO WARRANTY,</font> to the extent permitted by law. </p>
+<p> This is free software. You may redistribute copies of it under the terms of the GNU General Public License &lt;<a rel="nofollow" href="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</a>&gt;. There is NO WARRANTY, to the extent permitted by law. </p>

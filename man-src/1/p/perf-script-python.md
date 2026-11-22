@@ -22,8 +22,8 @@ perf script [-s[Python]:script[.py]]
 <dl>
 <dt>
 </dt><dd>
-.ft C<br />
-    syscall events : event count&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -sys_write 455067 sys_getdents 4072 sys_close 3037 sys_swapoff 1769 sys_read 923 sys_sched_setparam 826 sys_open 331 sys_newfstat 326 sys_mmap 217 sys_munmap 216 sys_futex 141 sys_select 102 sys_poll 84 sys_setitimer 12 sys_writev 8 15 8 sys_lseek 7 sys_rt_sigprocmask 6 sys_wait4 3 sys_ioctl 3 sys_set_robust_list 1 sys_exit 1 56 1 sys_access 1<br />
+.ft C<br/>
+    syscall events : event count&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -sys_write 455067 sys_getdents 4072 sys_close 3037 sys_swapoff 1769 sys_read 923 sys_sched_setparam 826 sys_open 331 sys_newfstat 326 sys_mmap 217 sys_munmap 216 sys_futex 141 sys_select 102 sys_poll 84 sys_setitimer 12 sys_writev 8 15 8 sys_lseek 7 sys_rt_sigprocmask 6 sys_wait4 3 sys_ioctl 3 sys_set_robust_list 1 sys_exit 1 56 1 sys_access 1<br/>
                          .ft
 </dd></dl>
 <p> Basically our task is to keep a per-syscall tally that gets updated every time a system call occurs in the system. Our script will do that, but first we need to record the data that will be processed by that script. Theoretically, there are a couple of ways we could do that: </p>
@@ -37,10 +37,10 @@ perf script [-s[Python]:script[.py]]
 <dl>
 <dt>
 </dt><dd>
-.ft C<br />
-#perf record &#8211; a &#8211; e raw_syscalls : sys_enter<br />
-    ^ C [perf record:Woken up 1 times to write data]<br />
-      [perf record:Captured and wrote 56.545 MB perf.data(~2470503 samples)]<br />
+.ft C<br/>
+#perf record &#8211; a &#8211; e raw_syscalls : sys_enter<br/>
+    ^ C [perf record:Woken up 1 times to write data]<br/>
+      [perf record:Captured and wrote 56.545 MB perf.data(~2470503 samples)]<br/>
           .ft
 </dd></dl>
 <p> The options basically say to collect data for every syscall event system-wide and multiplex the per-cpu output into a single stream. That single stream will be recorded in a file in the current directory called perf.data. </p>
@@ -139,10 +139,10 @@ def raw_syscalls__sys_enter(event_name, context, common_cpu,
 <dl>
 <dt>
 </dt><dd>
-.ft C<br />
-    syscalls = autodict()<br />
-try : syscalls<br />
-[id] += 1 except TypeError : syscalls[id] = 1<br />
+.ft C<br/>
+    syscalls = autodict()<br/>
+try : syscalls<br/>
+[id] += 1 except TypeError : syscalls[id] = 1<br/>
                                                 .ft
 </dd></dl>
 <p> The syscalls <i>autodict</i> object is a special kind of Python dictionary (implemented in Core.py) that implements Perl&#8217;s <i>autovivifying</i> hashes in Python i.e. with autovivifying hashes, you can assign nested hash values without having to go to the trouble of creating intermediate levels if they don&#8217;t exist e.g syscalls[comm][pid][id] = 1 will create the intermediate hash levels and finally assign the value 1 to the hash entry for <i>id</i> (because the value being assigned isn&#8217;t a hash object itself, the initial value is assigned in the TypeError exception. Well, there may be a better way to do this in Python but that&#8217;s what works for now). </p>
@@ -152,39 +152,39 @@ try : syscalls<br />
 <dl>
 <dt>
 </dt><dd>
-.ft C<br />
-    import os<br />
-        import sys<br />
-            sys.path.append(os.environ[&#8216;PERF_EXEC_PATH&#8217;] +<br />
-                            &#8216;/scripts/python/Perf-Trace-Util/lib/Perf/Trace&#8217;)<br />
-                from perf_trace_context import *from Core import *from Util import *syscalls = autodict()<br />
-    def trace_end()<br />
-    : print_syscall_totals()<br />
-          def raw_syscalls__sys_enter(event_name, context, common_cpu,<br />
-                                      common_secs, common_nsecs, common_pid, common_comm,<br />
-                                      id, args)<br />
-    :<br />
-try : syscalls[id] += 1<br />
-        except TypeError:<br />
-                syscalls[id] = 1<br />
-def print_syscall_totals():<br />
-    if for_comm is not None:<br />
+.ft C<br/>
+    import os<br/>
+        import sys<br/>
+            sys.path.append(os.environ[&#8216;PERF_EXEC_PATH&#8217;] +<br/>
+                            &#8216;/scripts/python/Perf-Trace-Util/lib/Perf/Trace&#8217;)<br/>
+                from perf_trace_context import *from Core import *from Util import *syscalls = autodict()<br/>
+    def trace_end()<br/>
+    : print_syscall_totals()<br/>
+          def raw_syscalls__sys_enter(event_name, context, common_cpu,<br/>
+                                      common_secs, common_nsecs, common_pid, common_comm,<br/>
+                                      id, args)<br/>
+    :<br/>
+try : syscalls[id] += 1<br/>
+        except TypeError:<br/>
+                syscalls[id] = 1<br/>
+def print_syscall_totals():<br/>
+    if for_comm is not None:<br/>
             print &#8220;
 syscall events for %s:
-&#8221; % (for_comm),<br />
-    else:<br />
+&#8221; % (for_comm),<br/>
+    else:<br/>
             print &#8220;
 syscall events:
-&#8221;,<br />
+&#8221;,<br/>
     print &#8220;%-40s  %10s
-&#8221; % (&#8220;event&#8221;, &#8220;count&#8221;),<br />
+&#8221; % (&#8220;event&#8221;, &#8220;count&#8221;),<br/>
     print &#8220;%-40s  %10s
-&#8221; % (&#8220;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-&#8220;, \<br />
-                                 &#8220;&#8212;&#8212;&#8212;&#8211;&#8220;),<br />
-    for id, val in sorted(syscalls.iteritems(), key = lambda(k, v): (v, k), \<br />
-                                  reverse = True):<br />
+&#8221; % (&#8220;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-&#8220;, \<br/>
+                                 &#8220;&#8212;&#8212;&#8212;&#8211;&#8220;),<br/>
+    for id, val in sorted(syscalls.iteritems(), key = lambda(k, v): (v, k), \<br/>
+                                  reverse = True):<br/>
             print &#8220;%-40s  %10d
-&#8221; % (syscall_name(id), val),<br />
+&#8221; % (syscall_name(id), val),<br/>
 .ft
 </dd></dl>
 <p> The script can be run just as before: </p>
@@ -241,10 +241,10 @@ perf script -s ~/libexec/perf-core/scripts/python/syscall-counts.py
 <dl>
 <dt>
 </dt><dd>
-.ft C<br />
-#ls &#8211; al kernel &#8211; source / tools / perf / scripts / python<br />
-            root[at] tropicana : /<br />
-                                 home / trz / src / tip #ls &#8211;<br />
+.ft C<br/>
+#ls &#8211; al kernel &#8211; source / tools / perf / scripts / python<br/>
+            root[at] tropicana : /<br/>
+                                 home / trz / src / tip #ls &#8211;<br/>
     al tools / perf / scripts / python total 32 drwxr &#8211; xr &#8211; x 4 trz trz 4096 2010 &#8211; 01 &#8211; 26 22 : 30.drwxr &#8211; xr &#8211; x 4 trz trz 4096 2010 &#8211; 01 &#8211; 26 22 : 29..drwxr &#8211; xr &#8211; x 2 trz trz 4096 2010 &#8211; 01 &#8211; 26 22 : 29 bin &#8211; rw &#8211; r&#8211; r&#8211; 1 trz trz 2548 2010 &#8211; 01 &#8211; 26 22 : 29 check &#8211; perf &#8211; script.py drwxr &#8211; xr &#8211; x 3 trz trz 4096 2010 &#8211; 01 &#8211; 26 22 : 49 Perf &#8211; Trace &#8211; Util &#8211; rw &#8211; r&#8211; r&#8211; 1 trz trz 1462 2010 &#8211; 01 &#8211; 26 22 : 30 syscall &#8211; counts.py.ft
 </dd></dl>
 <p> Once you&#8217;ve done that (don&#8217;t forget to do a new <i>make install</i>, otherwise your script won&#8217;t show up at run-time), <i>perf script -l</i> should show a new entry for your script: </p>

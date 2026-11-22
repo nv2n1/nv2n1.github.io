@@ -20,7 +20,7 @@ description: "eval – evaluate arbitrary perl code using actions"
   URxvt.keysym.M-End:  eval:scroll_to_bottom
 </pre>
 <h2>DESCRIPTION</h2>
-<p> Add support for evaluating arbitrary perl code using actions in keysym resources. If a keysym <i>action</i> takes the form <tt>&quot;eval:STRING&quot;</tt>, the specified <font SIZE="-1"><code>STRING</code></font> is evaluated as a Perl expression. While the full urxvt <font SIZE="-1">API</font> is available, the following methods are also provided for users&#8217; convenience, as they implement basic actions:</p>
+<p> Add support for evaluating arbitrary perl code using actions in keysym resources. If a keysym <i>action</i> takes the form <tt>&quot;eval:STRING&quot;</tt>, the specified <code>STRING</code> is evaluated as a Perl expression. While the full urxvt API is available, the following methods are also provided for users&#8217; convenience, as they implement basic actions:</p>
 <dl>
 <dt>scroll_up $count</dt>
 <dd>
@@ -35,9 +35,9 @@ description: "eval – evaluate arbitrary perl code using actions"
 </dd><dt>scroll_to_bottom</dt>
 <dd> Scroll to the top or bottom of the scrollback.</dd>
 <dt>selection_to_clipboard</dt>
-<dd> Copy the selection to the <font SIZE="-1">CLIPBOARD.</font></dd>
+<dd> Copy the selection to the CLIPBOARD.</dd>
 <dt>paste_primary</dt>
 <dd>
 </dd><dt>paste_clipboard</dt>
-<dd> Paste the value of the <font SIZE="-1">PRIMARY</font> or <font SIZE="-1">CLIPBOARD</font> selection. </dd>
+<dd> Paste the value of the PRIMARY or CLIPBOARD selection. </dd>
 </dl>

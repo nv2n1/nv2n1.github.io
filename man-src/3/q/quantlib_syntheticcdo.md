@@ -12,13 +12,13 @@ description: "QuantLib::SyntheticCDO – Synthetic Collateralized Debt Obligatio
 <p>#include &lt;ql/experimental/credit/syntheticcdo.hpp&gt; </p>
 <p> Inherits <code>QuantLib::Instrument</code>. </p>
 <h3>Classes</h3>
-<p>class <code>engine</code><br />
+<p>class <code>engine</code><br/>
  <i></i><code>CDO</code> base <code>engine</code>.</p>
 <h3>Public Member Functions</h3>
 <p><code>SyntheticCDO</code> (const boost::shared_ptr&lt; <code>Basket</code> &gt; basket, Protection::Side side, const <code>Schedule</code> &amp;schedule, <code>Rate</code> upfrontRate, <code>Rate</code> runningRate, const <code>DayCounter</code> &amp;dayCounter, <code>BusinessDayConvention</code> paymentConvention, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;yieldTS) </p>
 <p> boost::shared_ptr&lt; <code>Basket</code> &gt; <code>basket</code> () const </p>
-<p> bool <code>isExpired</code> () const<br />
- <i>returns whether the instrument is still tradable. </i><br />
+<p> bool <code>isExpired</code> () const<br/>
+ <i>returns whether the instrument is still tradable. </i><br/>
  <code>Rate</code> <code>fairPremium</code> () const </p>
 <p> <code>Rate</code> <code>fairUpfrontPremium</code> () const </p>
 <p> <code>Rate</code> <code>premiumValue</code> () const </p>

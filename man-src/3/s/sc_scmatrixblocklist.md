@@ -12,8 +12,8 @@ description: "sc::SCMatrixBlockList –"
 <p> Inherits <code>sc::SavableState</code>.</p>
 <h3>Public Member Functions</h3>
 <p><code>SCMatrixBlockList</code> (<code>StateIn</code> &amp;) </p>
-<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br />
- <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br />
+<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br/>
+ <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br/>
  void <code>insert</code> (<code>SCMatrixBlock</code> *) </p>
 <p> void <code>append</code> (<code>SCMatrixBlock</code> *) </p>
 <p> <code>SCMatrixBlockListIter</code> <code>begin</code> () </p>

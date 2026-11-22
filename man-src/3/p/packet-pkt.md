@@ -10,14 +10,14 @@ description: "packet.pkt – Pkt module"
 <p>packet.pkt &#8211; Pkt module</p>
 <h2>Description</h2>
 <p>Provides the object for a packet and the string representation of the packet. This object has an attribute for each of the layers in the packet so each layer can be accessed directly instead of going through each layer. To access the nfs layer object you can use &#8216;x.nfs&#8217; instead of using &#8216;x.ethernet.ip.tcp.rpc.nfs&#8217; which would be very cumbersome to use. Also, since NFS can be used with either TCP or UDP it would be harder to access the nfs object independently of the protocol. </p>
-<p> Packet object attributes:<br />
-&nbsp;<wbr>Pkt(<br />
-&nbsp;<wbr>&nbsp;<wbr>record&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>Record information&nbsp;<wbr>(frame number, etc.)<br />
-&nbsp;<wbr>&nbsp;<wbr>ethernet&nbsp;<wbr>=&nbsp;<wbr>ETHERNET II&nbsp;<wbr>(RFC 894)&nbsp;<wbr>object<br />
-&nbsp;<wbr>&nbsp;<wbr>ip&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>IPv4 object<br />
-&nbsp;<wbr>&nbsp;<wbr>tcp&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>TCP object<br />
-&nbsp;<wbr>&nbsp;<wbr>rpc&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>RPC object<br />
-&nbsp;<wbr>&nbsp;<wbr>nfs&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>NFS object<br />
+<p> Packet object attributes:<br/>
+&nbsp;<wbr>Pkt(<br/>
+&nbsp;<wbr>&nbsp;<wbr>record&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>Record information&nbsp;<wbr>(frame number, etc.)<br/>
+&nbsp;<wbr>&nbsp;<wbr>ethernet&nbsp;<wbr>=&nbsp;<wbr>ETHERNET II&nbsp;<wbr>(RFC 894)&nbsp;<wbr>object<br/>
+&nbsp;<wbr>&nbsp;<wbr>ip&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>IPv4 object<br/>
+&nbsp;<wbr>&nbsp;<wbr>tcp&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>TCP object<br/>
+&nbsp;<wbr>&nbsp;<wbr>rpc&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>RPC object<br/>
+&nbsp;<wbr>&nbsp;<wbr>nfs&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>NFS object<br/>
 &nbsp;<wbr>)</p>
 <h2>Classes</h2>
 <h3>class Pkt(baseobj.BaseObj)</h3>

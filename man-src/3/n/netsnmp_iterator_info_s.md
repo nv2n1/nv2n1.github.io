@@ -23,7 +23,7 @@ description: "iterator_info_s – Holds iterator information containing function
 <p> <code>Netsnmp_Iterator_Data</code> * <code>remove_data</code> </p>
 <p> <code>Netsnmp_Iterator_Op</code> * <code>get_size</code> </p>
 <p> int <code>sorted</code> </p>
-<p> void * <code>user_ctx</code><br />
+<p> void * <code>user_ctx</code><br/>
  <i>This can be used by client handlers to store any information they need. </i></p>
 <h2>Detailed Description</h2>
 <p>Holds iterator information containing functions which should be called by the iterator_handler to loop over your data set and sort it in a SNMP specific manner. </p>

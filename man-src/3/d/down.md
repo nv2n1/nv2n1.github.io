@@ -12,13 +12,13 @@ description: "QuantLib::Rounding – basic rounding class"
 <p>#include &lt;ql/math/rounding.hpp&gt; </p>
 <p> Inherited by <code>CeilingTruncation</code>, <code>ClosestRounding</code>, <code>DownRounding</code>, <code>FloorTruncation</code>, and <code>UpRounding</code>. </p>
 <h3>Public Types</h3>
-<p>enum <code>Type</code> { <code>None</code>, <code>Up</code>, <code>Down</code>, <code>Closest</code>, <code>Floor</code>, <code>Ceiling</code> }<br />
+<p>enum <code>Type</code> { <code>None</code>, <code>Up</code>, <code>Down</code>, <code>Closest</code>, <code>Floor</code>, <code>Ceiling</code> }<br/>
  <i>rounding methods </i></p>
 <h3>Public Member Functions</h3>
-<p><code>Rounding</code> ()<br />
- <i>default constructor </i><br />
+<p><code>Rounding</code> ()<br/>
+ <i>default constructor </i><br/>
  <code>Rounding</code> (<code>Integer</code> precision, <code>Type</code> type=Closest, <code>Integer</code> digit=5) </p>
-<p> Decimal <code>operator()</code> (Decimal value) const<br />
+<p> Decimal <code>operator()</code> (Decimal value) const<br/>
  <i>perform rounding </i></p>
 <h3>Inspectors</h3>
 <p><code>Integer</code> <code>precision</code> () const </p>

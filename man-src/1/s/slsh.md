@@ -64,30 +64,30 @@ slsh &gt; sum(sin(x) - cos(x));
 </code></pre>
 <p> Note that in this mode, variables are automatically declared. </p>
 <p> The interactive mode also supports command logging. Logging is enabled by the start_log function. The stop_log function will turn off logging. The default file where logging information will be written is <i>slsh.log</i>. An alternative may be specified as an optional argument to the start_log function: </p>
-<p>slsh &gt; start_log;<br />
-Logging input to slsh.log<br />
-        .<br />
-        .slsh &gt; stop_log;<br />
-slsh &gt; start_log(&#8220;foo.log&#8221;);<br />
-Logging input to foo.log<br />
-        .<br />
-        .slsh &gt; stop_log;<br />
-slsh &gt; start_log;<br />
+<p>slsh &gt; start_log;<br/>
+Logging input to slsh.log<br/>
+        .<br/>
+        .slsh &gt; stop_log;<br/>
+slsh &gt; start_log(&#8220;foo.log&#8221;);<br/>
+Logging input to foo.log<br/>
+        .<br/>
+        .slsh &gt; stop_log;<br/>
+slsh &gt; start_log;<br/>
 Logging input to foo.log</p>
 <p> Similarly, the save_input function may be used to save the previous input to a specified file: </p>
-<p>slsh &gt; save_input;<br />
-Input saved to slsh.log<br />
-        slsh &gt; save_input(&#8220;foo.log&#8221;);<br />
+<p>slsh &gt; save_input;<br/>
+Input saved to slsh.log<br/>
+        slsh &gt; save_input(&#8220;foo.log&#8221;);<br/>
 Input saved to foo.log</p>
 <p> As the above examples indicate, lines must end in a semicolon. This is a basic feature of the language and permits commands to span multiple lines, e.g., </p>
-<p>slsh &gt; x = [<br />
-    1, 2, 3,<br />
-    4, 5, 6<br />
-];<br />
-slsh &gt; sum(x);<br />
+<p>slsh &gt; x = [<br/>
+    1, 2, 3,<br/>
+    4, 5, 6<br/>
+];<br/>
+slsh &gt; sum(x);<br/>
  For convenience some users prefer that commands be automatically terminated with a semicolon. To have a semicolon silently appended to the end of an input line, put the following in <i>$HOME/.slshrc</i> file: </p>
-<p>#ifdef __INTERACTIVE__<br />
-slsh_append_semicolon(1);<br />
+<p>#ifdef __INTERACTIVE__<br/>
+slsh_append_semicolon(1);<br/>
 #endif</p>
 <p> The interactive mode also supports shell escapes. To pass a command to the shell, prefix it with !, e.g., </p>
 <pre>

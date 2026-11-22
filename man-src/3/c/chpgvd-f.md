@@ -10,7 +10,7 @@ description: "chpgvd.f –"
 <p>chpgvd.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>chpgvd</code> (ITYPE, JOBZ, UPLO, N, AP, BP, W, Z, LDZ, WORK, LWORK, RWORK, LRWORK, IWORK, LIWORK, INFO)<br />
+<p>subroutine <code>chpgvd</code> (ITYPE, JOBZ, UPLO, N, AP, BP, W, Z, LDZ, WORK, LWORK, RWORK, LRWORK, IWORK, LIWORK, INFO)<br/>
  <i></i><code>CHPGST</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine chpgvd (integerITYPE, characterJOBZ, characterUPLO, integerN, complex, dimension( * )AP, complex, dimension( * )BP, real, dimension( * )W, complex, dimension( ldz, * )Z, integerLDZ, complex, dimension( * )WORK, integerLWORK, real, dimension( * )RWORK, integerLRWORK, integer, dimension( * )IWORK, integerLIWORK, integerINFO)</h3>

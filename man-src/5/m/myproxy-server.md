@@ -195,8 +195,8 @@ crlDistributionPoints=URI:http://ca.ncsa.uiuc.edu/4a6cd8b1.r0</code></pre>
 <p> The following parameters enable OCSP status checking of stored credentials in the <code><a href="/docs/linux/man/8-myproxy-server/">myproxy-server</a></code>(8) repository, to avoid use of expired credentials.</p>
 <dl>
 <dt><code>ocsp_policy</code><i> policy</i></dt>
-<dd>Controls the policy for checking certificate validity via OCSP before credentials may be delegated. Currently, only the status of the end entity certificate is checked via OCSP (and not any proxy certificates or CA certificates). OCSP will not be used unless ocsp_responder_url and/or ocsp_policy are set. Supported policies are:<br />
-&nbsp;<wbr>&nbsp;<wbr>&quot;aia&quot;&nbsp;<wbr>&#8211; use OCSP responder in certificate AIA extension, if<br />
+<dd>Controls the policy for checking certificate validity via OCSP before credentials may be delegated. Currently, only the status of the end entity certificate is checked via OCSP (and not any proxy certificates or CA certificates). OCSP will not be used unless ocsp_responder_url and/or ocsp_policy are set. Supported policies are:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&quot;aia&quot;&nbsp;<wbr>&#8211; use OCSP responder in certificate AIA extension, if<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>present;&nbsp;<wbr>otherwise use ocsp_responder_url, if set</dd>
 <dt><code>ocsp_responder_url</code><i> URL</i></dt>
 <dd>Specifies the URL of an OCSP responder to use to check the validity of credentials stored in the myproxy-server repository before they may be delegated, so that revoked credentials can not be retrieved and used where their revocation status may not be checked. Currently, only the status of the end entity certificate is checked via OCSP (and not any proxy certificates or CA certificates). In any case, CRL checks are always performed. Both http and https urls are supported. OCSP will not be used unless ocsp_responder_url and/or ocsp_policy are set.</dd>
@@ -209,14 +209,14 @@ crlDistributionPoints=URI:http://ca.ncsa.uiuc.edu/4a6cd8b1.r0</code></pre>
 <dt><code>usage_stats_target</code><i> target_list</i></dt>
 <dd>This option can be used to specify the target collector hosts to which usage metrics should be reported. This setting will be ignored if <code>disable_usage_stats</code> is enabled. Multiple targets can be specified in <i>target_list</i> separated by comma(s). Each target specification is of the format <i>host:port[!tags]</i> <i>tags</i> control what data elements are reported. The following list specifies the tags for the corresponding data elements.</dd>
 <dl>
-<dd>V &#8211; Major Version number of MyProxy server v &#8211; Minor Version number of MyProxy server t &#8211; Task Code (0=Get, 1=Put, 2=Info, 3=Destroy, 4=ChangeCredPassphrase, 5=StoreEndEntCred, 6=RetrEndEntCred, 7=GetTrustRoots) r &#8211; Task Return Code. l &#8211; Requested Lifetime for Credential. L &#8211; Actual Lifetime for Credential. B &#8211; Informational Bit mask to be interpreted left to right as follows:<br />
-&nbsp;<wbr>PAM used<br />
-&nbsp;<wbr>SASL used<br />
-&nbsp;<wbr>Credential passphrase check used<br />
-&nbsp;<wbr>Trusted Retriever&nbsp;<wbr>(Certificate-based authentication)<br />
-&nbsp;<wbr>Certificate Authorization method used&nbsp;<wbr>(Trusted Renewer)<br />
-&nbsp;<wbr>Pubcookie was used<br />
-&nbsp;<wbr>Trustroots requested<br />
+<dd>V &#8211; Major Version number of MyProxy server v &#8211; Minor Version number of MyProxy server t &#8211; Task Code (0=Get, 1=Put, 2=Info, 3=Destroy, 4=ChangeCredPassphrase, 5=StoreEndEntCred, 6=RetrEndEntCred, 7=GetTrustRoots) r &#8211; Task Return Code. l &#8211; Requested Lifetime for Credential. L &#8211; Actual Lifetime for Credential. B &#8211; Informational Bit mask to be interpreted left to right as follows:<br/>
+&nbsp;<wbr>PAM used<br/>
+&nbsp;<wbr>SASL used<br/>
+&nbsp;<wbr>Credential passphrase check used<br/>
+&nbsp;<wbr>Trusted Retriever&nbsp;<wbr>(Certificate-based authentication)<br/>
+&nbsp;<wbr>Certificate Authorization method used&nbsp;<wbr>(Trusted Renewer)<br/>
+&nbsp;<wbr>Pubcookie was used<br/>
+&nbsp;<wbr>Trustroots requested<br/>
 &nbsp;<wbr>Trustroots delivered I &#8211; Client IP address u &#8211; Username U &#8211; User DN In addition to the above selected information, the following data are reported to ALL the specified/default target collectors. There&#8217;s no way to exclude these from being reported other than by disabling the reporting of usage metrics: Component code &#8211; 11 for MyProxy Component Data Format version &#8211; 0 currently IP Address of Reporting Server Timestamp Hostname If no tags are specified in a host spec, or the special string &quot;default&quot; is specified, the tags VvtrlLB are assumed. A site could choose to allow a different set of data to be reported by specifying a different tag set. The last 3 tags I, u and U above are more meant for a local collector that a site might like to deploy since they could be construed as private information. The special string &quot;all&quot; denotes all tags. By default, Usage Metrics reporting is sent to &quot;usage-stats.cilogon.org:4810&quot;. This can be made explicit by specifying &quot;default&quot; (all by itself) for the target specification as in: usage_stats_target &quot;default&quot; If <code>usage_stats_target</code> is not specified, a comma-separated list of targets (without any tags specified) if specified in the environment variable GLOBUS_USAGE_TARGETS will be used. </dd>
 <h2>Examples</h2>
 <p>The following policy enables all credential repository features. </p>

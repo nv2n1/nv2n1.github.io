@@ -14,13 +14,13 @@ description: "ql/stochasticprocess.hpp – stochastic processes"
 #include &lt;ql/patterns/observable.hpp&gt;
 #include &lt;ql/math/matrix.hpp&gt;</code></pre>
 <h3>Classes</h3>
-<p>class <code>StochasticProcess</code><br />
- <i>multi-dimensional stochastic process class. </i><br />
- class <code>discretization</code><br />
- <i></i><code>discretization</code> of a stochastic process over a given time interval<br />
- class <code>StochasticProcess1D</code><br />
- <i>1-dimensional stochastic process </i><br />
- class <code>discretization</code><br />
+<p>class <code>StochasticProcess</code><br/>
+ <i>multi-dimensional stochastic process class. </i><br/>
+ class <code>discretization</code><br/>
+ <i></i><code>discretization</code> of a stochastic process over a given time interval<br/>
+ class <code>StochasticProcess1D</code><br/>
+ <i>1-dimensional stochastic process </i><br/>
+ class <code>discretization</code><br/>
  <i></i><code>discretization</code> of a 1-D stochastic process</p>
 <h2>Detailed Description</h2>
 <p>stochastic processes</p>

@@ -65,8 +65,8 @@ description: "perlhack – How to hack on Perl"
 <p> The porters appreciate the time you spent helping to make Perl better. Thank you!</p>
 <dt>&bull;</dt>
 <dd> Acknowledgement </dd>
-<p> All contributors are credited (by name and email address) in the <font SIZE="-1">AUTHORS</font> file, which is part of the perl distribution, as well as the Git commit history. </p>
-<p> If you don’t want to be included in the <font SIZE="-1">AUTHORS</font> file, just let us know. Otherwise we will take your submission of a patch as permission to credit you in the <font SIZE="-1">AUTHORS</font> file.</p>
+<p> All contributors are credited (by name and email address) in the AUTHORS file, which is part of the perl distribution, as well as the Git commit history. </p>
+<p> If you don’t want to be included in the AUTHORS file, just let us know. Otherwise we will take your submission of a patch as permission to credit you in the AUTHORS file.</p>
 <dt>&bull;</dt>
 <dd> Next time </dd>
 <p> The next time you wish to make a patch, you need to start from the latest perl in a pristine state. Check you don&#8217;t have any local changes or added files in your perl check-out which you wish to keep, then run these commands: </p>
@@ -86,7 +86,7 @@ description: "perlhack – How to hack on Perl"
 <p> A searchable archive of the list is available at &lt;<a rel="nofollow" href="http://markmail.org/search/?q=perl5-porters">http://markmail.org/search/?q=perl5-porters</a>&gt;. There is also an archive at &lt;<a rel="nofollow" href="http://archive.develooper.com/perl5-porters@perl.org/">http://archive.develooper.com/perl5-porters@perl.org/</a>&gt;.</p>
 <h3>perl-changes mailing list</h3>
 <p> The perl5-changes mailing list receives a copy of each patch that gets submitted to the maintenance and development branches of the perl repository. See &lt;<a rel="nofollow" href="http://lists.perl.org/list/perl5-changes.html">http://lists.perl.org/list/perl5-changes.html</a>&gt; for subscription and archive information.</p>
-<h3>#p5p on <font SIZE="-1">IRC</font></h3>
+<h3>#p5p on IRC</h3>
 <p> Many porters are also active on the &lt;<a href="irc://irc.perl.org/#p5p">irc://irc.perl.org/#p5p</a>&gt; channel. Feel free to join the channel and ask questions about hacking on the Perl core.</p>
 <h2>GETTING THE PERL SOURCE</h2>
 <p> All of Perl&#8217;s source code is kept centrally in a Git repository at <i>perl5.git.perl.org</i>. The repository contains many Perl revisions from Perl 1 onwards and all the revisions from Perforce, the previous version control system. </p>
@@ -102,7 +102,7 @@ description: "perlhack – How to hack on Perl"
   % git clone <a rel="nofollow" href="http://perl5.git.perl.org/perl.git">http://perl5.git.perl.org/perl.git</a> perl
 </pre>
 <h3>Read access via the web</h3>
-<p> You may access the repository over the web. This allows you to browse the tree, see recent commits, subscribe to <font SIZE="-1">RSS</font> feeds for the changes, search for particular commits and more. You may access it at &lt;<a rel="nofollow" href="http://perl5.git.perl.org/perl.git">http://perl5.git.perl.org/perl.git</a>&gt;. A mirror of the repository is found at &lt;<a rel="nofollow" href="https://github.com/Perl/perl5">https://github.com/Perl/perl5</a>&gt;.</p>
+<p> You may access the repository over the web. This allows you to browse the tree, see recent commits, subscribe to RSS feeds for the changes, search for particular commits and more. You may access it at &lt;<a rel="nofollow" href="http://perl5.git.perl.org/perl.git">http://perl5.git.perl.org/perl.git</a>&gt;. A mirror of the repository is found at &lt;<a rel="nofollow" href="https://github.com/Perl/perl5">https://github.com/Perl/perl5</a>&gt;.</p>
 <h3>Read access via rsync</h3>
 <p> You can also choose to use rsync to get a copy of the current source tree for the bleadperl branch and all maintenance branches: </p>
 <pre>
@@ -129,7 +129,7 @@ description: "perlhack – How to hack on Perl"
 <p> Patches are reviewed and discussed on the p5p list. Simple, uncontroversial patches will usually be applied without any discussion. When the patch is applied, the ticket will be updated and you will receive email. In addition, an email will be sent to the p5p list. </p>
 <p> In other cases, the patch will need more work or discussion. That will happen on the p5p list. </p>
 <p> You are encouraged to participate in the discussion and advocate for your patch. Sometimes your patch may get lost in the shuffle. It&#8217;s appropriate to send a reminder email to p5p if no action has been taken in a month. Please remember that the Perl 5 developers are all volunteers, and be polite. </p>
-<p> Changes are always applied directly to the main development branch, called &#8220;blead&#8221;. Some patches may be backported to a maintenance branch. If you think your patch is appropriate for the maintenance branch (see &#8220;<font SIZE="-1">MAINTENANCE BRANCHES&#8221;</font> in perlpolicy), please explain why when you submit it.</p>
+<p> Changes are always applied directly to the main development branch, called &#8220;blead&#8221;. Some patches may be backported to a maintenance branch. If you think your patch is appropriate for the maintenance branch (see &#8220;MAINTENANCE BRANCHES&#8221; in perlpolicy), please explain why when you submit it.</p>
 <h3>Getting your patch accepted</h3>
 <p> If you are submitting a code patch there are several things that you can do to help the Perl 5 Porters accept your patch. </p>
 <p> <i>Patch style</i> </p>
@@ -141,7 +141,7 @@ description: "perlhack – How to hack on Perl"
 </pre>
 <p> This produces a patch based on the difference between blead and your current branch. It&#8217;s important to make sure that blead is up to date before producing the diff, that&#8217;s why we call <tt>&quot;git pull&quot;</tt> first. </p>
 <p> We strongly recommend that you use git if possible. It will make your life easier, and ours as well. </p>
-<p> However, if you&#8217;re not using git, you can still produce a suitable patch. You&#8217;ll need a pristine copy of the Perl source to diff against. The porters prefer unified diffs. Using <font SIZE="-1">GNU</font> <tt>&quot;diff&quot;</tt>, you can produce a diff like this: </p>
+<p> However, if you&#8217;re not using git, you can still produce a suitable patch. You&#8217;ll need a pristine copy of the Perl source to diff against. The porters prefer unified diffs. Using GNU <tt>&quot;diff&quot;</tt>, you can produce a diff like this: </p>
 <pre>
   % diff -Npurd perl.pristine perl.mine
 </pre>
@@ -173,20 +173,20 @@ description: "perlhack – How to hack on Perl"
 <p> In particular, follow these general guidelines for patching Perl sources:</p>
 <dl>
 <dt>&bull;</dt>
-<dd> 4-wide indents for code, 2-wide indents for nested <font SIZE="-1">CPP</font> <tt>&quot;#define&quot;</tt>s, with 8-wide tabstops.</dd>
+<dd> 4-wide indents for code, 2-wide indents for nested CPP <tt>&quot;#define&quot;</tt>s, with 8-wide tabstops.</dd>
 <dt>&bull;</dt>
 <dd> Use spaces for indentation, not tab characters. </dd>
 <p> The codebase is a mixture of tabs and spaces for indentation, and we are moving to spaces only. Converting lines you&#8217;re patching from 8-wide tabs to spaces will help this migration.</p>
 <dt>&bull;</dt>
 <dd> Try hard not to exceed 79-columns</dd>
 <dt>&bull;</dt>
-<dd> <font SIZE="-1">ANSI C</font> prototypes</dd>
+<dd> ANSI C prototypes</dd>
 <dt>&bull;</dt>
 <dd> Uncuddled elses and &#8220;K&amp;R&#8221; style for indenting control constructs</dd>
 <dt>&bull;</dt>
-<dd> No C<font SIZE="-2">++</font> style (//) comments</dd>
+<dd> No C++ style (//) comments</dd>
 <dt>&bull;</dt>
-<dd> Mark places that need to be revisited with <font SIZE="-1">XXX</font> (and revisit often!)</dd>
+<dd> Mark places that need to be revisited with XXX (and revisit often!)</dd>
 <dt>&bull;</dt>
 <dd> Opening brace lines up with &#8220;if&#8221; when conditional spans multiple lines; should be at end-of-line otherwise</dd>
 <dt>&bull;</dt>
@@ -198,11 +198,11 @@ description: "perlhack – How to hack on Perl"
 <dt>&bull;</dt>
 <dd> &#8220;return foo;&#8221; rather than &#8220;return(foo);&#8221;</dd>
 <dt>&bull;</dt>
-<dd> &#8220;if (!foo) &#8230;&#8221; rather than &#8220;if (foo == <font SIZE="-1">FALSE</font>) &#8230;&#8221; etc.</dd>
+<dd> &#8220;if (!foo) &#8230;&#8221; rather than &#8220;if (foo == FALSE) &#8230;&#8221; etc.</dd>
 <dt>&bull;</dt>
-<dd> Do not declare variables using &#8220;register&#8221;. It may be counterproductive with modern compilers, and is deprecated in C<font SIZE="-2">++</font>, under which the Perl source is regularly compiled.</dd>
+<dd> Do not declare variables using &#8220;register&#8221;. It may be counterproductive with modern compilers, and is deprecated in C++, under which the Perl source is regularly compiled.</dd>
 <dt>&bull;</dt>
-<dd> In-line functions that are in headers that are accessible to <font SIZE="-1">XS</font> code need to be able to compile without warnings with commonly used extra compilation flags, such as gcc&#8217;s <tt>&quot;-Wswitch-default&quot;</tt> which warns whenever a switch statement does not have a &#8220;default&#8221; case. The use of these extra flags is to catch potential problems in legal C code, and is often used by Perl aggregators, such as Linux distributors.</dd></dl>
+<dd> In-line functions that are in headers that are accessible to XS code need to be able to compile without warnings with commonly used extra compilation flags, such as gcc&#8217;s <tt>&quot;-Wswitch-default&quot;</tt> which warns whenever a switch statement does not have a &#8220;default&#8221; case. The use of these extra flags is to catch potential problems in legal C code, and is often used by Perl aggregators, such as Linux distributors.</dd></dl>
 <p> <i>Test suite</i> </p>
 <p> If your patch changes code (rather than just changing documentation), you should also include one or more test cases which illustrate the bug you&#8217;re fixing or validate the new functionality you&#8217;re adding. In general, you should update an existing test file rather than create a new one. </p>
 <p> Your test suite additions should generally follow these guidelines (courtesy of Gurusamy Sarathy &lt;gsar [at] activestate.com&gt;):</p>
@@ -216,9 +216,9 @@ description: "perlhack – How to hack on Perl"
 <dt>&bull;</dt>
 <dd> Use unrelated features (this will flush out bizarre interactions).</dd>
 <dt>&bull;</dt>
-<dd> Use non-standard idioms (otherwise you are not testing <font SIZE="-1">TIMTOWTDI</font>).</dd>
+<dd> Use non-standard idioms (otherwise you are not testing TIMTOWTDI).</dd>
 <dt>&bull;</dt>
-<dd> Avoid using hardcoded test numbers whenever possible (the <font SIZE="-1">EXPECTED/GOT</font> found in t/op/tie.t is much more maintainable, and gives better failure reports).</dd>
+<dd> Avoid using hardcoded test numbers whenever possible (the EXPECTED/GOT found in t/op/tie.t is much more maintainable, and gives better failure reports).</dd>
 <dt>&bull;</dt>
 <dd> Give meaningful error messages when a test fails.</dd>
 <dt>&bull;</dt>
@@ -242,7 +242,7 @@ description: "perlhack – How to hack on Perl"
 <h3>Patching a core module</h3>
 <p> This works just like patching anything else, with one extra consideration. </p>
 <p> Modules in the <i>cpan/</i> directory of the source tree are maintained outside of the Perl core. When the author updates the module, the updates are simply copied into the core. See that module&#8217;s documentation or its listing on &lt;<a rel="nofollow" href="http://search.cpan.org/">http://search.cpan.org/</a>&gt; for more information on reporting bugs and submitting patches. </p>
-<p> In most cases, patches to modules in <i>cpan/</i> should be sent upstream and should not be applied to the Perl core individually. If a patch to a file in <i>cpan/</i> absolutely cannot wait for the fix to be made upstream, released to <font SIZE="-1">CPAN</font> and copied to blead, you must add (or update) a <tt>&quot;CUSTOMIZED&quot;</tt> entry in the <i>&#8220;Porting/Maintainers.pl&#8221;</i> file to flag that a local modification has been made. See <i>&#8220;Porting/Maintainers.pl&#8221;</i> for more details. </p>
+<p> In most cases, patches to modules in <i>cpan/</i> should be sent upstream and should not be applied to the Perl core individually. If a patch to a file in <i>cpan/</i> absolutely cannot wait for the fix to be made upstream, released to CPAN and copied to blead, you must add (or update) a <tt>&quot;CUSTOMIZED&quot;</tt> entry in the <i>&#8220;Porting/Maintainers.pl&#8221;</i> file to flag that a local modification has been made. See <i>&#8220;Porting/Maintainers.pl&#8221;</i> for more details. </p>
 <p> In contrast, modules in the <i>dist/</i> directory are maintained in the core.</p>
 <h3>Updating perldelta</h3>
 <p> For changes significant enough to warrant a <i>pod/perldelta.pod</i> entry, the porters will greatly appreciate it if you submit a delta entry along with your actual change. Significant changes include, but are not limited to:</p>
@@ -285,8 +285,8 @@ description: "perlhack – How to hack on Perl"
 <p> It&#8217;s a cardinal sin to break existing Perl programs. New warnings can be contentious&#8212;some say that a program that emits warnings is not broken, while others say it is. Adding keywords has the potential to break programs, changing the meaning of existing token sequences or functions might break programs. </p>
 <p> The Perl 5 core includes mechanisms to help porters make backwards incompatible changes more compatible such as the feature and deprecate modules. Please use them when appropriate. </p>
 <p> <i>Could it be a module instead?</i> </p>
-<p> Perl 5 has extension mechanisms, modules and <font SIZE="-1">XS,</font> specifically to avoid the need to keep changing the Perl interpreter. You can write modules that export functions, you can give those functions prototypes so they can be called like built-in functions, you can even write <font SIZE="-1">XS</font> code to mess with the runtime data structures of the Perl interpreter if you want to implement really complicated things. </p>
-<p> Whenever possible, new features should be prototyped in a <font SIZE="-1">CPAN</font> module before they will be considered for the core. </p>
+<p> Perl 5 has extension mechanisms, modules and XS, specifically to avoid the need to keep changing the Perl interpreter. You can write modules that export functions, you can give those functions prototypes so they can be called like built-in functions, you can even write XS code to mess with the runtime data structures of the Perl interpreter if you want to implement really complicated things. </p>
+<p> Whenever possible, new features should be prototyped in a CPAN module before they will be considered for the core. </p>
 <p> <i>Is the feature generic enough?</i> </p>
 <p> Is this something that only the submitter wants added to the language, or is it broadly useful? Sometimes, instead of adding a feature with a tight focus, the porters might decide to wait until someone implements the more generalized feature. </p>
 <p> <i>Does it potentially introduce new bugs?</i> </p>
@@ -329,12 +329,12 @@ description: "perlhack – How to hack on Perl"
 <dd> Everything else </dd>
 <p> Now that the core of Perl is tested, Test::More can and should be used. You can also use the full suite of core modules in the tests.</dl>
 <p> When you say &#8220;make test&#8221;, Perl uses the <i>t/TEST</i> program to run the test suite (except under Win32 where it uses <i>t/harness</i> instead). All tests are run from the <i>t/</i> directory, <code>not</code> the directory which contains the test. This causes some problems with the tests in <i>lib/</i>, so here&#8217;s some opportunity for some patching. </p>
-<p> You must be triply conscious of cross-platform concerns. This usually boils down to using File::Spec, avoiding things like <tt>&quot;fork()&quot;</tt> and <tt>&quot;system()&quot;</tt> unless absolutely necessary, and not assuming that a given character has a particular ordinal value (code point) or that its <font SIZE="-1">UTF-8</font> representation is composed of particular bytes. </p>
-<p> There are several functions available to specify characters and code points portably in tests. The always-preloaded functions <tt>&quot;utf8::unicode_to_native()&quot;</tt> and its inverse <tt>&quot;utf8::native_to_unicode()&quot;</tt> take code points and translate appropriately. The file <i>t/charset_tools.pl</i> has several functions that can be useful. It has versions of the previous two functions that take strings as inputs &#8212; not single numeric code points: <tt>&quot;uni_to_native()&quot;</tt> and <tt>&quot;native_to_uni()&quot;</tt>. If you must look at the individual bytes comprising a <font SIZE="-1">UTF-8</font> encoded string, <tt>&quot;byte_utf8a_to_utf8n()&quot;</tt> takes as input a string of those bytes encoded for an <font SIZE="-1">ASCII</font> platform, and returns the equivalent string in the native platform. For example, <tt>&quot;byte_utf8a_to_utf8n(&quot; &quot;)&quot;</tt> returns the byte sequence on the current platform that form the <font SIZE="-1">UTF-8</font> for <tt>&quot;U+00A0&quot;</tt>, since <tt>&quot; &quot;</tt> are the <font SIZE="-1">UTF-8</font> bytes on an <font SIZE="-1">ASCII</font> platform for that code point. This function returns <tt>&quot; &quot;</tt> on an <font SIZE="-1">ASCII</font> platform, and <tt>&quot;�A&quot;</tt> on an <font SIZE="-1">EBCDIC 1047</font> one. </p>
+<p> You must be triply conscious of cross-platform concerns. This usually boils down to using File::Spec, avoiding things like <tt>&quot;fork()&quot;</tt> and <tt>&quot;system()&quot;</tt> unless absolutely necessary, and not assuming that a given character has a particular ordinal value (code point) or that its UTF-8 representation is composed of particular bytes. </p>
+<p> There are several functions available to specify characters and code points portably in tests. The always-preloaded functions <tt>&quot;utf8::unicode_to_native()&quot;</tt> and its inverse <tt>&quot;utf8::native_to_unicode()&quot;</tt> take code points and translate appropriately. The file <i>t/charset_tools.pl</i> has several functions that can be useful. It has versions of the previous two functions that take strings as inputs &#8212; not single numeric code points: <tt>&quot;uni_to_native()&quot;</tt> and <tt>&quot;native_to_uni()&quot;</tt>. If you must look at the individual bytes comprising a UTF-8 encoded string, <tt>&quot;byte_utf8a_to_utf8n()&quot;</tt> takes as input a string of those bytes encoded for an ASCII platform, and returns the equivalent string in the native platform. For example, <tt>&quot;byte_utf8a_to_utf8n(&quot; &quot;)&quot;</tt> returns the byte sequence on the current platform that form the UTF-8 for <tt>&quot;U+00A0&quot;</tt>, since <tt>&quot; &quot;</tt> are the UTF-8 bytes on an ASCII platform for that code point. This function returns <tt>&quot; &quot;</tt> on an ASCII platform, and <tt>&quot;�A&quot;</tt> on an EBCDIC 1047 one. </p>
 <p> But easiest is, if the character is specifiable as a literal, like <tt>&quot;A&quot;</tt> or <tt>&quot;%&quot;</tt>, to use that; if not so specificable, you can use use <tt>&quot;\N{}&quot;</tt> , if the side effects aren&#8217;t troublesome. Simply specify all your characters in hex, using <tt>&quot;\N{U+ZZ}&quot;</tt> instead of <tt>&quot;</tt>\xZZ&quot;</code>. <code>&quot;\N{}&quot;</code> is the Unicode name, and so it always gives you the Unicode character. <code>&quot;\N{U+41}&quot;</code> is the character whose Unicode code point is <code>0x41</code>, hence is <code>&#8216;A&#8217;</code> on all platforms. The side effects are: </p>
 <dl>
 <dt>&bull;</dt>
-<dd> <p> These select Unicode rules. That means that in double-quotish strings, the string is always converted to <font SIZE="-1">UTF-8</font> to force a Unicode interpretation (you can <code>&quot;utf8::downgrade()&quot;</code> afterwards to convert back to non-UTF8, if possible). In regular expression patterns, the conversion isn&#8217;t done, but if the character set modifier would otherwise be <code>&quot;/d&quot;</code>, it is changed to <code>&quot;/u&quot;</code>. </p>
+<dd> <p> These select Unicode rules. That means that in double-quotish strings, the string is always converted to UTF-8 to force a Unicode interpretation (you can <code>&quot;utf8::downgrade()&quot;</code> afterwards to convert back to non-UTF8, if possible). In regular expression patterns, the conversion isn&#8217;t done, but if the character set modifier would otherwise be <code>&quot;/d&quot;</code>, it is changed to <code>&quot;/u&quot;</code>. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> If you use the form <code>&quot;\N{</code>character name <code>}&quot;</code>, the charnames module gets automatically loaded. This may not be suitable for the test level you are doing. </p>
@@ -359,14 +359,14 @@ description: "perlhack – How to hack on Perl"
 <dd> <p> test_harness </p>
 <p> Run the test suite with the <i>t/harness</i> controlling program, instead of <i>t/TEST</i>. <i>t/harness</i> is more sophisticated, and uses the Test::Harness module, thus using this test target supposes that perl mostly works. The main advantage for our purposes is that it prints a detailed summary of failed tests at the end. Also, unlike <i>t/TEST</i>, it doesn&#8217;t redirect stderr to stdout. </p>
 <p> Note that under Win32 <i>t/harness</i> is always used instead of <i>t/TEST</i>, so there is no special ``test_harness&#8217;&#8216; target. </p>
-<p> Under Win32&#8217;s ``test&#8217;&#8216; target you may use the <font SIZE="-1">TEST_SWITCHES</font> and <font SIZE="-1">TEST_FILES</font> environment variables to control the behaviour of <i>t/harness</i>. This means you can say </p>
+<p> Under Win32&#8217;s ``test&#8217;&#8216; target you may use the TEST_SWITCHES and TEST_FILES environment variables to control the behaviour of <i>t/harness</i>. This means you can say </p>
 <pre><code>    nmake test TEST_FILES=&quot;op/*.t&quot;
     nmake test TEST_SWITCHES=&quot;-torture&quot; TEST_FILES=&quot;op/*.t&quot;
 </code></pre>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> test-notty test_notty </p>
-<p> Sets <font SIZE="-1">PERL_SKIP_TTY_TEST</font> to true before running normal test. </p>
+<p> Sets PERL_SKIP_TTY_TEST to true before running normal test. </p>
  </dd></dl>
 <h3>Parallel tests</h3>
 <p> The core distribution can now run its regression tests in parallel on Unix-like platforms. Instead of running <code>&quot;make test&quot;</code>, set <code>&quot;TEST_JOBS&quot;</code> in your environment to the number of tests to run in parallel, and run <code>&quot;make test_harness&quot;</code>. On a Bourne-like shell, this can be done as </p>
@@ -399,11 +399,11 @@ description: "perlhack – How to hack on Perl"
  </dd>
 <dt>&bull;</dt>
 <dd> <p> -re=PATTERN </p>
-<p> Filter the file list so that all the test files run match <font SIZE="-1">PATTERN.</font> Note that this form is distinct from the <code>-re </code><font SIZE="-1"><code>LIST OF PATTERNS</code></font> form below in that it allows the file list to be provided as well. </p>
+<p> Filter the file list so that all the test files run match PATTERN. Note that this form is distinct from the <code>-re </code><code>LIST OF PATTERNS</code> form below in that it allows the file list to be provided as well. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> -re <font SIZE="-1">LIST OF PATTERNS</font> </p>
-<p> Filter the file list so that all the test files run match /(LIST|OF|PATTERNS)/. Note that with this form the patterns are joined by &#8216;|&#8216; and you cannot supply a list of files, instead the test files are obtained from the <font SIZE="-1">MANIFEST.</font> </p>
+<dd> <p> -re LIST OF PATTERNS </p>
+<p> Filter the file list so that all the test files run match /(LIST|OF|PATTERNS)/. Note that with this form the patterns are joined by &#8216;|&#8216; and you cannot supply a list of files, instead the test files are obtained from the MANIFEST. </p>
  </dd></dl>
 <p> You can run an individual test by a command similar to </p>
 <pre><code>    ./perl -I../lib path/to/foo.t
@@ -412,18 +412,18 @@ description: "perlhack – How to hack on Perl"
 <dl>
 <dt>&bull;</dt>
 <dd> <p> PERL_CORE=1 </p>
-<p> indicates that we&#8217;re running this test as part of the perl core test suite. This is useful for modules that have a dual life on <font SIZE="-1">CPAN.</font> </p>
+<p> indicates that we&#8217;re running this test as part of the perl core test suite. This is useful for modules that have a dual life on CPAN. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> PERL_DESTRUCT_LEVEL=2 </p>
-<p> is set to 2 if it isn&#8217;t set already (see ``<font SIZE="-1">PERL_DESTRUCT_LEVEL&#8217;&#8216;</font> in perlhacktips). </p>
+<p> is set to 2 if it isn&#8217;t set already (see ``PERL_DESTRUCT_LEVEL&#8217;&#8216; in perlhacktips). </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <font SIZE="-1">PERL</font> </p>
+<dd> <p> PERL </p>
 <p> (used only by <i>t/TEST</i>) if set, overrides the path to the perl executable that should be used to run the tests (the default being <i>./perl</i>). </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <font SIZE="-1">PERL_SKIP_TTY_TEST</font> </p>
+<dd> <p> PERL_SKIP_TTY_TEST </p>
 <p> if set, tells to skip the tests that need a terminal. It&#8217;s actually set automatically by the Makefile, but can also be forced artificially by running &#8216;make test_notty&#8217;. </p>
  </dd></dl>
 <p> <i>Other environment variables that may influence tests</i> </p>
@@ -433,15 +433,15 @@ description: "perlhack – How to hack on Perl"
 <p> Setting this variable runs all the Net::Ping modules tests, otherwise some tests that interact with the outside world are skipped. See perl58delta. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <font SIZE="-1">PERL_TEST_NOVREXX</font> </p>
-<p> Setting this variable skips the vrexx.t tests for <font SIZE="-1">OS2::REXX.</font> </p>
+<dd> <p> PERL_TEST_NOVREXX </p>
+<p> Setting this variable skips the vrexx.t tests for OS2::REXX. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <font SIZE="-1">PERL_TEST_NUMCONVERTS</font> </p>
+<dd> <p> PERL_TEST_NUMCONVERTS </p>
 <p> This sets a variable in op/numconvert.t. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <font SIZE="-1">PERL_TEST_MEMORY</font> </p>
+<dd> <p> PERL_TEST_MEMORY </p>
 <p> Setting this variable includes the tests in <i>t/bigmem/</i>. This should be set to the number of gigabytes of memory available for testing, eg. <code>&quot;PERL_TEST_MEMORY=4&quot;</code> indicates that tests that require 4GiB of available memory can be run safely. </p>
  </dd></dl>
 <p> See also the documentation for the Test and Test::Harness modules, for more environment variables that affect testing.  </p>
@@ -450,7 +450,7 @@ description: "perlhack – How to hack on Perl"
 <p> The file <i>t/perf/opcount.t</i> is designed to test whether a particular code snippet has been compiled into an optree containing specified numbers of particular op types. This is good for testing whether optimisations which alter ops, such as converting an <code>&quot;aelem&quot;</code> op into an <code>&quot;aelemfast&quot;</code> op, are really doing that. </p>
 <p> The files <i>t/perf/speed.t</i> and <i>t/re/speed.t</i> are designed to test things that run thousands of times slower if a particular optimisation is broken (for example, the utf8 length cache on long utf8 strings). Add a test that will take a fraction of a second normally, and minutes otherwise, causing the test file to time out on failure.  </p>
 <h3>Building perl at older commits</h3>
-<p> In the course of hacking on the Perl core distribution, you may have occasion to configure, build and test perl at an old commit. Sometimes <code>&quot;make&quot;</code> will fail during this process. If that happens, you may be able to salvage the situation by using the Devel::PatchPerl library from <font SIZE="-1">CPAN</font> (not included in the core) to bring the source code at that commit to a buildable state. </p>
+<p> In the course of hacking on the Perl core distribution, you may have occasion to configure, build and test perl at an old commit. Sometimes <code>&quot;make&quot;</code> will fail during this process. If that happens, you may be able to salvage the situation by using the Devel::PatchPerl library from CPAN (not included in the core) to bring the source code at that commit to a buildable state. </p>
 <p> Here&#8217;s a real world example, taken from work done to resolve perl #72414 &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=72414">https://rt.perl.org/Ticket/Display.html?id=72414</a>&gt;. Use of <i>Porting/bisect.pl</i> had identified commit <code>&quot;ba77e4cc9d1ceebf472c9c5c18b2377ee47062e6&quot;</code> as the commit in which a bug was corrected. To confirm, a P5P developer wanted to configure and build perl at commit <code>&quot;ba77e4c^&quot;</code> (presumably ``bad&#8217;&#8216;) and then at <code>&quot;ba77e4c&quot;</code> (presumably ``good&#8217;&#8216;). Normal configuration and build was attempted: </p>
 <pre><code>    $ sh ./Configure -des -Dusedevel
     $ make test_prep
@@ -477,7 +477,7 @@ description: "perlhack – How to hack on Perl"
     $ perl -MDevel::PatchPerl -e \
         'Devel::PatchPerl-&gt;patch_source(&quot;5.11.1&quot;, &quot;/path/to/sourcecode&quot;);'
 </code></pre>
-<p> Once the source was patched, <code>&quot;./Configure&quot;</code> and <code>&quot;make test_prep&quot;</code> were called and completed successfully, enabling confirmation of the findings in <font SIZE="-1">RT</font> #72414.  </p>
+<p> Once the source was patched, <code>&quot;./Configure&quot;</code> and <code>&quot;make test_prep&quot;</code> were called and completed successfully, enabling confirmation of the findings in RT #72414.  </p>
 <h2>MORE READING FOR GUTS HACKERS</h2>
 <p> To hack on the Perl guts, you&#8217;ll need to read the following things: </p>
 <dl>
@@ -506,20 +506,20 @@ description: "perlhack – How to hack on Perl"
  </dd>
 <dt>&bull;</dt>
 <dd> <p> perlxstut and perlxs </p>
-<p> A working knowledge of <font SIZE="-1">XSUB</font> programming is incredibly useful for core hacking; XSUBs use techniques drawn from the <font SIZE="-1">PP</font> code, the portion of the guts that actually executes a Perl program. It&#8217;s a lot gentler to learn those techniques from simple examples and explanation than from the core itself. </p>
+<p> A working knowledge of XSUB programming is incredibly useful for core hacking; XSUBs use techniques drawn from the PP code, the portion of the guts that actually executes a Perl program. It&#8217;s a lot gentler to learn those techniques from simple examples and explanation than from the core itself. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> perlapi </p>
-<p> The documentation for the Perl <font SIZE="-1">API</font> explains what some of the internal functions do, as well as the many macros used in the source. </p>
+<p> The documentation for the Perl API explains what some of the internal functions do, as well as the many macros used in the source. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> <i>Porting/pumpkin.pod</i> </p>
 <p> This is a collection of words of wisdom for a Perl porter; some of it is only useful to the pumpkin holder, but most of it applies to anyone wanting to go about Perl development. </p>
  </dd></dl>
 <h2>CPAN TESTERS AND PERL SMOKERS</h2>
-<p> The <font SIZE="-1">CPAN</font> testers ( &lt;<a rel="nofollow" href="http://testers.cpan.org/">http://testers.cpan.org/</a>&gt; ) are a group of volunteers who test <font SIZE="-1">CPAN</font> modules on a variety of platforms. </p>
+<p> The CPAN testers ( &lt;<a rel="nofollow" href="http://testers.cpan.org/">http://testers.cpan.org/</a>&gt; ) are a group of volunteers who test CPAN modules on a variety of platforms. </p>
 <p> Perl Smokers ( &lt;<a rel="nofollow" href="http://www.nntp.perl.org/group/perl.daily-build/">http://www.nntp.perl.org/group/perl.daily-build/</a>&gt; and &lt;<a rel="nofollow" href="http://www.nntp.perl.org/group/perl.daily-build.reports/">http://www.nntp.perl.org/group/perl.daily-build.reports/</a>&gt; ) automatically test Perl source releases on platforms with various configurations. </p>
-<p> Both efforts welcome volunteers. In order to get involved in smoke testing of the perl itself visit &lt;<a rel="nofollow" href="http://search.cpan.org/dist/Test-Smoke/">http://search.cpan.org/dist/Test-Smoke/</a>&gt;. In order to start smoke testing <font SIZE="-1">CPAN</font> modules visit &lt;<a rel="nofollow" href="http://search.cpan.org/dist/CPANPLUS-YACSmoke/">http://search.cpan.org/dist/CPANPLUS-YACSmoke/</a>&gt; or &lt;<a rel="nofollow" href="http://search.cpan.org/dist/minismokebox/">http://search.cpan.org/dist/minismokebox/</a>&gt; or &lt;<a rel="nofollow" href="http://search.cpan.org/dist/CPAN-Reporter/">http://search.cpan.org/dist/CPAN-Reporter/</a>&gt;.  </p>
+<p> Both efforts welcome volunteers. In order to get involved in smoke testing of the perl itself visit &lt;<a rel="nofollow" href="http://search.cpan.org/dist/Test-Smoke/">http://search.cpan.org/dist/Test-Smoke/</a>&gt;. In order to start smoke testing CPAN modules visit &lt;<a rel="nofollow" href="http://search.cpan.org/dist/CPANPLUS-YACSmoke/">http://search.cpan.org/dist/CPANPLUS-YACSmoke/</a>&gt; or &lt;<a rel="nofollow" href="http://search.cpan.org/dist/minismokebox/">http://search.cpan.org/dist/minismokebox/</a>&gt; or &lt;<a rel="nofollow" href="http://search.cpan.org/dist/CPAN-Reporter/">http://search.cpan.org/dist/CPAN-Reporter/</a>&gt;.  </p>
 <h2>WHAT NEXT?</h2>
 <p> If you&#8217;ve read all the documentation in the document and the ones listed above, you&#8217;re more than ready to hack on Perl. </p>
 <p> Here&#8217;s some more recommendations </p>
@@ -528,7 +528,7 @@ description: "perlhack – How to hack on Perl"
 <dd> <p> Subscribe to perl5-porters, follow the patches and try and understand them; don&#8217;t be afraid to ask if there&#8217;s a portion you&#8217;re not clear on &#8211; who knows, you may unearth a bug in the patch... </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Do read the <font SIZE="-1">README</font> associated with your operating system, e.g. <font SIZE="-1">README</font>.aix on the <font SIZE="-1">IBM AIX OS.</font> Don&#8217;t hesitate to supply patches to that <font SIZE="-1">README</font> if you find anything missing or changed over a new <font SIZE="-1">OS</font> release. </p>
+<dd> <p> Do read the README associated with your operating system, e.g. README.aix on the IBM AIX OS. Don&#8217;t hesitate to supply patches to that README if you find anything missing or changed over a new OS release. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Find an area of Perl that seems interesting to you, and see if you can work out how it works. Scan through the source, and step over it in the debugger. Play, poke, investigate, fiddle! You&#8217;ll probably get to understand not just your chosen area but a much wider range of <i>perl</i>&#8216;s activity as well, and probably sooner than you&#8217;d think. </p>
@@ -542,15 +542,15 @@ description: "perlhack – How to hack on Perl"
 <p> Quotations are taken from writings of J.R.R. Tolkien pertaining to his Legendarium, almost always from <i>The Lord of the Rings</i>. Chapters and page numbers are given using the following editions: </p>
 <dl>
 <dt>&bull;</dt>
-<dd> <p> <i>The Hobbit</i>, by J.R.R. Tolkien. The hardcover, 70th-anniversary edition of 2007 was used, published in the <font SIZE="-1">UK</font> by Harper Collins Publishers and in the <font SIZE="-1">US</font> by the Houghton Mifflin Company. </p>
+<dd> <p> <i>The Hobbit</i>, by J.R.R. Tolkien. The hardcover, 70th-anniversary edition of 2007 was used, published in the UK by Harper Collins Publishers and in the US by the Houghton Mifflin Company. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <i>The Lord of the Rings</i>, by J.R.R. Tolkien. The hardcover, 50th-anniversary edition of 2004 was used, published in the <font SIZE="-1">UK</font> by Harper Collins Publishers and in the <font SIZE="-1">US</font> by the Houghton Mifflin Company. </p>
+<dd> <p> <i>The Lord of the Rings</i>, by J.R.R. Tolkien. The hardcover, 50th-anniversary edition of 2004 was used, published in the UK by Harper Collins Publishers and in the US by the Houghton Mifflin Company. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> <i>The Lays of Beleriand</i>, by J.R.R. Tolkien and published posthumously by his son and literary executor, C.J.R. Tolkien, being the 3rd of the 12 volumes in Christopher&#8217;s mammoth <i>History of Middle Earth</i>. Page numbers derive from the hardcover edition, first published in 1983 by George Allen &amp; Unwin; no page numbers changed for the special 3-volume omnibus edition of 2002 or the various trade-paper editions, all again now by Harper Collins or Houghton Mifflin. </p>
  </dd></dl>
-<p> Other <font SIZE="-1">JRRT</font> books fair game for quotes would thus include <i>The Adventures of Tom Bombadil</i>, <i>The Silmarillion</i>, <i>Unfinished Tales</i>, and <i>The Tale of the Children of Hurin</i>, all but the first posthumously assembled by <font SIZE="-1">CJRT.</font> But <i>The Lord of the Rings</i> itself is perfectly fine and probably best to quote from, provided you can find a suitable quote there. </p>
+<p> Other JRRT books fair game for quotes would thus include <i>The Adventures of Tom Bombadil</i>, <i>The Silmarillion</i>, <i>Unfinished Tales</i>, and <i>The Tale of the Children of Hurin</i>, all but the first posthumously assembled by CJRT. But <i>The Lord of the Rings</i> itself is perfectly fine and probably best to quote from, provided you can find a suitable quote there. </p>
 <p> So if you were to supply a new, complete, top-level source file to add to Perl, you should conform to this peculiar practice by yourself selecting an appropriate quotation from Tolkien, retaining the original spelling and punctuation and using the same format the rest of the quotes are in. Indirect and oblique is just fine; remember, it&#8217;s a metaphor, so being meta is, after all, what it&#8217;s for.  </p>
 <h2>AUTHOR</h2>
 <p> This document was originally written by Nathan Torkington, and is maintained by the perl5-porters mailing list. </p>

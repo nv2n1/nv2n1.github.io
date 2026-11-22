@@ -10,7 +10,7 @@ description: "vfork – create a child process and block parent"
 
 <p> vfork &#8211; create a child process and block parent </p>
 <h2>SYNOPSIS</h2>
-<p> <code>#include &lt;sys/types.h&gt;</code><br />
+<p> <code>#include &lt;sys/types.h&gt;</code><br/>
  <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>pid_t vfork(void);</code> </p>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>

@@ -23,7 +23,7 @@ description: "dh_gconf – install GConf defaults files and register schemas"
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>&#8211;priority</code> <i>priority</i></dt>
-<dd> Use <i>priority</i> (which should be a 2-digit number) as the defaults priority instead of <code>10</code>. Higher values than ten can be used by derived distributions (<code>20</code>), <font SIZE="-1">CDD</font> distributions (<code>50</code>), or site-specific packages (<code>90</code>).</dd></dl>
+<dd> Use <i>priority</i> (which should be a 2-digit number) as the defaults priority instead of <code>10</code>. Higher values than ten can be used by derived distributions (<code>20</code>), CDD distributions (<code>50</code>), or site-specific packages (<code>90</code>).</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/7-debhelper/">debhelper</a></i>(7) </p>
 <p> This program is a part of debhelper.</p>

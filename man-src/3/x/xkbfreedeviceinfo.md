@@ -10,7 +10,7 @@ description: "XkbFreeDeviceInfo – Free an XkbDeviceInfoRec structure"
 <p>XkbFreeDeviceInfo &#8211; Free an XkbDeviceInfoRec structure </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>void XkbFreeDeviceInfo</code> <code>(XkbDeviceInfoPtr </code><i>device_info</i><code>,</code> <code>unsigned int </code><i>which</i><code>,</code> <code>Bool </code><i>free_all</i><code>);</code><br />
+<dt> <code>void XkbFreeDeviceInfo</code> <code>(XkbDeviceInfoPtr </code><i>device_info</i><code>,</code> <code>unsigned int </code><i>which</i><code>,</code> <code>Bool </code><i>free_all</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

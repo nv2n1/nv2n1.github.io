@@ -9,9 +9,9 @@ description: "pam_krb5 – Kerberos 5 authentication"
 
 <p>pam_krb5 &#8211; Kerberos 5 authentication</p>
 <h2>Synopsis</h2>
-<p><code>auth required //usr/$LIB/security/pam_krb5.so</code><br />
- <code>session optional //usr/$LIB/security/pam_krb5.so</code><br />
- <code>account sufficient //usr/$LIB/security/pam_krb5.so</code><br />
+<p><code>auth required //usr/$LIB/security/pam_krb5.so</code><br/>
+ <code>session optional //usr/$LIB/security/pam_krb5.so</code><br/>
+ <code>account sufficient //usr/$LIB/security/pam_krb5.so</code><br/>
  <code>password sufficient //usr/$LIB/security/pam_krb5.so</code> </p>
 <h2>Description</h2>
 <p>The pam_krb5.so module is designed to allow smooth integration of Kerberos 5 password-checking for applications which use PAM. It creates session-specific credential caches. If the system is an AFS client, it will also attempt to obtain tokens for the local cell, the cell which contains the user&#8217;s home directory, and any explicitly-configured cells. When a user logs in, the module&#8217;s authentication function performs a simple password check and, if possible, obtains Kerberos 5 credentials, caching them for later use. When the application requests initialization of credentials (or opens a session), the usual ticket files are created. When the application subsequently requests deletion of credentials or closing of the session, the module deletes the ticket files. When the application requests account management, if the module did not participate in authenticating the user, it will signal libpam to ignore the module. If the module did participate in authenticating the user, it will check for an expired user password and verify the user&#8217;s authorization using the .k5login file of the user being authenticated, which is expected to be accessible to the module. </p>
@@ -34,7 +34,7 @@ description: "pam_krb5 – Kerberos 5 authentication"
 <dt>ccache_dir=<i>/tmp</i></dt>
 <dd>tells pam_krb5.so which directory to use for storing credential caches. The default setting is <i>/tmp</i>. </dd>
 <dt>ccname_template=<i>FILE:%d/krb5cc_%U_XXXXXX</i></dt>
-<dd>specifies the location in which to place the user&#8217;s session-specific credential cache. This value is treated as a template, and these sequences are substituted:<br />
+<dd>specifies the location in which to place the user&#8217;s session-specific credential cache. This value is treated as a template, and these sequences are substituted:<br/>
 &nbsp;<wbr>&nbsp;<wbr>%u<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>login name</dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>%U<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>login UID</p>
 <p>&nbsp;<wbr>&nbsp;<wbr>%p<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>principal name</p>

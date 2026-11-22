@@ -11,7 +11,7 @@ description: "dlaset.f –"
 <p> dlaset.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dlaset</code> (UPLO, M, N, ALPHA, BETA, A, LDA)<br />
+<p> subroutine <code>dlaset</code> (UPLO, M, N, ALPHA, BETA, A, LDA)<br/>
  <i></i><code>DLASET</code> initializes the off-diagonal elements and the diagonal elements of a matrix to given values.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlaset (characterUPLO, integerM, integerN, double precisionALPHA, double precisionBETA, double precision, dimension( lda, * )A, integerLDA)</h3>

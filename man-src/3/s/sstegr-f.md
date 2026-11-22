@@ -10,7 +10,7 @@ description: "sstegr.f –"
 <p>sstegr.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>sstegr</code> (JOBZ, RANGE, N, D, E, VL, VU, IL, IU, ABSTOL, M, W, Z, LDZ, ISUPPZ, WORK, LWORK, IWORK, LIWORK, INFO)<br />
+<p>subroutine <code>sstegr</code> (JOBZ, RANGE, N, D, E, VL, VU, IL, IU, ABSTOL, M, W, Z, LDZ, ISUPPZ, WORK, LWORK, IWORK, LIWORK, INFO)<br/>
  <i></i><code>SSTEGR</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sstegr (characterJOBZ, characterRANGE, integerN, real, dimension( * )D, real, dimension( * )E, realVL, realVU, integerIL, integerIU, realABSTOL, integerM, real, dimension( * )W, real, dimension( ldz, * )Z, integerLDZ, integer, dimension( * )ISUPPZ, real, dimension( * )WORK, integerLWORK, integer, dimension( * )IWORK, integerLIWORK, integerINFO)</h3>

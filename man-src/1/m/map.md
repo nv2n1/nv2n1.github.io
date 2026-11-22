@@ -23,19 +23,19 @@ map - recode from and to various character sets.Reads from STDIN, writes to STDO
 
  Examples: 
 
- Conversion from <font SIZE="-1">ISO-8859-1</font> to Unicode: 
+ Conversion from ISO-8859-1 to Unicode: 
 
  <pre>
  map --to unicode &lt; iso-8859-1.txt &gt; unicode.txt
 </pre> 
 
- Conversion from <font SIZE="-1">GB2312</font> to <font SIZE="-1">CP936:</font> 
+ Conversion from GB2312 to CP936: 
 
  <pre>
  map --from cp936 --to GB2312 &lt; gb2312.txt &gt; cp936.txt
 </pre> 
 
- Conversion from <font SIZE="-1">CP850</font> to Unicode: 
+ Conversion from CP850 to Unicode: 
 
  <pre>
  map --from cp850 --to unicode &lt; cp850.txt &gt; unicode.txt

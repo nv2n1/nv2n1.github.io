@@ -11,7 +11,7 @@ description: "cgelss.f –"
 <p> cgelss.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cgelss</code> (M, N, NRHS, A, LDA, B, LDB, S, RCOND, RANK, WORK, LWORK, RWORK, INFO)<br />
+<p> subroutine <code>cgelss</code> (M, N, NRHS, A, LDA, B, LDB, S, RCOND, RANK, WORK, LWORK, RWORK, INFO)<br/>
  <i></i><code> CGELSS solves overdetermined or underdetermined systems for GE matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cgelss (integerM, integerN, integerNRHS, complex, dimension( lda, * )A, integerLDA, complex, dimension( ldb, * )B, integerLDB, real, dimension( * )S, realRCOND, integerRANK, complex, dimension( * )WORK, integerLWORK, real, dimension( * )RWORK, integerINFO)</h3>

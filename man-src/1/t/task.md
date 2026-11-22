@@ -10,7 +10,7 @@ description: "task – A command line todo manager."
 
 <p> task &#8211; A command line todo manager.</p>
 <h2>SYNOPSIS</h2>
-<p> <code>task &lt;filter&gt; &lt;command&gt; [ &lt;mods&gt; | &lt;args&gt; ]</code><br />
+<p> <code>task &lt;filter&gt; &lt;command&gt; [ &lt;mods&gt; | &lt;args&gt; ]</code><br/>
  <code>task &#8211;version</code> </p>
 <h2>DESCRIPTION</h2>
 <p> Taskwarrior is a command line todo list manager. It maintains a list of tasks that you want to do, allowing you to add/remove, and otherwise manipulate them. Taskwarrior has a rich set of subcommands that allow you to do various things with it. </p>
@@ -24,29 +24,29 @@ description: "task – A command line todo manager."
 <p>&nbsp;<wbr>&nbsp;<wbr>description.contains:garden </p>
 <p> as a convenient shortcut. The &#8216;contains&#8217; here is an attribute modifier, which is used to exert more control over the filter than simply absence or presence. See the section &#8216;ATTRIBUTE MODIFIERS&#8217; below for a complete list of modifiers. </p>
 <p> Note that a filter may have zero terms, which means that all tasks apply to the command. This can be dangerous, and this special case is confirmed, and cannot be overridden. For example, this command: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>task modify&nbsp;<wbr>+work<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>task modify&nbsp;<wbr>+work<br/>
 &nbsp;<wbr>&nbsp;<wbr>This command has no filter, and will modify all tasks.&nbsp;<wbr>&nbsp;<wbr>Are you sure?&nbsp;<wbr>(yes/no) </p>
 <p> will add the &#8216;work&#8217; tag to all tasks, but only after confirmation. </p>
 <p> More filter examples: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>task&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&lt;command&gt;&nbsp;<wbr>&lt;mods&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>task 28&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&lt;command&gt;&nbsp;<wbr>&lt;mods&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>task&nbsp;<wbr>+weekend&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&lt;command&gt;&nbsp;<wbr>&lt;mods&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>task project:Home due.before:today&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&lt;command&gt;&nbsp;<wbr>&lt;mods&gt;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>task&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&lt;command&gt;&nbsp;<wbr>&lt;mods&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>task 28&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&lt;command&gt;&nbsp;<wbr>&lt;mods&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>task&nbsp;<wbr>+weekend&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&lt;command&gt;&nbsp;<wbr>&lt;mods&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>task project:Home due.before:today&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&lt;command&gt;&nbsp;<wbr>&lt;mods&gt;<br/>
 &nbsp;<wbr>&nbsp;<wbr>task ebeeab00-ccf8-464b-8b58-f7f2d606edfb&nbsp;<wbr>&lt;command&gt;&nbsp;<wbr>&lt;mods&gt; </p>
 <p> By default filter elements are combined with an implicit &#8216;and&#8217; operator, but &#8216;or&#8217; and &#8216;xor&#8217; may also be used, provided parentheses are included: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>task&nbsp;<wbr>&#8216;(&nbsp;<wbr>/[Cc]at|[Dd]og/&nbsp;<wbr>or&nbsp;<wbr>/[0-9]+/&nbsp;<wbr>)&#8217;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&lt;command&gt;&nbsp;<wbr>&lt;mods&gt; </p>
 <p> The parentheses isolate the logical term from any default command filter or implicit report filter which would be combined with an implicit &#8216;and&#8217;. </p>
 <p> A filter may target specific tasks using ID or UUID numbers. To specify multiple tasks use one of these forms (space-separated list of ID numbers, UUID numbers or ID ranges): </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>task 1 2 3&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>delete<br />
-&nbsp;<wbr>&nbsp;<wbr>task 1-3&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>info<br />
-&nbsp;<wbr>&nbsp;<wbr>task 1 2-5 19&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>modify pri:H<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>task 1 2 3&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>delete<br/>
+&nbsp;<wbr>&nbsp;<wbr>task 1-3&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>info<br/>
+&nbsp;<wbr>&nbsp;<wbr>task 1 2-5 19&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>modify pri:H<br/>
 &nbsp;<wbr>&nbsp;<wbr>task 4-7 ebeeab00-ccf8-464b-8b58-f7f2d606edfb info </p>
 <h2>MODIFICATIONS</h2>
 <p> The &lt;mods&gt; consist of zero or more changes to apply to the selected tasks, such as: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>task&nbsp;<wbr>&lt;filter&gt;&nbsp;<wbr>&lt;command&gt;&nbsp;<wbr>project:Home<br />
-&nbsp;<wbr>&nbsp;<wbr>task&nbsp;<wbr>&lt;filter&gt;&nbsp;<wbr>&lt;command&gt;&nbsp;<wbr>+weekend&nbsp;<wbr>+garden due:tomorrow<br />
-&nbsp;<wbr>&nbsp;<wbr>task&nbsp;<wbr>&lt;filter&gt;&nbsp;<wbr>&lt;command&gt;&nbsp;<wbr>Description/annotation text<br />
-&nbsp;<wbr>&nbsp;<wbr>task&nbsp;<wbr>&lt;filter&gt;&nbsp;<wbr>&lt;command&gt;&nbsp;<wbr>/from/to/&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&lt;- replace first match<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>task&nbsp;<wbr>&lt;filter&gt;&nbsp;<wbr>&lt;command&gt;&nbsp;<wbr>project:Home<br/>
+&nbsp;<wbr>&nbsp;<wbr>task&nbsp;<wbr>&lt;filter&gt;&nbsp;<wbr>&lt;command&gt;&nbsp;<wbr>+weekend&nbsp;<wbr>+garden due:tomorrow<br/>
+&nbsp;<wbr>&nbsp;<wbr>task&nbsp;<wbr>&lt;filter&gt;&nbsp;<wbr>&lt;command&gt;&nbsp;<wbr>Description/annotation text<br/>
+&nbsp;<wbr>&nbsp;<wbr>task&nbsp;<wbr>&lt;filter&gt;&nbsp;<wbr>&lt;command&gt;&nbsp;<wbr>/from/to/&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&lt;- replace first match<br/>
 &nbsp;<wbr>&nbsp;<wbr>task&nbsp;<wbr>&lt;filter&gt;&nbsp;<wbr>&lt;command&gt;&nbsp;<wbr>/from/to/g&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&lt;- replace all matches </p>
 <h2>SUBCOMMANDS</h2>
 <p> Taskwarrior supports different kinds of commands. There are read commands, write commands, miscellaneous commands and script helper commands. Read commands do not allow modification of tasks. Write commands can alter almost any aspect of a task. Script helper commands are provided to help you write add-on scripts, for example, shell completion (only minimal output is generated, as with verbose=nothing). </p>
@@ -85,15 +85,15 @@ description: "task – A command line todo manager."
 <dd> Displays only a count of tasks matching the filter. </dd>
 <dt><code>task &lt;filter&gt; export</code></dt>
 <dd> Exports all tasks in the JSON format. Redirect the output to a file, if you wish to save it, or pipe it to another command or script to convert it to another format. The standard task release comes with a few example scripts, such as: </dd>
-<p>&nbsp;<wbr>&nbsp;<wbr>export-csv.pl<br />
-&nbsp;<wbr>&nbsp;<wbr>export-sql.py<br />
-&nbsp;<wbr>&nbsp;<wbr>export-xml.py<br />
-&nbsp;<wbr>&nbsp;<wbr>export-yaml.pl<br />
-&nbsp;<wbr>&nbsp;<wbr>export-html.pl<br />
-&nbsp;<wbr>&nbsp;<wbr>export-tsv.pl<br />
-&nbsp;<wbr>&nbsp;<wbr>export-xml.rb<br />
-&nbsp;<wbr>&nbsp;<wbr>export-ical.pl<br />
-&nbsp;<wbr>&nbsp;<wbr>export-xml.pl<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>export-csv.pl<br/>
+&nbsp;<wbr>&nbsp;<wbr>export-sql.py<br/>
+&nbsp;<wbr>&nbsp;<wbr>export-xml.py<br/>
+&nbsp;<wbr>&nbsp;<wbr>export-yaml.pl<br/>
+&nbsp;<wbr>&nbsp;<wbr>export-html.pl<br/>
+&nbsp;<wbr>&nbsp;<wbr>export-tsv.pl<br/>
+&nbsp;<wbr>&nbsp;<wbr>export-xml.rb<br/>
+&nbsp;<wbr>&nbsp;<wbr>export-ical.pl<br/>
+&nbsp;<wbr>&nbsp;<wbr>export-xml.pl<br/>
 &nbsp;<wbr>&nbsp;<wbr>export-yad.pl </p>
 <dt><code>task &lt;filter&gt; ghistory.annual</code></dt>
 <dd> Shows a graphical report of task status by year. </dd>
@@ -170,7 +170,7 @@ description: "task – A command line todo manager."
 <p> If no file or &quot;-&quot; is specified, import tasks from STDIN. </p>
 <p> Setting rc.recurrence.confirmation to an appropriate level is recommended if import is to be used in automated workflows. See <a href="/docs/linux/man/5-taskrc/">taskrc</a>(5). </p>
 <p> For importing other file formats, the standard task release comes with a few example scripts, such as: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>import-todo.sh.pl<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>import-todo.sh.pl<br/>
 &nbsp;<wbr>&nbsp;<wbr>import-yaml.pl </p>
 <dt><code>task log &lt;mods&gt;</code></dt>
 <dd> Adds a new task that is already completed, to the task list. </dd>
@@ -189,11 +189,11 @@ description: "task – A command line todo manager."
 <dt><code>task calc &lt;expression&gt;</code></dt>
 <dd> Evaluates an algebraic expression. Can be used to test how Taskwarrior parses and evaluates the expression given on the command line. </dd>
 <p> Examples: </p>
-<p>&nbsp;<wbr>task calc 1&nbsp;<wbr>+&nbsp;<wbr>1<br />
+<p>&nbsp;<wbr>task calc 1&nbsp;<wbr>+&nbsp;<wbr>1<br/>
 &nbsp;<wbr>2 </p>
-<p>&nbsp;<wbr>task calc now&nbsp;<wbr>+&nbsp;<wbr>8d<br />
+<p>&nbsp;<wbr>task calc now&nbsp;<wbr>+&nbsp;<wbr>8d<br/>
 &nbsp;<wbr>2015-03-26T18:06:57 </p>
-<p>&nbsp;<wbr>task calc eom<br />
+<p>&nbsp;<wbr>task calc eom<br/>
 &nbsp;<wbr>2015-03-31T23:59:59 </p>
 <dt><code>task config [name [value | &#8221;]]</code></dt>
 <dd> Add, modify and remove settings directly in the Taskwarrior configuration. This command either modifies the &#8216;name&#8217; setting with a new value of &#8216;value&#8217;, or adds a new entry that is equivalent to &#8216;name=value&#8217;: </dd>
@@ -213,8 +213,8 @@ description: "task – A command line todo manager."
 <dt><code>task context define &lt;name&gt; &lt;filter&gt;</code></dt>
 <dd> Defines a new context with name &lt;name&gt; and definition &lt;filter&gt;. This command does not affect the currently set context, just adds a new context definition. </dd>
 <p> Examples: </p>
-<p>&nbsp;<wbr>task context define work project:Work<br />
-&nbsp;<wbr>task context define home project:Home or&nbsp;<wbr>+home<br />
+<p>&nbsp;<wbr>task context define work project:Work<br/>
+&nbsp;<wbr>task context define home project:Home or&nbsp;<wbr>+home<br/>
 &nbsp;<wbr>task context define superurgent due:today and&nbsp;<wbr>+urgent </p>
 <dt><code>task context list</code></dt>
 <dd> Outputs a list of available contexts along with their definitions. </dd>
@@ -286,63 +286,63 @@ description: "task – A command line todo manager."
 <dd> Shows the UUIDs and descriptions of matching tasks. </dd>
 <dt><code>task _get &lt;DOM&gt; [&lt;DOM&gt; &#8230;]</code></dt>
 <dd> Accesses and displays the DOM reference(s). Used to extract individual values from tasks, or the system. Supported DOM references are: </dd>
-<p>&nbsp;<wbr>&nbsp;<wbr>rc.&lt;name&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>context.program<br />
-&nbsp;<wbr>&nbsp;<wbr>context.args<br />
-&nbsp;<wbr>&nbsp;<wbr>context.width<br />
-&nbsp;<wbr>&nbsp;<wbr>context.height<br />
-&nbsp;<wbr>&nbsp;<wbr>system.version<br />
-&nbsp;<wbr>&nbsp;<wbr>system.os<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;id&gt;.&lt;attribute&gt;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>rc.&lt;name&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>context.program<br/>
+&nbsp;<wbr>&nbsp;<wbr>context.args<br/>
+&nbsp;<wbr>&nbsp;<wbr>context.width<br/>
+&nbsp;<wbr>&nbsp;<wbr>context.height<br/>
+&nbsp;<wbr>&nbsp;<wbr>system.version<br/>
+&nbsp;<wbr>&nbsp;<wbr>system.os<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;id&gt;.&lt;attribute&gt;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&lt;uuid&gt;.&lt;attribute&gt; </p>
 <p> Note that the &#8216;rc.&lt;name&gt;&#8217; reference may need to be escaped using &#8216;&#8211;&#8216; to prevent the reference from being interpreted as an override. </p>
 <p> Note that if the DOM reference is not valid, or the reference evaluates to a missing value, the command exits with 1. </p>
 <p> Additionally, some components of the attributes of particular types may be extracted by DOM references. </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>$&nbsp;<wbr>task&nbsp;<wbr>_get 2.due.year<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>$&nbsp;<wbr>task&nbsp;<wbr>_get 2.due.year<br/>
 &nbsp;<wbr>&nbsp;<wbr>2015 </p>
 <p> For a full list of supported attribute-specific DOM references, consult the online documentation at: &lt;<a rel="nofollow" href="http://taskwarrior.org/docs/dom.html">http://taskwarrior.org/docs/dom.html</a>&gt; </p>
 </dl>
 <h2>ATTRIBUTES AND METADATA</h2>
 <dl>
 <dt><code>ID</code></dt>
-<dd> Tasks can be specified uniquely by IDs, which are simply the indexes of the tasks in the data file. The ID of a task may therefore change, but only when a command is run that displays IDs. When modifying tasks, it is safe to rely on the last displayed ID. Always run a report to check you have the right ID for a task. IDs can be given to task as a sequence, for example,<br />
+<dd> Tasks can be specified uniquely by IDs, which are simply the indexes of the tasks in the data file. The ID of a task may therefore change, but only when a command is run that displays IDs. When modifying tasks, it is safe to rely on the last displayed ID. Always run a report to check you have the right ID for a task. IDs can be given to task as a sequence, for example,<br/>
  <code>task 1,4-10,19 delete</code> </dd>
 <dt><code>+tag|-tag</code></dt>
 <dd> Tags are arbitrary words associated with a task. Use + to add a tag and &#8211; to remove a tag from a task. A task can have any quantity of tags. </dd>
 <p> Certain tags (called &#8216;special tags&#8217;), can be used to affect the way tasks are treated. For example, if a task has the special tag &#8216;nocolor&#8217;, then it is exempt from all color rules. The supported special tags are: </p>
-<p>&nbsp;<wbr>+nocolor&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Disable color rules processing for this task<br />
-&nbsp;<wbr>+nonag&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Completion of this task suppresses all nag messages<br />
-&nbsp;<wbr>+nocal&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>This task will not appear on the calendar<br />
+<p>&nbsp;<wbr>+nocolor&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Disable color rules processing for this task<br/>
+&nbsp;<wbr>+nonag&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Completion of this task suppresses all nag messages<br/>
+&nbsp;<wbr>+nocal&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>This task will not appear on the calendar<br/>
 &nbsp;<wbr>+next&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Elevates task so it appears on&nbsp;<wbr>&#8216;next&#8217;&nbsp;<wbr>report </p>
 <p> There are also virtual tags, which represent task metadata in tag form. These tags do not exist, but can be used to filter tasks. The supported virtual tags are: </p>
-<p>&nbsp;<wbr>ACTIVE&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task is started<br />
-&nbsp;<wbr>ANNOTATED&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task has annotations<br />
-&nbsp;<wbr>BLOCKED&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task is blocked<br />
-&nbsp;<wbr>BLOCKING&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task is blocking<br />
-&nbsp;<wbr>CHILD&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task has a parent<br />
-&nbsp;<wbr>COMPLETED&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task has completed status<br />
-&nbsp;<wbr>DELETED&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task has deleted status<br />
-&nbsp;<wbr>DUE&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task is due<br />
-&nbsp;<wbr>DUETODAY&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task is due today<br />
-&nbsp;<wbr>LATEST&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task is the newest added task<br />
-&nbsp;<wbr>MONTH&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task is due this month<br />
-&nbsp;<wbr>ORPHAN&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task has any orphaned UDA values<br />
-&nbsp;<wbr>OVERDUE&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task is overdue<br />
-&nbsp;<wbr>PARENT&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task is a parent<br />
-&nbsp;<wbr>PENDING&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task has pending status<br />
-&nbsp;<wbr>PRIORITY&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task has a priority<br />
-&nbsp;<wbr>PROJECT&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task has a project<br />
-&nbsp;<wbr>READY&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task is actionable<br />
-&nbsp;<wbr>SCHEDULED&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task is scheduled<br />
-&nbsp;<wbr>TAGGED&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task has tags<br />
-&nbsp;<wbr>TODAY&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task is due today<br />
-&nbsp;<wbr>TOMORROW&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task is due sometime tomorrow<br />
-&nbsp;<wbr>UDA&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task has any UDA values<br />
-&nbsp;<wbr>UNBLOCKED&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task is not blocked<br />
-&nbsp;<wbr>UNTIL&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task expires<br />
-&nbsp;<wbr>WAITING&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task is waiting<br />
-&nbsp;<wbr>WEEK&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task is due this week<br />
-&nbsp;<wbr>YEAR&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task is due this year<br />
+<p>&nbsp;<wbr>ACTIVE&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task is started<br/>
+&nbsp;<wbr>ANNOTATED&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task has annotations<br/>
+&nbsp;<wbr>BLOCKED&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task is blocked<br/>
+&nbsp;<wbr>BLOCKING&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task is blocking<br/>
+&nbsp;<wbr>CHILD&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task has a parent<br/>
+&nbsp;<wbr>COMPLETED&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task has completed status<br/>
+&nbsp;<wbr>DELETED&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task has deleted status<br/>
+&nbsp;<wbr>DUE&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task is due<br/>
+&nbsp;<wbr>DUETODAY&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task is due today<br/>
+&nbsp;<wbr>LATEST&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task is the newest added task<br/>
+&nbsp;<wbr>MONTH&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task is due this month<br/>
+&nbsp;<wbr>ORPHAN&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task has any orphaned UDA values<br/>
+&nbsp;<wbr>OVERDUE&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task is overdue<br/>
+&nbsp;<wbr>PARENT&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task is a parent<br/>
+&nbsp;<wbr>PENDING&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task has pending status<br/>
+&nbsp;<wbr>PRIORITY&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task has a priority<br/>
+&nbsp;<wbr>PROJECT&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task has a project<br/>
+&nbsp;<wbr>READY&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task is actionable<br/>
+&nbsp;<wbr>SCHEDULED&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task is scheduled<br/>
+&nbsp;<wbr>TAGGED&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task has tags<br/>
+&nbsp;<wbr>TODAY&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task is due today<br/>
+&nbsp;<wbr>TOMORROW&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task is due sometime tomorrow<br/>
+&nbsp;<wbr>UDA&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task has any UDA values<br/>
+&nbsp;<wbr>UNBLOCKED&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task is not blocked<br/>
+&nbsp;<wbr>UNTIL&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task expires<br/>
+&nbsp;<wbr>WAITING&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task is waiting<br/>
+&nbsp;<wbr>WEEK&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task is due this week<br/>
+&nbsp;<wbr>YEAR&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task is due this year<br/>
 &nbsp;<wbr>YESTERDAY&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Matches if the task was due sometime yesterday </p>
 <p> You can use +BLOCKED to filter blocked tasks, or -BLOCKED for unblocked tasks. Similarly, -BLOCKED is equivalent to +UNBLOCKED. It is an error to attempt to add or remove a virtual tag. </p>
 <dt><code>project:&lt;project-name&gt;</code></dt>
@@ -370,17 +370,17 @@ description: "task – A command line todo manager."
 <p> Attribute modifiers improve filters. Supported modifiers are: </p>
 <dl>
 <dt>
-</dt><dd> <code>before (synonyms under, below)</code><br />
- <code>after (synonyms over, above)</code><br />
- <code>none</code><br />
- <code>any</code><br />
- <code>is (synonym equals)</code><br />
- <code>isnt (synonym not)</code><br />
- <code>has (synonym contains)</code><br />
- <code>hasnt</code><br />
- <code>startswith (synonym left)</code><br />
- <code>endswith (synonym right)</code><br />
- <code>word</code><br />
+</dt><dd> <code>before (synonyms under, below)</code><br/>
+ <code>after (synonyms over, above)</code><br/>
+ <code>none</code><br/>
+ <code>any</code><br/>
+ <code>is (synonym equals)</code><br/>
+ <code>isnt (synonym not)</code><br/>
+ <code>has (synonym contains)</code><br/>
+ <code>hasnt</code><br/>
+ <code>startswith (synonym left)</code><br/>
+ <code>endswith (synonym right)</code><br/>
+ <code>word</code><br/>
  <code>noword</code></dd></dl>
 <p> For example: </p>
 <dl>
@@ -389,19 +389,19 @@ description: "task – A command line todo manager."
 <p> The <i>before</i> modifier is used to compare values, preserving semantics, so project.before:B list all projects that begin with &#8216;A&#8217;. Priority &#8216;L&#8217; is before &#8216;M&#8217;, and due:2011-01-01 is before due:2011-01-02. The synonyms &#8216;under&#8217; and &#8216;below&#8217; are included to allow filters that read more naturally. </p>
 <p> The <i>after</i> modifier is the inverse of the <i>before</i> modifier. </p>
 <p> The <i>none</i> modifier requires that the attribute does not have a value. For example: </p>
-<p>&nbsp;<wbr>task priority:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>list<br />
+<p>&nbsp;<wbr>task priority:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>list<br/>
 &nbsp;<wbr>task priority.none: list </p>
 <p> are equivalent, and list tasks that do not have a priority. </p>
 <p> The <i>any</i> modifier requires that the attribute has a value, but any value will suffice. </p>
 <p> The <i>is</i> modifier requires an exact match with the value. </p>
 <p> The <i>isnt</i> modifier is the inverse of the <i>is</i> modifier. </p>
 <p> The <i>has</i> modifier is used to search for a substring, such as: </p>
-<p>&nbsp;<wbr>task description.has:foo list<br />
+<p>&nbsp;<wbr>task description.has:foo list<br/>
 &nbsp;<wbr>task foo&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>list </p>
 <p> These are equivalent and will return any task that has &#8216;foo&#8217; in the description or annotations. </p>
 <p> The <i>hasnt</i> modifier is the inverse of the <i>has</i> modifier. </p>
 <p> The <i>startswith</i> modifier matches against the left, or beginning of an attribute, such that: </p>
-<p>&nbsp;<wbr>task project.startswith:H list<br />
+<p>&nbsp;<wbr>task project.startswith:H list<br/>
 &nbsp;<wbr>task project:H&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>list </p>
 <p> are equivalent and will match any project starting with &#8216;H&#8217;. Matching all projects not starting with &#8216;H&#8217; is done with: </p>
 <p>&nbsp;<wbr>task project.not:H&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>list </p>
@@ -412,20 +412,20 @@ description: "task – A command line todo manager."
 <p> The <i>noword</i> modifier is the inverse of the <i>word</i> modifier. </p>
 <h2>EXPRESSIONS AND OPERATORS</h2>
 <p> You can use the following operators in filter expressions: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>and&nbsp;<wbr>&nbsp;<wbr>or&nbsp;<wbr>&nbsp;<wbr>xor&nbsp;<wbr>&nbsp;<wbr>!&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Logical operators<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;&nbsp;<wbr>&nbsp;<wbr>&lt;=&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>&nbsp;<wbr>==&nbsp;<wbr>&nbsp;<wbr>!=&nbsp;<wbr>&nbsp;<wbr>!==&nbsp;<wbr>&nbsp;<wbr>&gt;=&nbsp;<wbr>&nbsp;<wbr>&gt;&nbsp;<wbr>&nbsp;<wbr>Relational operators<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>and&nbsp;<wbr>&nbsp;<wbr>or&nbsp;<wbr>&nbsp;<wbr>xor&nbsp;<wbr>&nbsp;<wbr>!&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Logical operators<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;&nbsp;<wbr>&nbsp;<wbr>&lt;=&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>&nbsp;<wbr>==&nbsp;<wbr>&nbsp;<wbr>!=&nbsp;<wbr>&nbsp;<wbr>!==&nbsp;<wbr>&nbsp;<wbr>&gt;=&nbsp;<wbr>&nbsp;<wbr>&gt;&nbsp;<wbr>&nbsp;<wbr>Relational operators<br/>
 &nbsp;<wbr>&nbsp;<wbr>(&nbsp;<wbr>&nbsp;<wbr>)&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Precedence </p>
 <p> For example: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>task due.before:eom priority.not:L list<br />
-&nbsp;<wbr>&nbsp;<wbr>task&nbsp;<wbr>&#8216;(&nbsp;<wbr>due&nbsp;<wbr>&lt;&nbsp;<wbr>eom or priority&nbsp;<wbr>!=&nbsp;<wbr>L&nbsp;<wbr>)&#8217;&nbsp;<wbr>list<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>task due.before:eom priority.not:L list<br/>
+&nbsp;<wbr>&nbsp;<wbr>task&nbsp;<wbr>&#8216;(&nbsp;<wbr>due&nbsp;<wbr>&lt;&nbsp;<wbr>eom or priority&nbsp;<wbr>!=&nbsp;<wbr>L&nbsp;<wbr>)&#8217;&nbsp;<wbr>list<br/>
 &nbsp;<wbr>&nbsp;<wbr>task&nbsp;<wbr>&#8216;!&nbsp;<wbr>(&nbsp;<wbr>project:Home or project:Garden&nbsp;<wbr>)&#8217;&nbsp;<wbr>list </p>
 <p> The <i>=</i> operator tests for approximate equality. Dates compare equal if they are on the same day (hour and minutes are ignored). Strings compare equal if the left operand starts with the right operand. The <i>==</i> operator tests for exact equality. The <i>!=</i> and <i>!==</i> operators are the negation of <i>=</i> and <i>==</i> respectively. The negation operator is <i>!</i>. </p>
 <p> Note that the parentheses are required when using a logical operator other than the &#8216;and&#8217; operator. The reason is that some reports contain filters that must be combined with the command line. Consider this example: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>task project:Home or project:Garden list </p>
 <p> While this looks correct, it is not. The &#8216;list&#8217; report contains a filter of: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>task show report.list.filter </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>Config Variable&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Value<br />
-&nbsp;<wbr>&nbsp;<wbr>&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;&nbsp;<wbr>&nbsp;<wbr>&#8212;&#8212;&#8212;&#8212;&#8211;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>Config Variable&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Value<br/>
+&nbsp;<wbr>&nbsp;<wbr>&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;&nbsp;<wbr>&nbsp;<wbr>&#8212;&#8212;&#8212;&#8212;&#8211;<br/>
 &nbsp;<wbr>&nbsp;<wbr>report.list.filter status:pending </p>
 <p> Which means the example is really: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>task status:pending project:Home or project:Garden list </p>
@@ -437,10 +437,10 @@ description: "task – A command line todo manager."
 <p>&nbsp;<wbr>&nbsp;<wbr>task&nbsp;<wbr>&#8216;(&nbsp;<wbr>project:Home or project:Garden&nbsp;<wbr>)&#8217;&nbsp;<wbr>list </p>
 <p> This includes quotes to escape the parentheses, so that the shell doesn&#8217;t interpret them and hide them from Taskwarrior. </p>
 <p> There is redundancy between operators, attribute modifiers and other syntactic sugar. For example, the following are all equivalent: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>task foo&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>list<br />
-&nbsp;<wbr>&nbsp;<wbr>task&nbsp;<wbr>/foo/&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>list<br />
-&nbsp;<wbr>&nbsp;<wbr>task description.contains:foo list<br />
-&nbsp;<wbr>&nbsp;<wbr>task description.has:foo&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>list<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>task foo&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>list<br/>
+&nbsp;<wbr>&nbsp;<wbr>task&nbsp;<wbr>/foo/&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>list<br/>
+&nbsp;<wbr>&nbsp;<wbr>task description.contains:foo list<br/>
+&nbsp;<wbr>&nbsp;<wbr>task description.has:foo&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>list<br/>
 &nbsp;<wbr>&nbsp;<wbr>task&nbsp;<wbr>&#8216;description&nbsp;<wbr>~&nbsp;<wbr>foo&#8217;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>list </p>
 <h2>SPECIFYING DATES AND FREQUENCIES</h2>
 <h3>DATES</h3>
@@ -452,45 +452,45 @@ description: "task – A command line todo manager."
 <dt>ISO-8601</dt>
 <dd> task &#8230; due:2013-03-14T22:30:00Z </dd>
 <dt>Relative wording</dt>
-<dd> task &#8230; due:now<br />
- task &#8230; due:today<br />
- task &#8230; due:yesterday<br />
+<dd> task &#8230; due:now<br/>
+ task &#8230; due:today<br/>
+ task &#8230; due:yesterday<br/>
  task &#8230; due:tomorrow </dd>
 <dt>Day number with ordinal</dt>
-<dd> task &#8230; due:23rd<br />
- task &#8230; due:3wks<br />
- task &#8230; due:1day<br />
+<dd> task &#8230; due:23rd<br/>
+ task &#8230; due:3wks<br/>
+ task &#8230; due:1day<br/>
  task &#8230; due:9hrs </dd>
 <dt>Start of next (work) week (Monday), calendar week (Sunday or Monday), month, quarter and year</dt>
 <dd>
- task &#8230; due:sow<br />
- task &#8230; due:soww<br />
- task &#8230; due:socw<br />
- task &#8230; due:som<br />
- task &#8230; due:soq<br />
+ task &#8230; due:sow<br/>
+ task &#8230; due:soww<br/>
+ task &#8230; due:socw<br/>
+ task &#8230; due:som<br/>
+ task &#8230; due:soq<br/>
  task &#8230; due:soy </dd>
 <dt>End of current (work) week (Friday), calendar week (Saturday or Sunday), month, quarter and year</dt>
 <dd>
- task &#8230; due:eow<br />
- task &#8230; due:eoww<br />
- task &#8230; due:eocw<br />
- task &#8230; due:eom<br />
- task &#8230; due:eoq<br />
+ task &#8230; due:eow<br/>
+ task &#8230; due:eoww<br/>
+ task &#8230; due:eocw<br/>
+ task &#8230; due:eom<br/>
+ task &#8230; due:eoq<br/>
  task &#8230; due:eoy </dd>
 <dt>At some point or later</dt>
 <dd>
- task &#8230; wait:later<br />
+ task &#8230; wait:later<br/>
  task &#8230; wait:someday </dd>
 <p> This sets the wait date to 1/18/2038. </p>
 <dt>Next occurring weekday</dt>
 <dd> task &#8230; due:fri </dd>
 <dt>Predictable holidays</dt>
-<dd> task &#8230; due:goodfriday<br />
- task &#8230; due:easter<br />
- task &#8230; due:eastermonday<br />
- task &#8230; due:ascension<br />
- task &#8230; due:pentecost<br />
- task &#8230; due:midsommar<br />
+<dd> task &#8230; due:goodfriday<br/>
+ task &#8230; due:easter<br/>
+ task &#8230; due:eastermonday<br/>
+ task &#8230; due:ascension<br/>
+ task &#8230; due:pentecost<br/>
+ task &#8230; due:midsommar<br/>
  task &#8230; due:midsommarafton</dd></dl>
 </dl>
 <h3>FREQUENCIES</h3>
@@ -518,38 +518,38 @@ description: "task – A command line todo manager."
 </dl>
 <h2>CONTEXT</h2>
 <p> Context is a user-defined filter, which is automatically applied to all commands that filter the task list. In particular, any report command will have its result affected by the current active context. </p>
-<p>&nbsp;<wbr>$&nbsp;<wbr>task list<br />
-&nbsp;<wbr>ID Age Project&nbsp;<wbr>&nbsp;<wbr>Description&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Urg<br />
-&nbsp;<wbr>1&nbsp;<wbr>&nbsp;<wbr>2d&nbsp;<wbr>&nbsp;<wbr>Sport&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Run 5 miles&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1.42<br />
+<p>&nbsp;<wbr>$&nbsp;<wbr>task list<br/>
+&nbsp;<wbr>ID Age Project&nbsp;<wbr>&nbsp;<wbr>Description&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Urg<br/>
+&nbsp;<wbr>1&nbsp;<wbr>&nbsp;<wbr>2d&nbsp;<wbr>&nbsp;<wbr>Sport&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Run 5 miles&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1.42<br/>
 &nbsp;<wbr>2&nbsp;<wbr>&nbsp;<wbr>1d&nbsp;<wbr>&nbsp;<wbr>Home&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Clean the dishes&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1.14 </p>
-<p>&nbsp;<wbr>$&nbsp;<wbr>task context home<br />
+<p>&nbsp;<wbr>$&nbsp;<wbr>task context home<br/>
 &nbsp;<wbr>Context&nbsp;<wbr>&#8216;home&#8217;&nbsp;<wbr>set. Use&nbsp;<wbr>&#8216;task context none&#8217;&nbsp;<wbr>to remove. </p>
-<p>&nbsp;<wbr>$&nbsp;<wbr>task list<br />
-&nbsp;<wbr>ID Age Project&nbsp;<wbr>&nbsp;<wbr>Description&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Urg<br />
-&nbsp;<wbr>2&nbsp;<wbr>&nbsp;<wbr>1d&nbsp;<wbr>&nbsp;<wbr>Home&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Clean the dishes&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1.14<br />
+<p>&nbsp;<wbr>$&nbsp;<wbr>task list<br/>
+&nbsp;<wbr>ID Age Project&nbsp;<wbr>&nbsp;<wbr>Description&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Urg<br/>
+&nbsp;<wbr>2&nbsp;<wbr>&nbsp;<wbr>1d&nbsp;<wbr>&nbsp;<wbr>Home&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Clean the dishes&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1.14<br/>
 &nbsp;<wbr>Context&nbsp;<wbr>&#8216;home&#8217;&nbsp;<wbr>set. Use&nbsp;<wbr>&#8216;task context none&#8217;&nbsp;<wbr>to remove. </p>
 <p> As seen in the example above, context is applied by specifying its name to the &quot;context&quot; command. To change the currently applied context, just pass the new context&#8217;s name to the &#8216;context&#8217; command. </p>
 <p> To unset any context, use the &#8216;none&#8217; subcommand. </p>
-<p>&nbsp;<wbr>$&nbsp;<wbr>task context none<br />
+<p>&nbsp;<wbr>$&nbsp;<wbr>task context none<br/>
 &nbsp;<wbr>Context unset. </p>
-<p>&nbsp;<wbr>$&nbsp;<wbr>task list<br />
-&nbsp;<wbr>ID Age Project&nbsp;<wbr>&nbsp;<wbr>Description&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Urg<br />
-&nbsp;<wbr>1&nbsp;<wbr>&nbsp;<wbr>2d&nbsp;<wbr>&nbsp;<wbr>Sport&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Run 5 miles&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1.42<br />
+<p>&nbsp;<wbr>$&nbsp;<wbr>task list<br/>
+&nbsp;<wbr>ID Age Project&nbsp;<wbr>&nbsp;<wbr>Description&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Urg<br/>
+&nbsp;<wbr>1&nbsp;<wbr>&nbsp;<wbr>2d&nbsp;<wbr>&nbsp;<wbr>Sport&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Run 5 miles&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1.42<br/>
 &nbsp;<wbr>2&nbsp;<wbr>&nbsp;<wbr>1d&nbsp;<wbr>&nbsp;<wbr>Home&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Clean the dishes&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1.14 </p>
 <p> Context can be defined using the &#8216;define&#8217; subcommand, specifying both the name of the new context, and it&#8217;s assigned filter. </p>
-<p>&nbsp;<wbr>$&nbsp;<wbr>task context define home project:Home<br />
-&nbsp;<wbr>Are you sure you want to add&nbsp;<wbr>&#8216;context.home&#8217;&nbsp;<wbr>with a value of&nbsp;<wbr>&#8216;project:Home&#8217;?&nbsp;<wbr>(yes/no)&nbsp;<wbr>yes<br />
+<p>&nbsp;<wbr>$&nbsp;<wbr>task context define home project:Home<br/>
+&nbsp;<wbr>Are you sure you want to add&nbsp;<wbr>&#8216;context.home&#8217;&nbsp;<wbr>with a value of&nbsp;<wbr>&#8216;project:Home&#8217;?&nbsp;<wbr>(yes/no)&nbsp;<wbr>yes<br/>
 &nbsp;<wbr>Context&nbsp;<wbr>&#8216;home&#8217;&nbsp;<wbr>successfully defined. </p>
 <p> To remove the definition, use the &#8216;delete&#8217; subcommand. </p>
-<p>&nbsp;<wbr>$&nbsp;<wbr>task context delete home<br />
-&nbsp;<wbr>Are you sure you want to remove&nbsp;<wbr>&#8216;context.home&#8217;?&nbsp;<wbr>(yes/no)&nbsp;<wbr>yes<br />
+<p>&nbsp;<wbr>$&nbsp;<wbr>task context delete home<br/>
+&nbsp;<wbr>Are you sure you want to remove&nbsp;<wbr>&#8216;context.home&#8217;?&nbsp;<wbr>(yes/no)&nbsp;<wbr>yes<br/>
 &nbsp;<wbr>Context&nbsp;<wbr>&#8216;home&#8217;&nbsp;<wbr>successfully undefined. </p>
 <p> To check what is the currently active context, use the &#8216;show&#8217; subcommand. </p>
-<p>&nbsp;<wbr>$&nbsp;<wbr>task context show<br />
+<p>&nbsp;<wbr>$&nbsp;<wbr>task context show<br/>
 &nbsp;<wbr>Context&nbsp;<wbr>&#8216;home&#8217;&nbsp;<wbr>with filter&nbsp;<wbr>&#8216;project:Home&#8217;&nbsp;<wbr>is currently applied. </p>
 <p> Contexts can store arbitrarily complex filters. </p>
-<p>&nbsp;<wbr>$&nbsp;<wbr>task context define family project:Family or&nbsp;<wbr>+paul or&nbsp;<wbr>+nancy<br />
-&nbsp;<wbr>Are you sure you want to add&nbsp;<wbr>&#8216;context.home&#8217;&nbsp;<wbr>with a value of&nbsp;<wbr>&#8216;project:Family or&nbsp;<wbr>+paul or&nbsp;<wbr>+nancy&#8217;?&nbsp;<wbr>(yes/no)&nbsp;<wbr>yes<br />
+<p>&nbsp;<wbr>$&nbsp;<wbr>task context define family project:Family or&nbsp;<wbr>+paul or&nbsp;<wbr>+nancy<br/>
+&nbsp;<wbr>Are you sure you want to add&nbsp;<wbr>&#8216;context.home&#8217;&nbsp;<wbr>with a value of&nbsp;<wbr>&#8216;project:Family or&nbsp;<wbr>+paul or&nbsp;<wbr>+nancy&#8217;?&nbsp;<wbr>(yes/no)&nbsp;<wbr>yes<br/>
 &nbsp;<wbr>Context&nbsp;<wbr>&#8216;family&#8217;&nbsp;<wbr>successfully defined. </p>
 <p> Contexts are permanent, and the currently set context name is stored in the &quot;context&quot; configuration variable. The context definition is stored in the &quot;context.&lt;name&gt;&quot; configuration variable. </p>
 <h2>COMMAND ABBREVIATION</h2>
@@ -574,7 +574,7 @@ description: "task – A command line todo manager."
 <p> Some task descriptions need to be escaped because of the shell and the special meaning of some characters to the shell. This can be done either by adding quotes to the description or escaping the special character: </p>
 <dl>
 <dt>
-</dt><dd> $ task add &quot;quoted &#8216; quote&quot;<br />
+</dt><dd> $ task add &quot;quoted &#8216; quote&quot;<br/>
  $ task add escaped \&#8217; quote</dd></dl>
 <p> The argument &#8212; (a double dash) tells Taskwarrior to treat all other args as description: </p>
 <dl>

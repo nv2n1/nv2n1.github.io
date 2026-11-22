@@ -9,9 +9,9 @@ description: "f2fscrypt – f2fs filesystem encryption utility"
 
 <p>f2fscrypt &#8211; f2fs filesystem encryption utility</p>
 <h2>Synopsis</h2>
-<p><code>f2fscrypt add_key -S </code>[<code> -k </code><i>keyring</i> ] [<code>-v</code>] [<code>-q</code>] [ <i> path</i> &#8230; ]<br />
- <code>f2fscrypt new_session</code><br />
- <code>f2fscrypt get_policy </code><i>path</i> &#8230;<br />
+<p><code>f2fscrypt add_key -S </code>[<code> -k </code><i>keyring</i> ] [<code>-v</code>] [<code>-q</code>] [ <i> path</i> &#8230; ]<br/>
+ <code>f2fscrypt new_session</code><br/>
+ <code>f2fscrypt get_policy </code><i>path</i> &#8230;<br/>
  <code>f2fscrypt set_policy </code><i>policy path</i> &#8230;</p>
 <h2>Description</h2>
 <p><code>f2fscrypt</code> performs encryption management for f2fs file systems.</p>

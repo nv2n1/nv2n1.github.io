@@ -12,7 +12,7 @@ description: "dbcolmovingstats – compute moving statistics over a window of a 
 <h2>SYNOPSIS</h2>
 <p> dbcolmovingstats [-am] [-w window-width] [-e EmptyValue] column</p>
 <h2>DESCRIPTION</h2>
-<p> Compute moving statistics over a <font SIZE="-1">COLUMN</font> of data. Records containing non-numeric data are considered null do not contribute to the stats (optionally they are treated as zeros with <tt>&quot;-a&quot;</tt>). </p>
+<p> Compute moving statistics over a COLUMN of data. Records containing non-numeric data are considered null do not contribute to the stats (optionally they are treated as zeros with <tt>&quot;-a&quot;</tt>). </p>
 <p> Currently we compute mean and sample standard deviation. (Note we only compute sample standard deviation, not full population.) Optionally, with <tt>&quot;-m&quot;</tt> we also compute median. (Currently there is no support for generalized quantiles.) </p>
 <p> Values before a sufficient number have been accumulated are given the empty value (if specified with <tt>&quot;-e&quot;</tt>). If no empty value is given, stats are computed on as many are possible if no empty value is specified. </p>
 <p> Dbcolmovingstats runs in O(1) memory, but must buffer a full window of data. Quantiles currently will repeatedly sort the window and so may perform poorly with wide windows.</p>
@@ -20,13 +20,13 @@ description: "dbcolmovingstats – compute moving statistics over a window of a 
 <dl>
 <dt><code>-a</code> or <code>&#8211;include-non-numeric</code></dt>
 <dd> Compute stats over all records (treat non-numeric records as zero rather than just ignoring them).</dd>
-<dt><code>-w</code> or <code>&#8211;window</code> <font SIZE="-1">WINDOW</font></dt>
-<dd> <font SIZE="-1">WINDOW</font> of how many items to accumulate (defaults to 10). (For compatibility with fsdb-1.x, <code>-n</code> is also supported.)</dd>
+<dt><code>-w</code> or <code>&#8211;window</code> WINDOW</dt>
+<dd> WINDOW of how many items to accumulate (defaults to 10). (For compatibility with fsdb-1.x, <code>-n</code> is also supported.)</dd>
 <dt><code>-m</code> or <code>&#8211;median</code></dt>
 <dd> Show median of the window in addition to mean.</dd>
 <dt><code>-e E</code> or <code>&#8211;empty E</code></dt>
 <dd> Give value E as the value for empty (null) records. This null value is then output before a full window is accumulated.</dd>
-<dt><code>-f </code><font SIZE="-1"><code>FORMAT</code></font> or <code>&#8211;format </code><font SIZE="-1"><code>FORMAT</code></font></dt>
+<dt><code>-f </code><code>FORMAT</code> or <code>&#8211;format </code><code>FORMAT</code></dt>
 <dd> Specify a <i><a href="/docs/linux/man/3-printf/">printf</a></i>(3)-style format for output mean and standard deviation. Defaults to <tt>&quot;%.5g&quot;</tt>.</dd></dl>
 <p> Eventually we expect to support other options of dbcolstats. </p>
 <p> This module also supports the standard fsdb options:</p>
@@ -91,4 +91,4 @@ description: "dbcolmovingstats – compute moving statistics over a window of a 
 <p> Currently there is no support for generalized quantiles.</p>
 <h2>AUTHOR and COPYRIGHT</h2>
 <p> Copyright (C) 1991-2015 by John Heidemann &lt;johnh [at] isi.edu&gt; </p>
-<p> This program is distributed under terms of the <font SIZE="-1">GNU</font> general public license, version 2. See the file <font SIZE="-1">COPYING</font> with the distribution for details. </p>
+<p> This program is distributed under terms of the GNU general public license, version 2. See the file COPYING with the distribution for details. </p>

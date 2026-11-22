@@ -32,7 +32,7 @@ description: "perl5141delta – what is new for perl v5.14.1"
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Pod::Perldoc has been upgraded from version 3.15_03 to 3.15_04. </p>
-<p> It corrects the search paths on <font SIZE="-1">VMS.</font> [perl #90640] </p>
+<p> It corrects the search paths on VMS. [perl #90640] </p>
  </dd></dl>
 <h3>Removed Modules and Pragmata</h3>
 <p> None  </p>
@@ -72,7 +72,7 @@ description: "perl5141delta – what is new for perl v5.14.1"
 <dt>&bull;</dt>
 <dd> <p> perlrun has undergone a significant clean-up. Most notably, the <code>-0x...</code> form of the <code>-0</code> flag has been clarified, and the final section on environment variables has been corrected and expanded. </p>
  </dd></dl>
-<p> <i></i><font SIZE="-1"><i>POSIX</i></font><i></i> </p>
+<p> <i></i><i>POSIX</i><i></i> </p>
 <dl>
 <dt>&bull;</dt>
 <dd> <p> The invocation documentation for <code>&quot;WIFEXITED&quot;</code>, <code>&quot;WEXITSTATUS&quot;</code>, <code>&quot;WIFSIGNALED&quot;</code>, <code>&quot;WTERMSIG&quot;</code>, <code>&quot;WIFSTOPPED&quot;</code>, and <code>&quot;WSTOPSIG&quot;</code> was corrected. </p>
@@ -88,7 +88,7 @@ description: "perl5141delta – what is new for perl v5.14.1"
 <h2>Configuration and Compilation</h2>
 <dl>
 <dt>&bull;</dt>
-<dd> <p> <i>regexp.h</i> has been modified for compatibility with <font SIZE="-1">GCC</font>&#8216;s <code>&quot;-Werror&quot;</code> option, as used by some projects that include perl&#8217;s header files. </p>
+<dd> <p> <i>regexp.h</i> has been modified for compatibility with GCC&#8216;s <code>&quot;-Werror&quot;</code> option, as used by some projects that include perl&#8217;s header files. </p>
  </dd></dl>
 <h2>Testing</h2>
 <dl>
@@ -96,7 +96,7 @@ description: "perl5141delta – what is new for perl v5.14.1"
 <dd> <p> Some test failures in <i>dist/Locale-Maketext/t/09_compile.t</i> that could occur depending on the environment have been fixed. [perl #89896] </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> A watchdog timer for <i>t/re/re.t</i> was lengthened to accommodate <font SIZE="-1">SH-4</font> systems which were unable to complete the tests before the previous timer ran out. </p>
+<dd> <p> A watchdog timer for <i>t/re/re.t</i> was lengthened to accommodate SH-4 systems which were unable to complete the tests before the previous timer ran out. </p>
  </dd></dl>
 <h2>Platform Support</h2>
 <h3>New Platforms</h3>
@@ -109,13 +109,13 @@ description: "perl5141delta – what is new for perl v5.14.1"
 <dt>&bull;</dt>
 <dd> <p> Documentation listing the Solaris packages required to build Perl on Solaris 9 and Solaris 10 has been corrected. </p>
  </dd></dl>
-<p> <i>Mac </i><font SIZE="-1"><i>OS X</i></font><i></i> </p>
+<p> <i>Mac </i><i>OS X</i><i></i> </p>
 <dl>
 <dt>&bull;</dt>
 <dd> <p> The <i>lib/locale.t</i> test script has been updated to work on the upcoming Lion release. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Mac <font SIZE="-1">OS X</font> specific compilation instructions have been clarified. </p>
+<dd> <p> Mac OS X specific compilation instructions have been clarified. </p>
  </dd></dl>
 <p> <i>Ubuntu Linux</i> </p>
 <dl>
@@ -125,7 +125,7 @@ description: "perl5141delta – what is new for perl v5.14.1"
 <h2>Internal Changes</h2>
 <dl>
 <dt>&bull;</dt>
-<dd> <p> The compiled representation of formats is now stored via the mg_ptr of their PERL_MAGIC_fm. Previously it was stored in the string buffer, beyond <code>SvLEN()</code>, the regular end of the string. <code>SvCOMPILED()</code> and SvCOMPILED_{on,off}() now exist solely for compatibility for <font SIZE="-1">XS</font> code. The first is always 0, the other two now no-ops. </p>
+<dd> <p> The compiled representation of formats is now stored via the mg_ptr of their PERL_MAGIC_fm. Previously it was stored in the string buffer, beyond <code>SvLEN()</code>, the regular end of the string. <code>SvCOMPILED()</code> and SvCOMPILED_{on,off}() now exist solely for compatibility for XS code. The first is always 0, the other two now no-ops. </p>
  </dd></dl>
 <h2>Bug Fixes</h2>
 <dl>
@@ -148,7 +148,7 @@ description: "perl5141delta – what is new for perl v5.14.1"
 <dd> <p> Several Unicode case-folding bugs have been fixed. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> The new (in 5.14.0) regular expression modifier <code>&quot;/a&quot;</code> when repeated like <code>&quot;/aa&quot;</code> forbids the characters outside the <font SIZE="-1">ASCII</font> range that match characters inside that range from matching under <code>&quot;/i&quot;</code>. This did not work under some circumstances, all involving alternation, such as: </p>
+<dd> <p> The new (in 5.14.0) regular expression modifier <code>&quot;/a&quot;</code> when repeated like <code>&quot;/aa&quot;</code> forbids the characters outside the ASCII range that match characters inside that range from matching under <code>&quot;/i&quot;</code>. This did not work under some circumstances, all involving alternation, such as: </p>
 <pre><code> &quot;\N{KELVIN SIGN}&quot; =~ /k|foo/iaa;
 </code></pre>
 <p> succeeded inappropriately. This is now fixed. </p>
@@ -163,9 +163,9 @@ description: "perl5141delta – what is new for perl v5.14.1"
 <h2>Reporting Bugs</h2>
 <p> If you find what you think is a bug, you might check the articles recently posted to the comp.lang.perl.misc newsgroup and the perl bug database at <a rel="nofollow" href="http://rt.perl.org/perlbug/">http://rt.perl.org/perlbug/</a> . There may also be information at <a rel="nofollow" href="http://www.perl.org/">http://www.perl.org/</a> , the Perl Home Page. </p>
 <p> If you believe you have an unreported bug, please run the perlbug program included with your release. Be sure to trim your bug down to a tiny but sufficient test case. Your bug report, along with the output of <code>&quot;perl -V&quot;</code>, will be sent off to perlbug [at] perl.org to be analysed by the Perl porting team. </p>
-<p> If the bug you are reporting has security implications, which make it inappropriate to send to a publicly archived mailing list, then please send it to perl5-security-report [at] perl.org. This points to a closed subscription unarchived mailing list, which includes all the core committers, who be able to help assess the impact of issues, figure out a resolution, and help co-ordinate the release of patches to mitigate or fix the problem across all platforms on which Perl is supported. Please only use this address for security issues in the Perl core, not for modules independently distributed on <font SIZE="-1">CPAN.</font>  </p>
+<p> If the bug you are reporting has security implications, which make it inappropriate to send to a publicly archived mailing list, then please send it to perl5-security-report [at] perl.org. This points to a closed subscription unarchived mailing list, which includes all the core committers, who be able to help assess the impact of issues, figure out a resolution, and help co-ordinate the release of patches to mitigate or fix the problem across all platforms on which Perl is supported. Please only use this address for security issues in the Perl core, not for modules independently distributed on CPAN.  </p>
 <h2>SEE ALSO</h2>
 <p> The <i>Changes</i> file for an explanation of how to view exhaustive details on what changed. </p>
-<p> The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. </p>
-<p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
+<p> The <i></i><i>INSTALL</i><i></i> file for how to build Perl. </p>
+<p> The <i></i><i>README</i><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information. </p>

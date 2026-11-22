@@ -43,9 +43,9 @@ description: "xforms – A GUI Toolkit for X Window Systems"
 <h2>See Also</h2>
 <p>fdesign(1L), fd2ps(1L) </p>
 <h2>Author</h2>
-<p>Copyright (c) 1996-2002 T.C. Zhao, Mark Overmars and Steve Lamont<br />
- Since 2002: GNU Lesser General Public License<br />
+<p>Copyright (c) 1996-2002 T.C. Zhao, Mark Overmars and Steve Lamont<br/>
+ Since 2002: GNU Lesser General Public License<br/>
  Maintainers: Jean-Marc Lasgouttes, Angus Leeming, Jens Thoms Toerring &lt;jt [at] toerring.de&gt;</p>
 <h2>Home Page</h2>
-<p><a rel="nofollow" href="http://xforms-toolkit.org">http://xforms-toolkit.org</a><br />
+<p><a rel="nofollow" href="http://xforms-toolkit.org">http://xforms-toolkit.org</a><br/>
  <a rel="nofollow" href="http://savannah.nongnu.org/projects/xforms/">http://savannah.nongnu.org/projects/xforms/</a></p>

@@ -23,29 +23,29 @@ template&lt; class T &gt;                                                    (5)
 unique_ptr&lt;T&gt; make_unique_default_init( std::size_t size );                (only for array types with unknown bound)
 template&lt; class T, class... Args &gt;                                     (6) (since C++20)
 /* unspecified */ make_unique_default_init( Args&amp;&amp;... args ) = delete;     (only for array types with known bound)</code></pre>
-<p>Constructs an object of type T and wraps it in a std::unique_ptr.<br />
-1) Constructs a non-array type T. The arguments args are passed to the constructor of T. This overload only participates in overload resolution if T is not an array type. The function is equivalent to:<br />
-&nbsp;<wbr>&nbsp;unique_ptr&lt;T&gt;(new T(std::forward&lt;Args&gt;(args)&#8230;))<br />
-2) Constructs an array of unknown bound T. This overload only participates in overload resolution if T is an array of unknown bound. The function is equivalent to:<br />
-&nbsp;<wbr>&nbsp;unique_ptr&lt;T&gt;(new typename std::remove_extent&lt;T&gt;::type[size]())<br />
-3,6) Construction of arrays of known bound is disallowed.<br />
-4) Same as <code>(1)</code>, except that the object is default-initialized. This overload only participates in overload resolution if T is not an array type. The function is equivalent to:<br />
-&nbsp;<wbr>&nbsp;unique_ptr&lt;T&gt;(new T)<br />
-5) Same as <code>(2)</code>, except that the array is default-initialized. This overload only participates in overload resolution if T is an array of unknown bound. The function is equivalent to:<br />
+<p>Constructs an object of type T and wraps it in a std::unique_ptr.<br/>
+1) Constructs a non-array type T. The arguments args are passed to the constructor of T. This overload only participates in overload resolution if T is not an array type. The function is equivalent to:<br/>
+&nbsp;<wbr>&nbsp;unique_ptr&lt;T&gt;(new T(std::forward&lt;Args&gt;(args)&#8230;))<br/>
+2) Constructs an array of unknown bound T. This overload only participates in overload resolution if T is an array of unknown bound. The function is equivalent to:<br/>
+&nbsp;<wbr>&nbsp;unique_ptr&lt;T&gt;(new typename std::remove_extent&lt;T&gt;::type[size]())<br/>
+3,6) Construction of arrays of known bound is disallowed.<br/>
+4) Same as <code>(1)</code>, except that the object is default-initialized. This overload only participates in overload resolution if T is not an array type. The function is equivalent to:<br/>
+&nbsp;<wbr>&nbsp;unique_ptr&lt;T&gt;(new T)<br/>
+5) Same as <code>(2)</code>, except that the array is default-initialized. This overload only participates in overload resolution if T is an array of unknown bound. The function is equivalent to:<br/>
 &nbsp;<wbr>&nbsp;unique_ptr&lt;T&gt;(new typename std::remove_extent&lt;T&gt;::type[size]) </p>
 <h2>Parameters</h2>
-<p>args &#8211; list of arguments with which an instance of T will be constructed.<br />
+<p>args &#8211; list of arguments with which an instance of T will be constructed.<br/>
 size &#8211; the size of the array to construct</p>
 <h2>Return value</h2>
 <p>std::unique_ptr of an instance of type T. </p>
 <h2>Exceptions</h2>
 <p>May throw std::bad_alloc or any exception thrown by the constructor of T. If an exception is thrown, this function has no effect. </p>
 <p>Possible Implementation </p>
-<p>&nbsp;<wbr>&nbsp;// note: this implementation does not disable this overload for array types<br />
-&nbsp;<wbr>&nbsp;template&lt;typename T, typename&#8230; Args&gt;<br />
-&nbsp;<wbr>&nbsp;std::unique_ptr&lt;T&gt; make_unique(Args&amp;&amp;&#8230; args)<br />
-&nbsp;<wbr>&nbsp;{<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;return std::unique_ptr&lt;T&gt;(new T(std::forward&lt;Args&gt;(args)&#8230;));<br />
+<p>&nbsp;<wbr>&nbsp;// note: this implementation does not disable this overload for array types<br/>
+&nbsp;<wbr>&nbsp;template&lt;typename T, typename&#8230; Args&gt;<br/>
+&nbsp;<wbr>&nbsp;std::unique_ptr&lt;T&gt; make_unique(Args&amp;&amp;&#8230; args)<br/>
+&nbsp;<wbr>&nbsp;{<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;return std::unique_ptr&lt;T&gt;(new T(std::forward&lt;Args&gt;(args)&#8230;));<br/>
 &nbsp;<wbr>&nbsp;}</p>
 <h2>Notes</h2>
 <p>Unlike std::make_shared (which has std::allocate_shared), std::make_unique does not have an allocator-aware counterpart. A hypothetical allocate_unique would be required to invent the deleter type D for the unique_ptr&lt;T,D&gt; it returns which would contain an allocator object and invoke both destroy and deallocate in its operator(). </p>
@@ -90,18 +90,18 @@ int main()
 }
 </code></pre>
 <h2>Output:</h2>
-<p>&nbsp;<wbr>&nbsp;make_unique&lt;Vec3&gt;(): {x:0 y:0 z:0}<br />
-&nbsp;<wbr>&nbsp;make_unique&lt;Vec3&gt;(0,1,2): {x:0 y:1 z:2}<br />
-&nbsp;<wbr>&nbsp;make_unique&lt;Vec3[]&gt;<code>(5)</code>:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;{x:0 y:0 z:0}<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;{x:0 y:0 z:0}<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;{x:0 y:0 z:0}<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;{x:0 y:0 z:0}<br />
+<p>&nbsp;<wbr>&nbsp;make_unique&lt;Vec3&gt;(): {x:0 y:0 z:0}<br/>
+&nbsp;<wbr>&nbsp;make_unique&lt;Vec3&gt;(0,1,2): {x:0 y:1 z:2}<br/>
+&nbsp;<wbr>&nbsp;make_unique&lt;Vec3[]&gt;<code>(5)</code>:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;{x:0 y:0 z:0}<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;{x:0 y:0 z:0}<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;{x:0 y:0 z:0}<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;{x:0 y:0 z:0}<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;{x:0 y:0 z:0}</p>
 <h2>See also</h2>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;constructs a new unique_ptr<br />
-constructor <i>(public member function)</i><br />
-make_shared<br />
-make_shared_default_init creates a shared pointer that manages a new object<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(function template)</i><br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;constructs a new unique_ptr<br/>
+constructor <i>(public member function)</i><br/>
+make_shared<br/>
+make_shared_default_init creates a shared pointer that manages a new object<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(function template)</i><br/>
 (C++20) </p>

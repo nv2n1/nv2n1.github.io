@@ -19,7 +19,7 @@ description: "cefsconv – convert a TeX document in SJIS encoding containing CE
 </dt><dd> <code>sjisconv</code> &lt; <i>infile</i> | <code>cefconv</code> &gt; <i>outfile</i></dd></dl>
 <p> This filter is part of the <code>CJK</code> macro package for LaTeX 2e.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-sjisconv/">sjisconv</a></code>(1), <code><a href="/docs/linux/man/1-bg5conv/">bg5conv</a></code>(1), <code><a href="/docs/linux/man/1-cefconv/">cefconv</a></code>(1), <code><a href="/docs/linux/man/1-cef5conv/">cef5conv</a></code>(1), <code><a href="/docs/linux/man/1-extconv/">extconv</a></code>(1),<br />
+<p> <code><a href="/docs/linux/man/1-sjisconv/">sjisconv</a></code>(1), <code><a href="/docs/linux/man/1-bg5conv/">bg5conv</a></code>(1), <code><a href="/docs/linux/man/1-cefconv/">cefconv</a></code>(1), <code><a href="/docs/linux/man/1-cef5conv/">cef5conv</a></code>(1), <code><a href="/docs/linux/man/1-extconv/">extconv</a></code>(1),<br/>
  the <code>CJK</code> documentation files.</p>
 <h2>AUTHOR</h2>
 <p> Werner Lemberg </p>

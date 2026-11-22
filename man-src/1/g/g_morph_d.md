@@ -17,32 +17,32 @@ description: "g_morph – linear interpolation of conformations"
 <p> x(i) = x1 + (first+(i/(N-1))*(last-first))*(x2-x1) </p>
 <p> Finally the RMSD with respect to both input structures can be computed if explicitly selected (-or option). In that case an index file may be read to select what group RMS is computed from.</p>
 <h2>FILES</h2>
-<p> <code>-f1</code><i> conf1.gro</i> <code>Input</code><br />
+<p> <code>-f1</code><i> conf1.gro</i> <code>Input</code><br/>
 &nbsp;<wbr>Structure file: gro g96 pdb tpr tpb tpa&nbsp;<wbr> </p>
-<p> <code>-f2</code><i> conf2.gro</i> <code>Input</code><br />
+<p> <code>-f2</code><i> conf2.gro</i> <code>Input</code><br/>
 &nbsp;<wbr>Structure file: gro g96 pdb tpr tpb tpa&nbsp;<wbr> </p>
-<p> <code>-o</code><i> interm.xtc</i> <code>Output</code><br />
+<p> <code>-o</code><i> interm.xtc</i> <code>Output</code><br/>
 &nbsp;<wbr>Trajectory: xtc trr trj gro g96 pdb&nbsp;<wbr> </p>
-<p> <code>-or</code><i> rms-interm.xvg</i> <code>Output, Opt.</code><br />
+<p> <code>-or</code><i> rms-interm.xvg</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-n</code><i> index.ndx</i> <code>Input, Opt.</code><br />
+<p> <code>-n</code><i> index.ndx</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Index file&nbsp;<wbr> </p>
 <h2>OTHER OPTIONS</h2>
-<p> <code>-[no]h</code><i>no </i><br />
+<p> <code>-[no]h</code><i>no </i><br/>
 &nbsp;<wbr>Print help info and quit </p>
-<p> <code>-nice</code><i> int</i><code> 0</code><br />
+<p> <code>-nice</code><i> int</i><code> 0</code><br/>
 &nbsp;<wbr>Set the nicelevel </p>
-<p> <code>-[no]w</code><i>no </i><br />
+<p> <code>-[no]w</code><i>no </i><br/>
 &nbsp;<wbr>View output xvg, xpm, eps and pdb files </p>
-<p> <code>-[no]xvgr</code><i>yes </i><br />
+<p> <code>-[no]xvgr</code><i>yes </i><br/>
 &nbsp;<wbr>Add specific codes&nbsp;<wbr>(legends etc.)&nbsp;<wbr>in the output xvg files for the xmgrace program </p>
-<p> <code>-ninterm</code><i> int</i><code> 11</code><br />
+<p> <code>-ninterm</code><i> int</i><code> 11</code><br/>
 &nbsp;<wbr>Number of intermediates </p>
-<p> <code>-first</code><i> real</i><code> 0 </code><br />
+<p> <code>-first</code><i> real</i><code> 0 </code><br/>
 &nbsp;<wbr>Corresponds to first generated structure&nbsp;<wbr>(0 is input x0, see above) </p>
-<p> <code>-last</code><i> real</i><code> 1 </code><br />
+<p> <code>-last</code><i> real</i><code> 1 </code><br/>
 &nbsp;<wbr>Corresponds to last generated structure&nbsp;<wbr>(1 is input x1, see above) </p>
-<p> <code>-[no]fit</code><i>yes </i><br />
+<p> <code>-[no]fit</code><i>yes </i><br/>
 &nbsp;<wbr>Do a least squares fit of the second to the first structure before interpolating </p>
 <h2>SEE ALSO</h2>
 <p> <code>gromacs(7)</code> </p>

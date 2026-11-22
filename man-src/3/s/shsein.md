@@ -11,7 +11,7 @@ description: "shsein.f –"
 <p> shsein.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>shsein</code> (SIDE, EIGSRC, INITV, SELECT, N, H, LDH, WR, WI, VL, LDVL, VR, LDVR, MM, M, WORK, IFAILL, IFAILR, INFO)<br />
+<p> subroutine <code>shsein</code> (SIDE, EIGSRC, INITV, SELECT, N, H, LDH, WR, WI, VL, LDVL, VR, LDVR, MM, M, WORK, IFAILL, IFAILR, INFO)<br/>
  <i></i><code>SHSEIN</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine shsein (characterSIDE, characterEIGSRC, characterINITV, logical, dimension( * )SELECT, integerN, real, dimension( ldh, * )H, integerLDH, real, dimension( * )WR, real, dimension( * )WI, real, dimension( ldvl, * )VL, integerLDVL, real, dimension( ldvr, * )VR, integerLDVR, integerMM, integerM, real, dimension( * )WORK, integer, dimension( * )IFAILL, integer, dimension( * )IFAILR, integerINFO)</h3>
@@ -115,21 +115,21 @@ description: "shsein.f –"
               if SIDE = 'L' or 'B', the left eigenvectors specified by SELECT will be stored consecutively in the columns of VL, in the same order as their eigenvalues.A complex eigenvector corresponding to a complex eigenvalue is stored in two consecutive columns, the first holding the real part and the second the imaginary part.If SIDE = 'R', VL is not referenced.
 </code></pre>
 <p> <i>LDVL</i> </p>
-<p>LDVL is INTEGER<br />
-        The leading dimension of the array VL.LDVL &gt;= max(1, N) if SIDE = &#8216;L&#8217; or &#8216;B&#8217;;<br />
+<p>LDVL is INTEGER<br/>
+        The leading dimension of the array VL.LDVL &gt;= max(1, N) if SIDE = &#8216;L&#8217; or &#8216;B&#8217;;<br/>
 LDVL &gt;= 1 otherwise.</p>
 <p> <i>VR</i> </p>
-<p>          VR is REAL array, dimension (LDVR,MM)<br />
-          On entry, if INITV = &#8216;U&#8217; and SIDE = &#8216;R&#8217; or &#8216;B&#8217;, VR must<br />
-          contain starting vectors for the inverse iteration for the<br />
-          right eigenvectors; the starting vector for each eigenvector<br />
-          must be in the same column(s)<br />
-          in which the eigenvector will<br />
-              be stored.On exit,<br />
+<p>          VR is REAL array, dimension (LDVR,MM)<br/>
+          On entry, if INITV = &#8216;U&#8217; and SIDE = &#8216;R&#8217; or &#8216;B&#8217;, VR must<br/>
+          contain starting vectors for the inverse iteration for the<br/>
+          right eigenvectors; the starting vector for each eigenvector<br/>
+          must be in the same column(s)<br/>
+          in which the eigenvector will<br/>
+              be stored.On exit,<br/>
               if SIDE = &#8216;R&#8217; or &#8216;B&#8217;, the right eigenvectors specified by SELECT will be stored consecutively in the columns of VR, in the same order as their eigenvalues.A complex eigenvector corresponding to a complex eigenvalue is stored in two consecutive columns, the first holding the real part and the second the imaginary part.If SIDE = &#8216;L&#8217;, VR is not referenced.</p>
 <p> <i>LDVR</i> </p>
-<p>LDVR is INTEGER<br />
-        The leading dimension of the array VR.LDVR &gt;= max(1, N) if SIDE = &#8216;R&#8217; or &#8216;B&#8217;;<br />
+<p>LDVR is INTEGER<br/>
+        The leading dimension of the array VR.LDVR &gt;= max(1, N) if SIDE = &#8216;R&#8217; or &#8216;B&#8217;;<br/>
 LDVR &gt;= 1 otherwise.</p>
 <p> <i>MM</i> </p>
 <pre>
@@ -149,24 +149,24 @@ LDVR &gt;= 1 otherwise.</p>
           WORK is REAL array, dimension ((N+2)*N)
 </pre>
 <p> <i>IFAILL</i> </p>
-<p>IFAILL is INTEGER array, dimension(MM) If SIDE = &#8216;L&#8217; or &#8216;B&#8217;, IFAILL(i) = j &gt; 0 if the left eigenvector in the i &#8211; th column of VL(corresponding to the eigenvalue w(j)) failed to converge;<br />
-IFAILL(i) = 0 if the<br />
-                eigenvector converged satisfactorily.If the i<br />
-                &#8211; th<br />
-            and (i + 1) th<br />
-            columns of VL hold a complex eigenvector,<br />
-    then IFAILL(i) and<br />
-        IFAILL(i + 1) are set to the same value.If SIDE = &#8216;R&#8217;,<br />
+<p>IFAILL is INTEGER array, dimension(MM) If SIDE = &#8216;L&#8217; or &#8216;B&#8217;, IFAILL(i) = j &gt; 0 if the left eigenvector in the i &#8211; th column of VL(corresponding to the eigenvalue w(j)) failed to converge;<br/>
+IFAILL(i) = 0 if the<br/>
+                eigenvector converged satisfactorily.If the i<br/>
+                &#8211; th<br/>
+            and (i + 1) th<br/>
+            columns of VL hold a complex eigenvector,<br/>
+    then IFAILL(i) and<br/>
+        IFAILL(i + 1) are set to the same value.If SIDE = &#8216;R&#8217;,<br/>
                                                    IFAILL is not referenced.</p>
 <p> <i>IFAILR</i> </p>
-<p>IFAILR is INTEGER array, dimension(MM) If SIDE = &#8216;R&#8217; or &#8216;B&#8217;, IFAILR(i) = j &gt; 0 if the right eigenvector in the i &#8211; th column of VR(corresponding to the eigenvalue w(j)) failed to converge;<br />
-IFAILR(i) = 0 if the<br />
-                eigenvector converged satisfactorily.If the i<br />
-                &#8211; th<br />
-            and (i + 1) th<br />
-            columns of VR hold a complex eigenvector,<br />
-    then IFAILR(i) and<br />
-        IFAILR(i + 1) are set to the same value.If SIDE = &#8216;L&#8217;,<br />
+<p>IFAILR is INTEGER array, dimension(MM) If SIDE = &#8216;R&#8217; or &#8216;B&#8217;, IFAILR(i) = j &gt; 0 if the right eigenvector in the i &#8211; th column of VR(corresponding to the eigenvalue w(j)) failed to converge;<br/>
+IFAILR(i) = 0 if the<br/>
+                eigenvector converged satisfactorily.If the i<br/>
+                &#8211; th<br/>
+            and (i + 1) th<br/>
+            columns of VR hold a complex eigenvector,<br/>
+    then IFAILR(i) and<br/>
+        IFAILR(i + 1) are set to the same value.If SIDE = &#8216;L&#8217;,<br/>
                                                    IFAILR is not referenced.</p>
 <p> <i>INFO</i> </p>
 <pre><code>

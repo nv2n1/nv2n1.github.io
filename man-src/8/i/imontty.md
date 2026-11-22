@@ -21,7 +21,7 @@ line0 Out Net 0204229700
 line0 Off </pre>
 <p><i>Usage</i> is one of <code>Off</code>(line), <code>Out</code>(going), <code>In</code>(coming) or <code>Excl</code>(usive). <i>Type</i> is one of <code>raw</code> (raw device), <code>Modem</code> (modem/tty emulation), <code>Net</code> (IP interface), <code>Voice</code> (voice call) or <code>Fax</code> (fax transmission). <i>Number</i> is either the called party&#8217;s number (outgoing) or the calling party number (incoming). </p>
 <h2>Author</h2>
-<p>Volker Götz volker [at] oops.franken.de<br />
+<p>Volker Götz volker [at] oops.franken.de<br/>
  manpage adapted from the README by Paul Slootman &lt;paul [at] isdn4linux.de&gt;</p>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/8-imon/">imon</a></i>(8) </p>

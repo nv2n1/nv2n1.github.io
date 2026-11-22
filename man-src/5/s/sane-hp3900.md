@@ -44,8 +44,8 @@ BenQ 5550 RTS8823L-01E *</pre>
 <p> Example: export SANE_DEBUG_HP3900=4 </p>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/5-sane-usb/">sane-usb</a></code>(5), <code><a href="/docs/linux/man/1-sane-find-scanner/">sane-find-scanner</a></code>(1),<br />
- <i><a rel="nofollow" href="http://sourceforge.net/projects/hp3900-series/">http://sourceforge.net/projects/hp3900-series/</a></i><br />
+<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/5-sane-usb/">sane-usb</a></code>(5), <code><a href="/docs/linux/man/1-sane-find-scanner/">sane-find-scanner</a></code>(1),<br/>
+ <i><a rel="nofollow" href="http://sourceforge.net/projects/hp3900-series/">http://sourceforge.net/projects/hp3900-series/</a></i><br/>
  <i><a rel="nofollow" href="http://jkdsoftware.dyndns.org/drupal/?q=es/books/151">http://jkdsoftware.dyndns.org/drupal/?q=es/books/151</a></i> </p>
 <h2>Author</h2>
 <p>Jonathan Bravo Lopez &lt;<i>jkdsoft [at] gmail.com</i>&gt;</p>

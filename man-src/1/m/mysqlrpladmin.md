@@ -59,7 +59,7 @@ description: "mysqlrpladmin – Administration utility for MySQL replication"
 <p> The options required for the elect, health and gtid commands include the <code>&#8211;master</code> option to specify the existing master, and either the <code>&#8211;slaves</code> option to list all of the slaves in the topology or the <code>&#8211;discover-slaves-login</code> option to provide the user name and password to discover any slaves in the topology that are registered and connected to the master. </p>
 <p> The options required for switchover include the <code>&#8211;master</code> option to specify the existing master, the <code>&#8211;new-master</code> option to specify the candidate slave (the slave to become the new master), and either the <code>&#8211;slaves</code> option to list the considered slaves in the topology or the <code>&#8211;discover-slaves-login</code> option to provide the user name and password to discover any slaves in the topology that are registered and connected to the master. </p>
 <p> The failover command requires only the <code>&#8211;slaves</code> option to explicitly list all of the slaves in the topology because it is expected that the master is down when this command is used. </p>
-<p> Use the <code>&#8211;verbose</code> option to see additional information in the health report and additional messages during switchover or failover.<br />
+<p> Use the <code>&#8211;verbose</code> option to see additional information in the health report and additional messages during switchover or failover.<br/>
 OPTIONS </p>
 <p> <code>mysqlrpladmin</code> accepts the following command-line options: </p>
 <dl>
@@ -162,93 +162,93 @@ OPTIONS </p>
 <p> Similarly, if you use localhost to connect to the master, the health report may not show all of the slaves. It is best to use the actual hostname of the master when connecting or setting up replication. </p>
 <p> If the user does not specify the <code>&#8211;rpl-user </code> and the user has specified the switchover or failover command, the utility will check to see if the slaves are using &#8211;master-info-repository=TABLE. If they are not, the utility will stop with an error. </p>
 <p> All the commands require either the <code>&#8211;slaves</code> or <code>&#8211;discover-slaves-login</code> option but both cannot be used at the same time. In fact, some commands only allow the use of the <code>&#8211;slaves</code> option which is safer to specify the list slaves, because <code>&#8211;discover-slaves-login</code> might not provide an up to date list of available slaves. </p>
-<p> The path to the MySQL client tools should be included in the PATH environment variable in order to use the authentication mechanism with login-paths. This will allow the utility to use the my_print_defaults tools which is required to read the login-path values from the login configuration file (.mylogin.cnf).<br />
+<p> The path to the MySQL client tools should be included in the PATH environment variable in order to use the authentication mechanism with login-paths. This will allow the utility to use the my_print_defaults tools which is required to read the login-path values from the login configuration file (.mylogin.cnf).<br/>
 EXAMPLES </p>
 <p> To perform best slave election for a topology with GTID_MODE=ON (server version 5.6.5 or higher) where all slaves are specified with the <code>&#8211;slaves</code> option, run the following command.: </p>
 <dl>
 <dt>
 </dt><dd>
-$ mysqlrpladmin&#8211; master = root[at] localhost : 3331 &#8211;slaves = root[at] localhost : 3332, root[at] localhost : 3333, root[at] localhost : 3334 elect<br />
-#Electing candidate slave from known slaves.<br />
-#Best slave found is located on localhost : 3332.<br />
+$ mysqlrpladmin&#8211; master = root[at] localhost : 3331 &#8211;slaves = root[at] localhost : 3332, root[at] localhost : 3333, root[at] localhost : 3334 elect<br/>
+#Electing candidate slave from known slaves.<br/>
+#Best slave found is located on localhost : 3332.<br/>
 #&#8230; done.
 </dd></dl>
 <p> To perform best slave election supplying a candidate list, use the following command.: </p>
 <dl>
 <dt>
 </dt><dd>
-$ mysqlrpladmin&#8211; master = root[at] localhost : 3331 &#8211;slaves = root[at] localhost : 3332, root[at] localhost : 3333, root[at] localhost : 3334 &#8211;candidates = root[at] localhost : 3333, root[at] localhost : 3334 elect<br />
-#Electing candidate slave from candidate list then slaves list.<br />
-#Best slave found is located on localhost : 3332.<br />
+$ mysqlrpladmin&#8211; master = root[at] localhost : 3331 &#8211;slaves = root[at] localhost : 3332, root[at] localhost : 3333, root[at] localhost : 3334 &#8211;candidates = root[at] localhost : 3333, root[at] localhost : 3334 elect<br/>
+#Electing candidate slave from candidate list then slaves list.<br/>
+#Best slave found is located on localhost : 3332.<br/>
 #&#8230; done.
 </dd></dl>
 <p> To perform failover after a master has failed, use the following command.: </p>
 <dl>
 <dt>
 </dt><dd>
-$ mysqlrpladmin&#8211; slaves = root[at] localhost : 3332, root[at] localhost : 3333, root[at] localhost : 3334 &#8211;candidates = root[at] localhost : 3333, root[at] localhost : 3334 failover<br />
-#Performing failover.<br />
-#Candidate slave localhost : 3333 will become the new master.<br />
-#Preparing candidate for failover.<br />
-#Creating replication user if it does not exist.<br />
-#Stopping slaves.<br />
-#Performing STOP on all slaves.<br />
-#Switching slaves to new master.<br />
-#Starting slaves.<br />
-#Performing START on all slaves.<br />
-#Checking slaves for errors.<br />
-#Failover complete.<br />
+$ mysqlrpladmin&#8211; slaves = root[at] localhost : 3332, root[at] localhost : 3333, root[at] localhost : 3334 &#8211;candidates = root[at] localhost : 3333, root[at] localhost : 3334 failover<br/>
+#Performing failover.<br/>
+#Candidate slave localhost : 3333 will become the new master.<br/>
+#Preparing candidate for failover.<br/>
+#Creating replication user if it does not exist.<br/>
+#Stopping slaves.<br/>
+#Performing STOP on all slaves.<br/>
+#Switching slaves to new master.<br/>
+#Starting slaves.<br/>
+#Performing START on all slaves.<br/>
+#Checking slaves for errors.<br/>
+#Failover complete.<br/>
 #&#8230; done.
 </dd></dl>
 <p> To see the replication health of a topology with GTID_MODE=ON (server version 5.6.5 or higher) and discover all slaves attached to the master, run the following command. We use the result of the failover command above.: </p>
 <dl>
 <dt>
 </dt><dd>
-$ mysqlrpladmin&#8211; master = root[at] localhost : 3333 &#8211;slaves = root[at] localhost : 3332, root[at] localhost : 3334 health<br />
-#Getting health for master : localhost : 3333.<br />
-#<br />
-#Replication Topology Health:<br />
-                                                                                                   + &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; -+ |<br />
-                                                                                               host | port | role | state | gtid_mode | health |<br />
-                                                                                               +&#8211; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; -+ | localhost | 3333 | MASTER | UP | ON | OK |<br />
-                                                                                               | localhost | 3332 | SLAVE | UP | ON | OK |<br />
-                                                                                               | localhost | 3334 | SLAVE | UP | ON | OK |<br />
-                                                                                               +&#8211; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; -+<br />
+$ mysqlrpladmin&#8211; master = root[at] localhost : 3333 &#8211;slaves = root[at] localhost : 3332, root[at] localhost : 3334 health<br/>
+#Getting health for master : localhost : 3333.<br/>
+#<br/>
+#Replication Topology Health:<br/>
+                                                                                                   + &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; -+ |<br/>
+                                                                                               host | port | role | state | gtid_mode | health |<br/>
+                                                                                               +&#8211; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; -+ | localhost | 3333 | MASTER | UP | ON | OK |<br/>
+                                                                                               | localhost | 3332 | SLAVE | UP | ON | OK |<br/>
+                                                                                               | localhost | 3334 | SLAVE | UP | ON | OK |<br/>
+                                                                                               +&#8211; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; -+<br/>
 #&#8230; done.
 </dd></dl>
 <p> To view a detailed replication health report but with all of the replication health checks revealed, use the <code>&#8211;verbose</code> option as shown below. In this example, we use vertical format to make viewing easier.: </p>
 <dl>
 <dt>
 </dt><dd>
-$ mysqlrpladmin&#8211; master = root[at] localhost : 3331 &#8211;slaves = root[at] localhost : 3332, root[at] localhost : 3333, root[at] localhost : 3334 &#8211;verbose health<br />
-#Getting health for master : localhost : 3331.<br />
-#Attempting to contact localhost&#8230; Success<br />
-#Attempting to contact localhost&#8230; Success<br />
-#Attempting to contact localhost&#8230; Success<br />
-#Attempting to contact localhost&#8230; Success<br />
-#<br />
-#Replication Topology Health:<br />
-                                                                                                                                  ************************ *<br />
-                                                                                                                              1. row *************************host : localhost port : 3331 role : MASTER state : UP gtid_mode : ON health : OK version : 5.6.5 &#8211;<br />
-                                                                                                                          m8 &#8211; debug &#8211; log master_log_file : mysql &#8211; bin .000001 master_log_pos : 571 IO_Thread : SQL_Thread : Secs_Behind : Remaining_Delay : IO_Error_Num : IO_Error : *************************2. row *************************host : localhost port : 3332 role : SLAVE state : UP gtid_mode : ON health : OK version : 5.6.5 &#8211; m8 &#8211; debug &#8211; log master_log_file : mysql &#8211; bin .000001 master_log_pos : 571 IO_Thread : Yes SQL_Thread : Yes Secs_Behind : 0 Remaining_Delay : No IO_Error_Num : 0 IO_Error : *************************3. row *************************host : localhost port : 3333 role : SLAVE state : UP gtid_mode : ON health : OK version : 5.6.5 &#8211; m8 &#8211; debug &#8211; log master_log_file : mysql &#8211; bin .000001 master_log_pos : 571 IO_Thread : Yes SQL_Thread : Yes Secs_Behind : 0 Remaining_Delay : No IO_Error_Num : 0 IO_Error : *************************4. row *************************host : localhost port : 3334 role : SLAVE state : UP gtid_mode : ON health : OK version : 5.6.5 &#8211; m8 &#8211; debug &#8211; log master_log_file : mysql &#8211; bin .000001 master_log_pos : 571 IO_Thread : Yes SQL_Thread : Yes Secs_Behind : 0 Remaining_Delay : No IO_Error_Num : 0 IO_Error : 4 rows.<br />
+$ mysqlrpladmin&#8211; master = root[at] localhost : 3331 &#8211;slaves = root[at] localhost : 3332, root[at] localhost : 3333, root[at] localhost : 3334 &#8211;verbose health<br/>
+#Getting health for master : localhost : 3331.<br/>
+#Attempting to contact localhost&#8230; Success<br/>
+#Attempting to contact localhost&#8230; Success<br/>
+#Attempting to contact localhost&#8230; Success<br/>
+#Attempting to contact localhost&#8230; Success<br/>
+#<br/>
+#Replication Topology Health:<br/>
+                                                                                                                                  ************************ *<br/>
+                                                                                                                              1. row *************************host : localhost port : 3331 role : MASTER state : UP gtid_mode : ON health : OK version : 5.6.5 &#8211;<br/>
+                                                                                                                          m8 &#8211; debug &#8211; log master_log_file : mysql &#8211; bin .000001 master_log_pos : 571 IO_Thread : SQL_Thread : Secs_Behind : Remaining_Delay : IO_Error_Num : IO_Error : *************************2. row *************************host : localhost port : 3332 role : SLAVE state : UP gtid_mode : ON health : OK version : 5.6.5 &#8211; m8 &#8211; debug &#8211; log master_log_file : mysql &#8211; bin .000001 master_log_pos : 571 IO_Thread : Yes SQL_Thread : Yes Secs_Behind : 0 Remaining_Delay : No IO_Error_Num : 0 IO_Error : *************************3. row *************************host : localhost port : 3333 role : SLAVE state : UP gtid_mode : ON health : OK version : 5.6.5 &#8211; m8 &#8211; debug &#8211; log master_log_file : mysql &#8211; bin .000001 master_log_pos : 571 IO_Thread : Yes SQL_Thread : Yes Secs_Behind : 0 Remaining_Delay : No IO_Error_Num : 0 IO_Error : *************************4. row *************************host : localhost port : 3334 role : SLAVE state : UP gtid_mode : ON health : OK version : 5.6.5 &#8211; m8 &#8211; debug &#8211; log master_log_file : mysql &#8211; bin .000001 master_log_pos : 571 IO_Thread : Yes SQL_Thread : Yes Secs_Behind : 0 Remaining_Delay : No IO_Error_Num : 0 IO_Error : 4 rows.<br/>
 #&#8230; done.
 </dd></dl>
 <p> To run the same failover command above, but specify a log file, use the following command.: </p>
 <dl>
 <dt>
 </dt><dd>
-$ mysqlrpladmin&#8211; slaves = root[at] localhost : 3332, root[at] localhost : 3333, root[at] localhost : 3334 &#8211;candidates = root[at] localhost : 3333, root[at] localhost : 3334 &#8211;log = test_log.txt failover<br />
-#Performing failover.<br />
-#Candidate slave localhost : 3333 will become the new master.<br />
-#Preparing candidate for failover.<br />
-#Creating replication user if it does not exist.<br />
-#Stopping slaves.<br />
-#Performing STOP on all slaves.<br />
-#Switching slaves to new master.<br />
-#Starting slaves.<br />
-#Performing START on all slaves.<br />
-#Checking slaves for errors.<br />
-#Failover complete.<br />
+$ mysqlrpladmin&#8211; slaves = root[at] localhost : 3332, root[at] localhost : 3333, root[at] localhost : 3334 &#8211;candidates = root[at] localhost : 3333, root[at] localhost : 3334 &#8211;log = test_log.txt failover<br/>
+#Performing failover.<br/>
+#Candidate slave localhost : 3333 will become the new master.<br/>
+#Preparing candidate for failover.<br/>
+#Creating replication user if it does not exist.<br/>
+#Stopping slaves.<br/>
+#Performing STOP on all slaves.<br/>
+#Switching slaves to new master.<br/>
+#Starting slaves.<br/>
+#Performing START on all slaves.<br/>
+#Checking slaves for errors.<br/>
+#Failover complete.<br/>
 #&#8230; done.
 </dd></dl>
 <p> After this command, the log file will contain entries like the following: </p>
@@ -275,30 +275,30 @@ $ mysqlrpladmin&#8211; slaves = root[at] localhost : 3332, root[at] localhost : 
 <dl>
 <dt>
 </dt><dd>
-$ mysqlrpladmin&#8211; master = root[at] localhost : 3331 &#8211;slaves = root[at] localhost : 3332, root[at] localhost : 3333, root[at] localhost : 3334 &#8211;new &#8211; master = root[at] localhost : 3332 &#8211;demote &#8211; master switchover<br />
-#Performing switchover from master at localhost : 3331 to slave at localhost : 3332.<br />
-#Checking candidate slave prerequisites.<br />
-#Waiting for slaves to catch up to old master.<br />
-#Stopping slaves.<br />
-#Performing STOP on all slaves.<br />
-#Demoting old master to be a slave to the new master.<br />
-#Switching slaves to new master.<br />
-#Starting all slaves.<br />
-#Performing START on all slaves.<br />
-#Checking slaves for errors.<br />
-#Switchover complete.<br />
+$ mysqlrpladmin&#8211; master = root[at] localhost : 3331 &#8211;slaves = root[at] localhost : 3332, root[at] localhost : 3333, root[at] localhost : 3334 &#8211;new &#8211; master = root[at] localhost : 3332 &#8211;demote &#8211; master switchover<br/>
+#Performing switchover from master at localhost : 3331 to slave at localhost : 3332.<br/>
+#Checking candidate slave prerequisites.<br/>
+#Waiting for slaves to catch up to old master.<br/>
+#Stopping slaves.<br/>
+#Performing STOP on all slaves.<br/>
+#Demoting old master to be a slave to the new master.<br/>
+#Switching slaves to new master.<br/>
+#Starting all slaves.<br/>
+#Performing START on all slaves.<br/>
+#Checking slaves for errors.<br/>
+#Switchover complete.<br/>
 #&#8230; done.
 </dd></dl>
 <p> If the replication health report is generated on the topology following the above command, it will display the old master as a slave as shown below.: </p>
 <dl>
 <dt>
 </dt><dd>
-#Replication Topology Health:<br />
-+ &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; -+ | host | port | role | state | gtid_mode | health |<br />
-    +&#8211; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; -+ | localhost | 3332 | MASTER | UP | ON | OK |<br />
-    | localhost | 3331 | SLAVE | UP | ON | OK |<br />
-    | localhost | 3333 | SLAVE | UP | ON | OK |<br />
-    | localhost | 3334 | SLAVE | UP | ON | OK |<br />
+#Replication Topology Health:<br/>
++ &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; -+ | host | port | role | state | gtid_mode | health |<br/>
+    +&#8211; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; -+ | localhost | 3332 | MASTER | UP | ON | OK |<br/>
+    | localhost | 3331 | SLAVE | UP | ON | OK |<br/>
+    | localhost | 3333 | SLAVE | UP | ON | OK |<br/>
+    | localhost | 3334 | SLAVE | UP | ON | OK |<br/>
     +&#8211; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; -+
 </dd></dl>
 <p> You can use the discover slaves feature, if and only if all slaves report their host and port to the master. A sample command to generate a replication health report with discovery is shown below. Note that the option <code>&#8211;discover-slaves-login</code> cannot be used in conjunction with the <code>&#8211;slaves</code> option.: </p>

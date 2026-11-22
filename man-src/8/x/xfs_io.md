@@ -9,7 +9,7 @@ description: "xfs_io – debug the I/O path of an XFS filesystem"
 
 <p>xfs_io &#8211; debug the I/O path of an XFS filesystem</p>
 <h2>Synopsis</h2>
-<p><code>xfs_io</code> [ <code>-adfimrRstxT</code> ] [ <code>-c</code> <i>cmd</i> ] &#8230; [ <code>-p</code> <i>prog</i> ] <i>file</i><br />
+<p><code>xfs_io</code> [ <code>-adfimrRstxT</code> ] [ <code>-c</code> <i>cmd</i> ] &#8230; [ <code>-p</code> <i>prog</i> ] <i>file</i><br/>
  <code>xfs_io -V</code></p>
 <h2>Description</h2>
 <p><code>xfs_io</code> is a debugging tool like <code><a href="/docs/linux/man/8-xfs_db/">xfs_db</a></code>(8), but is aimed at examining the regular file I/O paths rather than the raw XFS volume itself. These code paths include not only the obvious read/write/mmap interfaces for manipulating files, but also cover all of the XFS extensions (such as space preallocation, additional inode flags, etc).</p>

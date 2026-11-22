@@ -19,21 +19,21 @@ description: "QuantLib::Array – 1-D array used in linear algebra."
 <p> typedef boost::reverse_iterator&lt; const_iterator &gt; <code>const_reverse_iterator</code> </p>
 <h3>Public Member Functions</h3>
 <p> <code>Constructors, destructor, and assignment</code> </p>
-<p> <code>Array</code> (Size size=0)<br />
- <i>creates the array with the given dimension </i><br />
- <code>Array</code> (Size size, Real value)<br />
- <i>creates the array and fills it with </i>value<br />
- <code>Array</code> (Size size, Real value, Real increment)<br />
- <i>creates the array and fills it according to $ a_{0} = value, a_{i}=a_{i-1}+increment $ </i><br />
+<p> <code>Array</code> (Size size=0)<br/>
+ <i>creates the array with the given dimension </i><br/>
+ <code>Array</code> (Size size, Real value)<br/>
+ <i>creates the array and fills it with </i>value<br/>
+ <code>Array</code> (Size size, Real value, Real increment)<br/>
+ <i>creates the array and fills it according to $ a_{0} = value, a_{i}=a_{i-1}+increment $ </i><br/>
  <code>Array</code> (const <code>Array</code> &amp;) </p>
 <p> <code>Array</code> (const <code>Disposable</code>&lt; <code>Array</code> &gt; &amp;) </p>
-<p> <code>Array</code> (const std::vector&lt; Real &gt; &amp;)<br />
- <i>creates the array as a copy of a given stl vector </i><br />
+<p> <code>Array</code> (const std::vector&lt; Real &gt; &amp;)<br/>
+ <i>creates the array as a copy of a given stl vector </i><br/>
  <code>Array</code> &amp; <code>operator=</code> (const <code>Array</code> &amp;) </p>
 <p> <code>Array</code> &amp; <code>operator=</code> (const <code>Disposable</code>&lt; <code>Array</code> &gt; &amp;) </p>
 <p> bool <code>operator==</code> (const <code>Array</code> &amp;) const </p>
 <p> bool <code>operator!=</code> (const <code>Array</code> &amp;) const </p>
-<p> <code>Vector algebra</code><br />
+<p> <code>Vector algebra</code><br/>
  v += x and similar operation involving a scalar value are shortcuts for $ rall i : v_i = v_i + x $ </p>
 <p> v *= w and similar operation involving two vectors are shortcuts for $ rall i : v_i = v_i imes w_i $ </p>
 <p> <code>Precondition:</code></p>
@@ -49,20 +49,20 @@ description: "QuantLib::Array – 1-D array used in linear algebra."
 <p> const <code>Array</code> &amp; <code>operator/=</code> (const <code>Array</code> &amp;) </p>
 <p> const <code>Array</code> &amp; <code>operator/=</code> (Real) </p>
 <p> <code>Element access</code> </p>
-<p> Real <code>operator[]</code> (Size) const<br />
- <i>read-only </i><br />
+<p> Real <code>operator[]</code> (Size) const<br/>
+ <i>read-only </i><br/>
  Real <code>at</code> (Size) const </p>
 <p> Real <code>front</code> () const </p>
 <p> Real <code>back</code> () const </p>
-<p> Real &amp; <code>operator[]</code> (Size)<br />
- <i>read-write </i><br />
+<p> Real &amp; <code>operator[]</code> (Size)<br/>
+ <i>read-write </i><br/>
  Real &amp; <code>at</code> (Size) </p>
 <p> Real &amp; <code>front</code> () </p>
 <p> Real &amp; <code>back</code> () </p>
 <p> <code>Inspectors</code> </p>
-<p> Size <code>size</code> () const<br />
- <i>dimension of the array </i><br />
- bool <code>empty</code> () const<br />
+<p> Size <code>size</code> () const<br/>
+ <i>dimension of the array </i><br/>
+ bool <code>empty</code> () const<br/>
  <i>whether the array is empty </i> </p>
 <p> <code>Iterator access</code> </p>
 <p> const_iterator <code>begin</code> () const </p>
@@ -76,7 +76,7 @@ description: "QuantLib::Array – 1-D array used in linear algebra."
 <p> <code>Utilities</code> </p>
 <p> void <code>swap</code> (<code>Array</code> &amp;) </p>
 <h3>Related Functions</h3>
-<p> (Note that these are not member functions.)<br />
+<p> (Note that these are not member functions.)<br/>
  Real <code>DotProduct</code> (const <code>Array</code> &amp;, const <code>Array</code> &amp;) </p>
 <p> const <code>Disposable</code>&lt; <code>Array</code> &gt; <code>operator+</code> (const <code>Array</code> &amp;v) </p>
 <p> const <code>Disposable</code>&lt; <code>Array</code> &gt; <code>operator-</code> (const <code>Array</code> &amp;v) </p>

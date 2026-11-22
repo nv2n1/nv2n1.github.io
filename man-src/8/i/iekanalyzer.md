@@ -16,7 +16,7 @@ description: "ipmiutil_ekanalyzer – run FRU-Ekeying analyzer with FRU files"
 <dt><i>filename1</i></dt>
 <dd>binary file that stores FRU data of a Carrier or an AMC module</dd>
 <dt><i>filename2</i></dt>
-<dd>binary file that stores FRU data of an AMC module. These binary files can be generated from this command:<br />
+<dd>binary file that stores FRU data of an AMC module. These binary files can be generated from this command:<br/>
 &nbsp;<wbr>&nbsp;<wbr><i>ipmiutil fru -i id -d filename</i></dd>
 <dt><i>filename3</i></dt>
 <dd>configuration file used for configuring On-Carrier Device ID or OEM GUID. This file is optional.</dd>
@@ -69,29 +69,29 @@ description: "ipmiutil_ekanalyzer – run FRU-Ekeying analyzer with FRU files"
 <dd>
 </dd><dl>
 <dt><i>carrier</i> (default) <code>oc=filename1</code> <code>oc=filename2</code> <code>&#8230;</code></dt>
-<dd>Display point to point physical connectivity between carriers and AMC modules.<br />
-&nbsp;<wbr>Example:<br />
-#&nbsp;<wbr>ipmiutil ekanalyzer print carrier oc=fru oc=carrierfru<br />
-From Carrier file: fru<br />
-Number of AMC bays supported by Carrier: 2<br />
-AMC slot B1 topology:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Port 0&nbsp;<wbr>=====&gt;&nbsp;<wbr>On Carrier Device ID 0, Port 16<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Port 1&nbsp;<wbr>=====&gt;&nbsp;<wbr>On Carrier Device ID 0, Port 12<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Port 2&nbsp;<wbr>=====&gt;&nbsp;<wbr>AMC slot B2, Port 2<br />
-AMC slot B2 topology:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Port 0&nbsp;<wbr>=====&gt;&nbsp;<wbr>On Carrier Device ID 0, Port 3<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Port 2&nbsp;<wbr>=====&gt;&nbsp;<wbr>AMC slot B1, Port 2<br />
-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*<br />
-From Carrier file: carrierfru<br />
-On Carrier Device ID 0 topology:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Port 0&nbsp;<wbr>=====&gt;&nbsp;<wbr>AMC slot B1, Port 4<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Port 1&nbsp;<wbr>=====&gt;&nbsp;<wbr>AMC slot B1, Port 5<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Port 2&nbsp;<wbr>=====&gt;&nbsp;<wbr>AMC slot B2, Port 6<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Port 3&nbsp;<wbr>=====&gt;&nbsp;<wbr>AMC slot B2, Port 7<br />
-AMC slot B1 topology:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Port 0&nbsp;<wbr>=====&gt;&nbsp;<wbr>AMC slot B2, Port 0<br />
-AMC slot B1 topology:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Port 1&nbsp;<wbr>=====&gt;&nbsp;<wbr>AMC slot B2, Port 1<br />
+<dd>Display point to point physical connectivity between carriers and AMC modules.<br/>
+&nbsp;<wbr>Example:<br/>
+#&nbsp;<wbr>ipmiutil ekanalyzer print carrier oc=fru oc=carrierfru<br/>
+From Carrier file: fru<br/>
+Number of AMC bays supported by Carrier: 2<br/>
+AMC slot B1 topology:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Port 0&nbsp;<wbr>=====&gt;&nbsp;<wbr>On Carrier Device ID 0, Port 16<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Port 1&nbsp;<wbr>=====&gt;&nbsp;<wbr>On Carrier Device ID 0, Port 12<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Port 2&nbsp;<wbr>=====&gt;&nbsp;<wbr>AMC slot B2, Port 2<br/>
+AMC slot B2 topology:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Port 0&nbsp;<wbr>=====&gt;&nbsp;<wbr>On Carrier Device ID 0, Port 3<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Port 2&nbsp;<wbr>=====&gt;&nbsp;<wbr>AMC slot B1, Port 2<br/>
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*<br/>
+From Carrier file: carrierfru<br/>
+On Carrier Device ID 0 topology:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Port 0&nbsp;<wbr>=====&gt;&nbsp;<wbr>AMC slot B1, Port 4<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Port 1&nbsp;<wbr>=====&gt;&nbsp;<wbr>AMC slot B1, Port 5<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Port 2&nbsp;<wbr>=====&gt;&nbsp;<wbr>AMC slot B2, Port 6<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Port 3&nbsp;<wbr>=====&gt;&nbsp;<wbr>AMC slot B2, Port 7<br/>
+AMC slot B1 topology:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Port 0&nbsp;<wbr>=====&gt;&nbsp;<wbr>AMC slot B2, Port 0<br/>
+AMC slot B1 topology:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Port 1&nbsp;<wbr>=====&gt;&nbsp;<wbr>AMC slot B2, Port 1<br/>
 Number of AMC bays supported by Carrier: 2 </dd>
 <dt><i>power</i> <code>xx=filename1</code> <code>xx=filename2</code> <code>&#8230;</code></dt>
 <dd>Display power supply information between carrier and AMC modules.</dd>
@@ -112,62 +112,62 @@ Number of AMC bays supported by Carrier: 2 </dd>
 <dd>
 </dd><dl>
 <dt><i>match</i> (default) <code>xx=filename</code> <code>xx=filename</code> <code>&#8230;</code></dt>
-<dd>Display only matched results of Ekeying match between an On-Carrier device and an AMC module or between 2 AMC modules. Example:<br />
-&nbsp;<wbr>#&nbsp;<wbr>ipmiutil ekanalyzer summary match oc=fru b1=amcB1 a2=amcA2<br />
-&nbsp;<wbr>On-Carrier Device vs AMC slot B1<br />
-&nbsp;<wbr>&nbsp;<wbr>AMC slot B1 port 0&nbsp;<wbr>==&gt;&nbsp;<wbr>On-Carrier Device 0 port 16<br />
-Matching Result<br />
-From On-Carrier Device ID 0<br />
-&nbsp;<wbr>&nbsp;<wbr>Channel ID 11 || Lane 0: enable<br />
-&nbsp;<wbr>&nbsp;<wbr>Link Type: AMC.2 Ethernet<br />
-&nbsp;<wbr>&nbsp;<wbr>Link Type extension: 1000BASE-BX&nbsp;<wbr>(SerDES Gigabit)&nbsp;<wbr>Ethernet link<br />
-&nbsp;<wbr>&nbsp;<wbr>Link Group ID: 0 || Link Asym. Match: exact match<br />
-To AMC slot B1<br />
-&nbsp;<wbr>&nbsp;<wbr>Channel ID 0 || Lane 0: enable<br />
-&nbsp;<wbr>&nbsp;<wbr>Link Type: AMC.2 Ethernet<br />
-&nbsp;<wbr>&nbsp;<wbr>Link Type extension: 1000BASE-BX&nbsp;<wbr>(SerDES Gigabit)&nbsp;<wbr>Ethernet link<br />
-&nbsp;<wbr>&nbsp;<wbr>Link Group ID: 0 || Link Asym. Match: exact match<br />
-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*<br />
-&nbsp;<wbr>&nbsp;<wbr>AMC slot B1 port 1&nbsp;<wbr>==&gt;&nbsp;<wbr>On-Carrier Device 0 port 12<br />
-Matching Result<br />
-From On-Carrier Device ID 0<br />
-&nbsp;<wbr>&nbsp;<wbr>Channel ID 6 || Lane 0: enable<br />
-&nbsp;<wbr>&nbsp;<wbr>Link Type: AMC.2 Ethernet<br />
-&nbsp;<wbr>&nbsp;<wbr>Link Type extension: 1000BASE-BX&nbsp;<wbr>(SerDES Gigabit)&nbsp;<wbr>Ethernet link<br />
-&nbsp;<wbr>&nbsp;<wbr>Link Group ID: 0 || Link Asym. Match: exact match<br />
-To AMC slot B1<br />
-&nbsp;<wbr>&nbsp;<wbr>Channel ID 1 || Lane 0: enable<br />
-&nbsp;<wbr>&nbsp;<wbr>Link Type: AMC.2 Ethernet<br />
-&nbsp;<wbr>&nbsp;<wbr>Link Type extension: 1000BASE-BX&nbsp;<wbr>(SerDES Gigabit)&nbsp;<wbr>Ethernet link<br />
-&nbsp;<wbr>&nbsp;<wbr>Link Group ID: 0 || Link Asym. Match: exact match<br />
-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*<br />
-&nbsp;<wbr>On-Carrier Device vs AMC slot A2<br />
-&nbsp;<wbr>&nbsp;<wbr>AMC slot A2 port 0&nbsp;<wbr>==&gt;&nbsp;<wbr>On-Carrier Device 0 port 3<br />
-Matching Result<br />
-From On-Carrier Device ID 0<br />
-&nbsp;<wbr>&nbsp;<wbr>Channel ID 9 || Lane 0: enable<br />
-&nbsp;<wbr>&nbsp;<wbr>Link Type: AMC.2 Ethernet<br />
-&nbsp;<wbr>&nbsp;<wbr>Link Type extension: 1000BASE-BX&nbsp;<wbr>(SerDES Gigabit)&nbsp;<wbr>Ethernet link<br />
-&nbsp;<wbr>&nbsp;<wbr>Link Group ID: 0 || Link Asym. Match: exact match<br />
-To AMC slot A2<br />
-&nbsp;<wbr>&nbsp;<wbr>Channel ID 0 || Lane 0: enable<br />
-&nbsp;<wbr>&nbsp;<wbr>Link Type: AMC.2 Ethernet<br />
-&nbsp;<wbr>&nbsp;<wbr>Link Type extension: 1000BASE-BX&nbsp;<wbr>(SerDES Gigabit)&nbsp;<wbr>Ethernet link<br />
-&nbsp;<wbr>&nbsp;<wbr>Link Group ID: 0 || Link Asym. Match: exact match<br />
-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*<br />
-&nbsp;<wbr>AMC slot B1 vs AMC slot A2<br />
-&nbsp;<wbr>&nbsp;<wbr>AMC slot A2 port 2&nbsp;<wbr>==&gt;&nbsp;<wbr>AMC slot B1 port 2<br />
-Matching Result<br />
-From AMC slot B1<br />
-&nbsp;<wbr>&nbsp;<wbr>Channel ID 2 || Lane 0: enable<br />
-&nbsp;<wbr>&nbsp;<wbr>Link Type: AMC.3 Storage<br />
-&nbsp;<wbr>&nbsp;<wbr>Link Type extension: Serial Attached SCSI&nbsp;<wbr>(SAS/SATA)<br />
-&nbsp;<wbr>&nbsp;<wbr>Link Group ID: 0 || Link Asym. Match: FC or SAS interface&nbsp;<wbr>{exact match}<br />
-To AMC slot A2<br />
-&nbsp;<wbr>&nbsp;<wbr>Channel ID 2 || Lane 0: enable<br />
-&nbsp;<wbr>&nbsp;<wbr>Link Type: AMC.3 Storage<br />
-&nbsp;<wbr>&nbsp;<wbr>Link Type extension: Serial Attached SCSI&nbsp;<wbr>(SAS/SATA)<br />
-&nbsp;<wbr>&nbsp;<wbr>Link Group ID: 0 || Link Asym. Match: FC or SAS interface&nbsp;<wbr>{exact match}<br />
+<dd>Display only matched results of Ekeying match between an On-Carrier device and an AMC module or between 2 AMC modules. Example:<br/>
+&nbsp;<wbr>#&nbsp;<wbr>ipmiutil ekanalyzer summary match oc=fru b1=amcB1 a2=amcA2<br/>
+&nbsp;<wbr>On-Carrier Device vs AMC slot B1<br/>
+&nbsp;<wbr>&nbsp;<wbr>AMC slot B1 port 0&nbsp;<wbr>==&gt;&nbsp;<wbr>On-Carrier Device 0 port 16<br/>
+Matching Result<br/>
+From On-Carrier Device ID 0<br/>
+&nbsp;<wbr>&nbsp;<wbr>Channel ID 11 || Lane 0: enable<br/>
+&nbsp;<wbr>&nbsp;<wbr>Link Type: AMC.2 Ethernet<br/>
+&nbsp;<wbr>&nbsp;<wbr>Link Type extension: 1000BASE-BX&nbsp;<wbr>(SerDES Gigabit)&nbsp;<wbr>Ethernet link<br/>
+&nbsp;<wbr>&nbsp;<wbr>Link Group ID: 0 || Link Asym. Match: exact match<br/>
+To AMC slot B1<br/>
+&nbsp;<wbr>&nbsp;<wbr>Channel ID 0 || Lane 0: enable<br/>
+&nbsp;<wbr>&nbsp;<wbr>Link Type: AMC.2 Ethernet<br/>
+&nbsp;<wbr>&nbsp;<wbr>Link Type extension: 1000BASE-BX&nbsp;<wbr>(SerDES Gigabit)&nbsp;<wbr>Ethernet link<br/>
+&nbsp;<wbr>&nbsp;<wbr>Link Group ID: 0 || Link Asym. Match: exact match<br/>
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*<br/>
+&nbsp;<wbr>&nbsp;<wbr>AMC slot B1 port 1&nbsp;<wbr>==&gt;&nbsp;<wbr>On-Carrier Device 0 port 12<br/>
+Matching Result<br/>
+From On-Carrier Device ID 0<br/>
+&nbsp;<wbr>&nbsp;<wbr>Channel ID 6 || Lane 0: enable<br/>
+&nbsp;<wbr>&nbsp;<wbr>Link Type: AMC.2 Ethernet<br/>
+&nbsp;<wbr>&nbsp;<wbr>Link Type extension: 1000BASE-BX&nbsp;<wbr>(SerDES Gigabit)&nbsp;<wbr>Ethernet link<br/>
+&nbsp;<wbr>&nbsp;<wbr>Link Group ID: 0 || Link Asym. Match: exact match<br/>
+To AMC slot B1<br/>
+&nbsp;<wbr>&nbsp;<wbr>Channel ID 1 || Lane 0: enable<br/>
+&nbsp;<wbr>&nbsp;<wbr>Link Type: AMC.2 Ethernet<br/>
+&nbsp;<wbr>&nbsp;<wbr>Link Type extension: 1000BASE-BX&nbsp;<wbr>(SerDES Gigabit)&nbsp;<wbr>Ethernet link<br/>
+&nbsp;<wbr>&nbsp;<wbr>Link Group ID: 0 || Link Asym. Match: exact match<br/>
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*<br/>
+&nbsp;<wbr>On-Carrier Device vs AMC slot A2<br/>
+&nbsp;<wbr>&nbsp;<wbr>AMC slot A2 port 0&nbsp;<wbr>==&gt;&nbsp;<wbr>On-Carrier Device 0 port 3<br/>
+Matching Result<br/>
+From On-Carrier Device ID 0<br/>
+&nbsp;<wbr>&nbsp;<wbr>Channel ID 9 || Lane 0: enable<br/>
+&nbsp;<wbr>&nbsp;<wbr>Link Type: AMC.2 Ethernet<br/>
+&nbsp;<wbr>&nbsp;<wbr>Link Type extension: 1000BASE-BX&nbsp;<wbr>(SerDES Gigabit)&nbsp;<wbr>Ethernet link<br/>
+&nbsp;<wbr>&nbsp;<wbr>Link Group ID: 0 || Link Asym. Match: exact match<br/>
+To AMC slot A2<br/>
+&nbsp;<wbr>&nbsp;<wbr>Channel ID 0 || Lane 0: enable<br/>
+&nbsp;<wbr>&nbsp;<wbr>Link Type: AMC.2 Ethernet<br/>
+&nbsp;<wbr>&nbsp;<wbr>Link Type extension: 1000BASE-BX&nbsp;<wbr>(SerDES Gigabit)&nbsp;<wbr>Ethernet link<br/>
+&nbsp;<wbr>&nbsp;<wbr>Link Group ID: 0 || Link Asym. Match: exact match<br/>
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*<br/>
+&nbsp;<wbr>AMC slot B1 vs AMC slot A2<br/>
+&nbsp;<wbr>&nbsp;<wbr>AMC slot A2 port 2&nbsp;<wbr>==&gt;&nbsp;<wbr>AMC slot B1 port 2<br/>
+Matching Result<br/>
+From AMC slot B1<br/>
+&nbsp;<wbr>&nbsp;<wbr>Channel ID 2 || Lane 0: enable<br/>
+&nbsp;<wbr>&nbsp;<wbr>Link Type: AMC.3 Storage<br/>
+&nbsp;<wbr>&nbsp;<wbr>Link Type extension: Serial Attached SCSI&nbsp;<wbr>(SAS/SATA)<br/>
+&nbsp;<wbr>&nbsp;<wbr>Link Group ID: 0 || Link Asym. Match: FC or SAS interface&nbsp;<wbr>{exact match}<br/>
+To AMC slot A2<br/>
+&nbsp;<wbr>&nbsp;<wbr>Channel ID 2 || Lane 0: enable<br/>
+&nbsp;<wbr>&nbsp;<wbr>Link Type: AMC.3 Storage<br/>
+&nbsp;<wbr>&nbsp;<wbr>Link Type extension: Serial Attached SCSI&nbsp;<wbr>(SAS/SATA)<br/>
+&nbsp;<wbr>&nbsp;<wbr>Link Group ID: 0 || Link Asym. Match: FC or SAS interface&nbsp;<wbr>{exact match}<br/>
 &nbsp;<wbr>*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*</dd>
 <dt><i>unmatch</i> <code>xx=filename</code> <code>xx=filename</code> <code>&#8230;</code></dt>
 <dd>Display the unmatched results of Ekeying match between an On-Carrier device and an AMC module or between 2 AMC modules</dd>

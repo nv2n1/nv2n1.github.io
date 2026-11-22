@@ -11,7 +11,7 @@ description: "dlarrk.f –"
 <p> dlarrk.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dlarrk</code> (N, IW, GL, GU, D, E2, PIVMIN, RELTOL, W, WERR, INFO)<br />
+<p> subroutine <code>dlarrk</code> (N, IW, GL, GU, D, E2, PIVMIN, RELTOL, W, WERR, INFO)<br/>
  <i></i><code>DLARRK</code> computes one eigenvalue of a symmetric tridiagonal matrix T to suitable accuracy.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlarrk (integerN, integerIW, double precisionGL, double precisionGU, double precision, dimension( * )D, double precision, dimension( * )E2, double precisionPIVMIN, double precisionRELTOL, double precisionW, double precisionWERR, integerINFO)</h3>

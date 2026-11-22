@@ -11,13 +11,13 @@ description: "ipsec_atoaddr, ipsec_addrtoa, ipsec_atosubnet, ipsec_subnettoa –
 <p> ipsec_atoaddr, ipsec_addrtoa, ipsec_atosubnet, ipsec_subnettoa &#8211; convert Internet addresses and Subnet masks to and from ASCII</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libreswan.h&gt;</code> </p>
-<p> <code>const char *atoaddr(const char *src, size_t srclen,</code><br />
- &nbsp;<wbr> <code>struct in_addr *addr);</code><br />
- <code>size_t addrtoa(struct in_addr addr, int format,</code><br />
+<p> <code>const char *atoaddr(const char *src, size_t srclen,</code><br/>
+ &nbsp;<wbr> <code>struct in_addr *addr);</code><br/>
+ <code>size_t addrtoa(struct in_addr addr, int format,</code><br/>
  &nbsp;<wbr> <code>char *dst, size_t dstlen);</code> </p>
-<p> <code>const char *atosubnet(const char *src, size_t srclen,</code><br />
- &nbsp;<wbr> <code>struct in_addr *addr, struct in_addr *mask);</code><br />
- <code>size_t subnettoa(struct in_addr addr, struct in_addr mask,</code><br />
+<p> <code>const char *atosubnet(const char *src, size_t srclen,</code><br/>
+ &nbsp;<wbr> <code>struct in_addr *addr, struct in_addr *mask);</code><br/>
+ <code>size_t subnettoa(struct in_addr addr, struct in_addr mask,</code><br/>
  &nbsp;<wbr> <code>int format, char *dst, size_t dstlen);</code></p>
 <h2>DESCRIPTION</h2>
 <p> These functions are obsolete; see <i>ipsec_ttoaddr</i>(3) for their replacements. </p>

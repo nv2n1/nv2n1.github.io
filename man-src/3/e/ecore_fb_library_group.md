@@ -9,9 +9,9 @@ description: "Framebuffer Library Functions – Functions used to set up and shu
 
 <p>Framebuffer Library Functions &#8211; Functions used to set up and shut down the Ecore_Framebuffer functions. </p>
 <h3>Functions</h3>
-<p>EAPI int <code>ecore_fb_init</code> (const char *name __UNUSED__)<br />
- <i>Sets up the Ecore_Fb library. </i><br />
- EAPI int <code>ecore_fb_shutdown</code> (void)<br />
+<p>EAPI int <code>ecore_fb_init</code> (const char *name __UNUSED__)<br/>
+ <i>Sets up the Ecore_Fb library. </i><br/>
+ EAPI int <code>ecore_fb_shutdown</code> (void)<br/>
  <i>Shuts down the Ecore_Fb library. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions used to set up and shut down the Ecore_Framebuffer functions.</p>

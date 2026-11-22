@@ -22,7 +22,7 @@ description: "msort – sort records in complex ways"
 <p> A choice of sorting algorithms is provided. </p>
 <p> <i>msort</i> fully supports Unicode. The text to be sorted, and all specifications, should be in UTF-8 Unicode. (If you have plain ASCII text, this is not a problem as ASCII is a subset of Unicode.) Full Unicode case-folding is available, in Turkic and non-Turkic variants. Unicode normalization is performed before sorting. </p>
 <p> For usage information, execute <i>msort</i> with no arguments. </p>
-<p> Full information about <code>msort</code> is currently to be found in the reference manual, which is distributed as a PDF (Portable Document Format) file. If a copy is not available locally, you can download it from msort&#8217;s home page:<br />
+<p> Full information about <code>msort</code> is currently to be found in the reference manual, which is distributed as a PDF (Portable Document Format) file. If a copy is not available locally, you can download it from msort&#8217;s home page:<br/>
  <a rel="nofollow" href="http://billposer.org/Software/msort.html">http://billposer.org/Software/msort.html</a> </p>
 <h2>OPTIONS</h2>
 <h3>Informational options</h3>
@@ -110,7 +110,7 @@ description: "msort – sort records in complex ways"
 <dt><code>-s,&#8211;sort-order</code> &lt;file name&gt;|&lt;locale name&gt;|&quot;locale&quot;</dt>
 <dd> If the argument is a file name, it is taken to be a sort order file and the sort order for the key is read from the file. If the argument is a locale name, the collation rules for that locale are used. If the argument is &quot;locale&quot;, the collation rules for the current locale are used.</dd>
 <dt><code>-T,&#8211;transformations</code> &lt;(d)(e)(s)&gt;</dt>
-<dd> Apply the specified transformations. <i>d</i> specifies that diacritics are to be stripped. Separately encoded combining diacritics are removed. Characters with diacritics represented by<tt>&nbsp;<wbr>&nbsp;<wbr></tt>single codepoints are<br />
+<dd> Apply the specified transformations. <i>d</i> specifies that diacritics are to be stripped. Separately encoded combining diacritics are removed. Characters with diacritics represented by<tt>&nbsp;<wbr>&nbsp;<wbr></tt>single codepoints are<br/>
  replaced with the corresponding ASCII character without the diacritics, if there is one. <i>e</i> specifies that enclosed characters, that is, characters within circles or parentheses, are to be replaced with the corresponding plain ASCII character if there is one. <i>s</i> specifies that characters in special styles are to be replaced with the corresponding plain ASCII character if there is one. Stylistic equivalents include: small capitals (e.g. U+1D04), script forms (e.g. U+212C), black letter forms (e.g. U+212D), Arabic presentation forms (e.g. U+FE81), Hebrew presentation forms (e.g. U+FB1D), fullwidth forms (e.g. U+FF01), halfwidth forms (e.g. U+FF7B), and the mathematical alphanumeric symbols (e.g. U+1D400).</dd>
 <dt><code>-x,&#8211;exclusion-file</code> &lt;file name&gt;</dt>
 <dd> Read exclusions from named file</dd>

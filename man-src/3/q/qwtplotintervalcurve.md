@@ -13,24 +13,24 @@ description: "QwtPlotIntervalCurve –"
 <p>#include &lt;qwt_plot_intervalcurve.h&gt; </p>
 <p> Inherits <code>QwtPlotSeriesItem</code>, and <code>QwtSeriesStore&lt; QwtIntervalSample &gt;</code>.</p>
 <h3>Public Types</h3>
-<p>enum <code>CurveStyle</code> { <code>NoCurve</code>, <code>Tube</code>, <code>UserCurve</code> = 100 }<br />
- <i>Curve styles. The default setting is </i><code>QwtPlotIntervalCurve::Tube</code>.<br />
+<p>enum <code>CurveStyle</code> { <code>NoCurve</code>, <code>Tube</code>, <code>UserCurve</code> = 100 }<br/>
+ <i>Curve styles. The default setting is </i><code>QwtPlotIntervalCurve::Tube</code>.<br/>
  enum <code>PaintAttribute</code> { <code>ClipPolygons</code> = 0x01, <code>ClipSymbol</code> = 0x02 } </p>
-<p> typedef QFlags&lt; <code>PaintAttribute</code> &gt; <code>PaintAttributes</code><br />
+<p> typedef QFlags&lt; <code>PaintAttribute</code> &gt; <code>PaintAttributes</code><br/>
  <i>Paint attributes. </i></p>
 <h3>Public Member Functions</h3>
 <p><code>QwtPlotIntervalCurve</code> (const QString &amp;<code>title</code>=QString::null) </p>
 <p> <code>QwtPlotIntervalCurve</code> (const <code>QwtText</code> &amp;<code>title</code>) </p>
-<p> virtual <code>~QwtPlotIntervalCurve</code> ()<br />
- <i>Destructor. </i><br />
+<p> virtual <code>~QwtPlotIntervalCurve</code> ()<br/>
+ <i>Destructor. </i><br/>
  virtual int <code>rtti</code> () const </p>
 <p> void <code>setPaintAttribute</code> (<code>PaintAttribute</code>, bool on=true) </p>
 <p> bool <code>testPaintAttribute</code> (<code>PaintAttribute</code>) const </p>
 <p> void <code>setSamples</code> (const QVector&lt; <code>QwtIntervalSample</code> &gt; &amp;) </p>
 <p> void <code>setSamples</code> (<code>QwtSeriesData</code>&lt; <code>QwtIntervalSample</code> &gt; *) </p>
 <p> void <code>setPen</code> (const QColor &amp;, qreal width=0.0, Qt::PenStyle=Qt::SolidLine) </p>
-<p> void <code>setPen</code> (const QPen &amp;)<br />
- <i>Assign a pen. </i><br />
+<p> void <code>setPen</code> (const QPen &amp;)<br/>
+ <i>Assign a pen. </i><br/>
  const QPen &amp; <code>pen</code> () const </p>
 <p> void <code>setBrush</code> (const QBrush &amp;) </p>
 <p> const QBrush &amp; <code>brush</code> () const </p>
@@ -42,8 +42,8 @@ description: "QwtPlotIntervalCurve –"
 <p> virtual QRectF <code>boundingRect</code> () const </p>
 <p> virtual <code>QwtGraphic</code> <code>legendIcon</code> (int index, const QSizeF &amp;) const </p>
 <h3>Protected Member Functions</h3>
-<p>void <code>init</code> ()<br />
- <i>Initialize internal members. </i><br />
+<p>void <code>init</code> ()<br/>
+ <i>Initialize internal members. </i><br/>
  virtual void <code>drawTube</code> (QPainter *, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;canvasRect, int from, int to) const </p>
 <p> virtual void <code>drawSymbols</code> (QPainter *, const <code>QwtIntervalSymbol</code> &amp;, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;canvasRect, int from, int to) const </p>
 <h2>Detailed Description</h2>
@@ -102,11 +102,11 @@ description: "QwtPlotIntervalCurve –"
 <p>Draw a subset of the samples </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>xMap</i> Maps x-values into pixel coordinates.<br />
- <i>yMap</i> Maps y-values into pixel coordinates.<br />
- <i>canvasRect</i> Contents rectangle of the canvas<br />
- <i>from</i> Index of the first sample to be painted<br />
+<dd><i>painter</i> Painter<br/>
+ <i>xMap</i> Maps x-values into pixel coordinates.<br/>
+ <i>yMap</i> Maps y-values into pixel coordinates.<br/>
+ <i>canvasRect</i> Contents rectangle of the canvas<br/>
+ <i>from</i> Index of the first sample to be painted<br/>
  <i>to</i> Index of the last sample to be painted. If to &lt; 0 the series will be painted to its last sample.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -116,12 +116,12 @@ description: "QwtPlotIntervalCurve –"
 <p>Draw symbols for a subset of the samples </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>symbol</i> Interval symbol<br />
- <i>xMap</i> x map<br />
- <i>yMap</i> y map<br />
- <i>canvasRect</i> Contents rectangle of the canvas<br />
- <i>from</i> Index of the first sample to be painted<br />
+<dd><i>painter</i> Painter<br/>
+ <i>symbol</i> Interval symbol<br/>
+ <i>xMap</i> x map<br/>
+ <i>yMap</i> y map<br/>
+ <i>canvasRect</i> Contents rectangle of the canvas<br/>
+ <i>from</i> Index of the first sample to be painted<br/>
  <i>to</i> Index of the last sample to be painted</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -131,11 +131,11 @@ description: "QwtPlotIntervalCurve –"
 <p> Builds 2 curves from the upper and lower limits of the intervals and draws them with the <code>pen()</code>. The area between the curves is filled with the <code>brush()</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>xMap</i> Maps x-values into pixel coordinates.<br />
- <i>yMap</i> Maps y-values into pixel coordinates.<br />
- <i>canvasRect</i> Contents rectangle of the canvas<br />
- <i>from</i> Index of the first sample to be painted<br />
+<dd><i>painter</i> Painter<br/>
+ <i>xMap</i> Maps x-values into pixel coordinates.<br/>
+ <i>yMap</i> Maps y-values into pixel coordinates.<br/>
+ <i>canvasRect</i> Contents rectangle of the canvas<br/>
+ <i>from</i> Index of the first sample to be painted<br/>
  <i>to</i> Index of the last sample to be painted. If to &lt; 0 the series will be painted to its last sample.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -147,7 +147,7 @@ description: "QwtPlotIntervalCurve –"
 <p> In case of Tube <code>style()</code> the icon is a plain rectangle filled with the <code>brush()</code>. If a symbol is assigned it is scaled to size. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>index</i> Index of the legend entry ( ignored as there is only one )<br />
+<dd><i>index</i> Index of the legend entry ( ignored as there is only one )<br/>
  <i>size</i> Icon size</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -178,7 +178,7 @@ description: "QwtPlotIntervalCurve –"
 <p>Specify an attribute how to draw the curve </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>attribute</i> Paint attribute<br />
+<dd><i>attribute</i> Paint attribute<br/>
  <i>on</i> On/Off</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -188,8 +188,8 @@ description: "QwtPlotIntervalCurve –"
 <p> In Qt5 the default pen width is 1.0 ( 0.0 in Qt4 ) what makes it non cosmetic ( see QPen::isCosmetic() ). This method has been introduced to hide this incompatibility. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>color</i> Pen color<br />
- <i>width</i> Pen width<br />
+<dd><i>color</i> Pen color<br/>
+ <i>width</i> Pen width<br/>
  <i>style</i> Pen style</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>

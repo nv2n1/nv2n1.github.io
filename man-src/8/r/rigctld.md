@@ -90,7 +90,7 @@ description: "rigctld – Hamlib TCP rig control daemon"
 <h2>COMMANDS</h2>
 <p> Commands can be sent over the TCP socket either as a single char, or as a long command name plus the value(s) space separated on one &#8216;\n&#8217; terminated line. See <i>PROTOCOL</i>. </p>
 <p>Since most of the <code>Hamlib</code> operations have a <i>set</i> and a <i>get</i> method, an upper case letter will be used for <i>set</i> methods whereas the corresponding lower case letter refers to the <i>get</i> method. Each operation also has a long name; prepend a backslash to send a long command name. </p>
-<p>Example (Perl): `print $socket &quot;\\dump_caps\n&quot;;&#8216; to see what the radio&#8217;s backend can do <br />
+<p>Example (Perl): `print $socket &quot;\\dump_caps\n&quot;;&#8216; to see what the radio&#8217;s backend can do <br/>
  (<code>N.B.</code>: In Perl and many other languages a &#8216;\&#8216; will need to be escaped with a preceding &#8216;\&#8216; so that even though two backslash characters appear in the code, only one will be passed to <code>rigctld</code>. This is a possible bug, beware!). </p>
 <p>Please note that the backend for the radio to be controlled, or the radio itself may not support some commands. In that case, the operation will fail with a <code>Hamlib</code> error message. </p>
 <p>Here is a summary of the supported commands (In the case of &quot;set&quot; commands the quoted string is replaced by the value in the description. In the case of &quot;get&quot; commands the quoted string is the key name of the value returned.): </p>
@@ -313,12 +313,12 @@ description: "rigctld – Hamlib TCP rig control daemon"
 <p> <code>Default Protocol</code> </p>
 <p>The <code>rigctld</code> protocol is intentionally simple. Commands are entered on a single line with any needed values. In Perl, reliable results are obtained by terminating each command string with a newline character, &#8216;\n&#8217;. </p>
 <p>Example <i>set</i> (Perl code): </p>
-<p>print $socket &quot;F 14250000\n&quot;; <br />
+<p>print $socket &quot;F 14250000\n&quot;; <br/>
  print $socket &quot;\\set_mode LSB 2400\n&quot;; # escape leading &#8216;\&#8216; </p>
 <p>A one line response will be sent as a reply to <i>set</i> commands, &quot;RPRT <i>x</i>\n&quot; where <i>x</i> is the Hamlib error code with &#8216;0&#8217; indicating success of the command. </p>
 <p>Responses from <code>rigctld</code> <i>get</i> commands are text values and match the same tokens used in the <i>set</i> commands. Each value is returned on its own line. On error the string &quot;RPRT <i>x</i>\n&quot; is returned where <i>x</i> is the Hamlib error code. </p>
 <p>Example <i>get</i> (Perl code): </p>
-<p>print $socket &quot;f\n&quot;; <br />
+<p>print $socket &quot;f\n&quot;; <br/>
  &quot;14250000\n&quot; </p>
 <p>Most <i>get</i> functions return one to three values. A notable exception is the <i>\dump_caps</i> function which returns many lines of key:value pairs. </p>
 <p>This protocol is primarily used by the <i>NET rigctl</i> (rigctl model 2) backend which allows applications already written for Hamlib&#8217;s C API to take advantage of <code>rigctld</code> without the need of rewriting application code. An application&#8217;s user can select rig model 2 (&quot;NET rigctl&quot;) and then set rig_pathname to &quot;localhost:4532&quot; or other network host:port (set by the <i>-t</i> option above). </p>
@@ -329,39 +329,39 @@ description: "rigctld – Hamlib TCP rig control daemon"
 <p>3. Any records consisting of data values returned by the rig backend are prepended by a string immediately followed by a colon then a space and then the value terminated by the response separator. e.g. &quot;Frequency: 14250000\n&quot; when the command was prepended by &#8216;+&#8216;. </p>
 <p>4. All commands received will be acknowledged by <code>rigctld</code> with lines from rules 1 and 2. Lines from rule 3 are only returned when data values must be returned to the client. </p>
 <p>An example response to a <i>+\set_mode</i> command sent from the shell prompt (note the prepended &#8216;+&#8216;): </p>
-<p>$ echo &quot;+M USB 2400&quot; | nc -w 1 localhost 4532 <br />
- set_mode: USB 2400 <br />
+<p>$ echo &quot;+M USB 2400&quot; | nc -w 1 localhost 4532 <br/>
+ set_mode: USB 2400 <br/>
  RPRT 0 </p>
 <p>In this case the long command name and values are returned on the first line and the second line contains the end of block marker and the numeric rig backend return value indicating success. </p>
 <p>An example response to a <i>\get_mode</i> query: </p>
-<p>$ echo &quot;+\get_mode&quot; | nc -w 1 localhost 4532 <br />
- get_mode: <br />
- Mode: USB <br />
- Passband: 2400 <br />
+<p>$ echo &quot;+\get_mode&quot; | nc -w 1 localhost 4532 <br/>
+ get_mode: <br/>
+ Mode: USB <br/>
+ Passband: 2400 <br/>
  RPRT 0 </p>
 <p>In this case, as no value is passed to <code>rigctld</code>, the first line consists only of the long command name. The final line shows that the command was processed successfully by the rig backend. </p>
 <p>Invoking the Extended Response protocol requires prepending a command with a punctuation character. As shown in the examples above, prepending a &#8216;+&#8216; character to the command results in the responses being separated by a newline character (&#8216;\n&#8217;). Any other punctuation character recognized by the C <i>ispunct()</i> function except &#8216;\&#8216;, &#8216;?&#8216;, or &#8216;_&#8216; will cause that character to become the response separator and the entire response will be on one line. </p>
 <p>Separator character summary: </p>
 <dl>
 <dt><code>&#8216;+&#8216;</code></dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  Each record of the response is appended with a newline (&#8216;\n&#8217;). </p>
  </dd>
 <dt><code>&#8216;;&#8216;, &#8216;|&#8216;, or &#8216;,&#8216;</code></dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  Each record of the response is appended by the given character resulting in entire response on one line. </p>
 <p>Common record separators for text representations of spreadsheet data, etc. </p>
  </dd>
 <dt><code>&#8216;?&#8216;</code></dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  Reserved for &#8216;help&#8217; in rigctl short command </p>
  </dd>
 <dt><code>&#8216;_&#8216;</code></dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  Reserved for \get_info short command </p>
  </dd>
 <dt><code>&#8216;#&#8216;</code></dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  Reserved for comments when reading a command file script </p>
 <p>Other punctuation characters have not been tested! Use at your own risk. </p>
  </dd></dl>
@@ -372,14 +372,14 @@ description: "rigctld – Hamlib TCP rig control daemon"
 <p>And a \set_mode command prepended with a &#8216;|&#8216; returns: </p>
 <p>set_mode: USB 2400|RPRT 0 </p>
 <p>Such a format will allow reading a response as a single event using a preferred response separator. Other punctuation characters have not been tested! </p>
-<p>The following commands have been tested with the Extended Response protocol and the included <code>testctld.pl</code> script: <br />
- <i>\set_freq</i> <i>\get_freq</i> <i>\set_split_freq</i> <i>\get_split_freq</i> <br />
- <i>\set_mode</i> <i>\get_mode</i> <i>\set_split_mode</i> <i>\get_split_mode</i> <br />
- <i>\set_vfo</i> <i>\get_vfo</i> <i>\set_split_vfo</i> <i>\get_split_vfo</i> <br />
- <i>\set_rit</i> <i>\get_rit</i> <br />
- <i>\set_xit</i> <i>\get_xit</i> <br />
- <i>\set_ptt</i> <i>\get_ptt</i> <br />
- <i>\power2mW</i> <i>\mW2power</i> <br />
+<p>The following commands have been tested with the Extended Response protocol and the included <code>testctld.pl</code> script: <br/>
+ <i>\set_freq</i> <i>\get_freq</i> <i>\set_split_freq</i> <i>\get_split_freq</i> <br/>
+ <i>\set_mode</i> <i>\get_mode</i> <i>\set_split_mode</i> <i>\get_split_mode</i> <br/>
+ <i>\set_vfo</i> <i>\get_vfo</i> <i>\set_split_vfo</i> <i>\get_split_vfo</i> <br/>
+ <i>\set_rit</i> <i>\get_rit</i> <br/>
+ <i>\set_xit</i> <i>\get_xit</i> <br/>
+ <i>\set_ptt</i> <i>\get_ptt</i> <br/>
+ <i>\power2mW</i> <i>\mW2power</i> <br/>
  <i>\dump_caps</i>  </p>
 <h2>EXAMPLES</h2>
 <p> Start <code>rigctld</code> for a Yaesu FT-920 using a USB-to-serial adapter and backgrounding on Linux: </p>
@@ -410,8 +410,8 @@ description: "rigctld – Hamlib TCP rig control daemon"
 <p> Written by Stephane Fillod, Nate Bargmann, and the Hamlib Group </p>
 <p>&lt;<a rel="nofollow" href="http://www.hamlib.org">http://www.hamlib.org</a>&gt;.  </p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2000-2010 Stephane Fillod <br />
- Copyright &#169; 2011-2012 Nate Bargmann <br />
+<p> Copyright &#169; 2000-2010 Stephane Fillod <br/>
+ Copyright &#169; 2011-2012 Nate Bargmann <br/>
  Copyright &#169; 2000-2010 the Hamlib Group. </p>
 <p>This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  </p>
 <h2>SEE ALSO</h2>

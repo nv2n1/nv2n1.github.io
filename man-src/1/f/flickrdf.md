@@ -26,13 +26,13 @@ description: "flickrdf – call Flickr API"
 <dt><code>-D, &#8211;debug</code></dt>
 <dd> Print lots of debugging output.</dd>
 <dt><code>-o, &#8211;output </code><i>FORMAT</i></dt>
-<dd> Set output format to <i>FORMAT</i>. <i>FORMAT</i> is one of:<br />
-<i>ntriples</i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>N-Triples&nbsp;<wbr>(default)<br />
-<i>turtle</i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Turtle<br />
-<i>rdfxml</i>-xmp&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>RDF/XML&nbsp;<wbr>(XMP Profile)<br />
-<i>rdfxml</i>-abbrev&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>RDF/XML&nbsp;<wbr>(Abbreviated)<br />
-<i>rdfxml</i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>RDF/XML<br />
-<i>rss-1.0</i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>RSS 1.0<br />
+<dd> Set output format to <i>FORMAT</i>. <i>FORMAT</i> is one of:<br/>
+<i>ntriples</i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>N-Triples&nbsp;<wbr>(default)<br/>
+<i>turtle</i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Turtle<br/>
+<i>rdfxml</i>-xmp&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>RDF/XML&nbsp;<wbr>(XMP Profile)<br/>
+<i>rdfxml</i>-abbrev&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>RDF/XML&nbsp;<wbr>(Abbreviated)<br/>
+<i>rdfxml</i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>RDF/XML<br/>
+<i>rss-1.0</i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>RSS 1.0<br/>
 <i>dot</i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>GraphViz DOT format The exact list depends on the version of Raptor that flickcurl is linked against.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-flickcurl/">flickcurl</a>(1),</code><a href="/docs/linux/man/3-libraptor/">libraptor</a>(3). </p>

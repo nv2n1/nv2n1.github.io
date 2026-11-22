@@ -19,5 +19,5 @@ description: "XtDisplayToApplicationContext – obtain an application context"
 <h2>Description</h2>
 <p>The <code>XtDisplayToApplicationContext</code> function returns the application context for the specified display.</p>
 <h2>See Also</h2>
-<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

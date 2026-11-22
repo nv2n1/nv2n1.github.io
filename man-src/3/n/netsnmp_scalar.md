@@ -9,12 +9,12 @@ description: "scalar – Process scalars easily."
 
 <p>scalar &#8211; Process scalars easily.</p>
 <h3>Functions</h3>
-<p><code>netsnmp_mib_handler</code> * <code>netsnmp_get_scalar_handler</code> (void)<br />
- <i>Creates a scalar handler calling netsnmp_create_handler with a handler name defaulted to &#8216;scalar&#8217; and access method, netsnmp_scalar_helper_handler. </i><br />
- int <code>netsnmp_register_scalar</code> (<code>netsnmp_handler_registration</code> *reginfo)<br />
- <i>This function registers a scalar helper handler. </i><br />
- int <code>netsnmp_register_read_only_scalar</code> (<code>netsnmp_handler_registration</code> *reginfo)<br />
- <i>This function registers a read only scalar helper handler. </i><br />
+<p><code>netsnmp_mib_handler</code> * <code>netsnmp_get_scalar_handler</code> (void)<br/>
+ <i>Creates a scalar handler calling netsnmp_create_handler with a handler name defaulted to &#8216;scalar&#8217; and access method, netsnmp_scalar_helper_handler. </i><br/>
+ int <code>netsnmp_register_scalar</code> (<code>netsnmp_handler_registration</code> *reginfo)<br/>
+ <i>This function registers a scalar helper handler. </i><br/>
+ int <code>netsnmp_register_read_only_scalar</code> (<code>netsnmp_handler_registration</code> *reginfo)<br/>
+ <i>This function registers a read only scalar helper handler. </i><br/>
  int <code>netsnmp_scalar_helper_handler</code> (<code>netsnmp_mib_handler</code> *handler, <code>netsnmp_handler_registration</code> *reginfo, <code>netsnmp_agent_request_info</code> *reqinfo, <code>netsnmp_request_info</code> *requests)</p>
 <h2>Detailed Description</h2>
 <p>Process scalars easily.</p>

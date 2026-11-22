@@ -10,21 +10,21 @@ description: "pygmentize – highlights the input file"
 
 <p> pygmentize &#8211; highlights the input file</p>
 <h2>SYNOPSIS</h2>
-<p> <code>pygmentize</code> [-l&nbsp;<i>&lt;lexer&gt;</i>&nbsp;| -g]&nbsp;[-F&nbsp;<i>&lt;filter&gt;</i>[:<i>&lt;options&gt;</i>]]&nbsp;[-f&nbsp;<i>&lt;formatter&gt;</i>] [-O&nbsp;<i>&lt;options&gt;</i>]&nbsp;[-P&nbsp;<i>&lt;option=value&gt;</i>]&nbsp;[-o&nbsp;<i>&lt;outfile&gt;</i>]&nbsp;[<i>&lt;infile&gt;</i>]<br />
- <code>pygmentize</code> -S&nbsp;<i>&lt;style&gt;</i>&nbsp;-f&nbsp;<i>&lt;formatter&gt;</i>&nbsp;[-a&nbsp;<i>&lt;arg&gt;</i>]&nbsp;[-O&nbsp;<i>&lt;options&gt;</i>]&nbsp;[-P&nbsp;<i>&lt;option=value&gt;</i>]<br />
- <code>pygmentize</code> -L&nbsp;[<i>&lt;which&gt;</i>&nbsp;&#8230;]<br />
- <code>pygmentize</code> -N&nbsp;<i>&lt;filename&gt;</i><br />
- <code>pygmentize</code> -C<br />
- <code>pygmentize</code> -H&nbsp;<i>&lt;type&gt;</i>&nbsp;<i>&lt;name&gt;</i><br />
+<p> <code>pygmentize</code> [-l&nbsp;<i>&lt;lexer&gt;</i>&nbsp;| -g]&nbsp;[-F&nbsp;<i>&lt;filter&gt;</i>[:<i>&lt;options&gt;</i>]]&nbsp;[-f&nbsp;<i>&lt;formatter&gt;</i>] [-O&nbsp;<i>&lt;options&gt;</i>]&nbsp;[-P&nbsp;<i>&lt;option=value&gt;</i>]&nbsp;[-o&nbsp;<i>&lt;outfile&gt;</i>]&nbsp;[<i>&lt;infile&gt;</i>]<br/>
+ <code>pygmentize</code> -S&nbsp;<i>&lt;style&gt;</i>&nbsp;-f&nbsp;<i>&lt;formatter&gt;</i>&nbsp;[-a&nbsp;<i>&lt;arg&gt;</i>]&nbsp;[-O&nbsp;<i>&lt;options&gt;</i>]&nbsp;[-P&nbsp;<i>&lt;option=value&gt;</i>]<br/>
+ <code>pygmentize</code> -L&nbsp;[<i>&lt;which&gt;</i>&nbsp;&#8230;]<br/>
+ <code>pygmentize</code> -N&nbsp;<i>&lt;filename&gt;</i><br/>
+ <code>pygmentize</code> -C<br/>
+ <code>pygmentize</code> -H&nbsp;<i>&lt;type&gt;</i>&nbsp;<i>&lt;name&gt;</i><br/>
  <code>pygmentize</code> -h | -V </p>
 <h2>DESCRIPTION</h2>
 <p> Pygments is a generic syntax highlighter for general use in all kinds of software such as forum systems, wikis or other applications that need to prettify source code. </p>
-<p> Its highlights are:<br />
-&nbsp;<wbr>&nbsp;*&nbsp;a wide range of common languages and markup formats is supported<br />
-&nbsp;<wbr>&nbsp;*&nbsp;special attention is paid to details, increasing quality by a fair amount<br />
-&nbsp;<wbr>&nbsp;*&nbsp;support for new languages and formats are added easily<br />
-&nbsp;<wbr>&nbsp;*&nbsp;a number of output formats, presently HTML, LaTeX and ANSI sequences<br />
-&nbsp;<wbr>&nbsp;*&nbsp;it is usable as a command-line tool and as a library<br />
+<p> Its highlights are:<br/>
+&nbsp;<wbr>&nbsp;*&nbsp;a wide range of common languages and markup formats is supported<br/>
+&nbsp;<wbr>&nbsp;*&nbsp;special attention is paid to details, increasing quality by a fair amount<br/>
+&nbsp;<wbr>&nbsp;*&nbsp;support for new languages and formats are added easily<br/>
+&nbsp;<wbr>&nbsp;*&nbsp;a number of output formats, presently HTML, LaTeX and ANSI sequences<br/>
+&nbsp;<wbr>&nbsp;*&nbsp;it is usable as a command-line tool and as a library<br/>
 &nbsp;<wbr>&nbsp;*&nbsp;&#8230; and it highlights even Brainf**k! </p>
 <p> <code>pygmentize</code> is a command that uses Pygments to highlight the input file and write the result to <i>&lt;outfile&gt;</i>. If no <i>&lt;infile&gt;</i> is given, stdin is used.</p>
 <h2>OPTIONS</h2>

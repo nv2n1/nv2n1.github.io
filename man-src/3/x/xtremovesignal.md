@@ -30,6 +30,6 @@ description: "XtAppAddSignal, XtRemoveSignal, XtNoticeSignal – register and re
 <p> <code>XtNoticeSignal</code> is the only Intrinsics function that can safely be called from a signal handler. If <code>XtNoticeSignal</code> is called multiple times before the Intrinsics are able to invoke the registered callback, the callback is only called once. Logically the Intrinsics maintain &#8220;pending&#8221; for each registered callback. This flag is initially <code>False</code> and is set to <code>True</code> by <code>XtNoticeSignal</code>; the Intrinsics invoke the callback whenever the flag is <code>True</code>, and the flag is set to <code>False</code> just before the callback is invoked. </p>
 <p> The <code>XtRemoveSignal</code> function is called to remove the specified Intrinsics signal handler. The client should disable the source of the signal before calling <code>XtRemoveSignal</code>.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xtappaddtimeout/">XtAppAddTimeOut</a>(3),<a href="/docs/linux/man/3-xtappaddinput/">XtAppAddInput</a>(3),<a href="/docs/linux/man/3-xtappaddworkproc/">XtAppAddWorkProc</a>(3)<br />
- <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><a href="/docs/linux/man/3-xtappaddtimeout/">XtAppAddTimeOut</a>(3),<a href="/docs/linux/man/3-xtappaddinput/">XtAppAddInput</a>(3),<a href="/docs/linux/man/3-xtappaddworkproc/">XtAppAddWorkProc</a>(3)<br/>
+ <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

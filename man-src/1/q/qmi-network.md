@@ -54,7 +54,7 @@ description: "qmi-network – Simple network management of QMI devices"
 <dt>
 </dt><dd> 6) Once the qmi-network script reports a successful connection you still need to run a DHCP client on the associated WWAN network interface.</dd></dl>
 <h2>COPYRIGHT</h2>
-<p> Copyright (2013-2015) Aleksander Morgado License GPLv2+: GNU GPL version 2 or later &lt;<a rel="nofollow" href="http://gnu.org/licenses/gpl-2.0.html">http://gnu.org/licenses/gpl-2.0.html</a>&gt;<br />
+<p> Copyright (2013-2015) Aleksander Morgado License GPLv2+: GNU GPL version 2 or later &lt;<a rel="nofollow" href="http://gnu.org/licenses/gpl-2.0.html">http://gnu.org/licenses/gpl-2.0.html</a>&gt;<br/>
  This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.</p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>qmi-network</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>qmi-network</code> programs are properly installed at your site, the command</p>

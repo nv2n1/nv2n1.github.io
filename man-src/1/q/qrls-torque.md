@@ -13,9 +13,9 @@ description: "qrls – release hold on pbs batch jobs"
 <p> qrls [-h hold_list] [-t array_range] job_identifier &#8230;</p>
 <h2>DESCRIPTION</h2>
 <p> The <code>qrls</code> command removes or releases holds which exist on batch jobs. </p>
-<p> A job may have one or more types of holds which make the job ineligible for execution. The types of holds are <font SIZE="-1"></font><font SIZE="-2"><code> and </code></font><font SIZE="-3"><code> The different types of holds may require that the user issuing the qrls command have special privilege. Typically, the owner of the job will be able to remove a </code></font><font SIZE="-4"><code> hold, but not an </code></font><font SIZE="-5"><code> or </code></font><font SIZE="-6"><code> hold. An Attempt to release a hold for which the user does not have the correct privilege is an error and no holds will be released for that job. </p>
-<p> If no </code><i> option is specified, the </i></font><font SIZE="-7"><code> hold will be released. </p>
-<p> If the job has no </code><i> </i></font><font SIZE="-8"><i> pending, the job will change to the </i><code>queued</code> state. If an <i> </i></font><font SIZE="-9"><i> is still pending, the job will change to the </i><code>waiting</code> state. </font></p>
+<p> A job may have one or more types of holds which make the job ineligible for execution. The types of holds are <code> and </code><code> The different types of holds may require that the user issuing the qrls command have special privilege. Typically, the owner of the job will be able to remove a </code><code> hold, but not an </code><code> or </code><code> hold. An Attempt to release a hold for which the user does not have the correct privilege is an error and no holds will be released for that job. </p>
+<p> If no </code><i> option is specified, the </i><code> hold will be released. </p>
+<p> If the job has no </code><i> </i><i> pending, the job will change to the </i><code>queued</code> state. If an <i> </i><i> is still pending, the job will change to the </i><code>waiting</code> state. </p>
 <h2>OPTIONS</h2>
 <dl>
 <dt>-h hold_list</dt>
@@ -23,20 +23,20 @@ description: "qrls – release hold on pbs batch jobs"
 <dl>
 <dl>
 <dt>u &#8211;</dt>
-<dd> <font SIZE="-1"><code></dd>
+<dd> <code></dd>
 <dt>o &#8211;</dt>
-<dd> </code></font><font SIZE="-2"><code></dd>
+<dd> </code><code></dd>
 <dt>s &#8211;</dt>
-<dd> </code></font><font SIZE="-3"><code></dd></dl>
+<dd> </code><code></dd></dl>
 </dl>
 <dt>-t array_range</dt>
 <dd> The array_range argument is an integer id or a range of integers. Multiple ids or id ranges can be combined in a comma delimted list. Examples: -t 1-100 or -t 1,10,50-100</dd>
 <dt>
 </dt><dd> If an array range isn&#8217;t specified, the command tries to operate on the entire array. The command acts on the array (or specified range of the array) just as it would on an individual job.</dd></dl>
-<p> </code></font></p>
+<p> </code></p>
 <h2>OPERANDS</h2>
-<p> The qrls command accepts one or more <i> operands of the form:<br />
- </i><code><br />
+<p> The qrls command accepts one or more <i> operands of the form:<br/>
+ </i><code><br/>
  </code></p>
 <h2>STANDARD ERROR</h2>
 <p> The qrls command will write a diagnostic message to standard error for each error occurrence.</p>

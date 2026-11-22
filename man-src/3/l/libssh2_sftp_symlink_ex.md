@@ -22,15 +22,15 @@ int libssh2_sftp_symlink_ex(LIBSSH2_SFTP *sftp, const char *path,
 <p> <i>sftp</i> &#8211; SFTP instance as returned by <code><a href="/docs/linux/man/3-libssh2_sftp_init/">libssh2_sftp_init</a>(3)</code> </p>
 <p> <i>path</i> &#8211; Remote filesystem object to create a symlink from or resolve. </p>
 <p> <i>path_len</i> &#8211; Length of the name of the remote filesystem object to create a symlink from or resolve. </p>
-<p> <i>target</i> &#8211; a pointer to a buffer. The buffer has different uses depending what the <i>link_type</i> argument is set to.<br />
- <code>LIBSSH2_SFTP_SYMLINK</code>: Remote filesystem object to link to.<br />
- <code>LIBSSH2_SFTP_READLINK</code>: Pre-allocated buffer to resolve symlink target into.<br />
+<p> <i>target</i> &#8211; a pointer to a buffer. The buffer has different uses depending what the <i>link_type</i> argument is set to.<br/>
+ <code>LIBSSH2_SFTP_SYMLINK</code>: Remote filesystem object to link to.<br/>
+ <code>LIBSSH2_SFTP_READLINK</code>: Pre-allocated buffer to resolve symlink target into.<br/>
  <code>LIBSSH2_SFTP_REALPATH</code>: Pre-allocated buffer to resolve realpath target into. </p>
 <p> <i>target_len</i> &#8211; Length of the name of the remote filesystem target object. </p>
 <p> <i>link_type</i> &#8211; One of the three previously mentioned constants which determines the resulting behavior of this function. </p>
 <p> These are convenience macros: </p>
-<p> <code><a href="/docs/linux/man/3-libssh2_sftp_symlink/">libssh2_sftp_symlink</a>(3)</code> : Create a symbolic link between two filesystem objects.<br />
- <code><a href="/docs/linux/man/3-libssh2_sftp_readlink/">libssh2_sftp_readlink</a>(3)</code> : Resolve a symbolic link filesystem object to its next target.<br />
+<p> <code><a href="/docs/linux/man/3-libssh2_sftp_symlink/">libssh2_sftp_symlink</a>(3)</code> : Create a symbolic link between two filesystem objects.<br/>
+ <code><a href="/docs/linux/man/3-libssh2_sftp_readlink/">libssh2_sftp_readlink</a>(3)</code> : Resolve a symbolic link filesystem object to its next target.<br/>
  <code><a href="/docs/linux/man/3-libssh2_sftp_realpath/">libssh2_sftp_realpath</a>(3)</code> : Resolve a complex, relative, or symlinked filepath to its effective target.</p>
 <h2>RETURN VALUE</h2>
 <p> When using LIBSSH2_SFTP_SYMLINK, this funtion returns 0 on success or negative on failure. </p>

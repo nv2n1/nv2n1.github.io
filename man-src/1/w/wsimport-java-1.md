@@ -9,7 +9,7 @@ description: "wsimport – Java(TM) API for XML Web Services (JAX-WS) 2.0"
 ---
 
 <p> wsimport &#8211; Java(TM) API for XML Web Services (JAX-WS) 2.0 </p>
-<p> <code>Specification Version:</code> 2.1<br />
+<p> <code>Specification Version:</code> 2.1<br/>
  <code>Implementation Version:</code> 2.1.1 </p>
 <h2>Overview</h2>
 <p> The <i>wsimport</i> tool generates JAX-WS portable artifacts, such as:</p>

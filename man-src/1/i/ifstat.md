@@ -25,7 +25,7 @@ description: "ifstat – Report InterFace STATistics"
 <dt><code>-i</code></dt>
 <dd> Specifies the list of interfaces to monitor, separated by commas (if an interface name has a comma, it can be escaped with &#8216;\&#8217;). Multiple instances of the options are added together.</dd>
 <dt><code>-s</code></dt>
-<dd> Equivalent to <code>-d snmp:[comm@][#]host[/nn]]</code> to poll a remote host through <font SIZE="-1">SNMP</font>. See below for details.</dd>
+<dd> Equivalent to <code>-d snmp:[comm@][#]host[/nn]]</code> to poll a remote host through SNMP. See below for details.</dd>
 <dt><code>-h</code></dt>
 <dd> Displays a short help message.</dd>
 <dt><code>-n</code></dt>
@@ -60,19 +60,19 @@ description: "ifstat – Report InterFace STATistics"
 <dt><code>kstat</code></dt>
 <dd> This driver gets statistics from Solaris kstat interface. It doesn&#8217;t accept any options.</dd>
 <dt><code>ifdata</code></dt>
-<dd> This driver gets statistics using <font SIZE="-1">SIOCGIFDATA</font> ioctl under <font SIZE="-1">IRIX</font> and OpenBSD (different semantics). It doesn&#8217;t accept any options.</dd>
+<dd> This driver gets statistics using SIOCGIFDATA ioctl under IRIX and OpenBSD (different semantics). It doesn&#8217;t accept any options.</dd>
 <dt><code>route</code></dt>
-<dd> This driver gets statistics using routing sysctl on <font SIZE="-1">BSD</font> based systems. It doesn&#8217;t accept any options.</dd>
+<dd> This driver gets statistics using routing sysctl on BSD based systems. It doesn&#8217;t accept any options.</dd>
 <dt><code>kvm</code></dt>
 <dd> This driver gets statistics by reading the kernel live structures. It accepts an option specifying which files/devices to use in the following format : [execfile][,[corefile][,swapfile]] (see <i>kvm_open</i>(3) for details on those fields). If a null string is passed for a parameter, the system default will be used for it. </dd>
-<p> Note that for this driver to work, ifstat needs to have read access to the system memory device. This is usually done by running it as root, or by installing setgid mem or kmem. ifstat will <font SIZE="-1">NOT</font> install setgid by default; It is up to you to decide if you trust it.</p>
+<p> Note that for this driver to work, ifstat needs to have read access to the system memory device. This is usually done by running it as root, or by installing setgid mem or kmem. ifstat will NOT install setgid by default; It is up to you to decide if you trust it.</p>
 <dt><code>dlpi</code></dt>
-<dd> This driver gets statistics using the <font SIZE="-1">DLPI</font> streams interface available on <font SIZE="-1">HP-UX</font>. An alternate device to query statistics from can be passed as the option (default is /dev/dlpi).</dd>
+<dd> This driver gets statistics using the DLPI streams interface available on HP-UX. An alternate device to query statistics from can be passed as the option (default is /dev/dlpi).</dd>
 <dt><code>win32</code></dt>
 <dd> This driver gets statistics using the GetIfTable interface available on Win32 systems. It doesn&#8217;t accept any options.</dd>
 <dt><code>snmp</code></dt>
-<dd> This driver gets statistics through <font SIZE="-1">SNMP</font>. The option, in the form [comm@][#]host[/nn]], specifies the host and eventual community to poll. Default community is public, but can be changed by prepending &#8220;comm@&#8221; to the hostname. If host starts by a #, interface names are generated from their index as `ifNN&#8217; (this is a workaround for some equipments that give all interfaces the same description). Default host is localhost, and this will be used by default if snmp is the only available driver. </dd>
-<p> The driver will try to poll several interfaces at once by grouping requests in <font SIZE="-1">SNMP</font> packets. By default interfaces will be polled by group of 8. If this doesn&#8217;t work well with your equipments, you can lower that number by suffixing the hostname with /nn, where nn is the number of interfaces to poll at once. You can also increase the number if you want to poll a large number of interfaces efficiently and if your server supports it.</dl>
+<dd> This driver gets statistics through SNMP. The option, in the form [comm@][#]host[/nn]], specifies the host and eventual community to poll. Default community is public, but can be changed by prepending &#8220;comm@&#8221; to the hostname. If host starts by a #, interface names are generated from their index as `ifNN&#8217; (this is a workaround for some equipments that give all interfaces the same description). Default host is localhost, and this will be used by default if snmp is the only available driver. </dd>
+<p> The driver will try to poll several interfaces at once by grouping requests in SNMP packets. By default interfaces will be polled by group of 8. If this doesn&#8217;t work well with your equipments, you can lower that number by suffixing the hostname with /nn, where nn is the number of interfaces to poll at once. You can also increase the number if you want to poll a large number of interfaces efficiently and if your server supports it.</dl>
 </dl>
 <dl>
 </dl>

@@ -27,10 +27,10 @@ description: "cryptsetup – manage plain dm-crypt and LUKS encrypted volumes"
 <dd>Opens (creates a mapping with) &lt;name&gt; backed by device &lt;device&gt;. </dd>
 <p> Device type can be <i>plain</i>, <i>luks</i> (default), <i>luks1</i>, <i>luks2</i>, <i>loopaes</i> or <i>tcrypt</i>. </p>
 <p> For backward compatibility there are <code>open</code> command aliases: </p>
-<p> <code>create</code> (argument-order &lt;name&gt; &lt;device&gt;): open &#8211;type plain<br />
- <code>plainOpen</code>: open &#8211;type plain<br />
- <code>luksOpen</code>: open &#8211;type luks<br />
- <code>loopaesOpen</code>: open &#8211;type loopaes<br />
+<p> <code>create</code> (argument-order &lt;name&gt; &lt;device&gt;): open &#8211;type plain<br/>
+ <code>plainOpen</code>: open &#8211;type plain<br/>
+ <code>luksOpen</code>: open &#8211;type luks<br/>
+ <code>loopaesOpen</code>: open &#8211;type loopaes<br/>
  <code>tcryptOpen</code>: open &#8211;type tcrypt </p>
 <p> <code>&lt;options&gt;</code> are type specific and are described below for individual device types. For <code>create</code>, the order of the &lt;name&gt; and &lt;device&gt; options is inverted for historical reasons, all other aliases use the standard <code>&lt;device&gt; &lt;name&gt;</code> order.</dl>
 <p> <i>close</i> &lt;name&gt;</p>
@@ -80,7 +80,7 @@ description: "cryptsetup – manage plain dm-crypt and LUKS encrypted volumes"
 <h2>Plain Mode</h2>
 <p>Plain dm-crypt encrypts the device sector-by-sector with a single, non-salted hash of the passphrase. No checks are performed, no metadata is used. There is no formatting operation. When the raw device is mapped (opened), the usual device operations can be used on the mapped device, including filesystem creation. Mapped devices usually reside in /dev/mapper/&lt;name&gt;. </p>
 <p> The following are valid plain device type actions: </p>
-<p> <i>open</i> &#8211;type plain &lt;device&gt; &lt;name&gt;<br />
+<p> <i>open</i> &#8211;type plain &lt;device&gt; &lt;name&gt;<br/>
  <i>create</i> &lt;name&gt; &lt;device&gt; (<code>OBSOLETE syntax</code>)</p>
 <dl>
 <dd>Opens (creates a mapping with) &lt;name&gt; backed by device &lt;device&gt;. </dd>
@@ -102,7 +102,7 @@ description: "cryptsetup – manage plain dm-crypt and LUKS encrypted volumes"
 <p> <code>&lt;options&gt;</code> can be [&#8211;hash, &#8211;cipher, &#8211;verify-passphrase, &#8211;key-size, &#8211;key-slot, &#8211;key-file (takes precedence over optional second argument), &#8211;keyfile-offset, &#8211;keyfile-size, &#8211;use-random | &#8211;use-urandom, &#8211;uuid, &#8211;master-key-file, &#8211;iter-time, &#8211;header, &#8211;pbkdf-force-iterations, &#8211;force-password, &#8211;disable-locks]. </p>
 <p> For LUKS2, additional <code>&lt;options&gt;</code> can be [&#8211;integrity, &#8211;integrity-no-wipe, &#8211;sector-size, &#8211;label, &#8211;subsystem, &#8211;pbkdf, &#8211;pbkdf-memory, &#8211;pbkdf-parallel, &#8211;disable-locks, &#8211;disable-keyring, &#8211;luks2-metadata-size, &#8211;luks2-keyslots-size, &#8211;keyslot-cipher, &#8211;keyslot-key-size]. </p>
 <p> <code>WARNING:</code> Doing a luksFormat on an existing LUKS container will make all data the old container permanently irretrievable unless you have a header backup.</dl>
-<p> <i>open</i> &#8211;type luks &lt;device&gt; &lt;name&gt;<br />
+<p> <i>open</i> &#8211;type luks &lt;device&gt; &lt;name&gt;<br/>
  <i>luksOpen</i> &lt;device&gt; &lt;name&gt; (<code>old syntax</code>)</p>
 <dl>
 <dd>Opens the LUKS device &lt;device&gt; and sets up a mapping &lt;name&gt; after successful verification of the supplied passphrase. </dd>
@@ -147,14 +147,14 @@ description: "cryptsetup – manage plain dm-crypt and LUKS encrypted volumes"
 <p> <code>WARNING:</code> If you read the passphrase from stdin (without further argument or with &#8216;-&#8216; as an argument to &#8211;key-file), batch-mode (-q) will be implicitly switched on and no warning will be given when you remove the last remaining passphrase from a LUKS container. Removing the last passphrase makes the LUKS container permanently inaccessible. </p>
 <p> <code>NOTE:</code> If there is no passphrase provided (on stdin or through &#8211;key-file argument) and batch-mode (-q) is active, the key-slot is removed without any other warning. </p>
 </dl>
-<p> <i>erase</i> &lt;device&gt;<br />
+<p> <i>erase</i> &lt;device&gt;<br/>
  <i>luksErase</i> &lt;device&gt;</p>
 <dl>
 <dd>Erase all keyslots and make the LUKS container permanently inaccessible. You do not need to provide any password for this operation. </dd>
 <p> <code>WARNING:</code> This operation is irreversible.</dl>
 <p> <i>luksUUID</i> &lt;device&gt;</p>
 <dl>
-<dd>Print the UUID of a LUKS device.<br />
+<dd>Print the UUID of a LUKS device.<br/>
  Set new UUID if <i>&#8211;uuid</i> option is specified.</dd></dl>
 <p> <i>isLuks</i> &lt;device&gt;</p>
 <dl>
@@ -169,12 +169,12 @@ description: "cryptsetup – manage plain dm-crypt and LUKS encrypted volumes"
 <p> <code>WARNING:</code> If &#8211;dump-master-key is used with &#8211;key-file and the argument to &#8211;key-file is &#8216;-&#8216;, no validation question will be asked and no warning given.</dl>
 <p> <i>luksHeaderBackup</i> &lt;device&gt; &#8211;header-backup-file &lt;file&gt;</p>
 <dl>
-<dd>Stores a binary backup of the LUKS header and keyslot area.<br />
+<dd>Stores a binary backup of the LUKS header and keyslot area.<br/>
  Note: Using &#8216;-&#8216; as filename writes the header backup to a file named &#8216;-&#8216;. </dd>
 <p> <code>WARNING:</code> This backup file and a passphrase valid at the time of backup allows decryption of the LUKS data area, even if the passphrase was later changed or removed from the LUKS device. Also note that with a header backup you lose the ability to securely wipe the LUKS device by just overwriting the header and key-slots. You either need to securely erase all header backups in addition or overwrite the encrypted data area as well. The second option is less secure, as some sectors can survive, e.g. due to defect management.</dl>
 <p> <i>luksHeaderRestore</i> &lt;device&gt; &#8211;header-backup-file &lt;file&gt;</p>
 <dl>
-<dd>Restores a binary backup of the LUKS header and keyslot area from the specified file.<br />
+<dd>Restores a binary backup of the LUKS header and keyslot area from the specified file.<br/>
  Note: Using &#8216;-&#8216; as filename reads the header backup from a file named &#8216;-&#8216;. </dd>
 <p> <code>WARNING:</code> Header and keyslots will be replaced, only the passphrases from the backup will work afterward. </p>
 <p> This command requires that the master key size and data offset of the LUKS header already on the device and of the header backup match. Alternatively, if there is no LUKS header on the device, the backup will also be written to it.</dl>
@@ -202,14 +202,14 @@ description: "cryptsetup – manage plain dm-crypt and LUKS encrypted volumes"
 </dl>
 <h2>loop-AES EXTENSION</h2>
 <p>cryptsetup supports mapping loop-AES encrypted partition using a compatibility mode. </p>
-<p> <i>open</i> &#8211;type loopaes &lt;device&gt; &lt;name&gt; &#8211;key-file &lt;keyfile&gt;<br />
+<p> <i>open</i> &#8211;type loopaes &lt;device&gt; &lt;name&gt; &#8211;key-file &lt;keyfile&gt;<br/>
  <i>loopaesOpen</i> &lt;device&gt; &lt;name&gt; &#8211;key-file &lt;keyfile&gt; (<code>old syntax</code>)</p>
 <dl>
 <dd>Opens the loop-AES &lt;device&gt; and sets up a mapping &lt;name&gt;. </dd>
-<p> If the key file is encrypted with GnuPG, then you have to use &#8211;key-file=- and decrypt it before use, e.g. like this:<br />
+<p> If the key file is encrypted with GnuPG, then you have to use &#8211;key-file=- and decrypt it before use, e.g. like this:<br/>
  gpg &#8211;decrypt &lt;keyfile&gt; | cryptsetup loopaesOpen &#8211;key-file=- &lt;device&gt; &lt;name&gt; </p>
-<p> <code>WARNING:</code> The loop-AES extension cannot use the direct input of key file on real terminal because the keys are separated by end-of-line and only part of the multi-key file would be read.<br />
- If you need it in script, just use the pipe redirection:<br />
+<p> <code>WARNING:</code> The loop-AES extension cannot use the direct input of key file on real terminal because the keys are separated by end-of-line and only part of the multi-key file would be read.<br/>
+ If you need it in script, just use the pipe redirection:<br/>
  echo $keyfile | cryptsetup loopaesOpen &#8211;key-file=- &lt;device&gt; &lt;name&gt; </p>
 <p> Use <code>&#8211;keyfile-size</code> to specify the proper key length if needed. </p>
 <p> Use <code>&#8211;offset</code> to specify device offset. Note that the units need to be specified in number of 512 byte sectors. </p>
@@ -233,7 +233,7 @@ description: "cryptsetup – manage plain dm-crypt and LUKS encrypted volumes"
 <p> To use hidden header (and map hidden device, if available), use <code>&#8211;tcrypt-hidden</code> option. </p>
 <p> To explicitly use backup (secondary) header, use <code>&#8211;tcrypt-backup</code> option. </p>
 <p> <code>NOTE:</code> There is no protection for a hidden volume if the outer volume is mounted. The reason is that if there were any protection, it would require some metadata describing what to protect in the outer volume and the hidden volume would become detectable. </p>
-<p> <i>open</i> &#8211;type tcrypt &lt;device&gt; &lt;name&gt;<br />
+<p> <i>open</i> &#8211;type tcrypt &lt;device&gt; &lt;name&gt;<br/>
  <i>tcryptOpen</i> &lt;device&gt; &lt;name&gt; (<code>old syntax</code>)</p>
 <dl>
 <dd>Opens the TCRYPT (a TrueCrypt-compatible) &lt;device&gt; and sets up a mapping &lt;name&gt;. </dd>
@@ -317,7 +317,7 @@ description: "cryptsetup – manage plain dm-crypt and LUKS encrypted volumes"
 <p> See <code>NOTES ON RANDOM NUMBER GENERATORS</code> for more information. Use <i>cryptsetup &#8211;help</i> to show the compiled-in default random number generator. </p>
 <p> <code>WARNING:</code> In a low-entropy situation (e.g. in an embedded system), both selections are problematic. Using /dev/urandom can lead to weak keys. Using /dev/random can block a long time, potentially forever, if not enough entropy can be harvested by the kernel.</p>
 <dt><code>&#8211;key-slot, -S &lt;0-7&gt;</code></dt>
-<dd>For LUKS operations that add key material, this options allows you to specify which key slot is selected for the new key. This option can be used for <i>luksFormat</i>, and <i>luksAddKey</i>.<br />
+<dd>For LUKS operations that add key material, this options allows you to specify which key slot is selected for the new key. This option can be used for <i>luksFormat</i>, and <i>luksAddKey</i>.<br/>
  In addition, for <i>open</i>, this option selects a specific key-slot to compare the passphrase against. If the given passphrase would only match a different key-slot, the operation fails.</dd>
 <dt><code>&#8211;key-size, -s &lt;bits&gt;</code></dt>
 <dd>Sets key size in bits. The argument has to be a multiple of 8. The possible key-sizes are limited by the cipher and mode used. </dd>
@@ -364,7 +364,7 @@ description: "cryptsetup – manage plain dm-crypt and LUKS encrypted volumes"
 <dt><code>&#8211;progress-frequency &lt;seconds&gt;</code></dt>
 <dd>Print separate line every &lt;seconds&gt; with wipe progress.</dd>
 <dt><code>&#8211;timeout, -t &lt;number of seconds&gt;</code></dt>
-<dd>The number of seconds to wait before timeout on passphrase input via terminal. It is relevant every time a passphrase is asked, for example for <i>open</i>, <i>luksFormat</i> or <i>luksAddKey</i>. It has no effect if used in conjunction with &#8211;key-file.<br />
+<dd>The number of seconds to wait before timeout on passphrase input via terminal. It is relevant every time a passphrase is asked, for example for <i>open</i>, <i>luksFormat</i> or <i>luksAddKey</i>. It has no effect if used in conjunction with &#8211;key-file.<br/>
  This option is useful when the system should not stall if the user does not input a passphrase, e.g. during boot. The default is a value of 0 seconds, which means to wait forever.</dd>
 <dt><code>&#8211;tries, -T</code></dt>
 <dd>How often the input of the passphrase shall be retried. This option is relevant every time a passphrase is asked, for example for <i>open</i>, <i>luksFormat</i> or <i>luksAddKey</i>. The default is 3 tries.</dd>
@@ -537,15 +537,15 @@ description: "cryptsetup – manage plain dm-crypt and LUKS encrypted volumes"
 <h2>Reporting Bugs</h2>
 <p>Report bugs, including ones in the documentation, on the cryptsetup mailing list at &lt;dm-crypt [at] saout.de&gt; or in the &#8216;Issues&#8217; section on LUKS website. Please attach the output of the failed command with the &#8211;debug option added.</p>
 <h2>Authors</h2>
-<p>cryptsetup originally written by Jana Saout &lt;jana [at] saout.de&gt;<br />
- The LUKS extensions and original man page were written by Clemens Fruhwirth &lt;clemens [at] endorphin.org&gt;.<br />
- Man page extensions by Milan Broz &lt;gmazyland [at] gmail.com&gt;.<br />
+<p>cryptsetup originally written by Jana Saout &lt;jana [at] saout.de&gt;<br/>
+ The LUKS extensions and original man page were written by Clemens Fruhwirth &lt;clemens [at] endorphin.org&gt;.<br/>
+ Man page extensions by Milan Broz &lt;gmazyland [at] gmail.com&gt;.<br/>
  Man page rewrite and extension by Arno Wagner &lt;arno [at] wagner.name&gt;.</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2004 Jana Saout<br />
- Copyright &#169; 2004-2006 Clemens Fruhwirth<br />
- Copyright &#169; 2012-2014 Arno Wagner<br />
- Copyright &#169; 2009-2019 Red Hat, Inc.<br />
+<p>Copyright &#169; 2004 Jana Saout<br/>
+ Copyright &#169; 2004-2006 Clemens Fruhwirth<br/>
+ Copyright &#169; 2012-2014 Arno Wagner<br/>
+ Copyright &#169; 2009-2019 Red Hat, Inc.<br/>
  Copyright &#169; 2009-2019 Milan Broz </p>
 <p> This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>See Also</h2>

@@ -53,27 +53,27 @@ Note fields with a + are only available in the summary-detail report.
 <pre><code>
 stat - report command Description / Example-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --type Define the report type.type destination - tag filter Apply this filter definition.filter permit - only - tcp scale Scale report by n.scale 100 tag - mask Apply source and destination mask to tag.tag - mask 0xFF00 0xFF00 ip - source - address - format Format of source IP address.address - address, ie 128.146.1.7 prefix - len - address / len ie 128.146.1.7 / 24 prefix - mask - prefix / len 128.146.1 / 24 ip - destination - address - format Format of destination IP address.address - address, ie 128.146.1.7 prefix - len - address / len ie 128.146.1.7 / 24 prefix - mask - prefix / len 128.146.1 / 24 output Start an output configuration.Multiple output configurations can be configured per report.
 </code></pre>
-<p>output option Description / Example&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -path Pathname of output.If the path begins<br />
-                                with a |<br />
-        the output is a pipe.The<br />
-                    pathname is formatted through<br />
-                    strftime()<br />
-                        .Directories not in the path are<br />
-                automatically created.path<br />
-                / tmp / % Y / % m / % d / foo.out time What time to use when formatting the pathname with strftime.now<br />
-            &#8211; current time start &#8211; first flow end &#8211; last flow mid &#8211; average of first<br />
-    and last.tally Emit a % total line every n records.tally 10 format Output format.Currently only ascii.format ascii<br />
-                            sort Sort on a field.+<br />
-            ascending,<br />
-    -descending.sort + flows &#8211; sort on the flows field Sortable fields are flows, octets, packets,<br />
-    duration, avg &#8211; pps, min &#8211; pps, max &#8211; pps, avg &#8211; bps,<br />
-    min &#8211; bps, max &#8211; bps records Truncate report at n records.records 10 fields Enable / Disable fields with + / -.Fields : index, first, last, flows, octets, packets,<br />
-    duration, pps, bps, other, key, key1, key2,<br />
-    key3, key4, count.fields + key, +flows, +octets, +packets,<br />
+<p>output option Description / Example&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -path Pathname of output.If the path begins<br/>
+                                with a |<br/>
+        the output is a pipe.The<br/>
+                    pathname is formatted through<br/>
+                    strftime()<br/>
+                        .Directories not in the path are<br/>
+                automatically created.path<br/>
+                / tmp / % Y / % m / % d / foo.out time What time to use when formatting the pathname with strftime.now<br/>
+            &#8211; current time start &#8211; first flow end &#8211; last flow mid &#8211; average of first<br/>
+    and last.tally Emit a % total line every n records.tally 10 format Output format.Currently only ascii.format ascii<br/>
+                            sort Sort on a field.+<br/>
+            ascending,<br/>
+    -descending.sort + flows &#8211; sort on the flows field Sortable fields are flows, octets, packets,<br/>
+    duration, avg &#8211; pps, min &#8211; pps, max &#8211; pps, avg &#8211; bps,<br/>
+    min &#8211; bps, max &#8211; bps records Truncate report at n records.records 10 fields Enable / Disable fields with + / -.Fields : index, first, last, flows, octets, packets,<br/>
+    duration, pps, bps, other, key, key1, key2,<br/>
+    key3, key4, count.fields + key, +flows, +octets, +packets,<br/>
     For reports with one key, the key field is referenced with key, else key1, key2, key3, etc Note that the count field is only available in select reports, those which end in &#8211; count.</p>
-<p>                                                                                                                                                                                       options Enable<br />
-                                                                                                                                                                                       / Disable options with<br />
-                                                                                                                                                                  + / -+header &#8211; include header.+ xheader &#8211; include extra header.+ totals &#8211; include a totals line.+ percent &#8211; total &#8211; report in % total form.+ names &#8211; use symbolic names.options + header,<br />
+<p>                                                                                                                                                                                       options Enable<br/>
+                                                                                                                                                                                       / Disable options with<br/>
+                                                                                                                                                                  + / -+header &#8211; include header.+ xheader &#8211; include extra header.+ totals &#8211; include a totals line.+ percent &#8211; total &#8211; report in % total form.+ names &#8211; use symbolic names.options + header,<br/>
     +xheader</p>
 <p>stat &#8211; definition option Description / Example&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -filter Apply this filter definition.filter default tag Apply this tag definition.tag default mask Apply this mask definition.mask default report Invoke this report.Multiple reports can be set.report foo time &#8211; series How often to produce a report in seconds.time &#8211; series 60</p>
 <p>global options Description / Example&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -include &#8211; tag Specify path to include tag definitions.include &#8211; tag / flows / tags / test1 include &#8211; filter Specify path to include filter definitions.include &#8211; filter / flows / filters / test1 include &#8211; mask Specify path to include mask definitions.include &#8211; filter / flows / masks / test1</p>

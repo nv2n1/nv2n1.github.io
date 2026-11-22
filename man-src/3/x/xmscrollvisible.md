@@ -7,7 +7,7 @@ url: "/docs/linux/man/3-xmscrollvisible/"
 description: "XmScrollVisible — A ScrolledWindow function that makes an invisible descendant of a ScrolledWindow work area visible"
 ---
 
-<p><code>XmScrollVisible</code> &#8212; A ScrolledWindow function that makes an invisible<br />
+<p><code>XmScrollVisible</code> &#8212; A ScrolledWindow function that makes an invisible<br/>
 &nbsp;<wbr>descendant of a ScrolledWindow work area visible</p>
 <h2>Synopsis</h2>
 <pre>#include &lt;Xm/ScrolledW.h&gt;

@@ -9,9 +9,9 @@ description: "X Window Destroy Functions – Functions to destroy X windows."
 
 <p>X Window Destroy Functions &#8211; Functions to destroy X windows. </p>
 <h3>Functions</h3>
-<p>EAPI void <code>ecore_x_window_del</code> (Ecore_X_Window window)<br />
- <i>Deletes the given window. </i><br />
- EAPI void <code>ecore_x_window_delete_request_send</code> (Ecore_X_Window window)<br />
+<p>EAPI void <code>ecore_x_window_del</code> (Ecore_X_Window window)<br/>
+ <i>Deletes the given window. </i><br/>
+ EAPI void <code>ecore_x_window_delete_request_send</code> (Ecore_X_Window window)<br/>
  <i>Sends a delete request to the given window. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions to destroy X windows.</p>

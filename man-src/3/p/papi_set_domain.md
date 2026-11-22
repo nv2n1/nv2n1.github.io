@@ -22,12 +22,12 @@ description: "PAPI_set_domain –"
 @arg PAPI_DOM_ALL All above contexts counted
 @arg PAPI_DOM_MIN The smallest available context
 @arg PAPI_DOM_MAX The largest available context </pre>
-<p>&nbsp;<wbr>&nbsp;<wbr><br />
+<p>&nbsp;<wbr>&nbsp;<wbr><br/>
 &nbsp;<wbr> </p>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>PAPI_OK</i><br />
- <i>PAPI_EINVAL</i> One or more of the arguments is invalid.<br />
+<dd><i>PAPI_OK</i><br/>
+ <i>PAPI_EINVAL</i> One or more of the arguments is invalid.<br/>
 &nbsp;<wbr></dd></dl>
 <p> <code>PAPI_set_domain</code> sets the default counting domain for all new event sets created by <code>PAPI_create_eventset</code> in all threads. This call implicitly sets the domain for the cpu component (component 0) and is included to preserve backward compatibility. </p>
 <p> <code>Example:</code></p>

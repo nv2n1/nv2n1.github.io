@@ -11,7 +11,7 @@ description: "strsm.f –"
 <p> strsm.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>strsm</code> (SIDE, UPLO, TRANSA, DIAG, M, N, ALPHA, A, LDA, B, LDB)<br />
+<p> subroutine <code>strsm</code> (SIDE, UPLO, TRANSA, DIAG, M, N, ALPHA, A, LDA, B, LDB)<br/>
  <i></i><code>STRSM</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine strsm (characterSIDE, characterUPLO, characterTRANSA, characterDIAG, integerM, integerN, realALPHA, real, dimension(lda,*)A, integerLDA, real, dimension(ldb,*)B, integerLDB)</h3>

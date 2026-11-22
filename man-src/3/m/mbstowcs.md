@@ -54,90 +54,90 @@ description: "mbstowcs – convert a multibyte string to a wide-character string
 <p> The function <code><a href="/docs/linux/man/3-mbsrtowcs/">mbsrtowcs</a></code>(3) provides a better interface to the same functionality.  </p>
 <h2>EXAMPLES</h2>
 <p> The program below illustrates the use of <code>mbstowcs</code>(), as well as some of the wide character classification functions. An example run is the following: </p>
-<p> $ ./t_mbstowcs de_DE.UTF-8 Grüße! Length of source string (excluding terminator): <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;8 bytes <br />
+<p> $ ./t_mbstowcs de_DE.UTF-8 Grüße! Length of source string (excluding terminator): <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;8 bytes <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;6 multibyte characters </p>
-<p> Wide character string is: Grüße! (6 characters) <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;G alpha upper <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;r alpha lower <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;ü&nbsp;alpha lower <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;ß&nbsp;alpha lower <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;e alpha lower <br />
+<p> Wide character string is: Grüße! (6 characters) <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;G alpha upper <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;r alpha lower <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;ü&nbsp;alpha lower <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;ß&nbsp;alpha lower <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;e alpha lower <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;!&nbsp;!alpha  </p>
 <h3>Program source</h3>
 <p> #include &lt;wctype.h&gt; #include &lt;locale.h&gt; #include &lt;wchar.h&gt; #include &lt;stdio.h&gt; #include &lt;string.h&gt; #include &lt;stdlib.h&gt; </p>
-<p> int main(int argc, char *argv[]) { <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;size_t mbslen;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Number of multibyte characters in source&nbsp;*/ <br />
+<p> int main(int argc, char *argv[]) { <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;size_t mbslen;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Number of multibyte characters in source&nbsp;*/ <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;wchar_t&nbsp;*wcs;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Pointer to converted wide character string&nbsp;*/ </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(argc&nbsp;&lt;&nbsp;3)&nbsp;{ <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;fprintf(stderr,&nbsp;&quot;Usage:&nbsp;%s&nbsp;&lt;locale&gt;&nbsp;&lt;string&gt;\n&quot;, argv[0]); <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_FAILURE); <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(argc&nbsp;&lt;&nbsp;3)&nbsp;{ <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;fprintf(stderr,&nbsp;&quot;Usage:&nbsp;%s&nbsp;&lt;locale&gt;&nbsp;&lt;string&gt;\n&quot;, argv[0]); <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_FAILURE); <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;} </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Apply the specified locale&nbsp;*/ </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(setlocale(LC_ALL, argv[1])&nbsp;==&nbsp;NULL)&nbsp;{ <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;perror(&quot;setlocale&quot;); <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_FAILURE); <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(setlocale(LC_ALL, argv[1])&nbsp;==&nbsp;NULL)&nbsp;{ <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;perror(&quot;setlocale&quot;); <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_FAILURE); <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;} </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Calculate the length required to hold argv[2]&nbsp;converted to <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Calculate the length required to hold argv[2]&nbsp;converted to <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;a wide character string&nbsp;*/ </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;mbslen&nbsp;=&nbsp;mbstowcs(NULL, argv[2], 0); <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(mbslen&nbsp;==&nbsp;(size_t)&nbsp;-1)&nbsp;{ <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;perror(&quot;mbstowcs&quot;); <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_FAILURE); <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;mbslen&nbsp;=&nbsp;mbstowcs(NULL, argv[2], 0); <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(mbslen&nbsp;==&nbsp;(size_t)&nbsp;-1)&nbsp;{ <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;perror(&quot;mbstowcs&quot;); <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_FAILURE); <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;} </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Describe the source string to the user&nbsp;*/ </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;Length of source string&nbsp;(excluding terminator):\n&quot;); <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;%zu bytes\n&quot;, strlen(argv[2])); <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;Length of source string&nbsp;(excluding terminator):\n&quot;); <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;%zu bytes\n&quot;, strlen(argv[2])); <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;%zu multibyte characters\n\n&quot;, mbslen); </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Allocate wide character string of the desired size.&nbsp;<wbr>&nbsp;Add 1 <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Allocate wide character string of the desired size.&nbsp;<wbr>&nbsp;Add 1 <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;to allow for terminating null wide character&nbsp;(L&#8217;\0&#8217;).&nbsp;*/ </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;wcs&nbsp;=&nbsp;calloc(mbslen&nbsp;+&nbsp;1, sizeof(*wcs)); <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(wcs&nbsp;==&nbsp;NULL)&nbsp;{ <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;perror(&quot;calloc&quot;); <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_FAILURE); <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;wcs&nbsp;=&nbsp;calloc(mbslen&nbsp;+&nbsp;1, sizeof(*wcs)); <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(wcs&nbsp;==&nbsp;NULL)&nbsp;{ <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;perror(&quot;calloc&quot;); <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_FAILURE); <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;} </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Convert the multibyte character string in argv[2]&nbsp;to a <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Convert the multibyte character string in argv[2]&nbsp;to a <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;wide character string&nbsp;*/ </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(mbstowcs(wcs, argv[2], mbslen&nbsp;+&nbsp;1)&nbsp;==&nbsp;(size_t)&nbsp;-1)&nbsp;{ <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;perror(&quot;mbstowcs&quot;); <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_FAILURE); <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(mbstowcs(wcs, argv[2], mbslen&nbsp;+&nbsp;1)&nbsp;==&nbsp;(size_t)&nbsp;-1)&nbsp;{ <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;perror(&quot;mbstowcs&quot;); <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_FAILURE); <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;} </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;Wide character string is:&nbsp;%ls&nbsp;(%zu characters)\n&quot;, <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;Wide character string is:&nbsp;%ls&nbsp;(%zu characters)\n&quot;, <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;wcs, mbslen); </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Now do some inspection of the classes of the characters in <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Now do some inspection of the classes of the characters in <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;the wide character string&nbsp;*/ </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;for&nbsp;(wchar_t&nbsp;*wp&nbsp;=&nbsp;wcs;&nbsp;*wp&nbsp;!=&nbsp;0;&nbsp;wp++)&nbsp;{ <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;for&nbsp;(wchar_t&nbsp;*wp&nbsp;=&nbsp;wcs;&nbsp;*wp&nbsp;!=&nbsp;0;&nbsp;wp++)&nbsp;{ <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;%lc&nbsp;&quot;,&nbsp;(wint_t)&nbsp;*wp); </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(!iswalpha(*wp)) <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;!&quot;); <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(!iswalpha(*wp)) <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;!&quot;); <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;alpha&nbsp;&quot;); </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(iswalpha(*wp))&nbsp;{ <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(iswupper(*wp)) <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(iswalpha(*wp))&nbsp;{ <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(iswupper(*wp)) <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;upper&nbsp;&quot;); </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(iswlower(*wp)) <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;lower&nbsp;&quot;); <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(iswlower(*wp)) <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;lower&nbsp;&quot;); <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;} </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;putchar(&#8216;\n&#8217;); <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;putchar(&#8216;\n&#8217;); <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;} </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_SUCCESS); }  </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-mblen/">mblen</a></code>(3), <code><a href="/docs/linux/man/3-mbsrtowcs/">mbsrtowcs</a></code>(3), <code><a href="/docs/linux/man/3-mbtowc/">mbtowc</a></code>(3), <code><a href="/docs/linux/man/3-wcstombs/">wcstombs</a></code>(3), <code><a href="/docs/linux/man/3-wctomb/">wctomb</a></code>(3)  </p>

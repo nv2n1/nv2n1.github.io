@@ -10,11 +10,11 @@ description: "axcall – make an AX.25, NET/ROM or Rose connection."
 
 <p> axcall &#8211; make an AX.25, NET/ROM or Rose connection.</p>
 <h2>SYNOPSIS</h2>
-<p> For AX.25<br />
+<p> For AX.25<br/>
  <code>axcall [-b l|e] [-d] [-h] [-m s|e] [-p paclen] [-r] [-t] [-v] [-w window] port callsign [[via] digipeaters&#8230;..]</code> </p>
-<p> For NET/ROM<br />
+<p> For NET/ROM<br/>
  <code>axcall [-d] [-h] [-p paclen] [-r] [-t] [-v] port callsign</code> </p>
-<p> For Rose<br />
+<p> For Rose<br/>
  <code>axcall [-d] [-h] [-r] [-t] [-v] port callsign address [[via] digipeater]</code> </p>
 <h2>DESCRIPTION</h2>
 <p> <code>Axcall</code> is the general purpose AX.25, NET/ROM and Rose connection program. As is normal in AX.25 it runs entirely in line mode. All CR/LF translation is done transparently. The program provides ASCII, YAPP, YAPP-C and 7+ file transfer facilities. Some of the options are only valid in AX.25 mode, the program will quietly ignore them if given in NET/ROM mode or in Rose mode. </p>

@@ -10,9 +10,9 @@ description: "dialog – display dialog boxes from shell scripts"
 
 <p> dialog &#8211; display dialog boxes from shell scripts</p>
 <h2>SYNOPSIS</h2>
-<p> <code>dialog &#8211;clear</code><br />
- <code>dialog &#8211;create-rc </code><i>file</i><br />
- <code>dialog &#8211;print-maxsize</code><br />
+<p> <code>dialog &#8211;clear</code><br/>
+ <code>dialog &#8211;create-rc </code><i>file</i><br/>
+ <code>dialog &#8211;print-maxsize</code><br/>
  <code>dialog</code> <i>common-options</i> <i>box-options</i></p>
 <h2>DESCRIPTION</h2>
 <p> <code>Dialog</code> is a program that will let you to present a variety of questions or display messages using dialog boxes from a shell script. These types of dialog boxes are implemented (though not all are necessarily compiled into <code>dialog</code>):</p>

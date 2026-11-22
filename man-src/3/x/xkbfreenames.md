@@ -10,7 +10,7 @@ description: "XkbFreeNames – Free symbolic names structures"
 <p>XkbFreeNames &#8211; Free symbolic names structures </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>void XkbFreeNames</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>unsigned int </code><i>which</i><code>,</code> <code>Bool </code><i>free_map</i><code>);</code><br />
+<dt> <code>void XkbFreeNames</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>unsigned int </code><i>which</i><code>,</code> <code>Bool </code><i>free_map</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

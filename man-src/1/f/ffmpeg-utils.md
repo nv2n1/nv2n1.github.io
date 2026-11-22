@@ -62,11 +62,11 @@ description: "ffmpeg-utils – FFmpeg utilities"
         now
 </code></pre>
 <p> If the value is &#8220;now&#8221; it takes the current time. </p>
-<p> Time is local time unless Z is appended, in which case it is interpreted as <font SIZE="-1">UTC.</font> If the year-month-day part is not specified it takes the current year-month-day.</p>
+<p> Time is local time unless Z is appended, in which case it is interpreted as UTC. If the year-month-day part is not specified it takes the current year-month-day.</p>
 <h3>Time duration</h3>
 <p> There are two accepted syntaxes for expressing time duration. </p>
 <p>[-] [&lt;HH&gt;:]&lt;MM&gt; : &lt;SS&gt;[.&lt;m&gt;&#8230;]</p>
-<p> <i></i><font SIZE="-1"><i>HH</i></font><i></i> expresses the number of hours, <i></i><font SIZE="-1"><i>MM</i></font><i></i> the number of minutes for a maximum of 2 digits, and <i></i><font SIZE="-1"><i>SS</i></font><i></i> the number of seconds for a maximum of 2 digits. The <i>m</i> at the end expresses decimal value for <i></i><font SIZE="-1"><i>SS</i></font><i></i>. </p>
+<p> <i></i><i>HH</i><i></i> expresses the number of hours, <i></i><i>MM</i><i></i> the number of minutes for a maximum of 2 digits, and <i></i><i>SS</i><i></i> the number of seconds for a maximum of 2 digits. The <i>m</i> at the end expresses decimal value for <i></i><i>SS</i><i></i>. </p>
 <p> <i>or</i> </p>
 <pre><code>
 [-]&lt;S&gt; + [.&lt;m&gt;...][s | ms | us]
@@ -512,120 +512,120 @@ description: "ffmpeg-utils – FFmpeg utilities"
 <p> A channel layout specifies the spatial disposition of the channels in a multi-channel audio stream. To specify a channel layout, FFmpeg makes use of a special syntax. </p>
 <p> Individual channels are identified by an id, as given by the table below:</p>
 <dl>
-<dt><font SIZE="-1"><code>FL</code></font></dt>
+<dt><code>FL</code></dt>
 <dd> front left</dd>
-<dt><font SIZE="-1"><code>FR</code></font></dt>
+<dt><code>FR</code></dt>
 <dd> front right</dd>
-<dt><font SIZE="-1"><code>FC</code></font></dt>
+<dt><code>FC</code></dt>
 <dd> front center</dd>
-<dt><font SIZE="-1"><code>LFE</code></font></dt>
+<dt><code>LFE</code></dt>
 <dd> low frequency</dd>
-<dt><font SIZE="-1"><code>BL</code></font></dt>
+<dt><code>BL</code></dt>
 <dd> back left</dd>
-<dt><font SIZE="-1"><code>BR</code></font></dt>
+<dt><code>BR</code></dt>
 <dd> back right</dd>
-<dt><font SIZE="-1"><code>FLC</code></font></dt>
+<dt><code>FLC</code></dt>
 <dd> front left-of-center</dd>
-<dt><font SIZE="-1"><code>FRC</code></font></dt>
+<dt><code>FRC</code></dt>
 <dd> front right-of-center</dd>
-<dt><font SIZE="-1"><code>BC</code></font></dt>
+<dt><code>BC</code></dt>
 <dd> back center</dd>
-<dt><font SIZE="-1"><code>SL</code></font></dt>
+<dt><code>SL</code></dt>
 <dd> side left</dd>
-<dt><font SIZE="-1"><code>SR</code></font></dt>
+<dt><code>SR</code></dt>
 <dd> side right</dd>
-<dt><font SIZE="-1"><code>TC</code></font></dt>
+<dt><code>TC</code></dt>
 <dd> top center</dd>
-<dt><font SIZE="-1"><code>TFL</code></font></dt>
+<dt><code>TFL</code></dt>
 <dd> top front left</dd>
-<dt><font SIZE="-1"><code>TFC</code></font></dt>
+<dt><code>TFC</code></dt>
 <dd> top front center</dd>
-<dt><font SIZE="-1"><code>TFR</code></font></dt>
+<dt><code>TFR</code></dt>
 <dd> top front right</dd>
-<dt><font SIZE="-1"><code>TBL</code></font></dt>
+<dt><code>TBL</code></dt>
 <dd> top back left</dd>
-<dt><font SIZE="-1"><code>TBC</code></font></dt>
+<dt><code>TBC</code></dt>
 <dd> top back center</dd>
-<dt><font SIZE="-1"><code>TBR</code></font></dt>
+<dt><code>TBR</code></dt>
 <dd> top back right</dd>
-<dt><font SIZE="-1"><code>DL</code></font></dt>
+<dt><code>DL</code></dt>
 <dd> downmix left</dd>
-<dt><font SIZE="-1"><code>DR</code></font></dt>
+<dt><code>DR</code></dt>
 <dd> downmix right</dd>
-<dt><font SIZE="-1"><code>WL</code></font></dt>
+<dt><code>WL</code></dt>
 <dd> wide left</dd>
-<dt><font SIZE="-1"><code>WR</code></font></dt>
+<dt><code>WR</code></dt>
 <dd> wide right</dd>
-<dt><font SIZE="-1"><code>SDL</code></font></dt>
+<dt><code>SDL</code></dt>
 <dd> surround direct left</dd>
-<dt><font SIZE="-1"><code>SDR</code></font></dt>
+<dt><code>SDR</code></dt>
 <dd> surround direct right</dd>
-<dt><font SIZE="-1"><code>LFE2</code></font></dt>
+<dt><code>LFE2</code></dt>
 <dd> low frequency 2</dd></dl>
 <p> Standard channel layout compositions can be specified by using the following identifiers:</p>
 <dl>
 <dt><code>mono</code></dt>
-<dd> <font SIZE="-1">FC</font></dd>
+<dd> FC</dd>
 <dt><code>stereo</code></dt>
-<dd> <font SIZE="-1">FL+FR</font></dd>
+<dd> FL+FR</dd>
 <dt><code>2.1</code></dt>
-<dd> <font SIZE="-1">FL+FR+LFE</font></dd>
+<dd> FL+FR+LFE</dd>
 <dt><code>3.0</code></dt>
-<dd> <font SIZE="-1">FL+FR+FC</font></dd>
+<dd> FL+FR+FC</dd>
 <dt><code>3.0(back)</code></dt>
-<dd> <font SIZE="-1">FL+FR+BC</font></dd>
+<dd> FL+FR+BC</dd>
 <dt><code>4.0</code></dt>
-<dd> <font SIZE="-1">FL+FR+FC+BC</font></dd>
+<dd> FL+FR+FC+BC</dd>
 <dt><code>quad</code></dt>
-<dd> <font SIZE="-1">FL+FR+BL+BR</font></dd>
+<dd> FL+FR+BL+BR</dd>
 <dt><code>quad(side)</code></dt>
-<dd> <font SIZE="-1">FL+FR+SL+SR</font></dd>
+<dd> FL+FR+SL+SR</dd>
 <dt><code>3.1</code></dt>
-<dd> <font SIZE="-1">FL+FR+FC+LFE</font></dd>
+<dd> FL+FR+FC+LFE</dd>
 <dt><code>5.0</code></dt>
-<dd> <font SIZE="-1">FL+FR+FC+BL+BR</font></dd>
+<dd> FL+FR+FC+BL+BR</dd>
 <dt><code>5.0(side)</code></dt>
-<dd> <font SIZE="-1">FL+FR+FC+SL+SR</font></dd>
+<dd> FL+FR+FC+SL+SR</dd>
 <dt><code>4.1</code></dt>
-<dd> <font SIZE="-1">FL+FR+FC+LFE+BC</font></dd>
+<dd> FL+FR+FC+LFE+BC</dd>
 <dt><code>5.1</code></dt>
-<dd> <font SIZE="-1">FL+FR+FC+LFE+BL+BR</font></dd>
+<dd> FL+FR+FC+LFE+BL+BR</dd>
 <dt><code>5.1(side)</code></dt>
-<dd> <font SIZE="-1">FL+FR+FC+LFE+SL+SR</font></dd>
+<dd> FL+FR+FC+LFE+SL+SR</dd>
 <dt><code>6.0</code></dt>
-<dd> <font SIZE="-1">FL+FR+FC+BC+SL+SR</font></dd>
+<dd> FL+FR+FC+BC+SL+SR</dd>
 <dt><code>6.0(front)</code></dt>
-<dd> <font SIZE="-1">FL+FR+FLC+FRC+SL+SR</font></dd>
+<dd> FL+FR+FLC+FRC+SL+SR</dd>
 <dt><code>hexagonal</code></dt>
-<dd> <font SIZE="-1">FL+FR+FC+BL+BR+BC</font></dd>
+<dd> FL+FR+FC+BL+BR+BC</dd>
 <dt><code>6.1</code></dt>
-<dd> <font SIZE="-1">FL+FR+FC+LFE+BC+SL+SR</font></dd>
+<dd> FL+FR+FC+LFE+BC+SL+SR</dd>
 <dt><code>6.1</code></dt>
-<dd> <font SIZE="-1">FL+FR+FC+LFE+BL+BR+BC</font></dd>
+<dd> FL+FR+FC+LFE+BL+BR+BC</dd>
 <dt><code>6.1(front)</code></dt>
-<dd> <font SIZE="-1">FL+FR+LFE+FLC+FRC+SL+SR</font></dd>
+<dd> FL+FR+LFE+FLC+FRC+SL+SR</dd>
 <dt><code>7.0</code></dt>
-<dd> <font SIZE="-1">FL+FR+FC+BL+BR+SL+SR</font></dd>
+<dd> FL+FR+FC+BL+BR+SL+SR</dd>
 <dt><code>7.0(front)</code></dt>
-<dd> <font SIZE="-1">FL+FR+FC+FLC+FRC+SL+SR</font></dd>
+<dd> FL+FR+FC+FLC+FRC+SL+SR</dd>
 <dt><code>7.1</code></dt>
-<dd> <font SIZE="-1">FL+FR+FC+LFE+BL+BR+SL+SR</font></dd>
+<dd> FL+FR+FC+LFE+BL+BR+SL+SR</dd>
 <dt><code>7.1(wide)</code></dt>
-<dd> <font SIZE="-1">FL+FR+FC+LFE+BL+BR+FLC+FRC</font></dd>
+<dd> FL+FR+FC+LFE+BL+BR+FLC+FRC</dd>
 <dt><code>7.1(wide-side)</code></dt>
-<dd> <font SIZE="-1">FL+FR+FC+LFE+FLC+FRC+SL+SR</font></dd>
+<dd> FL+FR+FC+LFE+FLC+FRC+SL+SR</dd>
 <dt><code>octagonal</code></dt>
-<dd> <font SIZE="-1">FL+FR+FC+BL+BR+BC+SL+SR</font></dd>
+<dd> FL+FR+FC+BL+BR+BC+SL+SR</dd>
 <dt><code>hexadecagonal</code></dt>
-<dd> <font SIZE="-1">FL+FR+FC+BL+BR+BC+SL+SR+WL+WR+TBL+TBR+TBC+TFC+TFL+TFR</font></dd>
+<dd> FL+FR+FC+BL+BR+BC+SL+SR+WL+WR+TBL+TBR+TBC+TFC+TFL+TFR</dd>
 <dt><code>downmix</code></dt>
-<dd> <font SIZE="-1">DL+DR</font></dd></dl>
+<dd> DL+DR</dd></dl>
 <p> A custom channel layout can be specified as a sequence of terms, separated by &#8216;+&#8217; or &#8216;|&#8217;. Each term can be:</p>
 <dl>
 <dt>&bull;</dt>
 <dd> the name of a standard channel layout (e.g. <code>mono</code>, <code>stereo</code>, <code>4.0</code>, <code>quad</code>, <code>5.0</code>, etc.)</dd>
 <dt>&bull;</dt>
-<dd> the name of a single channel (e.g. <font SIZE="-1"><code>FL</code></font>, <font SIZE="-1"><code>FR</code></font>, <font SIZE="-1"><code>FC</code></font>, <font SIZE="-1"><code>LFE</code></font>, etc.)</dd>
+<dd> the name of a single channel (e.g. <code>FL</code>, <code>FR</code>, <code>FC</code>, <code>LFE</code>, etc.)</dd>
 <dt>&bull;</dt>
 <dd> a number of channels, in decimal, followed by &#8216;c&#8217;, yielding the default channel layout for that number of channels (see the function <tt>&quot;av_get_default_channel_layout&quot;</tt>). Note that not all channel counts have a default layout.</dd>
 <dt>&bull;</dt>
@@ -695,7 +695,7 @@ description: "ffmpeg-utils – FFmpeg utilities"
 <dt><code>isinf(x)</code></dt>
 <dd> Return 1.0 if <i>x</i> is +/-INFINITY, 0.0 otherwise.</dd>
 <dt><code>isnan(x)</code></dt>
-<dd> Return 1.0 if <i>x</i> is <font SIZE="-1">NAN, 0.0</font> otherwise.</dd>
+<dd> Return 1.0 if <i>x</i> is NAN, 0.0 otherwise.</dd>
 <dt><code>ld(var)</code></dt>
 <dd> Load the value of the internal variable with number <i>var</i>, which was previously stored with st(<i>var</i>, <i>expr</i>). The function returns the loaded value.</dd>
 <dt><code>lerp(x, y, z)</code></dt>
@@ -757,18 +757,18 @@ description: "ffmpeg-utils – FFmpeg utilities"
 <dt><code>trunc(expr)</code></dt>
 <dd> Round the value of expression <i>expr</i> towards zero to the nearest integer. For example, &#8220;trunc(-1.5)&#8221; is &#8220;-1.0&#8221;.</dd>
 <dt><code>while(cond, expr)</code></dt>
-<dd> Evaluate expression <i>expr</i> while the expression <i>cond</i> is non-zero, and returns the value of the last <i>expr</i> evaluation, or <font SIZE="-1">NAN</font> if <i>cond</i> was always false.</dd></dl>
+<dd> Evaluate expression <i>expr</i> while the expression <i>cond</i> is non-zero, and returns the value of the last <i>expr</i> evaluation, or NAN if <i>cond</i> was always false.</dd></dl>
 <p> The following constants are available:</p>
 <dl>
-<dt><font SIZE="-1"><code>PI</code></font></dt>
+<dt><code>PI</code></dt>
 <dd> area of the unit disc, approximately 3.14</dd>
 <dt><code>E</code></dt>
 <dd> <code>exp</code>(1) (Euler&#8217;s number), approximately 2.718</dd>
-<dt><font SIZE="-1"><code>PHI</code></font></dt>
+<dt><code>PHI</code></dt>
 <dd> golden ratio (1+<code>sqrt</code>(5))/2, approximately 1.618</dd></dl>
 <p> Assuming that an expression is considered &#8220;true&#8221; if it has a non-zero value, note that: </p>
-<p> <tt>&quot;*&quot;</tt> works like <font SIZE="-1">AND</font> </p>
-<p> <tt>&quot;+&quot;</tt> works like <font SIZE="-1">OR</font> </p>
+<p> <tt>&quot;*&quot;</tt> works like AND </p>
+<p> <tt>&quot;+&quot;</tt> works like OR </p>
 <p> For example the construct: </p>
 <pre>
         if (A AND B) then C
@@ -778,7 +778,7 @@ description: "ffmpeg-utils – FFmpeg utilities"
         if(A*B, C)
 </pre>
 <p> In your C code, you can extend the list of unary and binary functions, and define recognized constants, so that they are available for your expressions. </p>
-<p> The evaluator also recognizes the International System unit prefixes. If &#8216;i&#8217; is appended after the prefix, binary prefixes are used, which are based on powers of 1024 instead of powers of 1000. The &#8216;B&#8217; postfix multiplies the value by 8, and can be appended after a unit prefix or used alone. This allows using for example &#8216;<font SIZE="-1">KB</font>&#8216;, &#8216;MiB&#8217;, &#8216;G&#8217; and &#8216;B&#8217; as number postfix. </p>
+<p> The evaluator also recognizes the International System unit prefixes. If &#8216;i&#8217; is appended after the prefix, binary prefixes are used, which are based on powers of 1024 instead of powers of 1000. The &#8216;B&#8217; postfix multiplies the value by 8, and can be appended after a unit prefix or used alone. This allows using for example &#8216;KB&#8216;, &#8216;MiB&#8217;, &#8216;G&#8217; and &#8216;B&#8217; as number postfix. </p>
 <p> The list of available International System prefixes follows, with indication of the corresponding powers of 10 and of 2.</p>
 <dl>
 <dt><code>y</code></dt>
@@ -826,4 +826,4 @@ description: "ffmpeg-utils – FFmpeg utilities"
 <h2>AUTHORS</h2>
 <p> The FFmpeg developers. </p>
 <p> For details about the authorship, see the Git history of the project (<a href="git://source.ffmpeg.org/ffmpeg">git://source.ffmpeg.org/ffmpeg</a>), e.g. by typing the command <code>git log</code> in the FFmpeg source directory, or browsing the online repository at &lt;<code><a rel="nofollow" href="http://source.ffmpeg.org">http://source.ffmpeg.org</a></code>&gt;. </p>
-<p> Maintainers for the specific components are listed in the file <i></i><font SIZE="-1"><i>MAINTAINERS</i></font><i></i> in the source code tree. </p>
+<p> Maintainers for the specific components are listed in the file <i></i><i>MAINTAINERS</i><i></i> in the source code tree. </p>

@@ -37,7 +37,7 @@ description: "nicotine-import-winconfig is a script to convert SoulSeek Windows 
 <p> Nicotine should be shut down before doing this. </p>
 <p> <code>nicotine-import-winconfig</code> &quot;/mnt/windows/Program Files/SoulSeek&quot;</p>
 <h2>AUTHOR</h2>
-<p> This manual page was written by Adam Cecile &lt;gandalf [at] le-vert.net&gt; for the Nicotine+ project.<br />
+<p> This manual page was written by Adam Cecile &lt;gandalf [at] le-vert.net&gt; for the Nicotine+ project.<br/>
  Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 or any later version published by the Free Software Foundation.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-nicotine/">nicotine</a>(1)</code> </p>

@@ -11,8 +11,8 @@ description: "aa_recommendhi – insert the given driver on beggining of the lis
 <p> aa_recommendhi &#8211; insert the given driver on beggining of the list of recommended drivers.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>
-<p> void aa_recommendhi<br />
- (<br />
+<p> void aa_recommendhi<br/>
+ (<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>aa_linkedlist **l,</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>const char *name</p>
 <p> ); </code></p>

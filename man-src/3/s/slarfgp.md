@@ -11,7 +11,7 @@ description: "slarfgp.f –"
 <p> slarfgp.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>slarfgp</code> (N, ALPHA, X, INCX, TAU)<br />
+<p> subroutine <code>slarfgp</code> (N, ALPHA, X, INCX, TAU)<br/>
  <i></i><code>SLARFGP</code> generates an elementary reflector (Householder matrix) with non-negatibe beta.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slarfgp (integerN, realALPHA, real, dimension( * )X, integerINCX, realTAU)</h3>

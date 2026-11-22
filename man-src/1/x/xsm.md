@@ -32,10 +32,10 @@ description: "xsm – X Session Manager"
 <h3>Default Startup Applications</h3>
 <p> The first time <i>xsm</i> is started, it will need to locate a list of applications to start up. For example, this list might include a window manager, a session management proxy, and an xterm. <i>xsm</i> will first look for the file <i>.xsmstartup</i> in the user&#8217;s home directory. If that file does not exist, it will look for the <i>system.xsm</i> file that was set up at installation time. Note that <i>xsm</i> provides a &quot;fail safe&quot; option when the user chooses a session to start up. The fail safe option simply loads the default applications described above. </p>
 <p> Each line in the startup file should contain a command to start an application. A sample startup file might look this: </p>
-<p> &lt;start of file&gt;<br />
- twm<br />
- smproxy<br />
- xterm<br />
+<p> &lt;start of file&gt;<br/>
+ twm<br/>
+ smproxy<br/>
+ xterm<br/>
  &lt;end of file&gt; </p>
 <h2>STARTING A SESSION</h2>
 <p> When <i>xsm</i> starts up, it first checks to see if the user previously saved any sessions. If no saved sessions exist, <i>xsm</i> starts up a set of default applications (as described above in the section titled <i>Default Startup Applications</i>). If at least one session exists, a session menu is presented. The <code>-session</code> option forces the specified <i>sessionName</i> session to be loaded, bypassing the session menu.</p>
@@ -98,5 +98,5 @@ description: "xsm – X Session Manager"
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-smproxy/">smproxy</a>(1), <a href="/docs/linux/man/1-rstart/">rstart</a>(1)</p>
 <h2>AUTHORS</h2>
-<p> Ralph Mor, X Consortium<br />
+<p> Ralph Mor, X Consortium<br/>
  Jordan Brown, Quarterdeck Office Systems </p>

@@ -33,7 +33,7 @@ description: "smp_phy_control – invoke PHY CONTROL SMP function"
 <p>&nbsp;<wbr>&nbsp;<wbr><code>8</code>&nbsp;<wbr>&nbsp;<wbr>: 1.5 Gbps </p>
 <p>&nbsp;<wbr>&nbsp;<wbr><code>9</code>&nbsp;<wbr>&nbsp;<wbr>: 3 Gbps </p>
 <p>&nbsp;<wbr>&nbsp;<wbr><code>10</code>&nbsp;<wbr>: 6 Gbps </p>
-<p>&nbsp;<wbr>&nbsp;<wbr><code>11</code>&nbsp;<wbr>: 12 Gbps<br />
+<p>&nbsp;<wbr>&nbsp;<wbr><code>11</code>&nbsp;<wbr>: 12 Gbps<br/>
  Default value is 0.</p>
 <dt><code>-m</code>, <code>&#8211;min</code>=<i>MI</i></dt>
 <dd>permits the programmed minimum physical link rate to be changed on the given phy. Permitted values are: </dd>
@@ -41,7 +41,7 @@ description: "smp_phy_control – invoke PHY CONTROL SMP function"
 <p>&nbsp;<wbr>&nbsp;<wbr><code>8</code>&nbsp;<wbr>&nbsp;<wbr>: 1.5 Gbps </p>
 <p>&nbsp;<wbr>&nbsp;<wbr><code>9</code>&nbsp;<wbr>&nbsp;<wbr>: 3 Gbps </p>
 <p>&nbsp;<wbr>&nbsp;<wbr><code>10</code>&nbsp;<wbr>: 6 Gbps </p>
-<p>&nbsp;<wbr>&nbsp;<wbr><code>11</code>&nbsp;<wbr>: 12 Gbps<br />
+<p>&nbsp;<wbr>&nbsp;<wbr><code>11</code>&nbsp;<wbr>: 12 Gbps<br/>
  Default value is 0.</p>
 <dt><code>-o</code>, <code>&#8211;op</code>=<i>OP</i></dt>
 <dd>specifies the operation to be performed on the given phy. The <i>OP</i> argument can be either numeric or a string. If a number is given, it is put into the &#8216;phy operation&#8217; field of the request. Allowable strings are abbreviations of which only the first two characters need to match. Each line in the following list contains a numeric value, a string and then a brief explanation: </dd>
@@ -53,7 +53,7 @@ description: "smp_phy_control – invoke PHY CONTROL SMP function"
 <p>&nbsp;<wbr>&nbsp;<wbr><code>6</code>&nbsp;<wbr>:&nbsp;<wbr><code>ca</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: clear affiliation </p>
 <p>&nbsp;<wbr>&nbsp;<wbr><code>7</code>&nbsp;<wbr>:&nbsp;<wbr><code>tspss</code>: transmit SATA port selection signal </p>
 <p>&nbsp;<wbr>&nbsp;<wbr><code>8</code>&nbsp;<wbr>:&nbsp;<wbr><code>citnl</code>: clear STP I_T nexus loss&nbsp;<wbr>(bit) </p>
-<p>&nbsp;<wbr>&nbsp;<wbr><code>9</code>&nbsp;<wbr>:&nbsp;<wbr><code>sadn</code>&nbsp;<wbr>: set attached device name<br />
+<p>&nbsp;<wbr>&nbsp;<wbr><code>9</code>&nbsp;<wbr>:&nbsp;<wbr><code>sadn</code>&nbsp;<wbr>: set attached device name<br/>
  The default value is 0 (no operation).</p>
 <dt><code>-p</code>, <code>&#8211;phy</code>=<i>ID</i></dt>
 <dd>phy identifier. <i>ID</i> is a value between 0 and 254. Default is 0.</dd>
@@ -88,7 +88,7 @@ description: "smp_phy_control – invoke PHY CONTROL SMP function"
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;dgilbert at interlog dot com&gt;.</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2006-2013 Douglas Gilbert<br />
+<p>Copyright &#169; 2006-2013 Douglas Gilbert<br/>
  This software is distributed under a FreeBSD license. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>See Also</h2>
 <p><code>smp_utils, smp_discover(smp_utils)</code> </p>

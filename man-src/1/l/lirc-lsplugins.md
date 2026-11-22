@@ -10,8 +10,8 @@ description: "lirc-lsplugins – print dynamic modules info"
 
 <p> lirc-lsplugins &#8211; print dynamic modules info</p>
 <h2>SYNOPSIS</h2>
-<p> <code>lirc-lsplugins</code> <i>[-l] [-q] [-U plugindir]</i> <i>[drivers]</i><br />
- <code>lirc-lsplugins</code> <i>-e [-q] [-U plugindir]</i><br />
+<p> <code>lirc-lsplugins</code> <i>[-l] [-q] [-U plugindir]</i> <i>[drivers]</i><br/>
+ <code>lirc-lsplugins</code> <i>-e [-q] [-U plugindir]</i><br/>
  <code>lirc-lsplugins</code> <i>-e [-q|-p|-h|-v]</i></p>
 <h2>DESCRIPTION</h2>
 <p> Tool which writes a simple list with info for each driver found. In particular, it writes info if a plugin can&#8217;t be loaded e. g., due to unresolved references. </p>
@@ -46,5 +46,5 @@ description: "lirc-lsplugins – print dynamic modules info"
 <h2>STATUS</h2>
 <p> This tool is in an early alpha stage. Both the output format and the command line syntax are subject to change.</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/3-fnmatch/">fnmatch</a>(3)<br />
+<p> <a href="/docs/linux/man/3-fnmatch/">fnmatch</a>(3)<br/>
  <a href="/docs/linux/man/8-lircd/">lircd</a>(8) </p>

@@ -10,9 +10,9 @@ description: "tar – manipulate tape archives"
 
 <p> <code>tar</code> &#8211; manipulate tape archives</p>
 <h2>SYNOPSIS</h2>
-<p> [<i>bundled-flags Ao </i>args Ac [Ao <i>file Ac </i>| Ao <i>pattern Ac </i>&#8230; ] ]<br />
- Br q Fl c [<i>options</i> ] [<i>files | directories</i> ]<br />
- Br q Fl r | Fl u &#8211;<code>f </code><i>archive-file</i> [<i>options</i> ] [<i>files | directories</i> ]<br />
+<p> [<i>bundled-flags Ao </i>args Ac [Ao <i>file Ac </i>| Ao <i>pattern Ac </i>&#8230; ] ]<br/>
+ Br q Fl c [<i>options</i> ] [<i>files | directories</i> ]<br/>
+ Br q Fl r | Fl u &#8211;<code>f </code><i>archive-file</i> [<i>options</i> ] [<i>files | directories</i> ]<br/>
  Br q Fl t | Fl x [<i>options</i> ] [<i>patterns</i> ]</p>
 <h2>DESCRIPTION</h2>
 <p> creates and manipulates streaming archive files. This implementation can extract from tar, pax, cpio, zip, jar, ar, xar, rpm, 7-zip, and ISO 9660 cdrom images and can create tar, pax, cpio, ar, zip, 7-zip, and shar archives. </p>

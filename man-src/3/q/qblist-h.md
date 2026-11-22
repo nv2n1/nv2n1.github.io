@@ -40,25 +40,25 @@ Iterate backwards over list safe against removal.
 #define qb_list_for_each_entry_from(pos, head, member)
 Iterate over list of given type from the current point.
 Functions</code></pre>
-<p> static void <code>qb_list_init</code> (struct <code>qb_list_head</code> *head)<br />
- <i>Initialize the list entry. </i><br />
- static void <code>qb_list_add</code> (struct <code>qb_list_head</code> *element, struct <code>qb_list_head</code> *head)<br />
- <i>Add this element to the list. </i><br />
- static void <code>qb_list_add_tail</code> (struct <code>qb_list_head</code> *element, struct <code>qb_list_head</code> *head)<br />
- <i>Add to the list (but at the end of the list). </i><br />
- static void <code>qb_list_del</code> (struct <code>qb_list_head</code> *_remove)<br />
- <i>Delete an entry from the list. </i><br />
- static void <code>qb_list_replace</code> (struct <code>qb_list_head</code> *old, struct <code>qb_list_head</code> *new)<br />
- <i>Replace old entry by new one. </i><br />
- static int <code>qb_list_is_last</code> (const struct <code>qb_list_head</code> *list, const struct <code>qb_list_head</code> *head)<br />
- <i>Tests whether list is the last entry in list head. </i><br />
- static int32_t <code>qb_list_empty</code> (const struct <code>qb_list_head</code> *head)<br />
- <i>A quick test to see if the list is empty (pointing to it&#8217;s self). </i><br />
- static void <code>qb_list_splice</code> (struct <code>qb_list_head</code> *list, struct <code>qb_list_head</code> *head)<br />
- <i>Join two lists. </i><br />
- static void <code>qb_list_splice_tail</code> (struct <code>qb_list_head</code> *list, struct <code>qb_list_head</code> *head)<br />
- <i>Join two lists, each list being a queue. </i><br />
- static int32_t <code>qb_list_length</code> (struct <code>qb_list_head</code> *head)<br />
+<p> static void <code>qb_list_init</code> (struct <code>qb_list_head</code> *head)<br/>
+ <i>Initialize the list entry. </i><br/>
+ static void <code>qb_list_add</code> (struct <code>qb_list_head</code> *element, struct <code>qb_list_head</code> *head)<br/>
+ <i>Add this element to the list. </i><br/>
+ static void <code>qb_list_add_tail</code> (struct <code>qb_list_head</code> *element, struct <code>qb_list_head</code> *head)<br/>
+ <i>Add to the list (but at the end of the list). </i><br/>
+ static void <code>qb_list_del</code> (struct <code>qb_list_head</code> *_remove)<br/>
+ <i>Delete an entry from the list. </i><br/>
+ static void <code>qb_list_replace</code> (struct <code>qb_list_head</code> *old, struct <code>qb_list_head</code> *new)<br/>
+ <i>Replace old entry by new one. </i><br/>
+ static int <code>qb_list_is_last</code> (const struct <code>qb_list_head</code> *list, const struct <code>qb_list_head</code> *head)<br/>
+ <i>Tests whether list is the last entry in list head. </i><br/>
+ static int32_t <code>qb_list_empty</code> (const struct <code>qb_list_head</code> *head)<br/>
+ <i>A quick test to see if the list is empty (pointing to it&#8217;s self). </i><br/>
+ static void <code>qb_list_splice</code> (struct <code>qb_list_head</code> *list, struct <code>qb_list_head</code> *head)<br/>
+ <i>Join two lists. </i><br/>
+ static void <code>qb_list_splice_tail</code> (struct <code>qb_list_head</code> *list, struct <code>qb_list_head</code> *head)<br/>
+ <i>Join two lists, each list being a queue. </i><br/>
+ static int32_t <code>qb_list_length</code> (struct <code>qb_list_head</code> *head)<br/>
  <i>Count the number of items in the list. </i></p>
 <h2>Detailed Description</h2>
 <p>This is a kernel style list implementation. </p>
@@ -75,21 +75,21 @@ Functions</code></pre>
 <p>Get the struct for this entry. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>ptr,:</i> the &amp;struct list_head pointer.<br />
- <i>type,:</i> the type of the struct this is embedded in.<br />
+<dd><i>ptr,:</i> the &amp;struct list_head pointer.<br/>
+ <i>type,:</i> the type of the struct this is embedded in.<br/>
  <i>member,:</i> the name of the list_struct within the struct.</dd></dl>
 <h3>#define qb_list_first_entry(ptr, type, member) <code>qb_list_entry</code>((ptr)-&gt;next, type, member)</h3>
 <p>Get the first element from a list. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>ptr,:</i> the &amp;struct list_head pointer.<br />
- <i>type,:</i> the type of the struct this is embedded in.<br />
+<dd><i>ptr,:</i> the &amp;struct list_head pointer.<br/>
+ <i>type,:</i> the type of the struct this is embedded in.<br/>
  <i>member,:</i> the name of the list_struct within the struct.</dd></dl>
 <h3>#define qb_list_for_each(pos, head) for (pos = (head)-&gt;next; pos != (head); pos = pos-&gt;next)</h3>
 <p>Iterate over a list. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>pos,:</i> the &amp;struct list_head to use as a loop counter.<br />
+<dd><i>pos,:</i> the &amp;struct list_head to use as a loop counter.<br/>
  <i>head,:</i> the head for your list.</dd></dl>
 <p> Referenced by qb_list_length().</p>
 <h3>#define qb_list_for_each_entry(pos, head, member)</h3>
@@ -98,8 +98,8 @@ Functions</code></pre>
 <p>Iterate over list of given type. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>pos,:</i> the type * to use as a loop counter.<br />
- <i>head,:</i> the head for your list.<br />
+<dd><i>pos,:</i> the type * to use as a loop counter.<br/>
+ <i>head,:</i> the head for your list.<br/>
  <i>member,:</i> the name of the list_struct within the struct.</dd></dl>
 <h3>#define qb_list_for_each_entry_from(pos, head, member)</h3>
 <p><code>Value:</code> </p>
@@ -107,8 +107,8 @@ Functions</code></pre>
 <p>Iterate over list of given type from the current point. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>pos,:</i> the type * to use as a loop cursor.<br />
- <i>head,:</i> the head for your list.<br />
+<dd><i>pos,:</i> the type * to use as a loop cursor.<br/>
+ <i>head,:</i> the head for your list.<br/>
  <i>member,:</i> the name of the list_struct within the struct.</dd></dl>
 <h3>#define qb_list_for_each_entry_reverse(pos, head, member)</h3>
 <p><code>Value:</code> </p>
@@ -116,8 +116,8 @@ Functions</code></pre>
 <p>Iterate backwards over list of given type. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>pos,:</i> the type to use as a loop counter.<br />
- <i>head,:</i> the head for your list.<br />
+<dd><i>pos,:</i> the type to use as a loop counter.<br/>
+ <i>head,:</i> the head for your list.<br/>
  <i>member,:</i> the name of the list_struct within the struct.</dd></dl>
 <h3>#define qb_list_for_each_entry_safe(pos, n, head, member)</h3>
 <p><code>Value:</code> </p>
@@ -125,9 +125,9 @@ Functions</code></pre>
 <p>Iterate over list of given type safe against removal of list entry. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>pos,:</i> the type * to use as a loop cursor.<br />
- <i>n,:</i> another type * to use as temporary storage<br />
- <i>head,:</i> the head for your list.<br />
+<dd><i>pos,:</i> the type * to use as a loop cursor.<br/>
+ <i>n,:</i> another type * to use as temporary storage<br/>
+ <i>head,:</i> the head for your list.<br/>
  <i>member,:</i> the name of the list_struct within the struct.</dd></dl>
 <h3>#define qb_list_for_each_entry_safe_reverse(pos, n, head, member)</h3>
 <p><code>Value:</code> </p>
@@ -135,15 +135,15 @@ Functions</code></pre>
 <p>Iterate backwards over list safe against removal. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>pos,:</i> the type * to use as a loop cursor.<br />
- <i>n,:</i> another type * to use as temporary storage<br />
- <i>head,:</i> the head for your list.<br />
+<dd><i>pos,:</i> the type * to use as a loop cursor.<br/>
+ <i>n,:</i> another type * to use as temporary storage<br/>
+ <i>head,:</i> the head for your list.<br/>
  <i>member,:</i> the name of the list_struct within the struct.</dd></dl>
 <h3>#define qb_list_for_each_reverse(pos, head) for (pos = (head)-&gt;prev; pos != (head); pos = pos-&gt;prev)</h3>
 <p>Iterate over a list backwards. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>pos,:</i> the &amp;struct list_head to use as a loop counter.<br />
+<dd><i>pos,:</i> the &amp;struct list_head to use as a loop counter.<br/>
  <i>head,:</i> the head for your list.</dd></dl>
 <h3>#define qb_list_for_each_safe(pos, n, head)</h3>
 <p><code>Value:</code> </p>
@@ -151,22 +151,22 @@ Functions</code></pre>
 <p>Iterate over a list safe against removal of list entry. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>pos,:</i> the &amp;struct list_head to use as a loop counter.<br />
- <i>n,:</i> another &amp;struct list_head to use as temporary storage<br />
+<dd><i>pos,:</i> the &amp;struct list_head to use as a loop counter.<br/>
+ <i>n,:</i> another &amp;struct list_head to use as temporary storage<br/>
  <i>head,:</i> the head for your list.</dd></dl>
 <h2>Function Documentation</h2>
 <h3>static void qb_list_add (struct <code>qb_list_head</code> *element, struct <code>qb_list_head</code> *head) [inline], [static]</h3>
 <p>Add this element to the list. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>element</i> the new element to insert.<br />
+<dd><i>element</i> the new element to insert.<br/>
  <i>head</i> pointer to the list head</dd></dl>
 <p> References qb_list_head::next, and qb_list_head::prev.</p>
 <h3>static void qb_list_add_tail (struct <code>qb_list_head</code> *element, struct <code>qb_list_head</code> *head) [inline], [static]</h3>
 <p>Add to the list (but at the end of the list). </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>element</i> pointer to the element to add<br />
+<dd><i>element</i> pointer to the element to add<br/>
  <i>head</i> pointer to the list head</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
@@ -198,7 +198,7 @@ Functions</code></pre>
 <p>Tests whether list is the last entry in list head. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>list,:</i> the entry to test<br />
+<dd><i>list,:</i> the entry to test<br/>
  <i>head,:</i> the head of the list</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -217,14 +217,14 @@ Functions</code></pre>
 <p>Replace old entry by new one. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>old,:</i> the element to be replaced<br />
+<dd><i>old,:</i> the element to be replaced<br/>
  <i>new,:</i> the new element to insert</dd></dl>
 <p> References qb_list_head::next, and qb_list_head::prev.</p>
 <h3>static void qb_list_splice (struct <code>qb_list_head</code> *list, struct <code>qb_list_head</code> *head) [inline], [static]</h3>
 <p>Join two lists. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>list</i> the new list to add.<br />
+<dd><i>list</i> the new list to add.<br/>
  <i>head</i> the place to add it in the first list.</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
@@ -234,7 +234,7 @@ Functions</code></pre>
 <p>Join two lists, each list being a queue. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>list,:</i> the new list to add.<br />
+<dd><i>list,:</i> the new list to add.<br/>
  <i>head,:</i> the place to add it in the first list.</dd></dl>
 <p> References qb_list_head::next, qb_list_head::prev, and qb_list_empty().</p>
 <h2>Author</h2>

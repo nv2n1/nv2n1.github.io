@@ -16,7 +16,7 @@ description: "catdoc – reads MS-Word file and puts its content as plain text o
 <p> <code>catdoc</code> doesn&#8217;t attempt to extract formatting information other than tables from MS-Word document, so different output modes means mainly that different characters should be escaped and different ways used to represent characters, missing from output charset. See CHARACTER SUBSTITUTION below </p>
 <p> <code>catdoc</code> uses internal <code>unicode</code>(4) representation of text, so it is able to convert texts when charset in source document doesn&#8217;t match charset on target system. See CHARACTER SETS below. </p>
 <p> If no file names supplied, <code>catdoc</code> processes its standard input unless it is terminal. It is unlikely that somebody could type Word document from keyboard, so if <code>catdoc </code> invoked without arguments and stdin is not redirected, it prints brief usage message and exits. Processing of standard input (even among other files) can be forced using dash &#8216;-&#8216; as file name. </p>
-<p> By default, <code>catdoc</code> wraps lines which are more than 72 chars long and separates paragraphs by blank lines. This behavior can be turned of by <code>-w</code> switch. In <i>wide</i> mode <code>catdoc prints each paragraph as one long line, suitable for import into</code> word processors which perform word wrapping theirselves. <br />
+<p> By default, <code>catdoc</code> wraps lines which are more than 72 chars long and separates paragraphs by blank lines. This behavior can be turned of by <code>-w</code> switch. In <i>wide</i> mode <code>catdoc prints each paragraph as one long line, suitable for import into</code> word processors which perform word wrapping theirselves. <br/>
 &nbsp;<wbr> </p>
 <h2>OPTIONS</h2>
 <dl>
@@ -42,14 +42,14 @@ description: "catdoc – reads MS-Word file and puts its content as plain text o
 <dd> <p> Specifies source charset. (one used in Word document), if Word document doesn&#8217;t contain UTF-16 text. When reading rtf documents, it is typically not necessary, because rtf documents contain ansicpg specification. But it can be set wrong by Word (I&#8217;ve seen RTF documents on Russian, where cp1252 was specified). In this case this option would take precedence over charset, specified in the document. But source_charset statement in the configuration file have less priority than charset in the document. </p>
  </dd>
 <dt><code>-t</code></dt>
-<dd> <p> - shortcut for <code>-f tex</code> <br />
+<dd> <p> - shortcut for <code>-f tex</code> <br/>
 &nbsp;<wbr>converts all printable chars, which have special meaning for&nbsp;<wbr> <code><a href="/docs/linux/man/1-LaTeX/">LaTeX</a></code>(1) into appropriate control sequences. Separates table columns by <code>&amp;.</code> </p>
  </dd>
 <dt><code>-u</code></dt>
 <dd> <p> - declares that Word document contain UNICODE (UTF-16) representation of text (as some Word-97 documents). If catdoc fails to correct Word document with default charset, try this option. </p>
  </dd>
 <dt><code>-8</code></dt>
-<dd> <p> - declares is Word document is 8 bit. Just in case that catdoc <br />
+<dd> <p> - declares is Word document is 8 bit. Just in case that catdoc <br/>
 &nbsp;<wbr>recognizes file format incorrectly. </p>
  </dd>
 <dt><code>-w</code></dt>
@@ -65,7 +65,7 @@ description: "catdoc – reads MS-Word file and puts its content as plain text o
 <dd> <p> outputs catdoc version </p>
  </dd></dl>
 <h2>CHARACTER SETS</h2>
-<p> When processing MS-Word file <code>catdoc</code> uses information about two character sets, typically different <br />
+<p> When processing MS-Word file <code>catdoc</code> uses information about two character sets, typically different <br/>
 &nbsp;<wbr>-&nbsp;<wbr>&nbsp;<wbr>input and output. They are stored in plain text files in&nbsp;<wbr> <code>catdoc</code> library directory. Character set files should contain two whitespace-separated hexadecimal numbers - 8-bit code in character set and 16-bit Unicode code. Anything from hash mark to end of line is ignored, as well as blank lines. </p>
 <p> <code>catdoc </code> distribution includes some of these character sets. Additional character set definitions, directly usable by <code>catdoc </code> can be obtained from <a href="ftp://ftp.unicode.org">ftp.unicode.org</a>. Charset files have <code>.txt</code> suffix, which shouldn&#8217;t be specified in command-line or configuration files. </p>
 <p> Note that <code>catdoc </code> is distributed with Cyrillic charsets as default. If you are not Russian, you probably don&#8217;t want it, an should reconfigure catdoc at compile time or in runtime configuration file. </p>
@@ -106,7 +106,7 @@ description: "catdoc – reads MS-Word file and puts its content as plain text o
 <dd> <p> Sets default source charset, which would be used if no <code>-s</code> option specified. Consult configuration of nearby windows workstation to find one you need. </p>
  </dd>
 <dt><code>target_charset = </code><i>charset-name</i></dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;<wbr>Sets default output charset. You probably know, which one you use. </p>
  </dd>
 <dt><code>charset_path = </code><i>directory-list</i></dt>
@@ -122,7 +122,7 @@ description: "catdoc – reads MS-Word file and puts its content as plain text o
 <dd> <p> sets character to output instead of unknown Unicode character (default &#8216;?&#8216;) Character specification can have one of two form - character enclosed in single quotes or hexadecimal code. </p>
  </dd>
 <dt><code>use_locale =</code><i>(yes|no)</i></dt>
-<dd> <p> Enables or disables automatic selection of output charset (default <code>yes</code>), <br />
+<dd> <p> Enables or disables automatic selection of output charset (default <code>yes</code>), <br/>
 &nbsp;<wbr>based on system locale settings (if enabled at compile time). If automatic detection is enabled, than output charset settings in the configuration files (but not in the command line) are ignored, and current system locale charset is used instead. There are no automatic choice of input charset, based of locale language, because most modern Word files (since Word 97) are Unicode anyway </p>
  </dd></dl>
 <h2>BUGS</h2>

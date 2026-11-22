@@ -63,6 +63,6 @@ description: "scsi_logging_level – access Linux SCSI logging level information
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;dgilbert at interlog dot com&gt;.</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; IBM Corp. 2006<br />
+<p>Copyright &#169; IBM Corp. 2006<br/>
  This software is distributed under the GPL version 2. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>
 <p> The software was obtained from an IBM package called s390-tools-1.6.2 found on that company&#8217;s &quot;developerworks&quot; site. The most recent version of that package at this time is 1.8.3 .</p>

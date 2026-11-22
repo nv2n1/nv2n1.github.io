@@ -13,7 +13,7 @@ description: "ncdump – Convert netCDF file to text form (CDL)"
 <p> <code></p>
 <dl>
 <dt>
-</dt><dd>ncdump [-chistxw] [-v </code><i>var1,&#8230;</i>] [-b <i>lang</i>] [-f <i>lang</i>] [-l <i>len</i>] [-n <i>name</i>] [-p <i>f_digits[,d_digits]</i>] [-g <i>grp1,&#8230;</i>] <i>file</i><br />
+</dt><dd>ncdump [-chistxw] [-v </code><i>var1,&#8230;</i>] [-b <i>lang</i>] [-f <i>lang</i>] [-l <i>len</i>] [-n <i>name</i>] [-p <i>f_digits[,d_digits]</i>] [-g <i>grp1,&#8230;</i>] <i>file</i><br/>
  <code></dd>
 <dt>
 </dt><dd>ncdump -k </code><i>file</i></dd></dl>

@@ -13,22 +13,22 @@ description: "glutOverlayDisplayFunc – Defines the display hook for an overlay
 <h2>Synopsis</h2>
 <p>In openglut.h Ft void Fn glutOverlayDisplayFunc void( *callback )( void )</p>
 <h2>Parameters</h2>
-<p>Bf Em<br />
-&nbsp;<wbr>callback Ef<br />
+<p>Bf Em<br/>
+&nbsp;<wbr>callback Ef<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Client hook for overlay redisplay.</p>
 <h2>Description</h2>
-<p>Bf Sy<br />
-&nbsp;<wbr>callback Ef<br />
+<p>Bf Sy<br/>
+&nbsp;<wbr>callback Ef<br/>
 &nbsp;<wbr>is invoked by OpenGLUT to refresh an overlay, if OpenGLUT thinks that this is necessary. Generally, very similar to glutDisplayFunc(), save that: </p>
-<p>&nbsp;<wbr>&#8211; The redisplay is triggered differently.<br />
-&nbsp;<wbr>&#8211; OpenGLUT sets the layer for you.<br />
+<p>&nbsp;<wbr>&#8211; The redisplay is triggered differently.<br/>
+&nbsp;<wbr>&#8211; OpenGLUT sets the layer for you.<br/>
 &nbsp;<wbr>&#8211; You do not need to have, and can deregister, this callback. </p>
-<p> This callback is bound to Bf Em<br />
-&nbsp;<wbr>both Ef<br />
-&nbsp;<wbr> the Bf Li<br />
-&nbsp;<wbr>current window Ef<br />
-&nbsp;<wbr>&nbsp;<wbr>and the Bf Li<br />
-&nbsp;<wbr>layer Ef<br />
+<p> This callback is bound to Bf Em<br/>
+&nbsp;<wbr>both Ef<br/>
+&nbsp;<wbr> the Bf Li<br/>
+&nbsp;<wbr>current window Ef<br/>
+&nbsp;<wbr>&nbsp;<wbr>and the Bf Li<br/>
+&nbsp;<wbr>layer Ef<br/>
 &nbsp;<wbr>. </p>
 <h2>Bugs</h2>
 <p>OpenGLUT does not implement layers at this time. </p>

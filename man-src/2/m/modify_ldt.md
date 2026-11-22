@@ -20,15 +20,15 @@ int modify_ldt(int func, void *ptr, unsigned long bytecount);
 <p> When <i>func</i> is 0, <code>modify_ldt</code>() reads the LDT into the memory pointed to by <i>ptr</i>. The number of bytes read is the smaller of <i>bytecount</i> and the actual size of the LDT, although the kernel may act as though the LDT is padded with additional trailing zero bytes. On success, <code>modify_ldt</code>() will return the number of bytes read. </p>
 <p> When <i>func</i> is 1 or 0x11, <code>modify_ldt</code>() modifies the LDT entry indicated by <i>ptr-&gt;entry_number</i>. <i>ptr</i> points to a <i>user_desc</i> structure and <i>bytecount</i> must equal the size of this structure. </p>
 <p> The <i>user_desc</i> structure is defined in <i>&lt;asm/ldt.h&gt;</i> as: </p>
-<p> struct user_desc {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned int&nbsp;<wbr>&nbsp;entry_number;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned int&nbsp;<wbr>&nbsp;base_addr;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned int&nbsp;<wbr>&nbsp;limit;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned int&nbsp;<wbr>&nbsp;seg_32bit:1;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned int&nbsp;<wbr>&nbsp;contents:2;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned int&nbsp;<wbr>&nbsp;read_exec_only:1;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned int&nbsp;<wbr>&nbsp;limit_in_pages:1;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned int&nbsp;<wbr>&nbsp;seg_not_present:1;<br />
+<p> struct user_desc {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned int&nbsp;<wbr>&nbsp;entry_number;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned int&nbsp;<wbr>&nbsp;base_addr;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned int&nbsp;<wbr>&nbsp;limit;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned int&nbsp;<wbr>&nbsp;seg_32bit:1;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned int&nbsp;<wbr>&nbsp;contents:2;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned int&nbsp;<wbr>&nbsp;read_exec_only:1;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned int&nbsp;<wbr>&nbsp;limit_in_pages:1;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned int&nbsp;<wbr>&nbsp;seg_not_present:1;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned int&nbsp;<wbr>&nbsp;useable:1; }; </p>
 <p> In Linux 2.4 and earlier, this structure was named <i>modify_ldt_ldt_s</i>. </p>
 <p> The <i>contents</i> field is the segment type (data, expand-down data, non-conforming code, or conforming code). The other fields match their descriptions in the CPU manual, although <code>modify_ldt</code>() cannot set the hardware-defined &quot;accessed&quot; bit described in the CPU manual. </p>

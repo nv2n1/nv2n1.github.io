@@ -16,15 +16,15 @@ description: "sc::RedundMolecularCoor –"
 <h3>Public Member Functions</h3>
 <p><code>RedundMolecularCoor</code> (<code>Ref</code>&lt; <code>Molecule</code> &gt; &amp;mol) </p>
 <p> <code>RedundMolecularCoor</code> (<code>StateIn</code> &amp;) </p>
-<p> <code>RedundMolecularCoor</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br />
- <i>The </i><code>KeyVal</code> constructor.<br />
- void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br />
- <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br />
- void <code>form_coordinates</code> (int keep_variable=0)<br />
- <i>Actually form the variable and constant internal coordinates from the simple internal coordinates. </i><br />
- void <code>guess_hessian</code> (<code>RefSymmSCMatrix</code> &amp;hessian)<br />
- <i>Form the approximate hessian. </i><br />
- <code>RefSymmSCMatrix</code> <code>inverse_hessian</code> (<code>RefSymmSCMatrix</code> &amp;)<br />
+<p> <code>RedundMolecularCoor</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br/>
+ <i>The </i><code>KeyVal</code> constructor.<br/>
+ void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br/>
+ <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br/>
+ void <code>form_coordinates</code> (int keep_variable=0)<br/>
+ <i>Actually form the variable and constant internal coordinates from the simple internal coordinates. </i><br/>
+ void <code>guess_hessian</code> (<code>RefSymmSCMatrix</code> &amp;hessian)<br/>
+ <i>Form the approximate hessian. </i><br/>
+ <code>RefSymmSCMatrix</code> <code>inverse_hessian</code> (<code>RefSymmSCMatrix</code> &amp;)<br/>
  <i>Invert the hessian. </i></p>
 <h2>Detailed Description</h2>
 <p>The <code>RedundMolecularCoor</code> class provides a redundant set of simple internal coordinates.</p>

@@ -169,10 +169,10 @@ description: "amulecmd – Console-based program to control aMule"
 <p> For example, the following strings are valid:</p>
 <dl>
 <dt>
-</dt><dd> _untranslated<code>de</code><br />
- _untranslated<code>de_DE</code><br />
- _untranslated<code>de_DE.iso88591</code><br />
- _untranslated<code>de_DE [at] euro</code><br />
+</dt><dd> _untranslated<code>de</code><br/>
+ _untranslated<code>de_DE</code><br/>
+ _untranslated<code>de_DE.iso88591</code><br/>
+ _untranslated<code>de_DE [at] euro</code><br/>
  _untranslated<code>de_DE.iso88591 [at] euro</code></dd></dl>
 <p> Though all the above strings are accepted as valid language definitions, <i>encoding</i> and <i>modifier</i> are yet unused. </p>
 <p> In addition to the format above, you can also specify full language names in English &#8211; so <code>-l german</code> is also valid and is equal to <code>-l de_DE</code>. </p>

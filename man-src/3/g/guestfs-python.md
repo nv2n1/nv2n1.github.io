@@ -17,24 +17,24 @@ description: "guestfs-python – How to use libguestfs from Python"
  g.launch ()
 </pre>
 <h2>DESCRIPTION</h2>
-<p> This manual page documents how to call libguestfs from the Python programming language. This page just documents the differences from the C <font SIZE="-1">API</font> and gives some examples. If you are not familiar with using libguestfs, you also need to read <i>guestfs</i>(3).</p>
+<p> This manual page documents how to call libguestfs from the Python programming language. This page just documents the differences from the C API and gives some examples. If you are not familiar with using libguestfs, you also need to read <i>guestfs</i>(3).</p>
 <h3>python_return_dict=True</h3>
 <p> All new code should construct the handle using: </p>
 <pre>
  g = guestfs.GuestFS (python_return_dict=True)
 </pre>
-<p> This indicates that your program wants to receive Python dicts for methods in the <font SIZE="-1">API</font> that return hashtables. </p>
+<p> This indicates that your program wants to receive Python dicts for methods in the API that return hashtables. </p>
 <p> In a future version of libguestfs, this will become the default.</p>
-<h3><font SIZE="-1">EXCEPTIONS</font></h3>
+<h3>EXCEPTIONS</h3>
 <p> Errors from libguestfs functions are mapped into <tt>&quot;RuntimeException&quot;</tt> with a single string argument which is the error message.</p>
-<h3><font SIZE="-1">MORE DOCUMENTATION</font></h3>
+<h3>MORE DOCUMENTATION</h3>
 <p> Type: </p>
 <pre>
  $ python
  &gt;&gt;&gt; import guestfs
  &gt;&gt;&gt; help (guestfs)
 </pre>
-<h3><font SIZE="-1">USING PYTHON BINDINGS IN A VIRTUALENV</font></h3>
+<h3>USING PYTHON BINDINGS IN A VIRTUALENV</h3>
 <p> These bindings are <i>not</i> available in pypi owing to a licensing problem. See <a rel="nofollow" href="https://bugzilla.redhat.com/1075594">https://bugzilla.redhat.com/1075594</a> for current status. </p>
 <p> However we do publish a Python distribution for selected stable versions of libguestfs in <a rel="nofollow" href="http://libguestfs.org/download/python.">http://libguestfs.org/download/python.</a> You can use it like this: </p>
 <pre>

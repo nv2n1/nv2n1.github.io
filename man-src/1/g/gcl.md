@@ -23,14 +23,14 @@ description: "gcl – GCL Common Lisp interpreter/compiler"
 <dt><code>-f</code></dt>
 <dd> Replace si::*command-args* by the the list starting after <code>-f</code>. Open the file following <code>-f</code>for<code>input,</code>skip<code>the</code>first<code>line,</code>and then read and eval the rest of the forms in the file. This can be used as with the shells to write small shell programs: </dd>
 </dl>
-<p> #!/usr/local/bin/gcl.exe -f<br />
+<p> #!/usr/local/bin/gcl.exe -f<br/>
  (format t &quot;hello world ~a~%&quot; (nth 1 si::*command-args*)) </p>
 <p> <code>The</code>value <i>si::*command-args*</i> will have the appropriate value. Thus if the above 2 line file is made executable and called <i>foo</i> then </p>
-<p> tutorial% foo billy<br />
+<p> tutorial% foo billy<br/>
  hello world billy </p>
 <p> <code>NOTE:</code>On<code>many</code>systems<code>(eg</code>SunOs)<code>the</code>first<code>line</code>of<code>an</code>executable script file such as: <code>#!/usr/local/bin/gcl.exe</code>-f only reads the first 32 characters! So if your pathname where the executable together with the &#8216;-f&#8217; amount to more than 32 characters the file will not be recognized. Also the executable must be the actual large binary file, [or a link to it], and not just a <i>/bin/sh</i> script. In latter case the <i>/bin/sh</i> interpreter would get invoked on the file. </p>
 <p> Alternately one could invoke the file <i>foo</i> without making it executable: </p>
-<p> tutorial% gcl -f foo &quot;from bill&quot;<br />
+<p> tutorial% gcl -f foo &quot;from bill&quot;<br/>
  hello world from bill </p>
 <dl>
 <dt><code>-batch</code></dt>

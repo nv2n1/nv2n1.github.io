@@ -11,7 +11,7 @@ description: "arm_start_application – check application is running"
 <p> arm_start_application &#8211; check application is running</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/arm4.h">arm4.h</a>&gt;</code> </p>
-<p> <code>arm_error_t<br />
+<p> <code>arm_error_t<br/>
  arm_start_application( </p>
 <p>&nbsp;<wbr>const arm_id_t&nbsp;<wbr>*</code><i>app_id</i><code>,&nbsp;<wbr> </p>
 <p>&nbsp;<wbr>const arm_char_t&nbsp;<wbr>*</code><i>app_group</i><code>,&nbsp;<wbr> </p>
@@ -28,12 +28,12 @@ description: "arm_start_application – check application is running"
 <p> The combination of <code>arm_register_application()</code> and <code>arm_start_application()</code> is equivalent to the ARM 2.0 call <code>arm_init()</code>. </p>
 <p> <i>app_group</i> is a pointer to a null-terminated string containing the identity of a group of application instances, if any. Application instances for a given software product that are started for a common runtime purpose are typically very good candidates for using the same group name. For example, identical replica instances of a product started across multiple processes or servers to address a specific transaction workload objective can be, advantageously to the ARM agent, commonly identified by the group name. The maximum length of the string is 256 (<code>ARM_PROPERTY_VALUE_MAX_CHARS</code>) characters, including the termination character. A null pointer (<code>ARM_STRING_NONE</code>) indicates that there is no group. </p>
 <p> <i>app_handle</i> is a pointer to an <code>arm_int64_t</code> into which the ARM library will store the value of the handle that will represent the application instance in all calls, up to and including the <code>arm_stop_application()</code> that indicates that the instance has completed executing. The scope of the handle is the process in which the <code>arm_start_application()</code> is executed. There are no requirements on the value it is set to, except that it must be possible to pass it on other calls, such as <code>arm_start_transaction()</code>, without the application needing to do any error checking. Whether the data is meaningful, or partially meaningful, is at the discretion of the ARM implementation. </p>
-<p> <i>app_id</i> is a pointer to a 16-byte ID returned by an <code>arm_register_application()</code> call.<br />
+<p> <i>app_id</i> is a pointer to a 16-byte ID returned by an <code>arm_register_application()</code> call.<br/>
 &nbsp;<wbr> <i>app_instance</i> is a pointer to a null-terminated string containing the identity of this instance of the application. It might contain the process ID, or a UUID in printable characters, for example. The maximum length of the string is 256 (<code>ARM_PROPERTY_VALUE_MAX_CHARS</code>) characters, including the termination character. A null pointer (<code>ARM_STRING_NONE</code>) indicates that there is no instance value. </p>
-<p> <i>buffer4</i> is a pointer to the user data buffer, if any. If the pointer is null (<code>ARM_BUF4_NONE</code>), there is no buffer. The sub-buffer formats that might be used are <code>arm_subbuffer_app_context_t</code> and <code>arm_subbuffer_system_address_t</code>.<br />
-&nbsp;<wbr> If no system address sub-buffer is provided on <code>arm_start_application()</code>, all transactions reported by this application instance execute in the current process.<br />
-&nbsp;<wbr> If a system address sub-buffer is provided on <code>arm_start_application()</code>, all transactions execute in a different process.<br />
-&nbsp;<wbr> If a system address sub-buffer is provided in which the system address length is zero, or the system address pointer is null, the system is the &quot;local&quot; system, as determined by the ARM implementation.<br />
+<p> <i>buffer4</i> is a pointer to the user data buffer, if any. If the pointer is null (<code>ARM_BUF4_NONE</code>), there is no buffer. The sub-buffer formats that might be used are <code>arm_subbuffer_app_context_t</code> and <code>arm_subbuffer_system_address_t</code>.<br/>
+&nbsp;<wbr> If no system address sub-buffer is provided on <code>arm_start_application()</code>, all transactions reported by this application instance execute in the current process.<br/>
+&nbsp;<wbr> If a system address sub-buffer is provided on <code>arm_start_application()</code>, all transactions execute in a different process.<br/>
+&nbsp;<wbr> If a system address sub-buffer is provided in which the system address length is zero, or the system address pointer is null, the system is the &quot;local&quot; system, as determined by the ARM implementation.<br/>
 &nbsp;<wbr> If a system address sub-buffer is provided in which there is a non-null system address and length, the system may be the local system or a remote system. Interpretation of what is local versus remote is at the discretion of the ARM implementation. </p>
 <p> <i>flags</i> contains 32-bit flags. No values are currently defined. The field should be zero (<code>ARM_FLAG_NONE</code>). </p>
 <h2>RETURN VALUE</h2>

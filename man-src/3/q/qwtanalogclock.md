@@ -15,19 +15,19 @@ description: "QwtAnalogClock –"
 <h3>Public Types</h3>
 <p>enum <code>Hand</code> { <code>SecondHand</code>, <code>MinuteHand</code>, <code>HourHand</code>, <code>NHands</code> } </p>
 <h3>Public Slots</h3>
-<p>void <code>setCurrentTime</code> ()<br />
- <i>Set the current time. </i><br />
+<p>void <code>setCurrentTime</code> ()<br/>
+ <i>Set the current time. </i><br/>
  void <code>setTime</code> (const QTime &amp;) </p>
 <h3>Public Member Functions</h3>
 <p><code>QwtAnalogClock</code> (QWidget *parent=NULL) </p>
-<p> virtual <code>~QwtAnalogClock</code> ()<br />
- <i>Destructor. </i><br />
+<p> virtual <code>~QwtAnalogClock</code> ()<br/>
+ <i>Destructor. </i><br/>
  void <code>setHand</code> (<code>Hand</code>, <code>QwtDialNeedle</code> *) </p>
 <p> const <code>QwtDialNeedle</code> * <code>hand</code> (<code>Hand</code>) const </p>
 <p> <code>QwtDialNeedle</code> * <code>hand</code> (<code>Hand</code>) </p>
 <h3>Protected Member Functions</h3>
-<p>virtual void <code>drawNeedle</code> (QPainter *, const QPointF &amp;, double radius, double direction, QPalette::ColorGroup) const<br />
- <i>Draw the needle. </i><br />
+<p>virtual void <code>drawNeedle</code> (QPainter *, const QPointF &amp;, double radius, double direction, QPalette::ColorGroup) const<br/>
+ <i>Draw the needle. </i><br/>
  virtual void <code>drawHand</code> (QPainter *, <code>Hand</code>, const QPointF &amp;, double radius, double direction, QPalette::ColorGroup) const </p>
 <h3>Additional Inherited Members</h3>
 <h2>Detailed Description</h2>
@@ -76,20 +76,20 @@ timer-&gt;start(1000);</pre>
 <p>Draw a clock hand </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>hd</i> Specify the type of hand<br />
- <i>center</i> Center of the clock<br />
- <i>radius</i> Maximum length for the hands<br />
- <i>direction</i> Direction of the hand in degrees, counter clockwise<br />
+<dd><i>painter</i> Painter<br/>
+ <i>hd</i> Specify the type of hand<br/>
+ <i>center</i> Center of the clock<br/>
+ <i>radius</i> Maximum length for the hands<br/>
+ <i>direction</i> Direction of the hand in degrees, counter clockwise<br/>
  <i>cg</i> ColorGroup</dd></dl>
 <h3>void QwtAnalogClock::drawNeedle (QPainter *painter, const QPointF &amp;center, doubleradius, doubledir, QPalette::ColorGroupcolorGroup) const [protected], [virtual]</h3>
 <p>Draw the needle. A clock has no single needle but three hands instead. <code>drawNeedle()</code> translates <code>value()</code> into directions for the hands and calls <code>drawHand()</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>center</i> Center of the clock<br />
- <i>radius</i> Maximum length for the hands<br />
- <i>dir</i> Dummy, not used.<br />
+<dd><i>painter</i> Painter<br/>
+ <i>center</i> Center of the clock<br/>
+ <i>radius</i> Maximum length for the hands<br/>
+ <i>dir</i> Dummy, not used.<br/>
  <i>colorGroup</i> ColorGroup</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -119,7 +119,7 @@ timer-&gt;start(1000);</pre>
 <p>Set a clock hand </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>hand</i> Specifies the type of hand<br />
+<dd><i>hand</i> Specifies the type of hand<br/>
  <i>needle</i> Hand</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>

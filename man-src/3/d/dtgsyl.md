@@ -11,7 +11,7 @@ description: "dtgsyl.f –"
 <p> dtgsyl.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dtgsyl</code> (TRANS, IJOB, M, N, A, LDA, B, LDB, C, LDC, D, LDD, E, LDE, F, LDF, SCALE, DIF, WORK, LWORK, IWORK, INFO)<br />
+<p> subroutine <code>dtgsyl</code> (TRANS, IJOB, M, N, A, LDA, B, LDB, C, LDC, D, LDD, E, LDE, F, LDF, SCALE, DIF, WORK, LWORK, IWORK, INFO)<br/>
  <i></i><code>DTGSYL</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dtgsyl (characterTRANS, integerIJOB, integerM, integerN, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( ldb, * )B, integerLDB, double precision, dimension( ldc, * )C, integerLDC, double precision, dimension( ldd, * )D, integerLDD, double precision, dimension( lde, * )E, integerLDE, double precision, dimension( ldf, * )F, integerLDF, double precisionSCALE, double precisionDIF, double precision, dimension( * )WORK, integerLWORK, integer, dimension( * )IWORK, integerINFO)</h3>
@@ -61,7 +61,7 @@ DTGSYL solves the generalized Sylvester equation : A *R - L *B = scale * C(1)
           = 'T', solve the 'transposed' system (3).
 </pre>
 <p> <i>IJOB</i> </p>
-<p>IJOB is INTEGER<br />
+<p>IJOB is INTEGER<br/>
     Specifies what kind of functionality to be performed.= 0 : solve(1) only.= 1 : The functionality of 0 and 3. = 2 : The functionality of 0 and 4. = 3 : Only an estimate of Dif[(A, D), (B, E)] is computed.(look ahead strategy IJOB = 1 is used).= 4 : Only an estimate of Dif[(A, D), (B, E)] is computed.(DGECON on sub &#8211; systems is used).Not referenced if TRANS = &#8216;T&#8217;.</p>
 <p> <i>M</i> </p>
 <pre>

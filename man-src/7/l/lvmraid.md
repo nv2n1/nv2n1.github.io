@@ -9,7 +9,7 @@ description: "lvmraid — LVM RAID"
 
 <p>lvmraid &#8212; LVM RAID</p>
 <h2>Description</h2>
-<p><code><a href="/docs/linux/man/8-lvm/">lvm</a></code>(8) RAID is a way to create a Logical Volume (LV) that uses multiple physical devices to improve performance or tolerate device failures. In LVM, the physical devices are Physical Volumes (PVs) in a single Volume Group (VG). How LV data blocks are placed onto PVs is determined by the RAID level. RAID levels are commonly referred to as &#8216;raid&#8217; followed by a number, e.g. raid1, raid5 or raid6. Selecting a RAID level involves making tradeoffs among: physical device requirements, fault tolerance, and performance. A description of the RAID levels can be found at<br />
+<p><code><a href="/docs/linux/man/8-lvm/">lvm</a></code>(8) RAID is a way to create a Logical Volume (LV) that uses multiple physical devices to improve performance or tolerate device failures. In LVM, the physical devices are Physical Volumes (PVs) in a single Volume Group (VG). How LV data blocks are placed onto PVs is determined by the RAID level. RAID levels are commonly referred to as &#8216;raid&#8217; followed by a number, e.g. raid1, raid5 or raid6. Selecting a RAID level involves making tradeoffs among: physical device requirements, fault tolerance, and performance. A description of the RAID levels can be found at<br/>
  <a rel="nofollow" href="http://www.snia.org">www.snia.org</a>/sites/default/files/SNIA_DDF_Technical_Position_v2.0.pdf LVM RAID uses both Device Mapper (DM) and Multiple Device (MD) drivers from the Linux kernel. DM is used to create and manage visible LVM devices, and MD is used to place data on physical devices. LVM creates hidden LVs (dm devices) layered between the visible LV and physical devices. LVs in the middle layers are called sub LVs. For LVM raid, a sub LV pair to store data and metadata (raid superblock and write intent bitmap) is created per raid image/leg (see lvs command examples below). </p>
 <h2>Create a RAID LV</h2>
 <p>To create a RAID LV, use lvcreate and specify an LV type. The LV type corresponds to a RAID level. The basic RAID levels that can be used are: <code>raid0, raid1, raid4, raid5, raid6, raid10.</code> </p>
@@ -68,8 +68,8 @@ description: "lvmraid — LVM RAID"
 <p>raid10 is a combination of raid1 and raid0, striping data across mirrored devices. LV data remains available if one or more devices remains in each mirror set. The minimum number of devices required is 4. </p>
 <p> <code>lvcreate &#8211;type raid10</code></p>
 <dl>
-<dd>[<code>&#8211;mirrors</code> <i>NumberMirrors</i>]<br />
- [<code>&#8211;stripes</code> <i>NumberStripes</i> <code>&#8211;stripesize</code> <i>Size</i>]<br />
+<dd>[<code>&#8211;mirrors</code> <i>NumberMirrors</i>]<br/>
+ [<code>&#8211;stripes</code> <i>NumberStripes</i> <code>&#8211;stripesize</code> <i>Size</i>]<br/>
  <i>VG</i> [<i>PVs</i>]</dd></dl>
 <dl>
 <dt> <code>&#8211;mirrors</code></dt>
@@ -136,14 +136,14 @@ description: "lvmraid — LVM RAID"
 <p> SubLVs are an internal implementation detail of LVM. The way they are used, constructed and named may change. </p>
 <p> The following examples show the SubLV arrangement for each of the basic RAID LV types, using the fewest number of devices allowed for each.</p>
 <h3>Examples</h3>
-<p><code>raid0</code><br />
+<p><code>raid0</code><br/>
  Each rimage SubLV holds a portion of LV data. No parity is used. No RAID metadata is used. </p>
 <pre># lvcreate --type raid0 --stripes 2 --name lvr0 ...
 # lvs -a -o name,segtype,devices
  lvr0 raid0 lvr0_rimage_0(0),lvr0_rimage_1(0)
  [lvr0_rimage_0] linear /dev/sda(...)
  [lvr0_rimage_1] linear /dev/sdb(...)</pre>
-<p><code>raid1</code><br />
+<p><code>raid1</code><br/>
  Each rimage SubLV holds a complete copy of LV data. No parity is used. Each rmeta SubLV holds RAID metadata. </p>
 <pre># lvcreate --type raid1 --mirrors 1 --name lvr1 ...
 # lvs -a -o name,segtype,devices
@@ -152,7 +152,7 @@ description: "lvmraid — LVM RAID"
  [lvr1_rimage_1] linear /dev/sdb(...)
  [lvr1_rmeta_0] linear /dev/sda(...)
  [lvr1_rmeta_1] linear /dev/sdb(...)</pre>
-<p><code>raid4</code><br />
+<p><code>raid4</code><br/>
  At least three rimage SubLVs each hold a portion of LV data and one rimage SubLV holds parity. Each rmeta SubLV holds RAID metadata. </p>
 <pre># lvcreate --type raid4 --stripes 2 --name lvr4 ...
 # lvs -a -o name,segtype,devices
@@ -165,7 +165,7 @@ description: "lvmraid — LVM RAID"
  [lvr4_rmeta_0] linear /dev/sda(...)
  [lvr4_rmeta_1] linear /dev/sdb(...)
  [lvr4_rmeta_2] linear /dev/sdc(...)</pre>
-<p><code>raid5</code><br />
+<p><code>raid5</code><br/>
  At least three rimage SubLVs each typcially hold a portion of LV data and parity (see section on raid5) Each rmeta SubLV holds RAID metadata. </p>
 <pre># lvcreate --type raid5 --stripes 2 --name lvr5 ...
 # lvs -a -o name,segtype,devices
@@ -178,7 +178,7 @@ description: "lvmraid — LVM RAID"
  [lvr5_rmeta_0] linear /dev/sda(...)
  [lvr5_rmeta_1] linear /dev/sdb(...)
  [lvr5_rmeta_2] linear /dev/sdc(...)</pre>
-<p><code>raid6</code><br />
+<p><code>raid6</code><br/>
  At least five rimage SubLVs each typically hold a portion of LV data and parity. (see section on raid6) Each rmeta SubLV holds RAID metadata. </p>
 <pre># lvcreate --type raid6 --stripes 3 --name lvr6
 # lvs -a -o name,segtype,devices
@@ -200,7 +200,7 @@ description: "lvmraid — LVM RAID"
  [lvr6_rmeta_3] linear /dev/sdd(...)
  [lvr6_rmeta_4] linear /dev/sde(...)
  [lvr6_rmeta_5] linear /dev/sdf(...)</pre>
-<p><code>raid10</code><br />
+<p><code>raid10</code><br/>
  At least four rimage SubLVs each hold a portion of LV data. No parity is used. Each rmeta SubLV holds RAID metadata. </p>
 <pre># lvcreate --type raid10 --stripes 2 --mirrors 1 --name lvr10
 # lvs -a -o name,segtype,devices
@@ -232,11 +232,11 @@ description: "lvmraid — LVM RAID"
 </dl>
 <p> If a RAID LV is missing devices, or has other device-related problems, lvs reports this in the health_status (and attr) fields: </p>
 <p> <code>lvs -o name,lv_health_status</code> </p>
-<p> <code>partial</code><br />
+<p> <code>partial</code><br/>
  Devices are missing from the LV. This is also indicated by the letter &quot;p&quot; (partial) in the 9th position of the lvs attr field. </p>
-<p> <code>refresh needed</code><br />
+<p> <code>refresh needed</code><br/>
  A device was temporarily missing but has returned. The LV needs to be refreshed to use the device again (which will usually require partial synchronization). This is also indicated by the letter &quot;r&quot; (refresh needed) in the 9th position of the lvs attr field. See <code>Refreshing an LV</code>. This could also indicate a problem with the device, in which case it should be be replaced, see <code>Replacing Devices</code>. </p>
-<p> <code>mismatches exist</code><br />
+<p> <code>mismatches exist</code><br/>
  See <code>Scrubbing</code>. </p>
 <p> Most commands will also print a warning if a device is missing, e.g. </p>
 <pre>WARNING: Device for PV uItL3Z-wBME-DQy0-... not found or rejected ...</pre>
@@ -244,13 +244,13 @@ description: "lvmraid — LVM RAID"
 <h3>Activating an LV with missing devices</h3>
 <p>A RAID LV that is missing devices may be activated or not, depending on the &quot;activation mode&quot; used in lvchange: </p>
 <p> <code>lvchange -ay &#8211;activationmode</code> <code>complete</code>|<code>degraded</code>|<code>partial</code> <i>LV</i> </p>
-<p> <code>complete</code><br />
+<p> <code>complete</code><br/>
  The LV is only activated if all devices are present. </p>
-<p> <code>degraded</code><br />
+<p> <code>degraded</code><br/>
  The LV is activated with missing devices if the RAID level can tolerate the number of missing devices without LV data loss. </p>
-<p> <code>partial</code><br />
+<p> <code>partial</code><br/>
  The LV is always activated, even if portions of the LV data are missing because of the missing device(s). This should only be used to perform extreme recovery or repair operations. </p>
-<p> <code><a href="/docs/linux/man/5-lvm-conf/">lvm.conf</a></code>(5) <code>activation/activation_mode</code><br />
+<p> <code><a href="/docs/linux/man/5-lvm-conf/">lvm.conf</a></code>(5) <code>activation/activation_mode</code><br/>
  controls the activation mode when not specified by the command. </p>
 <p> The default value is printed by: </p>
 <pre>lvmconfig --type default activation/activation_mode</pre>
@@ -274,11 +274,11 @@ description: "lvmraid — LVM RAID"
 <p>If a device in a RAID LV fails, device-mapper in the kernel notifies the <code><a href="/docs/linux/man/8-dmeventd/">dmeventd</a></code>(8) monitoring process (see <code>Monitoring</code>). dmeventd can be configured to automatically respond using: </p>
 <p> <code><a href="/docs/linux/man/5-lvm-conf/">lvm.conf</a></code>(5) <code>activation/raid_fault_policy</code> </p>
 <p> Possible settings are: </p>
-<p> <code>warn</code><br />
+<p> <code>warn</code><br/>
  A warning is added to the system log indicating that a device has failed in the RAID LV. It is left to the user to repair the LV, e.g. replace failed devices. </p>
-<p> <code>allocate</code><br />
+<p> <code>allocate</code><br/>
  dmeventd automatically attempts to repair the LV using spare devices in the VG. Note that even a transient failure is treated as a permanent failure under this setting. A new device is allocated and full synchronization is started. </p>
-<p> The specific command run by dmeventd to warn or repair is:<br />
+<p> The specific command run by dmeventd to warn or repair is:<br/>
  <code>lvconvert &#8211;repair &#8211;use-policies</code> <i>LV</i></p>
 <h3>Corrupted Data</h3>
 <p>Data on a device can be corrupted due to hardware errors without the device ever being disconnected or there being any fault in the software. This should be rare, and can be detected (see <code>Scrubbing</code>).</p>
@@ -353,38 +353,38 @@ description: "lvmraid — LVM RAID"
 <h3>Indirect conversions</h3>
 <p>Converting from one raid level to another may require multiple steps, converting first to intermediate raid levels. </p>
 <p> <code>linear to raid6</code> </p>
-<p> To convert an LV from linear to raid6:<br />
- 1. convert to raid1 with two images<br />
- 2. convert to raid5 (internally raid5_ls) with two images<br />
- 3. convert to raid5 with three or more stripes (reshape)<br />
- 4. convert to raid6 (internally raid6_ls_6)<br />
+<p> To convert an LV from linear to raid6:<br/>
+ 1. convert to raid1 with two images<br/>
+ 2. convert to raid5 (internally raid5_ls) with two images<br/>
+ 3. convert to raid5 with three or more stripes (reshape)<br/>
+ 4. convert to raid6 (internally raid6_ls_6)<br/>
  5. convert to raid6 (internally raid6_zr, reshape) </p>
-<p> The commands to perform the steps above are:<br />
- 1. lvconvert &#8211;type raid1 &#8211;mirrors 1 LV<br />
- 2. lvconvert &#8211;type raid5 LV<br />
- 3. lvconvert &#8211;stripes 3 LV<br />
- 4. lvconvert &#8211;type raid6 LV<br />
+<p> The commands to perform the steps above are:<br/>
+ 1. lvconvert &#8211;type raid1 &#8211;mirrors 1 LV<br/>
+ 2. lvconvert &#8211;type raid5 LV<br/>
+ 3. lvconvert &#8211;stripes 3 LV<br/>
+ 4. lvconvert &#8211;type raid6 LV<br/>
  5. lvconvert &#8211;type raid6 LV </p>
 <p> The final conversion from raid6_ls_6 to raid6_zr is done to avoid the potential write/recovery performance reduction in raid6_ls_6 because of the dedicated parity device. raid6_zr rotates data and parity blocks to avoid this. </p>
 <p> <code>linear to striped</code> </p>
-<p> To convert an LV from linear to striped:<br />
- 1. convert to raid1 with two images<br />
- 2. convert to raid5_n<br />
- 3. convert to raid5_n with five 128k stripes (reshape)<br />
+<p> To convert an LV from linear to striped:<br/>
+ 1. convert to raid1 with two images<br/>
+ 2. convert to raid5_n<br/>
+ 3. convert to raid5_n with five 128k stripes (reshape)<br/>
  4. convert raid5_n to striped </p>
-<p> The commands to perform the steps above are:<br />
- 1. lvconvert &#8211;type raid1 &#8211;mirrors 1 LV<br />
- 2. lvconvert &#8211;type raid5_n LV<br />
- 3. lvconvert &#8211;stripes 5 &#8211;stripesize 128k LV<br />
+<p> The commands to perform the steps above are:<br/>
+ 1. lvconvert &#8211;type raid1 &#8211;mirrors 1 LV<br/>
+ 2. lvconvert &#8211;type raid5_n LV<br/>
+ 3. lvconvert &#8211;stripes 5 &#8211;stripesize 128k LV<br/>
  4. lvconvert &#8211;type striped LV </p>
 <p> The raid5_n type in step 2 is used because it has dedicated parity SubLVs at the end, and can be converted to striped directly. The stripe size is increased in step 3 to add extra space for the conversion process. This step grows the LV size by a factor of five. After conversion, this extra space can be reduced (or used to grow the file system using the LV). </p>
 <p> Reversing these steps will convert a striped LV to linear. </p>
 <p> <code>raid6 to striped</code> </p>
-<p> To convert an LV from raid6_nr to striped:<br />
- 1. convert to raid6_n_6<br />
+<p> To convert an LV from raid6_nr to striped:<br/>
+ 1. convert to raid6_n_6<br/>
  2. convert to striped </p>
-<p> The commands to perform the steps above are:<br />
- 1. lvconvert &#8211;type raid6_n_6 LV<br />
+<p> The commands to perform the steps above are:<br/>
+ 1. lvconvert &#8211;type raid6_n_6 LV<br/>
  2. lvconvert &#8211;type striped LV</p>
 <h3>Examples</h3>
 <p>Converting an LV from <code>linear</code> to <code>raid1</code>. </p>
@@ -807,62 +807,62 @@ Are you sure you want to convert raid6_nr LV vg/lv? [y/n]: y
 <p> &quot;lvconvert &#8211;stripes 1 vg/lv&quot; for converting to 1 stripe will inform upfront about the reduced size to allow for resizing the content or growing the RaidLV before actually converting to 1 stripe. The <code>&#8211;force</code> option is needed to allow stripe removing conversions to prevent data loss. </p>
 <p> Of course any interim step can be the intended last one (e.g. striped-&gt; raid1).</p>
 <h2>RAID5 Variants</h2>
-<p>raid5_ls<br />
- &bull; RAID5 left symmetric<br />
+<p>raid5_ls<br/>
+ &bull; RAID5 left symmetric<br/>
  &bull; Rotating parity N with data restart </p>
-<p> raid5_la<br />
- &bull; RAID5 left symmetric<br />
+<p> raid5_la<br/>
+ &bull; RAID5 left symmetric<br/>
  &bull; Rotating parity N with data continuation </p>
-<p> raid5_rs<br />
- &bull; RAID5 right symmetric<br />
+<p> raid5_rs<br/>
+ &bull; RAID5 right symmetric<br/>
  &bull; Rotating parity 0 with data restart </p>
-<p> raid5_ra<br />
- &bull; RAID5 right asymmetric<br />
+<p> raid5_ra<br/>
+ &bull; RAID5 right asymmetric<br/>
  &bull; Rotating parity 0 with data continuation </p>
-<p> raid5_n<br />
- &bull; RAID5 parity n<br />
- &bull; Dedicated parity device n used for striped/raid0 conversions<br />
+<p> raid5_n<br/>
+ &bull; RAID5 parity n<br/>
+ &bull; Dedicated parity device n used for striped/raid0 conversions<br/>
  &bull; Used for RAID Takeover</p>
 <h2>RAID6 Variants</h2>
-<p>raid6<br />
- &bull; RAID6 zero restart (aka left symmetric)<br />
- &bull; Rotating parity 0 with data restart<br />
+<p>raid6<br/>
+ &bull; RAID6 zero restart (aka left symmetric)<br/>
+ &bull; Rotating parity 0 with data restart<br/>
  &bull; Same as raid6_zr </p>
-<p> raid6_zr<br />
- &bull; RAID6 zero restart (aka left symmetric)<br />
+<p> raid6_zr<br/>
+ &bull; RAID6 zero restart (aka left symmetric)<br/>
  &bull; Rotating parity 0 with data restart </p>
-<p> raid6_nr<br />
- &bull; RAID6 N restart (aka right symmetric)<br />
+<p> raid6_nr<br/>
+ &bull; RAID6 N restart (aka right symmetric)<br/>
  &bull; Rotating parity N with data restart </p>
-<p> raid6_nc<br />
- &bull; RAID6 N continue<br />
+<p> raid6_nc<br/>
+ &bull; RAID6 N continue<br/>
  &bull; Rotating parity N with data continuation </p>
-<p> raid6_n_6<br />
- &bull; RAID6 last parity devices<br />
+<p> raid6_n_6<br/>
+ &bull; RAID6 last parity devices<br/>
  &bull; Fixed dedicated last devices (P-Syndrome N-1 and Q-Syndrome N)</p>
 <dl>
 <dd>with striped data used for striped/raid0 conversions</dd></dl>
 <p> &bull; Used for RAID Takeover </p>
-<p> raid6_{ls,rs,la,ra}_6<br />
- &bull; RAID6 last parity device<br />
+<p> raid6_{ls,rs,la,ra}_6<br/>
+ &bull; RAID6 last parity device<br/>
  &bull; Dedicated last parity device used for conversions from/to</p>
 <dl>
 <dd>raid5_{ls,rs,la,ra}</dd></dl>
-<p> raid6_ls_6<br />
- &bull; RAID6 N continue<br />
- &bull; Same as raid5_ls for N-1 devices with fixed Q-Syndrome N<br />
+<p> raid6_ls_6<br/>
+ &bull; RAID6 N continue<br/>
+ &bull; Same as raid5_ls for N-1 devices with fixed Q-Syndrome N<br/>
  &bull; Used for RAID Takeover </p>
-<p> raid6_la_6<br />
- &bull; RAID6 N continue<br />
- &bull; Same as raid5_la for N-1 devices with fixed Q-Syndrome N<br />
+<p> raid6_la_6<br/>
+ &bull; RAID6 N continue<br/>
+ &bull; Same as raid5_la for N-1 devices with fixed Q-Syndrome N<br/>
  &bull; Used forRAID Takeover </p>
-<p> raid6_rs_6<br />
- &bull; RAID6 N continue<br />
- &bull; Same as raid5_rs for N-1 devices with fixed Q-Syndrome N<br />
+<p> raid6_rs_6<br/>
+ &bull; RAID6 N continue<br/>
+ &bull; Same as raid5_rs for N-1 devices with fixed Q-Syndrome N<br/>
  &bull; Used for RAID Takeover </p>
-<p> raid6_ra_6<br />
- &bull; RAID6 N continue<br />
- &bull; ame as raid5_ra for N-1 devices with fixed Q-Syndrome N<br />
+<p> raid6_ra_6<br/>
+ &bull; RAID6 N continue<br/>
+ &bull; ame as raid5_ra for N-1 devices with fixed Q-Syndrome N<br/>
  &bull; Used for RAID Takeover</p>
 <h2>History</h2>
 <p>The 2.6.38-rc1 version of the Linux kernel introduced a device-mapper target to interface with the software RAID (MD) personalities. This provided device-mapper with RAID 4/5/6 capabilities and a larger development community. Later, support for RAID1, RAID10, and RAID1E (RAID 10 variants) were added. Support for these new kernel RAID targets was added to LVM version 2.02.87. The capabilities of the LVM <code>raid1</code> type have surpassed the old <code>mirror</code> type. raid1 is now recommended instead of mirror. raid1 became the default for mirroring in LVM version 2.02.100.</p>

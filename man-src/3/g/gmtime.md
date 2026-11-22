@@ -26,21 +26,21 @@ time_t mktime(struct tm *tm);
 <p> <code>asctime_r</code>(), <code>ctime_r</code>(), <code>gmtime_r</code>(), <code>localtime_r</code>():</p>
 <dl>
 <dt>
-</dt><dd> _POSIX_C_SOURCE<br />
+</dt><dd> _POSIX_C_SOURCE<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code>ctime</code>(), <code>gmtime</code>(), and <code>localtime</code>() functions all take an argument of data type <i>time_t</i>, which represents calendar time. When interpreted as an absolute time value, it represents the number of seconds elapsed since the Epoch, 1970-01-01 00:00:00 +0000 (UTC). </p>
 <p> The <code>asctime</code>() and <code>mktime</code>() functions both take an argument representing broken-down time, which is a representation separated into year, month, day, and so on. </p>
 <p> Broken-down time is stored in the structure <i>tm</i>, which is defined in <i>&lt;time.h&gt;</i> as follows: </p>
-<p> struct tm {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int tm_sec;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Seconds&nbsp;(0-60)&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int tm_min;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Minutes&nbsp;(0-59)&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int tm_hour;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Hours&nbsp;(0-23)&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int tm_mday;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Day of the month&nbsp;(1-31)&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int tm_mon;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Month&nbsp;(0-11)&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int tm_year;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Year &#8211; 1900&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int tm_wday;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Day of the week&nbsp;(0-6, Sunday&nbsp;=&nbsp;0)&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int tm_yday;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Day in the year&nbsp;(0-365, 1 Jan&nbsp;=&nbsp;0)&nbsp;*/<br />
+<p> struct tm {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int tm_sec;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Seconds&nbsp;(0-60)&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int tm_min;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Minutes&nbsp;(0-59)&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int tm_hour;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Hours&nbsp;(0-23)&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int tm_mday;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Day of the month&nbsp;(1-31)&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int tm_mon;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Month&nbsp;(0-11)&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int tm_year;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Year &#8211; 1900&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int tm_wday;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Day of the week&nbsp;(0-6, Sunday&nbsp;=&nbsp;0)&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int tm_yday;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Day in the year&nbsp;(0-365, 1 Jan&nbsp;=&nbsp;0)&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int tm_isdst;&nbsp;<wbr>&nbsp;/*&nbsp;Daylight saving time&nbsp;*/ }; </p>
 <p> The members of the <i>tm</i> structure are:</p>
 <dl>
@@ -107,7 +107,7 @@ time_t mktime(struct tm *tm);
 <tr VALIGN=top>
 <td> <code>ctime</code>() </td>
 <td>Thread safety</td>
-<td> MT-Unsafe race:tmbuf<br />
+<td> MT-Unsafe race:tmbuf<br/>
  race:asctime env locale
 </td>
 </tr>

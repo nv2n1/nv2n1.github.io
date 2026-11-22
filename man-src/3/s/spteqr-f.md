@@ -10,7 +10,7 @@ description: "spteqr.f –"
 <p>spteqr.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>spteqr</code> (COMPZ, N, D, E, Z, LDZ, WORK, INFO)<br />
+<p> subroutine <code>spteqr</code> (COMPZ, N, D, E, Z, LDZ, WORK, INFO)<br/>
  <i></i><code>SPTEQR</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine spteqr (characterCOMPZ, integerN, real, dimension( * )D, real, dimension( * )E, real, dimension( ldz, * )Z, integerLDZ, real, dimension( * )WORK, integerINFO)</h3>

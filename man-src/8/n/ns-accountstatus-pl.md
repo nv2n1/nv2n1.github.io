@@ -9,7 +9,7 @@ description: "ns-accountstatus.pl – Directory Server perl script for checking 
 
 <p>ns-accountstatus.pl &#8211; Directory Server perl script for checking the status of entries.</p>
 <h2>Synopsis</h2>
-<p>ns-accountstatus.pl [-Z serverID] [-D rootdn] { -w password | -w &#8211; | -j filename } [-p port] [-h host] [-P protocol] {-I DN |<br />
+<p>ns-accountstatus.pl [-Z serverID] [-D rootdn] { -w password | -w &#8211; | -j filename } [-p port] [-h host] [-P protocol] {-I DN |<br/>
 &nbsp;<wbr>-b basedn -f filter&nbsp;<wbr>[-s scope]}&nbsp;<wbr>[-i]&nbsp;<wbr>[-g seconds]</p>
 <h2>Description</h2>
 <p>Provides account status information to establish whether an entry or group of entries is inactivated.</p>

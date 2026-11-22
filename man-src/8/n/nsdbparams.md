@@ -74,7 +74,7 @@ description: "nsdbparams – manage local NSDB connection parameter database"
 </dl>
 <p> The result of this command would look like:</p>
 <dl>
-<dd>nsdb.example.net:389:<br />
+<dd>nsdb.example.net:389:<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>connection security: FEDFS_SEC_NONE</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>follow referrals: no</p>
 </dl>

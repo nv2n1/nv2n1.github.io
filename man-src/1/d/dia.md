@@ -42,7 +42,7 @@ description: "dia – a diagram drawing program"
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  This option is currently only implemented for the PNG export filter. </dd>
 </dl>
 </dl>
@@ -121,7 +121,7 @@ description: "dia – a diagram drawing program"
 <dt>
 </dt><dd> &bull; pluginrc: the list of loaded plugins (XML).</dd></dl>
 <h2>SEE ALSO</h2>
-<p> m[blue]<code>Pango</code>m[]<font SIZE="-2">[1]</font> </p>
+<p> m[blue]<code>Pango</code>m[][1] </p>
 <p> X (1) </p>
 <p> xfig (1) </p>
 <p> inkscape (1)</p>

@@ -14,15 +14,15 @@ description: "QuantLib::InterestRateVolSurface – Interest rate volatility (smi
 <p> Inherited by <code>SabrVolSurface</code>. </p>
 <h3>Public Member Functions</h3>
 <p>const boost::shared_ptr&lt; <code>InterestRateIndex</code> &gt; &amp; <code>index</code> () const </p>
-<p> <code>Constructors</code><br />
+<p> <code>Constructors</code><br/>
  See the <code>TermStructure</code> documentation for issues regarding constructors. </p>
 <p> <code>InterestRateVolSurface</code> (const boost::shared_ptr&lt; <code>InterestRateIndex</code> &gt; &amp;, const <code>Calendar</code> &amp;cal=<code>Calendar</code>(), <code>BusinessDayConvention</code> bdc=Following, const <code>DayCounter</code> &amp;dc=<code>DayCounter</code>()) </p>
-<p> <code>InterestRateVolSurface</code> (const boost::shared_ptr&lt; <code>InterestRateIndex</code> &gt; &amp;, const <code>Date</code> &amp;referenceDate, const <code>Calendar</code> &amp;cal=<code>Calendar</code>(), <code>BusinessDayConvention</code> bdc=Following, const <code>DayCounter</code> &amp;dc=<code>DayCounter</code>())<br />
- <i>initialize with a fixed reference date </i><br />
- <code>InterestRateVolSurface</code> (const boost::shared_ptr&lt; <code>InterestRateIndex</code> &gt; &amp;, <code>Natural</code> settlementDays, const <code>Calendar</code> &amp;, <code>BusinessDayConvention</code> bdc=Following, const <code>DayCounter</code> &amp;dc=<code>DayCounter</code>())<br />
+<p> <code>InterestRateVolSurface</code> (const boost::shared_ptr&lt; <code>InterestRateIndex</code> &gt; &amp;, const <code>Date</code> &amp;referenceDate, const <code>Calendar</code> &amp;cal=<code>Calendar</code>(), <code>BusinessDayConvention</code> bdc=Following, const <code>DayCounter</code> &amp;dc=<code>DayCounter</code>())<br/>
+ <i>initialize with a fixed reference date </i><br/>
+ <code>InterestRateVolSurface</code> (const boost::shared_ptr&lt; <code>InterestRateIndex</code> &gt; &amp;, <code>Natural</code> settlementDays, const <code>Calendar</code> &amp;, <code>BusinessDayConvention</code> bdc=Following, const <code>DayCounter</code> &amp;dc=<code>DayCounter</code>())<br/>
  <i>calculate the reference date based on the global evaluation date </i> </p>
 <p> <code>VolatilityTermStructure interface</code> </p>
-<p> <code>Date</code> <code>optionDateFromTenor</code> (const <code>Period</code> &amp;) const<br />
+<p> <code>Date</code> <code>optionDateFromTenor</code> (const <code>Period</code> &amp;) const<br/>
  <i>period/date conversion </i> </p>
 <p> <code>Visitability</code> </p>
 <p> virtual void <code>accept</code> (<code>AcyclicVisitor</code> &amp;) </p>

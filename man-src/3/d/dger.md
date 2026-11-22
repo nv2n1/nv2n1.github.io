@@ -11,7 +11,7 @@ description: "dger.f –"
 <p> dger.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dger</code> (M, N, ALPHA, X, INCX, Y, INCY, A, LDA)<br />
+<p> subroutine <code>dger</code> (M, N, ALPHA, X, INCX, Y, INCY, A, LDA)<br/>
  <i></i><code>DGER</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dger (integerM, integerN, double precisionALPHA, double precision, dimension(*)X, integerINCX, double precision, dimension(*)Y, integerINCY, double precision, dimension(lda,*)A, integerLDA)</h3>

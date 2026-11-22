@@ -11,7 +11,7 @@ description: "dlatps.f –"
 <p> dlatps.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dlatps</code> (UPLO, TRANS, DIAG, NORMIN, N, AP, X, SCALE, CNORM, INFO)<br />
+<p> subroutine <code>dlatps</code> (UPLO, TRANS, DIAG, NORMIN, N, AP, X, SCALE, CNORM, INFO)<br/>
  <i></i><code>DLATPS</code> solves a triangular system of equations with the matrix held in packed storage.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlatps (characterUPLO, characterTRANS, characterDIAG, characterNORMIN, integerN, double precision, dimension( * )AP, double precision, dimension( * )X, double precisionSCALE, double precision, dimension( * )CNORM, integerINFO)</h3>

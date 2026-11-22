@@ -13,7 +13,7 @@ description: "imgbase – tool to manage writeable filesystems on read-only base
 <h2>Description</h2>
 <p>imgbase provides a specific management method to derive writeable filesystem layers from read-only base images. It also takes care that the layer which shall be used can be selected at boot time.</p>
 <dl>
-<dd><font SIZE="+1"> <code>Warning</code> </font><br />
+<dd> <code>Warning</code> <br/>
  imgbase is a WIP. That means this manpage is probably out of date and data loss can happen.  This works by using LVM thinpools and thin volumens, combined if a filesystem which supports the TRIM commant (i..e ext4 when it&#8217;s used with the discard mount option). The creation of this layout is described under the section called &#8220;USAGE&#8221;. imgbase needs a volume group, which is then populated with one or more base images (which are read-only thin volumes in a thinpool). For each of this base image one or more write-able layers can be added.</dd>
 <h2>Usage</h2>
 <h3>Creating the layout</h3>
@@ -31,7 +31,7 @@ description: "imgbase – tool to manage writeable filesystems on read-only base
 </dd></dl>
 <p> This will create a new base image. It will create a 1G sized thin volume and populate it with the rootfs.img. The rootfs.img must be smaller than the given size. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> The base image name is derived from a pre-defined naming scheme. </p>
 </dl>
 <h3>Adding a layer</h3>
@@ -42,7 +42,7 @@ description: "imgbase – tool to manage writeable filesystems on read-only base
 </dd></dl>
 <p> This will add a new layer for the latest existing base image. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> The layer name is also derived from a pre-defined naming scheme. </p>
 </dl>
 <h3>Inspection at runtime</h3>
@@ -112,7 +112,7 @@ ovirt-node-ng-4.0.0-0.3.master.20160330132038.el7
 <dl>
 <dd>Do <i>not</i> run the commands, just output what would be run.</dd></dl>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> Combine this with <code>&#8211;debug</code> to see the commands This does not work with all commands. </p>
 </dl>
 <p> Example: </p>

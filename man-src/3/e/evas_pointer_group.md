@@ -9,13 +9,13 @@ description: "Evas Pointer Functions – Functions that deal with the status of 
 
 <p>Evas Pointer Functions &#8211; Functions that deal with the status of the pointer. </p>
 <h3>Functions</h3>
-<p>EAPI void <code>evas_pointer_output_xy_get</code> (const <code>Evas</code> *e, int *x, int *y)<br />
- <i>This function returns the current known pointer co-ordinates. </i><br />
- EAPI void <code>evas_pointer_canvas_xy_get</code> (const <code>Evas</code> *e, Evas_Coord *x, Evas_Coord *y)<br />
- <i>This function returns the current known pointer co-ordinates. </i><br />
- EAPI int <code>evas_pointer_button_down_mask_get</code> (const <code>Evas</code> *e)<br />
- <i>Returns a bitmask with the mouse buttons currently pressed, set to 1. </i><br />
- EAPI Evas_Bool <code>evas_pointer_inside_get</code> (const <code>Evas</code> *e)<br />
+<p>EAPI void <code>evas_pointer_output_xy_get</code> (const <code>Evas</code> *e, int *x, int *y)<br/>
+ <i>This function returns the current known pointer co-ordinates. </i><br/>
+ EAPI void <code>evas_pointer_canvas_xy_get</code> (const <code>Evas</code> *e, Evas_Coord *x, Evas_Coord *y)<br/>
+ <i>This function returns the current known pointer co-ordinates. </i><br/>
+ EAPI int <code>evas_pointer_button_down_mask_get</code> (const <code>Evas</code> *e)<br/>
+ <i>Returns a bitmask with the mouse buttons currently pressed, set to 1. </i><br/>
+ EAPI Evas_Bool <code>evas_pointer_inside_get</code> (const <code>Evas</code> *e)<br/>
  <i>Returns whether the mouse pointer is logically inside the canvas. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that deal with the status of the pointer.</p>
@@ -46,8 +46,8 @@ description: "Evas Pointer Functions – Functions that deal with the status of 
 <p>This function returns the current known pointer co-ordinates. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>e</i> The pointer to the Evas Canvas<br />
- <i>x</i> The pointer to a Evas_Coord to be filled in<br />
+<dd><i>e</i> The pointer to the Evas Canvas<br/>
+ <i>x</i> The pointer to a Evas_Coord to be filled in<br/>
  <i>y</i> The pointer to a Evas_Coord to be filled in</dd></dl>
 <p> This function returns the current known canvas unit co-ordinates of the mouse pointer and sets the contents of the Evas_Coords pointed to by x and y to contain these co-ordinates. If e is not a valid canvas the results of this function are undefined. </p>
 <p> Example: </p>
@@ -77,8 +77,8 @@ description: "Evas Pointer Functions – Functions that deal with the status of 
 <p>This function returns the current known pointer co-ordinates. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>e</i> The pointer to the Evas Canvas<br />
- <i>x</i> The pointer to an integer to be filled in<br />
+<dd><i>e</i> The pointer to the Evas Canvas<br/>
+ <i>x</i> The pointer to an integer to be filled in<br/>
  <i>y</i> The pointer to an integer to be filled in</dd></dl>
 <p> This function returns the current known screen/output co-ordinates of the mouse pointer and sets the contents of the integers pointed to by x and y to contain these co-ordinates. If e is not a valid canvas the results of this function are undefined. </p>
 <p> Example: </p>

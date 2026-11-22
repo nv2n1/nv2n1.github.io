@@ -22,5 +22,5 @@ description: "getmails – wrapper for getmail to access multiple mailboxes"
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to the getmail debian package if bugs are in this wrapper script.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright 2011-2017 Osamu Aoki<br />
+<p> Copyright 2011-2017 Osamu Aoki<br/>
  This is free software; see the file COPYING for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>

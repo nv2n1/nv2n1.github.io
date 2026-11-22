@@ -10,7 +10,7 @@ description: "tint2 – lightweight panel/taskbar"
 
 <p> tint2 &#8211; lightweight panel/taskbar </p>
 <h2>SYNOPSIS</h2>
-<p> <code>tint2</code><br />
+<p> <code>tint2</code><br/>
  <code>tint2</code> -c <i>/path_to_config_file</i></p>
 <h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>tint2</code> command. </p>

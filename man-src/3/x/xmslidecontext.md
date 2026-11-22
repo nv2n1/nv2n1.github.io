@@ -23,16 +23,16 @@ description: "XmSlideContext – The SlideContext widget class"
 <p> <center></p>
 <table>
 <tr VALIGN=top>
-<td ALIGN=center COLSPAN=5><font SIZE="-9"><code><br />
-&nbsp;<wbr>XmSlideContext Resource Set</code></font>
+<td ALIGN=center COLSPAN=5><code><br/>
+&nbsp;<wbr>XmSlideContext Resource Set</code>
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9"><code>Name</code></font></td>
-<td><font SIZE="-9"><code>Class</code></font></td>
-<td><font SIZE="-9"><code>Type</code></font></td>
-<td><font SIZE="-9"><code>Default</code></font></td>
-<td><font SIZE="-9"><code>Access</code></font>
+<td><code>Name</code></td>
+<td><code>Class</code></td>
+<td><code>Type</code></td>
+<td><code>Default</code></td>
+<td><code>Access</code>
 </td>
 </tr>
 <tr VALIGN=top>
@@ -41,67 +41,67 @@ description: "XmSlideContext – The SlideContext widget class"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNslideDestHeight</font></td>
-<td><font SIZE="-9">XtCSlideDestHeight</font></td>
-<td><font SIZE="-9">Dimension</font></td>
-<td><font SIZE="-9">variable</font></td>
-<td><font SIZE="-9">C</font>
+<td>XmNslideDestHeight</td>
+<td>XtCSlideDestHeight</td>
+<td>Dimension</td>
+<td>variable</td>
+<td>C
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNslideDestWidth</font></td>
-<td><font SIZE="-9">XtCSlideDestWidth</font></td>
-<td><font SIZE="-9">Dimension</font></td>
-<td><font SIZE="-9">variable</font></td>
-<td><font SIZE="-9">C</font>
+<td>XmNslideDestWidth</td>
+<td>XtCSlideDestWidth</td>
+<td>Dimension</td>
+<td>variable</td>
+<td>C
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNslideDestX</font></td>
-<td><font SIZE="-9">XtCSlideDestX</font></td>
-<td><font SIZE="-9">Position</font></td>
-<td><font SIZE="-9">variable</font></td>
-<td><font SIZE="-9">C</font>
+<td>XmNslideDestX</td>
+<td>XtCSlideDestX</td>
+<td>Position</td>
+<td>variable</td>
+<td>C
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNslideDestY</font></td>
-<td><font SIZE="-9">XtCSlideDestY</font></td>
-<td><font SIZE="-9">Position</font></td>
-<td><font SIZE="-9">variable</font></td>
-<td><font SIZE="-9">C</font>
+<td>XmNslideDestY</td>
+<td>XtCSlideDestY</td>
+<td>Position</td>
+<td>variable</td>
+<td>C
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNslideFinishCallback</font></td>
-<td><font SIZE="-9">XtCCallback</font></td>
-<td><font SIZE="-9">XtCallbackList</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">C</font>
+<td>XmNslideFinishCallback</td>
+<td>XtCCallback</td>
+<td>XtCallbackList</td>
+<td>NULL</td>
+<td>C
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNslideInterval</font></td>
-<td><font SIZE="-9">XtCSlideInterval</font></td>
-<td><font SIZE="-9">int</font></td>
-<td><font SIZE="-9">5</font></td>
-<td><font SIZE="-9">C</font>
+<td>XmNslideInterval</td>
+<td>XtCSlideInterval</td>
+<td>int</td>
+<td>5</td>
+<td>C
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNslideMotionCallback</font></td>
-<td><font SIZE="-9">XtCCallback</font></td>
-<td><font SIZE="-9">XtCallbackList</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">C</font>
+<td>XmNslideMotionCallback</td>
+<td>XtCCallback</td>
+<td>XtCallbackList</td>
+<td>NULL</td>
+<td>C
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNslideWidget</font></td>
-<td><font SIZE="-9">XtCSlideWidget</font></td>
-<td><font SIZE="-9">Widget</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">C</font>
+<td>XmNslideWidget</td>
+<td>XtCSlideWidget</td>
+<td>Widget</td>
+<td>NULL</td>
+<td>C
 </td>
 </tr>
 </table>
@@ -129,16 +129,16 @@ description: "XmSlideContext – The SlideContext widget class"
 <p> <center></p>
 <table>
 <tr VALIGN=top>
-<td ALIGN=center COLSPAN=5><font SIZE="-9"><code><br />
-&nbsp;<wbr>Object Resource Set</code></font>
+<td ALIGN=center COLSPAN=5><code><br/>
+&nbsp;<wbr>Object Resource Set</code>
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9"><code>Name</code></font></td>
-<td><font SIZE="-9"><code>Class</code></font></td>
-<td><font SIZE="-9"><code>Type</code></font></td>
-<td><font SIZE="-9"><code>Default</code></font></td>
-<td><font SIZE="-9"><code>Access</code></font>
+<td><code>Name</code></td>
+<td><code>Class</code></td>
+<td><code>Type</code></td>
+<td><code>Default</code></td>
+<td><code>Access</code>
 </td>
 </tr>
 <tr VALIGN=top>
@@ -147,19 +147,19 @@ description: "XmSlideContext – The SlideContext widget class"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNdestroyCallback</font></td>
-<td><font SIZE="-9">XmCCallback</font></td>
-<td><font SIZE="-9">XtCallbackList</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">C</font>
+<td>XmNdestroyCallback</td>
+<td>XmCCallback</td>
+<td>XtCallbackList</td>
+<td>NULL</td>
+<td>C
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNscreen</font></td>
-<td><font SIZE="-9">XmCScreen</font></td>
-<td><font SIZE="-9">Screen *</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CG</font>
+<td>XmNscreen</td>
+<td>XmCScreen</td>
+<td>Screen *</td>
+<td>dynamic</td>
+<td>CG
 </td>
 </tr>
 </table>

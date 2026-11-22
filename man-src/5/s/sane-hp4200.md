@@ -11,8 +11,8 @@ description: "sane-hp4200 – SANE backend for Hewlett-Packard 4200 scanners"
 <h2>Description</h2>
 <p>The <code>sane-hp4200</code> library implements a SANE (Scanner Access Now Easy) backend that provides access to the following Hewlett-Packard USB flatbed scanners:</p>
 <dl>
-<dd>ScanJet 4200 C<br />
- ScanJet 4200 Cxi<br />
+<dd>ScanJet 4200 C<br/>
+ ScanJet 4200 Cxi<br/>
  ScanJet 4200 Cse</dd></dl>
 <p> More details can be found on the hp4200 backend homepage <i><a rel="nofollow" href="http://hp4200-backend.sourceforge.net/">http://hp4200-backend.sourceforge.net/</a></i>. This is BETA software. Keep your hand at the scanner&#8217;s plug and unplug it, if the head bumps at the end of the scan area. If you own a scanner other than the ones listed above that works with this backend, please let us know this by sending the scanner&#8217;s exact model name and the USB vendor and device ids (e.g. from <i>/proc/bus/usb/devices</i>, <code><a href="/docs/linux/man/1-sane-find-scanner/">sane-find-scanner</a></code>(1) or syslog) to us. Even if the scanner&#8217;s name is only slightly different from the models mentioned above, please let us know. </p>
 <h2>Configuration</h2>
@@ -34,7 +34,7 @@ description: "sane-hp4200 – SANE backend for Hewlett-Packard 4200 scanners"
 <p> Example: export SANE_DEBUG_HP4200=4 </p>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/5-sane-usb/">sane-usb</a></code>(5), <code><a href="/docs/linux/man/1-sane-find-scanner/">sane-find-scanner</a></code>(1),<br />
+<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/5-sane-usb/">sane-usb</a></code>(5), <code><a href="/docs/linux/man/1-sane-find-scanner/">sane-find-scanner</a></code>(1),<br/>
  <i><a rel="nofollow" href="http://hp4200-backend.sourceforge.net/">http://hp4200-backend.sourceforge.net/</a></i> </p>
 <h2>Author</h2>
 <p>Adrian Perez Jorge, Andrew John Lewis, Arnar Mar Hrafnkelsson, Frank Zago, Henning Meier-Geinitz. Current maintainer: Henning Meier-Geinitz &lt;<i>henning [at] meier-geinitz.de</i>&gt;.</p>

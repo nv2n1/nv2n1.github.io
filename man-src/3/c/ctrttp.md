@@ -11,7 +11,7 @@ description: "ctrttp.f –"
 <p> ctrttp.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>ctrttp</code> (UPLO, N, A, LDA, AP, INFO)<br />
+<p> subroutine <code>ctrttp</code> (UPLO, N, A, LDA, AP, INFO)<br/>
  <i></i><code>CTRTTP</code> copies a triangular matrix from the standard full format (TR) to the standard packed format (TP).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ctrttp (characterUPLO, integerN, complex, dimension( lda, * )A, integerLDA, complex, dimension( * )AP, integerINFO)</h3>

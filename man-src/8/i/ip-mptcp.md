@@ -20,9 +20,9 @@ mptcp
     help
 }
 </code></pre>
-<p> <code>ip mptcp endpoint add </code> <i>IFADDR</i> [ <code>port</code> <i>PORT</i> ] [ <code>dev</code> <i>IFNAME</i> ] [ <code>id</code> <i>ID</i> ] [ <i>FLAG-LIST</i> ]<br />
- <code>ip mptcp endpoint del id </code> <i>ID</i><br />
- <code>ip mptcp endpoint show </code> [ <code>id</code> <i>ID</i> ]<br />
+<p> <code>ip mptcp endpoint add </code> <i>IFADDR</i> [ <code>port</code> <i>PORT</i> ] [ <code>dev</code> <i>IFNAME</i> ] [ <code>id</code> <i>ID</i> ] [ <i>FLAG-LIST</i> ]<br/>
+ <code>ip mptcp endpoint del id </code> <i>ID</i><br/>
+ <code>ip mptcp endpoint show </code> [ <code>id</code> <i>ID</i> ]<br/>
  <code>ip mptcp endpoint flush</code> </p>
 <pre><code>FLAG-LIST := [ FLAG-LIST ] FLAG
 FLAG := [
@@ -32,8 +32,8 @@ subflow
 |
 backup
 ]</code></pre>
-<p> <code>ip mptcp limits set </code> [ <code>subflow</code> <i>SUBFLOW_NR</i> ] [ <code>add_addr_accepted</code> <i>ADD_ADDR_ACCEPTED_NR</i> ]<br />
- <code>ip mptcp limits show</code><br />
+<p> <code>ip mptcp limits set </code> [ <code>subflow</code> <i>SUBFLOW_NR</i> ] [ <code>add_addr_accepted</code> <i>ADD_ADDR_ACCEPTED_NR</i> ]<br/>
+ <code>ip mptcp limits show</code><br/>
  <code>ip mptcp monitor</code> </p>
 <h2>Description</h2>
 <p>MPTCP is a transport protocol built on top of TCP that allows TCP connections to use multiple paths to maximize resource usage and increase redundancy. The ip-mptcp sub-commands allow configuring several aspects of the MPTCP path manager, which is in charge of subflows creation: The <code>endpoint</code> object specifies the IP addresses that will be used and/or announced for additional subflows: </p>

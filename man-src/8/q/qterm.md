@@ -22,7 +22,7 @@ description: "qterm – terminate processing by a PBS batch server"
 </dd><dl>
 <dt>immediate</dt>
 <dd>All running jobs are to immediately stop execution.</dd>
-<dd>If checkpoint is supported, running jobs that were submitted with &quot;-c shutdown&quot; are checkpointed, terminated, and requeued. If checkpoint is not supported or the job cannot be checkpointed, running jobs are requeued if the <i> </i><font SIZE="-1"><i> attribute is true. Otherwise, jobs are killed.</dd>
+<dd>If checkpoint is supported, running jobs that were submitted with &quot;-c shutdown&quot; are checkpointed, terminated, and requeued. If checkpoint is not supported or the job cannot be checkpointed, running jobs are requeued if the <i> </i><i> attribute is true. Otherwise, jobs are killed.</dd>
 <dd>Normally the server will not shutdown until there are no jobs in the running state. If the server is unable to contact the MOM of running job, the job is still listed as running. The server may be forced down by a second qterm -t immediate command.</dd>
 <dt>delay&nbsp;<wbr></dt>
 <dd>If checkpoint is supported, running jobs that were submitted with &quot;-c shutdown&quot; are checkpointed, terminated, and requeued. If a job cannot be checkpointed, but can be rerun, the job is terminated and requeued. Otherwise, running jobs are allowed to continue to run. Note, the operator or administrator may use the qrerun and qdel commands to remove running jobs.</dd>
@@ -30,7 +30,7 @@ description: "qterm – terminate processing by a PBS batch server"
 <dd>This option is used when you wish that running jobs be left running when the server shuts down. The server will cleanly shutdown and can be restarted when desired. Upon restart of the server, jobs that continue to run are shown as running; jobs that terminated during the server&#8217;s absence will be placed into the exiting state.</dd></dl>
 </dl>
 </dl>
-<p> </i></font></p>
+<p> </i></p>
 <h2>Operands</h2>
 <p>The <i> operand specifies which servers are to shutdown. If no servers are given, then the default server will be terminated. </i></p>
 <h2>Standard Error</h2>

@@ -7,7 +7,7 @@ letter: "s"
 url: "/docs/linux/man/1-systasks/"
 ---
 
-<center> <font SIZE="+3">All Cver System tasks and Functions</font>
+<center> All Cver System tasks and Functions
  </center>
 
 

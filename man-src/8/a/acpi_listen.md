@@ -32,6 +32,6 @@ description: "acpi_listen – ACPI event listener"
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/8-acpid/">acpid</a>(8)</p>
 <h2>Authors</h2>
-<p>Ted Felix (<a rel="nofollow" href="http://www.tedfelix.com">www.tedfelix.com</a>)<br />
- Tim Hockin &lt;thockin [at] hockin.org&gt;<br />
+<p>Ted Felix (<a rel="nofollow" href="http://www.tedfelix.com">www.tedfelix.com</a>)<br/>
+ Tim Hockin &lt;thockin [at] hockin.org&gt;<br/>
  Luca Capello &lt;luca [at] pca.it&gt;</p>

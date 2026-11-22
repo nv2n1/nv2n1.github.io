@@ -10,7 +10,7 @@ description: "XkbDeviceBell – Rings the bell on an X input extension device or
 <p>XkbDeviceBell &#8211; Rings the bell on an X input extension device or the default keyboard </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Bool XkbDeviceBell</code> <code>(Display *</code><i>display</i><code>,</code> <code>Window </code><i>window</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>,</code> <code>unsigned int </code><i>bell_class</i><code>,</code> <code>unsigned int </code><i>bell_id</i><code>,</code> <code>int </code><i>percent</i><code>,</code> <code>Atom </code><i>name</i><code>);</code><br />
+<dt> <code>Bool XkbDeviceBell</code> <code>(Display *</code><i>display</i><code>,</code> <code>Window </code><i>window</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>,</code> <code>unsigned int </code><i>bell_class</i><code>,</code> <code>unsigned int </code><i>bell_id</i><code>,</code> <code>int </code><i>percent</i><code>,</code> <code>Atom </code><i>name</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

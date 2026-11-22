@@ -10,18 +10,18 @@ description: "twadmin – Tripwire administrative and utility tool"
 <p>twadmin &#8211; Tripwire administrative and utility tool</p>
 <h2>Synopsis</h2>
 <p><code>twadmin</code> { <code>-m F</code> | <code>&#8211;create-cfgfile</code> } <i> options&#8230; </i> </p>
-<p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> <i>configfile.txt</i><br />
- <code>twadmin</code> { <code>-m f</code> | <code>&#8211;print-cfgfile</code> } [ <i>options&#8230;</i> ]<br />
+<p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> <i>configfile.txt</i><br/>
+ <code>twadmin</code> { <code>-m f</code> | <code>&#8211;print-cfgfile</code> } [ <i>options&#8230;</i> ]<br/>
  <code>twadmin</code> { <code>-m P</code> | <code>&#8211;create-polfile</code> } [ <i>options&#8230;</i> ] </p>
-<p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> <i>policyfile.txt</i><br />
- <code>twadmin</code> { <code>-m p</code> | <code>&#8211;print-polfile</code> } [ <i>options&#8230;</i> ]<br />
+<p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> <i>policyfile.txt</i><br/>
+ <code>twadmin</code> { <code>-m p</code> | <code>&#8211;print-polfile</code> } [ <i>options&#8230;</i> ]<br/>
  <code>twadmin</code> { <code>-m R</code> | <code>&#8211;remove-encryption</code> } [ <i>options&#8230;</i> ] </p>
-<p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> <i>file1</i> [ <i>file2&#8230;</i> ]<br />
+<p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> <i>file1</i> [ <i>file2&#8230;</i> ]<br/>
  <code>twadmin</code> { <code>-m E</code> | <code>&#8211;encrypt</code> } [ <i>options&#8230;</i> ] </p>
-<p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> <i>file1</i> [ <i>file2&#8230;</i> ]<br />
+<p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> <i>file1</i> [ <i>file2&#8230;</i> ]<br/>
  <code>twadmin</code> { <code>-m e</code> | <code>&#8211;examine</code> } [ <i>options&#8230;</i> ] </p>
-<p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> <i>file1</i> [ <i>file2&#8230;</i> ]<br />
- <code>twadmin</code> { <code>-m G</code> | <code>&#8211;generate-keys</code> } <i>options&#8230;</i><br />
+<p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> <i>file1</i> [ <i>file2&#8230;</i> ]<br/>
+ <code>twadmin</code> { <code>-m G</code> | <code>&#8211;generate-keys</code> } <i>options&#8230;</i><br/>
  <code>twadmin</code> { <code>-m C</code> | <code>&#8211;change-passphrases</code> } <i>options&#8230;</i></p>
 <h2>Description</h2>
 <p>The <code>twadmin</code> utility is used to perform certain administrative functions related to <i>Tripwire</i> files and configuration options. Specifically, <code>twadmin</code> allows encoding, decoding, signing, and verification of <i>Tripwire</i> files, and provides a means to generate and change local and site keys.</p>

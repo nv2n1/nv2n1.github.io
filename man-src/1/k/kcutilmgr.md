@@ -50,23 +50,23 @@ description: "kcutilmgr – command line interface of miscellaneous utilities"
 <p> Options feature the following. </p>
 <dl>
 <dt>
-</dt><dd> <code>-d</code> : perform decoding (unescaping), not encoding (escaping).<br />
- <code>-hex</code> : use hexadecimal encoding.<br />
- <code>-url</code> : use URL encoding.<br />
- <code>-quote</code> : use Quoted-printable encoding.<br />
- <code>-key </code><i>str</i> : set the cipher key.<br />
- <code>-def</code> : use the deflate format.<br />
- <code>-gz</code> : use the gzip format.<br />
- <code>-lzo</code> : use LZO encoding.<br />
- <code>-lzma</code> : use LZMA encoding.<br />
- <code>-fnv</code> : use FNV hashing.<br />
- <code>-path</code> : use the path hashing of the directory database.<br />
- <code>-crc</code> : calculate the CRC32 checksum.<br />
- <code>-alt </code><i>str</i> : replaces matching substring with the alternative string.<br />
- <code>-ic</code> : ignores difference between upper and lower cases.<br />
- <code>-v</code> : show the version number of Kyoto Cabinet.<br />
- <code>-i</code> : show options to include the headers of Tokyo Cabinet.<br />
- <code>-l</code> : show options to link the library of Tokyo Cabinet.<br />
+</dt><dd> <code>-d</code> : perform decoding (unescaping), not encoding (escaping).<br/>
+ <code>-hex</code> : use hexadecimal encoding.<br/>
+ <code>-url</code> : use URL encoding.<br/>
+ <code>-quote</code> : use Quoted-printable encoding.<br/>
+ <code>-key </code><i>str</i> : set the cipher key.<br/>
+ <code>-def</code> : use the deflate format.<br/>
+ <code>-gz</code> : use the gzip format.<br/>
+ <code>-lzo</code> : use LZO encoding.<br/>
+ <code>-lzma</code> : use LZMA encoding.<br/>
+ <code>-fnv</code> : use FNV hashing.<br/>
+ <code>-path</code> : use the path hashing of the directory database.<br/>
+ <code>-crc</code> : calculate the CRC32 checksum.<br/>
+ <code>-alt </code><i>str</i> : replaces matching substring with the alternative string.<br/>
+ <code>-ic</code> : ignores difference between upper and lower cases.<br/>
+ <code>-v</code> : show the version number of Kyoto Cabinet.<br/>
+ <code>-i</code> : show options to include the headers of Tokyo Cabinet.<br/>
+ <code>-l</code> : show options to link the library of Tokyo Cabinet.<br/>
  <code>-p</code> : show the directory path of the commands.
 </dd></dl>
 <p> This command returns 0 on success, another on failure. </p>

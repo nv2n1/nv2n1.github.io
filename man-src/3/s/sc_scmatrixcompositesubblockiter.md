@@ -14,14 +14,14 @@ description: "sc::SCMatrixCompositeSubblockIter –"
 <p><code>SCMatrixCompositeSubblockIter</code> (Access, int niter) </p>
 <p> <code>SCMatrixCompositeSubblockIter</code> (<code>Ref</code>&lt; <code>SCMatrixSubblockIter</code> &gt; &amp;, <code>Ref</code>&lt; <code>SCMatrixSubblockIter</code> &gt; &amp;) </p>
 <p> void <code>set_iter</code> (int i, const <code>Ref</code>&lt; <code>SCMatrixSubblockIter</code> &gt; &amp;) </p>
-<p> void <code>begin</code> ()<br />
- <i>Start at the beginning. </i><br />
- int <code>ready</code> ()<br />
- <i>Returns nonzero if there is another block. </i><br />
- void <code>next</code> ()<br />
- <i>Proceed to the next block. </i><br />
- <code>SCMatrixBlock</code> * <code>block</code> ()<br />
- <i>Return the current block. </i><br />
+<p> void <code>begin</code> ()<br/>
+ <i>Start at the beginning. </i><br/>
+ int <code>ready</code> ()<br/>
+ <i>Returns nonzero if there is another block. </i><br/>
+ void <code>next</code> ()<br/>
+ <i>Proceed to the next block. </i><br/>
+ <code>SCMatrixBlock</code> * <code>block</code> ()<br/>
+ <i>Return the current block. </i><br/>
  int <code>current_block</code> () const</p>
 <h3>Protected Attributes</h3>
 <pre><code>int niters_

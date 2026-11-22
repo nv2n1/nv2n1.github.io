@@ -34,7 +34,7 @@ description: "vpSetCallback – define a callback function"
 <dl>
 <dd>
 </dd><dl>
-<dd>void <i>func</i>(void *<i>voxel_ptr,</i> float *<i>i_ptr</i>,<br />
+<dd>void <i>func</i>(void *<i>voxel_ptr,</i> float *<i>i_ptr</i>,<br/>
  void *<i>client_data</i>);</dd></dl>
 <dl>
 <dt><i>voxel_ptr</i></dt>
@@ -49,8 +49,8 @@ description: "vpSetCallback – define a callback function"
 <dl>
 <dd>
 </dd><dl>
-<dd>void <i>func</i>(void *<i>voxel_ptr,</i> float *<i>r_ptr</i>,<br />
- float *<i>r_ptr</i>, float *<i>r_ptr</i>,<br />
+<dd>void <i>func</i>(void *<i>voxel_ptr,</i> float *<i>r_ptr</i>,<br/>
+ float *<i>r_ptr</i>, float *<i>r_ptr</i>,<br/>
  void *<i>client_data</i>);</dd></dl>
 <dl>
 <dt><i>voxel_ptr</i></dt>
@@ -69,7 +69,7 @@ description: "vpSetCallback – define a callback function"
 <dl>
 <dd>
 </dd><dl>
-<dd>void *<i>func</i>(int <i>fd,</i> unsigned <i>offset,</i><br />
+<dd>void *<i>func</i>(int <i>fd,</i> unsigned <i>offset,</i><br/>
  void *<i>client_data</i>);</dd></dl>
 <dl>
 <dt><i>fd</i></dt>
@@ -96,7 +96,7 @@ description: "vpSetCallback – define a callback function"
 <dl>
 <dd>
 </dd><dl>
-<dd>void <i>func</i>(void *<i>ptr,</i> int <i>size</i>, char *<i>use</i>,<br />
+<dd>void <i>func</i>(void *<i>ptr,</i> int <i>size</i>, char *<i>use</i>,<br/>
  int <i>line</i>, char *<i>file</i>, void *<i>client_data</i>);</dd></dl>
 <dl>
 <dt><i>ptr</i></dt>

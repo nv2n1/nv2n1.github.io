@@ -35,7 +35,7 @@ description: "sip2ncid – Inject CID info by snooping SIP invites"
 <h2>Options</h2>
 <dl>
 <dt><code>-C &lt;filename&gt; | &#8211;config &lt;filename&gt;</code></dt>
-<dd>Configuration file.<br />
+<dd>Configuration file.<br/>
  Default: /etc/ncid/sip2ncid.conf</dd>
 <dt><code>-D | &#8211;debug</code></dt>
 <dd>Debug mode, <i>sip2ncid</i> stays attached to the terminal.</dd>
@@ -46,7 +46,7 @@ description: "sip2ncid – Inject CID info by snooping SIP invites"
 <dt><code>-l | &#8211;listdevs</code></dt>
 <dd>Returns a list of all network device names that can be used.</dd>
 <dt><code>-L &lt;filename&gt; | &#8211;logfile=&lt;filename&gt;</code></dt>
-<dd>Specifies the logfile name to use. The logfile must exist before it is used.<br />
+<dd>Specifies the logfile name to use. The logfile must exist before it is used.<br/>
  Default log filename: /var/log/sip2ncid.log</dd>
 <dt><code>-n &lt;[host][:port]&gt; | &#8211;ncid=&lt;[host][:port]&gt;</code></dt>
 <dd>Specifies the NCID server to connect to. Port may be specified by suffixing the hostname with &lt;:port&gt;, or if you only want to change the port, just &lt;:port&gt;. By default it will connect to port 3333 on &quot;127.0.0.1&quot;.</dd>
@@ -63,8 +63,8 @@ description: "sip2ncid – Inject CID info by snooping SIP invites"
 <dt><code>-V | &#8211;version</code></dt>
 <dd>Displays the version</dd>
 <dt><code>-v &lt;1-9&gt; | &#8211;verbose &lt;1-9&gt;</code></dt>
-<dd>Verbose mode. Output information, used for the logfile and the -D option. Set higher number for more information.<br />
- Default: verbose = 1<br />
+<dd>Verbose mode. Output information, used for the logfile and the -D option. Set higher number for more information.<br/>
+ Default: verbose = 1<br/>
  Most Useful: verbose = 3 (displays payload of all packets that matched the libpcap filter.</dd>
 <dt><code>-w &lt;dumpfile&gt; | &#8211;writefile &lt;dumpfile&gt;</code></dt>
 <dd>Write packets to a libpcap capture file. This also sets the debug option, verbose to level 3, and no filter is applied. Mostly only useful for development and debug purposes.</dd></dl>

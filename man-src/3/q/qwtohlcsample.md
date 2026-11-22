@@ -13,19 +13,19 @@ description: "QwtOHLCSample –"
 <p>#include &lt;qwt_samples.h&gt;</p>
 <h3>Public Member Functions</h3>
 <p><code>QwtOHLCSample</code> (double <code>time</code>=0.0, double <code>open</code>=0.0, double <code>high</code>=0.0, double <code>low</code>=0.0, double <code>close</code>=0.0) </p>
-<p> <code>QwtInterval</code> <code>boundingInterval</code> () const<br />
- <i>Calculate the bounding interval of the OHLC values. </i><br />
- bool <code>isValid</code> () const<br />
+<p> <code>QwtInterval</code> <code>boundingInterval</code> () const<br/>
+ <i>Calculate the bounding interval of the OHLC values. </i><br/>
+ bool <code>isValid</code> () const<br/>
  <i>Check if a sample is valid. </i></p>
 <h3>Public Attributes</h3>
 <p>double <code>time</code> </p>
-<p> double <code>open</code><br />
- <i>Opening price. </i><br />
- double <code>high</code><br />
- <i>Highest price. </i><br />
- double <code>low</code><br />
- <i>Lowest price. </i><br />
- double <code>close</code><br />
+<p> double <code>open</code><br/>
+ <i>Opening price. </i><br/>
+ double <code>high</code><br/>
+ <i>Highest price. </i><br/>
+ double <code>low</code><br/>
+ <i>Lowest price. </i><br/>
+ double <code>close</code><br/>
  <i>Closing price. </i></p>
 <h2>Detailed Description</h2>
 <p>Open-High-Low-Close sample used in financial charts. </p>
@@ -38,10 +38,10 @@ description: "QwtOHLCSample –"
 <p>Constructor </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>t</i> Time value<br />
- <i>o</i> Open value<br />
- <i>h</i> High value<br />
- <i>l</i> Low value<br />
+<dd><i>t</i> Time value<br/>
+ <i>o</i> Open value<br/>
+ <i>h</i> High value<br/>
+ <i>l</i> Low value<br/>
  <i>c</i> Close value</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3><code>QwtInterval</code> QwtOHLCSample::boundingInterval () const [inline]</h3>

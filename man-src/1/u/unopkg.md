@@ -10,11 +10,11 @@ description: "unopkg – LibreOffice Extension Manager"
 
 <p> unopkg &#8211; LibreOffice Extension Manager</p>
 <h2>SYNOPSIS</h2>
-<p> <code>unopkg</code> [<code>add</code>] &lt;<i>options</i>&gt; <i>extension-path&#8230;</i><br />
- <code>unopkg</code> [<code>remove</code>] &lt;<i>options</i>&gt; <i>extension-identifier&#8230;</i><br />
- <code>unopkg</code> [<code>list</code>] &lt;<i>options</i>&gt; <i>extension-identifier&#8230;</i><br />
- <code>unopkg</code> [<code>reinstall</code>] &lt;<i>options</i>&gt;<br />
- <code>unopkg</code> [<code>gui</code>]<br />
+<p> <code>unopkg</code> [<code>add</code>] &lt;<i>options</i>&gt; <i>extension-path&#8230;</i><br/>
+ <code>unopkg</code> [<code>remove</code>] &lt;<i>options</i>&gt; <i>extension-identifier&#8230;</i><br/>
+ <code>unopkg</code> [<code>list</code>] &lt;<i>options</i>&gt; <i>extension-identifier&#8230;</i><br/>
+ <code>unopkg</code> [<code>reinstall</code>] &lt;<i>options</i>&gt;<br/>
+ <code>unopkg</code> [<code>gui</code>]<br/>
  <code>unopkg</code> [<code>&#8211;help</code>|<code>-h</code>] </p>
 <h2>DESCRIPTION</h2>
 <p> LibreOffice is a fully featured office suite for the daily use with all features you would normally expect in an office suite. </p>

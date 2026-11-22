@@ -22,37 +22,37 @@ int ares_init(ares_channel *channelptr) int ares_init_options(ares_channel *chan
 <p> The <code>ares_init_options</code> function also initializes a name service channel, with additional options useful for applications requiring more control over name service configuration. The <i>optmask</i> parameter specifies which fields in the structure pointed to by <i>options</i> are set, as follows:</p>
 <dl>
 <dt><code>ARES_OPT_FLAGS</code></dt>
-<dd> <code>int </code><i>flags</i>;<br />
+<dd> <code>int </code><i>flags</i>;<br/>
  Flags controlling the behavior of the resolver. See below for a description of possible flag values.</dd>
 <dt><code>ARES_OPT_TIMEOUT</code></dt>
-<dd> <code>int </code><i>timeout</i>;<br />
+<dd> <code>int </code><i>timeout</i>;<br/>
  The number of seconds each name server is given to respond to a query on the first try. (After the first try, the timeout algorithm becomes more complicated, but scales linearly with the value of <i>timeout</i>.) The default is five seconds. This option is being deprecated by <i>ARES_OPT_TIMEOUTMS</i> starting in c-ares 1.5.2.</dd>
 <dt><code>ARES_OPT_TIMEOUTMS</code></dt>
-<dd> <code>int </code><i>timeout</i>;<br />
+<dd> <code>int </code><i>timeout</i>;<br/>
  The number of milliseconds each name server is given to respond to a query on the first try. (After the first try, the timeout algorithm becomes more complicated, but scales linearly with the value of <i>timeout</i>.) The default is five seconds. Note that this option is specified with the same struct field as the former <i>ARES_OPT_TIMEOUT</i>, it is but the option bits that tell c-ares how to interpret the number. This option was added in c-ares 1.5.2.</dd>
 <dt><code>ARES_OPT_TRIES</code></dt>
-<dd> <code>int </code><i>tries</i>;<br />
+<dd> <code>int </code><i>tries</i>;<br/>
  The number of tries the resolver will try contacting each name server before giving up. The default is four tries.</dd>
 <dt><code>ARES_OPT_NDOTS</code></dt>
-<dd> <code>int </code><i>ndots</i>;<br />
+<dd> <code>int </code><i>ndots</i>;<br/>
  The number of dots which must be present in a domain name for it to be queried for &quot;as is&quot; prior to querying for it with the default domain extensions appended. The default value is 1 unless set otherwise by resolv.conf or the RES_OPTIONS environment variable.</dd>
 <dt><code>ARES_OPT_PORT</code></dt>
-<dd> <code>unsigned short </code><i>port</i>;<br />
+<dd> <code>unsigned short </code><i>port</i>;<br/>
  The port to use for queries (both TCP and UDP), in network byte order. The default value is 53 (in network byte order), the standard name service port.</dd>
 <dt><code>ARES_OPT_SERVERS</code></dt>
-<dd> <code>struct in_addr *</code><i>servers</i>;<br />
- <code>int </code><i>nservers</i>;<br />
+<dd> <code>struct in_addr *</code><i>servers</i>;<br/>
+ <code>int </code><i>nservers</i>;<br/>
  The list of IPv4 servers to contact, instead of the servers specified in resolv.conf or the local named. In order to allow specification of either IPv4 or IPv6 name servers, the <code><a href="/docs/linux/man/3-ares_set_servers/">ares_set_servers</a>(3)</code> function must be used instead.</dd>
 <dt><code>ARES_OPT_DOMAINS</code></dt>
-<dd> <code>char **</code><i>domains</i>;<br />
- <code>int </code><i>ndomains</i>;<br />
+<dd> <code>char **</code><i>domains</i>;<br/>
+ <code>int </code><i>ndomains</i>;<br/>
  The domains to search, instead of the domains specified in resolv.conf or the domain derived from the kernel hostname variable.</dd>
 <dt><code>ARES_OPT_LOOKUPS</code></dt>
-<dd> <code>char *</code><i>lookups</i>;<br />
+<dd> <code>char *</code><i>lookups</i>;<br/>
  The lookups to perform for host queries. <i>lookups</i> should be set to a string of the characters &quot;b&quot; or &quot;f&quot;, where &quot;b&quot; indicates a DNS lookup and &quot;f&quot; indicates a lookup in the hosts file.</dd>
 <dt><code>ARES_OPT_SOCK_STATE_CB</code></dt>
-<dd> <code>void (*</code><i>sock_state_cb</i>)(void *data, int s, int read, int write);<br />
- <code>void *</code><i>sock_state_cb_data</i>;<br />
+<dd> <code>void (*</code><i>sock_state_cb</i>)(void *data, int s, int read, int write);<br/>
+ <code>void *</code><i>sock_state_cb_data</i>;<br/>
  A callback function to be invoked when a socket changes state. <i>s</i> will be passed the socket whose state has changed; <i>read</i> will be set to true if the socket should listen for read events, and <i>write</i> will be set to true if the socket should listen for write events. The value of <i>sock_state_cb_data</i> will be passed as the <i>data</i> argument.</dd></dl>
 <p> The <i>flags</i> field should be the bitwise or of some subset of the following values:</p>
 <dl>
@@ -88,6 +88,6 @@ int ares_init(ares_channel *channelptr) int ares_init_options(ares_channel *chan
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-ares_destroy/">ares_destroy</a>(3),</code> <code><a href="/docs/linux/man/3-ares_dup/">ares_dup</a>(3),</code> <code><a href="/docs/linux/man/3-ares_library_init/">ares_library_init</a>(3),</code> <code><a href="/docs/linux/man/3-ares_set_servers/">ares_set_servers</a>(3)</code></p>
 <h2>AUTHOR</h2>
-<p> Greg Hudson, MIT Information Systems<br />
- Copyright 1998 by the Massachusetts Institute of Technology.<br />
+<p> Greg Hudson, MIT Information Systems<br/>
+ Copyright 1998 by the Massachusetts Institute of Technology.<br/>
  Copyright (C) 2004-2010 by Daniel Stenberg. </p>

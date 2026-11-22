@@ -11,11 +11,11 @@ description: "API Typedefs and Structs –"
 <p> API Typedefs and Structs &#8211; </p>
 <p> These structures (and the typedefs that you use to reference them and their pointers) are the C equivalent of objects.</p>
 <h3>Data Structures</h3>
-<p> struct <code>ANTLR3_INPUT_STREAM_struct</code><br />
+<p> struct <code>ANTLR3_INPUT_STREAM_struct</code><br/>
  <i>Master context structure for an ANTLR3 C runtime based input stream. </i></p>
 <h3>Modules</h3>
 <p> <code>ANTLR3_BASE_RECOGNIZER &#8211; Base Recognizer Class Definition</code> </p>
-<p> <i>This is the definition of the base recognizer interface, instantiations of which are referred to via </i><code>pANTLR3_BASE_RECOGNIZER</code>.<br />
+<p> <i>This is the definition of the base recognizer interface, instantiations of which are referred to via </i><code>pANTLR3_BASE_RECOGNIZER</code>.<br/>
  <code>ANTLR3_RECOGNIZER_SHARED_STATE Recognizer Shared State Class Definition</code> </p>
 <p> <code>ANTLR3_BITSET &#8211; Bitset Class Definition</code> </p>
 <p> <code>ANTLR3_TOKEN_FACTORY &#8211; Token Factory Class Definition</code> </p>
@@ -53,7 +53,7 @@ description: "API Typedefs and Structs –"
 <p> <code>ANTLR3_REWRITE_RULE_ELEMENT_STREAM &#8211; Token Rewrite Stream Class Definition</code> </p>
 <p> <code>ANTLR3_DEBUG_EVENT_LISTENER &#8211; Debugger Class Definition</code> </p>
 <h3>Typedefs</h3>
-<p> typedef struct <code>ANTLR3_INPUT_STREAM_struct</code> <code>ANTLR3_INPUT_STREAM</code><br />
+<p> typedef struct <code>ANTLR3_INPUT_STREAM_struct</code> <code>ANTLR3_INPUT_STREAM</code><br/>
  <i>Master context structure for an ANTLR3 C runtime based input stream. </i></p>
 <h2>Detailed Description</h2>
 <p> These structures (and the typedefs that you use to reference them and their pointers) are the C equivalent of objects. </p>

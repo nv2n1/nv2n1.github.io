@@ -11,7 +11,7 @@ description: "dgels.f –"
 <p> dgels.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dgels</code> (TRANS, M, N, NRHS, A, LDA, B, LDB, WORK, LWORK, INFO)<br />
+<p> subroutine <code>dgels</code> (TRANS, M, N, NRHS, A, LDA, B, LDB, WORK, LWORK, INFO)<br/>
  <i></i><code> DGELS solves overdetermined or underdetermined systems for GE matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dgels (characterTRANS, integerM, integerN, integerNRHS, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( ldb, * )B, integerLDB, double precision, dimension( * )WORK, integerLWORK, integerINFO)</h3>
@@ -56,10 +56,10 @@ they are stored as the columns of the
           columns of the matrices B and X. NRHS &gt;=0.
 </pre>
 <p> <i>A</i> </p>
-<p>A is DOUBLE PRECISION array, dimension(LDA, N) On entry, the M &#8211; by &#8211; N matrix A.On exit,<br />
-    if M &gt;= N, A is overwritten by details of its QR factorization as returned by DGEQRF;<br />
-if M<br />
-&lt; N, A is overwritten by details of its LQ<br />
+<p>A is DOUBLE PRECISION array, dimension(LDA, N) On entry, the M &#8211; by &#8211; N matrix A.On exit,<br/>
+    if M &gt;= N, A is overwritten by details of its QR factorization as returned by DGEQRF;<br/>
+if M<br/>
+&lt; N, A is overwritten by details of its LQ<br/>
          factorization as returned by DGELQF.</p>
 <p> <i>LDA</i> </p>
 <pre>

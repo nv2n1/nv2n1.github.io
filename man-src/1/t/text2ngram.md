@@ -29,5 +29,5 @@ description: "text2ngram – generate statistical n-gram data from text"
 <dd> Show version information</dd></dl>
 <p> text2ngram is free software distributed under the GPL. Send bug reports to matteo.vescovi [at] yahoo.co.uk Copyright &#169; Matteo Vescovi</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; Matteo Vescovi<br />
+<p> Copyright &#169; Matteo Vescovi<br/>
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>

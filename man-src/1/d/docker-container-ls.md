@@ -14,39 +14,39 @@ description: "docker-container-ls – List containers"
 <h2>DESCRIPTION</h2>
 <p> List the containers in the local repository. By default this shows only the running containers. </p>
 <h2>Filters</h2>
-<p> Filter output based on these conditions:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; ancestor=([:tag]||image [at] digest &lt;mailto:image [at] digest&gt;)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;containers created from an image or a descendant.<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; before=(|)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; expose=([/]|/[])<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; exited=&nbsp;an exit code of&nbsp;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; health=(starting|healthy|unhealthy|none)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; id=&nbsp;a container&#8217;s ID<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; isolation=(default|process|hyperv)&nbsp;(Windows daemon only)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; is-task=(true|false)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; label=&nbsp;or label==<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; name=&nbsp;a container&#8217;s name<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; network=(|)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; publish=([/]|/[])<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; since=(|)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; status=(created|restarting|removing|running|paused|exited)<br />
+<p> Filter output based on these conditions:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; ancestor=([:tag]||image [at] digest &lt;mailto:image [at] digest&gt;)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;containers created from an image or a descendant.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; before=(|)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; expose=([/]|/[])<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; exited=&nbsp;an exit code of&nbsp;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; health=(starting|healthy|unhealthy|none)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; id=&nbsp;a container&#8217;s ID<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; isolation=(default|process|hyperv)&nbsp;(Windows daemon only)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; is-task=(true|false)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; label=&nbsp;or label==<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; name=&nbsp;a container&#8217;s name<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; network=(|)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; publish=([/]|/[])<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; since=(|)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; status=(created|restarting|removing|running|paused|exited)<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; volume=(|) </p>
 <h2>Format</h2>
 <p> The formatting option (<code>&#8211;format</code>) pretty-prints container output using a Go template. </p>
-<p> Valid placeholders for the Go template are listed below:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; .ID&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; Container ID.<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; .Image&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; Image ID.<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; .Command&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; Quoted command.<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; .CreatedAt&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; Time when the container was created.<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; .RunningFor&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; Elapsed time since the container was started.<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; .Ports&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; Exposed ports.<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; .Status&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; Container status.<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; .Size&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; Container disk size.<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; .Names&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; Container names.<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; .Labels&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; All labels assigned to the container.<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; .Label&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; Value of a specific label for this container.<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;For example&nbsp;<code>&#8216;&#123;&#123;.Label&nbsp;&quot;com.docker.swarm.cpu&quot;}}&#8217;</code>.<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; .Mounts&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; Names of the volumes mounted in this container.<br />
+<p> Valid placeholders for the Go template are listed below:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; .ID&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; Container ID.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; .Image&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; Image ID.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; .Command&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; Quoted command.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; .CreatedAt&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; Time when the container was created.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; .RunningFor&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; Elapsed time since the container was started.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; .Ports&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; Exposed ports.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; .Status&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; Container status.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; .Size&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; Container disk size.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; .Names&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; Container names.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; .Labels&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; All labels assigned to the container.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; .Label&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; Value of a specific label for this container.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;For example&nbsp;<code>&#8216;&#123;&#123;.Label&nbsp;&quot;com.docker.swarm.cpu&quot;}}&#8217;</code>.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; .Mounts&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; Names of the volumes mounted in this container.<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; .Networks&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; Names of the networks attached to this container. </p>
 <h2>EXAMPLES</h2>
 <h2>Display all containers, including non-running</h2>
@@ -95,15 +95,15 @@ $ docker container ls-- format "&#123;&#123;.ID}}: &#123;&#123;.Command}}" a87ec
 <dl>
 <dt>
 </dt><dd>
-<p>$ docker container ls&#8211; format &#8220;table &#123;&#123;.ID}}	&#123;&#123;.Labels}}&#8221; CONTAINER ID LABELS<br />
-    a87ecb4f327c com.docker.swarm.node = ubuntu,<br />
+<p>$ docker container ls&#8211; format &#8220;table &#123;&#123;.ID}}	&#123;&#123;.Labels}}&#8221; CONTAINER ID LABELS<br/>
+    a87ecb4f327c com.docker.swarm.node = ubuntu,<br/>
                  com.docker.swarm.storage = ssd 01946d9d34d8 c1d3b0166030 com.docker.swarm.node = debian, com.docker.swarm.cpu = 6 41d50ecd2f57 com.docker.swarm.node = fedora, com.docker.swarm.cpu = 3, com.docker.swarm.storage = ssd
 </dd></dl>
 <h2>Display containers with their node label in a table</h2>
 <dl>
 <dt>
 </dt><dd>
-<p>$ docker container ls&#8211; format &#8216;table &#123;&#123;.ID}}	&#123;&#123;(.Label &#8220;com.docker.swarm.node&#8221;)}}&#8217; CONTAINER ID NODE<br />
+<p>$ docker container ls&#8211; format &#8216;table &#123;&#123;.ID}}	&#123;&#123;(.Label &#8220;com.docker.swarm.node&#8221;)}}&#8217; CONTAINER ID NODE<br/>
     a87ecb4f327c ubuntu 01946d9d34d8 c1d3b0166030 debian 41d50ecd2f57 fedora
 </dd></dl>
 <h2>Display containers with remote-volume mounted</h2>

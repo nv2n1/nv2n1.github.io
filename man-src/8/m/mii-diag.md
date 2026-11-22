@@ -39,21 +39,21 @@ description: "mii-diag – Network adapter control and monitoring"
 <dd>Emit usage information. </dd>
 </dl>
 <h2>Description</h2>
-<p>Calling the command with just the interface name produces extensive output describing the transceiver capabilities, configuration and current status. The &#8216;&#8211;monitor&#8217; option allows scripting link beat changes. This option is similar to &#8211;watch, but with lower overhead and simplified output. It polls the interface only once a second and the output format is a single line per link change with three fixed words<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;unknown|down||negotiating|up&gt;&nbsp;<wbr>&lt;STATUS&gt;&nbsp;<wbr>&lt;PARTNER-CAP&gt; Example output: mii-diag &#8211;monitor eth0<br />
-down&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0x7809 0x0000<br />
-negotiating&nbsp;<wbr>&nbsp;<wbr>0x7829 0x45e1<br />
-up&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0x782d 0x45e1<br />
-down&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0x7809 0x0000 This may be used as<br />
-&nbsp;<wbr>&nbsp;<wbr>mii-diag &#8211;monitor eth0 |<br />
-&nbsp;<wbr>while read linkstatus bmsr linkpar;&nbsp;<wbr>do<br />
-&nbsp;<wbr>&nbsp;<wbr>case&nbsp;<wbr>$linkstatus in<br />
-&nbsp;<wbr>&nbsp;<wbr>up)&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>ifup eth0&nbsp;<wbr>;;<br />
-&nbsp;<wbr>&nbsp;<wbr>down)&nbsp;<wbr>ifdown eth0&nbsp;<wbr>;;<br />
-&nbsp;<wbr>&nbsp;<wbr>esac<br />
+<p>Calling the command with just the interface name produces extensive output describing the transceiver capabilities, configuration and current status. The &#8216;&#8211;monitor&#8217; option allows scripting link beat changes. This option is similar to &#8211;watch, but with lower overhead and simplified output. It polls the interface only once a second and the output format is a single line per link change with three fixed words<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;unknown|down||negotiating|up&gt;&nbsp;<wbr>&lt;STATUS&gt;&nbsp;<wbr>&lt;PARTNER-CAP&gt; Example output: mii-diag &#8211;monitor eth0<br/>
+down&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0x7809 0x0000<br/>
+negotiating&nbsp;<wbr>&nbsp;<wbr>0x7829 0x45e1<br/>
+up&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0x782d 0x45e1<br/>
+down&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0x7809 0x0000 This may be used as<br/>
+&nbsp;<wbr>&nbsp;<wbr>mii-diag &#8211;monitor eth0 |<br/>
+&nbsp;<wbr>while read linkstatus bmsr linkpar;&nbsp;<wbr>do<br/>
+&nbsp;<wbr>&nbsp;<wbr>case&nbsp;<wbr>$linkstatus in<br/>
+&nbsp;<wbr>&nbsp;<wbr>up)&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>ifup eth0&nbsp;<wbr>;;<br/>
+&nbsp;<wbr>&nbsp;<wbr>down)&nbsp;<wbr>ifdown eth0&nbsp;<wbr>;;<br/>
+&nbsp;<wbr>&nbsp;<wbr>esac<br/>
 &nbsp;<wbr>done It may be useful to shorten the DHCP client daemon timeout if it does not receive an address by adding the following setting to /etc/sysconfig/network: DHCPCDARGS=&quot;-t 3&quot; </p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-ether-wake/">ether-wake</a></code>(8),<code>net-diag</code>(8),<code><a href="/docs/linux/man/8-mii-tool/">mii-tool</a></code>(8).<br />
+<p><code><a href="/docs/linux/man/8-ether-wake/">ether-wake</a></code>(8),<code>net-diag</code>(8),<code><a href="/docs/linux/man/8-mii-tool/">mii-tool</a></code>(8).<br/>
  Addition documentation is available from <a rel="nofollow" href="http://scyld.com/diag/index.html.">http://scyld.com/diag/index.html.</a> </p>
 <h2>Known Bugs</h2>
 <p>The &#8211;all-interfaces option is quirky. There are very few settings that are usefully applied to all interfaces.</p>

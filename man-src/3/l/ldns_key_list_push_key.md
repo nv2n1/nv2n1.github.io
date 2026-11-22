@@ -10,7 +10,7 @@ description: "ldns_key_list_key_count, ldns_key_list_key, ldns_key_rsa_key, ldns
 
 <p> ldns_key_list_key_count, ldns_key_list_key, ldns_key_rsa_key, ldns_key_dsa_key, ldns_key_algorithm, ldns_key_hmac_key, ldns_key_origttl, ldns_key_inception, ldns_key_expiration, ldns_key_keytag, ldns_key_pubkey_owner, ldns_key_flags </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> size_t ldns_key_list_key_count(const ldns_key_list *key_list); </p>

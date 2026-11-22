@@ -14,9 +14,9 @@ description: "sc::BcastStateSend –"
 #include &lt;mstate.h&gt;</code></pre>
 <p> Inherits <code>sc::MsgStateSend</code>.</p>
 <h3>Public Member Functions</h3>
-<p><code>BcastStateSend</code> (const <code>Ref</code>&lt; <code>MessageGrp</code> &gt; &amp;)<br />
- <i>Create the </i><code>BcastStateSend</code>.<br />
- void <code>flush</code> ()<br />
+<p><code>BcastStateSend</code> (const <code>Ref</code>&lt; <code>MessageGrp</code> &gt; &amp;)<br/>
+ <i>Create the </i><code>BcastStateSend</code>.<br/>
+ void <code>flush</code> ()<br/>
  <i>Flush the data remaining in the buffer. </i></p>
 <h2>Detailed Description</h2>
 <p><code>BcastStateSend</code> does the send part of a broadcast of an object to all nodes. </p>

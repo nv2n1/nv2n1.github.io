@@ -23,5 +23,5 @@ description: "usleep – sleep some number of microseconds"
 <h2>BUGS</h2>
 <p> Probably not accurate on many machines down to the microsecond. Count on precision only to -4 or maybe -5.</p>
 <h2>AUTHOR</h2>
-<p> Donald Barnes &lt;djb [at] redhat.com&gt;<br />
+<p> Donald Barnes &lt;djb [at] redhat.com&gt;<br/>
  Erik Troan &lt;ewt [at] redhat.com&gt; </p>

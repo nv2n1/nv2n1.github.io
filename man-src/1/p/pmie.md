@@ -110,13 +110,13 @@ $hour &gt;= 9 &amp;&amp; $hour &lt;= 17 &amp;&amp;
 delta = 10 min;
 </pre>
 <p> If either the / or the /usr filesystem is more than 95% full, display an alarm popup, but not if it has already been displayed during the last 4 hours: </p>
-<p>filesys.free #&#8217;/dev/root&#8217; /<br />
-        filesys.capacity #&#8217;/dev/root&#8217; &lt;<br />
-    0.05<br />
-        -&gt;alarm 4 hour &#8220;root filesystem (almost) full&#8221;;<br />
-filesys.free #&#8217;/dev/usr&#8217; /<br />
-        filesys.capacity #&#8217;/dev/usr&#8217; &lt;<br />
-    0.05<br />
+<p>filesys.free #&#8217;/dev/root&#8217; /<br/>
+        filesys.capacity #&#8217;/dev/root&#8217; &lt;<br/>
+    0.05<br/>
+        -&gt;alarm 4 hour &#8220;root filesystem (almost) full&#8221;;<br/>
+filesys.free #&#8217;/dev/usr&#8217; /<br/>
+        filesys.capacity #&#8217;/dev/usr&#8217; &lt;<br/>
+    0.05<br/>
         -&gt;alarm 4 hour &#8220;/usr filesystem (almost) full&#8221;;</p>
 <p> The following rule requires a machine that supports the PCP environment metrics. If the machine environment temperature rises more than 2 degrees over a 10 minute interval, write an entry in the system log: </p>
 <pre>
@@ -125,21 +125,21 @@ environ.temp @0 - environ.temp @1 &gt; 2
    syslog &quot;machine room temperature rise alarm&quot;;
 </pre>
 <p> And something interesting if you have performance problems with your Oracle database: </p>
-<p>// back to 30sec evaluations<br />
-delta = 30 sec;<br />
-sid = &#8220;ptg1&#8221;;<br />
-#$ORACLE_SID setting<br />
-    lid = &#8220;223&#8221;;<br />
-#latch ID from v$latch<br />
-    lru = &#8220;#&#8217;$sid/$lid cache buffers lru chain'&#8221;;<br />
-host = &#8220;:moomba.melbourne.sgi.com&#8221;;<br />
-gets = &#8220;oracle.latch.gets $host $lru&#8221;;<br />
-total = &#8220;oracle.latch.gets $host $lru +<br />
-                oracle.latch.misses $host $lru +<br />
-                oracle.latch.immisses $host $lru &#8220;;<br />
-                $total &gt;<br />
-            100 &amp;&amp;<br />
-        $gets / $total &lt; 0.2<br />
+<p>// back to 30sec evaluations<br/>
+delta = 30 sec;<br/>
+sid = &#8220;ptg1&#8221;;<br/>
+#$ORACLE_SID setting<br/>
+    lid = &#8220;223&#8221;;<br/>
+#latch ID from v$latch<br/>
+    lru = &#8220;#&#8217;$sid/$lid cache buffers lru chain'&#8221;;<br/>
+host = &#8220;:moomba.melbourne.sgi.com&#8221;;<br/>
+gets = &#8220;oracle.latch.gets $host $lru&#8221;;<br/>
+total = &#8220;oracle.latch.gets $host $lru +<br/>
+                oracle.latch.misses $host $lru +<br/>
+                oracle.latch.immisses $host $lru &#8220;;<br/>
+                $total &gt;<br/>
+            100 &amp;&amp;<br/>
+        $gets / $total &lt; 0.2<br/>
                              -&gt;alarm &#8220;high lru latch contention in database $sid&#8221;;</p>
 <p> The following ruleset will emit exactly one message depending on the availability and value of the 1-minute load average. </p>
 <pre><code>
@@ -253,8 +253,8 @@ mypmda.errors &gt; 1 &amp;&amp; instant mypmda.errors &lt; 100
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code> some_inst<br />
- some_host<br />
+<td><code> some_inst<br/>
+ some_host<br/>
  some_sample </code></td>
 <td>Existential</td>
 <td> True if at least one set member is true in the associated dimension
@@ -266,8 +266,8 @@ mypmda.errors &gt; 1 &amp;&amp; instant mypmda.errors &lt; 100
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code> all_inst<br />
- all_host<br />
+<td><code> all_inst<br/>
+ all_host<br/>
  all_sample </code></td>
 <td>Universal</td>
 <td> True if all set members are true in the associated dimension
@@ -279,8 +279,8 @@ mypmda.errors &gt; 1 &amp;&amp; instant mypmda.errors &lt; 100
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code> N%_inst<br />
- N%_host<br />
+<td><code> N%_inst<br/>
+ N%_host<br/>
  N%_sample </code></td>
 <td>Percentile</td>
 <td> True if at least <i>N</i> percent of set members are true in the associated dimension
@@ -345,8 +345,8 @@ match_inst &quot;^dks[23]d&quot; disk.dev.total &gt; 20;
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code> min_inst<br />
- min_host<br />
+<td><code> min_inst<br/>
+ min_host<br/>
  min_sample </code></td>
 <td>Extrema</td>
 <td> Minimum value across all set members in the associated dimension
@@ -358,8 +358,8 @@ match_inst &quot;^dks[23]d&quot; disk.dev.total &gt; 20;
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code> max_inst<br />
- max_host<br />
+<td><code> max_inst<br/>
+ max_host<br/>
  max_sample </code></td>
 <td>Extrema</td>
 <td> Maximum value across all set members in the associated dimension
@@ -371,8 +371,8 @@ match_inst &quot;^dks[23]d&quot; disk.dev.total &gt; 20;
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code> sum_inst<br />
- sum_host<br />
+<td><code> sum_inst<br/>
+ sum_host<br/>
  sum_sample </code></td>
 <td>Aggregate</td>
 <td> Sum of values across all set members in the associated dimension
@@ -384,8 +384,8 @@ match_inst &quot;^dks[23]d&quot; disk.dev.total &gt; 20;
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code> avg_inst<br />
- avg_host<br />
+<td><code> avg_inst<br/>
+ avg_host<br/>
  avg_sample </code></td>
 <td>Aggregate</td>
 <td> Average value across all set members in the associated dimension
@@ -658,9 +658,9 @@ match_inst &quot;^dks[23]d&quot; disk.dev.total &gt; 20;
 <p></center></p>
 <h2>RULESETS</h2>
 <p> The ruleset clause is used to define a set of rules and actions that are evaluated in order until some action is executed, at which point the remaining rules and actions are skipped until the ruleset is again scheduled for evaluation. The keyword else is used to separate rules. After one or more regular rules (with a predicate and an action), a ruleset may include an optional </p>
-<p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> unknown -&gt; action<br />
+<p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> unknown -&gt; action<br/>
  clause, optionally followed by a </p>
-<p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> otherwise -&gt; action<br />
+<p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> otherwise -&gt; action<br/>
  clause. </p>
 <p> If all of the predicates in the rules evaluate to unknown and an unknown clause has been specified then action associated with the unknown clause will be executed. </p>
 <p> If no rule predicate is true and the unknown action is either not specified or not executed and an otherwise clause has been specified, then the action associated with the otherwise clause will be executed.</p>

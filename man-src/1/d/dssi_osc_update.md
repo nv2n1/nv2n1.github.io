@@ -16,8 +16,8 @@ description: "dssi_osc_update – send a DSSI `update’ OSC request"
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>&lt;OSC URL&gt;</code></dt>
-<dd> The URL specifying the host and plugin, to which the request is sent. This is typically obtained from the host, perhaps from startup messages or the host&#8217;s `About&#8217; dialog. For example:<br />
-&nbsp;<wbr>&nbsp;<wbr>osc.<a href="udp://localhost:19383/dssi/test.1">udp://localhost:19383/dssi/test.1</a><br />
+<dd> The URL specifying the host and plugin, to which the request is sent. This is typically obtained from the host, perhaps from startup messages or the host&#8217;s `About&#8217; dialog. For example:<br/>
+&nbsp;<wbr>&nbsp;<wbr>osc.<a href="udp://localhost:19383/dssi/test.1">udp://localhost:19383/dssi/test.1</a><br/>
 &nbsp;<wbr>&nbsp;<wbr>osc.<a href="udp://my.host.org:10886/dssi/xsynth-dssi/Xsynth/chan00">udp://my.host.org:10886/dssi/xsynth-dssi/Xsynth/chan00</a></dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-dssi_osc_send/">dssi_osc_send</a></code>(1). </p>

@@ -56,7 +56,7 @@ description: "kross – KDE application to run kross scripts."
 <p> <i><a href="/docs/linux/man/7-kdeoptions/">kdeoptions</a></i>(7), <i><a href="/docs/linux/man/7-qtoptions/">qtoptions</a></i>(7), <i><a href="/docs/linux/man/1-python/">python</a></i>(1), <i><a href="/docs/linux/man/1-ruby/">ruby</a></i>(1), <i><a href="/docs/linux/man/1-kjs/">kjs</a></i>(1), <i><a href="/docs/linux/man/1-java/">java</a></i>(1), <i><a href="/docs/linux/man/1-falcon/">falcon</a></i>(1) </p>
 <p> Look at <i><a rel="nofollow" href="http://kross.dipe.org/solution.html">http://kross.dipe.org/solution.html</a></i> for more information and tutorials.</p>
 <h2>BUGS</h2>
-<p> There are probably tons of bugs. Use m[blue]<code>bugs.kde.org</code>m[]<font SIZE="-2">[1]</font> to report them.</p>
+<p> There are probably tons of bugs. Use m[blue]<code>bugs.kde.org</code>m[][1] to report them.</p>
 <h2>AUTHOR</h2>
 <p> <code>Sebastian Sauer</code> &lt;mail [at] dipe.org&gt;</p>
 <dl>

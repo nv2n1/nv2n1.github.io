@@ -28,7 +28,7 @@ description: "reformail – E-mail reformatting tool"
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> Unlike a similar feature in the <code>formail</code> command, <code>reformail</code> takes care of locking the file, so it&#8217;s not necessary to implement your own locking mechanism for this option. </p>
 </dl>
 <h3>Extracting headers</h3>
@@ -81,12 +81,12 @@ description: "reformail – E-mail reformatting tool"
 <dt>
 </dt><dd> If this header occurs multiple times in the message, remove all occurrences except the last one.</dd></dl>
 <h2>AUTOREPLIES</h2>
-<p> The autoreply options from earlier versions of <code>mailbot</code> have been moved into m[blue]<code><a href="/docs/linux/man/1-mailbot/">mailbot</a></code>(1)m[]<font SIZE="-2">[1]</font>.</p>
+<p> The autoreply options from earlier versions of <code>mailbot</code> have been moved into m[blue]<code><a href="/docs/linux/man/1-mailbot/">mailbot</a></code>(1)m[][1].</p>
 <h2>BUGS</h2>
 <p> For the <code>-a</code>, <code>-A</code>, and <code>-I</code> options, a space after the header name and the colon is considered to be a non-empty field. </p>
 <p> Do not provide the same header to more than one family of header-modifying options, such as <code>-u</code>/<code>-U</code> and <code>-a</code>/<code>-A</code>. Doing so yields unpredictable results. It&#8217;s better to run <code>reformail</code> several times (use a pipe, perhaps).</p>
 <h2>SEE ALSO</h2>
-<p> m[blue]<code>courier</code>(8)m[]<font SIZE="-2">[2]</font>, <code>sendmail</code>(8), m[blue]<code><a href="/docs/linux/man/1-mailbot/">mailbot</a></code>(1)m[]<font SIZE="-2">[1]</font>, m[blue]<code><a href="/docs/linux/man/1-maildrop/">maildrop</a></code>(1)m[]<font SIZE="-2">[3]</font>.</p>
+<p> m[blue]<code>courier</code>(8)m[][2], <code>sendmail</code>(8), m[blue]<code><a href="/docs/linux/man/1-mailbot/">mailbot</a></code>(1)m[][1], m[blue]<code><a href="/docs/linux/man/1-maildrop/">maildrop</a></code>(1)m[][3].</p>
 <h2>AUTHOR</h2>
 <p> <code>Sam Varshavchik</code></p>
 <dl>

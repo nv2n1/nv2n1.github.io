@@ -17,9 +17,9 @@ maketext[OPTION][--domain = TEXTDOMAIN] MSGKEY[PARAM...] maketext[OPTION] - s MS
 
 <h2>DESCRIPTION</h2>
 
- The <tt>&quot;maketext&quot;</tt> script translates a natural language message into the user's language, by looking up the translation in a message <font SIZE="-1">MO</font> file, and process the plural transformation with Maketext. 
+ The <tt>&quot;maketext&quot;</tt> script translates a natural language message into the user's language, by looking up the translation in a message MO file, and process the plural transformation with Maketext. 
 
- The <tt>&quot;maketext&quot;</tt> script is a command-line interface to <i>Locale::Maketext::Gettext</i>(3) (and <i>Locale::Maketext</i>(3)). It can be used in shell scripts, etc, to translate, maketext and return the result. By this way, it enables Maketext to be integrated into other programming languages/systems, like bash/csh, python, <font SIZE="-1">PHP, C,</font> etc. It works like the command-line program gettext. 
+ The <tt>&quot;maketext&quot;</tt> script is a command-line interface to <i>Locale::Maketext::Gettext</i>(3) (and <i>Locale::Maketext</i>(3)). It can be used in shell scripts, etc, to translate, maketext and return the result. By this way, it enables Maketext to be integrated into other programming languages/systems, like bash/csh, python, PHP, C, etc. It works like the command-line program gettext. 
 
  For example: 
 
@@ -31,25 +31,25 @@ maketext[OPTION][--domain = TEXTDOMAIN] MSGKEY[PARAM...] maketext[OPTION] - s MS
 
 <dl>
 <dt>-d,--domain=TEXTDOMAIN
-</dt><dd> Retrieve translated messages from <font SIZE="-1">TEXTDOMAIN.</font>
+</dt><dd> Retrieve translated messages from TEXTDOMAIN.
 </dd><dt>-s
 </dt><dd> Adds a new line to the end of the output so that it behaves like the `echo' or the `gettext' command.
 </dd><dt>-h,--help
 </dt><dd> Display the help messages.
 </dd><dt>-V,--version
 </dt><dd> Display version information and exit.
-</dd><dt><font SIZE="-1">MSGKEY</font>
+</dd><dt>MSGKEY
 </dt><dd> The original text used to look up translated text.
-</dd><dt><font SIZE="-1">PARAM...</font>
+</dd><dt>PARAM...
 </dt><dd> Parameters to Maketext for the plural and other text functions.</dd></dl>
 
 <h2>ENVIRONMENT</h2>
 
 <dl>
-<dt><font SIZE="-1">TEXTDOMAIN</font>
-</dt><dd> <font SIZE="-1">TEXTDOMAIN</font> is used to determine the text domain when the -d parameter is not given.
-</dd><dt><font SIZE="-1">TEXTDOMAINDIR</font>
-</dt><dd> <font SIZE="-1">TEXTDOMAINDIR</font> is used to search the message catelog/MO file if it does not reside in the system locale directories.</dd></dl>
+<dt>TEXTDOMAIN
+</dt><dd> TEXTDOMAIN is used to determine the text domain when the -d parameter is not given.
+</dd><dt>TEXTDOMAINDIR
+</dt><dd> TEXTDOMAINDIR is used to search the message catelog/MO file if it does not reside in the system locale directories.</dd></dl>
 
 <h2>NOTES</h2>
 
@@ -63,7 +63,7 @@ maketext[OPTION][--domain = TEXTDOMAIN] MSGKEY[PARAM...] maketext[OPTION] - s MS
 
 <h2>SEE ALSO</h2>
 
- <i>Locale::Maketext</i>(3), <i>Locale::Maketext::TPJ13</i>(3), <i>Locale::Maketext::Gettext</i>(3), <i>Locale::Maketext::Gettext::Functions</i>(3), <i><a HREF="/docs/linux/man/3-bindtextdomain/">bindtextdomain</a></i>(3), <i><a HREF="/docs/linux/man/3-textdomain/">textdomain</a></i>(3). Also, please refer to the official <font SIZE="-1">GNU</font> gettext manual at &lt;<a rel="nofollow" HREF="http://www.gnu.org/software/gettext/manual/">http://www.gnu.org/software/gettext/manual/</a>&gt;.
+ <i>Locale::Maketext</i>(3), <i>Locale::Maketext::TPJ13</i>(3), <i>Locale::Maketext::Gettext</i>(3), <i>Locale::Maketext::Gettext::Functions</i>(3), <i><a HREF="/docs/linux/man/3-bindtextdomain/">bindtextdomain</a></i>(3), <i><a HREF="/docs/linux/man/3-textdomain/">textdomain</a></i>(3). Also, please refer to the official GNU gettext manual at &lt;<a rel="nofollow" HREF="http://www.gnu.org/software/gettext/manual/">http://www.gnu.org/software/gettext/manual/</a>&gt;.
 
 <h2>AUTHOR</h2>
 

@@ -10,23 +10,23 @@ description: "Cervisia – Graphical CVS frontend"
 
 <p> Cervisia &#8211; Graphical CVS frontend</p>
 <h2>SYNOPSIS</h2>
-<p> <code>cervisia</code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr><code>&#8211;display</code>&nbsp;<wbr><i>display</i>&nbsp;<wbr>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr><code>&#8211;caption</code>&nbsp;<wbr><i>caption</i>&nbsp;<wbr>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr><code>&#8211;icon</code>&nbsp;<wbr><i>icon</i>&nbsp;<wbr>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr><code>&#8211;miniicon</code>&nbsp;<wbr><i>miniicon</i>&nbsp;<wbr>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr><code>&#8211;config</code>&nbsp;<wbr><i>filename</i>&nbsp;<wbr>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr><code>&#8211;dcopserver</code>&nbsp;<wbr><i>server</i>&nbsp;<wbr>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr><code>&#8211;nocrashhandler</code>&nbsp;<wbr>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr><code>&#8211;waitforwm</code>&nbsp;<wbr>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr><code>&#8211;style</code>&nbsp;<wbr><i>style</i>&nbsp;<wbr>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr><code>&#8211;geometry</code>&nbsp;<wbr><i>geometry</i>&nbsp;<wbr>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr><code>&#8211;resolve</code>&nbsp;<wbr><i>filename</i>&nbsp;<wbr>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr><code>&#8211;log</code>&nbsp;<wbr><i>filename</i>&nbsp;<wbr>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr><code>&#8211;annotate</code>&nbsp;<wbr><i>filename</i>&nbsp;<wbr>]<br />
+<p> <code>cervisia</code><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr><code>&#8211;display</code>&nbsp;<wbr><i>display</i>&nbsp;<wbr>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr><code>&#8211;caption</code>&nbsp;<wbr><i>caption</i>&nbsp;<wbr>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr><code>&#8211;icon</code>&nbsp;<wbr><i>icon</i>&nbsp;<wbr>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr><code>&#8211;miniicon</code>&nbsp;<wbr><i>miniicon</i>&nbsp;<wbr>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr><code>&#8211;config</code>&nbsp;<wbr><i>filename</i>&nbsp;<wbr>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr><code>&#8211;dcopserver</code>&nbsp;<wbr><i>server</i>&nbsp;<wbr>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr><code>&#8211;nocrashhandler</code>&nbsp;<wbr>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr><code>&#8211;waitforwm</code>&nbsp;<wbr>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr><code>&#8211;style</code>&nbsp;<wbr><i>style</i>&nbsp;<wbr>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr><code>&#8211;geometry</code>&nbsp;<wbr><i>geometry</i>&nbsp;<wbr>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr><code>&#8211;resolve</code>&nbsp;<wbr><i>filename</i>&nbsp;<wbr>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr><code>&#8211;log</code>&nbsp;<wbr><i>filename</i>&nbsp;<wbr>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr><code>&#8211;annotate</code>&nbsp;<wbr><i>filename</i>&nbsp;<wbr>]<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr><i>directory</i>&nbsp;<wbr>]</p>
 <h2>DESCRIPTION</h2>
-<p> Cervisia is a graphical user interface for the Concurrent Versions System. It is based on the <font SIZE="-1">KDE</font> libraries and therefore shares their Look&#8217;n&#8217;Feel, configuration and help system.</p>
+<p> Cervisia is a graphical user interface for the Concurrent Versions System. It is based on the KDE libraries and therefore shares their Look&#8217;n&#8217;Feel, configuration and help system.</p>
 <h2>OPTIONS</h2>
 <p> Cervisia accepts the following options:</p>
 <dl>
@@ -51,9 +51,9 @@ description: "Cervisia – Graphical CVS frontend"
 <dt><code>&#8211;nocrashhandler</code></dt>
 <dd> Disables the crash handler. Use this to get core dumps</dd>
 <dt><code>&#8211;waitforwm</code></dt>
-<dd> Waits for a <font SIZE="-1">WM_NET</font> compatible windowmanager</dd>
+<dd> Waits for a WM_NET compatible windowmanager</dd>
 <dt><code>&#8211;style</code> <i>style</i></dt>
-<dd> Sets the application <font SIZE="-1">GUI</font> style</dd>
+<dd> Sets the application GUI style</dd>
 <dt><code>&#8211;geometry</code> <i>geometry</i></dt>
 <dd> Sets the geometry of the main window</dd></dl>
 <h2>FILES</h2>

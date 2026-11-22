@@ -114,7 +114,7 @@ description: "xfreerdp – FreeRDP X11 client"
 <p> <i>num</i></p>
 <dl>
 <dt>
-</dt><dd> A hexadecimal number that represents a bit-mask, were numbers mean the following <font SIZE="-2">[1]</font>: </dd>
+</dt><dd> A hexadecimal number that represents a bit-mask, were numbers mean the following [1]: </dd>
 <p> 1</p>
 <dl>
 <dt>

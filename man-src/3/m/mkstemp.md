@@ -21,13 +21,13 @@ int mkostemps(char *template, int suffixlen, int flags);
 <p> <code>mkstemp</code>():</p>
 <dl>
 <dt>
-</dt><dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.12:&nbsp;*/&nbsp;_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L<br />
+</dt><dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.12:&nbsp;*/&nbsp;_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_SVID_SOURCE ||&nbsp;_BSD_SOURCE</dd></dl>
-<p> <code>mkostemp</code>(): _GNU_SOURCE<br />
- <code>mkstemps</code>():<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Glibc since 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_SVID_SOURCE ||&nbsp;_BSD_SOURCE<br />
+<p> <code>mkostemp</code>(): _GNU_SOURCE<br/>
+ <code>mkstemps</code>():<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Glibc since 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_SVID_SOURCE ||&nbsp;_BSD_SOURCE<br/>
  <code>mkostemps</code>(): _GNU_SOURCE</p>
 <h2>DESCRIPTION</h2>
 <p> The <code>mkstemp</code>() function generates a unique temporary filename from <i>template</i>, creates and opens the file, and returns an open file descriptor for the file. </p>
@@ -59,7 +59,7 @@ int mkostemps(char *template, int suffixlen, int flags);
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>mkstemp</code>(), <code>mkostemp</code>(),<br />
+<td> <code>mkstemp</code>(), <code>mkostemp</code>(),<br/>
  <code>mkstemps</code>(), <code>mkostemps</code>() </td>
 <td>Thread safety</td>
 <td>MT-Safe

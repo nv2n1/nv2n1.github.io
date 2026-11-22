@@ -10,7 +10,7 @@ description: "gajim – a Jabber/XMPP client"
 
 <p> <code>gajim</code> &#8211; a Jabber/XMPP client </p>
 <h2>SYNOPSIS</h2>
-<p> &#8211;<code>h</code><br />
+<p> &#8211;<code>h</code><br/>
  [-<code>q</code> ] [-<code>v</code> ] [-<code>l </code><i>subsystem=level</i> ] [-<code>p </code><i>name</i> ] [-<code>c </code><i>directory</i> ]</p>
 <h2>DESCRIPTION</h2>
 <p> is a Jabber/XMPP client written in Python and GTK+. works nicely with GNOME, yet it does not require it to run. is designed for novice and advanced users as one, as well for XMPP server admins. </p>

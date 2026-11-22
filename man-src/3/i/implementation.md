@@ -13,7 +13,7 @@ description: "QuantLib::Parameter – Base class for model arguments."
 <p> #include &lt;ql/models/parameter.hpp&gt; </p>
 <p> Inherited by <code>ConstantParameter</code>, <code>NullParameter</code>, <code>PiecewiseConstantParameter</code>, and <code>TermStructureFittingParameter</code>. </p>
 <h3>Classes</h3>
-<p> class <code>Impl</code><br />
+<p> class <code>Impl</code><br/>
  <i>Base class for model parameter implementation. </i></p>
 <h3>Public Member Functions</h3>
 <p> const <code>Array</code> &amp; <code>params</code> () const </p>

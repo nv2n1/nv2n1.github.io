@@ -25,7 +25,7 @@ description: "fixmount – fix remote mount entries"
 <dt><code>-q</code></dt>
 <dd>Be quiet. Suppresses error messages due to timeouts and &quot;Program not registered&quot;, i.e., due to remote hosts not supporting RPC or not running mountd.</dd>
 <dt><code>-h</code><i>&nbsp;<wbr>name</i></dt>
-<dd>Pretend the local hostname is <i>name</i>. This is useful after the local hostname has been changed and rmtab entries using the old name remain on a remote machine. Unfortunately, most mountd&#8217;s won&#8217;t be able to successfully handle removal of such entries, so this option is useful in combination with <code>-v</code> only.<br />
+<dd>Pretend the local hostname is <i>name</i>. This is useful after the local hostname has been changed and rmtab entries using the old name remain on a remote machine. Unfortunately, most mountd&#8217;s won&#8217;t be able to successfully handle removal of such entries, so this option is useful in combination with <code>-v</code> only.<br/>
  This option also saves time as comparisons of remotely recorded and local hostnames by address are avoided.</dd></dl>
 <h2>Files</h2>
 <dl>

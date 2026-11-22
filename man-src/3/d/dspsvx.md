@@ -11,7 +11,7 @@ description: "dspsvx.f –"
 <p> dspsvx.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dspsvx</code> (FACT, UPLO, N, NRHS, AP, AFP, IPIV, B, LDB, X, LDX, RCOND, FERR, BERR, WORK, IWORK, INFO)<br />
+<p> subroutine <code>dspsvx</code> (FACT, UPLO, N, NRHS, AP, AFP, IPIV, B, LDB, X, LDX, RCOND, FERR, BERR, WORK, IWORK, INFO)<br/>
  <i></i><code> DSPSVX computes the solution to system of linear equations A * X = B for OTHER matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dspsvx (characterFACT, characterUPLO, integerN, integerNRHS, double precision, dimension( * )AP, double precision, dimension( * )AFP, integer, dimension( * )IPIV, double precision, dimension( ldb, * )B, integerLDB, double precision, dimension( ldx, * )X, integerLDX, double precisionRCOND, double precision, dimension( * )FERR, double precision, dimension( * )BERR, double precision, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>

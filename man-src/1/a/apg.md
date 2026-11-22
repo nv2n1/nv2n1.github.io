@@ -24,7 +24,7 @@ description: "apg – generates several random passwords"
 <dd> Use <code>algorithm</code> for password generation.</dd>
 <dl>
 <dt>
-</dt><dd> <code>0</code> &#8211; pronounceable password generation (default)<br />
+</dt><dd> <code>0</code> &#8211; pronounceable password generation (default)<br/>
  <code>1</code> &#8211; random character password generation</dd></dl>
 <dt><code>-n num_of_pass</code></dt>
 <dd> Generate <code>num_of_pass</code> number of passwords. Default is 6.</dd>
@@ -59,11 +59,11 @@ description: "apg – generates several random passwords"
 <dt>
 </dt><dd>
  <code>mode</code> can not be more than 4 characters in length. </dd>
-<p> <code>Note:</code><br />
+<p> <code>Note:</code><br/>
  Usage of L, M, S, C will slow down password generation process. </p>
-<p> <code>Examples:</code><br />
- <code>-M sncl</code><br />
- <code>-M SNCL</code><br />
+<p> <code>Examples:</code><br/>
+ <code>-M sncl</code><br/>
+ <code>-M SNCL</code><br/>
  <code>-M Cn</code></dl>
 <dt><code>-E char_string</code></dt>
 <dd> Exclude characters in <code>char_string</code> from password generation process (in pronounceable password generation mode you can not exclude small letters). To include special symbols that can be recognized by shell (apostrophe, quotes, dollar sign, etc.) in <code>char_string</code> use the backslashed versions.</dd>
@@ -71,13 +71,13 @@ description: "apg – generates several random passwords"
 <dt>
 </dt><dd>
 <p> <code>Examples:</code> </p>
-<p> Command <code>apg -a 1 -M n -n 3 -m 8 -E 23456789</code> will generate a set of passwords that will look like this:<br />
- <code>10100110</code><br />
- <code>01111000</code><br />
+<p> Command <code>apg -a 1 -M n -n 3 -m 8 -E 23456789</code> will generate a set of passwords that will look like this:<br/>
+ <code>10100110</code><br/>
+ <code>01111000</code><br/>
  <code>11011101</code> </p>
-<p> Command <code>apg -a 1 -M nc -n 3 -m 26 -E GHIJKLMNOPQRSTUVWXYZ</code> will generate a set of passwords that will look like this:<br />
- <code>16A1653CD4DE5E7BD9584A3476</code><br />
- <code>C8F78E06944AFD57FB9CB882BC</code><br />
+<p> Command <code>apg -a 1 -M nc -n 3 -m 26 -E GHIJKLMNOPQRSTUVWXYZ</code> will generate a set of passwords that will look like this:<br/>
+ <code>16A1653CD4DE5E7BD9584A3476</code><br/>
+ <code>C8F78E06944AFD57FB9CB882BC</code><br/>
  <code>8C8DF37CD792D36D056BBD5002</code>
 </dd></dl>
 </dl>
@@ -97,8 +97,8 @@ description: "apg – generates several random passwords"
 <dd> Use <code>cl_seed</code> as a random seed for password generation. I use it when i have to generate passwords in a shell script.</dd>
 <dl>
 <dt>
-</dt><dd> <code>Examples:</code><br />
- <code>-c /dev/urandom</code><br />
+</dt><dd> <code>Examples:</code><br/>
+ <code>-c /dev/urandom</code><br/>
  <code>-c /tmp/seed_file</code></dd></dl>
 </dl>
 <h3>Password output options</h3>
@@ -122,10 +122,10 @@ description: "apg – generates several random passwords"
 <dd> Print version information and exit</dd></dl>
 <h2>DEFAULT OPTIONS</h2>
 <p> <code>apg -a 0 -M sncl -n 6 -x 10 -m 8</code> (new style) </p>
-<p> If you want to generate really secure passwords, you should use option <code>-s</code>. To simplify <code>apg</code> usage, you can write a small shell script. For example:<br />
- <code>[begin]&#8212;-&gt; pwgen.sh</code><br />
- <code>#!/bin/sh</code><br />
- <code>/usr/local/bin/apg -m 8 -x 12 -s</code><br />
+<p> If you want to generate really secure passwords, you should use option <code>-s</code>. To simplify <code>apg</code> usage, you can write a small shell script. For example:<br/>
+ <code>[begin]&#8212;-&gt; pwgen.sh</code><br/>
+ <code>#!/bin/sh</code><br/>
+ <code>/usr/local/bin/apg -m 8 -x 12 -s</code><br/>
  <code>[ end ]&#8212;-&gt; pwgen.sh</code></p>
 <h2>EXIT CODE</h2>
 <p> On successful completion of its task, <code>apg</code> will complete with exit code 0. An exit code of -1 indicates an error occurred. Textual errors are written to the standard error stream.</p>
@@ -138,5 +138,5 @@ description: "apg – generates several random passwords"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-apgbfm/">apgbfm</a></code>(1)</p>
 <h2>AUTHOR</h2>
-<p> Adel I. Mirzazhanov, &lt;a-del [at] iname.com&gt;<br />
+<p> Adel I. Mirzazhanov, &lt;a-del [at] iname.com&gt;<br/>
  Project home page: <a rel="nofollow" href="http://www.adel.nursat.kz/apg/">http://www.adel.nursat.kz/apg/</a> </p>

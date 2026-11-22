@@ -13,12 +13,12 @@ description: "sc::SCElementMinAbs –"
 <h3>Public Member Functions</h3>
 <p><code>SCElementMinAbs</code> (double rinit) </p>
 <p> <code>SCElementMinAbs</code> (<code>StateIn</code> &amp;) </p>
-<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br />
- <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br />
- void <code>process</code> (<code>SCMatrixBlockIter</code> &amp;)<br />
- <i>This is the fallback routine to process blocks and is called by process_spec members that are not overridden. </i><br />
- int <code>has_collect</code> ()<br />
- <i>If duplicates of the </i><code>SCElementOp</code> exist (that is, there is more than one node), then if has_collect returns nonzero then collect is called with a <code>MessageGrp</code> reference after all of the blocks have been processed.<br />
+<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br/>
+ <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br/>
+ void <code>process</code> (<code>SCMatrixBlockIter</code> &amp;)<br/>
+ <i>This is the fallback routine to process blocks and is called by process_spec members that are not overridden. </i><br/>
+ int <code>has_collect</code> ()<br/>
+ <i>If duplicates of the </i><code>SCElementOp</code> exist (that is, there is more than one node), then if has_collect returns nonzero then collect is called with a <code>MessageGrp</code> reference after all of the blocks have been processed.<br/>
  void <code>defer_collect</code> (int) </p>
 <p> void <code>collect</code> (const <code>Ref</code>&lt; <code>MessageGrp</code> &gt; &amp;) </p>
 <p> void <code>collect</code> (const <code>Ref</code>&lt; <code>SCElementOp</code> &gt; &amp;) </p>

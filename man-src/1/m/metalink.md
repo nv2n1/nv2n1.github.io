@@ -46,12 +46,12 @@ description: "metalink — commandline metalink generator"
 <p> Supported algorithms are (-d options): md4 md5 sha1 sha256 sha384 sha512 rmd160 tiger crc32 ed2k gnunet sha1pieces </p>
 <p> Mirror lists are single line definitions according to: [location [preference] [type] % ] mirror base url</p>
 <h2>EXAMPLES</h2>
-<p> <a rel="nofollow" href="http://example.com/">http://example.com/</a> as a mirror: echo <a rel="nofollow" href="http://example.com">http://example.com</a> | metalink -d md5 -d sha1 *<br />
+<p> <a rel="nofollow" href="http://example.com/">http://example.com/</a> as a mirror: echo <a rel="nofollow" href="http://example.com">http://example.com</a> | metalink -d md5 -d sha1 *<br/>
 &nbsp;<wbr> </p>
 <p> <a rel="nofollow" href="http://example.com/">http://example.com/</a> as a mirror with preference and location: echo us 10 % <a rel="nofollow" href="http://example.com">http://example.com</a> | metalink -d md5 -d sha1 * </p>
 <p> <a rel="nofollow" href="http://example.com/">http://example.com/</a> as a mirror with preference only: echo 0 10 % <a rel="nofollow" href="http://example.com">http://example.com</a> | metalink -d md5 *</p>
 <h2>AUTHOR</h2>
-<p> This manual page was written by A. Bram Neijt bneijt [at] gmail.com for the <code>Debian</code> system (but may be used by others). Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 any later version published by the Free Software Foundation.<br />
+<p> This manual page was written by A. Bram Neijt bneijt [at] gmail.com for the <code>Debian</code> system (but may be used by others). Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 any later version published by the Free Software Foundation.<br/>
 &nbsp;<wbr> </p>
-<p> On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL.<br />
+<p> On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL.<br/>
 &nbsp;<wbr> </p>

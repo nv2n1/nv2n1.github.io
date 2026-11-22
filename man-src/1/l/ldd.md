@@ -13,15 +13,15 @@ description: "ldd – print shared object dependencies"
 <p> <code>ldd</code> [<i>option</i>]&#8230; <i>file</i>&#8230;</p>
 <h2>DESCRIPTION</h2>
 <p> <code>ldd</code> prints the shared objects (shared libraries) required by each program or shared object specified on the command line. An example of its use and output (using <code><a href="/docs/linux/man/1-sed/">sed</a></code>(1) to trim leading white space for readability in this page) is the following: </p>
-<p> $ <code>ldd /bin/ls | sed &#8216;s/^ */ /&#8217;</code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;linux-vdso.so.1&nbsp;(0x00007ffcc3563000)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;libselinux.so.1&nbsp;=&gt;&nbsp;/lib64/libselinux.so.1&nbsp;(0x00007f87e5459000)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;libcap.so.2&nbsp;=&gt;&nbsp;/lib64/libcap.so.2&nbsp;(0x00007f87e5254000)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;libc.so.6&nbsp;=&gt;&nbsp;/lib64/libc.so.6&nbsp;(0x00007f87e4e92000)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;libpcre.so.1&nbsp;=&gt;&nbsp;/lib64/libpcre.so.1&nbsp;(0x00007f87e4c22000)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;libdl.so.2&nbsp;=&gt;&nbsp;/lib64/libdl.so.2&nbsp;(0x00007f87e4a1e000)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/lib64/ld-linux-x86-64.so.2&nbsp;(0x00005574bf12e000)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;libattr.so.1&nbsp;=&gt;&nbsp;/lib64/libattr.so.1&nbsp;(0x00007f87e4817000)<br />
+<p> $ <code>ldd /bin/ls | sed &#8216;s/^ */ /&#8217;</code><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;linux-vdso.so.1&nbsp;(0x00007ffcc3563000)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;libselinux.so.1&nbsp;=&gt;&nbsp;/lib64/libselinux.so.1&nbsp;(0x00007f87e5459000)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;libcap.so.2&nbsp;=&gt;&nbsp;/lib64/libcap.so.2&nbsp;(0x00007f87e5254000)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;libc.so.6&nbsp;=&gt;&nbsp;/lib64/libc.so.6&nbsp;(0x00007f87e4e92000)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;libpcre.so.1&nbsp;=&gt;&nbsp;/lib64/libpcre.so.1&nbsp;(0x00007f87e4c22000)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;libdl.so.2&nbsp;=&gt;&nbsp;/lib64/libdl.so.2&nbsp;(0x00007f87e4a1e000)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/lib64/ld-linux-x86-64.so.2&nbsp;(0x00005574bf12e000)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;libattr.so.1&nbsp;=&gt;&nbsp;/lib64/libattr.so.1&nbsp;(0x00007f87e4817000)<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;libpthread.so.0&nbsp;=&gt;&nbsp;/lib64/libpthread.so.0&nbsp;(0x00007f87e45fa000) </p>
 <p> In the usual case, <code>ldd</code> invokes the standard dynamic linker (see <code><a href="/docs/linux/man/8-ld-so/">ld.so</a></code>(8)) with the <code>LD_TRACE_LOADED_OBJECTS</code> environment variable set to 1. This causes the dynamic linker to inspect the program&#8217;s dynamic dependencies, and find (according to the rules described in <code><a href="/docs/linux/man/8-ld-so/">ld.so</a></code>(8)) and load the objects that satisfy those dependencies. For each dependency, <code>ldd</code> displays the location of the matching object and the (hexadecimal) address at which it is loaded. (The <i>linux-vdso</i> and <i>ld-linux</i> shared dependencies are special; see <code><a href="/docs/linux/man/7-vdso/">vdso</a></code>(7) and <code><a href="/docs/linux/man/8-ld-so/">ld.so</a></code>(8).)</p>
 <h3>Security</h3>

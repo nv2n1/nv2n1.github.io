@@ -21,7 +21,7 @@ description: "xemacs – Emacs: The Next Generation"
 <p> <i>XEmacs</i>&#8216;s Undo can undo several steps of modification to your buffers, so it is easy to recover from editing mistakes. </p>
 <p> <i>XEmacs</i>&#8216;s many special packages handle mail reading (VM, MH-E and RMail) and sending (Mail), Usenet news reading and posting (GNUS), World Wide Web browsing (W3), specialized modes for editing source code in all common programming languages, syntax highlighting for many languages (Font-Lock), compiling (Compile), running subshells within <i>XEmacs</i> windows (Shell), outline editing (Outline), running a Lisp read-eval-print loop (Lisp-Interaction-Mode), and automated psychotherapy (Doctor). </p>
 <p> There is an extensive reference manual, but users of other Emacsen should have little trouble adapting even without a copy. Users new to Emacs will be able to use basic features fairly rapidly by studying the tutorial and using the self-documentation features. </p>
-<p> <font SIZE="-1">XEmacs Options</font> </p>
+<p> XEmacs Options </p>
 <p> XEmacs accepts all standard X Toolkit command line options when run in an X Windows environment. In addition, the following options are accepted (when options imply a sequence of actions to perform, they are performed in the order encountered):</p>
 <dl>
 <dt><code>-t</code><i> file</i></dt>
@@ -62,7 +62,7 @@ description: "xemacs – Emacs: The Next Generation"
 <dd> Insert <i>file</i> into the current buffer.</dd>
 <dt><code>-kill</code></dt>
 <dd> Exit <i>XEmacs</i> (useful with <code>-batch</code>).</dd></dl>
-<p> <font SIZE="-1">Using XEmacs with X Windows</font> </p>
+<p> Using XEmacs with X Windows </p>
 <p> <i>XEmacs</i> has been tailored to work well with the X window system. If you run <i>XEmacs</i> from under X windows, it will create its own X window to display in. </p>
 <p> <i>XEmacs</i> can be started with the following standard X options:</p>
 <dl>
@@ -227,7 +227,7 @@ description: "xemacs – Emacs: The Next Generation"
 <dd> The foreground color of the mouse cursor.</dd>
 <dt><code>pointerBackground (</code>class<code> Background)</code></dt>
 <dd> The background color of the mouse cursor.</dd></dl>
-<p> <font SIZE="-1">Using the Mouse</font> </p>
+<p> Using the Mouse </p>
 <p> The following lists the mouse button bindings for the <i>XEmacs</i> window under X11. </p>
 <p> MOUSE BUTTON<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>FUNCTION</p>
 <p> left<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>Set point or make a text selection.</p>

@@ -35,7 +35,7 @@ description: "qacct – report and account for xxQS_NAMExx usage"
 <dt><code>-help</code></dt>
 <dd> Display help information for the <i>qacct</i> command.</dd>
 <dt><code>-j</code> [<i>job_id</i>|<i>job_name</i>|<i>pattern</i>]</dt>
-<dd> The name, an expression for matching names, or ID of the job during execution for which accounting information is printed. If neither a name nor an ID is given, all jobs are listed.<br />
+<dd> The name, an expression for matching names, or ID of the job during execution for which accounting information is printed. If neither a name nor an ID is given, all jobs are listed.<br/>
  This option changes the output format of <i>qacct</i>. If activated, CPU times are no longer accumulated but &quot;raw&quot; per-job accounting information is printed in a formatted form instead. CPU time (seconds), integrated memory usage (GB seconds), total i/o (bytes), i/o wait time (seconds), and maximum virtual memory (bytes).</dd>
 <dt><code>-l </code><i>attr</i>=<i>val</i>,&#8230;</dt>
 <dd> A resource requirement specification which must be met by the queues in which the jobs being accounted were executing. The resource request is very similar to the one described in</dd>

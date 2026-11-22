@@ -11,7 +11,7 @@ description: "scsum1.f –"
 <p> scsum1.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> REAL function <code>scsum1</code> (N, CX, INCX)<br />
+<p> REAL function <code>scsum1</code> (N, CX, INCX)<br/>
  <i></i><code>SCSUM1</code> forms the 1-norm of the complex vector using the true absolute value.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>REAL function scsum1 (integerN, complex, dimension( * )CX, integerINCX)</h3>

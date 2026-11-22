@@ -227,7 +227,7 @@ description: "cscope – interactively examine a C program"
 <dt>
 </dt><dd> <code>cscope.in.out</code></dd>
 <dt><code>cscope.po.out</code></dt>
-<dd> Default files containing the inverted index used for quick symbol searching (-q option). If you use the -f option to rename the cross-reference file (so it&#8217;s not cscope.out), the names for these inverted index files will be created by adding<br />
+<dd> Default files containing the inverted index used for quick symbol searching (-q option). If you use the -f option to rename the cross-reference file (so it&#8217;s not cscope.out), the names for these inverted index files will be created by adding<br/>
 &nbsp;<wbr>.in and .po to the name you supply with -f. For example, if you indicated -f xyz, then these files would be named xyz.in and xyz.po.</dd>
 <dt><code>INCDIR</code></dt>
 <dd> Standard directory for #include files (usually /usr/include).</dd></dl>
@@ -248,40 +248,40 @@ description: "cscope – interactively examine a C program"
 <dd> are zero or more argument declarations (arg_decs may include comments and white space)</dd></dl>
 <p> It is not necessary for a function declaration to start at the beginning of a line. The return type may precede the function name; cscope will still recognize the declaration. Function definitions that deviate from this form will not be recognized by cscope. </p>
 <p> The &#8220;Function&#8221; column of the search output for the menu option Find functions called by this function: input field will only display the first function called in the line, that is, for this function </p>
-<p>&nbsp;<wbr>e()<br />
-&nbsp;<wbr>{<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>return&nbsp;<wbr>(f()&nbsp;<wbr>+&nbsp;<wbr>g());<br />
+<p>&nbsp;<wbr>e()<br/>
+&nbsp;<wbr>{<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>return&nbsp;<wbr>(f()&nbsp;<wbr>+&nbsp;<wbr>g());<br/>
 &nbsp;<wbr>} </p>
 <p> the display would be </p>
-<p>Functions called by this function: e<br />
-File Function Line<br />
+<p>Functions called by this function: e<br/>
+File Function Line<br/>
 a.c f 3 return(f()&nbsp;<wbr>+&nbsp;<wbr>g()); </p>
 <p> Occasionally, a function definition or call may not be recognized because of braces inside #if statements. Similarly, the use of a variable may be incorrectly recognized as a definition. </p>
 <p> A <code>typedef</code> name preceding a preprocessor statement will be incorrectly recognized as a global definition, for example, </p>
-<p>&nbsp;<wbr>LDFILE&nbsp;<wbr>&nbsp;<wbr>*<br />
+<p>&nbsp;<wbr>LDFILE&nbsp;<wbr>&nbsp;<wbr>*<br/>
 &nbsp;<wbr>#if AR16WR </p>
 <p> Preprocessor statements can also prevent the recognition of a global definition, for example, </p>
-<p>&nbsp;<wbr>char flag<br />
-&nbsp;<wbr>#ifdef ALLOCATE_STORAGE<br />
-=&nbsp;<wbr>-1<br />
-&nbsp;<wbr>#endif<br />
+<p>&nbsp;<wbr>char flag<br/>
+&nbsp;<wbr>#ifdef ALLOCATE_STORAGE<br/>
+=&nbsp;<wbr>-1<br/>
+&nbsp;<wbr>#endif<br/>
 &nbsp;<wbr>; </p>
 <p> A function declaration inside a function is incorrectly recognized as a function call, for example, </p>
-<p>&nbsp;<wbr>f()<br />
-&nbsp;<wbr>{<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>void g();<br />
+<p>&nbsp;<wbr>f()<br/>
+&nbsp;<wbr>{<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>void g();<br/>
 &nbsp;<wbr>} </p>
 <p> is incorrectly recognized as a call to g. </p>
 <p> <i>cscope</i> recognizes C++ classes by looking for the class keyword, but doesn&#8217;t recognize that a struct is also a class, so it doesn&#8217;t recognize inline member function definitions in a structure. It also doesn&#8217;t expect the class keyword in a <i>typedef</i> , so it incorrectly recognizes X as a definition in </p>
 <p>&nbsp;<wbr>typedef class X&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>&nbsp;<wbr>Y; </p>
 <p> It also doesn&#8217;t recognize operator function definitions </p>
-<p>&nbsp;<wbr>Bool Feature::operator==(const Feature&nbsp;<wbr>&amp;&nbsp;<wbr>other)<br />
-&nbsp;<wbr>{<br />
-&#8230;<br />
+<p>&nbsp;<wbr>Bool Feature::operator==(const Feature&nbsp;<wbr>&amp;&nbsp;<wbr>other)<br/>
+&nbsp;<wbr>{<br/>
+&#8230;<br/>
 &nbsp;<wbr>} </p>
 <p> Nor does it recognize function definitions with a function pointer argument </p>
-<p>&nbsp;<wbr>ParseTable::Recognize(int startState, char&nbsp;<wbr>*pattern,<br />
-int finishState, void&nbsp;<wbr>(*FinalAction)(char&nbsp;<wbr>*))<br />
-&nbsp;<wbr>{<br />
-&#8230;<br />
+<p>&nbsp;<wbr>ParseTable::Recognize(int startState, char&nbsp;<wbr>*pattern,<br/>
+int finishState, void&nbsp;<wbr>(*FinalAction)(char&nbsp;<wbr>*))<br/>
+&nbsp;<wbr>{<br/>
+&#8230;<br/>
 &nbsp;<wbr>} </p>

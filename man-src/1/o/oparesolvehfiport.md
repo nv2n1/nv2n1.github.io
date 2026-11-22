@@ -34,6 +34,6 @@ description: "oparesolvehfiport"
 <dd> HFI <i>x</i>, port <i>y</i> </dd>
 </dl>
 <h2>Examples</h2>
-<p> oparesolvehfiport 0 1<br />
- Output:<br />
+<p> oparesolvehfiport 0 1<br/>
+ Output:<br/>
  #8217#160; hfi_0:1 </p>

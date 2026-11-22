@@ -27,6 +27,6 @@ description: "XtAppAddWorkProc, XtRemoveWorkProc – Add and remove background p
 <p>The <code>XtAppAddWorkProc</code> function adds the specified work procedure for the application identified by app_context. </p>
 <p> The <code>XtRemoveWorkProc</code> function explicitly removes the specified background work procedure.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xtappnextevent/">XtAppNextEvent</a>(3)<br />
- <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><a href="/docs/linux/man/3-xtappnextevent/">XtAppNextEvent</a>(3)<br/>
+ <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

@@ -10,7 +10,7 @@ description: "XkbAllocDeviceInfo – Obtain an XkbDeviceInfoRec structure"
 <p>XkbAllocDeviceInfo &#8211; Obtain an XkbDeviceInfoRec structure </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>XkbDeviceInfoPtr XkbAllocDeviceInfo</code> <code>(unsigned int </code><i>device_spec</i><code>,</code> <code>unsigned int </code><i>n_buttons</i><code>,</code> <code>unsigned int </code><i>sz_leds</i><code>);</code><br />
+<dt> <code>XkbDeviceInfoPtr XkbAllocDeviceInfo</code> <code>(unsigned int </code><i>device_spec</i><code>,</code> <code>unsigned int </code><i>n_buttons</i><code>,</code> <code>unsigned int </code><i>sz_leds</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

@@ -10,7 +10,7 @@ description: "ldns_rr_print, ldns_rdf_print, ldns_pkt_print, ldns_rr_list_print,
 
 <p> ldns_rr_print, ldns_rdf_print, ldns_pkt_print, ldns_rr_list_print, ldns_resolver_print, ldns_zone_print </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> void ldns_rr_print(FILE *output, const ldns_rr *rr); </p>

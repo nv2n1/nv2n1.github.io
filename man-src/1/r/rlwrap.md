@@ -20,14 +20,14 @@ description: "rlwrap – readline wrapper"
 <dt> <code>-a, &#8211;always-readline [<i>password_prompt</i>]</code></dt>
 <dd> Always remain in &quot;readline mode&quot;, regardless of <i>command</i>&#8216;s terminal settings. Use this option if you want to use <code>rlwrap</code> with <i>command</i>s that already use readline. <code>NB</code>: With this option, rlwrap will echo (and save) passwords, unless you give <i>command</i>&#8216;s password prompt as an argument. The argument is optional; if given, it has to directly follow the option without an intervening space. </dd>
 <p> On a linux machine you can use the <code>-N</code> (<code>&#8211;no-children</code>) option to prevent the wrapping of pagers and editors called from <i>command</i>; this should make them much more usable </p>
-<p> Many commands that need <code>&#8211;always-readline</code> may also need <code>-t dumb</code> to prevent terminal control sequences from confusing <code>rlwrap</code> (although this will annoy the above-mentioned pagers and editors)<br />
+<p> Many commands that need <code>&#8211;always-readline</code> may also need <code>-t dumb</code> to prevent terminal control sequences from confusing <code>rlwrap</code> (although this will annoy the above-mentioned pagers and editors)<br/>
 &nbsp;<wbr></p>
 <dt> <code>-A, &#8211;ansi-colour-aware </code></dt>
 <dd> Prompts that use colour will confuse rlwrap, especially at the end of long input lines. This option will make rlwrap better behaved in such cases. If the prompt contains anything fancier than ANSI colour codes, this option may actually make things worse.</dd>
 <dt> <code>-b, &#8211;break-chars <i>list_of_characters</i></code></dt>
 <dd> Consider the specified characters word-breaking (whitespace is always word-breaking). This determines what is considered a &quot;word&quot;, both when completing and when building a completion word list from files specified by <code>-f</code> options following (not preceding!) it. Default list (){}[],&#8217;+-=&amp;^%$#@&quot;&quot;;|\ Unless -c is specified, / and . (period) are included in the default list.</dd>
 <dt> <code>-c, &#8211;complete-filenames </code></dt>
-<dd> Complete filenames (filename completion is always case-sensitive, even with the -i option)<br />
+<dd> Complete filenames (filename completion is always case-sensitive, even with the -i option)<br/>
 &nbsp;<wbr>When doing this, rlwrap keeps track of&nbsp;<wbr><i>command</i>s working directory.</dd>
 <dt> <code>-C, &#8211;command-name <i>command_name|N</i></code></dt>
 <dd> Use <i>command_name</i> instead of <i>command</i> to determine the names of history and completion files, and to initialise readline (as specified in ~/.inputrc). A numeric argument N &gt; 0 means: use the Nth argument counting backwards from the end of the argument list</dd>
@@ -176,7 +176,7 @@ description: "rlwrap – readline wrapper"
 </dl>
 <h2>BUGS and LIMITATIONS</h2>
 <p> Though it is flexible, delivers the goods (readline functionality), and adheres to the Unix &quot;many small tools&quot; paradigm, <code>rlwrap</code> is a kludge. It cannot know anything about <i>command</i>&#8216;s internal state, which makes context-sensitive completion impossible. Using the readline library from within <i>command</i> is still the best option. </p>
-<p> Also, because &quot;it takes two to tango&quot; there is no way for <code>rlwrap</code> to synchronise its internal state with <i>command</i>, resulting in a number of subtle race conditions, where e.g. <i>command</i> may have changed the state of its terminal before <code>rlwrap</code> has read <i>command</i> output that was written before the state change. You will notice these races especially on a busy machine and with heavy &quot;cooking&quot; and filtering, when suddenly (and unpredictably) promtps or command output are garbled or incorrectly coloured.<br />
+<p> Also, because &quot;it takes two to tango&quot; there is no way for <code>rlwrap</code> to synchronise its internal state with <i>command</i>, resulting in a number of subtle race conditions, where e.g. <i>command</i> may have changed the state of its terminal before <code>rlwrap</code> has read <i>command</i> output that was written before the state change. You will notice these races especially on a busy machine and with heavy &quot;cooking&quot; and filtering, when suddenly (and unpredictably) promtps or command output are garbled or incorrectly coloured.<br/>
 &nbsp;<wbr>&nbsp;<wbr> <code>rlwrap</code> can try, but often fails to, handle prompts that contain control characters. A flter may be used to clean up the prompt. </p>
 <h2>VERSION</h2>
 <p> This manpage documents rlwrap version 0.42</p>

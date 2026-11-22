@@ -11,7 +11,7 @@ description: "clacrt.f –"
 <p> clacrt.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>clacrt</code> (N, CX, INCX, CY, INCY, C, S)<br />
+<p> subroutine <code>clacrt</code> (N, CX, INCX, CY, INCY, C, S)<br/>
  <i></i><code>CLACRT</code> performs a linear transformation of a pair of complex vectors.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine clacrt (integerN, complex, dimension( * )CX, integerINCX, complex, dimension( * )CY, integerINCY, complexC, complexS)</h3>

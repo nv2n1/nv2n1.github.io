@@ -43,18 +43,18 @@ description: "sg_rbuf – reads data using SCSI READ BUFFER command"
 <p> Various numeric arguments (e.g. <i>OVERALL</i>) may include multiplicative suffixes or be given in hexadecimal. See the &quot;NUMERIC ARGUMENTS&quot; section in the <a href="/docs/linux/man/8-sg3_utils/">sg3_utils</a>(8) man page.</p>
 <h2>Examples</h2>
 <p>On the test system /dev/sg0 corresponds to a fast disk on a U2W SCSI bus (max 80 MB/sec). The disk specifications state that its cache is 4 MB. </p>
-<p>$&nbsp;<wbr>time ./sg_rbuf&nbsp;<wbr>/dev/sg0<br />
+<p>$&nbsp;<wbr>time ./sg_rbuf&nbsp;<wbr>/dev/sg0<br/>
  READ BUFFER reports: buffer capacity=3434944, </p>
-<p>&nbsp;<wbr>offset boundary=6<br />
+<p>&nbsp;<wbr>offset boundary=6<br/>
  Read 200 MiB (actual 199 MiB, 209531584 bytes), </p>
-<p>&nbsp;<wbr>buffer size=3354 KiB<br />
+<p>&nbsp;<wbr>buffer size=3354 KiB<br/>
  real 0m5.072s, user 0m0.000s, sys 0m2.280s </p>
 <p> So that is approximately 40 MB/sec at 40 % utilization. Now with the addition of the &quot;-q&quot; option this throughput improves and the utilization drops to 0%. </p>
-<p>$&nbsp;<wbr>time ./sg_rbuf -q&nbsp;<wbr>/dev/sg0<br />
+<p>$&nbsp;<wbr>time ./sg_rbuf -q&nbsp;<wbr>/dev/sg0<br/>
  READ BUFFER reports: buffer capacity=3434944, </p>
-<p>&nbsp;<wbr>offset boundary=6<br />
+<p>&nbsp;<wbr>offset boundary=6<br/>
  Read 200 MiB (actual 199 MiB, 209531584 bytes), </p>
-<p>&nbsp;<wbr>buffer size=3354 KiB<br />
+<p>&nbsp;<wbr>buffer size=3354 KiB<br/>
  real 0m2.784s, user 0m0.000s, sys 0m0.000s</p>
 <h2>Exit Status</h2>
 <p>The exit status of sg_rbuf is 0 when it is successful. Otherwise see the <a href="/docs/linux/man/8-sg3_utils/">sg3_utils</a>(8) man page.</p>
@@ -84,7 +84,7 @@ description: "sg_rbuf – reads data using SCSI READ BUFFER command"
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;dgilbert at interlog dot com&gt;.</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2000-2007 Douglas Gilbert<br />
+<p>Copyright &#169; 2000-2007 Douglas Gilbert<br/>
  This software is distributed under the GPL version 2. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>See Also</h2>
 <p><code>sg_read_buffer, sg_write_buffer, sg_test_rwbuf(all in sg3_utils)</code> </p>

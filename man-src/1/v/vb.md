@@ -60,7 +60,7 @@ VB - Visual Builder for the Prima toolkit
 </dt><dd></dd><dl><dd></dd><dl><dt>Object inspector
 </dt><dd>Brings the object inspector window, if it was hidden or closed.
 </dd><dt>Add widgets
-</dt><dd>Opens a file dialog, where the additional <font SIZE="-1">VB</font> modules can be located. The modules are used for providing custom widgets and properties for the builder. As an example, the <i>Prima/VB/examples/Widgety.pm</i> module is provided with the builder and the toolkit. Look inside this file for the implementation details.
+</dt><dd>Opens a file dialog, where the additional VB modules can be located. The modules are used for providing custom widgets and properties for the builder. As an example, the <i>Prima/VB/examples/Widgety.pm</i> module is provided with the builder and the toolkit. Look inside this file for the implementation details.
 </dd><dt>Reset guidelines
 </dt><dd>Reset the guidelines on the form window into a center position.
 </dd><dt>Snap to guidelines
@@ -98,4 +98,4 @@ VB - Visual Builder for the Prima toolkit
  The full explanation of properties and events is not provided here. It is not even the goal of this document, because the builder can work with the widgets irrespective of their property or event capabilities; this information is extracted by native toolkit functionality. To read on what each property or event means, use the documentation on the class of interest; Prima::Widget is a good start because it encompasses the ground <tt>&quot;Prima::Widget&quot;</tt> functionality. The other widgets are ( hopefully ) documented in their modules, for example, <tt>&quot;Prima::ScrollBar&quot;</tt> documentation can be found in Prima::ScrollBar.
 <h2>See Also</h2>Prima, Prima::VB::VBLoader
 <h2>Author</h2>Dmitry Karasik, &lt;dmitry [at] karasik.eu.org&gt;.
-<h2>Copyright</h2>This program is distributed under the <font SIZE="-1">BSD</font> License.
+<h2>Copyright</h2>This program is distributed under the BSD License.

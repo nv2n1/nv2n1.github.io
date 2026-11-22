@@ -68,7 +68,7 @@ description: "sane-avision – SANE backend for Avision branded and Avision OEM 
 <p> Example: export SANE_DEBUG_AVISION=7 </p>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/5-sane-scsi/">sane-scsi</a></code>(5), <code><a href="/docs/linux/man/5-sane-usb/">sane-usb</a></code>(5)<br />
+<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/5-sane-scsi/">sane-scsi</a></code>(5), <code><a href="/docs/linux/man/5-sane-usb/">sane-usb</a></code>(5)<br/>
  <i><a rel="nofollow" href="http://exactcode.com/site/open_source/saneavision">http://exactcode.com/site/open_source/saneavision</a></i> </p>
 <h2>Maintainer</h2>
 <p>Ren&eacute; Rebe</p>

@@ -29,8 +29,8 @@ Real testCumulativeY (Real y) const
 Real inverseCumulativeY (Real p) const</code></pre>
 <h2>Detailed Description</h2>
 <p>One-factor Gaussian Copula. </p>
-<p> The copula model [ Y_i = a_i,M+qrt{1-a_i^2}:Z_i ] is specified here by setting the desnity function for all variables, $ M, Z,$ and also $ Y $ to the standard normal distribution $<br />
- hi(x) = \xp(-x^2/2) / qrt{2<br />
+<p> The copula model [ Y_i = a_i,M+qrt{1-a_i^2}:Z_i ] is specified here by setting the desnity function for all variables, $ M, Z,$ and also $ Y $ to the standard normal distribution $<br/>
+ hi(x) = \xp(-x^2/2) / qrt{2<br/>
  i}. $  </p>
 <h2>Member Function Documentation</h2>
 <h3>Real density (Real m) const [virtual]</h3>

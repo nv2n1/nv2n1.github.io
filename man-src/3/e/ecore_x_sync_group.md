@@ -9,11 +9,11 @@ description: "X Sync Extension Functions – Functions related to the X Sync ext
 
 <p>X Sync Extension Functions &#8211; Functions related to the X Sync extension. </p>
 <h3>Functions</h3>
-<p>EAPI int <code>ecore_x_sync_query</code> (void)<br />
- <i>Return whether the X server supports the Sync Extension. </i><br />
- EAPI Ecore_X_Sync_Alarm <code>ecore_x_sync_alarm_new</code> (Ecore_X_Sync_Counter counter)<br />
- <i>Create a new alarm. </i><br />
- EAPI int <code>ecore_x_sync_alarm_free</code> (Ecore_X_Sync_Alarm alarm)<br />
+<p>EAPI int <code>ecore_x_sync_query</code> (void)<br/>
+ <i>Return whether the X server supports the Sync Extension. </i><br/>
+ EAPI Ecore_X_Sync_Alarm <code>ecore_x_sync_alarm_new</code> (Ecore_X_Sync_Counter counter)<br/>
+ <i>Create a new alarm. </i><br/>
+ EAPI int <code>ecore_x_sync_alarm_free</code> (Ecore_X_Sync_Alarm alarm)<br/>
  <i>Delete an alarm. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions related to the X Sync extension.</p>

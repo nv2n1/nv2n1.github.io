@@ -35,13 +35,13 @@ description: "service_seusers – The SELinux GNU/Linux user and service to SELi
 <h2>Examples</h2>
 <p>Example 1 &#8211; for the &#8216;root&#8217; user:</p>
 <dl>
-<dd># ./logins/root<br />
- ipa:user_u:s0<br />
+<dd># ./logins/root<br/>
+ ipa:user_u:s0<br/>
  this_service:unconfined_u:s0</dd></dl>
 <p> Example 2 &#8211; for GNU/Linux user &#8216;rch&#8217;:</p>
 <dl>
-<dd># ./logins/rch<br />
- ipa:unconfined_u:s0<br />
+<dd># ./logins/rch<br/>
+ ipa:unconfined_u:s0<br/>
  that_service:unconfined_u:s0</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-selinux/">selinux</a></code>(8), <code><a href="/docs/linux/man/8-pam/">PAM</a></code>(8), <code><a href="/docs/linux/man/3-selinux_policy_root/">selinux_policy_root</a></code>(3), <code>getseuser</code>(3), <code><a href="/docs/linux/man/5-selinux_config/">selinux_config</a></code>(5) </p>

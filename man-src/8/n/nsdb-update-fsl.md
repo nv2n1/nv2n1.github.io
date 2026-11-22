@@ -89,14 +89,14 @@ description: "nsdb-update-fsl – update attributes of a fileset location (FSL) 
 <p> Further suppose the NSDB <i>nsdb.example.net:389</i> has an NSDB container entry whose distinguished name is <i>o=fedfs</i>, and that an FSL child record with the UUID <i>323c5068-7c11-11e0-8d38-000c297fd679</i> already exists. </p>
 <p> To change the NFS minor version used when clients mount this location from zero to one, you might use:</p>
 <dl>
-<dd>$ nsdb-update-fsl -D cn=Manager -e o=fedfs \<br />
+<dd>$ nsdb-update-fsl -D cn=Manager -e o=fedfs \<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>-x 323c5068-7c11-11e0-8d38-000c297fd679 \</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>-l nsdb.example.net \</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>8e246ddc-7b46-11e0-8252-000c297fd679 \</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>fedfsNfsMinorVer -v 1</p>
-<p> Enter NSDB password:<br />
- Successfully updated FSL record<br />
-&nbsp;<wbr>&nbsp;<wbr>fedfsFslUuid=323c5068-7c11-11e0-8d38-000c297fd679,<br />
+<p> Enter NSDB password:<br/>
+ Successfully updated FSL record<br/>
+&nbsp;<wbr>&nbsp;<wbr>fedfsFslUuid=323c5068-7c11-11e0-8d38-000c297fd679,<br/>
 &nbsp;<wbr>&nbsp;<wbr>fedfsFsnUuid=8e246ddc-7b46-11e0-8252-000c297fd679,o=fedfs </p>
 </dl>
 <p> To see the contents of the updated FSL record, use <code><a href="/docs/linux/man/8-nsdb-resolve-fsn/">nsdb-resolve-fsn</a></code>(8).</p>

@@ -42,7 +42,7 @@ description: "dwz – DWARF optimization and duplicate removal tool"
 <h2>EXAMPLES</h2>
 <dl>
 <dt>
-</dt><dd> $ dwz -m .dwz/foobar-1.2.debug -rh \<br />
+</dt><dd> $ dwz -m .dwz/foobar-1.2.debug -rh \<br/>
 &nbsp;<wbr>&nbsp;bin/foo.debug bin/foo2.debug foo/lib/libbar.so.debug</dd></dl>
 <p> will attempt to optimize debugging information in <i>bin/foo.debug</i>, <i>bin/foo2.debug</i> and <i>lib/libbar.so.debug</i> (by modifying the files in place) and when beneficial also will create <i>.dwz/foobar-1.2.debug</i> file. <i>.gnu_debugaltlink</i> section in the first two files will refer to <i>../.dwz/foobar-1.2.debug</i> and in the last file to <i>../../.dwz/foobar-1.2.debug</i>. If e.g. <i>bin/foo.debug</i> and <i>bin/foo2.debug</i> were hardlinked together initially, they will be hardlinked again and for multifile optimizations considered just as a single file rather than two.</p>
 <dl>

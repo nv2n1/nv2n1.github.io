@@ -10,7 +10,7 @@ description: "dspgst.f –"
 <p>dspgst.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dspgst</code> (ITYPE, UPLO, N, AP, BP, INFO)<br />
+<p>subroutine <code>dspgst</code> (ITYPE, UPLO, N, AP, BP, INFO)<br/>
  <i></i><code>DSPGST</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dspgst (integerITYPE, characterUPLO, integerN, double precision, dimension( * )AP, double precision, dimension( * )BP, integerINFO)</h3>

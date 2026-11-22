@@ -159,7 +159,7 @@ description: "kdb – Elektra key database command line administration tool"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/7-elektra/">elektra</a></code>(7), <code><a href="/docs/linux/man/5-elektra/">elektra</a></code>(5)</p>
 <h2>AUTHOR</h2>
-<p> <code>Avi Alkalay</code> &lt;avi at unix.sh&gt;<br />
+<p> <code>Avi Alkalay</code> &lt;avi at unix.sh&gt;<br/>
  Linux Market Developer, Senior IT and Software Architect, IBM Linux Impact Team :: <i>ibm.com/linux</i> </p>
 <dl>
 <dt>

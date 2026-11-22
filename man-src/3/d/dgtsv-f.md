@@ -10,7 +10,7 @@ description: "dgtsv.f –"
 <p>dgtsv.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dgtsv</code> (N, NRHS, DL, D, DU, B, LDB, INFO)<br />
+<p> subroutine <code>dgtsv</code> (N, NRHS, DL, D, DU, B, LDB, INFO)<br/>
  <i></i><code> DGTSV computes the solution to system of linear equations A * X = B for GT matrices </code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dgtsv (integerN, integerNRHS, double precision, dimension( * )DL, double precision, dimension( * )D, double precision, dimension( * )DU, double precision, dimension( ldb, * )B, integerLDB, integerINFO)</h3>

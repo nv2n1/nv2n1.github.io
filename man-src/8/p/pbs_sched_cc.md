@@ -22,7 +22,7 @@ description: "pbs_sched_cc – pbs C scheduler"
 <dt>-L logfile</dt>
 <dd>Specifies an absolute path name of the file to use as the log file. If not specified, the scheduler will open a file named for the current date in the PBS_HOME/sched_logs directory (see the -d option).</dd>
 <dt>-p file</dt>
-<dd>This specifies the &quot;print&quot; file. Any output from the C code which is written to standard out or standard error will be written to this file. If this option is not given, the file used will be <i>PBS_HOME/sched_priv/sched_out .</i> See the <i> </i><font SIZE="-1"><i> option.</dd>
+<dd>This specifies the &quot;print&quot; file. Any output from the C code which is written to standard out or standard error will be written to this file. If this option is not given, the file used will be <i>PBS_HOME/sched_priv/sched_out .</i> See the <i> </i><i> option.</dd>
 <dt>-S port</dt>
 <dd>This specifies the port to use. If this option is not given, the default port for the PBS scheduler is used.</dd>
 <dt>-R port</dt>
@@ -30,7 +30,7 @@ description: "pbs_sched_cc – pbs C scheduler"
 <dt>-c file</dt>
 <dd>Specify a configuration file, see description below. If this is a relative file name it will be relative to PBS_HOME/sched_priv, see the -d option. If the -c option is not supplied, pbs_sched will not attempt to open a configuration file.</dd></dl>
 <p> The options that specify file names may be absolute or relative. If they are relative, their root directory will be PBS_HOME/sched_priv. </p>
-<p> </i></font></p>
+<p> </i></p>
 <h2>Usage</h2>
 <p>This version of the scheduler requires knowledge of the C language and the PBS API. Source code is provided for a main program for the scheduler. The site must supply the heart of the program. When invoked, the main program performs general initialization and housekeeping chores. Then a locally supplied function, <i>schedinit()</i> is called to perform site specific initialization. </p>
 <p> In the main loop, a locally supplied function, <i>schedule()</i> is called to make the scheduling decisions and perform any required actions. Information about jobs and queues is obtained from the Server through the standard PBS API as found in libifl.a. Information about the execution host(s) is obtained from the Resource Monitor. Routines to communicate with the Resource Monitor are found in libnet.a. </p>
@@ -63,5 +63,5 @@ description: "pbs_sched_cc – pbs C scheduler"
 <h2>Exit Status</h2>
 <p>Upon normal termination, an exit status of zero is returned.</p>
 <h2>See Also</h2>
-<p>pbs_sched_tcl(8B), pbs_server(8B), and pbs_mom(8B).<br />
+<p>pbs_sched_tcl(8B), pbs_server(8B), and pbs_mom(8B).<br/>
  PBS Internal Design Specification </p>

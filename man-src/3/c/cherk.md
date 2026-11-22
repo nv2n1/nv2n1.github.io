@@ -11,7 +11,7 @@ description: "cherk.f –"
 <p> cherk.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cherk</code> (UPLO, TRANS, N, K, ALPHA, A, LDA, BETA, C, LDC)<br />
+<p> subroutine <code>cherk</code> (UPLO, TRANS, N, K, ALPHA, A, LDA, BETA, C, LDC)<br/>
  <i></i><code>CHERK</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cherk (characterUPLO, characterTRANS, integerN, integerK, realALPHA, complex, dimension(lda,*)A, integerLDA, realBETA, complex, dimension(ldc,*)C, integerLDC)</h3>

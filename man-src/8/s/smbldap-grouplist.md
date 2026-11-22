@@ -16,7 +16,7 @@ smbldap-grouplist [-S] [group template]
 
 -d Show displayName 
 
- -S Show samba <font SIZE="-1">SID</font> entry 
+ -S Show samba SID entry 
 
  -? show the help message
 

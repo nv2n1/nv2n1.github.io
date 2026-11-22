@@ -10,11 +10,11 @@ description: "shtoolize – Build individual GNU shtool scripts"
 
 <p> shtoolize &#8211; Build individual GNU shtool scripts </p>
 <h2>VERSION</h2>
-<p> <font SIZE="-1">GNU</font> shtool <font SIZE="-1">2.0.8 (18-Jul-2008)</font></p>
+<p> GNU shtool 2.0.8 (18-Jul-2008)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>shtoolize</code> [<code>-h</code>] [<code>-v</code>] [<code>-q</code>] [<code>-o</code> <i>script</i>] <i>module</i> [ <i>module</i> &#8230; ]</p>
 <h2>DESCRIPTION</h2>
-<p> The <code>shtoolize</code> program builds individual <font SIZE="-1">GNU </font><code>shtool</code> scripts (written to the default output file <tt>&quot;shtool&quot;</tt> or to the specified <i>script</i>) out of one or more <code>shtool</code> ingredient <i>module</i>s. Available <i>module</i>s are: </p>
+<p> The <code>shtoolize</code> program builds individual GNU <code>shtool</code> scripts (written to the default output file <tt>&quot;shtool&quot;</tt> or to the specified <i>script</i>) out of one or more <code>shtool</code> ingredient <i>module</i>s. Available <i>module</i>s are: </p>
 <pre>
  echo       Print string with optional construct expansion
  mdate      Pretty-print modification time of a file or dir
@@ -50,7 +50,7 @@ description: "shtoolize – Build individual GNU shtool scripts"
 <dt><code>-o</code> <i>script</i></dt>
 <dd> Writes the output to file <i>script</i> instead to file &#8220;<tt>&quot;shtool&quot;</tt>&#8221;.</dd></dl>
 <h2>EXAMPLE</h2>
-<p> The typical free software package which is based on <font SIZE="-1">GNU </font><code>libtool</code> and <font SIZE="-1">GNU </font><code>shtool</code> one uses a <tt>&quot;Makefile&quot;</tt> entry like the following: </p>
+<p> The typical free software package which is based on GNU <code>libtool</code> and GNU <code>shtool</code> one uses a <tt>&quot;Makefile&quot;</tt> entry like the following: </p>
 <pre>
  #   Makefile entry for upgrading GNU tools
  upgrade-tools:

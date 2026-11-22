@@ -18,7 +18,7 @@ git mailsplit[-b][-f&lt;nn&gt;][-d&lt;prec&gt;][--keep - cr][--mboxrd] - o&lt;di
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Important</code> </font> </dd>
+  <code>Important</code>  </dd>
 <p> Maildir splitting relies upon filenames being sorted to output patches in the correct order. </p>
 </dl>
 <h2>OPTIONS</h2>

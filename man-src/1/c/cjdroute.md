@@ -23,12 +23,12 @@ description: "cjdroute — Cjdns packet switch"
 <dt>&bull;</dt>
 <dd> <code>&#8211;bench</code>: Run some cryptography performance benchmarks.</dd>
 <dt>&bull;</dt>
-<dd> <code>&#8211;version</code>:<br />
+<dd> <code>&#8211;version</code>:<br/>
  Print cjdroute version and the protocol version which this node speaks.</dd>
 <dt>&bull;</dt>
 <dd> <code>&#8211;cleanconf</code> &lt; conf: Print a clean (valid json) version of the config.</dd>
 <dt>&bull;</dt>
-<dd> <code>&#8211;nobg</code><br />
+<dd> <code>&#8211;nobg</code><br/>
  Never fork to the background no matter the config.</dd>
 </dl>
 <h2>USAGE</h2>
@@ -78,12 +78,12 @@ description: "cjdroute — Cjdns packet switch"
 <dt>&bull;</dt>
 <dd> <code>&#8211;bench</code>: Run some cryptography performance benchmarks.</dd>
 <dt>&bull;</dt>
-<dd> <code>&#8211;version</code>:<br />
+<dd> <code>&#8211;version</code>:<br/>
  Print cjdroute version and the protocol version which this node speaks.</dd>
 <dt>&bull;</dt>
 <dd> <code>&#8211;cleanconf</code> &lt; conf: Print a clean (valid json) version of the config.</dd>
 <dt>&bull;</dt>
-<dd> <code>&#8211;nobg</code><br />
+<dd> <code>&#8211;nobg</code><br/>
  Never fork to the background no matter the config.</dd>
 </dl>
 <h2>USAGE</h2>

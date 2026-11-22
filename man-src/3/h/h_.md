@@ -15,12 +15,12 @@ description: "QuantLib::HullWhiteProcess – Hull-White stochastic process."
 <h3>Public Member Functions</h3>
 <p> <code>HullWhiteProcess</code> (const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;h, Real a, Real sigma) </p>
 <p> <code>StochasticProcess1D interface</code> </p>
-<p> Real <code>x0</code> () const<br />
- <i>returns the initial value of the state variable </i><br />
- Real <code>drift</code> (Time t, Real x) const<br />
- <i>returns the drift part of the equation, i.e. $ mu(t, x_t) $ </i><br />
- Real <code>diffusion</code> (Time t, Real x) const<br />
- <i>returns the diffusion part of the equation, i.e. $ igma(t, x_t) $ </i><br />
+<p> Real <code>x0</code> () const<br/>
+ <i>returns the initial value of the state variable </i><br/>
+ Real <code>drift</code> (Time t, Real x) const<br/>
+ <i>returns the drift part of the equation, i.e. $ mu(t, x_t) $ </i><br/>
+ Real <code>diffusion</code> (Time t, Real x) const<br/>
+ <i>returns the diffusion part of the equation, i.e. $ igma(t, x_t) $ </i><br/>
  Real <code>expectation</code> (Time t0, Real x0, Time dt) const </p>
 <p> Real <code>stdDeviation</code> (Time t0, Real x0, Time dt) const </p>
 <p> Real <code>variance</code> (Time t0, Real x0, Time dt) const </p>

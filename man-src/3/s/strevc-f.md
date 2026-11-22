@@ -10,7 +10,7 @@ description: "strevc.f –"
 <p>strevc.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>strevc</code> (SIDE, HOWMNY, SELECT, N, T, LDT, VL, LDVL, VR, LDVR, MM, M, WORK, INFO)<br />
+<p>subroutine <code>strevc</code> (SIDE, HOWMNY, SELECT, N, T, LDT, VL, LDVL, VR, LDVR, MM, M, WORK, INFO)<br/>
  <i></i><code>STREVC</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine strevc (characterSIDE, characterHOWMNY, logical, dimension( * )SELECT, integerN, real, dimension( ldt, * )T, integerLDT, real, dimension( ldvl, * )VL, integerLDVL, real, dimension( ldvr, * )VR, integerLDVR, integerMM, integerM, real, dimension( * )WORK, integerINFO)</h3>

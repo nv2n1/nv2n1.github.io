@@ -10,50 +10,50 @@ description: "formail – mail (re)formatter"
 
 <p> formail &#8211; mail (re)formatter </p>
 <h2>SYNOPSIS</h2>
-<p> <code>formail</code> [<i></i><code>+</code>skip] [<i></i><code>&#8211;</code>total] [<code>-bczfrktedqBY</code>] [<code>-p</code> <i>prefix</i>]<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; [<code>-D</code> <i>maxlen idcache</i>]<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; [<code>-l</code> <i>folder</i>]<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; [<code>-x</code> <i>headerfield</i>] [<code>-X</code> <i>headerfield</i>]<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; [<code>-a</code> <i>headerfield</i>] [<code>-A</code> <i>headerfield</i>]<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; [<code>-i</code> <i>headerfield</i>] [<code>-I</code> <i>headerfield</i>]<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; [<code>-u</code> <i>headerfield</i>] [<code>-U</code> <i>headerfield</i>]<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; [<code>-R</code> <i>oldfield</i> <i>newfield</i>]<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; [<code>-n</code> [<i>maxprocs</i> ]] [<code>-m</code> <i>minfields</i>] [<code>-s</code> [<i>command</i> [<i>arg</i> &#8230;]]]<br />
+<p> <code>formail</code> [<i></i><code>+</code>skip] [<i></i><code>&#8211;</code>total] [<code>-bczfrktedqBY</code>] [<code>-p</code> <i>prefix</i>]<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; [<code>-D</code> <i>maxlen idcache</i>]<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; [<code>-l</code> <i>folder</i>]<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; [<code>-x</code> <i>headerfield</i>] [<code>-X</code> <i>headerfield</i>]<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; [<code>-a</code> <i>headerfield</i>] [<code>-A</code> <i>headerfield</i>]<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; [<code>-i</code> <i>headerfield</i>] [<code>-I</code> <i>headerfield</i>]<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; [<code>-u</code> <i>headerfield</i>] [<code>-U</code> <i>headerfield</i>]<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; [<code>-R</code> <i>oldfield</i> <i>newfield</i>]<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; [<code>-n</code> [<i>maxprocs</i> ]] [<code>-m</code> <i>minfields</i>] [<code>-s</code> [<i>command</i> [<i>arg</i> &#8230;]]]<br/>
  <code>formail</code> <code>-v</code> </p>
 <h2>DESCRIPTION</h2>
 <p> <code>formail</code> is a filter that can be used to force mail into mailbox format, perform `From &#8216; escaping, generate auto-replying headers, do simple header munging/extracting or split up a mailbox/digest/articles file. The mail/mailbox/article contents will be expected on stdin. </p>
 <p> If formail is supposed to determine the sender of the mail, but is unable to find any, it will substitute `foo@bar&#8217;. </p>
 <p> If formail is started without any command line options, it will force any mail coming from stdin into mailbox format and will escape <code>all</code> bogus `From &#8216; lines with a `&gt;&#8217;. </p>
 <h2>OPTIONS</h2>
-<p> Tp 0.5i <code>-v</code> Formail will print its version number and exit.<br />
- Tp <code>-b</code> Don&#8217;t escape any bogus mailbox headers (i.e., lines starting with `From &#8216;).<br />
- Tp <i></i><code>-p</code> prefix Define a different quotation prefix. If unspecified it defaults to `&gt;&#8217;.<br />
- Tp <code>-Y</code> Assume traditional Berkeley mailbox format, ignoring any <code>Content-Length:</code> fields.<br />
- Tp <code>-c</code> Concatenate continued fields in the header. Might be convenient when postprocessing mail with standard (line oriented) text utilities.<br />
- Tp <code>-z</code> Ensure a whitespace exists between field name and content. Zap fields which contain only a single whitespace character. Zap leading and trailing whitespace on fields extracted with <code>-x</code>.<br />
- Tp <code>-f</code> Force formail to simply pass along any non-mailbox format (i.e., don&#8217;t generate a `From &#8216; line as the first line).<br />
- Tp <code>-r</code> Generate an auto-reply header. This will normally throw away all the existing fields (except X-Loop:) in the original message, fields you wish to preserve need to be named using the <code>-i</code> option. If you use this option in conjunction with <code>-k</code>, you can prevent the body from being `escaped&#8217; by also specifying <code>-b</code>.<br />
- Tp <code>-k</code> When generating the auto-reply header or when extracting fields, keep the body as well.<br />
- Tp <code>-t</code> Trust the sender to have used a valid return address in his header. This causes formail to select the <i>header sender</i> instead of the <i>envelope sender</i> for the reply. This option should be used when generating auto-reply headers from news articles or when the sender of the message is expecting a reply.<br />
- Tp <code>-s</code> The input will be split up into separate mail messages, and piped into a program one by one (a new program is started for every part). <code>-s</code> has to be the last option specified, the first argument following it is expected to be the name of a program, any other arguments will be passed along to it. If you omit the program, then formail will simply concatenate the split mails on stdout again. See <code>FILENO</code>.<br />
- Tp <i></i><code>-n</code> [maxprocs] Tell formail not to wait for every program to finish before starting the next (causes splits to be processed in parallel). <i>Maxprocs</i> optionally specifies an upper limit on the number of concurrently running processes.<br />
- Tp <code>-e</code> Do not require empty lines to be preceding the header of a new message (i.e., the messages could start on every line).<br />
- Tp <code>-d</code> Tell formail that the messages it is supposed to split need not be in strict mailbox format (i.e., allows you to split digests/articles or non-standard mailbox formats). This disables recognition of the <code>Content-Length:</code> field.<br />
- Tp <code>-l folder</code> Generate a log summary in the same style as procmail. This includes the entire &quot;From &quot; line, the Subject: header field, the folder, and the size of the message in bytes. The mailstat command can be used to summarize logs in this format.<br />
- Tp <code>-B</code> Makes formail assume that it is splitting up a BABYL rmail file.<br />
- Tp <i></i><code>-m</code> minfields Allows you to specify the number of consecutive headerfields formail needs to find before it decides it found the start of a new message, it defaults to 2.<br />
- Tp <code>-q</code> Tells formail to (still detect but) be quiet about write errors, duplicate messages and mismatched <code>Content-Length:</code> fields. This option is on by default, to make it display the messages use <code>-q-</code>.<br />
- Tp <i></i><code>-D</code> maxlen idcache Formail will detect if the Message-ID of the current message has already been seen using an <i>idcache</i> file of approximately <i>maxlen</i> size. If not splitting, it will return success if a duplicate has been found. If splitting, it will not output duplicate messages. If used in conjunction with <code>-r</code>, formail will look at the <i>mail address</i> of the envelope sender <i>instead</i> at the Message-ID.<br />
- Tp <i></i><code>-x</code> headerfield Extract the contents of this <i>headerfield</i> from the header. Line continuations will be left intact; if you want the value on a single line then you&#8217;ll also need the <code>-c</code> option.<br />
- Tp <i></i><code>-X</code> headerfield Same as <code>-x</code>, but also preserves/includes the field name.<br />
- Tp <i></i><code>-a</code> headerfield Append a custom <i>headerfield</i> onto the header; but only if a similar field does not exist yet. If you specify either one of the field names <code>Message-ID:</code> or <code>Resent-Message-ID:</code> with no field contents, then formail will generate a unique message-ID for you.<br />
- Tp <i></i><code>-A</code> headerfield Append a custom <i>headerfield</i> onto the header in any case.<br />
- Tp <i></i><code>-i</code> headerfield Same as <code>-A</code>, except that any existing similar fields are renamed by prepending an &#8220;Old-&#8221; prefix. If <i>headerfield</i> consists only of a field-name, it will not be appended.<br />
- Tp <i></i><code>-I</code> headerfield Same as <code>-i</code>, except that any existing similar fields are simply removed. If <i>headerfield</i> consists only of a field-name, it effectively deletes the field.<br />
- Tp <i></i><code>-u</code> headerfield Make the first occurrence of this field unique, and thus delete all subsequent occurrences of it.<br />
- Tp <i></i><code>-U</code> headerfield Make the last occurrence of this field unique, and thus delete all preceding occurrences of it.<br />
- Tp <i></i><code>-R</code> oldfield newfield Renames all occurrences of the fieldname <i>oldfield</i> into <i>newfield</i>.<br />
- Tp <i></i><code>+</code>skip Skip the first <i>skip</i> messages while splitting.<br />
+<p> Tp 0.5i <code>-v</code> Formail will print its version number and exit.<br/>
+ Tp <code>-b</code> Don&#8217;t escape any bogus mailbox headers (i.e., lines starting with `From &#8216;).<br/>
+ Tp <i></i><code>-p</code> prefix Define a different quotation prefix. If unspecified it defaults to `&gt;&#8217;.<br/>
+ Tp <code>-Y</code> Assume traditional Berkeley mailbox format, ignoring any <code>Content-Length:</code> fields.<br/>
+ Tp <code>-c</code> Concatenate continued fields in the header. Might be convenient when postprocessing mail with standard (line oriented) text utilities.<br/>
+ Tp <code>-z</code> Ensure a whitespace exists between field name and content. Zap fields which contain only a single whitespace character. Zap leading and trailing whitespace on fields extracted with <code>-x</code>.<br/>
+ Tp <code>-f</code> Force formail to simply pass along any non-mailbox format (i.e., don&#8217;t generate a `From &#8216; line as the first line).<br/>
+ Tp <code>-r</code> Generate an auto-reply header. This will normally throw away all the existing fields (except X-Loop:) in the original message, fields you wish to preserve need to be named using the <code>-i</code> option. If you use this option in conjunction with <code>-k</code>, you can prevent the body from being `escaped&#8217; by also specifying <code>-b</code>.<br/>
+ Tp <code>-k</code> When generating the auto-reply header or when extracting fields, keep the body as well.<br/>
+ Tp <code>-t</code> Trust the sender to have used a valid return address in his header. This causes formail to select the <i>header sender</i> instead of the <i>envelope sender</i> for the reply. This option should be used when generating auto-reply headers from news articles or when the sender of the message is expecting a reply.<br/>
+ Tp <code>-s</code> The input will be split up into separate mail messages, and piped into a program one by one (a new program is started for every part). <code>-s</code> has to be the last option specified, the first argument following it is expected to be the name of a program, any other arguments will be passed along to it. If you omit the program, then formail will simply concatenate the split mails on stdout again. See <code>FILENO</code>.<br/>
+ Tp <i></i><code>-n</code> [maxprocs] Tell formail not to wait for every program to finish before starting the next (causes splits to be processed in parallel). <i>Maxprocs</i> optionally specifies an upper limit on the number of concurrently running processes.<br/>
+ Tp <code>-e</code> Do not require empty lines to be preceding the header of a new message (i.e., the messages could start on every line).<br/>
+ Tp <code>-d</code> Tell formail that the messages it is supposed to split need not be in strict mailbox format (i.e., allows you to split digests/articles or non-standard mailbox formats). This disables recognition of the <code>Content-Length:</code> field.<br/>
+ Tp <code>-l folder</code> Generate a log summary in the same style as procmail. This includes the entire &quot;From &quot; line, the Subject: header field, the folder, and the size of the message in bytes. The mailstat command can be used to summarize logs in this format.<br/>
+ Tp <code>-B</code> Makes formail assume that it is splitting up a BABYL rmail file.<br/>
+ Tp <i></i><code>-m</code> minfields Allows you to specify the number of consecutive headerfields formail needs to find before it decides it found the start of a new message, it defaults to 2.<br/>
+ Tp <code>-q</code> Tells formail to (still detect but) be quiet about write errors, duplicate messages and mismatched <code>Content-Length:</code> fields. This option is on by default, to make it display the messages use <code>-q-</code>.<br/>
+ Tp <i></i><code>-D</code> maxlen idcache Formail will detect if the Message-ID of the current message has already been seen using an <i>idcache</i> file of approximately <i>maxlen</i> size. If not splitting, it will return success if a duplicate has been found. If splitting, it will not output duplicate messages. If used in conjunction with <code>-r</code>, formail will look at the <i>mail address</i> of the envelope sender <i>instead</i> at the Message-ID.<br/>
+ Tp <i></i><code>-x</code> headerfield Extract the contents of this <i>headerfield</i> from the header. Line continuations will be left intact; if you want the value on a single line then you&#8217;ll also need the <code>-c</code> option.<br/>
+ Tp <i></i><code>-X</code> headerfield Same as <code>-x</code>, but also preserves/includes the field name.<br/>
+ Tp <i></i><code>-a</code> headerfield Append a custom <i>headerfield</i> onto the header; but only if a similar field does not exist yet. If you specify either one of the field names <code>Message-ID:</code> or <code>Resent-Message-ID:</code> with no field contents, then formail will generate a unique message-ID for you.<br/>
+ Tp <i></i><code>-A</code> headerfield Append a custom <i>headerfield</i> onto the header in any case.<br/>
+ Tp <i></i><code>-i</code> headerfield Same as <code>-A</code>, except that any existing similar fields are renamed by prepending an &#8220;Old-&#8221; prefix. If <i>headerfield</i> consists only of a field-name, it will not be appended.<br/>
+ Tp <i></i><code>-I</code> headerfield Same as <code>-i</code>, except that any existing similar fields are simply removed. If <i>headerfield</i> consists only of a field-name, it effectively deletes the field.<br/>
+ Tp <i></i><code>-u</code> headerfield Make the first occurrence of this field unique, and thus delete all subsequent occurrences of it.<br/>
+ Tp <i></i><code>-U</code> headerfield Make the last occurrence of this field unique, and thus delete all preceding occurrences of it.<br/>
+ Tp <i></i><code>-R</code> oldfield newfield Renames all occurrences of the fieldname <i>oldfield</i> into <i>newfield</i>.<br/>
+ Tp <i></i><code>+</code>skip Skip the first <i>skip</i> messages while splitting.<br/>
  Tp <i></i><code>&#8211;</code>total Output at most <i>total</i> messages while splitting. </p>
 <h2>NOTES</h2>
 <p> When renaming, removing, or extracting fields, partial fieldnames may be used to specify all fields that start with the specified value. </p>
@@ -124,12 +124,12 @@ description: "formail – mail (re)formatter"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mail/">mail</a></code>(1), <code>sendmail</code>(8), <code><a href="/docs/linux/man/1-procmail/">procmail</a></code>(1), <code><a href="/docs/linux/man/1-sed/">sed</a></code>(1), <code><a href="/docs/linux/man/1-sh/">sh</a></code>(1), <code>RFC822</code>, <code>RFC2822</code>, <code>RFC1123</code> </p>
 <h2>DIAGNOSTICS</h2>
-<p> Tp 2.3i Can&#8217;t fork Too many processes on this machine.<br />
- Tp Content-Length: field exceeds actual length by nnn bytes The Content-Length: field in the header specified a length that was longer than the actual body. This causes this message to absorb a number of subsequent messages following it in the same mailbox.<br />
- Tp Couldn&#8217;t write to stdout The program that formail was trying to pipe into didn&#8217;t accept all the data formail sent to it; this diagnostic can be suppressed by the <code>-q</code> option.<br />
- Tp Duplicate key found: x The Message-ID or sender x in this message was found in the idcache; this diagnostic can be suppressed by the <code>-q</code> option.<br />
- Tp Failed to execute &quot;x&quot; Program not in path, or not executable.<br />
- Tp File table full Too many open files on this machine.<br />
+<p> Tp 2.3i Can&#8217;t fork Too many processes on this machine.<br/>
+ Tp Content-Length: field exceeds actual length by nnn bytes The Content-Length: field in the header specified a length that was longer than the actual body. This causes this message to absorb a number of subsequent messages following it in the same mailbox.<br/>
+ Tp Couldn&#8217;t write to stdout The program that formail was trying to pipe into didn&#8217;t accept all the data formail sent to it; this diagnostic can be suppressed by the <code>-q</code> option.<br/>
+ Tp Duplicate key found: x The Message-ID or sender x in this message was found in the idcache; this diagnostic can be suppressed by the <code>-q</code> option.<br/>
+ Tp Failed to execute &quot;x&quot; Program not in path, or not executable.<br/>
+ Tp File table full Too many open files on this machine.<br/>
  Tp Invalid field-name: &quot;x&quot; The specified field-name &quot;x&quot; contains control characters, or cannot be a partial field-name for this option. </p>
 <h2>WARNINGS</h2>
 <p> You can save yourself and others a lot of grief if you try to avoid using this autoreply feature on mails coming through mailinglists. Depending on the format of the incoming mail (which in turn depends on both the original sender&#8217;s mail agent and the mailinglist setup) formail could decide to generate an autoreply header that replies to the list. </p>

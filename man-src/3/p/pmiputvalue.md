@@ -9,8 +9,8 @@ description: "pmiPutValue – add a value for a metric-instance pair"
 
 <p><code>pmiPutValue</code> &#8211; add a value for a metric-instance pair</p>
 <h2>C Synopsis</h2>
-<p><code> #include &lt;pcp/pmapi.h&gt;<br />
- #include &lt;pcp/impl.h&gt;<br />
+<p><code> #include &lt;pcp/pmapi.h&gt;<br/>
+ #include &lt;pcp/impl.h&gt;<br/>
  #include &lt;pcp/import.h&gt; </p>
 <p> int pmiPutValue(const char *</code><i>name</i>, const char *<i>instance</i>, const char&nbsp;<wbr>*<i>value</i>); </p>
 <p> cc &#8230; -lpcp_import -lpcp</p>

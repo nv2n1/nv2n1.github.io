@@ -9,23 +9,23 @@ description: "Ecore Connection Client Functions – Functions that operate on Ec
 
 <p>Ecore Connection Client Functions &#8211; Functions that operate on Ecore connection client objects. </p>
 <h3>Functions</h3>
-<p>EAPI int <code>ecore_con_client_send</code> (<code>Ecore_Con_Client</code> *cl, const void *data, int size)<br />
- <i>Sends the given data to the given client. </i><br />
- EAPI <code>Ecore_Con_Server</code> * <code>ecore_con_client_server_get</code> (<code>Ecore_Con_Client</code> *cl)<br />
- <i>Retrieves the server representing the socket the client has connected to. </i><br />
- EAPI void * <code>ecore_con_client_del</code> (<code>Ecore_Con_Client</code> *cl)<br />
- <i>Closes the connection and frees memory allocated to the given client. </i><br />
- EAPI void <code>ecore_con_client_data_set</code> (<code>Ecore_Con_Client</code> *cl, const void *data)<br />
- <i>Sets the data associated with the given client to </i>data.<br />
- EAPI void * <code>ecore_con_client_data_get</code> (<code>Ecore_Con_Client</code> *cl)<br />
- <i>Retrieves the data associated with the given client. </i><br />
- EAPI char * <code>ecore_con_client_ip_get</code> (<code>Ecore_Con_Client</code> *cl)<br />
- <i>Gets the IP address of a cleint that has connected. </i><br />
- EAPI void <code>ecore_con_client_flush</code> (<code>Ecore_Con_Client</code> *cl)<br />
- <i>Flushes all pending data to the given client. </i><br />
- EAPI int <code>ecore_con_ssl_available_get</code> (void)<br />
- <i>Returns if SSL support is available. </i><br />
- EAPI int <code>ecore_ipc_ssl_available_get</code> (void)<br />
+<p>EAPI int <code>ecore_con_client_send</code> (<code>Ecore_Con_Client</code> *cl, const void *data, int size)<br/>
+ <i>Sends the given data to the given client. </i><br/>
+ EAPI <code>Ecore_Con_Server</code> * <code>ecore_con_client_server_get</code> (<code>Ecore_Con_Client</code> *cl)<br/>
+ <i>Retrieves the server representing the socket the client has connected to. </i><br/>
+ EAPI void * <code>ecore_con_client_del</code> (<code>Ecore_Con_Client</code> *cl)<br/>
+ <i>Closes the connection and frees memory allocated to the given client. </i><br/>
+ EAPI void <code>ecore_con_client_data_set</code> (<code>Ecore_Con_Client</code> *cl, const void *data)<br/>
+ <i>Sets the data associated with the given client to </i>data.<br/>
+ EAPI void * <code>ecore_con_client_data_get</code> (<code>Ecore_Con_Client</code> *cl)<br/>
+ <i>Retrieves the data associated with the given client. </i><br/>
+ EAPI char * <code>ecore_con_client_ip_get</code> (<code>Ecore_Con_Client</code> *cl)<br/>
+ <i>Gets the IP address of a cleint that has connected. </i><br/>
+ EAPI void <code>ecore_con_client_flush</code> (<code>Ecore_Con_Client</code> *cl)<br/>
+ <i>Flushes all pending data to the given client. </i><br/>
+ EAPI int <code>ecore_con_ssl_available_get</code> (void)<br/>
+ <i>Returns if SSL support is available. </i><br/>
+ EAPI int <code>ecore_ipc_ssl_available_get</code> (void)<br/>
  <i>Returns if SSL support is available. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that operate on Ecore connection client objects.</p>
@@ -42,7 +42,7 @@ description: "Ecore Connection Client Functions – Functions that operate on Ec
 <p>Sets the data associated with the given client to data. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>cl</i> The given client.<br />
+<dd><i>cl</i> The given client.<br/>
  <i>data</i> What to set the data to.</dd></dl>
 <h3>EAPI void* ecore_con_client_del (<code>Ecore_Con_Client</code> * cl)</h3>
 <p>Closes the connection and frees memory allocated to the given client. </p>
@@ -74,8 +74,8 @@ description: "Ecore Connection Client Functions – Functions that operate on Ec
 <p>Sends the given data to the given client. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>cl</i> The given client.<br />
- <i>data</i> The given data.<br />
+<dd><i>cl</i> The given client.<br/>
+ <i>data</i> The given data.<br/>
  <i>size</i> Length of the data, in bytes, to send.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

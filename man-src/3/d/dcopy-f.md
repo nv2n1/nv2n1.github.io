@@ -10,7 +10,7 @@ description: "dcopy.f –"
 <p>dcopy.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dcopy</code> (N, DX, INCX, DY, INCY)<br />
+<p>subroutine <code>dcopy</code> (N, DX, INCX, DY, INCY)<br/>
  <i></i><code>DCOPY</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dcopy (integerN, double precision, dimension(*)DX, integerINCX, double precision, dimension(*)DY, integerINCY)</h3>

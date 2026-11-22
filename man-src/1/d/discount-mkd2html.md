@@ -12,7 +12,7 @@ description: "mkd2html – markdown to html converter"
 <h2>SYNOPSIS</h2>
 <p> [-<code>css file </code> ] [-<code>header string </code> ] [-<code>footer string </code> ] [file ]</p>
 <h2>DESCRIPTION</h2>
-<p> utility parses a <a href="/docs/linux/man/7-markdown/">markdown</a>(7)Ns-formatted textfile (or stdin if not specified,) and generates a web page. It reads <i>file</i> or <i>file.text</i><br />
+<p> utility parses a <a href="/docs/linux/man/7-markdown/">markdown</a>(7)Ns-formatted textfile (or stdin if not specified,) and generates a web page. It reads <i>file</i> or <i>file.text</i><br/>
 &nbsp;<wbr>and writes the result in <i>file.html</i> (where file is the passed argument.) </p>
 <p> is part of discount.</p>
 <h2>OPTIONS</h2>

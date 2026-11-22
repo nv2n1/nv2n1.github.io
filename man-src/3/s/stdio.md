@@ -10,8 +10,8 @@ description: "stdio – standard input/output library functions"
 <p>stdio &#8211; standard input/output library functions</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;stdio.h&gt;</code></pre>
-<p> <code>FILE *</code><i>stdin</i><code>;</code><br />
- <code>FILE *</code><i>stdout</i><code>;</code><br />
+<p> <code>FILE *</code><i>stdin</i><code>;</code><br/>
+ <code>FILE *</code><i>stdout</i><code>;</code><br/>
  <code>FILE *</code><i>stderr</i><code>;</code></p>
 <h2>Description</h2>
 <p>The standard I/O library provides a simple and efficient buffered stream I/O interface. Input and output is mapped into logical data streams and the physical I/O characteristics are concealed. The functions and macros are listed below; more information is available from the individual man pages. </p>

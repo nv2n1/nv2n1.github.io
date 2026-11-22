@@ -12,8 +12,8 @@ description: "votequorum_qdevice_master_wins – Sets or clears quorum device ma
 <pre><code>#include &lt;corosync/votequorum.h&gt;
 int votequorum_qdevice_master_wins(votequorum_handle_t handle const char name, unsigned int allow);</code></pre>
 <h2>Description</h2>
-<p>The <code>votequorum_qdevice_master_wins</code> informs votequorum whether or not the currently registered qdevice subsystem supports &#8216;master_wins&#8217; mode (default 0). This mode allows the qdevice to effectively take over the quorum calculations of votequorum. Any node with an active qdevice that also has master_wins set becomes quorate regardless of the node votes of the cluster. It is left up to the qdevice subsystem itself (not part of votequorum) to communicate across the nodes or otherwise provide some system of deciding which nodes will be part of the quorate cluster, if any. eg They may be the set of nodes that has access to a quorum disk.<br />
- <code>name</code> The name of the currently registered quorum device on this node. This must match the existing name known to votequorum.<br />
+<p>The <code>votequorum_qdevice_master_wins</code> informs votequorum whether or not the currently registered qdevice subsystem supports &#8216;master_wins&#8217; mode (default 0). This mode allows the qdevice to effectively take over the quorum calculations of votequorum. Any node with an active qdevice that also has master_wins set becomes quorate regardless of the node votes of the cluster. It is left up to the qdevice subsystem itself (not part of votequorum) to communicate across the nodes or otherwise provide some system of deciding which nodes will be part of the quorate cluster, if any. eg They may be the set of nodes that has access to a quorum disk.<br/>
+ <code>name</code> The name of the currently registered quorum device on this node. This must match the existing name known to votequorum.<br/>
  <code>allow</code> 0 (the default) means that master_wins is not active on this node. 1 means that master_wins is active on this node.</p>
 <h2>Return Value</h2>
 <p>This call returns the CS_OK value if successful, otherwise an error is returned. </p>

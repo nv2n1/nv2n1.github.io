@@ -16,24 +16,24 @@ description: "sc::StateOutText –"
 <h3>Public Member Functions</h3>
 <p><code>StateOutText</code> (std::ostream &amp;s) </p>
 <p> <code>StateOutText</code> (const char *) </p>
-<p> int <code>putstring</code> (const char *)<br />
- <i>This is like put except the length of the char array is determined by interpreting the character array as a character string. </i><br />
- int <code>put_array_char</code> (const char *, int)<br />
- <i>Put arrays of data. </i><br />
+<p> int <code>putstring</code> (const char *)<br/>
+ <i>This is like put except the length of the char array is determined by interpreting the character array as a character string. </i><br/>
+ int <code>put_array_char</code> (const char *, int)<br/>
+ <i>Put arrays of data. </i><br/>
  int <code>put_array_uint</code> (const unsigned int *, int) </p>
 <p> int <code>put_array_int</code> (const int *, int) </p>
 <p> int <code>put_array_float</code> (const float *, int) </p>
 <p> int <code>put_array_double</code> (const double *, int) </p>
-<p> int <code>put</code> (const <code>ClassDesc</code> *)<br />
- <i>Write out information about the given </i><code>ClassDesc</code>.<br />
- int <code>put</code> (char r)<br />
- <i>Write the given datum. </i><br />
+<p> int <code>put</code> (const <code>ClassDesc</code> *)<br/>
+ <i>Write out information about the given </i><code>ClassDesc</code>.<br/>
+ int <code>put</code> (char r)<br/>
+ <i>Write the given datum. </i><br/>
  int <code>put</code> (unsigned int r) </p>
 <p> int <code>put</code> (int r) </p>
 <p> int <code>put</code> (float r) </p>
 <p> int <code>put</code> (double r) </p>
-<p> int <code>put</code> (const char *, int)<br />
- <i>Write the given array data. </i><br />
+<p> int <code>put</code> (const char *, int)<br/>
+ <i>Write the given array data. </i><br/>
  int <code>put</code> (const unsigned int *, int) </p>
 <p> int <code>put</code> (const int *, int) </p>
 <p> int <code>put</code> (const float *, int) </p>

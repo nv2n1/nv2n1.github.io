@@ -74,7 +74,7 @@ dbmapreduce[-dMS][-k KeyField][-f CodeFile][-C Filtercode][--][ReduceCommand[Red
         dbmapreduce -k experiment -- dbcolstats duration
 </pre>
 <p> except that with <tt>&quot;-C&quot;</tt> there is no forking and so things run faster. </p>
-<p> If <tt>&quot;dbmapreduce&quot;</tt> is invoked from within Perl, then one can use a code <font SIZE="-1">SUB</font> as well:<br />
+<p> If <tt>&quot;dbmapreduce&quot;</tt> is invoked from within Perl, then one can use a code SUB as well:<br/>
 &nbsp;<wbr>dbmapreduce(-k&nbsp;<wbr>=&gt;&nbsp;<wbr>&#8216;experiment&#8217;,&nbsp;<wbr> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>-C =&gt; sub { dbcolstats(qw(&#8211;nolong duration)) });</p>
 <p> The reduce object must consume <i>all</i> input as a Fsdb stream, and close the output Fsdb stream. (If this assumption is not met the map/reduce will be aborted.) </p>
 <p> For non-map-reduce-aware filters, when the filter-generator code runs, <tt>$_[0]</tt> will be the current key.</p>
@@ -97,7 +97,7 @@ sub make_reducer
 <dt><code>-w</code> or <code>&#8211;warnings</code></dt>
 <dd> Enable warnings in user supplied code. Warnings are issued if an external reducer fails to consume all input. (Default to include warnings.)</dd>
 <dt><code>-T TmpDir</code></dt>
-<dd> where to put tmp files. Also uses environment variable <font SIZE="-1">TMPDIR,</font> if -T is not specified. Default is /tmp.</dd></dl>
+<dd> where to put tmp files. Also uses environment variable TMPDIR, if -T is not specified. Default is /tmp.</dd></dl>
 <p> This module also supports the standard fsdb options:</p>
 <dl>
 <dt><code>-d</code></dt>
@@ -139,4 +139,4 @@ sub make_reducer
 <p> Fsdb. dbmultistats dbrowsplituniq</p>
 <h2>AUTHOR and COPYRIGHT</h2>
 <p> Copyright (C) 1991-2016 by John Heidemann &lt;johnh [at] isi.edu&gt; </p>
-<p> This program is distributed under terms of the <font SIZE="-1">GNU</font> general public license, version 2. See the file <font SIZE="-1">COPYING</font> with the distribution for details. </p>
+<p> This program is distributed under terms of the GNU general public license, version 2. See the file COPYING with the distribution for details. </p>

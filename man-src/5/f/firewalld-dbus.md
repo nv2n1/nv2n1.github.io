@@ -52,7 +52,7 @@ description: "firewalld.dbus – firewalld D-Bus interface description"
 <h2>Interfaces</h2>
 <h3>org.fedoraproject.FirewallD1</h3>
 <p>This interface contains general runtime operations, like: reloading, panic mode, default zone handling, getting services and icmp types and their settings. </p>
-<p> <font SIZE="+1"> <code>Methods</code></p>
+<p>  <code>Methods</code></p>
 <dl>
 <dd>authorizeAll() → Nothing</dd>
 <dl>
@@ -220,7 +220,7 @@ description: "firewalld.dbus – firewalld D-Bus interface description"
 <dd>Set LogDenied value to <i>value</i>. If LogDenied is enabled, then logging rules are added right before reject and drop rules in the INPUT, FORWARD and OUTPUT chains for the default rules and also final reject and drop rules in zones. Possible values are: <i>all</i>, <i>unicast</i>, <i>broadcast</i>, <i>multicast</i> and <i>off</i>. The default value is <i>off</i> This is a runtime and permanent change. </dd>
 <p> Possible errors: ALREADY_SET, INVALID_VALUE</dl>
 </dl>
-<p> </font><font SIZE="+2"> <code>Signals</code></p>
+<p>  <code>Signals</code></p>
 <dl>
 <dd>DefaultZoneChanged(s: <i>zone</i>)</dd>
 <dl>
@@ -238,7 +238,7 @@ description: "firewalld.dbus – firewalld D-Bus interface description"
 <dl>
 <dd>Emitted when firewalld has been reloaded. Also emitted for a complete reload.</dd></dl>
 </dl>
-<p> </font><font SIZE="+3"> <code>Properties</code></p>
+<p>  <code>Properties</code></p>
 <dl>
 <dd><i>BRIDGE</i> &#8211; b &#8211; (ro)</dd>
 <dl>
@@ -274,10 +274,10 @@ description: "firewalld.dbus – firewalld D-Bus interface description"
 <dl>
 <dd>firewalld version string.</dd></dl>
 </dl>
-<p> </font></p>
+<p> </p>
 <h3>org.fedoraproject.FirewallD1.ipset</h3>
 <p>Operations in this interface allows to get, add, remove and query runtime ipset settings. For permanent configuration see org.fedoraproject.FirewallD1.config.ipset interface. </p>
-<p> <font SIZE="+1"> <code>Methods</code></p>
+<p>  <code>Methods</code></p>
 <dl>
 <dd>addEntry(s: ipset, s: entry) → as</dd>
 <dl>
@@ -327,7 +327,7 @@ description: "firewalld.dbus – firewalld D-Bus interface description"
 <dl>
 <dd>Permanently set list of entries to <i>entries</i>. For permanent operation see org.fedoraproject.FirewallD1.config.ipset.Methods.setEntries. See <i>entry</i> tag in <code><a href="/docs/linux/man/5-firewalld-ipset/">firewalld.ipset</a></code>(5).</dd></dl>
 </dl>
-<p> </font><font SIZE="+2"> <code>Signals</code></p>
+<p>  <code>Signals</code></p>
 <dl>
 <dd>EntryAdded(s: ipset, s: entry)</dd>
 <dl>
@@ -336,10 +336,10 @@ description: "firewalld.dbus – firewalld D-Bus interface description"
 <dl>
 <dd>Emitted when <i>entry</i> has been removed from <i>ipset</i>.</dd></dl>
 </dl>
-<p> </font></p>
+<p> </p>
 <h3>org.fedoraproject.FirewallD1.direct</h3>
 <p>This interface enables more direct access to the firewall. It enables runtime manipulation with chains and rules. For permanent configuration see org.fedoraproject.FirewallD1.config.direct interface. </p>
-<p> <font SIZE="+1"> <code>Methods</code></p>
+<p>  <code>Methods</code></p>
 <dl>
 <dd>addChain(s: ipv, s: table, s: chain) → Nothing</dd>
 <dl>
@@ -452,7 +452,7 @@ description: "firewalld.dbus – firewalld D-Bus interface description"
 <dd>Remove all rules from <i>chain</i> in <i>table</i> for <i>ipv</i> being either <i>ipv4</i> (iptables) or <i>ipv6</i> (ip6tables) or <i>eb</i> (ebtables). This concerns only rules previously added with addRule. For permanent operation see org.fedoraproject.FirewallD1.config.direct.Methods.removeRules. </dd>
 <p> Possible errors: INVALID_IPV, INVALID_TABLE</dl>
 </dl>
-<p> </font><font SIZE="+2"> <code>Signals</code></p>
+<p>  <code>Signals</code></p>
 <dl>
 <dd>ChainAdded(s: ipv, s: table, s: chain)</dd>
 <dl>
@@ -473,10 +473,10 @@ description: "firewalld.dbus – firewalld D-Bus interface description"
 <dl>
 <dd>Emitted when a rule with <i>args</i> has been removed from <i>chain</i> in <i>table</i> with <i>priority</i> for <i>ipv</i> being either <i>ipv4</i> (iptables) or <i>ipv6</i> (ip6tables) or <i>eb</i> (ebtables).</dd></dl>
 </dl>
-<p> </font></p>
+<p> </p>
 <h3>org.fedoraproject.FirewallD1.policies</h3>
 <p>Enables firewalld to be able to lock down configuration changes from local applications. Local applications or services are able to change the firewall configuration if they are running as root (example: libvirt). With these operations administrator can lock the firewall configuration so that either none or only applications that are in the whitelist are able to request firewall changes. For permanent configuration see org.fedoraproject.FirewallD1.config.policies interface. </p>
-<p> <font SIZE="+1"> <code>Methods</code></p>
+<p>  <code>Methods</code></p>
 <dl>
 <dd>addLockdownWhitelistCommand(s: command) → Nothing</dd>
 <dl>
@@ -546,7 +546,7 @@ description: "firewalld.dbus – firewalld D-Bus interface description"
 <dd>Remove <i>user</i> from whitelist. For permanent operation see org.fedoraproject.FirewallD1.config.policies.Methods.removeLockdownWhitelistUser. </dd>
 <p> Possible errors: NOT_ENABLED</dl>
 </dl>
-<p> </font><font SIZE="+2"> <code>Signals</code></p>
+<p>  <code>Signals</code></p>
 <dl>
 <dd>LockdownDisabled()</dd>
 <dl>
@@ -579,10 +579,10 @@ description: "firewalld.dbus – firewalld D-Bus interface description"
 <dl>
 <dd>Emitted when <i>user</i> has been removed from whitelist.</dd></dl>
 </dl>
-<p> </font></p>
+<p> </p>
 <h3>org.fedoraproject.FirewallD1.zone</h3>
 <p>Operations in this interface allows to get, add, remove and query runtime zone&#8217;s settings. For permanent settings see org.fedoraproject.FirewallD1.config.zone interface. </p>
-<p> <font SIZE="+1"> <code>Methods</code></p>
+<p>  <code>Methods</code></p>
 <dl>
 <dd>addForwardPort(s: zone, s: port, s: protocol, s: toport, s: toaddr, i: timeout) → s</dd>
 <dl>
@@ -809,7 +809,7 @@ description: "firewalld.dbus – firewalld D-Bus interface description"
 <p> Returns name of zone from which the source port was removed. </p>
 <p> Possible errors: INVALID_ZONE, INVALID_PORT, MISSING_PROTOCOL, INVALID_PROTOCOL, NOT_ENABLED, INVALID_COMMAND</dl>
 </dl>
-<p> </font><font SIZE="+2"> <code>Signals</code></p>
+<p>  <code>Signals</code></p>
 <dl>
 <dd>ForwardPortAdded(s: zone, s: port, s: protocol, s: toport, s: toaddr, i: timeout)</dd>
 <dl>
@@ -887,10 +887,10 @@ description: "firewalld.dbus – firewalld D-Bus interface description"
 <dl>
 <dd>Emitted when a zone an <i>source</i> is part of has been changed to <i>zone</i>.</dd></dl>
 </dl>
-<p> </font></p>
+<p> </p>
 <h3>org.fedoraproject.FirewallD1.config</h3>
 <p>Allows to permanently add, remove and query zones, services and icmp types. </p>
-<p> <font SIZE="+1"> <code>Methods</code></p>
+<p>  <code>Methods</code></p>
 <dl>
 <dd>addIPSet(s: ipset, (ssssa{ss}as): settings) → o</dd>
 <dl>
@@ -1064,7 +1064,7 @@ description: "firewalld.dbus – firewalld D-Bus interface description"
 <dl>
 <dd>List object paths of zones known to permanent environment. For list of zones known to runtime environment see org.fedoraproject.FirewallD1.zone.Methods.getZones. The lists (of zones known to runtime and permanent environment) will contain same zones in most cases, but might differ for example if org.fedoraproject.FirewallD1.config.Methods.addZone has been called recently, but firewalld has not been reloaded since then.</dd></dl>
 </dl>
-<p> </font><font SIZE="+2"> <code>Signals</code></p>
+<p>  <code>Signals</code></p>
 <dl>
 <dd>HelperAdded(s: helper)</dd>
 <dl>
@@ -1082,7 +1082,7 @@ description: "firewalld.dbus – firewalld D-Bus interface description"
 <dl>
 <dd>Emitted when <i>zone</i> has been added.</dd></dl>
 </dl>
-<p> </font><font SIZE="+3"> <code>Properties</code></p>
+<p>  <code>Properties</code></p>
 <dl>
 <dd>AutomaticHelpers &#8211; s &#8211; (rw)</dd>
 <dl>
@@ -1109,10 +1109,10 @@ description: "firewalld.dbus – firewalld D-Bus interface description"
 <dl>
 <dd>For some firewall settings several rules are needed in different tables to be able to handle packets in the correct way. To achieve that these packets are marked using the MARK target. With the MinimalMark property a block of marks can be reserved for private use; only marks over this value are used.</dd></dl>
 </dl>
-<p> </font></p>
+<p> </p>
 <h3>org.fedoraproject.FirewallD1.config.direct</h3>
 <p>Interface for permanent direct configuration, see also <code><a href="/docs/linux/man/5-firewalld-direct/">firewalld.direct</a></code>(5). For runtime direct configuration see org.fedoraproject.FirewallD1.direct interface. </p>
-<p> <font SIZE="+1"> <code>Methods</code></p>
+<p>  <code>Methods</code></p>
 <dl>
 <dd>addChain(s: ipv, s: table, s: chain) → Nothing</dd>
 <dl>
@@ -1195,15 +1195,15 @@ description: "firewalld.dbus – firewalld D-Bus interface description"
 <p> <i>chains (a(sss))</i>: array of (<i>ipv</i>, <i>table</i>, <i>chain</i>), see &#8216;chain&#8217; in <code><a href="/docs/linux/man/5-firewalld-direct/">firewalld.direct</a></code>(5).</p>
 <dl>
 <dd></dd></dl>
-<p> .<br />
+<p> .<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>.PP <i>rules (a(sssias))</i>: array of (<i>ipv</i>, <i>table</i>, <i>chain</i>, <i>priority</i>, array of <i>arguments</i>), see &#8216;rule&#8217; in <code><a href="/docs/linux/man/5-firewalld-direct/">firewalld.direct</a></code>(5).</p>
 <dl>
 <dd></dd></dl>
-<p> .<br />
+<p> .<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>.PP <i>passthroughs (a(sas))</i>: array of (<i>ipv</i>, array of <i>arguments</i>), see passthrough in <code><a href="/docs/linux/man/5-firewalld-direct/">firewalld.direct</a></code>(5).</p>
 <dl>
 <dd></dd></dl>
-<p> .<br />
+<p> .<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>.sp</dl>
 <p> queryChain(s: ipv, s: table, s: chain) → b</p>
 <dl>
@@ -1239,27 +1239,27 @@ description: "firewalld.dbus – firewalld D-Bus interface description"
 <p> <i>chains (a(sss))</i>: array of (<i>ipv</i>, <i>table</i>, <i>chain</i>), see &#8216;chain&#8217; in <code><a href="/docs/linux/man/5-firewalld-direct/">firewalld.direct</a></code>(5).</p>
 <dl>
 <dd></dd></dl>
-<p> .<br />
+<p> .<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>.PP <i>rules (a(sssias))</i>: array of (<i>ipv</i>, <i>table</i>, <i>chain</i>, <i>priority</i>, array of <i>arguments</i>), see &#8216;rule&#8217; in <code><a href="/docs/linux/man/5-firewalld-direct/">firewalld.direct</a></code>(5).</p>
 <dl>
 <dd></dd></dl>
-<p> .<br />
+<p> .<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>.PP <i>passthroughs (a(sas))</i>: array of (<i>ipv</i>, array of <i>arguments</i>), see passthrough in <code><a href="/docs/linux/man/5-firewalld-direct/">firewalld.direct</a></code>(5).</p>
 <dl>
 <dd></dd></dl>
-<p> .<br />
+<p> .<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>.sp Possible errors: INVALID_TYPE</dl>
 </dl>
-<p> </font><font SIZE="+2"> <code>Signals</code></p>
+<p>  <code>Signals</code></p>
 <dl>
 <dd>Updated()</dd>
 <dl>
 <dd>Emitted when configuration has been updated.</dd></dl>
 </dl>
-<p> </font></p>
+<p> </p>
 <h3>org.fedoraproject.FirewallD1.config.policies</h3>
 <p>Interface for permanent lockdown-whitelist configuration, see also <code><a href="/docs/linux/man/5-firewalld-lockdown-whitelist/">firewalld.lockdown-whitelist</a></code>(5). For runtime configuration see org.fedoraproject.FirewallD1.policies interface. </p>
-<p> <font SIZE="+1"> <code>Methods</code></p>
+<p>  <code>Methods</code></p>
 <dl>
 <dd>addLockdownWhitelistCommand(s: command) → Nothing</dd>
 <dl>
@@ -1350,16 +1350,16 @@ description: "firewalld.dbus – firewalld D-Bus interface description"
 <dd></dd></dl>
 <p> Possible errors: INVALID_TYPE</dl>
 </dl>
-<p> </font><font SIZE="+2"> <code>Signals</code></p>
+<p>  <code>Signals</code></p>
 <dl>
 <dd>LockdownWhitelistUpdated()</dd>
 <dl>
 <dd>Emitted when permanent lockdown-whitelist configuration has been updated.</dd></dl>
 </dl>
-<p> </font></p>
+<p> </p>
 <h3>org.fedoraproject.FirewallD1.config.ipset</h3>
 <p>Interface for permanent ipset configuration, see also <code><a href="/docs/linux/man/5-firewalld-ipset/">firewalld.ipset</a></code>(5). </p>
-<p> <font SIZE="+1"> <code>Methods</code></p>
+<p>  <code>Methods</code></p>
 <dl>
 <dd>addEntry(s: entry) → Nothing</dd>
 <dl>
@@ -1477,7 +1477,7 @@ description: "firewalld.dbus – firewalld D-Bus interface description"
 <dd></dd></dl>
 <p> Possible errors: INVALID_TYPE</dl>
 </dl>
-<p> </font><font SIZE="+2"> <code>Signals</code></p>
+<p>  <code>Signals</code></p>
 <dl>
 <dd>Removed(s: name)</dd>
 <dl>
@@ -1489,7 +1489,7 @@ description: "firewalld.dbus – firewalld D-Bus interface description"
 <dl>
 <dd>Emitted when ipset with <i>name</i> has been updated.</dd></dl>
 </dl>
-<p> </font><font SIZE="+3"> <code>Properties</code></p>
+<p>  <code>Properties</code></p>
 <dl>
 <dd>builtin &#8211; b &#8211; (ro)</dd>
 <dl>
@@ -1507,10 +1507,10 @@ description: "firewalld.dbus – firewalld D-Bus interface description"
 <dl>
 <dd>Path to directory where the ipset configuration is stored. Should be either /usr/lib/firewalld/ipsets or /etc/firewalld/ipsets.</dd></dl>
 </dl>
-<p> </font></p>
+<p> </p>
 <h3>org.fedoraproject.FirewallD1.config.zone</h3>
 <p>Interface for permanent zone configuration, see also <code><a href="/docs/linux/man/5-firewalld-zone/">firewalld.zone</a></code>(5). </p>
-<p> <font SIZE="+1"> <code>Methods</code></p>
+<p>  <code>Methods</code></p>
 <dl>
 <dd>addForwardPort(s: port, s: protocol, s: toport, s: toaddr) → Nothing</dd>
 <dl>
@@ -1835,7 +1835,7 @@ description: "firewalld.dbus – firewalld D-Bus interface description"
 <dd></dd></dl>
 <p> Possible errors: INVALID_TYPE</dl>
 </dl>
-<p> </font><font SIZE="+2"> <code>Signals</code></p>
+<p>  <code>Signals</code></p>
 <dl>
 <dd>Removed(s: name)</dd>
 <dl>
@@ -1847,7 +1847,7 @@ description: "firewalld.dbus – firewalld D-Bus interface description"
 <dl>
 <dd>Emitted when zone with <i>name</i> has been updated.</dd></dl>
 </dl>
-<p> </font><font SIZE="+3"> <code>Properties</code></p>
+<p>  <code>Properties</code></p>
 <dl>
 <dd>builtin &#8211; b &#8211; (ro)</dd>
 <dl>
@@ -1865,10 +1865,10 @@ description: "firewalld.dbus – firewalld D-Bus interface description"
 <dl>
 <dd>Path to directory where the zone configuration is stored. Should be either /usr/lib/firewalld/zones or /etc/firewalld/zones.</dd></dl>
 </dl>
-<p> </font></p>
+<p> </p>
 <h3>org.fedoraproject.FirewallD1.config.service</h3>
 <p>Interface for permanent service configuration, see also <code><a href="/docs/linux/man/5-firewalld-service/">firewalld.service</a></code>(5). </p>
-<p> <font SIZE="+1"> <code>Methods</code></p>
+<p>  <code>Methods</code></p>
 <dl>
 <dd>addModule(s: module) → Nothing</dd>
 <dl>
@@ -2043,7 +2043,7 @@ description: "firewalld.dbus – firewalld D-Bus interface description"
 <dd></dd></dl>
 <p> Possible errors: INVALID_TYPE</dl>
 </dl>
-<p> </font><font SIZE="+2"> <code>Signals</code></p>
+<p>  <code>Signals</code></p>
 <dl>
 <dd>Removed(s: name)</dd>
 <dl>
@@ -2055,7 +2055,7 @@ description: "firewalld.dbus – firewalld D-Bus interface description"
 <dl>
 <dd>Emitted when service with <i>name</i> has been updated.</dd></dl>
 </dl>
-<p> </font><font SIZE="+3"> <code>Properties</code></p>
+<p>  <code>Properties</code></p>
 <dl>
 <dd>builtin &#8211; b &#8211; (ro)</dd>
 <dl>
@@ -2073,10 +2073,10 @@ description: "firewalld.dbus – firewalld D-Bus interface description"
 <dl>
 <dd>Path to directory where the configuration is stored. Should be either /usr/lib/firewalld/services or /etc/firewalld/services.</dd></dl>
 </dl>
-<p> </font></p>
+<p> </p>
 <h3>org.fedoraproject.FirewallD1.config.helper</h3>
 <p>Interface for permanent helper configuration, see also <code><a href="/docs/linux/man/5-firewalld-helper/">firewalld.helper</a></code>(5). </p>
-<p> <font SIZE="+1"> <code>Methods</code></p>
+<p>  <code>Methods</code></p>
 <dl>
 <dd>addPort(s: port, s: protocol) → Nothing</dd>
 <dl>
@@ -2188,7 +2188,7 @@ description: "firewalld.dbus – firewalld D-Bus interface description"
 <dd></dd></dl>
 <p> Possible errors: INVALID_HELPER</dl>
 </dl>
-<p> </font><font SIZE="+2"> <code>Signals</code></p>
+<p>  <code>Signals</code></p>
 <dl>
 <dd>Removed(s: name)</dd>
 <dl>
@@ -2200,7 +2200,7 @@ description: "firewalld.dbus – firewalld D-Bus interface description"
 <dl>
 <dd>Emitted when helper with <i>name</i> has been updated.</dd></dl>
 </dl>
-<p> </font><font SIZE="+3"> <code>Properties</code></p>
+<p>  <code>Properties</code></p>
 <dl>
 <dd>builtin &#8211; b &#8211; (ro)</dd>
 <dl>
@@ -2218,10 +2218,10 @@ description: "firewalld.dbus – firewalld D-Bus interface description"
 <dl>
 <dd>Path to directory where the configuration is stored. Should be either /usr/lib/firewalld/helpers or /etc/firewalld/helpers.</dd></dl>
 </dl>
-<p> </font></p>
+<p> </p>
 <h3>org.fedoraproject.FirewallD1.config.icmptype</h3>
 <p>Interface for permanent icmp type configuration, see also <code><a href="/docs/linux/man/5-firewalld-icmptype/">firewalld.icmptype</a></code>(5). </p>
-<p> <font SIZE="+1"> <code>Methods</code></p>
+<p>  <code>Methods</code></p>
 <dl>
 <dd>addDestination(s: destination) → Nothing</dd>
 <dl>
@@ -2303,7 +2303,7 @@ description: "firewalld.dbus – firewalld D-Bus interface description"
 <dd></dd></dl>
 </dl>
 </dl>
-<p> </font><font SIZE="+2"> <code>Signals</code></p>
+<p>  <code>Signals</code></p>
 <dl>
 <dd>Removed(s: name)</dd>
 <dl>
@@ -2315,7 +2315,7 @@ description: "firewalld.dbus – firewalld D-Bus interface description"
 <dl>
 <dd>Emitted when icmp type with <i>name</i> has been updated.</dd></dl>
 </dl>
-<p> </font><font SIZE="+3"> <code>Properties</code></p>
+<p>  <code>Properties</code></p>
 <dl>
 <dd>builtin &#8211; b &#8211; (ro)</dd>
 <dl>
@@ -2333,7 +2333,7 @@ description: "firewalld.dbus – firewalld D-Bus interface description"
 <dl>
 <dd>Path to directory where the icmp type configuration is stored. Should be either /usr/lib/firewalld/icmptypes or /etc/firewalld/icmptypes.</dd></dl>
 </dl>
-<p> </font></p>
+<p> </p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-firewall-applet/">firewall-applet</a></code>(1), <code><a href="/docs/linux/man/1-firewalld/">firewalld</a></code>(1), <code><a href="/docs/linux/man/1-firewall-cmd/">firewall-cmd</a></code>(1), <code><a href="/docs/linux/man/1-firewall-config/">firewall-config</a></code>(1), <code><a href="/docs/linux/man/5-firewalld-conf/">firewalld.conf</a></code>(5), <code><a href="/docs/linux/man/5-firewalld-direct/">firewalld.direct</a></code>(5), <code><a href="/docs/linux/man/5-firewalld-dbus/">firewalld.dbus</a></code>(5), <code><a href="/docs/linux/man/5-firewalld-icmptype/">firewalld.icmptype</a></code>(5), <code><a href="/docs/linux/man/5-firewalld-lockdown-whitelist/">firewalld.lockdown-whitelist</a></code>(5), <code><a href="/docs/linux/man/1-firewall-offline-cmd/">firewall-offline-cmd</a></code>(1), <code><a href="/docs/linux/man/5-firewalld-richlanguage/">firewalld.richlanguage</a></code>(5), <code><a href="/docs/linux/man/5-firewalld-service/">firewalld.service</a></code>(5), <code><a href="/docs/linux/man/5-firewalld-zone/">firewalld.zone</a></code>(5), <code><a href="/docs/linux/man/5-firewalld-zones/">firewalld.zones</a></code>(5), <code><a href="/docs/linux/man/5-firewalld-ipset/">firewalld.ipset</a></code>(5), <code><a href="/docs/linux/man/5-firewalld-helper/">firewalld.helper</a></code>(5)</p>
 <h2>Notes</h2>

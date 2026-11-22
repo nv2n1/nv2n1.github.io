@@ -16,7 +16,7 @@ description: "amtapetype – generate a tapetype definition by testing the devic
 <dd>generates a tapetype entry for Amanda by testing the device directly.</dd>
 <h2>Options</h2>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> The options for <code>amtapetype</code> have changed in version 2.6.1 </p>
 </dl>
 <p> <code>-h</code></p>

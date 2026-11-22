@@ -10,15 +10,15 @@ description: "less – opposite of more"
 
 <p> less &#8211; opposite of more </p>
 <h2>SYNOPSIS</h2>
-<p> <code>less -?</code><br />
- <code>less &#8211;help</code><br />
- <code>less -V</code><br />
- <code>less &#8211;version</code><br />
- <code>less [-[+]aABcCdeEfFgGiIJKLmMnNqQrRsSuUVwWX~]</code><br />
- <code> [-b </code><i>space/</i>] [-h <i>lines/</i>] [-j <i>line/</i>] [-k <i>keyfile/</i>]<br />
- <code> [-{oO} </code><i>logfile/</i>] [-p <i>pattern/</i>] [-P <i>prompt/</i>] [-t <i>tag/</i>]<br />
- <code> [-T </code><i>tagsfile/</i>] [-x <i>tab/</i>,&#8230;] [-y <i>lines/</i>] [-[z] <i>lines/</i>]<br />
- <code> [-# </code><i>shift/</i>] [+[+]<i>cmd/</i>] [&#8211;] [<i>filename/</i>]&#8230;<br />
+<p> <code>less -?</code><br/>
+ <code>less &#8211;help</code><br/>
+ <code>less -V</code><br/>
+ <code>less &#8211;version</code><br/>
+ <code>less [-[+]aABcCdeEfFgGiIJKLmMnNqQrRsSuUVwWX~]</code><br/>
+ <code> [-b </code><i>space/</i>] [-h <i>lines/</i>] [-j <i>line/</i>] [-k <i>keyfile/</i>]<br/>
+ <code> [-{oO} </code><i>logfile/</i>] [-p <i>pattern/</i>] [-P <i>prompt/</i>] [-t <i>tag/</i>]<br/>
+ <code> [-T </code><i>tagsfile/</i>] [-x <i>tab/</i>,&#8230;] [-y <i>lines/</i>] [-[z] <i>lines/</i>]<br/>
+ <code> [-# </code><i>shift/</i>] [+[+]<i>cmd/</i>] [&#8211;] [<i>filename/</i>]&#8230;<br/>
  (See the OPTIONS section for alternate option syntax with long option names.)</p>
 <h2>DESCRIPTION</h2>
 <p> <i>Less</i> is a program similar to <i><a href="/docs/linux/man/1-more/">more</a></i>(1), but it has many more features. <i>Less</i> does not have to read the entire input file before starting, so with large input files it starts up faster than text editors like <i><a href="/docs/linux/man/1-vi/">vi</a></i>(1). <i>Less</i> uses termcap (or terminfo on some systems), so it can run on a variety of terminals. There is even limited support for hardcopy terminals. (On a hardcopy terminal, lines which should be printed at the top of the screen are prefixed with a caret.) </p>
@@ -299,8 +299,8 @@ description: "less – opposite of more"
 <dt>y</dt>
 <dd> Yellow</dd></dl>
 <p> The corresponding upper-case letter denotes a brighter shade of the color. For example, -DNGk displays line numbers as bright green text on a black background, and -DEbR displays error messages as blue text on a bright red background. If either character is a &quot;-&quot; or is omitted, the corresponding color is set to that of normal text. </p>
-<p> An 8-bit color string is one or two decimal integers separated by a dot, where the first integer specifies the foreground color and the second specifies the background color. Each integer is a value between 0 and 255 inclusive which selects a &quot;CSI 38;5&quot; color value (see<br />
- <a rel="nofollow" href="https://en.wikipedia.org/wiki/ANSI_escape_code#SGR_parameters)">https://en.wikipedia.org/wiki/ANSI_escape_code#SGR_parameters)</a> If either integer is a &quot;-&quot; or is omitted, the corresponding color is set to that of normal text. On MS-DOS versions of <i>less</i>, 8-bit color is not supported; instead, decimal values are interpreted as 4-bit CHAR_INFO.Attributes values (see<br />
+<p> An 8-bit color string is one or two decimal integers separated by a dot, where the first integer specifies the foreground color and the second specifies the background color. Each integer is a value between 0 and 255 inclusive which selects a &quot;CSI 38;5&quot; color value (see<br/>
+ <a rel="nofollow" href="https://en.wikipedia.org/wiki/ANSI_escape_code#SGR_parameters)">https://en.wikipedia.org/wiki/ANSI_escape_code#SGR_parameters)</a> If either integer is a &quot;-&quot; or is omitted, the corresponding color is set to that of normal text. On MS-DOS versions of <i>less</i>, 8-bit color is not supported; instead, decimal values are interpreted as 4-bit CHAR_INFO.Attributes values (see<br/>
  <a rel="nofollow" href="https://docs.microsoft.com/en-us/windows/console/char-info-str">https://docs.microsoft.com/en-us/windows/console/char-info-str</a>).</dl>
 <dt>-e or &#8211;quit-at-eof</dt>
 <dd> Causes <i>less</i> to automatically exit the second time it reaches end-of-file. By default, the only way to exit <i>less</i> is via the &quot;q&quot; command.</dd>
@@ -348,12 +348,12 @@ description: "less – opposite of more"
 <dt>-p<i>pattern</i> or &#8211;pattern=<i>pattern</i></dt>
 <dd> The -p option on the command line is equivalent to specifying +/<i>pattern</i>; that is, it tells <i>less</i> to start at the first occurrence of <i>pattern</i> in the file.</dd>
 <dt>-P<i>prompt</i> or &#8211;prompt=<i>prompt</i></dt>
-<dd> Provides a way to tailor the three prompt styles to your own preference. This option would normally be put in the LESS environment variable, rather than being typed in with each <i>less</i> command. Such an option must either be the last option in the LESS variable, or be terminated by a dollar sign.<br />
-&nbsp;-Ps followed by a string changes the default&nbsp;(short)&nbsp;prompt to that string.<br />
-&nbsp;-Pm changes the medium&nbsp;(-m)&nbsp;prompt.<br />
-&nbsp;-PM changes the long&nbsp;(-M)&nbsp;prompt.<br />
-&nbsp;-Ph changes the prompt for the help screen.<br />
-&nbsp;-P=&nbsp;changes the message printed by the&nbsp;=&nbsp;command.<br />
+<dd> Provides a way to tailor the three prompt styles to your own preference. This option would normally be put in the LESS environment variable, rather than being typed in with each <i>less</i> command. Such an option must either be the last option in the LESS variable, or be terminated by a dollar sign.<br/>
+&nbsp;-Ps followed by a string changes the default&nbsp;(short)&nbsp;prompt to that string.<br/>
+&nbsp;-Pm changes the medium&nbsp;(-m)&nbsp;prompt.<br/>
+&nbsp;-PM changes the long&nbsp;(-M)&nbsp;prompt.<br/>
+&nbsp;-Ph changes the prompt for the help screen.<br/>
+&nbsp;-P=&nbsp;changes the message printed by the&nbsp;=&nbsp;command.<br/>
 &nbsp;-Pw changes the message printed while waiting for data&nbsp;(in the F command). </dd>
 <p> All prompt strings consist of a sequence of letters and special escape sequences. See the section on PROMPTS for more details.</p>
 <dt>-q or &#8211;quiet or &#8211;silent</dt>
@@ -429,7 +429,7 @@ description: "less – opposite of more"
 <dt>&#8211;use-backslash</dt>
 <dd> This option changes the interpretations of options which follow this one. After the &#8211;use-backslash option, any backslash in an option string is removed and the following character is taken literally. This allows a dollar sign to be included in option strings.</dd>
 <dt>&#8211;use-color</dt>
-<dd> Enables the colored text in various places. The -D option can be used to change the colors. Colored text works only if the terminal supports ANSI color escape sequences (as defined in ECMA-48 SGR; see<br />
+<dd> Enables the colored text in various places. The -D option can be used to change the colors. Colored text works only if the terminal supports ANSI color escape sequences (as defined in ECMA-48 SGR; see<br/>
  <a rel="nofollow" href="https://www.ecma-international.org/publications-and-standards/standards/ecma-48">https://www.ecma-international.org/publications-and-standards/standards/ecma-48</a>).</dd>
 <dt>&#8211;wheel-lines=<i>n</i></dt>
 <dd> Set the number of lines to scroll when the mouse wheel is scrolled and the &#8211;mouse or &#8211;MOUSE option is in effect. The default is 1 line.</dd>
@@ -483,7 +483,7 @@ description: "less – opposite of more"
 <p> An input preprocessor receives one command line argument, the original filename, as entered by the user. It should create the replacement file, and when finished, print the name of the replacement file to its standard output. If the input preprocessor does not output a replacement filename, <i>less</i> uses the original file, as normal. The input preprocessor is not called when viewing standard input. To set up an input preprocessor, set the LESSOPEN environment variable to a command line which will invoke your input preprocessor. This command line should include one occurrence of the string &quot;%s&quot;, which will be replaced by the filename when the input preprocessor command is invoked. </p>
 <p> When <i>less</i> closes a file opened in such a way, it will call another program, called the input postprocessor, which may perform any desired clean-up action (such as deleting the replacement file created by LESSOPEN). This program receives two command line arguments, the original filename as entered by the user, and the name of the replacement file. To set up an input postprocessor, set the LESSCLOSE environment variable to a command line which will invoke your input postprocessor. It may include two occurrences of the string &quot;%s&quot;; the first is replaced with the original name of the file and the second with the name of the replacement file, which was output by LESSOPEN. </p>
 <p> For example, on many Unix systems, these two scripts will allow you to keep files in compressed format, but still let <i>less</i> view them directly: </p>
-<p> lessopen.sh:<br />
+<p> lessopen.sh:<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>#! /bin/sh</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>case &quot;$1&quot; in</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>*.Z)<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>TEMPFILE=$(mktemp)</p>
@@ -495,13 +495,13 @@ description: "less – opposite of more"
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>fi</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>;;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>esac</p>
-<p> lessclose.sh:<br />
+<p> lessclose.sh:<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>#! /bin/sh</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>rm $2</p>
 <p> To use these scripts, put them both where they can be executed and set LESSOPEN=&quot;lessopen.sh&nbsp;%s&quot;, and LESSCLOSE=&quot;lessclose.sh&nbsp;%s&nbsp;%s&quot;. More complex LESSOPEN and LESSCLOSE scripts may be written to accept other types of compressed files, and so on. </p>
 <p> It is also possible to set up an input preprocessor to pipe the file data directly to <i>less</i>, rather than putting the data into a replacement file. This avoids the need to decompress the entire file before starting to view it. An input preprocessor that works this way is called an input pipe. An input pipe, instead of writing the name of a replacement file on its standard output, writes the entire contents of the replacement file on its standard output. If the input pipe does not write any characters on its standard output, then there is no replacement file and <i>less</i> uses the original file, as normal. To use an input pipe, make the first character in the LESSOPEN environment variable a vertical bar (|) to signify that the input preprocessor is an input pipe. As with non-pipe input preprocessors, the command string must contain one occurrence of %s, which is replaced with the filename of the input file. </p>
 <p> For example, on many Unix systems, this script will work like the previous example scripts: </p>
-<p> lesspipe.sh:<br />
+<p> lesspipe.sh:<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>#! /bin/sh</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>case &quot;$1&quot; in</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>*.Z)<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>uncompress -c $1 2&gt;/dev/null</p>
@@ -836,7 +836,7 @@ description: "less – opposite of more"
 <p> less is part of the GNU project and is free software. You can redistribute it and/or modify it under the terms of either (1) the GNU General Public License as published by the Free Software Foundation; or (2) the Less License. See the file README in the less distribution for more details regarding redistribution. You should have received a copy of the GNU General Public License along with the source for less; see the file COPYING. If not, write to the Free Software Foundation, 59 Temple Place, Suite 330, Boston, MA 02111-1307, USA. You should also have received a copy of the Less License; see the file LICENSE. </p>
 <p> less is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
 <h2>AUTHOR</h2>
-<p> Mark Nudelman<br />
- Report bugs at <a rel="nofollow" href="https://github.com/gwsw/less/issues.">https://github.com/gwsw/less/issues.</a><br />
- For more information, see the less homepage at<br />
+<p> Mark Nudelman<br/>
+ Report bugs at <a rel="nofollow" href="https://github.com/gwsw/less/issues.">https://github.com/gwsw/less/issues.</a><br/>
+ For more information, see the less homepage at<br/>
  <a rel="nofollow" href="https://greenwoodsoftware.com/less">https://greenwoodsoftware.com/less</a> </p>

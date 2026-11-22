@@ -61,7 +61,7 @@ description: "JaxoDraw – A Program for the Interactive Generation of Feynman D
 <h2>ACKNOWLEDGEMENT</h2>
 <p> We are grateful to Prof. Arcadi Santamaria for numerous helpful remarks and moral support during the development of <code>JaxoDraw</code>. We also acknowledge Prof. Jos Vermaseren for his kind permission to use and distribute a modified version of his axodraw style file. John Collins has pushed the development of <code>JaxoDraw</code> a huge step forward by writing the new axodraw4j style file. We would finally like to thank all the people on the <code>JaxoDraw</code> mailing list for their help and feedback during the testing phase.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright (C) 2003-2006 Daniele Binosi and Lukas Theussl.<br />
+<p> Copyright (C) 2003-2006 Daniele Binosi and Lukas Theussl.<br/>
  Copyright (C) 2007-2008 Daniele Binosi, Lukas Theussl and Christian Kaufhold </p>
 <p> <code>JaxoDraw</code> is published under the terms of the Gnu General Public License. Other Copyrights may be found in various files, see the file <i>LICENSE</i> in the source distribution for detailed information.</p>
 <h2>SEE ALSO</h2>

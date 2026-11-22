@@ -15,13 +15,13 @@ description: "sc::ProcThreadGrp –"
 <p> Inherits <code>sc::ThreadGrp</code>.</p>
 <h3>Public Member Functions</h3>
 <p><code>ProcThreadGrp</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;) </p>
-<p> int <code>start_threads</code> ()<br />
- <i>Starts the threads running. </i><br />
- int <code>wait_threads</code> ()<br />
- <i>Wait for all the threads to complete. </i><br />
- <code>Ref</code>&lt; <code>ThreadLock</code> &gt; <code>new_lock</code> ()<br />
- <i>Return a local object. </i><br />
- <code>ThreadGrp</code> * <code>clone</code> (int nthread=-1)<br />
+<p> int <code>start_threads</code> ()<br/>
+ <i>Starts the threads running. </i><br/>
+ int <code>wait_threads</code> ()<br/>
+ <i>Wait for all the threads to complete. </i><br/>
+ <code>Ref</code>&lt; <code>ThreadLock</code> &gt; <code>new_lock</code> ()<br/>
+ <i>Return a local object. </i><br/>
+ <code>ThreadGrp</code> * <code>clone</code> (int nthread=-1)<br/>
  <i>Create a </i><code>ThreadGrp</code> like the current one.</p>
 <h2>Detailed Description</h2>
 <p>The <code>ProcThreadGrp</code> class privides a concrete thread group appropriate for an environment where there is only one thread.</p>

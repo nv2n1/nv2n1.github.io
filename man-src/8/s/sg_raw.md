@@ -66,7 +66,7 @@ description: "sg_raw – send arbitrary SCSI command to a device"
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;inguin at gmx dot de&gt;.</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2001-2012 Ingo van Lil<br />
+<p>Copyright &#169; 2001-2012 Ingo van Lil<br/>
  This software is distributed under the GPL version 2. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>See Also</h2>
 <p><code>sg_inq, sg_vpd, sg3_utils (sg3_utils), plscsi</code> </p>

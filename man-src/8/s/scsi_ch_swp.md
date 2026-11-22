@@ -30,7 +30,7 @@ description: "scsi_ch_swp – change SCSI Software WRITE Protect and block devic
 <h2>Authors</h2>
 <p>Written by D. Gilbert</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2013 Douglas Gilbert<br />
+<p>Copyright &#169; 2013 Douglas Gilbert<br/>
  This software is distributed under a FreeBSD license. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>See Also</h2>
 <p><code>sdparm(sdparm), <a href="/docs/linux/man/8-blockdev/">blockdev</a>(8)</code> </p>

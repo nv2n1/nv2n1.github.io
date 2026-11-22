@@ -9,13 +9,13 @@ description: "tcplay – tool to manage TrueCrypt volumes"
 
 <p><code>tcplay</code> &#8211; tool to manage TrueCrypt volumes</p>
 <h2>Synopsis</h2>
-<p>&#8211;<code>c</code> &#8211;<code>d </code><i>device</i> [-<code>g</code> ] [-<code>z</code> ] [-<code>w</code> ] [-<code>a </code><i>pbkdf_hash</i> ] [-<code>b </code><i>cipher</i> ] [-<code>f </code><i>keyfile_hidden</i> ] [-<code>k </code><i>keyfile</i> ] [-<code>x </code><i>pbkdf_hash</i> ] [-<code>y </code><i>cipher</i> ]<br />
- &#8211;<code>i</code> &#8211;<code>d </code><i>device</i> [-<code>e</code> ] [-<code>f </code><i>keyfile_hidden</i> ] [-<code>k </code><i>keyfile</i> ] [-<code>s </code><i>system_device</i> ] [-<code>-fde</code> ] [-<code>-use-backup</code> ] [-<code>-use-hdr-file </code><i>hdr_file</i> ] [-<code>-use-hidden-hdr-file </code><i>hdr_file</i> ]<br />
- &#8211;<code>j </code><i>mapping</i><br />
- &#8211;<code>m </code><i>mapping</i> &#8211;<code>d </code><i>device</i> [-<code>e</code> ] [-<code>f </code><i>keyfile_hidden</i> ] [-<code>k </code><i>keyfile</i> ] [-<code>s </code><i>system_device</i> ] [-<code>t</code> ] [-<code>-fde</code> ] [-<code>-use-backup</code> ] [-<code>-use-hdr-file </code><i>hdr_file</i> ] [-<code>-use-hidden-hdr-file </code><i>hdr_file</i> ]<br />
- &#8211;<code>-modify</code> &#8211;<code>d </code><i>device</i> [-<code>k </code><i>keyfile</i> ] [-<code>-new-keyfile </code><i>new_keyfile</i> ] [-<code>-new-pbkdf-prf </code><i>pbkdf_hash</i> ] [-<code>s </code><i>system_device</i> ] [-<code>-fde</code> ] [-<code>-use-backup</code> ] [-<code>-use-hdr-file </code><i>hdr_file</i> ] [-<code>-use-hidden-hdr-file </code><i>hdr_file</i> ] [-<code>-save-hdr-backup </code><i>hdr_file</i> ] [-<code>w</code> ]<br />
- &#8211;<code>-modify</code> &#8211;<code>d </code><i>device</i> [-<code>k </code><i>keyfile</i> ] &#8211;<code>-restore-from-backup-hdr</code> [-<code>w</code> ]<br />
- &#8211;<code>u </code><i>mapping</i><br />
+<p>&#8211;<code>c</code> &#8211;<code>d </code><i>device</i> [-<code>g</code> ] [-<code>z</code> ] [-<code>w</code> ] [-<code>a </code><i>pbkdf_hash</i> ] [-<code>b </code><i>cipher</i> ] [-<code>f </code><i>keyfile_hidden</i> ] [-<code>k </code><i>keyfile</i> ] [-<code>x </code><i>pbkdf_hash</i> ] [-<code>y </code><i>cipher</i> ]<br/>
+ &#8211;<code>i</code> &#8211;<code>d </code><i>device</i> [-<code>e</code> ] [-<code>f </code><i>keyfile_hidden</i> ] [-<code>k </code><i>keyfile</i> ] [-<code>s </code><i>system_device</i> ] [-<code>-fde</code> ] [-<code>-use-backup</code> ] [-<code>-use-hdr-file </code><i>hdr_file</i> ] [-<code>-use-hidden-hdr-file </code><i>hdr_file</i> ]<br/>
+ &#8211;<code>j </code><i>mapping</i><br/>
+ &#8211;<code>m </code><i>mapping</i> &#8211;<code>d </code><i>device</i> [-<code>e</code> ] [-<code>f </code><i>keyfile_hidden</i> ] [-<code>k </code><i>keyfile</i> ] [-<code>s </code><i>system_device</i> ] [-<code>t</code> ] [-<code>-fde</code> ] [-<code>-use-backup</code> ] [-<code>-use-hdr-file </code><i>hdr_file</i> ] [-<code>-use-hidden-hdr-file </code><i>hdr_file</i> ]<br/>
+ &#8211;<code>-modify</code> &#8211;<code>d </code><i>device</i> [-<code>k </code><i>keyfile</i> ] [-<code>-new-keyfile </code><i>new_keyfile</i> ] [-<code>-new-pbkdf-prf </code><i>pbkdf_hash</i> ] [-<code>s </code><i>system_device</i> ] [-<code>-fde</code> ] [-<code>-use-backup</code> ] [-<code>-use-hdr-file </code><i>hdr_file</i> ] [-<code>-use-hidden-hdr-file </code><i>hdr_file</i> ] [-<code>-save-hdr-backup </code><i>hdr_file</i> ] [-<code>w</code> ]<br/>
+ &#8211;<code>-modify</code> &#8211;<code>d </code><i>device</i> [-<code>k </code><i>keyfile</i> ] &#8211;<code>-restore-from-backup-hdr</code> [-<code>w</code> ]<br/>
+ &#8211;<code>u </code><i>mapping</i><br/>
  &#8211;<code>h | v</code></p>
 <h2>Description</h2>
 <p>The utility provides full support for creating and opening/mapping TrueCrypt-compatible volumes. It supports the following commands, each with a set of options detailed further below:</p>

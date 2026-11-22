@@ -11,7 +11,7 @@ description: "chegs2.f –"
 <p> chegs2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>chegs2</code> (ITYPE, UPLO, N, A, LDA, B, LDB, INFO)<br />
+<p> subroutine <code>chegs2</code> (ITYPE, UPLO, N, A, LDA, B, LDB, INFO)<br/>
  <i></i><code>CHEGS2</code> reduces a Hermitian definite generalized eigenproblem to standard form, using the factorization results obtained from cpotrf (unblocked algorithm).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine chegs2 (integerITYPE, characterUPLO, integerN, complex, dimension( lda, * )A, integerLDA, complex, dimension( ldb, * )B, integerLDB, integerINFO)</h3>

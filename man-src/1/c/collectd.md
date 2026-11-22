@@ -12,7 +12,7 @@ description: "collectd – System statistics collection daemon"
 <h2>SYNOPSIS</h2>
 <p> collectd <i>[options]</i></p>
 <h2>DESCRIPTION</h2>
-<p> collectd is a daemon that receives system statistics and makes them available in a number of ways. The main daemon itself doesn&#8217;t have any real functionality apart from loading, querying and submitting to plugins. For a description of available plugins please see &#8220;<font SIZE="-1">PLUGINS&#8221;</font> below.</p>
+<p> collectd is a daemon that receives system statistics and makes them available in a number of ways. The main daemon itself doesn&#8217;t have any real functionality apart from loading, querying and submitting to plugins. For a description of available plugins please see &#8220;PLUGINS&#8221; below.</p>
 <h2>OPTIONS</h2>
 <p> Most of collectd&#8217;s configuration is done using using a configfile. See <i><a href="/docs/linux/man/5-collectd-conf/">collectd.conf</a></i>(5) for an in-depth description of all options.</p>
 <dl>
@@ -29,7 +29,7 @@ description: "collectd – System statistics collection daemon"
 <dt><code>-h</code></dt>
 <dd> Output usage information and exit.</dd></dl>
 <h2>PLUGINS</h2>
-<p> As noted above, the real power of collectd lies within it&#8217;s plugins. A (hopefully complete) list of plugins and short descriptions can be found in the <i></i><font SIZE="-1"><i>README</i></font><i></i> file that is distributed with the sourcecode. If you&#8217;re using a package it&#8217;s a good bet to search somewhere near <i>/usr/share/doc/collectd</i>. </p>
+<p> As noted above, the real power of collectd lies within it&#8217;s plugins. A (hopefully complete) list of plugins and short descriptions can be found in the <i></i><i>README</i><i></i> file that is distributed with the sourcecode. If you&#8217;re using a package it&#8217;s a good bet to search somewhere near <i>/usr/share/doc/collectd</i>. </p>
 <p> There are two big groups of plugins, <code>input</code> and <code>output</code> plugins:</p>
 <dl>
 <dt>&bull;</dt>
@@ -43,10 +43,10 @@ description: "collectd – System statistics collection daemon"
 <h2>SIGNALS</h2>
 <p> <code>collectd</code> accepts the following signals:</p>
 <dl>
-<dt><font SIZE="-1"><code>SIGINT</code></font>, <font SIZE="-1"><code>SIGTERM</code></font></dt>
+<dt><code>SIGINT</code>, <code>SIGTERM</code></dt>
 <dd> These signals cause <code>collectd</code> to shut down all plugins and terminate.</dd>
-<dt><font SIZE="-1"><code>SIGUSR1</code></font></dt>
-<dd> This signal causes <code>collectd</code> to signal all plugins to flush data from internal caches. E. g. the <tt>&quot;rrdtool plugin&quot;</tt> will write all pending data to the <font SIZE="-1">RRD</font> files. This is the same as using the <tt>&quot;FLUSH -1&quot;</tt> command of the <tt>&quot;unixsock plugin&quot;</tt>.</dd></dl>
+<dt><code>SIGUSR1</code></dt>
+<dd> This signal causes <code>collectd</code> to signal all plugins to flush data from internal caches. E. g. the <tt>&quot;rrdtool plugin&quot;</tt> will write all pending data to the RRD files. This is the same as using the <tt>&quot;FLUSH -1&quot;</tt> command of the <tt>&quot;unixsock plugin&quot;</tt>.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/5-collectd-conf/">collectd.conf</a></i>(5), <i><a href="/docs/linux/man/5-collectd-email/">collectd-email</a></i>(5), <i><a href="/docs/linux/man/5-collectd-exec/">collectd-exec</a></i>(5), <i><a href="/docs/linux/man/5-collectd-perl/">collectd-perl</a></i>(5), <i><a href="/docs/linux/man/5-collectd-snmp/">collectd-snmp</a></i>(5), <i><a href="/docs/linux/man/5-collectd-unixsock/">collectd-unixsock</a></i>(5), <i><a href="/docs/linux/man/5-types-db/">types.db</a></i>(5), &lt;<a rel="nofollow" href="http://collectd.org/">http://collectd.org/</a>&gt;</p>
 <h2>AUTHOR</h2>

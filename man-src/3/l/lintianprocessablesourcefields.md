@@ -24,18 +24,18 @@ description: "Lintian::Processable::Source::Fields – Lintian interface to sour
 <dd>Returns a list of the binary and udeb packages listed in the <i>debian/control</i>. Package names appear the same order in the returned list as they do in the control file. </dd>
 <p> <i>Note</i>: Package names that are not valid are silently ignored. </p>
 <p> Needs-Info requirements for using <i>binaries</i>: Same as binary_package_type</p>
-<dt>binary_package_type (<font SIZE="-1">BINARY</font>)</dt>
+<dt>binary_package_type (BINARY)</dt>
 <dd>Returns package type based on value of the Package-Type (or if absent, X-Package-Type) field. If the field is omitted, the default value &#8220;deb&#8221; is used. </dd>
-<p> If the <font SIZE="-1">BINARY</font> is not a binary listed in the source packages <i>debian/control</i> file, this method return <tt>&quot;undef&quot;</tt>. </p>
+<p> If the BINARY is not a binary listed in the source packages <i>debian/control</i> file, this method return <tt>&quot;undef&quot;</tt>. </p>
 <p> Needs-Info requirements for using <i>binary_package_type</i>: Same as binary_field</p>
-<dt>source_field([FIELD[, <font SIZE="-1">DEFAULT</font>]])</dt>
-<dd>Returns the content of the field <font SIZE="-1">FIELD</font> from source package paragraph of the <i>debian/control</i> file, or <font SIZE="-1">DEFAULT</font> (defaulting to <tt>&quot;undef&quot;</tt>) if the field is not present. Only the literal value of the field is returned. </dd>
-<p> If <font SIZE="-1">FIELD</font> is not given, return a hashref mapping field names to their values (in this case <font SIZE="-1">DEFAULT</font> is ignored). This hashref should not be modified. </p>
-<p> <font SIZE="-1">NB:</font> If a field from the &#8220;dsc&#8221; file itself is desired, please use field instead.</p>
-<dt>binary_field (PACKAGE[, FIELD[, <font SIZE="-1">DEFAULT</font>]])</dt>
-<dd>Returns the content of the field <font SIZE="-1">FIELD</font> for the binary package <font SIZE="-1">PACKAGE</font> in the <i>debian/control</i> file, or <font SIZE="-1">DEFAULT</font> (defaulting to <tt>&quot;undef&quot;</tt>) if the field is not present. Inheritance of field values from the source section of the control file is not implemented. Only the literal value of the field is returned. </dd>
-<p> If <font SIZE="-1">FIELD</font> is not given, return a hashref mapping field names to their values (in this case, <font SIZE="-1">DEFAULT</font> is ignored). This hashref should not be modified. </p>
-<p> If <font SIZE="-1">PACKAGE</font> is not a binary built from this source, this returns <font SIZE="-1">DEFAULT.</font></p>
+<dt>source_field([FIELD[, DEFAULT]])</dt>
+<dd>Returns the content of the field FIELD from source package paragraph of the <i>debian/control</i> file, or DEFAULT (defaulting to <tt>&quot;undef&quot;</tt>) if the field is not present. Only the literal value of the field is returned. </dd>
+<p> If FIELD is not given, return a hashref mapping field names to their values (in this case DEFAULT is ignored). This hashref should not be modified. </p>
+<p> NB: If a field from the &#8220;dsc&#8221; file itself is desired, please use field instead.</p>
+<dt>binary_field (PACKAGE[, FIELD[, DEFAULT]])</dt>
+<dd>Returns the content of the field FIELD for the binary package PACKAGE in the <i>debian/control</i> file, or DEFAULT (defaulting to <tt>&quot;undef&quot;</tt>) if the field is not present. Inheritance of field values from the source section of the control file is not implemented. Only the literal value of the field is returned. </dd>
+<p> If FIELD is not given, return a hashref mapping field names to their values (in this case, DEFAULT is ignored). This hashref should not be modified. </p>
+<p> If PACKAGE is not a binary built from this source, this returns DEFAULT.</p>
 <dt>load_debian_control</dt>
 <dd>
 </dd><dt>binaries_data =item binary_names =item binary_fields =item source_fields</dt>

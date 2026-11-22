@@ -32,8 +32,8 @@ description: "sa-compile – compile SpamAssassin ruleset into native code"
 <h2>DESCRIPTION</h2>
 <p> sa-compile uses <tt>&quot;re2c&quot;</tt> to compile the site-wide parts of the SpamAssassin ruleset. No part of user_prefs or any files included from user_prefs can be built into the compiled set. </p>
 <p> This compiled set is then used by the <tt>&quot;Mail::SpamAssassin::Plugin::Rule2XSBody&quot;</tt> plugin to speed up SpamAssassin&#8217;s operation, where possible, and when that plugin is loaded. </p>
-<p> <tt>&quot;re2c&quot;</tt> can match strings much faster than perl code, by constructing a <font SIZE="-1">DFA</font> to match many simple strings in parallel, and compiling that to native object code. Not all SpamAssassin rules are amenable to this conversion, however. </p>
-<p> This requires <tt>&quot;re2c&quot;</tt> (see <tt>&quot;<a rel="nofollow" href="http://re2c.org/">http://re2c.org/</a>&quot;</tt>), and the C compiler used to build Perl <font SIZE="-1">XS</font> modules, be installed. </p>
+<p> <tt>&quot;re2c&quot;</tt> can match strings much faster than perl code, by constructing a DFA to match many simple strings in parallel, and compiling that to native object code. Not all SpamAssassin rules are amenable to this conversion, however. </p>
+<p> This requires <tt>&quot;re2c&quot;</tt> (see <tt>&quot;<a rel="nofollow" href="http://re2c.org/">http://re2c.org/</a>&quot;</tt>), and the C compiler used to build Perl XS modules, be installed. </p>
 <p> Note that running this, and creating a compiled ruleset, will have no effect on SpamAssassin scanning speeds unless you also edit your <tt>&quot;v320.pre&quot;</tt> file and ensure this line is uncommented: </p>
 <pre>
   loadplugin Mail::SpamAssassin::Plugin::Rule2XSBody
@@ -42,7 +42,7 @@ description: "sa-compile – compile SpamAssassin ruleset into native code"
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>&#8211;list</code></dt>
-<dd> Output the extracted base strings to <font SIZE="-1">STDOUT,</font> instead of generating the C extension code.</dd>
+<dd> Output the extracted base strings to STDOUT, instead of generating the C extension code.</dd>
 <dt><code>&#8211;sudo</code></dt>
 <dd> Use <tt><a href="/docs/linux/man/8-sudo/">sudo</a>(8)</tt> to run code as &#8216;root&#8217; when writing files to the compiled-rules storage area (which is <tt>&quot;/var/lib/spamassassin/compiled/5.016/3.004000&quot;</tt> by default).</dd>
 <dt><code>&#8211;quiet</code></dt>

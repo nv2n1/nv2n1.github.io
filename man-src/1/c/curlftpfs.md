@@ -51,8 +51,8 @@ description: "curlftpfs – mount a ftp host as a local directory"
 <dt><code>enable_epsv</code></dt>
 <dd> Tell curlftpfs to enable the use of the EPSV command when doing passive FTP transfers. Curlftpfs will first attempt to use EPSV before PASV.</dd>
 <dt><code>engine=&lt;name&gt;</code></dt>
-<dd> Select the OpenSSL crypto engine to use for cipher operations. Use:<br />
- <code>curl &#8211;engine list</code><br />
+<dd> Select the OpenSSL crypto engine to use for cipher operations. Use:<br/>
+ <code>curl &#8211;engine list</code><br/>
  to print a list of build-time supported engines. Note that not all (or none) of the engines may be available at run-time.</dd>
 <dt><code>ftpfs_debug</code></dt>
 <dd> Make curlftpfs print lots of debug information. Useful only in conjunction with the <code>-d</code> option.</dd>

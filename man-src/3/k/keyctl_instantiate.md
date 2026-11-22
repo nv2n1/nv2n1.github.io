@@ -8,10 +8,10 @@ url: "/docs/linux/man/3-keyctl_instantiate/"
 description: "keyctl_assume_authority – Assume the authority to instantiate a key keyctl_instantiate – Instantiate a key from flat data keyctl_instantiate_iov – Instantiate a key from segmented data keyctl_rejec..."
 ---
 
-<p> keyctl_assume_authority &#8211; Assume the authority to instantiate a key<br />
- keyctl_instantiate &#8211; Instantiate a key from flat data<br />
- keyctl_instantiate_iov &#8211; Instantiate a key from segmented data<br />
- keyctl_reject &#8211; Negatively instantiate a key specifying search error<br />
+<p> keyctl_assume_authority &#8211; Assume the authority to instantiate a key<br/>
+ keyctl_instantiate &#8211; Instantiate a key from flat data<br/>
+ keyctl_instantiate_iov &#8211; Instantiate a key from segmented data<br/>
+ keyctl_reject &#8211; Negatively instantiate a key specifying search error<br/>
  keyctl_negate &#8211; Negatively instantiate a key </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
@@ -66,9 +66,9 @@ long keyctl_reject(key_serial_t key, unsigned timeout,
 <h2>LINKING</h2>
 <p> This is a library function that can be found in <i>libkeyutils</i>. When linking, <code>-lkeyutils</code> should be specified to the linker.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-keyctl/">keyctl</a></code>(1),<br />
- <code><a href="/docs/linux/man/2-add_key/">add_key</a></code>(2),<br />
- <code><a href="/docs/linux/man/2-keyctl/">keyctl</a></code>(2),<br />
- <code><a href="/docs/linux/man/2-request_key/">request_key</a></code>(2),<br />
- <code><a href="/docs/linux/man/3-keyctl/">keyctl</a></code>(3),<br />
+<p> <code><a href="/docs/linux/man/1-keyctl/">keyctl</a></code>(1),<br/>
+ <code><a href="/docs/linux/man/2-add_key/">add_key</a></code>(2),<br/>
+ <code><a href="/docs/linux/man/2-keyctl/">keyctl</a></code>(2),<br/>
+ <code><a href="/docs/linux/man/2-request_key/">request_key</a></code>(2),<br/>
+ <code><a href="/docs/linux/man/3-keyctl/">keyctl</a></code>(3),<br/>
  <code><a href="/docs/linux/man/8-request-key/">request-key</a></code>(8) </p>

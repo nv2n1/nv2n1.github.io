@@ -32,15 +32,15 @@ description: "calfjackhost – JACK wrapper for Calf plugins"
 <dt><code>&#8211;help</code></dt>
 <dd> prints a help text</dd></dl>
 <p> An exclamation mark (!) in place of plugin name means automatic connection. If &quot;!&quot; is placed before the first plugin name, the first plugin has its inputs connected to <code>system:capture_1</code> and <code>system:capture_2</code>. If it&#8217;s placed between plugin names, those plugins are connected together (first plugin&#8217;s output is connected to second plugin&#8217;s input). If it&#8217;s placed after last plugin name, that plugin&#8217;s audio outputs are connected to <code>system:playback_1</code> and <code>system:playback_2</code> (first output pair). </p>
-<p> Plugin names (should be self-explanatory):<br />
-&nbsp;<wbr>*&nbsp;<wbr>flanger<br />
-&nbsp;<wbr>*&nbsp;<wbr>filter<br />
-&nbsp;<wbr>*&nbsp;<wbr>reverb<br />
-&nbsp;<wbr>*&nbsp;<wbr>vintagedelay<br />
-&nbsp;<wbr>*&nbsp;<wbr>monosynth<br />
-&nbsp;<wbr>*&nbsp;<wbr>multichorus&nbsp;<wbr>(chorus effect with multiple voices)<br />
-&nbsp;<wbr>*&nbsp;<wbr>compressor&nbsp;<wbr>(Thor Harald Johansen&#8217;s dynamic compressor)<br />
-&nbsp;<wbr>*&nbsp;<wbr>organ&nbsp;<wbr>(polyphonic synthesizer emulating tonewheel or solid state organs)<br />
+<p> Plugin names (should be self-explanatory):<br/>
+&nbsp;<wbr>*&nbsp;<wbr>flanger<br/>
+&nbsp;<wbr>*&nbsp;<wbr>filter<br/>
+&nbsp;<wbr>*&nbsp;<wbr>reverb<br/>
+&nbsp;<wbr>*&nbsp;<wbr>vintagedelay<br/>
+&nbsp;<wbr>*&nbsp;<wbr>monosynth<br/>
+&nbsp;<wbr>*&nbsp;<wbr>multichorus&nbsp;<wbr>(chorus effect with multiple voices)<br/>
+&nbsp;<wbr>*&nbsp;<wbr>compressor&nbsp;<wbr>(Thor Harald Johansen&#8217;s dynamic compressor)<br/>
+&nbsp;<wbr>*&nbsp;<wbr>organ&nbsp;<wbr>(polyphonic synthesizer emulating tonewheel or solid state organs)<br/>
 &nbsp;<wbr>*&nbsp;<wbr>rotaryspeaker&nbsp;<wbr>(not a faithful emulation, not even close) </p>
 <h2>BUGS</h2>
 <p> Please send bug reports to &lt;wdev [at] foltman.com&gt;. </p>

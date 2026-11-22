@@ -25,7 +25,7 @@ description: "ixpdimm-monitor – Daemon to monitor Intel(R) DIMM management eve
 <dd>An error occurred. </dd>
 </dl>
 <h2>Files</h2>
-<p>/var/lib/ixpdimm_sw/apss.dat<br />
+<p>/var/lib/ixpdimm_sw/apss.dat<br/>
  /var/run/ixpdimm-monitor.pid</p>
 <h2>See Also</h2>
 <p>ixpdimm-cli (8) </p>

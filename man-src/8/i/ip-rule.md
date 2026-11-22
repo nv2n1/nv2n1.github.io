@@ -15,7 +15,7 @@ rule
 { COMMAND |
     help }
 </code></pre>
-<p> <code>ip rule</code> [ <code>list</code> [ <i>SELECTOR</i> ]]<br />
+<p> <code>ip rule</code> [ <code>list</code> [ <i>SELECTOR</i> ]]<br/>
  <code>ip rule</code> { <code>add</code> | <code>del</code> } <i>SELECTOR ACTION</i> </p>
 <pre><code>ip rule
 { flush | save | restore }

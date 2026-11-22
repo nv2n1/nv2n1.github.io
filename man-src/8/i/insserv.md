@@ -132,18 +132,18 @@ description: "insserv – boot sequence organizer using LSB init.d script depend
 <dd>path to replace existing LSB comment headers with the comment headers found in this path.</dd>
 <dt><i>/etc/init.d/</i></dt>
 <dd>path to the init script base directory as required by the Linux Standard Base Specification (LSB).</dd></dl>
-<p> <i>/etc/init.d/.depend.boot</i>,<br />
- <i>/etc/init.d/.depend.start</i>,<br />
+<p> <i>/etc/init.d/.depend.boot</i>,<br/>
+ <i>/etc/init.d/.depend.start</i>,<br/>
  <i>/etc/init.d/.depend.stop</i> The <code><a href="/docs/linux/man/1-make/">make</a></code>(1) like dependency files produced by <code>insserv</code> for <i>booting</i>, <i>starting</i>, and <i>stopping</i> with the help of <code><a href="/docs/linux/man/8-startpar/">startpar</a></code>(8).</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-init/">init</a></code>(8), <code><a href="/docs/linux/man/8-startpar/">startpar</a></code>(8), <code><a href="/docs/linux/man/8-update-rc-d/">update-rc.d</a></code>(8).</p>
 <h2>Copyright</h2>
-<p>2000-2009 Werner Fink,<br />
- 2009 SuSE Linux Products GmbH Nuernberg, Germany.<br />
- 2000-2003 SuSE GmbH Nuernberg, Germany,<br />
+<p>2000-2009 Werner Fink,<br/>
+ 2009 SuSE Linux Products GmbH Nuernberg, Germany.<br/>
+ 2000-2003 SuSE GmbH Nuernberg, Germany,<br/>
  2007-2009 SuSE Linux Products GmbH Nuernberg, Germany.</p>
 <h2>Author</h2>
 <p>Werner Fink &lt;feedback [at] suse.de&gt;</p>
 <h2>Contributors</h2>
-<p>Petter Reinholdtsen<br />
+<p>Petter Reinholdtsen<br/>
  Kel Modderman</p>

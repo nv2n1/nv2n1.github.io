@@ -12,76 +12,76 @@ description: "sane-pixma – SANE backend for Canon Multi-Function Printers and 
 <p>The <code>sane-pixma</code> library implements a SANE (Scanner Access Now Easy) backend that provides access to Canon PIXMA / i-SENSYS / imageCLASS / imageRUNNER multi-function devices (All-in-one printers) and the Canon CanoScan Flatbed/TPU scanners. The backend implements both the USB interface and network interface (using Canon&#8217;s BJNP and MFNP protocols). The network interface supports scanners over IPv4 as well as IPv6 (MFNP over IPv6 is untested). </p>
 <p> Currently, the following models work with this backend: </p>
 <dl>
-<dd>PIXMA E410, E510<br />
- PIXMA G2000, G2010, G2100, G4000, G4511<br />
- PIXMA MG2100, MG2200, MG2400, MG2500, MG2900, MG3000, MG3100<br />
- PIXMA MG3200, MG3500, MG3600, MG4200, MG5100, MG5200, MG5300<br />
- PIXMA MG5400, MG5500, MG5600, MG5700, MG6100, MG6200, MG6300<br />
- PIXMA MG6400, MG7100, MG7500, MG7700, MG8200<br />
- PIXMA MP140, MP150, MP160, MP170, MP180, MP190<br />
- PIXMA MP210, MP220, MP230, MP240, MP250, MP260, MP270, MP280<br />
- PIXMA MP360, MP370, MP390<br />
- PIXMA MP450, MP460, MP470, MP480, MP490, MP495<br />
- PIXMA MP500, MP510, MP520, MP530, MP540, MP550, MP560<br />
- PIXMA MP600, MP600R, MP610, MP620, MP630, MP640<br />
- PIXMA MP700, MP710, MP730, PIXMA MP750 (no grayscale)<br />
- PIXMA MP800, MP800R, MP810, MP830<br />
- PIXMA MP960, MP970, MP980, MP990<br />
- PIXMA MX300, MX310, MX330, MX340, MX350, MX360, MX370<br />
- PIXMA MX410, MX420, MX470, MX510, MX520, MX530, MX700, MX720<br />
- PIXMA MX850, MX860, MX870, MX882, MX885, MX890, MX920, MX7600<br />
- PIXMA TR4500<br />
- PIXMA TS3100, TS3300, TS5000, TS5100, TS6100, TS6200, TS8000<br />
- PIXMA TS8200<br />
- PIXUS MP10<br />
- imageCLASS MF634Cdw, MF733Cdw<br />
- imageCLASS MF3110, MF3240, MF4010, MF4018<br />
- imageCLASS MF4120, MF4122, MF4140, MF4150<br />
- imageCLASS MF4270, MF4350d, MF4370dn, MF4380dn<br />
- imageCLASS MF4410, MF4430, MF4570dw, MF4660, MF4690<br />
- imageCLASS MF5730, MF5770, MF6550, MPC200<br />
- imageCLASS D420, D480, D530, D570<br />
- i-SENSYS MF210, MF230, MF240, MF440, MF620, MF630, MF640<br />
- i-SENSYS MF645C, MF730, MF731/733, MF741/743<br />
- i-SENSYS MF3010, MF4320d, MF4330d, MF4500, MF4700, MF4800<br />
- i-SENSYS MF6100, MF8030, MF8200C, MF8300<br />
- imageRUNNER 1020/1024/1025, 1133<br />
- CanoScan 8800F, 9000F, 9000F Mark II<br />
- CanoScan LiDE 300, 400<br />
+<dd>PIXMA E410, E510<br/>
+ PIXMA G2000, G2010, G2100, G4000, G4511<br/>
+ PIXMA MG2100, MG2200, MG2400, MG2500, MG2900, MG3000, MG3100<br/>
+ PIXMA MG3200, MG3500, MG3600, MG4200, MG5100, MG5200, MG5300<br/>
+ PIXMA MG5400, MG5500, MG5600, MG5700, MG6100, MG6200, MG6300<br/>
+ PIXMA MG6400, MG7100, MG7500, MG7700, MG8200<br/>
+ PIXMA MP140, MP150, MP160, MP170, MP180, MP190<br/>
+ PIXMA MP210, MP220, MP230, MP240, MP250, MP260, MP270, MP280<br/>
+ PIXMA MP360, MP370, MP390<br/>
+ PIXMA MP450, MP460, MP470, MP480, MP490, MP495<br/>
+ PIXMA MP500, MP510, MP520, MP530, MP540, MP550, MP560<br/>
+ PIXMA MP600, MP600R, MP610, MP620, MP630, MP640<br/>
+ PIXMA MP700, MP710, MP730, PIXMA MP750 (no grayscale)<br/>
+ PIXMA MP800, MP800R, MP810, MP830<br/>
+ PIXMA MP960, MP970, MP980, MP990<br/>
+ PIXMA MX300, MX310, MX330, MX340, MX350, MX360, MX370<br/>
+ PIXMA MX410, MX420, MX470, MX510, MX520, MX530, MX700, MX720<br/>
+ PIXMA MX850, MX860, MX870, MX882, MX885, MX890, MX920, MX7600<br/>
+ PIXMA TR4500<br/>
+ PIXMA TS3100, TS3300, TS5000, TS5100, TS6100, TS6200, TS8000<br/>
+ PIXMA TS8200<br/>
+ PIXUS MP10<br/>
+ imageCLASS MF634Cdw, MF733Cdw<br/>
+ imageCLASS MF3110, MF3240, MF4010, MF4018<br/>
+ imageCLASS MF4120, MF4122, MF4140, MF4150<br/>
+ imageCLASS MF4270, MF4350d, MF4370dn, MF4380dn<br/>
+ imageCLASS MF4410, MF4430, MF4570dw, MF4660, MF4690<br/>
+ imageCLASS MF5730, MF5770, MF6550, MPC200<br/>
+ imageCLASS D420, D480, D530, D570<br/>
+ i-SENSYS MF210, MF230, MF240, MF440, MF620, MF630, MF640<br/>
+ i-SENSYS MF645C, MF730, MF731/733, MF741/743<br/>
+ i-SENSYS MF3010, MF4320d, MF4330d, MF4500, MF4700, MF4800<br/>
+ i-SENSYS MF6100, MF8030, MF8200C, MF8300<br/>
+ imageRUNNER 1020/1024/1025, 1133<br/>
+ CanoScan 8800F, 9000F, 9000F Mark II<br/>
+ CanoScan LiDE 300, 400<br/>
  MAXIFY MB2000, MB2100, MB2300, MB2700, MB5000, MB5100, MB5400</dd></dl>
 <p> The following models are not well tested and/or the scanner sometimes hangs and must be switched off and on. </p>
 <dl>
 <dd>PIXMA MP760, MP770, MP780, MP790</dd></dl>
 <p> The following models may use the same Pixma protocol as those listed above, but have not yet been reported to work (or not). They are declared in the backend so that they get recognized and activated. Feedback in the sane-devel mailing list welcome. </p>
 <dl>
-<dd>PIXMA E400, E460, E470, E480, E500, E560, E600, E610<br />
- PIXMA E3100, E3300, E3400, E4200<br />
- PIXMA G2020, G2060, G3020, G3060, G7000, G7080<br />
- PIXMA MG4100, MG6500, MG6600, MG6800, MG6900, MG8100<br />
- PIXMA MP375R, MP493, MP740<br />
- PIXMA MX320, MX390, MX430, MX450, MX490, MX710<br />
- PIXMA G3000, G3010, G4010, G6000, G6080, G7000, GM4000, GM4080<br />
- PIXMA TR7500, TR7530, TR7600, TR8500, TR8530, TR8580, TR8600<br />
- PIXMA TR8630, TR9530<br />
- PIXMA TS3400, TS5100, TS6000, TS6130, TS6180, TS6230, TS6280, TS6300<br />
- PIXMA TS6330, TS6330, TS6380, TS6400, TS7330, TS7400, TS7430, TS8100<br />
- PIXMA TS8130, TS8180, TS8230, TS8280, TS8300, TS8330, TS8380, TS9000<br />
- PIXMA TS9100, TS9180, TS9500, TS9580<br />
- PIXUS MP5, XK50, XK60, XK70, XK80, XK90<br />
- imageCLASS MF720, MF810/820, MF5630, MF5650, MF5750, MF8170c<br />
- imageCLASS MPC190, D550<br />
- i-SENSYS MF110, MF220, MF260, MF410, MF420, MF510, MF520, MF740<br />
- i-SENSYS MF5880dn, MF5900, MF6680dn, MF8500C<br />
+<dd>PIXMA E400, E460, E470, E480, E500, E560, E600, E610<br/>
+ PIXMA E3100, E3300, E3400, E4200<br/>
+ PIXMA G2020, G2060, G3020, G3060, G7000, G7080<br/>
+ PIXMA MG4100, MG6500, MG6600, MG6800, MG6900, MG8100<br/>
+ PIXMA MP375R, MP493, MP740<br/>
+ PIXMA MX320, MX390, MX430, MX450, MX490, MX710<br/>
+ PIXMA G3000, G3010, G4010, G6000, G6080, G7000, GM4000, GM4080<br/>
+ PIXMA TR7500, TR7530, TR7600, TR8500, TR8530, TR8580, TR8600<br/>
+ PIXMA TR8630, TR9530<br/>
+ PIXMA TS3400, TS5100, TS6000, TS6130, TS6180, TS6230, TS6280, TS6300<br/>
+ PIXMA TS6330, TS6330, TS6380, TS6400, TS7330, TS7400, TS7430, TS8100<br/>
+ PIXMA TS8130, TS8180, TS8230, TS8280, TS8300, TS8330, TS8380, TS9000<br/>
+ PIXMA TS9100, TS9180, TS9500, TS9580<br/>
+ PIXUS MP5, XK50, XK60, XK70, XK80, XK90<br/>
+ imageCLASS MF720, MF810/820, MF5630, MF5650, MF5750, MF8170c<br/>
+ imageCLASS MPC190, D550<br/>
+ i-SENSYS MF110, MF220, MF260, MF410, MF420, MF510, MF520, MF740<br/>
+ i-SENSYS MF5880dn, MF5900, MF6680dn, MF8500C<br/>
  MAXIFY MB5300</dd></dl>
 <p> The following models may use partly the same Pixma protocol as other devices listed above, but may still need some work. They are declared in the backend as experimental and need the environment variable PIXMA_EXPERIMENT=1 to get recognized and activated. Snoop logs are required to further investigate, please contact the sane-devel mailing list. </p>
 <dl>
 <dd>&#8212; none &#8212;</dd></dl>
 <p> The backend supports: </p>
 <dl>
-<dd>* resolutions of 75, 150, 300, 600, 1200, 2400, 4800, and 9600 DPI (some maybe buggy),<br />
- * color and grayscale mode, as well as lineart on certain models,<br />
- * a custom gamma table,<br />
- * Automatic Document Feeder, Simplex and Duplex.<br />
+<dd>* resolutions of 75, 150, 300, 600, 1200, 2400, 4800, and 9600 DPI (some maybe buggy),<br/>
+ * color and grayscale mode, as well as lineart on certain models,<br/>
+ * a custom gamma table,<br/>
+ * Automatic Document Feeder, Simplex and Duplex.<br/>
  * Transparency Unit, 24 or 48 bits depth. Infrared channel on certain models.</dd></dl>
 <p> The device name for USB devices is in the form pixma:xxxxyyyy_zzzzz where x, y and z are vendor ID, product ID and serial number respectively. </p>
 <p> Example: pixma:04A91709_123456 is a MP150. </p>
@@ -89,8 +89,8 @@ description: "sane-pixma – SANE backend for Canon Multi-Function Printers and 
 <p> Example: pixma:MF4800_192.168.1.45 is a MF4800 Series multi-function peripheral. </p>
 <p> This backend, based on cloning original Canon drivers protocols, is in a production stage. Designed has been carried out without any applicable manufacturer documentation, probably never available. However, we have tested it as well as we could, but it may not work in all situations. You will find an up-to-date status at the project homepage. (See below). Users feedback is essential to help improve features and performances.</p>
 <h2>Options</h2>
-<p>Besides &quot;well-known&quot; options (e.g. resolution, mode etc.) <code>sane-pixma</code> backend also provides the following options, i.e. the options might change in the future.<br />
- The button status can be polled i.e. with <i>scanimage -A.</i><br />
+<p>Besides &quot;well-known&quot; options (e.g. resolution, mode etc.) <code>sane-pixma</code> backend also provides the following options, i.e. the options might change in the future.<br/>
+ The button status can be polled i.e. with <i>scanimage -A.</i><br/>
  Button scan is disabled on MAC OS X due to darwin libusb not handling timeouts in usb interrupt reads, but may work when using the network protocol.</p>
 <dl>
 <dt><i>adf-wait</i></dt>
@@ -166,29 +166,29 @@ description: "sane-pixma – SANE backend for Canon Multi-Function Printers and 
 <dt><code>SANE_DEBUG_PIXMA</code></dt>
 <dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend itself. Higher value increases the verbosity and includes the information printed at the lower levels.</dd>
 <dl>
-<dd>0 print nothing (default)<br />
- 1 print error and warning messages (recommended)<br />
- 2 print informational messages<br />
- 3 print debug-level messages<br />
- 4 print verbose debug-level messages<br />
- 11 dump USB traffic<br />
+<dd>0 print nothing (default)<br/>
+ 1 print error and warning messages (recommended)<br/>
+ 2 print informational messages<br/>
+ 3 print debug-level messages<br/>
+ 4 print verbose debug-level messages<br/>
+ 11 dump USB traffic<br/>
  21 full dump USB traffic
 </dd></dl>
 <dt><code>SANE_DEBUG_BJNP</code></dt>
 <dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for the <code>BJNP and MFNP</code> network protocols for this backend. Higher value increases the verbosity and includes the information printed at the lower levels.</dd>
 <dl>
-<dd>0 print nothing (default)<br />
- 1 Print error and warning messages (recommended)<br />
- 2 Print high level function tracing information<br />
- 3 Print more detailed protocol tracing information<br />
- 4 Print protocol headers<br />
+<dd>0 print nothing (default)<br/>
+ 1 Print error and warning messages (recommended)<br/>
+ 2 Print high level function tracing information<br/>
+ 3 Print more detailed protocol tracing information<br/>
+ 4 Print protocol headers<br/>
  5 Print full protocol contents</dd></dl>
 <dt><code>PIXMA_EXPERIMENT</code></dt>
 <dd>Setting to a non-zero value will enable the support for experimental models. You should also set SANE_DEBUG_PIXMA to 11.</dd>
 <dt><code>SANE_CONFIG_DIR</code></dt>
 <dd>This environment variable specifies the list of directories that may contain the configuration file. On *NIX systems, the directories are separated by a colon (`:&#8217;), under OS/2, they are separated by a semi-colon (`;&#8217;). If this variable is not set, the configuration file is searched in two default directories: first, the current working directory (&quot;.&quot;) and then in <i>/etc/sane.d</i>. If the value of the environment variable ends with the directory separator character, then the default directories are searched after the explicitly specified directories. For example, setting <code>SANE_CONFIG_DIR</code> to &quot;/tmp/config:&quot; would result in directories <i>tmp/config</i>, <i>.</i>, and <i>/etc/sane.d</i> being searched (in this order).</dd></dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/5-sane-dll/">sane-dll</a></code>(5), <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1), <code><a href="/docs/linux/man/1-scanadf/">scanadf</a></code>(1), <code><a href="/docs/linux/man/1-gamma4scanimage/">gamma4scanimage</a></code>(1), <code><a href="/docs/linux/man/3-getifaddrs/">getifaddrs</a></code>(3) In case of trouble with a recent Pixma model, try the latest code for the <code>sane-pixma</code> backend, available in the Sane git repository at:<br />
+<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/5-sane-dll/">sane-dll</a></code>(5), <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1), <code><a href="/docs/linux/man/1-scanadf/">scanadf</a></code>(1), <code><a href="/docs/linux/man/1-gamma4scanimage/">gamma4scanimage</a></code>(1), <code><a href="/docs/linux/man/3-getifaddrs/">getifaddrs</a></code>(3) In case of trouble with a recent Pixma model, try the latest code for the <code>sane-pixma</code> backend, available in the Sane git repository at:<br/>
  <i><a rel="nofollow" href="https://gitlab.com/sane-project/backends.git">https://gitlab.com/sane-project/backends.git</a></i> You can also post into the Sane-devel mailing list for support. </p>
 <h2>Authors</h2>
 <p>Wittawat Yamwong, Nicolas Martin, Dennis Lou, Louis Lagendijk, Rolf Bensch </p>

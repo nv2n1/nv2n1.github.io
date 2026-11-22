@@ -10,10 +10,10 @@ description: "ql/termstructures/volatility/equityfx/localvolcurve.hpp – Local 
 
 <p> ql/termstructures/volatility/equityfx/localvolcurve.hpp &#8211; Local volatility curve derived from a Black curve. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/termstructures/volatility/equityfx/blackvariancecurve.hpp&gt;<br />
+<p> #include &lt;ql/termstructures/volatility/equityfx/blackvariancecurve.hpp&gt;<br/>
  #include &lt;ql/termstructures/volatility/equityfx/localvoltermstructure.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>LocalVolCurve</code><br />
+<p> class <code>LocalVolCurve</code><br/>
  <i>Local volatility curve derived from a Black curve. </i></p>
 <h2>Detailed Description</h2>
 <p> Local volatility curve derived from a Black curve. </p>

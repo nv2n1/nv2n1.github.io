@@ -16,18 +16,18 @@ Protected Attributes</code></pre>
 <p> Inherits <code>QuantLib::LazyObject</code>. Inherited by <code>Bond</code>, <code>CapFloor</code>, <code>CDO</code>, <code>CdsOption</code>, <code>Commodity</code>, <code>CompositeInstrument</code>, <code>CreditDefaultSwap</code>, <code>Forward</code>, <code>InflationSwap</code>, <code>NthToDefault</code>, <code>Option</code>, <code>PathMultiAssetOption</code>, <code>RiskyAssetSwap</code>, <code>Stock</code>, <code>Swap</code>, <code>SyntheticCDO</code>, <code>VarianceOption</code>, and <code>VarianceSwap</code>.</p>
 <h3>Public Member Functions</h3>
 <p>virtual void <code>setupArguments</code> (PricingEngine::arguments *) const </p>
-<p> virtual void <code>fetchResults</code> (const PricingEngine::results *) const<br />
+<p> virtual void <code>fetchResults</code> (const PricingEngine::results *) const<br/>
  <code>Inspectors</code> </p>
-<p> <code>Real</code> <code>NPV</code> () const<br />
- <i>returns the net present value of the instrument. </i><br />
- <code>Real</code> <code>errorEstimate</code> () const<br />
- <i>returns the error estimate on the NPV when available. </i><br />
- template&lt;typename T &gt; T <code>result</code> (const std::string &amp;tag) const<br />
- <i>returns any additional result returned by the pricing engine. </i><br />
- const std::map&lt; std::string, boost::any &gt; &amp; <code>additionalResults</code> () const<br />
- <i>returns all additional result returned by the pricing engine. </i><br />
- virtual bool <code>isExpired</code> () const =0<br />
- <i>returns whether the instrument is still tradable. </i> <code>Modifiers</code><br />
+<p> <code>Real</code> <code>NPV</code> () const<br/>
+ <i>returns the net present value of the instrument. </i><br/>
+ <code>Real</code> <code>errorEstimate</code> () const<br/>
+ <i>returns the error estimate on the NPV when available. </i><br/>
+ template&lt;typename T &gt; T <code>result</code> (const std::string &amp;tag) const<br/>
+ <i>returns any additional result returned by the pricing engine. </i><br/>
+ const std::map&lt; std::string, boost::any &gt; &amp; <code>additionalResults</code> () const<br/>
+ <i>returns all additional result returned by the pricing engine. </i><br/>
+ virtual bool <code>isExpired</code> () const =0<br/>
+ <i>returns whether the instrument is still tradable. </i> <code>Modifiers</code><br/>
  void calculate () const</p>
 <p>virtual void setupExpired () const</p>
 <p>virtual void performCalculations () const</p>
@@ -36,9 +36,9 @@ Protected Attributes</code></pre>
 virtual void setupExpired () const
 virtual void performCalculations () const
 Protected Attributes</code></pre>
-<p> boost::shared_ptr&lt; <code>PricingEngine</code> &gt; <code>engine_</code><br />
- <code>Results</code><br />
- The value of this attribute and any other that derived classes might declare must be set during calculation.<br />
+<p> boost::shared_ptr&lt; <code>PricingEngine</code> &gt; <code>engine_</code><br/>
+ <code>Results</code><br/>
+ The value of this attribute and any other that derived classes might declare must be set during calculation.<br/>
  <code>Real</code> <code>NPV_</code> </p>
 <p> <code>Real</code> <code>errorEstimate_</code> </p>
 <p> std::map&lt; std::string, boost::any &gt; <code>additionalResults_</code></p>

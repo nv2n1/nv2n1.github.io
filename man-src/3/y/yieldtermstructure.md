@@ -13,28 +13,28 @@ description: "QuantLib::YieldTermStructure – Interest-rate term structure."
 <p> Inherits <code>QuantLib::TermStructure</code>. </p>
 <p> Inherited by <code>InterpolatedDiscountCurve&lt; LogLinear &gt;</code>, <code>FittedBondDiscountCurve</code>, <code>FlatForward</code>, <code>ForwardRateStructure</code>, <code>ImpliedTermStructure</code>, <code>InterpolatedDiscountCurve&lt; Interpolator &gt;</code>, and <code>ZeroYieldStructure</code>. </p>
 <h3>Public Member Functions</h3>
-<p><code>Constructors</code><br />
+<p><code>Constructors</code><br/>
  See the <code>TermStructure</code> documentation for issues regarding constructors. </p>
-<p> <code>YieldTermStructure</code> (const <code>DayCounter</code> &amp;dc=<code>DayCounter</code>())<br />
- <i>default constructor </i><br />
- <code>YieldTermStructure</code> (const <code>Date</code> &amp;referenceDate, const <code>Calendar</code> &amp;cal=<code>Calendar</code>(), const <code>DayCounter</code> &amp;dc=<code>DayCounter</code>())<br />
- <i>initialize with a fixed reference date </i><br />
- <code>YieldTermStructure</code> (<code>Natural</code> settlementDays, const <code>Calendar</code> &amp;cal, const <code>DayCounter</code> &amp;dc=<code>DayCounter</code>())<br />
+<p> <code>YieldTermStructure</code> (const <code>DayCounter</code> &amp;dc=<code>DayCounter</code>())<br/>
+ <i>default constructor </i><br/>
+ <code>YieldTermStructure</code> (const <code>Date</code> &amp;referenceDate, const <code>Calendar</code> &amp;cal=<code>Calendar</code>(), const <code>DayCounter</code> &amp;dc=<code>DayCounter</code>())<br/>
+ <i>initialize with a fixed reference date </i><br/>
+ <code>YieldTermStructure</code> (<code>Natural</code> settlementDays, const <code>Calendar</code> &amp;cal, const <code>DayCounter</code> &amp;dc=<code>DayCounter</code>())<br/>
  <i>calculate the reference date based on the global evaluation date </i> </p>
-<p> <code>zero-yield rates</code><br />
+<p> <code>zero-yield rates</code><br/>
  These methods return the implied zero-yield rate for a given date or time. In the former case, the time is calculated as a fraction of year from the reference date. </p>
 <p> <code>InterestRate</code> <code>zeroRate</code> (const <code>Date</code> &amp;d, const <code>DayCounter</code> &amp;resultDayCounter, Compounding comp, <code>Frequency</code> freq=Annual, bool extrapolate=false) const </p>
 <p> <code>InterestRate</code> <code>zeroRate</code> (Time t, Compounding comp, <code>Frequency</code> freq=Annual, bool extrapolate=false) const </p>
-<p> <code>discount factors</code><br />
+<p> <code>discount factors</code><br/>
  These methods return the discount factor for a given date or time. In the former case, the time is calculated as a fraction of year from the reference date. </p>
 <p> <code>DiscountFactor</code> <code>discount</code> (const <code>Date</code> &amp;, bool extrapolate=false) const </p>
 <p> <code>DiscountFactor</code> <code>discount</code> (Time, bool extrapolate=false) const </p>
-<p> <code>forward rates</code><br />
+<p> <code>forward rates</code><br/>
  These methods returns the implied forward interest rate between two dates or times. In the former case, times are calculated as fractions of year from the reference date. </p>
 <p> <code>InterestRate</code> <code>forwardRate</code> (const <code>Date</code> &amp;d1, const <code>Date</code> &amp;d2, const <code>DayCounter</code> &amp;resultDayCounter, Compounding comp, <code>Frequency</code> freq=Annual, bool extrapolate=false) const </p>
 <p> <code>InterestRate</code> <code>forwardRate</code> (const <code>Date</code> &amp;d, const <code>Period</code> &amp;p, const <code>DayCounter</code> &amp;resultDayCounter, Compounding comp, <code>Frequency</code> freq=Annual, bool extrapolate=false) const </p>
 <p> <code>InterestRate</code> <code>forwardRate</code> (Time t1, Time t2, Compounding comp, <code>Frequency</code> freq=Annual, bool extrapolate=false) const </p>
-<p> <code>par rates</code><br />
+<p> <code>par rates</code><br/>
  These methods returns the implied par rate for a given sequence of payments at the given dates or times. In the former case, times are calculated as fractions of year from the reference date. </p>
 <p> <code>Warning</code></p>
 <dl COMPACT>
@@ -43,9 +43,9 @@ description: "QuantLib::YieldTermStructure – Interest-rate term structure."
 <p> <code>Rate</code> <code>parRate</code> (const std::vector&lt; <code>Date</code> &gt; &amp;dates, <code>Frequency</code> freq=Annual, bool extrapolate=false) const </p>
 <p> <code>Rate</code> <code>parRate</code> (const std::vector&lt; Time &gt; &amp;times, <code>Frequency</code> freq=Annual, bool extrapolate=false) const </p>
 <h3>Protected Member Functions</h3>
-<p><code>Calculations</code><br />
+<p><code>Calculations</code><br/>
  These methods must be implemented in derived classes to perform the actual discount and rate calculations. When they are called, range check has already been performed; therefore, they must assume that extrapolation is required. </p>
-<p> virtual <code>DiscountFactor</code> <code>discountImpl</code> (Time) const =0<br />
+<p> virtual <code>DiscountFactor</code> <code>discountImpl</code> (Time) const =0<br/>
  <i>discount calculation </i></p>
 <h2>Detailed Description</h2>
 <p>Interest-rate term structure. </p>

@@ -200,15 +200,15 @@ int openat2(int dirfd, const char *pathname,
 <dt>
 </dt><dd> <code>O_TMPFILE</code> must be specified with one of <code>O_RDWR</code> or <code>O_WRONLY</code> and, optionally, <code>O_EXCL</code>. If <code>O_EXCL</code> is not specified, then <code><a href="/docs/linux/man/2-linkat/">linkat</a></code>(2) can be used to link the temporary file into the filesystem, making it permanent, using code like the following:</dd>
 <dt>
-</dt><dd> char path[PATH_MAX]; fd = open(&quot;/path/to/dir&quot;, O_TMPFILE | O_RDWR,<br />
+</dt><dd> char path[PATH_MAX]; fd = open(&quot;/path/to/dir&quot;, O_TMPFILE | O_RDWR,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;S_IRUSR | S_IWUSR); </dd>
 <p> /* File I/O on &#8216;fd&#8217;&#8230; */ </p>
 <p> linkat(fd, NULL, AT_FDCWD, &quot;/path/for/file&quot;, AT_EMPTY_PATH); </p>
-<p> /* If the caller doesn&#8217;t have the CAP_DAC_READ_SEARCH<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;capability&nbsp;(needed to use AT_EMPTY_PATH with&nbsp;<a href="/docs/linux/man/2-linkat/">linkat</a>(2)),<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;and there is a&nbsp;<a href="/docs/linux/man/5-proc/">proc</a>(5)&nbsp;filesystem mounted, then the<br />
+<p> /* If the caller doesn&#8217;t have the CAP_DAC_READ_SEARCH<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;capability&nbsp;(needed to use AT_EMPTY_PATH with&nbsp;<a href="/docs/linux/man/2-linkat/">linkat</a>(2)),<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;and there is a&nbsp;<a href="/docs/linux/man/5-proc/">proc</a>(5)&nbsp;filesystem mounted, then the<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<a href="/docs/linux/man/2-linkat/">linkat</a>(2)&nbsp;call above can be replaced with: </p>
-<p> snprintf(path, PATH_MAX, &quot;/proc/self/fd/%d&quot;, fd); linkat(AT_FDCWD, path, AT_FDCWD, &quot;/path/for/file&quot;,<br />
+<p> snprintf(path, PATH_MAX, &quot;/proc/self/fd/%d&quot;, fd); linkat(AT_FDCWD, path, AT_FDCWD, &quot;/path/for/file&quot;,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;AT_SYMLINK_FOLLOW); */</p>
 <dt>
 </dt><dd> In this case, the <code>open</code>() <i>mode</i> argument determines the file permission mode, as with <code>O_CREAT</code>.</dd>

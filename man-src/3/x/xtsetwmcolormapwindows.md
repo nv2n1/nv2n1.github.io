@@ -24,5 +24,5 @@ description: "XtSetWMColormapWindows – Set the value of the WM_COLORMAP_WINDOW
 <p><code>XtSetWMColormapWindows</code> returns immediately if <i>widget</i> is not realized or if <i>count</i> is zero. Otherwise, <code>XtSetWMColormapWindows</code> constructs an ordered list of windows by examining each widget in <i>list</i> in turn and ignoring the widget if it is not realized, or adding the widget&#8217;s window to the window list if the widget is realized and its colormap resource is different from the colormap resources of all widgets whose windows are already on the window list. </p>
 <p> Finally, <code>XtSetWMColormapWindows</code> stores the resulting window list in the WM_COLORMAP_WINDOWS property on the specified widget&#8217;s window.</p>
 <h2>See Also</h2>
-<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

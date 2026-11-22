@@ -16,22 +16,22 @@ description: "skopeo — Various operations with container images images and con
 <p> It also allows you to copy container images between various registries, possibly converting them as necessary, and to sign and verify images. </p>
 <h2>IMAGE NAMES</h2>
 <p> Most commands refer to container images, using a <i>transport</i>:<i>details</i> format. The following formats are supported: </p>
-<p> <code>atomic:</code><i>namespace</i><code>/</code><i>stream</i><code>:</code><i>tag</i><br />
-&nbsp;<wbr>&nbsp;<wbr>An image in the current project of the current default Atomic<br />
-&nbsp;<wbr>&nbsp;<wbr>Registry. The current project and Atomic Registry instance are by<br />
-&nbsp;<wbr>&nbsp;<wbr>default read from&nbsp;<wbr>$HOME/.kube/config, which is set e.g. using<br />
+<p> <code>atomic:</code><i>namespace</i><code>/</code><i>stream</i><code>:</code><i>tag</i><br/>
+&nbsp;<wbr>&nbsp;<wbr>An image in the current project of the current default Atomic<br/>
+&nbsp;<wbr>&nbsp;<wbr>Registry. The current project and Atomic Registry instance are by<br/>
+&nbsp;<wbr>&nbsp;<wbr>default read from&nbsp;<wbr>$HOME/.kube/config, which is set e.g. using<br/>
 &nbsp;<wbr>&nbsp;<wbr>(oc login). </p>
-<p> <code>dir:</code><i>path</i><br />
-&nbsp;<wbr>&nbsp;<wbr>An existing local directory&nbsp;<wbr><i>path</i>&nbsp;<wbr>storing the manifest, layer<br />
-&nbsp;<wbr>&nbsp;<wbr>tarballs and signatures as individual files. This is a<br />
-&nbsp;<wbr>&nbsp;<wbr>non-standardized format, primarily useful for debugging or<br />
+<p> <code>dir:</code><i>path</i><br/>
+&nbsp;<wbr>&nbsp;<wbr>An existing local directory&nbsp;<wbr><i>path</i>&nbsp;<wbr>storing the manifest, layer<br/>
+&nbsp;<wbr>&nbsp;<wbr>tarballs and signatures as individual files. This is a<br/>
+&nbsp;<wbr>&nbsp;<wbr>non-standardized format, primarily useful for debugging or<br/>
 &nbsp;<wbr>&nbsp;<wbr>noninvasive container inspection. </p>
-<p> <code>docker://</code><i>docker-reference</i><br />
-&nbsp;<wbr>&nbsp;<wbr>An image in a registry implementing the&nbsp;<wbr>&quot;Docker Registry HTTP API V2&quot;.<br />
-&nbsp;<wbr>&nbsp;<wbr>By default, uses the authorization state in&nbsp;<wbr>$HOME/.docker/config.json,<br />
+<p> <code>docker://</code><i>docker-reference</i><br/>
+&nbsp;<wbr>&nbsp;<wbr>An image in a registry implementing the&nbsp;<wbr>&quot;Docker Registry HTTP API V2&quot;.<br/>
+&nbsp;<wbr>&nbsp;<wbr>By default, uses the authorization state in&nbsp;<wbr>$HOME/.docker/config.json,<br/>
 &nbsp;<wbr>&nbsp;<wbr>which is set e.g. using&nbsp;<wbr>(docker login). </p>
-<p> <code>oci:</code><i>path</i><code>:</code><i>tag</i><br />
-&nbsp;<wbr>&nbsp;<wbr>An image&nbsp;<wbr><i>tag</i>&nbsp;<wbr>in a directory compliant with&nbsp;<wbr>&quot;Open Container Image<br />
+<p> <code>oci:</code><i>path</i><code>:</code><i>tag</i><br/>
+&nbsp;<wbr>&nbsp;<wbr>An image&nbsp;<wbr><i>tag</i>&nbsp;<wbr>in a directory compliant with&nbsp;<wbr>&quot;Open Container Image<br/>
 &nbsp;<wbr>&nbsp;<wbr>Layout Specification&quot;&nbsp;<wbr>at&nbsp;<wbr><i>path</i>. </p>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;debug</code> enable debug output </p>
@@ -100,11 +100,11 @@ $ docker exec -it registry bin/registry garbage-collect /etc/docker/registry/con
 <h2>skopeo help</h2>
 <p> show help for skopeo </p>
 <h2>FILES</h2>
-<p> <code>/etc/containers/policy.json</code><br />
-&nbsp;<wbr>&nbsp;<wbr>Default trust policy file, if&nbsp;<wbr><code>&#8211;policy</code>&nbsp;<wbr>is not specified.<br />
+<p> <code>/etc/containers/policy.json</code><br/>
+&nbsp;<wbr>&nbsp;<wbr>Default trust policy file, if&nbsp;<wbr><code>&#8211;policy</code>&nbsp;<wbr>is not specified.<br/>
 &nbsp;<wbr>&nbsp;<wbr>The policy format is documented in&nbsp;<wbr> &lt;<a rel="nofollow" href="https://github.com/containers/image/blob/master/docs/policy.json.md">https://github.com/containers/image/blob/master/docs/policy.json.md</a>&gt; . </p>
-<p> <code>/etc/containers/registries.d</code><br />
-&nbsp;<wbr>&nbsp;<wbr>Default directory containing registry configuration, if&nbsp;<wbr><code>&#8211;registries.d</code>&nbsp;<wbr>is not specified.<br />
+<p> <code>/etc/containers/registries.d</code><br/>
+&nbsp;<wbr>&nbsp;<wbr>Default directory containing registry configuration, if&nbsp;<wbr><code>&#8211;registries.d</code>&nbsp;<wbr>is not specified.<br/>
 &nbsp;<wbr>&nbsp;<wbr>The contents of this directory are documented in&nbsp;<wbr> &lt;<a rel="nofollow" href="https://github.com/containers/image/blob/master/docs/registries.d.md">https://github.com/containers/image/blob/master/docs/registries.d.md</a>&gt; . </p>
 <h2>EXAMPLES</h2>
 <h2>skopeo copy</h2>

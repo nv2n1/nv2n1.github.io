@@ -45,8 +45,8 @@ description: "Debugging Plugin –"
 <p> This function will initialize the debugging plugin-specific instance data for this plugin, and will make the plugin usable for ftp client handle attribute and handle creation. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>plugin</i> A pointer to an uninitialized plugin. The plugin will be configured as a debugging plugin, with the default of sending debugging messages to stderr.<br />
- <i>stream</i><br />
+<dd><i>plugin</i> A pointer to an uninitialized plugin. The plugin will be configured as a debugging plugin, with the default of sending debugging messages to stderr.<br/>
+ <i>stream</i><br/>
  <i>text</i></dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

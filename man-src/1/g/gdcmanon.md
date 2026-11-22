@@ -55,22 +55,22 @@ file-out  DICOM output directory
      --replace %d,%d,%s        DICOM tag(s) to replace
 </pre>
 <h3>general options</h3>
-<p>&#8211; h&#8211; help<br />
-        print this help text and exit &#8211;<br />
-    v&#8211; version<br />
-        print version information and exit &#8211;<br />
-    V&#8211; verbose<br />
-        verbose<br />
-        mode(warning + error)<br />
-            .-<br />
-    W&#8211; warning<br />
-    warning mode,<br />
-    print warning information<br />
-        &#8211; E&#8211; error<br />
-        error mode,<br />
-    print error information<br />
-        &#8211; D&#8211; debug<br />
-        debug mode,<br />
+<p>&#8211; h&#8211; help<br/>
+        print this help text and exit &#8211;<br/>
+    v&#8211; version<br/>
+        print version information and exit &#8211;<br/>
+    V&#8211; verbose<br/>
+        verbose<br/>
+        mode(warning + error)<br/>
+            .-<br/>
+    W&#8211; warning<br/>
+    warning mode,<br/>
+    print warning information<br/>
+        &#8211; E&#8211; error<br/>
+        error mode,<br/>
+    print error information<br/>
+        &#8211; D&#8211; debug<br/>
+        debug mode,<br/>
     print debug information</p>
 <h3>environment variable</h3>
 <pre>

@@ -467,7 +467,7 @@ An Unnumbered Subheading
 <dt><code>.IP</code></dt>
 <dd> <p> [<i>marker</i> [<i>width</i>]] The <i>marker</i> is usually a bullet character <code>\(bu</code> for unordered lists, a number (or auto-incrementing number register) for numbered lists, or a word or phrase for indented (glossary-style) lists. </p>
  </dd>
-<dd> <p> The <i>width</i> specifies the indent for the body of each list item. Once specified, the indent remains the same for all list items in the document until specified again. <br />
+<dd> <p> The <i>width</i> specifies the indent for the body of each list item. Once specified, the indent remains the same for all list items in the document until specified again. <br/>
  </p>
  </dd></dl>
 <h3>Tab stops</h3>
@@ -713,7 +713,7 @@ Details of Galactic Formation
 <dd> <p> The number register <code>GS</code> is set to~1 by the <i>groff ms</i> macros, but is not used by the Unix <i>ms</i> macros. Documents that need to determine whether they are being formatted with Unix <i>ms</i> or <i>groff ms</i> should use this number register. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> To make <i>groff ms</i> use the default page offset (which also specifies the left margin), the <code>PO</code> number register must stay undefined until the first <code>ms</code> macro is evaluated. This implies that <code>PO</code> should not be used early in the document, unless it is changed also: remember that accessing an undefined register automatically defines it. <br />
+<dd> <p> To make <i>groff ms</i> use the default page offset (which also specifies the left margin), the <code>PO</code> number register must stay undefined until the first <code>ms</code> macro is evaluated. This implies that <code>PO</code> should not be used early in the document, unless it is changed also: remember that accessing an undefined register automatically defines it. <br/>
  </p>
  </dd></dl>
 <h3>Strings</h3>
@@ -845,7 +845,7 @@ Details of Galactic Formation
 <dd> <p> Names containing only uppercase letters and digits. </p>
  </dd></dl>
 <h2>FILES</h2>
-<p> <i>/usr/:share/:groff/:1.22.4/:tmac/ms.tmac</i> (a wrapper file for <i>s.tmac</i>) <br />
+<p> <i>/usr/:share/:groff/:1.22.4/:tmac/ms.tmac</i> (a wrapper file for <i>s.tmac</i>) <br/>
  <i>/usr/:share/:groff/:1.22.4/:tmac/s.tmac</i>  </p>
 <h2>AUTHORS</h2>
 <p> The GNU version of the <i>ms</i> macro package was written by James Clark and contributors. This document was (re-)written by Larry Kollar  </p>

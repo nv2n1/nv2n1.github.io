@@ -47,7 +47,7 @@ description: "QwtMetricsMap – A Map to translate between layout, screen and pa
 <p>Wrapper for QMatrix::mapRect. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>m</i> Matrix<br />
+<dd><i>m</i> Matrix<br/>
  <i>rect</i> Rectangle to translate</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -56,7 +56,7 @@ description: "QwtMetricsMap – A Map to translate between layout, screen and pa
 <p>Wrapper for QMatrix::map. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>m</i> Matrix<br />
+<dd><i>m</i> Matrix<br/>
  <i>pa</i> Polygon to translate</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

@@ -10,10 +10,10 @@ description: "pmdaactivemq – ActiveMQ performance metrics domain agent (PMDA)"
 
 <p> <code>pmdaactivemq</code> &#8211; ActiveMQ performance metrics domain agent (PMDA)</p>
 <h2>DESCRIPTION</h2>
-<p> <code>pmdaactivemq</code> is a Performance Metrics Domain Agent (<font SIZE="-1">PMDA</font>) which exports performance metrics from ActiveMQ.</p>
+<p> <code>pmdaactivemq</code> is a Performance Metrics Domain Agent (PMDA) which exports performance metrics from ActiveMQ.</p>
 <h2>INSTALLATION</h2>
-<p> This <font SIZE="-1">PMDA</font> requires that ActiveMQ has been installed with the Jolokia JMX-HTTP bridge enabled. By default the PNDA will connect to localhost at port 8161 with a username and password of &#8216;admin&#8217;. This can be configured in PCP_PMDAS_DIR/activemq/activemq.conf </p>
-<p> Install the ActiveMQ <font SIZE="-1">PMDA</font> by using the Install script as root: </p>
+<p> This PMDA requires that ActiveMQ has been installed with the Jolokia JMX-HTTP bridge enabled. By default the PNDA will connect to localhost at port 8161 with a username and password of &#8216;admin&#8217;. This can be configured in PCP_PMDAS_DIR/activemq/activemq.conf </p>
+<p> Install the ActiveMQ PMDA by using the Install script as root: </p>
 <p>#&nbsp;<wbr>cd&nbsp;<wbr>$PCP_PMDAS_DIR/activemq </p>
 <p>#&nbsp;<wbr>./Install </p>
 <p> To uninstall, do the following as root: </p>

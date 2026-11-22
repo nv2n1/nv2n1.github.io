@@ -10,7 +10,7 @@ description: "zgetrf.f –"
 <p>zgetrf.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zgetrf</code> (M, N, A, LDA, IPIV, INFO)<br />
+<p>subroutine <code>zgetrf</code> (M, N, A, LDA, IPIV, INFO)<br/>
  <i></i><code>ZGETRF</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zgetrf (integerM, integerN, complex*16, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, integerINFO)</h3>

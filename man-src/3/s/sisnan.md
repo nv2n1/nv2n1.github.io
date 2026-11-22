@@ -11,7 +11,7 @@ description: "sisnan.f –"
 <p> sisnan.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> LOGICAL function <code>sisnan</code> (SIN)<br />
+<p> LOGICAL function <code>sisnan</code> (SIN)<br/>
  <i></i><code>SISNAN</code> tests input for NaN.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>LOGICAL function sisnan (realSIN)</h3>

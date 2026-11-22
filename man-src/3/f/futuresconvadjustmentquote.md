@@ -10,12 +10,12 @@ description: "ql/quotes/futuresconvadjustmentquote.hpp – quote for the futures
 
 <p> ql/quotes/futuresconvadjustmentquote.hpp &#8211; quote for the futures-convexity adjustment of an index </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/quote.hpp&gt;<br />
- #include &lt;ql/types.hpp&gt;<br />
- #include &lt;ql/handle.hpp&gt;<br />
+<p> #include &lt;ql/quote.hpp&gt;<br/>
+ #include &lt;ql/types.hpp&gt;<br/>
+ #include &lt;ql/handle.hpp&gt;<br/>
  #include &lt;ql/indexes/iborindex.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>FuturesConvAdjustmentQuote</code><br />
+<p> class <code>FuturesConvAdjustmentQuote</code><br/>
  <i>quote for the futures-convexity adjustment of an index </i></p>
 <h2>Detailed Description</h2>
 <p> quote for the futures-convexity adjustment of an index </p>

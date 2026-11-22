@@ -60,15 +60,15 @@ $xy = $aref;
 &quot;</tt> or the number 80 without having to store it in a named variable first. </p>
 <p> <i></i>Make Rule 2<i></i> </p>
 <p> <tt>&quot;[ ITEMS ]&quot;</tt> makes a new, anonymous array, and returns a reference to that array. <tt>&quot;{ ITEMS }&quot;</tt> makes a new, anonymous hash, and returns a reference to that hash. </p>
-<p>$aref = [ 1, &#8220;foo&#8221;, undef, 13 ];<br />
-#$aref now holds a reference to an array<br />
-$href = {APR = &gt; 4, AUG = &gt; 8};<br />
+<p>$aref = [ 1, &#8220;foo&#8221;, undef, 13 ];<br/>
+#$aref now holds a reference to an array<br/>
+$href = {APR = &gt; 4, AUG = &gt; 8};<br/>
 #$href now holds a reference to a hash</p>
 <p> The references you get from rule 2 are the same kind of references that you get from rule 1: </p>
-<p>#This:<br />
-$aref = [ 1, 2, 3 ];<br />
-#Does the same as this:<br />
-@array = (1, 2, 3);<br />
+<p>#This:<br/>
+$aref = [ 1, 2, 3 ];<br/>
+#Does the same as this:<br/>
+@array = (1, 2, 3);<br/>
 $aref = \@array;</p>
 <p> The first line is an abbreviation for the following two lines, except that it doesn&#8217;t create the superfluous array variable <tt>@array</tt>. </p>
 <p> If you write just <tt>&quot;[]&quot;</tt>, you get a new, empty anonymous array. If you write just <tt>&quot;{}&quot;</tt>, you get a new, empty anonymous hash.</p>
@@ -78,10 +78,10 @@ $aref = \@array;</p>
 <p> You can always use an array reference, in curly braces, in place of the name of an array. For example, <tt>&quot;@{$aref}&quot;</tt> instead of <tt>@array</tt>. </p>
 <p> Here are some examples of that: </p>
 <p> Arrays: </p>
-<p>@a @{$aref} An array<br />
-    reverse @a reverse @{$aref} Reverse the array<br />
-        $a[3] ${$aref}[3] An element of the array<br />
-            $a[3] = 17;<br />
+<p>@a @{$aref} An array<br/>
+    reverse @a reverse @{$aref} Reverse the array<br/>
+        $a[3] ${$aref}[3] An element of the array<br/>
+            $a[3] = 17;<br/>
 ${$aref}[3] = 17 Assigning an element</p>
 <p> On each line are two expressions that do the same thing. The left-hand versions operate on the array <tt>@a</tt>. The right-hand versions operate on the array that is referred to by <tt>$aref</tt>. Once they find the array they&#8217;re operating on, both versions do the same things to the arrays. </p>
 <p> Using a hash reference is <i>exactly</i> the same: </p>
@@ -93,24 +93,24 @@ ${$aref}[3] = 17 Assigning an element</p>
         }
 </pre>
 <p> so replace the array name, <tt>@array</tt>, with the reference: </p>
-<p>        for<br />
-            my $element(@{$aref})<br />
-            {<br />
-                &#8230;<br />
+<p>        for<br/>
+            my $element(@{$aref})<br/>
+            {<br/>
+                &#8230;<br/>
             }</p>
 <p> &#8220;How do I print out the contents of a hash when all I have is a reference?&#8221; First write the code for printing out a hash: </p>
-<p>        for<br />
-            my $key(keys % hash)<br />
-            {<br />
+<p>        for<br/>
+            my $key(keys % hash)<br/>
+            {<br/>
                 print &#8220;$key =&gt; $hash{$key}
-&#8221;;<br />
+&#8221;;<br/>
             }</p>
 <p> And then replace the hash name with the reference: </p>
-<p>        for<br />
-            my $key(keys % {$href})<br />
-            {<br />
+<p>        for<br/>
+            my $key(keys % {$href})<br/>
+            {<br/>
                 print &#8220;$key =&gt; ${$href}{$key}
-&#8221;;<br />
+&#8221;;<br/>
             }</p>
 <p> <i></i>Use Rule 2<i></i> </p>
 <p> <code>Use Rule 1</code> is all you really need, because it tells you how to do absolutely everything you ever need to do with references. But the most common thing to do with an array or a hash is to extract a single element, and the <code>Use Rule 1</code> notation is cumbersome. So there is an abbreviation. </p>
@@ -122,8 +122,8 @@ ${$aref}[3] = 17 Assigning an element</p>
 <p> Let&#8217;s see a quick example of how all this is useful. </p>
 <p> First, remember that <tt>&quot;[1, 2, 3]&quot;</tt> makes an anonymous array containing <tt>&quot;(1, 2, 3)&quot;</tt>, and gives you a reference to that array. </p>
 <p> Now think about </p>
-<p>@a = ([ 1, 2, 3 ],<br />
-      [ 4, 5, 6 ],<br />
+<p>@a = ([ 1, 2, 3 ],<br/>
+      [ 4, 5, 6 ],<br/>
       [ 7, 8, 9 ]);</p>
 <p> <tt>@a</tt> is an array with three elements, and each one is a reference to another array. </p>
 <p> <tt>$a[1]</tt> is one of these references. It refers to an array, the array containing <tt>&quot;(4, 5, 6)&quot;</tt>, and because it is a reference to an array, <code>Use Rule 2</code> says that we can write <tt>$a[1]-&gt;[2]</tt> to get the third element from that array. <tt>$a[1]-&gt;[2]</tt> is the 6. Similarly, <tt>$a[0]-&gt;[1]</tt> is the 2. What we have here is like a two-dimensional array; you can write <tt>$a[ROW]-&gt;[COLUMN]</tt> to get or set the element in any row and any column of the array. </p>
@@ -135,38 +135,38 @@ ${$aref}[3] = 17 Assigning an element</p>
 <p> You can see why the arrows are important. Without them, we would have had to write <tt>&quot;${$a[1]}[2]&quot;</tt> instead of <tt>$a[1][2]</tt>. For three-dimensional arrays, they let us write <tt>$x[2][3][5]</tt> instead of the unreadable <tt>&quot;${${$x[2]}[3]}[5]&quot;</tt>.</p>
 <h2>Solution</h2>
 <p> Here&#8217;s the answer to the problem I posed earlier, of reformatting a file of city and country names. </p>
-<p>1 my % table;<br />
-2 while (&lt;&gt;)<br />
-{<br />
-    3 chomp;<br />
-    4 my($city, $country) = split /, / ;<br />
-    5 $table{$country} = [] unless exists $table { $country };<br />
-    6 push @{$table{$country}}, $city;<br />
-    7<br />
-}<br />
-    8   for my $country (sort keys %table)<br />
-    {<br />
-        9 print &#8220;$country: &#8220;;<br />
-        10 my @cities = @{$table{$country}};<br />
-        11 print join &#8216;, &#8216;, sort @cities;<br />
+<p>1 my % table;<br/>
+2 while (&lt;&gt;)<br/>
+{<br/>
+    3 chomp;<br/>
+    4 my($city, $country) = split /, / ;<br/>
+    5 $table{$country} = [] unless exists $table { $country };<br/>
+    6 push @{$table{$country}}, $city;<br/>
+    7<br/>
+}<br/>
+    8   for my $country (sort keys %table)<br/>
+    {<br/>
+        9 print &#8220;$country: &#8220;;<br/>
+        10 my @cities = @{$table{$country}};<br/>
+        11 print join &#8216;, &#8216;, sort @cities;<br/>
         12 print &#8220;.
-&#8221;;<br />
-        13<br />
+&#8221;;<br/>
+        13<br/>
     }</p>
 <p> The program has two pieces: Lines 2-7 read the input and build a data structure, and lines 8-13 analyze the data and print out the report. We&#8217;re going to have a hash, <tt>%table</tt>, whose keys are country names, and whose values are references to arrays of city names. The data structure will look like this: </p>
-<p>% table + &#8212; &#8212; &#8212; -+&#8211; -+ | | | +&#8211; &#8212; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8211;+ | Germany | *&#8211; &#8212; &gt; | Frankfurt | Berlin |<br />
-    | | | +&#8211; &#8212; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8211;+ +&#8211; &#8212; &#8212; -+&#8211; -+ | | | +&#8211; &#8212; &#8212; &#8212; &#8211;+ | Finland | *&#8211; &#8212; &gt; | Helsinki |<br />
-    | | | +&#8211; &#8212; &#8212; &#8212; &#8211;+ +&#8211; &#8212; &#8212; -+&#8211; -+ | | | +&#8211; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8211;+ | USA | *&#8211; &#8212; &gt; | Chicago | Washington | New York |<br />
+<p>% table + &#8212; &#8212; &#8212; -+&#8211; -+ | | | +&#8211; &#8212; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8211;+ | Germany | *&#8211; &#8212; &gt; | Frankfurt | Berlin |<br/>
+    | | | +&#8211; &#8212; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8211;+ +&#8211; &#8212; &#8212; -+&#8211; -+ | | | +&#8211; &#8212; &#8212; &#8212; &#8211;+ | Finland | *&#8211; &#8212; &gt; | Helsinki |<br/>
+    | | | +&#8211; &#8212; &#8212; &#8212; &#8211;+ +&#8211; &#8212; &#8212; -+&#8211; -+ | | | +&#8211; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8211;+ | USA | *&#8211; &#8212; &gt; | Chicago | Washington | New York |<br/>
     | | | +&#8211; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8211;+ +&#8211; &#8212; &#8212; -+&#8211; -+</p>
 <p> We&#8217;ll look at output first. Supposing we already have this structure, how do we print it out? </p>
-<p>    8   for my $country (sort keys %table)<br />
-    {<br />
-        9 print &#8220;$country: &#8220;;<br />
-        10 my @cities = @{$table{$country}};<br />
-        11 print join &#8216;, &#8216;, sort @cities;<br />
+<p>    8   for my $country (sort keys %table)<br/>
+    {<br/>
+        9 print &#8220;$country: &#8220;;<br/>
+        10 my @cities = @{$table{$country}};<br/>
+        11 print join &#8216;, &#8216;, sort @cities;<br/>
         12 print &#8220;.
-&#8221;;<br />
-        13<br />
+&#8221;;<br/>
+        13<br/>
     }</p>
 <p> <tt>%table</tt> is an ordinary hash, and we get a list of keys from it, sort the keys, and loop over the keys as usual. The only use of references is in line 10. <tt>$table{$country}</tt> looks up the key <tt>$country</tt> in the hash and gets the value, which is a reference to an array of cities in that country. <code>Use Rule 1</code> says that we can recover the array by saying <tt>&quot;@{$table{$country}}&quot;</tt>. Line 10 is just like </p>
 <pre>
@@ -174,13 +174,13 @@ ${$aref}[3] = 17 Assigning an element</p>
 </pre>
 <p> except that the name <tt>&quot;array&quot;</tt> has been replaced by the reference <tt>&quot;{$table{$country}}&quot;</tt>. The <tt>&quot;@&quot;</tt> tells Perl to get the entire array. Having gotten the list of cities, we sort it, join it, and print it out as usual. </p>
 <p> Lines 2-7 are responsible for building the structure in the first place. Here they are again: </p>
-<p>2 while (&lt;&gt;)<br />
-{<br />
-    3 chomp;<br />
-    4 my($city, $country) = split /, / ;<br />
-    5 $table{$country} = [] unless exists $table { $country };<br />
-    6 push @{$table{$country}}, $city;<br />
-    7<br />
+<p>2 while (&lt;&gt;)<br/>
+{<br/>
+    3 chomp;<br/>
+    4 my($city, $country) = split /, / ;<br/>
+    5 $table{$country} = [] unless exists $table { $country };<br/>
+    6 push @{$table{$country}}, $city;<br/>
+    7<br/>
 }</p>
 <p> Lines 2-4 acquire a city and country name. Line 5 looks to see if the country is already present as a key in the hash. If it&#8217;s not, the program uses the <tt>&quot;[]&quot;</tt> notation (<code>Make Rule 2</code>) to manufacture a new, empty anonymous array of cities, and installs a reference to it into the hash under the appropriate key. </p>
 <p> Line 6 installs the city name into the appropriate array. <tt>$table{$country}</tt> now holds a reference to the array of cities seen in that country so far. Line 6 is exactly like </p>
@@ -189,13 +189,13 @@ ${$aref}[3] = 17 Assigning an element</p>
 </pre>
 <p> except that the name <tt>&quot;array&quot;</tt> has been replaced by the reference <tt>&quot;{$table{$country}}&quot;</tt>. The <tt>&quot;push&quot;</tt> adds a city name to the end of the referred-to array. </p>
 <p> There&#8217;s one fine point I skipped. Line 5 is unnecessary, and we can get rid of it. </p>
-<p>2 while (&lt;&gt;)<br />
-{<br />
-    3 chomp;<br />
-    4 my($city, $country) = split /, / ;<br />
-    5####$table{$country} = [] unless exists $table { $country };<br />
-    6 push @{$table{$country}}, $city;<br />
-    7<br />
+<p>2 while (&lt;&gt;)<br/>
+{<br/>
+    3 chomp;<br/>
+    4 my($city, $country) = split /, / ;<br/>
+    5####$table{$country} = [] unless exists $table { $country };<br/>
+    6 push @{$table{$country}}, $city;<br/>
+    7<br/>
 }</p>
 <p> If there&#8217;s already an entry in <tt>%table</tt> for the current <tt>$country</tt>, then nothing is different. Line 6 will locate the value in <tt>$table{$country}</tt>, which is a reference to an array, and push <tt>$city</tt> into the array. But what does it do when <tt>$country</tt> holds a key, say <tt>&quot;Greece&quot;</tt>, that is not yet in <tt>%table</tt>? </p>
 <p> This is Perl, so it does the exact right thing. It sees that you want to push <tt>&quot;Athens&quot;</tt> onto an array that doesn&#8217;t exist, so it helpfully makes a new, empty, anonymous array for you, installs it into <tt>%table</tt>, and then pushes <tt>&quot;Athens&quot;</tt> onto it. This is called <i>autovivification</i>&#8211;bringing things to life automatically. Perl saw that the key wasn&#8217;t in the hash, so it created a new hash entry automatically. Perl saw that you wanted to use the hash value as an array, so it created a new empty array and installed a reference to it in the hash automatically. And as usual, Perl made the array one element longer to hold the new city name.</p>

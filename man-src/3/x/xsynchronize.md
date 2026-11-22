@@ -24,5 +24,5 @@ description: "XSynchronize, XSetAfterFunction – enable or disable synchronizat
 <p>The <code>XSynchronize</code> function returns the previous after function. If onoff is <code>True</code>, <code>XSynchronize</code> turns on synchronous behavior. If onoff is <code>False</code>, <code>XSynchronize</code> turns off synchronous behavior. </p>
 <p> The specified procedure is called with only a display pointer. <code>XSetAfterFunction</code> returns the previous after function.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xseterrorhandler/">XSetErrorHandler</a>(3)<br />
+<p><a href="/docs/linux/man/3-xseterrorhandler/">XSetErrorHandler</a>(3)<br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

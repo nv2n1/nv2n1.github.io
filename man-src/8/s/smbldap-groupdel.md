@@ -16,7 +16,7 @@ smbldap-groupdel group
 
 The smbldap-groupdel command modifies the system account files, deleting all entries that refer to a group. The named group must exist. 
 
- You must manually check all filesystems to insure that no files remain with the named group as the file group <font SIZE="-1">ID.</font>
+ You must manually check all filesystems to insure that no files remain with the named group as the file group ID.
 
 <h2>See Also</h2>
 

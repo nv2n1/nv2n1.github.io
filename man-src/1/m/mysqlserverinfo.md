@@ -59,7 +59,7 @@ description: "mysqlserverinfo – Display Common Diagnostic Information from a S
 <p> To turn off the headers for <code>csv</code> or <code>tab</code> display format, specify the <code>&#8211;no-headers</code> option. </p>
 <p> To see the common default settings for the local server&#8217;s configuration file, use the <code>&#8211;show-defaults</code> option. This option reads the configuration file on the machine where the utility is run, not the machine for the host that the <code>&#8211;server</code> option specifies. </p>
 <p> To run the utility against several servers, specify the <code>&#8211;server</code> option multiple times. In this case, the utility attempts to connect to each server and read the information. </p>
-<p> To see the MySQL servers running on the local machine, use the <code>&#8211;show-servers</code> option. This shows all the servers with their process ID and data directory. On Windows, the utility shows only the process ID and port.<br />
+<p> To see the MySQL servers running on the local machine, use the <code>&#8211;show-servers</code> option. This shows all the servers with their process ID and data directory. On Windows, the utility shows only the process ID and port.<br/>
 OPTIONS </p>
 <p> <code>mysqlserverinfo</code> accepts the following command-line options: </p>
 <dl>
@@ -117,7 +117,7 @@ OPTIONS </p>
 </dt><dd> &bull; &#8211;version </dd>
 <p> Display version information and exit.</dl>
 <p> For the <code>&#8211;format</code> option, the permitted values are not case sensitive. In addition, values may be specified as any unambiguous prefix of a valid value. For example, <code>&#8211;format=g</code> specifies the grid format. An error occurs if a prefix matches more than one valid value. </p>
-<p> The path to the MySQL client tools should be included in the PATH environment variable in order to use the authentication mechanism with login-paths. This will allow the utility to use the my_print_defaults tools which is required to read the login-path values from the login configuration file (.mylogin.cnf).<br />
+<p> The path to the MySQL client tools should be included in the PATH environment variable in order to use the authentication mechanism with login-paths. This will allow the utility to use the my_print_defaults tools which is required to read the login-path values from the login configuration file (.mylogin.cnf).<br/>
 EXAMPLES </p>
 <p> To display the server information for the local server and the settings for <code>mysqld</code> in the configuration file with the output in a vertical list, use this command: </p>
 <dl>

@@ -10,7 +10,7 @@ description: "cladiv.f –"
 <p>cladiv.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>COMPLEX function <code>cladiv</code> (X, Y)<br />
+<p>COMPLEX function <code>cladiv</code> (X, Y)<br/>
  <i></i><code>CLADIV</code> performs complex division in real arithmetic, avoiding unnecessary overflow.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>COMPLEX function cladiv (complexX, complexY)</h3>

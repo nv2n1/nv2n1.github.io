@@ -11,7 +11,7 @@ description: "clahr2.f –"
 <p> clahr2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>clahr2</code> (N, K, NB, A, LDA, TAU, T, LDT, Y, LDY)<br />
+<p> subroutine <code>clahr2</code> (N, K, NB, A, LDA, TAU, T, LDT, Y, LDY)<br/>
  <i></i><code>CLAHR2</code> reduces the specified number of first columns of a general rectangular matrix A so that elements below the specified subdiagonal are zero, and returns auxiliary matrices which are needed to apply the transformation to the unreduced part of A.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine clahr2 (integerN, integerK, integerNB, complex, dimension( lda, * )A, integerLDA, complex, dimension( nb )TAU, complex, dimension( ldt, nb )T, integerLDT, complex, dimension( ldy, nb )Y, integerLDY)</h3>
@@ -141,7 +141,7 @@ description: "clahr2.f –"
 <p> <code>References: </code></p>
 <dl>
 <dt>
-</dt><dd> Gregorio Quintana-Orti and Robert van de Geijn, &#8216;Improving the<br />
+</dt><dd> Gregorio Quintana-Orti and Robert van de Geijn, &#8216;Improving the<br/>
 &nbsp;<wbr>&nbsp;<wbr>performance of reduction to Hessenberg form,&#8217;&nbsp;<wbr>ACM Transactions on Mathematical Software,&nbsp;<wbr>32(2):180-194, June 2006.&nbsp;<wbr></dd></dl>
 <p> Definition at line 182 of file clahr2.f.</p>
 <h2>Author</h2>

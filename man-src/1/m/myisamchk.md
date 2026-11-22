@@ -19,7 +19,7 @@ description: "myisamchk – MyISAM table-maintenance utility"
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Caution</code> </font> </dd>
+  <code>Caution</code>  </dd>
 <p> It is best to make a backup of a table before performing a table repair operation; under some circumstances the operation might cause data loss. Possible causes include but are not limited to file system errors. </p>
 </dl>
 <p> Invoke <code>myisamchk</code> like this: </p>
@@ -78,7 +78,7 @@ shell &gt; myisamchk-- silent-- force-- fast-- update - state-- key_buffer_size 
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Important</code> </font> </dd>
+  <code>Important</code>  </dd>
 <p> <i>You must ensure that no other program is using the tables while you are running </i><i></i><code>myisamchk</code>. The most effective means of doing so is to shut down the MySQL server while running <code>myisamchk</code>, or to lock all tables that <code>myisamchk</code> is being used on. </p>
 <p> Otherwise, when you run <code>myisamchk</code>, it may display the following error message: </p>
 <dl>
@@ -245,7 +245,7 @@ shell&gt; <code>myisamchk --recover --ft_min_word_len=3 </code><i>tbl_name</i><c
 <dl>
 <dt>
 </dt><dd>
-[mysqld] ft_min_word_len = 3<br />
+[mysqld] ft_min_word_len = 3<br/>
     [myisamchk] ft_min_word_len = 3
 </dd></dl>
 <p> An alternative to using <code>myisamchk</code> is to use the REPAIR TABLE, ANALYZE TABLE, OPTIMIZE TABLE, or ALTER TABLE. These statements are performed by the server, which knows the proper full-text parameter values to use.</p>
@@ -414,14 +414,14 @@ shell&gt; <code>myisamchk --recover --ft_min_word_len=3 </code><i>tbl_name</i><c
 <dl>
 <dt>
 </dt><dd>
-CREATE TABLE person(<br />
-    id INT NOT NULL AUTO_INCREMENT,<br />
-    last_name VARCHAR(20) NOT NULL,<br />
-    first_name VARCHAR(20) NOT NULL,<br />
-    birth DATE,<br />
-    death DATE,<br />
-    PRIMARY KEY(id),<br />
-    INDEX(last_name, first_name),<br />
+CREATE TABLE person(<br/>
+    id INT NOT NULL AUTO_INCREMENT,<br/>
+    last_name VARCHAR(20) NOT NULL,<br/>
+    first_name VARCHAR(20) NOT NULL,<br/>
+    birth DATE,<br/>
+    death DATE,<br/>
+    PRIMARY KEY(id),<br/>
+    INDEX(last_name, first_name),<br/>
     INDEX(birth)) MAX_ROWS = 1000000 ENGINE = MYISAM;
 </dd></dl>
 <p> Suppose also that the table has these data and index file sizes: </p>

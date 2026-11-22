@@ -12,16 +12,16 @@ description: "ninpaths – Report Usenet Path: statistics (new inpaths)"
 <p><code>ninpaths</code> <code>-p</code> <code>-d</code> <i>dumpfile</i> </p>
 <p> <code>ninpaths</code> <code>-r</code> <i>site</i> <code>-u</code> <i>dumpfile</i> [<code>-u</code> <i>dumpfile</i> &#8230;] <code>-v</code> <i>level</i></p>
 <h2>Description</h2>
-<p>This is an efficient and space-saving <code>inpaths</code> reporting program. It works as follows: you feed it the Path: lines via an <font SIZE="-1">INN</font> channel feed or some other similar method, and from time to time the program writes all its internal counters accumulated so far to a dump file. Another instance of the program picks up all the dump files, adds them up and formats them into the report. The purpose of the final report is to summarize the frequency of occurrence of sites in the Path: headers of articles. </p>
+<p>This is an efficient and space-saving <code>inpaths</code> reporting program. It works as follows: you feed it the Path: lines via an INN channel feed or some other similar method, and from time to time the program writes all its internal counters accumulated so far to a dump file. Another instance of the program picks up all the dump files, adds them up and formats them into the report. The purpose of the final report is to summarize the frequency of occurrence of sites in the Path: headers of articles. </p>
 <p> Some central sites accumulate the Path: data from many news servers running this program or one like it, and then report statistics on the most frequently seen news servers in Usenet article Path: lines. The <code>sendinpaths</code> script can be run daily to mail the accumulated statistics to such a site and remove the old dump files. </p>
 <p> You can get a working setup by doing the following:</p>
 <dl>
 <dt>1.</dt>
-<dd>Create a directory at <i>pathlog</i>/path (replacing <i>pathlog</i> here and in all steps that follow with the full path to your <font SIZE="-1">INN</font> log directory). Do not change the name of the <tt>&quot;path&quot;</tt> subdirectory because it is used by <code>sendinpaths</code>.</dd>
+<dd>Create a directory at <i>pathlog</i>/path (replacing <i>pathlog</i> here and in all steps that follow with the full path to your INN log directory). Do not change the name of the <tt>&quot;path&quot;</tt> subdirectory because it is used by <code>sendinpaths</code>.</dd>
 <dt>2.</dt>
 <dd>Set up a channel feed using an entry like: </dd>
 <pre> inpaths!:*:Tc,WP:&lt;pathbin&gt;/ninpaths -p -d &lt;pathlog&gt;/path/inpaths.%d</pre>
-<p>if your version of <font SIZE="-1">INN</font> supports <tt>&quot;WP&quot;</tt> (2.0 and later all do). Replace &lt;pathbin&gt; with the full path to your <font SIZE="-1">INN</font> binaries directory, and &lt;pathlog&gt; with the full path to your <font SIZE="-1">INN</font> log directory. </p>
+<p>if your version of INN supports <tt>&quot;WP&quot;</tt> (2.0 and later all do). Replace &lt;pathbin&gt; with the full path to your INN binaries directory, and &lt;pathlog&gt; with the full path to your INN log directory. </p>
 <p> Note that the naming convention of the generated inpaths dump files should not be changed. <code>sendinpaths</code> explicitly searches files whose name starts with <tt>&quot;inpaths.&quot;</tt> in the &lt;pathlog&gt;/path directory.</p>
 <dt>3.</dt>
 <dd>Run the following command to start logging these statistics: </dd>
@@ -54,7 +54,7 @@ description: "ninpaths – Report Usenet Path: statistics (new inpaths)"
  !!NLREC
  :&lt;site_a&gt;!&lt;site_b&gt;,&lt;count_ab&gt;:&lt;site_c&gt;!&lt;site_d&gt;,&lt;count_cd&gt; ...
  !!NEND &lt;nb-relations&gt;</pre>
-<p>where times are <font SIZE="-1">UNIX</font> timestamps. Then, <i>nb-sites</i> records follow. Each record is separated by a space or a new line, and consists of a host name <i>site_n</i> followed by a number of appearances <i>count_n</i>. The number of processed Path: header lines is <i>nb-articles</i>. </p>
+<p>where times are UNIX timestamps. Then, <i>nb-sites</i> records follow. Each record is separated by a space or a new line, and consists of a host name <i>site_n</i> followed by a number of appearances <i>count_n</i>. The number of processed Path: header lines is <i>nb-articles</i>. </p>
 <p> Afterwards, <i>nb-relations</i> relations follow. In 3.0.x versions, the relations are separated by a space or a new line, and their syntax is <tt>&quot;</tt>site_a<tt>!</tt>site_b<tt>!</tt>count_ab<tt>&quot;</tt> where <i>site_a</i> and <i>site_b</i> are numbers of the site records starting at 0. </p>
 <p> In 3.1.x versions, the relations begin with a colon and are separated by either nothing or a new line. Their syntax is <tt>&quot;:</tt>site_a<tt>!</tt>site_b<tt>,</tt>count_ab<tt>&quot;</tt> with the same meaning as in previous versions. The count can be omitted when it is <tt>1</tt>. More than two sites can be specified in the relation (<tt>&quot;:</tt>site_a<tt>!</tt>site_b<tt>!</tt>site_c<tt>,</tt>count_abc<tt>&quot;</tt>). </p>
 <p> For instance: </p>
@@ -68,14 +68,14 @@ description: "ninpaths – Report Usenet Path: statistics (new inpaths)"
 <pre> Path: news.trigofacile.com!news.ecp.fr!usenet.stanford.edu!not-for-mail
  Path: news.trigofacile.com!news.ecp.fr!newsgate.cistron.nl!bleachbot!not-for-mail</pre>
 <h2>Notes</h2>
-<p>If your <font SIZE="-1">INN</font> doesn&#8217;t have the <tt>&quot;WP&quot;</tt> feed flag (1.5 does not, 1.6 and 1.7 do, 2.0 and later all do), use the following <i>newsfeeds</i> entry: </p>
+<p>If your INN doesn&#8217;t have the <tt>&quot;WP&quot;</tt> feed flag (1.5 does not, 1.6 and 1.7 do, 2.0 and later all do), use the following <i>newsfeeds</i> entry: </p>
 <pre> inpaths!:*:Tc,WH:&lt;pathbin&gt;/ginpaths</pre>
 <p>where <code>ginpaths</code> is the following script: </p>
 <pre> #!/bin/sh
  exec egrep '^Path: ' | &lt;pathbin&gt;/ninpaths -p -d &lt;pathlog&gt;/path/inpaths.%d</pre>
 <p>replacing &lt;pathbin&gt; and &lt;pathlog&gt; as above.</p>
 <h2>History</h2>
-<p>This is a slightly modified version of Olaf Titz&#8217;s original <code>ninpaths</code> program, which is posted to alt.sources and kept on his <font SIZE="-1">WWW</font> archive under &lt;<a rel="nofollow" href="http://sites.inka.de/~bigred/sw/">http://sites.inka.de/~bigred/sw/</a>&gt;. </p>
+<p>This is a slightly modified version of Olaf Titz&#8217;s original <code>ninpaths</code> program, which is posted to alt.sources and kept on his WWW archive under &lt;<a rel="nofollow" href="http://sites.inka.de/~bigred/sw/">http://sites.inka.de/~bigred/sw/</a>&gt;. </p>
 <p> The idea and some implementation details for <code>ninpaths</code> come from the original <code>inpaths</code> program, but most of the code has been rewritten for clarity. This program is in the public domain. </p>
 <p> <tt>$Id:</tt> ninpaths.pod 9384 2011-12-25 20:57:03Z iulius $</p>
 <h2>See Also</h2>

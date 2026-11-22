@@ -20,10 +20,10 @@ Returns the period between two dates as a fraction of year.
 Protected Member Functions</code></pre>
 <p> Inherited by <code>Actual360</code>, <code>Actual365Fixed</code>, <code>ActualActual</code>, <code>Business252</code>, <code>OneDayCounter</code>, <code>SimpleDayCounter</code>, and <code>Thirty360</code>.</p>
 <h3>Classes</h3>
-<p>class <code>Impl</code><br />
+<p>class <code>Impl</code><br/>
  <i>abstract base class for day counter implementations </i></p>
 <h3>Public Member Functions</h3>
-<p><code>DayCounter</code> ()<br />
+<p><code>DayCounter</code> ()<br/>
  <code>DayCounter interface</code> </p>
 <pre><code>bool empty () const
 Returns whether or not the day counter is initialized.
@@ -38,7 +38,7 @@ Protected Member Functions</code></pre>
 <h3>Protected Attributes</h3>
 <p>boost::shared_ptr&lt; <code>Impl</code> &gt; <code>impl_</code></p>
 <h3>Related Functions</h3>
-<p>(Note that these are not member functions.)<br />
+<p>(Note that these are not member functions.)<br/>
  bool <code>operator==</code> (const <code>DayCounter</code> &amp;, const <code>DayCounter</code> &amp;) </p>
 <p> bool <code>operator!=</code> (const <code>DayCounter</code> &amp;, const <code>DayCounter</code> &amp;) </p>
 <p> std::ostream &amp; <code>operator&lt;&lt;</code> (std::ostream &amp;, const <code>DayCounter</code> &amp;)</p>

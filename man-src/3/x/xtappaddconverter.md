@@ -31,6 +31,6 @@ description: "XtAppAddConverter, XtAddConverter – register resource converter"
 <p><code>XtAppAddConverter</code> is equivalent in function to <code>XtAppSetTypeConverter</code> with <i>cache_type</i> equal to <code>XtCacheAll</code> for old-format type converters. It has been superseded by <code>XtAppSetTypeConverter</code>. </p>
 <p> <code>XtAddConverter</code> is equivalent in function to <code>XtSetTypeConverter</code> with <i>cache_type</i> equal to <code>XtCacheAll</code> for old-format type converters. It has been superseded by <code>XtSetTypeConverter</code>.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xtconvert/">XtConvert</a>(3), <a href="/docs/linux/man/3-xtstringconversionwarning/">XtStringConversionWarning</a>(3)<br />
- <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><a href="/docs/linux/man/3-xtconvert/">XtConvert</a>(3), <a href="/docs/linux/man/3-xtstringconversionwarning/">XtStringConversionWarning</a>(3)<br/>
+ <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

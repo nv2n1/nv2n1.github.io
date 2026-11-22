@@ -28,12 +28,12 @@ description: "qping – check application status of xxQS_NAMExx daemons."
 <p> <i>status:</i> The status value of the daemon. This value depends on the application which replies to the qping request. If the application does not provide any information, the status is 99999. Here are the possible status information values for the xxQS_NAMExx daemons: </p>
 <p> qmaster: </p>
 <p> <i>0</i> There is no unusual timing situation. </p>
-<p> <i>1</i> One or more threads has reached warning timeout. This may happen when at least one thread does not increment its time stamp for an usually long time. A possible reason for this is a high workload for this thread.<br />
+<p> <i>1</i> One or more threads has reached warning timeout. This may happen when at least one thread does not increment its time stamp for an usually long time. A possible reason for this is a high workload for this thread.<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; <i>2</i> One or more threads has reached error timeout. This may happen when at least one thread has not incremented its time stamp for longer than 10 minutes. </p>
 <p> <i>3</i> The time measurement is not initialized. </p>
 <p> execd: </p>
 <p> <i>0</i> There is no unusual timing situation. </p>
-<p> <i>1</i> Dispatcher has reached warning timeout. This may happen when the dispatcher does not increment its time stamp for an unusually long time. A possible reason for this is a high workload.<br />
+<p> <i>1</i> Dispatcher has reached warning timeout. This may happen when the dispatcher does not increment its time stamp for an unusually long time. A possible reason for this is a high workload.<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; <i>2</i> Dispatcher has reached error timeout. This may happen when the dispatcher has not incremented its time stamp for longer than 10 minutes. </p>
 <p> <i>3</i> The time measurement is not initialized. </p>
 <p> <i>info:</i> Status message of the daemon. This value depends on the application which replies to the qping request. If the application does not provide any information the info message is &quot;not available&quot;. Here are the possible status information values for the xxQS_NAMExx daemons: </p>
@@ -86,10 +86,10 @@ Time since last timestamp updating.
 <h3><code>-noalias</code></h3>
 <p> Ignore host_aliases file, which is located at <i>&lt;xxqs_name_sxx_root&gt;/&lt;cell&gt;/common/host_aliases.</i> If this option is used it is not necessary to set any xxQS_NAMExx environment variable.</p>
 <h3><code>-ssl</code></h3>
-<p> This option can be used to specify an SSL (Secure Socket Layer) configuration. qping will use the configuration to connect to services running SSL. If the xxQS_NAMExx settings file is not sourced, you have to use the <code>-noalias</code> option to bypass the need for the SGE_ROOT environment variable. The following environment variables are used to specify your certificates:<br />
-&nbsp;<wbr>&nbsp;SSL_CA_CERT_FILE &#8211; CA certificate file<br />
-&nbsp;<wbr>&nbsp;SSL_CERT_FILE&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; certificates file<br />
-&nbsp;<wbr>&nbsp;SSL_KEY_FILE&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; key file<br />
+<p> This option can be used to specify an SSL (Secure Socket Layer) configuration. qping will use the configuration to connect to services running SSL. If the xxQS_NAMExx settings file is not sourced, you have to use the <code>-noalias</code> option to bypass the need for the SGE_ROOT environment variable. The following environment variables are used to specify your certificates:<br/>
+&nbsp;<wbr>&nbsp;SSL_CA_CERT_FILE &#8211; CA certificate file<br/>
+&nbsp;<wbr>&nbsp;SSL_CERT_FILE&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; certificates file<br/>
+&nbsp;<wbr>&nbsp;SSL_KEY_FILE&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; key file<br/>
 &nbsp;<wbr>&nbsp;SSL_RAND_FILE&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; rand file</p>
 <h3><code>-tcp</code></h3>
 <p> This option is used to select TCP/IP as the protocol used to connect to other services.</p>

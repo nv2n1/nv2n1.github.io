@@ -20,17 +20,17 @@ description: "interfaces – shorewall6 interfaces file"
 <dd>The BROADCAST column is omitted.</dd></dl>
 <p> The format is specified by a line as follows: <code>?FORMAT {1|2}</code> The columns in the file are as follows. <code>ZONE</code> &#8211; <i>zone-name</i></p>
 <dl>
-<dd>Zone for this interface. Must match the name of a zone declared in /etc/shorewall6/zones. You may not list the firewall zone in this column. If the interface serves multiple zones that will be defined in the m[blue]<code>shorewall6-hosts</code>m[]<font SIZE="-2">[1]</font>(5) file, you should place &quot;-&quot; in this column. If there are multiple interfaces to the same zone, you must list them in separate entries. Example:</dd>
+<dd>Zone for this interface. Must match the name of a zone declared in /etc/shorewall6/zones. You may not list the firewall zone in this column. If the interface serves multiple zones that will be defined in the m[blue]<code>shorewall6-hosts</code>m[][1](5) file, you should place &quot;-&quot; in this column. If there are multiple interfaces to the same zone, you must list them in separate entries. Example:</dd>
 <dl>
 <dd>
 <pre>#ZONE INTERFACE BROADCAST
 loc eth1 -
 loc eth2 -</pre>
 </dd></dl>
-<p> Beginning with Shorewall 4.5.17, if you specify a zone for the &#8216;lo&#8217; interface, then that zone must be defined as type <code>local</code> in m[blue]<code>shorewall6-zones</code>m[]<font SIZE="-2">[2]</font>(5).</dl>
+<p> Beginning with Shorewall 4.5.17, if you specify a zone for the &#8216;lo&#8217; interface, then that zone must be defined as type <code>local</code> in m[blue]<code>shorewall6-zones</code>m[][2](5).</dl>
 <p> <code>INTERFACE</code> &#8211; <i>interface</i><code>[:</code><i>port</i><code>]</code></p>
 <dl>
-<dd>Logical name of interface. Each interface may be listed only once in this file. You may NOT specify the name of a &quot;virtual&quot; interface (e.g., eth0:0) here; see m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/FAQ.htm#faq18">http://www.shorewall.net/FAQ.htm#faq18</a></code>m[]<font SIZE="-2">[3]</font>. If the <code>physical</code> option is not specified, then the logical name is also the name of the actual interface. You may use wildcards here by specifying a prefix followed by the plus sign (&quot;+&quot;). For example, if you want to make an entry that applies to all PPP interfaces, use &#8216;ppp+&#8217;; that would match ppp0, ppp1, ppp2, &#8230;Please note that the &#8216;+&#8217; means &#8216;<code>one</code> or more additional characters&#8217; so &#8216;ppp&#8217; does not match &#8216;ppp+&#8217;. Care must be exercised when using wildcards where there is another zone that uses a matching specific interface. See m[blue]<code>shorewall6-nesting</code>m[]<font SIZE="-2">[4]</font>(5) for a discussion of this problem. Shorewall6 allows &#8216;+&#8217; as an interface name. There is no need to define the loopback interface (lo) in this file. If a <i>port</i> is given, then the <i>interface</i> must have been defined previously with the <code>bridge</code> option. The OPTIONS column must be empty when a <i>port</i> is given.</dd></dl>
+<dd>Logical name of interface. Each interface may be listed only once in this file. You may NOT specify the name of a &quot;virtual&quot; interface (e.g., eth0:0) here; see m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/FAQ.htm#faq18">http://www.shorewall.net/FAQ.htm#faq18</a></code>m[][3]. If the <code>physical</code> option is not specified, then the logical name is also the name of the actual interface. You may use wildcards here by specifying a prefix followed by the plus sign (&quot;+&quot;). For example, if you want to make an entry that applies to all PPP interfaces, use &#8216;ppp+&#8217;; that would match ppp0, ppp1, ppp2, &#8230;Please note that the &#8216;+&#8217; means &#8216;<code>one</code> or more additional characters&#8217; so &#8216;ppp&#8217; does not match &#8216;ppp+&#8217;. Care must be exercised when using wildcards where there is another zone that uses a matching specific interface. See m[blue]<code>shorewall6-nesting</code>m[][4](5) for a discussion of this problem. Shorewall6 allows &#8216;+&#8217; as an interface name. There is no need to define the loopback interface (lo) in this file. If a <i>port</i> is given, then the <i>interface</i> must have been defined previously with the <code>bridge</code> option. The OPTIONS column must be empty when a <i>port</i> is given.</dd></dl>
 <p> <code>ANYCAST</code> &#8211; <code>&#8211;</code></p>
 <dl>
 <dd>Enter &#8216;<code>-&#8216;</code> in this column. It is here for compatibility between Shorewall6 and Shorewall and is omitted if FORMAT is 2.</dd></dl>
@@ -50,9 +50,9 @@ loc eth2 -</pre>
 <p> If the option is specified without a value, then the value 1 is assumed.</dl>
 <p> <code>blacklist</code></p>
 <dl>
-<dd>Check packets arriving on this interface against the m[blue]<code>shorewall6-blacklist</code>m[]<font SIZE="-2">[5]</font>(5) file. Beginning with Shorewall 4.4.13:</dd>
+<dd>Check packets arriving on this interface against the m[blue]<code>shorewall6-blacklist</code>m[][5](5) file. Beginning with Shorewall 4.4.13:</dd>
 <dl>
-<dd>&bull; If a <i>zone</i> is given in the ZONES column, then the behavior is as if <code>blacklist</code> had been specified in the IN_OPTIONS column of m[blue]<code>shorewall6-zones</code>m[]<font SIZE="-2">[2]</font>(5).</dd></dl>
+<dd>&bull; If a <i>zone</i> is given in the ZONES column, then the behavior is as if <code>blacklist</code> had been specified in the IN_OPTIONS column of m[blue]<code>shorewall6-zones</code>m[][2](5).</dd></dl>
 <dl>
 <dd>&bull; Otherwise, the option is ignored with a warning: <code>WARNING: The &#8216;blacklist&#8217; option is ignored on multi-zone interfaces</code></dd></dl>
 </dl>
@@ -61,7 +61,7 @@ loc eth2 -</pre>
 <dd>Designates the interface as a bridge. Beginning with Shorewall 4.4.7, setting this option also sets <code>routeback</code>.</dd></dl>
 <p> <code>dbl={none|src|dst|src-dst}</code></p>
 <dl>
-<dd>Added in Shorewall 5.0.10. This option defined whether or not dynamic blacklisting is applied to packets entering the firewall through this interface and whether the source address and/or destination address is to be compared against the ipset-based dynamic blacklist (DYNAMIC_BLACKLIST=ipset&#8230; in m[blue]<code><a href="/docs/linux/man/5-shorewall6-conf/">shorewall6.conf</a>(5)</code>m[]<font SIZE="-2">[6]</font>). The default is determine by the setting of DYNAMIC_BLACKLIST: DYNAMIC_BLACKLIST=No</dd>
+<dd>Added in Shorewall 5.0.10. This option defined whether or not dynamic blacklisting is applied to packets entering the firewall through this interface and whether the source address and/or destination address is to be compared against the ipset-based dynamic blacklist (DYNAMIC_BLACKLIST=ipset&#8230; in m[blue]<code><a href="/docs/linux/man/5-shorewall6-conf/">shorewall6.conf</a>(5)</code>m[][6]). The default is determine by the setting of DYNAMIC_BLACKLIST: DYNAMIC_BLACKLIST=No</dd>
 <dl>
 <dd>Default is <code>none</code> (e.g., no dynamic blacklist checking).</dd></dl>
 <p> DYNAMIC_BLACKLIST=Yes</p>
@@ -87,10 +87,10 @@ loc eth2 -</pre>
 <dl>
 <dd>3. the interface has a static IP but is on a LAN segment with lots of DHCP clients.</dd></dl>
 <dl>
-<dd>4. the interface is a m[blue]<code>simple bridge</code>m[]<font SIZE="-2">[7]</font> with a DHCP server on one port and DHCP clients on another port.</dd>
+<dd>4. the interface is a m[blue]<code>simple bridge</code>m[][7] with a DHCP server on one port and DHCP clients on another port.</dd>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
- If you use m[blue]<code>Shorewall-perl for firewall/bridging</code>m[]<font SIZE="-2">[8]</font>, then you need to include DHCP-specific rules in m[blue]<code>shorewall-rules</code>m[]<font SIZE="-2">[9]</font>(8). DHCP uses UDP ports 546 and 547.  This option allows DHCP datagrams to enter and leave the interface.</dd></dl>
+<dd> <code>Note</code> <br/>
+ If you use m[blue]<code>Shorewall-perl for firewall/bridging</code>m[][8], then you need to include DHCP-specific rules in m[blue]<code>shorewall-rules</code>m[][9](8). DHCP uses UDP ports 546 and 547.  This option allows DHCP datagrams to enter and leave the interface.</dd></dl>
 <p> <code>forward</code>[={0|1}]</p>
 <dl>
 <dd>Sets the /proc/sys/net/ipv6/conf/interface/forwarding option to the specified value. If no value is supplied, then 1 is assumed.</dd></dl>
@@ -108,7 +108,7 @@ loc eth2 -</pre>
 <dd>Limit the zone named in the ZONE column to only the listed networks. If you specify this option, be sure to include the link-local network (ff80::/10).</dd></dl>
 <p> <code>nets=dynamic</code></p>
 <dl>
-<dd>Added in Shorewall 4.4.21. Defines the zone as dynamic. Requires ipset match support in your iptables and kernel. See m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/Dynamic.html">http://www.shorewall.net/Dynamic.html</a></code>m[]<font SIZE="-2">[10]</font> for further information.</dd></dl>
+<dd>Added in Shorewall 4.4.21. Defines the zone as dynamic. Requires ipset match support in your iptables and kernel. See m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/Dynamic.html">http://www.shorewall.net/Dynamic.html</a></code>m[][10] for further information.</dd></dl>
 <p> <code>nodbl</code></p>
 <dl>
 <dd>Added in Shorewall 5.0.8. When specified, dynamic blacklisting is disabled on the interface. Beginning with Shorewall 5.0.10, <code>nodbl</code> is equivalent to <code>dbl=none</code>.</dd></dl>
@@ -122,7 +122,7 @@ loc eth2 -</pre>
 <p> This option may not be specified together with <code>required</code>.</dl>
 <p> <code>physical</code>=<i>name</i></p>
 <dl>
-<dd>Added in Shorewall 4.4.4. When specified, the interface or port name in the INTERFACE column is a logical name that refers to the name given in this option. It is useful when you want to specify the same wildcard port name on two or more bridges. See m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/bridge-Shorewall-perl.html#Multiple">http://www.shorewall.net/bridge-Shorewall-perl.html#Multiple</a></code>m[]<font SIZE="-2">[11]</font>. If the <i>interface</i> name is a wildcard name (ends with &#8216;+&#8217;), then the physical <i>name</i> must also end in &#8216;+&#8217;. If <code>physical</code> is not specified, then it&#8217;s value defaults to the <i>interface</i> name.</dd></dl>
+<dd>Added in Shorewall 4.4.4. When specified, the interface or port name in the INTERFACE column is a logical name that refers to the name given in this option. It is useful when you want to specify the same wildcard port name on two or more bridges. See m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/bridge-Shorewall-perl.html#Multiple">http://www.shorewall.net/bridge-Shorewall-perl.html#Multiple</a></code>m[][11]. If the <i>interface</i> name is a wildcard name (ends with &#8216;+&#8217;), then the physical <i>name</i> must also end in &#8216;+&#8217;. If <code>physical</code> is not specified, then it&#8217;s value defaults to the <i>interface</i> name.</dd></dl>
 <p> <code>required</code></p>
 <dl>
 <dd>Added in Shorewall 4.4.10. When specified, the firewall will fail to start if the interface named in the INTERFACE column is not usable. May not be specified together with <code>optional</code>.</dd></dl>
@@ -136,7 +136,7 @@ loc eth2 -</pre>
 <dl>
 <dd>If this option is not specified for an interface, then source-routed packets will not be accepted from that interface unless explicitly enabled via sysconf. Only set this option to 1 (enable source routing) if you know what you are doing. This might represent a security risk and is not usually needed. Only those interfaces with the <code>sourceroute</code> option will have their setting changed; the value assigned to the setting will be the value specified (if any) or 1 if no value is given.</dd>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  This option does not work with a wild-card <i>interface</i> name (e.g., eth0.+) in the INTERFACE column.  <code>sfilter=(</code><i>net</i><code>[,&#8230;])</code></dd>
 <dl>
 <dd>Added in Shorewall 4.4.20. At this writing (spring 2011), Linux does not support reverse path filtering (RFC3704) for IPv6. In its absence, <code>sfilter</code> may be used as an anti-spoofing measure. This option should be used on bridges or other interfaces with the <code>routeback</code> option. On these interfaces, <code>sfilter</code> should list those local networks that are connected to the firewall through other interfaces.</dd></dl>
@@ -200,7 +200,7 @@ dmz eth2 -</pre>
 <h2>Files</h2>
 <p>/etc/shorewall6/interfaces</p>
 <h2>See Also</h2>
-<p>m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/configuration_file_basics.htm#Pairs">http://www.shorewall.net/configuration_file_basics.htm#Pairs</a></code>m[]<font SIZE="-2">[12]</font> </p>
+<p>m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/configuration_file_basics.htm#Pairs">http://www.shorewall.net/configuration_file_basics.htm#Pairs</a></code>m[][12] </p>
 <p> <a href="/docs/linux/man/8-shorewall6/">shorewall6</a>(8), <a href="/docs/linux/man/5-shorewall6-accounting/">shorewall6-accounting</a>(5), <a href="/docs/linux/man/5-shorewall6-actions/">shorewall6-actions</a>(5), shorewall6-blacklist(5), <a href="/docs/linux/man/5-shorewall6-hosts/">shorewall6-hosts</a>(5), <a href="/docs/linux/man/5-shorewall6-maclist/">shorewall6-maclist</a>(5), <a href="/docs/linux/man/5-shorewall6-netmap/">shorewall6-netmap</a>(5),<a href="/docs/linux/man/5-shorewall6-params/">shorewall6-params</a>(5), <a href="/docs/linux/man/5-shorewall6-policy/">shorewall6-policy</a>(5), <a href="/docs/linux/man/5-shorewall6-providers/">shorewall6-providers</a>(5), <a href="/docs/linux/man/5-shorewall6-rtrules/">shorewall6-rtrules</a>(5), shorewall6-routestopped(5), <a href="/docs/linux/man/5-shorewall6-rules/">shorewall6-rules</a>(5), <a href="/docs/linux/man/5-shorewall6-conf/">shorewall6.conf</a>(5), <a href="/docs/linux/man/5-shorewall6-secmarks/">shorewall6-secmarks</a>(5), <a href="/docs/linux/man/5-shorewall6-tcclasses/">shorewall6-tcclasses</a>(5), <a href="/docs/linux/man/5-shorewall6-tcdevices/">shorewall6-tcdevices</a>(5), <a href="/docs/linux/man/5-shorewall6-mangle/">shorewall6-mangle</a>(5), shorewall6-tos(5), <a href="/docs/linux/man/5-shorewall6-tunnels/">shorewall6-tunnels</a>(5), <a href="/docs/linux/man/5-shorewall6-zones/">shorewall6-zones</a>(5)</p>
 <h2>Notes</h2>
 <dl>

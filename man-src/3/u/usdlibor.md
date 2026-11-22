@@ -15,11 +15,11 @@ description: "ql/indexes/ibor/usdlibor.hpp – USD LIBOR rate"
 #include &lt;ql/time/daycounters/actual360.hpp&gt;
 #include &lt;ql/currencies/america.hpp&gt;</code></pre>
 <h3>Classes</h3>
-<p>class <code>USDLibor</code><br />
- <i>USD LIBOR rate </i><br />
- class <code>DailyTenorUSDLibor</code><br />
- <i>base class for the one day deposit BBA USD LIBOR indexes </i><br />
- class <code>USDLiborON</code><br />
+<p>class <code>USDLibor</code><br/>
+ <i>USD LIBOR rate </i><br/>
+ class <code>DailyTenorUSDLibor</code><br/>
+ <i>base class for the one day deposit BBA USD LIBOR indexes </i><br/>
+ class <code>USDLiborON</code><br/>
  <i>Overnight USD Libor index. </i></p>
 <h2>Detailed Description</h2>
 <p>USD LIBOR rate</p>

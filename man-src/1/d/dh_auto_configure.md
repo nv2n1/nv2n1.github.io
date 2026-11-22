@@ -15,7 +15,7 @@ description: "dh_auto_configure – automatically configure a package prior to b
 <p> <code>dh_auto_configure</code> is a debhelper program that tries to automatically configure a package prior to building. It does so by running the appropriate command for the build system it detects the package uses. For example, it looks for and runs a <i>./configure</i> script, <i>Makefile.PL</i>, <i>Build.PL</i>, or <i>cmake</i>. A standard set of parameters is determined and passed to the program that is run. Some build systems, such as make, do not need a configure step; for these <code>dh_auto_configure</code> will exit without doing anything. </p>
 <p> This is intended to work for about 90% of packages. If it doesn&#8217;t work, you&#8217;re encouraged to skip using <code>dh_auto_configure</code> at all, and just run <i>./configure</i> or its equivalent manually.</p>
 <h2>OPTIONS</h2>
-<p> See &quot;<font SIZE="-1"><code>BUILD SYSTEM OPTIONS</code></font>&quot; in <i><a href="/docs/linux/man/7-debhelper/">debhelper</a></i>(7) for a list of common build system selection and control options.</p>
+<p> See &quot;<code>BUILD SYSTEM OPTIONS</code>&quot; in <i><a href="/docs/linux/man/7-debhelper/">debhelper</a></i>(7) for a list of common build system selection and control options.</p>
 <dl>
 <dt><code>&#8212;</code> <i>params</i></dt>
 <dd> Pass <i>params</i> to the program that is run, after the parameters that <code>dh_auto_configure</code> usually passes. For example: </dd>

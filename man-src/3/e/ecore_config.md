@@ -10,180 +10,180 @@ description: "Ecore_Config.h – Provides the Enlightened Property Library."
 <p>Ecore_Config.h &#8211; Provides the Enlightened Property Library. </p>
 <h2>Synopsis</h2>
 <h3>Data Structures</h3>
-<p>struct <code>Ecore_Config_Prop</code><br />
+<p>struct <code>Ecore_Config_Prop</code><br/>
  <i>The actual property for storing a key-value pair. </i></p>
 <h3>Typedefs</h3>
-<p>typedef int(* <code>Ecore_Config_Listener</code> )(const char *key, const <code>Ecore_Config_Type</code> type, const int tag, void *data)<br />
+<p>typedef int(* <code>Ecore_Config_Listener</code> )(const char *key, const <code>Ecore_Config_Type</code> type, const int tag, void *data)<br/>
  <i>Property change callback function prototype. </i></p>
 <h3>Enumerations</h3>
-<p>enum <code>Ecore_Config_Type</code> { <code>ECORE_CONFIG_NIL</code> = 0, <code>ECORE_CONFIG_INT</code> = 1, <code>ECORE_CONFIG_FLT</code> = 2, <code>ECORE_CONFIG_STR</code> = 3, <code>ECORE_CONFIG_RGB</code> = 4, <code>ECORE_CONFIG_THM</code> = 5, <code>ECORE_CONFIG_BLN</code> = 6, <code>ECORE_CONFIG_SCT</code> = 7 }<br />
+<p>enum <code>Ecore_Config_Type</code> { <code>ECORE_CONFIG_NIL</code> = 0, <code>ECORE_CONFIG_INT</code> = 1, <code>ECORE_CONFIG_FLT</code> = 2, <code>ECORE_CONFIG_STR</code> = 3, <code>ECORE_CONFIG_RGB</code> = 4, <code>ECORE_CONFIG_THM</code> = 5, <code>ECORE_CONFIG_BLN</code> = 6, <code>ECORE_CONFIG_SCT</code> = 7 }<br/>
  <i>Valid configuration property types. </i></p>
 <h3>Functions</h3>
-<p>EAPI <code>Ecore_Config_Prop</code> * <code>ecore_config_get</code> (const char *key)<br />
- <i>Returns the property with the given key. </i><br />
- EAPI const char * <code>ecore_config_type_get</code> (const <code>Ecore_Config_Prop</code> *e)<br />
- <i>Returns the type of the property. </i><br />
- EAPI int <code>ecore_config_boolean_get</code> (const char *key)<br />
- <i>Returns the specified property as an integer. </i><br />
- EAPI char * <code>ecore_config_string_get</code> (const char *key)<br />
- <i>Returns the specified property as a string. </i><br />
- EAPI long <code>ecore_config_int_get</code> (const char *key)<br />
- <i>Returns the specified property as a long integer. </i><br />
- EAPI int <code>ecore_config_argb_get</code> (const char *key, int *a, int *r, int *g, int *b)<br />
- <i>Finds the alpha, red, green and blue values of a color property. </i><br />
- EAPI long <code>ecore_config_argbint_get</code> (const char *key)<br />
- <i>Returns a color property as a long. </i><br />
- EAPI char * <code>ecore_config_argbstr_get</code> (const char *key)<br />
- <i>Returns a color property as a string of hexadecimal characters. </i><br />
- EAPI float <code>ecore_config_float_get</code> (const char *key)<br />
- <i>Returns the specified property as a float. </i><br />
- EAPI char * <code>ecore_config_theme_get</code> (const char *key)<br />
- <i>Returns a theme property. </i><br />
- EAPI char * <code>ecore_config_as_string_get</code> (const char *key)<br />
- <i>Retrieves the key as a string. </i><br />
- EAPI int <code>ecore_config_describe</code> (const char *key, const char *desc)<br />
- <i>Sets the description field of the indicated property. </i><br />
- EAPI int <code>ecore_config_short_opt_set</code> (const char *key, char short_opt)<br />
- <i>Set the short option character of a property. </i><br />
- EAPI int <code>ecore_config_long_opt_set</code> (const char *key, const char *long_opt)<br />
- <i>Set the long option string of the property. </i><br />
- EAPI int <code>ecore_config_set</code> (const char *key, const char *val)<br />
- <i>Sets the indicated property to the value indicated by val</i>.<br />
- EAPI int <code>ecore_config_typed_set</code> (const char *key, const void *val, int type)<br />
- <i>Sets the indicated property to the given value and type. </i><br />
- EAPI int <code>ecore_config_boolean_set</code> (const char *key, int val)<br />
- <i>Sets the indicated property to the given boolean. </i><br />
- EAPI int <code>ecore_config_string_set</code> (const char *key, const char *val)<br />
- <i>Sets the indicated property to the given string. </i><br />
- EAPI int <code>ecore_config_int_set</code> (const char *key, int val)<br />
- <i>Sets the indicated property to the given integer. </i><br />
- EAPI int <code>ecore_config_argb_set</code> (const char *key, int a, int r, int g, int b)<br />
- <i>Sets the indicated property to a color value. </i><br />
- EAPI int <code>ecore_config_argbint_set</code> (const char *key, long argb)<br />
- <i>Sets the indicated property to a color value. </i><br />
- EAPI int <code>ecore_config_argbstr_set</code> (const char *key, const char *val)<br />
- <i>Sets the indicated property to a color value. </i><br />
- EAPI int <code>ecore_config_float_set</code> (const char *key, float val)<br />
- <i>Sets the indicated property to the given float value. </i><br />
- EAPI int <code>ecore_config_theme_set</code> (const char *key, const char *val)<br />
- <i>Sets the indicated property to a theme name. </i><br />
- EAPI int <code>ecore_config_theme_preview_group_set</code> (const char *key, const char *group)<br />
- <i>Sets the theme preview group of an indicated property. </i><br />
- EAPI int <code>ecore_config_as_string_set</code> (const char *key, const char *val)<br />
- <i>Sets the indicated property to the value given in the string. </i><br />
- EAPI int <code>ecore_config_default</code> (const char *key, const char *val, float lo, float hi, float step)<br />
- <i>Sets the indicated property if it has not already been set or loaded. </i><br />
- EAPI int <code>ecore_config_boolean_default</code> (const char *key, int val)<br />
- <i>Sets the indicated property to the given boolean if the property has not yet been set. </i><br />
- EAPI int <code>ecore_config_int_default</code> (const char *key, int val)<br />
- <i>Sets the indicated property to the given integer if the property has not yet been set. </i><br />
- EAPI int <code>ecore_config_int_default_bound</code> (const char *key, int val, int lo, int hi, int step)<br />
- <i>Sets the indicated property to the given integer if the property has not yet been set. </i><br />
- EAPI int <code>ecore_config_string_default</code> (const char *key, const char *val)<br />
- <i>Sets the indicated property to the given string if the property has not yet been set. </i><br />
- EAPI int <code>ecore_config_float_default</code> (const char *key, float val)<br />
- <i>Sets the indicated property to the given float if the property has not yet been set. </i><br />
- EAPI int <code>ecore_config_float_default_bound</code> (const char *key, float val, float lo, float hi, float step)<br />
- <i>Sets the indicated property to the given float if the property has not yet been set. </i><br />
- EAPI int <code>ecore_config_argb_default</code> (const char *key, int a, int r, int g, int b)<br />
- <i>Sets the indicated property to a color value if the property has not yet been set. </i><br />
- EAPI int <code>ecore_config_argbint_default</code> (const char *key, long argb)<br />
- <i>Sets the indicated property to a color value if the property has not yet been set. </i><br />
- EAPI int <code>ecore_config_argbstr_default</code> (const char *key, const char *val)<br />
- <i>Sets the indicated property to a color value if the property has not yet been set. </i><br />
- EAPI int <code>ecore_config_theme_default</code> (const char *key, const char *val)<br />
- <i>Sets the indicated property to a theme name if the property has not yet been set. </i><br />
- EAPI int <code>ecore_config_struct_int_add</code> (const char *key, const char *name, int val)<br />
- <i>Add an int property to the named structure. </i><br />
- EAPI int <code>ecore_config_struct_float_add</code> (const char *key, const char *name, float val)<br />
- <i>Add a float property to the named structure. </i><br />
- EAPI int <code>ecore_config_struct_create</code> (const char *key)<br />
- <i>Sets the indicated property to a structure if the property has not yet been set. </i><br />
- EAPI int <code>ecore_config_struct_string_add</code> (const char *key, const char *name, const char *val)<br />
- <i>Add a string property to the named structure. </i><br />
- EAPI int <code>ecore_config_struct_theme_add</code> (const char *key, const char *name, const char *val)<br />
- <i>Add a theme property to the named structure. </i><br />
- EAPI int <code>ecore_config_struct_argb_add</code> (const char *key, const char *name, int a, int r, int g, int b)<br />
- <i>Add an argb property to the named structure. </i><br />
- EAPI int <code>ecore_config_struct_boolean_add</code> (const char *key, const char *name, int val)<br />
- <i>Add a boolean property to the named structure. </i><br />
- EAPI int <code>ecore_config_struct_get</code> (const char *key, void *data)<br />
- <i>Get the contents of a defined structure property and load it into the passed C struct. </i><br />
- EAPI int <code>ecore_config_listen</code> (const char *name, const char *key, <code>Ecore_Config_Listener</code> listener, int tag, void *data)<br />
- <i>Adds a callback function to the list of functions called when a property changes. </i><br />
- EAPI int <code>ecore_config_deaf</code> (const char *name, const char *key, <code>Ecore_Config_Listener</code> listener)<br />
- <i>Removes a listener callback. </i><br />
- EAPI <code>Ecore_Config_Prop</code> * <code>ecore_config_dst</code> (<code>Ecore_Config_Prop</code> *e)<br />
- <i>Removes the given property from the local configuration and destroys it. </i><br />
- EAPI int <code>ecore_config_type_guess</code> (const char *key, const char *val)<br />
- <i>Tries to guess the type of a property. </i><br />
- EAPI Ecore_Config_Bundle * <code>ecore_config_bundle_new</code> (Ecore_Config_Server *srv, const char *id)<br />
- <i>Creates a new Ecore_Config_Bundle. </i><br />
- EAPI Ecore_Config_Bundle * <code>ecore_config_bundle_1st_get</code> (Ecore_Config_Server *srv)<br />
- <i>Locates the first configuration bundle on the given server. </i><br />
- EAPI Ecore_Config_Bundle * <code>ecore_config_bundle_next_get</code> (Ecore_Config_Bundle *ns)<br />
- <i>Locates the configuration bundle after the given one. </i><br />
- EAPI Ecore_Config_Bundle * <code>ecore_config_bundle_by_serial_get</code> (Ecore_Config_Server *srv, long serial)<br />
- <i>Locates a configuration bundle on a configuration server based on its serial number. </i><br />
- EAPI Ecore_Config_Bundle * <code>ecore_config_bundle_by_label_get</code> (Ecore_Config_Server *srv, const char *label)<br />
- <i>Gets the Ecore_Config_Bundle with the given identifier from the given server. </i><br />
- EAPI long <code>ecore_config_bundle_serial_get</code> (Ecore_Config_Bundle *ns)<br />
- <i>Retrieves the bundle&#8217;s serial number. </i><br />
- EAPI char * <code>ecore_config_bundle_label_get</code> (Ecore_Config_Bundle *ns)<br />
- <i>Retrieves the bundle&#8217;s identifier. </i><br />
- EAPI int <code>ecore_config_init</code> (const char *name)<br />
- <i>Initializes the Enlightened Property Library. </i><br />
- EAPI int <code>ecore_config_shutdown</code> (void)<br />
- <i>Frees memory and shuts down the library for an application. </i><br />
- EAPI int <code>ecore_config_system_init</code> (void)<br />
- <i>Initializes the Enlightened Property Library. </i><br />
- EAPI int <code>ecore_config_system_shutdown</code> (void)<br />
- <i>Frees memory and shuts down the library for other programming libraries. </i><br />
- EAPI int <code>ecore_config_load</code> (void)<br />
- <i>Loads the default configuration. </i><br />
- EAPI int <code>ecore_config_file_load</code> (const char *file)<br />
- <i>Load the given configuration file to the local configuration. </i><br />
- EAPI int <code>ecore_config_save</code> (void)<br />
- <i>Saves the current configuration to the default file. </i><br />
- EAPI int <code>ecore_config_file_save</code> (const char *file)<br />
- <i>Saves the local configuration to the given file. </i><br />
- EAPI int <code>ecore_config_evas_font_path_apply</code> (Evas *evas)<br />
- <i>Calls evas_font_path_append on </i>evas for each of the font names stored in the property &#8216;/e/font/path&#8217;.<br />
- EAPI char * <code>ecore_config_theme_search_path_get</code> (void)<br />
- <i>Retrieves the search path used to find themes. </i><br />
- EAPI int <code>ecore_config_theme_search_path_append</code> (const char *append)<br />
- <i>Adds the given path to the search path used to find themes. </i><br />
- EAPI char * <code>ecore_config_theme_default_path_get</code> (void)<br />
- <i>Retrieves the default theme search path. </i><br />
- EAPI char * <code>ecore_config_theme_with_path_from_name_get</code> (char *name)<br />
- <i>Retrieve a theme file&#8217;s full path. </i><br />
- EAPI char * <code>ecore_config_theme_with_path_get</code> (const char *key)<br />
- <i>Retrieves the full path to the theme file of the theme stored in the given property. </i><br />
- EAPI void <code>ecore_config_args_display</code> (void)<br />
- <i>Prints the property list of the local configuration bundle to output. </i><br />
- EAPI int <code>ecore_config_args_parse</code> (void)<br />
- <i>Parse the arguments set by </i><code>ecore_app_args_set</code> and set properties accordingly.<br />
- EAPI void <code>ecore_config_app_describe</code> (char *description)<br />
- <i>Sets the description string used by </i><code>ecore_config_args_display</code> .<br />
- EAPI int <code>ecore_config_create</code> (const char *key, void *val, char short_opt, char *long_opt, char *desc)<br />
- <i>Creates a new property, if it does not already exist, and sets its attributes to those given. </i><br />
- EAPI int <code>ecore_config_typed_create</code> (const char *key, void *val, int type, char short_opt, char *long_opt, char *desc)<br />
- <i>Creates a new property, if it does not already exist, and sets its attributes to those given. </i><br />
- EAPI int <code>ecore_config_boolean_create</code> (const char *key, int val, char short_opt, char *long_opt, char *desc)<br />
- <i>Creates a new boolean property, if it does not already exist, and sets its attributes to those given. </i><br />
- EAPI int <code>ecore_config_int_create</code> (const char *key, int val, char short_opt, char *long_opt, char *desc)<br />
- <i>Creates a new integer property, if it does not already exist, and sets its attributes to those given. </i><br />
- EAPI int <code>ecore_config_int_create_bound</code> (const char *key, int val, int low, int high, int step, char short_opt, char *long_opt, char *desc)<br />
- <i>Creates a new integer property, if it does not already exist, and sets its attributes to those given. </i><br />
- EAPI int <code>ecore_config_string_create</code> (const char *key, char *val, char short_opt, char *long_opt, char *desc)<br />
- <i>Creates a new string property, if it does not already exist, and sets its attributes to those given. </i><br />
- EAPI int <code>ecore_config_float_create</code> (const char *key, float val, char short_opt, char *long_opt, char *desc)<br />
- <i>Creates a new float property, if it does not already exist, and sets its attributes to those given. </i><br />
- EAPI int <code>ecore_config_float_create_bound</code> (const char *key, float val, float low, float high, float step, char short_opt, char *long_opt, char *desc)<br />
- <i>Creates a new float property, if it does not already exist, and sets its attributes to those given. </i><br />
- EAPI int <code>ecore_config_argb_create</code> (const char *key, char *val, char short_opt, char *long_opt, char *desc)<br />
- <i>Creates a new color property, if it does not already exist, and sets its attributes to those given. </i><br />
- EAPI int <code>ecore_config_theme_create</code> (const char *key, char *val, char short_opt, char *long_opt, char *desc)<br />
+<p>EAPI <code>Ecore_Config_Prop</code> * <code>ecore_config_get</code> (const char *key)<br/>
+ <i>Returns the property with the given key. </i><br/>
+ EAPI const char * <code>ecore_config_type_get</code> (const <code>Ecore_Config_Prop</code> *e)<br/>
+ <i>Returns the type of the property. </i><br/>
+ EAPI int <code>ecore_config_boolean_get</code> (const char *key)<br/>
+ <i>Returns the specified property as an integer. </i><br/>
+ EAPI char * <code>ecore_config_string_get</code> (const char *key)<br/>
+ <i>Returns the specified property as a string. </i><br/>
+ EAPI long <code>ecore_config_int_get</code> (const char *key)<br/>
+ <i>Returns the specified property as a long integer. </i><br/>
+ EAPI int <code>ecore_config_argb_get</code> (const char *key, int *a, int *r, int *g, int *b)<br/>
+ <i>Finds the alpha, red, green and blue values of a color property. </i><br/>
+ EAPI long <code>ecore_config_argbint_get</code> (const char *key)<br/>
+ <i>Returns a color property as a long. </i><br/>
+ EAPI char * <code>ecore_config_argbstr_get</code> (const char *key)<br/>
+ <i>Returns a color property as a string of hexadecimal characters. </i><br/>
+ EAPI float <code>ecore_config_float_get</code> (const char *key)<br/>
+ <i>Returns the specified property as a float. </i><br/>
+ EAPI char * <code>ecore_config_theme_get</code> (const char *key)<br/>
+ <i>Returns a theme property. </i><br/>
+ EAPI char * <code>ecore_config_as_string_get</code> (const char *key)<br/>
+ <i>Retrieves the key as a string. </i><br/>
+ EAPI int <code>ecore_config_describe</code> (const char *key, const char *desc)<br/>
+ <i>Sets the description field of the indicated property. </i><br/>
+ EAPI int <code>ecore_config_short_opt_set</code> (const char *key, char short_opt)<br/>
+ <i>Set the short option character of a property. </i><br/>
+ EAPI int <code>ecore_config_long_opt_set</code> (const char *key, const char *long_opt)<br/>
+ <i>Set the long option string of the property. </i><br/>
+ EAPI int <code>ecore_config_set</code> (const char *key, const char *val)<br/>
+ <i>Sets the indicated property to the value indicated by val</i>.<br/>
+ EAPI int <code>ecore_config_typed_set</code> (const char *key, const void *val, int type)<br/>
+ <i>Sets the indicated property to the given value and type. </i><br/>
+ EAPI int <code>ecore_config_boolean_set</code> (const char *key, int val)<br/>
+ <i>Sets the indicated property to the given boolean. </i><br/>
+ EAPI int <code>ecore_config_string_set</code> (const char *key, const char *val)<br/>
+ <i>Sets the indicated property to the given string. </i><br/>
+ EAPI int <code>ecore_config_int_set</code> (const char *key, int val)<br/>
+ <i>Sets the indicated property to the given integer. </i><br/>
+ EAPI int <code>ecore_config_argb_set</code> (const char *key, int a, int r, int g, int b)<br/>
+ <i>Sets the indicated property to a color value. </i><br/>
+ EAPI int <code>ecore_config_argbint_set</code> (const char *key, long argb)<br/>
+ <i>Sets the indicated property to a color value. </i><br/>
+ EAPI int <code>ecore_config_argbstr_set</code> (const char *key, const char *val)<br/>
+ <i>Sets the indicated property to a color value. </i><br/>
+ EAPI int <code>ecore_config_float_set</code> (const char *key, float val)<br/>
+ <i>Sets the indicated property to the given float value. </i><br/>
+ EAPI int <code>ecore_config_theme_set</code> (const char *key, const char *val)<br/>
+ <i>Sets the indicated property to a theme name. </i><br/>
+ EAPI int <code>ecore_config_theme_preview_group_set</code> (const char *key, const char *group)<br/>
+ <i>Sets the theme preview group of an indicated property. </i><br/>
+ EAPI int <code>ecore_config_as_string_set</code> (const char *key, const char *val)<br/>
+ <i>Sets the indicated property to the value given in the string. </i><br/>
+ EAPI int <code>ecore_config_default</code> (const char *key, const char *val, float lo, float hi, float step)<br/>
+ <i>Sets the indicated property if it has not already been set or loaded. </i><br/>
+ EAPI int <code>ecore_config_boolean_default</code> (const char *key, int val)<br/>
+ <i>Sets the indicated property to the given boolean if the property has not yet been set. </i><br/>
+ EAPI int <code>ecore_config_int_default</code> (const char *key, int val)<br/>
+ <i>Sets the indicated property to the given integer if the property has not yet been set. </i><br/>
+ EAPI int <code>ecore_config_int_default_bound</code> (const char *key, int val, int lo, int hi, int step)<br/>
+ <i>Sets the indicated property to the given integer if the property has not yet been set. </i><br/>
+ EAPI int <code>ecore_config_string_default</code> (const char *key, const char *val)<br/>
+ <i>Sets the indicated property to the given string if the property has not yet been set. </i><br/>
+ EAPI int <code>ecore_config_float_default</code> (const char *key, float val)<br/>
+ <i>Sets the indicated property to the given float if the property has not yet been set. </i><br/>
+ EAPI int <code>ecore_config_float_default_bound</code> (const char *key, float val, float lo, float hi, float step)<br/>
+ <i>Sets the indicated property to the given float if the property has not yet been set. </i><br/>
+ EAPI int <code>ecore_config_argb_default</code> (const char *key, int a, int r, int g, int b)<br/>
+ <i>Sets the indicated property to a color value if the property has not yet been set. </i><br/>
+ EAPI int <code>ecore_config_argbint_default</code> (const char *key, long argb)<br/>
+ <i>Sets the indicated property to a color value if the property has not yet been set. </i><br/>
+ EAPI int <code>ecore_config_argbstr_default</code> (const char *key, const char *val)<br/>
+ <i>Sets the indicated property to a color value if the property has not yet been set. </i><br/>
+ EAPI int <code>ecore_config_theme_default</code> (const char *key, const char *val)<br/>
+ <i>Sets the indicated property to a theme name if the property has not yet been set. </i><br/>
+ EAPI int <code>ecore_config_struct_int_add</code> (const char *key, const char *name, int val)<br/>
+ <i>Add an int property to the named structure. </i><br/>
+ EAPI int <code>ecore_config_struct_float_add</code> (const char *key, const char *name, float val)<br/>
+ <i>Add a float property to the named structure. </i><br/>
+ EAPI int <code>ecore_config_struct_create</code> (const char *key)<br/>
+ <i>Sets the indicated property to a structure if the property has not yet been set. </i><br/>
+ EAPI int <code>ecore_config_struct_string_add</code> (const char *key, const char *name, const char *val)<br/>
+ <i>Add a string property to the named structure. </i><br/>
+ EAPI int <code>ecore_config_struct_theme_add</code> (const char *key, const char *name, const char *val)<br/>
+ <i>Add a theme property to the named structure. </i><br/>
+ EAPI int <code>ecore_config_struct_argb_add</code> (const char *key, const char *name, int a, int r, int g, int b)<br/>
+ <i>Add an argb property to the named structure. </i><br/>
+ EAPI int <code>ecore_config_struct_boolean_add</code> (const char *key, const char *name, int val)<br/>
+ <i>Add a boolean property to the named structure. </i><br/>
+ EAPI int <code>ecore_config_struct_get</code> (const char *key, void *data)<br/>
+ <i>Get the contents of a defined structure property and load it into the passed C struct. </i><br/>
+ EAPI int <code>ecore_config_listen</code> (const char *name, const char *key, <code>Ecore_Config_Listener</code> listener, int tag, void *data)<br/>
+ <i>Adds a callback function to the list of functions called when a property changes. </i><br/>
+ EAPI int <code>ecore_config_deaf</code> (const char *name, const char *key, <code>Ecore_Config_Listener</code> listener)<br/>
+ <i>Removes a listener callback. </i><br/>
+ EAPI <code>Ecore_Config_Prop</code> * <code>ecore_config_dst</code> (<code>Ecore_Config_Prop</code> *e)<br/>
+ <i>Removes the given property from the local configuration and destroys it. </i><br/>
+ EAPI int <code>ecore_config_type_guess</code> (const char *key, const char *val)<br/>
+ <i>Tries to guess the type of a property. </i><br/>
+ EAPI Ecore_Config_Bundle * <code>ecore_config_bundle_new</code> (Ecore_Config_Server *srv, const char *id)<br/>
+ <i>Creates a new Ecore_Config_Bundle. </i><br/>
+ EAPI Ecore_Config_Bundle * <code>ecore_config_bundle_1st_get</code> (Ecore_Config_Server *srv)<br/>
+ <i>Locates the first configuration bundle on the given server. </i><br/>
+ EAPI Ecore_Config_Bundle * <code>ecore_config_bundle_next_get</code> (Ecore_Config_Bundle *ns)<br/>
+ <i>Locates the configuration bundle after the given one. </i><br/>
+ EAPI Ecore_Config_Bundle * <code>ecore_config_bundle_by_serial_get</code> (Ecore_Config_Server *srv, long serial)<br/>
+ <i>Locates a configuration bundle on a configuration server based on its serial number. </i><br/>
+ EAPI Ecore_Config_Bundle * <code>ecore_config_bundle_by_label_get</code> (Ecore_Config_Server *srv, const char *label)<br/>
+ <i>Gets the Ecore_Config_Bundle with the given identifier from the given server. </i><br/>
+ EAPI long <code>ecore_config_bundle_serial_get</code> (Ecore_Config_Bundle *ns)<br/>
+ <i>Retrieves the bundle&#8217;s serial number. </i><br/>
+ EAPI char * <code>ecore_config_bundle_label_get</code> (Ecore_Config_Bundle *ns)<br/>
+ <i>Retrieves the bundle&#8217;s identifier. </i><br/>
+ EAPI int <code>ecore_config_init</code> (const char *name)<br/>
+ <i>Initializes the Enlightened Property Library. </i><br/>
+ EAPI int <code>ecore_config_shutdown</code> (void)<br/>
+ <i>Frees memory and shuts down the library for an application. </i><br/>
+ EAPI int <code>ecore_config_system_init</code> (void)<br/>
+ <i>Initializes the Enlightened Property Library. </i><br/>
+ EAPI int <code>ecore_config_system_shutdown</code> (void)<br/>
+ <i>Frees memory and shuts down the library for other programming libraries. </i><br/>
+ EAPI int <code>ecore_config_load</code> (void)<br/>
+ <i>Loads the default configuration. </i><br/>
+ EAPI int <code>ecore_config_file_load</code> (const char *file)<br/>
+ <i>Load the given configuration file to the local configuration. </i><br/>
+ EAPI int <code>ecore_config_save</code> (void)<br/>
+ <i>Saves the current configuration to the default file. </i><br/>
+ EAPI int <code>ecore_config_file_save</code> (const char *file)<br/>
+ <i>Saves the local configuration to the given file. </i><br/>
+ EAPI int <code>ecore_config_evas_font_path_apply</code> (Evas *evas)<br/>
+ <i>Calls evas_font_path_append on </i>evas for each of the font names stored in the property &#8216;/e/font/path&#8217;.<br/>
+ EAPI char * <code>ecore_config_theme_search_path_get</code> (void)<br/>
+ <i>Retrieves the search path used to find themes. </i><br/>
+ EAPI int <code>ecore_config_theme_search_path_append</code> (const char *append)<br/>
+ <i>Adds the given path to the search path used to find themes. </i><br/>
+ EAPI char * <code>ecore_config_theme_default_path_get</code> (void)<br/>
+ <i>Retrieves the default theme search path. </i><br/>
+ EAPI char * <code>ecore_config_theme_with_path_from_name_get</code> (char *name)<br/>
+ <i>Retrieve a theme file&#8217;s full path. </i><br/>
+ EAPI char * <code>ecore_config_theme_with_path_get</code> (const char *key)<br/>
+ <i>Retrieves the full path to the theme file of the theme stored in the given property. </i><br/>
+ EAPI void <code>ecore_config_args_display</code> (void)<br/>
+ <i>Prints the property list of the local configuration bundle to output. </i><br/>
+ EAPI int <code>ecore_config_args_parse</code> (void)<br/>
+ <i>Parse the arguments set by </i><code>ecore_app_args_set</code> and set properties accordingly.<br/>
+ EAPI void <code>ecore_config_app_describe</code> (char *description)<br/>
+ <i>Sets the description string used by </i><code>ecore_config_args_display</code> .<br/>
+ EAPI int <code>ecore_config_create</code> (const char *key, void *val, char short_opt, char *long_opt, char *desc)<br/>
+ <i>Creates a new property, if it does not already exist, and sets its attributes to those given. </i><br/>
+ EAPI int <code>ecore_config_typed_create</code> (const char *key, void *val, int type, char short_opt, char *long_opt, char *desc)<br/>
+ <i>Creates a new property, if it does not already exist, and sets its attributes to those given. </i><br/>
+ EAPI int <code>ecore_config_boolean_create</code> (const char *key, int val, char short_opt, char *long_opt, char *desc)<br/>
+ <i>Creates a new boolean property, if it does not already exist, and sets its attributes to those given. </i><br/>
+ EAPI int <code>ecore_config_int_create</code> (const char *key, int val, char short_opt, char *long_opt, char *desc)<br/>
+ <i>Creates a new integer property, if it does not already exist, and sets its attributes to those given. </i><br/>
+ EAPI int <code>ecore_config_int_create_bound</code> (const char *key, int val, int low, int high, int step, char short_opt, char *long_opt, char *desc)<br/>
+ <i>Creates a new integer property, if it does not already exist, and sets its attributes to those given. </i><br/>
+ EAPI int <code>ecore_config_string_create</code> (const char *key, char *val, char short_opt, char *long_opt, char *desc)<br/>
+ <i>Creates a new string property, if it does not already exist, and sets its attributes to those given. </i><br/>
+ EAPI int <code>ecore_config_float_create</code> (const char *key, float val, char short_opt, char *long_opt, char *desc)<br/>
+ <i>Creates a new float property, if it does not already exist, and sets its attributes to those given. </i><br/>
+ EAPI int <code>ecore_config_float_create_bound</code> (const char *key, float val, float low, float high, float step, char short_opt, char *long_opt, char *desc)<br/>
+ <i>Creates a new float property, if it does not already exist, and sets its attributes to those given. </i><br/>
+ EAPI int <code>ecore_config_argb_create</code> (const char *key, char *val, char short_opt, char *long_opt, char *desc)<br/>
+ <i>Creates a new color property, if it does not already exist, and sets its attributes to those given. </i><br/>
+ EAPI int <code>ecore_config_theme_create</code> (const char *key, char *val, char short_opt, char *long_opt, char *desc)<br/>
  <i>Creates a new theme property, if it does not already exist, and sets its attributes to those given. </i></p>
 <h2>Detailed Description</h2>
 <p>Provides the Enlightened Property Library. </p>
@@ -243,7 +243,7 @@ description: "Ecore_Config.h – Provides the Enlightened Property Library."
 <p>Gets the Ecore_Config_Bundle with the given identifier from the given server. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>srv</i> The configuration server.<br />
+<dd><i>srv</i> The configuration server.<br/>
  <i>label</i> The bundle&#8217;s identifier string.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -252,7 +252,7 @@ description: "Ecore_Config.h – Provides the Enlightened Property Library."
 <p>Locates a configuration bundle on a configuration server based on its serial number. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>srv</i> The configuration server.<br />
+<dd><i>srv</i> The configuration server.<br/>
  <i>serial</i> Serial number.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -269,7 +269,7 @@ description: "Ecore_Config.h – Provides the Enlightened Property Library."
 <p>Creates a new Ecore_Config_Bundle. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>srv</i> Config server.<br />
+<dd><i>srv</i> Config server.<br/>
  <i>identifier</i> Identifier string for the new bundle.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -353,7 +353,7 @@ description: "Ecore_Config.h – Provides the Enlightened Property Library."
 <p> This function first checks to see if the property exists. If it does, then the type of the stored property is returned. Otherwise, the function tries to guess the type of the property based on val. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>key</i> The property key.<br />
+<dd><i>key</i> The property key.<br/>
  <i>val</i> The value in string form.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

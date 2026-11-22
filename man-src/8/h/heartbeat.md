@@ -12,10 +12,10 @@ description: "heartbeat – Heartbeat subsystem for High-Availability Linux"
 <p><code>heartbeat</code></p>
 <h2>Description</h2>
 <p><code>heartbeat</code> is a basic heartbeat subsystem for Linux-HA. It will run scripts at initialisation, and when machines go up or down. This version will also perform IP address takeover using gratuitous ARPs. It works correctly for a 2-node configuration, and is extensible to larger configurations. </p>
-<p> It implements the following kinds of heartbeats:<br />
-*&nbsp;<wbr>Bidirectional Serial Rings&nbsp;<wbr>(&quot;raw&quot;&nbsp;<wbr>serial ports)<br />
-*&nbsp;<wbr>UDP/IP broadcast&nbsp;<wbr>(ethernet, etc.)<br />
-*&nbsp;<wbr>UDP/IP multicast&nbsp;<wbr>(ethernet, etc.)<br />
+<p> It implements the following kinds of heartbeats:<br/>
+*&nbsp;<wbr>Bidirectional Serial Rings&nbsp;<wbr>(&quot;raw&quot;&nbsp;<wbr>serial ports)<br/>
+*&nbsp;<wbr>UDP/IP broadcast&nbsp;<wbr>(ethernet, etc.)<br/>
+*&nbsp;<wbr>UDP/IP multicast&nbsp;<wbr>(ethernet, etc.)<br/>
 *&nbsp;<wbr>special&nbsp;<wbr>&quot;ping&quot;&nbsp;<wbr>heartbeats for routers, etc. </p>
 <p> Comprehensive documentation on the configuration and running of <code>heartbeat</code> is supplied in HTML format with the distribution of the code. If this documentation is not installed on your system it can be found, with the latest distribution of heartbeat on <a rel="nofollow" href="http://www.linux-ha.org/">http://www.linux-ha.org/</a></p>
 <h2>Options</h2>

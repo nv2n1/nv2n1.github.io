@@ -17,18 +17,18 @@ description: "QuantLib::ExchangeRate – exchange rate between two currencies"
 <p> <code>ExchangeRate</code> () </p>
 <p> <code>ExchangeRate</code> (const <code>Currency</code> &amp;source, const <code>Currency</code> &amp;target, Decimal rate) </p>
 <p> <code>Inspectors</code> </p>
-<p> const <code>Currency</code> &amp; <code>source</code> () const<br />
- <i>the source currency. </i><br />
- const <code>Currency</code> &amp; <code>target</code> () const<br />
- <i>the target currency. </i><br />
- <code>Type</code> <code>type</code> () const<br />
- <i>the type </i><br />
- Decimal <code>rate</code> () const<br />
+<p> const <code>Currency</code> &amp; <code>source</code> () const<br/>
+ <i>the source currency. </i><br/>
+ const <code>Currency</code> &amp; <code>target</code> () const<br/>
+ <i>the target currency. </i><br/>
+ <code>Type</code> <code>type</code> () const<br/>
+ <i>the type </i><br/>
+ Decimal <code>rate</code> () const<br/>
  <i>the exchange rate (when available) </i></p>
 <h3>Utility methods</h3>
-<p><code>Money</code> <code>exchange</code> (const <code>Money</code> &amp;amount) const<br />
- <i>apply the exchange rate to a cash amount </i><br />
- static <code>ExchangeRate</code> <code>chain</code> (const <code>ExchangeRate</code> &amp;r1, const <code>ExchangeRate</code> &amp;r2)<br />
+<p><code>Money</code> <code>exchange</code> (const <code>Money</code> &amp;amount) const<br/>
+ <i>apply the exchange rate to a cash amount </i><br/>
+ static <code>ExchangeRate</code> <code>chain</code> (const <code>ExchangeRate</code> &amp;r1, const <code>ExchangeRate</code> &amp;r2)<br/>
  <i>chain two exchange rates </i></p>
 <h2>Detailed Description</h2>
 <p>exchange rate between two currencies </p>

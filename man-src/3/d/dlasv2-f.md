@@ -10,7 +10,7 @@ description: "dlasv2.f –"
 <p>dlasv2.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dlasv2</code> (F, G, H, SSMIN, SSMAX, SNR, CSR, SNL, CSL)<br />
+<p>subroutine <code>dlasv2</code> (F, G, H, SSMIN, SSMAX, SNR, CSR, SNL, CSL)<br/>
  <i></i><code>DLASV2</code> computes the singular value decomposition of a 2-by-2 triangular matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlasv2 (double precisionF, double precisionG, double precisionH, double precisionSSMIN, double precisionSSMAX, double precisionSNR, double precisionCSR, double precisionSNL, double precisionCSL)</h3>

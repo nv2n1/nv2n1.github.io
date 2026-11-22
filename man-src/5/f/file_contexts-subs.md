@@ -17,7 +17,7 @@ int selabel_lookup_raw(struct selabel_handle *hnd,
                        char **context,
                        const char *path, int mode);</code></pre>
 <h2>Description</h2>
-<p>The file contexts backend maps from pathname/mode combinations into security contexts. It is used to find the appropriate context for each file when relabeling a file system. The returned <i>context</i> must be freed using <code><a href="/docs/linux/man/3-freecon/">freecon</a></code>(3).<br />
+<p>The file contexts backend maps from pathname/mode combinations into security contexts. It is used to find the appropriate context for each file when relabeling a file system. The returned <i>context</i> must be freed using <code><a href="/docs/linux/man/3-freecon/">freecon</a></code>(3).<br/>
  <code><a href="/docs/linux/man/3-selabel_lookup/">selabel_lookup</a></code>(3) describes the function with its return and error codes, however the following <i>errno</i> is clarified further for the file contexts backend:</p>
 <dl>
 <dd>
@@ -50,7 +50,7 @@ int selabel_lookup_raw(struct selabel_handle *hnd,
 <dt>1.</dt>
 <dd>The mandatory file contexts file that is either the fully qualified file name from <i>SELABEL_OPT_PATH.value</i> or if <i>NULL</i>, then the path returned by <code><a href="/docs/linux/man/3-selinux_file_context_path/">selinux_file_context_path</a></code>(3).</dd>
 <dt>2.</dt>
-<dd>The optional local and distribution substitution files that perform path aliasing on the &#8216;in memory&#8217; version of the file contexts file.<br />
+<dd>The optional local and distribution substitution files that perform path aliasing on the &#8216;in memory&#8217; version of the file contexts file.<br/>
  These files have the same name as the mandatory file contexts file with the extensions <i>.subs</i> and <i>.subs_dist</i> added.</dd></dl>
 </dl>
 <p> If the <code>SELABEL_OPT_BASEONLY</code> is not set, then the following files will be processed:</p>
@@ -60,21 +60,21 @@ int selabel_lookup_raw(struct selabel_handle *hnd,
 <dt>1.</dt>
 <dd>The mandatory file contexts file that is either the fully qualified file name from <i>SELABEL_OPT_PATH.value</i> or if <i>NULL</i>, then the path returned by <code><a href="/docs/linux/man/3-selinux_file_context_path/">selinux_file_context_path</a></code>(3).</dd>
 <dt>2.</dt>
-<dd>The optional local customizations file that has the same name as the mandatory file contexts file with the extension <i>.local</i> added.<br />
+<dd>The optional local customizations file that has the same name as the mandatory file contexts file with the extension <i>.local</i> added.<br/>
  <code><a href="/docs/linux/man/3-selinux_file_context_local_path/">selinux_file_context_local_path</a></code>(3) will return the default path to this file.</dd>
 <dt>3.</dt>
-<dd>The optional user home directory customizations file that has the same name as the mandatory file contexts file with the extension <i>.homedirs</i> added.<br />
+<dd>The optional user home directory customizations file that has the same name as the mandatory file contexts file with the extension <i>.homedirs</i> added.<br/>
  <code><a href="/docs/linux/man/3-selinux_file_context_homedir_path/">selinux_file_context_homedir_path</a></code>(3) will return the default path to this file.</dd>
 <dt>4.</dt>
-<dd>The optional local and distribution substitution files that perform any path aliasing on the &#8216;in memory&#8217; version of the file contexts file (and the <i>.local</i> and/or <i>.homedirs</i> if present). These files have the same name as the mandatory file contexts file with the extensions <i>.subs</i> and <i>.subs_dist</i> added.<br />
+<dd>The optional local and distribution substitution files that perform any path aliasing on the &#8216;in memory&#8217; version of the file contexts file (and the <i>.local</i> and/or <i>.homedirs</i> if present). These files have the same name as the mandatory file contexts file with the extensions <i>.subs</i> and <i>.subs_dist</i> added.<br/>
  <code>selinux_file_context_subs_path</code>(3) and <code>selinux_file_context_subs_dist_path</code>(3) will return the default paths to these files.</dd></dl>
 </dl>
 <p> The default file context series of files are:</p>
 <dl>
-<dd><i>/etc/selinux/{SELINUXTYPE}/contexts/files/file_contexts</i><br />
- <i>/etc/selinux/{SELINUXTYPE}/contexts/files/file_contexts.local</i><br />
- <i>/etc/selinux/{SELINUXTYPE}/contexts/files/file_contexts.homedirs</i><br />
- <i>/etc/selinux/{SELINUXTYPE}/contexts/files/file_contexts.subs</i><br />
+<dd><i>/etc/selinux/{SELINUXTYPE}/contexts/files/file_contexts</i><br/>
+ <i>/etc/selinux/{SELINUXTYPE}/contexts/files/file_contexts.local</i><br/>
+ <i>/etc/selinux/{SELINUXTYPE}/contexts/files/file_contexts.homedirs</i><br/>
+ <i>/etc/selinux/{SELINUXTYPE}/contexts/files/file_contexts.subs</i><br/>
  <i>/etc/selinux/{SELINUXTYPE}/contexts/files/file_contexts.subs_dist</i></dd></dl>
 <p> Where <i>{SELINUXTYPE}</i> is the entry from the selinux configuration file <i>config</i> (see <code><a href="/docs/linux/man/5-selinux_config/">selinux_config</a></code>(5)). </p>
 <p> Only the <i>file_contexts</i> file is mandatory, the remainder are optional. </p>
@@ -93,9 +93,9 @@ int selabel_lookup_raw(struct selabel_handle *hnd,
 <dl>
 <dd>An optional file type consisting of:</dd>
 <dl>
-<dd><i>-b</i> &#8211; Block Device <i>-c</i> &#8211; Character Device<br />
- <i>-d</i> &#8211; Directory <i>-p</i> &#8211; Named Pipe<br />
- <i>-l</i> &#8211; Symbolic Link <i>-s</i> &#8211; Socket<br />
+<dd><i>-b</i> &#8211; Block Device <i>-c</i> &#8211; Character Device<br/>
+ <i>-d</i> &#8211; Directory <i>-p</i> &#8211; Named Pipe<br/>
+ <i>-l</i> &#8211; Symbolic Link <i>-s</i> &#8211; Socket<br/>
  <i>&#8212;</i> &#8211; Ordinary file</dd></dl>
 </dl>
 <p> <i>context</i></p>
@@ -113,10 +113,10 @@ int selabel_lookup_raw(struct selabel_handle *hnd,
 </dl>
 <p> Example:</p>
 <dl>
-<dd># ./contexts/files/file_contexts<br />
- # pathname file_type context<br />
- /.* system_u:object_r:default_t:s0<br />
- /[^/]+ &#8212; system_u:object_r:etc_runtime_t:s0<br />
+<dd># ./contexts/files/file_contexts<br/>
+ # pathname file_type context<br/>
+ /.* system_u:object_r:default_t:s0<br/>
+ /[^/]+ &#8212; system_u:object_r:etc_runtime_t:s0<br/>
  /tmp/.* &lt;&lt;none&gt;&gt;</dd></dl>
 <h2>Substitution File Format</h2>
 <p>Each line within the substitution files (<i>.subs</i> and <i>.subs_dist</i>) has the form:</p>
@@ -133,9 +133,9 @@ int selabel_lookup_raw(struct selabel_handle *hnd,
 </dl>
 <p> Example:</p>
 <dl>
-<dd># ./contexts/files/file_contexts.subs<br />
- # pathname subs_pathname<br />
- /myweb /var/www<br />
+<dd># ./contexts/files/file_contexts.subs<br/>
+ # pathname subs_pathname<br/>
+ /myweb /var/www<br/>
  /myspool /var/spool/mail </dd>
 <p> Using the above example, when <code><a href="/docs/linux/man/3-selabel_lookup/">selabel_lookup</a></code>(3) is passed a path of <i>/myweb/index.html</i> the function will substitute the <i>/myweb</i> component with <i>/var/www</i>, therefore the path used is: </p>
 <dl>
@@ -148,7 +148,7 @@ int selabel_lookup_raw(struct selabel_handle *hnd,
 <dt>2.</dt>
 <dd>If the size of file contexts series of files contain many entries, then <code><a href="/docs/linux/man/3-selabel_open/">selabel_open</a></code>(3) may have a delay as it reads in the files, and if requested validates the entries.</dd>
 <dt>3.</dt>
-<dd>Depending on the version of SELinux it is possible that a <i>file_contexts.template</i> file may also be present, however this is now deprecated.<br />
+<dd>Depending on the version of SELinux it is possible that a <i>file_contexts.template</i> file may also be present, however this is now deprecated.<br/>
  The template file has the same format as the <i>file_contexts</i> file and may also contain the keywords <code>HOME_ROOT</code>, <code>HOME_DIR</code>, <code>ROLE</code> and <code>USER</code>. This functionality has now been moved to the policy store and managed by <code><a href="/docs/linux/man/8-semodule/">semodule</a></code>(8) and <code><a href="/docs/linux/man/8-genhomedircon/">genhomedircon</a></code>(8).</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-selinux/">selinux</a></code>(8), <code><a href="/docs/linux/man/3-selabel_open/">selabel_open</a></code>(3), <code><a href="/docs/linux/man/3-selabel_lookup/">selabel_lookup</a></code>(3), <code><a href="/docs/linux/man/3-selabel_stats/">selabel_stats</a></code>(3), <code><a href="/docs/linux/man/3-selabel_close/">selabel_close</a></code>(3), <code><a href="/docs/linux/man/3-selinux_set_callback/">selinux_set_callback</a></code>(3), <code><a href="/docs/linux/man/3-selinux_file_context_path/">selinux_file_context_path</a></code>(3), <code><a href="/docs/linux/man/3-freecon/">freecon</a></code>(3), <code><a href="/docs/linux/man/5-selinux_config/">selinux_config</a></code>(5), <code><a href="/docs/linux/man/2-lstat/">lstat</a></code>(2), selinux_file_context_subs_path<code>(3), </code>selinux_file_context_subs_dist_path<code>(3), </code><a href="/docs/linux/man/3-selinux_file_context_homedir_path/">selinux_file_context_homedir_path</a><code>(3), <a href="/docs/linux/man/3-selinux_file_context_local_path/">selinux_file_context_local_path</a></code>(3), <code><a href="/docs/linux/man/8-semodule/">semodule</a></code>(8), <code><a href="/docs/linux/man/8-genhomedircon/">genhomedircon</a></code>(8) </p>

@@ -23,6 +23,6 @@ description: "XtGetApplicationNameAndClass – retrieve application name and cla
 <h2>Description</h2>
 <p><code>XtGetApplicationNameAndClass</code> returns the application name and class passed to <code>XtDisplayInitialize</code> for the specified display. If the display was never initialized or has been closed, the result is undefined. The returned strings are owned by the Intrinsics and must not be modified or freed by the caller.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-xtdisplayinitialize/">XtDisplayInitialize</a></code>(3)<br />
- <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><code><a href="/docs/linux/man/3-xtdisplayinitialize/">XtDisplayInitialize</a></code>(3)<br/>
+ <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

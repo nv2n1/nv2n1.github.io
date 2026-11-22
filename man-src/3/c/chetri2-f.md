@@ -10,7 +10,7 @@ description: "chetri2.f –"
 <p>chetri2.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>chetri2</code> (UPLO, N, A, LDA, IPIV, WORK, LWORK, INFO)<br />
+<p>subroutine <code>chetri2</code> (UPLO, N, A, LDA, IPIV, WORK, LWORK, INFO)<br/>
  <i></i><code>CHETRI2</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine chetri2 (characterUPLO, integerN, complex, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, complex, dimension( * )WORK, integerLWORK, integerINFO)</h3>

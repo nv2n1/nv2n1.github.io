@@ -68,7 +68,7 @@ description: "RSA functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>rsa</i> the rsa object to set the parameter for<br />
+</dt><dd> <i>rsa</i> the rsa object to set the parameter for<br/>
  <i>arg</i> the data object to store</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -79,7 +79,7 @@ description: "RSA functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>rsa</i> rsa parameter.<br />
+</dt><dd> <i>rsa</i> rsa parameter.<br/>
  <i>method</i> the new method for the RSA parameter.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

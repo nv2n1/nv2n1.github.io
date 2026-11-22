@@ -8,11 +8,11 @@ url: "/docs/linux/man/1-tiffset/"
 description: "tiffset – set a field in a TIFF header"
 ---
 
-<p> tiffset &#8211; set a field in a <font SIZE="-1">TIFF</font> header</p>
+<p> tiffset &#8211; set a field in a TIFF header</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tiffset</code> [ <i>options</i> ] <i>filename.tif</i></p>
 <h2>DESCRIPTION</h2>
-<p> <i>Tiffset</i> sets the value of a <font SIZE="-1">TIFF</font> header to a specified value.</p>
+<p> <i>Tiffset</i> sets the value of a TIFF header to a specified value.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-d</code><i> dirnumber</i></dt>

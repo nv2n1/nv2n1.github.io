@@ -14,9 +14,9 @@ description: "ql/termstructures/inflation/piecewiseyoyinflationcurve.hpp – Pie
 #include &lt;ql/termstructures/iterativebootstrap.hpp&gt;
 #include &lt;ql/patterns/lazyobject.hpp&gt;</code></pre>
 <h3>Classes</h3>
-<p>class <code>YoYInflationTraits</code><br />
- <i>Bootstrap traits to use for </i><code>PiecewiseZeroInflationCurve</code>.<br />
- class <code>PiecewiseYoYInflationCurve&lt; Interpolator, Bootstrap, Traits &gt;</code><br />
+<p>class <code>YoYInflationTraits</code><br/>
+ <i>Bootstrap traits to use for </i><code>PiecewiseZeroInflationCurve</code>.<br/>
+ class <code>PiecewiseYoYInflationCurve&lt; Interpolator, Bootstrap, Traits &gt;</code><br/>
  <i>Piecewise year-on-year inflation term structure. </i></p>
 <h2>Detailed Description</h2>
 <p>Piecewise year-on-year inflation term structure.</p>

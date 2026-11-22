@@ -39,36 +39,36 @@ dcmfile-in  DICOM input filename to be dumped
          use config file f for the logger
 </code></pre>
 <h3>input options</h3>
-<p>+ Im&#8211; monitor &#8211; file[f] ilename:string<br />
-                                     text file describing the monitor characteristics +<br />
-                                 Ic&#8211; camera &#8211; file[f]<br />
-                         ilename:string<br />
-                                     text file describing the camera characteristics +<br />
-                                 Ip&#8211; printer &#8211; file[f]<br />
-                         ilename:string<br />
-                                     text file describing the printer characteristics +<br />
-                                 Is&#8211; scanner &#8211; file[f]<br />
-                         ilename:string<br />
-                                     text file describing the scanner characteristics +<br />
-                                 Il&#8211; lum &#8211; range[m] in<br />
-                             max:float<br />
-                                     minimum and maximum<br />
-                                     luminance(cd / m ^ 2) +<br />
-                                 Io&#8211; od &#8211; range[m] in<br />
-                             max:float minimum and maximum optical density(OD),<br />
+<p>+ Im&#8211; monitor &#8211; file[f] ilename:string<br/>
+                                     text file describing the monitor characteristics +<br/>
+                                 Ic&#8211; camera &#8211; file[f]<br/>
+                         ilename:string<br/>
+                                     text file describing the camera characteristics +<br/>
+                                 Ip&#8211; printer &#8211; file[f]<br/>
+                         ilename:string<br/>
+                                     text file describing the printer characteristics +<br/>
+                                 Is&#8211; scanner &#8211; file[f]<br/>
+                         ilename:string<br/>
+                                     text file describing the scanner characteristics +<br/>
+                                 Il&#8211; lum &#8211; range[m] in<br/>
+                             max:float<br/>
+                                     minimum and maximum<br/>
+                                     luminance(cd / m ^ 2) +<br/>
+                                 Io&#8211; od &#8211; range[m] in<br/>
+                             max:float minimum and maximum optical density(OD),<br/>
                                  automatically converted to luminance</p>
 <h3>creation options</h3>
-<p>+ Ca&#8211; ambient &#8211; light[a] mbient light:float<br />
-                                           ambient light<br />
-                                           value(cd / m ^ 2, default:file f) +<br />
-                                       Ci&#8211; illumination[i]<br />
-                           llumination:float illumination value(cd / m ^ 2, default:file f) + Dn&#8211; min &#8211; density[m] inimum optical<br />
-                               density:float Dmin value(default:off, only with + Ip and +Io) + Dx&#8211; max &#8211; density[m] aximum optical<br />
-                               density:float Dmax value(default:off, only with + Ip and +Io) + Cd&#8211; ddl &#8211; count[n] umber of<br />
-                                  DDLs:integer<br />
-                                       number of Device Driving Levels(default:256, only with&#8211; lum / od &#8211; range) +<br />
-                                       Cf&#8211; curve &#8211; fitting[n]<br />
-                                 umber:integer<br />
+<p>+ Ca&#8211; ambient &#8211; light[a] mbient light:float<br/>
+                                           ambient light<br/>
+                                           value(cd / m ^ 2, default:file f) +<br/>
+                                       Ci&#8211; illumination[i]<br/>
+                           llumination:float illumination value(cd / m ^ 2, default:file f) + Dn&#8211; min &#8211; density[m] inimum optical<br/>
+                               density:float Dmin value(default:off, only with + Ip and +Io) + Dx&#8211; max &#8211; density[m] aximum optical<br/>
+                               density:float Dmax value(default:off, only with + Ip and +Io) + Cd&#8211; ddl &#8211; count[n] umber of<br/>
+                                  DDLs:integer<br/>
+                                       number of Device Driving Levels(default:256, only with&#8211; lum / od &#8211; range) +<br/>
+                                       Cf&#8211; curve &#8211; fitting[n]<br/>
+                                 umber:integer<br/>
     use polynomial curve fitting algorithm with order n(0..99, default:file setting or cubic spline)</p>
 <h3>output options</h3>
 <pre><code>
@@ -91,9 +91,9 @@ dcmfile-in  DICOM input filename to be dumped
 <p> Command line options are distinguished from parameters by a leading &#8216;+&#8217; or &#8216;-&#8216; sign, respectively. Usually, order and position of command line options are arbitrary (i.e. they can appear anywhere). However, if options are mutually exclusive the rightmost appearance is used. This behaviour conforms to the standard evaluation rules of common Unix shells. </p>
 <p> In addition, one or more command files can be specified using an &#8216;@&#8217; sign as a prefix to the filename (e.g. <i>@command.txt</i>). Such a command argument is replaced by the content of the corresponding text file (multiple whitespaces are treated as a single separator unless they appear between two quotation marks) prior to any further evaluation. Please note that a command file cannot contain another command file. This simple but effective approach allows to summarize common combinations of options/parameters and avoids longish and confusing command lines (an example is provided in file <i>&lt;datadir&gt;/dumppat.txt</i>).</p>
 <h2>FILES</h2>
-<p> <i>&lt;datadir&gt;/camera.lut</i> &#8211; sample characteristics file of a camera<br />
- <i>&lt;datadir&gt;/monitor.lut</i> &#8211; sample characteristics file of a monitor<br />
- <i>&lt;datadir&gt;/printer.lut</i> &#8211; sample characteristics file of a printer<br />
+<p> <i>&lt;datadir&gt;/camera.lut</i> &#8211; sample characteristics file of a camera<br/>
+ <i>&lt;datadir&gt;/monitor.lut</i> &#8211; sample characteristics file of a monitor<br/>
+ <i>&lt;datadir&gt;/printer.lut</i> &#8211; sample characteristics file of a printer<br/>
  <i>&lt;datadir&gt;/scanner.lut</i> &#8211; sample characteristics file of a scanner</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-dconvlum/">dconvlum</a></code>(1), <code><a href="/docs/linux/man/1-dcod2lum/">dcod2lum</a></code>(1)</p>

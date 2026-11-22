@@ -11,13 +11,13 @@ description: "Token Transport –"
 <p> Token Transport &#8211; </p>
 <p> Send and Receive Security Tokens.</p>
 <h3>Functions</h3>
-<p> int <code>globus_gss_assist_token_get_fd</code> (void *arg, void **bufp, size_t *sizep)<br />
- <i>Get token from a FILE *. </i><br />
- int <code>globus_gss_assist_token_send_fd</code> (void *arg, void *buf, size_t size)<br />
- <i>Send token via a FILE *. </i><br />
- int <code>globus_gss_assist_token_send_fd_without_length</code> (void *arg, void *buf, size_t size)<br />
- <i>Send token to a FILE *. </i><br />
- int <code>globus_gss_assist_token_send_fd_ex</code> (void *exp, void *buf, size_t size)<br />
+<p> int <code>globus_gss_assist_token_get_fd</code> (void *arg, void **bufp, size_t *sizep)<br/>
+ <i>Get token from a FILE *. </i><br/>
+ int <code>globus_gss_assist_token_send_fd</code> (void *arg, void *buf, size_t size)<br/>
+ <i>Send token via a FILE *. </i><br/>
+ int <code>globus_gss_assist_token_send_fd_without_length</code> (void *arg, void *buf, size_t size)<br/>
+ <i>Send token to a FILE *. </i><br/>
+ int <code>globus_gss_assist_token_send_fd_ex</code> (void *exp, void *buf, size_t size)<br/>
  <i>Send a token to a FILE *. </i></p>
 <h2>Detailed Description</h2>
 <p> Send and Receive Security Tokens. </p>
@@ -28,8 +28,8 @@ description: "Token Transport –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>arg</i> the FILE * stream cast to a void pointer<br />
- <i>bufp</i> the resulting token<br />
+</dt><dd> <i>arg</i> the FILE * stream cast to a void pointer<br/>
+ <i>bufp</i> the resulting token<br/>
  <i>sizep</i> the size (number of bytes) read into bufp</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -45,8 +45,8 @@ description: "Token Transport –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>arg</i> the FILE * stream to send the token on<br />
- <i>buf</i> the token<br />
+</dt><dd> <i>arg</i> the FILE * stream to send the token on<br/>
+ <i>buf</i> the token<br/>
  <i>size</i> the size of the token in bytes</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -57,8 +57,8 @@ description: "Token Transport –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>exp</i> the globus_gss_assist_ex variable that holds the FILE * stream and flags to bet set<br />
- <i>buf</i> the token buffer to send<br />
+</dt><dd> <i>exp</i> the globus_gss_assist_ex variable that holds the FILE * stream and flags to bet set<br/>
+ <i>buf</i> the token buffer to send<br/>
  <i>size</i> size of the token buffer</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

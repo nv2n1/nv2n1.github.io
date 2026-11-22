@@ -41,7 +41,7 @@ description: "btrfstune – tune various filesystem parameters"
 <dd>Enable seeding on a given device. Value 1 will enable seeding, 0 will disable it. </dd>
 <p> A seeding filesystem is forced to be mounted read-only. A new device can be added to the filesystem and will capture all writes keeping the seeding device intact. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Warning</code> </font><br />
+<dd> <code>Warning</code> <br/>
  Clearing the seeding flag on a device may be dangerous. If a previously-seeding device is changed, all filesystems that used that device will become unmountable. Setting the seeding flag back will not fix that. </dd>
 <p> A valid usecase is <i>seeding device as a base image</i>. Clear the seeding flag, update the filesystem and make it seeding again, provided that it&#8217;s OK to throw away all filesystems built on top of the previous base. </p>
 </dl>
@@ -55,7 +55,7 @@ description: "btrfstune – tune various filesystem parameters"
 <p> The <i>UUID</i> should be a 36 bytes string in <code><a href="/docs/linux/man/3-printf/">printf</a></code>(3) format <i>&quot;%08x-%04x-%04x-%04x-%012x&quot;</i>. If there is a previous unfinished fsid change, it will continue only if the <i>UUID</i> matches the unfinished one or if you use the option <i>-u</i>. </p>
 <p> All metadata blocks are rewritten, this may take some time, but the final filesystem compatibility is unaffected, unlike <i>-M</i>. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Warning</code> </font><br />
+<dd> <code>Warning</code> <br/>
  Cancelling or interrupting a UUID change operation will make the filesystem temporarily unmountable. To fix it, rerun <i>btrfstune -u</i> and let it complete. </dd>
 </dl>
 </dl>

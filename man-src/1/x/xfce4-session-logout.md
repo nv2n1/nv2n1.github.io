@@ -41,5 +41,5 @@ description: "xfce4-session-logout – Logs out from Xfce"
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to <a rel="nofollow" href="http://bugzilla.xfce.org/.">http://bugzilla.xfce.org/.</a></p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2004 Benedikt Meurer.<br />
+<p> Copyright &#169; 2004 Benedikt Meurer.<br/>
  Copyright &#169; 2008 Brian Tarricone. </p>

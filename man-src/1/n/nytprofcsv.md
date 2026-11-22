@@ -50,8 +50,8 @@ $ nytprofcsv[-h][-d][-o&lt;output directory&gt;][-f&lt;input file&gt;] perl - d 
 <p> Note2: If the source file is modified between profiling and report generation, the source might be misaligned</p>
 <h2>SEE ALSO</h2>
 <p> Mailing list and discussion at &lt;<a rel="nofollow" href="http://groups.google.com/group/develnytprof-dev">http://groups.google.com/group/develnytprof-dev</a>&gt; </p>
-<p> Public <font SIZE="-1">SVN</font> Repository and hacking instructions at &lt;<a rel="nofollow" href="http://code.google.com/p/perl-devel-nytprof/">http://code.google.com/p/perl-devel-nytprof/</a>&gt; </p>
-<p> Devel::NYTProf Devel::NYTProf::Reader nytprofhtml is an <font SIZE="-1">HTML</font> implementation of Devel::NYTProf::Reader</p>
+<p> Public SVN Repository and hacking instructions at &lt;<a rel="nofollow" href="http://code.google.com/p/perl-devel-nytprof/">http://code.google.com/p/perl-devel-nytprof/</a>&gt; </p>
+<p> Devel::NYTProf Devel::NYTProf::Reader nytprofhtml is an HTML implementation of Devel::NYTProf::Reader</p>
 <h2>AUTHOR</h2>
 <p> Adam Kaplan, akaplan at nytimes dotcom</p>
 <h2>COPYRIGHT AND LICENSE</h2>

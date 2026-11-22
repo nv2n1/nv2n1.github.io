@@ -54,66 +54,66 @@ input file format:
   # without meta-header but unfortunately it does.
 </pre>
 <h3>processing options</h3>
-<p>color space conversion:<br />
-  +cp   &#8211;conv-photometric<br />
-          convert if YCbCr photometric interpretation (default)<br />
-#If the compressed image uses YBR_FULL or YBR_FULL_422 photometric<br />
-#interpretation, convert to RGB during decompression.<br />
-  +cl   &#8211;conv-lossy<br />
-          convert YCbCr to RGB if lossy JPEG<br />
-#If the compressed image is encoded in lossy JPEG, assume YCbCr<br />
-#color model and convert to RGB.<br />
-  +cg   &#8211;conv-guess<br />
-          convert to RGB if YCbCr is guessed by library<br />
-#If the underlying JPEG library &#8220;guesses&#8221; the color space of the<br />
-#compressed image to be YCbCr, convert to RGB.<br />
-  +cgl  &#8211;conv-guess-lossy<br />
-          convert to RGB if lossy JPEG and YCbCr is<br />
-          guessed by the underlying JPEG library<br />
-#If the compressed image is encoded in lossy JPEG and the underlying<br />
-#JPEG library &#8220;guesses&#8221; the color space to be YCbCr, convert to RGB.<br />
-  +ca   &#8211;conv-always<br />
-          always convert YCbCr to RGB<br />
-#If the compressed image is a color image, assume YCbCr color model<br />
-#and convert to RGB.<br />
-  +cn   &#8211;conv-never<br />
-          never convert color space<br />
-#Never convert color space during decompression.<br />
-planar configuration:<br />
-  +pa   &#8211;planar-auto<br />
-          automatically determine planar configuration<br />
-          from SOP class and color space (default)<br />
-#If the compressed image is a color image, store in color &#8211; by &#8211; plane<br />
-#planar configuration if required by the SOP class and photometric<br />
-#interpretation.Hardcopy Color images are always stored color &#8211; by &#8211;<br />
-#plane, and the revised Ultrasound image objects are stored color &#8211; by &#8211;<br />
-#plane if the color model is YBR_FULL.Everything else is stored<br />
-#color &#8211; by &#8211; pixel.<br />
-  +px   &#8211;color-by-pixel<br />
-          always store color-by-pixel<br />
-#If the compressed image is a color image, store in color &#8211; by &#8211; pixel<br />
-#planar configuration.<br />
-  +pl   &#8211;color-by-plane<br />
-          always store color-by-plane<br />
-#If the compressed image is a color image, store in color &#8211; by &#8211; plane<br />
-#planar configuration.<br />
-SOP Instance UID:<br />
-  +ud   &#8211;uid-default<br />
-          keep same SOP Instance UID (default)<br />
-#Never assigns a new SOP instance UID.<br />
-  +ua   &#8211;uid-always<br />
-          always assign new UID<br />
-#Always assigns a new SOP instance UID.<br />
-workaround options for incorrect JPEG encodings:<br />
-  +w6   &#8211;workaround-pred6<br />
-          enable workaround for JPEG lossless images<br />
-          with overflow in predictor 6<br />
-#DICOM images with 16 bits / pixel have been observed &#8220;in the wild&#8221;<br />
-#that are compressed with lossless JPEG and need special handling<br />
-#because the encoder produced an 16 &#8211; bit integer overflow in predictor<br />
-# 6, which needs to be compensated(reproduced) during decompression.<br />
-#This flag enables a correct decompression of such faulty images, but<br />
-#at the same time will cause an incorrect decompression of correctly<br />
+<p>color space conversion:<br/>
+  +cp   &#8211;conv-photometric<br/>
+          convert if YCbCr photometric interpretation (default)<br/>
+#If the compressed image uses YBR_FULL or YBR_FULL_422 photometric<br/>
+#interpretation, convert to RGB during decompression.<br/>
+  +cl   &#8211;conv-lossy<br/>
+          convert YCbCr to RGB if lossy JPEG<br/>
+#If the compressed image is encoded in lossy JPEG, assume YCbCr<br/>
+#color model and convert to RGB.<br/>
+  +cg   &#8211;conv-guess<br/>
+          convert to RGB if YCbCr is guessed by library<br/>
+#If the underlying JPEG library &#8220;guesses&#8221; the color space of the<br/>
+#compressed image to be YCbCr, convert to RGB.<br/>
+  +cgl  &#8211;conv-guess-lossy<br/>
+          convert to RGB if lossy JPEG and YCbCr is<br/>
+          guessed by the underlying JPEG library<br/>
+#If the compressed image is encoded in lossy JPEG and the underlying<br/>
+#JPEG library &#8220;guesses&#8221; the color space to be YCbCr, convert to RGB.<br/>
+  +ca   &#8211;conv-always<br/>
+          always convert YCbCr to RGB<br/>
+#If the compressed image is a color image, assume YCbCr color model<br/>
+#and convert to RGB.<br/>
+  +cn   &#8211;conv-never<br/>
+          never convert color space<br/>
+#Never convert color space during decompression.<br/>
+planar configuration:<br/>
+  +pa   &#8211;planar-auto<br/>
+          automatically determine planar configuration<br/>
+          from SOP class and color space (default)<br/>
+#If the compressed image is a color image, store in color &#8211; by &#8211; plane<br/>
+#planar configuration if required by the SOP class and photometric<br/>
+#interpretation.Hardcopy Color images are always stored color &#8211; by &#8211;<br/>
+#plane, and the revised Ultrasound image objects are stored color &#8211; by &#8211;<br/>
+#plane if the color model is YBR_FULL.Everything else is stored<br/>
+#color &#8211; by &#8211; pixel.<br/>
+  +px   &#8211;color-by-pixel<br/>
+          always store color-by-pixel<br/>
+#If the compressed image is a color image, store in color &#8211; by &#8211; pixel<br/>
+#planar configuration.<br/>
+  +pl   &#8211;color-by-plane<br/>
+          always store color-by-plane<br/>
+#If the compressed image is a color image, store in color &#8211; by &#8211; plane<br/>
+#planar configuration.<br/>
+SOP Instance UID:<br/>
+  +ud   &#8211;uid-default<br/>
+          keep same SOP Instance UID (default)<br/>
+#Never assigns a new SOP instance UID.<br/>
+  +ua   &#8211;uid-always<br/>
+          always assign new UID<br/>
+#Always assigns a new SOP instance UID.<br/>
+workaround options for incorrect JPEG encodings:<br/>
+  +w6   &#8211;workaround-pred6<br/>
+          enable workaround for JPEG lossless images<br/>
+          with overflow in predictor 6<br/>
+#DICOM images with 16 bits / pixel have been observed &#8220;in the wild&#8221;<br/>
+#that are compressed with lossless JPEG and need special handling<br/>
+#because the encoder produced an 16 &#8211; bit integer overflow in predictor<br/>
+# 6, which needs to be compensated(reproduced) during decompression.<br/>
+#This flag enables a correct decompression of such faulty images, but<br/>
+#at the same time will cause an incorrect decompression of correctly<br/>
 #compressed images.Use with care.</p>
 <h3>output options</h3>
 <pre><code>

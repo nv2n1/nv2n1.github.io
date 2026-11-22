@@ -13,7 +13,7 @@ description: "nerr_match"
 int nerr_match(NEOERR *err, NERR_TYPE type);
 </code></pre>
 <h2>Arguments</h2>
-<p>err &#8211; the NEOERR that has an error.<br />
+<p>err &#8211; the NEOERR that has an error.<br/>
  type &#8211; the NEOERR type, as registered with nerr_register</p>
 <h2>Description</h2>
 <p>nerr_match is used to walk the NEOERR chain and match the error against a specific error type. In exception parlance, this would be the equivalent of &quot;catch&quot;. Typically, you can just compare a NEOERR against STATUS_OK or just test for true if you are checking for any error. </p>

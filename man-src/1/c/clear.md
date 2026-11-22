@@ -24,16 +24,16 @@ description: "clear – clear the terminal screen"
 <dd> do not attempt to clear the terminal&#8217;s scrollback buffer using the extended &#8220;E3&#8221; capability.</dd></dl>
 <h2>HISTORY</h2>
 <p> A <code>clear</code> command appeared in 2.79BSD dated February 24, 1979. Later that was provided in Unix 8th edition (1985). </p>
-<p> AT&amp;T adapted a different BSD program (<code>tset</code>) to make a new command (<code>tput</code>), and used this to replace the <code>clear</code> command with a shell script which calls <code>tput clear</code>, e.g.,<br />
-&nbsp;.sp<br />
+<p> AT&amp;T adapted a different BSD program (<code>tset</code>) to make a new command (<code>tput</code>), and used this to replace the <code>clear</code> command with a shell script which calls <code>tput clear</code>, e.g.,<br/>
+&nbsp;.sp<br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre>
 /usr/bin/tput ${1:+-T$1} clear 2&gt; /dev/null
 exit
 </pre>
 <p>&nbsp;.in -4 </p>
-<p> In 1989, when Keith Bostic revised the BSD <code>tput</code> command to make it similar to the AT&amp;T <code>tput</code>, he added a shell script for the <code>clear</code> command:<br />
-&nbsp;.sp<br />
+<p> In 1989, when Keith Bostic revised the BSD <code>tput</code> command to make it similar to the AT&amp;T <code>tput</code>, he added a shell script for the <code>clear</code> command:<br/>
+&nbsp;.sp<br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre>
 exec tput clear
@@ -41,9 +41,9 @@ exec tput clear
 <p>&nbsp;.in -4 </p>
 <p> The remainder of the script in each case is a copyright notice. </p>
 <p> The ncurses <code>clear</code> command began in 1995 by adapting the original BSD <code>clear</code> command (with terminfo, of course). </p>
-<p> The <code>E3</code> extension came later:<br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 In June 1999, xterm provided an extension to the standard control sequence for clearing the screen. Rather than clearing just the visible part of the screen using<br />
-&nbsp;.sp<br />
+<p> The <code>E3</code> extension came later:<br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 In June 1999, xterm provided an extension to the standard control sequence for clearing the screen. Rather than clearing just the visible part of the screen using<br/>
+&nbsp;.sp<br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre>
 printf '[2J'
@@ -51,18 +51,18 @@ printf '[2J'
 <p>&nbsp;.in -4</p>
 <dl>
 <dt>
-</dt><dd> one could clear the <i>scrollback</i> using<br />
-&nbsp;.sp<br />
+</dt><dd> one could clear the <i>scrollback</i> using<br/>
+&nbsp;.sp<br/>
 &nbsp;.in&nbsp;+4 </dd>
 <pre>
 printf '[<code>3</code>J'
 </pre>
 <p>&nbsp;.in -4</p>
 <dt>
-</dt><dd> This is documented in <i>XTerm Control Sequences</i> as a feature originating with xterm.<br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 A few other terminal developers adopted the feature, e.g., PuTTY in 2006.<br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 In April 2011, a Red Hat developer submitted a patch to the Linux kernel, modifying its console driver to do the same thing. The Linux change, part of the 3.0 release, did not mention xterm, although it was cited in the Red Hat bug report (#683733) which led to the change.<br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 Again, a few other terminal developers adopted the feature. But the next relevant step was a change to the <code>clear</code> program in 2013 to incorporate this extension.<br />
+</dt><dd> This is documented in <i>XTerm Control Sequences</i> as a feature originating with xterm.<br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 A few other terminal developers adopted the feature, e.g., PuTTY in 2006.<br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 In April 2011, a Red Hat developer submitted a patch to the Linux kernel, modifying its console driver to do the same thing. The Linux change, part of the 3.0 release, did not mention xterm, although it was cited in the Red Hat bug report (#683733) which led to the change.<br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 Again, a few other terminal developers adopted the feature. But the next relevant step was a change to the <code>clear</code> program in 2013 to incorporate this extension.<br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 In 2013, the <code>E3</code> extension was overlooked in <code>tput</code> with the &#8220;clear&#8221; parameter. That was addressed in 2016 by reorganizing <code>tput</code> to share its logic with <code>clear</code> and <code>tset</code>.</dd></dl>
 <h2>PORTABILITY</h2>
 <p> Neither IEEE Std 1003.1/The Open Group Base Specifications Issue 7 (POSIX.1-2008) nor X/Open Curses Issue 7 documents tset or reset. </p>

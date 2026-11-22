@@ -15,9 +15,9 @@ description: "docker-export – Export the contents of a container’s filesyste
 <p> Export the contents of a container&#8217;s filesystem using the full or shortened container ID or container name. The output is exported to STDOUT and can be redirected to a tar file. </p>
 <p> Stream to a file instead of STDOUT by using <code>-o</code>. </p>
 <h2>OPTIONS</h2>
-<p> <code>&#8211;help</code><br />
+<p> <code>&#8211;help</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Print usage statement </p>
-<p> <code>-o</code>, <code>&#8211;output</code>=&quot;&quot;<br />
+<p> <code>-o</code>, <code>&#8211;output</code>=&quot;&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>Write to a file, instead of STDOUT </p>
 <h2>EXAMPLES</h2>
 <p> Export the contents of the container called angry_bell to a tar file called angry_bell.tar: </p>

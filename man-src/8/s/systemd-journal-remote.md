@@ -12,7 +12,7 @@ description: "systemd-journal-remote – Receive journal messages over the netwo
 <dl>
 <dt> <code>systemd-journal-remote</code> [OPTIONS&#8230;] [-o/&#8211;output=<i>DIR</i>|<i>FILE</i>] [SOURCES&#8230;]</dt></dl>
 <h2>Description</h2>
-<dd>systemd-journal-remote is a command to receive serialized journal events and store them to the journal. Input streams are in the m[blue]<code>Journal Export Format</code>m[]<font SIZE="-2">[1]</font>, i.e. like the output from <code>journalctl &#8211;output=export</code>. For transport over the network, this serialized stream is usually carried over an HTTPS connection.</dd>
+<dd>systemd-journal-remote is a command to receive serialized journal events and store them to the journal. Input streams are in the m[blue]<code>Journal Export Format</code>m[][1], i.e. like the output from <code>journalctl &#8211;output=export</code>. For transport over the network, this serialized stream is usually carried over an HTTPS connection.</dd>
 <h2>Sources</h2>
 <p>Sources can be either &quot;active&quot; (<code>systemd-journal-remote</code> requests and pulls the data), or &quot;passive&quot; (<code>systemd-journal-remote</code> waits for a connection and then receives events pushed by the other side). </p>
 <p> <code>systemd-journal-remote</code> can read more than one event stream at a time. They will be interleaved in the output file. In case of &quot;active&quot; connections, each &quot;source&quot; is one stream, and in case of &quot;passive&quot; connections, each connection can result in a separate stream. Sockets can be configured in &quot;accept&quot; mode (i.e. only one connection), or &quot;listen&quot; mode (i.e. multiple connections, each resulting in a stream). </p>

@@ -12,36 +12,36 @@ description: "rrddump – dump the contents of an RRD to XML format"
 <h2>SYNOPSIS</h2>
 <p> <code>rrdtool</code> <code>dump</code> <i>filename.rrd</i> [<i>filename.xml</i>] [<code>&#8211;header</code>|<code>-h</code>&nbsp;<wbr>{none,xsd,dtd}] [<code>&#8211;no-header</code>] [<code>&#8211;daemon</code>&nbsp;<wbr><i>address</i>] &gt;&nbsp;<wbr><i>filename.xml</i></p>
 <h2>DESCRIPTION</h2>
-<p> The <code>dump</code> function writes the contents of an <font SIZE="-1"><code>RRD</code></font> in human readable (?) <font SIZE="-1">XML</font> format to a file or to stdout. This format can be read by rrdrestore. Together they allow you to transfer your files from one computer architecture to another as well to manipulate the contents of an <font SIZE="-1"><code>RRD</code></font> file in a somewhat more convenient manner.</p>
+<p> The <code>dump</code> function writes the contents of an <code>RRD</code> in human readable (?) XML format to a file or to stdout. This format can be read by rrdrestore. Together they allow you to transfer your files from one computer architecture to another as well to manipulate the contents of an <code>RRD</code> file in a somewhat more convenient manner.</p>
 <dl>
 <dt><i>filename.rrd</i></dt>
-<dd> The name of the <font SIZE="-1"><code>RRD</code></font> you want to dump.</dd>
+<dd> The name of the <code>RRD</code> you want to dump.</dd>
 <dt><i>filename.xml</i></dt>
-<dd> The (optional) filename that you want to write the <font SIZE="-1">XML</font> output to. If not specified, the <font SIZE="-1">XML</font> will be printed to stdout.</dd>
+<dd> The (optional) filename that you want to write the XML output to. If not specified, the XML will be printed to stdout.</dd>
 <dt><code>&#8211;header</code>|<code>-h</code> {none,xsd,dtd}</dt>
 <dd> By default RRDtool will add a dtd header to the xml file. Here you can customize this to and xsd header or no header at all.</dd>
 <dt><code>&#8211;no-header</code></dt>
 <dd> A shortcut for &#8211;header=none. </dd>
 <p> If you want to restore the dump with RRDtool 1.2 you should use the &#8211;no-header option since 1.2 can not deal with xml headers.</p>
 <dt><code>&#8211;daemon</code> <i>address</i></dt>
-<dd> Address of the rrdcached daemon. If specified, a <tt>&quot;flush&quot;</tt> command is sent to the server before reading the <font SIZE="-1">RRD</font> files. This allows <code>rrdtool</code> to return fresh data even if the daemon is configured to cache values for a long time. For a list of accepted formats, see the <code>-l</code> option in the rrdcached manual. </dd>
+<dd> Address of the rrdcached daemon. If specified, a <tt>&quot;flush&quot;</tt> command is sent to the server before reading the RRD files. This allows <code>rrdtool</code> to return fresh data even if the daemon is configured to cache values for a long time. For a list of accepted formats, see the <code>-l</code> option in the rrdcached manual. </dd>
 <pre>
  rrdtool dump --daemon unix:/var/run/rrdcached.sock /var/lib/rrd/foo.rrd
 </pre>
 </dl>
 <h2>EXAMPLES</h2>
-<p> To transfer an <font SIZE="-1">RRD</font> between architectures, follow these steps:</p>
+<p> To transfer an RRD between architectures, follow these steps:</p>
 <dl>
 <dt>1.</dt>
-<dd> On the same system where the <font SIZE="-1">RRD</font> was created, use <code>rrdtool</code> <code>dump</code> to export the data to <font SIZE="-1">XML</font> format.</dd>
+<dd> On the same system where the RRD was created, use <code>rrdtool</code> <code>dump</code> to export the data to XML format.</dd>
 <dt>2.</dt>
-<dd> Transfer the <font SIZE="-1">XML</font> dump to the target system.</dd>
+<dd> Transfer the XML dump to the target system.</dd>
 <dt>3.</dt>
-<dd> Run <code>rrdtool</code> <code>restore</code> to create a new <font SIZE="-1">RRD</font> from the <font SIZE="-1">XML</font> dump. See <code>rrdrestore</code> for details.</dd></dl>
+<dd> Run <code>rrdtool</code> <code>restore</code> to create a new RRD from the XML dump. See <code>rrdrestore</code> for details.</dd></dl>
 <h2>ENVIRONMENT VARIABLES</h2>
 <p> The following environment variables may be used to change the behavior of <tt>&quot;rrdtool dump&quot;</tt>:</p>
 <dl>
-<dt><font SIZE="-1"><code>RRDCACHED_ADDRESS</code></font></dt>
+<dt><code>RRDCACHED_ADDRESS</code></dt>
 <dd> If this environment variable is set it will have the same effect as specifying the <tt>&quot;--daemon&quot;</tt> option on the command line. If both are present, the command line argument takes precedence.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Tobias Oetiker &lt;tobi [at] oetiker.ch&gt; </p>

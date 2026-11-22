@@ -22,13 +22,13 @@ description: "threedkit – a set of functions for 3D support."
 <p> In the case of <code>ROTATE_OBJECT</code> being on, although the camera position is zero, some distance has to be placed between the camera and the object (or else it would appear to be infinitely large on the screen). This is done using the variable <i>s_cam</i> which is initialized to <i>distance</i> which is set by the calling application. It then loops through each surface (ordering them in the way they were just sorted &#8212; i.e. according to <i>sortarray</i> indexing) and calls one of five graphic routines to write the 3D surface to the hardware. </p>
 <dt><code>2.</code></dt>
 <dd>Assume that <code>TD_drawsolid</code> then calls <code>TD_drawmesh</code>. Here, each surface grid point is first <code>TD_translate</code>&#8216;d into a 2D screen point and stored in the <i>temp</i> array. There are obviously w(idth)*h(eight) points in the grid. </dd>
-<p> Following, each line from the 2D temp array is drawn on the screen. To draw the surface, the corner wishbone (two lines) from each grid square is drawn while advancing across and the down. After completing the scan, the furthest two edges of the surface must then be filled in, vis.:<br />
-&nbsp;<wbr>_&nbsp;<wbr>_&nbsp;<wbr>_&nbsp;<wbr>_&nbsp;<wbr>_&nbsp;<wbr>_<br />
- |_|_|_|_|_|_<br />
- |_|_|_|_|_|_<br />
- |_|_|_|_|_|_<br />
- |_|_|_|_|_|_<br />
- |_|_|_|_|_|_<br />
+<p> Following, each line from the 2D temp array is drawn on the screen. To draw the surface, the corner wishbone (two lines) from each grid square is drawn while advancing across and the down. After completing the scan, the furthest two edges of the surface must then be filled in, vis.:<br/>
+&nbsp;<wbr>_&nbsp;<wbr>_&nbsp;<wbr>_&nbsp;<wbr>_&nbsp;<wbr>_&nbsp;<wbr>_<br/>
+ |_|_|_|_|_|_<br/>
+ |_|_|_|_|_|_<br/>
+ |_|_|_|_|_|_<br/>
+ |_|_|_|_|_|_<br/>
+ |_|_|_|_|_|_<br/>
  | | | | | | </p>
 <p> To understand the object rotation, a knowledge of matrix multiplication is required. I once derived a camera rotation before I learned matrix computation. It amounted to the same thing, but was unnecessarily complicated to optimise. </p>
 <dt><code>3.</code></dt>
@@ -50,9 +50,9 @@ description: "threedkit – a set of functions for 3D support."
 <p>This manual page was edited by Michael Weller &lt;eowmob [at] exp-math.uni-essen.de&gt;. The demos, the initial documentation and the whole threedkit stuff was done by Paul Sheer &lt;psheer [at] icon.co.za&gt;. </p>
 <p> Paper mail:</p>
 <dl>
-<dd>Paul Sheer<br />
- P O BOX 890507<br />
- Lyndhurst<br />
- Johannesburg 2106<br />
+<dd>Paul Sheer<br/>
+ P O BOX 890507<br/>
+ Lyndhurst<br/>
+ Johannesburg 2106<br/>
  South Africa</dd></dl>
 <p> Donations (by check or postal order) will be appreciated and will encourage further development of this software. However this is strictly on a voluntary basis where this software falls under the GNU LIBRARY GENERAL PUBLIC LICENSE.</p>

@@ -9,12 +9,12 @@ description: "new-kernel-pkg – tool to script kernel installation"
 
 <p>new-kernel-pkg &#8211; tool to script kernel installation </p>
 <h2>Synopsis</h2>
-<p><code>new-kernel-pkg</code> [-v] [&#8211;mkinitrd] [&#8211;rminitrd] [&#8211;dracut]<br />
-&nbsp;<wbr>[&#8211;initrdfile=<i>initrd-image</i>&nbsp;<wbr>[&#8211;depmod]&nbsp;<wbr>[&#8211;rmmoddep]<br />
-&nbsp;<wbr>[&#8211;kernel-args=<i>args</i>]&nbsp;<wbr>[&#8211;remove-args=<i>args</i>]<br />
-&nbsp;<wbr>[&#8211;banner=<i>banner</i>]&nbsp;<wbr>[&#8211;multiboot=<i>multiboot</i>]<br />
-&nbsp;<wbr>[&#8211;mbargs=<i>mbargs</i>]&nbsp;<wbr>[&#8211;make-default]&nbsp;<wbr>[&#8211;add-dracut-args]<br />
-&nbsp;<wbr>[&#8211;add-plymouth-initrd]&nbsp;<wbr>[&#8211;host-only]<br />
+<p><code>new-kernel-pkg</code> [-v] [&#8211;mkinitrd] [&#8211;rminitrd] [&#8211;dracut]<br/>
+&nbsp;<wbr>[&#8211;initrdfile=<i>initrd-image</i>&nbsp;<wbr>[&#8211;depmod]&nbsp;<wbr>[&#8211;rmmoddep]<br/>
+&nbsp;<wbr>[&#8211;kernel-args=<i>args</i>]&nbsp;<wbr>[&#8211;remove-args=<i>args</i>]<br/>
+&nbsp;<wbr>[&#8211;banner=<i>banner</i>]&nbsp;<wbr>[&#8211;multiboot=<i>multiboot</i>]<br/>
+&nbsp;<wbr>[&#8211;mbargs=<i>mbargs</i>]&nbsp;<wbr>[&#8211;make-default]&nbsp;<wbr>[&#8211;add-dracut-args]<br/>
+&nbsp;<wbr>[&#8211;add-plymouth-initrd]&nbsp;<wbr>[&#8211;host-only]<br/>
 &nbsp;<wbr>&lt;&#8211;install | &#8211;remove | &#8211;update | &#8211;rpmposttrans&gt;&nbsp;<wbr>&lt;kernel-version&gt; </p>
 <h2>Description</h2>
 <p><code>new-kernel-pkg</code> is a tool used in packaging to automate the installation of a new kernel, including the creation of an initial ram filesystem image, updating of bootloader configuration, and other associated tasks. </p>

@@ -11,7 +11,7 @@ description: "ctgexc.f –"
 <p> ctgexc.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>ctgexc</code> (WANTQ, WANTZ, N, A, LDA, B, LDB, Q, LDQ, Z, LDZ, IFST, ILST, INFO)<br />
+<p> subroutine <code>ctgexc</code> (WANTQ, WANTZ, N, A, LDA, B, LDB, Q, LDQ, Z, LDZ, IFST, ILST, INFO)<br/>
  <i></i><code>CTGEXC</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ctgexc (logicalWANTQ, logicalWANTZ, integerN, complex, dimension( lda, * )A, integerLDA, complex, dimension( ldb, * )B, integerLDB, complex, dimension( ldq, * )Q, integerLDQ, complex, dimension( ldz, * )Z, integerLDZ, integerIFST, integerILST, integerINFO)</h3>

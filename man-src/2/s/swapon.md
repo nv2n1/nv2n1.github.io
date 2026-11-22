@@ -10,9 +10,9 @@ description: "swapon, swapoff – start/stop swapping to file/device"
 
 <p> swapon, swapoff &#8211; start/stop swapping to file/device </p>
 <h2>SYNOPSIS</h2>
-<p> <code>#include &lt;unistd.h&gt;</code><br />
+<p> <code>#include &lt;unistd.h&gt;</code><br/>
  <code>#include &lt;sys/swap.h&gt;</code> </p>
-<p> <code>int swapon(const char *</code><i>path</i><code>, int </code><i>swapflags</i><code>);</code><br />
+<p> <code>int swapon(const char *</code><i>path</i><code>, int </code><i>swapflags</i><code>);</code><br/>
  <code>int swapoff(const char *</code><i>path</i><code>);</code></p>
 <h2>DESCRIPTION</h2>
 <p> <code>swapon</code>() sets the swap area to the file or block device specified by <i>path</i>. <code>swapoff</code>() stops swapping to the file or block device specified by <i>path</i>. </p>

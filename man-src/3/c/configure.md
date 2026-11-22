@@ -31,8 +31,8 @@ XMLTV::Configure - Configuration file handling for XMLTV grabbers
  stagesub shall be a coderef that takes a stage-name or undef and a configuration hashref as a parameter and returns an xml-string that describes the configuration necessary for that stage. The xml-string shall follow the xmltv-configuration.dtd. 
  listsub shall be a coderef that takes a configuration hash as returned by LoadConfig as the first parameter and an option hash as returned by ParseOptions as the second parameter and returns an xml-string containing a list of all the channels that the grabber can deliver data for using the supplied configuration. Note that the listsub shall not use any channel-configuration from the hashref.</dd></dl><h2>Copyright</h2>Copyright (C) 2005 Mattias Holmlund. 
 
- This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. 
+ This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. 
 
- This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE. </font> See the <font SIZE="-1">GNU</font> General Public License for more details. 
+ This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. 
 
- You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, <font SIZE="-1">MA 02110-1301, USA.</font>
+ You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.

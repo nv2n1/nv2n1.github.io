@@ -11,7 +11,7 @@ description: "sgesvd.f –"
 <p> sgesvd.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>sgesvd</code> (JOBU, JOBVT, M, N, A, LDA, S, U, LDU, VT, LDVT, WORK, LWORK, INFO)<br />
+<p> subroutine <code>sgesvd</code> (JOBU, JOBVT, M, N, A, LDA, S, U, LDU, VT, LDVT, WORK, LWORK, INFO)<br/>
  <i></i><code> SGESVD computes the singular value decomposition (SVD) for GE matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sgesvd (characterJOBU, characterJOBVT, integerM, integerN, real, dimension( lda, * )A, integerLDA, real, dimension( * )S, real, dimension( ldu, * )U, integerLDU, real, dimension( ldvt, * )VT, integerLDVT, real, dimension( * )WORK, integerLWORK, integerINFO)</h3>
@@ -100,38 +100,38 @@ description: "sgesvd.f –"
           The singular values of A, sorted so that S(i) &gt;= S(i+1).
 </pre>
 <p> <i>U</i> </p>
-<p>U is REAL array, dimension(LDU, UCOL)(LDU, M) if JOBU = &#8216;A&#8217; or (LDU, min(M, N)) if JOBU = &#8216;S&#8217;.If JOBU = &#8216;A&#8217;, U contains the M &#8211; by &#8211; M orthogonal matrix U;<br />
-if JOBU<br />
-    = &#8216;S&#8217;, U contains the first min(m, n) columns of U(the left singular vectors, stored columnwise);<br />
-if JOBU<br />
+<p>U is REAL array, dimension(LDU, UCOL)(LDU, M) if JOBU = &#8216;A&#8217; or (LDU, min(M, N)) if JOBU = &#8216;S&#8217;.If JOBU = &#8216;A&#8217;, U contains the M &#8211; by &#8211; M orthogonal matrix U;<br/>
+if JOBU<br/>
+    = &#8216;S&#8217;, U contains the first min(m, n) columns of U(the left singular vectors, stored columnwise);<br/>
+if JOBU<br/>
 = &#8216;N&#8217; or &#8216;O&#8217;, U is not referenced.</p>
 <p> <i>LDU</i> </p>
-<p>LDU is INTEGER<br />
-        The leading dimension of the array U.LDU &gt;= 1;<br />
-if JOBU<br />
+<p>LDU is INTEGER<br/>
+        The leading dimension of the array U.LDU &gt;= 1;<br/>
+if JOBU<br/>
 = &#8216;S&#8217; or &#8216;A&#8217;, LDU &gt;= M.</p>
 <p> <i>VT</i> </p>
-<p>VT is REAL array, dimension(LDVT, N) If JOBVT = &#8216;A&#8217;, VT contains the N &#8211; by &#8211; N orthogonal matrix V **T;<br />
-if JOBVT<br />
-    = &#8216;S&#8217;, VT contains the first min(m, n) rows of<br />
-        V **T(the right singular vectors, stored rowwise);<br />
-if JOBVT<br />
+<p>VT is REAL array, dimension(LDVT, N) If JOBVT = &#8216;A&#8217;, VT contains the N &#8211; by &#8211; N orthogonal matrix V **T;<br/>
+if JOBVT<br/>
+    = &#8216;S&#8217;, VT contains the first min(m, n) rows of<br/>
+        V **T(the right singular vectors, stored rowwise);<br/>
+if JOBVT<br/>
 = &#8216;N&#8217; or &#8216;O&#8217;, VT is not referenced.</p>
 <p> <i>LDVT</i> </p>
-<p>LDVT is INTEGER<br />
-        The leading dimension of the array VT.LDVT &gt;= 1;<br />
-if JOBVT<br />
-    = &#8216;A&#8217;, LDVT &gt;= N;<br />
-if JOBVT<br />
+<p>LDVT is INTEGER<br/>
+        The leading dimension of the array VT.LDVT &gt;= 1;<br/>
+if JOBVT<br/>
+    = &#8216;A&#8217;, LDVT &gt;= N;<br/>
+if JOBVT<br/>
 = &#8216;S&#8217;, LDVT &gt;= min(M, N).</p>
 <p> <i>WORK</i> </p>
-<p>WORK is REAL array, dimension(MAX(1, LWORK)) On exit, if INFO = 0, WORK(1) returns the optimal LWORK;<br />
-if INFO<br />
-&gt; 0, WORK(2<br />
-          : MIN(M, N)) contains the unconverged superdiagonal elements of an upper bidiagonal matrix B whose diagonal is in S(not necessarily sorted)<br />
-         .B satisfies A = U * B * VT,<br />
-                      so it has the same singular values<br />
-    as A,<br />
+<p>WORK is REAL array, dimension(MAX(1, LWORK)) On exit, if INFO = 0, WORK(1) returns the optimal LWORK;<br/>
+if INFO<br/>
+&gt; 0, WORK(2<br/>
+          : MIN(M, N)) contains the unconverged superdiagonal elements of an upper bidiagonal matrix B whose diagonal is in S(not necessarily sorted)<br/>
+         .B satisfies A = U * B * VT,<br/>
+                      so it has the same singular values<br/>
+    as A,<br/>
                       and singular vectors related by U and VT.</p>
 <p> <i>LWORK</i> </p>
 <pre><code>

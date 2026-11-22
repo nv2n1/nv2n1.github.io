@@ -11,7 +11,7 @@ pmdesc - print out version and whatis description of perl modules
 
 <h2>DESCRIPTION</h2>
 
- Given one or more module names, show the version number (if known) and the `whatis' line, that is, the <font SIZE="-1">NAME</font> section's description, typically used for generation whatis databases.
+ Given one or more module names, show the version number (if known) and the `whatis' line, that is, the NAME section's description, typically used for generation whatis databases.
 
 <h2>EXAMPLES</h2>
 
@@ -27,7 +27,7 @@ pmdesc - print out version and whatis description of perl modules
 
 <h2>RESTRICTIONS</h2>
 
- This only works on modules. It should also work on filenames, but then it's a bit tricky finding out the package to call the <font SIZE="-1">VERSION</font> method on.
+ This only works on modules. It should also work on filenames, but then it's a bit tricky finding out the package to call the VERSION method on.
 
 <h2>SEE ALSO</h2>
 
@@ -41,6 +41,6 @@ pmdesc - print out version and whatis description of perl modules
 
 <h2>LICENSE</h2>
 
- This is free software; you can redistribute it and/or modify it under the terms of either: (a) the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 1, or (at your option) any later version, or (b) the Perl ``Artistic License''. (This is the Perl 5 licensing scheme.) 
+ This is free software; you can redistribute it and/or modify it under the terms of either: (a) the GNU General Public License as published by the Free Software Foundation; either version 1, or (at your option) any later version, or (b) the Perl ``Artistic License''. (This is the Perl 5 licensing scheme.) 
 
- Please note this is a change from the original pmtools-1.00 (still available on <font SIZE="-1">CPAN</font>), as pmtools-1.00 were licensed only under the Perl ``Artistic License''.
+ Please note this is a change from the original pmtools-1.00 (still available on CPAN), as pmtools-1.00 were licensed only under the Perl ``Artistic License''.

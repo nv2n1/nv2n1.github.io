@@ -21,7 +21,7 @@ perlpolicy - Various and sundry policies and commitments related to the Perl cor
 
  Over this group of porters presides Larry Wall. He has the final word in what does and does not change in any of the Perl programming languages. These days, Larry spends most of his time on Perl 6, while Perl 5 is shepherded by a ``pumpking'', a porter responsible for deciding what goes into each release and ensuring that releases happen on a regular basis. 
 
- Larry sees Perl development along the lines of the <font SIZE="-1">US</font> government: there's the Legislature (the porters), the Executive branch (the -pumpking), and the Supreme Court (Larry). The legislature can discuss and submit patches to the executive branch all they like, but the executive branch is free to veto them. Rarely, the Supreme Court will side with the executive branch over the legislature, or the legislature over the executive branch. Mostly, however, the legislature and the executive branch are supposed to get along and work out their differences without impeachment or court cases. 
+ Larry sees Perl development along the lines of the US government: there's the Legislature (the porters), the Executive branch (the -pumpking), and the Supreme Court (Larry). The legislature can discuss and submit patches to the executive branch all they like, but the executive branch is free to veto them. Rarely, the Supreme Court will side with the executive branch over the legislature, or the legislature over the executive branch. Mostly, however, the legislature and the executive branch are supposed to get along and work out their differences without impeachment or court cases. 
 
  You might sometimes see reference to Rule 1 and Rule 2. Larry's power as Supreme Court is expressed in The Rules:
 <dl>
@@ -54,7 +54,7 @@ perlpolicy - Various and sundry policies and commitments related to the Perl cor
 </dd><dt>&bull;
 </dt><dd> We encourage vendors to ship the most recent supported release of Perl at the time of their code freeze.
 </dd><dt>&bull;
-</dt><dd> As a vendor, you may have a requirement to backport security fixes beyond our 3 year support commitment. We can provide limited support and advice to you as you do so and, where possible will try to apply those patches to the relevant -maint branches in git, though we may or may not choose to make numbered releases or ``official'' patches available. See ``<font SIZE="-1">SECURITY VULNERABILITY CONTACT INFORMATION''</font> in perlsec for details on how to begin that process.</dd></dl>
+</dt><dd> As a vendor, you may have a requirement to backport security fixes beyond our 3 year support commitment. We can provide limited support and advice to you as you do so and, where possible will try to apply those patches to the relevant -maint branches in git, though we may or may not choose to make numbered releases or ``official'' patches available. See ``SECURITY VULNERABILITY CONTACT INFORMATION'' in perlsec for details on how to begin that process.</dd></dl>
 
 <h2>BACKWARD COMPATIBILITY AND DEPRECATION</h2>
 
@@ -87,12 +87,12 @@ perlpolicy - Various and sundry policies and commitments related to the Perl cor
  Experimental features must be experimental in two stable releases before being marked non-experimental. Experimental features will only have their experimental status revoked when they no longer have any design-changing bugs open against them and when they have remained unchanged in behavior for the entire length of a development cycle. In other words, a feature present in v5.20.0 may be marked no longer experimental in v5.22.0 if and only if its behavior is unchanged throughout all of v5.21.
 </dd><dt>deprecated
 </dt><dd> If something in the Perl core is marked as <b>deprecated</b>, we may remove it from the core in the future, though we might not. Generally, backward incompatible changes will have deprecation warnings for two release cycles before being removed, but may be removed after just one cycle if the risk seems quite low or the benefits quite high. 
- As of Perl 5.12, deprecated features and modules warn the user as they're used. When a module is deprecated, it will also be made available on <font SIZE="-1">CPAN.</font> Installing it from <font SIZE="-1">CPAN</font> will silence deprecation warnings for that module. 
+ As of Perl 5.12, deprecated features and modules warn the user as they're used. When a module is deprecated, it will also be made available on CPAN. Installing it from CPAN will silence deprecation warnings for that module. 
  If you use a deprecated feature or module and believe that its removal from the Perl core would be a mistake, please contact the perl5-porters mailinglist and plead your case. We don't deprecate things without a good reason, but sometimes there's a counterargument we haven't considered. Historically, we did not distinguish between ``deprecated'' and ``discouraged'' features.
 </dd><dt>discouraged
 </dt><dd> From time to time, we may mark language constructs and features which we consider to have been mistakes as <b>discouraged</b>. Discouraged features aren't currently candidates for removal, but we may later deprecate them if they're found to stand in the way of a significant improvement to the Perl core.
 </dd><dt>removed
-</dt><dd> Once a feature, construct or module has been marked as deprecated, we may remove it from the Perl core. Unsurprisingly, we say we've <b>removed</b> these things. When a module is removed, it will no longer ship with Perl, but will continue to be available on <font SIZE="-1">CPAN.</font></dd></dl>
+</dt><dd> Once a feature, construct or module has been marked as deprecated, we may remove it from the Perl core. Unsurprisingly, we say we've <b>removed</b> these things. When a module is removed, it will no longer ship with Perl, but will continue to be available on CPAN.</dd></dl>
 
 <h2>MAINTENANCE BRANCHES</h2>
 
@@ -103,7 +103,7 @@ perlpolicy - Various and sundry policies and commitments related to the Perl cor
  The following types of change may be considered acceptable, as long as they do not also fall into any of the ``unacceptable'' categories set out below:
 <dl>
 <dt>&bull;
-</dt><dd> Patches that fix CVEs or security issues. These changes should be passed using the security reporting mechanism rather than applied directly; see ``<font SIZE="-1">SECURITY VULNERABILITY CONTACT INFORMATION''</font> in perlsec.
+</dt><dd> Patches that fix CVEs or security issues. These changes should be passed using the security reporting mechanism rather than applied directly; see ``SECURITY VULNERABILITY CONTACT INFORMATION'' in perlsec.
 </dd><dt>&bull;
 </dt><dd> Patches that fix crashing bugs, assertion failures and memory corruption but which do not otherwise change perl's functionality or negatively impact performance.
 </dd><dt>&bull;
@@ -119,10 +119,10 @@ perlpolicy - Various and sundry policies and commitments related to the Perl cor
 </dd><dt>&bull;
 </dt><dd> Documentation updates that correct factual errors, explain significant bugs or deficiencies in the current implementation, or fix broken markup.
 </dd><dt>&bull;
-</dt><dd> Updates to dual-life modules should consist of minimal patches to fix crashing bugs or security issues (as above). Any changes made to dual-life modules for which <font SIZE="-1">CPAN</font> is canonical should be coordinated with the upstream author.</dd></dl>
+</dt><dd> Updates to dual-life modules should consist of minimal patches to fix crashing bugs or security issues (as above). Any changes made to dual-life modules for which CPAN is canonical should be coordinated with the upstream author.</dd></dl>
  
 
- The following types of change are <font SIZE="-1">NOT</font> acceptable:
+ The following types of change are NOT acceptable:
 <dl>
 <dt>&bull;
 </dt><dd> Patches that break binary compatibility. (Please talk to a pumpking.)
@@ -131,9 +131,9 @@ perlpolicy - Various and sundry policies and commitments related to the Perl cor
 </dd><dt>&bull;
 </dt><dd> Patches that add new warnings or errors or deprecate features.
 </dd><dt>&bull;
-</dt><dd> Ports of Perl to a new platform, architecture or <font SIZE="-1">OS</font> release that involve changes to the implementation.
+</dt><dd> Ports of Perl to a new platform, architecture or OS release that involve changes to the implementation.
 </dd><dt>&bull;
-</dt><dd> New versions of dual-life modules should <font SIZE="-1">NOT</font> be imported into maint. Those belong in the next stable series.</dd></dl>
+</dt><dd> New versions of dual-life modules should NOT be imported into maint. Those belong in the next stable series.</dd></dl>
  
 
  If there is any question about whether a given patch might merit inclusion in a maint release, then it almost certainly should not be included.
@@ -156,7 +156,7 @@ perlpolicy - Various and sundry policies and commitments related to the Perl cor
 
  What follows is a statement about artistic control, defined as the ability of authors of packages to guide the future of their code and maintain control over their work. It is a recognition that authors should have control over their work, and that it is a responsibility of the rest of the Perl community to ensure that they retain this control. It is an attempt to document the standards to which we, as Perl developers, intend to hold ourselves. It is an attempt to write down rough guidelines about the respect we owe each other as Perl developers. 
 
- This statement is not a legal contract. This statement is not a legal document in any way, shape, or form. Perl is distributed under the <font SIZE="-1">GNU</font> Public License and under the Artistic License; those are the precise legal terms. This statement isn't about the law or licenses. It's about community, mutual respect, trust, and good-faith cooperation. 
+ This statement is not a legal contract. This statement is not a legal document in any way, shape, or form. Perl is distributed under the GNU Public License and under the Artistic License; those are the precise legal terms. This statement isn't about the law or licenses. It's about community, mutual respect, trust, and good-faith cooperation. 
 
  We recognize that the Perl core, defined as the software distributed with the heart of Perl itself, is a joint project on the part of all of us. From time to time, a script, module, or set of modules (hereafter referred to simply as a ``module'') will prove so widely useful and/or so integral to the correct functioning of Perl itself that it should be distributed with the Perl core. This should never be done without the author's explicit consent, and a clear recognition on all parts that this means the module is being distributed under the same terms as Perl itself. A module author should realize that inclusion of a module into the Perl core will necessarily mean some loss of control over it, since changes may occasionally have to be made on short notice or for consistency with the rest of Perl. 
 

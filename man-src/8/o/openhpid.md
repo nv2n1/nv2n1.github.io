@@ -9,21 +9,21 @@ description: "openhpid – HPI instance to which multiple clients can connect."
 
 <p>openhpid &#8211; HPI instance to which multiple clients can connect.</p>
 <h2>Synopsis</h2>
-<p>openhpid -c config_file [<font SIZE="-1">OPTION</font>]</p>
+<p>openhpid -c config_file [OPTION]</p>
 <h2>Description</h2>
-<p>The OpenHPI daemon runs as a background process and accepts connections from remote clients that invoke <font SIZE="-1">HPI</font> function calls. The daemon wraps the OpenHPI library with a sockets-based <font SIZE="-1">API</font> that is archicture neutral for all types of clients. </p>
+<p>The OpenHPI daemon runs as a background process and accepts connections from remote clients that invoke HPI function calls. The daemon wraps the OpenHPI library with a sockets-based API that is archicture neutral for all types of clients. </p>
 <p> When you run the daemon, the standard method for locating the OpenHPI configuration file is used. However, the daemon will accept a configuration file as a command line option (-c) to override the default file. </p>
 <p> A command option (-p) or environment variable determines the port number the daemon will listen on for client connections. The default port is 4743. </p>
-<p> The daemon creates a <font SIZE="-1">PID</font> file in the /var/run subdirectory. This directory is only writable by the root user. Thus the daemon will fail when run as a normal user if the <font SIZE="-1">PID</font> file location is not overridden. To override the <font SIZE="-1">PID</font> file location you can use the -f command line option. </p>
+<p> The daemon creates a PID file in the /var/run subdirectory. This directory is only writable by the root user. Thus the daemon will fail when run as a normal user if the PID file location is not overridden. To override the PID file location you can use the -f command line option. </p>
 <p> The client and the daemon do not have to be on the same hardware architecture. The daemon could be running on a P-series processor and the client running on an x86-series processor. The client library and daemon use a marshaling technique to resolve architecture and structure padding conflicts. The user does not need to concern themselves with architectureal differences between the client and daemon. The one exception to this rule is 64-bit architectures. The client and daemon currently cannot resolve differences between 32-bit and 64-bit architectures.</p>
 <h2>Options</h2>
 <dl>
 <dt><code>-c</code>, <code>&#8211;cfg</code>=<i>conf_file</i></dt>
-<dd>Sets path/name of the configuration file. This option is required unless the environment variable <font SIZE="-1">OPENHPI_CONF</font> has been set to a valid configuration file.</dd>
+<dd>Sets path/name of the configuration file. This option is required unless the environment variable OPENHPI_CONF has been set to a valid configuration file.</dd>
 <dt><code>-v</code>, <code>&#8211;verbose</code></dt>
 <dd>This option causes the daemon to display verbose messages. This option is optional.</dd>
 <dt><code>-b</code>, <code>&#8211;bind</code>=<i>bind_address</i></dt>
-<dd>Bind address for the daemon socket. Also bind address can be specified with <font SIZE="-1">OPENHPI_DAEMON_BIND_ADDRESS</font> environment variable. No bind address is used by default.</dd>
+<dd>Bind address for the daemon socket. Also bind address can be specified with OPENHPI_DAEMON_BIND_ADDRESS environment variable. No bind address is used by default.</dd>
 <dt><code>-p</code>, <code>&#8211;port</code>=<i>port</i></dt>
 <dd>Overrides the default listening port (4743) of the daemon. The option is optional.</dd>
 <dt><code>-f</code>, <code>&#8211;pidfile</code>=<i>pidfile</i></dt>
@@ -33,7 +33,7 @@ description: "openhpid – HPI instance to which multiple clients can connect."
 <dt><code>-t</code>, <code>&#8211;threads</code>=<i>threads</i></dt>
 <dd>Sets the maximum number of connection threads. The default is umlimited. The option is optional.</dd>
 <dt><code>-n</code>, <code>&#8211;nondaemon</code></dt>
-<dd>Forces the code to run as a foreground process and <font SIZE="-1">NOT</font> as a daemon. The default is to run as a daemon. The option is optional.</dd>
+<dd>Forces the code to run as a foreground process and NOT as a daemon. The default is to run as a daemon. The option is optional.</dd>
 <dt><code>-6</code>, <code>&#8211;ipv6</code></dt>
 <dd>The daemon will try to bind IPv6 socket.</dd>
 <dt><code>-4</code>, <code>&#8211;ipv4</code></dt>
@@ -41,29 +41,29 @@ description: "openhpid – HPI instance to which multiple clients can connect."
 <dt><code>-4 -6</code></dt>
 <dd>The daemon will try to bind IPv4 or IPv6 socket.</dd></dl>
 <h2>Environmental Variables</h2>
-<p>All of these environment variables can instead be set in the openhpi.conf configuration file, except for <font SIZE="-1">OPENHPI_DAEMON_PORT</font> and <font SIZE="-1">OPENHPI_CONF.</font></p>
+<p>All of these environment variables can instead be set in the openhpi.conf configuration file, except for OPENHPI_DAEMON_PORT and OPENHPI_CONF.</p>
 <dl>
-<dt><font SIZE="-1"><code>OPENHPI_DAEMON_PORT</code></font>=PORT_NUMBER</dt>
+<dt><code>OPENHPI_DAEMON_PORT</code>=PORT_NUMBER</dt>
 <dd>The port number the host will listen on for clent connections. Default port is 4743.</dd>
-<dt><font SIZE="-1"><code>OPENHPI_LOG_ON_SEV</code></font></dt>
-<dd>Valus can be one of: <font SIZE="-1">CRITICAL,MAJOR,MINOR,INFORMATIONAL,OK,DEBUG.</font> Events of this severity or higher will be logged to the domain event log. The default is <font SIZE="-1">MINOR.</font></dd>
-<dt><font SIZE="-1"><code>OPENHPI_EVT_QUEUE_LIMIT</code></font>=NUMBER</dt>
+<dt><code>OPENHPI_LOG_ON_SEV</code></dt>
+<dd>Valus can be one of: CRITICAL,MAJOR,MINOR,INFORMATIONAL,OK,DEBUG. Events of this severity or higher will be logged to the domain event log. The default is MINOR.</dd>
+<dt><code>OPENHPI_EVT_QUEUE_LIMIT</code>=NUMBER</dt>
 <dd>Maximum number of events allowed in a subscribed session&#8217;s queue. Default is 10000.</dd>
-<dt><font SIZE="-1"><code>OPENHPI_DEL_SIZE_LIMIT</code></font>=NUMBER</dt>
+<dt><code>OPENHPI_DEL_SIZE_LIMIT</code>=NUMBER</dt>
 <dd>Maximum number of events allowed in the domain event log. Default is 10000</dd>
-<dt><font SIZE="-1"><code>OPENHPI_DEL_SAVE</code></font></dt>
-<dd>Set to <font SIZE="-1">YES</font> to persist the domain event logs to disk. They will be loaded in case the daemon restarts. Default is <font SIZE="-1">NO.</font></dd>
-<dt><font SIZE="-1"><code>OPENHPI_DAT_SIZE_LIMIT</code></font>=NUMBER</dt>
+<dt><code>OPENHPI_DEL_SAVE</code></dt>
+<dd>Set to YES to persist the domain event logs to disk. They will be loaded in case the daemon restarts. Default is NO.</dd>
+<dt><code>OPENHPI_DAT_SIZE_LIMIT</code>=NUMBER</dt>
 <dd>Maximum number of alarms allowed in the domain alarm table. Default is unlimited.</dd>
-<dt><font SIZE="-1"><code>OPENHPI_DAT_USER_LIMIT</code></font>=NUMBER</dt>
+<dt><code>OPENHPI_DAT_USER_LIMIT</code>=NUMBER</dt>
 <dd>Maximum number of user alarms allowed in the domain alarm table. Default is unlimited.</dd>
-<dt><font SIZE="-1"><code>OPENHPI_DAT_SAVE</code></font></dt>
-<dd>Set to <font SIZE="-1">YES</font> to persist the domain alarm tables to disk. They will be loaded in case the daemon restarts. Default is <font SIZE="-1">NO.</font></dd>
-<dt><font SIZE="-1"><code>OPENHPI_PATH</code></font>=&quot;/path/to/plugins:/another/path/to/plugins&quot;</dt>
+<dt><code>OPENHPI_DAT_SAVE</code></dt>
+<dd>Set to YES to persist the domain alarm tables to disk. They will be loaded in case the daemon restarts. Default is NO.</dd>
+<dt><code>OPENHPI_PATH</code>=&quot;/path/to/plugins:/another/path/to/plugins&quot;</dt>
 <dd>This is a colon delimited list of directories used when searching for an OpenHPI plugin to load. The default is <tt>$prefix</tt>/lib/openhpi.</dd>
-<dt><font SIZE="-1"><code>OPENHPI_VARPATH</code></font>=&quot;/path/to/dir&quot;</dt>
-<dd>This sets the directory used to store openhpi internal data. The domain event logs and alarm tables are saved there (if configured to) along with resource <font SIZE="-1">ID</font> to entity path mappings. Default is <tt>$prefix</tt>/var/lib/openhpi.</dd>
-<dt><font SIZE="-1"><code>OPENHPI_CONF</code></font>=&quot;/path/to/configurationg/file&quot;</dt>
+<dt><code>OPENHPI_VARPATH</code>=&quot;/path/to/dir&quot;</dt>
+<dd>This sets the directory used to store openhpi internal data. The domain event logs and alarm tables are saved there (if configured to) along with resource ID to entity path mappings. Default is <tt>$prefix</tt>/var/lib/openhpi.</dd>
+<dt><code>OPENHPI_CONF</code>=&quot;/path/to/configurationg/file&quot;</dt>
 <dd>This is another way of telling the daemon where to find the configuration file.</dd></dl>
 <h2>See Also</h2>
 <p>The following man pages may also be of interest</p>

@@ -339,36 +339,36 @@ See <a href="//www.systutorials.com/docs/linux/man/1-trace-cmd-profile/">trace-c
 <dl>
 <dt>
 </dt><dd>
-#trace &#8211; cmd record &#8211; e all ls&gt; / dev / null<br />
-#trace &#8211; cmd report<br />
-trace &#8211; cmd &#8211; 13541 [003] 106260.693809 : filemap_fault : address = 0x128122 offset = 0xce trace &#8211; cmd &#8211; 13543 [001] 106260.693809 : kmalloc : call_site = 81128dd4 ptr = 0xffff88003dd83800 bytes_req = 768 bytes_alloc = 1024 gfp_flags = GFP_KERNEL | GFP_ZERO<br />
-                                                                                                                                                                                                                                                                 ls &#8211;<br />
+#trace &#8211; cmd record &#8211; e all ls&gt; / dev / null<br/>
+#trace &#8211; cmd report<br/>
+trace &#8211; cmd &#8211; 13541 [003] 106260.693809 : filemap_fault : address = 0x128122 offset = 0xce trace &#8211; cmd &#8211; 13543 [001] 106260.693809 : kmalloc : call_site = 81128dd4 ptr = 0xffff88003dd83800 bytes_req = 768 bytes_alloc = 1024 gfp_flags = GFP_KERNEL | GFP_ZERO<br/>
+                                                                                                                                                                                                                                                                 ls &#8211;<br/>
                                                                                                                                                                                                                                                              13545 [002] 106260.693809 : kfree : call_site = 810a7abb ptr = 0x0 ls &#8211; 13545 [002] 106260.693818 : sys_exit_write : 0x1
 </dd></dl>
 <p> To use the function tracer with sched switch tracing: </p>
 <dl>
 <dt>
 </dt><dd>
-#trace &#8211; cmd record &#8211; p function &#8211; e sched_switch ls&gt; / dev / null<br />
-#trace &#8211; cmd report<br />
-ls &#8211; 13587 [002] 106467.860310 : function : hrtick_start_fair&lt;&#8211;pick_next_task_fair<br />
-                                                                      ls &#8211;<br />
-                                                                  13587 [002] 106467.860313 : sched_switch : prev_comm = trace &#8211; cmd prev_pid = 13587 prev_prio = 120 prev_state = R ==&gt;<br />
-                                                next_comm = trace &#8211; cmd next_pid = 13583 next_prio = 120 trace &#8211; cmd &#8211; 13585 [001] 106467.860314 : function : native_set_pte_at &lt; &#8211;__do_fault<br />
-                                                                                                                                                                                          trace &#8211;<br />
-                                                                                                                                                                                      cmd &#8211; 13586 [003] 106467.860314 : function : up_read &lt;<br />
-                                                                                                     &#8211;do_page_fault<br />
-                                                                                                             ls &#8211;<br />
-                                                                                                         13587 [002] 106467.860317 : function : __phys_addr &lt;<br />
-                                                                                                     &#8211;schedule<br />
-                                                                                                             trace &#8211;<br />
-                                                                                                         cmd &#8211; 13585 [001] 106467.860318 : function : _raw_spin_unlock &lt;<br />
-                                                                                                     &#8211;__do_fault<br />
-                                                                                                             ls &#8211;<br />
-                                                                                                         13587 [002] 106467.860320 : function : native_load_sp0 &lt;<br />
-                                                                                                     &#8211;__switch_to<br />
-                                                                                                             trace &#8211;<br />
-                                                                                                         cmd &#8211; 13586 [003] 106467.860322 : function : down_read_trylock &lt;<br />
+#trace &#8211; cmd record &#8211; p function &#8211; e sched_switch ls&gt; / dev / null<br/>
+#trace &#8211; cmd report<br/>
+ls &#8211; 13587 [002] 106467.860310 : function : hrtick_start_fair&lt;&#8211;pick_next_task_fair<br/>
+                                                                      ls &#8211;<br/>
+                                                                  13587 [002] 106467.860313 : sched_switch : prev_comm = trace &#8211; cmd prev_pid = 13587 prev_prio = 120 prev_state = R ==&gt;<br/>
+                                                next_comm = trace &#8211; cmd next_pid = 13583 next_prio = 120 trace &#8211; cmd &#8211; 13585 [001] 106467.860314 : function : native_set_pte_at &lt; &#8211;__do_fault<br/>
+                                                                                                                                                                                          trace &#8211;<br/>
+                                                                                                                                                                                      cmd &#8211; 13586 [003] 106467.860314 : function : up_read &lt;<br/>
+                                                                                                     &#8211;do_page_fault<br/>
+                                                                                                             ls &#8211;<br/>
+                                                                                                         13587 [002] 106467.860317 : function : __phys_addr &lt;<br/>
+                                                                                                     &#8211;schedule<br/>
+                                                                                                             trace &#8211;<br/>
+                                                                                                         cmd &#8211; 13585 [001] 106467.860318 : function : _raw_spin_unlock &lt;<br/>
+                                                                                                     &#8211;__do_fault<br/>
+                                                                                                             ls &#8211;<br/>
+                                                                                                         13587 [002] 106467.860320 : function : native_load_sp0 &lt;<br/>
+                                                                                                     &#8211;__switch_to<br/>
+                                                                                                             trace &#8211;<br/>
+                                                                                                         cmd &#8211; 13586 [003] 106467.860322 : function : down_read_trylock &lt;<br/>
                                                                                                      &#8211;do_page_fault
 </dd></dl>
 <p> Here is a nice way to find what interrupts have the highest latency: </p>
@@ -442,7 +442,7 @@ task: sleep-21611
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-trace-cmd/">trace-cmd</a>(1), <a href="/docs/linux/man/1-trace-cmd-report/">trace-cmd-report</a>(1), <a href="/docs/linux/man/1-trace-cmd-start/">trace-cmd-start</a>(1), <a href="/docs/linux/man/1-trace-cmd-stop/">trace-cmd-stop</a>(1), <a href="/docs/linux/man/1-trace-cmd-extract/">trace-cmd-extract</a>(1), <a href="/docs/linux/man/1-trace-cmd-reset/">trace-cmd-reset</a>(1), <a href="/docs/linux/man/1-trace-cmd-split/">trace-cmd-split</a>(1), <a href="/docs/linux/man/1-trace-cmd-list/">trace-cmd-list</a>(1), <a href="/docs/linux/man/1-trace-cmd-listen/">trace-cmd-listen</a>(1), <a href="/docs/linux/man/1-trace-cmd-profile/">trace-cmd-profile</a>(1)</p>
 <h2>AUTHOR</h2>
-<p> Written by Steven Rostedt, &lt;m[blue]<code>rostedt [at] goodmis.org</code>m[]<font SIZE="-2">[1]</font>&gt;</p>
+<p> Written by Steven Rostedt, &lt;m[blue]<code>rostedt [at] goodmis.org</code>m[][1]&gt;</p>
 <h2>RESOURCES</h2>
 <p> <a href="git://git.kernel.org/pub/scm/linux/kernel/git/rostedt/trace-cmd.git">git://git.kernel.org/pub/scm/linux/kernel/git/rostedt/trace-cmd.git</a></p>
 <h2>COPYING</h2>

@@ -9,10 +9,10 @@ description: "pmGetConfig, pmGetOptionalConfig – return values for Performance
 
 <p><code>pmGetConfig</code>, <code>pmGetOptionalConfig</code> &#8211; return values for Performance Co-Pilot configuration variables</p>
 <h2>C Synopsis</h2>
-<p><code> #include &lt;pcp/pmapi.h&gt;<br />
- char *pmGetConfig(const char *</code><i>variable</i>);<br />
+<p><code> #include &lt;pcp/pmapi.h&gt;<br/>
+ char *pmGetConfig(const char *</code><i>variable</i>);<br/>
  char *pmGetOptionalConfig(const char *<i>variable</i>); </p>
-<p> #include &lt;pcp/impl.h&gt;<br />
+<p> #include &lt;pcp/impl.h&gt;<br/>
  char *__pmGetAPIConfig(const char *<i>feature</i>); </p>
 <p> cc &#8230; -lpcp</p>
 <h2>Description</h2>

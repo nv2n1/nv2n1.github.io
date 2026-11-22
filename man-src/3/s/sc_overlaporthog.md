@@ -19,23 +19,23 @@ An enum for the types of orthogonalization.
 Public Member Functions</code></pre>
 <p> <code>OverlapOrthog</code> (<code>OrthogMethod</code> method, const <code>RefSymmSCMatrix</code> &amp;overlap, const <code>Ref</code>&lt; <code>SCMatrixKit</code> &gt; &amp;result_kit, double lindep_tolerance, int debug=0) </p>
 <p> <code>OverlapOrthog</code> (<code>StateIn</code> &amp;) </p>
-<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br />
- <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br />
+<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br/>
+ <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br/>
  void <code>reinit</code> (<code>OrthogMethod</code> method, const <code>RefSymmSCMatrix</code> &amp;overlap, const <code>Ref</code>&lt; <code>SCMatrixKit</code> &gt; &amp;result_kit, double lindep_tolerance, int debug=0) </p>
 <p> double <code>min_orthog_res</code> () const </p>
 <p> double <code>max_orthog_res</code> () const </p>
 <p> <code>Ref</code>&lt; <code>OverlapOrthog</code> &gt; <code>copy</code> () const </p>
-<p> <code>OrthogMethod</code> <code>orthog_method</code> () const<br />
- <i>Returns the orthogonalization method. </i><br />
- double <code>lindep_tol</code> () const<br />
- <i>Returns the tolerance for linear dependencies. </i><br />
- <code>RefSCMatrix</code> <code>basis_to_orthog_basis</code> ()<br />
- <i>Returns a matrix which does the requested transform from a basis to an orthogonal basis. </i><br />
- <code>RefSCMatrix</code> <code>basis_to_orthog_basis_inverse</code> ()<br />
- <i>Returns the inverse of the transformation returned by basis_to_orthog_basis. </i><br />
+<p> <code>OrthogMethod</code> <code>orthog_method</code> () const<br/>
+ <i>Returns the orthogonalization method. </i><br/>
+ double <code>lindep_tol</code> () const<br/>
+ <i>Returns the tolerance for linear dependencies. </i><br/>
+ <code>RefSCMatrix</code> <code>basis_to_orthog_basis</code> ()<br/>
+ <i>Returns a matrix which does the requested transform from a basis to an orthogonal basis. </i><br/>
+ <code>RefSCMatrix</code> <code>basis_to_orthog_basis_inverse</code> ()<br/>
+ <i>Returns the inverse of the transformation returned by basis_to_orthog_basis. </i><br/>
  <code>RefSCDimension</code> <code>dim</code> () </p>
 <p> <code>RefSCDimension</code> <code>orthog_dim</code> () </p>
-<p> int <code>nlindep</code> ()<br />
+<p> int <code>nlindep</code> ()<br/>
  <i>Returns the number of linearly dependent functions eliminated from the orthogonal basis. </i></p>
 <h2>Detailed Description</h2>
 <p>This class computes the orthogonalizing transform for a basis set.</p>

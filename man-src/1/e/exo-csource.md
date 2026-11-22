@@ -48,7 +48,7 @@ description: "exo-csource – C code generation utility for arbitrary data"
 <dt>
 </dt><dd> Prints the output to <i>identifier</i> instead of stdout (only used if <code>&#8211;build-list</code> was not specified as well).</dd></dl>
 <h2>SEE ALSO</h2>
-<p> The <code>gdk-pixbuf-csource</code> utility which ships with the Gtk+ distribution, available from m[blue]<code><a rel="nofollow" href="http://www.gtk.org">www.gtk.org</a></code>m[]<font SIZE="-2">[1]</font>.</p>
+<p> The <code>gdk-pixbuf-csource</code> utility which ships with the Gtk+ distribution, available from m[blue]<code><a rel="nofollow" href="http://www.gtk.org">www.gtk.org</a></code>m[][1].</p>
 <h2>AUTHOR</h2>
 <p> <code>exo-csource</code> was written by Benedikt Meurer &lt;benny [at] xfce.org&gt;. </p>
 <p> This manual page was provided by Benedikt Meurer &lt;benny [at] xfce.org&gt;.</p>

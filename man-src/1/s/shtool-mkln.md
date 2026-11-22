@@ -29,6 +29,6 @@ description: "shtool mkln – GNU shtool enhanced"
  shtool mkln -s foo/bar baz/quux
 </pre>
 <h2>HISTORY</h2>
-<p> The <font SIZE="-1"><code>GNU</code></font><code> shtool</code> <code>fixperm</code> command was originally written by Ralf S. Engelschall &lt;rse [at] engelschall.com&gt; in 1998 for <i>ePerl</i>.</p>
+<p> The <code>GNU</code><code> shtool</code> <code>fixperm</code> command was originally written by Ralf S. Engelschall &lt;rse [at] engelschall.com&gt; in 1998 for <i>ePerl</i>.</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-shtool/">shtool</a></i>(1), <i><a href="/docs/linux/man/1-ln/">ln</a></i>(1). </p>

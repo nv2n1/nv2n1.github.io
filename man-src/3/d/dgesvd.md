@@ -11,7 +11,7 @@ description: "dgesvd.f –"
 <p> dgesvd.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dgesvd</code> (JOBU, JOBVT, M, N, A, LDA, S, U, LDU, VT, LDVT, WORK, LWORK, INFO)<br />
+<p> subroutine <code>dgesvd</code> (JOBU, JOBVT, M, N, A, LDA, S, U, LDU, VT, LDVT, WORK, LWORK, INFO)<br/>
  <i></i><code> DGESVD computes the singular value decomposition (SVD) for GE matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dgesvd (characterJOBU, characterJOBVT, integerM, integerN, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( * )S, double precision, dimension( ldu, * )U, integerLDU, double precision, dimension( ldvt, * )VT, integerLDVT, double precision, dimension( * )WORK, integerLWORK, integerINFO)</h3>
@@ -76,16 +76,16 @@ description: "dgesvd.f –"
           The number of columns of the input matrix A.  N &gt;= 0.
 </pre>
 <p> <i>A</i> </p>
-<p>A is DOUBLE PRECISION array, dimension(LDA, N) On entry, the M &#8211; by &#8211; N matrix A.On exit,<br />
-    if JOBU = &#8216;O&#8217;, A is overwritten with the first min(m, n)<br />
-columns of U(the left singular vectors,<br />
-             stored columnwise);<br />
-if JOBVT<br />
-    = &#8216;O&#8217;, A is overwritten with the first min(m, n)<br />
-               rows of V **T(the right singular vectors,<br />
-                             stored rowwise);<br />
-if JOBU<br />
-.ne.&#8217;O&#8217; and JOBVT.ne.&#8217;O&#8217;, the contents of A<br />
+<p>A is DOUBLE PRECISION array, dimension(LDA, N) On entry, the M &#8211; by &#8211; N matrix A.On exit,<br/>
+    if JOBU = &#8216;O&#8217;, A is overwritten with the first min(m, n)<br/>
+columns of U(the left singular vectors,<br/>
+             stored columnwise);<br/>
+if JOBVT<br/>
+    = &#8216;O&#8217;, A is overwritten with the first min(m, n)<br/>
+               rows of V **T(the right singular vectors,<br/>
+                             stored rowwise);<br/>
+if JOBU<br/>
+.ne.&#8217;O&#8217; and JOBVT.ne.&#8217;O&#8217;, the contents of A<br/>
                               are destroyed.</p>
 <p> <i>LDA</i> </p>
 <pre>
@@ -98,38 +98,38 @@ if JOBU<br />
           The singular values of A, sorted so that S(i) &gt;= S(i+1).
 </pre>
 <p> <i>U</i> </p>
-<p>U is DOUBLE PRECISION array, dimension(LDU, UCOL)(LDU, M) if JOBU = &#8216;A&#8217; or (LDU, min(M, N)) if JOBU = &#8216;S&#8217;.If JOBU = &#8216;A&#8217;, U contains the M &#8211; by &#8211; M orthogonal matrix U;<br />
-if JOBU<br />
-    = &#8216;S&#8217;, U contains the first min(m, n) columns of U(the left singular vectors, stored columnwise);<br />
-if JOBU<br />
+<p>U is DOUBLE PRECISION array, dimension(LDU, UCOL)(LDU, M) if JOBU = &#8216;A&#8217; or (LDU, min(M, N)) if JOBU = &#8216;S&#8217;.If JOBU = &#8216;A&#8217;, U contains the M &#8211; by &#8211; M orthogonal matrix U;<br/>
+if JOBU<br/>
+    = &#8216;S&#8217;, U contains the first min(m, n) columns of U(the left singular vectors, stored columnwise);<br/>
+if JOBU<br/>
 = &#8216;N&#8217; or &#8216;O&#8217;, U is not referenced.</p>
 <p> <i>LDU</i> </p>
-<p>LDU is INTEGER<br />
-        The leading dimension of the array U.LDU &gt;= 1;<br />
-if JOBU<br />
+<p>LDU is INTEGER<br/>
+        The leading dimension of the array U.LDU &gt;= 1;<br/>
+if JOBU<br/>
 = &#8216;S&#8217; or &#8216;A&#8217;, LDU &gt;= M.</p>
 <p> <i>VT</i> </p>
-<p>VT is DOUBLE PRECISION array, dimension(LDVT, N) If JOBVT = &#8216;A&#8217;, VT contains the N &#8211; by &#8211; N orthogonal matrix V **T;<br />
-if JOBVT<br />
-    = &#8216;S&#8217;, VT contains the first min(m, n) rows of<br />
-        V **T(the right singular vectors, stored rowwise);<br />
-if JOBVT<br />
+<p>VT is DOUBLE PRECISION array, dimension(LDVT, N) If JOBVT = &#8216;A&#8217;, VT contains the N &#8211; by &#8211; N orthogonal matrix V **T;<br/>
+if JOBVT<br/>
+    = &#8216;S&#8217;, VT contains the first min(m, n) rows of<br/>
+        V **T(the right singular vectors, stored rowwise);<br/>
+if JOBVT<br/>
 = &#8216;N&#8217; or &#8216;O&#8217;, VT is not referenced.</p>
 <p> <i>LDVT</i> </p>
-<p>LDVT is INTEGER<br />
-        The leading dimension of the array VT.LDVT &gt;= 1;<br />
-if JOBVT<br />
-    = &#8216;A&#8217;, LDVT &gt;= N;<br />
-if JOBVT<br />
+<p>LDVT is INTEGER<br/>
+        The leading dimension of the array VT.LDVT &gt;= 1;<br/>
+if JOBVT<br/>
+    = &#8216;A&#8217;, LDVT &gt;= N;<br/>
+if JOBVT<br/>
 = &#8216;S&#8217;, LDVT &gt;= min(M, N).</p>
 <p> <i>WORK</i> </p>
-<p>WORK is DOUBLE PRECISION array, dimension(MAX(1, LWORK)) On exit, if INFO = 0, WORK(1) returns the optimal LWORK;<br />
-if INFO<br />
-&gt; 0, WORK(2<br />
-          : MIN(M, N)) contains the unconverged superdiagonal elements of an upper bidiagonal matrix B whose diagonal is in S(not necessarily sorted)<br />
-         .B satisfies A = U * B * VT,<br />
-                      so it has the same singular values<br />
-    as A,<br />
+<p>WORK is DOUBLE PRECISION array, dimension(MAX(1, LWORK)) On exit, if INFO = 0, WORK(1) returns the optimal LWORK;<br/>
+if INFO<br/>
+&gt; 0, WORK(2<br/>
+          : MIN(M, N)) contains the unconverged superdiagonal elements of an upper bidiagonal matrix B whose diagonal is in S(not necessarily sorted)<br/>
+         .B satisfies A = U * B * VT,<br/>
+                      so it has the same singular values<br/>
+    as A,<br/>
                       and singular vectors related by U and VT.</p>
 <p> <i>LWORK</i> </p>
 <pre><code>

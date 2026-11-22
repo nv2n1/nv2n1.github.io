@@ -10,7 +10,7 @@ description: "ztrcon.f –"
 <p>ztrcon.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>ztrcon</code> (NORM, UPLO, DIAG, N, A, LDA, RCOND, WORK, RWORK, INFO)<br />
+<p>subroutine <code>ztrcon</code> (NORM, UPLO, DIAG, N, A, LDA, RCOND, WORK, RWORK, INFO)<br/>
  <i></i><code>ZTRCON</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ztrcon (characterNORM, characterUPLO, characterDIAG, integerN, complex*16, dimension( lda, * )A, integerLDA, double precisionRCOND, complex*16, dimension( * )WORK, double precision, dimension( * )RWORK, integerINFO)</h3>

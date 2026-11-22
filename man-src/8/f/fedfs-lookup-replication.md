@@ -42,14 +42,14 @@ description: "fedfs-lookup-replication – send a FEDFS_LOOKUP_REPLICATION ADMIN
 <h2>Examples</h2>
 <p>Suppose you are the FedFS administrator of the <i>example.net</i> FedFS domain and that your domain&#8217;s NSDB hostname is <i>nsdb.example.net</i>. You have created a FedFS replication on file server <i>fs.example.net</i>. To see how the replication appears on the remote server, use:</p>
 <dl>
-<dd>$ fedfs-lookup-replication -h fs.example.net /export/replication1<br />
- Call completed successfully<br />
- FSN UUID: 89c6d208-7280-11e0-9f1d-000c297fd679<br />
+<dd>$ fedfs-lookup-replication -h fs.example.net /export/replication1<br/>
+ Call completed successfully<br/>
+ FSN UUID: 89c6d208-7280-11e0-9f1d-000c297fd679<br/>
  NSDB: nsdb.example.net:389 </dd>
 </dl>
 <p> To see real-time replication resolution results as the remote server sees them, use:</p>
 <dl>
-<dd>$ fedfs-lookup-replication -h fs.example.net -t nsdb /export/replication1<br />
+<dd>$ fedfs-lookup-replication -h fs.example.net -t nsdb /export/replication1<br/>
  Server returned FEDFS_ERR_NSDB_NOFSN </dd>
 </dl>
 <p> In this example, the replication marker exists on the file server, but the domain&#8217;s NSDB has not yet been updated to contain a list of fileset locations for the UUID contained in the replication marker. The file server is therefore not able to resolve the replication.</p>

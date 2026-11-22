@@ -57,8 +57,8 @@ description: "ipmiutil_hpm – PICMG HPM.1 Upgrade Agent"
 <dt><i>all</i></dt>
 <dd>Upgrade all components even if the firmware versions are the same (use this only after using &quot;check&quot; command). </dd>
 <dt><i>component</i> <code>x</code></dt>
-<dd>Upgrade only given component from the given file.<br />
- component 0 &#8211; BOOT<br />
+<dd>Upgrade only given component from the given file.<br/>
+ component 0 &#8211; BOOT<br/>
  component 1 &#8211; RTK </dd>
 <dt><i>activate</i></dt>
 <dd>Activate new firmware right away. </dd>
@@ -69,11 +69,11 @@ description: "ipmiutil_hpm – PICMG HPM.1 Upgrade Agent"
 <dt><i>targetcap</i></dt>
 <dd>Get the target upgrade capabilities. </dd>
 <dt><i>compprop</i> <code>id</code> <code>opt</code></dt>
-<dd>Get the specified component properties. Valid component <code>id</code>: 0-7. <code>Opt</code> can be one of following:<br />
- 0 &#8211; General properties<br />
- 1 &#8211; Current firmware version<br />
- 2 &#8211; Description string<br />
- 3 &#8211; Rollback firmware version<br />
+<dd>Get the specified component properties. Valid component <code>id</code>: 0-7. <code>Opt</code> can be one of following:<br/>
+ 0 &#8211; General properties<br/>
+ 1 &#8211; Current firmware version<br/>
+ 2 &#8211; Description string<br/>
+ 3 &#8211; Rollback firmware version<br/>
  4 &#8211; Deferred firmware version </dd>
 <dt><i>abort</i></dt>
 <dd>Abort the on-going firmware upgrade. </dd>
@@ -88,8 +88,8 @@ description: "ipmiutil_hpm – PICMG HPM.1 Upgrade Agent"
 </dl>
 </dl>
 <h2>Examples</h2>
-<p>ipmiutil hpm targetcap<br />
- Gets HPM target capabilities ipmiutil hpm -N 192.168.1.1 -U root -P pswd download firmware.img<br />
+<p>ipmiutil hpm targetcap<br/>
+ Gets HPM target capabilities ipmiutil hpm -N 192.168.1.1 -U root -P pswd download firmware.img<br/>
  Downloads the HPM firmware version contained in firmware.img over IPMI LAN. </p>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/8-ipmiutil/">ipmiutil</a>(8) <a href="/docs/linux/man/8-ialarms/">ialarms</a>(8) <a href="/docs/linux/man/8-iconfig/">iconfig</a>(8) <a href="/docs/linux/man/8-idiscover/">idiscover</a>(8) <a href="/docs/linux/man/8-ievents/">ievents</a>(8) <a href="/docs/linux/man/8-ifru/">ifru</a>(8) <a href="/docs/linux/man/8-igetevent/">igetevent</a>(8) <a href="/docs/linux/man/8-ihealth/">ihealth</a>(8) <a href="/docs/linux/man/8-ilan/">ilan</a>(8) <a href="/docs/linux/man/8-ireset/">ireset</a>(8) <a href="/docs/linux/man/8-isel/">isel</a>(8) <a href="/docs/linux/man/8-isensor/">isensor</a>(8) <a href="/docs/linux/man/8-iserial/">iserial</a>(8) <a href="/docs/linux/man/8-isol/">isol</a>(8) <a href="/docs/linux/man/8-iwdt/">iwdt</a>(8) </p>

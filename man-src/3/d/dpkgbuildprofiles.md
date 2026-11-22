@@ -13,9 +13,9 @@ description: "Dpkg::BuildProfiles – handle build profiles"
 <h2>Functions</h2>
 <dl COMPACT>
 <dt>my @profiles = <i>get_build_profiles()</i></dt>
-<dd>Get an array with the currently active build profiles, taken from the environment variable <font SIZE="-1"><code>DEB_BUILD_PROFILES</code></font>.</dd>
+<dd>Get an array with the currently active build profiles, taken from the environment variable <code>DEB_BUILD_PROFILES</code>.</dd>
 <dt>set_build_profiles(@profiles)</dt>
-<dd>Set <tt>@profiles</tt> as the current active build profiles, by setting the environment variable <font SIZE="-1"><code>DEB_BUILD_PROFILES</code></font>.</dd>
+<dd>Set <tt>@profiles</tt> as the current active build profiles, by setting the environment variable <code>DEB_BUILD_PROFILES</code>.</dd>
 <dt>my @profiles = parse_build_profiles($string)</dt>
 <dd>Parses a build profiles specification, into an array of array references.</dd>
 <dt>evaluate_restriction_formula(\@formula, \@profiles)</dt>

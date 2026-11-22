@@ -10,7 +10,7 @@ description: "htsfile – identify high-throughput sequencing data files"
 
 <p> htsfile &#8211; identify high-throughput sequencing data files </p>
 <h2>SYNOPSIS</h2>
-<p> <code>htsfile</code> [<code>-chHv</code>] <i>FILE</i>&#8230;<br />
+<p> <code>htsfile</code> [<code>-chHv</code>] <i>FILE</i>&#8230;<br/>
  <code>htsfile &#8211;copy</code> [<code>-v</code>] <i>FILE DESTFILE</i></p>
 <h2>DESCRIPTION</h2>
 <p> The <code>htsfile</code> utility attempts to identify what kind of high-throughput sequencing data files the specified files are, and provides minimal viewing capabilities for some kinds of data file. </p>

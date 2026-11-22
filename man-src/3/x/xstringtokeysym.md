@@ -39,5 +39,5 @@ description: "XStringToKeysym, XKeysymToString, XKeycodeToKeysym, XKeysymToKeyco
 <p> If the specified KeySym is not defined for any KeyCode, <code>XKeysymToKeycode</code> returns zero. </p>
 <p> The <code>XConvertCase</code> function returns the uppercase and lowercase forms of the specified Keysym, if the KeySym is subject to case conversion; otherwise, the specified KeySym is returned to both lower_return and upper_return. Support for conversion of other than Latin and Cyrillic KeySyms is implementation-dependent.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xkbkeycodetokeysym/">XkbKeycodeToKeysym</a>(3), <a href="/docs/linux/man/3-xlookupkeysym/">XLookupKeysym</a>(3)<br />
+<p><a href="/docs/linux/man/3-xkbkeycodetokeysym/">XkbKeycodeToKeysym</a>(3), <a href="/docs/linux/man/3-xlookupkeysym/">XLookupKeysym</a>(3)<br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

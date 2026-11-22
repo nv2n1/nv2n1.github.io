@@ -10,8 +10,8 @@ description: "transmission-qt – a bittorrent client"
 
 <p> <code>transmission-qt</code> &#8211; a bittorrent client</p>
 <h2>SYNOPSIS</h2>
-<p> <code>transmission-qt</code> &#8211;<code>h</code><br />
-<code>transmission-qt</code> [<br />
+<p> <code>transmission-qt</code> &#8211;<code>h</code><br/>
+<code>transmission-qt</code> [<br/>
 <code>options</code> ] [<i>torrent-file &#8230;</i> ]</p>
 <h2>DESCRIPTION</h2>
 <p> <code>transmission-qt</code> is a fast and easy BitTorrent client. </p>

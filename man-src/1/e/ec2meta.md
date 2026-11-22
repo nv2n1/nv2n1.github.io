@@ -15,7 +15,7 @@ ec2meta - get the metadata for this particular ec2 instance
 
 <h2>ARGUMENTS</h2>
 
- With a <font SIZE="-1">TYPE</font> reports just that <font SIZE="-1">TYPE</font> of meta data. With out one reports on all meta data available. (except the keys, which are listed by name, not value) 
+ With a TYPE reports just that TYPE of meta data. With out one reports on all meta data available. (except the keys, which are listed by name, not value) 
 
  The -h flag displays this help message. 
 

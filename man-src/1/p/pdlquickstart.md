@@ -9,39 +9,39 @@ description: "PDL::QuickStart – Quick introduction to PDL features."
 
 <p>PDL::QuickStart &#8211; Quick introduction to PDL features. </p>
 <h2>Synopsis</h2>
-<p>A brief summary of the main <font SIZE="-1">PDL</font> features and how to use them.</p>
+<p>A brief summary of the main PDL features and how to use them.</p>
 <h2>Description</h2>
 <h3>Introduction</h3>
 <p>Perl is an extremely good and versatile scripting language, well suited to beginners and allows rapid prototyping. However until recently it did not support data structures which allowed it to do fast number crunching. </p>
 <p> However with the development of Perl v5, Perl acquired &#8216;Objects&#8217;. To put it simply users can define their own special data types, and write custom routines to manipulate them either in low level languages (C and Fortran) or in Perl itself. </p>
-<p> This has been fully exploited by the PerlDL developers. The &#8216;<font SIZE="-1">PDL</font>&#8216; module is a complete Object-Oriented extension to Perl (although you don&#8217;t have to know what an object is to use it) which allows large N-dimensional data sets, such as large images, spectra, time series, etc to be stored <code>efficiently</code> and manipulated <code>en masse</code>. For example with the <font SIZE="-1">PDL</font> module we can write the Perl code <tt>&quot;$a = $b + $c&quot;</tt>, where <tt>$b</tt> and <tt>$c</tt> are large datasets (e.g. 2048&#215;2048 images), and get the result in only a fraction of a second. </p>
-<p> <font SIZE="-1">PDL</font> variables (or &#8216;piddles&#8217; as they have come to be known) support a wide range of fundamental data types &#8211; arrays can be bytes, short integers (signed or unsigned), long integers, floats or double precision floats. And because of the Object-Oriented nature of <font SIZE="-1">PDL</font> new customised datatypes can be derived from them. </p>
-<p> As well as the <font SIZE="-1">PDL</font> modules, that can be used by normal Perl programs, PerlDL comes with a command line Perl shell, called &#8216;perldl&#8217;, which supports command line editing. In combination with the various <font SIZE="-1">PDL</font> graphics modules this allows data to be easily played with and visualised.</p>
+<p> This has been fully exploited by the PerlDL developers. The &#8216;PDL&#8216; module is a complete Object-Oriented extension to Perl (although you don&#8217;t have to know what an object is to use it) which allows large N-dimensional data sets, such as large images, spectra, time series, etc to be stored <code>efficiently</code> and manipulated <code>en masse</code>. For example with the PDL module we can write the Perl code <tt>&quot;$a = $b + $c&quot;</tt>, where <tt>$b</tt> and <tt>$c</tt> are large datasets (e.g. 2048&#215;2048 images), and get the result in only a fraction of a second. </p>
+<p> PDL variables (or &#8216;piddles&#8217; as they have come to be known) support a wide range of fundamental data types &#8211; arrays can be bytes, short integers (signed or unsigned), long integers, floats or double precision floats. And because of the Object-Oriented nature of PDL new customised datatypes can be derived from them. </p>
+<p> As well as the PDL modules, that can be used by normal Perl programs, PerlDL comes with a command line Perl shell, called &#8216;perldl&#8217;, which supports command line editing. In combination with the various PDL graphics modules this allows data to be easily played with and visualised.</p>
 <h3>Help</h3>
-<p><font SIZE="-1">PDL</font> contains extensive documentation, available both within the <i>perldl</i> or <i>pdl2</i> shells and from the command line, using the <tt>&quot;pdldoc&quot;</tt> program. For further information try either of: </p>
+<p>PDL contains extensive documentation, available both within the <i>perldl</i> or <i>pdl2</i> shells and from the command line, using the <tt>&quot;pdldoc&quot;</tt> program. For further information try either of: </p>
 <pre> pdl&gt; help help
  $ pdldoc</pre>
-<p><font SIZE="-1">HTML</font> copies of the documentation should also be available. To find their location, try the following: </p>
+<p>HTML copies of the documentation should also be available. To find their location, try the following: </p>
 <pre> pdl&gt; foreach ( map{&quot;$_/PDL/HtmlDocs&quot;}@INC ) { p &quot;$_
 &quot; if -d $_ }</pre>
-<h3>Perl Datatypes and how <font SIZE="-1">PDL</font> extends them</h3>
+<h3>Perl Datatypes and how PDL extends them</h3>
 <p>The fundamental Perl data structures are scalar variables, e.g. <tt>$x</tt>, which can hold numbers or strings, lists or arrays of scalars, e.g. <tt>@x</tt>, and associative arrays/hashes of scalars, e.g. <tt>%x</tt>. </p>
 <p> Perl v5 introduces to Perl data structures and objects. A simple scalar variable <tt>$x</tt> now be a user-defined data type or full blown object (it actually holds a reference (a smart &#8220;pointer&#8221;) to this but that is not relevant for ordinary use of perlDL) </p>
 <p> The fundamental idea behind perlDL is to allow <tt>$x</tt> to hold a whole 1D spectrum, or a 2D image, a 3D data cube, and so on up to large N-dimensional data sets. These can be manipulated all at once, e.g. <tt>&quot;$a = $b + 2&quot;</tt> does a vector operation on each value in the spectrum/image/etc. </p>
-<p> You may well ask: &quot;Why not just store a spectrum as a simple Perl <tt>@x</tt> style list with each pixel being a list item?&quot; The two key answers to this are <i>memory</i> and <i>speed</i>. Because we know our spectrum consists of pure numbers we can compactly store them in a single block of memory corresponding to a C style numeric array. This takes up a <font SIZE="-1">LOT</font> less memory than the equivalent Perl list. It is then easy to pass this block of memory to a fast addition routine, or to any other C function which deals with arrays. As a result perlDL is very fast &#8212; for example one can multiply a 2048*2048 image in exactly the same time as it would take in C or <font SIZE="-1">FORTRAN </font>(0.1 sec on my <font SIZE="-1">SPARC</font>). A further advantage of this is that for simple operations (e.g. <tt>&quot;$x += 2&quot;</tt>) one can manipulate the whole array without caring about its dimensionality. </p>
-<p> I find when using perlDL it is most useful to think of standard Perl <tt>@x</tt> variables as &#8220;lists&#8221; of generic &#8220;things&#8221; and <font SIZE="-1">PDL</font> variables like <tt>$x</tt> as &#8220;arrays&#8221; which can be contained in lists or hashes. Quite often in my perlDL scripts I have <tt>@x</tt> contain a list of spectra, or a list of images (or even a mix!). Or perhaps one could have a hash (e.g. <tt>%x</tt>) of images&#8230; the only limit is memory! </p>
+<p> You may well ask: &quot;Why not just store a spectrum as a simple Perl <tt>@x</tt> style list with each pixel being a list item?&quot; The two key answers to this are <i>memory</i> and <i>speed</i>. Because we know our spectrum consists of pure numbers we can compactly store them in a single block of memory corresponding to a C style numeric array. This takes up a LOT less memory than the equivalent Perl list. It is then easy to pass this block of memory to a fast addition routine, or to any other C function which deals with arrays. As a result perlDL is very fast &#8212; for example one can multiply a 2048*2048 image in exactly the same time as it would take in C or FORTRAN (0.1 sec on my SPARC). A further advantage of this is that for simple operations (e.g. <tt>&quot;$x += 2&quot;</tt>) one can manipulate the whole array without caring about its dimensionality. </p>
+<p> I find when using perlDL it is most useful to think of standard Perl <tt>@x</tt> variables as &#8220;lists&#8221; of generic &#8220;things&#8221; and PDL variables like <tt>$x</tt> as &#8220;arrays&#8221; which can be contained in lists or hashes. Quite often in my perlDL scripts I have <tt>@x</tt> contain a list of spectra, or a list of images (or even a mix!). Or perhaps one could have a hash (e.g. <tt>%x</tt>) of images&#8230; the only limit is memory! </p>
 <p> perlDL variables support a range of data types &#8211; arrays can be bytes, short integers (signed or unsigned), long integers, floats or double precision floats.</p>
 <h3>Usage</h3>
 <p>PerlDL is loaded into your Perl script using this command: </p>
 <pre> use PDL; # in Perl scripts: use the standard perlDL modules</pre>
 <p>There are also a lot of extension modules, e.g. PDL::Graphics::TriD. Most of these (but not all as sometimes it is not appropriate) follow a standard convention. If you say: </p>
 <pre> use PDL::Graphics::TriD;</pre>
-<p>You import everything in a standard list from the module. Sometimes you might want to import nothing (e.g. if you want to use <font SIZE="-1">OO</font> syntax all the time and save the import tax). For these you say: </p>
+<p>You import everything in a standard list from the module. Sometimes you might want to import nothing (e.g. if you want to use OO syntax all the time and save the import tax). For these you say: </p>
 <pre> use PDL::Graphics::TriD qw();</pre>
 <p>And the empty <tt>&quot;qw()&quot;</tt> quotes are recognised as meaning &#8216;nothing&#8217;. You can also specify a list of functions to import in the normal Perl way. </p>
 <p> There is also an interactive shell, <tt>&quot;perldl&quot;</tt> or <tt>&quot;pdl2&quot;</tt>, see <i>perldl</i> or pdl2 for details.</p>
-<h3>To create a new <font SIZE="-1">PDL</font> variable</h3>
-<p>Here are some ways of creating a <font SIZE="-1">PDL</font> variable: </p>
+<h3>To create a new PDL variable</h3>
+<p>Here are some ways of creating a PDL variable: </p>
 <pre> $a = pdl [1..10]; # 1D array
  $a = pdl (1,2,3,4); # Ditto
  $a = pdl '[1 2 3 4]'; # Ditto
@@ -60,8 +60,8 @@ description: "PDL::QuickStart – Quick introduction to PDL features."
  $e = zeroes(3,2,4); # 3x2x4 zero-filled array
  $c = rfits $file; # Read FITS file
  @x = ( pdl(42), zeroes(3,2,4), rfits($file) ); # Is a LIST of PDL variables!</pre>
-<p>The <i>pdl()</i> function is used to initialise a <font SIZE="-1">PDL</font> variable from a scalar, list, list reference, another <font SIZE="-1">PDL</font> variable, or a properly formatted string. </p>
-<p> In addition all <font SIZE="-1">PDL</font> functions automatically convert normal Perl scalars to <font SIZE="-1">PDL</font> variables on-the-fly. </p>
+<p>The <i>pdl()</i> function is used to initialise a PDL variable from a scalar, list, list reference, another PDL variable, or a properly formatted string. </p>
+<p> In addition all PDL functions automatically convert normal Perl scalars to PDL variables on-the-fly. </p>
 <p> (also see &#8220;Type Conversion&#8221; and &#8220;Input/Output&#8221; sections below)</p>
 <h3>Arithmetic (and boolean expressions)</h3>
 <pre> $a = $b + 2; $a++; $a = $b / $c; # Etc.
@@ -126,13 +126,13 @@ description: "PDL::QuickStart – Quick introduction to PDL features."
 <pre> print $a;
  $b = &quot;Answer is = $a &quot;;</pre>
 <h3>Sections</h3>
-<p><font SIZE="-1">PDL</font> has very powerful multidimensional slicing and sectioning operators; see the <i>PDL::Slices</i>(3) man page for details; we&#8217;ll describe the most important one here. </p>
-<p> <font SIZE="-1">PDL</font> shows its Perl/C heritage in that arrays are zero-offset. Thus a 100&#215;100 image has indices <tt>&quot;0..99,0..99&quot;</tt>. (The convention is that the <i>center</i> of pixel (0,0) is at coordinate (0.0,0.0). All <font SIZE="-1">PDL</font> graphics functions conform to this definition and hide away the unit offsets of, for example, the <font SIZE="-1">PGPLOT FORTRAN</font> library. </p>
+<p>PDL has very powerful multidimensional slicing and sectioning operators; see the <i>PDL::Slices</i>(3) man page for details; we&#8217;ll describe the most important one here. </p>
+<p> PDL shows its Perl/C heritage in that arrays are zero-offset. Thus a 100&#215;100 image has indices <tt>&quot;0..99,0..99&quot;</tt>. (The convention is that the <i>center</i> of pixel (0,0) is at coordinate (0.0,0.0). All PDL graphics functions conform to this definition and hide away the unit offsets of, for example, the PGPLOT FORTRAN library. </p>
 <p> Following the usual convention coordinate (0,0) is displayed at the bottom left when displaying an image. It appears at the top left when using &quot;<tt>&quot;print $a&quot;</tt>&quot; etc. </p>
-<p> Simple sectioning uses a syntax extension to Perl, PDL::NiceSlice, that allows you to specify subranges via a null-method modifier to a <font SIZE="-1">PDL:</font> </p>
+<p> Simple sectioning uses a syntax extension to Perl, PDL::NiceSlice, that allows you to specify subranges via a null-method modifier to a PDL: </p>
 <pre> $b = $a-&gt;($x1:$x2,$y1:$y2,($z1)); # Take subsection</pre>
 <p>Here, <tt>$a</tt> is a 3-dimensional variable, and <tt>$b</tt> gets a planar cutout that is defined by the limits <tt>$x1</tt>, <tt>$x2</tt>, <tt>$y1</tt>, <tt>$y2</tt>, at the location <tt>$z1</tt>. The parenthesis around <tt>$z1</tt> cause the trivial index to be omitted &#8212; otherwise <tt>$b</tt> would be three-dimensional with a third dimension of order 1. </p>
-<p> You can put <font SIZE="-1">PDL</font> slices on either side of the element-wise assignment operator <tt>&quot;.=&quot;</tt>, like so: </p>
+<p> You can put PDL slices on either side of the element-wise assignment operator <tt>&quot;.=&quot;</tt>, like so: </p>
 <pre> # Set part of $bigimage to values from $smallimage
  $bigimage-&gt;($xa:$xb,$ya:$yb) .= $smallimage;</pre>
 <p>Some other miscellany: </p>
@@ -143,12 +143,12 @@ description: "PDL::QuickStart – Quick introduction to PDL features."
  # axisvals($x,$axis) and rvals() for radial distance
  # from centre).</pre>
 <h3>Input/Output</h3>
-<p>The <tt>&quot;PDL::IO&quot;</tt> modules implement several useful <font SIZE="-1">IO</font> format functions. It would be too much to give examples of each, but you can find a nice overview at <font SIZE="-1">PDL::IO</font>. Here is a sample of some of the supported <font SIZE="-1">IO</font> formats in <font SIZE="-1">PDL.</font></p>
+<p>The <tt>&quot;PDL::IO&quot;</tt> modules implement several useful IO format functions. It would be too much to give examples of each, but you can find a nice overview at PDL::IO. Here is a sample of some of the supported IO formats in PDL.</p>
 <dl>
 <dt>PDL::IO::Misc</dt>
-<dd>Ascii, <font SIZE="-1">FITS</font> and <font SIZE="-1">FIGARO/NDF IO</font> routines.</dd>
+<dd>Ascii, FITS and FIGARO/NDF IO routines.</dd>
 <dt>PDL::IO::FastRaw</dt>
-<dd>Using the raw data types of your machine, an unportable but blindingly fast <font SIZE="-1">IO</font> format. Also supports memory mapping to conserve memory as well as get more speed.</dd>
+<dd>Using the raw data types of your machine, an unportable but blindingly fast IO format. Also supports memory mapping to conserve memory as well as get more speed.</dd>
 <dt>PDL::IO::FlexRaw</dt>
 <dd>General raw data formats. Like FastRaw, only better.</dd>
 <dt>PDL::IO::Browser</dt>
@@ -156,26 +156,26 @@ description: "PDL::QuickStart – Quick introduction to PDL features."
 <dt>PDL::IO::Pnm</dt>
 <dd>Portaple bitmap and pixmap support.</dd>
 <dt>PDL::IO::Pic</dt>
-<dd>Using the previous module and netpbm, makes it possible to easily write <font SIZE="-1">GIF,</font> jpeg and whatever with simple commands.</dd></dl>
+<dd>Using the previous module and netpbm, makes it possible to easily write GIF, jpeg and whatever with simple commands.</dd></dl>
 <h3>Graphics</h3>
-<p>The philosophy behind perlDL is to make it work with a variety of existing graphics libraries since no single package will satisfy all needs and all people and this allows one to work with packages one already knows and likes. Obviously there will be some overlaps in functionality and some lack of consistency and uniformity. However this allows <font SIZE="-1">PDL</font> to keep up with a rapidly developing field &#8211; the latest <font SIZE="-1">PDL</font> modules provide interfaces to OpenGL and <font SIZE="-1">VRML</font> graphics!</p>
+<p>The philosophy behind perlDL is to make it work with a variety of existing graphics libraries since no single package will satisfy all needs and all people and this allows one to work with packages one already knows and likes. Obviously there will be some overlaps in functionality and some lack of consistency and uniformity. However this allows PDL to keep up with a rapidly developing field &#8211; the latest PDL modules provide interfaces to OpenGL and VRML graphics!</p>
 <dl>
 <dt>PDL::Graphics::PGPLOT</dt>
-<dd><font SIZE="-1">PGPLOT</font> provides a simple library for line graphics and image display. </dd>
-<p> There is an easy interface to this in the internal module PDL::Graphics::PGPLOT, which calls routines in the separately available <font SIZE="-1">PGPLOT</font> top-level module.</p>
+<dd>PGPLOT provides a simple library for line graphics and image display. </dd>
+<p> There is an easy interface to this in the internal module PDL::Graphics::PGPLOT, which calls routines in the separately available PGPLOT top-level module.</p>
 <dt>PDL::Graphics::PLplot</dt>
 <dd>PLplot provides a simple library for creating graphics with multiple output drivers, including a direct-to-piddle driver. </dd>
 <p> This module provides both high-level and low-level functionality built on PLplot. The low-level commands are pretty much direct bindings to PLplot&#8217;s C interface. Read more at PDL::Graphics::PLplot.</p>
 <dt>PDL::Graphics::IIS</dt>
 <dd>Many astronomers like to use SAOimage and Ximtool (or there derivations/clones). These are useful free widgets for inspection and visualisation of images. (They are not provided with perlDL but can easily be obtained from their official sites off the Net.) </dd>
-<p> The PDL::Graphics::IIS package provides allows one to display images in these (&#8220;<font SIZE="-1">IIS&#8221;</font> is the name of an ancient item of image display hardware whose protocols these tools conform to.)</p>
+<p> The PDL::Graphics::IIS package provides allows one to display images in these (&#8220;IIS&#8221; is the name of an ancient item of image display hardware whose protocols these tools conform to.)</p>
 <dt>PDL::Graphics::TriD</dt>
-<dd>See PDL::Graphics::TriD, this is a collection of 3D routines for OpenGL and (soon) <font SIZE="-1">VRML</font> and other 3D formats which allow 3D point, line, and surface plots from <font SIZE="-1">PDL.</font></dd></dl>
+<dd>See PDL::Graphics::TriD, this is a collection of 3D routines for OpenGL and (soon) VRML and other 3D formats which allow 3D point, line, and surface plots from PDL.</dd></dl>
 <h3>Autoloading</h3>
 <p>See PDL::AutoLoader. This allows one to autoload functions on demand, in a way perhaps familiar to users of MatLab. </p>
-<p> One can also write <font SIZE="-1">PDL</font> extensions as normal Perl modules.</p>
-<h3><font SIZE="-1">PDL</font> shells</h3>
-<p>The Perl script <tt>&quot;pdl2&quot;</tt> (or <tt>&quot;perldl&quot;</tt>) provides a simple command line interface to <font SIZE="-1">PDL. </font> If the latest Readlines/ReadKey modules have been installed <tt>&quot;pdl2&quot;</tt> detects this and enables command line recall and editing. See the man page for details. </p>
+<p> One can also write PDL extensions as normal Perl modules.</p>
+<h3>PDL shells</h3>
+<p>The Perl script <tt>&quot;pdl2&quot;</tt> (or <tt>&quot;perldl&quot;</tt>) provides a simple command line interface to PDL.  If the latest Readlines/ReadKey modules have been installed <tt>&quot;pdl2&quot;</tt> detects this and enables command line recall and editing. See the man page for details. </p>
 <p> e.g.: </p>
 <pre> % perldl
  perlDL shell v1.354
@@ -209,22 +209,22 @@ description: "PDL::QuickStart – Quick introduction to PDL features."
  [1 1 1 1 1]
  ]</pre>
 <dt>Initialization</dt>
-<dd>The files <tt>&quot;~/.perldlrc&quot;</tt> and <tt>&quot;local.perldlrc&quot;</tt> (in the current directory) are sourced if found. This allows the user to have global and local <font SIZE="-1">PDL</font> code for startup.</dd>
+<dd>The files <tt>&quot;~/.perldlrc&quot;</tt> and <tt>&quot;local.perldlrc&quot;</tt> (in the current directory) are sourced if found. This allows the user to have global and local PDL code for startup.</dd>
 <dt>Help</dt>
-<dd>Type &#8216;help&#8217;! One can search the <font SIZE="-1">PDL</font> documentation, and look up documentation on any function.</dd>
+<dd>Type &#8216;help&#8217;! One can search the PDL documentation, and look up documentation on any function.</dd>
 <dt>Escape</dt>
 <dd>Any line starting with the <tt>&quot;#&quot;</tt> character is treated as a shell escape. This character is configurable by setting the Perl variable <tt>$PERLDL_ESCAPE</tt>. This could, for example, be set in <tt>&quot;~/.perldlrc&quot;</tt>.</dd></dl>
 <h3>Overload operators</h3>
-<p>The following builtin Perl operators and functions have been overloaded to work on <font SIZE="-1">PDL</font> variables: </p>
+<p>The following builtin Perl operators and functions have been overloaded to work on PDL variables: </p>
 <pre> + - * / &gt; &lt; &gt;= &lt;= &lt;&lt; &gt;&gt; &amp; | ^ == != &lt;=&gt; ** % ! ~
  sin log abs atan2 sqrt cos exp</pre>
 <p>[All the unary functions (sin etc.) may be used with <i>inplace()</i> &#8211; see &#8220;Memory&#8221; below.]</p>
 <h3>Object-Orientation and perlDL</h3>
-<p><font SIZE="-1">PDL</font> operations are available as functions and methods. Thus one can derive new types of object, to represent custom data classes. </p>
-<p> By using overloading one can make mathematical operators do whatever you please, and <font SIZE="-1">PDL</font> has some built-in tricks which allow existing <font SIZE="-1">PDL</font> functions to work unchanged, even if the underlying data representation is vastly changed! See PDL::Objects</p>
+<p>PDL operations are available as functions and methods. Thus one can derive new types of object, to represent custom data classes. </p>
+<p> By using overloading one can make mathematical operators do whatever you please, and PDL has some built-in tricks which allow existing PDL functions to work unchanged, even if the underlying data representation is vastly changed! See PDL::Objects</p>
 <h3>Memory usage and references</h3>
 <p>Messing around with really huge data arrays may require some care. perlDL provides many facilities to let you perform operations on big arrays without generating extra copies though this does require a bit more thought and care from the programmer. </p>
-<p> <font SIZE="-1">NOTE:</font> On some most systems it is better to configure Perl (during the build options) to use the system <tt>&quot;malloc()&quot;</tt> function rather than Perl&#8217;s built-in one. This is because Perl&#8217;s one is optimised for speed rather than consumption of virtual memory &#8211; this can result in a factor of two improvement in the amount of memory storage you can use. The Perl malloc in 5.004 and later does have a number of compile-time options you can use to tune the behaviour.</p>
+<p> NOTE: On some most systems it is better to configure Perl (during the build options) to use the system <tt>&quot;malloc()&quot;</tt> function rather than Perl&#8217;s built-in one. This is because Perl&#8217;s one is optimised for speed rather than consumption of virtual memory &#8211; this can result in a factor of two improvement in the amount of memory storage you can use. The Perl malloc in 5.004 and later does have a number of compile-time options you can use to tune the behaviour.</p>
 <dl>
 <dt>Simple arithmetic</dt>
 <dd>If <tt>$a</tt> is a big image (e.g. occupying 10MB) then the command </dd>
@@ -244,7 +244,7 @@ description: "PDL::QuickStart – Quick introduction to PDL features."
 <dd>Most functions, e.g. <tt>&quot;log()&quot;</tt>, return a result which is a transformation of their argument. This makes for good programming practice. However many operations can be done &#8220;in-place&#8221; and this may be required when large arrays are in use and memory is at a premium. For these circumstances the operator <i>inplace()</i> is provided which prevents the extra copy and allows the argument to be modified. e.g.: </dd>
 <pre> $x = log($array); # $array unaffected
  log( inplace($bigarray) ); # $bigarray changed in situ</pre>
-<p><font SIZE="-1">WARNINGS:</font></p>
+<p>WARNINGS:</p>
 <dl>
 <dd>
 </dd><dl>
@@ -259,8 +259,8 @@ description: "PDL::QuickStart – Quick introduction to PDL features."
 <dd></dd></dl>
 </dl>
 <h3>Ensuring piddleness</h3>
-<p>If you have written a simple function and you don&#8217;t want it to blow up in your face if you pass it a simple number rather than a <font SIZE="-1">PDL</font> variable. Simply call the function <i>topdl()</i> first to make it safe. e.g.: </p>
+<p>If you have written a simple function and you don&#8217;t want it to blow up in your face if you pass it a simple number rather than a PDL variable. Simply call the function <i>topdl()</i> first to make it safe. e.g.: </p>
 <pre> sub myfiddle { my $pdl = topdl(shift); $pdl-&gt;fiddle_foo(...); ... }</pre>
-<p><tt>&quot;topdl()&quot;</tt> does <font SIZE="-1">NOT</font> perform a copy if a pdl variable is passed &#8211; it just falls through &#8211; which is obviously the desired behaviour. The routine is not of course necessary in normal user defined functions which do not care about internals.</p>
+<p><tt>&quot;topdl()&quot;</tt> does NOT perform a copy if a pdl variable is passed &#8211; it just falls through &#8211; which is obviously the desired behaviour. The routine is not of course necessary in normal user defined functions which do not care about internals.</p>
 <h2>Author</h2>
 <p>Copyright (C) Karl Glazebrook (kgb [at] aaoepp.aao.gov.au), Tuomas J. Lukka, (lukka [at] husc.harvard.edu) and Christian Soeller (c.soeller [at] auckland.ac.nz) 1997. Commercial reproduction of this documentation in a different format is forbidden.</p>

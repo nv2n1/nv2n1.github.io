@@ -21,5 +21,5 @@ description: "XtAppSetExitFlag, XtAppGetExitFlag – thread support functions"
 <p>To indicate that an application context should exit, use <code>XtAppSetExitFlag</code>. </p>
 <p> To test the exit status of an application context, use <code>XtAppGetExitFlag</code>.</p>
 <h2>See Also</h2>
-<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

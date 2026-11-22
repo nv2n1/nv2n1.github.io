@@ -10,7 +10,7 @@ description: "XkbGetSlowKeysDelay – Gets the SlowKeys acceptance delay for a k
 <p>XkbGetSlowKeysDelay &#8211; Gets the SlowKeys acceptance delay for a keyboard device </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Bool XkbGetSlowKeysDelay</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>,</code> <code>unsigned int *</code><i>delay_rtrn</i><code>);</code><br />
+<dt> <code>Bool XkbGetSlowKeysDelay</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>,</code> <code>unsigned int *</code><i>delay_rtrn</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

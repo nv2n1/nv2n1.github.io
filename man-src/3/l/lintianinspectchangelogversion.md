@@ -20,8 +20,8 @@ description: "Lintian::Inspect::Changelog::Version — Parse a literal version s
 <dd>Creates a new Lintian::Inspect::Changelog::Version object.</dd></dl>
 <h2>Instance Methods</h2>
 <dl COMPACT>
-<dt>set (<font SIZE="-1">LITERAL, NATIVE</font>)</dt>
-<dd>Set the various members in the Lintian::Inspect::Changelog::Version object using the <font SIZE="-1">LITERAL</font> version string and the <font SIZE="-1">NATIVE</font> boolean selector.</dd>
+<dt>set (LITERAL, NATIVE)</dt>
+<dd>Set the various members in the Lintian::Inspect::Changelog::Version object using the LITERAL version string and the NATIVE boolean selector.</dd>
 <dt>literal</dt>
 <dd>
 </dd><dt>epoch</dt>

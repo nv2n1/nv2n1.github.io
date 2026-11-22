@@ -29,7 +29,7 @@ description: "scsi_readcap – do SCSI READ CAPACITY command on disks"
 <h2>Authors</h2>
 <p>Written by D. Gilbert</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2009-2013 Douglas Gilbert<br />
+<p>Copyright &#169; 2009-2013 Douglas Gilbert<br/>
  This software is distributed under a FreeBSD license. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>See Also</h2>
 <p><code>sg_readcap (sg3_utils)</code> </p>

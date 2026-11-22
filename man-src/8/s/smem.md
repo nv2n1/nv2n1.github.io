@@ -94,10 +94,10 @@ description: "smem – Report memory usage with shared memory divided proportion
 <dt>2.</dt>
 <dd>Compile <i>smemcap.c</i> for your target system.</dd>
 <dt>3.</dt>
-<dd>Run <code>smemcap</code> on the target system and save the output:<br />
+<dd>Run <code>smemcap</code> on the target system and save the output:<br/>
  smemcap &gt; memorycapture.tar</dd>
 <dt>4.</dt>
-<dd>Copy the output to another machine and run smem on it:<br />
+<dd>Copy the output to another machine and run smem on it:<br/>
  smem -S memorycapture.tar </dd>
 </dl>
 <h2>Files</h2>

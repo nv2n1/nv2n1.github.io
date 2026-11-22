@@ -10,7 +10,7 @@ description: "XkbNoteDeviceChanges – Note device changes reported in an XkbExt
 <p>XkbNoteDeviceChanges &#8211; Note device changes reported in an XkbExtensionDeviceNotify event </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>void XkbNoteDeviceChanges</code> <code>(XkbDeviceChangesPtr </code><i>old</i><code>,</code> <code>XkbExtensionDeviceNotifyEvent *</code><i>new</i><code>,</code> <code>unsigned int </code><i>wanted</i><code>);</code><br />
+<dt> <code>void XkbNoteDeviceChanges</code> <code>(XkbDeviceChangesPtr </code><i>old</i><code>,</code> <code>XkbExtensionDeviceNotifyEvent *</code><i>new</i><code>,</code> <code>unsigned int </code><i>wanted</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

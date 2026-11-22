@@ -38,9 +38,9 @@ description: "opapacketcapture"
 <dd> Produces verbose output. </dd>
 </dl>
 <h2>Example</h2>
-<p> # opapacketcapture<br />
- opapacketcapture: Capturing packets using 128 MiB buffer<br />
- ^C<br />
- opapacketcapture: Triggered<br />
+<p> # opapacketcapture<br/>
+ opapacketcapture: Capturing packets using 128 MiB buffer<br/>
+ ^C<br/>
+ opapacketcapture: Triggered<br/>
  Number of packets stored is 100 </p>
 <p> In the example above, opapacketcapture operates until <code>CTRL+C</code> is entered. </p>

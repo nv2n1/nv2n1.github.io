@@ -12,7 +12,7 @@ description: "QuantLib::Singleton – Basic support for the singleton pattern."
 <p>#include &lt;ql/patterns/singleton.hpp&gt; </p>
 <p> Inherits boost::noncopyable. </p>
 <h3>Static Public Member Functions</h3>
-<p>static T &amp; <code>instance</code> ()<br />
+<p>static T &amp; <code>instance</code> ()<br/>
  <i>access to the unique instance </i></p>
 <h2>Detailed Description</h2>
 <h3>template&lt;class T&gt; class QuantLib::Singleton&lt; T &gt;</h3>

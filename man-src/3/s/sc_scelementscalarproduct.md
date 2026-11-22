@@ -12,8 +12,8 @@ description: "sc::SCElementScalarProduct –"
 <p> Inherits <code>sc::SCElementOp2</code>.</p>
 <h3>Public Member Functions</h3>
 <p><code>SCElementScalarProduct</code> (<code>StateIn</code> &amp;) </p>
-<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br />
- <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br />
+<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br/>
+ <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br/>
  void <code>process</code> (<code>SCMatrixBlockIter</code> &amp;, <code>SCMatrixBlockIter</code> &amp;) </p>
 <p> int <code>has_collect</code> () </p>
 <p> void <code>defer_collect</code> (int) </p>

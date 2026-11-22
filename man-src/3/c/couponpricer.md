@@ -10,18 +10,18 @@ description: "ql/cashflows/couponpricer.hpp – Coupon pricers."
 
 <p> ql/cashflows/couponpricer.hpp &#8211; Coupon pricers. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/termstructures/volatility/optionlet/optionletvolatilitystructure.hpp&gt;<br />
- #include &lt;ql/termstructures/volatility/swaption/swaptionvolstructure.hpp&gt;<br />
- #include &lt;ql/cashflow.hpp&gt;<br />
+<p> #include &lt;ql/termstructures/volatility/optionlet/optionletvolatilitystructure.hpp&gt;<br/>
+ #include &lt;ql/termstructures/volatility/swaption/swaptionvolstructure.hpp&gt;<br/>
+ #include &lt;ql/cashflow.hpp&gt;<br/>
  #include &lt;ql/option.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>FloatingRateCouponPricer</code><br />
- <i>generic pricer for floating-rate coupons </i><br />
- class <code>IborCouponPricer</code><br />
- <i>base pricer for capped/floored Ibor coupons </i><br />
- class <code>BlackIborCouponPricer</code><br />
- <i>Black-formula pricer for capped/floored Ibor coupons. </i><br />
- class <code>CmsCouponPricer</code><br />
+<p> class <code>FloatingRateCouponPricer</code><br/>
+ <i>generic pricer for floating-rate coupons </i><br/>
+ class <code>IborCouponPricer</code><br/>
+ <i>base pricer for capped/floored Ibor coupons </i><br/>
+ class <code>BlackIborCouponPricer</code><br/>
+ <i>Black-formula pricer for capped/floored Ibor coupons. </i><br/>
+ class <code>CmsCouponPricer</code><br/>
  <i>base pricer for vanilla CMS coupons </i></p>
 <h3>Functions</h3>
 <p> void <code>setCouponPricer</code> (const Leg &amp;leg, const boost::shared_ptr&lt; FloatingRateCouponPricer &gt; &amp;) </p>

@@ -21,9 +21,9 @@ description: "ql/math/interpolations/sabrinterpolation.hpp – SABR interpolatio
 #include &lt;ql/math/optimization/projectedcostfunction.hpp&gt;
 #include &lt;ql/math/optimization/constraint.hpp&gt;</code></pre>
 <h3>Classes</h3>
-<p>class <code>SABRInterpolation</code><br />
- <i>SABR smile interpolation between discrete volatility points. </i><br />
- class <code>SABR</code><br />
+<p>class <code>SABRInterpolation</code><br/>
+ <i>SABR smile interpolation between discrete volatility points. </i><br/>
+ class <code>SABR</code><br/>
  <i>SABR interpolation factory and traits </i></p>
 <h2>Detailed Description</h2>
 <p>SABR interpolation interpolation between discrete points.</p>

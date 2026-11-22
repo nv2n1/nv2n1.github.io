@@ -56,9 +56,9 @@ description: "y4mtopnm – Convert a YUV4MPEG2 stream to PNM images"
 </code></pre>
 <p> In this mode, any YUV4MPEG2 chroma format is accepted, but no upsampling or colorspace conversion is performed. This is essentially just a reformatting/permutation of the original data from the input stream into a PGM image container. All the other command-line flags continue to have the same effect on output.</p>
 <dt><code>-v</code><i> [0,1,2]</i></dt>
-<dd> Set verbosity level.<br />
-&nbsp;<wbr>0&nbsp;<wbr>=&nbsp;<wbr>warnings and errors only.<br />
-&nbsp;<wbr>1&nbsp;<wbr>=&nbsp;<wbr>add informative messages, too.<br />
+<dd> Set verbosity level.<br/>
+&nbsp;<wbr>0&nbsp;<wbr>=&nbsp;<wbr>warnings and errors only.<br/>
+&nbsp;<wbr>1&nbsp;<wbr>=&nbsp;<wbr>add informative messages, too.<br/>
 &nbsp;<wbr>2&nbsp;<wbr>=&nbsp;<wbr>add chatty debugging message, too. </dd>
 </dl>
 <h2>EXAMPLES</h2>
@@ -67,8 +67,8 @@ description: "y4mtopnm – Convert a YUV4MPEG2 stream to PNM images"
 <dt>
 </dt><dd> lav2yuv -f 15 your-video.avi | y4mscaler -O chromass=444 | y4mtopnm | pnmsplit &#8211; &quot;your-video-%d.ppm&quot;</dd></dl>
 <h2>AUTHOR</h2>
-<p> This manual page was written by Matt Marjanovic.<br />
- If you have questions, remarks, problems or you just want to contact the developers, the main mailing list for the MJPEG-tools is:<br />
+<p> This manual page was written by Matt Marjanovic.<br/>
+ If you have questions, remarks, problems or you just want to contact the developers, the main mailing list for the MJPEG-tools is:<br/>
 &nbsp;<wbr>&nbsp;<wbr><i>mjpeg-users [at] lists.sourceforge.net</i> </p>
 <dl>
 <dt>For more info, see our website at</dt>

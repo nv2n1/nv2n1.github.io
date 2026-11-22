@@ -11,8 +11,8 @@ description: "casinh, casinhf, casinhl – complex arc sine hyperbolic"
 <p> casinh, casinhf, casinhl &#8211; complex arc sine hyperbolic </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>
-<p> <code>double complex casinh(double complex </code><i>z</i><code>);</code><br />
- <code>float complex casinhf(float complex </code><i>z</i><code>);</code><br />
+<p> <code>double complex casinh(double complex </code><i>z</i><code>);</code><br/>
+ <code>float complex casinhf(float complex </code><i>z</i><code>);</code><br/>
  <code>long double complex casinhl(long double complex </code><i>z</i><code>);</code> </p>
 <p> Link with <i>-lm</i>.</p>
 <h2>DESCRIPTION</h2>

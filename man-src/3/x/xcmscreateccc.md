@@ -36,5 +36,5 @@ description: "XcmsCreateCCC, XcmsFreeCCC – creating and destroying CCCs"
 <p>The <code>XcmsCreateCCC</code> function creates a CCC for the specified display, screen, and visual. </p>
 <p> The <code>XcmsFreeCCC</code> function frees the memory used for the specified CCC. Note that default CCCs and those currently associated with colormaps are ignored.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-displayofccc/">DisplayOfCCC</a>(3), <a href="/docs/linux/man/3-xcmscccofcolormap/">XcmsCCCOfColormap</a>(3), <a href="/docs/linux/man/3-xcmsconvertcolors/">XcmsConvertColors</a>(3), <a href="/docs/linux/man/3-xcmsdefaultccc/">XcmsDefaultCCC</a>(3), <a href="/docs/linux/man/3-xcmssetwhitepoint/">XcmsSetWhitePoint</a>(3)<br />
+<p><a href="/docs/linux/man/3-displayofccc/">DisplayOfCCC</a>(3), <a href="/docs/linux/man/3-xcmscccofcolormap/">XcmsCCCOfColormap</a>(3), <a href="/docs/linux/man/3-xcmsconvertcolors/">XcmsConvertColors</a>(3), <a href="/docs/linux/man/3-xcmsdefaultccc/">XcmsDefaultCCC</a>(3), <a href="/docs/linux/man/3-xcmssetwhitepoint/">XcmsSetWhitePoint</a>(3)<br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

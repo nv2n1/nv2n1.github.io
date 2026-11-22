@@ -45,7 +45,7 @@ description: "Smokeping::probes::FTPtransfer – intrusive bandwidth probe"
  timeout = 10
  username = test-user</pre>
 <h2>Description</h2>
-<p>The probe uses the Net::FTP perl client to run performance tests using an <font SIZE="-1">FTP</font> server as a target. This probe is <code>intrusive</code> as it transfers real data. By using real data we get a fair shot at figuring out what a link is capable of when it comes to transfering actual files. </p>
+<p>The probe uses the Net::FTP perl client to run performance tests using an FTP server as a target. This probe is <code>intrusive</code> as it transfers real data. By using real data we get a fair shot at figuring out what a link is capable of when it comes to transfering actual files. </p>
 <p> The password can be specified either (in order of precedence, with the latter overriding the former) in the probe-specific variable `password&#8217;, in an external file or in the target-specific variable `password&#8217;. The location of this external file is given in the probe-specific variable `passwordfile&#8217;. See <i>Smokeping::probes::passwordchecker</i>(3pm) for the format of this file (summary: colon-separated triplets of the form `&lt;host&gt;:&lt;username&gt;:&lt;password&gt;&#8217;) </p>
 <p> The probe tries to be nice to the server and waits at least X seconds between starting filetransfers, where X is the value of the probe specific `min_interval&#8217; variable (1 by default). </p>
 <p> Many variables can be specified either in the probe or in the target definition, the target-specific variable will override the prove-specific variable. </p>
@@ -68,7 +68,7 @@ description: "Smokeping::probes::FTPtransfer – intrusive bandwidth probe"
 <p> Example value: get </p>
 <p> This setting is mandatory.</p>
 <dt>offset</dt>
-<dd>If you run many probes concurrently you may want to prevent them from hitting your network all at the same time. Using the probe-specific offset parameter you can change the point in time when each probe will be run. Offset is specified in % of total interval, or alternatively as &#8216;random&#8217;, and the offset from the &#8216;General&#8217; section is used if nothing is specified here. Note that this does <font SIZE="-1">NOT</font> influence the rrds itself, it is just a matter of when data acqusition is initiated. (This variable is only applicable if the variable &#8216;concurrentprobes&#8217; is set in the &#8216;General&#8217; section.) </dd>
+<dd>If you run many probes concurrently you may want to prevent them from hitting your network all at the same time. Using the probe-specific offset parameter you can change the point in time when each probe will be run. Offset is specified in % of total interval, or alternatively as &#8216;random&#8217;, and the offset from the &#8216;General&#8217; section is used if nothing is specified here. Note that this does NOT influence the rrds itself, it is just a matter of when data acqusition is initiated. (This variable is only applicable if the variable &#8216;concurrentprobes&#8217; is set in the &#8216;General&#8217; section.) </dd>
 <p> Example value: 50%</p>
 <dt>passwordfile</dt>
 <dd>Location of the file containing usernames and passwords. </dd>
@@ -78,11 +78,11 @@ description: "Smokeping::probes::FTPtransfer – intrusive bandwidth probe"
 <p> Example value: src/path/mybig.pdf </p>
 <p> This setting is mandatory.</p>
 <dt>step</dt>
-<dd>Duration of the base interval that this probe should use, if different from the one specified in the &#8216;Database&#8217; section. Note that the step in the <font SIZE="-1">RRD</font> files is fixed when they are originally generated, and if you change the step parameter afterwards, you&#8217;ll have to delete the old <font SIZE="-1">RRD</font> files or somehow convert them. (This variable is only applicable if the variable &#8216;concurrentprobes&#8217; is set in the &#8216;General&#8217; section.) </dd>
+<dd>Duration of the base interval that this probe should use, if different from the one specified in the &#8216;Database&#8217; section. Note that the step in the RRD files is fixed when they are originally generated, and if you change the step parameter afterwards, you&#8217;ll have to delete the old RRD files or somehow convert them. (This variable is only applicable if the variable &#8216;concurrentprobes&#8217; is set in the &#8216;General&#8217; section.) </dd>
 <p> Example value: 300</p>
 <dt>timeout</dt>
 <dd>The timeout is the maximum amount of time you will allow the probe to transfer the file. If the probe does not succeed to transfer in the time specified, it will get killed and a &#8216;loss&#8217; will be loged. </dd>
-<p> Since FTPtransfer is an invasive probe you should make sure you do not load the link for more than a few seconds anyway. Smokeping curently has a hard limit of 180 seconds for any <font SIZE="-1">RTT.</font> </p>
+<p> Since FTPtransfer is an invasive probe you should make sure you do not load the link for more than a few seconds anyway. Smokeping curently has a hard limit of 180 seconds for any RTT. </p>
 <p> Example value: 15 </p>
 <p> This setting is mandatory.</dl>
 <p> Supported target-specific variables:</p>
@@ -91,19 +91,19 @@ description: "Smokeping::probes::FTPtransfer – intrusive bandwidth probe"
 <dd>The local address to be used when making connections </dd>
 <p> Example value: myhost-nat-if</p>
 <dt>passive</dt>
-<dd>Use passive <font SIZE="-1">FTP</font> protocol </dd>
+<dd>Use passive FTP protocol </dd>
 <p> Example value: yes</p>
 <dt>password</dt>
 <dd>The password for the user, if not present in the password file. </dd>
 <p> Example value: test-password</p>
 <dt>pings</dt>
-<dd>How many pings should be sent to each target, if different from the global value specified in the Database section. Note that the number of pings in the <font SIZE="-1">RRD</font> files is fixed when they are originally generated, and if you change this parameter afterwards, you&#8217;ll have to delete the old <font SIZE="-1">RRD</font> files or somehow convert them. </dd>
+<dd>How many pings should be sent to each target, if different from the global value specified in the Database section. Note that the number of pings in the RRD files is fixed when they are originally generated, and if you change this parameter afterwards, you&#8217;ll have to delete the old RRD files or somehow convert them. </dd>
 <p> Example value: 5</p>
 <dt>port</dt>
-<dd>A non-standard <font SIZE="-1">FTP</font> port to be used </dd>
+<dd>A non-standard FTP port to be used </dd>
 <p> Example value: 3255</p>
 <dt>timeout</dt>
-<dd>Timeout in seconds for the <font SIZE="-1">FTP</font> transfer to complete. </dd>
+<dd>Timeout in seconds for the FTP transfer to complete. </dd>
 <p> Example value: 10</p>
 <dt>username</dt>
 <dd>The username to be tested. </dd>

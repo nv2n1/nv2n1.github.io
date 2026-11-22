@@ -10,7 +10,7 @@ description: "ztgexc.f –"
 <p>ztgexc.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>ztgexc</code> (WANTQ, WANTZ, N, A, LDA, B, LDB, Q, LDQ, Z, LDZ, IFST, ILST, INFO)<br />
+<p>subroutine <code>ztgexc</code> (WANTQ, WANTZ, N, A, LDA, B, LDB, Q, LDQ, Z, LDZ, IFST, ILST, INFO)<br/>
  <i></i><code>ZTGEXC</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ztgexc (logicalWANTQ, logicalWANTZ, integerN, complex*16, dimension( lda, * )A, integerLDA, complex*16, dimension( ldb, * )B, integerLDB, complex*16, dimension( ldq, * )Q, integerLDQ, complex*16, dimension( ldz, * )Z, integerLDZ, integerIFST, integerILST, integerINFO)</h3>

@@ -10,16 +10,16 @@ description: "getgroups, setgroups – get/set list of supplementary group IDs"
 
 <p> getgroups, setgroups &#8211; get/set list of supplementary group IDs </p>
 <h2>SYNOPSIS</h2>
-<p> <code>#include &lt;sys/types.h&gt;</code><br />
+<p> <code>#include &lt;sys/types.h&gt;</code><br/>
  <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>int getgroups(int </code><i>size</i><code>, gid_t </code><i>list</i><code>[]);</code> </p>
 <p> <code>#include &lt;grp.h&gt;</code> </p>
 <p> <code>int setgroups(size_t </code><i>size</i><code>, const gid_t *</code><i>list</i><code>);</code> </p>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
-<p> <code>setgroups</code>():<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Since glibc 2.19:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.19 and earlier:<br />
+<p> <code>setgroups</code>():<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Since glibc 2.19:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.19 and earlier:<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_BSD_SOURCE</p>
 <h2>DESCRIPTION</h2>
 <p> <code>getgroups</code>() returns the supplementary group IDs of the calling process in <i>list</i>. The argument <i>size</i> should be set to the maximum number of items that can be stored in the buffer pointed to by <i>list</i>. If the calling process is a member of more than <i>size</i> supplementary groups, then an error results. </p>

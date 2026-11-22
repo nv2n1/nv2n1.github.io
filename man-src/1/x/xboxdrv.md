@@ -100,11 +100,11 @@ xboxdrv --config first.ini --alt-config second.ini --alt-config third.ini
 <dd> Run xboxdrv as daemon. If this option is given xboxdrv will listen to udev for USB connection events and launch driver threads for newly connected controllers. </dd>
 <p> Configuration options can still be supplied as usual. Note however that xboxdrv when run as daemon will not create new uinput devices on demand, instead it will only create devices once at startup for the given configurations and then assign new controllers to these configurations. While this means xboxdrv can&#8217;t support an unlimited number of controllers, it also means that xboxdrv can allow hot plugging even for applications that don&#8217;t support it themselves, as applications will only see the permanent device files, not the controller that xboxdrv will change around under the hood. </p>
 <p> An example configuration that supports three controller would look like this: </p>
-<p>xboxdrv &#8211;daemon \<br />
-    # config options for the first controller<br />
-  &#8211;next-controller \<br />
-    # config options for the second controller<br />
-  &#8211;next-controller<br />
+<p>xboxdrv &#8211;daemon \<br/>
+    # config options for the first controller<br/>
+  &#8211;next-controller \<br/>
+    # config options for the second controller<br/>
+  &#8211;next-controller<br/>
 #config options for the third controller</p>
 <p> The <code>&#8211;match</code> option can be used to limit the controller slots to only those controllers that match the given RULE and thus be used to assign configurations only to specific controllers.</p>
 <dt><code>&#8211;detach</code></dt>
@@ -564,16 +564,16 @@ $ xboxdrv --relative-axis y2=64000 --axismap -y2=y2
 <dd> Removes all uinput mappings and will leave the driver in a blank state and only map those things you added yourself. If you only want to get rid of individual buttons you can use the &#8216;void&#8217; event.</dd>
 <dt><code>&#8211;ui-buttonmap</code> <i>UIBUTTONSPEC,&#8230;</i></dt>
 <dd>
-UIBUTTONSPEC = XBOXBUTTON[&#8220;+&#8221; XBOXBUTTON][&#8220;^&#8221; FILTER]&#8230; &#8220;=&#8221;(RELSPEC | BTNSPEC | EXECSPEC);<br />
-RELSPEC = [DEVICEID &#8220;-&#8220;] &#8220;REL_&#8221;[&#8220;:&#8221;[VALUE][&#8220;:&#8221; REPEAT]];<br />
-BTNSPEC = [DEVICEID &#8220;-&#8220;]((&#8220;BTN_&#8221; NAME) | (&#8220;KEY_&#8221; NAME)) { &#8220;+&#8221; BTNSPEC };<br />
-EXECSPEC = PROGRAM{&#8220;:&#8221; ARGUMENT};<br />
-XBOXBUTTON = &#8220;a&#8221; | &#8220;b&#8221; | &#8220;x&#8221; | &#8220;y&#8221; | &#8220;lb&#8221; | &#8220;rb&#8221; | &#8220;lt&#8221; | &#8220;rt&#8221; |<br />
-             &#8220;tl&#8221; | &#8220;tr&#8221; | &#8220;start&#8221; | &#8220;select&#8221; | &#8220;back&#8221; | &#8220;guide&#8221; | &#8220;black&#8221; | &#8220;white&#8221;;<br />
-FILTER = &#8220;toggle&#8221; | &#8220;invert&#8221; | &#8220;autofire&#8221;[&#8220;:&#8221; RATE][&#8220;:&#8221; DELAY] | log[&#8220;:&#8221; STRING];<br />
-NAME = STRING;<br />
-VALUE = NUMBER;<br />
-REPEAT = NUMBER;<br />
+UIBUTTONSPEC = XBOXBUTTON[&#8220;+&#8221; XBOXBUTTON][&#8220;^&#8221; FILTER]&#8230; &#8220;=&#8221;(RELSPEC | BTNSPEC | EXECSPEC);<br/>
+RELSPEC = [DEVICEID &#8220;-&#8220;] &#8220;REL_&#8221;[&#8220;:&#8221;[VALUE][&#8220;:&#8221; REPEAT]];<br/>
+BTNSPEC = [DEVICEID &#8220;-&#8220;]((&#8220;BTN_&#8221; NAME) | (&#8220;KEY_&#8221; NAME)) { &#8220;+&#8221; BTNSPEC };<br/>
+EXECSPEC = PROGRAM{&#8220;:&#8221; ARGUMENT};<br/>
+XBOXBUTTON = &#8220;a&#8221; | &#8220;b&#8221; | &#8220;x&#8221; | &#8220;y&#8221; | &#8220;lb&#8221; | &#8220;rb&#8221; | &#8220;lt&#8221; | &#8220;rt&#8221; |<br/>
+             &#8220;tl&#8221; | &#8220;tr&#8221; | &#8220;start&#8221; | &#8220;select&#8221; | &#8220;back&#8221; | &#8220;guide&#8221; | &#8220;black&#8221; | &#8220;white&#8221;;<br/>
+FILTER = &#8220;toggle&#8221; | &#8220;invert&#8221; | &#8220;autofire&#8221;[&#8220;:&#8221; RATE][&#8220;:&#8221; DELAY] | log[&#8220;:&#8221; STRING];<br/>
+NAME = STRING;<br/>
+VALUE = NUMBER;<br/>
+REPEAT = NUMBER;<br/>
 DEVICEID = NUMBER;</dd>
 <p> Allows you to change the event code that is send to the kernel for buttons. The usage is similar to the normal button mapping, except that the right hand side is an event name from <i>/usr/include/linux/input.h</i>. You can use all <code>KEY_</code> or <code>BTN_</code> codes for <code>&#8211;ui-buttonmap</code>. </p>
 <p> If the right hand side is left empty all the supplied filters will be added to the already existing button binding instead of a new one. </p>
@@ -598,9 +598,9 @@ $ xboxdrv --ui-buttonmap X=REL_???:VALUE:REPEAT
 <p>xboxdrv &#8211; s&#8211; ui &#8211; clear&#8211; ui &#8211; buttonmap A = JS_0 @0, B = JS_1 @0 &#8211;ui &#8211; axismap X2 = ABS_X @0, Y2 = ABS_Y @0 &#8211;ui &#8211; buttonmap X = JS_0 @0, Y = 1 &#8211; JS_1 @0 &#8211;ui &#8211; axismap X2 = ABS_X @1, Y2 = ABS_Y @1</p>
 <p> In this example the left stick creates a joystick device and the right stick creates a separate joystick device. </p>
 <p> When using multiple controller slots you can additionally append the slot id and thus assign events across controller slot boundaries. The syntax for that is: </p>
-<p>BTN_A @{deviceid}.<br />
-{<br />
-    slotid<br />
+<p>BTN_A @{deviceid}.<br/>
+{<br/>
+    slotid<br/>
 }</p>
 <p> Instead of giving just a single button, it is also possible to give two buttons to <code>&#8211;ui-buttonmap</code> to allow shifting: </p>
 <pre>
@@ -618,21 +618,21 @@ xboxdrv -s \
 <p> For documentation on the filters you can apply to events see [Button Filter].</p>
 <dt><code>&#8211;ui-axismap</code> <i>UIAXISSPEC,&#8230;</i></dt>
 <dd>
-UIAXISSPEC = [XBOXBTN &#8220;+&#8221;] XBOXAXIS { &#8220;^&#8221; FILTER } &#8220;=&#8221;(RELSPEC | RELREP | KEYSPEC | ABSSPEC);<br />
-KEYSPEC = [&#8220;key:&#8221;] &#8220;KEY_&#8221; NAME &#8220;:&#8221;<br />
-                   &#8220;KEY_&#8221; NAME &#8220;:&#8221; THRESHOLD;<br />
-RELSPEC = [&#8220;rel:&#8221;] &#8220;REL_&#8221; NAME &#8220;:&#8221; VALUE &#8220;:&#8221; REPEAT;<br />
-RELREP = &#8220;rel-repeat:&#8221;<br />
-         &#8220;REL_&#8221; NAME &#8220;:&#8221; VALUE &#8220;:&#8221; REPEAT;<br />
-ABSSPEC = [&#8220;abs:&#8221;] &#8220;ABS_&#8221; NAME;<br />
-FILTER = (&#8220;calibration&#8221; | &#8220;cal&#8221;) &#8220;:&#8221; MIN &#8220;:&#8221; CENTER &#8220;:&#8221; MAX |<br />
-         (&#8220;sensitifity&#8221; | &#8220;sen&#8221;) &#8220;:&#8221; SENSITIFITY |<br />
-         (&#8220;deadzone&#8221; | &#8220;dead&#8221;) &#8220;:&#8221; MIN &#8220;:&#8221; MAX &#8220;:&#8221; SMOOTH |<br />
-         (&#8220;relative&#8221; | &#8220;rel&#8221;) &#8220;:&#8221; SPEED |<br />
-         (&#8220;responsecurve&#8221; | &#8220;response&#8221; | &#8220;resp&#8221;){&#8220;:&#8221; VALUE} XBOXBTN = &#8220;a&#8221; | &#8220;b&#8221; | &#8220;x&#8221; | &#8220;y&#8221; | &#8220;start&#8221; | &#8220;back&#8221; | &#8220;guide&#8221; | &#8220;lb&#8221; | &#8220;rb&#8221; | &#8230; XBOXAXIS = &#8220;x1&#8221; | &#8220;y1&#8221; | &#8220;x2&#8221; | &#8220;y2&#8221; | &#8220;z&#8221; | &#8220;lt&#8221; | &#8220;rt&#8221; | &#8220;dpad_x&#8221; | &#8220;dpad_y&#8221;;<br />
-VALUE = NUMBER;<br />
-REPEAT = NUMBER;<br />
-THRESHOLD = NUMBER;<br />
+UIAXISSPEC = [XBOXBTN &#8220;+&#8221;] XBOXAXIS { &#8220;^&#8221; FILTER } &#8220;=&#8221;(RELSPEC | RELREP | KEYSPEC | ABSSPEC);<br/>
+KEYSPEC = [&#8220;key:&#8221;] &#8220;KEY_&#8221; NAME &#8220;:&#8221;<br/>
+                   &#8220;KEY_&#8221; NAME &#8220;:&#8221; THRESHOLD;<br/>
+RELSPEC = [&#8220;rel:&#8221;] &#8220;REL_&#8221; NAME &#8220;:&#8221; VALUE &#8220;:&#8221; REPEAT;<br/>
+RELREP = &#8220;rel-repeat:&#8221;<br/>
+         &#8220;REL_&#8221; NAME &#8220;:&#8221; VALUE &#8220;:&#8221; REPEAT;<br/>
+ABSSPEC = [&#8220;abs:&#8221;] &#8220;ABS_&#8221; NAME;<br/>
+FILTER = (&#8220;calibration&#8221; | &#8220;cal&#8221;) &#8220;:&#8221; MIN &#8220;:&#8221; CENTER &#8220;:&#8221; MAX |<br/>
+         (&#8220;sensitifity&#8221; | &#8220;sen&#8221;) &#8220;:&#8221; SENSITIFITY |<br/>
+         (&#8220;deadzone&#8221; | &#8220;dead&#8221;) &#8220;:&#8221; MIN &#8220;:&#8221; MAX &#8220;:&#8221; SMOOTH |<br/>
+         (&#8220;relative&#8221; | &#8220;rel&#8221;) &#8220;:&#8221; SPEED |<br/>
+         (&#8220;responsecurve&#8221; | &#8220;response&#8221; | &#8220;resp&#8221;){&#8220;:&#8221; VALUE} XBOXBTN = &#8220;a&#8221; | &#8220;b&#8221; | &#8220;x&#8221; | &#8220;y&#8221; | &#8220;start&#8221; | &#8220;back&#8221; | &#8220;guide&#8221; | &#8220;lb&#8221; | &#8220;rb&#8221; | &#8230; XBOXAXIS = &#8220;x1&#8221; | &#8220;y1&#8221; | &#8220;x2&#8221; | &#8220;y2&#8221; | &#8220;z&#8221; | &#8220;lt&#8221; | &#8220;rt&#8221; | &#8220;dpad_x&#8221; | &#8220;dpad_y&#8221;;<br/>
+VALUE = NUMBER;<br/>
+REPEAT = NUMBER;<br/>
+THRESHOLD = NUMBER;<br/>
 NAME = STRING;</dd>
 <p> Similar to <code>&#8211;ui-buttonmap</code> this option allows you to change the event code that is send to the kernel for axes. The events that are available are the same as for <code>&#8211;ui-buttonmap</code>. </p>
 <pre>
@@ -963,16 +963,16 @@ $ xboxdrv --next-config --mouse
 <p> The <code>&#8211;next-config</code> option will open up a second configuration and all configuration options on the right side of it will go there, while everything on the left side of it will go into the first configuration. Toggling between the configurations works with the guide button, you can have as many configuratios as you want.</p>
 <h3>MAPPING EVERY BUTTON MULTIPLE</h3>
 <p> Some games might require more buttons then your gamepad has, in those situation it can be useful to map a button twice by using shifted buttons: </p>
-<p>$ xboxdrv \<br />
-  &#8211;ui-clear \<br />
-  &#8211;ui-axismap X1=ABS_X,Y1=ABS_Y \<br />
-  &#8211;ui-buttonmap a=JS_0,b=JS_1,x=JS_2,y=JS_3 \<br />
-  &#8211;ui-buttonmap lb+a=JS_4,lb+b=JS_5,lb+x=JS_6,lb+y=JS_7 \<br />
-  &#8211;ui-buttonmap rb+a=JS_8,rb+b=JS_9,rb+x=JS_10,rb+y=JS_11<br />
-.fi<br />
-Here all face buttons are get mapped three times, once when<br />
-pressed normally, once when pressed while LB is held down and<br />
-once when RB is held down, thus given you for the six buttons<br />
+<p>$ xboxdrv \<br/>
+  &#8211;ui-clear \<br/>
+  &#8211;ui-axismap X1=ABS_X,Y1=ABS_Y \<br/>
+  &#8211;ui-buttonmap a=JS_0,b=JS_1,x=JS_2,y=JS_3 \<br/>
+  &#8211;ui-buttonmap lb+a=JS_4,lb+b=JS_5,lb+x=JS_6,lb+y=JS_7 \<br/>
+  &#8211;ui-buttonmap rb+a=JS_8,rb+b=JS_9,rb+x=JS_10,rb+y=JS_11<br/>
+.fi<br/>
+Here all face buttons are get mapped three times, once when<br/>
+pressed normally, once when pressed while LB is held down and<br/>
+once when RB is held down, thus given you for the six buttons<br/>
 12 virtual ones.</p>
 <h3>SAUERBRATEN</h3>
 <p> First analogstick gets mapped te cursor keys, second analogstick gets mapped to mouse. Note: This is just an incomplete example, not a perfectly playable configuration, you have to do tweaking yourself. </p>

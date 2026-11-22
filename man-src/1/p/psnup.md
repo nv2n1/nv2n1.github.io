@@ -23,7 +23,7 @@ description: "psnup – multiple pages per sheet"
 <p> The <i>-nup</i> option selects the number of logical pages to put on each sheet of paper. This can be any whole number; <i>psnup</i> tries to optimise the layout so that the minimum amount of space is wasted. If <i>psnup</i> cannot find a layout within its tolerance limit, it will abort with an error message. The alternative form <i>-i nup</i> can also be used, for compatibility with other n-up programs. </p>
 <p> <i>Psnup</i> normally prints the page numbers of the pages re-arranged; the <i>-q</i> option suppresses this.</p>
 <h2>EXAMPLES</h2>
-<p> The potential use of this utility is varied but one particular use is in conjunction with <i><a href="/docs/linux/man/1-psbook/">psbook</a>(1).</i> For example, using groff to create a PostScript document and lpr as the <font SIZE="-1">UNIX </font> print spooler a typical command line might look like this: </p>
+<p> The potential use of this utility is varied but one particular use is in conjunction with <i><a href="/docs/linux/man/1-psbook/">psbook</a>(1).</i> For example, using groff to create a PostScript document and lpr as the UNIX  print spooler a typical command line might look like this: </p>
 <p> groff -Tps -ms <i>file</i> | psbook | psnup -2 | lpr </p>
 <p> Where file is a 4 page document this command will result in a two page document printing two pages of <i>file</i> per page and rearranges the page order to match the input pages 4 and 1 on the first output page and pages 2 then 3 of the input document on the second output page.</p>
 <h2>AUTHOR</h2>

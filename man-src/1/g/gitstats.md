@@ -12,7 +12,7 @@ description: "gitstats – git history statistics generator"
 <h2>SYNOPSIS</h2>
 <p> <code>gitstats</code> [options] &lt;repository dir&gt; &lt;output dir&gt;</p>
 <h2>DESCRIPTION</h2>
-<p> <code>gitstats</code> is a statistics generator for <i><a href="/docs/linux/man/1-git/">git</a></i>(1) repositories. It examines the repository and produces some interesting statistics from the history of it. Currently <font SIZE="-1">HTML</font> is the only output format.</p>
+<p> <code>gitstats</code> is a statistics generator for <i><a href="/docs/linux/man/1-git/">git</a></i>(1) repositories. It examines the repository and produces some interesting statistics from the history of it. Currently HTML is the only output format.</p>
 <h2>OPTIONS</h2>
 <p> -c option=value </p>
 <p> Override a default configuration value. Defaults can be seen by running <code>gitstats</code> without parameters.</p>
@@ -35,7 +35,7 @@ description: "gitstats – git history statistics generator"
 <dt>project_name</dt>
 <dd> Project name to show on the generated pages. Default is to use basename of the repository directory.</dd>
 <dt>style</dt>
-<dd> <font SIZE="-1">CSS</font> stylesheet to use.</dd></dl>
+<dd> CSS stylesheet to use.</dd></dl>
 <h2>FAQ</h2>
 <p> Q: How do I generate statistics of a non-master branch? </p>
 <p> A: Use <tt>&quot;-c commit_end=web&quot;</tt> parameter. </p>

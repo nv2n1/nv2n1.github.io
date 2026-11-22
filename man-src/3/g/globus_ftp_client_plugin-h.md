@@ -12,7 +12,7 @@ description: "globus_ftp_client_plugin.h –"
 <h2>Synopsis</h2>
 <p>#include &#8216;globus_ftp_client.h&#8217; </p>
 <h3>Typedefs</h3>
-<p>typedef<br />
+<p>typedef<br/>
  <code>globus_ftp_client_plugin_t</code> *(* <code>globus_ftp_client_plugin_copy_t</code> )(<code>globus_ftp_client_plugin_t</code> *plugin_template, void *plugin_specific)&quot; </p>
 <p> typedef void(* <code>globus_ftp_client_plugin_destroy_t</code> )(<code>globus_ftp_client_plugin_t</code> *plugin, void *plugin_specific) </p>
 <p> typedef void(* <code>globus_ftp_client_plugin_connect_t</code> )(<code>globus_ftp_client_plugin_t</code> *plugin, void *plugin_specific, <code>globus_ftp_client_handle_t</code> *handle, const char *url) </p>

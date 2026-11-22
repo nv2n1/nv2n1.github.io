@@ -10,8 +10,8 @@ description: "pbsdsh – distribute task to nodes under pbs"
 
 <p> pbsdsh &#8211; distribute task to nodes under pbs </p>
 <h2>SYNOPSIS</h2>
-<p> pbsdsh [-c copies] [-o] [-s] [-u] [-v] program [args]<br />
- pbsdsh [-n node] [-o] [-s] [-u] [-v] program [args]<br />
+<p> pbsdsh [-c copies] [-o] [-s] [-u] [-v] program [args]<br/>
+ pbsdsh [-n node] [-o] [-s] [-u] [-v] program [args]<br/>
  pbsdsh [-h nodename] [-o] [-v] program [args]</p>
 <h2>DESCRIPTION</h2>
 <p> Executes (spawns) a normal Unix program on one or more nodes under control of the Portable Batch System, PBS. Pbsdsh uses the Task Manager API, see tm_spawn(3), to distribute the program on the allocated nodes. </p>

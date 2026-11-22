@@ -49,23 +49,23 @@ description: "jstack – Prints Java thread stack traces for a Java process, cor
 <h2>OPTIONS</h2>
 <dl>
 <dt>-F</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  Force a stack dump when <code>jstack</code> [<code>-l</code>] <code>pid</code> does not respond. </p>
  </dd>
 <dt>-l</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  Long listing. Prints additional information about locks such as a list of owned <code>java.util.concurrent</code> ownable synchronizers. See the <code>AbstractOwnableSynchronizer</code> class description at <a rel="nofollow" href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/locks/AbstractOwnableSynchronizer.html">http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/locks/AbstractOwnableSynchronizer.html</a> </p>
  </dd>
 <dt>-m</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  Prints a mixed mode stack trace that has both Java and native C/C++ frames. </p>
  </dd>
 <dt>-h</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  Prints a help message. </p>
  </dd>
 <dt>-help</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  Prints a help message. </p>
  </dd></dl>
 <h2>KNOWN BUGS</h2>
@@ -82,6 +82,6 @@ description: "jstack – Prints Java thread stack traces for a Java process, cor
 <dd> <p> <a href="/docs/linux/man/1-jps/">jps</a>(1) </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> jsadebugd(1) <br />
+<dd> <p> jsadebugd(1) <br/>
  </p>
  </dd></dl>

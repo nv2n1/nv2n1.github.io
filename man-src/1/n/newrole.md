@@ -18,32 +18,32 @@ description: "newrole – run a shell with a new SELinux role"
 <p> The new shell will be the shell specified in the user&#8217;s entry in the <i>/etc/passwd</i> file. </p>
 <p> The <code>-V</code> or <code>&#8211;version</code> shows the current version of newrole </p>
 <h2>EXAMPLE</h2>
-<p> Changing role:<br />
-#&nbsp;<wbr>id -Z<br />
-staff_u:staff_r:staff_t:SystemLow-SystemHigh<br />
-#&nbsp;<wbr>newrole -r sysadm_r<br />
-#&nbsp;<wbr>id -Z<br />
+<p> Changing role:<br/>
+#&nbsp;<wbr>id -Z<br/>
+staff_u:staff_r:staff_t:SystemLow-SystemHigh<br/>
+#&nbsp;<wbr>newrole -r sysadm_r<br/>
+#&nbsp;<wbr>id -Z<br/>
 staff_u:sysadm_r:sysadm_t:SystemLow-SystemHigh </p>
-<p> Changing sensitivity only:<br />
-#&nbsp;<wbr>id -Z<br />
-staff_u:sysadm_r:sysadm_t:Unclassified-SystemHigh<br />
-#&nbsp;<wbr>newrole -l Secret<br />
-#&nbsp;<wbr>id -Z<br />
+<p> Changing sensitivity only:<br/>
+#&nbsp;<wbr>id -Z<br/>
+staff_u:sysadm_r:sysadm_t:Unclassified-SystemHigh<br/>
+#&nbsp;<wbr>newrole -l Secret<br/>
+#&nbsp;<wbr>id -Z<br/>
 staff_u:sysadm_r:sysadm_t:Secret-SystemHigh </p>
-<p> Changing sensitivity and clearance:<br />
-#&nbsp;<wbr>id -Z<br />
-staff_u:sysadm_r:sysadm_t:Unclassified-SystemHigh<br />
-#&nbsp;<wbr>newrole -l Secret-Secret<br />
-#&nbsp;<wbr>id -Z<br />
+<p> Changing sensitivity and clearance:<br/>
+#&nbsp;<wbr>id -Z<br/>
+staff_u:sysadm_r:sysadm_t:Unclassified-SystemHigh<br/>
+#&nbsp;<wbr>newrole -l Secret-Secret<br/>
+#&nbsp;<wbr>id -Z<br/>
 staff_u:sysadm_r:sysadm_t:Secret </p>
-<p> Running a program in a given role or level:<br />
-#&nbsp;<wbr>newrole -r sysadm_r &#8212; -c&nbsp;<wbr>&quot;/path/to/app arg1 arg2&#8230;&quot;<br />
+<p> Running a program in a given role or level:<br/>
+#&nbsp;<wbr>newrole -r sysadm_r &#8212; -c&nbsp;<wbr>&quot;/path/to/app arg1 arg2&#8230;&quot;<br/>
 #&nbsp;<wbr>newrole -l Secret &#8212; -c&nbsp;<wbr>&quot;/path/to/app arg1 arg2&#8230;&quot; </p>
 <h2>FILES</h2>
-<p> /etc/passwd &#8211; user account information<br />
- /etc/shadow &#8211; encrypted passwords and age information<br />
- /etc/selinux/&lt;policy&gt;/contexts/default_type &#8211; default types for roles<br />
- /etc/selinux/&lt;policy&gt;/contexts/securetty_types &#8211; securetty types for level changes<br />
+<p> /etc/passwd &#8211; user account information<br/>
+ /etc/shadow &#8211; encrypted passwords and age information<br/>
+ /etc/selinux/&lt;policy&gt;/contexts/default_type &#8211; default types for roles<br/>
+ /etc/selinux/&lt;policy&gt;/contexts/securetty_types &#8211; securetty types for level changes<br/>
  /etc/selinux/newrole_pam.conf &#8211; optional mapping of commands to separate pam service names </p>
 <h2>SEE ALSO</h2>
 <p> <code>runcon</code> (1)</p>

@@ -10,7 +10,7 @@ description: "ztbmv.f –"
 <p>ztbmv.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>ztbmv</code> (UPLO, TRANS, DIAG, N, K, A, LDA, X, INCX)<br />
+<p>subroutine <code>ztbmv</code> (UPLO, TRANS, DIAG, N, K, A, LDA, X, INCX)<br/>
  <i></i><code>ZTBMV</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ztbmv (characterUPLO, characterTRANS, characterDIAG, integerN, integerK, complex*16, dimension(lda,*)A, integerLDA, complex*16, dimension(*)X, integerINCX)</h3>

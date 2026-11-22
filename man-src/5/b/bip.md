@@ -38,9 +38,9 @@ user {
 };
 </code></pre>
 <h2>Syntax Rules</h2>
-<p>The syntax is quite simple :<br />
- &#8211; everything after the <code>#</code> character is ignored (comments)<br />
- &#8211; each variable affectation must be finished with a <code>;</code><br />
+<p>The syntax is quite simple :<br/>
+ &#8211; everything after the <code>#</code> character is ignored (comments)<br/>
+ &#8211; each variable affectation must be finished with a <code>;</code><br/>
  &#8211; each section { } must be finished with a <code>;</code> </p>
 <p> If you use vim you will probably want to use vim with the provided <code>bip.vim</code> syntax file to avoid common syntax and lexical mistakes. You can also find an example configuration file along with BIP.</p>
 <h2>Global Options</h2>
@@ -56,12 +56,12 @@ user {
 <dt><code>log_system</code> (default: <code>true</code>)</dt>
 <dd>When true, system messages such as connection errors are logged. Else, BIP will not write system logs. </dd>
 <dt><code>log_format</code> (default: <code>%u/%n/%Y-%m/%c.%d.log</code>)</dt>
-<dd>Determines the log file name depending on :<br />
- &#8211; %u username (name in user { }; section)<br />
- &#8211; %n network name (name in connection { }; section)<br />
- &#8211; %c channel name<br />
- &#8211; %Y 4 digits year<br />
- &#8211; %m 2 digits month<br />
+<dd>Determines the log file name depending on :<br/>
+ &#8211; %u username (name in user { }; section)<br/>
+ &#8211; %n network name (name in connection { }; section)<br/>
+ &#8211; %c channel name<br/>
+ &#8211; %Y 4 digits year<br/>
+ &#8211; %m 2 digits month<br/>
  &#8211; %d 2 digits day </dd>
 <dt><code>log_level</code> (default: <code>1</code>)</dt>
 <dd>Specify the verbosity of BIP from 0 (fatal errors) to 6 (huge debug output) </dd>
@@ -176,9 +176,9 @@ user {
 <h2>See Also</h2>
 <p>bip, bipmkpw </p>
 <h2>Author</h2>
-<p>bip authors:<br />
- Arnaud &#8216;nohar&#8217; Cornet<br />
+<p>bip authors:<br/>
+ Arnaud &#8216;nohar&#8217; Cornet<br/>
  Loïc &#8216;Kyoshiro&#8217; Gomez </p>
-<p> Thanks to jj, YS and lafouine, for hanging around while we were coding.<br />
- Crypto shamelessly taken from Christophe &#8216;sexy&#8217; Devine.<br />
+<p> Thanks to jj, YS and lafouine, for hanging around while we were coding.<br/>
+ Crypto shamelessly taken from Christophe &#8216;sexy&#8217; Devine.<br/>
  This man page is written by Loïc &#8216;Kyoshiro&#8217; Gomez.</p>

@@ -24,7 +24,7 @@ description: "qblog.h –"
 <p>struct qb_log_callsite</p>
 <p>    An instance of this structure is created in a special ELF section at every dynamic debug callsite.</p>
 <p>    union qb_log_ctl2_arg_t</p>
-<p>        Macros<br />
+<p>        Macros<br/>
 #define LOG_TRACE (LOG_DEBUG + 1)</p>
 <p>#define QB_LOG_MAX_LEN 512</p>
 <p>#define QB_LOG_STRERROR_MAX_LEN 128</p>
@@ -43,7 +43,7 @@ description: "qblog.h –"
 <p>#define qb_leave() qb_log(LOG_TRACE, &#8216;LEAVING %s()&#8217;, __func__)</p>
 <p>#define QB_LOG_CTL2_I32(a) ((qb_log_ctl2_arg_t){.i32 = (a)})</p>
 <p>#define QB_LOG_CTL2_S(a) ((qb_log_ctl2_arg_t){.s = (a)})</p>
-<p>    Typedefs<br />
+<p>    Typedefs<br/>
  typedef const char *(* <code>qb_log_tags_stringify_fn</code> )(uint32_t <code>tags</code>) </p>
 <p> typedef void(* <code>qb_log_filter_fn</code> )(struct <code>qb_log_callsite</code> *cs) </p>
 <p> typedef void(* <code>qb_log_logger_fn</code> )(int32_t t, struct <code>qb_log_callsite</code> *cs, time_t timestamp, const char *msg) </p>
@@ -56,63 +56,63 @@ description: "qblog.h –"
 <p>enum qb_log_conf { QB_LOG_CONF_ENABLED, QB_LOG_CONF_FACILITY, QB_LOG_CONF_DEBUG, QB_LOG_CONF_SIZE, QB_LOG_CONF_THREADED, QB_LOG_CONF_PRIORITY_BUMP, QB_LOG_CONF_STATE_GET, QB_LOG_CONF_FILE_SYNC, QB_LOG_CONF_EXTENDED, QB_LOG_CONF_IDENT }</p>
 <p>enum qb_log_filter_type { QB_LOG_FILTER_FILE, QB_LOG_FILTER_FUNCTION, QB_LOG_FILTER_FORMAT, QB_LOG_FILTER_FILE_REGEX, QB_LOG_FILTER_FUNCTION_REGEX, QB_LOG_FILTER_FORMAT_REGEX }</p>
 <p>enum qb_log_filter_conf { QB_LOG_FILTER_ADD, QB_LOG_FILTER_REMOVE, QB_LOG_FILTER_CLEAR_ALL, QB_LOG_TAG_SET, QB_LOG_TAG_CLEAR, QB_LOG_TAG_CLEAR_ALL }</p>
-<p>Functions<br />
+<p>Functions<br/>
  struct <code>qb_log_callsite</code> <code>__attribute__</code> ((aligned(8))) </p>
-<p> void <code>qb_log_real_</code> (struct <code>qb_log_callsite</code> *cs,&#8230;)<br />
- <i>Internal function: use </i><code>qb_log()</code> or <code>qb_logt()</code><br />
+<p> void <code>qb_log_real_</code> (struct <code>qb_log_callsite</code> *cs,&#8230;)<br/>
+ <i>Internal function: use </i><code>qb_log()</code> or <code>qb_logt()</code><br/>
  void <code>qb_log_real_va_</code> (struct <code>qb_log_callsite</code> *cs, va_list ap) </p>
-<p> void <code>qb_log_from_external_source</code> (const char *<code>function</code>, const char *<code>filename</code>, const char *<code>format</code>, uint8_t <code>priority</code>, uint32_t <code>lineno</code>, uint32_t <code>tags</code>,&#8230;) <code>__attribute__</code>((<code>format</code>(printf<br />
- <i>This function is to import logs from other code (like libraries) that provide a callback with their logs. </i><br />
- void struct <code>qb_log_callsite</code> * <code>qb_log_callsite_get</code> (const char *<code>function</code>, const char *<code>filename</code>, const char *<code>format</code>, uint8_t <code>priority</code>, uint32_t <code>lineno</code>, uint32_t <code>tags</code>)<br />
- <i>Get or create a callsite at the given position. </i><br />
+<p> void <code>qb_log_from_external_source</code> (const char *<code>function</code>, const char *<code>filename</code>, const char *<code>format</code>, uint8_t <code>priority</code>, uint32_t <code>lineno</code>, uint32_t <code>tags</code>,&#8230;) <code>__attribute__</code>((<code>format</code>(printf<br/>
+ <i>This function is to import logs from other code (like libraries) that provide a callback with their logs. </i><br/>
+ void struct <code>qb_log_callsite</code> * <code>qb_log_callsite_get</code> (const char *<code>function</code>, const char *<code>filename</code>, const char *<code>format</code>, uint8_t <code>priority</code>, uint32_t <code>lineno</code>, uint32_t <code>tags</code>)<br/>
+ <i>Get or create a callsite at the given position. </i><br/>
  void <code>qb_log_from_external_source_va</code> (const char *<code>function</code>, const char *<code>filename</code>, const char *<code>format</code>, uint8_t <code>priority</code>, uint32_t <code>lineno</code>, uint32_t <code>tags</code>, va_list ap) <code>__attribute__</code>((<code>format</code>(printf </p>
-<p> void <code>qb_log_init</code> (const char *name, int32_t facility, uint8_t <code>priority</code>)<br />
- <i>Init the logging system. </i><br />
- void <code>qb_log_fini</code> (void)<br />
- <i>Logging system finalization function. </i><br />
- int32_t <code>qb_log_callsites_register</code> (struct <code>qb_log_callsite</code> *_start, struct <code>qb_log_callsite</code> *_stop)<br />
- <i>If you are using dynamically loadable modules via dlopen() and you load them after </i><code>qb_log_init()</code> then after you load the module you will need to do the following to get the filters to work in that module:<br />
- void <code>qb_log_callsites_dump</code> (void)<br />
- <i>Dump the callsite info to stdout. </i><br />
- int32_t <code>qb_log_ctl</code> (int32_t target, enum <code>qb_log_conf</code> conf_type, int32_t arg)<br />
- <i>Main logging control function. </i><br />
- int32_t <code>qb_log_ctl2</code> (int32_t target, enum <code>qb_log_conf</code> conf_type, <code>qb_log_ctl2_arg_t</code> arg)<br />
- <i>Extension of main logging control function accepting also strings. </i><br />
- int32_t <code>qb_log_filter_ctl</code> (int32_t value, enum <code>qb_log_filter_conf</code> c, enum <code>qb_log_filter_type</code> type, const char *text, uint8_t low_priority)<br />
- <i>This allows you modify the &#8216;tags&#8217; and &#8216;targets&#8217; callsite fields at runtime. </i><br />
- int32_t <code>qb_log_filter_ctl2</code> (int32_t value, enum <code>qb_log_filter_conf</code> c, enum <code>qb_log_filter_type</code> type, const char *text, uint8_t high_priority, uint8_t low_priority)<br />
- <i>This extends </i><code>qb_log_filter_ctl()</code> by been able to provide a high_priority.<br />
- int32_t <code>qb_log_filter_fn_set</code> (<code>qb_log_filter_fn</code> fn)<br />
- <i>Instead of using the </i><code>qb_log_filter_ctl()</code> functions you can apply the filters manually by defining a callback and setting the targets field using <code>qb_bit_set()</code> and <code>qb_bit_clear()</code> like the following below:<br />
- void <code>qb_log_tags_stringify_fn_set</code> (<code>qb_log_tags_stringify_fn</code> fn)<br />
- <i>Set the callback to map the &#8216;tags&#8217; bit map to a string. </i><br />
- void <code>qb_log_format_set</code> (int32_t t, const char *<code>format</code>)<br />
- <i>Set the format specifiers. </i><br />
- int32_t <code>qb_log_file_open</code> (const char *<code>filename</code>)<br />
- <i>Open a log file. </i><br />
- void <code>qb_log_file_close</code> (int32_t t)<br />
- <i>Close a log file and release is resources. </i><br />
- int32_t <code>qb_log_thread_priority_set</code> (int32_t policy, int32_t <code>priority</code>)<br />
- <i>When using threaded logging set the pthread policy and priority. </i><br />
- int32_t <code>qb_log_thread_start</code> (void)<br />
- <i>Start the logging pthread. </i><br />
- ssize_t <code>qb_log_blackbox_write_to_file</code> (const char *<code>filename</code>)<br />
- <i>Write the blackbox to file. </i><br />
- void <code>qb_log_blackbox_print_from_file</code> (const char *<code>filename</code>)<br />
- <i>Read the blackbox for file and print it out. </i><br />
- int32_t <code>qb_log_custom_open</code> (<code>qb_log_logger_fn</code> log_fn, <code>qb_log_close_fn</code> close_fn, <code>qb_log_reload_fn</code> reload_fn, void *user_data)<br />
- <i>Open a custom log target. </i><br />
- void <code>qb_log_custom_close</code> (int32_t t)<br />
- <i>Close a custom log target and release is resources. </i><br />
- void * <code>qb_log_target_user_data_get</code> (int32_t t)<br />
- <i>Retrieve the user data set by either qb_log_custom_open or qb_log_target_user_data_set. </i><br />
- int32_t <code>qb_log_target_user_data_set</code> (int32_t t, void *user_data)<br />
- <i>Associate user data with this log target. </i><br />
- void <code>qb_log_target_format</code> (int32_t target, struct <code>qb_log_callsite</code> *cs, time_t timestamp, const char *formatted_message, char *output_buffer)<br />
- <i>format the callsite and timestamp info according to the format set using </i><code>qb_log_format_set()</code> It is intended to be used from your custom logger function.<br />
- int32_t <code>qb_log_facility2int</code> (const char *fname)<br />
- <i>Convert string &#8216;auth&#8217; to equivalent number &#8216;LOG_AUTH&#8217; etc. </i><br />
- const char * <code>qb_log_facility2str</code> (int32_t fnum)<br />
+<p> void <code>qb_log_init</code> (const char *name, int32_t facility, uint8_t <code>priority</code>)<br/>
+ <i>Init the logging system. </i><br/>
+ void <code>qb_log_fini</code> (void)<br/>
+ <i>Logging system finalization function. </i><br/>
+ int32_t <code>qb_log_callsites_register</code> (struct <code>qb_log_callsite</code> *_start, struct <code>qb_log_callsite</code> *_stop)<br/>
+ <i>If you are using dynamically loadable modules via dlopen() and you load them after </i><code>qb_log_init()</code> then after you load the module you will need to do the following to get the filters to work in that module:<br/>
+ void <code>qb_log_callsites_dump</code> (void)<br/>
+ <i>Dump the callsite info to stdout. </i><br/>
+ int32_t <code>qb_log_ctl</code> (int32_t target, enum <code>qb_log_conf</code> conf_type, int32_t arg)<br/>
+ <i>Main logging control function. </i><br/>
+ int32_t <code>qb_log_ctl2</code> (int32_t target, enum <code>qb_log_conf</code> conf_type, <code>qb_log_ctl2_arg_t</code> arg)<br/>
+ <i>Extension of main logging control function accepting also strings. </i><br/>
+ int32_t <code>qb_log_filter_ctl</code> (int32_t value, enum <code>qb_log_filter_conf</code> c, enum <code>qb_log_filter_type</code> type, const char *text, uint8_t low_priority)<br/>
+ <i>This allows you modify the &#8216;tags&#8217; and &#8216;targets&#8217; callsite fields at runtime. </i><br/>
+ int32_t <code>qb_log_filter_ctl2</code> (int32_t value, enum <code>qb_log_filter_conf</code> c, enum <code>qb_log_filter_type</code> type, const char *text, uint8_t high_priority, uint8_t low_priority)<br/>
+ <i>This extends </i><code>qb_log_filter_ctl()</code> by been able to provide a high_priority.<br/>
+ int32_t <code>qb_log_filter_fn_set</code> (<code>qb_log_filter_fn</code> fn)<br/>
+ <i>Instead of using the </i><code>qb_log_filter_ctl()</code> functions you can apply the filters manually by defining a callback and setting the targets field using <code>qb_bit_set()</code> and <code>qb_bit_clear()</code> like the following below:<br/>
+ void <code>qb_log_tags_stringify_fn_set</code> (<code>qb_log_tags_stringify_fn</code> fn)<br/>
+ <i>Set the callback to map the &#8216;tags&#8217; bit map to a string. </i><br/>
+ void <code>qb_log_format_set</code> (int32_t t, const char *<code>format</code>)<br/>
+ <i>Set the format specifiers. </i><br/>
+ int32_t <code>qb_log_file_open</code> (const char *<code>filename</code>)<br/>
+ <i>Open a log file. </i><br/>
+ void <code>qb_log_file_close</code> (int32_t t)<br/>
+ <i>Close a log file and release is resources. </i><br/>
+ int32_t <code>qb_log_thread_priority_set</code> (int32_t policy, int32_t <code>priority</code>)<br/>
+ <i>When using threaded logging set the pthread policy and priority. </i><br/>
+ int32_t <code>qb_log_thread_start</code> (void)<br/>
+ <i>Start the logging pthread. </i><br/>
+ ssize_t <code>qb_log_blackbox_write_to_file</code> (const char *<code>filename</code>)<br/>
+ <i>Write the blackbox to file. </i><br/>
+ void <code>qb_log_blackbox_print_from_file</code> (const char *<code>filename</code>)<br/>
+ <i>Read the blackbox for file and print it out. </i><br/>
+ int32_t <code>qb_log_custom_open</code> (<code>qb_log_logger_fn</code> log_fn, <code>qb_log_close_fn</code> close_fn, <code>qb_log_reload_fn</code> reload_fn, void *user_data)<br/>
+ <i>Open a custom log target. </i><br/>
+ void <code>qb_log_custom_close</code> (int32_t t)<br/>
+ <i>Close a custom log target and release is resources. </i><br/>
+ void * <code>qb_log_target_user_data_get</code> (int32_t t)<br/>
+ <i>Retrieve the user data set by either qb_log_custom_open or qb_log_target_user_data_set. </i><br/>
+ int32_t <code>qb_log_target_user_data_set</code> (int32_t t, void *user_data)<br/>
+ <i>Associate user data with this log target. </i><br/>
+ void <code>qb_log_target_format</code> (int32_t target, struct <code>qb_log_callsite</code> *cs, time_t timestamp, const char *formatted_message, char *output_buffer)<br/>
+ <i>format the callsite and timestamp info according to the format set using </i><code>qb_log_format_set()</code> It is intended to be used from your custom logger function.<br/>
+ int32_t <code>qb_log_facility2int</code> (const char *fname)<br/>
+ <i>Convert string &#8216;auth&#8217; to equivalent number &#8216;LOG_AUTH&#8217; etc. </i><br/>
+ const char * <code>qb_log_facility2str</code> (int32_t fnum)<br/>
  <i>Convert number &#8216;LOG_AUTH&#8217; to equivalent string &#8216;auth&#8217; etc. </i></p>
 <h3>Variables</h3>
 <pre><code>const char * function
@@ -270,8 +270,8 @@ enum qb_log_target_slot __attribute__</code></pre>
 <p>This is the main function to generate a log message. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>priority</i> this takes syslog priorities.<br />
- <i>fmt</i> usual printf style format specifiers<br />
+<dd><i>priority</i> this takes syslog priorities.<br/>
+ <i>fmt</i> usual printf style format specifiers<br/>
  <i>args</i> usual printf style args</dd></dl>
 <h3>#define QB_LOG_CTL2_I32(a) ((<code>qb_log_ctl2_arg_t</code>) { .i32 = (a) })</h3>
 <h3>#define QB_LOG_CTL2_S(a) ((<code>qb_log_ctl2_arg_t</code>) { .s = (a) })</h3>
@@ -289,9 +289,9 @@ enum qb_log_target_slot __attribute__</code></pre>
 <p>This is the function to generate a log message if you want to manually add tags. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>priority</i> this takes syslog priorities.<br />
- <i>tags</i> this is a uint32_t that you can use with <code>qb_log_tags_stringify_fn_set()</code> to &#8216;tag&#8217; a log message with a feature or sub-system then you can use &#8216;%g&#8217; in the format specifer to print it out.<br />
- <i>fmt</i> usual printf style format specifiers<br />
+<dd><i>priority</i> this takes syslog priorities.<br/>
+ <i>tags</i> this is a uint32_t that you can use with <code>qb_log_tags_stringify_fn_set()</code> to &#8216;tag&#8217; a log message with a feature or sub-system then you can use &#8216;%g&#8217; in the format specifer to print it out.<br/>
+ <i>fmt</i> usual printf style format specifiers<br/>
  <i>args</i> usual printf style args</dd></dl>
 <h3>#define qb_perror(<code>priority</code>, fmt, args&#8230;)</h3>
 <p><code>Value:</code> </p>
@@ -300,8 +300,8 @@ enum qb_log_target_slot __attribute__</code></pre>
 <p>This is similar to perror except it goes into the logging system. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>priority</i> this takes syslog priorities.<br />
- <i>fmt</i> usual printf style format specifiers<br />
+<dd><i>priority</i> this takes syslog priorities.<br/>
+ <i>fmt</i> usual printf style format specifiers<br/>
  <i>args</i> usual printf style args</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
@@ -415,11 +415,11 @@ enum qb_log_target_slot __attribute__</code></pre>
 <p>Get or create a callsite at the given position. The result can then be passed into <code>qb_log_real_()</code> </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>function</i> originating function name<br />
- <i>filename</i> originating filename<br />
- <i>format</i> format string<br />
- <i>priority</i> this takes syslog priorities.<br />
- <i>lineno</i> file line number<br />
+<dd><i>function</i> originating function name<br/>
+ <i>filename</i> originating filename<br/>
+ <i>format</i> format string<br/>
+ <i>priority</i> this takes syslog priorities.<br/>
+ <i>lineno</i> file line number<br/>
  <i>tags</i> the tag</dd></dl>
 <h3>void qb_log_callsites_dump (void)</h3>
 <p>Dump the callsite info to stdout.</p>
@@ -434,22 +434,22 @@ enum qb_log_target_slot __attribute__</code></pre>
 <p>Main logging control function. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>target</i> QB_LOG_SYSLOG, QB_LOG_STDERR or result from <code>qb_log_file_open()</code><br />
- <i>conf_type</i> configuration directive (&#8216;what to configure&#8217;) that accepts int32_t argument determining the new value unless ignored for particular directive altogether (incompatible directives: QB_LOG_CONF_IDENT)<br />
+<dd><i>target</i> QB_LOG_SYSLOG, QB_LOG_STDERR or result from <code>qb_log_file_open()</code><br/>
+ <i>conf_type</i> configuration directive (&#8216;what to configure&#8217;) that accepts int32_t argument determining the new value unless ignored for particular directive altogether (incompatible directives: QB_LOG_CONF_IDENT)<br/>
  <i>arg</i> the new value for a state-changing configuration directive, ignored otherwise</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
 <dd><code>qb_log_conf</code></dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
-<dd><i>-errno</i> on error<br />
- <i>0</i> on success<br />
+<dd><i>-errno</i> on error<br/>
+ <i>0</i> on success<br/>
  <i>qb_log_target_state</i> for QB_LOG_CONF_STATE_GET</dd></dl>
 <h3>int32_t qb_log_ctl2 (int32_ttarget, enum <code>qb_log_conf</code>conf_type, <code>qb_log_ctl2_arg_t</code>arg)</h3>
 <p>Extension of main logging control function accepting also strings. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>target</i> QB_LOG_SYSLOG, QB_LOG_STDERR or result from <code>qb_log_file_open()</code><br />
+<dd><i>target</i> QB_LOG_SYSLOG, QB_LOG_STDERR or result from <code>qb_log_file_open()</code><br/>
  <i>conf_type</i> configuration directive (&#8216;what to configure&#8217;) that accepts either int32_t or a null-terminated string argument determining the new value unless ignored for particular directive (compatible directives: those valid for qb_log_ctl</dd>
 <dl>
 <dt>&bull;</dt>
@@ -467,7 +467,7 @@ enum qb_log_target_slot __attribute__</code></pre>
 <p>Open a custom log target. </p>
 <p> <code>Return values:</code></p>
 <dl>
-<dd><i>-errno</i> on error<br />
+<dd><i>-errno</i> on error<br/>
  <i>value</i> in inclusive range QB_LOG_TARGET_DYNAMIC_START to QB_LOG_TARGET_DYNAMIC_END (to be passed into other qb_log_* functions)</dd></dl>
 <h3>int32_t qb_log_facility2int (const char *fname)</h3>
 <p>Convert string &#8216;auth&#8217; to equivalent number &#8216;LOG_AUTH&#8217; etc.</p>
@@ -479,7 +479,7 @@ enum qb_log_target_slot __attribute__</code></pre>
 <p>Open a log file. </p>
 <p> <code>Return values:</code></p>
 <dl>
-<dd><i>-errno</i> on error<br />
+<dd><i>-errno</i> on error<br/>
  <i>value</i> in inclusive range QB_LOG_TARGET_DYNAMIC_START to QB_LOG_TARGET_DYNAMIC_END (to be passed into other qb_log_* functions)</dd></dl>
 <h3>int32_t qb_log_filter_ctl (int32_tvalue, enum <code>qb_log_filter_conf</code>c, enum <code>qb_log_filter_type</code>type, const char *text, uint8_tlow_priority)</h3>
 <p>This allows you modify the &#8216;tags&#8217; and &#8216;targets&#8217; callsite fields at runtime.</p>
@@ -512,19 +512,19 @@ enum qb_log_target_slot __attribute__</code></pre>
 <dd>the performance of this will not impress you, as the filtering is done on each log message, not beforehand. So try doing basic pre-filtering.</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>function</i> originating function name<br />
- <i>filename</i> originating filename<br />
- <i>format</i> format string<br />
- <i>priority</i> this takes syslog priorities.<br />
- <i>lineno</i> file line number<br />
+<dd><i>function</i> originating function name<br/>
+ <i>filename</i> originating filename<br/>
+ <i>format</i> format string<br/>
+ <i>priority</i> this takes syslog priorities.<br/>
+ <i>lineno</i> file line number<br/>
  <i>tags</i> this is a uint32_t that you can use with <code>qb_log_tags_stringify_fn_set()</code> to &#8216;tag&#8217; a log message with a feature or sub-system then you can use &#8216;%g&#8217; in the format specifer to print it out.</dd></dl>
 <h3>void qb_log_from_external_source_va (const char *function, const char *filename, const char *format, uint8_tpriority, uint32_tlineno, uint32_ttags, va_listap)</h3>
 <h3>void qb_log_init (const char *name, int32_tfacility, uint8_tpriority)</h3>
 <p>Init the logging system. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>name</i> will be passed into openlog()<br />
- <i>facility</i> default for all new targets.<br />
+<dd><i>name</i> will be passed into openlog()<br/>
+ <i>facility</i> default for all new targets.<br/>
  <i>priority</i> a basic filter with this priority will be added.</dd></dl>
 <h3>void qb_log_real_ (struct <code>qb_log_callsite</code> *cs, &#8230;)</h3>
 <p>Internal function: use <code>qb_log()</code> or <code>qb_logt()</code></p>
@@ -544,7 +544,7 @@ enum qb_log_target_slot __attribute__</code></pre>
 <p>When using threaded logging set the pthread policy and priority. </p>
 <p> <code>Return values:</code></p>
 <dl>
-<dd><i>-errno</i> on error<br />
+<dd><i>-errno</i> on error<br/>
  <i>0</i> success</dd></dl>
 <h3>int32_t qb_log_thread_start (void)</h3>
 <p>Start the logging pthread.</p>

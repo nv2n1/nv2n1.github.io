@@ -46,10 +46,10 @@ description: "pmview – performance metrics 3D visualization back-end"
 <dd> By default, <code>pmview</code> reports the time of day according to the local timezone on the system where <code>pmview</code> is run. The <code>-Z</code> option changes the default timezone to <i>timezone</i> which should be in the format of the environment variable <code>TZ</code> as described in <code><a href="/docs/linux/man/7-environ/">environ</a></code>(7).</dd>
 <dt><code>-z</code></dt>
 <dd> Change the reporting timezone to the local timezone at the host that is the source of the performance metrics, as identified via either the <code>-h</code> option, or the first <code>-a</code> option.</dd></dl>
-<p> <code>-geometry</code> <i>geometry</i><br />
- <code>-display</code> <i>display</i><br />
- <code>-name</code> <i>name</i><br />
- <code>-title</code> <i>title</i><br />
+<p> <code>-geometry</code> <i>geometry</i><br/>
+ <code>-display</code> <i>display</i><br/>
+ <code>-name</code> <i>name</i><br/>
+ <code>-title</code> <i>title</i><br/>
  <code>-xrm</code> <code>&quot;</code><i>resourceName: value</i><code>&quot;</code></p>
 <dl>
 <dt>

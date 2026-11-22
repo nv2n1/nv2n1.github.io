@@ -25,18 +25,18 @@ description: "corosync-cpgtool – A tool for displaying cpg groups and members.
 <h2>Examples</h2>
 <dl>
 <dt>Display the groups and process that belong to those cpg groups.</dt>
-<dd>$ corosync-cpgtool<br />
+<dd>$ corosync-cpgtool<br/>
  Group Name<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> PID<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> Node ID</dd>
-<p> example-group<br />
+<p> example-group<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> 2515<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> 191146176 (192.168.100.11)</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> 2471<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> 207923392 (192.168.100.12)</p>
 <dt>Get a comma-delimited list.</dt>
-<dd>$ corosync-cpgtool -d &quot;,&quot;<br />
- GRP_NAME,PID,NODEID<br />
- example-group,2515,191146176<br />
+<dd>$ corosync-cpgtool -d &quot;,&quot;<br/>
+ GRP_NAME,PID,NODEID<br/>
+ example-group,2515,191146176<br/>
  example-group,2471,207923392</dd>
 <dt>Just get the group names</dt>
-<dd>$ corosync-cpgtool -n<br />
+<dd>$ corosync-cpgtool -n<br/>
  example-group</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-corosync_overview/">corosync_overview</a></code>(8),</p>

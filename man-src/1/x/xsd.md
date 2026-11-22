@@ -46,7 +46,7 @@ description: "xsd – Mono’s utility for generating schema or class files"
 <dt><i>/help /h</i></dt>
 <dd> Show usage help.</dd></dl>
 <h2>AUTHORS</h2>
-<p> Lluis Sanchez Gual (lluis [at] ximian.com)<br />
+<p> Lluis Sanchez Gual (lluis [at] ximian.com)<br/>
  Atsushi Enomoto (atsushi [at] ximian.com) </p>
 <h2>LICENSE</h2>
 <p> xsd is released under the terms of the GNU GPL. </p>

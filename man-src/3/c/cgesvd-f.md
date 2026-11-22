@@ -10,7 +10,7 @@ description: "cgesvd.f –"
 <p>cgesvd.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>cgesvd</code> (JOBU, JOBVT, M, N, A, LDA, S, U, LDU, VT, LDVT, WORK, LWORK, RWORK, INFO)<br />
+<p>subroutine <code>cgesvd</code> (JOBU, JOBVT, M, N, A, LDA, S, U, LDU, VT, LDVT, WORK, LWORK, RWORK, INFO)<br/>
  <i></i><code> CGESVD computes the singular value decomposition (SVD) for GE matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cgesvd (characterJOBU, characterJOBVT, integerM, integerN, complex, dimension( lda, * )A, integerLDA, real, dimension( * )S, complex, dimension( ldu, * )U, integerLDU, complex, dimension( ldvt, * )VT, integerLDVT, complex, dimension( * )WORK, integerLWORK, real, dimension( * )RWORK, integerINFO)</h3>

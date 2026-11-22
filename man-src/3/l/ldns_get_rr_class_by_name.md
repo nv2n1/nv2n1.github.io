@@ -10,7 +10,7 @@ description: "ldns_get_rr_class_by_name, ldns_get_rr_type_by_name"
 
 <p> ldns_get_rr_class_by_name, ldns_get_rr_type_by_name </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ldns_rr_class ldns_get_rr_class_by_name(const char *name); </p>

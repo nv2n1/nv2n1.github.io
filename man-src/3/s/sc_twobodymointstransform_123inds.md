@@ -14,7 +14,7 @@ description: "sc::TwoBodyMOIntsTransform_123Inds –"
 <p><code>TwoBodyMOIntsTransform_123Inds</code> (const <code>Ref</code>&lt; <code>TwoBodyMOIntsTransform</code> &gt; &amp;tform, int mythread, int nthread, const <code>Ref</code>&lt; <code>ThreadLock</code> &gt; &amp;lock, const <code>Ref</code>&lt; <code>TwoBodyInt</code> &gt; &amp;tbint, double tol, int debug) </p>
 <p> void <code>set_i_offset</code> (const int ioff) </p>
 <p> void <code>set_ni</code> (const int nivalue) </p>
-<p> void <code>run</code> ()<br />
+<p> void <code>run</code> ()<br/>
  <i>This is called with the </i><code>Thread</code> is run from a <code>ThreadGrp</code>. </p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for MPQC from the source code.</p>

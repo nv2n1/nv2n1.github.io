@@ -13,10 +13,10 @@ description: "sc::MP2BasisExtrap –"
 <h3>Public Member Functions</h3>
 <p><code>MP2BasisExtrap</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;) </p>
 <p> <code>MP2BasisExtrap</code> (<code>StateIn</code> &amp;) </p>
-<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br />
+<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br/>
  <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.</p>
 <h3>Protected Member Functions</h3>
-<p>void <code>compute</code> ()<br />
+<p>void <code>compute</code> ()<br/>
  <i>Recompute at least the results that have compute true and are not already computed. </i></p>
 <h2>Member Function Documentation</h2>
 <h3>void sc::MP2BasisExtrap::compute () [protected, virtual]</h3>

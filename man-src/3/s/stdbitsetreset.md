@@ -9,11 +9,11 @@ description: "std::bitset<N>::reset – std::bitset<N>::reset"
 
 <p>std::bitset&lt;N&gt;::reset &#8211; std::bitset&lt;N&gt;::reset</p>
 <h2>Synopsis</h2>
-<p>bitset&lt;N&gt;&amp; reset(); <i>(until C++11)</i><br />
-bitset&lt;N&gt;&amp; reset() noexcept; <code>(1)</code> <i>(since C++11)</i><br />
-bitset&lt;N&gt;&amp; reset( std::size_t pos ); <code>(2)</code><br />
-Sets bits to false.<br />
-1) Sets all bits to false<br />
+<p>bitset&lt;N&gt;&amp; reset(); <i>(until C++11)</i><br/>
+bitset&lt;N&gt;&amp; reset() noexcept; <code>(1)</code> <i>(since C++11)</i><br/>
+bitset&lt;N&gt;&amp; reset( std::size_t pos ); <code>(2)</code><br/>
+Sets bits to false.<br/>
+1) Sets all bits to false<br/>
 2) Sets the bit at position pos to false. </p>
 <h2>Parameters</h2>
 <p>pos &#8211; the position of the bit to set</p>
@@ -39,11 +39,11 @@ int main()
 }
 </code></pre>
 <h2>Output:</h2>
-<p>&nbsp;<wbr>&nbsp;Bitset is 00101010<br />
-&nbsp;<wbr>&nbsp;After b.reset<code>(1)</code>: 00101000<br />
+<p>&nbsp;<wbr>&nbsp;Bitset is 00101010<br/>
+&nbsp;<wbr>&nbsp;After b.reset<code>(1)</code>: 00101000<br/>
 &nbsp;<wbr>&nbsp;After b.reset(): 00000000</p>
 <h2>See also</h2>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sets bits to true or given value<br />
-set <i>(public member function)</i><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;toggles the values of bits<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sets bits to true or given value<br/>
+set <i>(public member function)</i><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;toggles the values of bits<br/>
 flip <i>(public member function)</i> </p>

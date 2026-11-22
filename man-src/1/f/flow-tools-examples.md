@@ -35,7 +35,7 @@ set mls nde 10.0.0.1 9800
 set mls nde enable
 </pre>
 <p> When the 65xx is running in Native mode, from a users perspective the switch is only running IOS. </p>
-<p> More detailed examples can be found on Cisco&#8217;s web site<br />
+<p> More detailed examples can be found on Cisco&#8217;s web site<br/>
 &nbsp;<wbr>&lt;URL:<a rel="nofollow" href="http://www.cisco.com">http://www.cisco.com</a>&gt;.</p>
 <h2>EXAMPLE &#8211; CONFIGURING JUNIPER ROUTER</h2>
 <p> Juniper supports flow exports by the routing engine sampling packet headers and aggregating them into flows. Packet sampling is done by defining a firewall filter to accept and sample all traffic, applying that rule to the interface, then configuring the sampling forwarding option. </p>

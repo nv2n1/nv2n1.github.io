@@ -50,13 +50,13 @@ description: "tcutest – test cases of the utility API"
 <p> Options feature the following. </p>
 <dl>
 <dt>
-</dt><dd> <code>-rd</code> : perform the reading test also.<br />
- <code>-tr</code> : perform the iterator test also.<br />
- <code>-rnd</code> : select keys at random.<br />
- <code>-dk</code> : use the function `tcxxxputkeep&#8217; instead of `tcxxxput&#8217;.<br />
- <code>-dc</code> : use the function `tcxxxputcat&#8217; instead of `tcxxxput&#8217;.<br />
- <code>-dai</code> : use the function `tcxxxaddint&#8217; instead of `tcxxxput&#8217;.<br />
- <code>-dad</code> : use the function `tcxxxadddouble&#8217; instead of `tcxxxput&#8217;.<br />
+</dt><dd> <code>-rd</code> : perform the reading test also.<br/>
+ <code>-tr</code> : perform the iterator test also.<br/>
+ <code>-rnd</code> : select keys at random.<br/>
+ <code>-dk</code> : use the function `tcxxxputkeep&#8217; instead of `tcxxxput&#8217;.<br/>
+ <code>-dc</code> : use the function `tcxxxputcat&#8217; instead of `tcxxxput&#8217;.<br/>
+ <code>-dai</code> : use the function `tcxxxaddint&#8217; instead of `tcxxxput&#8217;.<br/>
+ <code>-dad</code> : use the function `tcxxxadddouble&#8217; instead of `tcxxxput&#8217;.<br/>
  <code>-dpr</code> : use the function `tcxxxputproc&#8217; instead of `tcxxxput&#8217;.
 </dd></dl>
 <p> This command returns 0 on success, another on failure. </p>

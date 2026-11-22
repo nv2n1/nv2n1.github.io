@@ -30,10 +30,10 @@ int fgetspent_r(FILE *stream, struct spwd *spbuf,
                 char *buf, size_t buflen, struct spwd **spbufp);
 int sgetspent_r(const char *s, struct spwd *spbuf,
                 char *buf, size_t buflen, struct spwd **spbufp);</code></pre>
-<p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>getspent_r</code>(), <code>getspnam_r</code>(), <code>fgetspent_r</code>(), <code>sgetspent_r</code>():<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Since glibc 2.19:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.19 and earlier:<br />
+<p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>getspent_r</code>(), <code>getspnam_r</code>(), <code>fgetspent_r</code>(), <code>sgetspent_r</code>():<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Since glibc 2.19:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.19 and earlier:<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</p>
 <h2>Description</h2>
 <p>Long ago it was considered safe to have encrypted passwords openly visible in the password file. When computers got faster and people got more security-conscious, this was no longer acceptable. Julianne Frances Haugh implemented the shadow password suite that keeps the encrypted passwords in the shadow password database (e.g., the local shadow password file <i>/etc/shadow</i>, NIS, and LDAP), readable only by root. The functions described below resemble those for the traditional password database (e.g., see <code><a href="/docs/linux/man/3-getpwnam/">getpwnam</a></code>(3) and <code><a href="/docs/linux/man/3-getpwent/">getpwent</a></code>(3)). The <code>getspnam</code>() function returns a pointer to a structure containing the broken-out fields of the record in the shadow password database that matches the username <i>name</i>. The <code>getspent</code>() function returns a pointer to the next entry in the shadow password database. The position in the input stream is initialized by <code>setspent</code>(). When done reading, the program may call <code>endspent</code>() so that resources can be deallocated. The <code>fgetspent</code>() function is similar to <code>getspent</code>() but uses the supplied stream instead of the one implicitly opened by <code>setspent</code>(). The <code>sgetspent</code>() function parses the supplied string <i>s</i> into a struct <i>spwd</i>. The <code>putspent</code>() function writes the contents of the supplied struct <i>spwd</i> <i>*p</i> as a text line in the shadow password file format to <i>stream</i>. String entries with value NULL and numerical entries with value -1 are written as an empty string. The <code>lckpwdf</code>() function is intended to protect against multiple simultaneous accesses of the shadow password database. It tries to acquire a lock, and returns 0 on success, or -1 on failure (lock not obtained within 15 seconds). The <code>ulckpwdf</code>() function releases the lock again. Note that there is no protection against direct access of the shadow password file. Only programs that use <code>lckpwdf</code>() will notice the lock. These were the functions that formed the original shadow API. They are widely available.</p>
@@ -93,13 +93,13 @@ int sgetspent_r(const char *s, struct spwd *spbuf,
 <tr VALIGN=top>
 <td> <code>getspent</code>() </td>
 <td>Thread safety</td>
-<td> MT-Unsafe race:getspent<br />
+<td> MT-Unsafe race:getspent<br/>
  race:spentbuf locale
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>setspent</code>(),<br />
- <code>endspent</code>(),<br />
+<td> <code>setspent</code>(),<br/>
+ <code>endspent</code>(),<br/>
  <code>getspent_r</code>() </td>
 <td>Thread safety</td>
 <td> MT-Unsafe race:getspent locale
@@ -118,16 +118,16 @@ int sgetspent_r(const char *s, struct spwd *spbuf,
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>putspent</code>(),<br />
- <code>getspnam_r</code>(),<br />
+<td> <code>putspent</code>(),<br/>
+ <code>getspnam_r</code>(),<br/>
  <code>sgetspent_r</code>() </td>
 <td>Thread safety</td>
 <td>MT-Safe locale
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>lckpwdf</code>(),<br />
- <code>ulckpwdf</code>(),<br />
+<td> <code>lckpwdf</code>(),<br/>
+ <code>ulckpwdf</code>(),<br/>
  <code>fgetspent_r</code>() </td>
 <td>Thread safety</td>
 <td>MT-Safe

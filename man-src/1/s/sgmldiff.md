@@ -10,10 +10,10 @@ description: "sgmldiff – Find differences in the markup of two SGML files"
 
 <p> sgmldiff &#8211; Find differences in the markup of two SGML files </p>
 <h2>SYNOPSIS</h2>
-<p> <code>sgmldiff</code> [ <code>options </code><i> &#8230;</i> ] <i>file1</i> <i>file2</i> [ <code>-a</code> | <code>&#8211;attributes</code><br />
-&nbsp;<wbr>|&nbsp;<wbr><code>-c&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr>attributes | nesting | textpos&nbsp;<wbr>]</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;context&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr>attributes | nesting | textpos&nbsp;<wbr>]</code><br />
-&nbsp;<wbr>|&nbsp;<wbr><code>-s</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;statistics</code><br />
-&nbsp;<wbr>|&nbsp;<wbr><code>-h</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;help</code><br />
+<p> <code>sgmldiff</code> [ <code>options </code><i> &#8230;</i> ] <i>file1</i> <i>file2</i> [ <code>-a</code> | <code>&#8211;attributes</code><br/>
+&nbsp;<wbr>|&nbsp;<wbr><code>-c&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr>attributes | nesting | textpos&nbsp;<wbr>]</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;context&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr>attributes | nesting | textpos&nbsp;<wbr>]</code><br/>
+&nbsp;<wbr>|&nbsp;<wbr><code>-s</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;statistics</code><br/>
+&nbsp;<wbr>|&nbsp;<wbr><code>-h</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;help</code><br/>
 &nbsp;<wbr>|&nbsp;<wbr><code>-v</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;version</code>&nbsp;<wbr>] </p>
 <h2>DESCRIPTION</h2>
 <p> This perl script allows to determine the structural differences between two SGML files. It compares the files, regardless of what is in between the tags, to only focus on the markup. Its output is similar to <code><a href="/docs/linux/man/1-diff/">diff</a></code>(1). </p>

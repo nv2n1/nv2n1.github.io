@@ -11,7 +11,7 @@ description: "cpbequ.f –"
 <p> cpbequ.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cpbequ</code> (UPLO, N, KD, AB, LDAB, S, SCOND, AMAX, INFO)<br />
+<p> subroutine <code>cpbequ</code> (UPLO, N, KD, AB, LDAB, S, SCOND, AMAX, INFO)<br/>
  <i></i><code>CPBEQU</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cpbequ (characterUPLO, integerN, integerKD, complex, dimension( ldab, * )AB, integerLDAB, real, dimension( * )S, realSCOND, realAMAX, integerINFO)</h3>

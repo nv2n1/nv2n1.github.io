@@ -17,87 +17,87 @@ description: "autoopts-config – script to get information about installed vers
 <dl>
 <dt><code>autogen</code></dt>
 <dd>
-<p> Print the full path name of the autogen executable.<br />
+<p> Print the full path name of the autogen executable.<br/>
  The unconfigured value is: ${bindir}/autogen${exeext}</p>
 </dd><dt><code>bindir</code></dt>
 <dd>
-<p> The destination directory for executable scripts and programs installed by the <i>autogen</i> package.<br />
+<p> The destination directory for executable scripts and programs installed by the <i>autogen</i> package.<br/>
  The unconfigured value is: @bindir@</p>
 </dd><dt><code>cflags</code></dt>
 <dd>
-<p> Print the compiler flags that are necessary to compile an autoopts program.<br />
+<p> Print the compiler flags that are necessary to compile an autoopts program.<br/>
  The unconfigured value is: -I${includedir}</p>
 </dd><dt><code>datadir</code></dt>
 <dd>
-<p> The directory for various data directories.<br />
+<p> The directory for various data directories.<br/>
  The unconfigured value is: @datadir@</p>
 </dd><dt><code>datarootdir</code></dt>
 <dd>
-<p> The root directory for various data directories. In this case, there is only one, &quot;datadir&quot;.<br />
+<p> The root directory for various data directories. In this case, there is only one, &quot;datadir&quot;.<br/>
  The unconfigured value is: @datarootdir@</p>
 </dd><dt><code>dotver</code></dt>
 <dd>
-<p> Print the currently installed version of autoopts, in dotted format.<br />
+<p> Print the currently installed version of autoopts, in dotted format.<br/>
  The unconfigured value is: @AO_CURRENT@.@AO_REVISION@.@AO_AGE@</p>
 </dd><dt><code>everything</code></dt>
 <dd>
 <p> Print the list of all names and values, one per line.</p>
 </dd><dt><code>exec_prefix</code></dt>
 <dd>
-<p> The installation root for libraries and executables.<br />
+<p> The installation root for libraries and executables.<br/>
  The unconfigured value is: @exec_prefix@</p>
 </dd><dt><code>exeext</code></dt>
 <dd>
-<p> The executable file extension used for the autogen executable.<br />
+<p> The executable file extension used for the autogen executable.<br/>
  The unconfigured value is: @EXEEXT@</p>
 </dd><dt><code>includedir</code></dt>
 <dd>
-<p> The directory where the AutoOpts headers are stored. This does not include the &quot;-I&quot; prefix gotten by specifying &quot;cflags&quot;.<br />
+<p> The directory where the AutoOpts headers are stored. This does not include the &quot;-I&quot; prefix gotten by specifying &quot;cflags&quot;.<br/>
  The unconfigured value is: @includedir@</p>
 </dd><dt><code>ldflags</code></dt>
 <dd>
-<p> Print the linker flags that are necessary to link an autoopts program in the default installation mode (static or dynamic).<br />
+<p> Print the linker flags that are necessary to link an autoopts program in the default installation mode (static or dynamic).<br/>
  The unconfigured value is: -L${libdir} -lopts</p>
 </dd><dt><code>ldopts</code></dt>
 <dd>
-<p> The linker options to use when linking a program to libopts.<br />
+<p> The linker options to use when linking a program to libopts.<br/>
  The unconfigured value is: @AG_LDFLAGS@</p>
 </dd><dt><code>libdir</code></dt>
 <dd>
-<p> The libopts installation directory.<br />
+<p> The libopts installation directory.<br/>
  The unconfigured value is: @libdir@</p>
 </dd><dt><code>libs</code></dt>
 <dd>
-<p> an alternate spelling of &quot;<i>ldflags</i>&quot;.<br />
+<p> an alternate spelling of &quot;<i>ldflags</i>&quot;.<br/>
  The unconfigured value is: ${ldflags}</p>
 </dd><dt><code>libsrc</code></dt>
 <dd>
-<p> The full path of the redistributable, tear-off libopts library source. This file is in gzipped-tarball format.<br />
+<p> The full path of the redistributable, tear-off libopts library source. This file is in gzipped-tarball format.<br/>
  The unconfigured value is: ${pkgdatadir}/libopts-${dotver}.tar.gz</p>
 </dd><dt><code>package</code></dt>
 <dd>
-<p> The name of the package that provides <code>autoopts</code>. This is always &quot;<i>autogen</i>&quot;.<br />
+<p> The name of the package that provides <code>autoopts</code>. This is always &quot;<i>autogen</i>&quot;.<br/>
  The unconfigured value is: @PACKAGE@</p>
 </dd><dt><code>pkgdatadir</code></dt>
 <dd>
-<p> The directory containing support files used by autogen.<br />
+<p> The directory containing support files used by autogen.<br/>
  The unconfigured value is: ${datadir}/${package}</p>
 </dd><dt><code>prefix</code></dt>
 <dd>
-<p> The <i>autogen</i> package installation prefix.<br />
+<p> The <i>autogen</i> package installation prefix.<br/>
  The unconfigured value is: @prefix@</p>
 </dd><dt><code>static_libs</code></dt>
 <dd>
-<p> The name of the AR archive of the libopts object code.<br />
+<p> The name of the AR archive of the libopts object code.<br/>
  The unconfigured value is: ${libdir}/libopts.a</p>
 </dd><dt><code>version</code></dt>
 <dd>
-<p> Print the currently installed version of autoopts.<br />
+<p> Print the currently installed version of autoopts.<br/>
  The unconfigured value is: @AO_CURRENT@:@AO_REVISION@:@AO_AGE@</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i>Autogen</i> Info system documentation.</p>
 <h2>AUTHORS</h2>
-<p> AutoGen is the work of Bruce Korb &lt;bkorb [at] gnu.org&gt;.<br />
- Bruce Korb &lt;bkorb [at] gnu.org&gt; and<br />
+<p> AutoGen is the work of Bruce Korb &lt;bkorb [at] gnu.org&gt;.<br/>
+ Bruce Korb &lt;bkorb [at] gnu.org&gt; and<br/>
  Luca Filipozzi &lt;lfilipoz [at] debian.org&gt; created this manpage. </p>
 <p> AutoOpts is released under either the GNU General Public License with the Library exception (LGPL), or else the advertising clause free BSD license. Which license used is at the discretion of the licensee. </p>

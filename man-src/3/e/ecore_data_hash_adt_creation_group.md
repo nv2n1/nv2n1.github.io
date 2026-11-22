@@ -9,9 +9,9 @@ description: "Hash Creation Functions – Functions that create hash tables."
 
 <p>Hash Creation Functions &#8211; Functions that create hash tables. </p>
 <h3>Functions</h3>
-<p>EAPI Ecore_Hash * <code>ecore_hash_new</code> (Ecore_Hash_Cb hash_func, Ecore_Compare_Cb compare)<br />
- <i>Creates and initializes a new hash. </i><br />
- EAPI int <code>ecore_hash_init</code> (Ecore_Hash *hash, Ecore_Hash_Cb hash_func, Ecore_Compare_Cb compare)<br />
+<p>EAPI Ecore_Hash * <code>ecore_hash_new</code> (Ecore_Hash_Cb hash_func, Ecore_Compare_Cb compare)<br/>
+ <i>Creates and initializes a new hash. </i><br/>
+ EAPI int <code>ecore_hash_init</code> (Ecore_Hash *hash, Ecore_Hash_Cb hash_func, Ecore_Compare_Cb compare)<br/>
  <i>Initializes the given hash. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that create hash tables.</p>
@@ -20,8 +20,8 @@ description: "Hash Creation Functions – Functions that create hash tables."
 <p>Initializes the given hash. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>hash</i> The given hash.<br />
- <i>hash_func</i> The function used for hashing node keys.<br />
+<dd><i>hash</i> The given hash.<br/>
+ <i>hash_func</i> The function used for hashing node keys.<br/>
  <i>compare</i> The function used for comparing node keys.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -31,7 +31,7 @@ description: "Hash Creation Functions – Functions that create hash tables."
 <p>Creates and initializes a new hash. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>hash_func</i> The function for determining hash position.<br />
+<dd><i>hash_func</i> The function for determining hash position.<br/>
  <i>compare</i> The function for comparing node keys.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

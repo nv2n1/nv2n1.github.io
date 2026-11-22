@@ -11,8 +11,8 @@ description: "clog2, clog2f, clog2l – base-2 logarithm of a complex number"
 <p> clog2, clog2f, clog2l &#8211; base-2 logarithm of a complex number </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>
-<p> <code>double complex clog2(double complex </code><i>z</i><code>);</code><br />
- <code>float complex clog2f(float complex </code><i>z</i><code>);</code><br />
+<p> <code>double complex clog2(double complex </code><i>z</i><code>);</code><br/>
+ <code>float complex clog2f(float complex </code><i>z</i><code>);</code><br/>
  <code>long double complex clog2l(long double complex </code><i>z</i><code>);</code></p>
 <h2>DESCRIPTION</h2>
 <p> The call <i>clog2(z)</i> is equivalent to <i>clog(z)/log(2)</i>. </p>

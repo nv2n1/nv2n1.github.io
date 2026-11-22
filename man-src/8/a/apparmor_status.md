@@ -41,7 +41,7 @@ description: "aa-status – display various information about the current AppArm
 </dd><dt>&#8211;verbose</dt>
 <dd>displays multiple data points about loaded AppArmor policy set (the default action if no arguments are given).</dd>
 <dt>&#8211;json</dt>
-<dd>displays multiple data points about loaded AppArmor policy set in a <font SIZE="-1">JSON</font> format, fit for machine consumption.</dd>
+<dd>displays multiple data points about loaded AppArmor policy set in a JSON format, fit for machine consumption.</dd>
 <dt>&#8211;pretty-json</dt>
 <dd>same as &#8211;json, formatted to be readable by humans as well as by machines.</dd>
 <dt>&#8211;help</dt>

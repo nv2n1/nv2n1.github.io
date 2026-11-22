@@ -41,7 +41,7 @@ description: "ipmiping – send IPMI Get Authentication Capabilitiy request to n
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;freeipmi-users [at] gnu.org&gt; or &lt;freeipmi-devel [at] gnu.org&gt;.</p>
 <h2>Copyright</h2>
-<p>Copyright (C) 2007-2012 Lawrence Livermore National Security, LLC.<br />
+<p>Copyright (C) 2007-2012 Lawrence Livermore National Security, LLC.<br/>
  Copyright (C) 2003-2007 The Regents of the University of California. </p>
 <p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.</p>
 <h2>Origin</h2>

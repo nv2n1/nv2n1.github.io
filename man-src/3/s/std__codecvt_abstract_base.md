@@ -61,12 +61,12 @@ static __c_locale _S_lc_ctype_c_locale (__c_locale __cloc, const char *__s)</cod
 <p> The result returned is a member of codecvt_base::result. If all the input is converted, returns codecvt_base::ok. If no conversion is necessary, returns codecvt_base::noconv. If the input ends early or there is insufficient space in the output, returns codecvt_base::partial. Otherwise the conversion failed and codecvt_base::error is returned. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__state</i> Persistent conversion state data.<br />
- <i>__from</i> Start of input.<br />
- <i>__from_end</i> End of input.<br />
- <i>__from_next</i> Returns start of unconverted data.<br />
- <i>__to</i> Start of output buffer.<br />
- <i>__to_end</i> End of output buffer.<br />
+<dd><i>__state</i> Persistent conversion state data.<br/>
+ <i>__from</i> Start of input.<br/>
+ <i>__from_end</i> End of input.<br/>
+ <i>__from_next</i> Returns start of unconverted data.<br/>
+ <i>__to</i> Start of output buffer.<br/>
+ <i>__to_end</i> End of output buffer.<br/>
  <i>__to_next</i> Returns start of unused output area.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -80,12 +80,12 @@ static __c_locale _S_lc_ctype_c_locale (__c_locale __cloc, const char *__s)</cod
 <p> The result returned is a member of codecvt_base::result. If all the input is converted, returns codecvt_base::ok. If no conversion is necessary, returns codecvt_base::noconv. If the input ends early or there is insufficient space in the output, returns codecvt_base::partial. Otherwise the conversion failed and codecvt_base::error is returned. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__state</i> Persistent conversion state data.<br />
- <i>__from</i> Start of input.<br />
- <i>__from_end</i> End of input.<br />
- <i>__from_next</i> Returns start of unconverted data.<br />
- <i>__to</i> Start of output buffer.<br />
- <i>__to_end</i> End of output buffer.<br />
+<dd><i>__state</i> Persistent conversion state data.<br/>
+ <i>__from</i> Start of input.<br/>
+ <i>__from_end</i> End of input.<br/>
+ <i>__from_next</i> Returns start of unconverted data.<br/>
+ <i>__to</i> Start of output buffer.<br/>
+ <i>__to_end</i> End of output buffer.<br/>
  <i>__to_next</i> Returns start of unused output area.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -98,9 +98,9 @@ static __c_locale _S_lc_ctype_c_locale (__c_locale __cloc, const char *__s)</cod
 <p> The result returned is a member of codecvt_base::result. If the state could be reset and data written, returns codecvt_base::ok. If no conversion is necessary, returns codecvt_base::noconv. If the output has insufficient space, returns codecvt_base::partial. Otherwise the reset failed and codecvt_base::error is returned. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__state</i> Persistent conversion state data.<br />
- <i>__to</i> Start of output buffer.<br />
- <i>__to_end</i> End of output buffer.<br />
+<dd><i>__state</i> Persistent conversion state data.<br/>
+ <i>__to</i> Start of output buffer.<br/>
+ <i>__to_end</i> End of output buffer.<br/>
  <i>__to_next</i> Returns start of unused output area.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

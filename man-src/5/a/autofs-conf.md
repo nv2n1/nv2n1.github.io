@@ -102,7 +102,7 @@ description: "autofs.conf – autofs configuration"
 <dt><code>ldap_proto_version</code></dt>
 <dd>autofs always attempts to use the highest available ldap protocol version.</dd>
 <dt><code>cache_duration</code>, <code>map_reload_interval</code>, <code>map_options</code></dt>
-<dd>The map<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>entry cache is continually updated and stale entries<br />
+<dd>The map<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>entry cache is continually updated and stale entries<br/>
  cleaned on re-load, which is done when map changes are detected so these configuration entries are not used by autofs. An exception to this is the case where the map is large. In this case it may be necessary to read the whole map at startup even if browsing is is not enabled. Adding the cache:=all option to map_options can be used to for this.</dd>
 <dt><code>localhost_address</code></dt>
 <dd>This is not used within autofs. This configuration option was only used in the amd user space server code and is not relevant within autofs.</dd></dl>

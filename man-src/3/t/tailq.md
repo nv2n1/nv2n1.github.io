@@ -44,14 +44,14 @@ void TAILQ_REMOVE(TAILQ_HEAD *head, struct TYPE *elm, TAILQ_ENTRY NAME);</code><
 <h2>Bugs</h2>
 <p>The macros <code>TAILQ_FOREACH</code>() and <code>TAILQ_FOREACH_REVERSE</code>() don&#8217;t allow <i>var</i> to be removed or freed within the loop, as it would interfere with the traversal. The macros <code>TAILQ_FOREACH_SAFE</code>() and <code>TAILQ_FOREACH_REVERSE_SAFE</code>(), which are present on the BSDs but are not present in glibc, fix this limitation by allowing <i>var</i> to safely be removed from the list and freed from within the loop without interfering with the traversal.</p>
 <h2>Examples</h2>
-<p>#include &lt;stddef.h&gt;<br />
-#include &lt;stdio.h&gt;<br />
-#include &lt;stdlib.h&gt;<br />
-#include &lt;sys/queue.h&gt;<br />
-struct entry {<br />
-    int data;<br />
-    TAILQ_ENTRY(entry)<br />
-    entries; /* Tail queue. */<br />
+<p>#include &lt;stddef.h&gt;<br/>
+#include &lt;stdio.h&gt;<br/>
+#include &lt;stdlib.h&gt;<br/>
+#include &lt;sys/queue.h&gt;<br/>
+struct entry {<br/>
+    int data;<br/>
+    TAILQ_ENTRY(entry)<br/>
+    entries; /* Tail queue. */<br/>
 }; TAILQ_HEAD(tailhead, entry); </p>
 <pre><code>int main(void)
 {

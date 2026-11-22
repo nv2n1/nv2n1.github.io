@@ -32,7 +32,7 @@ description: "pmlogrewrite – rewrite Performance Co-Pilot archives"
 <dt><code>-q</code></dt>
 <dd> Quick mode, where if there are no rewriting actions to be performed (none of the global data, instance domains or metrics from <i>inlog</i> will be changed), then <code>pmlogrewrite</code> will exit (with status 0, so success) immediately after parsing the configuration file(s) and <i>outlog</i> is not created.</dd>
 <dt><code>-s</code></dt>
-<dd> When the &#8220;units&#8221; of a metric are changed, if the dimension in terms of space, time and count is unaltered, then the scaling factor is being changed, e.g. BYTE to KBYTE, or MSEC<font SIZE="-3">-1</font> to USEC<font SIZE="-3">-1</font>, or the composite MBYTE.SEC<font SIZE="-3">-1</font> to KBYTE.USEC<font SIZE="-3">-1</font>. The motivation may be (a) that the original metadata was wrong but the values in <i>inlog</i> are correct, or (b) the metadata is changing so the values need to change as well. The default <code>pmlogrewrite</code> behaviour matches case (a). If case (b) applies, then use the <code>-s</code> option and the values of all the metrics with a scale factor change in each result will be rescaled. For finer control over value rescaling refer to the RESCALE option for the UNITS clause of the metric rewriting rule described below.</dd>
+<dd> When the &#8220;units&#8221; of a metric are changed, if the dimension in terms of space, time and count is unaltered, then the scaling factor is being changed, e.g. BYTE to KBYTE, or MSEC-1 to USEC-1, or the composite MBYTE.SEC-1 to KBYTE.USEC-1. The motivation may be (a) that the original metadata was wrong but the values in <i>inlog</i> are correct, or (b) the metadata is changing so the values need to change as well. The default <code>pmlogrewrite</code> behaviour matches case (a). If case (b) applies, then use the <code>-s</code> option and the values of all the metrics with a scale factor change in each result will be rescaled. For finer control over value rescaling refer to the RESCALE option for the UNITS clause of the metric rewriting rule described below.</dd>
 <dt><code>-v</code></dt>
 <dd> Increase verbosity of diagnostic output.</dd>
 <dt><code>-w</code></dt>
@@ -114,14 +114,14 @@ eek urk
 <p> A special case of the previous INDOM clause where the instance domain is a duplicate copy of the <i>domain</i>.<i>serial</i> instance domain from the <i>indom</i> rewriting rule, and then any mapping rules are applied to the copied <i>newdomain</i>.<i>newserial</i> instance domain. This is useful when a PMDA is split and the same instance domain needs to be replicated for domain <i>domain</i> and domain <i>newdomain</i>. So for example if the metrics <i>foo.one</i> and <i>foo.two</i> are both defined over instance domain 12.34, and <i>foo.two</i> is moved to another PMDA using domain 27, then the following rewriting rules could be used:</p>
 </dd><dl>
 <dt>
-</dt><dd> indom 12.34 { indom -&gt; duplicate 27.34 }<br />
+</dt><dd> indom 12.34 { indom -&gt; duplicate 27.34 }<br/>
  metric foo.two { indom -&gt; 27.34 pmid -&gt; 27.*.* }</dd></dl>
 </dl>
 <p> INST <i>oldid</i> -&gt; <i>newid</i></p>
 <dl>
 <dt>
 </dt><dd>
-<p> The instance identified by the internal instance identifier <i>oldid</i> is renumbered to <i>newid</i>. Both <i>oldid</i> and <i>newid</i> are integers in the range 0 to 2<font SIZE="-3">31</font>-1. </p>
+<p> The instance identified by the internal instance identifier <i>oldid</i> is renumbered to <i>newid</i>. Both <i>oldid</i> and <i>newid</i> are integers in the range 0 to 231-1. </p>
 <p> As a special case, <i>newid</i> may be the keyword DELETE and then the instance <i>oldid</i> will be expunged from <i>outlog</i> which removes it from the instance domain metadata and removes all values of this instance for all the associated metrics.</dd></dl>
 </dl>
 <p> A <code>metric</code> rewriting rule has the form: </p>
@@ -178,9 +178,9 @@ indom 29. * {indom-&gt;109. * } metric sample.bin
 <dl>
 <dt>
 </dt><dd>
-indom 29. * {indom-&gt;109. * } metric sample.bin<br />
-{<br />
-    indom-&gt;123.2<br />
+indom 29. * {indom-&gt;109. * } metric sample.bin<br/>
+{<br/>
+    indom-&gt;123.2<br/>
 }
 </dd></dl>
 </dl>
@@ -230,20 +230,20 @@ indom 29. * {indom-&gt;109. * } metric sample.bin<br />
 <dl>
 <dt>
 </dt><dd>
-metric disk.dev.read{type-&gt;U64} metric disk.dev.write{type-&gt;U64} metric disk.dev.total<br />
-{<br />
-    type-&gt;U64<br />
+metric disk.dev.read{type-&gt;U64} metric disk.dev.write{type-&gt;U64} metric disk.dev.total<br/>
+{<br/>
+    type-&gt;U64<br/>
 }
 </dd></dl>
 <p> The instances associated with the load average metric <code>kernel.all.load</code> could be renamed and renumbered by the rules below.</p>
 <dl>
 <dt>
 </dt><dd>
-#for the Linux PMDA, the kernel.all.load metric is defined<br />
-#over instance domain 60.2<br />
-indom 60.2<br />
-{<br />
-    inst 1-&gt;60 iname &#8220;1 minute&#8221;-&gt;&#8221;60 second&#8221; inst 5-&gt;300 iname &#8220;5 minute&#8221;-&gt;&#8221;300 second&#8221; inst 15-&gt;900 iname &#8220;15 minute&#8221;-&gt;&#8221;900 second&#8221;<br />
+#for the Linux PMDA, the kernel.all.load metric is defined<br/>
+#over instance domain 60.2<br/>
+indom 60.2<br/>
+{<br/>
+    inst 1-&gt;60 iname &#8220;1 minute&#8221;-&gt;&#8221;60 second&#8221; inst 5-&gt;300 iname &#8220;5 minute&#8221;-&gt;&#8221;300 second&#8221; inst 15-&gt;900 iname &#8220;15 minute&#8221;-&gt;&#8221;900 second&#8221;<br/>
 }
 </dd></dl>
 <p> If we decide to split the &#8220;proc&#8221; metrics out of the Linux PMDA, this will involve changing the domain number for the PMID of these metrics and the associated instance domains. The rules below would rewrite an old archive to match the changes after the PMDA split.</p>

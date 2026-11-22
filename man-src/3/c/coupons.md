@@ -16,8 +16,8 @@ description: "QuantLib::CreditDefaultSwap – Credit default swap."
 <p> <code>Constructors</code> </p>
 <p> <code>CreditDefaultSwap</code> (Protection::Side side, Real notional, <code>Rate</code> spread, const <code>Schedule</code> &amp;schedule, <code>BusinessDayConvention</code> paymentConvention, const <code>DayCounter</code> &amp;dayCounter, bool settlesAccrual=true, bool paysAtDefaultTime=true, const boost::shared_ptr&lt; <code>Claim</code> &gt; &amp;=boost::shared_ptr&lt; <code>Claim</code> &gt;()) </p>
 <p> <code>Instrument interface</code> </p>
-<p> bool <code>isExpired</code> () const<br />
- <i>returns whether the instrument is still tradable. </i><br />
+<p> bool <code>isExpired</code> () const<br/>
+ <i>returns whether the instrument is still tradable. </i><br/>
  void <code>setupArguments</code> (PricingEngine::arguments *) const </p>
 <p> void <code>fetchResults</code> (const PricingEngine::results *) const </p>
 <p> <code>Inspectors</code> </p>

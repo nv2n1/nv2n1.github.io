@@ -145,6 +145,6 @@ description: "userhelper – A helper interface to PAM."
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/1-userpasswd/">userpasswd</a></i>(1), <i><a href="/docs/linux/man/1-userinfo/">userinfo</a></i>(1), <i><a href="/docs/linux/man/8-consolehelper/">consolehelper</a></i>(8), <i><a href="/docs/linux/man/1-chfn/">chfn</a></i>(1), <i><a href="/docs/linux/man/1-chsh/">chsh</a></i>(1), <i><a href="/docs/linux/man/5-passwd/">passwd</a></i>(5)</p>
 <h2>Author</h2>
-<p>Otto Hammersmith &lt;otto [at] redhat.com&gt;<br />
+<p>Otto Hammersmith &lt;otto [at] redhat.com&gt;<br/>
  Michael K. Johnson &lt;johnsonm [at] redhat.com&gt;</p>
 </dl>

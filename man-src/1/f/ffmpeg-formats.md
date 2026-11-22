@@ -13,7 +13,7 @@ description: "ffmpeg-formats – FFmpeg formats"
 <p> This document describes the supported formats (muxers and demuxers) provided by the libavformat library.</p>
 <h2>FORMAT OPTIONS</h2>
 <p> The libavformat library provides some generic global options, which can be set on all the muxers and demuxers. In addition each muxer or demuxer may support so-called private options, which are specific for that component. </p>
-<p> Options may be set by specifying &#8211;<i>option</i> <i>value</i> in the FFmpeg tools, or by setting the value explicitly in the <tt>&quot;AVFormatContext&quot;</tt> options or using the <i>libavutil/opt.h</i> <font SIZE="-1">API</font> for programmatic use. </p>
+<p> Options may be set by specifying &#8211;<i>option</i> <i>value</i> in the FFmpeg tools, or by setting the value explicitly in the <tt>&quot;AVFormatContext&quot;</tt> options or using the <i>libavutil/opt.h</i> API for programmatic use. </p>
 <p> The list of supported options follows:</p>
 <dl>
 <dt><code>avioflags</code> <i>flags</i> <code>(</code><i>input/output</i><code>)</code></dt>
@@ -41,9 +41,9 @@ description: "ffmpeg-formats – FFmpeg formats"
 <dt><code>fastseek</code></dt>
 <dd> Enable fast, but inaccurate seeks for some formats.</dd>
 <dt><code>genpts</code></dt>
-<dd> Generate missing <font SIZE="-1">PTS</font> if <font SIZE="-1">DTS</font> is present.</dd>
+<dd> Generate missing PTS if DTS is present.</dd>
 <dt><code>igndts</code></dt>
-<dd> Ignore <font SIZE="-1">DTS</font> if <font SIZE="-1">PTS</font> is set. Inert when nofillin is set.</dd>
+<dd> Ignore DTS if PTS is set. Inert when nofillin is set.</dd>
 <dt><code>ignidx</code></dt>
 <dd> Ignore index.</dd>
 <dt><code>keepside (</code><i>deprecated</i><code>,</code><i>inert</i><code>)</code></dt>
@@ -55,7 +55,7 @@ description: "ffmpeg-formats – FFmpeg formats"
 <dt><code>noparse</code></dt>
 <dd> Disable AVParsers, this needs <tt>&quot;+nofillin&quot;</tt> too.</dd>
 <dt><code>sortdts</code></dt>
-<dd> Try to interleave output packets by <font SIZE="-1">DTS.</font> At present, available only for AVIs with an index.</dd></dl>
+<dd> Try to interleave output packets by DTS. At present, available only for AVIs with an index.</dd></dl>
 </dl>
 <dl>
 <dt>
@@ -71,7 +71,7 @@ description: "ffmpeg-formats – FFmpeg formats"
 <dt><code>latm (</code><i>deprecated</i><code>,</code><i>inert</i><code>)</code></dt>
 <dd>
 </dd><dt><code>shortest</code></dt>
-<dd> Stop muxing at the end of the shortest stream. It may be needed to increase max_interleave_delta to avoid flushing the longer streams before <font SIZE="-1">EOF.</font></dd></dl>
+<dd> Stop muxing at the end of the shortest stream. It may be needed to increase max_interleave_delta to avoid flushing the longer streams before EOF.</dd></dl>
 </dl>
 <dl>
 </dl>
@@ -156,7 +156,7 @@ description: "ffmpeg-formats – FFmpeg formats"
 <dt><code>correct_ts_overflow</code> <i>integer</i> <code>(</code><i>input</i><code>)</code></dt>
 <dd> Correct single timestamp overflows if set to 1. Default is 1.</dd>
 <dt><code>flush_packets</code> <i>integer</i> <code>(</code><i>output</i><code>)</code></dt>
-<dd> Flush the underlying I/O stream after each packet. Default is -1 (auto), which means that the underlying protocol will decide, 1 enables it, and has the effect of reducing the latency, 0 disables it and may increase <font SIZE="-1">IO</font> throughput in some cases.</dd>
+<dd> Flush the underlying I/O stream after each packet. Default is -1 (auto), which means that the underlying protocol will decide, 1 enables it, and has the effect of reducing the latency, 0 disables it and may increase IO throughput in some cases.</dd>
 <dt><code>output_ts_offset</code> <i>offset</i> <code>(</code><i>output</i><code>)</code></dt>
 <dd> Set the output time offset. </dd>
 <p> <i>offset</i> must be a time duration specification, see <code>the Time duration section in the <a href="/docs/linux/man/1-ffmpeg-utils/">ffmpeg-utils</a>(1) manual</code>. </p>
@@ -173,7 +173,7 @@ description: "ffmpeg-formats – FFmpeg formats"
 <dt><code>max_streams</code> <i>integer</i> <code>(</code><i>input</i><code>)</code></dt>
 <dd> Specifies the maximum number of streams. This can be used to reject files that would require too many resources due to a large number of streams.</dd>
 <dt><code>skip_estimate_duration_from_pts</code> <i>bool</i> <code>(</code><i>input</i><code>)</code></dt>
-<dd> Skip estimation of input duration when calculated using <font SIZE="-1">PTS.</font> At present, applicable for MPEG-PS and MPEG-TS.</dd>
+<dd> Skip estimation of input duration when calculated using PTS. At present, applicable for MPEG-PS and MPEG-TS.</dd>
 <dt><code>strict, f_strict</code> <i>integer</i> <code>(</code><i>input/output</i><code>)</code></dt>
 <dd> Specify how strictly to follow the standards. <tt>&quot;f_strict&quot;</tt> is deprecated and should be used only via the <code>ffmpeg</code> tool. </dd>
 <p> Possible values:</p>
@@ -207,7 +207,7 @@ description: "ffmpeg-formats – FFmpeg formats"
 <p> This demuxer is used to demux Audible Format 2, 3, and 4 (.aa) files.</p>
 <h3>apng</h3>
 <p> Animated Portable Network Graphics demuxer. </p>
-<p> This demuxer is used to demux <font SIZE="-1">APNG</font> files. All headers, but the <font SIZE="-1">PNG</font> signature, up to (but not including) the first fcTL chunk are transmitted as extradata. Frames are then split as being all the chunks between two fcTL ones, or between the last fcTL and <font SIZE="-1">IEND</font> chunks.</p>
+<p> This demuxer is used to demux APNG files. All headers, but the PNG signature, up to (but not including) the first fcTL chunk are transmitted as extradata. Frames are then split as being all the chunks between two fcTL ones, or between the last fcTL and IEND chunks.</p>
 <dl>
 <dt><code>-ignore_loop</code> <i>bool</i></dt>
 <dd> Ignore the loop variable in the file if set.</dd>
@@ -217,7 +217,7 @@ description: "ffmpeg-formats – FFmpeg formats"
 <dd> Default framerate in frames per second when none is specified in the file (0 meaning as fast as possible).</dd></dl>
 <h3>asf</h3>
 <p> Advanced Systems Format demuxer. </p>
-<p> This demuxer is used to demux <font SIZE="-1">ASF</font> files and <font SIZE="-1">MMS</font> network streams.</p>
+<p> This demuxer is used to demux ASF files and MMS network streams.</p>
 <dl>
 <dt><code>-no_resync_search</code> <i>bool</i></dt>
 <dd> Do not try to resynchronize by looking for a certain optional start code.</dd></dl>
@@ -254,7 +254,7 @@ description: "ffmpeg-formats – FFmpeg formats"
 <dt>&quot;stream&quot;</dt>
 <dd> Introduce a stream in the virtual file. All subsequent stream-related directives apply to the last introduced stream. Some streams properties must be set in order to allow identifying the matching streams in the subfiles. If no streams are defined in the script, the streams from the first file are copied.</dd>
 <dt>&quot;exact_stream_id id&quot;</dt>
-<dd> Set the id of the stream. If this directive is given, the string with the corresponding id in the subfiles will be used. This is especially useful for MPEG-PS (<font SIZE="-1">VOB</font>) files, where the order of the streams is not reliable.</dd></dl>
+<dd> Set the id of the stream. If this directive is given, the string with the corresponding id in the subfiles will be used. This is especially useful for MPEG-PS (VOB) files, where the order of the streams is not reliable.</dd></dl>
 <p> <i>Options</i> </p>
 <p> This demuxer accepts the following option:</p>
 <dl>
@@ -265,7 +265,7 @@ description: "ffmpeg-formats – FFmpeg formats"
 <p> -1 is equivalent to 1 if the format was automatically probed and 0 otherwise.</p>
 <dt><code>auto_convert</code></dt>
 <dd> If set to 1, try to perform automatic conversions on packet data to make the streams concatenable. The default is 1. </dd>
-<p> Currently, the only conversion is adding the h264_mp4toannexb bitstream filter to H.264 streams in <font SIZE="-1">MP4</font> format. This is necessary in particular if there are resolution changes.</p>
+<p> Currently, the only conversion is adding the h264_mp4toannexb bitstream filter to H.264 streams in MP4 format. This is necessary in particular if there are resolution changes.</p>
 <dt><code>segment_time_metadata</code></dt>
 <dd> If set to 1, every packet will contain the <i>lavf.concat.start_time</i> and the <i>lavf.concat.duration</i> packet metadata values which are the start_time and the duration of the respective file segments in the concatenated output expressed in microseconds. The duration metadata is only set if it is known based on the concat file. The default is 0.</dd></dl>
 <p> <i>Examples</i></p>
@@ -290,11 +290,11 @@ description: "ffmpeg-formats – FFmpeg formats"
 </pre>
 </dl>
 <h3>dash</h3>
-<p> Dynamic Adaptive Streaming over <font SIZE="-1">HTTP</font> demuxer. </p>
+<p> Dynamic Adaptive Streaming over HTTP demuxer. </p>
 <p> This demuxer presents all AVStreams found in the manifest. By setting the discard flags on AVStreams the caller can decide which streams to actually receive. Each stream mirrors the <tt>&quot;id&quot;</tt> and <tt>&quot;bandwidth&quot;</tt> properties from the <tt>&quot;&lt;Representation&gt;&quot;</tt> as metadata keys named &#8220;id&#8221; and &#8220;variant_bitrate&#8221; respectively.</p>
 <h3>flv, live_flv</h3>
 <p> Adobe Flash Video Format demuxer. </p>
-<p> This demuxer is used to demux <font SIZE="-1">FLV</font> files and <font SIZE="-1">RTMP</font> network streams. In case of live network streams, if you force format, you may use live_flv option instead of flv to survive timestamp discontinuities. </p>
+<p> This demuxer is used to demux FLV files and RTMP network streams. In case of live network streams, if you force format, you may use live_flv option instead of flv to survive timestamp discontinuities. </p>
 <pre>
         ffmpeg -f flv -i myfile.flv ...
         ffmpeg -f live_flv -i rtmp://&lt;any.server&gt;/anything/key ....
@@ -307,7 +307,7 @@ description: "ffmpeg-formats – FFmpeg formats"
 <dt><code>-flv_full_metadata</code> <i>bool</i></dt>
 <dd> Output all context of the onMetadata.</dd></dl>
 <h3>gif</h3>
-<p> Animated <font SIZE="-1">GIF</font> demuxer. </p>
+<p> Animated GIF demuxer. </p>
 <p> It accepts the following options:</p>
 <dl>
 <dt><code>min_delay</code></dt>
@@ -317,15 +317,15 @@ description: "ffmpeg-formats – FFmpeg formats"
 <dt><code>default_delay</code></dt>
 <dd> Set the default delay between frames in hundredths of seconds. Range is 0 to 6000. Default value is 10.</dd>
 <dt><code>ignore_loop</code></dt>
-<dd> <font SIZE="-1">GIF</font> files can contain information to loop a certain number of times (or infinitely). If <code>ignore_loop</code> is set to 1, then the loop setting from the input will be ignored and looping will not occur. If set to 0, then looping will occur and will cycle the number of times according to the <font SIZE="-1">GIF.</font> Default value is 1.</dd></dl>
-<p> For example, with the overlay filter, place an infinitely looping <font SIZE="-1">GIF</font> over another video: </p>
+<dd> GIF files can contain information to loop a certain number of times (or infinitely). If <code>ignore_loop</code> is set to 1, then the loop setting from the input will be ignored and looping will not occur. If set to 0, then looping will occur and will cycle the number of times according to the GIF. Default value is 1.</dd></dl>
+<p> For example, with the overlay filter, place an infinitely looping GIF over another video: </p>
 <pre>
         ffmpeg -i input.mp4 -ignore_loop 0 -i input.gif -filter_complex overlay=shortest=1 out.mkv
 </pre>
-<p> Note that in the above example the shortest option for overlay filter is used to end the output video at the length of the shortest input file, which in this case is <i>input.mp4</i> as the <font SIZE="-1">GIF</font> in this example loops infinitely.</p>
+<p> Note that in the above example the shortest option for overlay filter is used to end the output video at the length of the shortest input file, which in this case is <i>input.mp4</i> as the GIF in this example loops infinitely.</p>
 <h3>hls</h3>
-<p> <font SIZE="-1">HLS</font> demuxer </p>
-<p> Apple <font SIZE="-1">HTTP</font> Live Streaming demuxer. </p>
+<p> HLS demuxer </p>
+<p> Apple HTTP Live Streaming demuxer. </p>
 <p> This demuxer presents all AVStreams from all variant streams. The id field is set to the bitrate variant index number. By setting the discard flags on AVStreams (by pressing &#8216;a&#8217; or &#8216;v&#8217; in ffplay), the caller can decide which variant streams to actually receive. The total bitrate of the variant that the stream belongs to is available in a metadata key named &#8220;variant_bitrate&#8221;. </p>
 <p> It accepts the following options:</p>
 <dl>
@@ -338,11 +338,11 @@ description: "ffmpeg-formats – FFmpeg formats"
 <dt><code>m3u8_hold_counters</code></dt>
 <dd> The maximum number of times to load m3u8 when it refreshes without new segments. Default value is 1000.</dd>
 <dt><code>http_persistent</code></dt>
-<dd> Use persistent <font SIZE="-1">HTTP</font> connections. Applicable only for <font SIZE="-1">HTTP</font> streams. Enabled by default.</dd>
+<dd> Use persistent HTTP connections. Applicable only for HTTP streams. Enabled by default.</dd>
 <dt><code>http_multiple</code></dt>
-<dd> Use multiple <font SIZE="-1">HTTP</font> connections for downloading <font SIZE="-1">HTTP</font> segments. Enabled by default for <font SIZE="-1">HTTP/1.1</font> servers.</dd>
+<dd> Use multiple HTTP connections for downloading HTTP segments. Enabled by default for HTTP/1.1 servers.</dd>
 <dt><code>http_seekable</code></dt>
-<dd> Use <font SIZE="-1">HTTP</font> partial requests for downloading <font SIZE="-1">HTTP</font> segments. 0 = disable, 1 = enable, -1 = auto, Default is auto.</dd></dl>
+<dd> Use HTTP partial requests for downloading HTTP segments. 0 = disable, 1 = enable, -1 = auto, Default is auto.</dd></dl>
 <h3>image2</h3>
 <p> Image file demuxer. </p>
 <p> This demuxer reads from a list of image files specified by a pattern. The syntax and meaning of the pattern is specified by the option <i>pattern_type</i>. </p>
@@ -458,7 +458,7 @@ description: "ffmpeg-formats – FFmpeg formats"
 <dt><code>max_size</code></dt>
 <dd> The demuxer buffers the entire file into memory. Adjust this value to set the maximum buffer size, which in turn, acts as a ceiling for the size of files that can be read. Range is 0 to 100 MiB. 0 removes buffer size limit (not recommended). Default is 5 MiB.</dd>
 <dt><code>video_stream_expr</code></dt>
-<dd> String which is evaluated using the eval <font SIZE="-1">API</font> to assign colors to the generated video stream. Variables which can be used are <tt>&quot;x&quot;</tt>, <tt>&quot;y&quot;</tt>, <tt>&quot;w&quot;</tt>, <tt>&quot;h&quot;</tt>, <tt>&quot;t&quot;</tt>, <tt>&quot;speed&quot;</tt>, <tt>&quot;tempo&quot;</tt>, <tt>&quot;order&quot;</tt>, <tt>&quot;pattern&quot;</tt> and <tt>&quot;row&quot;</tt>.</dd>
+<dd> String which is evaluated using the eval API to assign colors to the generated video stream. Variables which can be used are <tt>&quot;x&quot;</tt>, <tt>&quot;y&quot;</tt>, <tt>&quot;w&quot;</tt>, <tt>&quot;h&quot;</tt>, <tt>&quot;t&quot;</tt>, <tt>&quot;speed&quot;</tt>, <tt>&quot;tempo&quot;</tt>, <tt>&quot;order&quot;</tt>, <tt>&quot;pattern&quot;</tt> and <tt>&quot;row&quot;</tt>.</dd>
 <dt><code>video_stream</code></dt>
 <dd> Generate video stream. Can be 1 (on) or 0 (off). Default is 0.</dd>
 <dt><code>video_stream_w</code></dt>
@@ -477,11 +477,11 @@ description: "ffmpeg-formats – FFmpeg formats"
 <dd> Set the subsong index. This can be either &#8216;all&#8217;, &#8216;auto&#8217;, or the index of the subsong. Subsong indexes start at 0. The default is &#8216;auto&#8217;. </dd>
 <p> The default value is to let libopenmpt choose.</p>
 <dt><code>layout</code></dt>
-<dd> Set the channel layout. Valid values are 1, 2, and 4 channel layouts. The default value is <font SIZE="-1">STEREO.</font></dd>
+<dd> Set the channel layout. Valid values are 1, 2, and 4 channel layouts. The default value is STEREO.</dd>
 <dt><code>sample_rate</code></dt>
-<dd> Set the sample rate for libopenmpt to output. Range is from 1000 to <font SIZE="-1">INT_MAX.</font> The value default is 48000.</dd></dl>
+<dd> Set the sample rate for libopenmpt to output. Range is from 1000 to INT_MAX. The value default is 48000.</dd></dl>
 <h3>mov/mp4/3gp</h3>
-<p> Demuxer for Quicktime File Format &amp; <font SIZE="-1">ISO/IEC</font> Base Media File Format (<font SIZE="-1">ISO/IEC 14496-12</font> or <font SIZE="-1">MPEG-4</font> Part 12, <font SIZE="-1">ISO/IEC 15444-12</font> or <font SIZE="-1">JPEG 2000</font> Part 12). </p>
+<p> Demuxer for Quicktime File Format &amp; ISO/IEC Base Media File Format (ISO/IEC 14496-12 or MPEG-4 Part 12, ISO/IEC 15444-12 or JPEG 2000 Part 12). </p>
 <p> Registered extensions: mov, mp4, m4a, 3gp, 3g2, mj2, psp, m4b, ism, ismv, isma, f4v </p>
 <p> <i>Options</i> </p>
 <p> This demuxer accepts the following options:</p>
@@ -504,11 +504,11 @@ description: "ffmpeg-formats – FFmpeg formats"
 <dl>
 <dl>
 <dt><code>auto</code></dt>
-<dd> Auto-detect whether to set mfra timestamps as <font SIZE="-1">PTS</font> or <font SIZE="-1">DTS</font> <i>(default)</i></dd>
+<dd> Auto-detect whether to set mfra timestamps as PTS or DTS <i>(default)</i></dd>
 <dt><code>dts</code></dt>
-<dd> Set mfra timestamps as <font SIZE="-1">DTS</font></dd>
+<dd> Set mfra timestamps as DTS</dd>
 <dt><code>pts</code></dt>
-<dd> Set mfra timestamps as <font SIZE="-1">PTS</font></dd>
+<dd> Set mfra timestamps as PTS</dd>
 <dt><code>0</code></dt>
 <dd> Don&#8217;t use mfra box to set timestamps</dd></dl>
 </dl>
@@ -517,40 +517,40 @@ description: "ffmpeg-formats – FFmpeg formats"
 <dt><code>export_all</code></dt>
 <dd> Export unrecognized boxes within the <i>udta</i> box as metadata entries. The first four characters of the box type are set as the key. Default is false.</dd>
 <dt><code>export_xmp</code></dt>
-<dd> Export entire contents of <i></i><font SIZE="-1"><i>XMP_</i></font><i></i> box and <i>uuid</i> box as a string with key <tt>&quot;xmp&quot;</tt>. Note that if <tt>&quot;export_all&quot;</tt> is set and this option isn&#8217;t, the contents of <i></i><font SIZE="-1"><i>XMP_</i></font><i></i> box are still exported but with key <tt>&quot;XMP_&quot;</tt>. Default is false.</dd>
+<dd> Export entire contents of <i></i><i>XMP_</i><i></i> box and <i>uuid</i> box as a string with key <tt>&quot;xmp&quot;</tt>. Note that if <tt>&quot;export_all&quot;</tt> is set and this option isn&#8217;t, the contents of <i></i><i>XMP_</i><i></i> box are still exported but with key <tt>&quot;XMP_&quot;</tt>. Default is false.</dd>
 <dt><code>activation_bytes</code></dt>
-<dd> 4-byte key required to decrypt Audible <font SIZE="-1">AAX</font> and <font SIZE="-1">AAX+</font> files. See Audible <font SIZE="-1">AAX</font> subsection below.</dd>
+<dd> 4-byte key required to decrypt Audible AAX and AAX+ files. See Audible AAX subsection below.</dd>
 <dt><code>audible_fixed_key</code></dt>
-<dd> Fixed key used for handling Audible <font SIZE="-1">AAX/AAX+</font> files. It has been pre-set so should not be necessary to specify.</dd>
+<dd> Fixed key used for handling Audible AAX/AAX+ files. It has been pre-set so should not be necessary to specify.</dd>
 <dt><code>decryption_key</code></dt>
-<dd> 16-byte key, in hex, to decrypt files encrypted using <font SIZE="-1">ISO</font> Common Encryption (<font SIZE="-1">CENC/AES-128 CTR</font>; <font SIZE="-1">ISO/IEC 23001-7</font>).</dd></dl>
-<p> <i>Audible </i><font SIZE="-1"><i>AAX</i></font><i></i> </p>
-<p> Audible <font SIZE="-1">AAX</font> files are encrypted M4B files, and they can be decrypted by specifying a 4 byte activation secret. </p>
+<dd> 16-byte key, in hex, to decrypt files encrypted using ISO Common Encryption (CENC/AES-128 CTR; ISO/IEC 23001-7).</dd></dl>
+<p> <i>Audible </i><i>AAX</i><i></i> </p>
+<p> Audible AAX files are encrypted M4B files, and they can be decrypted by specifying a 4 byte activation secret. </p>
 <pre>
         ffmpeg -activation_bytes 1CEB00DA -i test.aax -vn -c:a copy output.mp4
 </pre>
 <h3>mpegts</h3>
-<p> <font SIZE="-1">MPEG-2</font> transport stream demuxer. </p>
+<p> MPEG-2 transport stream demuxer. </p>
 <p> This demuxer accepts the following options:</p>
 <dl>
 <dt><code>resync_size</code></dt>
 <dd> Set size limit for looking up a new synchronization. Default value is 65536.</dd>
 <dt><code>skip_unknown_pmt</code></dt>
-<dd> Skip PMTs for programs not defined in the <font SIZE="-1">PAT.</font> Default value is 0.</dd>
+<dd> Skip PMTs for programs not defined in the PAT. Default value is 0.</dd>
 <dt><code>fix_teletext_pts</code></dt>
-<dd> Override teletext packet <font SIZE="-1">PTS</font> and <font SIZE="-1">DTS</font> values with the timestamps calculated from the <font SIZE="-1">PCR</font> of the first program which the teletext stream is part of and is not discarded. Default value is 1, set this option to 0 if you want your teletext packet <font SIZE="-1">PTS</font> and <font SIZE="-1">DTS</font> values untouched.</dd>
+<dd> Override teletext packet PTS and DTS values with the timestamps calculated from the PCR of the first program which the teletext stream is part of and is not discarded. Default value is 1, set this option to 0 if you want your teletext packet PTS and DTS values untouched.</dd>
 <dt><code>ts_packetsize</code></dt>
 <dd> Output option carrying the raw packet size in bytes. Show the detected raw packet size, cannot be set by the user.</dd>
 <dt><code>scan_all_pmts</code></dt>
 <dd> Scan and combine all PMTs. The value is an integer with value from -1 to 1 (-1 means automatic setting, 1 means enabled, 0 means disabled). Default value is -1.</dd>
 <dt><code>merge_pmt_versions</code></dt>
-<dd> Re-use existing streams when a <font SIZE="-1">PMT</font>&#8216;s version is updated and elementary streams move to different PIDs. Default value is 0.</dd></dl>
+<dd> Re-use existing streams when a PMT&#8216;s version is updated and elementary streams move to different PIDs. Default value is 0.</dd></dl>
 <h3>mpjpeg</h3>
-<p> <font SIZE="-1">MJPEG</font> encapsulated in multi-part <font SIZE="-1">MIME</font> demuxer. </p>
-<p> This demuxer allows reading of <font SIZE="-1">MJPEG,</font> where each frame is represented as a part of multipart/x-mixed-replace stream.</p>
+<p> MJPEG encapsulated in multi-part MIME demuxer. </p>
+<p> This demuxer allows reading of MJPEG, where each frame is represented as a part of multipart/x-mixed-replace stream.</p>
 <dl>
 <dt><code>strict_mime_boundary</code></dt>
-<dd> Default implementation applies a relaxed standard to multi-part <font SIZE="-1">MIME</font> boundary detection, to prevent regression with numerous existing endpoints not generating a proper <font SIZE="-1">MIME MJPEG</font> stream. Turning this option on by setting it to 1 will result in a stricter check of the boundary value.</dd></dl>
+<dd> Default implementation applies a relaxed standard to multi-part MIME boundary detection, to prevent regression with numerous existing endpoints not generating a proper MIME MJPEG stream. Turning this option on by setting it to 1 will result in a stricter check of the boundary value.</dd></dl>
 <h3>rawvideo</h3>
 <p> Raw video demuxer. </p>
 <p> This demuxer allows one to read raw video data. Since there is no header specifying the assumed video parameters, the user must specify them in order to be able to decode the data correctly. </p>
@@ -568,7 +568,7 @@ description: "ffmpeg-formats – FFmpeg formats"
 </pre>
 <h3>sbg</h3>
 <p> SBaGen script demuxer. </p>
-<p> This demuxer reads the script language used by SBaGen &lt;<code><a rel="nofollow" href="http://uazu.net/sbagen/">http://uazu.net/sbagen/</a></code>&gt; to generate binaural beats sessions. A <font SIZE="-1">SBG</font> script looks like that: </p>
+<p> This demuxer reads the script language used by SBaGen &lt;<code><a rel="nofollow" href="http://uazu.net/sbagen/">http://uazu.net/sbagen/</a></code>&gt; to generate binaural beats sessions. A SBG script looks like that: </p>
 <pre><code>
 - SE
       a:300 - 2.5 / 3 440 + 4.5 / 0
@@ -583,21 +583,21 @@ description: "ffmpeg-formats – FFmpeg formats"
       0:30
        :00 off
 </code></pre>
-<p> A <font SIZE="-1">SBG</font> script can mix absolute and relative timestamps. If the script uses either only absolute timestamps (including the script start time) or only relative ones, then its layout is fixed, and the conversion is straightforward. On the other hand, if the script mixes both kind of timestamps, then the <i></i><font SIZE="-1"><i>NOW</i></font><i></i> reference for relative timestamps will be taken from the current time of day at the time the script is read, and the script layout will be frozen according to that reference. That means that if the script is directly played, the actual times will match the absolute timestamps up to the sound controller&#8217;s clock accuracy, but if the user somehow pauses the playback or seeks, all times will be shifted accordingly.</p>
+<p> A SBG script can mix absolute and relative timestamps. If the script uses either only absolute timestamps (including the script start time) or only relative ones, then its layout is fixed, and the conversion is straightforward. On the other hand, if the script mixes both kind of timestamps, then the <i></i><i>NOW</i><i></i> reference for relative timestamps will be taken from the current time of day at the time the script is read, and the script layout will be frozen according to that reference. That means that if the script is directly played, the actual times will match the absolute timestamps up to the sound controller&#8217;s clock accuracy, but if the user somehow pauses the playback or seeks, all times will be shifted accordingly.</p>
 <h3>tedcaptions</h3>
-<p> <font SIZE="-1">JSON</font> captions used for &lt;<code><a rel="nofollow" href="http://www.ted.com/">http://www.ted.com/</a></code>&gt;. </p>
-<p> <font SIZE="-1">TED</font> does not provide links to the captions, but they can be guessed from the page. The file <i>tools/bookmarklets.html</i> from the FFmpeg source tree contains a bookmarklet to expose them. </p>
+<p> JSON captions used for &lt;<code><a rel="nofollow" href="http://www.ted.com/">http://www.ted.com/</a></code>&gt;. </p>
+<p> TED does not provide links to the captions, but they can be guessed from the page. The file <i>tools/bookmarklets.html</i> from the FFmpeg source tree contains a bookmarklet to expose them. </p>
 <p> This demuxer accepts the following option:</p>
 <dl>
 <dt><code>start_time</code></dt>
-<dd> Set the start time of the <font SIZE="-1">TED</font> talk, in milliseconds. The default is 15000 (15s). It is used to sync the captions with the downloadable videos, because they include a 15s intro.</dd></dl>
+<dd> Set the start time of the TED talk, in milliseconds. The default is 15000 (15s). It is used to sync the captions with the downloadable videos, because they include a 15s intro.</dd></dl>
 <p> Example: convert the captions to a format most players understand: </p>
 <pre>
         ffmpeg -i <a rel="nofollow" href="http://www.ted.com/talks/subtitles/id/1/lang/en">http://www.ted.com/talks/subtitles/id/1/lang/en</a> talk1-en.srt
 </pre>
 <h3>vapoursynth</h3>
 <p> Vapoursynth wrapper. </p>
-<p> Due to security concerns, Vapoursynth scripts will not be autodetected so the input format has to be forced. For ff* <font SIZE="-1">CLI</font> tools, add <tt>&quot;-f vapoursynth&quot;</tt> before the input <tt>&quot;-i yourscript.vpy&quot;</tt>. </p>
+<p> Due to security concerns, Vapoursynth scripts will not be autodetected so the input format has to be forced. For ff* CLI tools, add <tt>&quot;-f vapoursynth&quot;</tt> before the input <tt>&quot;-i yourscript.vpy&quot;</tt>. </p>
 <p> This demuxer accepts the following option:</p>
 <dl>
 <dt><code>max_script_size</code></dt>
@@ -635,9 +635,9 @@ description: "ffmpeg-formats – FFmpeg formats"
 <p> The required index space depends on the output file size and should be about 16 bytes per gigabyte. When this option is omitted or set to zero the necessary index space is guessed.</p>
 <dt><code>write_channel_mask</code></dt>
 <dd> Write the channel layout mask into the audio stream header. </dd>
-<p> This option is enabled by default. Disabling the channel mask can be useful in specific scenarios, e.g. when merging multiple audio streams into one for compatibility with software that only supports a single audio stream in <font SIZE="-1">AVI</font> (see <code>the &#8220;amerge&#8221; section in the ffmpeg-filters manual</code>).</p>
+<p> This option is enabled by default. Disabling the channel mask can be useful in specific scenarios, e.g. when merging multiple audio streams into one for compatibility with software that only supports a single audio stream in AVI (see <code>the &#8220;amerge&#8221; section in the ffmpeg-filters manual</code>).</p>
 <dt><code>flipped_raw_rgb</code></dt>
-<dd> If set to true, store positive height for raw <font SIZE="-1">RGB</font> bitmaps, which indicates bitmap is stored bottom-up. Note that this option does not flip the bitmap which has to be done manually beforehand, e.g. by using the vflip filter. Default is <i>false</i> and indicates bitmap is stored top down.</dd></dl>
+<dd> If set to true, store positive height for raw RGB bitmaps, which indicates bitmap is stored bottom-up. Note that this option does not flip the bitmap which has to be done manually beforehand, e.g. by using the vflip filter. Default is <i>false</i> and indicates bitmap is stored top down.</dd></dl>
 <h3>chromaprint</h3>
 <p> Chromaprint fingerprinter. </p>
 <p> This muxer feeds audio data to the Chromaprint library, which generates a fingerprint for the provided audio data. See &lt;<code><a rel="nofollow" href="https://acoustid.org/chromaprint">https://acoustid.org/chromaprint</a></code>&gt; </p>
@@ -663,20 +663,20 @@ description: "ffmpeg-formats – FFmpeg formats"
 </dl>
 </dl>
 <h3>crc</h3>
-<p> <font SIZE="-1">CRC</font> (Cyclic Redundancy Check) testing format. </p>
-<p> This muxer computes and prints the Adler-32 <font SIZE="-1">CRC</font> of all the input audio and video frames. By default audio frames are converted to signed 16-bit raw audio and video frames to raw video before computing the <font SIZE="-1">CRC.</font> </p>
-<p> The output of the muxer consists of a single line of the form: CRC=0x<i></i><font SIZE="-1"><i>CRC</i></font><i></i>, where <i></i><font SIZE="-1"><i>CRC</i></font><i></i> is a hexadecimal number 0-padded to 8 digits containing the <font SIZE="-1">CRC</font> for all the decoded input frames. </p>
+<p> CRC (Cyclic Redundancy Check) testing format. </p>
+<p> This muxer computes and prints the Adler-32 CRC of all the input audio and video frames. By default audio frames are converted to signed 16-bit raw audio and video frames to raw video before computing the CRC. </p>
+<p> The output of the muxer consists of a single line of the form: CRC=0x<i></i><i>CRC</i><i></i>, where <i></i><i>CRC</i><i></i> is a hexadecimal number 0-padded to 8 digits containing the CRC for all the decoded input frames. </p>
 <p> See also the <code>framecrc</code> muxer. </p>
 <p> <i>Examples</i> </p>
-<p> For example to compute the <font SIZE="-1">CRC</font> of the input, and store it in the file <i>out.crc</i>: </p>
+<p> For example to compute the CRC of the input, and store it in the file <i>out.crc</i>: </p>
 <pre>
         ffmpeg -i INPUT -f crc out.crc
 </pre>
-<p> You can print the <font SIZE="-1">CRC</font> to stdout with the command: </p>
+<p> You can print the CRC to stdout with the command: </p>
 <pre>
         ffmpeg -i INPUT -f crc -
 </pre>
-<p> You can select the output format of each frame with <code>ffmpeg</code> by specifying the audio and video codec and format. For example to compute the <font SIZE="-1">CRC</font> of the input audio converted to <font SIZE="-1">PCM</font> unsigned 8-bit and the input video converted to <font SIZE="-1">MPEG-2</font> video, use the command: </p>
+<p> You can select the output format of each frame with <code>ffmpeg</code> by specifying the audio and video codec and format. For example to compute the CRC of the input audio converted to PCM unsigned 8-bit and the input video converted to MPEG-2 video, use the command: </p>
 <pre>
         ffmpeg -i INPUT -c:a pcm_u8 -c:v mpeg2video -f crc -
 </pre>
@@ -689,7 +689,7 @@ description: "ffmpeg-formats – FFmpeg formats"
 <dl>
 <dl>
 <dt><code>aac_seq_header_detect</code></dt>
-<dd> Place <font SIZE="-1">AAC</font> sequence header based on audio stream data.</dd>
+<dd> Place AAC sequence header based on audio stream data.</dd>
 <dt><code>no_sequence_end</code></dt>
 <dd> Disable sequence end tag.</dd>
 <dt><code>no_metadata</code></dt>
@@ -697,20 +697,20 @@ description: "ffmpeg-formats – FFmpeg formats"
 <dt><code>no_duration_filesize</code></dt>
 <dd> Disable duration and filesize in metadata when they are equal to zero at the end of stream. (Be used to non-seekable living stream).</dd>
 <dt><code>add_keyframe_index</code></dt>
-<dd> Used to facilitate seeking; particularly for <font SIZE="-1">HTTP</font> pseudo streaming.</dd></dl>
+<dd> Used to facilitate seeking; particularly for HTTP pseudo streaming.</dd></dl>
 </dl>
 <dl>
 </dl>
 </dl>
 <h3>dash</h3>
-<p> Dynamic Adaptive Streaming over <font SIZE="-1">HTTP</font> (<font SIZE="-1">DASH</font>) muxer that creates segments and manifest files according to the MPEG-DASH standard <font SIZE="-1">ISO/IEC 23009-1:2014.</font> </p>
+<p> Dynamic Adaptive Streaming over HTTP (DASH) muxer that creates segments and manifest files according to the MPEG-DASH standard ISO/IEC 23009-1:2014. </p>
 <p> For more information see:</p>
 <dl>
 <dt>&bull;</dt>
-<dd> <font SIZE="-1">ISO DASH</font> Specification: &lt;<code><a rel="nofollow" href="http://standards.iso.org/ittf/PubliclyAvailableStandards/c065274_ISO_IEC_23009-1_2014.zip">http://standards.iso.org/ittf/PubliclyAvailableStandards/c065274_ISO_IEC_23009-1_2014.zip</a></code>&gt;</dd>
+<dd> ISO DASH Specification: &lt;<code><a rel="nofollow" href="http://standards.iso.org/ittf/PubliclyAvailableStandards/c065274_ISO_IEC_23009-1_2014.zip">http://standards.iso.org/ittf/PubliclyAvailableStandards/c065274_ISO_IEC_23009-1_2014.zip</a></code>&gt;</dd>
 <dt>&bull;</dt>
-<dd> WebM <font SIZE="-1">DASH</font> Specification: &lt;<code><a rel="nofollow" href="https://sites.google.com/a/webmproject.org/wiki/adaptive-streaming/webm-dash-specification">https://sites.google.com/a/webmproject.org/wiki/adaptive-streaming/webm-dash-specification</a></code>&gt;</dd></dl>
-<p> It creates a <font SIZE="-1">MPD</font> manifest file and segment files for each stream. </p>
+<dd> WebM DASH Specification: &lt;<code><a rel="nofollow" href="https://sites.google.com/a/webmproject.org/wiki/adaptive-streaming/webm-dash-specification">https://sites.google.com/a/webmproject.org/wiki/adaptive-streaming/webm-dash-specification</a></code>&gt;</dd></dl>
+<p> It creates a MPD manifest file and segment files for each stream. </p>
 <p> The segment filename might contain pre-defined identifiers used with SegmentTemplate as defined in section 5.3.9.4.4 of the standard. Available identifiers are &#8220;$RepresentationID$&#8221;, &#8220;$Number$&#8221;, &#8220;$Bandwidth$&#8221; and &#8220;$Time$&#8221;. In addition to the standard identifiers, an ffmpeg-specific &#8220;$ext$&#8221; identifier is also supported. When specified ffmpeg will replace <tt>$ext</tt>$ in the file name with muxing format&#8217;s extensions such as mp4, webm etc., </p>
 <pre>
         ffmpeg -re -i &lt;input&gt; -map 0 -map 0 -c:a libfdk_aac -c:v libx264 \
@@ -748,26 +748,26 @@ description: "ffmpeg-formats – FFmpeg formats"
 <dt><code>media_seg_name</code> <i>segment_name</i></dt>
 <dd> DASH-templated name to used for the media segments. Default is &#8220;chunk-stream$RepresentationID$-$Number%05d$.$ext$&#8221;. &#8220;$ext$&#8221; is replaced with the file name extension specific for the segment format.</dd>
 <dt><code>utc_timing_url</code> <i>utc_url</i></dt>
-<dd> <font SIZE="-1">URL</font> of the page that will return the <font SIZE="-1">UTC</font> timestamp in <font SIZE="-1">ISO</font> format. Example: &#8220;<a rel="nofollow" href="https://time.akamai.com/?iso''">https://time.akamai.com/?iso&#8221;</a></dd>
+<dd> URL of the page that will return the UTC timestamp in ISO format. Example: &#8220;<a rel="nofollow" href="https://time.akamai.com/?iso''">https://time.akamai.com/?iso&#8221;</a></dd>
 <dt><code>method</code> <i>method</i></dt>
-<dd> Use the given <font SIZE="-1">HTTP</font> method to create output files. Generally set to <font SIZE="-1">PUT</font> or <font SIZE="-1">POST.</font></dd>
+<dd> Use the given HTTP method to create output files. Generally set to PUT or POST.</dd>
 <dt><code>http_user_agent</code> <i>user_agent</i></dt>
-<dd> Override User-Agent field in <font SIZE="-1">HTTP</font> header. Applicable only for <font SIZE="-1">HTTP</font> output.</dd>
+<dd> Override User-Agent field in HTTP header. Applicable only for HTTP output.</dd>
 <dt><code>http_persistent</code> <i>http_persistent</i></dt>
-<dd> Use persistent <font SIZE="-1">HTTP</font> connections. Applicable only for <font SIZE="-1">HTTP</font> output.</dd>
+<dd> Use persistent HTTP connections. Applicable only for HTTP output.</dd>
 <dt><code>hls_playlist</code> <i>hls_playlist</i></dt>
-<dd> Generate <font SIZE="-1">HLS</font> playlist files as well. The master playlist is generated with the filename <i>hls_master_name</i>. One media playlist file is generated for each stream with filenames media_0.m3u8, media_1.m3u8, etc.</dd>
+<dd> Generate HLS playlist files as well. The master playlist is generated with the filename <i>hls_master_name</i>. One media playlist file is generated for each stream with filenames media_0.m3u8, media_1.m3u8, etc.</dd>
 <dt><code>hls_master_name</code> <i>file_name</i></dt>
-<dd> <font SIZE="-1">HLS</font> master playlist name. Default is &#8220;master.m3u8&#8221;.</dd>
+<dd> HLS master playlist name. Default is &#8220;master.m3u8&#8221;.</dd>
 <dt><code>streaming</code> <i>streaming</i></dt>
 <dd> Enable (1) or disable (0) chunk streaming mode of output. In chunk streaming mode, each frame will be a moof fragment which forms a chunk.</dd>
 <dt><code>adaptation_sets</code> <i>adaptation_sets</i></dt>
 <dd> Assign streams to AdaptationSets. Syntax is &#8220;id=x,streams=a,b,c id=y,streams=d,e&#8221; with x and y being the IDs of the adaptation sets and a,b,c,d and e are the indices of the mapped streams. </dd>
 <p> To map all video (or audio) streams to an AdaptationSet, &#8220;v&#8221; (or &#8220;a&#8221;) can be used as stream identifier instead of IDs. </p>
 <p> When no assignment is defined, this defaults to an AdaptationSet for each stream. </p>
-<p> Optional syntax is &#8220;id=x,seg_duration=x,frag_duration=x,frag_type=type,descriptor=descriptor_string,streams=a,b,c id=y,seg_duration=y,frag_type=type,streams=d,e&#8221; and so on, descriptor is useful to the scheme defined by <font SIZE="-1">ISO/IEC</font> 23009-1:2014/Amd.2:2015. For example, -adaptation_sets &#8220;id=0,descriptor=&lt;SupplementalProperty schemeIdUri=\&#8221;urn:mpeg:dash:srd:2014\&#8220; value=\&#8221;0,0,0,1,1,2,2\&#8220;/&gt;,streams=v&#8221;. Please note that descriptor string should be a self-closing xml tag. seg_duration, frag_duration and frag_type override the global option values for each adaptation set. For example, -adaptation_sets &#8220;id=0,seg_duration=2,frag_duration=1,frag_type=duration,streams=v id=1,seg_duration=2,frag_type=none,streams=a&#8221; type_id marks an adaptation set as containing streams meant to be used for Trick Mode for the referenced adaptation set. For example, -adaptation_sets &#8220;id=0,seg_duration=2,frag_type=none,streams=0 id=1,seg_duration=10,frag_type=none,trick_id=0,streams=1&#8221;</p>
+<p> Optional syntax is &#8220;id=x,seg_duration=x,frag_duration=x,frag_type=type,descriptor=descriptor_string,streams=a,b,c id=y,seg_duration=y,frag_type=type,streams=d,e&#8221; and so on, descriptor is useful to the scheme defined by ISO/IEC 23009-1:2014/Amd.2:2015. For example, -adaptation_sets &#8220;id=0,descriptor=&lt;SupplementalProperty schemeIdUri=\&#8221;urn:mpeg:dash:srd:2014\&#8220; value=\&#8221;0,0,0,1,1,2,2\&#8220;/&gt;,streams=v&#8221;. Please note that descriptor string should be a self-closing xml tag. seg_duration, frag_duration and frag_type override the global option values for each adaptation set. For example, -adaptation_sets &#8220;id=0,seg_duration=2,frag_duration=1,frag_type=duration,streams=v id=1,seg_duration=2,frag_type=none,streams=a&#8221; type_id marks an adaptation set as containing streams meant to be used for Trick Mode for the referenced adaptation set. For example, -adaptation_sets &#8220;id=0,seg_duration=2,frag_type=none,streams=0 id=1,seg_duration=10,frag_type=none,trick_id=0,streams=1&#8221;</p>
 <dt><code>timeout</code> <i>timeout</i></dt>
-<dd> Set timeout for socket I/O operations. Applicable only for <font SIZE="-1">HTTP</font> output.</dd>
+<dd> Set timeout for socket I/O operations. Applicable only for HTTP output.</dd>
 <dt><code>index_correction</code> <i>index_correction</i></dt>
 <dd> Enable (1) or Disable (0) segment index correction logic. Applicable only when <i>use_template</i> is enabled and <i>use_timeline</i> is disabled. </dd>
 <p> When enabled, the logic monitors the flow of segment indexes. If a streams&#8217;s segment index value is not at the expected real time position, then the logic corrects that index value. </p>
@@ -775,7 +775,7 @@ description: "ffmpeg-formats – FFmpeg formats"
 <dt><code>format_options</code> <i>options_list</i></dt>
 <dd> Set container format (mp4/webm) options using a <tt>&quot;:&quot;</tt> separated list of key=value parameters. Values containing <tt>&quot;:&quot;</tt> special characters must be escaped.</dd>
 <dt><code>global_sidx</code> <i>global_sidx</i></dt>
-<dd> Write global <font SIZE="-1">SIDX</font> atom. Applicable only for single file, mp4 output, non-streaming mode.</dd>
+<dd> Write global SIDX atom. Applicable only for single file, mp4 output, non-streaming mode.</dd>
 <dt><code>dash_segment_type</code> <i>dash_segment_type</i></dt>
 <dd> Possible values:</dd>
 <dl>
@@ -783,16 +783,16 @@ description: "ffmpeg-formats – FFmpeg formats"
 <dt><code>auto</code></dt>
 <dd> If this flag is set, the dash segment files format will be selected based on the stream codec. This is the default mode.</dd>
 <dt><code>mp4</code></dt>
-<dd> If this flag is set, the dash segment files will be in in <font SIZE="-1">ISOBMFF</font> format.</dd>
+<dd> If this flag is set, the dash segment files will be in in ISOBMFF format.</dd>
 <dt><code>webm</code></dt>
 <dd> If this flag is set, the dash segment files will be in in WebM format.</dd></dl>
 </dl>
 <dl>
 </dl>
 <dt><code>ignore_io_errors</code> <i>ignore_io_errors</i></dt>
-<dd> Ignore <font SIZE="-1">IO</font> errors during open and write. Useful for long-duration runs with network output.</dd>
+<dd> Ignore IO errors during open and write. Useful for long-duration runs with network output.</dd>
 <dt><code>lhls</code> <i>lhls</i></dt>
-<dd> Enable Low-latency <font SIZE="-1">HLS</font>(<font SIZE="-1">LHLS</font>). Adds #EXT-X-PREFETCH tag with current segment&#8217;s <font SIZE="-1">URI.</font> Apple doesn&#8217;t have an official spec for <font SIZE="-1">LHLS.</font> Meanwhile hls.js player folks are trying to standardize a open <font SIZE="-1">LHLS</font> spec. The draft spec is available in <a rel="nofollow" href="https://github.com/video-dev/hlsjs-rfcs/blob/lhls-spec/proposals/0001-lhls.md">https://github.com/video-dev/hlsjs-rfcs/blob/lhls-spec/proposals/0001-lhls.md</a> This option will also try to comply with the above open spec, till Apple&#8217;s spec officially supports it. Applicable only when <i>streaming</i> and <i>hls_playlist</i> options are enabled. This is an experimental feature.</dd>
+<dd> Enable Low-latency HLS(LHLS). Adds #EXT-X-PREFETCH tag with current segment&#8217;s URI. Apple doesn&#8217;t have an official spec for LHLS. Meanwhile hls.js player folks are trying to standardize a open LHLS spec. The draft spec is available in <a rel="nofollow" href="https://github.com/video-dev/hlsjs-rfcs/blob/lhls-spec/proposals/0001-lhls.md">https://github.com/video-dev/hlsjs-rfcs/blob/lhls-spec/proposals/0001-lhls.md</a> This option will also try to comply with the above open spec, till Apple&#8217;s spec officially supports it. Applicable only when <i>streaming</i> and <i>hls_playlist</i> options are enabled. This is an experimental feature.</dd>
 <dt><code>ldash</code> <i>ldash</i></dt>
 <dd> Enable Low-latency Dash by constraining the presence and values of some elements.</dd>
 <dt><code>master_m3u8_publish_rate</code> <i>master_m3u8_publish_rate</i></dt>
@@ -802,7 +802,7 @@ description: "ffmpeg-formats – FFmpeg formats"
 <dt><code>mpd_profile</code> <i>mpd_profile</i></dt>
 <dd> Set one or more manifest profiles.</dd>
 <dt><code>http_opts</code> <i>http_opts</i></dt>
-<dd> A :-separated list of key=value options to pass to the underlying <font SIZE="-1">HTTP</font> protocol. Applicable only for <font SIZE="-1">HTTP</font> output.</dd>
+<dd> A :-separated list of key=value options to pass to the underlying HTTP protocol. Applicable only for HTTP output.</dd>
 <dt><code>target_latency</code> <i>target_latency</i></dt>
 <dd> Set an intended target latency in seconds (fractional value can be set) for serving. Applicable only when <i>streaming</i> and <i>write_prft</i> options are enabled. This is an informative fields clients can use to measure the latency of the service.</dd>
 <dt><code>min_playback_rate</code> <i>min_playback_rate</i></dt>
@@ -817,15 +817,15 @@ description: "ffmpeg-formats – FFmpeg formats"
 </pre>
 </dd></dl>
 <h3>framecrc</h3>
-<p> Per-packet <font SIZE="-1">CRC</font> (Cyclic Redundancy Check) testing format. </p>
-<p> This muxer computes and prints the Adler-32 <font SIZE="-1">CRC</font> for each audio and video packet. By default audio frames are converted to signed 16-bit raw audio and video frames to raw video before computing the <font SIZE="-1">CRC.</font> </p>
+<p> Per-packet CRC (Cyclic Redundancy Check) testing format. </p>
+<p> This muxer computes and prints the Adler-32 CRC for each audio and video packet. By default audio frames are converted to signed 16-bit raw audio and video frames to raw video before computing the CRC. </p>
 <p> The output of the muxer consists of a line for each audio and video packet of the form: </p>
 <pre>
         &lt;stream_index&gt;, &lt;packet_dts&gt;, &lt;packet_pts&gt;, &lt;packet_duration&gt;, &lt;packet_size&gt;, 0x&lt;CRC&gt;
 </pre>
-<p> <i></i><font SIZE="-1"><i>CRC</i></font><i></i> is a hexadecimal number 0-padded to 8 digits containing the <font SIZE="-1">CRC</font> of the packet. </p>
+<p> <i></i><i>CRC</i><i></i> is a hexadecimal number 0-padded to 8 digits containing the CRC of the packet. </p>
 <p> <i>Examples</i> </p>
-<p> For example to compute the <font SIZE="-1">CRC</font> of the audio and video frames in <i></i><font SIZE="-1"><i>INPUT</i></font><i></i>, converted to raw audio and video packets, and store it in the file <i>out.crc</i>: </p>
+<p> For example to compute the CRC of the audio and video frames in <i></i><i>INPUT</i><i></i>, converted to raw audio and video packets, and store it in the file <i>out.crc</i>: </p>
 <pre>
         ffmpeg -i INPUT -f framecrc out.crc
 </pre>
@@ -833,7 +833,7 @@ description: "ffmpeg-formats – FFmpeg formats"
 <pre>
         ffmpeg -i INPUT -f framecrc -
 </pre>
-<p> With <code>ffmpeg</code>, you can select the output format to which the audio and video frames are encoded before computing the <font SIZE="-1">CRC</font> for each packet by specifying the audio and video codec. For example, to compute the <font SIZE="-1">CRC</font> of each decoded input audio frame converted to <font SIZE="-1">PCM</font> unsigned 8-bit and of each decoded input video frame converted to <font SIZE="-1">MPEG-2</font> video, use the command: </p>
+<p> With <code>ffmpeg</code>, you can select the output format to which the audio and video frames are encoded before computing the CRC for each packet by specifying the audio and video codec. For example, to compute the CRC of each decoded input audio frame converted to PCM unsigned 8-bit and of each decoded input video frame converted to MPEG-2 video, use the command: </p>
 <pre>
         ffmpeg -i INPUT -c:a pcm_u8 -c:v mpeg2video -f framecrc -
 </pre>
@@ -841,7 +841,7 @@ description: "ffmpeg-formats – FFmpeg formats"
 <h3>framehash</h3>
 <p> Per-packet hash testing format. </p>
 <p> This muxer computes and prints a cryptographic hash for each audio and video packet. This can be used for packet-by-packet equality checks without having to individually do a binary comparison on each. </p>
-<p> By default audio frames are converted to signed 16-bit raw audio and video frames to raw video before computing the hash, but the output of explicit conversions to other codecs can also be used. It uses the <font SIZE="-1">SHA-256</font> cryptographic hash function by default, but supports several other algorithms. </p>
+<p> By default audio frames are converted to signed 16-bit raw audio and video frames to raw video before computing the hash, but the output of explicit conversions to other codecs can also be used. It uses the SHA-256 cryptographic hash function by default, but supports several other algorithms. </p>
 <p> The output of the muxer consists of a line for each audio and video packet of the form: </p>
 <pre>
         &lt;stream_index&gt;, &lt;packet_dts&gt;, &lt;packet_pts&gt;, &lt;packet_duration&gt;, &lt;packet_size&gt;, &lt;hash&gt;
@@ -851,20 +851,20 @@ description: "ffmpeg-formats – FFmpeg formats"
 <dt><code>hash</code> <i>algorithm</i></dt>
 <dd> Use the cryptographic hash function specified by the string <i>algorithm</i>. Supported values include <tt>&quot;MD5&quot;</tt>, <tt>&quot;murmur3&quot;</tt>, <tt>&quot;RIPEMD128&quot;</tt>, <tt>&quot;RIPEMD160&quot;</tt>, <tt>&quot;RIPEMD256&quot;</tt>, <tt>&quot;RIPEMD320&quot;</tt>, <tt>&quot;SHA160&quot;</tt>, <tt>&quot;SHA224&quot;</tt>, <tt>&quot;SHA256&quot;</tt> (default), <tt>&quot;SHA512/224&quot;</tt>, <tt>&quot;SHA512/256&quot;</tt>, <tt>&quot;SHA384&quot;</tt>, <tt>&quot;SHA512&quot;</tt>, <tt>&quot;CRC32&quot;</tt> and <tt>&quot;adler32&quot;</tt>.</dd></dl>
 <p> <i>Examples</i> </p>
-<p> To compute the <font SIZE="-1">SHA-256</font> hash of the audio and video frames in <i></i><font SIZE="-1"><i>INPUT</i></font><i></i>, converted to raw audio and video packets, and store it in the file <i>out.sha256</i>: </p>
+<p> To compute the SHA-256 hash of the audio and video frames in <i></i><i>INPUT</i><i></i>, converted to raw audio and video packets, and store it in the file <i>out.sha256</i>: </p>
 <pre>
         ffmpeg -i INPUT -f framehash out.sha256
 </pre>
-<p> To print the information to stdout, using the <font SIZE="-1">MD5</font> hash function, use the command: </p>
+<p> To print the information to stdout, using the MD5 hash function, use the command: </p>
 <pre>
         ffmpeg -i INPUT -f framehash -hash md5 -
 </pre>
 <p> See also the <code>hash</code> muxer.</p>
 <h3>framemd5</h3>
-<p> Per-packet <font SIZE="-1">MD5</font> testing format. </p>
-<p> This is a variant of the <code>framehash</code> muxer. Unlike that muxer, it defaults to using the <font SIZE="-1">MD5</font> hash function. </p>
+<p> Per-packet MD5 testing format. </p>
+<p> This is a variant of the <code>framehash</code> muxer. Unlike that muxer, it defaults to using the MD5 hash function. </p>
 <p> <i>Examples</i> </p>
-<p> To compute the <font SIZE="-1">MD5</font> hash of the audio and video frames in <i></i><font SIZE="-1"><i>INPUT</i></font><i></i>, converted to raw audio and video packets, and store it in the file <i>out.md5</i>: </p>
+<p> To compute the MD5 hash of the audio and video frames in <i></i><i>INPUT</i><i></i>, converted to raw audio and video packets, and store it in the file <i>out.md5</i>: </p>
 <pre>
         ffmpeg -i INPUT -f framemd5 out.md5
 </pre>
@@ -874,7 +874,7 @@ description: "ffmpeg-formats – FFmpeg formats"
 </pre>
 <p> See also the <code>framehash</code> and <code>md5</code> muxers.</p>
 <h3>gif</h3>
-<p> Animated <font SIZE="-1">GIF</font> muxer. </p>
+<p> Animated GIF muxer. </p>
 <p> It accepts the following options:</p>
 <dl>
 <dt><code>loop</code></dt>
@@ -885,40 +885,40 @@ description: "ffmpeg-formats – FFmpeg formats"
 <pre>
         ffmpeg -i INPUT -loop 10 -final_delay 500 out.gif
 </pre>
-<p> Note 1: if you wish to extract the frames into separate <font SIZE="-1">GIF</font> files, you need to force the <code>image2</code> muxer: </p>
+<p> Note 1: if you wish to extract the frames into separate GIF files, you need to force the <code>image2</code> muxer: </p>
 <pre>
         ffmpeg -i INPUT -c:v gif -f image2 &quot;out%d.gif&quot;
 </pre>
-<p> Note 2: the <font SIZE="-1">GIF</font> format has a very large time base: the delay between two frames can therefore not be smaller than one centi second.</p>
+<p> Note 2: the GIF format has a very large time base: the delay between two frames can therefore not be smaller than one centi second.</p>
 <h3>hash</h3>
 <p> Hash testing format. </p>
 <p> This muxer computes and prints a cryptographic hash of all the input audio and video frames. This can be used for equality checks without having to do a complete binary comparison. </p>
-<p> By default audio frames are converted to signed 16-bit raw audio and video frames to raw video before computing the hash, but the output of explicit conversions to other codecs can also be used. Timestamps are ignored. It uses the <font SIZE="-1">SHA-256</font> cryptographic hash function by default, but supports several other algorithms. </p>
+<p> By default audio frames are converted to signed 16-bit raw audio and video frames to raw video before computing the hash, but the output of explicit conversions to other codecs can also be used. Timestamps are ignored. It uses the SHA-256 cryptographic hash function by default, but supports several other algorithms. </p>
 <p> The output of the muxer consists of a single line of the form: <i>algo</i>=<i>hash</i>, where <i>algo</i> is a short string representing the hash function used, and <i>hash</i> is a hexadecimal number representing the computed hash.</p>
 <dl>
 <dt><code>hash</code> <i>algorithm</i></dt>
 <dd> Use the cryptographic hash function specified by the string <i>algorithm</i>. Supported values include <tt>&quot;MD5&quot;</tt>, <tt>&quot;murmur3&quot;</tt>, <tt>&quot;RIPEMD128&quot;</tt>, <tt>&quot;RIPEMD160&quot;</tt>, <tt>&quot;RIPEMD256&quot;</tt>, <tt>&quot;RIPEMD320&quot;</tt>, <tt>&quot;SHA160&quot;</tt>, <tt>&quot;SHA224&quot;</tt>, <tt>&quot;SHA256&quot;</tt> (default), <tt>&quot;SHA512/224&quot;</tt>, <tt>&quot;SHA512/256&quot;</tt>, <tt>&quot;SHA384&quot;</tt>, <tt>&quot;SHA512&quot;</tt>, <tt>&quot;CRC32&quot;</tt> and <tt>&quot;adler32&quot;</tt>.</dd></dl>
 <p> <i>Examples</i> </p>
-<p> To compute the <font SIZE="-1">SHA-256</font> hash of the input converted to raw audio and video, and store it in the file <i>out.sha256</i>: </p>
+<p> To compute the SHA-256 hash of the input converted to raw audio and video, and store it in the file <i>out.sha256</i>: </p>
 <pre>
         ffmpeg -i INPUT -f hash out.sha256
 </pre>
-<p> To print an <font SIZE="-1">MD5</font> hash to stdout use the command: </p>
+<p> To print an MD5 hash to stdout use the command: </p>
 <pre>
         ffmpeg -i INPUT -f hash -hash md5 -
 </pre>
 <p> See also the <code>framehash</code> muxer.</p>
 <h3>hls</h3>
-<p> Apple <font SIZE="-1">HTTP</font> Live Streaming muxer that segments MPEG-TS according to the <font SIZE="-1">HTTP</font> Live Streaming (<font SIZE="-1">HLS</font>) specification. </p>
+<p> Apple HTTP Live Streaming muxer that segments MPEG-TS according to the HTTP Live Streaming (HLS) specification. </p>
 <p> It creates a playlist file, and one or more segment files. The output filename specifies the playlist filename. </p>
 <p> By default, the muxer creates a file for each segment produced. These files have the same name as the playlist, followed by a sequential number and a .ts extension. </p>
-<p> Make sure to require a closed <font SIZE="-1">GOP</font> when encoding and to set the <font SIZE="-1">GOP</font> size to fit your segment time constraint. </p>
+<p> Make sure to require a closed GOP when encoding and to set the GOP size to fit your segment time constraint. </p>
 <p> For example, to convert an input file with <code>ffmpeg</code>: </p>
 <pre>
         ffmpeg -i in.mkv -c:v h264 -flags +cgop -g 30 -hls_time 1 out.m3u8
 </pre>
 <p> This example will produce the playlist, <i>out.m3u8</i>, and segment files: <i>out0.ts</i>, <i>out1.ts</i>, <i>out2.ts</i>, etc. </p>
-<p> See also the <code>segment</code> muxer, which provides a more generic and flexible implementation of a segmenter, and can be used to perform <font SIZE="-1">HLS</font> segmentation. </p>
+<p> See also the <code>segment</code> muxer, which provides a more generic and flexible implementation of a segmenter, and can be used to perform HLS segmentation. </p>
 <p> <i>Options</i> </p>
 <p> This muxer supports the following options:</p>
 <dl>
@@ -957,7 +957,7 @@ description: "ffmpeg-formats – FFmpeg formats"
 <dt><code>start_number</code> <i>number</i></dt>
 <dd> Start the playlist sequence number (<tt>&quot;#EXT-X-MEDIA-SEQUENCE&quot;</tt>) from the specified <i>number</i> when <i>hls_start_number_source</i> value is <i>generic</i>. (This is the default case.) Unless <tt>&quot;hls_flags single_file&quot;</tt> is set, it also specifies starting sequence numbers of segment and subtitle filenames. Default value is 0.</dd>
 <dt><code>hls_allow_cache</code> <i>allowcache</i></dt>
-<dd> Explicitly set whether the client <font SIZE="-1">MAY</font> (1) or <font SIZE="-1">MUST NOT</font> (0) cache media segments.</dd>
+<dd> Explicitly set whether the client MAY (1) or MUST NOT (0) cache media segments.</dd>
 <dt><code>hls_base_url</code> <i>baseurl</i></dt>
 <dd> Append <i>baseurl</i> to every entry in the playlist. Useful to generate playlists with absolute paths. </dd>
 <p> Note that the playlist sequence number must be unique for each segment and it is not to be confused with the segment filename sequence number which can be cyclic, for example if the <code>wrap</code> option is specified.</p>
@@ -989,7 +989,7 @@ description: "ffmpeg-formats – FFmpeg formats"
 <pre>
         ffmpeg -i in.nut -strftime 1 -hls_segment_filename 'file-%Y%m%d-%s.ts' out.m3u8
 </pre>
-<p> This example will produce the playlist, <i>out.m3u8</i>, and segment files: <i>file-20160215-1455569023.ts</i>, <i>file-20160215-1455569024.ts</i>, etc. Note: On some systems/environments, the <tt>%s</tt> specifier is not available. See<br />
+<p> This example will produce the playlist, <i>out.m3u8</i>, and segment files: <i>file-20160215-1455569023.ts</i>, <i>file-20160215-1455569024.ts</i>, etc. Note: On some systems/environments, the <tt>%s</tt> specifier is not available. See<br/>
 &nbsp;<wbr>&nbsp;<tt>&quot;strftime()&quot;</tt>&nbsp;documentation. </p>
 <pre>
         ffmpeg -i in.nut -strftime 1 -hls_flags second_level_segment_index -hls_segment_filename 'file-%Y%m%d-%%04d.ts' out.m3u8
@@ -1008,7 +1008,7 @@ description: "ffmpeg-formats – FFmpeg formats"
 </pre>
 <p> This example will create a directory hierarchy 2016/02/15 (if any of them do not exist), and then produce the playlist, <i>out.m3u8</i>, and segment files: <i>2016/02/15/file-20160215-1455569023.ts</i>, <i>2016/02/15/file-20160215-1455569024.ts</i>, etc.</p>
 <dt><code>hls_key_info_file</code> <i>key_info_file</i></dt>
-<dd> Use the information in <i>key_info_file</i> for segment encryption. The first line of <i>key_info_file</i> specifies the key <font SIZE="-1">URI</font> written to the playlist. The key <font SIZE="-1">URL</font> is used to access the encryption key during playback. The second line specifies the path to the key file used to obtain the key during the encryption process. The key file is read as a single packed array of 16 octets in binary format. The optional third line specifies the initialization vector (<font SIZE="-1">IV</font>) as a hexadecimal string to be used instead of the segment sequence number (default) for encryption. Changes to <i>key_info_file</i> will result in segment encryption with the new key/IV and an entry in the playlist for the new key <font SIZE="-1">URI/IV</font> if <tt>&quot;hls_flags periodic_rekey&quot;</tt> is enabled. </dd>
+<dd> Use the information in <i>key_info_file</i> for segment encryption. The first line of <i>key_info_file</i> specifies the key URI written to the playlist. The key URL is used to access the encryption key during playback. The second line specifies the path to the key file used to obtain the key during the encryption process. The key file is read as a single packed array of 16 octets in binary format. The optional third line specifies the initialization vector (IV) as a hexadecimal string to be used instead of the segment sequence number (default) for encryption. Changes to <i>key_info_file</i> will result in segment encryption with the new key/IV and an entry in the playlist for the new key URI/IV if <tt>&quot;hls_flags periodic_rekey&quot;</tt> is enabled. </dd>
 <p> Key info file format: </p>
 <pre>
         &lt;key URI&gt;
@@ -1026,7 +1026,7 @@ description: "ffmpeg-formats – FFmpeg formats"
         file.key
         /path/to/file.key
 </pre>
-<p> Example <font SIZE="-1">IV:</font> </p>
+<p> Example IV: </p>
 <pre>
         0123456789ABCDEF0123456789ABCDEF
 </pre>
@@ -1048,7 +1048,7 @@ description: "ffmpeg-formats – FFmpeg formats"
           -hls_key_info_file file.keyinfo out.m3u8
 </pre>
 <dt><code>-hls_enc</code> <i>enc</i></dt>
-<dd> Enable (1) or disable (0) the <font SIZE="-1">AES128</font> encryption. When enabled every segment generated is encrypted and the encryption key is saved as <i>playlist name</i>.key.</dd>
+<dd> Enable (1) or disable (0) the AES128 encryption. When enabled every segment generated is encrypted and the encryption key is saved as <i>playlist name</i>.key.</dd>
 <dt><code>-hls_enc_key</code> <i>key</i></dt>
 <dd> 16-octet key to encrypt the segments, by default it is randomly generated.</dd>
 <dt><code>-hls_enc_key_url</code> <i>keyurl</i></dt>
@@ -1060,9 +1060,9 @@ description: "ffmpeg-formats – FFmpeg formats"
 <dl>
 <dl>
 <dt><code>mpegts</code></dt>
-<dd> Output segment files in <font SIZE="-1">MPEG-2</font> Transport Stream format. This is compatible with all <font SIZE="-1">HLS</font> versions.</dd>
+<dd> Output segment files in MPEG-2 Transport Stream format. This is compatible with all HLS versions.</dd>
 <dt><code>fmp4</code></dt>
-<dd> Output segment files in fragmented <font SIZE="-1">MP4</font> format, similar to MPEG-DASH. fmp4 files may be used in <font SIZE="-1">HLS</font> version 7 and above.</dd></dl>
+<dd> Output segment files in fragmented MP4 format, similar to MPEG-DASH. fmp4 files may be used in HLS version 7 and above.</dd></dl>
 </dl>
 <dl>
 </dl>
@@ -1081,7 +1081,7 @@ description: "ffmpeg-formats – FFmpeg formats"
 <dl>
 <dl>
 <dt><code>single_file</code></dt>
-<dd> If this flag is set, the muxer will store all segments in a single MPEG-TS file, and will use byte ranges in the playlist. <font SIZE="-1">HLS</font> playlists generated with this way will have the version number 4. For example: </dd>
+<dd> If this flag is set, the muxer will store all segments in a single MPEG-TS file, and will use byte ranges in the playlist. HLS playlists generated with this way will have the version number 4. For example: </dd>
 <pre>
         ffmpeg -i in.nut -hls_flags single_file out.m3u8
 </pre>
@@ -1097,7 +1097,7 @@ description: "ffmpeg-formats – FFmpeg formats"
 <dt><code>omit_endlist</code></dt>
 <dd> Do not append the <tt>&quot;EXT-X-ENDLIST&quot;</tt> tag at the end of the playlist.</dd>
 <dt><code>periodic_rekey</code></dt>
-<dd> The file specified by <tt>&quot;hls_key_info_file&quot;</tt> will be checked periodically and detect updates to the encryption info. Be sure to replace this file atomically, including the file containing the <font SIZE="-1">AES</font> encryption key.</dd>
+<dd> The file specified by <tt>&quot;hls_key_info_file&quot;</tt> will be checked periodically and detect updates to the encryption info. Be sure to replace this file atomically, including the file containing the AES encryption key.</dd>
 <dt><code>independent_segments</code></dt>
 <dd> Add the <tt>&quot;#EXT-X-INDEPENDENT-SEGMENTS&quot;</tt> to playlists that has video segments and when all the segments of that playlist are guaranteed to start with a Key frame.</dd>
 <dt><code>iframes_only</code></dt>
@@ -1129,13 +1129,13 @@ description: "ffmpeg-formats – FFmpeg formats"
 <dt><code>hls_playlist_type vod</code></dt>
 <dd> Emit <tt>&quot;#EXT-X-PLAYLIST-TYPE:VOD&quot;</tt> in the m3u8 header. Forces <code>hls_list_size</code> to 0; the playlist must not change.</dd>
 <dt><code>method</code></dt>
-<dd> Use the given <font SIZE="-1">HTTP</font> method to create the hls files. </dd>
+<dd> Use the given HTTP method to create the hls files. </dd>
 <pre>
         ffmpeg -re -i in.ts -f hls -method PUT <a rel="nofollow" href="http://example.com/live/out.m3u8">http://example.com/live/out.m3u8</a>
 </pre>
-<p> This example will upload all the mpegts segment files to the <font SIZE="-1">HTTP</font> server using the <font SIZE="-1">HTTP PUT</font> method, and update the m3u8 files every <tt>&quot;refresh&quot;</tt> times using the same method. Note that the <font SIZE="-1">HTTP</font> server must support the given method for uploading files.</p>
+<p> This example will upload all the mpegts segment files to the HTTP server using the HTTP PUT method, and update the m3u8 files every <tt>&quot;refresh&quot;</tt> times using the same method. Note that the HTTP server must support the given method for uploading files.</p>
 <dt><code>http_user_agent</code></dt>
-<dd> Override User-Agent field in <font SIZE="-1">HTTP</font> header. Applicable only for <font SIZE="-1">HTTP</font> output.</dd>
+<dd> Override User-Agent field in HTTP header. Applicable only for HTTP output.</dd>
 <dt><code>var_stream_map</code></dt>
 <dd> Map string which specifies how to group the audio, video and subtitle streams into different variant streams. The variant stream groups are separated by space. Expected string format is like this &#8220;a:0,v:0 a:1,v:1 &#8230;.&#8221;. Here a:, v:, s: are the keys to specify audio, video and subtitle streams respectively. Allowed values are 0 to 9 (limited just based on practical usage). </dd>
 <p> When there are two or more variant streams, the output filename pattern must contain the string &#8220;%v&#8221;, this string specifies the position of variant stream index in the output media playlist filenames. The string &#8220;%v&#8221; may be present in the filename or in the last directory name containing the file. If the string is present in the directory name, then sub-directories are created after expanding the directory name pattern. This enables creation of variant streams in subdirectories. </p>
@@ -1179,7 +1179,7 @@ description: "ffmpeg-formats – FFmpeg formats"
           -master_pl_name master.m3u8 \
           <a rel="nofollow" href="http://example.com/live/out_%v.m3u8">http://example.com/live/out_%v.m3u8</a>
 </pre>
-<p> This example creates two audio only and one video only variant streams. In addition to the #EXT-X-STREAM-INF tag for each variant stream in the master playlist, #EXT-X-MEDIA tag is also added for the two audio only variant streams and they are mapped to the one video only variant streams with audio group name &#8216;aud_low&#8217;, and the audio group have default stat is <font SIZE="-1">NO</font> or <font SIZE="-1">YES.</font> </p>
+<p> This example creates two audio only and one video only variant streams. In addition to the #EXT-X-STREAM-INF tag for each variant stream in the master playlist, #EXT-X-MEDIA tag is also added for the two audio only variant streams and they are mapped to the one video only variant streams with audio group name &#8216;aud_low&#8217;, and the audio group have default stat is NO or YES. </p>
 <p> By default, a single hls variant containing all the encoded streams is created. </p>
 <pre>
         ffmpeg -re -i in.ts -b:a:0 32k -b:a:1 64k -b:v:0 1000k \
@@ -1188,7 +1188,7 @@ description: "ffmpeg-formats – FFmpeg formats"
           -master_pl_name master.m3u8 \
           <a rel="nofollow" href="http://example.com/live/out_%v.m3u8">http://example.com/live/out_%v.m3u8</a>
 </pre>
-<p> This example creates two audio only and one video only variant streams. In addition to the #EXT-X-STREAM-INF tag for each variant stream in the master playlist, #EXT-X-MEDIA tag is also added for the two audio only variant streams and they are mapped to the one video only variant streams with audio group name &#8216;aud_low&#8217;, and the audio group have default stat is <font SIZE="-1">NO</font> or <font SIZE="-1">YES,</font> and one audio have and language is named <font SIZE="-1">ENG,</font> the other audio language is named <font SIZE="-1">CHN.</font> </p>
+<p> This example creates two audio only and one video only variant streams. In addition to the #EXT-X-STREAM-INF tag for each variant stream in the master playlist, #EXT-X-MEDIA tag is also added for the two audio only variant streams and they are mapped to the one video only variant streams with audio group name &#8216;aud_low&#8217;, and the audio group have default stat is NO or YES, and one audio have and language is named ENG, the other audio language is named CHN. </p>
 <p> By default, a single hls variant containing all the encoded streams is created. </p>
 <pre>
         ffmpeg -y -i input_with_subtitle.mkv \
@@ -1202,14 +1202,14 @@ description: "ffmpeg-formats – FFmpeg formats"
 </pre>
 <p> This example adds <tt>&quot;#EXT-X-MEDIA&quot;</tt> tag with <tt>&quot;TYPE=SUBTITLES&quot;</tt> in the master playlist with webvtt subtitle group name &#8216;subtitle&#8217;. Please make sure the input file has one text subtitle stream at least.</p>
 <dt><code>cc_stream_map</code></dt>
-<dd> Map string which specifies different closed captions groups and their attributes. The closed captions stream groups are separated by space. Expected string format is like this &#8220;ccgroup:&lt;group name&gt;,instreamid:&lt;<font SIZE="-1">INSTREAM-ID</font>&gt;,language:&lt;language code&gt; &#8230;.&#8221;. &#8216;ccgroup&#8217; and &#8216;instreamid&#8217; are mandatory attributes. &#8216;language&#8217; is an optional attribute. The closed captions groups configured using this option are mapped to different variant streams by providing the same &#8216;ccgroup&#8217; name in the <tt>&quot;var_stream_map&quot;</tt> string. If <tt>&quot;var_stream_map&quot;</tt> is not set, then the first available ccgroup in <tt>&quot;cc_stream_map&quot;</tt> is mapped to the output variant stream. The examples for these two use cases are given below. </dd>
+<dd> Map string which specifies different closed captions groups and their attributes. The closed captions stream groups are separated by space. Expected string format is like this &#8220;ccgroup:&lt;group name&gt;,instreamid:&lt;INSTREAM-ID&gt;,language:&lt;language code&gt; &#8230;.&#8221;. &#8216;ccgroup&#8217; and &#8216;instreamid&#8217; are mandatory attributes. &#8216;language&#8217; is an optional attribute. The closed captions groups configured using this option are mapped to different variant streams by providing the same &#8216;ccgroup&#8217; name in the <tt>&quot;var_stream_map&quot;</tt> string. If <tt>&quot;var_stream_map&quot;</tt> is not set, then the first available ccgroup in <tt>&quot;cc_stream_map&quot;</tt> is mapped to the output variant stream. The examples for these two use cases are given below. </dd>
 <pre>
         ffmpeg -re -i in.ts -b:v 1000k -b:a 64k -a53cc 1 -f hls \
           -cc_stream_map &quot;ccgroup:cc,instreamid:CC1,language:en&quot; \
           -master_pl_name master.m3u8 \
           <a rel="nofollow" href="http://example.com/live/out.m3u8">http://example.com/live/out.m3u8</a>
 </pre>
-<p> This example adds <tt>&quot;#EXT-X-MEDIA&quot;</tt> tag with <tt>&quot;TYPE=CLOSED-CAPTIONS&quot;</tt> in the master playlist with group name &#8216;cc&#8217;, language &#8216;en&#8217; (english) and INSTREAM-ID &#8216;<font SIZE="-1">CC1</font>&#8216;. Also, it adds <tt>&quot;CLOSED-CAPTIONS&quot;</tt> attribute with group name &#8216;cc&#8217; for the output variant stream. </p>
+<p> This example adds <tt>&quot;#EXT-X-MEDIA&quot;</tt> tag with <tt>&quot;TYPE=CLOSED-CAPTIONS&quot;</tt> in the master playlist with group name &#8216;cc&#8217;, language &#8216;en&#8217; (english) and INSTREAM-ID &#8216;CC1&#8216;. Also, it adds <tt>&quot;CLOSED-CAPTIONS&quot;</tt> attribute with group name &#8216;cc&#8217; for the output variant stream. </p>
 <pre>
         ffmpeg -re -i in.ts -b:v:0 1000k -b:v:1 256k -b:a:0 64k -b:a:1 32k \
           -a53cc:0 1 -a53cc:1 1\
@@ -1219,38 +1219,38 @@ description: "ffmpeg-formats – FFmpeg formats"
           -master_pl_name master.m3u8 \
           <a rel="nofollow" href="http://example.com/live/out_%v.m3u8">http://example.com/live/out_%v.m3u8</a>
 </pre>
-<p> This example adds two <tt>&quot;#EXT-X-MEDIA&quot;</tt> tags with <tt>&quot;TYPE=CLOSED-CAPTIONS&quot;</tt> in the master playlist for the INSTREAM-IDs &#8216;<font SIZE="-1">CC1</font>&#8216; and &#8216;<font SIZE="-1">CC2</font>&#8216;. Also, it adds <tt>&quot;CLOSED-CAPTIONS&quot;</tt> attribute with group name &#8216;cc&#8217; for the two output variant streams.</p>
+<p> This example adds two <tt>&quot;#EXT-X-MEDIA&quot;</tt> tags with <tt>&quot;TYPE=CLOSED-CAPTIONS&quot;</tt> in the master playlist for the INSTREAM-IDs &#8216;CC1&#8216; and &#8216;CC2&#8216;. Also, it adds <tt>&quot;CLOSED-CAPTIONS&quot;</tt> attribute with group name &#8216;cc&#8217; for the two output variant streams.</p>
 <dt><code>master_pl_name</code></dt>
-<dd> Create <font SIZE="-1">HLS</font> master playlist with the given name. </dd>
+<dd> Create HLS master playlist with the given name. </dd>
 <pre>
         ffmpeg -re -i in.ts -f hls -master_pl_name master.m3u8 <a rel="nofollow" href="http://example.com/live/out.m3u8">http://example.com/live/out.m3u8</a>
 </pre>
-<p> This example creates <font SIZE="-1">HLS</font> master playlist with name master.m3u8 and it is published at <a rel="nofollow" href="http://example.com/live/">http://example.com/live/</a></p>
+<p> This example creates HLS master playlist with name master.m3u8 and it is published at <a rel="nofollow" href="http://example.com/live/">http://example.com/live/</a></p>
 <dt><code>master_pl_publish_rate</code></dt>
 <dd> Publish master play list repeatedly every after specified number of segment intervals. </dd>
 <pre>
         ffmpeg -re -i in.ts -f hls -master_pl_name master.m3u8 \
         -hls_time 2 -master_pl_publish_rate 30 <a rel="nofollow" href="http://example.com/live/out.m3u8">http://example.com/live/out.m3u8</a>
 </pre>
-<p> This example creates <font SIZE="-1">HLS</font> master playlist with name master.m3u8 and keep publishing it repeatedly every after 30 segments i.e. every after 60s.</p>
+<p> This example creates HLS master playlist with name master.m3u8 and keep publishing it repeatedly every after 30 segments i.e. every after 60s.</p>
 <dt><code>http_persistent</code></dt>
-<dd> Use persistent <font SIZE="-1">HTTP</font> connections. Applicable only for <font SIZE="-1">HTTP</font> output.</dd>
+<dd> Use persistent HTTP connections. Applicable only for HTTP output.</dd>
 <dt><code>timeout</code></dt>
-<dd> Set timeout for socket I/O operations. Applicable only for <font SIZE="-1">HTTP</font> output.</dd>
+<dd> Set timeout for socket I/O operations. Applicable only for HTTP output.</dd>
 <dt><code>-ignore_io_errors</code></dt>
-<dd> Ignore <font SIZE="-1">IO</font> errors during open, write and delete. Useful for long-duration runs with network output.</dd>
+<dd> Ignore IO errors during open, write and delete. Useful for long-duration runs with network output.</dd>
 <dt><code>headers</code></dt>
-<dd> Set custom <font SIZE="-1">HTTP</font> headers, can override built in default headers. Applicable only for <font SIZE="-1">HTTP</font> output.</dd></dl>
+<dd> Set custom HTTP headers, can override built in default headers. Applicable only for HTTP output.</dd></dl>
 <h3>ico</h3>
-<p> <font SIZE="-1">ICO</font> file muxer. </p>
-<p> Microsoft&#8217;s icon file format (<font SIZE="-1">ICO</font>) has some strict limitations that should be noted:</p>
+<p> ICO file muxer. </p>
+<p> Microsoft&#8217;s icon file format (ICO) has some strict limitations that should be noted:</p>
 <dl>
 <dt>&bull;</dt>
 <dd> Size cannot exceed 256 pixels in any dimension</dd>
 <dt>&bull;</dt>
-<dd> Only <font SIZE="-1">BMP</font> and <font SIZE="-1">PNG</font> images can be stored</dd>
+<dd> Only BMP and PNG images can be stored</dd>
 <dt>&bull;</dt>
-<dd> If a <font SIZE="-1">BMP</font> image is used, it must be one of the following pixel formats: </dd>
+<dd> If a BMP image is used, it must be one of the following pixel formats: </dd>
 <pre>
         BMP Bit Depth      FFmpeg Pixel Format
         1bit               pal8
@@ -1261,9 +1261,9 @@ description: "ffmpeg-formats – FFmpeg formats"
         32bit              bgra
 </pre>
 <dt>&bull;</dt>
-<dd> If a <font SIZE="-1">BMP</font> image is used, it must use the <font SIZE="-1">BITMAPINFOHEADER DIB</font> header</dd>
+<dd> If a BMP image is used, it must use the BITMAPINFOHEADER DIB header</dd>
 <dt>&bull;</dt>
-<dd> If a <font SIZE="-1">PNG</font> image is used, it must use the rgba pixel format</dd></dl>
+<dd> If a PNG image is used, it must use the rgba pixel format</dd></dl>
 <h3>image2</h3>
 <p> Image file muxer. </p>
 <p> The image file muxer writes video frames to image files. </p>
@@ -1271,7 +1271,7 @@ description: "ffmpeg-formats – FFmpeg formats"
 <p> If the pattern contains &#8220;%d&#8221; or &quot;%0<i>N</i>d&quot;, the first filename of the file list specified will contain the number 1, all the following numbers will be sequential. </p>
 <p> The pattern may contain a suffix which is used to automatically determine the format of the image files to write. </p>
 <p> For example the pattern &#8220;img-%03d.bmp&#8221; will specify a sequence of filenames of the form <i>img-001.bmp</i>, <i>img-002.bmp</i>, &#8230;, <i>img-010.bmp</i>, etc. The pattern &#8220;img%%-%d.jpg&#8221; will specify a sequence of filenames of the form <i>img%-1.jpg</i>, <i>img%-2.jpg</i>, &#8230;, <i>img%-10.jpg</i>, etc. </p>
-<p> The image muxer supports the .Y.U.V image file format. This format is special in that that each image frame consists of three files, for each of the <font SIZE="-1">YUV420P</font> components. To read or write this image file format, specify the name of the &#8216;.Y&#8217; file. The muxer will automatically open the &#8216;.U&#8217; and &#8216;.V&#8217; files as required. </p>
+<p> The image muxer supports the .Y.U.V image file format. This format is special in that that each image frame consists of three files, for each of the YUV420P components. To read or write this image file format, specify the name of the &#8216;.Y&#8217; file. The muxer will automatically open the &#8216;.U&#8217; and &#8216;.V&#8217; files as required. </p>
 <p> <i>Options</i></p>
 <dl>
 <dt><code>frame_pts</code></dt>
@@ -1302,7 +1302,7 @@ description: "ffmpeg-formats – FFmpeg formats"
 <pre>
         ffmpeg -f v4l2 -r 1 -i /dev/video0 -f image2 -strftime 1 &quot;%Y-%m-%d_%H-%M-%S.jpg&quot;
 </pre>
-<p> You can set the file name with current frame&#8217;s <font SIZE="-1">PTS:</font> </p>
+<p> You can set the file name with current frame&#8217;s PTS: </p>
 <pre>
         ffmpeg -f v4l2 -r 1 -i /dev/video0 -copyts -f image2 -frame_pts true %d.jpg&quot;
 </pre>
@@ -1320,7 +1320,7 @@ description: "ffmpeg-formats – FFmpeg formats"
 <dd> Set title name provided to a single track. This gets mapped to the FileDescription element for a stream written as attachment.</dd>
 <dt><code>language</code></dt>
 <dd> Specify the language of the track in the Matroska languages form. </dd>
-<p> The language can be either the 3 letters bibliographic <font SIZE="-1">ISO-639-2</font> (<font SIZE="-1">ISO 639-2/B</font>) form (like &#8220;fre&#8221; for French), or a language code mixed with a country code for specialities in languages (like &#8220;fre-ca&#8221; for Canadian French).</p>
+<p> The language can be either the 3 letters bibliographic ISO-639-2 (ISO 639-2/B) form (like &#8220;fre&#8221; for French), or a language code mixed with a country code for specialities in languages (like &#8220;fre-ca&#8221; for Canadian French).</p>
 <dt><code>stereo_mode</code></dt>
 <dd> Set stereo 3D video layout of two views in a single video track. </dd>
 <p> The following values are recognized:</p>
@@ -1380,28 +1380,28 @@ description: "ffmpeg-formats – FFmpeg formats"
 <dt><code>infer_no_subs</code></dt>
 <dd> This mode is the same as infer except that if no subtitle track with disposition default exists, no subtitle track will be marked as default.</dd>
 <dt><code>passthrough</code></dt>
-<dd> In this mode the FlagDefault is set if and only if the <font SIZE="-1">AV_DISPOSITION_DEFAULT</font> flag is set in the disposition of the corresponding stream.</dd></dl>
+<dd> In this mode the FlagDefault is set if and only if the AV_DISPOSITION_DEFAULT flag is set in the disposition of the corresponding stream.</dd></dl>
 </dl>
 <dl>
 </dl>
 <dt><code>flipped_raw_rgb</code></dt>
-<dd> If set to true, store positive height for raw <font SIZE="-1">RGB</font> bitmaps, which indicates bitmap is stored bottom-up. Note that this option does not flip the bitmap which has to be done manually beforehand, e.g. by using the vflip filter. Default is <i>false</i> and indicates bitmap is stored top down.</dd></dl>
+<dd> If set to true, store positive height for raw RGB bitmaps, which indicates bitmap is stored bottom-up. Note that this option does not flip the bitmap which has to be done manually beforehand, e.g. by using the vflip filter. Default is <i>false</i> and indicates bitmap is stored top down.</dd></dl>
 <h3>md5</h3>
-<p> <font SIZE="-1">MD5</font> testing format. </p>
-<p> This is a variant of the <code>hash</code> muxer. Unlike that muxer, it defaults to using the <font SIZE="-1">MD5</font> hash function. </p>
+<p> MD5 testing format. </p>
+<p> This is a variant of the <code>hash</code> muxer. Unlike that muxer, it defaults to using the MD5 hash function. </p>
 <p> <i>Examples</i> </p>
-<p> To compute the <font SIZE="-1">MD5</font> hash of the input converted to raw audio and video, and store it in the file <i>out.md5</i>: </p>
+<p> To compute the MD5 hash of the input converted to raw audio and video, and store it in the file <i>out.md5</i>: </p>
 <pre>
         ffmpeg -i INPUT -f md5 out.md5
 </pre>
-<p> You can print the <font SIZE="-1">MD5</font> to stdout with the command: </p>
+<p> You can print the MD5 to stdout with the command: </p>
 <pre>
         ffmpeg -i INPUT -f md5 -
 </pre>
 <p> See also the <code>hash</code> and <code>framemd5</code> muxers.</p>
 <h3>mov, mp4, ismv</h3>
-<p> <font SIZE="-1">MOV/MP4/ISMV</font> (Smooth Streaming) muxer. </p>
-<p> The mov/mp4/ismv muxer supports fragmentation. Normally, a <font SIZE="-1">MOV/MP4</font> file has all the metadata about all packets stored in one location (written at the end of the file, it can be moved to the start for better playback by adding <i>faststart</i> to the <i>movflags</i>, or using the <code>qt-faststart</code> tool). A fragmented file consists of a number of fragments, where packets and metadata about these packets are stored together. Writing a fragmented file has the advantage that the file is decodable even if the writing is interrupted (while a normal <font SIZE="-1">MOV/MP4</font> is undecodable if it is not properly finished), and it requires less memory when writing very long files (since writing normal <font SIZE="-1">MOV/MP4</font> files stores info about every single packet in memory until the file is closed). The downside is that it is less compatible with other applications. </p>
+<p> MOV/MP4/ISMV (Smooth Streaming) muxer. </p>
+<p> The mov/mp4/ismv muxer supports fragmentation. Normally, a MOV/MP4 file has all the metadata about all packets stored in one location (written at the end of the file, it can be moved to the start for better playback by adding <i>faststart</i> to the <i>movflags</i>, or using the <code>qt-faststart</code> tool). A fragmented file consists of a number of fragments, where packets and metadata about these packets are stored together. Writing a fragmented file has the advantage that the file is decodable even if the writing is interrupted (while a normal MOV/MP4 is undecodable if it is not properly finished), and it requires less memory when writing very long files (since writing normal MOV/MP4 files stores info about every single packet in memory until the file is closed). The downside is that it is less compatible with other applications. </p>
 <p> <i>Options</i> </p>
 <p> Fragmentation is enabled by setting one of the AVOptions that define how to cut the file into fragments:</p>
 <dl>
@@ -1421,7 +1421,7 @@ description: "ffmpeg-formats – FFmpeg formats"
 <p> Additionally, the way the output file is written can be adjusted through a few other options:</p>
 <dl>
 <dt><code>-movflags empty_moov</code></dt>
-<dd> Write an initial moov atom directly at the start of the file, without describing any samples in it. Generally, an mdat/moov pair is written at the start of the file, as a normal <font SIZE="-1">MOV/MP4</font> file, containing only a short portion of the file. With this option set, there is no initial mdat atom, and the moov atom only describes the tracks but has a zero duration. </dd>
+<dd> Write an initial moov atom directly at the start of the file, without describing any samples in it. Generally, an mdat/moov pair is written at the start of the file, as a normal MOV/MP4 file, containing only a short portion of the file. With this option set, there is no initial mdat atom, and the moov atom only describes the tracks but has a zero duration. </dd>
 <p> This option is implicitly set when writing ismv (Smooth Streaming) files.</p>
 <dt><code>-movflags separate_moof</code></dt>
 <dd> Write a separate moof (movie fragment) atom for each track. Normally, packets for all tracks are written in a moof atom (which is slightly more efficient), but with this option set, the muxer writes one moof/mdat pair for each track, making it easier to separate tracks. </dd>
@@ -1431,7 +1431,7 @@ description: "ffmpeg-formats – FFmpeg formats"
 <dt><code>-movflags faststart</code></dt>
 <dd> Run a second pass moving the index (moov atom) to the beginning of the file. This operation can take a while, and will not work in various situations such as fragmented output, thus it is not enabled by default.</dd>
 <dt><code>-movflags rtphint</code></dt>
-<dd> Add <font SIZE="-1">RTP</font> hinting tracks to the output file.</dd>
+<dd> Add RTP hinting tracks to the output file.</dd>
 <dt><code>-movflags disable_chpl</code></dt>
 <dd> Disable Nero chapter markers (chpl atom). Normally, both Nero chapters and a QuickTime chapter track are written to the file. With this option set, only the QuickTime chapter track will be written. Nero chapters can cause failures when the file is reprocessed with certain tagging programs, like mp3Tag 2.61a and iTunes 11.3, most likely other versions are affected as well.</dd>
 <dt><code>-movflags omit_tfhd_offset</code></dt>
@@ -1441,23 +1441,23 @@ description: "ffmpeg-formats – FFmpeg formats"
 <dt><code>-write_tmcd</code></dt>
 <dd> Specify <tt>&quot;on&quot;</tt> to force writing a timecode track, <tt>&quot;off&quot;</tt> to disable it and <tt>&quot;auto&quot;</tt> to write a timecode track only for mov and mp4 output (default).</dd>
 <dt><code>-movflags negative_cts_offsets</code></dt>
-<dd> Enables utilization of version 1 of the <font SIZE="-1">CTTS</font> box, in which the <font SIZE="-1">CTS</font> offsets can be negative. This enables the initial sample to have <font SIZE="-1">DTS/CTS</font> of zero, and reduces the need for edit lists for some cases such as video tracks with B-frames. Additionally, eases conformance with the DASH-IF interoperability guidelines. </dd>
+<dd> Enables utilization of version 1 of the CTTS box, in which the CTS offsets can be negative. This enables the initial sample to have DTS/CTS of zero, and reduces the need for edit lists for some cases such as video tracks with B-frames. Additionally, eases conformance with the DASH-IF interoperability guidelines. </dd>
 <p> This option is implicitly set when writing ismv (Smooth Streaming) files.</p>
 <dt><code>-write_prft</code></dt>
-<dd> Write producer time reference box (<font SIZE="-1">PRFT</font>) with a specified time source for the <font SIZE="-1">NTP</font> field in the <font SIZE="-1">PRFT</font> box. Set value as <code>wallclock</code> to specify timesource as wallclock time and <code>pts</code> to specify timesource as input packets&#8217; <font SIZE="-1">PTS</font> values. </dd>
-<p> Setting value to <code>pts</code> is applicable only for a live encoding use case, where <font SIZE="-1">PTS</font> values are set as as wallclock time at the source. For example, an encoding use case with decklink capture source where <code>video_pts</code> and <code>audio_pts</code> are set to <code>abs_wallclock</code>.</dl>
+<dd> Write producer time reference box (PRFT) with a specified time source for the NTP field in the PRFT box. Set value as <code>wallclock</code> to specify timesource as wallclock time and <code>pts</code> to specify timesource as input packets&#8217; PTS values. </dd>
+<p> Setting value to <code>pts</code> is applicable only for a live encoding use case, where PTS values are set as as wallclock time at the source. For example, an encoding use case with decklink capture source where <code>video_pts</code> and <code>audio_pts</code> are set to <code>abs_wallclock</code>.</dl>
 <p> <i>Example</i> </p>
-<p> Smooth Streaming content can be pushed in real time to a publishing point on <font SIZE="-1">IIS</font> with this muxer. Example: </p>
+<p> Smooth Streaming content can be pushed in real time to a publishing point on IIS with this muxer. Example: </p>
 <pre>
         ffmpeg -re &lt;&lt;normal input/transcoding options&gt;&gt; -movflags isml+frag_keyframe -f ismv <a rel="nofollow" href="http://server/publishingpoint.isml/Streams(Encoder1)">http://server/publishingpoint.isml/Streams(Encoder1)</a>
 </pre>
 <h3>mp3</h3>
-<p> The <font SIZE="-1">MP3</font> muxer writes a raw <font SIZE="-1">MP3</font> stream with the following optional features:</p>
+<p> The MP3 muxer writes a raw MP3 stream with the following optional features:</p>
 <dl>
 <dt>&bull;</dt>
 <dd> An ID3v2 metadata header at the beginning (enabled by default). Versions 2.3 and 2.4 are supported, the <tt>&quot;id3v2_version&quot;</tt> private option controls which one is used (3 or 4). Setting <tt>&quot;id3v2_version&quot;</tt> to 0 disables the ID3v2 header completely. </dd>
-<p> The muxer supports writing attached pictures (<font SIZE="-1">APIC</font> frames) to the ID3v2 header. The pictures are supplied to the muxer in form of a video stream with a single packet. There can be any number of those streams, each will correspond to a single <font SIZE="-1">APIC</font> frame. The stream metadata tags <i>title</i> and <i>comment</i> map to <font SIZE="-1">APIC</font> <i>description</i> and <i>picture type</i> respectively. See &lt;<code><a rel="nofollow" href="http://id3.org/id3v2.4.0-frames">http://id3.org/id3v2.4.0-frames</a></code>&gt; for allowed picture types. </p>
-<p> Note that the <font SIZE="-1">APIC</font> frames must be written at the beginning, so the muxer will buffer the audio frames until it gets all the pictures. It is therefore advised to provide the pictures as soon as possible to avoid excessive buffering.</p>
+<p> The muxer supports writing attached pictures (APIC frames) to the ID3v2 header. The pictures are supplied to the muxer in form of a video stream with a single packet. There can be any number of those streams, each will correspond to a single APIC frame. The stream metadata tags <i>title</i> and <i>comment</i> map to APIC <i>description</i> and <i>picture type</i> respectively. See &lt;<code><a rel="nofollow" href="http://id3.org/id3v2.4.0-frames">http://id3.org/id3v2.4.0-frames</a></code>&gt; for allowed picture types. </p>
+<p> Note that the APIC frames must be written at the beginning, so the muxer will buffer the audio frames until it gets all the pictures. It is therefore advised to provide the pictures as soon as possible to avoid excessive buffering.</p>
 <dt>&bull;</dt>
 <dd> A Xing/LAME frame right after the ID3v2 header (if present). It is enabled by default, but will be written only if the output is seekable. The <tt>&quot;write_xing&quot;</tt> private option can be used to disable it. The frame contains various information that may be useful to the decoder, like the audio duration or encoder delay.</dd>
 <dt>&bull;</dt>
@@ -1472,31 +1472,31 @@ description: "ffmpeg-formats – FFmpeg formats"
         ffmpeg -i input.mp3 -i cover.png -c copy -map 0 -map 1
         -metadata:s:v title=&quot;Album cover&quot; -metadata:s:v comment=&quot;Cover (Front)&quot; out.mp3
 </pre>
-<p> Write a &#8220;clean&#8221; <font SIZE="-1">MP3</font> without any extra features: </p>
+<p> Write a &#8220;clean&#8221; MP3 without any extra features: </p>
 <pre>
         ffmpeg -i input.wav -write_xing 0 -id3v2_version 0 out.mp3
 </pre>
 <h3>mpegts</h3>
-<p> <font SIZE="-1">MPEG</font> transport stream muxer. </p>
-<p> This muxer implements <font SIZE="-1">ISO 13818-1</font> and part of <font SIZE="-1">ETSI EN 300 468.</font> </p>
+<p> MPEG transport stream muxer. </p>
+<p> This muxer implements ISO 13818-1 and part of ETSI EN 300 468. </p>
 <p> The recognized metadata settings in mpegts muxer are <tt>&quot;service_provider&quot;</tt> and <tt>&quot;service_name&quot;</tt>. If they are not set the default for <tt>&quot;service_provider&quot;</tt> is <code>FFmpeg</code> and the default for <tt>&quot;service_name&quot;</tt> is <code>Service01</code>. </p>
 <p> <i>Options</i> </p>
 <p> The muxer options are:</p>
 <dl>
 <dt><code>mpegts_transport_stream_id</code> <i>integer</i></dt>
-<dd> Set the <code>transport_stream_id</code>. This identifies a transponder in <font SIZE="-1">DVB.</font> Default is <tt>0x0001</tt>.</dd>
+<dd> Set the <code>transport_stream_id</code>. This identifies a transponder in DVB. Default is <tt>0x0001</tt>.</dd>
 <dt><code>mpegts_original_network_id</code> <i>integer</i></dt>
-<dd> Set the <code>original_network_id</code>. This is unique identifier of a network in <font SIZE="-1">DVB.</font> Its main use is in the unique identification of a service through the path <code>Original_Network_ID, Transport_Stream_ID</code>. Default is <tt>0x0001</tt>.</dd>
+<dd> Set the <code>original_network_id</code>. This is unique identifier of a network in DVB. Its main use is in the unique identification of a service through the path <code>Original_Network_ID, Transport_Stream_ID</code>. Default is <tt>0x0001</tt>.</dd>
 <dt><code>mpegts_service_id</code> <i>integer</i></dt>
-<dd> Set the <code>service_id</code>, also known as program in <font SIZE="-1">DVB.</font> Default is <tt>0x0001</tt>.</dd>
+<dd> Set the <code>service_id</code>, also known as program in DVB. Default is <tt>0x0001</tt>.</dd>
 <dt><code>mpegts_service_type</code> <i>integer</i></dt>
 <dd> Set the program <code>service_type</code>. Default is <tt>&quot;digital_tv&quot;</tt>. Accepts the following options:</dd>
 <dl>
 <dl>
 <dt><code>hex_value</code></dt>
-<dd> Any hexadecimal value between <tt>0x01</tt> and <tt>0xff</tt> as defined in <font SIZE="-1">ETSI 300 468.</font></dd>
+<dd> Any hexadecimal value between <tt>0x01</tt> and <tt>0xff</tt> as defined in ETSI 300 468.</dd>
 <dt><code>digital_tv</code></dt>
-<dd> Digital <font SIZE="-1">TV</font> service.</dd>
+<dd> Digital TV service.</dd>
 <dt><code>digital_radio</code></dt>
 <dd> Digital Radio service.</dd>
 <dt><code>teletext</code></dt>
@@ -1504,36 +1504,36 @@ description: "ffmpeg-formats – FFmpeg formats"
 <dt><code>advanced_codec_digital_radio</code></dt>
 <dd> Advanced Codec Digital Radio service.</dd>
 <dt><code>mpeg2_digital_hdtv</code></dt>
-<dd> <font SIZE="-1">MPEG2</font> Digital <font SIZE="-1">HDTV</font> service.</dd>
+<dd> MPEG2 Digital HDTV service.</dd>
 <dt><code>advanced_codec_digital_sdtv</code></dt>
-<dd> Advanced Codec Digital <font SIZE="-1">SDTV</font> service.</dd>
+<dd> Advanced Codec Digital SDTV service.</dd>
 <dt><code>advanced_codec_digital_hdtv</code></dt>
-<dd> Advanced Codec Digital <font SIZE="-1">HDTV</font> service.</dd></dl>
+<dd> Advanced Codec Digital HDTV service.</dd></dl>
 </dl>
 <dl>
 </dl>
 <dt><code>mpegts_pmt_start_pid</code> <i>integer</i></dt>
-<dd> Set the first <font SIZE="-1">PID</font> for PMTs. Default is <tt>0x1000</tt>, minimum is <tt>0x0020</tt>, maximum is <tt>0x1ffa</tt>. This option has no effect in m2ts mode where the <font SIZE="-1">PMT PID</font> is fixed <tt>0x0100</tt>.</dd>
+<dd> Set the first PID for PMTs. Default is <tt>0x1000</tt>, minimum is <tt>0x0020</tt>, maximum is <tt>0x1ffa</tt>. This option has no effect in m2ts mode where the PMT PID is fixed <tt>0x0100</tt>.</dd>
 <dt><code>mpegts_start_pid</code> <i>integer</i></dt>
-<dd> Set the first <font SIZE="-1">PID</font> for elementary streams. Default is <tt>0x0100</tt>, minimum is <tt>0x0020</tt>, maximum is <tt>0x1ffa</tt>. This option has no effect in m2ts mode where the elementary stream PIDs are fixed.</dd>
+<dd> Set the first PID for elementary streams. Default is <tt>0x0100</tt>, minimum is <tt>0x0020</tt>, maximum is <tt>0x1ffa</tt>. This option has no effect in m2ts mode where the elementary stream PIDs are fixed.</dd>
 <dt><code>mpegts_m2ts_mode</code> <i>boolean</i></dt>
 <dd> Enable m2ts mode if set to <tt>1</tt>. Default value is <tt>&quot;-1&quot;</tt> which disables m2ts mode.</dd>
 <dt><code>muxrate</code> <i>integer</i></dt>
-<dd> Set a constant muxrate. Default is <font SIZE="-1">VBR.</font></dd>
+<dd> Set a constant muxrate. Default is VBR.</dd>
 <dt><code>pes_payload_size</code> <i>integer</i></dt>
-<dd> Set minimum <font SIZE="-1">PES</font> packet payload in bytes. Default is <tt>2930</tt>.</dd>
+<dd> Set minimum PES packet payload in bytes. Default is <tt>2930</tt>.</dd>
 <dt><code>mpegts_flags</code> <i>flags</i></dt>
 <dd> Set mpegts flags. Accepts the following options:</dd>
 <dl>
 <dl>
 <dt><code>resend_headers</code></dt>
-<dd> Reemit <font SIZE="-1">PAT/PMT</font> before writing the next packet.</dd>
+<dd> Reemit PAT/PMT before writing the next packet.</dd>
 <dt><code>latm</code></dt>
-<dd> Use <font SIZE="-1">LATM</font> packetization for <font SIZE="-1">AAC.</font></dd>
+<dd> Use LATM packetization for AAC.</dd>
 <dt><code>pat_pmt_at_frames</code></dt>
-<dd> Reemit <font SIZE="-1">PAT</font> and <font SIZE="-1">PMT</font> at each video frame.</dd>
+<dd> Reemit PAT and PMT at each video frame.</dd>
 <dt><code>system_b</code></dt>
-<dd> Conform to System B (<font SIZE="-1">DVB</font>) instead of System A (<font SIZE="-1">ATSC</font>).</dd>
+<dd> Conform to System B (DVB) instead of System A (ATSC).</dd>
 <dt><code>initial_discontinuity</code></dt>
 <dd> Mark the initial packet of each stream as discontinuity.</dd></dl>
 </dl>
@@ -1542,15 +1542,15 @@ description: "ffmpeg-formats – FFmpeg formats"
 <dt><code>mpegts_copyts</code> <i>boolean</i></dt>
 <dd> Preserve original timestamps, if value is set to <tt>1</tt>. Default value is <tt>&quot;-1&quot;</tt>, which results in shifting timestamps so that they start from 0.</dd>
 <dt><code>omit_video_pes_length</code> <i>boolean</i></dt>
-<dd> Omit the <font SIZE="-1">PES</font> packet length for video packets. Default is <tt>1</tt> (true).</dd>
+<dd> Omit the PES packet length for video packets. Default is <tt>1</tt> (true).</dd>
 <dt><code>pcr_period</code> <i>integer</i></dt>
-<dd> Override the default <font SIZE="-1">PCR</font> retransmission time in milliseconds. Default is <tt>&quot;-1&quot;</tt> which means that the <font SIZE="-1">PCR</font> interval will be determined automatically: 20 ms is used for <font SIZE="-1">CBR</font> streams, the highest multiple of the frame duration which is less than 100 ms is used for <font SIZE="-1">VBR</font> streams.</dd>
+<dd> Override the default PCR retransmission time in milliseconds. Default is <tt>&quot;-1&quot;</tt> which means that the PCR interval will be determined automatically: 20 ms is used for CBR streams, the highest multiple of the frame duration which is less than 100 ms is used for VBR streams.</dd>
 <dt><code>pat_period</code> <i>duration</i></dt>
-<dd> Maximum time in seconds between <font SIZE="-1">PAT/PMT</font> tables. Default is <tt>0.1</tt>.</dd>
+<dd> Maximum time in seconds between PAT/PMT tables. Default is <tt>0.1</tt>.</dd>
 <dt><code>sdt_period</code> <i>duration</i></dt>
-<dd> Maximum time in seconds between <font SIZE="-1">SDT</font> tables. Default is <tt>0.5</tt>.</dd>
+<dd> Maximum time in seconds between SDT tables. Default is <tt>0.5</tt>.</dd>
 <dt><code>tables_version</code> <i>integer</i></dt>
-<dd> Set <font SIZE="-1">PAT, PMT</font> and <font SIZE="-1">SDT</font> version (default <tt>0</tt>, valid values are from 0 to 31, inclusively). This option allows updating stream structure so that standard consumer may detect the change. To do so, reopen output <tt>&quot;AVFormatContext&quot;</tt> (in case of <font SIZE="-1">API</font> usage) or restart <code>ffmpeg</code> instance, cyclically changing <code>tables_version</code> value: </dd>
+<dd> Set PAT, PMT and SDT version (default <tt>0</tt>, valid values are from 0 to 31, inclusively). This option allows updating stream structure so that standard consumer may detect the change. To do so, reopen output <tt>&quot;AVFormatContext&quot;</tt> (in case of API usage) or restart <code>ffmpeg</code> instance, cyclically changing <code>tables_version</code> value: </dd>
 <pre>
         ffmpeg -i source1.ts -codec copy -f mpegts -tables_version 0 <a href="udp://1.1.1.1:1111">udp://1.1.1.1:1111</a>
         ffmpeg -i source2.ts -codec copy -f mpegts -tables_version 1 <a href="udp://1.1.1.1:1111">udp://1.1.1.1:1111</a>
@@ -1574,12 +1574,12 @@ description: "ffmpeg-formats – FFmpeg formats"
              out.ts
 </pre>
 <h3>mxf, mxf_d10, mxf_opatom</h3>
-<p> <font SIZE="-1">MXF</font> muxer. </p>
+<p> MXF muxer. </p>
 <p> <i>Options</i> </p>
 <p> The muxer options are:</p>
 <dl>
 <dt><code>store_user_comments</code> <i>bool</i></dt>
-<dd> Set if user comments should be stored if available or never. <font SIZE="-1">IRT D-10</font> does not allow user comments. The default is thus to write them for mxf and mxf_opatom but not for mxf_d10</dd></dl>
+<dd> Set if user comments should be stored if available or never. IRT D-10 does not allow user comments. The default is thus to write them for mxf and mxf_opatom but not for mxf_d10</dd></dl>
 <h3>null</h3>
 <p> Null muxer. </p>
 <p> This muxer does not generate any output file, it is mainly useful for testing or benchmarking purposes. </p>
@@ -1631,12 +1631,12 @@ description: "ffmpeg-formats – FFmpeg formats"
 <h3>segment, stream_segment, ssegment</h3>
 <p> Basic stream segmenter. </p>
 <p> This muxer outputs streams to a number of separate files of nearly fixed duration. Output filename pattern can be set in a fashion similar to <code>image2</code>, or by using a <tt>&quot;strftime&quot;</tt> template if the <code>strftime</code> option is enabled. </p>
-<p> <tt>&quot;stream_segment&quot;</tt> is a variant of the muxer used to write to streaming output formats, i.e. which do not require global headers, and is recommended for outputting e.g. to <font SIZE="-1">MPEG</font> transport stream segments. <tt>&quot;ssegment&quot;</tt> is a shorter alias for <tt>&quot;stream_segment&quot;</tt>. </p>
+<p> <tt>&quot;stream_segment&quot;</tt> is a variant of the muxer used to write to streaming output formats, i.e. which do not require global headers, and is recommended for outputting e.g. to MPEG transport stream segments. <tt>&quot;ssegment&quot;</tt> is a shorter alias for <tt>&quot;stream_segment&quot;</tt>. </p>
 <p> Every segment starts with a keyframe of the selected reference stream, which is set through the <code>reference_stream</code> option. </p>
 <p> Note that if you want accurate splitting for a video file, you need to make the input key frames correspond to the exact splitting times expected by the segmenter, or the segment muxer will start the new segment with the key frame found next after the specified start time. </p>
 <p> The segment muxer works best with a single constant frame rate video. </p>
 <p> Optionally it can generate a list of the created segments, by setting the option <i>segment_list</i>. The list type is specified by the <i>segment_list_type</i> option. The entry filenames in the segment list are set by default to the basename of the corresponding segment files. </p>
-<p> See also the <code>hls</code> muxer, which provides a more specific implementation for <font SIZE="-1">HLS</font> segmentation. </p>
+<p> See also the <code>hls</code> muxer, which provides a more specific implementation for HLS segmentation. </p>
 <p> <i>Options</i> </p>
 <p> The segment muxer supports the following options:</p>
 <dl>
@@ -1678,7 +1678,7 @@ description: "ffmpeg-formats – FFmpeg formats"
 <pre>
         &lt;segment_filename&gt;,&lt;segment_start_time&gt;,&lt;segment_end_time&gt;
 </pre>
-<p> <i>segment_filename</i> is the name of the output file generated by the muxer according to the provided pattern. <font SIZE="-1">CSV</font> escaping (according to <font SIZE="-1">RFC4180</font>) is applied if required. </p>
+<p> <i>segment_filename</i> is the name of the output file generated by the muxer according to the provided pattern. CSV escaping (according to RFC4180) is applied if required. </p>
 <p> <i>segment_start_time</i> and <i>segment_end_time</i> specify the segment start and end time expressed in seconds. </p>
 <p> A list file with the suffix <tt>&quot;.csv&quot;</tt> or <tt>&quot;.ext&quot;</tt> will auto-select this format. </p>
 <p> <code>ext</code> is deprecated in favor or <code>csv</code>.</p>
@@ -1709,11 +1709,11 @@ description: "ffmpeg-formats – FFmpeg formats"
 <p> Default is the maximum possible duration which means starting a new segment regardless of the elapsed time since the last clock time.</p>
 <dt><code>segment_time_delta</code> <i>delta</i></dt>
 <dd> Specify the accuracy time when selecting the start time for a segment, expressed as a duration specification. Default value is &#8220;0&#8221;. </dd>
-<p> When delta is specified a key-frame will start a new segment if its <font SIZE="-1">PTS</font> satisfies the relation: </p>
+<p> When delta is specified a key-frame will start a new segment if its PTS satisfies the relation: </p>
 <pre>
         PTS &gt;= start_time - time_delta
 </pre>
-<p> This option is useful when splitting video content, which is always split at <font SIZE="-1">GOP</font> boundaries, in case a key frame is found just before the specified split time. </p>
+<p> This option is useful when splitting video content, which is always split at GOP boundaries, in case a key frame is found just before the specified split time. </p>
 <p> In particular may be used in combination with the <i>ffmpeg</i> option <i>force_key_frames</i>. The key frame times specified by <i>force_key_frames</i> may not be set accurately because of rounding issues, with the consequence that a key frame time may result set just before the specified time. For constant frame rate videos a value of 1/(2*<i>frame_rate</i>) should address the worst case mismatch between the specified time and the time set by <i>force_key_frames</i>.</p>
 <dt><code>segment_times</code> <i>times</i></dt>
 <dd> Specify a list of split points. <i>times</i> contains a list of comma separated duration specifications, in increasing order. See also the <code>segment_time</code> option.</dd>
@@ -1734,7 +1734,7 @@ description: "ffmpeg-formats – FFmpeg formats"
 <dd> Specify timestamp offset to apply to the output packet timestamps. The argument must be a time duration specification, and defaults to 0.</dd>
 <dt><code>write_empty_segments</code> <i>1|0</i></dt>
 <dd> If enabled, write an empty segment if there are no packets during the period a segment would usually span. Otherwise, the segment will be filled with the next packet written. Defaults to <tt>0</tt>.</dd></dl>
-<p> Make sure to require a closed <font SIZE="-1">GOP</font> when encoding and to set the <font SIZE="-1">GOP</font> size to fit your segment time constraint. </p>
+<p> Make sure to require a closed GOP when encoding and to set the GOP size to fit your segment time constraint. </p>
 <p> <i>Examples</i></p>
 <dl>
 <dt>&bull;</dt>
@@ -1765,12 +1765,12 @@ description: "ffmpeg-formats – FFmpeg formats"
         ffmpeg -i in.mkv -codec copy -map 0 -f segment -segment_list out.csv -segment_frames 100,200,300,500,800 out%03d.nut
 </pre>
 <dt>&bull;</dt>
-<dd> Convert the <i>in.mkv</i> to <font SIZE="-1">TS</font> segments using the <tt>&quot;libx264&quot;</tt> and <tt>&quot;aac&quot;</tt> encoders: </dd>
+<dd> Convert the <i>in.mkv</i> to TS segments using the <tt>&quot;libx264&quot;</tt> and <tt>&quot;aac&quot;</tt> encoders: </dd>
 <pre>
         ffmpeg -i in.mkv -map 0 -codec:v libx264 -codec:a aac -f ssegment -segment_list out.list out%03d.ts
 </pre>
 <dt>&bull;</dt>
-<dd> Segment the input file, and create an M3U8 live playlist (can be used as live <font SIZE="-1">HLS</font> source): </dd>
+<dd> Segment the input file, and create an M3U8 live playlist (can be used as live HLS source): </dd>
 <pre>
         ffmpeg -re -i in.mkv -codec copy -map 0 -f segment -segment_list playlist.m3u8 \
         -segment_list_flags +live -segment_time 10 out%03d.mkv
@@ -1792,24 +1792,24 @@ description: "ffmpeg-formats – FFmpeg formats"
 <h3>streamhash</h3>
 <p> Per stream hash testing format. </p>
 <p> This muxer computes and prints a cryptographic hash of all the input frames, on a per-stream basis. This can be used for equality checks without having to do a complete binary comparison. </p>
-<p> By default audio frames are converted to signed 16-bit raw audio and video frames to raw video before computing the hash, but the output of explicit conversions to other codecs can also be used. Timestamps are ignored. It uses the <font SIZE="-1">SHA-256</font> cryptographic hash function by default, but supports several other algorithms. </p>
+<p> By default audio frames are converted to signed 16-bit raw audio and video frames to raw video before computing the hash, but the output of explicit conversions to other codecs can also be used. Timestamps are ignored. It uses the SHA-256 cryptographic hash function by default, but supports several other algorithms. </p>
 <p> The output of the muxer consists of one line per stream of the form: <i>streamindex</i>,<i>streamtype</i>,<i>algo</i>=<i>hash</i>, where <i>streamindex</i> is the index of the mapped stream, <i>streamtype</i> is a single character indicating the type of stream, <i>algo</i> is a short string representing the hash function used, and <i>hash</i> is a hexadecimal number representing the computed hash.</p>
 <dl>
 <dt><code>hash</code> <i>algorithm</i></dt>
 <dd> Use the cryptographic hash function specified by the string <i>algorithm</i>. Supported values include <tt>&quot;MD5&quot;</tt>, <tt>&quot;murmur3&quot;</tt>, <tt>&quot;RIPEMD128&quot;</tt>, <tt>&quot;RIPEMD160&quot;</tt>, <tt>&quot;RIPEMD256&quot;</tt>, <tt>&quot;RIPEMD320&quot;</tt>, <tt>&quot;SHA160&quot;</tt>, <tt>&quot;SHA224&quot;</tt>, <tt>&quot;SHA256&quot;</tt> (default), <tt>&quot;SHA512/224&quot;</tt>, <tt>&quot;SHA512/256&quot;</tt>, <tt>&quot;SHA384&quot;</tt>, <tt>&quot;SHA512&quot;</tt>, <tt>&quot;CRC32&quot;</tt> and <tt>&quot;adler32&quot;</tt>.</dd></dl>
 <p> <i>Examples</i> </p>
-<p> To compute the <font SIZE="-1">SHA-256</font> hash of the input converted to raw audio and video, and store it in the file <i>out.sha256</i>: </p>
+<p> To compute the SHA-256 hash of the input converted to raw audio and video, and store it in the file <i>out.sha256</i>: </p>
 <pre>
         ffmpeg -i INPUT -f streamhash out.sha256
 </pre>
-<p> To print an <font SIZE="-1">MD5</font> hash to stdout use the command: </p>
+<p> To print an MD5 hash to stdout use the command: </p>
 <pre>
         ffmpeg -i INPUT -f streamhash -hash md5 -
 </pre>
 <p> See also the <code>hash</code> and <code>framehash</code> muxers.</p>
 <h3>fifo</h3>
 <p> The fifo pseudo-muxer allows the separation of encoding and muxing by using first-in-first-out queue and running the actual muxer in a separate thread. This is especially useful in combination with the <code>tee</code> muxer and can be used to send data to several destinations with different reliability/writing speed/latency. </p>
-<p> <font SIZE="-1">API</font> users should be aware that callback functions (interrupt_callback, io_open and io_close) used within its AVFormatContext must be thread-safe. </p>
+<p> API users should be aware that callback functions (interrupt_callback, io_open and io_close) used within its AVFormatContext must be thread-safe. </p>
 <p> The behavior of the fifo muxer if the queue fills up or if the output fails is selectable,</p>
 <dl>
 <dt>&bull;</dt>
@@ -1849,7 +1849,7 @@ description: "ffmpeg-formats – FFmpeg formats"
 </dl>
 <h3>tee</h3>
 <p> The tee muxer can be used to write the same data to several outputs, such as files or streams. It can be used, for example, to stream a video over a network and save it to disk at the same time. </p>
-<p> It is different from specifying several outputs to the <code>ffmpeg</code> command-line tool. With the tee muxer, the audio and video data will be encoded only once. With conventional multiple outputs, multiple encoding operations in parallel are initiated, which can be a very expensive process. The tee muxer is not useful when using the libavformat <font SIZE="-1">API</font> directly because it is then possible to feed the same packets to several muxers directly. </p>
+<p> It is different from specifying several outputs to the <code>ffmpeg</code> command-line tool. With the tee muxer, the audio and video data will be encoded only once. With conventional multiple outputs, multiple encoding operations in parallel are initiated, which can be a very expensive process. The tee muxer is not useful when using the libavformat API directly because it is then possible to feed the same packets to several muxers directly. </p>
 <p> Since the tee muxer does not represent any particular output format, ffmpeg cannot auto-select output streams. So all streams intended for output must be specified using <tt>&quot;-map&quot;</tt>. See the examples below. </p>
 <p> Some encoders may need different options depending on the output format; the auto-detection of this can not work with the tee muxer, so they need to be explicitly specified. The main example is the <code>global_header</code> flag. </p>
 <p> The slave outputs are specified in the file name given to the muxer, separated by &#8216;|&#8217;. If any of the slave name contains the &#8216;|&#8217; separator, leading or trailing spaces or any special character, those must be escaped (see <code>the &#8220;Quoting and escaping&#8221; section in the <a href="/docs/linux/man/1-ffmpeg-utils/">ffmpeg-utils</a>(1) manual</code>). </p>
@@ -1863,7 +1863,7 @@ description: "ffmpeg-formats – FFmpeg formats"
 <p> The following special options are also recognized:</p>
 <dl>
 <dt><code>f</code></dt>
-<dd> Specify the format name. Required if it cannot be guessed from the output <font SIZE="-1">URL.</font></dd>
+<dd> Specify the format name. Required if it cannot be guessed from the output URL.</dd>
 <dt><code>bsfs[/</code><i>spec</i><code>]</code></dt>
 <dd> Specify a list of bitstream filters to apply to the specified output. </dd>
 <p> It is possible to specify to which streams a given bitstream filter applies, by appending a stream specifier to the option separated by <tt>&quot;/&quot;</tt>. <i>spec</i> must be a stream specifier (see <code>Format stream specifiers</code>). </p>
@@ -1882,7 +1882,7 @@ description: "ffmpeg-formats – FFmpeg formats"
 <p> <i>Examples</i></p>
 <dl>
 <dt>&bull;</dt>
-<dd> Encode something and both archive it in a WebM file and stream it as MPEG-TS over <font SIZE="-1">UDP:</font> </dd>
+<dd> Encode something and both archive it in a WebM file and stream it as MPEG-TS over UDP: </dd>
 <pre>
         ffmpeg -i ... -c:v libx264 -c:a mp2 -f tee -map 0:v -map 0:a
           &quot;archive-20121107.mkv|[f=mpegts]<a href="udp://10.0.1.255:1234/">udp://10.0.1.255:1234/</a>&quot;
@@ -1898,31 +1898,31 @@ description: "ffmpeg-formats – FFmpeg formats"
 <p>ffmpeg &#8211; i&#8230; &#8211; map 0 &#8211; flags + global_header &#8211; c : v libx264 &#8211; c : a aac &#8211; f tee &#8220;[bsfs/v=dump_extra=freq=keyframe]out.ts|[movflags=+faststart]out.mp4|[select=\&#8217;a:1\&#8217;]out.aac&#8221;
 </dl>
 <h3>webm_dash_manifest</h3>
-<p> WebM <font SIZE="-1">DASH</font> Manifest muxer. </p>
-<p> This muxer implements the WebM <font SIZE="-1">DASH</font> Manifest specification to generate the <font SIZE="-1">DASH</font> manifest <font SIZE="-1">XML.</font> It also supports manifest generation for <font SIZE="-1">DASH</font> live streams. </p>
+<p> WebM DASH Manifest muxer. </p>
+<p> This muxer implements the WebM DASH Manifest specification to generate the DASH manifest XML. It also supports manifest generation for DASH live streams. </p>
 <p> For more information see:</p>
 <dl>
 <dt>&bull;</dt>
-<dd> WebM <font SIZE="-1">DASH</font> Specification: &lt;<code><a rel="nofollow" href="https://sites.google.com/a/webmproject.org/wiki/adaptive-streaming/webm-dash-specification">https://sites.google.com/a/webmproject.org/wiki/adaptive-streaming/webm-dash-specification</a></code>&gt;</dd>
+<dd> WebM DASH Specification: &lt;<code><a rel="nofollow" href="https://sites.google.com/a/webmproject.org/wiki/adaptive-streaming/webm-dash-specification">https://sites.google.com/a/webmproject.org/wiki/adaptive-streaming/webm-dash-specification</a></code>&gt;</dd>
 <dt>&bull;</dt>
-<dd> <font SIZE="-1">ISO DASH</font> Specification: &lt;<code><a rel="nofollow" href="http://standards.iso.org/ittf/PubliclyAvailableStandards/c065274_ISO_IEC_23009-1_2014.zip">http://standards.iso.org/ittf/PubliclyAvailableStandards/c065274_ISO_IEC_23009-1_2014.zip</a></code>&gt;</dd></dl>
+<dd> ISO DASH Specification: &lt;<code><a rel="nofollow" href="http://standards.iso.org/ittf/PubliclyAvailableStandards/c065274_ISO_IEC_23009-1_2014.zip">http://standards.iso.org/ittf/PubliclyAvailableStandards/c065274_ISO_IEC_23009-1_2014.zip</a></code>&gt;</dd></dl>
 <p> <i>Options</i> </p>
 <p> This muxer supports the following options:</p>
 <dl>
 <dt><code>adaptation_sets</code></dt>
 <dd> This option has the following syntax: &#8220;id=x,streams=a,b,c id=y,streams=d,e&#8221; where x and y are the unique identifiers of the adaptation sets and a,b,c,d and e are the indices of the corresponding audio and video streams. Any number of adaptation sets can be added using this option.</dd>
 <dt><code>live</code></dt>
-<dd> Set this to 1 to create a live stream <font SIZE="-1">DASH</font> Manifest. Default: 0.</dd>
+<dd> Set this to 1 to create a live stream DASH Manifest. Default: 0.</dd>
 <dt><code>chunk_start_index</code></dt>
 <dd> Start index of the first chunk. This will go in the <code>startNumber</code> attribute of the <code>SegmentTemplate</code> element in the manifest. Default: 0.</dd>
 <dt><code>chunk_duration_ms</code></dt>
 <dd> Duration of each chunk in milliseconds. This will go in the <code>duration</code> attribute of the <code>SegmentTemplate</code> element in the manifest. Default: 1000.</dd>
 <dt><code>utc_timing_url</code></dt>
-<dd> <font SIZE="-1">URL</font> of the page that will return the <font SIZE="-1">UTC</font> timestamp in <font SIZE="-1">ISO</font> format. This will go in the <code>value</code> attribute of the <code>UTCTiming</code> element in the manifest. Default: None.</dd>
+<dd> URL of the page that will return the UTC timestamp in ISO format. This will go in the <code>value</code> attribute of the <code>UTCTiming</code> element in the manifest. Default: None.</dd>
 <dt><code>time_shift_buffer_depth</code></dt>
-<dd> Smallest time (in seconds) shifting buffer for which any Representation is guaranteed to be available. This will go in the <code>timeShiftBufferDepth</code> attribute of the <font SIZE="-1"><code>MPD</code></font> element. Default: 60.</dd>
+<dd> Smallest time (in seconds) shifting buffer for which any Representation is guaranteed to be available. This will go in the <code>timeShiftBufferDepth</code> attribute of the <code>MPD</code> element. Default: 60.</dd>
 <dt><code>minimum_update_period</code></dt>
-<dd> Minimum update period (in seconds) of the manifest. This will go in the <code>minimumUpdatePeriod</code> attribute of the <font SIZE="-1"><code>MPD</code></font> element. Default: 0.</dd></dl>
+<dd> Minimum update period (in seconds) of the manifest. This will go in the <code>minimumUpdatePeriod</code> attribute of the <code>MPD</code> element. Default: 0.</dd></dl>
 <p> <i>Example</i> </p>
 <pre>
         ffmpeg -f webm_dash_manifest -i video1.webm \
@@ -1937,7 +1937,7 @@ description: "ffmpeg-formats – FFmpeg formats"
 </pre>
 <h3>webm_chunk</h3>
 <p> WebM Live Chunk Muxer. </p>
-<p> This muxer writes out WebM headers and chunks as separate files which can be consumed by clients that support WebM Live streams via <font SIZE="-1">DASH.</font> </p>
+<p> This muxer writes out WebM headers and chunks as separate files which can be consumed by clients that support WebM Live streams via DASH. </p>
 <p> <i>Options</i> </p>
 <p> This muxer supports the following options:</p>
 <dl>
@@ -1982,7 +1982,7 @@ description: "ffmpeg-formats – FFmpeg formats"
 <dt>5.</dt>
 <dd> After global metadata there may be sections with per-stream/per-chapter metadata.</dd>
 <dt>6.</dt>
-<dd> A section starts with the section name in uppercase (i.e. <font SIZE="-1">STREAM</font> or <font SIZE="-1">CHAPTER</font>) in brackets (<code>[</code>, <code>]</code>) and ends with next section or end of file.</dd>
+<dd> A section starts with the section name in uppercase (i.e. STREAM or CHAPTER) in brackets (<code>[</code>, <code>]</code>) and ends with next section or end of file.</dd>
 <dt>7.</dt>
 <dd> At the beginning of a chapter section there may be an optional timebase to be used for start/end values. It must be in form <code>TIMEBASE=</code><i>num</i><code>/</code><i>den</i>, where <i>num</i> and <i>den</i> are integers. If the timebase is missing then start/end times are assumed to be in nanoseconds. </dd>
 <p> Next a chapter section must contain chapter start and end times in form <code>START=</code><i>num</i>, <code>END=</code><i>num</i>, where <i>num</i> is a positive integer.</p>
@@ -1991,7 +1991,7 @@ description: "ffmpeg-formats – FFmpeg formats"
 <dt>9.</dt>
 <dd> Metadata keys or values containing special characters (<code>=</code>, <code>;</code>, <code>#</code>, <code>\</code> and a newline) must be escaped with a backslash <code>\</code>.</dd>
 <dt>10.</dt>
-<dd> Note that whitespace in metadata (e.g. <code>foo = bar</code>) is considered to be a part of the tag (in the example above key is <code>foo</code> , value is<br />
+<dd> Note that whitespace in metadata (e.g. <code>foo = bar</code>) is considered to be a part of the tag (in the example above key is <code>foo</code> , value is<br/>
 &nbsp;<code>bar</code>).</dd></dl>
 <p> A ffmetadata file might look like this: </p>
 <pre><code>
@@ -2011,7 +2011,7 @@ this is a comment
 <pre>
         ffmpeg -i INPUT -f ffmetadata FFMETADATAFILE
 </pre>
-<p> Reinserting edited metadata information from the <font SIZE="-1">FFMETADATAFILE</font> file can be done as: </p>
+<p> Reinserting edited metadata information from the FFMETADATAFILE file can be done as: </p>
 <pre>
         ffmpeg -i INPUT -i FFMETADATAFILE -map_metadata 1 -codec copy OUTPUT
 </pre>
@@ -2020,4 +2020,4 @@ this is a comment
 <h2>AUTHORS</h2>
 <p> The FFmpeg developers. </p>
 <p> For details about the authorship, see the Git history of the project (<a href="git://source.ffmpeg.org/ffmpeg">git://source.ffmpeg.org/ffmpeg</a>), e.g. by typing the command <code>git log</code> in the FFmpeg source directory, or browsing the online repository at &lt;<code><a rel="nofollow" href="http://source.ffmpeg.org">http://source.ffmpeg.org</a></code>&gt;. </p>
-<p> Maintainers for the specific components are listed in the file <i></i><font SIZE="-1"><i>MAINTAINERS</i></font><i></i> in the source code tree. </p>
+<p> Maintainers for the specific components are listed in the file <i></i><i>MAINTAINERS</i><i></i> in the source code tree. </p>

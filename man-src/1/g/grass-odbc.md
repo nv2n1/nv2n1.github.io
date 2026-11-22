@@ -8,9 +8,9 @@ description: "Communication between GRASS and ODBC database for attribute manage
 ---
 
 <p>Communication between GRASS and ODBC database for attribute management: </p>
-<p> | GRASS module | | ODBC Interface | | RDBMS<br />
- | <i></i><code>GRASS</code> | <i></i><code>DBMI driver</code> | <i></i><code>unixODBC</code> | <i></i><code>ODBC driver</code> | <i></i><code>PostgreSQL</code><br />
- | <i></i><code>Oracle</code><br />
+<p> | GRASS module | | ODBC Interface | | RDBMS<br/>
+ | <i></i><code>GRASS</code> | <i></i><code>DBMI driver</code> | <i></i><code>unixODBC</code> | <i></i><code>ODBC driver</code> | <i></i><code>PostgreSQL</code><br/>
+ | <i></i><code>Oracle</code><br/>
  | <i></i><code>&#8230;</code></p>
 <h2>Supported SQL commands</h2>
 <p> All SQL commands supported by ODBC.</p>
@@ -25,7 +25,7 @@ description: "Communication between GRASS and ODBC database for attribute manage
 <p>&nbsp;<wbr>[PostgreSQL] </p>
 <p>&nbsp;<wbr>Description&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>ODBC for PostgreSQL </p>
 <p>&nbsp;<wbr>Driver&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>/usr/lib/libodbcpsql.so </p>
-<p>&nbsp;<wbr>Setup&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>/usr/lib/libodbcpsqlS.so<br />
+<p>&nbsp;<wbr>Setup&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>/usr/lib/libodbcpsqlS.so<br/>
  FileUsage = 1</p>
 <dt>
 </dt><dd>
@@ -45,35 +45,35 @@ description: "Communication between GRASS and ODBC database for attribute manage
 <p>&nbsp;<wbr>RowVersioning&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>No </p>
 <p>&nbsp;<wbr>ShowSystemTables&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>No </p>
 <p>&nbsp;<wbr>ShowOidColumn&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>No </p>
-<p>&nbsp;<wbr>FakeOidIndex&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>No<br />
+<p>&nbsp;<wbr>FakeOidIndex&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>No<br/>
  ConnSettings = Configuration of an DSN without GUI is described on <a rel="nofollow" href="http://www.unixodbc.org/odbcinst.html,">http://www.unixodbc.org/odbcinst.html,</a> but odbc.ini and .odbc.ini may be created by the &#8216;ODBCConfig&#8217; tool. You can easily view your DSN structure by &#8216;DataManager&#8217;. Configuration with GUI is described on <a rel="nofollow" href="http://www.unixodbc.org/doc/UserManual/">http://www.unixodbc.org/doc/UserManual/</a></dl>
 <p> To find out about your PostgreSQL protocol, run: </p>
 <p> psql -V </p>
 <dl>
 <dt>
-</dt><dd> Now create a new database if not yet existing:<br />
+</dt><dd> Now create a new database if not yet existing:<br/>
  db.createdb driver=odbc database=grass6test </dd>
 <dt>
-</dt><dd> Now store the table &#8216;mytable.dbf&#8217; (here: in current directory) into PostgreSQL through ODBC:<br />
- db.connect driver=odbc database=grass6test<br />
+</dt><dd> Now store the table &#8216;mytable.dbf&#8217; (here: in current directory) into PostgreSQL through ODBC:<br/>
+ db.connect driver=odbc database=grass6test<br/>
  db.copy from_driver=dbf from_database=./ from_table=mytable rs </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>to_driver=odbc to_database=grass6test to_table=mytable </p>
 <dt>
 </dt><dd>
-&nbsp;<wbr>Next link map to attribute table&nbsp;<wbr>(now the ODBC table is used, not the dbf file):<br />
+&nbsp;<wbr>Next link map to attribute table&nbsp;<wbr>(now the ODBC table is used, not the dbf file):<br/>
  v.db.connect map=mytable.shp table=mytable key=ID rs </dd>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>database=grass6test driver=odbc<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>database=grass6test driver=odbc<br/>
  v.db.connect -p </p>
 <dt>
-</dt><dd> Finally a test: Here we should see the table columns (if the ODBC connection works):<br />
- db.tables -p<br />
+</dt><dd> Finally a test: Here we should see the table columns (if the ODBC connection works):<br/>
+ db.tables -p<br/>
  db.columns table=mytable </dd>
 <p> Now the table name &#8216;mytable&#8217; should appear.</dl>
 <p> Doesn&#8217;t work? Check with &#8216;isql &#8216; if the ODBC-PostgreSQL connection is really established.</dl>
-<p> Note that you can also connect mySQL, Oracle etc. through ODBC to GRASS. You can also check the vector map itself concerning a current link to a table:<br />
- v.db.connect -p mytable.shp<br />
+<p> Note that you can also connect mySQL, Oracle etc. through ODBC to GRASS. You can also check the vector map itself concerning a current link to a table:<br/>
+ v.db.connect -p mytable.shp<br/>
  which should print the database connection through ODBC to the defined RDBMS.</p>
 <h2>SEE ALSO</h2>
 <p> <i> db.connect, v.db.connect, unixODBC web site, SQL support in GRASS GIS</i> </p>
-<p> <i>Last changed: $Date: 2007-07-18 16:10:27 +0200 (Wed, 18 Jul 2007) $</i><br />
+<p> <i>Last changed: $Date: 2007-07-18 16:10:27 +0200 (Wed, 18 Jul 2007) $</i><br/>
  Help Index </p>

@@ -13,9 +13,9 @@ description: "QuantLib::BarrierOption – Barrier option on a single asset."
 <p> Inherits <code>QuantLib::OneAssetOption</code>. </p>
 <p> Inherited by <code>DividendBarrierOption</code>, and <code>QuantoBarrierOption</code>. </p>
 <h3>Classes</h3>
-<p>class <code>arguments</code><br />
- <i>Arguments for barrier option calculation </i><br />
- class <code>engine</code><br />
+<p>class <code>arguments</code><br/>
+ <i>Arguments for barrier option calculation </i><br/>
+ class <code>engine</code><br/>
  <i>Barrier-option engine base class </i></p>
 <h3>Public Member Functions</h3>
 <p><code>BarrierOption</code> (Barrier::Type barrierType, <code>Real</code> barrier, <code>Real</code> rebate, const boost::shared_ptr&lt; <code>StrikedTypePayoff</code> &gt; &amp;payoff, const boost::shared_ptr&lt; <code>Exercise</code> &gt; &amp;exercise) </p>

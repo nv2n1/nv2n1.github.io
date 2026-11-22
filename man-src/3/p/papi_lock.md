@@ -14,7 +14,7 @@ description: "PAPI_lock –"
 <p><code>PAPI_lock()</code> grabs access to one of the two PAPI mutex variables. This function is provided to the user to have a platform independent call to a (hopefully) efficiently implemented mutex. </p>
 <p> <code>C Interface:</code></p>
 <dl COMPACT>
-<dd>#include &lt;<code>papi.h</code>&gt;<br />
+<dd>#include &lt;<code>papi.h</code>&gt;<br/>
  void <code>PAPI_lock(int lock)</code>;</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>

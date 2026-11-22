@@ -35,8 +35,8 @@ description: "nstor_lsmplugin — LibstorageMgmt nstor plugin"
 </dl>
 <h2>SUPPORTED SOFTWARE</h2>
 <p> NexentaStor 3.x is supported. Detailed support status can be queried via: </p>
-<p>&nbsp;<wbr>*&nbsp;<wbr><code>lsm.Client.capabilities()</code>&nbsp;<wbr>&nbsp;<wbr>(Python API)<br />
-&nbsp;<wbr>*&nbsp;<wbr><code>lsm_capabilities()</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(C API)<br />
+<p>&nbsp;<wbr>*&nbsp;<wbr><code>lsm.Client.capabilities()</code>&nbsp;<wbr>&nbsp;<wbr>(Python API)<br/>
+&nbsp;<wbr>*&nbsp;<wbr><code>lsm_capabilities()</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(C API)<br/>
 &nbsp;<wbr>*&nbsp;<wbr><code>lsmcli capabilities</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(lsmcli command line). </p>
 <h2>FIREWALL RULES</h2>
 <p> By default, this plugin requires the access to the nstor array&#8217;s TCP 2000 port. </p>
@@ -45,5 +45,5 @@ description: "nstor_lsmplugin — LibstorageMgmt nstor plugin"
 <h2>BUGS</h2>
 <p> Please report bugs to <i>&lt;libstoragemgmt-devel [at] lists.sourceforge.net&gt;</i> </p>
 <h2>AUTHOR</h2>
-<p> Gris Ge <i>&lt;fge [at] redhat.com&gt;</i><br />
+<p> Gris Ge <i>&lt;fge [at] redhat.com&gt;</i><br/>
  Tony Asleson <i>&lt;tasleson [at] redhat.com&gt;</i> </p>

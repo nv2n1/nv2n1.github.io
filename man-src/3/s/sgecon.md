@@ -11,7 +11,7 @@ description: "sgecon.f –"
 <p> sgecon.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>sgecon</code> (NORM, N, A, LDA, ANORM, RCOND, WORK, IWORK, INFO)<br />
+<p> subroutine <code>sgecon</code> (NORM, N, A, LDA, ANORM, RCOND, WORK, IWORK, INFO)<br/>
  <i></i><code>SGECON</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sgecon (characterNORM, integerN, real, dimension( lda, * )A, integerLDA, realANORM, realRCOND, real, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>

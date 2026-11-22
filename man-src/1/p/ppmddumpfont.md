@@ -15,7 +15,7 @@ description: "ppmddumpfont – dump a Ppmdfont file"
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>ppmddumpfont</code> reads a Ppmdfont file on Standard Input and writes to Standard Error a human readable description of the font. </p>
 <p> (There are no arguments or options) </p>
-<p> See <code>Libnetpbm</code>PPM<code>Drawing</code>Function Manual (1)<br />
+<p> See <code>Libnetpbm</code>PPM<code>Drawing</code>Function Manual (1)<br/>
 &nbsp;<wbr>for details on Ppmdfont files. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ppmdraw/">ppmdraw</a></code>(1) , <code><a href="/docs/linux/man/1-ppmdmkfont/">ppmdmkfont</a></code>(1) , <code><a href="/docs/linux/man/1-ppmdcfont/">ppmdcfont</a></code>(1) , <code>Libnetpbm</code>PPM<code>Drawing</code>Function<code>Manual</code>(1) </p>

@@ -14,23 +14,23 @@ description: "gammurc – gammu(1) configuration file"
 <p><a href="/docs/linux/man/1-gammu/">gammu</a>(1) reads configuration from a config file. It&#8217;s location is determined on runtime. On Unix systems, it first tries ~/.gammurc and then falls back to /etc/gammurc. On Windows, user configuration is tried at profile/Application Data/gammurc and then gammu falls back to current directory (./gammurc). This file use ini file syntax, with comments being marked with both ; and #. Sections of config file are identified in square brackets line [this]. All key values are case insensitive. Configuration file for gammu can contain several sections &#8211; [gammu], [gammu1], [gammuN], &#8230; Each section configures one connection setup and in default mode gammu tries all of them in numerical order. You can also specify which configuration section to use by giving it&#8217;s number ([gammu] has number 0) as a parameter to <a href="/docs/linux/man/1-gammu/">gammu</a>(1) and it will then use only this section.</p>
 <dl>
 <dt><code>Connection</code></dt>
-<dd>Protocol which will be used to talk to your phone. For Nokia cables you want to use one of following: <code>fbus</code> &#8211; serial FBUS connection<br />
- <code>fbususb</code> &#8211; FBUS over USB cable (experimental, for Nokia cables on Linux, including DKU-2)<br />
- <code>dlr3</code> &#8211; DLR-3 and compatible cables<br />
- <code>dku2</code> &#8211; DKU-2 and compatible cables<br />
- <code>dku5</code> &#8211; DKU-5 and compatible cables<br />
- <code>mbus</code> &#8211; serial MBUS connection If you use some non original cable, you might need to append -nodtr (eg. for ARK3116 based cables) or -nopower, but Gammu should be able to detect this automatically. For non-Nokia phones connected using cable you generally want: <code>at</code> &#8211; generic AT commands based connection You can optionally specify speed of the connection, eg. at19200, but it is not needed for modern USB cables. For IrDA connections use one of following: <code>irdaphonet</code> &#8211; Phonet connection for Nokia phones.<br />
- <code>irdaat</code> &#8211; AT commands connection for most of phones (this is not supported on Linux).<br />
- <code>irdaobex</code> &#8211; OBEX (IrMC or file transfer) connection for most of phones.<br />
- <code>irdagnapbus</code> &#8211; GNapplet based connection for Symbian phones For Bluetooth connection use one of following: <code>bluephonet</code> &#8211; Phonet connection for Nokia phones.<br />
- <code>blueat</code> &#8211; AT commands connection for most of phones.<br />
- <code>blueobex</code> &#8211; OBEX (IrMC or file transfer) connection for most of phones.<br />
+<dd>Protocol which will be used to talk to your phone. For Nokia cables you want to use one of following: <code>fbus</code> &#8211; serial FBUS connection<br/>
+ <code>fbususb</code> &#8211; FBUS over USB cable (experimental, for Nokia cables on Linux, including DKU-2)<br/>
+ <code>dlr3</code> &#8211; DLR-3 and compatible cables<br/>
+ <code>dku2</code> &#8211; DKU-2 and compatible cables<br/>
+ <code>dku5</code> &#8211; DKU-5 and compatible cables<br/>
+ <code>mbus</code> &#8211; serial MBUS connection If you use some non original cable, you might need to append -nodtr (eg. for ARK3116 based cables) or -nopower, but Gammu should be able to detect this automatically. For non-Nokia phones connected using cable you generally want: <code>at</code> &#8211; generic AT commands based connection You can optionally specify speed of the connection, eg. at19200, but it is not needed for modern USB cables. For IrDA connections use one of following: <code>irdaphonet</code> &#8211; Phonet connection for Nokia phones.<br/>
+ <code>irdaat</code> &#8211; AT commands connection for most of phones (this is not supported on Linux).<br/>
+ <code>irdaobex</code> &#8211; OBEX (IrMC or file transfer) connection for most of phones.<br/>
+ <code>irdagnapbus</code> &#8211; GNapplet based connection for Symbian phones For Bluetooth connection use one of following: <code>bluephonet</code> &#8211; Phonet connection for Nokia phones.<br/>
+ <code>blueat</code> &#8211; AT commands connection for most of phones.<br/>
+ <code>blueobex</code> &#8211; OBEX (IrMC or file transfer) connection for most of phones.<br/>
  <code>bluerfgnapbus</code> &#8211; GNapplet based connection for Symbian phones</dd>
 <dt><code>Port</code></dt>
 <dd>Device node or address of phone. It depends on used connection. For cables or emulated serial ports, you enter device name (for example /dev/ttyS0, /dev/ttyACM0, /dev/ircomm0, /dev/rfcomm0 on Linux, /dev/cuad0 on FreeBSD or COM1: on Windows). The special exception are DKU-2 and DKU-5 cables on Windows, where the device is automatically detected from driver information and this parameters is ignored. For Bluetooth connection you have to enter Bluetooth address of your phone (you can list Bluetooth devices in range on Linux using &quot;hcitool scan&quot; command). Optionally you can also force Gammu to use specified channel by includig channel number after slash. Before using Gammu, your device should be paired with computer or you should have set up automatic pairing. For IrDA connections, this parameters is not used at all. If IrDA does not work on Linux, you might need to bring up the interface and enable discovery (you need to run these commands as root): </dd>
 <dt><code>Model</code></dt>
-<dd>Do not use this parameter unless really needed! The only use case for this is when Gammu does not know your phone and misdetects it&#8217;s features. The only special case for using model is to force special type of OBEX connection instead of letting Gammu try the best suited for selected operation: <code>obexfs</code> &#8211; force using of file browsing service (file system support)<br />
- <code>obexirmc</code> &#8211; force using of IrMC service (contacts, calendar and notes support)<br />
+<dd>Do not use this parameter unless really needed! The only use case for this is when Gammu does not know your phone and misdetects it&#8217;s features. The only special case for using model is to force special type of OBEX connection instead of letting Gammu try the best suited for selected operation: <code>obexfs</code> &#8211; force using of file browsing service (file system support)<br/>
+ <code>obexirmc</code> &#8211; force using of IrMC service (contacts, calendar and notes support)<br/>
  <code>obexnone</code> &#8211; none service chosen, this has only limited use for sending file (<code>sendfile</code> command)</dd>
 <dt><code>SynchronizeTime</code></dt>
 <dd>If you want to set time from computer to phone during starting connection.</dd>
@@ -43,12 +43,12 @@ description: "gammurc – gammu(1) configuration file"
 <dt><code>LogFile</code></dt>
 <dd>Path to file where information about communication will be stored.</dd>
 <dt><code>LogFormat</code></dt>
-<dd>Determines what all will be logged to LogFile. Possible values are: <code>nothing</code> &#8211; no debug level<br />
- <code>text</code> &#8211; transmission dump in text format<br />
- <code>textall</code> &#8211; all possible info in text format<br />
- <code>textalldate</code> &#8211; all possible info in text format, with time stamp<br />
- <code>errors</code> &#8211; errors in text format<br />
- <code>errorsdate</code> &#8211; errors in text format, with time stamp<br />
+<dd>Determines what all will be logged to LogFile. Possible values are: <code>nothing</code> &#8211; no debug level<br/>
+ <code>text</code> &#8211; transmission dump in text format<br/>
+ <code>textall</code> &#8211; all possible info in text format<br/>
+ <code>textalldate</code> &#8211; all possible info in text format, with time stamp<br/>
+ <code>errors</code> &#8211; errors in text format<br/>
+ <code>errorsdate</code> &#8211; errors in text format, with time stamp<br/>
  <code>binary</code> &#8211; transmission dump in binary format For debugging use either <code>textalldate</code> or <code>textall</code>, it contains all needed information to diagnose problems.</dd>
 <dt><code>Features</code></dt>
 <dd>Custom features for phone. This can be used as override when values coded in common/gsmphones.c are bad or missing. Consult include/gammu-info.h for possible values (all GSM_Feature values without leading F_ prefix). Please report correct values to Gammu authors.</dd>
@@ -76,7 +76,7 @@ connection = blueat</pre>
 <h2>Author</h2>
 <p>gammu-smsd and this manual page were written by Michal Cihar &lt;michal [at] cihar.com&gt;.</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2009 Michal Cihar and other authors. License GPLv2: GNU GPL version 2 &lt;<a rel="nofollow" href="http://www.gnu.org/licenses/old-licenses/gpl-2.0.html">http://www.gnu.org/licenses/old-licenses/gpl-2.0.html</a>&gt;<br />
+<p>Copyright &#169; 2009 Michal Cihar and other authors. License GPLv2: GNU GPL version 2 &lt;<a rel="nofollow" href="http://www.gnu.org/licenses/old-licenses/gpl-2.0.html">http://www.gnu.org/licenses/old-licenses/gpl-2.0.html</a>&gt;<br/>
  This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.</p>
 <h2>Reporting Bugs</h2>
 <p>Please report bugs to &lt;<a rel="nofollow" href="http://bugs.cihar.com">http://bugs.cihar.com</a>&gt;.</p>

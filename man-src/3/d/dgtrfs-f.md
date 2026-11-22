@@ -10,7 +10,7 @@ description: "dgtrfs.f –"
 <p>dgtrfs.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dgtrfs</code> (TRANS, N, NRHS, DL, D, DU, DLF, DF, DUF, DU2, IPIV, B, LDB, X, LDX, FERR, BERR, WORK, IWORK, INFO)<br />
+<p> subroutine <code>dgtrfs</code> (TRANS, N, NRHS, DL, D, DU, DLF, DF, DUF, DU2, IPIV, B, LDB, X, LDX, FERR, BERR, WORK, IWORK, INFO)<br/>
  <i></i><code>DGTRFS</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dgtrfs (characterTRANS, integerN, integerNRHS, double precision, dimension( * )DL, double precision, dimension( * )D, double precision, dimension( * )DU, double precision, dimension( * )DLF, double precision, dimension( * )DF, double precision, dimension( * )DUF, double precision, dimension( * )DU2, integer, dimension( * )IPIV, double precision, dimension( ldb, * )B, integerLDB, double precision, dimension( ldx, * )X, integerLDX, double precision, dimension( * )FERR, double precision, dimension( * )BERR, double precision, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>

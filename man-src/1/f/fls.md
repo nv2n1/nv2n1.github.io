@@ -29,7 +29,7 @@ description: "fls – List file and directory names in a disk image."
 <dd> Display file details in long format. The following contents are displayed: </dd>
 <p> file_type inode file_name mod_time acc_time chg_time cre_time size uid gid</p>
 <dt>-m mnt</dt>
-<dd> Display files in time machine format so that a timeline can be<br />
+<dd> Display files in time machine format so that a timeline can be<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;created with&nbsp;<a href="/docs/linux/man/1-mactime/">mactime</a>(1).&nbsp;<wbr>&nbsp; The string given as <i>mnt</i> will be prepended to the file names as the mounting point (for example /usr).</dd>
 <dt>-p</dt>
 <dd> Display the full path for each entry. By default it denotes the directory depth on recursive runs with a &#8216;+&#8217; sign.</dd>

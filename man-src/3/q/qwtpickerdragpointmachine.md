@@ -13,9 +13,9 @@ description: "QwtPickerDragPointMachine –"
 <p>#include &lt;qwt_picker_machine.h&gt; </p>
 <p> Inherits <code>QwtPickerMachine</code>.</p>
 <h3>Public Member Functions</h3>
-<p><code>QwtPickerDragPointMachine</code> ()<br />
- <i>Constructor. </i><br />
- virtual QList&lt; <code>Command</code> &gt; <code>transition</code> (const <code>QwtEventPattern</code> &amp;, const QEvent *)<br />
+<p><code>QwtPickerDragPointMachine</code> ()<br/>
+ <i>Constructor. </i><br/>
+ virtual QList&lt; <code>Command</code> &gt; <code>transition</code> (const <code>QwtEventPattern</code> &amp;, const QEvent *)<br/>
  <i>Transition. </i></p>
 <h3>Additional Inherited Members</h3>
 <h2>Detailed Description</h2>

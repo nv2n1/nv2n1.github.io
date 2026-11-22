@@ -32,7 +32,7 @@ description: "aplaymidi – play Standard MIDI Files"
 <h2>BUGS</h2>
 <p> <code>aplaymidi</code> handles &quot;Port Number&quot; meta events, but not &quot;Port Name&quot; meta events. </p>
 <h2>SEE ALSO</h2>
-<p> pmidi(1)<br />
+<p> pmidi(1)<br/>
  playmidi(1) </p>
 <h2>AUTHOR</h2>
 <p> Clemens Ladisch &lt;clemens [at] ladisch.de&gt; </p>

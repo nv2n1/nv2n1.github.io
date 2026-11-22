@@ -10,7 +10,7 @@ description: "zsytrs_rook.f –"
 <p>zsytrs_rook.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zsytrs_rook</code> (UPLO, N, NRHS, A, LDA, IPIV, B, LDB, INFO)<br />
+<p>subroutine <code>zsytrs_rook</code> (UPLO, N, NRHS, A, LDA, IPIV, B, LDB, INFO)<br/>
  <i></i><code>ZSYTRS_ROOK</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zsytrs_rook (characterUPLO, integerN, integerNRHS, complex*16, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, complex*16, dimension( ldb, * )B, integerLDB, integerINFO)</h3>

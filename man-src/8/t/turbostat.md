@@ -9,7 +9,7 @@ description: "turbostat – Report processor frequency and idle statistics"
 
 <p>turbostat &#8211; Report processor frequency and idle statistics</p>
 <h2>Synopsis</h2>
-<p><code> turbostat</code> [<code>Options</code>] command<br />
+<p><code> turbostat</code> [<code>Options</code>] command<br/>
  <code>turbostat</code> [<code>Options</code>] [<code>&#8211;interval seconds</code>]</p>
 <h2>Description</h2>
 <p><code>turbostat </code> reports processor topology, frequency, idle power-state statistics, temperature and power on X86 processors. There are two ways to invoke turbostat. The first method is to supply a <code>command</code>, which is forked and statistics are printed upon its completion. The second method is to omit the command, and turbostat displays statistics every 5 seconds. The 5-second interval can be changed using the &#8211;interval option. Some information is not available on older processors.</p>

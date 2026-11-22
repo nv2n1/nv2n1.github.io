@@ -29,12 +29,12 @@ description: "icns2png – convert Mac OS icns files to png images"
 <dd> Displays this help message.</dd>
 <dt> <code>-v</code>, <code>&#8211;version</code> Displays the version information</dt></dl>
 <h2>EXAMPLES</h2>
-<dd>icns2png <code>-x</code> anicon.icns # Extract all icon found in anicon.icns<br />
- icns2png <code>-x</code> <code>-s</code> 48 anicon.icns # Extract all 48&#215;48 32-bit icons<br />
- icns2png <code>-x</code> <code>-s</code> 32 <code>-d</code> 1 anicon.icns # Extract all 32&#215;32 1-bit icons<br />
+<dd>icns2png <code>-x</code> anicon.icns # Extract all icon found in anicon.icns<br/>
+ icns2png <code>-x</code> <code>-s</code> 48 anicon.icns # Extract all 48&#215;48 32-bit icons<br/>
+ icns2png <code>-x</code> <code>-s</code> 32 <code>-d</code> 1 anicon.icns # Extract all 32&#215;32 1-bit icons<br/>
  icns2png <code>-l</code> anicon.icns # Lists the icons contained in anicon.icns</dd>
 <h2>AUTHOR</h2>
 <p> Written by Mathew Eis</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2001-2008 Mathew Eis<br />
+<p> Copyright &#169; 2001-2008 Mathew Eis<br/>
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>

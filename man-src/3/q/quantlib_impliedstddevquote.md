@@ -14,9 +14,9 @@ description: "QuantLib::ImpliedStdDevQuote – quote for the implied standard de
 <h3>Public Member Functions</h3>
 <p><code>ImpliedStdDevQuote</code> (Option::Type optionType, const <code>Handle</code>&lt; <code>Quote</code> &gt; &amp;forward, const <code>Handle</code>&lt; <code>Quote</code> &gt; &amp;price, <code>Real</code> strike, <code>Real</code> guess, <code>Real</code> accuracy=1.0e-6, Natural maxIter=100) </p>
 <p> <code>Quote interface</code> </p>
-<p> <code>Real</code> <code>value</code> () const<br />
- <i>returns the current value </i><br />
- bool <code>isValid</code> () const<br />
+<p> <code>Real</code> <code>value</code> () const<br/>
+ <i>returns the current value </i><br/>
+ bool <code>isValid</code> () const<br/>
  <i>returns true if the </i><code>Quote</code> holds a valid value</p>
 <h3>Protected Member Functions</h3>
 <p>void <code>performCalculations</code> () const </p>

@@ -9,16 +9,16 @@ description: "ettercap NG-0.7.3 – Man page for the Ncurses GUI."
 
 <p><code>ettercap NG-0.7.3 &#8211; Man page for the Ncurses GUI.</code> </p>
 <h2>General Description</h2>
-<p>The curses GUI is quite simple and intuitive.<br />
+<p>The curses GUI is quite simple and intuitive.<br/>
  It is menu-driven. Every flag or function can be modified/called through the upper menu. All user messages are printed in the bottom window. If you want to see the old messages, you can scroll the window buffer by pressing the UP, DOWN, PPAGE, NPAGE keys. The middle part is used to display information or dialogs for the user. </p>
 <p> The menus can be opened by pressing the relative hotkey. For the menus the hotkey is represented by the uppercase initial letter of the title (e.g. &#8216;S&#8217; for Sniffing, &#8216;T&#8217; for Targets). The functions within a menu can be called by pressing the hotkey depicted near the function name on the right. Hotkeys prefixed with &#8216;C-&#8216; are to be used in conjunction with the CTRL key (e.g. &#8216;C-f&#8217; means CTRL+f). </p>
 <p> You can switch the focus between the objects on the screen by pressing the TAB key or by clicking on it with the mouse (if you are running ettercap within an xterm). Mouse events are supported only through the xterm. You can use the mouse to select objects, open a menu, choose a function, scroll the elevators for the scrolling windows, etc etc. </p>
-<p> When you open multiple windows in the middle part, they will overlap. Use the TAB key to switch between them. Use CTRL+Q to close the focused window.<br />
+<p> When you open multiple windows in the middle part, they will overlap. Use the TAB key to switch between them. Use CTRL+Q to close the focused window.<br/>
  You can also use CTRL+Q to close the input dialog if you want to cancel the requested input. (i.e. you have selected the wrong function and you want to go back). </p>
 <p> To have a quick help on the shortcuts you can use against a particular window press the SPACE key. A help window will be displayed with a list of shortcuts that can be used. If the window does not appear, no shortcuts are available.</p>
 <h2>How To Select It</h2>
 <p>To use the ncurses GUI you have to: </p>
-<p> &#8211; compile ettercap with ncurses support (obviously)<br />
+<p> &#8211; compile ettercap with ncurses support (obviously)<br/>
  &#8211; run it with the -C flag </p>
 <p> Passing the -C flag is sufficient, but if you want you can pass other flags that will be automatically set for the ncurses GUI. You will be able to override them using the menu to change the options.</p>
 <h2>Once Started</h2>
@@ -44,12 +44,12 @@ description: "ettercap NG-0.7.3 – Man page for the Ncurses GUI."
 <dd>
 </dd><dl>
 <dt><code>Unified sniffing&#8230; </code></dt>
-<dd>Choosing this function you will be prompted to select the network interface to be used for sniffing. The first up and running interface is suggested in the input box. For an explanation of what unified sniffing is, refer to <a href="/docs/linux/man/8-ettercap/">ettercap</a>(8).<br />
+<dd>Choosing this function you will be prompted to select the network interface to be used for sniffing. The first up and running interface is suggested in the input box. For an explanation of what unified sniffing is, refer to <a href="/docs/linux/man/8-ettercap/">ettercap</a>(8).<br/>
  TIP: if you use the &#8216;u&#8217; hotkey, this step will be skipped and the default interface is automatically selected.</dd>
 <dt><code>Bridged sniffing&#8230; </code></dt>
 <dd>After selecting the two interfaces to be used, you will enter the Bridged sniffing mode. For an explanation of what bridged sniffing is, refer to <a href="/docs/linux/man/8-ettercap/">ettercap</a>(8).</dd>
 <dt><code>Set pcap filter&#8230;</code></dt>
-<dd>Here you can insert a tcpdump-like filter for the capturing process.<br />
+<dd>Here you can insert a tcpdump-like filter for the capturing process.<br/>
  IMPORTANT: if you manage to use a mitm attack, remember that if ettercap does not see a packet, it will NOT be forwarded. So be sure of what you are doing by setting a pcap filter.</dd></dl>
 </dl>
 <dt><code>Options</code></dt>
@@ -66,7 +66,7 @@ description: "ettercap NG-0.7.3 – Man page for the Ncurses GUI."
 </dl>
 </dl>
 <h2>The Interesting Part</h2>
-<p>Once you have selected an offline sniffing or a live capture, the upper menu is modified and you can start to do the interesting things&#8230;<br />
+<p>Once you have selected an offline sniffing or a live capture, the upper menu is modified and you can start to do the interesting things&#8230;<br/>
  Some of the following menu are only available in live capture. </p>
 <dl>
 <dt><code>Start</code></dt>
@@ -103,7 +103,7 @@ description: "ettercap NG-0.7.3 – Man page for the Ncurses GUI."
 <dd>
 </dd><dl>
 <dt><code>Hosts list</code></dt>
-<dd>Displays the list of hosts detected through an ARP scan or converted from the passive profiles. This list is used by MITM attacks when the ANY target is selected, so if you want to exclude a host from the attack, simply delete it from the list.<br />
+<dd>Displays the list of hosts detected through an ARP scan or converted from the passive profiles. This list is used by MITM attacks when the ANY target is selected, so if you want to exclude a host from the attack, simply delete it from the list.<br/>
  You can remove a host from the list by pressing &#8216;d&#8217;, add it to TARGET1 by pressing &#8216;1&#8217; or add it to TARGET2 by pressing &#8216;2&#8217;.</dd>
 <dt><code>Scan for hosts</code></dt>
 <dd>Perform the ARP scan of the netmask if no TARGETS are selected. If TARGETS was specified it only scans for those hosts.</dd>
@@ -118,11 +118,11 @@ description: "ettercap NG-0.7.3 – Man page for the Ncurses GUI."
 <dd>
 </dd><dl>
 <dt><code>Connections</code></dt>
-<dd>Displays the connection list. To see detailed information about a connection press &#8216;d&#8217;, or press &#8216;k&#8217; to kill it. To see the traffic for a specific connection, select it and press enter. Once the two-panel interface is displayed you can move the focus with the arrow keys. Press &#8216;j&#8217; to switch between joined and splitted visualization. Press &#8216;k&#8217; to kill the connection. Press &#8216;y&#8217; to inject interactively and &#8216;Y&#8217; to inject a file. Note that it is important which panel has the focus as the injected data will be sent to that address.<br />
+<dd>Displays the connection list. To see detailed information about a connection press &#8216;d&#8217;, or press &#8216;k&#8217; to kill it. To see the traffic for a specific connection, select it and press enter. Once the two-panel interface is displayed you can move the focus with the arrow keys. Press &#8216;j&#8217; to switch between joined and splitted visualization. Press &#8216;k&#8217; to kill the connection. Press &#8216;y&#8217; to inject interactively and &#8216;Y&#8217; to inject a file. Note that it is important which panel has the focus as the injected data will be sent to that address.<br/>
  HINT: connections marked with an asterisk contain account(s) information.</dd>
 <dt><code>Profiles</code></dt>
-<dd>Diplays the passive profile hosts list. Selecting a host will display the relative details (including account with user and pass for that host).<br />
- You can convert the passive profile list into the hosts list by pressing &#8216;c&#8217;. To purge remote hosts, press &#8216;l&#8217;. To purge local hosts, press &#8216;r&#8217;. You can also dump the current profile to a file by pressing &#8216;d&#8217;; the dumped file can be opened with <a href="/docs/linux/man/8-etterlog/">etterlog</a>(8).<br />
+<dd>Diplays the passive profile hosts list. Selecting a host will display the relative details (including account with user and pass for that host).<br/>
+ You can convert the passive profile list into the hosts list by pressing &#8216;c&#8217;. To purge remote hosts, press &#8216;l&#8217;. To purge local hosts, press &#8216;r&#8217;. You can also dump the current profile to a file by pressing &#8216;d&#8217;; the dumped file can be opened with <a href="/docs/linux/man/8-etterlog/">etterlog</a>(8).<br/>
  HINT: profiles marked with an asterisk contain account(s) information.</dd>
 <dt><code>Statistics</code></dt>
 <dd>Displays some statistics about the sniffing process.</dd>

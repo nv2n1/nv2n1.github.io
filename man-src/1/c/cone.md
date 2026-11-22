@@ -19,7 +19,7 @@ description: "cone – Read and send E-mail messages"
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> Connections to remote mail servers may be disconnected for inactivity if Cone remains suspended for a prolonged period of time. When suspended, Cone cannot maintain any active connections to remote mail servers. </p>
 </dl>
 <p> The <code>-c</code> option names a directory where Cone saves its configuration files, and defaults to $HOME/.cone. The configuration directory will be created, if necessary. </p>
@@ -31,14 +31,14 @@ description: "cone – Read and send E-mail messages"
 <h3>Viewing MIME attachments</h3>
 <p> Cone displays text and simple HTML content by itself. Other kinds of attachments may be viewed by using a helper script. Cone invokes a helper script to open a MIME attachment. The helper script&#8217;s name is &#8220;<i>TYPE</i>.<i>SUBTYPE</i>.filter&#8221;, where &#8220;TYPE&#8221; and &#8220;SUBTYPE&#8221; corresponds to the MIME type and subtype, accordingly. Cone looks for helper scripts in $HOME/.cone (or the directory specified by <code>-c</code>) and in /usr/share/cone. </p>
 <p> For example, a helper script named &#8220;IMAGE.GIF.filter&#8221;, if installed, is invoked to process image/gif MIME attachments. </p>
-<p> <font SIZE="+1"> <code>Helper scripts</code></p>
+<p>  <code>Helper scripts</code></p>
 <dl>
 <dt>
 </dt><dd>
 <p> Cone runs each helper script twice: </p>
 </dd><dl>
 <dt>
-</dt><dd> </font></dd>
+</dt><dd> </dd>
 <pre>
 TYPE.SUBTYPE.filter check <i>type/subtype</i>
 </pre>
@@ -56,14 +56,14 @@ TYPE.SUBTYPE.filter filter <i>type/subtype</i> <i>filename</i>
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> This is a temporary file, whose extension will not necessary be the file extension associated with this MIME type. </p>
 </dl>
 <p> The helper script should read and process the file specified by the third argument. Cone interprets anything the helper script writes to standard output as HTML. </p>
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> Cone waits until the helper script terminates before displaying the rest of the message. Most helper scripts should run in the background. However, note that Cone removes the temporary file when the original message is closed; the temporary file may be removed any time after the helper script terminates. The helper script should make its own private copy of the file, if necessary. </p>
 </dl>
 </dl>
@@ -73,7 +73,7 @@ TYPE.SUBTYPE.filter filter <i>type/subtype</i> <i>filename</i>
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> Cone also looks <i>method</i>.handler in $HOME/.cone (or the directory specified by <code>-c</code>) in addition to /usr/share/cone. </p>
 </dl>
 <h2>FILES</h2>

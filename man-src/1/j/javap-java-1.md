@@ -48,16 +48,16 @@ class DocFooter extends Applet
 }
 </code></pre>
 <p> The output from <code>javap DocFooter.class</code> yields: </p>
-<p>Compiled from &#8220;DocFooter.java&#8221; public class DocFooter extends java.applet.Applet<br />
-{<br />
-    java.lang.String date;<br />
-    java.lang.String email;<br />
-  public<br />
-    DocFooter();<br />
-  public<br />
-    void init();<br />
-  public<br />
-    void paint(java.awt.Graphics);<br />
+<p>Compiled from &#8220;DocFooter.java&#8221; public class DocFooter extends java.applet.Applet<br/>
+{<br/>
+    java.lang.String date;<br/>
+    java.lang.String email;<br/>
+  public<br/>
+    DocFooter();<br/>
+  public<br/>
+    void init();<br/>
+  public<br/>
+    void paint(java.awt.Graphics);<br/>
 }</p>
 <p> The output from <code>javap -c DocFooter.class</code> yields: </p>
 <pre><code>

@@ -13,9 +13,9 @@ description: "ck_cohort – generalized interface for lock cohorts"
 <p> Concurrency Kit (libck, -lck)</p>
 <h2>SYNOPSIS</h2>
 <p> In ck_cohort.h Fn CK_COHORT_PROTOTYPE COHORT_NAME cohort_name LOCK_FXN global_lock_method LOCK_FXN global_unlock_method LOCK_FXN local_lock_method LOCK_FXN local_unlock_method Fn CK_COHORT_TRYLOCK_PROTOTYPE COHORT_NAME cohort_name LOCK_FXN global_lock_method LOCK_FXN global_unlock_method BOOL_LOCK_FXN global_locked_method BOOL_LOCK_FXN global_trylock_method LOCK_FXN local_lock_method LOCK_FXN local_unlock_method BOOL_LOCK_FXN local_locked_method BOOL_LOCK_FXN local_trylock_method Fn CK_COHORT_INSTANCE COHORT_NAME cohort_name Fn CK_COHORT_INIT COHORT_NAME cohort_name ck_cohort *cohort void *global_lock void *local_lock unsigned int pass_limit Fn CK_COHORT_LOCK COHORT_NAME cohort_name ck_cohort *cohort void *global_context void *local_context Fn CK_COHORT_UNLOCK COHORT_NAME cohort_name ck_cohort *cohort void *global_context void *local_context </p>
-<p> Where LOCK_FXN refers to a method with the signature<br />
- void(void *lock, void *context)<br />
- BOOL_LOCK_FXN refers to a method with the signature<br />
+<p> Where LOCK_FXN refers to a method with the signature<br/>
+ void(void *lock, void *context)<br/>
+ BOOL_LOCK_FXN refers to a method with the signature<br/>
  bool(void *lock, void *context) </p>
 <p> The Fa context argument in each signature is used to pass along any additional information that the lock might need for its lock, unlock and trylock methods. The values for this argument are provided to each call to CK_COHORT_LOCK3, CK_COHORT_UNLOCK3, CK_COHORT_LOCKED3, and CK_COHORT_TRYLOCK3</p>
 <h2>DESCRIPTION</h2>

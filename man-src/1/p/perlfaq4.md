@@ -12,7 +12,7 @@ description: "perlfaq4 – Data Manipulation"
 <h2>VERSION</h2>
 <p> version 5.20190126  </p>
 <h2>DESCRIPTION</h2>
-<p> This section of the <font SIZE="-1">FAQ</font> answers questions related to manipulating numbers, dates, strings, arrays, hashes, and miscellaneous data issues.  </p>
+<p> This section of the FAQ answers questions related to manipulating numbers, dates, strings, arrays, hashes, and miscellaneous data issues.  </p>
 <h2>Data: Numbers</h2>
 <h3>Why am I getting long decimals (eg, 19.9499999999999) instead of the numbers I should be getting (eg, 19.95)?</h3>
 <p> For the long explanation, see David Goldberg&#8217;s ``What Every Computer Scientist Should Know About Floating-Point Arithmetic&#8217;&#8216; (&lt;<a rel="nofollow" href="http://web.cse.msu.edu/~cse320/Documents/FloatingPoint.pdf">http://web.cse.msu.edu/~cse320/Documents/FloatingPoint.pdf</a>&gt;). </p>
@@ -54,7 +54,7 @@ description: "perlfaq4 – Data Manipulation"
 <p> Remember that <code>&quot;int()&quot;</code> merely truncates toward 0. For rounding to a certain number of digits, <code>&quot;sprintf()&quot;</code> or <code>&quot;printf()&quot;</code> is usually the easiest route. </p>
 <pre><code>    printf(&quot;%.3f&quot;, 3.1415926535); # prints 3.142
 </code></pre>
-<p> The <font SIZE="-1">POSIX</font> module (part of the standard Perl distribution) implements <code>&quot;ceil()&quot;</code>, <code>&quot;floor()&quot;</code>, and a number of other mathematical and trigonometric functions. </p>
+<p> The POSIX module (part of the standard Perl distribution) implements <code>&quot;ceil()&quot;</code>, <code>&quot;floor()&quot;</code>, and a number of other mathematical and trigonometric functions. </p>
 <pre><code>    use POSIX;
     my $ceil = ceil(3.5); # 4
     my $floor = floor(3.5); # 3
@@ -65,10 +65,10 @@ description: "perlfaq4 – Data Manipulation"
 <pre><code>    for (my $i = -5; $i &lt;= 5; $i += 0.5) { printf &quot;%.0f &quot;,$i }
     -5 -4 -4 -4 -3 -2 -2 -2 -1 -0 0 0 1 2 2 2 3 4 4 4 5
 </code></pre>
-<p> Don&#8217;t blame Perl. It&#8217;s the same as in C. <font SIZE="-1">IEEE</font> says we have to do this. Perl numbers whose absolute values are integers under 2**31 (on 32-bit machines) will work pretty much like mathematical integers. Other numbers are not guaranteed.  </p>
+<p> Don&#8217;t blame Perl. It&#8217;s the same as in C. IEEE says we have to do this. Perl numbers whose absolute values are integers under 2**31 (on 32-bit machines) will work pretty much like mathematical integers. Other numbers are not guaranteed.  </p>
 <h3>How do I convert between numeric representations/bases/radixes?</h3>
 <p> As always with Perl there is more than one way to do it. Below are a few examples of approaches to making common conversions between number representations. This is intended to be representational rather than exhaustive. </p>
-<p> Some of the examples later in perlfaq4 use the Bit::Vector module from <font SIZE="-1">CPAN.</font> The reason you might choose Bit::Vector over the perl built-in functions is that it works with numbers of <font SIZE="-1">ANY</font> size, that it is optimized for speed on some operations, and for at least some programmers the notation might be familiar. </p>
+<p> Some of the examples later in perlfaq4 use the Bit::Vector module from CPAN. The reason you might choose Bit::Vector over the perl built-in functions is that it works with numbers of ANY size, that it is optimized for speed on some operations, and for at least some programmers the notation might be familiar. </p>
 <dl>
 <dt>How do I convert hexadecimal into decimal</dt>
 <dd> <p> Using perl&#8217;s built in conversion of <code>&quot;0x&quot;</code> notation: </p>
@@ -80,7 +80,7 @@ description: "perlfaq4 – Data Manipulation"
 <p> Using <code>&quot;pack&quot;</code>: </p>
 <pre><code>    my $dec = unpack(&quot;N&quot;, pack(&quot;H8&quot;, substr(&quot;0&quot; x 8 . &quot;DEADBEEF&quot;, -8)));
 </code></pre>
-<p> Using the <font SIZE="-1">CPAN</font> module <code>&quot;Bit::Vector&quot;</code>: </p>
+<p> Using the CPAN module <code>&quot;Bit::Vector&quot;</code>: </p>
 <pre><code>    use Bit::Vector;
     my $vec = Bit::Vector-&gt;new_Hex(32, &quot;DEADBEEF&quot;);
     my $dec = $vec-&gt;to_Dec();
@@ -180,7 +180,7 @@ description: "perlfaq4 – Data Manipulation"
     }
 </code></pre>
 <h3>How do I multiply matrices?</h3>
-<p> Use the Math::Matrix or Math::MatrixReal modules (available from <font SIZE="-1">CPAN</font>) or the <font SIZE="-1">PDL</font> extension (also available from <font SIZE="-1">CPAN</font>).  </p>
+<p> Use the Math::Matrix or Math::MatrixReal modules (available from CPAN) or the PDL extension (also available from CPAN).  </p>
 <h3>How do I perform an operation on a series of integers?</h3>
 <p> To call a function on each element in an array, and collect the results, use: </p>
 <pre><code>    my @results = map { my_func($_) } @array;
@@ -214,7 +214,7 @@ description: "perlfaq4 – Data Manipulation"
 </code></pre>
 <p> 5.004 and later automatically call <code>&quot;srand&quot;</code> at the beginning. Don&#8217;t call <code>&quot;srand&quot;</code> more than once---you make your numbers less random, rather than more. </p>
 <p> Computers are good at being predictable and bad at being random (despite appearances caused by bugs in your programs :-). The <i>random</i> article in the ``Far More Than You Ever Wanted To Know&#8217;&#8216; collection in &lt;<a rel="nofollow" href="http://www.cpan.org/misc/olddoc/FMTEYEWTK.tgz">http://www.cpan.org/misc/olddoc/FMTEYEWTK.tgz</a>&gt;, courtesy of Tom Phoenix, talks more about this. John von Neumann said, ``Anyone who attempts to generate random numbers by deterministic means is, of course, living in a state of sin.&#8216;&#8216; </p>
-<p> Perl relies on the underlying system for the implementation of <code>&quot;rand&quot;</code> and <code>&quot;srand&quot;</code>; on some systems, the generated numbers are not random enough (especially on Windows : see &lt;<a rel="nofollow" href="http://www.perlmonks.org/?node_id=803632">http://www.perlmonks.org/?node_id=803632</a>&gt;). Several <font SIZE="-1">CPAN</font> modules in the <code>&quot;Math&quot;</code> namespace implement better pseudorandom generators; see for example Math::Random::MT (``Mersenne Twister&#8217;&#8216;, fast), or Math::TrulyRandom (uses the imperfections in the system&#8217;s timer to generate random numbers, which is rather slow). More algorithms for random numbers are described in ``Numerical Recipes in C&#8217;&#8216; at &lt;<a rel="nofollow" href="http://www.nr.com/">http://www.nr.com/</a>&gt;  </p>
+<p> Perl relies on the underlying system for the implementation of <code>&quot;rand&quot;</code> and <code>&quot;srand&quot;</code>; on some systems, the generated numbers are not random enough (especially on Windows : see &lt;<a rel="nofollow" href="http://www.perlmonks.org/?node_id=803632">http://www.perlmonks.org/?node_id=803632</a>&gt;). Several CPAN modules in the <code>&quot;Math&quot;</code> namespace implement better pseudorandom generators; see for example Math::Random::MT (``Mersenne Twister&#8217;&#8216;, fast), or Math::TrulyRandom (uses the imperfections in the system&#8217;s timer to generate random numbers, which is rather slow). More algorithms for random numbers are described in ``Numerical Recipes in C&#8217;&#8216; at &lt;<a rel="nofollow" href="http://www.nr.com/">http://www.nr.com/</a>&gt;  </p>
 <h3>How do I get a random number between X and Y?</h3>
 <p> To get a random number between two values, you can use the <code>&quot;rand()&quot;</code> built-in to get a random number between 0 and 1. From there, you shift that into the range that you want. </p>
 <p> <code>&quot;rand($x)&quot;</code> returns a number such that <code>&quot;0 &lt;= rand($x) &lt; $x&quot;</code>. Thus what you want to have perl figure out is a random number in the range from 0 to the difference between your <i>X</i> and <i>Y</i>. </p>
@@ -235,12 +235,12 @@ description: "perlfaq4 – Data Manipulation"
 <p> The day of the year is in the list returned by the <code>&quot;localtime&quot;</code> function. Without an argument <code>&quot;localtime&quot;</code> uses the current time. </p>
 <pre><code>    my $day_of_year = (localtime)[7];
 </code></pre>
-<p> The <font SIZE="-1">POSIX</font> module can also format a date as the day of the year or week of the year. </p>
+<p> The POSIX module can also format a date as the day of the year or week of the year. </p>
 <pre><code>    use POSIX qw/strftime/;
     my $day_of_year = strftime &quot;%j&quot;, localtime;
     my $week_of_year = strftime &quot;%W&quot;, localtime;
 </code></pre>
-<p> To get the day of year for any date, use <font SIZE="-1">POSIX</font>&#8216;s <code>&quot;mktime&quot;</code> to get a time in epoch seconds for the argument to <code>&quot;localtime&quot;</code>. </p>
+<p> To get the day of year for any date, use POSIX&#8216;s <code>&quot;mktime&quot;</code> to get a time in epoch seconds for the argument to <code>&quot;localtime&quot;</code>. </p>
 <pre><code>    use POSIX qw/mktime strftime/;
     my $week_of_year = strftime &quot;%W&quot;,
         localtime( mktime( 0, 0, 0, 18, 11, 87 ) );
@@ -264,7 +264,7 @@ description: "perlfaq4 – Data Manipulation"
         return 1+int((((localtime(shift || time))[5] + 1899))/1000);
     }
 </code></pre>
-<p> On some systems, the <font SIZE="-1">POSIX</font> module&#8217;s <code>&quot;strftime()&quot;</code> function has been extended in a non-standard way to use a <code>%C</code> format, which they sometimes claim is the ``century&#8217;&#8216;. It isn&#8217;t, because on most such systems, this is only the first two digits of the four-digit year, and thus cannot be used to determine reliably the current century or millennium.  </p>
+<p> On some systems, the POSIX module&#8217;s <code>&quot;strftime()&quot;</code> function has been extended in a non-standard way to use a <code>%C</code> format, which they sometimes claim is the ``century&#8217;&#8216;. It isn&#8217;t, because on most such systems, this is only the first two digits of the four-digit year, and thus cannot be used to determine reliably the current century or millennium.  </p>
 <h3>How can I compare two dates and find the difference?</h3>
 <p> (contributed by brian d foy) </p>
 <p> You could just store all your dates as a number and then subtract. Life isn&#8217;t always that simple though. </p>
@@ -282,7 +282,7 @@ description: "perlfaq4 – Data Manipulation"
 </code></pre>
 <p> If you want to work with formatted dates, the Date::Manip, Date::Calc, or DateTime modules can help you.  </p>
 <h3>How can I take a string and turn it into epoch seconds?</h3>
-<p> If it&#8217;s a regular enough string that it always has the same format, you can split it up and pass the parts to <code>&quot;timelocal&quot;</code> in the standard Time::Local module. Otherwise, you should look into the Date::Calc, Date::Parse, and Date::Manip modules from <font SIZE="-1">CPAN.</font>  </p>
+<p> If it&#8217;s a regular enough string that it always has the same format, you can split it up and pass the parts to <code>&quot;timelocal&quot;</code> in the standard Time::Local module. Otherwise, you should look into the Date::Calc, Date::Parse, and Date::Manip modules from CPAN.  </p>
 <h3>How can I find the Julian Day?</h3>
 <p> (contributed by brian d foy and Dave Cross) </p>
 <p> You can use the Time::Piece module, part of the Standard Library, which can convert a date/time to a Julian Day: </p>
@@ -305,7 +305,7 @@ description: "perlfaq4 – Data Manipulation"
     $ perl -MDateTime -le'print DateTime-&gt;today-&gt;doy'
     31
 </code></pre>
-<p> You can use the Time::JulianDay module available on <font SIZE="-1">CPAN.</font> Ensure that you really want to find a Julian day, though, as many people have different ideas about Julian days (see &lt;<a rel="nofollow" href="http://www.hermetic.ch/cal_stud/jdn.htm">http://www.hermetic.ch/cal_stud/jdn.htm</a>&gt; for instance): </p>
+<p> You can use the Time::JulianDay module available on CPAN. Ensure that you really want to find a Julian day, though, as many people have different ideas about Julian days (see &lt;<a rel="nofollow" href="http://www.hermetic.ch/cal_stud/jdn.htm">http://www.hermetic.ch/cal_stud/jdn.htm</a>&gt; for instance): </p>
 <pre><code>    $ perl -MTime::JulianDay -le 'print local_julian_day( time )'
     55608
 </code></pre>
@@ -355,7 +355,7 @@ description: "perlfaq4 – Data Manipulation"
 <p> There are many ways to ensure that values are what you expect or want to accept. Besides the specific examples that we cover in the perlfaq, you can also look at the modules with ``Assert&#8217;&#8216; and ``Validate&#8217;&#8216; in their names, along with other modules such as Regexp::Common. </p>
 <p> Some modules have validation for particular types of input, such as Business::ISBN, Business::CreditCard, Email::Valid, and Data::Validate::IP.  </p>
 <h3>How do I unescape a string?</h3>
-<p> It depends just what you mean by ``escape&#8217;&#8216;. <font SIZE="-1">URL</font> escapes are dealt with in perlfaq9. Shell escapes with the backslash (<code>&quot;\&quot;</code>) character are removed with </p>
+<p> It depends just what you mean by ``escape&#8217;&#8216;. URL escapes are dealt with in perlfaq9. Shell escapes with the backslash (<code>&quot;\&quot;</code>) character are removed with </p>
 <pre><code>    s/\\(.)/$1/g;
 </code></pre>
 <p> This won&#8217;t expand <code>&quot;\n&quot;</code> or <code>&quot;\t&quot;</code> or any other special escapes.  </p>
@@ -389,8 +389,8 @@ description: "perlfaq4 – Data Manipulation"
 <pre><code>    print &quot;The time is &quot; . localtime() . &quot;.\n&quot;;
 </code></pre>
 <h3>How do I find matching/nesting anything?</h3>
-<p> To find something between two single characters, a pattern like <code>&quot;/x([^x]*)x/&quot;</code> will get the intervening bits in <code>$1</code>. For multiple ones, then something more like <code>&quot;/alpha(.*?)omega/&quot;</code> would be needed. For nested patterns and/or balanced expressions, see the so-called (?PARNO) construct (available since perl 5.10). The <font SIZE="-1">CPAN</font> module Regexp::Common can help to build such regular expressions (see in particular Regexp::Common::balanced and Regexp::Common::delimited). </p>
-<p> More complex cases will require to write a parser, probably using a parsing module from <font SIZE="-1">CPAN,</font> like Regexp::Grammars, Parse::RecDescent, Parse::Yapp, Text::Balanced, or Marpa::R2.  </p>
+<p> To find something between two single characters, a pattern like <code>&quot;/x([^x]*)x/&quot;</code> will get the intervening bits in <code>$1</code>. For multiple ones, then something more like <code>&quot;/alpha(.*?)omega/&quot;</code> would be needed. For nested patterns and/or balanced expressions, see the so-called (?PARNO) construct (available since perl 5.10). The CPAN module Regexp::Common can help to build such regular expressions (see in particular Regexp::Common::balanced and Regexp::Common::delimited). </p>
+<p> More complex cases will require to write a parser, probably using a parsing module from CPAN, like Regexp::Grammars, Parse::RecDescent, Parse::Yapp, Text::Balanced, or Marpa::R2.  </p>
 <h3>How do I reverse a string?</h3>
 <p> Use <code>&quot;reverse()&quot;</code> in scalar context, as documented in ``reverse&#8217;&#8216; in perlfunc. </p>
 <pre><code>    my $reversed = reverse $string;
@@ -409,7 +409,7 @@ description: "perlfaq4 – Data Manipulation"
     print wrap(&quot;\t&quot;, ' ', @paragraphs);
 </code></pre>
 <p> The paragraphs you give to Text::Wrap should not contain embedded newlines. Text::Wrap doesn&#8217;t justify the lines (flush-right). </p>
-<p> Or use the <font SIZE="-1">CPAN</font> module Text::Autoformat. Formatting files can be easily done by making a shell alias, like so: </p>
+<p> Or use the CPAN module Text::Autoformat. Formatting files can be easily done by making a shell alias, like so: </p>
 <pre><code>    alias fmt=&quot;perl -i -MText::Autoformat -n0777 \
         -e 'print autoformat $_, {all=&gt;1}' $*&quot;
 </code></pre>
@@ -507,7 +507,7 @@ description: "perlfaq4 – Data Manipulation"
 <pre><code>    use Text::ParseWords;
     @new = quotewords(&quot;,&quot;, 0, $text);
 </code></pre>
-<p> For parsing or generating <font SIZE="-1">CSV,</font> though, using Text::CSV rather than implementing it yourself is highly recommended; you&#8217;ll save yourself odd bugs popping up later by just using code which has already been tried and tested in production for years.  </p>
+<p> For parsing or generating CSV, though, using Text::CSV rather than implementing it yourself is highly recommended; you&#8217;ll save yourself odd bugs popping up later by just using code which has already been tried and tested in production for years.  </p>
 <h3>How do I strip blank space from the beginning/end of a string?</h3>
 <p> (contributed by brian d foy) </p>
 <p> A substitution can do this for you. For a single line, you want to replace all the leading or trailing whitespace with nothing. You can do that with a pair of substitutions: </p>
@@ -567,7 +567,7 @@ description: "perlfaq4 – Data Manipulation"
         # ( 'fred', '', 'barney', '', 'betty' );
 </code></pre>
 <p> If you want to work with comma-separated values, don&#8217;t do this since that format is a bit more complicated. Use one of the modules that handle that format, such as Text::CSV, Text::CSV_XS, or Text::CSV_PP. </p>
-<p> If you want to break apart an entire line of fixed columns, you can use <code>&quot;unpack&quot;</code> with the A (<font SIZE="-1">ASCII</font>) format. By using a number after the format specifier, you can denote the column width. See the <code>&quot;pack&quot;</code> and <code>&quot;unpack&quot;</code> entries in perlfunc for more details. </p>
+<p> If you want to break apart an entire line of fixed columns, you can use <code>&quot;unpack&quot;</code> with the A (ASCII) format. By using a number after the format specifier, you can denote the column width. See the <code>&quot;pack&quot;</code> and <code>&quot;unpack&quot;</code> entries in perlfunc for more details. </p>
 <pre><code>    my @fields = unpack( $line, &quot;A8 A8 A8 A16 A4&quot; );
 </code></pre>
 <p> Note that spaces in the format argument to <code>&quot;unpack&quot;</code> do not denote literal spaces. If you have space separated data, you may want <code>&quot;split&quot;</code> instead.  </p>
@@ -624,7 +624,7 @@ description: "perlfaq4 – Data Manipulation"
     print &quot;@lines&quot;; # WRONG - extra blanks
     print @lines; # right
 </code></pre>
-<font SIZE="-1"></font><h3>Why don't my &lt;&lt; HERE documents work?</h3>
+<h3>Why don't my &lt;&lt; HERE documents work?</h3>
 <p> Here documents are found in perlop. Check for these three things: </p>
 <dl>
 <dt>There must be no space after the &lt;&lt; part.</dt>
@@ -642,7 +642,7 @@ description: "perlfaq4 – Data Manipulation"
         goes here
     HERE_TARGET
 </code></pre>
-<p> But the <font SIZE="-1">HERE_TARGET</font> must still be flush against the margin. If you want that indented also, you&#8217;ll have to quote in the indentation. </p>
+<p> But the HERE_TARGET must still be flush against the margin. If you want that indented also, you&#8217;ll have to quote in the indentation. </p>
 <pre><code>    (my $quote = &lt;&lt;' FINIS') =~ s/^\s+//gm;
             ...we will have peace, when you and all your works have
             perished--and the works of your dark master to whom you
@@ -848,7 +848,7 @@ description: "perlfaq4 – Data Manipulation"
         return 1;
     }
 </code></pre>
-<p> For multilevel structures, you may wish to use an approach more like this one. It uses the <font SIZE="-1">CPAN</font> module FreezeThaw: </p>
+<p> For multilevel structures, you may wish to use an approach more like this one. It uses the CPAN module FreezeThaw: </p>
 <pre><code>    use FreezeThaw qw(cmpStr);
     my @a = my @b = ( &quot;this&quot;, &quot;that&quot;, [ &quot;more&quot;, &quot;stuff&quot; ] );
     printf &quot;a and b contain %s arrays\n&quot;,
@@ -896,7 +896,7 @@ description: "perlfaq4 – Data Manipulation"
 <p> (contributed by brian d foy) </p>
 <p> Perl&#8217;s arrays do not have a fixed size, so you don&#8217;t need linked lists if you just want to add or remove items. You can use array operations such as <code>&quot;push&quot;</code>, <code>&quot;pop&quot;</code>, <code>&quot;shift&quot;</code>, <code>&quot;unshift&quot;</code>, or <code>&quot;splice&quot;</code> to do that. </p>
 <p> Sometimes, however, linked lists can be useful in situations where you want to ``shard&#8217;&#8216; an array so you have many small arrays instead of a single big array. You can keep arrays longer than Perl&#8217;s largest array index, lock smaller arrays separately in threaded programs, reallocate less memory, or quickly insert elements in the middle of the chain. </p>
-<p> Steve Lembark goes through the details in his <font SIZE="-1">YAPC::NA 2009</font> talk ``Perly Linked Lists&#8217;&#8216; ( &lt;<a rel="nofollow" href="http://www.slideshare.net/lembark/perly-linked-lists">http://www.slideshare.net/lembark/perly-linked-lists</a>&gt; ), although you can just use his LinkedList::Single module.  </p>
+<p> Steve Lembark goes through the details in his YAPC::NA 2009 talk ``Perly Linked Lists&#8217;&#8216; ( &lt;<a rel="nofollow" href="http://www.slideshare.net/lembark/perly-linked-lists">http://www.slideshare.net/lembark/perly-linked-lists</a>&gt; ), although you can just use his LinkedList::Single module.  </p>
 <h3>How do I handle circular lists?</h3>
 <p> (contributed by brian d foy) </p>
 <p> If you want to cycle through an array endlessly, you can increment the index modulo the number of elements in the array: </p>
@@ -986,7 +986,7 @@ description: "perlfaq4 – Data Manipulation"
 <pre><code>    my $element = $array[ rand @array ];
 </code></pre>
 <h3>How do I permute N elements of a list?</h3>
-<p> Use the List::Permutor module on <font SIZE="-1">CPAN.</font> If the list is actually an array, try the Algorithm::Permute module (also on <font SIZE="-1">CPAN</font>). It&#8217;s written in <font SIZE="-1">XS</font> code and is very efficient: </p>
+<p> Use the List::Permutor module on CPAN. If the list is actually an array, try the Algorithm::Permute module (also on CPAN). It&#8217;s written in XS code and is very efficient: </p>
 <pre><code>    use Algorithm::Permute;
     my @array = 'a'..'d';
     my $p_iterator = Algorithm::Permute-&gt;new ( \@array );
@@ -1029,7 +1029,7 @@ description: "perlfaq4 – Data Manipulation"
 <pre><code>    @list = sort { $a &lt;=&gt; $b } @list;
 </code></pre>
 <p> The default sort function is cmp, string comparison, which would sort <code>&quot;(1, 2, 10)&quot;</code> into <code>&quot;(1, 10, 2)&quot;</code>. <code>&quot;&lt;=&gt;&quot;</code>, used above, is the numerical comparison operator. </p>
-<p> If you have a complicated function needed to pull out the part you want to sort on, then don&#8217;t do it inside the sort function. Pull it out first, because the sort <font SIZE="-1">BLOCK</font> can be called many times for the same element. Here&#8217;s an example of how to pull out the first word after the first number on each item, and then sort those words case-insensitively. </p>
+<p> If you have a complicated function needed to pull out the part you want to sort on, then don&#8217;t do it inside the sort function. Pull it out first, because the sort BLOCK can be called many times for the same element. Here&#8217;s an example of how to pull out the first word after the first number on each item, and then sort those words case-insensitively. </p>
 <pre><code>    my @idx;
     for (@data) {
         my $item;
@@ -1100,7 +1100,7 @@ description: "perlfaq4 – Data Manipulation"
         push @ints, grep vec($vec, $_, 1), $-[0] * 8 .. $+[0] * 8;
     }
 </code></pre>
-<p> Or use the <font SIZE="-1">CPAN</font> module Bit::Vector: </p>
+<p> Or use the CPAN module Bit::Vector: </p>
 <pre><code>    my $vector = Bit::Vector-&gt;new($num_of_bits);
     $vector-&gt;Index_List_Store(@ints);
     my @ints = $vector-&gt;Index_List_Read();
@@ -1265,7 +1265,7 @@ description: "perlfaq4 – Data Manipulation"
     } keys %hash;
 </code></pre>
 <h3>How can I always keep my hash sorted?</h3>
-<p> You can look into using the <code>&quot;DB_File&quot;</code> module and <code>&quot;tie()&quot;</code> using the <code>$DB_BTREE</code> hash bindings as documented in ``In Memory Databases&#8217;&#8216; in DB_File. The Tie::IxHash module from <font SIZE="-1">CPAN</font> might also be instructive. Although this does keep your hash sorted, you might not like the slowdown you suffer from the tie interface. Are you sure you need to do this? :)  </p>
+<p> You can look into using the <code>&quot;DB_File&quot;</code> module and <code>&quot;tie()&quot;</code> using the <code>$DB_BTREE</code> hash bindings as documented in ``In Memory Databases&#8217;&#8216; in DB_File. The Tie::IxHash module from CPAN might also be instructive. Although this does keep your hash sorted, you might not like the slowdown you suffer from the tie interface. Are you sure you need to do this? :)  </p>
 <h3>What's the difference between delete and undef with hashes?</h3>
 <p> Hashes contain pairs of scalars: the first is the key, the second is the value. The key will be coerced to a string, although the value can be any kind of scalar: string, number, or reference. If a key <code>$key</code> is present in <code>%hash</code>, <code>&quot;exists($hash{$key})&quot;</code> will return true. The value for a given key can be <code>&quot;undef&quot;</code>, in which case <code>$hash{$key}</code> will be <code>&quot;undef&quot;</code> while <code>&quot;exists $hash{$key}&quot;</code> will return true. This corresponds to (<code>$key</code>, <code>&quot;undef&quot;</code>) being in the hash. </p>
 <p> Pictures help... Here&#8217;s the <code>%hash</code> table: </p>
@@ -1327,7 +1327,7 @@ description: "perlfaq4 – Data Manipulation"
 </code></pre>
 <p> See, the whole entry is gone!  </p>
 <h3>Why don't my tied hashes make the defined/exists distinction?</h3>
-<p> This depends on the tied hash&#8217;s implementation of <font SIZE="-1"><code>EXISTS</code></font><code>()</code>. For example, there isn&#8217;t the concept of undef with hashes that are tied to DBM* files. It also means that <code>exists()</code> and <code>defined()</code> do the same thing with a DBM* file, and what they end up doing is not what they do with ordinary hashes.  </p>
+<p> This depends on the tied hash&#8217;s implementation of <code>EXISTS</code><code>()</code>. For example, there isn&#8217;t the concept of undef with hashes that are tied to DBM* files. It also means that <code>exists()</code> and <code>defined()</code> do the same thing with a DBM* file, and what they end up doing is not what they do with ordinary hashes.  </p>
 <code></code><h3>How do I reset an each() operation part-way through?</h3>
 <p> (contributed by brian d foy) </p>
 <p> You can use the <code>&quot;keys&quot;</code> or <code>&quot;values&quot;</code> functions to reset <code>&quot;each&quot;</code>. To simply reset the iterator used by <code>&quot;each&quot;</code> without doing anything else, use one of them in void context: </p>
@@ -1356,10 +1356,10 @@ description: "perlfaq4 – Data Manipulation"
     }
     my @uniq = keys %seen;
 </code></pre>
-<font SIZE="-1"></font><h3>How can I store a multidimensional array in a DBM file?</h3>
-<p> Either stringify the structure yourself (no fun), or else get the <font SIZE="-1">MLDBM</font> (which uses Data::Dumper) module from <font SIZE="-1">CPAN</font> and layer it on top of either DB_File or GDBM_File. You might also try DBM::Deep, but it can be a bit slow.  </p>
+<h3>How can I store a multidimensional array in a DBM file?</h3>
+<p> Either stringify the structure yourself (no fun), or else get the MLDBM (which uses Data::Dumper) module from CPAN and layer it on top of either DB_File or GDBM_File. You might also try DBM::Deep, but it can be a bit slow.  </p>
 <h3>How can I make my hash remember the order I put elements into it?</h3>
-<p> Use the Tie::IxHash from <font SIZE="-1">CPAN.</font> </p>
+<p> Use the Tie::IxHash from CPAN. </p>
 <pre><code>    use Tie::IxHash;
     tie my %myhash, 'Tie::IxHash';
     for (my $i=0; $i&lt;20; $i++) {
@@ -1394,7 +1394,7 @@ description: "perlfaq4 – Data Manipulation"
 <p> However, if you want the old behavior (and think carefully about that because it&#8217;s a weird side effect), you can pass a hash slice instead. Perl 5.004 didn&#8217;t make this a special case: </p>
 <pre><code>    my_sub( @hash{ qw/foo/ } );
 </code></pre>
-<font SIZE="-2"></font><h3>How can I make the Perl equivalent of a C structure/C ++ class/hash or array of hashes or arrays?</h3>
+<h3>How can I make the Perl equivalent of a C structure/C ++ class/hash or array of hashes or arrays?</h3>
 <p> Usually a hash ref, perhaps like this: </p>
 <pre><code>    $record = {
         NAME =&gt; &quot;Jason&quot;,
@@ -1427,7 +1427,7 @@ description: "perlfaq4 – Data Manipulation"
                         }
             );
 </code></pre>
-<p> That&#8217;s autovivification. You can get around this in a few ways. The easiest way is to just turn it off. The lexical <code>&quot;autovivification&quot;</code> pragma is available on <font SIZE="-1">CPAN.</font> Now you don&#8217;t add to the hash: </p>
+<p> That&#8217;s autovivification. You can get around this in a few ways. The easiest way is to just turn it off. The lexical <code>&quot;autovivification&quot;</code> pragma is available on CPAN. Now you don&#8217;t add to the hash: </p>
 <pre><code>    {
         no autovivification;
         my %hash;
@@ -1436,7 +1436,7 @@ description: "perlfaq4 – Data Manipulation"
         }
     }
 </code></pre>
-<p> The Data::Diver module on <font SIZE="-1">CPAN</font> can do it for you too. Its <code>&quot;Dive&quot;</code> subroutine can tell you not only if the keys exist but also get the value: </p>
+<p> The Data::Diver module on CPAN can do it for you too. Its <code>&quot;Dive&quot;</code> subroutine can tell you not only if the keys exist but also get the value: </p>
 <pre><code>    use Data::Diver qw(Dive);
     my @exists = Dive( \%hash, qw(key1 key2 key3) );
     if( ! @exists ) {
@@ -1464,11 +1464,11 @@ description: "perlfaq4 – Data Manipulation"
 <p> Since version 5.8.0, hashes can be <i>restricted</i> to a fixed number of given keys. Methods for creating and dealing with restricted hashes are exported by the Hash::Util module.  </p>
 <h2>Data: Misc</h2>
 <h3>How do I handle binary data correctly?</h3>
-<p> Perl is binary-clean, so it can handle binary data just fine. On Windows or <font SIZE="-1">DOS,</font> however, you have to use <code>&quot;binmode&quot;</code> for binary files to avoid conversions for line endings. In general, you should use <code>&quot;binmode&quot;</code> any time you want to work with binary data. </p>
+<p> Perl is binary-clean, so it can handle binary data just fine. On Windows or DOS, however, you have to use <code>&quot;binmode&quot;</code> for binary files to avoid conversions for line endings. In general, you should use <code>&quot;binmode&quot;</code> any time you want to work with binary data. </p>
 <p> Also see ``binmode&#8217;&#8216; in perlfunc or perlopentut. </p>
 <p> If you&#8217;re concerned about 8-bit textual data then see perllocale. If you want to deal with multibyte characters, however, there are some gotchas. See the section on Regular Expressions.  </p>
 <h3>How do I determine whether a scalar is a number/whole/integer/float?</h3>
-<p> Assuming that you don&#8217;t care about <font SIZE="-1">IEEE</font> notations like ``NaN&#8217;&#8216; or ``Infinity&#8217;&#8216;, you probably just want to use a regular expression (see also perlretut and perlre): </p>
+<p> Assuming that you don&#8217;t care about IEEE notations like ``NaN&#8217;&#8216; or ``Infinity&#8217;&#8216;, you probably just want to use a regular expression (see also perlretut and perlre): </p>
 <pre><code>    use 5.010;
     if ( /\D/ )
         { say &quot;\thas nondigits&quot;; }
@@ -1483,8 +1483,8 @@ description: "perlfaq4 – Data Manipulation"
     if ( /^[+-]?(?=\.?\d)\d*\.?\d*(?:e[+-]?\d+)?\z/i )
         { say &quot;\tis a C float&quot; }
 </code></pre>
-<p> There are also some commonly used modules for the task. Scalar::Util (distributed with 5.8) provides access to perl&#8217;s internal function <code>&quot;looks_like_number&quot;</code> for determining whether a variable looks like a number. Data::Types exports functions that validate data types using both the above and other regular expressions. Thirdly, there is Regexp::Common which has regular expressions to match various types of numbers. Those three modules are available from the <font SIZE="-1">CPAN.</font> </p>
-<p> If you&#8217;re on a <font SIZE="-1">POSIX</font> system, Perl supports the <code>&quot;POSIX::strtod&quot;</code> function for converting strings to doubles (and also <code>&quot;POSIX::strtol&quot;</code> for longs). Its semantics are somewhat cumbersome, so here&#8217;s a <code>&quot;getnum&quot;</code> wrapper function for more convenient access. This function takes a string and returns the number it found, or <code>&quot;undef&quot;</code> for input that isn&#8217;t a C float. The <code>&quot;is_numeric&quot;</code> function is a front end to <code>&quot;getnum&quot;</code> if you just want to say, ``Is this a float?&#8216;&#8216; </p>
+<p> There are also some commonly used modules for the task. Scalar::Util (distributed with 5.8) provides access to perl&#8217;s internal function <code>&quot;looks_like_number&quot;</code> for determining whether a variable looks like a number. Data::Types exports functions that validate data types using both the above and other regular expressions. Thirdly, there is Regexp::Common which has regular expressions to match various types of numbers. Those three modules are available from the CPAN. </p>
+<p> If you&#8217;re on a POSIX system, Perl supports the <code>&quot;POSIX::strtod&quot;</code> function for converting strings to doubles (and also <code>&quot;POSIX::strtol&quot;</code> for longs). Its semantics are somewhat cumbersome, so here&#8217;s a <code>&quot;getnum&quot;</code> wrapper function for more convenient access. This function takes a string and returns the number it found, or <code>&quot;undef&quot;</code> for input that isn&#8217;t a C float. The <code>&quot;is_numeric&quot;</code> function is a front end to <code>&quot;getnum&quot;</code> if you just want to say, ``Is this a float?&#8216;&#8216; </p>
 <pre><code>    sub getnum {
         use POSIX qw(strtod);
         my $str = shift;
@@ -1501,9 +1501,9 @@ description: "perlfaq4 – Data Manipulation"
     }
     sub is_numeric { defined getnum($_[0]) }
 </code></pre>
-<p> Or you could check out the String::Scanf module on the <font SIZE="-1">CPAN</font> instead.  </p>
+<p> Or you could check out the String::Scanf module on the CPAN instead.  </p>
 <h3>How do I keep persistent data across program calls?</h3>
-<p> For some specific applications, you can use one of the <font SIZE="-1">DBM</font> modules. See AnyDBM_File. More generically, you should consult the FreezeThaw or Storable modules from <font SIZE="-1">CPAN.</font> Starting from Perl 5.8, Storable is part of the standard distribution. Here&#8217;s one example using Storable&#8217;s <code>&quot;store&quot;</code> and <code>&quot;retrieve&quot;</code> functions: </p>
+<p> For some specific applications, you can use one of the DBM modules. See AnyDBM_File. More generically, you should consult the FreezeThaw or Storable modules from CPAN. Starting from Perl 5.8, Storable is part of the standard distribution. Here&#8217;s one example using Storable&#8217;s <code>&quot;store&quot;</code> and <code>&quot;retrieve&quot;</code> functions: </p>
 <pre><code>    use Storable;
     store(\%hash, &quot;filename&quot;);
     # later on...
@@ -1511,7 +1511,7 @@ description: "perlfaq4 – Data Manipulation"
     %hash = %{ retrieve(&quot;filename&quot;) }; # direct to hash
 </code></pre>
 <h3>How do I print out or copy a recursive data structure?</h3>
-<p> The Data::Dumper module on <font SIZE="-1">CPAN</font> (or the 5.005 release of Perl) is great for printing out data structures. The Storable module on <font SIZE="-1">CPAN</font> (or the 5.8 release of Perl), provides a function called <code>&quot;dclone&quot;</code> that recursively copies its argument. </p>
+<p> The Data::Dumper module on CPAN (or the 5.005 release of Perl) is great for printing out data structures. The Storable module on CPAN (or the 5.8 release of Perl), provides a function called <code>&quot;dclone&quot;</code> that recursively copies its argument. </p>
 <pre><code>    use Storable qw(dclone);
     $r2 = dclone($r1);
 </code></pre>
@@ -1520,11 +1520,11 @@ description: "perlfaq4 – Data Manipulation"
 </code></pre>
 <h3>How do I define methods for every class/object?</h3>
 <p> (contributed by Ben Morrow) </p>
-<p> You can use the <code>&quot;UNIVERSAL&quot;</code> class (see <font SIZE="-1">UNIVERSAL</font>). However, please be very careful to consider the consequences of doing this: adding methods to every object is very likely to have unintended consequences. If possible, it would be better to have all your object inherit from some common base class, or to use an object system like Moose that supports roles.  </p>
+<p> You can use the <code>&quot;UNIVERSAL&quot;</code> class (see UNIVERSAL). However, please be very careful to consider the consequences of doing this: adding methods to every object is very likely to have unintended consequences. If possible, it would be better to have all your object inherit from some common base class, or to use an object system like Moose that supports roles.  </p>
 <h3>How do I verify a credit card checksum?</h3>
-<p> Get the Business::CreditCard module from <font SIZE="-1">CPAN.</font>  </p>
-<font SIZE="-1"></font><h3>How do I pack arrays of doubles or floats for XS code?</h3>
-<p> The arrays.h/arrays.c code in the <font SIZE="-1">PGPLOT</font> module on <font SIZE="-1">CPAN</font> does just this. If you&#8217;re doing a lot of float or double processing, consider using the <font SIZE="-1">PDL</font> module from <font SIZE="-1">CPAN</font> instead---it makes number-crunching easy. </p>
+<p> Get the Business::CreditCard module from CPAN.  </p>
+<h3>How do I pack arrays of doubles or floats for XS code?</h3>
+<p> The arrays.h/arrays.c code in the PGPLOT module on CPAN does just this. If you&#8217;re doing a lot of float or double processing, consider using the PDL module from CPAN instead---it makes number-crunching easy. </p>
 <p> See &lt;<a rel="nofollow" href="https://metacpan.org/release/PGPLOT">https://metacpan.org/release/PGPLOT</a>&gt; for the code.  </p>
 <h2>AUTHOR AND COPYRIGHT</h2>
 <p> Copyright (c) 1997-2010 Tom Christiansen, Nathan Torkington, and other authors as noted. All rights reserved. </p>

@@ -23,113 +23,113 @@ char *ldap_err2string(int err);
 <h2>PROTOCOL RESULT CODES</h2>
 <p> This section provides a partial list of protocol codes recognized by the library. As LDAP is extensible, additional values may be returned. A complete listing of <i>registered</i> LDAP result codes can be obtained from the <i>Internet Assigned Numbers Authority</i> &lt;<a rel="nofollow" href="http://www.iana.org">http://www.iana.org</a>&gt;. </p>
 <dl>
-<dt><font SIZE="-1">LDAP_SUCCESS</font></dt>
+<dt>LDAP_SUCCESS</dt>
 <dd> The request was successful.</dd>
-<dt><font SIZE="-1">LDAP_OPERATIONS_ERROR</font></dt>
+<dt>LDAP_OPERATIONS_ERROR</dt>
 <dd> An operations error occurred.</dd>
-<dt><font SIZE="-1">LDAP_PROTOCOL_ERROR</font></dt>
+<dt>LDAP_PROTOCOL_ERROR</dt>
 <dd> A protocol violation was detected.</dd>
-<dt><font SIZE="-1">LDAP_TIMELIMIT_EXCEEDED</font></dt>
+<dt>LDAP_TIMELIMIT_EXCEEDED</dt>
 <dd> An LDAP time limit was exceeded.</dd>
-<dt><font SIZE="-1">LDAP_SIZELIMIT_EXCEEDED</font></dt>
+<dt>LDAP_SIZELIMIT_EXCEEDED</dt>
 <dd> An LDAP size limit was exceeded.</dd>
-<dt><font SIZE="-1">LDAP_COMPARE_FALSE</font></dt>
+<dt>LDAP_COMPARE_FALSE</dt>
 <dd> A compare operation returned false.</dd>
-<dt><font SIZE="-1">LDAP_COMPARE_TRUE</font></dt>
+<dt>LDAP_COMPARE_TRUE</dt>
 <dd> A compare operation returned true.</dd>
-<dt><font SIZE="-1">LDAP_STRONG_AUTH_NOT_SUPPORTED</font></dt>
+<dt>LDAP_STRONG_AUTH_NOT_SUPPORTED</dt>
 <dd> The LDAP server does not support strong authentication.</dd>
-<dt><font SIZE="-1">LDAP_STRONG_AUTH_REQUIRED</font></dt>
+<dt>LDAP_STRONG_AUTH_REQUIRED</dt>
 <dd> Strong authentication is required for the operation.</dd>
-<dt><font SIZE="-1">LDAP_PARTIAL_RESULTS</font></dt>
+<dt>LDAP_PARTIAL_RESULTS</dt>
 <dd> Partial results only returned.</dd>
-<dt><font SIZE="-1">LDAP_NO_SUCH_ATTRIBUTE</font></dt>
+<dt>LDAP_NO_SUCH_ATTRIBUTE</dt>
 <dd> The attribute type specified does not exist in the entry.</dd>
-<dt><font SIZE="-1">LDAP_UNDEFINED_TYPE</font></dt>
+<dt>LDAP_UNDEFINED_TYPE</dt>
 <dd> The attribute type specified is invalid.</dd>
-<dt><font SIZE="-1">LDAP_INAPPROPRIATE_MATCHING</font></dt>
+<dt>LDAP_INAPPROPRIATE_MATCHING</dt>
 <dd> Filter type not supported for the specified attribute.</dd>
-<dt><font SIZE="-1">LDAP_CONSTRAINT_VIOLATION</font></dt>
+<dt>LDAP_CONSTRAINT_VIOLATION</dt>
 <dd> An attribute value specified violates some constraint (e.g., a postalAddress has too many lines, or a line that is too long).</dd>
-<dt><font SIZE="-1">LDAP_TYPE_OR_VALUE_EXISTS</font></dt>
+<dt>LDAP_TYPE_OR_VALUE_EXISTS</dt>
 <dd> An attribute type or attribute value specified already exists in the entry.</dd>
-<dt><font SIZE="-1">LDAP_INVALID_SYNTAX</font></dt>
+<dt>LDAP_INVALID_SYNTAX</dt>
 <dd> An invalid attribute value was specified.</dd>
-<dt><font SIZE="-1">LDAP_NO_SUCH_OBJECT</font></dt>
+<dt>LDAP_NO_SUCH_OBJECT</dt>
 <dd> The specified object does not exist in The Directory.</dd>
-<dt><font SIZE="-1">LDAP_ALIAS_PROBLEM</font></dt>
+<dt>LDAP_ALIAS_PROBLEM</dt>
 <dd> An alias in The Directory points to a nonexistent entry.</dd>
-<dt><font SIZE="-1">LDAP_INVALID_DN_SYNTAX</font></dt>
+<dt>LDAP_INVALID_DN_SYNTAX</dt>
 <dd> A syntactically invalid DN was specified.</dd>
-<dt><font SIZE="-1">LDAP_IS_LEAF</font></dt>
+<dt>LDAP_IS_LEAF</dt>
 <dd> The object specified is a leaf.</dd>
-<dt><font SIZE="-1">LDAP_ALIAS_DEREF_PROBLEM</font></dt>
+<dt>LDAP_ALIAS_DEREF_PROBLEM</dt>
 <dd> A problem was encountered when dereferencing an alias.</dd>
-<dt><font SIZE="-1">LDAP_INAPPROPRIATE_AUTH</font></dt>
+<dt>LDAP_INAPPROPRIATE_AUTH</dt>
 <dd> Inappropriate authentication was specified (e.g., LDAP_AUTH_SIMPLE was specified and the entry does not have a userPassword attribute).</dd>
-<dt><font SIZE="-1">LDAP_INVALID_CREDENTIALS</font></dt>
+<dt>LDAP_INVALID_CREDENTIALS</dt>
 <dd> Invalid credentials were presented (e.g., the wrong password).</dd>
-<dt><font SIZE="-1">LDAP_INSUFFICIENT_ACCESS</font></dt>
+<dt>LDAP_INSUFFICIENT_ACCESS</dt>
 <dd> The user has insufficient access to perform the operation.</dd>
-<dt><font SIZE="-1">LDAP_BUSY</font></dt>
+<dt>LDAP_BUSY</dt>
 <dd> The DSA is busy.</dd>
-<dt><font SIZE="-1">LDAP_UNAVAILABLE</font></dt>
+<dt>LDAP_UNAVAILABLE</dt>
 <dd> The DSA is unavailable.</dd>
-<dt><font SIZE="-1">LDAP_UNWILLING_TO_PERFORM</font></dt>
+<dt>LDAP_UNWILLING_TO_PERFORM</dt>
 <dd> The DSA is unwilling to perform the operation.</dd>
-<dt><font SIZE="-1">LDAP_LOOP_DETECT</font></dt>
+<dt>LDAP_LOOP_DETECT</dt>
 <dd> A loop was detected.</dd>
-<dt><font SIZE="-1">LDAP_NAMING_VIOLATION</font></dt>
+<dt>LDAP_NAMING_VIOLATION</dt>
 <dd> A naming violation occurred.</dd>
-<dt><font SIZE="-1">LDAP_OBJECT_CLASS_VIOLATION</font></dt>
+<dt>LDAP_OBJECT_CLASS_VIOLATION</dt>
 <dd> An object class violation occurred (e.g., a &quot;must&quot; attribute was missing from the entry).</dd>
-<dt><font SIZE="-1">LDAP_NOT_ALLOWED_ON_NONLEAF</font></dt>
+<dt>LDAP_NOT_ALLOWED_ON_NONLEAF</dt>
 <dd> The operation is not allowed on a nonleaf object.</dd>
-<dt><font SIZE="-1">LDAP_NOT_ALLOWED_ON_RDN</font></dt>
+<dt>LDAP_NOT_ALLOWED_ON_RDN</dt>
 <dd> The operation is not allowed on an RDN.</dd>
-<dt><font SIZE="-1">LDAP_ALREADY_EXISTS</font></dt>
+<dt>LDAP_ALREADY_EXISTS</dt>
 <dd> The entry already exists.</dd>
-<dt><font SIZE="-1">LDAP_NO_OBJECT_CLASS_MODS</font></dt>
+<dt>LDAP_NO_OBJECT_CLASS_MODS</dt>
 <dd> Object class modifications are not allowed.</dd>
-<dt><font SIZE="-1">LDAP_OTHER</font></dt>
+<dt>LDAP_OTHER</dt>
 <dd> An unknown error occurred. </dd>
 </dl>
 <h2>API ERROR CODES</h2>
 <p> This section provides a complete list of API error codes recognized by the library. Note that LDAP_SUCCESS indicates success of an API call in addition to representing the return of the LDAP &#8216;success&#8217; resultCode. </p>
 <dl>
-<dt><font SIZE="-1">LDAP_SERVER_DOWN</font></dt>
+<dt>LDAP_SERVER_DOWN</dt>
 <dd> The LDAP library can&#8217;t contact the LDAP server.</dd>
-<dt><font SIZE="-1">LDAP_LOCAL_ERROR</font></dt>
+<dt>LDAP_LOCAL_ERROR</dt>
 <dd> Some local error occurred. This is usually a failed dynamic memory allocation.</dd>
-<dt><font SIZE="-1">LDAP_ENCODING_ERROR</font></dt>
+<dt>LDAP_ENCODING_ERROR</dt>
 <dd> An error was encountered encoding parameters to send to the LDAP server.</dd>
-<dt><font SIZE="-1">LDAP_DECODING_ERROR</font></dt>
+<dt>LDAP_DECODING_ERROR</dt>
 <dd> An error was encountered decoding a result from the LDAP server.</dd>
-<dt><font SIZE="-1">LDAP_TIMEOUT</font></dt>
+<dt>LDAP_TIMEOUT</dt>
 <dd> A timelimit was exceeded while waiting for a result.</dd>
-<dt><font SIZE="-1">LDAP_AUTH_UNKNOWN</font></dt>
+<dt>LDAP_AUTH_UNKNOWN</dt>
 <dd> The authentication method specified to ldap_bind() is not known.</dd>
-<dt><font SIZE="-1">LDAP_FILTER_ERROR</font></dt>
+<dt>LDAP_FILTER_ERROR</dt>
 <dd> An invalid filter was supplied to ldap_search() (e.g., unbalanced parentheses).</dd>
-<dt><font SIZE="-1">LDAP_PARAM_ERROR</font></dt>
+<dt>LDAP_PARAM_ERROR</dt>
 <dd> An ldap routine was called with a bad parameter.</dd>
-<dt><font SIZE="-1">LDAP_NO_MEMORY</font></dt>
+<dt>LDAP_NO_MEMORY</dt>
 <dd> An memory allocation (e.g., <a href="/docs/linux/man/3-malloc/">malloc</a>(3) or other dynamic memory allocator) call failed in an ldap library routine.</dd>
-<dt><font SIZE="-1">LDAP_USER_CANCELED</font></dt>
+<dt>LDAP_USER_CANCELED</dt>
 <dd> Indicates the user cancelled the operation.</dd>
-<dt><font SIZE="-1">LDAP_CONNECT_ERROR</font></dt>
+<dt>LDAP_CONNECT_ERROR</dt>
 <dd> Indicates a connection problem.</dd>
-<dt><font SIZE="-1">LDAP_NOT_SUPPORTED</font></dt>
+<dt>LDAP_NOT_SUPPORTED</dt>
 <dd> Indicates the routine was called in a manner not supported by the library.</dd>
-<dt><font SIZE="-1">LDAP_CONTROL_NOT_FOUND</font></dt>
+<dt>LDAP_CONTROL_NOT_FOUND</dt>
 <dd> Indicates the control provided is unknown to the client library.</dd>
-<dt><font SIZE="-1">LDAP_NO_RESULTS_RETURNED</font></dt>
+<dt>LDAP_NO_RESULTS_RETURNED</dt>
 <dd> Indicates no results returned.</dd>
-<dt><font SIZE="-1">LDAP_MORE_RESULTS_TO_RETURN</font></dt>
+<dt>LDAP_MORE_RESULTS_TO_RETURN</dt>
 <dd> Indicates more results could be returned.</dd>
-<dt><font SIZE="-1">LDAP_CLIENT_LOOP</font></dt>
+<dt>LDAP_CLIENT_LOOP</dt>
 <dd> Indicates the library has detected a loop in its processing.</dd>
-<dt><font SIZE="-1">LDAP_REFERRAL_LIMIT_EXCEEDED</font></dt>
+<dt>LDAP_REFERRAL_LIMIT_EXCEEDED</dt>
 <dd> Indicates the referral limit has been exceeded. </dd>
 </dl>
 <h2>DEPRECATED</h2>

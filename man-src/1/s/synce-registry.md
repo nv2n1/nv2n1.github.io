@@ -10,12 +10,12 @@ description: "synce-registry – read or modify the registry on a PDA"
 
 <p> synce-registry &#8211; read or modify the registry on a PDA </p>
 <h2>SYNOPSIS</h2>
-<p> <code>synce-registry</code> [-d <i>LEVEL</i>] [-p <i>DEVNAME</i>] [-h]<br />
-[-r]&nbsp;<wbr><i>PARENTKEY</i>&nbsp;<wbr><i>KEY</i>&nbsp;<wbr><i>VALUE</i><br />
-&nbsp;<wbr>&nbsp;<wbr>-w&nbsp;<wbr>[-t TYPE]&nbsp;<wbr><i>PARENTKEY</i>&nbsp;<wbr><i>KEY</i>&nbsp;<wbr><i>VALUE</i>&nbsp;<wbr><i>NEWVALUE</i><br />
-&nbsp;<wbr>&nbsp;<wbr>-l&nbsp;<wbr><i>PARENTKEY</i>&nbsp;<wbr><i>KEY</i><br />
-&nbsp;<wbr>&nbsp;<wbr>-n&nbsp;<wbr><i>PARENTKEY</i>&nbsp;<wbr><i>NEWKEY</i><br />
-&nbsp;<wbr>&nbsp;<wbr>-x&nbsp;<wbr><i>PARENTKEY</i>&nbsp;<wbr><i>KEY</i>&nbsp;<wbr><i>VALUE</i>&nbsp;<wbr>(<code>not supported</code>)<br />
+<p> <code>synce-registry</code> [-d <i>LEVEL</i>] [-p <i>DEVNAME</i>] [-h]<br/>
+[-r]&nbsp;<wbr><i>PARENTKEY</i>&nbsp;<wbr><i>KEY</i>&nbsp;<wbr><i>VALUE</i><br/>
+&nbsp;<wbr>&nbsp;<wbr>-w&nbsp;<wbr>[-t TYPE]&nbsp;<wbr><i>PARENTKEY</i>&nbsp;<wbr><i>KEY</i>&nbsp;<wbr><i>VALUE</i>&nbsp;<wbr><i>NEWVALUE</i><br/>
+&nbsp;<wbr>&nbsp;<wbr>-l&nbsp;<wbr><i>PARENTKEY</i>&nbsp;<wbr><i>KEY</i><br/>
+&nbsp;<wbr>&nbsp;<wbr>-n&nbsp;<wbr><i>PARENTKEY</i>&nbsp;<wbr><i>NEWKEY</i><br/>
+&nbsp;<wbr>&nbsp;<wbr>-x&nbsp;<wbr><i>PARENTKEY</i>&nbsp;<wbr><i>KEY</i>&nbsp;<wbr><i>VALUE</i>&nbsp;<wbr>(<code>not supported</code>)<br/>
 &nbsp;<wbr>&nbsp;<wbr>-X&nbsp;<wbr><i>PARENTKEY</i>&nbsp;<wbr><i>KEY</i>&nbsp;<wbr>(<code>not supported</code>) </p>
 <h2>DESCRIPTION</h2>
 <p> <code>synce-registry</code> manipulates the registry on a device connected through SynCE. It can read and write values, add new keys and values, and list the values of a key. </p>

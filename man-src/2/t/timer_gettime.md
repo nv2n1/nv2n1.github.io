@@ -22,11 +22,11 @@ int timer_gettime(timer_t timerid, struct itimerspec *curr_value);
 <p> <code>timer_settime</code>(), <code>timer_gettime</code>(): _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;199309L</p>
 <h2>DESCRIPTION</h2>
 <p> <code>timer_settime</code>() arms or disarms the timer identified by <i>timerid</i>. The <i>new_value</i> argument is pointer to an <i>itimerspec</i> structure that specifies the new initial value and the new interval for the timer. The <i>itimerspec</i> structure is defined as follows: </p>
-<p> struct timespec {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;time_t tv_sec;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Seconds&nbsp;*/<br />
+<p> struct timespec {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;time_t tv_sec;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Seconds&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;long&nbsp;<wbr>&nbsp;<wbr>&nbsp;tv_nsec;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Nanoseconds&nbsp;*/ }; </p>
-<p> struct itimerspec {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct timespec it_interval;&nbsp;<wbr>&nbsp;/*&nbsp;Timer interval&nbsp;*/<br />
+<p> struct itimerspec {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct timespec it_interval;&nbsp;<wbr>&nbsp;/*&nbsp;Timer interval&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct timespec it_value;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Initial expiration&nbsp;*/ }; </p>
 <p> Each of the substructures of the <i>itimerspec</i> structure is a <i>timespec</i> structure that allows a time value to be specified in seconds and nanoseconds. These time values are measured according to the clock that was specified when the timer was created by <code><a href="/docs/linux/man/2-timer_create/">timer_create</a></code>(2). </p>
 <p> If <i>new_value-&gt;it_value</i> specifies a nonzero value (i.e., either subfield is nonzero), then <code>timer_settime</code>() arms (starts) the timer, setting it to initially expire at the given time. (If the timer was already armed, then the previous settings are overwritten.) If <i>new_value-&gt;it_value</i> specifies a zero value (i.e., both subfields are zero), then the timer is disarmed. </p>

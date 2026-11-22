@@ -10,7 +10,7 @@ description: "openproc, closeproc – initialize process information from /proc/
 <p>openproc, closeproc &#8211; initialize process information from /proc/</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;proc/readproc.h&gt;</code></pre>
-<p> <code>PROCTAB* openproc (int </code><i>flags</i><code>, &#8230; );</code><br />
+<p> <code>PROCTAB* openproc (int </code><i>flags</i><code>, &#8230; );</code><br/>
  <code>void closeproc (PROCTAB* </code><i>PT</i><code>);</code> </p>
 <h2>Synopsis</h2>
 <p>The <code>openproc</code> function initializes a PROCTAB structure which can be used by iterated readproc calls to get information on current processes. Depending on <i>flags</i>, openproc may need a second argument or a second and third argument (see below). <code>closeproc</code> closes all files opened by <code>openproc</code> and deallocates the memory allocated by <code>openproc.</code> The PROCTAB structure is defined in <i>&lt;proc/readproc.h&gt;</i> </p>

@@ -10,8 +10,8 @@ description: "pmdbg – translate Performance Co-Pilot debug control flags"
 
 <p> <code>pmdbg</code> &#8211; translate Performance Co-Pilot debug control flags</p>
 <h2>SYNOPSIS</h2>
-<p> <code>pmdbg</code> <i>code</i> &#8230;<br />
- <code>pmdbg</code> <code>-l</code><br />
+<p> <code>pmdbg</code> <i>code</i> &#8230;<br/>
+ <code>pmdbg</code> <code>-l</code><br/>
  <code>pmdbg</code> <code>-D</code> <i>name</i>[,<i>name</i> &#8230;]</p>
 <h2>DESCRIPTION</h2>
 <p> The components of the Performance Co-Pilot (PCP) use a global vector of bit-fields to control diagnostic and debug output. </p>

@@ -10,7 +10,7 @@ description: "XkbFreeGeomDoodads – Free geometry doodads"
 <p>XkbFreeGeomDoodads &#8211; Free geometry doodads </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>void XkbFreeGeomDoodads</code> <code>(XkbDoodadPtr </code><i>doodads</i><code>,</code> <code>int </code><i>count</i><code>,</code> <code>Bool </code><i>free_all</i><code>);</code><br />
+<dt> <code>void XkbFreeGeomDoodads</code> <code>(XkbDoodadPtr </code><i>doodads</i><code>,</code> <code>int </code><i>count</i><code>,</code> <code>Bool </code><i>free_all</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

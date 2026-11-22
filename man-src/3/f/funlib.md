@@ -57,76 +57,76 @@ description: "FunLib: the Funtools Programming Interface"
 <pre>
   gcc -o foo foo.c -lfuntools -ldl -lm
 </pre>
-<p> Once configure has built a Makefile on your platform, the required &#8220;extra&#8221; libraries (aside from -lm, which always is required) are specified in that file&#8217;s <font SIZE="-1">EXTRA_LIBS</font> variable. For example, under Linux you will find: </p>
+<p> Once configure has built a Makefile on your platform, the required &#8220;extra&#8221; libraries (aside from -lm, which always is required) are specified in that file&#8217;s EXTRA_LIBS variable. For example, under Linux you will find: </p>
 <pre>
   grep EXTRA_LIBS Makefile
   EXTRA_LIBS      =  -ldl
   ...
 </pre>
-<p> The Funtools library contains both the zlib library (<a rel="nofollow" href="http://www.gzip.org/zlib/)">http://www.gzip.org/zlib/)</a> and Doug Mink&#8217;s <font SIZE="-1">WCS</font> library (<a rel="nofollow" href="http://tdc-www.harvard.edu/software/wcstools/">http://tdc-www.harvard.edu/software/wcstools/</a>). It is not necessary to put these libraries on a Funtools link line. Include files necessary for using these libraries are installed in the Funtools include directory. </p>
+<p> The Funtools library contains both the zlib library (<a rel="nofollow" href="http://www.gzip.org/zlib/)">http://www.gzip.org/zlib/)</a> and Doug Mink&#8217;s WCS library (<a rel="nofollow" href="http://tdc-www.harvard.edu/software/wcstools/">http://tdc-www.harvard.edu/software/wcstools/</a>). It is not necessary to put these libraries on a Funtools link line. Include files necessary for using these libraries are installed in the Funtools include directory. </p>
 <p> <code>Funtools Programming Tutorial</code> </p>
-<p> The <i>FunOpen()</i> function is used to open a <font SIZE="-1">FITS</font> file, an array, or a raw event file: </p>
-<p>/* open the input FITS file for reading */<br />
-ifun = FunOpen(iname, &#8220;r&#8221;, NULL);<br />
-/* open the output FITS file for writing, and connect it to the input file */<br />
+<p> The <i>FunOpen()</i> function is used to open a FITS file, an array, or a raw event file: </p>
+<p>/* open the input FITS file for reading */<br/>
+ifun = FunOpen(iname, &#8220;r&#8221;, NULL);<br/>
+/* open the output FITS file for writing, and connect it to the input file */<br/>
 ofun = FunOpen(iname, &#8220;w&#8221;, ifun);</p>
 <p> A new output file can inherit header parameters automatically from existing input file by passing the input Funtools handle as the last argument to the new file&#8217;s <i>FunOpen()</i> call as shown above. </p>
 <p> For image data, you then can call <i>FunImageGet()</i> to read an image into memory. </p>
-<p>float buf = NULL;<br />
-/* extract and bin the data section into an image buffer */<br />
+<p>float buf = NULL;<br/>
+/* extract and bin the data section into an image buffer */<br/>
 buf = FunImageGet(fun, NULL, &#8220;bitpix=-32&#8221;);</p>
-<p> If the (second) buf argument to this call is <font SIZE="-1">NULL</font>, buffer space is allocated automatically. The (third) plist argument can be used to specify the return data type of the array. If <font SIZE="-1">NULL</font> is specified, the data type of the input file is used. </p>
-<p> To process an image buffer, you would generally make a call to <i>FunInfoGet()</i> to determine the dimensions of the image (which may have been changed from the original file dimensions due to Funtools image sectioning on the command line). In a <font SIZE="-1">FITS</font> image, the index along the dim1 axis varies most rapidly, followed by the dim2 axis, etc. Thus, to access each pixel in an 2D image, use a double loop such as: </p>
-<p>buf = FunImageGet(fun, NULL, &#8220;bitpix=-32&#8221;);<br />
-FunInfoGet(fun, FUN_SECT_DIM1, &amp;dim1, FUN_SECT_DIM2, &amp;dim2, 0);<br />
-for (i = 1; i &lt;= dim2; i++) {<br />
-    for (j = 1; j &lt;= dim1; j++) {<br />
-        &#8230; process buf[((i &#8211; 1) * dim1) + (j &#8211; 1)]&#8230;<br />
-    }<br />
+<p> If the (second) buf argument to this call is NULL, buffer space is allocated automatically. The (third) plist argument can be used to specify the return data type of the array. If NULL is specified, the data type of the input file is used. </p>
+<p> To process an image buffer, you would generally make a call to <i>FunInfoGet()</i> to determine the dimensions of the image (which may have been changed from the original file dimensions due to Funtools image sectioning on the command line). In a FITS image, the index along the dim1 axis varies most rapidly, followed by the dim2 axis, etc. Thus, to access each pixel in an 2D image, use a double loop such as: </p>
+<p>buf = FunImageGet(fun, NULL, &#8220;bitpix=-32&#8221;);<br/>
+FunInfoGet(fun, FUN_SECT_DIM1, &amp;dim1, FUN_SECT_DIM2, &amp;dim2, 0);<br/>
+for (i = 1; i &lt;= dim2; i++) {<br/>
+    for (j = 1; j &lt;= dim1; j++) {<br/>
+        &#8230; process buf[((i &#8211; 1) * dim1) + (j &#8211; 1)]&#8230;<br/>
+    }<br/>
 }</p>
 <p> or: </p>
-<p>buf = FunImageGet(fun, NULL, &#8220;bitpix=-32&#8221;);<br />
-FunInfoGet(fun, FUN_SECT_DIM1, &amp;dim1, FUN_SECT_DIM2, &amp;dim2, 0);<br />
-for (i = 0; i &lt; (dim1 * dim2); i++) {<br />
-    &#8230; process buf[i]&#8230;<br />
+<p>buf = FunImageGet(fun, NULL, &#8220;bitpix=-32&#8221;);<br/>
+FunInfoGet(fun, FUN_SECT_DIM1, &amp;dim1, FUN_SECT_DIM2, &amp;dim2, 0);<br/>
+for (i = 0; i &lt; (dim1 * dim2); i++) {<br/>
+    &#8230; process buf[i]&#8230;<br/>
 }</p>
 <p> Finally, you can write the resulting image to disk using <i>FunImagePut()</i>: </p>
 <p>FunImagePut(fun2, buf, dim1, dim2, -32, NULL);</p>
-<p> Note that Funtools automatically takes care of book-keeping tasks such as reading and writing <font SIZE="-1">FITS</font> headers (although you can, of course, write your own header or add your own parameters to a header). </p>
+<p> Note that Funtools automatically takes care of book-keeping tasks such as reading and writing FITS headers (although you can, of course, write your own header or add your own parameters to a header). </p>
 <p> For binary tables and raw event files, a call to <i>FunOpen()</i> will be followed by a call to the <i>FunColumnSelect()</i> routine to select columns to be read from the input file and/or written to the output file: </p>
-<p>typedef struct evstruct {<br />
-    double time;<br />
-    int time2;<br />
-} * Ev, EvRec;<br />
-FunColumnSelect(fun, sizeof(EvRec), NULL,<br />
-                &#8220;time&#8221;, &#8220;D&#8221;, &#8220;rw&#8221;, FUN_OFFSET(Ev, time),<br />
-                &#8220;time2&#8221;, &#8220;J&#8221;, &#8220;w&#8221;, FUN_OFFSET(Ev, time2),<br />
+<p>typedef struct evstruct {<br/>
+    double time;<br/>
+    int time2;<br/>
+} * Ev, EvRec;<br/>
+FunColumnSelect(fun, sizeof(EvRec), NULL,<br/>
+                &#8220;time&#8221;, &#8220;D&#8221;, &#8220;rw&#8221;, FUN_OFFSET(Ev, time),<br/>
+                &#8220;time2&#8221;, &#8220;J&#8221;, &#8220;w&#8221;, FUN_OFFSET(Ev, time2),<br/>
                 NULL);</p>
 <p> Columns whose (third) mode argument contains an &#8220;r&#8221; are &#8220;readable&#8221;, i.e., columns will be read from the input file and converted into the data type specified in the call&#8217;s second argument. These columns values then are stored in the specified offset of the user record structure. Columns whose mode argument contains a &#8220;w&#8221; are &#8220;writable&#8221;, i.e., these values will be written to the output file. The <i>FunColumnSelect()</i> routine also offers the option of automatically merging user columns with the original input columns when writing the output rows. </p>
 <p> Once a set of columns has been specified, you can retrieve rows using <i>FunTableRowGet()</i>, and write the rows using <i>FunTableRowPut()</i>: </p>
-<p>Ev ebuf, ev;<br />
-/* get rows &#8212; let routine allocate the array */<br />
-while ((ebuf = (Ev)FunTableRowGet(fun, NULL, MAXROW, NULL, &amp;got))) {<br />
-    /* process all rows */<br />
-    for (i = 0; i &lt; got; i++) {<br />
-        /* point to the i&#8217;th row */<br />
-        ev = ebuf + i;<br />
-        /* time2 is generated here */<br />
-        ev-&gt;time2 = (int)(ev-&gt;time + .5);<br />
-        /* change the input time as well */<br />
-        ev-&gt;time = -(ev-&gt;time / 10.0);<br />
-    }<br />
-    /* write out this batch of rows with the new column */<br />
-    FunTableRowPut(fun2, (char *)ebuf, got, 0, NULL);<br />
-    /* free row data */<br />
-    if (ebuf)<br />
-        free(ebuf);<br />
+<p>Ev ebuf, ev;<br/>
+/* get rows &#8212; let routine allocate the array */<br/>
+while ((ebuf = (Ev)FunTableRowGet(fun, NULL, MAXROW, NULL, &amp;got))) {<br/>
+    /* process all rows */<br/>
+    for (i = 0; i &lt; got; i++) {<br/>
+        /* point to the i&#8217;th row */<br/>
+        ev = ebuf + i;<br/>
+        /* time2 is generated here */<br/>
+        ev-&gt;time2 = (int)(ev-&gt;time + .5);<br/>
+        /* change the input time as well */<br/>
+        ev-&gt;time = -(ev-&gt;time / 10.0);<br/>
+    }<br/>
+    /* write out this batch of rows with the new column */<br/>
+    FunTableRowPut(fun2, (char *)ebuf, got, 0, NULL);<br/>
+    /* free row data */<br/>
+    if (ebuf)<br/>
+        free(ebuf);<br/>
 }</p>
-<p> The input rows are retrieved into an array of user structs, which can be accessed serially as shown above. Once again, Funtools automatically takes care of book-keeping tasks such as reading and writing <font SIZE="-1">FITS</font> headers (although you can, of course, write your own header or add your own parameters to a header). </p>
+<p> The input rows are retrieved into an array of user structs, which can be accessed serially as shown above. Once again, Funtools automatically takes care of book-keeping tasks such as reading and writing FITS headers (although you can, of course, write your own header or add your own parameters to a header). </p>
 <p> When all processing is done, you can call <i>FunClose()</i> to close the file(s): </p>
-<p>FunClose(fun2);<br />
+<p>FunClose(fun2);<br/>
 FunClose(fun);</p>
-<p> These are the basics of processing <font SIZE="-1">FITS</font> files (and arrays or raw event data) using Funtools. The routines in these examples are described in more detail below, along with a few other routines that support parameter access, data flushing, etc. </p>
+<p> These are the basics of processing FITS files (and arrays or raw event data) using Funtools. The routines in these examples are described in more detail below, along with a few other routines that support parameter access, data flushing, etc. </p>
 <p> <code>Compiling and Linking</code> </p>
 <p> To create a Funtools application, a software developer will include the funtools.h definitions file in Funtools code: </p>
 <pre><code>
@@ -148,7 +148,7 @@ FunClose(fun);</p>
 <dt>*</dt>
 <dd> WindowsNT/Cygwin 1.0</dd>
 <dt>*</dt>
-<dd> <font SIZE="-1">SGI/IRIX64</font> 6.5</dd></dl>
+<dd> SGI/IRIX64 6.5</dd></dl>
 <p> <code>A Short Digression on Subroutine Order</code> </p>
 <p> There is a natural order for all I/O access libraries. You would not think of reading a file without first opening it, or writing a file after closing it. A large part of the experiment in funtools is to use the idea of &#8220;natural order&#8221; as a means of making programming easier. We do this by maintaining the state of processing for a given funtools file, so that we can do things like write headers and flush extension padding at the right time, without you having to do it. </p>
 <p> For example, if you open a new funtools file for writing using <i>FunOpen()</i>, then generate an array of image data and call <i>FunImagePut()</i>, funtools knows to write the image header automatically. There is no need to think about writing a standard header. Of course, you can add parameters to the file first by calling one of the <i>FunParamPut()</i> routines, and these parameters will automatically be added to the header when it is written out. There still is no need to write the header explicitly. </p>
@@ -157,12 +157,12 @@ FunClose(fun);</p>
 <dt>*</dt>
 <dd> When specifying that input extensions be copied to an output file via a reference handle, open the output file <code>before</code> reading the input file. (Otherwise the initial copy will not occur).</dd>
 <dt>*</dt>
-<dd> Always write parameters to an output file using one of the <i>FunParamPut()</i> calls <code>before</code> writing any data. (This is a good idea for all <font SIZE="-1">FITS</font> libraries, to avoid having to recopy data is the <font SIZE="-1">FITS</font> header needs to be extended by adding a single parameter.)</dd>
+<dd> Always write parameters to an output file using one of the <i>FunParamPut()</i> calls <code>before</code> writing any data. (This is a good idea for all FITS libraries, to avoid having to recopy data is the FITS header needs to be extended by adding a single parameter.)</dd>
 <dt>*</dt>
-<dd> If you retrieve an image, and need to know the data type, use the <font SIZE="-1">FUN_SECT_BITPIX</font> option of <i>FunInfoGet()</i>, <code>after</code> calling <i>FunImageGet()</i>, since it is possible to change the value of <font SIZE="-1">BITPIX</font> from the latter.</dd>
+<dd> If you retrieve an image, and need to know the data type, use the FUN_SECT_BITPIX option of <i>FunInfoGet()</i>, <code>after</code> calling <i>FunImageGet()</i>, since it is possible to change the value of BITPIX from the latter.</dd>
 <dt>*</dt>
 <dd> When specifying that input extensions be copied to an output file via a reference handle, close the output file <code>before</code> closing input file, or else use <i>FunFlush()</i> explicitly on the output file <code>before</code> closing the input file. (Otherwise the final copy will not occur).</dd></dl>
-<p> We believe that these are the natural rules that are implied in most <font SIZE="-1">FITS</font> programming tasks. However, we recognize that making explicit use of &#8220;natural order&#8221; to decide what automatic action to take on behalf of the programmer is experimental. Therefore, if you find that your needs are not compatible with our preferred order, please let us know &#8212; it will be most illuminating for us as we evaluate this experiment. </p>
+<p> We believe that these are the natural rules that are implied in most FITS programming tasks. However, we recognize that making explicit use of &#8220;natural order&#8221; to decide what automatic action to take on behalf of the programmer is experimental. Therefore, if you find that your needs are not compatible with our preferred order, please let us know &#8212; it will be most illuminating for us as we evaluate this experiment. </p>
 <p> <code>Funtools Programming Examples</code> </p>
 <p> The following complete coding examples are provided to illustrate the simplicity of Funtools applications. They can be found in the funtest subdirectory of the Funtools distribution. In many cases, you should be able to modify one of these programs to generate your own Funtools program:</p>
 <dl>
@@ -177,7 +177,7 @@ FunClose(fun);</p>
 <dt>*</dt>
 <dd> imblank.c: blank out image values below a threshold</dd>
 <dt>*</dt>
-<dd> asc2fits.c: convert a specific <font SIZE="-1">ASCII</font> table to <font SIZE="-1">FITS</font> binary table</dd></dl>
+<dd> asc2fits.c: convert a specific ASCII table to FITS binary table</dd></dl>
 <p> <code>The Funtools Programming Reference Manual</code> </p>
 <p> #include &lt;<a href="file:/usr/include/funtools.h">funtools.h</a>&gt; </p>
 <p> Fun FunOpen(char *name, char *mode, Fun ref) </p>

@@ -32,7 +32,7 @@ gcc -o mydevice mydevice.c
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-evtest/">evtest</a>(1)</p>
 <h2>AUTHOR</h2>
-<p> evtest-capture was written by Peter Hutterer &lt;m[blue]<code>peter.hutterer [at] redhat.com</code>m[]<font SIZE="-2">[1]</font>&gt;.</p>
+<p> evtest-capture was written by Peter Hutterer &lt;m[blue]<code>peter.hutterer [at] redhat.com</code>m[][1]&gt;.</p>
 <h2>NOTES</h2>
 <dl>
 <dt> 1.</dt>

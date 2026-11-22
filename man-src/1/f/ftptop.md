@@ -37,7 +37,7 @@ description: "ftptop – display running status on proftpd server connections"
 <dd> Print out the version of <i>ftptop</i> and quit.</dd></dl>
 <p> While <i>ftptop</i> is running, hit the &#8216;q&#8217; key to quit. The &#8216;t&#8217; key toggles between display modes. Currently there are two display modes: <code>normal</code> and <code>transfer speed</code> modes.</p>
 <h2>FILES</h2>
-<p> <code>/usr/bin/ftptop</code><br />
+<p> <code>/usr/bin/ftptop</code><br/>
  <code>/run/proftpd/proftpd.scoreboard</code></p>
 <h2>AUTHORS</h2>
 <p> ProFTPD is written and maintained by a number of people, full credits can be found on <code><a rel="nofollow" href="http://www.proftpd.org/credits.html">http://www.proftpd.org/credits.html</a></code></p>

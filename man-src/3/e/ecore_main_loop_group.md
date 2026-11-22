@@ -9,11 +9,11 @@ description: "Main Loop Functions – These functions control the Ecore event ha
 
 <p>Main Loop Functions &#8211; These functions control the Ecore event handling loop. </p>
 <h3>Functions</h3>
-<p>EAPI void <code>ecore_main_loop_iterate</code> (void)<br />
- <i>Runs a single iteration of the main loop to process everything on the queue. </i><br />
- EAPI void <code>ecore_main_loop_begin</code> (void)<br />
- <i>Runs the application main loop. </i><br />
- EAPI void <code>ecore_main_loop_quit</code> (void)<br />
+<p>EAPI void <code>ecore_main_loop_iterate</code> (void)<br/>
+ <i>Runs a single iteration of the main loop to process everything on the queue. </i><br/>
+ EAPI void <code>ecore_main_loop_begin</code> (void)<br/>
+ <i>Runs the application main loop. </i><br/>
+ EAPI void <code>ecore_main_loop_quit</code> (void)<br/>
  <i>Quits the main loop once all the events currently on the queue have been processed. </i></p>
 <h2>Detailed Description</h2>
 <p>These functions control the Ecore event handling loop. </p>

@@ -12,7 +12,7 @@ description: "llvm-as – LLVM assembler"
 <h2>SYNOPSIS</h2>
 <p> <code>llvm-as</code> [<i>options</i>] [<i>filename</i>]</p>
 <h2>DESCRIPTION</h2>
-<p> <code>llvm-as</code> is the <font SIZE="-1">LLVM</font> assembler. It reads a file containing human-readable <font SIZE="-1">LLVM</font> assembly language, translates it to <font SIZE="-1">LLVM</font> bitcode, and writes the result into a file or to standard output. </p>
+<p> <code>llvm-as</code> is the LLVM assembler. It reads a file containing human-readable LLVM assembly language, translates it to LLVM bitcode, and writes the result into a file or to standard output. </p>
 <p> If <i>filename</i> is omitted or is <tt>&quot;-&quot;</tt>, then <code>llvm-as</code> reads its input from standard input. </p>
 <p> If an output file is not specified with the <code>-o</code> option, then <code>llvm-as</code> sends its output to a file or standard output by following these rules:</p>
 <dl>
@@ -35,4 +35,4 @@ description: "llvm-as – LLVM assembler"
 <h2>SEE ALSO</h2>
 <p> llvm-dis, gccas</p>
 <h2>AUTHORS</h2>
-<p> Maintained by the <font SIZE="-1">LLVM</font> Team (&lt;<a rel="nofollow" href="http://llvm.org">http://llvm.org</a>&gt;). </p>
+<p> Maintained by the LLVM Team (&lt;<a rel="nofollow" href="http://llvm.org">http://llvm.org</a>&gt;). </p>

@@ -20,11 +20,11 @@ description: "texdiff – Compares two (La)TeX documents to create a merged vers
  \newcommand\TLSins[1]{\cbstart{}\textcolor{ins}{\uline{#1}}\cbend{}}
  \newcommand\TLSdel[1]{\cbdelete{}\textcolor{del}{\sout{#1}}}
 </code></pre>
-<p> Define editing colors <code>&quot;ins&quot;</code> and <code>&quot;del&quot;</code> with existing <code>&quot;xcolor&quot;</code> color names: <br />
+<p> Define editing colors <code>&quot;ins&quot;</code> and <code>&quot;del&quot;</code> with existing <code>&quot;xcolor&quot;</code> color names: <br/>
 &nbsp;\colorlet{ins}{blue}&nbsp;\colorlet{del}{red} </p>
-<p> Or from scratch: <br />
+<p> Or from scratch: <br/>
 &nbsp;\definecolor{ins}{rgb}{0, 0.5, 0} </p>
-<p> These macros are <font SIZE="-1">NOT</font> automatically interted at \begin{document} like the original scripts did (see the <font SIZE="-1"><code>ACKNOWLEDGMENTS</code></font> section below), because this will not work on files of a multi-file document (those included by \include or \input). Furthermore, if you insert the macros manually, you can tune them as you like, i. e. change text color or position of changebars. Have a look at the documentation of the ulem and changebar packages on how to do this!  </p>
+<p> These macros are NOT automatically interted at \begin{document} like the original scripts did (see the <code>ACKNOWLEDGMENTS</code> section below), because this will not work on files of a multi-file document (those included by \include or \input). Furthermore, if you insert the macros manually, you can tune them as you like, i. e. change text color or position of changebars. Have a look at the documentation of the ulem and changebar packages on how to do this!  </p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>--nofloats</code>, <code>-n</code></dt>
@@ -34,11 +34,11 @@ description: "texdiff – Compares two (La)TeX documents to create a merged vers
 <dd> <p> Turns on debugging. Temporary files that contain numbered braces are kept and a raw difference file is written as output file name appended with &#8216;-wdiff.tex&#8217;. In addition, several regular expression diagnostics are printed. <code>Warning: produces a lot of output.</code> </p>
  </dd></dl>
 <h2>AUTHOR</h2>
-<p> Mark Doll &lt;markdoll&lt;<font SIZE="-1">AT</font>&gt;gmx.net&gt;, Cengiz Gunay &lt;cengique&lt;<font SIZE="-1">AT</font>&gt;users.sf.net&gt;.  </p>
+<p> Mark Doll &lt;markdoll&lt;AT&gt;gmx.net&gt;, Cengiz Gunay &lt;cengique&lt;AT&gt;users.sf.net&gt;.  </p>
 <h2>ACKNOWLEDGMENTS</h2>
 <dl>
 <dt><code>*</code></dt>
-<dd> <p> Version 0.4, by <font SIZE="-1">CG</font>, 2009/09/15. Added use of GetOpt to take an optional parameter to skip float (e.g., figure or table) contents. Added an optional debug mode. Embedded <font SIZE="-1">POD</font> documentation. Fixed problem with insertion and deletions appearing in the middle of sectioning commands by throwing off LaTeX. </p>
+<dd> <p> Version 0.4, by CG, 2009/09/15. Added use of GetOpt to take an optional parameter to skip float (e.g., figure or table) contents. Added an optional debug mode. Embedded POD documentation. Fixed problem with insertion and deletions appearing in the middle of sectioning commands by throwing off LaTeX. </p>
  </dd>
 <dt><code>*</code></dt>
 <dd> <p> Version 0.3, modified by Cengiz Gunay &lt;cengique [at] users.sf.net&gt;, 2009/06/30. Added some Latex commands that should be excluded and fixed handling of &#8216;\%&#8216; characters. </p>

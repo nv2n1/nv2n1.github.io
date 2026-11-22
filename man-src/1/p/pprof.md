@@ -108,5 +108,5 @@ description: "pprof – manual page for pprof (part of gperftools)"
 <p> Further documentation for <code>pprof</code> is maintained as a web page called <code>cpu_profiler.html</code> and is likely installed at one of the following locations:</p>
 <dl>
 <dt>
-</dt><dd> <code>/usr/share/gperftools/cpu_profiler.html</code><br />
+</dt><dd> <code>/usr/share/gperftools/cpu_profiler.html</code><br/>
  <code>/usr/local/share/gperftools/cpu_profiler.html</code></dd></dl>

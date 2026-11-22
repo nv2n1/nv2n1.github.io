@@ -11,13 +11,13 @@ description: "ipsec_initaddr, ipsec_addrtypeof, ipsec_addrlenof, ipsec_addrbytes
 <p> ipsec_initaddr, ipsec_addrtypeof, ipsec_addrlenof, ipsec_addrbytesof, ipsec_addrbytesptr &#8211; initialize an ip_address, get address type of an ip_address, get length of address within an ip_address, get copy of address within an ip_address, get pointer to address within an ip_address</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libreswan.h&gt;</code> </p>
-<p> <code>const char *initaddr(const char *src, size_t srclen,</code><br />
- &nbsp;<wbr> <code>int af, ip_address *dst);</code><br />
- <code>int addrtypeof(const ip_address *src);</code><br />
- <code>size_t addrlenof(const ip_address *src);</code><br />
- <code>size_t addrbytesof(const ip_address *src,</code><br />
- &nbsp;<wbr> <code>unsigned char *dst, size_t dstlen);</code><br />
- <code>size_t addrbytesptr(const ip_address *src,</code><br />
+<p> <code>const char *initaddr(const char *src, size_t srclen,</code><br/>
+ &nbsp;<wbr> <code>int af, ip_address *dst);</code><br/>
+ <code>int addrtypeof(const ip_address *src);</code><br/>
+ <code>size_t addrlenof(const ip_address *src);</code><br/>
+ <code>size_t addrbytesof(const ip_address *src,</code><br/>
+ &nbsp;<wbr> <code>unsigned char *dst, size_t dstlen);</code><br/>
+ <code>size_t addrbytesptr(const ip_address *src,</code><br/>
  &nbsp;<wbr> <code>const unsigned char **dst);</code></p>
 <h2>DESCRIPTION</h2>
 <p> The <code>&lt;libreswan.h&gt;</code> library uses an internal type <i>ip_address</i> to contain one of the (currently two) types of IP address. These functions provide basic tools for creating and examining this type. </p>

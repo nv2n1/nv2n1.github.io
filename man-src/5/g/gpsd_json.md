@@ -72,7 +72,7 @@ description: "gpsd_json – gpsd request/response protol"
 <td> ept </td>
 <td> No </td>
 <td> numeric </td>
-<td> Estimated timestamp error (%f, seconds, 95% confidence).<br />
+<td> Estimated timestamp error (%f, seconds, 95% confidence).<br/>
 &nbsp;<wbr>&nbsp;<wbr>Present if time is present.
 </td>
 </tr>
@@ -80,7 +80,7 @@ description: "gpsd_json – gpsd request/response protol"
 <td> lat </td>
 <td> No </td>
 <td> numeric </td>
-<td> Latitude in degrees: +/- signifies North/South. Present<br />
+<td> Latitude in degrees: +/- signifies North/South. Present<br/>
 &nbsp;<wbr>&nbsp;<wbr>when mode is 2 or 3.
 </td>
 </tr>
@@ -88,7 +88,7 @@ description: "gpsd_json – gpsd request/response protol"
 <td> lon </td>
 <td> No </td>
 <td> numeric </td>
-<td> Longitude in degrees: +/- signifies East/West. Present<br />
+<td> Longitude in degrees: +/- signifies East/West. Present<br/>
 &nbsp;<wbr>&nbsp;<wbr>when mode is 2 or 3.
 </td>
 </tr>
@@ -103,8 +103,8 @@ description: "gpsd_json – gpsd request/response protol"
 <td> epx </td>
 <td> No </td>
 <td> numeric </td>
-<td> Longitude error estimate in meters, 95% confidence. Present<br />
-&nbsp;<wbr>&nbsp;<wbr>if mode is 2 or 3 and DOPs can be calculated from the satellite&nbsp;<wbr><br />
+<td> Longitude error estimate in meters, 95% confidence. Present<br/>
+&nbsp;<wbr>&nbsp;<wbr>if mode is 2 or 3 and DOPs can be calculated from the satellite&nbsp;<wbr><br/>
 &nbsp;<wbr>&nbsp;<wbr>view.
 </td>
 </tr>
@@ -112,8 +112,8 @@ description: "gpsd_json – gpsd request/response protol"
 <td> epy </td>
 <td> No </td>
 <td> numeric </td>
-<td> Latitude error estimate in meters, 95% confidence. Present<br />
-&nbsp;<wbr>&nbsp;<wbr>if mode is 2 or 3 and DOPs can be calculated from the satellite&nbsp;<wbr><br />
+<td> Latitude error estimate in meters, 95% confidence. Present<br/>
+&nbsp;<wbr>&nbsp;<wbr>if mode is 2 or 3 and DOPs can be calculated from the satellite&nbsp;<wbr><br/>
 &nbsp;<wbr>&nbsp;<wbr>view.
 </td>
 </tr>
@@ -121,8 +121,8 @@ description: "gpsd_json – gpsd request/response protol"
 <td> epv </td>
 <td> No </td>
 <td> numeric </td>
-<td> Estimated vertical error in meters, 95% confidence. Present<br />
-&nbsp;<wbr>&nbsp;<wbr>if mode is 3 and DOPs can be calculated from the satellite&nbsp;<wbr><br />
+<td> Estimated vertical error in meters, 95% confidence. Present<br/>
+&nbsp;<wbr>&nbsp;<wbr>if mode is 3 and DOPs can be calculated from the satellite&nbsp;<wbr><br/>
 &nbsp;<wbr>&nbsp;<wbr>view.
 </td>
 </tr>
@@ -224,7 +224,7 @@ description: "gpsd_json – gpsd request/response protol"
 <td> xdop </td>
 <td> No </td>
 <td> numeric </td>
-<td> Longitudinal dilution of precision, a dimensionless <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>factor which should be multiplied by a base UERE to get an<br />
+<td> Longitudinal dilution of precision, a dimensionless <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>factor which should be multiplied by a base UERE to get an<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>error estimate.
 </td>
 </tr>
@@ -232,7 +232,7 @@ description: "gpsd_json – gpsd request/response protol"
 <td> ydop </td>
 <td> No </td>
 <td> numeric </td>
-<td> Latitudinal dilution of precision, a dimensionless <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>factor which should be multiplied by a base UERE to get an<br />
+<td> Latitudinal dilution of precision, a dimensionless <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>factor which should be multiplied by a base UERE to get an<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>error estimate.
 </td>
 </tr>
@@ -240,7 +240,7 @@ description: "gpsd_json – gpsd request/response protol"
 <td> vdop </td>
 <td> No </td>
 <td> numeric </td>
-<td> Altitude dilution of precision, a dimensionless <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>factor which should be multiplied by a base UERE to get an<br />
+<td> Altitude dilution of precision, a dimensionless <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>factor which should be multiplied by a base UERE to get an<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>error estimate.
 </td>
 </tr>
@@ -248,7 +248,7 @@ description: "gpsd_json – gpsd request/response protol"
 <td> tdop </td>
 <td> No </td>
 <td> numeric </td>
-<td> Time dilution of precision, a dimensionless <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>factor which should be multiplied by a base UERE to get an<br />
+<td> Time dilution of precision, a dimensionless <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>factor which should be multiplied by a base UERE to get an<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>error estimate.
 </td>
 </tr>
@@ -256,7 +256,7 @@ description: "gpsd_json – gpsd request/response protol"
 <td> hdop </td>
 <td> No </td>
 <td> numeric </td>
-<td> Horizontal dilution of precision, a dimensionless <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>factor which should be multiplied by a base UERE to get a<br />
+<td> Horizontal dilution of precision, a dimensionless <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>factor which should be multiplied by a base UERE to get a<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>circular error estimate.
 </td>
 </tr>
@@ -264,7 +264,7 @@ description: "gpsd_json – gpsd request/response protol"
 <td> pdop </td>
 <td> No </td>
 <td> numeric </td>
-<td> Spherical dilution of precision, a dimensionless <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>factor which should be multiplied by a base UERE to get an<br />
+<td> Spherical dilution of precision, a dimensionless <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>factor which should be multiplied by a base UERE to get an<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>error estimate.
 </td>
 </tr>
@@ -272,7 +272,7 @@ description: "gpsd_json – gpsd request/response protol"
 <td> gdop </td>
 <td> No </td>
 <td> numeric </td>
-<td> Hyperspherical dilution of precision, a dimensionless <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>factor which should be multiplied by a base UERE to get an<br />
+<td> Hyperspherical dilution of precision, a dimensionless <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>factor which should be multiplied by a base UERE to get an<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>error estimate.
 </td>
 </tr>
@@ -327,7 +327,7 @@ description: "gpsd_json – gpsd request/response protol"
 <td> used </td>
 <td> Yes </td>
 <td> boolean </td>
-<td> Used in current solution? (SBAS/WAAS/EGNOS satellites <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>may be flagged used if the solution has corrections from them,<br />
+<td> Used in current solution? (SBAS/WAAS/EGNOS satellites <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>may be flagged used if the solution has corrections from them,<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>but not all drivers make this information available.)
 </td>
 </tr>
@@ -745,7 +745,7 @@ description: "gpsd_json – gpsd request/response protol"
 <td> remote </td>
 <td> No </td>
 <td> string </td>
-<td> URL of the remote daemon reporting this version. If<br />
+<td> URL of the remote daemon reporting this version. If<br/>
 &nbsp;<wbr>&nbsp;<wbr>empty, this is the version of the local daemon.
 </td>
 </tr>
@@ -791,7 +791,7 @@ description: "gpsd_json – gpsd request/response protol"
 <td> remote </td>
 <td> No </td>
 <td> string </td>
-<td> URL of the remote daemon reporting the device set. If<br />
+<td> URL of the remote daemon reporting the device set. If<br/>
 &nbsp;<wbr>&nbsp;<wbr>empty, this is a DEVICES response from the local daemon.
 </td>
 </tr>
@@ -843,7 +843,7 @@ description: "gpsd_json – gpsd request/response protol"
 <td> nmea </td>
 <td> No </td>
 <td> boolean </td>
-<td> Enable (true) or disable (false) dumping of binary <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>packets as pseudo-NMEA. Default<br />
+<td> Enable (true) or disable (false) dumping of binary <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>packets as pseudo-NMEA. Default<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>is false.
 </td>
 </tr>
@@ -851,11 +851,11 @@ description: "gpsd_json – gpsd request/response protol"
 <td> raw </td>
 <td> No </td>
 <td> integer </td>
-<td> Controls &#8216;raw&#8217; mode. When this attribute is set to 1 <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>for a channel, gpsd reports the<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>unprocessed NMEA or AIVDM data stream from whatever device is attached.<br />
+<td> Controls &#8216;raw&#8217; mode. When this attribute is set to 1 <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>for a channel, gpsd reports the<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>unprocessed NMEA or AIVDM data stream from whatever device is attached.<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>Binary GPS packets are hex-dumped. RTCM2 and RTCM3
-<p>&nbsp;<wbr>&nbsp;<wbr>packets are not dumped in raw mode. When this attribute is set to <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>2 for a channel that processes binary data,<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>gpsd reports the received data verbatim<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>packets are not dumped in raw mode. When this attribute is set to <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>2 for a channel that processes binary data,<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>gpsd reports the received data verbatim<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>without hex-dumping.</p>
 </td>
 </tr>
@@ -870,9 +870,9 @@ description: "gpsd_json – gpsd request/response protol"
 <td> split24 </td>
 <td> No </td>
 <td> boolean </td>
-<td> If true, aggregate AIS type24 sentence parts. If false,<br />
-&nbsp;<wbr>&nbsp;<wbr>report each part as a separate JSON object, leaving the<br />
-&nbsp;<wbr>&nbsp;<wbr>client to match MMSIs and aggregate.&nbsp;<wbr>&nbsp;<wbr>Default is<br />
+<td> If true, aggregate AIS type24 sentence parts. If false,<br/>
+&nbsp;<wbr>&nbsp;<wbr>report each part as a separate JSON object, leaving the<br/>
+&nbsp;<wbr>&nbsp;<wbr>client to match MMSIs and aggregate.&nbsp;<wbr>&nbsp;<wbr>Default is<br/>
 &nbsp;<wbr>&nbsp;<wbr>false. Applies only to AIS reports.
 </td>
 </tr>
@@ -880,10 +880,10 @@ description: "gpsd_json – gpsd request/response protol"
 <td> pps </td>
 <td> No </td>
 <td> boolean </td>
-<td> If true, emit a PPS bar when the device issues<br />
-&nbsp;<wbr>&nbsp;<wbr>1PPS.&nbsp;<wbr>&nbsp;<wbr>Intended to be used with the&nbsp;<wbr>&quot;nmea&quot;&nbsp;<wbr>and&nbsp;<wbr>&quot;raw&quot;&nbsp;<wbr>modes.<br />
-&nbsp;<wbr>&nbsp;<wbr>Default is false.&nbsp;<wbr><code>Note: this is an<br />
-&nbsp;<wbr>&nbsp;<wbr>unstable experimental feature which may change or be removed<br />
+<td> If true, emit a PPS bar when the device issues<br/>
+&nbsp;<wbr>&nbsp;<wbr>1PPS.&nbsp;<wbr>&nbsp;<wbr>Intended to be used with the&nbsp;<wbr>&quot;nmea&quot;&nbsp;<wbr>and&nbsp;<wbr>&quot;raw&quot;&nbsp;<wbr>modes.<br/>
+&nbsp;<wbr>&nbsp;<wbr>Default is false.&nbsp;<wbr><code>Note: this is an<br/>
+&nbsp;<wbr>&nbsp;<wbr>unstable experimental feature which may change or be removed<br/>
 &nbsp;<wbr>&nbsp;<wbr>without notice.</code>
 </td>
 </tr>
@@ -891,8 +891,8 @@ description: "gpsd_json – gpsd request/response protol"
 <td> device </td>
 <td> No </td>
 <td> string </td>
-<td> If present, enable watching only of the specified device <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>rather than all devices. Useful with raw and NMEA modes<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>in which device responses aren&#8217;t tagged. Has no effect when<br />
+<td> If present, enable watching only of the specified device <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>rather than all devices. Useful with raw and NMEA modes<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>in which device responses aren&#8217;t tagged. Has no effect when<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>used with enable:false.
 </td>
 </tr>
@@ -900,7 +900,7 @@ description: "gpsd_json – gpsd request/response protol"
 <td> remote </td>
 <td> No </td>
 <td> string </td>
-<td> URL of the remote daemon reporting the watch set. If<br />
+<td> URL of the remote daemon reporting the watch set. If<br/>
 &nbsp;<wbr>&nbsp;<wbr>empty, this is a WATCH response from the local daemon.
 </td>
 </tr>
@@ -986,7 +986,7 @@ description: "gpsd_json – gpsd request/response protol"
 ]}]}</pre>
 </dd></dl>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  Client software should not assume the field inventory of the POLL response is fixed for all time. As gpsd collects and caches more data from more sensor types, those data are likely to find their way into this response. </dd>
 </dl>
 </dl>
@@ -1084,7 +1084,7 @@ description: "gpsd_json – gpsd request/response protol"
 <td> No </td>
 <td> string </td>
 <td> Name the device for which the control bits are <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>being reported, or for which they are to be applied. This
-<p>&nbsp;<wbr>&nbsp;<wbr>attribute may be omitted only when there is exactly one<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>attribute may be omitted only when there is exactly one<br/>
 &nbsp;<wbr>&nbsp;<wbr>subscribed channel.
 </td>
 </tr>
@@ -1092,8 +1092,8 @@ description: "gpsd_json – gpsd request/response protol"
 <td> activated </td>
 <td> No </td>
 <td> string </td>
-<td> Time the device was activated as an ISO8601<br />
-&nbsp;<wbr>&nbsp;<wbr>timestamp. If the device is inactive this attribute is<br />
+<td> Time the device was activated as an ISO8601<br/>
+&nbsp;<wbr>&nbsp;<wbr>timestamp. If the device is inactive this attribute is<br/>
 &nbsp;<wbr>&nbsp;<wbr>absent.
 </td>
 </tr>
@@ -1101,9 +1101,9 @@ description: "gpsd_json – gpsd request/response protol"
 <td> flags </td>
 <td> No </td>
 <td> integer </td>
-<td> Bit vector of property flags. Currently defined flags are:<br />
-&nbsp;<wbr>&nbsp;<wbr>describe packet types seen so far&nbsp;<wbr>(GPS, RTCM2, RTCM3, <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>AIS). Won&#8217;t be reported if empty, e.g. before<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>gpsd has seen identifiable packets<br />
+<td> Bit vector of property flags. Currently defined flags are:<br/>
+&nbsp;<wbr>&nbsp;<wbr>describe packet types seen so far&nbsp;<wbr>(GPS, RTCM2, RTCM3, <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>AIS). Won&#8217;t be reported if empty, e.g. before<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>gpsd has seen identifiable packets<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>from the device.</p>
 </td>
 </tr>
@@ -1111,7 +1111,7 @@ description: "gpsd_json – gpsd request/response protol"
 <td> driver </td>
 <td> No </td>
 <td> string </td>
-<td> GPSD&#8217;s name for the device driver type. Won&#8217;t be reported before <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>gpsd has seen identifiable packets<br />
+<td> GPSD&#8217;s name for the device driver type. Won&#8217;t be reported before <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>gpsd has seen identifiable packets<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>from the device.
 </td>
 </tr>
@@ -1148,8 +1148,8 @@ description: "gpsd_json – gpsd request/response protol"
 <td> native </td>
 <td> No </td>
 <td> integer </td>
-<td> 0 means NMEA mode and 1 means <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>alternate mode (binary if it has one, for SiRF and Evermore chipsets<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>in particular). Attempting to set this mode on a non-GPS<br />
+<td> 0 means NMEA mode and 1 means <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>alternate mode (binary if it has one, for SiRF and Evermore chipsets<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>in particular). Attempting to set this mode on a non-GPS<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>device will yield an error.
 </td>
 </tr>
@@ -1164,7 +1164,7 @@ description: "gpsd_json – gpsd request/response protol"
 <td> mincycle </td>
 <td> No </td>
 <td> real </td>
-<td> Device minimum cycle time in seconds. Reported from <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>?CONFIGDEV when (and only when) the rate is switchable. It is<br />
+<td> Device minimum cycle time in seconds. Reported from <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>?CONFIGDEV when (and only when) the rate is switchable. It is<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>read-only and not settable.
 </td>
 </tr>
@@ -1252,7 +1252,7 @@ description: "gpsd_json – gpsd request/response protol"
 <h2>Rtcm2</h2>
 <p>RTCM-104 is a family of serial protocols used for broadcasting pseudorange corrections from differential-GPS reference stations. Many GPS receivers can accept these corrections to improve their reporting accuracy. </p>
 <p> RTCM-104 comes in two major and incompatible flavors, 2.x and 3.x. Each major flavor has minor (compatible) revisions. </p>
-<p> The applicable standard for RTCM Version 2.x is RTCM Recommended Standards for Differential NAVSTAR GPS Service RTCM Paper 194-93/SC 104-STD. For RTCM 3.1 it is RTCM Paper 177-2006-SC104-STD. Ordering instructions for both standards are accessible from the website of the m[blue]<code>Radio Technical Commission for Maritime Services</code>m[]<font SIZE="-2">[1]</font> under &quot;Publications&quot;.</p>
+<p> The applicable standard for RTCM Version 2.x is RTCM Recommended Standards for Differential NAVSTAR GPS Service RTCM Paper 194-93/SC 104-STD. For RTCM 3.1 it is RTCM Paper 177-2006-SC104-STD. Ordering instructions for both standards are accessible from the website of the m[blue]<code>Radio Technical Commission for Maritime Services</code>m[][1] under &quot;Publications&quot;.</p>
 <h3>Rtcm Wire Transmissions</h3>
 <p>Differential-GPS correction stations consist of a GPS reference receiver coupled to a low frequency (LF) transmitter. The GPS reference receiver is a survey-grade GPS that does GPS carrier tracking and can work out its own position to a few millimeters. It generates range and range-rate corrections and encodes them into RTCM104. It ships the RTCM104 to the LF transmitter over serial rs-232 signal at 100 baud or 200 baud depending on the requirements of the transmitter. </p>
 <p> The LF transmitter broadcasts the approximately 300khz radio signal that differential-GPS radio receivers pick up. Transmitters that are meant to have a higher range will need to transmit at the slower rate. The higher the data rate the harder it will be for the remote radio receiver to receive with a good signal-to-noise ration. (Higher data rate signals can&#8217;t be averaged over as long a time frame, hence they appear noisier.)</p>
@@ -1262,9 +1262,9 @@ description: "gpsd_json – gpsd request/response protol"
 <h3>Rtcm2 Json Format</h3>
 <p>Each RTCM2 message is dumped as a single JSON object per message, with the message fields as attributes of that object. Arrays of satellite, station, and constellation statistics become arrays of JSON sub-objects. Each sentence will normally also have a &quot;device&quot; field containing the pathname of the originating device. </p>
 <p> All attributes other than the device field are mandatory. Header attributes are emitted before others. </p>
-<p> <font SIZE="+1"> <code>Header portion</code></p>
+<p>  <code>Header portion</code></p>
 <dl>
-<dd><code>Table 15. SKY object</code> </font></dd>
+<dd><code>Table 15. SKY object</code> </dd>
 <table BORDER>
 <tr VALIGN=top>
 <td><code> Name </code></td>
@@ -1298,7 +1298,7 @@ description: "gpsd_json – gpsd request/response protol"
 <td> zcount </td>
 <td> real </td>
 <td>
-<p> The reference time of the corrections in the message in seconds within the current hour. Note that it is in GPS time, which is some seconds ahead of UTC (see the U.S. Naval Observatory&#8217;s m[blue]<code>table of leap second corrections</code>m[]<font SIZE="-2">[2]</font>).
+<p> The reference time of the corrections in the message in seconds within the current hour. Note that it is in GPS time, which is some seconds ahead of UTC (see the U.S. Naval Observatory&#8217;s m[blue]<code>table of leap second corrections</code>m[][2]).
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1323,7 +1323,7 @@ description: "gpsd_json – gpsd request/response protol"
 </td>
 </tr>
 </table>
-<p> <font SIZE="+1"> </p>
+<p>  </p>
 <p> &lt;message type&gt; is one of </p>
 <p> 1</p>
 <dl>
@@ -1353,10 +1353,10 @@ description: "gpsd_json – gpsd request/response protol"
 <dl>
 <dd>GLONASS subset corrections &#8212; a message containing corrections for a set of the GLONASS satellites in view.</dd></dl>
 </dl>
-<p> </font><font SIZE="+2"> <code>Type 1 and 9: Correction data</code></p>
+<p>  <code>Type 1 and 9: Correction data</code></p>
 <dl>
 <dd>One or more satellite objects follow the header for type 1 or type 9 messages. Here is the format: </dd>
-<p> <code>Table 16. Satellite object</code> </font></p>
+<p> <code>Table 16. Satellite object</code> </p>
 <table BORDER>
 <tr VALIGN=top>
 <td><code> Name </code></td>
@@ -1401,9 +1401,9 @@ description: "gpsd_json – gpsd request/response protol"
 </td>
 </tr>
 </table>
-<p> <font SIZE="+2"> </p>
+<p>  </p>
 <p> User Differential Range Error values are as follows: </p>
-<p> <code>Table 17. UDRE values</code> </font></p>
+<p> <code>Table 17. UDRE values</code> </p>
 <table BORDER>
 <tr VALIGN=top>
 <td> 0 </td>
@@ -1426,10 +1426,10 @@ description: "gpsd_json – gpsd request/response protol"
 </td>
 </tr>
 </table>
-<p> <font SIZE="+2"> </p>
+<p>  </p>
 <p> Here&#8217;s an example: </p>
 <dl>
-<dd></font></dd>
+<dd></dd>
 <pre>{&quot;class&quot;:&quot;RTCM2&quot;,&quot;type&quot;:1,
  &quot;station_id&quot;:688,&quot;zcount&quot;:843.0,&quot;seqnum&quot;:5,&quot;length&quot;:19,&quot;station_health&quot;:6,
  &quot;satellites&quot;:[
@@ -1447,10 +1447,10 @@ description: "gpsd_json – gpsd request/response protol"
 ]}</pre>
 </dl>
 </dl>
-<p> <font SIZE="+1"> <code>Type 3: Reference Station Parameters</code></p>
+<p>  <code>Type 3: Reference Station Parameters</code></p>
 <dl>
 <dd>Here are the payload members of a type 3 (Reference Station Parameters) message: </dd>
-<p> <code>Table 18. Reference Station Parameters</code> </font></p>
+<p> <code>Table 18. Reference Station Parameters</code> </p>
 <table BORDER>
 <tr VALIGN=top>
 <td><code> Name </code></td>
@@ -1481,22 +1481,22 @@ description: "gpsd_json – gpsd request/response protol"
 </td>
 </tr>
 </table>
-<p> <font SIZE="+1"> </p>
+<p>  </p>
 <p> The coordinates are the position of the station, in meters to two decimal places, in Earth Centred Earth Fixed coordinates. These are usually referred to the WGS84 reference frame, but may be referred to NAD83 in the US (essentially identical to WGS84 for all except geodesists), or to some other reference frame in other parts of the world. </p>
 <p> An invalid reference message is represented by a type 3 header without payload fields. </p>
 <p> Here&#8217;s an example: </p>
 <dl>
-<dd></font></dd>
+<dd></dd>
 <pre>{&quot;class&quot;:&quot;RTCM2&quot;,&quot;type&quot;:3,
  &quot;station_id&quot;:652,&quot;zcount&quot;:1657.2,&quot;seqnum&quot;:2,&quot;length&quot;:4,&quot;station_health&quot;:6,
  &quot;x&quot;:3878620.92,&quot;y&quot;:670281.40,&quot;z&quot;:5002093.59
 }</pre>
 </dl>
 </dl>
-<p> <font SIZE="+1"> <code>Type 4: Datum</code></p>
+<p>  <code>Type 4: Datum</code></p>
 <dl>
 <dd>Here are the payload members of a type 4 (Datum) message: </dd>
-<p> <code>Table 19. Datum</code> </font></p>
+<p> <code>Table 19. Datum</code> </p>
 <table BORDER>
 <tr VALIGN=top>
 <td><code> Name </code></td>
@@ -1548,14 +1548,14 @@ description: "gpsd_json – gpsd request/response protol"
 </td>
 </tr>
 </table>
-<p> <font SIZE="+1"> </p>
+<p>  </p>
 <p> &lt;dx&gt; &lt;dy&gt; &lt;dz&gt; are offsets to convert from local datum to GNSS datum or vice versa. These fields are optional. </p>
 <p> An invalid datum message is represented by a type 4 header without payload fields.</dl>
-<p> </font><font SIZE="+2"> <code>Type 5: Constellation Health</code></p>
+<p>  <code>Type 5: Constellation Health</code></p>
 <dl>
 <dd>One or more of these follow the header for type 5 messages &#8212; one for each satellite. </dd>
 <p> Here is the format: </p>
-<p> <code>Table 20. Constellation health</code> </font></p>
+<p> <code>Table 20. Constellation health</code> </p>
 <table BORDER>
 <tr VALIGN=top>
 <td><code> Name </code></td>
@@ -1601,7 +1601,7 @@ description: "gpsd_json – gpsd request/response protol"
 <tr VALIGN=top>
 <td> new_data </td>
 <td> bool </td>
-<td> True indicates that the IOD for this satellite will<br />
+<td> True indicates that the IOD for this satellite will<br/>
 &nbsp;<wbr>&nbsp;<wbr>soon be updated in type 1 or 9 messages..PP
 </td>
 </tr>
@@ -1620,16 +1620,16 @@ description: "gpsd_json – gpsd request/response protol"
 </td>
 </tr>
 </table>
-<p> <font SIZE="+2"> </p>
+<p>  </p>
 </dl>
-<p> </font><font SIZE="+3"> <code>Type 6: Null</code></p>
+<p>  <code>Type 6: Null</code></p>
 <dl>
 <dd>This just indicates a null message. There are no payload fields.</dd></dl>
-<p> </font><font SIZE="+4"> <code>Unknown message</code></p>
+<p>  <code>Unknown message</code></p>
 <dl>
 <dd>This format is used to dump message words in hexadecimal when the message type field doesn&#8217;t match any of the known ones. </dd>
 <p> Here is the format: </p>
-<p> <code>Table 21. Unknown Message</code> </font></p>
+<p> <code>Table 21. Unknown Message</code> </p>
 <table BORDER>
 <tr VALIGN=top>
 <td><code> Name </code></td>
@@ -1646,12 +1646,12 @@ description: "gpsd_json – gpsd request/response protol"
 </td>
 </tr>
 </table>
-<p> <font SIZE="+4"> </p>
+<p>  </p>
 <p> Each string in the array is a hex literal representing 30 bits of information, after parity checks and inversion. The high two bits should be ignored.</dl>
-<p> </font><font SIZE="+5"> <code>Type 7: Radio Beacon Almanac</code></p>
+<p>  <code>Type 7: Radio Beacon Almanac</code></p>
 <dl>
 <dd>Here is the format: </dd>
-<p> <code>Table 22. Contellation health</code> </font></p>
+<p> <code>Table 22. Contellation health</code> </p>
 <table BORDER>
 <tr VALIGN=top>
 <td><code> Name </code></td>
@@ -1709,10 +1709,10 @@ description: "gpsd_json – gpsd request/response protol"
 </td>
 </tr>
 </table>
-<p> <font SIZE="+5"> </p>
+<p>  </p>
 <p> Here&#8217;s an example: </p>
 <dl>
-<dd></font></dd>
+<dd></dd>
 <pre>{&quot;class&quot;:&quot;RTCM2&quot;,&quot;type&quot;:9,&quot;station_id&quot;:268,&quot;zcount&quot;:252.6,
  &quot;seqnum&quot;:4,&quot;length&quot;:5,&quot;station_health&quot;:0,
  &quot;satellites&quot;:[
@@ -1722,10 +1722,10 @@ description: "gpsd_json – gpsd request/response protol"
 ]}</pre>
 </dl>
 </dl>
-<p> <font SIZE="+1"> <code>Type 13: GPS Time of Week</code></p>
+<p>  <code>Type 13: GPS Time of Week</code></p>
 <dl>
 <dd>Here are the payload members of a type 13 (Groumf Tramitter Parameters) message: </dd>
-<p> <code>Table 23. Grund Transmitter Parameters</code> </font></p>
+<p> <code>Table 23. Grund Transmitter Parameters</code> </p>
 <table BORDER>
 <tr VALIGN=top>
 <td><code> Name </code></td>
@@ -1770,12 +1770,12 @@ description: "gpsd_json – gpsd request/response protol"
 </td>
 </tr>
 </table>
-<p> <font SIZE="+1"> </p>
+<p>  </p>
 <p> This message type replaces message type 3 (Reference Station Parameters) in RTCM 2.3.</dl>
-<p> </font><font SIZE="+2"> <code>Type 14: GPS Time of Week</code></p>
+<p>  <code>Type 14: GPS Time of Week</code></p>
 <dl>
 <dd>Here are the payload members of a type 14 (GPS Time of Week) message: </dd>
-<p> <code>Table 24. Reference Station Parameters</code> </font></p>
+<p> <code>Table 24. Reference Station Parameters</code> </p>
 <table BORDER>
 <tr VALIGN=top>
 <td><code> Name </code></td>
@@ -1806,18 +1806,18 @@ description: "gpsd_json – gpsd request/response protol"
 </td>
 </tr>
 </table>
-<p> <font SIZE="+2"> </p>
+<p>  </p>
 <p> Here&#8217;s an example: </p>
 <dl>
-<dd></font></dd>
+<dd></dd>
 <pre>{&quot;class&quot;:&quot;RTCM2&quot;,&quot;type&quot;:14,&quot;station_id&quot;:652,&quot;zcount&quot;:1657.2,
  &quot;seqnum&quot;:3,&quot;length&quot;:1,&quot;station_health&quot;:6,&quot;week&quot;:601,&quot;hour&quot;:109,
  &quot;leapsecs&quot;:15}</pre>
 </dl>
 </dl>
-<p> <font SIZE="+1"> <code>Type 16: Special Message</code></p>
+<p>  <code>Type 16: Special Message</code></p>
 <dl>
-<dd><code>Table 25. Special Message</code> </font></dd>
+<dd><code>Table 25. Special Message</code> </dd>
 <table BORDER>
 <tr VALIGN=top>
 <td><code> Name </code></td>
@@ -1834,12 +1834,12 @@ description: "gpsd_json – gpsd request/response protol"
 </td>
 </tr>
 </table>
-<p> <font SIZE="+1"> </p>
+<p>  </p>
 </dl>
-<p> </font><font SIZE="+2"> <code>Type 31: Correction data</code></p>
+<p>  <code>Type 31: Correction data</code></p>
 <dl>
 <dd>One or more GLONASS satellite objects follow the header for type 1 or type 9 messages. Here is the format: </dd>
-<p> <code>Table 26. Satellite object</code> </font></p>
+<p> <code>Table 26. Satellite object</code> </p>
 <table BORDER>
 <tr VALIGN=top>
 <td><code> Name </code></td>
@@ -1891,10 +1891,10 @@ description: "gpsd_json – gpsd request/response protol"
 </td>
 </tr>
 </table>
-<p> <font SIZE="+2"> </p>
+<p>  </p>
 <p> Here&#8217;s an example: </p>
 <dl>
-<dd></font></dd>
+<dd></dd>
 <pre>{&quot;class&quot;:&quot;RTCM2&quot;,&quot;type&quot;:31,&quot;station_id&quot;:652,&quot;zcount&quot;:1642.2,
  &quot;seqnum&quot;:0,&quot;length&quot;:14,&quot;station_health&quot;:6,
  &quot;satellites&quot;:[

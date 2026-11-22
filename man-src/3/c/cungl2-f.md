@@ -10,7 +10,7 @@ description: "cungl2.f –"
 <p>cungl2.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>cungl2</code> (M, N, K, A, LDA, TAU, WORK, INFO)<br />
+<p>subroutine <code>cungl2</code> (M, N, K, A, LDA, TAU, WORK, INFO)<br/>
  <i></i><code>CUNGL2</code> generates all or part of the unitary matrix Q from an LQ factorization determined by cgelqf (unblocked algorithm).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cungl2 (integerM, integerN, integerK, complex, dimension( lda, * )A, integerLDA, complex, dimension( * )TAU, complex, dimension( * )WORK, integerINFO)</h3>

@@ -11,11 +11,11 @@ description: "Query Results –"
 <p> Query Results &#8211; </p>
 <p> List results are returned as globus_list_t&#8217;s, list datums depend on the type of query (eg <code>globus_rls_string2_t</code>, <code>globus_rls_attribute_t</code>, etc).</p>
 <h3>Data Structures</h3>
-<p> struct <code>globus_rls_attribute_object_t</code><br />
- <i></i><code>globus_rls_client_lrc_attr_search()</code> returns a list of these structures which include the object name (LFN or PFN) and attribute value found by the query.<br />
- struct <code>globus_rls_string2_t</code><br />
- <i>String pair result. </i><br />
- struct <code>globus_rls_string2_bulk_t</code><br />
+<p> struct <code>globus_rls_attribute_object_t</code><br/>
+ <i></i><code>globus_rls_client_lrc_attr_search()</code> returns a list of these structures which include the object name (LFN or PFN) and attribute value found by the query.<br/>
+ struct <code>globus_rls_string2_t</code><br/>
+ <i>String pair result. </i><br/>
+ struct <code>globus_rls_string2_bulk_t</code><br/>
  <i>String pair result with return code, returned by bulk query operations. </i></p>
 <h3>Functions</h3>
 <p> globus_result_t <code>globus_rls_client_free_list</code> (globus_list_t *list) </p>

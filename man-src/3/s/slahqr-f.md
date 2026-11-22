@@ -10,7 +10,7 @@ description: "slahqr.f –"
 <p>slahqr.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>slahqr</code> (WANTT, WANTZ, N, ILO, IHI, H, LDH, WR, WI, ILOZ, IHIZ, Z, LDZ, INFO)<br />
+<p>subroutine <code>slahqr</code> (WANTT, WANTZ, N, ILO, IHI, H, LDH, WR, WI, ILOZ, IHIZ, Z, LDZ, INFO)<br/>
  <i></i><code>SLAHQR</code> computes the eigenvalues and Schur factorization of an upper Hessenberg matrix, using the double-shift/single-shift QR algorithm.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slahqr (logicalWANTT, logicalWANTZ, integerN, integerILO, integerIHI, real, dimension( ldh, * )H, integerLDH, real, dimension( * )WR, real, dimension( * )WI, integerILOZ, integerIHIZ, real, dimension( ldz, * )Z, integerLDZ, integerINFO)</h3>

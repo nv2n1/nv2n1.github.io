@@ -13,25 +13,25 @@ description: "Atlas::Objects::Operation::InfoData – This is base operator for 
 <p> Inherits <code>Atlas::Objects::Operation::RootOperationData</code>. </p>
 <p> Inherited by <code>Atlas::Objects::Operation::ErrorData</code>, and <code>Atlas::Objects::Operation::PerceptionData</code>. </p>
 <h3>Public Member Functions</h3>
-<p>virtual <code>InfoData</code> * <code>copy</code> () const<br />
- <i>Copy this object. </i><br />
- virtual bool <code>instanceOf</code> (int classNo) const<br />
- <i>Is this instance of some class? </i><br />
- virtual void <code>iterate</code> (int &amp;current_class, std::string &amp;attr) const<br />
- <i>Iterate over the attributes of this instance. </i><br />
- virtual void <code>free</code> ()<br />
- <i>Free an instance of this class, returning it to the memory pool. </i><br />
- virtual <code>InfoData</code> * <code>getDefaultObject</code> ()<br />
+<p>virtual <code>InfoData</code> * <code>copy</code> () const<br/>
+ <i>Copy this object. </i><br/>
+ virtual bool <code>instanceOf</code> (int classNo) const<br/>
+ <i>Is this instance of some class? </i><br/>
+ virtual void <code>iterate</code> (int &amp;current_class, std::string &amp;attr) const<br/>
+ <i>Iterate over the attributes of this instance. </i><br/>
+ virtual void <code>free</code> ()<br/>
+ <i>Free an instance of this class, returning it to the memory pool. </i><br/>
+ virtual <code>InfoData</code> * <code>getDefaultObject</code> ()<br/>
  <i>Get the reference object that contains the default values for attributes of instances of the same class as this object. </i></p>
 <h3>Static Public Member Functions</h3>
-<p>static <code>InfoData</code> * <code>alloc</code> ()<br />
- <i>Allocate a new instance of this class, using an existing instance if available. </i><br />
- static <code>InfoData</code> * <code>getDefaultObjectInstance</code> ()<br />
+<p>static <code>InfoData</code> * <code>alloc</code> ()<br/>
+ <i>Allocate a new instance of this class, using an existing instance if available. </i><br/>
+ static <code>InfoData</code> * <code>getDefaultObjectInstance</code> ()<br/>
  <i>Get the reference object that contains the default values for attributes of instances of this class. </i></p>
 <h3>Protected Member Functions</h3>
-<p><code>InfoData</code> (<code>InfoData</code> *defaults=NULL)<br />
- <i>Construct a </i><code>InfoData</code> class definition.<br />
- virtual <code>~InfoData</code> ()<br />
+<p><code>InfoData</code> (<code>InfoData</code> *defaults=NULL)<br/>
+ <i>Construct a </i><code>InfoData</code> class definition.<br/>
+ virtual <code>~InfoData</code> ()<br/>
  <i>Default destructor. </i></p>
 <h2>Detailed Description</h2>
 <p>This is base operator for operations that tell you info about objects or events. </p>

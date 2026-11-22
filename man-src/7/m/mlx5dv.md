@@ -7,7 +7,7 @@ url: "/docs/linux/man/7-mlx5dv/"
 description: "mlx5dv – Direct verbs for mlx5 devices This is low level access to mlx5 devices to perform data path operations, without general branching performed by"
 ---
 
-<p>mlx5dv &#8211; Direct verbs for mlx5 devices<br />
+<p>mlx5dv &#8211; Direct verbs for mlx5 devices<br/>
  This is low level access to mlx5 devices to perform data path operations, without general branching performed by <code></p>
 <p> ibv_post_send</code>(3). </p>
 <h2>Description</h2>

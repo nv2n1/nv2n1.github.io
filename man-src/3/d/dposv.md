@@ -11,7 +11,7 @@ description: "dposv.f –"
 <p> dposv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dposv</code> (UPLO, N, NRHS, A, LDA, B, LDB, INFO)<br />
+<p> subroutine <code>dposv</code> (UPLO, N, NRHS, A, LDA, B, LDB, INFO)<br/>
  <i></i><code> DPOSV computes the solution to system of linear equations A * X = B for PO matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dposv (characterUPLO, integerN, integerNRHS, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( ldb, * )B, integerLDB, integerINFO)</h3>

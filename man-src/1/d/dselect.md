@@ -12,10 +12,10 @@ description: "dselect – Debian package management frontend"
 <h2>SYNOPSIS</h2>
 <p> <code>dselect</code> [<i>option</i>&#8230;] [<i>action</i>]</p>
 <h2>DESCRIPTION</h2>
-<p> <code>dselect</code> is one of the primary user interfaces for managing packages on a Debian system. At the <code>dselect</code> main menu, the system administrator can:<br />
-&nbsp;<wbr>&#8211; Update the list of available package versions,<br />
-&nbsp;<wbr>&#8211; View the status of installed and available packages,<br />
-&nbsp;<wbr>&#8211; Alter package selections and manage dependencies,<br />
+<p> <code>dselect</code> is one of the primary user interfaces for managing packages on a Debian system. At the <code>dselect</code> main menu, the system administrator can:<br/>
+&nbsp;<wbr>&#8211; Update the list of available package versions,<br/>
+&nbsp;<wbr>&#8211; View the status of installed and available packages,<br/>
+&nbsp;<wbr>&#8211; Alter package selections and manage dependencies,<br/>
 &nbsp;<wbr>&#8211; Install new packages or upgrade to newer versions. </p>
 <p> <code>dselect</code> operates as a front-end to <code><a href="/docs/linux/man/1-dpkg/">dpkg</a></code>(1), the low-level debian package handling tool. It features a full-screen package selections manager with package depends and conflicts resolver. When run with administrator privileges, packages can be installed, upgraded and removed. Various access methods can be configured to retrieve available package version information and installable packages from package repositories. Depending on the used access method, these repositories can be public archive servers on the internet, local archive servers or cdroms. The recommended access method is <i>apt</i>, which is provided by the package <code>apt</code>. </p>
 <p> Normally <code>dselect</code> is invoked without parameters. An interactive menu is presented, offering the user a list of actions. If an action is given as argument, then that action is started immediately. Several command line parameters are still available to modify the running behaviour of <code>dselect</code> or show additional information about the program.</p>
@@ -100,63 +100,63 @@ description: "dselect – Debian package management frontend"
 <p> The select screen is by default split in a top and a bottom half. The top half shows a list of packages. A cursor bar can select an individual package, or a group of packages, if applicable, by selecting the group header. The bottom half of the screen shows some details about the package currently selected in the top half of the screen. The type of detail that is displayed can be varied. </p>
 <p> Pressing the <code>&#8216;I&#8217;</code> key toggles a full-screen display of the packages list, an enlarged view of the package details, or the equally split screen. </p>
 <h3>Package details view</h3>
-<p> The package details view by default shows the extended package description for the package that is currently selected in the packages status list. The type of detail can be toggled by pressing the <code>&#8216;i&#8217;</code> key. This alternates between:<br />
-&nbsp;<wbr>&#8211; the extended description<br />
-&nbsp;<wbr>&#8211; the control information for the installed version<br />
+<p> The package details view by default shows the extended package description for the package that is currently selected in the packages status list. The type of detail can be toggled by pressing the <code>&#8216;i&#8217;</code> key. This alternates between:<br/>
+&nbsp;<wbr>&#8211; the extended description<br/>
+&nbsp;<wbr>&#8211; the control information for the installed version<br/>
 &nbsp;<wbr>&#8211; the control information for the available version </p>
 <p> In a dependency resolution screen, there is also the possibility of viewing the specific unresolved depends or conflicts related to the package and causing it to be listed. </p>
 <h3>Packages status list</h3>
 <p> The main select screen displays a list of all packages known to the debian package management system. This includes packages installed on the system and packages known from the available packages database. </p>
 <p> For every package, the list shows the package&#8217;s status, priority, section, installed and available architecture, installed and available versions, the package name and its short description, all in one line. By pressing the <code>&#8216;A&#8217;</code> key, the display of the installed and available architecture can be toggled between on an off. By pressing the <code>&#8216;V&#8217;</code> key, the display of the installed and available version can be toggled between on an off. By pressing the <code>&#8216;v&#8217;</code> key, the package status display is toggled between verbose and shorthand. Shorthand display is the default. </p>
 <p> The shorthand status indication consists of four parts: an error flag, which should normally be clear, the current status, the last selection state and the current selection state. The first two relate to the actual state of the package, the second pair are about the selections set by the user. </p>
-<p> These are the meanings of the shorthand package status indicator codes:<br />
-&nbsp;<wbr>Error flag:<br />
-&nbsp;<wbr>&nbsp;<wbr><i>empty</i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>no error<br />
-&nbsp;<wbr>&nbsp;<wbr><code>R</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>serious error, needs reinstallation;<br />
-&nbsp;<wbr>Installed state:<br />
-&nbsp;<wbr>&nbsp;<wbr><i>empty</i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>not installed;<br />
-&nbsp;<wbr>&nbsp;<wbr><code>*</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>fully installed and configured;<br />
-&nbsp;<wbr>&nbsp;<wbr><code>&#8211;</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>not installed but some config files may remain;<br />
-&nbsp;<wbr>&nbsp;<wbr><code>U</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>unpacked but not yet configured;<br />
-&nbsp;<wbr>&nbsp;<wbr><code>C</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>half-configured&nbsp;<wbr>(an error happened);<br />
-&nbsp;<wbr>&nbsp;<wbr><code>I</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>half-installed&nbsp;<wbr>(an error happened).<br />
-&nbsp;<wbr>Current and requested selections:<br />
-&nbsp;<wbr>&nbsp;<wbr><code>*</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>marked for installation or upgrade;<br />
-&nbsp;<wbr>&nbsp;<wbr><code>&#8211;</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>marked for removal, configuration files remain;<br />
-&nbsp;<wbr>&nbsp;<wbr><code>=</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>on hold: package will not be processed at all;<br />
-&nbsp;<wbr>&nbsp;<wbr><code>_</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>marked for purge, also remove configuration;<br />
+<p> These are the meanings of the shorthand package status indicator codes:<br/>
+&nbsp;<wbr>Error flag:<br/>
+&nbsp;<wbr>&nbsp;<wbr><i>empty</i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>no error<br/>
+&nbsp;<wbr>&nbsp;<wbr><code>R</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>serious error, needs reinstallation;<br/>
+&nbsp;<wbr>Installed state:<br/>
+&nbsp;<wbr>&nbsp;<wbr><i>empty</i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>not installed;<br/>
+&nbsp;<wbr>&nbsp;<wbr><code>*</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>fully installed and configured;<br/>
+&nbsp;<wbr>&nbsp;<wbr><code>&#8211;</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>not installed but some config files may remain;<br/>
+&nbsp;<wbr>&nbsp;<wbr><code>U</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>unpacked but not yet configured;<br/>
+&nbsp;<wbr>&nbsp;<wbr><code>C</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>half-configured&nbsp;<wbr>(an error happened);<br/>
+&nbsp;<wbr>&nbsp;<wbr><code>I</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>half-installed&nbsp;<wbr>(an error happened).<br/>
+&nbsp;<wbr>Current and requested selections:<br/>
+&nbsp;<wbr>&nbsp;<wbr><code>*</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>marked for installation or upgrade;<br/>
+&nbsp;<wbr>&nbsp;<wbr><code>&#8211;</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>marked for removal, configuration files remain;<br/>
+&nbsp;<wbr>&nbsp;<wbr><code>=</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>on hold: package will not be processed at all;<br/>
+&nbsp;<wbr>&nbsp;<wbr><code>_</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>marked for purge, also remove configuration;<br/>
 &nbsp;<wbr>&nbsp;<wbr><code>n</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>package is new and has yet to be marked. </p>
 <h3>Cursor and screen movement</h3>
 <p> The package selection list and the dependency conflict resolution screens can be navigated using motion commands mapped to the following keys: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr><code>p, Up, k</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>move cursor bar up<br />
-&nbsp;<wbr>&nbsp;<wbr><code>n, Down, j</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>move cursor bar down<br />
-&nbsp;<wbr>&nbsp;<wbr><code>P, Pgup, Backspace</code>&nbsp;<wbr>scroll list 1 page up<br />
-&nbsp;<wbr>&nbsp;<wbr><code>N, Pgdn, Space</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>scroll list 1 page down<br />
-&nbsp;<wbr>&nbsp;<wbr><code>^p</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>scroll list 1 line up<br />
-&nbsp;<wbr>&nbsp;<wbr><code>^n</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>scroll list 1 line down<br />
-&nbsp;<wbr>&nbsp;<wbr><code>t, Home</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>jump to top of list<br />
-&nbsp;<wbr>&nbsp;<wbr><code>e, End</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>jump to end of list<br />
-&nbsp;<wbr>&nbsp;<wbr><code>u</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>scroll info 1 page up<br />
-&nbsp;<wbr>&nbsp;<wbr><code>d</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>scroll info 1 page down<br />
-&nbsp;<wbr>&nbsp;<wbr><code>^u</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>scroll info 1 line up<br />
-&nbsp;<wbr>&nbsp;<wbr><code>^d</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>scroll info 1 line down<br />
-&nbsp;<wbr>&nbsp;<wbr><code>B, Left-arrow</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>pan display 1/3 screen left<br />
-&nbsp;<wbr>&nbsp;<wbr><code>F, Right-arrow</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>pan display 1/3 screen right<br />
-&nbsp;<wbr>&nbsp;<wbr><code>^b</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>pan display 1 character left<br />
+<p>&nbsp;<wbr>&nbsp;<wbr><code>p, Up, k</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>move cursor bar up<br/>
+&nbsp;<wbr>&nbsp;<wbr><code>n, Down, j</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>move cursor bar down<br/>
+&nbsp;<wbr>&nbsp;<wbr><code>P, Pgup, Backspace</code>&nbsp;<wbr>scroll list 1 page up<br/>
+&nbsp;<wbr>&nbsp;<wbr><code>N, Pgdn, Space</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>scroll list 1 page down<br/>
+&nbsp;<wbr>&nbsp;<wbr><code>^p</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>scroll list 1 line up<br/>
+&nbsp;<wbr>&nbsp;<wbr><code>^n</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>scroll list 1 line down<br/>
+&nbsp;<wbr>&nbsp;<wbr><code>t, Home</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>jump to top of list<br/>
+&nbsp;<wbr>&nbsp;<wbr><code>e, End</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>jump to end of list<br/>
+&nbsp;<wbr>&nbsp;<wbr><code>u</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>scroll info 1 page up<br/>
+&nbsp;<wbr>&nbsp;<wbr><code>d</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>scroll info 1 page down<br/>
+&nbsp;<wbr>&nbsp;<wbr><code>^u</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>scroll info 1 line up<br/>
+&nbsp;<wbr>&nbsp;<wbr><code>^d</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>scroll info 1 line down<br/>
+&nbsp;<wbr>&nbsp;<wbr><code>B, Left-arrow</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>pan display 1/3 screen left<br/>
+&nbsp;<wbr>&nbsp;<wbr><code>F, Right-arrow</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>pan display 1/3 screen right<br/>
+&nbsp;<wbr>&nbsp;<wbr><code>^b</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>pan display 1 character left<br/>
 &nbsp;<wbr>&nbsp;<wbr><code>^f</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>pan display 1 character right </p>
 <h3>Searching and sorting</h3>
 <p> The list of packages can be searched by package name. This is done by pressing <code>&#8216;/&#8217;</code>, and typing a simple search string. The string is interpreted as a <code><a href="/docs/linux/man/7-regex/">regex</a></code>(7) regular expression. If you add <code>&#8216;/d&#8217;</code> to the search expression, dselect will also search in descriptions. If you add <code>&#8216;/i&#8217;</code> the search will be case insensitive. You may combine these two suffixes like this: <code>&#8216;/id&#8217;</code>. Repeated searching is accomplished by repeatedly pressing the <code>&#8216;n&#8217;</code> or <code>&#8216;\&#8217;</code> keys, until the wanted package is found. If the search reaches the bottom of the list, it wraps to the top and continues searching from there. </p>
-<p> The list sort order can be varied by pressing the <code>&#8216;o&#8217;</code> and <code>&#8216;O&#8217;</code> keys repeatedly. The following nine sort orderings can be selected:<br />
-&nbsp;<wbr>alphabet&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>available&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>status<br />
-&nbsp;<wbr>priority+section&nbsp;<wbr>&nbsp;<wbr>available+priority&nbsp;<wbr>&nbsp;<wbr>status+priority<br />
-&nbsp;<wbr>section+priority&nbsp;<wbr>&nbsp;<wbr>available+section&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>status+section<br />
+<p> The list sort order can be varied by pressing the <code>&#8216;o&#8217;</code> and <code>&#8216;O&#8217;</code> keys repeatedly. The following nine sort orderings can be selected:<br/>
+&nbsp;<wbr>alphabet&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>available&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>status<br/>
+&nbsp;<wbr>priority+section&nbsp;<wbr>&nbsp;<wbr>available+priority&nbsp;<wbr>&nbsp;<wbr>status+priority<br/>
+&nbsp;<wbr>section+priority&nbsp;<wbr>&nbsp;<wbr>available+section&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>status+section<br/>
  Where not listed above explicitly, alphabetic order is used as the final subordering sort key. </p>
 <h3>Altering selections</h3>
-<p> The requested selection state of individual packages may be altered with the following commands:<br />
-&nbsp;<wbr>&nbsp;<wbr><code>+, Insert</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>install or upgrade<br />
-&nbsp;<wbr>&nbsp;<wbr><code>=, H</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>hold in present state and version<br />
-&nbsp;<wbr>&nbsp;<wbr><code>:, G</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>unhold: upgrade or leave uninstalled<br />
-&nbsp;<wbr>&nbsp;<wbr><code>-, Delete</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>remove, but leave configuration<br />
+<p> The requested selection state of individual packages may be altered with the following commands:<br/>
+&nbsp;<wbr>&nbsp;<wbr><code>+, Insert</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>install or upgrade<br/>
+&nbsp;<wbr>&nbsp;<wbr><code>=, H</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>hold in present state and version<br/>
+&nbsp;<wbr>&nbsp;<wbr><code>:, G</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>unhold: upgrade or leave uninstalled<br/>
+&nbsp;<wbr>&nbsp;<wbr><code>-, Delete</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>remove, but leave configuration<br/>
 &nbsp;<wbr>&nbsp;<wbr><code>_</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>remove&nbsp;<wbr>&amp;&nbsp;<wbr>purge configuration </p>
 <p> When the change request results in one or more unsatisfied depends or conflicts, <code>dselect</code> prompts the user with a dependency resolution screen. This will be further explained below. </p>
 <p> It is also possible to apply these commands to groups of package selections, by pointing the cursor bar onto a group header. The exact grouping of packages is dependent on the current list ordering settings. </p>

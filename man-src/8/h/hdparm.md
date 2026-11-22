@@ -174,12 +174,12 @@ description: "hdparm – get/set SATA/IDE device parameters"
 <dt><i>&#8211;security-erase-enhanced PWD</i></dt>
 <dd>Enhanced erase (locked) drive, using password PWD <code>(DANGEROUS).</code> Password is given as an ASCII string and is padded with NULs to reach 32 bytes. The applicable drive password is selected with the &#8211;user-master switch (default is &quot;user&quot; password). No other options are permitted on the command line with this one.</dd>
 <dt><i>&#8211;user-master USER</i></dt>
-<dd>Specifies which password (user/master) to select. <code>Defaults to user password.</code> Only useful in combination with &#8211;security-unlock, &#8211;security-set-pass, &#8211;security-disable, &#8211;security-erase or &#8211;security-erase-enhanced.<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;u&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;user password<br />
+<dd>Specifies which password (user/master) to select. <code>Defaults to user password.</code> Only useful in combination with &#8211;security-unlock, &#8211;security-set-pass, &#8211;security-disable, &#8211;security-erase or &#8211;security-erase-enhanced.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;u&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;user password<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;m&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;master password </dd>
 <dt><i>&#8211;security-mode MODE</i></dt>
-<dd>Specifies which security mode (high/maximum) to set. <code>Defaults to high.</code> Only useful in combination with &#8211;security-set-pass.<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;h&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;high security<br />
+<dd>Specifies which security mode (high/maximum) to set. <code>Defaults to high.</code> Only useful in combination with &#8211;security-set-pass.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;h&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;high security<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;m&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;maximum security </dd>
 <p> <code>THIS FEATURE IS EXPERIMENTAL AND NOT WELL TESTED. USE AT YOUR OWN RISK.</code></dl>
 <h2>Files</h2>

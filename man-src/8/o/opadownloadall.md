@@ -37,9 +37,9 @@ description: "opadownloadall (Linux) Copies one or more files to a group of host
 <dd>The name of the file or directory on the destination hosts to copy to. </dd>
 <dd>If more than one source file is specified, <i>dest_file</i> is treated as a directory name. The given directory must already exist on the destination host. The copy fails for hosts where the directory does not exist.</dd></dl>
 <h2>Example</h2>
-<p>opadownloadall -h &#8216;arwen elrond&#8217; irqbalance vncservers /etc/sysconfig<br />
+<p>opadownloadall -h &#8216;arwen elrond&#8217; irqbalance vncservers /etc/sysconfig<br/>
  # Copies two files to 2 hosts </p>
-<p> opadownloadall -p irqbalance vncservers /etc/sysconfig<br />
+<p> opadownloadall -p irqbalance vncservers /etc/sysconfig<br/>
  # Copies two files to all hosts</p>
 <h2>Environment Variables</h2>
 <p>The following environment variables are also used by this command:</p>

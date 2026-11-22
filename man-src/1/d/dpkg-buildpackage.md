@@ -15,7 +15,7 @@ description: "dpkg-buildpackage – build binary or source packages from sources
 <p> <code>dpkg-buildpackage</code> is a program that automates the process of building a Debian package. It consists of the following steps:</p>
 <dl>
 <dt><code>1.</code></dt>
-<dd> It prepares the build environment by setting various environment variables (see <font SIZE="-1"><code>ENVIRONMENT</code></font>), runs the <code>init</code> hook, and calls <code>dpkg-source &#8211;before-build</code> (unless <code>-T</code> or <code>&#8211;target</code> has been used).</dd>
+<dd> It prepares the build environment by setting various environment variables (see <code>ENVIRONMENT</code>), runs the <code>init</code> hook, and calls <code>dpkg-source &#8211;before-build</code> (unless <code>-T</code> or <code>&#8211;target</code> has been used).</dd>
 <dt><code>2.</code></dt>
 <dd> It checks that the build-dependencies and build-conflicts are satisfied (unless <code>-d</code> or <code>&#8211;no-check-builddeps</code> is specified).</dd>
 <dt><code>3.</code></dt>
@@ -33,9 +33,9 @@ description: "dpkg-buildpackage – build binary or source packages from sources
 <dt><code>9.</code></dt>
 <dd> It calls <code>dpkg-source &#8211;after-build</code>.</dd>
 <dt><code>10.</code></dt>
-<dd> It runs the <code>check</code> hook and calls a package checker for the <code>.changes</code> file (if a command is specified in <font SIZE="-1"><code>DEB_CHECK_COMMAND</code></font> or with <code>&#8211;check-command</code>).</dd>
+<dd> It runs the <code>check</code> hook and calls a package checker for the <code>.changes</code> file (if a command is specified in <code>DEB_CHECK_COMMAND</code> or with <code>&#8211;check-command</code>).</dd>
 <dt><code>11.</code></dt>
-<dd> It runs the <code>sign</code> hook and calls <code>gpg</code> (as long as it is not an <font SIZE="-1">UNRELEASED</font> build, or <code>&#8211;no-sign</code> is specified) to sign the <code>.dsc</code> file (if any, unless <code>-us</code> or <code>&#8211;unsigned-source</code> is specified), the <code>.buildinfo</code> file (unless <code>-ui</code>, <code>&#8211;unsigned-buildinfo</code>, <code>-uc</code> or <code>&#8211;unsigned-changes</code> is specified) and the <code>.changes</code> file (unless <code>-uc</code> or <code>&#8211;unsigned-changes</code> is specified).</dd>
+<dd> It runs the <code>sign</code> hook and calls <code>gpg</code> (as long as it is not an UNRELEASED build, or <code>&#8211;no-sign</code> is specified) to sign the <code>.dsc</code> file (if any, unless <code>-us</code> or <code>&#8211;unsigned-source</code> is specified), the <code>.buildinfo</code> file (unless <code>-ui</code>, <code>&#8211;unsigned-buildinfo</code>, <code>-uc</code> or <code>&#8211;unsigned-changes</code> is specified) and the <code>.changes</code> file (unless <code>-uc</code> or <code>&#8211;unsigned-changes</code> is specified).</dd>
 <dt><code>12.</code></dt>
 <dd> It runs the <code>done</code> hook.</dd></dl>
 <h2>OPTIONS</h2>
@@ -99,17 +99,17 @@ description: "dpkg-buildpackage – build binary or source packages from sources
 <dt><code>-a</code>, <code>&#8211;host-arch</code> <i>architecture</i></dt>
 <dd> Specify the Debian architecture we build for (long option since dpkg 1.17.17). The architecture of the machine we build on is determined automatically, and is also the default for the host machine.</dd>
 <dt><code>-t</code>, <code>&#8211;host-type</code> <i>gnu-system-type</i></dt>
-<dd> Specify the <font SIZE="-1">GNU</font> system type we build for (long option since dpkg 1.17.17). It can be used in place of <code>&#8211;host-arch</code> or as a complement to override the default <font SIZE="-1">GNU</font> system type of the host Debian architecture.</dd>
+<dd> Specify the GNU system type we build for (long option since dpkg 1.17.17). It can be used in place of <code>&#8211;host-arch</code> or as a complement to override the default GNU system type of the host Debian architecture.</dd>
 <dt><code>&#8211;target-arch</code> <i>architecture</i></dt>
 <dd> Specify the Debian architecture the binaries built will build for (since dpkg 1.17.17). The default value is the host machine.</dd>
 <dt><code>&#8211;target-type</code> <i>gnu-system-type</i></dt>
-<dd> Specify the <font SIZE="-1">GNU</font> system type the binaries built will build for (since dpkg 1.17.17). It can be used in place of <code>&#8211;target-arch</code> or as a complement to override the default <font SIZE="-1">GNU</font> system type of the target Debian architecture.</dd>
+<dd> Specify the GNU system type the binaries built will build for (since dpkg 1.17.17). It can be used in place of <code>&#8211;target-arch</code> or as a complement to override the default GNU system type of the target Debian architecture.</dd>
 <dt><code>-P</code>, <code>&#8211;build-profiles=</code><i>profile</i>[<code>,</code>&#8230;]</dt>
-<dd> Specify the profile(s) we build, as a comma-separated list (since dpkg 1.17.2, long option since dpkg 1.18.8). The default behavior is to build for no specific profile. Also sets them (as a space separated list) as the <font SIZE="-1"><code>DEB_BUILD_PROFILES</code></font> environment variable which allows, for example, <code>debian/rules</code> files to use this information for conditional builds.</dd>
+<dd> Specify the profile(s) we build, as a comma-separated list (since dpkg 1.17.2, long option since dpkg 1.18.8). The default behavior is to build for no specific profile. Also sets them (as a space separated list) as the <code>DEB_BUILD_PROFILES</code> environment variable which allows, for example, <code>debian/rules</code> files to use this information for conditional builds.</dd>
 <dt><code>-j</code>, <code>&#8211;jobs</code>[=<i>jobs</i>|<code>auto</code>]</dt>
-<dd> Number of jobs allowed to be run simultaneously, number of jobs matching the number of online processors if <code>auto</code> is specified (since dpkg 1.17.10), or unlimited number if <i>jobs</i> is not specified, equivalent to the <code><a href="/docs/linux/man/1-make/">make</a></code>(1) option of the same name (since dpkg 1.14.7, long option since dpkg 1.18.8). Will add itself to the <font SIZE="-1"><code>MAKEFLAGS</code></font> environment variable, which should cause all subsequent make invocations to inherit the option, thus forcing the parallel setting on the packaging (and possibly the upstream build system if that uses make) regardless of their support for parallel builds, which might cause build failures. Also adds <code>parallel=</code><i>jobs</i> or <code>parallel</code> to the <font SIZE="-1"><code>DEB_BUILD_OPTIONS</code></font> environment variable which allows debian/rules files to use this information for their own purposes. The <code>-j</code> value will override the <code>parallel=</code><i>jobs</i> or <code>parallel</code> option in the <font SIZE="-1"><code>DEB_BUILD_OPTIONS</code></font> environment variable. Note that the <code>auto</code> value will get replaced by the actual number of currently active processors, and as such will not get propagated to any child process. If the number of online processors cannot be inferred then the code will fallback to using serial execution (since dpkg 1.18.15), although this should only happen on exotic and unsupported systems.</dd>
+<dd> Number of jobs allowed to be run simultaneously, number of jobs matching the number of online processors if <code>auto</code> is specified (since dpkg 1.17.10), or unlimited number if <i>jobs</i> is not specified, equivalent to the <code><a href="/docs/linux/man/1-make/">make</a></code>(1) option of the same name (since dpkg 1.14.7, long option since dpkg 1.18.8). Will add itself to the <code>MAKEFLAGS</code> environment variable, which should cause all subsequent make invocations to inherit the option, thus forcing the parallel setting on the packaging (and possibly the upstream build system if that uses make) regardless of their support for parallel builds, which might cause build failures. Also adds <code>parallel=</code><i>jobs</i> or <code>parallel</code> to the <code>DEB_BUILD_OPTIONS</code> environment variable which allows debian/rules files to use this information for their own purposes. The <code>-j</code> value will override the <code>parallel=</code><i>jobs</i> or <code>parallel</code> option in the <code>DEB_BUILD_OPTIONS</code> environment variable. Note that the <code>auto</code> value will get replaced by the actual number of currently active processors, and as such will not get propagated to any child process. If the number of online processors cannot be inferred then the code will fallback to using serial execution (since dpkg 1.18.15), although this should only happen on exotic and unsupported systems.</dd>
 <dt><code>-J</code>, <code>&#8211;jobs-try</code>[=<i>jobs</i>|<code>auto</code>]</dt>
-<dd> This option (since dpkg 1.18.2, long option since dpkg 1.18.8) is equivalent to the <code>-j</code> option except that it does not set the <font SIZE="-1"><code>MAKEFLAGS</code></font> environment variable, and as such it is safer to use with any package including those that are not parallel-build safe. </dd>
+<dd> This option (since dpkg 1.18.2, long option since dpkg 1.18.8) is equivalent to the <code>-j</code> option except that it does not set the <code>MAKEFLAGS</code> environment variable, and as such it is safer to use with any package including those that are not parallel-build safe. </dd>
 <p> <code>auto</code> is the default behavior (since dpkg 1.18.11). Setting the number of jobs to 1 will restore a serial behavior.</p>
 <dt><code>-D</code>, <code>&#8211;check-builddeps</code></dt>
 <dd> Check build dependencies and conflicts; abort if unsatisfied (long option since dpkg 1.18.8). This is the default behavior.</dd>
@@ -130,13 +130,13 @@ description: "dpkg-buildpackage – build binary or source packages from sources
 <dt><code>&#8211;sanitize-env</code></dt>
 <dd> Sanitize the build environment (since dpkg 1.20.0). This will reset or remove environment variables, umask, and any other process attributes that might otherwise adversely affect the build of packages. Because the official entry point to build packages is <code>debian/rules</code>, packages cannot rely on these settings being in place, and thus should work even when they are not. What to sanitize is vendor specific.</dd>
 <dt><code>-r</code>, <code>&#8211;root-command=</code><i>gain-root-command</i></dt>
-<dd> When <code>dpkg-buildpackage</code> needs to execute part of the build process as root, it prefixes the command it executes with <i>gain-root-command</i> if one has been specified (long option since dpkg 1.18.8). Otherwise, if none has been specified, <code>fakeroot</code> will be used by default, if the command is present. <i>gain-root-command</i> should start with the name of a program on the <font SIZE="-1"><code>PATH</code></font> and will get as arguments the name of the real command to run and the arguments it should take. <i>gain-root-command</i> can include parameters (they must be space-separated) but no shell metacharacters. <i>gain-root-command</i> might typically be <code>fakeroot</code>, <code>sudo</code>, <code>super</code> or <code>really</code>. <code>su</code> is not suitable, since it can only invoke the user&#8217;s shell with <code>-c</code> instead of passing arguments individually to the command to be run.</dd>
+<dd> When <code>dpkg-buildpackage</code> needs to execute part of the build process as root, it prefixes the command it executes with <i>gain-root-command</i> if one has been specified (long option since dpkg 1.18.8). Otherwise, if none has been specified, <code>fakeroot</code> will be used by default, if the command is present. <i>gain-root-command</i> should start with the name of a program on the <code>PATH</code> and will get as arguments the name of the real command to run and the arguments it should take. <i>gain-root-command</i> can include parameters (they must be space-separated) but no shell metacharacters. <i>gain-root-command</i> might typically be <code>fakeroot</code>, <code>sudo</code>, <code>super</code> or <code>really</code>. <code>su</code> is not suitable, since it can only invoke the user&#8217;s shell with <code>-c</code> instead of passing arguments individually to the command to be run.</dd>
 <dt><code>-R</code>, <code>&#8211;rules-file=</code><i>rules-file</i></dt>
 <dd> Building a Debian package usually involves invoking <code>debian/rules</code> as a command with several standard parameters (since dpkg 1.14.17, long option since dpkg 1.18.8). With this option it&#8217;s possible to use another program invocation to build the package (it can include space separated parameters). Alternatively it can be used to execute the standard rules file with another make program (for example by using <code>/usr/local/bin/make -f debian/rules</code> as <i>rules-file</i>).</dd>
 <dt><code>&#8211;check-command=</code><i>check-command</i></dt>
 <dd> Command used to check the <code>.changes</code> file itself and any artifact built referenced in the file (since dpkg 1.17.6). The command should take the <code>.changes</code> pathname as an argument. This command will usually be <code>lintian</code>.</dd>
 <dt><code>&#8211;check-option=</code><i>opt</i></dt>
-<dd> Pass option <i>opt</i> to the <i>check-command</i> specified with <font SIZE="-1"><code>DEB_CHECK_COMMAND</code></font> or <code>&#8211;check-command</code> (since dpkg 1.17.6). Can be used multiple times.</dd>
+<dd> Pass option <i>opt</i> to the <i>check-command</i> specified with <code>DEB_CHECK_COMMAND</code> or <code>&#8211;check-command</code> (since dpkg 1.17.6). Can be used multiple times.</dd>
 <dt><code>&#8211;hook-</code><i>hook-name</i><code>=</code><i>hook-command</i></dt>
 <dd> Set the specified shell code <i>hook-command</i> as the hook <i>hook-name</i>, which will run at the times specified in the run steps (since dpkg 1.17.6). The hooks will always be executed even if the following action is not performed (except for the <code>binary</code> hook). All the hooks will run in the unpacked source directory. </dd>
 <p> <code>Note:</code> Hooks can affect the build process, and cause build failures if their commands fail, so watch out for unintended consequences. </p>
@@ -165,7 +165,7 @@ description: "dpkg-buildpackage – build binary or source packages from sources
 <dt><code>&#8211;buildinfo-option=</code><i>opt</i></dt>
 <dd> Pass option <i>opt</i> to <code>dpkg-genbuildinfo</code> (since dpkg 1.18.11). Can be used multiple times.</dd>
 <dt><code>-p</code>, <code>&#8211;sign-command=</code><i>sign-command</i></dt>
-<dd> When <code>dpkg-buildpackage</code> needs to execute <font SIZE="-1">GPG</font> to sign a source control (<code>.dsc</code>) file or a <code>.changes</code> file it will run <i>sign-command</i> (searching the <font SIZE="-1"><code>PATH</code></font> if necessary) instead of <code>gpg</code> (long option since dpkg 1.18.8). <i>sign-command</i> will get all the arguments that <code>gpg</code> would have gotten. <i>sign-command</i> should not contain spaces or any other shell metacharacters.</dd>
+<dd> When <code>dpkg-buildpackage</code> needs to execute GPG to sign a source control (<code>.dsc</code>) file or a <code>.changes</code> file it will run <i>sign-command</i> (searching the <code>PATH</code> if necessary) instead of <code>gpg</code> (long option since dpkg 1.18.8). <i>sign-command</i> will get all the arguments that <code>gpg</code> would have gotten. <i>sign-command</i> should not contain spaces or any other shell metacharacters.</dd>
 <dt><code>-k</code>, <code>&#8211;sign-key=</code><i>key-id</i></dt>
 <dd> Specify a key-ID to use when signing packages (long option since dpkg 1.18.8).</dd>
 <dt><code>-us</code>, <code>&#8211;unsigned-source</code></dt>
@@ -221,18 +221,18 @@ description: "dpkg-buildpackage – build binary or source packages from sources
 <h2>ENVIRONMENT</h2>
 <h3>External environment</h3>
 <dl>
-<dt><font SIZE="-1"><code>DEB_CHECK_COMMAND</code></font></dt>
+<dt><code>DEB_CHECK_COMMAND</code></dt>
 <dd> If set, it will be used as the command to check the <code>.changes</code> file (since dpkg 1.17.6). Overridden by the <code>&#8211;check-command</code> option.</dd>
-<dt><font SIZE="-1"><code>DEB_SIGN_KEYID</code></font></dt>
+<dt><code>DEB_SIGN_KEYID</code></dt>
 <dd> If set, it will be used to sign the <code>.changes</code> and <code>.dsc</code> files (since dpkg 1.17.2). Overridden by the <code>&#8211;sign-key</code> option.</dd>
-<dt><font SIZE="-1"><code>DEB_BUILD_OPTIONS</code></font></dt>
+<dt><code>DEB_BUILD_OPTIONS</code></dt>
 <dd> If set, it will contain a space-separated list of options that might affect the build process in <i>debian/rules</i>, and the behavior of some dpkg commands. </dd>
-<p> With <code>nocheck</code> the <font SIZE="-1"><code>DEB_CHECK_COMMAND</code></font> variable will be ignored. With <code>parallel=</code><i>N</i> the parallel jobs will be set to <i>N</i>, overridden by the <code>&#8211;jobs-try</code> option.</p>
-<dt><font SIZE="-1"><code>DEB_BUILD_PROFILES</code></font></dt>
+<p> With <code>nocheck</code> the <code>DEB_CHECK_COMMAND</code> variable will be ignored. With <code>parallel=</code><i>N</i> the parallel jobs will be set to <i>N</i>, overridden by the <code>&#8211;jobs-try</code> option.</p>
+<dt><code>DEB_BUILD_PROFILES</code></dt>
 <dd> If set, it will be used as the active build profile(s) for the package being built (since dpkg 1.17.2). It is a space separated list of profile names. Overridden by the <code>-P</code> option.</dd>
-<dt><font SIZE="-1"><code>DPKG_COLORS</code></font></dt>
+<dt><code>DPKG_COLORS</code></dt>
 <dd> Sets the color mode (since dpkg 1.18.5). The currently accepted values are: <code>auto</code> (default), <code>always</code> and <code>never</code>.</dd>
-<dt><font SIZE="-1"><code>DPKG_NLS</code></font></dt>
+<dt><code>DPKG_NLS</code></dt>
 <dd> If set, it will be used to decide whether to activate Native Language Support, also known as internationalization (or i18n) support (since dpkg 1.19.0). The accepted values are: <code>0</code> and <code>1</code> (default).</dd></dl>
 <h3>Internal environment</h3>
 <p> Even if <code>dpkg-buildpackage</code> exports some variables, <code>debian/rules</code> should not rely on their presence and should instead use the respective interface to retrieve the needed values, because that file is the main entry point to build packages and running it standalone should be supported.</p>
@@ -243,11 +243,11 @@ description: "dpkg-buildpackage – build binary or source packages from sources
 <dd>
 </dd><dt><code>DEB_TARGET_*</code></dt>
 <dd> <code>dpkg-architecture</code> is called with the <code>-a</code> and <code>-t</code> parameters forwarded. Any variable that is output by its <code>-s</code> option is integrated in the build environment.</dd>
-<dt><font SIZE="-1"><code>DEB_RULES_REQUIRES_ROOT</code></font></dt>
+<dt><code>DEB_RULES_REQUIRES_ROOT</code></dt>
 <dd> This variable is set to the value obtained from the <code>Rules-Requires-Root</code> field or from the command-line. When set, it will be a valid value for the <code>Rules-Requires-Root</code> field. It is used to notify <code>debian/rules</code> whether the <code>rootless-builds.txt</code> specification is supported.</dd>
-<dt><font SIZE="-1"><code>DEB_GAIN_ROOT_CMD</code></font></dt>
+<dt><code>DEB_GAIN_ROOT_CMD</code></dt>
 <dd> This variable is set to <i>gain-root-command</i> when the field <code>Rules-Requires-Root</code> is set to a value different to <code>no</code> and <code>binary-targets</code>.</dd>
-<dt><font SIZE="-1"><code>SOURCE_DATE_EPOCH</code></font></dt>
+<dt><code>SOURCE_DATE_EPOCH</code></dt>
 <dd> This variable is set to the Unix timestamp since the epoch of the latest entry in <i>debian/changelog</i>, if it is not already defined.</dd></dl>
 <h2>FILES</h2>
 <dl>
@@ -259,7 +259,7 @@ description: "dpkg-buildpackage – build binary or source packages from sources
 <dd> User configuration file.</dd></dl>
 <h2>NOTES</h2>
 <h3>Compiler flags are no longer exported</h3>
-<p> Between dpkg 1.14.17 and 1.16.1, <code>dpkg-buildpackage</code> exported compiler flags (<font SIZE="-1"><code>CFLAGS</code></font>, <font SIZE="-1"><code>CXXFLAGS</code></font>, <font SIZE="-1"><code>FFLAGS</code></font>, <font SIZE="-1"><code>CPPFLAGS</code></font> and <font SIZE="-1"><code>LDFLAGS</code></font>) with values as returned by <code>dpkg-buildflags</code>. This is no longer the case.</p>
+<p> Between dpkg 1.14.17 and 1.16.1, <code>dpkg-buildpackage</code> exported compiler flags (<code>CFLAGS</code>, <code>CXXFLAGS</code>, <code>FFLAGS</code>, <code>CPPFLAGS</code> and <code>LDFLAGS</code>) with values as returned by <code>dpkg-buildflags</code>. This is no longer the case.</p>
 <h3>Default build targets</h3>
 <p> <code>dpkg-buildpackage</code> is using the <code>build-arch</code> and <code>build-indep</code> targets since dpkg 1.16.2. Those targets are thus mandatory. But to avoid breakages of existing packages, and ease the transition, if the source package does not build both architecture independent and dependent binary packages (since dpkg 1.18.8) it will fallback to use the <code>build</code> target if <code>make -f debian/rules -qn</code> <i>build-target</i> returns 2 as exit code.</p>
 <h2>BUGS</h2>

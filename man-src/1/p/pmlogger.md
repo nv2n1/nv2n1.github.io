@@ -139,7 +139,7 @@ allow localhost : mandatory, advisory;
 <dt><code>$PCP_SYSCONFIG_DIR/pmlogger</code></dt>
 <dd> additional environment variables that will be set when the primary <code>pmlogger</code> instance executes. Only settings of the form &quot;PMLOGGER_VARIABLE=value&quot; will be honoured.</dd>
 <dt><i>./pmlogger.log</i></dt>
-<dd> (or <code>$PCP_LOG_DIR/pmlogger/</code><i>hostname</i><code>/pmlogger.log</code> when started automatically by either <code>$PCP_RC_DIR/pmlogger</code> or one of the <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1) monitoring scripts such as <code><a href="/docs/linux/man/1-pmlogger_check/">pmlogger_check</a></code>(1))<br />
+<dd> (or <code>$PCP_LOG_DIR/pmlogger/</code><i>hostname</i><code>/pmlogger.log</code> when started automatically by either <code>$PCP_RC_DIR/pmlogger</code> or one of the <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1) monitoring scripts such as <code><a href="/docs/linux/man/1-pmlogger_check/">pmlogger_check</a></code>(1))<br/>
  all messages and diagnostics are directed here</dd></dl>
 <h2>ENVIRONMENT</h2>
 <p> Normally <code>pmlogger</code> creates a socket to receive control messages from <code><a href="/docs/linux/man/1-pmlc/">pmlc</a></code>(1) on the first available TCP/IP port numbered 4330 or higher. The environment variable <code>PMLOGGER_PORT</code> may be used to specify an alternative starting port number. </p>
@@ -150,9 +150,9 @@ allow localhost : mandatory, advisory;
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1), <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1), <code><a href="/docs/linux/man/1-pmdumplog/">pmdumplog</a></code>(1), <code><a href="/docs/linux/man/1-pmlc/">pmlc</a></code>(1), <code><a href="/docs/linux/man/1-pmlogger_check/">pmlogger_check</a></code>(1), <code>__pmSpecLocalPMDA</code>(3), <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5), <code><a href="/docs/linux/man/5-pcp-env/">pcp.env</a></code>(5), <code><a href="/docs/linux/man/5-pmns/">pmns</a></code>(5) and <code><a href="/docs/linux/man/8-chkconfig/">chkconfig</a></code>(8).</p>
 <h2>DIAGNOSTICS</h2>
-<p> The archive logs are sufficiently precious that <code>pmlogger</code> will not truncate an existing physical file. A message of the form<br />
- __pmLogNewFile: &quot;foo.index&quot; already exists, not over-written<br />
+<p> The archive logs are sufficiently precious that <code>pmlogger</code> will not truncate an existing physical file. A message of the form<br/>
+ __pmLogNewFile: &quot;foo.index&quot; already exists, not over-written<br/>
  __pmLogCreate: File exists indicates this situation has arisen. You must explicitly remove the files and launch <code>pmlogger</code> again. </p>
-<p> There may be at most one primary <code>pmlogger</code> instance per monitored host; attempting to bend this rule produces the error:<br />
+<p> There may be at most one primary <code>pmlogger</code> instance per monitored host; attempting to bend this rule produces the error:<br/>
  pmlogger: there is already a primary pmlogger running </p>
 <p> Various other messages relating to the creation and/or deletion of files in <i>$PCP_TMP_DIR/pmlogger</i> suggest a permission problem on this directory, or some feral files have appeared therein. </p>

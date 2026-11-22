@@ -25,12 +25,12 @@ imgsize[-r | -a | -f fmt] file[file...]
     dash.gif: width=&quot;32&quot; height=&quot;8&quot;
 </pre>
 <h2>OPTIONS</h2>
-<p> By default, the width and height are returned as attributes for an <font SIZE="-1">IMG</font> tag in <font SIZE="-1">HTML,</font> essentially <tt>&quot;width=&quot;40&quot; height=&quot;30&quot;&quot;</tt> or similar. The following options may be used to return alternate formats (all report width first, then height):</p>
+<p> By default, the width and height are returned as attributes for an IMG tag in HTML, essentially <tt>&quot;width=&quot;40&quot; height=&quot;30&quot;&quot;</tt> or similar. The following options may be used to return alternate formats (all report width first, then height):</p>
 <dl>
 <dt>&quot;-r&quot;</dt>
 <dd> Return &#8220;raw&#8221; format data. Just the numbers separated by a single space.</dd>
 <dt>&quot;-a&quot;</dt>
-<dd> Return a Perl-style list of attributes suitable for passing to the <tt>&quot;img()&quot;</tt> method of the <font SIZE="-1">CGI</font> module (see <font SIZE="-1">CGI</font>).</dd>
+<dd> Return a Perl-style list of attributes suitable for passing to the <tt>&quot;img()&quot;</tt> method of the CGI module (see CGI).</dd>
 <dt>&quot;-f&quot; <code>fmt</code></dt>
 <dd> Pass the string specified in <i>fmt</i> to <tt>&quot;sprintf&quot;</tt> and thus use it to format the results to your taste. <tt>&quot;sprintf&quot;</tt> will be passed two numbers, so any other formatting directives will be lost. The numbers are passed as width first, then height.</dd></dl>
 <h2>EXIT STATUS</h2>
@@ -40,22 +40,22 @@ imgsize[-r | -a | -f fmt] file[file...]
 <h2>SUPPORT</h2>
 <dl>
 <dt>&bull;</dt>
-<dd> <font SIZE="-1">RT: CPAN</font>&#8216;s request tracker </dd>
+<dd> RT: CPAN&#8216;s request tracker </dd>
 <p> &lt;<a rel="nofollow" href="http://rt.cpan.org/NoAuth/Bugs.html?Dist=Image-Size">http://rt.cpan.org/NoAuth/Bugs.html?Dist=Image-Size</a>&gt;</p>
 <dt>&bull;</dt>
-<dd> AnnoCPAN: Annotated <font SIZE="-1">CPAN</font> documentation </dd>
+<dd> AnnoCPAN: Annotated CPAN documentation </dd>
 <p> &lt;<a rel="nofollow" href="http://annocpan.org/dist/Image-Size">http://annocpan.org/dist/Image-Size</a>&gt;</p>
 <dt>&bull;</dt>
-<dd> <font SIZE="-1">CPAN</font> Ratings </dd>
+<dd> CPAN Ratings </dd>
 <p> &lt;<a rel="nofollow" href="http://cpanratings.perl.org/d/Image-Size">http://cpanratings.perl.org/d/Image-Size</a>&gt;</p>
 <dt>&bull;</dt>
-<dd> Search <font SIZE="-1">CPAN</font> </dd>
+<dd> Search CPAN </dd>
 <p> &lt;<a rel="nofollow" href="http://search.cpan.org/dist/Image-Size">http://search.cpan.org/dist/Image-Size</a>&gt;</p>
 <dt>&bull;</dt>
 <dd> Project page on GitHub </dd>
 <p> &lt;<a rel="nofollow" href="http://github.com/rjray/image-size">http://github.com/rjray/image-size</a>&gt;</dl>
 <h2>LICENSE AND COPYRIGHT</h2>
-<p> Copying and distribution are permitted under the terms of the Artistic License 2.0 (&lt;<a rel="nofollow" href="http://www.opensource.org/licenses/artistic-license-2.0.php">http://www.opensource.org/licenses/artistic-license-2.0.php</a>&gt;) or the <font SIZE="-1">GNU LGPL 2.1 </font>(&lt;<a rel="nofollow" href="http://www.opensource.org/licenses/lgpl-2.1.php">http://www.opensource.org/licenses/lgpl-2.1.php</a>&gt;).</p>
+<p> Copying and distribution are permitted under the terms of the Artistic License 2.0 (&lt;<a rel="nofollow" href="http://www.opensource.org/licenses/artistic-license-2.0.php">http://www.opensource.org/licenses/artistic-license-2.0.php</a>&gt;) or the GNU LGPL 2.1 (&lt;<a rel="nofollow" href="http://www.opensource.org/licenses/lgpl-2.1.php">http://www.opensource.org/licenses/lgpl-2.1.php</a>&gt;).</p>
 <h2>SEE ALSO</h2>
 <p> Image::Size</p>
 <h2>AUTHOR</h2>

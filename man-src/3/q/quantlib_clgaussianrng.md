@@ -15,7 +15,7 @@ description: "QuantLib::CLGaussianRng – Gaussian random number generator."
 <p> typedef RNG <code>urng_type</code> </p>
 <h3>Public Member Functions</h3>
 <p><code>CLGaussianRng</code> (const RNG &amp;uniformGenerator) </p>
-<p> <code>sample_type</code> <code>next</code> () const<br />
+<p> <code>sample_type</code> <code>next</code> () const<br/>
  <i>returns a sample from a Gaussian distribution </i></p>
 <h2>Detailed Description</h2>
 <h3>template&lt;class RNG&gt; class QuantLib::CLGaussianRng&lt; RNG &gt;</h3>

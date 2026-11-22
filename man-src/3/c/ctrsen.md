@@ -11,7 +11,7 @@ description: "ctrsen.f –"
 <p> ctrsen.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>ctrsen</code> (JOB, COMPQ, SELECT, N, T, LDT, Q, LDQ, W, M, S, SEP, WORK, LWORK, INFO)<br />
+<p> subroutine <code>ctrsen</code> (JOB, COMPQ, SELECT, N, T, LDT, Q, LDQ, W, M, S, SEP, WORK, LWORK, INFO)<br/>
  <i></i><code>CTRSEN</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ctrsen (characterJOB, characterCOMPQ, logical, dimension( * )SELECT, integerN, complex, dimension( ldt, * )T, integerLDT, complex, dimension( ldq, * )Q, integerLDQ, complex, dimension( * )W, integerM, realS, realSEP, complex, dimension( * )WORK, integerLWORK, integerINFO)</h3>
@@ -74,13 +74,13 @@ description: "ctrsen.f –"
           The leading dimension of the array T. LDT &gt;= max(1,N).
 </pre>
 <p> <i>Q</i> </p>
-<p>Q is COMPLEX array, dimension(LDQ, N) On entry, if COMPQ = &#8216;V&#8217;, the matrix Q of Schur vectors.On exit, if COMPQ = &#8216;V&#8217;, Q has been postmultiplied by the unitary transformation matrix which reorders T; the leading M<br />
-          columns of Q form an orthonormal basis for the specified<br />
-          invariant subspace.<br />
+<p>Q is COMPLEX array, dimension(LDQ, N) On entry, if COMPQ = &#8216;V&#8217;, the matrix Q of Schur vectors.On exit, if COMPQ = &#8216;V&#8217;, Q has been postmultiplied by the unitary transformation matrix which reorders T; the leading M<br/>
+          columns of Q form an orthonormal basis for the specified<br/>
+          invariant subspace.<br/>
           If COMPQ = &#8216;N&#8217;, Q is not referenced.</p>
 <p> <i>LDQ</i> </p>
-<p>LDQ is INTEGER<br />
-        The leading dimension of the array Q.LDQ &gt;= 1;<br />
+<p>LDQ is INTEGER<br/>
+        The leading dimension of the array Q.LDQ &gt;= 1;<br/>
 and if COMPQ = &#8216;V&#8217;, LDQ &gt;= N.</p>
 <p> <i>W</i> </p>
 <pre>

@@ -9,21 +9,21 @@ description: "ovs-pki – OpenFlow public key infrastructure management utility"
 
 <p>ovs-pki &#8211; OpenFlow public key infrastructure management utility</p>
 <h2>Synopsis</h2>
-<p>Each command takes the form: <code>ovs-pki</code> [<i>options</i>] <i>command</i> [<i>args</i>] The implemented commands and their arguments are:<br />
- <code>ovs-pki</code> <code>init</code><br />
- <code>ovs-pki</code> <code>req</code> <i>name</i><br />
- <code>ovs-pki</code> <code>sign</code> <i>name</i> [<i>type</i>]<br />
- <code>ovs-pki</code> <code>req+sign</code> <i>name</i> [<i>type</i>]<br />
- <code>ovs-pki</code> <code>verify</code> <i>name</i> [<i>type</i>]<br />
- <code>ovs-pki</code> <code>fingerprint</code> <i>file</i><br />
- <code>ovs-pki</code> <code>self-sign</code> <i>name</i> Each <i>type</i> above is a certificate type, either <code>switch</code> (default) or <code>controller</code>. The available options are:<br />
- [<code>-k</code> <i>type</i> | <code>&#8211;key=</code><i>type</i>]<br />
- [<code>-B</code> <i>nbits</i> | <code>&#8211;bits=</code><i>nbits</i>]<br />
- [<code>-D</code> <i>file</i> | <code>&#8211;dsaparam=</code><i>file</i>]<br />
- [<code>-b</code> | <code>&#8211;batch</code>]<br />
- [<code>-f</code> | <code>&#8211;force</code>]<br />
- [<code>-d</code> <i>dir</i> | <code>&#8211;dir=</code><i>dir</i>]<br />
- [<code>-l</code> <i>file</i> | <code>&#8211;log=</code><i>file</i>]<br />
+<p>Each command takes the form: <code>ovs-pki</code> [<i>options</i>] <i>command</i> [<i>args</i>] The implemented commands and their arguments are:<br/>
+ <code>ovs-pki</code> <code>init</code><br/>
+ <code>ovs-pki</code> <code>req</code> <i>name</i><br/>
+ <code>ovs-pki</code> <code>sign</code> <i>name</i> [<i>type</i>]<br/>
+ <code>ovs-pki</code> <code>req+sign</code> <i>name</i> [<i>type</i>]<br/>
+ <code>ovs-pki</code> <code>verify</code> <i>name</i> [<i>type</i>]<br/>
+ <code>ovs-pki</code> <code>fingerprint</code> <i>file</i><br/>
+ <code>ovs-pki</code> <code>self-sign</code> <i>name</i> Each <i>type</i> above is a certificate type, either <code>switch</code> (default) or <code>controller</code>. The available options are:<br/>
+ [<code>-k</code> <i>type</i> | <code>&#8211;key=</code><i>type</i>]<br/>
+ [<code>-B</code> <i>nbits</i> | <code>&#8211;bits=</code><i>nbits</i>]<br/>
+ [<code>-D</code> <i>file</i> | <code>&#8211;dsaparam=</code><i>file</i>]<br/>
+ [<code>-b</code> | <code>&#8211;batch</code>]<br/>
+ [<code>-f</code> | <code>&#8211;force</code>]<br/>
+ [<code>-d</code> <i>dir</i> | <code>&#8211;dir=</code><i>dir</i>]<br/>
+ [<code>-l</code> <i>file</i> | <code>&#8211;log=</code><i>file</i>]<br/>
  [<code>-h</code> | <code>&#8211;help</code>] Some options do not apply to every command. </p>
 <h2>Description</h2>
 <p>The <code>ovs-pki</code> program sets up and manages a public key infrastructure for use with OpenFlow. It is intended to be a simple interface for organizations that do not have an established public key infrastructure. Other PKI tools can substitute for or supplement the use of <code>ovs-pki</code>. <code>ovs-pki</code> uses <code>openssl</code>(1) for certificate management and key generation. </p>

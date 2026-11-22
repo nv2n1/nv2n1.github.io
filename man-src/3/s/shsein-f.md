@@ -10,7 +10,7 @@ description: "shsein.f –"
 <p>shsein.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>shsein</code> (SIDE, EIGSRC, INITV, SELECT, N, H, LDH, WR, WI, VL, LDVL, VR, LDVR, MM, M, WORK, IFAILL, IFAILR, INFO)<br />
+<p>subroutine <code>shsein</code> (SIDE, EIGSRC, INITV, SELECT, N, H, LDH, WR, WI, VL, LDVL, VR, LDVR, MM, M, WORK, IFAILL, IFAILR, INFO)<br/>
  <i></i><code>SHSEIN</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine shsein (characterSIDE, characterEIGSRC, characterINITV, logical, dimension( * )SELECT, integerN, real, dimension( ldh, * )H, integerLDH, real, dimension( * )WR, real, dimension( * )WI, real, dimension( ldvl, * )VL, integerLDVL, real, dimension( ldvr, * )VR, integerLDVR, integerMM, integerM, real, dimension( * )WORK, integer, dimension( * )IFAILL, integer, dimension( * )IFAILR, integerINFO)</h3>

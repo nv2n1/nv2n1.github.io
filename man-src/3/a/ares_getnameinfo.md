@@ -64,5 +64,5 @@ void *arg)
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-ares_process/">ares_process</a></code>(3), <code>ares_getaddrinfo</code>(3)</p>
 <h2>AUTHOR</h2>
-<p> Dominick Meglio<br />
+<p> Dominick Meglio<br/>
  Copyright 2005 by Dominick Meglio. </p>

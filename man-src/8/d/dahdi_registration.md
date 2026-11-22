@@ -22,9 +22,9 @@ Without parameters, show all connected XPDs sorted by physical connector order. 
 
 <h2>Parameters</h2>
 
-off --- deregisters all <font SIZE="-1">XPD</font>'s from dahdi. 
+off --- deregisters all XPD's from dahdi. 
 
- on --- registers all <font SIZE="-1">XPD</font>'s to dahdi.
+ on --- registers all XPD's to dahdi.
 
 <h2>Options</h2>
 
@@ -32,7 +32,7 @@ off --- deregisters all <font SIZE="-1">XPD</font>'s from dahdi.
 </dt><dd>The sort order to use.</dd></dl>
  
 
- If the option is not used, the sort order is taken from the environment variable <font SIZE="-1">XBUS_SORT</font> and failing that: the hard-coded default of <font SIZE="-1">SORT_CONNECTOR</font>. 
+ If the option is not used, the sort order is taken from the environment variable XBUS_SORT and failing that: the hard-coded default of SORT_CONNECTOR. 
 
  The available sorting orders are documented in Dahdi::Xpp manual.
 
@@ -61,6 +61,6 @@ An example of the output of dahdi_registration for some registered Astribanks:
 <h2>Files</h2>
 
 <dl><dt>/proc/xpp/XBUS-nn/XPD-mm/dahdi_registration
-</dt><dd>Reading from this file shows if if the if the specific <font SIZE="-1">XPD</font> is registered. Writing to it 0 or 1 registers / unregisters the device. 
- This should allow you to register / unregister a specific <font SIZE="-1">XPD</font> rather than all of them. 
+</dt><dd>Reading from this file shows if if the if the specific XPD is registered. Writing to it 0 or 1 registers / unregisters the device. 
+ This should allow you to register / unregister a specific XPD rather than all of them. 
 </dd></dl>

@@ -8,16 +8,16 @@ url: "/docs/linux/man/1-pal2rgb/"
 description: "pal2rgb – convert a palette color TIFF image to a full color image"
 ---
 
-<p> pal2rgb &#8211; convert a palette color <font SIZE="-1">TIFF</font> image to a full color image</p>
+<p> pal2rgb &#8211; convert a palette color TIFF image to a full color image</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pal2rgb</code> [ <i>options</i> ] <i>input.tif</i> <i>output.tif</i></p>
 <h2>DESCRIPTION</h2>
-<p> <i>Pal2rgb</i> converts a palette color <font SIZE="-1">TIFF</font> image to a full color image by applying the colormap of the palette image to each sample to generate a full color <font SIZE="-1">RGB</font> image.</p>
+<p> <i>Pal2rgb</i> converts a palette color TIFF image to a full color image by applying the colormap of the palette image to each sample to generate a full color RGB image.</p>
 <h2>OPTIONS</h2>
 <p> Options that affect the interpretation of input data are:</p>
 <dl>
 <dt><code>-C</code></dt>
-<dd> This option overrides the default behavior of <i>pal2rgb</i> in determining whether or not colormap entries contain 16-bit or 8-bit values. By default the colormap is inspected and if no colormap entry greater than 255 is found, the colormap is assumed to have only 8-bit values; otherwise 16-bit values (as required by the <font SIZE="-1">TIFF</font> specification) are assumed. The <code>-C</code> option can be used to explicitly specify the number of bits for colormap entries: <code>-C 8</code> for 8-bit values, <code>-C 16</code> for 16-bit values.</dd></dl>
+<dd> This option overrides the default behavior of <i>pal2rgb</i> in determining whether or not colormap entries contain 16-bit or 8-bit values. By default the colormap is inspected and if no colormap entry greater than 255 is found, the colormap is assumed to have only 8-bit values; otherwise 16-bit values (as required by the TIFF specification) are assumed. The <code>-C</code> option can be used to explicitly specify the number of bits for colormap entries: <code>-C 8</code> for 8-bit values, <code>-C 16</code> for 16-bit values.</dd></dl>
 <p> Options that affect the output file format are:</p>
 <dl>
 <dt><code>-p</code></dt>

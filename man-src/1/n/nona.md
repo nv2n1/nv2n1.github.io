@@ -16,7 +16,7 @@ description: "nona – Stitch a panorama image"
 <p> Only the non-antialiasing interpolators of PanoTools are supported. </p>
 <p> The following output formats (<code>n</code> option of PanoTools <code>p</code> script line) are supported:</p>
 <dl>
-<dt><font SIZE="-1">JPEG, TIFF, PNG :</font> Single image formats without feathered blending</dt>
+<dt>JPEG, TIFF, PNG : Single image formats without feathered blending</dt>
 <dd>
 </dd><dt>TIFF_m : multiple tiff files</dt>
 <dd>
@@ -36,7 +36,7 @@ description: "nona – Stitch a panorama image"
 <dt><code>-i</code> <i>num</i></dt>
 <dd> Remap only image with number num (can be specified multiple times)</dd>
 <dt><code>-m</code> <i>str</i></dt>
-<dd> Set output file format (<font SIZE="-1">TIFF,</font> TIFF_m, TIFF_multilayer, <font SIZE="-1">EXR,</font> EXR_m)</dd>
+<dd> Set output file format (TIFF, TIFF_m, TIFF_multilayer, EXR, EXR_m)</dd>
 <dt><code>-r</code> <i>ldr</i>/<i>hdr</i></dt>
 <dd> Set output mode:</dd>
 <dl>
@@ -50,21 +50,21 @@ description: "nona – Stitch a panorama image"
 </dl>
 <dt><code>-e</code> <i>exposure</i></dt>
 <dd> Set exposure for ldr mode</dd>
-<dt><code>-p</code> <i></i><font SIZE="-1"><i>TYPE</i></font><i></i></dt>
+<dt><code>-p</code> <i></i><i>TYPE</i><i></i></dt>
 <dd> Pixel type of the output. Can be one of:</dd>
 <dl>
 <dl>
-<dt><font SIZE="-1">UINT8 8</font> bit unsigned integer</dt>
+<dt>UINT8 8 bit unsigned integer</dt>
 <dd>
-</dd><dt><font SIZE="-1">UINT16 16</font> bit unsigned integer</dt>
+</dd><dt>UINT16 16 bit unsigned integer</dt>
 <dd>
-</dd><dt><font SIZE="-1">INT16 16</font> bit signed integer</dt>
+</dd><dt>INT16 16 bit signed integer</dt>
 <dd>
-</dd><dt><font SIZE="-1">UINT32 32</font> bit unsigned integer</dt>
+</dd><dt>UINT32 32 bit unsigned integer</dt>
 <dd>
-</dd><dt><font SIZE="-1">INT32 32</font> bit signed integer</dt>
+</dd><dt>INT32 32 bit signed integer</dt>
 <dd>
-</dd><dt><font SIZE="-1">FLOAT 32</font> bit floating point</dt>
+</dd><dt>FLOAT 32 bit floating point</dt>
 <dd></dd></dl>
 </dl>
 <dl>
@@ -73,11 +73,11 @@ description: "nona – Stitch a panorama image"
 <dd> Set compression type. Possible options for tiff output:</dd>
 <dl>
 <dl>
-<dt><font SIZE="-1">NONE </font> no compression</dt>
+<dt>NONE  no compression</dt>
 <dd>
-</dd><dt><font SIZE="-1">LZW LZW</font> compression</dt>
+</dd><dt>LZW LZW compression</dt>
 <dd>
-</dd><dt><font SIZE="-1">DEFLATE </font> deflate compression</dt>
+</dd><dt>DEFLATE  deflate compression</dt>
 <dd></dd></dl>
 </dl>
 <dl>

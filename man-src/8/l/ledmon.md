@@ -9,14 +9,14 @@ description: "ledmon – Intel(R) LED monitor service for storage enclosures."
 
 <p>ledmon &#8211; Intel(R) LED monitor service for storage enclosures.</p>
 <h2>Synopsis</h2>
-<p><code>ledmon</code> [<i></i><font SIZE="-1"><i>OPTIONS</i></font><i></i>]</p>
+<p><code>ledmon</code> [<i></i><i>OPTIONS</i><i></i>]</p>
 <h2>Description</h2>
-<p>The ledmon application is a daemon process used to monitor a state of software <font SIZE="-1">RAID</font> devices (md only) or a state of block devices. The state is visualizing on LEDs associated to each slot in an enclosure or a drive bay. There are two types of system: 2-LEDs system (Activity <font SIZE="-1">LED,</font> Status <font SIZE="-1">LED</font>) and 3-LEDs system (Activity <font SIZE="-1">LED,</font> Locate <font SIZE="-1">LED,</font> Fail <font SIZE="-1">LED</font>). This application has the highest priority when accessing the LEDs. </p>
-<p> The ledmon application uses <font SIZE="-1">SGPIO</font> and <font SIZE="-1">SES-2</font> protocol to control LEDs. The program implements <font SIZE="-1">IBPI</font> patterns of <font SIZE="-1">SFF-8489</font> specification for <font SIZE="-1">SGPIO.</font> Please note some enclosures do not stick close to <font SIZE="-1">SFF-8489</font> specification. It might happen that enclosure processor will accept <font SIZE="-1">IBPI</font> pattern but it will blink LEDs not according to <font SIZE="-1">SFF-8489</font> specification or it has limited number of patterns supported. </p>
-<p> <font SIZE="-1">LED</font> management (<font SIZE="-1">AHCI</font>) and SAF-TE protocols are not supported. </p>
-<p> There&#8217;s no method provided to specify which <font SIZE="-1">RAID</font> volume should be monitored and which not. The ledmon application monitors all <font SIZE="-1">RAID</font> devices and visualizes their state. </p>
-<p> The ledmon application has been verified to work with Intel(R) storage controllers (i.e. Intel(R) <font SIZE="-1">AHCI</font> controller and Intel(R) <font SIZE="-1">SAS</font> controller). The application might work with storage controllers of other vendors (especially <font SIZE="-1">SAS/SCSI</font> controllers). However storage controllers of other vendors have not been tested. </p>
-<p> The ledmon application is part of Intel(R) Enclosure <font SIZE="-1">LED</font> Utilities. Only single instance of the application is allowed.</p>
+<p>The ledmon application is a daemon process used to monitor a state of software RAID devices (md only) or a state of block devices. The state is visualizing on LEDs associated to each slot in an enclosure or a drive bay. There are two types of system: 2-LEDs system (Activity LED, Status LED) and 3-LEDs system (Activity LED, Locate LED, Fail LED). This application has the highest priority when accessing the LEDs. </p>
+<p> The ledmon application uses SGPIO and SES-2 protocol to control LEDs. The program implements IBPI patterns of SFF-8489 specification for SGPIO. Please note some enclosures do not stick close to SFF-8489 specification. It might happen that enclosure processor will accept IBPI pattern but it will blink LEDs not according to SFF-8489 specification or it has limited number of patterns supported. </p>
+<p> LED management (AHCI) and SAF-TE protocols are not supported. </p>
+<p> There&#8217;s no method provided to specify which RAID volume should be monitored and which not. The ledmon application monitors all RAID devices and visualizes their state. </p>
+<p> The ledmon application has been verified to work with Intel(R) storage controllers (i.e. Intel(R) AHCI controller and Intel(R) SAS controller). The application might work with storage controllers of other vendors (especially SAS/SCSI controllers). However storage controllers of other vendors have not been tested. </p>
+<p> The ledmon application is part of Intel(R) Enclosure LED Utilities. Only single instance of the application is allowed.</p>
 <h2>Options</h2>
 <dl>
 <dt><code>-c</code> or <code>&#8211;config</code>=<i>path</i></dt>
@@ -41,9 +41,9 @@ description: "ledmon – Intel(R) LED monitor service for storage enclosures."
 <dd>Global configuration file, shared between ledmon and all ledctl application instances.</dd></dl>
 <h2>License</h2>
 <p>Copyright (c) 2009-2016 Intel Corporation. </p>
-<p> This program is distributed under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation. See the build-in help for details on the License and the lack of warranty.</p>
+<p> This program is distributed under the terms of the GNU General Public License as published by the Free Software Foundation. See the build-in help for details on the License and the lack of warranty.</p>
 <h2>Bugs</h2>
-<p>The ledmon application does not recognize <font SIZE="-1">PFA</font> state (Predicted Failure Analysis), hence the <font SIZE="-1">PFA</font> pattern from <font SIZE="-1">SFF-8489</font> specification is not visualized.</p>
+<p>The ledmon application does not recognize PFA state (Predicted Failure Analysis), hence the PFA pattern from SFF-8489 specification is not visualized.</p>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/8-ledctl/">ledctl</a></i>(8), <i><a href="/docs/linux/man/5-ledctl-conf/">ledctl.conf</a></i>(5)</p>
 <h2>Author</h2>

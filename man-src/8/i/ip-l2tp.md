@@ -87,20 +87,20 @@ HEXSTR := { 8 or 16 hex digits (4 / 8 bytes) }</code></pre>
 <dt><code>local</code><i> ADDR</i></dt>
 <dd>set the IP address of the local interface to be used for the tunnel. This address must be the address of a local interface. May be specified as an IPv4 address or an IPv6 address.</dd>
 <dt><code>encap</code><i> ENCAP</i></dt>
-<dd>set the encapsulation type of the tunnel.<br />
+<dd>set the encapsulation type of the tunnel.<br/>
  Valid values for encapsulation are: <code>udp</code>, <code>ip</code>.</dd>
 <dt><code>udp_sport</code><i> PORT</i></dt>
 <dd>set the UDP source port to be used for the tunnel. Must be present when udp encapsulation is selected. Ignored when ip encapsulation is selected.</dd>
 <dt><code>udp_dport</code><i> PORT</i></dt>
 <dd>set the UDP destination port to be used for the tunnel. Must be present when udp encapsulation is selected. Ignored when ip encapsulation is selected.</dd>
 <dt><code>udp_csum</code><i> STATE</i></dt>
-<dd>(IPv4 only) control if IPv4 UDP checksums should be calculated and checked for the encapsulating UDP packets, when UDP encapsulating is selected. Default is <code>off</code>.<br />
+<dd>(IPv4 only) control if IPv4 UDP checksums should be calculated and checked for the encapsulating UDP packets, when UDP encapsulating is selected. Default is <code>off</code>.<br/>
  Valid values are: <code>on</code>, <code>off</code>.</dd>
 <dt><code>udp6_csum_tx</code><i> STATE</i></dt>
-<dd>(IPv6 only) control if IPv6 UDP checksums should be calculated for encapsulating UDP packets, when UDP encapsulating is selected. Default is <code>on</code>.<br />
+<dd>(IPv6 only) control if IPv6 UDP checksums should be calculated for encapsulating UDP packets, when UDP encapsulating is selected. Default is <code>on</code>.<br/>
  Valid values are: <code>on</code>, <code>off</code>.</dd>
 <dt><code>udp6_csum_rx</code><i> STATE</i></dt>
-<dd>(IPv6 only) control if IPv6 UDP checksums should be checked for the encapsulating UDP packets, when UDP encapsulating is selected. Default is <code>on</code>.<br />
+<dd>(IPv6 only) control if IPv6 UDP checksums should be checked for the encapsulating UDP packets, when UDP encapsulating is selected. Default is <code>on</code>.<br/>
  Valid values are: <code>on</code>, <code>off</code>.</dd></dl>
 <h3>ip l2tp del tunnel &#8211; destroy a tunnel</h3>
 <dl>
@@ -125,10 +125,10 @@ HEXSTR := { 8 or 16 hex digits (4 / 8 bytes) }</code></pre>
 <dt><code>peer_cookie</code><i> HEXSTR</i></dt>
 <dd>sets an optional peer cookie value to be assigned to the session. This is a 4 or 8 byte value, specified as 8 or 16 hex digits, e.g. 014d3636deadbeef. The value must match the cookie value set at the peer. It tells the local system what cookie value to expect to find in received L2TP packets. Default is to use no cookie.</dd>
 <dt><code>l2spec_type</code><i> L2SPECTYPE</i></dt>
-<dd>set the layer2specific header type of the session.<br />
+<dd>set the layer2specific header type of the session.<br/>
  Valid values are: <code>none</code>, <code>default</code>.</dd>
 <dt><code>seq</code><i> SEQ</i></dt>
-<dd>controls sequence numbering to prevent or detect out of order packets. <code>send</code> puts a sequence number in the default layer2specific header of each outgoing packet. <code>recv</code> reorder packets if they are received out of order. Default is <code>none</code>.<br />
+<dd>controls sequence numbering to prevent or detect out of order packets. <code>send</code> puts a sequence number in the default layer2specific header of each outgoing packet. <code>recv</code> reorder packets if they are received out of order. Default is <code>none</code>.<br/>
  Valid values are: <code>none</code>, <code>send</code>, <code>recv</code>, <code>both</code>.</dd></dl>
 <h3>ip l2tp del session &#8211; destroy a session</h3>
 <dl>

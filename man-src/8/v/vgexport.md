@@ -21,7 +21,7 @@ description: "vgexport – Unregister volume group(s) from the system"
 <p>Export specified VGs. </p>
 <p> <code>vgexport</code> <i>VG</i>|<i>Tag</i>|<i>Select</i> &#8230; </p>
 <dl>
-<dd>[ <code>-S</code>|<code>&#8211;select</code> <i>String</i> ]<br />
+<dd>[ <code>-S</code>|<code>&#8211;select</code> <i>String</i> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <p> Export all VGs. </p>
 <p> <code>vgexport</code> <code>-a</code>|<code>&#8211;all</code> </p>
@@ -32,19 +32,19 @@ description: "vgexport – Unregister volume group(s) from the system"
 <dd>[ <code>&#8211;reportformat</code> <code>basic</code>|<code>json</code> ]</dd></dl>
 <p> Common options for lvm:</p>
 <dl>
-<dd>[ <code>-d</code>|<code>&#8211;debug</code> ]<br />
- [ <code>-h</code>|<code>&#8211;help</code> ]<br />
- [ <code>-q</code>|<code>&#8211;quiet</code> ]<br />
- [ <code>-t</code>|<code>&#8211;test</code> ]<br />
- [ <code>-v</code>|<code>&#8211;verbose</code> ]<br />
- [ <code>-y</code>|<code>&#8211;yes</code> ]<br />
- [ <code>&#8211;commandprofile</code> <i>String</i> ]<br />
- [ <code>&#8211;config</code> <i>String</i> ]<br />
- [ <code>&#8211;driverloaded</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;lockopt</code> <i>String</i> ]<br />
- [ <code>&#8211;longhelp</code> ]<br />
- [ <code>&#8211;nolocking</code> ]<br />
- [ <code>&#8211;profile</code> <i>String</i> ]<br />
+<dd>[ <code>-d</code>|<code>&#8211;debug</code> ]<br/>
+ [ <code>-h</code>|<code>&#8211;help</code> ]<br/>
+ [ <code>-q</code>|<code>&#8211;quiet</code> ]<br/>
+ [ <code>-t</code>|<code>&#8211;test</code> ]<br/>
+ [ <code>-v</code>|<code>&#8211;verbose</code> ]<br/>
+ [ <code>-y</code>|<code>&#8211;yes</code> ]<br/>
+ [ <code>&#8211;commandprofile</code> <i>String</i> ]<br/>
+ [ <code>&#8211;config</code> <i>String</i> ]<br/>
+ [ <code>&#8211;driverloaded</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;lockopt</code> <i>String</i> ]<br/>
+ [ <code>&#8211;longhelp</code> ]<br/>
+ [ <code>&#8211;nolocking</code> ]<br/>
+ [ <code>&#8211;profile</code> <i>String</i> ]<br/>
  [ <code>&#8211;version</code> ]</dd></dl>
 <h2>Options</h2>
 <dl>

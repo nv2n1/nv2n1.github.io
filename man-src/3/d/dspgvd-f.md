@@ -10,7 +10,7 @@ description: "dspgvd.f –"
 <p>dspgvd.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dspgvd</code> (ITYPE, JOBZ, UPLO, N, AP, BP, W, Z, LDZ, WORK, LWORK, IWORK, LIWORK, INFO)<br />
+<p>subroutine <code>dspgvd</code> (ITYPE, JOBZ, UPLO, N, AP, BP, W, Z, LDZ, WORK, LWORK, IWORK, LIWORK, INFO)<br/>
  <i></i><code>DSPGST</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dspgvd (integerITYPE, characterJOBZ, characterUPLO, integerN, double precision, dimension( * )AP, double precision, dimension( * )BP, double precision, dimension( * )W, double precision, dimension( ldz, * )Z, integerLDZ, double precision, dimension( * )WORK, integerLWORK, integer, dimension( * )IWORK, integerLIWORK, integerINFO)</h3>

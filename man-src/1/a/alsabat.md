@@ -29,9 +29,9 @@ description: "alsabat – command-line sound tester for ALSA sound card driver"
 <dt><i>-C</i></dt>
 <dd> Select the capture PCM device.</dd>
 <dt><i>-f</i></dt>
-<dd> Sample format<br />
- Recognized sample formats are: U8 S16_LE S24_3LE S32_LE<br />
- Some of these may not be available on selected hardware<br />
+<dd> Sample format<br/>
+ Recognized sample formats are: U8 S16_LE S24_3LE S32_LE<br/>
+ Some of these may not be available on selected hardware<br/>
  The available format shortcuts are: </dd>
 <pre><code>
 - f cd(16 bit little endian, 44100, stereo)[-f S16_LE - c2 - r44100] - f dat(16 bit little endian, 48000, stereo)[-f S16_LE - c2 - r48000]
@@ -42,16 +42,16 @@ description: "alsabat – command-line sound tester for ALSA sound card driver"
 <dt><i>-r</i></dt>
 <dd> Sampling rate in Hertz. The default rate is 44100 Hertz. Valid values depends on hardware support.</dd>
 <dt><i>-n</i></dt>
-<dd> Duration of generated signal. The value could be either of the two forms:<br />
- 1. Decimal integer, means number of frames;<br />
- 2. Floating point with suffix &#8216;s&#8217;, means number of seconds.<br />
+<dd> Duration of generated signal. The value could be either of the two forms:<br/>
+ 1. Decimal integer, means number of frames;<br/>
+ 2. Floating point with suffix &#8216;s&#8217;, means number of seconds.<br/>
  The default is 2 seconds.</dd>
 <dt><i>-k</i></dt>
-<dd> Sigma k value for analysis.<br />
- The analysis function reads data from WAV file, run FFT against the data to get magnitude of frequency vectors, and then calculates the average value and standard deviation of frequency vectors. After that, we define a threshold:<br />
- threshold = k * standard_deviation + mean_value<br />
- Frequencies with amplitude larger than threshold will be recognized as a peak, and the frequency with largest peak value will be recognized as a detected frequency.<br />
- ALSABAT then compares the detected frequency to target frequency, to decide if the detecting passes or fails.<br />
+<dd> Sigma k value for analysis.<br/>
+ The analysis function reads data from WAV file, run FFT against the data to get magnitude of frequency vectors, and then calculates the average value and standard deviation of frequency vectors. After that, we define a threshold:<br/>
+ threshold = k * standard_deviation + mean_value<br/>
+ Frequencies with amplitude larger than threshold will be recognized as a peak, and the frequency with largest peak value will be recognized as a detected frequency.<br/>
+ ALSABAT then compares the detected frequency to target frequency, to decide if the detecting passes or fails.<br/>
  The default value is 3.0.</dd>
 <dt><i>-F</i></dt>
 <dd> Target frequency for signal generation and analysis, in Hertz. The default is 997.0 Hertz. Valid range is (DC_THRESHOLD, 40% * Sampling rate).</dd>
@@ -82,9 +82,9 @@ description: "alsabat – command-line sound tester for ALSA sound card driver"
 <dd> Play the RIFF WAV file &quot;500Hz.wav&quot; which contains 500 Hertz waveform LPCM data, and then capture and analyze. </dd>
 </dl>
 <h2>RETURN VALUE</h2>
-<p> On success, returns 0.<br />
- If no peak be detected, returns -1001;<br />
- If only DC be detected, returns -1002;<br />
+<p> On success, returns 0.<br/>
+ If no peak be detected, returns -1001;<br/>
+ If only DC be detected, returns -1002;<br/>
  If peak frequency does not match with the target frequency, returns -1003. </p>
 <h2>SEE ALSO</h2>
 <p> <code> <a href="/docs/linux/man/1-aplay/">aplay</a>(1) </code> </p>

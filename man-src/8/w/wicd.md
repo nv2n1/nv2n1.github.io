@@ -20,45 +20,45 @@ description: "Wicd – Wired and Wireless Network Connection Manager"
 <p> The user interface (stored in wicd-gtk), which is made up of a tray icon, a main GUI window, and its child dialogs, gets configuration and network info from the daemon either by querying it using the methods in the daemon&#8217;s dbus interface or by receiving signals emitted from the daemon over D-Bus. Any configuration changes made in the user interface are passed back to the daemon, which actually applies the changes and writes them to configuration files. </p>
 <p> Since the user interface just queries for connection and configuration info from the daemon, it is possible to run wicd without the GUI at all. Also, the daemon is started by wicd&#8217;s init script during system startup (before any user logs in), making it possible to use wicd with &quot;headless&quot; machines.</p>
 <h2>Usage Hints</h2>
-<p><code>Choosing Alternate Tools</code><br />
+<p><code>Choosing Alternate Tools</code><br/>
  Wicd supports several alternatives regarding the networking tools on linux. In the &quot;External Programs&quot; tab of the Preferences menu, you can choose your preferred DHCP client, link detection tool, and routing tool if the defaults aren&#8217;t suitable for your particular distribution or system. </p>
-<p> <code>Custom Scripts</code><br />
- If you need to run any custom commands before or after connecting to or disconnecting from a network, Wicd supports this; however, you will need to have a graphical sudo helper installed (currently supported are kdesu, gksu, and ktsuss). Also see /etc/wicd/scripts/ in FILES.<br />
+<p> <code>Custom Scripts</code><br/>
+ If you need to run any custom commands before or after connecting to or disconnecting from a network, Wicd supports this; however, you will need to have a graphical sudo helper installed (currently supported are kdesu, gksu, and ktsuss). Also see /etc/wicd/scripts/ in FILES.<br/>
  If you do not have a graphical sudo helper installed, you still have the ability to use custom scripts, but you will have to set them up manually. See <a href="/docs/linux/man/5-wicd-wired-settings-conf/">wicd-wired-settings.conf</a>(5) and/or <a href="/docs/linux/man/5-wicd-wireless-settings-conf/">wicd-wireless-settings.conf</a>(5) for more information on how to do so. </p>
-<p> <code>Automatically Connecting to Networks</code><br />
+<p> <code>Automatically Connecting to Networks</code><br/>
  Wicd uses the BSSID to recognize a particular network (and thus to decide whether it should automatically connect to it). If you are on a network that has many different access points which all have the same ESSID (many universities have such networks), there is an option in the &quot;Advanced Settings&quot; to &quot;Use these settings for all networks sharing this essid.&quot; With this option enabled, Wicd will autoconnect to that network, regardless of which node it sees.</p>
 <h2>Files</h2>
-<p><code>/etc/wicd/manager-settings.conf</code><br />
- This file contains global settings for Wicd.<br />
+<p><code>/etc/wicd/manager-settings.conf</code><br/>
+ This file contains global settings for Wicd.<br/>
  See this file&#8217;s own man page for more information about it. </p>
-<p> <code>/etc/wicd/wired-settings.conf</code><br />
- This file contains settings related to the wired interface.<br />
+<p> <code>/etc/wicd/wired-settings.conf</code><br/>
+ This file contains settings related to the wired interface.<br/>
  See this file&#8217;s own man page for more information about it. </p>
-<p> <code>/etc/wicd/wireless-settings.conf</code><br />
- This file contains settings related to the wireless interface.<br />
+<p> <code>/etc/wicd/wireless-settings.conf</code><br/>
+ This file contains settings related to the wireless interface.<br/>
  See this file&#8217;s own man page for more information about it. </p>
-<p> <code>/etc/wicd/dhclient.conf.template</code><br />
+<p> <code>/etc/wicd/dhclient.conf.template</code><br/>
  This is used to generate /var/lib/wicd/dhclient.conf during Wicd activity, if you&#8217;re using dhclient(1) as DHCP client. See <a href="/docs/linux/man/5-dhclient-conf/">dhclient.conf</a>(5) for more information. </p>
-<p> <code>/etc/wicd/encryption/templates/</code><br />
+<p> <code>/etc/wicd/encryption/templates/</code><br/>
  This directory contains various templates for encrypted (WEP, WPA, etcetera) connections. If none of them fit your needs, you may create your own and add it to this directory. If you do this, please contact the authors (see below) of Wicd. </p>
-<p> <code>/etc/wicd/scripts/</code><br />
- Dropping a script in the relevant directory will cause it to be executed when the specified event is preformed upon connection or disconnect from or to any network. Please note that pre/post disconnect scripts may be executed multiple times on already-disconnected interfaces.<br />
- The scripts will be passed different parameters, depending if Wicd is acting on a wired or a wireless network. In the former case, &quot;wired wired wired&quot; will be passed (three times, just for compatibility with the wireless case). If Wicd is acting on a wireless network, it will pass &quot;wireless ESSID BSSID&quot; to the script.<br />
- Available directories are:<br />
- /etc/wicd/scripts/predisconnect<br />
- /etc/wicd/scripts/postdisconnect<br />
- /etc/wicd/scripts/preconnect<br />
+<p> <code>/etc/wicd/scripts/</code><br/>
+ Dropping a script in the relevant directory will cause it to be executed when the specified event is preformed upon connection or disconnect from or to any network. Please note that pre/post disconnect scripts may be executed multiple times on already-disconnected interfaces.<br/>
+ The scripts will be passed different parameters, depending if Wicd is acting on a wired or a wireless network. In the former case, &quot;wired wired wired&quot; will be passed (three times, just for compatibility with the wireless case). If Wicd is acting on a wireless network, it will pass &quot;wireless ESSID BSSID&quot; to the script.<br/>
+ Available directories are:<br/>
+ /etc/wicd/scripts/predisconnect<br/>
+ /etc/wicd/scripts/postdisconnect<br/>
+ /etc/wicd/scripts/preconnect<br/>
  /etc/wicd/scripts/postconnect </p>
-<p> <code>/var/lib/wicd/configurations/</code><br />
+<p> <code>/var/lib/wicd/configurations/</code><br/>
  This directory contains individual configuration files for each encrypted network you set up in Wicd. </p>
-<p> <code>/var/log/wicd/</code><br />
+<p> <code>/var/log/wicd/</code><br/>
  This directory contains logfiles of Wicd&#8217;s activity. Please refer to the log if you are having connection or other problems.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-wicd-manager-settings-conf/">wicd-manager-settings.conf</a></code>(5), <code><a href="/docs/linux/man/5-wicd-wired-settings-conf/">wicd-wired-settings.conf</a></code>(5), <code><a href="/docs/linux/man/5-wicd-wireless-settings-conf/">wicd-wireless-settings.conf</a></code>(5), <code><a href="/docs/linux/man/5-dhclient-conf/">dhclient.conf</a></code>(5), <code><a href="/docs/linux/man/8-wicd-curses/">wicd-curses</a></code>(8), <code><a href="/docs/linux/man/8-ifconfig/">ifconfig</a></code>(8), <code><a href="/docs/linux/man/8-iwconfig/">iwconfig</a></code>(8), <code><a href="/docs/linux/man/8-wpa_supplicant/">wpa_supplicant</a></code>(8), <code><a href="/docs/linux/man/8-route/">route</a></code>(8), <code><a href="/docs/linux/man/8-ip/">ip</a></code>(8), <code><a href="/docs/linux/man/8-mii-tool/">mii-tool</a></code>(8), <code><a href="/docs/linux/man/8-ethtool/">ethtool</a></code>(8), <code><a href="/docs/linux/man/8-dhclient/">dhclient</a></code>(8), <code>dhcpcd</code>(8), <code>pump</code>(8). </p>
 <h2>Wicd Authors</h2>
-<p>Adam Blackburn &lt;compwiz18 [at] gmail.com&gt;<br />
- Dan O&#8217;Reilly &lt;oreilldf [at] gmail.com&gt;<br />
- Andrew Psaltis &lt;ampsaltis [at] gmail.com&gt; (curses client)<br />
+<p>Adam Blackburn &lt;compwiz18 [at] gmail.com&gt;<br/>
+ Dan O&#8217;Reilly &lt;oreilldf [at] gmail.com&gt;<br/>
+ Andrew Psaltis &lt;ampsaltis [at] gmail.com&gt; (curses client)<br/>
  David Paleino &lt;d.paleino [at] gmail.com&gt;</p>
 <h2>Manpage Author</h2>
 <p>Robby Workman &lt;rworkman [at] slackware.com&gt;</p>

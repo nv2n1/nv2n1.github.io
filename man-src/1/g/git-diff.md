@@ -385,7 +385,7 @@ git diff[&lt;options&gt;][&lt;commit&gt;][--][&lt;path&gt;...] git diff[&lt;opti
 <dl>
 <dt>
 </dt><dd>
-+ return frotz(nitfol, two-&gt;ptr, 1, 0);<br />
++ return frotz(nitfol, two-&gt;ptr, 1, 0);<br/>
 &#8230; &#8211; hit = frotz(nitfol, mf2.ptr, 1, 0);
 </dd></dl>
 <p> While <code>git log -G&quot;frotz\(nitfol&quot;</code> will show this commit, <code>git log -S&quot;frotz\(nitfol&quot; &#8211;pickaxe-regex</code> will not (because the number of occurrences of that string did not change). </p>
@@ -746,26 +746,26 @@ rename to a
 <dl>
 <dt>
 </dt><dd>
-diff&#8211; combined describe.c<br />
-    index fabadb8,<br />
-    cc95eb0..4866510 &#8212; -a / describe.c++ + b / describe.c<br />
-                                                @ @ @-98,<br />
-    20 &#8211; 98, 12 + 98, 20 @ @ @ return (a_date &gt; b_date) ? -1 : (a_date == b_date) ? 0<br />
-                                                                                  : 1;<br />
-}<br />
-&#8211; static void describe(char *arg) &#8211; static void describe(struct commit *cmit, int last_one)++ static void describe(char *arg, int last_one)<br />
-{<br />
-    +unsigned char sha1[20];<br />
-    +struct commit *cmit;<br />
-    struct commit_list *list;<br />
-    static int initialized = 0;<br />
-    struct commit_name *n;<br />
-    +if (get_sha1(arg, sha1) &lt; 0) + usage(describe_usage);<br />
-    +cmit = lookup_commit_reference(sha1);<br />
-    +if (!cmit) + usage(describe_usage);<br />
-    +if (!initialized)<br />
-    {<br />
-        initialized = 1;<br />
+diff&#8211; combined describe.c<br/>
+    index fabadb8,<br/>
+    cc95eb0..4866510 &#8212; -a / describe.c++ + b / describe.c<br/>
+                                                @ @ @-98,<br/>
+    20 &#8211; 98, 12 + 98, 20 @ @ @ return (a_date &gt; b_date) ? -1 : (a_date == b_date) ? 0<br/>
+                                                                                  : 1;<br/>
+}<br/>
+&#8211; static void describe(char *arg) &#8211; static void describe(struct commit *cmit, int last_one)++ static void describe(char *arg, int last_one)<br/>
+{<br/>
+    +unsigned char sha1[20];<br/>
+    +struct commit *cmit;<br/>
+    struct commit_list *list;<br/>
+    static int initialized = 0;<br/>
+    struct commit_name *n;<br/>
+    +if (get_sha1(arg, sha1) &lt; 0) + usage(describe_usage);<br/>
+    +cmit = lookup_commit_reference(sha1);<br/>
+    +if (!cmit) + usage(describe_usage);<br/>
+    +if (!initialized)<br/>
+    {<br/>
+        initialized = 1;<br/>
         for_each_ref(get_name);
 </dd></dl>
 <dl>
@@ -925,8 +925,8 @@ $ git diff --cached   <code>(2)</code>
 $ git diff HEAD       <code>(3)</code>
 </pre>
 </dd></dl>
-<p> <code>1. </code>Changes in the working tree not yet staged for the next commit.<br />
- <code>2. </code>Changes between the index and your last commit; what you would be committing if you run <code>git commit</code> without <code>-a</code> option.<br />
+<p> <code>1. </code>Changes in the working tree not yet staged for the next commit.<br/>
+ <code>2. </code>Changes between the index and your last commit; what you would be committing if you run <code>git commit</code> without <code>-a</code> option.<br/>
  <code>3. </code>Changes in the working tree since your last commit; what you would be committing if you run <code>git commit -a</code>
 </dl>
 <p> Comparing with arbitrary commits</p>
@@ -940,8 +940,8 @@ $ git diff HEAD -- ./test  <code>(2)</code>
 $ git diff HEAD^ HEAD      <code>(3)</code>
 </pre>
 </dd></dl>
-<p> <code>1. </code>Instead of using the tip of the current branch, compare with the tip of &quot;test&quot; branch.<br />
- <code>2. </code>Instead of comparing with the tip of &quot;test&quot; branch, compare with the tip of the current branch, but limit the comparison to the file &quot;test&quot;.<br />
+<p> <code>1. </code>Instead of using the tip of the current branch, compare with the tip of &quot;test&quot; branch.<br/>
+ <code>2. </code>Instead of comparing with the tip of &quot;test&quot; branch, compare with the tip of the current branch, but limit the comparison to the file &quot;test&quot;.<br/>
  <code>3. </code>Compare the version before the last commit and the last commit.
 </dl>
 <p> Comparing branches</p>
@@ -955,8 +955,8 @@ $ git diff topic..master   <code>(2)</code>
 $ git diff topic...master  <code>(3)</code>
 </pre>
 </dd></dl>
-<p> <code>1. </code>Changes between the tips of the topic and the master branches.<br />
- <code>2. </code>Same as above.<br />
+<p> <code>1. </code>Changes between the tips of the topic and the master branches.<br/>
+ <code>2. </code>Same as above.<br/>
  <code>3. </code>Changes that occurred on the master branch since when the topic branch was started off it.
 </dl>
 <p> Limiting the diff output</p>
@@ -970,8 +970,8 @@ $ git diff --name-status                <code>(2)</code>
 $ git diff arch/i386 include/asm-i386   <code>(3)</code>
 </pre>
 </dd></dl>
-<p> <code>1. </code>Show only modification, rename, and copy, but not addition or deletion.<br />
- <code>2. </code>Show only names and the nature of change, but not actual diff output.<br />
+<p> <code>1. </code>Show only modification, rename, and copy, but not addition or deletion.<br/>
+ <code>2. </code>Show only names and the nature of change, but not actual diff output.<br/>
  <code>3. </code>Limit diff output to named subtrees.
 </dl>
 <p> Munging the diff output</p>
@@ -984,7 +984,7 @@ $ git diff --find-copies-harder -B -C  <code>(1)</code>
 $ git diff -R                          <code>(2)</code>
 </pre>
 </dd></dl>
-<p> <code>1. </code>Spend extra cycles to find renames, copies and complete rewrites (very expensive).<br />
+<p> <code>1. </code>Spend extra cycles to find renames, copies and complete rewrites (very expensive).<br/>
  <code>2. </code>Output diff in reverse.
 </dl>
 <h2>SEE ALSO</h2>

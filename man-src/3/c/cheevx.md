@@ -11,7 +11,7 @@ description: "cheevx.f –"
 <p> cheevx.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cheevx</code> (JOBZ, RANGE, UPLO, N, A, LDA, VL, VU, IL, IU, ABSTOL, M, W, Z, LDZ, WORK, LWORK, RWORK, IWORK, IFAIL, INFO)<br />
+<p> subroutine <code>cheevx</code> (JOBZ, RANGE, UPLO, N, A, LDA, VL, VU, IL, IU, ABSTOL, M, W, Z, LDZ, WORK, LWORK, RWORK, IWORK, IFAIL, INFO)<br/>
  <i></i><code> CHEEVX computes the eigenvalues and, optionally, the left and/or right eigenvectors for HE matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cheevx (characterJOBZ, characterRANGE, characterUPLO, integerN, complex, dimension( lda, * )A, integerLDA, realVL, realVU, integerIL, integerIU, realABSTOL, integerM, real, dimension( * )W, complex, dimension( ldz, * )Z, integerLDZ, complex, dimension( * )WORK, integerLWORK, real, dimension( * )RWORK, integer, dimension( * )IWORK, integer, dimension( * )IFAIL, integerINFO)</h3>

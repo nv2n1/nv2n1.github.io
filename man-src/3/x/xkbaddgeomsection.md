@@ -10,7 +10,7 @@ description: "XkbAddGeomSection – Add one section to an existing keyboard geom
 <p>XkbAddGeomSection &#8211; Add one section to an existing keyboard geometry </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>XkbSectionPtr XkbAddGeomSection</code> <code>(XkbGeometryPtr </code><i>geom</i><code>,</code> <code>Atom </code><i>name</i><code>,</code> <code>int </code><i>sz_rows</i><code>,</code> <code>int </code><i>sz_doodads</i><code>,</code> <code>int </code><i>sz_overlays</i><code>);</code><br />
+<dt> <code>XkbSectionPtr XkbAddGeomSection</code> <code>(XkbGeometryPtr </code><i>geom</i><code>,</code> <code>Atom </code><i>name</i><code>,</code> <code>int </code><i>sz_rows</i><code>,</code> <code>int </code><i>sz_doodads</i><code>,</code> <code>int </code><i>sz_overlays</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

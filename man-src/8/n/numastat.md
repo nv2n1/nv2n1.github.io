@@ -47,13 +47,13 @@ url: "/docs/linux/man/8-numastat/"
 <dt>NUMASTAT_WIDTH</dt>
 <dd></dd></dl>
 <h2>Files</h2>
-<p><i>/proc/*/numa_maps</i><br />
- <i>/sys/devices/system/node/node*/meminfo</i><br />
+<p><i>/proc/*/numa_maps</i><br/>
+ <i>/sys/devices/system/node/node*/meminfo</i><br/>
  <i>/sys/devices/system/node/node*/numastat</i></p>
 <h2>Examples</h2>
-<p><i>numastat -c -z -m -n</i><br />
- <i>numastat -czs libvirt kvm qemu</i><br />
- <i>watch -n1 numastat</i><br />
+<p><i>numastat -c -z -m -n</i><br/>
+ <i>numastat -czs libvirt kvm qemu</i><br/>
+ <i>watch -n1 numastat</i><br/>
  <i>watch -n1 &#8211;differences=cumulative numastat</i></p>
 <h2>Authors</h2>
 <p>The original <code>numastat</code> perl script was written circa 2003 by Andi Kleen &lt;andi.kleen [at] intel.com&gt;. The current <code>numastat</code> program was written in 2012 by Bill Gray &lt;bgray [at] redhat.com&gt; to be compatible by default with the original, and to add options to display per-node system memory usage and per-node process memory allocation.</p>

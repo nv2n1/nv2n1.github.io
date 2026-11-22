@@ -42,7 +42,7 @@ I  Ascii    /usr/bin/ascii-xfr -sv   Y   U   N   Y
 J  Ascii    /usr/bin/ascii-xfr -rv   Y   D   N   Y
 </pre>
 <h2>AUTHOR</h2>
-<p> Miquel van Smoorenburg, miquels [at] cistron.nl<br />
+<p> Miquel van Smoorenburg, miquels [at] cistron.nl<br/>
  Jukka Lahtinen, walker [at] netsonic.fi</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-minicom/">minicom</a>(1) </p>

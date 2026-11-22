@@ -17,7 +17,7 @@ description: "deb-shlibs – Debian shared library information file"
 <p> The <i>library</i> and <i>version</i> fields are whitespace-delimited, but the <i>dependencies</i> field extends to the end of the line. The <i>type</i> field is optional and normally not needed. </p>
 <p> The <i>dependencies</i> field has the same syntax as the <code>Depends</code> field in a binary control file, see <code><a href="/docs/linux/man/5-deb-control/">deb-control</a></code>(5).</p>
 <h2>Soname Formats</h2>
-<p>The <font SIZE="-1">SONAME</font> formats supported are: </p>
+<p>The SONAME formats supported are: </p>
 <dl>
 <dd><i>name</i>.so.<i>version</i></dd></dl>
 <p> and </p>
@@ -25,7 +25,7 @@ description: "deb-shlibs – Debian shared library information file"
 <dd><i>name</i>&#8211;<i>version</i>.so</dd></dl>
 <p> where <i>name</i> is usually prefixed by <code>lib</code>.</p>
 <h2>Examples</h2>
-<p>The <code>shlibs</code> file for a typical library package, named <i>libcrunch1</i>, that provides one library whose <font SIZE="-1">SONAME</font> is <i>libcrunch.so.1</i>, might read </p>
+<p>The <code>shlibs</code> file for a typical library package, named <i>libcrunch1</i>, that provides one library whose SONAME is <i>libcrunch.so.1</i>, might read </p>
 <pre> libcrunch 1 libcrunch1 (&gt;= 1.2-1)</pre>
 <p>The <i>dependencies</i> must mention the most recent version of the package that added new symbols to the library: in the above example, new symbols were added to version 1.2 of <i>libcrunch</i>. This is not the only reason the dependencies might need to be tightened.</p>
 <h2>See Also</h2>

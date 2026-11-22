@@ -10,9 +10,9 @@ description: "qtchooser – a wrapper used to select between Qt development bina
 
 <p> qtchooser &#8211; a wrapper used to select between Qt development binary versions </p>
 <h2>SYNOPSIS</h2>
-<p> <code>qtchooser</code> <code>-list-versions</code><br />
- <code>qtchooser</code> <code>-print-env</code> [<code>-qt=</code><i>version</i>]<br />
- <code>qtchooser</code> <code>-run-tool=</code><i>tool</i> [<code>-qt=</code><i>version</i>] [<i>program_arguments</i>]<br />
+<p> <code>qtchooser</code> <code>-list-versions</code><br/>
+ <code>qtchooser</code> <code>-print-env</code> [<code>-qt=</code><i>version</i>]<br/>
+ <code>qtchooser</code> <code>-run-tool=</code><i>tool</i> [<code>-qt=</code><i>version</i>] [<i>program_arguments</i>]<br/>
  <code>&lt;executable_name&gt;</code> [<code>-qt=</code><i>version</i>] [<i>program_arguments</i>] </p>
 <h2>DESCRIPTION</h2>
 <p> Qt is a cross-platform C++ application framework. Qt&#8217;s primary feature is its rich set of widgets that provide standard GUI functionality. </p>

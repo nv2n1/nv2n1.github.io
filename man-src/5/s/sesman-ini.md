@@ -71,10 +71,10 @@ description: "sesman.ini – Configuration file for xrdp-sesman(8)"
 <dd>Sets the time limit (in seconds) before a disconnected session is killed. If set to <i>0</i>, automatic killing is disabled. </dd>
 <dt><code>Policy</code>=<i>[Default|UBD|UBI|UBC|UBDI|UBDC]</i></dt>
 <dd>Session allocation policy. By default, a new session is created for the combination &lt;User,BitPerPixel&gt; when using Xrdp, and for the combination &lt;User,BitPerPixel,DisplaySize&gt; when using Xvnc. This behavior can be changed by setting session policy to: </dd>
-<p> <code>UBD</code> &#8211; session per &lt;User,BitPerPixel,DisplaySize&gt;<br />
- <code>UBI</code> &#8211; session per &lt;User,BitPerPixel,IPAddr&gt;<br />
- <code>UBC</code> &#8211; session per &lt;User,BitPerPixel,Connection&gt;<br />
- <code>UBDI</code> &#8211; session per &lt;User,BitPerPixel,DisplaySize,IPAddr&gt;<br />
+<p> <code>UBD</code> &#8211; session per &lt;User,BitPerPixel,DisplaySize&gt;<br/>
+ <code>UBI</code> &#8211; session per &lt;User,BitPerPixel,IPAddr&gt;<br/>
+ <code>UBC</code> &#8211; session per &lt;User,BitPerPixel,Connection&gt;<br/>
+ <code>UBDI</code> &#8211; session per &lt;User,BitPerPixel,DisplaySize,IPAddr&gt;<br/>
  <code>UBDC</code> &#8211; session per &lt;User,BitPerPixel,DisplaySize,Connection&gt; </p>
 <p> Note that the <code>User</code> and <code>BitPerPixel</code> criteria cannot be turned off. For Xvnc connections, <code>DisplaySize</code> is always enabled as well. </p>
 </dl>

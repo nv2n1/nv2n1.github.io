@@ -10,13 +10,13 @@ description: "snmpvacm – creates and maintains SNMPv3 View-based Access Contro
 
 <p> snmpvacm &#8211; creates and maintains SNMPv3 View-based Access Control entries on a network entity</p>
 <h2>SYNOPSIS</h2>
-<p> <code>snmpvacm</code> [COMMON OPTIONS] AGENT <code>createSec2Group</code> MODEL SECURITYNAME GROUPNAME<br />
- <code>snmpvacm</code> [COMMON OPTIONS] AGENT <code>deleteSec2Group</code> MODEL SECURITYNAME<br />
- <code>snmpvacm</code> [COMMON OPTIONS] AGENT <code>createView</code> [-Ce] NAME SUBTREE MASK<br />
- <code>snmpvacm</code> [COMMON OPTIONS] AGENT <code>deleteView</code> NAME SUBTREE<br />
- <code>snmpvacm</code> [COMMON OPTIONS] AGENT <code>createAccess</code> GROUPNAME [CONTEXTPREFIX] MODEL LEVEL CONTEXTMATCH READVIEW WRITEVIEW NOTIFYVIEW<br />
- <code>snmpvacm</code> [COMMON OPTIONS] AGENT <code>deleteAccess</code> GROUPNAME [CONTEXTPREFIX] MODEL LEVEL<br />
- <code>snmpvacm</code> [COMMON OPTIONS] AGENT <code>createAuth</code> GROUPNAME [CONTEXTPREFIX] MODEL LEVEL AUTHTYPE CONTEXTMATCH VIEW<br />
+<p> <code>snmpvacm</code> [COMMON OPTIONS] AGENT <code>createSec2Group</code> MODEL SECURITYNAME GROUPNAME<br/>
+ <code>snmpvacm</code> [COMMON OPTIONS] AGENT <code>deleteSec2Group</code> MODEL SECURITYNAME<br/>
+ <code>snmpvacm</code> [COMMON OPTIONS] AGENT <code>createView</code> [-Ce] NAME SUBTREE MASK<br/>
+ <code>snmpvacm</code> [COMMON OPTIONS] AGENT <code>deleteView</code> NAME SUBTREE<br/>
+ <code>snmpvacm</code> [COMMON OPTIONS] AGENT <code>createAccess</code> GROUPNAME [CONTEXTPREFIX] MODEL LEVEL CONTEXTMATCH READVIEW WRITEVIEW NOTIFYVIEW<br/>
+ <code>snmpvacm</code> [COMMON OPTIONS] AGENT <code>deleteAccess</code> GROUPNAME [CONTEXTPREFIX] MODEL LEVEL<br/>
+ <code>snmpvacm</code> [COMMON OPTIONS] AGENT <code>createAuth</code> GROUPNAME [CONTEXTPREFIX] MODEL LEVEL AUTHTYPE CONTEXTMATCH VIEW<br/>
  <code>snmpvacm</code> [COMMON OPTIONS] AGENT <code>deleteAuth</code> GROUPNAME [CONTEXTPREFIX] MODEL LEVEL AUTHTYPE </p>
 <h2>DESCRIPTION</h2>
 <p> <code>snmpvacm</code> is an SNMP application that can be used to do simple maintenance on the View-based Control Module (VACM) tables of an SNMP agent. The SNMPv3 VACM specifications (see RFC2575) define assorted tables to specify groups of users, MIB views, and authorised access settings. These <code>snmpvacm</code> commands effectively create or delete rows in the appropriate one of these tables, and match the equivalent configure directives which are documented in the <i><a href="/docs/linux/man/5-snmpd-conf/">snmpd.conf</a>(5)</i> man page. </p>
@@ -27,9 +27,9 @@ description: "snmpvacm – creates and maintains SNMPv3 View-based Access Contro
 <p> MODEL</p>
 <dl>
 <dt>
-</dt><dd> An integer representing the security model, taking one of the following values:<br />
- 1 &#8211; reserved for SNMPv1<br />
- 2 &#8211; reserved for SNMPv2c<br />
+</dt><dd> An integer representing the security model, taking one of the following values:<br/>
+ 1 &#8211; reserved for SNMPv1<br/>
+ 2 &#8211; reserved for SNMPv2c<br/>
  3 &#8211; User-based Security Model (USM) </dd>
 </dl>
 <p> SECURITYNAME</p>
@@ -80,16 +80,16 @@ description: "snmpvacm – creates and maintains SNMPv3 View-based Access Contro
 <p> MODEL</p>
 <dl>
 <dt>
-</dt><dd> An integer representing the security model, taking one of the following values:<br />
- 1 &#8211; reserved for SNMPv1<br />
- 2 &#8211; reserved for SNMPv2c<br />
+</dt><dd> An integer representing the security model, taking one of the following values:<br/>
+ 1 &#8211; reserved for SNMPv1<br/>
+ 2 &#8211; reserved for SNMPv2c<br/>
  3 &#8211; User-based Security Model (USM)</dd></dl>
 <p> LEVEL</p>
 <dl>
 <dt>
-</dt><dd> An integer representing the minimal security level, taking one of the following values:<br />
- 1 &#8211; noAuthNoPriv<br />
- 2 &#8211; authNoPriv<br />
+</dt><dd> An integer representing the minimal security level, taking one of the following values:<br/>
+ 1 &#8211; noAuthNoPriv<br/>
+ 2 &#8211; authNoPriv<br/>
  3 &#8211; authPriv</dd>
 <dt>
 </dt><dd> This access entry will be applied to requests of this level or higher (where authPriv is higher than authNoPriv which is in turn higher than noAuthNoPriv).</dd></dl>

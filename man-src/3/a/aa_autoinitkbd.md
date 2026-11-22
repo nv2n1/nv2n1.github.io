@@ -11,8 +11,8 @@ description: "aa_autoinitkbd – easy to use AA-lib keyboard initialization func
 <p> aa_autoinitkbd &#8211; easy to use AA-lib keyboard initialization function.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>
-<p> int aa_autoinitkbd<br />
- (<br />
+<p> int aa_autoinitkbd<br/>
+ (<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>struct aa_context *context,</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>int mode</p>
 <p> ); </code></p>

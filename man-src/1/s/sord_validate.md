@@ -29,9 +29,9 @@ description: "sord_validate – Validate RDF data"
 <h2>AUTHOR</h2>
 <p> sord_validate was written by David Robillard &lt;d@drobilla.net&gt; </p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2012-2013 David Robillard.<br />
- License: &lt;<a rel="nofollow" href="http://www.opensource.org/licenses/isc-license">http://www.opensource.org/licenses/isc-license</a>&gt;<br />
- This is free software; you are free to change and redistribute it.<br />
+<p> Copyright &#169; 2012-2013 David Robillard.<br/>
+ License: &lt;<a rel="nofollow" href="http://www.opensource.org/licenses/isc-license">http://www.opensource.org/licenses/isc-license</a>&gt;<br/>
+ This is free software; you are free to change and redistribute it.<br/>
  There is NO WARRANTY, to the extent permitted by law. </p>
 <h2>SEE ALSO</h2>
 <p> &lt;<a rel="nofollow" href="http://drobilla.net/software/sord">http://drobilla.net/software/sord</a>&gt; </p>

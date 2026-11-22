@@ -13,25 +13,25 @@ description: "log4cpp::FileAppender –"
 <p> Inherits <code>log4cpp::LayoutAppender</code>. </p>
 <p> Inherited by <code>log4cpp::RollingFileAppender</code>.</p>
 <h3>Public Member Functions</h3>
-<p><code>FileAppender</code> (const std::string &amp;name, const std::string &amp;fileName, bool append=true, mode_t mode=00644)<br />
- <i>Constructs a </i><code>FileAppender</code>.<br />
- <code>FileAppender</code> (const std::string &amp;name, int fd)<br />
- <i>Constructs a </i><code>FileAppender</code> to an already open file descriptor.<br />
+<p><code>FileAppender</code> (const std::string &amp;name, const std::string &amp;fileName, bool append=true, mode_t mode=00644)<br/>
+ <i>Constructs a </i><code>FileAppender</code>.<br/>
+ <code>FileAppender</code> (const std::string &amp;name, int fd)<br/>
+ <i>Constructs a </i><code>FileAppender</code> to an already open file descriptor.<br/>
  virtual <code>~FileAppender</code> () </p>
-<p> virtual bool <code>reopen</code> ()<br />
- <i>Reopens the logfile. </i><br />
- virtual void <code>close</code> ()<br />
- <i>Closes the logfile. </i><br />
- virtual void <code>setAppend</code> (bool append)<br />
- <i>Sets the append vs truncate flag. </i><br />
- virtual bool <code>getAppend</code> () const<br />
- <i>Gets the value of the &#8216;append&#8217; option. </i><br />
- virtual void <code>setMode</code> (mode_t mode)<br />
- <i>Sets the file open mode. </i><br />
- virtual mode_t <code>getMode</code> () const<br />
+<p> virtual bool <code>reopen</code> ()<br/>
+ <i>Reopens the logfile. </i><br/>
+ virtual void <code>close</code> ()<br/>
+ <i>Closes the logfile. </i><br/>
+ virtual void <code>setAppend</code> (bool append)<br/>
+ <i>Sets the append vs truncate flag. </i><br/>
+ virtual bool <code>getAppend</code> () const<br/>
+ <i>Gets the value of the &#8216;append&#8217; option. </i><br/>
+ virtual void <code>setMode</code> (mode_t mode)<br/>
+ <i>Sets the file open mode. </i><br/>
+ virtual mode_t <code>getMode</code> () const<br/>
  <i>Gets the file open mode. </i></p>
 <h3>Protected Member Functions</h3>
-<p>virtual void <code>_append</code> (const <code>LoggingEvent</code> &amp;event)<br />
+<p>virtual void <code>_append</code> (const <code>LoggingEvent</code> &amp;event)<br/>
  <i>Log in </i><code>Appender</code> specific way.</p>
 <h3>Protected Attributes</h3>
 <p>const std::string <code>_fileName</code> </p>
@@ -44,15 +44,15 @@ description: "log4cpp::FileAppender –"
 <p>Constructs a <code>FileAppender</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>name</i> the name of the <code>Appender</code>.<br />
- <i>fileName</i> the name of the file to which the <code>Appender</code> has to log.<br />
- <i>append</i> whether the <code>Appender</code> has to truncate the file or just append to it if it already exists. Defaults to &#8216;true&#8217;.<br />
+<dd><i>name</i> the name of the <code>Appender</code>.<br/>
+ <i>fileName</i> the name of the file to which the <code>Appender</code> has to log.<br/>
+ <i>append</i> whether the <code>Appender</code> has to truncate the file or just append to it if it already exists. Defaults to &#8216;true&#8217;.<br/>
  <i>mode</i> file mode to open the logfile with. Defaults to 00644.</dd></dl>
 <h3>log4cpp::FileAppender::FileAppender (const std::string &amp;name, intfd)</h3>
 <p>Constructs a <code>FileAppender</code> to an already open file descriptor. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>name</i> the name of the <code>Appender</code>.<br />
+<dd><i>name</i> the name of the <code>Appender</code>.<br/>
  <i>fd</i> the file descriptor to which the <code>Appender</code> has to log.</dd></dl>
 <h3>log4cpp::FileAppender::~FileAppender () [virtual]</h3>
 <h2>Member Function Documentation</h2>

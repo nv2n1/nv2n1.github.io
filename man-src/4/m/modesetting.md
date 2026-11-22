@@ -38,12 +38,12 @@ description: "modesetting – video driver for framebuffer device"
 <dt><code>Option &#34;PageFlip&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
 <dd>Enable DRI3 page flipping. The default is <code>on.</code></dd>
 <dt><code>Option &#34;VariableRefresh&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
-<dd>Enables support for enabling variable refresh on the Screen&#8217;s CRTCs when an suitable application is flipping via the Present extension.<br />
+<dd>Enables support for enabling variable refresh on the Screen&#8217;s CRTCs when an suitable application is flipping via the Present extension.<br/>
  The default is <code>off.</code></dd>
 <dt><code>Option &#34;AsyncFlipSecondaries&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
 <dd>Use async flips for secondary video outputs on multi-display setups. If a screen has multiple displays attached and DRI3 page flipping is used, then only one of the displays will have its page flip synchronized to vblank for tear-free presentation. This is the display that is used for presentation timing and timestamping, usually the one covering the biggest pixel area of the screen. All other displays (&quot;Secondaries&quot;) will not synchronize their flips. This may cause some tearing on these displays, but it prevents a permanent or periodic slowdown or irritating judder of animations if not all video outputs are running synchronized with each other and with the same refresh rate. There is no perfect solution apart from perfectly synchronized outputs, but this option may give preferrable results if the displays in a multi-display setup mirror or clone each other. The default is <code>off.</code></dd>
 <dt><code>Option &#34;ZaphodHeads&#34; &#34;</code><i>string</i><code>&#34;</code></dt>
-<dd>Specify the RandR output(s) to use with zaphod mode for a particular driver instance. If you use this option you must use this option for all instances of the driver.<br />
+<dd>Specify the RandR output(s) to use with zaphod mode for a particular driver instance. If you use this option you must use this option for all instances of the driver.<br/>
  For example: <code>Option &#34;ZaphodHeads&#34; &#34;LVDS,VGA-0&#34;</code> will assign xrandr outputs LVDS and VGA-0 to this instance of the driver.</dd>
 <dt><code>Option &#34;UseGammaLUT&#34; &#34;</code><i>boolean</i><code>&#34;</code></dt>
 <dd>Enable or disable use of the GAMMA_LUT property, when available. When enabled, this option allows the driver to use gamma ramps with more entries, if supported by the kernel. By default, GAMMA_LUT will be used for kms drivers which are known to be safe for use of GAMMA_LUT.</dd>

@@ -11,17 +11,17 @@ description: "packet.pktt – Packet trace module"
 <h2>Description</h2>
 <p>The Packet trace module is a python module that takes a trace file created by tcpdump and unpacks the contents of each packet. You can decode one packet at a time, or do a search for specific packets. The main difference between these modules and other tools used to decode trace files is that you can use this module to completely automate your tests. </p>
 <p> How does it work? It opens the trace file and reads one record at a time keeping track where each record starts. This way, very large trace files can be opened without having to wait for the file to load and avoid loading the whole file into memory. </p>
-<p> Packet layers supported:<br />
-&nbsp;<wbr>&#8211; ETHERNET II&nbsp;<wbr>(RFC 894)<br />
-&nbsp;<wbr>&#8211; IP layer&nbsp;<wbr>(supports IPv4 and IPv6)<br />
-&nbsp;<wbr>&#8211; UDP layer<br />
-&nbsp;<wbr>&#8211; TCP layer<br />
-&nbsp;<wbr>&#8211; RPC layer<br />
-&nbsp;<wbr>&#8211; NFS v4.0<br />
-&nbsp;<wbr>&#8211; NFS v4.1 including pNFS file layouts<br />
-&nbsp;<wbr>&#8211; NFS v4.2<br />
-&nbsp;<wbr>&#8211; PORTMAP v2<br />
-&nbsp;<wbr>&#8211; MOUNT v3<br />
+<p> Packet layers supported:<br/>
+&nbsp;<wbr>&#8211; ETHERNET II&nbsp;<wbr>(RFC 894)<br/>
+&nbsp;<wbr>&#8211; IP layer&nbsp;<wbr>(supports IPv4 and IPv6)<br/>
+&nbsp;<wbr>&#8211; UDP layer<br/>
+&nbsp;<wbr>&#8211; TCP layer<br/>
+&nbsp;<wbr>&#8211; RPC layer<br/>
+&nbsp;<wbr>&#8211; NFS v4.0<br/>
+&nbsp;<wbr>&#8211; NFS v4.1 including pNFS file layouts<br/>
+&nbsp;<wbr>&#8211; NFS v4.2<br/>
+&nbsp;<wbr>&#8211; PORTMAP v2<br/>
+&nbsp;<wbr>&#8211; MOUNT v3<br/>
 &nbsp;<wbr>&#8211; NLM v4</p>
 <h2>Classes</h2>
 <h3>class Header(baseobj.BaseObj)</h3>

@@ -10,7 +10,7 @@ description: "XkbAllocGeomDoodads – Allocate doodads that are global to a keyb
 <p>XkbAllocGeomDoodads &#8211; Allocate doodads that are global to a keyboard geometry </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Status XkbAllocGeomDoodads</code> <code>(XkbGeometryPtr </code><i>geom</i><code>,</code> <code>int </code><i>num_needed</i><code>);</code><br />
+<dt> <code>Status XkbAllocGeomDoodads</code> <code>(XkbGeometryPtr </code><i>geom</i><code>,</code> <code>int </code><i>num_needed</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

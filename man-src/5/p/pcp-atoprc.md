@@ -11,7 +11,7 @@ description: "atoprc – pcp-atop/pcp-atopsar related resource file"
 <h2>Description</h2>
 <p>This manual page documents the resource file of the <i>pcp-atop</i> and <i>pcp-atopsar</i> commands. These commands can be used to monitor the system and process load on a system. The pcp-atoprc file contains the default settings. These settings are read during startup, first from the system-wide rcfile <i>/etc/atoprc</i> and after that from the user-specific rcfile <i>~/.atoprc</i> (so system-wide settings can be overruled by an individual user). The options in both rcfiles are identical. </p>
 <h2>Options</h2>
-<p>The rcfile contains keyword-value pairs, one on every line (blank lines and lines starting with a #-sign are ignored).<br />
+<p>The rcfile contains keyword-value pairs, one on every line (blank lines and lines starting with a #-sign are ignored).<br/>
  The following keywords can be specified: </p>
 <dl>
 <dt><code>flags</code></dt>
@@ -72,19 +72,19 @@ description: "atoprc – pcp-atop/pcp-atopsar related resource file"
 <dd>A percentage of the critical percentage to determine if the resource is almost critical (see section COLORS in the man-page of the <i>pcp-atop</i> command). When this value is zero, no line coloring for `almost critical&#8217; is performed.</dd></dl>
 <dl>
 <dt><code>colorinfo</code></dt>
-<dd>Definition of color name for information messages (default: green).<br />
+<dd>Definition of color name for information messages (default: green).<br/>
  Allowed colors are: red green yellow blue magenta cyan black white.</dd></dl>
 <dl>
 <dt><code>colorthread</code></dt>
-<dd>Definition of color name for thread-specific lines when using the &#8216;y&#8217; option (default: yellow).<br />
+<dd>Definition of color name for thread-specific lines when using the &#8216;y&#8217; option (default: yellow).<br/>
  Allowed colors are: red green yellow blue magenta cyan black white.</dd></dl>
 <dl>
 <dt><code>coloralmost</code></dt>
-<dd>Definition of color name for almost critical resources (default: cyan).<br />
+<dd>Definition of color name for almost critical resources (default: cyan).<br/>
  Allowed colors are: red green yellow blue magenta cyan black white.</dd></dl>
 <dl>
 <dt><code>colorcritical</code></dt>
-<dd>Definition of color name for critical resources (default: red).<br />
+<dd>Definition of color name for critical resources (default: red).<br/>
  Allowed colors are: red green yellow blue magenta cyan black white.</dd></dl>
 <dl>
 <dt><code>pcp-atopsarflags</code></dt>
@@ -92,31 +92,31 @@ description: "atoprc – pcp-atop/pcp-atopsar related resource file"
 <p> An example of the <code>/etc/atoprc</code> or <code>~/.atoprc</code> file:</p>
 <dl>
 <dt>&nbsp;<wbr></dt>
-<dd>flags&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Aaf<br />
- interval&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>5<br />
- username<br />
- procname<br />
- maxlinecpu&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>4<br />
- maxlinedisk&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>10<br />
- maxlineintf&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>5<br />
- cpucritperc&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>80<br />
- almostcrit&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>90<br />
- pcp-atopsarflags&nbsp;<wbr>&nbsp;<wbr>CMH<br />
- ownprocline&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>PID:50 VGROW:40 RGROW:45 COMMAND-LINE:50<br />
+<dd>flags&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Aaf<br/>
+ interval&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>5<br/>
+ username<br/>
+ procname<br/>
+ maxlinecpu&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>4<br/>
+ maxlinedisk&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>10<br/>
+ maxlineintf&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>5<br/>
+ cpucritperc&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>80<br/>
+ almostcrit&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>90<br/>
+ pcp-atopsarflags&nbsp;<wbr>&nbsp;<wbr>CMH<br/>
+ ownprocline&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>PID:50 VGROW:40 RGROW:45 COMMAND-LINE:50<br/>
  ownpagline&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>PAGSCAN:3 BLANKBOX:0 PAGSWIN:3 PAGSWOUT:7</dd></dl>
 <p> The keywords &#8216;ownprocline&#8217; and &#8216;ownpagline&#8217; are explained in the subsequent section.</p>
 <h2>Own Definition Of Output Line</h2>
 <p>Via the rcfile it is possible to define the layout of the output lines yourself, i.e. you can define the layout of one line with process information with the keyword &#8216;ownprocline&#8217; (to be selected with the key &#8216;o&#8217; or the flag -o) and you can redefine all lines with system information. </p>
 <p> The layout of an output-line can be defined as follows (notice that this should be specified as one line in the rcfile): </p>
 <p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>keyword&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&lt;columnid&gt;:&lt;prio&gt; [&lt;columnid&gt;:&lt;prio&gt; &#8230;] </p>
-<p> The <code>columnid</code> is the symbolic name of a column that should shown at this position in the output line.<br />
- The <code>prio</code> is a positive integer value that determines which columns have precedence whenever not all specified columns fit into the current screen-width. The higher value, the higher priority.<br />
+<p> The <code>columnid</code> is the symbolic name of a column that should shown at this position in the output line.<br/>
+ The <code>prio</code> is a positive integer value that determines which columns have precedence whenever not all specified columns fit into the current screen-width. The higher value, the higher priority.<br/>
  The column-specifications should be separated by a space. The order in which columns have been specified is the order in which they will be shown, with respect to their priority (columns that do not fit, will be dropped dynamically). </p>
 <p> A special columnid for system lines is &#8216;BLANKBOX&#8217;. This indicates that an empty column is required at this position. Also this special columnid is followed by a priority (usually low). </p>
 <p> The following definition can be specified for process information: </p>
 <dl>
 <dt><code>ownprocline</code></dt>
-<dd>The columnid&#8217;s are the names of the columns that are shown in the normal output of the process-related lines that are shown by <i>pcp-atop</i> such as &#8216;PID&#8217;, &#8216;CMD&#8217;, &#8216;S&#8217;, &#8230;. The only exception is the special columnid &#8216;SORTITEM&#8217; that is used to show one of the columns CPU%/DSK%/MEM%/NET%, depending on the chosen sort-criterium.<br />
+<dd>The columnid&#8217;s are the names of the columns that are shown in the normal output of the process-related lines that are shown by <i>pcp-atop</i> such as &#8216;PID&#8217;, &#8216;CMD&#8217;, &#8216;S&#8217;, &#8230;. The only exception is the special columnid &#8216;SORTITEM&#8217; that is used to show one of the columns CPU%/DSK%/MEM%/NET%, depending on the chosen sort-criterium.<br/>
  An example of a user-defined process line:</dd></dl>
 <dl>
 <dt>&nbsp;<wbr></dt>

@@ -30,7 +30,7 @@ description: "kgb-client – relay commits to KGB servers"
 </dd><dt><code>kgb-client</code> &#8211;man</dt>
 <dd></dd></dl>
 <h2>DESCRIPTION</h2>
-<p> <code>kgb-client</code> is the client counterpart of <i><a href="/docs/linux/man/1-kgb-bot/">kgb-bot</a></i>(1). It is intended to be used as a hook in your version control system, executed after the repository gets updated. It analyzes the commit(s) and then relays the information to the <font SIZE="-1">KGB</font> server, which will show it on <font SIZE="-1">IRC.</font></p>
+<p> <code>kgb-client</code> is the client counterpart of <i><a href="/docs/linux/man/1-kgb-bot/">kgb-bot</a></i>(1). It is intended to be used as a hook in your version control system, executed after the repository gets updated. It analyzes the commit(s) and then relays the information to the KGB server, which will show it on IRC.</p>
 <h2>CONFIGURATION</h2>
 <dl>
 <dt><code>&#8211;conf</code> <i>configuration file</i></dt>
@@ -39,9 +39,9 @@ description: "kgb-client – relay commits to KGB servers"
 <p> See <i><a href="/docs/linux/man/5-kgb-client-conf/">kgb-client.conf</a></i>(5) for available configuration options. Unless noted otherwise, all the options in the configuration file can also be used on command line, prefixing them with two dashes. E.g. <tt>&quot;repo-id&quot;</tt> becomes <tt>&quot;--repo-id&quot;</tt>. </p>
 <p> Options given on the command line take precedence over configuration file.</p>
 <h2>FAKE COMMIT MODE</h2>
-<p> If invoked with the <code>&#8211;fake</code> option, <code>kgb-client</code> will send a fake commit to the servers. This is useful for testing client-server communication independently from <font SIZE="-1">VCS</font> setup.</p>
+<p> If invoked with the <code>&#8211;fake</code> option, <code>kgb-client</code> will send a fake commit to the servers. This is useful for testing client-server communication independently from VCS setup.</p>
 <h2>MESSAGE RELAY MODE</h2>
-<p> When the <code>&#8211;relay-msg</code> option is given, there is no repository to be inspected. Instead, the non-option command line arguments are passed verbatim to the bot to display on <font SIZE="-1">IRC.</font> This can be used for real-time notification about other events like bug submissions etc.</p>
+<p> When the <code>&#8211;relay-msg</code> option is given, there is no repository to be inspected. Instead, the non-option command line arguments are passed verbatim to the bot to display on IRC. This can be used for real-time notification about other events like bug submissions etc.</p>
 <h2>SUPPORTED VERSION CONTROL SYSTEMS</h2>
 <h3>Subversion</h3>
 <p> Installation requires calling <code>kgb-client</code> with two command line arguments, like this: </p>
@@ -66,8 +66,8 @@ description: "kgb-client – relay commits to KGB servers"
 <dl>
 <dt>conf =item web-link</dt>
 <dd></dd></dl>
-<h3><font SIZE="-1">CVS</font></h3>
-<p> <code>kgb-client</code> shall be installed in the <i>loginfo</i> file in the <tt>&quot;CVSROOT&quot;</tt> module of the <font SIZE="-1">CVS</font> repository. It shall be given two arguments &#8212; the repository root, and the directory in which the changes are being made. </p>
+<h3>CVS</h3>
+<p> <code>kgb-client</code> shall be installed in the <i>loginfo</i> file in the <tt>&quot;CVSROOT&quot;</tt> module of the CVS repository. It shall be given two arguments &#8212; the repository root, and the directory in which the changes are being made. </p>
 <p> For example: </p>
 <pre>
     ALL /path/to/kgb-client --conf /path/to.conf ... &quot;$CVSROOT&quot; &quot;%p&quot;

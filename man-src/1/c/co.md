@@ -12,11 +12,11 @@ description: "co – check out RCS revisions"
 <h2>SYNOPSIS</h2>
 <p> <code>co</code> [<i>options</i>]<i> file </i>&#8230;</p>
 <h2>DESCRIPTION</h2>
-<p> <code>co</code> retrieves a revision from each <font SIZE="-1">RCS</font> file and stores it into the corresponding working file. </p>
-<p> Filenames matching an <font SIZE="-1">RCS</font> suffix denote <font SIZE="-1">RCS</font> files; all others denote working files. Names are paired as explained in <code><a href="/docs/linux/man/1-ci/">ci</a></code>(1). </p>
-<p> Revisions of an <font SIZE="-1">RCS</font> file can be checked out locked or unlocked. Locking a revision prevents overlapping updates. A revision checked out for reading or processing (e.g., compiling) need not be locked. A revision checked out for editing and later checkin must normally be locked. Checkout with locking fails if the revision to be checked out is currently locked by another user. (A lock can be broken with <code><a href="/docs/linux/man/1-rcs/">rcs</a></code>(1).)&nbsp;<wbr> Checkout with locking also requires the caller to be on the access list of the <font SIZE="-1">RCS</font> file, unless he is the owner of the file or the superuser, or the access list is empty. Checkout without locking is not subject to accesslist restrictions, and is not affected by the presence of locks. </p>
+<p> <code>co</code> retrieves a revision from each RCS file and stores it into the corresponding working file. </p>
+<p> Filenames matching an RCS suffix denote RCS files; all others denote working files. Names are paired as explained in <code><a href="/docs/linux/man/1-ci/">ci</a></code>(1). </p>
+<p> Revisions of an RCS file can be checked out locked or unlocked. Locking a revision prevents overlapping updates. A revision checked out for reading or processing (e.g., compiling) need not be locked. A revision checked out for editing and later checkin must normally be locked. Checkout with locking fails if the revision to be checked out is currently locked by another user. (A lock can be broken with <code><a href="/docs/linux/man/1-rcs/">rcs</a></code>(1).)&nbsp;<wbr> Checkout with locking also requires the caller to be on the access list of the RCS file, unless he is the owner of the file or the superuser, or the access list is empty. Checkout without locking is not subject to accesslist restrictions, and is not affected by the presence of locks. </p>
 <p> A revision is selected by options for revision or branch number, checkin date/time, author, or state. When the selection options are applied in combination, <code>co</code> retrieves the latest revision that satisfies all of them. If none of the selection options is specified, <code>co</code> retrieves the latest revision on the default branch (normally the trunk, see the <code>-b</code> option of <code><a href="/docs/linux/man/1-rcs/">rcs</a></code>(1)). A revision or branch number can be attached to any of the options <code>-f</code>, <code>-I</code>, <code>-l</code>, <code>-M</code>, <code>-p</code>, <code>-q</code>, <code>-r</code>, or <code>-u</code>. The options <code>-d</code> (date), <code>-s</code> (state), and <code>-w</code> (author) retrieve from a single branch, the <i>selected</i> branch, which is either specified by one of <code>-f</code>, &#8230;, <code>-u</code>, or the default branch. </p>
-<p> A <code>co</code> command applied to an <font SIZE="-1">RCS</font> file with no revisions creates a zero-length working file. <code>co</code> always performs keyword substitution (see below).</p>
+<p> A <code>co</code> command applied to an RCS file with no revisions creates a zero-length working file. <code>co</code> always performs keyword substitution (see below).</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-r</code>[<i>rev</i>]</dt>
@@ -26,17 +26,17 @@ description: "co – check out RCS revisions"
 <dt><code>-u</code>[<i>rev</i>]</dt>
 <dd> same as <code>-r</code>, except that it unlocks the retrieved revision if it was locked by the caller. If <i>rev</i> is omitted, <code>-u</code> retrieves the revision locked by the caller, if there is one; otherwise, it retrieves the latest revision on the default branch.</dd>
 <dt><code>-f</code>[<i>rev</i>]</dt>
-<dd> forces the overwriting of the working file; useful in connection with <code>-q</code>. See also <font SIZE="-1">FILE MODES</font> below.</dd>
+<dd> forces the overwriting of the working file; useful in connection with <code>-q</code>. See also FILE MODES below.</dd>
 <dt><code>-kkv</code></dt>
 <dd> Generate keyword strings using the default form, e.g. <code>$Revision: 5.9.0 $</code> for the <code>Revision</code> keyword. A locker&#8217;s name is inserted in the value of the <code>Header</code>, <code>Id</code>, and <code>Locker</code> keyword strings only as a file is being locked, i.e. by <code>ci -l</code> and <code>co -l.</code> This is the default.</dd>
 <dt><code>-kkvl</code></dt>
 <dd> Like <code>-kkv</code>, except that a locker&#8217;s name is always inserted if the given revision is currently locked.</dd>
 <dt><code>-kk</code></dt>
-<dd> Generate only keyword names in keyword strings; omit their values. See <font SIZE="-1">KEYWORD SUBSTITUTION</font> below. For example, for the <code>Revision</code> keyword, generate the string <code>$Revision$</code> instead of <code>$Revision: 5.9.0 $</code>. This option is useful to ignore differences due to keyword substitution when comparing different revisions of a file. Log messages are inserted after <code>$Log$</code> keywords even if <code>-kk</code> is specified, since this tends to be more useful when merging changes.</dd>
+<dd> Generate only keyword names in keyword strings; omit their values. See KEYWORD SUBSTITUTION below. For example, for the <code>Revision</code> keyword, generate the string <code>$Revision$</code> instead of <code>$Revision: 5.9.0 $</code>. This option is useful to ignore differences due to keyword substitution when comparing different revisions of a file. Log messages are inserted after <code>$Log$</code> keywords even if <code>-kk</code> is specified, since this tends to be more useful when merging changes.</dd>
 <dt><code>-ko</code></dt>
 <dd> Generate the old keyword string, present in the working file just before it was checked in. For example, for the <code>Revision</code> keyword, generate the string <code>$Revision: 1.1 $</code> instead of <code>$Revision: 5.9.0 $</code> if that is how the string appeared when the file was checked in. This can be useful for file formats that cannot tolerate any changes to substrings that happen to take the form of keyword strings.</dd>
 <dt><code>-kb</code></dt>
-<dd> Generate a binary image of the old keyword string. This acts like <code>-ko</code>, except it performs all working file input and output in binary mode. This makes little difference on Posix and Unix hosts, but on DOS-like hosts one should use <code>rcs -i -kb</code> to initialize an <font SIZE="-1">RCS</font> file intended to be used for binary files. Also, on all hosts, <code><a href="/docs/linux/man/1-rcsmerge/">rcsmerge</a></code>(1) normally refuses to merge files when <code>-kb</code> is in effect.</dd>
+<dd> Generate a binary image of the old keyword string. This acts like <code>-ko</code>, except it performs all working file input and output in binary mode. This makes little difference on Posix and Unix hosts, but on DOS-like hosts one should use <code>rcs -i -kb</code> to initialize an RCS file intended to be used for binary files. Also, on all hosts, <code><a href="/docs/linux/man/1-rcsmerge/">rcsmerge</a></code>(1) normally refuses to merge files when <code>-kb</code> is in effect.</dd>
 <dt><code>-kv</code></dt>
 <dd> Generate only keyword values for keyword strings. For example, for the <code>Revision</code> keyword, generate the string <code>5.9.0</code> instead of <code>$Revision: 5.9.0 $</code>. This can help generate files in programming languages where it is hard to strip keyword delimiters like <code>$Revision:&nbsp;<wbr>$</code> from a string. However, further keyword substitution cannot be performed once the keyword names are removed, so this option should be used with care. Because of this danger of losing keywords, this option cannot be combined with <code>-l</code>, and the owner write permission of the working file is turned off; to edit the file later, check it out again without <code>-kv</code>.</dd>
 <dt><code>-p</code>[<i>rev</i>]</dt>
@@ -46,17 +46,17 @@ description: "co – check out RCS revisions"
 <dt><code>-I</code>[<i>rev</i>]</dt>
 <dd> interactive mode; the user is prompted and questioned even if the standard input is not a terminal.</dd>
 <dt><code>-d</code><i>date</i></dt>
-<dd> retrieves the latest revision on the selected branch whose checkin date/time is less than or equal to <i>date</i>. The date and time can be given in free format. The time zone <code>LT</code> stands for local time; other common time zone names are understood. For example, the following <i>date</i>s are equivalent if local time is January 11, 1990, 8pm Pacific Standard Time, eight hours west of Coordinated Universal Time (<font SIZE="-1">UTC</font>):</dd>
+<dd> retrieves the latest revision on the selected branch whose checkin date/time is less than or equal to <i>date</i>. The date and time can be given in free format. The time zone <code>LT</code> stands for local time; other common time zone names are understood. For example, the following <i>date</i>s are equivalent if local time is January 11, 1990, 8pm Pacific Standard Time, eight hours west of Coordinated Universal Time (UTC):</dd>
 <dl>
 <dl>
 <dt>
 </dt><dd>
 <pre>
 <code>8:00 pm lt</code>
-<code>4:00 AM, Jan. 12, 1990</code>             default is <font SIZE="-1">UTC</font>
-<code>1990-01-12 04:00:00+00</code>             <font SIZE="-1">ISO</font> 8601 (<font SIZE="-1">UTC</font>)
-<code>1990-01-11 20:00:00-08</code>             <font SIZE="-1">ISO</font> 8601 (local time)
-<code>1990/01/12 04:00:00</code>                traditional <font SIZE="-1">RCS</font> format
+<code>4:00 AM, Jan. 12, 1990</code>             default is UTC
+<code>1990-01-12 04:00:00+00</code>             ISO 8601 (UTC)
+<code>1990-01-11 20:00:00-08</code>             ISO 8601 (local time)
+<code>1990/01/12 04:00:00</code>                traditional RCS format
 <code>Thu Jan 11 20:00:00 1990 LT</code>        output of <code><a href="//www.systutorials.com/docs/linux/man/3-ctime/">ctime</a></code>(3) + <code>LT</code>
 <code>Thu Jan 11 20:00:00 PST 1990</code>       output of <code><a href="//www.systutorials.com/docs/linux/man/1-date/">date</a></code>(1)
 <code>Fri Jan 12 04:00:00 GMT 1990</code>
@@ -64,7 +64,7 @@ description: "co – check out RCS revisions"
 <code>12-January-1990, 04:00 WET</code>
 </pre>
 </dd></dl>
-<p> Most fields in the date and time can be defaulted. The default time zone is normally <font SIZE="-1">UTC</font>, but this can be overridden by the <code>-z</code> option. The other defaults are determined in the order year, month, day, hour, minute, and second (most to least significant). At least one of these fields must be provided. For omitted fields that are of higher significance than the highest provided field, the time zone&#8217;s current values are assumed. For all other omitted fields, the lowest possible values are assumed. For example, without <code>-z</code>, the date <code>20, 10:30</code> defaults to 10:30:00 <font SIZE="-1">UTC</font> of the 20th of the <font SIZE="-1">UTC</font> time zone&#8217;s current month and year. The date/time must be quoted if it contains spaces.</dl>
+<p> Most fields in the date and time can be defaulted. The default time zone is normally UTC, but this can be overridden by the <code>-z</code> option. The other defaults are determined in the order year, month, day, hour, minute, and second (most to least significant). At least one of these fields must be provided. For omitted fields that are of higher significance than the highest provided field, the time zone&#8217;s current values are assumed. For all other omitted fields, the lowest possible values are assumed. For example, without <code>-z</code>, the date <code>20, 10:30</code> defaults to 10:30:00 UTC of the 20th of the UTC time zone&#8217;s current month and year. The date/time must be quoted if it contains spaces.</dl>
 <dt><code>-M</code>[<i>rev</i>]</dt>
 <dd> Set the modification time on the new working file to be the date of the retrieved revision. Use this option with care; it can confuse <code><a href="/docs/linux/man/1-make/">make</a></code>(1).</dd>
 <dt><code>-s</code><i>state</i></dt>
@@ -72,7 +72,7 @@ description: "co – check out RCS revisions"
 <dt><code>-S</code></dt>
 <dd> Enable <i>self-same</i> mode. In this mode, the owner of a lock is unimportant, just that it exists. Effectively, this means the user cannot check out the same revision twice.</dd>
 <dt><code>-T</code></dt>
-<dd> Preserve the modification time on the <font SIZE="-1">RCS</font> file even if the <font SIZE="-1">RCS</font> file changes because a lock is added or removed. This option can suppress extensive recompilation caused by a <code><a href="/docs/linux/man/1-make/">make</a></code>(1) dependency of some other copy of the working file on the <font SIZE="-1">RCS</font> file. Use this option with care; it can suppress recompilation even when it is needed, i.e. when the change of lock would mean a change to keyword strings in the other working file.</dd>
+<dd> Preserve the modification time on the RCS file even if the RCS file changes because a lock is added or removed. This option can suppress extensive recompilation caused by a <code><a href="/docs/linux/man/1-make/">make</a></code>(1) dependency of some other copy of the working file on the RCS file. Use this option with care; it can suppress recompilation even when it is needed, i.e. when the change of lock would mean a change to keyword strings in the other working file.</dd>
 <dt><code>-w</code>[<i>login</i>]</dt>
 <dd> retrieves the latest revision on the selected branch which was checked in by the user with login name <i>login</i>. If the argument <i>login</i> is omitted, the caller&#8217;s login is assumed.</dd>
 <dt><code>-j</code><i>joinlist</i></dt>
@@ -84,13 +84,13 @@ description: "co – check out RCS revisions"
 <p> For each pair, <code>co</code> joins revisions <i>rev1</i> and <i>rev3</i> with respect to <i>rev2</i>. This means that all changes that transform <i>rev2</i> into <i>rev1</i> are applied to a copy of <i>rev3</i>. This is particularly useful if <i>rev1</i> and <i>rev3</i> are the ends of two branches that have <i>rev2</i> as a common ancestor. If <i>rev1</i>&lt;<i>rev2</i>&lt;<i>rev3</i> on the same branch, joining generates a new revision which is like <i>rev3,</i> but with all changes that lead from <i>rev1</i> to <i>rev2</i> undone. If changes from <i>rev2</i> to <i>rev1</i> overlap with changes from <i>rev2</i> to <i>rev3,</i> <code>co</code> reports overlaps as described in <code><a href="/docs/linux/man/1-merge/">merge</a></code>(1). </p>
 <p> For the initial pair, <i>rev2</i> can be omitted. The default is the common ancestor. If any of the arguments indicate branches, the latest revisions on those branches are assumed. The options <code>-l</code> and <code>-u</code> lock or unlock <i>rev1</i>.</dd></dl>
 <dt><code>-V</code></dt>
-<dd> Print <font SIZE="-1">RCS</font>&#8216;s version number.</dd>
+<dd> Print RCS&#8216;s version number.</dd>
 <dt><code>-V</code><i>n</i></dt>
-<dd> Emulate <font SIZE="-1">RCS</font> version <i>n,</i> where <i>n</i> can be <code>3</code>, <code>4</code>, or <code>5</code>. This can be useful when interchanging <font SIZE="-1">RCS</font> files with others who are running older versions of <font SIZE="-1">RCS</font>. To see which version of <font SIZE="-1">RCS</font> your correspondents are running, have them invoke <code>rcs -V</code>; this works with newer versions of <font SIZE="-1">RCS</font>. If it doesn&#8217;t work, have them invoke <code>rlog</code> on an <font SIZE="-1">RCS</font> file; if none of the first few lines of output contain the string <code>branch:</code> it is version 3; if the dates&#8217; years have just two digits, it is version 4; otherwise, it is version 5. An <font SIZE="-1">RCS</font> file generated while emulating version 3 loses its default branch. An <font SIZE="-1">RCS</font> revision generated while emulating version 4 or earlier has a time stamp that is off by up to 13 hours. A revision extracted while emulating version 4 or earlier contains abbreviated dates of the form <i>yy</i><code>/</code><i>mm</i><code>/</code><i>dd</i> and can also contain different white space and line prefixes in the substitution for <code>$Log$</code>.</dd>
+<dd> Emulate RCS version <i>n,</i> where <i>n</i> can be <code>3</code>, <code>4</code>, or <code>5</code>. This can be useful when interchanging RCS files with others who are running older versions of RCS. To see which version of RCS your correspondents are running, have them invoke <code>rcs -V</code>; this works with newer versions of RCS. If it doesn&#8217;t work, have them invoke <code>rlog</code> on an RCS file; if none of the first few lines of output contain the string <code>branch:</code> it is version 3; if the dates&#8217; years have just two digits, it is version 4; otherwise, it is version 5. An RCS file generated while emulating version 3 loses its default branch. An RCS revision generated while emulating version 4 or earlier has a time stamp that is off by up to 13 hours. A revision extracted while emulating version 4 or earlier contains abbreviated dates of the form <i>yy</i><code>/</code><i>mm</i><code>/</code><i>dd</i> and can also contain different white space and line prefixes in the substitution for <code>$Log$</code>.</dd>
 <dt><code>-x</code><i>suffixes</i></dt>
-<dd> Use <i>suffixes</i> to characterize <font SIZE="-1">RCS</font> files. See <code><a href="/docs/linux/man/1-ci/">ci</a></code>(1) for details.</dd>
+<dd> Use <i>suffixes</i> to characterize RCS files. See <code><a href="/docs/linux/man/1-ci/">ci</a></code>(1) for details.</dd>
 <dt><code>-z</code><i>zone</i></dt>
-<dd> specifies the date output format in keyword substitution, and specifies the default time zone for <i>date</i> in the <code>-d</code><i>date</i> option. The <i>zone</i> should be empty, a numeric <font SIZE="-1">UTC</font> offset, or the special string <code>LT</code> for local time. The default is an empty <i>zone</i>, which uses the traditional <font SIZE="-1">RCS</font> format of <font SIZE="-1">UTC</font> without any time zone indication and with slashes separating the parts of the date; otherwise, times are output in <font SIZE="-1">ISO</font> 8601 format with time zone indication. For example, if local time is January 11, 1990, 8pm Pacific Standard Time, eight hours west of <font SIZE="-1">UTC</font>, then the time is output as follows:</dd>
+<dd> specifies the date output format in keyword substitution, and specifies the default time zone for <i>date</i> in the <code>-d</code><i>date</i> option. The <i>zone</i> should be empty, a numeric UTC offset, or the special string <code>LT</code> for local time. The default is an empty <i>zone</i>, which uses the traditional RCS format of UTC without any time zone indication and with slashes separating the parts of the date; otherwise, times are output in ISO 8601 format with time zone indication. For example, if local time is January 11, 1990, 8pm Pacific Standard Time, eight hours west of UTC, then the time is output as follows:</dd>
 <dl>
 <dl>
 <dt>
@@ -102,7 +102,7 @@ description: "co – check out RCS revisions"
 <code>-z+05:30</code>    <code>1990-01-12 09:30:00+05:30</code>
 </pre>
 </dd></dl>
-<p> The <code>-z</code> option does not affect dates stored in <font SIZE="-1">RCS</font> files, which are always <font SIZE="-1">UTC</font>.</dl>
+<p> The <code>-z</code> option does not affect dates stored in RCS files, which are always UTC.</dl>
 </dl>
 <h2>KEYWORD SUBSTITUTION</h2>
 <p> Strings of the form <code>$</code><i>keyword</i><code>$</code> and <code>$</code><i>keyword</i><code>:</code><i>&#8230;</i><code>$</code> embedded in the text are replaced with strings of the form <code>$</code><i>keyword</i><code>:</code><i>value</i><code>$</code> where <i>keyword</i> and <i>value</i> are pairs listed below. Keywords can be embedded in literal strings or comments to identify a revision. </p>
@@ -112,19 +112,19 @@ description: "co – check out RCS revisions"
 <dt><code>$Author$</code></dt>
 <dd> The login name of the user who checked in the revision.</dd>
 <dt><code>$Date$</code></dt>
-<dd> The date and time the revision was checked in. With <code>-z</code><i>zone</i> a numeric time zone offset is appended; otherwise, the date is <font SIZE="-1">UTC</font>.</dd>
+<dd> The date and time the revision was checked in. With <code>-z</code><i>zone</i> a numeric time zone offset is appended; otherwise, the date is UTC.</dd>
 <dt><code>$Header$</code></dt>
-<dd> A standard header containing the full <font SIZE="-1">RCS</font> file name, the revision number, the date and time, the author, the state, and the locker (if locked). With <code>-z</code><i>zone</i> a numeric time zone offset is appended to the date; otherwise, the date is <font SIZE="-1">UTC</font>.</dd>
+<dd> A standard header containing the full RCS file name, the revision number, the date and time, the author, the state, and the locker (if locked). With <code>-z</code><i>zone</i> a numeric time zone offset is appended to the date; otherwise, the date is UTC.</dd>
 <dt><code>$Id$</code></dt>
-<dd> Same as <code>$Header$</code>, except that the <font SIZE="-1">RCS</font> file name is without the directory components.</dd>
+<dd> Same as <code>$Header$</code>, except that the RCS file name is without the directory components.</dd>
 <dt><code>$Locker$</code></dt>
 <dd> The login name of the user who locked the revision (empty if not locked).</dd>
 <dt><code>$Log$</code></dt>
-<dd> The log message supplied during checkin, preceded by a header containing the <font SIZE="-1">RCS</font> file name, the revision number, the author, and the date and time. With <code>-z</code><i>zone</i> a numeric time zone offset is appended; otherwise, the date is <font SIZE="-1">UTC</font>. Existing log messages are <i>not</i> replaced. Instead, the new log message is inserted after <code>$Log:</code>&#8230;<code>$</code>. This is useful for accumulating a complete change log in a source file.</dd>
+<dd> The log message supplied during checkin, preceded by a header containing the RCS file name, the revision number, the author, and the date and time. With <code>-z</code><i>zone</i> a numeric time zone offset is appended; otherwise, the date is UTC. Existing log messages are <i>not</i> replaced. Instead, the new log message is inserted after <code>$Log:</code>&#8230;<code>$</code>. This is useful for accumulating a complete change log in a source file.</dd>
 <dl>
 <dt>
 </dt><dd>
-<p> Each inserted line is prefixed by the string that prefixes the <code>$Log$</code> line. For example, if the <code>$Log$</code> line is &#8220;<code>//&nbsp;<wbr>$Log: tan.cc&nbsp;<wbr>$</code>&#8221;, <font SIZE="-1">RCS</font> prefixes each line of the log with &#8220;<code>//&nbsp;<wbr></code>&#8221;. This is useful for languages with comments that go to the end of the line. The convention for other languages is to use a &#8220;<code> * </code>&#8221; prefix inside a multiline comment. For example, the initial log comment of a C program conventionally is of the following form:</p>
+<p> Each inserted line is prefixed by the string that prefixes the <code>$Log$</code> line. For example, if the <code>$Log$</code> line is &#8220;<code>//&nbsp;<wbr>$Log: tan.cc&nbsp;<wbr>$</code>&#8221;, RCS prefixes each line of the log with &#8220;<code>//&nbsp;<wbr></code>&#8221;. This is useful for languages with comments that go to the end of the line. The convention for other languages is to use a &#8220;<code> * </code>&#8221; prefix inside a multiline comment. For example, the initial log comment of a C program conventionally is of the following form:</p>
 </dd><dl>
 <dt>
 </dt><dd>
@@ -134,15 +134,15 @@ description: "co – check out RCS revisions"
 */
 </code></pre>
 </dd></dl>
-<p> For backwards compatibility with older versions of <font SIZE="-1">RCS</font>, if the log prefix is <code>/*</code> or <code>(*</code> surrounded by optional white space, inserted log lines contain a space instead of <code>/</code> or <code>(</code>; however, this usage is obsolescent and should not be relied on.</dl>
+<p> For backwards compatibility with older versions of RCS, if the log prefix is <code>/*</code> or <code>(*</code> surrounded by optional white space, inserted log lines contain a space instead of <code>/</code> or <code>(</code>; however, this usage is obsolescent and should not be relied on.</dl>
 <dt><code>$Name$</code></dt>
 <dd> The symbolic name used to check out the revision, if any. For example, <code>co -rJoe</code> generates <code>$Name: Joe&nbsp;<wbr>$</code>. Plain <code>co</code> generates just <code>$Name:&nbsp;<wbr>&nbsp;<wbr>$</code>.</dd>
 <dt><code>$RCSfile$</code></dt>
-<dd> The <font SIZE="-1">RCS</font> file name without directory components.</dd>
+<dd> The RCS file name without directory components.</dd>
 <dt><code>$Revision$</code></dt>
 <dd> The revision number assigned to the revision.</dd>
 <dt><code>$Source$</code></dt>
-<dd> The full <font SIZE="-1">RCS</font> file name.</dd>
+<dd> The full RCS file name.</dd>
 <dt><code>$State$</code></dt>
 <dd> The state assigned to the revision with the <code>-s</code> option of <code><a href="/docs/linux/man/1-rcs/">rcs</a></code>(1) or <code><a href="/docs/linux/man/1-ci/">ci</a></code>(1).</dd></dl>
 <p> The following characters in keyword values are represented by escape sequences to keep keyword strings well-formed. </p>
@@ -160,38 +160,38 @@ $        $
 </pre>
 </dd></dl>
 <h2>FILE MODES</h2>
-<p> The working file inherits the read and execute permissions from the <font SIZE="-1">RCS</font> file. In addition, the owner write permission is turned on, unless <code>-kv</code> is set or the file is checked out unlocked and locking is set to strict (see <code><a href="/docs/linux/man/1-rcs/">rcs</a></code>(1)). </p>
+<p> The working file inherits the read and execute permissions from the RCS file. In addition, the owner write permission is turned on, unless <code>-kv</code> is set or the file is checked out unlocked and locking is set to strict (see <code><a href="/docs/linux/man/1-rcs/">rcs</a></code>(1)). </p>
 <p> If a file with the name of the working file exists already and has write permission, <code>co</code> aborts the checkout, asking beforehand if possible. If the existing working file is not writable or <code>-f</code> is given, the working file is deleted without asking.</p>
 <h2>FILES</h2>
 <p> <code>co</code> accesses files much as <code><a href="/docs/linux/man/1-ci/">ci</a></code>(1) does, except that it does not need to read the working file unless a revision number of <code>$</code> is specified.</p>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><font SIZE="-1"><code>RCSINIT</code></font></dt>
-<dd> Options prepended to the argument list, separated by spaces. A backslash escapes spaces within an option. The <font SIZE="-1"><code>RCSINIT</code></font> options are prepended to the argument lists of most <font SIZE="-1">RCS</font> commands. Useful <font SIZE="-1"><code>RCSINIT</code></font> options include <code>-q</code>, <code>-V</code>, <code>-x</code>, and <code>-z</code>.</dd>
-<dt><font SIZE="-1"><code>RCS_MEM_LIMIT</code></font></dt>
-<dd> An integer <i>lim</i>, measured in kilobytes, specifying the threshold under which commands will try to use memory-based operations for processing the <font SIZE="-1">RCS</font> file. (For <font SIZE="-1">RCS</font> files of size <i>lim</i> kilobytes or greater, RCS will use the slower standard input/output routines.) Default value is 256.</dd>
-<dt><font SIZE="-1"><code>TMPDIR</code></font></dt>
-<dd> Name of the temporary directory. If not set, the environment variables <font SIZE="-1"><code>TMP</code></font> and <font SIZE="-1"><code>TEMP</code></font> are inspected instead and the first value found is taken; if none of them are set, a host-dependent default is used, typically <code>/tmp</code>.</dd></dl>
+<dt><code>RCSINIT</code></dt>
+<dd> Options prepended to the argument list, separated by spaces. A backslash escapes spaces within an option. The <code>RCSINIT</code> options are prepended to the argument lists of most RCS commands. Useful <code>RCSINIT</code> options include <code>-q</code>, <code>-V</code>, <code>-x</code>, and <code>-z</code>.</dd>
+<dt><code>RCS_MEM_LIMIT</code></dt>
+<dd> An integer <i>lim</i>, measured in kilobytes, specifying the threshold under which commands will try to use memory-based operations for processing the RCS file. (For RCS files of size <i>lim</i> kilobytes or greater, RCS will use the slower standard input/output routines.) Default value is 256.</dd>
+<dt><code>TMPDIR</code></dt>
+<dd> Name of the temporary directory. If not set, the environment variables <code>TMP</code> and <code>TEMP</code> are inspected instead and the first value found is taken; if none of them are set, a host-dependent default is used, typically <code>/tmp</code>.</dd></dl>
 <h2>DIAGNOSTICS</h2>
-<p> The <font SIZE="-1">RCS</font> file name, the working file name, and the revision number retrieved are written to the diagnostic output. The exit status is zero if and only if all operations were successful.</p>
+<p> The RCS file name, the working file name, and the revision number retrieved are written to the diagnostic output. The exit status is zero if and only if all operations were successful.</p>
 <h2>IDENTIFICATION</h2>
-<p> Author: Walter F. Tichy.<br />
- Manual Page Revision: 5.9.0; Release Date: 2014-06-10.<br />
- Copyright &#169; 2010-2013 Thien-Thi Nguyen.<br />
- Copyright &#169; 1990, 1991, 1992, 1993, 1994, 1995 Paul Eggert.<br />
+<p> Author: Walter F. Tichy.<br/>
+ Manual Page Revision: 5.9.0; Release Date: 2014-06-10.<br/>
+ Copyright &#169; 2010-2013 Thien-Thi Nguyen.<br/>
+ Copyright &#169; 1990, 1991, 1992, 1993, 1994, 1995 Paul Eggert.<br/>
  Copyright &#169; 1982, 1988, 1989 Walter F. Tichy. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ci/">ci</a></code>(1), <code><a href="/docs/linux/man/3-ctime/">ctime</a></code>(3), <code><a href="/docs/linux/man/1-date/">date</a></code>(1), <code><a href="/docs/linux/man/1-ident/">ident</a></code>(1), <code><a href="/docs/linux/man/1-make/">make</a></code>(1), <code><a href="/docs/linux/man/1-rcs/">rcs</a></code>(1), <code><a href="/docs/linux/man/1-rcsclean/">rcsclean</a></code>(1), <code><a href="/docs/linux/man/1-rcsdiff/">rcsdiff</a></code>(1), <code><a href="/docs/linux/man/1-rcsmerge/">rcsmerge</a></code>(1), <code><a href="/docs/linux/man/1-rlog/">rlog</a></code>(1), <code><a href="/docs/linux/man/5-rcsfile/">rcsfile</a></code>(5). </p>
-<p> Walter F. Tichy, <font SIZE="-1">RCS</font>&#8211;A System for Version Control, <i>Software&#8211;Practice &amp; Experience</i> <code>15</code>, 7 (July 1985), 637-654. </p>
-<p> The full documentation for <font SIZE="-1">RCS</font> is maintained as a Texinfo manual. If the <code><a href="/docs/linux/man/1-info/">info</a></code>(1) and <font SIZE="-1">RCS</font> programs are properly installed at your site, the command</p>
+<p> Walter F. Tichy, RCS&#8211;A System for Version Control, <i>Software&#8211;Practice &amp; Experience</i> <code>15</code>, 7 (July 1985), 637-654. </p>
+<p> The full documentation for RCS is maintained as a Texinfo manual. If the <code><a href="/docs/linux/man/1-info/">info</a></code>(1) and RCS programs are properly installed at your site, the command</p>
 <dl>
 <dt>
 </dt><dd> <code>info rcs</code></dd></dl>
-<p> should give you access to the complete manual. Additionally, the <font SIZE="-1">RCS</font> homepage:</p>
+<p> should give you access to the complete manual. Additionally, the RCS homepage:</p>
 <dl>
 <dt>
 </dt><dd> <code><a rel="nofollow" href="http://www.gnu.org/software/rcs/">http://www.gnu.org/software/rcs/</a></code></dd></dl>
 <p> has news and links to the latest release, development site, etc.</p>
 <h2>LIMITS</h2>
-<p> Links to the <font SIZE="-1">RCS</font> and working files are not preserved. </p>
+<p> Links to the RCS and working files are not preserved. </p>
 <p> There is no way to selectively suppress the expansion of keywords, except by writing them differently. In nroff and troff, this is done by embedding the null-character <code>\&amp;</code> into the keyword. </p>

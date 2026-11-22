@@ -17,7 +17,7 @@ int selinux_restorecon_xattr(const char *pathname,
 <h2>Description</h2>
 <p><code>selinux_restorecon_xattr</code>() returns a linked list of <code>dir_xattr</code> structures containing information described below based on:</p>
 <dl>
-<dd><i>pathname</i> containing a directory tree to be searched for <i>security.sehash</i> extended attribute entries. <i>xattr_flags</i> contains options as follows:  <code>SELINUX_RESTORECON_XATTR_RECURSE</code> recursively descend directories. <code>SELINUX_RESTORECON_XATTR_DELETE_NONMATCH_DIGESTS</code> delete non-matching digests from each directory in <i>pathname</i>. <code>SELINUX_RESTORECON_XATTR_DELETE_ALL_DIGESTS</code> delete all digests from each directory in <i>pathname</i>. <code>SELINUX_RESTORECON_XATTR_IGNORE_MOUNTS</code> do not read <code>/proc/mounts</code> to obtain a list of non-seclabel mounts to be excluded from the search.<br />
+<dd><i>pathname</i> containing a directory tree to be searched for <i>security.sehash</i> extended attribute entries. <i>xattr_flags</i> contains options as follows:  <code>SELINUX_RESTORECON_XATTR_RECURSE</code> recursively descend directories. <code>SELINUX_RESTORECON_XATTR_DELETE_NONMATCH_DIGESTS</code> delete non-matching digests from each directory in <i>pathname</i>. <code>SELINUX_RESTORECON_XATTR_DELETE_ALL_DIGESTS</code> delete all digests from each directory in <i>pathname</i>. <code>SELINUX_RESTORECON_XATTR_IGNORE_MOUNTS</code> do not read <code>/proc/mounts</code> to obtain a list of non-seclabel mounts to be excluded from the search.<br/>
  Setting <code>SELINUX_RESTORECON_XATTR_IGNORE_MOUNTS</code> is useful where there is a non-seclabel fs mounted with a seclabel fs mounted on a directory below this.</dd></dl>
 <p> <i>xattr_list</i> is the returned pointer to a linked list of <code>dir_xattr</code> structures, each containing the following information: </p>
 <pre><code>struct dir_xattr {
@@ -52,10 +52,10 @@ int selinux_restorecon_xattr(const char *pathname,
 <dt>4.</dt>
 <dd>By default <code>stderr</code> is used to log output messages and errors. This may be changed by calling <code><a href="/docs/linux/man/3-selinux_set_callback/">selinux_set_callback</a></code>(3) with the <code>SELINUX_CB_LOG</code> <i>type</i> option. </dd>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-selinux_restorecon/">selinux_restorecon</a></code>(3)<br />
- <code><a href="/docs/linux/man/3-selinux_restorecon_set_sehandle/">selinux_restorecon_set_sehandle</a></code>(3),<br />
- <code><a href="/docs/linux/man/3-selinux_restorecon_default_handle/">selinux_restorecon_default_handle</a></code>(3),<br />
- <code><a href="/docs/linux/man/3-selinux_restorecon_set_exclude_list/">selinux_restorecon_set_exclude_list</a></code>(3),<br />
- <code><a href="/docs/linux/man/3-selinux_restorecon_set_alt_rootpath/">selinux_restorecon_set_alt_rootpath</a></code>(3),<br />
+<p><code><a href="/docs/linux/man/3-selinux_restorecon/">selinux_restorecon</a></code>(3)<br/>
+ <code><a href="/docs/linux/man/3-selinux_restorecon_set_sehandle/">selinux_restorecon_set_sehandle</a></code>(3),<br/>
+ <code><a href="/docs/linux/man/3-selinux_restorecon_default_handle/">selinux_restorecon_default_handle</a></code>(3),<br/>
+ <code><a href="/docs/linux/man/3-selinux_restorecon_set_exclude_list/">selinux_restorecon_set_exclude_list</a></code>(3),<br/>
+ <code><a href="/docs/linux/man/3-selinux_restorecon_set_alt_rootpath/">selinux_restorecon_set_alt_rootpath</a></code>(3),<br/>
  <code><a href="/docs/linux/man/3-selinux_set_callback/">selinux_set_callback</a></code>(3) </p>
 </dl>

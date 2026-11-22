@@ -10,7 +10,7 @@ description: "claesy.f –"
 <p>claesy.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>claesy</code> (A, B, C, RT1, RT2, EVSCAL, CS1, SN1)<br />
+<p>subroutine <code>claesy</code> (A, B, C, RT1, RT2, EVSCAL, CS1, SN1)<br/>
  <i></i><code>CLAESY</code> computes the eigenvalues and eigenvectors of a 2-by-2 complex symmetric matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine claesy (complexA, complexB, complexC, complexRT1, complexRT2, complexEVSCAL, complexCS1, complexSN1)</h3>

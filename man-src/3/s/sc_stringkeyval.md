@@ -19,16 +19,16 @@ description: "sc::StringKeyVal –"
 <p>virtual const char * classname (const char *)</p>
 <p>Returns the name of the exact class of the object at the keyword.</p>
 <p>virtual const char * truekeyword (const char *)</p>
-<p>Returns a string which is the actual keyword if some sort of variable substitution takes place (needed to make multiple references to the same object work in input files). <code>Debugging.</code><br />
+<p>Returns a string which is the actual keyword if some sort of variable substitution takes place (needed to make multiple references to the same object work in input files). <code>Debugging.</code><br/>
  See the parent class documentation for descriptions of these functions. </p>
 <pre><code>virtual void errortrace (std::ostream &amp;fp=ExEnv::err0())
 Write a message to fp describing the error.
 virtual void dump (std::ostream &amp;fp=ExEnv::err0())
 Write a message to fp describing the error.
 Protected Member Functions</code></pre>
-<p> int <code>key_exists</code> (const char *)<br />
- <i>Ultimately called by exists. </i><br />
- <code>Ref</code>&lt; <code>KeyValValue</code> &gt; <code>key_value</code> (const char *, const <code>KeyValValue</code> &amp;def)<br />
+<p> int <code>key_exists</code> (const char *)<br/>
+ <i>Ultimately called by exists. </i><br/>
+ <code>Ref</code>&lt; <code>KeyValValue</code> &gt; <code>key_value</code> (const char *, const <code>KeyValValue</code> &amp;def)<br/>
  <i>Ultimately called by value. </i></p>
 <h2>Detailed Description</h2>
 <p><code>StringKeyVal</code> is a base class for <code>KeyVal</code> implementations that store all values in a string format. </p>

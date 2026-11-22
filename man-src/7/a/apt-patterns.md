@@ -148,7 +148,7 @@ description: "apt-patterns – Syntax and semantics of apt search patterns"
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-apt-get/">apt-get</a></code>(8), <code><a href="/docs/linux/man/8-apt/">apt</a></code>(8)</p>
 <h2>Bugs</h2>
-<p>m[blue]<code>APT bug page</code>m[]<font SIZE="-2">[1]</font>. If you wish to report a bug in APT, please see /usr/share/doc/debian/bug-reporting.txt or the <code>reportbug</code>(1) command.</p>
+<p>m[blue]<code>APT bug page</code>m[][1]. If you wish to report a bug in APT, please see /usr/share/doc/debian/bug-reporting.txt or the <code>reportbug</code>(1) command.</p>
 <h2>Author</h2>
 <p>APT was written by the APT team &lt;apt [at] packages.debian.org&gt;.</p>
 <h2>Authors</h2>

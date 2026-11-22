@@ -113,16 +113,16 @@ description: "srcpd.conf – The configuration file for the srcpd deamon"
 <h3>ddl</h3>
 <p>Digital Direct for Linux (DDL) via serial line (RS232). With this module the PC is enabled to generate a digital control voltage for Maerklin/Motorola (MM) and/or NMRA/DCC using the serial interface (RS232) hardware. Output lines TxD and GND are used by this feature and must be connected to booster inputs properly. </p>
 <p> This module exposes optimal signal performance if special user rights for the <i>srcpd</i> are applied. It is recommended especially for Maerklin/Motorola users to configure a system user <i>srcpd</i> and a group <i>srcpd</i> with these command lines: </p>
-<p>$&nbsp;<wbr>addgroup &#8211;system srcpd<br />
+<p>$&nbsp;<wbr>addgroup &#8211;system srcpd<br/>
 $&nbsp;<wbr>adduser &#8211;system &#8211;no-create-home &#8211;ingroup srcpd srcpd </p>
 <p> In order to increase the realtime priority for this user the system file <i>/etc/security/limits.conf</i> must be edited to add following line: </p>
 <p>&nbsp;<wbr>srcpd&nbsp;<wbr>&nbsp;<wbr>&#8211;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rtprio&nbsp;<wbr>&nbsp;<wbr>99 </p>
 <p> According to these measures the configuration file must be adapted as follows: </p>
-<p>&nbsp;<wbr>&lt;server&gt;<br />
-&#8230;<br />
-&lt;username&gt;srcpd&lt;/username&gt;<br />
-&lt;groupname&gt;srcpd&lt;/groupname&gt;<br />
-&#8230;<br />
+<p>&nbsp;<wbr>&lt;server&gt;<br/>
+&#8230;<br/>
+&lt;username&gt;srcpd&lt;/username&gt;<br/>
+&lt;groupname&gt;srcpd&lt;/groupname&gt;<br/>
+&#8230;<br/>
 &nbsp;<wbr>&lt;/server&gt; </p>
 <dl>
 <dt>number_ga</dt>

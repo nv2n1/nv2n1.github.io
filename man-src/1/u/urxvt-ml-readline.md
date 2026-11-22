@@ -15,7 +15,7 @@ readline - improve readline editing (enabled by default)
 
  To avoid too many false positives, this is only done when:
 <dl>
-<dt>- the tty is in <font SIZE="-1">ICANON</font> state.
+<dt>- the tty is in ICANON state.
 </dt><dd>
 </dd><dt>- the text cursor is visible.
 </dt><dd>

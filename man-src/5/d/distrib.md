@@ -17,7 +17,7 @@ description: "distrib.pats – Default values for the Distribution: header"
 <p> When a post is received by <code>nnrpd</code> that does not already contain a Distribution: header, each newsgroup to which an article is posted will be checked against this file in turn, and the matching line with the highest weight will be used as the value of the Distribution: header. If no lines match, or if the matching line has an empty string for its third field, no header will be added. In case a distribution is added by <code>nnrpd</code>, make sure it is not rejected by the <i>newsfeeds</i> <tt>&quot;ME&quot;</tt> entry. </p>
 <p> A list of recommended distributions can be specified in <i><a href="/docs/linux/man/5-distributions/">distributions</a></i>(5).</p>
 <h2>History</h2>
-<p>Written by Rich <tt>$alz</tt> &lt;rsalz [at] uunet.uu.net&gt; for InterNetNews. Converted to <font SIZE="-1">POD</font> by Russ Allbery &lt;rra [at] stanford.edu&gt;. </p>
+<p>Written by Rich <tt>$alz</tt> &lt;rsalz [at] uunet.uu.net&gt; for InterNetNews. Converted to POD by Russ Allbery &lt;rra [at] stanford.edu&gt;. </p>
 <p> $Id: distrib.pats.pod 8435 2009-05-01 08:59:23Z iulius $</p>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/5-distributions/">distributions</a></i>(5), <i><a href="/docs/linux/man/5-inn-conf/">inn.conf</a></i>(5), <i><a href="/docs/linux/man/5-newsfeeds/">newsfeeds</a></i>(5), <i><a href="/docs/linux/man/8-nnrpd/">nnrpd</a></i>(8), <i><a href="/docs/linux/man/3-uwildmat/">uwildmat</a></i>(3). </p>

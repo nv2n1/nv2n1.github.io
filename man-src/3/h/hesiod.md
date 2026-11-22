@@ -47,8 +47,8 @@ cc file.c -lhesiod
 <dt>EINVAL</dt>
 <dd> <i>hesiod_to_bind</i> failed to convert the resulting domain name from UTF-8 to an internationalized domain name.</dd></dl>
 <h2>AUTHOR</h2>
-<p> Steve Dyer, IBM/Project Athena<br />
- Greg Hudson, MIT Team Athena<br />
+<p> Steve Dyer, IBM/Project Athena<br/>
+ Greg Hudson, MIT Team Athena<br/>
  Copyright 1987, 1988, 1995, 1996, 2000 by the Massachusetts Institute of Technology.</p>
 <h2>BUGS</h2>
 <p> The strings corresponding to the <i>errno</i> values set by the Hesiod functions are not particularly indicative of what went wrong, especially for <i>ENOEXEC</i> and <i>ENOENT</i>. </p>

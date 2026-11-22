@@ -41,7 +41,7 @@ description: "bakefile – native makefiles generator"
 </tr>
 <tr VALIGN=top>
 <td> borland </td>
-<td> Makefile for Borland C++ and Borland<br />
+<td> Makefile for Borland C++ and Borland<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>make
 </td>
 </tr>
@@ -52,25 +52,25 @@ description: "bakefile – native makefiles generator"
 </tr>
 <tr VALIGN=top>
 <td> dmars_smake </td>
-<td> Makefile for Digital Mars C/C++ with<br />
+<td> Makefile for Digital Mars C/C++ with<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>SMAKE
 </td>
 </tr>
 <tr VALIGN=top>
 <td> gnu </td>
-<td> Makefile for GNU toolchain: GNU Make, GCC,<br />
+<td> Makefile for GNU toolchain: GNU Make, GCC,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>etc.
 </td>
 </tr>
 <tr VALIGN=top>
 <td> mingw </td>
-<td> Makefile for MinGW toolchain:<br />
+<td> Makefile for MinGW toolchain:<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mingw32-make, MinGW port of GCC, etc.
 </td>
 </tr>
 <tr VALIGN=top>
 <td> msvc </td>
-<td> Makefile for Visual C++ with Microsoft<br />
+<td> Makefile for Visual C++ with Microsoft<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>nmake
 </td>
 </tr>
@@ -81,7 +81,7 @@ description: "bakefile – native makefiles generator"
 </tr>
 <tr VALIGN=top>
 <td> msevc4prj </td>
-<td> Microsoft Embedded Visual C++ 4 project<br />
+<td> Microsoft Embedded Visual C++ 4 project<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>files
 </td>
 </tr>

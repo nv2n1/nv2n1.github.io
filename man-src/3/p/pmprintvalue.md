@@ -9,7 +9,7 @@ description: "pmPrintValue – print a performance metric value"
 
 <p><code>pmPrintValue</code> &#8211; print a performance metric value</p>
 <h2>C Synopsis</h2>
-<p><code> #include &lt;stdio.h&gt;<br />
+<p><code> #include &lt;stdio.h&gt;<br/>
  #include &lt;pcp/pmapi.h&gt; </p>
 <p> void pmPrintValue(FILE *</code><i>f</i>, int <i>valfmt</i>, int <i>type</i>, const pmValue&nbsp;<wbr>*<i>val</i>, int&nbsp;<wbr><i>minwidth</i>); </p>
 <p> cc &#8230; -lpcp</p>

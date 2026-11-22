@@ -9,9 +9,9 @@ description: "quotaon, quotaoff – turn filesystem quotas on and off"
 
 <p>quotaon, quotaoff &#8211; turn filesystem quotas on and off</p>
 <h2>Synopsis</h2>
-<p><code>/usr/sbin/quotaon</code> [ <code>-vugfp</code> ] [ <code>-F</code> <i>format-name</i> ] <i>filesystem</i>&#8230;<br />
+<p><code>/usr/sbin/quotaon</code> [ <code>-vugfp</code> ] [ <code>-F</code> <i>format-name</i> ] <i>filesystem</i>&#8230;<br/>
  <code>/usr/sbin/quotaon</code> [ <code>-avugfp</code> ] [ <code>-F</code> <i>format-name</i> ] </p>
-<p> <code>/usr/sbin/quotaoff</code> [ <code>-vugp</code> ] [ <code>-x</code> <i>state</i> ] <i>filesystem</i>&#8230;<br />
+<p> <code>/usr/sbin/quotaoff</code> [ <code>-vugp</code> ] [ <code>-x</code> <i>state</i> ] <i>filesystem</i>&#8230;<br/>
  <code>/usr/sbin/quotaoff</code> [ <code>-avugp</code> ]</p>
 <h2>Description</h2>
 <h3>quotaon</h3>

@@ -11,7 +11,7 @@ description: "dgttrf.f –"
 <p> dgttrf.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dgttrf</code> (N, DL, D, DU, DU2, IPIV, INFO)<br />
+<p> subroutine <code>dgttrf</code> (N, DL, D, DU, DU2, IPIV, INFO)<br/>
  <i></i><code>DGTTRF</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dgttrf (integerN, double precision, dimension( * )DL, double precision, dimension( * )D, double precision, dimension( * )DU, double precision, dimension( * )DU2, integer, dimension( * )IPIV, integerINFO)</h3>

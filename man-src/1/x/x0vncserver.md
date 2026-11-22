@@ -10,7 +10,7 @@ description: "x0vncserver – TigerVNC Server for X displays"
 
 <p> x0vncserver &#8211; TigerVNC Server for X displays</p>
 <h2>SYNOPSIS</h2>
-<p> <code>x0vncserver</code> [<i>options</i>]<br />
+<p> <code>x0vncserver</code> [<i>options</i>]<br/>
  <code>x0vncserver -version</code></p>
 <h2>DESCRIPTION</h2>
 <p> <code>x0vncserver</code> is a TigerVNC Server which makes any X display remotely accessible via VNC, TigerVNC or compatible viewers. Unlike <code><a href="/docs/linux/man/1-xvnc/">Xvnc</a></code>(1), it does not create a virtual display. Instead, it just shares an existing X server (typically, that one connected to the physical screen). </p>
@@ -106,7 +106,7 @@ description: "x0vncserver – TigerVNC Server for X displays"
 <dd> <code>SendCutText</code> <code>MaxCutText</code> Currently unused. </dd>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-xvnc/">Xvnc</a></code>(1), <code><a href="/docs/linux/man/1-vncpasswd/">vncpasswd</a></code>(1),<br />
+<p> <code><a href="/docs/linux/man/1-xvnc/">Xvnc</a></code>(1), <code><a href="/docs/linux/man/1-vncpasswd/">vncpasswd</a></code>(1),<br/>
  <a rel="nofollow" href="http://www.tigervnc.org/">http://www.tigervnc.org/</a> </p>
 <h2>AUTHOR</h2>
 <p> Constantin Kaplinsky and others. </p>

@@ -14,8 +14,8 @@ description: "AUX2BIB – Extracts a BibTeX database according to an aux file."
 <h2>DESCRIPTION</h2>
 <p> Aux2bib reads a <i>.aux</i> file as produced by <code>LaTeX</code> and writes to standard output a bibtex file containing exactly the bibtex entries refereed in the aux file. </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-bibtex/">bibtex</a></code>(1), <code><a href="/docs/linux/man/1-latex/">latex</a></code>(1),<br />
- <i><a rel="nofollow" href="http://www.lri.fr/~filliatr/bibtex2html/">http://www.lri.fr/~filliatr/bibtex2html/</a></i><br />
+<p> <code><a href="/docs/linux/man/1-bibtex/">bibtex</a></code>(1), <code><a href="/docs/linux/man/1-latex/">latex</a></code>(1),<br/>
+ <i><a rel="nofollow" href="http://www.lri.fr/~filliatr/bibtex2html/">http://www.lri.fr/~filliatr/bibtex2html/</a></i><br/>
  <i>/usr/share/doc/bibtex2html</i> </p>
 <h2>AUTHOR</h2>
 <p> Ralf Treinen &lt;treinen [at] debian.org&gt; </p>

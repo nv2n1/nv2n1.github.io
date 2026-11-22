@@ -33,10 +33,10 @@ description: "QwtScaleTransformation – Operations for linear or logarithmic (b
 <p>Transform a value from a linear to a logarithmic interval. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>x</i> value related to the linear interval [p1, p2]<br />
- <i>p1</i> first border of linear interval<br />
- <i>p2</i> first border of linear interval<br />
- <i>s1</i> first border of logarithmic interval<br />
+<dd><i>x</i> value related to the linear interval [p1, p2]<br/>
+ <i>p1</i> first border of linear interval<br/>
+ <i>p2</i> first border of linear interval<br/>
+ <i>s1</i> first border of logarithmic interval<br/>
  <i>s2</i> first border of logarithmic interval</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -53,10 +53,10 @@ description: "QwtScaleTransformation – Operations for linear or logarithmic (b
 <p>Transform a value between 2 linear intervals. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>x</i> value related to the interval [x1, x2]<br />
- <i>x1</i> first border of source interval<br />
- <i>x2</i> first border of source interval<br />
- <i>y1</i> first border of target interval<br />
+<dd><i>x</i> value related to the interval [x1, x2]<br/>
+ <i>x1</i> first border of source interval<br/>
+ <i>x2</i> first border of source interval<br/>
+ <i>y1</i> first border of target interval<br/>
  <i>y2</i> first border of target interval</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

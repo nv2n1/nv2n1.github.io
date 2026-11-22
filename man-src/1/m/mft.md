@@ -36,8 +36,8 @@ description: "mft – translate Metafont or MetaPost code to TeX code for pretty
 <dt><i>cmbase.mft</i></dt>
 <dd> Style file for Computer Modern.</dd></dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-mf/">mf</a></code>(1), <code><a href="/docs/linux/man/1-weave/">weave</a></code>(1).<br />
- Donald E. Knuth, <i>Computer Modern Typefaces</i> (Volume E of <i>Computers and Typesetting</i>), Addison-Wesley, 1986, ISBN 0-201-13446-2.<br />
+<p> <code><a href="/docs/linux/man/1-mf/">mf</a></code>(1), <code><a href="/docs/linux/man/1-weave/">weave</a></code>(1).<br/>
+ Donald E. Knuth, <i>Computer Modern Typefaces</i> (Volume E of <i>Computers and Typesetting</i>), Addison-Wesley, 1986, ISBN 0-201-13446-2.<br/>
  Donald E. Knuth et al., <i>Metafontware</i>.</p>
 <h2>AUTHORS</h2>
 <p> Donald E. Knuth wrote the program, and he ported it to Unix with the help of Pierre MacKay and the Unix port of <code>weave</code> by Howard Trickey and Pavel Curtis. The program is published in the <i>Metafontware</i> technical report, available from the TeX Users Group. </p>

@@ -34,7 +34,7 @@ description: "oidentd_masq.conf – oidentd IP masquerading/NAT configuration fi
 </dd><dt>192.168.1.0/255.255.255.0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>user6<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>UNIX</dt>
 <dd></dd></dl>
 <h2>Author</h2>
-<p>Ryan McCabe &lt;ryan [at] numb.org&gt;<br />
+<p>Ryan McCabe &lt;ryan [at] numb.org&gt;<br/>
  <a rel="nofollow" href="http://dev.ojnk.net">http://dev.ojnk.net</a></p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-oidentd/">oidentd</a></code>(8) <code><a href="/docs/linux/man/5-oidentd-conf/">oidentd.conf</a></code>(5) </p>

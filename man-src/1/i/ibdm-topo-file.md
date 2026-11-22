@@ -54,16 +54,16 @@ description: "IBDM Topology File"
 <dt><code>REM-PORT-PANEL-NAME</code></dt>
 <dd> A name of the remote system port. We use the numbers as printed on the front panel and Ln for Leaf number N or Sn for Spine number N.</dd></dl>
 <h2>EXAMPLE</h2>
-<p> The following is a topology file for a simple cluster with one 24 port switch and two HCAs. The firts <font SIZE="-1">HCA</font> named H-1 and connect to the fabric with its two ports. The second <font SIZE="-1">HCA</font> named H-2. The switch is of type <font SIZE="-1">MTS2400</font> and is named S-1 </p>
-<p> <font SIZE="-1">MTS2400</font> S-1<br />
-P1 -&gt;&nbsp;<wbr><font SIZE="-1">MT23108</font>&nbsp;<wbr>H-1 P1<br />
-P2 -&gt;&nbsp;<wbr><font SIZE="-1">MT23108</font>&nbsp;<wbr>H-1 P2<br />
-P24 -&gt;&nbsp;<wbr><font SIZE="-1">MT23108</font>&nbsp;<wbr>H-2 P1</p>
+<p> The following is a topology file for a simple cluster with one 24 port switch and two HCAs. The firts HCA named H-1 and connect to the fabric with its two ports. The second HCA named H-2. The switch is of type MTS2400 and is named S-1 </p>
+<p> MTS2400 S-1<br/>
+P1 -&gt;&nbsp;<wbr>MT23108&nbsp;<wbr>H-1 P1<br/>
+P2 -&gt;&nbsp;<wbr>MT23108&nbsp;<wbr>H-1 P2<br/>
+P24 -&gt;&nbsp;<wbr>MT23108&nbsp;<wbr>H-2 P1</p>
 <h2>OPTIONAL CFG SECTION</h2>
 <p> This section in the system declaration line describes the special customization of each board of the system. </p>
-<p> That is the <font SIZE="-1">CFG</font> string is a set of comma-separated sub-fields. Each sub-field describes some special configuration of a corresponding system board. The actual semantics of the specific board modifiers is defined by the <font SIZE="-1">IBNL</font> of the specific system.</p>
+<p> That is the CFG string is a set of comma-separated sub-fields. Each sub-field describes some special configuration of a corresponding system board. The actual semantics of the specific board modifiers is defined by the IBNL of the specific system.</p>
 <h2>EXAMPLE</h2>
-<p> The following is an example of a definition-line in a topology file of the <font SIZE="-1">MTS9600</font> switch system. This switch system can have up to eight leafs and four spines. This example of the <font SIZE="-1">MTS9600</font> lacks (R) leafs no.6,7 and 8, and lacks spines no. 3 and 4. </p>
-<p> <font SIZE="-1">MTS9600</font> PartialGz1 <font SIZE="-1">CFG:</font> leaf3=R,leaf5=R,leaf7=R,spine1=R</p>
+<p> The following is an example of a definition-line in a topology file of the MTS9600 switch system. This switch system can have up to eight leafs and four spines. This example of the MTS9600 lacks (R) leafs no.6,7 and 8, and lacks spines no. 3 and 4. </p>
+<p> MTS9600 PartialGz1 CFG: leaf3=R,leaf5=R,leaf7=R,spine1=R</p>
 <h2>AUTHOR</h2>
-<p> Eitan Zahavi, Mellanox Technologies <font SIZE="-1">LTD</font>, eitan [at] mellanox.co.il </p>
+<p> Eitan Zahavi, Mellanox Technologies LTD, eitan [at] mellanox.co.il </p>

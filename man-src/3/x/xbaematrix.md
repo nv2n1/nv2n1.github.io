@@ -23,8 +23,8 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 <p> Motif&#8217;s Drag and Drop functionality can be achieved via the <code>XmNprocessDragCallback</code>. </p>
 <p> For large amounts of data, the overhead of assigning data to the widget can be avoided using the <code>XmNdrawCellCallback</code>. This callback also allows user defined pixmaps to be placed in a certain cell. When using this callback, data for string fields can be written back to the application by using the <code>XmNwriteCellCallback</code>.</p>
 <h2>Classes</h2>
-<p><code>XbaeMatrix</code> inherits behavior and resources from the <code>Core</code>, <code>Composite</code>, <code>Constraint</code>, and <code>XmManager</code> widget classes.<br />
- The class pointer is <code>xbaeMatrixWidgetClass</code>.<br />
+<p><code>XbaeMatrix</code> inherits behavior and resources from the <code>Core</code>, <code>Composite</code>, <code>Constraint</code>, and <code>XmManager</code> widget classes.<br/>
+ The class pointer is <code>xbaeMatrixWidgetClass</code>.<br/>
  The class name is <code>XbaeMatrix</code>.</p>
 <h2>New Resources</h2>
 <p>The following table lists the new resources defined by <code>XbaeMatrix</code>. The codes in the &#8220;Access&#8221; column indicate whether the given resource can be set at creation time (C), or set by using XtSetValues (S), or retrieved by using XtGetValues (G). </p>
@@ -56,11 +56,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNallowColumnResize</font></td>
-<td><font SIZE="-9">XmCAllowResize</font></td>
-<td><font SIZE="-9">Boolean</font></td>
-<td><font SIZE="-9">True</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNallowColumnResize</td>
+<td>XmCAllowResize</td>
+<td>Boolean</td>
+<td>True</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -69,11 +69,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNallowRowResize</font></td>
-<td><font SIZE="-9">XmCAllowResize</font></td>
-<td><font SIZE="-9">Boolean</font></td>
-<td><font SIZE="-9">True</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNallowRowResize</td>
+<td>XmCAllowResize</td>
+<td>Boolean</td>
+<td>True</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -82,11 +82,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNaltRowCount</font></td>
-<td><font SIZE="-9">XmCAltRowCount</font></td>
-<td><font SIZE="-9">int</font></td>
-<td><font SIZE="-9">1</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNaltRowCount</td>
+<td>XmCAltRowCount</td>
+<td>int</td>
+<td>1</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -95,11 +95,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNboldLabels</font></td>
-<td><font SIZE="-9">XmCBoldLabels</font></td>
-<td><font SIZE="-9">Boolean</font></td>
-<td><font SIZE="-9">False</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNboldLabels</td>
+<td>XmCBoldLabels</td>
+<td>Boolean</td>
+<td>False</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -108,11 +108,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNbuttonLabels</font></td>
-<td><font SIZE="-9">XmCButtonLabels</font></td>
-<td><font SIZE="-9">Boolean</font></td>
-<td><font SIZE="-9">False</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNbuttonLabels</td>
+<td>XmCButtonLabels</td>
+<td>Boolean</td>
+<td>False</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -121,11 +121,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNbuttonLabelBackground</font></td>
-<td><font SIZE="-9">XmCColor</font></td>
-<td><font SIZE="-9">Pixel</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNbuttonLabelBackground</td>
+<td>XmCColor</td>
+<td>Pixel</td>
+<td>dynamic</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -134,11 +134,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNcalcCursorPosition</font></td>
-<td><font SIZE="-9">XmCCalcCursorPosition</font></td>
-<td><font SIZE="-9">Boolean</font></td>
-<td><font SIZE="-9">False</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNcalcCursorPosition</td>
+<td>XmCCalcCursorPosition</td>
+<td>Boolean</td>
+<td>False</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -147,11 +147,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNcellBackgrounds</font></td>
-<td><font SIZE="-9">XmCColors</font></td>
-<td><font SIZE="-9">PixelTable</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNcellBackgrounds</td>
+<td>XmCColors</td>
+<td>PixelTable</td>
+<td>NULL</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -160,11 +160,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNcellHighlightThickness</font></td>
-<td><font SIZE="-9">XmCHighlightThickness</font></td>
-<td><font SIZE="-9">Dimension</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNcellHighlightThickness</td>
+<td>XmCHighlightThickness</td>
+<td>Dimension</td>
+<td>dynamic</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -173,11 +173,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNcellMarginHeight</font></td>
-<td><font SIZE="-9">XmCMarginHeight</font></td>
-<td><font SIZE="-9">Dimension</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNcellMarginHeight</td>
+<td>XmCMarginHeight</td>
+<td>Dimension</td>
+<td>dynamic</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -186,11 +186,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNcellMarginWidth</font></td>
-<td><font SIZE="-9">XmCMarginWidth</font></td>
-<td><font SIZE="-9">Dimension</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNcellMarginWidth</td>
+<td>XmCMarginWidth</td>
+<td>Dimension</td>
+<td>dynamic</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -199,11 +199,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNcellShadowThickness</font></td>
-<td><font SIZE="-9">XmCShadowThickness</font></td>
-<td><font SIZE="-9">Dimension</font></td>
-<td><font SIZE="-9">2</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNcellShadowThickness</td>
+<td>XmCShadowThickness</td>
+<td>Dimension</td>
+<td>2</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -212,11 +212,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNcellShadowType</font></td>
-<td><font SIZE="-9">XmCShadowType</font></td>
-<td><font SIZE="-9">unsigned char</font></td>
-<td><font SIZE="-9">XmSHADOW_OUT</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNcellShadowType</td>
+<td>XmCShadowType</td>
+<td>unsigned char</td>
+<td>XmSHADOW_OUT</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -225,11 +225,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNcellShadowTypes</font></td>
-<td><font SIZE="-9">XmCCellShadowTypes</font></td>
-<td><font SIZE="-9">unsigned char **</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNcellShadowTypes</td>
+<td>XmCCellShadowTypes</td>
+<td>unsigned char **</td>
+<td>NULL</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -238,11 +238,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNcellUserData</font></td>
-<td><font SIZE="-9">XmCCellUserData</font></td>
-<td><font SIZE="-9">XtPointer **</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNcellUserData</td>
+<td>XmCCellUserData</td>
+<td>XtPointer **</td>
+<td>NULL</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -251,11 +251,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNclipWindow</font></td>
-<td><font SIZE="-9">XmCClipWindow</font></td>
-<td><font SIZE="-9">Widget</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">G</font>
+<td>XmNclipWindow</td>
+<td>XmCClipWindow</td>
+<td>Widget</td>
+<td>NULL</td>
+<td>G
 </td>
 </tr>
 <tr VALIGN=top>
@@ -264,11 +264,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNcells</font></td>
-<td><font SIZE="-9">XmCCells</font></td>
-<td><font SIZE="-9">CellTable</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNcells</td>
+<td>XmCCells</td>
+<td>CellTable</td>
+<td>NULL</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -277,11 +277,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNcolors</font></td>
-<td><font SIZE="-9">XmCColors</font></td>
-<td><font SIZE="-9">PixelTable</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNcolors</td>
+<td>XmCColors</td>
+<td>PixelTable</td>
+<td>NULL</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -290,11 +290,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNcolumnAlignments</font></td>
-<td><font SIZE="-9">XmCAlignments</font></td>
-<td><font SIZE="-9">AlignmentArray</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNcolumnAlignments</td>
+<td>XmCAlignments</td>
+<td>AlignmentArray</td>
+<td>dynamic</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -303,11 +303,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNcolumnButtonLabels</font></td>
-<td><font SIZE="-9">XmCButtonLabels</font></td>
-<td><font SIZE="-9">BooleanArray</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNcolumnButtonLabels</td>
+<td>XmCButtonLabels</td>
+<td>BooleanArray</td>
+<td>NULL</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -316,11 +316,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNcolumnLabelAlignments</font></td>
-<td><font SIZE="-9">XmCAlignments</font></td>
-<td><font SIZE="-9">AlignmentArray</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNcolumnLabelAlignments</td>
+<td>XmCAlignments</td>
+<td>AlignmentArray</td>
+<td>dynamic</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -329,11 +329,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNcolumnLabelColor</font></td>
-<td><font SIZE="-9">XmCColor</font></td>
-<td><font SIZE="-9">Pixel</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNcolumnLabelColor</td>
+<td>XmCColor</td>
+<td>Pixel</td>
+<td>dynamic</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -342,11 +342,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNcolumnLabels</font></td>
-<td><font SIZE="-9">XmCLabels</font></td>
-<td><font SIZE="-9">StringArray</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNcolumnLabels</td>
+<td>XmCLabels</td>
+<td>StringArray</td>
+<td>NULL</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -355,11 +355,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNcolumnMaxLengths</font></td>
-<td><font SIZE="-9">XmCColumnMaxLengths</font></td>
-<td><font SIZE="-9">MaxLengthArray</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNcolumnMaxLengths</td>
+<td>XmCColumnMaxLengths</td>
+<td>MaxLengthArray</td>
+<td>NULL</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -368,11 +368,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNcolumnShadowTypes</font></td>
-<td><font SIZE="-9">XmCShadowTypes</font></td>
-<td><font SIZE="-9">unsigned char *</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNcolumnShadowTypes</td>
+<td>XmCShadowTypes</td>
+<td>unsigned char *</td>
+<td>NULL</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -381,11 +381,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNcolumnUserData</font></td>
-<td><font SIZE="-9">XmCUserDatas</font></td>
-<td><font SIZE="-9">XtPointer *</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNcolumnUserData</td>
+<td>XmCUserDatas</td>
+<td>XtPointer *</td>
+<td>NULL</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -394,11 +394,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNcolumnWidthInPixels</font></td>
-<td><font SIZE="-9">XmCColumnWidthInPixels</font></td>
-<td><font SIZE="-9">Boolean</font></td>
-<td><font SIZE="-9">False</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNcolumnWidthInPixels</td>
+<td>XmCColumnWidthInPixels</td>
+<td>Boolean</td>
+<td>False</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -407,11 +407,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNcolumnWidths</font></td>
-<td><font SIZE="-9">XmCColumnWidths</font></td>
-<td><font SIZE="-9">WidthArray</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNcolumnWidths</td>
+<td>XmCColumnWidths</td>
+<td>WidthArray</td>
+<td>NULL</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -420,11 +420,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNcolumns</font></td>
-<td><font SIZE="-9">XmCColumns</font></td>
-<td><font SIZE="-9">int</font></td>
-<td><font SIZE="-9">0</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNcolumns</td>
+<td>XmCColumns</td>
+<td>int</td>
+<td>0</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -433,11 +433,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNdefaultActionCallback</font></td>
-<td><font SIZE="-9">XmCCallback</font></td>
-<td><font SIZE="-9">XtCallbackList</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNdefaultActionCallback</td>
+<td>XmCCallback</td>
+<td>XtCallbackList</td>
+<td>NULL</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -446,11 +446,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNdoubleClickInterval</font></td>
-<td><font SIZE="-9">XmCDoubleClickInterval</font></td>
-<td><font SIZE="-9">int</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNdoubleClickInterval</td>
+<td>XmCDoubleClickInterval</td>
+<td>int</td>
+<td>dynamic</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -459,11 +459,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNdrawCellCallback</font></td>
-<td><font SIZE="-9">XmCCallback</font></td>
-<td><font SIZE="-9">Callback</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNdrawCellCallback</td>
+<td>XmCCallback</td>
+<td>Callback</td>
+<td>NULL</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -472,11 +472,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNenterCellCallback</font></td>
-<td><font SIZE="-9">XmCCallback</font></td>
-<td><font SIZE="-9">Callback</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNenterCellCallback</td>
+<td>XmCCallback</td>
+<td>Callback</td>
+<td>NULL</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -485,11 +485,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNevenRowBackground</font></td>
-<td><font SIZE="-9">XmCBackground</font></td>
-<td><font SIZE="-9">Pixel</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNevenRowBackground</td>
+<td>XmCBackground</td>
+<td>Pixel</td>
+<td>dynamic</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -498,11 +498,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNfill</font></td>
-<td><font SIZE="-9">XmCFill</font></td>
-<td><font SIZE="-9">Boolean</font></td>
-<td><font SIZE="-9">False</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNfill</td>
+<td>XmCFill</td>
+<td>Boolean</td>
+<td>False</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -511,11 +511,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNhorzFill</font></td>
-<td><font SIZE="-9">XmCHorzFill</font></td>
-<td><font SIZE="-9">Boolean</font></td>
-<td><font SIZE="-9">False</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNhorzFill</td>
+<td>XmCHorzFill</td>
+<td>Boolean</td>
+<td>False</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -524,11 +524,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNvertFill</font></td>
-<td><font SIZE="-9">XmCVertFill</font></td>
-<td><font SIZE="-9">Boolean</font></td>
-<td><font SIZE="-9">False</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNvertFill</td>
+<td>XmCVertFill</td>
+<td>Boolean</td>
+<td>False</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -537,11 +537,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNfixedColumns</font></td>
-<td><font SIZE="-9">XmCFixedColumns</font></td>
-<td><font SIZE="-9">Dimension</font></td>
-<td><font SIZE="-9">0</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNfixedColumns</td>
+<td>XmCFixedColumns</td>
+<td>Dimension</td>
+<td>0</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -550,11 +550,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNfixedRows</font></td>
-<td><font SIZE="-9">XmCFixedRows</font></td>
-<td><font SIZE="-9">Dimension</font></td>
-<td><font SIZE="-9">0</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNfixedRows</td>
+<td>XmCFixedRows</td>
+<td>Dimension</td>
+<td>0</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -563,11 +563,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNfontList</font></td>
-<td><font SIZE="-9">XmCFontList</font></td>
-<td><font SIZE="-9">FontList</font></td>
-<td><font SIZE="-9">fixed</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNfontList</td>
+<td>XmCFontList</td>
+<td>FontList</td>
+<td>fixed</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -576,11 +576,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNgridLineColor</font></td>
-<td><font SIZE="-9">XmCColor</font></td>
-<td><font SIZE="-9">Pixel</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNgridLineColor</td>
+<td>XmCColor</td>
+<td>Pixel</td>
+<td>dynamic</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -589,11 +589,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNgridType</font></td>
-<td><font SIZE="-9">XmCGridType</font></td>
-<td><font SIZE="-9">GridType</font></td>
-<td><font SIZE="-9">XmGRID_CELL_LINE</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNgridType</td>
+<td>XmCGridType</td>
+<td>GridType</td>
+<td>XmGRID_CELL_LINE</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -631,11 +631,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNhighlightedCells</font></td>
-<td><font SIZE="-9">XmCHighlightedCells</font></td>
-<td><font SIZE="-9">HighlightTable *</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNhighlightedCells</td>
+<td>XmCHighlightedCells</td>
+<td>HighlightTable *</td>
+<td>dynamic</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -644,11 +644,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNhorizontalScrollBar</font></td>
-<td><font SIZE="-9">XmCHorizontalScrollBar</font></td>
-<td><font SIZE="-9">Widget</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">G</font>
+<td>XmNhorizontalScrollBar</td>
+<td>XmCHorizontalScrollBar</td>
+<td>Widget</td>
+<td>NULL</td>
+<td>G
 </td>
 </tr>
 <tr VALIGN=top>
@@ -657,11 +657,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNhorizontalScrollBarDisplayPolicy</font></td>
-<td><font SIZE="-9">XmCMatrixScrollBarDisplayPolicy</font></td>
-<td><font SIZE="-9">unsigned char</font></td>
-<td><font SIZE="-9">XmDISPLAY_AS_NEEDED</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNhorizontalScrollBarDisplayPolicy</td>
+<td>XmCMatrixScrollBarDisplayPolicy</td>
+<td>unsigned char</td>
+<td>XmDISPLAY_AS_NEEDED</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -670,11 +670,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNlabelActivateCallback</font></td>
-<td><font SIZE="-9">XmCCallback</font></td>
-<td><font SIZE="-9">Callback</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNlabelActivateCallback</td>
+<td>XmCCallback</td>
+<td>Callback</td>
+<td>NULL</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -683,11 +683,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNlabelFont</font></td>
-<td><font SIZE="-9">XmCFontList</font></td>
-<td><font SIZE="-9">FontList</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNlabelFont</td>
+<td>XmCFontList</td>
+<td>FontList</td>
+<td>dynamic</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -696,11 +696,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNleaveCellCallback</font></td>
-<td><font SIZE="-9">XmCCallback</font></td>
-<td><font SIZE="-9">Callback</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNleaveCellCallback</td>
+<td>XmCCallback</td>
+<td>Callback</td>
+<td>NULL</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -709,11 +709,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNleftColumn</font></td>
-<td><font SIZE="-9">XmCLeftColumn</font></td>
-<td><font SIZE="-9">int</font></td>
-<td><font SIZE="-9">0</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNleftColumn</td>
+<td>XmCLeftColumn</td>
+<td>int</td>
+<td>0</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -722,11 +722,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNmodifyVerifyCallback</font></td>
-<td><font SIZE="-9">XmCCallback</font></td>
-<td><font SIZE="-9">Callback</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNmodifyVerifyCallback</td>
+<td>XmCCallback</td>
+<td>Callback</td>
+<td>NULL</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -735,11 +735,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNmultiLineCell</font></td>
-<td><font SIZE="-9">XmCMultiLineCell</font></td>
-<td><font SIZE="-9">Boolean</font></td>
-<td><font SIZE="-9">False</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNmultiLineCell</td>
+<td>XmCMultiLineCell</td>
+<td>Boolean</td>
+<td>False</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -748,11 +748,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNnonFixedDetachedLeft</font></td>
-<td><font SIZE="-9">XmCNonFixedDetachedLeft</font></td>
-<td><font SIZE="-9">Boolean</font></td>
-<td><font SIZE="-9">False</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNnonFixedDetachedLeft</td>
+<td>XmCNonFixedDetachedLeft</td>
+<td>Boolean</td>
+<td>False</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -761,11 +761,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNnonFixedDetachedTop</font></td>
-<td><font SIZE="-9">XmCNonFixedDetachedTop</font></td>
-<td><font SIZE="-9">Boolean</font></td>
-<td><font SIZE="-9">False</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNnonFixedDetachedTop</td>
+<td>XmCNonFixedDetachedTop</td>
+<td>Boolean</td>
+<td>False</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -774,11 +774,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNoddRowBackground</font></td>
-<td><font SIZE="-9">XmCBackground</font></td>
-<td><font SIZE="-9">Pixel</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNoddRowBackground</td>
+<td>XmCBackground</td>
+<td>Pixel</td>
+<td>dynamic</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -787,11 +787,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNprocessDragCallback</font></td>
-<td><font SIZE="-9">XmCCallback</font></td>
-<td><font SIZE="-9">Callback</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNprocessDragCallback</td>
+<td>XmCCallback</td>
+<td>Callback</td>
+<td>NULL</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -800,11 +800,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNrenderTable</font></td>
-<td><font SIZE="-9">XmCRenderTable</font></td>
-<td><font SIZE="-9">RenderTable</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNrenderTable</td>
+<td>XmCRenderTable</td>
+<td>RenderTable</td>
+<td>NULL</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -813,11 +813,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNresizeCallback</font></td>
-<td><font SIZE="-9">XmCCallback</font></td>
-<td><font SIZE="-9">Callback</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNresizeCallback</td>
+<td>XmCCallback</td>
+<td>Callback</td>
+<td>NULL</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -826,11 +826,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNresizeColumnCallback</font></td>
-<td><font SIZE="-9">XmCCallback</font></td>
-<td><font SIZE="-9">Callback</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNresizeColumnCallback</td>
+<td>XmCCallback</td>
+<td>Callback</td>
+<td>NULL</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -839,11 +839,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNreverseSelect</font></td>
-<td><font SIZE="-9">XmCReverseSelect</font></td>
-<td><font SIZE="-9">Boolean</font></td>
-<td><font SIZE="-9">False</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNreverseSelect</td>
+<td>XmCReverseSelect</td>
+<td>Boolean</td>
+<td>False</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -852,11 +852,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNrowButtonLabels</font></td>
-<td><font SIZE="-9">XmCButtonLabels</font></td>
-<td><font SIZE="-9">BooleanArray</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNrowButtonLabels</td>
+<td>XmCButtonLabels</td>
+<td>BooleanArray</td>
+<td>NULL</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -865,11 +865,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNrowHeightInPixels</font></td>
-<td><font SIZE="-9">XmCRowHeightInPixels</font></td>
-<td><font SIZE="-9">Boolean</font></td>
-<td><font SIZE="-9">True</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNrowHeightInPixels</td>
+<td>XmCRowHeightInPixels</td>
+<td>Boolean</td>
+<td>True</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -878,11 +878,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNrowHeights</font></td>
-<td><font SIZE="-9">XmCColumnWidths</font></td>
-<td><font SIZE="-9">WidthArray</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNrowHeights</td>
+<td>XmCColumnWidths</td>
+<td>WidthArray</td>
+<td>NULL</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -891,11 +891,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNrowLabelAlignment</font></td>
-<td><font SIZE="-9">XmCAlignment</font></td>
-<td><font SIZE="-9">Alignment</font></td>
-<td><font SIZE="-9">XmALIGNMENT_END</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNrowLabelAlignment</td>
+<td>XmCAlignment</td>
+<td>Alignment</td>
+<td>XmALIGNMENT_END</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -904,11 +904,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNrowLabelColor</font></td>
-<td><font SIZE="-9">XmCColor</font></td>
-<td><font SIZE="-9">Pixel</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNrowLabelColor</td>
+<td>XmCColor</td>
+<td>Pixel</td>
+<td>dynamic</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -917,11 +917,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNrowLabelWidth</font></td>
-<td><font SIZE="-9">XmCRowLabelWidth</font></td>
-<td><font SIZE="-9">Short</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNrowLabelWidth</td>
+<td>XmCRowLabelWidth</td>
+<td>Short</td>
+<td>dynamic</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -930,11 +930,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNrowLabels</font></td>
-<td><font SIZE="-9">XmCLabels</font></td>
-<td><font SIZE="-9">StringArray</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNrowLabels</td>
+<td>XmCLabels</td>
+<td>StringArray</td>
+<td>NULL</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -943,11 +943,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNrowShadowTypes</font></td>
-<td><font SIZE="-9">XmCShadowTypes</font></td>
-<td><font SIZE="-9">unsigned char *</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNrowShadowTypes</td>
+<td>XmCShadowTypes</td>
+<td>unsigned char *</td>
+<td>NULL</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -956,11 +956,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNrowUserData</font></td>
-<td><font SIZE="-9">XmCUserDatas</font></td>
-<td><font SIZE="-9">XtPointer *</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNrowUserData</td>
+<td>XmCUserDatas</td>
+<td>XtPointer *</td>
+<td>NULL</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -969,11 +969,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNrows</font></td>
-<td><font SIZE="-9">XmCRows</font></td>
-<td><font SIZE="-9">int</font></td>
-<td><font SIZE="-9">0</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNrows</td>
+<td>XmCRows</td>
+<td>int</td>
+<td>0</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -982,11 +982,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNscrollBarPlacement</font></td>
-<td><font SIZE="-9">XmCScrollBarPlacement</font></td>
-<td><font SIZE="-9">unsigned char</font></td>
-<td><font SIZE="-9">XmBOTTOM_RIGHT</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNscrollBarPlacement</td>
+<td>XmCScrollBarPlacement</td>
+<td>unsigned char</td>
+<td>XmBOTTOM_RIGHT</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -995,11 +995,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNselectCellCallback</font></td>
-<td><font SIZE="-9">XmCCallback</font></td>
-<td><font SIZE="-9">Callback</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNselectCellCallback</td>
+<td>XmCCallback</td>
+<td>Callback</td>
+<td>NULL</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1008,11 +1008,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNselectScrollVisible</font></td>
-<td><font SIZE="-9">XmCSelectScrollVisible</font></td>
-<td><font SIZE="-9">Boolean</font></td>
-<td><font SIZE="-9">True</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNselectScrollVisible</td>
+<td>XmCSelectScrollVisible</td>
+<td>Boolean</td>
+<td>True</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1021,11 +1021,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNselectedBackground</font></td>
-<td><font SIZE="-9">XmCColor</font></td>
-<td><font SIZE="-9">Pixel</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNselectedBackground</td>
+<td>XmCColor</td>
+<td>Pixel</td>
+<td>dynamic</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1034,11 +1034,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNselectedCells</font></td>
-<td><font SIZE="-9">XmCSelectedCells</font></td>
-<td><font SIZE="-9">BooleanTable</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNselectedCells</td>
+<td>XmCSelectedCells</td>
+<td>BooleanTable</td>
+<td>dynamic</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1047,11 +1047,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNselectedForeground</font></td>
-<td><font SIZE="-9">XmCColor</font></td>
-<td><font SIZE="-9">Pixel</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNselectedForeground</td>
+<td>XmCColor</td>
+<td>Pixel</td>
+<td>dynamic</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1060,11 +1060,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNshadowType</font></td>
-<td><font SIZE="-9">XmCShadowType</font></td>
-<td><font SIZE="-9">unsigned char</font></td>
-<td><font SIZE="-9">XmSHADOW_IN</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNshadowType</td>
+<td>XmCShadowType</td>
+<td>unsigned char</td>
+<td>XmSHADOW_IN</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1073,11 +1073,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNshowArrows</font></td>
-<td><font SIZE="-9">XmCShowArrows</font></td>
-<td><font SIZE="-9">Boolean</font></td>
-<td><font SIZE="-9">False</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNshowArrows</td>
+<td>XmCShowArrows</td>
+<td>Boolean</td>
+<td>False</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1086,11 +1086,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNspace</font></td>
-<td><font SIZE="-9">XmCSpace</font></td>
-<td><font SIZE="-9">Dimension</font></td>
-<td><font SIZE="-9">dynamic </font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNspace</td>
+<td>XmCSpace</td>
+<td>Dimension</td>
+<td>dynamic </td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1099,11 +1099,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNtextBackground</font></td>
-<td><font SIZE="-9">XmCBackground</font></td>
-<td><font SIZE="-9">Pixel</font></td>
-<td><font SIZE="-9">XmUNSPECIFIED_PIXEL</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNtextBackground</td>
+<td>XmCBackground</td>
+<td>Pixel</td>
+<td>XmUNSPECIFIED_PIXEL</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1112,11 +1112,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNtextBackgroundIsCell</font></td>
-<td><font SIZE="-9">XmCTextBackgroundIsCell</font></td>
-<td><font SIZE="-9">Boolean</font></td>
-<td><font SIZE="-9">False</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNtextBackgroundIsCell</td>
+<td>XmCTextBackgroundIsCell</td>
+<td>Boolean</td>
+<td>False</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1125,11 +1125,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNtextField</font></td>
-<td><font SIZE="-9">XmCTextField</font></td>
-<td><font SIZE="-9">Widget</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">G</font>
+<td>XmNtextField</td>
+<td>XmCTextField</td>
+<td>Widget</td>
+<td>NULL</td>
+<td>G
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1138,11 +1138,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNtextShadowThickness</font></td>
-<td><font SIZE="-9">XmCTextShadowThickness</font></td>
-<td><font SIZE="-9">Dimension</font></td>
-<td><font SIZE="-9">0</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNtextShadowThickness</td>
+<td>XmCTextShadowThickness</td>
+<td>Dimension</td>
+<td>0</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1151,11 +1151,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNtextTranslations</font></td>
-<td><font SIZE="-9">XmCTranslations</font></td>
-<td><font SIZE="-9">TranslationTable</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNtextTranslations</td>
+<td>XmCTranslations</td>
+<td>TranslationTable</td>
+<td>dynamic</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1164,11 +1164,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNtopRow</font></td>
-<td><font SIZE="-9">XmCTopRow</font></td>
-<td><font SIZE="-9">int</font></td>
-<td><font SIZE="-9">0</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNtopRow</td>
+<td>XmCTopRow</td>
+<td>int</td>
+<td>0</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1177,11 +1177,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNtrackcellCallback</font></td>
-<td><font SIZE="-9">XmCCallback</font></td>
-<td><font SIZE="-9">Callback</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNtrackcellCallback</td>
+<td>XmCCallback</td>
+<td>Callback</td>
+<td>NULL</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1190,11 +1190,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNtrailingAttachedBottom</font></td>
-<td><font SIZE="-9">XmCTrailingAttachedBottom</font></td>
-<td><font SIZE="-9">Boolean</font></td>
-<td><font SIZE="-9">False</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNtrailingAttachedBottom</td>
+<td>XmCTrailingAttachedBottom</td>
+<td>Boolean</td>
+<td>False</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1203,11 +1203,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNtrailingAttachedRight</font></td>
-<td><font SIZE="-9">XmCTrailingAttachedRight</font></td>
-<td><font SIZE="-9">Boolean</font></td>
-<td><font SIZE="-9">False</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNtrailingAttachedRight</td>
+<td>XmCTrailingAttachedRight</td>
+<td>Boolean</td>
+<td>False</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1216,11 +1216,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNtrailingFixedColumns</font></td>
-<td><font SIZE="-9">XmCTrailingFixedColumns</font></td>
-<td><font SIZE="-9">Dimension</font></td>
-<td><font SIZE="-9">0</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNtrailingFixedColumns</td>
+<td>XmCTrailingFixedColumns</td>
+<td>Dimension</td>
+<td>0</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1229,11 +1229,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNtrailingFixedRows</font></td>
-<td><font SIZE="-9">XmCTrailingFixedRows</font></td>
-<td><font SIZE="-9">Dimension</font></td>
-<td><font SIZE="-9">0</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNtrailingFixedRows</td>
+<td>XmCTrailingFixedRows</td>
+<td>Dimension</td>
+<td>0</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1242,11 +1242,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNtraverseCellCallback</font></td>
-<td><font SIZE="-9">XmCCallback</font></td>
-<td><font SIZE="-9">Callback</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNtraverseCellCallback</td>
+<td>XmCCallback</td>
+<td>Callback</td>
+<td>NULL</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1255,11 +1255,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNtraverseFixedCells</font></td>
-<td><font SIZE="-9">XmCTraverseFixedCells</font></td>
-<td><font SIZE="-9">Boolean</font></td>
-<td><font SIZE="-9">False</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNtraverseFixedCells</td>
+<td>XmCTraverseFixedCells</td>
+<td>Boolean</td>
+<td>False</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1297,11 +1297,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNuseXbaeInput</font></td>
-<td><font SIZE="-9">XmCUseXbaeInput</font></td>
-<td><font SIZE="-9">Boolean</font></td>
-<td><font SIZE="-9">False</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNuseXbaeInput</td>
+<td>XmCUseXbaeInput</td>
+<td>Boolean</td>
+<td>False</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1310,11 +1310,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNvalueChangedCallback</font></td>
-<td><font SIZE="-9">XmCCallback</font></td>
-<td><font SIZE="-9">Callback</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNvalueChangedCallback</td>
+<td>XmCCallback</td>
+<td>Callback</td>
+<td>NULL</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1323,11 +1323,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNverticalScrollBar</font></td>
-<td><font SIZE="-9">XmCVerticalScrollBar</font></td>
-<td><font SIZE="-9">Widget</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">G</font>
+<td>XmNverticalScrollBar</td>
+<td>XmCVerticalScrollBar</td>
+<td>Widget</td>
+<td>NULL</td>
+<td>G
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1336,11 +1336,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNverticalScrollBarDisplayPolicy</font></td>
-<td><font SIZE="-9">XmCMatrixScrollBarDisplayPolicy</font></td>
-<td><font SIZE="-9">unsigned char</font></td>
-<td><font SIZE="-9">XmDISPLAY_AS_NEEDED</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNverticalScrollBarDisplayPolicy</td>
+<td>XmCMatrixScrollBarDisplayPolicy</td>
+<td>unsigned char</td>
+<td>XmDISPLAY_AS_NEEDED</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1349,11 +1349,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNvisibleColumns</font></td>
-<td><font SIZE="-9">XmCVisibleColumns</font></td>
-<td><font SIZE="-9">Dimension</font></td>
-<td><font SIZE="-9">0</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNvisibleColumns</td>
+<td>XmCVisibleColumns</td>
+<td>Dimension</td>
+<td>0</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1362,11 +1362,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNvisibleRows</font></td>
-<td><font SIZE="-9">XmCVisibleRows</font></td>
-<td><font SIZE="-9">Dimension</font></td>
-<td><font SIZE="-9">0</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNvisibleRows</td>
+<td>XmCVisibleRows</td>
+<td>Dimension</td>
+<td>0</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1375,11 +1375,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNwrapType</font></td>
-<td><font SIZE="-9">XmCWrapType</font></td>
-<td><font SIZE="-9">Boolean</font></td>
-<td><font SIZE="-9">XbaeWrapNone</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNwrapType</td>
+<td>XmCWrapType</td>
+<td>Boolean</td>
+<td>XbaeWrapNone</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1388,11 +1388,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNwriteCellCallback</font></td>
-<td><font SIZE="-9">XmCCallback</font></td>
-<td><font SIZE="-9">Callback</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNwriteCellCallback</td>
+<td>XmCCallback</td>
+<td>Callback</td>
+<td>NULL</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1401,11 +1401,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNxmColumnLabels</font></td>
-<td><font SIZE="-9">XmCXmLabels</font></td>
-<td><font SIZE="-9">XmString *</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNxmColumnLabels</td>
+<td>XmCXmLabels</td>
+<td>XmString *</td>
+<td>NULL</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1414,11 +1414,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNxmRowLabels</font></td>
-<td><font SIZE="-9">XmCXmLabels</font></td>
-<td><font SIZE="-9">XmString *</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNxmRowLabels</td>
+<td>XmCXmLabels</td>
+<td>XmString *</td>
+<td>NULL</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1445,7 +1445,7 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 <dt><code>XmNcalcCursorPosition</code></dt>
 <dd>If set to True, the insertion position on the text field is calculated with respect to where the pointer was clicked in the cell. The default value is False. The insertion position will be overridden if the <i>position</i> member of the <code>XbaeEnterCellCallbackStruct</code> is set to a valid position.</dd>
 <dt><code>XmNcellBackgrounds</code></dt>
-<dd>Points to an array of pointers to rows. Each row is an array of Pixel values, one for each column in that row. This data structure is the same as that for <code>XmNcells</code>, except each entry is a Pixel instead of a String. The background of a cell will be drawn in the color specified for that cell. If <code>XmNcellBackgrounds</code> is <font SIZE="-1">NULL,</font> backgrounds will be drawn using the color specified by <code>XmNbackground</code>. This resource is copied. <code>XmNcellBackgrounds may be specified in a resource file but due to the</code> two dimensional nature of the <code>XbaeMatrix</code> widget, it must be done by terminating each line with a 
+<dd>Points to an array of pointers to rows. Each row is an array of Pixel values, one for each column in that row. This data structure is the same as that for <code>XmNcells</code>, except each entry is a Pixel instead of a String. The background of a cell will be drawn in the color specified for that cell. If <code>XmNcellBackgrounds</code> is NULL, backgrounds will be drawn using the color specified by <code>XmNbackground</code>. This resource is copied. <code>XmNcellBackgrounds may be specified in a resource file but due to the</code> two dimensional nature of the <code>XbaeMatrix</code> widget, it must be done by terminating each line with a 
  character. If the <code>XbaeMatrix widget had</code> <code>XmNrows</code> set to 5 and <code>XmNcolumns</code> set to 5, <code>XmNcellBackgrounds</code> would be specified as: </dd>
 <table>
 <tr VALIGN=top>
@@ -1549,23 +1549,23 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 </table>
-<p> Now cells could be used as the <code>XmNcells</code> resource. If <code>XmNcells</code> is <font SIZE="-1">NULL,</font> <code>XbaeMatrix</code> will <code>not</code> generate an internal table of empty Strings. This implies that if <code>XmNcells </code> is <code>NULL</code>, no cells have been set. This resource is copied. See the discussion in <code>XmNcellBackgrounds</code> for how to specify <code>XmNcells</code> in a resource file.</p>
+<p> Now cells could be used as the <code>XmNcells</code> resource. If <code>XmNcells</code> is NULL, <code>XbaeMatrix</code> will <code>not</code> generate an internal table of empty Strings. This implies that if <code>XmNcells </code> is <code>NULL</code>, no cells have been set. This resource is copied. See the discussion in <code>XmNcellBackgrounds</code> for how to specify <code>XmNcells</code> in a resource file.</p>
 <dt><code>XmNclipWindow</code></dt>
 <dd>The widget ID of the clip window. The clip window is the widget that contains the non-fixed region of cells. This resource can not be set to a new value.</dd>
 <dt><code>XmNcolors</code></dt>
-<dd>Points to an array of pointers to rows. Each row is an array of Pixel values, one for each column in that row. This data structure is the same as that for <code>XmNcells</code>, except each entry is a Pixel instead of a String. The text in a cell will be drawn in the color specified for that cell. If <code>XmNcolors</code> is <font SIZE="-1">NULL,</font> text will be drawn using the color specified by <code>XmNforeground</code>. This resource is copied. See the discussion in <code>XmNcellBackgrounds</code> for how to specify <code>XmNcolors</code> in a resource file.</dd>
+<dd>Points to an array of pointers to rows. Each row is an array of Pixel values, one for each column in that row. This data structure is the same as that for <code>XmNcells</code>, except each entry is a Pixel instead of a String. The text in a cell will be drawn in the color specified for that cell. If <code>XmNcolors</code> is NULL, text will be drawn using the color specified by <code>XmNforeground</code>. This resource is copied. See the discussion in <code>XmNcellBackgrounds</code> for how to specify <code>XmNcolors</code> in a resource file.</dd>
 <dt><code>XmNcolumnAlignments</code></dt>
-<dd>Points to an array of alignments (unsigned char), one for each column. Each element can be one of <code>XmALIGNMENT_BEGINNING</code>, <code>XmALIGNMENT_CENTER</code> or <code>XmALIGNMENT_END</code>. This specifies the alignment of the text or pixmap in each cell of that column. See the description of <code>XmNalignment</code> for <code>XmLabel(3X)</code>. If <code>XmNcolumnAlignments</code> is <font SIZE="-1">NULL, </font> each column will default to <code>XmALIGNMENT_BEGINNING</code>. This resource is copied.</dd>
+<dd>Points to an array of alignments (unsigned char), one for each column. Each element can be one of <code>XmALIGNMENT_BEGINNING</code>, <code>XmALIGNMENT_CENTER</code> or <code>XmALIGNMENT_END</code>. This specifies the alignment of the text or pixmap in each cell of that column. See the description of <code>XmNalignment</code> for <code>XmLabel(3X)</code>. If <code>XmNcolumnAlignments</code> is NULL,  each column will default to <code>XmALIGNMENT_BEGINNING</code>. This resource is copied.</dd>
 <dt><code>XmNcolumnButtonLabels</code></dt>
 <dd>An array of Booleans that tells the <code>XbaeMatrix</code> which column labels should be drawn as a button. Each Boolean can be specified as a Boolean string or integer. In order to use this resource, <code>XmNbuttonLabels</code> should be set to False.</dd>
 <dt><code>XmNcolumnLabelAlignments</code></dt>
-<dd>Points to an array of alignments (unsigned char), one for each column label. Each element can be one of <code>XmALIGNMENT_BEGINNING,</code> <code>XmALIGNMENT_CENTER</code> or <code>XmALIGNMENT_END</code>. This specifies the alignment of the text of each column label. See the description of <code>XmNalignment</code> for <code>XmLabel(3X)</code>. If <code>XmNcolumnLabelAlignments</code> is <font SIZE="-1">NULL,</font> each column label will default to <code>XmALIGNMENT_BEGINNING</code>. This resource is copied.</dd>
+<dd>Points to an array of alignments (unsigned char), one for each column label. Each element can be one of <code>XmALIGNMENT_BEGINNING,</code> <code>XmALIGNMENT_CENTER</code> or <code>XmALIGNMENT_END</code>. This specifies the alignment of the text of each column label. See the description of <code>XmNalignment</code> for <code>XmLabel(3X)</code>. If <code>XmNcolumnLabelAlignments</code> is NULL, each column label will default to <code>XmALIGNMENT_BEGINNING</code>. This resource is copied.</dd>
 <dt><code>XmNcolumnLabelColor</code></dt>
 <dd>Specifies a Pixel value in which to draw the <code>XmNcolumnLabels</code>.</dd>
 <dt><code>XmNcolumnLabels</code></dt>
-<dd>Points to an array of Strings to be drawn above each column. Each String may have embedded newline characters, in which case the label will be drawn on multiple lines. If there is a <code>XmNxmColumnLabels </code> defined for this coluumn it will be displayed in place of the <code>XmNcolumnLabels. </code> If <code>XmNcolumnLabels </code> and <code>XmNxmColumnLabels </code> are <font SIZE="-1">NULL, </font> no labels will be drawn. This resource is copied.</dd>
+<dd>Points to an array of Strings to be drawn above each column. Each String may have embedded newline characters, in which case the label will be drawn on multiple lines. If there is a <code>XmNxmColumnLabels </code> defined for this coluumn it will be displayed in place of the <code>XmNcolumnLabels. </code> If <code>XmNcolumnLabels </code> and <code>XmNxmColumnLabels </code> are NULL,  no labels will be drawn. This resource is copied.</dd>
 <dt><code>XmNcolumnMaxLengths</code></dt>
-<dd>Points to an array of int, one for each column. These specify the maximum length of a String which can be entered in the cells in that column. See the description of the <code>XmText(3X) XmNmaxLength</code> resource. If <code>XmNcolumnMaxLengths</code> is <font SIZE="-1">NULL</font> or an element of the array is equal to 0, then the corresponding width from <code>XmNcolumnWidths</code> is used. This resource is copied.</dd>
+<dd>Points to an array of int, one for each column. These specify the maximum length of a String which can be entered in the cells in that column. See the description of the <code>XmText(3X) XmNmaxLength</code> resource. If <code>XmNcolumnMaxLengths</code> is NULL or an element of the array is equal to 0, then the corresponding width from <code>XmNcolumnWidths</code> is used. This resource is copied.</dd>
 <dt><code>XmNcolumnShadowTypes</code></dt>
 <dd>Specifies on a per column basis, the <code>XmNcellShadowType</code>. Values for the resource are the same as for <code>XmNcellShadowType</code>. This resource is copied.</dd>
 <dt><code>XmNcolumnUserData</code></dt>
@@ -1575,7 +1575,7 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 <dt><code>XmNcolumnWidths</code></dt>
 <dd>Points to an array of short, one for each column. These specify the visible width of the cells in each column. See the description of the <code>XmText(3X) XmNcolumns</code> resource. This resource is copied.</dd>
 <dt><code>XmNcolumns</code></dt>
-<dd>Specifies the total number of columns of cells. <code>XmNcolumns</code> must be at least one. If the number of columns is changed via XtSetValues, then <code>XmNcolumnMaxLengths</code> must change or be <font SIZE="-1">NULL,</font> <code>XmNcolumnLabels</code> must change or be <font SIZE="-1">NULL,</font> <code>XmNcolumnAlignments</code> must change or be <font SIZE="-1">NULL </font> and <code>XmNcolumnLabelAlignments</code> must change or be <font SIZE="-1">NULL.</font> The preferred way to dynamically change the number of columns is to use <code>XbaeMatrixAddColumns()</code> or <code>XbaeMatrixDeleteColumns()</code>.</dd>
+<dd>Specifies the total number of columns of cells. <code>XmNcolumns</code> must be at least one. If the number of columns is changed via XtSetValues, then <code>XmNcolumnMaxLengths</code> must change or be NULL, <code>XmNcolumnLabels</code> must change or be NULL, <code>XmNcolumnAlignments</code> must change or be NULL  and <code>XmNcolumnLabelAlignments</code> must change or be NULL. The preferred way to dynamically change the number of columns is to use <code>XbaeMatrixAddColumns()</code> or <code>XbaeMatrixDeleteColumns()</code>.</dd>
 <dt><code>XmNdefaultActionCallback</code></dt>
 <dd>Specifies a list of callbacks to be called when a double click occurs in a cell. A pointer to an <code>XbaeMatrixDefaultActionCallbackStruct</code> is passed to the callbacks. Events are reported to the cell in which the double click occurs regardless of whether or not a callback exists. This callback is called by the DefaultAction() action and is NULL by default. The <code>XmNdefaultActionCallback</code> is ideal for popping up a dialog or other window when a double click occurs.</dd>
 <dt><code>XmNdoubleClickInterval</code></dt>
@@ -1604,7 +1604,7 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 <dt><code>XmNgridType</code></dt>
 <dd>Sets the way the matrix grid is drawn. The grid types available include <code>XmGRID_NONE</code>, <code>XmGRID_CELL_LINE</code>, <code>XmGRID_CELL_SHADOW</code>, <code>XmGRID_ROW_LINE</code>, <code>XmGRID_ROW_SHADOW</code>, <code>XmGRID_COLUMN_LINE</code> and <code>XmGRID_COLUMN_SHADOW</code>. All of the grid types vary the way the shadow or line is drawn around the cell. <code>XmGRID_ROW_LINE</code>, <code>XmGRID_ROW_SHADOW</code>, <code>XmGRID_COLUMN_LINE</code>, and <code>XmGRID_COLUMN_SHADOW</code> only draw a border around the rows and columns, giving a more tabular rather than spreadsheet appearance. The default is <code>XmGRID_CELL_LINE</code> which draws a solid line around the cells.</dd>
 <dt><code>XmNhighlightedCells</code></dt>
-<dd>Points to an array of pointers to rows. Each row is an array of unsigned char values, one for each column in that row. This data structure is the same as that for <code>XmNcells</code>, except each entry is an unsigned char instead of a String. Each entry in the array will have a value that is either <code>HighlightNone</code>, <code>HighlightCell</code>, <code>HighlightRow</code>, <code>HighlightColumn</code>, <code>HighlightOther</code> or the bitwise OR of those values, depending on the value of <code>XmNgridType</code> and which call was used to highlight the cell. A cell will be drawn as highlighted if the corresponding unsigned char does not have the value <code>HighlightNone</code>. If <code>XmNhighlightedCells</code> is <font SIZE="-1">NULL,</font> <code>XbaeMatrix</code> then no cells have been highlighted. This resource is copied, and cannot be specified in a resource file.</dd>
+<dd>Points to an array of pointers to rows. Each row is an array of unsigned char values, one for each column in that row. This data structure is the same as that for <code>XmNcells</code>, except each entry is an unsigned char instead of a String. Each entry in the array will have a value that is either <code>HighlightNone</code>, <code>HighlightCell</code>, <code>HighlightRow</code>, <code>HighlightColumn</code>, <code>HighlightOther</code> or the bitwise OR of those values, depending on the value of <code>XmNgridType</code> and which call was used to highlight the cell. A cell will be drawn as highlighted if the corresponding unsigned char does not have the value <code>HighlightNone</code>. If <code>XmNhighlightedCells</code> is NULL, <code>XbaeMatrix</code> then no cells have been highlighted. This resource is copied, and cannot be specified in a resource file.</dd>
 <dt><code>XmNhorizontalScrollBar</code></dt>
 <dd>The widget ID of the horizontal <code>XmScrollBar</code>. This resource exists only for those applications that need to tie another scrollbar to the matrix&#8217;s for synchronized scrolling. This resource can not be set to a new value.</dd>
 <dt><code>XmNhorizontalScrollBarDisplayPolicy</code></dt>
@@ -1649,7 +1649,7 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 <dt><code>XmNrowLabelWidth</code></dt>
 <dd>Specifies the width of the row labels. <code>XmNrowLabelWidth</code> defaults to the width of the longest row label.</dd>
 <dt><code>XmNrowLabels</code></dt>
-<dd>Points to an array of Strings to be drawn to the left of each row. Each String may have embedded newline characters, in which case the label will be drawn on multiple lines. If there is a <code>XmNxmRowLabels </code> defined for this row it will be displayed in place of the <code>XmNrowLabels. </code> If <code>XmNrowLabels</code> and <code>XmNxmRowLabels</code> are <font SIZE="-1">NULL, </font> no labels will be drawn. This resource is copied.</dd>
+<dd>Points to an array of Strings to be drawn to the left of each row. Each String may have embedded newline characters, in which case the label will be drawn on multiple lines. If there is a <code>XmNxmRowLabels </code> defined for this row it will be displayed in place of the <code>XmNrowLabels. </code> If <code>XmNrowLabels</code> and <code>XmNxmRowLabels</code> are NULL,  no labels will be drawn. This resource is copied.</dd>
 <dt><code>XmNrowHeightInPixels</code></dt>
 <dd>Specifies wether the elements of <code>XmNrowHeights </code> are measured in pixels or lines.</dd>
 <dt><code>XmNrowHeights</code></dt>
@@ -1659,7 +1659,7 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 <dt><code>XmNrowUserData</code></dt>
 <dd>Points to a user defined data area associated with a particular row. The data should be set using <code>XbaeMatrixSetRowUserData()</code> and retrieved using <code>XbaeMatrixGetRowUserData()</code>. This resource cannot be specified in a resource file.</dd>
 <dt><code>XmNrows</code></dt>
-<dd>Specifies the total number of rows of cells. <code>XmNrows</code> must be at least one. If the number of rows is changed via XtSetValues, then <code>XmNrowLabels</code> must change or be <font SIZE="-1">NULL.</font> The preferred way to dynamically change the number of rows is to use <code>XbaeMatrixAddRows()</code> or <code>XbaeMatrixDeleteRows()</code>.</dd>
+<dd>Specifies the total number of rows of cells. <code>XmNrows</code> must be at least one. If the number of rows is changed via XtSetValues, then <code>XmNrowLabels</code> must change or be NULL. The preferred way to dynamically change the number of rows is to use <code>XbaeMatrixAddRows()</code> or <code>XbaeMatrixDeleteRows()</code>.</dd>
 <dt><code>XmNscrollBarPlacement</code></dt>
 <dd>Determines where the scrollbars will be drawn. See the discussion of <code>XmNscrollBarPlacement</code> in <code><a href="/docs/linux/man/3-xmscrolledwindow/">XmScrolledWindow</a>(3)</code> for a complete discussion on this resource.</dd>
 <dt><code>XmNselectCellCallback</code></dt>
@@ -1669,7 +1669,7 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 <dt><code>XmNselectedBackground</code></dt>
 <dd>Allows the background of selected cells in <code>XmNselectedCells</code> to be specified.</dd>
 <dt><code>XmNselectedCells</code></dt>
-<dd>Points to an array of pointers to rows. Each row is an array of Boolean values, one for each column in that row. This data structure is the same as that for <code>XmNcells</code>, except each entry is a Boolean instead of a String. A cell will be drawn as selected if the corresponding Boolean is True. If <code>XmNselectedCells</code> is <font SIZE="-1">NULL,</font> then no cells have been selected. This resource is copied. It cannot be specified in a resource file.</dd>
+<dd>Points to an array of pointers to rows. Each row is an array of Boolean values, one for each column in that row. This data structure is the same as that for <code>XmNcells</code>, except each entry is a Boolean instead of a String. A cell will be drawn as selected if the corresponding Boolean is True. If <code>XmNselectedCells</code> is NULL, then no cells have been selected. This resource is copied. It cannot be specified in a resource file.</dd>
 <dt><code>XmNselectedForeground</code></dt>
 <dd>Allows the foreground of selected cells in <code>XmNselectedCells</code> to be specified.</dd>
 <dt><code>XmNshadowType</code></dt>
@@ -1721,9 +1721,9 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 <dt><code>XmNwriteCellCallback</code></dt>
 <dd>Specifies a list of callbacks to be called when a cell value changes and an <code>XmNdrawCellCallback</code> is defined. A pointer to an <code>XbaeMatrixWriteCellCallbackStruct</code> is passed to the callbacks. The <code>XmNwriteCellCallback</code> allows data to be written back into the application&#8217;s data structure and must be defined for an editable <code>XbaeMatrix</code> with an <code>XmNdrawCellCallback</code>.</dd>
 <dt><code>XmNxmRowLabels</code></dt>
-<dd>Points to an array of XmStrings to be drawn to the left of each row. If <code>XmNxmRowLabels</code> is <font SIZE="-1">NULL, </font> <code>XmNrowLabels </code> will be used. This resource is copied.</dd>
+<dd>Points to an array of XmStrings to be drawn to the left of each row. If <code>XmNxmRowLabels</code> is NULL,  <code>XmNrowLabels </code> will be used. This resource is copied.</dd>
 <dt><code>XmNxmColumnLabels</code></dt>
-<dd>Points to an array of XmStrings to be drawn above each column. If <code>XmNxmColumnLabels</code> is <font SIZE="-1">NULL, </font> <code>XmNcolumnLabels </code> will be used. This resource is copied.</dd></dl>
+<dd>Points to an array of XmStrings to be drawn above each column. If <code>XmNxmColumnLabels</code> is NULL,  <code>XmNcolumnLabels </code> will be used. This resource is copied.</dd></dl>
 <h2>Inherited Resources</h2>
 <p>The following table lists the resources which <code>XbaeMatrix</code> inherits from it&#8217;s superclasses <code>XmManager</code>, <code>Compositeand</code> <code>Core</code>. For a complete description of each resource, refer to the man page for that superclass. The codes in the &#8220;Access&#8221; column indicate whether the given resource can be set at creation time (C), or set by using XtSetValues (S), or retrieved by using XtGetValues (G). </p>
 <table BORDER>
@@ -1754,11 +1754,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNbottomShadowColor</font></td>
-<td><font SIZE="-9">XmCBottomShadowColor</font></td>
-<td><font SIZE="-9">Pixel</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNbottomShadowColor</td>
+<td>XmCBottomShadowColor</td>
+<td>Pixel</td>
+<td>dynamic</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1767,11 +1767,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNbottomShadowPixmap</font></td>
-<td><font SIZE="-9">XmCBottomShadowPixmap</font></td>
-<td><font SIZE="-9">Pixmap</font></td>
-<td><font SIZE="-9">XmUNSPECIFIED_PIXMAP</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNbottomShadowPixmap</td>
+<td>XmCBottomShadowPixmap</td>
+<td>Pixmap</td>
+<td>XmUNSPECIFIED_PIXMAP</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1780,11 +1780,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNforeground</font></td>
-<td><font SIZE="-9">XmCForeground</font></td>
-<td><font SIZE="-9">Pixel</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNforeground</td>
+<td>XmCForeground</td>
+<td>Pixel</td>
+<td>dynamic</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1793,11 +1793,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNhighlightColor</font></td>
-<td><font SIZE="-9">XmCHighlightColor</font></td>
-<td><font SIZE="-9">Pixel</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNhighlightColor</td>
+<td>XmCHighlightColor</td>
+<td>Pixel</td>
+<td>dynamic</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1806,11 +1806,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNhighlightPixmap</font></td>
-<td><font SIZE="-9">XmCHighlightPixmap</font></td>
-<td><font SIZE="-9">Pixmap</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNhighlightPixmap</td>
+<td>XmCHighlightPixmap</td>
+<td>Pixmap</td>
+<td>dynamic</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1819,11 +1819,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNinitialFocus</font></td>
-<td><font SIZE="-9">XmCInitialFocus</font></td>
-<td><font SIZE="-9">Widget</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNinitialFocus</td>
+<td>XmCInitialFocus</td>
+<td>Widget</td>
+<td>NULL</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1832,11 +1832,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNnavigationType</font></td>
-<td><font SIZE="-9">XmCNavigationType</font></td>
-<td><font SIZE="-9">XmNavigationType</font></td>
-<td><font SIZE="-9">XmTAB_GROUP</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNnavigationType</td>
+<td>XmCNavigationType</td>
+<td>XmNavigationType</td>
+<td>XmTAB_GROUP</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1845,11 +1845,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNshadowThickness</font></td>
-<td><font SIZE="-9">XmCShadowThickness</font></td>
-<td><font SIZE="-9">Dimension</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNshadowThickness</td>
+<td>XmCShadowThickness</td>
+<td>Dimension</td>
+<td>dynamic</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1858,11 +1858,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNstringDirection</font></td>
-<td><font SIZE="-9">XmCStringDirection</font></td>
-<td><font SIZE="-9">XmStringDirection</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CG</font>
+<td>XmNstringDirection</td>
+<td>XmCStringDirection</td>
+<td>XmStringDirection</td>
+<td>dynamic</td>
+<td>CG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1871,11 +1871,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNtopShadowColor</font></td>
-<td><font SIZE="-9">XmCTopShadowColor</font></td>
-<td><font SIZE="-9">Pixel</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNtopShadowColor</td>
+<td>XmCTopShadowColor</td>
+<td>Pixel</td>
+<td>dynamic</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1884,11 +1884,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNtopShadowPixmap</font></td>
-<td><font SIZE="-9">XmCTopShadowPixmap</font></td>
-<td><font SIZE="-9">Pixmap</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNtopShadowPixmap</td>
+<td>XmCTopShadowPixmap</td>
+<td>Pixmap</td>
+<td>dynamic</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1897,11 +1897,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNtraversalOn</font></td>
-<td><font SIZE="-9">XmCTraversalOn</font></td>
-<td><font SIZE="-9">Boolean</font></td>
-<td><font SIZE="-9">True</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNtraversalOn</td>
+<td>XmCTraversalOn</td>
+<td>Boolean</td>
+<td>True</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1910,11 +1910,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNunitType</font></td>
-<td><font SIZE="-9">XmCUnitType</font></td>
-<td><font SIZE="-9">unsigned char</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNunitType</td>
+<td>XmCUnitType</td>
+<td>unsigned char</td>
+<td>dynamic</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1923,11 +1923,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNuserData</font></td>
-<td><font SIZE="-9">XmCUserData</font></td>
-<td><font SIZE="-9">XtPointer</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNuserData</td>
+<td>XmCUserData</td>
+<td>XtPointer</td>
+<td>NULL</td>
+<td>CSG
 </td>
 </tr>
 </table>
@@ -1960,11 +1960,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNchildren</font></td>
-<td><font SIZE="-9">XmCReadOnly</font></td>
-<td><font SIZE="-9">WidgetList</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">G</font>
+<td>XmNchildren</td>
+<td>XmCReadOnly</td>
+<td>WidgetList</td>
+<td>NULL</td>
+<td>G
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1973,11 +1973,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNinsertPosition</font></td>
-<td><font SIZE="-9">XmCInsertPosition</font></td>
-<td><font SIZE="-9">XtOrderProc</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNinsertPosition</td>
+<td>XmCInsertPosition</td>
+<td>XtOrderProc</td>
+<td>NULL</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -1986,11 +1986,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNnumChildren</font></td>
-<td><font SIZE="-9">XmCReadOnly</font></td>
-<td><font SIZE="-9">Cardinal</font></td>
-<td><font SIZE="-9">0</font></td>
-<td><font SIZE="-9">G</font>
+<td>XmNnumChildren</td>
+<td>XmCReadOnly</td>
+<td>Cardinal</td>
+<td>0</td>
+<td>G
 </td>
 </tr>
 </table>
@@ -2023,11 +2023,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNaccelerators</font></td>
-<td><font SIZE="-9">XmCAccelerators</font></td>
-<td><font SIZE="-9">XtAccelerators</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNaccelerators</td>
+<td>XmCAccelerators</td>
+<td>XtAccelerators</td>
+<td>NULL</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -2036,11 +2036,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNancestorSensitive</font></td>
-<td><font SIZE="-9">XmCSensitive</font></td>
-<td><font SIZE="-9">Boolean</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">G</font>
+<td>XmNancestorSensitive</td>
+<td>XmCSensitive</td>
+<td>Boolean</td>
+<td>dynamic</td>
+<td>G
 </td>
 </tr>
 <tr VALIGN=top>
@@ -2049,11 +2049,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNbackground</font></td>
-<td><font SIZE="-9">XmCBackground</font></td>
-<td><font SIZE="-9">Pixel</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNbackground</td>
+<td>XmCBackground</td>
+<td>Pixel</td>
+<td>dynamic</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -2062,11 +2062,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNbackgroundPixmap</font></td>
-<td><font SIZE="-9">XmCPixmap</font></td>
-<td><font SIZE="-9">Pixmap</font></td>
-<td><font SIZE="-9">XmUNSPECIFIED_PIXMAP</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNbackgroundPixmap</td>
+<td>XmCPixmap</td>
+<td>Pixmap</td>
+<td>XmUNSPECIFIED_PIXMAP</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -2075,11 +2075,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNborderColor</font></td>
-<td><font SIZE="-9">XmCBorderColor</font></td>
-<td><font SIZE="-9">Pixel</font></td>
-<td><font SIZE="-9">XtDefaultForeground</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNborderColor</td>
+<td>XmCBorderColor</td>
+<td>Pixel</td>
+<td>XtDefaultForeground</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -2088,11 +2088,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNborderPixmap</font></td>
-<td><font SIZE="-9">XmCPixmap</font></td>
-<td><font SIZE="-9">Pixmap</font></td>
-<td><font SIZE="-9">XmUNSPECIFIED_PIXMAP</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNborderPixmap</td>
+<td>XmCPixmap</td>
+<td>Pixmap</td>
+<td>XmUNSPECIFIED_PIXMAP</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -2101,11 +2101,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNborderWidth</font></td>
-<td><font SIZE="-9">XmCBorderWidth</font></td>
-<td><font SIZE="-9">Dimension</font></td>
-<td><font SIZE="-9">1</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNborderWidth</td>
+<td>XmCBorderWidth</td>
+<td>Dimension</td>
+<td>1</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -2114,11 +2114,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNcolormap</font></td>
-<td><font SIZE="-9">XmCColormap</font></td>
-<td><font SIZE="-9">Colormap</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CG</font>
+<td>XmNcolormap</td>
+<td>XmCColormap</td>
+<td>Colormap</td>
+<td>dynamic</td>
+<td>CG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -2127,11 +2127,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNdepth</font></td>
-<td><font SIZE="-9">XmCDepth</font></td>
-<td><font SIZE="-9">int</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CG</font>
+<td>XmNdepth</td>
+<td>XmCDepth</td>
+<td>int</td>
+<td>dynamic</td>
+<td>CG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -2140,11 +2140,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNdestroyCallback</font></td>
-<td><font SIZE="-9">XmCCallback</font></td>
-<td><font SIZE="-9">XtCallbackList</font></td>
-<td><font SIZE="-9">NULL</font></td>
-<td><font SIZE="-9">C</font>
+<td>XmNdestroyCallback</td>
+<td>XmCCallback</td>
+<td>XtCallbackList</td>
+<td>NULL</td>
+<td>C
 </td>
 </tr>
 <tr VALIGN=top>
@@ -2153,11 +2153,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNheight</font></td>
-<td><font SIZE="-9">XmCHeight</font></td>
-<td><font SIZE="-9">Dimension</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNheight</td>
+<td>XmCHeight</td>
+<td>Dimension</td>
+<td>dynamic</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -2166,11 +2166,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNinitialResourcesPersistent</font></td>
-<td><font SIZE="-9">XmCInitialResourcesPersistent</font></td>
-<td><font SIZE="-9">Boolean</font></td>
-<td><font SIZE="-9">True</font></td>
-<td><font SIZE="-9">C</font>
+<td>XmNinitialResourcesPersistent</td>
+<td>XmCInitialResourcesPersistent</td>
+<td>Boolean</td>
+<td>True</td>
+<td>C
 </td>
 </tr>
 <tr VALIGN=top>
@@ -2179,11 +2179,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNmappedWhenManaged</font></td>
-<td><font SIZE="-9">XmCMappedWhenManaged</font></td>
-<td><font SIZE="-9">Boolean</font></td>
-<td><font SIZE="-9">True</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNmappedWhenManaged</td>
+<td>XmCMappedWhenManaged</td>
+<td>Boolean</td>
+<td>True</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -2192,11 +2192,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNscreen</font></td>
-<td><font SIZE="-9">XmCScreen</font></td>
-<td><font SIZE="-9">Screen</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CG</font>
+<td>XmNscreen</td>
+<td>XmCScreen</td>
+<td>Screen</td>
+<td>dynamic</td>
+<td>CG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -2205,11 +2205,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNsensitive</font></td>
-<td><font SIZE="-9">XmCSensitive</font></td>
-<td><font SIZE="-9">Boolean</font></td>
-<td><font SIZE="-9">True</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNsensitive</td>
+<td>XmCSensitive</td>
+<td>Boolean</td>
+<td>True</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -2218,11 +2218,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNtranslations</font></td>
-<td><font SIZE="-9">XmCTranslations</font></td>
-<td><font SIZE="-9">XtTranslations</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNtranslations</td>
+<td>XmCTranslations</td>
+<td>XtTranslations</td>
+<td>dynamic</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -2231,11 +2231,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNwidth</font></td>
-<td><font SIZE="-9">XmCWidth</font></td>
-<td><font SIZE="-9">Dimension</font></td>
-<td><font SIZE="-9">dynamic</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNwidth</td>
+<td>XmCWidth</td>
+<td>Dimension</td>
+<td>dynamic</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -2244,11 +2244,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNx</font></td>
-<td><font SIZE="-9">XmCPosition</font></td>
-<td><font SIZE="-9">Position</font></td>
-<td><font SIZE="-9">0</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNx</td>
+<td>XmCPosition</td>
+<td>Position</td>
+<td>0</td>
+<td>CSG
 </td>
 </tr>
 <tr VALIGN=top>
@@ -2257,11 +2257,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </td>
 </tr>
 <tr VALIGN=top>
-<td><font SIZE="-9">XmNy</font></td>
-<td><font SIZE="-9">XmCPosition</font></td>
-<td><font SIZE="-9">Position</font></td>
-<td><font SIZE="-9">0</font></td>
-<td><font SIZE="-9">CSG</font>
+<td>XmNy</td>
+<td>XmCPosition</td>
+<td>Position</td>
+<td>0</td>
+<td>CSG
 </td>
 </tr>
 </table>
@@ -2475,7 +2475,7 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 <dt><i>reason</i></dt>
 <dd>Set to <code>XbaeDrawCellReason</code>.</dd>
 <dt><i>event</i></dt>
-<dd>Always set to <font SIZE="-1">NULL</font></dd>
+<dd>Always set to NULL</dd>
 <dt><i>row</i></dt>
 <dd>The row number of the cell that needs to be drawn.</dd>
 <dt><i>column</i></dt>
@@ -2955,7 +2955,7 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </dl>
 <dl COMPACT>
 <dt><code>XmNresizeCallback</code></dt>
-<dd>Callbacks on the <code>XmNresizeCallback</code> list are called when the <code>XbaeMatrix</code> widget is resized. A pointer to the following structure is passed to<br />
+<dd>Callbacks on the <code>XmNresizeCallback</code> list are called when the <code>XbaeMatrix</code> widget is resized. A pointer to the following structure is passed to<br/>
 &nbsp;<wbr>each callback on the <code>XmNresizeCallback</code> list: </dd>
 <table>
 <tr VALIGN=top>
@@ -3015,7 +3015,7 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 <dt><i>reason</i></dt>
 <dd>Set to <code>XbaeResizeReason</code>.</dd>
 <dt><i>event</i></dt>
-<dd>Always set to <font SIZE="-1">NULL</font></dd>
+<dd>Always set to NULL</dd>
 <dt><i>row</i></dt>
 <dd>Set to the number of rows in the matrix (provided for convenience).</dd>
 <dt><i>column</i></dt>
@@ -3185,9 +3185,9 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 <dt><i>column</i></dt>
 <dd>The column number of the cell which was selected.</dd>
 <dt><i>selected_cells</i></dt>
-<dd>The value of the <code>XmNselectedCells</code> resource. This is provided as a convenience to the application and will be <font SIZE="-1">NULL</font> if no cells have yet been selected.</dd>
+<dd>The value of the <code>XmNselectedCells</code> resource. This is provided as a convenience to the application and will be NULL if no cells have yet been selected.</dd>
 <dt><i>cells</i></dt>
-<dd>The value of the <code>XmNcells</code> resource. This is provided as a convenience to the application and will be <font SIZE="-1">NULL</font> if no cells have been specified or the <code>XmNdrawCellCallback</code> is being used.</dd>
+<dd>The value of the <code>XmNcells</code> resource. This is provided as a convenience to the application and will be NULL if no cells have been specified or the <code>XmNdrawCellCallback</code> is being used.</dd>
 <dt><i>num_params</i></dt>
 <dd>The number of String parameters passed to the SelectCell() action.</dd>
 <dt><i>params</i></dt>
@@ -3216,7 +3216,7 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 </tr>
 </table>
 <p> The callbacks on the <code>XmNselectCellCallback</code> list can also be used in other ways, e.g. to pop up a cell specific menu. </p>
-<p> <code>NOTE:</code> If no cells have been selected, the value of <i>selected_cells</i> will be <font SIZE="-1">NULL.</font> The same applies for <i>cells</i>. Care must be taken so as not to dereference these members of the callback struct.</dl>
+<p> <code>NOTE:</code> If no cells have been selected, the value of <i>selected_cells</i> will be NULL. The same applies for <i>cells</i>. Care must be taken so as not to dereference these members of the callback struct.</dl>
 </dl>
 <dl COMPACT>
 <dt><code>XmNtrackCellCallback</code></dt>
@@ -3571,7 +3571,7 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 <dt><i>reason</i></dt>
 <dd>Set to <code>XbaeWriteCellReason</code>.</dd>
 <dt><i>event</i></dt>
-<dd>Always set to <font SIZE="-1">NULL</font></dd>
+<dd>Always set to NULL</dd>
 <dt><i>row</i></dt>
 <dd>The row number of the cell that needs to be written.</dd>
 <dt><i>column</i></dt>
@@ -3585,7 +3585,7 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 <dt><i>mask</i></dt>
 <dd>A mask for the pixmap as obtained from the XPM library. <i>mask</i> is only necessary when <i>pixmap</i> has a depth greater than one.</dd></dl>
 <p> If the application adds this callback, when the <code>XbaeMatrix</code> is editable and has been assigned an <code>XmNdrawCellCallback</code>, data on the widget can be edited and stored back in the application&#8217;s data structure. Only if an <code>XmNdrawCellCallback</code> has been assigned to the <code>XbaeMatrix</code> widget, will the <code>XmNwriteCellCallback</code> be called. </p>
-<p> At the moment, <i>pixmap</i> and <i>mask</i> will be sent to the <code>XmNwriteCellCallback</code> as <font SIZE="-1">NULL.</font> </p>
+<p> At the moment, <i>pixmap</i> and <i>mask</i> will be sent to the <code>XmNwriteCellCallback</code> as NULL. </p>
 </dl>
 </dl>
 <h2>Translations</h2>
@@ -3896,22 +3896,22 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 <dt><i>position</i></dt>
 <dd>The column position before which to add the new columns. Must be greater than or equal to zero, and less than or equal to <code>XmNcolumns</code>.</dd>
 <dt><i>columns</i></dt>
-<dd>Points to an ordinary two dimensional array of String, or <font SIZE="-1">NULL.</font> These Strings will be used to modify the <code>XmNcells</code> resource to populate the new columns. Each row in the array must have <code>XmNrows</code> elements and represents one of the new columns. columns must have <code>num_columns</code> rows. If columns is <font SIZE="-1">NULL,</font> empty columns will be added.</dd>
+<dd>Points to an ordinary two dimensional array of String, or NULL. These Strings will be used to modify the <code>XmNcells</code> resource to populate the new columns. Each row in the array must have <code>XmNrows</code> elements and represents one of the new columns. columns must have <code>num_columns</code> rows. If columns is NULL, empty columns will be added.</dd>
 <dt><i>labels</i></dt>
-<dd>Points to an array of String, or <font SIZE="-1">NULL.</font> These Strings will be used as the <code>XmNcolumnLabels</code> for the new columns. The labels array must have num_columns elements. If labels is <font SIZE="-1">NULL,</font> and <code>XmNcolumnLabels</code> is set, then blank column labels will be used.</dd>
+<dd>Points to an array of String, or NULL. These Strings will be used as the <code>XmNcolumnLabels</code> for the new columns. The labels array must have num_columns elements. If labels is NULL, and <code>XmNcolumnLabels</code> is set, then blank column labels will be used.</dd>
 <dt><i>widths</i></dt>
-<dd>Points to an array of short or <font SIZE="-1">NULL.</font> These values will be used as the <code>XmNcolumnWidths</code> for the new columns. The widths array must have num_columns elements. if widths is NULL then a default width will be used for the new columns.</dd>
+<dd>Points to an array of short or NULL. These values will be used as the <code>XmNcolumnWidths</code> for the new columns. The widths array must have num_columns elements. if widths is NULL then a default width will be used for the new columns.</dd>
 <dt><i>max_lengths</i></dt>
-<dd>Points to an array of int, or <font SIZE="-1">NULL.</font> These values will be used as the <code>XmNcolumnMaxLengths</code> for the new columns. The max_lengths array must have num_columns elements. If max_lengths is <font SIZE="-1">NULL,</font> then the corresponding value from widths will be used.</dd>
+<dd>Points to an array of int, or NULL. These values will be used as the <code>XmNcolumnMaxLengths</code> for the new columns. The max_lengths array must have num_columns elements. If max_lengths is NULL, then the corresponding value from widths will be used.</dd>
 <dt><i>alignments</i></dt>
-<dd>Points to an array of unsigned char, or <font SIZE="-1">NULL.</font> These values will be used as the <code>XmNcolumnAlignments</code> for the new columns. The alignments array must have num_columns elements. If alignments is <font SIZE="-1">NULL,</font> then <code>XmALIGNMENT_BEGINNING</code> will be used.</dd>
+<dd>Points to an array of unsigned char, or NULL. These values will be used as the <code>XmNcolumnAlignments</code> for the new columns. The alignments array must have num_columns elements. If alignments is NULL, then <code>XmALIGNMENT_BEGINNING</code> will be used.</dd>
 <dt><i>label_alignments</i></dt>
-<dd>Points to an array of unsigned char, or <font SIZE="-1">NULL.</font> These values will be used as the <code>XmNcolumnLabelAlignments</code> for the new column labels. The label_alignments array must have num_columns elements. If label_alignments is <font SIZE="-1">NULL,</font> then <code>XmALIGNMENT_BEGINNING</code> will be used.</dd>
+<dd>Points to an array of unsigned char, or NULL. These values will be used as the <code>XmNcolumnLabelAlignments</code> for the new column labels. The label_alignments array must have num_columns elements. If label_alignments is NULL, then <code>XmALIGNMENT_BEGINNING</code> will be used.</dd>
 <dt><i>colors</i></dt>
-<dd>Points to an array of Pixel, or <font SIZE="-1">NULL.</font> These values will be used to set the corresponding columns in the <code>XmNcolors</code> table for the new columns. The colors array must have num_columns elements. If colors is <font SIZE="-1">NULL,</font> then <code>XmNforeground</code> will be used.</dd>
+<dd>Points to an array of Pixel, or NULL. These values will be used to set the corresponding columns in the <code>XmNcolors</code> table for the new columns. The colors array must have num_columns elements. If colors is NULL, then <code>XmNforeground</code> will be used.</dd>
 <dt><i>num_columns</i></dt>
 <dd>The number of columns which are being added to the widget.</dd></dl>
-<p> <code>XbaeMatrixAddColumns()</code> allows the application developer to dynamically add new columns anywhere in the Matrix. The columns will be added before the column specified in position. Columns are numbered starting at zero. To append new columns onto the end of the Matrix, specify position as the total number of columns. Most of the arguments to <code>XbaeMatrixAddColumns()</code> may be specified as <font SIZE="-1">NULL.</font> Default values will be used by the widget. </p>
+<p> <code>XbaeMatrixAddColumns()</code> allows the application developer to dynamically add new columns anywhere in the Matrix. The columns will be added before the column specified in position. Columns are numbered starting at zero. To append new columns onto the end of the Matrix, specify position as the total number of columns. Most of the arguments to <code>XbaeMatrixAddColumns()</code> may be specified as NULL. Default values will be used by the widget. </p>
 <p> If the programmer attempts to add columns using <code>XbaeMatrixAddColumns()</code> when there are no rows, it will result in a warning message. There must be at least one row in the <code>XbaeMatrix</code> widget to add columns. </p>
 <p> To maintain backward compatability, the cell backgrounds cannot be set in a call to <code>XbaeMatrixAddColumns()</code> and must be set (if so desired) in a separate call to <code>XtVaSetValues()</code>. </p>
 </dl>
@@ -3966,11 +3966,11 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 <dt><i>position</i></dt>
 <dd>The row position before which to add the new rows. Must be greater than or equal to zero, and less than or equal to <code>XmNrows</code>.</dd>
 <dt><i>rows</i></dt>
-<dd>Points to an ordinary two dimensional array of String, or <font SIZE="-1">NULL.</font> These Strings will be used to modify the <code>XmNcells</code> resource to populate the new rows. Each row in the array must have <code>XmNcolumns</code> elements and represents one of the new rows. rows must have num_rows rows. If rows is <font SIZE="-1">NULL,</font> empty rows will be added.</dd>
+<dd>Points to an ordinary two dimensional array of String, or NULL. These Strings will be used to modify the <code>XmNcells</code> resource to populate the new rows. Each row in the array must have <code>XmNcolumns</code> elements and represents one of the new rows. rows must have num_rows rows. If rows is NULL, empty rows will be added.</dd>
 <dt><i>labels</i></dt>
-<dd>Points to an array of String, or <font SIZE="-1">NULL.</font> These Strings will be used as the <code>XmNrowLabels</code> for the new rows. The labels array must have num_rows elements. If labels is <font SIZE="-1">NULL,</font> and <code>XmNrowLabels</code> is set, then blank row labels will be used</dd>
+<dd>Points to an array of String, or NULL. These Strings will be used as the <code>XmNrowLabels</code> for the new rows. The labels array must have num_rows elements. If labels is NULL, and <code>XmNrowLabels</code> is set, then blank row labels will be used</dd>
 <dt><i>colors</i></dt>
-<dd>Points to an array of Pixel, or <font SIZE="-1">NULL.</font> These values will be used to set the corresponding rows in the <code>XmNcolors</code> table for the new rows. The colors array must have num_rows elements. If colors is <font SIZE="-1">NULL,</font> then <code>XmNforeground</code> will be used.</dd>
+<dd>Points to an array of Pixel, or NULL. These values will be used to set the corresponding rows in the <code>XmNcolors</code> table for the new rows. The colors array must have num_rows elements. If colors is NULL, then <code>XmNforeground</code> will be used.</dd>
 <dt><i>num_rows</i></dt>
 <dd>The number of rows which are being added to the widget.</dd></dl>
 <p> <code>XbaeMatrixAddRows()</code> allows the application developer to dynamically add new rows anywhere in the Matrix. The rows will be added before the row specified in position. Rows are numbered starting at zero. To append new rows onto the end of the Matrix, specify position as the total number of rows. </p>
@@ -4649,7 +4649,7 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 <dd>The row of the cell whose data should be retrieved.</dd>
 <dt><i>column</i></dt>
 <dd>The column of the cell whose data should be retrieved.</dd></dl>
-<p> <code>XbaeMatrixGetCellUserData()</code> returns a pointer to the data assigned to the cell in the given coordinates. The data should be set using <code>XbaeMatrixSetCellUserData()</code>. If no data is found to be associated with the particular cell, <font SIZE="-1">NULL</font> is returned. </p>
+<p> <code>XbaeMatrixGetCellUserData()</code> returns a pointer to the data assigned to the cell in the given coordinates. The data should be set using <code>XbaeMatrixSetCellUserData()</code>. If no data is found to be associated with the particular cell, NULL is returned. </p>
 </dl>
 <p> <code>XbaeMatrixGetColumnWidth()</code> </p>
 <dl COMPACT>
@@ -4705,7 +4705,7 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 <dd>An <code>XbaeMatrix</code> widget.</dd>
 <dt><i>column</i></dt>
 <dd>The column of the label that should be retrieved.</dd></dl>
-<p> <code>XbaeMatrixGetColumnLabel()</code> returns a pointer to the label of the given column. If no column labels exist or the given column is not a valid column <font SIZE="-1">NULL</font> is returned. If no data is found to be associated with the particular column, <font SIZE="-1">NULL</font> is returned. </p>
+<p> <code>XbaeMatrixGetColumnLabel()</code> returns a pointer to the label of the given column. If no column labels exist or the given column is not a valid column NULL is returned. If no data is found to be associated with the particular column, NULL is returned. </p>
 </dl>
 <p> <code>XbaeMatrixGetColumnUserData()</code> </p>
 <dl COMPACT>
@@ -4733,7 +4733,7 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 <dd>An <code>XbaeMatrix</code> widget.</dd>
 <dt><i>column</i></dt>
 <dd>The column of the cell whose data should be retrieved.</dd></dl>
-<p> <code>XbaeMatrixGetColumnUserData()</code> returns a pointer to the data assigned to the given column. The data should be set using <code>XbaeMatrixSetColumnUserData()</code>. If no data is found to be associated with the particular column, <font SIZE="-1">NULL</font> is returned. </p>
+<p> <code>XbaeMatrixGetColumnUserData()</code> returns a pointer to the data assigned to the given column. The data should be set using <code>XbaeMatrixSetColumnUserData()</code>. If no data is found to be associated with the particular column, NULL is returned. </p>
 </dl>
 <p> <code>XbaeMatrixGetCurrentCell()</code> </p>
 <dl COMPACT>
@@ -4889,7 +4889,7 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 <dd>An <code>XbaeMatrix</code> widget.</dd>
 <dt><i>row</i></dt>
 <dd>The row of the label that should be retrieved.</dd></dl>
-<p> <code>XbaeMatrixGetRowLabel()</code> returns a pointer to the label of the given row. If no row labels exist or the given row is not a valid row <font SIZE="-1">NULL</font> is returned. </p>
+<p> <code>XbaeMatrixGetRowLabel()</code> returns a pointer to the label of the given row. If no row labels exist or the given row is not a valid row NULL is returned. </p>
 </dl>
 <p> <code>XbaeMatrixGetRowUserData()</code> </p>
 <dl COMPACT>
@@ -4917,7 +4917,7 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 <dd>An <code>XbaeMatrix</code> widget.</dd>
 <dt><i>row</i></dt>
 <dd>The row of the cell whose data should be retrieved.</dd></dl>
-<p> <code>XbaeMatrixGetRowUserData()</code> returns a pointer to the data assigned to the given row. The data should be set using <code>XbaeMatrixSetRowUserData()</code>. If no data is found to be associated with the particular row, <font SIZE="-1">NULL</font> is returned. </p>
+<p> <code>XbaeMatrixGetRowUserData()</code> returns a pointer to the data assigned to the given row. The data should be set using <code>XbaeMatrixSetRowUserData()</code>. If no data is found to be associated with the particular row, NULL is returned. </p>
 </dl>
 <p> <code>XbaeMatrixGetXmColumnLabel()</code> </p>
 <dl COMPACT>
@@ -4945,7 +4945,7 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 <dd>An <code>XbaeMatrix</code> widget.</dd>
 <dt><i>column</i></dt>
 <dd>The column of the xmLabel that should be retrieved.</dd></dl>
-<p> <code>XbaeMatrixGetXmColumnLabel()</code> returns a pointer to the xmLabel of the given column. If no xmColumnLabels exist or the given column is not a valid column <font SIZE="-1">NULL</font> is returned. If no data is found to be associated with the particular column, <font SIZE="-1">NULL</font> is returned. </p>
+<p> <code>XbaeMatrixGetXmColumnLabel()</code> returns a pointer to the xmLabel of the given column. If no xmColumnLabels exist or the given column is not a valid column NULL is returned. If no data is found to be associated with the particular column, NULL is returned. </p>
 </dl>
 <p> <code>XbaeMatrixGetXmRowLabel()</code> </p>
 <dl COMPACT>
@@ -4973,7 +4973,7 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 <dd>An <code>XbaeMatrix</code> widget.</dd>
 <dt><i>row</i></dt>
 <dd>The row of the xmLabel that should be retrieved.</dd></dl>
-<p> <code>XbaeMatrixGetXmRowLabel()</code> returns a pointer to the xmLabel of the given row. If no xmRowLabels exist or the given row is not a valid row <font SIZE="-1">NULL</font> is returned. If no data is found to be associated with the particular row, <font SIZE="-1">NULL</font> is returned. </p>
+<p> <code>XbaeMatrixGetXmRowLabel()</code> returns a pointer to the xmLabel of the given row. If no xmRowLabels exist or the given row is not a valid row NULL is returned. If no data is found to be associated with the particular row, NULL is returned. </p>
 </dl>
 <p> <code>XbaeMatrixHighlightCell()</code> </p>
 <dl COMPACT>
@@ -5429,7 +5429,7 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 <dd>An <code>XbaeMatrix</code> widget.</dd>
 <dt><i>column</i></dt>
 <dd>The column of the matrix to redraw.</dd></dl>
-<p> <code>XbaeMatrixRefreshColumn()</code> allows the application developer to efficiently redraw a specific column<br />
+<p> <code>XbaeMatrixRefreshColumn()</code> allows the application developer to efficiently redraw a specific column<br/>
 &nbsp;<wbr>of the matrix. </p>
 </dl>
 <p> <code>XbaeMatrixRefreshRow()</code> </p>
@@ -5458,7 +5458,7 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 <dd>An <code>XbaeMatrix</code> widget.</dd>
 <dt><i>row</i></dt>
 <dd>The row of the matrix to redraw.</dd></dl>
-<p> <code>XbaeMatrixRefreshRow()</code> allows the application developer to efficiently redraw a specific row<br />
+<p> <code>XbaeMatrixRefreshRow()</code> allows the application developer to efficiently redraw a specific row<br/>
 &nbsp;<wbr>of the matrix. </p>
 </dl>
 <p> <code>XbaeMatrixRowColToXY()</code> </p>
@@ -5567,7 +5567,7 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 <dd>The row of the cell to select.</dd>
 <dt><i>column</i></dt>
 <dd>The column of the cell to select.</dd></dl>
-<p> <code>XbaeMatrixSelectCell()</code> allows the application developer to programmatically select a cell. <code>XbaeMatrixSelectCell()</code> first scrolls the specified cell until it is visible, and then draws the cell in reverse video (or selectedForeground / selectedBackground if set).<br />
+<p> <code>XbaeMatrixSelectCell()</code> allows the application developer to programmatically select a cell. <code>XbaeMatrixSelectCell()</code> first scrolls the specified cell until it is visible, and then draws the cell in reverse video (or selectedForeground / selectedBackground if set).<br/>
 &nbsp;<wbr>The corresponding Boolean in the <code>XmNselectedCells</code> array will be set to True. </p>
 </dl>
 <p> <code>XbaeMatrixSelectColumn()</code> </p>
@@ -5712,7 +5712,7 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 <dd>The column of the cell whose background should be set.</dd>
 <dt><i>color</i></dt>
 <dd>The new color to which to set this cell&#8217;s background.</dd></dl>
-<p> <code>XbaeMatrixSetCellBackground()</code> is a convenient way to specify and modify the <code>XmNcellBackgrounds</code> resource when changing the background of a single cell. If <code>XmNcellBackgrounds</code> is <font SIZE="-1">NULL,</font> then <code>XbaeMatrixSetCellBackground()</code> will create a Pixel table initialized to <code>XmNforeground</code> except for the cell specified in it&#8217;s arguments. If <code>XmNcellBackgrounds</code> is not <font SIZE="-1">NULL,</font> then <code>XbaeMatrixSetCellBackground()</code> will changed the specified cell in that resource to the specified color. </p>
+<p> <code>XbaeMatrixSetCellBackground()</code> is a convenient way to specify and modify the <code>XmNcellBackgrounds</code> resource when changing the background of a single cell. If <code>XmNcellBackgrounds</code> is NULL, then <code>XbaeMatrixSetCellBackground()</code> will create a Pixel table initialized to <code>XmNforeground</code> except for the cell specified in it&#8217;s arguments. If <code>XmNcellBackgrounds</code> is not NULL, then <code>XbaeMatrixSetCellBackground()</code> will changed the specified cell in that resource to the specified color. </p>
 </dl>
 <p> <code>XbaeMatrixSetCellColor()</code> </p>
 <dl COMPACT>
@@ -5756,7 +5756,7 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 <dd>The column of the cell whose color should be set.</dd>
 <dt><i>color</i></dt>
 <dd>The new color to which to set this cell.</dd></dl>
-<p> <code>XbaeMatrixSetCellColor()</code> is a convenient way to specify and modify the <code>XmNcolors</code> resource when changing the color of a single cell. If <code>XmNcolors</code> is <font SIZE="-1">NULL,</font> then <code>XbaeMatrixSetCellColor()</code> will create a Pixel table initialized to <code>XmNforeground</code> except for the cell specified in it&#8217;s arguments. If <code>XmNcolors</code> is not <font SIZE="-1">NULL,</font> then <code>XbaeMatrixSetCellColor()</code> will changed the specified cell in that resource to the specified color. </p>
+<p> <code>XbaeMatrixSetCellColor()</code> is a convenient way to specify and modify the <code>XmNcolors</code> resource when changing the color of a single cell. If <code>XmNcolors</code> is NULL, then <code>XbaeMatrixSetCellColor()</code> will create a Pixel table initialized to <code>XmNforeground</code> except for the cell specified in it&#8217;s arguments. If <code>XmNcolors</code> is not NULL, then <code>XbaeMatrixSetCellColor()</code> will changed the specified cell in that resource to the specified color. </p>
 </dl>
 <p> <code>XbaeMatrixSetCellPixmap()</code> </p>
 <dl COMPACT>
@@ -6056,7 +6056,7 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 <dd>Points to an array of Pixel. These specify the backgrounds for the cells in the specified columns. The colors array must have num_colors elements.</dd>
 <dt><i>num_colors</i></dt>
 <dd>The number of colors in the colors array.</dd></dl>
-<p> <code>XbaeMatrixSetColumnBackgrounds()</code> is a convenient way to specify and modify the <code>XmNcellBackgrounds</code> resource when setting the background of an entire column or columns. If <code>XmNcellBackgrounds</code> is <font SIZE="-1">NULL,</font> then <code>XbaeMatrixSetColumnBackgrounds()</code> will create a Pixel table initialized to <code>XmNforeground</code> except for the columns specified in it&#8217;s arguments. If <code>XmNcellBackgrounds</code> is not <font SIZE="-1">NULL,</font> then <code>XbaeMatrixSetColumnBackgrounds()</code> will changed the specified columns in that resource to the specified colors. </p>
+<p> <code>XbaeMatrixSetColumnBackgrounds()</code> is a convenient way to specify and modify the <code>XmNcellBackgrounds</code> resource when setting the background of an entire column or columns. If <code>XmNcellBackgrounds</code> is NULL, then <code>XbaeMatrixSetColumnBackgrounds()</code> will create a Pixel table initialized to <code>XmNforeground</code> except for the columns specified in it&#8217;s arguments. If <code>XmNcellBackgrounds</code> is not NULL, then <code>XbaeMatrixSetColumnBackgrounds()</code> will changed the specified columns in that resource to the specified colors. </p>
 </dl>
 <p> <code>XbaeMatrixSetColumnColors()</code> </p>
 <dl COMPACT>
@@ -6100,7 +6100,7 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 <dd>Points to an array of Pixel. These specify the colors for the cells in the specified columns. The colors array must have num_colors elements.</dd>
 <dt><i>num_colors</i></dt>
 <dd>The number of colors in the colors array.</dd></dl>
-<p> <code>XbaeMatrixSetColumnColors()</code> is a convenient way to specify and modify the <code>XmNcolors</code> resource when setting the color of an entire column or columns. If <code>XmNcolors</code> is <font SIZE="-1">NULL,</font> then <code>XbaeMatrixSetColumnColors()</code> will create a Pixel table initialized to <code>XmNforeground</code> except for the columns specified in it&#8217;s arguments. If <code>XmNcolors</code> is not <font SIZE="-1">NULL,</font> then <code>XbaeMatrixSetColumnColors()</code> will changed the specified columns in that resource to the specified colors. </p>
+<p> <code>XbaeMatrixSetColumnColors()</code> is a convenient way to specify and modify the <code>XmNcolors</code> resource when setting the color of an entire column or columns. If <code>XmNcolors</code> is NULL, then <code>XbaeMatrixSetColumnColors()</code> will create a Pixel table initialized to <code>XmNforeground</code> except for the columns specified in it&#8217;s arguments. If <code>XmNcolors</code> is not NULL, then <code>XbaeMatrixSetColumnColors()</code> will changed the specified columns in that resource to the specified colors. </p>
 </dl>
 <p> <code>XbaeMatrixSetColumnWidth()</code> </p>
 <dl COMPACT>
@@ -6288,7 +6288,7 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 <dd>Points to an array of Pixel. These specify the backgrounds for the cells in the specified rows. The colors array must have num_colors elements.</dd>
 <dt><i>num_colors</i></dt>
 <dd>The number of colors in the colors array.</dd></dl>
-<p> <code>XbaeMatrixSetRowBackgrounds()</code> is a convenient way to specify and modify the <code>XmNcellBackgrounds</code> resource when setting the background of an entire row or rows. If <code>XmNcellBackgrounds</code> is <font SIZE="-1">NULL,</font> then <code>XbaeMatrixSetRowBackgrounds()</code> will create a Pixel table initialized to <code>XmNforeground</code> except for the rows specified in it&#8217;s arguments. If <code>XmNcellBackgrounds</code> is not <font SIZE="-1">NULL,</font> then <code>XbaeMatrixSetRowBackgrounds()</code> will changed the specified rows in that resource to the specified colors. </p>
+<p> <code>XbaeMatrixSetRowBackgrounds()</code> is a convenient way to specify and modify the <code>XmNcellBackgrounds</code> resource when setting the background of an entire row or rows. If <code>XmNcellBackgrounds</code> is NULL, then <code>XbaeMatrixSetRowBackgrounds()</code> will create a Pixel table initialized to <code>XmNforeground</code> except for the rows specified in it&#8217;s arguments. If <code>XmNcellBackgrounds</code> is not NULL, then <code>XbaeMatrixSetRowBackgrounds()</code> will changed the specified rows in that resource to the specified colors. </p>
 </dl>
 <p> <code>XbaeMatrixSetRowColors()</code> </p>
 <dl COMPACT>
@@ -6332,7 +6332,7 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 <dd>Points to an array of Pixel. These specify the colors for the cells in the specified rows. The colors array must have num_colors elements.</dd>
 <dt><i>num_colors</i></dt>
 <dd>The number of colors in the colors array.</dd></dl>
-<p> <code>XbaeMatrixSetRowColors()</code> is a convenient way to specify and modify the <code>XmNcolors</code> resource when setting the color of an entire row or rows. If <code>XmNcolors</code> is <font SIZE="-1">NULL,</font> then <code>XbaeMatrixSetRowColors()</code> will create a Pixel table initialized to <code>XmNforeground</code> except for the rows specified in it&#8217;s arguments. If <code>XmNcolors</code> is not <font SIZE="-1">NULL,</font> then <code>XbaeMatrixSetRowColors()</code> will changed the specified rows in that resource to the specified colors. </p>
+<p> <code>XbaeMatrixSetRowColors()</code> is a convenient way to specify and modify the <code>XmNcolors</code> resource when setting the color of an entire row or rows. If <code>XmNcolors</code> is NULL, then <code>XbaeMatrixSetRowColors()</code> will create a Pixel table initialized to <code>XmNforeground</code> except for the rows specified in it&#8217;s arguments. If <code>XmNcolors</code> is not NULL, then <code>XbaeMatrixSetRowColors()</code> will changed the specified rows in that resource to the specified colors. </p>
 </dl>
 <p> <code>XbaeMatrixSetRowHeight()</code> </p>
 <dl COMPACT>
@@ -6864,12 +6864,12 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 <p> <code>Kevin Brannen</code> (kbrannen [at] metronet.com) took over maintainership following Andrew Wason&#8217;s departure and released version 4.0. </p>
 <p> <code>Andrew Lister</code> (lister [at] db.com) maintained from 1995 to 1999.</p>
 <h2>Special Thanks</h2>
-<p>Andrew Wason for the original idea and source code.<br />
- Jay Schmidgall for his contributions.<br />
- Nick Banyard for providing the multibyte extensions.<br />
- Callum Gibson for the pattern parsing in the XbaeInput widget.<br />
- Sascha Goebel for debugging the scroll-per-pixel code.<br />
- Tobias Oed for lots of code cleanup and debugging.<br />
+<p>Andrew Wason for the original idea and source code.<br/>
+ Jay Schmidgall for his contributions.<br/>
+ Nick Banyard for providing the multibyte extensions.<br/>
+ Callum Gibson for the pattern parsing in the XbaeInput widget.<br/>
+ Sascha Goebel for debugging the scroll-per-pixel code.<br/>
+ Tobias Oed for lots of code cleanup and debugging.<br/>
  The people from Arcad Systemhaus for code submission for XbaeMatrixSort and a couple of related functionalities, and easier pixmap support.</p>
 <h2>Release</h2>
 <p>This document describes XbaeMatrix, version 4.60.4.</p>
@@ -6879,7 +6879,7 @@ description: "XbaeMatrix – The Bellcore Application Environment (BAE) XbaeMatr
 <p>Bellcore, previous and current maintainers of the Xbae widgets (collectively &#8216;authors&#8217;) provide this information solely to professionals who have the appropriate degree of experience to understand and interpret its contents in accordance with generally accepted engineering or other professional standards and applicable regulations. No recommendations as to products or vendors is made or should be implied. </p>
 <p> While the information contained herein has been prepared from sources deemed to be reliable, the authors reserve the right to revise the information without notice, but has no obligation to do so. Unless the recipient has been expressly granted a license by Bellcore under separate applicable written agreement with Bellcore, no license, expressed or implied, is granted under any patents, copyrights or other intellectual property rights. Use of the information is at your discretion and shall not be deemed an inducement by Bellcore to infringe any existing or later-issued patent, copyrights or other intellectual property right. </p>
 <p> THE AUTHORS MAKE NO REPRESENTATIONS AND EXTENDS NO WARRANTIES, EXPRESS OR IMPLIED, WITH RESPECT TO THE INFORMATION, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR ANY PARTICULAR PURPOSE, AND THE WARRANTY AGAINST INFRINGEMENT OF PATENTS OR OTHER INTELLECTUAL PROPERTY RIGHTS. THE INFORMATION IS PROVIDED &#8220;AS IS&#8221;, AND IN NO EVENT SHALL THE AUTHORS OR ANY OF ITS AFFILIATES BE LIABLE FOR ANY DAMAGES, INCLUDING ANY LOST PROFITS OR OTHER INCIDENTAL OR CONSEQUENTIAL DAMAGES RELATING TO THE INFORMATION. </p>
-<p> Copyright 1991, 1992 Bellcore.<br />
- Copyright 1995-99 Andrew Lister All Rights Reserved.<br />
+<p> Copyright 1991, 1992 Bellcore.<br/>
+ Copyright 1995-99 Andrew Lister All Rights Reserved.<br/>
  Copyright 1999-2002 LessTif Developers </p>
 <p> The above no warranty extends to all additions and contributions. No contributor shall be held liable; this work is provided &#8220;as is&#8221;. If this is a problem for you, then don&#8217;t use this software.</p>

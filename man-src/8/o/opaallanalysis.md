@@ -60,7 +60,7 @@ description: "opaallanalysis"
 <dt>-T <i>topology_input</i></dt>
 <dd>Name of topology input file to use. Any %P markers in this filename are replaced with the HFI:port being operated on, such as 0:0 or 1:2. Default = /etc/sysconfig/opa/topology.%P.xml. If -T NONE is specified, no topology input file is used. See <i>opareport</i> for more information.</dd></dl>
 <h2>Example</h2>
-<p>opaallanalysis<br />
+<p>opaallanalysis<br/>
  opaallanalysis -p &#8216;1:1 2:1&#8217;</p>
 <h2>Environment Variables</h2>
 <p>The following environment variables are also used by this command:</p>

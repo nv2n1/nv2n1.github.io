@@ -14,9 +14,9 @@ description: "sc::SavableStateProxy –"
 #include &lt;proxy.h&gt;</code></pre>
 <p> Inherits <code>sc::DescribedClassProxy</code>.</p>
 <h3>Public Member Functions</h3>
-<p><code>Ref</code>&lt; <code>DescribedClass</code> &gt; <code>object</code> ()<br />
- <i>Return the object referred to by this proxy. </i><br />
- <code>SavableStateProxy</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br />
+<p><code>Ref</code>&lt; <code>DescribedClass</code> &gt; <code>object</code> ()<br/>
+ <i>Return the object referred to by this proxy. </i><br/>
+ <code>SavableStateProxy</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br/>
  <i>Create the proxy with a </i><code>Ref</code> to a <code>KeyVal</code> object.</p>
 <h2>Detailed Description</h2>
 <p>Create a proxy for a <code>SavableState</code> object. </p>

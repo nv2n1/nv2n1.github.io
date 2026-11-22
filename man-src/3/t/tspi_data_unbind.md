@@ -7,7 +7,7 @@ url: "/docs/linux/man/3-tspi_data_unbind/"
 description: "Tspi_Data_Unbind – Decrypts data that has been bound to a key"
 ---
 
-<p>TCG Software Stack Developer&#8217;s Reference<br />
+<p>TCG Software Stack Developer&#8217;s Reference<br/>
  </center></p>
 <h2>Name</h2>
 <p>Tspi_Data_Unbind &#8211; Decrypts data that has been bound to a key </p>
@@ -35,19 +35,19 @@ description: "Tspi_Data_Unbind – Decrypts data that has been bound to a key"
 <h2>Return Codes</h2>
 <p><code>Tspi_Data_Unbind</code> returns TSS_SUCCESS on success, otherwise one of the following values is returned:</p>
 <dl COMPACT>
-<dt><font SIZE="-1">TSS_E_INVALID_HANDLE</font></dt>
+<dt>TSS_E_INVALID_HANDLE</dt>
 <dd><i>hEncData</i> or <i>hEncKey</i> is not a valid handle. </dd>
-<dt><font SIZE="-1">TSS_E_INTERNAL_ERROR</font></dt>
+<dt>TSS_E_INTERNAL_ERROR</dt>
 <dd>An internal SW error has been detected. </dd>
-<dt><font SIZE="-1">TSS_E_BAD_PARAMETER</font></dt>
+<dt>TSS_E_BAD_PARAMETER</dt>
 <dd>One or more parameters is bad. </dd>
-<dt><font SIZE="-1">TSS_E_INVALID_ENCSCHEME</font></dt>
+<dt>TSS_E_INVALID_ENCSCHEME</dt>
 <dd>Invalid encryption scheme. </dd>
-<dt><font SIZE="-1">TSS_E_ENC_INVALID_LENGTH</font></dt>
+<dt>TSS_E_ENC_INVALID_LENGTH</dt>
 <dd>Invalid length of data to be encypted. </dd>
-<dt><font SIZE="-1">TSS_E_ENC_NO_DATA</font></dt>
+<dt>TSS_E_ENC_NO_DATA</dt>
 <dd>No data to encrypt. </dd>
-<dt><font SIZE="-1">TSS_E_ENC_INVALID_TYPE</font></dt>
+<dt>TSS_E_ENC_INVALID_TYPE</dt>
 <dd>Invalid encryption type. </dd>
 </dl>
 <h2>Conforming To</h2>

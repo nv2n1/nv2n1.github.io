@@ -13,13 +13,13 @@ description: "edquota – edit user quotas"
 <p> <code>edquota</code> [ <code>-u</code>&nbsp;<wbr>| <code>-g</code> ] [ <code>-F</code> <i>format-name</i> ] [ <code>-f</code> <i>filesystem</i> ] <code>-t</code> </p>
 <p> <code>edquota</code> [ <code>-u</code>&nbsp;<wbr>| <code>-g</code> ] [ <code>-F</code> <i>format-name</i> ] [ <code>-f</code> <i>filesystem</i> ] <code>-T</code> <i>username</i>&nbsp;<wbr>| <i>groupname</i>&#8230;</p>
 <h2>Description</h2>
-<p><code>edquota</code> is a quota editor. One or more users or groups may be specified on the command line. If a number is given in the place of user/group name it is treated as an UID/GID. For each user or group a temporary file is created with an <font SIZE="-1">ASCII</font> representation of the current disk quotas for that user or group and an editor is then invoked on the file. The quotas may then be modified, new quotas added, etc. Setting a quota to zero indicates that no quota should be imposed. </p>
+<p><code>edquota</code> is a quota editor. One or more users or groups may be specified on the command line. If a number is given in the place of user/group name it is treated as an UID/GID. For each user or group a temporary file is created with an ASCII representation of the current disk quotas for that user or group and an editor is then invoked on the file. The quotas may then be modified, new quotas added, etc. Setting a quota to zero indicates that no quota should be imposed. </p>
 <p> Block usage and limits are reported and interpereted as multiples of kibibyte (1024 bytes) blocks by default. Symbols K, M, G, and T can be appended to numeric value to express kibibytes, mebibytes, gibibytes, and tebibytes. </p>
 <p> Inode usage and limits are interpreted literally. Symbols k, m, g, and t can be appended to numeric value to express multiples of 10^3, 10^6, 10^9, and 10^12 inodes. </p>
 <p> Users are permitted to exceed their soft limits for a grace period that may be specified per filesystem. Once the grace period has expired, the soft limit is enforced as a hard limit. </p>
 <p> The current usage information in the file is for informational purposes; only the hard and soft limits can be changed. </p>
 <p> Upon leaving the editor, <code>edquota</code> reads the temporary file and modifies the binary quota files to reflect the changes made. </p>
-<p> The editor invoked is <code><a href="/docs/linux/man/1-vi/">vi</a></code>(1) unless either the <font SIZE="-1"><code>EDITOR</code></font> or the <font SIZE="-1"><code>VISUAL</code></font> environment variable specifies otherwise. </p>
+<p> The editor invoked is <code><a href="/docs/linux/man/1-vi/">vi</a></code>(1) unless either the <code>EDITOR</code> or the <code>VISUAL</code> environment variable specifies otherwise. </p>
 <p> Only the super-user may edit quotas.</p>
 <h2>Options</h2>
 <dl>

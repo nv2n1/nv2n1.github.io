@@ -71,7 +71,7 @@ description: "mysqldump – a database backup program"
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> A dump made using PowerShell on Windows with output redirection creates a file that has UTF-16 encoding: </p>
 <dl>
 <dt>
@@ -201,7 +201,7 @@ shell &gt; mysqldump[options] db_name[tbl_name...] shell &gt; mysqldump[options]
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  If the OpenSSL FIPS Object Module is not available, the only permitted value for <code>&#8211;ssl-fips-mode</code> is OFF. In this case, setting <code>&#8211;ssl-fips-mode</code> to ON or STRICT causes the client to produce a warning at startup and to operate in non-FIPS mode. </dd>
 </dl>
 </dl>
@@ -281,7 +281,7 @@ shell &gt; mysqldump[options] db_name[tbl_name...] shell &gt; mysqldump[options]
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  This option does <i>not</i> exclude statements creating log file groups or tablespaces from <code>mysqldump</code> output; however, you can use the <code>&#8211;no-tablespaces</code> option for this purpose. </dd>
 </dl>
 </dl>
@@ -393,14 +393,14 @@ shell &gt; mysqldump[options] db_name[tbl_name...] shell &gt; mysqldump[options]
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  Inconsistencies in the sequence of transactions from the relay log which have been executed can cause the wrong position to be used. See Section 17.5.1.33, &#8220;Replication and Transaction Inconsistencies&#8221; for more information. </dd>
 </dl>
 <p> <code>&#8211;dump-slave</code> causes the coordinates from the master to be used rather than those of the dumped server, as is done by the <code>&#8211;master-data</code> option. In addition, specfiying this option causes the <code>&#8211;master-data</code> option to be overridden, if used, and effectively ignored. </p>
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Warning</code> </font><br />
+  <code>Warning</code> <br/>
  This option should not be used if the server where the dump is going to be applied uses gtid_mode=ON and MASTER_AUTOPOSITION=1. </dd>
 </dl>
 <p> The option value is handled the same way as for <code>&#8211;master-data</code> (setting no value or 1 causes a CHANGE MASTER TO statement to be written to the dump, setting 2 causes the statement to be written but encased in SQL comments) and has the same effect as <code>&#8211;master-data</code> in terms of enabling or disabling other options and in how locking is handled. </p>
@@ -428,7 +428,7 @@ shell &gt; mysqldump[options] db_name[tbl_name...] shell &gt; mysqldump[options]
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  For MySQL 5.6 and 5.7, it is not recommended to load a dump file when GTIDs are enabled on the server (gtid_mode=ON), if your dump file includes system tables. <code>mysqldump</code> issues DML instructions for the system tables which use the non-transactional MyISAM storage engine, and this combination is not permitted when GTIDs are enabled. </dd>
 </dl>
 <p> If the SET @@GLOBAL.gtid_purged statement would not have the desired result on your target server, you can exclude the statement from the output, or (from MySQL 8.0.17) include it but comment it out so that it is not actioned automatically. You can also include the statement but manually edit it in the dump file to achieve the desired result. </p>
@@ -502,7 +502,7 @@ shell &gt; mysqldump[options] db_name[tbl_name...] shell &gt; mysqldump[options]
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  This option should be used only when <code>mysqldump</code> is run on the same machine as the <code>mysqld</code> server. Because the server creates *.txt files in the directory that you specify, the directory must be writable by the server and the MySQL account that you use must have the FILE privilege. Because <code>mysqldump</code> creates *.sql in the same directory, it must be writable by your system login account. </dd>
 </dl>
 <p> By default, the .txt data files are formatted using tab characters between column values and a newline at the end of each line. The format can be specified explicitly using the <code>&#8211;fields-</code><i>xxx</i> and <code>&#8211;lines-terminated-by</code> options. </p>
@@ -622,7 +622,7 @@ shell &gt; mysqldump-- xml - u root world City &lt; ? xml version = "1.0" ? &gt;
 </dt><dd> &bull; <code>&#8211;triggers</code> </dd>
 <p> Include triggers for each dumped table in the output. This option is enabled by default; disable it with <code>&#8211;skip-triggers</code>. </p>
 <p> To be able to dump a table&#8217;s triggers, you must have the TRIGGER privilege for the table. </p>
-<p> Multiple triggers are permitted. <code>mysqldump</code> dumps triggers in activation order so that when the dump file is reloaded, triggers are created in the same activation order. However, if a <code>mysqldump</code> dump file contains multiple triggers for a table that have the same trigger event and action time, an error occurs for attempts to load the dump file into an older server that does not support multiple triggers. (For a workaround, see m[blue]<code>Downgrade Notes</code>m[]<font SIZE="-2">[1]</font>; you can convert triggers to be compatible with older servers.)</dl>
+<p> Multiple triggers are permitted. <code>mysqldump</code> dumps triggers in activation order so that when the dump file is reloaded, triggers are created in the same activation order. However, if a <code>mysqldump</code> dump file contains multiple triggers for a table that have the same trigger event and action time, an error occurs for attempts to load the dump file into an older server that does not support multiple triggers. (For a workaround, see m[blue]<code>Downgrade Notes</code>m[][1]; you can convert triggers to be compatible with older servers.)</dl>
 <dl>
 <dt>
 </dt><dd> &bull; <code>&#8211;where=&#8217;</code><i>where_condition</i><code>&#8216;</code>, <code>-w &#8216;</code><i>where_condition</i><code>&#8216;</code> </dd>
@@ -696,7 +696,7 @@ shell &gt; mysqldump-- xml - u root world City &lt; ? xml version = "1.0" ? &gt;
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  For upgrades to MySQL 5.7.2 or higher from older versions, do not use <code>&#8211;flush-privileges</code>. For upgrade instructions in this case, see Section 2.11.4, &#8220;Changes in MySQL 8.0&#8221;. </dd>
 </dl>
 </dl>

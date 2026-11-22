@@ -10,7 +10,7 @@ description: "XkbKeyAction – Returns the key action"
 <p>XkbKeyAction &#8211; Returns the key action </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>XkbAction XkbKeyAction</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>KeyCode </code><i>keycode</i><code>,</code> <code>int </code><i>idx</i><code>);</code><br />
+<dt> <code>XkbAction XkbKeyAction</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>KeyCode </code><i>keycode</i><code>,</code> <code>int </code><i>idx</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

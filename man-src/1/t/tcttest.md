@@ -42,30 +42,30 @@ description: "tcttest – test cases of the table database API"
 <p> Options feature the following. </p>
 <dl>
 <dt>
-</dt><dd> <code>-mt</code> : call the function `tctdbsetmutex&#8217;.<br />
- <code>-tl</code> : enable the option `TDBTLARGE&#8217;.<br />
- <code>-td</code> : enable the option `TDBTDEFLATE&#8217;.<br />
- <code>-tb</code> : enable the option `TDBTBZIP&#8217;.<br />
- <code>-tt</code> : enable the option `TDBTTCBS&#8217;.<br />
- <code>-tx</code> : enable the option `TDBTEXCODEC&#8217;.<br />
- <code>-rc </code><i>num</i> : specify the number of cached records.<br />
- <code>-lc </code><i>num</i> : specify the number of cached leaf pages.<br />
- <code>-nc </code><i>num</i> : specify the number of cached non-leaf pages.<br />
- <code>-xm </code><i>num</i> : specify the size of the extra mapped memory.<br />
- <code>-df </code><i>num</i> : specify the unit step number of auto defragmentation.<br />
- <code>-ip</code> : create the number index for the primary key.<br />
- <code>-is</code> : create the string index for the column &quot;str&quot;.<br />
- <code>-in</code> : create the number index for the column &quot;num&quot;.<br />
- <code>-it</code> : create the string index for the column &quot;type&quot;.<br />
- <code>-if</code> : create the token inverted index for the column &quot;flag&quot;.<br />
- <code>-ix</code> : create the q-gram inverted index for the column &quot;text&quot;.<br />
- <code>-nl</code> : enable the option `TDBNOLCK&#8217;.<br />
- <code>-nb</code> : enable the option `TDBLCKNB&#8217;.<br />
- <code>-rnd</code> : select keys at random.<br />
- <code>-pn </code><i>num</i> : specify the number of patterns.<br />
- <code>-dai</code> : use the function `tctdbaddint&#8217; instead of `tctdbputcat&#8217;.<br />
- <code>-dad</code> : use the function `tctdbadddouble&#8217; instead of `tctdbputcat&#8217;.<br />
- <code>-rl</code> : set the length of values at random.<br />
+</dt><dd> <code>-mt</code> : call the function `tctdbsetmutex&#8217;.<br/>
+ <code>-tl</code> : enable the option `TDBTLARGE&#8217;.<br/>
+ <code>-td</code> : enable the option `TDBTDEFLATE&#8217;.<br/>
+ <code>-tb</code> : enable the option `TDBTBZIP&#8217;.<br/>
+ <code>-tt</code> : enable the option `TDBTTCBS&#8217;.<br/>
+ <code>-tx</code> : enable the option `TDBTEXCODEC&#8217;.<br/>
+ <code>-rc </code><i>num</i> : specify the number of cached records.<br/>
+ <code>-lc </code><i>num</i> : specify the number of cached leaf pages.<br/>
+ <code>-nc </code><i>num</i> : specify the number of cached non-leaf pages.<br/>
+ <code>-xm </code><i>num</i> : specify the size of the extra mapped memory.<br/>
+ <code>-df </code><i>num</i> : specify the unit step number of auto defragmentation.<br/>
+ <code>-ip</code> : create the number index for the primary key.<br/>
+ <code>-is</code> : create the string index for the column &quot;str&quot;.<br/>
+ <code>-in</code> : create the number index for the column &quot;num&quot;.<br/>
+ <code>-it</code> : create the string index for the column &quot;type&quot;.<br/>
+ <code>-if</code> : create the token inverted index for the column &quot;flag&quot;.<br/>
+ <code>-ix</code> : create the q-gram inverted index for the column &quot;text&quot;.<br/>
+ <code>-nl</code> : enable the option `TDBNOLCK&#8217;.<br/>
+ <code>-nb</code> : enable the option `TDBLCKNB&#8217;.<br/>
+ <code>-rnd</code> : select keys at random.<br/>
+ <code>-pn </code><i>num</i> : specify the number of patterns.<br/>
+ <code>-dai</code> : use the function `tctdbaddint&#8217; instead of `tctdbputcat&#8217;.<br/>
+ <code>-dad</code> : use the function `tctdbadddouble&#8217; instead of `tctdbputcat&#8217;.<br/>
+ <code>-rl</code> : set the length of values at random.<br/>
  <code>-ru</code> : select update operations at random.
 </dd></dl>
 <p> This command returns 0 on success, another on failure. </p>

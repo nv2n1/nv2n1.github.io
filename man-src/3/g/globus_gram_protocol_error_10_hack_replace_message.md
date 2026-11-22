@@ -11,11 +11,11 @@ description: "Error Messages –"
 <p> Error Messages &#8211; </p>
 <p> GRAM Error Messages Functions in this section handle converting GRAM error codes to strings which can help the user diagnose GRAM problems.</p>
 <h3>Functions</h3>
-<p> const char * <code>globus_gram_protocol_error_string</code> (int error_code)<br />
- <i>Get a description of a a GRAM error code. </i><br />
- void <code>globus_gram_protocol_error_7_hack_replace_message</code> (const char *message)<br />
- <i>Replace the error message associated with error 7 with a custom message. </i><br />
- void <code>globus_gram_protocol_error_10_hack_replace_message</code> (const char *message)<br />
+<p> const char * <code>globus_gram_protocol_error_string</code> (int error_code)<br/>
+ <i>Get a description of a a GRAM error code. </i><br/>
+ void <code>globus_gram_protocol_error_7_hack_replace_message</code> (const char *message)<br/>
+ <i>Replace the error message associated with error 7 with a custom message. </i><br/>
+ void <code>globus_gram_protocol_error_10_hack_replace_message</code> (const char *message)<br/>
  <i>Replace the error message associated with error 10 with a custom message. </i></p>
 <h2>Detailed Description</h2>
 <p> GRAM Error Messages Functions in this section handle converting GRAM error codes to strings which can help the user diagnose GRAM problems. </p>

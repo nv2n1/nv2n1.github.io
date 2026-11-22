@@ -76,7 +76,7 @@ static __c_locale _S_lc_ctype_c_locale (__c_locale __cloc, const char *__s)</cod
 <p> do_is() is a hook for a derived facet to change the behavior of classifying. do_is() must always return the same result for the same input. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__c</i> The char_type to find the mask of.<br />
+<dd><i>__c</i> The char_type to find the mask of.<br/>
  <i>__m</i> The mask to compare against.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -88,8 +88,8 @@ static __c_locale _S_lc_ctype_c_locale (__c_locale __cloc, const char *__s)</cod
 <p> do_is() is a hook for a derived facet to change the behavior of classifying. do_is() must always return the same result for the same input. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__lo</i> Pointer to start of range.<br />
- <i>__hi</i> Pointer to end of range.<br />
+<dd><i>__lo</i> Pointer to start of range.<br/>
+ <i>__hi</i> Pointer to end of range.<br/>
  <i>__vec</i> Pointer to an array of mask storage.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -101,7 +101,7 @@ static __c_locale _S_lc_ctype_c_locale (__c_locale __cloc, const char *__s)</cod
 <p> Note: this is not what you want for codepage conversions. See codecvt for that. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__c</i> The char_type to convert.<br />
+<dd><i>__c</i> The char_type to convert.<br/>
  <i>__dfault</i> Char to return if conversion fails.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -114,9 +114,9 @@ static __c_locale _S_lc_ctype_c_locale (__c_locale __cloc, const char *__s)</cod
 <p> Note: this is not what you want for codepage conversions. See codecvt for that. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__lo</i> Pointer to start of range.<br />
- <i>__hi</i> Pointer to end of range.<br />
- <i>__dfault</i> Char to use if conversion fails.<br />
+<dd><i>__lo</i> Pointer to start of range.<br/>
+ <i>__hi</i> Pointer to end of range.<br/>
+ <i>__dfault</i> Char to use if conversion fails.<br/>
  <i>__to</i> Pointer to the destination array.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -127,8 +127,8 @@ static __c_locale _S_lc_ctype_c_locale (__c_locale __cloc, const char *__s)</cod
 <p> do_scan_is() is a hook for a derived facet to change the behavior of match searching. do_is() must always return the same result for the same input. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__m</i> The mask to compare against.<br />
- <i>__lo</i> Pointer to start of range.<br />
+<dd><i>__m</i> The mask to compare against.<br/>
+ <i>__lo</i> Pointer to start of range.<br/>
  <i>__hi</i> Pointer to end of range.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -140,8 +140,8 @@ static __c_locale _S_lc_ctype_c_locale (__c_locale __cloc, const char *__s)</cod
 <p> do_scan_is() is a hook for a derived facet to change the behavior of match searching. do_is() must always return the same result for the same input. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__m</i> The mask to compare against.<br />
- <i>__lo</i> Pointer to start of range.<br />
+<dd><i>__m</i> The mask to compare against.<br/>
+ <i>__lo</i> Pointer to start of range.<br/>
  <i>__hi</i> Pointer to end of range.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -164,7 +164,7 @@ static __c_locale _S_lc_ctype_c_locale (__c_locale __cloc, const char *__s)</cod
 <p> do_tolower() is a hook for a derived facet to change the behavior of lowercasing. do_tolower() must always return the same result for the same input. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__lo</i> Pointer to start of range.<br />
+<dd><i>__lo</i> Pointer to start of range.<br/>
  <i>__hi</i> Pointer to end of range.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -186,7 +186,7 @@ static __c_locale _S_lc_ctype_c_locale (__c_locale __cloc, const char *__s)</cod
 <p> do_toupper() is a hook for a derived facet to change the behavior of uppercasing. do_toupper() must always return the same result for the same input. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__lo</i> Pointer to start of range.<br />
+<dd><i>__lo</i> Pointer to start of range.<br/>
  <i>__hi</i> Pointer to end of range.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -210,8 +210,8 @@ static __c_locale _S_lc_ctype_c_locale (__c_locale __cloc, const char *__s)</cod
 <p> Note: this is not what you want for codepage conversions. See codecvt for that. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__lo</i> Pointer to start range.<br />
- <i>__hi</i> Pointer to end of range.<br />
+<dd><i>__lo</i> Pointer to start range.<br/>
+ <i>__hi</i> Pointer to end of range.<br/>
  <i>__to</i> Pointer to the destination array.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -221,7 +221,7 @@ static __c_locale _S_lc_ctype_c_locale (__c_locale __cloc, const char *__s)</cod
 <p>Test char_type classification. This function finds a mask M for <i>__c</i> and compares it to mask <i>__m</i>. It does so by returning the value of ctype&lt;char_type&gt;::do_is(). </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__c</i> The char_type to compare the mask of.<br />
+<dd><i>__c</i> The char_type to compare the mask of.<br/>
  <i>__m</i> The mask to compare against.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -232,8 +232,8 @@ static __c_locale _S_lc_ctype_c_locale (__c_locale __cloc, const char *__s)</cod
 <p>Return a mask array. This function finds the mask for each char_type in the range [lo,hi) and successively writes it to vec. vec must have as many elements as the char array. It does so by returning the value of ctype&lt;char_type&gt;::do_is(). </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__lo</i> Pointer to start of range.<br />
- <i>__hi</i> Pointer to end of range.<br />
+<dd><i>__lo</i> Pointer to start of range.<br/>
+ <i>__hi</i> Pointer to end of range.<br/>
  <i>__vec</i> Pointer to an array of mask storage.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -244,7 +244,7 @@ static __c_locale _S_lc_ctype_c_locale (__c_locale __cloc, const char *__s)</cod
 <p> Note: this is not what you want for codepage conversions. See codecvt for that. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__c</i> The char_type to convert.<br />
+<dd><i>__c</i> The char_type to convert.<br/>
  <i>__dfault</i> Char to return if conversion fails.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -256,9 +256,9 @@ static __c_locale _S_lc_ctype_c_locale (__c_locale __cloc, const char *__s)</cod
 <p> Note: this is not what you want for codepage conversions. See codecvt for that. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__lo</i> Pointer to start of range.<br />
- <i>__hi</i> Pointer to end of range.<br />
- <i>__dfault</i> Char to use if conversion fails.<br />
+<dd><i>__lo</i> Pointer to start of range.<br/>
+ <i>__hi</i> Pointer to end of range.<br/>
+ <i>__dfault</i> Char to use if conversion fails.<br/>
  <i>__to</i> Pointer to the destination array.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -268,8 +268,8 @@ static __c_locale _S_lc_ctype_c_locale (__c_locale __cloc, const char *__s)</cod
 <p>Find char_type matching a mask. This function searches for and returns the first char_type c in [lo,hi) for which is(m,c) is true. It does so by returning ctype&lt;char_type&gt;::do_scan_is(). </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__m</i> The mask to compare against.<br />
- <i>__lo</i> Pointer to start of range.<br />
+<dd><i>__m</i> The mask to compare against.<br/>
+ <i>__lo</i> Pointer to start of range.<br/>
  <i>__hi</i> Pointer to end of range.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -279,8 +279,8 @@ static __c_locale _S_lc_ctype_c_locale (__c_locale __cloc, const char *__s)</cod
 <p>Find char_type not matching a mask. This function searches for and returns the first char_type c in [lo,hi) for which is(m,c) is false. It does so by returning ctype&lt;char_type&gt;::do_scan_not(). </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__m</i> The mask to compare against.<br />
- <i>__lo</i> Pointer to first char in range.<br />
+<dd><i>__m</i> The mask to compare against.<br/>
+ <i>__lo</i> Pointer to first char in range.<br/>
  <i>__hi</i> Pointer to end of range.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -299,7 +299,7 @@ static __c_locale _S_lc_ctype_c_locale (__c_locale __cloc, const char *__s)</cod
 <p>Convert array to lowercase. This function converts each char_type in the range [__lo,__hi) to lowercase if possible. Other elements remain untouched. It does so by returning ctype&lt;char_type&gt;:: do_tolower(__lo, __hi). </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__lo</i> Pointer to start of range.<br />
+<dd><i>__lo</i> Pointer to start of range.<br/>
  <i>__hi</i> Pointer to end of range.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -318,7 +318,7 @@ static __c_locale _S_lc_ctype_c_locale (__c_locale __cloc, const char *__s)</cod
 <p>Convert array to uppercase. This function converts each char_type in the range [lo,hi) to uppercase if possible. Other elements remain untouched. It does so by returning ctype&lt;char_type&gt;:: do_toupper(lo, hi). </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__lo</i> Pointer to start of range.<br />
+<dd><i>__lo</i> Pointer to start of range.<br/>
  <i>__hi</i> Pointer to end of range.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -340,8 +340,8 @@ static __c_locale _S_lc_ctype_c_locale (__c_locale __cloc, const char *__s)</cod
 <p> Note: this is not what you want for codepage conversions. See codecvt for that. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__lo</i> Pointer to start of range.<br />
- <i>__hi</i> Pointer to end of range.<br />
+<dd><i>__lo</i> Pointer to start of range.<br/>
+ <i>__hi</i> Pointer to end of range.<br/>
  <i>__to</i> Pointer to the destination array.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

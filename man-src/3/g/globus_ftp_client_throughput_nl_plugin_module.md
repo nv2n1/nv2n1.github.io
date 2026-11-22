@@ -78,9 +78,9 @@ description: "Netlogger Throughput Plugin –"
 <p> This will initialize a netlogger wrapped throughput plugin. Note that the nl_url may be NULL. Regardless of what nl_host is set to, if the env variable NL_DEST_ENV is set, logging will always occur to that location. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>plugin</i> a plugin to be initialized<br />
- <i>nl_url</i> the url to log to (May be NULL) Valid urls are: file://tmp/netlog.log x-<a href="netlog://host[:port]">netlog://host[:port]</a> x-<a href="syslog://localhost">syslog://localhost</a><br />
- <i>prog_name</i> This is used as the prog name in the NetLoggerOpen call<br />
+<dd><i>plugin</i> a plugin to be initialized<br/>
+ <i>nl_url</i> the url to log to (May be NULL) Valid urls are: file://tmp/netlog.log x-<a href="netlog://host[:port]">netlog://host[:port]</a> x-<a href="syslog://localhost">syslog://localhost</a><br/>
+ <i>prog_name</i> This is used as the prog name in the NetLoggerOpen call<br/>
  <i>opaque_string</i> this is an opaque string that will be inserted into all logged statements. (may be NULL)</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -98,8 +98,8 @@ description: "Netlogger Throughput Plugin –"
 <p> This will initialize a netlogger wrapped throughput plugin. Instead of passing a NetLogger url as in the plain init func, you can pass in a previously &#8216;Open&#8217;ed NLhandle. This handle will not be destroyed by this plugin. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>plugin</i> a plugin to be initialized<br />
- <i>nl_handle</i> a previously opened NetLogger handle<br />
+<dd><i>plugin</i> a plugin to be initialized<br/>
+ <i>nl_handle</i> a previously opened NetLogger handle<br/>
  <i>opaque_string</i> this is an opaque string that will be inserted into all logged statements. (may be NULL)</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -117,11 +117,11 @@ description: "Netlogger Throughput Plugin –"
 <p> You can still get the automatic netlogging of throughput along with receiving the same throughput callbacks that the throughput plugin provides by using this function to set these callbacks. Note that the callbacks are defined the same as in the throughput plugin </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>plugin</i><br />
- <i>begin_cb</i> the callback to be called upon the start of a transfer<br />
- <i>per_stripe_cb</i> the callback to be called every time updated throughput info is available for a given stripe<br />
- <i>total_cb</i> the callback to be called every time updated throughput info is available for any stripe<br />
- <i>complete_cb</i> the callback to be called to indicate transfer completion<br />
+<dd><i>plugin</i><br/>
+ <i>begin_cb</i> the callback to be called upon the start of a transfer<br/>
+ <i>per_stripe_cb</i> the callback to be called every time updated throughput info is available for a given stripe<br/>
+ <i>total_cb</i> the callback to be called every time updated throughput info is available for any stripe<br/>
+ <i>complete_cb</i> the callback to be called to indicate transfer completion<br/>
  <i>user_specific</i> a pointer to some user specific data that will be provided to all callbacks</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

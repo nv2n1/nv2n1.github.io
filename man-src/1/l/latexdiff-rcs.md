@@ -16,7 +16,7 @@ description: "latexdiff-vc – wrapper script that calls latexdiff for different
 </pre>
 <p> <code>latexdiff-vc</code> [ <i>latexdiff-options</i> ] [ <i>latexdiff-vc-options</i> ][ <code>&#8211;postscript</code> | <code>&#8211;pdf</code> ] <i>old.tex</i> <i>new.tex</i></p>
 <h2>DESCRIPTION</h2>
-<p> <i>latexdiff-vc</i> is a wrapper script that applies <i>latexdiff</i> to a file, or multiple files under version control (git, subversion (<font SIZE="-1">SVN</font>), mercurial (hg), <font SIZE="-1">CVS, RCS</font>), and optionally runs the sequence of <tt>&quot;latex&quot;</tt> and <tt>&quot;dvips&quot;</tt> or <tt>&quot;pdflatex&quot;</tt> commands necessary to produce pdf or postscript output of the difference tex file(s). It can also be applied to a pair of files to automatise the generation of difference file in postscript or pdf format.</p>
+<p> <i>latexdiff-vc</i> is a wrapper script that applies <i>latexdiff</i> to a file, or multiple files under version control (git, subversion (SVN), mercurial (hg), CVS, RCS), and optionally runs the sequence of <tt>&quot;latex&quot;</tt> and <tt>&quot;dvips&quot;</tt> or <tt>&quot;pdflatex&quot;</tt> commands necessary to produce pdf or postscript output of the difference tex file(s). It can also be applied to a pair of files to automatise the generation of difference file in postscript or pdf format.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>&#8211;rcs</code>, <code>&#8211;svn</code>, <code>&#8211;cvs</code>, <code>&#8211;git</code> or <code>&#8211;hg</code></dt>
@@ -24,7 +24,7 @@ description: "latexdiff-vc – wrapper script that calls latexdiff for different
 <p> latexdiff-cvs, latexdiff-rcs etc are variants of latexdiff-vc which default to the respective versioning system. However, this default can still be overridden using the options above. </p>
 <p> Note that hg needs to support the <tt>&quot;--root&quot;</tt> option (version &gt;= 2.9)</p>
 <dt><code>-r</code>, <code>-r</code> <i>rev</i> or <code>&#8211;revision</code>, <code>&#8211;revision=</code><i>rev</i></dt>
-<dd> Choose revision (under <font SIZE="-1">RCS, CVS, SVN, GIT</font> or <font SIZE="-1">HG</font>). One or two <code>-r</code> options can be specified, and they result in different behaviour:</dd>
+<dd> Choose revision (under RCS, CVS, SVN, GIT or HG). One or two <code>-r</code> options can be specified, and they result in different behaviour:</dd>
 <dl>
 <dl>
 <dt><code>latexdiff-vc</code> -r <i>file.tex</i> &#8230;</dt>
@@ -48,7 +48,7 @@ description: "latexdiff-vc – wrapper script that calls latexdiff for different
 <p> The generic usage of this function is : <tt>&quot;latexdiff-vc --flatten -r rev1 [-r rev2] master.tex&quot;</tt> where master.tex is the project file containing the highest level of includes etc. </p>
 <p> With <tt>&quot;--flatten=keep-intermediate&quot;</tt>, the intermediate revision snapshots are kept in the current directory (Default is to store them in a temporary directory and delete them after generating the diff file.)</p>
 <dt><code>&#8211;only-changes</code></dt>
-<dd> Post-process the output such that only pages with changes on them are displayed. This requires the use of subtype <font SIZE="-1">ZLABEL</font> in latexdiff, which will be set automatically, but any manually set -s option will be overruled (also requires zref package to be installed). (note that this option must be combined with &#8211;ps or &#8211;pdf to make sense)</dd>
+<dd> Post-process the output such that only pages with changes on them are displayed. This requires the use of subtype ZLABEL in latexdiff, which will be set automatically, but any manually set -s option will be overruled (also requires zref package to be installed). (note that this option must be combined with &#8211;ps or &#8211;pdf to make sense)</dd>
 <dt><code>&#8211;force</code></dt>
 <dd> Overwrite existing diff files without asking for confirmation. Default behaviour is to ask for confirmation before overwriting an existing difference file.</dd>
 <dt><code>&#8211;run</code></dt>
@@ -90,7 +90,7 @@ description: "latexdiff-vc – wrapper script that calls latexdiff for different
 <h2>PORTABILITY</h2>
 <p> <i>latexdiff-vc</i> uses external commands and is therefore dependent on the system architecture; it has been tested mainly on Unix-like systems. It also requires a version control system and latex to be installed on the system to make use of all features. Modules from Perl 5.8 or higher are required.</p>
 <h2>BUG REPORTING</h2>
-<p> Please submit bug reports using the issue tracker of the github repository page <i><a rel="nofollow" href="https://github.com/ftilmann/latexdiff.git">https://github.com/ftilmann/latexdiff.git</a></i>, or send them to <i>tilmann &#8212; </i><font SIZE="-1"><i>AT</i></font><i> &#8212; gfz-potsdam.de</i>. Include the version number of <i>latexdiff-vc</i> (option <tt>&quot;--version&quot;</tt>).</p>
+<p> Please submit bug reports using the issue tracker of the github repository page <i><a rel="nofollow" href="https://github.com/ftilmann/latexdiff.git">https://github.com/ftilmann/latexdiff.git</a></i>, or send them to <i>tilmann &#8212; </i><i>AT</i><i> &#8212; gfz-potsdam.de</i>. Include the version number of <i>latexdiff-vc</i> (option <tt>&quot;--version&quot;</tt>).</p>
 <h2>AUTHOR</h2>
 <p> Version 1.2.1 Copyright (C) 2005-2017 Frederik Tilmann </p>
-<p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License Version 3 Contributors: S Utcke, H Bruyninckx; some ideas have been inspired by git-latexdiff bash script. C. Junghans: Mercurial Support. </p>
+<p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License Version 3 Contributors: S Utcke, H Bruyninckx; some ideas have been inspired by git-latexdiff bash script. C. Junghans: Mercurial Support. </p>

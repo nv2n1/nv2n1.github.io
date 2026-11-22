@@ -34,16 +34,16 @@ description: "SGI –"
 <p> template&lt;typename _Tp , typename _Compare &gt; const _Tp &amp; <code>__gnu_cxx::__median</code> (const _Tp &amp;__a, const _Tp &amp;__b, const _Tp &amp;__c, _Compare __comp) </p>
 <p> size_t <code>std::_Find_first</code> () const noexcept </p>
 <p> size_t <code>std::_Find_next</code> (size_t __prev) const noexcept </p>
-<p> template&lt;class _Operation1 , class _Operation2 &gt; unary_compose&lt; _Operation1,<br />
+<p> template&lt;class _Operation1 , class _Operation2 &gt; unary_compose&lt; _Operation1,<br/>
  _Operation2 &gt; <code>__gnu_cxx::compose1</code> (const _Operation1 &amp;__fn1, const _Operation2 &amp;__fn2)&quot; </p>
-<p> template&lt;class _Operation1 , class _Operation2 , class _Operation3 &gt; binary_compose&lt; _Operation1,<br />
+<p> template&lt;class _Operation1 , class _Operation2 , class _Operation3 &gt; binary_compose&lt; _Operation1,<br/>
  _Operation2, _Operation3 &gt; <code>__gnu_cxx::compose2</code> (const _Operation1 &amp;__fn1, const _Operation2 &amp;__fn2, const _Operation3 &amp;__fn3)&quot; </p>
 <p> template&lt;class _Result &gt; constant_void_fun&lt; _Result &gt; <code>__gnu_cxx::constant0</code> (const _Result &amp;__val) </p>
-<p> template&lt;class _Result &gt; constant_unary_fun&lt; _Result,<br />
+<p> template&lt;class _Result &gt; constant_unary_fun&lt; _Result,<br/>
  _Result &gt; <code>__gnu_cxx::constant1</code> (const _Result &amp;__val)&quot; </p>
-<p> template&lt;class _Result &gt; constant_binary_fun&lt; _Result,<br />
+<p> template&lt;class _Result &gt; constant_binary_fun&lt; _Result,<br/>
  _Result, _Result &gt; <code>__gnu_cxx::constant2</code> (const _Result &amp;__val)&quot; </p>
-<p> template&lt;typename _InputIterator , typename _Size , typename _OutputIterator &gt; pair&lt; _InputIterator,<br />
+<p> template&lt;typename _InputIterator , typename _Size , typename _OutputIterator &gt; pair&lt; _InputIterator,<br/>
  _OutputIterator &gt; <code>__gnu_cxx::copy_n</code> (_InputIterator __first, _Size __count, _OutputIterator __result)&quot; </p>
 <p> template&lt;typename _InputIterator , typename _Distance &gt; void <code>__gnu_cxx::distance</code> (_InputIterator __first, _InputIterator __last, _Distance &amp;__n) </p>
 <p> template&lt;class _Tp &gt; _Tp <code>__gnu_cxx::identity_element</code> (<code>std::plus</code>&lt; _Tp &gt;) </p>
@@ -93,8 +93,8 @@ description: "SGI –"
 <p>Find the median of three values. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>__a</i> A value.<br />
- <i>__b</i> A value.<br />
+<dd><i>__a</i> A value.<br/>
+ <i>__b</i> A value.<br/>
  <i>__c</i> A value.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -105,9 +105,9 @@ description: "SGI –"
 <p>Find the median of three values using a predicate for comparison. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>__a</i> A value.<br />
- <i>__b</i> A value.<br />
- <i>__c</i> A value.<br />
+<dd><i>__a</i> A value.<br/>
+ <i>__b</i> A value.<br/>
+ <i>__c</i> A value.<br/>
  <i>__comp</i> A binary predicate.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -173,8 +173,8 @@ description: "SGI –"
 <p>Copies the range [first,first+count) into [result,result+count). </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>__first</i> An input iterator.<br />
- <i>__count</i> The number of elements to copy.<br />
+<dd><i>__first</i> An input iterator.<br/>
+ <i>__count</i> The number of elements to copy.<br/>
  <i>__result</i> An output iterator.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -199,9 +199,9 @@ description: "SGI –"
 <p>memcmp on steroids. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>__first1</i> An input iterator.<br />
- <i>__last1</i> An input iterator.<br />
- <i>__first2</i> An input iterator.<br />
+<dd><i>__first1</i> An input iterator.<br/>
+ <i>__last1</i> An input iterator.<br/>
+ <i>__first2</i> An input iterator.<br/>
  <i>__last2</i> An input iterator.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -250,8 +250,8 @@ description: "SGI –"
 <p>Copies the range [first,last) into result. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>__first</i> An input iterator.<br />
- <i>__count</i> Length<br />
+<dd><i>__first</i> An input iterator.<br/>
+ <i>__count</i> Length<br/>
  <i>__result</i> An output iterator.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

@@ -90,7 +90,7 @@ description: "Mirmon – OO interface for mirmon objects"
 <dt><code>start_probe</code></dt>
 <dd>Start a probe for the mirror in non-blocking mode ; returns the associated (IO::Handle) file handle. The caller must maintain an association between the handles and the mirror objects.</dd>
 <dt><code>finish_probe ( $handle )</code></dt>
-<dd>Sets the (IO::Handle) <code>$handle</code> to blocking <font SIZE="-1">IO</font> ; reads a result from the handle, and updates the state of the mirror.</dd></dl>
+<dd>Sets the (IO::Handle) <code>$handle</code> to blocking IO ; reads a result from the handle, and updates the state of the mirror.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/1-mirmon/">mirmon</a>(1) </p>
 <h2>Author</h2>

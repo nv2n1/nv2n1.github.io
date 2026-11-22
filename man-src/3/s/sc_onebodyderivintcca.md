@@ -15,9 +15,9 @@ description: "sc::OneBodyDerivIntCCA –"
 <p> Inherits <code>sc::OneBodyDerivInt</code>.</p>
 <h3>Public Member Functions</h3>
 <p><code>OneBodyDerivIntCCA</code> (<code>Integral</code> *, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;, IntegralEvaluatorFactory, bool, string) </p>
-<p> void <code>compute_shell</code> (int, int, <code>DerivCenters</code> &amp;)<br />
- <i></i><code>Compute</code> the derivative integrals and place the result in the buffer returned by <code>buffer()</code>.<br />
- void <code>compute_shell</code> (int, int, int)<br />
+<p> void <code>compute_shell</code> (int, int, <code>DerivCenters</code> &amp;)<br/>
+ <i></i><code>Compute</code> the derivative integrals and place the result in the buffer returned by <code>buffer()</code>.<br/>
+ void <code>compute_shell</code> (int, int, int)<br/>
  <i></i><code>Compute</code> the derivative integrals with respect to the given center and place the result in the buffer returned by <code>buffer()</code>.</p>
 <h3>Protected Types</h3>
 <p>typedef void(Int1eCCA::* <code>IntegralFunction</code> )(int, int, <code>DerivCenters</code> &amp;)</p>

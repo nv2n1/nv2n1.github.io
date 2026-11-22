@@ -9,7 +9,7 @@ description: "rxe – Software RDMA over Ethernet"
 
 <p>rxe &#8211; Software RDMA over Ethernet</p>
 <h2>Synopsis</h2>
-<p><code>modprobe rdma_rxe</code><br />
+<p><code>modprobe rdma_rxe</code><br/>
  This is usually performed by a configuration utility (see <code><a href="/docs/linux/man/8-rxe_cfg/">rxe_cfg</a></code>(8).) </p>
 <h2>Description</h2>
 <p>The rdma_rxe kernel module provides a software implementation of the RoCEv2 protocol. The RoCEv2 protocol is an RDMA transport protocol that exists on top of UDP/IPv4 or UDP/IPv6. The InfiniBand (IB) Base Transport Header (BTH) is encapsulated in the UDP packet. Once a RXE instance has been created, communicating via RXE is the same as communicating via any OFED compatible Infiniband HCA, albeit in some cases with addressing implications. In particular, while the use of a GRH header is optional within IB subnets, it is mandatory with RoCE. Verbs applications written over IB verbs should work seamlessly, but they require provisioning of GRH information when creating address vectors. The library and driver are modified to provide for mapping from GID to MAC addresses required by the hardware. </p>

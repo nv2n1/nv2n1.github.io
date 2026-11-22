@@ -21,7 +21,7 @@ description: "idmapd.conf – configuration file for libnfsidmap"
 <dt><code>Domain</code></dt>
 <dd>The local NFSv4 domain name. An NFSv4 domain is a namespace with a unique username&lt;-&gt;UID and groupname&lt;-&gt;GID mapping. (Default: Host&#8217;s fully-qualified DNS domain name)</dd>
 <dt><code>Local-Realms</code></dt>
-<dd>A comma-separated list of Kerberos realm names that may be considered equivalent to the local realm name. For example, users juser [at] ORDER.EDU and juser [at] MAIL.ORDER.EDU may be considered to be the same user in the specified <code>Domain.</code> (Default: the host&#8217;s default realm name)<br />
+<dd>A comma-separated list of Kerberos realm names that may be considered equivalent to the local realm name. For example, users juser [at] ORDER.EDU and juser [at] MAIL.ORDER.EDU may be considered to be the same user in the specified <code>Domain.</code> (Default: the host&#8217;s default realm name)<br/>
  <code>Note:</code> If a value is specified here, the default local realm must be included as well.</dd></dl>
 <h3>[Mapping] section variables</h3>
 <dl>

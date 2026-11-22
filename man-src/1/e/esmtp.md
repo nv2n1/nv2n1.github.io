@@ -10,11 +10,11 @@ description: "esmtp – libESMTP to Sendmail compatibility interface"
 
 <p> esmtp &#8211; libESMTP to Sendmail compatibility interface</p>
 <h2>SYNOPSIS</h2>
-<p> <code>esmtp</code> [<i>flags</i>] [<i>address &#8230;</i>]<br />
+<p> <code>esmtp</code> [<i>flags</i>] [<i>address &#8230;</i>]<br/>
  <code>sendmail</code> [<i>flags</i>] [<i>address &#8230;</i>] </p>
-<p> <code>mailq</code><br />
+<p> <code>mailq</code><br/>
  <code>sendmail -bp</code> </p>
-<p> <code>newaliases</code><br />
+<p> <code>newaliases</code><br/>
  <code>sendmail -bi</code> </p>
 <h2>DESCRIPTION</h2>
 <p> <code>Esmtp</code> is a send-only <code>sendmail</code> emulator for machines which normally retrieve their mail from a centralized mailhub using programs such as <code>fetchmail</code>. </p>

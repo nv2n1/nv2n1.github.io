@@ -14,7 +14,7 @@ description: "byobu-select-session – select and connect to a byobu session"
 <p> If an invalid selection is chosen 3 times in a row, the user is connected to the youngest session. </p>
 <p> By default, if only one session exists, the user is connected to that session, and if no sessions exist, a new session is created &#8212; such that there is no interactive prompt in the normal behavior. However, some users may choose to always be prompted, by touching the file $BYOBU_CONFIG_DIR/.always-select. </p>
 <p> Note that BYOBU_CONFIG_DIR=$HOME/.byobu. </p>
-<p> Named sessions that begin with a &quot;.&quot; are &quot;hidden&quot; from <code><a href="/docs/linux/man/1-byobu-select-session/">byobu-select-session</a></code>(1). This is useful, for instance, if you do not want a session to be automatically selected at login. Example:<br />
+<p> Named sessions that begin with a &quot;.&quot; are &quot;hidden&quot; from <code><a href="/docs/linux/man/1-byobu-select-session/">byobu-select-session</a></code>(1). This is useful, for instance, if you do not want a session to be automatically selected at login. Example:<br/>
 &nbsp;<wbr>&nbsp;<wbr>byobu -S .hidden </p>
 <h2>FILES</h2>
 <p> <i>$BYOBU_CONFIG_DIR/.always-select</i> </p>

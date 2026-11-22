@@ -13,8 +13,8 @@ description: "nanorc – GNU nano’s configuration file"
 <h2>Notice</h2>
 <p>Since version 4.0, <code>nano</code> by default: </p>
 <dl>
-<dd>&bull; does not automatically hard-wrap lines that become overlong,<br />
- &bull; includes the line below the title bar in the editing area,<br />
+<dd>&bull; does not automatically hard-wrap lines that become overlong,<br/>
+ &bull; includes the line below the title bar in the editing area,<br/>
  &bull; does linewise (smooth) scrolling.</dd></dl>
 <p> To get the old, Pico behavior back, you can use <code>set breaklonglines</code>, <code>set emptyline</code>, and <code>set jumpyscrolling</code>.</p>
 <h2>Options</h2>

@@ -10,13 +10,13 @@ description: "davix-get – Download tool based on libdavix"
 
 <p> davix-get &#8211; Download tool based on libdavix</p>
 <h2>SYNOPSIS</h2>
-<p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> davix-get [options]&#8230; url<br />
+<p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> davix-get [options]&#8230; url<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> davix-get [options]&#8230; url local_file</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> </p>
 <h2>DESCRIPTION</h2>
-<p> <code>davix-get</code> is a tool to download resources from HTTP, Webdav or REST compatible services.<br />
+<p> <code>davix-get</code> is a tool to download resources from HTTP, Webdav or REST compatible services.<br/>
  The command supports the protocol Http (http(s)://), WebDav (dav(s)://) and S3 (s3(s)://). </p>
-<p> Target resources can either be a single file or a collection.<br />
+<p> Target resources can either be a single file or a collection.<br/>
  In the case of collection, all sub-collections will also be downloaded. </p>
 <p> davix-get is powered by libdavix. See <a href="/docs/linux/man/3-libdavix/">libdavix</a>(3) for details. </p>
 <h2>OPTIONS</h2>
@@ -191,15 +191,15 @@ description: "davix-get – Download tool based on libdavix"
 </dt><dd> Azure authentication key</dd></dl>
 <p>&nbsp;<wbr>&nbsp;<wbr> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> </p>
 <h2>EXAMPLES</h2>
-<p> <code>Download content and print it on stdout<br />
+<p> <code>Download content and print it on stdout<br/>
 &nbsp;<wbr>&nbsp;<wbr>davix-get&nbsp;<wbr><a rel="nofollow" href="http://example.org/dir1/dir2/file1">http://example.org/dir1/dir2/file1</a> </p>
-<p> Download content to a local file<br />
+<p> Download content to a local file<br/>
 &nbsp;<wbr>&nbsp;<wbr>davix-get s3://bucket.example.org/collection/file2&nbsp;<wbr>/tmp/file2 </p>
-<p> Download content to a local file with VOMS authentication in a Grid environment<br />
+<p> Download content to a local file with VOMS authentication in a Grid environment<br/>
 &nbsp;<wbr>&nbsp;<wbr>davix-get -P grid&nbsp;<wbr><a href="davs://grid-storage.example.org/dir1/file1">davs://grid-storage.example.org/dir1/file1</a>&nbsp;<wbr>/tmp/file1 </p>
-<p> Download content and print it to stdout, using a OAuth token<br />
+<p> Download content and print it to stdout, using a OAuth token<br/>
 &nbsp;<wbr>&nbsp;<wbr>davix-get&nbsp;<wbr><a rel="nofollow" href="https://example.org/dir1/tmpfile">https://example.org/dir1/tmpfile</a>&nbsp;<wbr>-H&nbsp;<wbr>&quot;Authorization: Bearer mytoken&quot; </p>
-<p> Download collection to a local directory<br />
+<p> Download collection to a local directory<br/>
 &nbsp;<wbr>&nbsp;<wbr>davix-get&nbsp;<wbr><a href="dav://example.org/dir">dav://example.org/dir</a>&nbsp;<wbr>./mydir </p>
 <p> </code></p>
 <h2>SEE ALSO</h2>

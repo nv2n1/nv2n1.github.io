@@ -17,7 +17,7 @@ json_pp[-v][-f from_format][-t to_format][-json_opt options_to_json1[, options_t
 
 <h2>DESCRIPTION</h2>
 
- json_pp converts between some input and output formats (one of them is <font SIZE="-1">JSON</font>). This program was copied from json_xs and modified. 
+ json_pp converts between some input and output formats (one of them is JSON). This program was copied from json_xs and modified. 
 
  The default input format is json and the default output format is json with pretty option.
 
@@ -29,29 +29,29 @@ json_pp[-v][-f from_format][-t to_format][-json_opt options_to_json1[, options_t
     -f from_format
 </pre> 
 
- Reads a data in the given format from <font SIZE="-1">STDIN.</font> 
+ Reads a data in the given format from STDIN. 
 
  Format types:
 <dl>
 <dt>json
-</dt><dd> as <font SIZE="-1">JSON</font>
+</dt><dd> as JSON
 </dd><dt>eval
 </dt><dd> as Perl code</dd></dl>
 
 <h3>-t</h3>
 
- Writes a data in the given format to <font SIZE="-1">STDOUT.</font>
+ Writes a data in the given format to STDOUT.
 <dl>
 <dt>null
 </dt><dd> no action.
 </dd><dt>json
-</dt><dd> as <font SIZE="-1">JSON</font>
+</dt><dd> as JSON
 </dd><dt>dumper
 </dt><dd> as Data::Dumper</dd></dl>
 
 <h3>-json_opt</h3>
 
- options to <font SIZE="-1">JSON::PP</font> 
+ options to JSON::PP 
 
  Acceptable options are: 
 
@@ -99,7 +99,7 @@ $ perl - e 'print q|{"foo":"あい","bar":1234567890000000000000000}|' |
 
 <h2>SEE ALSO</h2>
 
- <font SIZE="-1">JSON::PP</font>, json_xs
+ JSON::PP, json_xs
 
 <h2>AUTHOR</h2>
 

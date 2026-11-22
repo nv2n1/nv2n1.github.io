@@ -11,7 +11,7 @@ description: "bacula-sd – Bacula’s Storage Daemon"
 <h2>Synopsis</h2>
 <p><code>bacula-sd</code> [<i>options</i>]</p>
 <h2>Description</h2>
-<p>This manual page documents briefly the <code>bacula-sd</code> command.<br />
+<p>This manual page documents briefly the <code>bacula-sd</code> command.<br/>
  Bacula&#8217;s Storage Daemon acts as the interface between the Bacula network backup system and a tape drive/autochanger or filesystem where the backups will be stored.</p>
 <h2>Options</h2>
 <dl>

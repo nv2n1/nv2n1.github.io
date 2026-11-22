@@ -10,7 +10,7 @@ description: "cdotc.f –"
 <p>cdotc.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>COMPLEX function <code>cdotc</code> (N, CX, INCX, CY, INCY)<br />
+<p>COMPLEX function <code>cdotc</code> (N, CX, INCX, CY, INCY)<br/>
  <i></i><code>CDOTC</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>COMPLEX function cdotc (integerN, complex, dimension(*)CX, integerINCX, complex, dimension(*)CY, integerINCY)</h3>

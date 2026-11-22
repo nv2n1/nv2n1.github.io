@@ -15,8 +15,8 @@ description: "src/antlr3debughandlers.c –"
 <h3>Functions</h3>
 <p> static void <code>ack</code> (<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy) </p>
 <p> static void <code>addChild</code> (<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, <code>pANTLR3_BASE_TREE</code> root, <code>pANTLR3_BASE_TREE</code> child) </p>
-<p> ANTLR3_API <code>pANTLR3_DEBUG_EVENT_LISTENER</code> <code>antlr3DebugListenerNew</code> ()<br />
- <i>Create and initialize a new debug event listener that can be connected to by ANTLRWorks and any other debugger via a socket. </i><br />
+<p> ANTLR3_API <code>pANTLR3_DEBUG_EVENT_LISTENER</code> <code>antlr3DebugListenerNew</code> ()<br/>
+ <i>Create and initialize a new debug event listener that can be connected to by ANTLRWorks and any other debugger via a socket. </i><br/>
  <code>pANTLR3_DEBUG_EVENT_LISTENER</code> <code>antlr3DebugListenerNewPort</code> (<code>ANTLR3_UINT32</code> port) </p>
 <p> static void <code>becomeRoot</code> (<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, <code>pANTLR3_BASE_TREE</code> newRoot, <code>pANTLR3_BASE_TREE</code> oldRoot) </p>
 <p> static void <code>beginBacktrack</code> (<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy, int level) </p>

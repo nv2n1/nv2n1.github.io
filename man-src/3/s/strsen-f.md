@@ -10,7 +10,7 @@ description: "strsen.f –"
 <p>strsen.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>strsen</code> (JOB, COMPQ, SELECT, N, T, LDT, Q, LDQ, WR, WI, M, S, SEP, WORK, LWORK, IWORK, LIWORK, INFO)<br />
+<p>subroutine <code>strsen</code> (JOB, COMPQ, SELECT, N, T, LDT, Q, LDQ, WR, WI, M, S, SEP, WORK, LWORK, IWORK, LIWORK, INFO)<br/>
  <i></i><code>STRSEN</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine strsen (characterJOB, characterCOMPQ, logical, dimension( * )SELECT, integerN, real, dimension( ldt, * )T, integerLDT, real, dimension( ldq, * )Q, integerLDQ, real, dimension( * )WR, real, dimension( * )WI, integerM, realS, realSEP, real, dimension( * )WORK, integerLWORK, integer, dimension( * )IWORK, integerLIWORK, integerINFO)</h3>

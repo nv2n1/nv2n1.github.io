@@ -28,8 +28,8 @@ description: "Parcellite – Lightweight GTK+ Clipboard Manager"
 <h2>ACTIONS</h2>
 <p> <code>Parcellite&#8217;s</code> actions perform commands using the contents of your clipboard. &quot;<code>%s</code>&quot; in the command is replaced with the clipboard contents. Use double quotes &quot;<code>%s</code>&quot; to expand env variables like $HOME to /home/your_name Use single quotes &#8216;%s&#8217; to feed your action with env variables without shell expansion. Use %% if you want a literal %. See the man page for gnuC printf (man 2 printf) for more information.</p>
 <h2>CLI EXAMPLES</h2>
-<p>&nbsp;<wbr>echo&nbsp;<wbr>&quot;copied to clipboard&quot;&nbsp;<wbr>| parcellite<br />
-&nbsp;<wbr>parcellite&nbsp;<wbr>&quot;copied to clipboard&quot;<br />
+<p>&nbsp;<wbr>echo&nbsp;<wbr>&quot;copied to clipboard&quot;&nbsp;<wbr>| parcellite<br/>
+&nbsp;<wbr>parcellite&nbsp;<wbr>&quot;copied to clipboard&quot;<br/>
 &nbsp;<wbr>echo&nbsp;<wbr>&quot;copied to clipboard&quot;&nbsp;<wbr>| parcellite -c</p>
 <h2>Hotkeys</h2>
 <p>&nbsp;<wbr>The available hotkey modifiers are&nbsp;<wbr>&lt;Ctrl&gt;,&nbsp;<wbr>&lt;Alt&gt;&nbsp;<wbr>&lt;Shift&gt;,&nbsp;<wbr>&lt;Release&gt;,&nbsp;<wbr>&lt;Meta&gt;,&nbsp;<wbr>&lt;Super&gt;,&nbsp;<wbr>&lt;Hyper&gt;,&nbsp;<wbr>&lt;Mod[1-5]&gt;</p>
@@ -41,16 +41,16 @@ description: "Parcellite – Lightweight GTK+ Clipboard Manager"
 <dd> generally checking all these boxes is appropriate.</dd>
 <dt><code>History </code></dt>
 <dd>
-&nbsp;<wbr>Check&nbsp;<wbr>&#8216;Save history&#8217;&nbsp;<wbr>to save history on close.<br />
-&nbsp;<wbr>&#8216;Position history&#8217;&nbsp;<wbr>&#8211; Set the location where history appears. If unchecked, appears where the mouse is.<br />
-&nbsp;<wbr>&#8216;X&#8217;&nbsp;<wbr>&#8211; X location in pixels. 0 is top of screen.<br />
-&nbsp;<wbr>&#8216;Y&#8217;&nbsp;<wbr>&#8211; Y location in pixels. 0 is left of screen.<br />
-&nbsp;<wbr>&nbsp;<wbr><br />
+&nbsp;<wbr>Check&nbsp;<wbr>&#8216;Save history&#8217;&nbsp;<wbr>to save history on close.<br/>
+&nbsp;<wbr>&#8216;Position history&#8217;&nbsp;<wbr>&#8211; Set the location where history appears. If unchecked, appears where the mouse is.<br/>
+&nbsp;<wbr>&#8216;X&#8217;&nbsp;<wbr>&#8211; X location in pixels. 0 is top of screen.<br/>
+&nbsp;<wbr>&#8216;Y&#8217;&nbsp;<wbr>&#8211; Y location in pixels. 0 is left of screen.<br/>
+&nbsp;<wbr>&nbsp;<wbr><br/>
 &nbsp;<wbr>&#8216;Max Data Size&nbsp;<wbr>(MB)&#8217;&nbsp;<wbr>&#8211; Set Maximum amount of data to copy for each entry in MBytes. 0 is no limit.</dd>
 <dt><code>Miscellaneous</code></dt>
 <dd>
-&nbsp;<wbr>&#8216;Search As You Type&#8217;&nbsp;<wbr>&#8211; If checked, does a search-as-you-type. Turns red if not found. Goes to top&nbsp;<wbr>(Alt-E)&nbsp;<wbr>line when no chars are entered for search<br />
-&nbsp;<wbr>&nbsp;<wbr><br />
+&nbsp;<wbr>&#8216;Search As You Type&#8217;&nbsp;<wbr>&#8211; If checked, does a search-as-you-type. Turns red if not found. Goes to top&nbsp;<wbr>(Alt-E)&nbsp;<wbr>line when no chars are entered for search<br/>
+&nbsp;<wbr>&nbsp;<wbr><br/>
 &nbsp;<wbr>&#8216;Case Sensitive Search&#8217;&nbsp;<wbr>&#8211; If checked, does case sensitive search. </dd>
 <p>&nbsp;<wbr>&#8216;Ignore Whitespace Only&#8217;&nbsp;<wbr>&#8211; If checked, will ignore any clipboard additions that contain only whitespace. </p>
 <p>&nbsp;<wbr>&#8216;Trim Whitespace&#8217;&nbsp;<wbr>&#8211; If checked, will trim whitespace from beginning and end of entry. </p>
@@ -83,7 +83,7 @@ description: "Parcellite – Lightweight GTK+ Clipboard Manager"
 <h2>AUTHOR</h2>
 <p> Written by Gilberto &quot;Xyhthyx&quot; Miralla &lt;xyhthyx [at] gmail.com&gt;. Gilberto is no longer maintaining the project. &#8216;Rickyrockrat&#8217; is his replacement.</p>
 <h2>BUGS</h2>
-<p> Please include your ~/.config/parcellite/parcelliterc file when filing a bug. This will give me your preferences.<br />
-&nbsp;<wbr>Please report any bugs to the bug tracker via this web page:<br />
-&nbsp;<wbr><a rel="nofollow" href="http://sourceforge.net/projects/parcellite/support">http://sourceforge.net/projects/parcellite/support</a><br />
+<p> Please include your ~/.config/parcellite/parcelliterc file when filing a bug. This will give me your preferences.<br/>
+&nbsp;<wbr>Please report any bugs to the bug tracker via this web page:<br/>
+&nbsp;<wbr><a rel="nofollow" href="http://sourceforge.net/projects/parcellite/support">http://sourceforge.net/projects/parcellite/support</a><br/>
 &nbsp;<wbr>Click on&nbsp;<wbr>&#8216;Bugs&#8217;&nbsp;<wbr>under&nbsp;<wbr>&#8216;Project Trackers&#8217;&nbsp;<wbr>to file a bug if you are registered with Source Forge. If not, email rickyrockrat (rickyrockrat at users.sourceforge.net), or click the &#8216;project administers&#8217; in the link above. </p>

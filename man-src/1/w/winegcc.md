@@ -51,5 +51,5 @@ description: "winegcc – Wine C and C++ MinGW Compatible Compiler"
 <h2>AVAILABILITY</h2>
 <p> <code>winegcc</code> is part of the Wine distribution, which is available through WineHQ, the <code>Wine development headquarters</code></p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-gcc/">gcc</a></code>(1), <code><a href="/docs/linux/man/1-winebuild/">winebuild</a></code>(1), <code><a href="/docs/linux/man/1-wrc/">wrc</a></code>(1), <code><a href="/docs/linux/man/1-wine/">wine</a></code>(1),<br />
+<p> <code><a href="/docs/linux/man/1-gcc/">gcc</a></code>(1), <code><a href="/docs/linux/man/1-winebuild/">winebuild</a></code>(1), <code><a href="/docs/linux/man/1-wrc/">wrc</a></code>(1), <code><a href="/docs/linux/man/1-wine/">wine</a></code>(1),<br/>
  <code>Wine documentation and support</code> </p>

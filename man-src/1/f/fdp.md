@@ -8,22 +8,22 @@ url: "/docs/linux/man/1-fdp/"
 description: "dot – filter for drawing directed graphs neato – filter for drawing undirected graphs twopi – filter for radial layouts of graphs circo – filter for circular layout of graphs fdp – filter for drawi..."
 ---
 
-<p> dot &#8211; filter for drawing directed graphs<br />
- neato &#8211; filter for drawing undirected graphs<br />
- twopi &#8211; filter for radial layouts of graphs<br />
- circo &#8211; filter for circular layout of graphs<br />
- fdp &#8211; filter for drawing undirected graphs<br />
- sfdp &#8211; filter for drawing large undirected graphs<br />
- patchwork &#8211; filter for squarified tree maps<br />
+<p> dot &#8211; filter for drawing directed graphs<br/>
+ neato &#8211; filter for drawing undirected graphs<br/>
+ twopi &#8211; filter for radial layouts of graphs<br/>
+ circo &#8211; filter for circular layout of graphs<br/>
+ fdp &#8211; filter for drawing undirected graphs<br/>
+ sfdp &#8211; filter for drawing large undirected graphs<br/>
+ patchwork &#8211; filter for squarified tree maps<br/>
  osage &#8211; filter for array-based layouts </p>
 <h2>SYNOPSIS</h2>
-<p> <code>dot</code> [<i>options</i>] [files]<br />
- <code>neato</code> [<i>options</i>] [files]<br />
- <code>twopi</code> [<i>options</i>] [files]<br />
- <code>circo</code> [<i>options</i>] [files]<br />
- <code>fdp</code> [<i>options</i>] [files]<br />
- <code>sfdp</code> [<i>options</i>] [files]<br />
- <code>patchwork</code> [<i>options</i>] [files]<br />
+<p> <code>dot</code> [<i>options</i>] [files]<br/>
+ <code>neato</code> [<i>options</i>] [files]<br/>
+ <code>twopi</code> [<i>options</i>] [files]<br/>
+ <code>circo</code> [<i>options</i>] [files]<br/>
+ <code>fdp</code> [<i>options</i>] [files]<br/>
+ <code>sfdp</code> [<i>options</i>] [files]<br/>
+ <code>patchwork</code> [<i>options</i>] [files]<br/>
  <code>osage</code> [<i>options</i>] [files]</p>
 <h2>DESCRIPTION</h2>
 <p> These are a collection of programs for drawing graphs. There is actually only one main program; the specific layout algorithms are implemented as plugins. Thus, they largely share all of the same command-line options. </p>
@@ -37,36 +37,36 @@ description: "dot – filter for drawing directed graphs neato – filter for dr
 <p> <i>osage</i> draws the graph using its cluster structure. For a given cluster, each of its subclusters is laid out internally. Then the subclusters, plus any remaining nodes, are repositioned based on the cluster&#8217;s <code>pack</code> and <code>packmode</code> attributes.</p>
 <h2>OUTPUT FORMATS</h2>
 <p> Graphviz uses an extensible plugin mechanism for its output renderers, so to see what output formats your installation of dot supports you can use &#8220;dot -T:&#8221; and check the warning message. Also, The plugin mechanism supports multiple implementations of the output formats, allowing variations in the renderers and formatters. To see what variants are available for a particular output format, use, for example: &#8220;dot -Tpng:&#8221; and to force a particular variant, use, for example: &#8220;dot -Tpng:gd&#8221; </p>
-<p> Traditionally, Graphviz supports the following:<br />
- <code>-Tdot</code> (Dot format containing layout information),<br />
- <code>-Txdot</code> (Dot format containing complete layout information),<br />
- <code>-Tps</code> (PostScript),<br />
- <code>-Tpdf</code> (PDF),<br />
- <code>-Tsvg</code> <code>-Tsvgz</code> (Structured Vector Graphics),<br />
- <code>-Tfig</code> (XFIG graphics),<br />
- <code>-Tpng</code> (png bitmap graphics),<br />
- <code>-Tgif</code> (gif bitmap graphics),<br />
- <code>-Tjpg</code> <code>-Tjpeg</code> (jpeg bitmap graphics),<br />
- <code>-Tjson</code> (xdot information encoded in JSON),<br />
- <code>-Timap</code> (imagemap files for httpd servers for each node or edge that has a non-null <code>href</code> attribute.),<br />
- <code>-Tcmapx</code> (client-side imagemap for use in html and xhtml).<br />
+<p> Traditionally, Graphviz supports the following:<br/>
+ <code>-Tdot</code> (Dot format containing layout information),<br/>
+ <code>-Txdot</code> (Dot format containing complete layout information),<br/>
+ <code>-Tps</code> (PostScript),<br/>
+ <code>-Tpdf</code> (PDF),<br/>
+ <code>-Tsvg</code> <code>-Tsvgz</code> (Structured Vector Graphics),<br/>
+ <code>-Tfig</code> (XFIG graphics),<br/>
+ <code>-Tpng</code> (png bitmap graphics),<br/>
+ <code>-Tgif</code> (gif bitmap graphics),<br/>
+ <code>-Tjpg</code> <code>-Tjpeg</code> (jpeg bitmap graphics),<br/>
+ <code>-Tjson</code> (xdot information encoded in JSON),<br/>
+ <code>-Timap</code> (imagemap files for httpd servers for each node or edge that has a non-null <code>href</code> attribute.),<br/>
+ <code>-Tcmapx</code> (client-side imagemap for use in html and xhtml).<br/>
  Additional less common or more special-purpose output formats can be found at //<a rel="nofollow" href="http://www.graphviz.org/content/output-formats.">http://www.graphviz.org/content/output-formats.</a> </p>
 <p> Alternative plugins providing support for a given output format can be found from the error message resulting from appending a &#8216;:&#8217; to the format. e.g. <code>-Tpng:</code> The first plugin listed is always the default. </p>
 <p> The <code>-P</code> switch can be used to produce a graph of all output variants supported by plugins in the local installation of graphviz.</p>
 <h2>GRAPH FILE LANGUAGE</h2>
 <p> Here is a synopsis of the graph file language, normally using the extension <code>.gv</code>, for graphs: </p>
-<p> [<code>strict</code>] (<code>graph</code>|<code>digraph</code>) <i>name</i> { <i>statement-list</i> }<br />
+<p> [<code>strict</code>] (<code>graph</code>|<code>digraph</code>) <i>name</i> { <i>statement-list</i> }<br/>
  is the top-level graph. If the graph is <code>strict</code>, then multiple edges are not allowed between the same pairs of nodes. If it is a directed graph, indicated by <code>digraph</code>, then the <i>edgeop</i> must be &quot;-&gt;&quot;. If it is an undirected <code>graph</code> then the <i>edgeop</i> must be &quot;&#8211;&quot;. </p>
 <p> Statements may be: </p>
-<p> <i>name</i><code>=</code><i>val</i><code>;</code><br />
- <code>node [</code><i>name</i><code>=</code><i>val</i><code>];</code><br />
- <code>edge [</code><i>name</i><code>=</code><i>val</i><code>];</code><br />
+<p> <i>name</i><code>=</code><i>val</i><code>;</code><br/>
+ <code>node [</code><i>name</i><code>=</code><i>val</i><code>];</code><br/>
+ <code>edge [</code><i>name</i><code>=</code><i>val</i><code>];</code><br/>
  Set default graph, node, or edge attribute <i>name</i> to <i>val</i>. Any subgraph, node, or edge appearing after this inherits the new default attributes. </p>
-<p> <code>n0 [</code><i>name0=val0,name1=val1,&#8230;</i><code>];</code><br />
+<p> <code>n0 [</code><i>name0=val0,name1=val1,&#8230;</i><code>];</code><br/>
  Creates node <code>n0</code> (if it does not already exist) and sets its attributes according to the optional list. </p>
-<p> <code>n0 </code><i>edgeop</i> n1 <i>edgeop</i> <i>&#8230;</i><i>edgeop</i> nn <code>[</code><i>name0=val0,name1=val1,&#8230;</i><code>];</code><br />
+<p> <code>n0 </code><i>edgeop</i> n1 <i>edgeop</i> <i>&#8230;</i><i>edgeop</i> nn <code>[</code><i>name0=val0,name1=val1,&#8230;</i><code>];</code><br/>
  Creates edges between nodes <code>n0</code>, <code>n1</code>, &#8230;, <code>nn</code> and sets their attributes according to the optional list. Creates nodes as necessary. </p>
-<p> [<code>subgraph </code><i>name</i>] <code>{ </code><i>statement-list </i><code>}</code><br />
+<p> [<code>subgraph </code><i>name</i>] <code>{ </code><i>statement-list </i><code>}</code><br/>
  Creates a subgraph. Subgraphs may be used in place of <code>n0</code>, &#8230;, <code>nn</code> in the above statements to create edges. [<code>subgraph </code><i>name</i>] is optional; if missing, the subgraph is assigned an internal name. </p>
 <p> The language accepts both C-style comments /*C&#8230;*/ or //&#8230; </p>
 <p> Attribute names and values are ordinary (C-style) strings. The following sections describe attributes that control graph layout. </p>
@@ -102,24 +102,24 @@ description: "dot – filter for drawing directed graphs neato – filter for dr
 <p> <code>ranksep=</code><i>f</i> sets the minimum separation between ranks. </p>
 <p> <code>rankdir=LR|RL|BT</code> requests a left-to-right, right-to-left, or bottom-to-top, drawing. </p>
 <p> <code>rank=same</code> (or <code>min</code> or <code>max</code>) in a subgraph constrains the rank assignment of its nodes. If a subgraph&#8217;s name has the prefix <code>cluster</code>, its nodes are drawn in a distinct rectangle of the layout. Clusters may be nested. </p>
-<p> <code>(neato-specific attributes)</code><br />
+<p> <code>(neato-specific attributes)</code><br/>
  <code>mode=</code><i>val</i>. Algorithm for minimizing energy in the layout. By default, <code>neato</code> uses stress majorization. If <code>mode=KK</code>, it uses a version of gradient descent. </p>
 <p> <code>model=</code><i>val</i>. The <code>neato</code> model computes the desired distances between all pairs of vertices. By default, it uses the length of the shortest path. If <code>model</code> is set to <code>circuit</code>, a circuit-resistance model is used. If <code>model</code> is set to <code>subset</code>, it uses a model whereby the edge length is the number of nodes that are neighbors of exactly one of the edge&#8217;s vertices. </p>
 <p> <code>start=</code><i>val</i>. Requests random initial placement and seeds the random number generator. If <i>val</i> is not an integer, the process ID or current time is used as the seed. </p>
 <p> <code>epsilon=</code><i>n</i>. Sets the cutoff for the solver. The default is 0.1. </p>
-<p> <code>(twopi-specific attributes)</code><br />
+<p> <code>(twopi-specific attributes)</code><br/>
  <code>root=</code><i>ctr</i>. This specifies the node to be used as the center of the layout. If not specified, <i>twopi</i> will randomly pick one of the nodes that are furthest from a leaf node, where a leaf node is a node of degree 1. If no leaf nodes exists, an arbitrary node is picked as center. </p>
 <p> <code>ranksep=</code><i>val</i>. Specifies the radial distance in inches between the sequence of rings. The default is 0.75. </p>
-<p> <code>(circo-specific attributes)</code><br />
+<p> <code>(circo-specific attributes)</code><br/>
  <code>root=</code><i>nodename</i>. Specifies the name of a node occurring in the root block. If the graph is disconnected, the <code>root</code> node attribute can be used to specify additional root blocks. </p>
 <p> <code>mindist=</code><i>value</i>. Sets the minimum separation between all nodes. If not specified then <i>circo</i> uses a default value of 1.0. </p>
-<p> <code>(fdp-specific attributes)</code><br />
+<p> <code>(fdp-specific attributes)</code><br/>
  <code>K=</code><i>val</i>. Sets the default ideal node separation in the layout. </p>
 <p> <code>maxiter=</code><i>val</i>. Sets the maximum number of iterations used to layout the graph. </p>
 <p> <code>start=</code><i>val</i>. Adjusts the random initial placement of nodes with no specified position. If <i>val</i> is is an integer, it is used as the seed for the random number generator. If <i>val</i> is not an integer, a random system-generated integer, such as the process ID or current time, is used as the seed. </p>
 <h2> Node Attributes</h2>
 <p> <code>height=</code><i>d</i> or <code>width=</code><i>d</i> sets minimum height or width. Adding <code>fixedsize=true</code> forces these to be the actual size (text labels are ignored). </p>
-<p> <code>shape=</code><i>builtin_polygon</i> record epsf<br />
+<p> <code>shape=</code><i>builtin_polygon</i> record epsf<br/>
  <i>builtin_polygon</i> can be such values as <code>plaintext, ellipse, oval, circle, egg, triangle, box, diamond, trapezium, parallelogram, house, hexagon, octagon, note, tab, box3d, or component,</code>, among others. (Polygons are defined or modified by the following node attributes: <code>regular</code>, <code>peripheries</code>, <code>sides</code>, <code>orientation</code>, <code>distortion</code> and <code>skew</code>.) <code>epsf</code> uses the node&#8217;s <code>shapefile</code> attribute as the path name of an external EPSF file to be automatically loaded for the node shape. </p>
 <p> See <a rel="nofollow" href="http://www.graphviz.org/content/node-shapes">http://www.graphviz.org/content/node-shapes</a> for a complete description of node shapes. </p>
 <p> <code>color=</code><i>colorvalue</i> sets the outline color, and the default fill color if style=filled and <code>fillcolor</code> is not specified. </p>
@@ -135,9 +135,9 @@ description: "dot – filter for drawing directed graphs neato – filter for dr
 <p> <code>orientation=</code><i>f</i> sets the orientation of the first apex of the polygon counterclockwise from the vertical, in degrees. <i>f</i> may be a floating point number. The orientation of labels is not affected by this attribute. This attribute is added to the initial orientation of <i>builtin_polygons.</i> </p>
 <p> <code>distortion=</code><i>f</i> sets the amount of broadening of the top and narrowing of the bottom of the polygon (relative to its orientation). Floating point values between -1 and +1 are suggested. This attribute is ignored by <i>builtin_polygons</i>. </p>
 <p> <code>skew=</code><i>f</i> sets the amount of right-displacement of the top and left-displacement of the bottom of the polygon (relative to its orientation). Floating point values between -1 and +1 are suggested. This attribute is ignored by <i>builtin_polygons</i>. </p>
-<p> <code>(circo-specific attributes)</code><br />
+<p> <code>(circo-specific attributes)</code><br/>
  <code>root=</code><i>true/false</i>. This specifies that the block containing the given node be treated as the root of the spanning tree in the layout. </p>
-<p> <code>(neato- and fdp-specific attributes)</code><br />
+<p> <code>(neato- and fdp-specific attributes)</code><br/>
  <code>pin=</code><i>val</i>. If <i>val</i> is <code>true</code>, the node will remain at its initial position. </p>
 <h2> Edge Attributes</h2>
 <p> <code>weight=</code><i>val</i> where <i>val</i> is the cost of the edge. For <code>dot</code>, weights must be non-negative integers. Values greater than 1 tend to shorten the edge; weight 0 flat edges are ignored for ordering nodes. In <code>twopi</code>, a weight of 0 will cause the edge to be ignored in constructing the underlying spanning tree. For <code>neato</code> and <code>fdp</code>, a heavier weight will put more emphasis on the algorithm achieving an edge length closer to that specified by the edge&#8217;s <code>len</code> attribute. </p>
@@ -162,15 +162,15 @@ description: "dot – filter for drawing directed graphs neato – filter for dr
 <p> <code>labeldistance</code> and <code>labelangle</code> (in degrees CCW) specify the placement of head and tail labels. </p>
 <p> <code>decorate</code> draws line from edge to label. </p>
 <p> <code>samehead,sametail</code> aim edges having the same value to the same port, using the average landing point. </p>
-<p> <code>(dot-specific attributes)</code><br />
+<p> <code>(dot-specific attributes)</code><br/>
  <code>constraint=false</code> causes an edge to be ignored for rank assignment. </p>
 <p> <code>minlen=</code><i>n</i> where <i>n</i> is an integer factor that applies to the edge length (ranks for normal edges, or minimum node separation for flat edges). </p>
 <p> <code>xlabel=</code><i>&quot;text&quot;</i> Edge labels in <code>dot</code> are treated as special types of nodes, with space allocated for them during node layout. This can sometimes deform the edge routing. If an <code>xlabel</code> is used instead, the label is placed after all nodes and edges have been positioned. In turn, this may mean that there is some overlap among the labels. </p>
-<p> <code>(neato and fdp-specific attributes)</code><br />
+<p> <code>(neato and fdp-specific attributes)</code><br/>
  <code>len=</code><i>f</i> sets the optimal length of an edge. The default is 1.0. </p>
 <h2>COMMAND-LINE OPTIONS</h2>
-<p> <code>-G</code> sets a default graph attribute.<br />
- <code>-N</code> sets a default node attribute.<br />
+<p> <code>-G</code> sets a default graph attribute.<br/>
+ <code>-N</code> sets a default node attribute.<br/>
  <code>-E</code> sets a default edge attribute. Example: <code>-Gsize=&quot;7,8&quot; -Nshape=box -Efontsize=8</code> </p>
 <p> <code>-l</code><i>file</i> loads custom PostScript library files. Usually these define custom shapes or styles. If <code>-l</code> is given by itself, the standard library is omitted. </p>
 <p> <code>-T</code><i>lang</i> sets the output language as described above. </p>
@@ -231,18 +231,18 @@ graph test123
 <p> Because unconstrained optimization is employed, node boxes can possibly overlap or touch unrelated edges. All existing spring embedders seem to have this limitation. </p>
 <p> Apparently reasonable attempts to pin nodes or adjust edge lengths and weights can cause instability.</p>
 <h2>AUTHORS</h2>
-<p> Stephen C. North &lt;north [at] research.att.com&gt;<br />
- Emden R. Gansner &lt;erg [at] graphviz.org&gt;<br />
- John C. Ellson &lt;ellson [at] research.att.com&gt;<br />
+<p> Stephen C. North &lt;north [at] research.att.com&gt;<br/>
+ Emden R. Gansner &lt;erg [at] graphviz.org&gt;<br/>
+ John C. Ellson &lt;ellson [at] research.att.com&gt;<br/>
  Yifan Hu &lt;yifanhu [at] yahoo.com&gt; </p>
 <p> The bitmap driver (PNG, GIF etc) is by Thomas Boutell, &lt;<a rel="nofollow" href="http://www.boutell.com/gd">http://www.boutell.com/gd</a>&gt; </p>
 <p> The Truetype font renderer is from the Freetype Project (David Turner, Robert Wilhelm, and Werner Lemberg) (who can be contacted at freetype-devel [at] lists.lrz-muenchen.de).</p>
 <h2>SEE ALSO</h2>
 <p> This man page contains only a small amount of the information related to the Graphviz layout programs. The most complete information can be found at <a rel="nofollow" href="http://www.graphviz.org/Documentation.php,">http://www.graphviz.org/Documentation.php,</a> especially in the on-line reference pages. Most of these documents are also available in the <i>doc</i> and <i>doc/info</i> subtrees in the source and binary distributions. </p>
 <p> <code><a href="/docs/linux/man/1-dotty/">dotty</a></code>(1),<code>tcldot</code>(n),<code>xcolors</code>(1),<code>libgraph</code>(3). </p>
-<p> E. R. Gansner, S. C. North, K. P. Vo, &quot;DAG &#8211; A Program to Draw Directed Graphs&quot;, Software &#8211; Practice and Experience 17(1), 1988, pp. 1047-1062.<br />
- E. R. Gansner, E. Koutsofios, S. C. North, K. P. Vo, &quot;A Technique for Drawing Directed Graphs,&quot; IEEE Trans. on Soft. Eng. 19(3), 1993, pp. 214-230.<br />
- S. North and E. Koutsofios, &quot;Applications of graph visualization&quot;, Graphics Interface 94, pp. 234-245.<br />
- E. R. Gansner and E. Koutsofios and S. C. North, &quot;Drawing Graphs with dot,&quot; Available at <a rel="nofollow" href="http://www.graphviz.org/pdf/dotguide.pdf.">http://www.graphviz.org/pdf/dotguide.pdf.</a><br />
- S. C. North, &quot;NEATO User&#8217;s Manual&quot;. Available <a rel="nofollow" href="http://www.graphviz.org/pdf/neatoguide.pdf.">http://www.graphviz.org/pdf/neatoguide.pdf.</a><br />
+<p> E. R. Gansner, S. C. North, K. P. Vo, &quot;DAG &#8211; A Program to Draw Directed Graphs&quot;, Software &#8211; Practice and Experience 17(1), 1988, pp. 1047-1062.<br/>
+ E. R. Gansner, E. Koutsofios, S. C. North, K. P. Vo, &quot;A Technique for Drawing Directed Graphs,&quot; IEEE Trans. on Soft. Eng. 19(3), 1993, pp. 214-230.<br/>
+ S. North and E. Koutsofios, &quot;Applications of graph visualization&quot;, Graphics Interface 94, pp. 234-245.<br/>
+ E. R. Gansner and E. Koutsofios and S. C. North, &quot;Drawing Graphs with dot,&quot; Available at <a rel="nofollow" href="http://www.graphviz.org/pdf/dotguide.pdf.">http://www.graphviz.org/pdf/dotguide.pdf.</a><br/>
+ S. C. North, &quot;NEATO User&#8217;s Manual&quot;. Available <a rel="nofollow" href="http://www.graphviz.org/pdf/neatoguide.pdf.">http://www.graphviz.org/pdf/neatoguide.pdf.</a><br/>
  E. R. Gansner and Y. Hu, &quot;Efficient, Proximity-Preserving Node Overlap Removal&quot;, J. Graph Algorithms Appl., 14(1) pp. 53-74, 2010. </p>

@@ -9,10 +9,10 @@ description: "iwspy – Get wireless statistics from specific nodes"
 
 <p>iwspy &#8211; Get wireless statistics from specific nodes</p>
 <h2>Synopsis</h2>
-<p><code>iwspy [</code><i>interface</i><code>]</code><br />
- <code>iwspy </code><i>interface</i><code> [+] </code><i>DNSNAME</i><code> | </code><i>IPADDR</i><code> | </code><i>HWADDR</i><code> [&#8230;]</code><br />
- <code>iwspy </code><i>interface</i><code> off</code><br />
- <code>iwspy </code><i>interface</i><code> setthr </code><i>low high</i><br />
+<p><code>iwspy [</code><i>interface</i><code>]</code><br/>
+ <code>iwspy </code><i>interface</i><code> [+] </code><i>DNSNAME</i><code> | </code><i>IPADDR</i><code> | </code><i>HWADDR</i><code> [&#8230;]</code><br/>
+ <code>iwspy </code><i>interface</i><code> off</code><br/>
+ <code>iwspy </code><i>interface</i><code> setthr </code><i>low high</i><br/>
  <code>iwspy </code><i>interface</i><code> getthr</code></p>
 <h2>Description</h2>
 <p><code>Iwspy</code> is used to set a list of addresses to monitor in a wireless network interface and to read back quality of link information for each of those. This information is the same as the one available in <i>/proc/net/wireless</i> : quality of the link, signal strength and noise level. </p>
@@ -30,8 +30,8 @@ description: "iwspy – Get wireless statistics from specific nodes"
 <dt><code>off</code></dt>
 <dd>Remove the current list of addresses and disable the spy functionality</dd>
 <dt><code>setthr</code></dt>
-<dd>Set the <i>low</i> and <i>high</i> signal strength threshold for the iwspy event (for drivers that support it).<br />
- Every time the signal strength for any of the address monitored with iwspy goes lower than the low threshold or goes higher than the high threshold, a Wireless Event will be generated.<br />
+<dd>Set the <i>low</i> and <i>high</i> signal strength threshold for the iwspy event (for drivers that support it).<br/>
+ Every time the signal strength for any of the address monitored with iwspy goes lower than the low threshold or goes higher than the high threshold, a Wireless Event will be generated.<br/>
  This can be used to monitor link outages without having to run iwspy periodically.</dd>
 <dt><code>getthr</code></dt>
 <dd>Retrieve the current <i>low</i> and <i>high</i> signal strength threshold for the iwspy event.</dd></dl>

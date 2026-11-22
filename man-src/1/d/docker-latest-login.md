@@ -20,11 +20,11 @@ description: "docker-login – Log in to a Docker registry."
 <p> item connecting to a remote daemon, such as a docker-machine provisioned docker engine. item user is added to the docker group. This will impact the security of your system; the docker group is root equivalent. See &lt;<a rel="nofollow" href="https://docs.docker.com/articles/security/#docker-daemon-attack-surface">https://docs.docker.com/articles/security/#docker-daemon-attack-surface</a>&gt; for details.</dd></dl>
 <p> You can log into any public or private repository for which you have credentials. When you log in, the command stores encoded credentials in $HOME/.docker/config.json on Linux or %USERPROFILE%/.docker/config.json on Windows. </p>
 <h2>OPTIONS</h2>
-<p> <code>&#8211;help</code><br />
+<p> <code>&#8211;help</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Print usage statement </p>
-<p> <code>-p</code>, <code>&#8211;password</code>=&quot;&quot;<br />
+<p> <code>-p</code>, <code>&#8211;password</code>=&quot;&quot;<br/>
 Password </p>
-<p> <code>-u</code>, <code>&#8211;username</code>=&quot;&quot;<br />
+<p> <code>-u</code>, <code>&#8211;username</code>=&quot;&quot;<br/>
 Username </p>
 <h2>EXAMPLES</h2>
 <h2>Login to a registry on your localhost</h2>

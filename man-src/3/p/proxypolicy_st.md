@@ -16,7 +16,7 @@ description: "PROXYPOLICY_st –"
 <p> This typedef maintains information about the policies that have been placed on a proxy certificate </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>policy_language</i> defines which policy language is to be used to define the policies<br />
+<dd><i>policy_language</i> defines which policy language is to be used to define the policies<br/>
  <i>policy</i> the policy that determines the policies on a certificate</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for globus gsi proxy ssl from the source code.</p>

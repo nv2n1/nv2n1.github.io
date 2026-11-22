@@ -13,7 +13,7 @@ description: "ffmpeg-resampler – FFmpeg Resampler"
 <p> The FFmpeg resampler provides a high-level interface to the libswresample library audio resampling utilities. In particular it allows one to perform audio resampling, audio channel layout rematrixing, and convert audio format and packing layout.</p>
 <h2>RESAMPLER OPTIONS</h2>
 <p> The audio resampler supports the following named options. </p>
-<p> Options may be set by specifying &#8211;<i>option</i> <i>value</i> in the FFmpeg tools, <i>option</i>=<i>value</i> for the aresample filter, by setting the value explicitly in the <tt>&quot;SwrContext&quot;</tt> options or using the <i>libavutil/opt.h</i> <font SIZE="-1">API</font> for programmatic use.</p>
+<p> Options may be set by specifying &#8211;<i>option</i> <i>value</i> in the FFmpeg tools, <i>option</i>=<i>value</i> for the aresample filter, by setting the value explicitly in the <tt>&quot;SwrContext&quot;</tt> options or using the <i>libavutil/opt.h</i> API for programmatic use.</p>
 <dl>
 <dt><code>ich, in_channel_count</code></dt>
 <dd> Set the number of input channels. Default value is 0. Setting this value is not mandatory if the corresponding channel layout <code>in_channel_layout</code> is set.</dd>
@@ -41,7 +41,7 @@ description: "ffmpeg-resampler – FFmpeg Resampler"
 <dt><code>slev, surround_mix_level</code></dt>
 <dd> Set the surround mix level. It is a value expressed in deciBel, and must be in the interval [-32,32].</dd>
 <dt><code>lfe_mix_level</code></dt>
-<dd> Set <font SIZE="-1">LFE</font> mix into non <font SIZE="-1">LFE</font> level. It is used when there is a <font SIZE="-1">LFE</font> input but no <font SIZE="-1">LFE</font> output. It is a value expressed in deciBel, and must be in the interval [-32,32].</dd>
+<dd> Set LFE mix into non LFE level. It is used when there is a LFE input but no LFE output. It is a value expressed in deciBel, and must be in the interval [-32,32].</dd>
 <dt><code>rmvol, rematrix_volume</code></dt>
 <dd> Set rematrix volume. Default value is 1.0.</dd>
 <dt><code>rematrix_maxval</code></dt>
@@ -92,7 +92,7 @@ description: "ffmpeg-resampler – FFmpeg Resampler"
 <dl>
 <dl>
 <dt><code>swr</code></dt>
-<dd> select the native <font SIZE="-1">SW</font> Resampler; filter options precision and cheby are not applicable in this case.</dd>
+<dd> select the native SW Resampler; filter options precision and cheby are not applicable in this case.</dd>
 <dt><code>soxr</code></dt>
 <dd> select the SoX Resampler (where available); compensation, and filter options filter_size, phase_shift, exact_rational, filter_type &amp; kaiser_beta, are not applicable in this case.</dd></dl>
 </dl>
@@ -134,7 +134,7 @@ description: "ffmpeg-resampler – FFmpeg Resampler"
 <dt><code>dolby</code></dt>
 <dd> select Dolby</dd>
 <dt><code>dplii</code></dt>
-<dd> select Dolby Pro Logic <font SIZE="-1">II</font></dd></dl>
+<dd> select Dolby Pro Logic II</dd></dl>
 </dl>
 <dl>
 <dt>
@@ -163,4 +163,4 @@ description: "ffmpeg-resampler – FFmpeg Resampler"
 <h2>AUTHORS</h2>
 <p> The FFmpeg developers. </p>
 <p> For details about the authorship, see the Git history of the project (<a href="git://source.ffmpeg.org/ffmpeg">git://source.ffmpeg.org/ffmpeg</a>), e.g. by typing the command <code>git log</code> in the FFmpeg source directory, or browsing the online repository at &lt;<code><a rel="nofollow" href="http://source.ffmpeg.org">http://source.ffmpeg.org</a></code>&gt;. </p>
-<p> Maintainers for the specific components are listed in the file <i></i><font SIZE="-1"><i>MAINTAINERS</i></font><i></i> in the source code tree. </p>
+<p> Maintainers for the specific components are listed in the file <i></i><i>MAINTAINERS</i><i></i> in the source code tree. </p>

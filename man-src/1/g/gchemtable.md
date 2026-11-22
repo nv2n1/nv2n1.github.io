@@ -23,6 +23,6 @@ description: "gchemtable – periodic table of the elements"
 <dt>
 </dt><dd> Manpage author.</dd></dl>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2002-2007 Jean Br&#8217;efort<br />
+<p> Copyright &#169; 2002-2007 Jean Br&#8217;efort<br/>
  Copyright &#169; 2004-2007 Daniel Leidert </p>
 <p> Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 or any later version published by the Free Software Foundation. </p>

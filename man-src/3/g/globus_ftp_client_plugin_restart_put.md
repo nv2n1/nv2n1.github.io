@@ -18,15 +18,15 @@ description: "Plugins –"
 <p> <code>Netlogger Throughput Plugin</code> </p>
 <p> <code>Throughput Performance Plugin</code> </p>
 <h3>Data Structures</h3>
-<p> struct <code>globus_i_ftp_client_plugin_t</code><br />
+<p> struct <code>globus_i_ftp_client_plugin_t</code><br/>
  <i>FTP Client Plugin.</i> </p>
 <p> Each plugin implementation should define a method for initializing one of these structures. Plugins may be implemented as either a static function table, or a specialized plugin with plugin-specific attributes. &quot;</p>
 <h3>Typedefs</h3>
-<p> typedef struct<br />
- <code>globus_i_ftp_client_plugin_t</code> * <code>globus_ftp_client_plugin_t</code>&quot;<br />
+<p> typedef struct<br/>
+ <code>globus_i_ftp_client_plugin_t</code> * <code>globus_ftp_client_plugin_t</code>&quot;<br/>
  <i>FTP Client plugin</i> </p>
-<p> An FTP Client plugin is used to add restart, monitoring, and performance tuning operations to the FTP Client library, without modifying the base API. Multiple plugins may be associated with a globus_ftp_client_handle_t. &quot;<br />
- typedef<br />
+<p> An FTP Client plugin is used to add restart, monitoring, and performance tuning operations to the FTP Client library, without modifying the base API. Multiple plugins may be associated with a globus_ftp_client_handle_t. &quot;<br/>
+ typedef<br/>
  <code>globus_ftp_client_plugin_t</code> *(* <code>globus_ftp_client_plugin_copy_t</code> )(<code>globus_ftp_client_plugin_t</code> *plugin_template, void *plugin_specific)&quot; </p>
 <p> typedef void(* <code>globus_ftp_client_plugin_destroy_t</code> )(<code>globus_ftp_client_plugin_t</code> *plugin, void *plugin_specific) </p>
 <p> typedef void(* <code>globus_ftp_client_plugin_connect_t</code> )(<code>globus_ftp_client_plugin_t</code> *plugin, void *plugin_specific, <code>globus_ftp_client_handle_t</code> *handle, const char *url) </p>
@@ -60,8 +60,8 @@ description: "Plugins –"
 <p> typedef void(* <code>globus_ftp_client_plugin_response_t</code> )(<code>globus_ftp_client_plugin_t</code> *plugin, void *plugin_specific, <code>globus_ftp_client_handle_t</code> *handle, const char *url, globus_object_t *error, const globus_ftp_control_response_t *ftp_response) </p>
 <p> typedef void(* <code>globus_ftp_client_plugin_fault_t</code> )(<code>globus_ftp_client_plugin_t</code> *plugin, void *plugin_specific, <code>globus_ftp_client_handle_t</code> *handle, const char *url, globus_object_t *error) </p>
 <p> typedef void(* <code>globus_ftp_client_plugin_complete_t</code> )(<code>globus_ftp_client_plugin_t</code> *plugin, void *plugin_specific, <code>globus_ftp_client_handle_t</code> *handle) </p>
-<p> typedef struct<br />
- <code>globus_i_ftp_client_plugin_t</code> <code>globus_i_ftp_client_plugin_t</code>&quot;<br />
+<p> typedef struct<br/>
+ <code>globus_i_ftp_client_plugin_t</code> <code>globus_i_ftp_client_plugin_t</code>&quot;<br/>
  <i>FTP Client Plugin.</i> </p>
 <p> Each plugin implementation should define a method for initializing one of these structures. Plugins may be implemented as either a static function table, or a specialized plugin with plugin-specific attributes. &quot;</p>
 <h3>Enumerations</h3>
@@ -105,8 +105,8 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>plugin</i> The plugin which is being notified.<br />
- <i>plugin_specific</i> Plugin-specific data.<br />
+</dt><dd> <i>plugin</i> The plugin which is being notified.<br/>
+ <i>plugin_specific</i> Plugin-specific data.<br/>
  <i>handle</i> The handle associated with the request.</dd></dl>
 <h3>typedef void(* globus_ftp_client_plugin_authenticate_t)(<code>globus_ftp_client_plugin_t</code> *plugin, void *plugin_specific, <code>globus_ftp_client_handle_t</code> *handle, const char *url, const globus_ftp_control_auth_info_t *auth_info)</h3>
 <p> Plugin authentication notification callback. </p>
@@ -115,10 +115,10 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>plugin</i> The plugin which is being notified.<br />
- <i>plugin_specific</i> Plugin-specific data.<br />
- <i>handle</i> The handle associated with the connection.<br />
- <i>url</i> The URL of the server to connect to.<br />
+</dt><dd> <i>plugin</i> The plugin which is being notified.<br/>
+ <i>plugin_specific</i> Plugin-specific data.<br/>
+ <i>handle</i> The handle associated with the connection.<br/>
+ <i>url</i> The URL of the server to connect to.<br/>
  <i>auth_info</i> Authentication and authorization info being used to authenticate with the FTP or GridFTP server.</dd></dl>
 <h3>typedef void(* globus_ftp_client_plugin_chgrp_t)(<code>globus_ftp_client_plugin_t</code> *plugin, void *plugin_specific, <code>globus_ftp_client_handle_t</code> *handle, const char *url, const char *group, const <code>globus_ftp_client_operationattr_t</code> *attr, globus_bool_t restart)</h3>
 <p> Plugin chgrp notification callback. </p>
@@ -127,12 +127,12 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>plugin</i> The plugin which is being notified.<br />
- <i>plugin_specific</i> Plugin-specific data.<br />
- <i>handle</i> The handle associated with the delete operation.<br />
- <i>url</i> The url to chgrp.<br />
- <i>group</i> The group name or ID to change to.<br />
- <i>attr</i> The attributes to be used during this operation.<br />
+</dt><dd> <i>plugin</i> The plugin which is being notified.<br/>
+ <i>plugin_specific</i> Plugin-specific data.<br/>
+ <i>handle</i> The handle associated with the delete operation.<br/>
+ <i>url</i> The url to chgrp.<br/>
+ <i>group</i> The group name or ID to change to.<br/>
+ <i>attr</i> The attributes to be used during this operation.<br/>
  <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current delete operation; otherwise, this is set to GLOBUS_FALSE.</dd></dl>
 <h3>typedef void(* globus_ftp_client_plugin_chmod_t)(<code>globus_ftp_client_plugin_t</code> *plugin, void *plugin_specific, <code>globus_ftp_client_handle_t</code> *handle, const char *url, int mode, const <code>globus_ftp_client_operationattr_t</code> *attr, globus_bool_t restart)</h3>
 <p> Plugin chmod notification callback. </p>
@@ -141,12 +141,12 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>plugin</i> The plugin which is being notified.<br />
- <i>plugin_specific</i> Plugin-specific data.<br />
- <i>handle</i> The handle associated with the delete operation.<br />
- <i>url</i> The url to chmod.<br />
- <i>mode</i> The file mode to be applied.<br />
- <i>attr</i> The attributes to be used during this operation.<br />
+</dt><dd> <i>plugin</i> The plugin which is being notified.<br/>
+ <i>plugin_specific</i> Plugin-specific data.<br/>
+ <i>handle</i> The handle associated with the delete operation.<br/>
+ <i>url</i> The url to chmod.<br/>
+ <i>mode</i> The file mode to be applied.<br/>
+ <i>attr</i> The attributes to be used during this operation.<br/>
  <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current delete operation; otherwise, this is set to GLOBUS_FALSE.</dd></dl>
 <h3>typedef void(* globus_ftp_client_plugin_cksm_t)(<code>globus_ftp_client_plugin_t</code> *plugin, void *plugin_specific, <code>globus_ftp_client_handle_t</code> *handle, const char *url, globus_off_t offset, globus_off_t length, const char *algorithm, const <code>globus_ftp_client_operationattr_t</code> *attr, globus_bool_t restart)</h3>
 <p> Plugin cksm notification callback. </p>
@@ -155,14 +155,14 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>plugin</i> The plugin which is being notified.<br />
- <i>plugin_specific</i> Plugin-specific data.<br />
- <i>handle</i> The handle associated with the delete operation.<br />
- <i>url</i> The url to cksm.<br />
- <i>offset</i> File offset to start calculating checksum.<br />
- <i>length</i> Length of data to read from the starting offset. Use -1 to read the entire file.<br />
- <i>algorithm</i> A pointer to a string to be filled with the checksum of the file. On error the value pointed to by it is undefined.<br />
- <i>attr</i> The attributes to be used during this operation.<br />
+</dt><dd> <i>plugin</i> The plugin which is being notified.<br/>
+ <i>plugin_specific</i> Plugin-specific data.<br/>
+ <i>handle</i> The handle associated with the delete operation.<br/>
+ <i>url</i> The url to cksm.<br/>
+ <i>offset</i> File offset to start calculating checksum.<br/>
+ <i>length</i> Length of data to read from the starting offset. Use -1 to read the entire file.<br/>
+ <i>algorithm</i> A pointer to a string to be filled with the checksum of the file. On error the value pointed to by it is undefined.<br/>
+ <i>attr</i> The attributes to be used during this operation.<br/>
  <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current delete operation; otherwise, this is set to GLOBUS_FALSE.</dd></dl>
 <h3>typedef void(* globus_ftp_client_plugin_command_t)(<code>globus_ftp_client_plugin_t</code> *plugin, void *plugin_specific, <code>globus_ftp_client_handle_t</code> *handle, const char *url, const char *command)</h3>
 <p> Command callback. </p>
@@ -170,10 +170,10 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>plugin</i> The plugin which is being notified.<br />
- <i>plugin_specific</i> Plugin-specific data.<br />
- <i>handle</i> The handle associated with the request.<br />
- <i>url</i> The URL which this command is being sent to.<br />
+</dt><dd> <i>plugin</i> The plugin which is being notified.<br/>
+ <i>plugin_specific</i> Plugin-specific data.<br/>
+ <i>handle</i> The handle associated with the request.<br/>
+ <i>url</i> The URL which this command is being sent to.<br/>
  <i>command</i> A string containing the command which is being sent to the server (TYPE I, for example).</dd></dl>
 <h3>typedef void(* globus_ftp_client_plugin_complete_t)(<code>globus_ftp_client_plugin_t</code> *plugin, void *plugin_specific, <code>globus_ftp_client_handle_t</code> *handle)</h3>
 <p> Completion notification callback. </p>
@@ -181,8 +181,8 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>plugin</i> The plugin which is being notified.<br />
- <i>plugin_specific</i> Plugin-specific data.<br />
+</dt><dd> <i>plugin</i> The plugin which is being notified.<br/>
+ <i>plugin_specific</i> Plugin-specific data.<br/>
  <i>handle</i> The handle associated with the operation.</dd></dl>
 <h3>typedef void(* globus_ftp_client_plugin_connect_t)(<code>globus_ftp_client_plugin_t</code> *plugin, void *plugin_specific, <code>globus_ftp_client_handle_t</code> *handle, const char *url)</h3>
 <p> Plugin connection begin function. </p>
@@ -191,8 +191,8 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>plugin</i> The plugin which is being notified.<br />
- <i>plugin_specific</i> Plugin-specific data.<br />
+</dt><dd> <i>plugin</i> The plugin which is being notified.<br/>
+ <i>plugin_specific</i> Plugin-specific data.<br/>
  <i>handle</i> The handle associated with the connection.</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
@@ -205,7 +205,7 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>plugin_template</i> A plugin previously initialized by a call to the plugin-specific initialization function. by the user.<br />
+</dt><dd> <i>plugin_template</i> A plugin previously initialized by a call to the plugin-specific initialization function. by the user.<br/>
  <i>plugin_specific</i> Plugin-specific data.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -221,12 +221,12 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>plugin</i> The plugin which is being notified.<br />
- <i>plugin_specific</i> Plugin-specific data.<br />
- <i>handle</i> The handle associated with the request.<br />
- <i>buffer</i> The buffer which was successfully transferred over the network.<br />
- <i>length</i> The amount of data to read or written.<br />
- <i>offset</i> The offset into the file where this data buffer belongs.<br />
+</dt><dd> <i>plugin</i> The plugin which is being notified.<br/>
+ <i>plugin_specific</i> Plugin-specific data.<br/>
+ <i>handle</i> The handle associated with the request.<br/>
+ <i>buffer</i> The buffer which was successfully transferred over the network.<br/>
+ <i>length</i> The amount of data to read or written.<br/>
+ <i>offset</i> The offset into the file where this data buffer belongs.<br/>
  <i>eof</i> This value is set to GLOBUS_TRUE if end-of-file is being processed for this transfer.</dd></dl>
 <h3>typedef void(* globus_ftp_client_plugin_delete_t)(<code>globus_ftp_client_plugin_t</code> *plugin, void *plugin_specific, <code>globus_ftp_client_handle_t</code> *handle, const char *url, const <code>globus_ftp_client_operationattr_t</code> *attr, globus_bool_t restart)</h3>
 <p> Plugin delete notification callback. </p>
@@ -235,11 +235,11 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>plugin</i> The plugin which is being notified.<br />
- <i>plugin_specific</i> Plugin-specific data.<br />
- <i>handle</i> The handle associated with the delete operation.<br />
- <i>url</i> The url to be deleted.<br />
- <i>attr</i> The attributes to be used during this operation.<br />
+</dt><dd> <i>plugin</i> The plugin which is being notified.<br/>
+ <i>plugin_specific</i> Plugin-specific data.<br/>
+ <i>handle</i> The handle associated with the delete operation.<br/>
+ <i>url</i> The url to be deleted.<br/>
+ <i>attr</i> The attributes to be used during this operation.<br/>
  <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current delete operation; otherwise, this is set to GLOBUS_FALSE.</dd></dl>
 <h3>typedef void(* globus_ftp_client_plugin_destroy_t)(<code>globus_ftp_client_plugin_t</code> *plugin, void *plugin_specific)</h3>
 <p> Plugin destroy function. </p>
@@ -247,7 +247,7 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>plugin</i> The plugin, created by the create function, which is to be destroyed.<br />
+</dt><dd> <i>plugin</i> The plugin, created by the create function, which is to be destroyed.<br/>
  <i>plugin_specific</i> Plugin-specific data.</dd></dl>
 <h3>typedef void(* globus_ftp_client_plugin_fault_t)(<code>globus_ftp_client_plugin_t</code> *plugin, void *plugin_specific, <code>globus_ftp_client_handle_t</code> *handle, const char *url, globus_object_t *error)</h3>
 <p> Fault notification callback. </p>
@@ -255,10 +255,10 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>plugin</i> The plugin which is being notified.<br />
- <i>plugin_specific</i> Plugin-specific data.<br />
- <i>handle</i> The handle associated with the request.<br />
- <i>url</i> The url being processed when the fault ocurred.<br />
+</dt><dd> <i>plugin</i> The plugin which is being notified.<br/>
+ <i>plugin_specific</i> Plugin-specific data.<br/>
+ <i>handle</i> The handle associated with the request.<br/>
+ <i>url</i> The url being processed when the fault ocurred.<br/>
  <i>error</i> An error object describing the fault.</dd></dl>
 <h3>typedef void(* globus_ftp_client_plugin_feat_t)(<code>globus_ftp_client_plugin_t</code> *plugin, void *plugin_specific, <code>globus_ftp_client_handle_t</code> *handle, const char *url, const <code>globus_ftp_client_operationattr_t</code> *attr, globus_bool_t restart)</h3>
 <p> Plugin feat notification callback. </p>
@@ -267,11 +267,11 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>plugin</i> The plugin which is being notified.<br />
- <i>plugin_specific</i> Plugin-specific data.<br />
- <i>handle</i> The handle associated with the feat operation.<br />
- <i>url</i> The url to be feat&#8217;d.<br />
- <i>attr</i> The attributes to be used during this operation.<br />
+</dt><dd> <i>plugin</i> The plugin which is being notified.<br/>
+ <i>plugin_specific</i> Plugin-specific data.<br/>
+ <i>handle</i> The handle associated with the feat operation.<br/>
+ <i>url</i> The url to be feat&#8217;d.<br/>
+ <i>attr</i> The attributes to be used during this operation.<br/>
  <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current feat operation; otherwise, this is set to GLOBUS_FALSE.</dd></dl>
 <h3>typedef void(* globus_ftp_client_plugin_get_t)(<code>globus_ftp_client_plugin_t</code> *plugin, void *plugin_specific, <code>globus_ftp_client_handle_t</code> *handle, const char *url, const <code>globus_ftp_client_operationattr_t</code> *attr, globus_bool_t restart)</h3>
 <p> Plugin get notification callback. </p>
@@ -280,11 +280,11 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>plugin</i> The plugin which is being notified.<br />
- <i>plugin_specific</i> Plugin-specific data.<br />
- <i>handle</i> The handle associated with the get operation.<br />
- <i>url</i> The url of the get operation.<br />
- <i>attr</i> The attributes to be used during this transfer.<br />
+</dt><dd> <i>plugin</i> The plugin which is being notified.<br/>
+ <i>plugin_specific</i> Plugin-specific data.<br/>
+ <i>handle</i> The handle associated with the get operation.<br/>
+ <i>url</i> The url of the get operation.<br/>
+ <i>attr</i> The attributes to be used during this transfer.<br/>
  <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current get transfer; otherwise, this is set to GLOBUS_FALSE.</dd></dl>
 <h3>typedef void(* globus_ftp_client_plugin_list_t)(<code>globus_ftp_client_plugin_t</code> *plugin, void *plugin_specific, <code>globus_ftp_client_handle_t</code> *handle, const char *url, const <code>globus_ftp_client_operationattr_t</code> *attr, globus_bool_t restart)</h3>
 <p> Plugin list notification callback. </p>
@@ -293,11 +293,11 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>plugin</i> The plugin which is being notified.<br />
- <i>plugin_specific</i> Plugin-specific data.<br />
- <i>handle</i> The handle associated with the list operation.<br />
- <i>url</i> The url of the list operation.<br />
- <i>attr</i> The attributes to be used during this transfer.<br />
+</dt><dd> <i>plugin</i> The plugin which is being notified.<br/>
+ <i>plugin_specific</i> Plugin-specific data.<br/>
+ <i>handle</i> The handle associated with the list operation.<br/>
+ <i>url</i> The url of the list operation.<br/>
+ <i>attr</i> The attributes to be used during this transfer.<br/>
  <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current list transfer; otherwise, this is set to GLOBUS_FALSE.</dd></dl>
 <h3>typedef void(* globus_ftp_client_plugin_machine_list_t)(<code>globus_ftp_client_plugin_t</code> *plugin, void *plugin_specific, <code>globus_ftp_client_handle_t</code> *handle, const char *url, const <code>globus_ftp_client_operationattr_t</code> *attr, globus_bool_t restart)</h3>
 <p> Plugin machine list notification callback. </p>
@@ -306,11 +306,11 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>plugin</i> The plugin which is being notified.<br />
- <i>plugin_specific</i> Plugin-specific data.<br />
- <i>handle</i> The handle associated with the list operation.<br />
- <i>url</i> The url of the list operation.<br />
- <i>attr</i> The attributes to be used during this transfer.<br />
+</dt><dd> <i>plugin</i> The plugin which is being notified.<br/>
+ <i>plugin_specific</i> Plugin-specific data.<br/>
+ <i>handle</i> The handle associated with the list operation.<br/>
+ <i>url</i> The url of the list operation.<br/>
+ <i>attr</i> The attributes to be used during this transfer.<br/>
  <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current list transfer; otherwise, this is set to GLOBUS_FALSE.</dd></dl>
 <h3>typedef void(* globus_ftp_client_plugin_mkdir_t)(<code>globus_ftp_client_plugin_t</code> *plugin, void *plugin_specific, <code>globus_ftp_client_handle_t</code> *handle, const char *url, const <code>globus_ftp_client_operationattr_t</code> *attr, globus_bool_t restart)</h3>
 <p> Plugin mkdir notification callback. </p>
@@ -319,11 +319,11 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>plugin</i> The plugin which is being notified.<br />
- <i>plugin_specific</i> Plugin-specific data.<br />
- <i>handle</i> The handle associated with the mkdir operation.<br />
- <i>url</i> The url of the directory to create.<br />
- <i>attr</i> The attributes to be used during this operation.<br />
+</dt><dd> <i>plugin</i> The plugin which is being notified.<br/>
+ <i>plugin_specific</i> Plugin-specific data.<br/>
+ <i>handle</i> The handle associated with the mkdir operation.<br/>
+ <i>url</i> The url of the directory to create.<br/>
+ <i>attr</i> The attributes to be used during this operation.<br/>
  <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current mkdir operation; otherwise, this is set to GLOBUS_FALSE.</dd></dl>
 <h3>typedef void(* globus_ftp_client_plugin_mlst_t)(<code>globus_ftp_client_plugin_t</code> *plugin, void *plugin_specific, <code>globus_ftp_client_handle_t</code> *handle, const char *url, const <code>globus_ftp_client_operationattr_t</code> *attr, globus_bool_t restart)</h3>
 <p> Plugin mlst notification callback. </p>
@@ -332,11 +332,11 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>plugin</i> The plugin which is being notified.<br />
- <i>plugin_specific</i> Plugin-specific data.<br />
- <i>handle</i> The handle associated with the list operation.<br />
- <i>url</i> The url of the list operation.<br />
- <i>attr</i> The attributes to be used during this transfer.<br />
+</dt><dd> <i>plugin</i> The plugin which is being notified.<br/>
+ <i>plugin_specific</i> Plugin-specific data.<br/>
+ <i>handle</i> The handle associated with the list operation.<br/>
+ <i>url</i> The url of the list operation.<br/>
+ <i>attr</i> The attributes to be used during this transfer.<br/>
  <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current list transfer; otherwise, this is set to GLOBUS_FALSE.</dd></dl>
 <h3>typedef void(* globus_ftp_client_plugin_modification_time_t)(<code>globus_ftp_client_plugin_t</code> *plugin, void *plugin_specific, <code>globus_ftp_client_handle_t</code> *handle, const char *url, const <code>globus_ftp_client_operationattr_t</code> *attr, globus_bool_t restart)</h3>
 <p> Plugin modification time notification callback. </p>
@@ -345,11 +345,11 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>plugin</i> The plugin which is being notified.<br />
- <i>plugin_specific</i> Plugin-specific data.<br />
- <i>handle</i> The handle associated with the list operation.<br />
- <i>url</i> The url of the list operation.<br />
- <i>attr</i> The attributes to be used during this transfer.<br />
+</dt><dd> <i>plugin</i> The plugin which is being notified.<br/>
+ <i>plugin_specific</i> Plugin-specific data.<br/>
+ <i>handle</i> The handle associated with the list operation.<br/>
+ <i>url</i> The url of the list operation.<br/>
+ <i>attr</i> The attributes to be used during this transfer.<br/>
  <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current list transfer; otherwise, this is set to GLOBUS_FALSE.</dd></dl>
 <h3>typedef void(* globus_ftp_client_plugin_move_t)(<code>globus_ftp_client_plugin_t</code> *plugin, void *plugin_specific, <code>globus_ftp_client_handle_t</code> *handle, const char *source_url, const char *dest_url, const <code>globus_ftp_client_operationattr_t</code> *attr, globus_bool_t restart)</h3>
 <p> Plugin move notification callback. </p>
@@ -358,12 +358,12 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>plugin</i> The plugin which is being notified.<br />
- <i>plugin_specific</i> Plugin-specific data.<br />
- <i>handle</i> The handle associated with the move operation.<br />
- <i>source_url</i> The source url of the move operation.<br />
- <i>dest_url</i> The destination url of the move operation.<br />
- <i>attr</i> The attributes to be used during this move.<br />
+</dt><dd> <i>plugin</i> The plugin which is being notified.<br/>
+ <i>plugin_specific</i> Plugin-specific data.<br/>
+ <i>handle</i> The handle associated with the move operation.<br/>
+ <i>source_url</i> The source url of the move operation.<br/>
+ <i>dest_url</i> The destination url of the move operation.<br/>
+ <i>attr</i> The attributes to be used during this move.<br/>
  <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current move transfer; otherwise, this is set to GLOBUS_FALSE.</dd></dl>
 <h3>typedef void(* globus_ftp_client_plugin_put_t)(<code>globus_ftp_client_plugin_t</code> *plugin, void *plugin_specific, <code>globus_ftp_client_handle_t</code> *handle, const char *url, const <code>globus_ftp_client_operationattr_t</code> *attr, globus_bool_t restart)</h3>
 <p> Plugin put notification callback. </p>
@@ -372,11 +372,11 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>plugin</i> The plugin which is being notified.<br />
- <i>plugin_specific</i> Plugin-specific data.<br />
- <i>handle</i> The handle associated with the put operation.<br />
- <i>url</i> The url of the put operation.<br />
- <i>attr</i> The attributes to be used during this transfer.<br />
+</dt><dd> <i>plugin</i> The plugin which is being notified.<br/>
+ <i>plugin_specific</i> Plugin-specific data.<br/>
+ <i>handle</i> The handle associated with the put operation.<br/>
+ <i>url</i> The url of the put operation.<br/>
+ <i>attr</i> The attributes to be used during this transfer.<br/>
  <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current put transfer; otherwise, this is set to GLOBUS_FALSE.</dd></dl>
 <h3>typedef void(* globus_ftp_client_plugin_read_t)(<code>globus_ftp_client_plugin_t</code> *plugin, void *plugin_specific, <code>globus_ftp_client_handle_t</code> *handle, const globus_byte_t *buffer, globus_size_t buffer_length)</h3>
 <p> Plugin read registration callback. </p>
@@ -384,10 +384,10 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>plugin</i> The plugin which is being notified.<br />
- <i>plugin_specific</i> Plugin-specific data.<br />
- <i>handle</i> The handle associated with the request.<br />
- <i>buffer</i> The data buffer to read into.<br />
+</dt><dd> <i>plugin</i> The plugin which is being notified.<br/>
+ <i>plugin_specific</i> Plugin-specific data.<br/>
+ <i>handle</i> The handle associated with the request.<br/>
+ <i>buffer</i> The data buffer to read into.<br/>
  <i>buffer_length</i> The maximum amount of data to read into the buffer.</dd></dl>
 <h3>typedef void(* globus_ftp_client_plugin_recursive_list_t)(<code>globus_ftp_client_plugin_t</code> *plugin, void *plugin_specific, <code>globus_ftp_client_handle_t</code> *handle, const char *url, const <code>globus_ftp_client_operationattr_t</code> *attr, globus_bool_t restart)</h3>
 <p> Plugin recursive list notification callback. </p>
@@ -396,11 +396,11 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>plugin</i> The plugin which is being notified.<br />
- <i>plugin_specific</i> Plugin-specific data.<br />
- <i>handle</i> The handle associated with the list operation.<br />
- <i>url</i> The url of the list operation.<br />
- <i>attr</i> The attributes to be used during this transfer.<br />
+</dt><dd> <i>plugin</i> The plugin which is being notified.<br/>
+ <i>plugin_specific</i> Plugin-specific data.<br/>
+ <i>handle</i> The handle associated with the list operation.<br/>
+ <i>url</i> The url of the list operation.<br/>
+ <i>attr</i> The attributes to be used during this transfer.<br/>
  <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current list transfer; otherwise, this is set to GLOBUS_FALSE.</dd></dl>
 <h3>typedef void(* globus_ftp_client_plugin_response_t)(<code>globus_ftp_client_plugin_t</code> *plugin, void *plugin_specific, <code>globus_ftp_client_handle_t</code> *handle, const char *url, globus_object_t *error, const globus_ftp_control_response_t *ftp_response)</h3>
 <p> Response callback. </p>
@@ -408,11 +408,11 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>plugin</i> The plugin which is being notified.<br />
- <i>plugin_specific</i> Plugin-specific data.<br />
- <i>handle</i> The handle associated with the request.<br />
- <i>url</i> The URL which this response came from.<br />
- <i>error</i> An error which occurred while processing this command/response pair.<br />
+</dt><dd> <i>plugin</i> The plugin which is being notified.<br/>
+ <i>plugin_specific</i> Plugin-specific data.<br/>
+ <i>handle</i> The handle associated with the request.<br/>
+ <i>url</i> The URL which this response came from.<br/>
+ <i>error</i> An error which occurred while processing this command/response pair.<br/>
  <i>ftp_response</i> The response structure from the ftp control library.</dd></dl>
 <h3>typedef void(* globus_ftp_client_plugin_rmdir_t)(<code>globus_ftp_client_plugin_t</code> *plugin, void *plugin_specific, <code>globus_ftp_client_handle_t</code> *handle, const char *url, const <code>globus_ftp_client_operationattr_t</code> *attr, globus_bool_t restart)</h3>
 <p> Plugin rmdir notification callback. </p>
@@ -421,11 +421,11 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>plugin</i> The plugin which is being notified.<br />
- <i>plugin_specific</i> Plugin-specific data.<br />
- <i>handle</i> The handle associated with the rmdir operation.<br />
- <i>url</i> The url of the rmdir operation.<br />
- <i>attr</i> The attributes to be used during this operation.<br />
+</dt><dd> <i>plugin</i> The plugin which is being notified.<br/>
+ <i>plugin_specific</i> Plugin-specific data.<br/>
+ <i>handle</i> The handle associated with the rmdir operation.<br/>
+ <i>url</i> The url of the rmdir operation.<br/>
+ <i>attr</i> The attributes to be used during this operation.<br/>
  <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current rmdir operation; otherwise, this is set to GLOBUS_FALSE.</dd></dl>
 <h3>typedef void(* globus_ftp_client_plugin_size_t)(<code>globus_ftp_client_plugin_t</code> *plugin, void *plugin_specific, <code>globus_ftp_client_handle_t</code> *handle, const char *url, const <code>globus_ftp_client_operationattr_t</code> *attr, globus_bool_t restart)</h3>
 <p> Plugin size notification callback. </p>
@@ -434,11 +434,11 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>plugin</i> The plugin which is being notified.<br />
- <i>plugin_specific</i> Plugin-specific data.<br />
- <i>handle</i> The handle associated with the list operation.<br />
- <i>url</i> The url of the list operation.<br />
- <i>attr</i> The attributes to be used during this transfer.<br />
+</dt><dd> <i>plugin</i> The plugin which is being notified.<br/>
+ <i>plugin_specific</i> Plugin-specific data.<br/>
+ <i>handle</i> The handle associated with the list operation.<br/>
+ <i>url</i> The url of the list operation.<br/>
+ <i>attr</i> The attributes to be used during this transfer.<br/>
  <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current list transfer; otherwise, this is set to GLOBUS_FALSE.</dd></dl>
 <h3>typedef void(* globus_ftp_client_plugin_stat_t)(<code>globus_ftp_client_plugin_t</code> *plugin, void *plugin_specific, <code>globus_ftp_client_handle_t</code> *handle, const char *url, const <code>globus_ftp_client_operationattr_t</code> *attr, globus_bool_t restart)</h3>
 <p> Plugin stat notification callback. </p>
@@ -447,11 +447,11 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>plugin</i> The plugin which is being notified.<br />
- <i>plugin_specific</i> Plugin-specific data.<br />
- <i>handle</i> The handle associated with the list operation.<br />
- <i>url</i> The url of the list operation.<br />
- <i>attr</i> The attributes to be used during this transfer.<br />
+</dt><dd> <i>plugin</i> The plugin which is being notified.<br/>
+ <i>plugin_specific</i> Plugin-specific data.<br/>
+ <i>handle</i> The handle associated with the list operation.<br/>
+ <i>url</i> The url of the list operation.<br/>
+ <i>attr</i> The attributes to be used during this transfer.<br/>
  <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current list transfer; otherwise, this is set to GLOBUS_FALSE.</dd></dl>
 <h3>typedef void(* globus_ftp_client_plugin_symlink_t)(<code>globus_ftp_client_plugin_t</code> *plugin, void *plugin_specific, <code>globus_ftp_client_handle_t</code> *handle, const char *url, const char *utime_time, const <code>globus_ftp_client_operationattr_t</code> *attr, globus_bool_t restart)</h3>
 <p> Plugin symlink notification callback. </p>
@@ -460,12 +460,12 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>plugin</i> The plugin which is being notified.<br />
- <i>plugin_specific</i> Plugin-specific data.<br />
- <i>handle</i> The handle associated with the symlink operation.<br />
- <i>url</i> The url of the new link.<br />
- <i>link_url</i> The url to which the new link should point.<br />
- <i>attr</i> The attributes to be used during this operation.<br />
+</dt><dd> <i>plugin</i> The plugin which is being notified.<br/>
+ <i>plugin_specific</i> Plugin-specific data.<br/>
+ <i>handle</i> The handle associated with the symlink operation.<br/>
+ <i>url</i> The url of the new link.<br/>
+ <i>link_url</i> The url to which the new link should point.<br/>
+ <i>attr</i> The attributes to be used during this operation.<br/>
  <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current utime operation; otherwise, this is set to GLOBUS_FALSE.</dd></dl>
 <h3>typedef struct <code>globus_i_ftp_client_plugin_t</code>* <code>globus_ftp_client_plugin_t</code></h3>
 <p> FTP Client plugin </p>
@@ -481,13 +481,13 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>plugin</i> The plugin which is being notified.<br />
- <i>plugin_specific</i> Plugin-specific data.<br />
- <i>handle</i> The handle associated with the transfer operation.<br />
- <i>source_url</i> The source url of the transfer operation.<br />
- <i>source_attr</i> The attributes to be used during this transfer on the source.<br />
- <i>dest_url</i> The destination url of the third-party transfer operation.<br />
- <i>dest_attr</i> The attributes to be used during this transfer on the destination.<br />
+</dt><dd> <i>plugin</i> The plugin which is being notified.<br/>
+ <i>plugin_specific</i> Plugin-specific data.<br/>
+ <i>handle</i> The handle associated with the transfer operation.<br/>
+ <i>source_url</i> The source url of the transfer operation.<br/>
+ <i>source_attr</i> The attributes to be used during this transfer on the source.<br/>
+ <i>dest_url</i> The destination url of the third-party transfer operation.<br/>
+ <i>dest_attr</i> The attributes to be used during this transfer on the destination.<br/>
  <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current transfer transfer; otherwise, this is set to GLOBUS_FALSE.</dd></dl>
 <h3>typedef void(* globus_ftp_client_plugin_utime_t)(<code>globus_ftp_client_plugin_t</code> *plugin, void *plugin_specific, <code>globus_ftp_client_handle_t</code> *handle, const char *url, const struct tm *utime_time, const <code>globus_ftp_client_operationattr_t</code> *attr, globus_bool_t restart)</h3>
 <p> Plugin utime notification callback. </p>
@@ -496,12 +496,12 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>plugin</i> The plugin which is being notified.<br />
- <i>plugin_specific</i> Plugin-specific data.<br />
- <i>handle</i> The handle associated with the utime operation.<br />
- <i>url</i> The url to utime.<br />
- <i>utime_time</i> The modification time to change the file to.<br />
- <i>attr</i> The attributes to be used during this operation.<br />
+</dt><dd> <i>plugin</i> The plugin which is being notified.<br/>
+ <i>plugin_specific</i> Plugin-specific data.<br/>
+ <i>handle</i> The handle associated with the utime operation.<br/>
+ <i>url</i> The url to utime.<br/>
+ <i>utime_time</i> The modification time to change the file to.<br/>
+ <i>attr</i> The attributes to be used during this operation.<br/>
  <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current utime operation; otherwise, this is set to GLOBUS_FALSE.</dd></dl>
 <h3>typedef void(* globus_ftp_client_plugin_verbose_list_t)(<code>globus_ftp_client_plugin_t</code> *plugin, void *plugin_specific, <code>globus_ftp_client_handle_t</code> *handle, const char *url, const <code>globus_ftp_client_operationattr_t</code> *attr, globus_bool_t restart)</h3>
 <p> Plugin verbose list notification callback. </p>
@@ -510,11 +510,11 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>plugin</i> The plugin which is being notified.<br />
- <i>plugin_specific</i> Plugin-specific data.<br />
- <i>handle</i> The handle associated with the list operation.<br />
- <i>url</i> The url of the list operation.<br />
- <i>attr</i> The attributes to be used during this transfer.<br />
+</dt><dd> <i>plugin</i> The plugin which is being notified.<br/>
+ <i>plugin_specific</i> Plugin-specific data.<br/>
+ <i>handle</i> The handle associated with the list operation.<br/>
+ <i>url</i> The url of the list operation.<br/>
+ <i>attr</i> The attributes to be used during this transfer.<br/>
  <i>restart</i> This value is set to GLOBUS_TRUE when this callback is caused by a plugin restarting the current list transfer; otherwise, this is set to GLOBUS_FALSE.</dd></dl>
 <h3>typedef void(* globus_ftp_client_plugin_write_t)(<code>globus_ftp_client_plugin_t</code> *plugin, void *plugin_specific, <code>globus_ftp_client_handle_t</code> *handle, const globus_byte_t *buffer, globus_size_t buffer_length, globus_off_t offset, globus_bool_t eof)</h3>
 <p> Plugin write registration callback. </p>
@@ -522,12 +522,12 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>plugin</i> The plugin which is being notified.<br />
- <i>plugin_specific</i> Plugin-specific data.<br />
- <i>handle</i> The handle associated with the request.<br />
- <i>buffer</i> The buffer which is being written.<br />
- <i>buffer_length</i> The amount of data in the buffer.<br />
- <i>offset</i> The offset within the file where the buffer is to be written.<br />
+</dt><dd> <i>plugin</i> The plugin which is being notified.<br/>
+ <i>plugin_specific</i> Plugin-specific data.<br/>
+ <i>handle</i> The handle associated with the request.<br/>
+ <i>buffer</i> The buffer which is being written.<br/>
+ <i>buffer_length</i> The amount of data in the buffer.<br/>
+ <i>offset</i> The offset within the file where the buffer is to be written.<br/>
  <i>eof</i> This value is set to GLOBUS_TRUE if this is the last data buffer to be sent for this put request.</dd></dl>
 <h3>typedef struct <code>globus_i_ftp_client_plugin_t</code> <code>globus_i_ftp_client_plugin_t</code></h3>
 <p> FTP Client Plugin. </p>
@@ -571,8 +571,8 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The handle which is associated with the transfer.<br />
- <i>num_channels</i> The number of channels to add to the transfer.<br />
+</dt><dd> <i>handle</i> The handle which is associated with the transfer.<br/>
+ <i>num_channels</i> The number of channels to add to the transfer.<br/>
  <i>stripe</i> The stripe number to have the channels added to.</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
@@ -584,8 +584,8 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The handle which is associated with the transfer.<br />
- <i>num_channels</i> The number of channels to remove from the transfer.<br />
+</dt><dd> <i>handle</i> The handle which is associated with the transfer.<br/>
+ <i>num_channels</i> The number of channels to remove from the transfer.<br/>
  <i>stripe</i> The stripe number to have the channels removed from.</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
@@ -598,10 +598,10 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The handle which is associated with the chgrp.<br />
- <i>url</i> The destination URL of the transfer. This may be different than the original chgrp&#8217;s URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL.<br />
- <i>group</i> The group name or ID to change the file to.<br />
- <i>attr</i> The attributes to use for the new transfer. This may be a modified version of the original chgrp&#8217;s attribute set.<br />
+</dt><dd> <i>handle</i> The handle which is associated with the chgrp.<br/>
+ <i>url</i> The destination URL of the transfer. This may be different than the original chgrp&#8217;s URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL.<br/>
+ <i>group</i> The group name or ID to change the file to.<br/>
+ <i>attr</i> The attributes to use for the new transfer. This may be a modified version of the original chgrp&#8217;s attribute set.<br/>
  <i>when</i> Absolute time for when to restart the chgrp. The current control and data connections will be stopped immediately. If this completes before <code>when</code>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dd></dl>
 <h3>globus_result_t globus_ftp_client_plugin_restart_chmod (<code>globus_ftp_client_handle_t</code> *handle, const char *url, intmode, const <code>globus_ftp_client_operationattr_t</code> *attr, const globus_abstime_t *when)</h3>
 <p> Restart an existing chmod. </p>
@@ -610,10 +610,10 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The handle which is associated with the chmod.<br />
- <i>url</i> The destination URL of the transfer. This may be different than the original chmod&#8217;s URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL.<br />
- <i>mode</i> The file mode that will be applied. Must be an octal number repre- senting the bit pattern for the new permissions.<br />
- <i>attr</i> The attributes to use for the new transfer. This may be a modified version of the original chmod&#8217;s attribute set.<br />
+</dt><dd> <i>handle</i> The handle which is associated with the chmod.<br/>
+ <i>url</i> The destination URL of the transfer. This may be different than the original chmod&#8217;s URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL.<br/>
+ <i>mode</i> The file mode that will be applied. Must be an octal number repre- senting the bit pattern for the new permissions.<br/>
+ <i>attr</i> The attributes to use for the new transfer. This may be a modified version of the original chmod&#8217;s attribute set.<br/>
  <i>when</i> Absolute time for when to restart the chmod. The current control and data connections will be stopped immediately. If this completes before <code>when</code>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dd></dl>
 <h3>globus_result_t globus_ftp_client_plugin_restart_cksm (<code>globus_ftp_client_handle_t</code> *handle, const char *url, globus_off_toffset, globus_off_tlength, const char *algorithm, const <code>globus_ftp_client_operationattr_t</code> *attr, const globus_abstime_t *when)</h3>
 <p> Restart an existing cksm. </p>
@@ -622,12 +622,12 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The handle which is associated with the cksm.<br />
- <i>url</i> The destination URL of the transfer. This may be different than the original cksm&#8217;s URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL.<br />
- <i>offset</i> File offset to start calculating checksum.<br />
- <i>length</i> Length of data to read from the starting offset. Use -1 to read the entire file.<br />
- <i>algorithm</i> A pointer to a string to be filled with the checksum of the file. On error the value pointed to by it is undefined.<br />
- <i>attr</i> The attributes to use for the new transfer. This may be a modified version of the original cksm&#8217;s attribute set.<br />
+</dt><dd> <i>handle</i> The handle which is associated with the cksm.<br/>
+ <i>url</i> The destination URL of the transfer. This may be different than the original cksm&#8217;s URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL.<br/>
+ <i>offset</i> File offset to start calculating checksum.<br/>
+ <i>length</i> Length of data to read from the starting offset. Use -1 to read the entire file.<br/>
+ <i>algorithm</i> A pointer to a string to be filled with the checksum of the file. On error the value pointed to by it is undefined.<br/>
+ <i>attr</i> The attributes to use for the new transfer. This may be a modified version of the original cksm&#8217;s attribute set.<br/>
  <i>when</i> Absolute time for when to restart the cksm. The current control and data connections will be stopped immediately. If this completes before <code>when</code>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dd></dl>
 <h3>globus_result_t globus_ftp_client_plugin_restart_delete (<code>globus_ftp_client_handle_t</code> *handle, const char *url, const <code>globus_ftp_client_operationattr_t</code> *attr, const globus_abstime_t *when)</h3>
 <p> Restart an existing delete. </p>
@@ -636,9 +636,9 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The handle which is associated with the delete.<br />
- <i>url</i> The destination URL of the transfer. This may be different than the original delete&#8217;s URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL.<br />
- <i>attr</i> The attributes to use for the new transfer. This may be a modified version of the original delete&#8217;s attribute set.<br />
+</dt><dd> <i>handle</i> The handle which is associated with the delete.<br/>
+ <i>url</i> The destination URL of the transfer. This may be different than the original delete&#8217;s URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL.<br/>
+ <i>attr</i> The attributes to use for the new transfer. This may be a modified version of the original delete&#8217;s attribute set.<br/>
  <i>when</i> Absolute time for when to restart the delete. The current control and data connections will be stopped immediately. If this completes before <code>when</code>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dd></dl>
 <h3>globus_result_t globus_ftp_client_plugin_restart_feat (<code>globus_ftp_client_handle_t</code> *handle, const char *url, const <code>globus_ftp_client_operationattr_t</code> *attr, const globus_abstime_t *when)</h3>
 <p> Restart an existing feat. </p>
@@ -647,9 +647,9 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The handle which is associated with the feat.<br />
- <i>url</i> The destination URL of the transfer. This may be different than the original feat&#8217;s URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL.<br />
- <i>attr</i> The attributes to use for the new transfer. This may be a modified version of the original feat&#8217;s attribute set.<br />
+</dt><dd> <i>handle</i> The handle which is associated with the feat.<br/>
+ <i>url</i> The destination URL of the transfer. This may be different than the original feat&#8217;s URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL.<br/>
+ <i>attr</i> The attributes to use for the new transfer. This may be a modified version of the original feat&#8217;s attribute set.<br/>
  <i>when</i> Absolute time for when to restart the feat. The current control and data connections will be stopped immediately. If this completes before <code>when</code>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dd></dl>
 <h3>globus_result_t globus_ftp_client_plugin_restart_get (<code>globus_ftp_client_handle_t</code> *handle, const char *url, const <code>globus_ftp_client_operationattr_t</code> *attr, <code>globus_ftp_client_restart_marker_t</code> *restart_marker, const globus_abstime_t *when)</h3>
 <p> Restart an existing get. </p>
@@ -658,10 +658,10 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The handle which is associated with the get.<br />
- <i>url</i> The source URL of the transfer. This may be different than the original get&#8217;s URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL.<br />
- <i>attr</i> The attributes to use for the new transfer. This may be a modified version of the original get&#8217;s attribute set. This may be useful when the plugin wishes to send restart markers to the FTP server to prevent re-sending the data which has already been sent.<br />
- <i>restart_marker</i> Plugin-provided restart marker for resuming at a non-default restart point. This may be used to implement a persistent restart across process invocations. The default behavior if this is NULL is to use any restart information which has been received by the ftp client library while processing this operation when restarted.<br />
+</dt><dd> <i>handle</i> The handle which is associated with the get.<br/>
+ <i>url</i> The source URL of the transfer. This may be different than the original get&#8217;s URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL.<br/>
+ <i>attr</i> The attributes to use for the new transfer. This may be a modified version of the original get&#8217;s attribute set. This may be useful when the plugin wishes to send restart markers to the FTP server to prevent re-sending the data which has already been sent.<br/>
+ <i>restart_marker</i> Plugin-provided restart marker for resuming at a non-default restart point. This may be used to implement a persistent restart across process invocations. The default behavior if this is NULL is to use any restart information which has been received by the ftp client library while processing this operation when restarted.<br/>
  <i>when</i> Absolute time for when to restart the get. The current control and data connections will be stopped immediately. If this completes before <code>when</code>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dd></dl>
 <h3>globus_result_t globus_ftp_client_plugin_restart_get_marker (<code>globus_ftp_client_handle_t</code> *handle, <code>globus_ftp_client_restart_marker_t</code> *marker)</h3>
 <p> Get restart marker </p>
@@ -669,7 +669,7 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The handle which is associated with the transfer.<br />
+</dt><dd> <i>handle</i> The handle which is associated with the transfer.<br/>
  <i>marker</i> Pointer to an uninitialized restart marker type</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -688,9 +688,9 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The handle which is associated with the list.<br />
- <i>url</i> The destination URL of the transfer. This may be different than the original list&#8217;s URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL.<br />
- <i>attr</i> The attributes to use for the new transfer. This may be a modified version of the original list&#8217;s attribute set.<br />
+</dt><dd> <i>handle</i> The handle which is associated with the list.<br/>
+ <i>url</i> The destination URL of the transfer. This may be different than the original list&#8217;s URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL.<br/>
+ <i>attr</i> The attributes to use for the new transfer. This may be a modified version of the original list&#8217;s attribute set.<br/>
  <i>when</i> Absolute time for when to restart the list. The current control and data connections will be stopped immediately. If this completes before <code>when</code>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dd></dl>
 <h3>globus_result_t globus_ftp_client_plugin_restart_machine_list (<code>globus_ftp_client_handle_t</code> *handle, const char *url, const <code>globus_ftp_client_operationattr_t</code> *attr, const globus_abstime_t *when)</h3>
 <p> Restart an existing machine list. </p>
@@ -699,9 +699,9 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The handle which is associated with the list.<br />
- <i>url</i> The destination URL of the transfer. This may be different than the original list&#8217;s URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL.<br />
- <i>attr</i> The attributes to use for the new transfer. This may be a modified version of the original list&#8217;s attribute set.<br />
+</dt><dd> <i>handle</i> The handle which is associated with the list.<br/>
+ <i>url</i> The destination URL of the transfer. This may be different than the original list&#8217;s URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL.<br/>
+ <i>attr</i> The attributes to use for the new transfer. This may be a modified version of the original list&#8217;s attribute set.<br/>
  <i>when</i> Absolute time for when to restart the list. The current control and data connections will be stopped immediately. If this completes before <code>when</code>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dd></dl>
 <h3>globus_result_t globus_ftp_client_plugin_restart_mkdir (<code>globus_ftp_client_handle_t</code> *handle, const char *url, const <code>globus_ftp_client_operationattr_t</code> *attr, const globus_abstime_t *when)</h3>
 <p> Restart an existing mkdir. </p>
@@ -710,9 +710,9 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The handle which is associated with the mkdir.<br />
- <i>url</i> The destination URL of the transfer. This may be different than the original mkdir&#8217;s URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL.<br />
- <i>attr</i> The attributes to use for the new transfer. This may be a modified version of the original mkdir&#8217;s attribute set.<br />
+</dt><dd> <i>handle</i> The handle which is associated with the mkdir.<br/>
+ <i>url</i> The destination URL of the transfer. This may be different than the original mkdir&#8217;s URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL.<br/>
+ <i>attr</i> The attributes to use for the new transfer. This may be a modified version of the original mkdir&#8217;s attribute set.<br/>
  <i>when</i> Absolute time for when to restart the mkdir. The current control and data connections will be stopped immediately. If this completes before <code>when</code>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dd></dl>
 <h3>globus_result_t globus_ftp_client_plugin_restart_mlst (<code>globus_ftp_client_handle_t</code> *handle, const char *url, const <code>globus_ftp_client_operationattr_t</code> *attr, const globus_abstime_t *when)</h3>
 <p> Restart an existing MLST. </p>
@@ -721,9 +721,9 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The handle which is associated with the list.<br />
- <i>url</i> The destination URL of the transfer. This may be different than the original list&#8217;s URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL.<br />
- <i>attr</i> The attributes to use for the new transfer. This may be a modified version of the original list&#8217;s attribute set.<br />
+</dt><dd> <i>handle</i> The handle which is associated with the list.<br/>
+ <i>url</i> The destination URL of the transfer. This may be different than the original list&#8217;s URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL.<br/>
+ <i>attr</i> The attributes to use for the new transfer. This may be a modified version of the original list&#8217;s attribute set.<br/>
  <i>when</i> Absolute time for when to restart the list. The current control and data connections will be stopped immediately. If this completes before <code>when</code>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dd></dl>
 <h3>globus_result_t globus_ftp_client_plugin_restart_modification_time (<code>globus_ftp_client_handle_t</code> *handle, const char *url, const <code>globus_ftp_client_operationattr_t</code> *attr, const globus_abstime_t *when)</h3>
 <p> Restart a modification time check operation. </p>
@@ -732,9 +732,9 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The handle which is associated with the operation.<br />
- <i>url</i> The source URL of the modification time check. This may be different than the original operations URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL.<br />
- <i>attr</i> The attributes to use for the new operation. This may be a modified version of the original operations&#8217;s attribute set.<br />
+</dt><dd> <i>handle</i> The handle which is associated with the operation.<br/>
+ <i>url</i> The source URL of the modification time check. This may be different than the original operations URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL.<br/>
+ <i>attr</i> The attributes to use for the new operation. This may be a modified version of the original operations&#8217;s attribute set.<br/>
  <i>when</i> Absolute time for when to restart the modification time check. The current control and data connections will be stopped immediately. If this completes before <code>when</code>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dd></dl>
 <h3>globus_result_t globus_ftp_client_plugin_restart_move (<code>globus_ftp_client_handle_t</code> *handle, const char *source_url, const char *dest_url, const <code>globus_ftp_client_operationattr_t</code> *attr, const globus_abstime_t *when)</h3>
 <p> Restart an existing move. </p>
@@ -743,10 +743,10 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The handle which is associated with the move.<br />
- <i>source_url</i> The source URL of the move. This may be different than the original get&#8217;s URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL.<br />
- <i>dest_url</i> The destination URL of the move. This may be different than the original get&#8217;s URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL. Note that only the path component of this URL is used.<br />
- <i>attr</i> The attributes to use for the new transfer. This may be a modified version of the original move&#8217;s attribute set. This may be useful when the plugin wishes to send restart markers to the FTP server to prevent re-sending the data which has already been sent.<br />
+</dt><dd> <i>handle</i> The handle which is associated with the move.<br/>
+ <i>source_url</i> The source URL of the move. This may be different than the original get&#8217;s URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL.<br/>
+ <i>dest_url</i> The destination URL of the move. This may be different than the original get&#8217;s URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL. Note that only the path component of this URL is used.<br/>
+ <i>attr</i> The attributes to use for the new transfer. This may be a modified version of the original move&#8217;s attribute set. This may be useful when the plugin wishes to send restart markers to the FTP server to prevent re-sending the data which has already been sent.<br/>
  <i>when</i> Absolute time for when to restart the move. The current control and data connections will be stopped immediately. If this completes before <code>when</code>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dd></dl>
 <h3>globus_result_t globus_ftp_client_plugin_restart_put (<code>globus_ftp_client_handle_t</code> *handle, const char *url, const <code>globus_ftp_client_operationattr_t</code> *attr, <code>globus_ftp_client_restart_marker_t</code> *restart_marker, const globus_abstime_t *when)</h3>
 <p> Restart an existing put. </p>
@@ -755,10 +755,10 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The handle which is associated with the put.<br />
- <i>url</i> The URL of the transfer. This may be different than the original put&#8217;s URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL. If the put is restarted with a different URL, the plugin must re-send any data which has already been acknowledged by it&#8217;s callback.<br />
- <i>attr</i> The attributes to use for the new transfer. This may be a modified version of the original put&#8217;s attribute set. This may be useful when the plugin wishes to send restart markers to the FTP server to prevent re-sending the data which has already been sent.<br />
- <i>restart_marker</i> Plugin-provided restart marker for resuming at a non-default restart point. This may be used to implement a persistent restart across process invocations. The default behavior if this is NULL is to use any restart information which has been received by the ftp client library while processing this operation when restarted.<br />
+</dt><dd> <i>handle</i> The handle which is associated with the put.<br/>
+ <i>url</i> The URL of the transfer. This may be different than the original put&#8217;s URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL. If the put is restarted with a different URL, the plugin must re-send any data which has already been acknowledged by it&#8217;s callback.<br/>
+ <i>attr</i> The attributes to use for the new transfer. This may be a modified version of the original put&#8217;s attribute set. This may be useful when the plugin wishes to send restart markers to the FTP server to prevent re-sending the data which has already been sent.<br/>
+ <i>restart_marker</i> Plugin-provided restart marker for resuming at a non-default restart point. This may be used to implement a persistent restart across process invocations. The default behavior if this is NULL is to use any restart information which has been received by the ftp client library while processing this operation when restarted.<br/>
  <i>when</i> Absolute time for when to restart the put. The current control and data connections will be stopped immediately. If this completes before <code>when</code>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dd></dl>
 <h3>globus_result_t globus_ftp_client_plugin_restart_recursive_list (<code>globus_ftp_client_handle_t</code> *handle, const char *url, const <code>globus_ftp_client_operationattr_t</code> *attr, const globus_abstime_t *when)</h3>
 <p> Restart an existing recursive list. </p>
@@ -767,9 +767,9 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The handle which is associated with the list.<br />
- <i>url</i> The destination URL of the transfer. This may be different than the original list&#8217;s URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL.<br />
- <i>attr</i> The attributes to use for the new transfer. This may be a modified version of the original list&#8217;s attribute set.<br />
+</dt><dd> <i>handle</i> The handle which is associated with the list.<br/>
+ <i>url</i> The destination URL of the transfer. This may be different than the original list&#8217;s URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL.<br/>
+ <i>attr</i> The attributes to use for the new transfer. This may be a modified version of the original list&#8217;s attribute set.<br/>
  <i>when</i> Absolute time for when to restart the list. The current control and data connections will be stopped immediately. If this completes before <code>when</code>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dd></dl>
 <h3>globus_result_t globus_ftp_client_plugin_restart_rmdir (<code>globus_ftp_client_handle_t</code> *handle, const char *url, const <code>globus_ftp_client_operationattr_t</code> *attr, const globus_abstime_t *when)</h3>
 <p> Restart an existing rmdir. </p>
@@ -778,9 +778,9 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The handle which is associated with the rmdir.<br />
- <i>url</i> The destination URL of the transfer. This may be different than the original rmdir&#8217;s URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL.<br />
- <i>attr</i> The attributes to use for the new transfer. This may be a modified version of the original rmdir&#8217;s attribute set.<br />
+</dt><dd> <i>handle</i> The handle which is associated with the rmdir.<br/>
+ <i>url</i> The destination URL of the transfer. This may be different than the original rmdir&#8217;s URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL.<br/>
+ <i>attr</i> The attributes to use for the new transfer. This may be a modified version of the original rmdir&#8217;s attribute set.<br/>
  <i>when</i> Absolute time for when to restart the rmdir. The current control and data connections will be stopped immediately. If this completes before <code>when</code>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dd></dl>
 <h3>globus_result_t globus_ftp_client_plugin_restart_size (<code>globus_ftp_client_handle_t</code> *handle, const char *url, const <code>globus_ftp_client_operationattr_t</code> *attr, const globus_abstime_t *when)</h3>
 <p> Restart a size check operation. </p>
@@ -789,9 +789,9 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The handle which is associated with the operation.<br />
- <i>url</i> The source URL of the size check. This may be different than the original operations URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL.<br />
- <i>attr</i> The attributes to use for the new operation. This may be a modified version of the original operations&#8217;s attribute set.<br />
+</dt><dd> <i>handle</i> The handle which is associated with the operation.<br/>
+ <i>url</i> The source URL of the size check. This may be different than the original operations URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL.<br/>
+ <i>attr</i> The attributes to use for the new operation. This may be a modified version of the original operations&#8217;s attribute set.<br/>
  <i>when</i> Absolute time for when to restart the size check. The current control and data connections will be stopped immediately. If this completes before <code>when</code>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dd></dl>
 <h3>globus_result_t globus_ftp_client_plugin_restart_stat (<code>globus_ftp_client_handle_t</code> *handle, const char *url, const <code>globus_ftp_client_operationattr_t</code> *attr, const globus_abstime_t *when)</h3>
 <p> Restart an existing STAT. </p>
@@ -800,9 +800,9 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The handle which is associated with the list.<br />
- <i>url</i> The destination URL of the transfer. This may be different than the original list&#8217;s URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL.<br />
- <i>attr</i> The attributes to use for the new transfer. This may be a modified version of the original list&#8217;s attribute set.<br />
+</dt><dd> <i>handle</i> The handle which is associated with the list.<br/>
+ <i>url</i> The destination URL of the transfer. This may be different than the original list&#8217;s URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL.<br/>
+ <i>attr</i> The attributes to use for the new transfer. This may be a modified version of the original list&#8217;s attribute set.<br/>
  <i>when</i> Absolute time for when to restart the list. The current control and data connections will be stopped immediately. If this completes before <code>when</code>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dd></dl>
 <h3>globus_result_t globus_ftp_client_plugin_restart_symlink (<code>globus_ftp_client_handle_t</code> *handle, const char *url, const char *link_url, const <code>globus_ftp_client_operationattr_t</code> *attr, const globus_abstime_t *when)</h3>
 <p> Restart an existing symlink. </p>
@@ -811,10 +811,10 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The handle which is associated with the chgrp.<br />
- <i>url</i> The destination URL of the transfer. This may be different than the original symlink&#8217;s URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL.<br />
- <i>link_url</i> The URL to symbolically link the file to.<br />
- <i>attr</i> The attributes to use for the new transfer. This may be a modified version of the original symlink&#8217;s attribute set.<br />
+</dt><dd> <i>handle</i> The handle which is associated with the chgrp.<br/>
+ <i>url</i> The destination URL of the transfer. This may be different than the original symlink&#8217;s URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL.<br/>
+ <i>link_url</i> The URL to symbolically link the file to.<br/>
+ <i>attr</i> The attributes to use for the new transfer. This may be a modified version of the original symlink&#8217;s attribute set.<br/>
  <i>when</i> Absolute time for when to restart the symlink. The current control and data connections will be stopped immediately. If this completes before <code>when</code>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dd></dl>
 <h3>globus_result_t globus_ftp_client_plugin_restart_third_party_transfer (<code>globus_ftp_client_handle_t</code> *handle, const char *source_url, const <code>globus_ftp_client_operationattr_t</code> *source_attr, const char *dest_url, const <code>globus_ftp_client_operationattr_t</code> *dest_attr, <code>globus_ftp_client_restart_marker_t</code> *restart_marker, const globus_abstime_t *when)</h3>
 <p> Restart an existing third-party transfer. </p>
@@ -823,12 +823,12 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The handle which is associated with the transfer.<br />
- <i>source_url</i> The source URL of the transfer. This may be different than the original URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL<br />
- <i>source_attr</i> The attributes to use for the new transfer. This may be a modified version of the original transfer&#8217;s attribute set. This may be useful when the plugin wishes to send restart markers to the FTP server to prevent re-sending the data which has already been sent.<br />
- <i>dest_url</i> The destination URL of the transfer. This may be different than the original destination URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL.<br />
- <i>dest_attr</i> The attributes to use for the new transfer. This may be a modified version of the original transfer&#8217;s attribute set. This may be useful when the plugin wishes to send restart markers to the FTP server to prevent re-sending the data which has already been sent.<br />
- <i>restart_marker</i> Plugin-provided restart marker for resuming at a non-default restart point. This may be used to implement a persistent restart across process invocations. The default behavior if this is NULL is to use any restart information which has been received by the ftp client library while processing this operation when restarted.<br />
+</dt><dd> <i>handle</i> The handle which is associated with the transfer.<br/>
+ <i>source_url</i> The source URL of the transfer. This may be different than the original URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL<br/>
+ <i>source_attr</i> The attributes to use for the new transfer. This may be a modified version of the original transfer&#8217;s attribute set. This may be useful when the plugin wishes to send restart markers to the FTP server to prevent re-sending the data which has already been sent.<br/>
+ <i>dest_url</i> The destination URL of the transfer. This may be different than the original destination URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL.<br/>
+ <i>dest_attr</i> The attributes to use for the new transfer. This may be a modified version of the original transfer&#8217;s attribute set. This may be useful when the plugin wishes to send restart markers to the FTP server to prevent re-sending the data which has already been sent.<br/>
+ <i>restart_marker</i> Plugin-provided restart marker for resuming at a non-default restart point. This may be used to implement a persistent restart across process invocations. The default behavior if this is NULL is to use any restart information which has been received by the ftp client library while processing this operation when restarted.<br/>
  <i>when</i> Absolute time for when to restart the transfer. The current control and data connections will be stopped immediately. If this completes before <code>when</code>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dd></dl>
 <h3>globus_result_t globus_ftp_client_plugin_restart_utime (<code>globus_ftp_client_handle_t</code> *handle, const char *url, const struct tm *utime_time, const <code>globus_ftp_client_operationattr_t</code> *attr, const globus_abstime_t *when)</h3>
 <p> Restart an existing utime. </p>
@@ -837,10 +837,10 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The handle which is associated with the chgrp.<br />
- <i>url</i> The destination URL of the transfer. This may be different than the original utime&#8217;s URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL.<br />
- <i>utime_time</i> The time value to change the file to.<br />
- <i>attr</i> The attributes to use for the new transfer. This may be a modified version of the original utime&#8217;s attribute set.<br />
+</dt><dd> <i>handle</i> The handle which is associated with the chgrp.<br/>
+ <i>url</i> The destination URL of the transfer. This may be different than the original utime&#8217;s URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL.<br/>
+ <i>utime_time</i> The time value to change the file to.<br/>
+ <i>attr</i> The attributes to use for the new transfer. This may be a modified version of the original utime&#8217;s attribute set.<br/>
  <i>when</i> Absolute time for when to restart the utime. The current control and data connections will be stopped immediately. If this completes before <code>when</code>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dd></dl>
 <h3>globus_result_t globus_ftp_client_plugin_restart_verbose_list (<code>globus_ftp_client_handle_t</code> *handle, const char *url, const <code>globus_ftp_client_operationattr_t</code> *attr, const globus_abstime_t *when)</h3>
 <p> Restart an existing verbose list. </p>
@@ -849,9 +849,9 @@ description: "Plugins –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The handle which is associated with the list.<br />
- <i>url</i> The destination URL of the transfer. This may be different than the original list&#8217;s URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL.<br />
- <i>attr</i> The attributes to use for the new transfer. This may be a modified version of the original list&#8217;s attribute set.<br />
+</dt><dd> <i>handle</i> The handle which is associated with the list.<br/>
+ <i>url</i> The destination URL of the transfer. This may be different than the original list&#8217;s URL, if the plugin decides to redirect to another FTP server due to performance or reliability problems with the original URL.<br/>
+ <i>attr</i> The attributes to use for the new transfer. This may be a modified version of the original list&#8217;s attribute set.<br/>
  <i>when</i> Absolute time for when to restart the list. The current control and data connections will be stopped immediately. If this completes before <code>when</code>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_ftp_client from the source code. </p>

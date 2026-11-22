@@ -11,7 +11,7 @@ description: "dptcon.f –"
 <p> dptcon.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dptcon</code> (N, D, E, ANORM, RCOND, WORK, INFO)<br />
+<p> subroutine <code>dptcon</code> (N, D, E, ANORM, RCOND, WORK, INFO)<br/>
  <i></i><code>DPTCON</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dptcon (integerN, double precision, dimension( * )D, double precision, dimension( * )E, double precisionANORM, double precisionRCOND, double precision, dimension( * )WORK, integerINFO)</h3>

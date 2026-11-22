@@ -81,9 +81,9 @@ $ tar Ccf $(dirname SRC_PATH) - $(basename SRC_PATH) | docker exec -i foo tar Cx
 </dd></dl>
 <p> Using &#8211; as the SRC_PATH streams the contents of STDIN as a tar archive. The command extracts the content of the tar to the DEST_PATH in container&#8217;s filesystem. In this case, DEST_PATH must specify a directory. Using &#8211; as the DEST_PATH streams the contents of the resource as a tar archive to STDOUT. </p>
 <h2>OPTIONS</h2>
-<p> <code>-L</code>, <code>&#8211;follow-link</code>=<i>true</i>|<i>false</i><br />
+<p> <code>-L</code>, <code>&#8211;follow-link</code>=<i>true</i>|<i>false</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>Follow symbol link in SRC_PATH </p>
-<p> <code>&#8211;help</code><br />
+<p> <code>&#8211;help</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Print usage statement </p>
 <h2>EXAMPLES</h2>
 <p> Suppose a container has finished producing some output as a file it saves to somewhere in its filesystem. This could be the output of a build job or some other computation. You can copy these outputs from the container to a location on your local host. </p>

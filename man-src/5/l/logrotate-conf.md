@@ -28,7 +28,7 @@ description: "logrotate – rotates, compresses, and mails system logs"
 <dd>Tells <code>logrotate</code> to log verbose output into the log_file. The verbose output logged to that file is the same as when running <code>logrotate</code> with <code>-v</code> switch. The log file is overwritten on every <code>logrotate</code> execution. </dd>
 <dt><code>-m</code>, <code>&#8211;mail</code> <i>command</i></dt>
 <dd>Tells <code>logrotate</code> which command to use when mailing logs. This command should accept the following arguments:</dd>
-<dd>1) the subject of the message given with &#8216;-s subject&#8217;<br />
+<dd>1) the subject of the message given with &#8216;-s subject&#8217;<br/>
  2) the recipient.</dd>
 <dd>The command must then read a message on standard input and mail it to the recipient. The default mail command is <i>/usr/bin/mail</i>. </dd>
 <dt><code>&#8211;usage</code></dt>

@@ -10,7 +10,7 @@ description: "tcsh – C shell with file name completion and command line editin
 
 <p> tcsh &#8211; C shell with file name completion and command line editing</p>
 <h2>SYNOPSIS</h2>
-<p> <code>tcsh </code>[<code>-bcdefFimnqstvVxX</code>] [<code>-Dname</code>[<code>=value</code>]] [arg &#8230;]<br />
+<p> <code>tcsh </code>[<code>-bcdefFimnqstvVxX</code>] [<code>-Dname</code>[<code>=value</code>]] [arg &#8230;]<br/>
  <code>tcsh -l</code></p>
 <h2>DESCRIPTION</h2>
 <p> <i>tcsh</i> is an enhanced but completely compatible version of the Berkeley UNIX C shell, <i><a href="/docs/linux/man/1-csh/">csh</a></i>(1). It is a command language interpreter usable both as an interactive login shell and a shell script command processor. It includes a command-line editor (see <code>The command-line editor</code>), programmable word completion (see <code>Completion and listing</code>), spelling correction (see <code>Spelling correction</code>), a history mechanism (see <code>History substitution</code>), job control (see <code>Jobs</code>) and a C-like syntax. The <code>NEW FEATURES</code> section describes major enhancements of <i>tcsh</i> over <i><a href="/docs/linux/man/1-csh/">csh</a></i>(1). Throughout this manual, features of <i>tcsh</i> not found in most <i><a href="/docs/linux/man/1-csh/">csh</a></i>(1) implementations (specifically, the 4.4BSD <i>csh</i>) are labeled with `(+)&#8217;, and features which are present in <i><a href="/docs/linux/man/1-csh/">csh</a></i>(1) but not usually documented are labeled with `(u)&#8217;.</p>
@@ -95,31 +95,31 @@ description: "tcsh – C shell with file name completion and command line editin
 <p> You can list the possible completions of a word at any time by typing `^D&#8217; to run the <i>delete-char-or-list-or-eof</i> editor command. The shell lists the possible completions using the <i>ls-F</i> builtin (q.v.) and reprints the prompt and unfinished command line, for example:</p>
 <dl>
 <dt>
-</dt><dd> &gt; ls /usr/l[^D]<br />
- lbin/ lib/ local/ lost+found/<br />
+</dt><dd> &gt; ls /usr/l[^D]<br/>
+ lbin/ lib/ local/ lost+found/<br/>
  &gt; ls /usr/l</dd></dl>
 <p> If the <code>autolist</code> shell variable is set, the shell lists the remaining choices (if any) whenever completion fails:</p>
 <dl>
 <dt>
-</dt><dd> &gt; set autolist<br />
- &gt; nm /usr/lib/libt[tab]<br />
- libtermcap.a@ libtermlib.a@<br />
+</dt><dd> &gt; set autolist<br/>
+ &gt; nm /usr/lib/libt[tab]<br/>
+ libtermcap.a@ libtermlib.a@<br/>
  &gt; nm /usr/lib/libterm</dd></dl>
 <p> If <code>autolist</code> is set to `ambiguous&#8217;, choices are listed only when completion fails and adds no new characters to the word being completed. </p>
 <p> A filename to be completed can contain variables, your own or others&#8217; home directories abbreviated with `~&#8217; (see <code>Filename substitution</code>) and directory stack entries abbreviated with `=&#8217; (see <code>Directory stack substitution</code>). For example,</p>
 <dl>
 <dt>
-</dt><dd> &gt; ls ~k[^D]<br />
- kahn kas kellogg<br />
- &gt; ls ~ke[tab]<br />
+</dt><dd> &gt; ls ~k[^D]<br/>
+ kahn kas kellogg<br/>
+ &gt; ls ~ke[tab]<br/>
  &gt; ls ~kellogg/</dd></dl>
 <p> or</p>
 <dl>
 <dt>
-</dt><dd> &gt; set local = /usr/local<br />
- &gt; ls $lo[tab]<br />
- &gt; ls $local/[^D]<br />
- bin/ etc/ lib/ man/ src/<br />
+</dt><dd> &gt; set local = /usr/local<br/>
+ &gt; ls $lo[tab]<br/>
+ &gt; ls $local/[^D]<br/>
+ bin/ etc/ lib/ man/ src/<br/>
  &gt; ls $local/</dd></dl>
 <p> Note that variables can also be expanded explicitly with the <i>expand-variables</i> editor command. </p>
 <p> <i>delete-char-or-list-or-eof</i> lists at only the end of the line; in the middle of a line it deletes the character under the cursor and on an empty line it logs one out or, if <code>ignoreeof</code> is set, does nothing. `M-^D&#8217;, bound to the editor command <i>list-choices</i>, lists completion possibilities anywhere on a line, and <i>list-choices</i> (or any one of the related editor commands that do or don&#8217;t delete, list and/or log out, listed under <i>delete-char-or-list-or-eof</i>) can be bound to `^D&#8217; with the <i>bindkey</i> builtin command if so desired. </p>
@@ -127,20 +127,20 @@ description: "tcsh – C shell with file name completion and command line editin
 <p> The shell variable <code>fignore</code> can be set to a list of suffixes to be ignored by completion. Consider the following:</p>
 <dl>
 <dt>
-</dt><dd> &gt; ls<br />
- Makefile condiments.h~ main.o side.c<br />
- README main.c meal side.o<br />
- condiments.h main.c~<br />
- &gt; set fignore = (.o \~)<br />
- &gt; emacs ma[^D]<br />
- main.c main.c~ main.o<br />
- &gt; emacs ma[tab]<br />
+</dt><dd> &gt; ls<br/>
+ Makefile condiments.h~ main.o side.c<br/>
+ README main.c meal side.o<br/>
+ condiments.h main.c~<br/>
+ &gt; set fignore = (.o \~)<br/>
+ &gt; emacs ma[^D]<br/>
+ main.c main.c~ main.o<br/>
+ &gt; emacs ma[tab]<br/>
  &gt; emacs main.c</dd></dl>
 <p> `main.c~&#8217; and `main.o&#8217; are ignored by completion (but not listing), because they end in suffixes in <code>fignore</code>. Note that a `\&#8217; was needed in front of `~&#8217; to prevent it from being expanded to <code>home</code> as described under <code>Filename substitution</code>. <code>fignore</code> is ignored if only one completion is possible. </p>
 <p> If the <code>complete</code> shell variable is set to `enhance&#8217;, completion 1) ignores case and 2) considers periods, hyphens and underscores (`.&#8217;, `-&#8216; and `_&#8217;) to be word separators and hyphens and underscores to be equivalent. If you had the following files</p>
 <dl>
 <dt>
-</dt><dd> comp.lang.c comp.lang.perl comp.std.c++<br />
+</dt><dd> comp.lang.c comp.lang.perl comp.std.c++<br/>
  comp.lang.c++ comp.std.c</dd></dl>
 <p> and typed `mail -f c.l.c[tab]&#8217;, it would be completed to `mail -f comp.lang.c&#8217;, and ^D would list `comp.lang.c&#8217; and `comp.lang.c++&#8217;. `mail -f c..c++[^D]&#8217; would list `comp.lang.c++&#8217; and `comp.std.c++&#8217;. Typing `rm a&#8211;file[^D]&#8217; in the following directory</p>
 <dl>
@@ -151,14 +151,14 @@ description: "tcsh – C shell with file name completion and command line editin
 <p> Completion and listing are affected by several other shell variables: <code>recexact</code> can be set to complete on the shortest possible unique match, even if more typing might result in a longer match:</p>
 <dl>
 <dt>
-</dt><dd> &gt; ls<br />
- fodder foo food foonly<br />
- &gt; set recexact<br />
+</dt><dd> &gt; ls<br/>
+ fodder foo food foonly<br/>
+ &gt; set recexact<br/>
  &gt; rm fo[tab]</dd></dl>
 <p> just beeps, because `fo&#8217; could expand to `fod&#8217; or `foo&#8217;, but if we type another `o&#8217;,</p>
 <dl>
 <dt>
-</dt><dd> &gt; rm foo[tab]<br />
+</dt><dd> &gt; rm foo[tab]<br/>
  &gt; rm foo</dd></dl>
 <p> the completion completes on `foo&#8217;, even though `food&#8217; and `foonly&#8217; also match. <code>autoexpand</code> can be set to run the <i>expand-history</i> editor command before each completion attempt, <code>autocorrect</code> can be set to spelling-correct the word to be completed (see <code>Spelling correction</code>) before each completion attempt and <code>correct</code> can be set to complete commands automatically after one hits `return&#8217;. <code>matchbeep</code> can be set to make completion beep or not beep in a variety of situations, and <code>nobeep</code> can be set to never beep at all. <code>nostat</code> can be set to a list of directories and/or patterns that match directories to prevent the completion mechanism from <i><a href="/docs/linux/man/2-stat/">stat</a></i>(2)ing those directories. <code>listmax</code> and <code>listmaxrows</code> can be set to limit the number of items and rows (respectively) that are listed without asking first. <code>recognize_only_executables</code> can be set to make the shell list only executables when listing commands, but it is quite slow. </p>
 <p> Finally, the <i>complete</i> builtin command can be used to tell the shell how to complete words other than filenames, commands and variables. Completion and listing do not work on glob-patterns (see <code>Filename substitution</code>), but the <i>list-glob</i> and <i>expand-glob</i> editor commands perform equivalent functions for glob-patterns.</p>
@@ -168,8 +168,8 @@ description: "tcsh – C shell with file name completion and command line editin
 <p> When spelling correction is invoked in any of these ways and the shell thinks that any part of the command line is misspelled, it prompts with the corrected line:</p>
 <dl>
 <dt>
-</dt><dd> &gt; set correct = cmd<br />
- &gt; lz /usr/bin<br />
+</dt><dd> &gt; set correct = cmd<br/>
+ &gt; lz /usr/bin<br/>
  CORRECT&gt;ls /usr/bin (y|n|e|a)?</dd></dl>
 <p> One can answer `y&#8217; or space to execute the corrected line, `e&#8217; to leave the uncorrected command in the input buffer, `a&#8217; to abort the command as if `^C&#8217; had been hit, and anything else to execute the original line unchanged. </p>
 <p> Spelling correction recognizes user-defined completions (see the <i>complete</i> builtin command). If an input word in a position for which a completion is defined resembles a word in the completion list, spelling correction registers a misspelling and suggests the latter word as a correction. However, if the input word does not match any of the possible completions for that position, spelling correction does not register a misspelling. </p>
@@ -314,9 +314,9 @@ description: "tcsh – C shell with file name completion and command line editin
 <p> For example, consider this bit of someone&#8217;s history list:</p>
 <dl>
 <dt>
-</dt><dd> &nbsp;<wbr>9 8:30 nroff -man wumpus.man<br />
- 10 8:31 cp wumpus.man wumpus.man.old<br />
- 11 8:36 vi wumpus.man<br />
+</dt><dd> &nbsp;<wbr>9 8:30 nroff -man wumpus.man<br/>
+ 10 8:31 cp wumpus.man wumpus.man.old<br/>
+ 11 8:36 vi wumpus.man<br/>
  12 8:37 diff wumpus.man.old wumpus.man</dd></dl>
 <p> The commands are shown with their event numbers and time stamps. The current event, which we haven&#8217;t typed in yet, is event 13. `!11&#8242; and `!-2&#8242; refer to event 11. `!!&#8217; refers to the previous event, 12. `!!&#8217; can be abbreviated `!&#8217; if it is followed by `:&#8217; (`:&#8217; is described below). `!n&#8217; refers to event 9, which begins with `n&#8217;. `!?old?&#8217; also refers to event 12, which contains `old&#8217;. Without word designators or modifiers history references simply expand to the entire event, so we might type `!cp&#8217; to redo the copy command or `!!|more&#8217; if the `diff&#8217; output scrolled off the top of the screen. </p>
 <p> History references may be insulated from the surrounding text with braces if necessary. For example, `!vdoc&#8217; would look for a command beginning with `vdoc&#8217;, and, in this example, not find one, but `!{v}doc&#8217; would expand unambiguously to `vi wumpus.mandoc&#8217;. Even in braces, history substitutions do not nest. </p>
@@ -384,16 +384,16 @@ description: "tcsh – C shell with file name completion and command line editin
 <p> (+) In <i>csh</i> as such, only one modifier may be applied to each history or variable expansion. In <i>tcsh</i>, more than one may be used, for example</p>
 <dl>
 <dt>
-</dt><dd> % mv wumpus.man /usr/man/man1/wumpus.1<br />
- % man !$:t:r<br />
+</dt><dd> % mv wumpus.man /usr/man/man1/wumpus.1<br/>
+ % man !$:t:r<br/>
  man wumpus</dd></dl>
 <p> In <i>csh</i>, the result would be `wumpus.1:r&#8217;. A substitution followed by a colon may need to be insulated from it with braces:</p>
 <dl>
 <dt>
-</dt><dd> &gt; mv a.out /usr/games/wumpus<br />
- &gt; setenv PATH !$:h:$PATH<br />
- Bad ! modifier: $.<br />
- &gt; setenv PATH !{-2$:h}:$PATH<br />
+</dt><dd> &gt; mv a.out /usr/games/wumpus<br/>
+ &gt; setenv PATH !$:h:$PATH<br/>
+ Bad ! modifier: $.<br/>
+ &gt; setenv PATH !{-2$:h}:$PATH<br/>
  setenv PATH /usr/games:/bin:/usr/bin:.</dd></dl>
 <p> The first attempt would succeed in <i>csh</i> but fails in <i>tcsh</i>, because <i>tcsh</i> expects another modifier after the second colon rather than `$&#8217;. </p>
 <p> Finally, history can be accessed through the editor as well as through the substitutions just described. The <i>up-</i> and <i>down-history</i>, <i>history-search-backward</i> and <i>-forward</i>, <i>i-search-back</i> and <i>-fwd</i>, <i>vi-search-back</i> and <i>-fwd</i>, <i>copy-prev-word</i> and <i>insert-last-word</i> editor commands search for events in the history list and copy them into the input buffer. The <i>toggle-literal-history</i> editor command switches between the expanded and literal forms of history lines in the input buffer. <i>expand-history</i> and <i>expand-line</i> expand history substitutions in the current word and in the entire input buffer respectively.</p>
@@ -473,9 +473,9 @@ description: "tcsh – C shell with file name completion and command line editin
 <p> An entire glob-pattern can also be negated with `^&#8217;:</p>
 <dl>
 <dt>
-</dt><dd> &gt; echo *<br />
- bang crash crunch ouch<br />
- &gt; echo ^cr*<br />
+</dt><dd> &gt; echo *<br/>
+ bang crash crunch ouch<br/>
+ &gt; echo ^cr*<br/>
  bang ouch</dd></dl>
 <p> Glob-patterns which do not use `?&#8217;, `*&#8217;, or `[]&#8217; or which use `{}&#8217; or `~&#8217; (below) are not negated correctly. </p>
 <p> The metanotation `a{b,c,d}e&#8217; is a shorthand for `abe ace ade&#8217;. Left-to-right order is preserved: `/usr/source/s1/{oldls,ls}.c&#8217; expands to `/usr/source/s1/oldls.c /usr/source/s1/ls.c&#8217;. The results of matches are sorted separately at a low level to preserve this order: `../{memo,*box}&#8217; might expand to `../memo ../box ../mbox&#8217;. (Note that `memo&#8217; was not sorted with the results of matching `*box&#8217;.) It is not an error when this construct expands to files which do not exist, but it is possible to get an error from a command to which the expanded list is passed. This construct may be nested. As a special case the words `{&#8216;, `}&#8217; and `{}&#8217; are passed undisturbed. </p>
@@ -488,15 +488,15 @@ description: "tcsh – C shell with file name completion and command line editin
 <p> The character `=&#8217; followed by one or more digits expands to an entry in the directory stack. The special case `=-&#8216; expands to the last directory in the stack. For example,</p>
 <dl>
 <dt>
-</dt><dd> &gt; dirs -v<br />
- 0 /usr/bin<br />
- 1 /usr/spool/uucp<br />
- 2 /usr/accts/sys<br />
- &gt; echo =1<br />
- /usr/spool/uucp<br />
- &gt; echo =0/calendar<br />
- /usr/bin/calendar<br />
- &gt; echo =-<br />
+</dt><dd> &gt; dirs -v<br/>
+ 0 /usr/bin<br/>
+ 1 /usr/spool/uucp<br/>
+ 2 /usr/accts/sys<br/>
+ &gt; echo =1<br/>
+ /usr/spool/uucp<br/>
+ &gt; echo =0/calendar<br/>
+ /usr/bin/calendar<br/>
+ &gt; echo =-<br/>
  /usr/accts/sys</dd></dl>
 <p> The <code>noglob</code> and <code>nonomatch</code> shell variables and the <i>expand-glob</i> editor command apply to directory stack as well as filename substitutions.</p>
 <h3>Other substitutions (+)</h3>
@@ -538,8 +538,8 @@ description: "tcsh – C shell with file name completion and command line editin
 <dd> Open file name</i> (which is first variable, command and filename expanded) as the standard input.</dd>
 <dt>&lt;&lt; <i>word</dt>
 <dd> Read the shell input up to a line which is identical to word</i>. <i>word</i> is not subjected to variable, filename or command substitution, and each input line is compared to <i>word</i> before any substitutions are done on this input line. Unless a quoting `\&#8217;, `&quot;&#8217;, `&#8217; or &#8220;&#8217; appears in <i>word</i> variable and command substitution is performed on the intervening lines, allowing `\&#8217; to quote `$&#8217;, `\&#8217; and &#8220;&#8217;. Commands which are substituted have all blanks, tabs, and newlines preserved, except for the final newline which is dropped. The resultant text is placed in an anonymous temporary file which is given to the command as standard input.</dd></dl>
-<p> &gt; <i>name<br />
- &gt;! name<br />
+<p> &gt; <i>name<br/>
+ &gt;! name<br/>
  &gt;&amp; name</p>
 <dl>
 <dt>&gt;&amp;! name</dt>
@@ -550,8 +550,8 @@ description: "tcsh – C shell with file name completion and command line editin
 <p> If the shell variable <code>noclobber</code> is set, then the file must not exist or be a character special file (e.g., a terminal or `/dev/null&#8217;) or an error results. This helps prevent accidental destruction of files. In this case the `!&#8217; forms can be used to suppress this check. </p>
 <p> The forms involving `&amp;&#8217; route the diagnostic output into the specified file as well as the standard output. <i>name</i> is expanded in the same way as `&lt;&#8216; input filenames are.</dd></dl>
 </dl>
-<p> &gt;&gt; <i>name<br />
- &gt;&gt;&amp; name<br />
+<p> &gt;&gt; <i>name<br/>
+ &gt;&gt;&amp; name<br/>
  &gt;&gt;! name</p>
 <dl>
 <dt>&gt;&gt;&amp;! name</dt>
@@ -571,7 +571,7 @@ description: "tcsh – C shell with file name completion and command line editin
 <p> These operators are similar to those of C and have the same precedence. They include</p>
 <dl>
 <dt>
-</dt><dd> || &amp;&amp; | ^ &amp; == != =~ !~ &lt;= &gt;=<br />
+</dt><dd> || &amp;&amp; | ^ &amp; == != =~ !~ &lt;= &gt;=<br/>
  &lt; &gt; &lt;&lt; &gt;&gt; + &#8211; * / % ! ~ ( )</dd></dl>
 <p> Here the precedence increases to the right, `==&#8217; `!=&#8217; `=~&#8217; and `!~&#8217;, `&lt;=&#8217; `&gt;=&#8217; `&lt;&#8216; and `&gt;&#8217;, `&lt;&lt;&#8216; and `&gt;&gt;&#8217;, `+&#8217; and `-&#8216;, `*&#8217; `/&#8217; and `%&#8217; being, in groups, at the same level. When multiple operators which have same precedence are used in one expression, calculation must be done from operator of right side. The `==&#8217; `!=&#8217; `=~&#8217; and `!~&#8217; operators compare their arguments as strings; all others operate on numbers. The operators `=~&#8217; and `!~&#8217; are like `!=&#8217; and `==&#8217; except that the right hand side is a glob-pattern (see <code>Filename substitution</code>) against which the left hand operand is matched. This reduces the need for use of the <i>switch</i> builtin command in shell scripts when all that is really needed is pattern matching. </p>
 <p> Null or missing arguments are considered `0&#8242;. The results of all expressions are strings, which represent decimal numbers. It is important to note that no two components of an expression can appear in the same word; except when adjacent to components of expressions which are syntactically significant to the parser (`&amp;&#8217; `|&#8217; `&lt;&#8216; `&gt;&#8217; `(&#8216; `)&#8217;) they should be surrounded by spaces.</p>
@@ -740,9 +740,9 @@ nn. If the tty is not in 8 bit mode, other 8 bit characters are printed by conve
 <dd> A synonym for the <i>bg</i> builtin command.</dd>
 <dt><code>:</code></dt>
 <dd> Does nothing, successfully.</dd></dl>
-<p> <code>@</code><br />
- <code>@ </code><i>name</i><code> = </code><i>expr</i><br />
- <code>@ </code><i>name</i>[<i>index</i>]<code> = </code><i>expr</i><br />
+<p> <code>@</code><br/>
+ <code>@ </code><i>name</i><code> = </code><i>expr</i><br/>
+ <code>@ </code><i>name</i>[<i>index</i>]<code> = </code><i>expr</i><br/>
  <code>@ </code><i>name</i><code>++</code>|<code>&#8212;</code></p>
 <dl>
 <dt><code>@ </code><i>name</i>[<i>index</i>]<code>++</code>|<code>&#8212;</code></dt>
@@ -760,7 +760,7 @@ nn. If the tty is not in 8 bit mode, other 8 bit characters are printed by conve
 <dd> Shows the amount of dynamic memory acquired, broken down into used and free memory. With an argument shows the number of free and used blocks in each size category. The categories start at size 8 and double at each step. This command&#8217;s output may vary across system types, because systems other than the VAX may use a different memory allocator.</dd>
 <dt><code>bg </code>[<code>%</code><i>job</i> &#8230;]</dt>
 <dd> Puts the specified jobs (or, without arguments, the current job) into the background, continuing each if it is stopped. <i>job</i> may be a number, a string, `&#8217;, `%&#8217;, `+&#8217; or `-&#8216; as described under <code>Jobs</code>.</dd></dl>
-<p> <code>bindkey </code>[<code>-l</code>|<code>-d</code>|<code>-e</code>|<code>-v</code>|<code>-u</code>] (+)<br />
+<p> <code>bindkey </code>[<code>-l</code>|<code>-d</code>|<code>-e</code>|<code>-v</code>|<code>-u</code>] (+)<br/>
  <code>bindkey </code>[<code>-a</code>] [<code>-b</code>] [<code>-k</code>] [<code>-r</code>] [<code>&#8212;</code>] <i>key </i>(+)</p>
 <dl>
 <dt><code>bindkey </code>[<code>-a</code>] [<code>-b</code>] [<code>-k</code>] [<code>-c</code>|<code>-s</code>] [<code>&#8212;</code>] <i>key command </i>(+)</dt>
@@ -921,10 +921,10 @@ nn. If the tty is not in 8 bit mode, other 8 bit characters are printed by conve
 <p> completes only the first word following `cd&#8217; (`p/1&#8242;) with a directory. <code>p</code>-type completion can also be used to narrow down command completion:</p>
 <dl>
 <dt>
-</dt><dd> &gt; co[^D]<br />
- complete compress<br />
- &gt; complete -co* &#8216;p/0/(compress)/&#8217;<br />
- &gt; co[^D]<br />
+</dt><dd> &gt; co[^D]<br/>
+ complete compress<br/>
+ &gt; complete -co* &#8216;p/0/(compress)/&#8217;<br/>
+ &gt; co[^D]<br/>
  &gt; compress</dd></dl>
 <p> This completion completes commands (words in position 0, `p/0&#8242;) which begin with `co&#8217; (thus matching `co*&#8217;) to `compress&#8217; (the only word in the list). The leading `-&#8216; indicates that this completion is to be used with only ambiguous commands.</p>
 <dl>
@@ -938,28 +938,28 @@ nn. If the tty is not in 8 bit mode, other 8 bit characters are printed by conve
 <p> Different <i>list</i>s are useful with different commands.</p>
 <dl>
 <dt>
-</dt><dd> &gt; complete alias &#8216;p/1/a/&#8217;<br />
- &gt; complete man &#8216;p/*/c/&#8217;<br />
- &gt; complete set &#8216;p/1/s/&#8217;<br />
+</dt><dd> &gt; complete alias &#8216;p/1/a/&#8217;<br/>
+ &gt; complete man &#8216;p/*/c/&#8217;<br/>
+ &gt; complete set &#8216;p/1/s/&#8217;<br/>
  &gt; complete true &#8216;p/1/x:Truth has no options./&#8217;</dd></dl>
 <p> These complete words following `alias&#8217; with aliases, `man&#8217; with commands, and `set&#8217; with shell variables. `true&#8217; doesn&#8217;t have any options, so <code>x</code> does nothing when completion is attempted and prints `Truth has no options.&#8217; when completion choices are listed. </p>
 <p> Note that the <i>man</i> example, and several other examples below, could just as well have used &#8216;c/*&#8217; or &#8216;n/*&#8217; as &#8216;p/*&#8217;. </p>
 <p> Words can be completed from a variable evaluated at completion time,</p>
 <dl>
 <dt>
-</dt><dd> &gt; complete ftp &#8216;p/1/$hostnames/&#8217;<br />
- &gt; set hostnames = (rtfm.mit.edu tesla.ee.cornell.edu)<br />
- &gt; ftp [^D]<br />
- rtfm.mit.edu tesla.ee.cornell.edu<br />
- &gt; ftp [^C]<br />
- &gt; set hostnames = (rtfm.mit.edu tesla.ee.cornell.edu uunet.uu.net)<br />
- &gt; ftp [^D]<br />
+</dt><dd> &gt; complete ftp &#8216;p/1/$hostnames/&#8217;<br/>
+ &gt; set hostnames = (rtfm.mit.edu tesla.ee.cornell.edu)<br/>
+ &gt; ftp [^D]<br/>
+ rtfm.mit.edu tesla.ee.cornell.edu<br/>
+ &gt; ftp [^C]<br/>
+ &gt; set hostnames = (rtfm.mit.edu tesla.ee.cornell.edu uunet.uu.net)<br/>
+ &gt; ftp [^D]<br/>
  rtfm.mit.edu tesla.ee.cornell.edu uunet.uu.net</dd></dl>
 <p> or from a command run at completion time:</p>
 <dl>
 <dt>
-</dt><dd> &gt; complete kill &#8216;p/*/`ps | awk \{print\ \$1\}`/&#8217;<br />
- &gt; kill -9 [^D]<br />
+</dt><dd> &gt; complete kill &#8216;p/*/`ps | awk \{print\ \$1\}`/&#8217;<br/>
+ &gt; kill -9 [^D]<br/>
  23113 23377 23380 23406 23429 23529 23530 PID</dd></dl>
 <p> Note that the <i>complete</i> command does not itself quote its arguments, so the braces, space and `$&#8217; in `{print $1}&#8217; must be quoted explicitly. </p>
 <p> One command can have multiple completions:</p>
@@ -989,15 +989,15 @@ nn. If the tty is not in 8 bit mode, other 8 bit characters are printed by conve
 <p> Finally, here&#8217;s a complex example for inspiration:</p>
 <dl>
 <dt>
-</dt><dd> &gt; complete find \<br />
- &#8216;n/-name/f/&#8217; &#8216;n/-newer/f/&#8217; &#8216;n/-{,n}cpio/f/&#8217; \<br />
- &#8216;n/-exec/c/&#8217; &#8216;n/-ok/c/&#8217; &#8216;n/-user/u/&#8217; \<br />
- &#8216;n/-group/g/&#8217; &#8216;n/-fstype/(nfs 4.2)/&#8217; \<br />
- &#8216;n/-type/(b c d f l p s)/&#8217; \<br />
- &#8216;c/-/(name newer cpio ncpio exec ok user \<br />
- group fstype type atime ctime depth inum \<br />
- ls mtime nogroup nouser perm print prune \<br />
- size xdev)/&#8217; \<br />
+</dt><dd> &gt; complete find \<br/>
+ &#8216;n/-name/f/&#8217; &#8216;n/-newer/f/&#8217; &#8216;n/-{,n}cpio/f/&#8217; \<br/>
+ &#8216;n/-exec/c/&#8217; &#8216;n/-ok/c/&#8217; &#8216;n/-user/u/&#8217; \<br/>
+ &#8216;n/-group/g/&#8217; &#8216;n/-fstype/(nfs 4.2)/&#8217; \<br/>
+ &#8216;n/-type/(b c d f l p s)/&#8217; \<br/>
+ &#8216;c/-/(name newer cpio ncpio exec ok user \<br/>
+ group fstype type atime ctime depth inum \<br/>
+ ls mtime nogroup nouser perm print prune \<br/>
+ size xdev)/&#8217; \<br/>
  &#8216;p/*/d/&#8217;</dd></dl>
 <p> This completes words following `-name&#8217;, `-newer&#8217;, `-cpio&#8217; or `ncpio&#8217; (note the pattern which matches both) to files, words following `-exec&#8217; or `-ok&#8217; to commands, words following `user&#8217; and `group&#8217; to users and groups respectively and words following `-fstype&#8217; or `-type&#8217; to members of the given lists. It also completes the switches themselves from the given list (note the use of <code>c</code>-type completion) and completes anything not otherwise completed to a directory. Whew. </p>
 <p> Remember that programmed completions are ignored if the word being completed is a tilde substitution (beginning with `~&#8217;) or a variable (beginning with `$&#8217;). <i>complete</i> is an experimental feature, and the syntax may change in future versions of the shell. See also the <i>uncomplete</i> builtin command.</dl>
@@ -1005,7 +1005,7 @@ nn. If the tty is not in 8 bit mode, other 8 bit characters are printed by conve
 <dd> Continues execution of the nearest enclosing <i>while</i> or <i>foreach</i>. The rest of the commands on the current line are executed.</dd>
 <dt><code>default:</code></dt>
 <dd> Labels the default case in a <i>switch</i> statement. It should come after all <i>case</i> labels.</dd></dl>
-<p> <code>dirs </code>[<code>-l</code>] [<code>-n</code>|<code>-v</code>]<br />
+<p> <code>dirs </code>[<code>-l</code>] [<code>-n</code>|<code>-v</code>]<br/>
  <code>dirs -S</code>|<code>-L </code>[<i>filename</i>] (+)</p>
 <dl>
 <dt><code>dirs -c </code>(+)</dt>
@@ -1026,18 +1026,18 @@ nn. If the tty is not in 8 bit mode, other 8 bit characters are printed by conve
 <p> If <i>arg</i> is &#8216;baud&#8217;, &#8216;cols&#8217;, &#8216;lines&#8217;, &#8216;meta&#8217; or &#8216;tabs&#8217;, prints the value of that capability (&quot;yes&quot; or &quot;no&quot; indicating that the terminal does or does not have that capability). One might use this to make the output from a shell script less verbose on slow terminals, or limit command output to the number of lines on the screen:</p>
 </dd><dl>
 <dt>
-</dt><dd> &gt; set history=`echotc lines`<br />
+</dt><dd> &gt; set history=`echotc lines`<br/>
  &gt; @ history&#8211;</dd></dl>
 <p> Termcap strings may contain wildcards which will not echo correctly. One should use double quotes when setting a shell variable to a terminal capability string, as in the following example that places the date in the status line:</p>
 <dl>
 <dt>
-</dt><dd> &gt; set tosl=&quot;`echotc ts 0`&quot;<br />
- &gt; set frsl=&quot;`echotc fs`&quot;<br />
+</dt><dd> &gt; set tosl=&quot;`echotc ts 0`&quot;<br/>
+ &gt; set frsl=&quot;`echotc fs`&quot;<br/>
  &gt; echo -n &quot;$tosl&quot;;date; echo -n &quot;$frsl&quot;</dd></dl>
 <p> With <code>-s</code>, nonexistent capabilities return the empty string rather than causing an error. With <code>-v</code>, messages are verbose.</dl>
 </dl>
-<p> <code>else</code><br />
- <code>end</code><br />
+<p> <code>else</code><br/>
+ <code>end</code><br/>
  <code>endif</code></p>
 <dl>
 <dt><code>endsw</code></dt>
@@ -1052,7 +1052,7 @@ nn. If the tty is not in 8 bit mode, other 8 bit characters are printed by conve
 <dd> Brings the specified jobs (or, without arguments, the current job) into the foreground, continuing each if it is stopped. <i>job</i> may be a number, a string, `&#8217;, `%&#8217;, `+&#8217; or `-&#8216; as described under <code>Jobs</code>. See also the <i>run-fg-editor</i> editor command.</dd>
 <dt><code>filetest &#8211;</code><i>op file</i> &#8230; (+)</dt>
 <dd> Applies <i>op</i> (which is a file inquiry operator as described under <code>File inquiry operators</code>) to each <i>file</i> and returns the results as a space-separated list.</dd></dl>
-<p> <code>foreach </code><i>name </i><code>(</code><i>wordlist</i><code>)</code><br />
+<p> <code>foreach </code><i>name </i><code>(</code><i>wordlist</i><code>)</code><br/>
  &#8230;</p>
 <dl>
 <dt><code>end</code></dt>
@@ -1069,7 +1069,7 @@ nn. If the tty is not in 8 bit mode, other 8 bit characters are printed by conve
 <dd> Prints a statistics line indicating how effective the internal hash table has been at locating commands (and avoiding <i>exec</i>&#8216;s). An <i>exec</i> is attempted for each component of the <code>path</code> where the hash function indicates a possible hit, and in each component which does not begin with a `/&#8217;.</dd>
 <dt>
 </dt><dd> On machines without <i><a href="/docs/linux/man/2-vfork/">vfork</a></i>(2), prints only the number and size of hash buckets.</dd></dl>
-<p> <code>history </code>[<code>-hTr</code>] [<i>n</i>]<br />
+<p> <code>history </code>[<code>-hTr</code>] [<i>n</i>]<br/>
  <code>history -S</code>|<code>-L|-M </code>[<i>filename</i>] (+)</p>
 <dl>
 <dt><code>history -c </code>(+)</dt>
@@ -1086,11 +1086,11 @@ nn. If the tty is not in 8 bit mode, other 8 bit characters are printed by conve
 <dd> With <i>command</i>, runs <i>command</i> such that it will exit on a hangup signal and arranges for the shell to send it a hangup signal when the shell exits. Note that commands may set their own response to hangups, overriding <i>hup</i>. Without an argument, causes the non-interactive shell only to exit on a hangup for the remainder of the script. See also <code>Signal handling</code> and the <i>nohup</i> builtin command.</dd>
 <dt><code>if (</code><i>expr</i><code>) </code><i>command</i></dt>
 <dd> If <i>expr</i> (an expression, as described under <code>Expressions</code>) evaluates true, then <i>command</i> is executed. Variable substitution on <i>command</i> happens early, at the same time it does for the rest of the <i>if</i> command. <i>command</i> must be a simple command, not an alias, a pipeline, a command list or a parenthesized command list, but it may have arguments. Input/output redirection occurs even if <i>expr</i> is false and <i>command</i> is thus <i>not</i> executed; this is a bug.</dd></dl>
-<p> <code>if (</code><i>expr</i><code>) then</code><br />
- &#8230;<br />
- <code>else if (</code><i>expr2</i><code>) then</code><br />
- &#8230;<br />
- <code>else</code><br />
+<p> <code>if (</code><i>expr</i><code>) then</code><br/>
+ &#8230;<br/>
+ <code>else if (</code><i>expr2</i><code>) then</code><br/>
+ &#8230;<br/>
+ <code>else</code><br/>
  &#8230;</p>
 <dl>
 <dt><code>endif</code></dt>
@@ -1225,7 +1225,7 @@ nn. If the tty is not in 8 bit mode, other 8 bit characters are printed by conve
 <dd> The specified <i>command</i>, which is subject to the same restrictions as the <i>command</i> in the one line <i>if</i> statement above, is executed <i>count</i> times. I/O redirections occur exactly once, even if <i>count</i> is 0.</dd>
 <dt><code>rootnode //</code><i>nodename </i>(+)</dt>
 <dd> Changes the rootnode to //<i>nodename</i>, so that `/&#8217; will be interpreted as `//<i>nodename</i>&#8216;. (Domain/OS only)</dd></dl>
-<p> <code>sched </code>(+)<br />
+<p> <code>sched </code>(+)<br/>
  <code>sched </code>[<code>+</code>]<i>hh:mm command</i> (+)</p>
 <dl>
 <dt><code>sched &#8211;</code><i>n</i> (+)</dt>
@@ -1247,19 +1247,19 @@ nn. If the tty is not in 8 bit mode, other 8 bit characters are printed by conve
 <dt>
 </dt><dd> &gt; sched </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>1&nbsp;<wbr>&nbsp;<wbr>Wed Apr&nbsp;<wbr>&nbsp;<wbr>4 15:42&nbsp;<wbr>&nbsp;<wbr>/usr/lib/uucp/uucico -r1 -sother </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>2&nbsp;<wbr>&nbsp;<wbr>Wed Apr&nbsp;<wbr>&nbsp;<wbr>4 17:00&nbsp;<wbr>&nbsp;<wbr>set prompt=[%h]&nbsp;<wbr>It&#8217;s after 5;&nbsp;<wbr>go home:&nbsp;<wbr>&gt;<br />
- &gt; sched -2<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>2&nbsp;<wbr>&nbsp;<wbr>Wed Apr&nbsp;<wbr>&nbsp;<wbr>4 17:00&nbsp;<wbr>&nbsp;<wbr>set prompt=[%h]&nbsp;<wbr>It&#8217;s after 5;&nbsp;<wbr>go home:&nbsp;<wbr>&gt;<br/>
+ &gt; sched -2<br/>
  &gt; sched </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>1&nbsp;<wbr>&nbsp;<wbr>Wed Apr&nbsp;<wbr>&nbsp;<wbr>4 15:42&nbsp;<wbr>&nbsp;<wbr>/usr/lib/uucp/uucico -r1 -sother</dl>
 <p> A command in the scheduled-event list is executed just before the first prompt is printed after the time when the command is scheduled. It is possible to miss the exact time when the command is to be run, but an overdue command will execute at the next prompt. A command which comes due while the shell is waiting for user input is executed immediately. However, normal operation of an already-running command will not be interrupted so that a scheduled-event list element may be run. </p>
 <p> This mechanism is similar to, but not the same as, the <i><a href="/docs/linux/man/1-at/">at</a></i>(1) command on some Unix systems. Its major disadvantage is that it may not run a command at exactly the specified time. Its major advantage is that because <i>sched</i> runs directly from the shell, it has access to shell variables and other structures. This provides a mechanism for changing one&#8217;s working environment based on the time of day.</dl>
 </dl>
-<p> <code>set</code><br />
- <code>set </code><i>name</i> &#8230;<br />
- <code>set </code><i>name</i><code>=</code><i>word</i> &#8230;<br />
- <code>set [-r] [-f|-l] </code><i>name</i><code>=(</code><i>wordlist</i><code>)</code> &#8230; (+)<br />
- <code>set </code><i>name[index]</i><code>=</code><i>word</i> &#8230;<br />
- <code>set -r </code>(+)<br />
+<p> <code>set</code><br/>
+ <code>set </code><i>name</i> &#8230;<br/>
+ <code>set </code><i>name</i><code>=</code><i>word</i> &#8230;<br/>
+ <code>set [-r] [-f|-l] </code><i>name</i><code>=(</code><i>wordlist</i><code>)</code> &#8230; (+)<br/>
+ <code>set </code><i>name[index]</i><code>=</code><i>word</i> &#8230;<br/>
+ <code>set -r </code>(+)<br/>
  <code>set -r </code><i>name</i> &#8230; (+)</p>
 <dl>
 <dt><code>set -r </code><i>name</i><code>=</code><i>word</i> &#8230; (+)</dt>
@@ -1288,17 +1288,17 @@ nn. If the tty is not in 8 bit mode, other 8 bit characters are printed by conve
 <dd> Stops the specified jobs or processes which are executing in the background. <i>job</i> may be a number, a string, `&#8217;, `%&#8217;, `+&#8217; or `-&#8216; as described under <code>Jobs</code>. There is no default <i>job</i>; saying just `stop&#8217; does not stop the current job.</dd>
 <dt><code>suspend</code></dt>
 <dd> Causes the shell to stop in its tracks, much as if it had been sent a stop signal with <code>^Z</code>. This is most often used to stop shells started by <i><a href="/docs/linux/man/1-su/">su</a></i>(1).</dd></dl>
-<p> <code>switch (</code><i>string</i><code>)</code><br />
+<p> <code>switch (</code><i>string</i><code>)</code><br/>
  <code>case </code><i>str1</i><code>:</code></p>
 <dl>
 <dt>
-</dt><dd> &#8230;<br />
+</dt><dd> &#8230;<br/>
  <code>breaksw</code></dd></dl>
 <p> &#8230; </p>
 <p> <code>default:</code></p>
 <dl>
 <dt>
-</dt><dd> &#8230;<br />
+</dt><dd> &#8230;<br/>
  <code>breaksw</code></dd>
 <dt><code>endsw</code></dt>
 <dd> Each case label is successively matched, against the specified <i>string</i> which is first command and filename expanded. The file metacharacters `*&#8217;, `?&#8217; and `[&#8230;]&#8217; may be used in the case labels, which are variable expanded. If none of the labels match before a `default&#8217; label is found, then the execution begins after the default label. Each case label and the default label must appear at the beginning of a line. The command <i>breaksw</i> causes execution to continue after the <i>endsw</i>. Otherwise control may fall through case labels and default labels as in C. If no label matches and there is no default, execution continues after the <i>endsw</i>.</dd>
@@ -1337,7 +1337,7 @@ nn. If the tty is not in 8 bit mode, other 8 bit characters are printed by conve
 <dd> Reports all known instances of <i>command</i>, including aliases, builtins and executables in <code>path</code>.</dd>
 <dt><code>which</code> <i>command</i> (+)</dt>
 <dd> Displays the command that will be executed by the shell after substitutions, <code>path</code> searching, etc. The builtin command is just like <i><a href="/docs/linux/man/1-which/">which</a></i>(1), but it correctly reports <i>tcsh</i> aliases and builtins and is 10 to 100 times faster. See also the <i>which-command</i> editor command.</dd></dl>
-<p> <code>while (</code><i>expr</i><code>)</code><br />
+<p> <code>while (</code><i>expr</i><code>)</code><br/>
  &#8230;</p>
 <dl>
 <dt><code>end</code></dt>
@@ -1378,7 +1378,7 @@ nn. If the tty is not in 8 bit mode, other 8 bit characters are printed by conve
 <dl>
 <dl>
 <dt>
-</dt><dd> &gt; set tperiod = 30<br />
+</dt><dd> &gt; set tperiod = 30<br/>
  &gt; alias periodic checknews</dd></dl>
 <p> then the <i>checknews</i>(1) program runs every 30 minutes. If <i>periodic</i> is set but <code>tperiod</code> is unset or set to 0, <i>periodic</i> behaves like <i>precmd</i>.</dl>
 <dt><code>precmd</code></dt>
@@ -1468,10 +1468,10 @@ nn. If the tty is not in 8 bit mode, other 8 bit characters are printed by conve
 <p>&nbsp;<wbr>&nbsp;<wbr>1 &#8230; used for the first byte of a multi-byte character. </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>2 &#8230; used for the second byte of a multi-byte character. </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>3 &#8230; used for both the first byte and second byte of a multi-byte character. </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>Example:<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>Example:<br/>
  If set to `001322&#8242;, the first character (means 0x00 of the ASCII code) and second character (means 0x01 of ASCII code) are set to `0&#8242;. Then, it is not used for multi-byte characters. The 3rd character (0x02) is set to &#8216;1&#8217;, indicating that it is used for the first byte of a multi-byte character. The 4th character(0x03) is set &#8216;3&#8217;. It is used for both the first byte and the second byte of a multi-byte character. The 5th and 6th characters (0x04,0x05) are set to &#8216;2&#8217;, indicating that they are used for the second byte of a multi-byte character. </p>
 <p> The GNU fileutils version of ls cannot display multi-byte filenames without the -N ( &#8211;literal ) option. If you are using this version, set the second word of dspmbyte to &quot;ls&quot;. If not, for example, &quot;ls-F -l&quot; cannot display multi-byte filenames. </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>Note:<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>Note:<br/>
  This variable can only be used if KANJI and DSPMBYTE has been defined at compile time.</dl>
 <dt><code>dunique </code>(+)</dt>
 <dd> If set, <i>pushd</i> removes any instances of <i>name</i> from the stack before pushing it onto the stack.</dd>
@@ -1666,7 +1666,7 @@ nn. If the tty is not in 8 bit mode, other 8 bit characters are printed by conve
 <p> The bold, standout and underline sequences are often used to distinguish a superuser shell. For example,</p>
 <dl>
 <dt>
-</dt><dd> &gt; set prompt = &quot;%m [%h] %B[%@]%b [%/] you rang? &quot;<br />
+</dt><dd> &gt; set prompt = &quot;%m [%h] %B[%@]%b [%/] you rang? &quot;<br/>
  tut [37] <code>[2:54pm]</code> [/usr/accts/sys] you rang? _</dd></dl>
 <p> If `%t&#8217;, `%@&#8217;, `%T&#8217;, `%p&#8217;, or `%P&#8217; is used, and <code>noding</code> is not set, then print `DING!&#8217; on the change of hour (i.e, `:00&#8242; minutes) instead of the actual time. </p>
 <p> Set by default to `%# &#8216; in interactive shells.</dl>
@@ -1718,44 +1718,44 @@ nn. If the tty is not in 8 bit mode, other 8 bit characters are printed by conve
 <p> Some examples are in order. First, let&#8217;s set up some play directories:</p>
 </dd><dl>
 <dt>
-</dt><dd> &gt; cd /tmp<br />
- &gt; mkdir from from/src to<br />
+</dt><dd> &gt; cd /tmp<br/>
+ &gt; mkdir from from/src to<br/>
  &gt; ln -s from/src to/dst</dd></dl>
 <p> Here&#8217;s the behavior with <code>symlinks</code> unset,</p>
 <dl>
 <dt>
-</dt><dd> &gt; cd /tmp/to/dst; echo $cwd<br />
- /tmp/to/dst<br />
- &gt; cd ..; echo $cwd<br />
+</dt><dd> &gt; cd /tmp/to/dst; echo $cwd<br/>
+ /tmp/to/dst<br/>
+ &gt; cd ..; echo $cwd<br/>
  /tmp/from</dd></dl>
 <p> here&#8217;s the behavior with <code>symlinks</code> set to `chase&#8217;,</p>
 <dl>
 <dt>
-</dt><dd> &gt; cd /tmp/to/dst; echo $cwd<br />
- /tmp/from/src<br />
- &gt; cd ..; echo $cwd<br />
+</dt><dd> &gt; cd /tmp/to/dst; echo $cwd<br/>
+ /tmp/from/src<br/>
+ &gt; cd ..; echo $cwd<br/>
  /tmp/from</dd></dl>
 <p> here&#8217;s the behavior with <code>symlinks</code> set to `ignore&#8217;,</p>
 <dl>
 <dt>
-</dt><dd> &gt; cd /tmp/to/dst; echo $cwd<br />
- /tmp/to/dst<br />
- &gt; cd ..; echo $cwd<br />
+</dt><dd> &gt; cd /tmp/to/dst; echo $cwd<br/>
+ /tmp/to/dst<br/>
+ &gt; cd ..; echo $cwd<br/>
  /tmp/to</dd></dl>
 <p> and here&#8217;s the behavior with <code>symlinks</code> set to `expand&#8217;.</p>
 <dl>
 <dt>
-</dt><dd> &gt; cd /tmp/to/dst; echo $cwd<br />
- /tmp/to/dst<br />
- &gt; cd ..; echo $cwd<br />
- /tmp/to<br />
- &gt; cd /tmp/to/dst; echo $cwd<br />
- /tmp/to/dst<br />
- &gt; cd &quot;..&quot;; echo $cwd<br />
- /tmp/from<br />
- &gt; /bin/echo ..<br />
- /tmp/to<br />
- &gt; /bin/echo &quot;..&quot;<br />
+</dt><dd> &gt; cd /tmp/to/dst; echo $cwd<br/>
+ /tmp/to/dst<br/>
+ &gt; cd ..; echo $cwd<br/>
+ /tmp/to<br/>
+ &gt; cd /tmp/to/dst; echo $cwd<br/>
+ /tmp/to/dst<br/>
+ &gt; cd &quot;..&quot;; echo $cwd<br/>
+ /tmp/from<br/>
+ &gt; /bin/echo ..<br/>
+ /tmp/to<br/>
+ &gt; /bin/echo &quot;..&quot;<br/>
  ..</dd></dl>
 <p> Note that `expand&#8217; expansion 1) works just like `ignore&#8217; for builtins like <i>cd</i>, 2) is prevented by quoting, and 3) happens before filenames are passed to non-builtin commands.</dl>
 <dt><code>tcsh </code>(+)</dt>

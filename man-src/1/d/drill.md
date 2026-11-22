@@ -77,12 +77,12 @@ description: "drill – get (debug) information out of DNS(SEC)"
 <p> Alternatively, when DNSSEC enabled tracing (<code>-TD</code>) or signature chasing (<code>-S</code>), if <code>-k</code> is not specified, and a default trust anchor (/var/lib/unbound/root.key) exists and contains a valid DNSKEY or DS record, it will be used as the trust anchor. </p>
 <dt><code>-o </code><i>mnemonic</i></dt>
 <dd> Use this option to set or unset specific header bits. A bit is set by using the bit mnemonic in CAPITAL letters. A bit is unset when the mnemonic is given in lowercase. The following mnemonics are understood by <code>drill</code>: </dd>
-<p>&nbsp;<wbr>&nbsp;<wbr>QR, qr: set, unset QueRy&nbsp;<wbr>(default: on)<br />
-&nbsp;<wbr>&nbsp;<wbr>AA, aa: set, unset Authoritative Answer&nbsp;<wbr>(default: off)<br />
-&nbsp;<wbr>&nbsp;<wbr>TC, tc: set, unset TrunCated&nbsp;<wbr>(default: off)<br />
-&nbsp;<wbr>&nbsp;<wbr>RD, rd: set, unset Recursion Desired&nbsp;<wbr>(default: on)<br />
-&nbsp;<wbr>&nbsp;<wbr>CD, cd: set, unset Checking Disabled&nbsp;<wbr>&nbsp;<wbr>(default: off)<br />
-&nbsp;<wbr>&nbsp;<wbr>RA, ra: set, unset Recursion Available&nbsp;<wbr>&nbsp;<wbr>(default: off)<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>QR, qr: set, unset QueRy&nbsp;<wbr>(default: on)<br/>
+&nbsp;<wbr>&nbsp;<wbr>AA, aa: set, unset Authoritative Answer&nbsp;<wbr>(default: off)<br/>
+&nbsp;<wbr>&nbsp;<wbr>TC, tc: set, unset TrunCated&nbsp;<wbr>(default: off)<br/>
+&nbsp;<wbr>&nbsp;<wbr>RD, rd: set, unset Recursion Desired&nbsp;<wbr>(default: on)<br/>
+&nbsp;<wbr>&nbsp;<wbr>CD, cd: set, unset Checking Disabled&nbsp;<wbr>&nbsp;<wbr>(default: off)<br/>
+&nbsp;<wbr>&nbsp;<wbr>RA, ra: set, unset Recursion Available&nbsp;<wbr>&nbsp;<wbr>(default: off)<br/>
 &nbsp;<wbr>&nbsp;<wbr>AD, ad: set, unset Authenticated Data&nbsp;<wbr>(default: off) </p>
 <p> Thus: <code>-o CD</code>, will enable Checking Disabled, which instructs the cache to not validate the answers it gives out. </p>
 <dt><code>-p </code><i>port</i></dt>

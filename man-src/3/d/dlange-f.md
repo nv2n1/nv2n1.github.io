@@ -10,7 +10,7 @@ description: "dlange.f –"
 <p>dlange.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>DOUBLE PRECISION function <code>dlange</code> (NORM, M, N, A, LDA, WORK)<br />
+<p>DOUBLE PRECISION function <code>dlange</code> (NORM, M, N, A, LDA, WORK)<br/>
  <i></i><code>DLANGE</code> returns the value of the 1-norm, Frobenius norm, infinity-norm, or the largest absolute value of any element of a general rectangular matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>DOUBLE PRECISION function dlange (characterNORM, integerM, integerN, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( * )WORK)</h3>

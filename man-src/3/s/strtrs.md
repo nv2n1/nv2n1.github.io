@@ -11,7 +11,7 @@ description: "strtrs.f –"
 <p> strtrs.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>strtrs</code> (UPLO, TRANS, DIAG, N, NRHS, A, LDA, B, LDB, INFO)<br />
+<p> subroutine <code>strtrs</code> (UPLO, TRANS, DIAG, N, NRHS, A, LDA, B, LDB, INFO)<br/>
  <i></i><code>STRTRS</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine strtrs (characterUPLO, characterTRANS, characterDIAG, integerN, integerNRHS, real, dimension( lda, * )A, integerLDA, real, dimension( ldb, * )B, integerLDB, integerINFO)</h3>

@@ -10,16 +10,16 @@ description: "setreuid, setregid – set real and/or effective user or group ID"
 
 <p> setreuid, setregid &#8211; set real and/or effective user or group ID </p>
 <h2>SYNOPSIS</h2>
-<p> <code>#include &lt;sys/types.h&gt;</code><br />
+<p> <code>#include &lt;sys/types.h&gt;</code><br/>
  <code>#include &lt;unistd.h&gt;</code> </p>
-<p> <code>int setreuid(uid_t </code><i>ruid</i><code>, uid_t </code><i>euid</i><code>);</code><br />
+<p> <code>int setreuid(uid_t </code><i>ruid</i><code>, uid_t </code><i>euid</i><code>);</code><br/>
  <code>int setregid(gid_t </code><i>rgid</i><code>, gid_t </code><i>egid</i><code>);</code> </p>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
 <p> <code>setreuid</code>(), <code>setregid</code>():</p>
 <dl>
 <dt>
-</dt><dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
+</dt><dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>setreuid</code>() sets real and effective user IDs of the calling process. </p>

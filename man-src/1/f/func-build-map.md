@@ -15,11 +15,11 @@ func-build-map -- Builds/augments delegation map of all available func minions
 
 <h2>DESCRIPTION</h2>
 
- Func's delegation feature allows an overlord to execute commands through proxies (minions which also run as overlords) to reduce <font SIZE="-1">XMLRPC</font> overhead and the amount of time required to execute commands over large Func networks. 
+ Func's delegation feature allows an overlord to execute commands through proxies (minions which also run as overlords) to reduce XMLRPC overhead and the amount of time required to execute commands over large Func networks. 
 
  To accomplish this task, Func needs to know where each proxy and minion sits in the Func network, and for the sake of expediency, this data is stored within a map file on the overlord. 
 
- func-build-map, when run on an overlord, recursively probes through one's Func network, discovering its topology. When complete, it stores a mapfile, encoded in <font SIZE="-1">YAML</font>, in /var/lib/func/map. 
+ func-build-map, when run on an overlord, recursively probes through one's Func network, discovering its topology. When complete, it stores a mapfile, encoded in YAML, in /var/lib/func/map. 
 
  If you utilize delegation frequently, we recommend running this tool as a cron job to ensure that your mapfile remains up to date with changes in your Func network topology.
 
@@ -45,7 +45,7 @@ func-build-map -- Builds/augments delegation map of all available func minions
 
 <h2>DELEGATES</h2>
 
- To get started with delegation via the Python <font SIZE="-1">API</font>, try the following code: 
+ To get started with delegation via the Python API, try the following code: 
 
  <pre>
   import func.overlord.client as fc

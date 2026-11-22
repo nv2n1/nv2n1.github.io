@@ -20,9 +20,9 @@ int PAPI_destroy_eventset( int * EventSet );</pre>
 <dd><i>*EventSet</i> A pointer to the integer handle for a PAPI event set as created by <code>PAPI_create_eventset</code>. The value pointed to by EventSet is then set to PAPI_NULL on success.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>PAPI_EINVAL</i> One or more of the arguments is invalid. Attempting to destroy a non-empty event set or passing in a null pointer to be destroyed.<br />
- <i>PAPI_ENOEVST</i> The EventSet specified does not exist.<br />
- <i>PAPI_EISRUN</i> The EventSet is currently counting events.<br />
+<dd><i>PAPI_EINVAL</i> One or more of the arguments is invalid. Attempting to destroy a non-empty event set or passing in a null pointer to be destroyed.<br/>
+ <i>PAPI_ENOEVST</i> The EventSet specified does not exist.<br/>
+ <i>PAPI_EISRUN</i> The EventSet is currently counting events.<br/>
  <i>PAPI_EBUG</i> Internal error, send mail to ptools-perfapi [at] ptools.org and complain.</dd></dl>
 <p> <code>Examples:</code></p>
 <dl COMPACT>

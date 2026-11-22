@@ -10,8 +10,8 @@ description: "tstiee.f –"
 <p>tstiee.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>program <code>tstiee</code><br />
- <i></i><code>TSTIEE</code><br />
+<p>program <code>tstiee</code><br/>
+ <i></i><code>TSTIEE</code><br/>
  INTEGER function <code>ilaenv</code> (ISPEC, NAME, OPTS, N1, N2, N3, N4) </p>
 <p> INTEGER function <code>ieeeck</code> (ISPEC, ZERO, ONE)</p>
 <h2>Function/Subroutine Documentation</h2>

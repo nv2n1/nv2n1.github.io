@@ -21,12 +21,12 @@ dbroweval[-f CodeFile] code[code...]
 <p> Even more perverse, _columname(N) is the value of the Nth column after columnname [so <i>_columnname</i>(0) is the also the column&#8217;s value.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-b </code><font SIZE="-1"><code>CODE</code></font></dt>
-<dd> Run <font SIZE="-1">CODE</font> before reading any data (like awk <font SIZE="-1">BEGIN</font> blocks).</dd>
-<dt><code>-e </code><font SIZE="-1"><code>CODE</code></font></dt>
-<dd> Run <font SIZE="-1">CODE</font> at the end of all data (like awk <font SIZE="-1">END</font> blocks).</dd>
-<dt><code>-f </code><font SIZE="-1"><code>FILE</code></font></dt>
-<dd> Read code from the <font SIZE="-1">FILE.</font></dd>
+<dt><code>-b </code><code>CODE</code></dt>
+<dd> Run CODE before reading any data (like awk BEGIN blocks).</dd>
+<dt><code>-e </code><code>CODE</code></dt>
+<dd> Run CODE at the end of all data (like awk END blocks).</dd>
+<dt><code>-f </code><code>FILE</code></dt>
+<dd> Read code from the FILE.</dd>
 <dt><code>-n</code> or <code>&#8211;no-output</code></dt>
 <dd> no output except for comments and what is in the provided code</dd>
 <dt><code>-N</code> or <code>&#8211;no-output-even-comments</code></dt>
@@ -75,11 +75,11 @@ dbroweval[-f CodeFile] code[code...]
 <h3>Command:</h3>
 <p>cat data.fsdb | dbroweval &#8216;_mean = sprintf(&#8220;%8.0f&#8221;, _mean); _stddev = sprintf(&#8220;%8.0f&#8221;, _stddev);&#8217;</p>
 <h3>Output:</h3>
-<p>#fsdb size mean stddev pct_rsd<br />
-1024 1496200 284970 19.047 10240 5028600 601030 11.952 102400 4921600 309390 6.2863<br />
-#| dbsetheader size bw<br />
-#| / home / johnh / BIN / DB / dbmultistats size bw<br />
-#| / home / johnh / BIN / DB / dbcol size mean stddev pct_rsd<br />
+<p>#fsdb size mean stddev pct_rsd<br/>
+1024 1496200 284970 19.047 10240 5028600 601030 11.952 102400 4921600 309390 6.2863<br/>
+#| dbsetheader size bw<br/>
+#| / home / johnh / BIN / DB / dbmultistats size bw<br/>
+#| / home / johnh / BIN / DB / dbcol size mean stddev pct_rsd<br/>
 #| / home / johnh / BIN / DB / dbroweval{_mean = sprintf(&#8220;%8.0f&#8221;, _mean); _stddev = sprintf(&#8220;%8.0f&#8221;, _stddev); }</p>
 <h3>Command 2: Changing the Schema</h3>
 <p> By default, dbroweval reads and writes the same format file. The recommended method of adding and removing columns is to do so before or after dbroweval. I.e., </p>
@@ -91,25 +91,25 @@ dbroweval[-f CodeFile] code[code...]
         dbcol size mean divisible_by_ten
 </pre>
 <p> Another approach is to use the <tt>&quot;next row&quot;</tt> command to skip output of a row. I.e., the equivalent: </p>
-<p>cat data.fsdb |<br />
-    dbcolcreate divisible_by_ten |<br />
-    dbroweval &#8216;_divisible_by_ten = (_size % 10 == 0); next row if (!_divisible_by_ten);&#8217; |<br />
+<p>cat data.fsdb |<br/>
+    dbcolcreate divisible_by_ten |<br/>
+    dbroweval &#8216;_divisible_by_ten = (_size % 10 == 0); next row if (!_divisible_by_ten);&#8217; |<br/>
     dbcol size mean divisible_by_ten</p>
 <p> However, neither of these approachs work very well when the output is a <i>completely</i> different schema. </p>
 <p> The recommended method for schema-changing commands is to write a full filter, but a full filter is a bit heavy weight. As an alternative, one can use the <tt>&quot;-m&quot;</tt> option to request manual configuration of the output, then use <tt>@out_args</tt> to define the output schema (it specifies the <tt>&quot;Fsdb::IO::Writer&quot;</tt> arguments), and <tt>$ofref</tt> is the output row. It may also reference &lt;$in&gt;, the input <tt>&quot;Fsdb::IO::Reader&quot;</tt> argument, and &lt;$fref&gt; as an aref to the current line. Note that newly created columns <i>do not</i> have underscore-names </p>
 <p> Thus a third equivalent is: </p>
-<p>cat data.fsdb |<br />
-    dbroweval &#8211; m &#8211; b &#8216;@out_args = ( -clone =&gt; $in, \<br />
-                 -cols =&gt; ($in-&gt;cols, divisible_by_ten); &#8216; &#8216;my $div_by_10 = (_size % 10 == 0); \<br />
-            $ofref = [ @$fref, $div_by_10 ] if ($div_by_ten);&#8217; |<br />
+<p>cat data.fsdb |<br/>
+    dbroweval &#8211; m &#8211; b &#8216;@out_args = ( -clone =&gt; $in, \<br/>
+                 -cols =&gt; ($in-&gt;cols, divisible_by_ten); &#8216; &#8216;my $div_by_10 = (_size % 10 == 0); \<br/>
+            $ofref = [ @$fref, $div_by_10 ] if ($div_by_ten);&#8217; |<br/>
     dbcol size mean divisible_by_ten</p>
 <p> or </p>
-<p>cat data.fsdb |<br />
-    dbroweval &#8211; m &#8211; b &#8216;@out_args = ( -clone =&gt; $in, \<br />
-                -cols =&gt; [qw(size mean divisible_by_ten)] ); &#8216; &#8216;my $div_by_10 = (_size % 10 == 0);  \<br />
+<p>cat data.fsdb |<br/>
+    dbroweval &#8211; m &#8211; b &#8216;@out_args = ( -clone =&gt; $in, \<br/>
+                -cols =&gt; [qw(size mean divisible_by_ten)] ); &#8216; &#8216;my $div_by_10 = (_size % 10 == 0);  \<br/>
             $ofref = [ _mean, _size, $div_by_10 ] if ($div_by_ten);&#8217;</p>
 <p> Finally, one can write different a completely different schema, although it&#8217;s more work: </p>
-<p>cat data.fsdb |<br />
+<p>cat data.fsdb |<br/>
     dbroweval &#8211; m &#8211; b &#8216;@out_args = (-cols =&gt; [qw(size n)]);&#8217; &#8216;$ofref = [ _size, 1 ];&#8217;</p>
 <p> writes different columns, and </p>
 <pre><code>
@@ -137,4 +137,4 @@ cat data.fsdb |
 <p> <i>Fsdb</i>(3)</p>
 <h2>AUTHOR and COPYRIGHT</h2>
 <p> Copyright (C) 1991-2007 by John Heidemann &lt;johnh [at] isi.edu&gt; </p>
-<p> This program is distributed under terms of the <font SIZE="-1">GNU</font> general public license, version 2. See the file <font SIZE="-1">COPYING</font> with the distribution for details. </p>
+<p> This program is distributed under terms of the GNU general public license, version 2. See the file COPYING with the distribution for details. </p>

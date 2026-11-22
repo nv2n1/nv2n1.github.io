@@ -77,8 +77,8 @@ description: "QwtDoubleInterval – A class representing an interval."
 <p> Build an interval with from min/max values </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>minValue</i> Minimum value<br />
- <i>maxValue</i> Maximum value<br />
+<dd><i>minValue</i> Minimum value<br/>
+ <i>maxValue</i> Maximum value<br/>
  <i>borderFlags</i> Include/Exclude borders</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>int QwtDoubleInterval::borderFlags () const [inline]</h3>
@@ -134,7 +134,7 @@ description: "QwtDoubleInterval – A class representing an interval."
 <p>Limit the interval, keeping the border modes </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>lowerBound</i> Lower limit<br />
+<dd><i>lowerBound</i> Lower limit<br/>
  <i>upperBound</i> Upper limit</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -191,8 +191,8 @@ description: "QwtDoubleInterval – A class representing an interval."
 <p>Assign the limits of the interval </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>minValue</i> Minimum value<br />
- <i>maxValue</i> Maximum value<br />
+<dd><i>minValue</i> Minimum value<br/>
+ <i>maxValue</i> Maximum value<br/>
  <i>borderFlags</i> Include/Exclude borders</dd></dl>
 <h3>void QwtDoubleInterval::setMaxValue (double maxValue) [inline]</h3>
 <p>Assign the upper limit of the interval </p>

@@ -9,9 +9,9 @@ description: "xfs_growfs, xfs_info – expand an XFS filesystem"
 
 <p>xfs_growfs, xfs_info &#8211; expand an XFS filesystem</p>
 <h2>Synopsis</h2>
-<p><code>xfs_growfs</code> [ <code>-dilnrx</code> ] [ <code>-D</code> <i>size</i> ] [ <code>-e</code> <i>rtextsize</i> ] [ <code>-L</code> <i>size</i> ] [ <code>-m</code> <i>maxpct</i> ] [ <code>-t</code> <i>mtab</i> ] [ <code>-R</code> <i>size</i> ] <i>mount-point</i><br />
+<p><code>xfs_growfs</code> [ <code>-dilnrx</code> ] [ <code>-D</code> <i>size</i> ] [ <code>-e</code> <i>rtextsize</i> ] [ <code>-L</code> <i>size</i> ] [ <code>-m</code> <i>maxpct</i> ] [ <code>-t</code> <i>mtab</i> ] [ <code>-R</code> <i>size</i> ] <i>mount-point</i><br/>
  <code>xfs_growfs -V</code> </p>
-<p> <code>xfs_info</code> [ <code>-t</code> <i>mtab</i> ] <i>mount-point</i><br />
+<p> <code>xfs_info</code> [ <code>-t</code> <i>mtab</i> ] <i>mount-point</i><br/>
  <code>xfs_info -V</code></p>
 <h2>Description</h2>
 <p><code>xfs_growfs</code> expands an existing XFS filesystem (see <code><a href="/docs/linux/man/5-xfs/">xfs</a></code>(5)). The <i>mount-point</i> argument is the pathname of the directory where the filesystem is mounted. The filesystem must be mounted to be grown (see <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8)). The existing contents of the filesystem are undisturbed, and the added space becomes available for additional file storage. </p>

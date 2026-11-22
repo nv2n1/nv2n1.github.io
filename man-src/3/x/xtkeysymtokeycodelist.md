@@ -36,5 +36,5 @@ description: "XtGetKeysymTable, XtKeysymToKeycodeList – query keysyms and keyc
 <p><code>XtGetKeysymTable</code> returns a pointer to the Intrinsics&#8217; copy of the server&#8217;s KeyCode-to-KeySym table. This table must not be modified. </p>
 <p> The <code>XtKeysymToKeycodeList</code> procedure returns all the KeyCodes that have <i>keysym</i> in their entry for the keyboard mapping table associated with <i>display</i>. The caller should free the storage pointed to by <i>keycodes_return</i> using <code>XtFree</code> when it is no longer useful.</p>
 <h2>See Also</h2>
-<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

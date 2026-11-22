@@ -19,9 +19,9 @@ description: "libgetdns — an implementation of a modern asynchronous DNS API b
 <dl>
 <dt>
 </dt><dd>
-&nbsp;<wbr>Full support for event-driven programming<br />
-&nbsp;<wbr>Supports DNSSEC in multiple ways<br />
-&nbsp;<wbr>Mirroring of the resolution in getaddrinfo()<br />
+&nbsp;<wbr>Full support for event-driven programming<br/>
+&nbsp;<wbr>Supports DNSSEC in multiple ways<br/>
+&nbsp;<wbr>Mirroring of the resolution in getaddrinfo()<br/>
 &nbsp;<wbr>Easily supports all RRtypes, even those yet to be defined</dd></dl>
 <p> Each of the entry points is offered with both asynchronous and synchronous signatures. The asynchronous functions rely on event handling and callback via libevent. Functions are thread safe. </p>
 <p> A context structure maintains DNS query and response data and is used to maintain state during calls to the public entry points. </p>
@@ -57,12 +57,12 @@ description: "libgetdns — an implementation of a modern asynchronous DNS API b
 <p> This implementation provides asynchronous support via the following mechanisms: </p>
 <dl>
 <dt>
-</dt><dd> File Descriptor Polling<br />
+</dt><dd> File Descriptor Polling<br/>
  Event Loop Integrations:</dd>
 <dl>
 <dt>
-</dt><dd> libevent<br />
- libuv<br />
+</dt><dd> libevent<br/>
+ libuv<br/>
  libev</dd></dl>
 <p> Custom Event Loop Integrations</dl>
 <p> All functions and types discussed in this page are declared in getdns_extra.h </p>
@@ -86,19 +86,19 @@ description: "libgetdns — an implementation of a modern asynchronous DNS API b
 <p> Note that if both libevent1 and libevent2 reside on system, the extension uses libevent2. </p>
 <dl>
 <dt>
-</dt><dd> Extension library: libgetdns_ext_event.[shared_lib_ext]<br />
+</dt><dd> Extension library: libgetdns_ext_event.[shared_lib_ext]<br/>
  Extension header: getdns/getdns_ext_libevent.h</dd></dl>
 <p> <code>libuv</code> </p>
 <p> The libuv extension allows a context to attach to a uv_loop_s. The event loop can then be run like any other application using libuv via uv_run and expect getdns callbacks to fire. </p>
 <dl>
 <dt>
-</dt><dd> Extension library: libgetdns_ext_uv.[shared_lib_ext]<br />
+</dt><dd> Extension library: libgetdns_ext_uv.[shared_lib_ext]<br/>
  Extension header: getdns_ext_libuv.h</dd></dl>
 <p> <code>libev</code> </p>
 <p> The libev extension allows a context to attach to a ev_loop. The event loop can then be run like any other application using libev via ev_run and expect getdns callbacks to fire. </p>
 <dl>
 <dt>
-</dt><dd> Extension library: libgetdns_ext_ev.[shared_lib_ext]<br />
+</dt><dd> Extension library: libgetdns_ext_ev.[shared_lib_ext]<br/>
  Extension header: getdns_ext_libev.h</dd></dl>
 <h3>getdns_context event loop extension functions</h3>
 <p> The following are functions used by the extension entry point to attach to a particular context. </p>
@@ -138,8 +138,8 @@ description: "libgetdns — an implementation of a modern asynchronous DNS API b
 <dl>
 <dt>
 </dt><dd>
- GETDNS_BAD_DNS_CNAME_IN_TARGET: query type does not allow a CNAME pointed to a CNAME<br />
- GETDNS_BAD_DNS_ALL_NUMERIC_LABEL: one or more labels is all numeric<br />
+ GETDNS_BAD_DNS_CNAME_IN_TARGET: query type does not allow a CNAME pointed to a CNAME<br/>
+ GETDNS_BAD_DNS_ALL_NUMERIC_LABEL: one or more labels is all numeric<br/>
  GETDNS_BAD_DNS_CNAME_RETURNED_FOR_OTHER_TYPE: query type for other than CNAME returned a CNAME</dd></dl>
 <dt> &quot;specify_class&quot; (int) </dt>
 <dd>Set to the DNS class number (other than Internet (IN) class desired in query. </dd>
@@ -150,82 +150,82 @@ description: "libgetdns — an implementation of a modern asynchronous DNS API b
 <h2>DNSSEC</h2>
 <p> If an application wants the API to do DNSSEC validation for a request, it must set one or more DNSSEC-related extensions. Note that the default is for none of these extensions to be set and the API will not perform DNSSEC. Note that getting DNSSEC results can take longer in a few circumstances. </p>
 <p> To return the DNSSEC status for each DNS record in the replies_tree list, use the dnssec_return_status extension. The extension&#8217;s value (an int) is set to GETDNS_EXTENSION_TRUE to cause the returned status to have the name dnssec_status (an int) added to the other names in the record&#8217;s dict (&quot;header&quot;, &quot;question&quot;, and so on). The values for that name are GETDNS_DNSSEC_SECURE, GETDNS_DNSSEC_BOGUS, GETDNS_DNSSEC_INDETERMINATE, and GETDNS_DNSSEC_INSECURE. Thus, a reply might look like: </p>
-<p> { # This is the first reply<br />
-&quot;dnssec_status&quot;: GETDNS_DNSSEC_INDETERMINATE,<br />
-&quot;header&quot;:&nbsp;<wbr>{&nbsp;<wbr>&quot;id&quot;: 23456,&nbsp;<wbr>&quot;qr&quot;: 1,&nbsp;<wbr>&quot;opcode&quot;: 0, &#8230;&nbsp;<wbr>},<br />
+<p> { # This is the first reply<br/>
+&quot;dnssec_status&quot;: GETDNS_DNSSEC_INDETERMINATE,<br/>
+&quot;header&quot;:&nbsp;<wbr>{&nbsp;<wbr>&quot;id&quot;: 23456,&nbsp;<wbr>&quot;qr&quot;: 1,&nbsp;<wbr>&quot;opcode&quot;: 0, &#8230;&nbsp;<wbr>},<br/>
 . . . </p>
 <p> If instead of returning the status, you want to only see secure results, use the dnssec_return_only_secure extension. The extension&#8217;s value (an int) is set to GETDNS_EXTENSION_TRUE to cause only records that the API can validate as secure with DNSSEC to be returned in the replies_tree and replies_full lists. No additional names are added to the dict of the record; the change is that some records might not appear in the results. When this context option is set, if the API receives DNS replies but none are determined to be secure, the error code at the top level of the response object is GETDNS_RESPSTATUS_NO_SECURE_ANSWERS. </p>
 <p> Applications that want to do their own validation will want to have the DNSSEC-related records for a particular response. Use the dnssec_return_validation_chain extension. The extension&#8217;s value (an int) is set to GETDNS_EXTENSION_TRUE to cause a set of additional DNSSEC-related records needed for validation to be returned in the response object. This set comes as validation_chain (a list) at the top level of the response object. This list includes all resource record dicts for all the resource records (DS, DNSKEY and their RRSIGs) that are needed to perform the validation from the root up. Thus, a reply might look like: </p>
-<p> { # This is the response object<br />
-&nbsp;<wbr>&quot;validation_chain&quot;:<br />
-&nbsp;<wbr>[&nbsp;<wbr>{&nbsp;<wbr>&quot;name&quot;:&nbsp;<wbr>&lt;bindata for .&gt;,<br />
-&nbsp;<wbr>&quot;type&quot;: GETDNS_RRTYPE_DNSKEY,<br />
-&nbsp;<wbr>&quot;rdata&quot;:&nbsp;<wbr>{&nbsp;<wbr>&quot;flags&quot;: 256, . . .&nbsp;<wbr>},<br />
-. . .&nbsp;<wbr><br />
-&nbsp;<wbr>},<br />
-&nbsp;<wbr>{&nbsp;<wbr>&quot;name&quot;:&nbsp;<wbr>&lt;bindata for .&gt;,<br />
-&quot;type&quot;: GETDNS_RRTYPE_DNSKEY,<br />
-&quot;rdata&quot;:&nbsp;<wbr>{&nbsp;<wbr>&quot;flags&quot;: 257, . . .&nbsp;<wbr>},<br />
-. . .<br />
-&nbsp;<wbr>},<br />
-&nbsp;<wbr>{&nbsp;<wbr>&quot;name&quot;:&nbsp;<wbr>&lt;bindata for .&gt;,<br />
-&quot;type&quot;: GETDNS_RRTYPE_RRSIG,<br />
-&quot;rdata&quot;:&nbsp;<wbr>{&nbsp;<wbr>&quot;signers_name&quot;:&nbsp;<wbr>&lt;bindata for .&gt;,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&quot;type_covered&quot;: GETDNS_RRTYPE_DNSKEY,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>. . .<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>},<br />
-&nbsp;<wbr>},<br />
-&nbsp;<wbr>{&nbsp;<wbr>&quot;name&quot;:&nbsp;<wbr>&lt;bindata for com.&gt;,<br />
-&quot;type&quot;: GETDNS_RRTYPE_DS,<br />
-. . .<br />
-&nbsp;<wbr>},<br />
-&nbsp;<wbr>{&nbsp;<wbr>&quot;name&quot;:&nbsp;<wbr>&lt;bindata for com.&gt;,<br />
-&quot;type&quot;: GETDNS_RRTYPE_RRSIG<br />
-&quot;rdata&quot;:&nbsp;<wbr>{&nbsp;<wbr>&quot;signers_name&quot;:&nbsp;<wbr>&lt;bindata for .&gt;,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&quot;type_covered&quot;: GETDNS_RRTYPE_DS,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>. . .<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>},<br />
-. . .<br />
-&nbsp;<wbr>},<br />
-&nbsp;<wbr>{&nbsp;<wbr>&quot;name&quot;:&nbsp;<wbr>&lt;bindata for com.&gt;,<br />
-&quot;type&quot;: GETDNS_RRTYPE_DNSKEY<br />
-&quot;rdata&quot;:&nbsp;<wbr>{&nbsp;<wbr>&quot;flags&quot;: 256, . . .&nbsp;<wbr>},<br />
-. . .<br />
-&nbsp;<wbr>},<br />
-&nbsp;<wbr>{&nbsp;<wbr>&quot;name&quot;:&nbsp;<wbr>&lt;bindata for com.&gt;,<br />
-&quot;type&quot;: GETDNS_RRTYPE_DNSKEY<br />
-&quot;rdata&quot;:&nbsp;<wbr>{&nbsp;<wbr>&quot;flags&quot;: 257, . . .&nbsp;<wbr>},<br />
-. . .<br />
-&nbsp;<wbr>},<br />
-&nbsp;<wbr>{&nbsp;<wbr>&quot;name&quot;:&nbsp;<wbr>&lt;bindata for com.&gt;,<br />
-&quot;type&quot;: GETDNS_RRTYPE_RRSIG<br />
-&quot;rdata&quot;:&nbsp;<wbr>{&nbsp;<wbr>&quot;signers_name&quot;:&nbsp;<wbr>&lt;bindata for com.&gt;,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&quot;type_covered&quot;: GETDNS_RRTYPE_DNSKEY,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>. . .<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>},<br />
-. . .<br />
-&nbsp;<wbr>},<br />
-&nbsp;<wbr>{&nbsp;<wbr>&quot;name&quot;:&nbsp;<wbr>&lt;bindata for example.com.&gt;,<br />
-&quot;type&quot;: GETDNS_RRTYPE_DS,<br />
-. . .<br />
-&nbsp;<wbr>},<br />
-&nbsp;<wbr>{&nbsp;<wbr>&quot;name&quot;:&nbsp;<wbr>&lt;bindata for example.com.&gt;,<br />
-&quot;type&quot;: GETDNS_RRTYPE_RRSIG<br />
-&quot;rdata&quot;:&nbsp;<wbr>{&nbsp;<wbr>&quot;signers_name&quot;:&nbsp;<wbr>&lt;bindata for com.&gt;,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&quot;type_covered&quot;: GETDNS_RRTYPE_DS,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>. . .<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>},<br />
-. . .<br />
-&nbsp;<wbr>},<br />
-&nbsp;<wbr>{&nbsp;<wbr>&quot;name&quot;:&nbsp;<wbr>&lt;bindata for example.com.&gt;,<br />
-&quot;type&quot;: GETDNS_RRTYPE_DNSKEY<br />
-&quot;rdata&quot;:&nbsp;<wbr>{&nbsp;<wbr>&quot;flags&quot;: 257, &#8230;&nbsp;<wbr>},<br />
-. . .<br />
-&nbsp;<wbr>},<br />
-&nbsp;<wbr>. . .<br />
-&nbsp;<wbr>&nbsp;<wbr>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&quot;replies_tree&quot;:<br />
-&nbsp;<wbr>&nbsp;<wbr>[<br />
+<p> { # This is the response object<br/>
+&nbsp;<wbr>&quot;validation_chain&quot;:<br/>
+&nbsp;<wbr>[&nbsp;<wbr>{&nbsp;<wbr>&quot;name&quot;:&nbsp;<wbr>&lt;bindata for .&gt;,<br/>
+&nbsp;<wbr>&quot;type&quot;: GETDNS_RRTYPE_DNSKEY,<br/>
+&nbsp;<wbr>&quot;rdata&quot;:&nbsp;<wbr>{&nbsp;<wbr>&quot;flags&quot;: 256, . . .&nbsp;<wbr>},<br/>
+. . .&nbsp;<wbr><br/>
+&nbsp;<wbr>},<br/>
+&nbsp;<wbr>{&nbsp;<wbr>&quot;name&quot;:&nbsp;<wbr>&lt;bindata for .&gt;,<br/>
+&quot;type&quot;: GETDNS_RRTYPE_DNSKEY,<br/>
+&quot;rdata&quot;:&nbsp;<wbr>{&nbsp;<wbr>&quot;flags&quot;: 257, . . .&nbsp;<wbr>},<br/>
+. . .<br/>
+&nbsp;<wbr>},<br/>
+&nbsp;<wbr>{&nbsp;<wbr>&quot;name&quot;:&nbsp;<wbr>&lt;bindata for .&gt;,<br/>
+&quot;type&quot;: GETDNS_RRTYPE_RRSIG,<br/>
+&quot;rdata&quot;:&nbsp;<wbr>{&nbsp;<wbr>&quot;signers_name&quot;:&nbsp;<wbr>&lt;bindata for .&gt;,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&quot;type_covered&quot;: GETDNS_RRTYPE_DNSKEY,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>. . .<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>},<br/>
+&nbsp;<wbr>},<br/>
+&nbsp;<wbr>{&nbsp;<wbr>&quot;name&quot;:&nbsp;<wbr>&lt;bindata for com.&gt;,<br/>
+&quot;type&quot;: GETDNS_RRTYPE_DS,<br/>
+. . .<br/>
+&nbsp;<wbr>},<br/>
+&nbsp;<wbr>{&nbsp;<wbr>&quot;name&quot;:&nbsp;<wbr>&lt;bindata for com.&gt;,<br/>
+&quot;type&quot;: GETDNS_RRTYPE_RRSIG<br/>
+&quot;rdata&quot;:&nbsp;<wbr>{&nbsp;<wbr>&quot;signers_name&quot;:&nbsp;<wbr>&lt;bindata for .&gt;,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&quot;type_covered&quot;: GETDNS_RRTYPE_DS,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>. . .<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>},<br/>
+. . .<br/>
+&nbsp;<wbr>},<br/>
+&nbsp;<wbr>{&nbsp;<wbr>&quot;name&quot;:&nbsp;<wbr>&lt;bindata for com.&gt;,<br/>
+&quot;type&quot;: GETDNS_RRTYPE_DNSKEY<br/>
+&quot;rdata&quot;:&nbsp;<wbr>{&nbsp;<wbr>&quot;flags&quot;: 256, . . .&nbsp;<wbr>},<br/>
+. . .<br/>
+&nbsp;<wbr>},<br/>
+&nbsp;<wbr>{&nbsp;<wbr>&quot;name&quot;:&nbsp;<wbr>&lt;bindata for com.&gt;,<br/>
+&quot;type&quot;: GETDNS_RRTYPE_DNSKEY<br/>
+&quot;rdata&quot;:&nbsp;<wbr>{&nbsp;<wbr>&quot;flags&quot;: 257, . . .&nbsp;<wbr>},<br/>
+. . .<br/>
+&nbsp;<wbr>},<br/>
+&nbsp;<wbr>{&nbsp;<wbr>&quot;name&quot;:&nbsp;<wbr>&lt;bindata for com.&gt;,<br/>
+&quot;type&quot;: GETDNS_RRTYPE_RRSIG<br/>
+&quot;rdata&quot;:&nbsp;<wbr>{&nbsp;<wbr>&quot;signers_name&quot;:&nbsp;<wbr>&lt;bindata for com.&gt;,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&quot;type_covered&quot;: GETDNS_RRTYPE_DNSKEY,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>. . .<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>},<br/>
+. . .<br/>
+&nbsp;<wbr>},<br/>
+&nbsp;<wbr>{&nbsp;<wbr>&quot;name&quot;:&nbsp;<wbr>&lt;bindata for example.com.&gt;,<br/>
+&quot;type&quot;: GETDNS_RRTYPE_DS,<br/>
+. . .<br/>
+&nbsp;<wbr>},<br/>
+&nbsp;<wbr>{&nbsp;<wbr>&quot;name&quot;:&nbsp;<wbr>&lt;bindata for example.com.&gt;,<br/>
+&quot;type&quot;: GETDNS_RRTYPE_RRSIG<br/>
+&quot;rdata&quot;:&nbsp;<wbr>{&nbsp;<wbr>&quot;signers_name&quot;:&nbsp;<wbr>&lt;bindata for com.&gt;,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&quot;type_covered&quot;: GETDNS_RRTYPE_DS,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>. . .<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>},<br/>
+. . .<br/>
+&nbsp;<wbr>},<br/>
+&nbsp;<wbr>{&nbsp;<wbr>&quot;name&quot;:&nbsp;<wbr>&lt;bindata for example.com.&gt;,<br/>
+&quot;type&quot;: GETDNS_RRTYPE_DNSKEY<br/>
+&quot;rdata&quot;:&nbsp;<wbr>{&nbsp;<wbr>&quot;flags&quot;: 257, &#8230;&nbsp;<wbr>},<br/>
+. . .<br/>
+&nbsp;<wbr>},<br/>
+&nbsp;<wbr>. . .<br/>
+&nbsp;<wbr>&nbsp;<wbr>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&quot;replies_tree&quot;:<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<br/>
 &nbsp;<wbr>&nbsp;<wbr>. . . </p>
 <p> If a request is using a context in which stub resolution is set, and that request also has any of the dnssec_return_status, dnssec_return_only_secure, or dnssec_return_validation_chain extensions specified, the API will not perform the request and will instead return an error of GETDNS_RETURN_DNSSEC_WITH_STUB_DISALLOWED. </p>
 <h2>OPT RESOURCE RECORDS</h2>
@@ -259,9 +259,9 @@ description: "libgetdns — an implementation of a modern asynchronous DNS API b
 <dl>
 <dt>
 </dt><dd>
-&nbsp;<wbr>GETDNS_NAMETYPE_DNS<br />
-&nbsp;<wbr>Normal DNS&nbsp;<wbr>(RFC 1035)<br />
-&nbsp;<wbr>GETDNS_NAMETYPE_WINS<br />
+&nbsp;<wbr>GETDNS_NAMETYPE_DNS<br/>
+&nbsp;<wbr>Normal DNS&nbsp;<wbr>(RFC 1035)<br/>
+&nbsp;<wbr>GETDNS_NAMETYPE_WINS<br/>
 &nbsp;<wbr>The WINS name service&nbsp;<wbr>(some reference needed)</dd></dl>
 <p> If the call was getdns_address or getdns_address_sync, the top level of replies_tree has an additional name, just_address_answers (a list). The value of just_address_answers is a list that contains all of the A and AAAA records from the answer sections of any of the replies, in the order they appear in the replies. Each item in the list is a dict with at least two names: address_type (whose value is a bindata; it is currently either &quot;IPv4&quot; or &quot;IPv6&quot;) and address_data (whose value is a bindata). Note that the dnssec_return_only_secure extension affects what will appear in the just_address_answers list. If the DNS returns other address types, those types will appear in this list as well. </p>
 <p> The API can make service discovery through SRV records easier. If the call was getdns_service or getdns_service_sync, the top level of replies_tree has an additional name, srv_addresses (a list). The list is ordered by priority and weight based on the weighting algorithm in RFC 2782, lowest priority value first. Each element of the list is dict has at least two names: port and domain_name. If the API was able to determine the address of the target domain name (such as from its cache or from the Additional section of responses), the dict for an element will also contain address_type (whose value is a bindata; it is currently either &quot;IPv4&quot; or &quot;IPv6&quot;) and address_data (whose value is a bindata). Note that the dnssec_return_only_secure extension affects what will appear in the srv_addresses list. </p>
@@ -279,10 +279,10 @@ description: "libgetdns — an implementation of a modern asynchronous DNS API b
 <p> typedef void (*getdns_callback_t)(</p>
 <dl>
 <dt>
-</dt><dd> getdns_context_t context,<br />
- uint16_t callback_type,<br />
- getdns_dict *response,<br />
- void *userarg,<br />
+</dt><dd> getdns_context_t context,<br/>
+ uint16_t callback_type,<br/>
+ getdns_dict *response,<br/>
+ void *userarg,<br/>
  getdns_transaction_t transaction_id)</dd></dl>
 <dl>
 <dt> <i>context</i></dt>
@@ -307,7 +307,7 @@ description: "libgetdns — an implementation of a modern asynchronous DNS API b
 <dl>
 <dt>
 </dt><dd>
- getdns_return_t<br />
+ getdns_return_t<br/>
  <code>getdns_cancel_callback</code> (getdns_context_t context, getdns_transaction_t transaction_id)</dd></dl>
 <p> This causes the API to call the callback with a callback_type of GETDNS_CALLBACK_CANCEL if the callback for this transaction_id has not already been called. The callback code for cancellation should clean up any memory related to the identified call, such as to deallocate the memory for the userarg. getdns_cancel_callback() may return immediately, even before the callback finishes its work and returns. Calling getdns_cancel_callback() with a transaction_id of a callback that has already been called or an unknown transaction_id returns GETDNS_RETURN_UNKNOWN_TRANSACTION; otherwise, getdns_cancel_callback() returns GETDNS_RETURN_GOOD. </p>
 <h2>FILES</h2>
@@ -324,15 +324,15 @@ description: "libgetdns — an implementation of a modern asynchronous DNS API b
 <dl>
 <dt>
 </dt><dd>
- Craig Despeaux, Verisign Inc.<br />
- John Dickinson, Sinodun<br />
- Sara Dickinson, Sinodun<br />
- Neel Goyal, Verisign Inc.<br />
- Shumon Huque, Verisign Labs<br />
- Olaf Kolkman, NLnet Labs<br />
- Allison Mankin, Verisign Inc. &#8211; Verisign Labs.<br />
- Melinda Shore, No Mountain Software LLC<br />
- Willem Toorop, NLnet Labs<br />
- Gowri Visweswaran, Verisign Labs<br />
- Wouter Wijngaards, NLnet Labs<br />
+ Craig Despeaux, Verisign Inc.<br/>
+ John Dickinson, Sinodun<br/>
+ Sara Dickinson, Sinodun<br/>
+ Neel Goyal, Verisign Inc.<br/>
+ Shumon Huque, Verisign Labs<br/>
+ Olaf Kolkman, NLnet Labs<br/>
+ Allison Mankin, Verisign Inc. &#8211; Verisign Labs.<br/>
+ Melinda Shore, No Mountain Software LLC<br/>
+ Willem Toorop, NLnet Labs<br/>
+ Gowri Visweswaran, Verisign Labs<br/>
+ Wouter Wijngaards, NLnet Labs<br/>
  Glen Wiley, Verisign Inc.</dd></dl>

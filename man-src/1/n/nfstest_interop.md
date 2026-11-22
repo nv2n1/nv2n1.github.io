@@ -14,15 +14,15 @@ description: "nfstest_interop – NFS interoperability tests"
 <h2>DESCRIPTION</h2>
 <p> Basic interoperability tests verify that a file written with different versions of NFS is written correctly. The contents of the file are verified by reading the file back using one of the NFS versions. </p>
 <p> The tests append different data from different versions of NFS one at a time then reads the contents of the file to verify it was written correctly. This is done twice for each test: </p>
-<p>1)&nbsp;<wbr>Mount different versions of NFS&nbsp;<wbr>(NFSv3, NFSv4, NFSv4.1)<br />
-2)&nbsp;<wbr>Create empty file<br />
-3)&nbsp;<wbr>Append data using NFSv3<br />
-4)&nbsp;<wbr>Append data using NFSv4<br />
-5)&nbsp;<wbr>Append data using NFSv4.1<br />
-6)&nbsp;<wbr>Read file and verify contents are correct<br />
-7)&nbsp;<wbr>Append data using NFSv3<br />
-8)&nbsp;<wbr>Append data using NFSv4<br />
-9)&nbsp;<wbr>Append data using NFSv4.1<br />
+<p>1)&nbsp;<wbr>Mount different versions of NFS&nbsp;<wbr>(NFSv3, NFSv4, NFSv4.1)<br/>
+2)&nbsp;<wbr>Create empty file<br/>
+3)&nbsp;<wbr>Append data using NFSv3<br/>
+4)&nbsp;<wbr>Append data using NFSv4<br/>
+5)&nbsp;<wbr>Append data using NFSv4.1<br/>
+6)&nbsp;<wbr>Read file and verify contents are correct<br/>
+7)&nbsp;<wbr>Append data using NFSv3<br/>
+8)&nbsp;<wbr>Append data using NFSv4<br/>
+9)&nbsp;<wbr>Append data using NFSv4.1<br/>
 &nbsp;<wbr>&nbsp;<wbr>10)&nbsp;<wbr>Read file and verify contents are correct </p>
 <h2>OPTIONS</h2>
 <dl>

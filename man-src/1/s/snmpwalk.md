@@ -35,13 +35,13 @@ description: "snmpwalk – retrieve a subtree of management values using SNMP GE
 <p> Note that <code>snmpbulkget</code> REQUIRES an argument specifying the agent to query and at most one OID argument, as described there. The command: </p>
 <p> snmpwalk -Os -c public -v 1 zeus system </p>
 <p> will retrieve all of the variables under system: </p>
-<p> sysDescr.0 = STRING: &quot;SunOS zeus.net.cmu.edu 4.1.3_U1 1 sun4m&quot;<br />
- sysObjectID.0 = OID: enterprises.hp.nm.hpsystem.10.1.1<br />
- sysUpTime.0 = Timeticks: (155274552) 17 days, 23:19:05<br />
- sysContact.0 = STRING: &quot;&quot;<br />
- sysName.0 = STRING: &quot;zeus.net.cmu.edu&quot;<br />
- sysLocation.0 = STRING: &quot;&quot;<br />
- sysServices.0 = INTEGER: 72<br />
+<p> sysDescr.0 = STRING: &quot;SunOS zeus.net.cmu.edu 4.1.3_U1 1 sun4m&quot;<br/>
+ sysObjectID.0 = OID: enterprises.hp.nm.hpsystem.10.1.1<br/>
+ sysUpTime.0 = Timeticks: (155274552) 17 days, 23:19:05<br/>
+ sysContact.0 = STRING: &quot;&quot;<br/>
+ sysName.0 = STRING: &quot;zeus.net.cmu.edu&quot;<br/>
+ sysLocation.0 = STRING: &quot;&quot;<br/>
+ sysServices.0 = INTEGER: 72<br/>
  (plus the contents of the sysORTable). </p>
 <p> The command: </p>
 <p> snmpwalk -Os -c public -v 1 -CE sysORTable zeus system </p>

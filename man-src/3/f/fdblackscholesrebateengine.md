@@ -10,10 +10,10 @@ description: "ql/experimental/finitedifferences/fdblackscholesrebateengine.hpp â
 
 <p> ql/experimental/finitedifferences/fdblackscholesrebateengine.hpp &#8211; Finite-Differences Black Scholes barrier option rebate helper engine. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/experimental/finitedifferences/dividendbarrieroption.hpp&gt;<br />
+<p> #include &lt;ql/experimental/finitedifferences/dividendbarrieroption.hpp&gt;<br/>
  #include &lt;ql/processes/blackscholesprocess.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>FdBlackScholesRebateEngine</code><br />
+<p> class <code>FdBlackScholesRebateEngine</code><br/>
  <i>Finite-Differences Black Scholes barrier option rebate helper engine. </i></p>
 <h2>Detailed Description</h2>
 <p> Finite-Differences Black Scholes barrier option rebate helper engine. </p>

@@ -27,7 +27,7 @@ template&lt;class T &gt; const SampledCurve &amp; transformGrid (T x)</code></pr
 <p>void regrid (const Array &amp;new_grid)</p>
 <p>template&lt;class T &gt; void regrid (const Array &amp;new_grid, T func)</p>
 <p>template&lt;class T &gt; const SampledCurve &amp; transform (T x)</p>
-<p>template&lt;class T &gt; const SampledCurve &amp; transformGrid (T x) <code>inspectors</code><br />
+<p>template&lt;class T &gt; const SampledCurve &amp; transformGrid (T x) <code>inspectors</code><br/>
  void swap (SampledCurve &amp;)</p>
 <p>void setLogGrid (Real min, Real max)</p>
 <p>void regridLogGrid (Real min, Real max)</p>
@@ -36,7 +36,7 @@ template&lt;class T &gt; const SampledCurve &amp; transformGrid (T x)</code></pr
 <p>void regrid (const Array &amp;new_grid)</p>
 <p>template&lt;class T &gt; void regrid (const Array &amp;new_grid, T func)</p>
 <p>template&lt;class T &gt; const SampledCurve &amp; transform (T x)</p>
-<p>template&lt;class T &gt; const SampledCurve &amp; transformGrid (T x) <code>modifiers</code><br />
+<p>template&lt;class T &gt; const SampledCurve &amp; transformGrid (T x) <code>modifiers</code><br/>
  void swap (SampledCurve &amp;)</p>
 <p>void setLogGrid (Real min, Real max)</p>
 <p>void regridLogGrid (Real min, Real max)</p>
@@ -48,7 +48,7 @@ template&lt;class T &gt; const SampledCurve &amp; transformGrid (T x)</code></pr
 <p>template&lt;class T &gt; const SampledCurve &amp; transformGrid (T x) <code>calculations</code> </p>
 <p> <code>Real</code> <code>valueAtCenter</code> () const </p>
 <p> <code>Real</code> <code>firstDerivativeAtCenter</code> () const </p>
-<p> <code>Real</code> <code>secondDerivativeAtCenter</code> () const<br />
+<p> <code>Real</code> <code>secondDerivativeAtCenter</code> () const<br/>
  <code>utilities</code> </p>
 <pre><code>void swap (SampledCurve &amp;)
 void setLogGrid (Real min, Real max)

@@ -10,7 +10,7 @@ description: "cla_herfsx_extended.f –"
 <p>cla_herfsx_extended.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>cla_herfsx_extended</code> (PREC_TYPE, UPLO, N, NRHS, A, LDA, AF, LDAF, IPIV, COLEQU, C, B, LDB, Y, LDY, BERR_OUT, N_NORMS, ERR_BNDS_NORM, ERR_BNDS_COMP, RES, AYB, DY, Y_TAIL, RCOND, ITHRESH, RTHRESH, DZ_UB, IGNORE_CWISE, INFO)<br />
+<p>subroutine <code>cla_herfsx_extended</code> (PREC_TYPE, UPLO, N, NRHS, A, LDA, AF, LDAF, IPIV, COLEQU, C, B, LDB, Y, LDY, BERR_OUT, N_NORMS, ERR_BNDS_NORM, ERR_BNDS_COMP, RES, AYB, DY, Y_TAIL, RCOND, ITHRESH, RTHRESH, DZ_UB, IGNORE_CWISE, INFO)<br/>
  <i></i><code>CLA_HERFSX_EXTENDED</code> improves the computed solution to a system of linear equations for Hermitian indefinite matrices by performing extra-precise iterative refinement and provides error bounds and backward error estimates for the solution.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cla_herfsx_extended (integerPREC_TYPE, characterUPLO, integerN, integerNRHS, complex, dimension( lda, * )A, integerLDA, complex, dimension( ldaf, * )AF, integerLDAF, integer, dimension( * )IPIV, logicalCOLEQU, real, dimension( * )C, complex, dimension( ldb, * )B, integerLDB, complex, dimension( ldy, * )Y, integerLDY, real, dimension( * )BERR_OUT, integerN_NORMS, real, dimension( nrhs, * )ERR_BNDS_NORM, real, dimension( nrhs, * )ERR_BNDS_COMP, complex, dimension( * )RES, real, dimension( * )AYB, complex, dimension( * )DY, complex, dimension( * )Y_TAIL, realRCOND, integerITHRESH, realRTHRESH, realDZ_UB, logicalIGNORE_CWISE, integerINFO)</h3>

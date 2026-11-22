@@ -10,7 +10,7 @@ description: "zgeevx.f –"
 <p>zgeevx.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zgeevx</code> (BALANC, JOBVL, JOBVR, SENSE, N, A, LDA, W, VL, LDVL, VR, LDVR, ILO, IHI, SCALE, ABNRM, RCONDE, RCONDV, WORK, LWORK, RWORK, INFO)<br />
+<p>subroutine <code>zgeevx</code> (BALANC, JOBVL, JOBVR, SENSE, N, A, LDA, W, VL, LDVL, VR, LDVR, ILO, IHI, SCALE, ABNRM, RCONDE, RCONDV, WORK, LWORK, RWORK, INFO)<br/>
  <i></i><code> ZGEEVX computes the eigenvalues and, optionally, the left and/or right eigenvectors for GE matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zgeevx (characterBALANC, characterJOBVL, characterJOBVR, characterSENSE, integerN, complex*16, dimension( lda, * )A, integerLDA, complex*16, dimension( * )W, complex*16, dimension( ldvl, * )VL, integerLDVL, complex*16, dimension( ldvr, * )VR, integerLDVR, integerILO, integerIHI, double precision, dimension( * )SCALE, double precisionABNRM, double precision, dimension( * )RCONDE, double precision, dimension( * )RCONDV, complex*16, dimension( * )WORK, integerLWORK, double precision, dimension( * )RWORK, integerINFO)</h3>

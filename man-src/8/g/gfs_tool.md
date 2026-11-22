@@ -58,7 +58,7 @@ description: "gfs_tool – interface to gfs ioctl calls"
 <dt><code>sb</code> <i>device</i> <code>all</code></dt>
 <dd>Print out the superblock.</dd>
 <dt><code>setflag</code> <i>Flag</i> <i>File1</i> <i>File2</i> <i>&#8230;</i></dt>
-<dd>Set an attribute flag on a file. There are four currently supported flags. They are jdata, directio, inherit_jdata, and inherit_directio.<br />
+<dd>Set an attribute flag on a file. There are four currently supported flags. They are jdata, directio, inherit_jdata, and inherit_directio.<br/>
 &nbsp;<wbr>&nbsp;<wbr> The <i>jdata</i> flag causes all the data written to a regular file to be journaled. The jdata flag can only be set (or cleared) if the file is zero length. </dd>
 <p> The <i>directio</i> flag causes all I/O to a regular file to be Direct I/O, even if the O_DIRECT flag isn&#8217;t used on the open() command. </p>
 <p> The <i>inherit_jdata</i> flag is set on a directory. It causes all new regular files created in that directory automatically inherit the <i>jdata</i> flag. The <i>inherit_jdata</i> is also inherited by any new subdirectories created in that directory. </p>

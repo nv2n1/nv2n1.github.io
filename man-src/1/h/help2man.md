@@ -52,25 +52,25 @@ description: "help2man – generate a simple manual page"
 <dd> include stderr when parsing option output</dd></dl>
 <h2>INCLUDE FILES</h2>
 <p> Additional material may be included in the generated output with the <code>&#8211;include</code> and <code>&#8211;opt-include</code> options. The format is simple: </p>
-<p>&nbsp;<wbr>[section]<br />
+<p>&nbsp;<wbr>[section]<br/>
 &nbsp;<wbr>text </p>
-<p>&nbsp;<wbr>/pattern/<br />
+<p>&nbsp;<wbr>/pattern/<br/>
 &nbsp;<wbr>text </p>
 <p> Blocks of verbatim *roff text are inserted into the output either at the start of the given <code>[</code><i>section</i><code>]</code> (case insensitive), or after a paragraph matching <code>/</code><i>pattern</i><code>/</code>. </p>
 <p> Patterns use the Perl regular expression syntax and may be followed by the <i>i</i>, <i>s</i> or <i>m</i> modifiers (see <code><a href="/docs/linux/man/1-perlre/">perlre</a></code>(1)). </p>
 <p> Lines before the first section or pattern which begin with `-&#8216; are processed as options. Anything else is silently ignored and may be used for comments, RCS keywords and the like. </p>
 <p> The section output order (for those included) is: </p>
-<p>&nbsp;<wbr>NAME<br />
-&nbsp;<wbr>SYNOPSIS<br />
-&nbsp;<wbr>DESCRIPTION<br />
-&nbsp;<wbr>OPTIONS<br />
-&nbsp;<wbr>ENVIRONMENT<br />
-&nbsp;<wbr>FILES<br />
-&nbsp;<wbr>EXAMPLES<br />
-&nbsp;<wbr><i>other</i><br />
-&nbsp;<wbr>AUTHOR<br />
-&nbsp;<wbr>REPORTING BUGS<br />
-&nbsp;<wbr>COPYRIGHT<br />
+<p>&nbsp;<wbr>NAME<br/>
+&nbsp;<wbr>SYNOPSIS<br/>
+&nbsp;<wbr>DESCRIPTION<br/>
+&nbsp;<wbr>OPTIONS<br/>
+&nbsp;<wbr>ENVIRONMENT<br/>
+&nbsp;<wbr>FILES<br/>
+&nbsp;<wbr>EXAMPLES<br/>
+&nbsp;<wbr><i>other</i><br/>
+&nbsp;<wbr>AUTHOR<br/>
+&nbsp;<wbr>REPORTING BUGS<br/>
+&nbsp;<wbr>COPYRIGHT<br/>
 &nbsp;<wbr>SEE ALSO </p>
 <p> Any <code>[NAME]</code> or <code>[SYNOPSIS]</code> sections appearing in the include file will replace what would have automatically been produced (although you can still override the former with <code>&#8211;name</code> if required). </p>
 <p> Other sections are prepended to the automatically produced output for the standard sections given above, or included at <i>other</i> (above) in the order they were encountered in the include file.</p>
@@ -82,7 +82,7 @@ description: "help2man – generate a simple manual page"
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;bug-help2man [at] gnu.org&gt;.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010, 2011, 2012 Free Software Foundation, Inc.<br />
+<p> Copyright &#169; 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009, 2010, 2011, 2012 Free Software Foundation, Inc.<br/>
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>help2man</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>help2man</code> programs are properly installed at your site, the command</p>

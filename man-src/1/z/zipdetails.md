@@ -22,13 +22,13 @@ zipdetails[-v][--scan] zipfile.zip
 
  Zipdetails displays information about the internal record structure of zip files. It is not concerned with displaying any details of the compressed data stored in the zip file. 
 
- The program assumes prior understanding of the internal structure of a Zip file. You should have a copy of the Zip <font SIZE="-1">APPNOTE</font> file at hand to help understand the output from this program (``<font SIZE="-1">SEE ALSO''</font> for details).
+ The program assumes prior understanding of the internal structure of a Zip file. You should have a copy of the Zip APPNOTE file at hand to help understand the output from this program (``SEE ALSO'' for details).
 
 <h3>Default Behaviour</h3>
 
  By default the program expects to be given a well-formed zip file. It will navigate the Zip file by first parsing the zip central directory at the end of the file. If that is found, it will then walk through the zip records starting at the beginning of the file. Any badly formed zip data structures encountered are likely to terminate the program. 
 
- If the program finds any structural problems with the zip file it will print a summary at the end of the output report. The set of error cases reported is very much a work in progress, so don't rely on this feature to find all the possible errors in a zip file. If you have suggestions for use-cases where this could be enhanced please consider creating an enhancement request (see ``<font SIZE="-1">SUPPORT''</font>).
+ If the program finds any structural problems with the zip file it will print a summary at the end of the output report. The set of error cases reported is very much a work in progress, so don't rely on this feature to find all the possible errors in a zip file. If you have suggestions for use-cases where this could be enhanced please consider creating an enhancement request (see ``SUPPORT'').
 
 <h3>Scan-Mode</h3>
 
@@ -38,7 +38,7 @@ zipdetails[-v][--scan] zipfile.zip
 
  Note that the 4-byte signatures used in zip files can sometimes match with random data stored in the zip file, so care is needed interpreting the results.
 
-<h3><font SIZE="-1">OPTIONS</font></h3>
+<h3>OPTIONS</h3>
 
 <dl>
 <dt>-h
@@ -80,7 +80,7 @@ zipdetails[-v][--scan] zipfile.zip
 <dt>&bull;
 </dt><dd> Multi-part archives.
 </dd><dt>&bull;
-</dt><dd> The strong encryption features defined in the ``<font SIZE="-1">APPNOTE''</font> document.</dd></dl>
+</dt><dd> The strong encryption features defined in the ``APPNOTE'' document.</dd></dl>
 
 <h2>TODO</h2>
 
@@ -92,7 +92,7 @@ zipdetails[-v][--scan] zipfile.zip
 
 <h2>SEE ALSO</h2>
 
- The primary reference for Zip files is the ``<font SIZE="-1">APPNOTE''</font> document available at &lt;<a rel="nofollow" HREF="http://www.pkware.com/documents/casestudies/APPNOTE.TXT">http://www.pkware.com/documents/casestudies/APPNOTE.TXT</a>&gt;. 
+ The primary reference for Zip files is the ``APPNOTE'' document available at &lt;<a rel="nofollow" HREF="http://www.pkware.com/documents/casestudies/APPNOTE.TXT">http://www.pkware.com/documents/casestudies/APPNOTE.TXT</a>&gt;. 
 
  An alternative reference is the Info-Zip appnote. This is available from &lt;<a HREF="ftp://ftp.info-zip.org/pub/infozip/doc/">ftp://ftp.info-zip.org/pub/infozip/doc/</a>&gt; 
 

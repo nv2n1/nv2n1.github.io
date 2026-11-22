@@ -17,7 +17,7 @@ description: "dpkg-mergechangelogs – 3-way merge of debian/changelog files"
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>&#8211;merge-unreleased</code></dt>
-<dd> Ignore the version number when the entries are marked as <font SIZE="-1"><code>UNRELEASED</code></font> (since dpkg 1.21.0). </dd>
+<dd> Ignore the version number when the entries are marked as <code>UNRELEASED</code> (since dpkg 1.21.0). </dd>
 <p> This is useful when you have diverging development for versions that have not yet been released. For instance 2.1-1 is released, then development happens for the new 2.2-1 and then for 2.3-1, where it makes sense to just end with a coalesced entry for 2.3-1 including all the development done in 2.2-1.</p>
 <dt><code>-m</code>, <code>&#8211;merge-prereleases</code></dt>
 <dd> Drop the part after the last tilde in the version number when doing version comparison to identify if two entries are supposed to be the same or not. </dd>
@@ -28,9 +28,9 @@ description: "dpkg-mergechangelogs – 3-way merge of debian/changelog files"
 <dd> Show the version and exit.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><font SIZE="-1"><code>DPKG_COLORS</code></font></dt>
+<dt><code>DPKG_COLORS</code></dt>
 <dd> Sets the color mode (since dpkg 1.18.5). The currently accepted values are: <code>auto</code> (default), <code>always</code> and <code>never</code>.</dd>
-<dt><font SIZE="-1"><code>DPKG_NLS</code></font></dt>
+<dt><code>DPKG_NLS</code></dt>
 <dd> If set, it will be used to decide whether to activate Native Language Support, also known as internationalization (or i18n) support (since dpkg 1.19.0). The accepted values are: <code>0</code> and <code>1</code> (default).</dd></dl>
 <h2>LIMITATIONS</h2>
 <p> Anything that is not parsed by Dpkg::Changelog is lost during the merge. This might include stuff like comments which were not supposed to be there, etc.</p>

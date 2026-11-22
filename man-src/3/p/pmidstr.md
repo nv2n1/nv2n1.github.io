@@ -10,7 +10,7 @@ description: "pmIDStr, pmIDStr_r – convert a performance metric identifier int
 <p><code>pmIDStr</code>, <code>pmIDStr_r</code> &#8211; convert a performance metric identifier into a string</p>
 <h2>C Synopsis</h2>
 <p><code> #include &lt;pcp/pmapi.h&gt; </p>
-<p> const char *pmIDStr(pmID </code><i>pmid</i>);<br />
+<p> const char *pmIDStr(pmID </code><i>pmid</i>);<br/>
  char *pmIDStr_r(pmID <i>pmid</i>, char *<i>buf</i>, int <i>buflen</i>); </p>
 <p> cc &#8230; -lpcp</p>
 <h2>Description</h2>

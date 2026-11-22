@@ -10,7 +10,7 @@ description: "sgeqrt.f –"
 <p>sgeqrt.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>sgeqrt</code> (M, N, NB, A, LDA, T, LDT, WORK, INFO)<br />
+<p>subroutine <code>sgeqrt</code> (M, N, NB, A, LDA, T, LDT, WORK, INFO)<br/>
  <i></i><code>SGEQRT</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sgeqrt (integerM, integerN, integerNB, real, dimension( lda, * )A, integerLDA, real, dimension( ldt, * )T, integerLDT, real, dimension( * )WORK, integerINFO)</h3>

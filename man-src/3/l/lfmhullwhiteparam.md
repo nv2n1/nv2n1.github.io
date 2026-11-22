@@ -10,10 +10,10 @@ description: "ql/legacy/libormarketmodels/lfmhullwhiteparam.hpp – libor market
 
 <p> ql/legacy/libormarketmodels/lfmhullwhiteparam.hpp &#8211; libor market model parameterization based on Hull White </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/legacy/libormarketmodels/lfmprocess.hpp&gt;<br />
+<p> #include &lt;ql/legacy/libormarketmodels/lfmprocess.hpp&gt;<br/>
  #include &lt;ql/legacy/libormarketmodels/lfmcovarparam.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>LfmHullWhiteParameterization</code><br />
+<p> class <code>LfmHullWhiteParameterization</code><br/>
  <i>Libor market model parameterization based on Hull White paper </i></p>
 <h2>Detailed Description</h2>
 <p> libor market model parameterization based on Hull White </p>

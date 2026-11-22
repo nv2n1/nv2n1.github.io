@@ -11,7 +11,7 @@ description: "sgelss.f –"
 <p> sgelss.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>sgelss</code> (M, N, NRHS, A, LDA, B, LDB, S, RCOND, RANK, WORK, LWORK, INFO)<br />
+<p> subroutine <code>sgelss</code> (M, N, NRHS, A, LDA, B, LDB, S, RCOND, RANK, WORK, LWORK, INFO)<br/>
  <i></i><code> SGELSS solves overdetermined or underdetermined systems for GE matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sgelss (integerM, integerN, integerNRHS, real, dimension( lda, * )A, integerLDA, real, dimension( ldb, * )B, integerLDB, real, dimension( * )S, realRCOND, integerRANK, real, dimension( * )WORK, integerLWORK, integerINFO)</h3>

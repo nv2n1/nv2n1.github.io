@@ -10,9 +10,9 @@ description: "unison-2.40.102 – a file-synchronization tool for Unix and Windo
 
 <p> unison-2.40.102 &#8211; a file-synchronization tool for Unix and Windows </p>
 <h2>SYNOPSIS</h2>
-<p> <code>unison-2.40.102</code> [<i>options</i>]<br />
- <code>unison-2.40.102</code> root1 root2 [<i>options</i>]<br />
- <code>unison-2.40.102</code> profilename [<i>options</i>]<br />
+<p> <code>unison-2.40.102</code> [<i>options</i>]<br/>
+ <code>unison-2.40.102</code> root1 root2 [<i>options</i>]<br/>
+ <code>unison-2.40.102</code> profilename [<i>options</i>]<br/>
  <code>unison-2.40.102-gtk</code> [<i>options</i>]</p>
 <h2>DESCRIPTION</h2>
 <p> This manual page briefly documents Unison, and was written for the Debian GNU/Linux distribution because the original program does not have a manual page. For a full description, please refer to the inbuilt documentation or the manuals in /usr/share/doc/unison/. The unison-2.40.102-gtk binary has similar command-line options, but allows the user to select and create profiles and configure options from within the program. </p>

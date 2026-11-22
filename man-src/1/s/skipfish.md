@@ -16,7 +16,7 @@ description: "skipfish – web application security scanner"
 <h2>OPTIONS SUMMARY</h2>
 <dl>
 <dt>
-</dt><dd> <font SIZE="-1"> </font></dd>
+</dt><dd>  </dd>
 <pre>
 Authentication and access options:
   -A user:pass   - use specified HTTP authentication credentials
@@ -195,19 +195,19 @@ Other settings:
 <dd> This causes request / response data to be flushed to disk instead of being kept in memory. As a result, the memory usage for large scans will be significant lower. </dd>
 </dl>
 <h2>EXAMPLES</h2>
-<p> <code>Scan type: config</code><br />
+<p> <code>Scan type: config</code><br/>
  skipfish &#8211;config config/example.conf <a rel="nofollow" href="http://example.com">http://example.com</a> </p>
-<p> <code>Scan type: quick</code><br />
+<p> <code>Scan type: quick</code><br/>
  skipfish -o output/dir/ <a rel="nofollow" href="http://example.com">http://example.com</a> </p>
-<p> <code>Scan type: extensive bruteforce</code><br />
+<p> <code>Scan type: extensive bruteforce</code><br/>
  skipfish [&#8230;other options..] <i>-S dictionaries/complete.wl</i> <a rel="nofollow" href="http://example.com">http://example.com</a> </p>
-<p> <code>Scan type: without bruteforcing</code><br />
+<p> <code>Scan type: without bruteforcing</code><br/>
  skipfish [&#8230;other options..] -LY <a rel="nofollow" href="http://example.com">http://example.com</a> </p>
-<p> <code>Scan type: authenticated (basic)</code><br />
+<p> <code>Scan type: authenticated (basic)</code><br/>
  skipfish [&#8230;other options..] <i>-A username:password</i> <a rel="nofollow" href="http://example.com">http://example.com</a> </p>
-<p> <code>Scan type: authenticated (cookie)</code><br />
+<p> <code>Scan type: authenticated (cookie)</code><br/>
  skipfish [&#8230;other options..] -C jsession=myauthcookiehere -X /logout <a rel="nofollow" href="http://example.com">http://example.com</a> </p>
-<p> <code>Scan type: flaky server</code><br />
+<p> <code>Scan type: flaky server</code><br/>
  skipfish [&#8230;other options..] -l 5 -g 2 -t 30 -i 15 <a rel="nofollow" href="http://example.com">http://example.com</a> </p>
 <h2>NOTES</h2>
 <p> The default values for all flags can be viewed by running &#8216;./skipfish -h&#8217; . </p>

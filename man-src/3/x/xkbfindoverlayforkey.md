@@ -10,7 +10,7 @@ description: "XkbFindOverlayForKey – Find the alternate name by using the prim
 <p>XkbFindOverlayForKey &#8211; Find the alternate name by using the primary name for a key that is part of an overlay </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>char * XkbFindOverlayForKey</code> <code>(XkbGeometryPtr </code><i>geom</i><code>,</code> <code>XkbSectionPtr </code><i>section</i><code>,</code> <code>char *</code><i>under</i><code>);</code><br />
+<dt> <code>char * XkbFindOverlayForKey</code> <code>(XkbGeometryPtr </code><i>geom</i><code>,</code> <code>XkbSectionPtr </code><i>section</i><code>,</code> <code>char *</code><i>under</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

@@ -9,7 +9,7 @@ description: "i2cdump – examine I2C registers"
 
 <p>i2cdump &#8211; examine I2C registers </p>
 <h2>Synopsis</h2>
-<p><code>i2cdump</code> [<code>-f</code>] [<code>-r first-last</code>] [<code>-y</code>] <i>i2cbus</i> <i>address</i> [<i>mode </i>[<i>bank </i>[<i>bankreg</i>]]]<br />
+<p><code>i2cdump</code> [<code>-f</code>] [<code>-r first-last</code>] [<code>-y</code>] <i>i2cbus</i> <i>address</i> [<i>mode </i>[<i>bank </i>[<i>bankreg</i>]]]<br/>
  <code>i2cdump</code> <code>-V</code> </p>
 <h2>Description</h2>
 <p>i2cdump is a small helper program to examine registers visible through the I2C bus. </p>

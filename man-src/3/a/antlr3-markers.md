@@ -12,66 +12,66 @@ description: "ANTLR3_COMMON_TREE_NODE_STREAM_struct –"
 <h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3commontreenodestream.h">antlr3commontreenodestream.h</a>&gt;</p>
 <h3>Data Fields</h3>
-<p> <code>ANTLR3_MARKER</code> <code>absoluteNodeIndex</code><br />
- <i>What node index did we just consume? i=0..n-1 for n node trees. </i><br />
- <code>pANTLR3_BASE_TREE_ADAPTOR</code> <code>adaptor</code><br />
- <i>Pointer to tree adaptor interface that manipulates/builds the tree. </i><br />
+<p> <code>ANTLR3_MARKER</code> <code>absoluteNodeIndex</code><br/>
+ <i>What node index did we just consume? i=0..n-1 for n node trees. </i><br/>
+ <code>pANTLR3_BASE_TREE_ADAPTOR</code> <code>adaptor</code><br/>
+ <i>Pointer to tree adaptor interface that manipulates/builds the tree. </i><br/>
  void(* <code>addLookahead</code> )(struct <code>ANTLR3_COMMON_TREE_NODE_STREAM_struct</code> *ctns, <code>pANTLR3_BASE_TREE</code> node) </p>
 <p> void(* <code>addNavigationNode</code> )(struct <code>ANTLR3_COMMON_TREE_NODE_STREAM_struct</code> *ctns, <code>ANTLR3_UINT32</code> ttype) </p>
-<p> <code>ANTLR3_INT32</code> <code>currentChildIndex</code><br />
- <i>Which child are we currently visiting? If -1 we have not visited this node yet; next </i><code>consume()</code> request will set currentIndex to 0.<br />
- <code>pANTLR3_BASE_TREE</code> <code>currentNode</code><br />
- <i>Which node are we currently visiting? </i><br />
- <code>ANTLR3_COMMON_TREE</code> <code>DOWN</code><br />
- <i>Dummy tree node that indicates a descent into a child tree. </i><br />
- <code>ANTLR3_COMMON_TREE</code> <code>EOF_NODE</code><br />
- <i>Dummy tree node that indicates the termination point of the tree. </i><br />
+<p> <code>ANTLR3_INT32</code> <code>currentChildIndex</code><br/>
+ <i>Which child are we currently visiting? If -1 we have not visited this node yet; next </i><code>consume()</code> request will set currentIndex to 0.<br/>
+ <code>pANTLR3_BASE_TREE</code> <code>currentNode</code><br/>
+ <i>Which node are we currently visiting? </i><br/>
+ <code>ANTLR3_COMMON_TREE</code> <code>DOWN</code><br/>
+ <i>Dummy tree node that indicates a descent into a child tree. </i><br/>
+ <code>ANTLR3_COMMON_TREE</code> <code>EOF_NODE</code><br/>
+ <i>Dummy tree node that indicates the termination point of the tree. </i><br/>
  void(* <code>fill</code> )(struct <code>ANTLR3_COMMON_TREE_NODE_STREAM_struct</code> *ctns, <code>ANTLR3_INT32</code> k) </p>
 <p> void(* <code>free</code> )(struct <code>ANTLR3_COMMON_TREE_NODE_STREAM_struct</code> *ctns) </p>
 <p> <code>ANTLR3_UINT32</code>(* <code>getLookaheadSize</code> )(struct <code>ANTLR3_COMMON_TREE_NODE_STREAM_struct</code> *ctns) </p>
 <p> <code>pANTLR3_BASE_TREE</code>(* <code>handleRootnode</code> )(struct <code>ANTLR3_COMMON_TREE_NODE_STREAM_struct</code> *ctns) </p>
 <p> <code>ANTLR3_BOOLEAN</code>(* <code>hasNext</code> )(struct <code>ANTLR3_COMMON_TREE_NODE_STREAM_struct</code> *ctns) </p>
 <p> <code>ANTLR3_BOOLEAN</code>(* <code>hasUniqueNavigationNodes</code> )(struct <code>ANTLR3_COMMON_TREE_NODE_STREAM_struct</code> *ctns) </p>
-<p> <code>ANTLR3_UINT32</code> <code>head</code><br />
- <i>lookAhead[head] is the first symbol of lookahead, LT(1). </i><br />
- <code>ANTLR3_COMMON_TREE</code> <code>INVALID_NODE</code><br />
- <i>Dummy node that is returned if we need to indicate an invalid node for any reason. </i><br />
- <code>ANTLR3_BOOLEAN</code> <code>isRewriter</code><br />
- <i>Indicates whether this node stream was derived from a prior node stream to be used by a rewriting tree parser for instance. </i><br />
- <code>pANTLR3_BASE_TREE</code> * <code>lookAhead</code><br />
- <i>Buffer tree node stream for use with LT(i). </i><br />
- <code>ANTLR3_UINT32</code> <code>lookAheadLength</code><br />
- <i>Number of elements available in the lookahead buffer at any point in time. </i><br />
- <code>pANTLR3_VECTOR</code> <code>markers</code><br />
- <i>Calls to </i><code>mark()</code> may be nested so we have to track a stack of them.<br />
+<p> <code>ANTLR3_UINT32</code> <code>head</code><br/>
+ <i>lookAhead[head] is the first symbol of lookahead, LT(1). </i><br/>
+ <code>ANTLR3_COMMON_TREE</code> <code>INVALID_NODE</code><br/>
+ <i>Dummy node that is returned if we need to indicate an invalid node for any reason. </i><br/>
+ <code>ANTLR3_BOOLEAN</code> <code>isRewriter</code><br/>
+ <i>Indicates whether this node stream was derived from a prior node stream to be used by a rewriting tree parser for instance. </i><br/>
+ <code>pANTLR3_BASE_TREE</code> * <code>lookAhead</code><br/>
+ <i>Buffer tree node stream for use with LT(i). </i><br/>
+ <code>ANTLR3_UINT32</code> <code>lookAheadLength</code><br/>
+ <i>Number of elements available in the lookahead buffer at any point in time. </i><br/>
+ <code>pANTLR3_VECTOR</code> <code>markers</code><br/>
+ <i>Calls to </i><code>mark()</code> may be nested so we have to track a stack of them.<br/>
  <code>pANTLR3_BASE_TREE</code>(* <code>newDownNode</code> )(struct <code>ANTLR3_COMMON_TREE_NODE_STREAM_struct</code> *ctns) </p>
 <p> <code>pANTLR3_BASE_TREE</code>(* <code>newUpNode</code> )(struct <code>ANTLR3_COMMON_TREE_NODE_STREAM_struct</code> *ctns) </p>
 <p> <code>pANTLR3_BASE_TREE</code>(* <code>next</code> )(struct <code>ANTLR3_COMMON_TREE_NODE_STREAM_struct</code> *ctns) </p>
-<p> <code>pANTLR3_VECTOR</code> <code>nodes</code><br />
- <i>The complete mapping from stream index to tree node. </i><br />
- <code>pANTLR3_STACK</code> <code>nodeStack</code><br />
- <i>As we walk down the nodes, we must track parent nodes so we know where to go after walking the last child of a node. </i><br />
- <code>ANTLR3_INT32</code> <code>p</code><br />
- <i>The current index into the nodes vector of the current tree we are parsing and possibly rewriting. </i><br />
+<p> <code>pANTLR3_VECTOR</code> <code>nodes</code><br/>
+ <i>The complete mapping from stream index to tree node. </i><br/>
+ <code>pANTLR3_STACK</code> <code>nodeStack</code><br/>
+ <i>As we walk down the nodes, we must track parent nodes so we know where to go after walking the last child of a node. </i><br/>
+ <code>ANTLR3_INT32</code> <code>p</code><br/>
+ <i>The current index into the nodes vector of the current tree we are parsing and possibly rewriting. </i><br/>
  <code>ANTLR3_INT32</code>(* <code>pop</code> )(struct <code>ANTLR3_COMMON_TREE_NODE_STREAM_struct</code> *ctns) </p>
-<p> <code>pANTLR3_BASE_TREE</code> <code>previousNode</code><br />
- <i>Which node did we last visit? Used for LT(-1). </i><br />
+<p> <code>pANTLR3_BASE_TREE</code> <code>previousNode</code><br/>
+ <i>Which node did we last visit? Used for LT(-1). </i><br/>
  void(* <code>push</code> )(struct <code>ANTLR3_COMMON_TREE_NODE_STREAM_struct</code> *ctns, <code>ANTLR3_INT32</code> index) </p>
 <p> void(* <code>reset</code> )(struct <code>ANTLR3_COMMON_TREE_NODE_STREAM_struct</code> *ctns) </p>
-<p> <code>pANTLR3_BASE_TREE</code> <code>root</code><br />
- <i>Which tree are we navigating ? </i><br />
- <code>pANTLR3_STRING_FACTORY</code> <code>stringFactory</code><br />
- <i>String factory for use by anything that wishes to create strings such as a tree representation or some copy of the text etc. </i><br />
- void * <code>super</code><br />
- <i>Any interface that implements this interface (is a super structure containing this structure), may store the pointer to itself here in the super pointer, which is not used by the common tree node stream. </i><br />
- <code>ANTLR3_UINT32</code> <code>tail</code><br />
- <i>Add new lookahead at lookahead[tail]. </i><br />
- <code>pANTLR3_TREE_NODE_STREAM</code> <code>tnstream</code><br />
- <i>Pointer to the tree node stream interface. </i><br />
- <code>ANTLR3_BOOLEAN</code> <code>uniqueNavigationNodes</code><br />
- <i>If set to ANTLR3_TRUE then the navigation nodes UP, DOWN are duplicated rather than reused within the tree. </i><br />
- <code>ANTLR3_COMMON_TREE</code> <code>UP</code><br />
- <i>Dummy tree node that indicates a descent up to a parent tree. </i><br />
+<p> <code>pANTLR3_BASE_TREE</code> <code>root</code><br/>
+ <i>Which tree are we navigating ? </i><br/>
+ <code>pANTLR3_STRING_FACTORY</code> <code>stringFactory</code><br/>
+ <i>String factory for use by anything that wishes to create strings such as a tree representation or some copy of the text etc. </i><br/>
+ void * <code>super</code><br/>
+ <i>Any interface that implements this interface (is a super structure containing this structure), may store the pointer to itself here in the super pointer, which is not used by the common tree node stream. </i><br/>
+ <code>ANTLR3_UINT32</code> <code>tail</code><br/>
+ <i>Add new lookahead at lookahead[tail]. </i><br/>
+ <code>pANTLR3_TREE_NODE_STREAM</code> <code>tnstream</code><br/>
+ <i>Pointer to the tree node stream interface. </i><br/>
+ <code>ANTLR3_BOOLEAN</code> <code>uniqueNavigationNodes</code><br/>
+ <i>If set to ANTLR3_TRUE then the navigation nodes UP, DOWN are duplicated rather than reused within the tree. </i><br/>
+ <code>ANTLR3_COMMON_TREE</code> <code>UP</code><br/>
+ <i>Dummy tree node that indicates a descent up to a parent tree. </i><br/>
  <code>pANTLR3_BASE_TREE</code>(* <code>visitChild</code> )(struct <code>ANTLR3_COMMON_TREE_NODE_STREAM_struct</code> *ctns, <code>ANTLR3_UINT32</code> child) </p>
 <p> void(* <code>walkBackToMostRecentNodeWithUnvisitedChildren</code> )(struct <code>ANTLR3_COMMON_TREE_NODE_STREAM_struct</code> *ctns) </p>
 <h2>Field Documentation</h2>

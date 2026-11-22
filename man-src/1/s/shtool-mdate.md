@@ -17,7 +17,7 @@ description: "shtool mdate – GNU shtool pretty-print last modification time"
 <p> The following command line options are available.</p>
 <dl>
 <dt><code>-n</code>, <code>&#8211;newline</code></dt>
-<dd> By default, output is written to <i>stdout</i> followed by a &#8220;newline&#8221; (<font SIZE="-1">ASCII</font> character 0x0a). If option <code>-n</code> is used, this newline character is omitted.</dd>
+<dd> By default, output is written to <i>stdout</i> followed by a &#8220;newline&#8221; (ASCII character 0x0a). If option <code>-n</code> is used, this newline character is omitted.</dd>
 <dt><code>-z</code>, <code>&#8211;zero</code></dt>
 <dd> Pads numeric day and numeric month with a leading zero. Default is to have variable width.</dd>
 <dt><code>-s</code>, <code>&#8211;shorten</code></dt>
@@ -36,6 +36,6 @@ description: "shtool mdate – GNU shtool pretty-print last modification time"
  shtool mdate -f '-' -s foo.txt
 </pre>
 <h2>HISTORY</h2>
-<p> The <font SIZE="-1"><code>GNU</code></font><code> shtool</code> <code>mdate</code> command was originally written by Ulrich Drepper in 1995 and revised by Ralf S. Engelschall &lt;rse [at] engelschall.com&gt; in 1998 for inclusion into <font SIZE="-1"><code>GNU</code></font><code> shtool</code>.</p>
+<p> The <code>GNU</code><code> shtool</code> <code>mdate</code> command was originally written by Ulrich Drepper in 1995 and revised by Ralf S. Engelschall &lt;rse [at] engelschall.com&gt; in 1998 for inclusion into <code>GNU</code><code> shtool</code>.</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-shtool/">shtool</a></i>(1), <i><a href="/docs/linux/man/1-date/">date</a></i>(1), <i><a href="/docs/linux/man/1-ls/">ls</a></i>(1). </p>

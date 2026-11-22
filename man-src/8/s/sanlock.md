@@ -154,8 +154,8 @@ host2:
 <pre># sanlock shutdown</pre>
 <h2>Options</h2>
 <p>COMMAND can be one of three primary top level choices </p>
-<p> <code>sanlock daemon</code> start daemon<br />
- <code>sanlock client</code> send request to daemon (default command if none given)<br />
+<p> <code>sanlock daemon</code> start daemon<br/>
+ <code>sanlock client</code> send request to daemon (default command if none given)<br/>
  <code>sanlock direct</code> access storage directly (no coordination with daemon)</p>
 <h3>Daemon Command</h3>
 <p><code>sanlock daemon</code> [options] </p>
@@ -205,7 +205,7 @@ host2:
 <p> Tell the sanlock daemon to release the specified host_id in the lockspace. Any processes holding resource leases in this lockspace will be killed, and the resource leases not released. </p>
 <p> <code>sanlock client command -r</code> RESOURCE <code>-c</code> <i>path</i> <i>args</i> </p>
 <p> Register with the sanlock daemon, acquire the specified resource lease, and exec the command at path with args. When the command exits, the sanlock daemon will release the lease. -c must be the final option. </p>
-<p> <code>sanlock client acquire -r</code> RESOURCE <code>-p</code> <i>pid</i><br />
+<p> <code>sanlock client acquire -r</code> RESOURCE <code>-p</code> <i>pid</i><br/>
  <code>sanlock client release -r</code> RESOURCE <code>-p</code> <i>pid</i> </p>
 <p> Tell the sanlock daemon to acquire or release the specified resource lease for the given pid. The pid must be registered with the sanlock daemon. acquire can optionally take a versioned RESOURCE string RESOURCE:lver, where lver is the version of the lease that must be acquired, or fail. </p>
 <p> <code>sanlock client convert -r</code> RESOURCE <code>-p</code> <i>pid</i> </p>
@@ -221,31 +221,31 @@ host2:
 <p> <code>sanlock client set_event -s</code> LOCKSPACE <code>-i</code> <i>host_id</i> <code>-g</code> <i>gen</i> <code>-e</code> <i>num</i> <code>-d</code> <i>num</i> </p>
 <p> Set an event for another host. When the sanlock daemon next renews its delta lease for the lockspace it will: set the bit for the host_id in its bitmap, and set the generation, event and data values in its own delta lease. An application that has registered for events from this lockspace on the destination host will get the event that has been set when the destination sees the event during its next delta lease renewal. </p>
 <p> <code>sanlock client set_config -s</code> LOCKSPACE </p>
-<p> Set a configuration value for a lockspace. Only lockspace_name is used from the LOCKSPACE argument. The USED flag has the same effect on a lockspace as a process holding a resource lease that will not exit. The USED_BY_ORPHANS flag means that an orphan resource lease will have the same effect as the USED.<br />
- -u 0|1 Set (1) or clear (0) the USED flag.<br />
+<p> Set a configuration value for a lockspace. Only lockspace_name is used from the LOCKSPACE argument. The USED flag has the same effect on a lockspace as a process holding a resource lease that will not exit. The USED_BY_ORPHANS flag means that an orphan resource lease will have the same effect as the USED.<br/>
+ -u 0|1 Set (1) or clear (0) the USED flag.<br/>
  -O 0|1 Set (1) or clear (0) the USED_BY_ORPHANS flag.</p>
 <h3>Direct Command</h3>
 <p><code>sanlock direct</code> <i>action</i> [options] </p>
 <p> <code>-o</code><i> sec</i> io timeout in seconds </p>
-<p> <code>sanlock direct init -s</code> LOCKSPACE<br />
+<p> <code>sanlock direct init -s</code> LOCKSPACE<br/>
  <code>sanlock direct init -r</code> RESOURCE </p>
 <p> Initialize storage for 2000 host_id (delta) leases for the given lockspace, or initialize storage for one resource (paxos) lease. Both options require 1MB of space. The host_id in the LOCKSPACE string is not relevant to initialization, so the value is ignored. (The default of 2000 host_ids can be changed for special cases using the -n num_hosts and -m max_hosts options.) With -s, the -o option specifies the io timeout to be written in the host_id leases. </p>
-<p> <code>sanlock direct read_leader -s</code> LOCKSPACE<br />
+<p> <code>sanlock direct read_leader -s</code> LOCKSPACE<br/>
  <code>sanlock direct read_leader -r</code> RESOURCE </p>
 <p> Read a leader record from disk and print the fields. The leader record is the single sector of a delta lease, or the first sector of a paxos lease. </p>
 <p> <code>sanlock direct dump</code><i> path</i>[<code>:</code><i>offset</i>] </p>
 <p> Read disk sectors and print leader records for delta or paxos leases. Add -f 1 to print the request record values for paxos leases, and host_ids set in delta lease bitmaps.</p>
 <h3>LOCKSPACE option string</h3>
 <p><code>-s</code> <i>lockspace_name</i>:<i>host_id</i>:<i>path</i>:<i>offset</i> </p>
-<p> <i>lockspace_name</i> name of lockspace<br />
- <i>host_id</i> local host identifier in lockspace<br />
- <i>path</i> path to storage reserved for leases<br />
+<p> <i>lockspace_name</i> name of lockspace<br/>
+ <i>host_id</i> local host identifier in lockspace<br/>
+ <i>path</i> path to storage reserved for leases<br/>
  <i>offset</i> offset on path (bytes)</p>
 <h3>RESOURCE option string</h3>
 <p><code>-r</code> <i>lockspace_name</i>:<i>resource_name</i>:<i>path</i>:<i>offset</i> </p>
-<p> <i>lockspace_name</i> name of lockspace<br />
- <i>resource_name</i> name of resource<br />
- <i>path</i> path to storage reserved for leases<br />
+<p> <i>lockspace_name</i> name of lockspace<br/>
+ <i>resource_name</i> name of resource<br/>
+ <i>path</i> path to storage reserved for leases<br/>
  <i>offset</i> offset on path (bytes)</p>
 <h3>RESOURCE option string with suffix</h3>
 <p><code>-r</code> <i>lockspace_name</i>:<i>resource_name</i>:<i>path</i>:<i>offset</i>:<i>lver</i> </p>

@@ -11,12 +11,12 @@ description: "sane-canon_pp – SANE backend for Canon CanoScan Parallel Port fl
 <h2>Description</h2>
 <p>The <code>sane-canon_pp</code> library implements a SANE (Scanner Access Now Easy) backend that provides access to the following Canon flatbed scanners:</p>
 <dl>
-<dd>CanoScan FB320P<br />
- CanoScan FB620P<br />
- CanoScan FB330P<br />
- CanoScan FB630P<br />
- CanoScan N340P<br />
- CanoScan N640P<br />
+<dd>CanoScan FB320P<br/>
+ CanoScan FB620P<br/>
+ CanoScan FB330P<br/>
+ CanoScan FB630P<br/>
+ CanoScan N340P<br/>
+ CanoScan N640P<br/>
  CanoScan N640P ex
 </dd></dl>
 <p> No USB scanners are supported and there are no plans to support them in the future. Other projects are working on support for USB scanners. See the <i>PROJECTS</i> file for more detail. The FB310P and FB610P are re-badged Avision scanners which use a different command set, so are unlikely to be supported by this backend in the future. IMPORTANT: this is alpha code. While we have made every effort to make it as reliable as possible, it will not always work as expected. Feedback is still appreciated. Please send any bug reports to the maintainers as listed on the web page (listed in <code>SEE ALSO</code> below). </p>
@@ -59,7 +59,7 @@ description: "sane-canon_pp – SANE backend for Canon CanoScan Parallel Port fl
 <dd>This is under investigation, but for now only a simple gamma profile (ie: the one returned during calibration) will be loaded.</dd></dl>
 <p> <code>Communication Problems</code> ECP mode in libieee1284 doesn&#8217;t always work properly, even with new hardware. We believe that this is a ppdev problem. If you change the configuration file to include <code>force_nibble</code> , the problem will go away, but you will only be able to scan in nibble mode. Sometimes the scanner can be left in a state where our code cannot revive it. If the backend reports no scanner present, try unplugging the power and plugging it back in. Also try unplugging printers from the pass-through port. The scanner will not respond correctly to our commands when you first plug in the power. You may find if you try a scan very soon after plugging in the power that the backend will incorrectly report that you have no scanner present. To avoid this, give it about 10 seconds to reset itself before attempting any scans. <code>Repeated Lines</code> Sometimes at high resolutions (ie. 600dpi) you will notice lines which appear twice. These lines correspond to points where the scanner head has stopped during the scan (it stops every time the internal 64kb buffer is full). Basically it&#8217;s a mechanical problem inside the scanner, that the tolerance of movement for a start/stop event is greater than 1/600 inches. I&#8217;ve never tried the windows driver so I&#8217;m not sure how (or if) it works around this problem, but as we don&#8217;t know how to rewind the scanner head to do these bits again, there&#8217;s currently no nice way to deal with the problem. <code>Grey-scale Scans</code> Be aware that the scanner uses the green LEDs to read grey-scale scans, meaning green coloured things will appear lighter than normal, and red and blue coloured items will appear darker than normal. For high-accuracy grey-scale scans of colour items, it&#8217;s best just to scan in colour and convert to grey-scale in graphics software such as the GIMP. <code>FB620P/FB320P Caveats</code> These models can not be reset in the same way as the others. The windows driver doesn&#8217;t know how to reset them either &#8211; when left with an inconsistent scanner, it will start scanning half way down the page! Aborting is known to work correctly on the FB*30P models, and is known to be broken on the FB*20P models. The FB620P which I tested on simply returns garbage after a scan has been aborted using the method we know. Aborting is able to leave the scanner in a state where it can be shut down, but not where another scan can be made. </p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/5-sane-dll/">sane-dll</a>(5),</code> <code><a href="/docs/linux/man/3-libieee1284/">libieee1284</a></code>(3),<br />
+<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/5-sane-dll/">sane-dll</a>(5),</code> <code><a href="/docs/linux/man/3-libieee1284/">libieee1284</a></code>(3),<br/>
  <i><a rel="nofollow" href="http://canon-fb330p.sourceforge.net/">http://canon-fb330p.sourceforge.net/</a></i> </p>
 <h2>Author</h2>
 <p>This backend is primarily the work of Simon Krix (Reverse Engineering), and Matthew Duggan (SANE interface). </p>

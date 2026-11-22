@@ -19,7 +19,7 @@ description: "ANTLR3_LIST_struct –"
 <p> <code>ANTLR3_INT32</code>(* <code>put</code> )(struct <code>ANTLR3_LIST_struct</code> *list, <code>ANTLR3_INTKEY</code> key, void *element, void(ANTLR3_CDECL *freeptr)(void *)) </p>
 <p> void *(* <code>remove</code> )(struct <code>ANTLR3_LIST_struct</code> *list, <code>ANTLR3_INTKEY</code> key) </p>
 <p> <code>ANTLR3_UINT32</code>(* <code>size</code> )(struct <code>ANTLR3_LIST_struct</code> *list) </p>
-<p> <code>pANTLR3_HASH_TABLE</code> <code>table</code><br />
+<p> <code>pANTLR3_HASH_TABLE</code> <code>table</code><br/>
  <i>Hash table that is storing the list elements. </i></p>
 <h2>Detailed Description</h2>
 <p>Structure that represents a LIST collection.</p>

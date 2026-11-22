@@ -13,10 +13,10 @@ description: "QwtDateScaleDraw –"
 <p>#include &lt;qwt_date_scale_draw.h&gt; </p>
 <p> Inherits <code>QwtScaleDraw</code>.</p>
 <h3>Public Member Functions</h3>
-<p><code>QwtDateScaleDraw</code> (Qt::TimeSpec=Qt::LocalTime)<br />
- <i>Constructor. </i><br />
- virtual <code>~QwtDateScaleDraw</code> ()<br />
- <i>Destructor. </i><br />
+<p><code>QwtDateScaleDraw</code> (Qt::TimeSpec=Qt::LocalTime)<br/>
+ <i>Constructor. </i><br/>
+ virtual <code>~QwtDateScaleDraw</code> ()<br/>
+ <i>Destructor. </i><br/>
  void <code>setDateFormat</code> (<code>QwtDate::IntervalType</code>, const QString &amp;) </p>
 <p> QString <code>dateFormat</code> (<code>QwtDate::IntervalType</code>) const </p>
 <p> void <code>setTimeSpec</code> (Qt::TimeSpec) </p>
@@ -25,8 +25,8 @@ description: "QwtDateScaleDraw –"
 <p> int <code>utcOffset</code> () const </p>
 <p> void <code>setWeek0Type</code> (<code>QwtDate::Week0Type</code>) </p>
 <p> <code>QwtDate::Week0Type</code> <code>week0Type</code> () const </p>
-<p> virtual <code>QwtText</code> <code>label</code> (double) const<br />
- <i>Convert a value into its representing label. </i><br />
+<p> virtual <code>QwtText</code> <code>label</code> (double) const<br/>
+ <i>Convert a value into its representing label. </i><br/>
  QDateTime <code>toDateTime</code> (double) const </p>
 <h3>Protected Member Functions</h3>
 <p>virtual <code>QwtDate::IntervalType</code> <code>intervalType</code> (const <code>QwtScaleDiv</code> &amp;) const </p>
@@ -96,7 +96,7 @@ ddd dd MMM yyyy&#8217;</p>
 <p> The default setting ignores dateTime and return the default format for the interval type. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>dateTime</i> Datetime value<br />
+<dd><i>dateTime</i> Datetime value<br/>
  <i>intervalType</i> Interval type</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -131,7 +131,7 @@ ddd dd MMM yyyy&#8217;</p>
 <p>Set the default format string for an datetime interval type </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>intervalType</i> Interval type<br />
+<dd><i>intervalType</i> Interval type<br/>
  <i>format</i> Default format string</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>

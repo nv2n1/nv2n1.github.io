@@ -23,6 +23,6 @@ description: "XtAppAddActions – register an action table"
 <h2>Description</h2>
 <p>The <code>XtAppAddActions</code> function adds the specified action table and registers it with the translation manager.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xtparsetranslationtable/">XtParseTranslationTable</a>(3)<br />
- <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><a href="/docs/linux/man/3-xtparsetranslationtable/">XtParseTranslationTable</a>(3)<br/>
+ <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

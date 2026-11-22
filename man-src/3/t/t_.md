@@ -24,14 +24,14 @@ Protected Attributes</code></pre>
 <p>virtual void partialRollback (DiscretizedAsset &amp;, Time to) const =0</p>
 <p>virtual Real presentValue (DiscretizedAsset &amp;) const =0</p>
 <p>computes the present value of an asset.</p>
-<p>Protected Attributes <code>Inspectors</code><br />
+<p>Protected Attributes <code>Inspectors</code><br/>
  virtual void initialize (DiscretizedAsset &amp;, Time time) const =0</p>
 <p>initialize an asset at the given time.</p>
 <p>virtual void rollback (DiscretizedAsset &amp;, Time to) const =0</p>
 <p>virtual void partialRollback (DiscretizedAsset &amp;, Time to) const =0</p>
 <p>virtual Real presentValue (DiscretizedAsset &amp;) const =0</p>
 <p>computes the present value of an asset.</p>
-<p>Protected Attributes <code>Numerical method interface</code><br />
+<p>Protected Attributes <code>Numerical method interface</code><br/>
  These methods are to be used by discretized assets and must be overridden by developers implementing numerical methods. Users are advised to use the corresponding methods of <code>DiscretizedAsset</code> instead. </p>
 <pre><code>virtual void initialize (DiscretizedAsset &amp;, Time time) const =0
 initialize an asset at the given time.

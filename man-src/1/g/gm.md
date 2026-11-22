@@ -43,202 +43,202 @@ description: "gm – command-line utility to create, edit, compare, convert, or 
 <p> <code>time</code> executes a subcommand and reports the user, system, and total execution time consumed. </p>
 <p> <code>version</code> reports the GraphicsMagick release version, maximum sample-depth, copyright notice, supported features, and the options used while building the software. </p>
 <p> The <code>GraphicsMagick</code> utilities recognize the following image formats: </p>
-<p> <code>Name</code> <code>Mode</code> <code>Description</code><br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>3FR&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Hasselblad Photo RAW<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>8BIM&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Photoshop resource format<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>8BIMTEXT&nbsp;<wbr>&nbsp;<wbr>rw- Photoshop resource text format<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>8BIMWTEXT rw- Photoshop resource wide text format<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>APP1&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Raw application information<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>APP1JPEG&nbsp;<wbr>&nbsp;<wbr>rw- Raw JPEG binary data<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>ART&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; PF1: 1st Publisher<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>ARW&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Sony Alpha DSLR RAW<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>AVS&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>AVS X image<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>BIE&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Joint Bi-level Image experts Group<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>interchange format<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>BMP&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Microsoft Windows bitmap image<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>BMP2&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-w- Microsoft Windows bitmap image v2<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>BMP3&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-w- Microsoft Windows bitmap image v3<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>CACHE&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8212; Magick Persistent Cache image format<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>CALS&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Continuous Acquisition and Life-cycle<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Support Type 1 image<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>CAPTION&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Caption&nbsp;<wbr>(requires separate size info)<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>CIN&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Kodak Cineon Format<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>CMYK&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Raw cyan, magenta, yellow, and black<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>samples&nbsp;<wbr>(8 or 16 bits, depending on<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>the image depth)<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>CMYKA&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Raw cyan, magenta, yellow, black, and<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>matte samples&nbsp;<wbr>(8 or 16 bits, depending<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>on the image depth)<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>CR2&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Canon Photo RAW<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>CRW&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Canon Photo RAW<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>CUR&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Microsoft Cursor Icon<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>CUT&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; DR Halo<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>DCM&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Digital Imaging and Communications in<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Medicine image<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>DCR&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Kodak Photo RAW<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>DCX&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>ZSoft IBM PC multi-page Paintbrush<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>DNG&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Adobe Digital Negative<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>DPS&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Display PostScript Interpreter<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>DPX&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Digital Moving Picture Exchange<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>EPDF&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Encapsulated Portable Document Format<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>EPI&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Adobe Encapsulated PostScript<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Interchange format<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>EPS&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Adobe Encapsulated PostScript<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>EPS2&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-w- Adobe Level II Encapsulated PostScript<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>EPS3&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-w- Adobe Level III Encapsulated PostScript<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>EPSF&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Adobe Encapsulated PostScript<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>EPSI&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Adobe Encapsulated PostScript<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Interchange format<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>EPT&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Adobe Encapsulated PostScript with MS-DOS<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>TIFF preview<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>EPT2&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Adobe Level II Encapsulated PostScript<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>with MS-DOS TIFF preview<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>EPT3&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Adobe Level III Encapsulated PostScript<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>with MS-DOS TIFF preview<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>EXIF&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Exif digital camera binary data<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>FAX&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Group 3 FAX&nbsp;<wbr>(Not TIFF Group3 FAX!)<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>FITS&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Flexible Image Transport System<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>FRACTAL&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Plasma fractal image<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>FPX&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- FlashPix Format<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>GIF&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>CompuServe graphics interchange format<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>GIF87&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- CompuServe graphics interchange format<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(version 87a)<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>GRADIENT&nbsp;<wbr>&nbsp;<wbr>r&#8211; Gradual passing from one shade to<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>another<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>GRAY&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Raw gray samples&nbsp;<wbr>(8/16/32 bits,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>depending on the image depth)<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>HISTOGRAM -w- Histogram of the image<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>HRZ&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; HRZ: Slow scan TV<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>HTML&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-w- Hypertext Markup Language and a<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>client-side image map<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>ICB&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Truevision Targa image<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>ICC&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- ICC Color Profile<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>ICM&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- ICC Color Profile<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>ICO&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Microsoft icon<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>ICON&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Microsoft icon<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>IDENTITY&nbsp;<wbr>&nbsp;<wbr>r&#8211; Hald CLUT identity image<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>IMAGE&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; GraphicsMagick Embedded Image<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>INFO&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-w+&nbsp;<wbr>Image descriptive information and<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>statistics<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>IPTC&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- IPTC Newsphoto<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>IPTCTEXT&nbsp;<wbr>&nbsp;<wbr>rw- IPTC Newsphoto text format<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>IPTCWTEXT rw- IPTC Newsphoto wide text format<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>JBG&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Joint Bi-level Image experts Group<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>interchange format<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>JBIG&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Joint Bi-level Image experts Group<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>interchange format<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>JNG&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- JPEG Network Graphics<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>JP2&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- JPEG-2000 JP2 File Format Syntax<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>JPC&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- JPEG-2000 Code Stream Syntax<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>JPEG&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Joint Photographic Experts Group<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>JFIF format<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>JPG&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Joint Photographic Experts Group<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>JFIF format<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>K25&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Kodak Photo RAW<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>KDC&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Kodak Photo RAW<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>LABEL&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Text image format<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>M2V&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>MPEG-2 Video Stream<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>MAP&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Colormap intensities and indices<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>MAT&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; MATLAB image format<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>MATTE&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-w+&nbsp;<wbr>MATTE format<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>MIFF&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Magick Image File Format<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>MNG&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Multiple-image Network Graphics<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>MONO&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Bi-level bitmap in least-significant-<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-byte-first order<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>MPC&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Magick Persistent Cache image format<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>MPEG&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>MPEG-1 Video Stream<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>MPG&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>MPEG-1 Video Stream<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>MRW&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Minolta Photo Raw<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>MSL&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Magick Scripting Language<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>MTV&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>MTV Raytracing image format<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>MVG&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Magick Vector Graphics<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>NEF&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Nikon Electronic Format<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>NULL&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Constant image of uniform color<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>OTB&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- On-the-air bitmap<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>P7&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Xv thumbnail format<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PAL&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- 16bit/pixel interleaved YUV<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PALM&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Palm Pixmap<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PBM&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Portable bitmap format&nbsp;<wbr>(black and white)<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PCD&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Photo CD<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PCDS&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Photo CD<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PCL&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-w- Page Control Language<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PCT&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Apple Macintosh QuickDraw/PICT<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PCX&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- ZSoft IBM PC Paintbrush<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PDB&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Palm Database ImageViewer Format<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PDF&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Portable Document Format<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PEF&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Pentax Electronic File<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PFA&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; TrueType font<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PFB&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; TrueType font<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PGM&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Portable graymap format&nbsp;<wbr>(gray scale)<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PGX&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; JPEG-2000 VM Format<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PICON&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Personal Icon<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PICT&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Apple Macintosh QuickDraw/PICT<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PIX&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Alias/Wavefront RLE image format<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PLASMA&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Plasma fractal image<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PNG&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Portable Network Graphics<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PNG24&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Portable Network Graphics, 24 bit RGB<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>opaque only<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PNG32&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Portable Network Graphics, 32 bit RGBA<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>semitransparency OK<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PNG8&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Portable Network Graphics, 8-bit<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>indexed, binary transparency only<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PNM&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Portable anymap<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PPM&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Portable pixmap format&nbsp;<wbr>(color)<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PREVIEW&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-w- Show a preview an image enhancement,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>effect, or f/x<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PS&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Adobe PostScript<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PS2&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-w+&nbsp;<wbr>Adobe Level II PostScript<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PS3&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-w+&nbsp;<wbr>Adobe Level III PostScript<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PSD&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Adobe Photoshop bitmap<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PTIF&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Pyramid encoded TIFF<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PWP&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Seattle Film Works<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>RAF&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Fuji Photo RAW<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>RAS&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>SUN Rasterfile<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>RGB&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Raw red, green, and blue samples<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>RGBA&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Raw red, green, blue, and matte samples<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>RLA&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Alias/Wavefront image<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>RLE&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Utah Run length encoded image<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>SCT&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Scitex HandShake<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>SFW&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Seattle Film Works<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>SGI&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Irix RGB image<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>SHTML&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-w- Hypertext Markup Language and a<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>client-side image map<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>STEGANO&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Steganographic image<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>SUN&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>SUN Rasterfile<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>SVG&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Scalable Vector Gaphics<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>TEXT&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Raw text<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>TGA&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Truevision Targa image<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>TIFF&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Tagged Image File Format<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>TILE&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Tile image with a texture<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>TIM&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; PSX TIM<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>TOPOL&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; TOPOL X Image<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>TTF&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; TrueType font<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>TXT&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Raw text<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>UIL&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-w- X-Motif UIL table<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>UYVY&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- 16bit/pixel interleaved YUV<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>VDA&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Truevision Targa image<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>VICAR&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- VICAR rasterfile format<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>VID&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Visual Image Directory<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>VIFF&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Khoros Visualization image<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>VST&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Truevision Targa image<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>WBMP&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Wireless Bitmap&nbsp;<wbr>(level 0)&nbsp;<wbr>image<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>WMF&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Windows Metafile<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>WPG&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Word Perfect Graphics<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>X&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- X Image<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>X3F&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Foveon X3&nbsp;<wbr>(Sigma/Polaroid)&nbsp;<wbr>RAW<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>XBM&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- X Windows system bitmap&nbsp;<wbr>(black<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>and white)<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>XC&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Constant image uniform color<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>XCF&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; GIMP image<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>XMP&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Adobe XML metadata<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>XPM&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- X Windows system pixmap&nbsp;<wbr>(color)<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>XV&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Khoros Visualization image<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>XWD&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- X Windows system window dump&nbsp;<wbr>(color)<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>YUV&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- CCIR 601 4:1:1 or 4:2:2&nbsp;<wbr>(8-bit only)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><br />
-&nbsp;<wbr>Modes:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Read<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>w&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Write<br />
+<p> <code>Name</code> <code>Mode</code> <code>Description</code><br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>3FR&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Hasselblad Photo RAW<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>8BIM&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Photoshop resource format<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>8BIMTEXT&nbsp;<wbr>&nbsp;<wbr>rw- Photoshop resource text format<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>8BIMWTEXT rw- Photoshop resource wide text format<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>APP1&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Raw application information<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>APP1JPEG&nbsp;<wbr>&nbsp;<wbr>rw- Raw JPEG binary data<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>ART&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; PF1: 1st Publisher<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>ARW&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Sony Alpha DSLR RAW<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>AVS&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>AVS X image<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>BIE&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Joint Bi-level Image experts Group<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>interchange format<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>BMP&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Microsoft Windows bitmap image<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>BMP2&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-w- Microsoft Windows bitmap image v2<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>BMP3&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-w- Microsoft Windows bitmap image v3<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>CACHE&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8212; Magick Persistent Cache image format<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>CALS&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Continuous Acquisition and Life-cycle<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Support Type 1 image<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>CAPTION&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Caption&nbsp;<wbr>(requires separate size info)<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>CIN&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Kodak Cineon Format<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>CMYK&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Raw cyan, magenta, yellow, and black<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>samples&nbsp;<wbr>(8 or 16 bits, depending on<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>the image depth)<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>CMYKA&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Raw cyan, magenta, yellow, black, and<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>matte samples&nbsp;<wbr>(8 or 16 bits, depending<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>on the image depth)<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>CR2&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Canon Photo RAW<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>CRW&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Canon Photo RAW<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>CUR&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Microsoft Cursor Icon<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>CUT&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; DR Halo<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>DCM&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Digital Imaging and Communications in<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Medicine image<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>DCR&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Kodak Photo RAW<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>DCX&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>ZSoft IBM PC multi-page Paintbrush<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>DNG&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Adobe Digital Negative<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>DPS&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Display PostScript Interpreter<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>DPX&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Digital Moving Picture Exchange<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>EPDF&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Encapsulated Portable Document Format<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>EPI&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Adobe Encapsulated PostScript<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Interchange format<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>EPS&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Adobe Encapsulated PostScript<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>EPS2&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-w- Adobe Level II Encapsulated PostScript<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>EPS3&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-w- Adobe Level III Encapsulated PostScript<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>EPSF&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Adobe Encapsulated PostScript<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>EPSI&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Adobe Encapsulated PostScript<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Interchange format<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>EPT&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Adobe Encapsulated PostScript with MS-DOS<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>TIFF preview<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>EPT2&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Adobe Level II Encapsulated PostScript<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>with MS-DOS TIFF preview<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>EPT3&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Adobe Level III Encapsulated PostScript<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>with MS-DOS TIFF preview<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>EXIF&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Exif digital camera binary data<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>FAX&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Group 3 FAX&nbsp;<wbr>(Not TIFF Group3 FAX!)<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>FITS&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Flexible Image Transport System<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>FRACTAL&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Plasma fractal image<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>FPX&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- FlashPix Format<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>GIF&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>CompuServe graphics interchange format<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>GIF87&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- CompuServe graphics interchange format<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(version 87a)<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>GRADIENT&nbsp;<wbr>&nbsp;<wbr>r&#8211; Gradual passing from one shade to<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>another<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>GRAY&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Raw gray samples&nbsp;<wbr>(8/16/32 bits,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>depending on the image depth)<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>HISTOGRAM -w- Histogram of the image<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>HRZ&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; HRZ: Slow scan TV<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>HTML&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-w- Hypertext Markup Language and a<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>client-side image map<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>ICB&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Truevision Targa image<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>ICC&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- ICC Color Profile<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>ICM&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- ICC Color Profile<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>ICO&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Microsoft icon<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>ICON&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Microsoft icon<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>IDENTITY&nbsp;<wbr>&nbsp;<wbr>r&#8211; Hald CLUT identity image<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>IMAGE&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; GraphicsMagick Embedded Image<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>INFO&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-w+&nbsp;<wbr>Image descriptive information and<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>statistics<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>IPTC&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- IPTC Newsphoto<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>IPTCTEXT&nbsp;<wbr>&nbsp;<wbr>rw- IPTC Newsphoto text format<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>IPTCWTEXT rw- IPTC Newsphoto wide text format<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>JBG&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Joint Bi-level Image experts Group<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>interchange format<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>JBIG&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Joint Bi-level Image experts Group<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>interchange format<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>JNG&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- JPEG Network Graphics<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>JP2&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- JPEG-2000 JP2 File Format Syntax<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>JPC&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- JPEG-2000 Code Stream Syntax<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>JPEG&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Joint Photographic Experts Group<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>JFIF format<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>JPG&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Joint Photographic Experts Group<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>JFIF format<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>K25&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Kodak Photo RAW<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>KDC&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Kodak Photo RAW<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>LABEL&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Text image format<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>M2V&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>MPEG-2 Video Stream<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>MAP&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Colormap intensities and indices<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>MAT&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; MATLAB image format<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>MATTE&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-w+&nbsp;<wbr>MATTE format<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>MIFF&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Magick Image File Format<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>MNG&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Multiple-image Network Graphics<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>MONO&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Bi-level bitmap in least-significant-<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-byte-first order<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>MPC&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Magick Persistent Cache image format<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>MPEG&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>MPEG-1 Video Stream<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>MPG&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>MPEG-1 Video Stream<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>MRW&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Minolta Photo Raw<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>MSL&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Magick Scripting Language<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>MTV&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>MTV Raytracing image format<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>MVG&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Magick Vector Graphics<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>NEF&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Nikon Electronic Format<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>NULL&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Constant image of uniform color<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>OTB&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- On-the-air bitmap<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>P7&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Xv thumbnail format<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PAL&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- 16bit/pixel interleaved YUV<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PALM&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Palm Pixmap<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PBM&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Portable bitmap format&nbsp;<wbr>(black and white)<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PCD&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Photo CD<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PCDS&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Photo CD<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PCL&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-w- Page Control Language<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PCT&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Apple Macintosh QuickDraw/PICT<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PCX&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- ZSoft IBM PC Paintbrush<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PDB&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Palm Database ImageViewer Format<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PDF&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Portable Document Format<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PEF&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Pentax Electronic File<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PFA&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; TrueType font<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PFB&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; TrueType font<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PGM&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Portable graymap format&nbsp;<wbr>(gray scale)<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PGX&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; JPEG-2000 VM Format<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PICON&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Personal Icon<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PICT&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Apple Macintosh QuickDraw/PICT<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PIX&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Alias/Wavefront RLE image format<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PLASMA&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Plasma fractal image<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PNG&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Portable Network Graphics<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PNG24&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Portable Network Graphics, 24 bit RGB<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>opaque only<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PNG32&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Portable Network Graphics, 32 bit RGBA<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>semitransparency OK<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PNG8&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Portable Network Graphics, 8-bit<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>indexed, binary transparency only<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PNM&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Portable anymap<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PPM&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Portable pixmap format&nbsp;<wbr>(color)<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PREVIEW&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-w- Show a preview an image enhancement,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>effect, or f/x<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PS&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Adobe PostScript<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PS2&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-w+&nbsp;<wbr>Adobe Level II PostScript<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PS3&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-w+&nbsp;<wbr>Adobe Level III PostScript<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PSD&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Adobe Photoshop bitmap<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PTIF&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Pyramid encoded TIFF<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>PWP&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Seattle Film Works<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>RAF&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Fuji Photo RAW<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>RAS&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>SUN Rasterfile<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>RGB&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Raw red, green, and blue samples<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>RGBA&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Raw red, green, blue, and matte samples<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>RLA&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Alias/Wavefront image<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>RLE&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Utah Run length encoded image<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>SCT&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Scitex HandShake<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>SFW&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Seattle Film Works<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>SGI&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Irix RGB image<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>SHTML&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-w- Hypertext Markup Language and a<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>client-side image map<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>STEGANO&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Steganographic image<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>SUN&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>SUN Rasterfile<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>SVG&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Scalable Vector Gaphics<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>TEXT&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Raw text<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>TGA&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Truevision Targa image<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>TIFF&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Tagged Image File Format<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>TILE&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Tile image with a texture<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>TIM&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; PSX TIM<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>TOPOL&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; TOPOL X Image<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>TTF&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; TrueType font<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>TXT&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Raw text<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>UIL&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-w- X-Motif UIL table<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>UYVY&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- 16bit/pixel interleaved YUV<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>VDA&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Truevision Targa image<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>VICAR&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- VICAR rasterfile format<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>VID&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Visual Image Directory<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>VIFF&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Khoros Visualization image<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>VST&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Truevision Targa image<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>WBMP&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Wireless Bitmap&nbsp;<wbr>(level 0)&nbsp;<wbr>image<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>WMF&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Windows Metafile<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>WPG&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Word Perfect Graphics<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>X&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- X Image<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>X3F&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Foveon X3&nbsp;<wbr>(Sigma/Polaroid)&nbsp;<wbr>RAW<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>XBM&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- X Windows system bitmap&nbsp;<wbr>(black<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>and white)<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>XC&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; Constant image uniform color<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>XCF&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&#8211; GIMP image<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>XMP&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- Adobe XML metadata<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>XPM&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- X Windows system pixmap&nbsp;<wbr>(color)<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>XV&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw+&nbsp;<wbr>Khoros Visualization image<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>XWD&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- X Windows system window dump&nbsp;<wbr>(color)<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>YUV&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rw- CCIR 601 4:1:1 or 4:2:2&nbsp;<wbr>(8-bit only)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><br/>
+&nbsp;<wbr>Modes:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Read<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>w&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Write<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Multi-image </p>
 <p> <i>Support for some of these formats require additional programs or libraries. See README in the source package for where to find optional additional software</i>. </p>
 <p> Note, a format delineated with + means that if more than one image is specified, frames are combined into a single multi-image file. Use <code>+adjoin</code> if you want a single image produced for each frame. </p>
@@ -275,9 +275,9 @@ description: "gm – command-line utility to create, edit, compare, convert, or 
 <dd> apply ASC CDL color transform </dd>
 <p> Applies (&quot;bakes in&quot;) the ASC CDL, which is a format for the exchange of basic primary color grading information between equipment and software from different manufacturers. The format defines the math for three functions: slope, offset and power. Each function uses a number for the red, green, and blue color channels for a total of nine numbers comprising a single color decision. The tenth number (optional) is for chromiance (saturation) as specified by ASC CDL 1.2. </p>
 <p> The argument string is comma delimited and is in the following form (but without invervening spaces or line breaks) </p>
-<p>&nbsp;<wbr>redslope,redoffset,redpower:<br />
-&nbsp;<wbr>greenslope,greenoffset,greenpower:<br />
-&nbsp;<wbr>blueslope,blueoffset,bluepower:<br />
+<p>&nbsp;<wbr>redslope,redoffset,redpower:<br/>
+&nbsp;<wbr>greenslope,greenoffset,greenpower:<br/>
+&nbsp;<wbr>blueslope,blueoffset,bluepower:<br/>
 &nbsp;<wbr>saturation </p>
 <p> with the unity (no change) specification being: </p>
 <p>&nbsp;<wbr>&quot;1.0,0.0,1.0:1.0,0.0,1.0:1.0,0.0,1.0:1.0&quot; </p>
@@ -342,7 +342,7 @@ description: "gm – command-line utility to create, edit, compare, convert, or 
 <dd> colorize the image with the pen color </dd>
 <p> Specify the amount of colorization as a percentage. You can apply separate colorization values to the red, green, and blue channels of the image with a colorization value list delimited with slashes (e.g. 0/0/50). </p>
 <p> The <code>-colorize</code> option may be used in conjunction with <code>-modulate</code> to produce a nice sepia toned image like: </p>
-<p>&nbsp;<wbr>gm convert input.ppm -modulate 115,0,100&nbsp;<wbr>\<br />
+<p>&nbsp;<wbr>gm convert input.ppm -modulate 115,0,100&nbsp;<wbr>\<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-colorize 7,21,50 output.ppm. </p>
 <dt><code>-colormap </code><i>&lt;type&gt;</i></dt>
 <dd> define the colormap type </dd>
@@ -373,72 +373,72 @@ description: "gm – command-line utility to create, edit, compare, convert, or 
 <p> The description of composition uses abstract terminology in order to allow the the description to be more clear, while avoiding constant values which are specific to a particular build configuration. Each image pixel is represented by red, green, and blue levels (which are equal for a gray pixel). MaxRGB is the maximum integral value which may be stored in the red, green, or blue channels of the image. Each image pixel may also optionally (if the image matte channel is enabled) have an associated level of opacity (ranging from opaque to transparent), which may be used to determine the influence of the pixel color when compositing the pixel with another image pixel. If the image matte channel is disabled, then all pixels in the image are treated as opaque. The color of an <i>opaque</i> pixel is fully visible while the color of a <i>transparent</i> pixel color is entirely absent (pixel color is ignored). </p>
 <p> By definition, raster images have a rectangular shape. All image rows are of equal length, and all image columns have the same number of rows. By treating the opacity channel as a visual &quot;mask&quot; the rectangular image may be given a &quot;shape&quot; by treating the opacity channel as a cookie-cutter for the image. Pixels within the shape are opaque, while pixels outside the shape are transparent. Pixels on the boundary of the shape may be between opaque and transparent in order to provide antialiasing (visually smooth edges). The description of the composition operators use this concept of image &quot;shape&quot; in order to make the description of the operators easier to understand. While it is convenient to describe the operators in terms of &quot;shapes&quot; they are by no means limited to mask-style operations since they are based on continuous floating-point mathematics rather than simple boolean operations. </p>
 <p> By default, the <i>Over</i> composite operator is used. The following composite operators are available: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>Over<br />
-&nbsp;<wbr>&nbsp;<wbr>In<br />
-&nbsp;<wbr>&nbsp;<wbr>Out<br />
-&nbsp;<wbr>&nbsp;<wbr>Atop<br />
-&nbsp;<wbr>&nbsp;<wbr>Xor<br />
-&nbsp;<wbr>&nbsp;<wbr>Plus<br />
-&nbsp;<wbr>&nbsp;<wbr>Minus<br />
-&nbsp;<wbr>&nbsp;<wbr>Add<br />
-&nbsp;<wbr>&nbsp;<wbr>Subtract<br />
-&nbsp;<wbr>&nbsp;<wbr>Difference<br />
-&nbsp;<wbr>&nbsp;<wbr>Divide<br />
-&nbsp;<wbr>&nbsp;<wbr>Multiply<br />
-&nbsp;<wbr>&nbsp;<wbr>Bumpmap<br />
-&nbsp;<wbr>&nbsp;<wbr>Copy<br />
-&nbsp;<wbr>&nbsp;<wbr>CopyRed<br />
-&nbsp;<wbr>&nbsp;<wbr>CopyGreen<br />
-&nbsp;<wbr>&nbsp;<wbr>CopyBlue<br />
-&nbsp;<wbr>&nbsp;<wbr>CopyOpacity<br />
-&nbsp;<wbr>&nbsp;<wbr>CopyCyan<br />
-&nbsp;<wbr>&nbsp;<wbr>CopyMagenta<br />
-&nbsp;<wbr>&nbsp;<wbr>CopyYellow<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>Over<br/>
+&nbsp;<wbr>&nbsp;<wbr>In<br/>
+&nbsp;<wbr>&nbsp;<wbr>Out<br/>
+&nbsp;<wbr>&nbsp;<wbr>Atop<br/>
+&nbsp;<wbr>&nbsp;<wbr>Xor<br/>
+&nbsp;<wbr>&nbsp;<wbr>Plus<br/>
+&nbsp;<wbr>&nbsp;<wbr>Minus<br/>
+&nbsp;<wbr>&nbsp;<wbr>Add<br/>
+&nbsp;<wbr>&nbsp;<wbr>Subtract<br/>
+&nbsp;<wbr>&nbsp;<wbr>Difference<br/>
+&nbsp;<wbr>&nbsp;<wbr>Divide<br/>
+&nbsp;<wbr>&nbsp;<wbr>Multiply<br/>
+&nbsp;<wbr>&nbsp;<wbr>Bumpmap<br/>
+&nbsp;<wbr>&nbsp;<wbr>Copy<br/>
+&nbsp;<wbr>&nbsp;<wbr>CopyRed<br/>
+&nbsp;<wbr>&nbsp;<wbr>CopyGreen<br/>
+&nbsp;<wbr>&nbsp;<wbr>CopyBlue<br/>
+&nbsp;<wbr>&nbsp;<wbr>CopyOpacity<br/>
+&nbsp;<wbr>&nbsp;<wbr>CopyCyan<br/>
+&nbsp;<wbr>&nbsp;<wbr>CopyMagenta<br/>
+&nbsp;<wbr>&nbsp;<wbr>CopyYellow<br/>
 &nbsp;<wbr>&nbsp;<wbr>CopyBlack </p>
 <p> The behavior of each operator is described below. </p>
-<p> <code>Over</code><br />
+<p> <code>Over</code><br/>
 &nbsp;<wbr> The result will be the union of the two image shapes, with opaque areas of <i>change-image</i> obscuring <i>base-image</i> in the region of overlap. </p>
-<p> <code>In</code><br />
+<p> <code>In</code><br/>
 &nbsp;<wbr> The result is simply <i>change-image</i> cut by the shape of <i>base-image</i>. None of the image data of <i>base-image</i> will be in the result. </p>
-<p> <code>Out</code><br />
+<p> <code>Out</code><br/>
 &nbsp;<wbr> The resulting image is <i>change-image</i> with the shape of <i>base-image</i> cut out. </p>
-<p> <code>Atop</code><br />
+<p> <code>Atop</code><br/>
 &nbsp;<wbr> The result is the same shape as <i>base-image</i>, with <i>change-image</i> obscuring <i>base-image</i> where the image shapes overlap. Note this differs from <code>over</code> because the portion of <i>change-image</i> outside <i>base-image</i>&#8216;s shape does not appear in the result. </p>
-<p> <code>Xor</code><br />
+<p> <code>Xor</code><br/>
 &nbsp;<wbr> The result is the image data from both <i>change-image</i> and <i>base-image</i> that is outside the overlap region. The overlap region will be blank. </p>
-<p> <code>Plus</code><br />
+<p> <code>Plus</code><br/>
 &nbsp;<wbr> The result is just the sum of the image data. Output values are cropped to MaxRGB (no overflow). This operation is independent of the matte channels. </p>
-<p> <code>Minus</code><br />
+<p> <code>Minus</code><br/>
 &nbsp;<wbr> The result of <i>change-image</i> &#8211; <i>base-image</i>, with underflow cropped to zero. The matte channel is ignored (set to opaque, full coverage). </p>
-<p> <code>Add</code><br />
+<p> <code>Add</code><br/>
 &nbsp;<wbr> The result of <i>change-image</i> + <i>base-image</i>, with overflow wrapping around (<i>mod</i> MaxRGB+1). </p>
-<p> <code>Subtract</code><br />
+<p> <code>Subtract</code><br/>
 &nbsp;<wbr> The result of <i>change-image</i> &#8211; <i>base-image</i>, with underflow wrapping around (<i>mod</i> MaxRGB+1). The <code>add</code> and <code>subtract</code> operators can be used to perform reversible transformations. </p>
-<p> <code>Difference</code><br />
+<p> <code>Difference</code><br/>
 &nbsp;<wbr> The result of abs(<i>change-image</i> &#8211; <i>base-image</i>). This is useful for comparing two very similar images. </p>
-<p> <code>Divide</code><br />
+<p> <code>Divide</code><br/>
 &nbsp;<wbr> The result of <i>change-image</i> / <i>base-image</i>. This is useful for improving the readability of text on unevenly illuminated photos (by using a gaussian blurred copy of change-image as base-image). </p>
-<p> <code>Multiply</code><br />
+<p> <code>Multiply</code><br/>
 &nbsp;<wbr> The result of <i>change-image</i> * <i>base-image</i>. This is useful for the creation of drop-shadows. </p>
-<p> <code>Bumpmap</code><br />
+<p> <code>Bumpmap</code><br/>
 &nbsp;<wbr> The result <i>base-image</i> shaded by <i>change-image</i>. </p>
-<p> <code>Copy</code><br />
+<p> <code>Copy</code><br/>
 &nbsp;<wbr> The resulting image is <i>base-image</i> replaced with <i>change-image</i>. Here the matte information is ignored. </p>
-<p> <code>CopyRed</code><br />
+<p> <code>CopyRed</code><br/>
 &nbsp;<wbr> The resulting image is the red channel in <i>base-image</i> replaced with the red channel in <i>change-image</i>. The other channels are copied untouched. </p>
-<p> <code>CopyGreen</code><br />
+<p> <code>CopyGreen</code><br/>
 &nbsp;<wbr> The resulting image is the green channel in <i>base-image</i> replaced with the green channel in <i>change-image</i>. The other channels are copied untouched. </p>
-<p> <code>CopyBlue</code><br />
+<p> <code>CopyBlue</code><br/>
 &nbsp;<wbr> The resulting image is the blue channel in <i>base-image</i> replaced with the blue channel in <i>change-image</i>. The other channels are copied untouched. </p>
-<p> <code>CopyOpacity</code><br />
+<p> <code>CopyOpacity</code><br/>
 &nbsp;<wbr> The resulting image is the opacity channel in <i>base-image</i> replaced with the opacity channel in <i>change-image</i>. The other channels are copied untouched. </p>
-<p> <code>CopyCyan</code><br />
+<p> <code>CopyCyan</code><br/>
 &nbsp;<wbr> The resulting image is the cyan channel in <i>base-image</i> replaced with the cyan channel in <i>change-image</i>. The other channels are copied untouched. Use of this operator requires that base-image be in CMYK(A) colorspace. </p>
-<p> <code>CopyMagenta</code><br />
+<p> <code>CopyMagenta</code><br/>
 &nbsp;<wbr> The resulting image is the magenta channel in <i>base-image</i> replaced with the magenta channel in <i>change-image</i>. The other channels are copied untouched. Use of this operator requires that base-image be in CMYK(A) colorspace. </p>
-<p> <code>CopyYellow</code><br />
+<p> <code>CopyYellow</code><br/>
 &nbsp;<wbr> The resulting image is the yellow channel in <i>base-image</i> replaced with the yellow channel in <i>change-image</i>. The other channels are copied untouched. Use of this operator requires that base-image be in CMYK(A) colorspace. </p>
-<p> <code>CopyBlack</code><br />
+<p> <code>CopyBlack</code><br/>
 &nbsp;<wbr> The resulting image is the black channel in <i>base-image</i> replaced with the black channel in <i>change-image</i>. The other channels are copied untouched. Use of this operator requires that base-image be in CMYK(A) colorspace. If change-image is not in CMYK space, then the change-image pixel intensities are used. </p>
 <dt><code>-compress </code><i>&lt;type&gt;</i></dt>
 <dd> the type of image compression </dd>
@@ -481,113 +481,113 @@ description: "gm – command-line utility to create, edit, compare, convert, or 
 <dt><code>-define </code><i>&lt;key&gt;{=&lt;value&gt;},&#8230;</i></dt>
 <dd> add coder/decoder specific options This option creates one or more definitions for coders and decoders to use while reading and writing image data. Definitions may be passed to coders and decoders to control options that are specific to certain image formats. If <i>value</i> is missing for a definition, an empty-valued definition of a flag will be created with that name. This is used to control on/off options. Use +define &lt;key&gt;,&#8230; to remove definitions previously created. Use +define &quot;*&quot; to remove all existing definitions. </dd>
 <p> The following definitions may be created: </p>
-<p> <code>cineon:colorspace={rgb|cineonlog}</code><br />
+<p> <code>cineon:colorspace={rgb|cineonlog}</code><br/>
 &nbsp;<wbr> Use the cineon:colorspace option when reading a Cineon file to specify the colorspace the Cineon file uses. This overrides the colorspace type implied by the DPX header (if any). </p>
-<p> <code>dpx:bits-per-sample=&lt;value&gt;</code><br />
+<p> <code>dpx:bits-per-sample=&lt;value&gt;</code><br/>
 &nbsp;<wbr> If the dpx:bits-per-sample key is defined, GraphicsMagick will write DPX images with the specified bits per sample, overriding any existing depth value. If this option is not specified, then the value is based on the existing image depth value from the original image file. The DPX standard supports bits per sample values of 1, 8, 10, 12, and 16. Many DPX readers demand a sample size of 10 bits with type A padding (see below). </p>
-<p> <code>dpx:colorspace={rgb|cineonlog}</code><br />
+<p> <code>dpx:colorspace={rgb|cineonlog}</code><br/>
 &nbsp;<wbr> Use the dpx:colorspace option when reading a DPX file to specify the colorspace the DPX file uses. This overrides the colorspace type implied by the DPX header (if any). </p>
-<p> <code>dpx:packing-method={packed|a|b|lsbpad|msbpad}</code><br />
+<p> <code>dpx:packing-method={packed|a|b|lsbpad|msbpad}</code><br/>
 &nbsp;<wbr> DPX samples are output within 32-bit words. They may be tightly packed end-to-end within the words (&quot;packed&quot;), padded with null bits to the right of the sample (&quot;a&quot; or &quot;lsbpad), or padded with null bits to the left of the sample (&quot;b&quot; or &quot;msbpad&quot;). This option only has an effect for sample sizes of 10 or 12 bits. If samples are not packed, the DPX standard recommends type A padding. Many DPX readers demand a sample size of 10 bits with type A padding. </p>
-<p> <code>dpx:pixel-endian={lsb|msb}</code><br />
+<p> <code>dpx:pixel-endian={lsb|msb}</code><br/>
 &nbsp;<wbr> Allows the user to specify the endian order of the pixels when reading or writing the DPX files. Sometimes this is useful if the file is (or must be) written incorrectly so that the file header and the pixels use different endianness. </p>
-<p> <code>dpx:swap-samples={true|false}</code><br />
+<p> <code>dpx:swap-samples={true|false}</code><br/>
 &nbsp;<wbr> GraphicsMagick strives to adhere to the DPX standard but certain aspects of the standard can be quite confusing. As a result, some 10-bit DPX files have Red and Blue interchanged, or Cb and Cr interchanged due to an different interpretation of the standard, or getting the wires crossed. The swap-samples option may be supplied when reading or writing in order to read or write using the necessary sample order. </p>
-<p> <code>jp2:rate=&lt;value&gt;</code><br />
+<p> <code>jp2:rate=&lt;value&gt;</code><br/>
 &nbsp;<wbr> Specify the compression factor to use while writing JPEG-2000 files. The compression factor is the reciprocal of the compression ratio. The valid range is 0.0 to 1.0, with 1.0 indicating lossless compression. If defined, this value overrides the -quality setting. The default quality setting of 75 results in a rate value of 0.06641. </p>
-<p> <code>jpeg:block-smoothing={true|false}</code><br />
+<p> <code>jpeg:block-smoothing={true|false}</code><br/>
 &nbsp;<wbr> Enables or disables block smoothing when reading a JPEG file (default enabled). </p>
-<p> <code>jpeg:dct-method=&lt;value&gt;</code><br />
+<p> <code>jpeg:dct-method=&lt;value&gt;</code><br/>
 &nbsp;<wbr> Selects the IJG JPEG library DCT implementation to use. The encoding implementations vary in speed and encoding error. The available choices for <code>value</code> are <code>islow</code>, <code>ifast</code>, <code>float</code>, <code>default</code> and <code>fastest</code>. Note that <code>fastest</code> might not necessarily be fastest on your CPU, depending on the choices made when the JPEG library was built and how your CPU behaves. </p>
-<p> <code>jpeg:fancy-upsampling={true|false}</code><br />
+<p> <code>jpeg:fancy-upsampling={true|false}</code><br/>
 &nbsp;<wbr> Enables or disables fancy upsampling when reading a JPEG file (default enabled). </p>
-<p> <code>jpeg:optimize-coding={true|false}</code><br />
+<p> <code>jpeg:optimize-coding={true|false}</code><br/>
 &nbsp;<wbr> </p>
 <p> Selects if huffman encoding should be used. Huffman encoding is enabled by default, but may be disabled for very large images since it encoding requires that the entire image be buffered in memory. Huffman encoding produces smaller JPEG files at the expense of added compression time and memory consumption. </p>
-<p> <code>jpeg:preserve-settings</code><br />
+<p> <code>jpeg:preserve-settings</code><br/>
 &nbsp;<wbr> If the jpeg:preserve-settings flag is defined, the JPEG encoder will use the same &quot;quality&quot; and &quot;sampling-factor&quot; settings that were found in the input file, if the input was in JPEG format. These settings are also preserved if the input is a JPEG file and the output is a JNG file. If the colorspace of the output file differs from that of the input file, the quality setting is preserved but the sampling-factors are not. </p>
-<p> <code>pcl:fit-to-page</code><br />
-&nbsp;<wbr> If the pcl:fit-to-page flag is defined, then the printer is requested to scale the image to fit the page size (width and/or height). <code>pdf:use-cropbox={true|false}</code><br />
+<p> <code>pcl:fit-to-page</code><br/>
+&nbsp;<wbr> If the pcl:fit-to-page flag is defined, then the printer is requested to scale the image to fit the page size (width and/or height). <code>pdf:use-cropbox={true|false}</code><br/>
 &nbsp;<wbr> If the pdf:use-cropbox flag is set to <code>true</code>, then Ghostscript is requested to apply the PDF crop box. </p>
-<p> <code>pdf:stop-on-error={true|false}</code><br />
+<p> <code>pdf:stop-on-error={true|false}</code><br/>
 &nbsp;<wbr> If the pdf:stop-on-error flag is set to <code>true</code>, then Ghostscript is requested to stop processing the PDF when the first error is encountered. Otherwise it will attempt to process all requested pages. </p>
-<p> <code>ps:imagemask</code><br />
+<p> <code>ps:imagemask</code><br/>
 &nbsp;<wbr> If the ps:imagemask flag is defined, the PS3 and EPS3 coders will create Postscript files that render bilevel images with the Postscript imagemask operator instead of the image operator. </p>
-<p> <code>tiff:alpha={unspecified|associated|unassociated}</code><br />
+<p> <code>tiff:alpha={unspecified|associated|unassociated}</code><br/>
 &nbsp;<wbr> Specify the TIFF alpha channel type when reading or writing TIFF files, overriding the normal value. The default alpha channel type for new files is unspecified alpha. Existing alpha settings are preserved when converting from one TIFF file to another. When a TIFF file uses associated alpha, the image pixels are pre-multiplied (i.e. altered) with the alpha channel. Files with &quot;associated&quot; alpha appear as if they were alpha composited on a black background when the matte channel is disabled. If the unassociated alpha type is selected, then the alpha channel is saved without altering the pixels. Photoshop recognizes associated alpha as transparency information, if the file is saved with unassociated alpha, the alpha information is loaded as an independent channel. Note that for many years, ImageMagick and GraphicsMagick marked TIFF files as using associated alpha, without properly pre-multiplying the pixels. </p>
-<p> <code>tiff:fill-order={msb2lsb|lsb2msb}</code><br />
+<p> <code>tiff:fill-order={msb2lsb|lsb2msb}</code><br/>
 &nbsp;<wbr> If the tiff:fill-order key is defined, GraphicsMagick will use it to determine the bit fill order used while writing TIFF files. The normal default is &quot;msb2lsb&quot;, which matches the native bit order of all modern CPUs. The only exception to this is when Group3 or Group4 FAX compression is requested since FAX machines send data in bit-reversed order and therefore RFC 2301 recommends using reverse order. </p>
-<p> <code>tiff:group-three-options=&lt;value&gt;</code><br />
+<p> <code>tiff:group-three-options=&lt;value&gt;</code><br/>
 &nbsp;<wbr> If the tiff:group-three-options key is defined, GraphicsMagick will use it to set the group3 options tag when writing group3-compressed TIFF. Please see the TIFF specification for the usage of this tag. The default value is 4. </p>
-<p> <code>tiff:ignore-tags=&lt;tags&gt;</code><br />
+<p> <code>tiff:ignore-tags=&lt;tags&gt;</code><br/>
 &nbsp;<wbr> If the tiff:ignore-tags key is defined, then it is used as a list of comma-delimited integer TIFF tag values to ignore while reading the TIFF file. This is useful in order to be able to read files which which otherwise fail to read due to problems with TIFF tags. Note that some TIFF tags are required in order to be able to read the image data at all. </p>
-<p> <code>tiff:report-warnings={false|true}</code><br />
+<p> <code>tiff:report-warnings={false|true}</code><br/>
 &nbsp;<wbr> If the tiff:report-warnings key is defined and set to <code>true</code>, then TIFF warnings are reported as a warning exception rather than as a coder log message. Such warnings are reported after the image has been read or written. Most TIFF warnings are benign but sometimes they may help deduce problems with the TIFF file, or help detect that the TIFF file requires a special application to read successfully due to the use of proprietary or specialized extensions. </p>
-<p> <code>tiff:sample-format={unsigned|ieeefp}</code><br />
+<p> <code>tiff:sample-format={unsigned|ieeefp}</code><br/>
 &nbsp;<wbr> If the tiff:sample-format key is defined, GraphicsMagick will use it to determine the sample format used while writing TIFF files. The default is &quot;unsigned&quot;. Specify &quot;ieeefp&quot; in order to write floating-point TIFF files with float (32-bit) or double (64-bit) values. Use the tiff:bits-per-sample define to determine the type of floating-point value to use. </p>
-<p> <code>tiff:max-sample-value=&lt;value&gt;</code><br />
+<p> <code>tiff:max-sample-value=&lt;value&gt;</code><br/>
 &nbsp;<wbr> If the tiff:max-sample-value key is defined, GraphicsMagick will use the assigned value as the maximum floating point value while reading or writing IEEE floating point TIFFs. Otherwise the maximum value is 1.0 or the value obtained from the file&#8217;s SMaxSampleValue tag (if present). The floating point data is currently not scanned in advance to determine a best maximum sample value so if the range is not 1.0, or the SMaxSampleValue tag is not present, it may be necessary to (intelligently) use this parameter to properly read a file. </p>
-<p> <code>tiff:min-sample-value=&lt;value&gt;</code><br />
+<p> <code>tiff:min-sample-value=&lt;value&gt;</code><br/>
 &nbsp;<wbr> If the tiff:min-sample-value key is defined, GraphicsMagick will use the assigned value as the minimum floating point value while reading or writing IEEE floating point TIFFs. Otherwise the minimum value is 0.0 or the value obtained from the file&#8217;s SMinSampleValue tag (if present). </p>
-<p> <code>tiff:bits-per-sample=&lt;value&gt;</code><br />
+<p> <code>tiff:bits-per-sample=&lt;value&gt;</code><br/>
 &nbsp;<wbr> If the tiff:bits-per-sample key is defined, GraphicsMagick will write images with the specified bits per sample, overriding any existing depth value. Value may be any in the range of 1 to 32, or 64 when the default &#8216;unsigned&#8217; format is written, or 16/32/24/64 if IEEEFP format is written. Please note that the baseline TIFF 6.0 specification only requires readers to handle certain powers of two, and the values to be handled depend on the nature of the image (e.g. colormapped, grayscale, RGB, CMYK). </p>
-<p> <code>tiff:samples-per-pixel=&lt;value&gt;</code><br />
+<p> <code>tiff:samples-per-pixel=&lt;value&gt;</code><br/>
 &nbsp;<wbr> If the tiff:samples-per-pixel key is defined to a value, the TIFF coder will write TIFF images with the defined samples per pixel, overriding any value stored in the image. This option should not normally be used. </p>
-<p> <code>tiff:rows-per-strip=&lt;value&gt;</code><br />
+<p> <code>tiff:rows-per-strip=&lt;value&gt;</code><br/>
 &nbsp;<wbr> Allows the user to specify the number of rows per TIFF strip. Rounded up to a multiple of 16 when using JPEG compression. Ignored when using tiles. </p>
-<p> <code>tiff:strip-per-page=true</code><br />
+<p> <code>tiff:strip-per-page=true</code><br/>
 &nbsp;<wbr> Requests that the image is written in a single TIFF strip. This is normally the default when group3 or group4 compression is requested within reasonable limits. Requesting a single strip for large images may result in failure due to resource consumption in the writer or reader. </p>
-<p> <code>tiff:tile</code><br />
+<p> <code>tiff:tile</code><br/>
 &nbsp;<wbr> Enable writing tiled TIFF (rather than stripped) using the default tile size. Tiled TIFF organizes the image as an array of smaller images (tiles) in order to enable random access. </p>
-<p> <code>tiff:tile-geometry=&lt;width&gt;x&lt;height&gt;</code><br />
+<p> <code>tiff:tile-geometry=&lt;width&gt;x&lt;height&gt;</code><br/>
 &nbsp;<wbr> Specify the tile size to use while writing tiled TIFF. Width and height should be a multiple of 16. If the value is not a multiple of 16, then it will be rounded down. Enables tiled TIFF if it has not already been enabled. GraphicsMagick does not use tiled storage internally so tiles need to be converted back and forth from the internal scanline-oriented storage to tile-oriented storage. Testing with typical RGB images shows that useful square tile size values range from 128&#215;128 to 1024&#215;1024. Large images which require using a disk-based pixel cache benefit from large tile sizes while images which fit in memory work well with smaller tile sizes. </p>
-<p> <code>tiff:tile-width=&lt;width&gt;</code><br />
+<p> <code>tiff:tile-width=&lt;width&gt;</code><br/>
 &nbsp;<wbr> Specify the tile width to use while writing tiled TIFF. The tile height is then defaulted to an appropriate size. Width should be a multiple of 16. If the value is not a multiple of 16, then it will be rounded down. Enables tiled TIFF if it has not already been enabled. </p>
-<p> <code>tiff:tile-height=&lt;height&gt;</code><br />
+<p> <code>tiff:tile-height=&lt;height&gt;</code><br/>
 &nbsp;<wbr> Specify the tile height to use while writing tiled TIFF. The tile width is then defaulted to an appropriate size. Height should be a multiple of 16. If the value is not a multiple of 16, then it will be rounded down. Enables tiled TIFF if it has not already been enabled. </p>
-<p> <code>webp:lossless={true|false}</code><br />
+<p> <code>webp:lossless={true|false}</code><br/>
 &nbsp;<wbr> Enable lossless encoding. </p>
-<p> <code>webp:method={0-6}</code><br />
+<p> <code>webp:method={0-6}</code><br/>
 &nbsp;<wbr> Quality/speed trade-off. </p>
-<p> <code>webp:image-hint={default,graph,photo,picture}</code><br />
+<p> <code>webp:image-hint={default,graph,photo,picture}</code><br/>
 &nbsp;<wbr> Hint for image type. </p>
-<p> <code>webp:target-size=&lt;integer&gt;</code><br />
+<p> <code>webp:target-size=&lt;integer&gt;</code><br/>
 &nbsp;<wbr> Target size in bytes. </p>
-<p> <code>webp:target-psnr=&lt;float&gt;</code><br />
+<p> <code>webp:target-psnr=&lt;float&gt;</code><br/>
 &nbsp;<wbr> Minimal distortion to try to achieve. </p>
-<p> <code>webp:segments={1-4}</code><br />
+<p> <code>webp:segments={1-4}</code><br/>
 &nbsp;<wbr> Maximum number of segments to use. </p>
-<p> <code>webp:sns-strength={0-100}</code><br />
+<p> <code>webp:sns-strength={0-100}</code><br/>
 &nbsp;<wbr> Spatial Noise Shaping. </p>
-<p> <code>webp:filter-strength={0-100}</code><br />
+<p> <code>webp:filter-strength={0-100}</code><br/>
 &nbsp;<wbr> Filter strength. </p>
-<p> <code>webp:filter-sharpness={0-7}</code><br />
+<p> <code>webp:filter-sharpness={0-7}</code><br/>
 &nbsp;<wbr> Filter sharpness. </p>
-<p> <code>webp:filter-type={0,1}</code><br />
+<p> <code>webp:filter-type={0,1}</code><br/>
 &nbsp;<wbr> Filtering type. 0 = simple, 1 = strong (only used if filter-strength &gt; 0 or autofilter is enabled). </p>
-<p> <code>webp:auto-filter={true|false}</code><br />
+<p> <code>webp:auto-filter={true|false}</code><br/>
 &nbsp;<wbr> Auto adjust filter&#8217;s strength. </p>
-<p> <code>webp:alpha-compression=&lt;integer&gt;</code><br />
+<p> <code>webp:alpha-compression=&lt;integer&gt;</code><br/>
 &nbsp;<wbr> Algorithm for encoding the alpha plane (0 = none, 1 = compressed with WebP lossless). Default is 1. </p>
-<p> <code>webp:alpha-filtering=&lt;integer&gt;</code><br />
+<p> <code>webp:alpha-filtering=&lt;integer&gt;</code><br/>
 &nbsp;<wbr> Predictive filtering method for alpha plane. 0: none, 1: fast, 2: best. Default is 1. </p>
-<p> <code>webp:alpha-quality={0-100}</code><br />
+<p> <code>webp:alpha-quality={0-100}</code><br/>
 &nbsp;<wbr> Between 0 (smallest size) and 100 (lossless). Default is 100. </p>
-<p> <code>webp:pass=[1..10]</code><br />
+<p> <code>webp:pass=[1..10]</code><br/>
 &nbsp;<wbr> Number of entropy-analysis passes. </p>
-<p> <code>webp:show-compressed={true|false}</code><br />
+<p> <code>webp:show-compressed={true|false}</code><br/>
 &nbsp;<wbr> Export the compressed picture back. In-loop filtering is not applied. </p>
-<p> <code>webp:preprocessing=[0,1,2]</code><br />
+<p> <code>webp:preprocessing=[0,1,2]</code><br/>
 &nbsp;<wbr> 0=none, 1=segment-smooth, 2=pseudo-random dithering </p>
-<p> <code>webp:partitions=[0-3]</code><br />
+<p> <code>webp:partitions=[0-3]</code><br/>
 &nbsp;<wbr> log2(number of token partitions) in [0..3]. Default is 0 for easier progressive decoding. </p>
-<p> <code>webp:partition-limit={0-100}</code><br />
+<p> <code>webp:partition-limit={0-100}</code><br/>
 &nbsp;<wbr> Quality degradation allowed to fit the 512k limit on prediction modes coding (0: no degradation, 100: maximum possible degradation). </p>
-<p> <code>webp:emulate-jpeg-size={true|false}</code><br />
+<p> <code>webp:emulate-jpeg-size={true|false}</code><br/>
 &nbsp;<wbr> If true, compression parameters will be remapped to better match the expected output size from JPEG compression. Generally, the output size will be similar but the degradation will be lower. </p>
-<p> <code>webp:thread-level=&lt;integer&gt;</code><br />
+<p> <code>webp:thread-level=&lt;integer&gt;</code><br/>
 &nbsp;<wbr> If non-zero, try and use multi-threaded encoding. </p>
-<p> <code>webp:low-memory={true|false}</code><br />
+<p> <code>webp:low-memory={true|false}</code><br/>
 &nbsp;<wbr> If set, reduce memory usage (but increase CPU use) </p>
 <p> For example, to create a postscript file that will render only the black pixels of a bilevel image, use: </p>
 <p>&nbsp;<wbr>gm convert bilevel.tif -define ps:imagemask eps3:stencil.ps </p>
@@ -596,7 +596,7 @@ description: "gm – command-line utility to create, edit, compare, convert, or 
 <p> This option is useful for regulating the animation of image sequences <i>Delay/100</i> seconds must expire before the display of the next image. The default is no delay between each showing of the image sequence. The maximum delay is 65535. </p>
 <p> You can specify a delay range (e.g. <i>-delay 10-500</i>) which sets the minimum and maximum delay.</p>
 <dt><code>-density </code><i>&lt;width&gt;x&lt;height&gt;</i></dt>
-<dd> horizontal and vertical resolution in pixels of the image This option specifies the image resolution to store while encoding a raster image or the canvas resolution while rendering (reading) vector formats such as Postscript, PDF, WMF, and SVG into a raster image. Image resolution provides the unit of measure to apply when rendering to an output device or raster image. The default unit of measure is in dots per inch (DPI). The <code>-units</code> option may be used to select dots per centimeter instead.<br />
+<dd> horizontal and vertical resolution in pixels of the image This option specifies the image resolution to store while encoding a raster image or the canvas resolution while rendering (reading) vector formats such as Postscript, PDF, WMF, and SVG into a raster image. Image resolution provides the unit of measure to apply when rendering to an output device or raster image. The default unit of measure is in dots per inch (DPI). The <code>-units</code> option may be used to select dots per centimeter instead.<br/>
 &nbsp;<wbr>The default resolution is 72 dots per inch, which is equivalent to one point per pixel (Macintosh and Postscript standard). Computer screens are normally 72 or 96 dots per inch while printers typically support 150, 300, 600, or 1200 dots per inch. To determine the resolution of your display, use a ruler to measure the width of your screen in inches, and divide by the number of horizontal pixels (1024 on a 1024&#215;768 display). If the file format supports it, this option may be used to update the stored image resolution. Note that Photoshop stores and obtains image resolution from a proprietary embedded profile. If this profile is not stripped from the image, then Photoshop will continue to treat the image using its former resolution, ignoring the image resolution specified in the standard file header. The density option is an attribute and does not alter the underlying raster image. It may be used to adjust the rendered size for desktop publishing purposes by adjusting the scale applied to the pixels. To resize the image so that it is the same size at a different resolution, use the <code>-resample</code> option.</dd>
 <dt><code>-depth </code><i>&lt;value&gt;</i></dt>
 <dd> depth of the image </dd>
@@ -615,12 +615,12 @@ description: "gm – command-line utility to create, edit, compare, convert, or 
 <dd> GIF disposal method </dd>
 <p> The Disposal Method indicates the way in which the graphic is to be treated after being displayed. </p>
 <p> Here are the valid methods: </p>
-<p>&nbsp;<wbr>Undefined&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>No disposal specified.<br />
-&nbsp;<wbr>None&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Do not dispose between frames.<br />
-&nbsp;<wbr>Background&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Overwrite the image area with<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>the background color.<br />
-&nbsp;<wbr>Previous&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Overwrite the image area with<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>what was there prior to rendering<br />
+<p>&nbsp;<wbr>Undefined&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>No disposal specified.<br/>
+&nbsp;<wbr>None&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Do not dispose between frames.<br/>
+&nbsp;<wbr>Background&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Overwrite the image area with<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>the background color.<br/>
+&nbsp;<wbr>Previous&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Overwrite the image area with<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>what was there prior to rendering<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>the image. </p>
 <dt><code>-dissolve </code><i>&lt;percent&gt;</i></dt>
 <dd> dissolve an image into another by the given percent </dd>
@@ -633,32 +633,32 @@ description: "gm – command-line utility to create, edit, compare, convert, or 
 <dt><code>-draw </code><i>&lt;string&gt;</i></dt>
 <dd> annotate an image with one or more graphic primitives </dd>
 <p> Use this option to annotate an image with one or more graphic primitives. The primitives include shapes, text, transformations, and pixel operations. The shape primitives are </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>point&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>x,y<br />
-&nbsp;<wbr>&nbsp;<wbr>line&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>x0,y0 x1,y1<br />
-&nbsp;<wbr>&nbsp;<wbr>rectangle&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>x0,y0 x1,y1<br />
-&nbsp;<wbr>&nbsp;<wbr>roundRectangle&nbsp;<wbr>&nbsp;<wbr>x0,y0 x1,y1 wc,hc<br />
-&nbsp;<wbr>&nbsp;<wbr>arc&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>x0,y0 x1,y1 a0,a1<br />
-&nbsp;<wbr>&nbsp;<wbr>ellipse&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>x0,y0 rx,ry a0,a1<br />
-&nbsp;<wbr>&nbsp;<wbr>circle&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>x0,y0 x1,y1<br />
-&nbsp;<wbr>&nbsp;<wbr>polyline&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>x0,y0&nbsp;<wbr>&nbsp;<wbr>&#8230;&nbsp;<wbr>&nbsp;<wbr>xn,yn<br />
-&nbsp;<wbr>&nbsp;<wbr>polygon&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>x0,y0&nbsp;<wbr>&nbsp;<wbr>&#8230;&nbsp;<wbr>&nbsp;<wbr>xn,yn<br />
-&nbsp;<wbr>&nbsp;<wbr>Bezier&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>x0,y0&nbsp;<wbr>&nbsp;<wbr>&#8230;&nbsp;<wbr>&nbsp;<wbr>xn,yn<br />
-&nbsp;<wbr>&nbsp;<wbr>path&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>path specification<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>point&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>x,y<br/>
+&nbsp;<wbr>&nbsp;<wbr>line&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>x0,y0 x1,y1<br/>
+&nbsp;<wbr>&nbsp;<wbr>rectangle&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>x0,y0 x1,y1<br/>
+&nbsp;<wbr>&nbsp;<wbr>roundRectangle&nbsp;<wbr>&nbsp;<wbr>x0,y0 x1,y1 wc,hc<br/>
+&nbsp;<wbr>&nbsp;<wbr>arc&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>x0,y0 x1,y1 a0,a1<br/>
+&nbsp;<wbr>&nbsp;<wbr>ellipse&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>x0,y0 rx,ry a0,a1<br/>
+&nbsp;<wbr>&nbsp;<wbr>circle&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>x0,y0 x1,y1<br/>
+&nbsp;<wbr>&nbsp;<wbr>polyline&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>x0,y0&nbsp;<wbr>&nbsp;<wbr>&#8230;&nbsp;<wbr>&nbsp;<wbr>xn,yn<br/>
+&nbsp;<wbr>&nbsp;<wbr>polygon&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>x0,y0&nbsp;<wbr>&nbsp;<wbr>&#8230;&nbsp;<wbr>&nbsp;<wbr>xn,yn<br/>
+&nbsp;<wbr>&nbsp;<wbr>Bezier&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>x0,y0&nbsp;<wbr>&nbsp;<wbr>&#8230;&nbsp;<wbr>&nbsp;<wbr>xn,yn<br/>
+&nbsp;<wbr>&nbsp;<wbr>path&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>path specification<br/>
 &nbsp;<wbr>&nbsp;<wbr>image&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>operator x0,y0 w,h filename </p>
 <p> The text primitive is </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>text&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>x0,y0 string </p>
 <p> The text gravity primitive is </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>gravity&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>NorthWest, North, NorthEast, West, Center,<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>gravity&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>NorthWest, North, NorthEast, West, Center,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>East, SouthWest, South, or SouthEast </p>
 <p> The text gravity primitive only affects the placement of text and does not interact with the other primitives. It is equivalent to using the <code>-gravity</code> commandline option, except that it is limited in scope to the <code>-draw</code> option in which it appears. </p>
 <p> The transformation primitives are </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>rotate&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>degrees<br />
-&nbsp;<wbr>&nbsp;<wbr>translate&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>dx,dy<br />
-&nbsp;<wbr>&nbsp;<wbr>scale&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>sx,sy<br />
-&nbsp;<wbr>&nbsp;<wbr>skewX&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>degrees<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>rotate&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>degrees<br/>
+&nbsp;<wbr>&nbsp;<wbr>translate&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>dx,dy<br/>
+&nbsp;<wbr>&nbsp;<wbr>scale&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>sx,sy<br/>
+&nbsp;<wbr>&nbsp;<wbr>skewX&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>degrees<br/>
 &nbsp;<wbr>&nbsp;<wbr>skewY&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>degrees </p>
 <p> The pixel operation primitives are </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>color&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>x0,y0 method<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>color&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>x0,y0 method<br/>
 &nbsp;<wbr>&nbsp;<wbr>matte&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>x0,y0 method </p>
 <p> The shape primitives are drawn in the color specified in the preceding <code>-stroke</code> option. Except for the <code>line</code> and <code>point</code> primitives, they are filled with the color specified in the preceding <code>-fill</code> option. For unfilled shapes, use -fill none. </p>
 <p> <code>Point</code> requires a single coordinate. </p>
@@ -685,10 +685,10 @@ description: "gm – command-line utility to create, edit, compare, convert, or 
 <p> <code>SkewX</code> and <code>SkewY</code> skew them with respect to the origin of the main image or the region. </p>
 <p> The transformations modify the current affine matrix, which is initialized from the initial affine matrix defined by the <code>-affine</code> option. Transformations are cumulative within the <code>-draw</code> option. The initial affine matrix is not affected; that matrix is only changed by the appearance of another <code>-affine</code> option. If another <code>-draw</code> option appears, the current affine matrix is reinitialized from the initial affine matrix. </p>
 <p> Use <code>color</code> to change the color of a pixel to the fill color (see <code>-fill</code>). Follow the pixel coordinate with a method: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>point<br />
-&nbsp;<wbr>&nbsp;<wbr>replace<br />
-&nbsp;<wbr>&nbsp;<wbr>floodfill<br />
-&nbsp;<wbr>&nbsp;<wbr>filltoborder<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>point<br/>
+&nbsp;<wbr>&nbsp;<wbr>replace<br/>
+&nbsp;<wbr>&nbsp;<wbr>floodfill<br/>
+&nbsp;<wbr>&nbsp;<wbr>filltoborder<br/>
 &nbsp;<wbr>&nbsp;<wbr>reset </p>
 <p> Consider the target pixel as that specified by your coordinate. The <code>point</code> method recolors the target pixel. The <code>replace</code> method recolors any pixel that matches the color of the target pixel. <code>Floodfill</code> recolors any pixel that matches the color of the target pixel and is a neighbor, whereas <code>filltoborder</code> recolors any neighbor pixel that is not the border color. Finally, <code>reset</code> recolors all pixels. </p>
 <p> Use <code>matte</code> to the change the pixel matte value to transparent. Follow the pixel coordinate with a method (see the <code>color</code> primitive for a description of methods). The <code>point</code> method changes the matte value of the target pixel. The <code>replace</code> method changes the matte value of any pixel that matches the color of the target pixel. <code>Floodfill</code> changes the matte value of any pixel that matches the color of the target pixel and is a neighbor, whereas <code>filltoborder</code> changes the matte value of any neighbor pixel that is not the border color (<code>-bordercolor</code>). Finally <code>reset</code> changes the matte value of all pixels. </p>
@@ -712,13 +712,13 @@ description: "gm – command-line utility to create, edit, compare, convert, or 
 <dd> composite image on background color canvas image </dd>
 <p> This option composites the image on a new background color (<code>-background</code>) canvas image of size &lt;width&gt;x&lt;height&gt;. The existing image content is composited at the position specified by geometry x and y offset and/or desired gravity (<code>-gravity</code>) using the current image compose (<code>-compose</code>) method. Image content which falls outside the bounds of the new image dimensions is discarded. </p>
 <p> For example, this command creates a thumbnail of an image, and centers it on a red color backdrop image, offsetting the canvas ten pixels to the left and five pixels up, with respect to the thumbnail: </p>
-<p>&nbsp;<wbr>gm convert infile.jpg -thumbnail 120&#215;80 -background red -gravity center&nbsp;<wbr>\<br />
+<p>&nbsp;<wbr>gm convert infile.jpg -thumbnail 120&#215;80 -background red -gravity center&nbsp;<wbr>\<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-extent 140&#215;100-10-5 outfile.jpg </p>
 <p> This command reduces or expands a JPEG image to fit on an 800&#215;600 display: </p>
-<p>&nbsp;<wbr>gm convert -size 800&#215;600 input.jpg&nbsp;<wbr>\<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-resize 800&#215;600 -background black&nbsp;<wbr>\<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-compose Copy -gravity center&nbsp;<wbr>\<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-extent 800&#215;600&nbsp;<wbr>\<br />
+<p>&nbsp;<wbr>gm convert -size 800&#215;600 input.jpg&nbsp;<wbr>\<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-resize 800&#215;600 -background black&nbsp;<wbr>\<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-compose Copy -gravity center&nbsp;<wbr>\<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-extent 800&#215;600&nbsp;<wbr>\<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-quality 92 output.jpg </p>
 <p> If the aspect ratio of the input image isn&#8217;t exactly 4:3, then the image is centered on an 800&#215;600 black canvas.</p>
 <dt><code>-file </code><i>&lt;filename&gt;</i></dt>
@@ -727,41 +727,41 @@ description: "gm – command-line utility to create, edit, compare, convert, or 
 <dt><code>-fill </code><i>&lt;color&gt;</i></dt>
 <dd> color to use when filling a graphic primitive </dd>
 <p> Colors are represented in GraphicsMagick in the same form used by SVG. Use &quot;gm convert -list color&quot; to list named colors: </p>
-<p>&nbsp;<wbr>name&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(named color)<br />
-&nbsp;<wbr>#RGB&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(hex numbers, 4 bits each)<br />
-&nbsp;<wbr>#RRGGBB&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(8 bits each)<br />
-&nbsp;<wbr>#RRRGGGBBB&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(12 bits each)<br />
-&nbsp;<wbr>#RRRRGGGGBBBB&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(16 bits each)<br />
-&nbsp;<wbr>#RGBA&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(4 bits each)<br />
-&nbsp;<wbr>#RRGGBBAA&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(8 bits each)<br />
-&nbsp;<wbr>#RRRGGGBBBAAA&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(12 bits each)<br />
-&nbsp;<wbr>#RRRRGGGGBBBBAAAA&nbsp;<wbr>&nbsp;<wbr>(16 bits each)<br />
-&nbsp;<wbr>rgb(r,g,b)&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(r,g,b are decimal numbers)<br />
+<p>&nbsp;<wbr>name&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(named color)<br/>
+&nbsp;<wbr>#RGB&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(hex numbers, 4 bits each)<br/>
+&nbsp;<wbr>#RRGGBB&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(8 bits each)<br/>
+&nbsp;<wbr>#RRRGGGBBB&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(12 bits each)<br/>
+&nbsp;<wbr>#RRRRGGGGBBBB&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(16 bits each)<br/>
+&nbsp;<wbr>#RGBA&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(4 bits each)<br/>
+&nbsp;<wbr>#RRGGBBAA&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(8 bits each)<br/>
+&nbsp;<wbr>#RRRGGGBBBAAA&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(12 bits each)<br/>
+&nbsp;<wbr>#RRRRGGGGBBBBAAAA&nbsp;<wbr>&nbsp;<wbr>(16 bits each)<br/>
+&nbsp;<wbr>rgb(r,g,b)&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(r,g,b are decimal numbers)<br/>
 &nbsp;<wbr>rgba(r,g,b,a)&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(r,g,b,a are decimal numbers) </p>
 <p> Enclose the color specification in quotation marks to prevent the &quot;#&quot; or the parentheses from being interpreted by your shell. </p>
 <p> For example, </p>
-<p>&nbsp;<wbr>gm convert -fill blue &#8230;<br />
-&nbsp;<wbr>gm convert -fill&nbsp;<wbr>&quot;#ddddff&quot;&nbsp;<wbr>&#8230;<br />
+<p>&nbsp;<wbr>gm convert -fill blue &#8230;<br/>
+&nbsp;<wbr>gm convert -fill&nbsp;<wbr>&quot;#ddddff&quot;&nbsp;<wbr>&#8230;<br/>
 &nbsp;<wbr>gm convert -fill&nbsp;<wbr>&quot;rgb(65000,65000,65535)&quot;&nbsp;<wbr>&#8230; </p>
 <p> The shorter forms are scaled up, if necessary by replication. For example, #3af, #33aaff, and #3333aaaaffff are all equivalent. </p>
 <p> See <code>-draw</code> for further details.</p>
 <dt><code>-filter </code><i>&lt;type&gt;</i></dt>
 <dd> use this type of filter when resizing an image </dd>
 <p> Use this option to affect the resizing operation of an image (see <code>-geometry</code>). Choose from these filters (ordered by approximate increasing CPU time): </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>Point<br />
-&nbsp;<wbr>&nbsp;<wbr>Box<br />
-&nbsp;<wbr>&nbsp;<wbr>Triangle<br />
-&nbsp;<wbr>&nbsp;<wbr>Hermite<br />
-&nbsp;<wbr>&nbsp;<wbr>Hanning<br />
-&nbsp;<wbr>&nbsp;<wbr>Hamming<br />
-&nbsp;<wbr>&nbsp;<wbr>Blackman<br />
-&nbsp;<wbr>&nbsp;<wbr>Gaussian<br />
-&nbsp;<wbr>&nbsp;<wbr>Quadratic<br />
-&nbsp;<wbr>&nbsp;<wbr>Cubic<br />
-&nbsp;<wbr>&nbsp;<wbr>Catrom<br />
-&nbsp;<wbr>&nbsp;<wbr>Mitchell<br />
-&nbsp;<wbr>&nbsp;<wbr>Lanczos<br />
-&nbsp;<wbr>&nbsp;<wbr>Bessel<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>Point<br/>
+&nbsp;<wbr>&nbsp;<wbr>Box<br/>
+&nbsp;<wbr>&nbsp;<wbr>Triangle<br/>
+&nbsp;<wbr>&nbsp;<wbr>Hermite<br/>
+&nbsp;<wbr>&nbsp;<wbr>Hanning<br/>
+&nbsp;<wbr>&nbsp;<wbr>Hamming<br/>
+&nbsp;<wbr>&nbsp;<wbr>Blackman<br/>
+&nbsp;<wbr>&nbsp;<wbr>Gaussian<br/>
+&nbsp;<wbr>&nbsp;<wbr>Quadratic<br/>
+&nbsp;<wbr>&nbsp;<wbr>Cubic<br/>
+&nbsp;<wbr>&nbsp;<wbr>Catrom<br/>
+&nbsp;<wbr>&nbsp;<wbr>Mitchell<br/>
+&nbsp;<wbr>&nbsp;<wbr>Lanczos<br/>
+&nbsp;<wbr>&nbsp;<wbr>Bessel<br/>
 &nbsp;<wbr>&nbsp;<wbr>Sinc </p>
 <p> The default filter is automatically selected to provide the best quality while consuming a reasonable amount of time. The <code>Mitchell</code> filter is used if the image supports a palette, supports a matte channel, or is being enlarged, otherwise the <code>Lanczos</code> filter is used.</p>
 <dt><code>-flatten</code></dt>
@@ -769,8 +769,8 @@ description: "gm – command-line utility to create, edit, compare, convert, or 
 <p> In some file formats (e.g. Photoshop&#8217;s PSD) complex images may be represented by &quot;layers&quot; (independent images) which must be composited in order to obtain the final rendition. The <code>-flatten</code> option accomplishes this composition. The sequence of images is replaced by a single image created by compositing each image in turn, while respecting composition operators and page offsets. While <code>-flatten</code> is immediately useful for eliminating layers, it is also useful as a general-purpose composition tool. </p>
 <p> The sequence of images is terminated by the appearance of any option. If the <code>-flatten</code> option appears after all of the input images, all images are flattened. Also see <code>-mosaic</code> which is similar to <code>-flatten</code> except that it adds a suitably-sized canvas base image. </p>
 <p> For example, this composites an image on top of a 640&#215;400 transparent black canvas image: </p>
-<p>&nbsp;<wbr>gm convert -size 640&#215;300 xc:transparent&nbsp;<wbr>\<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-compose over -page&nbsp;<wbr>+0-100&nbsp;<wbr>\<br />
+<p>&nbsp;<wbr>gm convert -size 640&#215;300 xc:transparent&nbsp;<wbr>\<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-compose over -page&nbsp;<wbr>+0-100&nbsp;<wbr>\<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>frame.png -flatten output.png </p>
 <p> and this flattens a Photoshop PSD file: </p>
 <p>&nbsp;<wbr>gm convert input.psd -flatten output.png </p>
@@ -793,160 +793,160 @@ description: "gm – command-line utility to create, edit, compare, convert, or 
 <dt><code>-format </code><i>&lt;string&gt;</i></dt>
 <dd> output formatted image characteristics </dd>
 <p> When used with the <code>identify</code> utility, or the <code>convert</code> utility with output written to the &#8216;info:-&#8216; file specification, use this option to print information about the image in a format of your choosing. You can include the image filename, type, width, height, Exif data, or other image attributes by embedding special format characters: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>%b&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>file size<br />
-&nbsp;<wbr>&nbsp;<wbr>%c&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>comment<br />
-&nbsp;<wbr>&nbsp;<wbr>%d&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>directory<br />
-&nbsp;<wbr>&nbsp;<wbr>%e&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>filename extension<br />
-&nbsp;<wbr>&nbsp;<wbr>%f&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>filename<br />
-&nbsp;<wbr>&nbsp;<wbr>%g&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>page dimensions and offsets<br />
-&nbsp;<wbr>&nbsp;<wbr>%h&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>height<br />
-&nbsp;<wbr>&nbsp;<wbr>%i&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>input filename<br />
-&nbsp;<wbr>&nbsp;<wbr>%k&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>number of unique colors<br />
-&nbsp;<wbr>&nbsp;<wbr>%l&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>label<br />
-&nbsp;<wbr>&nbsp;<wbr>%m&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>magick<br />
-&nbsp;<wbr>&nbsp;<wbr>%n&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>number of scenes<br />
-&nbsp;<wbr>&nbsp;<wbr>%o&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>output filename<br />
-&nbsp;<wbr>&nbsp;<wbr>%p&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>page number<br />
-&nbsp;<wbr>&nbsp;<wbr>%q&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>image bit depth<br />
-&nbsp;<wbr>&nbsp;<wbr>%r&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>image type description<br />
-&nbsp;<wbr>&nbsp;<wbr>%s&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>scene number<br />
-&nbsp;<wbr>&nbsp;<wbr>%t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>top of filename<br />
-&nbsp;<wbr>&nbsp;<wbr>%u&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>unique temporary filename<br />
-&nbsp;<wbr>&nbsp;<wbr>%w&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>width<br />
-&nbsp;<wbr>&nbsp;<wbr>%x&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>horizontal resolution<br />
-&nbsp;<wbr>&nbsp;<wbr>%y&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>vertical resolution<br />
-&nbsp;<wbr>&nbsp;<wbr>%A&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>transparency supported<br />
-&nbsp;<wbr>&nbsp;<wbr>%C&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>compression type<br />
-&nbsp;<wbr>&nbsp;<wbr>%D&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>GIF disposal method<br />
-&nbsp;<wbr>&nbsp;<wbr>%G&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Original width and height<br />
-&nbsp;<wbr>&nbsp;<wbr>%H&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>page height<br />
-&nbsp;<wbr>&nbsp;<wbr>%M&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>original filename specification<br />
-&nbsp;<wbr>&nbsp;<wbr>%O&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>page offset&nbsp;<wbr>(x,y)<br />
-&nbsp;<wbr>&nbsp;<wbr>%P&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>page dimensions&nbsp;<wbr>(width,height)<br />
-&nbsp;<wbr>&nbsp;<wbr>%Q&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>compression quality<br />
-&nbsp;<wbr>&nbsp;<wbr>%T&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>time delay&nbsp;<wbr>(in centi-seconds)<br />
-&nbsp;<wbr>&nbsp;<wbr>%U&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>resolution units<br />
-&nbsp;<wbr>&nbsp;<wbr>%W&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>page width<br />
-&nbsp;<wbr>&nbsp;<wbr>%X&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>page horizontal offset&nbsp;<wbr>(x)<br />
-&nbsp;<wbr>&nbsp;<wbr>%Y&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>page vertical offset&nbsp;<wbr>(y)<br />
-&nbsp;<wbr>&nbsp;<wbr>%@&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>trim bounding box<br />
-&nbsp;<wbr>&nbsp;<wbr>%#&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>signature<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>%b&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>file size<br/>
+&nbsp;<wbr>&nbsp;<wbr>%c&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>comment<br/>
+&nbsp;<wbr>&nbsp;<wbr>%d&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>directory<br/>
+&nbsp;<wbr>&nbsp;<wbr>%e&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>filename extension<br/>
+&nbsp;<wbr>&nbsp;<wbr>%f&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>filename<br/>
+&nbsp;<wbr>&nbsp;<wbr>%g&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>page dimensions and offsets<br/>
+&nbsp;<wbr>&nbsp;<wbr>%h&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>height<br/>
+&nbsp;<wbr>&nbsp;<wbr>%i&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>input filename<br/>
+&nbsp;<wbr>&nbsp;<wbr>%k&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>number of unique colors<br/>
+&nbsp;<wbr>&nbsp;<wbr>%l&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>label<br/>
+&nbsp;<wbr>&nbsp;<wbr>%m&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>magick<br/>
+&nbsp;<wbr>&nbsp;<wbr>%n&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>number of scenes<br/>
+&nbsp;<wbr>&nbsp;<wbr>%o&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>output filename<br/>
+&nbsp;<wbr>&nbsp;<wbr>%p&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>page number<br/>
+&nbsp;<wbr>&nbsp;<wbr>%q&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>image bit depth<br/>
+&nbsp;<wbr>&nbsp;<wbr>%r&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>image type description<br/>
+&nbsp;<wbr>&nbsp;<wbr>%s&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>scene number<br/>
+&nbsp;<wbr>&nbsp;<wbr>%t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>top of filename<br/>
+&nbsp;<wbr>&nbsp;<wbr>%u&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>unique temporary filename<br/>
+&nbsp;<wbr>&nbsp;<wbr>%w&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>width<br/>
+&nbsp;<wbr>&nbsp;<wbr>%x&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>horizontal resolution<br/>
+&nbsp;<wbr>&nbsp;<wbr>%y&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>vertical resolution<br/>
+&nbsp;<wbr>&nbsp;<wbr>%A&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>transparency supported<br/>
+&nbsp;<wbr>&nbsp;<wbr>%C&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>compression type<br/>
+&nbsp;<wbr>&nbsp;<wbr>%D&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>GIF disposal method<br/>
+&nbsp;<wbr>&nbsp;<wbr>%G&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Original width and height<br/>
+&nbsp;<wbr>&nbsp;<wbr>%H&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>page height<br/>
+&nbsp;<wbr>&nbsp;<wbr>%M&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>original filename specification<br/>
+&nbsp;<wbr>&nbsp;<wbr>%O&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>page offset&nbsp;<wbr>(x,y)<br/>
+&nbsp;<wbr>&nbsp;<wbr>%P&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>page dimensions&nbsp;<wbr>(width,height)<br/>
+&nbsp;<wbr>&nbsp;<wbr>%Q&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>compression quality<br/>
+&nbsp;<wbr>&nbsp;<wbr>%T&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>time delay&nbsp;<wbr>(in centi-seconds)<br/>
+&nbsp;<wbr>&nbsp;<wbr>%U&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>resolution units<br/>
+&nbsp;<wbr>&nbsp;<wbr>%W&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>page width<br/>
+&nbsp;<wbr>&nbsp;<wbr>%X&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>page horizontal offset&nbsp;<wbr>(x)<br/>
+&nbsp;<wbr>&nbsp;<wbr>%Y&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>page vertical offset&nbsp;<wbr>(y)<br/>
+&nbsp;<wbr>&nbsp;<wbr>%@&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>trim bounding box<br/>
+&nbsp;<wbr>&nbsp;<wbr>%#&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>signature<br/>
 &nbsp;<wbr>&nbsp;<wbr>
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>newline<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>newline<br/>
 &nbsp;<wbr>&nbsp;<wbr>
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>carriage return<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>carriage return<br/>
 &nbsp;<wbr>&nbsp;<wbr>%%&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>% </p>
 <p> For example, </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>-format&nbsp;<wbr>&quot;%m:%f&nbsp;<wbr>%wx%h&quot; </p>
 <p> displays <code>MIFF:bird.miff 512&#215;480</code> for an image titled <code>bird.miff</code> and whose width is 512 and height is 480. </p>
 <p> If the first character of <i>string</i> is <code>@</code>, the format is read from a file titled by the remaining characters in the string. </p>
 <p> The values of image type (<code>%p</code>) which may be returned include: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>Bilevel<br />
-&nbsp;<wbr>&nbsp;<wbr>Grayscale<br />
-&nbsp;<wbr>&nbsp;<wbr>GrayscaleMatte<br />
-&nbsp;<wbr>&nbsp;<wbr>Palette<br />
-&nbsp;<wbr>&nbsp;<wbr>PaletteMatte<br />
-&nbsp;<wbr>&nbsp;<wbr>TrueColor<br />
-&nbsp;<wbr>&nbsp;<wbr>TrueColorMatte<br />
-&nbsp;<wbr>&nbsp;<wbr>ColorSeparation<br />
-&nbsp;<wbr>&nbsp;<wbr>ColorSeparationMatte<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>Bilevel<br/>
+&nbsp;<wbr>&nbsp;<wbr>Grayscale<br/>
+&nbsp;<wbr>&nbsp;<wbr>GrayscaleMatte<br/>
+&nbsp;<wbr>&nbsp;<wbr>Palette<br/>
+&nbsp;<wbr>&nbsp;<wbr>PaletteMatte<br/>
+&nbsp;<wbr>&nbsp;<wbr>TrueColor<br/>
+&nbsp;<wbr>&nbsp;<wbr>TrueColorMatte<br/>
+&nbsp;<wbr>&nbsp;<wbr>ColorSeparation<br/>
+&nbsp;<wbr>&nbsp;<wbr>ColorSeparationMatte<br/>
 &nbsp;<wbr>&nbsp;<wbr>Optimize </p>
 <p> You can also use the following special formatting syntax to print Exif information contained in the file: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>%[EXIF:&lt;tag&gt;] </p>
 <p> Where &quot;&lt;tag&gt;&quot; may be one of the following: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>&nbsp;<wbr>(print all Exif tags, in keyword=data format)<br />
-&nbsp;<wbr>&nbsp;<wbr>!&nbsp;<wbr>&nbsp;<wbr>(print all Exif tags, in tag_number format)<br />
-&nbsp;<wbr>&nbsp;<wbr>#hhhh&nbsp;<wbr>(print data for Exif tag&nbsp;<wbr>#hhhh)<br />
-&nbsp;<wbr>&nbsp;<wbr>ImageWidth<br />
-&nbsp;<wbr>&nbsp;<wbr>ImageLength<br />
-&nbsp;<wbr>&nbsp;<wbr>BitsPerSample<br />
-&nbsp;<wbr>&nbsp;<wbr>Compression<br />
-&nbsp;<wbr>&nbsp;<wbr>PhotometricInterpretation<br />
-&nbsp;<wbr>&nbsp;<wbr>FillOrder<br />
-&nbsp;<wbr>&nbsp;<wbr>DocumentName<br />
-&nbsp;<wbr>&nbsp;<wbr>ImageDescription<br />
-&nbsp;<wbr>&nbsp;<wbr>Make<br />
-&nbsp;<wbr>&nbsp;<wbr>Model<br />
-&nbsp;<wbr>&nbsp;<wbr>StripOffsets<br />
-&nbsp;<wbr>&nbsp;<wbr>Orientation<br />
-&nbsp;<wbr>&nbsp;<wbr>SamplesPerPixel<br />
-&nbsp;<wbr>&nbsp;<wbr>RowsPerStrip<br />
-&nbsp;<wbr>&nbsp;<wbr>StripByteCounts<br />
-&nbsp;<wbr>&nbsp;<wbr>XResolution<br />
-&nbsp;<wbr>&nbsp;<wbr>YResolution<br />
-&nbsp;<wbr>&nbsp;<wbr>PlanarConfiguration<br />
-&nbsp;<wbr>&nbsp;<wbr>ResolutionUnit<br />
-&nbsp;<wbr>&nbsp;<wbr>TransferFunction<br />
-&nbsp;<wbr>&nbsp;<wbr>Software<br />
-&nbsp;<wbr>&nbsp;<wbr>DateTime<br />
-&nbsp;<wbr>&nbsp;<wbr>Artist<br />
-&nbsp;<wbr>&nbsp;<wbr>WhitePoint<br />
-&nbsp;<wbr>&nbsp;<wbr>PrimaryChromaticities<br />
-&nbsp;<wbr>&nbsp;<wbr>TransferRange<br />
-&nbsp;<wbr>&nbsp;<wbr>JPEGProc<br />
-&nbsp;<wbr>&nbsp;<wbr>JPEGInterchangeFormat<br />
-&nbsp;<wbr>&nbsp;<wbr>JPEGInterchangeFormatLength<br />
-&nbsp;<wbr>&nbsp;<wbr>YCbCrCoefficients<br />
-&nbsp;<wbr>&nbsp;<wbr>YCbCrSubSampling<br />
-&nbsp;<wbr>&nbsp;<wbr>YCbCrPositioning<br />
-&nbsp;<wbr>&nbsp;<wbr>ReferenceBlackWhite<br />
-&nbsp;<wbr>&nbsp;<wbr>CFARepeatPatternDim<br />
-&nbsp;<wbr>&nbsp;<wbr>CFAPattern<br />
-&nbsp;<wbr>&nbsp;<wbr>BatteryLevel<br />
-&nbsp;<wbr>&nbsp;<wbr>Copyright<br />
-&nbsp;<wbr>&nbsp;<wbr>ExposureTime<br />
-&nbsp;<wbr>&nbsp;<wbr>FNumber<br />
-&nbsp;<wbr>&nbsp;<wbr>IPTC/NAA<br />
-&nbsp;<wbr>&nbsp;<wbr>ExifOffset<br />
-&nbsp;<wbr>&nbsp;<wbr>InterColorProfile<br />
-&nbsp;<wbr>&nbsp;<wbr>ExposureProgram<br />
-&nbsp;<wbr>&nbsp;<wbr>SpectralSensitivity<br />
-&nbsp;<wbr>&nbsp;<wbr>GPSInfo<br />
-&nbsp;<wbr>&nbsp;<wbr>ISOSpeedRatings<br />
-&nbsp;<wbr>&nbsp;<wbr>OECF<br />
-&nbsp;<wbr>&nbsp;<wbr>ExifVersion<br />
-&nbsp;<wbr>&nbsp;<wbr>DateTimeOriginal<br />
-&nbsp;<wbr>&nbsp;<wbr>DateTimeDigitized<br />
-&nbsp;<wbr>&nbsp;<wbr>ComponentsConfiguration<br />
-&nbsp;<wbr>&nbsp;<wbr>CompressedBitsPerPixel<br />
-&nbsp;<wbr>&nbsp;<wbr>ShutterSpeedValue<br />
-&nbsp;<wbr>&nbsp;<wbr>ApertureValue<br />
-&nbsp;<wbr>&nbsp;<wbr>BrightnessValue<br />
-&nbsp;<wbr>&nbsp;<wbr>ExposureBiasValue<br />
-&nbsp;<wbr>&nbsp;<wbr>MaxApertureValue<br />
-&nbsp;<wbr>&nbsp;<wbr>SubjectDistance<br />
-&nbsp;<wbr>&nbsp;<wbr>MeteringMode<br />
-&nbsp;<wbr>&nbsp;<wbr>LightSource<br />
-&nbsp;<wbr>&nbsp;<wbr>Flash<br />
-&nbsp;<wbr>&nbsp;<wbr>FocalLength<br />
-&nbsp;<wbr>&nbsp;<wbr>MakerNote<br />
-&nbsp;<wbr>&nbsp;<wbr>UserComment<br />
-&nbsp;<wbr>&nbsp;<wbr>SubSecTime<br />
-&nbsp;<wbr>&nbsp;<wbr>SubSecTimeOriginal<br />
-&nbsp;<wbr>&nbsp;<wbr>SubSecTimeDigitized<br />
-&nbsp;<wbr>&nbsp;<wbr>FlashPixVersion<br />
-&nbsp;<wbr>&nbsp;<wbr>ColorSpace<br />
-&nbsp;<wbr>&nbsp;<wbr>ExifImageWidth<br />
-&nbsp;<wbr>&nbsp;<wbr>ExifImageLength<br />
-&nbsp;<wbr>&nbsp;<wbr>InteroperabilityOffset<br />
-&nbsp;<wbr>&nbsp;<wbr>FlashEnergy<br />
-&nbsp;<wbr>&nbsp;<wbr>SpatialFrequencyResponse<br />
-&nbsp;<wbr>&nbsp;<wbr>FocalPlaneXResolution<br />
-&nbsp;<wbr>&nbsp;<wbr>FocalPlaneYResolution<br />
-&nbsp;<wbr>&nbsp;<wbr>FocalPlaneResolutionUnit<br />
-&nbsp;<wbr>&nbsp;<wbr>SubjectLocation<br />
-&nbsp;<wbr>&nbsp;<wbr>ExposureIndex<br />
-&nbsp;<wbr>&nbsp;<wbr>SensingMethod<br />
-&nbsp;<wbr>&nbsp;<wbr>FileSource<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>&nbsp;<wbr>(print all Exif tags, in keyword=data format)<br/>
+&nbsp;<wbr>&nbsp;<wbr>!&nbsp;<wbr>&nbsp;<wbr>(print all Exif tags, in tag_number format)<br/>
+&nbsp;<wbr>&nbsp;<wbr>#hhhh&nbsp;<wbr>(print data for Exif tag&nbsp;<wbr>#hhhh)<br/>
+&nbsp;<wbr>&nbsp;<wbr>ImageWidth<br/>
+&nbsp;<wbr>&nbsp;<wbr>ImageLength<br/>
+&nbsp;<wbr>&nbsp;<wbr>BitsPerSample<br/>
+&nbsp;<wbr>&nbsp;<wbr>Compression<br/>
+&nbsp;<wbr>&nbsp;<wbr>PhotometricInterpretation<br/>
+&nbsp;<wbr>&nbsp;<wbr>FillOrder<br/>
+&nbsp;<wbr>&nbsp;<wbr>DocumentName<br/>
+&nbsp;<wbr>&nbsp;<wbr>ImageDescription<br/>
+&nbsp;<wbr>&nbsp;<wbr>Make<br/>
+&nbsp;<wbr>&nbsp;<wbr>Model<br/>
+&nbsp;<wbr>&nbsp;<wbr>StripOffsets<br/>
+&nbsp;<wbr>&nbsp;<wbr>Orientation<br/>
+&nbsp;<wbr>&nbsp;<wbr>SamplesPerPixel<br/>
+&nbsp;<wbr>&nbsp;<wbr>RowsPerStrip<br/>
+&nbsp;<wbr>&nbsp;<wbr>StripByteCounts<br/>
+&nbsp;<wbr>&nbsp;<wbr>XResolution<br/>
+&nbsp;<wbr>&nbsp;<wbr>YResolution<br/>
+&nbsp;<wbr>&nbsp;<wbr>PlanarConfiguration<br/>
+&nbsp;<wbr>&nbsp;<wbr>ResolutionUnit<br/>
+&nbsp;<wbr>&nbsp;<wbr>TransferFunction<br/>
+&nbsp;<wbr>&nbsp;<wbr>Software<br/>
+&nbsp;<wbr>&nbsp;<wbr>DateTime<br/>
+&nbsp;<wbr>&nbsp;<wbr>Artist<br/>
+&nbsp;<wbr>&nbsp;<wbr>WhitePoint<br/>
+&nbsp;<wbr>&nbsp;<wbr>PrimaryChromaticities<br/>
+&nbsp;<wbr>&nbsp;<wbr>TransferRange<br/>
+&nbsp;<wbr>&nbsp;<wbr>JPEGProc<br/>
+&nbsp;<wbr>&nbsp;<wbr>JPEGInterchangeFormat<br/>
+&nbsp;<wbr>&nbsp;<wbr>JPEGInterchangeFormatLength<br/>
+&nbsp;<wbr>&nbsp;<wbr>YCbCrCoefficients<br/>
+&nbsp;<wbr>&nbsp;<wbr>YCbCrSubSampling<br/>
+&nbsp;<wbr>&nbsp;<wbr>YCbCrPositioning<br/>
+&nbsp;<wbr>&nbsp;<wbr>ReferenceBlackWhite<br/>
+&nbsp;<wbr>&nbsp;<wbr>CFARepeatPatternDim<br/>
+&nbsp;<wbr>&nbsp;<wbr>CFAPattern<br/>
+&nbsp;<wbr>&nbsp;<wbr>BatteryLevel<br/>
+&nbsp;<wbr>&nbsp;<wbr>Copyright<br/>
+&nbsp;<wbr>&nbsp;<wbr>ExposureTime<br/>
+&nbsp;<wbr>&nbsp;<wbr>FNumber<br/>
+&nbsp;<wbr>&nbsp;<wbr>IPTC/NAA<br/>
+&nbsp;<wbr>&nbsp;<wbr>ExifOffset<br/>
+&nbsp;<wbr>&nbsp;<wbr>InterColorProfile<br/>
+&nbsp;<wbr>&nbsp;<wbr>ExposureProgram<br/>
+&nbsp;<wbr>&nbsp;<wbr>SpectralSensitivity<br/>
+&nbsp;<wbr>&nbsp;<wbr>GPSInfo<br/>
+&nbsp;<wbr>&nbsp;<wbr>ISOSpeedRatings<br/>
+&nbsp;<wbr>&nbsp;<wbr>OECF<br/>
+&nbsp;<wbr>&nbsp;<wbr>ExifVersion<br/>
+&nbsp;<wbr>&nbsp;<wbr>DateTimeOriginal<br/>
+&nbsp;<wbr>&nbsp;<wbr>DateTimeDigitized<br/>
+&nbsp;<wbr>&nbsp;<wbr>ComponentsConfiguration<br/>
+&nbsp;<wbr>&nbsp;<wbr>CompressedBitsPerPixel<br/>
+&nbsp;<wbr>&nbsp;<wbr>ShutterSpeedValue<br/>
+&nbsp;<wbr>&nbsp;<wbr>ApertureValue<br/>
+&nbsp;<wbr>&nbsp;<wbr>BrightnessValue<br/>
+&nbsp;<wbr>&nbsp;<wbr>ExposureBiasValue<br/>
+&nbsp;<wbr>&nbsp;<wbr>MaxApertureValue<br/>
+&nbsp;<wbr>&nbsp;<wbr>SubjectDistance<br/>
+&nbsp;<wbr>&nbsp;<wbr>MeteringMode<br/>
+&nbsp;<wbr>&nbsp;<wbr>LightSource<br/>
+&nbsp;<wbr>&nbsp;<wbr>Flash<br/>
+&nbsp;<wbr>&nbsp;<wbr>FocalLength<br/>
+&nbsp;<wbr>&nbsp;<wbr>MakerNote<br/>
+&nbsp;<wbr>&nbsp;<wbr>UserComment<br/>
+&nbsp;<wbr>&nbsp;<wbr>SubSecTime<br/>
+&nbsp;<wbr>&nbsp;<wbr>SubSecTimeOriginal<br/>
+&nbsp;<wbr>&nbsp;<wbr>SubSecTimeDigitized<br/>
+&nbsp;<wbr>&nbsp;<wbr>FlashPixVersion<br/>
+&nbsp;<wbr>&nbsp;<wbr>ColorSpace<br/>
+&nbsp;<wbr>&nbsp;<wbr>ExifImageWidth<br/>
+&nbsp;<wbr>&nbsp;<wbr>ExifImageLength<br/>
+&nbsp;<wbr>&nbsp;<wbr>InteroperabilityOffset<br/>
+&nbsp;<wbr>&nbsp;<wbr>FlashEnergy<br/>
+&nbsp;<wbr>&nbsp;<wbr>SpatialFrequencyResponse<br/>
+&nbsp;<wbr>&nbsp;<wbr>FocalPlaneXResolution<br/>
+&nbsp;<wbr>&nbsp;<wbr>FocalPlaneYResolution<br/>
+&nbsp;<wbr>&nbsp;<wbr>FocalPlaneResolutionUnit<br/>
+&nbsp;<wbr>&nbsp;<wbr>SubjectLocation<br/>
+&nbsp;<wbr>&nbsp;<wbr>ExposureIndex<br/>
+&nbsp;<wbr>&nbsp;<wbr>SensingMethod<br/>
+&nbsp;<wbr>&nbsp;<wbr>FileSource<br/>
 &nbsp;<wbr>&nbsp;<wbr>SceneType </p>
 <p> JPEG specific information (from reading a JPEG file) may be obtained like this: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>%[JPEG-&lt;tag&gt;] </p>
 <p> Where &quot;&lt;tag&gt;&quot; may be one of the following: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(all JPEG-related tags, in<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>keyword=data format)<br />
-&nbsp;<wbr>&nbsp;<wbr>Quality&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>IJG JPEG&nbsp;<wbr>&quot;quality&quot;&nbsp;<wbr>estimate<br />
-&nbsp;<wbr>&nbsp;<wbr>Colorspace&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>JPEG colorspace numeric ID<br />
-&nbsp;<wbr>&nbsp;<wbr>Colorspace-Name&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>JPEG colorspace name<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(all JPEG-related tags, in<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>keyword=data format)<br/>
+&nbsp;<wbr>&nbsp;<wbr>Quality&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>IJG JPEG&nbsp;<wbr>&quot;quality&quot;&nbsp;<wbr>estimate<br/>
+&nbsp;<wbr>&nbsp;<wbr>Colorspace&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>JPEG colorspace numeric ID<br/>
+&nbsp;<wbr>&nbsp;<wbr>Colorspace-Name&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>JPEG colorspace name<br/>
 &nbsp;<wbr>&nbsp;<wbr>Sampling-factors&nbsp;<wbr>&nbsp;<wbr>JPEG sampling factors </p>
 <p> Please note that JPEG has no notion of &quot;quality&quot; and that the quality metric used by, and estimated by the software is based on the quality metric established by IJG JPEG 6b. Other encoders (e.g. that used by Adobe Photoshop) use different encoding metrics. </p>
 <p> Surround the format specification with quotation marks to prevent your shell from misinterpreting any spaces and square brackets.</p>
@@ -971,7 +971,7 @@ description: "gm – command-line utility to create, edit, compare, convert, or 
 <dt><code>-geometry </code><i>&lt;width&gt;x&lt;height&gt;{+-}&lt;x&gt;{+-}&lt;y&gt;{%}{@}{!}{^}{&lt;}{&gt;}</i></dt>
 <dd> Specify dimension, offset, and resize options. </dd>
 <p> The <code>-geometry</code> option is used for a number of different purposes, depending on the utility it is used with. </p>
-<p> For the X11 commands (&#8216;animate&#8217;, &#8216;display&#8217;, and &#8216;import&#8217;), it specifies the preferred size and location of the Image window. By default, the window size is the image size and the location is chosen by you (or your window manager) when it is mapped.<br />
+<p> For the X11 commands (&#8216;animate&#8217;, &#8216;display&#8217;, and &#8216;import&#8217;), it specifies the preferred size and location of the Image window. By default, the window size is the image size and the location is chosen by you (or your window manager) when it is mapped.<br/>
 &nbsp;<wbr>For the&nbsp;<wbr>&#8216;import&#8217;,&nbsp;<wbr>&#8216;convert&#8217;,&nbsp;<wbr>&#8216;mogrify&#8217;&nbsp;<wbr>utility commands it may be used to specify the desired size when resizing an image. In this case, symbols representing resize options may be appended to the geometry string to influence how the resize request is treated. </p>
 <p> See later notes corresponding to usage by particular commands. The following notes apply to when <code>-geometry</code> is used to express a resize request, taking into account the current properties of the image. </p>
 <p> By default, the width and height are maximum values. That is, the image is expanded or contracted to fit the width and height value while maintaining the aspect ratio of the image. </p>
@@ -1063,18 +1063,18 @@ description: "gm – command-line utility to create, edit, compare, convert, or 
 <dd> Specify format for debug log </dd>
 <p> This option specifies the format for the log printed when the <code>-debug</code> option is active. </p>
 <p> You can display the following components by embedding special format characters: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>%d&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>domain<br />
-&nbsp;<wbr>&nbsp;<wbr>%e&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>event<br />
-&nbsp;<wbr>&nbsp;<wbr>%f&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>function<br />
-&nbsp;<wbr>&nbsp;<wbr>%l&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>line<br />
-&nbsp;<wbr>&nbsp;<wbr>%m&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>module<br />
-&nbsp;<wbr>&nbsp;<wbr>%p&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>process ID<br />
-&nbsp;<wbr>&nbsp;<wbr>%r&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>real CPU time<br />
-&nbsp;<wbr>&nbsp;<wbr>%t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>wall clock time<br />
-&nbsp;<wbr>&nbsp;<wbr>%u&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>user CPU time<br />
-&nbsp;<wbr>&nbsp;<wbr>%%&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>percent sign<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>%d&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>domain<br/>
+&nbsp;<wbr>&nbsp;<wbr>%e&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>event<br/>
+&nbsp;<wbr>&nbsp;<wbr>%f&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>function<br/>
+&nbsp;<wbr>&nbsp;<wbr>%l&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>line<br/>
+&nbsp;<wbr>&nbsp;<wbr>%m&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>module<br/>
+&nbsp;<wbr>&nbsp;<wbr>%p&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>process ID<br/>
+&nbsp;<wbr>&nbsp;<wbr>%r&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>real CPU time<br/>
+&nbsp;<wbr>&nbsp;<wbr>%t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>wall clock time<br/>
+&nbsp;<wbr>&nbsp;<wbr>%u&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>user CPU time<br/>
+&nbsp;<wbr>&nbsp;<wbr>%%&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>percent sign<br/>
 &nbsp;<wbr>&nbsp;<wbr>
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>newline<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>newline<br/>
 &nbsp;<wbr>&nbsp;<wbr>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>carriage return </p>
 <p> For example: </p>
@@ -1098,11 +1098,11 @@ description: "gm – command-line utility to create, edit, compare, convert, or 
 <dd> display image using this type. </dd>
 <p> [<i>animate</i> or <i>display</i>] </p>
 <p> Choose from these <i>Standard Colormap</i> types: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>best<br />
-&nbsp;<wbr>&nbsp;<wbr>default<br />
-&nbsp;<wbr>&nbsp;<wbr>gray<br />
-&nbsp;<wbr>&nbsp;<wbr>red<br />
-&nbsp;<wbr>&nbsp;<wbr>green<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>best<br/>
+&nbsp;<wbr>&nbsp;<wbr>default<br/>
+&nbsp;<wbr>&nbsp;<wbr>gray<br/>
+&nbsp;<wbr>&nbsp;<wbr>red<br/>
+&nbsp;<wbr>&nbsp;<wbr>green<br/>
 &nbsp;<wbr>&nbsp;<wbr>blue </p>
 <p> The <i>X server</i> must support the <i>Standard Colormap</i> you choose, otherwise an error occurs. Use <code>list</code> as the type and <code>display</code> searches the list of colormap types in <code>top-to-bottom</code> order until one is located. See <i><a href="/docs/linux/man/1-xstdcmap/">xstdcmap</a>(1)</i> for one way of creating Standard Colormaps.</p>
 <dt><code>-mask </code><i>&lt;filename&gt;</i></dt>
@@ -1151,10 +1151,10 @@ description: "gm – command-line utility to create, edit, compare, convert, or 
 <p> The <code>-page</code> option can be used to establish the dimensions of the mosaic and to position the subsequent image within the mosaic. If the <code>-page</code> argument does not specify width and height, then the canvas dimensions are evaluated based on the image sizes and offsets. </p>
 <p> The sequence of images is terminated by the appearance of any option. If the <code>-mosaic</code> option appears after all of the input images, all images are included in the mosaic. </p>
 <p> The following is an example of composing an image based on red, green, and blue layers extracted from a sequence of images and pasted on the canvas image at specified offsets: </p>
-<p>&nbsp;<wbr>gm convert -background black&nbsp;<wbr>\<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-compose CopyRed&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-page&nbsp;<wbr>+0-100 red.png&nbsp;<wbr>\<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-compose CopyGreen -page&nbsp;<wbr>+0+40&nbsp;<wbr>&nbsp;<wbr>green.png&nbsp;<wbr>\<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-compose CopyBlue&nbsp;<wbr>&nbsp;<wbr>-page&nbsp;<wbr>+0+180 blue.png&nbsp;<wbr>\<br />
+<p>&nbsp;<wbr>gm convert -background black&nbsp;<wbr>\<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-compose CopyRed&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-page&nbsp;<wbr>+0-100 red.png&nbsp;<wbr>\<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-compose CopyGreen -page&nbsp;<wbr>+0+40&nbsp;<wbr>&nbsp;<wbr>green.png&nbsp;<wbr>\<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-compose CopyBlue&nbsp;<wbr>&nbsp;<wbr>-page&nbsp;<wbr>+0+180 blue.png&nbsp;<wbr>\<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-mosaic output.png </p>
 <dt><code>-motion-blur </code><i>&lt;radius&gt;{x&lt;sigma&gt;}{+angle}</i></dt>
 <dd> Simulate motion blur </dd>
@@ -1169,12 +1169,12 @@ description: "gm – command-line utility to create, edit, compare, convert, or 
 <p> The principal function of noise peak elimination filter is to smooth the objects within an image without losing edge information and without creating undesired structures. The central idea of the algorithm is to replace a pixel with its next neighbor in value within a pixel window, if this pixel has been found to be noise. A pixel is defined as noise if and only if this pixel is a maximum or minimum within the pixel window. </p>
 <p> Use <code>radius</code> to specify the width of the neighborhood. </p>
 <p> Use <code>+noise</code> followed by a noise type to add noise to an image. The noise added modulates the existing image pixels. Choose from these noise types: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>Uniform<br />
-&nbsp;<wbr>&nbsp;<wbr>Gaussian<br />
-&nbsp;<wbr>&nbsp;<wbr>Multiplicative<br />
-&nbsp;<wbr>&nbsp;<wbr>Impulse<br />
-&nbsp;<wbr>&nbsp;<wbr>Laplacian<br />
-&nbsp;<wbr>&nbsp;<wbr>Poisson<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>Uniform<br/>
+&nbsp;<wbr>&nbsp;<wbr>Gaussian<br/>
+&nbsp;<wbr>&nbsp;<wbr>Multiplicative<br/>
+&nbsp;<wbr>&nbsp;<wbr>Impulse<br/>
+&nbsp;<wbr>&nbsp;<wbr>Laplacian<br/>
+&nbsp;<wbr>&nbsp;<wbr>Poisson<br/>
 &nbsp;<wbr>&nbsp;<wbr>Random&nbsp;<wbr>(uniform distribution) </p>
 <dt><code>-noop</code></dt>
 <dd> NOOP (no option) </dd>
@@ -1194,63 +1194,63 @@ description: "gm – command-line utility to create, edit, compare, convert, or 
 <p> <code>Gray</code> treats the color channels as a grayscale intensity and performs the requested operation on the equivalent pixel intensity so the result is a gray image. Select an operator from <code>Add</code>, <code>And</code>, <code>Assign</code>, <code>Depth</code>, <code>Divide</code>, <code>Gamma</code>, <code>Negate</code>, <code>LShift</code>, <code>Log</code>, <code>Max</code>, <code>Min</code>, <code>Multiply</code>, <code>Or</code>, <code>Pow</code> <code>RShift</code>, <code>Subtract</code>, <code>Threshold</code>, <code>Threshold-White</code>, <code>Threshold-White-Negate</code>, <code>Threshold-Black</code>, <code>Threshold-Black-Negate</code>, <code>Xor</code>, <code>Noise-Gaussian</code>, <code>Noise-Impulse</code>, <code>Noise-Laplacian</code>, <code>Noise-Multiplicative</code>, <code>Noise-Poisson</code>, <code>Noise-Random</code>, and <code>Noise-Uniform</code>. </p>
 <p> Rvalue may be any floating point or integer value. Normally rvalue will be in the range of 0 to MaxRGB, where MaxRGB is the largest quantum value supported by the GraphicsMagick build (255, 65535, or 4294967295) but values outside this range are useful for some arithmetic operations. Arguments to logical or bit-wise operations are rounded to a positive integral value prior to use. If a percent (<code>%</code>) symbol is appended to the argument, then the argument has a range of 0 to 100 percent. </p>
 <p> The following is a description of the operators: </p>
-<p> <code>Add</code><br />
+<p> <code>Add</code><br/>
 &nbsp;<wbr> Result is rvalue added to channel value. </p>
-<p> <code>And</code><br />
+<p> <code>And</code><br/>
 &nbsp;<wbr> Result is the logical AND of rvalue with channel value. </p>
-<p> <code>Assign</code><br />
+<p> <code>Assign</code><br/>
 &nbsp;<wbr> Result is rvalue. </p>
-<p> <code>Depth</code><br />
+<p> <code>Depth</code><br/>
 &nbsp;<wbr> Result is channel value adjusted so that it may be (approximately) stored in the specified number of bits without additional loss. </p>
-<p> <code>Divide</code><br />
+<p> <code>Divide</code><br/>
 &nbsp;<wbr> Result is channel value divided by rvalue. </p>
-<p> <code>Gamma</code><br />
+<p> <code>Gamma</code><br/>
 &nbsp;<wbr> Result is channel value gamma adjusted by rvalue. </p>
-<p> <code>LShift</code><br />
+<p> <code>LShift</code><br/>
 &nbsp;<wbr> Result is channel value bitwise left shifted by rvalue bits. </p>
-<p> <code>Log</code><br />
+<p> <code>Log</code><br/>
 &nbsp;<wbr> Result is computed as log(value*rvalue+1)/log(rvalue+1). </p>
-<p> <code>Max</code><br />
+<p> <code>Max</code><br/>
 &nbsp;<wbr> Result is assigned to rvalue if rvalue is greater than value. </p>
-<p> <code>Min</code><br />
+<p> <code>Min</code><br/>
 &nbsp;<wbr> Result is assigned to rvalue if rvalue is less than value. </p>
-<p> <code>Multiply</code><br />
+<p> <code>Multiply</code><br/>
 &nbsp;<wbr> Result is channel value multiplied by rvalue. </p>
-<p> <code>Negate</code><br />
+<p> <code>Negate</code><br/>
 &nbsp;<wbr> Result is inverse of channel value (like a film negative). An rvalue must be supplied but is currently not used. Inverting the image twice results in the original image. </p>
-<p> <code>Or</code><br />
+<p> <code>Or</code><br/>
 &nbsp;<wbr> Result is the logical OR of rvalue with channel value. </p>
-<p> <code>Pow</code><br />
+<p> <code>Pow</code><br/>
 &nbsp;<wbr> Result is computed as pow(value,rvalue). Similar to Gamma except that rvalue is not inverted. </p>
-<p> <code>RShift</code><br />
+<p> <code>RShift</code><br/>
 &nbsp;<wbr> Result is channel value bitwise right shifted by rvalue bits. </p>
-<p> <code>Subtract</code><br />
+<p> <code>Subtract</code><br/>
 &nbsp;<wbr> Result is channel value minus rvalue. </p>
-<p> <code>Threshold</code><br />
+<p> <code>Threshold</code><br/>
 &nbsp;<wbr> Result is maximum (white) if channel value is greater than rvalue, or minimum (black) if it is less than or equal to rvalue. If <code>all</code> channels are specified, then thresholding is done based on computed pixel intensity. </p>
-<p> <code>Threshold-white</code><br />
+<p> <code>Threshold-white</code><br/>
 &nbsp;<wbr> Result is maximum (white) if channel value is greater than rvalue and is unchanged if it is less than or equal to rvalue. This can be used to remove apparent noise from the bright parts of an image. If <code>all</code> channels are specified, then thresholding is done based on computed pixel intensity. </p>
-<p> <code>Threshold-White-Negate</code><br />
+<p> <code>Threshold-White-Negate</code><br/>
 &nbsp;<wbr> Result is set to black if channel value is greater than rvalue and is unchanged if it is less than or equal to rvalue. If <code>all</code> channels are specified, then thresholding is done based on computed pixel intensity. </p>
-<p> <code>Threshold-black</code><br />
+<p> <code>Threshold-black</code><br/>
 &nbsp;<wbr> Result is minimum (black) if channel value is less than than rvalue and is unchanged if it is greater than or equal to rvalue. This can be used to remove apparent noise from the dark parts of an image. If <code>all</code> channels are specified, then thresholding is done based on computed pixel intensity. </p>
-<p> <code>Threshold-Black-Negate</code><br />
+<p> <code>Threshold-Black-Negate</code><br/>
 &nbsp;<wbr> Result is set to white if channel value is less than than rvalue and is unchanged if it is greater than or equal to rvalue. If <code>all</code> channels are specified, then thresholding is done based on computed pixel intensity. </p>
-<p> <code>Xor</code><br />
+<p> <code>Xor</code><br/>
 &nbsp;<wbr> Result is the logical XOR of rvalue with channel value. An interesting property of XOR is that performing the same operation twice results in the original value. </p>
-<p> <code>Noise-Gaussian</code><br />
+<p> <code>Noise-Gaussian</code><br/>
 &nbsp;<wbr> Result is the current channel value modulated with gaussian noise according to the intensity specified by rvalue. </p>
-<p> <code>Noise-Impulse</code><br />
+<p> <code>Noise-Impulse</code><br/>
 &nbsp;<wbr> Result is the current channel value modulated with impulse noise according to the intensity specified by rvalue. </p>
-<p> <code>Noise-Laplacian</code><br />
+<p> <code>Noise-Laplacian</code><br/>
 &nbsp;<wbr> Result is the current channel value modulated with laplacian noise according to the intensity specified by rvalue. </p>
-<p> <code>Noise-Multiplicative</code><br />
+<p> <code>Noise-Multiplicative</code><br/>
 &nbsp;<wbr> Result is the current channel value modulated with multiplicative gaussian noise according to the intensity specified by rvalue. </p>
-<p> <code>Noise-Poisson</code><br />
+<p> <code>Noise-Poisson</code><br/>
 &nbsp;<wbr> Result is the current channel value modulated with poisson noise according to the intensity specified by rvalue. </p>
-<p> <code>Noise-Random</code><br />
+<p> <code>Noise-Random</code><br/>
 &nbsp;<wbr> Result is the current channel value modulated with random (uniform distribution) noise according to the intensity specified by rvalue. The initial noise intensity (rvalue=1.0) is the range of one pixel quantum span. </p>
-<p> <code>Noise-Uniform</code><br />
+<p> <code>Noise-Uniform</code><br/>
 &nbsp;<wbr> Result is the channel value with uniform noise applied according to the intensity specified by rvalue. </p>
 <p> As an example, the <code>Assign</code> operator assigns a fixed value to a channel. For example, this command sets the red channel to the mid-range value: </p>
 <p>&nbsp;<wbr>gm convert in.bmp -operator red assign&nbsp;<wbr>&quot;50%&quot;&nbsp;<wbr>out.bmp </p>
@@ -1271,43 +1271,43 @@ description: "gm – command-line utility to create, edit, compare, convert, or 
 <dt><code>-page </code><i>&lt;width&gt;x&lt;height&gt;{+-}&lt;x&gt;{+-}&lt;y&gt;{%}{!}{&lt;}{&gt;}</i></dt>
 <dd> size and location of an image canvas </dd>
 <p> Use this option to specify the dimensions of the <i>PostScript</i> page in dots per inch or a TEXT page in pixels. The choices for a PostScript page are: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>11&#215;17&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>792&nbsp;<wbr>&nbsp;<wbr>1224<br />
-&nbsp;<wbr>&nbsp;<wbr>Ledger&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1224&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>792<br />
-&nbsp;<wbr>&nbsp;<wbr>Legal&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>612&nbsp;<wbr>&nbsp;<wbr>1008<br />
-&nbsp;<wbr>&nbsp;<wbr>Letter&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>612&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>792<br />
-&nbsp;<wbr>&nbsp;<wbr>LetterSmall&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>612&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>792<br />
-&nbsp;<wbr>&nbsp;<wbr>ArchE&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>2592&nbsp;<wbr>&nbsp;<wbr>3456<br />
-&nbsp;<wbr>&nbsp;<wbr>ArchD&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1728&nbsp;<wbr>&nbsp;<wbr>2592<br />
-&nbsp;<wbr>&nbsp;<wbr>ArchC&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1296&nbsp;<wbr>&nbsp;<wbr>1728<br />
-&nbsp;<wbr>&nbsp;<wbr>ArchB&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>864&nbsp;<wbr>&nbsp;<wbr>1296<br />
-&nbsp;<wbr>&nbsp;<wbr>ArchA&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>648&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>864<br />
-&nbsp;<wbr>&nbsp;<wbr>A0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>2380&nbsp;<wbr>&nbsp;<wbr>3368<br />
-&nbsp;<wbr>&nbsp;<wbr>A1&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1684&nbsp;<wbr>&nbsp;<wbr>2380<br />
-&nbsp;<wbr>&nbsp;<wbr>A2&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1190&nbsp;<wbr>&nbsp;<wbr>1684<br />
-&nbsp;<wbr>&nbsp;<wbr>A3&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>842&nbsp;<wbr>&nbsp;<wbr>1190<br />
-&nbsp;<wbr>&nbsp;<wbr>A4&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>595&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>842<br />
-&nbsp;<wbr>&nbsp;<wbr>A4Small&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>595&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>842<br />
-&nbsp;<wbr>&nbsp;<wbr>A5&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>421&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>595<br />
-&nbsp;<wbr>&nbsp;<wbr>A6&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>297&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>421<br />
-&nbsp;<wbr>&nbsp;<wbr>A7&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>210&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>297<br />
-&nbsp;<wbr>&nbsp;<wbr>A8&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>148&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>210<br />
-&nbsp;<wbr>&nbsp;<wbr>A9&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>105&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>148<br />
-&nbsp;<wbr>&nbsp;<wbr>A10&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>74&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>105<br />
-&nbsp;<wbr>&nbsp;<wbr>B0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>2836&nbsp;<wbr>&nbsp;<wbr>4008<br />
-&nbsp;<wbr>&nbsp;<wbr>B1&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>2004&nbsp;<wbr>&nbsp;<wbr>2836<br />
-&nbsp;<wbr>&nbsp;<wbr>B2&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1418&nbsp;<wbr>&nbsp;<wbr>2004<br />
-&nbsp;<wbr>&nbsp;<wbr>B3&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1002&nbsp;<wbr>&nbsp;<wbr>1418<br />
-&nbsp;<wbr>&nbsp;<wbr>B4&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>709&nbsp;<wbr>&nbsp;<wbr>1002<br />
-&nbsp;<wbr>&nbsp;<wbr>B5&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>501&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>709<br />
-&nbsp;<wbr>&nbsp;<wbr>C0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>2600&nbsp;<wbr>&nbsp;<wbr>3677<br />
-&nbsp;<wbr>&nbsp;<wbr>C1&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1837&nbsp;<wbr>&nbsp;<wbr>2600<br />
-&nbsp;<wbr>&nbsp;<wbr>C2&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1298&nbsp;<wbr>&nbsp;<wbr>1837<br />
-&nbsp;<wbr>&nbsp;<wbr>C3&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>918&nbsp;<wbr>&nbsp;<wbr>1298<br />
-&nbsp;<wbr>&nbsp;<wbr>C4&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>649&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>918<br />
-&nbsp;<wbr>&nbsp;<wbr>C5&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>459&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>649<br />
-&nbsp;<wbr>&nbsp;<wbr>C6&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>323&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>459<br />
-&nbsp;<wbr>&nbsp;<wbr>Flsa&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>612&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>936<br />
-&nbsp;<wbr>&nbsp;<wbr>Flse&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>612&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>936<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>11&#215;17&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>792&nbsp;<wbr>&nbsp;<wbr>1224<br/>
+&nbsp;<wbr>&nbsp;<wbr>Ledger&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1224&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>792<br/>
+&nbsp;<wbr>&nbsp;<wbr>Legal&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>612&nbsp;<wbr>&nbsp;<wbr>1008<br/>
+&nbsp;<wbr>&nbsp;<wbr>Letter&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>612&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>792<br/>
+&nbsp;<wbr>&nbsp;<wbr>LetterSmall&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>612&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>792<br/>
+&nbsp;<wbr>&nbsp;<wbr>ArchE&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>2592&nbsp;<wbr>&nbsp;<wbr>3456<br/>
+&nbsp;<wbr>&nbsp;<wbr>ArchD&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1728&nbsp;<wbr>&nbsp;<wbr>2592<br/>
+&nbsp;<wbr>&nbsp;<wbr>ArchC&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1296&nbsp;<wbr>&nbsp;<wbr>1728<br/>
+&nbsp;<wbr>&nbsp;<wbr>ArchB&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>864&nbsp;<wbr>&nbsp;<wbr>1296<br/>
+&nbsp;<wbr>&nbsp;<wbr>ArchA&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>648&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>864<br/>
+&nbsp;<wbr>&nbsp;<wbr>A0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>2380&nbsp;<wbr>&nbsp;<wbr>3368<br/>
+&nbsp;<wbr>&nbsp;<wbr>A1&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1684&nbsp;<wbr>&nbsp;<wbr>2380<br/>
+&nbsp;<wbr>&nbsp;<wbr>A2&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1190&nbsp;<wbr>&nbsp;<wbr>1684<br/>
+&nbsp;<wbr>&nbsp;<wbr>A3&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>842&nbsp;<wbr>&nbsp;<wbr>1190<br/>
+&nbsp;<wbr>&nbsp;<wbr>A4&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>595&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>842<br/>
+&nbsp;<wbr>&nbsp;<wbr>A4Small&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>595&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>842<br/>
+&nbsp;<wbr>&nbsp;<wbr>A5&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>421&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>595<br/>
+&nbsp;<wbr>&nbsp;<wbr>A6&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>297&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>421<br/>
+&nbsp;<wbr>&nbsp;<wbr>A7&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>210&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>297<br/>
+&nbsp;<wbr>&nbsp;<wbr>A8&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>148&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>210<br/>
+&nbsp;<wbr>&nbsp;<wbr>A9&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>105&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>148<br/>
+&nbsp;<wbr>&nbsp;<wbr>A10&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>74&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>105<br/>
+&nbsp;<wbr>&nbsp;<wbr>B0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>2836&nbsp;<wbr>&nbsp;<wbr>4008<br/>
+&nbsp;<wbr>&nbsp;<wbr>B1&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>2004&nbsp;<wbr>&nbsp;<wbr>2836<br/>
+&nbsp;<wbr>&nbsp;<wbr>B2&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1418&nbsp;<wbr>&nbsp;<wbr>2004<br/>
+&nbsp;<wbr>&nbsp;<wbr>B3&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1002&nbsp;<wbr>&nbsp;<wbr>1418<br/>
+&nbsp;<wbr>&nbsp;<wbr>B4&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>709&nbsp;<wbr>&nbsp;<wbr>1002<br/>
+&nbsp;<wbr>&nbsp;<wbr>B5&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>501&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>709<br/>
+&nbsp;<wbr>&nbsp;<wbr>C0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>2600&nbsp;<wbr>&nbsp;<wbr>3677<br/>
+&nbsp;<wbr>&nbsp;<wbr>C1&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1837&nbsp;<wbr>&nbsp;<wbr>2600<br/>
+&nbsp;<wbr>&nbsp;<wbr>C2&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1298&nbsp;<wbr>&nbsp;<wbr>1837<br/>
+&nbsp;<wbr>&nbsp;<wbr>C3&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>918&nbsp;<wbr>&nbsp;<wbr>1298<br/>
+&nbsp;<wbr>&nbsp;<wbr>C4&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>649&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>918<br/>
+&nbsp;<wbr>&nbsp;<wbr>C5&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>459&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>649<br/>
+&nbsp;<wbr>&nbsp;<wbr>C6&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>323&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>459<br/>
+&nbsp;<wbr>&nbsp;<wbr>Flsa&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>612&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>936<br/>
+&nbsp;<wbr>&nbsp;<wbr>Flse&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>612&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>936<br/>
 &nbsp;<wbr>&nbsp;<wbr>HalfLetter&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>396&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>612 </p>
 <p> For convenience you can specify the page size by media (e.g. A4, Ledger, etc.). Otherwise, <code>-page</code> behaves much like <code>-geometry</code> (e.g. -page letter+43+43&gt;). </p>
 <p> This option is also used to place subimages when writing to a multi-image format that supports offsets, such as GIF89 and MNG. When used for this purpose the offsets are always measured from the top left corner of the canvas and are not affected by the <code>-gravity</code> option. To position a GIF or MNG image, use <code>-page</code><i>{+-}&lt;x&gt;{+-}&lt;y&gt;</i> (e.g. -page +100+200). When writing to a MNG file, a <code>-page</code> option appearing ahead of the first image in the sequence with nonzero width and height defines the width and height values that are written in the <code>MHDR</code> chunk. Otherwise, the MNG width and height are computed from the bounding box that contains all images in the sequence. When writing a GIF89 file, only the bounding box method is used to determine its dimensions. </p>
@@ -1334,34 +1334,34 @@ description: "gm – command-line utility to create, edit, compare, convert, or 
 <dt><code>-preview </code><i>&lt;type&gt;</i></dt>
 <dd> image preview type </dd>
 <p> Use this option to affect the preview operation of an image (e.g. convert file.png -preview Gamma Preview:gamma.png). Choose from these previews: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>Rotate<br />
-&nbsp;<wbr>&nbsp;<wbr>Shear<br />
-&nbsp;<wbr>&nbsp;<wbr>Roll<br />
-&nbsp;<wbr>&nbsp;<wbr>Hue<br />
-&nbsp;<wbr>&nbsp;<wbr>Saturation<br />
-&nbsp;<wbr>&nbsp;<wbr>Brightness<br />
-&nbsp;<wbr>&nbsp;<wbr>Gamma<br />
-&nbsp;<wbr>&nbsp;<wbr>Spiff<br />
-&nbsp;<wbr>&nbsp;<wbr>Dull<br />
-&nbsp;<wbr>&nbsp;<wbr>Grayscale<br />
-&nbsp;<wbr>&nbsp;<wbr>Quantize<br />
-&nbsp;<wbr>&nbsp;<wbr>Despeckle<br />
-&nbsp;<wbr>&nbsp;<wbr>ReduceNoise<br />
-&nbsp;<wbr>&nbsp;<wbr>AddNoise<br />
-&nbsp;<wbr>&nbsp;<wbr>Sharpen<br />
-&nbsp;<wbr>&nbsp;<wbr>Blur<br />
-&nbsp;<wbr>&nbsp;<wbr>Threshold<br />
-&nbsp;<wbr>&nbsp;<wbr>EdgeDetect<br />
-&nbsp;<wbr>&nbsp;<wbr>Spread<br />
-&nbsp;<wbr>&nbsp;<wbr>Shade<br />
-&nbsp;<wbr>&nbsp;<wbr>Raise<br />
-&nbsp;<wbr>&nbsp;<wbr>Segment<br />
-&nbsp;<wbr>&nbsp;<wbr>Solarize<br />
-&nbsp;<wbr>&nbsp;<wbr>Swirl<br />
-&nbsp;<wbr>&nbsp;<wbr>Implode<br />
-&nbsp;<wbr>&nbsp;<wbr>Wave<br />
-&nbsp;<wbr>&nbsp;<wbr>OilPaint<br />
-&nbsp;<wbr>&nbsp;<wbr>CharcoalDrawing<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>Rotate<br/>
+&nbsp;<wbr>&nbsp;<wbr>Shear<br/>
+&nbsp;<wbr>&nbsp;<wbr>Roll<br/>
+&nbsp;<wbr>&nbsp;<wbr>Hue<br/>
+&nbsp;<wbr>&nbsp;<wbr>Saturation<br/>
+&nbsp;<wbr>&nbsp;<wbr>Brightness<br/>
+&nbsp;<wbr>&nbsp;<wbr>Gamma<br/>
+&nbsp;<wbr>&nbsp;<wbr>Spiff<br/>
+&nbsp;<wbr>&nbsp;<wbr>Dull<br/>
+&nbsp;<wbr>&nbsp;<wbr>Grayscale<br/>
+&nbsp;<wbr>&nbsp;<wbr>Quantize<br/>
+&nbsp;<wbr>&nbsp;<wbr>Despeckle<br/>
+&nbsp;<wbr>&nbsp;<wbr>ReduceNoise<br/>
+&nbsp;<wbr>&nbsp;<wbr>AddNoise<br/>
+&nbsp;<wbr>&nbsp;<wbr>Sharpen<br/>
+&nbsp;<wbr>&nbsp;<wbr>Blur<br/>
+&nbsp;<wbr>&nbsp;<wbr>Threshold<br/>
+&nbsp;<wbr>&nbsp;<wbr>EdgeDetect<br/>
+&nbsp;<wbr>&nbsp;<wbr>Spread<br/>
+&nbsp;<wbr>&nbsp;<wbr>Shade<br/>
+&nbsp;<wbr>&nbsp;<wbr>Raise<br/>
+&nbsp;<wbr>&nbsp;<wbr>Segment<br/>
+&nbsp;<wbr>&nbsp;<wbr>Solarize<br/>
+&nbsp;<wbr>&nbsp;<wbr>Swirl<br/>
+&nbsp;<wbr>&nbsp;<wbr>Implode<br/>
+&nbsp;<wbr>&nbsp;<wbr>Wave<br/>
+&nbsp;<wbr>&nbsp;<wbr>OilPaint<br/>
+&nbsp;<wbr>&nbsp;<wbr>CharcoalDrawing<br/>
 &nbsp;<wbr>&nbsp;<wbr>JPEG </p>
 <p> The default preview is <code>JPEG</code>.</p>
 <dt><code>-process </code><i>&lt;command&gt;</i></dt>
@@ -1383,16 +1383,16 @@ description: "gm – command-line utility to create, edit, compare, convert, or 
 <dd> disable progress monitor and busy cursor </dd>
 <p> By default, when an image is displayed, a progress monitor bar is shown in the top left corner of an existing image display window, and the current cursor is replaced with an hourglass cursor. Use <code>+progress</code> to disable the progress monitor and busy cursor during display operations. While the progress monitor is disabled for all operations, the busy cursor continues to be enabled for non-display operations such as image processing. This option is useful for non-interactive display operations, or when a &quot;clean&quot; look is desired.</p>
 <dt><code>-quality </code><i>&lt;value&gt;</i></dt>
-<dd> JPEG/MIFF/PNG/TIFF compression level<br />
+<dd> JPEG/MIFF/PNG/TIFF compression level<br/>
 &nbsp;<wbr>For the JPEG and MPEG image formats, quality is 0&nbsp;<wbr>(lowest image quality and highest compression) to 100 (best quality but least effective compression). The default quality is 75. Use the <code>-sampling-factor</code> option to specify the factors for chroma downsampling. To use the same quality value as that found by the JPEG decoder, use the -define jpeg:preserve-settings flag. </dd>
 <p> For the MIFF image format, and the TIFF format while using ZIP compression, quality/10 is the zlib compression level, which is 0 (worst but fastest compression) to 9 (best but slowest). It has no effect on the image appearance, since the compression is always lossless. </p>
 <p> For the JPEG-2000 image format, quality is mapped using a non-linear equation to the compression ratio required by the Jasper library. This non-linear equation is intended to loosely approximate the quality provided by the JPEG v1 format. The default quality value 75 results in a request for 16:1 compression. The quality value 100 results in a request for non-lossy compression. </p>
 <p> For the MNG and PNG image formats, the quality value sets the zlib compression level (quality / 10) and filter-type (quality % 10). Compression levels range from 0 (fastest compression) to 100 (best but slowest). For compression level 0, the Huffman-only strategy is used, which is fastest but not necessarily the worst compression. </p>
 <p> If filter-type is 4 or less, the specified filter-type is used for all scanlines: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>0: none<br />
-&nbsp;<wbr>&nbsp;<wbr>1: sub<br />
-&nbsp;<wbr>&nbsp;<wbr>2: up<br />
-&nbsp;<wbr>&nbsp;<wbr>3: average<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>0: none<br/>
+&nbsp;<wbr>&nbsp;<wbr>1: sub<br/>
+&nbsp;<wbr>&nbsp;<wbr>2: up<br/>
+&nbsp;<wbr>&nbsp;<wbr>3: average<br/>
 &nbsp;<wbr>&nbsp;<wbr>4: Paeth </p>
 <p> If filter-type is 5, adaptive filtering is used when quality is greater than 50 and the image does not have a color map, otherwise no filtering is used. </p>
 <p> If filter-type is 6, adaptive filtering with <i>minimum-sum-of-absolute-values</i> is used. </p>
@@ -1415,35 +1415,35 @@ description: "gm – command-line utility to create, edit, compare, convert, or 
 <p> A user supplied color translation matrix (expressed as a text string) is used to translate/blend the image channels based on weightings in a supplied matrix which may be of order 3 (color channels only), 4 (color channels plus opacity), or 5 (color channels plus opacity and offset). Values in the columns of the matrix (red, green, blue, opacity) are used as multipliers with the existing channel values and added together according to the rows of the matrix. Matrix values are floating point and may be negative. The offset column (column 5) is purely additive and is scaled such that 0.0 to 1.0 represents the maximum quantum range (but values are not limited to this range). The math for the color translation matrix is similar to that used by Adobe Flash except that the offset is scaled to 1.0 (divide Flash offset by 255 for use with GraphicsMagick) so that the results are independent of quantum depth. </p>
 <p> An <code>identity</code> matrix exists for each matrix order which results in no change to the image. The translation matrix should be based on an alteration of the identity matrix. </p>
 <p> Identity matrix of order 3 </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>1 0 0<br />
-&nbsp;<wbr>&nbsp;<wbr>0 1 0<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>1 0 0<br/>
+&nbsp;<wbr>&nbsp;<wbr>0 1 0<br/>
 &nbsp;<wbr>&nbsp;<wbr>0 0 1 </p>
 <p> which may be formatted into a convenient matrix argument similar to (comma is treated as white space): </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>-recolor&nbsp;<wbr>&quot;1 0 0, 0 1 0, 0 0 1&quot; </p>
 <p> Identity matrix of order 4 </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>1 0 0 0<br />
-&nbsp;<wbr>&nbsp;<wbr>0 1 0 0<br />
-&nbsp;<wbr>&nbsp;<wbr>0 0 1 0<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>1 0 0 0<br/>
+&nbsp;<wbr>&nbsp;<wbr>0 1 0 0<br/>
+&nbsp;<wbr>&nbsp;<wbr>0 0 1 0<br/>
 &nbsp;<wbr>&nbsp;<wbr>0 0 0 1 </p>
 <p> Identity matrix of order 5. The last row is required to exist for the purpose of parsing, but is otherwise not used. </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>1 0 0 0 0<br />
-&nbsp;<wbr>&nbsp;<wbr>0 1 0 0 0<br />
-&nbsp;<wbr>&nbsp;<wbr>0 0 1 0 0<br />
-&nbsp;<wbr>&nbsp;<wbr>0 0 0 1 0<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>1 0 0 0 0<br/>
+&nbsp;<wbr>&nbsp;<wbr>0 1 0 0 0<br/>
+&nbsp;<wbr>&nbsp;<wbr>0 0 1 0 0<br/>
+&nbsp;<wbr>&nbsp;<wbr>0 0 0 1 0<br/>
 &nbsp;<wbr>&nbsp;<wbr>0 0 0 0 1 </p>
 <p> As an example, an image wrongly in BGR channel order may be converted to RGB using this matrix (blue-&gt;red, red-&gt;blue): </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>0 0 1<br />
-&nbsp;<wbr>&nbsp;<wbr>0 1 0<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>0 0 1<br/>
+&nbsp;<wbr>&nbsp;<wbr>0 1 0<br/>
 &nbsp;<wbr>&nbsp;<wbr>1 0 0 </p>
 <p> and an RGB image using standard Rec.709 primaries may be converted to grayscale using this matrix of standard weighting factors: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>0.2126 0.7152 0.0722<br />
-&nbsp;<wbr>&nbsp;<wbr>0.2126 0.7152 0.0722<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>0.2126 0.7152 0.0722<br/>
+&nbsp;<wbr>&nbsp;<wbr>0.2126 0.7152 0.0722<br/>
 &nbsp;<wbr>&nbsp;<wbr>0.2126 0.7152 0.0722 </p>
 <p> and contrast may be reduced by scaling down by 80% and adding a 10% offset: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>0.8 0.0 0.0 0.0 0.1<br />
-&nbsp;<wbr>&nbsp;<wbr>0.0 0.8 0.0 0.0 0.1<br />
-&nbsp;<wbr>&nbsp;<wbr>0.0 0.0 0.8 0.0 0.1<br />
-&nbsp;<wbr>&nbsp;<wbr>0.0 0.0 0.0 0.8 0.1<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>0.8 0.0 0.0 0.0 0.1<br/>
+&nbsp;<wbr>&nbsp;<wbr>0.0 0.8 0.0 0.0 0.1<br/>
+&nbsp;<wbr>&nbsp;<wbr>0.0 0.0 0.8 0.0 0.1<br/>
+&nbsp;<wbr>&nbsp;<wbr>0.0 0.0 0.0 0.8 0.1<br/>
 &nbsp;<wbr>&nbsp;<wbr>0.0 0.0 0.0 0.0 1.0 </p>
 <dt><code>-red-primary </code><i>&lt;x&gt;,&lt;y&gt;</i></dt>
 <dd> red chromaticity primary point</dd>
@@ -1537,10 +1537,10 @@ description: "gm – command-line utility to create, edit, compare, convert, or 
 <dd> width and height of the image </dd>
 <p> Use this option to specify the width and height of raw images whose dimensions are unknown such as <code>GRAY</code>, <code>RGB</code>, or <code>CMYK</code>. In addition to width and height, use <code>-size</code> with an offset to skip any header information in the image or tell the number of colors in a <code>MAP</code> image file, (e.g. -size 640&#215;512+256). </p>
 <p> For Photo CD images, choose from these sizes: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>192&#215;128<br />
-&nbsp;<wbr>&nbsp;<wbr>384&#215;256<br />
-&nbsp;<wbr>&nbsp;<wbr>768&#215;512<br />
-&nbsp;<wbr>&nbsp;<wbr>1536&#215;1024<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>192&#215;128<br/>
+&nbsp;<wbr>&nbsp;<wbr>384&#215;256<br/>
+&nbsp;<wbr>&nbsp;<wbr>768&#215;512<br/>
+&nbsp;<wbr>&nbsp;<wbr>1536&#215;1024<br/>
 &nbsp;<wbr>&nbsp;<wbr>3072&#215;2048 </p>
 <p> Finally, use this option to choose a particular resolution layer of a JBIG or JPEG image (e.g. -size 1024&#215;768).</p>
 <dt><code>-snaps </code><i>&lt;value&gt;</i></dt>
@@ -1634,16 +1634,16 @@ description: "gm – command-line utility to create, edit, compare, convert, or 
 <dd> sharpen the image with an unsharp mask operator </dd>
 <p> The <code>-unsharp</code> option sharpens an image. The image is convolved with a Gaussian operator of the given radius and standard deviation (sigma). For reasonable results, radius should be larger than sigma. Use a radius of 0 to have the method select a suitable radius. </p>
 <p> The parameters are: </p>
-<p> <code>radius</code><br />
+<p> <code>radius</code><br/>
 &nbsp;<wbr> </p>
 <p> The radius of the Gaussian, in pixels, not counting the center pixel (default 0). </p>
-<p> <code>sigma</code><br />
+<p> <code>sigma</code><br/>
 &nbsp;<wbr> </p>
 <p> The standard deviation of the Gaussian, in pixels (default 1.0). </p>
-<p> <code>amount</code><br />
+<p> <code>amount</code><br/>
 &nbsp;<wbr> </p>
 <p> The percentage of the difference between the original and the blur image that is added back into the original (default 1.0). </p>
-<p> <code>threshold</code><br />
+<p> <code>threshold</code><br/>
 &nbsp;<wbr> </p>
 <p> The threshold, as a fraction of MaxRGB, needed to apply the difference amount (default 0.05). </p>
 <dt><code>-use-pixmap</code></dt>
@@ -1660,29 +1660,29 @@ description: "gm – command-line utility to create, edit, compare, convert, or 
 <dd> specify contents of &quot;virtual pixels&quot; </dd>
 <p> This option defines &quot;virtual pixels&quot; for use in operations that can access pixels outside the boundaries of an image. </p>
 <p> Choose from these methods: </p>
-<p> <code>Constant</code><br />
+<p> <code>Constant</code><br/>
 &nbsp;<wbr> </p>
 <p> Use the image background color. </p>
-<p> <code>Edge</code><br />
+<p> <code>Edge</code><br/>
 &nbsp;<wbr> </p>
 <p> Extend the edge pixel toward infinity (default). </p>
-<p> <code>Mirror</code><br />
+<p> <code>Mirror</code><br/>
 &nbsp;<wbr> </p>
 <p> Mirror the image. </p>
-<p> <code>Tile</code><br />
+<p> <code>Tile</code><br/>
 &nbsp;<wbr> </p>
 <p> Tile the image. </p>
 <p> This option affects operations that use virtual pixels such as <code>-blur</code>, <code>-sharpen</code>, <code>-wave</code>, etc.</p>
 <dt><code>-visual </code><i>&lt;type&gt;</i></dt>
 <dd> animate images using this X visual type </dd>
 <p> Choose from these visual classes: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>StaticGray<br />
-&nbsp;<wbr>&nbsp;<wbr>GrayScale<br />
-&nbsp;<wbr>&nbsp;<wbr>StaticColor<br />
-&nbsp;<wbr>&nbsp;<wbr>PseudoColor<br />
-&nbsp;<wbr>&nbsp;<wbr>TrueColor<br />
-&nbsp;<wbr>&nbsp;<wbr>DirectColor<br />
-&nbsp;<wbr>&nbsp;<wbr>default<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>StaticGray<br/>
+&nbsp;<wbr>&nbsp;<wbr>GrayScale<br/>
+&nbsp;<wbr>&nbsp;<wbr>StaticColor<br/>
+&nbsp;<wbr>&nbsp;<wbr>PseudoColor<br/>
+&nbsp;<wbr>&nbsp;<wbr>TrueColor<br/>
+&nbsp;<wbr>&nbsp;<wbr>DirectColor<br/>
+&nbsp;<wbr>&nbsp;<wbr>default<br/>
 &nbsp;<wbr>&nbsp;<wbr>visual id </p>
 <p> The X server must support the visual you choose, otherwise an error occurs. If a visual is not specified, the visual class that can display the most simultaneous colors on the default screen is chosen.</p>
 <dt><code>-watermark </code><i>&lt;brightness&gt;x&lt;saturation&gt;</i></dt>
@@ -1705,7 +1705,7 @@ description: "gm – command-line utility to create, edit, compare, convert, or 
 <dt><code>-write </code><i>&lt;filename&gt;</i></dt>
 <dd> write an intermediate image [<i>convert, composite</i>] </dd>
 <p> The current image is written to the specified filename and then processing continues using that image. The following is an example of how several sizes of an image may be generated in one command (repeat as often as needed): </p>
-<p>&nbsp;<wbr>gm convert input.jpg -resize 50%&nbsp;<wbr>-write input50.jpg&nbsp;<wbr>\<br />
+<p>&nbsp;<wbr>gm convert input.jpg -resize 50%&nbsp;<wbr>-write input50.jpg&nbsp;<wbr>\<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-resize 25%&nbsp;<wbr>input25.jpg </p>
 <dt><code>-write </code><i>&lt;filename&gt;</i></dt>
 <dd> write the image to a file [<i>display</i>] </dd>
@@ -1770,48 +1770,48 @@ description: "gm – command-line utility to create, edit, compare, convert, or 
 <dl>
 <dt><code>colors.mgk</code></dt>
 <dd> colors configuration file </dd>
-<p>&nbsp;<wbr>&nbsp;<wbr>&lt;?xml version=&quot;1.0&quot;?&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;colormap&gt;<br />
-&nbsp;<wbr>&lt;color name=&quot;AliceBlue&quot;&nbsp;<wbr>red=&quot;240&quot;&nbsp;<wbr>green=&quot;248&quot;&nbsp;<wbr>blue=&quot;255&quot;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>compliance=&quot;SVG, X11, XPM&quot;&nbsp;<wbr>/&gt;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&lt;?xml version=&quot;1.0&quot;?&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;colormap&gt;<br/>
+&nbsp;<wbr>&lt;color name=&quot;AliceBlue&quot;&nbsp;<wbr>red=&quot;240&quot;&nbsp;<wbr>green=&quot;248&quot;&nbsp;<wbr>blue=&quot;255&quot;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>compliance=&quot;SVG, X11, XPM&quot;&nbsp;<wbr>/&gt;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&lt;/colormap&gt; </p>
 <dt><code>delegates.mgk</code></dt>
 <dd> delegates configuration file</dd>
 <dt><code>log.mgk</code></dt>
 <dd> logging configuration file </dd>
-<p>&nbsp;<wbr>&nbsp;<wbr>&lt;?xml version=&quot;1.0&quot;?&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;magicklog&gt;<br />
-&nbsp;<wbr>&lt;log events=&quot;None&quot;&nbsp;<wbr>/&gt;<br />
-&nbsp;<wbr>&lt;log output=&quot;stdout&quot;&nbsp;<wbr>/&gt;<br />
-&nbsp;<wbr>&lt;log filename=&quot;Magick-%d.log&quot;&nbsp;<wbr>/&gt;<br />
-&nbsp;<wbr>&lt;log generations=&quot;3&quot;&nbsp;<wbr>/&gt;<br />
-&nbsp;<wbr>&lt;log limit=&quot;2000&quot;&nbsp;<wbr>/&gt;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&lt;?xml version=&quot;1.0&quot;?&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;magicklog&gt;<br/>
+&nbsp;<wbr>&lt;log events=&quot;None&quot;&nbsp;<wbr>/&gt;<br/>
+&nbsp;<wbr>&lt;log output=&quot;stdout&quot;&nbsp;<wbr>/&gt;<br/>
+&nbsp;<wbr>&lt;log filename=&quot;Magick-%d.log&quot;&nbsp;<wbr>/&gt;<br/>
+&nbsp;<wbr>&lt;log generations=&quot;3&quot;&nbsp;<wbr>/&gt;<br/>
+&nbsp;<wbr>&lt;log limit=&quot;2000&quot;&nbsp;<wbr>/&gt;<br/>
 &nbsp;<wbr>&lt;log format=&quot;%t&nbsp;<wbr>%r&nbsp;<wbr>%u&nbsp;<wbr>%p&nbsp;<wbr>%m/%f/%l/%d:
-&nbsp;<wbr>&nbsp;<wbr>%e&quot;&nbsp;<wbr>&nbsp;<wbr>/&gt;<br />
+&nbsp;<wbr>&nbsp;<wbr>%e&quot;&nbsp;<wbr>&nbsp;<wbr>/&gt;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&lt;/magicklog&gt; </p>
 <dt><code>modules.mgk</code></dt>
 <dd> loadable modules configuration file </dd>
-<p>&nbsp;<wbr>&nbsp;<wbr>&lt;?xml version=&quot;1.0&quot;?&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;modulemap&gt;<br />
-&nbsp;<wbr>&lt;module magick=&quot;8BIM&quot;&nbsp;<wbr>name=&quot;META&quot;&nbsp;<wbr>/&gt;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&lt;?xml version=&quot;1.0&quot;?&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;modulemap&gt;<br/>
+&nbsp;<wbr>&lt;module magick=&quot;8BIM&quot;&nbsp;<wbr>name=&quot;META&quot;&nbsp;<wbr>/&gt;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&lt;/modulemap&gt; </p>
 <dt><code>type.mgk</code></dt>
 <dd> master type (fonts) configuration file </dd>
-<p>&nbsp;<wbr>&nbsp;<wbr>&lt;?xml version=&quot;1.0&quot;?&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;typemap&gt;<br />
-&nbsp;<wbr>&lt;include file=&quot;type-windows.mgk&quot;&nbsp;<wbr>/&gt;<br />
-&nbsp;<wbr>&lt;type<br />
-name=&quot;AvantGarde-Book&quot;<br />
-fullname=&quot;AvantGarde Book&quot;<br />
-family=&quot;AvantGarde&quot;<br />
-foundry=&quot;URW&quot;<br />
-weight=&quot;400&quot;<br />
-style=&quot;normal&quot;<br />
-stretch=&quot;normal&quot;<br />
-format=&quot;type1&quot;<br />
-metrics=&quot;/usr/local/share/ghostscript/fonts/a010013l.afm&quot;<br />
-glyphs=&quot;/usr/local/share/ghostscript/fonts/a010013l.pfb&quot;<br />
-&nbsp;<wbr>/&gt;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&lt;?xml version=&quot;1.0&quot;?&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;typemap&gt;<br/>
+&nbsp;<wbr>&lt;include file=&quot;type-windows.mgk&quot;&nbsp;<wbr>/&gt;<br/>
+&nbsp;<wbr>&lt;type<br/>
+name=&quot;AvantGarde-Book&quot;<br/>
+fullname=&quot;AvantGarde Book&quot;<br/>
+family=&quot;AvantGarde&quot;<br/>
+foundry=&quot;URW&quot;<br/>
+weight=&quot;400&quot;<br/>
+style=&quot;normal&quot;<br/>
+stretch=&quot;normal&quot;<br/>
+format=&quot;type1&quot;<br/>
+metrics=&quot;/usr/local/share/ghostscript/fonts/a010013l.afm&quot;<br/>
+glyphs=&quot;/usr/local/share/ghostscript/fonts/a010013l.pfb&quot;<br/>
+&nbsp;<wbr>/&gt;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&lt;/typemap&gt; </p>
 </dl>
 <h2>GM ANIMATE</h2>
@@ -1822,7 +1822,7 @@ glyphs=&quot;/usr/local/share/ghostscript/fonts/a010013l.pfb&quot;<br />
 <p> To animate a set of images of a cockatoo, use: </p>
 <p>&nbsp;<wbr>gm animate cockatoo.* </p>
 <p> To animate a cockatoo image sequence while using the Standard Colormap <i>best</i>, use: </p>
-<p>&nbsp;<wbr>xstdcmap -best<br />
+<p>&nbsp;<wbr>xstdcmap -best<br/>
 &nbsp;<wbr>gm animate -map best cockatoo.* </p>
 <p> To animate an image of a cockatoo without a border centered on a backdrop, use: </p>
 <p>&nbsp;<wbr>gm animate&nbsp;<wbr>+borderwidth -backdrop cockatoo.* </p>
@@ -1933,7 +1933,7 @@ glyphs=&quot;/usr/local/share/ghostscript/fonts/a010013l.pfb&quot;<br />
 <dd> make image the background of a window </dd>
 <p> For a more detailed description of each option, see Options, above. </p>
 <p> Any option you specify on the command line remains in effect for the group of images following it, until the group is terminated by the appearance of any option or <code>-noop</code>. For example, to animate three images, the first with 32 colors, the second with an unlimited number of colors, and the third with only 16 colors, use: </p>
-<p>&nbsp;<wbr>gm animate -colors 32 cockatoo.1 -noop cockatoo.2<br />
+<p>&nbsp;<wbr>gm animate -colors 32 cockatoo.1 -noop cockatoo.2<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-colors 16 cockatoo.3 </p>
 <p> <code>Animate</code> options can appear on the command line or in your X resources file. See <i>X(1)</i>. Options on the command line supersede values specified in your X resources file. Image filenames may appear in any order on the command line if the image format is <i>MIFF</i> (refer to <code>miff(5)</code> and the <code>scene</code> keyword is specified in the image. Otherwise the images will display in the order they appear on the command line.</dl>
 <h2>MOUSE BUTTONS</h2>
@@ -1941,58 +1941,58 @@ glyphs=&quot;/usr/local/share/ghostscript/fonts/a010013l.pfb&quot;<br />
 <h2>COMMAND WIDGET</h2>
 <p> The Command widget lists a number of sub-menus and commands. They are </p>
 <p>&nbsp;<wbr><code>Animate</code> </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>Open<br />
-&nbsp;<wbr>&nbsp;<wbr>Play<br />
-&nbsp;<wbr>&nbsp;<wbr>Step<br />
-&nbsp;<wbr>&nbsp;<wbr>Repeat<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>Open<br/>
+&nbsp;<wbr>&nbsp;<wbr>Play<br/>
+&nbsp;<wbr>&nbsp;<wbr>Step<br/>
+&nbsp;<wbr>&nbsp;<wbr>Repeat<br/>
 &nbsp;<wbr>&nbsp;<wbr>Auto Reverse </p>
 <p>&nbsp;<wbr><code>Speed</code> </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>Faster<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>Faster<br/>
 &nbsp;<wbr>&nbsp;<wbr>Slower </p>
 <p>&nbsp;<wbr><code>Direction</code> </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>Forward<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>Forward<br/>
 &nbsp;<wbr>&nbsp;<wbr>Reverse </p>
-<p>&nbsp;<wbr><code>Image Info</code><br />
-&nbsp;<wbr><code>Help</code><br />
+<p>&nbsp;<wbr><code>Image Info</code><br/>
+&nbsp;<wbr><code>Help</code><br/>
 &nbsp;<wbr><code>Quit</code> </p>
 <p> Menu items with a indented triangle have a sub-menu. They are represented above as the indented items. To access a sub-menu item, move the pointer to the appropriate menu and press a button and drag. When you find the desired sub-menu item, release the button and the command is executed. Move the pointer away from the sub-menu if you decide not to execute a particular command.</p>
 <h2>KEYBOARD ACCELERATORS</h2>
-<p> <code>Ctl+O</code><br />
-&nbsp;<wbr> Press to load an image from a file. <code>space</code><br />
-&nbsp;<wbr> Press to display the next image in the sequence. <code>&lt;</code><br />
-&nbsp;<wbr> Press to speed-up the display of the images. Refer to <code>-delay</code> for more information. <code>&gt;</code><br />
-&nbsp;<wbr> Press to slow the display of the images. Refer to <code>-delay</code> for more information. <code>?</code><br />
-&nbsp;<wbr> Press to display information about the image. Press any key or button to erase the information. This information is printed: image name; image size; and the total number of unique colors in the image. <code>F1</code><br />
-&nbsp;<wbr> Press to display helpful information about <code><a href="/docs/linux/man/1-animate/">animate</a>(1)</code>. <code>Ctl-q</code><br />
+<p> <code>Ctl+O</code><br/>
+&nbsp;<wbr> Press to load an image from a file. <code>space</code><br/>
+&nbsp;<wbr> Press to display the next image in the sequence. <code>&lt;</code><br/>
+&nbsp;<wbr> Press to speed-up the display of the images. Refer to <code>-delay</code> for more information. <code>&gt;</code><br/>
+&nbsp;<wbr> Press to slow the display of the images. Refer to <code>-delay</code> for more information. <code>?</code><br/>
+&nbsp;<wbr> Press to display information about the image. Press any key or button to erase the information. This information is printed: image name; image size; and the total number of unique colors in the image. <code>F1</code><br/>
+&nbsp;<wbr> Press to display helpful information about <code><a href="/docs/linux/man/1-animate/">animate</a>(1)</code>. <code>Ctl-q</code><br/>
 &nbsp;<wbr> Press to discard all images and exit program. </p>
 <h2>X RESOURCES</h2>
 <p> <code>Animate</code> options can appear on the command line or in your X resource file. Options on the command line supersede values specified in your X resource file. See <code>X(1)</code> for more information on X resources. </p>
 <p> All <code>animate</code> options have a corresponding X resource. In addition, the <code>animate</code> program uses the following X resources: </p>
-<p> <code>background</code> <code>(</code><i>class</i> <code>Background)</code><br />
+<p> <code>background</code> <code>(</code><i>class</i> <code>Background)</code><br/>
 &nbsp;<wbr> </p>
-<p> Specifies the preferred color to use for the Image window background. The default is #ccc. <code>borderColor</code> <code>(</code><i>class</i> <code>BorderColor)</code><br />
+<p> Specifies the preferred color to use for the Image window background. The default is #ccc. <code>borderColor</code> <code>(</code><i>class</i> <code>BorderColor)</code><br/>
 &nbsp;<wbr> </p>
-<p> Specifies the preferred color to use for the Image window border. The default is #ccc. <code>borderWidth</code> <code>(</code><i>class</i> <code>BorderWidth)</code><br />
+<p> Specifies the preferred color to use for the Image window border. The default is #ccc. <code>borderWidth</code> <code>(</code><i>class</i> <code>BorderWidth)</code><br/>
 &nbsp;<wbr> </p>
-<p> Specifies the width in pixels of the Image window border. The default is 2. <code>font</code> <code>(</code><i>class</i> <code>Font</code> <code>or</code> <code>FontList)</code><br />
+<p> Specifies the width in pixels of the Image window border. The default is 2. <code>font</code> <code>(</code><i>class</i> <code>Font</code> <code>or</code> <code>FontList)</code><br/>
 &nbsp;<wbr> </p>
-<p> Specifies the name of the preferred font to use in normal formatted text. The default is 14 point <i>Helvetica</i>. <code>foreground</code> <code>(</code><i>class</i> <code>Foreground)</code><br />
+<p> Specifies the name of the preferred font to use in normal formatted text. The default is 14 point <i>Helvetica</i>. <code>foreground</code> <code>(</code><i>class</i> <code>Foreground)</code><br/>
 &nbsp;<wbr> </p>
-<p> Specifies the preferred color to use for text within the Image window. The default is black. <code>geometry</code> <code>(</code><i>class</i> <code>geometry)</code><br />
+<p> Specifies the preferred color to use for text within the Image window. The default is black. <code>geometry</code> <code>(</code><i>class</i> <code>geometry)</code><br/>
 &nbsp;<wbr> </p>
-<p> Specifies the preferred size and position of the image window. It is not necessarily obeyed by all window managers. Offsets, if present, are handled in <i>X(1)</i> style. A negative x offset is measured from the right edge of the screen to the right edge of the icon, and a negative y offset is measured from the bottom edge of the screen to the bottom edge of the icon. <code>iconGeometry</code> <code>(</code><i>class</i> <code>IconGeometry)</code><br />
+<p> Specifies the preferred size and position of the image window. It is not necessarily obeyed by all window managers. Offsets, if present, are handled in <i>X(1)</i> style. A negative x offset is measured from the right edge of the screen to the right edge of the icon, and a negative y offset is measured from the bottom edge of the screen to the bottom edge of the icon. <code>iconGeometry</code> <code>(</code><i>class</i> <code>IconGeometry)</code><br/>
 &nbsp;<wbr> </p>
-<p> Specifies the preferred size and position of the application when iconified. It is not necessarily obeyed by all window managers. Offsets, if present, are handled in the same manner as in class Geometry. <code>iconic</code> <code>(</code><i>class</i> <code>Iconic)</code><br />
+<p> Specifies the preferred size and position of the application when iconified. It is not necessarily obeyed by all window managers. Offsets, if present, are handled in the same manner as in class Geometry. <code>iconic</code> <code>(</code><i>class</i> <code>Iconic)</code><br/>
 &nbsp;<wbr> </p>
-<p> This resource indicates that you would prefer that the application&#8217;s windows initially not be visible as if the windows had be immediately iconified by you. Window managers may choose not to honor the application&#8217;s request. <code>matteColor</code> <code>(</code><i>class</i> <code>MatteColor)</code><br />
+<p> This resource indicates that you would prefer that the application&#8217;s windows initially not be visible as if the windows had be immediately iconified by you. Window managers may choose not to honor the application&#8217;s request. <code>matteColor</code> <code>(</code><i>class</i> <code>MatteColor)</code><br/>
 &nbsp;<wbr> </p>
-<p> Specify the color of windows. It is used for the backgrounds of windows, menus, and notices. A 3D effect is achieved by using highlight and shadow colors derived from this color. Default value: #ddd. <code>name</code> <code>(</code><i>class</i> <code>Name)</code><br />
+<p> Specify the color of windows. It is used for the backgrounds of windows, menus, and notices. A 3D effect is achieved by using highlight and shadow colors derived from this color. Default value: #ddd. <code>name</code> <code>(</code><i>class</i> <code>Name)</code><br/>
 &nbsp;<wbr> </p>
-<p> This resource specifies the name under which resources for the application should be found. This resource is useful in shell aliases to distinguish between invocations of an application, without resorting to creating links to alter the executable file name. The default is the application name. <code>sharedMemory</code> <code>(</code><i>class</i> <code>SharedMemory)</code><br />
+<p> This resource specifies the name under which resources for the application should be found. This resource is useful in shell aliases to distinguish between invocations of an application, without resorting to creating links to alter the executable file name. The default is the application name. <code>sharedMemory</code> <code>(</code><i>class</i> <code>SharedMemory)</code><br/>
 &nbsp;<wbr> </p>
-<p> This resource specifies whether animate should attempt use shared memory for pixmaps. ImageMagick must be compiled with shared memory support, and the display must support the MIT-SHM extension. Otherwise, this resource is ignored. The default is True. <code>text_font</code> <code>(</code><i>class</i> <code>textFont)</code><br />
+<p> This resource specifies whether animate should attempt use shared memory for pixmaps. ImageMagick must be compiled with shared memory support, and the display must support the MIT-SHM extension. Otherwise, this resource is ignored. The default is True. <code>text_font</code> <code>(</code><i>class</i> <code>textFont)</code><br/>
 &nbsp;<wbr> </p>
-<p> Specifies the name of the preferred font to use in fixed (typewriter style) formatted text. The default is 14 point <i>Courier</i>. <code>title</code> <code>(</code><i>class</i> <code>Title)</code><br />
+<p> Specifies the name of the preferred font to use in fixed (typewriter style) formatted text. The default is 14 point <i>Courier</i>. <code>title</code> <code>(</code><i>class</i> <code>Title)</code><br/>
 &nbsp;<wbr> </p>
 <p> This resource specifies the title to be used for the Image window. This information is sometimes used by a window manager to provide some sort of header identifying the window. The default is the image file name. </p>
 <h2>GM BATCH</h2>
@@ -2000,19 +2000,19 @@ glyphs=&quot;/usr/local/share/ghostscript/fonts/a010013l.pfb&quot;<br />
 <p> <code>batch</code> executes an arbitary number of the utility commands (e.g. <code>convert</code>) in the form of a simple linear batch script in order to improve execution efficiency, and/or to allow use as a subordinate co-process under the control of an arbitrary script or program.</p>
 <h2>EXAMPLES</h2>
 <p>&nbsp;<wbr>To drive&nbsp;<wbr><code>&#8216;gm batch&#8217;</code>&nbsp;<wbr>using a shell script&nbsp;<wbr>(or a program written in any language), have the script/program send commands to &#8216;gm batch&#8217; via its standard input. Specify that standard input should be used by using <code>&#8216;-&#8216;</code> as the file name. The following example converts all files matching &#8216;*.jpg&#8217; to TIFF format while rotating each file by 90 degrees and stripping all embedded profiles. The shell script syntax is standard Unix shell: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>for file in&nbsp;<wbr>*.jpg<br />
-&nbsp;<wbr>&nbsp;<wbr>do<br />
-&nbsp;<wbr>outfile=`basename&nbsp;<wbr>$file .jpg`.tiff<br />
-&nbsp;<wbr>echo convert -verbose&nbsp;<wbr>&quot;&#8217;$file&#8217;&quot;&nbsp;<wbr>-rotate 90&nbsp;<wbr>\<br />
-&nbsp;<wbr>+profile&nbsp;<wbr>&quot;&#8217;*&#8217;&quot;&nbsp;<wbr>&quot;&#8217;$outfile&#8217;&quot;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>for file in&nbsp;<wbr>*.jpg<br/>
+&nbsp;<wbr>&nbsp;<wbr>do<br/>
+&nbsp;<wbr>outfile=`basename&nbsp;<wbr>$file .jpg`.tiff<br/>
+&nbsp;<wbr>echo convert -verbose&nbsp;<wbr>&quot;&#8217;$file&#8217;&quot;&nbsp;<wbr>-rotate 90&nbsp;<wbr>\<br/>
+&nbsp;<wbr>+profile&nbsp;<wbr>&quot;&#8217;*&#8217;&quot;&nbsp;<wbr>&quot;&#8217;$outfile&#8217;&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>done | gm batch -echo on -feedback on &#8211; </p>
 <p> We can accomplish the same as the previous example by putting all the commands in a text file and then specifying the name of the text file as the script to execute: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>for file in&nbsp;<wbr>*.jpg<br />
-&nbsp;<wbr>&nbsp;<wbr>do<br />
-&nbsp;<wbr>outfile=`basename&nbsp;<wbr>$file .jpg`.tiff<br />
-&nbsp;<wbr>echo convert -verbose&nbsp;<wbr>&quot;&#8217;$file&#8217;&quot;&nbsp;<wbr>-rotate 90&nbsp;<wbr>\<br />
-&nbsp;<wbr>+profile&nbsp;<wbr>&quot;&#8217;*&#8217;&quot;&nbsp;<wbr>&quot;&#8217;$outfile&#8217;&quot;<br />
-&nbsp;<wbr>&nbsp;<wbr>done&nbsp;<wbr>&gt;&nbsp;<wbr>script.txt<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>for file in&nbsp;<wbr>*.jpg<br/>
+&nbsp;<wbr>&nbsp;<wbr>do<br/>
+&nbsp;<wbr>outfile=`basename&nbsp;<wbr>$file .jpg`.tiff<br/>
+&nbsp;<wbr>echo convert -verbose&nbsp;<wbr>&quot;&#8217;$file&#8217;&quot;&nbsp;<wbr>-rotate 90&nbsp;<wbr>\<br/>
+&nbsp;<wbr>+profile&nbsp;<wbr>&quot;&#8217;*&#8217;&quot;&nbsp;<wbr>&quot;&#8217;$outfile&#8217;&quot;<br/>
+&nbsp;<wbr>&nbsp;<wbr>done&nbsp;<wbr>&gt;&nbsp;<wbr>script.txt<br/>
 &nbsp;<wbr>&nbsp;<wbr>gm batch -echo on -feedback on script.txt </p>
 <h2>OPTIONS</h2>
 <p> Options are processed from left to right and must appear before any filename argument.</p>
@@ -2048,22 +2048,22 @@ glyphs=&quot;/usr/local/share/ghostscript/fonts/a010013l.pfb&quot;<br />
 <p> To obtain benchmark information for a single execution of a command: </p>
 <p>&nbsp;<wbr>gm benchmark convert input.ppm -gaussian 0x1 output.ppm </p>
 <p> To obtain benchmark information from 100 iterations of the command: </p>
-<p>&nbsp;<wbr>gm benchmark -iterations 100 convert input.ppm&nbsp;<wbr>\<br />
+<p>&nbsp;<wbr>gm benchmark -iterations 100 convert input.ppm&nbsp;<wbr>\<br/>
 -gaussian 0x1 output.ppm </p>
 <p> To obtain benchmark information by iterating the command until a specified amount of time (in seconds) has been consumed: </p>
-<p>&nbsp;<wbr>gm benchmark -duration 30 convert input.ppm&nbsp;<wbr>\<br />
+<p>&nbsp;<wbr>gm benchmark -duration 30 convert input.ppm&nbsp;<wbr>\<br/>
 -gaussian 0x1 output.ppm </p>
 <p> To obtain a full performance report with an increasing number of threads (1-32 threads, stepping the number of threads by four each time): </p>
-<p>&nbsp;<wbr>gm benchmark -duration 3 -stepthreads 4 convert&nbsp;<wbr>\<br />
+<p>&nbsp;<wbr>gm benchmark -duration 3 -stepthreads 4 convert&nbsp;<wbr>\<br/>
 input.ppm -gaussian 0x2 output.ppm </p>
 <p> Here is the interpretation of the output: </p>
-<p>&nbsp;<wbr><code>threads</code>&nbsp;<wbr>&#8211; number of threads used.<br />
-&nbsp;<wbr><code>iter</code>&nbsp;<wbr>&#8211; number of command iterations executed.<br />
-&nbsp;<wbr><code>user</code>&nbsp;<wbr>&#8211; total user time consumed.<br />
-&nbsp;<wbr><code>total</code>&nbsp;<wbr>&#8211; total elapsed time consumed.<br />
-&nbsp;<wbr><code>iter/s</code>&nbsp;<wbr>&#8211; number of command iterations per second.<br />
-&nbsp;<wbr><code>iter/cpu</code>&nbsp;<wbr>&#8211; amount of CPU time consumed per iteration.<br />
-&nbsp;<wbr><code>speedup</code>&nbsp;<wbr>&#8211; speedup compared with one thread.<br />
+<p>&nbsp;<wbr><code>threads</code>&nbsp;<wbr>&#8211; number of threads used.<br/>
+&nbsp;<wbr><code>iter</code>&nbsp;<wbr>&#8211; number of command iterations executed.<br/>
+&nbsp;<wbr><code>user</code>&nbsp;<wbr>&#8211; total user time consumed.<br/>
+&nbsp;<wbr><code>total</code>&nbsp;<wbr>&#8211; total elapsed time consumed.<br/>
+&nbsp;<wbr><code>iter/s</code>&nbsp;<wbr>&#8211; number of command iterations per second.<br/>
+&nbsp;<wbr><code>iter/cpu</code>&nbsp;<wbr>&#8211; amount of CPU time consumed per iteration.<br/>
+&nbsp;<wbr><code>speedup</code>&nbsp;<wbr>&#8211; speedup compared with one thread.<br/>
 &nbsp;<wbr><code>karp-flatt</code>&nbsp;<wbr>&#8211; Karp-Flatt measure of speedup efficiency. </p>
 <p> <i>Please note that the reported &quot;speedup&quot; is based on the execution time of just one thread. A preliminary warm-up pass is used before timing the first loop in order to ensure that the CPU is brought out of power-saving modes and that system caches are warmed up. Most modern CPUs provide a &quot;turbo&quot; mode where the CPU clock speed is increased (e.g. by a factor of two) when only one or two cores are active. If the CPU grows excessively hot (due to insufficient cooling), then it may dial back its clock rates as a form of thermal management. These factors result in an under-reporting of speedup compared to if &quot;turbo&quot; mode was disabled and the CPU does not need to worry about thermal management. The </i><code>powertop</code> utility available under Linux and Solaris provides a way to observe CPU core clock rates while a benchmark is running.</p>
 <h2>OPTIONS</h2>
@@ -2079,7 +2079,7 @@ input.ppm -gaussian 0x2 output.ppm </p>
 <dt><code>-rawcsv</code></dt>
 <dd> Print results in CSV format Print results in a comma-separated value (CSV) format which is easy to parse for plotting or importing into a spreadsheet or database. The values reported are <code>threads</code>, <code>iterations</code>, <code>user_time</code>, and <code>elapsed_time</code>.</dd>
 <dt><code>-stepthreads </code><i>step</i></dt>
-<dd> execute a per-thread benchmark ramp<br />
+<dd> execute a per-thread benchmark ramp<br/>
 &nbsp;<wbr>Execute a per-thread benchmark ramp, incrementing the number of threads at each step by the specified value. The maximum number of threads is taken from the standard OMP_NUM_THREADS environment variable.</dd></dl>
 <h2>GM COMPARE</h2>
 <p> <code>compare</code> compares two similar images using a specified statistical method (see <code>-metric</code>) and/or by writing a difference image (<code>-file</code>), with the altered pixels annotated using a specified method (see <code>-highlight-style</code>) and color (see <code>-highlight-color</code>). <i>Reference-image</i> is the original image and <i>compare-image</i> is the (possibly) altered version, which should have the same dimensions as <i>reference-image</i>.</p>
@@ -2087,7 +2087,7 @@ input.ppm -gaussian 0x2 output.ppm </p>
 <p> To compare two images using Mean Square Error (MSE) statistical analysis use: </p>
 <p>&nbsp;<wbr>gm compare -metric mse original.miff compare.miff </p>
 <p> To create an annotated difference image use: </p>
-<p>&nbsp;<wbr>gm compare -highlight-style assign -highlight-color purple&nbsp;<wbr>\<br />
+<p>&nbsp;<wbr>gm compare -highlight-style assign -highlight-color purple&nbsp;<wbr>\<br/>
 -file diff.miff original.miff compare.miff </p>
 <h2>OPTIONS</h2>
 <p> Options are processed in command line order. Any option you specify on the command line remains in effect only for the image that follows. All options are reset to their default values after each image is read. </p>
@@ -2150,19 +2150,19 @@ input.ppm -gaussian 0x2 output.ppm </p>
 <p> To composite an image of a cockatoo with a perch, use: </p>
 <p>&nbsp;<wbr>gm composite cockatoo.miff perch.ras composite.miff </p>
 <p> To compute the difference between images in a series, use: </p>
-<p>&nbsp;<wbr>gm composite -compose difference series.2 series.1<br />
+<p>&nbsp;<wbr>gm composite -compose difference series.2 series.1<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>difference.miff </p>
 <p> To composite an image of a cockatoo with a perch starting at location (100,150), use: </p>
-<p>&nbsp;<wbr>gm composite -geometry&nbsp;<wbr>+100+150 cockatoo.miff<br />
+<p>&nbsp;<wbr>gm composite -geometry&nbsp;<wbr>+100+150 cockatoo.miff<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>perch.ras composite.miff </p>
 <p> To tile a logo across your image of a cockatoo, use </p>
-<p>&nbsp;<wbr>gm convert&nbsp;<wbr>+shade 30&#215;60 cockatoo.miff mask.miff<br />
-&nbsp;<wbr>gm composite -compose bumpmap -tile logo.png<br />
+<p>&nbsp;<wbr>gm convert&nbsp;<wbr>+shade 30&#215;60 cockatoo.miff mask.miff<br/>
+&nbsp;<wbr>gm composite -compose bumpmap -tile logo.png<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>cockatoo.miff mask.miff composite.miff </p>
 <p> To composite a red, green, and blue color plane into a single composite image, try </p>
-<p>&nbsp;<wbr>gm composite -compose CopyGreen green.png red.png<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>red-green.png<br />
-&nbsp;<wbr>gm composite -compose CopyBlue blue.png red-green.png&nbsp;<wbr><br />
+<p>&nbsp;<wbr>gm composite -compose CopyGreen green.png red.png<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>red-green.png<br/>
+&nbsp;<wbr>gm composite -compose CopyBlue blue.png red-green.png&nbsp;<wbr><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>gm composite.png </p>
 <h2>OPTIONS</h2>
 <p> Options are processed in command line order. Any option you specify on the command line remains in effect only for the image that follows. All options are reset to their default values after each image is read. </p>
@@ -2296,17 +2296,17 @@ input.ppm -gaussian 0x2 output.ppm </p>
 </dl>
 <h2>GM CONJURE</h2>
 <p> The Magick scripting language (MSL) will primarily benefit those that want to accomplish custom image processing tasks but do not wish to program, or those that do not have access to a Perl interpreter or a compiler. The interpreter is called conjure and here is an example script: </p>
-<p>&nbsp;<wbr>&lt;?xml version=&quot;1.0&quot;&nbsp;<wbr>encoding=&quot;UTF-8&quot;?&gt;<br />
-&nbsp;<wbr>&lt;image size=&quot;400&#215;400&quot;&nbsp;<wbr>&gt;<br />
-&lt;read filename=&quot;image.gif&quot;&nbsp;<wbr>/&gt;<br />
-&lt;get width=&quot;base-width&quot;&nbsp;<wbr>height=&quot;base-height&quot;&nbsp;<wbr>/&gt;<br />
-&lt;resize geometry=&quot;%[dimensions]&quot;&nbsp;<wbr>/&gt;<br />
-&lt;get width=&quot;width&quot;&nbsp;<wbr>height=&quot;height&quot;&nbsp;<wbr>/&gt;<br />
-&lt;print output=<br />
-&nbsp;<wbr>&nbsp;<wbr>&quot;Image sized from&nbsp;<wbr>%[base-width]x%[base-height]<br />
+<p>&nbsp;<wbr>&lt;?xml version=&quot;1.0&quot;&nbsp;<wbr>encoding=&quot;UTF-8&quot;?&gt;<br/>
+&nbsp;<wbr>&lt;image size=&quot;400&#215;400&quot;&nbsp;<wbr>&gt;<br/>
+&lt;read filename=&quot;image.gif&quot;&nbsp;<wbr>/&gt;<br/>
+&lt;get width=&quot;base-width&quot;&nbsp;<wbr>height=&quot;base-height&quot;&nbsp;<wbr>/&gt;<br/>
+&lt;resize geometry=&quot;%[dimensions]&quot;&nbsp;<wbr>/&gt;<br/>
+&lt;get width=&quot;width&quot;&nbsp;<wbr>height=&quot;height&quot;&nbsp;<wbr>/&gt;<br/>
+&lt;print output=<br/>
+&nbsp;<wbr>&nbsp;<wbr>&quot;Image sized from&nbsp;<wbr>%[base-width]x%[base-height]<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>to&nbsp;<wbr>%[width]x%[height].
-&quot;&nbsp;<wbr>/&gt;<br />
-&lt;write filename=&quot;image.png&quot;&nbsp;<wbr>/&gt;<br />
+&quot;&nbsp;<wbr>/&gt;<br/>
+&lt;write filename=&quot;image.png&quot;&nbsp;<wbr>/&gt;<br/>
 &nbsp;<wbr>&lt;/image&gt; </p>
 <p> invoked with </p>
 <p>&nbsp;<wbr>gm conjure -dimensions 400&#215;400 incantation.msl </p>
@@ -2333,161 +2333,161 @@ input.ppm -gaussian 0x2 output.ppm </p>
 <dd> print GraphicsMagick version string</dd></dl>
 <h2>MAGICK SCRIPTING LANGUAGE</h2>
 <p> The Magick Scripting Language (MSL) presently defines the following elements and their attributes: </p>
-<p> <code>&lt;image&gt;</code><br />
+<p> <code>&lt;image&gt;</code><br/>
 &nbsp;<wbr> background, color, id, size </p>
 <p> Define a new image object. <code>&lt;/image&gt;</code> destroys it. Because of this, if you wish to reference multiple &quot;subimages&quot; (aka pages or layers), you can embed one <code>image</code> element inside of another. For example: </p>
-<p>&nbsp;<wbr>&lt;image&gt;<br />
-&nbsp;<wbr>&lt;read filename=&quot;input.png&quot;&nbsp;<wbr>/&gt;<br />
-&nbsp;<wbr>&lt;get width=&quot;base-width&quot;&nbsp;<wbr>height=&quot;base-height&quot;&nbsp;<wbr>/&gt;<br />
-&nbsp;<wbr>&lt;image height=&quot;base-height&quot;&nbsp;<wbr>width=&quot;base-width&quot;&gt;<br />
-&nbsp;<wbr>&lt;image&nbsp;<wbr>/&gt;<br />
-&nbsp;<wbr>&lt;write filename=&quot;output.mng&quot;&nbsp;<wbr>/&gt;<br />
+<p>&nbsp;<wbr>&lt;image&gt;<br/>
+&nbsp;<wbr>&lt;read filename=&quot;input.png&quot;&nbsp;<wbr>/&gt;<br/>
+&nbsp;<wbr>&lt;get width=&quot;base-width&quot;&nbsp;<wbr>height=&quot;base-height&quot;&nbsp;<wbr>/&gt;<br/>
+&nbsp;<wbr>&lt;image height=&quot;base-height&quot;&nbsp;<wbr>width=&quot;base-width&quot;&gt;<br/>
+&nbsp;<wbr>&lt;image&nbsp;<wbr>/&gt;<br/>
+&nbsp;<wbr>&lt;write filename=&quot;output.mng&quot;&nbsp;<wbr>/&gt;<br/>
 &nbsp;<wbr>&lt;/image&gt; </p>
 <p>&nbsp;<wbr>&lt;image size=&quot;400&#215;400&quot;&nbsp;<wbr>/&gt; </p>
-<p> <code>&lt;group&gt;</code><br />
+<p> <code>&lt;group&gt;</code><br/>
 &nbsp;<wbr> </p>
 <p> Define a new group of image objects. By default, images are only valid for the life of their <code>&lt;image&gt;</code>element. </p>
-<p>&nbsp;<wbr>&lt;image&gt;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8212; creates the image<br />
-&nbsp;<wbr>&#8230;..&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8212; do stuff with it<br />
+<p>&nbsp;<wbr>&lt;image&gt;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8212; creates the image<br/>
+&nbsp;<wbr>&#8230;..&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8212; do stuff with it<br/>
 &nbsp;<wbr>&lt;/image&gt;&nbsp;<wbr>&nbsp;<wbr>&#8212; dispose of the image </p>
 <p> However, in a group, all images in that group will stay around for the life of the group: </p>
-<p>&nbsp;<wbr>&lt;group&gt;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8212; start a group<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;image&gt;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8212; create an image<br />
-&nbsp;<wbr>&nbsp;<wbr>&#8230;.&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8212; do stuff<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;/image&gt;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8212; NOOP<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;image&gt;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8212; create another image<br />
-&nbsp;<wbr>&nbsp;<wbr>&#8230;.&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8212; do more stuff<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;/image&gt;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8212; NOOP<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;write filename=&quot;image.mng&quot;&nbsp;<wbr>/&gt;&nbsp;<wbr>&nbsp;<wbr>&#8212; output<br />
+<p>&nbsp;<wbr>&lt;group&gt;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8212; start a group<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;image&gt;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8212; create an image<br/>
+&nbsp;<wbr>&nbsp;<wbr>&#8230;.&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8212; do stuff<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;/image&gt;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8212; NOOP<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;image&gt;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8212; create another image<br/>
+&nbsp;<wbr>&nbsp;<wbr>&#8230;.&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8212; do more stuff<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;/image&gt;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8212; NOOP<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;write filename=&quot;image.mng&quot;&nbsp;<wbr>/&gt;&nbsp;<wbr>&nbsp;<wbr>&#8212; output<br/>
 &nbsp;<wbr>&lt;/group&gt;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8212; dispose of both images </p>
-<p> <code>&lt;read&gt;</code><br />
-&nbsp;<wbr><br />
+<p> <code>&lt;read&gt;</code><br/>
+&nbsp;<wbr><br/>
 &nbsp;<wbr>filename </p>
 <p> Read a new image from a disk file. </p>
 <p>&nbsp;<wbr>&lt;read filename=&quot;image.gif&quot;&nbsp;<wbr>/&gt; </p>
 <p> To read two images use </p>
-<p>&nbsp;<wbr>&lt;read filename=&quot;image.gif&quot;&nbsp;<wbr>/&gt;<br />
+<p>&nbsp;<wbr>&lt;read filename=&quot;image.gif&quot;&nbsp;<wbr>/&gt;<br/>
 &nbsp;<wbr>&lt;read filename=&quot;image.png&nbsp;<wbr>/&gt; </p>
-<p> <code>&lt;write&gt;</code><br />
-&nbsp;<wbr><br />
+<p> <code>&lt;write&gt;</code><br/>
+&nbsp;<wbr><br/>
 &nbsp;<wbr>filename Write the image(s) to disk, either as a single multiple-image file or multiple ones if necessary. </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&lt;write filename=image.tiff&quot;&nbsp;<wbr>/&gt; </p>
-<p> <code>&lt;get&gt;</code><br />
+<p> <code>&lt;get&gt;</code><br/>
 &nbsp;<wbr> Get any attribute recognized by PerlMagick&#8217;s GetAttribute() and stores it as an image attribute for later use. Currently only <i>width</i> and <i>height</i> are supported. </p>
-<p>&nbsp;<wbr>&lt;get width=&quot;base-width&quot;&nbsp;<wbr>height=&quot;base-height&quot;&nbsp;<wbr>/&gt;<br />
+<p>&nbsp;<wbr>&lt;get width=&quot;base-width&quot;&nbsp;<wbr>height=&quot;base-height&quot;&nbsp;<wbr>/&gt;<br/>
 &nbsp;<wbr>&lt;print output=&quot;Image size is&nbsp;<wbr>%[base-width]x%[base-height].
 &quot;&nbsp;<wbr>/&gt; </p>
-<p> <code>&lt;set&gt;</code><br />
-&nbsp;<wbr> background, bordercolor, clip-mask, colorspace, density, magick, mattecolor, opacity. Set an attribute recognized by PerlMagick&#8217;s GetAttribute(). <code>&lt;profile&gt;</code><br />
-&nbsp;<wbr><br />
+<p> <code>&lt;set&gt;</code><br/>
+&nbsp;<wbr> background, bordercolor, clip-mask, colorspace, density, magick, mattecolor, opacity. Set an attribute recognized by PerlMagick&#8217;s GetAttribute(). <code>&lt;profile&gt;</code><br/>
+&nbsp;<wbr><br/>
 &nbsp;<wbr>[profilename] </p>
 <p> Read one or more IPTC, ICC or generic profiles from file and assign to image </p>
 <p>&nbsp;<wbr>&lt;profile iptc=&quot;profile.iptc&quot;&nbsp;<wbr>generic=&quot;generic.dat&quot;&nbsp;<wbr>/&gt; </p>
 <p> To remove a specified profile use &quot;!&quot; as the filename eg </p>
 <p>&nbsp;<wbr>&lt;profile icm=&quot;!&quot;&nbsp;<wbr>iptc=&quot;profile.iptc&quot;&nbsp;<wbr>/&gt; </p>
-<p> <code>&lt;border&gt;</code><br />
-&nbsp;<wbr><br />
-&nbsp;<wbr>fill, geometry, height, width <code>&lt;blur&gt;</code><br />
-&nbsp;<wbr><br />
-&nbsp;<wbr>radius, sigma <code>&lt;charcoal&gt;</code><br />
-&nbsp;<wbr><br />
-&nbsp;<wbr>radius, sigma <code>&lt;chop&gt;</code><br />
-&nbsp;<wbr><br />
-&nbsp;<wbr>geometry, height, width, x, y <code>&lt;crop&gt;</code><br />
-&nbsp;<wbr><br />
-&nbsp;<wbr>geometry, height, width, x, y <code>&lt;composite&gt;</code><br />
-&nbsp;<wbr><br />
+<p> <code>&lt;border&gt;</code><br/>
+&nbsp;<wbr><br/>
+&nbsp;<wbr>fill, geometry, height, width <code>&lt;blur&gt;</code><br/>
+&nbsp;<wbr><br/>
+&nbsp;<wbr>radius, sigma <code>&lt;charcoal&gt;</code><br/>
+&nbsp;<wbr><br/>
+&nbsp;<wbr>radius, sigma <code>&lt;chop&gt;</code><br/>
+&nbsp;<wbr><br/>
+&nbsp;<wbr>geometry, height, width, x, y <code>&lt;crop&gt;</code><br/>
+&nbsp;<wbr><br/>
+&nbsp;<wbr>geometry, height, width, x, y <code>&lt;composite&gt;</code><br/>
+&nbsp;<wbr><br/>
 &nbsp;<wbr>compose, geometry, gravity, image, x, y </p>
-<p>&nbsp;<wbr>&lt;?xml version=&quot;1.0&quot;&nbsp;<wbr>encoding=&quot;UTF-8&quot;?&gt;<br />
-&nbsp;<wbr>&lt;group&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;image id=&quot;image_01&quot;&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&lt;read filename=&quot;cloud3.gif&quot;/&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&lt;resize geometry=&quot;250&#215;90&quot;/&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;/image&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;image id=&quot;image_02&quot;&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&lt;read filename=&quot;cloud4.gif&quot;/&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&lt;resize geometry=&quot;190&#215;100&quot;/&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;/image&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;image&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&lt;read filename=&quot;background.jpg&quot;/&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&lt;composite image=&quot;image_01&quot;&nbsp;<wbr>geometry=&quot;+740+470&quot;/&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&lt;composite image=&quot;image_02&quot;&nbsp;<wbr>geometry=&quot;+390+415&quot;/&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;/image&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;write filename=&quot;result.png&quot;/&gt;<br />
+<p>&nbsp;<wbr>&lt;?xml version=&quot;1.0&quot;&nbsp;<wbr>encoding=&quot;UTF-8&quot;?&gt;<br/>
+&nbsp;<wbr>&lt;group&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;image id=&quot;image_01&quot;&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&lt;read filename=&quot;cloud3.gif&quot;/&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&lt;resize geometry=&quot;250&#215;90&quot;/&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;/image&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;image id=&quot;image_02&quot;&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&lt;read filename=&quot;cloud4.gif&quot;/&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&lt;resize geometry=&quot;190&#215;100&quot;/&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;/image&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;image&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&lt;read filename=&quot;background.jpg&quot;/&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&lt;composite image=&quot;image_01&quot;&nbsp;<wbr>geometry=&quot;+740+470&quot;/&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&lt;composite image=&quot;image_02&quot;&nbsp;<wbr>geometry=&quot;+390+415&quot;/&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;/image&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;write filename=&quot;result.png&quot;/&gt;<br/>
 &nbsp;<wbr>&lt;/group&gt; </p>
-<p> <code>&lt;despeckle&gt;</code><br />
-&nbsp;<wbr> <code>&lt;emboss&gt;</code><br />
-&nbsp;<wbr><br />
-&nbsp;<wbr>radius, sigma <code>&lt;enhance&gt;</code><br />
-&nbsp;<wbr> <code>&lt;equalize&gt;</code><br />
-&nbsp;<wbr> <code>&lt;edge&gt;</code><br />
-&nbsp;<wbr><br />
-&nbsp;<wbr>radius <code>&lt;flip&gt;</code><br />
-&nbsp;<wbr> <code>&lt;flop&gt;</code><br />
-&nbsp;<wbr> <code>&lt;frame&gt;</code><br />
-&nbsp;<wbr><br />
-&nbsp;<wbr>fill, geometry, height, width, x, y, inner, outer <code>&lt;flatten&gt;</code><br />
-&nbsp;<wbr> <code>&lt;get&gt;</code><br />
-&nbsp;<wbr><br />
-&nbsp;<wbr>height, width <code>&lt;gamma&gt;</code><br />
-&nbsp;<wbr><br />
-&nbsp;<wbr>red, green, blue <code>&lt;image&gt;</code><br />
-&nbsp;<wbr><br />
-&nbsp;<wbr>background, color, id, size <code>&lt;implode&gt;</code><br />
-&nbsp;<wbr><br />
-&nbsp;<wbr>amount <code>&lt;magnify&gt;</code><br />
-&nbsp;<wbr> <code>&lt;minify&gt;</code><br />
-&nbsp;<wbr> <code>&lt;medianfilter&gt;</code><br />
-&nbsp;<wbr><br />
-&nbsp;<wbr>radius <code>&lt;normalize&gt;</code><br />
-&nbsp;<wbr> <code>&lt;oilpaint&gt;</code><br />
-&nbsp;<wbr><br />
-&nbsp;<wbr>radius <code>&lt;print&gt;</code><br />
-&nbsp;<wbr><br />
-&nbsp;<wbr>output <code>&lt;profile&gt;</code><br />
-&nbsp;<wbr><br />
-&nbsp;<wbr>[profilename] <code>&lt;read&gt;</code><br />
-&nbsp;<wbr> <code>&lt;resize&gt;</code><br />
-&nbsp;<wbr><br />
-&nbsp;<wbr>blur, filter, geometry, height, width <code>&lt;roll&gt;</code><br />
-&nbsp;<wbr><br />
-&nbsp;<wbr>geometry, x, y <code>&lt;rotate&gt;</code><br />
-&nbsp;<wbr><br />
-&nbsp;<wbr>degrees <code>&lt;reducenoise&gt;</code><br />
-&nbsp;<wbr><br />
-&nbsp;<wbr>radius <code>&lt;sample&gt;</code><br />
-&nbsp;<wbr><br />
-&nbsp;<wbr>geometry, height, width <code>&lt;scale&gt;</code><br />
-&nbsp;<wbr><br />
-&nbsp;<wbr>geometry, height, width <code>&lt;sharpen&gt;</code><br />
-&nbsp;<wbr><br />
-&nbsp;<wbr>radius, sigma <code>&lt;shave&gt;</code><br />
-&nbsp;<wbr><br />
-&nbsp;<wbr>geometry, height, width <code>&lt;shear&gt;</code><br />
-&nbsp;<wbr><br />
-&nbsp;<wbr>x, y <code>&lt;solarize&gt;</code><br />
-&nbsp;<wbr><br />
-&nbsp;<wbr>threshold <code>&lt;spread&gt;</code><br />
-&nbsp;<wbr><br />
-&nbsp;<wbr>radius <code>&lt;stegano&gt;</code><br />
-&nbsp;<wbr><br />
-&nbsp;<wbr>image <code>&lt;stereo&gt;</code><br />
-&nbsp;<wbr><br />
-&nbsp;<wbr>image <code>&lt;swirl&gt;</code><br />
-&nbsp;<wbr><br />
-&nbsp;<wbr>degrees <code>&lt;texture&gt;</code><br />
-&nbsp;<wbr><br />
-&nbsp;<wbr>image <code>&lt;threshold&gt;</code><br />
-&nbsp;<wbr><br />
-&nbsp;<wbr>threshold <code>&lt;transparent&gt;</code><br />
-&nbsp;<wbr><br />
-&nbsp;<wbr>color <code>&lt;trim&gt;</code><br />
+<p> <code>&lt;despeckle&gt;</code><br/>
+&nbsp;<wbr> <code>&lt;emboss&gt;</code><br/>
+&nbsp;<wbr><br/>
+&nbsp;<wbr>radius, sigma <code>&lt;enhance&gt;</code><br/>
+&nbsp;<wbr> <code>&lt;equalize&gt;</code><br/>
+&nbsp;<wbr> <code>&lt;edge&gt;</code><br/>
+&nbsp;<wbr><br/>
+&nbsp;<wbr>radius <code>&lt;flip&gt;</code><br/>
+&nbsp;<wbr> <code>&lt;flop&gt;</code><br/>
+&nbsp;<wbr> <code>&lt;frame&gt;</code><br/>
+&nbsp;<wbr><br/>
+&nbsp;<wbr>fill, geometry, height, width, x, y, inner, outer <code>&lt;flatten&gt;</code><br/>
+&nbsp;<wbr> <code>&lt;get&gt;</code><br/>
+&nbsp;<wbr><br/>
+&nbsp;<wbr>height, width <code>&lt;gamma&gt;</code><br/>
+&nbsp;<wbr><br/>
+&nbsp;<wbr>red, green, blue <code>&lt;image&gt;</code><br/>
+&nbsp;<wbr><br/>
+&nbsp;<wbr>background, color, id, size <code>&lt;implode&gt;</code><br/>
+&nbsp;<wbr><br/>
+&nbsp;<wbr>amount <code>&lt;magnify&gt;</code><br/>
+&nbsp;<wbr> <code>&lt;minify&gt;</code><br/>
+&nbsp;<wbr> <code>&lt;medianfilter&gt;</code><br/>
+&nbsp;<wbr><br/>
+&nbsp;<wbr>radius <code>&lt;normalize&gt;</code><br/>
+&nbsp;<wbr> <code>&lt;oilpaint&gt;</code><br/>
+&nbsp;<wbr><br/>
+&nbsp;<wbr>radius <code>&lt;print&gt;</code><br/>
+&nbsp;<wbr><br/>
+&nbsp;<wbr>output <code>&lt;profile&gt;</code><br/>
+&nbsp;<wbr><br/>
+&nbsp;<wbr>[profilename] <code>&lt;read&gt;</code><br/>
+&nbsp;<wbr> <code>&lt;resize&gt;</code><br/>
+&nbsp;<wbr><br/>
+&nbsp;<wbr>blur, filter, geometry, height, width <code>&lt;roll&gt;</code><br/>
+&nbsp;<wbr><br/>
+&nbsp;<wbr>geometry, x, y <code>&lt;rotate&gt;</code><br/>
+&nbsp;<wbr><br/>
+&nbsp;<wbr>degrees <code>&lt;reducenoise&gt;</code><br/>
+&nbsp;<wbr><br/>
+&nbsp;<wbr>radius <code>&lt;sample&gt;</code><br/>
+&nbsp;<wbr><br/>
+&nbsp;<wbr>geometry, height, width <code>&lt;scale&gt;</code><br/>
+&nbsp;<wbr><br/>
+&nbsp;<wbr>geometry, height, width <code>&lt;sharpen&gt;</code><br/>
+&nbsp;<wbr><br/>
+&nbsp;<wbr>radius, sigma <code>&lt;shave&gt;</code><br/>
+&nbsp;<wbr><br/>
+&nbsp;<wbr>geometry, height, width <code>&lt;shear&gt;</code><br/>
+&nbsp;<wbr><br/>
+&nbsp;<wbr>x, y <code>&lt;solarize&gt;</code><br/>
+&nbsp;<wbr><br/>
+&nbsp;<wbr>threshold <code>&lt;spread&gt;</code><br/>
+&nbsp;<wbr><br/>
+&nbsp;<wbr>radius <code>&lt;stegano&gt;</code><br/>
+&nbsp;<wbr><br/>
+&nbsp;<wbr>image <code>&lt;stereo&gt;</code><br/>
+&nbsp;<wbr><br/>
+&nbsp;<wbr>image <code>&lt;swirl&gt;</code><br/>
+&nbsp;<wbr><br/>
+&nbsp;<wbr>degrees <code>&lt;texture&gt;</code><br/>
+&nbsp;<wbr><br/>
+&nbsp;<wbr>image <code>&lt;threshold&gt;</code><br/>
+&nbsp;<wbr><br/>
+&nbsp;<wbr>threshold <code>&lt;transparent&gt;</code><br/>
+&nbsp;<wbr><br/>
+&nbsp;<wbr>color <code>&lt;trim&gt;</code><br/>
 &nbsp;<wbr> </p>
 <h2>GM CONVERT</h2>
 <p> <code>Convert</code> converts an input file using one image format to an output file with a differing image format. In addition, various types of image processing can be performed on the converted image during the conversion process. <code>Convert</code> recognizes the image formats listed in <i>GraphicsMagick(1)</i>. </p>
 <h2>EXAMPLES</h2>
 <p> To make a thumbnail of a JPEG image, use: </p>
-<p>&nbsp;<wbr>gm convert -size 120&#215;120 cockatoo.jpg -resize 120&#215;120<br />
+<p>&nbsp;<wbr>gm convert -size 120&#215;120 cockatoo.jpg -resize 120&#215;120<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>+profile&nbsp;<wbr>&quot;*&quot;&nbsp;<wbr>thumbnail.jpg </p>
 <p> In this example, &#8216;-size 120&#215;120&#8217; gives a hint to the JPEG decoder that the image is going to be downscaled to 120&#215;120, allowing it to run faster by avoiding returning full-resolution images to GraphicsMagick for the subsequent resizing operation. The &#8216;-resize 120&#215;120&#8217; specifies the desired dimensions of the output image. It will be scaled so its largest dimension is 120 pixels. The &#8216;+profile &quot;*&quot;&#8217; removes any ICM, EXIF, IPTC, or other profiles that might be present in the input and aren&#8217;t needed in the thumbnail. </p>
 <p> To convert a <i>MIFF</i> image of a cockatoo to a SUN raster image, use: </p>
@@ -2497,22 +2497,22 @@ input.ppm -gaussian 0x2 output.ppm </p>
 <p> To convert a TIFF image to a <i>PostScript</i> A4 page with the image in the lower left-hand corner, use: </p>
 <p>&nbsp;<wbr>gm convert -page A4+0+0 image.tiff document.ps </p>
 <p> To convert a raw Gray image with a 128 byte header to a portable graymap, use: </p>
-<p>&nbsp;<wbr>gm convert -depth 8 -size 768&#215;512+128 gray:raw<br />
+<p>&nbsp;<wbr>gm convert -depth 8 -size 768&#215;512+128 gray:raw<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>image.pgm </p>
 <p> In this example, &quot;raw&quot; is the input file. Its format is &quot;gray&quot; and it has the dimensions and number of header bytes specified by the -size option and the sample depth specified by the -depth option. The output file is &quot;image.pgm&quot;. The suffix &quot;.pgm&quot; specifies its format. </p>
 <p> To convert a Photo CD image to a TIFF image, use: </p>
-<p>&nbsp;<wbr>gm convert -size 1536&#215;1024 img0009.pcd image.tiff<br />
+<p>&nbsp;<wbr>gm convert -size 1536&#215;1024 img0009.pcd image.tiff<br/>
 &nbsp;<wbr>gm convert img0009.pcd[4]&nbsp;<wbr>image.tiff </p>
 <p> To create a visual image directory of all your JPEG images, use: </p>
 <p>&nbsp;<wbr>gm convert&nbsp;<wbr>&#8216;vid:*.jpg&#8217;&nbsp;<wbr>directory.miff </p>
 <p> To annotate an image with blue text using font 12&#215;24 at position (100,100), use: </p>
-<p>&nbsp;<wbr>gm convert -font helvetica -fill blue<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-draw&nbsp;<wbr>&quot;text 100,100 Cockatoo&quot;<br />
+<p>&nbsp;<wbr>gm convert -font helvetica -fill blue<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-draw&nbsp;<wbr>&quot;text 100,100 Cockatoo&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>bird.jpg bird.miff </p>
 <p> To tile a 640&#215;480 image with a JPEG texture with bumps use: </p>
 <p>&nbsp;<wbr>gm convert -size 640&#215;480 tile:bumps.jpg tiled.png </p>
 <p> To surround an icon with an ornamental border to use with Mosaic(1), use: </p>
-<p>&nbsp;<wbr>gm convert -mattecolor&nbsp;<wbr>&quot;#697B8F&quot;&nbsp;<wbr>-frame 6&#215;6 bird.jpg<br />
+<p>&nbsp;<wbr>gm convert -mattecolor&nbsp;<wbr>&quot;#697B8F&quot;&nbsp;<wbr>-frame 6&#215;6 bird.jpg<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>icon.png </p>
 <p> To create a MNG animation from a DNA molecule sequence, use: </p>
 <p>&nbsp;<wbr>gm convert -delay 20 dna.*&nbsp;<wbr>dna.mng </p>
@@ -2830,68 +2830,68 @@ input.ppm -gaussian 0x2 output.ppm </p>
 <h2>GM DISPLAY</h2>
 <p> Display is a machine architecture independent image processing and display program. It can display an image on any workstation screen running an X server. <code>Display</code> can read and write <code>many</code> of the more popular image formats (e.g. <code>JPEG</code>, <code>TIFF</code>, <code>PNM</code>, <code>Photo CD</code>, etc.). </p>
 <p> With <code>display</code>, you can perform these functions on an image: </p>
-<p>&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>load an image from a file<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>display the next image<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>display the former image<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>display a sequence of images as a slide show<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>write the image to a file<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>print the image to a&nbsp;<wbr><i>PostScript</i>&nbsp;<wbr>printer<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>delete the image file<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>create a Visual Image Directory<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>select the image to display by its thumbnail rather than name<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>undo last image transformation<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>copy a region of the image<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>paste a region to the image<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>restore the image to its original size<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>refresh the image<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>half the image size<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>double the image size<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>resize the image<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>crop the image<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>cut the image<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>flop image in the horizontal direction<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>flip image in the vertical direction<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>rotate the image 90 degrees clockwise<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>rotate the image 90 degrees counter-clockwise<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>rotate the image<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>shear the image<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>roll the image<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>trim the image edges<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>invert the colors of the image<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>vary the color brightness<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>vary the color saturation<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>vary the image hue<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>gamma correct the image<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>sharpen the image contrast<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>dull the image contrast<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>perform histogram equalization on the image<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>perform histogram normalization on the image<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>negate the image colors<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>convert the image to grayscale<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>set the maximum number of unique colors in the image<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>reduce the speckles within an image<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>eliminate peak noise from an image<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>detect edges within the image<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>emboss an image<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>segment the image by color<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>simulate an oil painting<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>simulate a charcoal drawing<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>annotate the image with text<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>draw on the image<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>edit an image pixel color<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>edit the image matte information<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>composite an image with another<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>add a border to the image<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>surround image with an ornamental border<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>apply image processing techniques to a region of interest<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>display information about the image<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>zoom a portion of the image<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>show a histogram of the image<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>display image to background of a window<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>set user preferences<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>display information about this program<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>discard all images and exit program<br />
-&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>change the level of magnification<br />
+<p>&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>load an image from a file<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>display the next image<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>display the former image<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>display a sequence of images as a slide show<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>write the image to a file<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>print the image to a&nbsp;<wbr><i>PostScript</i>&nbsp;<wbr>printer<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>delete the image file<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>create a Visual Image Directory<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>select the image to display by its thumbnail rather than name<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>undo last image transformation<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>copy a region of the image<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>paste a region to the image<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>restore the image to its original size<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>refresh the image<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>half the image size<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>double the image size<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>resize the image<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>crop the image<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>cut the image<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>flop image in the horizontal direction<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>flip image in the vertical direction<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>rotate the image 90 degrees clockwise<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>rotate the image 90 degrees counter-clockwise<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>rotate the image<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>shear the image<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>roll the image<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>trim the image edges<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>invert the colors of the image<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>vary the color brightness<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>vary the color saturation<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>vary the image hue<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>gamma correct the image<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>sharpen the image contrast<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>dull the image contrast<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>perform histogram equalization on the image<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>perform histogram normalization on the image<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>negate the image colors<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>convert the image to grayscale<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>set the maximum number of unique colors in the image<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>reduce the speckles within an image<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>eliminate peak noise from an image<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>detect edges within the image<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>emboss an image<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>segment the image by color<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>simulate an oil painting<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>simulate a charcoal drawing<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>annotate the image with text<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>draw on the image<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>edit an image pixel color<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>edit the image matte information<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>composite an image with another<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>add a border to the image<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>surround image with an ornamental border<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>apply image processing techniques to a region of interest<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>display information about the image<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>zoom a portion of the image<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>show a histogram of the image<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>display image to background of a window<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>set user preferences<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>display information about this program<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>discard all images and exit program<br/>
+&nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>change the level of magnification<br/>
 &nbsp;<wbr>o&nbsp;<wbr>&nbsp;<wbr>display images specified by a World Wide Web&nbsp;<wbr>(WWW)&nbsp;<wbr>uniform resource locator&nbsp;<wbr>(URL) </p>
 <h2>EXAMPLES</h2>
 <p> To scale an image of a cockatoo to exactly 640 pixels in width and 480 pixels in height and position the window at location (200,200), use: </p>
@@ -2910,7 +2910,7 @@ input.ppm -gaussian 0x2 output.ppm </p>
 <p>&nbsp;<wbr>gm gm convert file.jpg HISTOGRAM:- | gm display &#8211; </p>
 <h2>OPTIONS</h2>
 <p> Options are processed in command line order. Any option you specify on the command line remains in effect until it is explicitly changed by specifying the option again with a different effect. For example to display three images, the first with 32 colors, the second with an unlimited number of colors, and the third with only 16 colors, use: </p>
-<p>&nbsp;<wbr>gm display -colors 32 cockatoo.miff -noop duck.miff<br />
+<p>&nbsp;<wbr>gm display -colors 32 cockatoo.miff -noop duck.miff<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-colors 16 macaw.miff </p>
 <p> <code>Display</code> options can appear on the command line or in your X resources file. See <i>X(1)</i>. Options on the command line supersede values specified in your X resources file. </p>
 <p> For a more detailed description of each option, see Options, above. </p>
@@ -3086,212 +3086,212 @@ input.ppm -gaussian 0x2 output.ppm </p>
 <dd> Press and drag to define a region of the image to magnify.</dd>
 <dt><code>3</code></dt>
 <dd> Press and drag to choose from a select set of <code><a href="/docs/linux/man/1-display/">display</a>(1)</code> commands. This button behaves differently if the image being displayed is a visual image directory. Choose a particular tile of the directory and press this button and drag to select a command from a pop-up menu. Choose from these menu items: </dd>
-<p>&nbsp;<wbr>Open<br />
-&nbsp;<wbr>Next<br />
-&nbsp;<wbr>Former<br />
-&nbsp;<wbr>Delete<br />
+<p>&nbsp;<wbr>Open<br/>
+&nbsp;<wbr>Next<br/>
+&nbsp;<wbr>Former<br/>
+&nbsp;<wbr>Delete<br/>
 &nbsp;<wbr>Update </p>
 <p> If you choose <code>Open</code>, the image represented by the tile is displayed. To return to the visual image directory, choose <code>Next</code> from the Command widget (refer to Command Widget). <code>Next</code> and <code>Former</code> moves to the next or former image respectively. Choose <code>Delete</code> to delete a particular image tile. Finally, choose <code>Update</code> to synchronize all the image tiles with their respective images. See montage and miff for more details.</dl>
 <h2>COMMAND WIDGET</h2>
 <p> The Command widget lists a number of sub-menus and commands. They are </p>
 <p>&nbsp;<wbr><code>File</code> </p>
-<p>&nbsp;<wbr>Open&#8230;<br />
-&nbsp;<wbr>Next<br />
-&nbsp;<wbr>Former<br />
-&nbsp;<wbr>Select&#8230;<br />
-&nbsp;<wbr>Save&#8230;<br />
-&nbsp;<wbr>Print&#8230;<br />
-&nbsp;<wbr>Delete&#8230;<br />
-&nbsp;<wbr>Canvas&#8230;<br />
-&nbsp;<wbr>Visual Directory&#8230;<br />
+<p>&nbsp;<wbr>Open&#8230;<br/>
+&nbsp;<wbr>Next<br/>
+&nbsp;<wbr>Former<br/>
+&nbsp;<wbr>Select&#8230;<br/>
+&nbsp;<wbr>Save&#8230;<br/>
+&nbsp;<wbr>Print&#8230;<br/>
+&nbsp;<wbr>Delete&#8230;<br/>
+&nbsp;<wbr>Canvas&#8230;<br/>
+&nbsp;<wbr>Visual Directory&#8230;<br/>
 &nbsp;<wbr>Quit </p>
 <p>&nbsp;<wbr><code>Edit</code> </p>
-<p>&nbsp;<wbr>Undo<br />
-&nbsp;<wbr>Redo<br />
-&nbsp;<wbr>Cut<br />
-&nbsp;<wbr>Copy<br />
+<p>&nbsp;<wbr>Undo<br/>
+&nbsp;<wbr>Redo<br/>
+&nbsp;<wbr>Cut<br/>
+&nbsp;<wbr>Copy<br/>
 &nbsp;<wbr>Paste </p>
 <p>&nbsp;<wbr><code>View</code> </p>
-<p>&nbsp;<wbr>Half Size<br />
-&nbsp;<wbr>Original Size<br />
-&nbsp;<wbr>Double Size<br />
-&nbsp;<wbr>Resize&#8230;<br />
-&nbsp;<wbr>Apply<br />
-&nbsp;<wbr>Refresh<br />
+<p>&nbsp;<wbr>Half Size<br/>
+&nbsp;<wbr>Original Size<br/>
+&nbsp;<wbr>Double Size<br/>
+&nbsp;<wbr>Resize&#8230;<br/>
+&nbsp;<wbr>Apply<br/>
+&nbsp;<wbr>Refresh<br/>
 &nbsp;<wbr>Restore </p>
 <p>&nbsp;<wbr><code>Transform</code> </p>
-<p>&nbsp;<wbr>Crop<br />
-&nbsp;<wbr>Chop<br />
-&nbsp;<wbr>Flop<br />
-&nbsp;<wbr>Flip<br />
-&nbsp;<wbr>Rotate Right<br />
-&nbsp;<wbr>Rotate Left<br />
-&nbsp;<wbr>Rotate&#8230;<br />
-&nbsp;<wbr>Shear&#8230;<br />
-&nbsp;<wbr>Roll&#8230;<br />
+<p>&nbsp;<wbr>Crop<br/>
+&nbsp;<wbr>Chop<br/>
+&nbsp;<wbr>Flop<br/>
+&nbsp;<wbr>Flip<br/>
+&nbsp;<wbr>Rotate Right<br/>
+&nbsp;<wbr>Rotate Left<br/>
+&nbsp;<wbr>Rotate&#8230;<br/>
+&nbsp;<wbr>Shear&#8230;<br/>
+&nbsp;<wbr>Roll&#8230;<br/>
 &nbsp;<wbr>Trim Edges </p>
 <p>&nbsp;<wbr><code>Enhance</code> </p>
-<p>&nbsp;<wbr>Hue&#8230;<br />
-&nbsp;<wbr>Saturation&#8230;<br />
-&nbsp;<wbr>Brightness&#8230;<br />
-&nbsp;<wbr>Gamma&#8230;<br />
-&nbsp;<wbr>Spiff&#8230;<br />
-&nbsp;<wbr>Dull<br />
-&nbsp;<wbr>Equalize<br />
-&nbsp;<wbr>Normalize<br />
-&nbsp;<wbr>Negate<br />
-&nbsp;<wbr>GRAYscale<br />
+<p>&nbsp;<wbr>Hue&#8230;<br/>
+&nbsp;<wbr>Saturation&#8230;<br/>
+&nbsp;<wbr>Brightness&#8230;<br/>
+&nbsp;<wbr>Gamma&#8230;<br/>
+&nbsp;<wbr>Spiff&#8230;<br/>
+&nbsp;<wbr>Dull<br/>
+&nbsp;<wbr>Equalize<br/>
+&nbsp;<wbr>Normalize<br/>
+&nbsp;<wbr>Negate<br/>
+&nbsp;<wbr>GRAYscale<br/>
 &nbsp;<wbr>Quantize&#8230; </p>
 <p>&nbsp;<wbr><code>Effects</code> </p>
-<p>&nbsp;<wbr>Despeckle<br />
-&nbsp;<wbr>Emboss<br />
-&nbsp;<wbr>Reduce Noise<br />
-&nbsp;<wbr>Add Noise<br />
-&nbsp;<wbr>Sharpen&#8230;<br />
-&nbsp;<wbr>Blur&#8230;<br />
-&nbsp;<wbr>Threshold&#8230;<br />
-&nbsp;<wbr>Edge Detect&#8230;<br />
-&nbsp;<wbr>Spread&#8230;<br />
-&nbsp;<wbr>Shade&#8230;<br />
-&nbsp;<wbr>Raise&#8230;<br />
+<p>&nbsp;<wbr>Despeckle<br/>
+&nbsp;<wbr>Emboss<br/>
+&nbsp;<wbr>Reduce Noise<br/>
+&nbsp;<wbr>Add Noise<br/>
+&nbsp;<wbr>Sharpen&#8230;<br/>
+&nbsp;<wbr>Blur&#8230;<br/>
+&nbsp;<wbr>Threshold&#8230;<br/>
+&nbsp;<wbr>Edge Detect&#8230;<br/>
+&nbsp;<wbr>Spread&#8230;<br/>
+&nbsp;<wbr>Shade&#8230;<br/>
+&nbsp;<wbr>Raise&#8230;<br/>
 &nbsp;<wbr>Segment&#8230; </p>
 <p>&nbsp;<wbr><code>F/X</code> </p>
-<p>&nbsp;<wbr>Solarize&#8230;<br />
-&nbsp;<wbr>Swirl&#8230;<br />
-&nbsp;<wbr>Implode&#8230;<br />
-&nbsp;<wbr>Wave&#8230;<br />
-&nbsp;<wbr>Oil Paint&#8230;<br />
+<p>&nbsp;<wbr>Solarize&#8230;<br/>
+&nbsp;<wbr>Swirl&#8230;<br/>
+&nbsp;<wbr>Implode&#8230;<br/>
+&nbsp;<wbr>Wave&#8230;<br/>
+&nbsp;<wbr>Oil Paint&#8230;<br/>
 &nbsp;<wbr>Charcoal Draw&#8230; </p>
 <p>&nbsp;<wbr><code>Image Edit</code> </p>
-<p>&nbsp;<wbr>Annotate&#8230;<br />
-&nbsp;<wbr>Draw&#8230;<br />
-&nbsp;<wbr>Color&#8230;<br />
-&nbsp;<wbr>Matte&#8230;<br />
-&nbsp;<wbr>Composite&#8230;<br />
-&nbsp;<wbr>Add Border&#8230;<br />
-&nbsp;<wbr>Add Frame&#8230;<br />
-&nbsp;<wbr>Comment&#8230;<br />
-&nbsp;<wbr>Launch&#8230;<br />
+<p>&nbsp;<wbr>Annotate&#8230;<br/>
+&nbsp;<wbr>Draw&#8230;<br/>
+&nbsp;<wbr>Color&#8230;<br/>
+&nbsp;<wbr>Matte&#8230;<br/>
+&nbsp;<wbr>Composite&#8230;<br/>
+&nbsp;<wbr>Add Border&#8230;<br/>
+&nbsp;<wbr>Add Frame&#8230;<br/>
+&nbsp;<wbr>Comment&#8230;<br/>
+&nbsp;<wbr>Launch&#8230;<br/>
 &nbsp;<wbr>Region of Interest&#8230; </p>
 <p>&nbsp;<wbr><code>Miscellany</code> </p>
-<p>&nbsp;<wbr>Image Info<br />
-&nbsp;<wbr>Zoom Image<br />
-&nbsp;<wbr>Show Preview&#8230;<br />
-&nbsp;<wbr>Show Histogram<br />
-&nbsp;<wbr>Show Matte<br />
-&nbsp;<wbr>Background&#8230;<br />
-&nbsp;<wbr>Slide Show<br />
+<p>&nbsp;<wbr>Image Info<br/>
+&nbsp;<wbr>Zoom Image<br/>
+&nbsp;<wbr>Show Preview&#8230;<br/>
+&nbsp;<wbr>Show Histogram<br/>
+&nbsp;<wbr>Show Matte<br/>
+&nbsp;<wbr>Background&#8230;<br/>
+&nbsp;<wbr>Slide Show<br/>
 &nbsp;<wbr>Preferences&#8230; </p>
 <p>&nbsp;<wbr><code>Help</code> </p>
-<p>&nbsp;<wbr>Overview<br />
-&nbsp;<wbr>Browse Documentation<br />
+<p>&nbsp;<wbr>Overview<br/>
+&nbsp;<wbr>Browse Documentation<br/>
 &nbsp;<wbr>About Display </p>
 <p> Menu items with a indented triangle have a sub-menu. They are represented above as the indented items. To access a sub-menu item, move the pointer to the appropriate menu and press button 1 and drag. When you find the desired sub-menu item, release the button and the command is executed. Move the pointer away from the sub-menu if you decide not to execute a particular command.</p>
 <h2>KEYBOARD ACCELERATORS</h2>
 <p> Accelerators are one or two key presses that effect a particular command. The keyboard accelerators that <code>display</code> understands is: </p>
-<p>&nbsp;<wbr>Ctl+O&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to load an image from a file.<br />
+<p>&nbsp;<wbr>Ctl+O&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to load an image from a file.<br/>
 &nbsp;<wbr>space&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to display the next image. </p>
 <p> If the image is a multi-paged document such as a <i>PostScript</i> document, you can skip ahead several pages by preceding this command with a number. For example to display the fourth page beyond the current page, press 4space. </p>
 <p>&nbsp;<wbr>backspace Press to display the former image. </p>
 <p> If the image is a multi-paged document such as a <i>PostScript</i> document, you can skip behind several pages by preceding this command with a number. For example to display the fourth page preceding the current page, press 4n. </p>
-<p>&nbsp;<wbr>Ctl-S&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to save the image to a file.<br />
-&nbsp;<wbr>Ctl-P&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to print the image to a<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><i>PostScript</i>&nbsp;<wbr>printer.<br />
-&nbsp;<wbr>Ctl-D&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to delete an image file.<br />
-&nbsp;<wbr>Ctl-N&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to create a blank canvas.<br />
-&nbsp;<wbr>Ctl-Q&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to discard all images and exit program.<br />
-&nbsp;<wbr>Ctl+Z&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to undo last image transformation.<br />
-&nbsp;<wbr>Ctl+R&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to redo last image transformation.<br />
-&nbsp;<wbr>Ctl-X&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to cut a region of<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>the image.<br />
-&nbsp;<wbr>Ctl-C&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to copy a region of<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>the image.<br />
-&nbsp;<wbr>Ctl-V&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to paste a region to<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>the image.<br />
-&nbsp;<wbr>&lt;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to halve the image size.<br />
-&nbsp;<wbr>.&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to return to the original image size.<br />
-&nbsp;<wbr>&gt;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to double the image size.<br />
-&nbsp;<wbr>%&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to resize the image to a width and height<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>you specify.<br />
-&nbsp;<wbr>Cmd-A&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to make any image transformations<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>permanent.<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>By default, any image size transformations are<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>applied to the original image to create the<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>image displayed on the X server.&nbsp;<wbr>&nbsp;<wbr>However, the<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>transformations are not permanent&nbsp;<wbr>(i.e. the<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>original image does not change size only the<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>X image does). For example, if you press&nbsp;<wbr>&quot;&gt;&quot;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>the X image will appear to double in size, but<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>the original image will in fact remain the same<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>size.&nbsp;<wbr>&nbsp;<wbr>To force the original image to double in<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>size, press&nbsp;<wbr>&quot;&gt;&quot;&nbsp;<wbr>followed by&nbsp;<wbr>&quot;Cmd-A&quot;.<br />
-&nbsp;<wbr>@&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to refresh the image window.<br />
-&nbsp;<wbr>C&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to crop the image.<br />
-&nbsp;<wbr>[&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to chop the image.<br />
-&nbsp;<wbr>H&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to flop image in the horizontal direction.<br />
-&nbsp;<wbr>V&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to flip image in the vertical direction.<br />
-&nbsp;<wbr>/&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to rotate the image 90 degrees clockwise.<br />
-&nbsp;<wbr>\&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to rotate the image 90 degrees<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>counter-clockwise.<br />
-&nbsp;<wbr>*&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to rotate the image<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>the number of degrees you specify.<br />
-&nbsp;<wbr>S&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to shear the image the number of degrees<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>you specify.<br />
-&nbsp;<wbr>R&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to roll the image.<br />
-&nbsp;<wbr>T&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to trim the image edges.<br />
-&nbsp;<wbr>Shft-H&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to vary the color hue.<br />
-&nbsp;<wbr>Shft-S&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to vary the color saturation.<br />
-&nbsp;<wbr>Shft-L&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to vary the image brightness.<br />
-&nbsp;<wbr>Shft-G&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to gamma correct the image.<br />
-&nbsp;<wbr>Shft-C&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to spiff up the image contrast.<br />
-&nbsp;<wbr>Shft-Z&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to dull the image contrast.<br />
-&nbsp;<wbr>=&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to perform histogram equalization on<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>the image.<br />
-&nbsp;<wbr>Shft-N&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to perform histogram normalization on<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>the image.<br />
-&nbsp;<wbr>Shft-~&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to negate the colors of the image.<br />
-&nbsp;<wbr>.&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to convert the image colors to gray.<br />
-&nbsp;<wbr>Shft-#&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to set the maximum number of unique<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>colors in the image.<br />
-&nbsp;<wbr>F2&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to reduce the speckles in an image.<br />
-&nbsp;<wbr>F2&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to emboss an image.<br />
-&nbsp;<wbr>F4&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to eliminate peak noise from an image.<br />
-&nbsp;<wbr>F5&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to add noise to an image.<br />
-&nbsp;<wbr>F6&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to sharpen an image.<br />
-&nbsp;<wbr>F7&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to blur image an image.<br />
-&nbsp;<wbr>F8&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to threshold the image.<br />
-&nbsp;<wbr>F9&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to detect edges within an image.<br />
-&nbsp;<wbr>F10&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to displace pixels by a random amount.<br />
-&nbsp;<wbr>F11&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to shade the image using a distant light<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>source.<br />
-&nbsp;<wbr>F12&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to lighten or darken image edges to<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>create a 3-D effect.<br />
-&nbsp;<wbr>F13&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to segment the image by color.<br />
-&nbsp;<wbr>Meta-S&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to swirl image pixels about the center.<br />
-&nbsp;<wbr>Meta-I&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to implode image pixels about the center.<br />
-&nbsp;<wbr>Meta-W&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to alter an image along a sine wave.<br />
-&nbsp;<wbr>Meta-P&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to simulate an oil painting.<br />
-&nbsp;<wbr>Meta-C&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to simulate a charcoal drawing.<br />
-&nbsp;<wbr>Alt-X&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to composite the image<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>with another.<br />
-&nbsp;<wbr>Alt-A&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to annotate the image with text.<br />
-&nbsp;<wbr>Alt-D&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to draw a line on the image.<br />
-&nbsp;<wbr>Alt-P&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to edit an image pixel color.<br />
-&nbsp;<wbr>Alt-M&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to edit the image matte information.<br />
-&nbsp;<wbr>Alt-X&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to composite the image with another.<br />
-&nbsp;<wbr>Alt-A&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to add a border to the image.<br />
-&nbsp;<wbr>Alt-F&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to add a ornamental frame to the image.<br />
-&nbsp;<wbr>Alt-Shft-!&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to add an image comment.<br />
-&nbsp;<wbr>Ctl-A&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to apply image processing techniques to a<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>region of interest.<br />
-&nbsp;<wbr>Shft-?&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to display information about the image.<br />
-&nbsp;<wbr>Shft-+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to map the zoom image window.<br />
-&nbsp;<wbr>Shft-P&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to preview an image enhancement, effect,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>or f/x.<br />
-&nbsp;<wbr>F1&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to display helpful information about<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>the&nbsp;<wbr>&quot;display&quot;&nbsp;<wbr>utility.<br />
-&nbsp;<wbr>Find&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to browse documentation about<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>GraphicsMagick.<br />
+<p>&nbsp;<wbr>Ctl-S&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to save the image to a file.<br/>
+&nbsp;<wbr>Ctl-P&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to print the image to a<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><i>PostScript</i>&nbsp;<wbr>printer.<br/>
+&nbsp;<wbr>Ctl-D&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to delete an image file.<br/>
+&nbsp;<wbr>Ctl-N&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to create a blank canvas.<br/>
+&nbsp;<wbr>Ctl-Q&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to discard all images and exit program.<br/>
+&nbsp;<wbr>Ctl+Z&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to undo last image transformation.<br/>
+&nbsp;<wbr>Ctl+R&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to redo last image transformation.<br/>
+&nbsp;<wbr>Ctl-X&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to cut a region of<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>the image.<br/>
+&nbsp;<wbr>Ctl-C&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to copy a region of<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>the image.<br/>
+&nbsp;<wbr>Ctl-V&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to paste a region to<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>the image.<br/>
+&nbsp;<wbr>&lt;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to halve the image size.<br/>
+&nbsp;<wbr>.&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to return to the original image size.<br/>
+&nbsp;<wbr>&gt;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to double the image size.<br/>
+&nbsp;<wbr>%&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to resize the image to a width and height<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>you specify.<br/>
+&nbsp;<wbr>Cmd-A&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to make any image transformations<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>permanent.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>By default, any image size transformations are<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>applied to the original image to create the<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>image displayed on the X server.&nbsp;<wbr>&nbsp;<wbr>However, the<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>transformations are not permanent&nbsp;<wbr>(i.e. the<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>original image does not change size only the<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>X image does). For example, if you press&nbsp;<wbr>&quot;&gt;&quot;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>the X image will appear to double in size, but<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>the original image will in fact remain the same<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>size.&nbsp;<wbr>&nbsp;<wbr>To force the original image to double in<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>size, press&nbsp;<wbr>&quot;&gt;&quot;&nbsp;<wbr>followed by&nbsp;<wbr>&quot;Cmd-A&quot;.<br/>
+&nbsp;<wbr>@&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to refresh the image window.<br/>
+&nbsp;<wbr>C&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to crop the image.<br/>
+&nbsp;<wbr>[&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to chop the image.<br/>
+&nbsp;<wbr>H&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to flop image in the horizontal direction.<br/>
+&nbsp;<wbr>V&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to flip image in the vertical direction.<br/>
+&nbsp;<wbr>/&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to rotate the image 90 degrees clockwise.<br/>
+&nbsp;<wbr>\&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to rotate the image 90 degrees<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>counter-clockwise.<br/>
+&nbsp;<wbr>*&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to rotate the image<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>the number of degrees you specify.<br/>
+&nbsp;<wbr>S&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to shear the image the number of degrees<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>you specify.<br/>
+&nbsp;<wbr>R&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to roll the image.<br/>
+&nbsp;<wbr>T&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to trim the image edges.<br/>
+&nbsp;<wbr>Shft-H&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to vary the color hue.<br/>
+&nbsp;<wbr>Shft-S&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to vary the color saturation.<br/>
+&nbsp;<wbr>Shft-L&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to vary the image brightness.<br/>
+&nbsp;<wbr>Shft-G&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to gamma correct the image.<br/>
+&nbsp;<wbr>Shft-C&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to spiff up the image contrast.<br/>
+&nbsp;<wbr>Shft-Z&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to dull the image contrast.<br/>
+&nbsp;<wbr>=&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to perform histogram equalization on<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>the image.<br/>
+&nbsp;<wbr>Shft-N&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to perform histogram normalization on<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>the image.<br/>
+&nbsp;<wbr>Shft-~&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to negate the colors of the image.<br/>
+&nbsp;<wbr>.&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to convert the image colors to gray.<br/>
+&nbsp;<wbr>Shft-#&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to set the maximum number of unique<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>colors in the image.<br/>
+&nbsp;<wbr>F2&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to reduce the speckles in an image.<br/>
+&nbsp;<wbr>F2&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to emboss an image.<br/>
+&nbsp;<wbr>F4&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to eliminate peak noise from an image.<br/>
+&nbsp;<wbr>F5&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to add noise to an image.<br/>
+&nbsp;<wbr>F6&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to sharpen an image.<br/>
+&nbsp;<wbr>F7&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to blur image an image.<br/>
+&nbsp;<wbr>F8&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to threshold the image.<br/>
+&nbsp;<wbr>F9&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to detect edges within an image.<br/>
+&nbsp;<wbr>F10&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to displace pixels by a random amount.<br/>
+&nbsp;<wbr>F11&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to shade the image using a distant light<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>source.<br/>
+&nbsp;<wbr>F12&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to lighten or darken image edges to<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>create a 3-D effect.<br/>
+&nbsp;<wbr>F13&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to segment the image by color.<br/>
+&nbsp;<wbr>Meta-S&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to swirl image pixels about the center.<br/>
+&nbsp;<wbr>Meta-I&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to implode image pixels about the center.<br/>
+&nbsp;<wbr>Meta-W&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to alter an image along a sine wave.<br/>
+&nbsp;<wbr>Meta-P&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to simulate an oil painting.<br/>
+&nbsp;<wbr>Meta-C&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to simulate a charcoal drawing.<br/>
+&nbsp;<wbr>Alt-X&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to composite the image<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>with another.<br/>
+&nbsp;<wbr>Alt-A&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to annotate the image with text.<br/>
+&nbsp;<wbr>Alt-D&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to draw a line on the image.<br/>
+&nbsp;<wbr>Alt-P&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to edit an image pixel color.<br/>
+&nbsp;<wbr>Alt-M&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to edit the image matte information.<br/>
+&nbsp;<wbr>Alt-X&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to composite the image with another.<br/>
+&nbsp;<wbr>Alt-A&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to add a border to the image.<br/>
+&nbsp;<wbr>Alt-F&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to add a ornamental frame to the image.<br/>
+&nbsp;<wbr>Alt-Shft-!&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to add an image comment.<br/>
+&nbsp;<wbr>Ctl-A&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to apply image processing techniques to a<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>region of interest.<br/>
+&nbsp;<wbr>Shft-?&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to display information about the image.<br/>
+&nbsp;<wbr>Shft-+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to map the zoom image window.<br/>
+&nbsp;<wbr>Shft-P&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to preview an image enhancement, effect,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>or f/x.<br/>
+&nbsp;<wbr>F1&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to display helpful information about<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>the&nbsp;<wbr>&quot;display&quot;&nbsp;<wbr>utility.<br/>
+&nbsp;<wbr>Find&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to browse documentation about<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>GraphicsMagick.<br/>
 &nbsp;<wbr>1-9&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Press to change the level of magnification. </p>
 <p> Use the arrow keys to move the image one pixel up, down, left, or right within the magnify window. Be sure to first map the magnify window by pressing button 2. </p>
 <p> Press ALT and one of the arrow keys to trim off one pixel from any side of the image.</p>
@@ -3363,41 +3363,41 @@ input.ppm -gaussian 0x2 output.ppm </p>
 <p> Note that cut information for image window is not retained for colormapped X server visuals (e.g. <i>StaticColor</i>, <i>StaticColor</i>, <i>GRAYScale</i>, <i>PseudoColor</i>). Correct cutting behavior may require a <i>TrueColor</i> or <i>DirectColor</i> visual or a <i>Standard Colormap</i>. </p>
 <p> To begin, press choose <code>Cut</code> of the <code>Edit</code> sub-menu from the Command widget. Alternatively, press <code>F3</code> in the image window. </p>
 <p> A small window appears showing the location of the cursor in the image window. You are now in cut mode. In cut mode, the Command widget has these options: </p>
-<p>&nbsp;<wbr><code>Help</code><br />
+<p>&nbsp;<wbr><code>Help</code><br/>
 &nbsp;<wbr><code>Dismiss</code> </p>
 <p> To define a cut region, press button 1 and drag. The cut region is defined by a highlighted rectangle that expands or contracts as it follows the pointer. Once you are satisfied with the cut region, release the button. You are now in rectify mode. In rectify mode, the Command widget has these options: </p>
-<p>&nbsp;<wbr><code>Cut</code><br />
-&nbsp;<wbr><code>Help</code><br />
+<p>&nbsp;<wbr><code>Cut</code><br/>
+&nbsp;<wbr><code>Help</code><br/>
 &nbsp;<wbr><code>Dismiss</code> </p>
 <p> You can make adjustments by moving the pointer to one of the cut rectangle corners, pressing a button, and dragging. Finally, press Cut to commit your copy region. To exit without cutting the image, press Dismiss.</p>
 <h2>IMAGE COPYING</h2>
 <p> To begin, press choose <code>Copy</code> of the <code>Edit</code> sub-menu from the Command widget. Alternatively, press <code>F4</code> in the image window. </p>
 <p> A small window appears showing the location of the cursor in the image window. You are now in copy mode. In copy mode, the Command widget has these options: </p>
-<p>&nbsp;<wbr>Help<br />
+<p>&nbsp;<wbr>Help<br/>
 &nbsp;<wbr>Dismiss </p>
 <p> To define a copy region, press button 1 and drag. The copy region is defined by a highlighted rectangle that expands or contracts as it follows the pointer. Once you are satisfied with the copy region, release the button. You are now in rectify mode. In rectify mode, the Command widget has these options: </p>
-<p>&nbsp;<wbr>Copy<br />
-&nbsp;<wbr>Help<br />
+<p>&nbsp;<wbr>Copy<br/>
+&nbsp;<wbr>Help<br/>
 &nbsp;<wbr>Dismiss </p>
 <p> You can make adjustments by moving the pointer to one of the copy rectangle corners, pressing a button, and dragging. Finally, press Copy to commit your copy region. To exit without copying the image, press Dismiss.</p>
 <h2>IMAGE PASTING</h2>
 <p> To begin, press choose <code>Paste</code> of the <code>Edit</code> sub-menu from the Command widget. Alternatively, press <code>F5</code> in the image window. </p>
 <p> A small window appears showing the location of the cursor in the image window. You are now in Paste mode. To exit immediately, press Dismiss. In Paste mode, the Command widget has these options: </p>
 <p>&nbsp;<wbr><code>Operators</code> </p>
-<p>&nbsp;<wbr>over<br />
-&nbsp;<wbr>in<br />
-&nbsp;<wbr>out<br />
-&nbsp;<wbr>atop<br />
-&nbsp;<wbr>xor<br />
-&nbsp;<wbr>plus<br />
-&nbsp;<wbr>minus<br />
-&nbsp;<wbr>add<br />
-&nbsp;<wbr>subtract<br />
-&nbsp;<wbr>difference<br />
-&nbsp;<wbr>multiply<br />
-&nbsp;<wbr>bumpmap<br />
+<p>&nbsp;<wbr>over<br/>
+&nbsp;<wbr>in<br/>
+&nbsp;<wbr>out<br/>
+&nbsp;<wbr>atop<br/>
+&nbsp;<wbr>xor<br/>
+&nbsp;<wbr>plus<br/>
+&nbsp;<wbr>minus<br/>
+&nbsp;<wbr>add<br/>
+&nbsp;<wbr>subtract<br/>
+&nbsp;<wbr>difference<br/>
+&nbsp;<wbr>multiply<br/>
+&nbsp;<wbr>bumpmap<br/>
 &nbsp;<wbr>replace </p>
-<p>&nbsp;<wbr><code>Help</code><br />
+<p>&nbsp;<wbr><code>Help</code><br/>
 &nbsp;<wbr><code>Dismiss</code> </p>
 <p> Choose a composite operation from the <code>Operators</code> sub-menu of the Command widget. How each operator behaves is described below. <i>image window</i> is the image currently displayed on your X server and <i>image</i> is the image obtained with the File Browser widget.</p>
 <dl>
@@ -3434,20 +3434,20 @@ input.ppm -gaussian 0x2 output.ppm </p>
 <h2>IMAGE CROPPING</h2>
 <p> To begin, press choose <code>Crop</code> of the <code>Transform</code> submenu from the Command widget. Alternatively, press C in the image window. </p>
 <p> A small window appears showing the location of the cursor in the image window. You are now in crop mode. In crop mode, the Command widget has these options: </p>
-<p>&nbsp;<wbr><code>Help</code><br />
+<p>&nbsp;<wbr><code>Help</code><br/>
 &nbsp;<wbr><code>Dismiss</code> </p>
 <p> To define a cropping region, press button 1 and drag. The cropping region is defined by a highlighted rectangle that expands or contracts as it follows the pointer. Once you are satisfied with the cropping region, release the button. You are now in rectify mode. In rectify mode, the Command widget has these options: </p>
-<p>&nbsp;<wbr><code>Crop</code><br />
-&nbsp;<wbr><code>Help</code><br />
+<p>&nbsp;<wbr><code>Crop</code><br/>
+&nbsp;<wbr><code>Help</code><br/>
 &nbsp;<wbr><code>Dismiss</code> </p>
 <p> You can make adjustments by moving the pointer to one of the cropping rectangle corners, pressing a button, and dragging. Finally, press Crop to commit your cropping region. To exit without cropping the image, press Dismiss.</p>
 <h2>IMAGE CHOPPING</h2>
 <p> An image is chopped interactively. There is no command line argument to chop an image. To begin, choose <code>Chop</code> of the <code>Transform</code> sub-menu from the Command widget. Alternatively, press [ in the Image window. </p>
 <p> You are now in <code>Chop</code> mode. To exit immediately, press <code>Dismiss</code>. In Chop mode, the Command widget has these options: </p>
 <p>&nbsp;<wbr><code>Direction</code> </p>
-<p>&nbsp;<wbr>horizontal<br />
+<p>&nbsp;<wbr>horizontal<br/>
 &nbsp;<wbr>vertical </p>
-<p>&nbsp;<wbr><code>Help</code><br />
+<p>&nbsp;<wbr><code>Help</code><br/>
 &nbsp;<wbr><code>Dismiss</code> </p>
 <p> If the you choose the horizontal direction (this is the default), the area of the image between the two horizontal endpoints of the chop line is removed. Otherwise, the area of the image between the two vertical endpoints of the chop line is removed. </p>
 <p> Select a location within the image window to begin your chop, press and hold any button. Next, move the pointer to another location in the image. As you move a line will connect the initial location and the pointer. When you release the button, the area within the image to chop is determined by which direction you choose from the Command widget. </p>
@@ -3456,20 +3456,20 @@ input.ppm -gaussian 0x2 output.ppm </p>
 <p> Press the / key to rotate the image 90 degrees or \ to rotate -90 degrees. To interactively choose the degree of rotation, choose <code>Rotate&#8230;</code> of the <code>Transform</code> submenu from the Command Widget. Alternatively, press * in the image window. </p>
 <p> A small horizontal line is drawn next to the pointer. You are now in rotate mode. To exit immediately, press Dismiss. In rotate mode, the Command widget has these options: </p>
 <p>&nbsp;<wbr><code>Pixel Color</code> </p>
-<p>&nbsp;<wbr>black<br />
-&nbsp;<wbr>blue<br />
-&nbsp;<wbr>cyan<br />
-&nbsp;<wbr>green<br />
-&nbsp;<wbr>gray<br />
-&nbsp;<wbr>red<br />
-&nbsp;<wbr>magenta<br />
-&nbsp;<wbr>yellow<br />
-&nbsp;<wbr>white<br />
+<p>&nbsp;<wbr>black<br/>
+&nbsp;<wbr>blue<br/>
+&nbsp;<wbr>cyan<br/>
+&nbsp;<wbr>green<br/>
+&nbsp;<wbr>gray<br/>
+&nbsp;<wbr>red<br/>
+&nbsp;<wbr>magenta<br/>
+&nbsp;<wbr>yellow<br/>
+&nbsp;<wbr>white<br/>
 &nbsp;<wbr>Browser&#8230; </p>
 <p>&nbsp;<wbr><code>Direction</code> </p>
-<p>&nbsp;<wbr>horizontal<br />
+<p>&nbsp;<wbr>horizontal<br/>
 &nbsp;<wbr>vertical </p>
-<p>&nbsp;<wbr><code>Help</code><br />
+<p>&nbsp;<wbr><code>Help</code><br/>
 &nbsp;<wbr><code>Dismiss</code> </p>
 <p> Choose a background color from the Pixel Color sub-menu. Additional background colors can be specified with the color browser. You can change the menu colors by setting the X resources pen1 through pen9. </p>
 <p> If you choose the color browser and press <code>Grab</code>, you can select the background color by moving the pointer to the desired color on the screen and press any button. </p>
@@ -3479,51 +3479,51 @@ input.ppm -gaussian 0x2 output.ppm </p>
 <p> An image is annotated interactively. There is no command line argument to annotate an image. To begin, choose <code>Annotate</code> of the <code>Image Edit</code> sub-menu from the Command widget. Alternatively, press a in the image window. </p>
 <p> A small window appears showing the location of the cursor in the image window. You are now in annotate mode. To exit immediately, press Dismiss. In annotate mode, the Command widget has these options: </p>
 <p>&nbsp;<wbr> <code>Font Name</code> </p>
-<p>&nbsp;<wbr> fixed<br />
-&nbsp;<wbr> variable<br />
-&nbsp;<wbr> 5&#215;8<br />
-&nbsp;<wbr> 6&#215;10<br />
-&nbsp;<wbr> 7x13bold<br />
-&nbsp;<wbr> 8x13bold<br />
-&nbsp;<wbr> 9x15bold<br />
-&nbsp;<wbr> 10&#215;20<br />
-&nbsp;<wbr> 12&#215;24<br />
+<p>&nbsp;<wbr> fixed<br/>
+&nbsp;<wbr> variable<br/>
+&nbsp;<wbr> 5&#215;8<br/>
+&nbsp;<wbr> 6&#215;10<br/>
+&nbsp;<wbr> 7x13bold<br/>
+&nbsp;<wbr> 8x13bold<br/>
+&nbsp;<wbr> 9x15bold<br/>
+&nbsp;<wbr> 10&#215;20<br/>
+&nbsp;<wbr> 12&#215;24<br/>
 &nbsp;<wbr> Browser&#8230; </p>
 <p>&nbsp;<wbr> <code>Font Color</code> </p>
-<p>&nbsp;<wbr> black<br />
-&nbsp;<wbr> blue<br />
-&nbsp;<wbr> cyan<br />
-&nbsp;<wbr> green<br />
-&nbsp;<wbr> gray<br />
-&nbsp;<wbr> red<br />
-&nbsp;<wbr> magenta<br />
-&nbsp;<wbr> yellow<br />
-&nbsp;<wbr> white<br />
-&nbsp;<wbr> transparent<br />
+<p>&nbsp;<wbr> black<br/>
+&nbsp;<wbr> blue<br/>
+&nbsp;<wbr> cyan<br/>
+&nbsp;<wbr> green<br/>
+&nbsp;<wbr> gray<br/>
+&nbsp;<wbr> red<br/>
+&nbsp;<wbr> magenta<br/>
+&nbsp;<wbr> yellow<br/>
+&nbsp;<wbr> white<br/>
+&nbsp;<wbr> transparent<br/>
 &nbsp;<wbr> Browser&#8230; </p>
 <p>&nbsp;<wbr> <code>Box Color</code> </p>
-<p>&nbsp;<wbr> black<br />
-&nbsp;<wbr> blue<br />
-&nbsp;<wbr> cyan<br />
-&nbsp;<wbr> green<br />
-&nbsp;<wbr> gray<br />
-&nbsp;<wbr> red<br />
-&nbsp;<wbr> magenta<br />
-&nbsp;<wbr> yellow<br />
-&nbsp;<wbr> white<br />
-&nbsp;<wbr> transparent<br />
+<p>&nbsp;<wbr> black<br/>
+&nbsp;<wbr> blue<br/>
+&nbsp;<wbr> cyan<br/>
+&nbsp;<wbr> green<br/>
+&nbsp;<wbr> gray<br/>
+&nbsp;<wbr> red<br/>
+&nbsp;<wbr> magenta<br/>
+&nbsp;<wbr> yellow<br/>
+&nbsp;<wbr> white<br/>
+&nbsp;<wbr> transparent<br/>
 &nbsp;<wbr> Browser&#8230; </p>
 <p>&nbsp;<wbr> <code>Rotate Text</code> </p>
-<p>&nbsp;<wbr> -90<br />
-&nbsp;<wbr> -45<br />
-&nbsp;<wbr> -30<br />
-&nbsp;<wbr> 0<br />
-&nbsp;<wbr> 30<br />
-&nbsp;<wbr> 45<br />
-&nbsp;<wbr> 90<br />
-&nbsp;<wbr> 180<br />
+<p>&nbsp;<wbr> -90<br/>
+&nbsp;<wbr> -45<br/>
+&nbsp;<wbr> -30<br/>
+&nbsp;<wbr> 0<br/>
+&nbsp;<wbr> 30<br/>
+&nbsp;<wbr> 45<br/>
+&nbsp;<wbr> 90<br/>
+&nbsp;<wbr> 180<br/>
 &nbsp;<wbr> Dialog&#8230; </p>
-<p>&nbsp;<wbr> <code>Help</code><br />
+<p>&nbsp;<wbr> <code>Help</code><br/>
 &nbsp;<wbr> <code>Dismiss</code> </p>
 <p> Choose a font name from the <code>Font Name</code> sub-menu. Additional font names can be specified with the font browser. You can change the menu names by setting the X resources font1 through font9. </p>
 <p> Choose a font color from the <code>Font Color</code> sub-menu. Additional font colors can be specified with the color browser. You can change the menu colors by setting the X resources pen1 through pen9. </p>
@@ -3538,21 +3538,21 @@ input.ppm -gaussian 0x2 output.ppm </p>
 <p> If the <code>Composite</code> image does not have any matte information, you are informed and the file browser is displayed again. Enter the name of a mask image. The image is typically grayscale and the same size as the composite image. If the image is not grayscale, it is converted to grayscale and the resulting intensities are used as matte information. </p>
 <p> A small window appears showing the location of the cursor in the image window. You are now in composite mode. To exit immediately, press Dismiss. In composite mode, the Command widget has these options: </p>
 <p>&nbsp;<wbr> <code>Operators</code> </p>
-<p>&nbsp;<wbr> over<br />
-&nbsp;<wbr> in<br />
-&nbsp;<wbr> out<br />
-&nbsp;<wbr> atop<br />
-&nbsp;<wbr> xor<br />
-&nbsp;<wbr> plus<br />
-&nbsp;<wbr> minus<br />
-&nbsp;<wbr> add<br />
-&nbsp;<wbr> subtract<br />
-&nbsp;<wbr> difference<br />
-&nbsp;<wbr> bumpmap<br />
+<p>&nbsp;<wbr> over<br/>
+&nbsp;<wbr> in<br/>
+&nbsp;<wbr> out<br/>
+&nbsp;<wbr> atop<br/>
+&nbsp;<wbr> xor<br/>
+&nbsp;<wbr> plus<br/>
+&nbsp;<wbr> minus<br/>
+&nbsp;<wbr> add<br/>
+&nbsp;<wbr> subtract<br/>
+&nbsp;<wbr> difference<br/>
+&nbsp;<wbr> bumpmap<br/>
 &nbsp;<wbr> replace </p>
-<p>&nbsp;<wbr> <code>Blend</code><br />
-&nbsp;<wbr> <code>Displace</code><br />
-&nbsp;<wbr> <code>Help</code><br />
+<p>&nbsp;<wbr> <code>Blend</code><br/>
+&nbsp;<wbr> <code>Displace</code><br/>
+&nbsp;<wbr> <code>Help</code><br/>
 &nbsp;<wbr> <code>Dismiss</code> </p>
 <p> Choose a composite operation from the Operators sub-menu of the Command widget. How each operator behaves is described below. image window is the image currently displayed on your X server and image is the image obtained</p>
 <dl>
@@ -3590,41 +3590,41 @@ input.ppm -gaussian 0x2 output.ppm </p>
 <p> Changing the the color of a set of pixels is performed interactively. There is no command line argument to edit a pixel. To begin, choose <code>Color</code> from the <code>Image Edit</code> submenu of the Command widget. Alternatively, press c in the image window. </p>
 <p> A small window appears showing the location of the cursor in the image window. You are now in color edit mode. To exit immediately, press <code>Dismiss</code>. In color edit mode, the <code>Command widget</code> has these options: </p>
 <p>&nbsp;<wbr> <code>Method</code> </p>
-<p>&nbsp;<wbr> point<br />
-&nbsp;<wbr> replace<br />
-&nbsp;<wbr> floodfill<br />
+<p>&nbsp;<wbr> point<br/>
+&nbsp;<wbr> replace<br/>
+&nbsp;<wbr> floodfill<br/>
 &nbsp;<wbr> reset </p>
 <p>&nbsp;<wbr> <code>Pixel Color</code> </p>
-<p>&nbsp;<wbr> black<br />
-&nbsp;<wbr> blue<br />
-&nbsp;<wbr> cyan<br />
-&nbsp;<wbr> green<br />
-&nbsp;<wbr> gray<br />
-&nbsp;<wbr> red<br />
-&nbsp;<wbr> magenta<br />
-&nbsp;<wbr> yellow<br />
-&nbsp;<wbr> white<br />
+<p>&nbsp;<wbr> black<br/>
+&nbsp;<wbr> blue<br/>
+&nbsp;<wbr> cyan<br/>
+&nbsp;<wbr> green<br/>
+&nbsp;<wbr> gray<br/>
+&nbsp;<wbr> red<br/>
+&nbsp;<wbr> magenta<br/>
+&nbsp;<wbr> yellow<br/>
+&nbsp;<wbr> white<br/>
 &nbsp;<wbr> Browser&#8230; </p>
 <p>&nbsp;<wbr> <code>Border Color</code> </p>
-<p>&nbsp;<wbr> black<br />
-&nbsp;<wbr> blue<br />
-&nbsp;<wbr> cyan<br />
-&nbsp;<wbr> green<br />
-&nbsp;<wbr> gray<br />
-&nbsp;<wbr> red<br />
-&nbsp;<wbr> magenta<br />
-&nbsp;<wbr> yellow<br />
-&nbsp;<wbr> white<br />
+<p>&nbsp;<wbr> black<br/>
+&nbsp;<wbr> blue<br/>
+&nbsp;<wbr> cyan<br/>
+&nbsp;<wbr> green<br/>
+&nbsp;<wbr> gray<br/>
+&nbsp;<wbr> red<br/>
+&nbsp;<wbr> magenta<br/>
+&nbsp;<wbr> yellow<br/>
+&nbsp;<wbr> white<br/>
 &nbsp;<wbr> Browser&#8230; </p>
 <p>&nbsp;<wbr> <code>Fuzz</code> </p>
-<p>&nbsp;<wbr> 0<br />
-&nbsp;<wbr> 2<br />
-&nbsp;<wbr> 4<br />
-&nbsp;<wbr> 8<br />
-&nbsp;<wbr> 16<br />
+<p>&nbsp;<wbr> 0<br/>
+&nbsp;<wbr> 2<br/>
+&nbsp;<wbr> 4<br/>
+&nbsp;<wbr> 8<br/>
+&nbsp;<wbr> 16<br/>
 &nbsp;<wbr>Dialog&#8230; </p>
-<p>&nbsp;<wbr> <code>Undo</code><br />
-&nbsp;<wbr> <code>Help</code><br />
+<p>&nbsp;<wbr> <code>Undo</code><br/>
+&nbsp;<wbr> <code>Help</code><br/>
 &nbsp;<wbr> <code>Dismiss</code> </p>
 <p> Choose a color editing method from the <code>Method</code> sub-menu of the Command widget. The <code>point method</code> recolors any pixel selected with the pointer unless the button is released. The <code>replace method</code> recolors any pixel that matches the color of the pixel you select with a button press. <code>Floodfill</code> recolors any pixel that matches the color of the pixel you select with a button press and is a neighbor. Whereas <code>filltoborder</code> changes the matte value of any neighbor pixel that is not the border color. Finally <code>reset</code> changes the entire image to the designated color. </p>
 <p> Next, choose a pixel color from the <code>Pixel Color</code> sub-menu. Additional pixel colors can be specified with the color browser. You can change the menu colors by setting the X resources pen1 through pen9. </p>
@@ -3637,77 +3637,77 @@ input.ppm -gaussian 0x2 output.ppm </p>
 <p> Alternatively, press m in the image window. </p>
 <p> A small window appears showing the location of the cursor in the image window. You are now in matte edit mode. To exit immediately, press Dismiss. In matte edit mode, the Command widget has these options: </p>
 <p>&nbsp;<wbr> <code>Method</code> </p>
-<p>&nbsp;<wbr> point<br />
-&nbsp;<wbr> replace<br />
-&nbsp;<wbr> floodfill<br />
+<p>&nbsp;<wbr> point<br/>
+&nbsp;<wbr> replace<br/>
+&nbsp;<wbr> floodfill<br/>
 &nbsp;<wbr> reset </p>
 <p>&nbsp;<wbr> <code>Border Color</code> </p>
-<p>&nbsp;<wbr> black<br />
-&nbsp;<wbr> blue<br />
-&nbsp;<wbr> cyan<br />
-&nbsp;<wbr> green<br />
-&nbsp;<wbr> gray<br />
-&nbsp;<wbr> red<br />
-&nbsp;<wbr> magenta<br />
-&nbsp;<wbr> yellow<br />
-&nbsp;<wbr> white<br />
+<p>&nbsp;<wbr> black<br/>
+&nbsp;<wbr> blue<br/>
+&nbsp;<wbr> cyan<br/>
+&nbsp;<wbr> green<br/>
+&nbsp;<wbr> gray<br/>
+&nbsp;<wbr> red<br/>
+&nbsp;<wbr> magenta<br/>
+&nbsp;<wbr> yellow<br/>
+&nbsp;<wbr> white<br/>
 &nbsp;<wbr> Browser&#8230; </p>
 <p>&nbsp;<wbr> <code>Fuzz</code> </p>
-<p>&nbsp;<wbr> 0<br />
-&nbsp;<wbr> 2<br />
-&nbsp;<wbr> 4<br />
-&nbsp;<wbr> 8<br />
-&nbsp;<wbr> 16<br />
+<p>&nbsp;<wbr> 0<br/>
+&nbsp;<wbr> 2<br/>
+&nbsp;<wbr> 4<br/>
+&nbsp;<wbr> 8<br/>
+&nbsp;<wbr> 16<br/>
 &nbsp;<wbr>Dialog&#8230; </p>
-<p>&nbsp;<wbr> <code>Matte</code><br />
-&nbsp;<wbr> <code>Undo</code><br />
-&nbsp;<wbr> <code>Help</code><br />
+<p>&nbsp;<wbr> <code>Matte</code><br/>
+&nbsp;<wbr> <code>Undo</code><br/>
+&nbsp;<wbr> <code>Help</code><br/>
 &nbsp;<wbr> <code>Dismiss</code> </p>
 <p> Choose a matte editing method from the <code>Method</code> sub-menu of the Command widget. The <code>point method</code> changes the matte value of the any pixel selected with the pointer until the button is released. The <code>replace method</code> changes the matte value of any pixel that matches the color of the pixel you select with a button press. <code>Floodfill</code> changes the matte value of any pixel that matches the color of the pixel you select with a button press and is a neighbor. Whereas <code>filltoborder</code> recolors any neighbor pixel that is not the border color. Finally <code>reset</code> changes the entire image to the designated matte value. Choose <code>Matte Value</code> and a dialog appears requesting a matte value. Enter a value between <code>0 and 255</code>. This value is assigned as the matte value of the selected pixel or pixels. Now, press any button to select a pixel within the Image window to change its matte value. You can change the matte value of additional pixels by increasing the Delta value. The Delta value is first added then subtracted from the red, green, and blue of the target color. Any pixels within the range also have their matte value updated. If the <code>Magnify widget</code> is mapped, it can be helpful in positioning your pointer within the image (refer to button 2). Alternatively you can select a pixel to change the matte value from within the <code>Magnify widget</code>. Move the pointer to the <code>Magnify widget</code> and position the pixel with the cursor control keys. Finally, press a button to change the matte value of the selected pixel (or pixels). Matte information is only valid in a <i>DirectClass image</i>. Therefore, any <i>PseudoClass</i> image is promoted to <i>DirectClass</i>. Note that matte information for <i>PseudoClass</i> is not retained for colormapped X server visuals (e.g. <i>StaticColor, StaticColor, GrayScale, PseudoColor</i>) unless you immediately save your image to a file (refer to Write). Correct matte editing behavior may require a <i>TrueColor</i> or <i>DirectColor</i> visual or a <i>Standard Colormap</i>.</p>
 <h2>IMAGE DRAWING</h2>
 <p> An image is drawn upon interactively. <code>There is no command line argument to draw on an image</code>. To begin, choose <code>Draw</code> of the Image <code>Edit</code> sub-menu from the Command widget. Alternatively, press d in the image window. </p>
 <p> The cursor changes to a crosshair to indicate you are in draw mode. To exit immediately, press Dismiss. In draw mode, the Command widget has these options: </p>
 <p>&nbsp;<wbr> <code>Primitive</code> </p>
-<p>&nbsp;<wbr> point<br />
-&nbsp;<wbr> line<br />
-&nbsp;<wbr> rectangle<br />
-&nbsp;<wbr> fill rectangle<br />
-&nbsp;<wbr> circle<br />
-&nbsp;<wbr> fill circle<br />
-&nbsp;<wbr> ellipse<br />
-&nbsp;<wbr> fill ellipse<br />
-&nbsp;<wbr> polygon<br />
+<p>&nbsp;<wbr> point<br/>
+&nbsp;<wbr> line<br/>
+&nbsp;<wbr> rectangle<br/>
+&nbsp;<wbr> fill rectangle<br/>
+&nbsp;<wbr> circle<br/>
+&nbsp;<wbr> fill circle<br/>
+&nbsp;<wbr> ellipse<br/>
+&nbsp;<wbr> fill ellipse<br/>
+&nbsp;<wbr> polygon<br/>
 &nbsp;<wbr> fill polygon </p>
 <p>&nbsp;<wbr> <code>Color</code> </p>
-<p>&nbsp;<wbr> black<br />
-&nbsp;<wbr> blue<br />
-&nbsp;<wbr> cyan<br />
-&nbsp;<wbr> green<br />
-&nbsp;<wbr> gray<br />
-&nbsp;<wbr> red<br />
-&nbsp;<wbr> magenta<br />
-&nbsp;<wbr> yellow<br />
-&nbsp;<wbr> white<br />
-&nbsp;<wbr> transparent<br />
+<p>&nbsp;<wbr> black<br/>
+&nbsp;<wbr> blue<br/>
+&nbsp;<wbr> cyan<br/>
+&nbsp;<wbr> green<br/>
+&nbsp;<wbr> gray<br/>
+&nbsp;<wbr> red<br/>
+&nbsp;<wbr> magenta<br/>
+&nbsp;<wbr> yellow<br/>
+&nbsp;<wbr> white<br/>
+&nbsp;<wbr> transparent<br/>
 &nbsp;<wbr> Browser&#8230; </p>
 <p>&nbsp;<wbr> <code>Stipple</code> </p>
-<p>&nbsp;<wbr> Brick<br />
-&nbsp;<wbr> Diagonal<br />
-&nbsp;<wbr> Scales<br />
-&nbsp;<wbr> Vertical<br />
-&nbsp;<wbr> Wavy<br />
-&nbsp;<wbr> Translucent<br />
-&nbsp;<wbr> Opaque<br />
+<p>&nbsp;<wbr> Brick<br/>
+&nbsp;<wbr> Diagonal<br/>
+&nbsp;<wbr> Scales<br/>
+&nbsp;<wbr> Vertical<br/>
+&nbsp;<wbr> Wavy<br/>
+&nbsp;<wbr> Translucent<br/>
+&nbsp;<wbr> Opaque<br/>
 &nbsp;<wbr> Open&#8230; </p>
 <p>&nbsp;<wbr> <code>Width</code> </p>
-<p>&nbsp;<wbr> 1<br />
-&nbsp;<wbr> 2<br />
-&nbsp;<wbr> 4<br />
-&nbsp;<wbr> 8<br />
-&nbsp;<wbr> 16<br />
+<p>&nbsp;<wbr> 1<br/>
+&nbsp;<wbr> 2<br/>
+&nbsp;<wbr> 4<br/>
+&nbsp;<wbr> 8<br/>
+&nbsp;<wbr> 16<br/>
 &nbsp;<wbr>Dialog&#8230; </p>
-<p>&nbsp;<wbr> <code>Undo</code><br />
-&nbsp;<wbr> <code>Help</code><br />
+<p>&nbsp;<wbr> <code>Undo</code><br/>
+&nbsp;<wbr> <code>Help</code><br/>
 &nbsp;<wbr> <code>Dismiss</code> </p>
 <p> Choose a drawing primitive from the <code>Primitive</code> sub-menu. </p>
 <p> Next, choose a color from the <code>Color</code> sub-menu. Additional colors can be specified with the color browser. You can change the menu colors by setting the X resources pen1 through pen9. The transparent color updates the image matte channel and is useful for image compositing. </p>
@@ -3719,59 +3719,59 @@ input.ppm -gaussian 0x2 output.ppm </p>
 <h2>REGION OF INTEREST</h2>
 <p> To begin, press choose Region of Interest of the Pixel Transform sub-menu from the Command widget. Alternatively, press R in the image window. </p>
 <p> A small window appears showing the location of the cursor in the image window. You are now in region of interest mode. In region of interest mode, the Command widget has these options: </p>
-<p>&nbsp;<wbr> <code>Help</code><br />
+<p>&nbsp;<wbr> <code>Help</code><br/>
 &nbsp;<wbr> <code>Dismiss</code> </p>
 <p> To define a region of interest, press button 1 and drag. The region of interest is defined by a highlighted rectangle that expands or contracts as it follows the pointer. Once you are satisfied with the region of interest, release the button. You are now in apply mode. In apply mode the Command widget has these options: </p>
 <p>&nbsp;<wbr> <code>File</code> </p>
-<p>&nbsp;<wbr> Save&#8230;<br />
+<p>&nbsp;<wbr> Save&#8230;<br/>
 &nbsp;<wbr> Print&#8230; </p>
 <p>&nbsp;<wbr> <code>Edit</code> </p>
-<p>&nbsp;<wbr> Undo<br />
+<p>&nbsp;<wbr> Undo<br/>
 &nbsp;<wbr> Redo </p>
 <p>&nbsp;<wbr> <code>Transform</code> </p>
-<p>&nbsp;<wbr> Flip<br />
-&nbsp;<wbr> Flop<br />
-&nbsp;<wbr> Rotate Right<br />
+<p>&nbsp;<wbr> Flip<br/>
+&nbsp;<wbr> Flop<br/>
+&nbsp;<wbr> Rotate Right<br/>
 &nbsp;<wbr> Rotate Left </p>
 <p>&nbsp;<wbr> <code>Enhance</code> </p>
-<p>&nbsp;<wbr> Hue&#8230;<br />
-&nbsp;<wbr> Saturation&#8230;<br />
-&nbsp;<wbr> Brightness&#8230;<br />
-&nbsp;<wbr> Gamma&#8230;<br />
-&nbsp;<wbr> Spiff<br />
-&nbsp;<wbr> Dull<br />
-&nbsp;<wbr> Equalize<br />
-&nbsp;<wbr> Normalize<br />
-&nbsp;<wbr> Negate<br />
-&nbsp;<wbr> GRAYscale<br />
+<p>&nbsp;<wbr> Hue&#8230;<br/>
+&nbsp;<wbr> Saturation&#8230;<br/>
+&nbsp;<wbr> Brightness&#8230;<br/>
+&nbsp;<wbr> Gamma&#8230;<br/>
+&nbsp;<wbr> Spiff<br/>
+&nbsp;<wbr> Dull<br/>
+&nbsp;<wbr> Equalize<br/>
+&nbsp;<wbr> Normalize<br/>
+&nbsp;<wbr> Negate<br/>
+&nbsp;<wbr> GRAYscale<br/>
 &nbsp;<wbr> Quantize&#8230; </p>
 <p>&nbsp;<wbr> <code>Effects</code> </p>
-<p>&nbsp;<wbr> Despeckle<br />
-&nbsp;<wbr> Emboss<br />
-&nbsp;<wbr> Reduce Noise<br />
-&nbsp;<wbr> Add Noise<br />
-&nbsp;<wbr> Sharpen&#8230;<br />
-&nbsp;<wbr> Blur&#8230;<br />
-&nbsp;<wbr> Threshold&#8230;<br />
-&nbsp;<wbr> Edge Detect&#8230;<br />
-&nbsp;<wbr> Spread&#8230;<br />
-&nbsp;<wbr> Shade&#8230;<br />
-&nbsp;<wbr> Raise&#8230;<br />
+<p>&nbsp;<wbr> Despeckle<br/>
+&nbsp;<wbr> Emboss<br/>
+&nbsp;<wbr> Reduce Noise<br/>
+&nbsp;<wbr> Add Noise<br/>
+&nbsp;<wbr> Sharpen&#8230;<br/>
+&nbsp;<wbr> Blur&#8230;<br/>
+&nbsp;<wbr> Threshold&#8230;<br/>
+&nbsp;<wbr> Edge Detect&#8230;<br/>
+&nbsp;<wbr> Spread&#8230;<br/>
+&nbsp;<wbr> Shade&#8230;<br/>
+&nbsp;<wbr> Raise&#8230;<br/>
 &nbsp;<wbr> Segment&#8230; </p>
 <p>&nbsp;<wbr> <code>F/X</code> </p>
-<p>&nbsp;<wbr> Solarize&#8230;<br />
-&nbsp;<wbr> Swirl&#8230;<br />
-&nbsp;<wbr> Implode&#8230;<br />
-&nbsp;<wbr> Wave&#8230;<br />
-&nbsp;<wbr> Oil Paint<br />
+<p>&nbsp;<wbr> Solarize&#8230;<br/>
+&nbsp;<wbr> Swirl&#8230;<br/>
+&nbsp;<wbr> Implode&#8230;<br/>
+&nbsp;<wbr> Wave&#8230;<br/>
+&nbsp;<wbr> Oil Paint<br/>
 &nbsp;<wbr> Charcoal Draw&#8230; </p>
 <p>&nbsp;<wbr> <code>Miscellany</code> </p>
-<p>&nbsp;<wbr> Image Info<br />
-&nbsp;<wbr> Zoom Image<br />
-&nbsp;<wbr> Show Preview&#8230;<br />
-&nbsp;<wbr> Show Histogram<br />
+<p>&nbsp;<wbr> Image Info<br/>
+&nbsp;<wbr> Zoom Image<br/>
+&nbsp;<wbr> Show Preview&#8230;<br/>
+&nbsp;<wbr> Show Histogram<br/>
 &nbsp;<wbr> Show Matte </p>
-<p>&nbsp;<wbr> <code>Help</code><br />
+<p>&nbsp;<wbr> <code>Help</code><br/>
 &nbsp;<wbr> <code>Dismiss</code> </p>
 <p> You can make adjustments to the region of interest by moving the pointer to one of the rectangle corners, pressing a button, and dragging. Finally, choose an image processing technique from the Command widget. You can choose more than one image processing technique to apply to an area. Alternatively, you can move the region of interest before applying another image processing technique. To exit, press Dismiss.</p>
 <h2>IMAGE PANNING</h2>
@@ -3780,38 +3780,38 @@ input.ppm -gaussian 0x2 output.ppm </p>
 <p> The panning icon is withdrawn if the image becomes smaller than the dimensions of the X server screen.</p>
 <h2>USER PREFERENCES</h2>
 <p> Preferences affect the default behavior of <code><a href="/docs/linux/man/1-display/">display</a>(1)</code>. The preferences are either true or false and are stored in your home directory as .displayrc: </p>
-<p> <code>display image centered on a backdrop</code>&quot;<br />
+<p> <code>display image centered on a backdrop</code>&quot;<br/>
 &nbsp;<wbr> </p>
-<p> This backdrop covers the entire workstation screen and is useful for hiding other X window activity while viewing the image. The color of the backdrop is specified as the background color. Refer to X Resources for details. <code>confirm on program exit</code>&quot;<br />
+<p> This backdrop covers the entire workstation screen and is useful for hiding other X window activity while viewing the image. The color of the backdrop is specified as the background color. Refer to X Resources for details. <code>confirm on program exit</code>&quot;<br/>
 &nbsp;<wbr> </p>
-<p> Ask for a confirmation before exiting the <code><a href="/docs/linux/man/1-display/">display</a>(1)</code> program. <code>correct image for display gamma</code>&quot;<br />
+<p> Ask for a confirmation before exiting the <code><a href="/docs/linux/man/1-display/">display</a>(1)</code> program. <code>correct image for display gamma</code>&quot;<br/>
 &nbsp;<wbr> </p>
-<p> If the image has a known gamma, the gamma is corrected to match that of the X server (see the X Resource<code> displayGamma</code>). <code>display warning messages</code>&quot;<br />
+<p> If the image has a known gamma, the gamma is corrected to match that of the X server (see the X Resource<code> displayGamma</code>). <code>display warning messages</code>&quot;<br/>
 &nbsp;<wbr> </p>
-<p> Display any warning messages. <code>apply Floyd/Steinberg error diffusion to image</code>&quot;<br />
+<p> Display any warning messages. <code>apply Floyd/Steinberg error diffusion to image</code>&quot;<br/>
 &nbsp;<wbr> </p>
-<p> The basic strategy of dithering is to trade intensity resolution for spatial resolution by averaging the intensities of several neighboring pixels. Images which suffer from severe contouring when reducing colors can be improved with this preference. <code>use a shared colormap for colormapped X visuals</code>&quot;<br />
+<p> The basic strategy of dithering is to trade intensity resolution for spatial resolution by averaging the intensities of several neighboring pixels. Images which suffer from severe contouring when reducing colors can be improved with this preference. <code>use a shared colormap for colormapped X visuals</code>&quot;<br/>
 &nbsp;<wbr> </p>
-<p> This option only applies when the default X server visual is <i>PseudoColor</i> or <i>GRAYScale</i>. Refer to <code>-visual</code> for more details. By default, a shared colormap is allocated. The image shares colors with other X clients. Some image colors could be approximated, therefore your image may look very different than intended. Otherwise the image colors appear exactly as they are defined. However, other clients may go technicolor when the image colormap is installed. <code>display images as an X server pixmap</code>&quot;<br />
+<p> This option only applies when the default X server visual is <i>PseudoColor</i> or <i>GRAYScale</i>. Refer to <code>-visual</code> for more details. By default, a shared colormap is allocated. The image shares colors with other X clients. Some image colors could be approximated, therefore your image may look very different than intended. Otherwise the image colors appear exactly as they are defined. However, other clients may go technicolor when the image colormap is installed. <code>display images as an X server pixmap</code>&quot;<br/>
 &nbsp;<wbr> </p>
 <p> Images are maintained as a XImage by default. Set this resource to True to utilize a server Pixmap instead. This option is useful if your image exceeds the dimensions of your server screen and you intend to pan the image. Panning is much faster with Pixmaps than with a XImage. Pixmaps are considered a precious resource, use them with discretion. </p>
 <dl>
 </dl>
 <h2>GM IDENTIFY</h2>
 <p> <code>Identify</code> describes the format and characteristics of one or more image files as internally supported by the software. It will also report if an image is incomplete or corrupt. The information displayed includes the scene number, the file name, the width and height of the image, whether the image is colormapped or not, the number of colors in the image, the number of bytes in the image, the format of the image (JPEG, PNM, etc.), and finally the number of seconds in both user time and elapsed time it took to read and process the image. If -verbose or +ping are provided as an option, the pixel read rate is also displayed. An example line output from <code>identify</code> follows: </p>
-<p>&nbsp;<wbr>images/aquarium.miff 640&#215;480 PseudoClass 256c<br />
+<p>&nbsp;<wbr>images/aquarium.miff 640&#215;480 PseudoClass 256c<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>308135b MIFF 0.000u 0:01 </p>
 <p> If -verbose is set, expect additional output including any image comment: </p>
-<p>&nbsp;<wbr>Image: images/aquarium.miff<br />
-&nbsp;<wbr>class: PseudoClass<br />
-&nbsp;<wbr>colors: 256<br />
-&nbsp;<wbr>signature: eb5dca81dd93ae7e6ffae99a527eb5dca8&#8230;<br />
-&nbsp;<wbr>matte: False<br />
-&nbsp;<wbr>geometry: 640&#215;480<br />
-&nbsp;<wbr>depth: 8<br />
-&nbsp;<wbr>bytes: 308135<br />
-&nbsp;<wbr>format: MIFF<br />
-&nbsp;<wbr>comments:<br />
+<p>&nbsp;<wbr>Image: images/aquarium.miff<br/>
+&nbsp;<wbr>class: PseudoClass<br/>
+&nbsp;<wbr>colors: 256<br/>
+&nbsp;<wbr>signature: eb5dca81dd93ae7e6ffae99a527eb5dca8&#8230;<br/>
+&nbsp;<wbr>matte: False<br/>
+&nbsp;<wbr>geometry: 640&#215;480<br/>
+&nbsp;<wbr>depth: 8<br/>
+&nbsp;<wbr>bytes: 308135<br/>
+&nbsp;<wbr>format: MIFF<br/>
+&nbsp;<wbr>comments:<br/>
 &nbsp;<wbr>Imported from MTV raster image: aquarium.mtv </p>
 <p> For some formats, additional format-specific information about the file will be written if the -debug coder or -debug all option is used.</p>
 <h2>IDENTIFY OPTIONS</h2>
@@ -3861,7 +3861,7 @@ input.ppm -gaussian 0x2 output.ppm </p>
 <p> To capture the entire X server screen in the JPEG image format in a file entitled root.jpeg, without using the mouse, use: </p>
 <p>&nbsp;<wbr>gm import -window root root.jpeg </p>
 <p> To capture the 512&#215;256 area at the upper right corner of the X server screen in the PNG image format in a well-compressed file entitled corner.png, without using the mouse, use: </p>
-<p>&nbsp;<wbr>gm import -window root -crop 512&#215;256-0+0 -quality 90<br />
+<p>&nbsp;<wbr>gm import -window root -crop 512&#215;256-0+0 -quality 90<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>corner.png </p>
 <h2>OPTIONS</h2>
 <p> Options are processed in command line order. Any option you specify on the command line remains in effect until it is explicitly changed by specifying the option again with a different effect. </p>
@@ -4267,22 +4267,22 @@ input.ppm -gaussian 0x2 output.ppm </p>
 <p> Note, a composite MIFF image displayed to an X server with <code>display</code> behaves differently than other images. You can think of the composite as a visual image directory. Choose a particular tile of the composite and press a button to display it. See <code><a href="/docs/linux/man/1-display/">display</a>(1)</code> and <code>miff(5)</code></p>
 <h2>EXAMPLES</h2>
 <p> To create a montage of a cockatoo, a parrot, and a hummingbird and write it to a file called birds, use: </p>
-<p>&nbsp;<wbr>gm montage cockatoo.miff parrot.miff hummingbird.miff<br />
+<p>&nbsp;<wbr>gm montage cockatoo.miff parrot.miff hummingbird.miff<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>birds.miff </p>
 <p> To tile several bird images so that they are at most 256 pixels in width and 192 pixels in height, surrounded by a red border, and separated by 10 pixels of background color, use: </p>
-<p>&nbsp;<wbr>gm montage -geometry 256&#215;192+10+10 -bordercolor red<br />
+<p>&nbsp;<wbr>gm montage -geometry 256&#215;192+10+10 -bordercolor red<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>birds.*&nbsp;<wbr>montage.miff </p>
 <p> To create an unlabeled parrot image, 640 by 480 pixels, and surrounded by a border of black, use: </p>
-<p>&nbsp;<wbr>gm montage -geometry 640&#215;480 -bordercolor black<br />
+<p>&nbsp;<wbr>gm montage -geometry 640&#215;480 -bordercolor black<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-label&nbsp;<wbr>&quot;&quot;&nbsp;<wbr>parrot.miff bird.miff </p>
 <p> To create an image of an eagle with a textured background, use: </p>
 <p>&nbsp;<wbr>gm montage -texture bumps.jpg eagle.jpg eagle.png </p>
 <p> To join several GIF images together without any extraneous graphics (e.g. no label, no shadowing, no surrounding tile frame), use: </p>
-<p>&nbsp;<wbr>gm montage&nbsp;<wbr>+frame&nbsp;<wbr>+shadow&nbsp;<wbr>+label -tile 5&#215;1<br />
+<p>&nbsp;<wbr>gm montage&nbsp;<wbr>+frame&nbsp;<wbr>+shadow&nbsp;<wbr>+label -tile 5&#215;1<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-geometry 50&#215;50+0+0&nbsp;<wbr>*.png joined.png </p>
 <h2>OPTIONS</h2>
 <p> Any option you specify on the command line remains in effect for the group of images following it, until the group is terminated by the appearance of any option or <code>-noop</code>. For example, to make a montage of three images, the first with 32 colors, the second with an unlimited number of colors, and the third with only 16 colors, use: </p>
-<p>&nbsp;<wbr>gm montage -colors 32 cockatoo.1 -noop cockatoo.2<br />
+<p>&nbsp;<wbr>gm montage -colors 32 cockatoo.1 -noop cockatoo.2<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-colors 16 cockatoo.3 cockatoos.miff </p>
 <p> For a more detailed description of each option, see Options, above. </p>
 <dl>
@@ -4466,8 +4466,8 @@ input.ppm -gaussian 0x2 output.ppm </p>
 <p> To obtain time information for the execution of a command: </p>
 <p> % gm time convert input.ppm -gaussian 0x2 output.ppm convert input.ppm -gaussian 0x2 output.ppm 22.60s user 0.00s system 2354% cpu 0.960 total </p>
 <p> Here is the interpretation of the above output: </p>
-<p>&nbsp;<wbr><code>user</code>&nbsp;<wbr>&#8211; the total user time consumed.<br />
-&nbsp;<wbr><code>system</code>&nbsp;<wbr>&#8211; the total system time consumed.<br />
+<p>&nbsp;<wbr><code>user</code>&nbsp;<wbr>&#8211; the total user time consumed.<br/>
+&nbsp;<wbr><code>system</code>&nbsp;<wbr>&#8211; the total system time consumed.<br/>
 &nbsp;<wbr><code>total</code>&nbsp;<wbr>&#8211; the total elapsed time consumed. </p>
 <h2>OPTIONS</h2>
 <p> The time command reqires no options other than the gm command to execute.</p>
@@ -4476,44 +4476,44 @@ input.ppm -gaussian 0x2 output.ppm </p>
 <p> <code>version</code> displays the software release version, build quantum (pixel sample) depth, web site URL, copyright notice, enabled features support, configuration parameters, and final build options used to build the software. The available information depends on how the software was configured and the host system.</p>
 <h2>EXAMPLES</h2>
 <p> To display the version information: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>%&nbsp;<wbr>gm -version<br />
-&nbsp;<wbr>&nbsp;<wbr>GraphicsMagick 1.3.19 2013-12-31 Q16&nbsp;<wbr><a rel="nofollow" href="http://www.GraphicsMagick.org/">http://www.GraphicsMagick.org/</a><br />
-&nbsp;<wbr>&nbsp;<wbr>Copyright&nbsp;<wbr>(C)&nbsp;<wbr>2002-2013 GraphicsMagick Group.<br />
-&nbsp;<wbr>&nbsp;<wbr>Additional copyrights and licenses apply to this software.<br />
-&nbsp;<wbr>&nbsp;<wbr>See&nbsp;<wbr><a rel="nofollow" href="http://www.GraphicsMagick.org/www/Copyright.html">http://www.GraphicsMagick.org/www/Copyright.html</a>&nbsp;<wbr>for details.<br />
-&nbsp;<wbr>&nbsp;<wbr>Feature Support:<br />
-&nbsp;<wbr>Thread Safe&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>yes<br />
-&nbsp;<wbr>Large Files&nbsp;<wbr>(&gt;&nbsp;<wbr>32 bit)&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>yes<br />
-&nbsp;<wbr>Large Memory&nbsp;<wbr>(&gt;&nbsp;<wbr>32 bit)&nbsp;<wbr>&nbsp;<wbr>no<br />
-&nbsp;<wbr>BZIP&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>yes<br />
-&nbsp;<wbr>DPS&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>no<br />
-&nbsp;<wbr>FlashPix&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>no<br />
-&nbsp;<wbr>FreeType&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>yes<br />
-&nbsp;<wbr>Ghostscript&nbsp;<wbr>(Library)&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>no<br />
-&nbsp;<wbr>JBIG&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>no<br />
-&nbsp;<wbr>JPEG-2000&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>yes<br />
-&nbsp;<wbr>JPEG&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>yes<br />
-&nbsp;<wbr>Little CMS&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>yes<br />
-&nbsp;<wbr>Loadable Modules&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>no<br />
-&nbsp;<wbr>OpenMP&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>yes&nbsp;<wbr>(201107)<br />
-&nbsp;<wbr>PNG&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>yes<br />
-&nbsp;<wbr>TIFF&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>yes<br />
-&nbsp;<wbr>TRIO&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>no<br />
-&nbsp;<wbr>UMEM&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>yes<br />
-&nbsp;<wbr>WMF&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>no<br />
-&nbsp;<wbr>X11&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>yes<br />
-&nbsp;<wbr>XML&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>yes<br />
-&nbsp;<wbr>ZLIB&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>yes<br />
-&nbsp;<wbr>&nbsp;<wbr>Host type: i386-pc-solaris2.11<br />
-&nbsp;<wbr>&nbsp;<wbr>Configured using the command:<br />
-&nbsp;<wbr>./configure&nbsp;<wbr>&nbsp;<wbr>&#8230;<br />
-&nbsp;<wbr>&nbsp;<wbr>Final Build Parameters:<br />
-&nbsp;<wbr>CC&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>&#8230;<br />
-&nbsp;<wbr>CFLAGS&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>&#8230;<br />
-&nbsp;<wbr>CPPFLAGS&nbsp;<wbr>=&nbsp;<wbr>&#8230;<br />
-&nbsp;<wbr>CXX&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>&#8230;<br />
-&nbsp;<wbr>CXXFLAGS&nbsp;<wbr>=&nbsp;<wbr>&#8230;<br />
-&nbsp;<wbr>LDFLAGS&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>&#8230;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>%&nbsp;<wbr>gm -version<br/>
+&nbsp;<wbr>&nbsp;<wbr>GraphicsMagick 1.3.19 2013-12-31 Q16&nbsp;<wbr><a rel="nofollow" href="http://www.GraphicsMagick.org/">http://www.GraphicsMagick.org/</a><br/>
+&nbsp;<wbr>&nbsp;<wbr>Copyright&nbsp;<wbr>(C)&nbsp;<wbr>2002-2013 GraphicsMagick Group.<br/>
+&nbsp;<wbr>&nbsp;<wbr>Additional copyrights and licenses apply to this software.<br/>
+&nbsp;<wbr>&nbsp;<wbr>See&nbsp;<wbr><a rel="nofollow" href="http://www.GraphicsMagick.org/www/Copyright.html">http://www.GraphicsMagick.org/www/Copyright.html</a>&nbsp;<wbr>for details.<br/>
+&nbsp;<wbr>&nbsp;<wbr>Feature Support:<br/>
+&nbsp;<wbr>Thread Safe&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>yes<br/>
+&nbsp;<wbr>Large Files&nbsp;<wbr>(&gt;&nbsp;<wbr>32 bit)&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>yes<br/>
+&nbsp;<wbr>Large Memory&nbsp;<wbr>(&gt;&nbsp;<wbr>32 bit)&nbsp;<wbr>&nbsp;<wbr>no<br/>
+&nbsp;<wbr>BZIP&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>yes<br/>
+&nbsp;<wbr>DPS&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>no<br/>
+&nbsp;<wbr>FlashPix&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>no<br/>
+&nbsp;<wbr>FreeType&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>yes<br/>
+&nbsp;<wbr>Ghostscript&nbsp;<wbr>(Library)&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>no<br/>
+&nbsp;<wbr>JBIG&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>no<br/>
+&nbsp;<wbr>JPEG-2000&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>yes<br/>
+&nbsp;<wbr>JPEG&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>yes<br/>
+&nbsp;<wbr>Little CMS&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>yes<br/>
+&nbsp;<wbr>Loadable Modules&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>no<br/>
+&nbsp;<wbr>OpenMP&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>yes&nbsp;<wbr>(201107)<br/>
+&nbsp;<wbr>PNG&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>yes<br/>
+&nbsp;<wbr>TIFF&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>yes<br/>
+&nbsp;<wbr>TRIO&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>no<br/>
+&nbsp;<wbr>UMEM&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>yes<br/>
+&nbsp;<wbr>WMF&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>no<br/>
+&nbsp;<wbr>X11&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>yes<br/>
+&nbsp;<wbr>XML&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>yes<br/>
+&nbsp;<wbr>ZLIB&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>yes<br/>
+&nbsp;<wbr>&nbsp;<wbr>Host type: i386-pc-solaris2.11<br/>
+&nbsp;<wbr>&nbsp;<wbr>Configured using the command:<br/>
+&nbsp;<wbr>./configure&nbsp;<wbr>&nbsp;<wbr>&#8230;<br/>
+&nbsp;<wbr>&nbsp;<wbr>Final Build Parameters:<br/>
+&nbsp;<wbr>CC&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>&#8230;<br/>
+&nbsp;<wbr>CFLAGS&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>&#8230;<br/>
+&nbsp;<wbr>CPPFLAGS&nbsp;<wbr>=&nbsp;<wbr>&#8230;<br/>
+&nbsp;<wbr>CXX&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>&#8230;<br/>
+&nbsp;<wbr>CXXFLAGS&nbsp;<wbr>=&nbsp;<wbr>&#8230;<br/>
+&nbsp;<wbr>LDFLAGS&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>&#8230;<br/>
 &nbsp;<wbr>LIBS&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>&#8230; </p>
 <h2>OPTIONS</h2>
 <p> The version command does not currently support any options. </p>

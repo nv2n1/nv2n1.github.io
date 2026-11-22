@@ -34,8 +34,8 @@ description: "toe – table of (terminfo) entries"
 <dt><code>-V</code></dt>
 <dd> reports the version of ncurses which was used in this program, and exits.</dd></dl>
 <h2>EXAMPLES</h2>
-<p> Without sorting, the <code>-a</code> option reports all of the names found in all of the terminal databases found by the <code>TERMINFO</code> and <code>TERMINFO_DIRS</code> environment variables:<br />
-&nbsp;.sp<br />
+<p> Without sorting, the <code>-a</code> option reports all of the names found in all of the terminal databases found by the <code>TERMINFO</code> and <code>TERMINFO_DIRS</code> environment variables:<br/>
+&nbsp;.sp<br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre>
 MtxOrb162       16x2 Matrix Orbital LCD display
@@ -53,8 +53,8 @@ qansi-t         QNX ansi without console writes
 . . .
 </pre>
 <p>&nbsp;.in -4 </p>
-<p> Use the <code>-a</code> and <code>-s</code> options together to show where each terminal description was found:<br />
-&nbsp;.sp<br />
+<p> Use the <code>-a</code> and <code>-s</code> options together to show where each terminal description was found:<br/>
+&nbsp;.sp<br/>
 &nbsp;.in&nbsp;+4 </p>
 <pre><code>
 --&gt; /usr/local/ncurses/share/terminfo
@@ -79,9 +79,9 @@ qansi-t         QNX ansi without console writes
 <dd> Compiled terminal description database.</dd></dl>
 <h2>HISTORY</h2>
 <p> This utility is not provided by other implementations. There is no relevant X/Open or POSIX standard for <code>toe</code>. </p>
-<p> The program name refers to a developer&#8217;s pun:<br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>tic</code>,<br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>tac</code> (now <code>tack</code>),<br />
+<p> The program name refers to a developer&#8217;s pun:<br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>tic</code>,<br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>tac</code> (now <code>tack</code>),<br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 <code>toe</code>. </p>
 <p> It replaced a <code>-T</code> option which was briefly supported by the ncurses <code>infocmp</code> utility in 1995. </p>
 <p> The <code>-a</code> and <code>-s</code> options were added to <code>toe</code> several years later (2006 and 2011, respectively).</p>

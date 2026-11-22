@@ -10,7 +10,7 @@ description: "cgesdd.f –"
 <p>cgesdd.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>cgesdd</code> (JOBZ, M, N, A, LDA, S, U, LDU, VT, LDVT, WORK, LWORK, RWORK, IWORK, INFO)<br />
+<p>subroutine <code>cgesdd</code> (JOBZ, M, N, A, LDA, S, U, LDU, VT, LDVT, WORK, LWORK, RWORK, IWORK, INFO)<br/>
  <i></i><code>CGESDD</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cgesdd (characterJOBZ, integerM, integerN, complex, dimension( lda, * )A, integerLDA, real, dimension( * )S, complex, dimension( ldu, * )U, integerLDU, complex, dimension( ldvt, * )VT, integerLDVT, complex, dimension( * )WORK, integerLWORK, real, dimension( * )RWORK, integer, dimension( * )IWORK, integerINFO)</h3>

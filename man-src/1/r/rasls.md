@@ -34,6 +34,6 @@ description: "rasls – list information on rasterfiles"
 <p> <code>rasview</code>(1NCARG), <code>rascat</code>(1NCARG), <code>rasgetpal</code>(1NCARG), <code>rasls</code>(1NCARG), <code>rassplit</code>(1NCARG), <code>ras_formats</code>(5NCARG), <code>ras_palette</code>(5NCARG) </p>
 <p> Hardcopy: NCAR Graphics Fundamentals, UNIX Version</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright (C) 1987-2009<br />
+<p> Copyright (C) 1987-2009<br/>
  University Corporation for Atmospheric Research </p>
 <p> The use of this Software is governed by a License Agreement. </p>

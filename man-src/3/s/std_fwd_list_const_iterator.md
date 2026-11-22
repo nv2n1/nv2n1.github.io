@@ -11,7 +11,7 @@ description: "std::_Fwd_list_const_iterator< _Tp > –"
 <h2>Synopsis</h2>
 <h3>Public Types</h3>
 <p>typedef const <code>_Fwd_list_node</code>&lt; _Tp &gt; <code>_Node</code> </p>
-<p> typedef<br />
+<p> typedef<br/>
  <code>_Fwd_list_const_iterator</code>&lt; _Tp &gt; <code>_Self</code>&quot; </p>
 <p> typedef ptrdiff_t <code>difference_type</code> </p>
 <p> typedef <code>_Fwd_list_iterator</code>&lt; _Tp &gt; <code>iterator</code> </p>

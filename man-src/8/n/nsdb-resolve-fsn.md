@@ -83,12 +83,12 @@ description: "nsdb-resolve-fsn – resolve a fileset name (FSN) record on an NSD
 </dl>
 <p> Further suppose the NSDB <i>nsdb.example.net:389</i> has an NSDB Container Entry whose distinguished name is <i>o=fedfs</i>, and that the FSN has a single FSL child record. To resolve the FSN, you might use:</p>
 <dl>
-<dd>$ nsdb-resolve-fsn -e o=fedfs \<br />
+<dd>$ nsdb-resolve-fsn -e o=fedfs \<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>-l nsdb.example.net \</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>8e246ddc-7b46-11e0-8252-000c297fd679</p>
 <p> For FSN UUID 8e246ddc-7b46-11e0-8252-000c297fd679 </p>
 <p>&nbsp;<wbr>FSN TTL&nbsp;<wbr>&nbsp;<wbr>600 </p>
-<p> &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;<br />
+<p> &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;<br/>
  dn: fedfsFslUuid=323c5068-7c11-11e0-8d38-000c297fd679, </p>
 <p>&nbsp;<wbr>fedfsFsnUuid=8e246ddc-7b46-11e0-8252-000c297fd679,o=fedfs </p>
 <p>&nbsp;<wbr>FSN UUID:<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>8e246ddc-7b46-11e0-8252-000c297fd679</p>

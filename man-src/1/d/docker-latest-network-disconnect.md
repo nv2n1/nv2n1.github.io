@@ -21,13 +21,13 @@ description: "docker-network-disconnect – disconnect a container from a networ
 </pre>
 </dd></dl>
 <h2>OPTIONS</h2>
-<p> <code>NETWORK</code><br />
+<p> <code>NETWORK</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Specify network name </p>
-<p> <code>CONTAINER</code><br />
+<p> <code>CONTAINER</code><br/>
 &nbsp;<wbr>Specify container name </p>
-<p> <code>&#8211;force</code><br />
+<p> <code>&#8211;force</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Force the container to disconnect from a network </p>
-<p> <code>&#8211;help</code><br />
+<p> <code>&#8211;help</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Print usage statement </p>
 <h2>HISTORY</h2>
 <p> OCT 2015, created by Mary Anthony &lt;mary [at] docker.com&gt; </p>

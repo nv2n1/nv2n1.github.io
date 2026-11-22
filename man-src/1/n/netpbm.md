@@ -499,7 +499,7 @@ description: "netpbm – package of graphics manipulation programs and libraries
 <dt><code>ppmtv </code></dt>
 <dd> Make an image lined so it looks like an old TV</dd>
 <dt><code>pbmto4425 </code></dt>
-<dd> Display PBM image on AT&amp;T 4425 ASCII terminal with gfx chars<br />
+<dd> Display PBM image on AT&amp;T 4425 ASCII terminal with gfx chars<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dd></dl>
 <h3>Uncatalogued As Yet</h3>
 <dl>
@@ -539,11 +539,11 @@ description: "netpbm – package of graphics manipulation programs and libraries
 <p> Here is an example of a shell command to convert all your of PNG files (named *.png) to JPEG files named *.jpg: </p>
 <p> <code>for i in *.png; do pngtopnm $i | ppmtojpeg &gt;`basename $i .png`.jpg; done</code> </p>
 <p> Or you might just generate a stream of individual shell commands, one per file, with awk or perl. Here&#8217;s how to brighten 30 YUV images that make up one second of a movie, keeping the images in the same files: </p>
-<p> <code>ls *.yuv<br />
- </code> <code>| perl -ne &#8216;chomp; </code><br />
- <code>print yuvtoppm $_ | ppmbrighten -v 100 | ppmtoyuv &gt;tmp$$.yuv;, </code><br />
- <code>mv tmp$$.yuv $_ </code><br />
- <code>&#8216;<br />
+<p> <code>ls *.yuv<br/>
+ </code> <code>| perl -ne &#8216;chomp; </code><br/>
+ <code>print yuvtoppm $_ | ppmbrighten -v 100 | ppmtoyuv &gt;tmp$$.yuv;, </code><br/>
+ <code>mv tmp$$.yuv $_ </code><br/>
+ <code>&#8216;<br/>
  </code> <code>| sh </code> </p>
 <p> The tools <code>find </code> (with the <code>-exec </code> option) and <code>xargs </code> are also useful for simple manipulation of groups of files. </p>
 <p> Some shells&#8217; &quot;process substitution&quot; facility can help where a non-Netpbm program expects you to identify a disk file for input and you want it to use the result of a Netpbm manipulation. Say printcmyk takes the filename of a Tiff CMYK file as input and what you have is a PNG file <code>abc.png</code>. Try: </p>

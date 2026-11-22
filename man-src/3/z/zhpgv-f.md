@@ -10,7 +10,7 @@ description: "zhpgv.f –"
 <p>zhpgv.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zhpgv</code> (ITYPE, JOBZ, UPLO, N, AP, BP, W, Z, LDZ, WORK, RWORK, INFO)<br />
+<p>subroutine <code>zhpgv</code> (ITYPE, JOBZ, UPLO, N, AP, BP, W, Z, LDZ, WORK, RWORK, INFO)<br/>
  <i></i><code>ZHPGST</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zhpgv (integerITYPE, characterJOBZ, characterUPLO, integerN, complex*16, dimension( * )AP, complex*16, dimension( * )BP, double precision, dimension( * )W, complex*16, dimension( ldz, * )Z, integerLDZ, complex*16, dimension( * )WORK, double precision, dimension( * )RWORK, integerINFO)</h3>

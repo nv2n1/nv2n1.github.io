@@ -10,7 +10,7 @@ description: "qsched, process-scheduler-log – show scheduling information on r
 
 <p> qsched, process-scheduler-log &#8211; show scheduling information on resource reservation </p>
 <h2>SYNTAX</h2>
-<p> <code>qsched</code> [<code>-u&nbsp;</code><i>user</i>|<code>&#8211;user=</code><i>user</i>] [<code>-a</code>|<code>&#8211;all</code>] [<code>-j&nbsp;</code><i>jid_list</i>|<code>&#8211;jid=</code><i>jid_list</i>] [<code>-f</code>|<code>&#8211;full</code>] [<code>-s</code> <code>j</code>|<code>&#8211;sort=j</code>] [<code>-q</code>|<code>&#8211;queues</code>] [<code>-d</code>|<code>&#8211;debug</code>] [<code>-h</code>|<code>&#8211;help</code>]<br />
+<p> <code>qsched</code> [<code>-u&nbsp;</code><i>user</i>|<code>&#8211;user=</code><i>user</i>] [<code>-a</code>|<code>&#8211;all</code>] [<code>-j&nbsp;</code><i>jid_list</i>|<code>&#8211;jid=</code><i>jid_list</i>] [<code>-f</code>|<code>&#8211;full</code>] [<code>-s</code> <code>j</code>|<code>&#8211;sort=j</code>] [<code>-q</code>|<code>&#8211;queues</code>] [<code>-d</code>|<code>&#8211;debug</code>] [<code>-h</code>|<code>&#8211;help</code>]<br/>
  <code>process-scheduler-log</code> [<code>-v</code>]</p>
 <h2>DESCRIPTION</h2>
 <p> <code>qsched</code> reports resources being reserved for jobs on the basis of the <i>schedule</i> file, which is processed by <code>process-scheduler-log</code>, which runs continuously. Generating <i>schedule</i> requires setting <code>MONITOR=1</code> in the <code>params</code> parameter of the scheduler (see </p>
@@ -49,5 +49,5 @@ description: "qsched, process-scheduler-log – show scheduling information on r
 <dd> Contents of last complete scheduling interval seen in <i>schedule</i> file.</dd></dl>
 <h2>SEE ALSO</h2>
 <h2>AUTHOR</h2>
-<p> Mark Dixon &lt;m.c.dixon [at] leeds.ac.uk&gt;<br />
+<p> Mark Dixon &lt;m.c.dixon [at] leeds.ac.uk&gt;<br/>
  Man page by Dave Love &lt;d.love [at] liverpool.ac.uk&gt; </p>

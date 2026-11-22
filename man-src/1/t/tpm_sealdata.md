@@ -8,7 +8,7 @@ url: "/docs/linux/man/1-tpm_sealdata/"
 description: "tpm_sealdata – seal input data to the system’s TPM"
 ---
 
-<p>TPM Management &#8211; tpm_sealdata<br />
+<p>TPM Management &#8211; tpm_sealdata<br/>
  </center></p>
 
 <p> tpm_sealdata &#8211; seal input data to the system&#8217;s TPM </p>

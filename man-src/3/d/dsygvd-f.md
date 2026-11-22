@@ -10,7 +10,7 @@ description: "dsygvd.f –"
 <p>dsygvd.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dsygvd</code> (ITYPE, JOBZ, UPLO, N, A, LDA, B, LDB, W, WORK, LWORK, IWORK, LIWORK, INFO)<br />
+<p>subroutine <code>dsygvd</code> (ITYPE, JOBZ, UPLO, N, A, LDA, B, LDB, W, WORK, LWORK, IWORK, LIWORK, INFO)<br/>
  <i></i><code>DSYGST</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dsygvd (integerITYPE, characterJOBZ, characterUPLO, integerN, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( ldb, * )B, integerLDB, double precision, dimension( * )W, double precision, dimension( * )WORK, integerLWORK, integer, dimension( * )IWORK, integerLIWORK, integerINFO)</h3>

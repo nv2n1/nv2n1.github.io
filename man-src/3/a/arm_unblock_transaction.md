@@ -11,7 +11,7 @@ description: "arm_unblock_transaction – unblock transaction"
 <p> arm_unblock_transaction &#8211; unblock transaction</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/arm4.h">arm4.h</a>&gt;</code> </p>
-<p> <code>arm_error_t<br />
+<p> <code>arm_error_t<br/>
  arm_unblock_transaction( </p>
 <p>&nbsp;<wbr>const arm_tran_start_handle_t&nbsp;<wbr></code><i>tran_handle</i><code>,&nbsp;<wbr> </p>
 <p>&nbsp;<wbr>const arm_tran_block_handle_t&nbsp;<wbr></code><i>block_handle</i><code>,&nbsp;<wbr> </p>
@@ -22,7 +22,7 @@ description: "arm_unblock_transaction – unblock transaction"
 <p> Call <code>arm_unblock_transaction()</code> when a transaction is no longer blocked on an external event. It should be called when <code>arm_block_transaction()</code> was previously called and the blocking condition no longer exists. Knowledge of when a transaction is blocked can be useful for better understanding response times. It is useful to separate out this &quot;blocked&quot; time from the elapsed start-to-stop time. The unblocked call is paired with a block call for finer grained analysis. </p>
 <p> <code>arm_stop_transaction()</code> is an implicit <code>arm_unblock_transaction()</code> for any blocking condition for the transaction instance that has not been cleared yet [<code>arm_block_transaction()</code> issued without a matching <code>arm_unblock_transaction()</code>]. It should only be called without calling <code>arm_unblock_transaction()</code> first when the blocking condition ends immediately prior to the transaction ending. </p>
 <p> <i>block_handle</i> is a handle returned in an out parameter from an <code>arm_block_transaction()</code> call in the same process. </p>
-<p> <i>buffer4</i> is a pointer to the user data buffer, if any. If the pointer is null, there is no buffer. No sub-buffer types are currently valid with this function call, so the pointer should be null (<code>ARM_BUF4_NONE</code>).<br />
+<p> <i>buffer4</i> is a pointer to the user data buffer, if any. If the pointer is null, there is no buffer. No sub-buffer types are currently valid with this function call, so the pointer should be null (<code>ARM_BUF4_NONE</code>).<br/>
 &nbsp;<wbr> <i>flags</i> contains 32-bit flags. No values are currently defined. The field should be zero (<code>ARM_FLAG_NONE</code>). </p>
 <p> <i>tran_handle</i> is a handle returned in an out parameter from an <code>arm_start_transaction()</code> call in the same process. </p>
 <h2>RETURN VALUE</h2>

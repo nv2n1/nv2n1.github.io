@@ -12,17 +12,17 @@ description: "ANTLR3_TOKEN_SOURCE_struct –"
 <h2>Synopsis</h2>
 <p>#include &lt;<a href="file:/usr/include/antlr3tokenstream.h">antlr3tokenstream.h</a>&gt;</p>
 <h3>Data Fields</h3>
-<p><code>ANTLR3_COMMON_TOKEN</code> <code>eofToken</code><br />
- <i>A special pre-allocated token, which signifies End Of Tokens. </i><br />
- <code>pANTLR3_STRING</code> <code>fileName</code><br />
- <i>When the token source is constructed, it is populated with the file name from whence the tokens were produced by the lexer. </i><br />
- <code>pANTLR3_COMMON_TOKEN</code>(* <code>nextToken</code> )(struct <code>ANTLR3_TOKEN_SOURCE_struct</code> *tokenSource)<br />
- <i>Pointer to a function that returns the next token in the stream. </i><br />
- <code>ANTLR3_COMMON_TOKEN</code> <code>skipToken</code><br />
- <i>A special pre-allocated token, which is returned by </i><code>mTokens()</code> if the lexer rule said to just skip the generated token altogether.<br />
- <code>pANTLR3_STRING_FACTORY</code> <code>strFactory</code><br />
- <i>Whoever is providing tokens, needs to provide a string factory too. </i><br />
- void * <code>super</code><br />
+<p><code>ANTLR3_COMMON_TOKEN</code> <code>eofToken</code><br/>
+ <i>A special pre-allocated token, which signifies End Of Tokens. </i><br/>
+ <code>pANTLR3_STRING</code> <code>fileName</code><br/>
+ <i>When the token source is constructed, it is populated with the file name from whence the tokens were produced by the lexer. </i><br/>
+ <code>pANTLR3_COMMON_TOKEN</code>(* <code>nextToken</code> )(struct <code>ANTLR3_TOKEN_SOURCE_struct</code> *tokenSource)<br/>
+ <i>Pointer to a function that returns the next token in the stream. </i><br/>
+ <code>ANTLR3_COMMON_TOKEN</code> <code>skipToken</code><br/>
+ <i>A special pre-allocated token, which is returned by </i><code>mTokens()</code> if the lexer rule said to just skip the generated token altogether.<br/>
+ <code>pANTLR3_STRING_FACTORY</code> <code>strFactory</code><br/>
+ <i>Whoever is providing tokens, needs to provide a string factory too. </i><br/>
+ void * <code>super</code><br/>
  <i>Whatever is supplying the token source interface, needs a pointer to itself so that this pointer can be passed to it when the nextToken function is called. </i></p>
 <h2>Detailed Description</h2>
 <p>Definition of a token source, which has a pointer to a function that returns the next token (using a token factory if it is going to be efficient) and a pointer to an ANTLR3_INPUT_STREAM. </p>

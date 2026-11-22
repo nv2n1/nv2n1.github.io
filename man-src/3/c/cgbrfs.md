@@ -11,7 +11,7 @@ description: "cgbrfs.f –"
 <p> cgbrfs.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cgbrfs</code> (TRANS, N, KL, KU, NRHS, AB, LDAB, AFB, LDAFB, IPIV, B, LDB, X, LDX, FERR, BERR, WORK, RWORK, INFO)<br />
+<p> subroutine <code>cgbrfs</code> (TRANS, N, KL, KU, NRHS, AB, LDAB, AFB, LDAFB, IPIV, B, LDB, X, LDX, FERR, BERR, WORK, RWORK, INFO)<br/>
  <i></i><code>CGBRFS</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cgbrfs (characterTRANS, integerN, integerKL, integerKU, integerNRHS, complex, dimension( ldab, * )AB, integerLDAB, complex, dimension( ldafb, * )AFB, integerLDAFB, integer, dimension( * )IPIV, complex, dimension( ldb, * )B, integerLDB, complex, dimension( ldx, * )X, integerLDX, real, dimension( * )FERR, real, dimension( * )BERR, complex, dimension( * )WORK, real, dimension( * )RWORK, integerINFO)</h3>

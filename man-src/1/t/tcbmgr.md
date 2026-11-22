@@ -54,33 +54,33 @@ description: "tcbmgr – the command line utility of the B+ tree database API"
 <p> Options feature the following. </p>
 <dl>
 <dt>
-</dt><dd> <code>-cd</code> : use the comparison function `tccmpdecimal&#8217;.<br />
- <code>-ci</code> : use the comparison function `tccmpint32&#8242;.<br />
- <code>-cj</code> : use the comparison function `tccmpint64&#8242;.<br />
- <code>-tl</code> : enable the option `BDBTLARGE&#8217;.<br />
- <code>-td</code> : enable the option `BDBTDEFLATE&#8217;.<br />
- <code>-tb</code> : enable the option `BDBTBZIP&#8217;.<br />
- <code>-tt</code> : enable the option `BDBTTCBS&#8217;.<br />
- <code>-tx</code> : enable the option `BDBTEXCODEC&#8217;.<br />
- <code>-nl</code> : enable the option `BDBNOLCK&#8217;.<br />
- <code>-nb</code> : enable the option `BDBLCKNB&#8217;.<br />
- <code>-sx</code> : the input data is evaluated as a hexadecimal data string.<br />
- <code>-dk</code> : use the function `tcbdbputkeep&#8217; instead of `tcbdbput&#8217;.<br />
- <code>-dc</code> : use the function `tcbdbputcat&#8217; instead of `tcbdbput&#8217;.<br />
- <code>-dd</code> : use the function `tcbdbputdup&#8217; instead of `tcbdbput&#8217;.<br />
- <code>-db</code> : use the function `tcbdbputdupback&#8217; instead of `tcbdbput&#8217;.<br />
- <code>-dai</code> : use the function `tcbdbaddint&#8217; instead of `tcbdbput&#8217;.<br />
- <code>-dad</code> : use the function `tcbdbadddouble&#8217; instead of `tcbdbput&#8217;.<br />
- <code>-px</code> : the output data is converted into a hexadecimal data string.<br />
- <code>-pz</code> : do not append line feed at the end of the output.<br />
- <code>-m </code><i>num</i> : specify the maximum number of the output.<br />
- <code>-bk</code> : perform backword scanning.<br />
- <code>-pv</code> : print values of records also.<br />
- <code>-j </code><i>str</i> : specify the key where the cursor jump to.<br />
- <code>-rb </code><i>bkey</i> <i>ekey</i> : specify the range of keys.<br />
- <code>-fm </code><i>str</i> : specify the prefix of keys.<br />
- <code>-tz</code> : enable the option `UINT8_MAX&#8217;.<br />
- <code>-df</code> : perform defragmentation only.<br />
+</dt><dd> <code>-cd</code> : use the comparison function `tccmpdecimal&#8217;.<br/>
+ <code>-ci</code> : use the comparison function `tccmpint32&#8242;.<br/>
+ <code>-cj</code> : use the comparison function `tccmpint64&#8242;.<br/>
+ <code>-tl</code> : enable the option `BDBTLARGE&#8217;.<br/>
+ <code>-td</code> : enable the option `BDBTDEFLATE&#8217;.<br/>
+ <code>-tb</code> : enable the option `BDBTBZIP&#8217;.<br/>
+ <code>-tt</code> : enable the option `BDBTTCBS&#8217;.<br/>
+ <code>-tx</code> : enable the option `BDBTEXCODEC&#8217;.<br/>
+ <code>-nl</code> : enable the option `BDBNOLCK&#8217;.<br/>
+ <code>-nb</code> : enable the option `BDBLCKNB&#8217;.<br/>
+ <code>-sx</code> : the input data is evaluated as a hexadecimal data string.<br/>
+ <code>-dk</code> : use the function `tcbdbputkeep&#8217; instead of `tcbdbput&#8217;.<br/>
+ <code>-dc</code> : use the function `tcbdbputcat&#8217; instead of `tcbdbput&#8217;.<br/>
+ <code>-dd</code> : use the function `tcbdbputdup&#8217; instead of `tcbdbput&#8217;.<br/>
+ <code>-db</code> : use the function `tcbdbputdupback&#8217; instead of `tcbdbput&#8217;.<br/>
+ <code>-dai</code> : use the function `tcbdbaddint&#8217; instead of `tcbdbput&#8217;.<br/>
+ <code>-dad</code> : use the function `tcbdbadddouble&#8217; instead of `tcbdbput&#8217;.<br/>
+ <code>-px</code> : the output data is converted into a hexadecimal data string.<br/>
+ <code>-pz</code> : do not append line feed at the end of the output.<br/>
+ <code>-m </code><i>num</i> : specify the maximum number of the output.<br/>
+ <code>-bk</code> : perform backword scanning.<br/>
+ <code>-pv</code> : print values of records also.<br/>
+ <code>-j </code><i>str</i> : specify the key where the cursor jump to.<br/>
+ <code>-rb </code><i>bkey</i> <i>ekey</i> : specify the range of keys.<br/>
+ <code>-fm </code><i>str</i> : specify the prefix of keys.<br/>
+ <code>-tz</code> : enable the option `UINT8_MAX&#8217;.<br/>
+ <code>-df</code> : perform defragmentation only.<br/>
  <code>-sc</code> : normalize keys as lower cases.
 </dd></dl>
 <p> This command returns 0 on success, another on failure. </p>

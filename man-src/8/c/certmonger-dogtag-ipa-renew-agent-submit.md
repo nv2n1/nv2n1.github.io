@@ -20,24 +20,24 @@ description: "dogtag-ipa-renew-agent-submit"
 <dd>The top-level URL for the agent interface provided by the CA. In IPA installations, this is typically <i>https://</i><code>SERVER</code>:<code>AGENTPORT</code>/ca/agent/ca. If no URL is specified, the <i>host</i> named in the <i>[global]</i> section in the <i>/etc/ipa/default.conf</i> file is used as the value of <code>SERVER</code>, and the value of <code>AGENTPORT</code> will be inferred based on the value of the <i>dogtag_version</i> in the <i>[global]</i> section in the <i>/etc/ipa/default.conf</i> file: if <i>dogtag_version</i> is set to <i>10</i> or more, <code>AGENTPORT</code> will be set to 8443. Otherwise it will be 9443.</dd>
 <dt><code>-d</code> dbdir <code>-n</code> nickname <code>-c</code> certfile <code>-k</code> keyfile</dt>
 <dd>The location of the key and certificate which the client should use to authenticate to the CA&#8217;s agent interface. Exactly which values are meaningful depend on which cryptography library your copy of libcurl was linked with. </dd>
-<p> If none of these options are specified, and none of the <code>-p</code>, <code>-P</code>, <code>-i</code>, nor <code>-C</code> options are specified, then this set of defaults is used:<br />
-&nbsp;<wbr><code>-i</code>&nbsp;<wbr><i>/etc/ipa/ca.crt</i><br />
-&nbsp;<wbr><code>-d</code>&nbsp;<wbr><i>/etc/httpd/alias</i><br />
-&nbsp;<wbr><code>-n</code>&nbsp;<wbr><i>ipaCert</i><br />
+<p> If none of these options are specified, and none of the <code>-p</code>, <code>-P</code>, <code>-i</code>, nor <code>-C</code> options are specified, then this set of defaults is used:<br/>
+&nbsp;<wbr><code>-i</code>&nbsp;<wbr><i>/etc/ipa/ca.crt</i><br/>
+&nbsp;<wbr><code>-d</code>&nbsp;<wbr><i>/etc/httpd/alias</i><br/>
+&nbsp;<wbr><code>-n</code>&nbsp;<wbr><i>ipaCert</i><br/>
 &nbsp;<wbr><code>-p</code>&nbsp;<wbr><i>/etc/httpd/alias/pwdfile.txt</i></p>
 <dt><code>-p</code> pinfile</dt>
 <dd>The name of a file which contains a PIN/password which will be needed in order to make use of the agent credentials. </dd>
-<p> If this option is not specified, and none of the <code>-d</code>, <code>-n</code>, <code>-c</code>, <code>-k</code>, <code>-P</code>, <code>-i</code>, nor <code>-C</code> options are specified, then this set of defaults is used:<br />
-&nbsp;<wbr><code>-i</code>&nbsp;<wbr><i>/etc/ipa/ca.crt</i><br />
-&nbsp;<wbr><code>-d</code>&nbsp;<wbr><i>/etc/httpd/alias</i><br />
-&nbsp;<wbr><code>-n</code>&nbsp;<wbr><i>ipaCert</i><br />
+<p> If this option is not specified, and none of the <code>-d</code>, <code>-n</code>, <code>-c</code>, <code>-k</code>, <code>-P</code>, <code>-i</code>, nor <code>-C</code> options are specified, then this set of defaults is used:<br/>
+&nbsp;<wbr><code>-i</code>&nbsp;<wbr><i>/etc/ipa/ca.crt</i><br/>
+&nbsp;<wbr><code>-d</code>&nbsp;<wbr><i>/etc/httpd/alias</i><br/>
+&nbsp;<wbr><code>-n</code>&nbsp;<wbr><i>ipaCert</i><br/>
 &nbsp;<wbr><code>-p</code>&nbsp;<wbr><i>/etc/httpd/alias/pwdfile.txt</i></p>
 <dt><code>-i</code> cainfo <code>-C</code> capath</dt>
 <dd>The location of a file containing a copy of the CA&#8217;s certificate, against which the CA server&#8217;s certificate will be verified, or a directory containing, among other things, such a file. </dd>
-<p> If these options are not specified, and none of the <code>-d</code>, <code>-n</code>, <code>-c</code>, <code>-k</code>, <code>-p</code>, nor <code>-P</code> options are specified, then this set of defaults is used:<br />
-&nbsp;<wbr><code>-i</code>&nbsp;<wbr><i>/etc/ipa/ca.crt</i><br />
-&nbsp;<wbr><code>-d</code>&nbsp;<wbr><i>/etc/httpd/alias</i><br />
-&nbsp;<wbr><code>-n</code>&nbsp;<wbr><i>ipaCert</i><br />
+<p> If these options are not specified, and none of the <code>-d</code>, <code>-n</code>, <code>-c</code>, <code>-k</code>, <code>-p</code>, nor <code>-P</code> options are specified, then this set of defaults is used:<br/>
+&nbsp;<wbr><code>-i</code>&nbsp;<wbr><i>/etc/ipa/ca.crt</i><br/>
+&nbsp;<wbr><code>-d</code>&nbsp;<wbr><i>/etc/httpd/alias</i><br/>
+&nbsp;<wbr><code>-n</code>&nbsp;<wbr><i>ipaCert</i><br/>
 &nbsp;<wbr><code>-p</code>&nbsp;<wbr><i>/etc/httpd/alias/pwdfile.txt</i></p>
 <dt><code>-s</code> serial</dt>
 <dd>The serial number of an already-issued certificate for which the client should attempt to obtain a new certificate, in hexadecimal form, if one can not be read from the <i>CERTMONGER_CERTIFICATE</i> environment variable.</dd>

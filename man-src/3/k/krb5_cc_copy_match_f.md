@@ -10,107 +10,107 @@ description: "Heimdal Kerberos 5 credential cache functions –"
 
 <p> Heimdal Kerberos 5 credential cache functions &#8211; </p>
 <h3>Functions</h3>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_cc_register</code> (krb5_context context, const krb5_cc_ops *ops, krb5_boolean override)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_cc_resolve</code> (krb5_context context, const char *name, krb5_ccache *id)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_cc_new_unique</code> (krb5_context context, const char *type, const char *hint, krb5_ccache *id)&quot; </p>
-<p> KRB5_LIB_FUNCTION const char<br />
+<p> KRB5_LIB_FUNCTION const char<br/>
  *KRB5_LIB_CALL <code>krb5_cc_get_name</code> (krb5_context context, krb5_ccache id)&quot; </p>
-<p> KRB5_LIB_FUNCTION const char<br />
+<p> KRB5_LIB_FUNCTION const char<br/>
  *KRB5_LIB_CALL <code>krb5_cc_get_type</code> (krb5_context context, krb5_ccache id)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_cc_get_full_name</code> (krb5_context context, krb5_ccache id, char **str)&quot; </p>
-<p> KRB5_LIB_FUNCTION const<br />
+<p> KRB5_LIB_FUNCTION const<br/>
  krb5_cc_ops *KRB5_LIB_CALL <code>krb5_cc_get_ops</code> (krb5_context context, krb5_ccache id)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_cc_switch</code> (krb5_context context, krb5_ccache id)&quot; </p>
-<p> KRB5_LIB_FUNCTION krb5_boolean<br />
+<p> KRB5_LIB_FUNCTION krb5_boolean<br/>
  KRB5_LIB_CALL <code>krb5_cc_support_switch</code> (krb5_context context, const char *type)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_cc_set_default_name</code> (krb5_context context, const char *name)&quot; </p>
-<p> KRB5_LIB_FUNCTION const char<br />
+<p> KRB5_LIB_FUNCTION const char<br/>
  *KRB5_LIB_CALL <code>krb5_cc_default_name</code> (krb5_context context)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_cc_default</code> (krb5_context context, krb5_ccache *id)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_cc_initialize</code> (krb5_context context, krb5_ccache id, krb5_principal primary_principal)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_cc_destroy</code> (krb5_context context, krb5_ccache id)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_cc_close</code> (krb5_context context, krb5_ccache id)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_cc_store_cred</code> (krb5_context context, krb5_ccache id, krb5_creds *creds)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_cc_retrieve_cred</code> (krb5_context context, krb5_ccache id, krb5_flags whichfields, const krb5_creds *mcreds, krb5_creds *creds)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_cc_get_principal</code> (krb5_context context, krb5_ccache id, krb5_principal *principal)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_cc_start_seq_get</code> (krb5_context context, const krb5_ccache id, krb5_cc_cursor *cursor)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_cc_next_cred</code> (krb5_context context, const krb5_ccache id, krb5_cc_cursor *cursor, krb5_creds *creds)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_cc_end_seq_get</code> (krb5_context context, const krb5_ccache id, krb5_cc_cursor *cursor)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_cc_remove_cred</code> (krb5_context context, krb5_ccache id, krb5_flags which, krb5_creds *cred)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_cc_set_flags</code> (krb5_context context, krb5_ccache id, krb5_flags flags)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_cc_get_flags</code> (krb5_context context, krb5_ccache id, krb5_flags *flags)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_cc_copy_match_f</code> (krb5_context context, const krb5_ccache from, krb5_ccache to, krb5_boolean(*match)(krb5_context, void *, const krb5_creds *), void *matchctx, unsigned int *matched)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_cc_copy_cache</code> (krb5_context context, const krb5_ccache from, krb5_ccache to)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_cc_get_version</code> (krb5_context context, const krb5_ccache id)&quot; </p>
-<p> KRB5_LIB_FUNCTION void<br />
+<p> KRB5_LIB_FUNCTION void<br/>
  KRB5_LIB_CALL <code>krb5_cc_clear_mcred</code> (krb5_creds *mcred)&quot; </p>
-<p> KRB5_LIB_FUNCTION const<br />
+<p> KRB5_LIB_FUNCTION const<br/>
  krb5_cc_ops *KRB5_LIB_CALL <code>krb5_cc_get_prefix_ops</code> (krb5_context context, const char *prefix)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_cc_cache_get_first</code> (krb5_context context, const char *type, krb5_cc_cache_cursor *cursor)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_cc_cache_next</code> (krb5_context context, krb5_cc_cache_cursor cursor, krb5_ccache *id)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_cc_cache_end_seq_get</code> (krb5_context context, krb5_cc_cache_cursor cursor)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_cc_cache_match</code> (krb5_context context, krb5_principal client, krb5_ccache *id)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_cc_move</code> (krb5_context context, krb5_ccache from, krb5_ccache to)&quot; </p>
-<p> KRB5_LIB_FUNCTION krb5_boolean<br />
+<p> KRB5_LIB_FUNCTION krb5_boolean<br/>
  KRB5_LIB_CALL <code>krb5_is_config_principal</code> (krb5_context context, krb5_const_principal principal)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_cc_set_config</code> (krb5_context context, krb5_ccache id, krb5_const_principal principal, const char *name, krb5_data *data)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_cc_get_config</code> (krb5_context context, krb5_ccache id, krb5_const_principal principal, const char *name, krb5_data *data)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_cccol_cursor_new</code> (krb5_context context, krb5_cccol_cursor *cursor)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_cccol_cursor_next</code> (krb5_context context, krb5_cccol_cursor cursor, krb5_ccache *cache)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_cccol_cursor_free</code> (krb5_context context, krb5_cccol_cursor *cursor)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_cc_last_change_time</code> (krb5_context context, krb5_ccache id, krb5_timestamp *mtime)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_cccol_last_change_time</code> (krb5_context context, const char *type, krb5_timestamp *mtime)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_cc_get_friendly_name</code> (krb5_context context, krb5_ccache id, char **name)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_cc_set_friendly_name</code> (krb5_context context, krb5_ccache id, const char *name)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_cc_get_lifetime</code> (krb5_context context, krb5_ccache id, time_t *t)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_cc_set_kdc_offset</code> (krb5_context context, krb5_ccache id, krb5_deltat offset)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_cc_get_kdc_offset</code> (krb5_context context, krb5_ccache id, krb5_deltat *offset)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_cc_gen_new</code> (krb5_context context, const krb5_cc_ops *ops, krb5_ccache *id) <code>KRB5_DEPRECATED_FUNCTION</code>(&#8216;Use X instead&#8217;)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_cc_copy_creds</code> (krb5_context, const krb5_ccache, krb5_ccache)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_free_kdc_rep</code> (krb5_context, krb5_kdc_rep *)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_get_validated_creds</code> (krb5_context, krb5_creds *, krb5_principal, krb5_ccache, char *)&quot; </p>
 <h3>Variables</h3>
 <p> KRB5_LIB_VARIABLE const krb5_cc_ops <code>krb5_acc_ops</code> </p>
@@ -130,8 +130,8 @@ description: "Heimdal Kerberos 5 credential cache functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A Kerberos 5 context<br />
- <i>type</i> optional type to iterate over, if NULL, the default cache is used.<br />
+</dt><dd> <i>context</i> A Kerberos 5 context<br/>
+ <i>type</i> optional type to iterate over, if NULL, the default cache is used.<br/>
  <i>cursor</i> cursor should be freed with <code>krb5_cc_cache_end_seq_get()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -142,8 +142,8 @@ description: "Heimdal Kerberos 5 credential cache functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A Kerberos 5 context<br />
- <i>client</i> The principal to search for<br />
+</dt><dd> <i>context</i> A Kerberos 5 context<br/>
+ <i>client</i> The principal to search for<br/>
  <i>id</i> the returned credential cache</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -154,8 +154,8 @@ description: "Heimdal Kerberos 5 credential cache functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A Kerberos 5 context<br />
- <i>cursor</i> the iterator cursor, returned by <code>krb5_cc_cache_get_first()</code><br />
+</dt><dd> <i>context</i> A Kerberos 5 context<br/>
+ <i>cursor</i> the iterator cursor, returned by <code>krb5_cc_cache_get_first()</code><br/>
  <i>id</i> next ccache</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -179,11 +179,11 @@ description: "Heimdal Kerberos 5 credential cache functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A Kerberos 5 context.<br />
- <i>from</i> the cache to copy data from.<br />
- <i>to</i> the cache to copy data to.<br />
- <i>match</i> a match function that should return TRUE if cred argument should be copied, if NULL, all credentials are copied.<br />
- <i>matchctx</i> context passed to match function.<br />
+</dt><dd> <i>context</i> A Kerberos 5 context.<br/>
+ <i>from</i> the cache to copy data from.<br/>
+ <i>to</i> the cache to copy data to.<br/>
+ <i>match</i> a match function that should return TRUE if cred argument should be copied, if NULL, all credentials are copied.<br/>
+ <i>matchctx</i> context passed to match function.<br/>
  <i>matched</i> set to true if there was a credential that matched, may be NULL.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -221,10 +221,10 @@ description: "Heimdal Kerberos 5 credential cache functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a Keberos context<br />
- <i>id</i> the credential cache to store the data for<br />
- <i>principal</i> configuration for a specific principal, if NULL, global for the whole cache.<br />
- <i>name</i> name under which the configuraion is stored.<br />
+</dt><dd> <i>context</i> a Keberos context<br/>
+ <i>id</i> the credential cache to store the data for<br/>
+ <i>principal</i> configuration for a specific principal, if NULL, global for the whole cache.<br/>
+ <i>name</i> name under which the configuraion is stored.<br/>
  <i>data</i> data to fetched, free with <code>krb5_data_free()</code></dd></dl>
 <h3>KRB5_LIB_FUNCTION krb5_error_code KRB5_LIB_CALL krb5_cc_get_flags (krb5_contextcontext, krb5_ccacheid, krb5_flags *flags)</h3>
 <p> Get the flags of `id&#8217;, store them in `flags&#8217;.</p>
@@ -239,8 +239,8 @@ description: "Heimdal Kerberos 5 credential cache functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a Keberos context<br />
- <i>id</i> return pointer to a found credential cache<br />
+</dt><dd> <i>context</i> a Keberos context<br/>
+ <i>id</i> return pointer to a found credential cache<br/>
  <i>str</i> the returned name of a credential cache, free with krb5_xfree()</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -252,8 +252,8 @@ description: "Heimdal Kerberos 5 credential cache functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A Kerberos 5 context.<br />
- <i>id</i> a credential cache<br />
+</dt><dd> <i>context</i> A Kerberos 5 context.<br/>
+ <i>id</i> a credential cache<br/>
  <i>offset</i> the offset in seconds</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -265,8 +265,8 @@ description: "Heimdal Kerberos 5 credential cache functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A Kerberos 5 context.<br />
- <i>id</i> a credential cache<br />
+</dt><dd> <i>context</i> A Kerberos 5 context.<br/>
+ <i>id</i> a credential cache<br/>
  <i>t</i> the relative lifetime of the initial ticket</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -305,8 +305,8 @@ description: "Heimdal Kerberos 5 credential cache functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A Kerberos 5 context<br />
- <i>id</i> The credential cache to probe<br />
+</dt><dd> <i>context</i> A Kerberos 5 context<br/>
+ <i>id</i> The credential cache to probe<br/>
  <i>mtime</i> the last modification time, set to 0 on error.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -317,8 +317,8 @@ description: "Heimdal Kerberos 5 credential cache functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a Keberos context<br />
- <i>from</i> the credential cache to move the content from<br />
+</dt><dd> <i>context</i> a Keberos context<br/>
+ <i>from</i> the credential cache to move the content from<br/>
  <i>to</i> the credential cache to move the content to</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -341,8 +341,8 @@ description: "Heimdal Kerberos 5 credential cache functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a Keberos context<br />
- <i>ops</i> type of plugin symbol<br />
+</dt><dd> <i>context</i> a Keberos context<br/>
+ <i>ops</i> type of plugin symbol<br/>
  <i>override</i> flag to select if the registration is to overide an existing ops with the same name.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -355,8 +355,8 @@ description: "Heimdal Kerberos 5 credential cache functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a Keberos context.<br />
- <i>name</i> string name of a credential cache.<br />
+</dt><dd> <i>context</i> a Keberos context.<br/>
+ <i>name</i> string name of a credential cache.<br/>
  <i>id</i> return pointer to a found credential cache.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -367,10 +367,10 @@ description: "Heimdal Kerberos 5 credential cache functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A Kerberos 5 context<br />
- <i>id</i> a Kerberos 5 credential cache<br />
- <i>whichfields</i> what fields to use for matching credentials, same flags as whichfields in <code>krb5_compare_creds()</code><br />
- <i>mcreds</i> template credential to use for comparing<br />
+</dt><dd> <i>context</i> A Kerberos 5 context<br/>
+ <i>id</i> a Kerberos 5 credential cache<br/>
+ <i>whichfields</i> what fields to use for matching credentials, same flags as whichfields in <code>krb5_compare_creds()</code><br/>
+ <i>mcreds</i> template credential to use for comparing<br/>
  <i>creds</i> returned credential, free with <code>krb5_free_cred_contents()</code></dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -381,10 +381,10 @@ description: "Heimdal Kerberos 5 credential cache functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a Keberos context<br />
- <i>id</i> the credential cache to store the data for<br />
- <i>principal</i> configuration for a specific principal, if NULL, global for the whole cache.<br />
- <i>name</i> name under which the configuraion is stored.<br />
+</dt><dd> <i>context</i> a Keberos context<br/>
+ <i>id</i> the credential cache to store the data for<br/>
+ <i>principal</i> configuration for a specific principal, if NULL, global for the whole cache.<br/>
+ <i>name</i> name under which the configuraion is stored.<br/>
  <i>data</i> data to store, if NULL, configure is removed.</dd></dl>
 <h3>KRB5_LIB_FUNCTION krb5_error_code KRB5_LIB_CALL krb5_cc_set_default_name (krb5_contextcontext, const char *name)</h3>
 <p> Set the default cc name for `context&#8217; to `name&#8217;.</p>
@@ -402,8 +402,8 @@ description: "Heimdal Kerberos 5 credential cache functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A Kerberos 5 context.<br />
- <i>id</i> a credential cache<br />
+</dt><dd> <i>context</i> A Kerberos 5 context.<br/>
+ <i>id</i> a credential cache<br/>
  <i>offset</i> the offset in seconds</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -434,7 +434,7 @@ description: "Heimdal Kerberos 5 credential cache functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A Kerberos 5 context<br />
+</dt><dd> <i>context</i> A Kerberos 5 context<br/>
  <i>cursor</i> the iteration cursor to be freed.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -445,7 +445,7 @@ description: "Heimdal Kerberos 5 credential cache functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a Keberos context<br />
+</dt><dd> <i>context</i> a Keberos context<br/>
  <i>cursor</i> passed into <code>krb5_cccol_cursor_next()</code> and free with <code>krb5_cccol_cursor_free()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -456,8 +456,8 @@ description: "Heimdal Kerberos 5 credential cache functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A Kerberos 5 context<br />
- <i>cursor</i> the iteration cursor<br />
+</dt><dd> <i>context</i> A Kerberos 5 context<br/>
+ <i>cursor</i> the iteration cursor<br/>
  <i>cache</i> the returned cursor, pointer is set to NULL on failure and a cache on success. The returned cache needs to be freed with <code>krb5_cc_close()</code> or destroyed with <code>krb5_cc_destroy()</code>. MIT Kerberos behavies slightly diffrent and sets cache to NULL when all caches are iterated over and return 0.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -468,8 +468,8 @@ description: "Heimdal Kerberos 5 credential cache functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A Kerberos 5 context<br />
- <i>type</i> The credential cache to probe, if NULL, all type are traversed.<br />
+</dt><dd> <i>context</i> A Kerberos 5 context<br/>
+ <i>type</i> The credential cache to probe, if NULL, all type are traversed.<br/>
  <i>mtime</i> the last modification time, set to 0 on error.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -482,17 +482,17 @@ description: "Heimdal Kerberos 5 credential cache functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a Kerberos 5 context<br />
- <i>creds</i> the credentials to verify<br />
- <i>client</i> the client name to match up<br />
- <i>ccache</i> the credential cache to use<br />
+</dt><dd> <i>context</i> a Kerberos 5 context<br/>
+ <i>creds</i> the credentials to verify<br/>
+ <i>client</i> the client name to match up<br/>
+ <i>ccache</i> the credential cache to use<br/>
  <i>service</i> a service name to use, used with <code>krb5_sname_to_principal()</code> to build a hostname to use to verify.</dd></dl>
 <h3>KRB5_LIB_FUNCTION krb5_boolean KRB5_LIB_CALL krb5_is_config_principal (krb5_contextcontext, krb5_const_principalprincipal)</h3>
 <p> Return TRUE (non zero) if the principal is a configuration principal (generated part of <code>krb5_cc_set_config()</code>). Returns FALSE (zero) if not a configuration principal. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a Keberos context<br />
+</dt><dd> <i>context</i> a Keberos context<br/>
  <i>principal</i> principal to check if it a configuration principal</dd></dl>
 <h2>Variable Documentation</h2>
 <h3>KRB5_LIB_VARIABLE const krb5_cc_ops krb5_acc_ops</h3>
@@ -563,33 +563,33 @@ description: "Heimdal Kerberos 5 credential cache functions –"
 <p> Variable containing the DIR based credential cache implemention.</p>
 <h3>KRB5_LIB_VARIABLE const krb5_cc_ops krb5_fcc_ops</h3>
 <p> <code>Initial value:</code> </p>
-<p>= {<br />
-    KRB5_CC_OPS_VERSION,<br />
-    &#8220;FILE&#8221;,<br />
-    fcc_get_name,<br />
-    fcc_resolve,<br />
-    fcc_gen_new,<br />
-    fcc_initialize,<br />
-    fcc_destroy,<br />
-    fcc_close,<br />
-    fcc_store_cred,<br />
-    NULL,<br />
-    fcc_get_principal,<br />
-    fcc_get_first,<br />
-    fcc_get_next,<br />
-    fcc_end_get,<br />
-    fcc_remove_cred,<br />
-    fcc_set_flags,<br />
-    fcc_get_version,<br />
-    fcc_get_cache_first,<br />
-    fcc_get_cache_next,<br />
-    fcc_end_cache_get,<br />
-    fcc_move,<br />
-    fcc_get_default_name,<br />
-    NULL,<br />
-    fcc_lastchange,<br />
-    fcc_set_kdc_offset,<br />
-    fcc_get_kdc_offset}<br />
+<p>= {<br/>
+    KRB5_CC_OPS_VERSION,<br/>
+    &#8220;FILE&#8221;,<br/>
+    fcc_get_name,<br/>
+    fcc_resolve,<br/>
+    fcc_gen_new,<br/>
+    fcc_initialize,<br/>
+    fcc_destroy,<br/>
+    fcc_close,<br/>
+    fcc_store_cred,<br/>
+    NULL,<br/>
+    fcc_get_principal,<br/>
+    fcc_get_first,<br/>
+    fcc_get_next,<br/>
+    fcc_end_get,<br/>
+    fcc_remove_cred,<br/>
+    fcc_set_flags,<br/>
+    fcc_get_version,<br/>
+    fcc_get_cache_first,<br/>
+    fcc_get_cache_next,<br/>
+    fcc_end_cache_get,<br/>
+    fcc_move,<br/>
+    fcc_get_default_name,<br/>
+    NULL,<br/>
+    fcc_lastchange,<br/>
+    fcc_set_kdc_offset,<br/>
+    fcc_get_kdc_offset}<br/>
  Variable containing the FILE based credential cache implemention.</p>
 <h3>KRB5_LIB_VARIABLE const krb5_cc_ops krb5_mcc_ops</h3>
 <p> <code>Initial value:</code> </p>

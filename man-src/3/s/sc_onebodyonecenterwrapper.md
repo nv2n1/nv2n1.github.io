@@ -12,7 +12,7 @@ description: "sc::OneBodyOneCenterWrapper –"
 <p> Inherits <code>sc::OneBodyOneCenterInt</code>.</p>
 <h3>Public Member Functions</h3>
 <p><code>OneBodyOneCenterWrapper</code> (const <code>Ref</code>&lt; <code>OneBodyInt</code> &gt; &amp;ob, int sh2=0) </p>
-<p> void <code>compute_shell</code> (int)<br />
+<p> void <code>compute_shell</code> (int)<br/>
  <i>Computes the integrals for basis functions on the given shell. </i></p>
 <h2>Member Function Documentation</h2>
 <h3>void sc::OneBodyOneCenterWrapper::compute_shell (int) [virtual]</h3>

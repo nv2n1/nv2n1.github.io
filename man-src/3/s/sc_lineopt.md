@@ -16,17 +16,17 @@ description: "sc::LineOpt –"
 <h3>Public Member Functions</h3>
 <p><code>LineOpt</code> (<code>StateIn</code> &amp;) </p>
 <p> <code>LineOpt</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;) </p>
-<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br />
- <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br />
- virtual void <code>init</code> (<code>RefSCVector</code> &amp;direction)<br />
- <i>Initializes the line search object. </i><br />
- virtual void <code>init</code> (<code>RefSCVector</code> &amp;direction, <code>Ref</code>&lt; <code>Function</code> &gt; function)<br />
- <i>Initializes the line search object. </i><br />
- void <code>apply_transform</code> (const <code>Ref</code>&lt; <code>NonlinearTransform</code> &gt; &amp;)<br />
- <i>Applies a nonlinear transform. </i><br />
- double <code>decrease_factor</code> ()<br />
- <i>Returns factor for sufficient decrease test. </i><br />
- double <code>set_decrease_factor</code> (double factor)<br />
+<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br/>
+ <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br/>
+ virtual void <code>init</code> (<code>RefSCVector</code> &amp;direction)<br/>
+ <i>Initializes the line search object. </i><br/>
+ virtual void <code>init</code> (<code>RefSCVector</code> &amp;direction, <code>Ref</code>&lt; <code>Function</code> &gt; function)<br/>
+ <i>Initializes the line search object. </i><br/>
+ void <code>apply_transform</code> (const <code>Ref</code>&lt; <code>NonlinearTransform</code> &gt; &amp;)<br/>
+ <i>Applies a nonlinear transform. </i><br/>
+ double <code>decrease_factor</code> ()<br/>
+ <i>Returns factor for sufficient decrease test. </i><br/>
+ double <code>set_decrease_factor</code> (double factor)<br/>
  <i>Sets factor for sufficient decrease test. </i></p>
 <h3>Protected Member Functions</h3>
 <pre><code>int sufficient_decrease (RefSCVector &amp;step)

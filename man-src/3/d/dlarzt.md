@@ -11,7 +11,7 @@ description: "dlarzt.f –"
 <p> dlarzt.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dlarzt</code> (DIRECT, STOREV, N, K, V, LDV, TAU, T, LDT)<br />
+<p> subroutine <code>dlarzt</code> (DIRECT, STOREV, N, K, V, LDV, TAU, T, LDT)<br/>
  <i></i><code>DLARZT</code> forms the triangular factor T of a block reflector H = I &#8211; vtvH.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlarzt (characterDIRECT, characterSTOREV, integerN, integerK, double precision, dimension( ldv, * )V, integerLDV, double precision, dimension( * )TAU, double precision, dimension( ldt, * )T, integerLDT)</h3>

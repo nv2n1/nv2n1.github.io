@@ -10,17 +10,17 @@ description: "Handle Management –"
 
 <p> Handle Management &#8211; </p>
 <h3>Data Structures</h3>
-<p> struct <code>globus_i_ftp_client_data_target_t</code><br />
- <i>Data connection caching information. </i><br />
- struct <code>globus_i_ftp_client_handle_t</code><br />
+<p> struct <code>globus_i_ftp_client_data_target_t</code><br/>
+ <i>Data connection caching information. </i><br/>
+ struct <code>globus_i_ftp_client_handle_t</code><br/>
  <i>FTP Client handle implementation. </i></p>
 <h3>Typedefs</h3>
-<p> typedef struct<br />
- <code>globus_i_ftp_client_handle_t</code> * <code>globus_ftp_client_handle_t</code>&quot;<br />
+<p> typedef struct<br/>
+ <code>globus_i_ftp_client_handle_t</code> * <code>globus_ftp_client_handle_t</code>&quot;<br/>
  <i>FTP Client Handle.</i> </p>
-<p> An FTP client handle is used to associate state with a group of operations. Handles can have <code>attributes</code> associated with them. All FTP <code>operations </code> take a handle pointer as a parameter. &quot;<br />
- typedef struct<br />
- <code>globus_i_ftp_client_handle_t</code> <code>globus_i_ftp_client_handle_t</code>&quot;<br />
+<p> An FTP client handle is used to associate state with a group of operations. Handles can have <code>attributes</code> associated with them. All FTP <code>operations </code> take a handle pointer as a parameter. &quot;<br/>
+ typedef struct<br/>
+ <code>globus_i_ftp_client_handle_t</code> <code>globus_i_ftp_client_handle_t</code>&quot;<br/>
  <i>FTP Client handle implementation. </i></p>
 <h3>Initialize</h3>
 <p> globus_result_t <code>globus_ftp_client_handle_init</code> (<code>globus_ftp_client_handle_t</code> *handle, <code>globus_ftp_client_handleattr_t</code> *attr) </p>
@@ -56,7 +56,7 @@ description: "Handle Management –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The FTP client handle to set or query.<br />
+</dt><dd> <i>handle</i> The FTP client handle to set or query.<br/>
  <i>plugin</i> A pointer to the plugin structure to add to this handle.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
@@ -68,7 +68,7 @@ description: "Handle Management –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> Handle which will contain a cached connection to the URL server.<br />
+</dt><dd> <i>handle</i> Handle which will contain a cached connection to the URL server.<br/>
  <i>url</i> The URL of the FTP or GSIFTP server to cache.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
@@ -91,7 +91,7 @@ description: "Handle Management –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> Handle which will contain a cached connection to the URL server.<br />
+</dt><dd> <i>handle</i> Handle which will contain a cached connection to the URL server.<br/>
  <i>url</i> The URL of the FTP or GSIFTP server to cache.</dd></dl>
 <h3>globus_result_t globus_ftp_client_handle_init (<code>globus_ftp_client_handle_t</code> *handle, <code>globus_ftp_client_handleattr_t</code> *attr)</h3>
 <p> Initialize a client FTP handle. </p>
@@ -99,7 +99,7 @@ description: "Handle Management –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The handle to be initialized.<br />
+</dt><dd> <i>handle</i> The handle to be initialized.<br/>
  <i>attr</i> Initial attributes to be used to create this handle.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
@@ -113,7 +113,7 @@ description: "Handle Management –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The FTP client handle to set or query.<br />
+</dt><dd> <i>handle</i> The FTP client handle to set or query.<br/>
  <i>plugin</i> A pointer to the plugin structure to remove from this handle.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
@@ -125,7 +125,7 @@ description: "Handle Management –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The FTP client handle to set or query.<br />
+</dt><dd> <i>handle</i> The FTP client handle to set or query.<br/>
  <i>user_pointer</i> The value of the user pointer field.</dd></dl>
 <p> <code>Note:</code></p>
 <dl>

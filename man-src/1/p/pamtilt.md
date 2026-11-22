@@ -25,7 +25,7 @@ description: "pamtilt – print the tilt angle of a PGM file"
 <p> &#8216;Document skew&#8217; is the name given to what happens when you feed a page into an image scanner at an angle: the resulting image is tilted. <code>pamtilt</code> aims to correct that. </p>
 <p> <code>pamtilt</code> makes three iterations at successively finer increments, testing prospective rotation angles to find the best one. <code>pamtilt</code> works best for straightening images with strong horizontal lines and does poorly with arbitrary photos. If <code>pamtilt</code> has no confidence in its results, it prints the special value 00.00; you can check for this or just pass it as a legal argument to pnmrotate. </p>
 <p> <code>pamtilt</code> operates on the first plane of the input image, which is either PNM or PAM, and ignores any other planes. Ordinarily, the input is PGM or GRAYSCALE PAM, so there is only one plane. </p>
-<p> <code>pamtilt</code> works on bilevel (PBM, BLACKANDWHITE PAM) images as well as grayscale, but you will minimize artifacts if you scan and rotate in grayscale before you apply a threshold to make a bilevel image.<br />
+<p> <code>pamtilt</code> works on bilevel (PBM, BLACKANDWHITE PAM) images as well as grayscale, but you will minimize artifacts if you scan and rotate in grayscale before you apply a threshold to make a bilevel image.<br/>
 &nbsp;<wbr>&nbsp;<wbr></p>
 <h2>OPTIONS</h2>
 <p> A few options have general utility: </p>

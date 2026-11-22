@@ -18,7 +18,7 @@ description: "libavutil – multimedia-biased utility library"
 <dt><code>Small</code></dt>
 <dd> Both sources and objects should be small.</dd>
 <dt><code>Efficient</code></dt>
-<dd> It should have low <font SIZE="-1">CPU</font> and memory usage.</dd>
+<dd> It should have low CPU and memory usage.</dd>
 <dt><code>Useful</code></dt>
 <dd> It should avoid useless features that almost no one needs.</dd></dl>
 <h2>SEE ALSO</h2>
@@ -26,4 +26,4 @@ description: "libavutil – multimedia-biased utility library"
 <h2>AUTHORS</h2>
 <p> The FFmpeg developers. </p>
 <p> For details about the authorship, see the Git history of the project (<a href="git://source.ffmpeg.org/ffmpeg">git://source.ffmpeg.org/ffmpeg</a>), e.g. by typing the command <code>git log</code> in the FFmpeg source directory, or browsing the online repository at &lt;<code><a rel="nofollow" href="http://source.ffmpeg.org">http://source.ffmpeg.org</a></code>&gt;. </p>
-<p> Maintainers for the specific components are listed in the file <i></i><font SIZE="-1"><i>MAINTAINERS</i></font><i></i> in the source code tree. </p>
+<p> Maintainers for the specific components are listed in the file <i></i><i>MAINTAINERS</i><i></i> in the source code tree. </p>

@@ -10,8 +10,8 @@ description: "arm4_control – ARM 4 agent control program"
 
 <p> arm4_control &#8211; ARM 4 agent control program</p>
 <h2>SYNOPSIS</h2>
-<p> <code>arm4_control</code> <i>&#8211;help|-h</i><br />
- <code>arm4_control</code> <i>&#8211;version|-V</i><br />
+<p> <code>arm4_control</code> <i>&#8211;help|-h</i><br/>
+ <code>arm4_control</code> <i>&#8211;version|-V</i><br/>
  <code>arm4_control</code> [<i>&#8211;config|-C config_file</i>] [<i>commands&#8230;</i>]</p>
 <h2>DESCRIPTION</h2>
 <p> The <code>arm4_control</code> program controls the <code>arm4_daemon</code> program.</p>

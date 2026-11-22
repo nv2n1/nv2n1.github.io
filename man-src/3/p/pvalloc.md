@@ -27,7 +27,7 @@ void *pvalloc(size_t size);</code></pre>
  || /* Glibc versions &lt;= 2.19: */ _SVID_SOURCE || _BSD_SOURCE
 <br></pre>
 </dd><dt>Before glibc 2.12:</dt>
-<dd>_BSD_SOURCE || _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
+<dd>_BSD_SOURCE || _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br/>
  (The (nonstandard) header file <i>&lt;malloc.h&gt;</i> also exposes the declaration of <code>valloc</code>(); no feature test macros are required.)</dd></dl>
 </dl>
 <h2>Description</h2>
@@ -60,15 +60,15 @@ void *pvalloc(size_t size);</code></pre>
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>aligned_alloc</code>(),<br />
- <code>memalign</code>(),<br />
+<td> <code>aligned_alloc</code>(),<br/>
+ <code>memalign</code>(),<br/>
  <code>posix_memalign</code>() </td>
 <td>Thread safety</td>
 <td>MT-Safe
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>valloc</code>(),<br />
+<td> <code>valloc</code>(),<br/>
  <code>pvalloc</code>() </td>
 <td>Thread safety</td>
 <td>MT-Unsafe init

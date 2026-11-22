@@ -24,6 +24,6 @@ description: "pnmtoddif – Convert a portable anymap to DDIF format"
 <p> pbm format (bitmap) data is written as 1 bit DDIF, pgm format data (greyscale) as 8 bit greyscale DDIF, and ppm format data is written as 8,8,8 bit color DDIF. All DDIF image files are written as uncompressed. The data plane organization is interleaved by pixel. </p>
 <p> In addition to the number of pixels in the width and height dimension, DDIF images also carry information about the size that the image should have, that is, the physical space that a pixel occupies. PBMPLUS images do not carry this information, hence it has to be externally supplied. The default of 78 dpi has the beneficial property of not causing a resize on most Digital Equipment Corporation color monitors.</p>
 <h2>AUTHOR</h2>
-<p> Burkhard Neidecker-Lutz<br />
- Digital Equipment Corporation, CEC Karlsruhe<br />
+<p> Burkhard Neidecker-Lutz<br/>
+ Digital Equipment Corporation, CEC Karlsruhe<br/>
  neideck [at] nestvx.enet.dec.com </p>

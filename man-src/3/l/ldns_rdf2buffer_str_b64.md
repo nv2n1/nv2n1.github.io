@@ -10,7 +10,7 @@ description: "ldns_rdf2buffer_str_a, ldns_rdf2buffer_str_aaaa, ldns_rdf2buffer_s
 
 <p> ldns_rdf2buffer_str_a, ldns_rdf2buffer_str_aaaa, ldns_rdf2buffer_str_str, ldns_rdf2buffer_str_b64, ldns_rdf2buffer_str_hex, ldns_rdf2buffer_str_type, ldns_rdf2buffer_str_class, ldns_rdf2buffer_str_alg, ldns_rdf2buffer_str_loc, ldns_rdf2buffer_str_unknown, ldns_rdf2buffer_str_nsap, ldns_rdf2buffer_str_wks, ldns_rdf2buffer_str_nsec, ldns_rdf2buffer_str_period, ldns_rdf2buffer_str_tsigtime, ldns_rdf2buffer_str_apl, ldns_rdf2buffer_str_int16_data, ldns_rdf2buffer_str_int16, ldns_rdf2buffer_str_ipseckey </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ldns_status ldns_rdf2buffer_str_a(ldns_buffer *output, const ldns_rdf *rdf); </p>

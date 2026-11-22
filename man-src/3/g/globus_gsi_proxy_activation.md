@@ -10,7 +10,7 @@ description: "Activation –"
 
 <p> Activation &#8211; </p>
 <h3>Macros</h3>
-<p> #define <code>GLOBUS_GSI_PROXY_MODULE</code><br />
+<p> #define <code>GLOBUS_GSI_PROXY_MODULE</code><br/>
  <i>Module descriptor. </i></p>
 <h2>Detailed Description</h2>
 <p> Globus GSI Proxy uses standard Globus module activation and deactivation. Before any Globus GSI Proxy functions are called, the following function must be called: </p>

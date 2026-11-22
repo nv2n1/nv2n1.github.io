@@ -41,9 +41,9 @@ description: "festival_client – client access to festiva; text-to-speech serve
 <h2>BUGS</h2>
 <p> This still isn&#8217;t as general as it should be. It seems to require lots of special little options which suggests the general options aren&#8217;t right. </p>
 <h2>AUTHOR</h2>
-<p> Alan W Black and Paul Taylor<br />
- (C) Centre for Speech Technology Research<br />
- University of Edinburgh<br />
- 80 South Bridge<br />
- Edinburgh EH1 1HN<br />
+<p> Alan W Black and Paul Taylor<br/>
+ (C) Centre for Speech Technology Research<br/>
+ University of Edinburgh<br/>
+ 80 South Bridge<br/>
+ Edinburgh EH1 1HN<br/>
  <a rel="nofollow" href="http://www.cstr.ed.ac.uk/projects/festival.html">http://www.cstr.ed.ac.uk/projects/festival.html</a> </p>

@@ -23,5 +23,5 @@ description: "XtSetMultiClickTime, XtGetMultiClickTime – set and get multi-cli
 <p><code>XtSetMultiClickTime</code> sets the time interval used by the translation manager to determine when multiple events are interpreted as a repeated event. </p>
 <p> <code>XtGetMultiClickTime</code> returns the time in milliseconds that the translation manager uses to determine if multiple events are to be interpreted as a repeated event for purposes of matching a translation entry containing a repeat count.</p>
 <h2>See Also</h2>
-<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

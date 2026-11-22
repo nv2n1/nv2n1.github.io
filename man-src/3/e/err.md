@@ -37,9 +37,9 @@ void vwarnx(const char *fmt, va_list args);
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>err</code>(), <code>errx</code>(),<br />
- <code>warn</code>(), <code>warnx</code>(),<br />
- <code>verr</code>(), <code>verrx</code>(),<br />
+<td> <code>err</code>(), <code>errx</code>(),<br/>
+ <code>warn</code>(), <code>warnx</code>(),<br/>
+ <code>verr</code>(), <code>verrx</code>(),<br/>
  <code>vwarn</code>(), <code>vwarnx</code>() </td>
 <td>Thread safety</td>
 <td>MT-Safe locale
@@ -50,17 +50,17 @@ void vwarnx(const char *fmt, va_list args);
 <p> These functions are nonstandard BSD extensions.</p>
 <h2>EXAMPLES</h2>
 <p> Display the current <i>errno</i> information string and exit: </p>
-<p> p = malloc(size); if (p == NULL)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;err(EXIT_FAILURE, NULL); fd = open(file_name, O_RDONLY, 0); if (fd == -1)<br />
+<p> p = malloc(size); if (p == NULL)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;err(EXIT_FAILURE, NULL); fd = open(file_name, O_RDONLY, 0); if (fd == -1)<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;err(EXIT_FAILURE,&nbsp;&quot;%s&quot;, file_name); </p>
 <p> Display an error message and exit: </p>
-<p> if (tm.tm_hour &lt; START_TIME)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;errx(EXIT_FAILURE,&nbsp;&quot;too early, wait until&nbsp;%s&quot;,<br />
+<p> if (tm.tm_hour &lt; START_TIME)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;errx(EXIT_FAILURE,&nbsp;&quot;too early, wait until&nbsp;%s&quot;,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;start_time_string); </p>
 <p> Warn of an error: </p>
-<p> fd = open(raw_device, O_RDONLY, 0); if (fd == -1)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;warnx(&quot;%s:&nbsp;%s: trying the block device&quot;,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;raw_device, strerror(errno)); fd = open(block_device, O_RDONLY, 0); if (fd == -1)<br />
+<p> fd = open(raw_device, O_RDONLY, 0); if (fd == -1)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;warnx(&quot;%s:&nbsp;%s: trying the block device&quot;,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;raw_device, strerror(errno)); fd = open(block_device, O_RDONLY, 0); if (fd == -1)<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;err(EXIT_FAILURE,&nbsp;&quot;%s&quot;, block_device);</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-error/">error</a></code>(3), <code><a href="/docs/linux/man/3-exit/">exit</a></code>(3), <code><a href="/docs/linux/man/3-perror/">perror</a></code>(3), <code><a href="/docs/linux/man/3-printf/">printf</a></code>(3), <code><a href="/docs/linux/man/3-strerror/">strerror</a></code>(3)</p>

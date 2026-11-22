@@ -58,7 +58,7 @@ mongoperf &lt; config
 <p> Defines the number of threads <code>mongoperf</code> will use in the test. To saturate your system&#8217;s storage system you will need multiple threads. Consider setting <code>nThreads</code> to <code>16</code>.</p>
 <dt><code>mongoperf.fileSizeMB</code></dt>
 <dd> <i>Type:</i> Integer. </dd>
-<p> <i>Default:</i> 1 megabyte (i.e. 1024<font SIZE="-2">2</font> bytes) </p>
+<p> <i>Default:</i> 1 megabyte (i.e. 10242 bytes) </p>
 <p> Test file size.</p>
 <dt><code>mongoperf.sleepMicros</code></dt>
 <dd> <i>Type:</i> Integer. </dd>

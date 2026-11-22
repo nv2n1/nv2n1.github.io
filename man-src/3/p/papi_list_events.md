@@ -20,12 +20,12 @@ description: "PAPI_list_events –"
 <p>&nbsp;<wbr>int&nbsp;<wbr><code>PAPI_list_events(int&nbsp;<wbr>*EventSet, int&nbsp;<wbr>*Events, int&nbsp;<wbr>*number&nbsp;<wbr>)</code>;</dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>EventSet</i> An integer handle for a PAPI event set as created by <code>PAPI_create_eventset</code><br />
- <i>*Events</i> A pointer to a preallocated array of codes for events, such as PAPI_INT_INS. No more than *number codes will be stored into the array.<br />
+<dd><i>EventSet</i> An integer handle for a PAPI event set as created by <code>PAPI_create_eventset</code><br/>
+ <i>*Events</i> A pointer to a preallocated array of codes for events, such as PAPI_INT_INS. No more than *number codes will be stored into the array.<br/>
  <i>*number</i> On input, the size of the Events array, or maximum number of event codes to be returned. A value of 0 can be used to probe an event set. On output, the number of events actually in the event set. This value may be greater than the actually stored number of event codes.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>PAPI_EINVAL</i><br />
+<dd><i>PAPI_EINVAL</i><br/>
  <i>PAPI_ENOEVST</i></dd></dl>
 <p> <code>Examples:</code></p>
 <dl COMPACT>

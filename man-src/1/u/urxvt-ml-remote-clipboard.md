@@ -15,7 +15,7 @@ remote-clipboard - manage a shared and possibly remote clipboard
 
  We use it to implement a ``distributed selection mechanism'', which just means that one command uploads the file to a remote server, and another reads it. 
 
- The commands can be set using the <tt>&quot;URxvt.remote-selection.store&quot;</tt> and <tt>&quot;URxvt.remote-selection.fetch&quot;</tt> resources. The first should read the selection to store from <font SIZE="-1">STDIN </font>(always in <font SIZE="-1">UTF-8</font>), the second should provide the selection data on <font SIZE="-1">STDOUT </font>(also in <font SIZE="-1">UTF-8</font>). 
+ The commands can be set using the <tt>&quot;URxvt.remote-selection.store&quot;</tt> and <tt>&quot;URxvt.remote-selection.fetch&quot;</tt> resources. The first should read the selection to store from STDIN (always in UTF-8), the second should provide the selection data on STDOUT (also in UTF-8). 
 
  The defaults (which are likely useless to you) use rsh and cat: 
 

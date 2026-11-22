@@ -11,31 +11,31 @@ description: "Context –"
 <p> Context &#8211; </p>
 <p> Net Manager Context Management Functions.</p>
 <h3>Typedefs</h3>
-<p> typedef struct<br />
- globus_i_net_manager_context_s * <code>globus_net_manager_context_t</code>&quot;<br />
+<p> typedef struct<br/>
+ globus_i_net_manager_context_s * <code>globus_net_manager_context_t</code>&quot;<br/>
  <i>Net Manager Context. </i></p>
 <h3>Functions</h3>
-<p> void <code>globus_net_manager_context_destroy</code> (<code>globus_net_manager_context_t</code> context)<br />
- <i>Destroy Context. </i><br />
- globus_result_t <code>globus_net_manager_context_end_listen</code> (<code>globus_net_manager_context_t</code> context, const char *task_id, const char *transport, const char *local_contact, const <code>globus_net_manager_attr_t</code> *attr_array)<br />
- <i>Call Context End Listen. </i><br />
- globus_result_t <code>globus_net_manager_context_init</code> (<code>globus_net_manager_context_t</code> *context, const <code>globus_net_manager_attr_t</code> *attrs)<br />
- <i>Initialize Context. </i><br />
- globus_result_t <code>globus_net_manager_context_post_accept</code> (<code>globus_net_manager_context_t</code> context, const char *task_id, const char *transport, const char *local_contact, const char *remote_contact, const <code>globus_net_manager_attr_t</code> *attr_array, <code>globus_net_manager_attr_t</code> **attr_array_out)<br />
- <i>Call Context Post Accept. </i><br />
- globus_result_t <code>globus_net_manager_context_post_close</code> (<code>globus_net_manager_context_t</code> context, const char *task_id, const char *transport, const char *local_contact, const char *remote_contact, const <code>globus_net_manager_attr_t</code> *attr_array)<br />
- <i>Call Context Post Close. </i><br />
- globus_result_t <code>globus_net_manager_context_post_connect</code> (<code>globus_net_manager_context_t</code> context, const char *task_id, const char *transport, const char *local_contact, const char *remote_contact, const <code>globus_net_manager_attr_t</code> *attr_array, <code>globus_net_manager_attr_t</code> **attr_array_out)<br />
- <i>Call Context Post Connect. </i><br />
- globus_result_t <code>globus_net_manager_context_post_listen</code> (<code>globus_net_manager_context_t</code> context, const char *task_id, const char *transport, const char *local_contact, const <code>globus_net_manager_attr_t</code> *attr_array, char **local_contact_out, <code>globus_net_manager_attr_t</code> **attr_array_out)<br />
- <i>Call Context Post Listen. </i><br />
- globus_result_t <code>globus_net_manager_context_pre_accept</code> (<code>globus_net_manager_context_t</code> context, const char *task_id, const char *transport, const char *local_contact, const <code>globus_net_manager_attr_t</code> *attr_array, <code>globus_net_manager_attr_t</code> **attr_array_out)<br />
- <i>Call Context Pre Accept. </i><br />
- globus_result_t <code>globus_net_manager_context_pre_close</code> (<code>globus_net_manager_context_t</code> context, const char *task_id, const char *transport, const char *local_contact, const char *remote_contact, const <code>globus_net_manager_attr_t</code> *attr_array)<br />
- <i>Call Context Pre Close. </i><br />
- globus_result_t <code>globus_net_manager_context_pre_connect</code> (<code>globus_net_manager_context_t</code> context, const char *task_id, const char *transport, const char *remote_contact, const <code>globus_net_manager_attr_t</code> *attr_array, char **remote_contact_out, <code>globus_net_manager_attr_t</code> **attr_array_out)<br />
- <i>Call Context Pre Connect. </i><br />
- globus_result_t <code>globus_net_manager_context_pre_listen</code> (<code>globus_net_manager_context_t</code> context, const char *task_id, const char *transport, const <code>globus_net_manager_attr_t</code> *attr_array, <code>globus_net_manager_attr_t</code> **attr_array_out)<br />
+<p> void <code>globus_net_manager_context_destroy</code> (<code>globus_net_manager_context_t</code> context)<br/>
+ <i>Destroy Context. </i><br/>
+ globus_result_t <code>globus_net_manager_context_end_listen</code> (<code>globus_net_manager_context_t</code> context, const char *task_id, const char *transport, const char *local_contact, const <code>globus_net_manager_attr_t</code> *attr_array)<br/>
+ <i>Call Context End Listen. </i><br/>
+ globus_result_t <code>globus_net_manager_context_init</code> (<code>globus_net_manager_context_t</code> *context, const <code>globus_net_manager_attr_t</code> *attrs)<br/>
+ <i>Initialize Context. </i><br/>
+ globus_result_t <code>globus_net_manager_context_post_accept</code> (<code>globus_net_manager_context_t</code> context, const char *task_id, const char *transport, const char *local_contact, const char *remote_contact, const <code>globus_net_manager_attr_t</code> *attr_array, <code>globus_net_manager_attr_t</code> **attr_array_out)<br/>
+ <i>Call Context Post Accept. </i><br/>
+ globus_result_t <code>globus_net_manager_context_post_close</code> (<code>globus_net_manager_context_t</code> context, const char *task_id, const char *transport, const char *local_contact, const char *remote_contact, const <code>globus_net_manager_attr_t</code> *attr_array)<br/>
+ <i>Call Context Post Close. </i><br/>
+ globus_result_t <code>globus_net_manager_context_post_connect</code> (<code>globus_net_manager_context_t</code> context, const char *task_id, const char *transport, const char *local_contact, const char *remote_contact, const <code>globus_net_manager_attr_t</code> *attr_array, <code>globus_net_manager_attr_t</code> **attr_array_out)<br/>
+ <i>Call Context Post Connect. </i><br/>
+ globus_result_t <code>globus_net_manager_context_post_listen</code> (<code>globus_net_manager_context_t</code> context, const char *task_id, const char *transport, const char *local_contact, const <code>globus_net_manager_attr_t</code> *attr_array, char **local_contact_out, <code>globus_net_manager_attr_t</code> **attr_array_out)<br/>
+ <i>Call Context Post Listen. </i><br/>
+ globus_result_t <code>globus_net_manager_context_pre_accept</code> (<code>globus_net_manager_context_t</code> context, const char *task_id, const char *transport, const char *local_contact, const <code>globus_net_manager_attr_t</code> *attr_array, <code>globus_net_manager_attr_t</code> **attr_array_out)<br/>
+ <i>Call Context Pre Accept. </i><br/>
+ globus_result_t <code>globus_net_manager_context_pre_close</code> (<code>globus_net_manager_context_t</code> context, const char *task_id, const char *transport, const char *local_contact, const char *remote_contact, const <code>globus_net_manager_attr_t</code> *attr_array)<br/>
+ <i>Call Context Pre Close. </i><br/>
+ globus_result_t <code>globus_net_manager_context_pre_connect</code> (<code>globus_net_manager_context_t</code> context, const char *task_id, const char *transport, const char *remote_contact, const <code>globus_net_manager_attr_t</code> *attr_array, char **remote_contact_out, <code>globus_net_manager_attr_t</code> **attr_array_out)<br/>
+ <i>Call Context Pre Connect. </i><br/>
+ globus_result_t <code>globus_net_manager_context_pre_listen</code> (<code>globus_net_manager_context_t</code> context, const char *task_id, const char *transport, const <code>globus_net_manager_attr_t</code> *attr_array, <code>globus_net_manager_attr_t</code> **attr_array_out)<br/>
  <i>Call Context Pre Listen. </i></p>
 <h2>Detailed Description</h2>
 <p> Net Manager Context Management Functions. </p>
@@ -58,10 +58,10 @@ description: "Context –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> The context to call functions in.<br />
- <i>task_id</i> The task_id associated with this network operation.<br />
- <i>transport</i> The transport driver associated with this network operation.<br />
- <i>local_contact</i> The string representation of the local address of the socket.<br />
+</dt><dd> <i>context</i> The context to call functions in.<br/>
+ <i>task_id</i> The task_id associated with this network operation.<br/>
+ <i>transport</i> The transport driver associated with this network operation.<br/>
+ <i>local_contact</i> The string representation of the local address of the socket.<br/>
  <i>attr_array</i> The set of attributes to pass to the managers.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -72,7 +72,7 @@ description: "Context –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A pointer to the context to initialize.<br />
+</dt><dd> <i>context</i> A pointer to the context to initialize.<br/>
  <i>attrs</i> An array of attributes to initialize the context with.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -83,12 +83,12 @@ description: "Context –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> The context to call functions in.<br />
- <i>task_id</i> The task_id associated with this network operation.<br />
- <i>transport</i> The transport driver associated with this network operation.<br />
- <i>local_contact</i> The string representation of the local address of the socket.<br />
- <i>remote_contact</i> The string representation of the remote address of the socket.<br />
- <i>attr_array</i> The set of attributes to pass to the managers.<br />
+</dt><dd> <i>context</i> The context to call functions in.<br/>
+ <i>task_id</i> The task_id associated with this network operation.<br/>
+ <i>transport</i> The transport driver associated with this network operation.<br/>
+ <i>local_contact</i> The string representation of the local address of the socket.<br/>
+ <i>remote_contact</i> The string representation of the remote address of the socket.<br/>
+ <i>attr_array</i> The set of attributes to pass to the managers.<br/>
  <i>attr_array_out</i> The resulting set of attributes from the managers. This will be set to NULL if no manager modifies the attributes.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -99,11 +99,11 @@ description: "Context –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> The context to call functions in.<br />
- <i>task_id</i> The task_id associated with this network operation.<br />
- <i>transport</i> The transport driver associated with this network operation.<br />
- <i>local_contact</i> The string representation of the local address of the socket.<br />
- <i>remote_contact</i> The string representation of the remote address of the socket<br />
+</dt><dd> <i>context</i> The context to call functions in.<br/>
+ <i>task_id</i> The task_id associated with this network operation.<br/>
+ <i>transport</i> The transport driver associated with this network operation.<br/>
+ <i>local_contact</i> The string representation of the local address of the socket.<br/>
+ <i>remote_contact</i> The string representation of the remote address of the socket<br/>
  <i>attr_array</i> The set of attributes to pass to the managers.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -114,12 +114,12 @@ description: "Context –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> The context to call functions in.<br />
- <i>task_id</i> The task_id associated with this network operation.<br />
- <i>transport</i> The transport driver associated with this network operation.<br />
- <i>local_contact</i> The string representation of the local address of the socket.<br />
- <i>remote_contact</i> The string representation of the remote address of the socket.<br />
- <i>attr_array</i> The set of attributes to pass to the managers.<br />
+</dt><dd> <i>context</i> The context to call functions in.<br/>
+ <i>task_id</i> The task_id associated with this network operation.<br/>
+ <i>transport</i> The transport driver associated with this network operation.<br/>
+ <i>local_contact</i> The string representation of the local address of the socket.<br/>
+ <i>remote_contact</i> The string representation of the remote address of the socket.<br/>
+ <i>attr_array</i> The set of attributes to pass to the managers.<br/>
  <i>attr_array_out</i> The resulting set of attributes from the managers. This will be set to NULL if no manager modifies the attributes.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -130,12 +130,12 @@ description: "Context –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> The context to call functions in.<br />
- <i>task_id</i> The task_id associated with this network operation.<br />
- <i>transport</i> The transport driver associated with this network operation.<br />
- <i>local_contact</i> The string representation of the local address of the socket.<br />
- <i>attr_array</i> The set of attributes to pass to the managers.<br />
- <i>local_contact_out</i> The resulting local contact from the managers. This will be set to NULL if no manager modifies the local contact.<br />
+</dt><dd> <i>context</i> The context to call functions in.<br/>
+ <i>task_id</i> The task_id associated with this network operation.<br/>
+ <i>transport</i> The transport driver associated with this network operation.<br/>
+ <i>local_contact</i> The string representation of the local address of the socket.<br/>
+ <i>attr_array</i> The set of attributes to pass to the managers.<br/>
+ <i>local_contact_out</i> The resulting local contact from the managers. This will be set to NULL if no manager modifies the local contact.<br/>
  <i>attr_array_out</i> The resulting set of attributes from the managers. This will be set to NULL if no manager modifies the attributes.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -146,11 +146,11 @@ description: "Context –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> The context to call functions in.<br />
- <i>task_id</i> The task_id associated with this network operation.<br />
- <i>transport</i> The transport driver associated with this network operation.<br />
- <i>local_contact</i> The string representation of the local address of socket.<br />
- <i>attr_array</i> The set of attributes to pass to the managers.<br />
+</dt><dd> <i>context</i> The context to call functions in.<br/>
+ <i>task_id</i> The task_id associated with this network operation.<br/>
+ <i>transport</i> The transport driver associated with this network operation.<br/>
+ <i>local_contact</i> The string representation of the local address of socket.<br/>
+ <i>attr_array</i> The set of attributes to pass to the managers.<br/>
  <i>attr_array_out</i> The resulting set of attributes from the managers. This will be set to NULL if no manager modifies the attributes.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -161,11 +161,11 @@ description: "Context –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> The context to call functions in.<br />
- <i>task_id</i> The task_id associated with this network operation.<br />
- <i>transport</i> The transport driver associated with this network operation.<br />
- <i>local_contact</i> The string representation of the local address of socket.<br />
- <i>remote_contact</i> The string representation of the remote address of socket.<br />
+</dt><dd> <i>context</i> The context to call functions in.<br/>
+ <i>task_id</i> The task_id associated with this network operation.<br/>
+ <i>transport</i> The transport driver associated with this network operation.<br/>
+ <i>local_contact</i> The string representation of the local address of socket.<br/>
+ <i>remote_contact</i> The string representation of the remote address of socket.<br/>
  <i>attr_array</i> The set of attributes to pass to the managers.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -176,12 +176,12 @@ description: "Context –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> The context to call functions in.<br />
- <i>task_id</i> The task_id associated with this network operation.<br />
- <i>transport</i> The transport driver associated with this network operation.<br />
- <i>remote_contact</i> The string representation of the remote address of socket.<br />
- <i>attr_array</i> The set of attributes to pass to the managers.<br />
- <i>remote_contact_out</i> The resulting string representation of the remote address. This will be set to NULL if no manager modifies the address.<br />
+</dt><dd> <i>context</i> The context to call functions in.<br/>
+ <i>task_id</i> The task_id associated with this network operation.<br/>
+ <i>transport</i> The transport driver associated with this network operation.<br/>
+ <i>remote_contact</i> The string representation of the remote address of socket.<br/>
+ <i>attr_array</i> The set of attributes to pass to the managers.<br/>
+ <i>remote_contact_out</i> The resulting string representation of the remote address. This will be set to NULL if no manager modifies the address.<br/>
  <i>attr_array_out</i> The resulting set of attributes from the managers. This will be set to NULL if no manager modifies the attributes.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -192,10 +192,10 @@ description: "Context –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> The context to call functions in.<br />
- <i>task_id</i> The task_id associated with this network operation.<br />
- <i>transport</i> The transport driver associated with this network operation.<br />
- <i>attr_array</i> The set of attributes to pass to the managers.<br />
+</dt><dd> <i>context</i> The context to call functions in.<br/>
+ <i>task_id</i> The task_id associated with this network operation.<br/>
+ <i>transport</i> The transport driver associated with this network operation.<br/>
+ <i>attr_array</i> The set of attributes to pass to the managers.<br/>
  <i>attr_array_out</i> The resulting set of attributes from the managers. This will be set to NULL if no manager modifies the attributes.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

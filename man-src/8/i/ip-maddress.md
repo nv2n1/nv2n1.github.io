@@ -15,7 +15,7 @@ maddress
 { COMMAND |
     help }
 </code></pre>
-<p> <code>ip maddress</code> [ <code>add</code> | <code>del</code> ] <i>MULTIADDR</i><code> dev </code><i>NAME</i><br />
+<p> <code>ip maddress</code> [ <code>add</code> | <code>del</code> ] <i>MULTIADDR</i><code> dev </code><i>NAME</i><br/>
  <code>ip maddress show</code> [ <code>dev</code> <i>NAME</i> ] </p>
 <h2>Description</h2>
 <p><code>maddress</code> objects are multicast addresses.</p>

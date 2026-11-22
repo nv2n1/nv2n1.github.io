@@ -10,7 +10,7 @@ description: "izamax.f –"
 <p>izamax.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>INTEGER function <code>izamax</code> (N, ZX, INCX)<br />
+<p>INTEGER function <code>izamax</code> (N, ZX, INCX)<br/>
  <i></i><code>IZAMAX</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>INTEGER function izamax (integerN, complex*16, dimension(*)ZX, integerINCX)</h3>

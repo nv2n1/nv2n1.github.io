@@ -29,17 +29,17 @@ description: "toast — GSM 06.10 lossy sound compression"
 <dt><code>-p</code></dt>
 <dd> (precious) Do not delete the source files. Source files are implicitly left alone whenever -c is specified or tcat is run.</dd>
 <dt><code>-C</code></dt>
-<dd> (LTP cut-off) Ignore most sample values when calculating the GSM long-term correlation lag during encoding. (The multiplications that do this are a bottleneck of the algorithm.) The resulting encoding process will not produce exactly the same results as GSM 06.10 would, but remains close enough to be compatible.<br />
+<dd> (LTP cut-off) Ignore most sample values when calculating the GSM long-term correlation lag during encoding. (The multiplications that do this are a bottleneck of the algorithm.) The resulting encoding process will not produce exactly the same results as GSM 06.10 would, but remains close enough to be compatible.<br/>
  The <code>-C</code> option applies only to the encoder and is silently ignored by the decoder.</dd>
 <dt><code>-F</code></dt>
-<dd> (fast) On systems with a floating point processor, but without a multiplication instruction, -F sacrifices standard conformance to performance and nearly doubles the speed of the algorithm.<br />
- The resulting encoding and decoding process will not produce exactly the same results as GSM 06.10 would, but remains close enough to be compatible.<br />
+<dd> (fast) On systems with a floating point processor, but without a multiplication instruction, -F sacrifices standard conformance to performance and nearly doubles the speed of the algorithm.<br/>
+ The resulting encoding and decoding process will not produce exactly the same results as GSM 06.10 would, but remains close enough to be compatible.<br/>
  The default is standard-conforming operation.</dd>
 <dt><code>-v</code></dt>
 <dd> (version)&nbsp;<wbr> outputs the version of toast (or untoast or tcat) to stdout and exits.</dd>
 <dt><code>-h</code></dt>
 <dd> (help)&nbsp;<wbr> prints a short overview of the options.</dd></dl>
-<p> Toast, untoast and tcat try to guess the appropriate audio data format from the file suffix. Command line options can also specify a format to be used for all files.<br />
+<p> Toast, untoast and tcat try to guess the appropriate audio data format from the file suffix. Command line options can also specify a format to be used for all files.<br/>
  The following formats are supported:</p>
 <dl>
 <dt><code>-u</code></dt>

@@ -36,5 +36,5 @@ description: "XtSetLanguageProc – set the language procedure"
 <dd>Returns the value of the current locale. On ANSI C-based systems this is the return value from a final call to <code>setlocale</code>( <code>LC_ALL</code>, NULL ).</dd></dl>
 <p> A client wishing to use this mechanism to establish locale can do so by calling <code>XtSetLanguageProc</code> prior to <code>XtDisplayInitialize.</code></p>
 <h2>See Also</h2>
-<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

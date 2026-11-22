@@ -80,7 +80,7 @@ corelist - v
 </dd><dt>-d
 </dt><dd> finds the first perl version where a module has been released by date, and not by version number (as is the default).
 </dd><dt>--diff
-</dt><dd> Given two versions of perl, this prints a human-readable table of all module changes between the two. The output format may change in the future, and is meant for <i>humans</i>, not programs. For programs, use the Module::CoreList <font SIZE="-1">API.</font>
+</dt><dd> Given two versions of perl, this prints a human-readable table of all module changes between the two. The output format may change in the future, and is meant for <i>humans</i>, not programs. For programs, use the Module::CoreList API.
 </dd><dt>-? or -help
 </dt><dd> help! help! help! to see more help, try --man.
 </dd><dt>-man
@@ -99,7 +99,7 @@ corelist - v
 </dd><dt>--feature, -f
 </dt><dd> lists the first version bundle of each named feature given
 </dd><dt>--upstream, -u
-</dt><dd> Shows if the given module is primarily maintained in perl core or on <font SIZE="-1">CPAN</font> and bug tracker <font SIZE="-1">URL.</font></dd></dl>
+</dt><dd> Shows if the given module is primarily maintained in perl core or on CPAN and bug tracker URL.</dd></dl>
  
 
  As a special case, if you specify the module name <tt>&quot;Unicode&quot;</tt>, you'll get the version number of the Unicode Character Database bundled with the requested perl versions.

@@ -125,7 +125,7 @@ mysqlslap&#8211; concurrency = 5 &#8211;iterations = 5 &#8211;query = query.sql&
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  If the <code>&#8211;auto-generate-sql</code> option is also given, <code>mysqlslap</code> drops the schema at the end of the test run. To avoid this, use the <code>&#8211;no-drop</code> option as well. </dd>
 </dl>
 </dl>
@@ -329,7 +329,7 @@ shell &gt; mysqlslap-- delimiter = ";" --number - of - queries = 10 --query = "u
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  If the OpenSSL FIPS Object Module is not available, the only permitted value for <code>&#8211;ssl-fips-mode</code> is OFF. In this case, setting <code>&#8211;ssl-fips-mode</code> to ON or STRICT causes the client to produce a warning at startup and to operate in non-FIPS mode. </dd>
 </dl>
 </dl>

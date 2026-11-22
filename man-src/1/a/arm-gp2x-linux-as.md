@@ -10,137 +10,137 @@ description: "AS – the portable GNU assembler."
 
 <p> AS &#8211; the portable GNU assembler.</p>
 <h2>SYNOPSIS</h2>
-<p> as [<code>-a</code>[<code>cdhlns</code>][=<i>file</i>]] [<code>&#8211;alternate</code>] [<code>-D</code>]<br />
-&nbsp;<wbr>[<code>&#8211;defsym</code>&nbsp;<wbr><i>sym</i>=<i>val</i>]&nbsp;<wbr>[<code>-f</code>]&nbsp;<wbr>[<code>-g</code>]&nbsp;<wbr>[<code>&#8211;gstabs</code>]&nbsp;<wbr>[<code>&#8211;gstabs+</code>]<br />
-&nbsp;<wbr>[<code>&#8211;gdwarf-2</code>]&nbsp;<wbr>[<code>&#8211;help</code>]&nbsp;<wbr>[<code>-I</code>&nbsp;<wbr><i>dir</i>]&nbsp;<wbr>[<code>-J</code>]&nbsp;<wbr>[<code>-K</code>]&nbsp;<wbr>[<code>-L</code>]<br />
-&nbsp;<wbr>[<code>&#8211;listing-lhs-width</code>=<i></i><font SIZE="-1"><i>NUM</i></font><i></i>]&nbsp;<wbr>[<code>&#8211;listing-lhs-width2</code>=<i></i><font SIZE="-1"><i>NUM</i></font><i></i>]<br />
-&nbsp;<wbr>[<code>&#8211;listing-rhs-width</code>=<i></i><font SIZE="-1"><i>NUM</i></font><i></i>]&nbsp;<wbr>[<code>&#8211;listing-cont-lines</code>=<i></i><font SIZE="-1"><i>NUM</i></font><i></i>]<br />
-&nbsp;<wbr>[<code>&#8211;keep-locals</code>]&nbsp;<wbr>[<code>-o</code>&nbsp;<wbr><i>objfile</i>]&nbsp;<wbr>[<code>-R</code>]&nbsp;<wbr>[<code>&#8211;statistics</code>]&nbsp;<wbr>[<code>-v</code>]<br />
-&nbsp;<wbr>[<code>-version</code>]&nbsp;<wbr>[<code>&#8211;version</code>]&nbsp;<wbr>[<code>-W</code>]&nbsp;<wbr>[<code>&#8211;warn</code>]&nbsp;<wbr>[<code>&#8211;fatal-warnings</code>]&nbsp;<wbr><br />
-&nbsp;<wbr>[<code>-w</code>]&nbsp;<wbr>[<code>-x</code>]&nbsp;<wbr>[<code>-Z</code>]&nbsp;<wbr>[<code>&#8211;target-help</code>]&nbsp;<wbr>[<i>target-options</i>]&nbsp;<wbr><br />
+<p> as [<code>-a</code>[<code>cdhlns</code>][=<i>file</i>]] [<code>&#8211;alternate</code>] [<code>-D</code>]<br/>
+&nbsp;<wbr>[<code>&#8211;defsym</code>&nbsp;<wbr><i>sym</i>=<i>val</i>]&nbsp;<wbr>[<code>-f</code>]&nbsp;<wbr>[<code>-g</code>]&nbsp;<wbr>[<code>&#8211;gstabs</code>]&nbsp;<wbr>[<code>&#8211;gstabs+</code>]<br/>
+&nbsp;<wbr>[<code>&#8211;gdwarf-2</code>]&nbsp;<wbr>[<code>&#8211;help</code>]&nbsp;<wbr>[<code>-I</code>&nbsp;<wbr><i>dir</i>]&nbsp;<wbr>[<code>-J</code>]&nbsp;<wbr>[<code>-K</code>]&nbsp;<wbr>[<code>-L</code>]<br/>
+&nbsp;<wbr>[<code>&#8211;listing-lhs-width</code>=<i></i><i>NUM</i><i></i>]&nbsp;<wbr>[<code>&#8211;listing-lhs-width2</code>=<i></i><i>NUM</i><i></i>]<br/>
+&nbsp;<wbr>[<code>&#8211;listing-rhs-width</code>=<i></i><i>NUM</i><i></i>]&nbsp;<wbr>[<code>&#8211;listing-cont-lines</code>=<i></i><i>NUM</i><i></i>]<br/>
+&nbsp;<wbr>[<code>&#8211;keep-locals</code>]&nbsp;<wbr>[<code>-o</code>&nbsp;<wbr><i>objfile</i>]&nbsp;<wbr>[<code>-R</code>]&nbsp;<wbr>[<code>&#8211;statistics</code>]&nbsp;<wbr>[<code>-v</code>]<br/>
+&nbsp;<wbr>[<code>-version</code>]&nbsp;<wbr>[<code>&#8211;version</code>]&nbsp;<wbr>[<code>-W</code>]&nbsp;<wbr>[<code>&#8211;warn</code>]&nbsp;<wbr>[<code>&#8211;fatal-warnings</code>]&nbsp;<wbr><br/>
+&nbsp;<wbr>[<code>-w</code>]&nbsp;<wbr>[<code>-x</code>]&nbsp;<wbr>[<code>-Z</code>]&nbsp;<wbr>[<code>&#8211;target-help</code>]&nbsp;<wbr>[<i>target-options</i>]&nbsp;<wbr><br/>
 &nbsp;<wbr>[<code>&#8212;</code>|<i>files</i>&nbsp;<wbr>&#8230;] </p>
-<p> <i>Target Alpha options:</i><br />
-[<code>-m</code><i>cpu</i>]<br />
-[<code>-mdebug</code>&nbsp;<wbr>|&nbsp;<wbr><code>-no-mdebug</code>]<br />
-[<code>-relax</code>]&nbsp;<wbr>[<code>-g</code>]&nbsp;<wbr>[<code>-G</code><i>size</i>]<br />
+<p> <i>Target Alpha options:</i><br/>
+[<code>-m</code><i>cpu</i>]<br/>
+[<code>-mdebug</code>&nbsp;<wbr>|&nbsp;<wbr><code>-no-mdebug</code>]<br/>
+[<code>-relax</code>]&nbsp;<wbr>[<code>-g</code>]&nbsp;<wbr>[<code>-G</code><i>size</i>]<br/>
 [<code>-F</code>]&nbsp;<wbr>[<code>-32addr</code>] </p>
-<p> <i>Target </i><font SIZE="-1"><i>ARC</i></font><i> options:</i><br />
-[<code>-marc[5|6|7|8]</code>]<br />
+<p> <i>Target </i><i>ARC</i><i> options:</i><br/>
+[<code>-marc[5|6|7|8]</code>]<br/>
 [<code>-EB</code>|<code>-EL</code>] </p>
-<p> <i>Target </i><font SIZE="-1"><i>ARM</i></font><i> options:</i><br />
-[<code>-mcpu</code>=<i>processor</i>[+<i>extension</i>&#8230;]]<br />
-[<code>-march</code>=<i>architecture</i>[+<i>extension</i>&#8230;]]<br />
-[<code>-mfpu</code>=<i>floating-point-format</i>]<br />
-[<code>-mfloat-abi</code>=<i>abi</i>]<br />
-[<code>-meabi</code>=<i>ver</i>]<br />
-[<code>-mthumb</code>]<br />
-[<code>-EB</code>|<code>-EL</code>]<br />
-[<code>-mapcs-32</code>|<code>-mapcs-26</code>|<code>-mapcs-float</code>|<br />
-&nbsp;<wbr><code>-mapcs-reentrant</code>]<br />
+<p> <i>Target </i><i>ARM</i><i> options:</i><br/>
+[<code>-mcpu</code>=<i>processor</i>[+<i>extension</i>&#8230;]]<br/>
+[<code>-march</code>=<i>architecture</i>[+<i>extension</i>&#8230;]]<br/>
+[<code>-mfpu</code>=<i>floating-point-format</i>]<br/>
+[<code>-mfloat-abi</code>=<i>abi</i>]<br/>
+[<code>-meabi</code>=<i>ver</i>]<br/>
+[<code>-mthumb</code>]<br/>
+[<code>-EB</code>|<code>-EL</code>]<br/>
+[<code>-mapcs-32</code>|<code>-mapcs-26</code>|<code>-mapcs-float</code>|<br/>
+&nbsp;<wbr><code>-mapcs-reentrant</code>]<br/>
 [<code>-mthumb-interwork</code>]&nbsp;<wbr>[<code>-k</code>] </p>
-<p> <i>Target </i><font SIZE="-1"><i>CRIS</i></font><i> options:</i><br />
-[<code>&#8211;underscore</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;no-underscore</code>]<br />
-[<code>&#8211;pic</code>]&nbsp;<wbr>[<code>-N</code>]<br />
-[<code>&#8211;emulation=criself</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;emulation=crisaout</code>]<br />
+<p> <i>Target </i><i>CRIS</i><i> options:</i><br/>
+[<code>&#8211;underscore</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;no-underscore</code>]<br/>
+[<code>&#8211;pic</code>]&nbsp;<wbr>[<code>-N</code>]<br/>
+[<code>&#8211;emulation=criself</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;emulation=crisaout</code>]<br/>
 [<code>&#8211;march=v0_v10</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;march=v10</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;march=v32</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;march=common_v10_v32</code>] </p>
-<p> <i>Target D10V options:</i><br />
+<p> <i>Target D10V options:</i><br/>
 [<code>-O</code>] </p>
-<p> <i>Target D30V options:</i><br />
+<p> <i>Target D30V options:</i><br/>
 [<code>-O</code>|<code>-n</code>|<code>-N</code>] </p>
-<p> <i>Target i386 options:</i><br />
+<p> <i>Target i386 options:</i><br/>
 [<code>&#8211;32</code>|<code>&#8211;64</code>]&nbsp;<wbr>[<code>-n</code>] </p>
-<p> <i>Target i960 options:</i><br />
-[<code>-ACA</code>|<code>-ACA_A</code>|<code>-ACB</code>|<code>-ACC</code>|<code>-AKA</code>|<code>-AKB</code>|<br />
-&nbsp;<wbr><code>-AKC</code>|<code>-AMC</code>]<br />
+<p> <i>Target i960 options:</i><br/>
+[<code>-ACA</code>|<code>-ACA_A</code>|<code>-ACB</code>|<code>-ACC</code>|<code>-AKA</code>|<code>-AKB</code>|<br/>
+&nbsp;<wbr><code>-AKC</code>|<code>-AMC</code>]<br/>
 [<code>-b</code>]&nbsp;<wbr>[<code>-no-relax</code>] </p>
-<p> <i>Target </i><font SIZE="-1"><i>IA-64</i></font><i> options:</i><br />
-[<code>-mconstant-gp</code>|<code>-mauto-pic</code>]<br />
-[<code>-milp32</code>|<code>-milp64</code>|<code>-mlp64</code>|<code>-mp64</code>]<br />
-[<code>-mle</code>|<code>mbe</code>]<br />
-[<code>-munwind-check=warning</code>|<code>-munwind-check=error</code>]<br />
-[<code>-mhint.b=ok</code>|<code>-mhint.b=warning</code>|<code>-mhint.b=error</code>]<br />
+<p> <i>Target </i><i>IA-64</i><i> options:</i><br/>
+[<code>-mconstant-gp</code>|<code>-mauto-pic</code>]<br/>
+[<code>-milp32</code>|<code>-milp64</code>|<code>-mlp64</code>|<code>-mp64</code>]<br/>
+[<code>-mle</code>|<code>mbe</code>]<br/>
+[<code>-munwind-check=warning</code>|<code>-munwind-check=error</code>]<br/>
+[<code>-mhint.b=ok</code>|<code>-mhint.b=warning</code>|<code>-mhint.b=error</code>]<br/>
 [<code>-x</code>|<code>-xexplicit</code>]&nbsp;<wbr>[<code>-xauto</code>]&nbsp;<wbr>[<code>-xdebug</code>] </p>
-<p> <i>Target </i><font SIZE="-1"><i>IP2K</i></font><i> options:</i><br />
+<p> <i>Target </i><i>IP2K</i><i> options:</i><br/>
 [<code>-mip2022</code>|<code>-mip2022ext</code>] </p>
-<p> <i>Target M32R options:</i><br />
-[<code>&#8211;m32rx</code>|<code>&#8211;[no-]warn-explicit-parallel-conflicts</code>|<br />
+<p> <i>Target M32R options:</i><br/>
+[<code>&#8211;m32rx</code>|<code>&#8211;[no-]warn-explicit-parallel-conflicts</code>|<br/>
 <code>&#8211;W[n]p</code>] </p>
-<p> <i>Target M680X0 options:</i><br />
+<p> <i>Target M680X0 options:</i><br/>
 [<code>-l</code>]&nbsp;<wbr>[<code>-m68000</code>|<code>-m68010</code>|<code>-m68020</code>|&#8230;] </p>
-<p> <i>Target M68HC11 options:</i><br />
-[<code>-m68hc11</code>|<code>-m68hc12</code>|<code>-m68hcs12</code>]<br />
-[<code>-mshort</code>|<code>-mlong</code>]<br />
-[<code>-mshort-double</code>|<code>-mlong-double</code>]<br />
-[<code>&#8211;force-long-branchs</code>]&nbsp;<wbr>[<code>&#8211;short-branchs</code>]<br />
-[<code>&#8211;strict-direct-mode</code>]&nbsp;<wbr>[<code>&#8211;print-insn-syntax</code>]<br />
+<p> <i>Target M68HC11 options:</i><br/>
+[<code>-m68hc11</code>|<code>-m68hc12</code>|<code>-m68hcs12</code>]<br/>
+[<code>-mshort</code>|<code>-mlong</code>]<br/>
+[<code>-mshort-double</code>|<code>-mlong-double</code>]<br/>
+[<code>&#8211;force-long-branchs</code>]&nbsp;<wbr>[<code>&#8211;short-branchs</code>]<br/>
+[<code>&#8211;strict-direct-mode</code>]&nbsp;<wbr>[<code>&#8211;print-insn-syntax</code>]<br/>
 [<code>&#8211;print-opcodes</code>]&nbsp;<wbr>[<code>&#8211;generate-example</code>] </p>
-<p> <i>Target </i><font SIZE="-1"><i>MCORE</i></font><i> options:</i><br />
-[<code>-jsri2bsr</code>]&nbsp;<wbr>[<code>-sifilter</code>]&nbsp;<wbr>[<code>-relax</code>]<br />
+<p> <i>Target </i><i>MCORE</i><i> options:</i><br/>
+[<code>-jsri2bsr</code>]&nbsp;<wbr>[<code>-sifilter</code>]&nbsp;<wbr>[<code>-relax</code>]<br/>
 [<code>-mcpu=[210|340]</code>] </p>
-<p> <i>Target </i><font SIZE="-1"><i>MIPS</i></font><i> options:</i><br />
-[<code>-nocpp</code>]&nbsp;<wbr>[<code>-EL</code>]&nbsp;<wbr>[<code>-EB</code>]&nbsp;<wbr>[<code>-O</code>[<i>optimization level</i>]]<br />
-[<code>-g</code>[<i>debug level</i>]]&nbsp;<wbr>[<code>-G</code>&nbsp;<wbr><i>num</i>]&nbsp;<wbr>[<code>-KPIC</code>]&nbsp;<wbr>[<code>-call_shared</code>]<br />
-[<code>-non_shared</code>]&nbsp;<wbr>[<code>-xgot</code>]<br />
-[<code>-mabi</code>=<i></i><font SIZE="-1"><i>ABI</i></font><i></i>]&nbsp;<wbr>[<code>-32</code>]&nbsp;<wbr>[<code>-n32</code>]&nbsp;<wbr>[<code>-64</code>]&nbsp;<wbr>[<code>-mfp32</code>]&nbsp;<wbr>[<code>-mgp32</code>]<br />
-[<code>-march</code>=<i></i><font SIZE="-1"><i>CPU</i></font><i></i>]&nbsp;<wbr>[<code>-mtune</code>=<i></i><font SIZE="-1"><i>CPU</i></font><i></i>]&nbsp;<wbr>[<code>-mips1</code>]&nbsp;<wbr>[<code>-mips2</code>]<br />
-[<code>-mips3</code>]&nbsp;<wbr>[<code>-mips4</code>]&nbsp;<wbr>[<code>-mips5</code>]&nbsp;<wbr>[<code>-mips32</code>]&nbsp;<wbr>[<code>-mips32r2</code>]<br />
-[<code>-mips64</code>]&nbsp;<wbr>[<code>-mips64r2</code>]<br />
-[<code>-construct-floats</code>]&nbsp;<wbr>[<code>-no-construct-floats</code>]<br />
-[<code>-trap</code>]&nbsp;<wbr>[<code>-no-break</code>]&nbsp;<wbr>[<code>-break</code>]&nbsp;<wbr>[<code>-no-trap</code>]<br />
-[<code>-mfix7000</code>]&nbsp;<wbr>[<code>-mno-fix7000</code>]<br />
-[<code>-mips16</code>]&nbsp;<wbr>[<code>-no-mips16</code>]<br />
-[<code>-mips3d</code>]&nbsp;<wbr>[<code>-no-mips3d</code>]<br />
-[<code>-mdmx</code>]&nbsp;<wbr>[<code>-no-mdmx</code>]<br />
-[<code>-mdebug</code>]&nbsp;<wbr>[<code>-no-mdebug</code>]<br />
+<p> <i>Target </i><i>MIPS</i><i> options:</i><br/>
+[<code>-nocpp</code>]&nbsp;<wbr>[<code>-EL</code>]&nbsp;<wbr>[<code>-EB</code>]&nbsp;<wbr>[<code>-O</code>[<i>optimization level</i>]]<br/>
+[<code>-g</code>[<i>debug level</i>]]&nbsp;<wbr>[<code>-G</code>&nbsp;<wbr><i>num</i>]&nbsp;<wbr>[<code>-KPIC</code>]&nbsp;<wbr>[<code>-call_shared</code>]<br/>
+[<code>-non_shared</code>]&nbsp;<wbr>[<code>-xgot</code>]<br/>
+[<code>-mabi</code>=<i></i><i>ABI</i><i></i>]&nbsp;<wbr>[<code>-32</code>]&nbsp;<wbr>[<code>-n32</code>]&nbsp;<wbr>[<code>-64</code>]&nbsp;<wbr>[<code>-mfp32</code>]&nbsp;<wbr>[<code>-mgp32</code>]<br/>
+[<code>-march</code>=<i></i><i>CPU</i><i></i>]&nbsp;<wbr>[<code>-mtune</code>=<i></i><i>CPU</i><i></i>]&nbsp;<wbr>[<code>-mips1</code>]&nbsp;<wbr>[<code>-mips2</code>]<br/>
+[<code>-mips3</code>]&nbsp;<wbr>[<code>-mips4</code>]&nbsp;<wbr>[<code>-mips5</code>]&nbsp;<wbr>[<code>-mips32</code>]&nbsp;<wbr>[<code>-mips32r2</code>]<br/>
+[<code>-mips64</code>]&nbsp;<wbr>[<code>-mips64r2</code>]<br/>
+[<code>-construct-floats</code>]&nbsp;<wbr>[<code>-no-construct-floats</code>]<br/>
+[<code>-trap</code>]&nbsp;<wbr>[<code>-no-break</code>]&nbsp;<wbr>[<code>-break</code>]&nbsp;<wbr>[<code>-no-trap</code>]<br/>
+[<code>-mfix7000</code>]&nbsp;<wbr>[<code>-mno-fix7000</code>]<br/>
+[<code>-mips16</code>]&nbsp;<wbr>[<code>-no-mips16</code>]<br/>
+[<code>-mips3d</code>]&nbsp;<wbr>[<code>-no-mips3d</code>]<br/>
+[<code>-mdmx</code>]&nbsp;<wbr>[<code>-no-mdmx</code>]<br/>
+[<code>-mdebug</code>]&nbsp;<wbr>[<code>-no-mdebug</code>]<br/>
 [<code>-mpdr</code>]&nbsp;<wbr>[<code>-mno-pdr</code>] </p>
-<p> <i>Target </i><font SIZE="-1"><i>MMIX</i></font><i> options:</i><br />
-[<code>&#8211;fixed-special-register-names</code>]&nbsp;<wbr>[<code>&#8211;globalize-symbols</code>]<br />
-[<code>&#8211;gnu-syntax</code>]&nbsp;<wbr>[<code>&#8211;relax</code>]&nbsp;<wbr>[<code>&#8211;no-predefined-symbols</code>]<br />
-[<code>&#8211;no-expand</code>]&nbsp;<wbr>[<code>&#8211;no-merge-gregs</code>]&nbsp;<wbr>[<code>-x</code>]<br />
+<p> <i>Target </i><i>MMIX</i><i> options:</i><br/>
+[<code>&#8211;fixed-special-register-names</code>]&nbsp;<wbr>[<code>&#8211;globalize-symbols</code>]<br/>
+[<code>&#8211;gnu-syntax</code>]&nbsp;<wbr>[<code>&#8211;relax</code>]&nbsp;<wbr>[<code>&#8211;no-predefined-symbols</code>]<br/>
+[<code>&#8211;no-expand</code>]&nbsp;<wbr>[<code>&#8211;no-merge-gregs</code>]&nbsp;<wbr>[<code>-x</code>]<br/>
 [<code>&#8211;linker-allocated-gregs</code>] </p>
-<p> <i>Target </i><font SIZE="-1"><i>PDP11</i></font><i> options:</i><br />
-[<code>-mpic</code>|<code>-mno-pic</code>]&nbsp;<wbr>[<code>-mall</code>]&nbsp;<wbr>[<code>-mno-extensions</code>]<br />
-[<code>-m</code><i>extension</i>|<code>-mno-</code><i>extension</i>]<br />
+<p> <i>Target </i><i>PDP11</i><i> options:</i><br/>
+[<code>-mpic</code>|<code>-mno-pic</code>]&nbsp;<wbr>[<code>-mall</code>]&nbsp;<wbr>[<code>-mno-extensions</code>]<br/>
+[<code>-m</code><i>extension</i>|<code>-mno-</code><i>extension</i>]<br/>
 [<code>-m</code><i>cpu</i>]&nbsp;<wbr>[<code>-m</code><i>machine</i>]&nbsp;<wbr>&nbsp;<wbr> </p>
-<p> <i>Target picoJava options:</i><br />
+<p> <i>Target picoJava options:</i><br/>
 [<code>-mb</code>|<code>-me</code>] </p>
-<p> <i>Target PowerPC options:</i><br />
-[<code>-mpwrx</code>|<code>-mpwr2</code>|<code>-mpwr</code>|<code>-m601</code>|<code>-mppc</code>|<code>-mppc32</code>|<code>-m603</code>|<code>-m604</code>|<br />
-&nbsp;<wbr><code>-m403</code>|<code>-m405</code>|<code>-mppc64</code>|<code>-m620</code>|<code>-mppc64bridge</code>|<code>-mbooke</code>|<br />
-&nbsp;<wbr><code>-mbooke32</code>|<code>-mbooke64</code>]<br />
-[<code>-mcom</code>|<code>-many</code>|<code>-maltivec</code>]&nbsp;<wbr>[<code>-memb</code>]<br />
-[<code>-mregnames</code>|<code>-mno-regnames</code>]<br />
-[<code>-mrelocatable</code>|<code>-mrelocatable-lib</code>]<br />
-[<code>-mlittle</code>|<code>-mlittle-endian</code>|<code>-mbig</code>|<code>-mbig-endian</code>]<br />
+<p> <i>Target PowerPC options:</i><br/>
+[<code>-mpwrx</code>|<code>-mpwr2</code>|<code>-mpwr</code>|<code>-m601</code>|<code>-mppc</code>|<code>-mppc32</code>|<code>-m603</code>|<code>-m604</code>|<br/>
+&nbsp;<wbr><code>-m403</code>|<code>-m405</code>|<code>-mppc64</code>|<code>-m620</code>|<code>-mppc64bridge</code>|<code>-mbooke</code>|<br/>
+&nbsp;<wbr><code>-mbooke32</code>|<code>-mbooke64</code>]<br/>
+[<code>-mcom</code>|<code>-many</code>|<code>-maltivec</code>]&nbsp;<wbr>[<code>-memb</code>]<br/>
+[<code>-mregnames</code>|<code>-mno-regnames</code>]<br/>
+[<code>-mrelocatable</code>|<code>-mrelocatable-lib</code>]<br/>
+[<code>-mlittle</code>|<code>-mlittle-endian</code>|<code>-mbig</code>|<code>-mbig-endian</code>]<br/>
 [<code>-msolaris</code>|<code>-mno-solaris</code>] </p>
-<p> <i>Target </i><font SIZE="-1"><i>SPARC</i></font><i> options:</i><br />
-[<code>-Av6</code>|<code>-Av7</code>|<code>-Av8</code>|<code>-Asparclet</code>|<code>-Asparclite</code><br />
-&nbsp;<wbr><code>-Av8plus</code>|<code>-Av8plusa</code>|<code>-Av9</code>|<code>-Av9a</code>]<br />
-[<code>-xarch=v8plus</code>|<code>-xarch=v8plusa</code>]&nbsp;<wbr>[<code>-bump</code>]<br />
+<p> <i>Target </i><i>SPARC</i><i> options:</i><br/>
+[<code>-Av6</code>|<code>-Av7</code>|<code>-Av8</code>|<code>-Asparclet</code>|<code>-Asparclite</code><br/>
+&nbsp;<wbr><code>-Av8plus</code>|<code>-Av8plusa</code>|<code>-Av9</code>|<code>-Av9a</code>]<br/>
+[<code>-xarch=v8plus</code>|<code>-xarch=v8plusa</code>]&nbsp;<wbr>[<code>-bump</code>]<br/>
 [<code>-32</code>|<code>-64</code>] </p>
-<p> <i>Target </i><font SIZE="-1"><i>TIC54X</i></font><i> options:</i><br />
-&nbsp;<wbr>[<code>-mcpu=54[123589]</code>|<code>-mcpu=54[56]lp</code>]&nbsp;<wbr>[<code>-mfar-mode</code>|<code>-mf</code>]&nbsp;<wbr><br />
+<p> <i>Target </i><i>TIC54X</i><i> options:</i><br/>
+&nbsp;<wbr>[<code>-mcpu=54[123589]</code>|<code>-mcpu=54[56]lp</code>]&nbsp;<wbr>[<code>-mfar-mode</code>|<code>-mf</code>]&nbsp;<wbr><br/>
 &nbsp;<wbr>[<code>-merrors-to-file</code>&nbsp;<wbr><i>&lt;filename&gt;</i>|<code>-me</code>&nbsp;<wbr><i>&lt;filename&gt;</i>] </p>
-<p> <i>Target Xtensa options:</i><br />
-&nbsp;<wbr>[<code>&#8211;[no-]text-section-literals</code>]&nbsp;<wbr>[<code>&#8211;[no-]absolute-literals</code>]<br />
-&nbsp;<wbr>[<code>&#8211;[no-]target-align</code>]&nbsp;<wbr>[<code>&#8211;[no-]longcalls</code>]<br />
-&nbsp;<wbr>[<code>&#8211;[no-]transform</code>]<br />
+<p> <i>Target Xtensa options:</i><br/>
+&nbsp;<wbr>[<code>&#8211;[no-]text-section-literals</code>]&nbsp;<wbr>[<code>&#8211;[no-]absolute-literals</code>]<br/>
+&nbsp;<wbr>[<code>&#8211;[no-]target-align</code>]&nbsp;<wbr>[<code>&#8211;[no-]longcalls</code>]<br/>
+&nbsp;<wbr>[<code>&#8211;[no-]transform</code>]<br/>
 &nbsp;<wbr>[<code>&#8211;rename-section</code>&nbsp;<wbr><i>oldname</i>=<i>newname</i>]</p>
 <h2>DESCRIPTION</h2>
-<p> <font SIZE="-1">GNU</font> <code>as</code> is really a family of assemblers. If you use (or have used) the <font SIZE="-1">GNU</font> assembler on one architecture, you should find a fairly similar environment when you use it on another architecture. Each version has much in common with the others, including object file formats, most assembler directives (often called <i>pseudo-ops</i>) and assembler syntax. </p>
-<p> <code>as</code> is primarily intended to assemble the output of the <font SIZE="-1">GNU</font> C compiler <tt>&quot;gcc&quot;</tt> for use by the linker <tt>&quot;ld&quot;</tt>. Nevertheless, we&#8217;ve tried to make <code>as</code> assemble correctly everything that other assemblers for the same machine would assemble. Any exceptions are documented explicitly. This doesn&#8217;t mean <code>as</code> always uses the same syntax as another assembler for the same architecture; for example, we know of several incompatible versions of 680&#215;0 assembly language syntax. </p>
+<p> GNU <code>as</code> is really a family of assemblers. If you use (or have used) the GNU assembler on one architecture, you should find a fairly similar environment when you use it on another architecture. Each version has much in common with the others, including object file formats, most assembler directives (often called <i>pseudo-ops</i>) and assembler syntax. </p>
+<p> <code>as</code> is primarily intended to assemble the output of the GNU C compiler <tt>&quot;gcc&quot;</tt> for use by the linker <tt>&quot;ld&quot;</tt>. Nevertheless, we&#8217;ve tried to make <code>as</code> assemble correctly everything that other assemblers for the same machine would assemble. Any exceptions are documented explicitly. This doesn&#8217;t mean <code>as</code> always uses the same syntax as another assembler for the same architecture; for example, we know of several incompatible versions of 680&#215;0 assembly language syntax. </p>
 <p> Each time you run <code>as</code> it assembles exactly one source program. The source program is made up of one or more files. (The standard input is also a file.) </p>
 <p> You give <code>as</code> a command line that has zero or more input file names. The input files are read (from left file name to right). A command line argument (in any position) that has no special meaning is taken to be an input file name. </p>
 <p> If you give <code>as</code> no file names it attempts to read one input file from the <code>as</code> standard input, which is normally your terminal. You may have to type <code>ctl-D</code> to tell <code>as</code> there is no more program to assemble. </p>
 <p> Use <code>&#8212;</code> if you need to explicitly name the standard input file in your command line. </p>
 <p> If the source is empty, <code>as</code> produces a small, empty object file. </p>
 <p> <code>as</code> may write warnings and error messages to the standard error file (usually your terminal). This should not happen when a compiler runs <code>as</code> automatically. Warnings report an assumption made so that <code>as</code> could keep assembling a flawed program; errors report a grave problem that stops the assembly. </p>
-<p> If you are invoking <code>as</code> via the <font SIZE="-1">GNU</font> C compiler, you can use the <code>-Wa</code> option to pass arguments through to the assembler. The assembler arguments must be separated from each other (and the <code>-Wa</code>) by commas. For example: </p>
+<p> If you are invoking <code>as</code> via the GNU C compiler, you can use the <code>-Wa</code> option to pass arguments through to the assembler. The assembler arguments must be separated from each other (and the <code>-Wa</code>) by commas. For example: </p>
 <pre>
         gcc -c -g -O -Wa,-alh,-L file.c
 </pre>
 <p> This passes two options to the assembler: <code>-alh</code> (emit a listing to standard output with high-level and assembly source) and <code>-L</code> (retain local symbols in the symbol table). </p>
-<p> Usually you do not need to use this <code>-Wa</code> mechanism, since many compiler command-line options are automatically passed to the assembler by the compiler. (You can call the <font SIZE="-1">GNU</font> compiler driver with the <code>-v</code> option to see precisely what options it passes to each compilation pass, including the assembler.)</p>
+<p> Usually you do not need to use this <code>-Wa</code> mechanism, since many compiler command-line options are automatically passed to the assembler by the compiler. (You can call the GNU compiler driver with the <code>-v</code> option to see precisely what options it passes to each compilation pass, including the assembler.)</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-a[cdhlmns]</code></dt>
@@ -179,13 +179,13 @@ description: "AS – the portable GNU assembler."
 <dt><code>-g</code></dt>
 <dd>
 </dd><dt><code>&#8211;gen-debug</code></dt>
-<dd> Generate debugging information for each assembler source line using whichever debug format is preferred by the target. This currently means either <font SIZE="-1">STABS</font>, <font SIZE="-1">ECOFF</font> or <font SIZE="-1">DWARF2</font>.</dd>
+<dd> Generate debugging information for each assembler source line using whichever debug format is preferred by the target. This currently means either STABS, ECOFF or DWARF2.</dd>
 <dt><code>&#8211;gstabs</code></dt>
 <dd> Generate stabs debugging information for each assembler line. This may help debugging assembler code, if the debugger can handle it.</dd>
 <dt><code>&#8211;gstabs+</code></dt>
-<dd> Generate stabs debugging information for each assembler line, with <font SIZE="-1">GNU</font> extensions that probably only gdb can handle, and that could make other debuggers crash or refuse to read your program. This may help debugging assembler code. Currently the only <font SIZE="-1">GNU</font> extension is the location of the current working directory at assembling time.</dd>
+<dd> Generate stabs debugging information for each assembler line, with GNU extensions that probably only gdb can handle, and that could make other debuggers crash or refuse to read your program. This may help debugging assembler code. Currently the only GNU extension is the location of the current working directory at assembling time.</dd>
 <dt><code>&#8211;gdwarf-2</code></dt>
-<dd> Generate <font SIZE="-1">DWARF2</font> debugging information for each assembler line. This may help debugging assembler code, if the debugger can handle it. Note&#8212;this option is only supported by some targets, not all of them.</dd>
+<dd> Generate DWARF2 debugging information for each assembler line. This may help debugging assembler code, if the debugger can handle it. Note&#8212;this option is only supported by some targets, not all of them.</dd>
 <dt><code>&#8211;help</code></dt>
 <dd> Print a summary of the command line options and exit.</dd>
 <dt><code>&#8211;target-help</code></dt>
@@ -238,22 +238,22 @@ description: "AS – the portable GNU assembler."
 <dd> Generate an object file even after errors.</dd>
 <dt><code>&#8212; |</code> <i>files</i> <code>&#8230;</code></dt>
 <dd> Standard input, or source files to assemble.</dd></dl>
-<p> The following options are available when as is configured for an <font SIZE="-1">ARC</font> processor.</p>
+<p> The following options are available when as is configured for an ARC processor.</p>
 <dl>
 <dt><code>-marc[5|6|7|8]</code></dt>
 <dd> This option selects the core processor variant.</dd>
 <dt><code>-EB | -EL</code></dt>
 <dd> Select either big-endian (-EB) or little-endian (-EL) output.</dd></dl>
-<p> The following options are available when as is configured for the <font SIZE="-1">ARM</font> processor family.</p>
+<p> The following options are available when as is configured for the ARM processor family.</p>
 <dl>
 <dt><code>-mcpu=</code><i>processor</i><code>[+</code><i>extension</i><code>&#8230;]</code></dt>
-<dd> Specify which <font SIZE="-1">ARM</font> processor variant is the target.</dd>
+<dd> Specify which ARM processor variant is the target.</dd>
 <dt><code>-march=</code><i>architecture</i><code>[+</code><i>extension</i><code>&#8230;]</code></dt>
-<dd> Specify which <font SIZE="-1">ARM</font> architecture variant is used by the target.</dd>
+<dd> Specify which ARM architecture variant is used by the target.</dd>
 <dt><code>-mfpu=</code><i>floating-point-format</i></dt>
 <dd> Select which Floating Point architecture is the target.</dd>
 <dt><code>-mfloat-abi=</code><i>abi</i></dt>
-<dd> Select which floating point <font SIZE="-1">ABI</font> is in use.</dd>
+<dd> Select which floating point ABI is in use.</dd>
 <dt><code>-mthumb</code></dt>
 <dd> Enable Thumb only instruction decoding.</dd>
 <dt><code>-mapcs-32 | -mapcs-26 | -mapcs-float | -mapcs-reentrant</code></dt>
@@ -261,9 +261,9 @@ description: "AS – the portable GNU assembler."
 <dt><code>-EB | -EL</code></dt>
 <dd> Select either big-endian (-EB) or little-endian (-EL) output.</dd>
 <dt><code>-mthumb-interwork</code></dt>
-<dd> Specify that the code has been generated with interworking between Thumb and <font SIZE="-1">ARM</font> code in mind.</dd>
+<dd> Specify that the code has been generated with interworking between Thumb and ARM code in mind.</dd>
 <dt><code>-k</code></dt>
-<dd> Specify that <font SIZE="-1">PIC</font> code has been generated.</dd></dl>
+<dd> Specify that PIC code has been generated.</dd></dl>
 <p> See the info pages for documentation of the CRIS-specific options. </p>
 <p> The following options are available when as is configured for a D10V processor.</p>
 <dl>
@@ -285,12 +285,12 @@ description: "AS – the portable GNU assembler."
 <dd> Add code to collect statistics about branches taken.</dd>
 <dt><code>-no-relax</code></dt>
 <dd> Do not alter compare-and-branch instructions for long displacements; error if necessary.</dd></dl>
-<p> The following options are available when as is configured for the Ubicom <font SIZE="-1">IP2K</font> series.</p>
+<p> The following options are available when as is configured for the Ubicom IP2K series.</p>
 <dl>
 <dt><code>-mip2022ext</code></dt>
-<dd> Specifies that the extended <font SIZE="-1">IP2022</font> instructions are allowed.</dd>
+<dd> Specifies that the extended IP2022 instructions are allowed.</dd>
 <dt><code>-mip2022</code></dt>
-<dd> Restores the default behaviour, which restricts the permitted instructions to just the basic <font SIZE="-1">IP2022</font> ones.</dd></dl>
+<dd> Restores the default behaviour, which restricts the permitted instructions to just the basic IP2022 ones.</dd></dl>
 <p> The following options are available when as is configured for the Renesas M32R (formerly Mitsubishi M32R) series.</p>
 <dl>
 <dt><code>&#8211;m32rx</code></dt>
@@ -312,8 +312,8 @@ description: "AS – the portable GNU assembler."
 <dt><code>-m68881 | -m68882 | -mno-68881 | -mno-68882</code></dt>
 <dd> The target machine does (or does not) have a floating-point coprocessor. The default is to assume a coprocessor for 68020, 68030, and cpu32. Although the basic 68000 is not compatible with the 68881, a combination of the two can be specified, since it&#8217;s possible to do emulation of the coprocessor instructions with the main processor.</dd>
 <dt><code>-m68851 | -mno-68851</code></dt>
-<dd> The target machine does (or does not) have a memory-management unit coprocessor. The default is to assume an <font SIZE="-1">MMU</font> for 68020 and up.</dd></dl>
-<p> For details about the <font SIZE="-1">PDP-11</font> machine dependent features options, see <tt>@ref</tt>{PDP-11-Options}.</p>
+<dd> The target machine does (or does not) have a memory-management unit coprocessor. The default is to assume an MMU for 68020 and up.</dd></dl>
+<p> For details about the PDP-11 machine dependent features options, see <tt>@ref</tt>{PDP-11-Options}.</p>
 <dl>
 <dt><code>-mpic | -mno-pic</code></dt>
 <dd> Generate position-independent (or position-dependent) code. The default is <code>-mpic</code>.</dd>
@@ -326,7 +326,7 @@ description: "AS – the portable GNU assembler."
 <dt><code>-m</code><i>extension</i> <code>| -mno-</code><i>extension</i></dt>
 <dd> Enable (or disable) a particular instruction set extension.</dd>
 <dt><code>-m</code><i>cpu</i></dt>
-<dd> Enable the instruction set extensions supported by a particular <font SIZE="-1">CPU</font>, and disable all other extensions.</dd>
+<dd> Enable the instruction set extensions supported by a particular CPU, and disable all other extensions.</dd>
 <dt><code>-m</code><i>machine</i></dt>
 <dd> Enable the instruction set extensions supported by a particular machine model, and disable all other extensions.</dd></dl>
 <p> The following options are available when as is configured for a picoJava processor.</p>
@@ -340,13 +340,13 @@ description: "AS – the portable GNU assembler."
 <dt><code>-m68hc11 | -m68hc12 | -m68hcs12</code></dt>
 <dd> Specify what processor is the target. The default is defined by the configuration option when building the assembler.</dd>
 <dt><code>-mshort</code></dt>
-<dd> Specify to use the 16-bit integer <font SIZE="-1">ABI</font>.</dd>
+<dd> Specify to use the 16-bit integer ABI.</dd>
 <dt><code>-mlong</code></dt>
-<dd> Specify to use the 32-bit integer <font SIZE="-1">ABI</font>.</dd>
+<dd> Specify to use the 32-bit integer ABI.</dd>
 <dt><code>-mshort-double</code></dt>
-<dd> Specify to use the 32-bit double <font SIZE="-1">ABI</font>.</dd>
+<dd> Specify to use the 32-bit double ABI.</dd>
 <dt><code>-mlong-double</code></dt>
-<dd> Specify to use the 64-bit double <font SIZE="-1">ABI</font>.</dd>
+<dd> Specify to use the 64-bit double ABI.</dd>
 <dt><code>&#8211;force-long-branchs</code></dt>
 <dd> Relative branches are turned into absolute ones. This concerns conditional branches, unconditional branches and branches to a sub routine.</dd>
 <dt><code>-S | &#8211;short-branchs</code></dt>
@@ -359,14 +359,14 @@ description: "AS – the portable GNU assembler."
 <dd> print the list of instructions with syntax and then exit.</dd>
 <dt><code>&#8211;generate-example</code></dt>
 <dd> print an example of instruction for each possible instruction and then exit. This option is only useful for testing <code>as</code>.</dd></dl>
-<p> The following options are available when <code>as</code> is configured for the <font SIZE="-1">SPARC</font> architecture:</p>
+<p> The following options are available when <code>as</code> is configured for the SPARC architecture:</p>
 <dl>
 <dt><code>-Av6 | -Av7 | -Av8 | -Asparclet | -Asparclite</code></dt>
 <dd>
 </dd><dt><code>-Av8plus | -Av8plusa | -Av9 | -Av9a</code></dt>
-<dd> Explicitly select a variant of the <font SIZE="-1">SPARC</font> architecture. </dd>
+<dd> Explicitly select a variant of the SPARC architecture. </dd>
 <p> <code>-Av8plus</code> and <code>-Av8plusa</code> select a 32 bit environment. <code>-Av9</code> and <code>-Av9a</code> select a 64 bit environment. </p>
-<p> <code>-Av8plusa</code> and <code>-Av9a</code> enable the <font SIZE="-1">SPARC</font> V9 instruction set with UltraSPARC extensions.</p>
+<p> <code>-Av8plusa</code> and <code>-Av9a</code> enable the SPARC V9 instruction set with UltraSPARC extensions.</p>
 <dt><code>-xarch=v8plus | -xarch=v8plusa</code></dt>
 <dd> For compatibility with the Solaris v9 assembler. These options are equivalent to -Av8plus and -Av8plusa, respectively.</dd>
 <dt><code>-bump</code></dt>
@@ -375,14 +375,14 @@ description: "AS – the portable GNU assembler."
 <dl>
 <dt><code>-mfar-mode</code></dt>
 <dd> Enable extended addressing mode. All addresses and relocations will assume extended addressing (usually 23 bits).</dd>
-<dt><code>-mcpu=</code><i></i><font SIZE="-1"><i>CPU_VERSION</i></font><i></i></dt>
-<dd> Sets the <font SIZE="-1">CPU</font> version being compiled for.</dd>
-<dt><code>-merrors-to-file</code> <i></i><font SIZE="-1"><i>FILENAME</i></font><i></i></dt>
+<dt><code>-mcpu=</code><i></i><i>CPU_VERSION</i><i></i></dt>
+<dd> Sets the CPU version being compiled for.</dd>
+<dt><code>-merrors-to-file</code> <i></i><i>FILENAME</i><i></i></dt>
 <dd> Redirect error output to a file, for broken systems which don&#8217;t support such behaviour in the shell.</dd></dl>
-<p> The following options are available when as is configured for a <font SIZE="-1">MIPS</font> processor.</p>
+<p> The following options are available when as is configured for a MIPS processor.</p>
 <dl>
 <dt><code>-G</code> <i>num</i></dt>
-<dd> This option sets the largest size of an object that can be referenced implicitly with the <tt>&quot;gp&quot;</tt> register. It is only accepted for targets that use <font SIZE="-1">ECOFF</font> format, such as a DECstation running Ultrix. The default value is 8.</dd>
+<dd> This option sets the largest size of an object that can be referenced implicitly with the <tt>&quot;gp&quot;</tt> register. It is only accepted for targets that use ECOFF format, such as a DECstation running Ultrix. The default value is 8.</dd>
 <dt><code>-EB</code></dt>
 <dd> Generate &#8220;big endian&#8221; format output.</dd>
 <dt><code>-EL</code></dt>
@@ -404,11 +404,11 @@ description: "AS – the portable GNU assembler."
 </dd><dt><code>-mips64</code></dt>
 <dd>
 </dd><dt><code>-mips64r2</code></dt>
-<dd> Generate code for a particular <font SIZE="-1">MIPS</font> Instruction Set Architecture level. <code>-mips1</code> is an alias for <code>-march=r3000</code>, <code>-mips2</code> is an alias for <code>-march=r6000</code>, <code>-mips3</code> is an alias for <code>-march=r4000</code> and <code>-mips4</code> is an alias for <code>-march=r8000</code>. <code>-mips5</code>, <code>-mips32</code>, <code>-mips32r2</code>, <code>-mips64</code>, and <code>-mips64r2</code> correspond to generic <font SIZE="-1"><code>MIPS</code></font><code> V</code>, <font SIZE="-1"><code>MIPS32</code></font>, <font SIZE="-1"><code>MIPS32</code></font><code> Release 2</code>, <font SIZE="-1"><code>MIPS64</code></font>, and <font SIZE="-1"><code>MIPS64</code></font><code> Release 2</code> <font SIZE="-1">ISA</font> processors, respectively.</dd>
-<dt><code>-march=</code><i></i><font SIZE="-1"><i>CPU</i></font><i></i></dt>
-<dd> Generate code for a particular <font SIZE="-1">MIPS</font> cpu.</dd>
+<dd> Generate code for a particular MIPS Instruction Set Architecture level. <code>-mips1</code> is an alias for <code>-march=r3000</code>, <code>-mips2</code> is an alias for <code>-march=r6000</code>, <code>-mips3</code> is an alias for <code>-march=r4000</code> and <code>-mips4</code> is an alias for <code>-march=r8000</code>. <code>-mips5</code>, <code>-mips32</code>, <code>-mips32r2</code>, <code>-mips64</code>, and <code>-mips64r2</code> correspond to generic <code>MIPS</code><code> V</code>, <code>MIPS32</code>, <code>MIPS32</code><code> Release 2</code>, <code>MIPS64</code>, and <code>MIPS64</code><code> Release 2</code> ISA processors, respectively.</dd>
+<dt><code>-march=</code><i></i><i>CPU</i><i></i></dt>
+<dd> Generate code for a particular MIPS cpu.</dd>
 <dt><code>-mtune=</code><i>cpu</i></dt>
-<dd> Schedule and tune for a particular <font SIZE="-1">MIPS</font> cpu.</dd>
+<dd> Schedule and tune for a particular MIPS cpu.</dd>
 <dt><code>-mfix7000</code></dt>
 <dd>
 </dd><dt><code>-mno-fix7000</code></dt>
@@ -416,7 +416,7 @@ description: "AS – the portable GNU assembler."
 <dt><code>-mdebug</code></dt>
 <dd>
 </dd><dt><code>-no-mdebug</code></dt>
-<dd> Cause stabs-style debugging output to go into an ECOFF-style .mdebug section instead of the standard <font SIZE="-1">ELF</font> .stabs sections.</dd>
+<dd> Cause stabs-style debugging output to go into an ECOFF-style .mdebug section instead of the standard ELF .stabs sections.</dd>
 <dt><code>-mpdr</code></dt>
 <dd>
 </dd><dt><code>-mno-pdr</code></dt>
@@ -424,26 +424,26 @@ description: "AS – the portable GNU assembler."
 <dt><code>-mgp32</code></dt>
 <dd>
 </dd><dt><code>-mfp32</code></dt>
-<dd> The register sizes are normally inferred from the <font SIZE="-1">ISA</font> and <font SIZE="-1">ABI</font>, but these flags force a certain group of registers to be treated as 32 bits wide at all times. <code>-mgp32</code> controls the size of general-purpose registers and <code>-mfp32</code> controls the size of floating-point registers.</dd>
+<dd> The register sizes are normally inferred from the ISA and ABI, but these flags force a certain group of registers to be treated as 32 bits wide at all times. <code>-mgp32</code> controls the size of general-purpose registers and <code>-mfp32</code> controls the size of floating-point registers.</dd>
 <dt><code>-mips16</code></dt>
 <dd>
 </dd><dt><code>-no-mips16</code></dt>
-<dd> Generate code for the <font SIZE="-1">MIPS</font> 16 processor. This is equivalent to putting <tt>&quot;.set mips16&quot;</tt> at the start of the assembly file. <code>-no-mips16</code> turns off this option.</dd>
+<dd> Generate code for the MIPS 16 processor. This is equivalent to putting <tt>&quot;.set mips16&quot;</tt> at the start of the assembly file. <code>-no-mips16</code> turns off this option.</dd>
 <dt><code>-mips3d</code></dt>
 <dd>
 </dd><dt><code>-no-mips3d</code></dt>
-<dd> Generate code for the <font SIZE="-1">MIPS-3D</font> Application Specific Extension. This tells the assembler to accept <font SIZE="-1">MIPS-3D</font> instructions. <code>-no-mips3d</code> turns off this option.</dd>
+<dd> Generate code for the MIPS-3D Application Specific Extension. This tells the assembler to accept MIPS-3D instructions. <code>-no-mips3d</code> turns off this option.</dd>
 <dt><code>-mdmx</code></dt>
 <dd>
 </dd><dt><code>-no-mdmx</code></dt>
-<dd> Generate code for the <font SIZE="-1">MDMX</font> Application Specific Extension. This tells the assembler to accept <font SIZE="-1">MDMX</font> instructions. <code>-no-mdmx</code> turns off this option.</dd>
+<dd> Generate code for the MDMX Application Specific Extension. This tells the assembler to accept MDMX instructions. <code>-no-mdmx</code> turns off this option.</dd>
 <dt><code>&#8211;construct-floats</code></dt>
 <dd>
 </dd><dt><code>&#8211;no-construct-floats</code></dt>
 <dd> The <code>&#8211;no-construct-floats</code> option disables the construction of double width floating point constants by loading the two halves of the value into the two single width floating point registers that make up the double width register. By default <code>&#8211;construct-floats</code> is selected, allowing construction of these floating point constants.</dd>
 <dt><code>&#8211;emulation=</code><i>name</i></dt>
-<dd> This option causes <code>as</code> to emulate <code>as</code> configured for some other target, in all respects, including output format (choosing between <font SIZE="-1">ELF</font> and <font SIZE="-1">ECOFF</font> only), handling of pseudo-opcodes which may generate debugging information or store symbol table information, and default endianness. The available configuration names are: <code>mipsecoff</code>, <code>mipself</code>, <code>mipslecoff</code>, <code>mipsbecoff</code>, <code>mipslelf</code>, <code>mipsbelf</code>. The first two do not alter the default endianness from that of the primary target for which the assembler was configured; the others change the default to little- or big-endian as indicated by the <code>b</code> or <code>l</code> in the name. Using <code>-EB</code> or <code>-EL</code> will override the endianness selection in any case. </dd>
-<p> This option is currently supported only when the primary target <code>as</code> is configured for is a <font SIZE="-1">MIPS</font> <font SIZE="-1">ELF</font> or <font SIZE="-1">ECOFF</font> target. Furthermore, the primary target or others specified with <code>&#8211;enable-targets=&#8230;</code> at configuration time must include support for the other format, if both are to be available. For example, the Irix 5 configuration includes support for both. </p>
+<dd> This option causes <code>as</code> to emulate <code>as</code> configured for some other target, in all respects, including output format (choosing between ELF and ECOFF only), handling of pseudo-opcodes which may generate debugging information or store symbol table information, and default endianness. The available configuration names are: <code>mipsecoff</code>, <code>mipself</code>, <code>mipslecoff</code>, <code>mipsbecoff</code>, <code>mipslelf</code>, <code>mipsbelf</code>. The first two do not alter the default endianness from that of the primary target for which the assembler was configured; the others change the default to little- or big-endian as indicated by the <code>b</code> or <code>l</code> in the name. Using <code>-EB</code> or <code>-EL</code> will override the endianness selection in any case. </dd>
+<p> This option is currently supported only when the primary target <code>as</code> is configured for is a MIPS ELF or ECOFF target. Furthermore, the primary target or others specified with <code>&#8211;enable-targets=&#8230;</code> at configuration time must include support for the other format, if both are to be available. For example, the Irix 5 configuration includes support for both. </p>
 <p> Eventually, this option will support more configurations, with more fine-grained control over the assembler&#8217;s behavior, and will be supported for more processors.</p>
 <dt><code>-nocpp</code></dt>
 <dd> <code>as</code> ignores this option. It is accepted for compatibility with the native tools.</dd>
@@ -462,7 +462,7 @@ description: "AS – the portable GNU assembler."
 <dt><code>-jsri2bsr</code></dt>
 <dd>
 </dd><dt><code>-nojsri2bsr</code></dt>
-<dd> Enable or disable the <font SIZE="-1">JSRI</font> to <font SIZE="-1">BSR</font> transformation. By default this is enabled. The command line option <code>-nojsri2bsr</code> can be used to disable it.</dd>
+<dd> Enable or disable the JSRI to BSR transformation. By default this is enabled. The command line option <code>-nojsri2bsr</code> can be used to disable it.</dd>
 <dt><code>-sifilter</code></dt>
 <dd>
 </dd><dt><code>-nosifilter</code></dt>
@@ -492,4 +492,4 @@ description: "AS – the portable GNU assembler."
 <p> <i><a href="/docs/linux/man/1-gcc/">gcc</a></i>(1), <i><a href="/docs/linux/man/1-ld/">ld</a></i>(1), and the Info entries for <i>binutils</i> and <i>ld</i>.</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 1991, 92, 93, 94, 95, 96, 97, 98, 99, 2000, 2001, 2002 Free Software Foundation, Inc. </p>
-<p> Permission is granted to copy, distribute and/or modify this document under the terms of the <font SIZE="-1">GNU</font> Free Documentation License, Version 1.1 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts. A copy of the license is included in the section entitled &#8220;<font SIZE="-1">GNU</font> Free Documentation License&#8221;. </p>
+<p> Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.1 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts. A copy of the license is included in the section entitled &#8220;GNU Free Documentation License&#8221;. </p>

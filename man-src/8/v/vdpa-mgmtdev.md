@@ -16,7 +16,7 @@ mgmtdev
 OPTIONS := {
     -V[ersion]
 }</code></pre>
-<p> <code>vdpa mgmtdev show</code> [ <i>MGMTDEV</i> ]<br />
+<p> <code>vdpa mgmtdev show</code> [ <i>MGMTDEV</i> ]<br/>
  <code>vdpa mgmtdev help</code> </p>
 <h2>Description</h2>
 <h3>vdpa mgmtdev show &#8211; display vdpa management device attributes</h3>

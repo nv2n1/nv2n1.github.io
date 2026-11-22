@@ -10,7 +10,7 @@ description: "CURLOPT_TELNETOPTIONS – custom telnet options"
 <p>CURLOPT_TELNETOPTIONS &#8211; custom telnet options</p>
 <h2>Synopsis</h2>
 <p>#include &lt;curl/curl.h&gt; </p>
-<p> CURLcode curl_easy_setopt(CURL *handle, CURLOPT_TELNETOPTIONS,<br />
+<p> CURLcode curl_easy_setopt(CURL *handle, CURLOPT_TELNETOPTIONS,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>struct curl_slist&nbsp;<wbr>*cmds);</p>
 <h2>Description</h2>
 <p>Provide a pointer to a curl_slist with variables to pass to the telnet negotiations. The variables should be in the format &lt;option=value&gt;. libcurl supports the options &#8216;TTYPE&#8217;, &#8216;XDISPLOC&#8217; and &#8216;NEW_ENV&#8217;. See the TELNET standard for details.</p>

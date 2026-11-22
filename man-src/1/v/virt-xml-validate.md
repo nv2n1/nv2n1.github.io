@@ -11,31 +11,31 @@ description: "virt-xml-validate – validate libvirt XML files against a schema"
 <p> virt-xml-validate &#8211; validate libvirt XML files against a schema </p>
 <h2>SYNOPSIS</h2>
 <p> <code>virt-xml-validate</code> <i>XML-FILE</i> [<i>SCHEMA-NAME</i>] </p>
-<p> <code>virt-xml-validate</code> <i></i><font SIZE="-1"><i>OPTION</i></font><i></i></p>
+<p> <code>virt-xml-validate</code> <i></i><i>OPTION</i><i></i></p>
 <h2>DESCRIPTION</h2>
-<p> Validates a libvirt <font SIZE="-1">XML</font> for compliance with the published schema. The first compulsory argument is the path to the <font SIZE="-1">XML</font> file to be validated. The optional second argument is the name of the schema to validate against. If omitted, the schema name will be inferred from the name of the root element in the <font SIZE="-1">XML</font> document. </p>
+<p> Validates a libvirt XML for compliance with the published schema. The first compulsory argument is the path to the XML file to be validated. The optional second argument is the name of the schema to validate against. If omitted, the schema name will be inferred from the name of the root element in the XML document. </p>
 <p> Valid schema names currently include</p>
 <dl>
 <dt>&quot;domainsnapshot&quot;</dt>
-<dd> The schema for the <font SIZE="-1">XML</font> format used by domain snapshot configuration</dd>
+<dd> The schema for the XML format used by domain snapshot configuration</dd>
 <dt>&quot;domain&quot;</dt>
-<dd> The schema for the <font SIZE="-1">XML</font> format used by guest domains configuration</dd>
+<dd> The schema for the XML format used by guest domains configuration</dd>
 <dt>&quot;network&quot;</dt>
-<dd> The schema for the <font SIZE="-1">XML</font> format used by virtual network configuration</dd>
+<dd> The schema for the XML format used by virtual network configuration</dd>
 <dt>&quot;storagepool&quot;</dt>
-<dd> The schema for the <font SIZE="-1">XML</font> format used by storage pool configuration</dd>
+<dd> The schema for the XML format used by storage pool configuration</dd>
 <dt>&quot;storagevol&quot;</dt>
-<dd> The schema for the <font SIZE="-1">XML</font> format used by storage volume descriptions</dd>
+<dd> The schema for the XML format used by storage volume descriptions</dd>
 <dt>&quot;nodedev&quot;</dt>
-<dd> The schema for the <font SIZE="-1">XML</font> format used by node device descriptions</dd>
+<dd> The schema for the XML format used by node device descriptions</dd>
 <dt>&quot;capability&quot;</dt>
-<dd> The schema for the <font SIZE="-1">XML</font> format used to declare driver capabilities</dd>
+<dd> The schema for the XML format used to declare driver capabilities</dd>
 <dt>&quot;nwfilter&quot;</dt>
-<dd> The schema for the <font SIZE="-1">XML</font> format used by network traffic filters</dd>
+<dd> The schema for the XML format used by network traffic filters</dd>
 <dt>&quot;secret&quot;</dt>
-<dd> The schema for the <font SIZE="-1">XML</font> format used by secrets descriptions</dd>
+<dd> The schema for the XML format used by secrets descriptions</dd>
 <dt>&quot;interface&quot;</dt>
-<dd> The schema for the <font SIZE="-1">XML</font> format used by physical host interfaces</dd></dl>
+<dd> The schema for the XML format used by physical host interfaces</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-h, &#8211;help</code></dt>
@@ -51,6 +51,6 @@ description: "virt-xml-validate – validate libvirt XML files against a schema"
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2009-2013 by Red Hat, Inc. Copyright (C) 2009 by Daniel P. Berrange</p>
 <h2>LICENSE</h2>
-<p> virt-xml-validate is distributed under the terms of the <font SIZE="-1">GNU GPL</font> v2+. This is free software; see the source for copying conditions. There is <font SIZE="-1">NO</font> warranty; not even for <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE</font></p>
+<p> virt-xml-validate is distributed under the terms of the GNU GPL v2+. This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-virsh/">virsh</a></i>(1), online <font SIZE="-1">XML</font> format descriptions &lt;<a rel="nofollow" href="http://libvirt.org/format.html">http://libvirt.org/format.html</a>&gt; </p>
+<p> <i><a href="/docs/linux/man/1-virsh/">virsh</a></i>(1), online XML format descriptions &lt;<a rel="nofollow" href="http://libvirt.org/format.html">http://libvirt.org/format.html</a>&gt; </p>

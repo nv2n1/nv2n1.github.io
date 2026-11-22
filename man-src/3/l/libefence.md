@@ -88,7 +88,7 @@ void *valloc(size_t size);
 <h2>WARNINGS</h2>
 <p> I have tried to do as good a job as I can on this software, but I doubt that it is even theoretically possible to make it bug-free. This software has no warranty. It will not detect some bugs that you might expect it to detect, and will indicate that some non-bugs are bugs.</p>
 <h2>LICENSE</h2>
-<p> Copyright 1987-1999 Bruce Perens. All rights reserved.<br />
+<p> Copyright 1987-1999 Bruce Perens. All rights reserved.<br/>
  This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License, Version 2, as published by the Free Software Foundation. A copy of this license is distributed with this software in the file &quot;COPYING&quot;. </p>
 <p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. Read the file &quot;COPYING&quot; for more details.</p>
 <h2>CONTACTING THE AUTHOR</h2>
@@ -104,7 +104,7 @@ Internet: bruce [at] perens.com
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/3-malloc/">malloc</a>(3), <a href="/docs/linux/man/2-mmap/">mmap</a>(2), <a href="/docs/linux/man/2-mprotect/">mprotect</a>(2), <a href="/docs/linux/man/8-swapon/">swapon</a>(8)</p>
 <h2>DIAGNOSTICS</h2>
-<p> Segmentation Fault: Examine the offending statement for violation of the boundaries of a memory allocation.<br />
+<p> Segmentation Fault: Examine the offending statement for violation of the boundaries of a memory allocation.<br/>
  Bus Error: See the section on <i>WORD-ALIGNMENT AND OVERRUN DETECTION.</i> in this manual page.</p>
 <h2>BUGS</h2>
 <p> My explanation of the alignment issue could be improved. </p>

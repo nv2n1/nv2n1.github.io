@@ -55,15 +55,15 @@ description: "newscache – Cache for Network News Transport Protocol (NNTP)"
 <h2>Diagnostics</h2>
 <p>NewsCache logs diagnostics messages with the syslog priority debug. If NewsCache is configured with the <code>&#8211;enabe-debug</code> option, he produce much more messages (for details see the INSTALL file). <code>newscache -o </code> prints out the actual configuration parameter. In some error situation you can try to create a core dump file or debug a client process with gdb (for details see the documentation directory).</p>
 <h2>Files</h2>
-<p>/etc/newscache.conf<br />
- /usr/sbin/newscache<br />
- /usr/sbin/newscacheclean<br />
- /usr/sbin/newscacheclean<br />
+<p>/etc/newscache.conf<br/>
+ /usr/sbin/newscache<br/>
+ /usr/sbin/newscacheclean<br/>
+ /usr/sbin/newscacheclean<br/>
  /usr/sbin/updatenews</p>
 <h2>See Also</h2>
 <p><code>newscache.conf</code>(5), <code><a href="/docs/linux/man/8-newscacheclean/">newscacheclean</a></code>(8), <code><a href="/docs/linux/man/8-updatenews/">updatenews</a></code>(8). </p>
 <h2>Authors</h2>
-<p>1997-2000 Thomas Gschwind &lt;tom [at] infosys.tuwien.ac.at&gt;<br />
+<p>1997-2000 Thomas Gschwind &lt;tom [at] infosys.tuwien.ac.at&gt;<br/>
  2001-2004 Herbert Straub &lt;h.straub [at] aon.at&gt;</p>
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;newscache [at] linuxhacker.org&gt;.</p>

@@ -34,8 +34,8 @@ description: "epylog.conf – epylog configuration"
 <dt><code>include_unparsed</code></dt>
 <dd>Can be either &quot;yes&quot; or &quot;no&quot;. If &quot;no&quot; is specified, strings that didn&#8217;t match any of the modules will not be appended to the report. Not very wise! A good setting is &quot;yes&quot;.</dd>
 <dt><code>publishers</code></dt>
-<dd>Lists the publishers to use. The value is the name of the section where to look for the publisher configuration. E.g.:<br />
- <code>publishers = nfspub</code><br />
+<dd>Lists the publishers to use. The value is the name of the section where to look for the publisher configuration. E.g.:<br/>
+ <code>publishers = nfspub</code><br/>
  will look for a section called &quot;[nfspub]&quot; for publisher initialization. The name of the publisher has nothing to do with the method it uses for publishing. The fact that the default are named [file] and [mail] is only a matter of convenience. List multiple values separated by a comma. </dd>
 </dl>
 <h2>Mail Publisher</h2>
@@ -43,8 +43,8 @@ description: "epylog.conf – epylog configuration"
 <dt><code>method</code></dt>
 <dd>Method must be set to &quot;mail&quot; for this publisher to be considered a mail publisher.</dd>
 <dt><code>smtpserv</code></dt>
-<dd>Can be either a hostname of an SMTP server to use, or the location of a sendmail binary. If the value starts with a &quot;/&quot; it will be considered a path. E.g. valid entries:<br />
- <code>smtpserv = mail.example.com</code><br />
+<dd>Can be either a hostname of an SMTP server to use, or the location of a sendmail binary. If the value starts with a &quot;/&quot; it will be considered a path. E.g. valid entries:<br/>
+ <code>smtpserv = mail.example.com</code><br/>
  <code>smtpserv = /usr/sbin/sendmail -t</code></dd>
 <dt><code>mailto</code></dt>
 <dd>The list of email addresses where to mail the report. Separate multiple entries by a comma. If ommitted, &quot;root [at] localhost&quot; will be used.</dd>
@@ -59,16 +59,16 @@ description: "epylog.conf – epylog configuration"
 <dt><code>gpg_encrypt</code></dt>
 <dd>Logs routinely contain sensitive information, so you may want to encrypt the email report to ensure that nobody can read it other than designated administrators. Set to &quot;yes&quot; to enable gpg-encryption of the mail report. You will need to install mygpgme (installed by default on all yum-managed systems).</dd>
 <dt><code>gpg_keyringdir</code></dt>
-<dd>If you don&#8217;t want to use the default keyring (usually /root/.gnupg), you can set up a separate keyring directory for epylog&#8217;s use. E.g.:<br />
+<dd>If you don&#8217;t want to use the default keyring (usually /root/.gnupg), you can set up a separate keyring directory for epylog&#8217;s use. E.g.:<br/>
  &gt; mkdir -m 0700 /etc/epylog/gpg</dd>
 <dt><code>gpg_recipients</code></dt>
-<dd>List of PGP key id&#8217;s to use when encrypting the report. The keys must be in the pubring specified in gpg_keyringdir. If this option is omitted, epylog will encrypt to all keys found in the pubring. To add a public key to a keyring, you can use the following command.<br />
- &gt; gpg [&#8211;homedir=/etc/epylog/gpg] &#8211;import pubkey.gpg<br />
+<dd>List of PGP key id&#8217;s to use when encrypting the report. The keys must be in the pubring specified in gpg_keyringdir. If this option is omitted, epylog will encrypt to all keys found in the pubring. To add a public key to a keyring, you can use the following command.<br/>
+ &gt; gpg [&#8211;homedir=/etc/epylog/gpg] &#8211;import pubkey.gpg<br/>
  You can generate the pubkey.gpg file by running &quot;gpg &#8211;export KEYID&quot; on your workstation, or you can use &quot;gpg &#8211;search&quot; to import the public keys from the keyserver.</dd>
 <dt><code>gpg_signers</code></dt>
-<dd>To use the signing option, you will first need to generate a private key:<br />
- &gt; gpg [&#8211;homedir=/etc/epylog/gpg] &#8211;gen-key<br />
- Create a <code>sign-only RSA key</code> and leave the passphrase empty. You can then use &quot;gpg &#8211;export&quot; to export the key you have generated and import it on the workstation where you read mail.<br />
+<dd>To use the signing option, you will first need to generate a private key:<br/>
+ &gt; gpg [&#8211;homedir=/etc/epylog/gpg] &#8211;gen-key<br/>
+ Create a <code>sign-only RSA key</code> and leave the passphrase empty. You can then use &quot;gpg &#8211;export&quot; to export the key you have generated and import it on the workstation where you read mail.<br/>
  If gpg_signers is not set, the report will not be signed. </dd>
 </dl>
 <h2>File Publisher</h2>
@@ -88,8 +88,8 @@ description: "epylog.conf – epylog configuration"
 <dt><code>smtpserv</code></dt>
 <dd>Use this smtp server when sending notifications. Can be either a hostname or a path to sendmail. Defaults to &quot;/usr/sbin/sendmail -t&quot;.</dd>
 <dt><code>pubroot</code></dt>
-<dd>When generating a notification message, use this as publication root to make a link. E.g.:<br />
- <code>pubroot = <a rel="nofollow" href="http://www.example.com/epylog">http://www.example.com/epylog</a></code><br />
+<dd>When generating a notification message, use this as publication root to make a link. E.g.:<br/>
+ <code>pubroot = <a rel="nofollow" href="http://www.example.com/epylog">http://www.example.com/epylog</a></code><br/>
  will make a link: <a rel="nofollow" href="http://www.example.com/epylog/dirname/filename.html">http://www.example.com/epylog/dirname/filename.html</a> </dd>
 </dl>
 <h2>Comments</h2>

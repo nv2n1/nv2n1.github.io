@@ -37,5 +37,5 @@ description: "XtAppNextEvent, XtAppPending, XtAppPeekEvent, XtAppProcessEvent, X
 <p> The <code>XtAppMainLoop</code> function processes events using <code>XtAppProcessEvent</code>, varying the <i>mask</i> parameter and using <code>XtAppPending</code> to ensure that it has a chance to handle events of all types, i.e., X events, timer events, input events and signal sources. This constitutes the main loop of X Toolkit applications, and, as such, it does not return unless <code>XtAppSetExitFlag</code> is called. Applications are expected to exit in response to some user action. There is nothing special about <code>XtAppMainLoop</code>; it is simply an loop that processes events until <code>XtAppGetExitFlag</code>() returns true. </p>
 <p> Applications can provide their own version of this loop, which tests some global termination flag or tests that the number of top-level widgets is larger than zero before circling back for the next event.</p>
 <h2>See Also</h2>
-<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

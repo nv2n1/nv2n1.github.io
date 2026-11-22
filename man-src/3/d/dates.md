@@ -18,8 +18,8 @@ description: "QuantLib::Exercise – Base exercise class."
 <p> <code>Exercise</code> (Type type) </p>
 <p> Type <code>type</code> () const </p>
 <p> <code>Date</code> <code>date</code> (Size index) const </p>
-<p> const std::vector&lt; <code>Date</code> &gt; &amp; <code>dates</code> () const<br />
- <i>Returns all exercise dates. </i><br />
+<p> const std::vector&lt; <code>Date</code> &gt; &amp; <code>dates</code> () const<br/>
+ <i>Returns all exercise dates. </i><br/>
  <code>Date</code> <code>lastDate</code> () const </p>
 <h3>Protected Attributes</h3>
 <p> std::vector&lt; <code>Date</code> &gt; <code>dates_</code> </p>

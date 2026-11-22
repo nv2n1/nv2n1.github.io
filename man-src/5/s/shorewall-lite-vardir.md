@@ -14,7 +14,7 @@ description: "vardir – Shorewall Lite file"
 <h2>Description</h2>
 <dd>This file does not exist by default. You may create the file if you want to change the directory used by Shorewall Lite to store state information, including compiled firewall scripts. By default, the directory used is /var/lib/shorewall-lite/. The file contains a single variable assignment: <code>VARDIR=</code><i>directory</i> where <i>directory</i> is the name of a directory. If you add this file, you should copy the files from /var/lib/shorewall-lite to the new directory before performing a <code>shorewall-lite restart</code>.</dd>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  Beginning with Shorewall 4.5.2, use of this file is deprecated in favor of specifying VARDIR in the shorewallrc file used during installation of Shorewall Core. While the name of the variable remains VARDIR, the meaning is slightly different. When set in shorewallrc, Shorewall Lite, will create a directory under the specified path name to hold state information. Example: VARDIR=/opt/var/lib/ The state directory for Shorewall Lite will be /opt/var/lib/shorewall-lite/. When VARDIR is set in /etc/shorewall-lite/vardir, Shorewall Lite will save its state in the <i>directory</i> specified. </dd>
 <h2>Example</h2>
 <p>VARDIR=/root/shorewall</p>

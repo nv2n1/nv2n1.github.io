@@ -10,7 +10,7 @@ description: "dpotrs.f –"
 <p>dpotrs.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dpotrs</code> (UPLO, N, NRHS, A, LDA, B, LDB, INFO)<br />
+<p>subroutine <code>dpotrs</code> (UPLO, N, NRHS, A, LDA, B, LDB, INFO)<br/>
  <i></i><code>DPOTRS</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dpotrs (characterUPLO, integerN, integerNRHS, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( ldb, * )B, integerLDB, integerINFO)</h3>

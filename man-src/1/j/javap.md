@@ -28,8 +28,8 @@ description: "javap – Disassembles one or more class files."
 <h2>DESCRIPTION</h2>
 <p> The <code>javap</code> command disassembles one or more class files. The output depends on the options used. When no options are used, then the <code>javap</code> command prints the package, protected and public fields, and methods of the classes passed to it. The <code>javap</code> command prints its output to <code>stdout</code>.</p>
 <h2>OPTIONS</h2>
-<p> -help<br />
- &#8211;help<br />
+<p> -help<br/>
+ &#8211;help<br/>
  -?</p>
 <dl>
 <dt>
@@ -50,7 +50,7 @@ description: "javap – Disassembles one or more class files."
 <dl>
 <dt>
 </dt><dd> Shows only protected and public classes and members.</dd></dl>
-<p> -private<br />
+<p> -private<br/>
  -p</p>
 <dl>
 <dt>
@@ -133,16 +133,16 @@ class DocFooter extends Applet
 <dl>
 <dt>
 </dt><dd>
-Compiled from &#8220;DocFooter.java&#8221; public class DocFooter extends java.applet.Applet<br />
-{<br />
-    java.lang.String date;<br />
-    java.lang.String email;<br />
-  public<br />
-    DocFooter();<br />
-  public<br />
-    void init();<br />
-  public<br />
-    void paint(java.awt.Graphics);<br />
+Compiled from &#8220;DocFooter.java&#8221; public class DocFooter extends java.applet.Applet<br/>
+{<br/>
+    java.lang.String date;<br/>
+    java.lang.String email;<br/>
+  public<br/>
+    DocFooter();<br/>
+  public<br/>
+    void init();<br/>
+  public<br/>
+    void paint(java.awt.Graphics);<br/>
 }
 </dd></dl>
 <p> The output from <code>javap -c DocFooter.class</code> command yields the following: </p>

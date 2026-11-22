@@ -16,9 +16,9 @@ int pthread_timedjoin_np(pthread_t thread, void **retval,
                          const struct timespec *abstime);</code></pre>
 <p> Compile and link with <i>-pthread</i>.</p>
 <h2>Description</h2>
-<p>These functions operate in the same way as <code><a href="/docs/linux/man/3-pthread_join/">pthread_join</a></code>(3), except for the differences described on this page. The <code>pthread_tryjoin_np</code>() function performs a nonblocking join with the thread <i>thread</i>, returning the exit status of the thread in <i>*retval</i>. If <i>thread</i> has not yet terminated, then instead of blocking, as is done by <code><a href="/docs/linux/man/3-pthread_join/">pthread_join</a></code>(3), the call returns an error. The <code>pthread_timedjoin_np</code>() function performs a join-with-timeout. If <i>thread</i> has not yet terminated, then the call blocks until a maximum time, specified in <i>abstime</i>, measured against the <code>CLOCK_REALTIME</code> clock. If the timeout expires before <i>thread</i> terminates, the call returns an error. The <i>abstime</i> argument is a structure of the following form, specifying an absolute time measured since the Epoch (see <code><a href="/docs/linux/man/2-time/">time</a></code>(2)): struct timespec {<br />
-    time_t tv_sec; /* seconds */<br />
-    long tv_nsec;  /* nanoseconds */<br />
+<p>These functions operate in the same way as <code><a href="/docs/linux/man/3-pthread_join/">pthread_join</a></code>(3), except for the differences described on this page. The <code>pthread_tryjoin_np</code>() function performs a nonblocking join with the thread <i>thread</i>, returning the exit status of the thread in <i>*retval</i>. If <i>thread</i> has not yet terminated, then instead of blocking, as is done by <code><a href="/docs/linux/man/3-pthread_join/">pthread_join</a></code>(3), the call returns an error. The <code>pthread_timedjoin_np</code>() function performs a join-with-timeout. If <i>thread</i> has not yet terminated, then the call blocks until a maximum time, specified in <i>abstime</i>, measured against the <code>CLOCK_REALTIME</code> clock. If the timeout expires before <i>thread</i> terminates, the call returns an error. The <i>abstime</i> argument is a structure of the following form, specifying an absolute time measured since the Epoch (see <code><a href="/docs/linux/man/2-time/">time</a></code>(2)): struct timespec {<br/>
+    time_t tv_sec; /* seconds */<br/>
+    long tv_nsec;  /* nanoseconds */<br/>
 };</p>
 <h2>Return Value</h2>
 <p>On success, these functions return 0; on error, they return an error number.</p>
@@ -55,7 +55,7 @@ int pthread_timedjoin_np(pthread_t thread, void **retval,
 <h2>Conforming To</h2>
 <p>These functions are nonstandard GNU extensions; hence the suffix &quot;_np&quot; (nonportable) in the names.</p>
 <h2>Examples</h2>
-<p>The following code waits to join for up to 5 seconds: struct timespec ts;<br />
+<p>The following code waits to join for up to 5 seconds: struct timespec ts;<br/>
 int s; &#8230; </p>
 <pre><code>if (clock_gettime(CLOCK_REALTIME, &amp;ts) == -1) {
     /* Handle error */

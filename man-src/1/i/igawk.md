@@ -10,7 +10,7 @@ description: "igawk – gawk with include files"
 
 <p> igawk &#8211; gawk with include files </p>
 <h2>SYNOPSIS</h2>
-<p> <code>igawk</code> [ all <i>gawk</i> options ] <code>-f</code> <i>program-file</i> [ <code>&#8212;</code> ] file &#8230;<br />
+<p> <code>igawk</code> [ all <i>gawk</i> options ] <code>-f</code> <i>program-file</i> [ <code>&#8212;</code> ] file &#8230;<br/>
  <code>igawk</code> [ all <i>gawk</i> options ] [ <code>&#8212;</code> ] <i>program-text</i> file &#8230;</p>
 <h2>DESCRIPTION</h2>
 <p> <i>Igawk</i> is a simple shell script that adds the ability to have &#8220;include files&#8221; to <i><a href="/docs/linux/man/1-gawk/">gawk</a></i>(1). </p>

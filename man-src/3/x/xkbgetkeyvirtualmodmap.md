@@ -10,7 +10,7 @@ description: "XkbGetKeyVirtualModMap – Obtain the virtual modifier map (the vm
 <p>XkbGetKeyVirtualModMap &#8211; Obtain the virtual modifier map (the vmodmap array) for a subset of the keys in a keyboard description </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Status XkbGetKeyVirtualModMap</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>unsigned int </code><i>first</i><code>,</code> <code>unsigned int </code><i>num</i><code>,</code> <code>XkbDescPtr </code><i>xkb</i><code>);</code><br />
+<dt> <code>Status XkbGetKeyVirtualModMap</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>unsigned int </code><i>first</i><code>,</code> <code>unsigned int </code><i>num</i><code>,</code> <code>XkbDescPtr </code><i>xkb</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

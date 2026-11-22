@@ -12,7 +12,7 @@ description: "pki – Command-Line Interface for accessing Certificate System se
 <h2>SYNOPSIS</h2>
 <p> <code>pki</code> [CLI options] &lt;command&gt; [command arguments] </p>
 <h2>DESCRIPTION</h2>
-<p> The <code>pki</code> command provides a command-line interface allowing clients to access various services on the Certificate System server. These services include certificates, groups, keys, security domains, and users.<br />
+<p> The <code>pki</code> command provides a command-line interface allowing clients to access various services on the Certificate System server. These services include certificates, groups, keys, security domains, and users.<br/>
 &nbsp;<wbr>&nbsp;<wbr></p>
 <h2>CLI OPTIONS</h2>
 <dl>
@@ -90,7 +90,7 @@ description: "pki – Command-Line Interface for accessing Certificate System se
 <p> <code>Note:</code> When issuing the first <code>pki</code> command using the authentication parameters (after completion of the setup of the client security database), a user may be greeted with a warning message which indicates that an untrusted issuer was encountered. Simply reply &#8216;Y&#8217; to import the CA certificate, and, presuming that the displayed CA server URL is valid, press the carriage return. </p>
 <h3>Client Authentication</h3>
 <p> To authenticate with a client certificate: </p>
-<p> <code>pki -d &lt;client security database location&gt; -c &lt;client security database password&gt; -n &lt;client certificate nickname&gt; &lt;command&gt;</code><br />
+<p> <code>pki -d &lt;client security database location&gt; -c &lt;client security database password&gt; -n &lt;client certificate nickname&gt; &lt;command&gt;</code><br/>
 &nbsp;<wbr> Alternatively, to prevent exposure via the command-line, a client security database may store their password in a file instead. See <code>Client-side Password Files</code> for detailed information. </p>
 <p> To authenticate with a client certificate by obtaining the client security database password from a client-side password file: </p>
 <p> <code>pki -d &lt;client security database location&gt; -C &lt;client-side password file&gt; -n &lt;client certificate nickname&gt; &lt;command&gt;</code> </p>
@@ -113,21 +113,21 @@ description: "pki – Command-Line Interface for accessing Certificate System se
 <p> &bull; TBD: Allow numerous &#8216;token=password&#8217; lines in a single client-side password file to support the ability to authenticate against specified tokens as well as multiple tokens. </p>
 </dl>
 <p> <code>Valid examples include:</code> </p>
-<p> <code>internal=foobar</code><br />
+<p> <code>internal=foobar</code><br/>
 where:&nbsp;<wbr>&nbsp;<wbr>token=&quot;internal&quot;, password=&quot;foobar&quot; </p>
-<p> <code>hardware-nethsm=foobar</code><br />
+<p> <code>hardware-nethsm=foobar</code><br/>
 where:&nbsp;<wbr>&nbsp;<wbr>token=&quot;hardware-nethsm&quot;&nbsp;<wbr>(ignored &#8211; TBD), password=&quot;foobar&quot; </p>
-<p> <code>internal=ack=bar</code><br />
+<p> <code>internal=ack=bar</code><br/>
 where:&nbsp;<wbr>&nbsp;<wbr>token=&quot;internal&quot;, password=&quot;ack=bar&quot; </p>
-<p> <code>hardware-nethsm=ack=bar</code><br />
+<p> <code>hardware-nethsm=ack=bar</code><br/>
 where:&nbsp;<wbr>&nbsp;<wbr>token=&quot;hardware-nethsm&quot;&nbsp;<wbr>(ignored &#8211; TBD), password=&quot;ack=bar&quot; </p>
-<p> <code>=foobar</code><br />
+<p> <code>=foobar</code><br/>
 where:&nbsp;<wbr>&nbsp;<wbr>token=&quot;internal&quot;&nbsp;<wbr>(default), password=&quot;foobar&quot; </p>
-<p> <code>=foo=bar</code><br />
-where:&nbsp;<wbr>&nbsp;<wbr>token=&quot;internal&quot;&nbsp;<wbr>(default), password=&quot;foo=bar&quot;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(Since the password contains an&nbsp;<wbr>&#8216;=&#8217;&nbsp;<wbr>character,<br />
+<p> <code>=foo=bar</code><br/>
+where:&nbsp;<wbr>&nbsp;<wbr>token=&quot;internal&quot;&nbsp;<wbr>(default), password=&quot;foo=bar&quot;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(Since the password contains an&nbsp;<wbr>&#8216;=&#8217;&nbsp;<wbr>character,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>an initial&nbsp;<wbr>&#8216;=&#8217;&nbsp;<wbr>character must be specified!) </p>
-<p> <code>foobar</code><br />
+<p> <code>foobar</code><br/>
 where:&nbsp;<wbr>&nbsp;<wbr>token=&quot;internal&quot;&nbsp;<wbr>(default), password=&quot;foobar&quot; </p>
 <h3>Results Paging</h3>
 <p> Some commands (e.g. cert-find) may return multiple results. Since the number of results may be large, the results are split into multiple pages. By default the command will return only the first page (e.g. the first 20 results). To retrieve results from another page, additional paging parameters can be specified: </p>

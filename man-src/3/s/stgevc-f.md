@@ -10,7 +10,7 @@ description: "stgevc.f –"
 <p>stgevc.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>stgevc</code> (SIDE, HOWMNY, SELECT, N, S, LDS, P, LDP, VL, LDVL, VR, LDVR, MM, M, WORK, INFO)<br />
+<p>subroutine <code>stgevc</code> (SIDE, HOWMNY, SELECT, N, S, LDS, P, LDP, VL, LDVL, VR, LDVR, MM, M, WORK, INFO)<br/>
  <i></i><code>STGEVC</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine stgevc (characterSIDE, characterHOWMNY, logical, dimension( * )SELECT, integerN, real, dimension( lds, * )S, integerLDS, real, dimension( ldp, * )P, integerLDP, real, dimension( ldvl, * )VL, integerLDVL, real, dimension( ldvr, * )VR, integerLDVR, integerMM, integerM, real, dimension( * )WORK, integerINFO)</h3>

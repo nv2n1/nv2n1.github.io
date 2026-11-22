@@ -11,7 +11,7 @@ description: "dasum.f –"
 <p> dasum.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> DOUBLE PRECISION function <code>dasum</code> (N, DX, INCX)<br />
+<p> DOUBLE PRECISION function <code>dasum</code> (N, DX, INCX)<br/>
  <i></i><code>DASUM</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>DOUBLE PRECISION function dasum (integerN, double precision, dimension(*)DX, integerINCX)</h3>

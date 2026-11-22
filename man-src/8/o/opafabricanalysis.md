@@ -52,7 +52,7 @@ description: "opafabricanalysis"
 <dt>-T <i>topology_input</i></dt>
 <dd>Name of topology input file to use. Any %P markers in this filename are replaced with the HFI:port being operated on (such as 0:0 or 1:2). Default = /etc/sysconfig/opa/topology.%P.xml. If -T NONE is specified, no topology input file is used. See <i>opareport</i> for more information.</dd></dl>
 <h2>Example</h2>
-<p>opafabricanalysis<br />
+<p>opafabricanalysis<br/>
  opafabricanalysis -p &#8216;1:1 1:2 2:1 2:2&#8217; The fabric analysis tool checks the following:</p>
 <dl>
 <dt>&bull;</dt>

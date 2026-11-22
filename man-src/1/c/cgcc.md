@@ -10,7 +10,7 @@ description: "cgcc – Compiler wrapper to run Sparse after compiling"
 
 <p> cgcc &#8211; Compiler wrapper to run Sparse after compiling</p>
 <h2>SYNOPSIS</h2>
-<p> <code>cgcc</code> [<i>SPARSE OPTIONS</i>]&#8230; [<i>COMPILER OPTIONS</i>]&#8230; [<i>INPUT FILES</i>]&#8230;<br />
+<p> <code>cgcc</code> [<i>SPARSE OPTIONS</i>]&#8230; [<i>COMPILER OPTIONS</i>]&#8230; [<i>INPUT FILES</i>]&#8230;<br/>
  <code>make CC=cgcc</code></p>
 <h2>DESCRIPTION</h2>
 <p> <code>cgcc</code> provides a wrapper around a C compiler (<code>cc</code> by default) which also invokes the Sparse static analysis tool. </p>

@@ -22,31 +22,31 @@ port  tcp/ip port number to listen on (default: in config file)
 </pre>
 <h2>OPTIONS</h2>
 <h3>general options</h3>
-<p>&#8211; h&#8211; help<br />
-        print this help text and exit&#8211; version<br />
-            print version information and exit&#8211; arguments<br />
-                print expanded command line arguments &#8211;<br />
-    q&#8211; quiet<br />
-        quiet mode,<br />
-    print no warnings and errors &#8211; v&#8211; verbose<br />
-                                       verbose mode,<br />
-    print processing details &#8211; d&#8211; debug<br />
-                                   debug mode,<br />
-    print debug information &#8211; ll&#8211; log &#8211; level[l] evel:string<br />
-                                                       constant(fatal, error, warn, info, debug, trace)<br />
-          use level l for the logger<br />
-  -lc   &#8211;log-config  [f]ilename: string<br />
-          use config file f for the logger<br />
-  -c    &#8211;config  [f]ilename: string<br />
-          use specific configuration file<br />
-          (default: /usr/local/etc/dcmtk/dcmqrscp.cfg)<br />
-#This option allows a specific configuration file to be<br />
-#specified.By default, the configuration file in the<br />
-#system configuration directory(&#8220;etc&#8221; on Unix systems and<br />
-#current working directory on Windows systems) with the name<br />
-#&#8221;dcmqrscp.cfg&#8221; will be used.It is an error if a valid<br />
-#configuration file is not available.See the documentation<br />
-#on configuration for more information(dcmqrcnf.txt and the<br />
+<p>&#8211; h&#8211; help<br/>
+        print this help text and exit&#8211; version<br/>
+            print version information and exit&#8211; arguments<br/>
+                print expanded command line arguments &#8211;<br/>
+    q&#8211; quiet<br/>
+        quiet mode,<br/>
+    print no warnings and errors &#8211; v&#8211; verbose<br/>
+                                       verbose mode,<br/>
+    print processing details &#8211; d&#8211; debug<br/>
+                                   debug mode,<br/>
+    print debug information &#8211; ll&#8211; log &#8211; level[l] evel:string<br/>
+                                                       constant(fatal, error, warn, info, debug, trace)<br/>
+          use level l for the logger<br/>
+  -lc   &#8211;log-config  [f]ilename: string<br/>
+          use config file f for the logger<br/>
+  -c    &#8211;config  [f]ilename: string<br/>
+          use specific configuration file<br/>
+          (default: /usr/local/etc/dcmtk/dcmqrscp.cfg)<br/>
+#This option allows a specific configuration file to be<br/>
+#specified.By default, the configuration file in the<br/>
+#system configuration directory(&#8220;etc&#8221; on Unix systems and<br/>
+#current working directory on Windows systems) with the name<br/>
+#&#8221;dcmqrscp.cfg&#8221; will be used.It is an error if a valid<br/>
+#configuration file is not available.See the documentation<br/>
+#on configuration for more information(dcmqrcnf.txt and the<br/>
 #example configuration file dcmqrscp.cfg).</p>
 <h3>multi-process options</h3>
 <pre>
@@ -61,172 +61,172 @@ port  tcp/ip port number to listen on (default: in config file)
           fork child process for each association (default)
 </pre>
 <h3>database options</h3>
-<p>association negotiation:<br />
-        &#8211;require-find<br />
-          reject all MOVE/GET presentation contexts for<br />
-          which no corresponding FIND context is proposed<br />
-#This option causes dcmqrscp to enforce a restriction about<br />
-#FIND and MOVE presentation contexts.The RSNA&#8217;93 demonstration<br />
-#required that a CTN refuse to accept a presentation context for<br />
-#a MOVE if a FIND presentation context is not also requested.<br />
-#This option enforces this restriction.<br />
-        &#8211;no-parallel-store<br />
-          reject multiple simultaneous STORE presentation<br />
-          contexts for one application entity title<br />
-#This option causes dcmqrscp to refuse storage presentations<br />
-#contexts for AE Titles if another association has already<br />
-#sucessfully negotiated storage presentation contexts for the<br />
-#AE Title.This option should only be needed for debugging<br />
-#since the dcmqrscp database back &#8211; end sequentialises access via<br />
-#file &#8211; locking.<br />
-        &#8211;disable-get<br />
-          disable C-GET support<br />
-        &#8211;allow-shutdown<br />
-          allow external shutdown via a private SOP class<br />
-checking identifier validity:<br />
-  -XF   &#8211;check-find<br />
-          check C-FIND identifier validity<br />
-#This option causes dcmqrscp database back &#8211; end to perform checks<br />
-#on the Query Identifiers for a C &#8211; FIND command.With this option,<br />
-#dcmqrscp will reject any queries which do not conform to the very<br />
-#strict DICOM rules for Query Identifiers.<br />
-        &#8211;no-check-find<br />
-          do not check C-FIND identifier validity (default)<br />
-  -XM   &#8211;check-move<br />
-          check C-MOVE identifier validity<br />
-#This option causes dcmqrscp database back &#8211; end to perform checks<br />
-#on the Query Identifiers for a C &#8211; MOVE command.With this option,<br />
-#dcmqrscp will reject any queries which do not conform to the very<br />
-#strict DICOM rules for Query Identifiers.<br />
-        &#8211;no-check-move<br />
-          do not check C-MOVE identifier validity (default)<br />
-restriction of move targets:<br />
-        &#8211;move-unrestricted<br />
-          do not restrict move destination (default)<br />
-  -ZA   &#8211;move-aetitle<br />
-          restrict move destination to requesting AE title<br />
-  -ZH   &#8211;move-host<br />
-          restrict move destination to requesting host<br />
-  -ZV   &#8211;move-vendor<br />
-          restrict move destination to requesting vendor<br />
-restriction of query/retrieve models:<br />
-  -QP   &#8211;no-patient-root<br />
-          do not support Patient Root Q/R models<br />
-  -QS   &#8211;no-study-root<br />
-          do not support Study Root Q/R models<br />
-  -QO   &#8211;no-patient-study<br />
+<p>association negotiation:<br/>
+        &#8211;require-find<br/>
+          reject all MOVE/GET presentation contexts for<br/>
+          which no corresponding FIND context is proposed<br/>
+#This option causes dcmqrscp to enforce a restriction about<br/>
+#FIND and MOVE presentation contexts.The RSNA&#8217;93 demonstration<br/>
+#required that a CTN refuse to accept a presentation context for<br/>
+#a MOVE if a FIND presentation context is not also requested.<br/>
+#This option enforces this restriction.<br/>
+        &#8211;no-parallel-store<br/>
+          reject multiple simultaneous STORE presentation<br/>
+          contexts for one application entity title<br/>
+#This option causes dcmqrscp to refuse storage presentations<br/>
+#contexts for AE Titles if another association has already<br/>
+#sucessfully negotiated storage presentation contexts for the<br/>
+#AE Title.This option should only be needed for debugging<br/>
+#since the dcmqrscp database back &#8211; end sequentialises access via<br/>
+#file &#8211; locking.<br/>
+        &#8211;disable-get<br/>
+          disable C-GET support<br/>
+        &#8211;allow-shutdown<br/>
+          allow external shutdown via a private SOP class<br/>
+checking identifier validity:<br/>
+  -XF   &#8211;check-find<br/>
+          check C-FIND identifier validity<br/>
+#This option causes dcmqrscp database back &#8211; end to perform checks<br/>
+#on the Query Identifiers for a C &#8211; FIND command.With this option,<br/>
+#dcmqrscp will reject any queries which do not conform to the very<br/>
+#strict DICOM rules for Query Identifiers.<br/>
+        &#8211;no-check-find<br/>
+          do not check C-FIND identifier validity (default)<br/>
+  -XM   &#8211;check-move<br/>
+          check C-MOVE identifier validity<br/>
+#This option causes dcmqrscp database back &#8211; end to perform checks<br/>
+#on the Query Identifiers for a C &#8211; MOVE command.With this option,<br/>
+#dcmqrscp will reject any queries which do not conform to the very<br/>
+#strict DICOM rules for Query Identifiers.<br/>
+        &#8211;no-check-move<br/>
+          do not check C-MOVE identifier validity (default)<br/>
+restriction of move targets:<br/>
+        &#8211;move-unrestricted<br/>
+          do not restrict move destination (default)<br/>
+  -ZA   &#8211;move-aetitle<br/>
+          restrict move destination to requesting AE title<br/>
+  -ZH   &#8211;move-host<br/>
+          restrict move destination to requesting host<br/>
+  -ZV   &#8211;move-vendor<br/>
+          restrict move destination to requesting vendor<br/>
+restriction of query/retrieve models:<br/>
+  -QP   &#8211;no-patient-root<br/>
+          do not support Patient Root Q/R models<br/>
+  -QS   &#8211;no-study-root<br/>
+          do not support Study Root Q/R models<br/>
+  -QO   &#8211;no-patient-study<br/>
           do not support Patient/Study Only Q/R models</p>
 <h3>network options</h3>
-<p>preferred network transfer syntaxes (incoming associations):<br />
-  +x=   &#8211;prefer-uncompr<br />
-          prefer explicit VR local byte order (default)<br />
-  +xe   &#8211;prefer-little<br />
-          prefer explicit VR little endian TS<br />
-  +xb   &#8211;prefer-big<br />
-          prefer explicit VR big endian TS<br />
-  +xs   &#8211;prefer-lossless<br />
-          prefer default JPEG lossless TS<br />
-  +xy   &#8211;prefer-jpeg8<br />
-          prefer default JPEG lossy TS for 8 bit data<br />
-  +xx   &#8211;prefer-jpeg12<br />
-          prefer default JPEG lossy TS for 12 bit data<br />
-  +xv   &#8211;prefer-j2k-lossless<br />
-          prefer JPEG 2000 lossless TS<br />
-  +xw   &#8211;prefer-j2k-lossy<br />
-          prefer JPEG 2000 lossy TS<br />
-  +xt   &#8211;prefer-jls-lossless<br />
-          prefer JPEG-LS lossless TS<br />
-  +xu   &#8211;prefer-jls-lossy<br />
-          prefer JPEG-LS lossy TS<br />
-  +xm   &#8211;prefer-mpeg2<br />
-          prefer MPEG2 Main Profile @ Main Level TS<br />
-  +xh   &#8211;prefer-mpeg2-high<br />
-          prefer MPEG2 Main Profile @ High Level TS<br />
-  +xr   &#8211;prefer-rle<br />
-          prefer RLE lossless TS<br />
-  +xd   &#8211;prefer-deflated<br />
-          prefer deflated explicit VR little endian TS<br />
-  +xi   &#8211;implicit<br />
-          accept implicit VR little endian TS only<br />
-proposed transmission transfer syntaxes (outgoing associations):<br />
-  -x=   &#8211;propose-uncompr<br />
-          propose all uncompressed TS, explicit VR<br />
-          with local byte ordering first (default)<br />
-  -xe   &#8211;propose-little<br />
-          propose all uncompressed TS, explicit VR little endian first<br />
-  -xb   &#8211;propose-big<br />
-          propose all uncompressed TS, explicit VR big endian first<br />
-  -xi   &#8211;propose-implicit<br />
-          propose implicit VR little endian TS only<br />
-  -xs   &#8211;propose-lossless<br />
-          propose default JPEG lossless TS<br />
-          and all uncompressed transfer syntaxes<br />
-  -xy   &#8211;propose-jpeg8<br />
-          propose default JPEG lossy TS for 8 bit data<br />
-          and all uncompressed transfer syntaxes<br />
-  -xx   &#8211;propose-jpeg12<br />
-          propose default JPEG lossy TS for 12 bit data<br />
-          and all uncompressed transfer syntaxes<br />
-  -xv   &#8211;propose-j2k-lossless<br />
-          propose JPEG 2000 lossless TS<br />
-          and all uncompressed transfer syntaxes<br />
-  -xw   &#8211;propose-j2k-lossy<br />
-          propose JPEG 2000 lossy TS<br />
-          and all uncompressed transfer syntaxes<br />
-  -xt   &#8211;propose-jls-lossless<br />
-          propose JPEG-LS lossless TS<br />
-          and all uncompressed transfer syntaxes<br />
-  -xu   &#8211;propose-jls-lossy<br />
-          propose JPEG-LS lossy TS<br />
-          and all uncompressed transfer syntaxes<br />
-  -xm   &#8211;propose-mpeg2<br />
-          propose MPEG2 Main Profile @ Main Level TS only<br />
-  -xh   &#8211;propose-mpeg2-high<br />
-          propose MPEG2 Main Profile @ High Level TS only<br />
-  -xr   &#8211;propose-rle<br />
-          propose RLE lossless TS<br />
-          and all uncompressed transfer syntaxes<br />
-  -xd   &#8211;propose-deflated<br />
-          propose deflated explicit VR little endian TS<br />
-          and all uncompressed transfer syntaxes<br />
-network host access control (tcp wrapper):<br />
-  -ac   &#8211;access-full<br />
-          accept connections from any host (default)<br />
-  +ac   &#8211;access-control<br />
-          enforce host access control rules<br />
-other network options:<br />
-  -to   &#8211;timeout  [s]econds: integer (default: unlimited)<br />
-          timeout for connection requests<br />
-  -ta   &#8211;acse-timeout  [s]econds: integer (default: 30)<br />
-          timeout for ACSE messages<br />
-  -td   &#8211;dimse-timeout  [s]econds: integer (default: unlimited)<br />
-          timeout for DIMSE messages<br />
-  -pdu  &#8211;max-pdu  [n]umber of bytes: integer (4096..131072)<br />
-          set max receive pdu to n bytes<br />
-          (default: use value from configuration file)<br />
-  -dhl  &#8211;disable-host-lookup<br />
-          disable hostname lookup<br />
-        &#8211;refuse<br />
-          refuse association<br />
-        &#8211;reject<br />
-          reject association if no implementation class UID<br />
-        &#8211;ignore<br />
-          ignore store data, receive but do not store<br />
-#This option causes dcmqrscp database back &#8211; end to ignore<br />
-#all images received by the Storage Service Class.All images<br />
-#will be received from the network but not stored to disk nor<br />
-#recorded in database.<br />
-  -up   &#8211;uid-padding<br />
+<p>preferred network transfer syntaxes (incoming associations):<br/>
+  +x=   &#8211;prefer-uncompr<br/>
+          prefer explicit VR local byte order (default)<br/>
+  +xe   &#8211;prefer-little<br/>
+          prefer explicit VR little endian TS<br/>
+  +xb   &#8211;prefer-big<br/>
+          prefer explicit VR big endian TS<br/>
+  +xs   &#8211;prefer-lossless<br/>
+          prefer default JPEG lossless TS<br/>
+  +xy   &#8211;prefer-jpeg8<br/>
+          prefer default JPEG lossy TS for 8 bit data<br/>
+  +xx   &#8211;prefer-jpeg12<br/>
+          prefer default JPEG lossy TS for 12 bit data<br/>
+  +xv   &#8211;prefer-j2k-lossless<br/>
+          prefer JPEG 2000 lossless TS<br/>
+  +xw   &#8211;prefer-j2k-lossy<br/>
+          prefer JPEG 2000 lossy TS<br/>
+  +xt   &#8211;prefer-jls-lossless<br/>
+          prefer JPEG-LS lossless TS<br/>
+  +xu   &#8211;prefer-jls-lossy<br/>
+          prefer JPEG-LS lossy TS<br/>
+  +xm   &#8211;prefer-mpeg2<br/>
+          prefer MPEG2 Main Profile @ Main Level TS<br/>
+  +xh   &#8211;prefer-mpeg2-high<br/>
+          prefer MPEG2 Main Profile @ High Level TS<br/>
+  +xr   &#8211;prefer-rle<br/>
+          prefer RLE lossless TS<br/>
+  +xd   &#8211;prefer-deflated<br/>
+          prefer deflated explicit VR little endian TS<br/>
+  +xi   &#8211;implicit<br/>
+          accept implicit VR little endian TS only<br/>
+proposed transmission transfer syntaxes (outgoing associations):<br/>
+  -x=   &#8211;propose-uncompr<br/>
+          propose all uncompressed TS, explicit VR<br/>
+          with local byte ordering first (default)<br/>
+  -xe   &#8211;propose-little<br/>
+          propose all uncompressed TS, explicit VR little endian first<br/>
+  -xb   &#8211;propose-big<br/>
+          propose all uncompressed TS, explicit VR big endian first<br/>
+  -xi   &#8211;propose-implicit<br/>
+          propose implicit VR little endian TS only<br/>
+  -xs   &#8211;propose-lossless<br/>
+          propose default JPEG lossless TS<br/>
+          and all uncompressed transfer syntaxes<br/>
+  -xy   &#8211;propose-jpeg8<br/>
+          propose default JPEG lossy TS for 8 bit data<br/>
+          and all uncompressed transfer syntaxes<br/>
+  -xx   &#8211;propose-jpeg12<br/>
+          propose default JPEG lossy TS for 12 bit data<br/>
+          and all uncompressed transfer syntaxes<br/>
+  -xv   &#8211;propose-j2k-lossless<br/>
+          propose JPEG 2000 lossless TS<br/>
+          and all uncompressed transfer syntaxes<br/>
+  -xw   &#8211;propose-j2k-lossy<br/>
+          propose JPEG 2000 lossy TS<br/>
+          and all uncompressed transfer syntaxes<br/>
+  -xt   &#8211;propose-jls-lossless<br/>
+          propose JPEG-LS lossless TS<br/>
+          and all uncompressed transfer syntaxes<br/>
+  -xu   &#8211;propose-jls-lossy<br/>
+          propose JPEG-LS lossy TS<br/>
+          and all uncompressed transfer syntaxes<br/>
+  -xm   &#8211;propose-mpeg2<br/>
+          propose MPEG2 Main Profile @ Main Level TS only<br/>
+  -xh   &#8211;propose-mpeg2-high<br/>
+          propose MPEG2 Main Profile @ High Level TS only<br/>
+  -xr   &#8211;propose-rle<br/>
+          propose RLE lossless TS<br/>
+          and all uncompressed transfer syntaxes<br/>
+  -xd   &#8211;propose-deflated<br/>
+          propose deflated explicit VR little endian TS<br/>
+          and all uncompressed transfer syntaxes<br/>
+network host access control (tcp wrapper):<br/>
+  -ac   &#8211;access-full<br/>
+          accept connections from any host (default)<br/>
+  +ac   &#8211;access-control<br/>
+          enforce host access control rules<br/>
+other network options:<br/>
+  -to   &#8211;timeout  [s]econds: integer (default: unlimited)<br/>
+          timeout for connection requests<br/>
+  -ta   &#8211;acse-timeout  [s]econds: integer (default: 30)<br/>
+          timeout for ACSE messages<br/>
+  -td   &#8211;dimse-timeout  [s]econds: integer (default: unlimited)<br/>
+          timeout for DIMSE messages<br/>
+  -pdu  &#8211;max-pdu  [n]umber of bytes: integer (4096..131072)<br/>
+          set max receive pdu to n bytes<br/>
+          (default: use value from configuration file)<br/>
+  -dhl  &#8211;disable-host-lookup<br/>
+          disable hostname lookup<br/>
+        &#8211;refuse<br/>
+          refuse association<br/>
+        &#8211;reject<br/>
+          reject association if no implementation class UID<br/>
+        &#8211;ignore<br/>
+          ignore store data, receive but do not store<br/>
+#This option causes dcmqrscp database back &#8211; end to ignore<br/>
+#all images received by the Storage Service Class.All images<br/>
+#will be received from the network but not stored to disk nor<br/>
+#recorded in database.<br/>
+  -up   &#8211;uid-padding<br/>
           silently correct space-padded UIDs</p>
 <h3>encoding options</h3>
-<p>post-1993 value representations:<br />
-  +u    &#8211;enable-new-vr<br />
-          enable support for new VRs (UN/UT) (default)<br />
-  -u    &#8211;disable-new-vr<br />
-          disable support for new VRs, convert to OB<br />
-#This option disables generation of new VRs(UN / UT) when writing<br />
-#DICOM encoded data to a file to the network.This option can be<br />
-#used to force compatibility with applications which do not support<br />
+<p>post-1993 value representations:<br/>
+  +u    &#8211;enable-new-vr<br/>
+          enable support for new VRs (UN/UT) (default)<br/>
+  -u    &#8211;disable-new-vr<br/>
+          disable support for new VRs, convert to OB<br/>
+#This option disables generation of new VRs(UN / UT) when writing<br/>
+#DICOM encoded data to a file to the network.This option can be<br/>
+#used to force compatibility with applications which do not support<br/>
 #these value representations.</p>
 <h3>output options</h3>
 <pre><code>
@@ -620,8 +620,8 @@ RLELosslessTransferSyntax                            1.2.840.10008.1.2.5
 <p> The <code>dcmqrscp</code> utility will attempt to load DICOM data dictionaries specified in the <i>DCMDICTPATH</i> environment variable. By default, i.e. if the <i>DCMDICTPATH</i> environment variable is not set, the file <i>&lt;datadir&gt;/dicom.dic</i> will be loaded unless the dictionary is built into the application (default for Windows). </p>
 <p> The default behaviour should be preferred and the <i>DCMDICTPATH</i> environment variable only used when alternative data dictionaries are required. The <i>DCMDICTPATH</i> environment variable has the same format as the Unix shell <i>PATH</i> variable in that a colon (&#8216;:&#8217;) separates entries. On Windows systems, a semicolon (&#8216;;&#8217;) is used as a separator. The data dictionary code will attempt to load each file specified in the <i>DCMDICTPATH</i> environment variable. It is an error if no data dictionary can be loaded.</p>
 <h2>FILES</h2>
-<p> <i>&lt;docdir&gt;/dcmqrcnf.txt</i> &#8211; configuration information<br />
- <i>&lt;docdir&gt;/dcmqrset.txt</i> &#8211; setup information<br />
+<p> <i>&lt;docdir&gt;/dcmqrcnf.txt</i> &#8211; configuration information<br/>
+ <i>&lt;docdir&gt;/dcmqrset.txt</i> &#8211; setup information<br/>
  <i>&lt;etcdir&gt;/dcmqrscp.cfg</i> &#8211; example configuration file</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-dcmqrti/">dcmqrti</a></code>(1)</p>

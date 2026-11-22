@@ -10,7 +10,7 @@ description: "runcon – run command with specified security context"
 
 <p> runcon &#8211; run command with specified security context </p>
 <h2>SYNOPSIS</h2>
-<p> <code>runcon</code> <i>,CONTEXT COMMAND /</i>[<i>,args/</i>]<br />
+<p> <code>runcon</code> <i>,CONTEXT COMMAND /</i>[<i>,args/</i>]<br/>
  <code>runcon</code> [ <i>,-c /</i>] [<i>,-u USER/</i>] [<i>,-r ROLE/</i>] [<i>,-t TYPE/</i>] [<i>,-l RANGE/</i>] <i>,COMMAND /</i>[<i>,args/</i>]</p>
 <h2>DESCRIPTION</h2>
 <p> Run COMMAND with completely-specified CONTEXT, or with current or transitioned security context modified by one or more of LEVEL, ROLE, TYPE, and USER. </p>
@@ -38,11 +38,11 @@ description: "runcon – run command with specified security context"
 <h2>AUTHOR</h2>
 <p> Written by Russell Coker.</p>
 <h2>REPORTING BUGS</h2>
-<p> GNU coreutils online help: &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/">https://www.gnu.org/software/coreutils/</a>&gt;<br />
+<p> GNU coreutils online help: &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/">https://www.gnu.org/software/coreutils/</a>&gt;<br/>
  Report any translation bugs to &lt;<a rel="nofollow" href="https://translationproject.org/team/">https://translationproject.org/team/</a>&gt;</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2020 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="https://gnu.org/licenses/gpl.html">https://gnu.org/licenses/gpl.html</a>&gt;.<br />
+<p> Copyright &#169; 2020 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="https://gnu.org/licenses/gpl.html">https://gnu.org/licenses/gpl.html</a>&gt;.<br/>
  This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.</p>
 <h2>SEE ALSO</h2>
-<p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/runcon">https://www.gnu.org/software/coreutils/runcon</a>&gt;<br />
+<p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/runcon">https://www.gnu.org/software/coreutils/runcon</a>&gt;<br/>
  or available locally via: info &#8216;(coreutils) runcon invocation&#8217; </p>

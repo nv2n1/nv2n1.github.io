@@ -238,6 +238,6 @@ Idt  idt
 <p> IRIX 4.x users should not set use the shared memory connection to their X server. i.e don&#8217;t use the display shm:0. </p>
 <p> Background color changes don&#8217;t work when <code>idt</code> is in animate mode. <code>idt</code> will use whatever color was most recently set in the animation segment for the entire segment.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright (C) 1987-2009<br />
+<p> Copyright (C) 1987-2009<br/>
  University Corporation for Atmospheric Research </p>
 <p> The use of this Software is governed by a License Agreement. </p>

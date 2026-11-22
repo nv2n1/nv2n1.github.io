@@ -10,7 +10,7 @@ description: "pmdapostgresql – PostgreSQL database PMDA"
 
 <p> <code>pmdapostgresql</code> &#8211; PostgreSQL database PMDA</p>
 <h2>DESCRIPTION</h2>
-<p> <code>pmdapostgresql</code> is a Performance Co-Pilot <font SIZE="-1">PMDA</font> which extracts live performance data from a running PostgreSQL database.</p>
+<p> <code>pmdapostgresql</code> is a Performance Co-Pilot PMDA which extracts live performance data from a running PostgreSQL database.</p>
 <h2>INSTALLATION</h2>
 <p> <code>pmdapostgresql</code> uses a configuration file from (in this order):</p>
 <dl>
@@ -23,7 +23,7 @@ description: "pmdapostgresql – PostgreSQL database PMDA"
 <p> This file can contain overridden values (Perl code) for the settings listed at the start of pmdapostgresql.pl, for example:</p>
 <dl>
 <dt>&bull;</dt>
-<dd> $database &#8211; database access method and database name, [default: &#8216;dbi:Pg:dbname=postgres&#8217;] (see <font SIZE="-1"><i>DBI</i></font><i></i>(3) for details)</dd>
+<dd> $database &#8211; database access method and database name, [default: &#8216;dbi:Pg:dbname=postgres&#8217;] (see <i>DBI</i><i></i>(3) for details)</dd>
 <dt>&bull;</dt>
 <dd> $username &#8211; username to connect to the database [default: &#8216;postgres&#8217;]</dd>
 <dt>&bull;</dt>
@@ -40,7 +40,7 @@ description: "pmdapostgresql – PostgreSQL database PMDA"
 <h2>FILES</h2>
 <dl>
 <dt><code>/etc/pcpdbi.conf</code></dt>
-<dd> configuration file for all <font SIZE="-1">PCP</font> database monitors</dd>
+<dd> configuration file for all PCP database monitors</dd>
 <dt><code>$PCP_PMDAS_DIR/postgresql/postgresql.conf</code></dt>
 <dd> configuration file for <code>pmdapostgresql</code></dd>
 <dt><code>$PCP_PMDAS_DIR/postgresql/Install</code></dt>

@@ -30,7 +30,7 @@ description: "nilfs_cleanerd – NILFS2 garbage collector"
 <dd>
 </dd><dl>
 <dt><code># mount -t nilfs2</code></dt>
-<dd>/dev/sdb1 on /nilfs type nilfs2 (rw,gcpid=<i>PID</i>)<br />
+<dd>/dev/sdb1 on /nilfs type nilfs2 (rw,gcpid=<i>PID</i>)<br/>
  <code># kill &#8211;</code><i>SIGNAL</i> <i>PID</i></dd></dl>
 </dl>
 <dl>

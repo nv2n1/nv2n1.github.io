@@ -46,5 +46,5 @@ description: "ocamldep – Dependency generator for OCaml"
 <dd> Display a short usage summary and exit. </dd>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-ocamlc/">ocamlc</a></code>(1), <code><a href="/docs/linux/man/1-ocamlopt/">ocamlopt</a></code>(1).<br />
+<p> <code><a href="/docs/linux/man/1-ocamlc/">ocamlc</a></code>(1), <code><a href="/docs/linux/man/1-ocamlopt/">ocamlopt</a></code>(1).<br/>
  <i>The OCaml user&#8217;s manual</i>, chapter &quot;Dependency generator&quot;. </p>

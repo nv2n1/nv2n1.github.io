@@ -60,7 +60,7 @@ description: "sssd-ad – SSSD Active Directory provider"
 <p> The option also supports specifying different filters per domain or forest. This extended filter would consist of: &#8220;KEYWORD:NAME:FILTER&#8221;. The keyword can be either &#8220;DOM&#8221;, &#8220;FOREST&#8221; or missing. </p>
 <p> If the keyword equals to &#8220;DOM&#8221; or is missing, then &#8220;NAME&#8221; specifies the domain or subdomain the filter applies to. If the keyword equals to &#8220;FOREST&#8221;, then the filter equals to all domains from the forest specified by &#8220;NAME&#8221;. </p>
 <p> Multiple filters can be separated with the &#8220;?&#8221; character, similarly to how search bases work. </p>
-<p> Nested group membership must be searched for using a special OID &#8220;:1.2.840.113556.1.4.1941:&#8221; in addition to the full DOM:domain.example.org: syntax to ensure the parser does not attempt to interpret the colon characters associated with the OID. If you do not use this OID then nested group membership will not be resolved. See usage example below and refer here for further information about the OID: m[blue]<code>[MS-ADTS] section LDAP extensions</code>m[]<font SIZE="-2">[1]</font> </p>
+<p> Nested group membership must be searched for using a special OID &#8220;:1.2.840.113556.1.4.1941:&#8221; in addition to the full DOM:domain.example.org: syntax to ensure the parser does not attempt to interpret the colon characters associated with the OID. If you do not use this OID then nested group membership will not be resolved. See usage example below and refer here for further information about the OID: m[blue]<code>[MS-ADTS] section LDAP extensions</code>m[][1] </p>
 <p> The most specific match is always used. For example, if the option specified filter for a domain the user is a member of and a global filter, the per-domain filter would be applied. If there are more matches with the same specification, the first one is used. </p>
 <p> Examples: </p>
 <dl>
@@ -393,7 +393,7 @@ DOM:dom1:(memberOf:1.2.840.113556.1.4.1941:=cn=nestedgroup,ou=groups,dc=example,
 ldap_schema = ad</pre>
 </dd></dl>
 <p> The default configuration results in configuring 10,000 slices, each capable of holding up to 200,000 IDs, starting from 200,000 and going up to 2,000,200,000. This should be sufficient for most deployments. </p>
-<p> <font SIZE="+1"> <code>Advanced Configuration</code></p>
+<p>  <code>Advanced Configuration</code></p>
 <dl>
 <dd>ldap_idmap_range_min (integer)</dd>
 <dl>
@@ -432,7 +432,7 @@ ldap_schema = ad</pre>
 <p> Note: Additional secondary slices might be generated when SID is being mapped to UNIX id and RID part of SID is out of range for secondary slices generated so far. If value of ldap_idmap_helper_table_size is equal to 0 then no additional secondary slices are generated. </p>
 <p> Default: 10</dl>
 </dl>
-<p> </font></p>
+<p> </p>
 <h3>Well-Known SIDs</h3>
 <p>SSSD supports to look up the names of Well-Known SIDs, i.e. SIDs with a special hardcoded meaning. Since the generic users and groups related to those Well-Known SIDs have no equivalent in a Linux/UNIX environment no POSIX IDs are available for those objects. </p>
 <p> The SID name space is organized in authorities which can be seen as different domains. The authorities for the Well-Known SIDs are </p>

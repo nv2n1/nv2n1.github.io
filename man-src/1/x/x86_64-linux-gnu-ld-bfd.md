@@ -12,11 +12,11 @@ description: "ld – The GNU linker"
 <p>ld [<code>options</code>] <i>objfile</i> &#8230;</p>
 <h2>Description</h2>
 <p><code>ld</code> combines a number of object and archive files, relocates their data and ties up symbol references. Usually the last step in compiling a program is to run <code>ld</code>. </p>
-<p> <code>ld</code> accepts Linker Command Language files written in a superset of <font SIZE="-1">AT&amp;T</font>&#8216;s Link Editor Command Language syntax, to provide explicit and total control over the linking process. </p>
-<p> This man page does not describe the command language; see the <code>ld</code> entry in <tt>&quot;info&quot;</tt> for full details on the command language and on other aspects of the <font SIZE="-1">GNU</font> linker. </p>
-<p> This version of <code>ld</code> uses the general purpose <font SIZE="-1">BFD</font> libraries to operate on object files. This allows <code>ld</code> to read, combine, and write object files in many different formats&#8212;for example, <font SIZE="-1">COFF</font> or <tt>&quot;a.out&quot;</tt>. Different formats may be linked together to produce any available kind of object file. </p>
-<p> Aside from its flexibility, the <font SIZE="-1">GNU</font> linker is more helpful than other linkers in providing diagnostic information. Many linkers abandon execution immediately upon encountering an error; whenever possible, <code>ld</code> continues executing, allowing you to identify other errors (or, in some cases, to get an output file in spite of the error). </p>
-<p> The <font SIZE="-1">GNU</font> linker <code>ld</code> is meant to cover a broad range of situations, and to be as compatible as possible with other linkers. As a result, you have many choices to control its behavior.</p>
+<p> <code>ld</code> accepts Linker Command Language files written in a superset of AT&amp;T&#8216;s Link Editor Command Language syntax, to provide explicit and total control over the linking process. </p>
+<p> This man page does not describe the command language; see the <code>ld</code> entry in <tt>&quot;info&quot;</tt> for full details on the command language and on other aspects of the GNU linker. </p>
+<p> This version of <code>ld</code> uses the general purpose BFD libraries to operate on object files. This allows <code>ld</code> to read, combine, and write object files in many different formats&#8212;for example, COFF or <tt>&quot;a.out&quot;</tt>. Different formats may be linked together to produce any available kind of object file. </p>
+<p> Aside from its flexibility, the GNU linker is more helpful than other linkers in providing diagnostic information. Many linkers abandon execution immediately upon encountering an error; whenever possible, <code>ld</code> continues executing, allowing you to identify other errors (or, in some cases, to get an output file in spite of the error). </p>
+<p> The GNU linker <code>ld</code> is meant to cover a broad range of situations, and to be as compatible as possible with other linkers. As a result, you have many choices to control its behavior.</p>
 <h2>Options</h2>
 <p>The linker supports a plethora of command-line options, but in actual practice few of them are used in any particular context. For instance, a frequent use of <code>ld</code> is to link standard Unix object files on a standard, supported Unix system. On such a system, to link a file <tt>&quot;hello.o&quot;</tt>: </p>
 <pre> ld -o &lt;output&gt; /lib/crt0.o hello.o -lc</pre>
@@ -26,42 +26,42 @@ description: "ld – The GNU linker"
 <p> Usually the linker is invoked with at least one object file, but you can specify other forms of binary input files using <code>-l</code>, <code>-R</code>, and the script command language. If <i>no</i> binary input files at all are specified, the linker does not produce any output, and issues the message <code>No input files</code>. </p>
 <p> If the linker cannot recognize the format of an object file, it will assume that it is a linker script. A script specified in this way augments the main linker script used for the link (either the default linker script or the one specified by using <code>-T</code>). This feature permits the linker to link against a file which appears to be an object or an archive, but actually merely defines some symbol values, or uses <tt>&quot;INPUT&quot;</tt> or <tt>&quot;GROUP&quot;</tt> to load other objects. Specifying a script in this way merely augments the main linker script, with the extra commands placed after the main script; use the <code>-T</code> option to replace the default linker script entirely, but note the effect of the <tt>&quot;INSERT&quot;</tt> command. </p>
 <p> For options whose names are a single letter, option arguments must either follow the option letter without intervening whitespace, or be given as separate arguments immediately following the option that requires them. </p>
-<p> For options whose names are multiple letters, either one dash or two can precede the option name; for example, <code>-trace-symbol</code> and <code>&#8211;trace-symbol</code> are equivalent. Note&#8212;there is one exception to this rule. Multiple letter options that start with a lower case &#8216;o&#8217; can only be preceded by two dashes. This is to reduce confusion with the <code>-o</code> option. So for example <code>-omagic</code> sets the output file name to <code>magic</code> whereas <code>&#8211;omagic</code> sets the <font SIZE="-1">NMAGIC</font> flag on the output. </p>
+<p> For options whose names are multiple letters, either one dash or two can precede the option name; for example, <code>-trace-symbol</code> and <code>&#8211;trace-symbol</code> are equivalent. Note&#8212;there is one exception to this rule. Multiple letter options that start with a lower case &#8216;o&#8217; can only be preceded by two dashes. This is to reduce confusion with the <code>-o</code> option. So for example <code>-omagic</code> sets the output file name to <code>magic</code> whereas <code>&#8211;omagic</code> sets the NMAGIC flag on the output. </p>
 <p> Arguments to multiple-letter options must either be separated from the option name by an equals sign, or be given as separate arguments immediately following the option that requires them. For example, <code>&#8211;trace-symbol foo</code> and <code>&#8211;trace-symbol=foo</code> are equivalent. Unique abbreviations of the names of multiple-letter options are accepted. </p>
 <p> Note&#8212;if the linker is being invoked indirectly, via a compiler driver (e.g. <code>gcc</code>) then all the linker command-line options should be prefixed by <code>-Wl,</code> (or whatever is appropriate for the particular compiler driver) like this: </p>
 <pre> gcc -Wl,--start-group foo.o bar.o -Wl,--end-group</pre>
 <p>This is important, because otherwise the compiler driver program may silently drop the linker options, resulting in a bad link. Confusion may also arise when passing options that require values through a driver, as the use of a space between option and argument acts as a separator, and causes the driver to pass only the option to the linker and the argument to the compiler. In this case, it is simplest to use the joined forms of both single- and multiple-letter options, such as: </p>
 <pre> gcc foo.o bar.o -Wl,-eENTRY -Wl,-Map=a.map</pre>
-<p>Here is a table of the generic command-line switches accepted by the <font SIZE="-1">GNU</font> linker:</p>
+<p>Here is a table of the generic command-line switches accepted by the GNU linker:</p>
 <dl COMPACT>
 <dt><code>@</code><i>file</i></dt>
 <dd>Read command-line options from <i>file</i>. The options read are inserted in place of the original @<i>file</i> option. If <i>file</i> does not exist, or cannot be read, then the option will be treated literally, and not removed. </dd>
 <p> Options in <i>file</i> are separated by whitespace. A whitespace character may be included in an option by surrounding the entire option in either single or double quotes. Any character (including a backslash) may be included by prefixing the character to be included with a backslash. The <i>file</i> may itself contain additional @<i>file</i> options; any such options will be processed recursively.</p>
 <dt><code>-a</code> <i>keyword</i></dt>
-<dd>This option is supported for <font SIZE="-1">HP/UX</font> compatibility. The <i>keyword</i> argument must be one of the strings <code>archive</code>, <code>shared</code>, or <code>default</code>. <code>-aarchive</code> is functionally equivalent to <code>-Bstatic</code>, and the other two keywords are functionally equivalent to <code>-Bdynamic</code>. This option may be used any number of times.</dd>
-<dt><code>&#8211;audit</code> <i></i><font SIZE="-1"><i>AUDITLIB</i></font><i></i></dt>
-<dd>Adds <i></i><font SIZE="-1"><i>AUDITLIB</i></font><i></i> to the <tt>&quot;DT_AUDIT&quot;</tt> entry of the dynamic section. <i></i><font SIZE="-1"><i>AUDITLIB</i></font><i></i> is not checked for existence, nor will it use the <font SIZE="-1">DT_SONAME</font> specified in the library. If specified multiple times <tt>&quot;DT_AUDIT&quot;</tt> will contain a colon separated list of audit interfaces to use. If the linker finds an object with an audit entry while searching for shared libraries, it will add a corresponding <tt>&quot;DT_DEPAUDIT&quot;</tt> entry in the output file. This option is only meaningful on <font SIZE="-1">ELF</font> platforms supporting the rtld-audit interface.</dd>
+<dd>This option is supported for HP/UX compatibility. The <i>keyword</i> argument must be one of the strings <code>archive</code>, <code>shared</code>, or <code>default</code>. <code>-aarchive</code> is functionally equivalent to <code>-Bstatic</code>, and the other two keywords are functionally equivalent to <code>-Bdynamic</code>. This option may be used any number of times.</dd>
+<dt><code>&#8211;audit</code> <i></i><i>AUDITLIB</i><i></i></dt>
+<dd>Adds <i></i><i>AUDITLIB</i><i></i> to the <tt>&quot;DT_AUDIT&quot;</tt> entry of the dynamic section. <i></i><i>AUDITLIB</i><i></i> is not checked for existence, nor will it use the DT_SONAME specified in the library. If specified multiple times <tt>&quot;DT_AUDIT&quot;</tt> will contain a colon separated list of audit interfaces to use. If the linker finds an object with an audit entry while searching for shared libraries, it will add a corresponding <tt>&quot;DT_DEPAUDIT&quot;</tt> entry in the output file. This option is only meaningful on ELF platforms supporting the rtld-audit interface.</dd>
 <dt><code>-b</code> <i>input-format</i></dt>
 <dd>
 </dd><dt><code>&#8211;format=</code><i>input-format</i></dt>
-<dd><code>ld</code> may be configured to support more than one kind of object file. If your <code>ld</code> is configured this way, you can use the <code>-b</code> option to specify the binary format for input object files that follow this option on the command line. Even when <code>ld</code> is configured to support alternative object formats, you don&#8217;t usually need to specify this, as <code>ld</code> should be configured to expect as a default input format the most usual format on each machine. <i>input-format</i> is a text string, the name of a particular format supported by the <font SIZE="-1">BFD</font> libraries. (You can list the available binary formats with <code>objdump -i</code>.) </dd>
+<dd><code>ld</code> may be configured to support more than one kind of object file. If your <code>ld</code> is configured this way, you can use the <code>-b</code> option to specify the binary format for input object files that follow this option on the command line. Even when <code>ld</code> is configured to support alternative object formats, you don&#8217;t usually need to specify this, as <code>ld</code> should be configured to expect as a default input format the most usual format on each machine. <i>input-format</i> is a text string, the name of a particular format supported by the BFD libraries. (You can list the available binary formats with <code>objdump -i</code>.) </dd>
 <p> You may want to use this option if you are linking files with an unusual binary format. You can also use <code>-b</code> to switch formats explicitly (when linking object files of different formats), by including <code>-b</code> <i>input-format</i> before each group of object files in a particular format. </p>
 <p> The default format is taken from the environment variable <tt>&quot;GNUTARGET&quot;</tt>. </p>
 <p> You can also define the input format from a script, using the command <tt>&quot;TARGET&quot;</tt>;</p>
 <dt><code>-c</code> <i>MRI-commandfile</i></dt>
 <dd>
 </dd><dt><code>&#8211;mri-script=</code><i>MRI-commandfile</i></dt>
-<dd>For compatibility with linkers produced by <font SIZE="-1">MRI,</font> <code>ld</code> accepts script files written in an alternate, restricted command language, described in the <font SIZE="-1">MRI</font> Compatible Script Files section of <font SIZE="-1">GNU</font> ld documentation. Introduce <font SIZE="-1">MRI</font> script files with the option <code>-c</code>; use the <code>-T</code> option to run linker scripts written in the general-purpose <code>ld</code> scripting language. If <i>MRI-cmdfile</i> does not exist, <code>ld</code> looks for it in the directories specified by any <code>-L</code> options.</dd>
+<dd>For compatibility with linkers produced by MRI, <code>ld</code> accepts script files written in an alternate, restricted command language, described in the MRI Compatible Script Files section of GNU ld documentation. Introduce MRI script files with the option <code>-c</code>; use the <code>-T</code> option to run linker scripts written in the general-purpose <code>ld</code> scripting language. If <i>MRI-cmdfile</i> does not exist, <code>ld</code> looks for it in the directories specified by any <code>-L</code> options.</dd>
 <dt><code>-d</code></dt>
 <dd>
 </dd><dt><code>-dc</code></dt>
 <dd>
 </dd><dt><code>-dp</code></dt>
 <dd>These three options are equivalent; multiple forms are supported for compatibility with other linkers. They assign space to common symbols even if a relocatable output file is specified (with <code>-r</code>). The script command <tt>&quot;FORCE_COMMON_ALLOCATION&quot;</tt> has the same effect.</dd>
-<dt><code>&#8211;depaudit</code> <i></i><font SIZE="-1"><i>AUDITLIB</i></font><i></i></dt>
+<dt><code>&#8211;depaudit</code> <i></i><i>AUDITLIB</i><i></i></dt>
 <dd>
-</dd><dt><code>-P</code> <i></i><font SIZE="-1"><i>AUDITLIB</i></font><i></i></dt>
-<dd>Adds <i></i><font SIZE="-1"><i>AUDITLIB</i></font><i></i> to the <tt>&quot;DT_DEPAUDIT&quot;</tt> entry of the dynamic section. <i></i><font SIZE="-1"><i>AUDITLIB</i></font><i></i> is not checked for existence, nor will it use the <font SIZE="-1">DT_SONAME</font> specified in the library. If specified multiple times <tt>&quot;DT_DEPAUDIT&quot;</tt> will contain a colon separated list of audit interfaces to use. This option is only meaningful on <font SIZE="-1">ELF</font> platforms supporting the rtld-audit interface. The -P option is provided for Solaris compatibility.</dd>
+</dd><dt><code>-P</code> <i></i><i>AUDITLIB</i><i></i></dt>
+<dd>Adds <i></i><i>AUDITLIB</i><i></i> to the <tt>&quot;DT_DEPAUDIT&quot;</tt> entry of the dynamic section. <i></i><i>AUDITLIB</i><i></i> is not checked for existence, nor will it use the DT_SONAME specified in the library. If specified multiple times <tt>&quot;DT_DEPAUDIT&quot;</tt> will contain a colon separated list of audit interfaces to use. This option is only meaningful on ELF platforms supporting the rtld-audit interface. The -P option is provided for Solaris compatibility.</dd>
 <dt><code>&#8211;enable-non-contiguous-regions</code></dt>
 <dd>This option avoids generating an error if an input section does not fit a matching output section. The linker tries to allocate the input section to subseque nt matching output sections, and generates an error only if no output section is large enough. This is useful when several non-contiguous memory regions are available and the input section does not require a particular one. The order in which input sections are evaluated does not change, for instance: </dd>
 <pre> MEMORY {
@@ -80,7 +80,7 @@ description: "ld – The GNU linker"
  .data.3: size 4
  results in .data.1 affected to mem1, and .data.2 and .data.3
  affected to mem2, even though .data.3 would fit in mem3.</pre>
-<p>This option is incompatible with <font SIZE="-1">INSERT</font> statements because it changes the way input sections are mapped to output sections.</p>
+<p>This option is incompatible with INSERT statements because it changes the way input sections are mapped to output sections.</p>
 <dt><code>&#8211;enable-non-contiguous-regions-warnings</code></dt>
 <dd>This option enables warnings when <tt>&quot;--enable-non-contiguous-regions&quot;</tt> allows possibly unexpected matches in sections mapping, potentially leading to silently discarding a section instead of failing because it does not fit any output region.</dd>
 <dt><code>-e</code> <i>entry</i></dt>
@@ -88,9 +88,9 @@ description: "ld – The GNU linker"
 </dd><dt><code>&#8211;entry=</code><i>entry</i></dt>
 <dd>Use <i>entry</i> as the explicit symbol for beginning execution of your program, rather than the default entry point. If there is no symbol named <i>entry</i>, the linker will try to parse <i>entry</i> as a number, and use that as the entry address (the number will be interpreted in base 10; you may use a leading <code>0x</code> for base 16, or a leading <code>0</code> for base 8).</dd>
 <dt><code>&#8211;exclude-libs</code> <i>lib</i><code>,</code><i>lib</i><code>,&#8230;</code></dt>
-<dd>Specifies a list of archive libraries from which symbols should not be automatically exported. The library names may be delimited by commas or colons. Specifying <tt>&quot;--exclude-libs ALL&quot;</tt> excludes symbols in all archive libraries from automatic export. This option is available only for the i386 <font SIZE="-1">PE</font> targeted port of the linker and for <font SIZE="-1">ELF</font> targeted ports. For i386 <font SIZE="-1">PE,</font> symbols explicitly listed in a .def file are still exported, regardless of this option. For <font SIZE="-1">ELF</font> targeted ports, symbols affected by this option will be treated as hidden.</dd>
+<dd>Specifies a list of archive libraries from which symbols should not be automatically exported. The library names may be delimited by commas or colons. Specifying <tt>&quot;--exclude-libs ALL&quot;</tt> excludes symbols in all archive libraries from automatic export. This option is available only for the i386 PE targeted port of the linker and for ELF targeted ports. For i386 PE, symbols explicitly listed in a .def file are still exported, regardless of this option. For ELF targeted ports, symbols affected by this option will be treated as hidden.</dd>
 <dt><code>&#8211;exclude-modules-for-implib</code> <i>module</i><code>,</code><i>module</i><code>,&#8230;</code></dt>
-<dd>Specifies a list of object files or archive members, from which symbols should not be automatically exported, but which should be copied wholesale into the import library being generated during the link. The module names may be delimited by commas or colons, and must match exactly the filenames used by <code>ld</code> to open the files; for archive members, this is simply the member name, but for object files the name listed must include and match precisely any path used to specify the input file on the linker&#8217;s command-line. This option is available only for the i386 <font SIZE="-1">PE</font> targeted port of the linker. Symbols explicitly listed in a .def file are still exported, regardless of this option.</dd>
+<dd>Specifies a list of object files or archive members, from which symbols should not be automatically exported, but which should be copied wholesale into the import library being generated during the link. The module names may be delimited by commas or colons, and must match exactly the filenames used by <code>ld</code> to open the files; for archive members, this is simply the member name, but for object files the name listed must include and match precisely any path used to specify the input file on the linker&#8217;s command-line. This option is available only for the i386 PE targeted port of the linker. Symbols explicitly listed in a .def file are still exported, regardless of this option.</dd>
 <dt><code>-E</code></dt>
 <dd>
 </dd><dt><code>&#8211;export-dynamic</code></dt>
@@ -100,11 +100,11 @@ description: "ld – The GNU linker"
 <p> If you do not use either of these options (or use the <code>&#8211;no-export-dynamic</code> option to restore the default behavior), the dynamic symbol table will normally contain only those symbols which are referenced by some dynamic object mentioned in the link. </p>
 <p> If you use <tt>&quot;dlopen&quot;</tt> to load a dynamic object which needs to refer back to the symbols defined by the program, rather than some other dynamic object, then you will probably need to use this option when linking the program itself. </p>
 <p> You can also use the dynamic list to control what symbols should be added to the dynamic symbol table if the output format supports it. See the description of <code>&#8211;dynamic-list</code>. </p>
-<p> Note that this option is specific to <font SIZE="-1">ELF</font> targeted ports. <font SIZE="-1">PE</font> targets support a similar function to export all symbols from a <font SIZE="-1">DLL</font> or <font SIZE="-1">EXE</font>; see the description of <code>&#8211;export-all-symbols</code> below.</p>
+<p> Note that this option is specific to ELF targeted ports. PE targets support a similar function to export all symbols from a DLL or EXE; see the description of <code>&#8211;export-all-symbols</code> below.</p>
 <dt><code>&#8211;export-dynamic-symbol=</code><i>glob</i></dt>
-<dd>When creating a dynamically linked executable, symbols matching <i>glob</i> will be added to the dynamic symbol table. When creating a shared library, references to symbols matching <i>glob</i> will not be bound to the definitions within the shared library. This option is a no-op when creating a shared library and <code>-Bsymbolic</code> or <code>&#8211;dynamic-list</code> are not specified. This option is only meaningful on <font SIZE="-1">ELF</font> platforms which support shared libraries.</dd>
+<dd>When creating a dynamically linked executable, symbols matching <i>glob</i> will be added to the dynamic symbol table. When creating a shared library, references to symbols matching <i>glob</i> will not be bound to the definitions within the shared library. This option is a no-op when creating a shared library and <code>-Bsymbolic</code> or <code>&#8211;dynamic-list</code> are not specified. This option is only meaningful on ELF platforms which support shared libraries.</dd>
 <dt><code>&#8211;export-dynamic-symbol-list=</code><i>file</i></dt>
-<dd>Specify a <code>&#8211;export-dynamic-symbol</code> for each pattern in the file. The format of the file is the same as the version node without scope and node name. See <font SIZE="-1"><code>VERSION</code></font> for more information.</dd>
+<dd>Specify a <code>&#8211;export-dynamic-symbol</code> for each pattern in the file. The format of the file is the same as the version node without scope and node name. See <code>VERSION</code> for more information.</dd>
 <dt><code>-EB</code></dt>
 <dd>Link big-endian objects. This affects the default output format.</dd>
 <dt><code>-EL</code></dt>
@@ -112,40 +112,40 @@ description: "ld – The GNU linker"
 <dt><code>-f</code> <i>name</i></dt>
 <dd>
 </dd><dt><code>&#8211;auxiliary=</code><i>name</i></dt>
-<dd>When creating an <font SIZE="-1">ELF</font> shared object, set the internal <font SIZE="-1">DT_AUXILIARY</font> field to the specified name. This tells the dynamic linker that the symbol table of the shared object should be used as an auxiliary filter on the symbol table of the shared object <i>name</i>. </dd>
-<p> If you later link a program against this filter object, then, when you run the program, the dynamic linker will see the <font SIZE="-1">DT_AUXILIARY</font> field. If the dynamic linker resolves any symbols from the filter object, it will first check whether there is a definition in the shared object <i>name</i>. If there is one, it will be used instead of the definition in the filter object. The shared object <i>name</i> need not exist. Thus the shared object <i>name</i> may be used to provide an alternative implementation of certain functions, perhaps for debugging or for machine-specific performance. </p>
-<p> This option may be specified more than once. The <font SIZE="-1">DT_AUXILIARY</font> entries will be created in the order in which they appear on the command line.</p>
+<dd>When creating an ELF shared object, set the internal DT_AUXILIARY field to the specified name. This tells the dynamic linker that the symbol table of the shared object should be used as an auxiliary filter on the symbol table of the shared object <i>name</i>. </dd>
+<p> If you later link a program against this filter object, then, when you run the program, the dynamic linker will see the DT_AUXILIARY field. If the dynamic linker resolves any symbols from the filter object, it will first check whether there is a definition in the shared object <i>name</i>. If there is one, it will be used instead of the definition in the filter object. The shared object <i>name</i> need not exist. Thus the shared object <i>name</i> may be used to provide an alternative implementation of certain functions, perhaps for debugging or for machine-specific performance. </p>
+<p> This option may be specified more than once. The DT_AUXILIARY entries will be created in the order in which they appear on the command line.</p>
 <dt><code>-F</code> <i>name</i></dt>
 <dd>
 </dd><dt><code>&#8211;filter=</code><i>name</i></dt>
-<dd>When creating an <font SIZE="-1">ELF</font> shared object, set the internal <font SIZE="-1">DT_FILTER</font> field to the specified name. This tells the dynamic linker that the symbol table of the shared object which is being created should be used as a filter on the symbol table of the shared object <i>name</i>. </dd>
-<p> If you later link a program against this filter object, then, when you run the program, the dynamic linker will see the <font SIZE="-1">DT_FILTER</font> field. The dynamic linker will resolve symbols according to the symbol table of the filter object as usual, but it will actually link to the definitions found in the shared object <i>name</i>. Thus the filter object can be used to select a subset of the symbols provided by the object <i>name</i>. </p>
-<p> Some older linkers used the <code>-F</code> option throughout a compilation toolchain for specifying object-file format for both input and output object files. The <font SIZE="-1">GNU</font> linker uses other mechanisms for this purpose: the <code>-b</code>, <code>&#8211;format</code>, <code>&#8211;oformat</code> options, the <tt>&quot;TARGET&quot;</tt> command in linker scripts, and the <tt>&quot;GNUTARGET&quot;</tt> environment variable. The <font SIZE="-1">GNU</font> linker will ignore the <code>-F</code> option when not creating an <font SIZE="-1">ELF</font> shared object.</p>
+<dd>When creating an ELF shared object, set the internal DT_FILTER field to the specified name. This tells the dynamic linker that the symbol table of the shared object which is being created should be used as a filter on the symbol table of the shared object <i>name</i>. </dd>
+<p> If you later link a program against this filter object, then, when you run the program, the dynamic linker will see the DT_FILTER field. The dynamic linker will resolve symbols according to the symbol table of the filter object as usual, but it will actually link to the definitions found in the shared object <i>name</i>. Thus the filter object can be used to select a subset of the symbols provided by the object <i>name</i>. </p>
+<p> Some older linkers used the <code>-F</code> option throughout a compilation toolchain for specifying object-file format for both input and output object files. The GNU linker uses other mechanisms for this purpose: the <code>-b</code>, <code>&#8211;format</code>, <code>&#8211;oformat</code> options, the <tt>&quot;TARGET&quot;</tt> command in linker scripts, and the <tt>&quot;GNUTARGET&quot;</tt> environment variable. The GNU linker will ignore the <code>-F</code> option when not creating an ELF shared object.</p>
 <dt><code>-fini=</code><i>name</i></dt>
-<dd>When creating an <font SIZE="-1">ELF</font> executable or shared object, call <font SIZE="-1">NAME</font> when the executable or shared object is unloaded, by setting <font SIZE="-1">DT_FINI</font> to the address of the function. By default, the linker uses <tt>&quot;_fini&quot;</tt> as the function to call.</dd>
+<dd>When creating an ELF executable or shared object, call NAME when the executable or shared object is unloaded, by setting DT_FINI to the address of the function. By default, the linker uses <tt>&quot;_fini&quot;</tt> as the function to call.</dd>
 <dt><code>-g</code></dt>
 <dd>Ignored. Provided for compatibility with other tools.</dd>
 <dt><code>-G</code> <i>value</i></dt>
 <dd>
 </dd><dt><code>&#8211;gpsize=</code><i>value</i></dt>
-<dd>Set the maximum size of objects to be optimized using the <font SIZE="-1">GP</font> register to <i>size</i>. This is only meaningful for object file formats such as <font SIZE="-1">MIPS ELF</font> that support putting large and small objects into different sections. This is ignored for other object file formats.</dd>
+<dd>Set the maximum size of objects to be optimized using the GP register to <i>size</i>. This is only meaningful for object file formats such as MIPS ELF that support putting large and small objects into different sections. This is ignored for other object file formats.</dd>
 <dt><code>-h</code> <i>name</i></dt>
 <dd>
 </dd><dt><code>-soname=</code><i>name</i></dt>
-<dd>When creating an <font SIZE="-1">ELF</font> shared object, set the internal <font SIZE="-1">DT_SONAME</font> field to the specified name. When an executable is linked with a shared object which has a <font SIZE="-1">DT_SONAME</font> field, then when the executable is run the dynamic linker will attempt to load the shared object specified by the <font SIZE="-1">DT_SONAME</font> field rather than using the file name given to the linker.</dd>
+<dd>When creating an ELF shared object, set the internal DT_SONAME field to the specified name. When an executable is linked with a shared object which has a DT_SONAME field, then when the executable is run the dynamic linker will attempt to load the shared object specified by the DT_SONAME field rather than using the file name given to the linker.</dd>
 <dt><code>-i</code></dt>
 <dd>Perform an incremental link (same as option <code>-r</code>).</dd>
 <dt><code>-init=</code><i>name</i></dt>
-<dd>When creating an <font SIZE="-1">ELF</font> executable or shared object, call <font SIZE="-1">NAME</font> when the executable or shared object is loaded, by setting <font SIZE="-1">DT_INIT</font> to the address of the function. By default, the linker uses <tt>&quot;_init&quot;</tt> as the function to call.</dd>
+<dd>When creating an ELF executable or shared object, call NAME when the executable or shared object is loaded, by setting DT_INIT to the address of the function. By default, the linker uses <tt>&quot;_init&quot;</tt> as the function to call.</dd>
 <dt><code>-l</code> <i>namespec</i></dt>
 <dd>
 </dd><dt><code>&#8211;library=</code><i>namespec</i></dt>
 <dd>Add the archive or object file specified by <i>namespec</i> to the list of files to link. This option may be used any number of times. If <i>namespec</i> is of the form <i>:filename</i>, <code>ld</code> will search the library path for a file called <i>filename</i>, otherwise it will search the library path for a file called <i>libnamespec.a</i>. </dd>
-<p> On systems which support shared libraries, <code>ld</code> may also search for files other than <i>libnamespec.a</i>. Specifically, on <font SIZE="-1">ELF</font> and SunOS systems, <code>ld</code> will search a directory for a library called <i>libnamespec.so</i> before searching for one called <i>libnamespec.a</i>. (By convention, a <tt>&quot;.so&quot;</tt> extension indicates a shared library.) Note that this behavior does not apply to <i>:filename</i>, which always specifies a file called <i>filename</i>. </p>
+<p> On systems which support shared libraries, <code>ld</code> may also search for files other than <i>libnamespec.a</i>. Specifically, on ELF and SunOS systems, <code>ld</code> will search a directory for a library called <i>libnamespec.so</i> before searching for one called <i>libnamespec.a</i>. (By convention, a <tt>&quot;.so&quot;</tt> extension indicates a shared library.) Note that this behavior does not apply to <i>:filename</i>, which always specifies a file called <i>filename</i>. </p>
 <p> The linker will search an archive only once, at the location where it is specified on the command line. If the archive defines a symbol which was undefined in some object which appeared before the archive on the command line, the linker will include the appropriate file(s) from the archive. However, an undefined symbol in an object appearing later on the command line will not cause the linker to search the archive again. </p>
 <p> See the <code>-(</code> option for a way to force the linker to search archives multiple times. </p>
 <p> You may list the same archive multiple times on the command line. </p>
-<p> This type of archive searching is standard for Unix linkers. However, if you are using <code>ld</code> on <font SIZE="-1">AIX,</font> note that it is different from the behaviour of the <font SIZE="-1">AIX</font> linker.</p>
+<p> This type of archive searching is standard for Unix linkers. However, if you are using <code>ld</code> on AIX, note that it is different from the behaviour of the AIX linker.</p>
 <dt><code>-L</code> <i>searchdir</i></dt>
 <dd>
 </dd><dt><code>&#8211;library-path=</code><i>searchdir</i></dt>
@@ -182,7 +182,7 @@ description: "ld – The GNU linker"
  [0x0000000c] foo = (foo + 0x8)</pre>
 <p>See <code>Expressions</code> for more information about expressions in linker scripts.</p>
 <dt>&bull;</dt>
-<dd>How <font SIZE="-1">GNU</font> properties are merged. </dd>
+<dd>How GNU properties are merged. </dd>
 <p> When the linker merges input .note.gnu.property sections into one output .note.gnu.property section, some properties are removed or updated. These actions are reported in the link map. For example: </p>
 <pre> Removed property 0xc0000002 to merge foo.o (0x1) and bar.o (not found)</pre>
 <p>This indicates that property 0xc0000002 is removed from output when merging properties in <i>foo.o</i>, whose property 0xc0000002 value is 0x1, and <i>bar.o</i>, which doesn&#8217;t have property 0xc0000002. </p>
@@ -212,7 +212,7 @@ description: "ld – The GNU linker"
 <dt><code>&#8211;dependency-file=</code><i>depfile</i></dt>
 <dd>Write a <i>dependency file</i> to <i>depfile</i>. This file contains a rule suitable for <tt>&quot;make&quot;</tt> describing the output file and all the input files that were read to produce it. The output is similar to the compiler&#8217;s output with <code>-M -MP</code>. Note that there is no option like the compiler&#8217;s <code>-MM</code>, to exclude &#8220;system files&#8221; (which is not a well-specified concept in the linker, unlike &#8220;system headers&#8221; in the compiler). So the output from <code>&#8211;dependency-file</code> is always specific to the exact state of the installation where it was produced, and should not be copied into distributed makefiles without careful editing.</dd>
 <dt><code>-O</code> <i>level</i></dt>
-<dd>If <i>level</i> is a numeric values greater than zero <code>ld</code> optimizes the output. This might take significantly longer and therefore probably should only be enabled for the final binary. At the moment this option only affects <font SIZE="-1">ELF</font> shared library generation. Future releases of the linker may make more use of this option. Also currently there is no difference in the linker&#8217;s behaviour for different non-zero values of this option. Again this may change with future releases.</dd>
+<dd>If <i>level</i> is a numeric values greater than zero <code>ld</code> optimizes the output. This might take significantly longer and therefore probably should only be enabled for the final binary. At the moment this option only affects ELF shared library generation. Future releases of the linker may make more use of this option. Also currently there is no difference in the linker&#8217;s behaviour for different non-zero values of this option. Again this may change with future releases.</dd>
 <dt><code>-plugin</code> <i>name</i></dt>
 <dd>Involve a plugin in the linking process. The <i>name</i> parameter is the absolute filename of the plugin. Usually this parameter is automatically added by the complier, when using link time optimization, but users can also add their own plugins if they so wish. </dd>
 <p> Note that the location of the compiler originated plugins is different from the place where the <code>ar</code>, <code>nm</code> and <code>ranlib</code> programs search for their plugins. In order for those commands to make use of a compiler based plugin it must first be copied into the <i>${libdir}/bfd-plugins</i> directory. All gcc based linker plugins are backward compatible, so it is sufficient to just copy in the newest one.</p>
@@ -227,20 +227,20 @@ description: "ld – The GNU linker"
 <dd>
 </dd><dt><code>&#8211;emit-relocs</code></dt>
 <dd>Leave relocation sections and contents in fully linked executables. Post link analysis and optimization tools may need this information in order to perform correct modifications of executables. This results in larger executables. </dd>
-<p> This option is currently only supported on <font SIZE="-1">ELF</font> platforms.</p>
+<p> This option is currently only supported on ELF platforms.</p>
 <dt><code>&#8211;force-dynamic</code></dt>
 <dd>Force the output file to have dynamic sections. This option is specific to VxWorks targets.</dd>
 <dt><code>-r</code></dt>
 <dd>
 </dd><dt><code>&#8211;relocatable</code></dt>
-<dd>Generate relocatable output&#8212;i.e., generate an output file that can in turn serve as input to <code>ld</code>. This is often called <i>partial linking</i>. As a side effect, in environments that support standard Unix magic numbers, this option also sets the output file&#8217;s magic number to <tt>&quot;OMAGIC&quot;</tt>. If this option is not specified, an absolute file is produced. When linking C<font SIZE="-2">++</font> programs, this option <i>will not</i> resolve references to constructors; to do that, use <code>-Ur</code>. </dd>
+<dd>Generate relocatable output&#8212;i.e., generate an output file that can in turn serve as input to <code>ld</code>. This is often called <i>partial linking</i>. As a side effect, in environments that support standard Unix magic numbers, this option also sets the output file&#8217;s magic number to <tt>&quot;OMAGIC&quot;</tt>. If this option is not specified, an absolute file is produced. When linking C++ programs, this option <i>will not</i> resolve references to constructors; to do that, use <code>-Ur</code>. </dd>
 <p> When an input file does not have the same format as the output file, partial linking is only supported if that input file does not contain any relocations. Different output formats can have further restrictions; for example some <tt>&quot;a.out&quot;</tt>-based formats do not support partial linking with input files in other formats at all. </p>
 <p> This option does the same thing as <code>-i</code>.</p>
 <dt><code>-R</code> <i>filename</i></dt>
 <dd>
 </dd><dt><code>&#8211;just-symbols=</code><i>filename</i></dt>
 <dd>Read symbol names and their addresses from <i>filename</i>, but do not relocate it or include it in the output. This allows your output file to refer symbolically to absolute locations of memory defined in other programs. You may use this option more than once. </dd>
-<p> For compatibility with other <font SIZE="-1">ELF</font> linkers, if the <code>-R</code> option is followed by a directory name, rather than a file name, it is treated as the <code>-rpath</code> option.</p>
+<p> For compatibility with other ELF linkers, if the <code>-R</code> option is followed by a directory name, rather than a file name, it is treated as the <code>-rpath</code> option.</p>
 <dt><code>-s</code></dt>
 <dd>
 </dd><dt><code>&#8211;strip-all</code></dt>
@@ -274,10 +274,10 @@ description: "ld – The GNU linker"
 <dt><code>&#8211;require-defined=</code><i>symbol</i></dt>
 <dd>Require that <i>symbol</i> is defined in the output file. This option is the same as option <code>&#8211;undefined</code> except that if <i>symbol</i> is not defined in the output file then the linker will issue an error and exit. The same effect can be achieved in a linker script by using <tt>&quot;EXTERN&quot;</tt>, <tt>&quot;ASSERT&quot;</tt> and <tt>&quot;DEFINED&quot;</tt> together. This option can be used multiple times to require additional symbols.</dd>
 <dt><code>-Ur</code></dt>
-<dd>For anything other than C<font SIZE="-2">++</font> programs, this option is equivalent to <code>-r</code>: it generates relocatable output&#8212;i.e., an output file that can in turn serve as input to <code>ld</code>. When linking C<font SIZE="-2">++</font> programs, <code>-Ur</code> <i>does</i> resolve references to constructors, unlike <code>-r</code>. It does not work to use <code>-Ur</code> on files that were themselves linked with <code>-Ur</code>; once the constructor table has been built, it cannot be added to. Use <code>-Ur</code> only for the last partial link, and <code>-r</code> for the others.</dd>
-<dt><code>&#8211;orphan-handling=</code><i></i><font SIZE="-1"><i>MODE</i></font><i></i></dt>
+<dd>For anything other than C++ programs, this option is equivalent to <code>-r</code>: it generates relocatable output&#8212;i.e., an output file that can in turn serve as input to <code>ld</code>. When linking C++ programs, <code>-Ur</code> <i>does</i> resolve references to constructors, unlike <code>-r</code>. It does not work to use <code>-Ur</code> on files that were themselves linked with <code>-Ur</code>; once the constructor table has been built, it cannot be added to. Use <code>-Ur</code> only for the last partial link, and <code>-r</code> for the others.</dd>
+<dt><code>&#8211;orphan-handling=</code><i></i><i>MODE</i><i></i></dt>
 <dd>Control how orphan sections are handled. An orphan section is one not specifically mentioned in a linker script. </dd>
-<p> <i></i><font SIZE="-1"><i>MODE</i></font><i></i> can have any of the following values:</p>
+<p> <i></i><i>MODE</i><i></i> can have any of the following values:</p>
 <dl COMPACT>
 <dd>
 </dd><dl COMPACT>
@@ -292,8 +292,8 @@ description: "ld – The GNU linker"
 </dl>
 <dl COMPACT>
 <dd>The default if <code>&#8211;orphan-handling</code> is not given is <tt>&quot;place&quot;</tt>.</dd></dl>
-<dt><code>&#8211;unique[=</code><i></i><font SIZE="-1"><i>SECTION</i></font><i></i><code>]</code></dt>
-<dd>Creates a separate output section for every input section matching <i></i><font SIZE="-1"><i>SECTION</i></font><i></i>, or if the optional wildcard <i></i><font SIZE="-1"><i>SECTION</i></font><i></i> argument is missing, for every orphan input section. An orphan section is one not specifically mentioned in a linker script. You may use this option multiple times on the command line; It prevents the normal merging of input sections with the same name, overriding output section assignments in a linker script.</dd>
+<dt><code>&#8211;unique[=</code><i></i><i>SECTION</i><i></i><code>]</code></dt>
+<dd>Creates a separate output section for every input section matching <i></i><i>SECTION</i><i></i>, or if the optional wildcard <i></i><i>SECTION</i><i></i> argument is missing, for every orphan input section. An orphan section is one not specifically mentioned in a linker script. You may use this option multiple times on the command line; It prevents the normal merging of input sections with the same name, overriding output section assignments in a linker script.</dd>
 <dt><code>-v</code></dt>
 <dd>
 </dd><dt><code>&#8211;version</code></dt>
@@ -307,7 +307,7 @@ description: "ld – The GNU linker"
 <dt><code>-X</code></dt>
 <dd>
 </dd><dt><code>&#8211;discard-locals</code></dt>
-<dd>Delete all temporary local symbols. (These symbols start with system-specific local label prefixes, typically <code>.L</code> for <font SIZE="-1">ELF</font> systems or <code>L</code> for traditional a.out systems.)</dd>
+<dd>Delete all temporary local symbols. (These symbols start with system-specific local label prefixes, typically <code>.L</code> for ELF systems or <code>L</code> for traditional a.out systems.)</dd>
 <dt><code>-y</code> <i>symbol</i></dt>
 <dd>
 </dd><dt><code>&#8211;trace-symbol=</code><i>symbol</i></dt>
@@ -321,7 +321,7 @@ description: "ld – The GNU linker"
 <dd>
 </dd><dl COMPACT>
 <dt><code>bndplt</code></dt>
-<dd>Always generate <font SIZE="-1">BND</font> prefix in <font SIZE="-1">PLT</font> entries. Supported for Linux/x86_64.</dd>
+<dd>Always generate BND prefix in PLT entries. Supported for Linux/x86_64.</dd>
 <dt><code>call-nop=prefix-addr</code></dt>
 <dd>
 </dd><dt><code>call-nop=suffix-nop</code></dt>
@@ -329,13 +329,13 @@ description: "ld – The GNU linker"
 </dd><dt><code>call-nop=prefix-</code><i>byte</i></dt>
 <dd>
 </dd><dt><code>call-nop=suffix-</code><i>byte</i></dt>
-<dd>Specify the 1-byte <tt>&quot;NOP&quot;</tt> padding when transforming indirect call to a locally defined function, foo, via its <font SIZE="-1">GOT</font> slot. <code>call-nop=prefix-addr</code> generates <tt>&quot;0x67 call foo&quot;</tt>. <code>call-nop=suffix-nop</code> generates <tt>&quot;call foo 0x90&quot;</tt>. <code>call-nop=prefix-</code><i>byte</i> generates <tt>&quot;</tt>byte<tt> call foo&quot;</tt>. <code>call-nop=suffix-</code><i>byte</i> generates <tt>&quot;call foo </tt>byte<tt>&quot;</tt>. Supported for i386 and x86_64.</dd>
+<dd>Specify the 1-byte <tt>&quot;NOP&quot;</tt> padding when transforming indirect call to a locally defined function, foo, via its GOT slot. <code>call-nop=prefix-addr</code> generates <tt>&quot;0x67 call foo&quot;</tt>. <code>call-nop=suffix-nop</code> generates <tt>&quot;call foo 0x90&quot;</tt>. <code>call-nop=prefix-</code><i>byte</i> generates <tt>&quot;</tt>byte<tt> call foo&quot;</tt>. <code>call-nop=suffix-</code><i>byte</i> generates <tt>&quot;call foo </tt>byte<tt>&quot;</tt>. Supported for i386 and x86_64.</dd>
 <dt><code>cet-report=none</code></dt>
 <dd>
 </dd><dt><code>cet-report=warning</code></dt>
 <dd>
 </dd><dt><code>cet-report=error</code></dt>
-<dd>Specify how to report the missing <font SIZE="-1">GNU_PROPERTY_X86_FEATURE_1_IBT</font> and <font SIZE="-1">GNU_PROPERTY_X86_FEATURE_1_SHSTK</font> properties in input .note.gnu.property section. <code>cet-report=none</code>, which is the default, will make the linker not report missing properties in input files. <code>cet-report=warning</code> will make the linker issue a warning for missing properties in input files. <code>cet-report=error</code> will make the linker issue an error for missing properties in input files. Note that <code>ibt</code> will turn off the missing <font SIZE="-1">GNU_PROPERTY_X86_FEATURE_1_IBT</font> property report and <code>shstk</code> will turn off the missing <font SIZE="-1">GNU_PROPERTY_X86_FEATURE_1_SHSTK</font> property report. Supported for Linux/i386 and Linux/x86_64.</dd>
+<dd>Specify how to report the missing GNU_PROPERTY_X86_FEATURE_1_IBT and GNU_PROPERTY_X86_FEATURE_1_SHSTK properties in input .note.gnu.property section. <code>cet-report=none</code>, which is the default, will make the linker not report missing properties in input files. <code>cet-report=warning</code> will make the linker issue a warning for missing properties in input files. <code>cet-report=error</code> will make the linker issue an error for missing properties in input files. Note that <code>ibt</code> will turn off the missing GNU_PROPERTY_X86_FEATURE_1_IBT property report and <code>shstk</code> will turn off the missing GNU_PROPERTY_X86_FEATURE_1_SHSTK property report. Supported for Linux/i386 and Linux/x86_64.</dd>
 <dt><code>combreloc</code></dt>
 <dd>
 </dd><dt><code>nocombreloc</code></dt>
@@ -343,7 +343,7 @@ description: "ld – The GNU linker"
 <dt><code>common</code></dt>
 <dd>
 </dd><dt><code>nocommon</code></dt>
-<dd>Generate common symbols with <font SIZE="-1">STT_COMMON</font> type during a relocatable link. Use <font SIZE="-1">STT_OBJECT</font> type if <code>nocommon</code>.</dd>
+<dd>Generate common symbols with STT_COMMON type during a relocatable link. Use STT_OBJECT type if <code>nocommon</code>.</dd>
 <dt><code>common-page-size=</code><i>value</i></dt>
 <dd>Set the page size most commonly used to <i>value</i>. Memory image layout will be optimized to minimize memory pages if the system is using pages of this size.</dd>
 <dt><code>defs</code></dt>
@@ -359,14 +359,14 @@ description: "ld – The GNU linker"
 <dt><code>globalaudit</code></dt>
 <dd>This option is only meaningful when building a dynamic executable. This option marks the executable as requiring global auditing by setting the <tt>&quot;DF_1_GLOBAUDIT&quot;</tt> bit in the <tt>&quot;DT_FLAGS_1&quot;</tt> dynamic tag. Global auditing requires that any auditing library defined via the <code>&#8211;depaudit</code> or <code>-P</code> command-line options be run for all dynamic objects loaded by the application.</dd>
 <dt><code>ibtplt</code></dt>
-<dd>Generate Intel Indirect Branch Tracking (<font SIZE="-1">IBT</font>) enabled <font SIZE="-1">PLT</font> entries. Supported for Linux/i386 and Linux/x86_64.</dd>
+<dd>Generate Intel Indirect Branch Tracking (IBT) enabled PLT entries. Supported for Linux/i386 and Linux/x86_64.</dd>
 <dt><code>ibt</code></dt>
-<dd>Generate <font SIZE="-1">GNU_PROPERTY_X86_FEATURE_1_IBT</font> in .note.gnu.property section to indicate compatibility with <font SIZE="-1">IBT.</font> This also implies <code>ibtplt</code>. Supported for Linux/i386 and Linux/x86_64.</dd>
+<dd>Generate GNU_PROPERTY_X86_FEATURE_1_IBT in .note.gnu.property section to indicate compatibility with IBT. This also implies <code>ibtplt</code>. Supported for Linux/i386 and Linux/x86_64.</dd>
 <dt><code>indirect-extern-access</code></dt>
 <dd>
 </dd><dt><code>noindirect-extern-access</code></dt>
-<dd>Generate <font SIZE="-1">GNU_PROPERTY_1_NEEDED_INDIRECT_EXTERN_ACCESS</font> in .note.gnu.property section to indicate that object file requires canonical function pointers and cannot be used with copy relocation. This option also implies <code>noextern-protected-data</code> and <code>nocopyreloc</code>. Supported for i386 and x86-64. </dd>
-<p> <code>noindirect-extern-access</code> removes <font SIZE="-1">GNU_PROPERTY_1_NEEDED_INDIRECT_EXTERN_ACCESS</font> from .note.gnu.property section.</p>
+<dd>Generate GNU_PROPERTY_1_NEEDED_INDIRECT_EXTERN_ACCESS in .note.gnu.property section to indicate that object file requires canonical function pointers and cannot be used with copy relocation. This option also implies <code>noextern-protected-data</code> and <code>nocopyreloc</code>. Supported for i386 and x86-64. </dd>
+<p> <code>noindirect-extern-access</code> removes GNU_PROPERTY_1_NEEDED_INDIRECT_EXTERN_ACCESS from .note.gnu.property section.</p>
 <dt><code>initfirst</code></dt>
 <dd>This option is only meaningful when building a shared object. It marks the object so that its runtime initialization will occur before the runtime initialization of any other objects brought into the process at the same time. Similarly the runtime finalization of the object will occur after the runtime finalization of any other objects.</dd>
 <dt><code>interpose</code></dt>
@@ -374,29 +374,29 @@ description: "ld – The GNU linker"
 <dt><code>unique</code></dt>
 <dd>
 </dd><dt><code>nounique</code></dt>
-<dd>When generating a shared library or other dynamically loadable <font SIZE="-1">ELF</font> object mark it as one that should (by default) only ever be loaded once, and only in the main namespace (when using <tt>&quot;dlmopen&quot;</tt>). This is primarily used to mark fundamental libraries such as libc, libpthread et al which do not usually function correctly unless they are the sole instances of themselves. This behaviour can be overridden by the <tt>&quot;dlmopen&quot;</tt> caller and does not apply to certain loading mechanisms (such as audit libraries).</dd>
+<dd>When generating a shared library or other dynamically loadable ELF object mark it as one that should (by default) only ever be loaded once, and only in the main namespace (when using <tt>&quot;dlmopen&quot;</tt>). This is primarily used to mark fundamental libraries such as libc, libpthread et al which do not usually function correctly unless they are the sole instances of themselves. This behaviour can be overridden by the <tt>&quot;dlmopen&quot;</tt> caller and does not apply to certain loading mechanisms (such as audit libraries).</dd>
 <dt><code>lam-u48</code></dt>
-<dd>Generate <font SIZE="-1">GNU_PROPERTY_X86_FEATURE_1_LAM_U48</font> in .note.gnu.property section to indicate compatibility with Intel <font SIZE="-1">LAM_U48.</font> Supported for Linux/x86_64.</dd>
+<dd>Generate GNU_PROPERTY_X86_FEATURE_1_LAM_U48 in .note.gnu.property section to indicate compatibility with Intel LAM_U48. Supported for Linux/x86_64.</dd>
 <dt><code>lam-u57</code></dt>
-<dd>Generate <font SIZE="-1">GNU_PROPERTY_X86_FEATURE_1_LAM_U57</font> in .note.gnu.property section to indicate compatibility with Intel <font SIZE="-1">LAM_U57.</font> Supported for Linux/x86_64.</dd>
+<dd>Generate GNU_PROPERTY_X86_FEATURE_1_LAM_U57 in .note.gnu.property section to indicate compatibility with Intel LAM_U57. Supported for Linux/x86_64.</dd>
 <dt><code>lam-u48-report=none</code></dt>
 <dd>
 </dd><dt><code>lam-u48-report=warning</code></dt>
 <dd>
 </dd><dt><code>lam-u48-report=error</code></dt>
-<dd>Specify how to report the missing <font SIZE="-1">GNU_PROPERTY_X86_FEATURE_1_LAM_U48</font> property in input .note.gnu.property section. <code>lam-u48-report=none</code>, which is the default, will make the linker not report missing properties in input files. <code>lam-u48-report=warning</code> will make the linker issue a warning for missing properties in input files. <code>lam-u48-report=error</code> will make the linker issue an error for missing properties in input files. Supported for Linux/x86_64.</dd>
+<dd>Specify how to report the missing GNU_PROPERTY_X86_FEATURE_1_LAM_U48 property in input .note.gnu.property section. <code>lam-u48-report=none</code>, which is the default, will make the linker not report missing properties in input files. <code>lam-u48-report=warning</code> will make the linker issue a warning for missing properties in input files. <code>lam-u48-report=error</code> will make the linker issue an error for missing properties in input files. Supported for Linux/x86_64.</dd>
 <dt><code>lam-u57-report=none</code></dt>
 <dd>
 </dd><dt><code>lam-u57-report=warning</code></dt>
 <dd>
 </dd><dt><code>lam-u57-report=error</code></dt>
-<dd>Specify how to report the missing <font SIZE="-1">GNU_PROPERTY_X86_FEATURE_1_LAM_U57</font> property in input .note.gnu.property section. <code>lam-u57-report=none</code>, which is the default, will make the linker not report missing properties in input files. <code>lam-u57-report=warning</code> will make the linker issue a warning for missing properties in input files. <code>lam-u57-report=error</code> will make the linker issue an error for missing properties in input files. Supported for Linux/x86_64.</dd>
+<dd>Specify how to report the missing GNU_PROPERTY_X86_FEATURE_1_LAM_U57 property in input .note.gnu.property section. <code>lam-u57-report=none</code>, which is the default, will make the linker not report missing properties in input files. <code>lam-u57-report=warning</code> will make the linker issue a warning for missing properties in input files. <code>lam-u57-report=error</code> will make the linker issue an error for missing properties in input files. Supported for Linux/x86_64.</dd>
 <dt><code>lam-report=none</code></dt>
 <dd>
 </dd><dt><code>lam-report=warning</code></dt>
 <dd>
 </dd><dt><code>lam-report=error</code></dt>
-<dd>Specify how to report the missing <font SIZE="-1">GNU_PROPERTY_X86_FEATURE_1_LAM_U48</font> and <font SIZE="-1">GNU_PROPERTY_X86_FEATURE_1_LAM_U57</font> properties in input .note.gnu.property section. <code>lam-report=none</code>, which is the default, will make the linker not report missing properties in input files. <code>lam-report=warning</code> will make the linker issue a warning for missing properties in input files. <code>lam-report=error</code> will make the linker issue an error for missing properties in input files. Supported for Linux/x86_64.</dd>
+<dd>Specify how to report the missing GNU_PROPERTY_X86_FEATURE_1_LAM_U48 and GNU_PROPERTY_X86_FEATURE_1_LAM_U57 properties in input .note.gnu.property section. <code>lam-report=none</code>, which is the default, will make the linker not report missing properties in input files. <code>lam-report=warning</code> will make the linker issue a warning for missing properties in input files. <code>lam-report=error</code> will make the linker issue an error for missing properties in input files. Supported for Linux/x86_64.</dd>
 <dt><code>lazy</code></dt>
 <dd>When generating an executable or shared library, mark it to tell the dynamic linker to defer function call resolution to the point when the function is called (lazy binding), rather than at load time. Lazy binding is the default.</dd>
 <dt><code>loadfltr</code></dt>
@@ -428,11 +428,11 @@ description: "ld – The GNU linker"
 <dt><code>pack-relative-relocs</code></dt>
 <dd>
 </dd><dt><code>nopack-relative-relocs</code></dt>
-<dd>Generate compact relative relocation in position-independent executable and shared library. It adds <tt>&quot;DT_RELR&quot;</tt>, <tt>&quot;DT_RELRSZ&quot;</tt> and <tt>&quot;DT_RELRENT&quot;</tt> entries to the dynamic section. It is ignored when building position-dependent executable and relocatable output. <code>nopack-relative-relocs</code> is the default, which disables compact relative relocation. When linked against the <font SIZE="-1">GNU C</font> Library, a <font SIZE="-1">GLIBC_ABI_DT_RELR</font> symbol version dependency on the shared C Library is added to the output. Supported for i386 and x86-64.</dd>
+<dd>Generate compact relative relocation in position-independent executable and shared library. It adds <tt>&quot;DT_RELR&quot;</tt>, <tt>&quot;DT_RELRSZ&quot;</tt> and <tt>&quot;DT_RELRENT&quot;</tt> entries to the dynamic section. It is ignored when building position-dependent executable and relocatable output. <code>nopack-relative-relocs</code> is the default, which disables compact relative relocation. When linked against the GNU C Library, a GLIBC_ABI_DT_RELR symbol version dependency on the shared C Library is added to the output. Supported for i386 and x86-64.</dd>
 <dt><code>relro</code></dt>
 <dd>
 </dd><dt><code>norelro</code></dt>
-<dd>Create an <font SIZE="-1">ELF</font> <tt>&quot;PT_GNU_RELRO&quot;</tt> segment header in the object. This specifies a memory segment that should be made read-only after relocation, if supported. Specifying <code>common-page-size</code> smaller than the system page size will render this protection ineffective. Don&#8217;t create an <font SIZE="-1">ELF</font> <tt>&quot;PT_GNU_RELRO&quot;</tt> segment if <code>norelro</code>.</dd>
+<dd>Create an ELF <tt>&quot;PT_GNU_RELRO&quot;</tt> segment header in the object. This specifies a memory segment that should be made read-only after relocation, if supported. Specifying <code>common-page-size</code> smaller than the system page size will render this protection ineffective. Don&#8217;t create an ELF <tt>&quot;PT_GNU_RELRO&quot;</tt> segment if <code>norelro</code>.</dd>
 <dt><code>report-relative-reloc</code></dt>
 <dd>Report dynamic relative relocations generated by linker. Supported for Linux/i386 and Linux/x86_64.</dd>
 <dt><code>separate-code</code></dt>
@@ -440,21 +440,21 @@ description: "ld – The GNU linker"
 </dd><dt><code>noseparate-code</code></dt>
 <dd>Create separate code <tt>&quot;PT_LOAD&quot;</tt> segment header in the object. This specifies a memory segment that should contain only instructions and must be in wholly disjoint pages from any other data. Don&#8217;t create separate code <tt>&quot;PT_LOAD&quot;</tt> segment if <code>noseparate-code</code> is used.</dd>
 <dt><code>shstk</code></dt>
-<dd>Generate <font SIZE="-1">GNU_PROPERTY_X86_FEATURE_1_SHSTK</font> in .note.gnu.property section to indicate compatibility with Intel Shadow Stack. Supported for Linux/i386 and Linux/x86_64.</dd>
+<dd>Generate GNU_PROPERTY_X86_FEATURE_1_SHSTK in .note.gnu.property section to indicate compatibility with Intel Shadow Stack. Supported for Linux/i386 and Linux/x86_64.</dd>
 <dt><code>stack-size=</code><i>value</i></dt>
-<dd>Specify a stack size for an <font SIZE="-1">ELF</font> <tt>&quot;PT_GNU_STACK&quot;</tt> segment. Specifying zero will override any default non-zero sized <tt>&quot;PT_GNU_STACK&quot;</tt> segment creation.</dd>
+<dd>Specify a stack size for an ELF <tt>&quot;PT_GNU_STACK&quot;</tt> segment. Specifying zero will override any default non-zero sized <tt>&quot;PT_GNU_STACK&quot;</tt> segment creation.</dd>
 <dt><code>start-stop-gc</code></dt>
 <dd>
 </dd><dt><code>nostart-stop-gc</code></dt>
 <dd>When <code>&#8211;gc-sections</code> is in effect, a reference from a retained section to <tt>&quot;__start_SECNAME&quot;</tt> or <tt>&quot;__stop_SECNAME&quot;</tt> causes all input sections named <tt>&quot;SECNAME&quot;</tt> to also be retained, if <tt>&quot;SECNAME&quot;</tt> is representable as a C identifier and either <tt>&quot;__start_SECNAME&quot;</tt> or <tt>&quot;__stop_SECNAME&quot;</tt> is synthesized by the linker. <code>-z start-stop-gc</code> disables this effect, allowing sections to be garbage collected as if the special synthesized symbols were not defined. <code>-z start-stop-gc</code> has no effect on a definition of <tt>&quot;__start_SECNAME&quot;</tt> or <tt>&quot;__stop_SECNAME&quot;</tt> in an object file or linker script. Such a definition will prevent the linker providing a synthesized <tt>&quot;__start_SECNAME&quot;</tt> or <tt>&quot;__stop_SECNAME&quot;</tt> respectively, and therefore the special treatment by garbage collection for those references.</dd>
 <dt><code>start-stop-visibility=</code><i>value</i></dt>
-<dd>Specify the <font SIZE="-1">ELF</font> symbol visibility for synthesized <tt>&quot;__start_SECNAME&quot;</tt> and <tt>&quot;__stop_SECNAME&quot;</tt> symbols. <i>value</i> must be exactly <code>default</code>, <code>internal</code>, <code>hidden</code>, or <code>protected</code>. If no <code>-z start-stop-visibility</code> option is given, <code>protected</code> is used for compatibility with historical practice. However, it&#8217;s highly recommended to use <code>-z start-stop-visibility=hidden</code> in new programs and shared libraries so that these symbols are not exported between shared objects, which is not usually what&#8217;s intended.</dd>
+<dd>Specify the ELF symbol visibility for synthesized <tt>&quot;__start_SECNAME&quot;</tt> and <tt>&quot;__stop_SECNAME&quot;</tt> symbols. <i>value</i> must be exactly <code>default</code>, <code>internal</code>, <code>hidden</code>, or <code>protected</code>. If no <code>-z start-stop-visibility</code> option is given, <code>protected</code> is used for compatibility with historical practice. However, it&#8217;s highly recommended to use <code>-z start-stop-visibility=hidden</code> in new programs and shared libraries so that these symbols are not exported between shared objects, which is not usually what&#8217;s intended.</dd>
 <dt><code>text</code></dt>
 <dd>
 </dd><dt><code>notext</code></dt>
 <dd>
 </dd><dt><code>textoff</code></dt>
-<dd>Report an error if <font SIZE="-1">DT_TEXTREL</font> is set, i.e., if the position-independent or shared object has dynamic relocations in read-only sections. Don&#8217;t report an error if <code>notext</code> or <code>textoff</code>.</dd>
+<dd>Report an error if DT_TEXTREL is set, i.e., if the position-independent or shared object has dynamic relocations in read-only sections. Don&#8217;t report an error if <code>notext</code> or <code>textoff</code>.</dd>
 <dt><code>undefs</code></dt>
 <dd>Do not report unresolved symbol references from regular object files, either when creating an executable, or when creating a shared library. This option is the inverse of <code>-z defs</code>.</dd>
 <dt><code>unique-symbol</code></dt>
@@ -468,7 +468,7 @@ description: "ld – The GNU linker"
 </dd><dt><code>x86-64-v3</code></dt>
 <dd>
 </dd><dt><code>x86-64-v4</code></dt>
-<dd>Specify the x86-64 <font SIZE="-1">ISA</font> level needed in .note.gnu.property section. <code>x86-64-baseline</code> generates <tt>&quot;GNU_PROPERTY_X86_ISA_1_BASELINE&quot;</tt>. <code>x86-64-v2</code> generates <tt>&quot;GNU_PROPERTY_X86_ISA_1_V2&quot;</tt>. <code>x86-64-v3</code> generates <tt>&quot;GNU_PROPERTY_X86_ISA_1_V3&quot;</tt>. <code>x86-64-v4</code> generates <tt>&quot;GNU_PROPERTY_X86_ISA_1_V4&quot;</tt>. Supported for Linux/i386 and Linux/x86_64.</dd></dl>
+<dd>Specify the x86-64 ISA level needed in .note.gnu.property section. <code>x86-64-baseline</code> generates <tt>&quot;GNU_PROPERTY_X86_ISA_1_BASELINE&quot;</tt>. <code>x86-64-v2</code> generates <tt>&quot;GNU_PROPERTY_X86_ISA_1_V2&quot;</tt>. <code>x86-64-v3</code> generates <tt>&quot;GNU_PROPERTY_X86_ISA_1_V3&quot;</tt>. <code>x86-64-v4</code> generates <tt>&quot;GNU_PROPERTY_X86_ISA_1_V4&quot;</tt>. Supported for Linux/i386 and Linux/x86_64.</dd></dl>
 </dl>
 <dl COMPACT>
 <dd>Other keywords are ignored for Solaris compatibility.</dd></dl>
@@ -485,7 +485,7 @@ description: "ld – The GNU linker"
 <dt><code>&#8211;as-needed</code></dt>
 <dd>
 </dd><dt><code>&#8211;no-as-needed</code></dt>
-<dd>This option affects <font SIZE="-1">ELF DT_NEEDED</font> tags for dynamic libraries mentioned on the command line after the <code>&#8211;as-needed</code> option. Normally the linker will add a <font SIZE="-1">DT_NEEDED</font> tag for each dynamic library mentioned on the command line, regardless of whether the library is actually needed or not. <code>&#8211;as-needed</code> causes a <font SIZE="-1">DT_NEEDED</font> tag to only be emitted for a library that <i>at that point in the link</i> satisfies a non-weak undefined symbol reference from a regular object file or, if the library is not found in the <font SIZE="-1">DT_NEEDED</font> lists of other needed libraries, a non-weak undefined symbol reference from another needed dynamic library. Object files or libraries appearing on the command line <i>after</i> the library in question do not affect whether the library is seen as needed. This is similar to the rules for extraction of object files from archives. <code>&#8211;no-as-needed</code> restores the default behaviour. </dd>
+<dd>This option affects ELF DT_NEEDED tags for dynamic libraries mentioned on the command line after the <code>&#8211;as-needed</code> option. Normally the linker will add a DT_NEEDED tag for each dynamic library mentioned on the command line, regardless of whether the library is actually needed or not. <code>&#8211;as-needed</code> causes a DT_NEEDED tag to only be emitted for a library that <i>at that point in the link</i> satisfies a non-weak undefined symbol reference from a regular object file or, if the library is not found in the DT_NEEDED lists of other needed libraries, a non-weak undefined symbol reference from another needed dynamic library. Object files or libraries appearing on the command line <i>after</i> the library in question do not affect whether the library is seen as needed. This is similar to the rules for extraction of object files from archives. <code>&#8211;no-as-needed</code> restores the default behaviour. </dd>
 <p> Note: On Linux based systems the <code>&#8211;as-needed</code> option also has an affect on the behaviour of the <code>&#8211;rpath</code> and <code>&#8211;rpath-link</code> options. See the description of <code>&#8211;rpath-link</code> for more details.</p>
 <dt><code>&#8211;add-needed</code></dt>
 <dd>
@@ -500,7 +500,7 @@ description: "ld – The GNU linker"
 </dd><dt><code>-call_shared</code></dt>
 <dd>Link against dynamic libraries. This is only meaningful on platforms for which shared libraries are supported. This option is normally the default on such platforms. The different variants of this option are for compatibility with various systems. You may use this option multiple times on the command line: it affects library searching for <code>-l</code> options which follow it.</dd>
 <dt><code>-Bgroup</code></dt>
-<dd>Set the <tt>&quot;DF_1_GROUP&quot;</tt> flag in the <tt>&quot;DT_FLAGS_1&quot;</tt> entry in the dynamic section. This causes the runtime linker to handle lookups in this object and its dependencies to be performed only inside the group. <code>&#8211;unresolved-symbols=report-all</code> is implied. This option is only meaningful on <font SIZE="-1">ELF</font> platforms which support shared libraries.</dd>
+<dd>Set the <tt>&quot;DF_1_GROUP&quot;</tt> flag in the <tt>&quot;DT_FLAGS_1&quot;</tt> entry in the dynamic section. This causes the runtime linker to handle lookups in this object and its dependencies to be performed only inside the group. <code>&#8211;unresolved-symbols=report-all</code> is implied. This option is only meaningful on ELF platforms which support shared libraries.</dd>
 <dt><code>-Bstatic</code></dt>
 <dd>
 </dd><dt><code>-dn</code></dt>
@@ -510,20 +510,20 @@ description: "ld – The GNU linker"
 </dd><dt><code>-static</code></dt>
 <dd>Do not link against shared libraries. This is only meaningful on platforms for which shared libraries are supported. The different variants of this option are for compatibility with various systems. You may use this option multiple times on the command line: it affects library searching for <code>-l</code> options which follow it. This option also implies <code>&#8211;unresolved-symbols=report-all</code>. This option can be used with <code>-shared</code>. Doing so means that a shared library is being created but that all of the library&#8217;s external references must be resolved by pulling in entries from static libraries.</dd>
 <dt><code>-Bsymbolic</code></dt>
-<dd>When creating a shared library, bind references to global symbols to the definition within the shared library, if any. Normally, it is possible for a program linked against a shared library to override the definition within the shared library. This option is only meaningful on <font SIZE="-1">ELF</font> platforms which support shared libraries.</dd>
+<dd>When creating a shared library, bind references to global symbols to the definition within the shared library, if any. Normally, it is possible for a program linked against a shared library to override the definition within the shared library. This option is only meaningful on ELF platforms which support shared libraries.</dd>
 <dt><code>-Bsymbolic-functions</code></dt>
-<dd>When creating a shared library, bind references to global function symbols to the definition within the shared library, if any. This option is only meaningful on <font SIZE="-1">ELF</font> platforms which support shared libraries.</dd>
+<dd>When creating a shared library, bind references to global function symbols to the definition within the shared library, if any. This option is only meaningful on ELF platforms which support shared libraries.</dd>
 <dt><code>-Bno-symbolic</code></dt>
 <dd>This option can cancel previously specified <code>-Bsymbolic</code> and <code>-Bsymbolic-functions</code>.</dd>
 <dt><code>&#8211;dynamic-list=</code><i>dynamic-list-file</i></dt>
-<dd>Specify the name of a dynamic list file to the linker. This is typically used when creating shared libraries to specify a list of global symbols whose references shouldn&#8217;t be bound to the definition within the shared library, or creating dynamically linked executables to specify a list of symbols which should be added to the symbol table in the executable. This option is only meaningful on <font SIZE="-1">ELF</font> platforms which support shared libraries. </dd>
-<p> The format of the dynamic list is the same as the version node without scope and node name. See <font SIZE="-1"><code>VERSION</code></font> for more information.</p>
+<dd>Specify the name of a dynamic list file to the linker. This is typically used when creating shared libraries to specify a list of global symbols whose references shouldn&#8217;t be bound to the definition within the shared library, or creating dynamically linked executables to specify a list of symbols which should be added to the symbol table in the executable. This option is only meaningful on ELF platforms which support shared libraries. </dd>
+<p> The format of the dynamic list is the same as the version node without scope and node name. See <code>VERSION</code> for more information.</p>
 <dt><code>&#8211;dynamic-list-data</code></dt>
 <dd>Include all global data symbols to the dynamic list.</dd>
 <dt><code>&#8211;dynamic-list-cpp-new</code></dt>
-<dd>Provide the builtin dynamic list for C<font SIZE="-2">++</font> operator new and delete. It is mainly useful for building shared libstdc++.</dd>
+<dd>Provide the builtin dynamic list for C++ operator new and delete. It is mainly useful for building shared libstdc++.</dd>
 <dt><code>&#8211;dynamic-list-cpp-typeinfo</code></dt>
-<dd>Provide the builtin dynamic list for C<font SIZE="-2">++</font> runtime type identification.</dd>
+<dd>Provide the builtin dynamic list for C++ runtime type identification.</dd>
 <dt><code>&#8211;check-sections</code></dt>
 <dd>
 </dd><dt><code>&#8211;no-check-sections</code></dt>
@@ -531,24 +531,24 @@ description: "ld – The GNU linker"
 <dt><code>&#8211;copy-dt-needed-entries</code></dt>
 <dd>
 </dd><dt><code>&#8211;no-copy-dt-needed-entries</code></dt>
-<dd>This option affects the treatment of dynamic libraries referred to by <font SIZE="-1">DT_NEEDED</font> tags <i>inside</i> <font SIZE="-1">ELF</font> dynamic libraries mentioned on the command line. Normally the linker won&#8217;t add a <font SIZE="-1">DT_NEEDED</font> tag to the output binary for each library mentioned in a <font SIZE="-1">DT_NEEDED</font> tag in an input dynamic library. With <code>&#8211;copy-dt-needed-entries</code> specified on the command line however any dynamic libraries that follow it will have their <font SIZE="-1">DT_NEEDED</font> entries added. The default behaviour can be restored with <code>&#8211;no-copy-dt-needed-entries</code>. </dd>
-<p> This option also has an effect on the resolution of symbols in dynamic libraries. With <code>&#8211;copy-dt-needed-entries</code> dynamic libraries mentioned on the command line will be recursively searched, following their <font SIZE="-1">DT_NEEDED</font> tags to other libraries, in order to resolve symbols required by the output binary. With the default setting however the searching of dynamic libraries that follow it will stop with the dynamic library itself. No <font SIZE="-1">DT_NEEDED</font> links will be traversed to resolve symbols.</p>
+<dd>This option affects the treatment of dynamic libraries referred to by DT_NEEDED tags <i>inside</i> ELF dynamic libraries mentioned on the command line. Normally the linker won&#8217;t add a DT_NEEDED tag to the output binary for each library mentioned in a DT_NEEDED tag in an input dynamic library. With <code>&#8211;copy-dt-needed-entries</code> specified on the command line however any dynamic libraries that follow it will have their DT_NEEDED entries added. The default behaviour can be restored with <code>&#8211;no-copy-dt-needed-entries</code>. </dd>
+<p> This option also has an effect on the resolution of symbols in dynamic libraries. With <code>&#8211;copy-dt-needed-entries</code> dynamic libraries mentioned on the command line will be recursively searched, following their DT_NEEDED tags to other libraries, in order to resolve symbols required by the output binary. With the default setting however the searching of dynamic libraries that follow it will stop with the dynamic library itself. No DT_NEEDED links will be traversed to resolve symbols.</p>
 <dt><code>&#8211;cref</code></dt>
 <dd>Output a cross reference table. If a linker map file is being generated, the cross reference table is printed to the map file. Otherwise, it is printed on the standard output. </dd>
 <p> The format of the table is intentionally simple, so that it may be easily processed by a script if necessary. The symbols are printed out, sorted by name. For each symbol, a list of file names is given. If the symbol is defined, the first file listed is the location of the definition. If the symbol is defined as a common value then any files where this happens appear next. Finally any files that reference the symbol are listed.</p>
 <dt><code>&#8211;ctf-variables</code></dt>
 <dd>
 </dd><dt><code>&#8211;no-ctf-variables</code></dt>
-<dd>The <font SIZE="-1">CTF</font> debuginfo format supports a section which encodes the names and types of variables found in the program which do not appear in any symbol table. These variables clearly cannot be looked up by address by conventional debuggers, so the space used for their types and names is usually wasted: the types are usually small but the names are often not. <code>&#8211;ctf-variables</code> causes the generation of such a section. The default behaviour can be restored with <code>&#8211;no-ctf-variables</code>.</dd>
+<dd>The CTF debuginfo format supports a section which encodes the names and types of variables found in the program which do not appear in any symbol table. These variables clearly cannot be looked up by address by conventional debuggers, so the space used for their types and names is usually wasted: the types are usually small but the names are often not. <code>&#8211;ctf-variables</code> causes the generation of such a section. The default behaviour can be restored with <code>&#8211;no-ctf-variables</code>.</dd>
 <dt><code>&#8211;ctf-share-types=</code><i>method</i></dt>
-<dd>Adjust the method used to share types between translation units in <font SIZE="-1">CTF.</font></dd>
+<dd>Adjust the method used to share types between translation units in CTF.</dd>
 <dl COMPACT>
 <dd>
 </dd><dl COMPACT>
 <dt><code>share-unconflicted</code></dt>
 <dd>Put all types that do not have ambiguous definitions into the shared dictionary, where debuggers can easily access them, even if they only occur in one translation unit. This is the default.</dd>
 <dt><code>share-duplicated</code></dt>
-<dd>Put only types that occur in multiple translation units into the shared dictionary: types with only one definition go into per-translation-unit dictionaries. Types with ambiguous definitions in multiple translation units always go into per-translation-unit dictionaries. This tends to make the <font SIZE="-1">CTF</font> larger, but may reduce the amount of <font SIZE="-1">CTF</font> in the shared dictionary. For very large projects this may speed up opening the <font SIZE="-1">CTF</font> and save memory in the <font SIZE="-1">CTF</font> consumer at runtime.</dd></dl>
+<dd>Put only types that occur in multiple translation units into the shared dictionary: types with only one definition go into per-translation-unit dictionaries. Types with ambiguous definitions in multiple translation units always go into per-translation-unit dictionaries. This tends to make the CTF larger, but may reduce the amount of CTF in the shared dictionary. For very large projects this may speed up opening the CTF and save memory in the CTF consumer at runtime.</dd></dl>
 </dl>
 <dl COMPACT>
 <dd></dd></dl>
@@ -563,15 +563,15 @@ description: "ld – The GNU linker"
 <dt><code>&#8211;demangle[=</code><i>style</i><code>]</code></dt>
 <dd>
 </dd><dt><code>&#8211;no-demangle</code></dt>
-<dd>These options control whether to demangle symbol names in error messages and other output. When the linker is told to demangle, it tries to present symbol names in a readable fashion: it strips leading underscores if they are used by the object file format, and converts C<font SIZE="-2">++</font> mangled symbol names into user readable names. Different compilers have different mangling styles. The optional demangling style argument can be used to choose an appropriate demangling style for your compiler. The linker will demangle by default unless the environment variable <font SIZE="-1"><code>COLLECT_NO_DEMANGLE</code></font> is set. These options may be used to override the default.</dd>
+<dd>These options control whether to demangle symbol names in error messages and other output. When the linker is told to demangle, it tries to present symbol names in a readable fashion: it strips leading underscores if they are used by the object file format, and converts C++ mangled symbol names into user readable names. Different compilers have different mangling styles. The optional demangling style argument can be used to choose an appropriate demangling style for your compiler. The linker will demangle by default unless the environment variable <code>COLLECT_NO_DEMANGLE</code> is set. These options may be used to override the default.</dd>
 <dt><code>-I</code><i>file</i></dt>
 <dd>
 </dd><dt><code>&#8211;dynamic-linker=</code><i>file</i></dt>
-<dd>Set the name of the dynamic linker. This is only meaningful when generating dynamically linked <font SIZE="-1">ELF</font> executables. The default dynamic linker is normally correct; don&#8217;t use this unless you know what you are doing.</dd>
+<dd>Set the name of the dynamic linker. This is only meaningful when generating dynamically linked ELF executables. The default dynamic linker is normally correct; don&#8217;t use this unless you know what you are doing.</dd>
 <dt><code>&#8211;no-dynamic-linker</code></dt>
-<dd>When producing an executable file, omit the request for a dynamic linker to be used at load-time. This is only meaningful for <font SIZE="-1">ELF</font> executables that contain dynamic relocations, and usually requires entry point code that is capable of processing these relocations.</dd>
+<dd>When producing an executable file, omit the request for a dynamic linker to be used at load-time. This is only meaningful for ELF executables that contain dynamic relocations, and usually requires entry point code that is capable of processing these relocations.</dd>
 <dt><code>&#8211;embedded-relocs</code></dt>
-<dd>This option is similar to the <code>&#8211;emit-relocs</code> option except that the relocs are stored in a target-specific section. This option is only supported by the <font SIZE="-1"><code>BFIN</code></font>, <font SIZE="-1"><code>CR16</code></font> and <i>M68K</i> targets.</dd>
+<dd>This option is similar to the <code>&#8211;emit-relocs</code> option except that the relocs are stored in a target-specific section. This option is only supported by the <code>BFIN</code>, <code>CR16</code> and <i>M68K</i> targets.</dd>
 <dt><code>&#8211;disable-multiple-abs-defs</code></dt>
 <dd>Do not allow multiple definitions with symbols included in filename invoked by -R or &#8211;just-symbols</dd>
 <dt><code>&#8211;fatal-warnings</code></dt>
@@ -584,20 +584,20 @@ description: "ld – The GNU linker"
 <dt><code>&#8211;gc-sections</code></dt>
 <dd>
 </dd><dt><code>&#8211;no-gc-sections</code></dt>
-<dd>Enable garbage collection of unused input sections. It is ignored on targets that do not support this option. The default behaviour (of not performing this garbage collection) can be restored by specifying <code>&#8211;no-gc-sections</code> on the command line. Note that garbage collection for <font SIZE="-1">COFF</font> and <font SIZE="-1">PE</font> format targets is supported, but the implementation is currently considered to be experimental. </dd>
+<dd>Enable garbage collection of unused input sections. It is ignored on targets that do not support this option. The default behaviour (of not performing this garbage collection) can be restored by specifying <code>&#8211;no-gc-sections</code> on the command line. Note that garbage collection for COFF and PE format targets is supported, but the implementation is currently considered to be experimental. </dd>
 <p> <code>&#8211;gc-sections</code> decides which input sections are used by examining symbols and relocations. The section containing the entry symbol and all sections containing symbols undefined on the command-line will be kept, as will sections containing symbols referenced by dynamic objects. Note that when building shared libraries, the linker must assume that any visible symbol is referenced. Once this initial set of sections has been determined, the linker recursively marks as used any section referenced by their relocations. See <code>&#8211;entry</code>, <code>&#8211;undefined</code>, and <code>&#8211;gc-keep-exported</code>. </p>
 <p> This option can be set when doing a partial link (enabled with option <code>-r</code>). In this case the root of symbols kept must be explicitly specified either by one of the options <code>&#8211;entry</code>, <code>&#8211;undefined</code>, or <code>&#8211;gc-keep-exported</code> or by a <tt>&quot;ENTRY&quot;</tt> command in the linker script. </p>
-<p> As a <font SIZE="-1">GNU</font> extension, <font SIZE="-1">ELF</font> input sections marked with the <tt>&quot;SHF_GNU_RETAIN&quot;</tt> flag will not be garbage collected.</p>
+<p> As a GNU extension, ELF input sections marked with the <tt>&quot;SHF_GNU_RETAIN&quot;</tt> flag will not be garbage collected.</p>
 <dt><code>&#8211;print-gc-sections</code></dt>
 <dd>
 </dd><dt><code>&#8211;no-print-gc-sections</code></dt>
 <dd>List all sections removed by garbage collection. The listing is printed on stderr. This option is only effective if garbage collection has been enabled via the <code>&#8211;gc-sections</code>) option. The default behaviour (of not listing the sections that are removed) can be restored by specifying <code>&#8211;no-print-gc-sections</code> on the command line.</dd>
 <dt><code>&#8211;gc-keep-exported</code></dt>
-<dd>When <code>&#8211;gc-sections</code> is enabled, this option prevents garbage collection of unused input sections that contain global symbols having default or protected visibility. This option is intended to be used for executables where unreferenced sections would otherwise be garbage collected regardless of the external visibility of contained symbols. Note that this option has no effect when linking shared objects since it is already the default behaviour. This option is only supported for <font SIZE="-1">ELF</font> format targets.</dd>
+<dd>When <code>&#8211;gc-sections</code> is enabled, this option prevents garbage collection of unused input sections that contain global symbols having default or protected visibility. This option is intended to be used for executables where unreferenced sections would otherwise be garbage collected regardless of the external visibility of contained symbols. Note that this option has no effect when linking shared objects since it is already the default behaviour. This option is only supported for ELF format targets.</dd>
 <dt><code>&#8211;print-output-format</code></dt>
 <dd>Print the name of the default output format (perhaps influenced by other command-line options). This is the string that would appear in an <tt>&quot;OUTPUT_FORMAT&quot;</tt> linker script command.</dd>
 <dt><code>&#8211;print-memory-usage</code></dt>
-<dd>Print used size, total size and used size of memory regions created with the <font SIZE="-1"><code>MEMORY</code></font> command. This is useful on embedded targets to have a quick view of amount of free memory. The format of the output has one headline and one line per region. It is both human readable and easily parsable by tools. Here is an example of an output: </dd>
+<dd>Print used size, total size and used size of memory regions created with the <code>MEMORY</code> command. This is useful on embedded targets to have a quick view of amount of free memory. The format of the output has one headline and one line per region. It is both human readable and easily parsable by tools. Here is an example of an output: </dd>
 <pre> Memory region Used Size Region Size %age Used
  ROM: 256 KB 1 MB 25.00%
  RAM: 32 B 2 GB 0.00%</pre>
@@ -643,7 +643,7 @@ description: "ld – The GNU linker"
 <dt>&bull;</dt>
 <dd>A shared library specified at link time may not be the same as the one that is available at load time, so the symbol might actually be resolvable at load time.</dd>
 <dt>&bull;</dt>
-<dd>There are some operating systems, eg BeOS and <font SIZE="-1">HPPA,</font> where undefined symbols in shared libraries are normal. </dd>
+<dd>There are some operating systems, eg BeOS and HPPA, where undefined symbols in shared libraries are normal. </dd>
 <p> The BeOS kernel for example patches shared libraries at load time to select whichever function is most appropriate for the current architecture. This is used, for example, to dynamically select an appropriate memset function.</dl>
 </dl>
 <dl COMPACT>
@@ -668,25 +668,25 @@ description: "ld – The GNU linker"
 <dt><code>-nostdlib</code></dt>
 <dd>Only search library directories explicitly specified on the command line. Library directories specified in linker scripts (including linker scripts specified on the command line) are ignored.</dd>
 <dt><code>&#8211;oformat=</code><i>output-format</i></dt>
-<dd><code>ld</code> may be configured to support more than one kind of object file. If your <code>ld</code> is configured this way, you can use the <code>&#8211;oformat</code> option to specify the binary format for the output object file. Even when <code>ld</code> is configured to support alternative object formats, you don&#8217;t usually need to specify this, as <code>ld</code> should be configured to produce as a default output format the most usual format on each machine. <i>output-format</i> is a text string, the name of a particular format supported by the <font SIZE="-1">BFD</font> libraries. (You can list the available binary formats with <code>objdump -i</code>.) The script command <tt>&quot;OUTPUT_FORMAT&quot;</tt> can also specify the output format, but this option overrides it.</dd>
+<dd><code>ld</code> may be configured to support more than one kind of object file. If your <code>ld</code> is configured this way, you can use the <code>&#8211;oformat</code> option to specify the binary format for the output object file. Even when <code>ld</code> is configured to support alternative object formats, you don&#8217;t usually need to specify this, as <code>ld</code> should be configured to produce as a default output format the most usual format on each machine. <i>output-format</i> is a text string, the name of a particular format supported by the BFD libraries. (You can list the available binary formats with <code>objdump -i</code>.) The script command <tt>&quot;OUTPUT_FORMAT&quot;</tt> can also specify the output format, but this option overrides it.</dd>
 <dt><code>&#8211;out-implib</code> <i>file</i></dt>
-<dd>Create an import library in <i>file</i> corresponding to the executable the linker is generating (eg. a <font SIZE="-1">DLL</font> or <font SIZE="-1">ELF</font> program). This import library (which should be called <tt>&quot;*.dll.a&quot;</tt> or <tt>&quot;*.a&quot;</tt> for DLLs) may be used to link clients against the generated executable; this behaviour makes it possible to skip a separate import library creation step (eg. <tt>&quot;dlltool&quot;</tt> for DLLs). This option is only available for the i386 <font SIZE="-1">PE</font> and <font SIZE="-1">ELF</font> targetted ports of the linker.</dd>
+<dd>Create an import library in <i>file</i> corresponding to the executable the linker is generating (eg. a DLL or ELF program). This import library (which should be called <tt>&quot;*.dll.a&quot;</tt> or <tt>&quot;*.a&quot;</tt> for DLLs) may be used to link clients against the generated executable; this behaviour makes it possible to skip a separate import library creation step (eg. <tt>&quot;dlltool&quot;</tt> for DLLs). This option is only available for the i386 PE and ELF targetted ports of the linker.</dd>
 <dt><code>-pie</code></dt>
 <dd>
 </dd><dt><code>&#8211;pic-executable</code></dt>
-<dd>Create a position independent executable. This is currently only supported on <font SIZE="-1">ELF</font> platforms. Position independent executables are similar to shared libraries in that they are relocated by the dynamic linker to the virtual address the <font SIZE="-1">OS</font> chooses for them (which can vary between invocations). Like normal dynamically linked executables they can be executed and symbols defined in the executable cannot be overridden by shared libraries.</dd>
+<dd>Create a position independent executable. This is currently only supported on ELF platforms. Position independent executables are similar to shared libraries in that they are relocated by the dynamic linker to the virtual address the OS chooses for them (which can vary between invocations). Like normal dynamically linked executables they can be executed and symbols defined in the executable cannot be overridden by shared libraries.</dd>
 <dt><code>-no-pie</code></dt>
 <dd>Create a position dependent executable. This is the default.</dd>
 <dt><code>-qmagic</code></dt>
 <dd>This option is ignored for Linux compatibility.</dd>
 <dt><code>-Qy</code></dt>
-<dd>This option is ignored for <font SIZE="-1">SVR4</font> compatibility.</dd>
+<dd>This option is ignored for SVR4 compatibility.</dd>
 <dt><code>&#8211;relax</code></dt>
 <dd>
 </dd><dt><code>&#8211;no-relax</code></dt>
 <dd>An option with machine dependent effects. This option is only supported on a few targets. </dd>
 <p> On some platforms the <code>&#8211;relax</code> option performs target specific, global optimizations that become possible when the linker resolves addressing in the program, such as relaxing address modes, synthesizing new instructions, selecting shorter version of current instructions, and combining constant values. </p>
-<p> On some platforms these link time global optimizations may make symbolic debugging of the resulting executable impossible. This is known to be the case for the Matsushita <font SIZE="-1">MN10200</font> and <font SIZE="-1">MN10300</font> family of processors. </p>
+<p> On some platforms these link time global optimizations may make symbolic debugging of the resulting executable impossible. This is known to be the case for the Matsushita MN10200 and MN10300 family of processors. </p>
 <p> On platforms where the feature is supported, the option <code>&#8211;no-relax</code> will disable it. </p>
 <p> On platforms where the feature is not supported, both <code>&#8211;relax</code> and <code>&#8211;no-relax</code> are accepted, but ignored.</p>
 <dt><code>&#8211;retain-symbols-file=</code><i>filename</i></dt>
@@ -694,16 +694,16 @@ description: "ld – The GNU linker"
 <p> <code>&#8211;retain-symbols-file</code> does <i>not</i> discard undefined symbols, or symbols needed for relocations. </p>
 <p> You may only specify <code>&#8211;retain-symbols-file</code> once in the command line. It overrides <code>-s</code> and <code>-S</code>.</p>
 <dt><code>-rpath=</code><i>dir</i></dt>
-<dd>Add a directory to the runtime library search path. This is used when linking an <font SIZE="-1">ELF</font> executable with shared objects. All <code>-rpath</code> arguments are concatenated and passed to the runtime linker, which uses them to locate shared objects at runtime. </dd>
+<dd>Add a directory to the runtime library search path. This is used when linking an ELF executable with shared objects. All <code>-rpath</code> arguments are concatenated and passed to the runtime linker, which uses them to locate shared objects at runtime. </dd>
 <p> The <code>-rpath</code> option is also used when locating shared objects which are needed by shared objects explicitly included in the link; see the description of the <code>-rpath-link</code> option. Searching <code>-rpath</code> in this way is only supported by native linkers and cross linkers which have been configured with the <code>&#8211;with-sysroot</code> option. </p>
-<p> If <code>-rpath</code> is not used when linking an <font SIZE="-1">ELF</font> executable, the contents of the environment variable <tt>&quot;LD_RUN_PATH&quot;</tt> will be used if it is defined. </p>
-<p> The <code>-rpath</code> option may also be used on SunOS. By default, on SunOS, the linker will form a runtime search path out of all the <code>-L</code> options it is given. If a <code>-rpath</code> option is used, the runtime search path will be formed exclusively using the <code>-rpath</code> options, ignoring the <code>-L</code> options. This can be useful when using gcc, which adds many <code>-L</code> options which may be on <font SIZE="-1">NFS</font> mounted file systems. </p>
-<p> For compatibility with other <font SIZE="-1">ELF</font> linkers, if the <code>-R</code> option is followed by a directory name, rather than a file name, it is treated as the <code>-rpath</code> option.</p>
+<p> If <code>-rpath</code> is not used when linking an ELF executable, the contents of the environment variable <tt>&quot;LD_RUN_PATH&quot;</tt> will be used if it is defined. </p>
+<p> The <code>-rpath</code> option may also be used on SunOS. By default, on SunOS, the linker will form a runtime search path out of all the <code>-L</code> options it is given. If a <code>-rpath</code> option is used, the runtime search path will be formed exclusively using the <code>-rpath</code> options, ignoring the <code>-L</code> options. This can be useful when using gcc, which adds many <code>-L</code> options which may be on NFS mounted file systems. </p>
+<p> For compatibility with other ELF linkers, if the <code>-R</code> option is followed by a directory name, rather than a file name, it is treated as the <code>-rpath</code> option.</p>
 <dt><code>-rpath-link=</code><i>dir</i></dt>
-<dd>When using <font SIZE="-1">ELF</font> or SunOS, one shared library may require another. This happens when an <tt>&quot;ld -shared&quot;</tt> link includes a shared library as one of the input files. </dd>
+<dd>When using ELF or SunOS, one shared library may require another. This happens when an <tt>&quot;ld -shared&quot;</tt> link includes a shared library as one of the input files. </dd>
 <p> When the linker encounters such a dependency when doing a non-shared, non-relocatable link, it will automatically try to locate the required shared library and include it in the link, if it is not included explicitly. In such a case, the <code>-rpath-link</code> option specifies the first set of directories to search. The <code>-rpath-link</code> option may specify a sequence of directory names either by specifying a list of names separated by colons, or by appearing multiple times. </p>
 <p> The tokens <i></i>$ORIGIN<i></i> and <i></i>$LIB<i></i> can appear in these search directories. They will be replaced by the full path to the directory containing the program or shared object in the case of <i></i>$ORIGIN<i></i> and either <code>lib</code> &#8211; for 32-bit binaries &#8211; or <code>lib64</code> &#8211; for 64-bit binaries &#8211; in the case of <i></i>$LIB<i></i>. </p>
-<p> The alternative form of these tokens &#8211; <i>${</i><font SIZE="-1"><i>ORIGIN</i></font><i>}</i> and <i>${</i><font SIZE="-1"><i>LIB</i></font><i>}</i> can also be used. The token <i></i>$PLATFORM<i></i> is not supported. </p>
+<p> The alternative form of these tokens &#8211; <i>${</i><i>ORIGIN</i><i>}</i> and <i>${</i><i>LIB</i><i>}</i> can also be used. The token <i></i>$PLATFORM<i></i> is not supported. </p>
 <p> This option should be used with caution as it overrides the search path that may have been hard compiled into a shared library. In such a case it is possible to use unintentionally a different search path than the runtime linker would do. </p>
 <p> The linker uses the following search paths to locate required shared libraries:</p>
 <dl COMPACT>
@@ -714,13 +714,13 @@ description: "ld – The GNU linker"
 <dt>2.</dt>
 <dd>Any directories specified by <code>-rpath</code> options. The difference between <code>-rpath</code> and <code>-rpath-link</code> is that directories specified by <code>-rpath</code> options are included in the executable and used at runtime, whereas the <code>-rpath-link</code> option is only effective at link time. Searching <code>-rpath</code> in this way is only supported by native linkers and cross linkers which have been configured with the <code>&#8211;with-sysroot</code> option.</dd>
 <dt>3.</dt>
-<dd>On an <font SIZE="-1">ELF</font> system, for native linkers, if the <code>-rpath</code> and <code>-rpath-link</code> options were not used, search the contents of the environment variable <tt>&quot;LD_RUN_PATH&quot;</tt>.</dd>
+<dd>On an ELF system, for native linkers, if the <code>-rpath</code> and <code>-rpath-link</code> options were not used, search the contents of the environment variable <tt>&quot;LD_RUN_PATH&quot;</tt>.</dd>
 <dt>4.</dt>
 <dd>On SunOS, if the <code>-rpath</code> option was not used, search any directories specified using <code>-L</code> options.</dd>
 <dt>5.</dt>
 <dd>For a native linker, search the contents of the environment variable <tt>&quot;LD_LIBRARY_PATH&quot;</tt>.</dd>
 <dt>6.</dt>
-<dd>For a native <font SIZE="-1">ELF</font> linker, the directories in <tt>&quot;DT_RUNPATH&quot;</tt> or <tt>&quot;DT_RPATH&quot;</tt> of a shared library are searched for shared libraries needed by it. The <tt>&quot;DT_RPATH&quot;</tt> entries are ignored if <tt>&quot;DT_RUNPATH&quot;</tt> entries exist.</dd>
+<dd>For a native ELF linker, the directories in <tt>&quot;DT_RUNPATH&quot;</tt> or <tt>&quot;DT_RPATH&quot;</tt> of a shared library are searched for shared libraries needed by it. The <tt>&quot;DT_RPATH&quot;</tt> entries are ignored if <tt>&quot;DT_RUNPATH&quot;</tt> entries exist.</dd>
 <dt>7.</dt>
 <dd>For a linker for a Linux system, if the file <i>/etc/ld.so.conf</i> exists, the list of directories found in that file. Note: the path to this file is prefixed with the <tt>&quot;sysroot&quot;</tt> value, if that is defined, and then any <tt>&quot;prefix&quot;</tt> string if the linker was configured with the <code>&#8211;prefix=&lt;path&gt;</code> option.</dd>
 <dt>8.</dt>
@@ -730,17 +730,17 @@ description: "ld – The GNU linker"
 <dt>10.</dt>
 <dd>The default directories, normally <i>/lib</i> and <i>/usr/lib</i>.</dd>
 <dt>11.</dt>
-<dd>Any directories specified by a plugin <font SIZE="-1">LDPT_SET_EXTRA_LIBRARY_PATH.</font></dd>
+<dd>Any directories specified by a plugin LDPT_SET_EXTRA_LIBRARY_PATH.</dd>
 <dt>12.</dt>
 <dd>Any directories specified by a <tt>&quot;SEARCH_DIR&quot;</tt> command in a default linker script.</dd></dl>
 </dl>
 <dl COMPACT>
-<dd>Note however on Linux based systems there is an additional caveat: If the <code>&#8211;as-needed</code> option is active <i>and</i> a shared library is located which would normally satisfy the search <i>and</i> this library does not have <font SIZE="-1">DT_NEEDED</font> tag for <i>libc.so</i> <i>and</i> there is a shared library later on in the set of search directories which also satisfies the search <i>and</i> this second shared library does have a <font SIZE="-1">DT_NEEDED</font> tag for <i>libc.so</i> <i>then</i> the second library will be selected instead of the first. </dd>
+<dd>Note however on Linux based systems there is an additional caveat: If the <code>&#8211;as-needed</code> option is active <i>and</i> a shared library is located which would normally satisfy the search <i>and</i> this library does not have DT_NEEDED tag for <i>libc.so</i> <i>and</i> there is a shared library later on in the set of search directories which also satisfies the search <i>and</i> this second shared library does have a DT_NEEDED tag for <i>libc.so</i> <i>then</i> the second library will be selected instead of the first. </dd>
 <p> If the required shared library is not found, the linker will issue a warning and continue with the link.</dl>
 <dt><code>-shared</code></dt>
 <dd>
 </dd><dt><code>-Bshareable</code></dt>
-<dd>Create a shared library. This is currently only supported on <font SIZE="-1">ELF, XCOFF</font> and SunOS platforms. On SunOS, the linker will automatically create a shared library if the <code>-e</code> option is not used and there are undefined symbols in the link.</dd>
+<dd>Create a shared library. This is currently only supported on ELF, XCOFF and SunOS platforms. On SunOS, the linker will automatically create a shared library if the <code>-e</code> option is not used and there are undefined symbols in the link.</dd>
 <dt><code>&#8211;sort-common</code></dt>
 <dd>
 </dd><dt><code>&#8211;sort-common=ascending</code></dt>
@@ -752,17 +752,17 @@ description: "ld – The GNU linker"
 <dt><code>&#8211;sort-section=alignment</code></dt>
 <dd>This option will apply <tt>&quot;SORT_BY_ALIGNMENT&quot;</tt> to all wildcard section patterns in the linker script.</dd>
 <dt><code>&#8211;spare-dynamic-tags=</code><i>count</i></dt>
-<dd>This option specifies the number of empty slots to leave in the .dynamic section of <font SIZE="-1">ELF</font> shared objects. Empty slots may be needed by post processing tools, such as the prelinker. The default is 5.</dd>
+<dd>This option specifies the number of empty slots to leave in the .dynamic section of ELF shared objects. Empty slots may be needed by post processing tools, such as the prelinker. The default is 5.</dd>
 <dt><code>&#8211;split-by-file[=</code><i>size</i><code>]</code></dt>
 <dd>Similar to <code>&#8211;split-by-reloc</code> but creates a new output section for each input file when <i>size</i> is reached. <i>size</i> defaults to a size of 1 if not given.</dd>
 <dt><code>&#8211;split-by-reloc[=</code><i>count</i><code>]</code></dt>
-<dd>Tries to creates extra sections in the output file so that no single output section in the file contains more than <i>count</i> relocations. This is useful when generating huge relocatable files for downloading into certain real time kernels with the <font SIZE="-1">COFF</font> object file format; since <font SIZE="-1">COFF</font> cannot represent more than 65535 relocations in a single section. Note that this will fail to work with object file formats which do not support arbitrary sections. The linker will not split up individual input sections for redistribution, so if a single input section contains more than <i>count</i> relocations one output section will contain that many relocations. <i>count</i> defaults to a value of 32768.</dd>
+<dd>Tries to creates extra sections in the output file so that no single output section in the file contains more than <i>count</i> relocations. This is useful when generating huge relocatable files for downloading into certain real time kernels with the COFF object file format; since COFF cannot represent more than 65535 relocations in a single section. Note that this will fail to work with object file formats which do not support arbitrary sections. The linker will not split up individual input sections for redistribution, so if a single input section contains more than <i>count</i> relocations one output section will contain that many relocations. <i>count</i> defaults to a value of 32768.</dd>
 <dt><code>&#8211;stats</code></dt>
 <dd>Compute and display statistics about the operation of the linker, such as execution time and memory usage.</dd>
 <dt><code>&#8211;sysroot=</code><i>directory</i></dt>
 <dd>Use <i>directory</i> as the location of the sysroot, overriding the configure-time default. This option is only supported by linkers that were configured using <code>&#8211;with-sysroot</code>.</dd>
 <dt><code>&#8211;task-link</code></dt>
-<dd>This is used by <font SIZE="-1">COFF/PE</font> based targets to create a task-linked object file where all of the global symbols have been converted to statics.</dd>
+<dd>This is used by COFF/PE based targets to create a task-linked object file where all of the global symbols have been converted to statics.</dd>
 <dt><code>&#8211;traditional-format</code></dt>
 <dd>For some targets, the output of <code>ld</code> is different in some ways from the output of some existing linker. This switch requests <code>ld</code> to use the traditional format instead. </dd>
 <p> For example, on SunOS, <code>ld</code> combines duplicate entries in the symbol string table. This can reduce the size of an output file with full debugging information by over 30 percent. Unfortunately, the SunOS <tt>&quot;dbx&quot;</tt> program can not read the resulting program (<tt>&quot;gdb&quot;</tt> has no trouble). The <code>&#8211;traditional-format</code> switch tells <code>ld</code> to not combine duplicate entries.</p>
@@ -775,11 +775,11 @@ description: "ld – The GNU linker"
 </dd><dt><code>-Ttext=</code><i>org</i></dt>
 <dd>Same as <code>&#8211;section-start</code>, with <tt>&quot;.bss&quot;</tt>, <tt>&quot;.data&quot;</tt> or <tt>&quot;.text&quot;</tt> as the <i>sectionname</i>.</dd>
 <dt><code>-Ttext-segment=</code><i>org</i></dt>
-<dd>When creating an <font SIZE="-1">ELF</font> executable, it will set the address of the first byte of the text segment.</dd>
+<dd>When creating an ELF executable, it will set the address of the first byte of the text segment.</dd>
 <dt><code>-Trodata-segment=</code><i>org</i></dt>
-<dd>When creating an <font SIZE="-1">ELF</font> executable or shared object for a target where the read-only data is in its own segment separate from the executable text, it will set the address of the first byte of the read-only data segment.</dd>
+<dd>When creating an ELF executable or shared object for a target where the read-only data is in its own segment separate from the executable text, it will set the address of the first byte of the read-only data segment.</dd>
 <dt><code>-Tldata-segment=</code><i>org</i></dt>
-<dd>When creating an <font SIZE="-1">ELF</font> executable or shared object for x86-64 medium memory model, it will set the address of the first byte of the ldata segment.</dd>
+<dd>When creating an ELF executable or shared object for x86-64 medium memory model, it will set the address of the first byte of the ldata segment.</dd>
 <dt><code>&#8211;unresolved-symbols=</code><i>method</i></dt>
 <dd>Determine how to handle unresolved symbols. There are four possible values for <code>method</code>:</dd>
 <dl COMPACT>
@@ -799,10 +799,10 @@ description: "ld – The GNU linker"
 <p> Normally the linker will generate an error message for each reported unresolved symbol but the option <code>&#8211;warn-unresolved-symbols</code> can change this to a warning.</dl>
 <dt><code>&#8211;dll-verbose</code></dt>
 <dd>
-</dd><dt><code>&#8211;verbose[=</code><i></i><font SIZE="-1"><i>NUMBER</i></font><i></i><code>]</code></dt>
-<dd>Display the version number for <code>ld</code> and list the linker emulations supported. Display which input files can and cannot be opened. Display the linker script being used by the linker. If the optional <i></i><font SIZE="-1"><i>NUMBER</i></font><i></i> argument &gt; 1, plugin symbol status will also be displayed.</dd>
+</dd><dt><code>&#8211;verbose[=</code><i></i><i>NUMBER</i><i></i><code>]</code></dt>
+<dd>Display the version number for <code>ld</code> and list the linker emulations supported. Display which input files can and cannot be opened. Display the linker script being used by the linker. If the optional <i></i><i>NUMBER</i><i></i> argument &gt; 1, plugin symbol status will also be displayed.</dd>
 <dt><code>&#8211;version-script=</code><i>version-scriptfile</i></dt>
-<dd>Specify the name of a version script to the linker. This is typically used when creating shared libraries to specify additional information about the version hierarchy for the library being created. This option is only fully supported on <font SIZE="-1">ELF</font> platforms which support shared libraries; see <font SIZE="-1"><code>VERSION</code></font>. It is partially supported on <font SIZE="-1">PE</font> platforms, which can use version scripts to filter symbol visibility in auto-export mode: any symbols marked <code>local</code> in the version script will not be exported.</dd>
+<dd>Specify the name of a version script to the linker. This is typically used when creating shared libraries to specify additional information about the version hierarchy for the library being created. This option is only fully supported on ELF platforms which support shared libraries; see <code>VERSION</code>. It is partially supported on PE platforms, which can use version scripts to filter symbol visibility in auto-export mode: any symbols marked <code>local</code> in the version script will not be exported.</dd>
 <dt><code>&#8211;warn-common</code></dt>
 <dd>Warn when a common symbol is combined with another common symbol or with a symbol definition. Unix linkers allow this somewhat sloppy practice, but linkers on some other operating systems do not. This option allows you to find potential problems from combining global symbols. Unfortunately, some C libraries use this practice, so you may get some warnings about symbols in the libraries as well as in your programs. </dd>
 <p> There are three kinds of global symbols, illustrated here by C examples:</p>
@@ -849,7 +849,7 @@ description: "ld – The GNU linker"
 <dl COMPACT>
 <dd></dd></dl>
 <dt><code>&#8211;warn-constructors</code></dt>
-<dd>Warn if any global constructors are used. This is only useful for a few object file formats. For formats like <font SIZE="-1">COFF</font> or <font SIZE="-1">ELF,</font> the linker can not detect the use of global constructors.</dd>
+<dd>Warn if any global constructors are used. This is only useful for a few object file formats. For formats like COFF or ELF, the linker can not detect the use of global constructors.</dd>
 <dt><code>&#8211;warn-multiple-gp</code></dt>
 <dd>Warn if multiple global pointer values are required in the output file. This is only meaningful for certain processors, such as the Alpha. Specifically, some processors put large-valued constants in a special section. A special register (the global pointer) points into the middle of this section, so that constants can be loaded efficiently via a base-register relative addressing mode. Since the offset in base-register relative mode is fixed and relatively small (e.g., 16 bits), this limits the maximum size of the constant pool. Thus, in large programs, it is often necessary to use multiple global pointer values in order to be able to address all possible constants. This option causes a warning to be issued whenever this case occurs.</dd>
 <dt><code>&#8211;warn-once</code></dt>
@@ -857,9 +857,9 @@ description: "ld – The GNU linker"
 <dt><code>&#8211;warn-section-align</code></dt>
 <dd>Warn if the address of an output section is changed because of alignment. Typically, the alignment will be set by an input section. The address will only be changed if it not explicitly specified; that is, if the <tt>&quot;SECTIONS&quot;</tt> command does not specify a start address for the section.</dd>
 <dt><code>&#8211;warn-textrel</code></dt>
-<dd>Warn if the linker adds <font SIZE="-1">DT_TEXTREL</font> to a position-independent executable or shared object.</dd>
+<dd>Warn if the linker adds DT_TEXTREL to a position-independent executable or shared object.</dd>
 <dt><code>&#8211;warn-alternate-em</code></dt>
-<dd>Warn if an object has alternate <font SIZE="-1">ELF</font> machine code.</dd>
+<dd>Warn if an object has alternate ELF machine code.</dd>
 <dt><code>&#8211;warn-unresolved-symbols</code></dt>
 <dd>If the linker is going to report an unresolved symbol (see the option <code>&#8211;unresolved-symbols</code>) it will normally generate an error. This option makes it generate a warning instead.</dd>
 <dt><code>&#8211;error-unresolved-symbols</code></dt>
@@ -894,17 +894,17 @@ description: "ld – The GNU linker"
 <dt><code>&#8211;eh-frame-hdr</code></dt>
 <dd>
 </dd><dt><code>&#8211;no-eh-frame-hdr</code></dt>
-<dd>Request (<code>&#8211;eh-frame-hdr</code>) or suppress (<code>&#8211;no-eh-frame-hdr</code>) the creation of <tt>&quot;.eh_frame_hdr&quot;</tt> section and <font SIZE="-1">ELF</font> <tt>&quot;PT_GNU_EH_FRAME&quot;</tt> segment header.</dd>
+<dd>Request (<code>&#8211;eh-frame-hdr</code>) or suppress (<code>&#8211;no-eh-frame-hdr</code>) the creation of <tt>&quot;.eh_frame_hdr&quot;</tt> section and ELF <tt>&quot;PT_GNU_EH_FRAME&quot;</tt> segment header.</dd>
 <dt><code>&#8211;no-ld-generated-unwind-info</code></dt>
-<dd>Request creation of <tt>&quot;.eh_frame&quot;</tt> unwind info for linker generated code sections like <font SIZE="-1">PLT.</font> This option is on by default if linker generated unwind info is supported.</dd>
+<dd>Request creation of <tt>&quot;.eh_frame&quot;</tt> unwind info for linker generated code sections like PLT. This option is on by default if linker generated unwind info is supported.</dd>
 <dt><code>&#8211;enable-new-dtags</code></dt>
 <dd>
 </dd><dt><code>&#8211;disable-new-dtags</code></dt>
-<dd>This linker can create the new dynamic tags in <font SIZE="-1">ELF.</font> But the older <font SIZE="-1">ELF</font> systems may not understand them. If you specify <code>&#8211;enable-new-dtags</code>, the new dynamic tags will be created as needed and older dynamic tags will be omitted. If you specify <code>&#8211;disable-new-dtags</code>, no new dynamic tags will be created. By default, the new dynamic tags are not created. Note that those options are only available for <font SIZE="-1">ELF</font> systems.</dd>
+<dd>This linker can create the new dynamic tags in ELF. But the older ELF systems may not understand them. If you specify <code>&#8211;enable-new-dtags</code>, the new dynamic tags will be created as needed and older dynamic tags will be omitted. If you specify <code>&#8211;disable-new-dtags</code>, no new dynamic tags will be created. By default, the new dynamic tags are not created. Note that those options are only available for ELF systems.</dd>
 <dt><code>&#8211;hash-size=</code><i>number</i></dt>
 <dd>Set the default size of the linker&#8217;s hash tables to a prime number close to <i>number</i>. Increasing this value can reduce the length of time it takes the linker to perform its tasks, at the expense of increasing the linker&#8217;s memory requirements. Similarly reducing this value can reduce the memory requirements at the expense of speed.</dd>
 <dt><code>&#8211;hash-style=</code><i>style</i></dt>
-<dd>Set the type of linker&#8217;s hash table(s). <i>style</i> can be either <tt>&quot;sysv&quot;</tt> for classic <font SIZE="-1">ELF</font> <tt>&quot;.hash&quot;</tt> section, <tt>&quot;gnu&quot;</tt> for new style <font SIZE="-1">GNU</font> <tt>&quot;.gnu.hash&quot;</tt> section or <tt>&quot;both&quot;</tt> for both the classic <font SIZE="-1">ELF</font> <tt>&quot;.hash&quot;</tt> and new style <font SIZE="-1">GNU</font> <tt>&quot;.gnu.hash&quot;</tt> hash tables. The default depends upon how the linker was configured, but for most Linux based systems it will be <tt>&quot;both&quot;</tt>.</dd>
+<dd>Set the type of linker&#8217;s hash table(s). <i>style</i> can be either <tt>&quot;sysv&quot;</tt> for classic ELF <tt>&quot;.hash&quot;</tt> section, <tt>&quot;gnu&quot;</tt> for new style GNU <tt>&quot;.gnu.hash&quot;</tt> section or <tt>&quot;both&quot;</tt> for both the classic ELF <tt>&quot;.hash&quot;</tt> and new style GNU <tt>&quot;.gnu.hash&quot;</tt> hash tables. The default depends upon how the linker was configured, but for most Linux based systems it will be <tt>&quot;both&quot;</tt>.</dd>
 <dt><code>&#8211;compress-debug-sections=none</code></dt>
 <dd>
 </dd><dt><code>&#8211;compress-debug-sections=zlib</code></dt>
@@ -912,8 +912,8 @@ description: "ld – The GNU linker"
 </dd><dt><code>&#8211;compress-debug-sections=zlib-gnu</code></dt>
 <dd>
 </dd><dt><code>&#8211;compress-debug-sections=zlib-gabi</code></dt>
-<dd>On <font SIZE="-1">ELF</font> platforms, these options control how <font SIZE="-1">DWARF</font> debug sections are compressed using zlib. </dd>
-<p> <code>&#8211;compress-debug-sections=none</code> doesn&#8217;t compress <font SIZE="-1">DWARF</font> debug sections. <code>&#8211;compress-debug-sections=zlib-gnu</code> compresses <font SIZE="-1">DWARF</font> debug sections and renames them to begin with <code>.zdebug</code> instead of <code>.debug</code>. <code>&#8211;compress-debug-sections=zlib-gabi</code> also compresses <font SIZE="-1">DWARF</font> debug sections, but rather than renaming them it sets the <font SIZE="-1">SHF_COMPRESSED</font> flag in the sections&#8217; headers. </p>
+<dd>On ELF platforms, these options control how DWARF debug sections are compressed using zlib. </dd>
+<p> <code>&#8211;compress-debug-sections=none</code> doesn&#8217;t compress DWARF debug sections. <code>&#8211;compress-debug-sections=zlib-gnu</code> compresses DWARF debug sections and renames them to begin with <code>.zdebug</code> instead of <code>.debug</code>. <code>&#8211;compress-debug-sections=zlib-gabi</code> also compresses DWARF debug sections, but rather than renaming them it sets the SHF_COMPRESSED flag in the sections&#8217; headers. </p>
 <p> The <code>&#8211;compress-debug-sections=zlib</code> option is an alias for <code>&#8211;compress-debug-sections=zlib-gabi</code>. </p>
 <p> Note that this option overrides any compression in input debug sections, so if a binary is linked with <code>&#8211;compress-debug-sections=none</code> for example, then any compressed debug sections in input files will be uncompressed before they are copied into the output binary. </p>
 <p> The default compression behaviour varies depending upon the target involved and the configure options used to build the toolchain. The default can be determined by examining the output from the linker&#8217;s <code>&#8211;help</code> option.</p>
@@ -926,80 +926,80 @@ description: "ld – The GNU linker"
 <dt><code>&#8211;build-id</code></dt>
 <dd>
 </dd><dt><code>&#8211;build-id=</code><i>style</i></dt>
-<dd>Request the creation of a <tt>&quot;.note.gnu.build-id&quot;</tt> <font SIZE="-1">ELF</font> note section or a <tt>&quot;.buildid&quot;</tt> <font SIZE="-1">COFF</font> section. The contents of the note are unique bits identifying this linked file. <i>style</i> can be <tt>&quot;uuid&quot;</tt> to use 128 random bits, <tt>&quot;sha1&quot;</tt> to use a 160-bit <font SIZE="-1">SHA1</font> hash on the normative parts of the output contents, <tt>&quot;md5&quot;</tt> to use a 128-bit <font SIZE="-1">MD5</font> hash on the normative parts of the output contents, or <tt>&quot;0x</tt>hexstring<tt>&quot;</tt> to use a chosen bit string specified as an even number of hexadecimal digits (<tt>&quot;-&quot;</tt> and <tt>&quot;:&quot;</tt> characters between digit pairs are ignored). If <i>style</i> is omitted, <tt>&quot;sha1&quot;</tt> is used. </dd>
-<p> The <tt>&quot;md5&quot;</tt> and <tt>&quot;sha1&quot;</tt> styles produces an identifier that is always the same in an identical output file, but will be unique among all nonidentical output files. It is not intended to be compared as a checksum for the file&#8217;s contents. A linked file may be changed later by other tools, but the build <font SIZE="-1">ID</font> bit string identifying the original linked file does not change. </p>
+<dd>Request the creation of a <tt>&quot;.note.gnu.build-id&quot;</tt> ELF note section or a <tt>&quot;.buildid&quot;</tt> COFF section. The contents of the note are unique bits identifying this linked file. <i>style</i> can be <tt>&quot;uuid&quot;</tt> to use 128 random bits, <tt>&quot;sha1&quot;</tt> to use a 160-bit SHA1 hash on the normative parts of the output contents, <tt>&quot;md5&quot;</tt> to use a 128-bit MD5 hash on the normative parts of the output contents, or <tt>&quot;0x</tt>hexstring<tt>&quot;</tt> to use a chosen bit string specified as an even number of hexadecimal digits (<tt>&quot;-&quot;</tt> and <tt>&quot;:&quot;</tt> characters between digit pairs are ignored). If <i>style</i> is omitted, <tt>&quot;sha1&quot;</tt> is used. </dd>
+<p> The <tt>&quot;md5&quot;</tt> and <tt>&quot;sha1&quot;</tt> styles produces an identifier that is always the same in an identical output file, but will be unique among all nonidentical output files. It is not intended to be compared as a checksum for the file&#8217;s contents. A linked file may be changed later by other tools, but the build ID bit string identifying the original linked file does not change. </p>
 <p> Passing <tt>&quot;none&quot;</tt> for <i>style</i> disables the setting from any <tt>&quot;--build-id&quot;</tt> options earlier on the command line.</dl>
-<p> The i386 <font SIZE="-1">PE</font> linker supports the <code>-shared</code> option, which causes the output to be a dynamically linked library (<font SIZE="-1">DLL</font>) instead of a normal executable. You should name the output <tt>&quot;*.dll&quot;</tt> when you use this option. In addition, the linker fully supports the standard <tt>&quot;*.def&quot;</tt> files, which may be specified on the linker command line like an object file (in fact, it should precede archives it exports symbols from, to ensure that they get linked in, just like a normal object file). </p>
-<p> In addition to the options common to all targets, the i386 <font SIZE="-1">PE</font> linker support additional command-line options that are specific to the i386 <font SIZE="-1">PE</font> target. Options that take values may be separated from their values by either a space or an equals sign.</p>
+<p> The i386 PE linker supports the <code>-shared</code> option, which causes the output to be a dynamically linked library (DLL) instead of a normal executable. You should name the output <tt>&quot;*.dll&quot;</tt> when you use this option. In addition, the linker fully supports the standard <tt>&quot;*.def&quot;</tt> files, which may be specified on the linker command line like an object file (in fact, it should precede archives it exports symbols from, to ensure that they get linked in, just like a normal object file). </p>
+<p> In addition to the options common to all targets, the i386 PE linker support additional command-line options that are specific to the i386 PE target. Options that take values may be separated from their values by either a space or an equals sign.</p>
 <dl COMPACT>
 <dt><code>&#8211;add-stdcall-alias</code></dt>
-<dd>If given, symbols with a stdcall suffix (@<i>nn</i>) will be exported as-is and also with the suffix stripped. [This option is specific to the i386 <font SIZE="-1">PE</font> targeted port of the linker]</dd>
+<dd>If given, symbols with a stdcall suffix (@<i>nn</i>) will be exported as-is and also with the suffix stripped. [This option is specific to the i386 PE targeted port of the linker]</dd>
 <dt><code>&#8211;base-file</code> <i>file</i></dt>
-<dd>Use <i>file</i> as the name of a file in which to save the base addresses of all the relocations needed for generating DLLs with <i>dlltool</i>. [This is an i386 <font SIZE="-1">PE</font> specific option]</dd>
+<dd>Use <i>file</i> as the name of a file in which to save the base addresses of all the relocations needed for generating DLLs with <i>dlltool</i>. [This is an i386 PE specific option]</dd>
 <dt><code>&#8211;dll</code></dt>
-<dd>Create a <font SIZE="-1">DLL</font> instead of a regular executable. You may also use <code>-shared</code> or specify a <tt>&quot;LIBRARY&quot;</tt> in a given <tt>&quot;.def&quot;</tt> file. [This option is specific to the i386 <font SIZE="-1">PE</font> targeted port of the linker]</dd>
+<dd>Create a DLL instead of a regular executable. You may also use <code>-shared</code> or specify a <tt>&quot;LIBRARY&quot;</tt> in a given <tt>&quot;.def&quot;</tt> file. [This option is specific to the i386 PE targeted port of the linker]</dd>
 <dt><code>&#8211;enable-long-section-names</code></dt>
 <dd>
 </dd><dt><code>&#8211;disable-long-section-names</code></dt>
-<dd>The <font SIZE="-1">PE</font> variants of the <font SIZE="-1">COFF</font> object format add an extension that permits the use of section names longer than eight characters, the normal limit for <font SIZE="-1">COFF.</font> By default, these names are only allowed in object files, as fully-linked executable images do not carry the <font SIZE="-1">COFF</font> string table required to support the longer names. As a <font SIZE="-1">GNU</font> extension, it is possible to allow their use in executable images as well, or to (probably pointlessly!) disallow it in object files, by using these two options. Executable images generated with these long section names are slightly non-standard, carrying as they do a string table, and may generate confusing output when examined with non-GNU PE-aware tools, such as file viewers and dumpers. However, <font SIZE="-1">GDB</font> relies on the use of <font SIZE="-1">PE</font> long section names to find Dwarf-2 debug information sections in an executable image at runtime, and so if neither option is specified on the command-line, <code>ld</code> will enable long section names, overriding the default and technically correct behaviour, when it finds the presence of debug information while linking an executable image and not stripping symbols. [This option is valid for all <font SIZE="-1">PE</font> targeted ports of the linker]</dd>
+<dd>The PE variants of the COFF object format add an extension that permits the use of section names longer than eight characters, the normal limit for COFF. By default, these names are only allowed in object files, as fully-linked executable images do not carry the COFF string table required to support the longer names. As a GNU extension, it is possible to allow their use in executable images as well, or to (probably pointlessly!) disallow it in object files, by using these two options. Executable images generated with these long section names are slightly non-standard, carrying as they do a string table, and may generate confusing output when examined with non-GNU PE-aware tools, such as file viewers and dumpers. However, GDB relies on the use of PE long section names to find Dwarf-2 debug information sections in an executable image at runtime, and so if neither option is specified on the command-line, <code>ld</code> will enable long section names, overriding the default and technically correct behaviour, when it finds the presence of debug information while linking an executable image and not stripping symbols. [This option is valid for all PE targeted ports of the linker]</dd>
 <dt><code>&#8211;enable-stdcall-fixup</code></dt>
 <dd>
 </dd><dt><code>&#8211;disable-stdcall-fixup</code></dt>
-<dd>If the link finds a symbol that it cannot resolve, it will attempt to do &#8220;fuzzy linking&#8221; by looking for another defined symbol that differs only in the format of the symbol name (cdecl vs stdcall) and will resolve that symbol by linking to the match. For example, the undefined symbol <tt>&quot;_foo&quot;</tt> might be linked to the function <tt>&quot;_foo@12&quot;</tt>, or the undefined symbol <tt>&quot;_bar@16&quot;</tt> might be linked to the function <tt>&quot;_bar&quot;</tt>. When the linker does this, it prints a warning, since it normally should have failed to link, but sometimes import libraries generated from third-party dlls may need this feature to be usable. If you specify <code>&#8211;enable-stdcall-fixup</code>, this feature is fully enabled and warnings are not printed. If you specify <code>&#8211;disable-stdcall-fixup</code>, this feature is disabled and such mismatches are considered to be errors. [This option is specific to the i386 <font SIZE="-1">PE</font> targeted port of the linker]</dd>
+<dd>If the link finds a symbol that it cannot resolve, it will attempt to do &#8220;fuzzy linking&#8221; by looking for another defined symbol that differs only in the format of the symbol name (cdecl vs stdcall) and will resolve that symbol by linking to the match. For example, the undefined symbol <tt>&quot;_foo&quot;</tt> might be linked to the function <tt>&quot;_foo@12&quot;</tt>, or the undefined symbol <tt>&quot;_bar@16&quot;</tt> might be linked to the function <tt>&quot;_bar&quot;</tt>. When the linker does this, it prints a warning, since it normally should have failed to link, but sometimes import libraries generated from third-party dlls may need this feature to be usable. If you specify <code>&#8211;enable-stdcall-fixup</code>, this feature is fully enabled and warnings are not printed. If you specify <code>&#8211;disable-stdcall-fixup</code>, this feature is disabled and such mismatches are considered to be errors. [This option is specific to the i386 PE targeted port of the linker]</dd>
 <dt><code>&#8211;leading-underscore</code></dt>
 <dd>
 </dd><dt><code>&#8211;no-leading-underscore</code></dt>
 <dd>For most targets default symbol-prefix is an underscore and is defined in target&#8217;s description. By this option it is possible to disable/enable the default underscore symbol-prefix.</dd>
 <dt><code>&#8211;export-all-symbols</code></dt>
-<dd>If given, all global symbols in the objects used to build a <font SIZE="-1">DLL</font> will be exported by the <font SIZE="-1">DLL.</font> Note that this is the default if there otherwise wouldn&#8217;t be any exported symbols. When symbols are explicitly exported via <font SIZE="-1">DEF</font> files or implicitly exported via function attributes, the default is to not export anything else unless this option is given. Note that the symbols <tt>&quot;DllMain@12&quot;</tt>, <tt>&quot;DllEntryPoint@0&quot;</tt>, <tt>&quot;DllMainCRTStartup@12&quot;</tt>, and <tt>&quot;impure_ptr&quot;</tt> will not be automatically exported. Also, symbols imported from other DLLs will not be re-exported, nor will symbols specifying the <font SIZE="-1">DLL</font>&#8216;s internal layout such as those beginning with <tt>&quot;_head_&quot;</tt> or ending with <tt>&quot;_iname&quot;</tt>. In addition, no symbols from <tt>&quot;libgcc&quot;</tt>, <tt>&quot;libstd++&quot;</tt>, <tt>&quot;libmingw32&quot;</tt>, or <tt>&quot;crtX.o&quot;</tt> will be exported. Symbols whose names begin with <tt>&quot;__rtti_&quot;</tt> or <tt>&quot;__builtin_&quot;</tt> will not be exported, to help with C<font SIZE="-2">++</font> DLLs. Finally, there is an extensive list of cygwin-private symbols that are not exported (obviously, this applies on when building DLLs for cygwin targets). These cygwin-excludes are: <tt>&quot;_cygwin_dll_entry@12&quot;</tt>, <tt>&quot;_cygwin_crt0_common@8&quot;</tt>, <tt>&quot;_cygwin_noncygwin_dll_entry@12&quot;</tt>, <tt>&quot;_fmode&quot;</tt>, <tt>&quot;_impure_ptr&quot;</tt>, <tt>&quot;cygwin_attach_dll&quot;</tt>, <tt>&quot;cygwin_premain0&quot;</tt>, <tt>&quot;cygwin_premain1&quot;</tt>, <tt>&quot;cygwin_premain2&quot;</tt>, <tt>&quot;cygwin_premain3&quot;</tt>, and <tt>&quot;environ&quot;</tt>. [This option is specific to the i386 <font SIZE="-1">PE</font> targeted port of the linker]</dd>
+<dd>If given, all global symbols in the objects used to build a DLL will be exported by the DLL. Note that this is the default if there otherwise wouldn&#8217;t be any exported symbols. When symbols are explicitly exported via DEF files or implicitly exported via function attributes, the default is to not export anything else unless this option is given. Note that the symbols <tt>&quot;DllMain@12&quot;</tt>, <tt>&quot;DllEntryPoint@0&quot;</tt>, <tt>&quot;DllMainCRTStartup@12&quot;</tt>, and <tt>&quot;impure_ptr&quot;</tt> will not be automatically exported. Also, symbols imported from other DLLs will not be re-exported, nor will symbols specifying the DLL&#8216;s internal layout such as those beginning with <tt>&quot;_head_&quot;</tt> or ending with <tt>&quot;_iname&quot;</tt>. In addition, no symbols from <tt>&quot;libgcc&quot;</tt>, <tt>&quot;libstd++&quot;</tt>, <tt>&quot;libmingw32&quot;</tt>, or <tt>&quot;crtX.o&quot;</tt> will be exported. Symbols whose names begin with <tt>&quot;__rtti_&quot;</tt> or <tt>&quot;__builtin_&quot;</tt> will not be exported, to help with C++ DLLs. Finally, there is an extensive list of cygwin-private symbols that are not exported (obviously, this applies on when building DLLs for cygwin targets). These cygwin-excludes are: <tt>&quot;_cygwin_dll_entry@12&quot;</tt>, <tt>&quot;_cygwin_crt0_common@8&quot;</tt>, <tt>&quot;_cygwin_noncygwin_dll_entry@12&quot;</tt>, <tt>&quot;_fmode&quot;</tt>, <tt>&quot;_impure_ptr&quot;</tt>, <tt>&quot;cygwin_attach_dll&quot;</tt>, <tt>&quot;cygwin_premain0&quot;</tt>, <tt>&quot;cygwin_premain1&quot;</tt>, <tt>&quot;cygwin_premain2&quot;</tt>, <tt>&quot;cygwin_premain3&quot;</tt>, and <tt>&quot;environ&quot;</tt>. [This option is specific to the i386 PE targeted port of the linker]</dd>
 <dt><code>&#8211;exclude-symbols</code> <i>symbol</i><code>,</code><i>symbol</i><code>,&#8230;</code></dt>
-<dd>Specifies a list of symbols which should not be automatically exported. The symbol names may be delimited by commas or colons. [This option is specific to the i386 <font SIZE="-1">PE</font> targeted port of the linker]</dd>
+<dd>Specifies a list of symbols which should not be automatically exported. The symbol names may be delimited by commas or colons. [This option is specific to the i386 PE targeted port of the linker]</dd>
 <dt><code>&#8211;exclude-all-symbols</code></dt>
-<dd>Specifies no symbols should be automatically exported. [This option is specific to the i386 <font SIZE="-1">PE</font> targeted port of the linker]</dd>
+<dd>Specifies no symbols should be automatically exported. [This option is specific to the i386 PE targeted port of the linker]</dd>
 <dt><code>&#8211;file-alignment</code></dt>
-<dd>Specify the file alignment. Sections in the file will always begin at file offsets which are multiples of this number. This defaults to 512. [This option is specific to the i386 <font SIZE="-1">PE</font> targeted port of the linker]</dd>
+<dd>Specify the file alignment. Sections in the file will always begin at file offsets which are multiples of this number. This defaults to 512. [This option is specific to the i386 PE targeted port of the linker]</dd>
 <dt><code>&#8211;heap</code> <i>reserve</i></dt>
 <dd>
 </dd><dt><code>&#8211;heap</code> <i>reserve</i><code>,</code><i>commit</i></dt>
-<dd>Specify the number of bytes of memory to reserve (and optionally commit) to be used as heap for this program. The default is 1MB reserved, 4K committed. [This option is specific to the i386 <font SIZE="-1">PE</font> targeted port of the linker]</dd>
+<dd>Specify the number of bytes of memory to reserve (and optionally commit) to be used as heap for this program. The default is 1MB reserved, 4K committed. [This option is specific to the i386 PE targeted port of the linker]</dd>
 <dt><code>&#8211;image-base</code> <i>value</i></dt>
-<dd>Use <i>value</i> as the base address of your program or dll. This is the lowest memory location that will be used when your program or dll is loaded. To reduce the need to relocate and improve performance of your dlls, each should have a unique base address and not overlap any other dlls. The default is 0x400000 for executables, and 0x10000000 for dlls. [This option is specific to the i386 <font SIZE="-1">PE</font> targeted port of the linker]</dd>
+<dd>Use <i>value</i> as the base address of your program or dll. This is the lowest memory location that will be used when your program or dll is loaded. To reduce the need to relocate and improve performance of your dlls, each should have a unique base address and not overlap any other dlls. The default is 0x400000 for executables, and 0x10000000 for dlls. [This option is specific to the i386 PE targeted port of the linker]</dd>
 <dt><code>&#8211;kill-at</code></dt>
-<dd>If given, the stdcall suffixes (@<i>nn</i>) will be stripped from symbols before they are exported. [This option is specific to the i386 <font SIZE="-1">PE</font> targeted port of the linker]</dd>
+<dd>If given, the stdcall suffixes (@<i>nn</i>) will be stripped from symbols before they are exported. [This option is specific to the i386 PE targeted port of the linker]</dd>
 <dt><code>&#8211;large-address-aware</code></dt>
-<dd>If given, the appropriate bit in the &#8220;Characteristics&#8221; field of the <font SIZE="-1">COFF</font> header is set to indicate that this executable supports virtual addresses greater than 2 gigabytes. This should be used in conjunction with the /3GB or /USERVA=<i>value</i> megabytes switch in the &#8220;[operating systems]&#8221; section of the <font SIZE="-1">BOOT.INI.</font> Otherwise, this bit has no effect. [This option is specific to <font SIZE="-1">PE</font> targeted ports of the linker]</dd>
+<dd>If given, the appropriate bit in the &#8220;Characteristics&#8221; field of the COFF header is set to indicate that this executable supports virtual addresses greater than 2 gigabytes. This should be used in conjunction with the /3GB or /USERVA=<i>value</i> megabytes switch in the &#8220;[operating systems]&#8221; section of the BOOT.INI. Otherwise, this bit has no effect. [This option is specific to PE targeted ports of the linker]</dd>
 <dt><code>&#8211;disable-large-address-aware</code></dt>
-<dd>Reverts the effect of a previous <code>&#8211;large-address-aware</code> option. This is useful if <code>&#8211;large-address-aware</code> is always set by the compiler driver (e.g. Cygwin gcc) and the executable does not support virtual addresses greater than 2 gigabytes. [This option is specific to <font SIZE="-1">PE</font> targeted ports of the linker]</dd>
+<dd>Reverts the effect of a previous <code>&#8211;large-address-aware</code> option. This is useful if <code>&#8211;large-address-aware</code> is always set by the compiler driver (e.g. Cygwin gcc) and the executable does not support virtual addresses greater than 2 gigabytes. [This option is specific to PE targeted ports of the linker]</dd>
 <dt><code>&#8211;major-image-version</code> <i>value</i></dt>
-<dd>Sets the major number of the &#8220;image version&#8221;. Defaults to 1. [This option is specific to the i386 <font SIZE="-1">PE</font> targeted port of the linker]</dd>
+<dd>Sets the major number of the &#8220;image version&#8221;. Defaults to 1. [This option is specific to the i386 PE targeted port of the linker]</dd>
 <dt><code>&#8211;major-os-version</code> <i>value</i></dt>
-<dd>Sets the major number of the &#8220;os version&#8221;. Defaults to 4. [This option is specific to the i386 <font SIZE="-1">PE</font> targeted port of the linker]</dd>
+<dd>Sets the major number of the &#8220;os version&#8221;. Defaults to 4. [This option is specific to the i386 PE targeted port of the linker]</dd>
 <dt><code>&#8211;major-subsystem-version</code> <i>value</i></dt>
-<dd>Sets the major number of the &#8220;subsystem version&#8221;. Defaults to 4. [This option is specific to the i386 <font SIZE="-1">PE</font> targeted port of the linker]</dd>
+<dd>Sets the major number of the &#8220;subsystem version&#8221;. Defaults to 4. [This option is specific to the i386 PE targeted port of the linker]</dd>
 <dt><code>&#8211;minor-image-version</code> <i>value</i></dt>
-<dd>Sets the minor number of the &#8220;image version&#8221;. Defaults to 0. [This option is specific to the i386 <font SIZE="-1">PE</font> targeted port of the linker]</dd>
+<dd>Sets the minor number of the &#8220;image version&#8221;. Defaults to 0. [This option is specific to the i386 PE targeted port of the linker]</dd>
 <dt><code>&#8211;minor-os-version</code> <i>value</i></dt>
-<dd>Sets the minor number of the &#8220;os version&#8221;. Defaults to 0. [This option is specific to the i386 <font SIZE="-1">PE</font> targeted port of the linker]</dd>
+<dd>Sets the minor number of the &#8220;os version&#8221;. Defaults to 0. [This option is specific to the i386 PE targeted port of the linker]</dd>
 <dt><code>&#8211;minor-subsystem-version</code> <i>value</i></dt>
-<dd>Sets the minor number of the &#8220;subsystem version&#8221;. Defaults to 0. [This option is specific to the i386 <font SIZE="-1">PE</font> targeted port of the linker]</dd>
+<dd>Sets the minor number of the &#8220;subsystem version&#8221;. Defaults to 0. [This option is specific to the i386 PE targeted port of the linker]</dd>
 <dt><code>&#8211;output-def</code> <i>file</i></dt>
-<dd>The linker will create the file <i>file</i> which will contain a <font SIZE="-1">DEF</font> file corresponding to the <font SIZE="-1">DLL</font> the linker is generating. This <font SIZE="-1">DEF</font> file (which should be called <tt>&quot;*.def&quot;</tt>) may be used to create an import library with <tt>&quot;dlltool&quot;</tt> or may be used as a reference to automatically or implicitly exported symbols. [This option is specific to the i386 <font SIZE="-1">PE</font> targeted port of the linker]</dd>
+<dd>The linker will create the file <i>file</i> which will contain a DEF file corresponding to the DLL the linker is generating. This DEF file (which should be called <tt>&quot;*.def&quot;</tt>) may be used to create an import library with <tt>&quot;dlltool&quot;</tt> or may be used as a reference to automatically or implicitly exported symbols. [This option is specific to the i386 PE targeted port of the linker]</dd>
 <dt><code>&#8211;enable-auto-image-base</code></dt>
 <dd>
 </dd><dt><code>&#8211;enable-auto-image-base=</code><i>value</i></dt>
-<dd>Automatically choose the image base for DLLs, optionally starting with base <i>value</i>, unless one is specified using the <tt>&quot;--image-base&quot;</tt> argument. By using a hash generated from the dllname to create unique image bases for each <font SIZE="-1">DLL,</font> in-memory collisions and relocations which can delay program execution are avoided. [This option is specific to the i386 <font SIZE="-1">PE</font> targeted port of the linker]</dd>
+<dd>Automatically choose the image base for DLLs, optionally starting with base <i>value</i>, unless one is specified using the <tt>&quot;--image-base&quot;</tt> argument. By using a hash generated from the dllname to create unique image bases for each DLL, in-memory collisions and relocations which can delay program execution are avoided. [This option is specific to the i386 PE targeted port of the linker]</dd>
 <dt><code>&#8211;disable-auto-image-base</code></dt>
-<dd>Do not automatically generate a unique image base. If there is no user-specified image base (<tt>&quot;--image-base&quot;</tt>) then use the platform default. [This option is specific to the i386 <font SIZE="-1">PE</font> targeted port of the linker]</dd>
+<dd>Do not automatically generate a unique image base. If there is no user-specified image base (<tt>&quot;--image-base&quot;</tt>) then use the platform default. [This option is specific to the i386 PE targeted port of the linker]</dd>
 <dt><code>&#8211;dll-search-prefix</code> <i>string</i></dt>
-<dd>When linking dynamically to a dll without an import library, search for <tt>&quot;&lt;string&gt;&lt;basename&gt;.dll&quot;</tt> in preference to <tt>&quot;lib&lt;basename&gt;.dll&quot;</tt>. This behaviour allows easy distinction between DLLs built for the various &#8220;subplatforms&#8221;: native, cygwin, uwin, pw, etc. For instance, cygwin DLLs typically use <tt>&quot;--dll-search-prefix=cyg&quot;</tt>. [This option is specific to the i386 <font SIZE="-1">PE</font> targeted port of the linker]</dd>
+<dd>When linking dynamically to a dll without an import library, search for <tt>&quot;&lt;string&gt;&lt;basename&gt;.dll&quot;</tt> in preference to <tt>&quot;lib&lt;basename&gt;.dll&quot;</tt>. This behaviour allows easy distinction between DLLs built for the various &#8220;subplatforms&#8221;: native, cygwin, uwin, pw, etc. For instance, cygwin DLLs typically use <tt>&quot;--dll-search-prefix=cyg&quot;</tt>. [This option is specific to the i386 PE targeted port of the linker]</dd>
 <dt><code>&#8211;enable-auto-import</code></dt>
-<dd>Do sophisticated linking of <tt>&quot;_symbol&quot;</tt> to <tt>&quot;__imp__symbol&quot;</tt> for <font SIZE="-1">DATA</font> imports from DLLs, thus making it possible to bypass the dllimport mechanism on the user side and to reference unmangled symbol names. [This option is specific to the i386 <font SIZE="-1">PE</font> targeted port of the linker] </dd>
+<dd>Do sophisticated linking of <tt>&quot;_symbol&quot;</tt> to <tt>&quot;__imp__symbol&quot;</tt> for DATA imports from DLLs, thus making it possible to bypass the dllimport mechanism on the user side and to reference unmangled symbol names. [This option is specific to the i386 PE targeted port of the linker] </dd>
 <p> The following remarks pertain to the original implementation of the feature and are obsolete nowadays for Cygwin and MinGW targets. </p>
 <p> Note: Use of the &#8216;auto-import&#8217; extension will cause the text section of the image file to be made writable. This does not conform to the PE-COFF format specification published by Microsoft. </p>
 <p> Note &#8211; use of the &#8216;auto-import&#8217; extension will also cause read only data which would normally be placed into the .rdata section to be placed into the .data section instead. This is in order to work around a problem with consts that is described here: <a rel="nofollow" href="http://www.cygwin.com/ml/cygwin/2004-09/msg01101.html">http://www.cygwin.com/ml/cygwin/2004-09/msg01101.html</a> </p>
 <p> Using &#8216;auto-import&#8217; generally will &#8216;just work&#8217; &#8212; but sometimes you may see this message: </p>
 <p> &quot;variable &#8216;&lt;var&gt;&#8217; can&#8217;t be auto-imported. Please read the documentation for ld&#8217;s <tt>&quot;--enable-auto-import&quot;</tt> for details.&quot; </p>
-<p> This message occurs when some (sub)expression accesses an address ultimately given by the sum of two constants (Win32 import tables only allow one). Instances where this may occur include accesses to member fields of struct variables imported from a <font SIZE="-1">DLL,</font> as well as using a constant index into an array variable imported from a <font SIZE="-1">DLL.</font> Any multiword variable (arrays, structs, long long, etc) may trigger this error condition. However, regardless of the exact data type of the offending exported variable, ld will always detect it, issue the warning, and exit. </p>
+<p> This message occurs when some (sub)expression accesses an address ultimately given by the sum of two constants (Win32 import tables only allow one). Instances where this may occur include accesses to member fields of struct variables imported from a DLL, as well as using a constant index into an array variable imported from a DLL. Any multiword variable (arrays, structs, long long, etc) may trigger this error condition. However, regardless of the exact data type of the offending exported variable, ld will always detect it, issue the warning, and exit. </p>
 <p> There are several ways to address this difficulty, regardless of the data type of the exported variable: </p>
 <p> One way is to use &#8211;enable-runtime-pseudo-reloc switch. This leaves the task of adjusting references in your client code for runtime environment, so this method works only when runtime environment supports this feature. </p>
 <p> A second solution is to force one of the &#8216;constants&#8217; to be a variable &#8212; that is, unknown and un-optimizable at compile time. For arrays, there are two possibilities: a) make the indexee (the array&#8217;s address) a variable, or b) make the &#8216;constant&#8217; index a variable. Thus: </p>
@@ -1018,7 +1018,7 @@ description: "ld – The GNU linker"
 <pre> extern long long extern_ll;
  extern_ll --&gt;
  { volatile long long * local_ll=&amp;extern_ll; *local_ll }</pre>
-<p>A third method of dealing with this difficulty is to abandon &#8216;auto-import&#8217; for the offending symbol and mark it with <tt>&quot;__declspec(dllimport)&quot;</tt>. However, in practice that requires using compile-time #defines to indicate whether you are building a <font SIZE="-1">DLL,</font> building client code that will link to the <font SIZE="-1">DLL,</font> or merely building/linking to a static library. In making the choice between the various methods of resolving the &#8216;direct address with constant offset&#8217; problem, you should consider typical real-world usage: </p>
+<p>A third method of dealing with this difficulty is to abandon &#8216;auto-import&#8217; for the offending symbol and mark it with <tt>&quot;__declspec(dllimport)&quot;</tt>. However, in practice that requires using compile-time #defines to indicate whether you are building a DLL, building client code that will link to the DLL, or merely building/linking to a static library. In making the choice between the various methods of resolving the &#8216;direct address with constant offset&#8217; problem, you should consider typical real-world usage: </p>
 <p> Original: </p>
 <pre> --foo.h
  extern int arr[];
@@ -1057,35 +1057,35 @@ description: "ld – The GNU linker"
  }</pre>
 <p>A fourth way to avoid this problem is to re-code your library to use a functional interface rather than a data interface for the offending variables (e.g. <code>set_foo()</code> and <code>get_foo()</code> accessor functions).</p>
 <dt><code>&#8211;disable-auto-import</code></dt>
-<dd>Do not attempt to do sophisticated linking of <tt>&quot;_symbol&quot;</tt> to <tt>&quot;__imp__symbol&quot;</tt> for <font SIZE="-1">DATA</font> imports from DLLs. [This option is specific to the i386 <font SIZE="-1">PE</font> targeted port of the linker]</dd>
+<dd>Do not attempt to do sophisticated linking of <tt>&quot;_symbol&quot;</tt> to <tt>&quot;__imp__symbol&quot;</tt> for DATA imports from DLLs. [This option is specific to the i386 PE targeted port of the linker]</dd>
 <dt><code>&#8211;enable-runtime-pseudo-reloc</code></dt>
-<dd>If your code contains expressions described in &#8211;enable-auto-import section, that is, <font SIZE="-1">DATA</font> imports from <font SIZE="-1">DLL</font> with non-zero offset, this switch will create a vector of &#8216;runtime pseudo relocations&#8217; which can be used by runtime environment to adjust references to such data in your client code. [This option is specific to the i386 <font SIZE="-1">PE</font> targeted port of the linker]</dd>
+<dd>If your code contains expressions described in &#8211;enable-auto-import section, that is, DATA imports from DLL with non-zero offset, this switch will create a vector of &#8216;runtime pseudo relocations&#8217; which can be used by runtime environment to adjust references to such data in your client code. [This option is specific to the i386 PE targeted port of the linker]</dd>
 <dt><code>&#8211;disable-runtime-pseudo-reloc</code></dt>
-<dd>Do not create pseudo relocations for non-zero offset <font SIZE="-1">DATA</font> imports from DLLs. [This option is specific to the i386 <font SIZE="-1">PE</font> targeted port of the linker]</dd>
+<dd>Do not create pseudo relocations for non-zero offset DATA imports from DLLs. [This option is specific to the i386 PE targeted port of the linker]</dd>
 <dt><code>&#8211;enable-extra-pe-debug</code></dt>
-<dd>Show additional debug info related to auto-import symbol thunking. [This option is specific to the i386 <font SIZE="-1">PE</font> targeted port of the linker]</dd>
+<dd>Show additional debug info related to auto-import symbol thunking. [This option is specific to the i386 PE targeted port of the linker]</dd>
 <dt><code>&#8211;section-alignment</code></dt>
-<dd>Sets the section alignment. Sections in memory will always begin at addresses which are a multiple of this number. Defaults to 0x1000. [This option is specific to the i386 <font SIZE="-1">PE</font> targeted port of the linker]</dd>
+<dd>Sets the section alignment. Sections in memory will always begin at addresses which are a multiple of this number. Defaults to 0x1000. [This option is specific to the i386 PE targeted port of the linker]</dd>
 <dt><code>&#8211;stack</code> <i>reserve</i></dt>
 <dd>
 </dd><dt><code>&#8211;stack</code> <i>reserve</i><code>,</code><i>commit</i></dt>
-<dd>Specify the number of bytes of memory to reserve (and optionally commit) to be used as stack for this program. The default is 2MB reserved, 4K committed. [This option is specific to the i386 <font SIZE="-1">PE</font> targeted port of the linker]</dd>
+<dd>Specify the number of bytes of memory to reserve (and optionally commit) to be used as stack for this program. The default is 2MB reserved, 4K committed. [This option is specific to the i386 PE targeted port of the linker]</dd>
 <dt><code>&#8211;subsystem</code> <i>which</i></dt>
 <dd>
 </dd><dt><code>&#8211;subsystem</code> <i>which</i><code>:</code><i>major</i></dt>
 <dd>
 </dd><dt><code>&#8211;subsystem</code> <i>which</i><code>:</code><i>major</i><code>.</code><i>minor</i></dt>
-<dd>Specifies the subsystem under which your program will execute. The legal values for <i>which</i> are <tt>&quot;native&quot;</tt>, <tt>&quot;windows&quot;</tt>, <tt>&quot;console&quot;</tt>, <tt>&quot;posix&quot;</tt>, and <tt>&quot;xbox&quot;</tt>. You may optionally set the subsystem version also. Numeric values are also accepted for <i>which</i>. [This option is specific to the i386 <font SIZE="-1">PE</font> targeted port of the linker] </dd>
-<p> The following options set flags in the <tt>&quot;DllCharacteristics&quot;</tt> field of the <font SIZE="-1">PE</font> file header: [These options are specific to <font SIZE="-1">PE</font> targeted ports of the linker]</p>
+<dd>Specifies the subsystem under which your program will execute. The legal values for <i>which</i> are <tt>&quot;native&quot;</tt>, <tt>&quot;windows&quot;</tt>, <tt>&quot;console&quot;</tt>, <tt>&quot;posix&quot;</tt>, and <tt>&quot;xbox&quot;</tt>. You may optionally set the subsystem version also. Numeric values are also accepted for <i>which</i>. [This option is specific to the i386 PE targeted port of the linker] </dd>
+<p> The following options set flags in the <tt>&quot;DllCharacteristics&quot;</tt> field of the PE file header: [These options are specific to PE targeted ports of the linker]</p>
 <dt><code>&#8211;high-entropy-va</code></dt>
 <dd>
 </dd><dt><code>&#8211;disable-high-entropy-va</code></dt>
-<dd>Image is compatible with 64-bit address space layout randomization (<font SIZE="-1">ASLR</font>). This option is enabled by default for 64-bit <font SIZE="-1">PE</font> images. </dd>
+<dd>Image is compatible with 64-bit address space layout randomization (ASLR). This option is enabled by default for 64-bit PE images. </dd>
 <p> This option also implies <code>&#8211;dynamicbase</code> and <code>&#8211;enable-reloc-section</code>.</p>
 <dt><code>&#8211;dynamicbase</code></dt>
 <dd>
 </dd><dt><code>&#8211;disable-dynamicbase</code></dt>
-<dd>The image base address may be relocated using address space layout randomization (<font SIZE="-1">ASLR</font>). This feature was introduced with <font SIZE="-1">MS</font> Windows Vista for i386 <font SIZE="-1">PE</font> targets. This option is enabled by default but can be disabled via the <code>&#8211;disable-dynamicbase</code> option. This option also implies <code>&#8211;enable-reloc-section</code>.</dd>
+<dd>The image base address may be relocated using address space layout randomization (ASLR). This feature was introduced with MS Windows Vista for i386 PE targets. This option is enabled by default but can be disabled via the <code>&#8211;disable-dynamicbase</code> option. This option also implies <code>&#8211;enable-reloc-section</code>.</dd>
 <dt><code>&#8211;forceinteg</code></dt>
 <dd>
 </dd><dt><code>&#8211;disable-forceinteg</code></dt>
@@ -1093,7 +1093,7 @@ description: "ld – The GNU linker"
 <dt><code>&#8211;nxcompat</code></dt>
 <dd>
 </dd><dt><code>&#8211;disable-nxcompat</code></dt>
-<dd>The image is compatible with the Data Execution Prevention. This feature was introduced with <font SIZE="-1">MS</font> Windows <font SIZE="-1">XP SP2</font> for i386 <font SIZE="-1">PE</font> targets. The option is enabled by default.</dd>
+<dd>The image is compatible with the Data Execution Prevention. This feature was introduced with MS Windows XP SP2 for i386 PE targets. The option is enabled by default.</dd>
 <dt><code>&#8211;no-isolation</code></dt>
 <dd>
 </dd><dt><code>&#8211;disable-no-isolation</code></dt>
@@ -1101,7 +1101,7 @@ description: "ld – The GNU linker"
 <dt><code>&#8211;no-seh</code></dt>
 <dd>
 </dd><dt><code>&#8211;disable-no-seh</code></dt>
-<dd>The image does not use <font SIZE="-1">SEH.</font> No <font SIZE="-1">SE</font> handler may be called from this image. This option is disabled by default.</dd>
+<dd>The image does not use SEH. No SE handler may be called from this image. This option is disabled by default.</dd>
 <dt><code>&#8211;no-bind</code></dt>
 <dd>
 </dd><dt><code>&#8211;disable-no-bind</code></dt>
@@ -1109,7 +1109,7 @@ description: "ld – The GNU linker"
 <dt><code>&#8211;wdmdriver</code></dt>
 <dd>
 </dd><dt><code>&#8211;disable-wdmdriver</code></dt>
-<dd>The driver uses the <font SIZE="-1">MS</font> Windows Driver Model. This option is disabled by default.</dd>
+<dd>The driver uses the MS Windows Driver Model. This option is disabled by default.</dd>
 <dt><code>&#8211;tsaware</code></dt>
 <dd>
 </dd><dt><code>&#8211;disable-tsaware</code></dt>
@@ -1121,13 +1121,13 @@ description: "ld – The GNU linker"
 <dt><code>&#8211;enable-reloc-section</code></dt>
 <dd>
 </dd><dt><code>&#8211;disable-reloc-section</code></dt>
-<dd>Create the base relocation table, which is necessary if the image is loaded at a different image base than specified in the <font SIZE="-1">PE</font> header. This option is enabled by default.</dd></dl>
-<p> The C6X uClinux target uses a binary format called <font SIZE="-1">DSBT</font> to support shared libraries. Each shared library in the system needs to have a unique index; all executables use an index of 0.</p>
+<dd>Create the base relocation table, which is necessary if the image is loaded at a different image base than specified in the PE header. This option is enabled by default.</dd></dl>
+<p> The C6X uClinux target uses a binary format called DSBT to support shared libraries. Each shared library in the system needs to have a unique index; all executables use an index of 0.</p>
 <dl COMPACT>
 <dt><code>&#8211;dsbt-size</code> <i>size</i></dt>
-<dd>This option sets the number of entries in the <font SIZE="-1">DSBT</font> of the current executable or shared library to <i>size</i>. The default is to create a table with 64 entries.</dd>
+<dd>This option sets the number of entries in the DSBT of the current executable or shared library to <i>size</i>. The default is to create a table with 64 entries.</dd>
 <dt><code>&#8211;dsbt-index</code> <i>index</i></dt>
-<dd>This option sets the <font SIZE="-1">DSBT</font> index of the current executable or shared library to <i>index</i>. The default is 0, which is appropriate for generating executables. If a shared library is generated with a <font SIZE="-1">DSBT</font> index of 0, the <tt>&quot;R_C6000_DSBT_INDEX&quot;</tt> relocs are copied into the output file. </dd>
+<dd>This option sets the DSBT index of the current executable or shared library to <i>index</i>. The default is 0, which is appropriate for generating executables. If a shared library is generated with a DSBT index of 0, the <tt>&quot;R_C6000_DSBT_INDEX&quot;</tt> relocs are copied into the output file. </dd>
 <p> The <code>&#8211;no-merge-exidx-entries</code> switch disables the merging of adjacent exidx entries in frame unwind info.</p>
 <dt><code>&#8211;branch-stub</code></dt>
 <dd>This option enables linker branch relaxation by inserting branch stub sections when needed to extend the range of branches. This option is usually not required since C-SKY supports branch and call instructions that can access the full memory range and branch relaxation is normally handled by the compiler or assembler.</dd>
@@ -1138,31 +1138,31 @@ description: "ld – The GNU linker"
 <dt><code>&#8211;no-trampoline</code></dt>
 <dd>This option disables the generation of trampoline. By default a trampoline is generated for each far function which is called using a <tt>&quot;jsr&quot;</tt> instruction (this happens when a pointer to a far function is taken).</dd>
 <dt><code>&#8211;bank-window</code> <i>name</i></dt>
-<dd>This option indicates to the linker the name of the memory region in the <font SIZE="-1"><code>MEMORY</code></font> specification that describes the memory bank window. The definition of such region is then used by the linker to compute paging and addresses within the memory window.</dd></dl>
-<p> The following options are supported to control handling of <font SIZE="-1">GOT</font> generation when linking for 68K targets.</p>
+<dd>This option indicates to the linker the name of the memory region in the <code>MEMORY</code> specification that describes the memory bank window. The definition of such region is then used by the linker to compute paging and addresses within the memory window.</dd></dl>
+<p> The following options are supported to control handling of GOT generation when linking for 68K targets.</p>
 <dl COMPACT>
 <dt><code>&#8211;got=</code><i>type</i></dt>
-<dd>This option tells the linker which <font SIZE="-1">GOT</font> generation scheme to use. <i>type</i> should be one of <code>single</code>, <code>negative</code>, <code>multigot</code> or <code>target</code>. For more information refer to the Info entry for <i>ld</i>.</dd></dl>
-<p> The following options are supported to control microMIPS instruction generation and branch relocation checks for <font SIZE="-1">ISA</font> mode transitions when linking for <font SIZE="-1">MIPS</font> targets.</p>
+<dd>This option tells the linker which GOT generation scheme to use. <i>type</i> should be one of <code>single</code>, <code>negative</code>, <code>multigot</code> or <code>target</code>. For more information refer to the Info entry for <i>ld</i>.</dd></dl>
+<p> The following options are supported to control microMIPS instruction generation and branch relocation checks for ISA mode transitions when linking for MIPS targets.</p>
 <dl COMPACT>
 <dt><code>&#8211;insn32</code></dt>
 <dd>
 </dd><dt><code>&#8211;no-insn32</code></dt>
-<dd>These options control the choice of microMIPS instructions used in code generated by the linker, such as that in the <font SIZE="-1">PLT</font> or lazy binding stubs, or in relaxation. If <code>&#8211;insn32</code> is used, then the linker only uses 32-bit instruction encodings. By default or if <code>&#8211;no-insn32</code> is used, all instruction encodings are used, including 16-bit ones where possible.</dd>
+<dd>These options control the choice of microMIPS instructions used in code generated by the linker, such as that in the PLT or lazy binding stubs, or in relaxation. If <code>&#8211;insn32</code> is used, then the linker only uses 32-bit instruction encodings. By default or if <code>&#8211;no-insn32</code> is used, all instruction encodings are used, including 16-bit ones where possible.</dd>
 <dt><code>&#8211;ignore-branch-isa</code></dt>
 <dd>
 </dd><dt><code>&#8211;no-ignore-branch-isa</code></dt>
-<dd>These options control branch relocation checks for invalid <font SIZE="-1">ISA</font> mode transitions. If <code>&#8211;ignore-branch-isa</code> is used, then the linker accepts any branch relocations and any <font SIZE="-1">ISA</font> mode transition required is lost in relocation calculation, except for some cases of <tt>&quot;BAL&quot;</tt> instructions which meet relaxation conditions and are converted to equivalent <tt>&quot;JALX&quot;</tt> instructions as the associated relocation is calculated. By default or if <code>&#8211;no-ignore-branch-isa</code> is used a check is made causing the loss of an <font SIZE="-1">ISA</font> mode transition to produce an error.</dd>
+<dd>These options control branch relocation checks for invalid ISA mode transitions. If <code>&#8211;ignore-branch-isa</code> is used, then the linker accepts any branch relocations and any ISA mode transition required is lost in relocation calculation, except for some cases of <tt>&quot;BAL&quot;</tt> instructions which meet relaxation conditions and are converted to equivalent <tt>&quot;JALX&quot;</tt> instructions as the associated relocation is calculated. By default or if <code>&#8211;no-ignore-branch-isa</code> is used a check is made causing the loss of an ISA mode transition to produce an error.</dd>
 <dt><code>&#8211;compact-branches</code></dt>
 <dd>
 </dd><dt><code>&#8211;no-compact-branches</code></dt>
-<dd>These options control the generation of compact instructions by the linker in the <font SIZE="-1">PLT</font> entries for <font SIZE="-1">MIPS R6.</font></dd></dl>
+<dd>These options control the generation of compact instructions by the linker in the PLT entries for MIPS R6.</dd></dl>
 <p> For the pdp11-aout target, three variants of the output format can be produced as selected by the following options. The default variant for pdp11-aout is the <code>&#8211;omagic</code> option, whereas for other targets <code>&#8211;nmagic</code> is the default. The <code>&#8211;imagic</code> option is defined only for the pdp11-aout target, while the others are described here as they apply to the pdp11-aout target.</p>
 <dl COMPACT>
 <dt><code>-N</code></dt>
 <dd>
 </dd><dt><code>&#8211;omagic</code></dt>
-<dd>Mark the output as <tt>&quot;OMAGIC&quot;</tt> (0407) in the <i>a.out</i> header to indicate that the text segment is not to be write-protected and shared. Since the text and data sections are both readable and writable, the data section is allocated immediately contiguous after the text segment. This is the oldest format for <font SIZE="-1">PDP11</font> executable programs and is the default for <code>ld</code> on <font SIZE="-1">PDP11</font> Unix systems from the beginning through 2.11BSD.</dd>
+<dd>Mark the output as <tt>&quot;OMAGIC&quot;</tt> (0407) in the <i>a.out</i> header to indicate that the text segment is not to be write-protected and shared. Since the text and data sections are both readable and writable, the data section is allocated immediately contiguous after the text segment. This is the oldest format for PDP11 executable programs and is the default for <code>ld</code> on PDP11 Unix systems from the beginning through 2.11BSD.</dd>
 <dt><code>-n</code></dt>
 <dd>
 </dd><dt><code>&#8211;nmagic</code></dt>
@@ -1170,16 +1170,16 @@ description: "ld – The GNU linker"
 <dt><code>-z</code></dt>
 <dd>
 </dd><dt><code>&#8211;imagic</code></dt>
-<dd>Mark the output as <tt>&quot;IMAGIC&quot;</tt> (0411) in the <i>a.out</i> header to indicate that when the output file is executed, the program text and data areas will be loaded into separate address spaces using the split instruction and data space feature of the memory management unit in larger models of the <font SIZE="-1">PDP11.</font> This doubles the address space available to the program. The text segment is again pure, write-protected, and shareable. The only difference in the output format between this option and the others, besides the magic number, is that both the text and data sections start at location 0. The <code>-z</code> option selected this format in 2.11BSD. This option creates a <i>separate executable</i> format.</dd>
+<dd>Mark the output as <tt>&quot;IMAGIC&quot;</tt> (0411) in the <i>a.out</i> header to indicate that when the output file is executed, the program text and data areas will be loaded into separate address spaces using the split instruction and data space feature of the memory management unit in larger models of the PDP11. This doubles the address space available to the program. The text segment is again pure, write-protected, and shareable. The only difference in the output format between this option and the others, besides the magic number, is that both the text and data sections start at location 0. The <code>-z</code> option selected this format in 2.11BSD. This option creates a <i>separate executable</i> format.</dd>
 <dt><code>&#8211;no-omagic</code></dt>
 <dd>Equivalent to <code>&#8211;nmagic</code> for pdp11-aout.</dd></dl>
 <h2>Environment</h2>
 <p>You can change the behaviour of <code>ld</code> with the environment variables <tt>&quot;GNUTARGET&quot;</tt>, <tt>&quot;LDEMULATION&quot;</tt> and <tt>&quot;COLLECT_NO_DEMANGLE&quot;</tt>. </p>
-<p> <tt>&quot;GNUTARGET&quot;</tt> determines the input-file object format if you don&#8217;t use <code>-b</code> (or its synonym <code>&#8211;format</code>). Its value should be one of the <font SIZE="-1">BFD</font> names for an input format. If there is no <tt>&quot;GNUTARGET&quot;</tt> in the environment, <code>ld</code> uses the natural format of the target. If <tt>&quot;GNUTARGET&quot;</tt> is set to <tt>&quot;default&quot;</tt> then <font SIZE="-1">BFD</font> attempts to discover the input format by examining binary input files; this method often succeeds, but there are potential ambiguities, since there is no method of ensuring that the magic number used to specify object-file formats is unique. However, the configuration procedure for <font SIZE="-1">BFD</font> on each system places the conventional format for that system first in the search-list, so ambiguities are resolved in favor of convention. </p>
+<p> <tt>&quot;GNUTARGET&quot;</tt> determines the input-file object format if you don&#8217;t use <code>-b</code> (or its synonym <code>&#8211;format</code>). Its value should be one of the BFD names for an input format. If there is no <tt>&quot;GNUTARGET&quot;</tt> in the environment, <code>ld</code> uses the natural format of the target. If <tt>&quot;GNUTARGET&quot;</tt> is set to <tt>&quot;default&quot;</tt> then BFD attempts to discover the input format by examining binary input files; this method often succeeds, but there are potential ambiguities, since there is no method of ensuring that the magic number used to specify object-file formats is unique. However, the configuration procedure for BFD on each system places the conventional format for that system first in the search-list, so ambiguities are resolved in favor of convention. </p>
 <p> <tt>&quot;LDEMULATION&quot;</tt> determines the default emulation if you don&#8217;t use the <code>-m</code> option. The emulation can affect various aspects of linker behaviour, particularly the default linker script. You can list the available emulations with the <code>&#8211;verbose</code> or <code>-V</code> options. If the <code>-m</code> option is not used, and the <tt>&quot;LDEMULATION&quot;</tt> environment variable is not defined, the default emulation depends upon how the linker was configured. </p>
 <p> Normally, the linker will default to demangling symbols. However, if <tt>&quot;COLLECT_NO_DEMANGLE&quot;</tt> is set in the environment, then it will default to not demangling symbols. This environment variable is used in a similar fashion by the <tt>&quot;gcc&quot;</tt> linker wrapper program. The default may be overridden by the <code>&#8211;demangle</code> and <code>&#8211;no-demangle</code> options.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-ar/">ar</a></code>(1), <code><a href="/docs/linux/man/1-nm/">nm</a></code>(1), <code><a href="/docs/linux/man/1-objcopy/">objcopy</a></code>(1), <code><a href="/docs/linux/man/1-objdump/">objdump</a></code>(1), <code><a href="/docs/linux/man/1-readelf/">readelf</a></code>(1) and the Info entries for <i>binutils</i> and <i>ld</i>.</p>
 <h2>Copyright</h2>
 <p>Copyright (c) 1991-2022 Free Software Foundation, Inc. </p>
-<p> Permission is granted to copy, distribute and/or modify this document under the terms of the <font SIZE="-1">GNU</font> Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts. A copy of the license is included in the section entitled &#8220;<font SIZE="-1">GNU</font> Free Documentation License&#8221;.</p>
+<p> Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts. A copy of the license is included in the section entitled &#8220;GNU Free Documentation License&#8221;.</p>

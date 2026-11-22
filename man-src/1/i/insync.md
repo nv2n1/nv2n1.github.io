@@ -38,8 +38,8 @@ description: "insync – command line interface for the Insync process"
 </dl>
 <p> </code></p>
 <h2>BUGS</h2>
-<p> Please report bugs to support [at] insynchq.com.<br />
- How-to guides: &lt;<a rel="nofollow" href="https://help.insynchq.com">https://help.insynchq.com</a>&gt;.<br />
+<p> Please report bugs to support [at] insynchq.com.<br/>
+ How-to guides: &lt;<a rel="nofollow" href="https://help.insynchq.com">https://help.insynchq.com</a>&gt;.<br/>
  Support forums: &lt;<a rel="nofollow" href="https://forums.insynchq.com">https://forums.insynchq.com</a>&gt;.</p>
 <h2>AUTHOR</h2>
 <p> Created by the Insync team. </p>

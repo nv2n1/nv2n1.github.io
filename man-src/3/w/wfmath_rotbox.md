@@ -11,29 +11,29 @@ description: "WFMath::RotBox – A dim dimensional box, lying at an arbitrary an
 <h2>Synopsis</h2>
 <p>#include &lt;<a href="file:/usr/include/rotbox.h">rotbox.h</a>&gt; </p>
 <h3>Public Member Functions</h3>
-<p><code>RotBox</code> ()<br />
- <i>construct an uninitialized box </i><br />
- <code>RotBox</code> (const <code>Point</code>&lt; dim &gt; &amp;p, const <code>Vector</code>&lt; dim &gt; &amp;size, const <code>RotMatrix</code>&lt; dim &gt; &amp;orientation)<br />
- <i>construct a box from the given parameters </i><br />
- <code>RotBox</code> (const <code>RotBox</code> &amp;b)<br />
- <i>construct a copy of the box </i><br />
- <code>RotBox</code> (const AtlasInType &amp;a)<br />
- <i>Construct a rotbox from an object passed by Atlas. </i><br />
- AtlasOutType <code>toAtlas</code> () const<br />
- <i>Create an Atlas object from the box. </i><br />
- void <code>fromAtlas</code> (const AtlasInType &amp;a)<br />
- <i>Set the box&#8217;s value to that given by an Atlas object. </i><br />
- const <code>Point</code>&lt; dim &gt; &amp; <code>corner0</code> () const<br />
- <i>returns the base corner of the box </i><br />
- <code>Point</code>&lt; dim &gt; &amp; <code>corner0</code> ()<br />
- <i>returns the base corner of the box </i><br />
- const <code>Vector</code>&lt; dim &gt; &amp; <code>size</code> () const<br />
- <i>returns the size of the box </i><br />
- <code>Vector</code>&lt; dim &gt; &amp; <code>size</code> ()<br />
- <i>returns the size of the box </i><br />
- const <code>RotMatrix</code>&lt; dim &gt; &amp; <code>orientation</code> () const<br />
- <i>returns the orientation of the box </i><br />
- <code>RotMatrix</code>&lt; dim &gt; &amp; <code>orientation</code> ()<br />
+<p><code>RotBox</code> ()<br/>
+ <i>construct an uninitialized box </i><br/>
+ <code>RotBox</code> (const <code>Point</code>&lt; dim &gt; &amp;p, const <code>Vector</code>&lt; dim &gt; &amp;size, const <code>RotMatrix</code>&lt; dim &gt; &amp;orientation)<br/>
+ <i>construct a box from the given parameters </i><br/>
+ <code>RotBox</code> (const <code>RotBox</code> &amp;b)<br/>
+ <i>construct a copy of the box </i><br/>
+ <code>RotBox</code> (const AtlasInType &amp;a)<br/>
+ <i>Construct a rotbox from an object passed by Atlas. </i><br/>
+ AtlasOutType <code>toAtlas</code> () const<br/>
+ <i>Create an Atlas object from the box. </i><br/>
+ void <code>fromAtlas</code> (const AtlasInType &amp;a)<br/>
+ <i>Set the box&#8217;s value to that given by an Atlas object. </i><br/>
+ const <code>Point</code>&lt; dim &gt; &amp; <code>corner0</code> () const<br/>
+ <i>returns the base corner of the box </i><br/>
+ <code>Point</code>&lt; dim &gt; &amp; <code>corner0</code> ()<br/>
+ <i>returns the base corner of the box </i><br/>
+ const <code>Vector</code>&lt; dim &gt; &amp; <code>size</code> () const<br/>
+ <i>returns the size of the box </i><br/>
+ <code>Vector</code>&lt; dim &gt; &amp; <code>size</code> ()<br/>
+ <i>returns the size of the box </i><br/>
+ const <code>RotMatrix</code>&lt; dim &gt; &amp; <code>orientation</code> () const<br/>
+ <i>returns the orientation of the box </i><br/>
+ <code>RotMatrix</code>&lt; dim &gt; &amp; <code>orientation</code> ()<br/>
  <i>returns the orientation of the box </i></p>
 <h2>Detailed Description</h2>
 <h3>template&lt;const int dim&gt; class WFMath::RotBox&lt; dim &gt;</h3>

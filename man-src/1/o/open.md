@@ -48,7 +48,7 @@ description: "xdg-open – opens a file or URL in the user’s preferred applica
 <dt>
 </dt><dd> The action failed.</dd></dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-xdg-mime/">xdg-mime</a></code>(1), <code><a href="/docs/linux/man/1-xdg-settings/">xdg-settings</a></code>(1), m[blue]<code>MIME applications associations specification</code>m[]<font SIZE="-2">[1]</font></p>
+<p> <code><a href="/docs/linux/man/1-xdg-mime/">xdg-mime</a></code>(1), <code><a href="/docs/linux/man/1-xdg-settings/">xdg-settings</a></code>(1), m[blue]<code>MIME applications associations specification</code>m[][1]</p>
 <h2>EXAMPLES</h2>
 <dl>
 <dt>

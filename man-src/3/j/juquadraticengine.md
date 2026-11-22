@@ -10,10 +10,10 @@ description: "ql/pricingengines/vanilla/juquadraticengine.hpp – Ju quadratic (
 
 <p> ql/pricingengines/vanilla/juquadraticengine.hpp &#8211; Ju quadratic (1999) approximation engine. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/instruments/vanillaoption.hpp&gt;<br />
+<p> #include &lt;ql/instruments/vanillaoption.hpp&gt;<br/>
  #include &lt;ql/processes/blackscholesprocess.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>JuQuadraticApproximationEngine</code><br />
+<p> class <code>JuQuadraticApproximationEngine</code><br/>
  <i>Pricing engine for American options with Ju quadratic approximation. </i></p>
 <h2>Detailed Description</h2>
 <p> Ju quadratic (1999) approximation engine. </p>

@@ -26,7 +26,7 @@ description: "knsec3hash – Simple utility to compute NSEC3 hash (libknot equiv
 <h2>SEE ALSO</h2>
 <p> RFC 5155 &#8211; DNS Security (DNSSEC) Hashed Authenticated Denial of Existence.</p>
 <h2>EXAMPLE</h2>
-<p> $ knsec3hash c01dcafe 1 10 knot-dns.cz<br />
+<p> $ knsec3hash c01dcafe 1 10 knot-dns.cz<br/>
  7PTVGE7QV67EM61ROS9238P5RAKR2DM7 (salt=c01dcafe, hash=1, iterations=10)</p>
 <h2>AUTHOR</h2>
 <p> Jan Vcelak (<code><a rel="nofollow" href="http://knot-dns.cz">http://knot-dns.cz</a></code>)</p>

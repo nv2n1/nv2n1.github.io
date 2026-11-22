@@ -93,7 +93,7 @@ description: "pdfjadetex – PDF output from JadeTeX"
 <dd> <p> Metric files for pdfjadeTeX&#8217;s fonts. </p>
  </dd>
 <dt><i>*.fmt</i></dt>
-<dd> <p> Predigested pdfjadeTeX format (.fmt) files. <br />
+<dd> <p> Predigested pdfjadeTeX format (.fmt) files. <br/>
  </p>
  </dd></dl>
 <h2>BUGS</h2>

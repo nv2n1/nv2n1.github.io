@@ -35,5 +35,5 @@ description: "Lintian::Command – Utilities to execute other commands from lint
 <p> The following hash keys can be set to alter the behaviour of <code>spawn()</code>:</p>
 <dl COMPACT>
 <dt>in</dt>
-<dd><font SIZE="-1">STDIN</font> for the first forked child. Defaults to <tt>&quot;
+<dd>STDIN for the first forked child. Defaults to <tt>&quot;
 </dd></dl>

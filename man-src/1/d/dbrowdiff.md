@@ -20,7 +20,7 @@ description: "dbrowdiff – compute row-by-row differences of some column"
 <dd> Select baseline mode (the default), where differences are relative to the first row.</dd>
 <dt><code>-I</code> or <code>&#8211;incremental</code></dt>
 <dd> Select incremental mode, where differences are relative to the previous row.</dd>
-<dt><code>-f </code><font SIZE="-1"><code>FORMAT</code></font> or <code>&#8211;format </code><font SIZE="-1"><code>FORMAT</code></font></dt>
+<dt><code>-f </code><code>FORMAT</code> or <code>&#8211;format </code><code>FORMAT</code></dt>
 <dd> Specify a <i><a href="/docs/linux/man/3-printf/">printf</a></i>(3)-style format for output statistics. Defaults to <tt>&quot;%.5g&quot;</tt>.</dd></dl>
 <p> This module also supports the standard fsdb options:</p>
 <dl>
@@ -71,4 +71,4 @@ description: "dbrowdiff – compute row-by-row differences of some column"
 <p> dbrowdiff, dbrowuniq, and dbfilediff are similar but different. dbrowdiff computes row-by-row differences for a column, dbrowuniq eliminates rows that have no differences, and dbfilediff compares fields of two files.</p>
 <h2>AUTHOR and COPYRIGHT</h2>
 <p> Copyright (C) 1991-2008 by John Heidemann &lt;johnh [at] isi.edu&gt; </p>
-<p> This program is distributed under terms of the <font SIZE="-1">GNU</font> general public license, version 2. See the file <font SIZE="-1">COPYING</font> with the distribution for details. </p>
+<p> This program is distributed under terms of the GNU general public license, version 2. See the file COPYING with the distribution for details. </p>

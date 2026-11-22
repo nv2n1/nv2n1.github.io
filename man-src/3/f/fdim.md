@@ -11,8 +11,8 @@ description: "fdim, fdimf, fdiml – positive difference"
 <p> fdim, fdimf, fdiml &#8211; positive difference </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;math.h&gt;</code> </p>
-<p> <code>double fdim(double </code><i>x</i><code>, double </code><i>y</i><code>);</code><br />
- <code>float fdimf(float </code><i>x</i><code>, float </code><i>y</i><code>);</code><br />
+<p> <code>double fdim(double </code><i>x</i><code>, double </code><i>y</i><code>);</code><br/>
+ <code>float fdimf(float </code><i>x</i><code>, float </code><i>y</i><code>);</code><br/>
  <code>long double fdiml(long double </code><i>x</i><code>, long double </code><i>y</i><code>);</code> </p>
 <p> Link with <i>-lm</i>. </p>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>

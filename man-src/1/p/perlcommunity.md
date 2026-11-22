@@ -13,7 +13,7 @@ perlcommunity - a brief overview of the Perl community
 
  This document aims to provide an overview of the vast perl community, which is far too large and diverse to provide a detailed listing. If any specific niche has been forgotten, it is not meant as an insult but an omission for the sake of brevity. 
 
- The Perl community is as diverse as Perl, and there is a large amount of evidence that the Perl users apply <font SIZE="-1">TMTOWTDI</font> to all endeavors, not just programming. From websites, to <font SIZE="-1">IRC,</font> to mailing lists, there is more than one way to get involved in the community.
+ The Perl community is as diverse as Perl, and there is a large amount of evidence that the Perl users apply TMTOWTDI to all endeavors, not just programming. From websites, to IRC, to mailing lists, there is more than one way to get involved in the community.
 
 <h3>Where to Find the Community</h3>
 
@@ -25,11 +25,11 @@ perlcommunity - a brief overview of the Perl community
 
  Most Perl-related projects set up mailing lists for both users and contributors. If you don't see a certain project listed at &lt;<a rel="nofollow" HREF="http://lists.perl.org">http://lists.perl.org</a>&gt;, check the particular website for that project. Most mailing lists are archived at &lt;<a rel="nofollow" HREF="http://nntp.perl.org/">http://nntp.perl.org/</a>&gt;.
 
-<h3><font SIZE="-1">IRC</font></h3>
+<h3>IRC</h3>
 
- The Perl community has a rather large <font SIZE="-1">IRC</font> presence. For starters, it has its own <font SIZE="-1">IRC</font> network, &lt;<a HREF="irc://irc.perl.org">irc://irc.perl.org</a>&gt;. General (not help-oriented) chat can be found at &lt;<a HREF="irc://irc.perl.org/#perl">irc://irc.perl.org/#perl</a>&gt;. Many other more specific chats are also hosted on the network. Information about irc.perl.org is located on the network's website: &lt;<a rel="nofollow" HREF="http://www.irc.perl.org">http://www.irc.perl.org</a>&gt;. For a more help-oriented #perl, check out &lt;<a HREF="irc://irc.freenode.net/#perl">irc://irc.freenode.net/#perl</a>&gt;. Perl 6 development also has a presence in &lt;<a HREF="irc://irc.freenode.net/#perl6">irc://irc.freenode.net/#perl6</a>&gt;. Most Perl-related channels will be kind enough to point you in the right direction if you ask nicely. 
+ The Perl community has a rather large IRC presence. For starters, it has its own IRC network, &lt;<a HREF="irc://irc.perl.org">irc://irc.perl.org</a>&gt;. General (not help-oriented) chat can be found at &lt;<a HREF="irc://irc.perl.org/#perl">irc://irc.perl.org/#perl</a>&gt;. Many other more specific chats are also hosted on the network. Information about irc.perl.org is located on the network's website: &lt;<a rel="nofollow" HREF="http://www.irc.perl.org">http://www.irc.perl.org</a>&gt;. For a more help-oriented #perl, check out &lt;<a HREF="irc://irc.freenode.net/#perl">irc://irc.freenode.net/#perl</a>&gt;. Perl 6 development also has a presence in &lt;<a HREF="irc://irc.freenode.net/#perl6">irc://irc.freenode.net/#perl6</a>&gt;. Most Perl-related channels will be kind enough to point you in the right direction if you ask nicely. 
 
- Any large <font SIZE="-1">IRC</font> network (Dalnet, EFnet) is also likely to have a #perl channel, with varying activity levels.
+ Any large IRC network (Dalnet, EFnet) is also likely to have a #perl channel, with varying activity levels.
 
 <h3>Websites</h3>
 
@@ -56,31 +56,31 @@ perlcommunity - a brief overview of the Perl community
 </dd><dt>&lt;<a rel="nofollow" HREF="http://stackoverflow.com/">http://stackoverflow.com/</a>&gt;
 </dt><dd> Stack Overflow is a free question-and-answer site for programmers. It's not focussed solely on Perl, but it does have an active group of users who do their best to help people with their Perl programming questions.
 </dd><dt>&lt;<a rel="nofollow" HREF="http://prepan.org/">http://prepan.org/</a>&gt;
-</dt><dd> PrePAN is used as a place to discuss modules that you're considering uploading to the <font SIZE="-1">CPAN.</font> You can get feedback on their design before you upload.</dd></dl>
+</dt><dd> PrePAN is used as a place to discuss modules that you're considering uploading to the CPAN. You can get feedback on their design before you upload.</dd></dl>
 
 <h3>User Groups</h3>
 
  Many cities around the world have local Perl Mongers chapters. A Perl Mongers chapter is a local user group which typically holds regular in-person meetings, both social and technical; helps organize local conferences, workshops, and hackathons; and provides a mailing list or other continual contact method for its members to keep in touch. 
 
- To find your local Perl Mongers (or <font SIZE="-1">PM</font> as they're commonly abbreviated) group check the international Perl Mongers directory at &lt;<a rel="nofollow" HREF="http://www.pm.org/">http://www.pm.org/</a>&gt;.
+ To find your local Perl Mongers (or PM as they're commonly abbreviated) group check the international Perl Mongers directory at &lt;<a rel="nofollow" HREF="http://www.pm.org/">http://www.pm.org/</a>&gt;.
 
 <h3>Workshops</h3>
 
  Perl workshops are, as the name might suggest, workshops where Perl is taught in a variety of ways. At the workshops, subjects range from a beginner's introduction (such as the Pittsburgh Perl Workshop's ``Zero To Perl'') to much more advanced subjects. 
 
- There are several great resources for locating workshops: the websites mentioned above, the calendar mentioned below, and the <font SIZE="-1">YAPC</font> Europe website, &lt;<a rel="nofollow" HREF="http://www.yapceurope.org/">http://www.yapceurope.org/</a>&gt;, which is probably the best resource for European Perl events.
+ There are several great resources for locating workshops: the websites mentioned above, the calendar mentioned below, and the YAPC Europe website, &lt;<a rel="nofollow" HREF="http://www.yapceurope.org/">http://www.yapceurope.org/</a>&gt;, which is probably the best resource for European Perl events.
 
 <h3>Hackathons</h3>
 
  Hackathons are a very different kind of gathering where Perl hackers gather to do just that, hack nonstop for an extended (several day) period on a specific project or projects. Information about hackathons can be located in the same place as information about workshops as well as in &lt;<a HREF="irc://irc.perl.org/#perl">irc://irc.perl.org/#perl</a>&gt;. 
 
- If you have never been to a hackathon, here are a few basic things you need to know before attending: have a working laptop and know how to use it; check out the involved projects beforehand; have the necessary version control client; and bring backup equipment (an extra <font SIZE="-1">LAN</font> cable, additional power strips, etc.) because someone will forget.
+ If you have never been to a hackathon, here are a few basic things you need to know before attending: have a working laptop and know how to use it; check out the involved projects beforehand; have the necessary version control client; and bring backup equipment (an extra LAN cable, additional power strips, etc.) because someone will forget.
 
 <h3>Conventions</h3>
 
- Perl has two major annual conventions: The Perl Conference (now part of <font SIZE="-1">OSCON</font>), put on by O'Reilly, and Yet Another Perl Conference or <font SIZE="-1">YAPC</font> (pronounced yap-see), which is localized into several regional YAPCs (North America, Europe, Asia) in a stunning grassroots display by the Perl community. For more information about either conference, check out their respective web pages: <font SIZE="-1">OSCON</font> &lt;<a rel="nofollow" HREF="http://conferences.oreillynet.com/">http://conferences.oreillynet.com/</a>&gt;; <font SIZE="-1">YAPC</font> &lt;<a rel="nofollow" HREF="http://www.yapc.org">http://www.yapc.org</a>&gt;. 
+ Perl has two major annual conventions: The Perl Conference (now part of OSCON), put on by O'Reilly, and Yet Another Perl Conference or YAPC (pronounced yap-see), which is localized into several regional YAPCs (North America, Europe, Asia) in a stunning grassroots display by the Perl community. For more information about either conference, check out their respective web pages: OSCON &lt;<a rel="nofollow" HREF="http://conferences.oreillynet.com/">http://conferences.oreillynet.com/</a>&gt;; YAPC &lt;<a rel="nofollow" HREF="http://www.yapc.org">http://www.yapc.org</a>&gt;. 
 
- A relatively new conference franchise with a large Perl portion is the Open Source Developers Conference or <font SIZE="-1">OSDC.</font> First held in Australia it has recently also spread to Israel and France. More information can be found at: &lt;<a rel="nofollow" HREF="http://www.osdc.com.au/">http://www.osdc.com.au/</a>&gt; for Australia, &lt;<a rel="nofollow" HREF="http://www.osdc.org.il">http://www.osdc.org.il</a>&gt; for Israel, and &lt;<a rel="nofollow" HREF="http://www.osdc.fr/">http://www.osdc.fr/</a>&gt; for France.
+ A relatively new conference franchise with a large Perl portion is the Open Source Developers Conference or OSDC. First held in Australia it has recently also spread to Israel and France. More information can be found at: &lt;<a rel="nofollow" HREF="http://www.osdc.com.au/">http://www.osdc.com.au/</a>&gt; for Australia, &lt;<a rel="nofollow" HREF="http://www.osdc.org.il">http://www.osdc.org.il</a>&gt; for Israel, and &lt;<a rel="nofollow" HREF="http://www.osdc.fr/">http://www.osdc.fr/</a>&gt; for France.
 
 <h3>Calendar of Perl Events</h3>
 

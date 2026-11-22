@@ -10,24 +10,24 @@ pam_ssh_agent_auth - PAM module for granting permissions based on SSH agent requ
 
 <h2>Description</h2>
 
-This module provides authentication via ssh-agent. If an ssh-agent listening at <font SIZE="-1">SSH_AUTH_SOCK</font> can successfully authenticate that it has the secret key for a public key in the specified file, authentication is granted, otherwise authentication fails.
+This module provides authentication via ssh-agent. If an ssh-agent listening at SSH_AUTH_SOCK can successfully authenticate that it has the secret key for a public key in the specified file, authentication is granted, otherwise authentication fails.
 
 <h2>Configuration</h2>
 
 <dl><dt>/etc/pam.d/sudo: auth<tt>&nbsp;<wbr></tt>sufficient<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>pam_ssh_agent_auth.so file=/etc/security/authorized_keys
 </dt><dd></dd><dt>/etc/sudoers:
 </dt><dd>In older versions of sudo (&lt; 1.8.5) it was necessary to set: 
-&nbsp;<wbr>Defaults&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>env_keep&nbsp;<wbr>+=&nbsp;<wbr>``<font SIZE="-1">SSH_AUTH_SOCK''</font></dd></dl>
+&nbsp;<wbr>Defaults&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>env_keep&nbsp;<wbr>+=&nbsp;<wbr>``SSH_AUTH_SOCK''</dd></dl>
  
 
- This configuration would permit anyone who has an <font SIZE="-1">SSH_AUTH_SOCK</font> that manages the private key matching a public key in /etc/security/authorized_keys to execute sudo without having to enter a password. Note that the ssh-agent listening to <font SIZE="-1">SSH_AUTH_SOCK</font> can either be local, or forwarded. 
+ This configuration would permit anyone who has an SSH_AUTH_SOCK that manages the private key matching a public key in /etc/security/authorized_keys to execute sudo without having to enter a password. Note that the ssh-agent listening to SSH_AUTH_SOCK can either be local, or forwarded. 
 
- Unlike <font SIZE="-1">NOPASSWD,</font> this still requires an authentication, it's just that the authentication is provided by ssh-agent, and not password entry.
+ Unlike NOPASSWD, this still requires an authentication, it's just that the authentication is provided by ssh-agent, and not password entry.
 
 <h2>Arguments</h2>
 
 <dl><dt>file=&lt;path to authorized_keys&gt;
-</dt><dd>Specify the path to the authorized_keys file(s) you would like to use for authentication. Subject to tilde and % <font SIZE="-1">EXPANSIONS </font>(below)
+</dt><dd>Specify the path to the authorized_keys file(s) you would like to use for authentication. Subject to tilde and % EXPANSIONS (below)
 </dd><dt>allow_user_owned_authorized_keys_file
 </dt><dd>A flag which enables authorized_keys files to be owned by the invoking user, instead of root. This flag is enabled automatically whenever the expansions <tt>%h</tt> or ~ are used.
 </dd><dt>authorized_keys_command=&lt;path to executable&gt;
@@ -38,7 +38,7 @@ This module provides authentication via ssh-agent. If an ssh-agent listening at 
 </dt><dd>A flag which enables verbose logging
 </dd><dt>sudo_service_name=&lt;service name you compiled sudo to use&gt;
 </dt><dd>(when compiled with --enable-sudo-hack) 
- Specify the service name to use to identify the service ``sudo''. When the <font SIZE="-1">PAM_SERVICE</font> identifier matches this string, and if <font SIZE="-1">PAM_RUSER</font> is not set, pam_ssh_agent_auth will attempt to identify the calling user from the environment variable <font SIZE="-1">SUDO_USER. </font> 
+ Specify the service name to use to identify the service ``sudo''. When the PAM_SERVICE identifier matches this string, and if PAM_RUSER is not set, pam_ssh_agent_auth will attempt to identify the calling user from the environment variable SUDO_USER.  
  This defaults to ``sudo''.</dd></dl>
 
 <h2>Expansions</h2>
@@ -49,7 +49,7 @@ This module provides authentication via ssh-agent. If an ssh-agent listening at 
 </dt><dd>Automatically enables allow_user_owned_authorized_keys_file
 </dd><dt>%H --- The short-hostname
 </dt><dd></dd><dt>%u --- Username
-</dt><dd></dd><dt>%f --- <font SIZE="-1">FQDN</font>
+</dt><dd></dd><dt>%f --- FQDN
 </dt><dd></dd></dl>
 
 <h2>Examples</h2>

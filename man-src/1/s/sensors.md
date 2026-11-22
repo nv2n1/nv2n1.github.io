@@ -10,12 +10,12 @@ description: "sensors – print sensors information"
 
 <p> sensors &#8211; print sensors information </p>
 <h2>SYNOPSIS</h2>
-<p> <code>sensors [</code> <i>options</i> <code>] [</code> <i>chips</i> <code>]</code><br />
- <code>sensors -s [</code> <i>chips</i> <code>]</code><br />
+<p> <code>sensors [</code> <i>options</i> <code>] [</code> <i>chips</i> <code>]</code><br/>
+ <code>sensors -s [</code> <i>chips</i> <code>]</code><br/>
  <code>sensors &#8211;bus-list</code> </p>
 <h2>DESCRIPTION</h2>
-<p> <code>sensors</code> is used to show the current readings of all sensor chips.<br />
- <code>sensors -s</code> is used to set all limits as specified in the configuration file.<br />
+<p> <code>sensors</code> is used to show the current readings of all sensor chips.<br/>
+ <code>sensors -s</code> is used to set all limits as specified in the configuration file.<br/>
  <code>sensors &#8211;bus-list</code> is used to generate bus statements suitable for the configuration file. </p>
 <h2>OPTIONS</h2>
 <dl>
@@ -38,7 +38,7 @@ description: "sensors – print sensors information"
 <dt>&#8211;bus-list</dt>
 <dd> Generate bus statements suitable for using in sensors.conf. Such bus statements are only needed if you have several chips sharing the same address on different buses of the same type. As bus numbers are usually not guaranteed to be stable over reboots, these statements let you refer to each bus by its name rather than numbers.</dd></dl>
 <h2>FILES</h2>
-<p> <i>/etc/sensors3.conf</i><br />
+<p> <i>/etc/sensors3.conf</i><br/>
  <i>/etc/sensors.conf</i></p>
 <dl>
 <dt>

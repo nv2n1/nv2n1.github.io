@@ -13,7 +13,7 @@ description: "QuantLib::SimplePolynomialFitting – Simple polynomial fitting me
 <p> Inherits <code>QuantLib::FittedBondDiscountCurve::FittingMethod</code>. </p>
 <h3>Public Member Functions</h3>
 <p><code>SimplePolynomialFitting</code> (<code>Natural</code> degree, bool constrainAtZero=true) </p>
-<p> std::auto_ptr&lt; <code>FittedBondDiscountCurve::FittingMethod</code> &gt; <code>clone</code> () const<br />
+<p> std::auto_ptr&lt; <code>FittedBondDiscountCurve::FittingMethod</code> &gt; <code>clone</code> () const<br/>
  <i>clone of the current object </i></p>
 <h2>Detailed Description</h2>
 <p>Simple polynomial fitting method. </p>

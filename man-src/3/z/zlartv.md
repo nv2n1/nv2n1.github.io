@@ -10,7 +10,7 @@ description: "zlartv.f –"
 <p>zlartv.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlartv</code> (N, X, INCX, Y, INCY, C, S, INCC)<br />
+<p>subroutine <code>zlartv</code> (N, X, INCX, Y, INCY, C, S, INCC)<br/>
  <i></i><code>ZLARTV</code> applies a vector of plane rotations with real cosines and complex sines to the elements of a pair of vectors.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlartv (integerN, complex*16, dimension( * )X, integerINCX, complex*16, dimension( * )Y, integerINCY, double precision, dimension( * )C, complex*16, dimension( * )S, integerINCC)</h3>

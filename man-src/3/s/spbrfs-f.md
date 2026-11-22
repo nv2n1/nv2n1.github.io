@@ -10,7 +10,7 @@ description: "spbrfs.f –"
 <p>spbrfs.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>spbrfs</code> (UPLO, N, KD, NRHS, AB, LDAB, AFB, LDAFB, B, LDB, X, LDX, FERR, BERR, WORK, IWORK, INFO)<br />
+<p>subroutine <code>spbrfs</code> (UPLO, N, KD, NRHS, AB, LDAB, AFB, LDAFB, B, LDB, X, LDX, FERR, BERR, WORK, IWORK, INFO)<br/>
  <i></i><code>SPBRFS</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine spbrfs (characterUPLO, integerN, integerKD, integerNRHS, real, dimension( ldab, * )AB, integerLDAB, real, dimension( ldafb, * )AFB, integerLDAFB, real, dimension( ldb, * )B, integerLDB, real, dimension( ldx, * )X, integerLDX, real, dimension( * )FERR, real, dimension( * )BERR, real, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>

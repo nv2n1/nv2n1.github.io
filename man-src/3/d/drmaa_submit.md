@@ -20,14 +20,14 @@ char *error_diagnosis,
 size_t&amp;nbsp;error_diag_len
 </code></pre>
 <p> <code>);</code> </p>
-<p>int drmaa_run_bulk_jobs(<br />
-drmaa_job_ids_t **jobids,<br />
-drmaa_job_template_t *jt,<br />
-int&amp;nbsp;start,<br />
-int&amp;nbsp;end,<br />
-int&amp;nbsp;incr,<br />
-char *error_diagnosis,<br />
-size_t&amp;nbsp;error_diag_len<br />
+<p>int drmaa_run_bulk_jobs(<br/>
+drmaa_job_ids_t **jobids,<br/>
+drmaa_job_template_t *jt,<br/>
+int&amp;nbsp;start,<br/>
+int&amp;nbsp;end,<br/>
+int&amp;nbsp;incr,<br/>
+char *error_diagnosis,<br/>
+size_t&amp;nbsp;error_diag_len<br/>
  <code>);</code> </p>
 <pre><code>
 int drmaa_get_next_job_id(

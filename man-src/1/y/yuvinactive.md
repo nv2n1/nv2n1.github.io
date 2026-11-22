@@ -32,8 +32,8 @@ description: "yuvinactive – Set a part of the video to a defined state"
 <h2>BUGS</h2>
 <p> Right, there are bugs hidden. The thing is not well tested, and not every option might work. yuvinactive is in the first state of becoming a useful program. </p>
 <h2>AUTHOR</h2>
-<p> This man page was originally written by Bernhard Praschinger.<br />
- If you have questions, remarks, problems or you just want to contact the developers, the main mailing list for the MJPEG-tools is:<br />
+<p> This man page was originally written by Bernhard Praschinger.<br/>
+ If you have questions, remarks, problems or you just want to contact the developers, the main mailing list for the MJPEG-tools is:<br/>
 &nbsp;<wbr>&nbsp;<wbr><i>mjpeg-users [at] lists.sourceforge.net</i> </p>
 <dl>
 <dt>For more info, see our website at</dt>

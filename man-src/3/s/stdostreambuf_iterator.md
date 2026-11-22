@@ -9,14 +9,14 @@ description: "std::ostreambuf_iterator<CharT,Traits>::ostreambuf_iterator – st
 
 <p>std::ostreambuf_iterator&lt;CharT,Traits&gt;::ostreambuf_iterator &#8211; std::ostreambuf_iterator&lt;CharT,Traits&gt;::ostreambuf_iterator</p>
 <h2>Synopsis</h2>
-<p>ostreambuf_iterator( streambuf_type* buffer ) throw(); <i>(until C++11)</i><br />
-ostreambuf_iterator( streambuf_type* buffer ) noexcept; <code>(1)</code> <i>(since C++11)</i><br />
-ostreambuf_iterator( ostream_type&amp; stream ) throw(); <code>(2)</code> <i>(until C++11)</i><br />
-ostreambuf_iterator( ostream_type&amp; stream ) noexcept; <i>(since C++11)</i><br />
-1) Constructs the iterator with the private streambuf_type* member set to buffer and the failed() bit set to false. The behavior is undefined if buffer is a null pointer.<br />
+<p>ostreambuf_iterator( streambuf_type* buffer ) throw(); <i>(until C++11)</i><br/>
+ostreambuf_iterator( streambuf_type* buffer ) noexcept; <code>(1)</code> <i>(since C++11)</i><br/>
+ostreambuf_iterator( ostream_type&amp; stream ) throw(); <code>(2)</code> <i>(until C++11)</i><br/>
+ostreambuf_iterator( ostream_type&amp; stream ) noexcept; <i>(since C++11)</i><br/>
+1) Constructs the iterator with the private streambuf_type* member set to buffer and the failed() bit set to false. The behavior is undefined if buffer is a null pointer.<br/>
 2) Same as ostreambuf_iterator(stream.rdbuf()) </p>
 <h2>Parameters</h2>
-<p>stream &#8211; the output stream whose rdbuf() will be accessed by this iterator<br />
+<p>stream &#8211; the output stream whose rdbuf() will be accessed by this iterator<br/>
 buffer &#8211; the output stream buffer to be accessed by this iterator</p>
 <h2>Example</h2>
 <p>// Run this code </p>

@@ -24,23 +24,23 @@ description: "racount – count things from an argus(8) data file/stream."
 <dt><code>proto</code></dt>
 <dd> Print a count breakdown on protocols seen. <code>racount</code> will report on IP protocols, ether protocols, arp, rarp and unknowwn. </dd>
 <dt><code>addr</code></dt>
-<dd> Print a summary report of the occurence of the various types of network addresses encountered. The current list of IANA standard network address types include:<br />
-&nbsp;<wbr>IPv4 Unicast ThisNet, Reserved, LoopBack, LinkLocal, TestNet and Private<br />
-&nbsp;<wbr>IPv4 Multicast Local, Internet, AdHoc, Reserved, SdpSap, Nasdaq, DisTrans, SrcSpec, Glop, Admin, OrgLocal and SiteLocal<br />
-&nbsp;<wbr>IPv6 Loopback, LinkLocal, SiteLocal, Global, V4Compat, V4Mapped and Unspecified&nbsp;<wbr><br />
+<dd> Print a summary report of the occurence of the various types of network addresses encountered. The current list of IANA standard network address types include:<br/>
+&nbsp;<wbr>IPv4 Unicast ThisNet, Reserved, LoopBack, LinkLocal, TestNet and Private<br/>
+&nbsp;<wbr>IPv4 Multicast Local, Internet, AdHoc, Reserved, SdpSap, Nasdaq, DisTrans, SrcSpec, Glop, Admin, OrgLocal and SiteLocal<br/>
+&nbsp;<wbr>IPv6 Loopback, LinkLocal, SiteLocal, Global, V4Compat, V4Mapped and Unspecified&nbsp;<wbr><br/>
 &nbsp;<wbr>IPv6 MulticastNodeLocal, MulticastLinkLocal, MulticastSiteLocal, MulticastOrgLocal and MulticastGlobal </dd>
 </dl>
 </dl>
 <h2>EXAMPLE INVOCATION</h2>
 <p> This example runs <code>racount</code> against a single argus data file, generating the default output. </p>
 <pre>
-<font SIZE="-4">% racount -r argus.2012.02.13.17.20.00.out.gz
+% racount -r argus.2012.02.13.17.20.00.out.gz
 racount   records     total_pkts     src_pkts       dst_pkts       total_bytes        src_bytes          dst_bytes
     sum   336         21319          9266           12053          16954495           1329172            15625323          
-</font></pre>
+</pre>
 <p> This example runs <code>racount</code> against a directory containing argus data, generating a protocol breakdown as well as generating a network address summary. </p>
 <pre>
-<font SIZE="-4">% racount -M proto addr -r argus.2012.02.13.17.20.00.out.gz
+% racount -M proto addr -r argus.2012.02.13.17.20.00.out.gz
 racount   records     total_pkts     src_pkts       dst_pkts       total_bytes        src_bytes          dst_bytes
     sum   336         21319          9266           12053          16954495           1329172            15625323          
 Protocol Summary
@@ -54,7 +54,7 @@ Address Summary
   IPv4 Unicast Private      src 6           dst 3         
   IPv6 LinkLocal            src 3           dst 0         
   IPv6 Multicast Link Local src 0           dst 3 
-</font></pre>
+</pre>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 2000-2016 QoSient. All rights reserved.</p>
 <h2>AUTHORS</h2>

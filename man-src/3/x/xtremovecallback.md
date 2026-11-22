@@ -35,6 +35,6 @@ description: "XtAddCallback, XtAddCallbacks, XtRemoveCallback, XtRemoveCallbacks
 <p> The <code>XtRemoveCallbacks</code> function removes the specified callback procedures from the specified widget&#8217;s callback list. </p>
 <p> The <code>XtRemoveAllCallbacks</code> function removes all the callback procedures from the specified widget&#8217;s callback list.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xtcallcallbacks/">XtCallCallbacks</a>(3)<br />
- <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><a href="/docs/linux/man/3-xtcallcallbacks/">XtCallCallbacks</a>(3)<br/>
+ <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

@@ -14,7 +14,7 @@ description: "std::_List_const_iterator< _Tp > –"
 <p> typedef <code>_List_const_iterator</code>&lt; _Tp &gt; <code>_Self</code> </p>
 <p> typedef ptrdiff_t <code>difference_type</code> </p>
 <p> typedef <code>_List_iterator</code>&lt; _Tp &gt; <code>iterator</code> </p>
-<p> typedef<br />
+<p> typedef<br/>
  <code>std::bidirectional_iterator_tag</code> <code>iterator_category</code>&quot; </p>
 <p> typedef const _Tp * <code>pointer</code> </p>
 <p> typedef const _Tp &amp; <code>reference</code> </p>

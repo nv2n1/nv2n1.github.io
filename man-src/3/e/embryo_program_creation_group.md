@@ -9,13 +9,13 @@ description: "Program Creation and Destruction Functions – Functions that set 
 
 <p>Program Creation and Destruction Functions &#8211; Functions that set up programs, and destroy them. </p>
 <h3>Functions</h3>
-<p>EAPI Embryo_Program * <code>embryo_program_new</code> (void *data, int size)<br />
- <i>Creates a new Embryo program, with bytecode data that can be freed. </i><br />
- EAPI Embryo_Program * <code>embryo_program_const_new</code> (void *data, int size)<br />
- <i>Creates a new Embryo program, with bytecode data that cannot be freed. </i><br />
- EAPI Embryo_Program * <code>embryo_program_load</code> (char *file)<br />
- <i>Creates a new Embryo program based on the bytecode data stored in the given file. </i><br />
- EAPI void <code>embryo_program_free</code> (Embryo_Program *ep)<br />
+<p>EAPI Embryo_Program * <code>embryo_program_new</code> (void *data, int size)<br/>
+ <i>Creates a new Embryo program, with bytecode data that can be freed. </i><br/>
+ EAPI Embryo_Program * <code>embryo_program_const_new</code> (void *data, int size)<br/>
+ <i>Creates a new Embryo program, with bytecode data that cannot be freed. </i><br/>
+ EAPI Embryo_Program * <code>embryo_program_load</code> (char *file)<br/>
+ <i>Creates a new Embryo program based on the bytecode data stored in the given file. </i><br/>
+ EAPI void <code>embryo_program_free</code> (Embryo_Program *ep)<br/>
  <i>Frees the given Embryo program. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that set up programs, and destroy them.</p>
@@ -24,7 +24,7 @@ description: "Program Creation and Destruction Functions – Functions that set 
 <p>Creates a new Embryo program, with bytecode data that cannot be freed. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>data</i> Pointer to the bytecode of the program.<br />
+<dd><i>data</i> Pointer to the bytecode of the program.<br/>
  <i>size</i> Number of bytes of bytecode.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -47,7 +47,7 @@ description: "Program Creation and Destruction Functions – Functions that set 
 <p>Creates a new Embryo program, with bytecode data that can be freed. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>data</i> Pointer to the bytecode of the program.<br />
+<dd><i>data</i> Pointer to the bytecode of the program.<br/>
  <i>size</i> Number of bytes of bytecode.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

@@ -30,7 +30,7 @@ description: "ntfscmp – compare two NTFS filesystems and tell the differences"
 <h2>Author</h2>
 <p><code>ntfscmp</code> was written by Szabolcs Szakacsits. It was ported to ntfs-3g by Erik Larsson.</p>
 <h2>Availability</h2>
-<p><code>ntfscmp</code> is part of the <code>ntfs-3g</code> package and is available from:<br />
+<p><code>ntfscmp</code> is part of the <code>ntfs-3g</code> package and is available from:<br/>
  <a rel="nofollow" href="https://github.com/tuxera/ntfs-3g/wiki/">https://github.com/tuxera/ntfs-3g/wiki/</a></p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-ntfsinfo/">ntfsinfo</a></code>(8), <code><a href="/docs/linux/man/8-ntfscat/">ntfscat</a></code>(8), <code><a href="/docs/linux/man/1-diff/">diff</a></code>(1), <code><a href="/docs/linux/man/8-ntfsclone/">ntfsclone</a></code>(8), <code><a href="/docs/linux/man/8-ntfsprogs/">ntfsprogs</a></code>(8) </p>

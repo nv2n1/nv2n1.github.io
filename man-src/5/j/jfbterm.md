@@ -16,7 +16,7 @@ description: "jfbterm.conf – configuration file for"
 <dl>
 <dt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><i>entryName</i> : <i>value</i></dt>
 <dd></dd></dl>
-<p> If `+&#8217; is at beginning of the line, <i>value</i> is added to<br />
+<p> If `+&#8217; is at beginning of the line, <i>value</i> is added to<br/>
  <i>entryName</i> as an array. This means that one <i>entryName</i> can have multiple <i>value</i>s. </p>
 <p> A summary of configrations is included below.</p>
 <dl>

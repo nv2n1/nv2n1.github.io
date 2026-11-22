@@ -35,7 +35,7 @@ description: "yum-fs-snapshot.conf(5)"
 <dd>This is the space delimited lvcreate argument list that is used to specify the size of the snapshot LV. Valid lvcreate size options are -l or -L. If not specified then LVM snapshots will not be created for volumes that are not thinly provisioned.</dd></dl>
 <h2>Author</h2>
 <dl>
-<dd>Josef Bacik &lt;josef [at] toxicpanda.com&gt;<br />
+<dd>Josef Bacik &lt;josef [at] toxicpanda.com&gt;<br/>
  Mike Snitzer &lt;msnitzer [at] fedoraproject.org&gt;</dd>
 <dl>
 <dd></dd></dl>

@@ -11,7 +11,7 @@ description: "shgeqz.f –"
 <p> shgeqz.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>shgeqz</code> (JOB, COMPQ, COMPZ, N, ILO, IHI, H, LDH, T, LDT, ALPHAR, ALPHAI, BETA, Q, LDQ, Z, LDZ, WORK, LWORK, INFO)<br />
+<p> subroutine <code>shgeqz</code> (JOB, COMPQ, COMPZ, N, ILO, IHI, H, LDH, T, LDT, ALPHAR, ALPHAI, BETA, Q, LDQ, Z, LDZ, WORK, LWORK, INFO)<br/>
  <i></i><code>SHGEQZ</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine shgeqz (characterJOB, characterCOMPQ, characterCOMPZ, integerN, integerILO, integerIHI, real, dimension( ldh, * )H, integerLDH, real, dimension( ldt, * )T, integerLDT, real, dimension( * )ALPHAR, real, dimension( * )ALPHAI, real, dimension( * )BETA, real, dimension( ldq, * )Q, integerLDQ, real, dimension( ldz, * )Z, integerLDZ, real, dimension( * )WORK, integerLWORK, integerINFO)</h3>
@@ -59,22 +59,22 @@ A *x = lambda * B * x and if alpha is nonzero, mu = beta / alpha is an eigenvalu
           = 'S': Compute eigenvalues and the Schur form. 
 </pre>
 <p> <i>COMPQ</i> </p>
-<p>COMPQ is CHARACTER * 1 = &#8216;N&#8217; : Left Schur vectors(Q)<br />
-are not computed;<br />
-= &#8216;I&#8217; : Q is initialized to the unit matrix and the matrix Q<br />
-                                                    of left Schur vectors<br />
-                                                    of(H, T)<br />
-is returned;<br />
-= &#8216;V&#8217; : Q must contain an orthogonal matrix Q1 on entry and<br />
+<p>COMPQ is CHARACTER * 1 = &#8216;N&#8217; : Left Schur vectors(Q)<br/>
+are not computed;<br/>
+= &#8216;I&#8217; : Q is initialized to the unit matrix and the matrix Q<br/>
+                                                    of left Schur vectors<br/>
+                                                    of(H, T)<br/>
+is returned;<br/>
+= &#8216;V&#8217; : Q must contain an orthogonal matrix Q1 on entry and<br/>
         the product Q1 * Q is returned.</p>
 <p> <i>COMPZ</i> </p>
-<p>COMPZ is CHARACTER * 1 = &#8216;N&#8217; : Right Schur vectors(Z)<br />
-are not computed;<br />
-= &#8216;I&#8217; : Z is initialized to the unit matrix and the matrix Z<br />
-                                                    of right Schur vectors<br />
-                                                    of(H, T)<br />
-is returned;<br />
-= &#8216;V&#8217; : Z must contain an orthogonal matrix Z1 on entry and<br />
+<p>COMPZ is CHARACTER * 1 = &#8216;N&#8217; : Right Schur vectors(Z)<br/>
+are not computed;<br/>
+= &#8216;I&#8217; : Z is initialized to the unit matrix and the matrix Z<br/>
+                                                    of right Schur vectors<br/>
+                                                    of(H, T)<br/>
+is returned;<br/>
+= &#8216;V&#8217; : Z must contain an orthogonal matrix Z1 on entry and<br/>
         the product Z1 * Z is returned.</p>
 <p> <i>N</i> </p>
 <pre>
@@ -151,7 +151,7 @@ is returned;<br />
           they should not, in general, be computed.
 </pre>
 <p> <i>Q</i> </p>
-<p>Q is REAL array, dimension(LDQ, N) On entry, if COMPZ = &#8216;V&#8217;, the orthogonal matrix Q1 used in the reduction of(A, B)<br />
+<p>Q is REAL array, dimension(LDQ, N) On entry, if COMPZ = &#8216;V&#8217;, the orthogonal matrix Q1 used in the reduction of(A, B)<br/>
 to generalized Hessenberg form.On exit, if COMPZ = &#8216;I&#8217;, the orthogonal matrix of left Schur vectors of(H, T), and if COMPZ = &#8216;V&#8217;, the orthogonal matrix of left Schur vectors of(A, B).Not referenced if COMPZ = &#8216;N&#8217;.</p>
 <p> <i>LDQ</i> </p>
 <pre>

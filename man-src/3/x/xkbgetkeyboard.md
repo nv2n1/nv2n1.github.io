@@ -10,7 +10,7 @@ description: "XkbGetKeyboard – Retrieves one or more components of a keyboard 
 <p>XkbGetKeyboard &#8211; Retrieves one or more components of a keyboard device description </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>XkbDescPtr XkbGetKeyboard</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned int </code><i>which</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>);</code><br />
+<dt> <code>XkbDescPtr XkbGetKeyboard</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned int </code><i>which</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
@@ -99,6 +99,6 @@ description: "XkbGetKeyboard – Retrieves one or more components of a keyboard 
 <p> <i>XkbGetKeyboardByName(dpy, device_spec, </i> NULL, <i>which, which, </i> False).</p>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><font SIZE="-1">BadAlloc</font></dt>
+<dt>BadAlloc</dt>
 <dd>Unable to allocate storage </dd>
 </dl>

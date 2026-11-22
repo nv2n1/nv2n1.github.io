@@ -13,8 +13,8 @@ description: "QuantLib::AffineModel – Affine model class."
 <p> Inherits <code>QuantLib::Observable</code>. </p>
 <p> Inherited by <code>G2</code>, <code>LiborForwardModel</code>, and <code>OneFactorAffineModel</code>. </p>
 <h3>Public Member Functions</h3>
-<p>virtual <code>DiscountFactor</code> <code>discount</code> (Time t) const =0<br />
- <i>Implied discount curve. </i><br />
+<p>virtual <code>DiscountFactor</code> <code>discount</code> (Time t) const =0<br/>
+ <i>Implied discount curve. </i><br/>
  virtual Real <code>discountBond</code> (Time now, Time maturity, <code>Array</code> factors) const =0 </p>
 <p> virtual Real <code>discountBondOption</code> (Option::Type type, Real strike, Time maturity, Time bondMaturity) const =0 </p>
 <h2>Detailed Description</h2>

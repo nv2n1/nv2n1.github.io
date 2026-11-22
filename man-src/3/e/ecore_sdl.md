@@ -10,37 +10,37 @@ description: "Ecore_Sdl.h – Ecore SDL system functions."
 <p>Ecore_Sdl.h &#8211; Ecore SDL system functions. </p>
 <h2>Synopsis</h2>
 <h3>Data Structures</h3>
-<p>struct <code>_Ecore_Sdl_Event_Key_Down</code><br />
- <i>SDL Key Down event. </i><br />
- struct <code>_Ecore_Sdl_Event_Key_Up</code><br />
- <i>SDL Key Up event. </i><br />
- struct <code>_Ecore_Sdl_Event_Mouse_Button_Down</code><br />
- <i>SDL Mouse Down event. </i><br />
- struct <code>_Ecore_Sdl_Event_Mouse_Button_Up</code><br />
- <i>SDL Mouse Up event. </i><br />
- struct <code>_Ecore_Sdl_Event_Mouse_Move</code><br />
- <i>SDL Mouse Move event. </i><br />
- struct <code>_Ecore_Sdl_Event_Mouse_Wheel</code><br />
+<p>struct <code>_Ecore_Sdl_Event_Key_Down</code><br/>
+ <i>SDL Key Down event. </i><br/>
+ struct <code>_Ecore_Sdl_Event_Key_Up</code><br/>
+ <i>SDL Key Up event. </i><br/>
+ struct <code>_Ecore_Sdl_Event_Mouse_Button_Down</code><br/>
+ <i>SDL Mouse Down event. </i><br/>
+ struct <code>_Ecore_Sdl_Event_Mouse_Button_Up</code><br/>
+ <i>SDL Mouse Up event. </i><br/>
+ struct <code>_Ecore_Sdl_Event_Mouse_Move</code><br/>
+ <i>SDL Mouse Move event. </i><br/>
+ struct <code>_Ecore_Sdl_Event_Mouse_Wheel</code><br/>
  <i>SDL Mouse Wheel event. </i></p>
 <h3>Functions</h3>
-<p>EAPI int <code>ecore_sdl_shutdown</code> (void)<br />
+<p>EAPI int <code>ecore_sdl_shutdown</code> (void)<br/>
  <i>Shuts down the Ecore_Sdl library. </i></p>
 <h3>Variables</h3>
-<p>EAPI int <code>ECORE_SDL_EVENT_KEY_DOWN</code><br />
- <i>SDL Key Down event. </i><br />
- EAPI int <code>ECORE_SDL_EVENT_KEY_UP</code><br />
- <i>SDL Key Up event. </i><br />
- EAPI int <code>ECORE_SDL_EVENT_MOUSE_BUTTON_DOWN</code><br />
- <i>SDL Mouse Down event. </i><br />
- EAPI int <code>ECORE_SDL_EVENT_MOUSE_BUTTON_UP</code><br />
- <i>SDL Mouse Up event. </i><br />
- EAPI int <code>ECORE_SDL_EVENT_MOUSE_MOVE</code><br />
- <i>SDL Mouse Move event. </i><br />
- EAPI int <code>ECORE_SDL_EVENT_MOUSE_WHEEL</code><br />
- <i>SDL Mouse Wheel event. </i><br />
- EAPI int <code>ECORE_SDL_EVENT_GOT_FOCUS</code><br />
- <i>SDL Mouse Wheel event. </i><br />
- EAPI int <code>ECORE_SDL_EVENT_LOST_FOCUS</code><br />
+<p>EAPI int <code>ECORE_SDL_EVENT_KEY_DOWN</code><br/>
+ <i>SDL Key Down event. </i><br/>
+ EAPI int <code>ECORE_SDL_EVENT_KEY_UP</code><br/>
+ <i>SDL Key Up event. </i><br/>
+ EAPI int <code>ECORE_SDL_EVENT_MOUSE_BUTTON_DOWN</code><br/>
+ <i>SDL Mouse Down event. </i><br/>
+ EAPI int <code>ECORE_SDL_EVENT_MOUSE_BUTTON_UP</code><br/>
+ <i>SDL Mouse Up event. </i><br/>
+ EAPI int <code>ECORE_SDL_EVENT_MOUSE_MOVE</code><br/>
+ <i>SDL Mouse Move event. </i><br/>
+ EAPI int <code>ECORE_SDL_EVENT_MOUSE_WHEEL</code><br/>
+ <i>SDL Mouse Wheel event. </i><br/>
+ EAPI int <code>ECORE_SDL_EVENT_GOT_FOCUS</code><br/>
+ <i>SDL Mouse Wheel event. </i><br/>
+ EAPI int <code>ECORE_SDL_EVENT_LOST_FOCUS</code><br/>
  <i>SDL Mouse Wheel event. </i></p>
 <h2>Detailed Description</h2>
 <p>Ecore SDL system functions. </p>

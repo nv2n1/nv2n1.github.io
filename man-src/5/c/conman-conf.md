@@ -125,7 +125,7 @@ description: "conman.conf – ConMan daemon configuration file"
 <h2>Author</h2>
 <p>Chris Dunlap &lt;cdunlap [at] llnl.gov&gt;</p>
 <h2>Copyright</h2>
-<p>Copyright (C) 2007-2011 Lawrence Livermore National Security, LLC.<br />
+<p>Copyright (C) 2007-2011 Lawrence Livermore National Security, LLC.<br/>
  Copyright (C) 2001-2007 The Regents of the University of California. </p>
 <p> ConMan is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</p>
 <h2>See Also</h2>

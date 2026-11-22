@@ -22,36 +22,36 @@ description: "genbox – solvates a system"
 <p> Setting -shell larger than zero will place a layer of water of the specified thickness (nm) around the solute. Hint: it is a good idea to put the protein in the center of a box first (using editconf). </p>
 <p> Finally, genbox will optionally remove lines from your topology file in which a number of solvent molecules is already added, and adds a line with the total number of solvent molecules in your coordinate file.</p>
 <h2>FILES</h2>
-<p> <code>-cp</code><i> protein.gro</i> <code>Input, Opt.</code><br />
+<p> <code>-cp</code><i> protein.gro</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Structure file: gro g96 pdb tpr tpb tpa&nbsp;<wbr> </p>
-<p> <code>-cs</code><i> spc216.gro</i> <code>Input, Opt., Lib.</code><br />
+<p> <code>-cs</code><i> spc216.gro</i> <code>Input, Opt., Lib.</code><br/>
 &nbsp;<wbr>Structure file: gro g96 pdb tpr tpb tpa&nbsp;<wbr> </p>
-<p> <code>-ci</code><i> insert.gro</i> <code>Input, Opt.</code><br />
+<p> <code>-ci</code><i> insert.gro</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Structure file: gro g96 pdb tpr tpb tpa&nbsp;<wbr> </p>
-<p> <code>-o</code><i> out.gro</i> <code>Output</code><br />
+<p> <code>-o</code><i> out.gro</i> <code>Output</code><br/>
 &nbsp;<wbr>Structure file: gro g96 pdb&nbsp;<wbr> </p>
-<p> <code>-p</code><i> topol.top</i> <code>In/Out, Opt.</code><br />
+<p> <code>-p</code><i> topol.top</i> <code>In/Out, Opt.</code><br/>
 &nbsp;<wbr>Topology file&nbsp;<wbr> </p>
 <h2>OTHER OPTIONS</h2>
-<p> <code>-[no]h</code><i>no </i><br />
+<p> <code>-[no]h</code><i>no </i><br/>
 &nbsp;<wbr>Print help info and quit </p>
-<p> <code>-nice</code><i> int</i><code> 19</code><br />
+<p> <code>-nice</code><i> int</i><code> 19</code><br/>
 &nbsp;<wbr>Set the nicelevel </p>
-<p> <code>-box</code><i> vector</i><code> 0 0 0</code><br />
+<p> <code>-box</code><i> vector</i><code> 0 0 0</code><br/>
 &nbsp;<wbr>box size </p>
-<p> <code>-nmol</code><i> int</i><code> 0</code><br />
+<p> <code>-nmol</code><i> int</i><code> 0</code><br/>
 &nbsp;<wbr>no of extra molecules to insert </p>
-<p> <code>-try</code><i> int</i><code> 10</code><br />
+<p> <code>-try</code><i> int</i><code> 10</code><br/>
 &nbsp;<wbr>try inserting -nmol*-try times </p>
-<p> <code>-seed</code><i> int</i><code> 1997</code><br />
+<p> <code>-seed</code><i> int</i><code> 1997</code><br/>
 &nbsp;<wbr>random generator seed </p>
-<p> <code>-vdwd</code><i> real</i><code> 0.105 </code><br />
+<p> <code>-vdwd</code><i> real</i><code> 0.105 </code><br/>
 &nbsp;<wbr>default vdwaals distance </p>
-<p> <code>-shell</code><i> real</i><code> 0 </code><br />
+<p> <code>-shell</code><i> real</i><code> 0 </code><br/>
 &nbsp;<wbr>thickness of optional water layer around solute </p>
-<p> <code>-maxsol</code><i> int</i><code> 0</code><br />
+<p> <code>-maxsol</code><i> int</i><code> 0</code><br/>
 &nbsp;<wbr>maximum number of solvent molecules to add if they fit in the box. If zero&nbsp;<wbr>(default)&nbsp;<wbr>this is ignored </p>
-<p> <code>-[no]vel</code><i>no </i><br />
+<p> <code>-[no]vel</code><i>no </i><br/>
 &nbsp;<wbr>keep velocities from input solute and solvent </p>
 <h2>KNOWN PROBLEMS</h2>
 <p> &#8211; Molecules must be whole in the initial configurations. </p>

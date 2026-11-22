@@ -90,8 +90,8 @@ Sharp JX-325</pre>
 <p> Even the JX-250 needs only less than 10 seconds for a 400 dpi A4 gray scale scan, which results in a data transfer rate of more than 1.6 MB per second. This means that the data produced by the scanner must be processed fairly fast. Due to the small internal buffer of the JX-250, the backend must issue a read request for the next data block as soon as possible after reading a block of data in order to avoid carriage stops. </p>
 <p> Stops of the carriage can be caused by the following reasons: </p>
 <dl>
-<dd>&#8211; too much &quot;traffic&quot; on the SCSI bus<br />
- &#8211; slow responses by the backend to the scanner,<br />
+<dd>&#8211; too much &quot;traffic&quot; on the SCSI bus<br/>
+ &#8211; slow responses by the backend to the scanner,<br/>
  &#8211; a program which processes the data acquired by the backend too slow. </dd>
 </dl>
 <p> Too much &quot;traffic&quot; on the SCSI bus: This happens for example, if hard disks are connected to the same SCSI bus as the scanner, and when data transfer from/to these hard disks requires a considerable part of the SCSI bandwidth during a scan. If this is the case, you should consider to connect the scanner to a separate SCSI adapter. </p>

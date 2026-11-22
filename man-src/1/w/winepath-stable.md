@@ -31,5 +31,5 @@ description: "winepath – Tool to convert Unix paths to/from Win32 paths"
  </code> <h2>BUGS</h2>
  Bugs can be reported on the <code>Wine bug tracker</code>  <h2>AVAILABILITY</h2>
  <code>winepath</code> is part of the Wine distribution, which is available through WineHQ, the <code>Wine development headquarters</code>  <h2>SEE ALSO</h2>
- <code><a href="/docs/linux/man/1-wine/">wine</a></code>(1), <br />
+ <code><a href="/docs/linux/man/1-wine/">wine</a></code>(1), <br/>
  <code>Wine documentation and support</code> 

@@ -10,7 +10,7 @@ description: "sorcsd.f –"
 <p>sorcsd.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>recursive subroutine <code>sorcsd</code> (JOBU1, JOBU2, JOBV1T, JOBV2T, TRANS, SIGNS, M, P, Q, X11, LDX11, X12, LDX12, X21, LDX21, X22, LDX22, THETA, U1, LDU1, U2, LDU2, V1T, LDV1T, V2T, LDV2T, WORK, LWORK, IWORK, INFO)<br />
+<p>recursive subroutine <code>sorcsd</code> (JOBU1, JOBU2, JOBV1T, JOBV2T, TRANS, SIGNS, M, P, Q, X11, LDX11, X12, LDX12, X21, LDX21, X22, LDX22, THETA, U1, LDU1, U2, LDU2, V1T, LDV1T, V2T, LDV2T, WORK, LWORK, IWORK, INFO)<br/>
  <i></i><code>SORCSD</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>recursive subroutine sorcsd (characterJOBU1, characterJOBU2, characterJOBV1T, characterJOBV2T, characterTRANS, characterSIGNS, integerM, integerP, integerQ, real, dimension( ldx11, * )X11, integerLDX11, real, dimension( ldx12, * )X12, integerLDX12, real, dimension( ldx21, * )X21, integerLDX21, real, dimension( ldx22, * )X22, integerLDX22, real, dimension( * )THETA, real, dimension( ldu1, * )U1, integerLDU1, real, dimension( ldu2, * )U2, integerLDU2, real, dimension( ldv1t, * )V1T, integerLDV1T, real, dimension( ldv2t, * )V2T, integerLDV2T, real, dimension( * )WORK, integerLWORK, integer, dimension( * )IWORK, integerINFO)</h3>

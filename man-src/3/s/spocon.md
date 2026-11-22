@@ -11,7 +11,7 @@ description: "spocon.f –"
 <p> spocon.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>spocon</code> (UPLO, N, A, LDA, ANORM, RCOND, WORK, IWORK, INFO)<br />
+<p> subroutine <code>spocon</code> (UPLO, N, A, LDA, ANORM, RCOND, WORK, IWORK, INFO)<br/>
  <i></i><code>SPOCON</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine spocon (characterUPLO, integerN, real, dimension( lda, * )A, integerLDA, realANORM, realRCOND, real, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>

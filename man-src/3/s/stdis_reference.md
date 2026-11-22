@@ -17,26 +17,26 @@ description: "std::is_reference – std::is_reference"
 <h2>Template parameters</h2>
 <p>T &#8211; a type to check </p>
 <p>Helper variable template </p>
-<p>template&lt; class T &gt; <i>(since C++17)</i><br />
+<p>template&lt; class T &gt; <i>(since C++17)</i><br/>
 inline constexpr bool is_reference_v = is_reference&lt;T&gt;::value; </p>
 <p>Inherited from std::integral_constant</p>
 <h2>Member constants</h2>
-<p>value true if T is a reference type , false otherwise<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member constant)</i><br />
+<p>value true if T is a reference type , false otherwise<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member constant)</i><br/>
 <code>[static]</code></p>
 <h2>Member functions</h2>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;converts the object to bool, returns value<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;converts the object to bool, returns value<br/>
 operator bool <i>(public member function)</i> </p>
-<p>operator() returns value<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public member function)</i><br />
+<p>operator() returns value<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public member function)</i><br/>
 <i>(C++14)</i></p>
 <h2>Member types</h2>
-<p>Type Definition<br />
-value_type bool<br />
+<p>Type Definition<br/>
+value_type bool<br/>
 type std::integral_constant&lt;bool, value&gt;</p>
 <h2>Possible implementation</h2>
-<p>&nbsp;<wbr>&nbsp;template &lt;class T&gt; struct is_reference : std::false_type {};<br />
-&nbsp;<wbr>&nbsp;template &lt;class T&gt; struct is_reference&lt;T&amp;&gt; : std::true_type {};<br />
+<p>&nbsp;<wbr>&nbsp;template &lt;class T&gt; struct is_reference : std::false_type {};<br/>
+&nbsp;<wbr>&nbsp;template &lt;class T&gt; struct is_reference&lt;T&amp;&gt; : std::true_type {};<br/>
 &nbsp;<wbr>&nbsp;template &lt;class T&gt; struct is_reference&lt;T&amp;&amp;&gt; : std::true_type {};</p>
 <h2>Example</h2>
 <p>// Run this code </p>
@@ -63,16 +63,16 @@ int main()
 }
 </code></pre>
 <h2>Output:</h2>
-<p>&nbsp;<wbr>&nbsp;false<br />
-&nbsp;<wbr>&nbsp;true<br />
-&nbsp;<wbr>&nbsp;true<br />
-&nbsp;<wbr>&nbsp;false<br />
-&nbsp;<wbr>&nbsp;true<br />
+<p>&nbsp;<wbr>&nbsp;false<br/>
+&nbsp;<wbr>&nbsp;true<br/>
+&nbsp;<wbr>&nbsp;true<br/>
+&nbsp;<wbr>&nbsp;false<br/>
+&nbsp;<wbr>&nbsp;true<br/>
 &nbsp;<wbr>&nbsp;true</p>
 <h2>See also</h2>
-<p>is_lvalue_reference checks if a type is a lvalue reference<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(class template)</i><br />
-<i>(C++11)</i><br />
-is_rvalue_reference checks if a type is a rvalue reference<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(class template)</i><br />
+<p>is_lvalue_reference checks if a type is a lvalue reference<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(class template)</i><br/>
+<i>(C++11)</i><br/>
+is_rvalue_reference checks if a type is a rvalue reference<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(class template)</i><br/>
 <i>(C++11)</i> </p>

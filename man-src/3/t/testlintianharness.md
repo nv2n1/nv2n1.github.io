@@ -12,35 +12,35 @@ Test::Lintian::Harness -- Helper tools for t/runtests
  if (not up_to_date('some/build-stamp', 'some/dir')) {
  # do rebuild
  }</pre><h2>Description</h2>Helper functions for t/runtests.
-<h2>Functions</h2><dl COMPACT><dt>skip_reaon(<font SIZE="-1">SKIP_FILE</font>)
-</dt><dd>Return the (human-readable) reason for skipping a test by reading the <font SIZE="-1">SKIP_FILE.</font>
-</dd><dt>copy_template_dir(<font SIZE="-1">SKEL_DIR, TEST_SRC_DIR, TEST_TARGET_DIR,</font> [EXCL_SKEL[, <font SIZE="-1">EXCL_SRC</font>]])
-</dt><dd>Populate <font SIZE="-1">TEST_TARGET_DIR</font> with files/dirs from <font SIZE="-1">SKEL_DIR</font> and <font SIZE="-1">TEST_SRC_DIR.</font> If given, <font SIZE="-1">EXCL_SKEL</font> and <font SIZE="-1">EXCL_SRC</font> must be a listref containing rsync ``--exclude'' options.
-</dd><dt>runsystem(<font SIZE="-1">CMD...</font>)
-</dt><dd>Run <font SIZE="-1">CMD</font> via system, but throw an error if <font SIZE="-1">CMD</font> does not return 0.
-</dd><dt>runsystem_ok(<font SIZE="-1">CMD...</font>)
-</dt><dd>Run <font SIZE="-1">CMD</font> via system, but throw an error if <font SIZE="-1">CMD</font> does not return 0 or 1. 
- Returns 1 if <font SIZE="-1">CMD</font> returned successfully (i.e. 0), otherwise 0. 
+<h2>Functions</h2><dl COMPACT><dt>skip_reaon(SKIP_FILE)
+</dt><dd>Return the (human-readable) reason for skipping a test by reading the SKIP_FILE.
+</dd><dt>copy_template_dir(SKEL_DIR, TEST_SRC_DIR, TEST_TARGET_DIR, [EXCL_SKEL[, EXCL_SRC]])
+</dt><dd>Populate TEST_TARGET_DIR with files/dirs from SKEL_DIR and TEST_SRC_DIR. If given, EXCL_SKEL and EXCL_SRC must be a listref containing rsync ``--exclude'' options.
+</dd><dt>runsystem(CMD...)
+</dt><dd>Run CMD via system, but throw an error if CMD does not return 0.
+</dd><dt>runsystem_ok(CMD...)
+</dt><dd>Run CMD via system, but throw an error if CMD does not return 0 or 1. 
+ Returns 1 if CMD returned successfully (i.e. 0), otherwise 0. 
  This is mostly useful for running Lintian, which may return 0 or 1 on ``success''.
-</dd><dt>up_to_date(<font SIZE="-1">STAMPFILE,</font> DIR[, <font SIZE="-1">RUNNER_TS</font>])
-</dt><dd>Returns true if the mtime of <font SIZE="-1">STAMPFILE</font> is greater than or equal to the mtime of all files in <font SIZE="-1">DIR.</font> If <font SIZE="-1">RUNNER_TS</font> is given, then the mtime of <font SIZE="-1">STAMPFILE</font> must also be greater than or equal to the value of <font SIZE="-1">RUNNER_TS.</font> 
- If <font SIZE="-1">STAMPFILE</font> does not exist, this function returns false unconditionally.
-</dd><dt>check_test_depends(<font SIZE="-1">TESTDATA</font>)
-</dt><dd>Given a <font SIZE="-1">TESTDATA</font> with a dependency requirement, check whether the dependency requirement is satisfied. If satisfied, return <tt>&quot;undef&quot;</tt>, otherwise return a (human-readable) string containing the missing dependencies.
-</dd><dt>read_test_desc(<font SIZE="-1">FILENAME</font>)
-</dt><dd>Parse <font SIZE="-1">FILENAME</font> as a test description file, do a quick validation of its contents and return it in a hashref. This is similar get_dsc_control (<font SIZE="-1">DSCFILE</font>) except for the extra validation.
-</dd><dt>fill_in_tmpl(<font SIZE="-1">FILE, DATA</font>)
-</dt><dd>Create <font SIZE="-1">FILE</font> using ``${<font SIZE="-1">FILE</font>}.in'' as a template and <font SIZE="-1">DATA</font> as template data.
-</dd><dt>chdir_runcmd(<font SIZE="-1">DIR,</font> CMD_REF[, <font SIZE="-1">LOG_FILE</font>])
-</dt><dd>Fork, chdir to <font SIZE="-1">DIR</font> and exec the command (plus arguments) contained in <font SIZE="-1">CMD_REF.</font> The child process's <font SIZE="-1">STDERR</font> is merged into its <font SIZE="-1">STDOUT.</font> The <font SIZE="-1">STDOUT</font> stream of the child process is either directed to the path denoted by <font SIZE="-1">LOG_FILE</font> (if given and not <tt>&quot;undef&quot;</tt>) or to <i>/dev/null</i>. 
+</dd><dt>up_to_date(STAMPFILE, DIR[, RUNNER_TS])
+</dt><dd>Returns true if the mtime of STAMPFILE is greater than or equal to the mtime of all files in DIR. If RUNNER_TS is given, then the mtime of STAMPFILE must also be greater than or equal to the value of RUNNER_TS. 
+ If STAMPFILE does not exist, this function returns false unconditionally.
+</dd><dt>check_test_depends(TESTDATA)
+</dt><dd>Given a TESTDATA with a dependency requirement, check whether the dependency requirement is satisfied. If satisfied, return <tt>&quot;undef&quot;</tt>, otherwise return a (human-readable) string containing the missing dependencies.
+</dd><dt>read_test_desc(FILENAME)
+</dt><dd>Parse FILENAME as a test description file, do a quick validation of its contents and return it in a hashref. This is similar get_dsc_control (DSCFILE) except for the extra validation.
+</dd><dt>fill_in_tmpl(FILE, DATA)
+</dt><dd>Create FILE using ``${FILE}.in'' as a template and DATA as template data.
+</dd><dt>chdir_runcmd(DIR, CMD_REF[, LOG_FILE])
+</dt><dd>Fork, chdir to DIR and exec the command (plus arguments) contained in CMD_REF. The child process's STDERR is merged into its STDOUT. The STDOUT stream of the child process is either directed to the path denoted by LOG_FILE (if given and not <tt>&quot;undef&quot;</tt>) or to <i>/dev/null</i>. 
  Returns 0 on success and non-zero otherwise.
-</dd><dt>is_tag_in_file(<font SIZE="-1">TAGNAME, FILENAME</font>)
-</dt><dd>Returns true if <font SIZE="-1">FILENAME</font> appears to be output from Lintian, which emitted <font SIZE="-1">TAGNAME</font> from that run.
-</dd><dt>find_tests_for_tag(<font SIZE="-1">TAGNAME, GLOB_EXPR</font>)
-</dt><dd>Find checks for the Lintian tag denoted by <font SIZE="-1">TAGNAME</font> that match the <font SIZE="-1">GLOB_EXPR.</font> Note that <font SIZE="-1">GLOB_EXPR</font> must match only the ``desc'' file of the tests. 
+</dd><dt>is_tag_in_file(TAGNAME, FILENAME)
+</dt><dd>Returns true if FILENAME appears to be output from Lintian, which emitted TAGNAME from that run.
+</dd><dt>find_tests_for_tag(TAGNAME, GLOB_EXPR)
+</dt><dd>Find checks for the Lintian tag denoted by TAGNAME that match the GLOB_EXPR. Note that GLOB_EXPR must match only the ``desc'' file of the tests. 
  This function returns a list of the test-data for each of these tests.
-</dd><dt>generic_find_test_for_tag(<font SIZE="-1">TAGNAME,</font> GLOB_EXPR[, <font SIZE="-1">TCODE</font>])
-</dt><dd>Looks for <font SIZE="-1">TAGNAME</font> in all files returned by using glob on <font SIZE="-1">GLOB_EXPR. TCODE</font> is called for each file with <font SIZE="-1">TAGNAME</font> as first argument and the filename as second argument. <font SIZE="-1">TCODE</font> is expected to return a truth value that if the test should be run. If <font SIZE="-1">TCODE</font> returns something that is not just a raw truth value (e.g. a hash ref), this will be taken as the ``test'', otherwise this sub will attempt to guess the test name from the file. 
- If <font SIZE="-1">TCODE</font> is omitted, ``is_tag_in_file(<font SIZE="-1">TAGNAME, FILENAME</font>)'' will be used. 
- Returns a list of values returned by <font SIZE="-1">TCODE</font> or guessed test names (as per above) 
+</dd><dt>generic_find_test_for_tag(TAGNAME, GLOB_EXPR[, TCODE])
+</dt><dd>Looks for TAGNAME in all files returned by using glob on GLOB_EXPR. TCODE is called for each file with TAGNAME as first argument and the filename as second argument. TCODE is expected to return a truth value that if the test should be run. If TCODE returns something that is not just a raw truth value (e.g. a hash ref), this will be taken as the ``test'', otherwise this sub will attempt to guess the test name from the file. 
+ If TCODE is omitted, ``is_tag_in_file(TAGNAME, FILENAME)'' will be used. 
+ Returns a list of values returned by TCODE or guessed test names (as per above) 
 </dd></dl>

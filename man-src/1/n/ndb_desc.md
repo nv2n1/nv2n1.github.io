@@ -46,9 +46,9 @@ INSERT INTO fish VALUES('', 'guppy', 35, 2), ('', 'tuna', 2500, 150000),
 <dl>
 <dt>
 </dt><dd>
-shell &gt;./ ndb_desc &#8211; c localhost fish &#8211; d test &#8211; p&#8211; fish&#8211; Version : 2 Fragment type : 9 K Value : 6 Min load factor : 78 Max load factor : 80 Temporary table : no Number of attributes : 4 Number of primary keys : 1 Length of frm data : 311 Row Checksum : 1 Row GCI : 1 SingleUserMode : 0 ForceVarPart : 1 FragmentCount : 2 TableStatus : Retrieved&#8211; Attributes&#8211; id Int PRIMARY KEY DISTRIBUTION KEY AT = FIXED ST = MEMORY AUTO_INCR<br />
-    name Varchar(20; latin1_swedish_ci) NOT NULL AT = SHORT_VAR ST = MEMORY<br />
-        length_mm Int NOT NULL AT = FIXED ST = MEMORY<br />
+shell &gt;./ ndb_desc &#8211; c localhost fish &#8211; d test &#8211; p&#8211; fish&#8211; Version : 2 Fragment type : 9 K Value : 6 Min load factor : 78 Max load factor : 80 Temporary table : no Number of attributes : 4 Number of primary keys : 1 Length of frm data : 311 Row Checksum : 1 Row GCI : 1 SingleUserMode : 0 ForceVarPart : 1 FragmentCount : 2 TableStatus : Retrieved&#8211; Attributes&#8211; id Int PRIMARY KEY DISTRIBUTION KEY AT = FIXED ST = MEMORY AUTO_INCR<br/>
+    name Varchar(20; latin1_swedish_ci) NOT NULL AT = SHORT_VAR ST = MEMORY<br/>
+        length_mm Int NOT NULL AT = FIXED ST = MEMORY<br/>
             weight_gm Int NOT NULL AT = FIXED ST = MEMORY&#8211; Indexes&#8211; PRIMARY KEY(id) &#8211; UniqueHashIndex PRIMARY(id) &#8211; OrderedIndex uk$unique(name) &#8211; UniqueHashIndex uk(name) &#8211; OrderedIndex&#8211; Per partition info&#8211; Partition Row count Commit count Frag fixed memory Frag varsized memory Extent_space Free extent_space 0 2 2 32768 32768 0 0 1 4 4 32768 32768 0 0 NDBT_ProgramExit : 0 &#8211; OK
 </dd></dl>
 <p> Information about multiple tables can be obtained in a single invocation of <code>ndb_desc</code> by using their names, separated by spaces. All of the tables must be in the same database. </p>
@@ -57,14 +57,14 @@ shell &gt;./ ndb_desc &#8211; c localhost fish &#8211; d test &#8211; p&#8211; f
 <dl>
 <dt>
 </dt><dd>
-CREATE LOGFILE GROUP lg_1<br />
-    ADD UNDOFILE &#8216;undo_1.log&#8217; INITIAL_SIZE 16M UNDO_BUFFER_SIZE 2M ENGINE NDB;<br />
-ALTER LOGFILE GROUP lg_1<br />
-    ADD UNDOFILE &#8216;undo_2.log&#8217; INITIAL_SIZE 12M ENGINE NDB;<br />
-CREATE TABLESPACE ts_1<br />
-    ADD DATAFILE &#8216;data_1.dat&#8217; USE LOGFILE GROUP lg_1<br />
-        INITIAL_SIZE 32M ENGINE NDB;<br />
-ALTER TABLESPACE ts_1<br />
+CREATE LOGFILE GROUP lg_1<br/>
+    ADD UNDOFILE &#8216;undo_1.log&#8217; INITIAL_SIZE 16M UNDO_BUFFER_SIZE 2M ENGINE NDB;<br/>
+ALTER LOGFILE GROUP lg_1<br/>
+    ADD UNDOFILE &#8216;undo_2.log&#8217; INITIAL_SIZE 12M ENGINE NDB;<br/>
+CREATE TABLESPACE ts_1<br/>
+    ADD DATAFILE &#8216;data_1.dat&#8217; USE LOGFILE GROUP lg_1<br/>
+        INITIAL_SIZE 32M ENGINE NDB;<br/>
+ALTER TABLESPACE ts_1<br/>
     ADD DATAFILE &#8216;data_2.dat&#8217; INITIAL_SIZE 48M ENGINE NDB;
 </dd></dl>
 <p> (For more information on the statements just shown and the objects created by them, see Section 17.5.10.1, lqMySQL Cluster Disk Data Objectsrq, as well as Section 12.1.14, lqCREATE LOGFILE GROUP Syntaxrq, and Section 12.1.18, lqCREATE TABLESPACE Syntaxrq.) </p>
@@ -72,16 +72,16 @@ ALTER TABLESPACE ts_1<br />
 <dl>
 <dt>
 </dt><dd>
-CREATE TABLE fish(<br />
-    id INT(11) NOT NULL AUTO_INCREMENT,<br />
-    name VARCHAR(20) NOT NULL,<br />
-    length_mm INT(11) NOT NULL,<br />
-    weight_gm INT(11) NOT NULL,<br />
-    PRIMARY KEY pk(id),<br />
-    UNIQUE KEY uk(name)) TABLESPACE ts_1 STORAGE DISK<br />
-    ENGINE = NDB;<br />
-INSERT INTO fish VALUES(&#8221;, &#8216;guppy&#8217;, 35, 2), (&#8221;, &#8216;tuna&#8217;, 2500, 150000),<br />
-    (&#8221;, &#8216;shark&#8217;, 3000, 110000), (&#8221;, &#8216;manta ray&#8217;, 1500, 50000),<br />
+CREATE TABLE fish(<br/>
+    id INT(11) NOT NULL AUTO_INCREMENT,<br/>
+    name VARCHAR(20) NOT NULL,<br/>
+    length_mm INT(11) NOT NULL,<br/>
+    weight_gm INT(11) NOT NULL,<br/>
+    PRIMARY KEY pk(id),<br/>
+    UNIQUE KEY uk(name)) TABLESPACE ts_1 STORAGE DISK<br/>
+    ENGINE = NDB;<br/>
+INSERT INTO fish VALUES(&#8221;, &#8216;guppy&#8217;, 35, 2), (&#8221;, &#8216;tuna&#8217;, 2500, 150000),<br/>
+    (&#8221;, &#8216;shark&#8217;, 3000, 110000), (&#8221;, &#8216;manta ray&#8217;, 1500, 50000),<br/>
     (&#8221;, &#8216;grouper&#8217;, 900, 125000), (&#8221;, &#8216;puffer&#8217;, 250, 2500);
 </dd></dl>
 <p> When run against this version of the table, <code>ndb_desc</code> displays the following output: </p>

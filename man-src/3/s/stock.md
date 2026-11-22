@@ -13,7 +13,7 @@ description: "QuantLib::Stock – Simple stock class."
 <p> Inherits <code>QuantLib::Instrument</code>. </p>
 <h3>Public Member Functions</h3>
 <p><code>Stock</code> (const <code>Handle</code>&lt; <code>Quote</code> &gt; &amp;quote) </p>
-<p> bool <code>isExpired</code> () const<br />
+<p> bool <code>isExpired</code> () const<br/>
  <i>returns whether the instrument is still tradable. </i></p>
 <h3>Protected Member Functions</h3>
 <p>void <code>performCalculations</code> () const </p>

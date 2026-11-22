@@ -62,7 +62,7 @@ description: "xkbcomp – compile XKB keyboard description"
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/7-x/">X</a>(7)</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright 1994, Silicon Graphics Computer Systems and X Consortium, Inc.<br />
+<p> Copyright 1994, Silicon Graphics Computer Systems and X Consortium, Inc.<br/>
  See <i><a href="/docs/linux/man/7-x/">X</a>(7)</i> for a full statement of rights and permissions.</p>
 <h2>AUTHOR</h2>
 <p> Erik Fortune, Silicon Graphics </p>

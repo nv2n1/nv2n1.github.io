@@ -82,8 +82,8 @@ esac
 <dt><a href="/docs/linux/man/3-fstrcmpi/">fstrcmpi</a>(3)</dt>
 <dd> fuzzy comparison of strings, integer variation</dd></dl>
 <h2>COPYRIGHT</h2>
-<p> fstrcmp version 0.7<br />
- Copyright (C) 2009 Peter Miller<br />
+<p> fstrcmp version 0.7<br/>
+ Copyright (C) 2009 Peter Miller<br/>
  Peter Miller &lt;pmiller [at] opensource.org.au&gt; </p>
 <p> The comparison code is derived from the fuzzy comparison functions in GNU Gettext 0.17. The GNU Gettext comparison functions were, in turn, derived from GNU Diff 2.7. </p>
 <p> Copyright (C) 1988-2009 Free Software Foundation </p>

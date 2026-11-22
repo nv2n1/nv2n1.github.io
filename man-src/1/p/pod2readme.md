@@ -17,7 +17,7 @@ pod2readme - script to convert POD to README file
 
 <h2>DESCRIPTIONS</h2>
 
- Converts <font SIZE="-1">POD</font> in the specified file to a <i></i><font SIZE="-1"><i>README</i></font><i></i> text file. If a second argument is given, it will use that as the output file and assume that is the type of file to export: 
+ Converts POD in the specified file to a <i></i><i>README</i><i></i> text file. If a second argument is given, it will use that as the output file and assume that is the type of file to export: 
 
  <pre>
   pod2readme Module.pm COPYING

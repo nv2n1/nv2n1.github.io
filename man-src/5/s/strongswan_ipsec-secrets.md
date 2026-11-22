@@ -43,17 +43,17 @@ include ipsec.*.secrets</pre>
 <h3>Types Of Secrets</h3>
 <dl>
 <dt><code>[ &lt;selectors&gt; ] : PSK &lt;secret&gt;</code></dt>
-<dd>A preshared <i>secret</i> is most conveniently represented as a sequence of characters, which is delimited by double-quote characters (<code>&quot;</code>). The sequence cannot contain newline or double-quote characters.<br />
+<dd>A preshared <i>secret</i> is most conveniently represented as a sequence of characters, which is delimited by double-quote characters (<code>&quot;</code>). The sequence cannot contain newline or double-quote characters.<br/>
  Alternatively, preshared secrets can be represented as hexadecimal or Base64 encoded binary values. A character sequence beginning with <code>0x</code> is interpreted as sequence of hexadecimal digits. Similarly, a character sequence beginning with <code>0s</code> is interpreted as Base64 encoded binary data.</dd>
 <dt><code>: RSA &lt;private key file&gt; [ &lt;passphrase&gt; | %prompt ]</code></dt>
 <dd><code>: ECDSA &lt;private key file&gt; [ &lt;passphrase&gt; | %prompt ]</code> For the private key file both absolute paths or paths relative to <i>/etc/ipsec.d/private</i> are accepted. If the private key file is encrypted, the <i>passphrase</i> must be defined. Instead of a passphrase <code>%prompt</code> can be used which then causes the daemon to ask the user for the password whenever it is required to decrypt the key.</dd>
 <dt><code>: P12 &lt;PKCS#12 file&gt; [ &lt;passphrase&gt; | %prompt ]</code></dt>
 <dd>For the PKCS#12 file both absolute paths or paths relative to <i>/etc/ipsec.d/private</i> are accepted. If the container is encrypted, the <i>passphrase</i> must be defined. Instead of a passphrase <code>%prompt</code> can be used which then causes the daemon to ask the user for the password whenever it is required to decrypt the container. Private keys, client and CA certificates are extracted from the container. To use such a client certificate in a connection set leftid to one of the subjects of the certificate.</dd>
 <dt><code>&lt;user id&gt; : EAP &lt;secret&gt;</code></dt>
-<dd>The format of <i>secret</i> is the same as that of <code>PSK</code> secrets.<br />
+<dd>The format of <i>secret</i> is the same as that of <code>PSK</code> secrets.<br/>
  <code>EAP</code> secrets are IKEv2 only.</dd>
 <dt><code>&lt;user id&gt; : NTLM &lt;secret&gt;</code></dt>
-<dd>The format of <i>secret</i> is the same as that of <code>PSK</code> secrets, but the secret is stored as NTLM hash, which is MD4(UTF-16LE(secret)), instead of as cleartext.<br />
+<dd>The format of <i>secret</i> is the same as that of <code>PSK</code> secrets, but the secret is stored as NTLM hash, which is MD4(UTF-16LE(secret)), instead of as cleartext.<br/>
  <code>NTLM</code> secrets can only be used with the <code>eap-mschapv2</code> plugin.</dd>
 <dt><code>[ &lt;servername&gt; ] &lt;username&gt; : XAUTH &lt;password&gt;</code></dt>
 <dd>The format of <i>password</i> is the same as that of <code>PSK</code> secrets. <code>XAUTH</code> secrets are IKEv1 only.</dd>

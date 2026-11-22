@@ -34,18 +34,18 @@ description: "kcgrasstest – command line interface to test the cache tree data
 <p> Options feature the following. </p>
 <dl>
 <dt>
-</dt><dd> <code>-th </code><i>num</i> : specifies the number of worker threads.<br />
- <code>-rnd</code> : performs random test.<br />
- <code>-etc</code> : performs miscellaneous operations.<br />
- <code>-tran</code> : performs transaction.<br />
- <code>-tc</code> : tunes the database with the compression option.<br />
- <code>-bnum </code><i>num</i> : specifies the number of buckets of the hash table.<br />
- <code>-psiz </code><i>num</i> : specifies the size of each page.<br />
- <code>-pccap </code><i>num</i> : specifies the capacity size of the page cache.<br />
- <code>-rcd</code> : use the decimal comparator instead of the lexical one.<br />
- <code>-rcld</code> : use the lexical descending comparator instead of the ascending one.<br />
- <code>-rcdd</code> : use the decimal descending comparator instead of the lexical one.<br />
- <code>-lv</code> : reports all errors.<br />
+</dt><dd> <code>-th </code><i>num</i> : specifies the number of worker threads.<br/>
+ <code>-rnd</code> : performs random test.<br/>
+ <code>-etc</code> : performs miscellaneous operations.<br/>
+ <code>-tran</code> : performs transaction.<br/>
+ <code>-tc</code> : tunes the database with the compression option.<br/>
+ <code>-bnum </code><i>num</i> : specifies the number of buckets of the hash table.<br/>
+ <code>-psiz </code><i>num</i> : specifies the size of each page.<br/>
+ <code>-pccap </code><i>num</i> : specifies the capacity size of the page cache.<br/>
+ <code>-rcd</code> : use the decimal comparator instead of the lexical one.<br/>
+ <code>-rcld</code> : use the lexical descending comparator instead of the ascending one.<br/>
+ <code>-rcdd</code> : use the decimal descending comparator instead of the lexical one.<br/>
+ <code>-lv</code> : reports all errors.<br/>
  <code>-it </code><i>num</i> : specifies the number of repetition.
 </dd></dl>
 <p> This command returns 0 on success, another on failure. </p>

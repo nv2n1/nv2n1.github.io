@@ -9,17 +9,17 @@ description: "The Net-SNMP library –"
 
 <p>The Net-SNMP library &#8211;</p>
 <h3>Modules</h3>
-<p><code>asn1 parsing and datatype manipulation routines.</code><br />
- <i>Note on. </i><br />
+<p><code>asn1 parsing and datatype manipulation routines.</code><br/>
+ <i>Note on. </i><br/>
  <code>A generic callback mechanism</code> </p>
 <p> <code>generic linked-list data handling with a string as a key.</code> </p>
-<p> <code>storage space for defaults</code><br />
- <i>The purpose of the default storage is three-fold:. </i><br />
+<p> <code>storage space for defaults</code><br/>
+ <i>The purpose of the default storage is three-fold:. </i><br/>
  <code>mib parsing and datatype manipulation routines.</code> </p>
-<p> <code>Store and retrieve data referenced by an OID.</code><br />
- <i>This is essentially a way of storing data associated with a given OID. </i><br />
- <code>parsing various configuration files at run time</code><br />
- <i>The read_config related functions are a fairly extensible system of parsing various configuration files at the run time. </i><br />
+<p> <code>Store and retrieve data referenced by an OID.</code><br/>
+ <i>This is essentially a way of storing data associated with a given OID. </i><br/>
+ <code>parsing various configuration files at run time</code><br/>
+ <i>The read_config related functions are a fairly extensible system of parsing various configuration files at the run time. </i><br/>
  <code>generic library based alarm timers for various parts of an application</code> </p>
 <p> <code>various PDU processing routines</code> </p>
 <p> <code>generic logging for net-snmp</code> </p>
@@ -206,9 +206,9 @@ int snmp_errno = 0</code></pre>
 <p> This should be faster than doing a snmp_oid_compare for different length OIDs, since the length is checked first and if != returns immediately. Might be very slighly faster if lengths are ==. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>in_name1</i> A pointer to the first oid.<br />
- <i>len1</i> length of the first OID (in segments, not bytes)<br />
- <i>in_name2</i> A pointer to the second oid.<br />
+<dd><i>in_name1</i> A pointer to the first oid.<br/>
+ <i>len1</i> length of the first OID (in segments, not bytes)<br/>
+ <i>in_name2</i> A pointer to the second oid.<br/>
  <i>len2</i> length of the second OID (in segments, not bytes)</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -219,9 +219,9 @@ int snmp_errno = 0</code></pre>
 <p>Given two OIDs, determine the common prefix to them both. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>in_name1</i> A pointer to the first oid.<br />
- <i>len1</i> Length of the first oid.<br />
- <i>in_name2</i> A pointer to the second oid.<br />
+<dd><i>in_name1</i> A pointer to the first oid.<br/>
+ <i>len1</i> Length of the first oid.<br/>
+ <i>in_name2</i> A pointer to the second oid.<br/>
  <i>len2</i> Length of the second oid.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -234,9 +234,9 @@ int snmp_errno = 0</code></pre>
 <p> Functionally, this determines if in_name2 is equal or a subtree of in_name1 </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>in_name1</i> A pointer to the first oid.<br />
- <i>len1</i> length of the first OID (in segments, not bytes)<br />
- <i>in_name2</i> A pointer to the second oid.<br />
+<dd><i>in_name1</i> A pointer to the first oid.<br/>
+ <i>len1</i> length of the first OID (in segments, not bytes)<br/>
+ <i>in_name2</i> A pointer to the second oid.<br/>
  <i>len2</i> length of the second OID (in segments, not bytes)</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -254,9 +254,9 @@ int snmp_errno = 0</code></pre>
 <p>Compares 2 OIDs to determine if they are equal up until the shortest length. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>in_name1</i> A pointer to the first oid.<br />
- <i>len1</i> length of the first OID (in segments, not bytes)<br />
- <i>in_name2</i> A pointer to the second oid.<br />
+<dd><i>in_name1</i> A pointer to the first oid.<br/>
+ <i>len1</i> length of the first OID (in segments, not bytes)<br/>
+ <i>in_name2</i> A pointer to the second oid.<br/>
  <i>len2</i> length of the second OID (in segments, not bytes)</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -278,7 +278,7 @@ int snmp_errno = 0</code></pre>
 <p>probe for peer engineID </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>slp</i> session list pointer.<br />
+<dd><i>slp</i> session list pointer.<br/>
  <i>in_session</i> session for errors</dd></dl>
 <p> <code>Note:</code></p>
 <dl>

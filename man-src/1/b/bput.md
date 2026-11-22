@@ -10,7 +10,7 @@ description: "axgetput – upload or download files via AX.25 / axspawn Linux lo
 
 <p> axgetput &#8211; upload or download files via AX.25 / axspawn Linux login session.</p>
 <h2>SYNOPSIS</h2>
-<p> <code>axgetput</code> [-b <i>blocksize</i>] [-i] [-v] [-h] [?] <i>filename</i><br />
+<p> <code>axgetput</code> [-b <i>blocksize</i>] [-i] [-v] [-h] [?] <i>filename</i><br/>
  <code>axgetput</code> [-b <i>blocksize</i>] [-i] -s [-v] [-h] [?] [<i>filename</i>] </p>
 <h2>DESCRIPTION</h2>
 <dl>

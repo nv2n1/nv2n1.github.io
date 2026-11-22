@@ -10,15 +10,15 @@ description: "dbformmail – write a shell script that will send e-mail to many 
 
 <p> dbformmail &#8211; write a shell script that will send e-mail to many people </p>
 <h2>SYNOPSIS</h2>
-<p> dbformmail [-m <font SIZE="-1">MECHANISM</font>] format_file.txt</p>
+<p> dbformmail [-m MECHANISM] format_file.txt</p>
 <h2>DESCRIPTION</h2>
-<p> Read a &#8220;form mail&#8221; message from the file <font SIZE="-1">FORMAT_FILE.TXT,</font> filling in underscore-preceded column-names with data. Output a shell script which will send each message through some mail transport <font SIZE="-1">MECHANISM.</font> </p>
+<p> Read a &#8220;form mail&#8221; message from the file FORMAT_FILE.TXT, filling in underscore-preceded column-names with data. Output a shell script which will send each message through some mail transport MECHANISM. </p>
 <p> Do not use this program for evil or I will have to come over and have words with you. </p>
-<p> Note that this program does <font SIZE="-1">NOT</font> actually <font SIZE="-1">SEND</font> the mail. It writes a shell script that will send the mail for you. I recommend you save it to a file, check it (one last time!), then run it with sh. </p>
-<p> Unlike most Fsdb programs, this program does <i>not</i> output a <font SIZE="-1">FSDB</font> file.</p>
+<p> Note that this program does NOT actually SEND the mail. It writes a shell script that will send the mail for you. I recommend you save it to a file, check it (one last time!), then run it with sh. </p>
+<p> Unlike most Fsdb programs, this program does <i>not</i> output a FSDB file.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-m </code><font SIZE="-1"><code>MECHANISM</code></font></dt>
+<dt><code>-m </code><code>MECHANISM</code></dt>
 <dd> Select the mail-sending mechanism. Choose &#8220;Mail&#8221; or &#8220;sendmail&#8221;. Defaults to &#8220;Mail&#8221;.</dd></dl>
 <p> This module also supports the standard fsdb options:</p>
 <dl>
@@ -76,4 +76,4 @@ description: "dbformmail – write a shell script that will send e-mail to many 
 <p> Fsdb.</p>
 <h2>AUTHOR and COPYRIGHT</h2>
 <p> Copyright (C) 1991-2015 by John Heidemann &lt;johnh [at] isi.edu&gt; </p>
-<p> This program is distributed under terms of the <font SIZE="-1">GNU</font> general public license, version 2. See the file <font SIZE="-1">COPYING</font> with the distribution for details. </p>
+<p> This program is distributed under terms of the GNU general public license, version 2. See the file COPYING with the distribution for details. </p>

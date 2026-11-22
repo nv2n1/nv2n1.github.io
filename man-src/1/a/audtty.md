@@ -14,12 +14,12 @@ description: "audtty – Control Audacious from the command line with a friendly
 <h2>DESCRIPTION</h2>
 <p> audtty is a simple application for controlling Audacious from the command line. It is designed to make common, simple tasks fast and easy to do. It is operated using arrow keys and standard Audacious keys, to make it easy and intuitive to learn.</p>
 <h2>OPTIONS</h2>
-<p> To negate a short option, use &#8216;<code>+</code>&#8216; instead of &#8216;<code>&#8211;</code>&#8216; (e.g. <code>+a</code>).<br />
+<p> To negate a short option, use &#8216;<code>+</code>&#8216; instead of &#8216;<code>&#8211;</code>&#8216; (e.g. <code>+a</code>).<br/>
  Long-options are negated with <code>no-</code>, (e.g. <code>&#8211;no-read-all</code>).</p>
 <dl>
 <dt><code>The keys for basic control are as follows:</code></dt>
-<dd> +&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;+<br />
- | &lt;&lt; &gt; || o &gt;&gt; |<br />
+<dd> +&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;+<br/>
+ | &lt;&lt; &gt; || o &gt;&gt; |<br/>
  +&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;+ </dd>
 <p>&nbsp;<wbr>z&nbsp;<wbr>&nbsp;<wbr>x&nbsp;<wbr>&nbsp;<wbr>c&nbsp;<wbr>&nbsp;<wbr>v&nbsp;<wbr>&nbsp;<wbr>b</p>
 <dt><code>-a, &#8211;read-all</code></dt>
@@ -92,8 +92,8 @@ description: "audtty – Control Audacious from the command line with a friendly
 <p> The syntax of the configuration files are long options without the &#8216;&#8211;&#8216;, one on each line.</p>
 <dl>
 <dt><code>Example:</code></dt>
-<dd> numbers<br />
- title<br />
+<dd> numbers<br/>
+ title<br/>
  length no-read-all</dd></dl>
 <h2>BUGS</h2>
 <p> The xmms remote controlling library provides no good way of detecting changes in the playlist, and therefore <code>audtty</code> might need to be told to reload the playlist if songs are moved. Do so by pressing <code>L</code>. If the length of the playlist changes, <code>audtty</code> will assume the playlist has changed and reload the entire playlist to make sure it is correct. </p>

@@ -230,22 +230,22 @@ description: "agetty – alternative Linux getty"
 <p>This section shows examples for the process field of an entry in the <i>/etc/inittab</i> file. You&#8217;ll have to prepend appropriate values for the other fields. See <code><a href="/docs/linux/man/5-inittab/">inittab</a></code>(5) for more details. </p>
 <p>For a hardwired line or a console tty: </p>
 <dl>
-<dd> <p> <code>/sbin/agetty 9600 ttyS1</code> <br />
+<dd> <p> <code>/sbin/agetty 9600 ttyS1</code> <br/>
  </p>
  </dd></dl>
 <p>For a directly connected terminal without proper carrier-detect wiring (try this if your terminal just sleeps instead of giving you a password: prompt): </p>
 <dl>
-<dd> <p> <code>/sbin/agetty --local-line 9600 ttyS1 vt100</code> <br />
+<dd> <p> <code>/sbin/agetty --local-line 9600 ttyS1 vt100</code> <br/>
  </p>
  </dd></dl>
 <p>For an old-style dial-in line with a 9600/2400/1200 baud modem: </p>
 <dl>
-<dd> <p> <code>/sbin/agetty --extract-baud --timeout 60 ttyS1 9600,2400,1200</code> <br />
+<dd> <p> <code>/sbin/agetty --extract-baud --timeout 60 ttyS1 9600,2400,1200</code> <br/>
  </p>
  </dd></dl>
 <p>For a Hayes modem with a fixed 115200 bps interface to the machine (the example init string turns off modem echo and result codes, makes modem/computer DCD track modem/modem DCD, makes a DTR drop cause a disconnection, and turns on auto-answer after 1 ring): </p>
 <dl>
-<dd> <p> <code>/sbin/agetty --wait-cr --init-string &#8216;ATE0Q1&amp;D2&amp;C1S0=1\015&#8217; 115200 ttyS1</code> <br />
+<dd> <p> <code>/sbin/agetty --wait-cr --init-string &#8216;ATE0Q1&amp;D2&amp;C1S0=1\015&#8217; 115200 ttyS1</code> <br/>
  </p>
  </dd></dl>
 <h2>SECURITY NOTICE</h2>

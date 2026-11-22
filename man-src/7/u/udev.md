@@ -45,7 +45,7 @@ description: "udev – Dynamic device management"
  </dd></dl>
 <h3>Values</h3>
 <p>Values are written as double quoted strings, such as (&quot;string&quot;). To include a quotation mark (&quot;) in the value, precede it by a backslash (\&quot;). Any other occurrences of a backslash followed by a character are not unescaped. That is, &quot;\t\n&quot; is treated as four characters: backslash, lowercase t, backslash, lowercase n. </p>
-<p>The string can be prefixed with a lowercase e (e&quot;string\n&quot;) to mark the string as m[blue]<code>C-style escaped</code>m[]<font SIZE="-2">[1]</font>. For example, e&quot;string\n&quot; is parsed as 7 characters: 6 lowercase letters and a newline. This can be useful for writing special characters when a kernel driver requires them. </p>
+<p>The string can be prefixed with a lowercase e (e&quot;string\n&quot;) to mark the string as m[blue]<code>C-style escaped</code>m[][1]. For example, e&quot;string\n&quot; is parsed as 7 characters: 6 lowercase letters and a newline. This can be useful for writing special characters when a kernel driver requires them. </p>
 <p>Please note that <code>NUL</code> is not allowed in either string variant.  </p>
 <h3>Keys</h3>
 <p>The following key names can be used to match against device properties. Some of the keys also match against properties of the parent devices in sysfs, not only the device that has generated the event. If multiple keys that match a parent device are specified in a single rule, all these keys must match at one and the same parent device. </p>

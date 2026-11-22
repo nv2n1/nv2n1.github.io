@@ -7,7 +7,7 @@ url: "/docs/linux/man/8-gpt-virtual-pkg/"
 description: "gpt-virtual-pkg – Link external software into a GPT managed installation installation."
 ---
 
-<p><code>gpt-virtual-pkg</code> &#8211; Link external software into a <font SIZE="-1">GPT</font> managed installation installation.</p>
+<p><code>gpt-virtual-pkg</code> &#8211; Link external software into a GPT managed installation installation.</p>
 <h2>Synopsis</h2>
 <p><code>gpt-virtual-pkg</code> [options]</p>
 <h2>Description</h2>
@@ -23,7 +23,7 @@ description: "gpt-virtual-pkg – Link external software into a GPT managed inst
 <dt><code>-filelist=file</code></dt>
 <dd>Specifies the file containing the list of installed files..</dd>
 <dt><code>-gptfile=file</code></dt>
-<dd>Specifies the file containing the <font SIZE="-1">GPT</font> packaging data.</dd>
+<dd>Specifies the file containing the GPT packaging data.</dd>
 <dt><code>-help</code></dt>
 <dd>Print a brief help message and exits.</dd>
 <dt><code>-man</code></dt>

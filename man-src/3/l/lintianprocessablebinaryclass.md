@@ -17,8 +17,8 @@ description: "Lintian::Processable::Binary::Class – Lintian interface to binar
 <p> Native heuristics are only available in source packages.</p>
 <h2>Instance Methods</h2>
 <dl COMPACT>
-<dt>is_pkg_class ([<font SIZE="-1">TYPE</font>])</dt>
-<dd>Returns a truth value if the package is the given <font SIZE="-1">TYPE</font> of special package. <font SIZE="-1">TYPE</font> can be one of &#8220;transitional&#8221;, &#8220;debug&#8221; or &#8220;any-meta&#8221;. If omitted it defaults to &#8220;any-meta&#8221;. The semantics for these values are:</dd>
+<dt>is_pkg_class ([TYPE])</dt>
+<dd>Returns a truth value if the package is the given TYPE of special package. TYPE can be one of &#8220;transitional&#8221;, &#8220;debug&#8221; or &#8220;any-meta&#8221;. If omitted it defaults to &#8220;any-meta&#8221;. The semantics for these values are:</dd>
 <dl COMPACT>
 <dd>
 </dd><dl COMPACT>

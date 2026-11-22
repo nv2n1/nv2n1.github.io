@@ -10,7 +10,7 @@ description: "XkbGetDeviceInfo – Determine whether the X server allows Xkb acc
 <p>XkbGetDeviceInfo &#8211; Determine whether the X server allows Xkb access to particular capabilities of input devices other than the core X keyboard, or to determine the status of indicator maps, indicator names or button actions on a non-KeyClass extension device </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>XkbDeviceInfoPtr XkbGetDeviceInfo</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>unsigned int </code><i>which</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>,</code> <code>unsigned int </code><i>ind_class</i><code>,</code> <code>unsigned int </code><i>ind_id</i><code>);</code><br />
+<dt> <code>XkbDeviceInfoPtr XkbGetDeviceInfo</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>unsigned int </code><i>which</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>,</code> <code>unsigned int </code><i>ind_class</i><code>,</code> <code>unsigned int </code><i>ind_id</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

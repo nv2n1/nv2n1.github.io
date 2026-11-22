@@ -13,19 +13,19 @@ description: "QuantLib::Handle – Shared handle to an observable."
 <p> #include &lt;ql/handle.hpp&gt; </p>
 <h3>Public Member Functions</h3>
 <p> <code>Handle</code> (const boost::shared_ptr&lt; T &gt; &amp;h=boost::shared_ptr&lt; T &gt;(), bool registerAsObserver=true) </p>
-<p> const boost::shared_ptr&lt; T &gt; &amp; <code>currentLink</code> () const<br />
- <i>dereferencing </i><br />
+<p> const boost::shared_ptr&lt; T &gt; &amp; <code>currentLink</code> () const<br/>
+ <i>dereferencing </i><br/>
  const boost::shared_ptr&lt; T &gt; &amp; <code>operator-&gt;</code> () const </p>
 <p> const boost::shared_ptr&lt; T &gt; &amp; <code>operator*</code> () const </p>
-<p> bool <code>empty</code> () const<br />
- <i>checks if the contained shared pointer points to anything </i><br />
- <code>operator boost::shared_ptr&lt; Observable &gt;</code> () const<br />
- <i>allows registration as observable </i><br />
- template&lt;class U &gt; bool <code>operator==</code> (const <code>Handle</code>&lt; U &gt; &amp;other)<br />
- <i>equality test </i><br />
- template&lt;class U &gt; bool <code>operator!=</code> (const <code>Handle</code>&lt; U &gt; &amp;other)<br />
- <i>disequality test </i><br />
- template&lt;class U &gt; bool <code>operator&lt;</code> (const <code>Handle</code>&lt; U &gt; &amp;other)<br />
+<p> bool <code>empty</code> () const<br/>
+ <i>checks if the contained shared pointer points to anything </i><br/>
+ <code>operator boost::shared_ptr&lt; Observable &gt;</code> () const<br/>
+ <i>allows registration as observable </i><br/>
+ template&lt;class U &gt; bool <code>operator==</code> (const <code>Handle</code>&lt; U &gt; &amp;other)<br/>
+ <i>equality test </i><br/>
+ template&lt;class U &gt; bool <code>operator!=</code> (const <code>Handle</code>&lt; U &gt; &amp;other)<br/>
+ <i>disequality test </i><br/>
+ template&lt;class U &gt; bool <code>operator&lt;</code> (const <code>Handle</code>&lt; U &gt; &amp;other)<br/>
  <i>strict weak ordering </i></p>
 <h3>Protected Attributes</h3>
 <p> boost::shared_ptr&lt; Link &gt; <code>link_</code> </p>

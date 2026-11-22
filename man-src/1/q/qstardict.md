@@ -23,20 +23,20 @@ But reformatting and expanding takes additional CPU time. If the translation ref
 </pre>
 <h2>DICTIONARIES</h2>
 <p> Dictionaries for StarDict plugin are in <code>StarDict</code> format and by default must be placed into /usr/share/stardict/dic or ~/.stardict/dic directories. A dictionary must consist of three files: </p>
-<p>&nbsp;<wbr>&#8211; .dict[.dz]&nbsp;<wbr>file &#8211; main dictionary file<br />
-&nbsp;<wbr>&#8211; .idx &#8211; index file<br />
+<p>&nbsp;<wbr>&#8211; .dict[.dz]&nbsp;<wbr>file &#8211; main dictionary file<br/>
+&nbsp;<wbr>&#8211; .idx &#8211; index file<br/>
 &nbsp;<wbr>&#8211; .ifo &#8211; description file </p>
 <p> These files must be placed together in one directory.</p>
 <h2>PRONOUNCING PROGRAMS</h2>
 <p> QStarDict can pronounce words using external program when popup window is shown. You must set a voice program to pronounce text from stdin. By default this is <code>festival</code> with <code>&#8211;tts</code> option.</p>
 <h2>D-BUS</h2>
 <p> QStarDict supports D-Bus message bus. List of available methods: </p>
-<p> <code>void org.qstardict.dbus.showPopup(QString text</code><i>)</i><br />
- <code>void org.qstardict.dbus.showTranslation(QString text</code><i>)</i><br />
- <code>QString org.qstardict.dbus.translate(QString text</code><i>)</i><br />
- <code>QString org.qstardict.dbus.translateHtml(QString text</code><i>)</i><br />
- <code>QDBusVariant org.freedesktop.DBus.Properties.Get(QString interface_name</code><i>, QString property_name</i><code>)</code><br />
- <code>void org.freedesktop.DBus.Properties.Set(QString interface_name</code><i>, QString property_name</i><code>, QDBusVariant value</code><i>)</i><br />
+<p> <code>void org.qstardict.dbus.showPopup(QString text</code><i>)</i><br/>
+ <code>void org.qstardict.dbus.showTranslation(QString text</code><i>)</i><br/>
+ <code>QString org.qstardict.dbus.translate(QString text</code><i>)</i><br/>
+ <code>QString org.qstardict.dbus.translateHtml(QString text</code><i>)</i><br/>
+ <code>QDBusVariant org.freedesktop.DBus.Properties.Get(QString interface_name</code><i>, QString property_name</i><code>)</code><br/>
+ <code>void org.freedesktop.DBus.Properties.Set(QString interface_name</code><i>, QString property_name</i><code>, QDBusVariant value</code><i>)</i><br/>
  <code>QString org.freedesktop.DBus.Introspectable.Introspect()</code> </p>
 <p> List of available properties: </p>
 <p> <code>readwrite int org.qstardict.dbus.mainWindowVisible</code> </p>

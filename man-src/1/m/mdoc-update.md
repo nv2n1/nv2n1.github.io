@@ -65,16 +65,16 @@ void CreateAnException()
 }
 </code></pre>
 <dt><code>*</code></dt>
-<dd> This will not &quot;follow&quot; delegate and interface calls:<br />
-public<br />
-void UsesDelegates()<br />
-{<br />
-    Func&lt;int, int&gt; a = x = &gt;<br />
-    {<br />
-        throw new Exception();<br />
-    };<br />
-    a(4);<br />
-}<br />
+<dd> This will not &quot;follow&quot; delegate and interface calls:<br/>
+public<br/>
+void UsesDelegates()<br/>
+{<br/>
+    Func&lt;int, int&gt; a = x = &gt;<br/>
+    {<br/>
+        throw new Exception();<br/>
+    };<br/>
+    a(4);<br/>
+}<br/>
  The function <i>UsesDelegates()</i> won&#8217;t have any exceptions documented.</dd>
 <dt><code>*</code></dt>
 <dd> This will find exceptions which &quot;cannot happen&quot;, such as ArgumentNullExceptions for arguments which are &quot;known&quot; to be non-null: </dd>

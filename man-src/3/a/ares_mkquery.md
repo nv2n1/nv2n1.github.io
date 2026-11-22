@@ -30,5 +30,5 @@ int ares_mkquery(const char *name, int dnsclass, int type,
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-ares_expand_name/">ares_expand_name</a></code>(3), <code><a href="/docs/linux/man/3-ares_free_string/">ares_free_string</a></code>(3)</p>
 <h2>AUTHOR</h2>
-<p> Greg Hudson, MIT Information Systems<br />
+<p> Greg Hudson, MIT Information Systems<br/>
  Copyright 1998, 2000 by the Massachusetts Institute of Technology. </p>

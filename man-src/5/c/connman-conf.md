@@ -9,9 +9,9 @@ description: "main.conf – ConnMan configuration file"
 
 <p>main.conf &#8211; ConnMan configuration file</p>
 <h2>Synopsis</h2>
-<p>/etc/connman/main.conf<br />
- or<br />
- <i>&lt;SYSCONFDIR&gt;</i>/connman/main.conf<br />
+<p>/etc/connman/main.conf<br/>
+ or<br/>
+ <i>&lt;SYSCONFDIR&gt;</i>/connman/main.conf<br/>
  where &lt;SYSCONFDIR&gt; depends on your distribution or build.</p>
 <h2>Description</h2>
 <p><i>main.conf</i> is a configuration file for ConnMan. The configuration file is optional but it can be used to set up various aspects of ConnMan&#8217;s behavior. The location of the file may be changed through use of the &quot;&#8211;config=&quot; argument for <code>connman</code> (8).</p>

@@ -11,7 +11,7 @@ description: "get_iplayer – Stream Recording tool and PVR for BBC iPlayer, BBC
 <p> get_iplayer &#8211; Stream Recording tool and PVR for BBC iPlayer, BBC Podcasts and more</p>
 <h2>SYNOPSIS</h2>
 <p> <code>get_iplayer</code> [&lt;options&gt;] [&lt;regex|index&gt; &#8230;] </p>
-<p> <code>get_iplayer</code> <code>&#8211;get</code> [&lt;options&gt;] &lt;regex|index&gt; &#8230;<br />
+<p> <code>get_iplayer</code> <code>&#8211;get</code> [&lt;options&gt;] &lt;regex|index&gt; &#8230;<br/>
  <code>get_iplayer</code> &lt;url&gt; <code>&#8211;type</code>=&lt;type&gt; [&lt;options&gt;] </p>
 <p> <code>get_iplayer</code> &lt;pid|url&gt; [<code>&#8211;type</code>=&lt;type&gt; &lt;options&gt;] </p>
 <p> <code>get_iplayer</code> <code>&#8211;stream</code> [&lt;options&gt;] &lt;regex|index&gt; | mplayer <code>-cache</code> 3072 &#8211; </p>
@@ -479,7 +479,7 @@ description: "get_iplayer – Stream Recording tool and PVR for BBC iPlayer, BBC
 <p> get_iplayer was written by Phil Lewis &lt;iplayer2 (at sign) linuxcentre.net&gt; and is now maintained by the contributors at <a rel="nofollow" href="http://www.infradead.org/get_iplayer/html/get_iplayer.html">http://www.infradead.org/get_iplayer/html/get_iplayer.html</a> </p>
 <p> This manual page was originally written by Jonathan Wiltshire &lt;jmw [at] debian.org&gt; for the Debian project (but may be used by others).</p>
 <h2>COPYRIGHT NOTICE</h2>
-<p> get_iplayer v2.94, Copyright (C) 2008-2010 Phil Lewis<br />
-&nbsp;<wbr>&nbsp;<wbr>This program comes with ABSOLUTELY NO WARRANTY;&nbsp;<wbr>for details use &#8211;warranty.<br />
-&nbsp;<wbr>&nbsp;<wbr>This is free software, and you are welcome to redistribute it under certain<br />
+<p> get_iplayer v2.94, Copyright (C) 2008-2010 Phil Lewis<br/>
+&nbsp;<wbr>&nbsp;<wbr>This program comes with ABSOLUTELY NO WARRANTY;&nbsp;<wbr>for details use &#8211;warranty.<br/>
+&nbsp;<wbr>&nbsp;<wbr>This is free software, and you are welcome to redistribute it under certain<br/>
 &nbsp;<wbr>&nbsp;<wbr>conditions;&nbsp;<wbr>use &#8211;conditions for details. </p>

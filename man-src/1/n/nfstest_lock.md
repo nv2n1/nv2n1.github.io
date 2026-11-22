@@ -171,15 +171,15 @@ Locking non - overlapping range from a second process where end2 &lt; start1
                                                                                   process2 : | -- -- -- -- |
 </code></pre>
 <h3>nptest02</h3>
-<p>Locking non &#8211; overlapping range from a second process where end2 == start1 &#8211; 1 process1 : | &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; |<br />
+<p>Locking non &#8211; overlapping range from a second process where end2 == start1 &#8211; 1 process1 : | &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; |<br/>
                                                                                           process2 : | &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; |</p>
 <h3>nptest03</h3>
-<p>Locking non &#8211; overlapping range from a second process where start2 &gt; end1<br />
-                                                                         process1 : |<br />
-                                                                                    &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; |<br />
+<p>Locking non &#8211; overlapping range from a second process where start2 &gt; end1<br/>
+                                                                         process1 : |<br/>
+                                                                                    &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; |<br/>
                                                                                     process2 : | &#8212; &#8212; &#8212; &#8212; |</p>
 <h3>nptest04</h3>
-<p>Locking non &#8211; overlapping range from a second process where start2 == end1 + 1 process1 : | &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; |<br />
+<p>Locking non &#8211; overlapping range from a second process where start2 == end1 + 1 process1 : | &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; |<br/>
                                                                                           process2 : | &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; |</p>
 <h3>nctest</h3>
 <pre>
@@ -187,20 +187,20 @@ Run all non-overlapping locking tests using a second client: nctest01,
 nctest02, nctest03, nctest04
 </pre>
 <h3>nctest01</h3>
-<p>Locking non &#8211; overlapping range from a second client where end2 &lt; start1<br />
-                                                                      client1 : |<br />
-                                                                                &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; |<br />
+<p>Locking non &#8211; overlapping range from a second client where end2 &lt; start1<br/>
+                                                                      client1 : |<br/>
+                                                                                &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; |<br/>
                                                                                 client2 : | &#8212; &#8212; &#8212; &#8212; |</p>
 <h3>nctest02</h3>
-<p>Locking non &#8211; overlapping range from a second client where end2 == start1 &#8211; 1 client1 : | &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; |<br />
+<p>Locking non &#8211; overlapping range from a second client where end2 == start1 &#8211; 1 client1 : | &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; |<br/>
                                                                                         client2 : | &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; |</p>
 <h3>nctest03</h3>
-<p>Locking non &#8211; overlapping range from a second client where start2 &gt; end1<br />
-                                                                        client1 : |<br />
-                                                                                  &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; |<br />
+<p>Locking non &#8211; overlapping range from a second client where start2 &gt; end1<br/>
+                                                                        client1 : |<br/>
+                                                                                  &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; |<br/>
                                                                                   client2 : | &#8212; &#8212; &#8212; &#8212; |</p>
 <h3>nctest04</h3>
-<p>Locking non &#8211; overlapping range from a second client where start2 == end1 + 1 client1 : | &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; |<br />
+<p>Locking non &#8211; overlapping range from a second client where start2 == end1 + 1 client1 : | &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; |<br/>
                                                                                         client2 : | &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; |</p>
 <h3>overlap</h3>
 <pre>
@@ -214,43 +214,43 @@ Run all overlapping locking tests using a second process: optest01,
 optest02, optest03, optest04, optest05, optest06, optest07, optest08
 </pre>
 <h3>optest01</h3>
-<p>Locking same range from a second process<br />
-        process1 : |<br />
-                   &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; |<br />
+<p>Locking same range from a second process<br/>
+        process1 : |<br/>
+                   &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; |<br/>
                    process2 : | &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; |</p>
 <h3>optest02</h3>
-<p>Locking overlapping range from a second process where start2 &lt; start1<br />
-                                                                   process1 : |<br />
-                                                                              &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; |<br />
+<p>Locking overlapping range from a second process where start2 &lt; start1<br/>
+                                                                   process1 : |<br/>
+                                                                              &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; |<br/>
                                                                               process2 : | &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; |</p>
 <h3>optest03</h3>
-<p>Locking overlapping range from a second process where end2 &gt; end1<br />
-                                                                 process1 : |<br />
-                                                                            &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; |<br />
+<p>Locking overlapping range from a second process where end2 &gt; end1<br/>
+                                                                 process1 : |<br/>
+                                                                            &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; |<br/>
                                                                             process2 : | &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; |</p>
 <h3>optest04</h3>
-<p>Locking overlapping range from a second process where range2 is entirely within range1<br />
-        process1 : |<br />
-                   &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; |<br />
+<p>Locking overlapping range from a second process where range2 is entirely within range1<br/>
+        process1 : |<br/>
+                   &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; |<br/>
                    process2 : | &#8212; &#8212; &#8212; &#8212; |</p>
 <h3>optest05</h3>
-<p>Locking overlapping range from a second process where range1 is entirely within range2<br />
-        process1 : |<br />
-                   &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; |<br />
+<p>Locking overlapping range from a second process where range1 is entirely within range2<br/>
+        process1 : |<br/>
+                   &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; |<br/>
                    process2 : | &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; |</p>
 <h3>optest06</h3>
 <pre>
 Locking full file range from a second process
 </pre>
 <h3>optest07</h3>
-<p>Locking overlapping range from a second process where end2 == start1<br />
-                                                                  process1 : |<br />
-                                                                             &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; |<br />
+<p>Locking overlapping range from a second process where end2 == start1<br/>
+                                                                  process1 : |<br/>
+                                                                             &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; |<br/>
                                                                              process2 : | &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; |</p>
 <h3>optest08</h3>
-<p>Locking overlapping range from a second process where start2 == end1<br />
-                                                                    process1 : |<br />
-                                                                               &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; |<br />
+<p>Locking overlapping range from a second process where start2 == end1<br/>
+                                                                    process1 : |<br/>
+                                                                               &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; |<br/>
                                                                                process2 : | &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; |</p>
 <h3>octest</h3>
 <pre>
@@ -258,38 +258,38 @@ Run all overlapping locking tests using a second client: octest01,
 octest02, octest03, octest04, octest05, octest06, octest07, octest08
 </pre>
 <h3>octest01</h3>
-<p>Locking same range from a second client<br />
-        client1 : |<br />
-                  &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; |<br />
+<p>Locking same range from a second client<br/>
+        client1 : |<br/>
+                  &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; |<br/>
                   client2 : | &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; |</p>
 <h3>octest02</h3>
-<p>Locking overlapping range from a second client where start2 &lt; start1<br />
-                                                                  client1 : |<br />
-                                                                            &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; |<br />
+<p>Locking overlapping range from a second client where start2 &lt; start1<br/>
+                                                                  client1 : |<br/>
+                                                                            &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; |<br/>
                                                                             client2 : | &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; |</p>
 <h3>octest03</h3>
-<p>Locking overlapping range from a second client where end2 &gt; end1<br />
-                                                                client1 : |<br />
-                                                                          &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; |<br />
+<p>Locking overlapping range from a second client where end2 &gt; end1<br/>
+                                                                client1 : |<br/>
+                                                                          &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; |<br/>
                                                                           client2 : | &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; |</p>
 <h3>octest04</h3>
-<p>Locking overlapping range from a second client where range2 is entirely within range1<br />
-        client1 : |<br />
-                  &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; |<br />
+<p>Locking overlapping range from a second client where range2 is entirely within range1<br/>
+        client1 : |<br/>
+                  &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; |<br/>
                   client2 : | &#8212; &#8212; &#8212; &#8212; |</p>
 <h3>octest05</h3>
-<p>Locking overlapping range from a second client where range1 is entirely within range2<br />
-        client1 : |<br />
-                  &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; |<br />
+<p>Locking overlapping range from a second client where range1 is entirely within range2<br/>
+        client1 : |<br/>
+                  &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; |<br/>
                   client2 : | &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; |</p>
 <h3>octest06</h3>
 <pre>
 Locking full file range from a second client
 </pre>
 <h3>octest07</h3>
-<p>Locking overlapping range from a second client where end2 == start1<br />
-                                                                 client1 : |<br />
-                                                                           &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; |<br />
+<p>Locking overlapping range from a second client where end2 == start1<br/>
+                                                                 client1 : |<br/>
+                                                                           &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; |<br/>
                                                                            client2 : | &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; |</p>
 <h3>octest08</h3>
 <pre><code>

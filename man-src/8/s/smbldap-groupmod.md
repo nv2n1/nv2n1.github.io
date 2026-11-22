@@ -16,7 +16,7 @@ smbldap-groupmod [-g gid [-o]] [-a] [-r rid] [-s sid] [-t group type] [-n group_
 
 The smbldap-groupmod command modifies the system account files to reflect the changes that are specified on the command line. The options which apply to the smbldap-groupmod command are 
 
- -g gid The numerical value of the group's <font SIZE="-1">ID.</font> This value must be unique, unless the -o option is used. The value must be non negative. Any files which the old group <font SIZE="-1">ID</font> is the file roup <font SIZE="-1">ID</font> must have the file group <font SIZE="-1">ID</font> changed manually. 
+ -g gid The numerical value of the group's ID. This value must be unique, unless the -o option is used. The value must be non negative. Any files which the old group ID is the file roup ID must have the file group ID changed manually. 
 
  -n group_name 
 The name of the group will be changed from group to group_name. 
@@ -28,22 +28,22 @@ The members to be added to the group in comma-delimeted form.
 The members to be removed from the group in comma-delimted form. 
 
  -a 
-add an automatic Security&nbsp;<wbr><font SIZE="-1">ID</font>&nbsp;<wbr>for the group&nbsp;<wbr>(<font SIZE="-1">SID</font>). 
+add an automatic Security&nbsp;<wbr>ID&nbsp;<wbr>for the group&nbsp;<wbr>(SID). 
 
  -s sid 
-set the group&nbsp;<wbr><font SIZE="-1">SID. 
-&nbsp;<wbr>&nbsp;<wbr></font>&nbsp;<wbr>The&nbsp;<wbr><font SIZE="-1">SID</font>&nbsp;<wbr>must be unique and defined with the domain Security&nbsp;<wbr><font SIZE="-1">ID&nbsp;<wbr></font>($SID)&nbsp;<wbr>like sid=$SID-rid where rid is the group rid. 
+set the group&nbsp;<wbr>SID. 
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>The&nbsp;<wbr>SID&nbsp;<wbr>must be unique and defined with the domain Security&nbsp;<wbr>ID&nbsp;<wbr>($SID)&nbsp;<wbr>like sid=$SID-rid where rid is the group rid. 
 
  -r rid 
 set the group rid. 
-The&nbsp;<wbr><font SIZE="-1">SID</font>&nbsp;<wbr>is then calculated as sid=$SID-rid where&nbsp;<wbr><tt>$SID</tt>&nbsp;<wbr>is the domain Security&nbsp;<wbr><font SIZE="-1">ID.</font> 
+The&nbsp;<wbr>SID&nbsp;<wbr>is then calculated as sid=$SID-rid where&nbsp;<wbr><tt>$SID</tt>&nbsp;<wbr>is the domain Security&nbsp;<wbr>ID. 
 
  -t group type 
-set the&nbsp;<wbr><font SIZE="-1">NT</font>&nbsp;<wbr>Group type for the new group. Available values are 2&nbsp;<wbr>(domain group), 4&nbsp;<wbr>(local group)&nbsp;<wbr>and 5&nbsp;<wbr>(builtin group). The default group type is 2.
+set the&nbsp;<wbr>NT&nbsp;<wbr>Group type for the new group. Available values are 2&nbsp;<wbr>(domain group), 4&nbsp;<wbr>(local group)&nbsp;<wbr>and 5&nbsp;<wbr>(builtin group). The default group type is 2.
 
 <h2>Examples</h2>
 
-smbldap-groupmod -g 253 development This will change the <font SIZE="-1">GID</font> of the 'development' group to '253'. 
+smbldap-groupmod -g 253 development This will change the GID of the 'development' group to '253'. 
 
  smbldap-groupmod -n Idiots Managers This will change the name of the 'Managers' group to 'Idiots'. 
 

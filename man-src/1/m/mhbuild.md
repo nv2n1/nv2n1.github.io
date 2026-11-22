@@ -87,18 +87,18 @@ printf("Hello, World!);
 <dl>
 <dt>
 </dt><dd>
-#@ application / octet &#8211; stream;<br />
-type = tar;<br />
-conversions = compress<br />
-    [this is the nmh distribution]<br />
-{<br />
-    attachment;<br />
-    filename = &#8220;nmh.tar.gz&#8221;<br />
-}<br />
-name = &#8220;nmh.tar.gz&#8221;;<br />
-directory = &#8220;/pub/nmh&#8221;;<br />
-site = &#8220;ftp.math.gatech.edu&#8221;;<br />
-access &#8211; type = anon &#8211; ftp;<br />
+#@ application / octet &#8211; stream;<br/>
+type = tar;<br/>
+conversions = compress<br/>
+    [this is the nmh distribution]<br/>
+{<br/>
+    attachment;<br/>
+    filename = &#8220;nmh.tar.gz&#8221;<br/>
+}<br/>
+name = &#8220;nmh.tar.gz&#8221;;<br/>
+directory = &#8220;/pub/nmh&#8221;;<br/>
+site = &#8220;ftp.math.gatech.edu&#8221;;<br/>
+access &#8211; type = anon &#8211; ftp;<br/>
 mode = &#8220;image&#8221;
 </dd></dl>
 <p> You must give a description string to separate the content parameters from the external-parameters (although this string may be empty). This description string is specified by enclosing it within &#8220;[]&#8221;. A disposition string, to appear in a &#8220;Content-Disposition&#8221; header, may appear in the optional &#8220;{}&#8221;. </p>
@@ -224,16 +224,16 @@ and this content will be tagged as application/x-patch
 <dl>
 <dt>
 </dt><dd>
-To : nobody[at] nowhere.org<br />
-         cc : Subject : Look and listen to me !&#8211; &#8212; &#8212; &#8211;The first part will be text /<br />
-    plain<br />
-# &lt;text / enriched<br />
-        The second part will be text /<br />
-    enriched<br />
-#<br />
-        This third part will be text /<br />
-    plain<br />
-#audio / basic[silly giggle] | raw2audio &#8211; F &lt; / usr / lib / sounds / giggle.au<br />
+To : nobody[at] nowhere.org<br/>
+         cc : Subject : Look and listen to me !&#8211; &#8212; &#8212; &#8211;The first part will be text /<br/>
+    plain<br/>
+# &lt;text / enriched<br/>
+        The second part will be text /<br/>
+    enriched<br/>
+#<br/>
+        This third part will be text /<br/>
+    plain<br/>
+#audio / basic[silly giggle] | raw2audio &#8211; F &lt; / usr / lib / sounds / giggle.au<br/>
 #image / gif[photo of foobar] / home / foobar / lib / picture.gif
 </dd></dl>
 <h3>Integrity Check</h3>

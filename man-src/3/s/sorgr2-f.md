@@ -10,7 +10,7 @@ description: "sorgr2.f –"
 <p>sorgr2.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>sorgr2</code> (M, N, K, A, LDA, TAU, WORK, INFO)<br />
+<p>subroutine <code>sorgr2</code> (M, N, K, A, LDA, TAU, WORK, INFO)<br/>
  <i></i><code>SORGR2</code> generates all or part of the orthogonal matrix Q from an RQ factorization determined by sgerqf (unblocked algorithm).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sorgr2 (integerM, integerN, integerK, real, dimension( lda, * )A, integerLDA, real, dimension( * )TAU, real, dimension( * )WORK, integerINFO)</h3>

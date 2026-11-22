@@ -10,7 +10,7 @@ description: "zlatrd.f –"
 <p>zlatrd.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlatrd</code> (UPLO, N, NB, A, LDA, E, TAU, W, LDW)<br />
+<p>subroutine <code>zlatrd</code> (UPLO, N, NB, A, LDA, E, TAU, W, LDW)<br/>
  <i></i><code>ZLATRD</code> reduces the first nb rows and columns of a symmetric/Hermitian matrix A to real tridiagonal form by an unitary similarity transformation.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlatrd (characterUPLO, integerN, integerNB, complex*16, dimension( lda, * )A, integerLDA, double precision, dimension( * )E, complex*16, dimension( * )TAU, complex*16, dimension( ldw, * )W, integerLDW)</h3>

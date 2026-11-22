@@ -49,10 +49,10 @@ description: "Lintian::Profile – Profile parser for Lintian"
 <p> Paths returned are not guaranteed to exists.</p>
 <dt>display_level_for_tag</dt>
 <dd>
-</dd><dt>tag_is_enabled(<font SIZE="-1">TAG</font>)</dt>
+</dd><dt>tag_is_enabled(TAG)</dt>
 <dd>
-</dd><dt>display(<font SIZE="-1">OPERATION, RELATION, SEVERITY</font>)</dt>
-<dd>Configure which tags are displayed by severity. <font SIZE="-1">OPERATION</font> is <tt>&quot;+&quot;</tt> to display the indicated tags, <tt>&quot;-&quot;</tt> to not display the indicated tags, or <tt>&quot;=&quot;</tt> to not display any tags except the indicated ones. <font SIZE="-1">RELATION</font> is one of <tt>&quot;&lt;&quot;</tt>, <tt>&quot;&lt;=&quot;</tt>, <tt>&quot;=&quot;</tt>, <tt>&quot;&gt;=&quot;</tt>, or <tt>&quot;&gt;&quot;</tt>. The <font SIZE="-1">OPERATION</font> will be applied to all values of severity that match the given <font SIZE="-1">RELATION</font> on the <font SIZE="-1">SEVERITY</font> argument. If either of those arguments are undefined, the action applies to any value for that variable. For example: </dd>
+</dd><dt>display(OPERATION, RELATION, SEVERITY)</dt>
+<dd>Configure which tags are displayed by severity. OPERATION is <tt>&quot;+&quot;</tt> to display the indicated tags, <tt>&quot;-&quot;</tt> to not display the indicated tags, or <tt>&quot;=&quot;</tt> to not display any tags except the indicated ones. RELATION is one of <tt>&quot;&lt;&quot;</tt>, <tt>&quot;&lt;=&quot;</tt>, <tt>&quot;=&quot;</tt>, <tt>&quot;&gt;=&quot;</tt>, or <tt>&quot;&gt;&quot;</tt>. The OPERATION will be applied to all values of severity that match the given RELATION on the SEVERITY argument. If either of those arguments are undefined, the action applies to any value for that variable. For example: </dd>
 <pre> $tags-&gt;display('=', '&gt;=', 'error');</pre>
 <p>turns off display of all tags and then enables display of any tag of severity error or higher. </p>
 <pre> $tags-&gt;display('+', '&gt;', 'warning');</pre>

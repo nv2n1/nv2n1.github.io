@@ -24,7 +24,7 @@ description: "slocal – asynchronously filter and deliver new mail"
 <p> The <code>-verbose</code> switch causes <code>slocal</code> to give information on stdout about its progress. The <code>-debug</code> switch produces more verbose debugging output on stderr. These flags are useful when creating and debugging your &#8220;<i>.maildelivery</i>&#8221; file, as they allow you to see the decisions and actions that <code>slocal</code> is taking, as well as check for syntax errors in your &#8220;<i>.maildelivery</i>&#8221; file.</p>
 <h3>Message Transfer Agents</h3>
 <p> Most modern MTAs including <code>sendmail</code>, <code>postfix</code> and <code>exim</code> support a .forward file for directing incoming mail. You should include the line </p>
-<p> <center> &#8220;|&nbsp;<wbr>/usr/libexec/nmh/slocal -user username&#8221;<br />
+<p> <center> &#8220;|&nbsp;<wbr>/usr/libexec/nmh/slocal -user username&#8221;<br/>
  </center> </p>
 <p> in your .forward file in your home directory. This will cause your MTA to invoke <code>slocal</code> on your behalf when a message arrives.</p>
 <h3>The Maildelivery File</h3>
@@ -36,7 +36,7 @@ description: "slocal – asynchronously filter and deliver new mail"
 <p> <code>header</code>:</p>
 <dl>
 <dt>
-</dt><dd> The name of a header field (such as To, Cc, or From) that is to<br />
+</dt><dd> The name of a header field (such as To, Cc, or From) that is to<br/>
  be searched for a pattern. This is any field in the headers of the message that might be present. </dd>
 <p> The following special fields are also defined:</p>
 <dl>

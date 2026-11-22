@@ -10,7 +10,7 @@ description: "XkbOutOfRangeGroupNumber – Returns the out-of-range group number
 <p>XkbOutOfRangeGroupNumber &#8211; Returns the out-of-range group number, represented as a group index, from the group_info field of an XkbSymMapRec structure </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>unsigned char XkbOutOfRangeGroupNumber</code> <code>(unsigned char </code><i>grp_inf</i><code>);</code><br />
+<dt> <code>unsigned char XkbOutOfRangeGroupNumber</code> <code>(unsigned char </code><i>grp_inf</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

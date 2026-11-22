@@ -13,8 +13,8 @@ description: "loggen – Generate syslog messages at a specified rate"
 <dl>
 <dt> <code>loggen</code> [options]<code>target</code> [port]</dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>NOTE: The loggen application is distributed with the syslog-ng system logging application, and is usually part of the syslog-ng package. The latest version of the syslog-ng application is available at m[blue]<code>the official syslog-ng website</code>m[]<font SIZE="-2">[1]</font>. </dd>
-<p> This manual page is only an abstract; for the complete documentation of syslog-ng, see m[blue]<code>The syslog-ng Administrator Guide</code>m[]<font SIZE="-2">[2]</font>. </p>
+<dd>NOTE: The loggen application is distributed with the syslog-ng system logging application, and is usually part of the syslog-ng package. The latest version of the syslog-ng application is available at m[blue]<code>the official syslog-ng website</code>m[][1]. </dd>
+<p> This manual page is only an abstract; for the complete documentation of syslog-ng, see m[blue]<code>The syslog-ng Administrator Guide</code>m[][2]. </p>
 <p> The <code>loggen</code> application is tool to test and stress-test your syslog server and the connection to the server. It can send syslog messages to the server at a specified rate, using a number of connection types and protocols, including TCP, UDP, and unix domain sockets. The messages can be generated automatically (repeating the <i>PADD</i>string over and over), or read from a file or the standard input. </p>
 <p> When <code>loggen</code> finishes sending the messages, it displays the following statistics: </p>
 <dl>
@@ -97,7 +97,7 @@ description: "loggen – Generate syslog messages at a specified rate"
 <dt>
 </dt><dd> Read the messages from a file and send them to the target. See also the <i>&#8211;skip-tokens</i> option. </dd>
 <p> Specify <i>&#8211;</i> as the input file to read messages from the standard input (stdio). Note that when reading messages from the standard input, <code>loggen</code> can only use a single thread. The <i>-R &#8211;</i> parameters must be placed at end of command, like: <code>loggen 127.0.0.1 1061 &#8211;read-file &#8211;</code></dl>
-<p>&nbsp;<wbr>&nbsp;<wbr>Send the given sdata&nbsp;<wbr>(e.g.&nbsp;<wbr>&quot;[test name=\&quot;value\&quot;])&nbsp;<wbr>in case of syslog-proto<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>Send the given sdata&nbsp;<wbr>(e.g.&nbsp;<wbr>&quot;[test name=\&quot;value\&quot;])&nbsp;<wbr>in case of syslog-proto<br/>
 &nbsp;<wbr>&nbsp;<wbr>.PP <code>&#8211;sdata &lt;data-to-send&gt;</code> or <code>-p &lt;data-to-send&gt;</code></p>
 <dl>
 <dt>
@@ -135,11 +135,11 @@ description: "loggen – Generate syslog messages at a specified rate"
 <p> /home/algernon/install/syslog-ng/3.5/bin/loggen</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-syslog-ng-conf/">syslog-ng.conf</a></code>(5) </p>
-<p> m[blue]<code>The syslog-ng Administrator Guide</code>m[]<font SIZE="-2">[2]</font> </p>
-<p> If you experience any problems or need help with loggen or syslog-ng, visit the m[blue]<code>syslog-ng mailing list</code>m[]<font SIZE="-2">[3]</font> </p>
-<p> m[blue]<code>The syslog-ng OSE 3.3 Administrator Guide</code>m[]<font SIZE="-2">[2]</font> </p>
-<p> If you experience any problems or need help with syslog-ng, visit m[blue]<code>visit the syslog-ng wiki</code>m[]<font SIZE="-2">[4]</font> or the m[blue]<code>syslog-ng mailing list</code>m[]<font SIZE="-2">[3]</font>. </p>
-<p> For news and notifications about of syslog-ng, visit the m[blue]<code>syslog-ng Insider Blog</code>m[]<font SIZE="-2">[5]</font>.</p>
+<p> m[blue]<code>The syslog-ng Administrator Guide</code>m[][2] </p>
+<p> If you experience any problems or need help with loggen or syslog-ng, visit the m[blue]<code>syslog-ng mailing list</code>m[][3] </p>
+<p> m[blue]<code>The syslog-ng OSE 3.3 Administrator Guide</code>m[][2] </p>
+<p> If you experience any problems or need help with syslog-ng, visit m[blue]<code>visit the syslog-ng wiki</code>m[][4] or the m[blue]<code>syslog-ng mailing list</code>m[][3]. </p>
+<p> For news and notifications about of syslog-ng, visit the m[blue]<code>syslog-ng Insider Blog</code>m[][5].</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by the BalaBit Documentation Team &lt;documentation [at] balabit.com&gt;.</p>
 <h2>COPYRIGHT</h2>

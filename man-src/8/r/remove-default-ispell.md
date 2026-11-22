@@ -14,7 +14,7 @@ remove-default-ispell - remove default ispell dictionary
 
 <h2>Description</h2>
 
-<font SIZE="-1">WARNING:</font> Not to be used from the command line unless you know very well what you are doing. 
+WARNING: Not to be used from the command line unless you know very well what you are doing. 
 
  When called from package postrm, this program will take care of removing the entries associated to a ispell package from the dictionaries-common database and call for the new selection if it was the default one.
 

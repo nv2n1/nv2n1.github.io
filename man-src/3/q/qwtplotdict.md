@@ -17,8 +17,8 @@ description: "QwtPlotDict –"
 <p> virtual <code>~QwtPlotDict</code> () </p>
 <p> void <code>setAutoDelete</code> (bool) </p>
 <p> bool <code>autoDelete</code> () const </p>
-<p> const QwtPlotItemList &amp; <code>itemList</code> () const<br />
- <i>A QwtPlotItemList of all attached plot items. </i><br />
+<p> const QwtPlotItemList &amp; <code>itemList</code> () const<br/>
+ <i>A QwtPlotItemList of all attached plot items. </i><br/>
  QwtPlotItemList <code>itemList</code> (int rtti) const </p>
 <p> void <code>detachItems</code> (int rtti=<code>QwtPlotItem::Rtti_PlotItem</code>, bool <code>autoDelete</code>=true) </p>
 <h3>Protected Member Functions</h3>
@@ -55,7 +55,7 @@ description: "QwtPlotDict –"
 <p>Detach items from the dictionary </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>rtti</i> In case of <code>QwtPlotItem::Rtti_PlotItem</code> detach all items otherwise only those items of the type rtti.<br />
+<dd><i>rtti</i> In case of <code>QwtPlotItem::Rtti_PlotItem</code> detach all items otherwise only those items of the type rtti.<br/>
  <i>autoDelete</i> If true, delete all detached items</dd></dl>
 <h3>void QwtPlotDict::insertItem (<code>QwtPlotItem</code> *item) [protected]</h3>
 <p>Insert a plot item </p>

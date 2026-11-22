@@ -13,7 +13,7 @@ description: "btrfs-select-super – overwrite primary superblock with a backup 
 <h2>Description</h2>
 <p>Destructively overwrite all copies of the superblock with a specified copy. This helps in certain cases, for example when write barriers were disabled during a power failure and not all superblocks were written, or if the primary superblock is damaged, eg. accidentally overwritten. The filesystem specified by <i>device</i> must not be mounted.</p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  <code>Prior to overwriting the primary superblock, please make sure that the backup copies are valid!</code>  To dump a superblock use the <code>btrfs inspect-internal dump-super</code> command. Then run the check (in the non-repair mode) using the command <code>btrfs check -s</code> where <i>-s</i> specifies the superblock copy to use. Superblock copies exist in the following offsets on the device:</dd>
 <dl>
 <dd>&bull; primary: <i>64KiB</i> (65536)</dd></dl>

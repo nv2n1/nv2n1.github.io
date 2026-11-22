@@ -152,7 +152,7 @@ description: "bmc-watchdog – BMC watchdog timer daemon and control utility"
 <p> <i>spinpoll</i> &#8211; This workaround flag will inform some inband drivers (most notably the KCS driver) to spin while polling rather than putting the process to sleep. This may significantly improve the wall clock running time of tools because an operating system scheduler&#8217;s granularity may be much larger than the time it takes to perform a single IPMI message transaction. However, by spinning, your system may be performing less useful work by not contexting out the tool for a more useful task. </p>
 <p> <i>ignorestateflag</i> &#8211; This workaround option will ignore the BMC timer state flag (indicating if the timer is running or stopped) when running in daemon mode. On some BMCs, the flag is broken and will never report that a BMC timer is running, even if it is. The workaround will take notice of changes in the countdown seconds to determine if a timer is running or stopped. With this type of implementation, the reset-period must be large enough to ensure minor fluctuations in the countdown will not affect the workaround. Due to the implementation of this workaround, if another process stops the watchdog timer, it may be detectable. This option is confirmed to work around compliances issues on Sun x4100, x4200, and x4500.</p>
 <h2>Examples</h2>
-<p>Setup a bmc-watchdog daemon that resets the machine after 15 minutes (900 seconds) if the OS has crashed (see default bmc-watchdog rc script /etc/init.d/bmc-watchdog for a more complete example):<br />
+<p>Setup a bmc-watchdog daemon that resets the machine after 15 minutes (900 seconds) if the OS has crashed (see default bmc-watchdog rc script /etc/init.d/bmc-watchdog for a more complete example):<br/>
 &nbsp;<wbr>&nbsp;<wbr>bmc-watchdog -d -u 4 -p 0 -a 1 -i 900</p>
 <h2>Diagnostics</h2>
 <p>Upon successful execution, exit status is 0. On error, exit status is 1.</p>
@@ -162,7 +162,7 @@ description: "bmc-watchdog – BMC watchdog timer daemon and control utility"
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;freeipmi-users [at] gnu.org&gt; or &lt;freeipmi-devel [at] gnu.org&gt;.</p>
 <h2>Copyright</h2>
-<p>Copyright (C) 2007-2012 Lawrence Livermore National Security, LLC.<br />
+<p>Copyright (C) 2007-2012 Lawrence Livermore National Security, LLC.<br/>
  Copyright (C) 2004-2007 The Regents of the University of California. </p>
 <p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.</p>
 <h2>See Also</h2>

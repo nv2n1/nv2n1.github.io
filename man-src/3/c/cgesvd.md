@@ -11,7 +11,7 @@ description: "cgesvd.f –"
 <p> cgesvd.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cgesvd</code> (JOBU, JOBVT, M, N, A, LDA, S, U, LDU, VT, LDVT, WORK, LWORK, RWORK, INFO)<br />
+<p> subroutine <code>cgesvd</code> (JOBU, JOBVT, M, N, A, LDA, S, U, LDU, VT, LDVT, WORK, LWORK, RWORK, INFO)<br/>
  <i></i><code> CGESVD computes the singular value decomposition (SVD) for GE matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cgesvd (characterJOBU, characterJOBVT, integerM, integerN, complex, dimension( lda, * )A, integerLDA, real, dimension( * )S, complex, dimension( ldu, * )U, integerLDU, complex, dimension( ldvt, * )VT, integerLDVT, complex, dimension( * )WORK, integerLWORK, real, dimension( * )RWORK, integerINFO)</h3>
@@ -100,22 +100,22 @@ description: "cgesvd.f –"
           The singular values of A, sorted so that S(i) &gt;= S(i+1).
 </pre>
 <p> <i>U</i> </p>
-<p>U is COMPLEX array, dimension(LDU, UCOL)(LDU, M) if JOBU = &#8216;A&#8217; or (LDU, min(M, N)) if JOBU = &#8216;S&#8217;.If JOBU = &#8216;A&#8217;, U contains the M &#8211; by &#8211; M unitary matrix U;<br />
-if JOBU<br />
-    = &#8216;S&#8217;, U contains the first min(m, n) columns of U(the left singular vectors, stored columnwise);<br />
-if JOBU<br />
+<p>U is COMPLEX array, dimension(LDU, UCOL)(LDU, M) if JOBU = &#8216;A&#8217; or (LDU, min(M, N)) if JOBU = &#8216;S&#8217;.If JOBU = &#8216;A&#8217;, U contains the M &#8211; by &#8211; M unitary matrix U;<br/>
+if JOBU<br/>
+    = &#8216;S&#8217;, U contains the first min(m, n) columns of U(the left singular vectors, stored columnwise);<br/>
+if JOBU<br/>
 = &#8216;N&#8217; or &#8216;O&#8217;, U is not referenced.</p>
 <p> <i>LDU</i> </p>
-<p>LDU is INTEGER<br />
-        The leading dimension of the array U.LDU &gt;= 1;<br />
-if JOBU<br />
+<p>LDU is INTEGER<br/>
+        The leading dimension of the array U.LDU &gt;= 1;<br/>
+if JOBU<br/>
 = &#8216;S&#8217; or &#8216;A&#8217;, LDU &gt;= M.</p>
 <p> <i>VT</i> </p>
-<p>VT is COMPLEX array, dimension(LDVT, N) If JOBVT = &#8216;A&#8217;, VT contains the N &#8211; by &#8211; N unitary matrix V **H;<br />
-if JOBVT<br />
-    = &#8216;S&#8217;, VT contains the first min(m, n) rows of<br />
-        V **H(the right singular vectors, stored rowwise);<br />
-if JOBVT<br />
+<p>VT is COMPLEX array, dimension(LDVT, N) If JOBVT = &#8216;A&#8217;, VT contains the N &#8211; by &#8211; N unitary matrix V **H;<br/>
+if JOBVT<br/>
+    = &#8216;S&#8217;, VT contains the first min(m, n) rows of<br/>
+        V **H(the right singular vectors, stored rowwise);<br/>
+if JOBVT<br/>
 = &#8216;N&#8217; or &#8216;O&#8217;, VT is not referenced.</p>
 <p> <i>LDVT</i> </p>
 <pre><code>

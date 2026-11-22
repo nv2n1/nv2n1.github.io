@@ -35,12 +35,12 @@ description: "sane-cardscan – SANE backend for Corex CardScan usb scanners"
 <h2>Environment</h2>
 <p>The backend uses a single environment variable, <code>SANE_DEBUG_CARDSCAN,</code> which enables debugging output to stderr. Valid values are: </p>
 <dl>
-<dd>5 Errors<br />
- 10 Function trace<br />
- 15 Function detail<br />
- 20 Option commands<br />
- 25 SCSI/USB trace<br />
- 30 SCSI/USB detail<br />
+<dd>5 Errors<br/>
+ 10 Function trace<br/>
+ 15 Function detail<br/>
+ 20 Option commands<br/>
+ 25 SCSI/USB trace<br/>
+ 30 SCSI/USB detail<br/>
  35 Useless noise</dd></dl>
 <h2>Known Issues</h2>
 <dl>

@@ -104,19 +104,19 @@ description: "GOB2 – The GObject Builder"
 </pre>
 <p> To make an abstract class (to pass G_TYPE_FLAG_ABSTRACT) add &#8216;(abstract)&#8217; before the curly braces above. This works since version 2.0.13. </p>
 <h2>DATA MEMBERS</h2>
-<p> There are five types of data members. Three of them are normal data members, one is class wide (global) in scope and one is a virtual one, usually linked to a normal data member or a class wide data member. The three normal data members are public, protected and private. Public and protected are basically just entries in the object structure, while private has it&#8217;s own dynamically allocated private structure. Protected members are always put after the public one in the structure and are marked protected in the header file. There is only one identifier allowed per typename unlike in normal C. Example:<br />
-public<br />
-int i;<br />
-private<br />
-GtkWidget *h;<br />
-protected<br />
+<p> There are five types of data members. Three of them are normal data members, one is class wide (global) in scope and one is a virtual one, usually linked to a normal data member or a class wide data member. The three normal data members are public, protected and private. Public and protected are basically just entries in the object structure, while private has it&#8217;s own dynamically allocated private structure. Protected members are always put after the public one in the structure and are marked protected in the header file. There is only one identifier allowed per typename unlike in normal C. Example:<br/>
+public<br/>
+int i;<br/>
+private<br/>
+GtkWidget *h;<br/>
+protected<br/>
 long k;</p>
 <p> Public and protected data members are accessed normally as members of the object struct. Example where &#8216;i&#8217; is as above a public data member: </p>
 <pre>
   object-&gt;i = 1;
 </pre>
-<p> The private data members are defined in a structure which is only available inside the .c file, or by including a private header file. You must access them using the structure _priv. Example where &#8216;h&#8217; is the private data member (as in the above example):<br />
-object-&gt;_priv-&gt;h = NULL;<br />
+<p> The private data members are defined in a structure which is only available inside the .c file, or by including a private header file. You must access them using the structure _priv. Example where &#8216;h&#8217; is the private data member (as in the above example):<br/>
+object-&gt;_priv-&gt;h = NULL;<br/>
  The _priv structure is defined in the <code>&lt;basename&gt;-private.h</code>. This file is automatically included if you don&#8217;t include it yourself. You should always explicitly include it in your .gob file if you explicitly also include the main header file. The reason it is a separate header file is that you can also include it in other places that need to access this objects private data, such as if you have the majority of functionality of an object in a separate .c file. Or if a derived object needs to access the protected methods. </p>
 <p> In case you use the <code>&#8211;no-private-header</code> option, no private header file is created and you can only access the _priv pointer below the class definition in the .gob file. </p>
 <p> Also note that this structure is dynamically allocated, and is freed in the finalize handler. If you override the finalized handler, your code will be run first and only then will the _priv structure be freed. </p>
@@ -130,52 +130,52 @@ object-&gt;_priv-&gt;h = NULL;<br />
   SELF_GET_CLASS(object)-&gt;foo = 20;
 </pre>
 <p> <code>Automatic Initialization:</code> </p>
-<p> You can automatically initialize the public private and protected data members without having to add an init method. The advantage here is that initialization is kept close to the definition of the data member and thus it&#8217;s easier to check. To do this, just add a &#8216;=&#8217; followed by a number or a token. It is also possible to include arbitrary C code for more elaborate initializations by putting it all in curly braces. Note that the curly braces will not be printed into the output, but since gob does not C parsing it needs them to figure out where the C code ends. The code will be inserted into the init method, above the user defined body. So for example the following will initialize an integer to -1 and a string with a newly allocated string of &quot;hello&quot;.<br />
-public<br />
-int foo = -1;<br />
-private<br />
+<p> You can automatically initialize the public private and protected data members without having to add an init method. The advantage here is that initialization is kept close to the definition of the data member and thus it&#8217;s easier to check. To do this, just add a &#8216;=&#8217; followed by a number or a token. It is also possible to include arbitrary C code for more elaborate initializations by putting it all in curly braces. Note that the curly braces will not be printed into the output, but since gob does not C parsing it needs them to figure out where the C code ends. The code will be inserted into the init method, above the user defined body. So for example the following will initialize an integer to -1 and a string with a newly allocated string of &quot;hello&quot;.<br/>
+public<br/>
+int foo = -1;<br/>
+private<br/>
 char *bar = {g_strdup(&#8220;hello&#8221;)};</p>
 <p> <code>Automatic Destruction:</code> </p>
-<p> Most data stored as pointers needs to have a function called when the object is finalized to either free the data. Gob will let you define a function to be called on the data the object is finalized. This is achieved by putting &#8216;destroywith&#8217; followed by a function name after the variable definition. It is only called if the data you defined this on is not NULL, so you cans specify functions which do not handle NULL. It is very much like the GDestroyNotify function used in GTK+ and glib in many places. Unlike many other places, gob will not enforce any kind of type safety here so be a little bit more careful. Any function you give it will be called as a &quot;void function(void *)&quot;. It will in fact be cast into such a form before called. This is to avoid spurious warnings for gtk calls to subclass methods. The function needs not be of that form exactly, it just has to take one argument which is the pointer to the data. You should also not define this on any non-pointer data as the results may be undefined. Example:<br />
-public<br />
-char *foo = {g_strdup(&#8220;bar&#8221;)} destroywith g_free;<br />
+<p> Most data stored as pointers needs to have a function called when the object is finalized to either free the data. Gob will let you define a function to be called on the data the object is finalized. This is achieved by putting &#8216;destroywith&#8217; followed by a function name after the variable definition. It is only called if the data you defined this on is not NULL, so you cans specify functions which do not handle NULL. It is very much like the GDestroyNotify function used in GTK+ and glib in many places. Unlike many other places, gob will not enforce any kind of type safety here so be a little bit more careful. Any function you give it will be called as a &quot;void function(void *)&quot;. It will in fact be cast into such a form before called. This is to avoid spurious warnings for gtk calls to subclass methods. The function needs not be of that form exactly, it just has to take one argument which is the pointer to the data. You should also not define this on any non-pointer data as the results may be undefined. Example:<br/>
+public<br/>
+char *foo = {g_strdup(&#8220;bar&#8221;)} destroywith g_free;<br/>
  Note that the function name you give must be a real function and not macro. Also note that this is always called in the &quot;finalize&quot; method of GObject. It is always called after any user defined body of the finalize handler. </p>
-<p> Sometimes you may want to run arbitrary code on destruction. While this can be perfectly well done in the finalize handler. Depending on the style you may want to include all destruction/initialization code together with the definition of the data member. Thus you may want to put arbitrary code which will then be inserted into the &quot;finalize&quot; method of GObject. This can be done with the &quot;destroy&quot; keyword followed by arbitrary code in curly braces. Inside this code a macro called VAR will be define which refers to your variable. So for example destroying a GString can be either done with a helper routine or the following code:<br />
-public<br />
-GString *string = {g_string_new(NULL)} destroy<br />
-{<br />
-    if (VAR)<br />
-        g_string_free(VAR, TRUE);<br />
-};<br />
+<p> Sometimes you may want to run arbitrary code on destruction. While this can be perfectly well done in the finalize handler. Depending on the style you may want to include all destruction/initialization code together with the definition of the data member. Thus you may want to put arbitrary code which will then be inserted into the &quot;finalize&quot; method of GObject. This can be done with the &quot;destroy&quot; keyword followed by arbitrary code in curly braces. Inside this code a macro called VAR will be define which refers to your variable. So for example destroying a GString can be either done with a helper routine or the following code:<br/>
+public<br/>
+GString *string = {g_string_new(NULL)} destroy<br/>
+{<br/>
+    if (VAR)<br/>
+        g_string_free(VAR, TRUE);<br/>
+};<br/>
  The thing to remember with these is that there are many ways to do this and you&#8217;d better be consistent in your code in how you use the above things. Also defining a helper routine that will do the destruction will be a nicer thing to do if that&#8217;s a possibility. The &quot;destroy&quot; keyword with code does take up more space in the file and it may become more cluttered. </p>
 <p> The data is zeroed out after being destroyed. This is to make debugging easier in case your code might try to access an already finalized object. In case you have overridden the finalize method, your code will be run first and only then will the destructors be called. You should not however make any assumptions about the order at which the destructors are called. If you have interdependencies between destructors for different data members, you will have to do this in your own finalize override function. </p>
 <p> <code>Automatic Unreffing:</code> </p>
-<p> This is very much like the automatic destruction, but is instead run in the dispose method (it is among other places called from the &quot;destroy&quot; method of GtkObject). All data and other objects that you need to unref should be done here, and not at finalize time. The semantics are otherwise the same as for the &quot;destroywith&quot; and &quot;destroy&quot; keywords, except that you use &quot;unrefwith&quot; and &quot;unref&quot;.<br />
-public<br />
-G : Object *foo = NULL<br />
-        unrefwith g_object_unref;<br />
-public<br />
-G : Object *bar = NULL<br />
-        unref<br />
-{<br />
-    g_object_unref(VAR);<br />
+<p> This is very much like the automatic destruction, but is instead run in the dispose method (it is among other places called from the &quot;destroy&quot; method of GtkObject). All data and other objects that you need to unref should be done here, and not at finalize time. The semantics are otherwise the same as for the &quot;destroywith&quot; and &quot;destroy&quot; keywords, except that you use &quot;unrefwith&quot; and &quot;unref&quot;.<br/>
+public<br/>
+G : Object *foo = NULL<br/>
+        unrefwith g_object_unref;<br/>
+public<br/>
+G : Object *bar = NULL<br/>
+        unref<br/>
+{<br/>
+    g_object_unref(VAR);<br/>
 };</p>
 <h2>GOBJECT PROPERTIES</h2>
-<p> The fourth type of a data member a property type. It is a named data member which is one of the features of the GObject system. It just defines a way to get and set some data, but you have to take care of storing that data somewhere. So it is normal to also have a normal private (or public) data member where you store the real data. You normally need to define a get and a set handler. They are fragments of C code that will be used to get the value or set the value of the argument. Inside them you can use the define VAL to which you assign the data or get the data. You should treat this VAL as a GValue which stores the data of the correct type. You can also use the identifier &quot;self&quot; as pointer to the object instance. The type is defined as one of the GObject type enums, but without the G_TYPE_ prefix. There are also some attributes of a property which you can set. For example the following is a definition of an integer property &#8216;height&#8217; which will be synchronized with a private integer data member also of the name &#8216;height&#8217;.<br />
-private<br />
-int height;<br />
-property INT height(nick = _(&#8220;Short nickname&#8221;),<br />
-                    blurb = _(&#8220;Long description&#8221;),<br />
-                    minimum = 10,<br />
-                    maximum = 200,<br />
-                    default_value = 100)<br />
-    set<br />
-{<br />
-    self-&gt;_priv-&gt;height = g_value_get_int(VAL);<br />
-}<br />
-get<br />
-{<br />
-    g_value_set_int(VAL, self-&gt;_priv-&gt;height);<br />
+<p> The fourth type of a data member a property type. It is a named data member which is one of the features of the GObject system. It just defines a way to get and set some data, but you have to take care of storing that data somewhere. So it is normal to also have a normal private (or public) data member where you store the real data. You normally need to define a get and a set handler. They are fragments of C code that will be used to get the value or set the value of the argument. Inside them you can use the define VAL to which you assign the data or get the data. You should treat this VAL as a GValue which stores the data of the correct type. You can also use the identifier &quot;self&quot; as pointer to the object instance. The type is defined as one of the GObject type enums, but without the G_TYPE_ prefix. There are also some attributes of a property which you can set. For example the following is a definition of an integer property &#8216;height&#8217; which will be synchronized with a private integer data member also of the name &#8216;height&#8217;.<br/>
+private<br/>
+int height;<br/>
+property INT height(nick = _(&#8220;Short nickname&#8221;),<br/>
+                    blurb = _(&#8220;Long description&#8221;),<br/>
+                    minimum = 10,<br/>
+                    maximum = 200,<br/>
+                    default_value = 100)<br/>
+    set<br/>
+{<br/>
+    self-&gt;_priv-&gt;height = g_value_get_int(VAL);<br/>
+}<br/>
+get<br/>
+{<br/>
+    g_value_set_int(VAL, self-&gt;_priv-&gt;height);<br/>
 };</p>
 <p> The attributes are really optional though you should at least set some of them. All property types have a &#8216;nick&#8217; and a &#8216;blurb&#8217; attribute and you should set those accordingly. This will make runtime querying the object nicer as things such as gui editors and class browsers can be more verbose about the class itself. You can use the &#8216;_(&quot;string&quot;)&#8217; notation instead of just &quot;string&quot;, and that will mark the string for translation. </p>
 <p> Almost all types also have a &#8216;default_value&#8217; attribute which sets the initial value of this property (on object initialization, the set handler will be run automatically with this value). This value will be overridden if the user sets a value of this property on the call to g_object_new. </p>
@@ -209,25 +209,25 @@ get<br />
                 MY_OBJECT_PROP_HEIGHT (7),
                 NULL);
 </pre>
-<p> And for getting, you would use:<br />
-int height;<br />
-g_object_get(G_OBJECT(object),<br />
-             MY_OBJECT_GET_PROP_HEIGHT(&amp;height),<br />
-             NULL);<br />
+<p> And for getting, you would use:<br/>
+int height;<br/>
+g_object_get(G_OBJECT(object),<br/>
+             MY_OBJECT_GET_PROP_HEIGHT(&amp;height),<br/>
+             NULL);<br/>
  Note however that the type safety only works completely on GNU C compilers. The code will compile on other compilers but with minimal type safety. For complete type safety it is useful to use the get/set methods that are defined by using the &#8216;export&#8217; attribute. </p>
 <p> To get bettery type safety on some of the property types, you can specify the &#8216;type&#8217; attribute which will add casts where appropriate in code dealing with this property. This is especially useful for POINTER and OBJECT types. But even for others. </p>
-<p> You can also override properties from parent objects (that is override their implementation, not their attributes). Do this by adding the special &#8216;override&#8217; attribute. For example if the parent object had a &#8216;height&#8217; property then you could override it by<br />
-private<br />
-int height;<br />
-property INT height(override)<br />
-    set<br />
-{<br />
-    self-&gt;_priv-&gt;height = g_value_get_int(VAL);<br />
-}<br />
-get<br />
-{<br />
-    g_value_set_int(VAL, self-&gt;_priv-&gt;height);<br />
-};<br />
+<p> You can also override properties from parent objects (that is override their implementation, not their attributes). Do this by adding the special &#8216;override&#8217; attribute. For example if the parent object had a &#8216;height&#8217; property then you could override it by<br/>
+private<br/>
+int height;<br/>
+property INT height(override)<br/>
+    set<br/>
+{<br/>
+    self-&gt;_priv-&gt;height = g_value_get_int(VAL);<br/>
+}<br/>
+get<br/>
+{<br/>
+    g_value_set_int(VAL, self-&gt;_priv-&gt;height);<br/>
+};<br/>
  Overriding is supported since gob 2.0.10. </p>
 <h2>METHODS</h2>
 <p> There is a whole array of possible methods. The three normal, &quot;familiar&quot; method types are private, protected and public. Public are defined as normal functions with a prototype in the header file. Protected methods are defined as normal methods (which you can call from other files), but their prototype is placed in the private header file. Private methods are defined as static functions with prototypes at the top of the .c file. Then there are signal, virtual and override methods. More on those later. You can also define init and class_init methods with a special definition if you want to add code to the constructors or you can just leave them out. You can also not define a body for a method, by just using &#8216;;&#8217; instead of a body. This will define an empty function. You can&#8217;t do this for non-void regular public, private or protected methods, however it is acceptable for non-void virtual, signal and override methods. </p>
@@ -247,21 +247,21 @@ or
 </pre>
 <p> This will be the prototype of a function which has a self pointer as the first argument, an integer argument which will be checked and has to be more then 0 and less then 11, and a pointer to a GtkWidget object instance and it is checked for being null and the type will also be checked. </p>
 <p> <code>Function attributes:</code> </p>
-<p> For method that aren&#8217;t virtual, signal or override methods, and aren&#8217;t init or class_init, GLib function attribute macros G_GNUC_PRINTF, G_GNUC_SCANF, and G_GNUC_FORMAT can optionally be included after the argument list. Simply include an &#8216;attr&#8217; keyword and the C code to include in the file. You have to include braces and anything inside the braces will be printed into the header file after the function declaration and before the trailing semicolon. The braces themselves are not printed. For example:<br />
-public<br />
-void print(self, const char *format(check null), &#8230;)<br />
-    attr<br />
-{<br />
-    G_GNUC_PRINTF(2, 3)<br />
+<p> For method that aren&#8217;t virtual, signal or override methods, and aren&#8217;t init or class_init, GLib function attribute macros G_GNUC_PRINTF, G_GNUC_SCANF, and G_GNUC_FORMAT can optionally be included after the argument list. Simply include an &#8216;attr&#8217; keyword and the C code to include in the file. You have to include braces and anything inside the braces will be printed into the header file after the function declaration and before the trailing semicolon. The braces themselves are not printed. For example:<br/>
+public<br/>
+void print(self, const char *format(check null), &#8230;)<br/>
+    attr<br/>
+{<br/>
+    G_GNUC_PRINTF(2, 3)<br/>
 }</p>
 <p> This will produce a prototype which will generate a warning at compile time if the contents of the format argument (argument number 2) aren&#8217;t consistent with the types and number of the subsequent variadic arguments (the first of which is argument number 3). Only one &#8216;attr&#8217; keyword per method is allowed. If you have more than one attribute to include, you should put them all within the braces. Note that function attributes were aded in version 2.0.16. </p>
 <p> <code>Error return:</code> </p>
-<p> Methods which have a return value, there also has to be something returned if there is an error, such as if a precondition is not met. The default is 0, casted to the type of the method. If you need to return something else then you can specify an &#8216;onerror&#8217; keyword after the prototype and any optional function attribute macros, and after that a number, a token (an identifier) or a bit of C code enclosed in braces {}. The braces will not be printed into the output, they just delimit the string. For example:<br />
-public<br />
-void *get_something(self, int i(check &gt;= 0)) onerror NULL<br />
-{<br />
-    &#8230;<br />
-}<br />
+<p> Methods which have a return value, there also has to be something returned if there is an error, such as if a precondition is not met. The default is 0, casted to the type of the method. If you need to return something else then you can specify an &#8216;onerror&#8217; keyword after the prototype and any optional function attribute macros, and after that a number, a token (an identifier) or a bit of C code enclosed in braces {}. The braces will not be printed into the output, they just delimit the string. For example:<br/>
+public<br/>
+void *get_something(self, int i(check &gt;= 0)) onerror NULL<br/>
+{<br/>
+    &#8230;<br/>
+}<br/>
  The onerror value is also used in overrides that have a return value, in case there isn&#8217;t a parent method, PARENT_HANDLER will return it. More about this later. </p>
 <p> <code>Default return:</code> </p>
 <p> Some signal and virtual methods have a return type. But what happens if there is no default handler and no one connects to a signal. GOB2 will normally have the wrappers return whatever you specify with onerror or &#8216;0&#8217; if you haven&#8217;t specified anything. You can also specify a default return value with the keyword &#8216;defreturn&#8217;. It&#8217;s use is identical to the use of onerror, and you can in fact use both at the same time. Example </p>
@@ -270,45 +270,45 @@ void *get_something(self, int i(check &gt;= 0)) onerror NULL<br />
 </pre>
 <p> That is an empty virtual method (in C++ terms a pure virtual). If you never specify any handler for it in the derived children it will just return 10. </p>
 <p> <code>Constructor methods:</code> </p>
-<p> There are two methods that handle the construction of an object, init and class_init. You define them by just using the init or class_init keyword with an untyped argument in the argument list. The argument will be usable in your function as a pointer to your object or class depending if it&#8217;s init or class_init. For example:<br />
-init(self)<br />
-{<br />
-    /* initialize the object here */<br />
-    self-&gt;a = 9;<br />
-    self-&gt;b = 9;<br />
-}<br />
-class_init(class)<br />
-{<br />
-    /* initialize the class, this is rarely needed */<br />
-    class-&gt;blah = NULL;<br />
-}<br />
+<p> There are two methods that handle the construction of an object, init and class_init. You define them by just using the init or class_init keyword with an untyped argument in the argument list. The argument will be usable in your function as a pointer to your object or class depending if it&#8217;s init or class_init. For example:<br/>
+init(self)<br/>
+{<br/>
+    /* initialize the object here */<br/>
+    self-&gt;a = 9;<br/>
+    self-&gt;b = 9;<br/>
+}<br/>
+class_init(class)<br/>
+{<br/>
+    /* initialize the class, this is rarely needed */<br/>
+    class-&gt;blah = NULL;<br/>
+}<br/>
  The class_init function is very rarely needed as all standard class initialization is taken care of for you by gob itself. The init function should on the other hand be used whenever you need to construct or initialize anything in the object to put it into a sane state. </p>
 <p> <code>Constructor, dispose, finalize methods:</code> </p>
-<p> Since 2.0.16, you can also easily add code to the object&#8217;s constructor, dispose, and finalize methods. See GObject documentation on how these are run. The code you add will be run before calling the parents function for dispose and finalize, and after the parent function for constructor. The syntax is just like init and class_init. For example:<br />
-constructor(self)<br />
-{<br />
-    /* constructor method */<br />
-}<br />
-dispose(self)<br />
-{<br />
-    /* dispose method */<br />
-}<br />
-finalize(self)<br />
-{<br />
-    /* finalize method */<br />
-}<br />
+<p> Since 2.0.16, you can also easily add code to the object&#8217;s constructor, dispose, and finalize methods. See GObject documentation on how these are run. The code you add will be run before calling the parents function for dispose and finalize, and after the parent function for constructor. The syntax is just like init and class_init. For example:<br/>
+constructor(self)<br/>
+{<br/>
+    /* constructor method */<br/>
+}<br/>
+dispose(self)<br/>
+{<br/>
+    /* dispose method */<br/>
+}<br/>
+finalize(self)<br/>
+{<br/>
+    /* finalize method */<br/>
+}<br/>
  You can also just override those methods as usual, but the above is much easier and nearly as flexible. </p>
 <p> <code>Virtual methods:</code> </p>
 <p> Virtual methods are basically pointers in the class structure, so that one can override the method in derived methods. That is to implement the method in a derived class, you must then use an override method (more on those later). They can be empty (if you put &#8216;;&#8217; instead of the C code). A wrapper will also be defined which makes calling the methods he same as public methods. This type of method is just a little bit &quot;slower&quot; then normal functions, but not as slow as signals. You define them by using &quot;virtual&quot; keyword before the prototype. If you put the keyword &quot;private&quot; right after the &quot;virtual&quot; keyword, the wrapper will not be a public method, but a private one. You can do the same with &quot;protected&quot; to make a protected wrapper. </p>
 <p> <code>Signals:</code> </p>
-<p> Signals are methods to which the user can bind other handlers and override the default handler. The default handler is basically the method body. This is the most versatile and flexible type of a method and also the slowest. You need to specify a whole bunch of things when you define a signal. One thing is when the default handler will be run, first or last. You specify that by &quot;first&quot; or &quot;last&quot; right after the &quot;signal&quot; keyword. Then you need to define the GObject enum types (again without the G_TYPE_ prefix). For that you define the return types and the types of arguments after the &quot;self&quot; pointer (not including the &quot;self&quot; pointer). You put it in the following syntax &quot;&lt;return type&gt; (&lt;list of arguments&gt;)&quot;. If the return type is void, the type should be &quot;NONE&quot;, the same should be for the argument list. The rest of the prototype is the same as for other method types. The body can also be empty, and also there is a public method wrapper which you can use for calling the signal just like a public method. Example:<br />
-signal first INT(POINTER, INT)<br />
-int do_something(self, Gtk<br />
-                 : Widget *w(check null type), int length)<br />
-{<br />
-    &#8230;<br />
-}<br />
- or<br />
+<p> Signals are methods to which the user can bind other handlers and override the default handler. The default handler is basically the method body. This is the most versatile and flexible type of a method and also the slowest. You need to specify a whole bunch of things when you define a signal. One thing is when the default handler will be run, first or last. You specify that by &quot;first&quot; or &quot;last&quot; right after the &quot;signal&quot; keyword. Then you need to define the GObject enum types (again without the G_TYPE_ prefix). For that you define the return types and the types of arguments after the &quot;self&quot; pointer (not including the &quot;self&quot; pointer). You put it in the following syntax &quot;&lt;return type&gt; (&lt;list of arguments&gt;)&quot;. If the return type is void, the type should be &quot;NONE&quot;, the same should be for the argument list. The rest of the prototype is the same as for other method types. The body can also be empty, and also there is a public method wrapper which you can use for calling the signal just like a public method. Example:<br/>
+signal first INT(POINTER, INT)<br/>
+int do_something(self, Gtk<br/>
+                 : Widget *w(check null type), int length)<br/>
+{<br/>
+    &#8230;<br/>
+}<br/>
+ or<br/>
 signal last NONE(NONE) void foo(self);</p>
 <p> If you don&#8217;t want the wrapper that emits the signal to be public, you can include the keyword &quot;private&quot; after the &quot;signal&quot; keyword. This will make the wrapper a normal private method. You can also make a protected wrapper by using &quot;protected&quot; instead of &quot;private&quot;. </p>
 <p> If you don&#8217;t define a &quot;first&quot; or a &quot;last&quot;, the default will be taken as &quot;last&quot;. </p>
@@ -327,35 +327,35 @@ signal last NONE(NONE) void foo(self);</p>
 </pre>
 <p> To use BOXED in the signal arguments you need to tell gob which type of boxed argument you want to use. For this you can just add BOXED_GTK_TYPE_STRING instead of BOXED. For example BOXED_GTK_TYPE_TREE_ITER for GtkTreeIter. This works since version 2.0.13. </p>
 <p> <code>Override methods:</code> </p>
-<p> If you need to override some method (a signal or a virtual method of some class in the parent tree of the new object), you can define and override method. After the &quot;override&quot; keyword, you should put the typename of the class you are overriding a method from. Other then that it is the same as for other methods. The &quot;self&quot; pointer in this case should be the type of the method you are overriding so that you don&#8217;t get warnings during compilation. Also to call the method of the parent class, you can use the PARENT_HANDLER macro with your arguments. Example:<br />
-override(Gtk<br />
-         : Container) void add(Gtk<br />
-                               : Container *self(check null type), Gtk<br />
-                               : Widget *wid(check null type))<br />
-{<br />
-    /* some code here */<br />
-    PARENT_HANDLER(self, wid);<br />
-}<br />
+<p> If you need to override some method (a signal or a virtual method of some class in the parent tree of the new object), you can define and override method. After the &quot;override&quot; keyword, you should put the typename of the class you are overriding a method from. Other then that it is the same as for other methods. The &quot;self&quot; pointer in this case should be the type of the method you are overriding so that you don&#8217;t get warnings during compilation. Also to call the method of the parent class, you can use the PARENT_HANDLER macro with your arguments. Example:<br/>
+override(Gtk<br/>
+         : Container) void add(Gtk<br/>
+                               : Container *self(check null type), Gtk<br/>
+                               : Widget *wid(check null type))<br/>
+{<br/>
+    /* some code here */<br/>
+    PARENT_HANDLER(self, wid);<br/>
+}<br/>
  If the function has a return value, then PARENT_HANDLER is an expression that you can use. It will return whatever the parent handler returned, or the &quot;onerror&quot; expression if there was no parent handler. </p>
 <p> <code>Method names:</code> </p>
-<p> Inside the code, aliases are set for the methods, so that you don&#8217;t have to type the class name before each call, just type <code>self_</code> instead of the name of the class. So to call a method called <code>blah</code>, you would use the name <code>self_blah</code>. Example:<br />
-private<br />
-int foo(self)<br />
-{<br />
-    return self-&gt;len;<br />
+<p> Inside the code, aliases are set for the methods, so that you don&#8217;t have to type the class name before each call, just type <code>self_</code> instead of the name of the class. So to call a method called <code>blah</code>, you would use the name <code>self_blah</code>. Example:<br/>
+private<br/>
+int foo(self)<br/>
+{<br/>
+    return self-&gt;len;<br/>
 }</p>
-<p>private<br />
-int bar(self, int i)<br />
-{<br />
-    return self_foo(self) + i;<br />
+<p>private<br/>
+int bar(self, int i)<br/>
+{<br/>
+    return self_foo(self) + i;<br/>
 }</p>
 <h2>MAKING NEW OBJECTS</h2>
-<p> You should define a new method which should be a normal public method. Inside this method, you can use the GET_NEW macro that is defined for you and that will fetch a new object, so a fairly standard new method would look like:<br />
-public<br />
-GObject *new (void)<br />
-{<br />
-    GObject *ret = GET_NEW;<br />
-    return G_OBJECT(ret);<br />
+<p> You should define a new method which should be a normal public method. Inside this method, you can use the GET_NEW macro that is defined for you and that will fetch a new object, so a fairly standard new method would look like:<br/>
+public<br/>
+GObject *new (void)<br/>
+{<br/>
+    GObject *ret = GET_NEW;<br/>
+    return G_OBJECT(ret);<br/>
 }</p>
 <p> You should not a subtle peculiarity of the GObject system here. If there is any code inside the G_OBJECT macro argument, it will get executed multiple times. This means that things such as G_OBJECT(GET_NEW) would actually create 4 objects, leaking 3 of them. A good rule (as with anywhere in C) is to be careful with all macros. </p>
 <h2>SELF REFERENCES</h2>
@@ -373,51 +373,51 @@ GObject *new (void)<br />
 </pre>
 <h2>CREATING NEW ENUM, FLAGS and ERROR TYPES</h2>
 <p> You can create new GObject ENUM, FLAGS and GError types for use in your classes easily. Glib includes some utilities for handling these, however it may be cleaner to use the below specified way in your classes. It also then doesn&#8217;t require any Makefile setup. Make sure this is defined in the same section as the class, that is not in any of the &#8216;%?{&#8216; &#8216;%}&#8217; sections. </p>
-<p> You use the keywords &#8216;enum&#8217; &#8216;flags&#8217; and &#8216;error&#8217; as you would use the &#8216;class&#8217; keyword. Then you give a prefix for the values in the enumeration. Then you define a list of values just like in C. For &#8216;enum&#8217; types you can also specify the values assigned to each string. Then you specify the type in the standard gob style of specifying types. Here are a few examples of all of these:<br />
-enum LAME_CLIENT {<br />
-    IS_CONNECTED,<br />
-    NONE = 9,<br />
-    LAST<br />
-} Test : Enum;<br />
-flags BUGA_BUGA{<br />
-    ONE,<br />
-    TWO,<br />
-    MANY,<br />
-} Some : Flags;<br />
-error TEST_OBJECT_ERROR{<br />
-    BAD_THIS,<br />
+<p> You use the keywords &#8216;enum&#8217; &#8216;flags&#8217; and &#8216;error&#8217; as you would use the &#8216;class&#8217; keyword. Then you give a prefix for the values in the enumeration. Then you define a list of values just like in C. For &#8216;enum&#8217; types you can also specify the values assigned to each string. Then you specify the type in the standard gob style of specifying types. Here are a few examples of all of these:<br/>
+enum LAME_CLIENT {<br/>
+    IS_CONNECTED,<br/>
+    NONE = 9,<br/>
+    LAST<br/>
+} Test : Enum;<br/>
+flags BUGA_BUGA{<br/>
+    ONE,<br/>
+    TWO,<br/>
+    MANY,<br/>
+} Some : Flags;<br/>
+error TEST_OBJECT_ERROR{<br/>
+    BAD_THIS,<br/>
     BAD_THAT} Test : Object : Error;</p>
-<p> This will for example define an enum that is equivalent to the following C code:<br />
-typedef enum {<br />
-    LAME_CLIENT_IS_CONNECTED,<br />
-    LAME_CLIENT_NONE = 9,<br />
-    LAME_CLIENT_LAST<br />
+<p> This will for example define an enum that is equivalent to the following C code:<br/>
+typedef enum {<br/>
+    LAME_CLIENT_IS_CONNECTED,<br/>
+    LAME_CLIENT_NONE = 9,<br/>
+    LAME_CLIENT_LAST<br/>
 } TestEnum;</p>
 <h2>C++ MODE</h2>
 <p> There is a C++ mode so that gob creates C++ compiler friendly files. You need to use the &#8211;for-cpp argument to gob. This will make the generated file have a .cc instead of a .c extension, and several things will be adjusted to make it all work for a C++ compiler. One thing that will be missing is an alias to the new method, as that clashes with C++, so instead you&#8217;ll have to use the full name of the method inside your code. Also note that gob does not use any C++ features, this option will just make the generated code compile with a C++ compiler. </p>
 <h2>OVERRIDING THE GET_TYPE METHOD</h2>
-<p> The get_type is not really a method, but a function which initializes your object. Recently objects appeared which require you to make a custom get_type function. So it is possible to override this function. To do so, just define a new public method called get_type, with no arguments. Example:<br />
-public<br />
-GType get_type(void)<br />
-{<br />
-    /* code goes here */<br />
-    return some_type;<br />
+<p> The get_type is not really a method, but a function which initializes your object. Recently objects appeared which require you to make a custom get_type function. So it is possible to override this function. To do so, just define a new public method called get_type, with no arguments. Example:<br/>
+public<br/>
+GType get_type(void)<br/>
+{<br/>
+    /* code goes here */<br/>
+    return some_type;<br/>
 }</p>
 <h2>INTERFACES</h2>
 <p> Currently gob will only allow you to implement interfaces (that is, define new classes which implement an interface) and doesn&#8217;t yet have support for making new interfaces, but this will be coming at some point in the future. </p>
 <p> To define a class that implements an interface add a class flag &#8216;interface&#8217; with the type name of the interface as an argument. Then to implement a specific method of the interface, just add &#8216;interface &lt;typename&gt;&#8217; before the method definition. The method can, and probably should be, private. </p>
-<p> The following example implements a new object, that implements the Gtk:Tree:Model interface and implements the get_flags method of that interface. Do note that except for standard (GTK+ and glib) specific interfaces which seem to have a non-standard name for the interface structure, the structure should end with and Iface, if you are implementing an interface. That is for example for the Gtk:Tree:Model, the structure containing the table of methods should be named GtkTreeModelIface.<br />
-class Some : Object from G : Object(interface Gtk:Tree<br />
-                                    : Model)<br />
-{<br />
-    /* function implemented for the Gtk:Tree:Model interface */<br />
-    interface Gtk : Tree : Model private GtkTreeModelFlags<br />
-                           get_flags(Gtk:Tree<br />
-                                     : Model *self(check null type))<br />
-    {<br />
-        /* Here would be the implementation */<br />
-        return (GtkTreeModelFlags)0;<br />
-    }<br />
+<p> The following example implements a new object, that implements the Gtk:Tree:Model interface and implements the get_flags method of that interface. Do note that except for standard (GTK+ and glib) specific interfaces which seem to have a non-standard name for the interface structure, the structure should end with and Iface, if you are implementing an interface. That is for example for the Gtk:Tree:Model, the structure containing the table of methods should be named GtkTreeModelIface.<br/>
+class Some : Object from G : Object(interface Gtk:Tree<br/>
+                                    : Model)<br/>
+{<br/>
+    /* function implemented for the Gtk:Tree:Model interface */<br/>
+    interface Gtk : Tree : Model private GtkTreeModelFlags<br/>
+                           get_flags(Gtk:Tree<br/>
+                                     : Model *self(check null type))<br/>
+    {<br/>
+        /* Here would be the implementation */<br/>
+        return (GtkTreeModelFlags)0;<br/>
+    }<br/>
 }</p>
 <p> If you want to implement multiple interfaces just list more class flag lines as follows: </p>
 <pre>
@@ -429,19 +429,19 @@ class Some : Object from G : Object(interface Gtk:Tree<br />
   }
 </pre>
 <h2>DIRECT BonoboObject SUPPORT</h2>
-<p> If you want to build a BonoboObject class gob2 has direct support for these. Just create a new object that derives from Bonobo:Object. Then use a &quot;BonoboObject&quot; class flag with the interface name as an argument. The interface name should be as you would type it in C, that is with underscores as namespace separators. Then you add the methods (using exact same names as in the idl file) and prepend those methods with a BonoboObject keyword. For example imagine you have an interface GNOME/Foo/SomeInterface, with a method fooBar that takes a single string:<br />
-class Foo : Some : Interface from Bonobo : Object(BonoboObject GNOME_Foo_SomeInterface)<br />
-{<br />
-    BonoboObject private void<br />
-    fooBar(PortableServer_Servant servant,<br />
-           const CORBA_char *string,<br />
-           CORBA_Environment *ev)<br />
-    {<br />
-        Self *self = SELF(bonobo_object_from_servant(servant));<br />
-        /* your code here */<br />
-    }<br />
-    /* rest of class */<br />
-}<br />
+<p> If you want to build a BonoboObject class gob2 has direct support for these. Just create a new object that derives from Bonobo:Object. Then use a &quot;BonoboObject&quot; class flag with the interface name as an argument. The interface name should be as you would type it in C, that is with underscores as namespace separators. Then you add the methods (using exact same names as in the idl file) and prepend those methods with a BonoboObject keyword. For example imagine you have an interface GNOME/Foo/SomeInterface, with a method fooBar that takes a single string:<br/>
+class Foo : Some : Interface from Bonobo : Object(BonoboObject GNOME_Foo_SomeInterface)<br/>
+{<br/>
+    BonoboObject private void<br/>
+    fooBar(PortableServer_Servant servant,<br/>
+           const CORBA_char *string,<br/>
+           CORBA_Environment *ev)<br/>
+    {<br/>
+        Self *self = SELF(bonobo_object_from_servant(servant));<br/>
+        /* your code here */<br/>
+    }<br/>
+    /* rest of class */<br/>
+}<br/>
  Note that the implementation method can be private, in fact that&#8217;s probably a good idea to do. It won&#8217;t work to make this a signal, it can however be a virtual. Note that the method prototype must match the one from the interface header file, or you will get a bad assignment warning. You should check the header file generated by orbit-idl and see the epv structure for the correct prototypes if you can&#8217;t figure them out from the idl itself. Also note that the first argument is not &quot;self&quot;, but the servant and you must use bonobo_object_from_servant function to get the actual object pointer. </p>
 <h2>DIRECT LIBGLADE SUPPORT</h2>
 <p> Gob can simplify writing a libglade class. Just create a new object that derives from a GtkContainer widget. Then use a &quot;GladeXML&quot; class flag with the glade file name, root widget and optional domain as arguments between double quotes. For example: </p>
@@ -458,7 +458,7 @@ class My:Glade from Gtk:Window (GladeXML GLADE_FILE &quot;root&quot;)
   ....
 }
 </pre>
-<p> And somewhere in your header files you would have<br />
+<p> And somewhere in your header files you would have<br/>
 #define GLADE_FILE &#8220;/path/to/file.glade&#8221;</p>
 <p> You can declare widgets as data members by adding a &#8216;GladeXML&#8217; to the definition. </p>
 <pre>
@@ -479,29 +479,29 @@ on_button1_clicked(self, GtkButton * button)
 <p> As for types, there are Self and SelfClass types which are only defined in your source files. Their generation (just like the generation of the SELF macros) can be turned off, see command line options. </p>
 <h2>USING GTK-DOC STYLE INLINE DOCUMENTATION</h2>
 <p> If you want to use gtk-doc style inline documentation for your objects, you can do one of two things. First, you could include the inline documentation comments in your %{ %} section which will then be put verbatim into the output source file. This is the way you should use for functions you define outside of the class. </p>
-<p> For class methods, you should use a gtk+ style comment, however it can be indented any number of tabs or spaces and you can use the short method name without the type prefix. Gob will automatically try to extract these and translate to full names and put them in the output source file. An example would be:<br />
-class Gtk : Button : Example from Gtk : Button<br />
-{<br />
-    /**<br />
-     * new:<br />
-     *<br />
-     * Makes a new #GtkButtonExample widget<br />
-     *<br />
-     * Returns: a new widget<br />
-     **/<br />
-  public<br />
-    GtkWidget *new (void)<br />
-    {<br />
-        return (GtkWidget *)GET_NEW;<br />
-    }<br />
-}<br />
+<p> For class methods, you should use a gtk+ style comment, however it can be indented any number of tabs or spaces and you can use the short method name without the type prefix. Gob will automatically try to extract these and translate to full names and put them in the output source file. An example would be:<br/>
+class Gtk : Button : Example from Gtk : Button<br/>
+{<br/>
+    /**<br/>
+     * new:<br/>
+     *<br/>
+     * Makes a new #GtkButtonExample widget<br/>
+     *<br/>
+     * Returns: a new widget<br/>
+     **/<br/>
+  public<br/>
+    GtkWidget *new (void)<br/>
+    {<br/>
+        return (GtkWidget *)GET_NEW;<br/>
+    }<br/>
+}<br/>
  If the function you are documenting is a signal or a virtual then it will be documenting the wrapper that starts that virtual function or emits that signal. </p>
 <h2>DEALING WITH CIRCULAR HEADERS</h2>
-<p> Sometimes you may need to use an object of type MyObjectA in the MyObjectB class and vice versa. Obviously you can&#8217;t include headers for both. So you need to just declare the typedef in the header of A for B, and the other way around as well. The headers generated include a protecting define before it declares the typedef. This define is the __TYPEDEF_&lt;upper case object name&gt;__. So inside my-object-a.h there will be this:<br />
-#ifndef __TYPEDEF_MY_OBJECT_A__<br />
-#define __TYPEDEF_MY_OBJECT_A__<br />
-typedef struct _MyObjectA MyObjectA;<br />
-#endif<br />
+<p> Sometimes you may need to use an object of type MyObjectA in the MyObjectB class and vice versa. Obviously you can&#8217;t include headers for both. So you need to just declare the typedef in the header of A for B, and the other way around as well. The headers generated include a protecting define before it declares the typedef. This define is the __TYPEDEF_&lt;upper case object name&gt;__. So inside my-object-a.h there will be this:<br/>
+#ifndef __TYPEDEF_MY_OBJECT_A__<br/>
+#define __TYPEDEF_MY_OBJECT_A__<br/>
+typedef struct _MyObjectA MyObjectA;<br/>
+#endif<br/>
  Now instead of including my-object-a.h in the header section of my-object-b.gob, just copy the above code there and you&#8217;re set for using MyObjectA as a type in the method parameters and public types. </p>
 <p> Another way to get out of this problem is if you can use those types only in the private members, in which case they won&#8217;t be in the generated public header. </p>
 <h2>BUILDING WITH MAKE</h2>
@@ -539,23 +539,23 @@ typedef struct _MyObjectA MyObjectA;<br />
 <p> All the arguments after &#8211;m4 will be passed to m4 itself, so it has to be the last gob2 argument on the command line. This way you can specify arbitrary options to pass to m4. </p>
 <h2>BUGS</h2>
 <p> The lexer does not actually parse the C code, so I&#8217;m sure that some corner cases or maybe even some not so corner cases of C syntax might confuse gob completely. If you find any, send me the source that makes it go gaga and I&#8217;ll try to make the lexer try to handle it properly, but no promises. </p>
-<p> Another thing is that gob ignores preprocessor macros. Since gob counts braces, the following code won&#8217;t work:<br />
-#ifdef SOME_DEFINE<br />
-if (foo) {<br />
-#else<br />
-if (bar) {<br />
-#endif<br />
-    blah();<br />
-}<br />
- To make this work, you&#8217;d have to do this:<br />
-#ifdef SOME_DEFINE<br />
-if (foo)<br />
-#else<br />
-if (bar)<br />
-#endif<br />
-{<br />
-    blah();<br />
-}<br />
+<p> Another thing is that gob ignores preprocessor macros. Since gob counts braces, the following code won&#8217;t work:<br/>
+#ifdef SOME_DEFINE<br/>
+if (foo) {<br/>
+#else<br/>
+if (bar) {<br/>
+#endif<br/>
+    blah();<br/>
+}<br/>
+ To make this work, you&#8217;d have to do this:<br/>
+#ifdef SOME_DEFINE<br/>
+if (foo)<br/>
+#else<br/>
+if (bar)<br/>
+#endif<br/>
+{<br/>
+    blah();<br/>
+}<br/>
  There is no real good way we can handle this without parsing C code, so we probably never will. In the future, I might add #if 0 as a comment but that&#8217;s about as far as I can really take it and even that is problematic. Basically, if you use gob, just don&#8217;t use the C preprocessor too extensively. And if you use it make sure that you do not cross the boundaries of the C code segments. </p>
 <p> Comments will not get through to the generated files unless inside C code. This is not the case for gtk-doc style comments which are supported. </p>
 <p> The short name aliases are actually implemented as pointers to functions. Thus if you want to get the pointer of a function using the short name alias you can&#8217;t use the &#8216;&amp;&#8217;. Thus: </p>

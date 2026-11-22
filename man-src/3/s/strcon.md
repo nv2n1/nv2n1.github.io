@@ -10,7 +10,7 @@ description: "strcon.f –"
 <p>strcon.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>strcon</code> (NORM, UPLO, DIAG, N, A, LDA, RCOND, WORK, IWORK, INFO)<br />
+<p>subroutine <code>strcon</code> (NORM, UPLO, DIAG, N, A, LDA, RCOND, WORK, IWORK, INFO)<br/>
  <i></i><code>STRCON</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine strcon (characterNORM, characterUPLO, characterDIAG, integerN, real, dimension( lda, * )A, integerLDA, realRCOND, real, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>

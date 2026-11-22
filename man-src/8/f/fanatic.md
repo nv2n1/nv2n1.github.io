@@ -9,9 +9,9 @@ description: "fanatic – fan bridge configuration and test wizard"
 
 <p>fanatic &#8211; fan bridge configuration and test wizard</p>
 <h2>Synopsis</h2>
-<p><code>fanatic [&lt;cmd&gt; [&lt;arg&gt; &#8230;]]</code><br />
- <code>fanatic configure</code><br />
- <code>fanatic deconfigure</code><br />
+<p><code>fanatic [&lt;cmd&gt; [&lt;arg&gt; &#8230;]]</code><br/>
+ <code>fanatic configure</code><br/>
+ <code>fanatic deconfigure</code><br/>
  <code>fanatic test</code></p>
 <h2>Description</h2>
 <p><code>fanatic</code> is the configuration and test wizard for Fan networking. It is designed to simplify the process of configuring persistent Fan bridges. It will also configure both LXD and Docker to use those bridges as required. </p>
@@ -135,5 +135,5 @@ local lxd test: test complete PASS (master=0 slave=0)
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/8-fanctl/">fanctl</a></i>(8), <code>/usr/share/doc/ubuntu-fan/README</code></p>
 <h2>AUTHOR(s)</h2>
-<p>Andy Whitcroft &lt;apw [at] canonical.com&gt;,<br />
+<p>Andy Whitcroft &lt;apw [at] canonical.com&gt;,<br/>
  Stefan Bader &lt;stefan.bader [at] canonical.com&gt;</p>

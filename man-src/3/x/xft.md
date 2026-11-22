@@ -251,6 +251,6 @@ description: "Xft – X FreeType interface library"
 <h2>Author</h2>
 <p>Keith Packard</p>
 <h2>See Also</h2>
-<p><i>Fontconfig Developers Reference</i><br />
- <i>FreeType API Reference</i><br />
+<p><i>Fontconfig Developers Reference</i><br/>
+ <i>FreeType API Reference</i><br/>
  <i>Xlib &#8211; C Language Interface</i></p>

@@ -10,32 +10,32 @@ description: "The talloc string functions. –"
 <p>The talloc string functions. &#8211; </p>
 <p> talloc string allocation and manipulation functions.</p>
 <h3>Modules</h3>
-<p><code>The talloc debugging support functions</code><br />
+<p><code>The talloc debugging support functions</code><br/>
  <i>To aid memory debugging, talloc contains routines to inspect the currently allocated memory hierarchy. </i></p>
 <h3>Functions</h3>
-<p>char * <code>talloc_strdup</code> (const void *t, const char *p)<br />
- <i>Duplicate a string into a talloc chunk. </i><br />
- char * <code>talloc_strdup_append</code> (char *s, const char *a)<br />
- <i>Append a string to given string. </i><br />
- char * <code>talloc_strdup_append_buffer</code> (char *s, const char *a)<br />
- <i>Append a string to a given buffer. </i><br />
- char * <code>talloc_strndup</code> (const void *t, const char *p, size_t n)<br />
- <i>Duplicate a length-limited string into a talloc chunk. </i><br />
- char * <code>talloc_strndup_append</code> (char *s, const char *a, size_t n)<br />
- <i>Append at most n characters of a string to given string. </i><br />
- char * <code>talloc_strndup_append_buffer</code> (char *s, const char *a, size_t n)<br />
- <i>Append at most n characters of a string to given buffer. </i><br />
- char * <code>talloc_vasprintf</code> (const void *t, const char *fmt, va_list ap)<br />
- <i>Format a string given a va_list. </i><br />
- char * <code>talloc_vasprintf_append</code> (char *s, const char *fmt, va_list ap)<br />
- <i>Format a string given a va_list and append it to the given destination string. </i><br />
- char * <code>talloc_vasprintf_append_buffer</code> (char *s, const char *fmt, va_list ap)<br />
- <i>Format a string given a va_list and append it to the given destination buffer. </i><br />
- char * <code>talloc_asprintf</code> (const void *t, const char *fmt,&#8230;)<br />
- <i>Format a string. </i><br />
- char * <code>talloc_asprintf_append</code> (char *s, const char *fmt,&#8230;)<br />
- <i>Append a formatted string to another string. </i><br />
- char * <code>talloc_asprintf_append_buffer</code> (char *s, const char *fmt,&#8230;)<br />
+<p>char * <code>talloc_strdup</code> (const void *t, const char *p)<br/>
+ <i>Duplicate a string into a talloc chunk. </i><br/>
+ char * <code>talloc_strdup_append</code> (char *s, const char *a)<br/>
+ <i>Append a string to given string. </i><br/>
+ char * <code>talloc_strdup_append_buffer</code> (char *s, const char *a)<br/>
+ <i>Append a string to a given buffer. </i><br/>
+ char * <code>talloc_strndup</code> (const void *t, const char *p, size_t n)<br/>
+ <i>Duplicate a length-limited string into a talloc chunk. </i><br/>
+ char * <code>talloc_strndup_append</code> (char *s, const char *a, size_t n)<br/>
+ <i>Append at most n characters of a string to given string. </i><br/>
+ char * <code>talloc_strndup_append_buffer</code> (char *s, const char *a, size_t n)<br/>
+ <i>Append at most n characters of a string to given buffer. </i><br/>
+ char * <code>talloc_vasprintf</code> (const void *t, const char *fmt, va_list ap)<br/>
+ <i>Format a string given a va_list. </i><br/>
+ char * <code>talloc_vasprintf_append</code> (char *s, const char *fmt, va_list ap)<br/>
+ <i>Format a string given a va_list and append it to the given destination string. </i><br/>
+ char * <code>talloc_vasprintf_append_buffer</code> (char *s, const char *fmt, va_list ap)<br/>
+ <i>Format a string given a va_list and append it to the given destination buffer. </i><br/>
+ char * <code>talloc_asprintf</code> (const void *t, const char *fmt,&#8230;)<br/>
+ <i>Format a string. </i><br/>
+ char * <code>talloc_asprintf_append</code> (char *s, const char *fmt,&#8230;)<br/>
+ <i>Append a formatted string to another string. </i><br/>
+ char * <code>talloc_asprintf_append_buffer</code> (char *s, const char *fmt,&#8230;)<br/>
  <i>Append a formatted string to another string. </i></p>
 <h2>Detailed Description</h2>
 <p>talloc string allocation and manipulation functions.</p>
@@ -47,8 +47,8 @@ description: "The talloc string functions. –"
 * </pre>
 <p><code>Parameters:</code></p>
 <dl>
-<dd><i>t</i> The talloc context to hang the result off.<br />
- <i>fmt</i> The format string.<br />
+<dd><i>t</i> The talloc context to hang the result off.<br/>
+ <i>fmt</i> The format string.<br/>
  <i>&#8230;</i> The parameters used to fill fmt.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -61,8 +61,8 @@ description: "The talloc string functions. –"
 <p>If s == NULL then new context is created. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>s</i> The string to append to.<br />
- <i>fmt</i> The format string.<br />
+<dd><i>s</i> The string to append to.<br/>
+ <i>fmt</i> The format string.<br/>
  <i>&#8230;</i> The parameters used to fill fmt.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -83,8 +83,8 @@ description: "The talloc string functions. –"
 <p>If s == NULL then new context is created. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>s</i> The string to append to<br />
- <i>fmt</i> The format string.<br />
+<dd><i>s</i> The string to append to<br/>
+ <i>fmt</i> The format string.<br/>
  <i>&#8230;</i> The parameters used to fill fmt.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -103,7 +103,7 @@ description: "The talloc string functions. –"
 * </pre>
 <p><code>Parameters:</code></p>
 <dl>
-<dd><i>t</i> The talloc context to hang the result off.<br />
+<dd><i>t</i> The talloc context to hang the result off.<br/>
  <i>p</i> The string you want to duplicate.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -116,7 +116,7 @@ description: "The talloc string functions. –"
 <p>If s == NULL then new context is created. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>s</i> The destination to append to.<br />
+<dd><i>s</i> The destination to append to.<br/>
  <i>a</i> The string you want to append.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -141,7 +141,7 @@ description: "The talloc string functions. –"
 <p>If s == NULL then new context is created. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>s</i> The destination buffer to append to.<br />
+<dd><i>s</i> The destination buffer to append to.<br/>
  <i>a</i> The string you want to append.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -158,8 +158,8 @@ description: "The talloc string functions. –"
 * </pre>
 <p><code>Parameters:</code></p>
 <dl>
-<dd><i>t</i> The talloc context to hang the result off.<br />
- <i>p</i> The string you want to duplicate.<br />
+<dd><i>t</i> The talloc context to hang the result off.<br/>
+ <i>p</i> The string you want to duplicate.<br/>
  <i>n</i> The maximum string length to duplicate.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -172,8 +172,8 @@ description: "The talloc string functions. –"
 <p>If s == NULL then new context is created. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>s</i> The destination string to append to.<br />
- <i>a</i> The source string you want to append.<br />
+<dd><i>s</i> The destination string to append to.<br/>
+ <i>a</i> The source string you want to append.<br/>
  <i>n</i> The number of characters you want to append from the string.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -198,8 +198,8 @@ description: "The talloc string functions. –"
 <p>If s == NULL then new context is created. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>s</i> The destination buffer to append to.<br />
- <i>a</i> The source string you want to append.<br />
+<dd><i>s</i> The destination buffer to append to.<br/>
+ <i>a</i> The source string you want to append.<br/>
  <i>n</i> The number of characters you want to append from the string.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -216,8 +216,8 @@ description: "The talloc string functions. –"
 * </pre>
 <p><code>Parameters:</code></p>
 <dl>
-<dd><i>t</i> The talloc context to hang the result off.<br />
- <i>fmt</i> The format string.<br />
+<dd><i>t</i> The talloc context to hang the result off.<br/>
+ <i>fmt</i> The format string.<br/>
  <i>ap</i> The parameters used to fill fmt.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -226,8 +226,8 @@ description: "The talloc string functions. –"
 <p>Format a string given a va_list and append it to the given destination string. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>s</i> The destination string to append to.<br />
- <i>fmt</i> The format string.<br />
+<dd><i>s</i> The destination string to append to.<br/>
+ <i>fmt</i> The format string.<br/>
  <i>ap</i> The parameters used to fill fmt.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -241,8 +241,8 @@ description: "The talloc string functions. –"
 <p>Format a string given a va_list and append it to the given destination buffer. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>s</i> The destination buffer to append to.<br />
- <i>fmt</i> The format string.<br />
+<dd><i>s</i> The destination buffer to append to.<br/>
+ <i>fmt</i> The format string.<br/>
  <i>ap</i> The parameters used to fill fmt.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

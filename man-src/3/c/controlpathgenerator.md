@@ -16,15 +16,15 @@ description: "QuantLib::McSimulation – base class for Monte Carlo engines"
 <p> typedef <code>MonteCarloModel</code>&lt; MC, RNG, S &gt;::stats_type <code>stats_type</code> </p>
 <p> typedef <code>MonteCarloModel</code>&lt; MC, RNG, S &gt;::result_type <code>result_type</code> </p>
 <h3>Public Member Functions</h3>
-<p> result_type <code>value</code> (Real tolerance, Size maxSamples=QL_MAX_INTEGER, Size minSamples=1023) const<br />
- <i>add samples until the required absolute tolerance is reached </i><br />
- result_type <code>valueWithSamples</code> (Size samples) const<br />
- <i>simulate a fixed number of samples </i><br />
- result_type <code>errorEstimate</code> () const<br />
- <i>error estimated using the samples simulated so far </i><br />
- const stats_type &amp; <code>sampleAccumulator</code> (void) const<br />
- <i>access to the sample accumulator for richer statistics </i><br />
- void <code>calculate</code> (Real requiredTolerance, Size requiredSamples, Size maxSamples) const<br />
+<p> result_type <code>value</code> (Real tolerance, Size maxSamples=QL_MAX_INTEGER, Size minSamples=1023) const<br/>
+ <i>add samples until the required absolute tolerance is reached </i><br/>
+ result_type <code>valueWithSamples</code> (Size samples) const<br/>
+ <i>simulate a fixed number of samples </i><br/>
+ result_type <code>errorEstimate</code> () const<br/>
+ <i>error estimated using the samples simulated so far </i><br/>
+ const stats_type &amp; <code>sampleAccumulator</code> (void) const<br/>
+ <i>access to the sample accumulator for richer statistics </i><br/>
+ void <code>calculate</code> (Real requiredTolerance, Size requiredSamples, Size maxSamples) const<br/>
  <i>basic calculate method provided to inherited pricing engines </i></p>
 <h3>Protected Member Functions</h3>
 <p> <code>McSimulation</code> (bool antitheticVariate, bool controlVariate) </p>

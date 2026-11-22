@@ -25,9 +25,9 @@ description: "y4mtoppm – Convert YUV4MPEG2 stream to PPM images"
 <dt><code>-L</code></dt>
 <dd> For interlaced streams, output a single PPM image for each frame, containing two interleaved fields. (Otherwise, two PPM images will be generated for each frame; one per field.)</dd>
 <dt><code>-v</code><i> [0,1,2]</i></dt>
-<dd> Set verbosity level.<br />
-&nbsp;<wbr>0&nbsp;<wbr>=&nbsp;<wbr>warnings and errors only.<br />
-&nbsp;<wbr>1&nbsp;<wbr>=&nbsp;<wbr>add informative messages, too.<br />
+<dd> Set verbosity level.<br/>
+&nbsp;<wbr>0&nbsp;<wbr>=&nbsp;<wbr>warnings and errors only.<br/>
+&nbsp;<wbr>1&nbsp;<wbr>=&nbsp;<wbr>add informative messages, too.<br/>
 &nbsp;<wbr>2&nbsp;<wbr>=&nbsp;<wbr>add chatty debugging message, too. </dd>
 </dl>
 <h2>EXAMPLES</h2>
@@ -36,8 +36,8 @@ description: "y4mtoppm – Convert YUV4MPEG2 stream to PPM images"
 <dt>
 </dt><dd> lav2yuv -f 15 your-video.avi | y4mtoppm | pnmsplit &#8211; &quot;your-video-%d.ppm&quot;</dd></dl>
 <h2>AUTHOR</h2>
-<p> This man page was written by Matt Marjanovic.<br />
- If you have questions, remarks, problems or you just want to contact the developers, the main mailing list for the MJPEG-tools is:<br />
+<p> This man page was written by Matt Marjanovic.<br/>
+ If you have questions, remarks, problems or you just want to contact the developers, the main mailing list for the MJPEG-tools is:<br/>
 &nbsp;<wbr>&nbsp;<wbr><i>mjpeg-users [at] lists.sourceforge.net</i> </p>
 <dl>
 <dt>For more info, see our website at</dt>

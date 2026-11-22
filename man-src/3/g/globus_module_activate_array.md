@@ -10,14 +10,14 @@ description: "Module Activation Management –"
 
 <p> Module Activation Management &#8211; </p>
 <h3>Data Structures</h3>
-<p> struct <code>globus_module_descriptor_s</code><br />
+<p> struct <code>globus_module_descriptor_s</code><br/>
  <i>Module Descriptor. </i></p>
 <h3>Functions</h3>
-<p> int <code>globus_module_activate</code> (<code>globus_module_descriptor_t</code> *module_descriptor)<br />
- <i>Activate a module. </i><br />
- int <code>globus_module_activate_array</code> (<code>globus_module_descriptor_t</code> *module_array[], <code>globus_module_descriptor_t</code> **failed_module)<br />
- <i>Activate a group of modules. </i><br />
- int <code>globus_module_deactivate</code> (<code>globus_module_descriptor_t</code> *module_descriptor)<br />
+<p> int <code>globus_module_activate</code> (<code>globus_module_descriptor_t</code> *module_descriptor)<br/>
+ <i>Activate a module. </i><br/>
+ int <code>globus_module_activate_array</code> (<code>globus_module_descriptor_t</code> *module_array[], <code>globus_module_descriptor_t</code> **failed_module)<br/>
+ <i>Activate a group of modules. </i><br/>
+ int <code>globus_module_deactivate</code> (<code>globus_module_descriptor_t</code> *module_descriptor)<br/>
  <i>Deactivate a module. </i></p>
 <h2>Detailed Description</h2>
 <h2>Function Documentation</h2>
@@ -32,7 +32,7 @@ description: "Module Activation Management –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>module_array</i> NULL-terminated array of module descriptors to activate.<br />
+</dt><dd> <i>module_array</i> NULL-terminated array of module descriptors to activate.<br/>
  <i>failed_module</i> Pointer to set to the first module whose activation function failed.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_common from the source code. </p>

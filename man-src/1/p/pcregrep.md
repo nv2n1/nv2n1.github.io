@@ -154,11 +154,11 @@ description: "pcregrep – a grep with Perl-compatible regular expressions."
 <p> Although most of the common options work the same way, a few are different in <code>pcregrep</code>. For example, the <code>&#8211;include</code> option&#8217;s argument is a glob for GNU <code>grep</code>, but a regular expression for <code>pcregrep</code>. If both the <code>-c</code> and <code>-l</code> options are given, GNU grep lists only file names, without counts, but <code>pcregrep</code> gives the counts.</p>
 <h2>OPTIONS WITH DATA</h2>
 <p> There are four different ways in which an option with data can be specified. If a short form option is used, the data may follow immediately, or (with one exception) in the next command line item. For example: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>-f/some/file<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>-f/some/file<br/>
 &nbsp;<wbr>&nbsp;<wbr>-f&nbsp;<wbr>/some/file </p>
 <p> The exception is the <code>-o</code> option, which may appear with or without data. Because of this, if data is present, it must follow immediately in the same item, for example -o3. </p>
 <p> If a long form option is used, the data may appear in the same command line item, separated by an equals character, or (with two exceptions) it may appear in the next command line item. For example: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&#8211;file=/some/file<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&#8211;file=/some/file<br/>
 &nbsp;<wbr>&nbsp;<wbr>&#8211;file&nbsp;<wbr>/some/file </p>
 <p> Note, however, that if you want to supply a file name beginning with ~ as data in a shell command, and have the shell expand ~ to a home directory, you must separate the file name from the option, because the shell does not treat ~ specially unless it is at the start of an item. </p>
 <p> The exceptions to the above are the <code>&#8211;colour</code> (or <code>&#8211;color</code>) and <code>&#8211;only-matching</code> options, for which the data is optional. If one of these options does have data, it must be given in the first form, using an equals character. Otherwise <code>pcregrep</code> will assume that it has no data.</p>

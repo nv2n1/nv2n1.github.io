@@ -27,7 +27,7 @@ connid: &lt;connection ID&gt;</pre>
 <dd>Gives the path to a Unix domain socket to which the commands will be sent and from which replies are received. </dd>
 <p> When used as an overlay, these additional directives are defined:</p>
 <dt><code>sockops<tt>&nbsp;<wbr></tt>[ bind | unbind | search | compare | modify | modrdn | add | delete ]*</code></dt>
-<dd>Specify which request types to send to the external program. The default is<br />
+<dd>Specify which request types to send to the external program. The default is<br/>
  empty (no requests are sent).</dd>
 <dt><code>sockresps [ result | search ]*</code></dt>
 <dd>Specify which response types to send to the external program. &quot;result&quot; sends just the results of an operation. &quot;search&quot; sends all entries that the database returned for a search request. The default is empty (no responses are sent). </dd>

@@ -22,7 +22,7 @@ description: "The CHICKEN Scheme interpreter"
 <dt><code>CHICKEN_PREFIX</code></dt>
 <dd> Is used as a prefix directory for support files, include-files and libraries. </dd>
 <dt><code>CSI_OPTIONS</code></dt>
-<dd> When set to a string of command-line options, then the options are passed implicitly to every direct or indirect invocation of <i>csi</i><br />
+<dd> When set to a string of command-line options, then the options are passed implicitly to every direct or indirect invocation of <i>csi</i><br/>
  Note that runtime options of the form <code>-:&#8230;</code> can not be passed using this method. </dd>
 </dl>
 <h2>DOCUMENTATION</h2>

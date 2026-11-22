@@ -18,27 +18,27 @@ description: "estwaver – command line interface of web crawler"
 <p> <code>estwaver</code> is an aggregation of sub commands. The name of a sub command is specified by the first argument. Other arguments are parsed according to each sub command. The argument <i>rootdir</i> specifies the crawler root directory which contains configuration file and so on.</p>
 <dl>
 <dt><code>estwaver init [-apn|-acc] [-xs|-xl|-xh] [-sv|-si|-sa] rootdir</code></dt>
-<dd> Create the crawler root directory.<br />
- If <code>-apn</code> is specified, N-gram analysis is performed against European text also.<br />
- If <code>-acc</code> is specified, character category analysis is performed instead of N-gram analysis.<br />
- If <code>-xs</code> is specified, the index is tuned to register less than 50000 documents.<br />
- If <code>-xl</code> is specified, the index is tuned to register more than 300000 documents.<br />
- If <code>-xh</code> is specified, the index is tuned to register more than 1000000 documents.<br />
- If <code>-sv</code> is specified, scores are stored as void.<br />
- If <code>-si</code> is specified, scores are stored as 32-bit integer.<br />
+<dd> Create the crawler root directory.<br/>
+ If <code>-apn</code> is specified, N-gram analysis is performed against European text also.<br/>
+ If <code>-acc</code> is specified, character category analysis is performed instead of N-gram analysis.<br/>
+ If <code>-xs</code> is specified, the index is tuned to register less than 50000 documents.<br/>
+ If <code>-xl</code> is specified, the index is tuned to register more than 300000 documents.<br/>
+ If <code>-xh</code> is specified, the index is tuned to register more than 1000000 documents.<br/>
+ If <code>-sv</code> is specified, scores are stored as void.<br/>
+ If <code>-si</code> is specified, scores are stored as 32-bit integer.<br/>
  If <code>-sa</code> is specified, scores are stored as-is and marked not to be tuned when search.</dd>
 <dt><code>estwaver crawl [-restart|-revisit|-revcont] rootdir</code></dt>
-<dd> Start crawling.<br />
- If <code>-restart</code> is specified, crawling is restarted from the seed documents.<br />
- If <code>-revisit</code> is specified, collected documents are revisited.<br />
+<dd> Start crawling.<br/>
+ If <code>-restart</code> is specified, crawling is restarted from the seed documents.<br/>
+ If <code>-revisit</code> is specified, collected documents are revisited.<br/>
  If <code>-revcont</code> is specified, collected documents are revisited and then crawling is continued.&lt;/dd&gt;</dd>
 <dt><code>estwaver unittest rootdir</code></dt>
 <dd> Perform unit tests.</dd>
 <dt><code>estwaver fetch [-proxy hostr port] [-tout num] [-il lang] url</code></dt>
-<dd> Fetch a document.<br />
- <i>url</i> specifies the URL of a document.<br />
- <code>-proxy</code> specifies the host name and the port number of the proxy server.<br />
- <code>-tout</code> specifies timeout in seconds.<br />
+<dd> Fetch a document.<br/>
+ <i>url</i> specifies the URL of a document.<br/>
+ <code>-proxy</code> specifies the host name and the port number of the proxy server.<br/>
+ <code>-tout</code> specifies timeout in seconds.<br/>
  <code>-il</code> specifies the preferred language. By default, it is English.</dd></dl>
 <p> All sub commands return 0 if the operation is success, else return 1. A running crawler finishes with closing the database when it catches the signal 1 (SIGHUP), 2 (SIGINT), 3 (SIGQUIT), or 15 (SIGTERM). </p>
 <p> When crawling finishes, there is a directory <code>_index</code> in the crawler root directory. It is an index available by <code>estcmd</code> and so on. </p>

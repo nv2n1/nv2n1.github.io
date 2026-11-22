@@ -28,7 +28,7 @@ description: "startlxqt – script to initialize and launch LXQt sessions"
 <dt>
 </dt><dd> exec startlxqt</dd></dl>
 <p> to file <i>~/.xinitrc</i>. An LXQt session will then be launched by running <code>startx</code>. </p>
-<p> Display managers are making use of scripts like <code>startlxqt</code> automatically. Information about available desktop environments is provided by files <i>$XDG_DATA_DIRS/xsessions/*.desktop</i>, typically <i>/usr/share/xessions/*.desktop</i>.<br />
+<p> Display managers are making use of scripts like <code>startlxqt</code> automatically. Information about available desktop environments is provided by files <i>$XDG_DATA_DIRS/xsessions/*.desktop</i>, typically <i>/usr/share/xessions/*.desktop</i>.<br/>
  File <i>lxqt.desktop</i> provided by LXQt is stating <code>startlxqt</code> in key <i>Exec</i> while making sure the session manager <code>lxqt-session</code> does exist by stating it in key <i>TryExec</i>.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-lxqt-session/">lxqt-session</a></code>(1) <code><a href="/docs/linux/man/1-startx/">startx</a></code>(1) <code><a href="/docs/linux/man/1-sddm/">sddm</a></code>(1) </p>

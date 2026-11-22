@@ -69,7 +69,7 @@ description: "Markdown – The Markdown text formatting syntax"
 <p>A paragraph is simply one or more consecutive lines of text, separated by one or more blank lines. (A blank line is any line that looks like a blank line &#8212; a line containing nothing but spaces or tabs is considered blank.) Normal paragraphs should not be indented with spaces or tabs. </p>
 <p> The implication of the Qq one or more consecutive lines of text rule is that Markdown supports Qq hard-wrapped Dtext paragraphs. This differs significantly from most other text-to-HTML formatters (including Movable Type&#8217;s Qq Convert Line Breaks option) which translate every line break character in a paragraph into a `&lt;br /&gt;` tag. </p>
 <p> When you *do* want to insert a `&lt;br /&gt;` break tag using Markdown, you end a line with two or more spaces, then type return. </p>
-<p> Yes, this takes a tad more effort to create a `&lt;br /&gt;`, but a simplistic &quot;every line break is a `&lt;br /&gt;`&quot; rule wouldn&#8217;t work for Markdown. Markdown&#8217;s email-style Sx blockquoting<br />
+<p> Yes, this takes a tad more effort to create a `&lt;br /&gt;`, but a simplistic &quot;every line break is a `&lt;br /&gt;`&quot; rule wouldn&#8217;t work for Markdown. Markdown&#8217;s email-style Sx blockquoting<br/>
 &nbsp;<wbr>and multi-paragraph Sx list items work best &#8212; and look better &#8212; when you format them with hard breaks.</p>
 <h3>Headers</h3>
 <p>supports two styles of headers, <i>Setext</i> and <i>atx</i> </p>
@@ -522,8 +522,8 @@ description: "Markdown – The Markdown text formatting syntax"
 </blockquote>
 <h2>Miscellaneous</h2>
 <h3>Automatic Links</h3>
-<p>supports a shortcut style for creating Qq automatic links for URLs and email addresses: simply surround the URL or email address with angle brackets. What this means is that if you want to<br />
-&nbsp;<wbr>show the actual text of a URL or email address, and also have it be<br />
+<p>supports a shortcut style for creating Qq automatic links for URLs and email addresses: simply surround the URL or email address with angle brackets. What this means is that if you want to<br/>
+&nbsp;<wbr>show the actual text of a URL or email address, and also have it be<br/>
 &nbsp;<wbr>&nbsp;<wbr>a clickable link, you can do this: </p>
 <blockquote>
 <pre> &lt;<a rel="nofollow" href="http://example.com/">http://example.com/</a>&gt;</pre>
@@ -579,10 +579,10 @@ description: "Markdown – The Markdown text formatting syntax"
 <h2>Author</h2>
 <p>John Gruber <i><a rel="nofollow" href="http://daringfireball.net/">http://daringfireball.net/</a></i></p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/1-markdown/">markdown</a>(1), markdown(3), mkd-callbacks3, mkd-functions3, mkd-extensions7. <i><a rel="nofollow" href="http://daringfireball.net/projects/markdown">http://daringfireball.net/projects/markdown</a></i><br />
- <i><a rel="nofollow" href="http://docutils.sourceforge.net/mirror/setext.html">http://docutils.sourceforge.net/mirror/setext.html</a></i><br />
- <i><a rel="nofollow" href="http://www.aaronsw.com/2002/atx/">http://www.aaronsw.com/2002/atx/</a></i><br />
- <i><a rel="nofollow" href="http://textism.com/tools/textile/">http://textism.com/tools/textile/</a></i><br />
- <i><a rel="nofollow" href="http://docutils.sourceforge.net/rst.html">http://docutils.sourceforge.net/rst.html</a></i><br />
- <i><a rel="nofollow" href="http://www.triptico.com/software/grutatxt.html">http://www.triptico.com/software/grutatxt.html</a></i><br />
+<p><a href="/docs/linux/man/1-markdown/">markdown</a>(1), markdown(3), mkd-callbacks3, mkd-functions3, mkd-extensions7. <i><a rel="nofollow" href="http://daringfireball.net/projects/markdown">http://daringfireball.net/projects/markdown</a></i><br/>
+ <i><a rel="nofollow" href="http://docutils.sourceforge.net/mirror/setext.html">http://docutils.sourceforge.net/mirror/setext.html</a></i><br/>
+ <i><a rel="nofollow" href="http://www.aaronsw.com/2002/atx/">http://www.aaronsw.com/2002/atx/</a></i><br/>
+ <i><a rel="nofollow" href="http://textism.com/tools/textile/">http://textism.com/tools/textile/</a></i><br/>
+ <i><a rel="nofollow" href="http://docutils.sourceforge.net/rst.html">http://docutils.sourceforge.net/rst.html</a></i><br/>
+ <i><a rel="nofollow" href="http://www.triptico.com/software/grutatxt.html">http://www.triptico.com/software/grutatxt.html</a></i><br/>
  <i><a rel="nofollow" href="http://ettext.taint.org/doc/">http://ettext.taint.org/doc/</a></i> </p>

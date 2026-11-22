@@ -11,7 +11,7 @@ description: "dormbr.f –"
 <p> dormbr.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dormbr</code> (VECT, SIDE, TRANS, M, N, K, A, LDA, TAU, C, LDC, WORK, LWORK, INFO)<br />
+<p> subroutine <code>dormbr</code> (VECT, SIDE, TRANS, M, N, K, A, LDA, TAU, C, LDC, WORK, LWORK, INFO)<br/>
  <i></i><code>DORMBR</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dormbr (characterVECT, characterSIDE, characterTRANS, integerM, integerN, integerK, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( * )TAU, double precision, dimension( ldc, * )C, integerLDC, double precision, dimension( * )WORK, integerLWORK, integerINFO)</h3>
@@ -78,10 +78,10 @@ if k
           returned by DGEBRD.
 </pre>
 <p> <i>LDA</i> </p>
-<p>LDA is INTEGER<br />
-    The leading dimension of the array A.If VECT = &#8216;Q&#8217;,<br />
-                                            LDA &gt;= max(1, nq);<br />
-if VECT<br />
+<p>LDA is INTEGER<br/>
+    The leading dimension of the array A.If VECT = &#8216;Q&#8217;,<br/>
+                                            LDA &gt;= max(1, nq);<br/>
+if VECT<br/>
 = &#8216;P&#8217;, LDA &gt;= max(1, min(nq, K)).</p>
 <p> <i>TAU</i> </p>
 <pre>

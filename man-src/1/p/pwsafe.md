@@ -119,5 +119,5 @@ description: "pwsafe – commandline password database utility compatible with C
 <p> Copyright © 2004-2005 Nicolas S. Dade. </p>
 <p> This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>SEE ALSO</h2>
-<p> <a rel="nofollow" href="http://nsd.dyndns.org/pwsafe/">http://nsd.dyndns.org/pwsafe/</a><br />
+<p> <a rel="nofollow" href="http://nsd.dyndns.org/pwsafe/">http://nsd.dyndns.org/pwsafe/</a><br/>
  <a rel="nofollow" href="http://passwordsafe.sourceforge.net/,">http://passwordsafe.sourceforge.net/,</a> <a rel="nofollow" href="http://www.counterpane.com/">http://www.counterpane.com/</a> </p>

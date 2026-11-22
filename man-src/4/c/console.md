@@ -17,7 +17,7 @@ description: "console – console terminal and virtual consoles"
 <h3>Properties</h3>
 <p>Consoles carry a lot of state. I hope to document that some other time. The most important fact is that the consoles simulate vt100 terminals. In particular, a console is reset to the initial state by printing the two characters ESC c. All escape sequences can be found in <code><a href="/docs/linux/man/4-console_codes/">console_codes</a></code>(4).</p>
 <h2>Files</h2>
-<p><i>/dev/console</i><br />
+<p><i>/dev/console</i><br/>
  <i>/dev/tty*</i></p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-chvt/">chvt</a></code>(1), <code><a href="/docs/linux/man/1-deallocvt/">deallocvt</a></code>(1), <code><a href="/docs/linux/man/1-loadkeys/">loadkeys</a></code>(1), <code><a href="/docs/linux/man/1-mknod/">mknod</a></code>(1), <code><a href="/docs/linux/man/1-openvt/">openvt</a></code>(1), <code><a href="/docs/linux/man/4-console_codes/">console_codes</a></code>(4), <code><a href="/docs/linux/man/4-console_ioctl/">console_ioctl</a></code>(4), <code><a href="/docs/linux/man/4-tty/">tty</a></code>(4), <code><a href="/docs/linux/man/4-ttys/">ttyS</a></code>(4), <code><a href="/docs/linux/man/7-charsets/">charsets</a></code>(7), <code><a href="/docs/linux/man/8-agetty/">agetty</a></code>(8), <code><a href="/docs/linux/man/8-init/">init</a></code>(8), <code><a href="/docs/linux/man/8-mapscrn/">mapscrn</a></code>(8), <code><a href="/docs/linux/man/8-mingetty/">mingetty</a></code>(8), <code><a href="/docs/linux/man/8-resizecons/">resizecons</a></code>(8), <code><a href="/docs/linux/man/8-setfont/">setfont</a></code>(8)</p>

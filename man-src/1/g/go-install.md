@@ -28,9 +28,9 @@ description: "go – tool for managing Go source code"
 <dd> Package path arguments must refer to main packages. Pattern arguments will only match main packages.</dd></dl>
 <p> If the arguments don&#8217;t have version suffixes, &quot;go install&quot; may run in module-aware mode or GOPATH mode, depending on the GO111MODULE environment variable and the presence of a go.mod file. See &#8216;go help modules&#8217; for details. If module-aware mode is enabled, &quot;go install&quot; runs in the context of the main module. </p>
 <p> When module-aware mode is disabled, other packages are installed in the directory $GOPATH/pkg/$GOOS_$GOARCH. When module-aware mode is enabled, other packages are built and cached but not installed. </p>
-<p> The -i flag installs the dependencies of the named packages as well.<br />
+<p> The -i flag installs the dependencies of the named packages as well.<br/>
  The -i flag is deprecated. Compiled packages are cached automatically. </p>
-<p> For more about the build flags, see <code><a href="/docs/linux/man/1-go-build/">go-build</a></code>(1).<br />
+<p> For more about the build flags, see <code><a href="/docs/linux/man/1-go-build/">go-build</a></code>(1).<br/>
  For more about specifying packages, see <code><a href="/docs/linux/man/7-go-packages/">go-packages</a></code>(7).</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-go-build/">go-build</a></code>(1), <code><a href="/docs/linux/man/1-go-get/">go-get</a></code>(1), <code><a href="/docs/linux/man/1-go-clean/">go-clean</a></code>(1).</p>

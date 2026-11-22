@@ -37,7 +37,7 @@ description: "avisync – adjust audio synchronisation"
 <p> puts 10 audio frames at the beginning of the AVI-file. </p>
 <p> E.g. if the audio is delayed about 200 ms (0.2 seconds) and you&#8217;re working with a 25 frames per second AVI-File, you need to shift the audio 200/40 = 5 frames since one frame is 40 ms long.</p>
 <h2>AUTHORS</h2>
-<p> <code>avisync</code> was written by Thomas Oestreich<br />
+<p> <code>avisync</code> was written by Thomas Oestreich<br/>
  &lt;ostreich [at] theorie.physik.uni-goettingen.de&gt; with contributions from many others. See AUTHORS for details.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-aviindex/">aviindex</a></code>(1), <code><a href="/docs/linux/man/1-avifix/">avifix</a></code>(1), <code><a href="/docs/linux/man/1-avimerge/">avimerge</a></code>(1), <code><a href="/docs/linux/man/1-avisplit/">avisplit</a></code>(1), <code><a href="/docs/linux/man/1-tccat/">tccat</a></code>(1), <code><a href="/docs/linux/man/1-tcdecode/">tcdecode</a></code>(1), <code><a href="/docs/linux/man/1-tcdemux/">tcdemux</a></code>(1), <code><a href="/docs/linux/man/1-tcextract/">tcextract</a></code>(1), <code><a href="/docs/linux/man/1-tcprobe/">tcprobe</a></code>(1), <code><a href="/docs/linux/man/1-tcscan/">tcscan</a></code>(1), <code><a href="/docs/linux/man/1-transcode/">transcode</a></code>(1) </p>

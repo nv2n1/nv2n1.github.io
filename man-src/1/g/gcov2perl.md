@@ -36,7 +36,7 @@ gcov2perl - convert gcov files to Devel::Cover databases
 
 <h2>DETAILS</h2>
 
- To obtain coverage of <font SIZE="-1">XS</font> files they must first be compiled with the appropriate options. In a standard Makefile environment, such as that created by ExtUtils::MakeMaker, this can be accomplished with the command: 
+ To obtain coverage of XS files they must first be compiled with the appropriate options. In a standard Makefile environment, such as that created by ExtUtils::MakeMaker, this can be accomplished with the command: 
 
  <pre>
  HARNESS_PERL_SWITCHES=-MDevel::Cover make test \

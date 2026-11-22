@@ -20,7 +20,7 @@ static const Real x3_</code></pre>
 <p>static const Real beta_</p>
 <p>static const Real x1_</p>
 <p>static const Real x2_</p>
-<p>static const Real x3_<br />
+<p>static const Real x3_<br/>
  Real <code>integrate</code> (const boost::function&lt; Real(Real)&gt; &amp;f, Real a, Real b) const </p>
 <p> Real <code>adaptivGaussLobattoStep</code> (const boost::function&lt; Real(Real)&gt; &amp;f, Real a, Real b, Real fa, Real fb, Real is) const </p>
 <p> Real <code>calculateAbsTolerance</code> (const boost::function&lt; Real(Real)&gt; &amp;f, Real a, Real b) const</p>

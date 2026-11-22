@@ -10,9 +10,9 @@ description: "Error Handling Helpers –"
 
 <p> Error Handling Helpers &#8211; </p>
 <h3>Functions</h3>
-<p> globus_bool_t <code>globus_error_gssapi_match</code> (globus_object_t *error, globus_module_descriptor_t *module, const OM_uint32 major_status)<br />
- <i>Error Match. </i><br />
- globus_object_t * <code>globus_error_wrap_gssapi_error</code> (globus_module_descriptor_t *base_source, OM_uint32 major_status, OM_uint32 minor_status, int type, const char *source_file, const char *source_func, int source_line, const char *short_desc_format,&#8230;)<br />
+<p> globus_bool_t <code>globus_error_gssapi_match</code> (globus_object_t *error, globus_module_descriptor_t *module, const OM_uint32 major_status)<br/>
+ <i>Error Match. </i><br/>
+ globus_object_t * <code>globus_error_wrap_gssapi_error</code> (globus_module_descriptor_t *base_source, OM_uint32 major_status, OM_uint32 minor_status, int type, const char *source_file, const char *source_func, int source_line, const char *short_desc_format,&#8230;)<br/>
  <i>Wrap GSSAPI Error. </i></p>
 <h2>Detailed Description</h2>
 <p> Helper functions for dealing with Globus GSSAPI Error objects. </p>
@@ -24,27 +24,27 @@ description: "Error Handling Helpers –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>error</i> The error object for which to perform the check<br />
- <i>module</i> The module descriptor to check for<br />
+</dt><dd> <i>error</i> The error object for which to perform the check<br/>
+ <i>module</i> The module descriptor to check for<br/>
  <i>major_status</i> The major status to check for</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GLOBUS_TRUE</i> The error matched the module and major status<br />
+</dt><dd> <i>GLOBUS_TRUE</i> The error matched the module and major status<br/>
  <i>GLOBUS_FALSE</i> The error failed to match the module and major status</dd></dl>
 <h3>globus_object_t* globus_error_wrap_gssapi_error (globus_module_descriptor_t *base_source, OM_uint32major_status, OM_uint32minor_status, inttype, const char *source_file, const char *source_func, intsource_line, const char *short_desc_format, &#8230;)</h3>
 <p> Wrap GSSAPI Error. Allocate and initialize an error of type GLOBUS_ERROR_TYPE_GLOBUS which contains a causal error of type GLOBUS_ERROR_TYPE_GSSAPI. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>base_source</i> Pointer to the originating module.<br />
- <i>major_status</i> The major status to use when generating the causal error.<br />
- <i>minor_status</i> The minor status to use when generating the causal error.<br />
- <i>type</i> The error type. We may reserve part of this namespace for common errors. Errors not in this space are assumed to be local to the originating module.<br />
- <i>source_file</i> Name of file. Use <code>FILE</code><br />
- <i>source_func</i> Name of function. Use _globus_func_name and declare your func with GlobusFuncName(&lt;name&gt;)<br />
- <i>source_line</i> Line number. Use <code>LINE</code><br />
- <i>short_desc_format</i> Short format string giving a succinct description of the error. To be passed on to the user.<br />
+</dt><dd> <i>base_source</i> Pointer to the originating module.<br/>
+ <i>major_status</i> The major status to use when generating the causal error.<br/>
+ <i>minor_status</i> The minor status to use when generating the causal error.<br/>
+ <i>type</i> The error type. We may reserve part of this namespace for common errors. Errors not in this space are assumed to be local to the originating module.<br/>
+ <i>source_file</i> Name of file. Use <code>FILE</code><br/>
+ <i>source_func</i> Name of function. Use _globus_func_name and declare your func with GlobusFuncName(&lt;name&gt;)<br/>
+ <i>source_line</i> Line number. Use <code>LINE</code><br/>
+ <i>short_desc_format</i> Short format string giving a succinct description of the error. To be passed on to the user.<br/>
  <i>&#8230;</i> Arguments for the format string.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

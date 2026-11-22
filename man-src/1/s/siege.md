@@ -15,14 +15,14 @@ siege[options] siege[options]&lt;URL&gt;
         siege[options] - g&lt;URL&gt; siege[options] - f urls.txt
 </code></pre>
 <h2>DESCRIPTION</h2>
-<p> <tt>siege</tt> is a multi-threaded <font SIZE="-1">HTTP/FTP</font> load tester and benchmarking utility. It supports most of the features detailed in RFCs 2616 (<font SIZE="-1">HTTP</font>) and 959 (<font SIZE="-1">FTP</font>). Properties can be set at both from the command line and in a configuration file. When the same propertie is set in both locations, the command line takes precedent. </p>
+<p> <tt>siege</tt> is a multi-threaded HTTP/FTP load tester and benchmarking utility. It supports most of the features detailed in RFCs 2616 (HTTP) and 959 (FTP). Properties can be set at both from the command line and in a configuration file. When the same propertie is set in both locations, the command line takes precedent. </p>
 <p> The default configuration file is <tt>$HOME</tt>/.siege/siege.conf If you don&#8217;t have a <tt>$HOME</tt>/.siege directory and a siege.conf and cookies.txt file, siege will generate a new config directory when it runs. You can generate your configu directory with the following command: siege.config</p>
 <h2>OPTIONS</h2>
 <h3>Option Syntax</h3>
-<p> <tt>siege</tt> supports long and short options. Short options look like this:<br />
-&nbsp;<wbr>-c 25<br />
+<p> <tt>siege</tt> supports long and short options. Short options look like this:<br/>
+&nbsp;<wbr>-c 25<br/>
 &nbsp;<wbr>-c25 </p>
-<p> Long options look like this:<br />
+<p> Long options look like this:<br/>
 &nbsp;<wbr>&#8211;concurrent=25</p>
 <h3>Option Values</h3>
 <dl>
@@ -34,21 +34,21 @@ siege[options] siege[options]&lt;URL&gt;
 <dd> Prints a detailed summary of all the currently configured options, most of which are sent in <tt>$HOME</tt>/.siege/siege.conf</dd>
 <dt><code>-v</code>, <code>&#8211;vebose</code></dt>
 <dd> This directive puts <tt>siege</tt> into verbose mode which is actually a default setting. This command-line option is useful when the config file is set to &#8216;verbose = false&#8217; since it will allow you to override that. </dd>
-<p> By default <tt>siege</tt>&#8216;s verbose output is displayed in a color-coded style.<br />
-&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr><font SIZE="-1">HTTP</font>&nbsp;<wbr>2xx is coded blue<br />
-&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr><font SIZE="-1">HTTP</font>&nbsp;<wbr>3xx is coded cyan<br />
-&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr><font SIZE="-1">HTTP</font>&nbsp;<wbr>4xx is coded magenta<br />
-&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr><font SIZE="-1">HTTP</font>&nbsp;<wbr>5xx is coded red<br />
-&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr><font SIZE="-1">HTTP</font>&nbsp;<wbr>cached is coded black </p>
-<p> <font SIZE="-1">NOTE:</font> You can turn off color in siege.conf like this: &#8216;color = off&#8217;</p>
+<p> By default <tt>siege</tt>&#8216;s verbose output is displayed in a color-coded style.<br/>
+&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>HTTP&nbsp;<wbr>2xx is coded blue<br/>
+&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>HTTP&nbsp;<wbr>3xx is coded cyan<br/>
+&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>HTTP&nbsp;<wbr>4xx is coded magenta<br/>
+&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>HTTP&nbsp;<wbr>5xx is coded red<br/>
+&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>HTTP&nbsp;<wbr>cached is coded black </p>
+<p> NOTE: You can turn off color in siege.conf like this: &#8216;color = off&#8217;</p>
 <dt><code>-q</code>, <code>&#8211;quiet</code></dt>
 <dd> This directive silences <tt>siege</tt>. It is mostly used for scripting and is often used in conjunction with -g/&#8211;get. You can detect the success or failure of the run with its exit code. </dd>
-<p>  siege &#8211;quiet -g www.joedog.org<br />
-  if [ $? -eq 0 ] ;<br />
-  then<br />
+<p>  siege &#8211;quiet -g www.joedog.org<br/>
+  if [ $? -eq 0 ] ;<br/>
+  then<br/>
       echo &#8220;Success&#8221; else echo &#8220;Failure&#8221; fi</p>
-<dt><code>-g </code><font SIZE="-1"><code>URL</code></font>, <code>&#8211;get=URL</code></dt>
-<dd> This option allows you to request a <font SIZE="-1">URL</font> and watch the header transaction. There is a corresponding config file directive that allows you to set the request method for these requests: gmethod = HEAD|GET </dd>
+<dt><code>-g </code><code>URL</code>, <code>&#8211;get=URL</code></dt>
+<dd> This option allows you to request a URL and watch the header transaction. There is a corresponding config file directive that allows you to set the request method for these requests: gmethod = HEAD|GET </dd>
 <pre>
   $ siege -g &quot;<a rel="nofollow" href="https://www.joedog.org/">https://www.joedog.org/</a>&quot;
   HEAD / HTTP/1.0
@@ -67,32 +67,32 @@ siege[options] siege[options]&lt;URL&gt;
   Vary: Accept-Encoding,Cookie
   CF-RAY: 27219407eeff084a-IAD
 </pre>
-<p> <font SIZE="-1">NOTE:</font> It&#8217;s best practice to quote the <font SIZE="-1">URL</font> when it&#8217;s passed to <tt>siege</tt> from the the command-line.</p>
-<dt><code>-c </code><font SIZE="-1"><code>NUM</code></font>, <code>&#8211;concurrent=NUM</code></dt>
+<p> NOTE: It&#8217;s best practice to quote the URL when it&#8217;s passed to <tt>siege</tt> from the the command-line.</p>
+<dt><code>-c </code><code>NUM</code>, <code>&#8211;concurrent=NUM</code></dt>
 <dd> This option allows you to set the concurrent number of users. The total number of users is technically limited to your computer&#8217;s resources. </dd>
 <p> You should not configure more users than your web server is configured to handle. For example, the default apache configuration is capped at 255 threads. If you run siege with -c 1024, then 769 siege users are left waiting for an apache handler. </p>
 <p> For this reason, the default siege configuration is capped at 255 users. You can increase that number inside siege.conf but if you make a mess, then please don&#8217;t complain to us.</p>
-<dt><code>-r </code><font SIZE="-1"><code>NUM</code></font>, <code>&#8211;reps=NUM|once</code></dt>
+<dt><code>-r </code><code>NUM</code>, <code>&#8211;reps=NUM|once</code></dt>
 <dd> This option tells each siege user how times it should run. The value should generally be a number greater than zero but it may be the keyword &#8216;once&#8217;. </dd>
 <p> If &#8211;reps=3 then each siege user will run three times before it exits. However, if &#8211;reps=once, then each user will run through the urls.txt file exactly one time. </p>
 <p> For more information about the urls.txt file, see option -f &lt;file&gt;, &#8211;file=&lt;file&gt;</p>
 <dt><code>-t NUMm</code>, <code>&#8211;time=NUMm</code></dt>
 <dd> This option is similar to &#8211;reps but instead of specifying the number of times each user should run, it specifies the amount of time each should run. </dd>
-<p> The value format is &#8220;NUMm&#8221;, where &#8220;<font SIZE="-1">NUM</font>&#8221; is an amount of time and the &#8220;m&#8221; modifier is either S, M, or H for seconds, minutes and hours. To run <tt>siege</tt> for an hour, you could select any one of the following combinations: -t3600S, -t60M, -t1H. The modifier is not case sensitive, but it does require no space between the number and itself.</p>
-<dt><code>-d </code><font SIZE="-1"><code>NUM</code></font>, <code>&#8211;delay=NUM</code></dt>
-<dd> This option instructs <tt>siege</tt> how long to delay between each page request. The value <font SIZE="-1">NUM</font> represents the number of seconds between each one. This number can be a decimal value. In fact the default is half a second (&#8211;delay=0.5). </dd>
-<p> The time between delay requests is <font SIZE="-1">NOT</font> applied toward the transaction time. If two 0.1 second transactions have a 2 second delay between them, their average transaction time is run is 0.1 seconds. It is applied toward the total elapsed time. In this scenario, the elapsed time would be 2.2 seconds. </p>
-<p> <font SIZE="-1">NOTE:</font> when the parser is enabled (see: -p/&#8211;parser), there is no delay between the page and its elements, i.e., style sheets, javascripts, etc. The delay is only between page requests.</p>
+<p> The value format is &#8220;NUMm&#8221;, where &#8220;NUM&#8221; is an amount of time and the &#8220;m&#8221; modifier is either S, M, or H for seconds, minutes and hours. To run <tt>siege</tt> for an hour, you could select any one of the following combinations: -t3600S, -t60M, -t1H. The modifier is not case sensitive, but it does require no space between the number and itself.</p>
+<dt><code>-d </code><code>NUM</code>, <code>&#8211;delay=NUM</code></dt>
+<dd> This option instructs <tt>siege</tt> how long to delay between each page request. The value NUM represents the number of seconds between each one. This number can be a decimal value. In fact the default is half a second (&#8211;delay=0.5). </dd>
+<p> The time between delay requests is NOT applied toward the transaction time. If two 0.1 second transactions have a 2 second delay between them, their average transaction time is run is 0.1 seconds. It is applied toward the total elapsed time. In this scenario, the elapsed time would be 2.2 seconds. </p>
+<p> NOTE: when the parser is enabled (see: -p/&#8211;parser), there is no delay between the page and its elements, i.e., style sheets, javascripts, etc. The delay is only between page requests.</p>
 <dt><code>-b</code>, <code>&#8211;benchmark</code></dt>
 <dd> This directive tells siege to go into benchmark mode. This means there is no delay between iterations.</dd>
 <dt><code>-i</code>, <code>&#8211;internet</code></dt>
 <dd> This option sets siege into what we call internet mode. It makes requests from the urls.txt file (see: -f &lt;file&gt; / &#8211;file=&lt;file&gt;) in random order.</dd>
-<dt><code>-f </code><font SIZE="-1"><code>FILE</code></font>, <code>&#8211;file=FILE</code></dt>
+<dt><code>-f </code><code>FILE</code>, <code>&#8211;file=FILE</code></dt>
 <dd> This option tells siege to work with a list of urls inside a text file. The URLs are listed one per line. Unlike URLs that are passed as a command-line argument, the URLs in this file should not be quoted. </dd>
 <p> <tt>siege</tt>&#8216;s urls.txt parser supports comments and variables.</p>
-<dt><code>-R </code><font SIZE="-1"><code>FILE</code></font>, <code>&#8211;rc=FILE</code></dt>
+<dt><code>-R </code><code>FILE</code>, <code>&#8211;rc=FILE</code></dt>
 <dd> This directive allows you to set an alternative resource file. By default, the siegerc file is <tt>$HOME</tt>/.siege/siege.conf With this directive, you can override the default and use an alternative file.</dd>
-<dt><code>-L </code><font SIZE="-1"><code>FILE</code></font>, <code>&#8211;log=FILE</code></dt>
+<dt><code>-L </code><code>FILE</code>, <code>&#8211;log=FILE</code></dt>
 <dd> The default log file is <tt>$prefix</tt>/var/log/siege.log. This directive allows you to specify and alternative file for logging.</dd>
 <dt><code>-m &quot;string&quot;</code>, <code>&#8211;mark=&quot;string&quot;</code></dt>
 <dd> This option allows you to log a message to the log file before your stats are written there. It is generally used to identify the proceding run. You could, for example, mark the file with your command-line parameters so it&#8217;s understood what configuration generated the following data.</dd>
@@ -111,31 +111,31 @@ siege[options] siege[options]&lt;URL&gt;
 <dt><code>-T &quot;text&quot;</code>, <code>&#8211;content-type=&quot;text&quot;</code></dt>
 <dd> This is another set header shortcut. You use this option to override the default Content-type request header.</dd></dl>
 <h2>URL FORMAT</h2>
-<p> <tt>siege</tt> supports <font SIZE="-1">RFC</font> 1738 <font SIZE="-1">URL</font> formats but it takes pains to implement commonly used shortcuts for your convenience. In addition to <font SIZE="-1">RFC</font> 1738 formats, siege introduces its own <font SIZE="-1">URL</font> format to indicate protocol method. </p>
-<p> An <font SIZE="-1">RFC</font> 1738 <font SIZE="-1">URL</font> looks like this:<br />
+<p> <tt>siege</tt> supports RFC 1738 URL formats but it takes pains to implement commonly used shortcuts for your convenience. In addition to RFC 1738 formats, siege introduces its own URL format to indicate protocol method. </p>
+<p> An RFC 1738 URL looks like this:<br/>
 &nbsp;<wbr>&nbsp;<wbr>&lt;scheme&gt;://&lt;username&gt;:&lt;password&gt;@&lt;hostname&gt;:&lt;port&gt;/&lt;path&gt;;&lt;params&gt;?&lt;query&gt;#&lt;frag&gt; </p>
-<p> A <tt>siege</tt> <font SIZE="-1">URL</font> with a method idicator looks like this:<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;scheme&gt;://&lt;username&gt;:&lt;password&gt;@&lt;hostname&gt;:&lt;port&gt;/&lt;path&gt;&nbsp;<wbr><font SIZE="-1">POST</font>&nbsp;<wbr>&lt;query&gt; </p>
-<p> You can also post the contents of a file using the redirect character like this:<br />
-&nbsp;<wbr>&nbsp;<wbr>&lt;scheme&gt;://&lt;username&gt;:&lt;password&gt;@&lt;hostname&gt;:&lt;port&gt;/&lt;path&gt;&nbsp;<wbr><font SIZE="-1">POST</font>&nbsp;<wbr>&lt;/home/jeff/haha.txt </p>
-<p> Here&#8217;s two examples with the <tt>siege</tt> method indicator:<br />
-&nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="http://www.joedog.org/">http://www.joedog.org/</a>&nbsp;<wbr><font SIZE="-1">POST</font>&nbsp;<wbr>haha=papa&amp;dada=mama<br />
-&nbsp;<wbr>&nbsp;<wbr><a href="ftp://ftp.armstrong.com/">ftp://ftp.armstrong.com/</a>&nbsp;<wbr><font SIZE="-1">PUT</font>&nbsp;<wbr>&lt;/home/jdfulmer/etc/tests/bbc.jpg </p>
-<p> <font SIZE="-1">NOTE:</font> If you set URLs with method indicators at the command-line, then you <font SIZE="-1">MUST</font> quote the thing or your shell will treat it like three separate arguments. If the <font SIZE="-1">URL</font> is in a urls.txt file, then you shouldn&#8217;t quote it. </p>
-<p> As mentioned above, <tt>siege</tt> goes to great lengths to allow commonly used shortcuts that you&#8217;re used to from most browser implementations. It treats many parts of the 1738 <font SIZE="-1">URL</font> as optional. In this example, the parts in brackets are optional:<br />
+<p> A <tt>siege</tt> URL with a method idicator looks like this:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;scheme&gt;://&lt;username&gt;:&lt;password&gt;@&lt;hostname&gt;:&lt;port&gt;/&lt;path&gt;&nbsp;<wbr>POST&nbsp;<wbr>&lt;query&gt; </p>
+<p> You can also post the contents of a file using the redirect character like this:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&lt;scheme&gt;://&lt;username&gt;:&lt;password&gt;@&lt;hostname&gt;:&lt;port&gt;/&lt;path&gt;&nbsp;<wbr>POST&nbsp;<wbr>&lt;/home/jeff/haha.txt </p>
+<p> Here&#8217;s two examples with the <tt>siege</tt> method indicator:<br/>
+&nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="http://www.joedog.org/">http://www.joedog.org/</a>&nbsp;<wbr>POST&nbsp;<wbr>haha=papa&amp;dada=mama<br/>
+&nbsp;<wbr>&nbsp;<wbr><a href="ftp://ftp.armstrong.com/">ftp://ftp.armstrong.com/</a>&nbsp;<wbr>PUT&nbsp;<wbr>&lt;/home/jdfulmer/etc/tests/bbc.jpg </p>
+<p> NOTE: If you set URLs with method indicators at the command-line, then you MUST quote the thing or your shell will treat it like three separate arguments. If the URL is in a urls.txt file, then you shouldn&#8217;t quote it. </p>
+<p> As mentioned above, <tt>siege</tt> goes to great lengths to allow commonly used shortcuts that you&#8217;re used to from most browser implementations. It treats many parts of the 1738 URL as optional. In this example, the parts in brackets are optional:<br/>
 &nbsp;<wbr>&nbsp;<wbr>[<a href="scheme://]">scheme://]</a>&nbsp;<wbr>host.domain.xxx&nbsp;<wbr>[:port]&nbsp;<wbr>[/path/file] </p>
-<p> When <tt>siege</tt> receives a host name it builds the <font SIZE="-1">URL</font> with default assumptions. <a rel="nofollow" href="http://www.joedog.org">www.joedog.org</a> becomes <a href="http://www.joedog.org:80/">http://www.joedog.org:80/</a></p>
+<p> When <tt>siege</tt> receives a host name it builds the URL with default assumptions. <a rel="nofollow" href="http://www.joedog.org">www.joedog.org</a> becomes <a href="http://www.joedog.org:80/">http://www.joedog.org:80/</a></p>
 <h2>URLS.txt FILE</h2>
-<p> From the section called Option Syntax above we learn that <tt>siege</tt> can take a <font SIZE="-1">URL</font> as an argument. <tt>siege</tt> -c -r2 <a rel="nofollow" href="http://www.joedog.org">www.joedog.org</a> will request the JoeDog index page twice. But what if you want to hit large portions of the site? <tt>siege</tt> will allow you to fill a file with URLs so that it can run through list. </p>
-<p> The format for the file is one <font SIZE="-1">URL</font> per line:<br />
-&nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="https://www.joedog.org/">https://www.joedog.org/</a><br />
-&nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="https://www.joedog.org/haha/">https://www.joedog.org/haha/</a><br />
-&nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="https://www.joedog.org/haha/">https://www.joedog.org/haha/</a>&nbsp;<wbr><font SIZE="-1">POST</font>&nbsp;<wbr>homer=simpson&amp;marge=doestoo </p>
-<p> The file also supports UNIX-style commenting:<br />
-&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>Comment looks like this<br />
-&nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="https://www.joedog.org/">https://www.joedog.org/</a><br />
-&nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="https://www.joedog.org/haha/">https://www.joedog.org/haha/</a><br />
-&nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="https://www.joedog.org/haha/">https://www.joedog.org/haha/</a>&nbsp;<wbr><font SIZE="-1">POST</font>&nbsp;<wbr>homer=simpson&amp;marge=doestoo </p>
+<p> From the section called Option Syntax above we learn that <tt>siege</tt> can take a URL as an argument. <tt>siege</tt> -c -r2 <a rel="nofollow" href="http://www.joedog.org">www.joedog.org</a> will request the JoeDog index page twice. But what if you want to hit large portions of the site? <tt>siege</tt> will allow you to fill a file with URLs so that it can run through list. </p>
+<p> The format for the file is one URL per line:<br/>
+&nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="https://www.joedog.org/">https://www.joedog.org/</a><br/>
+&nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="https://www.joedog.org/haha/">https://www.joedog.org/haha/</a><br/>
+&nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="https://www.joedog.org/haha/">https://www.joedog.org/haha/</a>&nbsp;<wbr>POST&nbsp;<wbr>homer=simpson&amp;marge=doestoo </p>
+<p> The file also supports UNIX-style commenting:<br/>
+&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>Comment looks like this<br/>
+&nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="https://www.joedog.org/">https://www.joedog.org/</a><br/>
+&nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="https://www.joedog.org/haha/">https://www.joedog.org/haha/</a><br/>
+&nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="https://www.joedog.org/haha/">https://www.joedog.org/haha/</a>&nbsp;<wbr>POST&nbsp;<wbr>homer=simpson&amp;marge=doestoo </p>
 <p> It supports shell-style variable declaration and references. This is convenient if you want to run the same test on two different tiers or two different shemes: </p>
 <pre>
   SCHEME=https
@@ -144,7 +144,7 @@ siege[options] siege[options]&lt;URL&gt;
   $(SCHEME)://$(HOST)/haha/
   $(SCHEME)://$(HOST)/haha/ POST homer=simpson&amp;marge=doestoo
 </pre>
-<p> You can tell siege about this file with the -f/&#8211;file option:<br />
+<p> You can tell siege about this file with the -f/&#8211;file option:<br/>
 &nbsp;<wbr>&nbsp;<wbr>siege -c1 -r50 -f&nbsp;<wbr>/home/jeff/urls.txt</p>
 <h2>PERFORMANCE STATISTICS</h2>
 <p> When its run is complete, siege will gather performance data from all its clients and summarize them after the run. (You can also choose to log these numbers). The command-line output is modeled after Lincoln Stein&#8217;s torture.pl script: </p>
@@ -191,11 +191,11 @@ Transactions : 2000 hits
 <p> <tt>Jeffrey Fulmer, et al.</tt> &lt;jeff [at] joedog.org&gt; is the primary author of <tt>siege</tt>. Numerous people throughout the globe also contributed to this program. Their contributions are noted in the source code ChangeLog</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright <tt></tt> by <tt>Jeffrey Fulmer, et al.</tt> &lt;jeff [at] joedog.org&gt; </p>
-<p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
-<p> This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT</font> <font SIZE="-1">ANY</font> <font SIZE="-1">WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS</font> <font SIZE="-1">FOR</font> A <font SIZE="-1">PARTICULAR</font> <font SIZE="-1">PURPOSE</font>. See the <font SIZE="-1">GNU</font> General Public License for more details. </p>
-<p> You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, <font SIZE="-1">MA</font> 02139, <font SIZE="-1">USA</font>.</p>
+<p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
+<p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. </p>
+<p> You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.</p>
 <h2>AVAILABILITY</h2>
-<p> The most recent released version of <tt>siege</tt> is available by <font SIZE="-1">HTTP</font> download:<br />
+<p> The most recent released version of <tt>siege</tt> is available by HTTP download:<br/>
 &nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="http://download.joedog.org/pub/siege">http://download.joedog.org/pub/siege</a></p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-siege-config/">siege.config</a></i>(1) <i><a href="/docs/linux/man/1-bombardment/">bombardment</a></i>(1) <i><a href="/docs/linux/man/1-siege2csv/">siege2csv</a></i>(1) </p>

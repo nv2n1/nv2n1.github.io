@@ -235,9 +235,9 @@ sox[global - options][format - options] infile1
 <p> For all combining methods, input file volume adjustments can be made manually using the <code>-v</code> option (below) which can be given for one or more input files. If it is given for only some of the input files then the others receive no volume adjustment. In some circumstances, automatic volume adjustments may be applied (see below). </p>
 <p> The <code>-V</code> option (below) can be used to show the input file volume adjustments that have been selected (either manually or automatically). </p>
 <p> There are some special considerations that need to made when mixing input files: </p>
-<p> Unlike the other methods, `mix&#8217; combining has the potential to cause clipping in the combiner if no balancing is performed. In this case, if manual volume adjustments are not given, SoX will try to ensure that clipping does not occur by automatically adjusting the volume (amplitude) of each input signal by a factor of &sup1;/<font SIZE="-2">n</font>, where n is the number of input files. If this results in audio that is too quiet or otherwise unbalanced then the input file volumes can be set manually as described above. Using the <code>norm</code> effect on the mix is another alternative. </p>
+<p> Unlike the other methods, `mix&#8217; combining has the potential to cause clipping in the combiner if no balancing is performed. In this case, if manual volume adjustments are not given, SoX will try to ensure that clipping does not occur by automatically adjusting the volume (amplitude) of each input signal by a factor of &sup1;/n, where n is the number of input files. If this results in audio that is too quiet or otherwise unbalanced then the input file volumes can be set manually as described above. Using the <code>norm</code> effect on the mix is another alternative. </p>
 <p> If mixed audio seems loud enough at some points but too quiet in others then dynamic range compression should be applied to correct this &#8211; see the <code>compand</code> effect. </p>
-<p> With the `mix-power&#8217; combine method, the mixed volume is approximately equal to that of one of the input signals. This is achieved by balancing using a factor of &sup1;/<font SIZE="-2">srn</font> instead of &sup1;/<font SIZE="-2">n</font>. Note that this balancing factor does not guarantee that clipping will not occur, but the number of clips will usually be low and the resultant distortion is generally imperceptible.</p>
+<p> With the `mix-power&#8217; combine method, the mixed volume is approximately equal to that of one of the input signals. This is achieved by balancing using a factor of &sup1;/srn instead of &sup1;/n. Note that this balancing factor does not guarantee that clipping will not occur, but the number of clips will usually be low and the resultant distortion is generally imperceptible.</p>
 <h3>Output Files</h3>
 <p> SoX&#8217;s default behaviour is to take one or more input files and write them to a single output file. </p>
 <p> This behaviour can be changed by specifying the pseudo-effect `newfile&#8217; within the effects list. SoX will then enter multiple output mode. </p>
@@ -593,8 +593,8 @@ sox[global - options][format - options] infile1
 </pre>
 <p> It can also be used to override the type implied by an input filename extension, but if overriding with a type that has a header, SoX will exit with an appropriate error message if such a header is not actually present. </p>
 <p> See <code><a href="/docs/linux/man/7-soxformat/">soxformat</a></code>(7) for a list of supported file types.</dl>
-<p> <code>-L</code>, <code>&#8211;endian little</code><br />
- <code>-B</code>, <code>&#8211;endian big</code><br />
+<p> <code>-L</code>, <code>&#8211;endian little</code><br/>
+ <code>-B</code>, <code>&#8211;endian big</code><br/>
  <code>-x</code>, <code>&#8211;endian swap</code> </p>
 <dl>
 <dt>&nbsp;<wbr></dt>
@@ -754,7 +754,7 @@ sox[global - options][format - options] infile1
          60 0.32 0.4 2.3 -t 40 0.3 0.3 1.3 -s
 </pre>
 <dt><code>compand </code><i>attack1</i><code>,</code><i>decay1</i>{<code>,</code><i>attack2</i><code>,</code><i>decay2</i>}</dt>
-<dd> [<i>soft-knee-dB</i><code>:</code>]<i>in-dB1</i>[<code>,</code><i>out-dB1</i>]{<code>,</code><i>in-dB2</i><code>,</code><i>out-dB2</i>}<br />
+<dd> [<i>soft-knee-dB</i><code>:</code>]<i>in-dB1</i>[<code>,</code><i>out-dB1</i>]{<code>,</code><i>in-dB2</i><code>,</code><i>out-dB2</i>}<br/>
  [<i>gain</i> [<i>initial-volume-dB</i> [<i>delay</i>]]] </dd>
 <p> Compand (compress or expand) the dynamic range of the audio. </p>
 <p> The <i>attack</i> and <i>decay</i> parameters (in seconds) determine the time over which the instantaneous level of the input signal is averaged to determine its volume; attacks refer to increases in volume and decays refer to decreases. For most situations, the attack time (response to the music getting louder) should be shorter than the decay time because the human ear is more sensitive to sudden loud music than sudden soft music. Where more than one pair of attack/decay parameters are specified, each input channel is companded separately and the number of pairs must agree with the number of input channels. Typical values are <code>0.3,0.8</code> seconds. </p>
@@ -838,7 +838,7 @@ sox[global - options][format - options] infile1
         delay 0 .05 .1 .15 .2 .25 remix - fade 0 4 .1 norm -1
 </pre>
 <dt><code>dither</code> [<code>-S</code>|<code>-s</code>|<code>-f </code><i>filter</i>] [<code>-a</code>] [<code>-p </code><i>precision</i>]</dt>
-<dd> Apply dithering to the audio. Dithering deliberately adds a small amount of noise to the signal in order to mask audible quantization effects that can occur if the output sample size is less than 24 bits. With no options, this effect will add triangular (TPDF) white noise. Noise-shaping (only for certain sample rates) can be selected with <code>-s</code>. With the <code>-f</code> option, it is possible to select a particular noise-shaping filter from the following list: lipshitz, f-weighted, modified-e-weighted, improved-e-weighted, gesemann, shibata, low-shibata, high-shibata. Note that most filter types are available only with 44100Hz sample rate. The filter types are distinguished by the following properties: audibility of noise, level of (inaudible, but in some circumstances, otherwise problematic) shaped high frequency noise, and processing speed.<br />
+<dd> Apply dithering to the audio. Dithering deliberately adds a small amount of noise to the signal in order to mask audible quantization effects that can occur if the output sample size is less than 24 bits. With no options, this effect will add triangular (TPDF) white noise. Noise-shaping (only for certain sample rates) can be selected with <code>-s</code>. With the <code>-f</code> option, it is possible to select a particular noise-shaping filter from the following list: lipshitz, f-weighted, modified-e-weighted, improved-e-weighted, gesemann, shibata, low-shibata, high-shibata. Note that most filter types are available only with 44100Hz sample rate. The filter types are distinguished by the following properties: audibility of noise, level of (inaudible, but in some circumstances, otherwise problematic) shaped high frequency noise, and processing speed.<br/>
  See <a rel="nofollow" href="http://sox.sourceforge.net/SoX/NoiseShaping">http://sox.sourceforge.net/SoX/NoiseShaping</a> for graphs of the different noise-shaping curves. </dd>
 <p> The <code>-S</code> option selects a slightly `sloped&#8217; TPDF, biased towards higher frequencies. It can be used at any sampling rate but below ~~22k, plain TPDF is probably better, and above ~~ 37k, noise-shaped is probably better. </p>
 <p> The <code>-a</code> option enables a mode where dithering (and noise-shaping if applicable) are automatically enabled only when needed. The most likely use for this is when applying fade in or out to an already dithered file, so that the redithering applies only to the faded portions. However, auto dithering is not fool-proof, so the fades should be carefully checked for any noise modulation; if this occurs, then either re-dither the whole file, or use <code>trim</code>, <code>fade</code>, and concatencate. </p>
@@ -1040,7 +1040,7 @@ sox[global - options][format - options] infile1
 <dt><code>lowpass</code> [<code>-1</code>|<code>-2</code>] <i>frequency</i>[<code>k</code>] [width[<code>q</code>|<code>o</code>|<code>h</code>|<code>k</code>]]</dt>
 <dd> Apply a low-pass filter. See the description of the <code>highpass</code> effect for details.</dd>
 <dt><code>mcompand</code> &quot;<i>attack1</i><code>,</code><i>decay1</i>{<code>,</code><i>attack2</i><code>,</code><i>decay2</i>}</dt>
-<dd> [<i>soft-knee-dB</i><code>:</code>]<i>in-dB1</i>[<code>,</code><i>out-dB1</i>]{<code>,</code><i>in-dB2</i><code>,</code><i>out-dB2</i>}<br />
+<dd> [<i>soft-knee-dB</i><code>:</code>]<i>in-dB1</i>[<code>,</code><i>out-dB1</i>]{<code>,</code><i>in-dB2</i><code>,</code><i>out-dB2</i>}<br/>
  [<i>gain</i> [<i>initial-volume-dB</i> [<i>delay</i>]]]&quot; {<i>crossover-freq</i>[<code>k</code>] &quot;attack1,&#8230;&quot;} </dd>
 <p> The multi-band compander is similar to the single-band compander but the audio is first divided into bands using Linkwitz-Riley cross-over filters and a separately specifiable compander run on each band. See the <code>compand</code> effect for the definition of its parameters. Compand parameters are specified between double quotes and the crossover frequency for that band is given by <i>crossover-freq</i>; these can be repeated to create multiple bands. </p>
 <p> For example, the following (one long) command shows how multi-band companding is typically used in FM radio: </p>
@@ -1250,7 +1250,7 @@ sox[global - options][format - options] infile1
    sox input.wav output.wav remix -
 </pre>
 <p> performs a mix-down of all input channels to mono. </p>
-<p> By default, where an output channel is mixed from multiple (n) input channels, each input channel will be scaled by a factor of &sup1;/<font SIZE="-2">n</font>. Custom mixing volumes can be set by following a given input channel or range of input channels with a <i>vol-spec</i> (volume specification). This is one of the letters <code>p</code>, <code>i</code>, or <code>v</code>, followed by a volume number, the meaning of which depends on the given letter and is defined as follows: <center></p>
+<p> By default, where an output channel is mixed from multiple (n) input channels, each input channel will be scaled by a factor of &sup1;/n. Custom mixing volumes can be set by following a given input channel or range of input channels with a <i>vol-spec</i> (volume specification). This is one of the letters <code>p</code>, <code>i</code>, or <code>v</code>, followed by a volume number, the meaning of which depends on the given letter and is defined as follows: <center></p>
 <table>
 <tr VALIGN=top>
 <td><i>Letter</i></td>
@@ -1278,7 +1278,7 @@ sox[global - options][format - options] infile1
 </tr>
 </table>
 <p></center> </p>
-<p> If an <i>out-spec</i> includes at least one <i>vol-spec</i> then, by default, &sup1;/<font SIZE="-2">n</font> scaling is not applied to any other channels in the same out-spec (though may be in other out-specs). The -a (automatic) option however, can be given to retain the automatic scaling in this case. For example, </p>
+<p> If an <i>out-spec</i> includes at least one <i>vol-spec</i> then, by default, &sup1;/n scaling is not applied to any other channels in the same out-spec (though may be in other out-specs). The -a (automatic) option however, can be given to retain the automatic scaling in this case. For example, </p>
 <pre>
    sox input.wav output.wav remix 1,2 3,4v0.8
 </pre>
@@ -1297,7 +1297,7 @@ sox[global - options][format - options] infile1
    sox input.wav output.wav remix 1,2i
 </pre>
 <p> is a mono equivalent of the <code>oops</code> effect. </p>
-<p> If the <code>-p</code> option is given, then any automatic &sup1;/<font SIZE="-2">n</font> scaling is replaced by &sup1;/<font SIZE="-2">srn</font> (`power&#8217;) scaling; this gives a louder mix but one that might occasionally clip. <center></p>
+<p> If the <code>-p</code> option is given, then any automatic &sup1;/n scaling is replaced by &sup1;/srn (`power&#8217;) scaling; this gives a louder mix but one that might occasionally clip. <center></p>
 <table>
 <tr VALIGN=top>
 <td ALIGN=center>*&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></td>
@@ -1308,19 +1308,19 @@ sox[global - options][format - options] infile1
 </table>
 <p></center> </p>
 <p> One use of the <code>remix</code> effect is to split an audio file into a set of files, each containing one of the constituent channels (in order to perform subsequent processing on individual audio channels). Where more than a few channels are involved, a script such as the following (Bourne shell script) is useful: </p>
-<p>#!/ bin / sh<br />
-chans =`soxi &#8211; c &#8220;$1&#8243;` while[$chans &#8211; ge 1];<br />
-do<br />
-chans0 =`printf % 02i $chans` #2 digits hence up to 99 chans<br />
-                      out =`echo &#8220;$1&#8221; | sed &#8220;s/\(.*\)\.\(.*\)/\1-$chans0.\2/&#8221;` sox &#8220;$1&#8221;<br />
-                                                                                   &#8220;$out&#8221; remix $chans<br />
-                                                                                       chans =`expr $chans &#8211; 1` done<br />
+<p>#!/ bin / sh<br/>
+chans =`soxi &#8211; c &#8220;$1&#8243;` while[$chans &#8211; ge 1];<br/>
+do<br/>
+chans0 =`printf % 02i $chans` #2 digits hence up to 99 chans<br/>
+                      out =`echo &#8220;$1&#8221; | sed &#8220;s/\(.*\)\.\(.*\)/\1-$chans0.\2/&#8221;` sox &#8220;$1&#8221;<br/>
+                                                                                   &#8220;$out&#8221; remix $chans<br/>
+                                                                                       chans =`expr $chans &#8211; 1` done<br/>
  If a file <i>input.wav</i> containing six audio channels were given, the script would produce six output files: <i>input-01.wav</i>, <i>input-02.wav</i>, &#8230;, <i>input-06.wav</i>. </p>
 <p> See also the <code>swap</code> effect.</p>
 <dt><code>repeat</code> [<i>count</i> (1)]</dt>
 <dd> Repeat the entire audio <i>count</i> times, or once if <i>count</i> is not given. Requires temporary file space to store the audio to be repeated. Note that repeating once yields two copies: the original audio and the repeated audio.</dd>
 <dt><code>reverb</code> [<code>-w</code>|<code>&#8211;wet-only</code>] [<i>reverberance</i> (50%) [<i>HF-damping</i> (50%)</dt>
-<dd> [<i>room-scale</i> (100%) [<i>stereo-depth</i> (100%)<br />
+<dd> [<i>room-scale</i> (100%) [<i>stereo-depth</i> (100%)<br/>
  [<i>pre-delay</i> (0ms) [<i>wet-gain</i> (0dB)]]]]]] </dd>
 <p> Add reverberation to the audio using the `freeverb&#8217; algorithm. A reverberation effect is sometimes desirable for concert halls that are too small or contain so many people that the hall&#8217;s natural reverberance is diminished. Applying a small amount of stereo reverb to a (dry) mono signal will usually make it sound more natural. See [3] for a detailed description of reverberation. </p>
 <p> Note that this effect increases both the volume and the length of the audio, so to prevent clipping in these domains, a typical invocation might be: </p>
@@ -1444,7 +1444,7 @@ chans0 =`printf % 02i $chans` #2 digits hence up to 99 chans<br />
 <dd> Name of the spectrogram output PNG file, default `spectrogram.png&#8217;.</dd></dl>
 </dl>
 <dt>&nbsp;<wbr></dt>
-<dd> <i>Advanced Options:</i><br />
+<dd> <i>Advanced Options:</i><br/>
  In order to process a smaller section of audio without affecting other effects or the output signal (unlike when the <code>trim</code> effect is used), the following options may be used.</dd>
 <dl>
 <dl>
@@ -1567,7 +1567,7 @@ sox part1.wav piece.wav part2.wav &quot;$5&quot; splice \
 <p> cross-fades the files where the point of equal loudness is 3 seconds before the end of f1.wav, i.e. the total length of the cross-fade is 2 &#215; 3 = 6 seconds (Note: the $(&#8230;) notation is POSIX shell).</p>
 <dt><code>stat</code> [<code>-s </code><i>scale</i>] [<code>-rms</code>] [<code>-freq</code>] [<code>-v</code>] [<code>-d</code>]</dt>
 <dd> Display time and frequency domain statistical information about the audio. Audio is passed unmodified through the SoX processing chain. </dd>
-<p> The information is output to the `standard error&#8217; (stderr) stream and is calculated, where <i>n</i> is the duration of the audio in samples, <i>c</i> is the number of audio channels, <i>r</i> is the audio sample rate, and <i>x</i><font SIZE="-2"><i>k</i></font><i></i> represents the PCM value (in the range -1 to +1 by default) of each successive sample in the audio, as follows: <center></p>
+<p> The information is output to the `standard error&#8217; (stderr) stream and is calculated, where <i>n</i> is the duration of the audio in samples, <i>c</i> is the number of audio channels, <i>r</i> is the audio sample rate, and <i>x</i><i>k</i><i></i> represents the PCM value (in the range -1 to +1 by default) of each successive sample in the audio, as follows: <center></p>
 <table>
 <tr VALIGN=top>
 <td><i>Samples read</i></td>
@@ -1589,61 +1589,61 @@ sox part1.wav piece.wav part2.wav &quot;$5&quot; splice \
 </tr>
 <tr VALIGN=top>
 <td><i>Maximum amplitude</i></td>
-<td>max(<i>x</i><font SIZE="-2"><i>k</i></font><i></i>)</td>
+<td>max(<i>x</i><i>k</i><i></i>)</td>
 <td> The maximum sample value in the audio; usually this will be a positive number.
 </td>
 </tr>
 <tr VALIGN=top>
 <td><i>Minimum amplitude</i></td>
-<td>min(<i>x</i><font SIZE="-2"><i>k</i></font><i></i>)</td>
+<td>min(<i>x</i><i>k</i><i></i>)</td>
 <td> The minimum sample value in the audio; usually this will be a negative number.
 </td>
 </tr>
 <tr VALIGN=top>
 <td><i>Midline amplitude</i></td>
-<td>&#189;min(<i>x</i><font SIZE="-2"><i>k</i></font><i></i>)+&#189;max(<i>x</i><font SIZE="-2"><i>k</i></font><i></i>)</td>
+<td>&#189;min(<i>x</i><i>k</i><i></i>)+&#189;max(<i>x</i><i>k</i><i></i>)</td>
 <td>
 </td>
 </tr>
 <tr VALIGN=top>
 <td><i>Mean norm</i></td>
-<td>&sup1;/<font SIZE="-2">n</font>&Sigma;|<i>x</i><font SIZE="-2"><i>k</i></font><i></i>|</td>
+<td>&sup1;/n&Sigma;|<i>x</i><i>k</i><i></i>|</td>
 <td> The average of the absolute value of each sample in the audio.
 </td>
 </tr>
 <tr VALIGN=top>
 <td><i>Mean amplitude</i></td>
-<td>&sup1;/<font SIZE="-2">n</font>&Sigma;<i>x</i><font SIZE="-2"><i>k</i></font><i></i></td>
+<td>&sup1;/n&Sigma;<i>x</i><i>k</i><i></i></td>
 <td> The average of each sample in the audio. If this figure is non-zero, then it indicates the presence of a D.C. offset (which could be removed using the <code>dcshift</code> effect).
 </td>
 </tr>
 <tr VALIGN=top>
 <td><i>RMS amplitude</i></td>
-<td>sr(&sup1;/<font SIZE="-2">n</font>&Sigma;<i>x</i><font SIZE="-2"><i>k</i></font><i></i>&sup2;)</td>
+<td>sr(&sup1;/n&Sigma;<i>x</i><i>k</i><i></i>&sup2;)</td>
 <td> The level of a D.C. signal that would have the same power as the audio&#8217;s average power.
 </td>
 </tr>
 <tr VALIGN=top>
 <td><i>Maximum delta</i></td>
-<td>max(|<i>x</i><font SIZE="-2"><i>k</i></font><i></i>&#8211;<i>x</i><font SIZE="-2"><i>k-1</i></font><i></i>|)</td>
+<td>max(|<i>x</i><i>k</i><i></i>&#8211;<i>x</i><i>k-1</i><i></i>|)</td>
 <td>
 </td>
 </tr>
 <tr VALIGN=top>
 <td><i>Minimum delta</i></td>
-<td>min(|<i>x</i><font SIZE="-2"><i>k</i></font><i></i>&#8211;<i>x</i><font SIZE="-2"><i>k-1</i></font><i></i>|)</td>
+<td>min(|<i>x</i><i>k</i><i></i>&#8211;<i>x</i><i>k-1</i><i></i>|)</td>
 <td>
 </td>
 </tr>
 <tr VALIGN=top>
 <td><i>Mean delta</i></td>
-<td>&sup1;/<font SIZE="-2">n-1</font>&Sigma;|<i>x</i><font SIZE="-2"><i>k</i></font><i></i>&#8211;<i>x</i><font SIZE="-2"><i>k-1</i></font><i></i>|</td>
+<td>&sup1;/n-1&Sigma;|<i>x</i><i>k</i><i></i>&#8211;<i>x</i><i>k-1</i><i></i>|</td>
 <td>
 </td>
 </tr>
 <tr VALIGN=top>
 <td><i>RMS delta</i></td>
-<td>sr(&sup1;/<font SIZE="-2">n-1</font>&Sigma;(<i>x</i><font SIZE="-2"><i>k</i></font><i></i>&#8211;<i>x</i><font SIZE="-2"><i>k-1</i></font><i></i>)&sup2;)</td>
+<td>sr(&sup1;/n-1&Sigma;(<i>x</i><i>k</i><i></i>&#8211;<i>x</i><i>k-1</i><i></i>)&sup2;)</td>
 <td>
 </td>
 </tr>
@@ -1854,7 +1854,7 @@ sox part1.wav piece.wav part2.wav &quot;$5&quot; splice \
    play speech.wav norm vad reverse vad reverse
 </pre>
 <p> to trim from both ends. The use of the <code>norm</code> effect is recommended, but remember that neither <code>reverse</code> nor <code>norm</code> is suitable for use with streamed audio. </p>
-<p> <i>Options:</i><br />
+<p> <i>Options:</i><br/>
  Default values are shown in parenthesis.</p>
 <dl>
 <dl>
@@ -1870,7 +1870,7 @@ sox part1.wav piece.wav part2.wav &quot;$5&quot; splice \
 <dd> The amount of audio (in seconds) to preserve before the trigger point and any found quieter/shorter bursts.</dd></dl>
 </dl>
 <dt>&nbsp;<wbr></dt>
-<dd> <i>Advanced Options:</i><br />
+<dd> <i>Advanced Options:</i><br/>
  These allow fine tuning of the algorithm&#8217;s internal parameters.</dd>
 <dl>
 <dl>
@@ -1976,9 +1976,9 @@ sox part1.wav piece.wav part2.wav &quot;$5&quot; splice \
 <h2>BUGS</h2>
 <p> Please report any bugs found in this version of SoX to the mailing list (sox-users [at] lists.sourceforge.net).</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-soxi/">soxi</a></code>(1), <code><a href="/docs/linux/man/7-soxformat/">soxformat</a></code>(7), <code><a href="/docs/linux/man/3-libsox/">libsox</a></code>(3)<br />
- <code><a href="/docs/linux/man/1-audacity/">audacity</a></code>(1), <code><a href="/docs/linux/man/1-gnuplot/">gnuplot</a></code>(1), <code><a href="/docs/linux/man/1-octave/">octave</a></code>(1), <code><a href="/docs/linux/man/1-wget/">wget</a></code>(1)<br />
- The SoX web site at <a rel="nofollow" href="http://sox.sourceforge.net">http://sox.sourceforge.net</a><br />
+<p> <code><a href="/docs/linux/man/1-soxi/">soxi</a></code>(1), <code><a href="/docs/linux/man/7-soxformat/">soxformat</a></code>(7), <code><a href="/docs/linux/man/3-libsox/">libsox</a></code>(3)<br/>
+ <code><a href="/docs/linux/man/1-audacity/">audacity</a></code>(1), <code><a href="/docs/linux/man/1-gnuplot/">gnuplot</a></code>(1), <code><a href="/docs/linux/man/1-octave/">octave</a></code>(1), <code><a href="/docs/linux/man/1-wget/">wget</a></code>(1)<br/>
+ The SoX web site at <a rel="nofollow" href="http://sox.sourceforge.net">http://sox.sourceforge.net</a><br/>
  SoX scripting examples at <a rel="nofollow" href="http://sox.sourceforge.net/Docs/Scripts">http://sox.sourceforge.net/Docs/Scripts</a></p>
 <h3>References</h3>
 <dl>
@@ -1997,7 +1997,7 @@ sox part1.wav piece.wav part2.wav &quot;$5&quot; splice \
 <dt>[7]</dt>
 <dd> Steve Harris, <i>LADSPA plugins</i>, <a rel="nofollow" href="http://plugin.org.uk">http://plugin.org.uk</a></dd></dl>
 <h2>LICENSE</h2>
-<p> Copyright 1998-2013 Chris Bagwell and SoX Contributors.<br />
+<p> Copyright 1998-2013 Chris Bagwell and SoX Contributors.<br/>
  Copyright 1991 Lance Norskog and Sundry Contributors. </p>
 <p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2, or (at your option) any later version. </p>
 <p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>

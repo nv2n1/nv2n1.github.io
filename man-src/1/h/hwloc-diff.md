@@ -26,16 +26,16 @@ description: "hwloc-diff – Compute differences between two XML topologies"
 <h2>EXAMPLES</h2>
 <p> hwloc-diff&#8217;s operation is best described through several examples. </p>
 <p> Compute the difference between two XML topologies and output it to stdout: </p>
-<p>&nbsp;<wbr>$&nbsp;<wbr>hwloc-diff fourmi023.xml fourmi024.xml<br />
-&nbsp;<wbr>Found 11 differences, exporting to stdout<br />
-&nbsp;<wbr>&lt;?xml version=&quot;1.0&quot;&nbsp;<wbr>encoding=&quot;UTF-8&quot;?&gt;<br />
+<p>&nbsp;<wbr>$&nbsp;<wbr>hwloc-diff fourmi023.xml fourmi024.xml<br/>
+&nbsp;<wbr>Found 11 differences, exporting to stdout<br/>
+&nbsp;<wbr>&lt;?xml version=&quot;1.0&quot;&nbsp;<wbr>encoding=&quot;UTF-8&quot;?&gt;<br/>
 &nbsp;<wbr>&#8230; </p>
 <p> Output the difference to file diff.xml instead: </p>
-<p>&nbsp;<wbr>$&nbsp;<wbr>hwloc-diff fourmi023.xml fourmi024.xml diff.xml<br />
+<p>&nbsp;<wbr>$&nbsp;<wbr>hwloc-diff fourmi023.xml fourmi024.xml diff.xml<br/>
 &nbsp;<wbr>Found 11 differences, exporting to diff.xml </p>
 <p> When the difference is too complex to be represented: </p>
-<p>&nbsp;<wbr>$&nbsp;<wbr>hwloc-diff fourmi023.xml avakas-frontend1.xml<br />
-&nbsp;<wbr>Found 1 differences, including 1 too complex ones.<br />
+<p>&nbsp;<wbr>$&nbsp;<wbr>hwloc-diff fourmi023.xml avakas-frontend1.xml<br/>
+&nbsp;<wbr>Found 1 differences, including 1 too complex ones.<br/>
 &nbsp;<wbr>Cannot export differences to stdout </p>
 <p> Directly compute the difference between two topologies and apply it to another one: </p>
 <p>&nbsp;<wbr>$&nbsp;<wbr>hwloc-diff fourmi023.xml fourmi024.xml | hwloc-patch fourmi025.xml &#8211; </p>

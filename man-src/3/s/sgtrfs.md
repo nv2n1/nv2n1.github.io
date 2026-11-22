@@ -11,7 +11,7 @@ description: "sgtrfs.f –"
 <p> sgtrfs.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>sgtrfs</code> (TRANS, N, NRHS, DL, D, DU, DLF, DF, DUF, DU2, IPIV, B, LDB, X, LDX, FERR, BERR, WORK, IWORK, INFO)<br />
+<p> subroutine <code>sgtrfs</code> (TRANS, N, NRHS, DL, D, DU, DLF, DF, DUF, DU2, IPIV, B, LDB, X, LDX, FERR, BERR, WORK, IWORK, INFO)<br/>
  <i></i><code>SGTRFS</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sgtrfs (characterTRANS, integerN, integerNRHS, real, dimension( * )DL, real, dimension( * )D, real, dimension( * )DU, real, dimension( * )DLF, real, dimension( * )DF, real, dimension( * )DUF, real, dimension( * )DU2, integer, dimension( * )IPIV, real, dimension( ldb, * )B, integerLDB, real, dimension( ldx, * )X, integerLDX, real, dimension( * )FERR, real, dimension( * )BERR, real, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>

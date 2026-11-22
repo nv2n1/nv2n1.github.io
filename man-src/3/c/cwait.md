@@ -12,7 +12,7 @@ description: "cWait – wait a condition variable signal."
 <pre>#include &lt;util/ulocks.h&gt;</pre>
 <pre>NEOERR *cWait(pthread_cond_t *cond, pthread_mutex_t *mutex);</pre>
 <h2>Arguments</h2>
-<p>cond &#8211; condition variable to wait on.<br />
+<p>cond &#8211; condition variable to wait on.<br/>
  mutex &#8211; locked mutex to protect &lt;cond&gt;. </p>
 <h2>Description</h2>
 <p>Waits for a signal on condition variable &lt;cond&gt;. The mutex &lt;mutex&gt; must be locked by the thread. </p>

@@ -63,7 +63,7 @@ description: "mmcli – Control and monitor the ModemManager"
 <p>All options below take a <code>PATH</code> or <code>INDEX</code> argument. If no action is provided, the default information about the modem, bearer, etc. is shown instead. </p>
 <p> The <code>PATH</code> and <code>INDEX</code> are created automatically when the modem is plugged in. They can be found using <code>mmcli -L</code>. This produces something like (for modems only): </p>
 <dl>
-<dd>Found 1 modems:<br />
+<dd>Found 1 modems:<br/>
 &nbsp;<wbr>&nbsp;<wbr>/org/freedesktop/ModemManager1/Modem/<code>4</code></dd></dl>
 <p> In this case, the <code>INDEX</code> is <code>4</code> and the <code>PATH</code> is the entire string above. </p>
 <p> However, for the bearers, SIMs and SMS cases, the <code>PATH</code> is slightly different. The <i>Modem</i> is replaced with the object name in use, like <i>Bearer</i>. For example: </p>
@@ -273,9 +273,9 @@ description: "mmcli – Control and monitor the ModemManager"
 <dd>Show the status of the OMA device management subsystem.</dd>
 <dt><code>&#8211;oma-start-client-initiated-session=[SESSION TYPE]</code></dt>
 <dd>Request to start a client initiated session. </dd>
-<p> The given session type must be one of:<br />
-&nbsp;<wbr>&#8216;client-initiated-device-configure&#8217;<br />
-&nbsp;<wbr>&#8216;client-initiated-prl-update&#8217;<br />
+<p> The given session type must be one of:<br/>
+&nbsp;<wbr>&#8216;client-initiated-device-configure&#8217;<br/>
+&nbsp;<wbr>&#8216;client-initiated-prl-update&#8217;<br/>
 &nbsp;<wbr>&#8216;client-initiated-hands-free-activation&#8217;</p>
 <dt><code>&#8211;oma-accept-network-initiated-session=[SESSION ID]</code></dt>
 <dd>Request to accept a network initiated session.</dd>

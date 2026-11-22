@@ -11,7 +11,7 @@ description: "libssh2_knownhost_writefile – write a collection of known hosts 
 <p> libssh2_knownhost_writefile &#8211; write a collection of known hosts to a file</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>
-<p> int libssh2_knownhost_writefile(LIBSSH2_KNOWNHOSTS *hosts,<br />
+<p> int libssh2_knownhost_writefile(LIBSSH2_KNOWNHOSTS *hosts,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>const char&nbsp;<wbr>*filename, int type);</p>
 <h2>DESCRIPTION</h2>
 <p> Writes all the known hosts to the specified file using the specified file format. </p>

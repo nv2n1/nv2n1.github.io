@@ -41,28 +41,28 @@ description: "rpmrebuild_plugins – is an engine to expand rpmrebuild functiona
 <dl>
 <dt>
 </dt><dd>
- preamble<br />
- conflicts<br />
- obsoletes<br />
- provides<br />
- requires<br />
- description<br />
- files<br />
- triggers<br />
- pre<br />
- post<br />
- preun<br />
- postun<br />
- verifyscript<br />
+ preamble<br/>
+ conflicts<br/>
+ obsoletes<br/>
+ provides<br/>
+ requires<br/>
+ description<br/>
+ files<br/>
+ triggers<br/>
+ pre<br/>
+ post<br/>
+ preun<br/>
+ postun<br/>
+ verifyscript<br/>
  changelog</dd></dl>
 <h2>SPECFILE CONCATENATION</h2>
 <p> Concatenate&quot; create &#8216;full&#8217; specfile from the pieces. It do following: </p>
-<p> add AutoReq / AutoProv tags<br />
- add BuildRoot tag<br />
- add some defines to adjust rpm&#8217;s behaviour.<br />
- double all &#8216;%&#8217; &#8211; it&#8217;ll prevent rpm from attempting expand %something as macro.<br />
- add &#8216;%description&#8217; before description<br />
- add &#8216;%files&#8217; before files<br />
+<p> add AutoReq / AutoProv tags<br/>
+ add BuildRoot tag<br/>
+ add some defines to adjust rpm&#8217;s behaviour.<br/>
+ double all &#8216;%&#8217; &#8211; it&#8217;ll prevent rpm from attempting expand %something as macro.<br/>
+ add &#8216;%description&#8217; before description<br/>
+ add &#8216;%files&#8217; before files<br/>
  add &#8216;%changelog&#8217; before changelog</p>
 <h2>PLUGINS TYPES</h2>
 <p> rpm building (or rebuilding) process has two inputs: specfile and package&#8217;s files under buildroot directory. So, there are two plugins type:</p>
@@ -119,11 +119,11 @@ description: "rpmrebuild_plugins – is an engine to expand rpmrebuild functiona
 <h2>PLUGINS&#8217; MANPAGES FILENAME CONVENTION</h2>
 <p> If you are going to write plugin (and manpage for it) it&#8217;s strongly recommended than manpage&#8217;s file looks like <code>name.1rrp</code> &#8211; this way command <code>&#8216;man -k rrp&#8217;</code> will provide list of all rpmrebuild&#8217;s plugins installed. Please note, that <code>makewhatis</code> should be run before newly installed manpages will be available for <code>&#8216;man -k rrp&#8217; </code></p>
 <h2>AUTHORS</h2>
-<p> Eric Gerbier &lt;gerbier [at] users.sourceforge.net&gt;<br />
+<p> Eric Gerbier &lt;gerbier [at] users.sourceforge.net&gt;<br/>
  Valery Reznic &lt;valery_reznic [at] users.sourceforge.net&gt;</p>
 <dl>
 <dt>See &lt;URL:<a rel="nofollow" href="http://rpmrebuild.sourceforge.net/">http://rpmrebuild.sourceforge.net/</a>&gt;.</dt>
 <dd></dd></dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/8-rpm/">rpm</a>(8), <a href="/docs/linux/man/8-rpmbuild/">rpmbuild</a>(8), <a href="/docs/linux/man/1-rpmrebuild/">rpmrebuild</a>(1), demofiles.plug(1), demo.plug(1), nodoc.plug(1), uniq.plug(1), file2pacDep.plug(1), set_tag.plug(1), unset_tag.plug(1)<br />
+<p> <a href="/docs/linux/man/8-rpm/">rpm</a>(8), <a href="/docs/linux/man/8-rpmbuild/">rpmbuild</a>(8), <a href="/docs/linux/man/1-rpmrebuild/">rpmrebuild</a>(1), demofiles.plug(1), demo.plug(1), nodoc.plug(1), uniq.plug(1), file2pacDep.plug(1), set_tag.plug(1), unset_tag.plug(1)<br/>
 &nbsp;<wbr>&#8216;man -k rrp&#8217;&nbsp;<wbr>for plugins specific manpages </p>

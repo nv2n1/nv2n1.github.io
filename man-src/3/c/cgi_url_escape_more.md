@@ -17,7 +17,7 @@ description: "cgi_url_escape_more – url escape a string"
 NEOERR *cgi_url_escape_more(const char *buf, char **esc, const char *other);
 </code></pre>
 <h2>ARGUMENTS</h2>
-<p> buf &#8211; a 0 terminated string<br />
+<p> buf &#8211; a 0 terminated string<br/>
  other &#8211; a 0 terminated string of characters to escape </p>
 <h2>DESCRIPTION</h2>
 <p> cgi_url_escape_more will do URL escaping on the passed in string, and return a newly allocated string that is escaped. Characters which are escaped include control characters, %, ?, +, space, =, &amp;, /, and &quot; and any characters in other </p>

@@ -9,8 +9,8 @@ description: "std::chrono::time_of_day<Duration>::operatorprecision,std::chrono:
 
 <p>std::chrono::time_of_day&lt;Duration&gt;::operatorprecision,std::chrono::time_of_day&lt;Duration&gt;::to_duration &#8211; std::chrono::time_of_day&lt;Duration&gt;::operatorprecision,std::chrono::time_of_day&lt;Duration&gt;::to_duration</p>
 <h2>Synopsis</h2>
-<p>constexpr explicit operator precision() const noexcept; <code>(1)</code><br />
-constexpr precision to_duration() const noexcept; <code>(2)</code><br />
+<p>constexpr explicit operator precision() const noexcept; <code>(1)</code><br/>
+constexpr precision to_duration() const noexcept; <code>(2)</code><br/>
 Returns the stored duration. </p>
 <h2>Return value</h2>
 <p>The stored duration. </p>

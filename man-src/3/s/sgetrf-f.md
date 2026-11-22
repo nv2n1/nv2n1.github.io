@@ -10,7 +10,7 @@ description: "sgetrf.f –"
 <p>sgetrf.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>sgetrf</code> (M, N, A, LDA, IPIV, INFO)<br />
+<p>subroutine <code>sgetrf</code> (M, N, A, LDA, IPIV, INFO)<br/>
  <i></i><code>SGETRF</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sgetrf (integerM, integerN, real, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, integerINFO)</h3>

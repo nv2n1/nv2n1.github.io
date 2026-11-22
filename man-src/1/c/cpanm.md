@@ -24,7 +24,7 @@ description: "cpanm – get, unpack build and install modules from CPAN"
 <h2>COMMANDS</h2>
 <dl>
 <dt>(arguments)</dt>
-<dd> Command line arguments can be either a module name, distribution file, local file path, <font SIZE="-1">HTTP URL</font> or git repository <font SIZE="-1">URL.</font> Following commands will all work as you expect. </dd>
+<dd> Command line arguments can be either a module name, distribution file, local file path, HTTP URL or git repository URL. Following commands will all work as you expect. </dd>
 <pre>
     cpanm Plack
     cpanm Plack/Request.pm
@@ -34,10 +34,10 @@ description: "cpanm – get, unpack build and install modules from CPAN"
     cpanm <a href="git://github.com/miyagawa/Plack.git">git://github.com/miyagawa/Plack.git</a>
 </pre>
 <p> Additionally, you can use the notation using <tt>&quot;~&quot;</tt> and <tt>&quot;@&quot;</tt> to specify version for a given module. <tt>&quot;~&quot;</tt> specifies the version requirement in the CPAN::Meta::Spec format, while <tt>&quot;@&quot;</tt> pins the exact version, and is a shortcut for <tt>&quot;~&quot;== VERSION&quot;&quot;</tt>. </p>
-<p>cpanm Plack ~1.0000 #1.0000 or later<br />
+<p>cpanm Plack ~1.0000 #1.0000 or later<br/>
                                    cpanm Plack ~&#8221;&gt;= 1.0000, &lt; 2.0000&#8243; #latest of 1.xxxx cpanm Plack[at] 0.9990 #specific version.same as Plack ~&#8221;== 0.9990&#8243;</p>
 <p> The version query including specific version or range will be sent to MetaCPAN to search for previous releases. The query will search for BackPAN archives by default, unless you specify <tt>&quot;--dev&quot;</tt> option, in which case, archived versions will be filtered out. </p>
-<p> For a git repository, you can specify a branch, tag, or commit <font SIZE="-1">SHA</font> to build. The default is <tt>&quot;master&quot;</tt> </p>
+<p> For a git repository, you can specify a branch, tag, or commit SHA to build. The default is <tt>&quot;master&quot;</tt> </p>
 <pre>
     cpanm <a href="git://github.com/miyagawa/Plack.git@1.0000">git://github.com/miyagawa/Plack.git@1.0000</a>        # tag
     cpanm <a href="git://github.com/miyagawa/Plack.git@devel">git://github.com/miyagawa/Plack.git@devel</a>         # branch
@@ -59,9 +59,9 @@ description: "cpanm – get, unpack build and install modules from CPAN"
 <dt>&#8211;look</dt>
 <dd> Download and unpack the distribution and then open the directory with your shell. Handy to poke around the source code or do manual testing.</dd>
 <dt>-U, &#8211;uninstall</dt>
-<dd> <font SIZE="-1"><code>EXPERIMENTAL</code></font>: Uninstalls the modules. Will remove the distribution files from your library path using the <tt>&quot;.packlist&quot;</tt> file. </dd>
+<dd> <code>EXPERIMENTAL</code>: Uninstalls the modules. Will remove the distribution files from your library path using the <tt>&quot;.packlist&quot;</tt> file. </dd>
 <p> When used with <tt>&quot;-l&quot;</tt> or <tt>&quot;-L&quot;</tt>, only the files under the local::lib directory will be removed. </p>
-<p> <font SIZE="-1"><code>NOTE</code></font>: If you have the &#8220;dual-life&#8221; module in multiple locations (i.e. <tt>&quot;site_perl&quot;</tt> and <tt>&quot;perl&quot;</tt> library path, with perl 5.12 or later), only the files in <tt>&quot;site_perl&quot;</tt> will be deleted. </p>
+<p> <code>NOTE</code>: If you have the &#8220;dual-life&#8221; module in multiple locations (i.e. <tt>&quot;site_perl&quot;</tt> and <tt>&quot;perl&quot;</tt> library path, with perl 5.12 or later), only the files in <tt>&quot;site_perl&quot;</tt> will be deleted. </p>
 <p> If the distribution has bin scripts and man, they will be kept in case the core installation still references that, although there&#8217;s no guarantee that the script will continue working as expected with the older version of .pm files.</p>
 <dt>-h, &#8211;help</dt>
 <dd> Displays the help message.</dd>
@@ -100,27 +100,27 @@ description: "cpanm – get, unpack build and install modules from CPAN"
 <dt>&#8211;self-contained</dt>
 <dd> When examining the dependencies, assume no non-core modules are installed on the system. Handy if you want to bundle application dependencies in one directory so you can distribute to other machines.</dd>
 <dt>&#8211;mirror</dt>
-<dd> Specifies the base <font SIZE="-1">URL</font> for the <font SIZE="-1">CPAN</font> mirror to use, such as <tt>&quot;<a rel="nofollow" href="http://cpan.cpantesters.org/">http://cpan.cpantesters.org/</a>&quot;</tt> (you can omit the trailing slash). You can specify multiple mirror URLs by repeating the command line option. </dd>
-<p> You can use a local directory that has a <font SIZE="-1">CPAN</font> mirror structure (created by tools such as OrePAN or Pinto) by using a special <font SIZE="-1">URL</font> scheme <tt>&quot;file://&quot;</tt>. If the given <font SIZE="-1">URL</font> begins with `/` (without any scheme), it is considered as a file scheme as well. </p>
+<dd> Specifies the base URL for the CPAN mirror to use, such as <tt>&quot;<a rel="nofollow" href="http://cpan.cpantesters.org/">http://cpan.cpantesters.org/</a>&quot;</tt> (you can omit the trailing slash). You can specify multiple mirror URLs by repeating the command line option. </dd>
+<p> You can use a local directory that has a CPAN mirror structure (created by tools such as OrePAN or Pinto) by using a special URL scheme <tt>&quot;file://&quot;</tt>. If the given URL begins with `/` (without any scheme), it is considered as a file scheme as well. </p>
 <pre>
   cpanm --mirror file:///path/to/mirror
   cpanm --mirror ~/minicpan      # Because shell expands ~ to /home/user
 </pre>
 <p> Defaults to <tt>&quot;<a rel="nofollow" href="http://www.cpan.org/">http://www.cpan.org/</a>&quot;</tt>.</p>
 <dt>&#8211;mirror-only</dt>
-<dd> Download the mirror&#8217;s 02packages.details.txt.gz index file instead of querying the <font SIZE="-1">CPAN</font> Meta <font SIZE="-1">DB.</font> This will also effectively opt out sending your local perl versions to backend database servers such as <font SIZE="-1">CPAN</font> Meta <font SIZE="-1">DB</font> and MetaCPAN. </dd>
-<p> Select this option if you are using a local mirror of <font SIZE="-1">CPAN,</font> such as minicpan when you&#8217;re offline, or your own <font SIZE="-1">CPAN</font> index (a.k.a darkpan). </p>
+<dd> Download the mirror&#8217;s 02packages.details.txt.gz index file instead of querying the CPAN Meta DB. This will also effectively opt out sending your local perl versions to backend database servers such as CPAN Meta DB and MetaCPAN. </dd>
+<p> Select this option if you are using a local mirror of CPAN, such as minicpan when you&#8217;re offline, or your own CPAN index (a.k.a darkpan). </p>
 <p> <code>Tip:</code> It might be useful if you name these mirror options with your shell aliases, like: </p>
 <pre><code>
 alias minicpanm = 'cpanm --mirror ~/minicpan --mirror-only' alias darkpan = 'cpanm --mirror http://mycompany.example.com/DPAN --mirror-only'
 </code></pre>
 <dt>&#8211;mirror-index</dt>
-<dd> <font SIZE="-1"><code>EXPERIMENTAL</code></font>: Specifies the file path to <tt>&quot;02packages.details.txt&quot;</tt> for module search index.</dd>
+<dd> <code>EXPERIMENTAL</code>: Specifies the file path to <tt>&quot;02packages.details.txt&quot;</tt> for module search index.</dd>
 <dt>&#8211;prompt</dt>
 <dd> Prompts when a test fails so that you can skip, force install, retry or look in the shell to see what&#8217;s going wrong. It also prompts when one of the dependency failed if you want to proceed the installation. </dd>
 <p> Defaults to false, and you can say <tt>&quot;--no-prompt&quot;</tt> to override if it&#8217;s set in the default options in <tt>&quot;PERL_CPANM_OPT&quot;</tt>.</p>
 <dt>&#8211;dev</dt>
-<dd> <font SIZE="-1"><code>EXPERIMENTAL</code></font>: search for a newer developer release as well. Defaults to false.</dd>
+<dd> <code>EXPERIMENTAL</code>: search for a newer developer release as well. Defaults to false.</dd>
 <dt>&#8211;reinstall</dt>
 <dd> cpanm, when given a module name in the command line (i.e. <tt>&quot;cpanm Plack&quot;</tt>), checks the locally installed version first and skips if it is already installed. This option makes it skip the check, so: </dd>
 <pre>
@@ -132,14 +132,14 @@ alias minicpanm = 'cpanm --mirror ~/minicpan --mirror-only' alias darkpan = 'cpa
 <dd> Makes the configuration (such as <tt>&quot;Makefile.PL&quot;</tt> and <tt>&quot;Build.PL&quot;</tt>) interactive, so you can answer questions in the distribution that requires custom configuration or Task:: distributions. </dd>
 <p> Defaults to false, and you can say <tt>&quot;--no-interactive&quot;</tt> to override when it&#8217;s set in the default options in <tt>&quot;PERL_CPANM_OPT&quot;</tt>.</p>
 <dt>&#8211;pp, &#8211;pureperl</dt>
-<dd> Prefer Pure perl build of modules by setting <tt>&quot;PUREPERL_ONLY=1&quot;</tt> for MakeMaker and <tt>&quot;--pureperl-only&quot;</tt> for Build.PL based distributions. Note that not all of the <font SIZE="-1">CPAN</font> modules support this convention yet.</dd>
+<dd> Prefer Pure perl build of modules by setting <tt>&quot;PUREPERL_ONLY=1&quot;</tt> for MakeMaker and <tt>&quot;--pureperl-only&quot;</tt> for Build.PL based distributions. Note that not all of the CPAN modules support this convention yet.</dd>
 <dt>&#8211;with-recommends, &#8211;with-suggests</dt>
-<dd> <font SIZE="-1"><code>EXPERIMENTAL</code></font>: Installs dependencies declared as <tt>&quot;recommends&quot;</tt> and <tt>&quot;suggests&quot;</tt> respectively, per <font SIZE="-1">META</font> spec. When these dependencies fail to install, cpanm continues the installation, since they&#8217;re just recommendation/suggestion. </dd>
-<p> Enabling this could potentially make a circular dependency for a few modules on <font SIZE="-1">CPAN,</font> when <tt>&quot;recommends&quot;</tt> adds a module that <tt>&quot;recommends&quot;</tt> back the module in return. </p>
+<dd> <code>EXPERIMENTAL</code>: Installs dependencies declared as <tt>&quot;recommends&quot;</tt> and <tt>&quot;suggests&quot;</tt> respectively, per META spec. When these dependencies fail to install, cpanm continues the installation, since they&#8217;re just recommendation/suggestion. </dd>
+<p> Enabling this could potentially make a circular dependency for a few modules on CPAN, when <tt>&quot;recommends&quot;</tt> adds a module that <tt>&quot;recommends&quot;</tt> back the module in return. </p>
 <p> There&#8217;s also <tt>&quot;--without-recommend&quot;</tt> and <tt>&quot;--without-suggests&quot;</tt> to override the default decision made earlier in <tt>&quot;PERL_CPANM_OPT&quot;</tt>. </p>
 <p> Defaults to false for both.</p>
 <dt>&#8211;with-feature, &#8211;without-feature, &#8211;with-all-features</dt>
-<dd> <font SIZE="-1"><code>EXPERIMENTAL</code></font>: Specifies the feature to enable, if a module supports optional features per <font SIZE="-1">META</font> spec 2.0. </dd>
+<dd> <code>EXPERIMENTAL</code>: Specifies the feature to enable, if a module supports optional features per META spec 2.0. </dd>
 <pre>
     cpanm --with-feature=opt_csv Spreadsheet::Read
 </pre>
@@ -148,7 +148,7 @@ alias minicpanm = 'cpanm --mirror ~/minicpan --mirror-only' alias darkpan = 'cpa
 <dt>&#8211;configure-timeout, &#8211;build-timeout, &#8211;test-timeout</dt>
 <dd> Specify the timeout length (in seconds) to wait for the configure, build and test process. Current default values are: 60 for configure, 3600 for build and 1800 for test.</dd>
 <dt>&#8211;configure-args, &#8211;build-args, &#8211;test-args, &#8211;install-args</dt>
-<dd> <font SIZE="-1"><code>EXPERIMENTAL</code></font>: Pass arguments for configure/build/test/install commands respectively, for a given module to install. </dd>
+<dd> <code>EXPERIMENTAL</code>: Pass arguments for configure/build/test/install commands respectively, for a given module to install. </dd>
 <pre>
     cpanm DBD::mysql --configure-args=&quot;--cflags=... --libs=...&quot;
 </pre>
@@ -168,7 +168,7 @@ alias minicpanm = 'cpanm --mirror ~/minicpan --mirror-only' alias darkpan = 'cpa
 <dt>tree</dt>
 <dd> Displays the tree in a plain text format. This is the default value.</dd>
 <dt>json, yaml</dt>
-<dd> Outputs the tree in a <font SIZE="-1">JSON</font> or <font SIZE="-1">YAML</font> format. <font SIZE="-1">JSON</font> and <font SIZE="-1">YAML</font> modules need to be installed respectively. The output tree is represented as a recursive tuple of: </dd>
+<dd> Outputs the tree in a JSON or YAML format. JSON and YAML modules need to be installed respectively. The output tree is represented as a recursive tuple of: </dd>
 <pre>
   [ distribution, dependencies ]
 </pre>
@@ -187,33 +187,33 @@ alias minicpanm = 'cpanm --mirror ~/minicpan --mirror-only' alias darkpan = 'cpa
 <dl>
 </dl>
 <dt>&#8211;save-dists</dt>
-<dd> Specifies the optional directory path to copy downloaded tarballs in the <font SIZE="-1">CPAN</font> mirror compatible directory structure i.e. <i>authors/id/A/AU/AUTHORS/Foo-Bar-version.tar.gz</i> </dd>
-<p> If the distro tarball did not come from <font SIZE="-1">CPAN,</font> for example from a local file or from GitHub, then it will be saved under <i>vendor/Foo-Bar-version.tar.gz</i>.</p>
+<dd> Specifies the optional directory path to copy downloaded tarballs in the CPAN mirror compatible directory structure i.e. <i>authors/id/A/AU/AUTHORS/Foo-Bar-version.tar.gz</i> </dd>
+<p> If the distro tarball did not come from CPAN, for example from a local file or from GitHub, then it will be saved under <i>vendor/Foo-Bar-version.tar.gz</i>.</p>
 <dt>&#8211;uninst-shadows</dt>
-<dd> Uninstalls the shadow files of the distribution that you&#8217;re installing. This eliminates the confusion if you&#8217;re trying to install core (dual-life) modules from <font SIZE="-1">CPAN</font> against perl 5.10 or older, or modules that used to be XS-based but switched to pure perl at some version. </dd>
-<p> If you run cpanm as root and use <tt>&quot;INSTALL_BASE&quot;</tt> or equivalent to specify custom installation path, you <font SIZE="-1">SHOULD</font> disable this option so you won&#8217;t accidentally uninstall dual-life modules from the core include path. </p>
+<dd> Uninstalls the shadow files of the distribution that you&#8217;re installing. This eliminates the confusion if you&#8217;re trying to install core (dual-life) modules from CPAN against perl 5.10 or older, or modules that used to be XS-based but switched to pure perl at some version. </dd>
+<p> If you run cpanm as root and use <tt>&quot;INSTALL_BASE&quot;</tt> or equivalent to specify custom installation path, you SHOULD disable this option so you won&#8217;t accidentally uninstall dual-life modules from the core include path. </p>
 <p> Defaults to true if your perl version is smaller than 5.12, and you can disable that with <tt>&quot;--no-uninst-shadows&quot;</tt>. </p>
-<p> <font SIZE="-1"><code>NOTE</code></font>: Since version 1.3000 this flag is turned off by default for perl newer than 5.12, since with 5.12 <tt>@INC</tt> contains site_perl directory <i>before</i> the perl core library path, and uninstalling shadows is not necessary anymore and does more harm by deleting files from the core library path.</p>
+<p> <code>NOTE</code>: Since version 1.3000 this flag is turned off by default for perl newer than 5.12, since with 5.12 <tt>@INC</tt> contains site_perl directory <i>before</i> the perl core library path, and uninstalling shadows is not necessary anymore and does more harm by deleting files from the core library path.</p>
 <dt>&#8211;uninstall, -U</dt>
 <dd> Uninstalls a module from the library path. It finds a packlist for given modules, and removes all the files included in the same distribution. </dd>
 <p> If you enable local::lib, it only removes files from the local::lib directory. </p>
 <p> If you try to uninstall a module in <tt>&quot;perl&quot;</tt> directory (i.e. core module), an error will be thrown. </p>
 <p> A dialog wil be prompted to confirm the files to be deleted. If you pass <tt>&quot;-f&quot;</tt> option as well, the dialog will be skipped and uninstallation will be forced.</p>
 <dt>&#8211;cascade-search</dt>
-<dd> <font SIZE="-1"><code>EXPERIMENTAL</code></font>: Specifies whether to cascade search when you specify multiple mirrors and a mirror doesn&#8217;t have a module or has a lower version of the module than requested. Defaults to false.</dd>
+<dd> <code>EXPERIMENTAL</code>: Specifies whether to cascade search when you specify multiple mirrors and a mirror doesn&#8217;t have a module or has a lower version of the module than requested. Defaults to false.</dd>
 <dt>&#8211;skip-installed</dt>
 <dd> Specifies whether a module given in the command line is skipped if its latest version is already installed. Defaults to true. </dd>
-<p> <font SIZE="-1"><code>NOTE</code></font>: The <tt>&quot;PERL5LIB&quot;</tt> environment variable have to be correctly set for this to work with modules installed using local::lib, unless you always use the <tt>&quot;-l&quot;</tt> option.</p>
+<p> <code>NOTE</code>: The <tt>&quot;PERL5LIB&quot;</tt> environment variable have to be correctly set for this to work with modules installed using local::lib, unless you always use the <tt>&quot;-l&quot;</tt> option.</p>
 <dt>&#8211;skip-satisfied</dt>
-<dd> <font SIZE="-1"><code>EXPERIMENTAL</code></font>: Specifies whether a module (and version) given in the command line is skipped if it&#8217;s already installed. </dd>
+<dd> <code>EXPERIMENTAL</code>: Specifies whether a module (and version) given in the command line is skipped if it&#8217;s already installed. </dd>
 <p> If you run: </p>
 <pre>
   cpanm --skip-satisfied CGI DBI~1.2
 </pre>
-<p> cpanm won&#8217;t install them if you already have <font SIZE="-1">CGI </font>(for whatever versions) or have <font SIZE="-1">DBI</font> with version higher than 1.2. It is similar to <tt>&quot;--skip-installed&quot;</tt> but while <tt>&quot;--skip-installed&quot;</tt> checks if the <i>latest</i> version of <font SIZE="-1">CPAN</font> is installed, <tt>&quot;--skip-satisfied&quot;</tt> checks if a requested version (or not, which means any version) is installed. </p>
+<p> cpanm won&#8217;t install them if you already have CGI (for whatever versions) or have DBI with version higher than 1.2. It is similar to <tt>&quot;--skip-installed&quot;</tt> but while <tt>&quot;--skip-installed&quot;</tt> checks if the <i>latest</i> version of CPAN is installed, <tt>&quot;--skip-satisfied&quot;</tt> checks if a requested version (or not, which means any version) is installed. </p>
 <p> Defaults to false.</p>
 <dt>&#8211;verify</dt>
-<dd> Verify the integrity of distribution files retrieved from <font SIZE="-1">PAUSE</font> using <font SIZE="-1">CHECKSUMS</font> and <font SIZE="-1">SIGNATURES </font>(if found). Defaults to false.</dd>
+<dd> Verify the integrity of distribution files retrieved from PAUSE using CHECKSUMS and SIGNATURES (if found). Defaults to false.</dd>
 <dt>&#8211;report-perl-version</dt>
 <dd> Whether it report the locally installed perl version to the various web server as part of User-Agent. Defaults to true, and you can disable it by using <tt>&quot;--no-report-perl-version&quot;</tt>.</dd>
 <dt>&#8211;auto-cleanup</dt>
@@ -223,12 +223,12 @@ alias minicpanm = 'cpanm --mirror ~/minicpan --mirror-only' alias darkpan = 'cpa
 <dd> Generates man pages for executables (man1) and libraries (man3). </dd>
 <p> Defaults to true (man pages generated) unless <tt>&quot;-L|--local-lib-contained&quot;</tt> option is supplied in which case it&#8217;s set to false. You can disable it with <tt>&quot;--no-man-pages&quot;</tt>.</p>
 <dt>&#8211;lwp</dt>
-<dd> Uses <font SIZE="-1">LWP</font> module to download stuff over <font SIZE="-1">HTTP.</font> Defaults to true, and you can say <tt>&quot;--no-lwp&quot;</tt> to disable using <font SIZE="-1">LWP,</font> when you want to upgrade <font SIZE="-1">LWP</font> from <font SIZE="-1">CPAN</font> on some broken perl systems.</dd>
+<dd> Uses LWP module to download stuff over HTTP. Defaults to true, and you can say <tt>&quot;--no-lwp&quot;</tt> to disable using LWP, when you want to upgrade LWP from CPAN on some broken perl systems.</dd>
 <dt>&#8211;wget</dt>
-<dd> Uses <font SIZE="-1">GNU</font> Wget (if available) to download stuff. Defaults to true, and you can say <tt>&quot;--no-wget&quot;</tt> to disable using Wget (versions of Wget older than 1.9 don&#8217;t support the <tt>&quot;--retry-connrefused&quot;</tt> option used by cpanm).</dd>
+<dd> Uses GNU Wget (if available) to download stuff. Defaults to true, and you can say <tt>&quot;--no-wget&quot;</tt> to disable using Wget (versions of Wget older than 1.9 don&#8217;t support the <tt>&quot;--retry-connrefused&quot;</tt> option used by cpanm).</dd>
 <dt>&#8211;curl</dt>
 <dd> Uses cURL (if available) to download stuff. Defaults to true, and you can say <tt>&quot;--no-curl&quot;</tt> to disable using cURL. </dd>
-<p> Normally with <tt>&quot;--lwp&quot;</tt>, <tt>&quot;--wget&quot;</tt> and <tt>&quot;--curl&quot;</tt> options set to true (which is the default) cpanm tries <font SIZE="-1">LWP</font>, Wget, cURL and HTTP::Tiny (in that order) and uses the first one available.</dl>
+<p> Normally with <tt>&quot;--lwp&quot;</tt>, <tt>&quot;--wget&quot;</tt> and <tt>&quot;--curl&quot;</tt> options set to true (which is the default) cpanm tries LWP, Wget, cURL and HTTP::Tiny (in that order) and uses the first one available.</dl>
 <h2>SEE ALSO</h2>
 <p> App::cpanminus</p>
 <h2>COPYRIGHT</h2>

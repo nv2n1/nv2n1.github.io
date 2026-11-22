@@ -10,7 +10,7 @@ description: "zlacrt.f –"
 <p>zlacrt.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlacrt</code> (N, CX, INCX, CY, INCY, C, S)<br />
+<p>subroutine <code>zlacrt</code> (N, CX, INCX, CY, INCY, C, S)<br/>
  <i></i><code>ZLACRT</code> performs a linear transformation of a pair of complex vectors.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlacrt (integerN, complex*16, dimension( * )CX, integerINCX, complex*16, dimension( * )CY, integerINCY, complex*16C, complex*16S)</h3>

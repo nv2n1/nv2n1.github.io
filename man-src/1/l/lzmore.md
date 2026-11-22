@@ -10,7 +10,7 @@ description: "xzmore, lzmore – view xz or lzma compressed (text) files"
 
 <p> xzmore, lzmore &#8211; view xz or lzma compressed (text) files </p>
 <h2>SYNOPSIS</h2>
-<p> <code>xzmore</code> [<i>file&#8230;</i>]<br />
+<p> <code>xzmore</code> [<i>file&#8230;</i>]<br/>
  <code>lzmore</code> [<i>file&#8230;</i>]</p>
 <h2>DESCRIPTION</h2>
 <p> <code>xzmore</code> is a filter which allows examination of <code><a href="/docs/linux/man/1-xz/">xz</a></code>(1) or <code><a href="/docs/linux/man/1-lzma/">lzma</a></code>(1) compressed text files one screenful at a time on a soft-copy terminal. </p>

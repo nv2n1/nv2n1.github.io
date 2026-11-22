@@ -21,7 +21,7 @@ int unicode_ispunct(unicode_char c);
 int unicode_isspace(unicode_char c);
 int unicode_isupper(unicode_char c);</code></pre>
 <h2>Description</h2>
-<p><code>unicode_category_lookup</code>() looks up the m[blue]<code>unicode character&#8217;s categorization</code>m[]<font SIZE="-2">[1]</font>. <code>unicode_category_lookup</code>() returns a 32 bit value. The value&#8217;s</p>
+<p><code>unicode_category_lookup</code>() looks up the m[blue]<code>unicode character&#8217;s categorization</code>m[][1]. <code>unicode_category_lookup</code>() returns a 32 bit value. The value&#8217;s</p>
 <dd>UNICODE_CATEGORY_1 bits specify the first level of the unicode character&#8217;s category, with UNICODE_CATEGORY_2, UNICODE_CATEGORY_3, and UNICODE_CATEGORY_4 bits specifying the 2nd, 3rd, and 4th level, if given. A value of 0 for each corresponding bit set indicates that no category is specified for this level, for this character; otherwise the possible values are defined in &lt;courier-unicode.h&gt;. </dd>
 <p> The remaining functions implement comparable equivalents of their non-unicode versions in the standard C library, as follows: </p>
 <p> <code>unicode_isalnum</code>()</p>

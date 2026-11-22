@@ -19,20 +19,20 @@ description: "src/antlr3bitset.c –"
 <p> static void <code>antlr3BitsetFree</code> (<code>pANTLR3_BITSET</code> bitset) </p>
 <p> static <code>ANTLR3_BOOLEAN</code> <code>antlr3BitsetIsNil</code> (<code>pANTLR3_BITSET</code> bitset) </p>
 <p> ANTLR3_API <code>pANTLR3_BITSET</code> <code>antlr3BitsetList</code> (<code>pANTLR3_HASH_TABLE</code> list) </p>
-<p> ANTLR3_API <code>pANTLR3_BITSET</code> <code>antlr3BitsetLoad</code> (<code>pANTLR3_BITSET_LIST</code> inBits)<br />
- <i>Creates a new bitset with at least one 64 bit bset of bits, but as many 64 bit sets as are required. </i><br />
+<p> ANTLR3_API <code>pANTLR3_BITSET</code> <code>antlr3BitsetLoad</code> (<code>pANTLR3_BITSET_LIST</code> inBits)<br/>
+ <i>Creates a new bitset with at least one 64 bit bset of bits, but as many 64 bit sets as are required. </i><br/>
  static <code>ANTLR3_BOOLEAN</code> <code>antlr3BitsetMember</code> (<code>pANTLR3_BITSET</code> bitset, <code>ANTLR3_UINT32</code> bit) </p>
 <p> ANTLR3_API <code>pANTLR3_BITSET</code> <code>antlr3BitsetNew</code> (<code>ANTLR3_UINT32</code> numBits) </p>
 <p> static <code>ANTLR3_UINT32</code> <code>antlr3BitsetNumBits</code> (<code>pANTLR3_BITSET</code> bitset) </p>
-<p> ANTLR3_API <code>pANTLR3_BITSET</code> <code>antlr3BitsetOf</code> (<code>ANTLR3_INT32</code> bit,&#8230;)<br />
- <i>Creates a new bitset with at least one element, but as many elements are required. </i><br />
+<p> ANTLR3_API <code>pANTLR3_BITSET</code> <code>antlr3BitsetOf</code> (<code>ANTLR3_INT32</code> bit,&#8230;)<br/>
+ <i>Creates a new bitset with at least one element, but as many elements are required. </i><br/>
  static <code>pANTLR3_BITSET</code> <code>antlr3BitsetOR</code> (<code>pANTLR3_BITSET</code> bitset1, <code>pANTLR3_BITSET</code> bitset2) </p>
 <p> static void <code>antlr3BitsetORInPlace</code> (<code>pANTLR3_BITSET</code> bitset, <code>pANTLR3_BITSET</code> bitset2) </p>
 <p> static void <code>antlr3BitsetRemove</code> (<code>pANTLR3_BITSET</code> bitset, <code>ANTLR3_UINT32</code> bit) </p>
 <p> ANTLR3_API void <code>antlr3BitsetSetAPI</code> (<code>pANTLR3_BITSET</code> bitset) </p>
 <p> static <code>ANTLR3_UINT32</code> <code>antlr3BitsetSize</code> (<code>pANTLR3_BITSET</code> bitset) </p>
-<p> static <code>pANTLR3_INT32</code> <code>antlr3BitsetToIntList</code> (<code>pANTLR3_BITSET</code> bitset)<br />
- <i>Produce an integer list of all the bits that are turned on in this bitset. </i><br />
+<p> static <code>pANTLR3_INT32</code> <code>antlr3BitsetToIntList</code> (<code>pANTLR3_BITSET</code> bitset)<br/>
+ <i>Produce an integer list of all the bits that are turned on in this bitset. </i><br/>
  static <code>ANTLR3_UINT64</code> <code>bitMask</code> (<code>ANTLR3_UINT32</code> bitNumber) </p>
 <p> static void <code>grow</code> (<code>pANTLR3_BITSET</code> bitset, <code>ANTLR3_INT32</code> newSize) </p>
 <p> static void <code>growToInclude</code> (<code>pANTLR3_BITSET</code> bitset, <code>ANTLR3_INT32</code> bit) </p>

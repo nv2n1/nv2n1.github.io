@@ -9,8 +9,8 @@ description: "hciconfig – configure Bluetooth devices"
 
 <p>hciconfig &#8211; configure Bluetooth devices</p>
 <h2>Synopsis</h2>
-<p><code>hciconfig</code> <code>-h</code><br />
- <code>hciconfig</code> [<code>-a</code>]<br />
+<p><code>hciconfig</code> <code>-h</code><br/>
+ <code>hciconfig</code> [<code>-a</code>]<br/>
  <code>hciconfig</code> [<code>-a</code>] <code>hciX</code> [<i>command</i> [<i>command parameters</i>]] </p>
 <h2>Description</h2>
 <p><code>hciconfig</code> is used to configure Bluetooth devices. <i>hciX</i> is the name of a Bluetooth device installed in the system. If <i>hciX</i> is not given, <code>hciconfig</code> prints name and basic information about all the Bluetooth devices installed in the system. If <i>hciX</i> is given but no command is given, it prints basic information on device <i>hciX</i> only. Basic information is interface type, BD address, ACL MTU, SCO MTU, flags (up, init, running, raw, page scan enabled, inquiry scan enabled, inquiry, authentication enabled, encryption enabled).</p>

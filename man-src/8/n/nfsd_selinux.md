@@ -109,7 +109,7 @@ description: "nfsd_selinux – Security Enhanced Linux Policy for the nfsd proce
 <p> You can see the context of a file using the <code>-Z</code> option to <code>lsP Policy governs the access confined processes have to these files. SELinux nfsd policy is very flexible allowing users to setup their nfsd processes in as secure a method as possible. </p>
 <p> STANDARD FILE CONTEXT</code> </p>
 <p> SELinux defines the file context types for the nfsd, if you wanted to store files with these types in a diffent paths, you need to execute the semanage command to sepecify alternate labeling and then use restorecon to put the labels on disk. </p>
-<p> <code>semanage fcontext -a -t nfsd_unit_file_t &#8216;/srv/mynfsd_content(/.*)?&#8217;</code><br />
+<p> <code>semanage fcontext -a -t nfsd_unit_file_t &#8216;/srv/mynfsd_content(/.*)?&#8217;</code><br/>
  <code>restorecon -R -v /srv/mynfsd_content</code> </p>
 <p> Note: SELinux often uses regular expressions to specify labels that match multiple files. </p>
 <p> <i>The following file types are defined for nfsd:</i> </p>
@@ -131,13 +131,13 @@ description: "nfsd_selinux – Security Enhanced Linux Policy for the nfsd proce
 <dl>
 <dt>Allow nfsd servers to read the /var/nfsd directory by adding the public_content_t file type to the directory and by restoring the file type.</dt>
 <dd></dd></dl>
-<p> <code>semanage fcontext -a -t public_content_t &quot;/var/nfsd(/.*)?&quot;</code><br />
+<p> <code>semanage fcontext -a -t public_content_t &quot;/var/nfsd(/.*)?&quot;</code><br/>
  <code>restorecon -F -R -v /var/nfsd</code></p>
 <dl>
 <dt>Allow nfsd servers to read and write /var/nfsd/incoming by adding the public_content_rw_t type to the directory and by restoring the file type. You also need to turn on the nfsd_anon_write boolean.</dt>
 <dd></dd></dl>
-<p> <code>semanage fcontext -a -t public_content_rw_t &quot;/var/nfsd/incoming(/.*)?&quot;</code><br />
- <code>restorecon -F -R -v /var/nfsd/incoming</code><br />
+<p> <code>semanage fcontext -a -t public_content_rw_t &quot;/var/nfsd/incoming(/.*)?&quot;</code><br/>
+ <code>restorecon -F -R -v /var/nfsd/incoming</code><br/>
  <code>setsebool -P nfsd_anon_write 1</code> </p>
 <p> If you want to allow nfs servers to modify public files used for public file transfer services. Files/Directories must be labeled public_content_rw_t., you must turn on the nfsd_anon_write boolean. </p>
 <p> <code>setsebool -P nfsd_anon_write 1</code></p>

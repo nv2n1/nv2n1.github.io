@@ -10,7 +10,7 @@ description: "XkbSAScreen – Returns the screenXXX field of act converted to a 
 <p>XkbSAScreen &#8211; Returns the screenXXX field of act converted to a signed int </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>int XkbSAScreen </code> <code>(XkbSwitchScreenAction </code><i>act</i><code>);</code><br />
+<dt> <code>int XkbSAScreen </code> <code>(XkbSwitchScreenAction </code><i>act</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

@@ -17,6 +17,6 @@ description: "std::system_error::code – std::system_error::code"
 <h2>Return value</h2>
 <p>The stored error code. </p>
 <h2>See also</h2>
-<p>what returns explanatory string<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(virtual public member function)</i><br />
+<p>what returns explanatory string<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(virtual public member function)</i><br/>
 <code>[virtual]</code> </p>

@@ -29,11 +29,11 @@ description: "windmc – generates Windows message resources."
 <dt><code>-a</code></dt>
 <dd>
 </dd><dt><code>&#8211;ascii_in</code></dt>
-<dd> Specifies that the input file specified is <font SIZE="-1">ASCII.</font> This is the default behaviour.</dd>
+<dd> Specifies that the input file specified is ASCII. This is the default behaviour.</dd>
 <dt><code>-A</code></dt>
 <dd>
 </dd><dt><code>&#8211;ascii_out</code></dt>
-<dd> Specifies that messages in the output <tt>&quot;bin&quot;</tt> files should be in <font SIZE="-1">ASCII</font> format.</dd>
+<dd> Specifies that messages in the output <tt>&quot;bin&quot;</tt> files should be in ASCII format.</dd>
 <dt><code>-b</code></dt>
 <dd>
 </dd><dt><code>&#8211;binprefix</code></dt>
@@ -45,7 +45,7 @@ description: "windmc – generates Windows message resources."
 <dt><code>-C</code> <i>codepage</i></dt>
 <dd>
 </dd><dt><code>&#8211;codepage_in</code> <i>codepage</i></dt>
-<dd> Sets the default codepage to be used to convert input file to <font SIZE="-1">UTF16.</font> The default is ocdepage 1252.</dd>
+<dd> Sets the default codepage to be used to convert input file to UTF16. The default is ocdepage 1252.</dd>
 <dt><code>-d</code></dt>
 <dd>
 </dd><dt><code>&#8211;decimal_values</code></dt>
@@ -57,7 +57,7 @@ description: "windmc – generates Windows message resources."
 <dt><code>-F</code> <i>target</i></dt>
 <dd>
 </dd><dt><code>&#8211;target</code> <i>target</i></dt>
-<dd> Specify the <font SIZE="-1">BFD</font> format to use for a bin file as output. This is a <font SIZE="-1">BFD</font> target name; you can use the <code>&#8211;help</code> option to see a list of supported targets. Normally <code>windmc</code> will use the default format, which is the first one listed by the <code>&#8211;help</code> option.</dd>
+<dd> Specify the BFD format to use for a bin file as output. This is a BFD target name; you can use the <code>&#8211;help</code> option to see a list of supported targets. Normally <code>windmc</code> will use the default format, which is the first one listed by the <code>&#8211;help</code> option.</dd>
 <dt><code>-h</code> <i>path</i></dt>
 <dd>
 </dd><dt><code>&#8211;headerdir</code> <i>path</i></dt>
@@ -73,11 +73,11 @@ description: "windmc – generates Windows message resources."
 <dt><code>-n</code></dt>
 <dd>
 </dd><dt><code>&#8211;nullterminate</code></dt>
-<dd> Terminate message text in <tt>&quot;bin&quot;</tt> files by zero. By default they are terminated by <font SIZE="-1">CR/LF.</font></dd>
+<dd> Terminate message text in <tt>&quot;bin&quot;</tt> files by zero. By default they are terminated by CR/LF.</dd>
 <dt><code>-o</code></dt>
 <dd>
 </dd><dt><code>&#8211;hresult_use</code></dt>
-<dd> Not yet implemented. Instructs <tt>&quot;windmc&quot;</tt> to generate an <font SIZE="-1">OLE2</font> header file, using <font SIZE="-1">HRESULT</font> definitions. Status codes are used if the flag is not specified.</dd>
+<dd> Not yet implemented. Instructs <tt>&quot;windmc&quot;</tt> to generate an OLE2 header file, using HRESULT definitions. Status codes are used if the flag is not specified.</dd>
 <dt><code>-O</code> <i>codepage</i></dt>
 <dd>
 </dd><dt><code>&#8211;codepage_out</code> <i>codepage</i></dt>
@@ -89,11 +89,11 @@ description: "windmc – generates Windows message resources."
 <dt><code>-u</code></dt>
 <dd>
 </dd><dt><code>&#8211;unicode_in</code></dt>
-<dd> Specifies that the input file is <font SIZE="-1">UTF16.</font></dd>
+<dd> Specifies that the input file is UTF16.</dd>
 <dt><code>-U</code></dt>
 <dd>
 </dd><dt><code>&#8211;unicode_out</code></dt>
-<dd> Specifies that messages in the output <tt>&quot;bin&quot;</tt> file should be in <font SIZE="-1">UTF16</font> format. This is the default behaviour.</dd>
+<dd> Specifies that messages in the output <tt>&quot;bin&quot;</tt> file should be in UTF16 format. This is the default behaviour.</dd>
 <dt><code>-v</code></dt>
 <dd>
 </dd><dt><code>&#8211;verbose</code></dt>
@@ -113,4 +113,4 @@ description: "windmc – generates Windows message resources."
 <p> the Info entries for <i>binutils</i>.</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 1991-2014 Free Software Foundation, Inc. </p>
-<p> Permission is granted to copy, distribute and/or modify this document under the terms of the <font SIZE="-1">GNU</font> Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts. A copy of the license is included in the section entitled &#8220;<font SIZE="-1">GNU</font> Free Documentation License&#8221;. </p>
+<p> Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts. A copy of the license is included in the section entitled &#8220;GNU Free Documentation License&#8221;. </p>

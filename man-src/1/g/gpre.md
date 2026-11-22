@@ -14,7 +14,7 @@ description: "gpre – Firebird source pre-processor"
 <dt><code>gpre</code> [<i>option</i>&#8230;] <i>input</i> <i>output</i></dt>
 <dd></dd></dl>
 <h2>DESCRIPTION</h2>
-<p> <code>gpre</code> is a source pre-processor for easier writing of programs working with the raw Firebird <font SIZE="-1">API.</font> It supports multiple source languages. Using <code>gpre</code>, you can mix special SQL-like language with the normal program source.</p>
+<p> <code>gpre</code> is a source pre-processor for easier writing of programs working with the raw Firebird API. It supports multiple source languages. Using <code>gpre</code>, you can mix special SQL-like language with the normal program source.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-ada</code></dt>
@@ -24,13 +24,13 @@ description: "gpre – Firebird source pre-processor"
 <dt><code>-c</code></dt>
 <dd> Source is a C program.</dd>
 <dt><code>-cxx</code> | <code>-cplusplus</code></dt>
-<dd> Source is a C<font SIZE="-2">++</font> program.</dd>
+<dd> Source is a C++ program.</dd>
 <dt><code>-database</code> <i>name</i></dt>
 <dd> Pre-define database connection.</dd>
 <dt><code>-d_float</code></dt>
 <dd> Generate <tt>&quot;blr_d_float&quot;</tt> for doubles.</dd>
 <dt><code>-either_case</code></dt>
-<dd> Accept upper or lower case <font SIZE="-1">DML</font> in C.</dd>
+<dd> Accept upper or lower case DML in C.</dd>
 <dt><code>-fetch_password</code></dt>
 <dd> Fetch password from file.</dd>
 <dt><code>-charset</code> <i>string</i></dt>
@@ -38,7 +38,7 @@ description: "gpre – Firebird source pre-processor"
 <dt><code>-lang_internal</code></dt>
 <dd> Set some variables to defaults usable for internal Firebird use.</dd>
 <dt><code>-manual</code></dt>
-<dd> Do not automatically <font SIZE="-1">ATTACH</font> to a database.</dd>
+<dd> Do not automatically ATTACH to a database.</dd>
 <dt><code>-no_lines</code></dt>
 <dd> Do not generate C debug lines.</dd>
 <dt><code>-output</code></dt>
@@ -46,9 +46,9 @@ description: "gpre – Firebird source pre-processor"
 <dt><code>-password</code> <i>string</i></dt>
 <dd> Default password.</dd>
 <dt><code>-raw</code></dt>
-<dd> Generate unformatted binary <font SIZE="-1">BLR.</font></dd>
+<dd> Generate unformatted binary BLR.</dd>
 <dt><code>-sql_dialect</code> <i>value</i></dt>
-<dd> <font SIZE="-1">SQL</font> dialect to use.</dd>
+<dd> SQL dialect to use.</dd>
 <dt><code>-sqlda</code> N</dt>
 <dd> Deprecated feature.</dd>
 <dt><code>-user</code> <i>name</i></dt>
@@ -58,9 +58,9 @@ description: "gpre – Firebird source pre-processor"
 <dt><code>-x</code></dt>
 <dd> External database (used with <code>-database</code>).</dd>
 <dt><code>-cob</code></dt>
-<dd> Source is a <font SIZE="-1">COBOL</font> program.</dd>
+<dd> Source is a COBOL program.</dd>
 <dt><code>-ansi</code></dt>
-<dd> Generate <font SIZE="-1">ANSI85</font> compatible <font SIZE="-1">COBOL</font> code.</dd>
+<dd> Generate ANSI85 compatible COBOL code.</dd>
 <dt><code>-rmc</code></dt>
 <dd> RM/Cobol</dd>
 <dt><code>-z</code></dt>
@@ -68,11 +68,11 @@ description: "gpre – Firebird source pre-processor"
 <dt><code>-base</code> <i>dir</i></dt>
 <dd> Base directory for compile-time database.</dd>
 <dt><code>-dfm</code> <i>format</i></dt>
-<dd> <font SIZE="-1">COBOL</font> date format</dd>
+<dd> COBOL date format</dd>
 <dt><code>-noqli</code></dt>
-<dd> Suppress <font SIZE="-1">QLI</font> syntax.</dd>
+<dd> Suppress QLI syntax.</dd>
 <dt><code>-fortran</code></dt>
-<dd> Source is a <font SIZE="-1">FORTRAN</font> program.</dd>
+<dd> Source is a FORTRAN program.</dd>
 <dt><code>-pascal</code></dt>
 <dd> Source is a Pascal program.</dd>
 <dt><code>-trusted</code></dt>

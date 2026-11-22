@@ -226,11 +226,11 @@ description: "ipmipower – IPMI power control utility"
 <p> When multiple hosts are specified by the user, a socket will be created for each host and polled on, effectively allowing communication to all hosts in parallel. This will allow communication to large numbers of nodes far more quickly than if done in serial. The <code>-F</code> option can configure the number of nodes that can be communicated with in parallel at the same time. </p>
 <p> By default, standard output from each node specified will be output with the hostname prepended to each line. Although this output is readable in many situations, it may be difficult to read in other situations. For example, output from multiple nodes may be mixed together. The <code>-B</code> and <code>-C</code> options can be used to change this default.</p>
 <h2>Examples</h2>
-<p>Determine the power status of foo[0-2] with null username and password<br />
+<p>Determine the power status of foo[0-2] with null username and password<br/>
 &nbsp;<wbr>&nbsp;<wbr>ipmipower -h foo[0-2]&nbsp;<wbr>&#8211;stat </p>
-<p> Determine the power status of foo[0-2] with non-null username and password<br />
+<p> Determine the power status of foo[0-2] with non-null username and password<br/>
 &nbsp;<wbr>&nbsp;<wbr>ipmipower -h foo[0-2]&nbsp;<wbr>-u foo -p bar &#8211;stat </p>
-<p> Hard reset nodes foo[0-2] with non-null username and password<br />
+<p> Hard reset nodes foo[0-2] with non-null username and password<br/>
 &nbsp;<wbr>&nbsp;<wbr>ipmipower -h foo[0-2]&nbsp;<wbr>-u foo -p bar &#8211;reset</p>
 <h2>General Troubleshooting</h2>
 <p>Most often, IPMI problems are due to configuration problems. </p>
@@ -282,7 +282,7 @@ description: "ipmipower – IPMI power control utility"
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;freeipmi-users [at] gnu.org&gt; or &lt;freeipmi-devel [at] gnu.org&gt;.</p>
 <h2>Copyright</h2>
-<p>Copyright (C) 2007-2012 Lawrence Livermore National Security, LLC.<br />
+<p>Copyright (C) 2007-2012 Lawrence Livermore National Security, LLC.<br/>
  Copyright (C) 2003-2007 The Regents of the University of California. </p>
 <p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.</p>
 <h2>See Also</h2>

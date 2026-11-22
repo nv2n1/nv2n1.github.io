@@ -9,12 +9,12 @@ description: "globus_callout.h – Globus Callout Infrastructure."
 
 <p>globus_callout.h &#8211; Globus Callout Infrastructure.</p>
 <h2>Synopsis</h2>
-<p>#include &#8216;globus_common.h&#8217;<br />
+<p>#include &#8216;globus_common.h&#8217;<br/>
  #include &#8216;globus_callout_constants.h&#8217; </p>
 <h3>Macros</h3>
 <p>#define <code>GLOBUS_CALLOUT_MODULE</code> </p>
 <h3>Typedefs</h3>
-<p>typedef struct<br />
+<p>typedef struct<br/>
  globus_i_callout_handle_s * <code>globus_callout_handle_t</code>&quot; </p>
 <p> typedef globus_result_t(* <code>globus_callout_function_t</code> )(va_list ap) </p>
 <h3>Functions</h3>

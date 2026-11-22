@@ -53,7 +53,7 @@ description: "fusecompress – mounts an compressed virtual filesystem"
 <p> <code>allow_root</code> </p>
 <p> This option is similar to &#8216;allow_other&#8217; but file access is limited to the user mounting the filesystem and root. This option and &#8216;allow_other&#8217; are mutually exclusive. </p>
 <p> <code>nonempty</code> </p>
-<p> This option allows you to use the same directory for rootDir and mountPoint.<br />
+<p> This option allows you to use the same directory for rootDir and mountPoint.<br/>
 &nbsp;<wbr> Lzo is the fastest, bzip2 has high compression ratio, but it is the slowest, zlib is somewhere between them in terms of speed and compression ratio and lzma has highest compression ratio, it&#8217;s compression speed is better than bzip2 and decompression is fast. The none compression method is there for testing only as it doesn&#8217;t compress data, it copies the data without any modification (fusecompress&#8217; header is added). </p>
 <p> Block size influences compression ratio. Bigger block size allows better compression ratio, but random access to data will be slower and memory requirements will be bigger. </p>
 </dd></dl>

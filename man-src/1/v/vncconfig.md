@@ -10,12 +10,12 @@ description: "vncconfig – configure and control a VNC server"
 
 <p> vncconfig &#8211; configure and control a VNC server</p>
 <h2>SYNOPSIS</h2>
-<p> <code>vncconfig</code> [<i>parameters</i>]<br />
- <code>vncconfig</code> [<i>parameters</i>] <code>-connect</code> <i>host</i>[:<i>port</i>]<br />
- <code>vncconfig</code> [<i>parameters</i>] <code>-disconnect</code><br />
- <code>vncconfig</code> [<i>parameters</i>] [<code>-set</code>] <i>Xvnc-param</i>=<i>value</i> &#8230;<br />
- <code>vncconfig</code> [<i>parameters</i>] <code>-list</code><br />
- <code>vncconfig</code> [<i>parameters</i>] <code>-get</code> <i>Xvnc-param</i><br />
+<p> <code>vncconfig</code> [<i>parameters</i>]<br/>
+ <code>vncconfig</code> [<i>parameters</i>] <code>-connect</code> <i>host</i>[:<i>port</i>]<br/>
+ <code>vncconfig</code> [<i>parameters</i>] <code>-disconnect</code><br/>
+ <code>vncconfig</code> [<i>parameters</i>] [<code>-set</code>] <i>Xvnc-param</i>=<i>value</i> &#8230;<br/>
+ <code>vncconfig</code> [<i>parameters</i>] <code>-list</code><br/>
+ <code>vncconfig</code> [<i>parameters</i>] <code>-get</code> <i>Xvnc-param</i><br/>
  <code>vncconfig</code> [<i>parameters</i>] <code>-desc</code> <i>Xvnc-param</i></p>
 <h2>DESCRIPTION</h2>
 <p> <code>vncconfig</code> is used to configure and control a running instance of Xvnc, or any other X server with the VNC extension. Note that it cannot be used to control VNC servers prior to version 4. </p>
@@ -49,7 +49,7 @@ description: "vncconfig – configure and control a VNC server"
 <dd> When run as a &quot;helper&quot; app, make the window iconified at startup. </dd>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-vncpasswd/">vncpasswd</a></code>(1), <code><a href="/docs/linux/man/1-vncviewer/">vncviewer</a></code>(1), <code><a href="/docs/linux/man/1-vncserver/">vncserver</a></code>(1), <code><a href="/docs/linux/man/1-xvnc/">Xvnc</a></code>(1)<br />
+<p> <code><a href="/docs/linux/man/1-vncpasswd/">vncpasswd</a></code>(1), <code><a href="/docs/linux/man/1-vncviewer/">vncviewer</a></code>(1), <code><a href="/docs/linux/man/1-vncserver/">vncserver</a></code>(1), <code><a href="/docs/linux/man/1-xvnc/">Xvnc</a></code>(1)<br/>
  <a rel="nofollow" href="http://www.tigervnc.org">http://www.tigervnc.org</a> </p>
 <h2>AUTHOR</h2>
 <p> Tristan Richardson, RealVNC Ltd. and others. </p>

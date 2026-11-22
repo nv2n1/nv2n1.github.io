@@ -9,25 +9,25 @@ description: "Ecore Connection Server Functions – Functions that operate on Ec
 
 <p>Ecore Connection Server Functions &#8211; Functions that operate on Ecore server objects. </p>
 <h3>Functions</h3>
-<p>EAPI <code>Ecore_Con_Server</code> * <code>ecore_con_server_add</code> (Ecore_Con_Type compl_type, const char *name, int port, const void *data)<br />
- <i>Creates a server to listen for connections. </i><br />
- EAPI <code>Ecore_Con_Server</code> * <code>ecore_con_server_connect</code> (Ecore_Con_Type compl_type, const char *name, int port, const void *data)<br />
- <i>Creates a server object to represent the server listening at the given port. </i><br />
- EAPI void * <code>ecore_con_server_del</code> (<code>Ecore_Con_Server</code> *svr)<br />
- <i>Closes the connection and frees the given server. </i><br />
- EAPI void * <code>ecore_con_server_data_get</code> (<code>Ecore_Con_Server</code> *svr)<br />
- <i>Retrieves the data associated with the given server. </i><br />
- EAPI int <code>ecore_con_server_connected_get</code> (<code>Ecore_Con_Server</code> *svr)<br />
- <i>Retrieves whether the given server is currently connected. </i><br />
- EAPI Ecore_List * <code>ecore_con_server_clients_get</code> (<code>Ecore_Con_Server</code> *svr)<br />
- <i>Retrieves the current list of clients. </i><br />
- EAPI int <code>ecore_con_server_send</code> (<code>Ecore_Con_Server</code> *svr, const void *data, int size)<br />
- <i>Sends the given data to the given server. </i><br />
- EAPI void <code>ecore_con_server_client_limit_set</code> (<code>Ecore_Con_Server</code> *svr, int client_limit, char reject_excess_clients)<br />
- <i>Sets a limit on the number of clients that can be handled concurrently by the given server, and a policy on what to do if excess clients try to connect. </i><br />
- EAPI char * <code>ecore_con_server_ip_get</code> (<code>Ecore_Con_Server</code> *svr)<br />
- <i>Gets the IP address of a server that has been connected to. </i><br />
- EAPI void <code>ecore_con_server_flush</code> (<code>Ecore_Con_Server</code> *svr)<br />
+<p>EAPI <code>Ecore_Con_Server</code> * <code>ecore_con_server_add</code> (Ecore_Con_Type compl_type, const char *name, int port, const void *data)<br/>
+ <i>Creates a server to listen for connections. </i><br/>
+ EAPI <code>Ecore_Con_Server</code> * <code>ecore_con_server_connect</code> (Ecore_Con_Type compl_type, const char *name, int port, const void *data)<br/>
+ <i>Creates a server object to represent the server listening at the given port. </i><br/>
+ EAPI void * <code>ecore_con_server_del</code> (<code>Ecore_Con_Server</code> *svr)<br/>
+ <i>Closes the connection and frees the given server. </i><br/>
+ EAPI void * <code>ecore_con_server_data_get</code> (<code>Ecore_Con_Server</code> *svr)<br/>
+ <i>Retrieves the data associated with the given server. </i><br/>
+ EAPI int <code>ecore_con_server_connected_get</code> (<code>Ecore_Con_Server</code> *svr)<br/>
+ <i>Retrieves whether the given server is currently connected. </i><br/>
+ EAPI Ecore_List * <code>ecore_con_server_clients_get</code> (<code>Ecore_Con_Server</code> *svr)<br/>
+ <i>Retrieves the current list of clients. </i><br/>
+ EAPI int <code>ecore_con_server_send</code> (<code>Ecore_Con_Server</code> *svr, const void *data, int size)<br/>
+ <i>Sends the given data to the given server. </i><br/>
+ EAPI void <code>ecore_con_server_client_limit_set</code> (<code>Ecore_Con_Server</code> *svr, int client_limit, char reject_excess_clients)<br/>
+ <i>Sets a limit on the number of clients that can be handled concurrently by the given server, and a policy on what to do if excess clients try to connect. </i><br/>
+ EAPI char * <code>ecore_con_server_ip_get</code> (<code>Ecore_Con_Server</code> *svr)<br/>
+ <i>Gets the IP address of a server that has been connected to. </i><br/>
+ EAPI void <code>ecore_con_server_flush</code> (<code>Ecore_Con_Server</code> *svr)<br/>
  <i>Flushes all pending data to the given server. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that operate on Ecore server objects.</p>
@@ -44,9 +44,9 @@ description: "Ecore Connection Server Functions – Functions that operate on Ec
 <dd>If <i>compl_type</i> is ECORE_CON_REMOTE_SYSTEM, the server will listen on TCP port port.</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>compl_type</i> The connection type.<br />
- <i>name</i> Name to associate with the socket. It is used when generating the socket name of a Unix socket. Though it is not used for the TCP socket, it still needs to be a valid character array. NULL will not be accepted.<br />
- <i>port</i> Number to identify socket. When a Unix socket is used, it becomes part of the socket name. When a TCP socket is used, it is used as the TCP port.<br />
+<dd><i>compl_type</i> The connection type.<br/>
+ <i>name</i> Name to associate with the socket. It is used when generating the socket name of a Unix socket. Though it is not used for the TCP socket, it still needs to be a valid character array. NULL will not be accepted.<br/>
+ <i>port</i> Number to identify socket. When a Unix socket is used, it becomes part of the socket name. When a TCP socket is used, it is used as the TCP port.<br/>
  <i>data</i> Data to associate with the created Ecore_Con_Server object.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -58,8 +58,8 @@ description: "Ecore Connection Server Functions – Functions that operate on Ec
 <p> Beware that if you set this once ecore is already running, you may already have pending CLIENT_ADD events in your event queue. Those clients have already connected and will not be affected by this call. Only clients subsequently trying to connect will be affected. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>svr</i> The given server.<br />
- <i>client_limit</i> The maximum number of clients to handle concurrently. -1 means unlimited (default). 0 effectively disables the server.<br />
+<dd><i>svr</i> The given server.<br/>
+ <i>client_limit</i> The maximum number of clients to handle concurrently. -1 means unlimited (default). 0 effectively disables the server.<br/>
  <i>reject_excess_clients</i> Set to 1 to automatically disconnect excess clients as soon as they connect if you are already handling client_limit clients. Set to 0 (default) to just hold off on the &#8216;accept()&#8217; system call until the number of active clients drops. This causes the kernel to queue up to 4096 connections (or your kernel&#8217;s limit, whichever is lower).</dd></dl>
 <p> Referenced by ecore_ipc_server_client_limit_set().</p>
 <h3>EAPI Ecore_List* ecore_con_server_clients_get (<code>Ecore_Con_Server</code> * svr)</h3>
@@ -82,9 +82,9 @@ description: "Ecore Connection Server Functions – Functions that operate on Ec
 <dd>If <i>compl_type</i> is ECORE_CON_REMOTE_SYSTEM, the function will connect to the server listening on the TCP port &#8216;[name]:[port]&#8217;.</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>compl_type</i> The connection type.<br />
- <i>name</i> Name used when determining what socket to connect to. It is used to generate the socket name when the socket is a Unix socket. It is used as the hostname when connecting with a TCP socket.<br />
- <i>port</i> Number to identify the socket to connect to. Used when generating the socket name for a Unix socket, or as the TCP port when connecting to a TCP socket.<br />
+<dd><i>compl_type</i> The connection type.<br/>
+ <i>name</i> Name used when determining what socket to connect to. It is used to generate the socket name when the socket is a Unix socket. It is used as the hostname when connecting with a TCP socket.<br/>
+ <i>port</i> Number to identify the socket to connect to. Used when generating the socket name for a Unix socket, or as the TCP port when connecting to a TCP socket.<br/>
  <i>data</i> Data to associate with the created Ecore_Con_Server object.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -142,8 +142,8 @@ description: "Ecore Connection Server Functions – Functions that operate on Ec
 <p>Sends the given data to the given server. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>svr</i> The given server.<br />
- <i>data</i> The given data.<br />
+<dd><i>svr</i> The given server.<br/>
+ <i>data</i> The given data.<br/>
  <i>size</i> Length of the data, in bytes, to send.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

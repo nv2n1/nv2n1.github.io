@@ -10,7 +10,7 @@ description: "ldns_buffer_flip, ldns_buffer_rewind, ldns_buffer_position, ldns_b
 
 <p> ldns_buffer_flip, ldns_buffer_rewind, ldns_buffer_position, ldns_buffer_set_position, ldns_buffer_skip </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> void ldns_buffer_flip(ldns_buffer *buffer); </p>

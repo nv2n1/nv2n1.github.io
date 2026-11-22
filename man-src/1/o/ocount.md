@@ -15,7 +15,7 @@ description: "ocount – Event counting tool for Linux"
 <p> <code>ocount</code> is an OProfile tool that can be used to count native hardware events occurring in either a given application, a set of processes or threads, a subset of active system processors, or the entire system. The data collected during a counting session is displayed to stdout by default or, optionally, to a file. </p>
 <p> When counting multiple events, the kernel may not be able to count all events simultaneously and, thus, may need to multiplex the counting of the events. If this happens, the &quot;Percent time enabled&quot; column in the <code>ocount</code> output will be less than 100, but counts are scaled up to a 100% estimated value. </p>
 <h2>RUN MODES</h2>
-<p> One (and only one) of the following <font SIZE="-1"><code>run modes</code></font> must be specified. If you run <code>ocount</code> using a run mode other than <code>command </code><i>[args]</i> , press Ctrl-c to stop <code>ocount</code> when finished counting (e.g., when the monitored process ends). If you background <code>ocount</code> (i.e., with &#8216;&amp;&#8217;) while using one these run modes, you <code>must</code> stop it in a controlled manner so that the data collection process can be shut down cleanly and final results can be displayed. Use <code>kill</code> <code>-SIGINT</code> <code>&lt;ocount-PID&gt;</code> for this purpose.</p>
+<p> One (and only one) of the following <code>run modes</code> must be specified. If you run <code>ocount</code> using a run mode other than <code>command </code><i>[args]</i> , press Ctrl-c to stop <code>ocount</code> when finished counting (e.g., when the monitored process ends). If you background <code>ocount</code> (i.e., with &#8216;&amp;&#8217;) while using one these run modes, you <code>must</code> stop it in a controlled manner so that the data collection process can be shut down cleanly and final results can be displayed. Use <code>kill</code> <code>-SIGINT</code> <code>&lt;ocount-PID&gt;</code> for this purpose.</p>
 <dl>
 <dt><code>command </code><i>[args]</i></dt>
 <dd> The <i>command</i> is the application for which to count events. <i>args</i> are the input arguments required by the application. The <i>command</i> and its arguments <code>must</code> be positioned at the end of the command line, after all ocount options. </dd>
@@ -31,8 +31,8 @@ description: "ocount – Event counting tool for Linux"
 <h2>OTHER OPTIONS</h2>
 <dl>
 <dt><code>&#8211;events / -e </code><i>event1[,event2[,&#8230;]]</i></dt>
-<dd> This option is for passing a comma-separated list of event specifications for counting. Each event spec is of the form:<br />
- <i> name[:unitmask[:kernel[:user]]]</i><br />
+<dd> This option is for passing a comma-separated list of event specifications for counting. Each event spec is of the form:<br/>
+ <i> name[:unitmask[:kernel[:user]]]</i><br/>
  <code>Note:</code> Do <code>not</code> include a <i>count</i> value in the event spec, as that parameter is only need when profiling.</dd></dl>
 <dl>
 <dt>
@@ -57,7 +57,7 @@ description: "ocount – Event counting tool for Linux"
 <dl>
 <dt>
 </dt><dd> If <i>&#8211;timer-interval</i> is specified, a separate line formatted as </dd>
-<p>&nbsp;<wbr>timestamp,&lt;num_seconds_since_epoch&gt;<br />
+<p>&nbsp;<wbr>timestamp,&lt;num_seconds_since_epoch&gt;<br/>
  is printed ahead of each dump of event counts.</dl>
 <dl>
 <dt><code>&#8211;output-file / -f </code><i>outfile_name</i></dt>

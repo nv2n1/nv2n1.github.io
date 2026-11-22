@@ -80,10 +80,10 @@ Reverse Provides: </pre>
 <dd>This command prints the name of each package APT knows. The optional argument is a prefix match to filter the name list. The output is suitable for use in a shell tab complete function and the output is generated extremely quickly. This command is best used with the <code>&#8211;generate</code> option. Note that a package which APT knows of is not necessarily available to download, installable or installed, e.g. virtual packages are also listed in the generated list.</dd></dl>
 <p> <code>dotty</code> <i>pkg</i><code>&#8230;</code></p>
 <dl>
-<dd>dotty takes a list of packages on the command line and generates output suitable for use by dotty from the m[blue]<code>GraphViz</code>m[]<font SIZE="-2">[1]</font> package. The result will be a set of nodes and edges representing the relationships between the packages. By default the given packages will trace out all dependent packages; this can produce a very large graph. To limit the output to only the packages listed on the command line, set the APT::Cache::GivenOnly option. The resulting nodes will have several shapes; normal packages are boxes, pure virtual packages are triangles, mixed virtual packages are diamonds, missing packages are hexagons. Orange boxes mean recursion was stopped (leaf packages), blue lines are pre-depends, green lines are conflicts. Caution, dotty cannot graph larger sets of packages.</dd></dl>
+<dd>dotty takes a list of packages on the command line and generates output suitable for use by dotty from the m[blue]<code>GraphViz</code>m[][1] package. The result will be a set of nodes and edges representing the relationships between the packages. By default the given packages will trace out all dependent packages; this can produce a very large graph. To limit the output to only the packages listed on the command line, set the APT::Cache::GivenOnly option. The resulting nodes will have several shapes; normal packages are boxes, pure virtual packages are triangles, mixed virtual packages are diamonds, missing packages are hexagons. Orange boxes mean recursion was stopped (leaf packages), blue lines are pre-depends, green lines are conflicts. Caution, dotty cannot graph larger sets of packages.</dd></dl>
 <p> <code>xvcg</code> <i>pkg</i><code>&#8230;</code></p>
 <dl>
-<dd>The same as dotty, only for xvcg from the m[blue]<code>VCG tool</code>m[]<font SIZE="-2">[2]</font>.</dd></dl>
+<dd>The same as dotty, only for xvcg from the m[blue]<code>VCG tool</code>m[][2].</dd></dl>
 <p> <code>policy</code> [<i>pkg</i>&#8230;]</p>
 <dl>
 <dd>policy is meant to help debug issues relating to the preferences file. With no arguments it will print out the priorities of each source. Otherwise it prints out detailed information about the priority selection of the named package.</dd></dl>
@@ -166,7 +166,7 @@ Reverse Provides: </pre>
 <h2>Diagnostics</h2>
 <p><code>apt-cache</code> returns zero on normal operation, decimal 100 on error.</p>
 <h2>Bugs</h2>
-<p>m[blue]<code>APT bug page</code>m[]<font SIZE="-2">[3]</font>. If you wish to report a bug in APT, please see /usr/share/doc/debian/bug-reporting.txt or the <code>reportbug</code>(1) command.</p>
+<p>m[blue]<code>APT bug page</code>m[][3]. If you wish to report a bug in APT, please see /usr/share/doc/debian/bug-reporting.txt or the <code>reportbug</code>(1) command.</p>
 <h2>Authors</h2>
 <p><code>Jason Gunthorpe</code></p>
 <dl>

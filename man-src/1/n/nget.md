@@ -33,14 +33,14 @@ description: "nget – retrieve files from NNTP (usenet news) hosts"
 <dt>-x/&#8211;xgroup group(s)</dt>
 <dd> Use group(s) for subsequent -r commands, but without loading cache file or retrieving full header list. Instead, the XPAT command will used to retrieve only the matching headers. Compared to -g/-G this has the advantage of not requiring any disk space for cache files, and not requiring the initial retrieval of the full header list. The disadvantages are not all servers supporting XPAT, the inability to use complex regexs due to the need to convert it to the simpler wildmat format, and the possibility that the xpat command can be quite slow if the server is overloaded (you may need to increase the timeout value in some cases).</dd>
 <dt>-F/&#8211;flushserver host</dt>
-<dd> Following -g/-G: Flush all headers for server from current group(s).<br />
+<dd> Following -g/-G: Flush all headers for server from current group(s).<br/>
  Following -a/-A: Flush all groups/descriptions for server from grouplist.</dd>
 <dt>-r/&#8211;retrieve regex</dt>
-<dd> Following -g/-G/-x: Matches regex against subjects of previously selected group(s), and retrieves ones that match.<br />
+<dd> Following -g/-G/-x: Matches regex against subjects of previously selected group(s), and retrieves ones that match.<br/>
  Following -a/-A: Matches regex against newsgroup names and descriptions and lists ones that match. (-T required)</dd>
 <dt>-R/&#8211;expretrieve expression</dt>
-<dd> Like -r, but matches expression instead of merely a regexp. (see EXPRETRIEVE EXPRESSIONS section for more info.) Expression is a postfix expression that can contain these keywords:<br />
- Following -g/-G: subject, author, lines, bytes, have, req, date, age, update, updateage, messageid(or mid), references. Note that the &#8211;limit argument does not affect the option, if you want to limit based on number of lines, add it as part of the expression.<br />
+<dd> Like -r, but matches expression instead of merely a regexp. (see EXPRETRIEVE EXPRESSIONS section for more info.) Expression is a postfix expression that can contain these keywords:<br/>
+ Following -g/-G: subject, author, lines, bytes, have, req, date, age, update, updateage, messageid(or mid), references. Note that the &#8211;limit argument does not affect the option, if you want to limit based on number of lines, add it as part of the expression.<br/>
  Following -a/-A: group, desc.</dd>
 <dt>-@/&#8211;list LISTFILE</dt>
 <dd> Specify a file to load a list of command line args from. Looks in ~/.nget5/lists/ dir by default. A # char in a listfile that is the first character on a line or is preceeded by whitespace and not quoted starts a comment which lasts until the end of the line.</dd>
@@ -95,8 +95,8 @@ description: "nget – retrieve files from NNTP (usenet news) hosts"
 <dt>&#8211;no-autopar</dt>
 <dd> Disable automatic parfile handling. All parfiles that match the expression will be downloaded.</dd>
 <dt>-d/&#8211;dupecheck FLAGS</dt>
-<dd> Check to make sure you don&#8217;t already have files. This is done in two ways. The first (&quot;f&quot;) is by compiling a list of all files in the current directory, then checking against all messages to be retrieved to see if one of the filenames shows up in the subject. This works reasonably well, though sometimes the filename isn&#8217;t in the subject. It can also cause problems if you happen to have files in the directory named silly things like &quot;a&quot;, in which case all messages with the word &quot;a&quot; in them will be skipped. However, it is still smart enough not to skip messages that merely have a word containing &quot;a&quot;.<br />
- The second method (&quot;i&quot;) is by setting a flag in the header cache that will prevent it from being retrieved again. You can use combos such as -dfi to check both, -dFi to only check the flag, -dfI to only check files, etc.<br />
+<dd> Check to make sure you don&#8217;t already have files. This is done in two ways. The first (&quot;f&quot;) is by compiling a list of all files in the current directory, then checking against all messages to be retrieved to see if one of the filenames shows up in the subject. This works reasonably well, though sometimes the filename isn&#8217;t in the subject. It can also cause problems if you happen to have files in the directory named silly things like &quot;a&quot;, in which case all messages with the word &quot;a&quot; in them will be skipped. However, it is still smart enough not to skip messages that merely have a word containing &quot;a&quot;.<br/>
+ The second method (&quot;i&quot;) is by setting a flag in the header cache that will prevent it from being retrieved again. You can use combos such as -dfi to check both, -dFi to only check the flag, -dfI to only check files, etc.<br/>
  The third (&quot;m&quot;) will cause files that are found by the dupe file check (&quot;f&quot;) to be marked as retrieved in the cache. (Useful for handling crossposted binaries and/or binaries saved with another newsreader.)</dd>
 <dt>-D/&#8211;nodupecheck</dt>
 <dd> Don&#8217;t check either of the &#8211;dupecheck methods, retrieve any messages that match.</dd>
@@ -107,8 +107,8 @@ description: "nget – retrieve files from NNTP (usenet news) hosts"
 <dt>&#8211;help</dt>
 <dd> Show help.</dd></dl>
 <h2>EXPRETRIEVE EXPRESSIONS</h2>
-<p> Expressions are in postfix order. For the int, date, and age types, standard int comparisons are allowed (==, !=, &lt;, &lt;=, &gt;, &gt;=). For regex types, ==(=~), !=(!~) are allowed. Thus a comparison would take the following form:<br />
- Infix: &lt;keyword&gt; &lt;operator&gt; &lt;value&gt; Postfix: &lt;keyword&gt; &lt;value&gt; &lt;operator&gt; Comparisons can be joined with &amp;&amp;(and), ||(or).<br />
+<p> Expressions are in postfix order. For the int, date, and age types, standard int comparisons are allowed (==, !=, &lt;, &lt;=, &gt;, &gt;=). For regex types, ==(=~), !=(!~) are allowed. Thus a comparison would take the following form:<br/>
+ Infix: &lt;keyword&gt; &lt;operator&gt; &lt;value&gt; Postfix: &lt;keyword&gt; &lt;value&gt; &lt;operator&gt; Comparisons can be joined with &amp;&amp;(and), ||(or).<br/>
  Infix: &lt;comparison&gt; &amp;&amp; &lt;comparison&gt; Postfix: &lt;comparison&gt; &lt;comparison&gt; &amp;&amp;</p>
 <h3>-g/-G keywords</h3>
 <dl>
@@ -127,9 +127,9 @@ description: "nget – retrieve files from NNTP (usenet news) hosts"
 <dt>date (date)</dt>
 <dd> Matches the Date: header. All the standard formats are accepted.</dd>
 <dt>age (age)</dt>
-<dd> Matches the time since the Date: header.<br />
- Format: [X y[ears]] [X mo[nths]] [X w[eeks]] [X d[ays]] [X h[ours]] [X m[inutes]] [X s[econds]]<br />
- Ex.: &quot;6 months 7 hours 8 minutes&quot;<br />
+<dd> Matches the time since the Date: header.<br/>
+ Format: [X y[ears]] [X mo[nths]] [X w[eeks]] [X d[ays]] [X h[ours]] [X m[inutes]] [X s[econds]]<br/>
+ Ex.: &quot;6 months 7 hours 8 minutes&quot;<br/>
  Ex.: &quot;6mo7h8m&quot;</dd>
 <dt>update (date)</dt>
 <dd> Matches the &quot;update time&quot; of the cache item. That is, the most recent time that a new part of the file has been added. For example, if part 1 was added one day, and part 2 only appeared on the server the next day, then the update time would be when part 2 was added on the second day. But if both parts were seen on the first day, then seen again from a different server on the second day, the update time would stay at the original value.</dd>
@@ -246,11 +246,11 @@ description: "nget – retrieve files from NNTP (usenet news) hosts"
 </dt><dd> <code>{host1</code></dd>
 <dl>
 <dt>
-</dt><dd> <code>addr=news.host1.com</code><br />
- <code>id=3838</code><br />
- <code>user=bob</code><br />
- <code>pass=something</code><br />
- <code>fullxover=1</code><br />
+</dt><dd> <code>addr=news.host1.com</code><br/>
+ <code>id=3838</code><br/>
+ <code>user=bob</code><br/>
+ <code>pass=something</code><br/>
+ <code>fullxover=1</code><br/>
  <code>linelenience=-1,2</code></dd></dl>
 <p> <code>}</code></dl>
 <p> <code>}</code></dl>
@@ -265,16 +265,16 @@ description: "nget – retrieve files from NNTP (usenet news) hosts"
 </dt><dd> <code>{default</code></dd>
 <dl>
 <dt>
-</dt><dd> <code>_level=1.01</code><br />
- <code>_glevel=1.2</code><br />
- <code>host1=1.9</code><br />
- <code>goodhost=2.0</code><br />
+</dt><dd> <code>_level=1.01</code><br/>
+ <code>_glevel=1.2</code><br/>
+ <code>host1=1.9</code><br/>
+ <code>goodhost=2.0</code><br/>
  <code>badhost=0.9</code></dd></dl>
-<p> <code>}</code><br />
+<p> <code>}</code><br/>
  <code>{trustsizes</code></p>
 <dl>
 <dt>
-</dt><dd> <code>goodhost=5.0</code><br />
+</dt><dd> <code>goodhost=5.0</code><br/>
  <code>badhost=0.1</code></dd></dl>
 <p> <code>}</code></dl>
 <p> <code>}</code></dl>
@@ -285,13 +285,13 @@ description: "nget – retrieve files from NNTP (usenet news) hosts"
 </dt><dd> <code>{galias</code></dd>
 <dl>
 <dt>
-</dt><dd> <code>abpl=alt.binaries.pictures.linux</code><br />
+</dt><dd> <code>abpl=alt.binaries.pictures.linux</code><br/>
  <code>{chocobo</code></dd>
 <dl>
 <dt>
-</dt><dd> <code>group=alt.chocobo</code><br />
+</dt><dd> <code>group=alt.chocobo</code><br/>
  <code>prio=chocoprios</code></dd></dl>
-<p> <code>}</code><br />
+<p> <code>}</code><br/>
  <code>ospics=abpl,alt.binaries.pictures.freebsd</code></dl>
 <p> <code>}</code></dl>
 <h2>EXIT STATUS</h2>
@@ -374,15 +374,15 @@ description: "nget – retrieve files from NNTP (usenet news) hosts"
 </dl>
 </dl>
 <h2>EXAMPLES</h2>
-<p> The simplest possible example. Retrieve and decode everything from alt.binaries.test that you haven&#8217;t already gotten before:<br />
- <code>nget -g alt.binaries.test -r &quot;&quot;</code> get listing of all files matching penguin.*png from alt.binaries.pictures.linux (note this is a regex, equivilant to standard shell glob of penguin*png.. see the <a href="/docs/linux/man/7-regex/">regex</a>(7) or grep manpage for more info on regular expressions.)<br />
- <code>nget -g alt.binaries.pictures.linux -DTr &quot;penguin.*png&quot;</code> retrieve all the ones that have more than 50 lines:<br />
- <code>nget -g alt.binaries.pictures.linux -l 50 -r &quot;penguin.*png&quot;</code> equivilant to above, using -R:<br />
- <code>nget -g alt.binaries.pictures.linux -R &quot;lines 50 &gt; subject penguin.*png == &amp;&amp;&quot;</code><br />
- (basically (lines &gt; 50) &amp;&amp; (subject == penguin.*png)) flush all headers from host goodhost in group alt.binaries.pictures.linux:<br />
- <code>nget -Galt.binaries.pictures.linux -Fgoodhost</code> retrieve/update group list, and list all groups with &quot;linux&quot; in the name or description:<br />
- <code>nget -a -Tr linux</code> equivilant to above, using -R:<br />
- <code>nget -a -TR &quot;group linux == desc linux == ||&quot;</code> flush all groups from host goodhost in grouplist:<br />
+<p> The simplest possible example. Retrieve and decode everything from alt.binaries.test that you haven&#8217;t already gotten before:<br/>
+ <code>nget -g alt.binaries.test -r &quot;&quot;</code> get listing of all files matching penguin.*png from alt.binaries.pictures.linux (note this is a regex, equivilant to standard shell glob of penguin*png.. see the <a href="/docs/linux/man/7-regex/">regex</a>(7) or grep manpage for more info on regular expressions.)<br/>
+ <code>nget -g alt.binaries.pictures.linux -DTr &quot;penguin.*png&quot;</code> retrieve all the ones that have more than 50 lines:<br/>
+ <code>nget -g alt.binaries.pictures.linux -l 50 -r &quot;penguin.*png&quot;</code> equivilant to above, using -R:<br/>
+ <code>nget -g alt.binaries.pictures.linux -R &quot;lines 50 &gt; subject penguin.*png == &amp;&amp;&quot;</code><br/>
+ (basically (lines &gt; 50) &amp;&amp; (subject == penguin.*png)) flush all headers from host goodhost in group alt.binaries.pictures.linux:<br/>
+ <code>nget -Galt.binaries.pictures.linux -Fgoodhost</code> retrieve/update group list, and list all groups with &quot;linux&quot; in the name or description:<br/>
+ <code>nget -a -Tr linux</code> equivilant to above, using -R:<br/>
+ <code>nget -a -TR &quot;group linux == desc linux == ||&quot;</code> flush all groups from host goodhost in grouplist:<br/>
  <code>nget -A -Fgoodhost</code></p>
 <h2>NOTES</h2>
 <p> Running multiple copies of nget at once should be safe. It uses file locking, so there should be no way for the files to actually get corrupted. However if you have two ngets doing a -g on the same group at the same time, it would duplicate the download for both processes. If you are using -G there is no problem at all. (Theoretically you might be able to cause some sort of problems by downloading the same files from the same group in the same directory at the same time..)</p>
@@ -407,7 +407,7 @@ description: "nget – retrieve files from NNTP (usenet news) hosts"
 <dt>~/.nget5/lists/</dt>
 <dd> Default directory for listfiles.</dd></dl>
 <h2>AUTHOR</h2>
-<p> Matthew Mueller &lt;donut AT dakotacom.net&gt; The latest version, and other programs I have written, are available from:<br />
+<p> Matthew Mueller &lt;donut AT dakotacom.net&gt; The latest version, and other programs I have written, are available from:<br/>
  <a rel="nofollow" href="http://www.dakotacom.net/~donut/programs/">http://www.dakotacom.net/~donut/programs/</a></p>
 <h2>ACKNOWLEDGEMENTS</h2>
 <p> Frank Pilhofer, author of uulib, which nget depends upon for uudecoding the files once they are downloaded. <a rel="nofollow" href="http://www.fpx.de/fp/Software/UUDeview/">http://www.fpx.de/fp/Software/UUDeview/</a> Peter Brian Clements, author of par2-cmdline, which nget uses a stripped down version of for its par2 checking. <a rel="nofollow" href="http://parchive.sourceforge.net/">http://parchive.sourceforge.net/</a> The Unix-socket-faq, which my url for has gone bad, but is supposedly posted monthly on comp.unix.programmer. Beej&#8217;s Guide to Network Programming at <a rel="nofollow" href="http://www.ecst.csuchico.edu/~beej/guide/net/">http://www.ecst.csuchico.edu/~beej/guide/net/</a> Jean-loup Gailly and Mark Adler, for the zlib library.</p>

@@ -11,7 +11,7 @@ description: "slartgp.f –"
 <p> slartgp.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>slartgp</code> (F, G, CS, SN, R)<br />
+<p> subroutine <code>slartgp</code> (F, G, CS, SN, R)<br/>
  <i></i><code>SLARTGP</code> generates a plane rotation so that the diagonal is nonnegative.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slartgp (realF, realG, realCS, realSN, realR)</h3>

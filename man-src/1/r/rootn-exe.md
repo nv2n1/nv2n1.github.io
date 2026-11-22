@@ -11,7 +11,7 @@ description: "rootn.exe – ROOT interpretor memory managed backend"
 <h2>Description</h2>
 <p>This executable is linked with <code>libNew</code>, unlike <i>root.exe</i>, which makes it appropriate for if one wants to use memory mapped file, <code>TMapFile</code>, and so on. In all other aspects, it&#8217;s the same as the <i><a href="/docs/linux/man/1-root/">root</a></i>(1) executable.</p>
 <h2>See Also</h2>
-<p><font SIZE="-1"></font> <i><a href="/docs/linux/man/1-root/">root</a></i>(1), <i><a href="/docs/linux/man/1-root-exe/">root.exe</a></i>(1), and <i>cint</i>(1)</p>
+<p> <i><a href="/docs/linux/man/1-root/">root</a></i>(1), <i><a href="/docs/linux/man/1-root-exe/">root.exe</a></i>(1), and <i>cint</i>(1)</p>
 <h2>Original Authors</h2>
 <p>The ROOT team:</p>
 <dl COMPACT>

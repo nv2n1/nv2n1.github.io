@@ -47,9 +47,9 @@ description: "pbmtoppa – convert PBM image to HP Printer Performance Architect
 <h2>CONFIGURATION FILES</h2>
 <p> You can use configuration files to specify parameters rather than use invocation options. <code>pbmtoppa</code> processes the file /etc/pbmtoppa.conf, if it exists, before processing any options. It then processes each configuration file named by a <code>-f</code> option in order, applying the parameters from the configuration file as if they were invocation options used in the place of the <code>-f</code> option. </p>
 <p> Configuration files have the following format: </p>
-<p> <code>#</code><i>Comment</i><br />
- <i>key1</i> <i>value1</i><br />
- <i>key2</i> <i>value2</i><br />
+<p> <code>#</code><i>Comment</i><br/>
+ <i>key1</i> <i>value1</i><br/>
+ <i>key2</i> <i>value2</i><br/>
  [etc.] </p>
 <p> Valid <i>key</i>s are <code>version</code>, <code>xoffset</code>, <code>yoffset</code>, <code>topmargin</code>, <code>leftmargin</code>, <code>rightmargin</code>, <code>bottommargin</code>, <code>papersize</code>, or any non-null prefix of these words. Valid values are the same as with the corresponding invocation parameters. </p>
 <h2>EXAMPLES</h2>
@@ -59,16 +59,16 @@ description: "pbmtoppa – convert PBM image to HP Printer Performance Architect
 <p> <code>cat page1.pbm page2.pbm page3.pbm | pbmppa &gt;/dev/lp1</code> </p>
 <p> Print the Postscript file myfile.ps: </p>
 <p> <code>gs -sDEVICE=rawpbm -q -dNOPAUSE -r600 \ </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;-sOutputFile=- myfile.ps&nbsp;\<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;-sOutputFile=- myfile.ps&nbsp;\<br/>
  | pbmtoppa | lpr </code> </p>
 <h2>CALIBRATION</h2>
 <p> To be able to print successfully and properly, you need to tell <code>pbmtoppa</code> an X and a Y offset appropriate for your printer to use when generating the page. You can specify these offsets with the <code>-x </code> and <code>-y</code> invocation options or with the <code>xoff</code> and <code>yoff</code> parameters in a <code>pbmtoppa</code> configuration file. </p>
 <p> To determine the correct offsets, use the <code>pbmpage</code> program. </p>
 <p> If while trying to do this calibration, the printer refuses to print a page, but just blinks all three lights, specify large margins (e.g. 600 pixels &#8212; one inch) via <code>pbmpage</code> invocation options while doing the calibration. </p>
 <p> For example: </p>
-<p> <code>pbmpage | pbmtoppa &gt;/dev/lp1</code><br />
- or<br />
- <code>pbmpage | pbmtoppa | lpr -l</code><br />
+<p> <code>pbmpage | pbmtoppa &gt;/dev/lp1</code><br/>
+ or<br/>
+ <code>pbmpage | pbmtoppa | lpr -l</code><br/>
  (if your printer filter recognizes the &#8216;-l&#8217; (direct output) parameter). </p>
 <p> In the test pattern, the grid is marked off in pixel coordinate numbers. Unfortunately, these coordinates are probably cut off before the edge of the paper. You&#8217;ll have to use a ruler to estimate the pixel coordinate of the left and top edges of the actual sheet of paper (should be within +/- 300, may be negative; there are 600 pixels per inch). </p>
 <p> Add these coordinates to the X and Y offsets by either editing the configuration file or using the <code>-x </code> and <code>-y</code> command-line parameters. </p>
@@ -78,19 +78,19 @@ description: "pbmtoppa – convert PBM image to HP Printer Performance Architect
 <p> Here is a tip to intergrate HP720C support in RedHat&#8217;s printtool: </p>
 <p> Install pbm2ppa. Copy pbm2ppa to /usr/bin. </p>
 <p> Edit &quot;printerdb&quot; (in my system it is found in /usr/lib/rhs/rhs-printfilters ) and append the following lines: </p>
-<p> &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-Cut here&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;<br />
- StartEntry: DeskJet720C<br />
-&nbsp;<wbr>&nbsp;GSDriver: pbm<br />
-&nbsp;<wbr>&nbsp;Description:&nbsp;{HP DeskJet 720C}<br />
-&nbsp;<wbr>&nbsp;About:&nbsp;{&nbsp;\<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;This driver supports the HP DeskJet 720C&nbsp;\<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;inkjet printer.&nbsp;\<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;It does does not support color printing.&nbsp;\<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;IMPORTANT!&nbsp;Insert&nbsp;\<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&quot;- | pbm2ppa -&quot;&nbsp;\<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;in the&nbsp;&quot;Extra GS Otions&quot;&nbsp;field.\<br />
+<p> &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-Cut here&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;<br/>
+ StartEntry: DeskJet720C<br/>
+&nbsp;<wbr>&nbsp;GSDriver: pbm<br/>
+&nbsp;<wbr>&nbsp;Description:&nbsp;{HP DeskJet 720C}<br/>
+&nbsp;<wbr>&nbsp;About:&nbsp;{&nbsp;\<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;This driver supports the HP DeskJet 720C&nbsp;\<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;inkjet printer.&nbsp;\<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;It does does not support color printing.&nbsp;\<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;IMPORTANT!&nbsp;Insert&nbsp;\<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&quot;- | pbm2ppa -&quot;&nbsp;\<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;in the&nbsp;&quot;Extra GS Otions&quot;&nbsp;field.\<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;} </p>
-<p>&nbsp;<wbr>&nbsp;Resolution:&nbsp;{600}&nbsp;{600}&nbsp;{}<br />
+<p>&nbsp;<wbr>&nbsp;Resolution:&nbsp;{600}&nbsp;{600}&nbsp;{}<br/>
  EndEntry &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;- </p>
 <p> Now you can add an HP720C printer just like any other, using printtool. </p>
 <h2>SEE ALSO</h2>

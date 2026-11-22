@@ -11,7 +11,7 @@ description: "dsycon_rook.f –"
 <p> dsycon_rook.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dsycon_rook</code> (UPLO, N, A, LDA, IPIV, ANORM, RCOND, WORK, IWORK, INFO)<br />
+<p> subroutine <code>dsycon_rook</code> (UPLO, N, A, LDA, IPIV, ANORM, RCOND, WORK, IWORK, INFO)<br/>
  <i></i><code>DSYCON_ROOK</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dsycon_rook (characterUPLO, integerN, double precision, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, double precisionANORM, double precisionRCOND, double precision, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>

@@ -20,7 +20,7 @@ description: "dh – debhelper command sequencer"
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>&#8211;with</code> <i>addon</i>[<code>,</code><i>addon</i> &#8230;]</dt>
-<dd> Add the debhelper commands specified by the given addon to appropriate places in the sequence of commands that is run. This option can be repeated more than once, or multiple addons can be listed, separated by commas. This is used when there is a third-party package that provides debhelper commands. See the <i></i><font SIZE="-1"><i>PROGRAMMING</i></font><i></i> file for documentation about the sequence addon interface.</dd>
+<dd> Add the debhelper commands specified by the given addon to appropriate places in the sequence of commands that is run. This option can be repeated more than once, or multiple addons can be listed, separated by commas. This is used when there is a third-party package that provides debhelper commands. See the <i></i><i>PROGRAMMING</i><i></i> file for documentation about the sequence addon interface.</dd>
 <dt><code>&#8211;without</code> <i>addon</i></dt>
 <dd> The inverse of <code>&#8211;with</code>, disables using the given addon. This option can be repeated more than once, or multiple addons to disable can be listed, separated by commas.</dd>
 <dt><code>&#8211;list</code>, <code>-l</code></dt>
@@ -139,7 +139,7 @@ description: "dh – debhelper command sequencer"
 <p> In compat 9 or earlier, each debhelper command will record when it&#8217;s successfully run in <i>debian/package.debhelper.log</i>. (Which <code>dh_clean</code> deletes.) So <code>dh</code> can tell which commands have already been run, for which packages, and skip running those commands again. </p>
 <p> Each time <code>dh</code> is run (in compat 9 or earlier), it examines the log, and finds the last logged command that is in the specified sequence. It then continues with the next command in the sequence. The <code>&#8211;until</code>, <code>&#8211;before</code>, <code>&#8211;after</code>, and <code>&#8211;remaining</code> options can override this behavior (though they were removed in compat 10). </p>
 <p> A sequence can also run dependent targets in debian/rules. For example, the &#8220;binary&#8221; sequence runs the &#8220;install&#8221; target. </p>
-<p> <code>dh</code> uses the <font SIZE="-1"><code>DH_INTERNAL_OPTIONS</code></font> environment variable to pass information through to debhelper commands that are run inside override targets. The contents (and indeed, existence) of this environment variable, as the name might suggest, is subject to change at any time. </p>
+<p> <code>dh</code> uses the <code>DH_INTERNAL_OPTIONS</code> environment variable to pass information through to debhelper commands that are run inside override targets. The contents (and indeed, existence) of this environment variable, as the name might suggest, is subject to change at any time. </p>
 <p> Commands in the <code>build-indep</code>, <code>install-indep</code> and <code>binary-indep</code> sequences are passed the <code>-i</code> option to ensure they only work on architecture independent packages, and commands in the <code>build-arch</code>, <code>install-arch</code> and <code>binary-arch</code> sequences are passed the <code>-a</code> option to ensure they only work on architecture dependent packages.</p>
 <h2>DEPRECATED OPTIONS</h2>
 <p> The following options are deprecated. It&#8217;s much better to use override targets instead. They are <code>not</code> available in compat 10.</p>

@@ -42,7 +42,7 @@ description: "snmpset – communicates with a network entity using SNMP SET requ
 <p> For example: </p>
 <p> snmpset -c private -v 1 test-hub system.sysContact.0 s dpz [at] noc.rutgers.edu ip.ipforwarding.0 = 2 </p>
 <p> will set the variables sysContact.0 and ipForwarding.0: </p>
-<p> system.sysContact.0 = STRING: &quot;dpz [at] noc.rutgers.edu&quot;<br />
+<p> system.sysContact.0 = STRING: &quot;dpz [at] noc.rutgers.edu&quot;<br/>
  ip.ipForwarding.0 = INTEGER: not-forwarding(2) </p>
 <p> If the network entity has an error processing the request packet, an error packet will be returned and a message will be shown, helping to pinpoint in what way the request was malformed.</p>
 <h2>OPTIONS</h2>

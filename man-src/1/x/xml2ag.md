@@ -13,12 +13,12 @@ description: "xml2ag – XML to AutoGen Definiton Converter"
 <p> <code>xml2ag</code> [<code>&#8211;</code><i>flag</i> [<i>value</i>]]&#8230; [<code>&#8212;</code><i>opt-name</i>[[=| ]<i>value</i>]]&#8230;[ &lt;def-file&gt; ] </p>
 <p> This program will convert any arbitrary XML file into equivalent AutoGen definitions, and invoke AutoGen.</p>
 <h2>DESCRIPTION</h2>
-<p> The template will be derived from either:<br />
- * the <code>&#8211;override-tpl</code> command line option<br />
- * a top level XML attribute named, &quot;template&quot;<br />
+<p> The template will be derived from either:<br/>
+ * the <code>&#8211;override-tpl</code> command line option<br/>
+ * a top level XML attribute named, &quot;template&quot;<br/>
  One or the other <code>must</code> be provided, or the program will exit with a failure message. </p>
-<p> The &#8220;base-name&#8221; for the output will similarly be either:<br />
- * the <code>&#8211;base-name</code> command line option<br />
+<p> The &#8220;base-name&#8221; for the output will similarly be either:<br/>
+ * the <code>&#8211;base-name</code> command line option<br/>
  * the base name of the .xml file</p>
 <h2>OPTIONS</h2>
 <h3>All other options are derived from autogen</h3>
@@ -66,8 +66,8 @@ description: "xml2ag – XML to AutoGen Definiton Converter"
 exactly -1, or
 in the range  1 through 0x1000000
 </pre>
-<p> The default <i>lim</i> for this option is:<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><br />
+<p> The default <i>lim</i> for this option is:<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><br/>
 &nbsp;<wbr>256 </p>
 <p> Pass-through AutoGen argument</p>
 <dt><code>-t</code> <i>seconds</i>, <code>&#8211;timeout</code>=<i>seconds</i></dt>
@@ -84,8 +84,8 @@ templates     block-macros  expressions
 everything
 </pre>
 <p> or their numeric equivalent. </p>
-<p> The default <i>level</i> for this option is:<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><br />
+<p> The default <i>level</i> for this option is:<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><br/>
 &nbsp;<wbr>nothing </p>
 <p> Pass-through AutoGen argument</p>
 <dt><code>&#8211;trace-out</code>=<i>file</i></dt>

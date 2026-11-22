@@ -16,13 +16,13 @@ description: "sc::PsiCCSD –"
 <h3>Public Member Functions</h3>
 <p><code>PsiCCSD</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;) </p>
 <p> <code>PsiCCSD</code> (<code>StateIn</code> &amp;) </p>
-<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br />
- <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br />
- int <code>spin_polarized</code> ()<br />
- <i>Return 1 if the alpha density is not equal to the beta density. </i><br />
+<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br/>
+ <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br/>
+ int <code>spin_polarized</code> ()<br/>
+ <i>Return 1 if the alpha density is not equal to the beta density. </i><br/>
  int <code>gradient_implemented</code> () const</p>
 <h3>Protected Member Functions</h3>
-<p>void <code>write_input</code> (int conv)<br />
+<p>void <code>write_input</code> (int conv)<br/>
  <i>Prepares a complete Psi input file. The input file is assumed to have been opened. </i></p>
 <h2>Detailed Description</h2>
 <p><code>PsiCCSD</code> is a concrete implementation of Psi CCSD wave function.</p>

@@ -15,7 +15,7 @@ description: "ql/pricingengines/quanto/quantoengine.hpp – Quanto option engine
 #include &lt;ql/termstructures/yield/quantotermstructure.hpp&gt;
 #include &lt;ql/instruments/payoffs.hpp&gt;</code></pre>
 <h3>Classes</h3>
-<p>class <code>QuantoEngine&lt; Instr, Engine &gt;</code><br />
+<p>class <code>QuantoEngine&lt; Instr, Engine &gt;</code><br/>
  <i>Quanto engine. </i></p>
 <h2>Detailed Description</h2>
 <p>Quanto option engine.</p>

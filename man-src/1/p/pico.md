@@ -28,8 +28,8 @@ description: "nano – Nano’s ANOther editor, inspired by Pico"
 <p> Since version 4.0, <code>nano</code> by default: </p>
 <dl>
 <dt>
-</dt><dd> &bull; does not automatically hard-wrap lines that become overlong,<br />
- &bull; includes the line below the title bar in the editing area,<br />
+</dt><dd> &bull; does not automatically hard-wrap lines that become overlong,<br/>
+ &bull; includes the line below the title bar in the editing area,<br/>
  &bull; does linewise (smooth) scrolling.</dd></dl>
 <p> If you want the old, Pico behavior back, you can use <code>&#8211;breaklonglines</code>, <code>&#8211;emptyline</code>, and <code>&#8211;jumpyscrolling</code> (or <code>-bej</code> for short). </p>
 <h2>OPTIONS</h2>
@@ -158,7 +158,7 @@ description: "nano – Nano’s ANOther editor, inspired by Pico"
 <p> In some cases <code>nano</code> will try to dump the buffer into an emergency file. This will happen mainly if <code>nano</code> receives a SIGHUP or SIGTERM or runs out of memory. It will write the buffer into a file named <i>nano.save</i> if the buffer didn&#8217;t have a name already, or will add a &quot;.save&quot; suffix to the current filename. If an emergency file with that name already exists in the current directory, it will add &quot;.save&quot; plus a number (e.g. &quot;.save.1&quot;) to the current filename in order to make it unique. In multibuffer mode, <code>nano</code> will write all the open buffers to their respective emergency files. </p>
 <h2>BUGS</h2>
 <p> The recording and playback of keyboard macros works correctly only on a terminal emulator, not on a Linux console (VT), because the latter does not by default distinguish modified from unmodified arrow keys. </p>
-<p> Please report any other bugs that you encounter via:<br />
+<p> Please report any other bugs that you encounter via:<br/>
  <i><a rel="nofollow" href="https://savannah.gnu.org/bugs/?group=nano">https://savannah.gnu.org/bugs/?group=nano</a></i>. </p>
 <p> When nano crashes, it will save any modified buffers to emergency .save files. If you are able to reproduce the crash and you want to get a backtrace, define the environment variable <code>NANO_NOCATCH</code>. </p>
 <h2>HOMEPAGE</h2>

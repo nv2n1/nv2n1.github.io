@@ -17,7 +17,7 @@ int selabel_lookup_raw(struct selabel_handle *hnd,
                        char **context,
                        const char *object_name, int object_type);</code></pre>
 <h2>Description</h2>
-<p>The DB contexts backend maps from a pair of object name and class into security contexts. It is used to find the appropriate context for database objects when relabeling a certain database. The returned <i>context</i> must be freed using <code><a href="/docs/linux/man/3-freecon/">freecon</a></code>(3).<br />
+<p>The DB contexts backend maps from a pair of object name and class into security contexts. It is used to find the appropriate context for database objects when relabeling a certain database. The returned <i>context</i> must be freed using <code><a href="/docs/linux/man/3-freecon/">freecon</a></code>(3).<br/>
  <code><a href="/docs/linux/man/3-selabel_lookup/">selabel_lookup</a></code>(3) describes the function with its return and error codes. </p>
 <p> The <i>object_name</i> should be a fully qualified name using the hierarchy of database objects. For example, the <code>pg_class</code> table in the <code>postgres</code> database and <code>pg_catalog</code> schema should be qualified as:</p>
 <dl>
@@ -159,13 +159,13 @@ int selabel_lookup_raw(struct selabel_handle *hnd,
 <dd>The security context that will be applied to the object.</dd></dl>
 </dl>
 <p> The following example is for SE-PostgreSQL: </p>
-<p> # ./contexts/sepgsql_contexts file<br />
- # object_type object_name context<br />
- db_database my_database system_u:object_r:sepgsql_db_t:s0<br />
- db_database * system_u:object_r:sepgsql_db_t:s0<br />
- db_schema *.* system_u:object_r:sepgsql_schema_t:s0<br />
- db_tuple row_low system_u:object_r:sepgsql_table_t:s0<br />
- db_tuple row_high system_u:object_r:sepgsql_table_t:s0:c1023<br />
+<p> # ./contexts/sepgsql_contexts file<br/>
+ # object_type object_name context<br/>
+ db_database my_database system_u:object_r:sepgsql_db_t:s0<br/>
+ db_database * system_u:object_r:sepgsql_db_t:s0<br/>
+ db_schema *.* system_u:object_r:sepgsql_schema_t:s0<br/>
+ db_tuple row_low system_u:object_r:sepgsql_table_t:s0<br/>
+ db_tuple row_high system_u:object_r:sepgsql_table_t:s0:c1023<br/>
  db_tuple *.*.* system_u:object_r:sepgsql_table_t:s0</p>
 <h2>Notes</h2>
 <dl>

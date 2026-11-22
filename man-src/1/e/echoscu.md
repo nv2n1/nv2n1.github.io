@@ -40,28 +40,28 @@ port  tcp/ip port number of peer
           use config file f for the logger
 </code></pre>
 <h3>network options</h3>
-<p>application entity titles:<br />
-  -aet  &#8211;aetitle  [a]etitle: string<br />
-          set my calling AE title (default: ECHOSCU)<br />
-  -aec  &#8211;call  [a]etitle: string<br />
-          set called AE title of peer (default: ANY-SCP)<br />
-association negotiation debugging:<br />
-  -pts  &#8211;propose-ts  [n]umber: integer (1..28)<br />
-          propose n transfer syntaxes<br />
-  -ppc  &#8211;propose-pc  [n]umber: integer (1..128)<br />
-          propose n presentation contexts<br />
-other network options:<br />
-  -to   &#8211;timeout  [s]econds: integer (default: unlimited)<br />
-          timeout for connection requests<br />
-  -ta   &#8211;acse-timeout  [s]econds: integer (default: 30)<br />
-          timeout for ACSE messages<br />
-  -td   &#8211;dimse-timeout  [s]econds: integer (default: unlimited)<br />
-          timeout for DIMSE messages<br />
-  -pdu  &#8211;max-pdu  [n]umber of bytes: integer (4096..131072)<br />
-          set max receive pdu to n bytes (default: 16384)<br />
-        &#8211;repeat  [n]umber: integer<br />
-          repeat n times<br />
-        &#8211;abort<br />
+<p>application entity titles:<br/>
+  -aet  &#8211;aetitle  [a]etitle: string<br/>
+          set my calling AE title (default: ECHOSCU)<br/>
+  -aec  &#8211;call  [a]etitle: string<br/>
+          set called AE title of peer (default: ANY-SCP)<br/>
+association negotiation debugging:<br/>
+  -pts  &#8211;propose-ts  [n]umber: integer (1..28)<br/>
+          propose n transfer syntaxes<br/>
+  -ppc  &#8211;propose-pc  [n]umber: integer (1..128)<br/>
+          propose n presentation contexts<br/>
+other network options:<br/>
+  -to   &#8211;timeout  [s]econds: integer (default: unlimited)<br/>
+          timeout for connection requests<br/>
+  -ta   &#8211;acse-timeout  [s]econds: integer (default: 30)<br/>
+          timeout for ACSE messages<br/>
+  -td   &#8211;dimse-timeout  [s]econds: integer (default: unlimited)<br/>
+          timeout for DIMSE messages<br/>
+  -pdu  &#8211;max-pdu  [n]umber of bytes: integer (4096..131072)<br/>
+          set max receive pdu to n bytes (default: 16384)<br/>
+        &#8211;repeat  [n]umber: integer<br/>
+          repeat n times<br/>
+        &#8211;abort<br/>
           abort association instead of releasing it</p>
 <h3>transport layer security (TLS) options</h3>
 <pre><code>

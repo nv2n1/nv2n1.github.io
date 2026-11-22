@@ -20,7 +20,7 @@ description: "maildrop – mail delivery filter/agent"
 <p> <code>maildrop</code> does not accept an mbox-style From_ line before the first header line. <code>maildrop</code> does not accept leading empty lines before the first non-blank header line. If the message can possibly start with empty lines, and a From_ line, use <code>reformail -f0</code> to remove any initial empty lines, and replace a From_ line with a proper &#8220;Return-Path:&#8221; header; then pipe it to <code>maildrop</code>. </p>
 <p> If the file /etc/maildroprc exists, mail delivery or mail filtering instructions are read from that file. <code>maildrop</code>&#8216;s delivery/filtering instructions may direct <code>maildrop</code> to save the message in specific mailbox, discard it, return it to sender, or forward it to a different E-mail address. </p>
 <p> If /etc/maildroprc does not exist, or its mail delivery instructions do not completely dispose of this message, <code>maildrop</code> then reads the mail delivery instructions from $HOME/.mailfilter. If it doesn&#8217;t exist, or its mail delivery instructions do not completely dispose of the message, <code>maildrop</code> then saves the E-mail message in the default mailbox. </p>
-<p> <code>maildrop</code> knows how to deliver mail to an standard mailbox files; it also knows how to deliver to maildirs. A maildir is a directory-based mail format used by the m[blue]<code>Courier</code>m[]<font SIZE="-2">[1]</font> and m[blue]<code>Qmail</code>m[]<font SIZE="-2">[2]</font> mail servers. Many other mail servers also know how to read maildirs. When delivering to mailbox files, <code>maildrop</code> will lock the mailbox for the duration of the delivery. </p>
+<p> <code>maildrop</code> knows how to deliver mail to an standard mailbox files; it also knows how to deliver to maildirs. A maildir is a directory-based mail format used by the m[blue]<code>Courier</code>m[][1] and m[blue]<code>Qmail</code>m[][2] mail servers. Many other mail servers also know how to read maildirs. When delivering to mailbox files, <code>maildrop</code> will lock the mailbox for the duration of the delivery. </p>
 <p> This is the general mail delivery behavior. There are minor differences in behavior depending on <code>maildrop</code> delivery mode, which is determined based on how <code>maildrop</code> was started. <code>maildrop</code> uses three different primary operating modes: </p>
 <p> Manual mode</p>
 <dl>
@@ -33,9 +33,9 @@ description: "maildrop – mail delivery filter/agent"
 <p> Embedded mode</p>
 <dl>
 <dt>
-</dt><dd> <code>maildrop</code> functions as a part of another application. The embedded mode is used by the m[blue]<code>Courier</code>m[]<font SIZE="-2">[1]</font> mail server to integrate mail filtering directly into the process of receiving mail from a remote mail relay, thus rejecting unwanted mail before it is even accepted for local mail delivery. Embedded mode is used when either the -m, or the -M, option is specified, and is described below. See below for a more extensive description of the embedded mode.</dd></dl>
+</dt><dd> <code>maildrop</code> functions as a part of another application. The embedded mode is used by the m[blue]<code>Courier</code>m[][1] mail server to integrate mail filtering directly into the process of receiving mail from a remote mail relay, thus rejecting unwanted mail before it is even accepted for local mail delivery. Embedded mode is used when either the -m, or the -M, option is specified, and is described below. See below for a more extensive description of the embedded mode.</dd></dl>
 <h2>SECURITY</h2>
-<p> It is safe to install <code>maildrop</code> as a root setuid program. m[blue]<code>The Courier mail server</code>m[]<font SIZE="-2">[1]</font> installs <code>maildrop</code> as a root setuid program by default, in order to be able to use <code>maildrop</code> in embedded mode. If root runs <code>maildrop</code> (or it is setuided to root) the <code>-d</code> option may be used to specify the message&#8217;s recipient. <code>maildrop</code> immediately resets its userid to the one specified by the <code>-d</code> option. The user&#8217;s $HOME/.mailfilter is read (if it exists), and the message is delivered to the indicated user. </p>
+<p> It is safe to install <code>maildrop</code> as a root setuid program. m[blue]<code>The Courier mail server</code>m[][1] installs <code>maildrop</code> as a root setuid program by default, in order to be able to use <code>maildrop</code> in embedded mode. If root runs <code>maildrop</code> (or it is setuided to root) the <code>-d</code> option may be used to specify the message&#8217;s recipient. <code>maildrop</code> immediately resets its userid to the one specified by the <code>-d</code> option. The user&#8217;s $HOME/.mailfilter is read (if it exists), and the message is delivered to the indicated user. </p>
 <p> The system administrator can configure <code>maildrop</code> to restrict the <code>-d</code> option for everyone except the mail system itself. </p>
 <p> If in delivery mode the user&#8217;s home directory has the sticky bit set, <code>maildrop</code> immediately terminates with an exit code of <code>EX_TEMPFAIL</code>, without doing anything. Mail servers interpret the <code>EX_TEMPFAIL</code> exit code as a request to reschedule the message for another delivery attempt later. Setting the sticky bit allows $HOME/.mailfilter to be edited while temporarily holding all incoming mail. </p>
 <p> <code>maildrop</code> also terminates with <code>EX_TEMPFAIL</code> if the user&#8217;s home directory has world write permissions. </p>
@@ -51,7 +51,7 @@ description: "maildrop – mail delivery filter/agent"
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  This setting may already be the default, depending on maildrop&#8217;s configuration. </dd>
 </dl>
 </dl>
@@ -66,7 +66,7 @@ description: "maildrop – mail delivery filter/agent"
 <dt>
 </dt><dd> Run <code>maildrop</code> in delivery mode for this user ID. </dd>
 <p> The system administrator may optionally restrict the <code>-d</code> option to be available to the mail system only, so it may not be available to you. In all cases, the <code>-d</code> option is allowed if <i>user</i> is the same user who is running <code>maildrop</code>. Also, for the <code>-d</code> option to work at all, <code>maildrop</code> must be executed by root, or <code>maildrop</code> must be a root-owned program with the setuid bit set. Absence of a filename on <code>maildrop</code>&#8216;s command line implies the <code>-d</code> option for the user running <code>maildrop</code>. </p>
-<p> If <code>-d</code> is not specified, the first argument following all the options is a name of the file containing filtering instructions. The remaining arguments, if any, are assigned to the variables <i>$1</i>, <i>$2</i>, and so on (see m[blue]<code>&quot;Environment&quot;</code>m[]<font SIZE="-2">[3]</font> and m[blue]<code>&quot;Variable substitution&quot;</code>m[]<font SIZE="-2">[4]</font>).</dl>
+<p> If <code>-d</code> is not specified, the first argument following all the options is a name of the file containing filtering instructions. The remaining arguments, if any, are assigned to the variables <i>$1</i>, <i>$2</i>, and so on (see m[blue]<code>&quot;Environment&quot;</code>m[][3] and m[blue]<code>&quot;Variable substitution&quot;</code>m[][4]).</dl>
 <p> -f <i>address</i></p>
 <dl>
 <dt>
@@ -90,7 +90,7 @@ description: "maildrop – mail delivery filter/agent"
 <p> -D <i>uuu/ggg</i></p>
 <dl>
 <dt>
-</dt><dd> This option is reserved for use by the version of <code>maildrop</code> that comes integrated with the m[blue]<code>Courier mail server</code>m[]<font SIZE="-2">[1]</font>.</dd></dl>
+</dt><dd> This option is reserved for use by the version of <code>maildrop</code> that comes integrated with the m[blue]<code>Courier mail server</code>m[][1].</dd></dl>
 <p> -V <i>level</i></p>
 <dl>
 <dt>
@@ -115,55 +115,55 @@ description: "maildrop – mail delivery filter/agent"
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> /etc/maildroprc is read only in delivery mode. </p>
 </dl>
 <h2>VIRTUAL ACCOUNTS</h2>
 <p> The <code>-d</code> option can also specify a name of a virtual account or mailbox. See the <code>makeuserdb</code>(1) manual page in the Courier Authentication library&#8217;s documentation for more information.</p>
 <h2>EMBEDDED MODE</h2>
-<p> The embedded mode is used when <code>maildrop</code>&#8216;s filtering abilities are desired, but no actual mail delivery is needed. In embedded mode <code>maildrop</code> is executed by another application, and m[blue]<code>is passed the -m or the -M option.</code>m[]<font SIZE="-2">[5]</font><code>maildrop</code> reads the message, then runs the filtering rules specified in filename. </p>
+<p> The embedded mode is used when <code>maildrop</code>&#8216;s filtering abilities are desired, but no actual mail delivery is needed. In embedded mode <code>maildrop</code> is executed by another application, and m[blue]<code>is passed the -m or the -M option.</code>m[][5]<code>maildrop</code> reads the message, then runs the filtering rules specified in filename. </p>
 <p> filename may contain any filtering instructions EXCEPT the following: </p>
 <p> ` &#8230; `</p>
 <dl>
 <dt>
 </dt><dd> Text strings delimited by back-tick characters (run shell command) are not allowed.</dd></dl>
-<p> m[blue]<code>cc</code>m[]<font SIZE="-2">[6]</font></p>
+<p> m[blue]<code>cc</code>m[][6]</p>
 <dl>
 <dt>
 </dt><dd> The <code>cc</code> command is not allowed in embedded mode.</dd></dl>
-<p> m[blue]<code>dotlock</code>m[]<font SIZE="-2">[7]</font></p>
+<p> m[blue]<code>dotlock</code>m[][7]</p>
 <dl>
 <dt>
 </dt><dd> The <code>dotlock</code> command is not allowed in embedded mode.</dd></dl>
-<p> m[blue]<code>flock</code>m[]<font SIZE="-2">[8]</font></p>
+<p> m[blue]<code>flock</code>m[][8]</p>
 <dl>
 <dt>
 </dt><dd> The <code>flock</code> command is not allowed in embedded mode.</dd></dl>
-<p> m[blue]<code>gdbmopen</code>m[]<font SIZE="-2">[9]</font></p>
+<p> m[blue]<code>gdbmopen</code>m[][9]</p>
 <dl>
 <dt>
 </dt><dd> In embedded mode, GDBM databases may be opened only for reading.</dd></dl>
-<p> m[blue]<code>log</code>m[]<font SIZE="-2">[10]</font></p>
+<p> m[blue]<code>log</code>m[][10]</p>
 <dl>
 <dt>
 </dt><dd> The <code>log</code> command is not allowed in embedded mode.</dd></dl>
-<p> m[blue]<code>logfile</code>m[]<font SIZE="-2">[10]</font></p>
+<p> m[blue]<code>logfile</code>m[][10]</p>
 <dl>
 <dt>
 </dt><dd> The <code>logfile</code> command is not allowed in embedded mode.</dd></dl>
-<p> m[blue]<code>to</code>m[]<font SIZE="-2">[11]</font></p>
+<p> m[blue]<code>to</code>m[][11]</p>
 <dl>
 <dt>
 </dt><dd> The <code>to</code> command is not allowed in embedded mode.</dd></dl>
-<p> m[blue]<code>xfilter</code>m[]<font SIZE="-2">[12]</font></p>
+<p> m[blue]<code>xfilter</code>m[][12]</p>
 <dl>
 <dt>
 </dt><dd> The <code>xfilter</code> command is not allowed in embedded mode.</dd></dl>
 <p> Normally when the filename does not explicitly delivers a message, <code>maildrop</code> will deliver the message to the user&#8217;s default mailbox. This is also disabled in embedded mode. </p>
-<p> The filename may communicate with the parent application by using the m[blue]<code>echo</code>m[]<font SIZE="-2">[13]</font> statement and the <i>EXITCODE</i> environment variable.</p>
+<p> The filename may communicate with the parent application by using the m[blue]<code>echo</code>m[][13] statement and the <i>EXITCODE</i> environment variable.</p>
 <h3>/etc/maildroprcs</h3>
-<p> If <code>maildrop</code> encounters an m[blue]<code>include</code>m[]<font SIZE="-2">[14]</font> statement where the filename starts with /etc/maildroprcs/, the normal restrictions for the embedded mode are suspended while executing the filter file in the /etc/maildroprcs directory. The restrictions are also suspended for any additional filter files that are included from /etc/maildroprcs. The restrictions resume once <code>maildrop</code> finishes executing the file from /etc/maildroprcs. </p>
-<p> This allows the system administrator to have a controlled environment for running external commands (via the backticks, or the m[blue]<code>xfilter</code>m[]<font SIZE="-2">[12]</font> command). </p>
+<p> If <code>maildrop</code> encounters an m[blue]<code>include</code>m[][14] statement where the filename starts with /etc/maildroprcs/, the normal restrictions for the embedded mode are suspended while executing the filter file in the /etc/maildroprcs directory. The restrictions are also suspended for any additional filter files that are included from /etc/maildroprcs. The restrictions resume once <code>maildrop</code> finishes executing the file from /etc/maildroprcs. </p>
+<p> This allows the system administrator to have a controlled environment for running external commands (via the backticks, or the m[blue]<code>xfilter</code>m[][12] command). </p>
 <p> The name of the file may not contain any periods (so that a creative individual can&#8217;t write <i>include &quot;/etc/maildroprcs/../../home/user/recipe&quot;</i>). </p>
 <p> Before executing the commands in the /etc/maildroprcs file, <code>maildrop</code> automatically resets the following variables to their initial values: <i>DEFAULT</i>, <i>HOME</i>, <i>LOCKEXT</i>, <i>LOCKSLEEP</i>, <i>LOCKTIMEOUT</i>, <i>LOCKREFRESH</i>, <i>LOGNAME</i>, <i>PATH</i>, <i>SENDMAIL</i>, and <i>SHELL</i>. Please note that the previous values of these variables (if they were changed) will NOT be restored once <code>maildrop</code> finishes executing the commands from /etc/maildroprcs.</p>
 <h2>WATCHDOG TIMER</h2>
@@ -194,7 +194,7 @@ description: "maildrop – mail delivery filter/agent"
 <dt>
 </dt><dd> Directory containing files used in special embedded mode.</dd></dl>
 <h2>SEE ALSO</h2>
-<p> m[blue]<code><a href="/docs/linux/man/1-lockmail/">lockmail</a></code>(1)m[]<font SIZE="-2">[15]</font>, m[blue]<code><a href="/docs/linux/man/7-maildropfilter/">maildropfilter</a></code>(7)m[]<font SIZE="-2">[16]</font>, m[blue]<code><a href="/docs/linux/man/1-makedat/">makedat</a></code>(1)m[]<font SIZE="-2">[17]</font>, m[blue]<code><a href="/docs/linux/man/7-maildropgdbm/">maildropgdbm</a></code>(7)m[]<font SIZE="-2">[9]</font>, m[blue]<code><a href="/docs/linux/man/7-maildropex/">maildropex</a></code>(7)m[]<font SIZE="-2">[18]</font>, m[blue]<code><a href="/docs/linux/man/1-reformail/">reformail</a></code>(1)m[]<font SIZE="-2">[19]</font>, m[blue]<code><a href="/docs/linux/man/1-makemime/">makemime</a></code>(1)m[]<font SIZE="-2">[20]</font>, m[blue]<code><a href="/docs/linux/man/1-reformime/">reformime</a></code>(1)m[]<font SIZE="-2">[21]</font>, <code><a href="/docs/linux/man/1-egrep/">egrep</a></code>(1), <code><a href="/docs/linux/man/1-grep/">grep</a></code>(1), , m[blue]<code>courier</code>(8)m[]<font SIZE="-2">[22]</font>, <code>sendmail</code>(8), m[blue]<code><a rel="nofollow" href="http://www.qmail.org">http://www.qmail.org</a></code>m[].</p>
+<p> m[blue]<code><a href="/docs/linux/man/1-lockmail/">lockmail</a></code>(1)m[][15], m[blue]<code><a href="/docs/linux/man/7-maildropfilter/">maildropfilter</a></code>(7)m[][16], m[blue]<code><a href="/docs/linux/man/1-makedat/">makedat</a></code>(1)m[][17], m[blue]<code><a href="/docs/linux/man/7-maildropgdbm/">maildropgdbm</a></code>(7)m[][9], m[blue]<code><a href="/docs/linux/man/7-maildropex/">maildropex</a></code>(7)m[][18], m[blue]<code><a href="/docs/linux/man/1-reformail/">reformail</a></code>(1)m[][19], m[blue]<code><a href="/docs/linux/man/1-makemime/">makemime</a></code>(1)m[][20], m[blue]<code><a href="/docs/linux/man/1-reformime/">reformime</a></code>(1)m[][21], <code><a href="/docs/linux/man/1-egrep/">egrep</a></code>(1), <code><a href="/docs/linux/man/1-grep/">grep</a></code>(1), , m[blue]<code>courier</code>(8)m[][22], <code>sendmail</code>(8), m[blue]<code><a rel="nofollow" href="http://www.qmail.org">http://www.qmail.org</a></code>m[].</p>
 <h2>AUTHOR</h2>
 <p> <code>Sam Varshavchik</code></p>
 <dl>

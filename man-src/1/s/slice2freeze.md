@@ -13,7 +13,7 @@ description: "slice2freeze – Generates Freeze map and index classes in C++."
 <p> slice2freeze [options] [files] </p>
 <h2>DESCRIPTION</h2>
 <p> slice2freeze generates Freeze map and index classes in C++. </p>
-<p> Full documentation for slice2freeze is available online at:<br />
+<p> Full documentation for slice2freeze is available online at:<br/>
  &quot;<a rel="nofollow" href="http://doc.zeroc.com/pages/viewpage.action?pageId=5048540">http://doc.zeroc.com/pages/viewpage.action?pageId=5048540</a>&quot;. </p>
 <h2>OPTIONS</h2>
 <dl>

@@ -14,7 +14,7 @@ description: "std::__detail::_SpecializedCursor< _FwdIterT > –"
 <p><code>_SpecializedCursor</code> (const _FwdIterT &amp;__b, const _FwdIterT __e) </p>
 <p> bool <code>_M_at_end</code> () const </p>
 <p> const _FwdIterT &amp; <code>_M_begin</code> () const </p>
-<p> std::iterator_traits<br />
+<p> std::iterator_traits<br/>
  &lt; _FwdIterT &gt;::value_type <code>_M_current</code> () const &quot; </p>
 <p> const _FwdIterT &amp; <code>_M_end</code> () const </p>
 <p> void <code>_M_next</code> () </p>

@@ -56,8 +56,8 @@ description: "digitemp – program to read from 1-wire temperature sensors."
 <dd> See Humidity Format below.</dd></dl>
 <h2>Temperature Format</h2>
 <p> The temperature format can be either a numeric value, or a string. The numeric values select pre-configured output formats: </p>
-<p>&nbsp;<wbr>1&nbsp;<wbr>=&nbsp;<wbr>One line per sensor, time, C, F&nbsp;<wbr>(default)&nbsp;<wbr><br />
-&nbsp;<wbr>2&nbsp;<wbr>=&nbsp;<wbr>One line per sample, elapsed time, temperature in C<br />
+<p>&nbsp;<wbr>1&nbsp;<wbr>=&nbsp;<wbr>One line per sensor, time, C, F&nbsp;<wbr>(default)&nbsp;<wbr><br/>
+&nbsp;<wbr>2&nbsp;<wbr>=&nbsp;<wbr>One line per sample, elapsed time, temperature in C<br/>
 &nbsp;<wbr>3&nbsp;<wbr>=&nbsp;<wbr>Same as&nbsp;<wbr>#2, except temperature is in F </p>
 <p> #2 and #3 have the data seperated by tabs, suitable for import into a spreadsheet or other graphing software. </p>
 <p> The format string uses strftime tokens plus 5 special ones for DigiTemp:</p>

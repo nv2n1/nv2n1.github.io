@@ -15,9 +15,9 @@ description: "QuantLib::ForwardValueQuote – quote for the forward value of an 
 <p><code>ForwardValueQuote</code> (const boost::shared_ptr&lt; <code>Index</code> &gt; &amp;index, const <code>Date</code> &amp;fixingDate) </p>
 <p> void <code>update</code> () </p>
 <p> <code>Quote interface</code> </p>
-<p> <code>Real</code> <code>value</code> () const<br />
- <i>returns the current value </i><br />
- bool <code>isValid</code> () const<br />
+<p> <code>Real</code> <code>value</code> () const<br/>
+ <i>returns the current value </i><br/>
+ bool <code>isValid</code> () const<br/>
  <i>returns true if the </i><code>Quote</code> holds a valid value</p>
 <h2>Detailed Description</h2>
 <p>quote for the forward value of an index</p>

@@ -32,7 +32,7 @@ if (/ ^Subject
 <p> -f<i>address</i></p>
 <dl>
 <dt>
-</dt><dd> Address the autoresponse to <i>address</i>, which must be an m[blue]<code>RFC 2822</code>m[]<font SIZE="-2">[1]</font> address. By default <code>mailbot</code> takes the autoresponse address from the From: (or the Reply-To:) header in the original message. <code>-f</code>, if present, overrides and explicitly sets the autoresponse address. &quot;<i>address</i>&quot; must immediately follow the <code>-f</code> option without an intervening space (it&#8217;s a single command line argument). An <code>-f</code> option without an <i>address</i> takes the address from the <code>SENDER</code> environment variable.</dd></dl>
+</dt><dd> Address the autoresponse to <i>address</i>, which must be an m[blue]<code>RFC 2822</code>m[][1] address. By default <code>mailbot</code> takes the autoresponse address from the From: (or the Reply-To:) header in the original message. <code>-f</code>, if present, overrides and explicitly sets the autoresponse address. &quot;<i>address</i>&quot; must immediately follow the <code>-f</code> option without an intervening space (it&#8217;s a single command line argument). An <code>-f</code> option without an <i>address</i> takes the address from the <code>SENDER</code> environment variable.</dd></dl>
 <p> -t <i>filename</i></p>
 <dl>
 <dt>
@@ -40,14 +40,14 @@ if (/ ^Subject
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  Messages in languages (see the <code>-c</code> option) which use spaces as word delimiters must have <i>two</i> spaces at the end of a flowed line. The last space on a flowed line is logically removed, and the first space separates the last word on the previous line from the first word on the next line. Otherwise, the two words will not have a logical space between them if they get repositioned as part of adjusting the message&#8217;s width for display. </dd>
 <p> Messages in ideographic languages that do not use spaces as word delimiters need only one space trailing a flowed line. </p>
 </dl>
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  The trailing whitespace has no visual impact when shown by software that does not implemented flowed text format, and always displays messages using their original width. </dd>
 </dl>
 </dl>
@@ -74,14 +74,14 @@ The lamb was sure to go.
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  When the <code>-m</code> option is specified <code>mailbot</code> ignores the locale&#8217;s character set and formats the autoreply according to the character set read from the &#8220;Content-Type&#8221; header. </dd>
 </dl>
 </dl>
 <p> -M <i>address</i></p>
 <dl>
 <dt>
-</dt><dd> Format the autoresponse as a delivery status notification (m[blue]<code>RFC 1894</code>m[]<font SIZE="-2">[2]</font>). <i>address</i> is an m[blue]<code>RFC 2822</code>m[]<font SIZE="-2">[1]</font> E-mail address that generates the DSN. Note that the <code>-A</code> option should still be used in addition to <code>-M</code> in order to set the From: header on the autoresponse. <code>-M</code> sets the DSN address only. The <code>-M</code> option automatically sets <code>-T </code><code>replydsn</code></dd></dl>
+</dt><dd> Format the autoresponse as a delivery status notification (m[blue]<code>RFC 1894</code>m[][2]). <i>address</i> is an m[blue]<code>RFC 2822</code>m[][1] E-mail address that generates the DSN. Note that the <code>-A</code> option should still be used in addition to <code>-M</code> in order to set the From: header on the autoresponse. <code>-M</code> sets the DSN address only. The <code>-M</code> option automatically sets <code>-T </code><code>replydsn</code></dd></dl>
 <p> -R <i>type</i></p>
 <dl>
 <dt>
@@ -110,7 +110,7 @@ The lamb was sure to go.
 </dt><dd> &bull; &#8220;forwardatt&#8221; &#8211; attach the original message as a forwarded message attachment.</dd></dl>
 <dl>
 <dt>
-</dt><dd> &bull; &#8220;feedback&#8221; &#8211; generate an Email Feedback Report message (see m[blue]<code>RFC 5965</code>m[]<font SIZE="-2">[3]</font>). The &#8220;-R&#8221; option is required when this is specified.</dd></dl>
+</dt><dd> &bull; &#8220;feedback&#8221; &#8211; generate an Email Feedback Report message (see m[blue]<code>RFC 5965</code>m[][3]). The &#8220;-R&#8221; option is required when this is specified.</dd></dl>
 <dl>
 <dt>
 </dt><dd> &bull; &#8220;replyfeedback&#8221; &#8211; like &#8220;feedback&#8221;, but also adds a &#8220;To:&#8221; header, addressed to the original message&#8217;s sender.</dd></dl>
@@ -122,13 +122,13 @@ The lamb was sure to go.
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  The original message gets quoted, in the absence of this option, only if the original message was formatted as plain text. <code>mailbot</code> is unable to quote an original message which was formatted as HTML, or any other non-plaintext format. </dd>
 </dl>
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  For &#8220;replydsn&#8221;, &#8220;feedback&#8221;, and &#8220;replyfeedback&#8221; options, the convention is to attach the original message, or only its headers, separately; so this option should always be specified for these three reply formats. </dd>
 </dl>
 </dl>
@@ -182,7 +182,7 @@ The lamb was sure to go.
 <p> -r <i>addrlist</i></p>
 <dl>
 <dt>
-</dt><dd> <i>addrlist</i> is a comma-separated list of m[blue]<code>RFC 2822</code>m[]<font SIZE="-2">[1]</font> E-mail addresses. <code>mailbot</code> sends an autoresponse only if the original message has at least one of the specified addresses in any To: or Cc: header.</dd></dl>
+</dt><dd> <i>addrlist</i> is a comma-separated list of m[blue]<code>RFC 2822</code>m[][1] E-mail addresses. <code>mailbot</code> sends an autoresponse only if the original message has at least one of the specified addresses in any To: or Cc: header.</dd></dl>
 <p> -d <i>filename</i></p>
 <dl>
 <dt>
@@ -225,7 +225,7 @@ to &quot;./Maildir&quot;
 <p> If the named maildir does not exist, or is empty, <code>mailbot</code> does nothing. If the named maildir has more than one message, the most recent message gets used. </p>
 <p> The above example uses additional <code>mailbot</code> options to suppress duplicate autoresponses, and to set the &#8220;From:&#8221; header on the autoresponse.</p>
 <h2>SEE ALSO</h2>
-<p> m[blue]<code><a href="/docs/linux/man/1-maildrop/">maildrop</a></code>(1)m[]<font SIZE="-2">[4]</font>, m[blue]<code><a href="/docs/linux/man/1-reformail/">reformail</a></code>(1)m[]<font SIZE="-2">[5]</font>, m[blue]<code><a href="/docs/linux/man/1-reformime/">reformime</a></code>(1)m[]<font SIZE="-2">[6]</font>.</p>
+<p> m[blue]<code><a href="/docs/linux/man/1-maildrop/">maildrop</a></code>(1)m[][4], m[blue]<code><a href="/docs/linux/man/1-reformail/">reformail</a></code>(1)m[][5], m[blue]<code><a href="/docs/linux/man/1-reformime/">reformime</a></code>(1)m[][6].</p>
 <h2>AUTHOR</h2>
 <p> <code>Sam Varshavchik</code></p>
 <dl>

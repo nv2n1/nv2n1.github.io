@@ -15,11 +15,11 @@ certmaster-request -- requests SSL certs from a certmaster Fedora Unified Networ
 
 <h2>DESCRIPTION</h2>
 
- <font SIZE="-1">FIXME:</font> To be added later once we split this out from func.
+ FIXME: To be added later once we split this out from func.
 
 <h2>API</h2>
 
- Note: Many applications will want to use the <font SIZE="-1">XMLRPC</font> <font SIZE="-1">API</font> (see source) or import the Python code to request certs. For those that don't want to do that, this command line tool is available. Explore the other options if they make more sense for your application.
+ Note: Many applications will want to use the XMLRPC API (see source) or import the Python code to request certs. For those that don't want to do that, this command line tool is available. Explore the other options if they make more sense for your application.
 
 <h2>EXIT_STATUS</h2>
 

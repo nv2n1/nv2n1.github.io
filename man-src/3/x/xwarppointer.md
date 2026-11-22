@@ -41,5 +41,5 @@ description: "XWarpPointer – move pointer"
 <dt><code>BadWindow</code></dt>
 <dd>A value for a Window argument does not name a defined Window.</dd></dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xsetinputfocus/">XSetInputFocus</a>(3)<br />
+<p><a href="/docs/linux/man/3-xsetinputfocus/">XSetInputFocus</a>(3)<br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

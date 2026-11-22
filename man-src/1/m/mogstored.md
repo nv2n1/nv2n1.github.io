@@ -11,7 +11,7 @@ mogstored -- MogileFS storage daemon
 
 <h2>USAGE</h2>
 
- This is the MogileFS storage daemon, which is just an <font SIZE="-1">HTTP</font> server that supports <font SIZE="-1">PUT</font>, <font SIZE="-1">DELETE</font>, etc. It's actually a wrapper around Perlbal, doing all the proper Perlbal config for you. 
+ This is the MogileFS storage daemon, which is just an HTTP server that supports PUT, DELETE, etc. It's actually a wrapper around Perlbal, doing all the proper Perlbal config for you. 
 
  In addition, it monitors disk usage, I/O activity, etc, which are checked from the MogileFS tracker.
 
@@ -26,7 +26,7 @@ mogstored -- MogileFS storage daemon
 <h2>ENVIRONMENT</h2>
 
 <dl>
-<dt><font SIZE="-1">PERLBAL_XS_HEADERS</font>
+<dt>PERLBAL_XS_HEADERS
 </dt><dd> If defined and 0, Perlbal::XS::HTTPHeaders will not be used, if present. Otherwise, it will be enabled by default, if installed and loadable.</dd></dl>
 
 <h2>COPYRIGHT</h2>

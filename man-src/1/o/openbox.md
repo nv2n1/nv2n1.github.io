@@ -15,7 +15,7 @@ description: "openbox — A minimalistic, highly configurable, next generation w
 <p> Openbox is minimalistic, highly configurable, next generation window manager with extensive standards support. </p>
 <p> You can start Openbox in three ways: </p>
 <p> If you run a display manager such as GDM, you will find 3 entries in the login session type menu for Openbox: <code>GNOME/Openbox</code>, <code>KDE/Openbox</code> and <code>Openbox</code>. If you want to use Openbox within GNOME or KDE, you can choose the appropriate entry, and it will launch GNOME or KDE with Openbox as the window manager. </p>
-<p> The third option at log in, which is <code>Openbox</code> without a session manager, uses the <code>openbox-session</code> command to start Openbox. On log in, <code>openbox</code> will run the ~/.config/openbox/autostart.sh script if it exists, and will run the system-wide script /etc/xdg/openbox/autostart.sh otherwise. You may place anything you want to run automatically in those files, for example:<br />
+<p> The third option at log in, which is <code>Openbox</code> without a session manager, uses the <code>openbox-session</code> command to start Openbox. On log in, <code>openbox</code> will run the ~/.config/openbox/autostart.sh script if it exists, and will run the system-wide script /etc/xdg/openbox/autostart.sh otherwise. You may place anything you want to run automatically in those files, for example:<br/>
 &nbsp;<wbr> </p>
 <dl>
 <dt>

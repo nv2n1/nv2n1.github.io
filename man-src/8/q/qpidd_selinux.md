@@ -84,11 +84,11 @@ description: "qpidd_selinux – Security Enhanced Linux Policy for the qpidd pro
 <p> You can see the context of a file using the <code>-Z</code> option to <code>lsP Policy governs the access confined processes have to these files. SELinux qpidd policy is very flexible allowing users to setup their qpidd processes in as secure a method as possible. </p>
 <p> EQUIVALENCE DIRECTORIES</code> </p>
 <p> qpidd policy stores data with multiple different file context types under the /var/run/qpidd directory. If you would like to store the data in a different directory you can use the semanage command to create an equivalence mapping. If you wanted to store this data under the /srv dirctory you would execute the following command: </p>
-<p> <code>semanage fcontext -a -e /var/run/qpidd /srv/qpidd</code><br />
+<p> <code>semanage fcontext -a -e /var/run/qpidd /srv/qpidd</code><br/>
  <code>restorecon -R -v /srv/qpidd</code> </p>
 <p> <code>STANDARD FILE CONTEXT</code> </p>
 <p> SELinux defines the file context types for the qpidd, if you wanted to store files with these types in a diffent paths, you need to execute the semanage command to sepecify alternate labeling and then use restorecon to put the labels on disk. </p>
-<p> <code>semanage fcontext -a -t qpidd_var_run_t &#8216;/srv/myqpidd_content(/.*)?&#8217;</code><br />
+<p> <code>semanage fcontext -a -t qpidd_var_run_t &#8216;/srv/myqpidd_content(/.*)?&#8217;</code><br/>
  <code>restorecon -R -v /srv/myqpidd_content</code> </p>
 <p> Note: SELinux often uses regular expressions to specify labels that match multiple files. </p>
 <p> <i>The following file types are defined for qpidd:</i> </p>

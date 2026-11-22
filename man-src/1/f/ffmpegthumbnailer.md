@@ -38,5 +38,5 @@ description: "ffmpegthumbnailer – fast and lightweight video thumbnailer"
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;<a rel="nofollow" href="http://code.google.com/p/ffmpegthumbnailer/issues/list">http://code.google.com/p/ffmpegthumbnailer/issues/list</a>&gt;</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2008 Dirk Vanden Boer &lt;dirk.vdb [at] gmail.com&gt;<br />
+<p> Copyright &#169; 2008 Dirk Vanden Boer &lt;dirk.vdb [at] gmail.com&gt;<br/>
  This is free software. You may redistribute copies of it under the terms of the GNU General Public License (version 2 or later) &lt;<a rel="nofollow" href="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</a>&gt;. There is NO WARRANTY, to the extent permitted by law. </p>

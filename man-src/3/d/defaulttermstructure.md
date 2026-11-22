@@ -12,10 +12,10 @@ description: "ql/termstructures/defaulttermstructure.hpp – default-probability
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/termstructure.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>DefaultProbabilityTermStructure</code><br />
+<p> class <code>DefaultProbabilityTermStructure</code><br/>
  <i>default probability term structure </i></p>
 <h3>Typedefs</h3>
-<p> typedef Real <code>Probability</code><br />
+<p> typedef Real <code>Probability</code><br/>
  <i>probability </i></p>
 <h2>Detailed Description</h2>
 <p> default-probability term structure </p>

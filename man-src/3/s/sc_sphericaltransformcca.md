@@ -12,7 +12,7 @@ description: "sc::SphericalTransformCCA –"
 <p> Inherits <code>sc::SphericalTransform</code>.</p>
 <h3>Public Member Functions</h3>
 <p><code>SphericalTransformCCA</code> (int l, int subl=-1) </p>
-<p> <code>SphericalTransformComponent</code> * <code>new_components</code> ()<br />
+<p> <code>SphericalTransformComponent</code> * <code>new_components</code> ()<br/>
  <i>This must create SphericalTransformComponent&#8217;s of the appropriate specialization. </i></p>
 <h2>Member Function Documentation</h2>
 <h3><code>SphericalTransformComponent</code>* sc::SphericalTransformCCA::new_components () [inline, virtual]</h3>

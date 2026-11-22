@@ -128,10 +128,10 @@ description: "snmpcmd – options and behaviour common to most of the Net-SNMP c
 <dt><i></i>aal5pvc <i>or</i> pvc</dt>
 <dd> [interface.][VPI.]VCI</dd>
 <dt>udp6 or udpv6 or udpipv6</dt>
-<dd> hostname[:port] <i>or</i> IPv6-address:port <i>or</i><br />
+<dd> hostname[:port] <i>or</i> IPv6-address:port <i>or</i><br/>
 &nbsp;<wbr>&#8216;[&#8216;IPv6-address&#8217;]'[:port]</dd>
 <dt>tcp6 or tcpv6 or tcpipv6</dt>
-<dd> hostname[:port] <i>or</i> IPv6-address:port <i>or</i><br />
+<dd> hostname[:port] <i>or</i> IPv6-address:port <i>or</i><br/>
 &nbsp;<wbr>&#8216;[&#8216;IPv6-address&#8217;]'[:port]</dd></dl>
 </dl>
 <p> Note that &lt;transport-specifier&gt; strings are case-insensitive so that, for example, &quot;tcp&quot; and &quot;TCP&quot; are equivalent. Here are some examples, along with their interpretation:</p>
@@ -248,29 +248,29 @@ SNMPv2-MIB::sysUpTime.0 = Timeticks: (14096763) 1 day, 15:09:27.63
 </dt><dd> Timeticks: (14096763) 1 day, 15:09:27.63</dd></dl>
 </dl>
 <dt><code>-On</code></dt>
-<dd> Displays the OID numerically:<br />
+<dd> Displays the OID numerically:<br/>
  .1.3.6.1.2.1.1.3.0 = Timeticks: (14096763) 1 day, 15:09:27.63</dd>
 <dt><code>-Oq</code></dt>
-<dd> Removes the equal sign and type information when displaying varbind values:<br />
+<dd> Removes the equal sign and type information when displaying varbind values:<br/>
  SNMPv2-MIB::sysUpTime.0 1:15:09:27.63</dd>
 <dt><code>-OQ</code></dt>
-<dd> Removes the type information when displaying varbind values:<br />
+<dd> Removes the type information when displaying varbind values:<br/>
  SNMPv2-MIB::sysUpTime.0 = 1:15:09:27.63</dd>
 <dt><code>-Os</code></dt>
-<dd> Display the MIB object name (plus any instance or other subidentifiers):<br />
+<dd> Display the MIB object name (plus any instance or other subidentifiers):<br/>
  sysUpTime.0 = Timeticks: (14096763) 1 day, 15:09:27.63</dd>
 <dt><code>-OS</code></dt>
-<dd> Display the name of the MIB, as well as the object name:<br />
+<dd> Display the name of the MIB, as well as the object name:<br/>
  SNMPv2-MIB::sysUpTime.0 = Timeticks: (14096763) 1 day, 15:09:27.63</dd>
 <dt>
 </dt><dd> This is the default OID output format.</dd>
 <dt><code>-Ot</code></dt>
-<dd> Display TimeTicks values as raw numbers:<br />
+<dd> Display TimeTicks values as raw numbers:<br/>
  SNMPv2-MIB::sysUpTime.0 = 14096763</dd>
 <dt><code>-OT</code></dt>
 <dd> If values are printed as Hex strings, display a printable version as well.</dd>
 <dt><code>-Ou</code></dt>
-<dd> Display the OID in the traditional UCD-style (inherited from the original CMU code). That means removing a series of &quot;standard&quot; prefixes from the OID, and displaying the remaining list of MIB object names (plus any other subidentifiers):<br />
+<dd> Display the OID in the traditional UCD-style (inherited from the original CMU code). That means removing a series of &quot;standard&quot; prefixes from the OID, and displaying the remaining list of MIB object names (plus any other subidentifiers):<br/>
  system.sysUpTime.0 = Timeticks: (14096763) 1 day, 15:09:27.63</dd>
 <dt><code>-OU</code></dt>
 <dd> Do not print the UNITS suffix at the end of the value.</dd>
@@ -318,13 +318,13 @@ $ snmpgetnext - c public - v 1 localhost ipv6RouteTable IPv6 - MIB::ipv6RouteIfI
 <p> For <code>-LF</code> and <code>-LS</code> the priority specification comes before the file or facility token. The priorities recognised are:</p>
 <dl>
 <dt>
-</dt><dd> <code>0</code> or <code>!</code> for LOG_EMERG,<br />
- <code>1</code> or <code>a</code> for LOG_ALERT,<br />
- <code>2</code> or <code>c</code> for LOG_CRIT,<br />
- <code>3</code> or <code>e</code> for LOG_ERR,<br />
- <code>4</code> or <code>w</code> for LOG_WARNING,<br />
- <code>5</code> or <code>n</code> for LOG_NOTICE,<br />
- <code>6</code> or <code>i</code> for LOG_INFO, and<br />
+</dt><dd> <code>0</code> or <code>!</code> for LOG_EMERG,<br/>
+ <code>1</code> or <code>a</code> for LOG_ALERT,<br/>
+ <code>2</code> or <code>c</code> for LOG_CRIT,<br/>
+ <code>3</code> or <code>e</code> for LOG_ERR,<br/>
+ <code>4</code> or <code>w</code> for LOG_WARNING,<br/>
+ <code>5</code> or <code>n</code> for LOG_NOTICE,<br/>
+ <code>6</code> or <code>i</code> for LOG_INFO, and<br/>
  <code>7</code> or <code>d</code> for LOG_DEBUG.</dd></dl>
 <p> Normal output is (or will be!) logged at a priority level of <code>LOG_NOTICE</code> </p>
 <h2>INPUT OPTIONS</h2>
@@ -334,14 +334,14 @@ $ snmpgetnext - c public - v 1 localhost ipv6RouteTable IPv6 - MIB::ipv6RouteIfI
 <dd> specifies that the given name should be regarded as a regular expression, to match (case-insensitively) against object names in the MIB tree. The &quot;best&quot; match will be used &#8211; calculated as the one that matches the closest to the beginning of the node name and the highest in the tree. For example, the MIB object vacmSecurityModel could be matched by the expression vacmsecuritymodel (full name, but different case), or vacm.*model (regexp pattern). </dd>
 <p> Note that &#8216;.&#8217; is a special character in regular expression patterns, so the expression cannot specify instance subidentifiers or more than one object name. A &quot;best match&quot; expression will only be applied against single MIB object names. For example, the expression <i>sys*ontact.0</i> would not match the instance sysContact.0 (although <i>sys*ontact</i> would match sysContact). Similarly, specifying a MIB module name will not succeed (so <i>SNMPv2-MIB::sys.*ontact</i> would not match either).</p>
 <dt><code>-Ih</code></dt>
-<dd> disables the use of DISPLAY-HINT information when assigning values. This would then require providing the raw value:<br />
+<dd> disables the use of DISPLAY-HINT information when assigning values. This would then require providing the raw value:<br/>
  snmpset &#8230; HOST-RESOURCES-MIB::hrSystemDate.0 </dd>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>x&nbsp;<wbr>&quot;07 D2 0C 0A 02 04 06 08&quot;<br />
- instead of a formatted version:<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>x&nbsp;<wbr>&quot;07 D2 0C 0A 02 04 06 08&quot;<br/>
+ instead of a formatted version:<br/>
  snmpset &#8230; HOST-RESOURCES-MIB::hrSystemDate.0 </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>2002-12-10,2:4:6.8</p>
 <dt><code>-Ir</code></dt>
-<dd> disables checking table indexes and the value to be assigned against the relevant MIB definitions. This will (hopefully) result in the remote agent reporting an invalid request, rather than checking (and rejecting) this before it is sent to the remote agent.<br />
+<dd> disables checking table indexes and the value to be assigned against the relevant MIB definitions. This will (hopefully) result in the remote agent reporting an invalid request, rather than checking (and rejecting) this before it is sent to the remote agent.<br/>
 &nbsp;<wbr> Local checks are more efficient (and the diagnostics provided also tend to be more precise), but disabling this behaviour is particularly useful when testing the remote agent.</dd>
 <dt><code>-IR</code></dt>
 <dd> enables &quot;random access&quot; lookup of MIB names. Rather than providing a full OID path to the desired MIB object (or qualifying this object with an explicit MIB module name), the MIB tree will be searched for the matching object name. Thus .iso.org.dod.internet.mib-2.system.sysDescr.0 (or SNMPv2-MIB::sysDescr.0) can be specified simply as sysDescr.0.</dd>

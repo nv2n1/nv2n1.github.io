@@ -8,10 +8,10 @@ url: "/docs/linux/man/1-strfile/"
 description: "strfile – create a random access file for storing strings unstr – dump strings in pointer order"
 ---
 
-<p> strfile &#8211; create a random access file for storing strings<br />
+<p> strfile &#8211; create a random access file for storing strings<br/>
  unstr &#8211; dump strings in pointer order</p>
 <h2>SYNOPSIS</h2>
-<p> <code>strfile</code> [<code>-iorsx</code>] [<code>-c</code> <i>char</i>] <i>sourcefile</i> [<i>outputfile</i>]<br />
+<p> <code>strfile</code> [<code>-iorsx</code>] [<code>-c</code> <i>char</i>] <i>sourcefile</i> [<i>outputfile</i>]<br/>
  <code>unstr</code> [<code>-c</code> <i>char</i>] <i>datafile</i>[<i>.ext</i>] [<i>outputfile</i>]</p>
 <h2>DESCRIPTION</h2>
 <p> <code>strfile</code> reads a file containing groups of lines separated by a line containing a single percent `%&#8217; sign (or other specified delimiter character) and creates a data file which contains a header structure and a table of file offsets for each group of lines. This allows random access of the strings. </p>
@@ -34,15 +34,15 @@ description: "strfile – create a random access file for storing strings unstr 
 <dd> Note that each alphabetic character in the groups of lines is rotated 13 positions in a simple caesar cypher. This option causes the STR_ROTATED bit in the header <i>str_flags </i> field to be set. Note that it <code>does not</code> rotate the strings&#8211;that operation must be performed separately.</dd></dl>
 <h3>Header</h3>
 <p> The format of the header is: </p>
-<p> #define VERSION 1<br />
- unsigned long str_version; /* version number */<br />
- unsigned long str_numstr; /* # of strings in the file */<br />
- unsigned long str_longlen; /* length of longest string */<br />
- unsigned long str_shortlen; /* shortest string length */<br />
- #define STR_RANDOM 0x1 /* randomized pointers */<br />
- #define STR_ORDERED 0x2 /* ordered pointers */<br />
- #define STR_ROTATED 0x4 /* rot-13&#8217;d text */<br />
- unsigned long str_flags; /* bit field for flags */<br />
+<p> #define VERSION 1<br/>
+ unsigned long str_version; /* version number */<br/>
+ unsigned long str_numstr; /* # of strings in the file */<br/>
+ unsigned long str_longlen; /* length of longest string */<br/>
+ unsigned long str_shortlen; /* shortest string length */<br/>
+ #define STR_RANDOM 0x1 /* randomized pointers */<br/>
+ #define STR_ORDERED 0x2 /* ordered pointers */<br/>
+ #define STR_ROTATED 0x4 /* rot-13&#8217;d text */<br/>
+ unsigned long str_flags; /* bit field for flags */<br/>
  char str_delim; /* delimiting character */ </p>
 <p> All fields are written in network byte order.</p>
 <h2>BUGS</h2>

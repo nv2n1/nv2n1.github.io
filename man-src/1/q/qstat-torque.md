@@ -50,8 +50,8 @@ description: "qstat – show status of pbs batch jobs"
 <p> Individual jobs in the array are now also noted using square brackets instead of dashes; for example, here is part of the output of qstat -t for the preceding array: </p>
 <p> 189[299].napali STDIN[299] dbeer 0 Q batch</p>
 <dt>-u</dt>
-<dd> Job status is displayed in the alternative format. If an operand is a job id, status for that job is displayed. For a destination id operand, status for jobs at that destination which are owned by the user(s) listed in <i> are displayed. The syntax of the is:<br />
- </i><code><br />
+<dd> Job status is displayed in the alternative format. If an operand is a job id, status for that job is displayed. For a destination id operand, status for jobs at that destination which are owned by the user(s) listed in <i> are displayed. The syntax of the is:<br/>
+ </i><code><br/>
  Host names may be wild carded on the left end, e.g. &quot;*.nasa.gov&quot;. User_name without a &quot;@host&quot; is equivalent to &quot;user_name@*&quot;, that is at any host.</dd>
 <dt>-Q</dt>
 <dd> Specifies that the request is for queue status and that the operands are destination identifiers.</dd>
@@ -94,7 +94,7 @@ description: "qstat – show status of pbs batch jobs"
 <dd> the job state:</dd>
 <dl>
 <dt>
-</dt><dd> C &#8211; Job is completed after having run/<br />
+</dt><dd> C &#8211; Job is completed after having run/<br/>
  E &#8211;<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>Job is exiting after having run.</dd>
 <p> H &#8211;<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>Job is held.</p>
 <p> Q &#8211;<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>job is queued, eligible to run or routed.</p>
@@ -107,8 +107,8 @@ description: "qstat – show status of pbs batch jobs"
 <dt>&#8211;</dt>
 <dd> the queue in which the job resides</dd></dl>
 </dl>
-<p> If job status is being displayed and the option is specified, the output will depend on whether </i><code>qstat</code> was compiled to use a <code>Tcl</code> interpreter. See the configuration section for details. If <code>Tcl</code> is not being used, full display for each job consists of the header line:<br />
- <code> job identifier<br />
+<p> If job status is being displayed and the option is specified, the output will depend on whether </i><code>qstat</code> was compiled to use a <code>Tcl</code> interpreter. See the configuration section for details. If <code>Tcl</code> is not being used, full display for each job consists of the header line:<br/>
+ <code> job identifier<br/>
  Followed by one line per job attribute of the form: </p>
 <p> If any of the options -a, -i, -r, -u, -n, -s, -G or -M are provided, the alternative display format for jobs is used. The following items are displayed on a single line, in the specified order, separated by white space:</p>
 <dl>
@@ -164,7 +164,7 @@ description: "qstat – show status of pbs batch jobs"
 <dt>&#8211;</dt>
 <dd> The amount of space requested on the parallel I/O file system.</dd></dl>
 </dl>
-<p> The last three fields may not contain useful information at all sites or on all systems.<br />
+<p> The last three fields may not contain useful information at all sites or on all systems.<br/>
  Note: Remaining walltime does not account for walltime multiplication factors. </p>
 <p> Displaying Queue Status </p>
 <p> If queue status is being displayed and the </code><i> option was not specified, the following items are displayed on a single line, in the specified order, separated by white space:</p>
@@ -185,8 +185,8 @@ description: "qstat – show status of pbs batch jobs"
 <dt>&#8211;</dt>
 <dd> the type of queue, execution or routing.</dd></dl>
 </dl>
-<p> If queue status is being displayed and the option is specified, the output will depend on whether </i><code>qstat</code> was compiled to use a <code>Tcl</code> interpreter. See the configuration section for details. If <code>Tcl</code> is not being used, the full display for each queue consists of the header line:<br />
- <code> queue_name<br />
+<p> If queue status is being displayed and the option is specified, the output will depend on whether </i><code>qstat</code> was compiled to use a <code>Tcl</code> interpreter. See the configuration section for details. If <code>Tcl</code> is not being used, the full display for each queue consists of the header line:<br/>
+ <code> queue_name<br/>
  Followed by one line per queue attribute of the form: </p>
 <p> If the -q option is specified, queue information is displayed in the alternative format: The following information is displayed on a single line:</p>
 <dl>
@@ -208,8 +208,8 @@ description: "qstat – show status of pbs batch jobs"
 <dt>&#8211;</dt>
 <dd> the maximum number (limit) of jobs that may be run in the queue concurrently</dd>
 <dt>&#8211;</dt>
-<dd> the state of the queue given by a pair of letters:<br />
- &#8211; either the letter E if the queue is Enabled or D if Disabled, and<br />
+<dd> the state of the queue given by a pair of letters:<br/>
+ &#8211; either the letter E if the queue is Enabled or D if Disabled, and<br/>
  &#8211; either the letter R if the queue is Running (started) or S if Stopped.</dd></dl>
 </dl>
 <p> Displaying Server Status </p>
@@ -227,8 +227,8 @@ description: "qstat – show status of pbs batch jobs"
 <dt>&#8211;</dt>
 <dd> for each job state, the name of the state and the number of jobs in the server in that state</dd></dl>
 </dl>
-<p> If server status is being displayed and the option is specified, the output will depend on whether </i><code>qstat</code> was compiled to use a <code>Tcl</code> interpreter. See the configuration section for details. If <code>Tcl</code> is not being used, the full display for the server consist of the header line:<br />
- <code> server name<br />
+<p> If server status is being displayed and the option is specified, the output will depend on whether </i><code>qstat</code> was compiled to use a <code>Tcl</code> interpreter. See the configuration section for details. If <code>Tcl</code> is not being used, the full display for the server consist of the header line:<br/>
+ <code> server name<br/>
  Followed by one line per server attribute of the form: </p>
 <p> </code></p>
 <h2>STANDARD ERROR</h2>

@@ -23,5 +23,5 @@ description: "XtSessionGetToken, XtSessionReturnToken – token management for c
 <p>The <code>XtSessionGetToken</code> function will return NULL if the checkpoint operation instigated by the session manager is not currently under way. </p>
 <p> To indicate the completion of a deferred save operation and to return the checkpoint token use <code>XtSessionReturnToken</code>.</p>
 <h2>See Also</h2>
-<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

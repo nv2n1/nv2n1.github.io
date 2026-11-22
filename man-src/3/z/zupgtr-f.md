@@ -10,7 +10,7 @@ description: "zupgtr.f –"
 <p>zupgtr.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zupgtr</code> (UPLO, N, AP, TAU, Q, LDQ, WORK, INFO)<br />
+<p>subroutine <code>zupgtr</code> (UPLO, N, AP, TAU, Q, LDQ, WORK, INFO)<br/>
  <i></i><code>ZUPGTR</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zupgtr (characterUPLO, integerN, complex*16, dimension( * )AP, complex*16, dimension( * )TAU, complex*16, dimension( ldq, * )Q, integerLDQ, complex*16, dimension( * )WORK, integerINFO)</h3>

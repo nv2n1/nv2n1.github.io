@@ -9,9 +9,9 @@ description: "X Synchronization Functions – Functions that ensure that all com
 
 <p>X Synchronization Functions &#8211; Functions that ensure that all commands that have been issued by the Ecore X library have been sent to the server. </p>
 <h3>Functions</h3>
-<p>EAPI void <code>ecore_x_flush</code> (void)<br />
- <i>Sends all X commands in the X Display buffer. </i><br />
- EAPI void <code>ecore_x_sync</code> (void)<br />
+<p>EAPI void <code>ecore_x_flush</code> (void)<br/>
+ <i>Sends all X commands in the X Display buffer. </i><br/>
+ EAPI void <code>ecore_x_sync</code> (void)<br/>
  <i>Flushes the command buffer and waits until all requests have been processed by the server. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that ensure that all commands that have been issued by the Ecore X library have been sent to the server.</p>

@@ -10,7 +10,7 @@ description: "XkbAddGeomOverlay – Add one overlay to a section"
 <p>XkbAddGeomOverlay &#8211; Add one overlay to a section </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>XkbOverlayPtr XkbAddGeomOverlay</code> <code>(XkbSectionPtr </code><i>section</i><code>,</code> <code>Atom </code><i>name</i><code>,</code> <code>int </code><i>sz_rows</i><code>);</code><br />
+<dt> <code>XkbOverlayPtr XkbAddGeomOverlay</code> <code>(XkbSectionPtr </code><i>section</i><code>,</code> <code>Atom </code><i>name</i><code>,</code> <code>int </code><i>sz_rows</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

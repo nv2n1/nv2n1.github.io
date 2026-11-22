@@ -10,14 +10,14 @@ description: "ql/cashflows/conundrumpricer.hpp – CMS-coupon pricer."
 
 <p> ql/cashflows/conundrumpricer.hpp &#8211; CMS-coupon pricer. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/cashflows/couponpricer.hpp&gt;<br />
+<p> #include &lt;ql/cashflows/couponpricer.hpp&gt;<br/>
  #include &lt;ql/instruments/payoffs.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>HaganPricer</code><br />
- <i>CMS-coupon pricer. </i><br />
- class <code>NumericHaganPricer</code><br />
- <i>CMS-coupon pricer. </i><br />
- class <code>AnalyticHaganPricer</code><br />
+<p> class <code>HaganPricer</code><br/>
+ <i>CMS-coupon pricer. </i><br/>
+ class <code>NumericHaganPricer</code><br/>
+ <i>CMS-coupon pricer. </i><br/>
+ class <code>AnalyticHaganPricer</code><br/>
  <i>CMS-coupon pricer. </i></p>
 <h3>Functions</h3>
 <p> std::ostream &amp; <code>operator&lt;&lt;</code> (std::ostream &amp;out, GFunctionFactory::YieldCurveModel type) </p>

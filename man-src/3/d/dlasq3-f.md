@@ -10,7 +10,7 @@ description: "dlasq3.f –"
 <p>dlasq3.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dlasq3</code> (I0, N0, Z, PP, DMIN, SIGMA, DESIG, QMAX, NFAIL, ITER, NDIV, IEEE, TTYPE, DMIN1, DMIN2, DN, DN1, DN2, G, TAU)<br />
+<p>subroutine <code>dlasq3</code> (I0, N0, Z, PP, DMIN, SIGMA, DESIG, QMAX, NFAIL, ITER, NDIV, IEEE, TTYPE, DMIN1, DMIN2, DN, DN1, DN2, G, TAU)<br/>
  <i></i><code>DLASQ3</code> checks for deflation, computes a shift and calls dqds. Used by sbdsqr.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlasq3 (integerI0, integerN0, double precision, dimension( * )Z, integerPP, double precisionDMIN, double precisionSIGMA, double precisionDESIG, double precisionQMAX, integerNFAIL, integerITER, integerNDIV, logicalIEEE, integerTTYPE, double precisionDMIN1, double precisionDMIN2, double precisionDN, double precisionDN1, double precisionDN2, double precisionG, double precisionTAU)</h3>

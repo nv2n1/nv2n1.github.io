@@ -14,27 +14,27 @@ int (*pcre_callout)(pcre_callout_block *);
 int (*pcre16_callout)(pcre16_callout_block *);
 int (*pcre32_callout)(pcre32_callout_block *);</code></pre>
 <h2>Description</h2>
-<p>PCRE provides a feature called &quot;callout&quot;, which is a means of temporarily passing control to the caller of PCRE in the middle of pattern matching. The caller of PCRE provides an external function by putting its entry point in the global variable <i>pcre_callout</i> (<i>pcre16_callout</i> for the 16-bit library, <i>pcre32_callout</i> for the 32-bit library). By default, this variable contains NULL, which disables all calling out. Within a regular expression, (?C) indicates the points at which the external function is to be called. Different callout points can be identified by putting a number less than 256 after the letter C. The default value is zero. For example, this pattern has two callout points:<br />
-&nbsp;<wbr>&nbsp;(?C1)abc(?C2)def If the PCRE_AUTO_CALLOUT option bit is set when a pattern is compiled, PCRE automatically inserts callouts, all with number 255, before each item in the pattern. For example, if PCRE_AUTO_CALLOUT is used with the pattern<br />
+<p>PCRE provides a feature called &quot;callout&quot;, which is a means of temporarily passing control to the caller of PCRE in the middle of pattern matching. The caller of PCRE provides an external function by putting its entry point in the global variable <i>pcre_callout</i> (<i>pcre16_callout</i> for the 16-bit library, <i>pcre32_callout</i> for the 32-bit library). By default, this variable contains NULL, which disables all calling out. Within a regular expression, (?C) indicates the points at which the external function is to be called. Different callout points can be identified by putting a number less than 256 after the letter C. The default value is zero. For example, this pattern has two callout points:<br/>
+&nbsp;<wbr>&nbsp;(?C1)abc(?C2)def If the PCRE_AUTO_CALLOUT option bit is set when a pattern is compiled, PCRE automatically inserts callouts, all with number 255, before each item in the pattern. For example, if PCRE_AUTO_CALLOUT is used with the pattern<br/>
 &nbsp;<wbr>&nbsp;A(\d{2}|&#8211;) it is processed as if it were (?C255)A(?C255)((?C255)\d{2}(?C255)|(?C255)-(?C255)-(?C255))(?C255) Notice that there is a callout before and after each parenthesis and alternation bar. If the pattern contains a conditional group whose condition is an assertion, an automatic callout is inserted immediately before the condition. Such a callout may also be inserted explicitly, for example: </p>
 <pre><code>(?(?C9)(?=a)ab|de)</code></pre>
 <p> This applies only to assertion conditions (because they are themselves independent groups). Automatic callouts can be used for tracking the progress of pattern matching. The <code>pcretest</code> program has a pattern qualifier (/C) that sets automatic callouts; when it is used, the output indicates how the pattern is being matched. This is useful information when you are trying to optimize the performance of a particular pattern.</p>
 <h2>Missing Callouts</h2>
 <p>You should be aware that, because of optimizations in the way PCRE compiles and matches patterns, callouts sometimes do not happen exactly as you might expect. </p>
 <p> At compile time, PCRE &quot;auto-possessifies&quot; repeated items when it knows that what follows cannot be part of the repeat. For example, a+[bc] is compiled as if it were a++[bc]. The <code>pcretest</code> output when this pattern is anchored and then applied with automatic callouts to the string &quot;aaaa&quot; is: </p>
-<p>&nbsp;<wbr>&nbsp;&#8212;&gt;aaaa<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;+0&nbsp;^&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;^<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;+1&nbsp;^&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;a+<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;+3&nbsp;^&nbsp;<wbr>&nbsp;<wbr>&nbsp;^&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[bc]<br />
+<p>&nbsp;<wbr>&nbsp;&#8212;&gt;aaaa<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;+0&nbsp;^&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;^<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;+1&nbsp;^&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;a+<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;+3&nbsp;^&nbsp;<wbr>&nbsp;<wbr>&nbsp;^&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[bc]<br/>
 &nbsp;<wbr>&nbsp;No match </p>
 <p> This indicates that when matching [bc] fails, there is no backtracking into a+ and therefore the callouts that would be taken for the backtracks do not occur. You can disable the auto-possessify feature by passing PCRE_NO_AUTO_POSSESS to <code>pcre_compile()</code>, or starting the pattern with (*NO_AUTO_POSSESS). If this is done in <code>pcretest</code> (using the /O qualifier), the output changes to this: </p>
-<p>&nbsp;<wbr>&nbsp;&#8212;&gt;aaaa<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;+0&nbsp;^&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;^<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;+1&nbsp;^&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;a+<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;+3&nbsp;^&nbsp;<wbr>&nbsp;<wbr>&nbsp;^&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[bc]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;+3&nbsp;^&nbsp;<wbr>&nbsp;^&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[bc]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;+3&nbsp;^&nbsp;^&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[bc]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;+3&nbsp;^^&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[bc]<br />
+<p>&nbsp;<wbr>&nbsp;&#8212;&gt;aaaa<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;+0&nbsp;^&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;^<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;+1&nbsp;^&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;a+<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;+3&nbsp;^&nbsp;<wbr>&nbsp;<wbr>&nbsp;^&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[bc]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;+3&nbsp;^&nbsp;<wbr>&nbsp;^&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[bc]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;+3&nbsp;^&nbsp;^&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[bc]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;+3&nbsp;^^&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[bc]<br/>
 &nbsp;<wbr>&nbsp;No match </p>
 <p> This time, when matching [bc] fails, the matcher backtracks into a+ and tries again, repeatedly, until a+ itself fails. </p>
 <p> Other optimizations that provide fast &quot;no match&quot; results also affect callouts. For example, if the pattern is </p>
@@ -44,22 +44,22 @@ int (*pcre32_callout)(pcre32_callout_block *);</code></pre>
 <p> You can disable these optimizations by passing the PCRE_NO_START_OPTIMIZE option to the matching function, or by starting the pattern with (*NO_START_OPT). This slows down the matching process, but does ensure that callouts such as the example above are obeyed.</p>
 <h2>The Callout Interface</h2>
 <p>During matching, when PCRE reaches a callout point, the external function defined by <i>pcre_callout</i> or <i>pcre[16|32]_callout</i> is called (if it is set). This applies to both normal and DFA matching. The only argument to the callout function is a pointer to a <code>pcre_callout</code> or <code>pcre[16|32]_callout</code> block. These structures contains the following fields: </p>
-<p>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>version</i>;<br />
-&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>callout_number</i>;<br />
-&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;*<i>offset_vector</i>;<br />
-&nbsp;<wbr>&nbsp;const char&nbsp;<wbr>&nbsp;<wbr>&nbsp;*<i>subject</i>;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(8-bit version)<br />
-&nbsp;<wbr>&nbsp;PCRE_SPTR16&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>subject</i>;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(16-bit version)<br />
-&nbsp;<wbr>&nbsp;PCRE_SPTR32&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>subject</i>;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(32-bit version)<br />
-&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>subject_length</i>;<br />
-&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>start_match</i>;<br />
-&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>current_position</i>;<br />
-&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>capture_top</i>;<br />
-&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>capture_last</i>;<br />
-&nbsp;<wbr>&nbsp;void&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;*<i>callout_data</i>;<br />
-&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>pattern_position</i>;<br />
-&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>next_item_length</i>;<br />
-&nbsp;<wbr>&nbsp;const unsigned char&nbsp;*<i>mark</i>;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(8-bit version)<br />
-&nbsp;<wbr>&nbsp;const PCRE_UCHAR16&nbsp;<wbr>&nbsp;*<i>mark</i>;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(16-bit version)<br />
+<p>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>version</i>;<br/>
+&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>callout_number</i>;<br/>
+&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;*<i>offset_vector</i>;<br/>
+&nbsp;<wbr>&nbsp;const char&nbsp;<wbr>&nbsp;<wbr>&nbsp;*<i>subject</i>;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(8-bit version)<br/>
+&nbsp;<wbr>&nbsp;PCRE_SPTR16&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>subject</i>;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(16-bit version)<br/>
+&nbsp;<wbr>&nbsp;PCRE_SPTR32&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>subject</i>;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(32-bit version)<br/>
+&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>subject_length</i>;<br/>
+&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>start_match</i>;<br/>
+&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>current_position</i>;<br/>
+&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>capture_top</i>;<br/>
+&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>capture_last</i>;<br/>
+&nbsp;<wbr>&nbsp;void&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;*<i>callout_data</i>;<br/>
+&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>pattern_position</i>;<br/>
+&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>next_item_length</i>;<br/>
+&nbsp;<wbr>&nbsp;const unsigned char&nbsp;*<i>mark</i>;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(8-bit version)<br/>
+&nbsp;<wbr>&nbsp;const PCRE_UCHAR16&nbsp;<wbr>&nbsp;*<i>mark</i>;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(16-bit version)<br/>
 &nbsp;<wbr>&nbsp;const PCRE_UCHAR32&nbsp;<wbr>&nbsp;*<i>mark</i>;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(32-bit version) </p>
 <p> The <i>version</i> field is an integer containing the version number of the block format. The initial version was 0; the current version is 2. The version number will change again in future if additional fields are added, but the intention is never to remove any of the existing fields. </p>
 <p> The <i>callout_number</i> field contains the number of the callout, as compiled into the pattern (that is, the number after ?C for manual callouts, and 255 for automatically generated callouts). </p>

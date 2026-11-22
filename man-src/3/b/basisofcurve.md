@@ -33,8 +33,8 @@ description: "QuantLib::CommodityCurve – Commodity term structure."
 <p> const <code>CommodityType</code> &amp; <code>commodityType</code> () const </p>
 <p> const <code>UnitOfMeasure</code> &amp; <code>unitOfMeasure</code> () const </p>
 <p> const <code>Currency</code> &amp; <code>currency</code> () const </p>
-<p> <code>Date</code> <code>maxDate</code> () const<br />
- <i>the latest date for which the curve can return values </i><br />
+<p> <code>Date</code> <code>maxDate</code> () const<br/>
+ <i>the latest date for which the curve can return values </i><br/>
  const std::vector&lt; Time &gt; &amp; <code>times</code> () const </p>
 <p> const std::vector&lt; <code>Date</code> &gt; &amp; <code>dates</code> () const </p>
 <p> const std::vector&lt; <code>Real</code> &gt; &amp; <code>prices</code> () const </p>

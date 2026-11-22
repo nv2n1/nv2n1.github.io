@@ -17,8 +17,8 @@ description: "QwtPlotHistogram –"
 <h3>Public Member Functions</h3>
 <p><code>QwtPlotHistogram</code> (const QString &amp;<code>title</code>=QString::null) </p>
 <p> <code>QwtPlotHistogram</code> (const <code>QwtText</code> &amp;<code>title</code>) </p>
-<p> virtual <code>~QwtPlotHistogram</code> ()<br />
- <i>Destructor. </i><br />
+<p> virtual <code>~QwtPlotHistogram</code> ()<br/>
+ <i>Destructor. </i><br/>
  virtual int <code>rtti</code> () const </p>
 <p> void <code>setPen</code> (const QColor &amp;, qreal width=0.0, Qt::PenStyle=Qt::SolidLine) </p>
 <p> void <code>setPen</code> (const QPen &amp;) </p>
@@ -27,13 +27,13 @@ description: "QwtPlotHistogram –"
 <p> const QBrush &amp; <code>brush</code> () const </p>
 <p> void <code>setSamples</code> (const QVector&lt; <code>QwtIntervalSample</code> &gt; &amp;) </p>
 <p> void <code>setSamples</code> (<code>QwtSeriesData</code>&lt; <code>QwtIntervalSample</code> &gt; *) </p>
-<p> void <code>setBaseline</code> (double reference)<br />
- <i>Set the value of the baseline. </i><br />
+<p> void <code>setBaseline</code> (double reference)<br/>
+ <i>Set the value of the baseline. </i><br/>
  double <code>baseline</code> () const </p>
 <p> void <code>setStyle</code> (<code>HistogramStyle</code> <code>style</code>) </p>
 <p> <code>HistogramStyle</code> <code>style</code> () const </p>
-<p> void <code>setSymbol</code> (const <code>QwtColumnSymbol</code> *)<br />
- <i>Assign a symbol. </i><br />
+<p> void <code>setSymbol</code> (const <code>QwtColumnSymbol</code> *)<br/>
+ <i>Assign a symbol. </i><br/>
  const <code>QwtColumnSymbol</code> * <code>symbol</code> () const </p>
 <p> virtual void <code>drawSeries</code> (QPainter *p, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;canvasRect, int from, int to) const </p>
 <p> virtual QRectF <code>boundingRect</code> () const </p>
@@ -104,8 +104,8 @@ description: "QwtPlotHistogram –"
 <p>Calculate the area that is covered by a sample </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>sample</i> Sample<br />
- <i>xMap</i> Maps x-values into pixel coordinates.<br />
+<dd><i>sample</i> Sample<br/>
+ <i>xMap</i> Maps x-values into pixel coordinates.<br/>
  <i>yMap</i> Maps y-values into pixel coordinates.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -115,8 +115,8 @@ description: "QwtPlotHistogram –"
 <p> When a <code>symbol()</code> has been set the symbol is used otherwise the column is displayed as plain rectangle using <code>pen()</code> and <code>brush()</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>rect</i> Rectangle where to paint the column in paint device coordinates<br />
+<dd><i>painter</i> Painter<br/>
+ <i>rect</i> Rectangle where to paint the column in paint device coordinates<br/>
  <i>sample</i> Sample to be displayed</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
@@ -125,10 +125,10 @@ description: "QwtPlotHistogram –"
 <p>Draw a histogram in Columns <code>style()</code> </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>xMap</i> Maps x-values into pixel coordinates.<br />
- <i>yMap</i> Maps y-values into pixel coordinates.<br />
- <i>from</i> Index of the first sample to be painted<br />
+<dd><i>painter</i> Painter<br/>
+ <i>xMap</i> Maps x-values into pixel coordinates.<br/>
+ <i>yMap</i> Maps y-values into pixel coordinates.<br/>
+ <i>from</i> Index of the first sample to be painted<br/>
  <i>to</i> Index of the last sample to be painted. If to &lt; 0 the histogram will be painted to its last point.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -137,10 +137,10 @@ description: "QwtPlotHistogram –"
 <p>Draw a histogram in Lines <code>style()</code> </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>xMap</i> Maps x-values into pixel coordinates.<br />
- <i>yMap</i> Maps y-values into pixel coordinates.<br />
- <i>from</i> Index of the first sample to be painted<br />
+<dd><i>painter</i> Painter<br/>
+ <i>xMap</i> Maps x-values into pixel coordinates.<br/>
+ <i>yMap</i> Maps y-values into pixel coordinates.<br/>
+ <i>from</i> Index of the first sample to be painted<br/>
  <i>to</i> Index of the last sample to be painted. If to &lt; 0 the histogram will be painted to its last point.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -149,10 +149,10 @@ description: "QwtPlotHistogram –"
 <p>Draw a histogram in Outline <code>style()</code> </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>xMap</i> Maps x-values into pixel coordinates.<br />
- <i>yMap</i> Maps y-values into pixel coordinates.<br />
- <i>from</i> Index of the first sample to be painted<br />
+<dd><i>painter</i> Painter<br/>
+ <i>xMap</i> Maps x-values into pixel coordinates.<br/>
+ <i>yMap</i> Maps y-values into pixel coordinates.<br/>
+ <i>from</i> Index of the first sample to be painted<br/>
  <i>to</i> Index of the last sample to be painted. If to &lt; 0 the histogram will be painted to its last point.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -164,11 +164,11 @@ description: "QwtPlotHistogram –"
 <p>Draw a subset of the histogram samples </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>xMap</i> Maps x-values into pixel coordinates.<br />
- <i>yMap</i> Maps y-values into pixel coordinates.<br />
- <i>canvasRect</i> Contents rectangle of the canvas<br />
- <i>from</i> Index of the first sample to be painted<br />
+<dd><i>painter</i> Painter<br/>
+ <i>xMap</i> Maps x-values into pixel coordinates.<br/>
+ <i>yMap</i> Maps y-values into pixel coordinates.<br/>
+ <i>canvasRect</i> Contents rectangle of the canvas<br/>
+ <i>from</i> Index of the first sample to be painted<br/>
  <i>to</i> Index of the last sample to be painted. If to &lt; 0 the series will be painted to its last sample.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -178,7 +178,7 @@ description: "QwtPlotHistogram –"
 <p>A plain rectangle without pen using the <code>brush()</code> </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>index</i> Index of the legend entry ( ignored as there is only one )<br />
+<dd><i>index</i> Index of the legend entry ( ignored as there is only one )<br/>
  <i>size</i> Icon size</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -221,8 +221,8 @@ description: "QwtPlotHistogram –"
 <p> In Qt5 the default pen width is 1.0 ( 0.0 in Qt4 ) what makes it non cosmetic ( see QPen::isCosmetic() ). This method has been introduced to hide this incompatibility. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>color</i> Pen color<br />
- <i>width</i> Pen width<br />
+<dd><i>color</i> Pen color<br/>
+ <i>width</i> Pen width<br/>
  <i>style</i> Pen style</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>

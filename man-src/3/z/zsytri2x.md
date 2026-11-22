@@ -10,7 +10,7 @@ description: "zsytri2x.f –"
 <p>zsytri2x.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zsytri2x</code> (UPLO, N, A, LDA, IPIV, WORK, NB, INFO)<br />
+<p>subroutine <code>zsytri2x</code> (UPLO, N, A, LDA, IPIV, WORK, NB, INFO)<br/>
  <i></i><code>ZSYTRI2X</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zsytri2x (characterUPLO, integerN, complex*16, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, complex*16, dimension( n+nb+1,* )WORK, integerNB, integerINFO)</h3>

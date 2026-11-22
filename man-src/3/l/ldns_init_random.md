@@ -10,7 +10,7 @@ description: "ldns_init_random"
 
 <p> ldns_init_random </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> int ldns_init_random(FILE *fd, unsigned int size); </p>

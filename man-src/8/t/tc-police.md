@@ -9,7 +9,7 @@ description: "police – policing action"
 
 <p>police &#8211; policing action</p>
 <h2>Synopsis</h2>
-<p><code>tc</code> &#8230; <code>action police [</code> <code>rate</code><i> RATE </i><code>burst</code> <i>BYTES</i>[<code>/</code><i>BYTES</i>] ] [ <code>pkts_rate</code><i> RATE </i><code>pkts_burst</code> <i>PACKETS</i>] [ <code>mtu</code> <i>BYTES</i>[<code>/</code><i>BYTES</i>] ] [ <code>peakrate</code><i> RATE</i> ] [ <code>overhead</code><i> BYTES</i> ] [ <code>linklayer</code><i> TYPE</i> ] [ <i>CONTROL</i> ]<br />
+<p><code>tc</code> &#8230; <code>action police [</code> <code>rate</code><i> RATE </i><code>burst</code> <i>BYTES</i>[<code>/</code><i>BYTES</i>] ] [ <code>pkts_rate</code><i> RATE </i><code>pkts_burst</code> <i>PACKETS</i>] [ <code>mtu</code> <i>BYTES</i>[<code>/</code><i>BYTES</i>] ] [ <code>peakrate</code><i> RATE</i> ] [ <code>overhead</code><i> BYTES</i> ] [ <code>linklayer</code><i> TYPE</i> ] [ <i>CONTROL</i> ]<br/>
  <code>tc</code> &#8230; <code>filter</code> &#8230; [ <code>estimator</code> <i>SAMPLE AVERAGE </i>] <code>action police avrate</code> <i>RATE</i> [ <i>CONTROL</i> ] </p>
 <pre><code>CONTROL :=
 conform-exceed EXCEEDACT[/NOTEXCEEDACT
@@ -66,7 +66,7 @@ EXCEEDACT/NOTEXCEEDACT := {
 <h2>Examples</h2>
 <p>A typical application of the police action is to enforce ingress traffic rate by dropping exceeding packets. Although better done on the sender&#8217;s side, especially in scenarios with lack of peer control (e.g. with dial-up providers) this is often the best one can do in order to keep latencies low under high load. The following establishes input bandwidth policing to 1mbit/s using the <code>ingress</code> qdisc and <code>u32</code> filter:</p>
 <dl>
-<dd># tc qdisc add dev eth0 handle ffff: ingress # tc filter add dev eth0 parent ffff: u32 \ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>match u32 0 0 \<br />
+<dd># tc qdisc add dev eth0 handle ffff: ingress # tc filter add dev eth0 parent ffff: u32 \ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>match u32 0 0 \<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>police rate 1mbit burst 100k
 </dd></dl>
 <p> As an action can not live on it&#8217;s own, there always has to be a filter involved as link between qdisc and action. The example above uses <code>u32</code> for that, which is configured to effectively match any packet (passing it to the <code>police</code> action thereby). </p>

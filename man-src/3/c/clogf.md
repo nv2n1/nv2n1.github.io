@@ -11,8 +11,8 @@ description: "clog, clogf, clogl – natural logarithm of a complex number"
 <p> clog, clogf, clogl &#8211; natural logarithm of a complex number </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>
-<p> <code>double complex clog(double complex </code><i>z</i><code>);</code><br />
- <code>float complex clogf(float complex </code><i>z</i><code>);</code><br />
+<p> <code>double complex clog(double complex </code><i>z</i><code>);</code><br/>
+ <code>float complex clogf(float complex </code><i>z</i><code>);</code><br/>
  <code>long double complex clogl(long double complex </code><i>z</i><code>);</code> </p>
 <p> Link with <i>-lm</i>.</p>
 <h2>DESCRIPTION</h2>

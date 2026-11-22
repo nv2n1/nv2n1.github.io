@@ -35,7 +35,7 @@ description: "clearerr, feof, ferror, fileno – check and reset stream status"
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>clearerr</code>(), <code>feof</code>(),<br />
+<td> <code>clearerr</code>(), <code>feof</code>(),<br/>
  <code>ferror</code>(), <code>fileno</code>() </td>
 <td>Thread safety</td>
 <td>MT-Safe

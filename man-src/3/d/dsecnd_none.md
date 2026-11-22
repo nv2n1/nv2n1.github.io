@@ -10,7 +10,7 @@ description: "dsecnd_NONE.f –"
 <p>dsecnd_NONE.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>DOUBLE PRECISION function <code>dsecnd</code> ()<br />
+<p>DOUBLE PRECISION function <code>dsecnd</code> ()<br/>
  <i></i><code>DSECND</code> returns nothing</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>DOUBLE PRECISION function dsecnd ()</h3>

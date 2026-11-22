@@ -13,8 +13,8 @@ description: "QuantLib::EndCriteria – Criteria to end optimization process:."
 <h3>Public Types</h3>
 <p>enum <code>Type</code> { <code>None</code>, <code>MaxIterations</code>, <code>StationaryPoint</code>, <code>StationaryFunctionValue</code>, <code>StationaryFunctionAccuracy</code>, <code>ZeroGradientNorm</code>, <code>Unknown</code> } </p>
 <h3>Public Member Functions</h3>
-<p><code>EndCriteria</code> (Size maxIterations, Size maxStationaryStateIterations, <code>Real</code> rootEpsilon, <code>Real</code> functionEpsilon, <code>Real</code> gradientNormEpsilon)<br />
- <i>Initialization constructor. </i><br />
+<p><code>EndCriteria</code> (Size maxIterations, Size maxStationaryStateIterations, <code>Real</code> rootEpsilon, <code>Real</code> functionEpsilon, <code>Real</code> gradientNormEpsilon)<br/>
+ <i>Initialization constructor. </i><br/>
  Size <code>maxIterations</code> () const </p>
 <p> Size <code>maxStationaryStateIterations</code> () const </p>
 <p> <code>Real</code> <code>rootEpsilon</code> () const </p>
@@ -27,12 +27,12 @@ description: "QuantLib::EndCriteria – Criteria to end optimization process:."
 <p> bool <code>checkStationaryFunctionAccuracy</code> (const <code>Real</code> f, const bool positiveOptimization, EndCriteria::Type &amp;ecType) const </p>
 <p> bool <code>checkZeroGradientNorm</code> (const <code>Real</code> gNorm, EndCriteria::Type &amp;ecType) const </p>
 <h3>Protected Attributes</h3>
-<p>Size <code>maxIterations_</code><br />
- <i>Maximum number of iterations. </i><br />
- Size <code>maxStationaryStateIterations_</code><br />
- <i>Maximun number of iterations in stationary state. </i><br />
- <code>Real</code> <code>rootEpsilon_</code><br />
- <i>root, function and gradient epsilons </i><br />
+<p>Size <code>maxIterations_</code><br/>
+ <i>Maximum number of iterations. </i><br/>
+ Size <code>maxStationaryStateIterations_</code><br/>
+ <i>Maximun number of iterations in stationary state. </i><br/>
+ <code>Real</code> <code>rootEpsilon_</code><br/>
+ <i>root, function and gradient epsilons </i><br/>
  <code>Real</code> <code>functionEpsilon_</code> </p>
 <p> <code>Real</code> <code>gradientNormEpsilon_</code> </p>
 <h2>Detailed Description</h2>

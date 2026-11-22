@@ -74,8 +74,8 @@ Gets a pointer to an integer as argument.Returns the size of the next pending da
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/7-ip/">ip</a></code>(7), <code><a href="/docs/linux/man/7-raw/">raw</a></code>(7), <code><a href="/docs/linux/man/7-socket/">socket</a></code>(7), <code><a href="/docs/linux/man/7-udplite/">udplite</a></code>(7) </p>
 <p> The kernel source file <i>Documentation/networking/ip-sysctl.txt</i>. </p>
-<p> RFC 768 for the User Datagram Protocol.<br />
- RFC 1122 for the host requirements.<br />
+<p> RFC 768 for the User Datagram Protocol.<br/>
+ RFC 1122 for the host requirements.<br/>
  RFC 1191 for a description of path MTU discovery.</p>
 <h2>Colophon</h2>
 <p>This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>

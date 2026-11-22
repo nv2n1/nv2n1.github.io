@@ -17,9 +17,9 @@ description: "sane-dc25 – SANE backend for Kodak DC20/DC25 Digital Cameras"
 <p> The dumpinquiry line causes some information about the camera to be printed to stderr during startup. Note: This is not compatible with saned, so make sure you don&#8217;t have any dumpinquiry lines if you are using saned (i.e. scanning on a remote machine using a network). </p>
 <p> Empty lines and lines starting with a hash mark (#) are ignored. A sample configuration file is shown below: </p>
 <dl>
-<dd>port=/dev/ttyS0<br />
- # this is a comment<br />
- baud=115200<br />
+<dd>port=/dev/ttyS0<br/>
+ # this is a comment<br/>
+ baud=115200<br/>
  dumpinquiry</dd></dl>
 <h2>Files</h2>
 <dl>

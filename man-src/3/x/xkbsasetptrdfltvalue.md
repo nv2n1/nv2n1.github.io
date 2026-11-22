@@ -10,7 +10,7 @@ description: "XkbSASetPtrDfltValue – Sets the valueXXX field of act from val"
 <p>XkbSASetPtrDfltValue &#8211; Sets the valueXXX field of act from val </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>void XkbSASetPtrDfltValue</code> <code>(XkbAction </code><i>act</i><code>,</code> <code>int </code><i>val</i><code>);</code><br />
+<dt> <code>void XkbSASetPtrDfltValue</code> <code>(XkbAction </code><i>act</i><code>,</code> <code>int </code><i>val</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

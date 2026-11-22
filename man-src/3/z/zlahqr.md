@@ -10,7 +10,7 @@ description: "zlahqr.f –"
 <p>zlahqr.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlahqr</code> (WANTT, WANTZ, N, ILO, IHI, H, LDH, W, ILOZ, IHIZ, Z, LDZ, INFO)<br />
+<p>subroutine <code>zlahqr</code> (WANTT, WANTZ, N, ILO, IHI, H, LDH, W, ILOZ, IHIZ, Z, LDZ, INFO)<br/>
  <i></i><code>ZLAHQR</code> computes the eigenvalues and Schur factorization of an upper Hessenberg matrix, using the double-shift/single-shift QR algorithm.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlahqr (logicalWANTT, logicalWANTZ, integerN, integerILO, integerIHI, complex*16, dimension( ldh, * )H, integerLDH, complex*16, dimension( * )W, integerILOZ, integerIHIZ, complex*16, dimension( ldz, * )Z, integerLDZ, integerINFO)</h3>

@@ -11,13 +11,13 @@ description: "GridFTP Control API –"
 <p> GridFTP Control API &#8211; </p>
 <p> GridFTP Control API.</p>
 <h3>Modules</h3>
-<p> <code>GridFTP Constants</code><br />
- <i>Constants. </i><br />
- <code>GridFTP Server Control</code><br />
- <i>Manage GridFTP Server Control Connections. </i><br />
- <code>GridFTP Control Client</code><br />
- <i>Control Client. </i><br />
- <code>GridFTP Data Connections</code><br />
+<p> <code>GridFTP Constants</code><br/>
+ <i>Constants. </i><br/>
+ <code>GridFTP Server Control</code><br/>
+ <i>Manage GridFTP Server Control Connections. </i><br/>
+ <code>GridFTP Control Client</code><br/>
+ <i>Control Client. </i><br/>
+ <code>GridFTP Data Connections</code><br/>
  <i>Data Connections. </i></p>
 <h2>Detailed Description</h2>
 <p> GridFTP Control API. </p>

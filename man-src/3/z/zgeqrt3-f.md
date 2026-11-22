@@ -10,7 +10,7 @@ description: "zgeqrt3.f –"
 <p>zgeqrt3.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>recursive subroutine <code>zgeqrt3</code> (M, N, A, LDA, T, LDT, INFO)<br />
+<p>recursive subroutine <code>zgeqrt3</code> (M, N, A, LDA, T, LDT, INFO)<br/>
  <i></i><code>ZGEQRT3</code> recursively computes a QR factorization of a general real or complex matrix using the compact WY representation of Q.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>recursive subroutine zgeqrt3 (integerM, integerN, complex*16, dimension( lda, * )A, integerLDA, complex*16, dimension( ldt, * )T, integerLDT, integerINFO)</h3>

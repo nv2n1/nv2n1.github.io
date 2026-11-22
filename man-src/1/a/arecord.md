@@ -10,7 +10,7 @@ description: "arecord, aplay – command-line sound recorder and player for ALSA
 
 <p> arecord, aplay &#8211; command-line sound recorder and player for ALSA soundcard driver </p>
 <h2>SYNOPSIS</h2>
-<p> <code>arecord</code> [<i>flags</i>] [filename]<br />
+<p> <code>arecord</code> [<i>flags</i>] [filename]<br/>
  <code>aplay</code> [<i>flags</i>] [filename [filename]] &#8230; </p>
 <h2>DESCRIPTION</h2>
 <p> <code>arecord</code> is a command-line soundfile recorder for the ALSA soundcard driver. It supports several file formats and multiple soundcards with multiple devices. If recording with interleaved mode samples the file is automatically split before the 2GB filesize. </p>
@@ -35,9 +35,9 @@ description: "arecord, aplay – command-line sound recorder and player for ALSA
 <dt><i>-c, &#8211;channels=#</i></dt>
 <dd> The number of channels. The default is one channel. Valid values are 1 through 32.</dd>
 <dt><i>-f &#8211;format=FORMAT</i></dt>
-<dd> Sample format<br />
- Recognized sample formats are: S8 U8 S16_LE S16_BE U16_LE U16_BE S24_LE S24_BE U24_LE U24_BE S32_LE S32_BE U32_LE U32_BE FLOAT_LE FLOAT_BE FLOAT64_LE FLOAT64_BE IEC958_SUBFRAME_LE IEC958_SUBFRAME_BE MU_LAW A_LAW IMA_ADPCM MPEG GSM SPECIAL S24_3LE S24_3BE U24_3LE U24_3BE S20_3LE S20_3BE U20_3LE U20_3BE S18_3LE S18_3BE U18_3LE<br />
- Some of these may not be available on selected hardware<br />
+<dd> Sample format<br/>
+ Recognized sample formats are: S8 U8 S16_LE S16_BE U16_LE U16_BE S24_LE S24_BE U24_LE U24_BE S32_LE S32_BE U32_LE U32_BE FLOAT_LE FLOAT_BE FLOAT64_LE FLOAT64_BE IEC958_SUBFRAME_LE IEC958_SUBFRAME_BE MU_LAW A_LAW IMA_ADPCM MPEG GSM SPECIAL S24_3LE S24_3BE U24_3LE U24_3BE S20_3LE S20_3BE U20_3LE U20_3BE S18_3LE S18_3BE U18_3LE<br/>
+ Some of these may not be available on selected hardware<br/>
  The available format shortcuts are: </dd>
 <pre><code>
 - f cd(16 bit little endian, 44100, stereo)[-f S16_LE - c2 - r44100] - f cdr(16 bit big endian, 44100, stereo)[-f S16_BE - c2 - r44100] - f dat(16 bit little endian, 48000, stereo)[-f S16_LE - c2 - r48000]

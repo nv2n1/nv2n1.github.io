@@ -13,7 +13,7 @@ description: "QuantLib::Replication – Digital option replication strategy."
 <h3>Public Types</h3>
 <p>enum <code>Type</code> { <code>Sub</code>, <code>Central</code>, <code>Super</code> } </p>
 <h3>Related Functions</h3>
-<p>(Note that these are not member functions.)<br />
+<p>(Note that these are not member functions.)<br/>
  std::ostream &amp; <code>operator&lt;&lt;</code> (std::ostream &amp;, Replication::Type) </p>
 <h2>Detailed Description</h2>
 <p>Digital option replication strategy. </p>

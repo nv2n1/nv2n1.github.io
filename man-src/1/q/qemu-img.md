@@ -12,7 +12,7 @@ description: "qemu-img – QEMU disk image utility"
 <h2>SYNOPSIS</h2>
 <p> <code>qemu-img</code> [<i>standard</i> <i>options</i>] <i>command</i> [<i>command</i> <i>options</i>]</p>
 <h2>DESCRIPTION</h2>
-<p> qemu-img allows you to create, convert and modify images offline. It can handle all image formats supported by <font SIZE="-1">QEMU.</font> </p>
+<p> qemu-img allows you to create, convert and modify images offline. It can handle all image formats supported by QEMU. </p>
 <p> <code>Warning:</code> Never use qemu-img to modify images in use by a running virtual machine or any other process; this may destroy the image. Also, be aware that querying an image that is being modified by another process may encounter inconsistent state.</p>
 <h2>OPTIONS</h2>
 <p> Standard options:</p>
@@ -26,12 +26,12 @@ description: "qemu-img – QEMU disk image utility"
 <dl>
 <dl>
 <dt><code>[enable=]</code><i>pattern</i></dt>
-<dd> Immediately enable events matching <i>pattern</i> (either event name or a globbing pattern). This option is only available if <font SIZE="-1">QEMU</font> has been compiled with the <i>simple</i>, <i>log</i> or <i>ftrace</i> tracing backend. To specify multiple events or patterns, specify the <code>-trace</code> option multiple times. </dd>
+<dd> Immediately enable events matching <i>pattern</i> (either event name or a globbing pattern). This option is only available if QEMU has been compiled with the <i>simple</i>, <i>log</i> or <i>ftrace</i> tracing backend. To specify multiple events or patterns, specify the <code>-trace</code> option multiple times. </dd>
 <p> Use <tt>&quot;-trace help&quot;</tt> to print a list of names of trace points.</p>
 <dt><code>events=</code><i>file</i></dt>
-<dd> Immediately enable events listed in <i>file</i>. The file must contain one event name (as listed in the <i>trace-events-all</i> file) per line; globbing patterns are accepted too. This option is only available if <font SIZE="-1">QEMU</font> has been compiled with the <i>simple</i>, <i>log</i> or <i>ftrace</i> tracing backend.</dd>
+<dd> Immediately enable events listed in <i>file</i>. The file must contain one event name (as listed in the <i>trace-events-all</i> file) per line; globbing patterns are accepted too. This option is only available if QEMU has been compiled with the <i>simple</i>, <i>log</i> or <i>ftrace</i> tracing backend.</dd>
 <dt><code>file=</code><i>file</i></dt>
-<dd> Log output traces to <i>file</i>. This option is only available if <font SIZE="-1">QEMU</font> has been compiled with the <i>simple</i> tracing backend.</dd></dl>
+<dd> Log output traces to <i>file</i>. This option is only available if QEMU has been compiled with the <i>simple</i> tracing backend.</dd></dl>
 </dl>
 <dl>
 </dl>
@@ -81,15 +81,15 @@ description: "qemu-img – QEMU disk image utility"
 <dt><i>options</i></dt>
 <dd> is a comma separated list of format specific options in a name=value format. Use <tt>&quot;-o ?&quot;</tt> for an overview of the options supported by the used format or see the format descriptions below for details.</dd>
 <dt><i>snapshot_param</i></dt>
-<dd> is param used for internal snapshot, format is &#8216;snapshot.id=[<font SIZE="-1">ID</font>],snapshot.name=[<font SIZE="-1">NAME</font>]&#8217; or &#8216;[<font SIZE="-1">ID_OR_NAME</font>]&#8217;</dd>
+<dd> is param used for internal snapshot, format is &#8216;snapshot.id=[ID],snapshot.name=[NAME]&#8217; or &#8216;[ID_OR_NAME]&#8217;</dd>
 <dt><code>&#8211;object</code> <i>objectdef</i></dt>
-<dd> is a <font SIZE="-1">QEMU</font> user creatable object definition. See the <tt><a href="/docs/linux/man/1-qemu/">qemu</a>(1)</tt> manual page for a description of the object properties. The most common object type is a <tt>&quot;secret&quot;</tt>, which is used to supply passwords and/or encryption keys.</dd>
+<dd> is a QEMU user creatable object definition. See the <tt><a href="/docs/linux/man/1-qemu/">qemu</a>(1)</tt> manual page for a description of the object properties. The most common object type is a <tt>&quot;secret&quot;</tt>, which is used to supply passwords and/or encryption keys.</dd>
 <dt><code>&#8211;image-opts</code></dt>
 <dd> Indicates that the source <i>filename</i> parameter is to be interpreted as a full option string, not a plain filename. This parameter is mutually exclusive with the <i>-f</i> parameter.</dd>
 <dt><code>&#8211;target-image-opts</code></dt>
 <dd> Indicates that the <i>output_filename</i> parameter(s) are to be interpreted as a full option string, not a plain filename. This parameter is mutually exclusive with the <i>-O</i> parameters. It is currently required to also use the <i>-n</i> parameter to skip image creation. This restriction may be relaxed in a future release.</dd>
 <dt><code>&#8211;force-share (-U)</code></dt>
-<dd> If specified, <tt>&quot;qemu-img&quot;</tt> will open the image in shared mode, allowing other <font SIZE="-1">QEMU</font> processes to open it in write mode. For example, this can be used to get the image information (with &#8216;info&#8217; subcommand) when the image is used by a running guest. Note that this could produce inconsistent results because of concurrent metadata changes, etc. This option is only allowed when opening images in read-only mode.</dd>
+<dd> If specified, <tt>&quot;qemu-img&quot;</tt> will open the image in shared mode, allowing other QEMU processes to open it in write mode. For example, this can be used to get the image information (with &#8216;info&#8217; subcommand) when the image is used by a running guest. Note that this could produce inconsistent results because of concurrent metadata changes, etc. This option is only allowed when opening images in read-only mode.</dd>
 <dt><code>&#8211;backing-chain</code></dt>
 <dd> will enumerate information about backing files in a disk image chain. Refer below for further description.</dd>
 <dt><code>-c</code></dt>
@@ -135,7 +135,7 @@ description: "qemu-img – QEMU disk image utility"
 <dt><code>-W</code></dt>
 <dd> Allow out-of-order writes to the destination. This option improves performance, but is only recommended for preallocated devices like host devices or other raw block devices.</dd>
 <dt><code>-C</code></dt>
-<dd> Try to use copy offloading to move data from source image to target. This may improve performance if the data is remote, such as with <font SIZE="-1">NFS</font> or iSCSI backends, but will not automatically sparsify zero sectors, and may result in a fully allocated target image depending on the host support for getting allocation information.</dd>
+<dd> Try to use copy offloading to move data from source image to target. This may improve performance if the data is remote, such as with NFS or iSCSI backends, but will not automatically sparsify zero sectors, and may result in a fully allocated target image depending on the host support for getting allocation information.</dd>
 <dt><code>&#8211;salvage</code></dt>
 <dd> Try to ignore I/O errors when reading. Unless in quiet mode (<tt>&quot;-q&quot;</tt>), errors will still be printed. Areas that cannot be read from the source will be treated as containing only zeroes.</dd></dl>
 <p> Parameters to dd subcommand:</p>
@@ -158,10 +158,10 @@ description: "qemu-img – QEMU disk image utility"
 <dd> Run a simple sequential I/O benchmark on the specified image. If <tt>&quot;-w&quot;</tt> is specified, a write test is performed, otherwise a read test is performed. </dd>
 <p> A total number of <i>count</i> I/O requests is performed, each <i>buffer_size</i> bytes in size, and with <i>depth</i> requests in parallel. The first request starts at the position given by <i>offset</i>, each following request increases the current position by <i>step_size</i>. If <i>step_size</i> is not given, <i>buffer_size</i> is used for its value. </p>
 <p> If <i>flush_interval</i> is specified for a write test, the request queue is drained and a flush is issued before new writes are made whenever the number of remaining requests is a multiple of <i>flush_interval</i>. If additionally <tt>&quot;--no-drain&quot;</tt> is specified, a flush is issued without draining the request queue first. </p>
-<p> If <tt>&quot;-n&quot;</tt> is specified, the native <font SIZE="-1">AIO</font> backend is used if possible. On Linux, this option only works if <tt>&quot;-t none&quot;</tt> or <tt>&quot;-t directsync&quot;</tt> is specified as well. </p>
+<p> If <tt>&quot;-n&quot;</tt> is specified, the native AIO backend is used if possible. On Linux, this option only works if <tt>&quot;-t none&quot;</tt> or <tt>&quot;-t directsync&quot;</tt> is specified as well. </p>
 <p> For write tests, by default a buffer filled with zeros is written. This can be overridden with a pattern byte specified by <i>pattern</i>.</p>
 <dt><code>check [&#8211;object</code> <i>objectdef</i><code>] [&#8211;image-opts] [-q] [-f</code> <i>fmt</i><code>] [&#8211;output=</code><i>ofmt</i><code>] [-r [leaks | all]] [-T</code> <i>src_cache</i><code>] [-U]</code> <i>filename</i></dt>
-<dd> Perform a consistency check on the disk image <i>filename</i>. The command can output in the format <i>ofmt</i> which is either <tt>&quot;human&quot;</tt> or <tt>&quot;json&quot;</tt>. The <font SIZE="-1">JSON</font> output is an object of <font SIZE="-1">QAPI</font> type <tt>&quot;ImageCheck&quot;</tt>. </dd>
+<dd> Perform a consistency check on the disk image <i>filename</i>. The command can output in the format <i>ofmt</i> which is either <tt>&quot;human&quot;</tt> or <tt>&quot;json&quot;</tt>. The JSON output is an object of QAPI type <tt>&quot;ImageCheck&quot;</tt>. </dd>
 <p> If <tt>&quot;-r&quot;</tt> is specified, qemu-img tries to repair any inconsistencies found during the check. <tt>&quot;-r leaks&quot;</tt> repairs only cluster leaks, whereas <tt>&quot;-r all&quot;</tt> fixes all kinds of errors, with a higher risk of choosing the wrong fix or hiding corruption that has already occurred. </p>
 <p> Only the formats <tt>&quot;qcow2&quot;</tt>, <tt>&quot;qed&quot;</tt> and <tt>&quot;vdi&quot;</tt> support consistency checks. </p>
 <p> In case the image does not have any inconsistencies, check exits with <tt>0</tt>. Other exit codes indicate the kind of inconsistency found or if another error occurred. The following table summarizes all exit codes of the check subcommand:</p>
@@ -228,7 +228,7 @@ description: "qemu-img – QEMU disk image utility"
 <p> The data is by default read and written using blocks of 512 bytes but can be modified by specifying <i>block_size</i>. If count=<i>blocks</i> is specified dd will stop reading input after reading <i>blocks</i> input blocks. </p>
 <p> The size syntax is similar to <code><a href="/docs/linux/man/1-dd/">dd</a></code>(1)&#8217;s size syntax.</p>
 <dt><code>info [&#8211;object</code> <i>objectdef</i><code>] [&#8211;image-opts] [-f</code> <i>fmt</i><code>] [&#8211;output=</code><i>ofmt</i><code>] [&#8211;backing-chain] [-U]</code> <i>filename</i></dt>
-<dd> Give information about the disk image <i>filename</i>. Use it in particular to know the size reserved on disk which can be different from the displayed size. If <font SIZE="-1">VM</font> snapshots are stored in the disk image, they are displayed too. </dd>
+<dd> Give information about the disk image <i>filename</i>. Use it in particular to know the size reserved on disk which can be different from the displayed size. If VM snapshots are stored in the disk image, they are displayed too. </dd>
 <p> If a disk image has a backing file chain, information about each disk image in the chain can be recursively enumerated by using the option <tt>&quot;--backing-chain&quot;</tt>. </p>
 <p> For instance, if you have an image chain like: </p>
 <pre>
@@ -238,7 +238,7 @@ description: "qemu-img – QEMU disk image utility"
 <pre>
         qemu-img info --backing-chain snap2.qcow2
 </pre>
-<p> The command can output in the format <i>ofmt</i> which is either <tt>&quot;human&quot;</tt> or <tt>&quot;json&quot;</tt>. The <font SIZE="-1">JSON</font> output is an object of <font SIZE="-1">QAPI</font> type <tt>&quot;ImageInfo&quot;</tt>; with <tt>&quot;--backing-chain&quot;</tt>, it is an array of <tt>&quot;ImageInfo&quot;</tt> objects. </p>
+<p> The command can output in the format <i>ofmt</i> which is either <tt>&quot;human&quot;</tt> or <tt>&quot;json&quot;</tt>. The JSON output is an object of QAPI type <tt>&quot;ImageInfo&quot;</tt>; with <tt>&quot;--backing-chain&quot;</tt>, it is an array of <tt>&quot;ImageInfo&quot;</tt> objects. </p>
 <p> <tt>&quot;--output=human&quot;</tt> reports the following information (for every image in the chain):</p>
 <dl>
 <dl>
@@ -263,7 +263,7 @@ description: "qemu-img – QEMU disk image utility"
 <dt><i>Snapshot list</i></dt>
 <dd> A list of all internal snapshots</dd>
 <dt><i>Format specific information</i></dt>
-<dd> Further information whose structure depends on the image format. This section is a textual representation of the respective <tt>&quot;ImageInfoSpecific*&quot;</tt> <font SIZE="-1">QAPI</font> object (e.g. <tt>&quot;ImageInfoSpecificQCow2&quot;</tt> for qcow2 images).</dd></dl>
+<dd> Further information whose structure depends on the image format. This section is a textual representation of the respective <tt>&quot;ImageInfoSpecific*&quot;</tt> QAPI object (e.g. <tt>&quot;ImageInfoSpecificQCow2&quot;</tt> for qcow2 images).</dd></dl>
 </dl>
 <dl>
 </dl>
@@ -276,7 +276,7 @@ description: "qemu-img – QEMU disk image utility"
         0x100000        0x10000         0x95380000      /tmp/backing.qcow2
 </pre>
 <p> means that 0x20000 (131072) bytes starting at offset 0 in the image are available in /tmp/overlay.qcow2 (opened in <tt>&quot;raw&quot;</tt> format) starting at offset 0x50000 (327680). Data that is compressed, encrypted, or otherwise not available in raw format will cause an error if <tt>&quot;human&quot;</tt> format is in use. Note that file names can include newlines, thus it is not safe to parse this output format in scripts. </p>
-<p> The alternative format <tt>&quot;json&quot;</tt> will return an array of dictionaries in <font SIZE="-1">JSON</font> format. It will include similar information in the <tt>&quot;start&quot;</tt>, <tt>&quot;length&quot;</tt>, <tt>&quot;offset&quot;</tt> fields; it will also include other more specific information:</p>
+<p> The alternative format <tt>&quot;json&quot;</tt> will return an array of dictionaries in JSON format. It will include similar information in the <tt>&quot;start&quot;</tt>, <tt>&quot;length&quot;</tt>, <tt>&quot;offset&quot;</tt> fields; it will also include other more specific information:</p>
 <dl>
 <dl>
 <dt>&#8211;</dt>
@@ -289,10 +289,10 @@ description: "qemu-img – QEMU disk image utility"
 <dl>
 <dt>
 </dt><dd>
-<p> In <font SIZE="-1">JSON</font> format, the <tt>&quot;offset&quot;</tt> field is optional; it is absent in cases where <tt>&quot;human&quot;</tt> format would omit the entry or exit with an error. If <tt>&quot;data&quot;</tt> is false and the <tt>&quot;offset&quot;</tt> field is present, the corresponding sectors in the file are not yet in use, but they are preallocated. </p>
-<p> For more information, consult <i>include/block/block.h</i> in <font SIZE="-1">QEMU</font>&#8216;s source code.</dd></dl>
+<p> In JSON format, the <tt>&quot;offset&quot;</tt> field is optional; it is absent in cases where <tt>&quot;human&quot;</tt> format would omit the entry or exit with an error. If <tt>&quot;data&quot;</tt> is false and the <tt>&quot;offset&quot;</tt> field is present, the corresponding sectors in the file are not yet in use, but they are preallocated. </p>
+<p> For more information, consult <i>include/block/block.h</i> in QEMU&#8216;s source code.</dd></dl>
 <dt><code>measure [&#8211;output=</code><i>ofmt</i><code>] [-O</code> <i>output_fmt</i><code>] [-o</code> <i>options</i><code>] [&#8211;size</code> <i>N</i> <code>| [&#8211;object</code> <i>objectdef</i><code>] [&#8211;image-opts] [-f</code> <i>fmt</i><code>] [-l</code> <i>snapshot_param</i><code>]</code> <i>filename</i><code>]</code></dt>
-<dd> Calculate the file size required for a new image. This information can be used to size logical volumes or <font SIZE="-1">SAN</font> LUNs appropriately for the image that will be placed in them. The values reported are guaranteed to be large enough to fit the image. The command can output in the format <i>ofmt</i> which is either <tt>&quot;human&quot;</tt> or <tt>&quot;json&quot;</tt>. The <font SIZE="-1">JSON</font> output is an object of <font SIZE="-1">QAPI</font> type <tt>&quot;BlockMeasureInfo&quot;</tt>. </dd>
+<dd> Calculate the file size required for a new image. This information can be used to size logical volumes or SAN LUNs appropriately for the image that will be placed in them. The values reported are guaranteed to be large enough to fit the image. The command can output in the format <i>ofmt</i> which is either <tt>&quot;human&quot;</tt> or <tt>&quot;json&quot;</tt>. The JSON output is an object of QAPI type <tt>&quot;BlockMeasureInfo&quot;</tt>. </dd>
 <p> If the size <i>N</i> is given then act as if creating a new empty image file using <code>qemu-img create</code>. If <i>filename</i> is given then act as if converting an existing image file using <code>qemu-img convert</code>. The format of the new file is given by <i>output_fmt</i> while the format of an existing file is given by <i>fmt</i>. </p>
 <p> A snapshot in an existing image can be specified using <i>snapshot_param</i>. </p>
 <p> The following fields are reported: </p>
@@ -332,15 +332,15 @@ description: "qemu-img – QEMU disk image utility"
 <p> At this point, <tt>&quot;modified.img&quot;</tt> can be discarded, since <tt>&quot;base.img + diff.qcow2&quot;</tt> contains the same information.</dd></dl>
 <dt><code>resize [&#8211;object</code> <i>objectdef</i><code>] [&#8211;image-opts] [-f</code> <i>fmt</i><code>] [&#8211;preallocation=</code><i>prealloc</i><code>] [-q] [&#8211;shrink]</code> <i>filename</i> <code>[+ | -]</code><i>size</i></dt>
 <dd> Change the disk image as if it had been created with <i>size</i>. </dd>
-<p> Before using this command to shrink a disk image, you <font SIZE="-1">MUST</font> use file system and partitioning tools inside the <font SIZE="-1">VM</font> to reduce allocated file systems and partition sizes accordingly. Failure to do so will result in data loss! </p>
+<p> Before using this command to shrink a disk image, you MUST use file system and partitioning tools inside the VM to reduce allocated file systems and partition sizes accordingly. Failure to do so will result in data loss! </p>
 <p> When shrinking images, the <tt>&quot;--shrink&quot;</tt> option must be given. This informs qemu-img that the user acknowledges all loss of data beyond the truncated image&#8217;s end. </p>
-<p> After using this command to grow a disk image, you must use file system and partitioning tools inside the <font SIZE="-1">VM</font> to actually begin using the new space on the device. </p>
+<p> After using this command to grow a disk image, you must use file system and partitioning tools inside the VM to actually begin using the new space on the device. </p>
 <p> When growing an image, the <tt>&quot;--preallocation&quot;</tt> option may be used to specify how the additional image area should be allocated on the host. See the format description in the <tt>&quot;NOTES&quot;</tt> section which values are allowed. Using this option may result in slightly more data being allocated than necessary.</dl>
 <h2>NOTES</h2>
 <p> Supported image file formats:</p>
 <dl>
 <dt><code>raw</code></dt>
-<dd> Raw disk image format (default). This format has the advantage of being simple and easily exportable to all other emulators. If your file system supports <i>holes</i> (for example in ext2 or ext3 on Linux or <font SIZE="-1">NTFS</font> on Windows), then only the written sectors will reserve space. Use <tt>&quot;qemu-img info&quot;</tt> to know the real size used by the image or <tt>&quot;ls -ls&quot;</tt> on Unix/Linux. </dd>
+<dd> Raw disk image format (default). This format has the advantage of being simple and easily exportable to all other emulators. If your file system supports <i>holes</i> (for example in ext2 or ext3 on Linux or NTFS on Windows), then only the written sectors will reserve space. Use <tt>&quot;qemu-img info&quot;</tt> to know the real size used by the image or <tt>&quot;ls -ls&quot;</tt> on Unix/Linux. </dd>
 <p> Supported options:</p>
 <dl>
 <dl>
@@ -350,12 +350,12 @@ description: "qemu-img – QEMU disk image utility"
 <dl>
 </dl>
 <dt><code>qcow2</code></dt>
-<dd> <font SIZE="-1">QEMU</font> image format, the most versatile format. Use it to have smaller images (useful if your filesystem does not supports holes, for example on Windows), optional <font SIZE="-1">AES</font> encryption, zlib based compression and support of multiple <font SIZE="-1">VM</font> snapshots. </dd>
+<dd> QEMU image format, the most versatile format. Use it to have smaller images (useful if your filesystem does not supports holes, for example on Windows), optional AES encryption, zlib based compression and support of multiple VM snapshots. </dd>
 <p> Supported options:</p>
 <dl>
 <dl>
 <dt>&quot;compat&quot;</dt>
-<dd> Determines the qcow2 version to use. <tt>&quot;compat=0.10&quot;</tt> uses the traditional image format that can be read by any <font SIZE="-1">QEMU</font> since 0.10. <tt>&quot;compat=1.1&quot;</tt> enables image format extensions that only <font SIZE="-1">QEMU 1.1</font> and newer understand (this is the default). Amongst others, this includes zero clusters, which allow efficient copy-on-read for sparse images.</dd>
+<dd> Determines the qcow2 version to use. <tt>&quot;compat=0.10&quot;</tt> uses the traditional image format that can be read by any QEMU since 0.10. <tt>&quot;compat=1.1&quot;</tt> enables image format extensions that only QEMU 1.1 and newer understand (this is the default). Amongst others, this includes zero clusters, which allow efficient copy-on-read for sparse images.</dd>
 <dt>&quot;backing_file&quot;</dt>
 <dd> File name of a base image (see <code>create</code> subcommand)</dd>
 <dt>&quot;backing_fmt&quot;</dt>
@@ -372,12 +372,12 @@ description: "qemu-img – QEMU disk image utility"
 <dt>&#8211;</dt>
 <dd> In the event of the passphrase being compromised there is no way to change the passphrase to protect data in any qcow images. The files must be cloned, using a different encryption passphrase in the new file. The original file must then be securely erased using a program like shred, though even this is ineffective with many modern storage technologies.</dd>
 <dt>&#8211;</dt>
-<dd> Initialization vectors used to encrypt sectors are based on the guest virtual sector number, instead of the host physical sector. When a disk image has multiple internal snapshots this means that data in multiple physical sectors is encrypted with the same initialization vector. With the <font SIZE="-1">CBC</font> mode, this opens the possibility of watermarking attacks if the attack can collect multiple sectors encrypted with the same <font SIZE="-1">IV</font> and some predictable data. Having multiple qcow2 images with the same passphrase also exposes this weakness since the passphrase is directly used as the key.</dd></dl>
+<dd> Initialization vectors used to encrypt sectors are based on the guest virtual sector number, instead of the host physical sector. When a disk image has multiple internal snapshots this means that data in multiple physical sectors is encrypted with the same initialization vector. With the CBC mode, this opens the possibility of watermarking attacks if the attack can collect multiple sectors encrypted with the same IV and some predictable data. Having multiple qcow2 images with the same passphrase also exposes this weakness since the passphrase is directly used as the key.</dd></dl>
 </dl>
 <dl>
 <dt>
 </dt><dd>
-<p> Use of qcow / qcow2 encryption is thus strongly discouraged. Users are recommended to use an alternative encryption technology such as the Linux dm-crypt / <font SIZE="-1">LUKS</font> system.</dd></dl>
+<p> Use of qcow / qcow2 encryption is thus strongly discouraged. Users are recommended to use an alternative encryption technology such as the Linux dm-crypt / LUKS system.</dd></dl>
 <dt>&quot;cluster_size&quot;</dt>
 <dd> Changes the qcow2 cluster size (must be between 512 and 2M). Smaller cluster sizes can improve the image file size whereas larger cluster sizes generally provide better performance.</dd>
 <dt>&quot;preallocation&quot;</dt>
@@ -386,16 +386,16 @@ description: "qemu-img – QEMU disk image utility"
 <dd> If this option is set to <tt>&quot;on&quot;</tt>, reference count updates are postponed with the goal of avoiding metadata I/O and improving performance. This is particularly interesting with <code>cache=writethrough</code> which doesn&#8217;t batch metadata updates. The tradeoff is that after a host crash, the reference count tables must be rebuilt, i.e. on the next open an (automatic) <tt>&quot;qemu-img check -r all&quot;</tt> is required, which may take some time. </dd>
 <p> This option can only be enabled if <tt>&quot;compat=1.1&quot;</tt> is specified.</p>
 <dt>&quot;nocow&quot;</dt>
-<dd> If this option is set to <tt>&quot;on&quot;</tt>, it will turn off <font SIZE="-1">COW</font> of the file. It&#8217;s only valid on btrfs, no effect on other file systems. </dd>
-<p> Btrfs has low performance when hosting a <font SIZE="-1">VM</font> image file, even more when the guest on the <font SIZE="-1">VM</font> also using btrfs as file system. Turning off <font SIZE="-1">COW</font> is a way to mitigate this bad performance. Generally there are two ways to turn off <font SIZE="-1">COW</font> on btrfs: a) Disable it by mounting with nodatacow, then all newly created files will be <font SIZE="-1">NOCOW.</font> b) For an empty file, add the <font SIZE="-1">NOCOW</font> file attribute. That&#8217;s what this option does. </p>
-<p> Note: this option is only valid to new or empty files. If there is an existing file which is <font SIZE="-1">COW</font> and has data blocks already, it couldn&#8217;t be changed to <font SIZE="-1">NOCOW</font> by setting <tt>&quot;nocow=on&quot;</tt>. One can issue <tt>&quot;lsattr filename&quot;</tt> to check if the <font SIZE="-1">NOCOW</font> flag is set or not (Capital &#8216;C&#8217; is <font SIZE="-1">NOCOW</font> flag).</dl>
+<dd> If this option is set to <tt>&quot;on&quot;</tt>, it will turn off COW of the file. It&#8217;s only valid on btrfs, no effect on other file systems. </dd>
+<p> Btrfs has low performance when hosting a VM image file, even more when the guest on the VM also using btrfs as file system. Turning off COW is a way to mitigate this bad performance. Generally there are two ways to turn off COW on btrfs: a) Disable it by mounting with nodatacow, then all newly created files will be NOCOW. b) For an empty file, add the NOCOW file attribute. That&#8217;s what this option does. </p>
+<p> Note: this option is only valid to new or empty files. If there is an existing file which is COW and has data blocks already, it couldn&#8217;t be changed to NOCOW by setting <tt>&quot;nocow=on&quot;</tt>. One can issue <tt>&quot;lsattr filename&quot;</tt> to check if the NOCOW flag is set or not (Capital &#8216;C&#8217; is NOCOW flag).</dl>
 </dl>
 <dl>
 </dl>
 <dt><code>Other</code></dt>
-<dd> <font SIZE="-1">QEMU</font> also supports various other image file formats for compatibility with older <font SIZE="-1">QEMU</font> versions or other hypervisors, including <font SIZE="-1">VMDK, VDI, VHD</font> (vpc), <font SIZE="-1">VHDX,</font> qcow1 and <font SIZE="-1">QED.</font> For a full list of supported formats see <tt>&quot;qemu-img --help&quot;</tt>. For a more detailed description of these formats, see the <font SIZE="-1">QEMU</font> Emulation User Documentation. </dd>
+<dd> QEMU also supports various other image file formats for compatibility with older QEMU versions or other hypervisors, including VMDK, VDI, VHD (vpc), VHDX, qcow1 and QED. For a full list of supported formats see <tt>&quot;qemu-img --help&quot;</tt>. For a more detailed description of these formats, see the QEMU Emulation User Documentation. </dd>
 <p> The main purpose of the block drivers for these formats is image conversion. For running VMs, it is recommended to convert the disk images to either raw or qcow2 in order to achieve good performance.</dl>
 <h2>SEE ALSO</h2>
-<p> The <font SIZE="-1">HTML</font> documentation of <font SIZE="-1">QEMU</font> for more precise information and Linux user mode emulator invocation.</p>
+<p> The HTML documentation of QEMU for more precise information and Linux user mode emulator invocation.</p>
 <h2>AUTHOR</h2>
 <p> Fabrice Bellard </p>

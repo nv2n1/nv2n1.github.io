@@ -273,13 +273,13 @@ description: "sssd-ldap – SSSD LDAP provider"
 <dd>This option tells SSSD to take advantage of an Active Directory-specific feature which may speed up group lookup operations on deployments with complex or deep nested groups. </dd>
 <p> In most common cases, it is best to leave this option disabled. It generally only provides a performance increase on very complex nestings. </p>
 <p> If this option is enabled, SSSD will use it if it detects that the server supports it during initial connection. So &quot;True&quot; here essentially means &quot;auto-detect&quot;. </p>
-<p> Note: This feature is currently known to work only with Active Directory 2008 R1 and later. See m[blue]<code>MSDN(TM) documentation</code>m[]<font SIZE="-2">[1]</font> for more details. </p>
+<p> Note: This feature is currently known to work only with Active Directory 2008 R1 and later. See m[blue]<code>MSDN(TM) documentation</code>m[][1] for more details. </p>
 <p> Default: False</dl>
 <p> ldap_initgroups_use_matching_rule_in_chain</p>
 <dl>
 <dd>This option tells SSSD to take advantage of an Active Directory-specific feature which might speed up initgroups operations (most notably when dealing with complex or deep nested groups). </dd>
 <p> If this option is enabled, SSSD will use it if it detects that the server supports it during initial connection. So &quot;True&quot; here essentially means &quot;auto-detect&quot;. </p>
-<p> Note: This feature is currently known to work only with Active Directory 2008 R1 and later. See m[blue]<code>MSDN(TM) documentation</code>m[]<font SIZE="-2">[1]</font> for more details. </p>
+<p> Note: This feature is currently known to work only with Active Directory 2008 R1 and later. See m[blue]<code>MSDN(TM) documentation</code>m[][1] for more details. </p>
 <p> Default: False</dl>
 <p> ldap_use_tokengroups</p>
 <dl>
@@ -715,7 +715,7 @@ ldap_access_filter = (employeeType=admin)</pre>
 <p> Default: the value of <i>ldap_search_base</i> </p>
 <p> Please note that specifying scope or filter is not supported for searches against an Active Directory Server that might yield a large number of results and trigger the Range Retrieval extension in the response.</dl>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> If the option &#8220;ldap_use_tokengroups&#8221; is enabled. The searches against Active Directory will not be restricted and return all groups memberships, even with no gid mapping. It is recommended to disable this feature, if group names are not being displayed correctly. </p>
 </dl>
 <p> ldap_sudo_search_base (string)</p>
@@ -790,7 +790,7 @@ ldap_access_filter = (employeeType=admin)</pre>
 ldap_schema = ad</pre>
 </dd></dl>
 <p> The default configuration results in configuring 10,000 slices, each capable of holding up to 200,000 IDs, starting from 200,000 and going up to 2,000,200,000. This should be sufficient for most deployments. </p>
-<p> <font SIZE="+1"> <code>Advanced Configuration</code></p>
+<p>  <code>Advanced Configuration</code></p>
 <dl>
 <dd>ldap_idmap_range_min (integer)</dd>
 <dl>
@@ -829,7 +829,7 @@ ldap_schema = ad</pre>
 <p> Note: Additional secondary slices might be generated when SID is being mapped to UNIX id and RID part of SID is out of range for secondary slices generated so far. If value of ldap_idmap_helper_table_size is equal to 0 then no additional secondary slices are generated. </p>
 <p> Default: 10</dl>
 </dl>
-<p> </font></p>
+<p> </p>
 <h3>Well-Known SIDs</h3>
 <p>SSSD supports to look up the names of Well-Known SIDs, i.e. SIDs with a special hardcoded meaning. Since the generic users and groups related to those Well-Known SIDs have no equivalent in a Linux/UNIX environment no POSIX IDs are available for those objects. </p>
 <p> The SID name space is organized in authorities which can be seen as different domains. The authorities for the Well-Known SIDs are </p>

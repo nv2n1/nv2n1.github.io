@@ -13,21 +13,21 @@ description: "getdns_address, getdns_address_sync — get ip address(es) for a n
 <p> DNS Resolver library (libgetdns, -lgetdns) </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;getdns.h&gt; </p>
-<p> getdns_return_t<br />
+<p> getdns_return_t<br/>
  <code>getdns_address</code> (getdns_context *context,</p>
 <dl>
 <dt>
-</dt><dd> const char *name,<br />
- getdns_dict *extensions,<br />
- void *userarg,<br />
- getdns_transaction_t *transaction_id,<br />
+</dt><dd> const char *name,<br/>
+ getdns_dict *extensions,<br/>
+ void *userarg,<br/>
+ getdns_transaction_t *transaction_id,<br/>
  getdns_callback_t callbackfn)</dd></dl>
-<p> getdns_return_t<br />
+<p> getdns_return_t<br/>
  <code>getdns_address_sync</code> (getdns_context *context,</p>
 <dl>
 <dt>
-</dt><dd> const char *name,<br />
- getdns_dict *extensions,<br />
+</dt><dd> const char *name,<br/>
+ getdns_dict *extensions,<br/>
  getdns_dict **response)</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <a href="/docs/linux/man/3-getdns_address/">getdns_address</a>(3) and getdns_address_sync functions provide public entry points into the getdns API library to retrieve the address given a host name. They always returns both IPv4 and IPv6 addresses. This function will use all of the namespaces from the context (to better emulate getaddrinfo (3)). </p>
@@ -65,7 +65,7 @@ description: "getdns_address, getdns_address_sync — get ip address(es) for a n
 <h2>EXAMPLES</h2>
 <p> TBD </p>
 <h2>FILES</h2>
-<p> /etc/hosts<br />
+<p> /etc/hosts<br/>
  /etc/resolv.conf </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libgetdns/">libgetdns</a></code>(3), <code><a href="/docs/linux/man/3-getdns_context/">getdns_context</a></code>(3), <code>getdns_free_sync_request_memory</code>(3), <code><a href="/docs/linux/man/3-getdns_general/">getdns_general</a></code>(3), <code><a href="/docs/linux/man/3-getdns_general_sync/">getdns_general_sync</a></code>(3), <code><a href="/docs/linux/man/3-getdns_hostname/">getdns_hostname</a></code>(3), <code><a href="/docs/linux/man/3-getdns_hostname_sync/">getdns_hostname_sync</a></code>(3), <code><a href="/docs/linux/man/3-getdns_service/">getdns_service</a></code>(3), <code><a href="/docs/linux/man/3-getdns_service_sync/">getdns_service_sync</a></code>(3) </p>

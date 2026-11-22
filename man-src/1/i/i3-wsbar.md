@@ -15,12 +15,12 @@ description: "i3-wsbar – sample implementation of a standalone workspace bar"
 <dl>
 <dt><code>&#8211;command</code> &lt;command&gt;</dt>
 <dd> This command (at the moment only dzen2 is supported) will be started for each output. <tt>%x</tt> will be replaced with the X coordinate of the output. </dd>
-<p> Example:<br />
+<p> Example:<br/>
 &nbsp;<wbr>&#8211;command&nbsp;<wbr>&#8220;dzen2 -dock -x&nbsp;<wbr><tt>%x</tt>&#8221;</p>
 <dt><code>&#8211;input-on</code> &lt;list-of-RandR-outputs&gt;</dt>
 <dd> Specifies on which outputs the contents of stdin should be appended to the workspace bar. </dd>
-<p> Example:<br />
-&nbsp;<wbr>&#8211;input-on&nbsp;<wbr>&#8220;<font SIZE="-1">LVDS1</font>&#8221;</p>
+<p> Example:<br/>
+&nbsp;<wbr>&#8211;input-on&nbsp;<wbr>&#8220;LVDS1&#8221;</p>
 <dt><code>&#8211;output-on</code> &lt;list-of-RandR-outputs&gt;</dt>
 <dd> Specifies for which outputs i3-wsbar should start <tt>&quot;command&quot;</tt>.</dd>
 <dt><code>&#8211;show-all</code></dt>

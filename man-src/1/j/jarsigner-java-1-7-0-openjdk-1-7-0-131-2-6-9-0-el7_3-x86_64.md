@@ -373,39 +373,39 @@ description: "jarsigner – Signs and verifies Java Archive (JAR) files."
 <h3>Signed Jars</h3>
 <p>Signed JARs have the privilege configurations based on their JDK 1.1.<i>n</i> identity and policy file status as described. Only trusted identities can be imported into the JDK keystore. </p>
 <p> Default Privileges Granted to All Code </p>
-<p> Identity in 1.1 database: <i>No</i><br />
- Trusted identity imported into Java keystore from 1.1. database: <i>No</i><br />
+<p> Identity in 1.1 database: <i>No</i><br/>
+ Trusted identity imported into Java keystore from 1.1. database: <i>No</i><br/>
  Policy file grants privileges to identity/alias: <i>No</i> </p>
-<p> Identity in 1.1 database: <i>No</i><br />
- Trusted identity imported into Java keystore from 1.1. database: <i>Yes</i><br />
+<p> Identity in 1.1 database: <i>No</i><br/>
+ Trusted identity imported into Java keystore from 1.1. database: <i>Yes</i><br/>
  Policy file grants privileges to identity/alias: <i>No</i> </p>
-<p> Identity in 1.1 database: Yes/Untrusted<br />
- Trusted identity imported into Java keystore from 1.1. database: <i>No</i><br />
- Policy file grants privileges to identity/alias: <i>No</i><br />
+<p> Identity in 1.1 database: Yes/Untrusted<br/>
+ Trusted identity imported into Java keystore from 1.1. database: <i>No</i><br/>
+ Policy file grants privileges to identity/alias: <i>No</i><br/>
  See 3 in Notes Regarding Privileges of Signed JARs. </p>
-<p> Identity in 1.1 database: Yes/Untrusted<br />
- Trusted identity imported into Java keystore from 1.1. database: <i>No</i><br />
- Policy file grants privileges to identity/alias: <i>Yes</i><br />
+<p> Identity in 1.1 database: Yes/Untrusted<br/>
+ Trusted identity imported into Java keystore from 1.1. database: <i>No</i><br/>
+ Policy file grants privileges to identity/alias: <i>Yes</i><br/>
  See 1 and 3 in Notes Regarding Privileges of Signed JARs. </p>
 <p> Default Privileges and Policy File Privileges Granted </p>
-<p> Identity in 1.1 database: <i>No</i><br />
- Trusted identity imported into Java keystore from 1.1. database: <i>Yes</i><br />
+<p> Identity in 1.1 database: <i>No</i><br/>
+ Trusted identity imported into Java keystore from 1.1. database: <i>Yes</i><br/>
  Policy file grants privileges to identity/alias: <i>Yes</i> </p>
-<p> Identity in 1.1 database: <i>Yes/Trusted</i><br />
- Trusted identity imported into Java keystore from 1.1. database: <i>Yes</i><br />
- Policy file grants privileges to identity/alias: <i>Yes</i><br />
+<p> Identity in 1.1 database: <i>Yes/Trusted</i><br/>
+ Trusted identity imported into Java keystore from 1.1. database: <i>Yes</i><br/>
+ Policy file grants privileges to identity/alias: <i>Yes</i><br/>
  See 2 in Notes Regarding Privileges of Signed JARs. </p>
 <p> All Privileges Granted </p>
-<p> Identity in 1.1 database: <i>Yes/Trusted</i><br />
- Trusted identity imported into Java keystore from 1.1. database: <i>No</i><br />
+<p> Identity in 1.1 database: <i>Yes/Trusted</i><br/>
+ Trusted identity imported into Java keystore from 1.1. database: <i>No</i><br/>
  Policy file grants privileges to identity/alias: <i>No</i> </p>
-<p> Identity in 1.1 database: <i>Yes/Trusted</i><br />
- Trusted identity imported into Java keystore from 1.1. database: <i>Yes</i><br />
- Policy file grants privileges to identity/alias: <i>No</i><br />
+<p> Identity in 1.1 database: <i>Yes/Trusted</i><br/>
+ Trusted identity imported into Java keystore from 1.1. database: <i>Yes</i><br/>
+ Policy file grants privileges to identity/alias: <i>No</i><br/>
  See 1 in Notes Regarding Privileges of Signed JARs. </p>
-<p> Identity in 1.1 database: <i>Yes/Trusted</i><br />
- Trusted identity imported into Java keystore from 1.1. database: <i>No</i><br />
- Policy file grants privileges to identity/alias: <i>Yes</i><br />
+<p> Identity in 1.1 database: <i>Yes/Trusted</i><br/>
+ Trusted identity imported into Java keystore from 1.1. database: <i>No</i><br/>
+ Policy file grants privileges to identity/alias: <i>Yes</i><br/>
  See 1 in Notes Regarding Privileges of Signed JARs. </p>
 <p> Notes Regarding Privileges of Signed JARs</p>
 <dl>

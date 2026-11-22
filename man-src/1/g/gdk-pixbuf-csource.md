@@ -71,7 +71,7 @@ description: "gdk-pixbuf-csource – C code generation utility for GdkPixbuf ima
 <dt>
 </dt><dd> Make warnings fatal (causes the program to abort).</dd></dl>
 <h2>SEE ALSO</h2>
-<p> The GdkPixbuf documentation, shipped with the Gtk+ distribution, available from m[blue]<code><a rel="nofollow" href="http://www.gtk.org">www.gtk.org</a></code>m[]<font SIZE="-2">[1]</font>.</p>
+<p> The GdkPixbuf documentation, shipped with the Gtk+ distribution, available from m[blue]<code><a rel="nofollow" href="http://www.gtk.org">www.gtk.org</a></code>m[][1].</p>
 <h2>BUGS</h2>
 <p> The runlength encoder gets out of sync with the pixel boundaries, since it includes the rowstride padding in the encoded stream. Furthermore, it generates pixbufs with suboptimal rowstride in some cases.</p>
 <h2>NOTES</h2>

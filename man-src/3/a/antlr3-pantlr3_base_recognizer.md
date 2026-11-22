@@ -10,62 +10,62 @@ description: "pANTLR3_BASE_RECOGNIZER Base Recognizer Implementation –"
 <p>pANTLR3_BASE_RECOGNIZER Base Recognizer Implementation &#8211; </p>
 <p> The base recognizer interface is implemented by all higher level recognizers such as <code>pANTLR3_PARSER</code> and provides methods common to all recognizers.</p>
 <h3>Functions</h3>
-<p>static <code>ANTLR3_BOOLEAN</code> <code>alreadyParsedRule</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer, <code>ANTLR3_MARKER</code> ruleIndex)<br />
- <i>Has this rule already parsed input at the current index in the input stream? Return ANTLR3_TRUE if we have and ANTLR3_FALSE if we have not. </i><br />
+<p>static <code>ANTLR3_BOOLEAN</code> <code>alreadyParsedRule</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer, <code>ANTLR3_MARKER</code> ruleIndex)<br/>
+ <i>Has this rule already parsed input at the current index in the input stream? Return ANTLR3_TRUE if we have and ANTLR3_FALSE if we have not. </i><br/>
  ANTLR3_API <code>pANTLR3_BASE_RECOGNIZER</code> <code>antlr3BaseRecognizerNew</code> (<code>ANTLR3_UINT32</code> type, <code>ANTLR3_UINT32</code> sizeHint, <code>pANTLR3_RECOGNIZER_SHARED_STATE</code> state) </p>
-<p> ANTLR3_API void <code>antlr3MTExceptionNew</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer)<br />
- <i>Creates a new Mismatched Token Exception and inserts in the recognizer exception stack. </i><br />
+<p> ANTLR3_API void <code>antlr3MTExceptionNew</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer)<br/>
+ <i>Creates a new Mismatched Token Exception and inserts in the recognizer exception stack. </i><br/>
  ANTLR3_API void <code>antlr3RecognitionExceptionNew</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer) </p>
 <p> static void <code>beginBacktrack</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer, <code>ANTLR3_UINT32</code> level) </p>
 <p> static void <code>beginResync</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer) </p>
-<p> static <code>pANTLR3_BITSET</code> <code>combineFollows</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer, <code>ANTLR3_BOOLEAN</code> exact)<br />
- <i>Compute the current followset for the input stream. </i><br />
- static <code>pANTLR3_BITSET</code> <code>computeCSRuleFollow</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer)<br />
- <i>Compute the context-sensitive FOLLOW set for current rule. </i><br />
- static <code>pANTLR3_BITSET</code> <code>computeErrorRecoverySet</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer)<br />
- <i>Compute the error recovery set for the current rule. </i><br />
- static void <code>consumeUntil</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer, <code>ANTLR3_UINT32</code> tokenType)<br />
- <i>Eat tokens from the input stream until we get one of JUST the right type. </i><br />
- static void <code>consumeUntilSet</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer, <code>pANTLR3_BITSET</code> set)<br />
- <i>Eat tokens from the input stream until we find one that belongs to the supplied set. </i><br />
- static void <code>displayRecognitionError</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer, <code>pANTLR3_UINT8</code> *tokenNames)<br />
- <i>Standard/Example error display method. </i><br />
+<p> static <code>pANTLR3_BITSET</code> <code>combineFollows</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer, <code>ANTLR3_BOOLEAN</code> exact)<br/>
+ <i>Compute the current followset for the input stream. </i><br/>
+ static <code>pANTLR3_BITSET</code> <code>computeCSRuleFollow</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer)<br/>
+ <i>Compute the context-sensitive FOLLOW set for current rule. </i><br/>
+ static <code>pANTLR3_BITSET</code> <code>computeErrorRecoverySet</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer)<br/>
+ <i>Compute the error recovery set for the current rule. </i><br/>
+ static void <code>consumeUntil</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer, <code>ANTLR3_UINT32</code> tokenType)<br/>
+ <i>Eat tokens from the input stream until we get one of JUST the right type. </i><br/>
+ static void <code>consumeUntilSet</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer, <code>pANTLR3_BITSET</code> set)<br/>
+ <i>Eat tokens from the input stream until we find one that belongs to the supplied set. </i><br/>
+ static void <code>displayRecognitionError</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer, <code>pANTLR3_UINT8</code> *tokenNames)<br/>
+ <i>Standard/Example error display method. </i><br/>
  static void <code>endBacktrack</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer, <code>ANTLR3_UINT32</code> level, <code>ANTLR3_BOOLEAN</code> successful) </p>
 <p> static void <code>endResync</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer) </p>
 <p> static void <code>freeBR</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer) </p>
 <p> static void ANTLR3_CDECL <code>freeIntTrie</code> (void *trie) </p>
 <p> static void * <code>getCurrentInputSymbol</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer, <code>pANTLR3_INT_STREAM</code> istream) </p>
 <p> static void * <code>getMissingSymbol</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer, <code>pANTLR3_INT_STREAM</code> istream, <code>pANTLR3_EXCEPTION</code> e, <code>ANTLR3_UINT32</code> expectedTokenType, <code>pANTLR3_BITSET_LIST</code> follow) </p>
-<p> static <code>ANTLR3_UINT32</code> <code>getNumberOfSyntaxErrors</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer)<br />
- <i>Return how many syntax errors were detected by this recognizer. </i><br />
- static <code>pANTLR3_STACK</code> <code>getRuleInvocationStack</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer)<br />
- <i>Return the rule invocation stack (how we got here in the parse. </i><br />
+<p> static <code>ANTLR3_UINT32</code> <code>getNumberOfSyntaxErrors</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer)<br/>
+ <i>Return how many syntax errors were detected by this recognizer. </i><br/>
+ static <code>pANTLR3_STACK</code> <code>getRuleInvocationStack</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer)<br/>
+ <i>Return the rule invocation stack (how we got here in the parse. </i><br/>
  static <code>pANTLR3_STACK</code> <code>getRuleInvocationStackNamed</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer, <code>pANTLR3_UINT8</code> name) </p>
-<p> static <code>ANTLR3_MARKER</code> <code>getRuleMemoization</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer, <code>ANTLR3_INTKEY</code> ruleIndex, <code>ANTLR3_MARKER</code> ruleParseStart)<br />
- <i>Pointer to a function to return whether the rule has parsed input starting at the supplied start index before. </i><br />
- static void * <code>match</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer, <code>ANTLR3_UINT32</code> ttype, <code>pANTLR3_BITSET_LIST</code> follow)<br />
- <i>Match current input symbol against ttype. </i><br />
- static void <code>matchAny</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer)<br />
- <i>Consumes the next token, whatever it is, and resets the recognizer state so that it is not in error. </i><br />
- static void <code>memoize</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer, <code>ANTLR3_MARKER</code> ruleIndex, <code>ANTLR3_MARKER</code> ruleParseStart)<br />
- <i>Record whether or not this rule parsed the input at this position successfully. </i><br />
- static void <code>mismatch</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer, <code>ANTLR3_UINT32</code> ttype, <code>pANTLR3_BITSET_LIST</code> follow)<br />
- <i>Factor out what to do upon token mismatch so tree parsers can behave differently. </i><br />
+<p> static <code>ANTLR3_MARKER</code> <code>getRuleMemoization</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer, <code>ANTLR3_INTKEY</code> ruleIndex, <code>ANTLR3_MARKER</code> ruleParseStart)<br/>
+ <i>Pointer to a function to return whether the rule has parsed input starting at the supplied start index before. </i><br/>
+ static void * <code>match</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer, <code>ANTLR3_UINT32</code> ttype, <code>pANTLR3_BITSET_LIST</code> follow)<br/>
+ <i>Match current input symbol against ttype. </i><br/>
+ static void <code>matchAny</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer)<br/>
+ <i>Consumes the next token, whatever it is, and resets the recognizer state so that it is not in error. </i><br/>
+ static void <code>memoize</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer, <code>ANTLR3_MARKER</code> ruleIndex, <code>ANTLR3_MARKER</code> ruleParseStart)<br/>
+ <i>Record whether or not this rule parsed the input at this position successfully. </i><br/>
+ static void <code>mismatch</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer, <code>ANTLR3_UINT32</code> ttype, <code>pANTLR3_BITSET_LIST</code> follow)<br/>
+ <i>Factor out what to do upon token mismatch so tree parsers can behave differently. </i><br/>
  static <code>ANTLR3_BOOLEAN</code> <code>mismatchIsMissingToken</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer, <code>pANTLR3_INT_STREAM</code> is, <code>pANTLR3_BITSET_LIST</code> follow) </p>
 <p> static <code>ANTLR3_BOOLEAN</code> <code>mismatchIsUnwantedToken</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer, <code>pANTLR3_INT_STREAM</code> is, <code>ANTLR3_UINT32</code> ttype) </p>
-<p> static void <code>recover</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer)<br />
- <i>Recover from an error found on the input stream. </i><br />
- static <code>ANTLR3_BOOLEAN</code> <code>recoverFromMismatchedElement</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer, <code>pANTLR3_BITSET_LIST</code> followBits)<br />
- <i>This code is factored out from mismatched token and mismatched set recovery. </i><br />
+<p> static void <code>recover</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer)<br/>
+ <i>Recover from an error found on the input stream. </i><br/>
+ static <code>ANTLR3_BOOLEAN</code> <code>recoverFromMismatchedElement</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer, <code>pANTLR3_BITSET_LIST</code> followBits)<br/>
+ <i>This code is factored out from mismatched token and mismatched set recovery. </i><br/>
  static void * <code>recoverFromMismatchedSet</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer, <code>pANTLR3_BITSET_LIST</code> follow) </p>
-<p> static void * <code>recoverFromMismatchedToken</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer, <code>ANTLR3_UINT32</code> ttype, <code>pANTLR3_BITSET_LIST</code> follow)<br />
- <i>Attempt to recover from a single missing or extra token. </i><br />
- static void <code>reportError</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer)<br />
- <i>Report a recognition problem. </i><br />
+<p> static void * <code>recoverFromMismatchedToken</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer, <code>ANTLR3_UINT32</code> ttype, <code>pANTLR3_BITSET_LIST</code> follow)<br/>
+ <i>Attempt to recover from a single missing or extra token. </i><br/>
+ static void <code>reportError</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer)<br/>
+ <i>Report a recognition problem. </i><br/>
  static void <code>reset</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer) </p>
-<p> static <code>ANTLR3_BOOLEAN</code> <code>synpred</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer, void *ctx, void(*predicate)(void *ctx))<br />
- <i>A syntactic predicate. </i><br />
- static <code>pANTLR3_HASH_TABLE</code> <code>toStrings</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer, <code>pANTLR3_HASH_TABLE</code> tokens)<br />
+<p> static <code>ANTLR3_BOOLEAN</code> <code>synpred</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer, void *ctx, void(*predicate)(void *ctx))<br/>
+ <i>A syntactic predicate. </i><br/>
+ static <code>pANTLR3_HASH_TABLE</code> <code>toStrings</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer, <code>pANTLR3_HASH_TABLE</code> tokens)<br/>
  <i>Convenience method for template rewrites &#8211; NYI. </i></p>
 <h2>Detailed Description</h2>
 <p>The base recognizer interface is implemented by all higher level recognizers such as <code>pANTLR3_PARSER</code> and provides methods common to all recognizers.</p>

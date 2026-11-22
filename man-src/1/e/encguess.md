@@ -19,7 +19,7 @@ encguess - guess character encodings of files
   encguess [switches] filename...
 </pre>
 
-<h3><font SIZE="-1">SWITCHES</font></h3>
+<h3>SWITCHES</h3>
 
 <dl>
 <dt>-h
@@ -31,7 +31,7 @@ encguess - guess character encodings of files
 </dd><dt>-u
 </dt><dd> suppress display of unidentified types</dd></dl>
 
-<h3><font SIZE="-1">EXAMPLES:</font></h3>
+<h3>EXAMPLES:</h3>
 
 <dl>
 <dt>&bull;
@@ -53,7 +53,7 @@ encguess - guess character encodings of files
 
 <h2>DESCRIPTION</h2>
 
- The encoding identification is done by checking one encoding type at a time until all but the right type are eliminated. The set of encoding types to try is defined by the -s parameter and defaults to ascii, utf8 and <font SIZE="-1">UTF-16/32</font> with <font SIZE="-1">BOM.</font> This can be overridden by passing one or more encoding types via the -s parameter. If you need to pass in multiple suspect encoding types, use a quoted string with the a space separating each value.
+ The encoding identification is done by checking one encoding type at a time until all but the right type are eliminated. The set of encoding types to try is defined by the -s parameter and defaults to ascii, utf8 and UTF-16/32 with BOM. This can be overridden by passing one or more encoding types via the -s parameter. If you need to pass in multiple suspect encoding types, use a quoted string with the a space separating each value.
 
 <h2>SEE ALSO</h2>
 

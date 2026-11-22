@@ -10,10 +10,10 @@ description: "ibdiagnet – IB diagnostic net"
 
 <p> ibdiagnet &#8211; IB diagnostic net </p>
 <h2>SYNOPSYS</h2>
-<p> ibdiagnet [-c &lt;count&gt;] [-v] [-r] [-vlr] [-u] [-o &lt;out-dir&gt;]<br />
-&nbsp;<wbr>&nbsp;<wbr>[-t&nbsp;<wbr>&lt;topo-file&gt;]&nbsp;<wbr>[-s&nbsp;<wbr>&lt;sys-name&gt;]&nbsp;<wbr>[-i&nbsp;<wbr>&lt;dev-index&gt;]&nbsp;<wbr>[-p&nbsp;<wbr>&lt;port-num&gt;]&nbsp;<wbr>[-wt]<br />
-&nbsp;<wbr>&nbsp;<wbr>[-pm]&nbsp;<wbr>[-pc]&nbsp;<wbr>[-P&nbsp;<wbr>&lt;&lt;<font SIZE="-1">PM</font>&gt;=&lt;Value&gt;&gt;]<br />
-&nbsp;<wbr>&nbsp;<wbr>[-lw&nbsp;<wbr>&lt;1x|4x|12x&gt;]&nbsp;<wbr>[-ls&nbsp;<wbr>&lt;2.5|5|10&gt;]<br />
+<p> ibdiagnet [-c &lt;count&gt;] [-v] [-r] [-vlr] [-u] [-o &lt;out-dir&gt;]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[-t&nbsp;<wbr>&lt;topo-file&gt;]&nbsp;<wbr>[-s&nbsp;<wbr>&lt;sys-name&gt;]&nbsp;<wbr>[-i&nbsp;<wbr>&lt;dev-index&gt;]&nbsp;<wbr>[-p&nbsp;<wbr>&lt;port-num&gt;]&nbsp;<wbr>[-wt]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[-pm]&nbsp;<wbr>[-pc]&nbsp;<wbr>[-P&nbsp;<wbr>&lt;&lt;PM&gt;=&lt;Value&gt;&gt;]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[-lw&nbsp;<wbr>&lt;1x|4x|12x&gt;]&nbsp;<wbr>[-ls&nbsp;<wbr>&lt;2.5|5|10&gt;]<br/>
 &nbsp;<wbr>&nbsp;<wbr>[-skip&nbsp;<wbr>&lt;ibdiag_check/s&gt;]&nbsp;<wbr>[-load_db&nbsp;<wbr>&lt;db_file&gt;]</p>
 <h2>DESCRIPTION</h2>
 <p> ibdiagnet scans the fabric using directed route packets and extracts all the available information regarding its connectivity and devices. It then produces the following files in the output directory (which defined by the -o option (see below)).</p>
@@ -30,7 +30,7 @@ description: "ibdiagnet – IB diagnostic net"
 <dt><i>ibdiagnet.masks</i> &#8211;</dt>
 <dd> In case of duplicate port/node Guids, these file include the map between masked Guid and real Guids</dd>
 <dt><i>ibdiagnet.sm</i> &#8211;</dt>
-<dd> List of all the <font SIZE="-1">SM </font>(state and priority) in the fabric</dd>
+<dd> List of all the SM (state and priority) in the fabric</dd>
 <dt><i>ibdiagnet.pm</i> &#8211;</dt>
 <dd> A dump of the pm Counters values, of the fabric links</dd>
 <dt><i>ibdiagnet.pkey</i> &#8211;</dt>
@@ -38,16 +38,16 @@ description: "ibdiagnet – IB diagnostic net"
 <dt><i>ibdiagnet.mcgs</i> &#8211;</dt>
 <dd> A dump of the multicast groups, their properties and member host ports</dd>
 <dt><i>ibdiagnet.psl</i> &#8211;</dt>
-<dd> A dump of the path record <font SIZE="-1">SL</font> of each possible source node guid and <font SIZE="-1">DLID</font> pairs. Created only if -vlr option is provided</dd>
+<dd> A dump of the path record SL of each possible source node guid and DLID pairs. Created only if -vlr option is provided</dd>
 <dt><i>ibdiagnet.slvl</i> &#8211;</dt>
-<dd> A dump of the <font SIZE="-1">SL2VL</font> Tables from all the switches. Created only if -vlr option is provided</dd>
+<dd> A dump of the SL2VL Tables from all the switches. Created only if -vlr option is provided</dd>
 <dt><i>ibdiagnet.db</i> &#8211;</dt>
 <dd> A dump of the internal subnet database. This file can be loaded in later runs using the -load_db option</dd></dl>
-<p> In addition to generating the files above, the discovery phase also checks for duplicate node/port GUIDs in the <font SIZE="-1">IB</font> fabric. If such an error is detected, it is displayed on the standard output. After the discovery phase is completed, directed route packets are sent multiple times (according to the -c option) to detect possible problematic paths on which packets may be lost. Such paths are explored, and a report of the suspected bad links is displayed on the standard output. </p>
+<p> In addition to generating the files above, the discovery phase also checks for duplicate node/port GUIDs in the IB fabric. If such an error is detected, it is displayed on the standard output. After the discovery phase is completed, directed route packets are sent multiple times (according to the -c option) to detect possible problematic paths on which packets may be lost. Such paths are explored, and a report of the suspected bad links is displayed on the standard output. </p>
 <p> After scanning the fabric, if the -r option is provided, a full report of the fabric qualities is displayed. This report includes:</p>
 <dl>
 <dt>&bull;</dt>
-<dd> <font SIZE="-1"><code>SM</code></font><code> report</code></dd>
+<dd> <code>SM</code><code> report</code></dd>
 <dt>&bull;</dt>
 <dd> <code>Number of nodes and systems</code></dd>
 <dt>&bull;</dt>
@@ -69,7 +69,7 @@ description: "ibdiagnet – IB diagnostic net"
 <dd> <code>Partitions report</code></dd>
 <dt>&bull;</dt>
 <dd> <code>IPoIB report</code></dd></dl>
-<p> Note: In case the <font SIZE="-1">IB</font> fabric includes only one <font SIZE="-1">CA,</font> then CA-to-CA paths are not reported. Furthermore, if a topology file is provided, ibdiagnet uses the names defined in it for the output reports.</p>
+<p> Note: In case the IB fabric includes only one CA, then CA-to-CA paths are not reported. Furthermore, if a topology file is provided, ibdiagnet uses the names defined in it for the output reports.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-c &lt;count</code>&gt; :</dt>
@@ -130,7 +130,7 @@ description: "ibdiagnet – IB diagnostic net"
 <dd>
 </dd><dl>
 <dl>
-<dt> Specifies the index of the device of the port used to connect to the <font SIZE="-1">IB</font> fabric (in case of multiple devices on the local system)</dt>
+<dt> Specifies the index of the device of the port used to connect to the IB fabric (in case of multiple devices on the local system)</dt>
 <dd></dd></dl>
 </dl>
 <dl>
@@ -139,7 +139,7 @@ description: "ibdiagnet – IB diagnostic net"
 <dd>
 </dd><dl>
 <dl>
-<dt> Specifies the local device&#8217;s port num used to connect to the <font SIZE="-1">IB</font> fabric</dt>
+<dt> Specifies the local device&#8217;s port num used to connect to the IB fabric</dt>
 <dd></dd></dl>
 </dl>
 <dl>
@@ -211,7 +211,7 @@ description: "ibdiagnet – IB diagnostic net"
 <dd>
 </dd><dl>
 <dl>
-<dt> Write out the discovered topology into the given file. This flag is useful if you later want to check for changes from the current state of the fabric. A directory named ibdiag_ibnl is also created by this option, and holds the <font SIZE="-1">IBNL</font> files required to load this topology. To use these files you will need to set the environment variable named <font SIZE="-1">IBDM_IBNL_PATH</font> to that directory. The directory is located in /var/cache/ibutils or in the output directory provided by the -o flag.</dt>
+<dt> Write out the discovered topology into the given file. This flag is useful if you later want to check for changes from the current state of the fabric. A directory named ibdiag_ibnl is also created by this option, and holds the IBNL files required to load this topology. To use these files you will need to set the environment variable named IBDM_IBNL_PATH to that directory. The directory is located in /var/cache/ibutils or in the output directory provided by the -o flag.</dt>
 <dd></dd></dl>
 </dl>
 <dl>
@@ -229,8 +229,8 @@ description: "ibdiagnet – IB diagnostic net"
 <dd>
 </dd><dl>
 <dl>
-<dt> <font SIZE="-1">VL</font> based Routing &#8211; provide this option to create the paths <font SIZE="-1">SL</font> file (psl), <font SIZE="-1">SL2VL</font> file (slvl) and use them in credit loops check (if -r option is provided).</dt>
-<dd> <font SIZE="-1">NOTE:</font> Since number of paths is N^2 extracting the <font SIZE="-1">PSL</font> file may take some time.</dd></dl>
+<dt> VL based Routing &#8211; provide this option to create the paths SL file (psl), SL2VL file (slvl) and use them in credit loops check (if -r option is provided).</dt>
+<dd> NOTE: Since number of paths is N^2 extracting the PSL file may take some time.</dd></dl>
 </dl>
 <dl>
 </dl>
@@ -268,7 +268,7 @@ description: "ibdiagnet – IB diagnostic net"
 <dd>
 </dd><dt>2 &#8211; Failed to parse command line options</dt>
 <dd>
-</dd><dt>3 &#8211; Failed to intract with <font SIZE="-1">IB</font> fabric</dt>
+</dd><dt>3 &#8211; Failed to intract with IB fabric</dt>
 <dd>
 </dd><dt>4 &#8211; Failed to use local device or local port</dt>
 <dd>

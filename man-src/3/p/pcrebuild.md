@@ -26,7 +26,7 @@ description: "PCRE – Perl-compatible regular expressions"
 <p> as well. At least one of the three libraries must be built. Note that the C++ and POSIX wrappers are for the 8-bit library only, and that <code>pcregrep</code> is an 8-bit program. None of these are built if you select only the 16-bit or 32-bit libraries.</p>
 <h2>Building Shared And Static Libraries</h2>
 <p>The Autotools PCRE building process uses <code>libtool</code> to build both shared and static libraries by default. You can suppress one of these by adding one of </p>
-<p>&nbsp;<wbr>&nbsp;&#8211;disable-shared<br />
+<p>&nbsp;<wbr>&nbsp;&#8211;disable-shared<br/>
 &nbsp;<wbr>&nbsp;&#8211;disable-static </p>
 <p> to the <code>configure</code> command, as required.</p>
 <h2>C++ Support</h2>
@@ -100,7 +100,7 @@ description: "PCRE – Perl-compatible regular expressions"
 <p> The options that select newline behaviour, such as &#8211;enable-newline-is-cr, and equivalent run-time options, refer to these character values in an EBCDIC environment.</p>
 <h2>Pcregrep Options For Compressed File Support</h2>
 <p>By default, <code>pcregrep</code> reads all files as plain text. You can build it so that it recognizes files whose names end in <code>.gz</code> or <code>.bz2</code>, and reads them with <code>libz</code> or <code>libbz2</code>, respectively, by adding one or both of </p>
-<p>&nbsp;<wbr>&nbsp;&#8211;enable-pcregrep-libz<br />
+<p>&nbsp;<wbr>&nbsp;&#8211;enable-pcregrep-libz<br/>
 &nbsp;<wbr>&nbsp;&#8211;enable-pcregrep-libbz2 </p>
 <p> to the <code>configure</code> command. These options naturally require that the relevant libraries are installed on your system. Configuration will fail if they are not.</p>
 <h2>Pcregrep Buffer Size</h2>
@@ -112,8 +112,8 @@ description: "PCRE – Perl-compatible regular expressions"
 <p>&nbsp;<wbr>&nbsp;&#8211;enable-pcretest-libreadline </p>
 <p> to the <code>configure</code> command, <code>pcretest</code> is linked with the <code>libreadline</code> library, and when its input is from a terminal, it reads it using the <code>readline()</code> function. This provides line-editing and history facilities. Note that <code>libreadline</code> is GPL-licensed, so if you distribute a binary of <code>pcretest</code> linked in this way, there may be licensing issues. </p>
 <p> Setting this option causes the <code>-lreadline</code> option to be added to the <code>pcretest</code> build. In many operating environments with a sytem-installed <code>libreadline</code> this is sufficient. However, in some environments (e.g. if an unmodified distribution version of readline is in use), some extra configuration may be necessary. The INSTALL file for <code>libreadline</code> says this: </p>
-<p>&nbsp;<wbr>&nbsp;&quot;Readline uses the termcap functions, but does not link with the<br />
-&nbsp;<wbr>&nbsp;termcap or curses library itself, allowing applications which link<br />
+<p>&nbsp;<wbr>&nbsp;&quot;Readline uses the termcap functions, but does not link with the<br/>
+&nbsp;<wbr>&nbsp;termcap or curses library itself, allowing applications which link<br/>
 &nbsp;<wbr>&nbsp;with readline the to choose an appropriate library.&quot; </p>
 <p> If your environment has not been set up so that an appropriate library is automatically included, you may need to add something like </p>
 <p>&nbsp;<wbr>&nbsp;LIBS=&quot;-ncurses&quot; </p>

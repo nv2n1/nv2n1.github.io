@@ -15,18 +15,18 @@ description: "wflinfo – a utility for printing OpenGL or OpenGL ES driver info
 <h2>DESCRIPTION</h2>
 <dd>wflinfo is utility which creates an OpenGL or OpenGL ES context using the waffle library and prints information about the context.</dd>
 <h2>REQUIRED PARAMETERS</h2>
-<p> <code>-p</code> <i>platform</i><br />
+<p> <code>-p</code> <i>platform</i><br/>
  <code>&#8211;platform=</code><i>platform</i></p>
 <dl>
 <dt>
 </dt><dd> Where <i>platform</i> is android, cgl, gbm, glx, wayland, wgl, or x11_egl</dd></dl>
-<p> <code>-a</code> <i>api</i><br />
+<p> <code>-a</code> <i>api</i><br/>
  <code>&#8211;api=</code><i>api</i></p>
 <dl>
 <dt>
 </dt><dd> Where <i>api</i> is gl, gles1, gles2, or gles3</dd></dl>
 <h2>OPTIONS</h2>
-<p> <code>-V</code> <i>MAJOR.MINOR</i><br />
+<p> <code>-V</code> <i>MAJOR.MINOR</i><br/>
  <code>&#8211;version=</code><i>MAJOR.MINOR</i></p>
 <dl>
 <dt>
@@ -35,7 +35,7 @@ description: "wflinfo – a utility for printing OpenGL or OpenGL ES driver info
 <dl>
 <dt>
 </dt><dd> Where <i>profile</i> is core, compat or none</dd></dl>
-<p> <code>-v</code><br />
+<p> <code>-v</code><br/>
  <code>&#8211;verbose</code></p>
 <dl>
 <dt>
@@ -48,7 +48,7 @@ description: "wflinfo – a utility for printing OpenGL or OpenGL ES driver info
 <dl>
 <dt>
 </dt><dd> Request a debug context be created</dd></dl>
-<p> <code>-h</code><br />
+<p> <code>-h</code><br/>
  <code>&#8211;help</code></p>
 <dl>
 <dt>

@@ -9,12 +9,12 @@ description: "std::fpclassify – std::fpclassify"
 
 <p>std::fpclassify &#8211; std::fpclassify</p>
 <h2>Synopsis</h2>
-<p>Defined in header &lt;cmath&gt;<br />
-int fpclassify( float arg ); <code>(1)</code> <i>(since C++11)</i><br />
-int fpclassify( double arg ); <code>(2)</code> <i>(since C++11)</i><br />
-int fpclassify( long double arg ); <code>(3)</code> <i>(since C++11)</i><br />
-int fpclassify( IntegralType arg ); <code>(4)</code> <i>(since C++11)</i><br />
-1-3) Categorizes floating point value arg into the following categories: zero, subnormal, normal, infinite, NAN, or implementation-defined category.<br />
+<p>Defined in header &lt;cmath&gt;<br/>
+int fpclassify( float arg ); <code>(1)</code> <i>(since C++11)</i><br/>
+int fpclassify( double arg ); <code>(2)</code> <i>(since C++11)</i><br/>
+int fpclassify( long double arg ); <code>(3)</code> <i>(since C++11)</i><br/>
+int fpclassify( IntegralType arg ); <code>(4)</code> <i>(since C++11)</i><br/>
+1-3) Categorizes floating point value arg into the following categories: zero, subnormal, normal, infinite, NAN, or implementation-defined category.<br/>
 4) A set of overloads or a function template accepting the from argument of any integral_type. Equivalent to <code>(2)</code> (the argument is cast to double). </p>
 <h2>Parameters</h2>
 <p>arg &#8211; floating point value</p>
@@ -57,23 +57,23 @@ int main()
 }
 </code></pre>
 <h2>Output:</h2>
-<p>&nbsp;<wbr>&nbsp;1.0/0.0 is Inf<br />
-&nbsp;<wbr>&nbsp;0.0/0.0 is NaN<br />
-&nbsp;<wbr>&nbsp;DBL_MIN/2 is subnormal<br />
-&nbsp;<wbr>&nbsp;-0.0 is zero<br />
+<p>&nbsp;<wbr>&nbsp;1.0/0.0 is Inf<br/>
+&nbsp;<wbr>&nbsp;0.0/0.0 is NaN<br/>
+&nbsp;<wbr>&nbsp;DBL_MIN/2 is subnormal<br/>
+&nbsp;<wbr>&nbsp;-0.0 is zero<br/>
 &nbsp;<wbr>&nbsp;1.0 is normal</p>
 <h2>See also</h2>
-<p>isfinite checks if the given number has finite value<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(function)</i><br />
-<i>(C++11)</i><br />
-isinf checks if the given number is infinite<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(function)</i><br />
-<i>(C++11)</i><br />
-isnan checks if the given number is NaN<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(function)</i><br />
-<i>(C++11)</i><br />
-isnormal checks if the given number is normal<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(function)</i><br />
-<i>(C++11)</i><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;provides an interface to query properties of all fundamental numeric types.<br />
+<p>isfinite checks if the given number has finite value<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(function)</i><br/>
+<i>(C++11)</i><br/>
+isinf checks if the given number is infinite<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(function)</i><br/>
+<i>(C++11)</i><br/>
+isnan checks if the given number is NaN<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(function)</i><br/>
+<i>(C++11)</i><br/>
+isnormal checks if the given number is normal<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(function)</i><br/>
+<i>(C++11)</i><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;provides an interface to query properties of all fundamental numeric types.<br/>
 numeric_limits <i>(class template)</i> </p>

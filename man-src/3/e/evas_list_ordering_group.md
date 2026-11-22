@@ -9,9 +9,9 @@ description: "Linked List Ordering Functions – Functions that change the order
 
 <p>Linked List Ordering Functions &#8211; Functions that change the ordering of data in a linked list. </p>
 <h3>Functions</h3>
-<p>EAPI <code>Evas_List</code> * <code>evas_list_reverse</code> (<code>Evas_List</code> *list)<br />
- <i>Reverse all the elements in the list. </i><br />
- EAPI <code>Evas_List</code> * <code>evas_list_sort</code> (<code>Evas_List</code> *list, int size, int(*func)(void *, void *))<br />
+<p>EAPI <code>Evas_List</code> * <code>evas_list_reverse</code> (<code>Evas_List</code> *list)<br/>
+ <i>Reverse all the elements in the list. </i><br/>
+ EAPI <code>Evas_List</code> * <code>evas_list_sort</code> (<code>Evas_List</code> *list, int size, int(*func)(void *, void *))<br/>
  <i>Sort a list according to the ordering func will return. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that change the ordering of data in a linked list.</p>
@@ -34,8 +34,8 @@ description: "Linked List Ordering Functions – Functions that change the order
 <p>Sort a list according to the ordering func will return. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>list</i> The list handle to sort<br />
- <i>size</i> The length of the list to sort<br />
+<dd><i>list</i> The list handle to sort<br/>
+ <i>size</i> The length of the list to sort<br/>
  <i>func</i> A function pointer that can handle comparing the list data nodes</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

@@ -113,61 +113,61 @@ description: "ginsh – GiNaC Interactive Shell"
 <p> A list of the built-in functions follows. They nearly all work as the respective GiNaC methods of the same name, so I will not describe them in detail here. Please refer to the GiNaC documentation. </p>
 <dl>
 <dt>
-</dt><dd> <code>charpoly(</code><i>matrix</i><code>, </code><i>symbol</i><code>)</code> &#8211; characteristic polynomial of a matrix<br />
- <code>coeff(</code><i>expression</i><code>, </code><i>object</i><code>, </code><i>number</i><code>)</code> &#8211; extracts coefficient of object^number from a polynomial<br />
- <code>collect(</code><i>expression</i><code>, </code><i>object-or-list</i><code>)</code> &#8211; collects coefficients of like powers (result in recursive form)<br />
- <code>collect_distributed(</code><i>expression</i><code>, </code><i>list</i><code>)</code> &#8211; collects coefficients of like powers (result in distributed form)<br />
- <code>collect_common_factors(</code><i>expression</i><code>)</code> &#8211; collects common factors from the terms of sums<br />
- <code>conjugate(</code><i>expression</i><code>)</code> &#8211; complex conjugation<br />
- <code>content(</code><i>expression</i><code>, </code><i>symbol</i><code>)</code> &#8211; content part of a polynomial<br />
- <code>decomp_rational(</code><i>expression</i><code>, </code><i>symbol</i><code>)</code> &#8211; decompose rational function into polynomial and proper rational function<br />
- <code>degree(</code><i>expression</i><code>, </code><i>object</i><code>)</code> &#8211; degree of a polynomial<br />
- <code>denom(</code><i>expression</i><code>)</code> &#8211; denominator of a rational function<br />
- <code>determinant(</code><i>matrix</i><code>)</code> &#8211; determinant of a matrix<br />
- <code>diag(</code><i>expression&#8230;</i><code>)</code> &#8211; constructs diagonal matrix<br />
- <code>diff(</code><i>expression</i><code>, </code><i>symbol [</i><code>, </code><i>number]</i><code>)</code> &#8211; partial differentiation<br />
- <code>divide(</code><i>expression</i><code>, </code><i>expression</i><code>)</code> &#8211; exact polynomial division<br />
- <code>eval(</code><i>expression [</i><code>, </code><i>level]</i><code>)</code> &#8211; evaluates an expression, replacing symbols by their assigned value<br />
- <code>evalf(</code><i>expression [</i><code>, </code><i>level]</i><code>)</code> &#8211; evaluates an expression to a floating point number<br />
- <code>evalm(</code><i>expression</i><code>)</code> &#8211; evaluates sums, products and integer powers of matrices<br />
- <code>expand(</code><i>expression</i><code>)</code> &#8211; expands an expression<br />
- <code>factor(</code><i>expression</i><code>)</code> &#8211; factorizes an expression (univariate)<br />
- <code>find(</code><i>expression</i><code>, </code><i>pattern</i><code>)</code> &#8211; returns a list of all occurrences of a pattern in an expression<br />
- <code>fsolve(</code><i>expression</i><code>, </code><i>symbol</i><code>, </code><i>number</i><code>, </code><i>number</i><code>)</code> &#8211; numerically find root of a real-valued function within an interval<br />
- <code>gcd(</code><i>expression</i><code>, </code><i>expression</i><code>)</code> &#8211; greatest common divisor<br />
- <code>has(</code><i>expression</i><code>, </code><i>pattern</i><code>)</code> &#8211; returns &quot;1&quot; if the first expression contains the pattern as a subexpression, &quot;0&quot; otherwise<br />
- <code>integer_content(</code><i>expression</i><code>)</code> &#8211; integer content of a polynomial<br />
- <code>inverse(</code><i>matrix</i><code>)</code> &#8211; inverse of a matrix<br />
- <code>is(</code><i>relation</i><code>)</code> &#8211; returns &quot;1&quot; if the relation is true, &quot;0&quot; otherwise (false or undecided)<br />
- <code>lcm(</code><i>expression</i><code>, </code><i>expression</i><code>)</code> &#8211; least common multiple<br />
- <code>lcoeff(</code><i>expression</i><code>, </code><i>object</i><code>)</code> &#8211; leading coefficient of a polynomial<br />
- <code>ldegree(</code><i>expression</i><code>, </code><i>object</i><code>)</code> &#8211; low degree of a polynomial<br />
- <code>lsolve(</code><i>equation-list</i><code>, </code><i>symbol-list</i><code>)</code> &#8211; solve system of linear equations<br />
- <code>map(</code><i>expression</i><code>, </code><i>pattern</i><code>)</code> &#8211; apply function to each operand; the function to be applied is specified as a pattern with the &quot;$0&quot; wildcard standing for the operands<br />
- <code>match(</code><i>expression</i><code>, </code><i>pattern</i><code>)</code> &#8211; check whether expression matches a pattern; returns a list of wildcard substitutions or &quot;FAIL&quot; if there is no match<br />
- <code>nops(</code><i>expression</i><code>)</code> &#8211; number of operands in expression<br />
- <code>normal(</code><i>expression [</i><code>, </code><i>level]</i><code>)</code> &#8211; rational function normalization<br />
- <code>numer(</code><i>expression</i><code>)</code> &#8211; numerator of a rational function<br />
- <code>numer_denom(</code><i>expression</i><code>)</code> &#8211; numerator and denumerator of a rational function as a list<br />
- <code>op(</code><i>expression</i><code>, </code><i>number</i><code>)</code> &#8211; extract operand from expression<br />
- <code>power(</code><i>expr1</i><code>, </code><i>expr2</i><code>)</code> &#8211; exponentiation (equivalent to writing expr1^expr2)<br />
- <code>prem(</code><i>expression</i><code>, </code><i>expression</i><code>, </code><i>symbol</i><code>)</code> &#8211; pseudo-remainder of polynomials<br />
- <code>primpart(</code><i>expression</i><code>, </code><i>symbol</i><code>)</code> &#8211; primitive part of a polynomial<br />
- <code>quo(</code><i>expression</i><code>, </code><i>expression</i><code>, </code><i>symbol</i><code>)</code> &#8211; quotient of polynomials<br />
- <code>rank(</code><i>matrix</i><code>)</code> &#8211; rank of a matrix<br />
- <code>rem(</code><i>expression</i><code>, </code><i>expression</i><code>, </code><i>symbol</i><code>)</code> &#8211; remainder of polynomials<br />
- <code>resultant(</code><i>expression</i><code>, </code><i>expression</i><code>, </code><i>symbol</i><code>)</code> &#8211; resultant of two polynomials with respect to symbol s<br />
- <code>series(</code><i>expression</i><code>, </code><i>relation-or-symbol</i><code>, </code><i>order</i><code>)</code> &#8211; series expansion<br />
- <code>sprem(</code><i>expression</i><code>, </code><i>expression</i><code>, </code><i>symbol</i><code>)</code> &#8211; sparse pseudo-remainder of polynomials<br />
- <code>sqrfree(</code><i>expression [</i><code>, </code><i>symbol-list]</i><code>)</code> &#8211; square-free factorization of a polynomial<br />
- <code>sqrt(</code><i>expression</i><code>)</code> &#8211; square root<br />
- <code>subs(</code><i>expression</i><code>, </code><i>relation-or-list</i><code>)</code><br />
- <code>subs(</code><i>expression</i><code>, </code><i>look-for-list</i><code>, </code><i>replace-by-list</i><code>)</code> &#8211; substitute subexpressions (you may use wildcards)<br />
- <code>tcoeff(</code><i>expression</i><code>, </code><i>object</i><code>)</code> &#8211; trailing coefficient of a polynomial<br />
- <code>time(</code><i>expression</i><code>)</code> &#8211; returns the time in seconds needed to evaluate the given expression<br />
- <code>trace(</code><i>matrix</i><code>)</code> &#8211; trace of a matrix<br />
- <code>transpose(</code><i>matrix</i><code>)</code> &#8211; transpose of a matrix<br />
- <code>unassign(</code><i>&#8216;symbol&#8217;</i><code>)</code> &#8211; unassign an assigned symbol (mind the quotes, please!)<br />
+</dt><dd> <code>charpoly(</code><i>matrix</i><code>, </code><i>symbol</i><code>)</code> &#8211; characteristic polynomial of a matrix<br/>
+ <code>coeff(</code><i>expression</i><code>, </code><i>object</i><code>, </code><i>number</i><code>)</code> &#8211; extracts coefficient of object^number from a polynomial<br/>
+ <code>collect(</code><i>expression</i><code>, </code><i>object-or-list</i><code>)</code> &#8211; collects coefficients of like powers (result in recursive form)<br/>
+ <code>collect_distributed(</code><i>expression</i><code>, </code><i>list</i><code>)</code> &#8211; collects coefficients of like powers (result in distributed form)<br/>
+ <code>collect_common_factors(</code><i>expression</i><code>)</code> &#8211; collects common factors from the terms of sums<br/>
+ <code>conjugate(</code><i>expression</i><code>)</code> &#8211; complex conjugation<br/>
+ <code>content(</code><i>expression</i><code>, </code><i>symbol</i><code>)</code> &#8211; content part of a polynomial<br/>
+ <code>decomp_rational(</code><i>expression</i><code>, </code><i>symbol</i><code>)</code> &#8211; decompose rational function into polynomial and proper rational function<br/>
+ <code>degree(</code><i>expression</i><code>, </code><i>object</i><code>)</code> &#8211; degree of a polynomial<br/>
+ <code>denom(</code><i>expression</i><code>)</code> &#8211; denominator of a rational function<br/>
+ <code>determinant(</code><i>matrix</i><code>)</code> &#8211; determinant of a matrix<br/>
+ <code>diag(</code><i>expression&#8230;</i><code>)</code> &#8211; constructs diagonal matrix<br/>
+ <code>diff(</code><i>expression</i><code>, </code><i>symbol [</i><code>, </code><i>number]</i><code>)</code> &#8211; partial differentiation<br/>
+ <code>divide(</code><i>expression</i><code>, </code><i>expression</i><code>)</code> &#8211; exact polynomial division<br/>
+ <code>eval(</code><i>expression [</i><code>, </code><i>level]</i><code>)</code> &#8211; evaluates an expression, replacing symbols by their assigned value<br/>
+ <code>evalf(</code><i>expression [</i><code>, </code><i>level]</i><code>)</code> &#8211; evaluates an expression to a floating point number<br/>
+ <code>evalm(</code><i>expression</i><code>)</code> &#8211; evaluates sums, products and integer powers of matrices<br/>
+ <code>expand(</code><i>expression</i><code>)</code> &#8211; expands an expression<br/>
+ <code>factor(</code><i>expression</i><code>)</code> &#8211; factorizes an expression (univariate)<br/>
+ <code>find(</code><i>expression</i><code>, </code><i>pattern</i><code>)</code> &#8211; returns a list of all occurrences of a pattern in an expression<br/>
+ <code>fsolve(</code><i>expression</i><code>, </code><i>symbol</i><code>, </code><i>number</i><code>, </code><i>number</i><code>)</code> &#8211; numerically find root of a real-valued function within an interval<br/>
+ <code>gcd(</code><i>expression</i><code>, </code><i>expression</i><code>)</code> &#8211; greatest common divisor<br/>
+ <code>has(</code><i>expression</i><code>, </code><i>pattern</i><code>)</code> &#8211; returns &quot;1&quot; if the first expression contains the pattern as a subexpression, &quot;0&quot; otherwise<br/>
+ <code>integer_content(</code><i>expression</i><code>)</code> &#8211; integer content of a polynomial<br/>
+ <code>inverse(</code><i>matrix</i><code>)</code> &#8211; inverse of a matrix<br/>
+ <code>is(</code><i>relation</i><code>)</code> &#8211; returns &quot;1&quot; if the relation is true, &quot;0&quot; otherwise (false or undecided)<br/>
+ <code>lcm(</code><i>expression</i><code>, </code><i>expression</i><code>)</code> &#8211; least common multiple<br/>
+ <code>lcoeff(</code><i>expression</i><code>, </code><i>object</i><code>)</code> &#8211; leading coefficient of a polynomial<br/>
+ <code>ldegree(</code><i>expression</i><code>, </code><i>object</i><code>)</code> &#8211; low degree of a polynomial<br/>
+ <code>lsolve(</code><i>equation-list</i><code>, </code><i>symbol-list</i><code>)</code> &#8211; solve system of linear equations<br/>
+ <code>map(</code><i>expression</i><code>, </code><i>pattern</i><code>)</code> &#8211; apply function to each operand; the function to be applied is specified as a pattern with the &quot;$0&quot; wildcard standing for the operands<br/>
+ <code>match(</code><i>expression</i><code>, </code><i>pattern</i><code>)</code> &#8211; check whether expression matches a pattern; returns a list of wildcard substitutions or &quot;FAIL&quot; if there is no match<br/>
+ <code>nops(</code><i>expression</i><code>)</code> &#8211; number of operands in expression<br/>
+ <code>normal(</code><i>expression [</i><code>, </code><i>level]</i><code>)</code> &#8211; rational function normalization<br/>
+ <code>numer(</code><i>expression</i><code>)</code> &#8211; numerator of a rational function<br/>
+ <code>numer_denom(</code><i>expression</i><code>)</code> &#8211; numerator and denumerator of a rational function as a list<br/>
+ <code>op(</code><i>expression</i><code>, </code><i>number</i><code>)</code> &#8211; extract operand from expression<br/>
+ <code>power(</code><i>expr1</i><code>, </code><i>expr2</i><code>)</code> &#8211; exponentiation (equivalent to writing expr1^expr2)<br/>
+ <code>prem(</code><i>expression</i><code>, </code><i>expression</i><code>, </code><i>symbol</i><code>)</code> &#8211; pseudo-remainder of polynomials<br/>
+ <code>primpart(</code><i>expression</i><code>, </code><i>symbol</i><code>)</code> &#8211; primitive part of a polynomial<br/>
+ <code>quo(</code><i>expression</i><code>, </code><i>expression</i><code>, </code><i>symbol</i><code>)</code> &#8211; quotient of polynomials<br/>
+ <code>rank(</code><i>matrix</i><code>)</code> &#8211; rank of a matrix<br/>
+ <code>rem(</code><i>expression</i><code>, </code><i>expression</i><code>, </code><i>symbol</i><code>)</code> &#8211; remainder of polynomials<br/>
+ <code>resultant(</code><i>expression</i><code>, </code><i>expression</i><code>, </code><i>symbol</i><code>)</code> &#8211; resultant of two polynomials with respect to symbol s<br/>
+ <code>series(</code><i>expression</i><code>, </code><i>relation-or-symbol</i><code>, </code><i>order</i><code>)</code> &#8211; series expansion<br/>
+ <code>sprem(</code><i>expression</i><code>, </code><i>expression</i><code>, </code><i>symbol</i><code>)</code> &#8211; sparse pseudo-remainder of polynomials<br/>
+ <code>sqrfree(</code><i>expression [</i><code>, </code><i>symbol-list]</i><code>)</code> &#8211; square-free factorization of a polynomial<br/>
+ <code>sqrt(</code><i>expression</i><code>)</code> &#8211; square root<br/>
+ <code>subs(</code><i>expression</i><code>, </code><i>relation-or-list</i><code>)</code><br/>
+ <code>subs(</code><i>expression</i><code>, </code><i>look-for-list</i><code>, </code><i>replace-by-list</i><code>)</code> &#8211; substitute subexpressions (you may use wildcards)<br/>
+ <code>tcoeff(</code><i>expression</i><code>, </code><i>object</i><code>)</code> &#8211; trailing coefficient of a polynomial<br/>
+ <code>time(</code><i>expression</i><code>)</code> &#8211; returns the time in seconds needed to evaluate the given expression<br/>
+ <code>trace(</code><i>matrix</i><code>)</code> &#8211; trace of a matrix<br/>
+ <code>transpose(</code><i>matrix</i><code>)</code> &#8211; transpose of a matrix<br/>
+ <code>unassign(</code><i>&#8216;symbol&#8217;</i><code>)</code> &#8211; unassign an assigned symbol (mind the quotes, please!)<br/>
  <code>unit(</code><i>expression</i><code>, </code><i>symbol</i><code>)</code> &#8211; unit part of a polynomial
 </dd></dl>
 <h3>SPECIAL COMMANDS</h3>
@@ -246,9 +246,9 @@ parse error at quantum &gt; quit
 <dl>
 <dt>The GiNaC Group:</dt>
 <dd>
- Christian Bauer &lt;Christian.Bauer [at] uni-mainz.de&gt;<br />
- Alexander Frink &lt;Alexander.Frink [at] uni-mainz.de&gt;<br />
- Richard Kreckel &lt;Richard.Kreckel [at] uni-mainz.de&gt;<br />
+ Christian Bauer &lt;Christian.Bauer [at] uni-mainz.de&gt;<br/>
+ Alexander Frink &lt;Alexander.Frink [at] uni-mainz.de&gt;<br/>
+ Richard Kreckel &lt;Richard.Kreckel [at] uni-mainz.de&gt;<br/>
  Jens Vollinga &lt;vollinga [at] thep.physik.uni-mainz.de&gt;</dd></dl>
 <h2>SEE ALSO</h2>
 <p> GiNaC Tutorial &#8211; An open framework for symbolic computation within the C++ programming language </p>

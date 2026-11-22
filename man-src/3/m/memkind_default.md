@@ -8,7 +8,7 @@ url: "/docs/linux/man/3-memkind_default/"
 description: "memkind_default.h – default implementations for memkind operations. Note: This is EXEPRIMENTAL API. The functionality and the header file itself can be changed (including non-backward compatible ch..."
 ---
 
-<p> memkind_default.h &#8211; default implementations for memkind operations.<br />
+<p> memkind_default.h &#8211; default implementations for memkind operations.<br/>
  Note: This is EXEPRIMENTAL API. The functionality and the header file itself can be changed (including non-backward compatible changes), or remove.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

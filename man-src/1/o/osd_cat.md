@@ -10,7 +10,7 @@ description: "osd_cat – X on-screen file displayer"
 
 <p> osd_cat &#8211; X on-screen file displayer</p>
 <h2>SYNOPSIS</h2>
-<p> <code>osd_cat</code> [<i>OPTION</i>] [<i>FILE</i>]&#8230;<br />
+<p> <code>osd_cat</code> [<i>OPTION</i>] [<i>FILE</i>]&#8230;<br/>
  <code>osd_cat</code> <code>-b percentage</code>|<code>slider</code> [<i>OPTION</i>]</p>
 <h2>DESCRIPTION</h2>
 <p> Display FILE, or standard input, on X screen.</p>
@@ -34,7 +34,7 @@ description: "osd_cat – X on-screen file displayer"
 <dt><code>-s</code>, <code>&#8211;shadow</code>=<i>OFFSET</i></dt>
 <dd> This option specifies the <i>OFFSET</i> of the text shadow. The default is <code>0</code>, which means no text shadow is created.</dd>
 <dt><code>-a</code>, <code>&#8211;age</code>[=<i>SCROLL_AGE</i>]</dt>
-<dd> This option affects screen redrawing. If <i>SCROLL_AGE</i> seconds pass before a new line is ready (for example, you&#8217;re reading from a pipe), all lines are cleared at once instead of being scrolled off as new lines replace old lines. The default is <code>0</code>.<br />
+<dd> This option affects screen redrawing. If <i>SCROLL_AGE</i> seconds pass before a new line is ready (for example, you&#8217;re reading from a pipe), all lines are cleared at once instead of being scrolled off as new lines replace old lines. The default is <code>0</code>.<br/>
  When no <i>SCROLL_AGE</i> is explicitly given, the current value from <i>DELAY</i> is used.</dd>
 <dt><code>-w</code>, <code>&#8211;wait</dt>
 <dd> This option also affects screen redrawing. When there is data ready to be put on screen, this option will cause osd_cat</code> to wait until the display is clear. An alternative to scrolling.</dd>
@@ -48,7 +48,7 @@ description: "osd_cat – X on-screen file displayer"
 <dd> display help (which is often more up to date) and exit</dd></dl>
 <p> With no <i>FILE</i>, or when <i>FILE</i> is <code>&#8211;</code>, read standard input.</p>
 <h2>AUTHOR</h2>
-<p> Martijn van de Streek &lt;martijn [at] foodfight.org&gt;, Some patching done by Malcolm Valentine &lt;farkit [at] iprimus.com.au&gt; and Tim Wright &lt;tim [at] ignavus.net&gt;.<br />
+<p> Martijn van de Streek &lt;martijn [at] foodfight.org&gt;, Some patching done by Malcolm Valentine &lt;farkit [at] iprimus.com.au&gt; and Tim Wright &lt;tim [at] ignavus.net&gt;.<br/>
  xosd was written by Andre Renaud &lt;andre [at] ignavus.net&gt; and is maintained by Tim Wright &lt;tim [at] ignavus.net&gt;</p>
 <h2>SEE ALSO</h2>
 <p> More information on the X OSD Library and its author can be found on <a rel="nofollow" href="http://www.ignavus.net/software.html">http://www.ignavus.net/software.html</a></p>

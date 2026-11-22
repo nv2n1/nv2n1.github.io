@@ -19,7 +19,7 @@ description: "QuantLib::Money – amount of cash"
 <p> const <code>Currency</code> &amp; <code>currency</code> () const </p>
 <p> Decimal <code>value</code> () const </p>
 <p> <code>Money</code> <code>rounded</code> () const </p>
-<p> <code>Money arithmetics</code><br />
+<p> <code>Money arithmetics</code><br/>
  See below for non-member functions and for settings which determine the behavior of the operators. </p>
 <p> <code>Money</code> <code>operator+</code> () const </p>
 <p> <code>Money</code> <code>operator-</code> () const </p>
@@ -28,7 +28,7 @@ description: "QuantLib::Money – amount of cash"
 <p> <code>Money</code> &amp; <code>operator*=</code> (Decimal) </p>
 <p> <code>Money</code> &amp; <code>operator/=</code> (Decimal) </p>
 <h3>Related Functions</h3>
-<p>(Note that these are not member functions.)<br />
+<p>(Note that these are not member functions.)<br/>
  <code>Money</code> <code>operator+</code> (const <code>Money</code> &amp;, const <code>Money</code> &amp;) </p>
 <p> <code>Money</code> <code>operator-</code> (const <code>Money</code> &amp;, const <code>Money</code> &amp;) </p>
 <p> <code>Money</code> <code>operator*</code> (const <code>Money</code> &amp;, Decimal) </p>
@@ -47,7 +47,7 @@ description: "QuantLib::Money – amount of cash"
 <p> <code>Money</code> <code>operator*</code> (const <code>Currency</code> &amp;, Decimal) </p>
 <p> std::ostream &amp; <code>operator&lt;&lt;</code> (std::ostream &amp;, const <code>Money</code> &amp;) </p>
 <h3>Conversion settings</h3>
-<p>These parameters are used for combining money amounts in different currencies<br />
+<p>These parameters are used for combining money amounts in different currencies<br/>
  enum <code>ConversionType</code> { <code>NoConversion</code>, <code>BaseCurrencyConversion</code>, <code>AutomatedConversion</code> } </p>
 <p> static <code>ConversionType</code> <code>conversionType</code> </p>
 <p> static <code>Currency</code> <code>baseCurrency</code> </p>

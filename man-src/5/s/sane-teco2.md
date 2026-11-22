@@ -27,7 +27,7 @@ description: "sane-teco2 – SANE backend for TECO / RELISYS scanners"
  Relisys SCORPIO Pro-S VM6586 untested
  Relisys SCORPIO Super 3 VM3575 good</pre>
 </dd></dl>
-<p> For all these scanners, lineart and gray mode work well. However, most of them do not support more than a handful of resolutions in color mode. See the backend home page (under AUTHOR) for the exact status of each scanner. Note that the untested scanner will not be directly supported. You should contact the author for that. The TECO VM number can usually be found at the back of the scanner. It is also part of the FCC ID. The options the backend supports can either be selected through command line options to programs like <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1) or through GUI elements in <code>xscanimage</code>(1), <code><a href="/docs/linux/man/1-xsane/">xsane</a></code>(1), <code>quiteinsane</code>(1) or <code>kooka</code>(1).<br />
+<p> For all these scanners, lineart and gray mode work well. However, most of them do not support more than a handful of resolutions in color mode. See the backend home page (under AUTHOR) for the exact status of each scanner. Note that the untested scanner will not be directly supported. You should contact the author for that. The TECO VM number can usually be found at the back of the scanner. It is also part of the FCC ID. The options the backend supports can either be selected through command line options to programs like <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1) or through GUI elements in <code>xscanimage</code>(1), <code><a href="/docs/linux/man/1-xsane/">xsane</a></code>(1), <code>quiteinsane</code>(1) or <code>kooka</code>(1).<br/>
  If you have any success with a scanner not listed here, or if you notice any strange behavior, please report to the backend maintainer or to the SANE mailing list. </p>
 <h2>Options</h2>
 <p>Valid command line options and their syntax can be listed by using: </p>
@@ -40,8 +40,8 @@ description: "sane-teco2 – SANE backend for TECO / RELISYS scanners"
 <dd>selects the basic mode of operation of the scanner. The <i>Lineart</i> mode is black and white only (1 bit). <i>Gray</i> mode will produce 256 levels of gray (8 bits). <i>Color</i> will produce a 24 bits color image. </dd>
 <dt><code>&#8211;resolution 1..600</code></dt>
 <dd>Selects the resolution for a scan. The scanner can do all resolutions between 1 and 600, in increments of 1, for <i>Lineart</i> and <i>Gray</i>. For <i>Color</i>, a restricted set of resolutions are available. </dd>
-<p> <code>Note:</code> All values with ydpi &gt; 300 (300 x 600) or 600 (600 x 1200) result in a wrong proportion for the scan. The proportion can be adjusted with the following <code><a href="/docs/linux/man/1-convert/">convert</a></code>(1) command from imagemagick:<br />
- <i>convert -geometry (dpi/max_xdpi * 100%)x100%</i><br />
+<p> <code>Note:</code> All values with ydpi &gt; 300 (300 x 600) or 600 (600 x 1200) result in a wrong proportion for the scan. The proportion can be adjusted with the following <code><a href="/docs/linux/man/1-convert/">convert</a></code>(1) command from imagemagick:<br/>
+ <i>convert -geometry (dpi/max_xdpi * 100%)x100%</i><br/>
  max_xdpi is for the vm3575 constant with 300 dpi e.g. 600dpi adjust with: convert -geometry 200%x100% </p>
 <dt><code>&#8211;preview</code></dt>
 <dd>requests a preview scan. The resolution used for that scan is 50 dpi (for VM356A and VM6575 75 dpi) and the scan area is the maximum allowed. The scan mode is user selected. The default is &quot;no&quot;. </dd>

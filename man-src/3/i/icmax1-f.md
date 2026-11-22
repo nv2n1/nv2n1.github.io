@@ -10,7 +10,7 @@ description: "icmax1.f –"
 <p>icmax1.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>INTEGER function <code>icmax1</code> (N, CX, INCX)<br />
+<p>INTEGER function <code>icmax1</code> (N, CX, INCX)<br/>
  <i></i><code>ICMAX1</code> finds the index of the vector element whose real part has maximum absolute value.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>INTEGER function icmax1 (integerN, complex, dimension( * )CX, integerINCX)</h3>

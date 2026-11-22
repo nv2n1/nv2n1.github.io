@@ -126,8 +126,8 @@ chart [title &lt;title&gt;] style &lt;style&gt; &lt;options&gt;
 <dt>5.</dt>
 <dd> <code>pmchart</code> supports a global clause to specify the dimensions of the top-level window (using the width and height keywords), the number of visible points (points keyword) and the starting X and Y axis positions on the screen (xpos and ypos keywords). Each of these global attributes takes an integer value as the sole qualifier.</dd>
 <dt>6.</dt>
-<dd> Each chart has one or more plots associated with it, as defined by one of the following specifications:<br />
-plot<br />
+<dd> Each chart has one or more plots associated with it, as defined by one of the following specifications:<br/>
+plot<br/>
     [legend&lt;title&gt;][color&lt;colorspec&gt;][host&lt;hostspec&gt;] metric&lt;metricname&gt;[instance&lt;inst&gt; | matching&lt;pat&gt; | not -matching&lt;pat&gt;]</dd>
 <dl>
 <dt>

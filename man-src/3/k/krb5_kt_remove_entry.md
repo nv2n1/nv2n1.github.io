@@ -10,47 +10,47 @@ description: "Heimdal Kerberos 5 keytab handling functions –"
 
 <p> Heimdal Kerberos 5 keytab handling functions &#8211; </p>
 <h3>Functions</h3>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_kt_register</code> (krb5_context context, const krb5_kt_ops *ops)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_kt_resolve</code> (krb5_context context, const char *name, krb5_keytab *id)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_kt_default_name</code> (krb5_context context, char *name, size_t namesize)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_kt_default_modify_name</code> (krb5_context context, char *name, size_t namesize)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_kt_default</code> (krb5_context context, krb5_keytab *id)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_kt_read_service_key</code> (krb5_context context, krb5_pointer keyprocarg, krb5_principal principal, krb5_kvno vno, krb5_enctype enctype, krb5_keyblock **key)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_kt_get_type</code> (krb5_context context, krb5_keytab keytab, char *prefix, size_t prefixsize)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_kt_get_name</code> (krb5_context context, krb5_keytab keytab, char *name, size_t namesize)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_kt_get_full_name</code> (krb5_context context, krb5_keytab keytab, char **str)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_kt_close</code> (krb5_context context, krb5_keytab id)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_kt_destroy</code> (krb5_context context, krb5_keytab id)&quot; </p>
-<p> KRB5_LIB_FUNCTION krb5_boolean<br />
+<p> KRB5_LIB_FUNCTION krb5_boolean<br/>
  KRB5_LIB_CALL <code>krb5_kt_compare</code> (krb5_context context, krb5_keytab_entry *entry, krb5_const_principal principal, krb5_kvno vno, krb5_enctype enctype)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_kt_get_entry</code> (krb5_context context, krb5_keytab id, krb5_const_principal principal, krb5_kvno kvno, krb5_enctype enctype, krb5_keytab_entry *entry)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_kt_copy_entry_contents</code> (krb5_context context, const krb5_keytab_entry *in, krb5_keytab_entry *out)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_kt_free_entry</code> (krb5_context context, krb5_keytab_entry *entry)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_kt_start_seq_get</code> (krb5_context context, krb5_keytab id, krb5_kt_cursor *cursor)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_kt_next_entry</code> (krb5_context context, krb5_keytab id, krb5_keytab_entry *entry, krb5_kt_cursor *cursor)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_kt_end_seq_get</code> (krb5_context context, krb5_keytab id, krb5_kt_cursor *cursor)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_kt_add_entry</code> (krb5_context context, krb5_keytab id, krb5_keytab_entry *entry)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_kt_remove_entry</code> (krb5_context context, krb5_keytab id, krb5_keytab_entry *entry)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_kt_have_content</code> (krb5_context context, krb5_keytab id)&quot; </p>
 <h2>Detailed Description</h2>
 <h2>Function Documentation</h2>
@@ -59,8 +59,8 @@ description: "Heimdal Kerberos 5 keytab handling functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a Keberos context.<br />
- <i>id</i> a keytab.<br />
+</dt><dd> <i>context</i> a Keberos context.<br/>
+ <i>id</i> a keytab.<br/>
  <i>entry</i> the entry to add</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -71,7 +71,7 @@ description: "Heimdal Kerberos 5 keytab handling functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a Keberos context.<br />
+</dt><dd> <i>context</i> a Keberos context.<br/>
  <i>id</i> keytab to close.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -82,10 +82,10 @@ description: "Heimdal Kerberos 5 keytab handling functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a Keberos context.<br />
- <i>entry</i> an entry to match with.<br />
- <i>principal</i> principal to match, NULL matches all principals.<br />
- <i>vno</i> key version to match, 0 matches all key version numbers.<br />
+</dt><dd> <i>context</i> a Keberos context.<br/>
+ <i>entry</i> an entry to match with.<br/>
+ <i>principal</i> principal to match, NULL matches all principals.<br/>
+ <i>vno</i> key version to match, 0 matches all key version numbers.<br/>
  <i>enctype</i> encryption type to match, 0 matches all encryption types.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -96,8 +96,8 @@ description: "Heimdal Kerberos 5 keytab handling functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a Keberos context.<br />
- <i>in</i> the keytab entry to copy.<br />
+</dt><dd> <i>context</i> a Keberos context.<br/>
+ <i>in</i> the keytab entry to copy.<br/>
  <i>out</i> the copy of the keytab entry, free with <code>krb5_kt_free_entry()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -108,7 +108,7 @@ description: "Heimdal Kerberos 5 keytab handling functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a Keberos context.<br />
+</dt><dd> <i>context</i> a Keberos context.<br/>
  <i>id</i> the new default keytab.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -119,8 +119,8 @@ description: "Heimdal Kerberos 5 keytab handling functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a Keberos context.<br />
- <i>name</i> buffer where the name will be written<br />
+</dt><dd> <i>context</i> a Keberos context.<br/>
+ <i>name</i> buffer where the name will be written<br/>
  <i>namesize</i> length of name</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -131,8 +131,8 @@ description: "Heimdal Kerberos 5 keytab handling functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a Keberos context.<br />
- <i>name</i> buffer where the name will be written<br />
+</dt><dd> <i>context</i> a Keberos context.<br/>
+ <i>name</i> buffer where the name will be written<br/>
  <i>namesize</i> length of name</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -143,7 +143,7 @@ description: "Heimdal Kerberos 5 keytab handling functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a Keberos context.<br />
+</dt><dd> <i>context</i> a Keberos context.<br/>
  <i>id</i> keytab to destroy.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -154,8 +154,8 @@ description: "Heimdal Kerberos 5 keytab handling functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a Keberos context.<br />
- <i>id</i> a keytab.<br />
+</dt><dd> <i>context</i> a Keberos context.<br/>
+ <i>id</i> a keytab.<br/>
  <i>cursor</i> the cursor to free.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -166,7 +166,7 @@ description: "Heimdal Kerberos 5 keytab handling functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a Keberos context.<br />
+</dt><dd> <i>context</i> a Keberos context.<br/>
  <i>entry</i> the entry to free</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -177,11 +177,11 @@ description: "Heimdal Kerberos 5 keytab handling functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a Keberos context.<br />
- <i>id</i> a keytab.<br />
- <i>principal</i> principal to match, NULL matches all principals.<br />
- <i>kvno</i> key version to match, 0 matches all key version numbers.<br />
- <i>enctype</i> encryption type to match, 0 matches all encryption types.<br />
+</dt><dd> <i>context</i> a Keberos context.<br/>
+ <i>id</i> a keytab.<br/>
+ <i>principal</i> principal to match, NULL matches all principals.<br/>
+ <i>kvno</i> key version to match, 0 matches all key version numbers.<br/>
+ <i>enctype</i> encryption type to match, 0 matches all encryption types.<br/>
  <i>entry</i> the returned entry, free with <code>krb5_kt_free_entry()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -192,8 +192,8 @@ description: "Heimdal Kerberos 5 keytab handling functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a Keberos context.<br />
- <i>keytab</i> keytab to get name for.<br />
+</dt><dd> <i>context</i> a Keberos context.<br/>
+ <i>keytab</i> keytab to get name for.<br/>
  <i>str</i> the name of the keytab name, usee krb5_xfree() to free the string. On error, *str is set to NULL.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -204,9 +204,9 @@ description: "Heimdal Kerberos 5 keytab handling functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a Keberos context.<br />
- <i>keytab</i> the keytab to get the name for.<br />
- <i>name</i> name buffer.<br />
+</dt><dd> <i>context</i> a Keberos context.<br/>
+ <i>keytab</i> the keytab to get the name for.<br/>
+ <i>name</i> name buffer.<br/>
  <i>namesize</i> size of name buffer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -217,9 +217,9 @@ description: "Heimdal Kerberos 5 keytab handling functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a Keberos context.<br />
- <i>keytab</i> the keytab to get the prefix for<br />
- <i>prefix</i> prefix buffer<br />
+</dt><dd> <i>context</i> a Keberos context.<br/>
+ <i>keytab</i> the keytab to get the prefix for<br/>
+ <i>prefix</i> prefix buffer<br/>
  <i>prefixsize</i> length of prefix buffer</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -230,7 +230,7 @@ description: "Heimdal Kerberos 5 keytab handling functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a Keberos context.<br />
+</dt><dd> <i>context</i> a Keberos context.<br/>
  <i>id</i> a keytab.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -241,9 +241,9 @@ description: "Heimdal Kerberos 5 keytab handling functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a Keberos context.<br />
- <i>id</i> a keytab.<br />
- <i>entry</i> the returned entry, free with <code>krb5_kt_free_entry()</code>.<br />
+</dt><dd> <i>context</i> a Keberos context.<br/>
+ <i>id</i> a keytab.<br/>
+ <i>entry</i> the returned entry, free with <code>krb5_kt_free_entry()</code>.<br/>
  <i>cursor</i> the cursor of the iteration.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -254,11 +254,11 @@ description: "Heimdal Kerberos 5 keytab handling functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a Keberos context.<br />
- <i>keyprocarg</i><br />
- <i>principal</i><br />
- <i>vno</i><br />
- <i>enctype</i><br />
+</dt><dd> <i>context</i> a Keberos context.<br/>
+ <i>keyprocarg</i><br/>
+ <i>principal</i><br/>
+ <i>vno</i><br/>
+ <i>enctype</i><br/>
  <i>key</i></dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -269,7 +269,7 @@ description: "Heimdal Kerberos 5 keytab handling functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a Keberos context.<br />
+</dt><dd> <i>context</i> a Keberos context.<br/>
  <i>ops</i> a backend to register.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -280,8 +280,8 @@ description: "Heimdal Kerberos 5 keytab handling functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a Keberos context.<br />
- <i>id</i> a keytab.<br />
+</dt><dd> <i>context</i> a Keberos context.<br/>
+ <i>id</i> a keytab.<br/>
  <i>entry</i> the entry to remove</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -292,8 +292,8 @@ description: "Heimdal Kerberos 5 keytab handling functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a Keberos context.<br />
- <i>name</i> name to resolve<br />
+</dt><dd> <i>context</i> a Keberos context.<br/>
+ <i>name</i> name to resolve<br/>
  <i>id</i> resulting keytab, free with <code>krb5_kt_close()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -304,8 +304,8 @@ description: "Heimdal Kerberos 5 keytab handling functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a Keberos context.<br />
- <i>id</i> a keytab.<br />
+</dt><dd> <i>context</i> a Keberos context.<br/>
+ <i>id</i> a keytab.<br/>
  <i>cursor</i> a newly allocated cursor, free with <code>krb5_kt_end_seq_get()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

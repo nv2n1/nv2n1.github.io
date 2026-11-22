@@ -213,8 +213,8 @@ description: "tree – list contents of directories in a tree-like format."
 <p> <code>TZ</code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Timezone for timefmt output, see <code><a href="/docs/linux/man/3-strftime/">strftime</a></code>(3).</p>
 <p> <code>STDDATA_FD</code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Enable the stddata feature, optionally set descriptor to use.</p>
 <h2>AUTHOR</h2>
-<p> Steve Baker (ice [at] mama.indstate.edu)<br />
- HTML output hacked by Francesc Rocher (rocher [at] econ.udg.es)<br />
+<p> Steve Baker (ice [at] mama.indstate.edu)<br/>
+ HTML output hacked by Francesc Rocher (rocher [at] econ.udg.es)<br/>
  Charsets and OS/2 support by Kyosuke Tokoro (NBG01720 [at] nifty.ne.jp) </p>
 <h2>BUGS AND NOTES</h2>
 <p> Tree does not prune &quot;empty&quot; directories when the -P and -I options are used by default. Use the &#8211;prune option. </p>

@@ -10,7 +10,7 @@ description: "XkbGetAccessXTimeout – Queries the current AccessXTimeout option
 <p>XkbGetAccessXTimeout &#8211; Queries the current AccessXTimeout options for a keyboard device </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Bool XkbGetAccessXTimeout</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>,</code> <code>unsigned short *</code><i>timeout_rtrn</i><code>,</code> <code>unsigned int *</code><i>ctrls_mask_rtrn</i><code>,</code> <code>unsigned int *</code><i>ctrls_values_rtrn</i><code>,</code> <code>unsigned short *</code><i>options_mask_rtrn</i><code>,</code> <code>unsigned short *</code><i>options_values_rtrn</i><code>);</code><br />
+<dt> <code>Bool XkbGetAccessXTimeout</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>,</code> <code>unsigned short *</code><i>timeout_rtrn</i><code>,</code> <code>unsigned int *</code><i>ctrls_mask_rtrn</i><code>,</code> <code>unsigned int *</code><i>ctrls_values_rtrn</i><code>,</code> <code>unsigned short *</code><i>options_mask_rtrn</i><code>,</code> <code>unsigned short *</code><i>options_values_rtrn</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

@@ -10,7 +10,7 @@ description: "slaeda.f –"
 <p>slaeda.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>slaeda</code> (N, TLVLS, CURLVL, CURPBM, PRMPTR, PERM, GIVPTR, GIVCOL, GIVNUM, Q, QPTR, Z, ZTEMP, INFO)<br />
+<p>subroutine <code>slaeda</code> (N, TLVLS, CURLVL, CURPBM, PRMPTR, PERM, GIVPTR, GIVCOL, GIVNUM, Q, QPTR, Z, ZTEMP, INFO)<br/>
  <i></i><code>SLAEDA</code> used by sstedc. Computes the Z vector determining the rank-one modification of the diagonal matrix. Used when the original matrix is dense.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slaeda (integerN, integerTLVLS, integerCURLVL, integerCURPBM, integer, dimension( * )PRMPTR, integer, dimension( * )PERM, integer, dimension( * )GIVPTR, integer, dimension( 2, * )GIVCOL, real, dimension( 2, * )GIVNUM, real, dimension( * )Q, integer, dimension( * )QPTR, real, dimension( * )Z, real, dimension( * )ZTEMP, integerINFO)</h3>

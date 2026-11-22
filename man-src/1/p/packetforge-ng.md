@@ -12,7 +12,7 @@ description: "packetforge-ng – forge packets: ARP, UDP, ICMP or custom packets
 <h2>SYNOPSIS</h2>
 <p> <code>packetforge-ng</code> &lt;mode&gt; &lt;options&gt;</p>
 <h2>DESCRIPTION</h2>
-<p> <code>packetforge-ng</code> is a tool to create encrypted packets that can subsequently be used for injection. You may create various types of packets such as arp requests, UDP, ICMP and custom packets. The most common use is to create ARP requests for subsequent injection.<br />
+<p> <code>packetforge-ng</code> is a tool to create encrypted packets that can subsequently be used for injection. You may create various types of packets such as arp requests, UDP, ICMP and custom packets. The most common use is to create ARP requests for subsequent injection.<br/>
  To create an encrypted packet, you must have a PRGA (pseudo random genration algorithm) file. This is used to encrypt the packet you create. This is typically obtained from aireplay-ng chopchop or fragmentation attacks.</p>
 <h2>OPTIONS</h2>
 <dl>
@@ -61,24 +61,24 @@ description: "packetforge-ng – forge packets: ARP, UDP, ICMP or custom packets
 <h2>AUTHOR</h2>
 <p> This manual page was written by Thomas d&#8217;Otreppe. Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 or any later version published by the Free Software Foundation On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/8-airbase-ng/">airbase-ng</a>(8)</code><br />
- <code><a href="/docs/linux/man/8-aireplay-ng/">aireplay-ng</a>(8)</code><br />
- <code><a href="/docs/linux/man/8-airmon-ng/">airmon-ng</a>(8)</code><br />
- <code><a href="/docs/linux/man/8-airodump-ng/">airodump-ng</a>(8)</code><br />
- <code><a href="/docs/linux/man/8-airodump-ng-oui-update/">airodump-ng-oui-update</a>(8)</code><br />
- <code><a href="/docs/linux/man/8-airserv-ng/">airserv-ng</a>(8)</code><br />
- <code><a href="/docs/linux/man/8-airtun-ng/">airtun-ng</a>(8)</code><br />
- <code><a href="/docs/linux/man/8-besside-ng/">besside-ng</a>(8)</code><br />
- <code><a href="/docs/linux/man/8-easside-ng/">easside-ng</a>(8)</code><br />
- <code><a href="/docs/linux/man/8-tkiptun-ng/">tkiptun-ng</a>(8)</code><br />
- <code><a href="/docs/linux/man/8-wesside-ng/">wesside-ng</a>(8)</code><br />
- <code><a href="/docs/linux/man/1-aircrack-ng/">aircrack-ng</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-airdecap-ng/">airdecap-ng</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-airdecloak-ng/">airdecloak-ng</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-airolib-ng/">airolib-ng</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-besside-ng-crawler/">besside-ng-crawler</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-buddy-ng/">buddy-ng</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-ivstools/">ivstools</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-kstats/">kstats</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-makeivs-ng/">makeivs-ng</a>(1)</code><br />
+<p> <code><a href="/docs/linux/man/8-airbase-ng/">airbase-ng</a>(8)</code><br/>
+ <code><a href="/docs/linux/man/8-aireplay-ng/">aireplay-ng</a>(8)</code><br/>
+ <code><a href="/docs/linux/man/8-airmon-ng/">airmon-ng</a>(8)</code><br/>
+ <code><a href="/docs/linux/man/8-airodump-ng/">airodump-ng</a>(8)</code><br/>
+ <code><a href="/docs/linux/man/8-airodump-ng-oui-update/">airodump-ng-oui-update</a>(8)</code><br/>
+ <code><a href="/docs/linux/man/8-airserv-ng/">airserv-ng</a>(8)</code><br/>
+ <code><a href="/docs/linux/man/8-airtun-ng/">airtun-ng</a>(8)</code><br/>
+ <code><a href="/docs/linux/man/8-besside-ng/">besside-ng</a>(8)</code><br/>
+ <code><a href="/docs/linux/man/8-easside-ng/">easside-ng</a>(8)</code><br/>
+ <code><a href="/docs/linux/man/8-tkiptun-ng/">tkiptun-ng</a>(8)</code><br/>
+ <code><a href="/docs/linux/man/8-wesside-ng/">wesside-ng</a>(8)</code><br/>
+ <code><a href="/docs/linux/man/1-aircrack-ng/">aircrack-ng</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-airdecap-ng/">airdecap-ng</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-airdecloak-ng/">airdecloak-ng</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-airolib-ng/">airolib-ng</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-besside-ng-crawler/">besside-ng-crawler</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-buddy-ng/">buddy-ng</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-ivstools/">ivstools</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-kstats/">kstats</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-makeivs-ng/">makeivs-ng</a>(1)</code><br/>
  <code><a href="/docs/linux/man/1-wpaclean/">wpaclean</a>(1)</code> </p>

@@ -10,12 +10,12 @@ description: "ql/experimental/callablebonds/blackcallablebondengine.hpp – Blac
 
 <p> ql/experimental/callablebonds/blackcallablebondengine.hpp &#8211; Black-formula callable bond engines. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/experimental/callablebonds/callablebond.hpp&gt;<br />
+<p> #include &lt;ql/experimental/callablebonds/callablebond.hpp&gt;<br/>
  #include &lt;ql/experimental/callablebonds/callablebondvolstructure.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>BlackCallableFixedRateBondEngine</code><br />
- <i>Black-formula callable fixed rate bond engine. </i><br />
- class <code>BlackCallableZeroCouponBondEngine</code><br />
+<p> class <code>BlackCallableFixedRateBondEngine</code><br/>
+ <i>Black-formula callable fixed rate bond engine. </i><br/>
+ class <code>BlackCallableZeroCouponBondEngine</code><br/>
  <i>Black-formula callable zero coupon bond engine. </i></p>
 <h2>Detailed Description</h2>
 <p> Black-formula callable bond engines. </p>

@@ -65,10 +65,10 @@ print a diff over some SCM controlled entries
 <dt>2.</dt>
 <dd> Creates new .rosinstall file at TARGET-PATH configured </dd>
 <p> SOURCE_PATH can e.g. be a folder like /opt/ros/electric If PATH is not given, uses current folder. </p>
-<p>Usage : wstool init[TARGET_PATH[SOURCE_PATH]] ? Options::<br />
-                                                        &#8211; h,<br />
-        &#8211;help show this help message and exit&#8211; continue &#8211; on &#8211; error Continue despite checkout errors &#8211; j JOBS,<br />
-        &#8211;parallel = JOBS<br />
+<p>Usage : wstool init[TARGET_PATH[SOURCE_PATH]] ? Options::<br/>
+                                                        &#8211; h,<br/>
+        &#8211;help show this help message and exit&#8211; continue &#8211; on &#8211; error Continue despite checkout errors &#8211; j JOBS,<br/>
+        &#8211;parallel = JOBS<br/>
             How many parallel threads to use for installing</p>
 <p> Examples: </p>
 <pre>
@@ -78,19 +78,19 @@ $ wstool init ~/jade /opt/ros/jade
 <h3>set</h3>
 <p> add or changes one entry from your workspace config The command will infer whether you want to add or modify an entry. If you modify, it will only change the details you provide, keeping those you did not provide. if you only provide a uri, will use the basename of it as localname unless such an element already exists. </p>
 <p> The command only changes the configuration, to checkout or update the element, run wstool update afterwards. </p>
-<p>Usage: wstool set [localname] [SCM-URI]?  [&#8211;(detached|svn|hg|git|bzr)] [&#8211;version=VERSION]]<br />
-Options:<br />
-  -h, &#8211;help            show this help message and exit<br />
-  &#8211;detached            make an entry unmanaged (default for new element)<br />
-  -v VERSION, &#8211;version-new=VERSION<br />
-                        point SCM to this version<br />
-  &#8211;git                 make an entry a git entry<br />
-  &#8211;svn                 make an entry a subversion entry<br />
-  &#8211;hg                  make an entry a mercurial entry<br />
-  &#8211;bzr                 make an entry a bazaar entry<br />
-  -y, &#8211;confirm         Do not ask for confirmation<br />
-  -u, &#8211;update          update repository after set<br />
-  -t WORKSPACE, &#8211;target-workspace=WORKSPACE<br />
+<p>Usage: wstool set [localname] [SCM-URI]?  [&#8211;(detached|svn|hg|git|bzr)] [&#8211;version=VERSION]]<br/>
+Options:<br/>
+  -h, &#8211;help            show this help message and exit<br/>
+  &#8211;detached            make an entry unmanaged (default for new element)<br/>
+  -v VERSION, &#8211;version-new=VERSION<br/>
+                        point SCM to this version<br/>
+  &#8211;git                 make an entry a git entry<br/>
+  &#8211;svn                 make an entry a subversion entry<br/>
+  &#8211;hg                  make an entry a mercurial entry<br/>
+  &#8211;bzr                 make an entry a bazaar entry<br/>
+  -y, &#8211;confirm         Do not ask for confirmation<br/>
+  -u, &#8211;update          update repository after set<br/>
+  -t WORKSPACE, &#8211;target-workspace=WORKSPACE<br/>
                         which workspace to use</p>
 <p> Examples: </p>
 <pre>
@@ -102,17 +102,17 @@ $ wstool set robot_model --detached
 <p> The command merges config with given other rosinstall element sets, from files or web uris. </p>
 <p> The default workspace will be inferred from context, you can specify one using -t. </p>
 <p> By default, when an element in an additional URI has the same local-name as an existing element, the existing element will be replaced. In order to ensure the ordering of elements is as provided in the URI, use the option <code>&#8211;merge-kill-append</code>. </p>
-<p>Usage: wstool merge [URI] [OPTIONS]<br />
-Options:<br />
-  -h, &#8211;help            show this help message and exit<br />
-  -a, &#8211;merge-kill-append<br />
-                        merge by deleting given entry and appending new one<br />
-  -k, &#8211;merge-keep      (default) merge by keeping existing entry and<br />
-                        discarding new one<br />
-  -r, &#8211;merge-replace   merge by replacing given entry with new one<br />
-                        maintaining ordering<br />
-  -y, &#8211;confirm-all     do not ask for confirmation unless strictly necessary<br />
-  -t WORKSPACE, &#8211;target-workspace=WORKSPACE<br />
+<p>Usage: wstool merge [URI] [OPTIONS]<br/>
+Options:<br/>
+  -h, &#8211;help            show this help message and exit<br/>
+  -a, &#8211;merge-kill-append<br/>
+                        merge by deleting given entry and appending new one<br/>
+  -k, &#8211;merge-keep      (default) merge by keeping existing entry and<br/>
+                        discarding new one<br/>
+  -r, &#8211;merge-replace   merge by replacing given entry with new one<br/>
+                        maintaining ordering<br/>
+  -y, &#8211;confirm-all     do not ask for confirmation unless strictly necessary<br/>
+  -t WORKSPACE, &#8211;target-workspace=WORKSPACE<br/>
                         which workspace to use</p>
 <p> Examples: </p>
 <pre>
@@ -125,21 +125,21 @@ $ roslocate info robot_mode | wstool merge -
 <h3>update</h3>
 <p> update or check out some of your config elements </p>
 <p> This command calls the SCM provider to pull changes from remote to your local filesystem. In case the url has changed, the command will ask whether to delete or backup the folder. </p>
-<p>Usage: wstool update [localname]*<br />
-Options:<br />
-  -h, &#8211;help            show this help message and exit<br />
-  &#8211;delete-changed-uris<br />
-                        Delete the local copy of a directory before changing<br />
-                        uri.<br />
-  &#8211;abort-changed-uris  Abort if changed uri detected<br />
-  &#8211;continue-on-error   Continue despite checkout errors<br />
-  &#8211;backup-changed-uris=BACKUP_CHANGED<br />
-                        backup the local copy of a directory before changing<br />
-                        uri to this directory.<br />
-  -j JOBS, &#8211;parallel=JOBS<br />
-                        How many parallel threads to use for installing<br />
-  -v, &#8211;verbose         Whether to print out more information<br />
-  -t WORKSPACE, &#8211;target-workspace=WORKSPACE<br />
+<p>Usage: wstool update [localname]*<br/>
+Options:<br/>
+  -h, &#8211;help            show this help message and exit<br/>
+  &#8211;delete-changed-uris<br/>
+                        Delete the local copy of a directory before changing<br/>
+                        uri.<br/>
+  &#8211;abort-changed-uris  Abort if changed uri detected<br/>
+  &#8211;continue-on-error   Continue despite checkout errors<br/>
+  &#8211;backup-changed-uris=BACKUP_CHANGED<br/>
+                        backup the local copy of a directory before changing<br/>
+                        uri to this directory.<br/>
+  -j JOBS, &#8211;parallel=JOBS<br/>
+                        How many parallel threads to use for installing<br/>
+  -v, &#8211;verbose         Whether to print out more information<br/>
+  -t WORKSPACE, &#8211;target-workspace=WORKSPACE<br/>
                         which workspace to use</p>
 <p> Examples: </p>
 <pre>
@@ -155,20 +155,20 @@ $ wstool update robot_model geometry
 <p> If status is V, the difference between what was specified and what is real is shown in the respective column. For SVN entries, the url is split up according to standard layout (trunk/tags/branches). The ROS_PACKAGE_PATH follows the order of the table, earlier entries overlay later entries. </p>
 <p> When given one localname, just show the data of one element in list form. This also has the generic properties element which is usually empty. </p>
 <p> The <code>&#8211;only</code> option accepts keywords: [&#8216;path&#8217;, &#8216;localname&#8217;, &#8216;version&#8217;, &#8216;revision&#8217;, &#8216;cur_revision&#8217;, &#8216;uri&#8217;, &#8216;cur_uri&#8217;, &#8216;scmtype&#8217;] </p>
-<p>Usage: wstool info [localname]* [OPTIONS]<br />
-Options:<br />
-  -h, &#8211;help            show this help message and exit<br />
-  &#8211;root                Show workspace root path<br />
-  &#8211;data-only           Does not provide explanations<br />
-  &#8211;only=ONLY           Shows comma-separated lists of only given comma-<br />
-                        separated attribute(s).<br />
-  &#8211;yaml                Shows only version of single entry. Intended for<br />
-                        scripting.<br />
-  &#8211;fetch               When used, retrieves version information from remote<br />
-                        (takes longer).<br />
-  -u, &#8211;untracked       Also show untracked files as modifications<br />
-  -t WORKSPACE, &#8211;target-workspace=WORKSPACE<br />
-                        which workspace to use<br />
+<p>Usage: wstool info [localname]* [OPTIONS]<br/>
+Options:<br/>
+  -h, &#8211;help            show this help message and exit<br/>
+  &#8211;root                Show workspace root path<br/>
+  &#8211;data-only           Does not provide explanations<br/>
+  &#8211;only=ONLY           Shows comma-separated lists of only given comma-<br/>
+                        separated attribute(s).<br/>
+  &#8211;yaml                Shows only version of single entry. Intended for<br/>
+                        scripting.<br/>
+  &#8211;fetch               When used, retrieves version information from remote<br/>
+                        (takes longer).<br/>
+  -u, &#8211;untracked       Also show untracked files as modifications<br/>
+  -t WORKSPACE, &#8211;target-workspace=WORKSPACE<br/>
+                        which workspace to use<br/>
   -m, &#8211;managed-only    only show managed elements</p>
 <p> Examples: </p>
 <pre>
@@ -180,13 +180,13 @@ $ wstool info --only=path,cur_uri,cur_revision robot_model geometry
 </dl>
 <h3>status</h3>
 <p> print the change status of files in some SCM controlled entries. The status columns meanings are as the respective SCM defines them. </p>
-<p>Usage : wstool status[localname] *<br />
-        Options : -h,<br />
+<p>Usage : wstool status[localname] *<br/>
+        Options : -h,<br/>
     &#8211;help show this help message and exit&#8211; untracked Also shows untracked files &#8211; t WORKSPACE, &#8211;target &#8211; workspace = WORKSPACE which workspace to use</p>
 <h3>diff</h3>
 <p> print a diff over some SCM controlled entries </p>
-<p>Usage : wstool diff[localname] *<br />
-        Options : -h,<br />
+<p>Usage : wstool diff[localname] *<br/>
+        Options : -h,<br/>
     &#8211;help show this help message and exit&#8211; untracked Also shows untracked files &#8211; t WORKSPACE, &#8211;target &#8211; workspace = WORKSPACE which workspace to use</p>
 <h2>UBUNTU</h2>
 <p> On Ubuntu the recommended way to install rosinstall is to use apt. </p>

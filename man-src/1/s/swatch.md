@@ -18,7 +18,7 @@ description: "swatch – simple watcher"
 <dt><code>&#8211;awk-field-syntax</code></dt>
 <dd> Use this option only if you want to overide regular expression backreferencing in favor of <a href="/docs/linux/man/1-awk/">awk</a><code>(1)</code> style field referencing. Included for backward compatability.</dd>
 <dt><code>&#8211;config-file|-c</code> <i>filename</i></dt>
-<dd> Tells <code>swatch</code> where to find its configuration file. The default is <i>${</i><font SIZE="-1"><i>HOME</i></font><i>}/.swatchrc</i>.</dd>
+<dd> Tells <code>swatch</code> where to find its configuration file. The default is <i>${</i><i>HOME</i><i>}/.swatchrc</i>.</dd>
 <dt><code>&#8211;daemon</code></dt>
 <dd> This tells <code>swatch</code> to run in the background and disassociate itself from any terminal.</dd>
 <dt><code>&#8211;extra-include-dir|-I</code> <i>path</i></dt>
@@ -32,11 +32,11 @@ description: "swatch – simple watcher"
 <dt><code>&#8211;old-style-config|-O</code></dt>
 <dd> This tells <code>swatch</code> that your configuration file is written using the syntax that was abandoned back in the 1990&#8217;s.</dd>
 <dt><code>&#8211;pid-file</code> <i>file</i></dt>
-<dd> Writes the process <font SIZE="-1">ID</font> to <i>file</i>. Useful when running in daemon mode.</dd>
+<dd> Writes the process ID to <i>file</i>. Useful when running in daemon mode.</dd>
 <dt><code>&#8211;restart-time</code>=<i>[+]hh:mm[am|pm]</i> or <code>-r</code> <i>[+]hh:mm[am|pm]</i></dt>
 <dd> Restart at the specified time where <i>hh</i> is hours and <i>mm</i> is minutes. If the am/pm indicator is omitted, then a 24-hour clock is assumed. If the time is preceded by the &#8220;+&#8221; character, then the restart time will be set to the current time plus the specified time and the am/pm indicator will be ignored.</dd>
 <dt><code>&#8211;script-dir</code>=<i>/path/to/directory</i></dt>
-<dd> This switch causes the temporary watcher script to be written to a file in the specified directory rather than the user&#8217;s home directory. It is highly advised that you do <font SIZE="-1"><code>NOT</code></font> use directories that are writable by others such as /tmp.</dd>
+<dd> This switch causes the temporary watcher script to be written to a file in the specified directory rather than the user&#8217;s home directory. It is highly advised that you do <code>NOT</code> use directories that are writable by others such as /tmp.</dd>
 <dt><code>&#8211;tail-args</code> <i>arguments_for_tail_program</i></dt>
 <dd> Pass specific options to the <a href="/docs/linux/man/1-tail/">tail</a><code>(1)</code> program.</dd>
 <dt><code>&#8211;tail-program-name</code> <i>filename</i></dt>
@@ -44,7 +44,7 @@ description: "swatch – simple watcher"
 <dt><code>&#8211;version</code> or <code>-V</code></dt>
 <dd> Prints version information and exits.</dd>
 <dt><code>&#8211;use-cpan-file-tail</code></dt>
-<dd> Use <font SIZE="-1">CPAN</font>&#8216;s File::Tail module to read the log file instead of the <i><a href="/docs/linux/man/1-tail/">tail</a></i>(1) command.</dd></dl>
+<dd> Use CPAN&#8216;s File::Tail module to read the log file instead of the <i><a href="/docs/linux/man/1-tail/">tail</a></i>(1) command.</dd></dl>
 <p> You may specify only one of the following options:</p>
 <dl>
 <dt><code>&#8211;tail-file</code>=<i>filename</i> or <code>-t</code> <i>filename</i></dt>
@@ -58,7 +58,7 @@ description: "swatch – simple watcher"
 <dt><code>&#8211;debug</code>[=<i>level</i>]</dt>
 <dd> Spew out various levels of debugging for swatch developers.</dd>
 <dt><code>&#8211;dump-script</code>[=<i>filename</i>]</dt>
-<dd> Instead of running the watcher script after it is generated, it is written to <i>filename</i> or to <font SIZE="-1">STDOUT.</font></dd></dl>
+<dd> Instead of running the watcher script after it is generated, it is written to <i>filename</i> or to STDOUT.</dd></dl>
 <p> If swatch is called with no options, it is the same as typing the command line </p>
 <pre>
         swatch --config-file=~/.swatchrc --tail-file=/var/log/syslog
@@ -162,15 +162,15 @@ description: "swatch – simple watcher"
 <dl>
 <dt>
 </dt><dd> perlcode my <tt>$fsf_regex</tt> = &#8216;\d{2}:\d{2}:\d{2}\s+(.* file system full)&#8217;; </dd>
-<p> watchfor /$fsf_regex/<br />
-&nbsp;<wbr>threshold track_by=$1,type=limit,count=1,seconds=60<br />
-&nbsp;<wbr>echo<br />
+<p> watchfor /$fsf_regex/<br/>
+&nbsp;<wbr>threshold track_by=$1,type=limit,count=1,seconds=60<br/>
+&nbsp;<wbr>echo<br/>
 &nbsp;<wbr>bell</dl>
 <p> In this example, a line which contains the string &#8220;file system full&#8221; will be echoed and the screen bell will sound. Also, <code>threshold</code> will use what is matched within the parentheses as its key rather than trying to use the log message with its time stamp cut out. Multiple instances of the message will not be echoed if they appear within a minute of the first one. Instead the following message will be acted upon after the time interval has expired.</p>
 <h2>SEE ALSO</h2>
 <p> signal<code>(3)</code>, <a href="/docs/linux/man/1-perl/">perl</a><code>(1)</code>, <a href="/docs/linux/man/1-perlre/">perlre</a><code>(1)</code></p>
 <h2>NOTES</h2>
-<p> Upon receiving an <font SIZE="-1">ALRM</font> or <font SIZE="-1">HUP</font> signal swatch will re-read the configuration file and restart, except when used with the <i>&#8211;daemon</i> command line option where it will simply exit. Swatch will terminate gracefully when it receives a <font SIZE="-1">QUIT, TERM,</font> or <font SIZE="-1">INT</font> signal.</p>
+<p> Upon receiving an ALRM or HUP signal swatch will re-read the configuration file and restart, except when used with the <i>&#8211;daemon</i> command line option where it will simply exit. Swatch will terminate gracefully when it receives a QUIT, TERM, or INT signal.</p>
 <h2>AUTHOR</h2>
 <pre>
     E. Todd Atkins

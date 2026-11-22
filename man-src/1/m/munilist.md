@@ -10,9 +10,9 @@ description: "munilist – Making listing from CCD photomtetry files"
 
 <p> munilist &#8211; Making listing from CCD photomtetry files</p>
 <h2>SYNOPSIS</h2>
-<p> <code>munilist -os </code><i>[options</i>] <i>var comp chk1 chk2 &#8230; source_file &#8230;</i><br />
- <code>munilist -of </code><i>[options</i>] <i>s1 s2 &#8230; source_file &#8230;</i><br />
- <code>munilist -oa </code><i>[options</i>] <i>source_file &#8230;</i><br />
+<p> <code>munilist -os </code><i>[options</i>] <i>var comp chk1 chk2 &#8230; source_file &#8230;</i><br/>
+ <code>munilist -of </code><i>[options</i>] <i>s1 s2 &#8230; source_file &#8230;</i><br/>
+ <code>munilist -oa </code><i>[options</i>] <i>source_file &#8230;</i><br/>
  <code>munilist -ot </code><i>[options</i>] <i>source_file &#8230;</i> </p>
 <h2>DESCRIPTION</h2>
 <p> The Munilist program reads photometry files and creates the table of magnitudes of selected stars in the dependence on a time. The table is written to a output file in text format. The format of the table depends on given parameters and on the number of selected stars. The Munilist is usually the last step of reduction process. </p>

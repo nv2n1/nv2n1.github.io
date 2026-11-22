@@ -15,14 +15,14 @@ description: "glutWireTetrahedron – Draw a wireframe tetrahedron."
 <h2>Description</h2>
 <p>This function draws a regular, wireframe 4-sided polyhedron centered at the origin. The distance from the origin to the vertices is 1. </p>
 <h2>Todo</h2>
-<p>Merge Bf Sy<br />
-&nbsp;<wbr>r0 Ef<br />
-&nbsp;<wbr> Bf Sy<br />
-&nbsp;<wbr>r1 Ef<br />
-&nbsp;<wbr> Bf Sy<br />
-&nbsp;<wbr>r2 Ef<br />
-&nbsp;<wbr>and&nbsp;<wbr> Bf Sy<br />
-&nbsp;<wbr>r3 Ef<br />
+<p>Merge Bf Sy<br/>
+&nbsp;<wbr>r0 Ef<br/>
+&nbsp;<wbr> Bf Sy<br/>
+&nbsp;<wbr>r1 Ef<br/>
+&nbsp;<wbr> Bf Sy<br/>
+&nbsp;<wbr>r2 Ef<br/>
+&nbsp;<wbr>and&nbsp;<wbr> Bf Sy<br/>
+&nbsp;<wbr>r3 Ef<br/>
 &nbsp;<wbr>into one array. </p>
 <p> Put the normals into the (or an) array. </p>
 <p> Make the array static const, with file scope, and share with glutSolidTetrahedron(). </p>

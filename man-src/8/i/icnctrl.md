@@ -11,7 +11,7 @@ description: "icnctrl – configure ICN ISDN adaptor"
 <h2>Synopsis</h2>
 <p><code>icnctrl [-d</code> <i>Driver-Id</i><code>]</code> <i>action options</i> <code>&#8230;</code></p>
 <h2>Description</h2>
-<p><code>icnctrl</code> is used to setup the ICN <font SIZE="-1">ISDN</font> device driver and for downloading the firmware into the <font SIZE="-1">ISDN</font> card. The use of <i>icnctrl</i> makes sense, if you are using an ICN card only. </p>
+<p><code>icnctrl</code> is used to setup the ICN ISDN device driver and for downloading the firmware into the ISDN card. The use of <i>icnctrl</i> makes sense, if you are using an ICN card only. </p>
 <h2>Options</h2>
 <dl>
 <dt><code>-d </code><i>Driver-Id</i></dt>
@@ -39,7 +39,7 @@ description: "icnctrl – configure ICN ISDN adaptor"
 </dl>
 </dl>
 <dt><code>load </code><i>boot-code</i><i>firmware</i><code> [</code><i>firmware2</i><code>]</code></dt>
-<dd>downloads the firmware into the card and starts operation. Using this command, after loading the icn-module into kernel-space the first real access to the hardware is done. Therefore the <code>io</code> action above, should be used before, if the hardware settings are different from the default settings. Usually the images are located in <i>@DATADIR@</i>. The boot-code is named <i>loadpg.bin</i>. The firmware depends on the D-channel protocol of the <font SIZE="-1">ISDN</font> line. For German 1TR6-lines, the firmware is named <i>pc_1t_ca.bin</i>. For Euro-ISDN-lines, it is named <i>pc_eu_ca.bin</i>. When loading an ICN-4B, <code>two</code> firmware parameters have to be supplied. The first firmware is used for the upper S0 connector, the second firmware is used for the lower S0 connector (towards the card&#8217;s slot connector).</dd>
+<dd>downloads the firmware into the card and starts operation. Using this command, after loading the icn-module into kernel-space the first real access to the hardware is done. Therefore the <code>io</code> action above, should be used before, if the hardware settings are different from the default settings. Usually the images are located in <i>@DATADIR@</i>. The boot-code is named <i>loadpg.bin</i>. The firmware depends on the D-channel protocol of the ISDN line. For German 1TR6-lines, the firmware is named <i>pc_1t_ca.bin</i>. For Euro-ISDN-lines, it is named <i>pc_eu_ca.bin</i>. When loading an ICN-4B, <code>two</code> firmware parameters have to be supplied. The first firmware is used for the upper S0 connector, the second firmware is used for the lower S0 connector (towards the card&#8217;s slot connector).</dd>
 <dt><code>dump</code></dt>
 <dd>is available if the program is configured using the <code>&#8211;enable-dump</code> option only. The contents of internal driver variables is dumped on stdout.</dd></dl>
 <h2>Files</h2>

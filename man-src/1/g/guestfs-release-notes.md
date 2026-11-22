@@ -13,30 +13,30 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <p> These release notes only cover the differences from the previous stable/dev branch split (1.38.0). For detailed changelogs, please see the git repository, or the ChangeLog file distributed in the tarball.</p>
 <h3>New features</h3>
 <p> <i>New features in existing tools</i> </p>
-<p> Virt-inspector now displays the libosinfo short <font SIZE="-1">ID</font> for guests (Pino Toscano). </p>
+<p> Virt-inspector now displays the libosinfo short ID for guests (Pino Toscano). </p>
 <p> Guestfish <i>-N</i> will now generate 1G disks instead of 100M disks by default. </p>
 <p> Virt-resize supports f2fs filesystems (Pino Toscano). </p>
 <p> libguestfs-test-tool now supports bash tab completion (Pino Toscano). </p>
 <p> The <i>&#8211;machine-readable</i> option now supports sending output to files or stdout/stderr. This works uniformly across most OCaml-based virt tools, specifically: virt-builder, virt-builder-repository, virt-dib, virt-get-kernel, virt-resize, virt-sparsify, and virt-v2v (Pino Toscano). </p>
-<p> Virt-builder <i>&#8211;uninstall</i> option now works on <font SIZE="-1">SUSE</font> (Sebastian Meyer). </p>
-<p> Virt-builder now supports Windows. We are not able to ship Windows templates in the public respository for obvious licensing reasons, but if you are an <font SIZE="-1">MSDN</font> subscriber you may build your own. See <a rel="nofollow" href="https://rwmj.wordpress.com/2018/09/13/creating-windows-templates-for-virt-builder/">https://rwmj.wordpress.com/2018/09/13/creating-windows-templates-for-virt-builder/</a> </p>
+<p> Virt-builder <i>&#8211;uninstall</i> option now works on SUSE (Sebastian Meyer). </p>
+<p> Virt-builder now supports Windows. We are not able to ship Windows templates in the public respository for obvious licensing reasons, but if you are an MSDN subscriber you may build your own. See <a rel="nofollow" href="https://rwmj.wordpress.com/2018/09/13/creating-windows-templates-for-virt-builder/">https://rwmj.wordpress.com/2018/09/13/creating-windows-templates-for-virt-builder/</a> </p>
 <p> Many tools now support a <i>&#8211;key</i> option allowing you to pass in decryption keys for filesystems stored in local files on the host rather than having to feed them in over stdin (Pino Toscano). </p>
 <p> <i>virt-v2v and virt-p2v</i> </p>
-<p> New <i>-o rhv-upload</i> mode for directly uploading images to <font SIZE="-1">RHV,</font> bypassing the Export Storage Domain (Tomáš Golembiovský, Nir Soffer, Daniel Erez, Pino Toscano). </p>
+<p> New <i>-o rhv-upload</i> mode for directly uploading images to RHV, bypassing the Export Storage Domain (Tomáš Golembiovský, Nir Soffer, Daniel Erez, Pino Toscano). </p>
 <p> New <i>-o openstack</i> mode for directly uploading images to OpenStack and Cinder using OpenStack APIs. </p>
 <p> Virt-v2v now has a general mechanism for input and output options: <i>-io</i> and <i>-oo</i>. </p>
-<p> Virt-v2v can now install the <font SIZE="-1">RHV</font> tools or <font SIZE="-1">QEMU GA</font> in guests (Tomáš Golembiovský). </p>
+<p> Virt-v2v can now install the RHV tools or QEMU GA in guests (Tomáš Golembiovský). </p>
 <p> The huge manual has now been split into several smaller documents and is more focused on helping users to accomplish specific v2v tasks. </p>
-<p> Multiple improvements to the <font SIZE="-1">OVF</font> metadata when converting to <font SIZE="-1">RHV</font> (Tomáš Golembiovský, Pino Toscano, Arik Hadas). </p>
+<p> Multiple improvements to the OVF metadata when converting to RHV (Tomáš Golembiovský, Pino Toscano, Arik Hadas). </p>
 <p> Virt-v2v can now convert Linux guests with split kernel packages, especially Ubuntu 18.04 (Pino Toscano). </p>
 <p> Virt-v2v old <i>&#8211;password-file</i> option has been replaced by <i>-ip</i> (the old option remains for backwards compatibility). </p>
-<p> Virt-v2v now preserves the <font SIZE="-1">VM</font> Generation <font SIZE="-1">ID.</font> </p>
+<p> Virt-v2v now preserves the VM Generation ID. </p>
 <p> Virt-v2v has a new <i>&#8211;mac</i> option allowing specific NICs to be mapped precisely to networks or bridges on the target. </p>
 <p> New virt-v2v <i>&#8211;print-estimate</i> option to estimate the size of data that virt-v2v will copy. </p>
 <p> Virt-v2v is now usually able to remove open-vm-tools and VMware Tools from the Linux guest during conversion (Pino Toscano). </p>
-<p> Virt-v2v can now support <font SIZE="-1">UEFI</font> conversions to <font SIZE="-1">RHV</font> (Tomáš Golembiovský). </p>
+<p> Virt-v2v can now support UEFI conversions to RHV (Tomáš Golembiovský). </p>
 <p> Virt-p2v now prefers you to shut down instead of rebooting the machine after conversion has finished (Pino Toscano). </p>
-<p> Virt-v2v now writes the libosinfo short <font SIZE="-1">ID</font> to the libvirt metadata when using <i>-o local</i> and <i>-o libvirt</i> output modes (Martin Kletzander). </p>
+<p> Virt-v2v now writes the libosinfo short ID to the libvirt metadata when using <i>-o local</i> and <i>-o libvirt</i> output modes (Martin Kletzander). </p>
 <p> <i>Language bindings</i> </p>
 <p> OpenJDK 10+ is supported (Pino Toscano). </p>
 <p> Java bindings fixed for Gentoo host (Martin Kletzander). </p>
@@ -50,91 +50,91 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <p> Multiple documentation typos fixed (Yuri Chornoivan).</p>
 <h3>Security</h3>
 <p> See also <code><a href="/docs/linux/man/1-guestfs-security/">guestfs-security</a></code>(1). </p>
-<p> <i></i><font SIZE="-1"><i>CVE-2018-11806</i></font><i></i> </p>
+<p> <i></i><i>CVE-2018-11806</i><i></i> </p>
 <p> Qemu&#8217;s slirp (userspace networking) had several buffer overflows which could be triggered from the guest or network side.</p>
-<h3><font SIZE="-1">API</font></h3>
+<h3>API</h3>
 <p> <i>New APIs</i></p>
 <dl>
 <dt>&quot;f2fs_expand&quot;</dt>
 <dd> Expand an f2fs filesystem (Pino Toscano).</dd>
 <dt>&quot;inspect_get_osinfo&quot;</dt>
-<dd> Get the libosinfo short <font SIZE="-1">ID</font> for the inspected guest (Pino Toscano).</dd>
+<dd> Get the libosinfo short ID for the inspected guest (Pino Toscano).</dd>
 <dt>&quot;lvm_scan&quot;</dt>
 <dd> This rescans all PVs, VGs and LVs, optionally activating them.</dd></dl>
-<p> <i>Other </i><font SIZE="-1"><i>API</i></font><i> changes</i> </p>
+<p> <i>Other </i><i>API</i><i> changes</i> </p>
 <p> <tt>&quot;part_get_mbr_part_type&quot;</tt> was reimplemented in OCaml (Nikolay Ivanets). </p>
-<p> <tt>&quot;list_filesystems&quot;</tt> now filters out <font SIZE="-1">MBR</font> extended partitions (Nikolay Ivanets). </p>
-<p> <tt>&quot;vgscan&quot;</tt> has been deprecated. Use the new <tt>&quot;lvm_scan&quot;</tt> <font SIZE="-1">API</font> in preference.</p>
+<p> <tt>&quot;list_filesystems&quot;</tt> now filters out MBR extended partitions (Nikolay Ivanets). </p>
+<p> <tt>&quot;vgscan&quot;</tt> has been deprecated. Use the new <tt>&quot;lvm_scan&quot;</tt> API in preference.</p>
 <h3>Build changes</h3>
-<p> The <font SIZE="-1">JSON</font> library switched from yajl to Jansson ≥ 2.7 (Pino Toscano). </p>
+<p> The JSON library switched from yajl to Jansson ≥ 2.7 (Pino Toscano). </p>
 <p> Support for The Sleuth Kit 4.5 (Pino Toscano). </p>
 <p> Multiple improvements in the <tt>&quot;./configure&quot;</tt> script (Lin Ma). </p>
 <p> More out-of-tree build fixes (Hilko Bengen). </p>
 <p> Some work on reproducible builds (Bernhard M. Wiedemann).</p>
 <h3>Internals</h3>
-<p> lvmetad is now used unconditionally, and is started much earlier in the appliance boot process. This fixes support for certain <font SIZE="-1">PV</font> types. </p>
+<p> lvmetad is now used unconditionally, and is started much earlier in the appliance boot process. This fixes support for certain PV types. </p>
 <p> On Debian, dash is installed inside the appliance and in virt-rescue (Pino Toscano). </p>
-<p> The amount of <font SIZE="-1">RAM</font> assigned to the appliance has been increased from 500M to 768M (on x86_64, other architectures have different limits). This enables use of up to 255 disks when using recent Linux kernels. </p>
+<p> The amount of RAM assigned to the appliance has been increased from 500M to 768M (on x86_64, other architectures have different limits). This enables use of up to 255 disks when using recent Linux kernels. </p>
 <p> Virt-v2v now models the source machine type (eg. i440FX, Q35 or virt). </p>
 <p> Virt-p2v now generates configuration code automatically, also code for parsing the kernel command line. </p>
 <p> Use <tt>&quot;LT_INIT&quot;</tt> instead of <tt>&quot;AC_PROG_LIBTOOL&quot;</tt>. </p>
 <p> The OCaml <tt>&quot;JSON&quot;</tt> code for parsing and serializing has been unified into a single abstract data type. </p>
-<p> Most OCaml tools are now built using the <font SIZE="-1">PIC</font> runtime. This has a performance penalty on i686, but is relatively free on other architectures and has security benefits. </p>
-<p> The direct backend now queries the qemu binary for availability of <font SIZE="-1">KVM,</font> instead of using a heuristic based on <i>/dev/kvm</i> (Andrea Bolognani). </p>
+<p> Most OCaml tools are now built using the PIC runtime. This has a performance penalty on i686, but is relatively free on other architectures and has security benefits. </p>
+<p> The direct backend now queries the qemu binary for availability of KVM, instead of using a heuristic based on <i>/dev/kvm</i> (Andrea Bolognani). </p>
 <p> Our &#8220;clever&#8221; libxml2 writer macros are now used consistently across all parts of the code base. </p>
 <p> Qemu dropped <i>-nodefconfig</i> without telling us. The equivalent <i>-no-user-config</i> option is now used instead. Qemu also moved the <tt>&quot;serial&quot;</tt> option from <i>-drive</i> to <i>-device</i>, again without any notice, and this is also fixed.</p>
 <h3>Bugs fixed</h3>
 <dl>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1664310">https://bugzilla.redhat.com/1664310</a></dt>
-<dd> [<font SIZE="-1">RHEL 7.6 LP</font>] openstack output leaks passwords</dd>
+<dd> [RHEL 7.6 LP] openstack output leaks passwords</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1661038">https://bugzilla.redhat.com/1661038</a></dt>
 <dd> virt-inspector fails with &#8220;error: int_of_string&#8221; on a Linux image when /etc/fstab contains a partionless device</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1651432">https://bugzilla.redhat.com/1651432</a></dt>
-<dd> v2v &#8211; support for -insecure option to support <font SIZE="-1">OSP SSL</font> connection for <font SIZE="-1">VM</font> migrations</dd>
+<dd> v2v &#8211; support for -insecure option to support OSP SSL connection for VM migrations</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1642044">https://bugzilla.redhat.com/1642044</a></dt>
-<dd> [<font SIZE="-1">RFE</font>] virt-p2v <font SIZE="-1">UI</font> should give the option to shutdown after conversion is finished</dd>
+<dd> [RFE] virt-p2v UI should give the option to shutdown after conversion is finished</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1634248">https://bugzilla.redhat.com/1634248</a></dt>
 <dd> virt-v2v cannot convert opensuse15 guest</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1624902">https://bugzilla.redhat.com/1624902</a></dt>
 <dd> Fix rhev-apt command that virt-v2v runs in Windows guests on first boot</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1624878">https://bugzilla.redhat.com/1624878</a></dt>
-<dd> Update v2v docs to describe support for <font SIZE="-1">SHA 2</font> certs required for converting Windows 7 and 2008 R2 guests</dd>
+<dd> Update v2v docs to describe support for SHA 2 certs required for converting Windows 7 and 2008 R2 guests</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1615885">https://bugzilla.redhat.com/1615885</a></dt>
 <dd> Minor log issue of virt-v2v</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1614276">https://bugzilla.redhat.com/1614276</a></dt>
-<dd> VixDiskLib: VixDiskLib_Read: Read 4096 sectors at 57516160 failed. Error 2 (Memory allocation failed. Out of memory.) (DiskLib error 802: <font SIZE="-1">NBD_ERR_INSUFFICIENT_RESOURCES</font>) at 5240.</dd>
+<dd> VixDiskLib: VixDiskLib_Read: Read 4096 sectors at 57516160 failed. Error 2 (Memory allocation failed. Out of memory.) (DiskLib error 802: NBD_ERR_INSUFFICIENT_RESOURCES) at 5240.</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1612785">https://bugzilla.redhat.com/1612785</a></dt>
 <dd> &#8220;warning: &lt;target dev=&#8217;sr0&#8242;&gt; was ignored because the device name could not be recognized&#8221; should be hidden since convert cdrom is supported by virt-v2v</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1611690">https://bugzilla.redhat.com/1611690</a></dt>
 <dd> part_to_dev &#8220;/dev/sdp1&#8221; returns &#8220;/dev/sd&#8221; instead of &#8220;/dev/sdp&#8221;</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1608131">https://bugzilla.redhat.com/1608131</a></dt>
-<dd> inspection fails when swap partition in /etc/fstab has incorrect <font SIZE="-1">UUID</font> compared to actual swap partition</dd>
+<dd> inspection fails when swap partition in /etc/fstab has incorrect UUID compared to actual swap partition</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1605071">https://bugzilla.redhat.com/1605071</a></dt>
-<dd> On machines where /dev/kvm exists but <font SIZE="-1">KVM</font> doesn&#8217;t work, libguestfs will not fall back to <font SIZE="-1">TCG</font></dd>
+<dd> On machines where /dev/kvm exists but KVM doesn&#8217;t work, libguestfs will not fall back to TCG</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1602353">https://bugzilla.redhat.com/1602353</a></dt>
-<dd> virt-inspector can&#8217;t inspect LUKS-encrypted <font SIZE="-1">RHEL7</font> guest image</dd>
+<dd> virt-inspector can&#8217;t inspect LUKS-encrypted RHEL7 guest image</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1601943">https://bugzilla.redhat.com/1601943</a></dt>
 <dd> Improve error &#8220;No module named ovirtsdk4&#8221; in v2v rhv-upload conversion</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1598715">https://bugzilla.redhat.com/1598715</a></dt>
-<dd> Adding <font SIZE="-1">QXL</font> device in <font SIZE="-1">OVF</font> causes Cirrus Logic device to be added to guest</dd>
+<dd> Adding QXL device in OVF causes Cirrus Logic device to be added to guest</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1598350">https://bugzilla.redhat.com/1598350</a></dt>
-<dd> <font SIZE="-1">RFE:</font> virt-v2v should preserve &lt;genid&gt;</dd>
+<dd> RFE: virt-v2v should preserve &lt;genid&gt;</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1596851">https://bugzilla.redhat.com/1596851</a></dt>
 <dd> Transfer fails if local host is in maintenance mode</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1596810">https://bugzilla.redhat.com/1596810</a></dt>
-<dd> Transfer fails if local host belongs to another <font SIZE="-1">DC</font></dd>
+<dd> Transfer fails if local host belongs to another DC</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1592468">https://bugzilla.redhat.com/1592468</a></dt>
-<dd> v2v to <font SIZE="-1">RHV</font> transfer fails with: error: [empty name]: cannot read &#8216;//*/disksection&#8217; with value: null</dd>
+<dd> v2v to RHV transfer fails with: error: [empty name]: cannot read &#8216;//*/disksection&#8217; with value: null</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1592061">https://bugzilla.redhat.com/1592061</a></dt>
 <dd> virt-v2v convert rhel5.3 failure when executing rpm -ql kernel-2.6.18-128.el5 command</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1591789">https://bugzilla.redhat.com/1591789</a></dt>
-<dd> p2v: error: <font SIZE="-1">XML</font> error: <font SIZE="-1">CPU</font> vendor specified without <font SIZE="-1">CPU</font> model</dd>
+<dd> p2v: error: XML error: CPU vendor specified without CPU model</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1590220">https://bugzilla.redhat.com/1590220</a></dt>
 <dd> Hide rhv-upload option in virt-p2v client</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1588451">https://bugzilla.redhat.com/1588451</a></dt>
-<dd> Don&#8217;t use relative socket paths for <font SIZE="-1">NBD</font></dd>
+<dd> Don&#8217;t use relative socket paths for NBD</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1588088">https://bugzilla.redhat.com/1588088</a></dt>
-<dd> <font SIZE="-1">RFE:</font> Support for -o rhv-upload via Unix domain socket</dd>
+<dd> RFE: Support for -o rhv-upload via Unix domain socket</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1586198">https://bugzilla.redhat.com/1586198</a></dt>
 <dd> ovirt-imageio-daemon times out during migration</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1580309">https://bugzilla.redhat.com/1580309</a></dt>
@@ -142,7 +142,7 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1580292">https://bugzilla.redhat.com/1580292</a></dt>
 <dd> Virt-v2v rhel7.6 build can&#8217;t convert guest with qemu-kvm rhel7.5.z build</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1579047">https://bugzilla.redhat.com/1579047</a></dt>
-<dd> virt-builder: ubuntu-18.04 template has stray <font SIZE="-1">HTTP</font> proxy configured for apt</dd>
+<dd> virt-builder: ubuntu-18.04 template has stray HTTP proxy configured for apt</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1575640">https://bugzilla.redhat.com/1575640</a></dt>
 <dd> virt-builder: error: host cpu (x86_64) and guest arch (unknown) are not compatible</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1570407">https://bugzilla.redhat.com/1570407</a></dt>
@@ -152,25 +152,25 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1564983">https://bugzilla.redhat.com/1564983</a></dt>
 <dd> The mount-vfs failed to mount the logical volume</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1561828">https://bugzilla.redhat.com/1561828</a></dt>
-<dd> <font SIZE="-1">RHV</font> tools not properly installed in migrated Windows <font SIZE="-1">VM</font>&#8216;s causing boot failure</dd>
+<dd> RHV tools not properly installed in migrated Windows VM&#8216;s causing boot failure</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1559027">https://bugzilla.redhat.com/1559027</a></dt>
 <dd> virt-v2v does not honor &#8211;network with -o rhv-upload</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1557273">https://bugzilla.redhat.com/1557273</a></dt>
-<dd> [<font SIZE="-1">RFE</font>] Upload images directly to oVirt (virt-v2v -o rhv-upload)</dd>
+<dd> [RFE] Upload images directly to oVirt (virt-v2v -o rhv-upload)</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1544842">https://bugzilla.redhat.com/1544842</a></dt>
-<dd> [<font SIZE="-1">RFE</font>] Add libosinfo short-id to virt-inspector output</dd>
+<dd> [RFE] Add libosinfo short-id to virt-inspector output</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1544674">https://bugzilla.redhat.com/1544674</a></dt>
 <dd> virt-inspector &#8211;help differs from manpage</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1544227">https://bugzilla.redhat.com/1544227</a></dt>
-<dd> <font SIZE="-1">RFE:</font> recognize the Kali Linux distribution</dd>
+<dd> RFE: recognize the Kali Linux distribution</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1532224">https://bugzilla.redhat.com/1532224</a></dt>
 <dd> Resume=/dev/sdaX can&#8217;t be updated to resume=/dev/vdaX in rhel7 guest&#8217;s grub file after v2v conversion</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1530967">https://bugzilla.redhat.com/1530967</a></dt>
-<dd> Change categories of &#8220;Guest Operating system management by <font SIZE="-1">VIX API&#8221;</font> in v2v man page</dd>
+<dd> Change categories of &#8220;Guest Operating system management by VIX API&#8221; in v2v man page</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1527334">https://bugzilla.redhat.com/1527334</a></dt>
 <dd> Various -it vddk -io vddk* options should be documented, removed or fixed</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1148012">https://bugzilla.redhat.com/1148012</a></dt>
-<dd> <code>Reverted:</code> <font SIZE="-1">RFE:</font> Allow qemu-bridge-helper to be used to implement guestfs_set_network</dd></dl>
+<dd> <code>Reverted:</code> RFE: Allow qemu-bridge-helper to be used to implement guestfs_set_network</dd></dl>
 <h2>RELEASE NOTES FOR LIBGUESTFS 1.38</h2>
 <p> These release notes only cover the differences from the previous stable/dev branch split (1.36.0). For detailed changelogs, please see the git repository, or the ChangeLog file distributed in the tarball.</p>
 <h3>New features</h3>
@@ -179,28 +179,28 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <p> Virt-rescue (while not a new tool) has been substantially rewritten, implementing job control, <i>-m</i> and <i>-i</i> options, escape keys, etc. </p>
 <p> <i>New features in existing tools</i> </p>
 <p> Virt-builder planner has been improved so that faster and more efficient build plans are chosen for complex cases, especially when either the tmpdir or output is on networked storage. </p>
-<p> New virt-builder Fedora templates (starting with Fedora 26) will have plain partition layout and use <font SIZE="-1">GPT</font> for partitions. </p>
+<p> New virt-builder Fedora templates (starting with Fedora 26) will have plain partition layout and use GPT for partitions. </p>
 <p> Virt-customize &#8220;firstboot&#8221; scripts in guests using systemd are now installed under the <tt>&quot;multi-user.target&quot;</tt> instead of <tt>&quot;default.target&quot;</tt> so they will only run when the system is booted normally. </p>
 <p> Virt-customize now sets a random <i>/etc/machine-id</i> for Linux guests, if one is not already set. </p>
 <p> Virt-df now works correctly on filesystems with block sizes smaller than 1K (Nikolay Ivanets). </p>
 <p> Virt-dib has further compatibility enhancements with diskimage-builder (Pino Toscano). </p>
 <p> Virt-sysprep removes <tt>&quot;DHCP_HOSTNAME&quot;</tt> from <i>ifcfg-*</i> files. </p>
 <p> Virt-sysprep now works on Oracle Linux (Jamie Iles). </p>
-<p> Virt-resize now correctly copies <font SIZE="-1">GPT</font> partition attributes from the source to the destination (Cédric Bosdonnat). </p>
+<p> Virt-resize now correctly copies GPT partition attributes from the source to the destination (Cédric Bosdonnat). </p>
 <p> Bash tab completion implemented or enhanced for: virt-win-reg, virt-v2v-copy-to-local. </p>
 <p> <i>virt-v2v and virt-p2v</i> </p>
-<p> Virt-v2v can now read VMware <font SIZE="-1">VMX</font> files directly, either from local disk, <font SIZE="-1">NFS</font> storage, or over <font SIZE="-1">SSH</font> from an ESXi hypervisor. </p>
-<p> Virt-v2v can now use <font SIZE="-1">VDDK</font> as an input source. </p>
-<p> Both virt-v2v and virt-p2v are now able to pass through the source <font SIZE="-1">CPU</font> vendor, model and topology. However unfortunately not all source and target hypervisors are able to provide or consume this data at present (Tomáš Golembiovský). </p>
+<p> Virt-v2v can now read VMware VMX files directly, either from local disk, NFS storage, or over SSH from an ESXi hypervisor. </p>
+<p> Virt-v2v can now use VDDK as an input source. </p>
+<p> Both virt-v2v and virt-p2v are now able to pass through the source CPU vendor, model and topology. However unfortunately not all source and target hypervisors are able to provide or consume this data at present (Tomáš Golembiovský). </p>
 <p> Virt-v2v now supports encrypted guests (Pino Toscano). </p>
 <p> Virt-v2v can now handle VMware snapshots. Note that the snapshots are collapsed — it <i>does not</i> convert the chain of snapshots into a chain of snapshots. </p>
 <p> Virt-v2v now installs Windows 10 / Windows Server 2016 virtio block drivers correctly (Pavel Butsykin, Kun Wei). </p>
 <p> Virt-v2v now installs virtio-rng, balloon and pvpanic drivers, and correctly sets this in the target hypervisor metadata for hypervisors which support that (Tomáš Golembiovský). </p>
 <p> Virt-v2v now installs both legacy and modern virtio keys in the Windows registry (Ladi Prosek). </p>
-<p> Virt-p2v can now preserve (in some cases) the offset of the Real Time Clock from <font SIZE="-1">UTC.</font> </p>
+<p> Virt-p2v can now preserve (in some cases) the offset of the Real Time Clock from UTC. </p>
 <p> Virt-p2v now combines several scp commands to the conversion server into a single command, improving conversion times. </p>
 <p> Virt-v2v now detects the special Linux Xen PV-only kernels correctly (Laszlo Ersek). </p>
-<p> Virt-v2v <i>-o glance</i> now generates the right properties for <font SIZE="-1">UEFI</font> guests (Pino Toscano). </p>
+<p> Virt-v2v <i>-o glance</i> now generates the right properties for UEFI guests (Pino Toscano). </p>
 <p> Virt-v2v <i>-o null</i> now avoids spooling the guest to a temporary file, instead it writes to the qemu &#8220;null block device&#8221;. This makes it faster and use almost no disk space. </p>
 <p> Virt-v2v <i>-o rhv</i> now supports Windows 2016 Server guest type. </p>
 <p> Virt-v2v <i>-i libvirtxml</i> can now open network disks over http or https. </p>
@@ -211,25 +211,25 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <p> Perl <tt>%guestfs_introspection</tt> has been dropped. </p>
 <p> <i>Inspection</i> </p>
 <p> Inspection support was rewritten in OCaml and included inside the daemon. This makes inspection considerably faster, more robust and more easily extensible in future. </p>
-<p> Better icon support for <font SIZE="-1">ALT</font> Linux guests (Pino Toscano). </p>
+<p> Better icon support for ALT Linux guests (Pino Toscano). </p>
 <p> Better support for NeoKylin (Qingzheng Zhang). </p>
 <p> Can handle OSes like Void Linux which do not include <tt>&quot;VERSION_ID&quot;</tt> in <i>/etc/os-release</i> (Pino Toscano). </p>
 <p> Add support for Microsoft MS-DOS (Daniel Berrangé). </p>
 <p> <i>Architectures and platforms</i> </p>
 <p> Multiple fixes for S/390 architecture. Libguestfs and all the tools should now compile and run on this architecture. </p>
 <p> <i>Other</i> </p>
-<p> The libguestfs <font SIZE="-1">API</font> is now thread-safe (although not parallel). You can call APIs on the same handle from multiple threads without needing to take a lock.</p>
+<p> The libguestfs API is now thread-safe (although not parallel). You can call APIs on the same handle from multiple threads without needing to take a lock.</p>
 <h3>Security</h3>
 <p> There were multiple vulnerabilities in the icoutils <tt>&quot;wrestool&quot;</tt> program which is run by libguestfs to create icons for Windows guests. Using the latest <tt>&quot;wrestool&quot;</tt> is recommended.</p>
-<h3><font SIZE="-1">API</font></h3>
+<h3>API</h3>
 <p> <i>New APIs</i></p>
 <dl>
 <dt>&quot;hivex_value_string&quot;</dt>
-<dd> This replaces the deprecated <tt>&quot;hivex_value_utf8&quot;</tt> <font SIZE="-1">API,</font> but does the same thing.</dd>
+<dd> This replaces the deprecated <tt>&quot;hivex_value_utf8&quot;</tt> API, but does the same thing.</dd>
 <dt>&quot;part_get_gpt_attributes&quot;</dt>
 <dd>
 </dd><dt>&quot;part_set_gpt_attributes&quot;</dt>
-<dd> Read and write <font SIZE="-1">GPT</font> partition attribute flags (Cédric Bosdonnat).</dd>
+<dd> Read and write GPT partition attribute flags (Cédric Bosdonnat).</dd>
 <dt>&quot;part_resize&quot;</dt>
 <dd> Enlarge or shrink an existing partition (Nikos Skalkotos).</dd>
 <dt>&quot;yara_destroy&quot;</dt>
@@ -238,7 +238,7 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <dd>
 </dd><dt>&quot;yara_scan&quot;</dt>
 <dd> Support for the Yara malware scanning engine (Matteo Cafasso).</dd></dl>
-<p> <i>Other </i><font SIZE="-1"><i>API</i></font><i> changes</i> </p>
+<p> <i>Other </i><i>API</i><i> changes</i> </p>
 <p> APIs implemented in the daemon can now be written in either C or OCaml. Several APIs were rewritten in OCaml, although we are not planning to rewrite all of them. </p>
 <p> You will now get a clear error message if you try to add too many disks to the appliance, instead of getting a peculiar failure from qemu. </p>
 <p> Certain APIs accidentally allowed you to use <tt>&quot;/dev/urandom&quot;</tt> as an input &#8220;device&#8221;, eg. <tt>&quot;g.copy_device_to_device(&quot;/dev/urandom&quot;, &quot;/dev/sda&quot;)&quot;</tt>. The code has been modified to <i>forbid</i> this usage. </p>
@@ -247,7 +247,7 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <p> A working OCaml compiler ≥ 4.01 is now required for building libguestfs. The <tt>&quot;./configure --disable-ocaml&quot;</tt> option remains but is only used to disable the OCaml language bindings. </p>
 <p> Add <tt>&quot;RELEASES&quot;</tt> file which lists release dates for each version of libguestfs. You must update this file when making a new release. </p>
 <p> Documentation generated by <tt>&quot;gtk-doc&quot;</tt> has been removed. <tt>&quot;./configure --enable-gtk-doc&quot;</tt> now does nothing. </p>
-<p> Libtirpc is now used for <font SIZE="-1">XDR</font> functions and rpcgen. Note that glibc has deprecated and in most Linux distros dropped these, so for most people this will be an extra dependency (Martin Kletzander). </p>
+<p> Libtirpc is now used for XDR functions and rpcgen. Note that glibc has deprecated and in most Linux distros dropped these, so for most people this will be an extra dependency (Martin Kletzander). </p>
 <p> Libxcrypt is now used for <code><a href="/docs/linux/man/3-crypt/">crypt</a></code>(3). This is required if using glibc ≥ 2.27. </p>
 <p> <tt>&quot;ocaml-hivex&quot;</tt> is now required. </p>
 <p> Libvirt ≥ 1.2.20 is now required. </p>
@@ -256,20 +256,20 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <p> The <tt>&quot;AUTHORS&quot;</tt> and <tt>&quot;p2v/about-authors.c&quot;</tt> files are now generated from a single place. </p>
 <p> Either GnuPG v1 or v2 can be used. </p>
 <p> <tt>&quot;./configure --with-guestfs-path&quot;</tt> may be used to set the default <tt>&quot;LIBGUESTFS_PATH&quot;</tt>. In addition the way that the path is searched has changed slightly so that all types of appliances are searched in each path element separately (Pavel Butsykin). </p>
-<p> <tt>&quot;GUESTFSD_EXT_CMD&quot;</tt> which was used to mark external commands in the daemon has been removed. It was originally used by <font SIZE="-1">SUSE</font> builds, but they have not been using it for a while. </p>
+<p> <tt>&quot;GUESTFSD_EXT_CMD&quot;</tt> which was used to mark external commands in the daemon has been removed. It was originally used by SUSE builds, but they have not been using it for a while. </p>
 <p> The output from <tt>&quot;./configure&quot;</tt> is now visually grouped under headings related to what it is doing, making it much easier to scan (Pino Toscano). </p>
 <p> OCaml dependencies are now generated from a single script instead of multiple not-quite-the-same Makefile fragments. </p>
 <p> <tt>&quot;./configure --with-distro=ID&quot;</tt> can be used to override automatic Linux distro detection at build time (Pino Toscano). </p>
 <p> qemu ≥ 2.10 is supported (but not required). This adds mandatory locking to disks and libguestfs turns this off in certain circumstances when it is known to be safe (Lars Seipel, Peter Krempa, Daniel Berrangé, Pino Toscano, Fam Zheng, Yongkui Guo, Václav Kadlčík).</p>
 <h3>Internals</h3>
 <p> Most common code has been moved to the <i>common/</i> subdirectory, with OCaml common code being in <i>common/ml*</i> directories (eg. <i>common/visit</i> and <i>common/mlvisit</i> contain the visitor library in C and OCaml respectively). The <i>mllib</i> directory has been deleted and replaced by <i>common/mltools</i>. </p>
-<p> There is now a lightweight OCaml binding for <font SIZE="-1">PCRE,</font> see <i>common/mlpcre</i>. Use of OCaml <tt>&quot;Str&quot;</tt> library has been mostly replaced with <font SIZE="-1">PCRE.</font> </p>
+<p> There is now a lightweight OCaml binding for PCRE, see <i>common/mlpcre</i>. Use of OCaml <tt>&quot;Str&quot;</tt> library has been mostly replaced with PCRE. </p>
 <p> Add more calls to <tt>&quot;udev_settle&quot;</tt> to improve stability of partition code (Dawid Zamirski). </p>
 <p> Run <tt>&quot;udev_settle&quot;</tt> with <i>&#8211;exit-if-exists</i> option, which improves the speed of this command (Pavel Butsykin). </p>
 <p> Detect new locations of <code><a href="/docs/linux/man/3-major/">major</a></code>(3), <code><a href="/docs/linux/man/3-minor/">minor</a></code>(3), <code><a href="/docs/linux/man/3-makedev/">makedev</a></code>(3). </p>
 <p> Actions can now be deprecated with no suggested replacement, for APIs such as <tt>&quot;guestfs_wait_ready&quot;</tt> that should simply be removed from client code. </p>
 <p> Use gnulib <tt>&quot;set_nonblocking_flag&quot;</tt> wrapper instead of calling <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2) with <tt>&quot;O_NONBLOCK&quot;</tt> (Eric Blake). Similarly <tt>&quot;set_cloexec_flag&quot;</tt>. </p>
-<p> Fix memory leak in <font SIZE="-1">XFS</font> version of <tt>&quot;guestfs_vfs_minimum_size&quot;</tt> (Pino Toscano). </p>
+<p> Fix memory leak in XFS version of <tt>&quot;guestfs_vfs_minimum_size&quot;</tt> (Pino Toscano). </p>
 <p> Valgrind checks now run on the virt-p2v binary. </p>
 <p> Unicode single quotes (<tt>&quot;‘’&quot;</tt>) and now used in place of <tt>''</tt> or <tt>`'</tt> throughout the code and documentation. Similarly for <tt>&quot;’s&quot;</tt> instead of <tt>&quot;'s&quot;</tt>. </p>
 <p> The <tt>&quot;is_zero&quot;</tt> function has been reimplemented for greater speed (Eric Blake). </p>
@@ -277,8 +277,8 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <p> Generator string parameter and return types have been rationalised so there are only two types (<tt>&quot;String&quot;</tt>, <tt>&quot;StringList&quot;</tt>) with many subtypes eg. <tt>&quot;FileIn&quot;</tt> becomes <tt>&quot;String (FileIn, ...)&quot;</tt>. </p>
 <p> The appliance disk image can now be in formats other than raw (Pavel Butsykin). </p>
 <p> Multiple improvements to how we automatically build Debian templates for virt-builder (Pino Toscano). Enable serial console for these templates (Florian Klink). </p>
-<p> In the daemon, instead of making a private copy of lvm.conf and modifying it (eg for filters), start with an empty file since <font SIZE="-1">LVM</font> understands that to mean &#8220;all defaults&#8221; (Alasdair Kergon, Zdenek Kabelac). </p>
-<p> The <tt>&quot;direct&quot;</tt> backend can now run <font SIZE="-1">QMP</font> queries against the <font SIZE="-1">QEMU</font> binary, enhancing the kinds of information we can detect. In addition the code to query <font SIZE="-1">QEMU</font> has been made more robust for handling multiple parallel queries of different versions of <font SIZE="-1">QEMU.</font> </p>
+<p> In the daemon, instead of making a private copy of lvm.conf and modifying it (eg for filters), start with an empty file since LVM understands that to mean &#8220;all defaults&#8221; (Alasdair Kergon, Zdenek Kabelac). </p>
+<p> The <tt>&quot;direct&quot;</tt> backend can now run QMP queries against the QEMU binary, enhancing the kinds of information we can detect. In addition the code to query QEMU has been made more robust for handling multiple parallel queries of different versions of QEMU. </p>
 <p> OCaml Augeas bindings are bundled under <i>common/mlaugeas</i>. The long term plan is to remove this and use system ocaml-augeas when it is more widely available in distros (Pino Toscano). </p>
 <p> All OCaml modules (<tt>&quot;*.ml&quot;</tt> files) are now required to have an interface file (<tt>&quot;*.mli&quot;</tt>). If they don&#8217;t export anything then the interface will be empty except for comments. </p>
 <p> Certain OCaml features in OCaml ≥ 4.01 are used throughout the code, including replacing ‘{ field = field }’ with ‘{ field }’. </p>
@@ -291,7 +291,7 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <h3>Bugs fixed</h3>
 <dl>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1540535">https://bugzilla.redhat.com/1540535</a></dt>
-<dd> Example <font SIZE="-1">URI</font> of &#8220;Convert from ESXi hypervisor over <font SIZE="-1">SSH</font> to local libvirt&#8221; is incorrect in v2v man page</dd>
+<dd> Example URI of &#8220;Convert from ESXi hypervisor over SSH to local libvirt&#8221; is incorrect in v2v man page</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1539395">https://bugzilla.redhat.com/1539395</a></dt>
 <dd> virt-customize segfaults after upgrading to 1.37.35-3</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1536765">https://bugzilla.redhat.com/1536765</a></dt>
@@ -307,15 +307,15 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1518517">https://bugzilla.redhat.com/1518517</a></dt>
 <dd> virt-v2v fails with &#8220;unsupported configuration: shared access for disk &#8216;sdb&#8217; requires use of supported storage format&#8221;</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1516094">https://bugzilla.redhat.com/1516094</a></dt>
-<dd> Mere presence of <font SIZE="-1">QEMU</font> file locking options breaks <font SIZE="-1">NBD</font> (Block protocol &#8216;nbd&#8217; doesn&#8217;t support the option &#8216;locking&#8217;)</dd>
+<dd> Mere presence of QEMU file locking options breaks NBD (Block protocol &#8216;nbd&#8217; doesn&#8217;t support the option &#8216;locking&#8217;)</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1514756">https://bugzilla.redhat.com/1514756</a></dt>
 <dd> ./configure &#8211;disable-ocaml breaks building common/mlpcre which breaks building daemon</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1513884">https://bugzilla.redhat.com/1513884</a></dt>
-<dd> [<font SIZE="-1">RFE</font>]Should update some vddk info in v2v man page</dd>
+<dd> [RFE]Should update some vddk info in v2v man page</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1508874">https://bugzilla.redhat.com/1508874</a></dt>
 <dd> virt-v2v: warning: ova disk has an unknown VMware controller type (20)</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1506572">https://bugzilla.redhat.com/1506572</a></dt>
-<dd> virt-v2v &#8216;-i ova&#8217; is not parsing the <font SIZE="-1">MAC</font> address from the source <font SIZE="-1">OVF</font></dd>
+<dd> virt-v2v &#8216;-i ova&#8217; is not parsing the MAC address from the source OVF</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1506511">https://bugzilla.redhat.com/1506511</a></dt>
 <dd> virt-builder fails to parse repo file if it has blank space after the repository identifier</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1503958">https://bugzilla.redhat.com/1503958</a></dt>
@@ -333,75 +333,75 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1484957">https://bugzilla.redhat.com/1484957</a></dt>
 <dd> bump debian images to use single-partition layout</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1482737">https://bugzilla.redhat.com/1482737</a></dt>
-<dd> virt-resize failed to expand swap partition for <font SIZE="-1">RHEL5.11</font> guest image with &#8220;parsing <font SIZE="-1">UUID</font> failed&#8221;</dd>
+<dd> virt-resize failed to expand swap partition for RHEL5.11 guest image with &#8220;parsing UUID failed&#8221;</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1477623">https://bugzilla.redhat.com/1477623</a></dt>
-<dd> Running file <font SIZE="-1">API</font> on a special chardev may hang forever</dd>
+<dd> Running file API on a special chardev may hang forever</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1476081">https://bugzilla.redhat.com/1476081</a></dt>
 <dd> inspect-os report error: could not parse integer in version number: V7Update2</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1472719">https://bugzilla.redhat.com/1472719</a></dt>
-<dd> [<font SIZE="-1">RFE</font>]Add warning in process of v2v converting guest which has pci passthrough device</dd>
+<dd> [RFE]Add warning in process of v2v converting guest which has pci passthrough device</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1472208">https://bugzilla.redhat.com/1472208</a></dt>
 <dd> virt-v2v fails on opensuse 13.2 guest with error: statns: statns_stub: path must start with a / character</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1469655">https://bugzilla.redhat.com/1469655</a></dt>
 <dd> firstboot scripts are not correctly installed in Fedora 26</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1466563">https://bugzilla.redhat.com/1466563</a></dt>
-<dd> Libguestfs should pass copyonread flag through to the libvirt <font SIZE="-1">XML</font></dd>
+<dd> Libguestfs should pass copyonread flag through to the libvirt XML</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1465665">https://bugzilla.redhat.com/1465665</a></dt>
-<dd> 1.36.x build failure: gtkdocize fails using newer autotools due to missing <font SIZE="-1">GTK_DOC_CHECK</font> in configure.ac</dd>
+<dd> 1.36.x build failure: gtkdocize fails using newer autotools due to missing GTK_DOC_CHECK in configure.ac</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1460338">https://bugzilla.redhat.com/1460338</a></dt>
 <dd> guestfs_shutdown hangs if main process sets signal handlers</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1459979">https://bugzilla.redhat.com/1459979</a></dt>
 <dd> guestfs_add_domain_argv fails with readonly option when vdi/vhd disk is attached to libvirt domain</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1451665">https://bugzilla.redhat.com/1451665</a></dt>
-<dd> <font SIZE="-1">RFE:</font> Virt-v2v can&#8217;t convert the guest which has encrypted partition</dd>
+<dd> RFE: Virt-v2v can&#8217;t convert the guest which has encrypted partition</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1450325">https://bugzilla.redhat.com/1450325</a></dt>
-<dd> document <font SIZE="-1">URI</font> format for -a parameters of tools</dd>
+<dd> document URI format for -a parameters of tools</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1448739">https://bugzilla.redhat.com/1448739</a></dt>
-<dd> <font SIZE="-1">RFE:</font> Support multicore decompression for <font SIZE="-1">OVA</font> files using pigz and pxz</dd>
+<dd> RFE: Support multicore decompression for OVA files using pigz and pxz</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1447202">https://bugzilla.redhat.com/1447202</a></dt>
-<dd> Win 2016 guest is described as Win 10 after imported to <font SIZE="-1">RHEVM</font></dd>
+<dd> Win 2016 guest is described as Win 10 after imported to RHEVM</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1441197">https://bugzilla.redhat.com/1441197</a></dt>
-<dd> <font SIZE="-1">RFE:</font> ability to convert VMware virtual machines via vmx</dd>
+<dd> RFE: ability to convert VMware virtual machines via vmx</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1438939">https://bugzilla.redhat.com/1438939</a></dt>
 <dd> Please drop or update GnuPG (1.4.x) dependency</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1438794">https://bugzilla.redhat.com/1438794</a></dt>
-<dd> [<font SIZE="-1">RFE</font>] Install Windows virtio-rng drivers on VMs imported</dd>
+<dd> [RFE] Install Windows virtio-rng drivers on VMs imported</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1433937">https://bugzilla.redhat.com/1433937</a></dt>
 <dd> virt-inspector can&#8217;t get icon info from altlinux-centaurus</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1433577">https://bugzilla.redhat.com/1433577</a></dt>
 <dd> policycoreutils setfiles &gt;= 2.6 does .. nothing</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1431579">https://bugzilla.redhat.com/1431579</a></dt>
-<dd> Windows 8 <font SIZE="-1">UEFI</font> from VMware to <font SIZE="-1">KVM</font> fails to boot after conversion</dd>
+<dd> Windows 8 UEFI from VMware to KVM fails to boot after conversion</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1430680">https://bugzilla.redhat.com/1430680</a></dt>
 <dd> There is error info about &#8220;No such file or directory&#8221; when convert a guest from ova file by v2v</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1430184">https://bugzilla.redhat.com/1430184</a></dt>
 <dd> virt-dib should generate sha256 checksum instead of sha512</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1429506">https://bugzilla.redhat.com/1429506</a></dt>
-<dd> <font SIZE="-1">RFE: OVMF</font> should be detected on conversion server to prevent failed conversion</dd>
+<dd> RFE: OVMF should be detected on conversion server to prevent failed conversion</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1429491">https://bugzilla.redhat.com/1429491</a></dt>
 <dd> Should rename network name of rhv in virt-v2v man page</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1427529">https://bugzilla.redhat.com/1427529</a></dt>
-<dd> virt-sysprep should remove <font SIZE="-1">DHCP_HOSTNAME</font></dd>
+<dd> virt-sysprep should remove DHCP_HOSTNAME</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1417306">https://bugzilla.redhat.com/1417306</a></dt>
-<dd> <font SIZE="-1">QEMU</font> image file locking (libguestfs)</dd>
+<dd> QEMU image file locking (libguestfs)</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1409024">https://bugzilla.redhat.com/1409024</a></dt>
 <dd> [Debian] Missing db_dump abort inspection</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1406906">https://bugzilla.redhat.com/1406906</a></dt>
 <dd> Segmentation fault when reading corrupted path with Python 3 bindings</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1379289">https://bugzilla.redhat.com/1379289</a></dt>
-<dd> <font SIZE="-1">RFE:</font> virt-p2v should support mnemonic operations</dd>
+<dd> RFE: virt-p2v should support mnemonic operations</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1378022">https://bugzilla.redhat.com/1378022</a></dt>
-<dd> There is virt-v2v warning about &lt;listen type=&#8217;none&#8217;&gt; during converting a guest which has listen type=&#8217;none&#8217; in <font SIZE="-1">XML</font></dd>
+<dd> There is virt-v2v warning about &lt;listen type=&#8217;none&#8217;&gt; during converting a guest which has listen type=&#8217;none&#8217; in XML</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1376547">https://bugzilla.redhat.com/1376547</a></dt>
 <dd> qemu-system-s390x: -device isa-serial,chardev=charserial0,id=serial0: &#8216;isa-serial&#8217; is not a valid device model name</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1374232">https://bugzilla.redhat.com/1374232</a></dt>
-<dd> selinux relabel fails on <font SIZE="-1">RHEL 6.2</font> guests with &#8220;libguestfs error: selinux_relabel: : Success&#8221;</dd>
+<dd> selinux relabel fails on RHEL 6.2 guests with &#8220;libguestfs error: selinux_relabel: : Success&#8221;</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1367738">https://bugzilla.redhat.com/1367738</a></dt>
 <dd> Missing bash completion scripts for: virt-diff guestunmount virt-copy-in virt-copy-out virt-customize virt-get-kernel virt-p2v-make-disk virt-p2v-make-kickstart virt-tar-in virt-tar-out virt-v2v-copy-to-local virt-win-reg</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1362649">https://bugzilla.redhat.com/1362649</a></dt>
-<dd> <font SIZE="-1">RFE:</font> virt-sysprep does not utilize libguestfs encryption support</dd>
+<dd> RFE: virt-sysprep does not utilize libguestfs encryption support</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1172425">https://bugzilla.redhat.com/1172425</a></dt>
-<dd> [<font SIZE="-1">RFE</font>]virt-v2v failed to convert VMware <font SIZE="-1">ESX VM</font> with snapshot</dd>
+<dd> [RFE]virt-v2v failed to convert VMware ESX VM with snapshot</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1171654">https://bugzilla.redhat.com/1171654</a></dt>
 <dd> Modify a file in virt-rescue with vi on some linux terminal such as yakuake, can lead to abnormal display in virt-rescue shell</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1167623">https://bugzilla.redhat.com/1167623</a></dt>
@@ -425,30 +425,30 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <p> Bash tab-completion is now available in every command line tool that is shipped. </p>
 <p> <i>virt-v2v and virt-p2v</i> </p>
 <p> Conversions of Debian (6+) and Ubuntu (10.04+) guests are now supported (Tomáš Golembiovský, Pino Toscano). </p>
-<p> Conversions from <font SIZE="-1">SUSE</font> Xen hypervisor have now been tested (Cédric Bosdonnat). </p>
+<p> Conversions from SUSE Xen hypervisor have now been tested (Cédric Bosdonnat). </p>
 <p> Windows conversions may now install a program <tt>&quot;pnp_wait.exe&quot;</tt> which prevents conflicts between the Windows Plug-and-Play Manager and our own scripts that install virtio device drivers. Enabling this requires the <tt>&quot;pnp_wait.exe&quot;</tt> program to be built separately (Roman Kagan). </p>
-<p> <font SIZE="-1">OVA</font> files exported from <font SIZE="-1">AWS</font> can now be converted (Shahar Havivi). </p>
-<p> When converting <font SIZE="-1">OVA</font> files, in some circumstances virt-v2v can now read disk images directly from the <font SIZE="-1">OVA</font> input file instead of needing to unpack the <font SIZE="-1">OVA</font> file to a temporary directory. This can save large amounts of disk space, and is quicker (Tomáš Golembiovský). </p>
-<p> Virt-p2v can now be built on <font SIZE="-1">RHEL 5</font> (2007-era) Linux and <font SIZE="-1">RHEL 6,</font> which means that 32 bit and hardware with ancient fakeraid disks can be virtualized. Binaries of virt-p2v based on these old versions of <font SIZE="-1">RHEL</font> can be found at <a rel="nofollow" href="http://oirase.annexia.org/virt-p2v/">http://oirase.annexia.org/virt-p2v/</a> </p>
-<p> Virt-p2v can now use nbdkit (an <font SIZE="-1">NBD</font> server) as an alternative to qemu-nbd. In addition, virt-p2v can use &#8220;socket activation&#8221; which is a more robust method for opening the <font SIZE="-1">NBD</font> listening socket. Socket activation works with qemu-nbd or nbdkit, but requires the most up to date versions. </p>
+<p> OVA files exported from AWS can now be converted (Shahar Havivi). </p>
+<p> When converting OVA files, in some circumstances virt-v2v can now read disk images directly from the OVA input file instead of needing to unpack the OVA file to a temporary directory. This can save large amounts of disk space, and is quicker (Tomáš Golembiovský). </p>
+<p> Virt-p2v can now be built on RHEL 5 (2007-era) Linux and RHEL 6, which means that 32 bit and hardware with ancient fakeraid disks can be virtualized. Binaries of virt-p2v based on these old versions of RHEL can be found at <a rel="nofollow" href="http://oirase.annexia.org/virt-p2v/">http://oirase.annexia.org/virt-p2v/</a> </p>
+<p> Virt-p2v can now use nbdkit (an NBD server) as an alternative to qemu-nbd. In addition, virt-p2v can use &#8220;socket activation&#8221; which is a more robust method for opening the NBD listening socket. Socket activation works with qemu-nbd or nbdkit, but requires the most up to date versions. </p>
 <p> To prevent timeouts during P2V conversions, virt-p2v inhibits power saving on the physical machine, and also sends ping packets over the ssh control and data connections. </p>
 <p> Virt-v2v no longer removes the <tt>&quot;Processor&quot;</tt> and <tt>&quot;Intelppm&quot;</tt> nodes from the Windows Registry. </p>
 <p> Xen and vCenter conversions can now be done using the libvirt backend, provided libvirt ≥ 2.1.0 is used. </p>
-<p> <i>/dev/srX</i> (<font SIZE="-1">SCSI</font> CD-ROM) devices are ignored (Tomáš Golembiovský). </p>
-<p> When converting <font SIZE="-1">SUSE</font> Linux guests, use <i>/etc/modprobe.conf.local</i> if it exists. </p>
+<p> <i>/dev/srX</i> (SCSI CD-ROM) devices are ignored (Tomáš Golembiovský). </p>
+<p> When converting SUSE Linux guests, use <i>/etc/modprobe.conf.local</i> if it exists. </p>
 <p> Removing VMware tools from Linux guests should now work reliably (Pino Toscano). </p>
-<p> When converting <font SIZE="-1">OVA</font> files, virt-v2v now checks the disk image hash contained in the manifest file, whereas previously it was ignored because of a mistake in the code. In addition, <font SIZE="-1">SHA256</font> hashes are now supported (Tomáš Golembiovský). </p>
-<p> When converting <font SIZE="-1">OVA</font> files that contain compressed disk images, we now trust the <tt>&quot;ovf:compression&quot;</tt> attribute from the metadata instead of using content sniffing on the disk image (Tomáš Golembiovský). </p>
+<p> When converting OVA files, virt-v2v now checks the disk image hash contained in the manifest file, whereas previously it was ignored because of a mistake in the code. In addition, SHA256 hashes are now supported (Tomáš Golembiovský). </p>
+<p> When converting OVA files that contain compressed disk images, we now trust the <tt>&quot;ovf:compression&quot;</tt> attribute from the metadata instead of using content sniffing on the disk image (Tomáš Golembiovský). </p>
 <p> A new flag <i>&#8211;vdsm-compat</i> has been added to <i>-o vdsm</i> mode, allowing more efficient qcow2 images to be generated. </p>
-<p> Since the <font SIZE="-1">RHEV</font> product [commercially supported version of oVirt] has now been renamed to <font SIZE="-1">RHV, &#8220;RHEV&#8221;</font> was changed to &#8220;<font SIZE="-1">RHV&#8221;</font> throughout the tooling. In particular, <i>-o rhev</i> becomes <i>-o rhv</i>, although the old name can be used for backwards compatibility. </p>
-<p> The <tt>&quot;RHEV-APT&quot;</tt> utility is only installed when the output hypervisor is oVirt or <font SIZE="-1">RHV.</font> </p>
+<p> Since the RHEV product [commercially supported version of oVirt] has now been renamed to RHV, &#8220;RHEV&#8221; was changed to &#8220;RHV&#8221; throughout the tooling. In particular, <i>-o rhev</i> becomes <i>-o rhv</i>, although the old name can be used for backwards compatibility. </p>
+<p> The <tt>&quot;RHEV-APT&quot;</tt> utility is only installed when the output hypervisor is oVirt or RHV. </p>
 <p> A problem with virt-v2v running out of memory when doing an SELinux relabel of the guest filesystem should now be resolved. </p>
 <p> <i>Language bindings</i> </p>
 <p> Setting <tt>&quot;EXTRA_JAVAC_FLAGS&quot;</tt> before <i>./configure</i> allows you to add arbitrary flags to <tt>&quot;javac&quot;</tt> when compiling the Java bindings. </p>
-<p> Use of any libguestfs <font SIZE="-1">API</font> which returned a single struct, from Perl or Java bindings, would have leaked memory. This has now been fixed (Pino Toscano). </p>
+<p> Use of any libguestfs API which returned a single struct, from Perl or Java bindings, would have leaked memory. This has now been fixed (Pino Toscano). </p>
 <p> <i>Inspection</i> </p>
 <p> Inspection of Windows guests with mildly corrupted Windows Registry hives should now work instead of failing with an error. This feature requires hivex ≥ 1.3.14 (Dawid Zamirski). </p>
-<p> For Debian guests, we can now read the <font SIZE="-1">URL,</font> source name, summary and full description of installed packages. For RPM-based guests we can read the <font SIZE="-1">URL,</font> summary and description (Pino Toscano). </p>
+<p> For Debian guests, we can now read the URL, source name, summary and full description of installed packages. For RPM-based guests we can read the URL, summary and description (Pino Toscano). </p>
 <p> Inspection of guest operating systems that use a separate <i>/usr</i> partition should now work more reliably (Pino Toscano). </p>
 <p> When parsing guest <i>/etc/fstab</i>, paths are reduced to a canonical form (eg. <tt>&quot;///usr//local//&quot;</tt> → <tt>&quot;/usr/local&quot;</tt>). </p>
 <p> Inspection of btrfs subvolumes now works where the <i>/etc/fstab</i> options field contains commas. </p>
@@ -464,11 +464,11 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <p> There were no CVEs reported in this development cycle. However some security-related hardening was carried out as described below. </p>
 <p> Temporary filenames are now always generated using randomness from <i>/dev/urandom</i> (previously the C function <code><a href="/docs/linux/man/3-random/">random</a></code>(3) was used in one case). </p>
 <p> The <tt>$TERM</tt> environment variable is now validated before passing it through to the appliance kernel command line.</p>
-<h3><font SIZE="-1">API</font></h3>
+<h3>API</h3>
 <p> <i>New APIs</i></p>
 <dl>
 <dt>&quot;guestfs_aug_transform&quot;</dt>
-<dd> Exposes the Augeas <tt>&quot;aug_transform&quot;</tt> <font SIZE="-1">API</font> (Pino Toscano).</dd>
+<dd> Exposes the Augeas <tt>&quot;aug_transform&quot;</tt> API (Pino Toscano).</dd>
 <dt>&quot;guestfs_find_inode&quot;</dt>
 <dd> Find files by inode number (Matteo Cafasso).</dd>
 <dt>&quot;guestfs_inspect_get_windows_software_hive&quot;</dt>
@@ -477,26 +477,26 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <dd> Return the path to the Windows <tt>&quot;HKLM\SYSTEM&quot;</tt> and <tt>&quot;HKLM\SOFTWARE&quot;</tt> hives computed during inspection.</dd>
 <dt>&quot;guestfs_mksquashfs&quot;</dt>
 <dd> Create a squashfs filesystem from a path (Pino Toscano).</dd></dl>
-<p> <i>Other </i><font SIZE="-1"><i>API</i></font><i> changes</i></p>
+<p> <i>Other </i><i>API</i><i> changes</i></p>
 <dl>
 <dt>&quot;guestfs_add_domain&quot;</dt>
 <dd> This call now handles libvirt file-based volumes correctly, where previously these would have been ignored. Also handled are disks which require libvirt authentication secrets to open (Pino Toscano).</dd>
 <dt>&quot;guestfs_canonical_device_name&quot;</dt>
-<dd> This call will no longer incorrectly modify Linux software <font SIZE="-1">RAID</font> device names (like <i>/dev/mdX</i>).</dd>
+<dd> This call will no longer incorrectly modify Linux software RAID device names (like <i>/dev/mdX</i>).</dd>
 <dt>&quot;guestfs_file_architecture&quot;</dt>
-<dd> Previously the <tt>&quot;file_architecture&quot;</tt> <font SIZE="-1">API</font> could return either of the strings <tt>&quot;i386&quot;</tt> or <tt>&quot;i486&quot;</tt> for 32 bit x86 binaries. It now only returns <tt>&quot;i386&quot;</tt> (as documented). </dd>
-<p> This <font SIZE="-1">API</font> can now return the following new values: <tt>&quot;riscv32&quot;</tt>, <tt>&quot;riscv64&quot;</tt>, <tt>&quot;riscv128&quot;</tt>, <tt>&quot;s390&quot;</tt>, <tt>&quot;s390x&quot;</tt>.</p>
+<dd> Previously the <tt>&quot;file_architecture&quot;</tt> API could return either of the strings <tt>&quot;i386&quot;</tt> or <tt>&quot;i486&quot;</tt> for 32 bit x86 binaries. It now only returns <tt>&quot;i386&quot;</tt> (as documented). </dd>
+<p> This API can now return the following new values: <tt>&quot;riscv32&quot;</tt>, <tt>&quot;riscv64&quot;</tt>, <tt>&quot;riscv128&quot;</tt>, <tt>&quot;s390&quot;</tt>, <tt>&quot;s390x&quot;</tt>.</p>
 <dt>&quot;guestfs_hivex_open&quot;</dt>
 <dd> This now has an optional <tt>&quot;GUESTFS_HIVEX_OPEN_UNSAFE&quot;</tt> flag which allows certain corrupted Windows Registry hives to be opened. This feature requires hivex ≥ 1.3.14 (Dawid Zamirski).</dd>
 <dt>&quot;guestfs_list_partitions&quot;</dt>
-<dd> This call now returns Linux software <font SIZE="-1">RAID</font> partitions.</dd>
+<dd> This call now returns Linux software RAID partitions.</dd>
 <dt>&quot;guestfs_part_to_dev&quot;</dt>
 <dd> This call now correctly handles partition names which include <tt>&quot;p&lt;N&gt;&quot;</tt> (Pino Toscano).</dd>
 <dt>&quot;guestfs_set_label&quot;</dt>
 <dd> This call can now change the labels of swap partitions (Pino Toscano).</dd></dl>
 <h3>Build changes</h3>
 <p> libmagic, the library part of the <tt>&quot;file&quot;</tt> command, is now required at build time (previously optional). </p>
-<p> <font SIZE="-1">GCC 7</font> is now supported. </p>
+<p> GCC 7 is now supported. </p>
 <p> &#8220;Silent rules&#8221; are now used for OCaml programs, Java bindings. To show the full command line executed, add <tt>&quot;V=1&quot;</tt> on the make command line (Pino Toscano). </p>
 <p> Slow testing (<tt>&quot;make check-slow&quot;</tt>) now covers: firstboot scripts in Linux guests; v2v conversion of a selection of real Linux guests; the virt-customize <i>&#8211;hostname</i> and <i>&#8211;timezone</i> settings; the <i>&#8211;root-password</i> parameter; that the serial console works in virt-builder guests. </p>
 <p> Large generated C source files, eg. the list of commands found in <i>fish/cmds.c</i> (and many more), have been split into smaller files to speed parallel compilation. </p>
@@ -506,26 +506,26 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <p> Header files and C structs can now have internal documentation using the special <tt>&quot;/** ... */&quot;</tt> comments. </p>
 <p> <tt>&quot;@VAR@&quot;</tt> subtitutions in <tt>&quot;./run&quot;</tt> are now fully quoted. This is necessary so that (eg) <tt>&quot;./configure PYTHON=/some/path&quot;</tt> works robustly if <tt>&quot;/some/path&quot;</tt> contains characters that need to be quoted (Hilko Bengen). </p>
 <p> gperf ≥ 3.1 is now supported. </p>
-<p> Kraxel&#8217;s old edk2 builds can no longer be used for <font SIZE="-1">UEFI</font> support. <font SIZE="-1">UEFI</font> code is now fully free software, so use the versions bundled with your Linux distro instead. </p>
-<p> Virt-p2v can now be compiled on <font SIZE="-1">RHEL 5</font> (2007-era) Linux with Gtk 2.10.</p>
+<p> Kraxel&#8217;s old edk2 builds can no longer be used for UEFI support. UEFI code is now fully free software, so use the versions bundled with your Linux distro instead. </p>
+<p> Virt-p2v can now be compiled on RHEL 5 (2007-era) Linux with Gtk 2.10.</p>
 <h3>Internals</h3>
 <p> The generator and mllib <tt>&quot;Common_utils&quot;</tt> modules are now shared from the same source file. </p>
 <p> A considerable amount of common code has been moved into the <i>common</i> directory in the source and is now compiled only once. The mini-libraries located under here are: <i>common/edit</i>, <i>common/errnostring</i>, <i>common/miniexpect</i>, <i>common/options</i>, <i>common/parallel</i>, <i>common/progress</i>, <i>common/protocol</i>, <i>common/utils</i>, <i>common/visit</i>, <i>common/windows</i>. </p>
 <p> The directory containing the main library code has moved from <i>src</i> → <i>lib</i>. </p>
 <p> All tests written in shell script now use a common file of utility functions (<i>tests/test-functions.sh</i>). There are several new utility functions, mainly for skipping tests. Also these test scripts can now use autoconf-like path variables like <tt>$abs_top_srcdir</tt>. </p>
-<p> <font SIZE="-1">UEFI</font> paths are now stored in the generator (<i>generator/uefi.ml</i>). </p>
+<p> UEFI paths are now stored in the generator (<i>generator/uefi.ml</i>). </p>
 <p> The way the generator handles actions and procedure numbers was changed quite substantially. See <i>generator/actions_*.ml</i> and <i>generator/proc_nr.ml</i>. </p>
 <p> The gnulib <tt>&quot;getprogname&quot;</tt> module is now used everywhere when needing/printing the program name (Pino Toscano). </p>
 <p> <i>perl/Guestfs.c</i> is not translatable (Nikos Skalkotos). </p>
 <p> Virt-builder templates moved from <i>builder/website</i> to <i>builder/templates</i> and there is now a single unified program which can build any template. </p>
 <p> All Windows registry utilities used by virt-customize and virt-v2v have been moved to a common module called <tt>&quot;Registry&quot;</tt> under <i>mllib</i>. </p>
-<p> All <font SIZE="-1">POSIX</font> bindings have been moved to a new module called <tt>&quot;Unix_utils&quot;</tt> under <i>mllib</i>. </p>
+<p> All POSIX bindings have been moved to a new module called <tt>&quot;Unix_utils&quot;</tt> under <i>mllib</i>. </p>
 <p> Inspection, virt-customize and virt-v2v no longer recompute the Windows <tt>&quot;%systemroot%&quot;</tt>, <tt>&quot;CurrentControlSet&quot;</tt> or paths to the <tt>&quot;HKLM\SYSTEM&quot;</tt> and <tt>&quot;HKLM\SOFTWARE&quot;</tt> hives in multiple places. Instead these are all computed once (during inspection) and passed to the other tools through various <tt>&quot;guestfs_inspect_get_windows_*&quot;</tt> APIs. </p>
 <p> <tt>&quot;/dev/pts&quot;</tt> is now available inside the appliance, so any tools we run which require a pty will now work (Pino Toscano). </p>
 <p> Most OCaml warnings have been fixed. </p>
 <p> There is now a single common function for creating temporary files (<tt>&quot;guestfs_int_make_temp_path&quot;</tt>) (Matteo Cafasso). </p>
 <p> The <tt>$TERM</tt> environment variable is now validated before passing it through to the appliance kernel command line. </p>
-<p> Useless <font SIZE="-1">USB</font> and memballoon devices are no longer created in the appliance (Laine Stump). </p>
+<p> Useless USB and memballoon devices are no longer created in the appliance (Laine Stump). </p>
 <p> On aarch64 we now use virtio-pci for the appliance. This is somewhat faster than virtio-mmio. </p>
 <p> Use of <code><a href="/docs/linux/man/3-srandom/">srandom</a></code>(3) and <code><a href="/docs/linux/man/3-random/">random</a></code>(3) has been minimized. In particular, temporary filenames are no longer created based on randomness returned by <code><a href="/docs/linux/man/3-random/">random</a></code>(3), but <i>/dev/urandom</i> is used instead.</p>
 <h3>Bugs fixed</h3>
@@ -541,21 +541,21 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1416941">https://bugzilla.redhat.com/1416941</a></dt>
 <dd> compile of 1.34.3 fails with gperf 3.1</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1414682">https://bugzilla.redhat.com/1414682</a></dt>
-<dd> guestfs_canonical_device_name incorrectly returns /dev/sd0 for <font SIZE="-1">MD</font> devices (/dev/md0)</dd>
+<dd> guestfs_canonical_device_name incorrectly returns /dev/sd0 for MD devices (/dev/md0)</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1414510">https://bugzilla.redhat.com/1414510</a></dt>
 <dd> guestfs_list_filesystems does not recognize ddf partitions</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1409023">https://bugzilla.redhat.com/1409023</a></dt>
 <dd> [Debian] ldmtool not installed in the appliance</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1404287">https://bugzilla.redhat.com/1404287</a></dt>
-<dd> qemu-kvm cannot boot <font SIZE="-1">RHEL 7</font> kernel with <font SIZE="-1">TCG,</font> hangs at &#8220;Probing <font SIZE="-1">EDD</font> (edd=off to disable)&#8230;&#8221;</dd>
+<dd> qemu-kvm cannot boot RHEL 7 kernel with TCG, hangs at &#8220;Probing EDD (edd=off to disable)&#8230;&#8221;</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1404182">https://bugzilla.redhat.com/1404182</a></dt>
-<dd> <font SIZE="-1">RFE:</font> virt-resize should support a <font SIZE="-1">URL</font> as the outdisk</dd>
+<dd> RFE: virt-resize should support a URL as the outdisk</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1401474">https://bugzilla.redhat.com/1401474</a></dt>
 <dd> Importing VMs from VMware is failing with error &#8220;Inspection field &#8216;i_arch&#8217; was &#8216;unknown&#8221;&#8217;</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1401320">https://bugzilla.redhat.com/1401320</a></dt>
-<dd> <font SIZE="-1">RFE:</font> Increate virt-sysprep coverage a bit</dd>
+<dd> RFE: Increate virt-sysprep coverage a bit</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1400205">https://bugzilla.redhat.com/1400205</a></dt>
-<dd> Add &#8211;vdsm-compat=1.1 flag for <font SIZE="-1">VDSM</font></dd>
+<dd> Add &#8211;vdsm-compat=1.1 flag for VDSM</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1398070">https://bugzilla.redhat.com/1398070</a></dt>
 <dd> typo error in man page</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1392798">https://bugzilla.redhat.com/1392798</a></dt>
@@ -563,9 +563,9 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1390876">https://bugzilla.redhat.com/1390876</a></dt>
 <dd> &#8220;&#8211;machine-readable&#8221; info should be updated in virt-v2v manual page</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1379289">https://bugzilla.redhat.com/1379289</a></dt>
-<dd> <font SIZE="-1">RFE:</font> virt-p2v should support mnemonic operations</dd>
+<dd> RFE: virt-p2v should support mnemonic operations</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1378022">https://bugzilla.redhat.com/1378022</a></dt>
-<dd> There is virt-v2v warning about &lt;listen type=&#8217;none&#8217;&gt; during converting a guest which has listen type=&#8217;none&#8217; in <font SIZE="-1">XML</font></dd>
+<dd> There is virt-v2v warning about &lt;listen type=&#8217;none&#8217;&gt; during converting a guest which has listen type=&#8217;none&#8217; in XML</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1377081">https://bugzilla.redhat.com/1377081</a></dt>
 <dd> virt-p2v manual should update the new dialog information</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1375157">https://bugzilla.redhat.com/1375157</a></dt>
@@ -573,74 +573,74 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1374651">https://bugzilla.redhat.com/1374651</a></dt>
 <dd> Can&#8217;t install qxl driver for display device in win7 guest after converting to glance by virt-v2v</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1374405">https://bugzilla.redhat.com/1374405</a></dt>
-<dd> There is <font SIZE="-1">HTTP 404</font> error info when convert guest to glance by virt-v2v</dd>
+<dd> There is HTTP 404 error info when convert guest to glance by virt-v2v</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1374232">https://bugzilla.redhat.com/1374232</a></dt>
-<dd> selinux relabel fails on <font SIZE="-1">RHEL 6.2</font> guests with &#8220;libguestfs error: selinux_relabel: : Success&#8221;</dd>
+<dd> selinux relabel fails on RHEL 6.2 guests with &#8220;libguestfs error: selinux_relabel: : Success&#8221;</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1372668">https://bugzilla.redhat.com/1372668</a></dt>
 <dd> Process status is not normal in windows guest after converted from kvm to rhev by virt-v2v</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1372269">https://bugzilla.redhat.com/1372269</a></dt>
 <dd> Builder does not set hostname properly for Debian 8 (Jessie)</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1371843">https://bugzilla.redhat.com/1371843</a></dt>
-<dd> Improve <font SIZE="-1">OVA</font> import compatibility</dd>
+<dd> Improve OVA import compatibility</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1370424">https://bugzilla.redhat.com/1370424</a></dt>
 <dd> virt-manager coredump when vm with gluster image exists</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1367839">https://bugzilla.redhat.com/1367839</a></dt>
-<dd> Cannot import VMs from Xen and VMware when using <font SIZE="-1">RHEL7.3</font> host.</dd>
+<dd> Cannot import VMs from Xen and VMware when using RHEL7.3 host.</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1367738">https://bugzilla.redhat.com/1367738</a></dt>
 <dd> Missing bash completion scripts for: virt-diff guestunmount virt-copy-in virt-copy-out virt-customize virt-get-kernel virt-p2v-make-disk virt-p2v-make-kickstart virt-tar-in virt-tar-out virt-v2v-copy-to-local virt-win-reg</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1367615">https://bugzilla.redhat.com/1367615</a></dt>
-<dd> <font SIZE="-1">OVMF</font> file which is built for rhel7.3 can&#8217;t be used for virt-v2v uefi conversion</dd>
+<dd> OVMF file which is built for rhel7.3 can&#8217;t be used for virt-v2v uefi conversion</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1366456">https://bugzilla.redhat.com/1366456</a></dt>
 <dd> Converting rhel7 host installed on RAID:warning: fstrim: fstrim: /sysroot/: the discard operation is not supported</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1366049">https://bugzilla.redhat.com/1366049</a></dt>
-<dd> <font SIZE="-1">RFE:</font> libvirt backend: support handling disks stored as volume name in a pool</dd>
+<dd> RFE: libvirt backend: support handling disks stored as volume name in a pool</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1365005">https://bugzilla.redhat.com/1365005</a></dt>
 <dd> Guest name is incorrect if convert guest from disk image by virt-v2v</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1362649">https://bugzilla.redhat.com/1362649</a></dt>
-<dd> <font SIZE="-1">RFE:</font> virt-sysprep does not utilize libguestfs encryption support</dd>
+<dd> RFE: virt-sysprep does not utilize libguestfs encryption support</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1354507">https://bugzilla.redhat.com/1354507</a></dt>
 <dd> virt-v2v conversions from vCenter do not consistently obey the proxy environment variables</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1168144">https://bugzilla.redhat.com/1168144</a></dt>
-<dd> warning: fstrim: fstrim: /sysroot/: <font SIZE="-1">FITRIM</font> ioctl failed: Operation not supported (ignored) when convert win2003 guest from xen server</dd>
+<dd> warning: fstrim: fstrim: /sysroot/: FITRIM ioctl failed: Operation not supported (ignored) when convert win2003 guest from xen server</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1161019">https://bugzilla.redhat.com/1161019</a></dt>
-<dd> <font SIZE="-1">RFE:</font> Only install RHEV-APT if virt-v2v -o rhev/-o vdsm option is used</dd>
+<dd> RFE: Only install RHEV-APT if virt-v2v -o rhev/-o vdsm option is used</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1152369">https://bugzilla.redhat.com/1152369</a></dt>
-<dd> virt-v2v failed to convert <font SIZE="-1">RHEL 6.7 UEFI</font> guest: no grub1/grub-legacy or grub2 configuration file was found</dd>
+<dd> virt-v2v failed to convert RHEL 6.7 UEFI guest: no grub1/grub-legacy or grub2 configuration file was found</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1141631">https://bugzilla.redhat.com/1141631</a></dt>
-<dd> [<font SIZE="-1">RFE</font>] virt-v2v should support convert a guest to a dir-pool with using pool&#8217;s uuid</dd>
+<dd> [RFE] virt-v2v should support convert a guest to a dir-pool with using pool&#8217;s uuid</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1134878">https://bugzilla.redhat.com/1134878</a></dt>
 <dd> libvirt reports json &#8220;backing file&#8221; is missing</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1019388">https://bugzilla.redhat.com/1019388</a></dt>
 <dd> firstboot scripts (virt-builder, virt-sysprep) don&#8217;t work for Debian 6 &amp; 7 guests</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/737600">https://bugzilla.redhat.com/737600</a></dt>
-<dd> virt-v2v windows xp &#8211; machine dies <font SIZE="-1">BSOD</font> &#8211; processr,sys &#8211; workaround provided</dd></dl>
+<dd> virt-v2v windows xp &#8211; machine dies BSOD &#8211; processr,sys &#8211; workaround provided</dd></dl>
 <h2>RELEASE NOTES FOR LIBGUESTFS 1.34</h2>
 <p> These release notes only cover the differences from the previous stable/dev branch split (1.32.0). For detailed changelogs, please see the git repository, or the ChangeLog file distributed in the tarball.</p>
 <h3>New features</h3>
 <p> Multiple performance enhancements were made in libguestfs. The &#8220;hot cache&#8221; time to launch to appliance should be under 1 second assuming recent qemu and kernel are installed. There are also new utilities for precisely benchmarking libguestfs (<i>utils/boot-benchmark</i> and <i>utils/boot-analysis</i> in the source tree). </p>
-<p> The virt-p2v tool for converting physical machines to virtual machines was substantially improved. This includes: clearer, coloured output during conversions, support for Gtk 3, more detailed information about hardware, click to identify network interfaces, more debugging tools included with the <font SIZE="-1">ISO,</font> and many bug fixes. </p>
+<p> The virt-p2v tool for converting physical machines to virtual machines was substantially improved. This includes: clearer, coloured output during conversions, support for Gtk 3, more detailed information about hardware, click to identify network interfaces, more debugging tools included with the ISO, and many bug fixes. </p>
 <p> f2fs (Flash Friendly File System) is now supported (Pino Toscano). </p>
 <p> <i>New tools</i> </p>
-<p> <code>virt-p2v-make-kiwi</code>(1) can be used to build the virt-p2v <font SIZE="-1">ISO</font> based on <font SIZE="-1">SLES</font> and openSUSE, using the kiwi utility (Cédric Bosdonnat). </p>
+<p> <code>virt-p2v-make-kiwi</code>(1) can be used to build the virt-p2v ISO based on SLES and openSUSE, using the kiwi utility (Cédric Bosdonnat). </p>
 <p> <i>New features in existing tools</i> </p>
-<p> virt-resize will now preserve the <font SIZE="-1">GPT GUID.</font> This was required for Windows Server 2012 R2, where the bootloader would become confused if the <font SIZE="-1">GUID</font> changed (Maxim Perevedentsev). </p>
+<p> virt-resize will now preserve the GPT GUID. This was required for Windows Server 2012 R2, where the bootloader would become confused if the GUID changed (Maxim Perevedentsev). </p>
 <p> virt-resize will use sparse copying for (old MBR-style) extended partitions. This makes resizing of guests that use extended partitions much faster (Maxim Perevedentsev). </p>
-<p> virt-p2v kernel command line options can now be used to set defaults for <font SIZE="-1">GUI</font> configuration. </p>
+<p> virt-p2v kernel command line options can now be used to set defaults for GUI configuration. </p>
 <p> The virt-p2v debugging options have been completely removed, simplifying the interface and documentation. Debugging information is now captured fully automatically. </p>
 <p> virt-p2v-make-disk lets you specify an <i>&#8211;arch</i> option, allowing you to build a 32 bit virt-p2v, for compatibility with older systems. </p>
 <p> virt-p2v-make-disk no longer requires that you specify an <tt>&quot;os-version&quot;</tt> for the virt-p2v disk. If omitted it will try to choose a suitable <tt>&quot;os-version&quot;</tt> depending on your host system. </p>
-<p> virt-p2v-make-disk and virt-p2v-make-kickstart both gain a new <i>&#8211;install</i> option that allows you to add arbitrary extra packages to the virt-p2v <font SIZE="-1">ISO,</font> for customization, additional debugging tools and so on. </p>
+<p> virt-p2v-make-disk and virt-p2v-make-kickstart both gain a new <i>&#8211;install</i> option that allows you to add arbitrary extra packages to the virt-p2v ISO, for customization, additional debugging tools and so on. </p>
 <p> virt-v2v will now uninstall Parallels Tools (or the equivalent Virtuozzo Tools) from Linux guests. Also stop the Windows drivers from loading at boot. (Roman Kagan and Pavel Butsykin) </p>
 <p> virt-v2v <i>&#8211;in-place</i> mode has been enhanced to allow the caller to choose whether or not to install certain virtio drivers in the guest (Roman Kagan). </p>
 <p> virt-v2v conversion of Windows guests was substantially rewritten and simplified (Roman Kagan). </p>
 <p> virt-v2v <i>&#8211;in-place</i> mode now supports installing virtio-scsi drivers in guests (Roman Kagan). </p>
-<p> virt-v2v can now convert <font SIZE="-1">SUSE</font> guests and <font SIZE="-1">SUSE</font> guests using <font SIZE="-1">UEFI</font> (Cédric Bosdonnat and Jim Fehlig). </p>
+<p> virt-v2v can now convert SUSE guests and SUSE guests using UEFI (Cédric Bosdonnat and Jim Fehlig). </p>
 <p> virt-v2v can now convert guests to Glance that have multiple disks. Previously it would fail on such guests. </p>
-<p> The virt-v2v <i>&#8211;no-trim</i> and <i>&#8211;vmtype</i> options are now no-ops. They will print a warning but are otherwise ignored. virt-v2v can now generate the <font SIZE="-1">OVF</font> vmtype correctly without user intervention. </p>
-<p> virt-v2v has now been tested against <font SIZE="-1">SUSE</font> Xen as a source hypervisor (Cédric Bosdonnat). </p>
-<p> virt-v2v adds support for <font SIZE="-1">SUSE VMDP</font> drivers (Cédric Bosdonnat). </p>
-<p> virt-v2v can convert <font SIZE="-1">OVA</font> files containing subfolders, as produced by <font SIZE="-1">SUSE</font> Studio (Cédric Bosdonnat). </p>
-<p> virt-v2v sets the <font SIZE="-1">OVF</font> <tt>&quot;&lt;Origin&gt;&quot;</tt> element correctly. oVirt has been extended to support more source hypervisors (Shahar Havivi). </p>
+<p> The virt-v2v <i>&#8211;no-trim</i> and <i>&#8211;vmtype</i> options are now no-ops. They will print a warning but are otherwise ignored. virt-v2v can now generate the OVF vmtype correctly without user intervention. </p>
+<p> virt-v2v has now been tested against SUSE Xen as a source hypervisor (Cédric Bosdonnat). </p>
+<p> virt-v2v adds support for SUSE VMDP drivers (Cédric Bosdonnat). </p>
+<p> virt-v2v can convert OVA files containing subfolders, as produced by SUSE Studio (Cédric Bosdonnat). </p>
+<p> virt-v2v sets the OVF <tt>&quot;&lt;Origin&gt;&quot;</tt> element correctly. oVirt has been extended to support more source hypervisors (Shahar Havivi). </p>
 <p> virt-v2v now supports Windows Server 2016 (Tomáš Golembiovský). </p>
 <p> The virt-builder <i>&#8211;list</i> option can now be used to show all templates or a single template (Pino Toscano). </p>
 <p> All OCaml-based tools now use <code><a href="/docs/linux/man/3-getopt_long/">getopt_long</a></code>(3) for option parsing, and <i>&#8211;help</i> output has been improved (Pino Toscano). </p>
@@ -650,29 +650,29 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <p> virt-customize can now use <tt>&quot;pvvxsvc&quot;</tt> as an alternative to <tt>&quot;rhsrvany&quot;</tt> for running firstboot scripts in Windows guests (Cédric Bosdonnat). </p>
 <p> virt-customize now uses the strongest hashing scheme for passwords on Arch and Void Linux (Pino Toscano). </p>
 <p> virt-customize <i>&#8211;install</i> now works correctly on Arch (Pino Toscano). </p>
-<p> virt-inspector has new options <i>&#8211;no-applications</i> and <i>&#8211;no-icon</i> to prevent the list of applications and icon from being included in the <font SIZE="-1">XML</font> output (Pino Toscano). </p>
+<p> virt-inspector has new options <i>&#8211;no-applications</i> and <i>&#8211;no-icon</i> to prevent the list of applications and icon from being included in the XML output (Pino Toscano). </p>
 <p> New virt-sysprep <i>&#8211;network</i> option has been added, allowing you to actually use the <i>&#8211;install</i> etc options which were present in virt-sysprep before but did not usually work. Note that the network is still disabled by default. </p>
 <p> virt-sysprep <tt>&quot;fs-uuids&quot;</tt> operation no longer fails on btrfs guests (Maxim Perevedentsev). </p>
 <p> virt-dib can output Docker images (Pino Toscano). </p>
 <p> virt-dib has a new <i>&#8211;drive-format</i> option to allow the user to specify the format of the helper drive (Pino Toscano). </p>
-<p> All OCaml virt tools now have a <i>&#8211;colors</i>/<i>&#8211;colours</i> option which enables coloured output (using <font SIZE="-1">ANSI</font> escape sequences) even if the output is not a tty. The default is to check if the output is a tty and disable coloured output if not. This allows coloured output to be consumed by other tools. </p>
+<p> All OCaml virt tools now have a <i>&#8211;colors</i>/<i>&#8211;colours</i> option which enables coloured output (using ANSI escape sequences) even if the output is not a tty. The default is to check if the output is a tty and disable coloured output if not. This allows coloured output to be consumed by other tools. </p>
 <p> <i>Language bindings</i> </p>
-<p> <font SIZE="-1">PHP</font> test coverage has been enhanced (Pino Toscano). </p>
-<p> <font SIZE="-1">PHP 7</font> is now supported (Pino Toscano). </p>
-<p> Python bindings are now compliant with <font SIZE="-1">PEP 8</font> (Pino Toscano). </p>
+<p> PHP test coverage has been enhanced (Pino Toscano). </p>
+<p> PHP 7 is now supported (Pino Toscano). </p>
+<p> Python bindings are now compliant with PEP 8 (Pino Toscano). </p>
 <p> A Python pip package is available in <a rel="nofollow" href="http://libguestfs.org/download/python/">http://libguestfs.org/download/python/</a> </p>
 <p> The Ruby bindings now print the full exception if one is thrown by the event callback. Note this is still incorrect behaviour as event callbacks should not throw exceptions, but it aids debugging. </p>
 <p> All OCaml libraries and programs are now compiled with <i>-safe-string</i>, if supported by the OCaml compiler. </p>
 <p> <i>Inspection</i> </p>
-<p> Alpine Linux using busybox can now be inspected. Also the <font SIZE="-1">APK</font> package manager is supported in virt-customize (Pino Toscano). </p>
+<p> Alpine Linux using busybox can now be inspected. Also the APK package manager is supported in virt-customize (Pino Toscano). </p>
 <p> We now handle inspection of Mageia 4 (Pino Toscano). </p>
 <p> Void Linux and the Void Linux xbps package manager are fully supported (Pino Toscano). </p>
 <p> Parsing of CoreOS version information has been enhanced (Pino Toscano). </p>
-<p> It is now possible to get an icon from <font SIZE="-1">ALT</font> Linux (Pino Toscano). </p>
-<p> <font SIZE="-1">PLD</font> Linux versions &lt; 3 are now recognized (Pino Toscano). </p>
-<p> Windows drive letters are now returned for guests using <font SIZE="-1">GPT</font> partitions (Dawid Zamirski). </p>
+<p> It is now possible to get an icon from ALT Linux (Pino Toscano). </p>
+<p> PLD Linux versions &lt; 3 are now recognized (Pino Toscano). </p>
+<p> Windows drive letters are now returned for guests using GPT partitions (Dawid Zamirski). </p>
 <p> We can now correctly inspect Unix guests that do not have an <i>/etc/fstab</i> file (Pino Toscano). </p>
-<p> Added another source for the Ubuntu icon which doesn&#8217;t rely on <font SIZE="-1">GNOME</font> having been installed in the guest. </p>
+<p> Added another source for the Ubuntu icon which doesn&#8217;t rely on GNOME having been installed in the guest. </p>
 <p> We can now get an icon for Windows 7 64 bit guests. </p>
 <p> Libosinfo integration was rewritten to deal with the new database format used by osinfo (Pino Toscano). </p>
 <p> <i>Documentation</i> </p>
@@ -680,20 +680,20 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <p> The man pages, tools and tool <i>&#8211;help</i> output is now automatically checked to ensure that all tool options are properly documented, that warning sections are included where necessary, and that every page has a description section. </p>
 <p> The <code><a href="/docs/linux/man/1-guestfs-testing/">guestfs-testing</a></code>(1) man page has been refreshed and based on a newer libguestfs. </p>
 <p> <i>Architectures and platforms</i> </p>
-<p> virt-customize now works on <font SIZE="-1">POWER7</font> and <font SIZE="-1">POWER8</font> platforms, both big endian and little endian (Xianghua Chen and Hu Zhang).</p>
+<p> virt-customize now works on POWER7 and POWER8 platforms, both big endian and little endian (Xianghua Chen and Hu Zhang).</p>
 <h3>Security</h3>
 <p> See also <code><a href="/docs/linux/man/1-guestfs-security/">guestfs-security</a></code>(1). </p>
-<p> <i></i><font SIZE="-1"><i>CVE-2015-8869</i></font><i></i> </p>
+<p> <i></i><i>CVE-2015-8869</i><i></i> </p>
 <p> <a rel="nofollow" href="https://bugzilla.redhat.com/CVE-2015-8869">https://bugzilla.redhat.com/CVE-2015-8869</a> </p>
 <p> This vulnerability in OCaml might affect virt tools written in the OCaml programming language. It affects only 64 bit platforms. Because this bug affects code generation it is difficult to predict which precise software could be affected, and therefore our recommendation is that you recompile libguestfs using a version of the OCaml compiler where this bug has been fixed (or ask your Linux distro to do the same). </p>
 <p> <i>virt-customize ownership of .ssh, .ssh/authorized_keys</i> </p>
 <p> <a rel="nofollow" href="https://bugzilla.redhat.com/1337561">https://bugzilla.redhat.com/1337561</a> </p>
-<p> Previously when virt-customize injected an <font SIZE="-1">SSH</font> key into a guest, when it created the <i>~/.ssh</i> and <i>~/.ssh/authorized_keys</i> directory and file (in case they were missing) it created them with owner and group <tt>&quot;root.root&quot;</tt>. This has been fixed so the correct user is used. This is not thought to have been exploitable. </p>
+<p> Previously when virt-customize injected an SSH key into a guest, when it created the <i>~/.ssh</i> and <i>~/.ssh/authorized_keys</i> directory and file (in case they were missing) it created them with owner and group <tt>&quot;root.root&quot;</tt>. This has been fixed so the correct user is used. This is not thought to have been exploitable. </p>
 <p> <i>Windows </i>&quot;%systemroot%&quot;<i></i> </p>
 <p> The inspection code has been made more robust against guests which might use very long <tt>&quot;%systemroot%&quot;</tt> (derived from the guest-controlled Windows Registry). This is not thought to have been exploitable. </p>
 <p> <i>Virtio-rng is now available in the appliance</i> </p>
 <p> virtio-rng (the virtual Random Number Generator device) is now passed to the appliance, which should improve the quality random numbers generated for GUIDs and cryptographic key generation.</p>
-<h3><font SIZE="-1">API</font></h3>
+<h3>API</h3>
 <p> <i>New APIs</i></p>
 <dl>
 <dt>&quot;btrfs_filesystem_show&quot;</dt>
@@ -712,19 +712,19 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 </dd><dt>&quot;mountable_subvolume&quot;</dt>
 <dd> Split a Mountable into device name and subvolume (Cédric Bosdonnat).</dd>
 <dt>&quot;ntfscat_i&quot;</dt>
-<dd> Download <font SIZE="-1">NTFS</font> file by inode number (Matteo Cafasso).</dd>
+<dd> Download NTFS file by inode number (Matteo Cafasso).</dd>
 <dt>&quot;part_expand_gpt&quot;</dt>
-<dd> Allow in-place expanding of <font SIZE="-1">GPT</font> partitions by moving the second (backup) partition table to the end of the disk (Maxim Perevedentsev).</dd>
+<dd> Allow in-place expanding of GPT partitions by moving the second (backup) partition table to the end of the disk (Maxim Perevedentsev).</dd>
 <dt>&quot;part_get_disk_guid&quot;</dt>
 <dd>
 </dd><dt>&quot;part_set_disk_guid&quot;</dt>
 <dd>
 </dd><dt>&quot;part_set_disk_guid_random&quot;</dt>
-<dd> Get and set the <font SIZE="-1">GPT</font> disk <font SIZE="-1">GUID,</font> or set it to a fresh random value (Maxim Perevedentsev).</dd>
+<dd> Get and set the GPT disk GUID, or set it to a fresh random value (Maxim Perevedentsev).</dd>
 <dt>&quot;selinux_relabel&quot;</dt>
 <dd> SELinux-relabel part or all of the guest filesystem.</dd></dl>
-<p> <i>Other </i><font SIZE="-1"><i>API</i></font><i> changes</i> </p>
-<p> <tt>&quot;guestfs_set_selinux&quot;</tt>, <tt>&quot;guestfs_get_selinux&quot;</tt>, <tt>&quot;guestfs_setcon&quot;</tt>, <tt>&quot;guestfs_getcon&quot;</tt> and <tt>&quot;guestfs_llz&quot;</tt> have been deprecated. Use the new <font SIZE="-1">API</font> <tt>&quot;guestfs_selinux_relabel&quot;</tt> to relabel filesystems. Use <tt>&quot;guestfs_lgetxattrs&quot;</tt> to list the <tt>&quot;security.selinux&quot;</tt> extended attributes of existing files. </p>
+<p> <i>Other </i><i>API</i><i> changes</i> </p>
+<p> <tt>&quot;guestfs_set_selinux&quot;</tt>, <tt>&quot;guestfs_get_selinux&quot;</tt>, <tt>&quot;guestfs_setcon&quot;</tt>, <tt>&quot;guestfs_getcon&quot;</tt> and <tt>&quot;guestfs_llz&quot;</tt> have been deprecated. Use the new API <tt>&quot;guestfs_selinux_relabel&quot;</tt> to relabel filesystems. Use <tt>&quot;guestfs_lgetxattrs&quot;</tt> to list the <tt>&quot;security.selinux&quot;</tt> extended attributes of existing files. </p>
 <p> <tt>&quot;guestfs_vfs_minimum_size&quot;</tt> can now be used on dirty filesystems (Maxim Perevedentsev). </p>
 <p> <tt>&quot;guestfs_ll&quot;</tt> now works on paths which contain absolute symlinks (Pino Toscano). </p>
 <p> <tt>&quot;guestfs_glob_expand&quot;</tt> now has an optional <tt>&quot;directoryslash&quot;</tt> boolean parameter which controls whether trailing slashes are returned for directory names (Pino Toscano). </p>
@@ -733,8 +733,8 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <p> <tt>&quot;guestfs_is_lv&quot;</tt> no longer fails if passed a btrfs subvolume, it returns false instead (Maxim Perevedentsev).</p>
 <h3>Build changes</h3>
 <p> qemu ≥ 1.3.0 is required. </p>
-<p> yajl (a <font SIZE="-1">JSON</font> parsing library) is required to build libguestfs. </p>
-<p> You can now build with <font SIZE="-1">GCC 6.</font> </p>
+<p> yajl (a JSON parsing library) is required to build libguestfs. </p>
+<p> You can now build with GCC 6. </p>
 <p> <tt>&quot;make check-valgrind&quot;</tt> now has substantially better coverage. </p>
 <p> <tt>&quot;make check-slow&quot;</tt> now works again. </p>
 <p> Use <tt>&quot;make -C appliance clean-supermin-appliance&quot;</tt> to clean the supermin appliance (it will be rebuilt on next <tt>&quot;make&quot;</tt>). </p>
@@ -743,24 +743,24 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <p> The <tt>&quot;./configure&quot;</tt> options are now mostly documented in <code><a href="/docs/linux/man/1-guestfs-building/">guestfs-building</a></code>(1).</p>
 <h3>Internals</h3>
 <p> In git, versions are now tagged with <tt>&quot;v1.XX.YY&quot;</tt> (previously they were tagged with <tt>&quot;1.XX.YY&quot;</tt>). Using the <tt>&quot;v-&quot;</tt> prefix is more common in git repositories. </p>
-<p> When using the libvirt backend, we now wait for qemu to exit gracefully instead of killing it after 15 seconds. This helps when writing to slow devices (especially cheap <font SIZE="-1">USB</font> keys). </p>
+<p> When using the libvirt backend, we now wait for qemu to exit gracefully instead of killing it after 15 seconds. This helps when writing to slow devices (especially cheap USB keys). </p>
 <p> Error messages from libvirt now include the <tt>&quot;err-&gt;int1&quot;</tt> field which usually contains the <tt>&quot;errno&quot;</tt>. </p>
-<p> On <font SIZE="-1">ARM,</font> all <font SIZE="-1">DTB</font> (device tree) code has been removed. qemu creates the right device tree on the fly, we do not need to specify one. </p>
-<p> The C <font SIZE="-1">API</font> tests now use larger test disks, allowing <font SIZE="-1">BTRFS</font> to be tested properly (Pino Toscano). </p>
+<p> On ARM, all DTB (device tree) code has been removed. qemu creates the right device tree on the fly, we do not need to specify one. </p>
+<p> The C API tests now use larger test disks, allowing BTRFS to be tested properly (Pino Toscano). </p>
 <p> The tests should now work on a pure Python 3 host (Pino Toscano). </p>
 <p> In C bindings, internal functions are now (mostly) consistently named <tt>&quot;guestfs_int_*&quot;</tt> whereas previously there was no consistent scheme. </p>
 <p> The old <tt>&quot;safe_malloc&quot;</tt> etc functions are now no longer exported by the library, nor used in language bindings. </p>
-<p> Setting <font SIZE="-1">TMPDIR</font> to a path longer than ~ 100 characters will no longer cause libguestfs to fail silently and randomly when creating Unix domain sockets (Pino Toscano). </p>
+<p> Setting TMPDIR to a path longer than ~ 100 characters will no longer cause libguestfs to fail silently and randomly when creating Unix domain sockets (Pino Toscano). </p>
 <p> The <tt>&quot;COMPILE_REGEXP&quot;</tt> macro can now be used in the daemon. </p>
 <p> When tracing, results containing structs are now printed in full (Pino Toscano). </p>
-<p> The Perl <tt>&quot;Sys::Guestfs&quot;</tt> module now no longer embeds an incrementing <font SIZE="-1">API</font> &#8220;version number&#8221;. This module is now always at phony version &#8220;1.0&#8221;. To find the real version of libguestfs from Perl you must call <tt>&quot;$g-&gt;version&quot;</tt>. </p>
+<p> The Perl <tt>&quot;Sys::Guestfs&quot;</tt> module now no longer embeds an incrementing API &#8220;version number&#8221;. This module is now always at phony version &#8220;1.0&#8221;. To find the real version of libguestfs from Perl you must call <tt>&quot;$g-&gt;version&quot;</tt>. </p>
 <p> All code is compiled with <tt>&quot;-Wstack-usage=10000&quot;</tt> and multiple changes have been made to remove stack allocation of large strings and buffers. </p>
 <p> The <code><a href="/docs/linux/man/3-error/">error</a></code>(3) function is now used everywhere, replacing most previous uses of <code><a href="/docs/linux/man/3-perror/">perror</a></code>(3) + <code><a href="/docs/linux/man/3-exit/">exit</a></code>(3), and <code><a href="/docs/linux/man/3-fprintf/">fprintf</a></code>(3) + exit. </p>
 <p> In C code, <tt>&quot;/**&quot;</tt> comments are turned into documentation which is automatically added to the <code><a href="/docs/linux/man/1-guestfs-hacking/">guestfs-hacking</a></code>(1) manual page. </p>
 <p> A safe &#8220;getumask&#8221; function has been added. For recent Linux kernels this uses the newly added <tt>&quot;Umask&quot;</tt> field in <i>/proc/self/status</i>. For older Linux and other Unix, this uses a thread-safe technique involving <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) (thanks: Josh Stone, Jiri Jaburek, Eric Blake). </p>
 <p> Safe <code><a href="/docs/linux/man/2-posix_fadvise/">posix_fadvise</a></code>(2) wrappers have been added, and more hints have been added to the code which may make a minor difference to performance. </p>
 <p> A safe wrapper around <code><a href="/docs/linux/man/2-waitpid/">waitpid</a></code>(2) has been added which handles <tt>&quot;INTR&quot;</tt> properly. </p>
-<p> <tt>&quot;podwrapper.pl&quot;</tt> (used to generate the manual pages) now stops if any <font SIZE="-1">POD</font> error is found. A new script called <tt>&quot;podcheck.pl&quot;</tt> does cross-checking of <i>&#8211;help</i> output, tool options and manual pages. </p>
+<p> <tt>&quot;podwrapper.pl&quot;</tt> (used to generate the manual pages) now stops if any POD error is found. A new script called <tt>&quot;podcheck.pl&quot;</tt> does cross-checking of <i>&#8211;help</i> output, tool options and manual pages. </p>
 <p> All version numbers in the library (eg. versions of qemu, versions of libvirt, versions of guest operating systems) are unified in a single file <i>src/version.c</i> (Pino Toscano). </p>
 <p> On Windows guests, virt-customize will use the vendor-neutral path <tt>&quot;C:\Program Files\Guestfs\Firstboot&quot;</tt> to store firstboot scripts. Previously it used <tt>&quot;C:\Program Files\Red Hat\Firstboot&quot;</tt>. This change should be invisible to the scripts themselves. (Cédric Bosdonnat) </p>
 <p> On Linux guests, the firstboot services generated by virt-builder <i>&#8211;firstboot</i> etc have been renamed to <tt>&quot;guestfs-firstboot&quot;</tt> (Pino Toscano). </p>
@@ -768,23 +768,23 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <p> virt-p2v copies files it needs over to the virt-v2v conversion server using <code><a href="/docs/linux/man/1-scp/">scp</a></code>(1), instead of trying to send them via the shell session. This should improve reliability and should be a completely transparent to end users. </p>
 <p> All code in <i>mllib</i> is now built into a single <tt>&quot;mllib.cma&quot;</tt> or <tt>&quot;mllib.cmxa&quot;</tt> library. All code in <i>customize</i> is now built into a single <tt>&quot;customize.cma&quot;</tt> or <tt>&quot;customize.cmxa&quot;</tt> library. This simplifies the build of the OCaml tools. </p>
 <p> <code><a href="/docs/linux/man/8-lvmetad/">lvmetad</a></code>(8) is now used in the appliance when available (Pino Toscano). </p>
-<p> &#8220;Silent rules&#8221; are used for OCaml, Java, Erlang and <font SIZE="-1">POD.</font> Use <tt>&quot;make V=1&quot;</tt> to see the full command lines again (Pino Toscano).</p>
+<p> &#8220;Silent rules&#8221; are used for OCaml, Java, Erlang and POD. Use <tt>&quot;make V=1&quot;</tt> to see the full command lines again (Pino Toscano).</p>
 <h3>Bugs fixed</h3>
 <dl>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1364347">https://bugzilla.redhat.com/1364347</a></dt>
-<dd> virt-sparsify &#8211;in-place failed with <font SIZE="-1">UEFI</font> system</dd>
+<dd> virt-sparsify &#8211;in-place failed with UEFI system</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1362357">https://bugzilla.redhat.com/1362357</a></dt>
 <dd> run_command runs exit handlers when execve fails (e.g. due to missing executable)</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1362354">https://bugzilla.redhat.com/1362354</a></dt>
-<dd> virt-dib failed to create image using <font SIZE="-1">DIB_YUM_REPO_CONF</font></dd>
+<dd> virt-dib failed to create image using DIB_YUM_REPO_CONF</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1359652">https://bugzilla.redhat.com/1359652</a></dt>
-<dd> Fail to inspect Windows <font SIZE="-1">ISO</font> file</dd>
+<dd> Fail to inspect Windows ISO file</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1358142">https://bugzilla.redhat.com/1358142</a></dt>
 <dd> Some info will show when convert guest to libvirt by virt-v2v with parameter &#8211;quiet</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1354335">https://bugzilla.redhat.com/1354335</a></dt>
 <dd> overlay of disk images does not specify the format of the backing file</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1352761">https://bugzilla.redhat.com/1352761</a></dt>
-<dd> Virt-manager can&#8217;t show <font SIZE="-1">OS</font> icons of win7/win8/ubuntu guest.</dd>
+<dd> Virt-manager can&#8217;t show OS icons of win7/win8/ubuntu guest.</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1350363">https://bugzilla.redhat.com/1350363</a></dt>
 <dd> Improve error info &#8220;remote server timeout unexpectedly waiting for password prompt&#8221; when connect to a bogus server at p2v client</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1348900">https://bugzilla.redhat.com/1348900</a></dt>
@@ -794,15 +794,15 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1345809">https://bugzilla.redhat.com/1345809</a></dt>
 <dd> virt-customize &#8211;truncate-recursive should give an error message when specifying a no-existing path</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1343423">https://bugzilla.redhat.com/1343423</a></dt>
-<dd> [<font SIZE="-1">RFE</font>]Should give a better description about &#8216;curl error 22&#8217; when failed using ssh identity http url at p2v client</dd>
+<dd> [RFE]Should give a better description about &#8216;curl error 22&#8217; when failed using ssh identity http url at p2v client</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1343414">https://bugzilla.redhat.com/1343414</a></dt>
-<dd> Failed <font SIZE="-1">SSH</font> to conversion server by ssh identity http url at p2v client</dd>
+<dd> Failed SSH to conversion server by ssh identity http url at p2v client</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1343375">https://bugzilla.redhat.com/1343375</a></dt>
-<dd> [<font SIZE="-1">RFE</font>] uninstall packages inside the <font SIZE="-1">VM</font></dd>
+<dd> [RFE] uninstall packages inside the VM</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1342447">https://bugzilla.redhat.com/1342447</a></dt>
 <dd> Ifconfig command is not supported on p2v client</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1342398">https://bugzilla.redhat.com/1342398</a></dt>
-<dd> Convert a guest from <font SIZE="-1">RHEL</font> by virt-v2v but its origin info shows <font SIZE="-1">RHEV</font> at rhevm</dd>
+<dd> Convert a guest from RHEL by virt-v2v but its origin info shows RHEV at rhevm</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1342337">https://bugzilla.redhat.com/1342337</a></dt>
 <dd> Should remind a warning about disk image has a partition when using virt-p2v-make-disk</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1341984">https://bugzilla.redhat.com/1341984</a></dt>
@@ -812,19 +812,19 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1340809">https://bugzilla.redhat.com/1340809</a></dt>
 <dd> Testing connection timeout when input regular user of conversion server with checked &#8220;use sudo&#8230;&#8230;&#8221;button</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1340464">https://bugzilla.redhat.com/1340464</a></dt>
-<dd> [<font SIZE="-1">RFE</font>] Suggestion give user a reminder for &#8220;Cancel conversion&#8221; button</dd>
+<dd> [RFE] Suggestion give user a reminder for &#8220;Cancel conversion&#8221; button</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1340407">https://bugzilla.redhat.com/1340407</a></dt>
 <dd> Multiple network ports will not be aligned at p2v client</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1338083">https://bugzilla.redhat.com/1338083</a></dt>
-<dd> Update <font SIZE="-1">UEFI</font> whitelist for official fedora packages</dd>
+<dd> Update UEFI whitelist for official fedora packages</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1337561">https://bugzilla.redhat.com/1337561</a></dt>
 <dd> virt-customize &#8211;ssh-inject not applying correct file permission</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1335671">https://bugzilla.redhat.com/1335671</a></dt>
-<dd> extra quotes around <font SIZE="-1">UUID</font> confuses findfs in <font SIZE="-1">RHEL</font> (but not in Fedora)</dd>
+<dd> extra quotes around UUID confuses findfs in RHEL (but not in Fedora)</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1332025">https://bugzilla.redhat.com/1332025</a></dt>
 <dd> Inspection does not parse /etc/redhat-release containing &#8220;Derived from Red Hat Enterprise Linux 7.1 (Source)&#8221;</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1327488">https://bugzilla.redhat.com/1327488</a></dt>
-<dd> <font SIZE="-1">RFE:</font> Allow p2v kernel options without p2v.server to set defaults</dd>
+<dd> RFE: Allow p2v kernel options without p2v.server to set defaults</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1325825">https://bugzilla.redhat.com/1325825</a></dt>
 <dd> virt-v2v should prevent using multiple &#8216;-b&#8217; and &#8216;-n&#8217; option appears on the command line</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1321620">https://bugzilla.redhat.com/1321620</a></dt>
@@ -838,19 +838,19 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1316041">https://bugzilla.redhat.com/1316041</a></dt>
 <dd> virt-rescue fails, but missing error message</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1314244">https://bugzilla.redhat.com/1314244</a></dt>
-<dd> <font SIZE="-1">RFE:</font> virt-p2v log window should process colour escapes and backspaces</dd>
+<dd> RFE: virt-p2v log window should process colour escapes and backspaces</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1312254">https://bugzilla.redhat.com/1312254</a></dt>
 <dd> virt-v2v -o libvirt doesn&#8217;t preserve or use correct &lt;graphics type=&#8220;vnc|spice&#8221;&gt;</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1309706">https://bugzilla.redhat.com/1309706</a></dt>
 <dd> error: internal error: Invalid floppy device name: hdb</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1309619">https://bugzilla.redhat.com/1309619</a></dt>
-<dd> Wrong warning info &#8220;use standard <font SIZE="-1">VGA&#8221;</font> shows when converting windows &gt; 7 by virt-v2v</dd>
+<dd> Wrong warning info &#8220;use standard VGA&#8221; shows when converting windows &gt; 7 by virt-v2v</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1309580">https://bugzilla.redhat.com/1309580</a></dt>
-<dd> <font SIZE="-1">OS</font> name of win8.1 x64 guest shows incorrect in rhevm3.6 general info</dd>
+<dd> OS name of win8.1 x64 guest shows incorrect in rhevm3.6 general info</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1308769">https://bugzilla.redhat.com/1308769</a></dt>
 <dd> virt-v2v does not copy additional disks to Glance</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1306666">https://bugzilla.redhat.com/1306666</a></dt>
-<dd> Failure when disk contains an <font SIZE="-1">LV</font> with activationskip=y</dd>
+<dd> Failure when disk contains an LV with activationskip=y</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1296606">https://bugzilla.redhat.com/1296606</a></dt>
 <dd> virt-v2v doesn&#8217;t remove VirtualBox additions correctly because of file quoting</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1293527">https://bugzilla.redhat.com/1293527</a></dt>
@@ -858,13 +858,13 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1293276">https://bugzilla.redhat.com/1293276</a></dt>
 <dd> guestfish can not ll a symbolic link dir or edit a file in it</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1278878">https://bugzilla.redhat.com/1278878</a></dt>
-<dd> guestfish should be able to handle <font SIZE="-1">LVM</font> thin layouts</dd>
+<dd> guestfish should be able to handle LVM thin layouts</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1264835">https://bugzilla.redhat.com/1264835</a></dt>
 <dd> ppc64le: virt-customize &#8211;install fail to detect the guest arch</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1264332">https://bugzilla.redhat.com/1264332</a></dt>
 <dd> Test that trimming in virt-v2v doesn&#8217;t regress</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1232192">https://bugzilla.redhat.com/1232192</a></dt>
-<dd> Virt-v2v gives an error on a blank disk: part_get_parttype: unknown signature, of the output: <font SIZE="-1">BYT</font>;</dd>
+<dd> Virt-v2v gives an error on a blank disk: part_get_parttype: unknown signature, of the output: BYT;</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1229386">https://bugzilla.redhat.com/1229386</a></dt>
 <dd> virt-p2v in non-GUI mode doesn&#8217;t show any conversion progress or status</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1227599">https://bugzilla.redhat.com/1227599</a></dt>
@@ -876,19 +876,19 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1203898">https://bugzilla.redhat.com/1203898</a></dt>
 <dd> Support inspecting docker images without /etc/fstab</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1186935">https://bugzilla.redhat.com/1186935</a></dt>
-<dd> libguestfs cannot inspect recent Fedora / <font SIZE="-1">RHEL</font> &gt;= 7 when /usr is a separate partition</dd>
+<dd> libguestfs cannot inspect recent Fedora / RHEL &gt;= 7 when /usr is a separate partition</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1167916">https://bugzilla.redhat.com/1167916</a></dt>
 <dd> P2V: invalid conversion server prints unexpected end of file waiting for password prompt.</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1152825">https://bugzilla.redhat.com/1152825</a></dt>
 <dd> virt-rescue &#8211;selinux can not work well, when enable selinux in the command line the value of &#8216;getenforce&#8217; is still Disabled in virt-rescue appliance</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1150298">https://bugzilla.redhat.com/1150298</a></dt>
-<dd> <font SIZE="-1">ARM 32</font> bit on Ubuntu: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]</dd>
+<dd> ARM 32 bit on Ubuntu: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1089100">https://bugzilla.redhat.com/1089100</a></dt>
 <dd> NetworkManager avc unlink denied for resolv.conf after using &#8211;selinux-relabel</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/983969">https://bugzilla.redhat.com/983969</a></dt>
-<dd> <font SIZE="-1">RFE:</font> virt-sysprep should be SELinux-aware</dd>
+<dd> RFE: virt-sysprep should be SELinux-aware</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/855058">https://bugzilla.redhat.com/855058</a></dt>
-<dd> <font SIZE="-1">RFE:</font> virt-p2v: display more information about storage devices</dd>
+<dd> RFE: virt-p2v: display more information about storage devices</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/554829">https://bugzilla.redhat.com/554829</a></dt>
 <dd> SELinux handling could be done better.</dd></dl>
 <h2>RELEASE NOTES FOR LIBGUESTFS 1.32</h2>
@@ -903,27 +903,27 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <p> Virt-builder and virt-customize <i>&#8211;install</i> option now works on 32 bit Fedora guests. Previously it would try to install 64 bit packages (Jan Sedlák). </p>
 <p> Virt-builder can now fetch cloud images using Simple Streams v1.0 metadata (Pino Toscano). </p>
 <p> Virt-builder can now fetch openSUSE cloud images out of the box (Cédric Bosdonnat). </p>
-<p> Virt-customize will now use stronger (<font SIZE="-1">SHA-512</font>) encrypted passwords by default on openSUSE ≥ 11 (Pino Toscano). </p>
+<p> Virt-customize will now use stronger (SHA-512) encrypted passwords by default on openSUSE ≥ 11 (Pino Toscano). </p>
 <p> Virt-builder will now correctly handle output filenames containing colon characters (<tt>&quot;:&quot;</tt>), and will create temporary files in the libguestfs cache directory instead of defaulting to <i>/tmp</i> (Pino Toscano). </p>
 <p> Virt-resize has a new <i>&#8211;unknown-filesystems</i> option to control what to do when asked to resize a filesystem that libguestfs doesn&#8217;t know how to resize. </p>
 <p> Virt-v2v now has an <i>&#8211;in-place</i> flag/mode, allowing in-place conversion of guests (Roman Kagan). </p>
 <p> Virt-v2v has a <i>&#8211;compressed</i> option for creating compressed qcow2 output files. </p>
 <p> Virt-v2v can now correctly get the VMware datacenter path (dcPath) from libvirt, instead of having to calculate it using an algorithm that occasionally got the wrong answer (Matthias Bolte, Tingting Zheng). </p>
-<p> Virt-v2v now processes <font SIZE="-1">RAM</font> sizes correctly for 64 bit guests when running on a 32 bit host. </p>
+<p> Virt-v2v now processes RAM sizes correctly for 64 bit guests when running on a 32 bit host. </p>
 <p> <i>Language bindings</i> </p>
-<p> In Perl and Python programs, the <tt>&quot;get_program_name&quot;</tt> <font SIZE="-1">API</font> now returns the true program name, instead of the incorrect string <tt>&quot;perl&quot;</tt> or <tt>&quot;python&quot;</tt>. </p>
+<p> In Perl and Python programs, the <tt>&quot;get_program_name&quot;</tt> API now returns the true program name, instead of the incorrect string <tt>&quot;perl&quot;</tt> or <tt>&quot;python&quot;</tt>. </p>
 <p> The Python bindings can now be compiled against a different version of libguestfs, allowing the pip module to be built against any version of libguestfs (instead of requiring the pip module and libguestfs to have exactly the same version). </p>
 <p> The quality of the Ruby rdoc (documentation) has been improved (Pino Toscano). </p>
 <p> Perl scripts no longer hard-code the location of perl in the shebang line, but use <code><a href="/docs/linux/man/1-env/">env</a></code>(1) to locate it instead (Pino Toscano). </p>
-<p> In OCaml programs, the guestfs handle was incorrectly made into a global root, meaning it could never be garbage collected. If you didn&#8217;t call the <tt>&quot;close&quot;</tt> function explicitly, the handle would not be closed until the whole program exited. This has now been fixed so handles will be garbage collected in the usual way. This changes the <font SIZE="-1">API</font> of the OCaml function <tt>&quot;Guestfs.event_callback&quot;</tt>. Note that non-C language bindings are not covered by the libguestfs <font SIZE="-1">API/ABI</font> guarantee, although we try hard not to change them, but in this case it was essential in order to fix this very serious bug. </p>
+<p> In OCaml programs, the guestfs handle was incorrectly made into a global root, meaning it could never be garbage collected. If you didn&#8217;t call the <tt>&quot;close&quot;</tt> function explicitly, the handle would not be closed until the whole program exited. This has now been fixed so handles will be garbage collected in the usual way. This changes the API of the OCaml function <tt>&quot;Guestfs.event_callback&quot;</tt>. Note that non-C language bindings are not covered by the libguestfs API/ABI guarantee, although we try hard not to change them, but in this case it was essential in order to fix this very serious bug. </p>
 <p> <i>Inspection</i> </p>
-<p> Alpine Linux and the <font SIZE="-1">APK</font> package manager, <font SIZE="-1">ALT</font> Linux, Frugalware, and <font SIZE="-1">PLD</font> Linux are now recognized (Pino Toscano). </p>
+<p> Alpine Linux and the APK package manager, ALT Linux, Frugalware, and PLD Linux are now recognized (Pino Toscano). </p>
 <p> If it exists, <i>/etc/os-release</i> will be preferred for inspecting Linux guests (Pino Toscano). </p>
 <p> The correct kernel version is returned for Windows guests ≥ 10. </p>
 <p> <i>Documentation</i> </p>
 <p> The large <code>guestfs</code>(3) man page has been split into several separate man pages: <code><a href="/docs/linux/man/1-guestfs-hacking/">guestfs-hacking</a></code>(1) <code><a href="/docs/linux/man/1-guestfs-internals/">guestfs-internals</a></code>(1) <code><a href="/docs/linux/man/1-guestfs-security/">guestfs-security</a></code>(1). In the source tree, a new <i>docs</i> directory contains this documentation. </p>
 <p> <i>Architectures and platforms</i> </p>
-<p> Libguestfs now supports <font SIZE="-1">ARM 64</font> bit platforms with vGICv3.</p>
+<p> Libguestfs now supports ARM 64 bit platforms with vGICv3.</p>
 <h3>Security</h3>
 <p> See also <code><a href="/docs/linux/man/1-guestfs-security/">guestfs-security</a></code>(1).</p>
 <dl>
@@ -943,8 +943,8 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <p> If you use sVirt to confine qemu, that would thwart some attacks.</dd></dl>
 <dt>Virt-customize permissions on <i>.ssh</i>, <i>.ssh/authorized_keys</i></dt>
 <dd> <a rel="nofollow" href="https://bugzilla.redhat.com/1260778.">https://bugzilla.redhat.com/1260778.</a> </dd>
-<p> Previously when asked to inject an <font SIZE="-1">SSH</font> key into a guest, virt-customize (hence virt-builder too) would create the <i>.ssh</i> directory and <i>.ssh/authorized_keys</i> file with too broad permissions, allowing other users to read. They are now created as <tt>0700</tt> and <tt>0600</tt> respectively, which is the same as the <code><a href="/docs/linux/man/1-ssh-copy-id/">ssh-copy-id</a></code>(1) utility.</dl>
-<h3><font SIZE="-1">API</font></h3>
+<p> Previously when asked to inject an SSH key into a guest, virt-customize (hence virt-builder too) would create the <i>.ssh</i> directory and <i>.ssh/authorized_keys</i> file with too broad permissions, allowing other users to read. They are now created as <tt>0700</tt> and <tt>0600</tt> respectively, which is the same as the <code><a href="/docs/linux/man/1-ssh-copy-id/">ssh-copy-id</a></code>(1) utility.</dl>
+<h3>API</h3>
 <p> <i>New APIs</i></p>
 <dl>
 <dt>&quot;guestfs_get_identifier&quot;</dt>
@@ -960,8 +960,8 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 </pre>
 <p> making it easier to follow traces in multi-threaded programs, or where a program uses multiple handles (especially virt-v2v).</p>
 <dt>&quot;guestfs_vfs_minimum_size&quot;</dt>
-<dd> Return the minimum size of a filesystem (when shrunk). This supports ext2/3/4, <font SIZE="-1">XFS</font> and btrfs, and can support other filesystem types in future (Maxim Perevedentsev).</dd></dl>
-<p> <i>Other </i><font SIZE="-1"><i>API</i></font><i> changes</i></p>
+<dd> Return the minimum size of a filesystem (when shrunk). This supports ext2/3/4, XFS and btrfs, and can support other filesystem types in future (Maxim Perevedentsev).</dd></dl>
+<p> <i>Other </i><i>API</i><i> changes</i></p>
 <dl>
 <dt>&quot;guestfs_disk_create&quot;: add &quot;preallocation&quot; = &quot;off&quot;/&quot;metadata&quot;/&quot;full&quot;.</dt>
 <dd> For raw, this allows <tt>&quot;off&quot;</tt> as a synonym for <tt>&quot;sparse&quot;</tt> (making it consistent with qcow2). For qcow2, this allows <tt>&quot;sparse&quot;</tt> as a synonym for <tt>&quot;off&quot;</tt>. </dd>
@@ -969,13 +969,13 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <dt>&quot;guestfs_tar_in&quot;: new &quot;xattrs&quot;, &quot;selinux&quot;, &quot;acl&quot; parameters.</dt>
 <dd>
 </dd><dt>&quot;guestfs_tar_out&quot;: new &quot;xattrs&quot;, &quot;selinux&quot;, &quot;acl&quot; parameters.</dt>
-<dd> These extra parameters control whether extended attributes, SELinux contexts and/or <font SIZE="-1">POSIX</font> ACLs are restored from / saved to tarballs.</dd>
+<dd> These extra parameters control whether extended attributes, SELinux contexts and/or POSIX ACLs are restored from / saved to tarballs.</dd>
 <dt>&quot;guestfs_add_drive&quot;</dt>
 <dd> The existing <tt>&quot;username&quot;</tt> and <tt>&quot;secret&quot;</tt> parameters can be used to supply authentication for iSCSI (Pino Toscano).</dd></dl>
 <h3>Build changes</h3>
 <p> The <tt>&quot;./configure --enable-valgrind-daemon&quot;</tt> option has been removed. </p>
-<p> You can no longer build libguestfs on <font SIZE="-1">RHEL</font> 5-era (c.2007) machines. See the <tt>&quot;oldlinux&quot;</tt> branch if you need (limited) <font SIZE="-1">RHEL 5</font> support. </p>
-<p> Virt-p2v can now be built on <font SIZE="-1">RHEL</font> 6-era (c.2010) Linux distros. </p>
+<p> You can no longer build libguestfs on RHEL 5-era (c.2007) machines. See the <tt>&quot;oldlinux&quot;</tt> branch if you need (limited) RHEL 5 support. </p>
+<p> Virt-p2v can now be built on RHEL 6-era (c.2010) Linux distros. </p>
 <p> OCaml ≥ 3.11 (released in 2008) is now required to build from git. </p>
 <p> Building the Perl bindings now requires <tt>&quot;Module::Build&quot;</tt> (instead of <tt>&quot;ExtUtils::MakeMaker&quot;</tt>). </p>
 <p> Builds should be faster (especially when incrementally rebuilding), because work was done to reduce build times. </p>
@@ -987,11 +987,11 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <p> A new <tt>&quot;make installcheck&quot;</tt> rule has been added, allowing the installed copy of libguestfs to be tested.</p>
 <h3>Internals</h3>
 <p> Some effort was put into minimizing the size of the appliance, which reduces temporary disk space and time needed by libguestfs handles. </p>
-<p> The appliance now passes the <font SIZE="-1">NIC</font> name to dhcpd, fixing hangs when running the appliance on some distros (Cédric Bosdonnat). </p>
+<p> The appliance now passes the NIC name to dhcpd, fixing hangs when running the appliance on some distros (Cédric Bosdonnat). </p>
 <p> OCaml <tt>&quot;Guestfs.Errno&quot;</tt> is now generated (Pino Toscano). </p>
 <p> In OCaml tools, common code now handles <i>&#8211;debug-gc</i>, <i>&#8211;verbose</i> and other common options (Roman Kagan, Pino Toscano). </p>
 <p> The virt-v2v test harness allows us to boot the test guests at fixed dates in the past, ensuring that Windows reactivation doesn&#8217;t kick in. </p>
-<p> There is a new internal <font SIZE="-1">API</font> for reading/writing a subprocess via a pipe from library code. </p>
+<p> There is a new internal API for reading/writing a subprocess via a pipe from library code. </p>
 <p> Used <tt>&quot;deheader&quot;</tt> program to remove unused <tt>&quot;#include&quot;</tt> directives. </p>
 <p> In OCaml tools, the <tt>&quot;Char&quot;</tt> and <tt>&quot;String&quot;</tt> modules now implicitly reference the <tt>&quot;Common_utils.Char&quot;</tt> and <tt>&quot;Common_utils.String&quot;</tt> modules (instead of the ones from stdlib). The <tt>&quot;Common_utils&quot;</tt> modules contain a number of extra char/string utility functions, and also hide some unsafe functions in stdlib. </p>
 <p> Many more virt-v2v tests will now be run even if you don&#8217;t have rhsrvany and virtio-win installed (Roman Kagan). </p>
@@ -1019,15 +1019,15 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1279273">https://bugzilla.redhat.com/1279273</a></dt>
 <dd> About compression option for qcow2</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1278878">https://bugzilla.redhat.com/1278878</a></dt>
-<dd> guestfish should be able to handle <font SIZE="-1">LVM</font> thin layouts</dd>
+<dd> guestfish should be able to handle LVM thin layouts</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1278382">https://bugzilla.redhat.com/1278382</a></dt>
-<dd> <font SIZE="-1">DNF</font> python programming error when run from virt-builder</dd>
+<dd> DNF python programming error when run from virt-builder</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1278371">https://bugzilla.redhat.com/1278371</a></dt>
 <dd> inspection returns arch=&#8220;unknown&#8221; for Windows guest if file command is not installed</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1277274">https://bugzilla.redhat.com/1277274</a></dt>
 <dd> Document permissions needed for non-admin users to use virt-v2v</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1277122">https://bugzilla.redhat.com/1277122</a></dt>
-<dd> <font SIZE="-1">RFE:</font> virt-sparsify: make &#8216;&#8211;in-place&#8217; sparsification safe to abort (gracefully or ungracefully)</dd>
+<dd> RFE: virt-sparsify: make &#8216;&#8211;in-place&#8217; sparsification safe to abort (gracefully or ungracefully)</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1277074">https://bugzilla.redhat.com/1277074</a></dt>
 <dd> Virt-p2v client shouldn&#8217;t present the vdsm option because it&#8217;s not usable</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1276540">https://bugzilla.redhat.com/1276540</a></dt>
@@ -1043,33 +1043,33 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1262127">https://bugzilla.redhat.com/1262127</a></dt>
 <dd> Better diagnostic message when virbr0 doesn&#8217;t exist</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1261436">https://bugzilla.redhat.com/1261436</a></dt>
-<dd> No warning shows when convert a win7 guest with <font SIZE="-1">AVG</font> AntiVirus installed</dd>
+<dd> No warning shows when convert a win7 guest with AVG AntiVirus installed</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1260778">https://bugzilla.redhat.com/1260778</a></dt>
 <dd> virt-builder &#8211;ssh-inject doesn&#8217;t set proper permissions on created files</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1260689">https://bugzilla.redhat.com/1260689</a></dt>
-<dd> <font SIZE="-1">RFE: V2V</font> to check and warn user to disable group policy and anti virus on Windows guests</dd>
+<dd> RFE: V2V to check and warn user to disable group policy and anti virus on Windows guests</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1260590">https://bugzilla.redhat.com/1260590</a></dt>
 <dd> Wrong graphics protocal and video type set for guest after convert to rhev 3.6 by virt-v2v</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1258342">https://bugzilla.redhat.com/1258342</a></dt>
-<dd> extra slashes in vcenter <font SIZE="-1">URL</font> confuses virt-v2v</dd>
+<dd> extra slashes in vcenter URL confuses virt-v2v</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1257895">https://bugzilla.redhat.com/1257895</a></dt>
-<dd> [<font SIZE="-1">RHEV</font>][V2V] virt-v2v ignores <font SIZE="-1">NIC</font> if interface source/@network or source/@bridge is an empty string</dd>
+<dd> [RHEV][V2V] virt-v2v ignores NIC if interface source/@network or source/@bridge is an empty string</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1256405">https://bugzilla.redhat.com/1256405</a></dt>
 <dd> virt-builder created Fedora 22 32bit disk image cannot be updated</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1256222">https://bugzilla.redhat.com/1256222</a></dt>
-<dd> virt-p2v no <font SIZE="-1">GUI</font> mode:error opening control connection to <tt>$ip:22:unexpected</tt> …rompt</dd>
+<dd> virt-p2v no GUI mode:error opening control connection to <tt>$ip:22:unexpected</tt> …rompt</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1251909">https://bugzilla.redhat.com/1251909</a></dt>
 <dd> Option -oa preallocated -of qcow2 of virt-v2v didn&#8217;t work efficiently</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1250715">https://bugzilla.redhat.com/1250715</a></dt>
 <dd> v2v: spaces need to be escaped as <tt>%20</tt> in paths</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1248678">https://bugzilla.redhat.com/1248678</a></dt>
-<dd> Close all incoming ports on virt-p2v <font SIZE="-1">ISO</font></dd>
+<dd> Close all incoming ports on virt-p2v ISO</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1246882">https://bugzilla.redhat.com/1246882</a></dt>
 <dd> man virt-customize shows synopsis twice</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1242853">https://bugzilla.redhat.com/1242853</a></dt>
 <dd> mount-loop failed to setup loop device: No such file or directory</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1237136">https://bugzilla.redhat.com/1237136</a></dt>
-<dd> <font SIZE="-1">BUG:</font> unable to handle kernel <font SIZE="-1">NULL</font> pointer dereference at &lt;addr&gt; in function __blkg_lookup</dd>
+<dd> BUG: unable to handle kernel NULL pointer dereference at &lt;addr&gt; in function __blkg_lookup</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1230412">https://bugzilla.redhat.com/1230412</a></dt>
 <dd> virt-v2v should ignore bogus kernel entries in grub config</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1229119">https://bugzilla.redhat.com/1229119</a></dt>
@@ -1079,13 +1079,13 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1225789">https://bugzilla.redhat.com/1225789</a></dt>
 <dd> Wrong video driver is installed for rhel5.11 guest after conversion to libvirt</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1204131">https://bugzilla.redhat.com/1204131</a></dt>
-<dd> <font SIZE="-1">RFE:</font> virt-builder creates qcow v3 images, add build option for qcow v2</dd>
+<dd> RFE: virt-builder creates qcow v3 images, add build option for qcow v2</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1176801">https://bugzilla.redhat.com/1176801</a></dt>
 <dd> File /etc/sysconfig/kernel isn&#8217;t updated when convert XenPV guest with regular kernel installed</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1174551">https://bugzilla.redhat.com/1174551</a></dt>
-<dd> &#8220;lstatnslist&#8221; and &#8220;lstatlist&#8221; don&#8217;t give an error if the <font SIZE="-1">API</font> is used wrongly</dd>
+<dd> &#8220;lstatnslist&#8221; and &#8220;lstatlist&#8221; don&#8217;t give an error if the API is used wrongly</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1168223">https://bugzilla.redhat.com/1168223</a></dt>
-<dd> koji spin-livecd cannot build a working live <font SIZE="-1">CD</font></dd>
+<dd> koji spin-livecd cannot build a working live CD</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1165785">https://bugzilla.redhat.com/1165785</a></dt>
 <dd> mount-loop command fails: mount failed: Unknown error -1</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1164708">https://bugzilla.redhat.com/1164708</a></dt>
@@ -1101,14 +1101,14 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <p> <code><a href="/docs/linux/man/1-virt-dib/">virt-dib</a></code>(1) is a secure and safe alternative to the OpenStack &#8220;diskimage-builder&#8221; tool. It is compatible with diskimage-builder elements. (Pino Toscano) </p>
 <p> <code><a href="/docs/linux/man/1-virt-get-kernel/">virt-get-kernel</a></code>(1) extracts the kernel and ramdisk from a disk image. Previously this functionality was part of <code><a href="/docs/linux/man/1-virt-builder/">virt-builder</a></code>(1), but the new tool is more featureful. (Pino Toscano) </p>
 <p> <i>New features in existing tools</i> </p>
-<p> <code><a href="/docs/linux/man/1-virt-v2v/">virt-v2v</a></code>(1) <i>-i ova</i> mode can now read a wider range of <font SIZE="-1">OVA</font> files, and also unpacked files (directories). </p>
+<p> <code><a href="/docs/linux/man/1-virt-v2v/">virt-v2v</a></code>(1) <i>-i ova</i> mode can now read a wider range of OVA files, and also unpacked files (directories). </p>
 <p> virt-v2v now securely passes options to curl, so passwords, cookies and so on cannot be seen by users with shell access on the same machine. </p>
 <p> virt-v2v has a new <i>&#8211;password-file</i> option to allow you to securely pass in a password, and to avoid an interactive prompt. </p>
 <p> virt-v2v disables Windows autoreboot, making debugging conversion failures on Windows easier. </p>
 <p> virt-v2v now comes with an extensive external test suite. See <code>virt-v2v-test-harness</code>(1). </p>
-<p> virt-v2v allows virtio drivers to come from any location (Roman Kagan), and drivers can be read directly from the virtio <font SIZE="-1">ISO.</font> </p>
+<p> virt-v2v allows virtio drivers to come from any location (Roman Kagan), and drivers can be read directly from the virtio ISO. </p>
 <p> virt-v2v supports conversion of Windows ≥ 8. Note this is experimental, and possibly broken. Use with caution. </p>
-<p> virt-v2v can now convert <font SIZE="-1">UEFI</font> guests. </p>
+<p> virt-v2v can now convert UEFI guests. </p>
 <p> <code><a href="/docs/linux/man/1-virt-p2v/">virt-p2v</a></code>(1) adds a network configuration dialog. </p>
 <p> virt-p2v now has <tt>&quot;p2v.pre&quot;</tt>, <tt>&quot;p2v.post&quot;</tt> and <tt>&quot;p2v.fail&quot;</tt> triggers, allowing arbitrary scripts for preparing the host for conversion and tidying up post-conversion. </p>
 <p> virt-p2v now uses the more advanced metacity window manager (instead of matchbox). </p>
@@ -1124,7 +1124,7 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <dt><i>&#8211;move</i></dt>
 <dd> move files inside the guest (Maros Zatko)</dd>
 <dt><i>&#8211;ssh-inject</i></dt>
-<dd> inject <font SIZE="-1">SSH</font> keys into a guest (Pino Toscano)</dd>
+<dd> inject SSH keys into a guest (Pino Toscano)</dd>
 <dt><i>&#8211;sm-attach</i></dt>
 <dd>
 </dd><dt><i>&#8211;sm-credentials</i></dt>
@@ -1142,51 +1142,51 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 </dd><dt><i>&#8211;truncate-recursive</i></dt>
 <dd> truncate files (Maros Zatko)</dd></dl>
 <p> Improvements to virt-customize firstboot support. In particular, Windows firstboot should work as well as Linux (Roman Kagan). </p>
-<p> <code><a href="/docs/linux/man/1-virt-df/">virt-df</a></code>(1) can now use PolicyKit, <font SIZE="-1">SASL</font> and other authentication methods when getting the list of domains from libvirt. </p>
+<p> <code><a href="/docs/linux/man/1-virt-df/">virt-df</a></code>(1) can now use PolicyKit, SASL and other authentication methods when getting the list of domains from libvirt. </p>
 <p> Improvements to guestfish bash completion (Pino Toscano). </p>
 <p> Bash completion now completes short options as well as long options (Pino Toscano). </p>
 <p> <code><a href="/docs/linux/man/1-guestfish/">guestfish</a></code>(1) now displays a command synopsis if the number of parameters given to a command is wrong (Hu Tao). </p>
-<p> virt-builder now supports Red Hat Enterprise Linux versions back to <font SIZE="-1">RHEL 3.</font> </p>
-<p> virt-builder supports <font SIZE="-1">SUSE</font> guests using zypper (Cédric Bosdonnat). </p>
+<p> virt-builder now supports Red Hat Enterprise Linux versions back to RHEL 3. </p>
+<p> virt-builder supports SUSE guests using zypper (Cédric Bosdonnat). </p>
 <p> <i>Language bindings</i> </p>
 <p> The Java bindings now include validated Javadoc, and other improvements (Pino Toscano). </p>
-<p> Multiple fixes and improvements to the <font SIZE="-1">PHP</font> bindings (Pino Toscano). </p>
+<p> Multiple fixes and improvements to the PHP bindings (Pino Toscano). </p>
 <p> <i>Inspection</i> </p>
-<p> Inspection can now get icons from <font SIZE="-1">RHEL 7</font> and CentOS 7. </p>
+<p> Inspection can now get icons from RHEL 7 and CentOS 7. </p>
 <p> <i>/etc/favicon.png</i> is now allowed to be a symbolic link. </p>
-<p> For RPM-based guests, inspection now returns <font SIZE="-1">RPM</font> Epoch fields. </p>
+<p> For RPM-based guests, inspection now returns RPM Epoch fields. </p>
 <p> Debian packages now have separate Epoch and Version fields (Nikos Skalkotos). </p>
-<p> OpenBSD detection added, FreeBSD and NetBSD added as separate &#8220;distros&#8221;, and other <font SIZE="-1">BSD</font> inspection improvements and bug fixes (Nikos Skalkotos). </p>
+<p> OpenBSD detection added, FreeBSD and NetBSD added as separate &#8220;distros&#8221;, and other BSD inspection improvements and bug fixes (Nikos Skalkotos). </p>
 <p> CoreOS detection added (Nikos Skalkotos). </p>
 <p> The package manager in Fedora ≥ 22 is <tt>&quot;dnf&quot;</tt>. </p>
 <p> ReactOS guests can be inspected (Maros Zatko). </p>
-<p> Add support for <font SIZE="-1">UEFI</font> guests. </p>
+<p> Add support for UEFI guests. </p>
 <p> Inspection now works when kernel modules are gzip or xz compressed (Pino Toscano). </p>
 <p> Inspection now recognizes ppc64 and ppc64le guests (Maros Zatko). </p>
 <p> Inspection lists the installed applications on Archlinux guests (Nikos Skalkotos). </p>
 <p> <i>Architectures and platforms</i> </p>
-<p> <font SIZE="-1">PPC64</font> (<font SIZE="-1">POWER7</font>) and <font SIZE="-1">PPC64LE</font> (<font SIZE="-1">POWER8</font>) architectures are now much better supported, and should work out of the box. </p>
-<p> For aarch64, we use <font SIZE="-1">AAVMF</font> (an open source <font SIZE="-1">UEFI</font> implementation based on <font SIZE="-1">OVMF</font>) if available to run the appliance. </p>
+<p> PPC64 (POWER7) and PPC64LE (POWER8) architectures are now much better supported, and should work out of the box. </p>
+<p> For aarch64, we use AAVMF (an open source UEFI implementation based on OVMF) if available to run the appliance. </p>
 <p> For armv7, we now use the <i>-M virt</i> machine type by default. </p>
 <p> There is better support for compiling on non-Linux platforms (Pino Toscano, Margaret Lewicka). </p>
-<p> Libguestfs should now work on <font SIZE="-1">MIPS 32</font> bit little endian (&#8220;mipsel&#8221;). I have not been able to try 64 bit or big endian.</p>
+<p> Libguestfs should now work on MIPS 32 bit little endian (&#8220;mipsel&#8221;). I have not been able to try 64 bit or big endian.</p>
 <h3>Security</h3>
 <dl>
-<dt><font SIZE="-1">CVE-2014-8484</font></dt>
+<dt>CVE-2014-8484</dt>
 <dd>
-</dd><dt><font SIZE="-1">CVE-2014-8485</font></dt>
-<dd> Libguestfs previously ran the <code><a href="/docs/linux/man/1-strings/">strings</a></code>(1) utility on untrusted files. Strings could parse <font SIZE="-1">BFD</font> headers in an unsafe way, leading to possible arbitrary code execution. Libguestfs now runs strings with a flag to ensure it does not try to parse <font SIZE="-1">BFD</font> headers. This could have led to exploitation of the libguestfs appliance, but since libguestfs further constrains the appliance through virtualization, SELinux and other techniques, it was unlikely to have caused any privilege escalation on the host.</dd>
+</dd><dt>CVE-2014-8485</dt>
+<dd> Libguestfs previously ran the <code><a href="/docs/linux/man/1-strings/">strings</a></code>(1) utility on untrusted files. Strings could parse BFD headers in an unsafe way, leading to possible arbitrary code execution. Libguestfs now runs strings with a flag to ensure it does not try to parse BFD headers. This could have led to exploitation of the libguestfs appliance, but since libguestfs further constrains the appliance through virtualization, SELinux and other techniques, it was unlikely to have caused any privilege escalation on the host.</dd>
 <dt>XPath injection in virt-v2v</dt>
 <dd> One possible XPath injection vulnerability was fixed in virt-v2v. This might have allowed a malicious guest which was being converted by virt-v2v to construct an arbitrary XPath expression which would have been evaluated on the host (by the libxml2 library linked to the virt-v2v binary). It is not clear what the effects of this might be. </dd>
 <p> For further information, see upstream commit <a rel="nofollow" href="https://github.com/libguestfs/libguestfs/commit/6c6ce85f94c36803fe2db35a98db436bff0c14b0">https://github.com/libguestfs/libguestfs/commit/6c6ce85f94c36803fe2db35a98db436bff0c14b0</a></p>
 <dt>Denial of service problems when using &quot;qemu-img info&quot;</dt>
-<dd> When using the American Fuzzy Lop fuzzer (<tt>&quot;afl-fuzz&quot;</tt>) on the <tt>&quot;qemu-img info&quot;</tt> command, Richard W.M. Jones found that certain files can cause the <tt>&quot;qemu-img&quot;</tt> program to use lots of memory and time (for example 6GB of heap and 14 seconds of <font SIZE="-1">CPU</font> time on a fast Intel processor), and in some cases to crash. Since libguestfs may run <tt>&quot;qemu-img info&quot;</tt> on disk images to find out what they contain, this transitively could cause libguestfs to hang or consume lots of memory. </dd>
+<dd> When using the American Fuzzy Lop fuzzer (<tt>&quot;afl-fuzz&quot;</tt>) on the <tt>&quot;qemu-img info&quot;</tt> command, Richard W.M. Jones found that certain files can cause the <tt>&quot;qemu-img&quot;</tt> program to use lots of memory and time (for example 6GB of heap and 14 seconds of CPU time on a fast Intel processor), and in some cases to crash. Since libguestfs may run <tt>&quot;qemu-img info&quot;</tt> on disk images to find out what they contain, this transitively could cause libguestfs to hang or consume lots of memory. </dd>
 <p> Libguestfs was modified so that it uses resource limits to limit the space and time used by <tt>&quot;qemu-img info&quot;</tt>, to avoid this problem. If a malicious user tries to pass one of these disk images to libguestfs, <tt>&quot;qemu-img&quot;</tt> will crash and the crash is reported back to libguestfs callers as an error message.</dl>
-<h3><font SIZE="-1">API</font></h3>
+<h3>API</h3>
 <p> <i>New APIs</i></p>
 <dl>
 <dt>&quot;guestfs_add_libvirt_dom&quot;</dt>
-<dd> This exposes a previously private <font SIZE="-1">API</font> that allows you to pass a <tt>&quot;virDomainPtr&quot;</tt> object directly from libvirt to libguestfs.</dd>
+<dd> This exposes a previously private API that allows you to pass a <tt>&quot;virDomainPtr&quot;</tt> object directly from libvirt to libguestfs.</dd>
 <dt>&quot;guestfs_blockdev_setra&quot;</dt>
 <dd> Adjust readahead parameter for devices. See <tt>&quot;blockdev --setra&quot;</tt> command.</dd>
 <dt>&quot;guestfs_btrfs_balance&quot;</dt>
@@ -1248,17 +1248,17 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <dt>&quot;guestfs_copy_in&quot;</dt>
 <dd>
 </dd><dt>&quot;guestfs_copy_out&quot;</dt>
-<dd> Flexible APIs for recursively copying directories of files between the host and guest filesystem. Previously these were available only as guestfish commands, but now any <font SIZE="-1">API</font> users can call them (Pino Toscano).</dd>
+<dd> Flexible APIs for recursively copying directories of files between the host and guest filesystem. Previously these were available only as guestfish commands, but now any API users can call them (Pino Toscano).</dd>
 <dt>&quot;guestfs_part_get_gpt_guid&quot;</dt>
 <dd>
 </dd><dt>&quot;guestfs_part_set_gpt_guid&quot;</dt>
-<dd> Get and set the <font SIZE="-1">GPT</font> per-partition <font SIZE="-1">GUID.</font></dd>
+<dd> Get and set the GPT per-partition GUID.</dd>
 <dt>&quot;guestfs_part_get_mbr_part_type&quot;</dt>
-<dd> Get <font SIZE="-1">MBR</font> partition type (Chen Hanxiao).</dd>
+<dd> Get MBR partition type (Chen Hanxiao).</dd>
 <dt>&quot;guestfs_set_uuid_random&quot;</dt>
-<dd> Set the <font SIZE="-1">UUID</font> of a filesystem to a randomly generated value; supported filesystems currently are ext2/3/4, <font SIZE="-1">XFS,</font> Btrfs, and swap partitions. (Chen Hanxiao).</dd></dl>
-<p> <i>Other </i><font SIZE="-1"><i>API</i></font><i> changes</i> </p>
-<p> <tt>&quot;guestfs_disk_create&quot;</tt> can now use <font SIZE="-1">VMDK</font> files as backing files. </p>
+<dd> Set the UUID of a filesystem to a randomly generated value; supported filesystems currently are ext2/3/4, XFS, Btrfs, and swap partitions. (Chen Hanxiao).</dd></dl>
+<p> <i>Other </i><i>API</i><i> changes</i> </p>
+<p> <tt>&quot;guestfs_disk_create&quot;</tt> can now use VMDK files as backing files. </p>
 <p> <tt>&quot;guestfs_btrfs_subvolume_snapshot&quot;</tt> takes extra optional parameters (all added by Hu Tao):</p>
 <dl>
 <dt>&quot;ro&quot;</dt>
@@ -1266,7 +1266,7 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <dt>&quot;qgroupid&quot;</dt>
 <dd> for adding the snapshot to a qgroup</dd></dl>
 <p> <tt>&quot;guestfs_btrfs_subvolume_create&quot;</tt> can also take the optional <tt>&quot;qgroupid&quot;</tt> parameter (Hu Tao). </p>
-<p> <tt>&quot;guestfs_set_uuid&quot;</tt> can set <font SIZE="-1">UUID</font> of swap partitions, Btrfs (Hu Tao, Chen Hanxiao). </p>
+<p> <tt>&quot;guestfs_set_uuid&quot;</tt> can set UUID of swap partitions, Btrfs (Hu Tao, Chen Hanxiao). </p>
 <p> <tt>&quot;guestfs_copy_device_to_file&quot;</tt> and <tt>&quot;guestfs_copy_file_to_file&quot;</tt> have a new optional <tt>&quot;append&quot;</tt> parameter, allowing you to append to the output file instead of truncating it. </p>
 <p> <tt>&quot;guestfs_mkfs&quot;</tt> has a new optional <tt>&quot;label&quot;</tt> parameter to set the initial label of the new filesystem (Pino Toscano). </p>
 <p> <tt>&quot;guestfs_set_label&quot;</tt> and <tt>&quot;guestfs_set_uuid&quot;</tt> now set <tt>&quot;ENOTSUP&quot;</tt> as errno when there is no implemented support for the filesystem of the specified mountable (Chen Hanxiao). </p>
@@ -1278,19 +1278,19 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <p> OCaml <i>.annot</i> files are now created, so IDEs and editors like emacs and vi can browse OCaml types in the source code. </p>
 <p> Various fixes to allow different host/appliance architecture builds (Pino Toscano). </p>
 <p> Automake is now used directly to build all the OCaml programs, instead of ad hoc Makefile rules. One side effect of this is to enable warnings in all the C code used by OCaml programs. </p>
-<p> <tt>&quot;-fno-strict-overflow&quot;</tt> is used throughout the build to avoid dubious <font SIZE="-1">GCC</font> optimizations. </p>
-<p> Multiple cleanups to support <font SIZE="-1">GCC 5.</font> </p>
+<p> <tt>&quot;-fno-strict-overflow&quot;</tt> is used throughout the build to avoid dubious GCC optimizations. </p>
+<p> Multiple cleanups to support GCC 5. </p>
 <p> OCaml OUnit2 is needed to run some OCaml tests. </p>
 <p> Creating a statically linked <i>libguestfs.a</i> should work again. </p>
-<p> The <i>src/api-support</i> subdirectory and its scripts are no longer used. Instead we store in the <i>generator/actions.ml</i> when the <font SIZE="-1">API</font> was added to libguestfs.</p>
+<p> The <i>src/api-support</i> subdirectory and its scripts are no longer used. Instead we store in the <i>generator/actions.ml</i> when the API was added to libguestfs.</p>
 <h3>Internationalization</h3>
 <p> The translation service has changed from Transifex to Zanata. </p>
 <p> Many more translations are available now, for both library and tools messages and documentation.</p>
 <h3>Internals</h3>
 <p> In all OCaml tools, there are now common <tt>&quot;error&quot;</tt>, <tt>&quot;warning&quot;</tt>, <tt>&quot;info&quot;</tt> functions, and common way to set and get the <i>&#8211;quiet</i>, <i>-x</i> (trace) and <i>-v</i> (verbose) flags, and colour highlighting used consistently. </p>
-<p> <tt>&quot;COMPILE_REGEXP&quot;</tt> macros are used to simplify <font SIZE="-1">PCRE</font> constructors and destructors. </p>
+<p> <tt>&quot;COMPILE_REGEXP&quot;</tt> macros are used to simplify PCRE constructors and destructors. </p>
 <p> In the generator, <tt>&quot;Pointer&quot;</tt> arguments have finally been implemented. </p>
-<p> Internal identifiers no longer use double and triple underscores (eg. <tt>&quot;guestfs___program_name&quot;</tt>). These identifiers are invalid for C99 and C<font SIZE="-2">++</font> programs, although compilers would accept them. </p>
+<p> Internal identifiers no longer use double and triple underscores (eg. <tt>&quot;guestfs___program_name&quot;</tt>). These identifiers are invalid for C99 and C++ programs, although compilers would accept them. </p>
 <p> The daemon no longer parses <tt>&quot;guestfs_*&quot;</tt> options from <i>/proc/cmdline</i>. Instead it only takes ordinary command line options. The appliance init script turns <i>/proc/cmdline</i> into daemon command line options. </p>
 <p> The tests can now run the daemon as a &#8220;captive process&#8221;, allowing it to be run directly on the host. The main advantage of this is we can run valgrind directly on the daemon during testing.</p>
 <h3>Bugs fixed</h3>
@@ -1304,11 +1304,11 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1234351">https://bugzilla.redhat.com/1234351</a></dt>
 <dd> virt-v2v Support for Fedora virtio-win drivers</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1232192">https://bugzilla.redhat.com/1232192</a></dt>
-<dd> Virt-v2v gives an error on a blank disk: part_get_parttype: unknown signature, of the output: <font SIZE="-1">BYT</font>;</dd>
+<dd> Virt-v2v gives an error on a blank disk: part_get_parttype: unknown signature, of the output: BYT;</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1229385">https://bugzilla.redhat.com/1229385</a></dt>
 <dd> virt-p2v in kernel command line mode should power off the machine after conversion</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1229340">https://bugzilla.redhat.com/1229340</a></dt>
-<dd> virt-p2v no <font SIZE="-1">GUI</font> mode appends 
+<dd> virt-p2v no GUI mode appends 
  to the final command line parameter</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1229305">https://bugzilla.redhat.com/1229305</a></dt>
 <dd> virt-sysprep at cleanup deletes /var/spool/at/.SEQ which results in failing at</dd>
@@ -1321,21 +1321,21 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1213247">https://bugzilla.redhat.com/1213247</a></dt>
 <dd> virt tools should print the same format of version string</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1212808">https://bugzilla.redhat.com/1212808</a></dt>
-<dd> <font SIZE="-1">RFE:</font> virt-builder &#8211;touch</dd>
+<dd> RFE: virt-builder &#8211;touch</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1212807">https://bugzilla.redhat.com/1212807</a></dt>
 <dd> virt-builder &#8211;selinux-relabel flag fails on cross-architecture builds</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1212680">https://bugzilla.redhat.com/1212680</a></dt>
-<dd> <font SIZE="-1">RFE:</font> virt-inspector xpath query should output a neat format of the query element</dd>
+<dd> RFE: virt-inspector xpath query should output a neat format of the query element</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1212152">https://bugzilla.redhat.com/1212152</a></dt>
 <dd> virt-builder firstboot-command fails: File name too long</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1211996">https://bugzilla.redhat.com/1211996</a></dt>
 <dd> virt-inspector gives incorrect arch (ppc64) for ppc64le guest</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1203817">https://bugzilla.redhat.com/1203817</a></dt>
-<dd> <font SIZE="-1">RFE:</font> virt-customize &#8211;move and &#8211;copy</dd>
+<dd> RFE: virt-customize &#8211;move and &#8211;copy</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1201526">https://bugzilla.redhat.com/1201526</a></dt>
 <dd> index-parser can&#8217;t parse systemd mount files properly</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1196101">https://bugzilla.redhat.com/1196101</a></dt>
-<dd> virt-builder &#8211;upload option doesn&#8217;t work to a <font SIZE="-1">FAT</font> partition</dd>
+<dd> virt-builder &#8211;upload option doesn&#8217;t work to a FAT partition</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1196100">https://bugzilla.redhat.com/1196100</a></dt>
 <dd> virt-builder -x option on its own does not enable tracing</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1195204">https://bugzilla.redhat.com/1195204</a></dt>
@@ -1343,7 +1343,7 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1193237">https://bugzilla.redhat.com/1193237</a></dt>
 <dd> Virt-builder fingerprint is required even when no check desired</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1189284">https://bugzilla.redhat.com/1189284</a></dt>
-<dd> virt-resize should preserve <font SIZE="-1">GPT</font> partition UUIDs, else <font SIZE="-1">EFI</font> guests become unbootable</dd>
+<dd> virt-resize should preserve GPT partition UUIDs, else EFI guests become unbootable</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1188866">https://bugzilla.redhat.com/1188866</a></dt>
 <dd> Performance regression in virt-builder when uncompressing image</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1186800">https://bugzilla.redhat.com/1186800</a></dt>
@@ -1357,23 +1357,23 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1175676">https://bugzilla.redhat.com/1175676</a></dt>
 <dd> Typo error in &#8216;help ping-daemon&#8217;</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1175196">https://bugzilla.redhat.com/1175196</a></dt>
-<dd> &#8220;parse-environment&#8221; and &#8220;parse-environment-list&#8221; fail to parse &#8220;<font SIZE="-1">LIBGUESTFS_TRACE</font> = 0&#8221;</dd>
+<dd> &#8220;parse-environment&#8221; and &#8220;parse-environment-list&#8221; fail to parse &#8220;LIBGUESTFS_TRACE = 0&#8221;</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1175035">https://bugzilla.redhat.com/1175035</a></dt>
 <dd> &#8220;is-blockdev&#8221;/&#8220;is-blockdev-opts&#8221; fail to detect &#8220;/dev/sda&#8221;</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1174280">https://bugzilla.redhat.com/1174280</a></dt>
-<dd> <font SIZE="-1">RFE:</font> Allow v2v conversion of Oracle Linux 5.8 VMware <font SIZE="-1">VM</font></dd>
+<dd> RFE: Allow v2v conversion of Oracle Linux 5.8 VMware VM</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1174200">https://bugzilla.redhat.com/1174200</a></dt>
-<dd> New virt-v2v failure: <font SIZE="-1">CURL:</font> Error opening file: <font SIZE="-1">NSS:</font> client certificate not found (nickname not specified): Invalid argument</dd>
+<dd> New virt-v2v failure: CURL: Error opening file: NSS: client certificate not found (nickname not specified): Invalid argument</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1174123">https://bugzilla.redhat.com/1174123</a></dt>
 <dd> Graphics password disappear after conversion of virt-v2v</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1174073">https://bugzilla.redhat.com/1174073</a></dt>
 <dd> The listen address for vnc is changed after conversion by virt-v2v</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1171666">https://bugzilla.redhat.com/1171666</a></dt>
-<dd> inspection thinks <font SIZE="-1">EFI</font> partition is a separate operating system</dd>
+<dd> inspection thinks EFI partition is a separate operating system</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1171130">https://bugzilla.redhat.com/1171130</a></dt>
-<dd> virt-v2v conversion of <font SIZE="-1">RHEL 3</font> guest fails with: All of your loopback devices are in use</dd>
+<dd> virt-v2v conversion of RHEL 3 guest fails with: All of your loopback devices are in use</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1170685">https://bugzilla.redhat.com/1170685</a></dt>
-<dd> Conversion of <font SIZE="-1">RHEL 4</font> guest fails: rpm -ql 1:kernel-utils-2.4-23.el4: virt-v2v: error: libguestfs error: command_lines:</dd>
+<dd> Conversion of RHEL 4 guest fails: rpm -ql 1:kernel-utils-2.4-23.el4: virt-v2v: error: libguestfs error: command_lines:</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1170073">https://bugzilla.redhat.com/1170073</a></dt>
 <dd> virt-v2v picks debug kernels over non-debug kernels when versions are equal</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1169045">https://bugzilla.redhat.com/1169045</a></dt>
@@ -1381,7 +1381,7 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1169015">https://bugzilla.redhat.com/1169015</a></dt>
 <dd> virt-resize &#8211;expand fails on ubuntu-14.04.img image (regression)</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1168144">https://bugzilla.redhat.com/1168144</a></dt>
-<dd> warning: fstrim: fstrim: /sysroot/: <font SIZE="-1">FITRIM</font> ioctl failed: Operation not supported (ignored) when convert win2003 guest from xen server</dd>
+<dd> warning: fstrim: fstrim: /sysroot/: FITRIM ioctl failed: Operation not supported (ignored) when convert win2003 guest from xen server</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1167921">https://bugzilla.redhat.com/1167921</a></dt>
 <dd> p2v: No Network Connection dialog</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1167774">https://bugzilla.redhat.com/1167774</a></dt>
@@ -1409,29 +1409,29 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1164697">https://bugzilla.redhat.com/1164697</a></dt>
 <dd> typo errors in man pages</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1164619">https://bugzilla.redhat.com/1164619</a></dt>
-<dd> Inspect-get-icon failed on <font SIZE="-1">RHEL7</font> guest</dd>
+<dd> Inspect-get-icon failed on RHEL7 guest</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1162966">https://bugzilla.redhat.com/1162966</a></dt>
 <dd> xfs should also give a warning out to let customer know the limitation</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1161575">https://bugzilla.redhat.com/1161575</a></dt>
 <dd> Failed to import guest with &#8220;rtl8139&#8221; nic to openstack server after converted by v2v</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1159651">https://bugzilla.redhat.com/1159651</a></dt>
-<dd> virt-sysprep firstboot script is not deleted if it reboot a <font SIZE="-1">RHEL 7</font> guest</dd>
+<dd> virt-sysprep firstboot script is not deleted if it reboot a RHEL 7 guest</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1159258">https://bugzilla.redhat.com/1159258</a></dt>
-<dd> esx win2008 32 bit guest fail to load after conversion because the firmware isn&#8217;t <font SIZE="-1">ACPI</font> compatible</dd>
+<dd> esx win2008 32 bit guest fail to load after conversion because the firmware isn&#8217;t ACPI compatible</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1159016">https://bugzilla.redhat.com/1159016</a></dt>
-<dd> libvirt backend does not set <font SIZE="-1">RBD</font> password</dd>
+<dd> libvirt backend does not set RBD password</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1158526">https://bugzilla.redhat.com/1158526</a></dt>
 <dd> Use password file instead of process interaction</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1157679">https://bugzilla.redhat.com/1157679</a></dt>
 <dd> virt-p2v-make-disk should add firmwares</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1156449">https://bugzilla.redhat.com/1156449</a></dt>
-<dd> libguestfs <font SIZE="-1">FTBFS</font> on f21 ppc64le</dd>
+<dd> libguestfs FTBFS on f21 ppc64le</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1156301">https://bugzilla.redhat.com/1156301</a></dt>
-<dd> virt-inspector support adding a remote disk, but in its man page -a <font SIZE="-1">URI /</font> &#8211;add <font SIZE="-1">URI</font> is missing</dd>
+<dd> virt-inspector support adding a remote disk, but in its man page -a URI / &#8211;add URI is missing</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1155121">https://bugzilla.redhat.com/1155121</a></dt>
 <dd> Virt-v2v will fail when using relative path for -i ova</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1153844">https://bugzilla.redhat.com/1153844</a></dt>
-<dd> Redundancy whitespace at the end of directory name when use &lt;<font SIZE="-1">TAB</font>&gt; to complete the directory name in guestfish with a xfs filesystem in guest</dd>
+<dd> Redundancy whitespace at the end of directory name when use &lt;TAB&gt; to complete the directory name in guestfish with a xfs filesystem in guest</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1153589">https://bugzilla.redhat.com/1153589</a></dt>
 <dd> virt-v2v will hang when converting esx guest before disk copy phase</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1152998">https://bugzilla.redhat.com/1152998</a></dt>
@@ -1447,32 +1447,32 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1146007">https://bugzilla.redhat.com/1146007</a></dt>
 <dd> Input/output error during conversion of esx guest.</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1135585">https://bugzilla.redhat.com/1135585</a></dt>
-<dd> [<font SIZE="-1">RFE</font>] virt-builder should support copying in a directory/list of files</dd>
+<dd> [RFE] virt-builder should support copying in a directory/list of files</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1089566">https://bugzilla.redhat.com/1089566</a></dt>
 <dd> [abrt] livecd-tools: kickstart.py:276:apply:IOError: [Errno 2] No such file or directory: &#8216;/run/media/jones/2tp001data/createlive/temp/imgcreate-_dX8Us/install_root/etc/rpm/macros.imgcreate&#8217;</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1079625">https://bugzilla.redhat.com/1079625</a></dt>
 <dd> virt-sparsify fails if a btrfs filesystem contains readonly snapshots</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1075164">https://bugzilla.redhat.com/1075164</a></dt>
-<dd> <font SIZE="-1">RFE:</font> allow passing in a pre-opened libvirt connection from python</dd>
+<dd> RFE: allow passing in a pre-opened libvirt connection from python</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/912499">https://bugzilla.redhat.com/912499</a></dt>
 <dd> Security context on image file gets reset</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/889082">https://bugzilla.redhat.com/889082</a></dt>
-<dd> [<font SIZE="-1">RFE</font>] virt-v2v should check whether guest with same name exist on target first then transfer the disk</dd>
+<dd> [RFE] virt-v2v should check whether guest with same name exist on target first then transfer the disk</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/855059">https://bugzilla.redhat.com/855059</a></dt>
-<dd> <font SIZE="-1">RFE:</font> virt-p2v: display more information about network devices such as topology, bonding, etc.</dd>
+<dd> RFE: virt-p2v: display more information about network devices such as topology, bonding, etc.</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/823758">https://bugzilla.redhat.com/823758</a></dt>
-<dd> p2v client should have largest number restrictions for <font SIZE="-1">CPU</font> and Memory settings</dd>
+<dd> p2v client should have largest number restrictions for CPU and Memory settings</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/709327">https://bugzilla.redhat.com/709327</a></dt>
 <dd> hivex cannot read registry hives from ReactOS</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/709326">https://bugzilla.redhat.com/709326</a></dt>
 <dd> virt-inspector cannot detect ReactOS</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/119673">https://bugzilla.redhat.com/119673</a></dt>
-<dd> installation via <font SIZE="-1">NFS</font> doesn&#8217;t seem to work</dd></dl>
+<dd> installation via NFS doesn&#8217;t seem to work</dd></dl>
 <h2>RELEASE NOTES FOR LIBGUESTFS 1.28</h2>
 <p> These release notes only cover the differences from the previous stable/dev branch split (1.26.0). For detailed changelogs, please see the git repository, or the ChangeLog file distributed in the tarball.</p>
 <h3>New features</h3>
 <p> <i>Tools</i> </p>
-<p> <code><a href="/docs/linux/man/1-virt-v2v/">virt-v2v</a></code>(1) and <code><a href="/docs/linux/man/1-virt-p2v/">virt-p2v</a></code>(1) are tools for converting from foreign hypervisors (such as VMware or Xen) or physical machines, to <font SIZE="-1">KVM.</font> These tools were previously a separate project. The code for both tools has been integrated into the libguestfs tree. As part of the refactoring, virt-p2v has been rewritten (from Ruby, now C), and virt-v2v now uses several modern features of qemu which make it run many times faster than before. <code><a href="/docs/linux/man/1-virt-v2v/">virt-v2v</a></code>(1) can import from: VMware vCenter, VMware <font SIZE="-1">OVA</font> files, local disk files, libvirt, <font SIZE="-1">RHEL 5</font> Xen. It can output to: oVirt or Red Hat Enterprise Virtualization (RHEV-M), OpenStack Glance, libvirt, qemu, local disk files. </p>
+<p> <code><a href="/docs/linux/man/1-virt-v2v/">virt-v2v</a></code>(1) and <code><a href="/docs/linux/man/1-virt-p2v/">virt-p2v</a></code>(1) are tools for converting from foreign hypervisors (such as VMware or Xen) or physical machines, to KVM. These tools were previously a separate project. The code for both tools has been integrated into the libguestfs tree. As part of the refactoring, virt-p2v has been rewritten (from Ruby, now C), and virt-v2v now uses several modern features of qemu which make it run many times faster than before. <code><a href="/docs/linux/man/1-virt-v2v/">virt-v2v</a></code>(1) can import from: VMware vCenter, VMware OVA files, local disk files, libvirt, RHEL 5 Xen. It can output to: oVirt or Red Hat Enterprise Virtualization (RHEV-M), OpenStack Glance, libvirt, qemu, local disk files. </p>
 <p> <code><a href="/docs/linux/man/1-virt-log/">virt-log</a></code>(1) is a new tool for listing log files from guests. It supports a variety of guests including Linux traditional, Linux using journal, and Windows event log. </p>
 <p> <code><a href="/docs/linux/man/1-virt-builder/">virt-builder</a></code>(1) has a new <tt>&quot;--machine-readable&quot;</tt> option to make it simpler to consume virt-builder from other programs. </p>
 <p> New <code><a href="/docs/linux/man/1-virt-builder/">virt-builder</a></code>(1) and <code><a href="/docs/linux/man/1-virt-customize/">virt-customize</a></code>(1) <i>&#8211;chmod</i> option. </p>
@@ -1482,7 +1482,7 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <p> <code><a href="/docs/linux/man/1-virt-sparsify/">virt-sparsify</a></code>(1) can now write to a block device. </p>
 <p> <code><a href="/docs/linux/man/1-virt-customize/">virt-customize</a></code>(1) and <code><a href="/docs/linux/man/1-virt-sysprep/">virt-sysprep</a></code>(1) now support adding firstboot scripts to Windows guests. </p>
 <p> <code><a href="/docs/linux/man/1-virt-cat/">virt-cat</a></code>(1), <code><a href="/docs/linux/man/1-virt-edit/">virt-edit</a></code>(1), <code><a href="/docs/linux/man/1-virt-ls/">virt-ls</a></code>(1) now support the <i>-m</i> option, allowing you to override automatic inspection of guests and instead specify where to mount partitions (Pino Toscano). </p>
-<p> The virt tools now have coloured output: green for <font SIZE="-1">OK,</font> red for errors, blue for warnings. </p>
+<p> The virt tools now have coloured output: green for OK, red for errors, blue for warnings. </p>
 <p> <i>Language bindings</i> </p>
 <p> You can build a Python distribution using <tt>&quot;make -C python sdist&quot;</tt> </p>
 <p> Ruby bindings have switched from <tt>&quot;Test::Unit&quot;</tt> to <tt>&quot;MiniTest&quot;</tt>. </p>
@@ -1492,17 +1492,17 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <p> Linux guests which do not have <i>/etc/fstab</i> can now be handled (Pino Toscano). </p>
 <p> Minix is returned as <tt>&quot;minix&quot;</tt> (Pino Toscano). </p>
 <p> <i>Architectures</i> </p>
-<p> Aarch64 (64 bit <font SIZE="-1">ARM</font>) support has been added. </p>
+<p> Aarch64 (64 bit ARM) support has been added. </p>
 <p> Inspection and the <tt>&quot;guestfs_file_architecture&quot;</tt> call can now recognize arm (32 bit) and aarch64 guests.</p>
 <h3>Security</h3>
 <dl>
-<dt><font SIZE="-1">CVE-2014-0191</font> Network usage and entity resolution in <font SIZE="-1">XML</font> parsing</dt>
-<dd> Libguestfs previously used unsafe libxml2 APIs for parsing libvirt <font SIZE="-1">XML.</font> These APIs defaulted to allowing network connections to be made when certain <font SIZE="-1">XML</font> documents were presented. Using a malformed <font SIZE="-1">XML</font> document it was also possible to exhaust all <font SIZE="-1">CPU,</font> memory or file descriptors on the machine. </dd>
-<p> Since the libvirt <font SIZE="-1">XML</font> comes from a trusted source (the libvirt daemon) it is not thought that this could have been exploitable. </p>
+<dt>CVE-2014-0191 Network usage and entity resolution in XML parsing</dt>
+<dd> Libguestfs previously used unsafe libxml2 APIs for parsing libvirt XML. These APIs defaulted to allowing network connections to be made when certain XML documents were presented. Using a malformed XML document it was also possible to exhaust all CPU, memory or file descriptors on the machine. </dd>
+<p> Since the libvirt XML comes from a trusted source (the libvirt daemon) it is not thought that this could have been exploitable. </p>
 <p> This was fixed in libguestfs ≥ 1.27.9 and the fix was backported to stable versions ≥ 1.26.2, ≥ 1.24.9, ≥ 1.22.10 and ≥ 1.20.13. (Thanks: Dan Berrange, Pino Toscano).</p>
-<dt>Shellshock (bash <font SIZE="-1">CVE-2014-6271</font>)</dt>
+<dt>Shellshock (bash CVE-2014-6271)</dt>
 <dd> This bash bug indirectly affects libguestfs. For more information see: <a rel="nofollow" href="https://www.redhat.com/archives/libguestfs/2014-September/msg00252.html">https://www.redhat.com/archives/libguestfs/2014-September/msg00252.html</a></dd></dl>
-<h3><font SIZE="-1">API</font></h3>
+<h3>API</h3>
 <p> <i>New APIs</i></p>
 <dl>
 <dt>&quot;guestfs_clear_backend_setting&quot;</dt>
@@ -1527,24 +1527,24 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <p> Augeas is now a required dependency. </p>
 <p> Flex and bison are now required dependencies.</p>
 <h3>Internals</h3>
-<p> User-Mode Linux (<font SIZE="-1">UML</font>) is no longer a supported backend (although still available). It will be supported again once someone steps in and fixes various regressions and brokenness in the <font SIZE="-1">UML</font> (Linux) kernel. </p>
+<p> User-Mode Linux (UML) is no longer a supported backend (although still available). It will be supported again once someone steps in and fixes various regressions and brokenness in the UML (Linux) kernel. </p>
 <p> You can now connect gdb to qemu by specifying <tt>&quot;LIBGUESTFS_BACKEND_SETTINGS=gdb&quot;</tt> </p>
-<p> Serial <font SIZE="-1">BIOS</font> (sgabios) is now used by the libvirt backend (on x86 only) so that we see early <font SIZE="-1">BIOS</font> messages. </p>
+<p> Serial BIOS (sgabios) is now used by the libvirt backend (on x86 only) so that we see early BIOS messages. </p>
 <p> For the OCaml virt tools, exceptions are now handled and printed by a common function. </p>
-<p> A <font SIZE="-1">GCC</font> warning about large stack frames is now enabled by default. Several places that used large arrays and structures on the stack have been fixed. </p>
+<p> A GCC warning about large stack frames is now enabled by default. Several places that used large arrays and structures on the stack have been fixed. </p>
 <p> There is now a test for booting the appliance repeatedly. Useful for finding kernel leaks. See: <i>tests/qemu/qemu-boot.c</i> </p>
 <p> There is a test for testing the speed of various qemu features such as virtio-serial uploads and block device writes. See: <i>tests/qemu/qemu-speed-test.c</i> </p>
-<p> <font SIZE="-1">GCC</font> warnings are now enabled for OCaml-C bindings in the OCaml virt tools. </p>
+<p> GCC warnings are now enabled for OCaml-C bindings in the OCaml virt tools. </p>
 <p> The code for editing files used by <code><a href="/docs/linux/man/1-virt-edit/">virt-edit</a></code>(1), <code><a href="/docs/linux/man/1-guestfish/">guestfish</a></code>(1) <tt>&quot;edit&quot;</tt> command, <code><a href="/docs/linux/man/1-virt-customize/">virt-customize</a></code>(1) <i>&#8211;edit</i> option and more is now shared between all these utilities (thanks Pino Toscano). </p>
-<p> The <font SIZE="-1">FUSE</font> tests were rewritten in C to ensure finer control over how system calls are tested. </p>
+<p> The FUSE tests were rewritten in C to ensure finer control over how system calls are tested. </p>
 <p> The <i>update-bugs.sh</i> script has been fixed so it should no longer create an empty <tt>&quot;BUGS&quot;</tt> file if the Bugzilla server is unavailable. </p>
 <p> The <code><a href="/docs/linux/man/1-virt-resize/">virt-resize</a></code>(1) tests now use a stochastic method to ensure much deeper and broader testing. </p>
-<p> When the network is enabled, the appliance now uses <font SIZE="-1">DHCP</font> to acquire an <font SIZE="-1">IP</font> address. </p>
-<p> If libvirt is being used then the appliance will connect to <tt>&quot;virbr0&quot;</tt> (can be overridden by setting <tt>&quot;LIBGUESTFS_BACKEND_SETTINGS=network_bridge=&lt;some_bridge&gt;&quot;</tt>). This enables full-featured network connections, with working <font SIZE="-1">ICMP,</font> ping and so on.</p>
+<p> When the network is enabled, the appliance now uses DHCP to acquire an IP address. </p>
+<p> If libvirt is being used then the appliance will connect to <tt>&quot;virbr0&quot;</tt> (can be overridden by setting <tt>&quot;LIBGUESTFS_BACKEND_SETTINGS=network_bridge=&lt;some_bridge&gt;&quot;</tt>). This enables full-featured network connections, with working ICMP, ping and so on.</p>
 <h3>Bugs fixed</h3>
 <dl>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1153515">https://bugzilla.redhat.com/1153515</a></dt>
-<dd> empty (but set) <font SIZE="-1">LIBGUESTFS_BACKEND</font> prints libguestfs: error: invalid backend:</dd>
+<dd> empty (but set) LIBGUESTFS_BACKEND prints libguestfs: error: invalid backend:</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1151766">https://bugzilla.redhat.com/1151766</a></dt>
 <dd> libguestfs-bash-completion package contains file /usr/share/bash-completion/completions/virt-log, but no <code>_virt_log()</code> function in that file</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1151738">https://bugzilla.redhat.com/1151738</a></dt>
@@ -1556,17 +1556,17 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1150867">https://bugzilla.redhat.com/1150867</a></dt>
 <dd> &#8216;copy-file-to-file /src /dest&#8217; create file /dest even if command &#8216;copy-file-to-file /src /dest&#8217; failed</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1150815">https://bugzilla.redhat.com/1150815</a></dt>
-<dd> Can not find &#8220;<font SIZE="-1">RECURSIVE LONG LISTING&#8221;</font> in &#8216;man virt-diff&#8217;</dd>
+<dd> Can not find &#8220;RECURSIVE LONG LISTING&#8221; in &#8216;man virt-diff&#8217;</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1150701">https://bugzilla.redhat.com/1150701</a></dt>
 <dd> virt-v2v does not fstrim data disks and non-mounted filesystems</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1150475">https://bugzilla.redhat.com/1150475</a></dt>
-<dd> Exporting 2+ disk guest to <font SIZE="-1">RHEV,</font> only one disk shows after import</dd>
+<dd> Exporting 2+ disk guest to RHEV, only one disk shows after import</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1148355">https://bugzilla.redhat.com/1148355</a></dt>
-<dd> virt-filesystems: incorrect <font SIZE="-1">LVM</font> vg name when listing Fedora 21 Alpha Atomic image filesystems</dd>
+<dd> virt-filesystems: incorrect LVM vg name when listing Fedora 21 Alpha Atomic image filesystems</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1148072">https://bugzilla.redhat.com/1148072</a></dt>
 <dd> Option missing &#8211;no-selinux-relabel</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1148012">https://bugzilla.redhat.com/1148012</a></dt>
-<dd> <font SIZE="-1">RFE:</font> Allow qemu-bridge-helper to be used to implement guestfs_set_network</dd>
+<dd> RFE: Allow qemu-bridge-helper to be used to implement guestfs_set_network</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1146815">https://bugzilla.redhat.com/1146815</a></dt>
 <dd> virt-v2v prints warning: /files/etc/fstab/8/spec references unknown device &#8220;cdrom&#8221;</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1146275">https://bugzilla.redhat.com/1146275</a></dt>
@@ -1578,7 +1578,7 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1145916">https://bugzilla.redhat.com/1145916</a></dt>
 <dd> virt-v2v fails to convert win7 guest</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1144891">https://bugzilla.redhat.com/1144891</a></dt>
-<dd> <font SIZE="-1">RFE:</font> stat calls do not return nanosecond timestamps</dd>
+<dd> RFE: stat calls do not return nanosecond timestamps</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1144766">https://bugzilla.redhat.com/1144766</a></dt>
 <dd> <code>futimens()</code> is a no-op via guestmount</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1144201">https://bugzilla.redhat.com/1144201</a></dt>
@@ -1602,9 +1602,9 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1141723">https://bugzilla.redhat.com/1141723</a></dt>
 <dd> virt-v2v: error: disk sda has no defined format shows when converting xen hvm guest</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1141680">https://bugzilla.redhat.com/1141680</a></dt>
-<dd> [<font SIZE="-1">RFE</font>] virt-v2 should support convert a domain with using domain&#8217;s <font SIZE="-1">UUID</font> instead of domain name</dd>
+<dd> [RFE] virt-v2 should support convert a domain with using domain&#8217;s UUID instead of domain name</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1141631">https://bugzilla.redhat.com/1141631</a></dt>
-<dd> [<font SIZE="-1">RFE</font>] virt-v2 should support convert a guest to a dir-pool with using pool&#8217;s uuid</dd>
+<dd> [RFE] virt-v2 should support convert a guest to a dir-pool with using pool&#8217;s uuid</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1141157">https://bugzilla.redhat.com/1141157</a></dt>
 <dd> virt-sysprep option &#8216;&#8211;user-accounts&#8217; don&#8217;t work well</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1141145">https://bugzilla.redhat.com/1141145</a></dt>
@@ -1618,11 +1618,11 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1140547">https://bugzilla.redhat.com/1140547</a></dt>
 <dd> virt-builder option &#8216;&#8211;format&#8217; don&#8217;t work well</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1140156">https://bugzilla.redhat.com/1140156</a></dt>
-<dd> <font SIZE="-1">RFE:</font> Export to <font SIZE="-1">RHEV</font> data domain</dd>
+<dd> RFE: Export to RHEV data domain</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1140050">https://bugzilla.redhat.com/1140050</a></dt>
 <dd> No error shows when multiple conflicting options used with virt-v2v</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1139973">https://bugzilla.redhat.com/1139973</a></dt>
-<dd> Improve the error info when converting xen guest with no passwordless <font SIZE="-1">SSH</font> access configured</dd>
+<dd> Improve the error info when converting xen guest with no passwordless SSH access configured</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1139543">https://bugzilla.redhat.com/1139543</a></dt>
 <dd> Improve the error info when converting guest with no space left</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1138586">https://bugzilla.redhat.com/1138586</a></dt>
@@ -1644,7 +1644,7 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1109174">https://bugzilla.redhat.com/1109174</a></dt>
 <dd> virt-win-reg manual page is corrupted</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1106548">https://bugzilla.redhat.com/1106548</a></dt>
-<dd> root gets an error accessing to a non-root dir on a snapshot guestmount <font SIZE="-1">VMDK</font> img</dd>
+<dd> root gets an error accessing to a non-root dir on a snapshot guestmount VMDK img</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1103877">https://bugzilla.redhat.com/1103877</a></dt>
 <dd> These APIs also need to add to `guestfish -h` command list</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1102448">https://bugzilla.redhat.com/1102448</a></dt>
@@ -1652,13 +1652,13 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1102447">https://bugzilla.redhat.com/1102447</a></dt>
 <dd> libguestfs 1.27.13 does not build due to libxml library order</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1100498">https://bugzilla.redhat.com/1100498</a></dt>
-<dd> <font SIZE="-1">RFE:</font> non-polling mechanism to detect guestmount &#8211;no-fork readiness</dd>
+<dd> RFE: non-polling mechanism to detect guestmount &#8211;no-fork readiness</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1099490">https://bugzilla.redhat.com/1099490</a></dt>
 <dd> scrub-file can&#8217;t handle link file</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1099284">https://bugzilla.redhat.com/1099284</a></dt>
 <dd> typo errors in man pages</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1098718">https://bugzilla.redhat.com/1098718</a></dt>
-<dd> <font SIZE="-1">RFE:</font> virt-builder aliases</dd>
+<dd> RFE: virt-builder aliases</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1096465">https://bugzilla.redhat.com/1096465</a></dt>
 <dd> virt-builder &#8220;proxy=off&#8221; setting doesn&#8217;t turn off the proxy for downloads</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1094746">https://bugzilla.redhat.com/1094746</a></dt>
@@ -1689,7 +1689,7 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <p> <i>Tools</i> </p>
 <p> <code><a href="/docs/linux/man/1-virt-customize/">virt-customize</a></code>(1) is a new tool for customizing virtual machine disk images. It lets you install packages, edit configuration files, run scripts, set passwords and so on. <code><a href="/docs/linux/man/1-virt-builder/">virt-builder</a></code>(1) and <code><a href="/docs/linux/man/1-virt-sysprep/">virt-sysprep</a></code>(1) use virt-customize, and command line options across all these tools are now identical. </p>
 <p> <code><a href="/docs/linux/man/1-virt-diff/">virt-diff</a></code>(1) is a new tool for showing the differences between the filesystems of two virtual machines. It is mainly useful when showing what files have been changed between snapshots. </p>
-<p> <code><a href="/docs/linux/man/1-virt-builder/">virt-builder</a></code>(1) has been greatly enhanced. There are many more ways to customize the virtual machine. It can pull templates from multiple repositories. A parallelized internal xzcat implementation speeds up template decompression. Virt-builder uses an optimizing planner to choose the fastest way to build the <font SIZE="-1">VM.</font> It is now easier to use virt-builder from other programs. Internationalization support has been added to metadata. More efficient SELinux relabelling of files. Can build guests for multiple architectures. Error messages have been improved. (Pino Toscano) </p>
+<p> <code><a href="/docs/linux/man/1-virt-builder/">virt-builder</a></code>(1) has been greatly enhanced. There are many more ways to customize the virtual machine. It can pull templates from multiple repositories. A parallelized internal xzcat implementation speeds up template decompression. Virt-builder uses an optimizing planner to choose the fastest way to build the VM. It is now easier to use virt-builder from other programs. Internationalization support has been added to metadata. More efficient SELinux relabelling of files. Can build guests for multiple architectures. Error messages have been improved. (Pino Toscano) </p>
 <p> <code><a href="/docs/linux/man/1-virt-sparsify/">virt-sparsify</a></code>(1) has a new <i>&#8211;in-place</i> option. This sparsifies an image in place (without copying it) and is also much faster. (Lots of help provided by Paolo Bonzini) </p>
 <p> <code><a href="/docs/linux/man/1-virt-sysprep/">virt-sysprep</a></code>(1) can delete and scrub files under user control. You can lock user accounts or set random passwords on accounts. Can remove more log files. Can unsubscribe a guest from Red Hat Subscription Manager. New flexible way to enable and disable operations. (Wanlong Gao, Pino Toscano) </p>
 <p> <code><a href="/docs/linux/man/1-virt-win-reg/">virt-win-reg</a></code>(1) allows you to use URIs to specify remote disk images. </p>
@@ -1698,27 +1698,27 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <p> <code><a href="/docs/linux/man/1-virt-make-fs/">virt-make-fs</a></code>(1) was rewritten in C, but is unchanged in terms of functionality and command line usage. </p>
 <p> <i>Language bindings</i> </p>
 <p> The OCaml bindings have a new <tt>&quot;Guestfs.Errno&quot;</tt> module, used to check the error number returned by <tt>&quot;Guestfs.last_errno&quot;</tt>. </p>
-<p> <font SIZE="-1">PHP</font> tests now work. (Pino Toscano) </p>
+<p> PHP tests now work. (Pino Toscano) </p>
 <p> <i>Inspection</i> </p>
 <p> Inspection can recognize Debian live images. </p>
 <p> <i>Architectures</i> </p>
-<p> ARMv7 (32 bit) now supports <font SIZE="-1">KVM</font> acceleration. </p>
-<p> Aarch64 (<font SIZE="-1">ARM 64</font> bit) is supported, but the appliance part does not work yet. </p>
-<p> <font SIZE="-1">PPC64</font> support has been fixed and enhanced.</p>
+<p> ARMv7 (32 bit) now supports KVM acceleration. </p>
+<p> Aarch64 (ARM 64 bit) is supported, but the appliance part does not work yet. </p>
+<p> PPC64 support has been fixed and enhanced.</p>
 <h3>Security</h3>
 <dl>
 <dt>Denial of service when inspecting disk images with corrupt btrfs volumes</dt>
 <dd> It was possible to crash libguestfs (and programs that use libguestfs as a library) by presenting a disk image containing a corrupt btrfs volume. </dd>
-<p> This was caused by a <font SIZE="-1">NULL</font> pointer dereference causing a denial of service, and is not thought to be exploitable any further. </p>
-<p> See commit d70ceb4cbea165c960710576efac5a5716055486 for the fix. This fix is included in libguestfs stable branches ≥ 1.26.0, ≥ 1.24.6 and ≥ 1.22.8, and also in <font SIZE="-1">RHEL</font> ≥ 7.0. Earlier versions of libguestfs are not vulnerable.</p>
+<p> This was caused by a NULL pointer dereference causing a denial of service, and is not thought to be exploitable any further. </p>
+<p> See commit d70ceb4cbea165c960710576efac5a5716055486 for the fix. This fix is included in libguestfs stable branches ≥ 1.26.0, ≥ 1.24.6 and ≥ 1.22.8, and also in RHEL ≥ 7.0. Earlier versions of libguestfs are not vulnerable.</p>
 <dt>Better generation of random root passwords and random seeds</dt>
 <dd> When generating random root passwords and random seeds, two bugs were fixed which are possibly security related. Firstly we no longer read excessive bytes from <i>/dev/urandom</i> (most of which were just thrown away). Secondly we changed the code to avoid modulo bias. These issues were not thought to be exploitable. (Both changes suggested by Edwin Török)</dd></dl>
-<h3><font SIZE="-1">API</font></h3>
-<p> <font SIZE="-1">GUID</font> parameters are now validated when they are passed to <font SIZE="-1">API</font> calls, whereas previously you could have passed any string. (Pino Toscano) </p>
+<h3>API</h3>
+<p> GUID parameters are now validated when they are passed to API calls, whereas previously you could have passed any string. (Pino Toscano) </p>
 <p> <i>New APIs</i></p>
 <dl>
 <dt>&quot;guestfs_add_drive_opts&quot;: new &quot;discard&quot; parameter</dt>
-<dd> The new <tt>&quot;discard&quot;</tt> parameter allows fine-grained control over discard/trim support for a particular disk. This allows the host file to become more sparse (or thin-provisioned) when you delete files or issue the <tt>&quot;guestfs_fstrim&quot;</tt> <font SIZE="-1">API</font> call.</dd>
+<dd> The new <tt>&quot;discard&quot;</tt> parameter allows fine-grained control over discard/trim support for a particular disk. This allows the host file to become more sparse (or thin-provisioned) when you delete files or issue the <tt>&quot;guestfs_fstrim&quot;</tt> API call.</dd>
 <dt>&quot;guestfs_add_domain&quot;: new parameters: &quot;cachemode&quot;, &quot;discard&quot;</dt>
 <dd> These parameters are passed through when adding the domain&#8217;s disks.</dd>
 <dt>&quot;guestfs_blkdiscard&quot;</dt>
@@ -1728,21 +1728,21 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <dt>&quot;guestfs_compare_*&quot;</dt>
 <dd>
 </dd><dt>&quot;guestfs_copy_*&quot;</dt>
-<dd> For each struct returned through the <font SIZE="-1">API,</font> libguestfs now generates <tt>&quot;guestfs_compare_*&quot;</tt> and <tt>&quot;guestfs_copy_*&quot;</tt> functions to allow you to compare and copy structs.</dd>
+<dd> For each struct returned through the API, libguestfs now generates <tt>&quot;guestfs_compare_*&quot;</tt> and <tt>&quot;guestfs_copy_*&quot;</tt> functions to allow you to compare and copy structs.</dd>
 <dt>&quot;guestfs_copy_attributes&quot;</dt>
 <dd> Copy attributes (like permissions, xattrs, ownership) from one file to another. (Pino Toscano)</dd>
 <dt>&quot;guestfs_disk_create&quot;</dt>
-<dd> A flexible <font SIZE="-1">API</font> for creating empty disk images from scratch. This avoids the need to call out to external programs like <code><a href="/docs/linux/man/1-qemu-img/">qemu-img</a></code>(1).</dd>
+<dd> A flexible API for creating empty disk images from scratch. This avoids the need to call out to external programs like <code><a href="/docs/linux/man/1-qemu-img/">qemu-img</a></code>(1).</dd>
 <dt>&quot;guestfs_get_backend_settings&quot;</dt>
 <dd>
 </dd><dt>&quot;guestfs_set_backend_settings&quot;</dt>
-<dd> Per-backend settings (can also be set via the environment variable <tt>&quot;LIBGUESTFS_BACKEND_SETTINGS&quot;</tt>). The main use for this is forcing <font SIZE="-1">TCG</font> mode in the qemu-based backends, for example: </dd>
+<dd> Per-backend settings (can also be set via the environment variable <tt>&quot;LIBGUESTFS_BACKEND_SETTINGS&quot;</tt>). The main use for this is forcing TCG mode in the qemu-based backends, for example: </dd>
 <pre>
  export LIBGUESTFS_BACKEND=direct
  export LIBGUESTFS_BACKEND_SETTINGS=force_tcg
 </pre>
 <dt>&quot;guestfs_part_get_name&quot;</dt>
-<dd> Get the label or name of a partition (for <font SIZE="-1">GPT</font> disk images).</dd></dl>
+<dd> Get the label or name of a partition (for GPT disk images).</dd></dl>
 <h3>Build changes</h3>
 <p> The following extra packages are required to build libguestfs 1.26:</p>
 <dl>
@@ -1753,20 +1753,20 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <dt>xz</dt>
 <dd> This is now a required build dependency, where previously it was (in theory) optional.</dd></dl>
 <h3>Internals</h3>
-<p> <font SIZE="-1">PO</font> message extraction rewritten to be more robust. (Pino Toscano) </p>
+<p> PO message extraction rewritten to be more robust. (Pino Toscano) </p>
 <p> <tt>&quot;podwrapper&quot;</tt> gives an error if the <i>&#8211;insert</i> or <i>&#8211;verbatim</i> argument pattern is not found. </p>
-<p> Libguestfs now passes the qemu <i>-enable-fips</i> option to enable <font SIZE="-1">FIPS,</font> if qemu supports it. </p>
+<p> Libguestfs now passes the qemu <i>-enable-fips</i> option to enable FIPS, if qemu supports it. </p>
 <p> <tt>&quot;./configure --without-qemu&quot;</tt> can be used if you don&#8217;t want to specify a default hypervisor. </p>
-<p> Copy-on-write [<font SIZE="-1">COW</font>] overlays, used for example for read-only drives, are now created through an internal backend <font SIZE="-1">API</font> (<tt>&quot;.create_cow_overlay&quot;</tt>). </p>
-<p> Libvirt backend uses some funky C macros to generate <font SIZE="-1">XML.</font> These are simpler and safer. </p>
+<p> Copy-on-write [COW] overlays, used for example for read-only drives, are now created through an internal backend API (<tt>&quot;.create_cow_overlay&quot;</tt>). </p>
+<p> Libvirt backend uses some funky C macros to generate XML. These are simpler and safer. </p>
 <p> The ChangeLog file format has changed. It is now just the same as <tt>&quot;git log&quot;</tt>, instead of using a custom format. </p>
 <p> Appliance start-up has changed:</p>
 <dl>
 <dt>&bull;</dt>
-<dd> The libguestfs appliance now initializes <font SIZE="-1">LVM</font> the same way as it is done on physical machines.</dd>
+<dd> The libguestfs appliance now initializes LVM the same way as it is done on physical machines.</dd>
 <dt>&bull;</dt>
 <dd> The libguestfs appliance does not write an empty string to <i>/proc/sys/kernel/hotplug</i> when starting up. </dd>
-<p> Note that you <code>must</code> configure your kernel to have <tt>&quot;CONFIG_UEVENT_HELPER_PATH=&quot;&quot;&quot;</tt> otherwise you will get strange <font SIZE="-1">LVM</font> errors (this applies as much to any Linux machine, not just libguestfs). (Peter Rajnoha)</dl>
+<p> Note that you <code>must</code> configure your kernel to have <tt>&quot;CONFIG_UEVENT_HELPER_PATH=&quot;&quot;&quot;</tt> otherwise you will get strange LVM errors (this applies as much to any Linux machine, not just libguestfs). (Peter Rajnoha)</dl>
 <p> Libguestfs can now be built on arches that have <code><a href="/docs/linux/man/1-ocamlc/">ocamlc</a></code>(1) but not <code><a href="/docs/linux/man/1-ocamlopt/">ocamlopt</a></code>(1). (Hilko Bengen, Olaf Hering) </p>
 <p> You cannot use <tt>&quot;./configure --disable-daemon --enable-appliance&quot;</tt>. It made no sense anyway. Now it is expressly forbidden by the configure script. </p>
 <p> The packagelist file uses <tt>&quot;m4&quot;</tt> for macro expansion instead of <tt>&quot;cpp&quot;</tt>.</p>
@@ -1775,9 +1775,9 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1073906">https://bugzilla.redhat.com/1073906</a></dt>
 <dd> java bindings inspect_list_applications2 throws java.lang.ArrayIndexOutOfBoundsException:</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1063374">https://bugzilla.redhat.com/1063374</a></dt>
-<dd> [<font SIZE="-1">RFE</font>] enable subscription manager clean or unregister operation to sysprep</dd>
+<dd> [RFE] enable subscription manager clean or unregister operation to sysprep</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1060404">https://bugzilla.redhat.com/1060404</a></dt>
-<dd> virt-resize does not preserve <font SIZE="-1">GPT</font> partition names</dd>
+<dd> virt-resize does not preserve GPT partition names</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1057504">https://bugzilla.redhat.com/1057504</a></dt>
 <dd> mount-local should give a clearer error if root is not mounted</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1056290">https://bugzilla.redhat.com/1056290</a></dt>
@@ -1797,15 +1797,15 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1044585">https://bugzilla.redhat.com/1044585</a></dt>
 <dd> virt-builder network (eg. &#8211;install) doesn&#8217;t work if resolv.conf sets nameserver 127.0.0.1</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1044014">https://bugzilla.redhat.com/1044014</a></dt>
-<dd> When <font SIZE="-1">SSSD</font> is installed, libvirt configuration requires authentication, but not clear to user</dd>
+<dd> When SSSD is installed, libvirt configuration requires authentication, but not clear to user</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1039995">https://bugzilla.redhat.com/1039995</a></dt>
 <dd> virt-make-fs fails making fat/vfat whole disk: Device partition expected, not making filesystem on entire device &#8216;/dev/sda&#8217; (use -I to override)</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1039540">https://bugzilla.redhat.com/1039540</a></dt>
 <dd> virt-sysprep to delete more logfiles</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1033207">https://bugzilla.redhat.com/1033207</a></dt>
-<dd> <font SIZE="-1">RFE:</font> libguestfs inspection does not recognize Free4NAS live <font SIZE="-1">CD</font></dd>
+<dd> RFE: libguestfs inspection does not recognize Free4NAS live CD</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1028660">https://bugzilla.redhat.com/1028660</a></dt>
-<dd> <font SIZE="-1">RFE:</font> virt-sysprep/virt-builder should have an option to lock a user account</dd>
+<dd> RFE: virt-sysprep/virt-builder should have an option to lock a user account</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1026688">https://bugzilla.redhat.com/1026688</a></dt>
 <dd> libguestfs fails examining libvirt guest with ceph drives: rbd: image name must begin with a &#8216;/&#8217;</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1022431">https://bugzilla.redhat.com/1022431</a></dt>
@@ -1813,7 +1813,7 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1022184">https://bugzilla.redhat.com/1022184</a></dt>
 <dd> libguestfs: do not use versioned jar file</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1020806">https://bugzilla.redhat.com/1020806</a></dt>
-<dd> All libguestfs <font SIZE="-1">LVM</font> operations fail on Debian/Ubuntu</dd>
+<dd> All libguestfs LVM operations fail on Debian/Ubuntu</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/1008417">https://bugzilla.redhat.com/1008417</a></dt>
 <dd> Need update helpout of part-set-gpt-type</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/953907">https://bugzilla.redhat.com/953907</a></dt>
@@ -1824,17 +1824,17 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/660687">https://bugzilla.redhat.com/660687</a></dt>
 <dd> guestmount: &#8220;touch&#8221; command fails: touch: setting times of `timestamp&#8217;: Invalid argument</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/593511">https://bugzilla.redhat.com/593511</a></dt>
-<dd> [<font SIZE="-1">RFE</font>] function to get partition name</dd>
+<dd> [RFE] function to get partition name</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/563450">https://bugzilla.redhat.com/563450</a></dt>
 <dd> list-devices returns devices of different types out of order</dd></dl>
 <h2>RELEASE NOTES FOR LIBGUESTFS 1.24</h2>
 <p> These release notes only cover the differences from the previous stable/dev branch split (1.22.0). For detailed changelogs, please see the git repository, or the ChangeLog file distributed in the tarball.</p>
 <h3>New features</h3>
-<p> User-Mode Linux (<font SIZE="-1">UML</font>) can be used as an alternative backend (ie. instead of <font SIZE="-1">KVM</font>). This improves performance especially when using libguestfs inside a <font SIZE="-1">VM</font> (eg. in the cloud). <font SIZE="-1">UML</font> is supported as a first-class backend. See &#8220;USER-MODE <font SIZE="-1">LINUX BACKEND&#8221;</font> in <code>guestfs</code>(3) for how to use this. </p>
-<p> <font SIZE="-1">ARM</font> (32 bit) and <font SIZE="-1">PPC64</font> are now fully supported. </p>
+<p> User-Mode Linux (UML) can be used as an alternative backend (ie. instead of KVM). This improves performance especially when using libguestfs inside a VM (eg. in the cloud). UML is supported as a first-class backend. See &#8220;USER-MODE LINUX BACKEND&#8221; in <code>guestfs</code>(3) for how to use this. </p>
+<p> ARM (32 bit) and PPC64 are now fully supported. </p>
 <p> <i>Tools</i> </p>
 <p> <code><a href="/docs/linux/man/1-virt-builder/">virt-builder</a></code>(1) is a new tool for building virtual machine images. It lets you rapidly and securely create guests and customize them. </p>
-<p> New <code><a href="/docs/linux/man/1-virt-sysprep/">virt-sysprep</a></code>(1) operations: Remove files in <i>/tmp</i> and <i>/var/tmp</i>. Remove <font SIZE="-1">RPM</font> database files. Change root and user passwords. More log files are removed. New operations which are not enabled by default: Create random UUIDs for filesystems. Reset firewall rules. (Wanlong Gao) </p>
+<p> New <code><a href="/docs/linux/man/1-virt-sysprep/">virt-sysprep</a></code>(1) operations: Remove files in <i>/tmp</i> and <i>/var/tmp</i>. Remove RPM database files. Change root and user passwords. More log files are removed. New operations which are not enabled by default: Create random UUIDs for filesystems. Reset firewall rules. (Wanlong Gao) </p>
 <p> <code><a href="/docs/linux/man/1-virt-resize/">virt-resize</a></code>(1) and virt-sysprep can now use URIs to specify a remote disk. </p>
 <p> Use <tt>&quot;guestfish -N filename=type&quot;</tt> to create a named disk image (instead of the default <i>test1.img</i> etc). </p>
 <p> <code><a href="/docs/linux/man/1-virt-sparsify/">virt-sparsify</a></code>(1) now tests if there is enough disk space to complete the operation, instead of possibly running out of space half way through. </p>
@@ -1842,21 +1842,21 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <p> virt-resize <i>&#8211;no-sparse</i> flag can be used to resize on to partitions and other targets that are not zeroed. </p>
 <p> <i>Language bindings</i> </p>
 <p> New bindings for the Go programming language. </p>
-<p> <i></i><font SIZE="-1"><i>API</i></font><i></i> </p>
+<p> <i></i><i>API</i><i></i> </p>
 <p> Support for the systemd journal. </p>
 <p> <tt>&quot;guestfs_add_drive_opts&quot;</tt> can now control the qemu caching mode through a new <tt>&quot;cachemode&quot;</tt> parameter. You can select improved performance for temporary drives, or safety. </p>
-<p> <tt>&quot;guestfs_set_label&quot;</tt> now works for <font SIZE="-1">XFS</font> and btrfs. </p>
-<p> New <font SIZE="-1">GUESTFS_EVENT_WARNING</font> event for warning messages. </p>
+<p> <tt>&quot;guestfs_set_label&quot;</tt> now works for XFS and btrfs. </p>
+<p> New GUESTFS_EVENT_WARNING event for warning messages. </p>
 <p> <i>Inspection</i> </p>
-<p> Better inspection of <font SIZE="-1">SUSE</font> guests (Olaf Hering). </p>
+<p> Better inspection of SUSE guests (Olaf Hering). </p>
 <p> Better support for non-standard Windows <tt>%systemroot</tt>% (Matthew Booth). </p>
 <p> Enhanced error reporting for Augeas errors.</p>
 <h3>Security</h3>
 <dl>
-<dt><font SIZE="-1">CVE-2013-2124</font></dt>
+<dt>CVE-2013-2124</dt>
 <dd> <a rel="nofollow" href="https://bugzilla.redhat.com/show_bug.cgi?id=968306">https://bugzilla.redhat.com/show_bug.cgi?id=968306</a> </dd>
 <p> A denial of service was possible when inspecting certain guests. The fix has been backported to 1.20 and 1.22 branches.</p>
-<dt><font SIZE="-1">CVE-2013-4419</font></dt>
+<dt>CVE-2013-4419</dt>
 <dd> <a rel="nofollow" href="https://www.redhat.com/archives/libguestfs/2013-October/msg00031.html">https://www.redhat.com/archives/libguestfs/2013-October/msg00031.html</a> </dd>
 <p> Fix insecure temporary directory handling for remote guestfish. The fix has been backported to 1.20 and 1.22 branches.</dl>
 <h3>New APIs</h3>
@@ -1886,7 +1886,7 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <dt>sd-journal</dt>
 <dd> To read journal files from guests which use that.</dd>
 <dt>url_mkcow</dt>
-<dd> For <font SIZE="-1">UML</font> backend.</dd>
+<dd> For UML backend.</dd>
 <dt>curl</dt>
 <dd>
 </dd><dt>gpg</dt>
@@ -1935,9 +1935,9 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/989356">https://bugzilla.redhat.com/989356</a></dt>
 <dd> cap-get-file will return error if the file has not be set capabilities</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/986877">https://bugzilla.redhat.com/986877</a></dt>
-<dd> <font SIZE="-1">RFE:</font> Implement set-uuid command</dd>
+<dd> RFE: Implement set-uuid command</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/986875">https://bugzilla.redhat.com/986875</a></dt>
-<dd> <font SIZE="-1">RFE:</font> Implement set-label for xfs</dd>
+<dd> RFE: Implement set-label for xfs</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/985269">https://bugzilla.redhat.com/985269</a></dt>
 <dd> Can&#8217;t set acl value for a specified user with &#8216;acl-set-file&#8217;</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/983218">https://bugzilla.redhat.com/983218</a></dt>
@@ -1947,13 +1947,13 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/981683">https://bugzilla.redhat.com/981683</a></dt>
 <dd> &#8220;hivex-commit&#8221; should fail with a relative path</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/981663">https://bugzilla.redhat.com/981663</a></dt>
-<dd> disk-format &#8220;qemu-img info: <font SIZE="-1">JSON</font> parse error&#8221; when target file does not exist</dd>
+<dd> disk-format &#8220;qemu-img info: JSON parse error&#8221; when target file does not exist</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/978302">https://bugzilla.redhat.com/978302</a></dt>
 <dd> mke2fs-J should give a meaningful error when specified type is anything except &#8216;ext{2,3,4}&#8217;</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/975797">https://bugzilla.redhat.com/975797</a></dt>
 <dd> Specifying virtio interface (&#8216;iface&#8217; parameter) breaks the direct backend &#8211; libguestfs hangs</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/975753">https://bugzilla.redhat.com/975753</a></dt>
-<dd> &#8220;virt-resize &#8211;expand&#8221; and &#8220;virt-resize &#8211;resize&#8221; outputs error message for Win2008 32bit <font SIZE="-1">OS</font></dd>
+<dd> &#8220;virt-resize &#8211;expand&#8221; and &#8220;virt-resize &#8211;resize&#8221; outputs error message for Win2008 32bit OS</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/975412">https://bugzilla.redhat.com/975412</a></dt>
 <dd> inspection: Augeas expressions are broken with augeas &gt;= 0.10</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/974904">https://bugzilla.redhat.com/974904</a></dt>
@@ -1971,7 +1971,7 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <h2>RELEASE NOTES FOR LIBGUESTFS 1.22</h2>
 <p> These release notes only cover the differences from the previous stable/dev branch split (1.20.0). For detailed changelogs, please see the git repository, or the ChangeLog file distributed in the tarball.</p>
 <h3>New features</h3>
-<p> <i></i><font SIZE="-1"><i>API</i></font><i></i> </p>
+<p> <i></i><i>API</i><i></i> </p>
 <p> Remote access to disks:</p>
 <dl>
 <dt>&bull;</dt>
@@ -1979,9 +1979,9 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <dt>&bull;</dt>
 <dd> Secure Shell (ssh)</dd>
 <dt>&bull;</dt>
-<dd> <font SIZE="-1">HTTP</font> and <font SIZE="-1">HTTPS</font></dd>
+<dd> HTTP and HTTPS</dd>
 <dt>&bull;</dt>
-<dd> <font SIZE="-1">FTP</font> and <font SIZE="-1">FTPS</font></dd>
+<dd> FTP and FTPS</dd>
 <dt>&bull;</dt>
 <dd> iSCSI</dd>
 <dt>&bull;</dt>
@@ -1991,11 +1991,11 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <dt>&bull;</dt>
 <dd> Sheepdog</dd>
 <dt>&bull;</dt>
-<dd> <font SIZE="-1">TFTP</font></dd></dl>
-<p> The <font SIZE="-1">SYSLINUX</font> and <font SIZE="-1">EXTLINUX</font> bootloaders can now be installed in disk images using the <font SIZE="-1">API.</font> </p>
+<dd> TFTP</dd></dl>
+<p> The SYSLINUX and EXTLINUX bootloaders can now be installed in disk images using the API. </p>
 <p> Inspection can now handle filesystems such as btrfs where subvolumes are separately mountable (Matthew Booth). </p>
 <p> &#8220;Attach methods&#8221; are now known as &#8220;backends&#8221;. Compatibility with existing code is preserved. </p>
-<p> Filenames can contain &#8216;:&#8217;, as long as newer <font SIZE="-1">QEMU</font> is being used. </p>
+<p> Filenames can contain &#8216;:&#8217;, as long as newer QEMU is being used. </p>
 <p> <i>Tools</i> </p>
 <p> Virt-alignment-scan and virt-df scan multiple guests in parallel. </p>
 <p> Guestmount now passes errno accurately back to userspace in almost all cases. </p>
@@ -2006,15 +2006,15 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <p> Guestfish and guestmount now allow you to specify the filesystem type when mounting, which is more secure (Dave Vasilevsky). </p>
 <p> Guestfish is now the &#8220;guest filesystem shell&#8221;. </p>
 <p> Guestfish allows only <tt>1</tt> <tt>&quot;true&quot;</tt> <tt>&quot;t&quot;</tt> <tt>&quot;yes&quot;</tt> <tt>&quot;y&quot;</tt> <tt>&quot;on&quot;</tt> <tt>0</tt> <tt>&quot;false&quot;</tt> <tt>&quot;f&quot;</tt> <tt>&quot;no&quot;</tt> <tt>&quot;n&quot;</tt> <tt>&quot;off&quot;</tt> for boolean values (case insensitive), and gives an error for all other strings. </p>
-<p> New tool <tt>&quot;guestunmount&quot;</tt> for unmounting <font SIZE="-1">FUSE</font> filesystems safely. </p>
+<p> New tool <tt>&quot;guestunmount&quot;</tt> for unmounting FUSE filesystems safely. </p>
 <p> <tt>&quot;guestmount --no-fork&quot;</tt> flag prevents guestmount from daemonizing. </p>
 <p> Virt-resize now uses sparse copies by default, saving considerable space for guests which are mostly empty. </p>
 <p> Bash tab completion has been rewritten and can now handle most tools, and correctly tab-complete <tt>&quot;--long&quot;</tt> options. In addition, bash completion scripts are loaded on demand. </p>
 <p> <i>Language bindings</i> </p>
-<p> The Java <font SIZE="-1">API</font> now supports events. </p>
+<p> The Java API now supports events. </p>
 <p> The Python object now inherits from the <tt>&quot;object&quot;</tt> base class. </p>
 <p> Python methods which previously returned lists of tuples can now be made to return a Python dict. For backwards compatibility, you have to enable this by using the constructor option <tt>&quot;guestfs.GuestFS (python_return_dict=True)&quot;</tt>. </p>
-<p> The <font SIZE="-1">PHP</font> bindings are now tested properly, and have had multiple fixes. </p>
+<p> The PHP bindings are now tested properly, and have had multiple fixes. </p>
 <p> The long-deprecated Perl <tt>&quot;Sys::Guestfs::Lib&quot;</tt> library has been removed. <a rel="nofollow" href="https://www.redhat.com/archives/libguestfs/2013-April/msg00001.html">https://www.redhat.com/archives/libguestfs/2013-April/msg00001.html</a> </p>
 <p> <i>Examples</i> </p>
 <p> New example program showing how to enable debugging and capture log messages. </p>
@@ -2059,19 +2059,19 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <p> Multiple fixes to Haskell bindings. </p>
 <p> <tt>&quot;ln&quot;</tt> and <tt>&quot;ln-f&quot;</tt> APIs now capture <tt>&quot;errno&quot;</tt> correctly. </p>
 <p> Language binding tests use (mostly) a standard numbering scheme and aim to test the same range of features in each language. Also the number of launches required has been reduced so these tests should run much more quickly. </p>
-<p> Library code internally uses <font SIZE="-1">GCC</font> <tt>&quot;__attribute__((cleanup))&quot;</tt> (if available) to simplify memory allocation. </p>
+<p> Library code internally uses GCC <tt>&quot;__attribute__((cleanup))&quot;</tt> (if available) to simplify memory allocation. </p>
 <p> Internal header files have been reorganized. See the comments in <i>src/guestfs-internal*.h</i> </p>
 <p> Internal code shared between the library and certain tools is now located in a static <tt>&quot;libutils&quot;</tt> library. </p>
 <p> Almost all subdirectories can now use parallel builds, although note that the top-level directories still build in series. </p>
 <p> Use of <tt>&quot;PATH_MAX&quot;</tt> and <tt>&quot;NAME_MAX&quot;</tt> has been eliminated from the code. </p>
-<p> The Java <font SIZE="-1">API</font> now requires <font SIZE="-1">JVM</font> ≥ 1.6. </p>
+<p> The Java API now requires JVM ≥ 1.6. </p>
 <p> Force use of <tt>&quot;serial-tests&quot;</tt> with automake ≥ 1.12. </p>
 <p> Use of sockets in the library protocol layer is abstracted, allowing other non-POSIX layers to be added in future (see <i>src/conn-socket.c</i>). </p>
 <p> <tt>&quot;qemu-img info --output json&quot;</tt> is used if available, for more secure parsing of the output of this command. </p>
 <p> Distros can now use <tt>&quot;make INSTALLDIRS=vendor install&quot;</tt> to place Ruby bindings in vendordir. This eliminates a non-upstream patch carried by both Fedora and Debian. </p>
-<p> Valgrind log files are now written to <i>tmp/valgrind-</i><font SIZE="-1"><i>DATE</i></font><i>&#8211;</i><font SIZE="-1"><i>PID</i></font><i>.log</i> </p>
+<p> Valgrind log files are now written to <i>tmp/valgrind-</i><i>DATE</i><i>&#8211;</i><i>PID</i><i>.log</i> </p>
 <p> <tt>&quot;make clean&quot;</tt> cleans the local <tt>&quot;tmp/&quot;</tt> directory. </p>
-<p> The C <font SIZE="-1">API</font> tests have been rewritten using a more flexible generator language that allows arbitrary C code to be executing during tests.</p>
+<p> The C API tests have been rewritten using a more flexible generator language that allows arbitrary C code to be executing during tests.</p>
 <h3>Bugs fixed</h3>
 <dl>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/961812">https://bugzilla.redhat.com/961812</a></dt>
@@ -2103,7 +2103,7 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/909836">https://bugzilla.redhat.com/909836</a></dt>
 <dd> libguestfs-test-tool &#8211;qemu segfaults</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/909624">https://bugzilla.redhat.com/909624</a></dt>
-<dd> Unexpected non-tail recursion in recv_from_daemon results in stack overflow in very long-running <font SIZE="-1">API</font> calls that send progress messages</dd>
+<dd> Unexpected non-tail recursion in recv_from_daemon results in stack overflow in very long-running API calls that send progress messages</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/908322">https://bugzilla.redhat.com/908322</a></dt>
 <dd> virt-tar fails on non-existent directory names &#8220;error in chunked encoding at /home/rjones/d/libguestfs/tools/virt-tar line 272.&#8221;</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/908321">https://bugzilla.redhat.com/908321</a></dt>
@@ -2117,11 +2117,11 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/895910">https://bugzilla.redhat.com/895910</a></dt>
 <dd> guestmount: <code>rename()</code> incorrectly follows symbolic links</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/895905">https://bugzilla.redhat.com/895905</a></dt>
-<dd> guestmount: <code>link()</code> incorrectly returns <font SIZE="-1">ENOENT,</font> when it should be <font SIZE="-1">EXDEV</font></dd>
+<dd> guestmount: <code>link()</code> incorrectly returns ENOENT, when it should be EXDEV</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/895904">https://bugzilla.redhat.com/895904</a></dt>
 <dd> checksums-out fail to compute the checksums of all regular files in directory</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/894545">https://bugzilla.redhat.com/894545</a></dt>
-<dd> libguestfs <font SIZE="-1">FTBFS</font> on Fedora 19 because of new ruby</dd>
+<dd> libguestfs FTBFS on Fedora 19 because of new ruby</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/890027">https://bugzilla.redhat.com/890027</a></dt>
 <dd> virt-sysprep: Setting hostname, domain name and pretty name on Fedora 18 correctly</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/887971">https://bugzilla.redhat.com/887971</a></dt>
@@ -2135,7 +2135,7 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/811649">https://bugzilla.redhat.com/811649</a></dt>
 <dd> libguestfs cannot open disk images which are symlinks to files that contain &#8216;:&#8217; (colon) character</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/664558">https://bugzilla.redhat.com/664558</a></dt>
-<dd> <font SIZE="-1">RFE:</font> Allow to set log callback in Ruby bindings</dd></dl>
+<dd> RFE: Allow to set log callback in Ruby bindings</dd></dl>
 <h2>RELEASE NOTES FOR LIBGUESTFS 1.20</h2>
 <p> These release notes only cover the differences from the previous stable/dev branch split (1.18.0). For detailed changelogs, please see the git repository, or the ChangeLog file distributed in the tarball.</p>
 <h3>New features</h3>
@@ -2147,7 +2147,7 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <dt>&bull;</dt>
 <dd> using <tt>&quot;./configure --with-default-attach-method=libvirt[:URI]&quot;</tt></dd>
 <dt>&bull;</dt>
-<dd> or calling the <font SIZE="-1">API</font> method <tt>&quot;guestfs_set_attach_method&quot;</tt></dd></dl>
+<dd> or calling the API method <tt>&quot;guestfs_set_attach_method&quot;</tt></dd></dl>
 <p> SVirt (SELinux confinement) is used to secure the libguestfs appliance, if the libvirt backend is selected. </p>
 <p> <i>virtio-scsi, larger number of drives, hotplugging</i> </p>
 <p> Virtio-scsi is now used by default, if it is available. This greatly increases the number of drives that can be added to a single libguestfs handle (up to 255). </p>
@@ -2155,25 +2155,25 @@ description: "guestfs-release-notes – libguestfs Release Notes"
 <p> Libguestfs can now handle &gt; 25 disks, in all APIs, tools and tests. </p>
 <p> You can label drives when adding them, then refer to them by label (<i>/dev/disk/guestfs/LABEL</i>) instead of having to use device names (<i>/dev/sda</i>). </p>
 <p> <i>new library features</i> </p>
-<p> <font SIZE="-1">POSIX</font> Access Control Lists (ACLs) and Linux filesystem capabilities can now be read and written through the <font SIZE="-1">API.</font> </p>
+<p> POSIX Access Control Lists (ACLs) and Linux filesystem capabilities can now be read and written through the API. </p>
 <p> Windows Dynamic Disks are now supported. The metadata can only be read (volumes cannot be modified or created). However the data/filesystems in the volumes themselves can be mounted, read and written (Matthew Booth). </p>
-<p> Hivex (Windows Registry editing) is now directly supported through the <font SIZE="-1">API,</font> making reading or editing the Windows Registry much more efficient. </p>
+<p> Hivex (Windows Registry editing) is now directly supported through the API, making reading or editing the Windows Registry much more efficient. </p>
 <p> Several libguestfs APIs were reimplemented so they no longer have any limits on output. The reimplemented APIs are: <tt>&quot;guestfs_cat&quot;</tt>, <tt>&quot;guestfs_find&quot;</tt>, <tt>&quot;guestfs_read_file&quot;</tt>, <tt>&quot;guestfs_read_lines&quot;</tt>, <tt>&quot;guestfs_write&quot;</tt>, <tt>&quot;guestfs_write_append&quot;</tt>, <tt>&quot;guestfs_lstatlist&quot;</tt>, <tt>&quot;guestfs_lxattrlist&quot;</tt>, <tt>&quot;guestfs_readlinklist&quot;</tt>, <tt>&quot;guestfs_ls&quot;</tt>. </p>
 <p> <i>virt tools</i> </p>
 <p> <tt>&quot;guestfish touch 'win:c:
 ew_file'&quot;</tt> now works as expected. </p>
 <p> <tt>&quot;guestfish&quot;</tt> has a new <i>&#8211;network</i> option, which enables the user network in libguestfs. </p>
 <p> You can set <tt>&quot;GUESTFISH_PS1&quot;</tt> to use fancy prompts in <tt>&quot;guestfish&quot;</tt>. </p>
-<p> <tt>&quot;rsync&quot;</tt>, <tt>&quot;ssh&quot;</tt>, <tt>&quot;less&quot;</tt> and <tt>&quot;lrzip&quot;</tt> commands are now available in virt-rescue. In addition, <tt>&quot;rsync&quot;</tt> can be used through the <font SIZE="-1">API</font> for doing incremental copies. </p>
+<p> <tt>&quot;rsync&quot;</tt>, <tt>&quot;ssh&quot;</tt>, <tt>&quot;less&quot;</tt> and <tt>&quot;lrzip&quot;</tt> commands are now available in virt-rescue. In addition, <tt>&quot;rsync&quot;</tt> can be used through the API for doing incremental copies. </p>
 <p> <tt>&quot;virt-sparsify&quot;</tt> uses qcow2 v3 for increased efficiency. </p>
 <p> <tt>&quot;virt-sysprep&quot;</tt> enhancements:</p>
 <dl>
 <dt>&bull;</dt>
 <dd> generate new UUIDs for PVs and VGs</dd>
 <dt>&bull;</dt>
-<dd> remove the local machine <font SIZE="-1">ID</font> (Wanlong Gao)</dd>
+<dd> remove the local machine ID (Wanlong Gao)</dd>
 <dt>&bull;</dt>
-<dd> remove <font SIZE="-1">ABRT</font> data (Wanlong Gao)</dd>
+<dd> remove ABRT data (Wanlong Gao)</dd>
 <dt>&bull;</dt>
 <dd> remove puppet keys and log files (Wanlong Gao)</dd>
 <dt>&bull;</dt>
@@ -2181,7 +2181,7 @@ ew_file'&quot;</tt> now works as expected. </p>
 <dt>&bull;</dt>
 <dd> new <i>&#8211;firstboot</i> parameter allowing firstboot scripts for customizing guests</dd>
 <dt>&bull;</dt>
-<dd> remove <font SIZE="-1">HOSTNAME</font> field from <tt>&quot;ifcfg-eth*&quot;</tt> files (Wanlong Gao)</dd>
+<dd> remove HOSTNAME field from <tt>&quot;ifcfg-eth*&quot;</tt> files (Wanlong Gao)</dd>
 <dt>&bull;</dt>
 <dd> miscellaneous improvements for SuSE (Olaf Hering)</dd>
 <dt>&bull;</dt>
@@ -2199,30 +2199,30 @@ ew_file'&quot;</tt> now works as expected. </p>
 <p> The automated &#8216;bindtests&#8217; now test for 64 bit cleanliness in parameter passing. Several bugs in the bindings were found and fixed as a result. </p>
 <p> Better handling of blocking and non-blocking functions should make libguestfs calls more efficient. </p>
 <p> <i>inspection</i> </p>
-<p> Windows guests with unlimited-sized Registries are now supported. By adding the hivex <font SIZE="-1">API</font> to the libguestfs <font SIZE="-1">API,</font> it is much more efficient and easier to inspect and modify the Windows Registry in guests. </p>
+<p> Windows guests with unlimited-sized Registries are now supported. By adding the hivex API to the libguestfs API, it is much more efficient and easier to inspect and modify the Windows Registry in guests. </p>
 <p> Better support for SuSE guests (Olaf Hering). </p>
 <p> Return the architecture of installed applications (John Eckersberg). </p>
 <p> Windows 8 is now supported. </p>
 <p> Fedora 18 is now supported. </p>
 <p> Inspection of ISOs/CDs/DVDs can now use the libosinfo database. </p>
 <p> <i>ports</i> </p>
-<p> Libguestfs without the appliance can be compiled on Mac <font SIZE="-1">OS X</font> (Masami <font SIZE="-1">HIRATA</font>). </p>
-<p> <font SIZE="-1">RHEL 5</font> is now explicitly supported through the &#8216;oldlinux&#8217; branch in upstream git. </p>
+<p> Libguestfs without the appliance can be compiled on Mac OS X (Masami HIRATA). </p>
+<p> RHEL 5 is now explicitly supported through the &#8216;oldlinux&#8217; branch in upstream git. </p>
 <p> PowerPC 64 bit is now supported. Also libguestfs has been examined for endianness bugs and these have been fixed. </p>
 <p> <i>daemon</i> </p>
 <p> A man page for the daemon (<code>guestfsd</code>(8)) is included.</p>
 <h3>Security</h3>
 <p> <i>guestfish history file</i> </p>
 <p> The <i></i>$HOME<i>/.guestfish</i> history file is now created with 0600 permissions (instead of 0644 before) so it is no longer world readable. </p>
-<p> <i></i><font SIZE="-1"><i>CVE-2012-2690</i></font><i></i> </p>
+<p> <i></i><i>CVE-2012-2690</i><i></i> </p>
 <p> Old versions of both <tt>&quot;virt-edit&quot;</tt> and the <tt>&quot;guestfish&quot;</tt> <tt>&quot;edit&quot;</tt> command created a new file containing the changes but did not set the permissions, etc of the new file to match the old one. The result of this was that if you edited a security sensitive file such as <i>/etc/shadow</i> then it would be left world-readable after the edit. </p>
-<p> This issue was assigned <font SIZE="-1">CVE-2012-2690,</font> and is fixed in libguestfs ≥ 1.16. </p>
+<p> This issue was assigned CVE-2012-2690, and is fixed in libguestfs ≥ 1.16. </p>
 <p> For further information, see <a rel="nofollow" href="https://bugzilla.redhat.com/show_bug.cgi?id=788642">https://bugzilla.redhat.com/show_bug.cgi?id=788642</a></p>
 <h3>New APIs</h3>
 <pre><code>
 acl - delete - def - file acl - get - file acl - set - file canonical - device - name cap - get - file cap - set - file create - flags device - index disk - has - backing - file disk - format disk - virtual - size filesystem - available fill - dir fstrim get - cachedir get - libvirt - requested - credentials get - libvirt - requested - credential - prompt get - libvirt - requested - credential - challenge get - libvirt - requested - credential - defresult get - tmpdir hivex - close hivex - commit hivex - node - add - child hivex - node - children hivex - node - delete - child hivex - node - get - child hivex - node - get - value hivex - node - name hivex - node - parent hivex - node - set - value hivex - node - values hivex - open hivex - root hivex - value - key hivex - value - type hivex - value - utf8 hivex - value - value inspect - list - applications2(John Eckersberg) list - ldm - volumes list - ldm - partitions ldmtool - create - all ldmtool - diskgroup - disks ldmtool - diskgroup - name ldmtool - diskgroup - volumes ldmtool - remove - all ldmtool - scan ldmtool - scan - devices ldmtool - volume - hint ldmtool - volume - partitions ldmtool - volume - type ls0 max - disks mke2fs(Wanlong Gao) mklost - and-found mkswap[added label and uuid optional arguments] mktemp(Wanlong Gao) nr - devices parse - environment parse - environment - list rm - f rsync rsync - in rsync - out set - cachedir set - libvirt - supported - credentials set - libvirt - requested - credential set - tmpdir shutdown[backported to 1.16 and 1.18] tar - in[added compress flag] tar - out[added compress, numericowner, excludes flags] umount[added force and lazy optional arguments] utsname xfs - admin(Wanlong Gao) xfs - growfs(Wanlong Gao) xfs - info(Wanlong Gao) xfs - repair(Wanlong Gao)
 </code></pre>
-<p> In the C <font SIZE="-1">API</font> only: </p>
+<p> In the C API only: </p>
 <pre>
  guestfs_push_error_handler
  guestfs_pop_error_handler
@@ -2232,7 +2232,7 @@ acl - delete - def - file acl - get - file acl - set - file canonical - device -
 <p> febootstrap ≥ 3.20 is required. </p>
 <p> libvirt is optional, but if you want to use the new libvirt backend for launching the appliance then libvirt ≥ 0.10.2 would be required. </p>
 <p> Coverity has been run over the complete codebase, and many issues fixed (thanks Ondrej Vasik, Kamil Dudka). </p>
-<p> Functions which previously had no optargs can now be converted to ones with optargs, making extending the <font SIZE="-1">API</font> much more flexible. Source and binary backwards compatibility is preserved for users of the <font SIZE="-1">API.</font> </p>
+<p> Functions which previously had no optargs can now be converted to ones with optargs, making extending the API much more flexible. Source and binary backwards compatibility is preserved for users of the API. </p>
 <p> The way that libguestfs APIs and structures are represented in the generator has changed to use an OCaml struct instead of a tuple. This makes generator descriptions more flexible and easier to understand. For details see commits 39d1a7db and eb185eef. </p>
 <p> Separation of the library code into more files:</p>
 <dl>
@@ -2242,7 +2242,7 @@ acl - delete - def - file acl - get - file acl - set - file canonical - device -
 <dd> Generated action code is now split over several <i>src/action*.c</i> files, for faster compilation.</dd>
 <dt>&bull;</dt>
 <dd> The huge <i>src/guestfs.c</i> file is now split into smaller logical units.</dd></dl>
-<p> <font SIZE="-1">POD</font> (documentation) is now generated using a rewritten Perl program instead of pod2* + shell scripts. </p>
+<p> POD (documentation) is now generated using a rewritten Perl program instead of pod2* + shell scripts. </p>
 <p> Man pages now contain stable dates (Hilko Bengen). </p>
 <p> Skipped tests now exit with code 77, so they appear as <tt>&quot;SKIP:&quot;</tt> in <tt>&quot;make check&quot;</tt> output. </p>
 <p> The parallel mount-local test has been rewritten in C (RHBZ#838081). </p>
@@ -2252,7 +2252,7 @@ acl - delete - def - file acl - get - file acl - set - file canonical - device -
 <p> New configure options <tt>&quot;./configure --enable-code-profiling&quot;</tt> and <tt>&quot;./configure --enable-code-coverage&quot;</tt>. </p>
 <p> Multiple fixes to use of 64 bit integers in language bindings. </p>
 <p> The appliance backend now uses sgabios instead of vgabios (Dan Berrange). </p>
-<p> The <tt>&quot;./run&quot;</tt> script now sets enough environment variables that you can run OCaml, Python, Ruby, Java, <font SIZE="-1">GJS,</font> Erlang, Lua programs. </p>
+<p> The <tt>&quot;./run&quot;</tt> script now sets enough environment variables that you can run OCaml, Python, Ruby, Java, GJS, Erlang, Lua programs. </p>
 <p> <tt>&quot;./run --test&quot;</tt> flag for running tests with minimal output. It also prints the time taken to run each test. </p>
 <p> The <tt>&quot;./run&quot;</tt> script now builds up paths cumulatively, meaning that you can use <tt>&quot;./run&quot;</tt> twice, or use the libguestfs and libvirt <tt>&quot;./run&quot;</tt> scripts together. </p>
 <p> You can extract a list of external commands required by the daemon, making building the appliance on certain distros easier (Olaf Hering). </p>
@@ -2266,17 +2266,17 @@ acl - delete - def - file acl - get - file acl - set - file canonical - device -
 <p> There is now an internal mini-library for running commands. This allows us to redirect errors from external commands into events. </p>
 <p> Code for handling temporary directories and the appliance cache was completely overhauled. </p>
 <p> Code for temporarily ignoring/disabling errors now looks like this: </p>
-<p>guestfs_push_error_handler(g, NULL, NULL);<br />
-guestfs_mkdir(g, &#8220;/foo&#8221;); /* We don&#8217;t care if this fails. */<br />
+<p>guestfs_push_error_handler(g, NULL, NULL);<br/>
+guestfs_mkdir(g, &#8220;/foo&#8221;); /* We don&#8217;t care if this fails. */<br/>
 guestfs_pop_error_handler(g);</p>
 <p> The <tt>&quot;tests/extra&quot;</tt> directory has gone. The &#8220;extra tests&#8221; are now split into separately runnable targets, such as <tt>&quot;make check-valgrind&quot;</tt>. Use <tt>&quot;make help&quot;</tt> to get a summary of the targets. </p>
-<p> The <tt>&quot;lpj&quot;</tt> option is passed to the appliance kernel when using <font SIZE="-1">TCG.</font> This should improve clock stability (thanks Marcelo Tosatti, Olaf Hering).</p>
+<p> The <tt>&quot;lpj&quot;</tt> option is passed to the appliance kernel when using TCG. This should improve clock stability (thanks Marcelo Tosatti, Olaf Hering).</p>
 <h3>Bugs fixed</h3>
 <dl>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/882417">https://bugzilla.redhat.com/882417</a></dt>
-<dd> libguestfs tools fail with odd error messages if <font SIZE="-1">TMPDIR</font> is not an absolute path</dd>
+<dd> libguestfs tools fail with odd error messages if TMPDIR is not an absolute path</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/882299">https://bugzilla.redhat.com/882299</a></dt>
-<dd> Windows 8 guest disks can&#8217;t be mounted: &#8220;The <font SIZE="-1">NTFS</font> partition is in an unsafe state. Please resume and shutdown Windows fully (no hibernation or fast restarting), or mount the volume read-only with the &#8216;ro&#8217; mount option.&#8221;</dd>
+<dd> Windows 8 guest disks can&#8217;t be mounted: &#8220;The NTFS partition is in an unsafe state. Please resume and shutdown Windows fully (no hibernation or fast restarting), or mount the volume read-only with the &#8216;ro&#8217; mount option.&#8221;</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/881953">https://bugzilla.redhat.com/881953</a></dt>
 <dd> libguestfs: migration to /etc/hostname, /etc/vconsole.conf, /etc/locale.conf</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/880801">https://bugzilla.redhat.com/880801</a></dt>
@@ -2284,13 +2284,13 @@ guestfs_pop_error_handler(g);</p>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/879416">https://bugzilla.redhat.com/879416</a></dt>
 <dd> libguestfs-test-tool pauses when you use &#8211;help option</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/876579">https://bugzilla.redhat.com/876579</a></dt>
-<dd> mke2fs <font SIZE="-1">API</font> does not apply block device naming translation to journaldevice optarg</dd>
+<dd> mke2fs API does not apply block device naming translation to journaldevice optarg</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/860235">https://bugzilla.redhat.com/860235</a></dt>
 <dd> SELinux policy ought to allow qemu to write to unconfined_u:object_r:user_tmp_t:s0</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/859949">https://bugzilla.redhat.com/859949</a></dt>
-<dd> <font SIZE="-1">RFE:</font> inspect-list-applications does not return the architecture of <font SIZE="-1">RPM</font> packages</dd>
+<dd> RFE: inspect-list-applications does not return the architecture of RPM packages</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/859885">https://bugzilla.redhat.com/859885</a></dt>
-<dd> inspect-list-applications does not list all installed <font SIZE="-1">RPM</font> packages with same name and different versions</dd>
+<dd> inspect-list-applications does not list all installed RPM packages with same name and different versions</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/859876">https://bugzilla.redhat.com/859876</a></dt>
 <dd> guestfish printed paths are not canonicalized</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/859875">https://bugzilla.redhat.com/859875</a></dt>
@@ -2312,23 +2312,23 @@ guestfs_pop_error_handler(g);</p>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/852194">https://bugzilla.redhat.com/852194</a></dt>
 <dd> virt-sparsify &#8211;compress fails if output is raw format</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/847881">https://bugzilla.redhat.com/847881</a></dt>
-<dd> <font SIZE="-1">RFE:</font> allow extra arguments (like &#8211;exclude) to tar-out</dd>
+<dd> RFE: allow extra arguments (like &#8211;exclude) to tar-out</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/847880">https://bugzilla.redhat.com/847880</a></dt>
 <dd> tar-out should allow (or force) &#8211;numeric-owner</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/845522">https://bugzilla.redhat.com/845522</a></dt>
 <dd> guestfish &#8220;copy-out / localdir&#8221; command fails with &#8220;No such file or directory&#8221;</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/845488">https://bugzilla.redhat.com/845488</a></dt>
-<dd> Long filenames on <font SIZE="-1">NTFS</font> cause tar-out, copy-out etc to fail with error &#8220;Cannot open: File name too long&#8221;</dd>
+<dd> Long filenames on NTFS cause tar-out, copy-out etc to fail with error &#8220;Cannot open: File name too long&#8221;</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/842307">https://bugzilla.redhat.com/842307</a></dt>
-<dd> <font SIZE="-1">RFE:</font> Need help designing and implementing selinux policy for libguestfs/sVirt</dd>
+<dd> RFE: Need help designing and implementing selinux policy for libguestfs/sVirt</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/840572">https://bugzilla.redhat.com/840572</a></dt>
 <dd> virt-make-fs / tar-in should support vfat properly</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/840115">https://bugzilla.redhat.com/840115</a></dt>
-<dd> guestfish touch problem &#8211; case_sensitive_path <font SIZE="-1">API</font> expects the file to exist</dd>
+<dd> guestfish touch problem &#8211; case_sensitive_path API expects the file to exist</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/836710">https://bugzilla.redhat.com/836710</a></dt>
 <dd> Data loss when writing to qcow2-format disk files</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/834712">https://bugzilla.redhat.com/834712</a></dt>
-<dd> lvresize, lvresize-free fail unnecessarily if you don&#8217;t change the size of the <font SIZE="-1">LV:</font> &#8220;New size (nn extents) matches existing size (nn extents)&#8221;</dd>
+<dd> lvresize, lvresize-free fail unnecessarily if you don&#8217;t change the size of the LV: &#8220;New size (nn extents) matches existing size (nn extents)&#8221;</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/824716">https://bugzilla.redhat.com/824716</a></dt>
 <dd> compress-device-out didn&#8217;t support bzip2</dd>
 <dt><a rel="nofollow" href="https://bugzilla.redhat.com/824043">https://bugzilla.redhat.com/824043</a></dt>
@@ -2357,35 +2357,35 @@ guestfs_pop_error_handler(g);</p>
 <p> These release notes only cover the differences from the previous stable/dev branch split (1.16.0). For detailed changelogs, please see the git repository, or the ChangeLog file distributed in the tarball.</p>
 <h3>New features</h3>
 <p> <i>virt tools</i> </p>
-<p>&#8211; virt &#8211; sysprep has been rewritten and expanded(thanks Wanlong Gao)<br />
-    http: // libguestfs.org/virt-sysprep.1.html<br />
-        -virt &#8211; sparsify&#8211; zero is a new option that zeroes the named<br />
-            partition<br />
-        or filesystem<br />
-                   &#8211; virt &#8211; sparsify can now safely sparsify Linux swap partitions<br />
-                   &#8211; virt &#8211; sparsify fixed so it cleans up after<br />
-               ^ C<br />
-    http: // libguestfs.org/virt-sparsify.1.html<br />
-        -a new tool &#8216;libguestfs-make-fixed-appliance&#8217; is provided to build<br />
-        fixed appliances that can be copied to other machines that don&#8217;t have febootstrap support<br />
-    http: // libguestfs.org/libguestfs-make-fixed-appliance.1.html<br />
-        -virt &#8211; filesystems now displays the parents(containers) of MD<br />
-     devices and volume groups<br />
-   &#8211; virt-alignment-scan, run with no args, displays alignment information<br />
-     for all libvirt domains<br />
-   &#8211; virt-df and virt-alignment-scan will display information from all<br />
-     guests even when a disk is inaccessible<br />
+<p>&#8211; virt &#8211; sysprep has been rewritten and expanded(thanks Wanlong Gao)<br/>
+    http: // libguestfs.org/virt-sysprep.1.html<br/>
+        -virt &#8211; sparsify&#8211; zero is a new option that zeroes the named<br/>
+            partition<br/>
+        or filesystem<br/>
+                   &#8211; virt &#8211; sparsify can now safely sparsify Linux swap partitions<br/>
+                   &#8211; virt &#8211; sparsify fixed so it cleans up after<br/>
+               ^ C<br/>
+    http: // libguestfs.org/virt-sparsify.1.html<br/>
+        -a new tool &#8216;libguestfs-make-fixed-appliance&#8217; is provided to build<br/>
+        fixed appliances that can be copied to other machines that don&#8217;t have febootstrap support<br/>
+    http: // libguestfs.org/libguestfs-make-fixed-appliance.1.html<br/>
+        -virt &#8211; filesystems now displays the parents(containers) of MD<br/>
+     devices and volume groups<br/>
+   &#8211; virt-alignment-scan, run with no args, displays alignment information<br/>
+     for all libvirt domains<br/>
+   &#8211; virt-df and virt-alignment-scan will display information from all<br/>
+     guests even when a disk is inaccessible<br/>
    &#8211; virt-rescue new &#8211;scratch option to make scratch disks</p>
 <blockquote class="wp-embedded-content" data-secret="PAz0vsR6xK"><p><a href="https://rwmj.wordpress.com/2012/04/26/virt-rescue-scratch/" rel="nofollow noopener" target="_blank">virt-rescue &#8211;scratch</a></p></blockquote>
-<p><iframe loading="lazy" class="wp-embedded-content" sandbox="allow-scripts" security="restricted" style="position: absolute; visibility: hidden;" title="&#8220;virt-rescue &#8211;scratch&#8221; &#8212; Richard WM Jones" src="https://rwmj.wordpress.com/2012/04/26/virt-rescue-scratch/embed/#?secret=pJKIpTylRu#?secret=PAz0vsR6xK" data-secret="PAz0vsR6xK" width="600" height="338" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe><br />
-   &#8211; virt-make-fs can now be used to create btrfs<br />
-   &#8211; virt-edit preserves permissions, UID, GID and SELinux context<br />
-     when editing files<br />
-   &#8211; guestfish passes the close event over stdout and remote correctly<br />
-   &#8211; guestfish new &#8216;&#8211;pipe-error&#8217; option lets you detect errors in pipe<br />
-     commands<br />
-   &#8211; guestfish globs now expand device names<br />
-   &#8211; comma and colon characters in filenames now handled correctly by<br />
+<p><iframe loading="lazy" class="wp-embedded-content" sandbox="allow-scripts" security="restricted" style="position: absolute; visibility: hidden;" title="&#8220;virt-rescue &#8211;scratch&#8221; &#8212; Richard WM Jones" src="https://rwmj.wordpress.com/2012/04/26/virt-rescue-scratch/embed/#?secret=pJKIpTylRu#?secret=PAz0vsR6xK" data-secret="PAz0vsR6xK" width="600" height="338" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe><br/>
+   &#8211; virt-make-fs can now be used to create btrfs<br/>
+   &#8211; virt-edit preserves permissions, UID, GID and SELinux context<br/>
+     when editing files<br/>
+   &#8211; guestfish passes the close event over stdout and remote correctly<br/>
+   &#8211; guestfish new &#8216;&#8211;pipe-error&#8217; option lets you detect errors in pipe<br/>
+     commands<br/>
+   &#8211; guestfish globs now expand device names<br/>
+   &#8211; comma and colon characters in filenames now handled correctly by<br/>
      all virt tools</p>
 <p> <i>inspection</i> </p>
 <pre>
@@ -2395,7 +2395,7 @@ guestfs_pop_error_handler(g);</p>
    - inspection is now compatible with Windows guests that have been
      sysprepped (thanks Grant Williamson).
 </pre>
-<p> <i></i><font SIZE="-1"><i>API</i></font><i></i> </p>
+<p> <i></i><i>API</i><i></i> </p>
 <pre>
    - broad support for btrfs added, including adding multiple devices,
      fsck, snapshots (thanks Wanlong Gao)
@@ -2451,108 +2451,108 @@ guestfs_pop_error_handler(g);</p>
   zero-free-space: Zero free space in a filesystem.
 </pre>
 <h3>Internals</h3>
-<p> &#8211; The debian/ subdirectory has been removed.  We recommend you use<br />
-   the official Debian packages made by Hilko Bengen.<br />
-   http://people.debian.org/~bengen/libguestfs/<br />
-   http://packages.debian.org/search?keywords=libguestfs<br />
- &#8211; O_CLOEXEC / SOCK_CLOEXEC is now used for almost all file<br />
-   descriptors that the library opens.<br />
- &#8211; posix_fadvise is called when sequentially reading or writing large<br />
-   files.<br />
- &#8211; close all file descriptors and remove all signal handlers in the<br />
-   recovery process<br />
- &#8211; multiple gcc warnings and Coverity bugs have been fixed;<br />
- many<br />
-         strict &#8211;<br />
-     overflow bugs have also been fixed &#8211; use./ configure&#8211; enable &#8211; valgrind &#8211; daemon to use valgrind on the daemon;  many errors have been fixed<br />
- &#8211; use ./configure &#8211;with-qemu-options to pass extra options to qemu<br />
- &#8211; the daemon now has a growable strings buffer type (DECLARE_STRINGSBUF)<br />
- &#8211; the &lt;guestfs.h&gt; header file works with C++ and we have a regression<br />
-   test for this<br />
- &#8211; multiple APIs which should only be called in the CONFIG state now<br />
-   give an error if they are not<br />
- &#8211; .gitignore fixed to use absolute paths<br />
- &#8211; gobject bindings have been expanded, including mapping libguestfs<br />
-   events to gobject signals (thanks Matt Booth)<br />
- &#8211; gobject documentation is generated properly (thanks Matt Booth)<br />
- &#8211; gobject header files now live in a subdirectory<br />
- &#8211; CompareWithString test in the generator now works<br />
- &#8211; FUInt32, FUInt64 struct field types now use the correct XDR type<br />
- &#8211; OCaml tests are now run on bytecode and native code.<br />
- &#8211; java -Xlint:all is used, and all warnings have been fixed<br />
- &#8211; bmptopng, wrestool (etc) missing or failure no longer prints<br />
-   warning messages<br />
- &#8211; ruby: Use RbConfig instead of Config.<br />
- &#8211; PYTHONPATH is set by the ./run script.<br />
- &#8211; appliance building is now thread-safe.<br />
- &#8211; appliance now uses &#8216;ip&#8217; instead of &#8216;ifconfig&#8217; and &#8216;netstat&#8217;<br />
-   commands<br />
- &#8211; several fixes to make parallel builds work properly<br />
- &#8211; guestfish &#8211;listen now cleans up properly<br />
- &#8211; the BUSY state has been removed<br />
- &#8211; gettextize has been removed, replaced by a simple Makefile.am<br />
- &#8211; gettext support now covers virt-resize, virt-sparsify and virt-sysprep<br />
+<p> &#8211; The debian/ subdirectory has been removed.  We recommend you use<br/>
+   the official Debian packages made by Hilko Bengen.<br/>
+   http://people.debian.org/~bengen/libguestfs/<br/>
+   http://packages.debian.org/search?keywords=libguestfs<br/>
+ &#8211; O_CLOEXEC / SOCK_CLOEXEC is now used for almost all file<br/>
+   descriptors that the library opens.<br/>
+ &#8211; posix_fadvise is called when sequentially reading or writing large<br/>
+   files.<br/>
+ &#8211; close all file descriptors and remove all signal handlers in the<br/>
+   recovery process<br/>
+ &#8211; multiple gcc warnings and Coverity bugs have been fixed;<br/>
+ many<br/>
+         strict &#8211;<br/>
+     overflow bugs have also been fixed &#8211; use./ configure&#8211; enable &#8211; valgrind &#8211; daemon to use valgrind on the daemon;  many errors have been fixed<br/>
+ &#8211; use ./configure &#8211;with-qemu-options to pass extra options to qemu<br/>
+ &#8211; the daemon now has a growable strings buffer type (DECLARE_STRINGSBUF)<br/>
+ &#8211; the &lt;guestfs.h&gt; header file works with C++ and we have a regression<br/>
+   test for this<br/>
+ &#8211; multiple APIs which should only be called in the CONFIG state now<br/>
+   give an error if they are not<br/>
+ &#8211; .gitignore fixed to use absolute paths<br/>
+ &#8211; gobject bindings have been expanded, including mapping libguestfs<br/>
+   events to gobject signals (thanks Matt Booth)<br/>
+ &#8211; gobject documentation is generated properly (thanks Matt Booth)<br/>
+ &#8211; gobject header files now live in a subdirectory<br/>
+ &#8211; CompareWithString test in the generator now works<br/>
+ &#8211; FUInt32, FUInt64 struct field types now use the correct XDR type<br/>
+ &#8211; OCaml tests are now run on bytecode and native code.<br/>
+ &#8211; java -Xlint:all is used, and all warnings have been fixed<br/>
+ &#8211; bmptopng, wrestool (etc) missing or failure no longer prints<br/>
+   warning messages<br/>
+ &#8211; ruby: Use RbConfig instead of Config.<br/>
+ &#8211; PYTHONPATH is set by the ./run script.<br/>
+ &#8211; appliance building is now thread-safe.<br/>
+ &#8211; appliance now uses &#8216;ip&#8217; instead of &#8216;ifconfig&#8217; and &#8216;netstat&#8217;<br/>
+   commands<br/>
+ &#8211; several fixes to make parallel builds work properly<br/>
+ &#8211; guestfish &#8211;listen now cleans up properly<br/>
+ &#8211; the BUSY state has been removed<br/>
+ &#8211; gettextize has been removed, replaced by a simple Makefile.am<br/>
+ &#8211; gettext support now covers virt-resize, virt-sparsify and virt-sysprep<br/>
  &#8211; better support for the arm architecture</p>
 <h3>Bugs fixed</h3>
-<p> &#8211; 822490 virt-ls error: &#8220;libguestfs: error: checksum: path: parameter cannot be NULL&#8221;<br />
- &#8211; 816839 data overflow error when debug progress -1<br />
- &#8211; 816098 virt-make-fs fails to make a btrfs filesystem because it doesn&#8217;t allocate enough space<br />
- &#8211; 811872 inspection fails on ubuntu 10.04 guest with encrypted swap<br />
- &#8211; 811650 guestfs_last_error not set when qemu fails early during launch<br />
- &#8211; 811649 libguestfs cannot open disk images which are symlinks to files that contain &#8216;:&#8217; (colon) character<br />
- &#8211; 811117 [RFE][virt-sysprep] net-hwaddr not removed from &#8220;ifcfg-*&#8221; files on rhel<br />
- &#8211; 811112 [RFE][virt-sysprep] hostname can not be changed on rhel system<br />
- &#8211; 809361 inspection doesn&#8217;t recognize Fedora 18 (grub2 + GPT)<br />
- &#8211; 807905 mkfs blocksize option breaks when creating btrfs<br />
- &#8211; 805070 virt-filesystems should show &#8216;parents&#8217; of LV and RAID devices<br />
- &#8211; 804464 libguestfs cannot be built when LINGUAS is different then ja or uk<br />
- &#8211; 803664 libguestfs inspection fails on Windows XP: libguestfs: error: hivex: could not locate HKLM\SYSTEM\MountedDevices<br />
- &#8211; 803533 guestfish: write error<br />
- &#8211; 802389 event handlers for &#8216;close&#8217; event doesn&#8217;t work in remote mode<br />
- &#8211; 802109 libguestfs uses putc on stderr, results in many individual 1 byte writes of debug messages<br />
- &#8211; 801640 [RFE] the error reported by resize2fs-M need to be more clear<br />
- &#8211; 801298 Possible null dereference and resource leaks<br />
- &#8211; 801273 Document for set-pgroup need to be updated<br />
- &#8211; 798196 virt-resize confuses format and output_format variables; using &#8211;output-format sets the input format<br />
- &#8211; 797986 virt-resize on Windows XP in sysprep state causes &#8220;UNMOUNTABLE_BOOT_VOLUME&#8221; BSOD<br />
- &#8211; 796520 [RFE] Prevent user from running some appliance configure commands after appliance boot up<br />
- &#8211; 790721 multiprovider build error: RuntimeError: link: /tmp/.guestfs-0/kernel /tmp/.guestfs-0/kernel.10139: File exists<br />
- &#8211; 789960 guestfsd crash when try to mount non-exist disk<br />
- &#8211; 789504 virt-df (other tools?) should not give up if a guest disk is missing<br />
- &#8211; 788641 virt-edit doesn&#8217;t preserve file permissions<br />
- &#8211; 786215 libguestfs inspection does not recognize FreeDOS operating system<br />
- &#8211; 786188 libguestfs inspection does not recognize FreeDOS install CD<br />
- &#8211; 785668 aug-defnode: daemon crash<br />
- &#8211; 784647 Libguestfs uses deprecated net-tools<br />
- &#8211; 769304 virt-resize on RHEL 6 kernel fails to re-read the partition table<br />
- &#8211; 755729 Error message for resize2fs-M needs tweaking<br />
- &#8211; 701814 virt-win-reg fails on a libvirt guest that has no defined disk format: &#8220;format parameter is empty or contains disallowed characters&#8221;<br />
- &#8211; 679737 libguestfs: improve error message when zerofree is not available in the appliance<br />
+<p> &#8211; 822490 virt-ls error: &#8220;libguestfs: error: checksum: path: parameter cannot be NULL&#8221;<br/>
+ &#8211; 816839 data overflow error when debug progress -1<br/>
+ &#8211; 816098 virt-make-fs fails to make a btrfs filesystem because it doesn&#8217;t allocate enough space<br/>
+ &#8211; 811872 inspection fails on ubuntu 10.04 guest with encrypted swap<br/>
+ &#8211; 811650 guestfs_last_error not set when qemu fails early during launch<br/>
+ &#8211; 811649 libguestfs cannot open disk images which are symlinks to files that contain &#8216;:&#8217; (colon) character<br/>
+ &#8211; 811117 [RFE][virt-sysprep] net-hwaddr not removed from &#8220;ifcfg-*&#8221; files on rhel<br/>
+ &#8211; 811112 [RFE][virt-sysprep] hostname can not be changed on rhel system<br/>
+ &#8211; 809361 inspection doesn&#8217;t recognize Fedora 18 (grub2 + GPT)<br/>
+ &#8211; 807905 mkfs blocksize option breaks when creating btrfs<br/>
+ &#8211; 805070 virt-filesystems should show &#8216;parents&#8217; of LV and RAID devices<br/>
+ &#8211; 804464 libguestfs cannot be built when LINGUAS is different then ja or uk<br/>
+ &#8211; 803664 libguestfs inspection fails on Windows XP: libguestfs: error: hivex: could not locate HKLM\SYSTEM\MountedDevices<br/>
+ &#8211; 803533 guestfish: write error<br/>
+ &#8211; 802389 event handlers for &#8216;close&#8217; event doesn&#8217;t work in remote mode<br/>
+ &#8211; 802109 libguestfs uses putc on stderr, results in many individual 1 byte writes of debug messages<br/>
+ &#8211; 801640 [RFE] the error reported by resize2fs-M need to be more clear<br/>
+ &#8211; 801298 Possible null dereference and resource leaks<br/>
+ &#8211; 801273 Document for set-pgroup need to be updated<br/>
+ &#8211; 798196 virt-resize confuses format and output_format variables; using &#8211;output-format sets the input format<br/>
+ &#8211; 797986 virt-resize on Windows XP in sysprep state causes &#8220;UNMOUNTABLE_BOOT_VOLUME&#8221; BSOD<br/>
+ &#8211; 796520 [RFE] Prevent user from running some appliance configure commands after appliance boot up<br/>
+ &#8211; 790721 multiprovider build error: RuntimeError: link: /tmp/.guestfs-0/kernel /tmp/.guestfs-0/kernel.10139: File exists<br/>
+ &#8211; 789960 guestfsd crash when try to mount non-exist disk<br/>
+ &#8211; 789504 virt-df (other tools?) should not give up if a guest disk is missing<br/>
+ &#8211; 788641 virt-edit doesn&#8217;t preserve file permissions<br/>
+ &#8211; 786215 libguestfs inspection does not recognize FreeDOS operating system<br/>
+ &#8211; 786188 libguestfs inspection does not recognize FreeDOS install CD<br/>
+ &#8211; 785668 aug-defnode: daemon crash<br/>
+ &#8211; 784647 Libguestfs uses deprecated net-tools<br/>
+ &#8211; 769304 virt-resize on RHEL 6 kernel fails to re-read the partition table<br/>
+ &#8211; 755729 Error message for resize2fs-M needs tweaking<br/>
+ &#8211; 701814 virt-win-reg fails on a libvirt guest that has no defined disk format: &#8220;format parameter is empty or contains disallowed characters&#8221;<br/>
+ &#8211; 679737 libguestfs: improve error message when zerofree is not available in the appliance<br/>
  &#8211; 635971 glob mkfs ext2 /dev/vd[b-t]1 does not expand</p>
 <h2>RELEASE NOTES FOR LIBGUESTFS 1.16</h2>
 <p> These release notes only cover the differences from the previous stable/dev branch split (1.14.0). For detailed changelogs, please see the git repository, or the ChangeLog file distributed in the tarball.</p>
 <h3>New features</h3>
 <p> <i>libguestfs</i> </p>
-<p>   &#8211; allow XFS filesystems to be created over an existing filesystem<br />
-     (Wanlong Gao)<br />
-   &#8211; the (unspecified) default alignment for part-disk has been<br />
-     changed to 64K for better support of high-end network-attached<br />
-     storage<br />
-   &#8211; new guestfs-testing(1) man page<br />
-   &#8211; list-filesystems returns MD devices containing filesystems<br />
-     (Matthew Booth)<br />
-   &#8211; support for GCC &gt;= 4.7 (Jim Meyering)<br />
+<p>   &#8211; allow XFS filesystems to be created over an existing filesystem<br/>
+     (Wanlong Gao)<br/>
+   &#8211; the (unspecified) default alignment for part-disk has been<br/>
+     changed to 64K for better support of high-end network-attached<br/>
+     storage<br/>
+   &#8211; new guestfs-testing(1) man page<br/>
+   &#8211; list-filesystems returns MD devices containing filesystems<br/>
+     (Matthew Booth)<br/>
+   &#8211; support for GCC &gt;= 4.7 (Jim Meyering)<br/>
    &#8211; check user does not add the same drive twice (Wanlong Gao).</p>
 <p> <i>language bindings</i> </p>
-<p>   &#8211; Experimental GObject bindings, with support for GObject<br />
-     Introspection.  You can now use libguestfs from Javascript.<br />
-     Please note these are not stable and final in this release.<br />
-     (Matthew Booth).<br />
-   &#8211; support for Ruby &gt;= 1.9<br />
-   &#8211; Ruby bindings can be disabled individually (Hilko Bengen)<br />
-   &#8211; support for Python 2.6, 3.x (Richard Jones, Hilko Bengen)<br />
-   &#8211; support for PHP &gt;= 5.4<br />
-   &#8211; new %guestfs_introspection hash is available in Perl bindings so<br />
+<p>   &#8211; Experimental GObject bindings, with support for GObject<br/>
+     Introspection.  You can now use libguestfs from Javascript.<br/>
+     Please note these are not stable and final in this release.<br/>
+     (Matthew Booth).<br/>
+   &#8211; support for Ruby &gt;= 1.9<br/>
+   &#8211; Ruby bindings can be disabled individually (Hilko Bengen)<br/>
+   &#8211; support for Python 2.6, 3.x (Richard Jones, Hilko Bengen)<br/>
+   &#8211; support for PHP &gt;= 5.4<br/>
+   &#8211; new %guestfs_introspection hash is available in Perl bindings so<br/>
      you can query which optional arguments are available</p>
 <p> <i>inspection</i> </p>
 <pre>
@@ -2566,14 +2566,14 @@ guestfs_pop_error_handler(g);</p>
    - MD devices are tab-completed (Matthew Booth)
 </pre>
 <p> <i>virt tools</i> </p>
-<p>   &#8211; New tool virt-format for erasing and making blank disks<br />
-   &#8211; virt-sparsify new &#8211;compress and -o options to allow for compressed<br />
-     and different format output<br />
-   &#8211; virt-sparsify can now detect and sparsify .vdi files<br />
-   &#8211; virt-sysprep no longer requires xmlstarlet; a new virt-inspector &#8211;xpath<br />
-     option has been added to replace this functionality<br />
-   &#8211; virt-rescue has a new &#8211;suggest option which suggests mount commands<br />
-     for the guest<br />
+<p>   &#8211; New tool virt-format for erasing and making blank disks<br/>
+   &#8211; virt-sparsify new &#8211;compress and -o options to allow for compressed<br/>
+     and different format output<br/>
+   &#8211; virt-sparsify can now detect and sparsify .vdi files<br/>
+   &#8211; virt-sysprep no longer requires xmlstarlet; a new virt-inspector &#8211;xpath<br/>
+     option has been added to replace this functionality<br/>
+   &#8211; virt-rescue has a new &#8211;suggest option which suggests mount commands<br/>
+     for the guest<br/>
    &#8211; virt-resize no longer requires OCaml pcre library</p>
 <p> <i>libguestfs live</i> </p>
 <pre>
@@ -2597,22 +2597,22 @@ guestfs_pop_error_handler(g);</p>
   tune2fs: allow ext2/3/4 filesystems to be tuned
 </pre>
 <h3>Internals</h3>
-<p>  Git hosting has moved to http://github.com/libguestfs<br />
-  The various test directories have been rearranged logically, and now<br />
-  all appear under &#8216;tests/&#8217;.<br />
-  There is a &#8216;make extra-tests&#8217; rule which runs ordinary tests and<br />
-  additional tests, using valgrind to check for memory problems.<br />
-  Multiple memory leaks and other problems found by valgrind and fixed.<br />
-  Support for optional arguments in the generator has been rewritten<br />
-  to provide more features and safety (Matthew Booth).<br />
-  With gcc -fvisibility=hidden is used for internal symbols, avoiding<br />
-  call indirection via the PLT.<br />
-  RHashtable functions can be tested in the generator.<br />
-  ADD_ARG macro in daemon allows arg lists to be constructed without<br />
-  risk of stack smashing.<br />
-  Fix generation of OCaml functions that have more than 10 arguments.<br />
-  psmisc has been added to the appliance, allowing use of &#8216;fuser&#8217;,<br />
-  &#8216;killall&#8217; and &#8216;pstree&#8217; for debugging.<br />
+<p>  Git hosting has moved to http://github.com/libguestfs<br/>
+  The various test directories have been rearranged logically, and now<br/>
+  all appear under &#8216;tests/&#8217;.<br/>
+  There is a &#8216;make extra-tests&#8217; rule which runs ordinary tests and<br/>
+  additional tests, using valgrind to check for memory problems.<br/>
+  Multiple memory leaks and other problems found by valgrind and fixed.<br/>
+  Support for optional arguments in the generator has been rewritten<br/>
+  to provide more features and safety (Matthew Booth).<br/>
+  With gcc -fvisibility=hidden is used for internal symbols, avoiding<br/>
+  call indirection via the PLT.<br/>
+  RHashtable functions can be tested in the generator.<br/>
+  ADD_ARG macro in daemon allows arg lists to be constructed without<br/>
+  risk of stack smashing.<br/>
+  Fix generation of OCaml functions that have more than 10 arguments.<br/>
+  psmisc has been added to the appliance, allowing use of &#8216;fuser&#8217;,<br/>
+  &#8216;killall&#8217; and &#8216;pstree&#8217; for debugging.<br/>
   bindtests now cover RBufferOut and optional arguments (Matthew Booth).</p>
 <h3>Bugs fixed</h3>
 <pre>
@@ -2808,7 +2808,7 @@ line 2
      before using).
    - virt-edit has been rewritten in C.
 </pre>
-<p> <i></i><font SIZE="-1"><i>API</i></font><i> and language bindings</i> </p>
+<p> <i></i><i>API</i><i> and language bindings</i> </p>
 <pre>
    - Java is now completely supported.
      See <a rel="nofollow" href="http://libguestfs.org/guestfs-java.3.html">http://libguestfs.org/guestfs-java.3.html</a>
@@ -2865,59 +2865,59 @@ line 2
 <h2>Release notes for libguestfs 1.10.0</h2>
 <p> These release notes only cover the differences from the previous stable/dev branch split (1.8.0). For detailed changelogs, please see the git repository, or the ChangeLog file distributed in the tarball.</p>
 <h3>New features</h3>
-<p> &#8211; libguestfs and tools can be used against live virtual machines.<br />
-   See the &#8216;guestfish &#8211;live&#8217; and &#8216;guestmount &#8211;live&#8217; options, and (for<br />
-   the low-level interface) the new APIs set-attach-method and<br />
-   get-attach-method.<br />
- &#8211; New virt tools:<br />
-   virt-copy-in, virt-copy-out, virt-tar-in, virt-tar-out.<br />
- &#8211; libguestfs can get the drive letter mappings for Windows guests.<br />
- &#8211; virt-inspector displays drive letter mappings for Windows guests.<br />
- &#8211; Drive letters can now be used in virt-edit and guestfish programs<br />
-   when operating on Windows guests.<br />
- &#8211; virt-resize now works on 32 bit hosts.<br />
- &#8211; You can now inspect the install disks and live CDs of many different<br />
-   operating systems.<br />
- &#8211; guestfish &lt;! cmd which executes a shell cmd and inlines the result.<br />
- &#8211; guestfish, guestmount, virt-rescue now all support &#8211;ro and &#8211;rw<br />
-   options, and the default for this can be chosen via a configuration<br />
-   file (/etc/libguestfs-tools.conf).<br />
- &#8211; New event API allows more than one callback to be registered for<br />
-   each event, makes it possible to call the API from other languages,<br />
-   and allows nearly all log, debug and trace messages to be rerouted<br />
-   from stderr.<br />
- &#8211; Greater FHS compliance for temporary files, including using /var/tmp<br />
-   for large cached files that should survive reboot (instead of /tmp).<br />
- &#8211; guestfish, guestmount -m option allows mount options to be passed<br />
-   through to the underlying filesystem.<br />
- &#8211; mkfs-opts allows filesystem features to be specified.<br />
- &#8211; More intelligent handling of mountpoints, allowing mkmountpoint, mount<br />
-   and umount-all commands to work together properly.<br />
- &#8211; Trace messages are prefixed with a distinct string, allowing them to<br />
-   be easily &#8216;grepped&#8217; out from debug output.<br />
- &#8211; guestfs_launch (guestfish &#8216;run&#8217; command) now produces progress<br />
-   messages (a guestfish progress bar) if it takes longer than 5<br />
-   seconds to run.<br />
- &#8211; Several long-running commands where we are unable to estimate time<br />
-   to completion generate &#8220;pulse mode&#8221; progress events.  Progress bar<br />
-   in guestfish has been updated to display these.<br />
- &#8211; Publish new example code in: C, Perl, Python, OCaml, Ruby.<br />
- &#8211; New virt-dhcp-address example program.<br />
- &#8211; The Java and Ruby bindings have been improved greatly.<br />
- &#8211; Perl includes a way to get the errno of the last error.<br />
- &#8211; Python bindings now compatible with rpyc (thanks Erez Shinan).<br />
- &#8211; Transifex is now being used to manage translations.<br />
-   http://www.transifex.net/projects/p/libguestfs/<br />
- &#8211; Inspection now supports Red Hat Desktop, Slackware distributions.<br />
- &#8211; Inspection no longer fails for Windows guests that have two or<br />
-   more disks.<br />
- &#8211; Inspection can now tell the difference between Windows 2008 Server<br />
-   and Windows 7.<br />
- &#8211; Inspection can detect 32 bit applications installed in 64 bit<br />
-   Windows, running on the WOW64 emulator.<br />
- &#8211; A series of protocol fixes has fixed the old bug RHBZ#576879<br />
-   which used to cause errors during the upload command to lose<br />
-   protocol synchronization.<br />
+<p> &#8211; libguestfs and tools can be used against live virtual machines.<br/>
+   See the &#8216;guestfish &#8211;live&#8217; and &#8216;guestmount &#8211;live&#8217; options, and (for<br/>
+   the low-level interface) the new APIs set-attach-method and<br/>
+   get-attach-method.<br/>
+ &#8211; New virt tools:<br/>
+   virt-copy-in, virt-copy-out, virt-tar-in, virt-tar-out.<br/>
+ &#8211; libguestfs can get the drive letter mappings for Windows guests.<br/>
+ &#8211; virt-inspector displays drive letter mappings for Windows guests.<br/>
+ &#8211; Drive letters can now be used in virt-edit and guestfish programs<br/>
+   when operating on Windows guests.<br/>
+ &#8211; virt-resize now works on 32 bit hosts.<br/>
+ &#8211; You can now inspect the install disks and live CDs of many different<br/>
+   operating systems.<br/>
+ &#8211; guestfish &lt;! cmd which executes a shell cmd and inlines the result.<br/>
+ &#8211; guestfish, guestmount, virt-rescue now all support &#8211;ro and &#8211;rw<br/>
+   options, and the default for this can be chosen via a configuration<br/>
+   file (/etc/libguestfs-tools.conf).<br/>
+ &#8211; New event API allows more than one callback to be registered for<br/>
+   each event, makes it possible to call the API from other languages,<br/>
+   and allows nearly all log, debug and trace messages to be rerouted<br/>
+   from stderr.<br/>
+ &#8211; Greater FHS compliance for temporary files, including using /var/tmp<br/>
+   for large cached files that should survive reboot (instead of /tmp).<br/>
+ &#8211; guestfish, guestmount -m option allows mount options to be passed<br/>
+   through to the underlying filesystem.<br/>
+ &#8211; mkfs-opts allows filesystem features to be specified.<br/>
+ &#8211; More intelligent handling of mountpoints, allowing mkmountpoint, mount<br/>
+   and umount-all commands to work together properly.<br/>
+ &#8211; Trace messages are prefixed with a distinct string, allowing them to<br/>
+   be easily &#8216;grepped&#8217; out from debug output.<br/>
+ &#8211; guestfs_launch (guestfish &#8216;run&#8217; command) now produces progress<br/>
+   messages (a guestfish progress bar) if it takes longer than 5<br/>
+   seconds to run.<br/>
+ &#8211; Several long-running commands where we are unable to estimate time<br/>
+   to completion generate &#8220;pulse mode&#8221; progress events.  Progress bar<br/>
+   in guestfish has been updated to display these.<br/>
+ &#8211; Publish new example code in: C, Perl, Python, OCaml, Ruby.<br/>
+ &#8211; New virt-dhcp-address example program.<br/>
+ &#8211; The Java and Ruby bindings have been improved greatly.<br/>
+ &#8211; Perl includes a way to get the errno of the last error.<br/>
+ &#8211; Python bindings now compatible with rpyc (thanks Erez Shinan).<br/>
+ &#8211; Transifex is now being used to manage translations.<br/>
+   http://www.transifex.net/projects/p/libguestfs/<br/>
+ &#8211; Inspection now supports Red Hat Desktop, Slackware distributions.<br/>
+ &#8211; Inspection no longer fails for Windows guests that have two or<br/>
+   more disks.<br/>
+ &#8211; Inspection can now tell the difference between Windows 2008 Server<br/>
+   and Windows 7.<br/>
+ &#8211; Inspection can detect 32 bit applications installed in 64 bit<br/>
+   Windows, running on the WOW64 emulator.<br/>
+ &#8211; A series of protocol fixes has fixed the old bug RHBZ#576879<br/>
+   which used to cause errors during the upload command to lose<br/>
+   protocol synchronization.<br/>
  &#8211; New logo!</p>
 <h3>Security</h3>
 <pre>
@@ -2967,47 +2967,47 @@ line 2
 <h2>Release notes for libguestfs 1.8</h2>
 <p> These release notes only cover the differences from the previous stable/dev branch split (1.6.0). For detailed changelogs, please see the git repository, or the ChangeLog file distributed in the tarball.</p>
 <h3>New features</h3>
-<p> &#8211; Support and packages for Debian and Ubuntu.<br />
- &#8211; Daily builds from git repository on Debian and Ubuntu to reduce risk<br />
-   of regressions.<br />
- &#8211; Port to ArchLinux &#8216;pacman&#8217; (thanks Thomas S Hatch).<br />
- &#8211; The following tools have been rewritten in C (originally in Perl):<br />
-     . virt-cat<br />
-     . virt-df<br />
-     . virt-inspector<br />
-     . virt-ls<br />
-     . virt-rescue<br />
- &#8211; Some C tools support encrypted guests automatically.  This is<br />
-   supported in: guestfish, guestmount, virt-cat, virt-inspector,<br />
-   virt-ls.<br />
- &#8211; New tool virt-filesystems (in C) which is a replacement for<br />
-   virt-list-filesystems and virt-list-partitions, and has a superset<br />
-   of the functionality of those tools.<br />
- &#8211; guestfish, guestmount and the C tools use unified command line option<br />
-   parsing, so they support many common options such as &#8216;-a disk.img&#8217;,<br />
-   &#8216;-d libvirt-domain&#8217;, &#8216;-x&#8217;, &#8216;-v&#8217;.  The old command line option<br />
-   parsing is preserved for compatibility in scripts etc.<br />
- &#8211; guestfish no longer has any dependencies on Perl<br />
- &#8211; New man pages containing programming examples: guestfs-examples(3) (C/C++),<br />
-   guestfs-ocaml(3), guestfs-python(3), guestfs-ruby(3).<br />
- &#8211; Trace mode prints return values from API functions.<br />
- &#8211; virt-inspector can list applications installed in Windows guests, along<br />
-   with a great deal of information about those applications.<br />
- &#8211; Add support for inspecting: Linux Mint, Mandriva, FreeBSD.<br />
- &#8211; guestfish &#8211;rw option (with no effect currently) to make potentially<br />
-   dangerous write access explicit.<br />
- &#8211; guestfish &#8211;listen &#8211;csh for compatibility with csh, tcsh (thanks<br />
-   Eric Blake).<br />
- &#8211; The first upstream version that introduced each API function is now<br />
-   documented in guestfs(3).<br />
- &#8211; guestfs_last_errno allows you to retrieve the errno from the<br />
-   daemon, correctly translated to the local operating system.<br />
- &#8211; Functions can now have optional parameters.<br />
- &#8211; Progress bars and progress notifications can now happen for upload<br />
-   commands.<br />
- &#8211; Appliance builder more careful about not leaving temporary files<br />
-   around in /tmp.<br />
- &#8211; getfattr/setfattr commands added to virt-rescue.<br />
+<p> &#8211; Support and packages for Debian and Ubuntu.<br/>
+ &#8211; Daily builds from git repository on Debian and Ubuntu to reduce risk<br/>
+   of regressions.<br/>
+ &#8211; Port to ArchLinux &#8216;pacman&#8217; (thanks Thomas S Hatch).<br/>
+ &#8211; The following tools have been rewritten in C (originally in Perl):<br/>
+     . virt-cat<br/>
+     . virt-df<br/>
+     . virt-inspector<br/>
+     . virt-ls<br/>
+     . virt-rescue<br/>
+ &#8211; Some C tools support encrypted guests automatically.  This is<br/>
+   supported in: guestfish, guestmount, virt-cat, virt-inspector,<br/>
+   virt-ls.<br/>
+ &#8211; New tool virt-filesystems (in C) which is a replacement for<br/>
+   virt-list-filesystems and virt-list-partitions, and has a superset<br/>
+   of the functionality of those tools.<br/>
+ &#8211; guestfish, guestmount and the C tools use unified command line option<br/>
+   parsing, so they support many common options such as &#8216;-a disk.img&#8217;,<br/>
+   &#8216;-d libvirt-domain&#8217;, &#8216;-x&#8217;, &#8216;-v&#8217;.  The old command line option<br/>
+   parsing is preserved for compatibility in scripts etc.<br/>
+ &#8211; guestfish no longer has any dependencies on Perl<br/>
+ &#8211; New man pages containing programming examples: guestfs-examples(3) (C/C++),<br/>
+   guestfs-ocaml(3), guestfs-python(3), guestfs-ruby(3).<br/>
+ &#8211; Trace mode prints return values from API functions.<br/>
+ &#8211; virt-inspector can list applications installed in Windows guests, along<br/>
+   with a great deal of information about those applications.<br/>
+ &#8211; Add support for inspecting: Linux Mint, Mandriva, FreeBSD.<br/>
+ &#8211; guestfish &#8211;rw option (with no effect currently) to make potentially<br/>
+   dangerous write access explicit.<br/>
+ &#8211; guestfish &#8211;listen &#8211;csh for compatibility with csh, tcsh (thanks<br/>
+   Eric Blake).<br/>
+ &#8211; The first upstream version that introduced each API function is now<br/>
+   documented in guestfs(3).<br/>
+ &#8211; guestfs_last_errno allows you to retrieve the errno from the<br/>
+   daemon, correctly translated to the local operating system.<br/>
+ &#8211; Functions can now have optional parameters.<br/>
+ &#8211; Progress bars and progress notifications can now happen for upload<br/>
+   commands.<br/>
+ &#8211; Appliance builder more careful about not leaving temporary files<br/>
+   around in /tmp.<br/>
+ &#8211; getfattr/setfattr commands added to virt-rescue.<br/>
  &#8211; ROADMAP file covers roadmap and goals for future releases.</p>
 <h3>Security</h3>
 <pre>
@@ -3031,25 +3031,25 @@ line 2
  - mkfs-opts
 </pre>
 <h3>Internals</h3>
-<p> &#8211; C programs now only link precisely with the libraries that they use.<br />
- &#8211; PCRE, libmagic, hivex and libvirt libraries are now completely<br />
-   optional for building.<br />
- &#8211; Multiple memory leaks and file descriptor leaks fixed.<br />
- &#8211; Add a POD wrapper to unify generation of man pages and HTML files<br />
-   across all programs.<br />
- &#8211; Source includes phony images of Fedora, Debian, Ubuntu and<br />
-   Windows guests.<br />
- &#8211; Ruby bindings have &#8216;make install&#8217; rule.<br />
- &#8211; &lt;guestfs.h&gt; is now a single file.<br />
- &#8211; &lt;guestfs.h&gt; does not require XDR headers.<br />
- &#8211; ocaml xml-light library is no longer required to build (thanks<br />
-   Maxim Koltsov).<br />
- &#8211; ./configure &#8211;disable-[&#8230;] for each language binding (thanks<br />
-   Maxim Koltsov).<br />
- &#8211; Old ocaml-viewer program removed (use guestfs-browser instead).<br />
- &#8211; New C API test type &#8216;InitScratchFS&#8217; makes the tests run a little<br />
-   more quickly.<br />
- &#8211; Excluded packages in the appliance are now listed in a separate<br />
+<p> &#8211; C programs now only link precisely with the libraries that they use.<br/>
+ &#8211; PCRE, libmagic, hivex and libvirt libraries are now completely<br/>
+   optional for building.<br/>
+ &#8211; Multiple memory leaks and file descriptor leaks fixed.<br/>
+ &#8211; Add a POD wrapper to unify generation of man pages and HTML files<br/>
+   across all programs.<br/>
+ &#8211; Source includes phony images of Fedora, Debian, Ubuntu and<br/>
+   Windows guests.<br/>
+ &#8211; Ruby bindings have &#8216;make install&#8217; rule.<br/>
+ &#8211; &lt;guestfs.h&gt; is now a single file.<br/>
+ &#8211; &lt;guestfs.h&gt; does not require XDR headers.<br/>
+ &#8211; ocaml xml-light library is no longer required to build (thanks<br/>
+   Maxim Koltsov).<br/>
+ &#8211; ./configure &#8211;disable-[&#8230;] for each language binding (thanks<br/>
+   Maxim Koltsov).<br/>
+ &#8211; Old ocaml-viewer program removed (use guestfs-browser instead).<br/>
+ &#8211; New C API test type &#8216;InitScratchFS&#8217; makes the tests run a little<br/>
+   more quickly.<br/>
+ &#8211; Excluded packages in the appliance are now listed in a separate<br/>
    file appliance/excludelist.in, and can be customized per-distro.</p>
 <h3>Bugs fixed</h3>
 <pre>
@@ -3063,57 +3063,57 @@ line 2
 <h2>RELEASE NOTES FOR LIBGUESTFS 1.6</h2>
 <p> These release notes only cover the differences from the previous stable/dev branch split (1.4.0). For detailed changelogs, please see the git repository, or the ChangeLog file distributed in the tarball.</p>
 <h3>New features</h3>
-<p> &#8211; Use a new method for creating and caching the appliance.  This<br />
-   greatly improves the performance of libguestfs, often by a factor<br />
-   of x 4 to x 5.<br />
- &#8211; Support for guest inspection (like virt-inspector) via the ordinary<br />
-   API and all language bindings.  &#8216;guestfish -i&#8217; option is as a side-<br />
-   effect much quicker.<br />
- &#8211; virt-inspector and core inspection API can now detect guests running:<br />
-   Fedora, Debian, Ubuntu, Windows, Red Hat Enterprise Linux, CentOS,<br />
-   Scientific Linux, Gentoo, Pardus, Arch Linux, MeeGo.<br />
- &#8211; Support for LUKS whole-disk encryption in guests.<br />
- &#8211; PHP bindings.<br />
- &#8211; Progress messages (and progress bars in guestfish and virt-resize)<br />
-   for certain long-running operations.<br />
- &#8211; virt-df is now much more efficient.  Use &#8216;&#8211;one-per-guest&#8217; to restore<br />
-   the old per-guest isolation behaviour.<br />
- &#8211; guestfish &#8216;copy-in&#8217; and &#8216;copy-out&#8217; commands for copying files and<br />
-   directories recursively in and out of the guest.<br />
- &#8211; guestfish &#8216;hexedit&#8217; command for doing binary edits to devices and<br />
-   files.<br />
- &#8211; Change guestfish -i syntax to allow commands to be specified on the<br />
-   command line (retaining backwards compatibility).<br />
- &#8211; guestfish &#8216;-d &lt;domain&gt;&#8217; for adding disks from libvirt domains.<br />
- &#8211; guestfish &#8216;-N&#8217; option supports several new prepared disk image types:<br />
-         lvfs : disk with LV formatted with filesystem<br />
-           lv : disk with LV<br />
-     bootroot : boot+root<br />
-   bootrootlv : boot and root on LV<br />
- &#8211; guestfish &#8216;more&#8217; and &#8216;edit&#8217; commands now work with arbitrary files.<br />
- &#8211; guestfish &#8216;&#8211;echo-keys&#8217; option allows you to echo keys/passphrases<br />
-   while typing them.<br />
- &#8211; guestmount now supports -a / -d / -i options, like guestfish.<br />
- &#8211; Use virtio-serial for communications with the appliance.  This<br />
-   also has a major performance benefit.<br />
- &#8211; virt-edit &#8216;-b&#8217; option to create a backup of edited files.<br />
- &#8211; virt-edit &#8216;-e&#8217; option for non-interactive edits to files.<br />
- &#8211; Ability to capture core dumps from the appliance (thanks Matthew Booth).<br />
- &#8211; virt-rescue now shuts down cleanly (thanks Matthew Booth).<br />
- &#8211; virt-rescue now has a &#8211;network option to enable network access.<br />
- &#8211; virt-resize can now handle guests which use GPT partition table format.<br />
- &#8211; virt-resize has better support for shrinking guests.<br />
- &#8211; virt-resize supports qcow2-format guests.<br />
- &#8211; $TMPDIR can be used to override almost all temporary directory usage.<br />
- &#8211; OCaml users can use an alternate OO-style of coding, eg. g#launch ()<br />
- &#8211; The API supports calls which take optional parameters, eg.<br />
-     $g-&gt;add_drive_opts (&#8220;disk&#8221;, readonly =&gt; 1);<br />
- &#8211; Trace output now escapes and shortens large strings(thanks<br />
-                                                           Matthew Booth)<br />
-         .-<br />
-     Autosync is now on by default,<br />
-     resulting in more reliable behaviour<br />
-         when the handle is closed.-<br />
+<p> &#8211; Use a new method for creating and caching the appliance.  This<br/>
+   greatly improves the performance of libguestfs, often by a factor<br/>
+   of x 4 to x 5.<br/>
+ &#8211; Support for guest inspection (like virt-inspector) via the ordinary<br/>
+   API and all language bindings.  &#8216;guestfish -i&#8217; option is as a side-<br/>
+   effect much quicker.<br/>
+ &#8211; virt-inspector and core inspection API can now detect guests running:<br/>
+   Fedora, Debian, Ubuntu, Windows, Red Hat Enterprise Linux, CentOS,<br/>
+   Scientific Linux, Gentoo, Pardus, Arch Linux, MeeGo.<br/>
+ &#8211; Support for LUKS whole-disk encryption in guests.<br/>
+ &#8211; PHP bindings.<br/>
+ &#8211; Progress messages (and progress bars in guestfish and virt-resize)<br/>
+   for certain long-running operations.<br/>
+ &#8211; virt-df is now much more efficient.  Use &#8216;&#8211;one-per-guest&#8217; to restore<br/>
+   the old per-guest isolation behaviour.<br/>
+ &#8211; guestfish &#8216;copy-in&#8217; and &#8216;copy-out&#8217; commands for copying files and<br/>
+   directories recursively in and out of the guest.<br/>
+ &#8211; guestfish &#8216;hexedit&#8217; command for doing binary edits to devices and<br/>
+   files.<br/>
+ &#8211; Change guestfish -i syntax to allow commands to be specified on the<br/>
+   command line (retaining backwards compatibility).<br/>
+ &#8211; guestfish &#8216;-d &lt;domain&gt;&#8217; for adding disks from libvirt domains.<br/>
+ &#8211; guestfish &#8216;-N&#8217; option supports several new prepared disk image types:<br/>
+         lvfs : disk with LV formatted with filesystem<br/>
+           lv : disk with LV<br/>
+     bootroot : boot+root<br/>
+   bootrootlv : boot and root on LV<br/>
+ &#8211; guestfish &#8216;more&#8217; and &#8216;edit&#8217; commands now work with arbitrary files.<br/>
+ &#8211; guestfish &#8216;&#8211;echo-keys&#8217; option allows you to echo keys/passphrases<br/>
+   while typing them.<br/>
+ &#8211; guestmount now supports -a / -d / -i options, like guestfish.<br/>
+ &#8211; Use virtio-serial for communications with the appliance.  This<br/>
+   also has a major performance benefit.<br/>
+ &#8211; virt-edit &#8216;-b&#8217; option to create a backup of edited files.<br/>
+ &#8211; virt-edit &#8216;-e&#8217; option for non-interactive edits to files.<br/>
+ &#8211; Ability to capture core dumps from the appliance (thanks Matthew Booth).<br/>
+ &#8211; virt-rescue now shuts down cleanly (thanks Matthew Booth).<br/>
+ &#8211; virt-rescue now has a &#8211;network option to enable network access.<br/>
+ &#8211; virt-resize can now handle guests which use GPT partition table format.<br/>
+ &#8211; virt-resize has better support for shrinking guests.<br/>
+ &#8211; virt-resize supports qcow2-format guests.<br/>
+ &#8211; $TMPDIR can be used to override almost all temporary directory usage.<br/>
+ &#8211; OCaml users can use an alternate OO-style of coding, eg. g#launch ()<br/>
+ &#8211; The API supports calls which take optional parameters, eg.<br/>
+     $g-&gt;add_drive_opts (&#8220;disk&#8221;, readonly =&gt; 1);<br/>
+ &#8211; Trace output now escapes and shortens large strings(thanks<br/>
+                                                           Matthew Booth)<br/>
+         .-<br/>
+     Autosync is now on by default,<br/>
+     resulting in more reliable behaviour<br/>
+         when the handle is closed.-<br/>
          virt &#8211; df&#8211; uuid option allows you to follow a domain across migration and renaming.- Translations of manual pages.</p>
 <h3>Security</h3>
 <pre>
@@ -3154,83 +3154,83 @@ line 2
  - The Perl inspection code is no longer used by any of the tools.
 </pre>
 <h3>Bugs fixed</h3>
-<p> &#8211; 646822 libguestfs trace mode should not print long binary strings<br />
- &#8211; 646821 virt-df should have &#8211;uuid option<br />
- &#8211; 646432 /dev/mapper paths should not be returned from guestfs_mountpoints<br />
- &#8211; 643624 libguestfs tools documentation should describe how to quote guest domain names from shell<br />
- &#8211; 642934 No way to specify disk format when adding a disk to libguestfs<br />
- &#8211; 642933 guestfs_list_filesystems should be used in all possible places<br />
- &#8211; 642932 guestmount options should match guestfish options<br />
- &#8211; 642930 virt-inspector (Sys::Guestfs::Lib) should use C inspection APIs<br />
- &#8211; 642929 C inspection code should ignore /dev/fd* in /etc/fstab<br />
- &#8211; 642826 virt-resize converts any other image format to raw without notifying user, instructions do not account for this<br />
- &#8211; 640961 Document that grub-install might be needed for old Linux guests after virt-resize<br />
- &#8211; 639986 virt-df &#8211;csv does not properly quote &#8221; in libvirt domain names<br />
- &#8211; 639405 Interrupted cached appliance creation leaves libguestfs unusable<br />
- &#8211; 638901 Appliance filename should not contain repository name<br />
- &#8211; 638899 /dev/mapper paths should not be returned from C inspection APIs<br />
- &#8211; 636918 Updates to Spanish translation<br />
- &#8211; 636061 [abrt] guestfish-1.2.11-1.fc12: malloc_consolidate: Process /usr/bin/guestfish was killed by signal 11 (SIGSEGV)<br />
- &#8211; 635969 glob echo mkfs ext2 /dev/vd[b-t]1 prints garbage<br />
- &#8211; 634246 guestfs_part_get_parttype returns &#8220;loop&#8221; when run against a partition, LV or filesystem<br />
- &#8211; 633766 virt-resize &#8211;shrink fails<br />
- &#8211; 633357 Updates to Spanish translation<br />
- &#8211; 633096 virt-resize calculates block device size incorrectly, doesn&#8217;t work with qcow2 target<br />
- &#8211; 629593 Dutch translation added<br />
- &#8211; 627556 Updates to Spanish translations of libguestfs<br />
- &#8211; 626843 Updates to Spanish translations<br />
- &#8211; 619793 [RFE] Need a way to determine if a particular block device is a logical volume<br />
- &#8211; 618556 virt-rescue return none zero value when exit<br />
- &#8211; 617200 mount operation failed and hung on some images which running in read-only mode<br />
- &#8211; 610880 libguestfs should set broader read perms on tmpdir, so works in some situations when executed with umask 077<br />
- &#8211; 599503 document that mkmountpoint and umount-all cannot be mixed<br />
- &#8211; 571714 Running virt-df on disk image relabels it, so qemu can no longer write to it.<br />
+<p> &#8211; 646822 libguestfs trace mode should not print long binary strings<br/>
+ &#8211; 646821 virt-df should have &#8211;uuid option<br/>
+ &#8211; 646432 /dev/mapper paths should not be returned from guestfs_mountpoints<br/>
+ &#8211; 643624 libguestfs tools documentation should describe how to quote guest domain names from shell<br/>
+ &#8211; 642934 No way to specify disk format when adding a disk to libguestfs<br/>
+ &#8211; 642933 guestfs_list_filesystems should be used in all possible places<br/>
+ &#8211; 642932 guestmount options should match guestfish options<br/>
+ &#8211; 642930 virt-inspector (Sys::Guestfs::Lib) should use C inspection APIs<br/>
+ &#8211; 642929 C inspection code should ignore /dev/fd* in /etc/fstab<br/>
+ &#8211; 642826 virt-resize converts any other image format to raw without notifying user, instructions do not account for this<br/>
+ &#8211; 640961 Document that grub-install might be needed for old Linux guests after virt-resize<br/>
+ &#8211; 639986 virt-df &#8211;csv does not properly quote &#8221; in libvirt domain names<br/>
+ &#8211; 639405 Interrupted cached appliance creation leaves libguestfs unusable<br/>
+ &#8211; 638901 Appliance filename should not contain repository name<br/>
+ &#8211; 638899 /dev/mapper paths should not be returned from C inspection APIs<br/>
+ &#8211; 636918 Updates to Spanish translation<br/>
+ &#8211; 636061 [abrt] guestfish-1.2.11-1.fc12: malloc_consolidate: Process /usr/bin/guestfish was killed by signal 11 (SIGSEGV)<br/>
+ &#8211; 635969 glob echo mkfs ext2 /dev/vd[b-t]1 prints garbage<br/>
+ &#8211; 634246 guestfs_part_get_parttype returns &#8220;loop&#8221; when run against a partition, LV or filesystem<br/>
+ &#8211; 633766 virt-resize &#8211;shrink fails<br/>
+ &#8211; 633357 Updates to Spanish translation<br/>
+ &#8211; 633096 virt-resize calculates block device size incorrectly, doesn&#8217;t work with qcow2 target<br/>
+ &#8211; 629593 Dutch translation added<br/>
+ &#8211; 627556 Updates to Spanish translations of libguestfs<br/>
+ &#8211; 626843 Updates to Spanish translations<br/>
+ &#8211; 619793 [RFE] Need a way to determine if a particular block device is a logical volume<br/>
+ &#8211; 618556 virt-rescue return none zero value when exit<br/>
+ &#8211; 617200 mount operation failed and hung on some images which running in read-only mode<br/>
+ &#8211; 610880 libguestfs should set broader read perms on tmpdir, so works in some situations when executed with umask 077<br/>
+ &#8211; 599503 document that mkmountpoint and umount-all cannot be mixed<br/>
+ &#8211; 571714 Running virt-df on disk image relabels it, so qemu can no longer write to it.<br/>
  &#8211; 502533 Updated Polish translation of libguestfs</p>
 <h2>RELEASE NOTES FOR LIBGUESTFS 1.4</h2>
 <p> These release notes only cover the differences from the previous stable/dev branch split (1.2.0). For detailed changelogs, please see the git repository, or the ChangeLog file distributed in the tarball.</p>
 <h3>New features</h3>
-<p> &#8211; guestfish lets you choose a prepared disk image, eg:<br />
-     guestfish -N fs:ext4<br />
- &#8211; Add write support to guestmount (FUSE) module.<br />
- &#8211; virt-resize can now resize the content of partitions and logical<br />
-   volumes in the guest, and we have better support for shrinking guests.<br />
- &#8211; Bash tab-completion script for guestfish.<br />
- &#8211; Add ZFS support to virt-rescue.<br />
- &#8211; New tool &#8216;virt-make-fs&#8217; for creating filesystems with content.<br />
- &#8211; Allow suffixes on any guestfish number parameter, eg. &#8220;1M&#8221;.<br />
- &#8211; guestfish &#8216;man&#8217; command opens the manual page.<br />
- &#8211; guestfish supports a &#8220;heredoc&#8221; syntax for uploading files:<br />
-     upload -&lt;&lt;_end_ /foo<br />
-     content<br />
-     _end_<br />
- &#8211; Some guestfish commands now print their output in octal or hex<br />
-   where appropriate (RHBZ#583242).<br />
- &#8211; Allow dash prefix on guestfish command line.  This ignores any<br />
-   error from the second command:                   (RHBZ#578407)<br />
-     guestfish &#8212; cmd1 : -cmd2 : cmd3<br />
- &#8211; guestfish -h / help command now returns an error for non-existent<br />
-   commands (RHBZ#597145).<br />
- &#8211; New &#8216;supported&#8217; command in guestfish to list optional groups of<br />
-   commands which are supported by the daemon / configuration.<br />
- &#8211; virt-inspector and guestfish -i now work for filenames which<br />
-   contain spaces (RHBZ#507810).<br />
- &#8211; Change the protocol to use link-local addresses, to avoid<br />
-   conflicting with any address that the host might be using<br />
-   (RHBZ#588763).<br />
- &#8211; libguestfs now sets the correct time and timezone on filesystem<br />
-   modifications.<br />
- &#8211; Sort the domains into alphabetical order in virt-df.<br />
- &#8211; Make mkfs-b command work for FAT and NTFS by mapping the blocksize<br />
-   parameter to the cluster size (RHBZ#599464).<br />
- &#8211; Add version numbers to Perl modules (RHBZ#521674).<br />
- &#8211; Localization now works for all the libguestfs tools (RHBZ#559963).<br />
- &#8211; Tools now support filesystem-on-image VMs (RHBZ#590167).<br />
- &#8211; virt-list-partitions has a &#8216;-t&#8217; option to show the total size of disks.<br />
- &#8211; Include extra Augeas lenses in the supermin appliance (Matthew Booth).<br />
- &#8211; Add error and close callbacks.<br />
- &#8211; Add explicit close method in the Perl API.<br />
- &#8211; Multiple fixes for RHEL 5 compatibility.<br />
- &#8211; Multiple fixes for Debian/Ubuntu compatibility.<br />
+<p> &#8211; guestfish lets you choose a prepared disk image, eg:<br/>
+     guestfish -N fs:ext4<br/>
+ &#8211; Add write support to guestmount (FUSE) module.<br/>
+ &#8211; virt-resize can now resize the content of partitions and logical<br/>
+   volumes in the guest, and we have better support for shrinking guests.<br/>
+ &#8211; Bash tab-completion script for guestfish.<br/>
+ &#8211; Add ZFS support to virt-rescue.<br/>
+ &#8211; New tool &#8216;virt-make-fs&#8217; for creating filesystems with content.<br/>
+ &#8211; Allow suffixes on any guestfish number parameter, eg. &#8220;1M&#8221;.<br/>
+ &#8211; guestfish &#8216;man&#8217; command opens the manual page.<br/>
+ &#8211; guestfish supports a &#8220;heredoc&#8221; syntax for uploading files:<br/>
+     upload -&lt;&lt;_end_ /foo<br/>
+     content<br/>
+     _end_<br/>
+ &#8211; Some guestfish commands now print their output in octal or hex<br/>
+   where appropriate (RHBZ#583242).<br/>
+ &#8211; Allow dash prefix on guestfish command line.  This ignores any<br/>
+   error from the second command:                   (RHBZ#578407)<br/>
+     guestfish &#8212; cmd1 : -cmd2 : cmd3<br/>
+ &#8211; guestfish -h / help command now returns an error for non-existent<br/>
+   commands (RHBZ#597145).<br/>
+ &#8211; New &#8216;supported&#8217; command in guestfish to list optional groups of<br/>
+   commands which are supported by the daemon / configuration.<br/>
+ &#8211; virt-inspector and guestfish -i now work for filenames which<br/>
+   contain spaces (RHBZ#507810).<br/>
+ &#8211; Change the protocol to use link-local addresses, to avoid<br/>
+   conflicting with any address that the host might be using<br/>
+   (RHBZ#588763).<br/>
+ &#8211; libguestfs now sets the correct time and timezone on filesystem<br/>
+   modifications.<br/>
+ &#8211; Sort the domains into alphabetical order in virt-df.<br/>
+ &#8211; Make mkfs-b command work for FAT and NTFS by mapping the blocksize<br/>
+   parameter to the cluster size (RHBZ#599464).<br/>
+ &#8211; Add version numbers to Perl modules (RHBZ#521674).<br/>
+ &#8211; Localization now works for all the libguestfs tools (RHBZ#559963).<br/>
+ &#8211; Tools now support filesystem-on-image VMs (RHBZ#590167).<br/>
+ &#8211; virt-list-partitions has a &#8216;-t&#8217; option to show the total size of disks.<br/>
+ &#8211; Include extra Augeas lenses in the supermin appliance (Matthew Booth).<br/>
+ &#8211; Add error and close callbacks.<br/>
+ &#8211; Add explicit close method in the Perl API.<br/>
+ &#8211; Multiple fixes for RHEL 5 compatibility.<br/>
+ &#8211; Multiple fixes for Debian/Ubuntu compatibility.<br/>
  &#8211; Multiple revisions to improve the documentation.</p>
 <h3>Security</h3>
 <pre>
@@ -3367,9 +3367,9 @@ line 2
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2009-2019 Red Hat Inc.</p>
 <h2>LICENSE</h2>
-<p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
-<p> This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE.</font> See the <font SIZE="-1">GNU</font> General Public License for more details. </p>
-<p> You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, <font SIZE="-1">MA 02110-1301 USA.</font></p>
+<p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
+<p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. </p>
+<p> You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.</p>
 <h2>BUGS</h2>
 <p> To get a list of bugs against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/buglist.cgi?component=libguestfs">https://bugzilla.redhat.com/buglist.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>
 <p> To report a new bug against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs">https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>

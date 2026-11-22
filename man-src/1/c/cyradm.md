@@ -61,7 +61,7 @@ run('myscriptname');
 </dd><dt>&quot;dm&quot; <i>mailbox</i></dt>
 <dd> Delete the specified mailbox. </dd>
 <p> Administrators do not have implicit delete rights on mailboxes. Use the <code>setaclmailbox</code> command to grant the <tt>&quot;x&quot;</tt> permission to your principal if you need to delete a mailbox you do not own. </p>
-<p> Note that the online help admits to an optional host argument. This argument is not currently used, and will be rejected with an error if specified; it is reserved for <font SIZE="-1">IMSP.</font></p>
+<p> Note that the online help admits to an optional host argument. This argument is not currently used, and will be rejected with an error if specified; it is reserved for IMSP.</p>
 <dt>&quot;disconnect&quot;</dt>
 <dd>
 </dd><dt>&quot;disc&quot;</dt>
@@ -111,9 +111,9 @@ run('myscriptname');
 <dt>&quot;expire&quot;</dt>
 <dd> Sets the number of days after which messages will be expired from the mailbox.</dd>
 <dt>&quot;news2mail&quot;</dt>
-<dd> Sets an email address to which messages injected into the server via <font SIZE="-1">NNTP </font> will be sent.</dd>
+<dd> Sets an email address to which messages injected into the server via NNTP  will be sent.</dd>
 <dt>&quot;sharedseen&quot;</dt>
-<dd> Enables the use of a shared \Seen flag on messages rather than a per-user \Seen flag. The &#8216;s&#8217; right in the mailbox <font SIZE="-1">ACL</font> still controls whether a user can set the shared \Seen flag.</dd>
+<dd> Enables the use of a shared \Seen flag on messages rather than a per-user \Seen flag. The &#8216;s&#8217; right in the mailbox ACL still controls whether a user can set the shared \Seen flag.</dd>
 <dt>&quot;sieve&quot;</dt>
 <dd> Indicates the name of the global sieve script that should be run when a message is delivered to the shared mailbox (not used for personal mailboxes).</dd>
 <dt>&quot;squat&quot;</dt>
@@ -147,33 +147,33 @@ run('myscriptname');
 </dd><dt>&quot;setacl&quot; <i>mailbox</i> <i>id</i> <i>rights</i> [<i>id</i> <i>rights</i> &#8230;]</dt>
 <dd>
 </dd><dt>&quot;sam&quot; <i>mailbox</i> <i>id</i> <i>rights</i> [<i>id</i> <i>rights</i> &#8230;]</dt>
-<dd> Set ACLs on a mailbox. The <font SIZE="-1">ACL</font> may be one of the special strings <tt>&quot;none&quot;</tt>, <tt>&quot;read&quot;</tt> (<tt>&quot;lrs&quot;</tt>), <tt>&quot;post&quot;</tt> (<tt>&quot;lrsp&quot;</tt>), <tt>&quot;append&quot;</tt> (<tt>&quot;lrsip&quot;</tt>), <tt>&quot;write&quot;</tt> (<tt>&quot;lrswipkxte&quot;</tt>), <tt>&quot;delete&quot;</tt> (<tt>&quot;lrxte&quot;</tt>), or <tt>&quot;all&quot;</tt> (<tt>&quot;lrswipkxte&quot;</tt>), or any combinations of the <font SIZE="-1">ACL</font> codes:</dd>
+<dd> Set ACLs on a mailbox. The ACL may be one of the special strings <tt>&quot;none&quot;</tt>, <tt>&quot;read&quot;</tt> (<tt>&quot;lrs&quot;</tt>), <tt>&quot;post&quot;</tt> (<tt>&quot;lrsp&quot;</tt>), <tt>&quot;append&quot;</tt> (<tt>&quot;lrsip&quot;</tt>), <tt>&quot;write&quot;</tt> (<tt>&quot;lrswipkxte&quot;</tt>), <tt>&quot;delete&quot;</tt> (<tt>&quot;lrxte&quot;</tt>), or <tt>&quot;all&quot;</tt> (<tt>&quot;lrswipkxte&quot;</tt>), or any combinations of the ACL codes:</dd>
 <dl>
 <dl>
 <dt>l</dt>
-<dd> Lookup (mailbox is visible to <font SIZE="-1">LIST/LSUB, SUBSCRIBE</font> mailbox)</dd>
+<dd> Lookup (mailbox is visible to LIST/LSUB, SUBSCRIBE mailbox)</dd>
 <dt>r</dt>
-<dd> Read (<font SIZE="-1">SELECT/EXAMINE</font> the mailbox, perform <font SIZE="-1">STATUS</font>)</dd>
+<dd> Read (SELECT/EXAMINE the mailbox, perform STATUS)</dd>
 <dt>s</dt>
-<dd> Seen (set/clear \SEEN flag via <font SIZE="-1">STORE,</font> also set \SEEN flag during<br />
-&nbsp;<wbr><font SIZE="-1">APPEND/COPY/FETCH</font>&nbsp;<wbr>BODY[&#8230;])</dd>
+<dd> Seen (set/clear \SEEN flag via STORE, also set \SEEN flag during<br/>
+&nbsp;<wbr>APPEND/COPY/FETCH&nbsp;<wbr>BODY[&#8230;])</dd>
 <dt>w</dt>
 <dd> Write flags other than \SEEN and \DELETED</dd>
 <dt>i</dt>
-<dd> Insert (<font SIZE="-1">APPEND, COPY</font> destination)</dd>
+<dd> Insert (APPEND, COPY destination)</dd>
 <dt>p</dt>
 <dd> Post (send mail to mailbox)</dd>
 <dt>k</dt>
-<dd> Create mailbox (<font SIZE="-1">CREATE</font> new sub-mailboxes, parent for new mailbox in <font SIZE="-1">RENAME</font>)</dd>
+<dd> Create mailbox (CREATE new sub-mailboxes, parent for new mailbox in RENAME)</dd>
 <dt>x</dt>
-<dd> Delete mailbox (<font SIZE="-1">DELETE</font> mailbox, old mailbox name in <font SIZE="-1">RENAME</font>)</dd>
+<dd> Delete mailbox (DELETE mailbox, old mailbox name in RENAME)</dd>
 <dt>t</dt>
-<dd> Delete messages (set/clear \DELETED flag via <font SIZE="-1">STORE,</font> also set \DELETED<br />
-&nbsp;<wbr>flag during&nbsp;<wbr><font SIZE="-1">APPEND/COPY</font>)</dd>
+<dd> Delete messages (set/clear \DELETED flag via STORE, also set \DELETED<br/>
+&nbsp;<wbr>flag during&nbsp;<wbr>APPEND/COPY)</dd>
 <dt>e</dt>
-<dd> Perform <font SIZE="-1">EXPUNGE</font> and expunge as part of <font SIZE="-1">CLOSE</font></dd>
+<dd> Perform EXPUNGE and expunge as part of CLOSE</dd>
 <dt>a</dt>
-<dd> Administer (<font SIZE="-1">SETACL/DELETEACL/GETACL/LISTRIGHTS</font>)</dd></dl>
+<dd> Administer (SETACL/DELETEACL/GETACL/LISTRIGHTS)</dd></dl>
 </dl>
 <dl>
 </dl>
@@ -182,13 +182,13 @@ run('myscriptname');
 <dl>
 <dl>
 <dt>&quot;motd&quot;</dt>
-<dd> Sets a &#8220;message of the day&#8221;. The message gets displayed as an <font SIZE="-1">ALERT</font> after authentication.</dd>
+<dd> Sets a &#8220;message of the day&#8221;. The message gets displayed as an ALERT after authentication.</dd>
 <dt>&quot;comment&quot;</dt>
 <dd> Sets a comment or description associated with the server.</dd>
 <dt>&quot;admin&quot;</dt>
 <dd> Sets the administrator email address for the server.</dd>
 <dt>&quot;shutdown&quot;</dt>
-<dd> Sets a shutdown message. The message gets displayed as an <font SIZE="-1">ALERT</font> and all users are disconnected from the server (subsequent logins are disallowed).</dd>
+<dd> Sets a shutdown message. The message gets displayed as an ALERT and all users are disconnected from the server (subsequent logins are disallowed).</dd>
 <dt>&quot;expire&quot;</dt>
 <dd> Sets the number of days after which messages will be expired from the server (unless overridden by a mailbox annotation).</dd>
 <dt>&quot;squat&quot;</dt>

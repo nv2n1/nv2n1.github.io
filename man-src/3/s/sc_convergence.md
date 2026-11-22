@@ -16,17 +16,17 @@ description: "sc::Convergence –"
 <h3>Public Member Functions</h3>
 <p><code>Convergence</code> (double tolerance) </p>
 <p> <code>Convergence</code> (<code>StateIn</code> &amp;) </p>
-<p> <code>Convergence</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br />
- <i>The </i><code>KeyVal</code> constructor reads the following keywords:.<br />
- void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br />
- <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br />
- virtual void <code>get_grad</code> (const <code>Ref</code>&lt; <code>Function</code> &gt; &amp;)<br />
- <i>Set the current gradient and displacement. </i><br />
+<p> <code>Convergence</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br/>
+ <i>The </i><code>KeyVal</code> constructor reads the following keywords:.<br/>
+ void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br/>
+ <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br/>
+ virtual void <code>get_grad</code> (const <code>Ref</code>&lt; <code>Function</code> &gt; &amp;)<br/>
+ <i>Set the current gradient and displacement. </i><br/>
  virtual void <code>get_x</code> (const <code>Ref</code>&lt; <code>Function</code> &gt; &amp;) </p>
 <p> virtual void <code>set_nextx</code> (const <code>RefSCVector</code> &amp;) </p>
-<p> virtual void <code>reset</code> ()<br />
- <i>Set the current gradient and displacement to null. </i><br />
- virtual int <code>converged</code> ()<br />
+<p> virtual void <code>reset</code> ()<br/>
+ <i>Set the current gradient and displacement to null. </i><br/>
+ virtual int <code>converged</code> ()<br/>
  <i>Return nonzero if the optimization has converged. </i></p>
 <h3>Protected Member Functions</h3>
 <pre><code>void check_conv (const char *heading, double val, double bound, int &amp;pass, int &amp;fail)

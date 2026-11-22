@@ -60,13 +60,13 @@ exitstatus = perl_destruct(my_perl);
 perl_free(my_perl);
  
 
- <tt>&quot;perl_parse&quot;</tt> is actually a wrapper around <tt>&quot;S_parse_body&quot;</tt>, as defined in <i>perl.c</i>, which processes the command line options, sets up any statically linked <font SIZE="-1">XS</font> modules, opens the program and calls <tt>&quot;yyparse&quot;</tt> to parse it.
+ <tt>&quot;perl_parse&quot;</tt> is actually a wrapper around <tt>&quot;S_parse_body&quot;</tt>, as defined in <i>perl.c</i>, which processes the command line options, sets up any statically linked XS modules, opens the program and calls <tt>&quot;yyparse&quot;</tt> to parse it.
 
 <h3>Parsing</h3>
 
  The aim of this stage is to take the Perl source, and turn it into an op tree. We'll see what one of those looks like later. Strictly speaking, there's three things going on here. 
 
- <tt>&quot;yyparse&quot;</tt>, the parser, lives in <i>perly.c</i>, although you're better off reading the original <font SIZE="-1">YACC</font> input in <i>perly.y</i>. (Yes, Virginia, there <b>is</b> a <font SIZE="-1">YACC</font> grammar for Perl!) The job of the parser is to take your code and ``understand'' it, splitting it into sentences, deciding which operands go with which operators and so on. 
+ <tt>&quot;yyparse&quot;</tt>, the parser, lives in <i>perly.c</i>, although you're better off reading the original YACC input in <i>perly.y</i>. (Yes, Virginia, there <b>is</b> a YACC grammar for Perl!) The job of the parser is to take your code and ``understand'' it, splitting it into sentences, deciding which operands go with which operators and so on. 
 
  The parser is nobly assisted by the lexer, which chunks up your input into tokens, and decides what type of thing each token is: a variable name, an operator, a bareword, a subroutine, a core function, and so on. The main point of entry to the lexer is <tt>&quot;yylex&quot;</tt>, and that and its associated routines can be found in <i>toke.c</i>. Perl isn't much like other computer languages; it's highly context sensitive at times, it can be tricky to work out what sort of token something is, or where a token ends. As such, there's a lot of interplay between the tokeniser and the parser, which can get pretty frightening if you're not used to it. 
 
@@ -94,13 +94,13 @@ while ((PL_op = PL_op-&gt;op_ppaddr(aTHX))) {
 
  Well, maybe not. Anyway, each op contains a function pointer, which stipulates the function which will actually carry out the operation. This function will return the next op in the sequence - this allows for things like <tt>&quot;if&quot;</tt> which choose the next op dynamically at run time. The <tt>&quot;PERL_ASYNC_CHECK&quot;</tt> makes sure that things like signals interrupt execution if required. 
 
- The actual functions called are known as <font SIZE="-1">PP</font> code, and they're spread between four files: <i>pp_hot.c</i> contains the ``hot'' code, which is most often used and highly optimized, <i>pp_sys.c</i> contains all the system-specific functions, <i>pp_ctl.c</i> contains the functions which implement control structures (<tt>&quot;if&quot;</tt>, <tt>&quot;while&quot;</tt> and the like) and <i>pp.c</i> contains everything else. These are, if you like, the C code for Perl's built-in functions and operators. 
+ The actual functions called are known as PP code, and they're spread between four files: <i>pp_hot.c</i> contains the ``hot'' code, which is most often used and highly optimized, <i>pp_sys.c</i> contains all the system-specific functions, <i>pp_ctl.c</i> contains the functions which implement control structures (<tt>&quot;if&quot;</tt>, <tt>&quot;while&quot;</tt> and the like) and <i>pp.c</i> contains everything else. These are, if you like, the C code for Perl's built-in functions and operators. 
 
  Note that each <tt>&quot;pp_&quot;</tt> function is expected to return a pointer to the next op. Calls to perl subs (and eval blocks) are handled within the same runops loop, and do not consume extra space on the C stack. For example, <tt>&quot;pp_entersub&quot;</tt> and <tt>&quot;pp_entertry&quot;</tt> just push a <tt>&quot;CxSUB&quot;</tt> or <tt>&quot;CxEVAL&quot;</tt> block struct onto the context stack which contain the address of the op following the sub call or eval. They then return the first op of that sub or eval block, and so execution continues of that sub or block. Later, a <tt>&quot;pp_leavesub&quot;</tt> or <tt>&quot;pp_leavetry&quot;</tt> op pops the <tt>&quot;CxSUB&quot;</tt> or <tt>&quot;CxEVAL&quot;</tt>, retrieves the return op from it, and returns it.
 
 <h3>Exception handing</h3>
 
- Perl's exception handing (i.e. <tt>&quot;die&quot;</tt> etc.) is built on top of the low-level <tt>&quot;setjmp()&quot;</tt>/<tt>&quot;longjmp()&quot;</tt> C-library functions. These basically provide a way to capture the current <font SIZE="-1">PC</font> and <font SIZE="-1">SP</font> registers and later restore them; i.e. a <tt>&quot;longjmp()&quot;</tt> continues at the point in code where a previous <tt>&quot;setjmp()&quot;</tt> was done, with anything further up on the C stack being lost. This is why code should always save values using <tt>&quot;SAVE_FOO&quot;</tt> rather than in auto variables. 
+ Perl's exception handing (i.e. <tt>&quot;die&quot;</tt> etc.) is built on top of the low-level <tt>&quot;setjmp()&quot;</tt>/<tt>&quot;longjmp()&quot;</tt> C-library functions. These basically provide a way to capture the current PC and SP registers and later restore them; i.e. a <tt>&quot;longjmp()&quot;</tt> continues at the point in code where a previous <tt>&quot;setjmp()&quot;</tt> was done, with anything further up on the C stack being lost. This is why code should always save values using <tt>&quot;SAVE_FOO&quot;</tt> rather than in auto variables. 
 
  The perl core wraps <tt>&quot;setjmp()&quot;</tt> etc in the macros <tt>&quot;JMPENV_PUSH&quot;</tt> and <tt>&quot;JMPENV_JUMP&quot;</tt>. The basic rule of perl exceptions is that <tt>&quot;exit&quot;</tt>, and <tt>&quot;die&quot;</tt> (in the absence of <tt>&quot;eval&quot;</tt>) perform a <tt>JMPENV_JUMP(2)</tt>, while <tt>&quot;die&quot;</tt> within <tt>&quot;eval&quot;</tt> does a <tt>JMPENV_JUMP(3)</tt>. 
 
@@ -216,11 +216,11 @@ sub FETCH
 
  Because <tt>&quot;PL_restartop&quot;</tt> is non-null, <tt>&quot;run_body&quot;</tt> starts a new runops loop and execution continues.
 
-<h3><font SIZE="-1">INTERNAL VARIABLE TYPES</font></h3>
+<h3>INTERNAL VARIABLE TYPES</h3>
 
  You should by now have had a look at perlguts, which tells you about Perl's internal variable types: SVs, HVs, AVs and the rest. If not, do that now. 
 
- These variables are used not only to represent Perl-space variables, but also any constants in the code, as well as some structures completely internal to Perl. The symbol table, for instance, is an ordinary Perl hash. Your code is represented by an <font SIZE="-1">SV</font> as it's read into the parser; any program files you call are opened via ordinary Perl filehandles, and so on. 
+ These variables are used not only to represent Perl-space variables, but also any constants in the code, as well as some structures completely internal to Perl. The symbol table, for instance, is an ordinary Perl hash. Your code is represented by an SV as it's read into the parser; any program files you call are opened via ordinary Perl filehandles, and so on. 
 
  The core Devel::Peek module lets us examine SVs from a Perl program. Let's see, for instance, how Perl treats the constant <tt>&quot;hello&quot;</tt>. 
 
@@ -236,15 +236,15 @@ sub FETCH
 
  Reading <tt>&quot;Devel::Peek&quot;</tt> output takes a bit of practise, so let's go through it line by line. 
 
- Line 1 tells us we're looking at an <font SIZE="-1">SV</font> which lives at <tt>0xa04ecbc</tt> in memory. SVs themselves are very simple structures, but they contain a pointer to a more complex structure. In this case, it's a <font SIZE="-1">PV,</font> a structure which holds a string value, at location <tt>0xa041450</tt>. Line 2 is the reference count; there are no other references to this data, so it's 1. 
+ Line 1 tells us we're looking at an SV which lives at <tt>0xa04ecbc</tt> in memory. SVs themselves are very simple structures, but they contain a pointer to a more complex structure. In this case, it's a PV, a structure which holds a string value, at location <tt>0xa041450</tt>. Line 2 is the reference count; there are no other references to this data, so it's 1. 
 
- Line 3 are the flags for this <font SIZE="-1">SV</font> - it's <font SIZE="-1">OK</font> to use it as a <font SIZE="-1">PV,</font> it's a read-only <font SIZE="-1">SV</font> (because it's a constant) and the data is a <font SIZE="-1">PV</font> internally. Next we've got the contents of the string, starting at location <tt>0xa0484e0</tt>. 
+ Line 3 are the flags for this SV - it's OK to use it as a PV, it's a read-only SV (because it's a constant) and the data is a PV internally. Next we've got the contents of the string, starting at location <tt>0xa0484e0</tt>. 
 
  Line 5 gives us the current length of the string - note that this does <b>not</b> include the null terminator. Line 6 is not the length of the string, but the length of the currently allocated buffer; as the string grows, Perl automatically extends the available storage via a routine called <tt>&quot;SvGROW&quot;</tt>. 
 
  You can get at any of these quantities from C very easily; just add <tt>&quot;Sv&quot;</tt> to the name of the field shown in the snippet, and you've got a macro which will return the value: <tt>&quot;SvCUR(sv)&quot;</tt> returns the current length of the string, <tt>&quot;SvREFCOUNT(sv)&quot;</tt> returns the reference count, <tt>&quot;SvPV(sv, len)&quot;</tt> returns the string itself with its length, and so on. More macros to manipulate these properties can be found in perlguts. 
 
- Let's take an example of manipulating a <font SIZE="-1">PV,</font> from <tt>&quot;sv_catpvn&quot;</tt>, in <i>sv.c</i> 
+ Let's take an example of manipulating a PV, from <tt>&quot;sv_catpvn&quot;</tt>, in <i>sv.c</i> 
 
  
 1 void 2 Perl_sv_catpvn(pTHX_ SV *sv, const char *ptr, STRLEN len) 3
@@ -263,15 +263,15 @@ sub FETCH
 }
  
 
- This is a function which adds a string, <tt>&quot;ptr&quot;</tt>, of length <tt>&quot;len&quot;</tt> onto the end of the <font SIZE="-1">PV</font> stored in <tt>&quot;sv&quot;</tt>. The first thing we do in line 6 is make sure that the <font SIZE="-1">SV</font> <b>has</b> a valid <font SIZE="-1">PV,</font> by calling the <tt>&quot;SvPV_force&quot;</tt> macro to force a <font SIZE="-1">PV.</font> As a side effect, <tt>&quot;tlen&quot;</tt> gets set to the current value of the <font SIZE="-1">PV,</font> and the <font SIZE="-1">PV</font> itself is returned to <tt>&quot;junk&quot;</tt>. 
+ This is a function which adds a string, <tt>&quot;ptr&quot;</tt>, of length <tt>&quot;len&quot;</tt> onto the end of the PV stored in <tt>&quot;sv&quot;</tt>. The first thing we do in line 6 is make sure that the SV <b>has</b> a valid PV, by calling the <tt>&quot;SvPV_force&quot;</tt> macro to force a PV. As a side effect, <tt>&quot;tlen&quot;</tt> gets set to the current value of the PV, and the PV itself is returned to <tt>&quot;junk&quot;</tt>. 
 
- In line 7, we make sure that the <font SIZE="-1">SV</font> will have enough room to accommodate the old string, the new string and the null terminator. If <tt>&quot;LEN&quot;</tt> isn't big enough, <tt>&quot;SvGROW&quot;</tt> will reallocate space for us. 
+ In line 7, we make sure that the SV will have enough room to accommodate the old string, the new string and the null terminator. If <tt>&quot;LEN&quot;</tt> isn't big enough, <tt>&quot;SvGROW&quot;</tt> will reallocate space for us. 
 
- Now, if <tt>&quot;junk&quot;</tt> is the same as the string we're trying to add, we can grab the string directly from the <font SIZE="-1">SV</font>; <tt>&quot;SvPVX&quot;</tt> is the address of the <font SIZE="-1">PV</font> in the <font SIZE="-1">SV.</font> 
+ Now, if <tt>&quot;junk&quot;</tt> is the same as the string we're trying to add, we can grab the string directly from the SV; <tt>&quot;SvPVX&quot;</tt> is the address of the PV in the SV. 
 
- Line 10 does the actual catenation: the <tt>&quot;Move&quot;</tt> macro moves a chunk of memory around: we move the string <tt>&quot;ptr&quot;</tt> to the end of the <font SIZE="-1">PV</font> - that's the start of the <font SIZE="-1">PV</font> plus its current length. We're moving <tt>&quot;len&quot;</tt> bytes of type <tt>&quot;char&quot;</tt>. After doing so, we need to tell Perl we've extended the string, by altering <tt>&quot;CUR&quot;</tt> to reflect the new length. <tt>&quot;SvEND&quot;</tt> is a macro which gives us the end of the string, so that needs to be a <tt>&quot;\0&quot;</tt>. 
+ Line 10 does the actual catenation: the <tt>&quot;Move&quot;</tt> macro moves a chunk of memory around: we move the string <tt>&quot;ptr&quot;</tt> to the end of the PV - that's the start of the PV plus its current length. We're moving <tt>&quot;len&quot;</tt> bytes of type <tt>&quot;char&quot;</tt>. After doing so, we need to tell Perl we've extended the string, by altering <tt>&quot;CUR&quot;</tt> to reflect the new length. <tt>&quot;SvEND&quot;</tt> is a macro which gives us the end of the string, so that needs to be a <tt>&quot;\0&quot;</tt>. 
 
- Line 13 manipulates the flags; since we've changed the <font SIZE="-1">PV,</font> any <font SIZE="-1">IV</font> or <font SIZE="-1">NV</font> values will no longer be valid: if we have <tt>&quot;$a=10; $a.=&quot;6&quot;;&quot;</tt> we don't want to use the old <font SIZE="-1">IV</font> of 10. <tt>&quot;SvPOK_only_utf8&quot;</tt> is a special UTF-8-aware version of <tt>&quot;SvPOK_only&quot;</tt>, a macro which turns off the <font SIZE="-1">IOK</font> and <font SIZE="-1">NOK</font> flags and turns on <font SIZE="-1">POK.</font> The final <tt>&quot;SvTAINT&quot;</tt> is a macro which launders tainted data if taint mode is turned on. 
+ Line 13 manipulates the flags; since we've changed the PV, any IV or NV values will no longer be valid: if we have <tt>&quot;$a=10; $a.=&quot;6&quot;;&quot;</tt> we don't want to use the old IV of 10. <tt>&quot;SvPOK_only_utf8&quot;</tt> is a special UTF-8-aware version of <tt>&quot;SvPOK_only&quot;</tt>, a macro which turns off the IOK and NOK flags and turns on POK. The final <tt>&quot;SvTAINT&quot;</tt> is a macro which launders tainted data if taint mode is turned on. 
 
  AVs and HVs are more complicated, but SVs are by far the most common variable type being thrown around. Having seen something of how we manipulate these, let's go on and look at how the op tree is constructed.
 
@@ -283,7 +283,7 @@ sub FETCH
 
  The op tree is connected in two ways: you can imagine that there are two ``routes'' through it, two orders in which you can traverse the tree. First, parse order reflects how the parser understood the code, and secondly, execution order tells perl what order to perform the operations in. 
 
- The easiest way to examine the op tree is to stop Perl after it has finished parsing, and get it to dump out the tree. This is exactly what the compiler backends B::Terse, B::Concise and <font SIZE="-1">CPAN</font> module &lt;B::Debug do. 
+ The easiest way to examine the op tree is to stop Perl after it has finished parsing, and get it to dump out the tree. This is exactly what the compiler backends B::Terse, B::Concise and CPAN module &lt;B::Debug do. 
 
  Let's have a look at how Perl sees <tt>&quot;$a = $b + $c&quot;</tt>: 
 
@@ -291,7 +291,7 @@ sub FETCH
 % perl - MO = Terse - e '$a=$b+$c' 1 LISTOP(0x8179888) leave 2 OP(0x81798b0) enter 3 COP(0x8179850) nextstate 4 BINOP(0x8179828) sassign 5 BINOP(0x8179800) add[1] 6 UNOP(0x81796e0) null[15] 7 SVOP(0x80fafe0) gvsv GV(0x80fa4cc) * b 8 UNOP(0x81797e0) null[15] 9 SVOP(0x8179700) gvsv GV(0x80efeb0) * c 10 UNOP(0x816b4f0) null[15] 11 SVOP(0x816dcf0) gvsv GV(0x80fa460) * a
  
 
- Let's start in the middle, at line 4. This is a <font SIZE="-1">BINOP,</font> a binary operator, which is at location <tt>0x8179828</tt>. The specific operator in question is <tt>&quot;sassign&quot;</tt> - scalar assignment - and you can find the code which implements it in the function <tt>&quot;pp_sassign&quot;</tt> in <i>pp_hot.c</i>. As a binary operator, it has two children: the add operator, providing the result of <tt>&quot;$b+$c&quot;</tt>, is uppermost on line 5, and the left hand side is on line 10. 
+ Let's start in the middle, at line 4. This is a BINOP, a binary operator, which is at location <tt>0x8179828</tt>. The specific operator in question is <tt>&quot;sassign&quot;</tt> - scalar assignment - and you can find the code which implements it in the function <tt>&quot;pp_sassign&quot;</tt> in <i>pp_hot.c</i>. As a binary operator, it has two children: the add operator, providing the result of <tt>&quot;$b+$c&quot;</tt>, is uppermost on line 5, and the left hand side is on line 10. 
 
  Line 10 is the null op: this does exactly nothing. What is that doing there? If you see the null op, it's a sign that something has been optimized away after parsing. As we mentioned in ``Optimization'', the optimization stage sometimes converts two operations into one, for example when fetching a scalar variable. When this happens, instead of rewriting the op tree and cleaning up the dangling pointers, it's easier just to replace the redundant operation with the null op. Originally, the tree would have looked like this: 
 
@@ -345,7 +345,7 @@ sub FETCH
 
  This probably makes more sense for a human: enter a block, start a statement. Get the values of <tt>$b</tt> and <tt>$c</tt>, and add them together. Find <tt>$a</tt>, and assign one to the other. Then leave. 
 
- The way Perl builds up these op trees in the parsing process can be unravelled by examining <i>toke.c</i>, the lexer, and <i>perly.y</i>, the <font SIZE="-1">YACC</font> grammar. Let's look at the code that constructs the tree for <tt>&quot;$a = $b + $c&quot;</tt>. 
+ The way Perl builds up these op trees in the parsing process can be unravelled by examining <i>toke.c</i>, the lexer, and <i>perly.y</i>, the YACC grammar. Let's look at the code that constructs the tree for <tt>&quot;$a = $b + $c&quot;</tt>. 
 
  First, we'll look at the <tt>&quot;Perl_yylex&quot;</tt> function in the lexer. We want to look for <tt>&quot;case 'x'&quot;</tt>, where x is the first character of the operator. (Incidentally, when looking for the code that handles a keyword, you'll want to search for <tt>&quot;KEY_foo&quot;</tt> where ``foo'' is the keyword.) Here is the code that handles assignment (there are quite a few operators beginning with <tt>&quot;=&quot;</tt>, so most of it is omitted for brevity): 
 
@@ -386,7 +386,7 @@ sub FETCH
 }
  
 
- If you're not used to reading <font SIZE="-1">BNF</font> grammars, this is how it works: You're fed certain things by the tokeniser, which generally end up in upper case. <tt>&quot;ADDOP&quot;</tt> and <tt>&quot;ASSIGNOP&quot;</tt> are examples of ``terminal symbols'', because you can't get any simpler than them. 
+ If you're not used to reading BNF grammars, this is how it works: You're fed certain things by the tokeniser, which generally end up in upper case. <tt>&quot;ADDOP&quot;</tt> and <tt>&quot;ASSIGNOP&quot;</tt> are examples of ``terminal symbols'', because you can't get any simpler than them. 
 
  The grammar, lines one and three of the snippet above, tells you how to build up more complex forms. These complex forms, ``non-terminal symbols'' are generally placed in lower case. <tt>&quot;term&quot;</tt> here is a non-terminal symbol, representing a single expression. 
 
@@ -448,7 +448,7 @@ sub FETCH
 
 <h3>Argument stack</h3>
 
- Arguments are passed to <font SIZE="-1">PP</font> code and returned from <font SIZE="-1">PP</font> code using the argument stack, <tt>&quot;ST&quot;</tt>. The typical way to handle arguments is to pop them off the stack, deal with them how you wish, and then push the result back onto the stack. This is how, for instance, the cosine operator works: 
+ Arguments are passed to PP code and returned from PP code using the argument stack, <tt>&quot;ST&quot;</tt>. The typical way to handle arguments is to pop them off the stack, deal with them how you wish, and then push the result back onto the stack. This is how, for instance, the cosine operator works: 
 
  
 NV value;
@@ -457,7 +457,7 @@ value = Perl_cos(value);
 XPUSHn(value);
  
 
- We'll see a more tricky example of this when we consider Perl's macros below. <tt>&quot;POPn&quot;</tt> gives you the <font SIZE="-1">NV</font> (floating point value) of the top <font SIZE="-1">SV</font> on the stack: the <tt>$x</tt> in <tt>&quot;cos($x)&quot;</tt>. Then we compute the cosine, and push the result back as an <font SIZE="-1">NV.</font> The <tt>&quot;X&quot;</tt> in <tt>&quot;XPUSHn&quot;</tt> means that the stack should be extended if necessary - it can't be necessary here, because we know there's room for one more item on the stack, since we've just removed one! The <tt>&quot;XPUSH*&quot;</tt> macros at least guarantee safety. 
+ We'll see a more tricky example of this when we consider Perl's macros below. <tt>&quot;POPn&quot;</tt> gives you the NV (floating point value) of the top SV on the stack: the <tt>$x</tt> in <tt>&quot;cos($x)&quot;</tt>. Then we compute the cosine, and push the result back as an NV. The <tt>&quot;X&quot;</tt> in <tt>&quot;XPUSHn&quot;</tt> means that the stack should be extended if necessary - it can't be necessary here, because we know there's room for one more item on the stack, since we've just removed one! The <tt>&quot;XPUSH*&quot;</tt> macros at least guarantee safety. 
 
  Alternatively, you can fiddle with the stack directly: <tt>&quot;SP&quot;</tt> gives you the first element in your portion of the stack, and <tt>&quot;TOP*&quot;</tt> gives you the top SV/IV/NV/etc. on the stack. So, for instance, to do unary negation of an integer: 
 
@@ -471,7 +471,7 @@ XPUSHn(value);
 
 <h3>Mark stack</h3>
 
- I say ``your portion of the stack'' above because <font SIZE="-1">PP</font> code doesn't necessarily get the whole stack to itself: if your function calls another function, you'll only want to expose the arguments aimed for the called function, and not (necessarily) let it get at your own data. The way we do this is to have a ``virtual'' bottom-of-stack, exposed to each function. The mark stack keeps bookmarks to locations in the argument stack usable by each function. For instance, when dealing with a tied variable, (internally, something with ``P'' magic) Perl has to call methods for accesses to the tied variables. However, we need to separate the arguments exposed to the method to the argument exposed to the original function - the store or fetch or whatever it may be. Here's roughly how the tied <tt>&quot;push&quot;</tt> is implemented; see <tt>&quot;av_push&quot;</tt> in <i>av.c</i>: 
+ I say ``your portion of the stack'' above because PP code doesn't necessarily get the whole stack to itself: if your function calls another function, you'll only want to expose the arguments aimed for the called function, and not (necessarily) let it get at your own data. The way we do this is to have a ``virtual'' bottom-of-stack, exposed to each function. The mark stack keeps bookmarks to locations in the argument stack usable by each function. For instance, when dealing with a tied variable, (internally, something with ``P'' magic) Perl has to call methods for accesses to the tied variables. However, we need to separate the arguments exposed to the method to the argument exposed to the original function - the store or fetch or whatever it may be. Here's roughly how the tied <tt>&quot;push&quot;</tt> is implemented; see <tt>&quot;av_push&quot;</tt> in <i>av.c</i>: 
 
  
 1 PUSHMARK(SP);
@@ -498,7 +498,7 @@ XPUSHn(value);
 4 PUSHs(val);
  
 
- We're going to add two more items onto the argument stack: when you have a tied array, the <tt>&quot;PUSH&quot;</tt> subroutine receives the object and the value to be pushed, and that's exactly what we have here - the tied object, retrieved with <tt>&quot;SvTIED_obj&quot;</tt>, and the value, the <font SIZE="-1">SV</font> <tt>&quot;val&quot;</tt>. 
+ We're going to add two more items onto the argument stack: when you have a tied array, the <tt>&quot;PUSH&quot;</tt> subroutine receives the object and the value to be pushed, and that's exactly what we have here - the tied object, retrieved with <tt>&quot;SvTIED_obj&quot;</tt>, and the value, the SV <tt>&quot;val&quot;</tt>. 
 
  <pre>
      5  PUTBACK;
@@ -550,11 +550,11 @@ XPUSHn(value);
 }
 </code></pre> 
 
- Every line here (apart from the braces, of course) contains a macro. The first line sets up the function declaration as Perl expects for <font SIZE="-1">PP</font> code; line 3 sets up variable declarations for the argument stack and the target, the return value of the operation. Line 4 tries to see if the addition operation is overloaded; if so, the appropriate subroutine is called. 
+ Every line here (apart from the braces, of course) contains a macro. The first line sets up the function declaration as Perl expects for PP code; line 3 sets up variable declarations for the argument stack and the target, the return value of the operation. Line 4 tries to see if the addition operation is overloaded; if so, the appropriate subroutine is called. 
 
- Line 6 is another variable declaration - all variable declarations start with <tt>&quot;d&quot;</tt> - which pops from the top of the argument stack two NVs (hence <tt>&quot;nn&quot;</tt>) and puts them into the variables <tt>&quot;right&quot;</tt> and <tt>&quot;left&quot;</tt>, hence the <tt>&quot;rl&quot;</tt>. These are the two operands to the addition operator. Next, we call <tt>&quot;SETn&quot;</tt> to set the <font SIZE="-1">NV</font> of the return value to the result of adding the two values. This done, we return - the <tt>&quot;RETURN&quot;</tt> macro makes sure that our return value is properly handled, and we pass the next operator to run back to the main run loop. 
+ Line 6 is another variable declaration - all variable declarations start with <tt>&quot;d&quot;</tt> - which pops from the top of the argument stack two NVs (hence <tt>&quot;nn&quot;</tt>) and puts them into the variables <tt>&quot;right&quot;</tt> and <tt>&quot;left&quot;</tt>, hence the <tt>&quot;rl&quot;</tt>. These are the two operands to the addition operator. Next, we call <tt>&quot;SETn&quot;</tt> to set the NV of the return value to the result of adding the two values. This done, we return - the <tt>&quot;RETURN&quot;</tt> macro makes sure that our return value is properly handled, and we pass the next operator to run back to the main run loop. 
 
- Most of these macros are explained in perlapi, and some of the more important ones are explained in perlxs as well. Pay special attention to ``Background and <font SIZE="-1">PERL_IMPLICIT_CONTEXT''</font> in perlguts for information on the <tt>&quot;[pad]THX_?&quot;</tt> macros.
+ Most of these macros are explained in perlapi, and some of the more important ones are explained in perlxs as well. Pay special attention to ``Background and PERL_IMPLICIT_CONTEXT'' in perlguts for information on the <tt>&quot;[pad]THX_?&quot;</tt> macros.
 
 <h2>FURTHER READING</h2>
 

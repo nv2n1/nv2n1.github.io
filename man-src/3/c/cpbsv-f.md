@@ -10,7 +10,7 @@ description: "cpbsv.f –"
 <p>cpbsv.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>cpbsv</code> (UPLO, N, KD, NRHS, AB, LDAB, B, LDB, INFO)<br />
+<p>subroutine <code>cpbsv</code> (UPLO, N, KD, NRHS, AB, LDAB, B, LDB, INFO)<br/>
  <i></i><code> CPBSV computes the solution to system of linear equations A * X = B for OTHER matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cpbsv (characterUPLO, integerN, integerKD, integerNRHS, complex, dimension( ldab, * )AB, integerLDAB, complex, dimension( ldb, * )B, integerLDB, integerINFO)</h3>

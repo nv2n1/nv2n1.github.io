@@ -50,5 +50,5 @@ description: "rootsh – a logging wrapper for shells"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>rootsh</code> can be found at <a rel="nofollow" href="http://www.sourceforge.net/projects/rootsh">http://www.sourceforge.net/projects/rootsh</a></p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2007 Free Software Foundation, Inc.<br />
+<p> Copyright &#169; 2007 Free Software Foundation, Inc.<br/>
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>

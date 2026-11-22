@@ -10,7 +10,7 @@ description: "zgbcon.f –"
 <p>zgbcon.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zgbcon</code> (NORM, N, KL, KU, AB, LDAB, IPIV, ANORM, RCOND, WORK, RWORK, INFO)<br />
+<p>subroutine <code>zgbcon</code> (NORM, N, KL, KU, AB, LDAB, IPIV, ANORM, RCOND, WORK, RWORK, INFO)<br/>
  <i></i><code>ZGBCON</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zgbcon (characterNORM, integerN, integerKL, integerKU, complex*16, dimension( ldab, * )AB, integerLDAB, integer, dimension( * )IPIV, double precisionANORM, double precisionRCOND, complex*16, dimension( * )WORK, double precision, dimension( * )RWORK, integerINFO)</h3>

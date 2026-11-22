@@ -9,8 +9,8 @@ description: "pmdaAttribute – informs a PMDA about client connection attribute
 
 <p><code>pmdaAttribute</code> &#8211; informs a PMDA about client connection attributes</p>
 <h2>C Synopsis</h2>
-<p><code> #include &lt;pcp/pmapi.h&gt;<br />
- #include &lt;pcp/impl.h&gt;<br />
+<p><code> #include &lt;pcp/pmapi.h&gt;<br/>
+ #include &lt;pcp/impl.h&gt;<br/>
  #include &lt;pcp/pmda.h&gt; </p>
 <p> int pmdaAttribute(int </code><i>context</i>, int <i>key</i>, char *<i>value</i>, int <i>length</i>, pmdaExt *<i>pmda</i>); </p>
 <p> cc &#8230; -lpcp_pmda -lpcp</p>

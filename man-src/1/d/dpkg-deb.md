@@ -19,8 +19,8 @@ description: "dpkg-deb – Debian package archive (.deb) manipulation tool"
 <h2>COMMANDS</h2>
 <dl>
 <dt><code>-b</code>, <code>&#8211;build</code> <i>binary-directory</i> [<i>archive</i>|<i>directory</i>]</dt>
-<dd> Creates a debian archive from the filesystem tree stored in <i>binary-directory</i>. <i>binary-directory</i> must have a <font SIZE="-1"><code>DEBIAN</code></font> subdirectory, which contains the control information files such as the control file itself. This directory will <i>not</i> appear in the binary package&#8217;s filesystem archive, but instead the files in it will be put in the binary package&#8217;s control information area. </dd>
-<p> Unless you specify <code>&#8211;nocheck</code>, <code>dpkg-deb</code> will read <code>DEBIAN/control</code> and parse it. It will check the file for syntax errors and other problems, and display the name of the binary package being built. <code>dpkg-deb</code> will also check the permissions of the maintainer scripts and other files found in the <font SIZE="-1"><code>DEBIAN</code></font> control information directory. </p>
+<dd> Creates a debian archive from the filesystem tree stored in <i>binary-directory</i>. <i>binary-directory</i> must have a <code>DEBIAN</code> subdirectory, which contains the control information files such as the control file itself. This directory will <i>not</i> appear in the binary package&#8217;s filesystem archive, but instead the files in it will be put in the binary package&#8217;s control information area. </dd>
+<p> Unless you specify <code>&#8211;nocheck</code>, <code>dpkg-deb</code> will read <code>DEBIAN/control</code> and parse it. It will check the file for syntax errors and other problems, and display the name of the binary package being built. <code>dpkg-deb</code> will also check the permissions of the maintainer scripts and other files found in the <code>DEBIAN</code> control information directory. </p>
 <p> If no <i>archive</i> is specified then <code>dpkg-deb</code> will write the package into the file <i>binary-directory</i><code>.deb</code>. </p>
 <p> If the archive to be created already exists it will be overwritten. </p>
 <p> If the second argument is a directory then <code>dpkg-deb</code> will write to the file <i>directory</i><code>/</code><i>package</i><code>_</code><i>version</i><code>_</code><i>arch</i><code>.deb.</code> When a target directory is specified, rather than a file, the <code>&#8211;nocheck</code> option may not be used (since <code>dpkg-deb</code> needs to read and parse the package control file to determine which filename to use).</p>
@@ -44,7 +44,7 @@ description: "dpkg-deb – Debian package archive (.deb) manipulation tool"
 <dt><code>-X</code>, <code>&#8211;vextract</code> <i>archive directory</i></dt>
 <dd> Is like <code>&#8211;extract</code> (<code>-x</code>) with <code>&#8211;verbose</code> (<code>-v</code>) which prints a listing of the files extracted as it goes.</dd>
 <dt><code>-R</code>, <code>&#8211;raw-extract</code> <i>archive directory</i></dt>
-<dd> Extracts the filesystem tree from a package archive into a specified directory, and the control information files into a <font SIZE="-1"><code>DEBIAN</code></font> subdirectory of the specified directory (since dpkg 1.16.1). </dd>
+<dd> Extracts the filesystem tree from a package archive into a specified directory, and the control information files into a <code>DEBIAN</code> subdirectory of the specified directory (since dpkg 1.16.1). </dd>
 <p> The target directory (but not its parents) will be created if necessary. </p>
 <p> The input archive is not (currently) processed sequentially, so reading it from standard input (&laquo;<code>&#8211;</code>&raquo;) is <code>not</code> supported.</p>
 <dt><code>&#8211;ctrl-tarfile</code> <i>archive</i></dt>
@@ -53,7 +53,7 @@ description: "dpkg-deb – Debian package archive (.deb) manipulation tool"
 <dd> Extracts the filesystem tree data from a binary package and sends it to standard output in <code>tar</code> format. Together with <code><a href="/docs/linux/man/1-tar/">tar</a></code>(1) this can be used to extract a particular file from a package archive. The input archive will always be processed sequentially.</dd>
 <dt><code>-e</code>, <code>&#8211;control</code> <i>archive</i> [<i>directory</i>]</dt>
 <dd> Extracts the control information files from a package archive into the specified directory. </dd>
-<p> If no directory is specified then a subdirectory <font SIZE="-1"><code>DEBIAN</code></font> in the current directory is used. </p>
+<p> If no directory is specified then a subdirectory <code>DEBIAN</code> in the current directory is used. </p>
 <p> The target directory (but not its parents) will be created if necessary.</p>
 <dt><code>-?</code>, <code>&#8211;help</code></dt>
 <dd> Show the usage message and exit.</dd>
@@ -94,16 +94,16 @@ description: "dpkg-deb – Debian package archive (.deb) manipulation tool"
 <dd> Fatal or unrecoverable error due to invalid command-line usage, or interactions with the system, such as accesses to the database, memory allocations, etc.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><font SIZE="-1"><code>DPKG_COLORS</code></font></dt>
+<dt><code>DPKG_COLORS</code></dt>
 <dd> Sets the color mode (since dpkg 1.18.5). The currently accepted values are: <code>auto</code> (default), <code>always</code> and <code>never</code>.</dd>
-<dt><font SIZE="-1"><code>TMPDIR</code></font></dt>
+<dt><code>TMPDIR</code></dt>
 <dd> If set, <code>dpkg-deb</code> will use it as the directory in which to create temporary files and directories.</dd>
-<dt><font SIZE="-1"><code>SOURCE_DATE_EPOCH</code></font></dt>
+<dt><code>SOURCE_DATE_EPOCH</code></dt>
 <dd> If set, it will be used as the timestamp (as seconds since the epoch) in the <code><a href="/docs/linux/man/5-deb/">deb</a></code>(5)&#8217;s <code>ar</code>(5) container and used to clamp the mtime in the <code><a href="/docs/linux/man/5-tar/">tar</a></code>(5) file entries.</dd></dl>
 <h2>NOTES</h2>
 <p> Do not attempt to use just <code>dpkg-deb</code> to install software! You must use <code>dpkg</code> proper to ensure that all the files are correctly placed and the package&#8217;s scripts run and its status and contents recorded.</p>
 <h2>BUGS</h2>
 <p> <code>dpkg-deb -I</code> <i>package1</i><code>.deb</code> <i>package2</i><code>.deb</code> does the wrong thing. </p>
-<p> There is no authentication on <code>.deb</code> files; in fact, there isn&#8217;t even a straightforward checksum. (Higher level tools like <font SIZE="-1">APT</font> support authenticating <code>.deb</code> packages retrieved from a given repository, and most packages nowadays provide an md5sum control file generated by debian/rules. Though this is not directly supported by the lower level tools.)</p>
+<p> There is no authentication on <code>.deb</code> files; in fact, there isn&#8217;t even a straightforward checksum. (Higher level tools like APT support authenticating <code>.deb</code> packages retrieved from a given repository, and most packages nowadays provide an md5sum control file generated by debian/rules. Though this is not directly supported by the lower level tools.)</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-deb/">deb</a></code>(5), <code><a href="/docs/linux/man/5-deb-control/">deb-control</a></code>(5), <code><a href="/docs/linux/man/1-dpkg/">dpkg</a></code>(1), <code><a href="/docs/linux/man/1-dselect/">dselect</a></code>(1). </p>

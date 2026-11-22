@@ -21,16 +21,16 @@ description: "gnutls_x509_privkey_import – API function"
 <dt>gnutls_x509_crt_fmt_t format</dt>
 <dd> One of DER or PEM</dd></dl>
 <h2>DESCRIPTION</h2>
-<p> This function will convert the given DER or PEM encoded key to the native <code>gnutls_x509_privkey_t</code> format. The output will be stored in<br />
+<p> This function will convert the given DER or PEM encoded key to the native <code>gnutls_x509_privkey_t</code> format. The output will be stored in<br/>
 &nbsp;<wbr><i>key</i>&nbsp;<wbr>. </p>
 <p> If the key is PEM encoded it should have a header that contains &quot;PRIVATE KEY&quot;. Note that this function falls back to PKCS <code>8</code> decoding without password, if the default format fails to import.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>
 <h2>REPORTING BUGS</h2>
-<p> Report bugs to &lt;bugs [at] gnutls.org&gt;.<br />
+<p> Report bugs to &lt;bugs [at] gnutls.org&gt;.<br/>
  Home page: <a rel="nofollow" href="http://www.gnutls.org">http://www.gnutls.org</a> </p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2001-2014 Free Software Foundation, Inc..<br />
+<p> Copyright &#169; 2001-2014 Free Software Foundation, Inc..<br/>
  Copying and distribution of this file, with or without modification, are permitted in any medium without royalty provided the copyright notice and this notice are preserved.</p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>

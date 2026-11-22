@@ -25,19 +25,19 @@ Typedefs</code></pre>
 <p> typedef void *( <code>Netsnmp_Make_Data_Context</code> )(void *loop_context, struct <code>netsnmp_iterator_info_s</code> *) </p>
 <p> typedef void( <code>Netsnmp_Free_Loop_Context</code> )(void *, struct <code>netsnmp_iterator_info_s</code> *) </p>
 <p> typedef void( <code>Netsnmp_Free_Data_Context</code> )(void *, struct <code>netsnmp_iterator_info_s</code> *) </p>
-<p> typedef <code>netsnmp_iterator_info_s</code> <code>netsnmp_iterator_info</code><br />
+<p> typedef <code>netsnmp_iterator_info_s</code> <code>netsnmp_iterator_info</code><br/>
  <i>Typedefs the </i><code>netsnmp_iterator_info_s</code> struct into netsnmp_iterator_info.</p>
 <h3>Functions</h3>
 <p><code>netsnmp_iterator_info</code> * <code>netsnmp_iterator_create_table</code> (<code>Netsnmp_First_Data_Point</code> *firstDP, <code>Netsnmp_Next_Data_Point</code> *nextDP, <code>Netsnmp_First_Data_Point</code> *getidx, <code>netsnmp_variable_list</code> *indexes) </p>
 <p> void <code>netsnmp_iterator_delete_table</code> (<code>netsnmp_iterator_info</code> *iinfo) </p>
-<p> <code>netsnmp_mib_handler</code> * <code>netsnmp_get_table_iterator_handler</code> (<code>netsnmp_iterator_info</code> *iinfo)<br />
- <i>returns a netsnmp_mib_handler object for the table_iterator helper </i><br />
- int <code>netsnmp_register_table_iterator</code> (<code>netsnmp_handler_registration</code> *reginfo, <code>netsnmp_iterator_info</code> *iinfo)<br />
- <i>Creates and registers a table iterator helper handler calling netsnmp_create_handler with a handler name set to TABLE_ITERATOR_NAME and access method, netsnmp_table_iterator_helper_handler. </i><br />
- NETSNMP_INLINE void * <code>netsnmp_extract_iterator_context</code> (<code>netsnmp_request_info</code> *request)<br />
- <i>extracts the table_iterator specific data from a request. </i><br />
- NETSNMP_INLINE void <code>netsnmp_insert_iterator_context</code> (<code>netsnmp_request_info</code> *request, void *data)<br />
- <i>inserts table_iterator specific data for a newly created row into a request </i><br />
+<p> <code>netsnmp_mib_handler</code> * <code>netsnmp_get_table_iterator_handler</code> (<code>netsnmp_iterator_info</code> *iinfo)<br/>
+ <i>returns a netsnmp_mib_handler object for the table_iterator helper </i><br/>
+ int <code>netsnmp_register_table_iterator</code> (<code>netsnmp_handler_registration</code> *reginfo, <code>netsnmp_iterator_info</code> *iinfo)<br/>
+ <i>Creates and registers a table iterator helper handler calling netsnmp_create_handler with a handler name set to TABLE_ITERATOR_NAME and access method, netsnmp_table_iterator_helper_handler. </i><br/>
+ NETSNMP_INLINE void * <code>netsnmp_extract_iterator_context</code> (<code>netsnmp_request_info</code> *request)<br/>
+ <i>extracts the table_iterator specific data from a request. </i><br/>
+ NETSNMP_INLINE void <code>netsnmp_insert_iterator_context</code> (<code>netsnmp_request_info</code> *request, void *data)<br/>
+ <i>inserts table_iterator specific data for a newly created row into a request </i><br/>
  int <code>netsnmp_table_iterator_helper_handler</code> (<code>netsnmp_mib_handler</code> *handler, <code>netsnmp_handler_registration</code> *reginfo, <code>netsnmp_agent_request_info</code> *reqinfo, <code>netsnmp_request_info</code> *requests) </p>
 <p> void * <code>netsnmp_iterator_row_first</code> (<code>netsnmp_iterator_info</code> *iinfo) </p>
 <p> void * <code>netsnmp_iterator_row_get</code> (<code>netsnmp_iterator_info</code> *iinfo, void *row) </p>
@@ -95,7 +95,7 @@ Typedefs</code></pre>
 <p> If NOT_SERIALIZED is not defined the function injects the serialize handler into the calling chain prior to calling netsnmp_register_table. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>reginfo</i> is a pointer to a netsnmp_handler_registration struct<br />
+<dd><i>reginfo</i> is a pointer to a netsnmp_handler_registration struct<br/>
  <i>iinfo</i> is a pointer to a netsnmp_iterator_info struct</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

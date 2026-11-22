@@ -95,8 +95,8 @@ USB Model: ASIC: Properties: Prod-ID
 ----------------------------------------------------------
 Strobe XP100 LM9833 600x1200dpi 48bit 512Kb 0x0427</pre>
 <h2>Other Plustek Scanners</h2>
-<p>For parallelport device support see the <code><a href="/docs/linux/man/5-sane-plustek_pp/">sane-plustek_pp</a></code>(5) backend.<br />
- The SCSI scanner OpticPro 19200S is a rebadged Artec AM12S scanner and is supported by the <code><a href="/docs/linux/man/5-sane-artec/">sane-artec</a></code>(5) backend.<br />
+<p>For parallelport device support see the <code><a href="/docs/linux/man/5-sane-plustek_pp/">sane-plustek_pp</a></code>(5) backend.<br/>
+ The SCSI scanner OpticPro 19200S is a rebadged Artec AM12S scanner and is supported by the <code><a href="/docs/linux/man/5-sane-artec/">sane-artec</a></code>(5) backend.<br/>
  Only the National Semiconductor LM983[1/2/] based devices of Plustek are supported by this backend. Older versions of the U12, the UT12, the U1212 and U1248 (GrandTech chipset) are not supported. </p>
 <pre>Model Chipset backend
 ------------------------------------
@@ -111,9 +111,9 @@ UT12 P98003 u12
 <h2>Configuration</h2>
 <p>To use your scanner with this backend, you need at least two entries in the configuration file <i>/etc/sane.d/plustek.conf</i></p>
 <dl>
-<dd><i>[usb] vendor-id product-id</i><br />
+<dd><i>[usb] vendor-id product-id</i><br/>
  <i>device /dev/usbscanner</i></dd></dl>
-<p> <i>[usb]</i> tells the backend, that the following devicename (here <i>/dev/usbscanner</i>) has to be interpreted as USB scanner device. If vendor- and product-id has not been specified, the backend tries to detect this by its own. If device is set to <i>auto</i> then the next matching device is used.<br />
+<p> <i>[usb]</i> tells the backend, that the following devicename (here <i>/dev/usbscanner</i>) has to be interpreted as USB scanner device. If vendor- and product-id has not been specified, the backend tries to detect this by its own. If device is set to <i>auto</i> then the next matching device is used.<br/>
  The following options can be used for a default setup of your device. Most of them are also available through the frontend. </p>
 <p> <code>The Options:</code> </p>
 <p> option warmup t</p>
@@ -135,68 +135,68 @@ UT12 P98003 u12
 </dl>
 <p> option invertNegatives b</p>
 <dl>
-<dd><i>b</i> 0 &#8211;&gt; do not invert the picture during negative scans,<br />
+<dd><i>b</i> 0 &#8211;&gt; do not invert the picture during negative scans,<br/>
  1 &#8211;&gt; invert picture</dd></dl>
 <p> option cacheCalData b</p>
 <dl>
-<dd><i>b</i> 0 &#8211;&gt; do not save calibration results,<br />
+<dd><i>b</i> 0 &#8211;&gt; do not save calibration results,<br/>
  1 &#8211;&gt; save results of calibration in <i>~/.sane/</i> directory</dd></dl>
 <p> option altCalibration b</p>
 <dl>
-<dd><i>b</i> 0 &#8211;&gt; use standard calibration routines,<br />
+<dd><i>b</i> 0 &#8211;&gt; use standard calibration routines,<br/>
  1 &#8211;&gt; use alternate calibration (only non Plustek devices, standard for CIS devices)</dd></dl>
 <p> option skipFine b</p>
 <dl>
-<dd><i>b</i> 0 &#8211;&gt; perform fine calibration,<br />
+<dd><i>b</i> 0 &#8211;&gt; perform fine calibration,<br/>
  1 &#8211;&gt; skip fine calibration (only non Plustek devices)</dd></dl>
 <p> option skipFineWhite b</p>
 <dl>
-<dd><i>b</i> 0 &#8211;&gt; perform white fine calibration,<br />
+<dd><i>b</i> 0 &#8211;&gt; perform white fine calibration,<br/>
  1 &#8211;&gt; skip white fine calibration (only non Plustek devices)</dd></dl>
 <p> option skipDarkStrip b</p>
 <dl>
-<dd><i>b</i> 0 &#8211;&gt; perform dark calibration, with enabled lamp using the dark calibration strip of the scanner. If the scanner does not have such a strip, the alternative way is to switch off the lamp during this step.<br />
+<dd><i>b</i> 0 &#8211;&gt; perform dark calibration, with enabled lamp using the dark calibration strip of the scanner. If the scanner does not have such a strip, the alternative way is to switch off the lamp during this step.<br/>
  1 &#8211;&gt; always switch off the lamp for dark calibration, even a black strip is available</dd></dl>
 <p> option skipCalibration b</p>
 <dl>
-<dd><i>b</i> 0 &#8211;&gt; perform calibration,<br />
+<dd><i>b</i> 0 &#8211;&gt; perform calibration,<br/>
  1 &#8211;&gt; skip calibration (only non Plustek devices)</dd></dl>
 <p> option enableTPA b</p>
 <dl>
-<dd><i>b</i> 0 &#8211;&gt; default behaviour, specified by the internal tables,<br />
+<dd><i>b</i> 0 &#8211;&gt; default behaviour, specified by the internal tables,<br/>
  1 &#8211;&gt; override internal tables and allow TPA mode (EPSON/UMAX only)</dd></dl>
-<p> option posOffX x<br />
- option posOffY y<br />
- option tpaOffX x<br />
- option tpaOffY y<br />
- option negOffX x<br />
+<p> option posOffX x<br/>
+ option posOffY y<br/>
+ option tpaOffX x<br/>
+ option tpaOffY y<br/>
+ option negOffX x<br/>
  option negOffY y</p>
 <dl>
 <dd><i>x y</i> By using this settings, the user can adjust the given image positions. <code>Please note, that there&#8217;s no internal range checking for</code> <code>this feature.</code></dd></dl>
-<p> option posShadingY p<br />
- option tpaShadingY p<br />
+<p> option posShadingY p<br/>
+ option tpaShadingY p<br/>
  option negShadingY p</p>
 <dl>
 <dd><i>p</i> overrides the internal shading position. The values are in steps. <code>Please note, that there&#8217;s no internal range checking for</code> <code>this feature.</code></dd></dl>
-<p> option redGamma r<br />
- option greenGamma g<br />
- option blueGamma b<br />
+<p> option redGamma r<br/>
+ option greenGamma g<br/>
+ option blueGamma b<br/>
  option grayGamma gr</p>
 <dl>
 <dd><i>r g b gr</i></dd></dl>
 <p> By using these values, the internal linear gamma table (r,g,b,gr = 1.0) can be adjusted. </p>
-<p> option red_gain r<br />
- option red_offset ro<br />
- option green_gain g<br />
- option green_offset go<br />
- option blue_gain b<br />
+<p> option red_gain r<br/>
+ option red_offset ro<br/>
+ option green_gain g<br/>
+ option green_offset go<br/>
+ option blue_gain b<br/>
  option blue_offset bo</p>
 <dl>
 <dd><i>r g b ro go bo</i> These values can be used to set the gain and offset values of the AFE for each channel. The range is between 0 and 63. -1 means autocalibration.</dd></dl>
 <p> See the plustek.conf file for examples. </p>
-<p> <code>Note:</code><br />
+<p> <code>Note:</code><br/>
  You have to make sure, that the USB subsystem is loaded correctly and you have access to the device-node. For more details see <code><a href="/docs/linux/man/5-sane-usb/">sane-usb</a></code>(5) manpage. You might use <code><a href="/docs/linux/man/1-sane-find-scanner/">sane-find-scanner</a></code>(1) to check that you have access to your device. </p>
-<p> <code>Note:</code><br />
+<p> <code>Note:</code><br/>
  If there&#8217;s no configuration file, the backend defaults to <code>device auto</code></p>
 <h2>Files</h2>
 <dl>
@@ -216,13 +216,13 @@ UT12 P98003 u12
 <p> Example: export SANE_DEBUG_PLUSTEK=10 </p>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/5-sane-usb/">sane-usb</a></code>(5), <code><a href="/docs/linux/man/5-sane-u12/">sane-u12</a></code>(5), <code><a href="/docs/linux/man/5-sane-gt68xx/">sane-gt68xx</a></code>(5), <code><a href="/docs/linux/man/5-sane-mustek_pp/">sane-mustek_pp</a></code>(5), <code><a href="/docs/linux/man/1-sane-find-scanner/">sane-find-scanner</a></code>(1), <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1)<br />
+<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/5-sane-usb/">sane-usb</a></code>(5), <code><a href="/docs/linux/man/5-sane-u12/">sane-u12</a></code>(5), <code><a href="/docs/linux/man/5-sane-gt68xx/">sane-gt68xx</a></code>(5), <code><a href="/docs/linux/man/5-sane-mustek_pp/">sane-mustek_pp</a></code>(5), <code><a href="/docs/linux/man/1-sane-find-scanner/">sane-find-scanner</a></code>(1), <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1)<br/>
  <i>/usr/share/doc/libsane/plustek/Plustek-USB.changes</i> </p>
 <h2>Contact And Bug-Reports</h2>
-<p>Please send any information and bug-reports to:<br />
+<p>Please send any information and bug-reports to:<br/>
  <code>SANE Mailing List</code> </p>
-<p> Additional info and hints can be obtained from our<br />
- Mailing-List archive at:<br />
+<p> Additional info and hints can be obtained from our<br/>
+ Mailing-List archive at:<br/>
  <i><a rel="nofollow" href="http://www.sane-project.org/mailing-lists.html">http://www.sane-project.org/mailing-lists.html</a></i> </p>
 <p> To obtain debug messages from the backend, please set the environment-variable <code>SANE_DEBUG_PLUSTEK</code> before calling your favorite scan-frontend (i.e. <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1)),<code>i.e.:</code> </p>
 <p> <i>export SANE_DEBUG_PLUSTEK=20 ; scanimage</i> </p>

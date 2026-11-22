@@ -17,7 +17,7 @@ description: "Globus FTP Client API –"
 <p> <code>FTP Operations</code> </p>
 <p> <code>FTP Operation Attributes</code> </p>
 <p> <code>Reading and Writing Data</code> </p>
-<p> <code>Plugins</code><br />
+<p> <code>Plugins</code><br/>
  <i>Plugin API. </i></p>
 <h2>Detailed Description</h2>
 <p> The Globus FTP Client library provides a convenient way of accessing files on remote FTP servers. In addition to supporting the basic FTP protocol, the FTP Client library supports several security and performance extensions to make FTP more suitable for Grid applications. These extensions are described in the Grid FTP Protocol document. </p>

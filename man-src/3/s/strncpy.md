@@ -17,14 +17,14 @@ char *strncpy(char *dest, const char *src, size_t n);</code></pre>
 <p> The <code>strncpy</code>() function is similar, except that at most <i>n</i> bytes of <i>src</i> are copied. <code>Warning</code>: If there is no null byte among the first <i>n</i> bytes of <i>src</i>, the string placed in <i>dest</i> will not be null-terminated. </p>
 <p> If the length of <i>src</i> is less than <i>n</i>, <code>strncpy</code>() writes additional null bytes to <i>dest</i> to ensure that a total of <i>n</i> bytes are written. </p>
 <p> A simple implementation of <code>strncpy</code>() might be: </p>
-<p> char * strncpy(char *dest, const char *src, size_t n) { <br />
+<p> char * strncpy(char *dest, const char *src, size_t n) { <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;size_t i; </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;for&nbsp;(i&nbsp;=&nbsp;0;&nbsp;i&nbsp;&lt;&nbsp;n&nbsp;&amp;&amp;&nbsp;src[i]&nbsp;!=&nbsp;&#8216;\0&#8217;;&nbsp;i++) <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;dest[i]&nbsp;=&nbsp;src[i]; <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;for&nbsp;(&nbsp;;&nbsp;i&nbsp;&lt;&nbsp;n;&nbsp;i++) <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;for&nbsp;(i&nbsp;=&nbsp;0;&nbsp;i&nbsp;&lt;&nbsp;n&nbsp;&amp;&amp;&nbsp;src[i]&nbsp;!=&nbsp;&#8216;\0&#8217;;&nbsp;i++) <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;dest[i]&nbsp;=&nbsp;src[i]; <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;for&nbsp;(&nbsp;;&nbsp;i&nbsp;&lt;&nbsp;n;&nbsp;i++) <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;dest[i]&nbsp;=&nbsp;&#8216;\0&#8217;; </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;return dest; }  </p>
 <h2>RETURN VALUE</h2>
 <p> The <code>strcpy</code>() and <code>strncpy</code>() functions return a pointer to the destination string <i>dest</i>.  </p>
@@ -50,13 +50,13 @@ char *strncpy(char *dest, const char *src, size_t n);</code></pre>
 <p> Some programmers consider <code>strncpy</code>() to be inefficient and error prone. If the programmer knows (i.e., includes code to test!) that the size of <i>dest</i> is greater than the length of <i>src</i>, then <code>strcpy</code>() can be used. </p>
 <p> One valid (and intended) use of <code>strncpy</code>() is to copy a C string to a fixed-length buffer while ensuring both that the buffer is not overflowed and that unused bytes in the destination buffer are zeroed out (perhaps to prevent information leaks if the buffer is to be written to media or transmitted to another process via an interprocess communication technique). </p>
 <p> If there is no terminating null byte in the first <i>n</i> bytes of <i>src</i>, <code>strncpy</code>() produces an unterminated string in <i>dest</i>. If <i>buf</i> has length <i>buflen</i>, you can force termination using something like the following: </p>
-<p> if (buflen &gt; 0) { <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;strncpy(buf, str, buflen &#8211; 1); <br />
+<p> if (buflen &gt; 0) { <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;strncpy(buf, str, buflen &#8211; 1); <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;buf[buflen &#8211; 1]=&nbsp;&#8216;\0&#8217;; } </p>
 <p> (Of course, the above technique ignores the fact that, if <i>src</i> contains more than <i>buflen &#8211; 1</i> bytes, information is lost in the copying to <i>dest</i>.)  </p>
 <h3>strlcpy()</h3>
 <p> Some systems (the BSDs, Solaris, and others) provide the following function: </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;size_t strlcpy(char&nbsp;*dest, const char&nbsp;*src, size_t size); </p>
 <p> This function is similar to <code>strncpy</code>(), but it copies at most <i>size-1</i> bytes to <i>dest</i>, always adds a terminating null byte, and does not pad the destination with (further) null bytes. This function fixes some of the problems of <code>strcpy</code>() and <code>strncpy</code>(), but the caller must still handle the possibility of data loss if <i>size</i> is too small. The return value of the function is the length of <i>src</i>, which allows truncation to be easily detected: if the return value is greater than or equal to <i>size</i>, truncation occurred. If loss of data matters, the caller <i>must</i> either check the arguments before the call, or test the function return value. <code>strlcpy</code>() is not present in glibc and is not standardized by POSIX, but is available on Linux via the <i>libbsd</i> library.  </p>
 <h2>BUGS</h2>

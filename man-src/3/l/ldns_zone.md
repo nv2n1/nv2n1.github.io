@@ -10,7 +10,7 @@ description: "ldns_zone"
 
 <p> ldns_zone </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <h2>DESCRIPTION</h2>
@@ -18,17 +18,17 @@ description: "ldns_zone"
 <dt> <i>ldns_zone</i></dt>
 <dd>
 </dd><dd>DNS Zone </dd>
-<p> A list of RR&#8217;s with some<br />
- extra information which comes from the SOA RR<br />
- Note: nothing has been done to make this efficient (yet).<br />
- struct ldns_struct_zone<br />
- {<br />
+<p> A list of RR&#8217;s with some<br/>
+ extra information which comes from the SOA RR<br/>
+ Note: nothing has been done to make this efficient (yet).<br/>
+ struct ldns_struct_zone<br/>
+ {<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><code>the soa defines a zone:</code></p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>ldns_rr <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>*_soa;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>/* basicly a zone is a list of rr&#8217;s */</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>ldns_rr_list <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>*_rrs;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>/* we could change this to be a b-tree etc etc todo */</p>
-<p> };<br />
+<p> };<br/>
  typedef struct ldns_struct_zone ldns_zone;<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>
 </dl>
 <h2>AUTHOR</h2>

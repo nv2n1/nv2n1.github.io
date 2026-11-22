@@ -10,22 +10,22 @@ description: "ovsdb-tool – Open vSwitch database management utility"
 
 <p> ovsdb-tool &#8211; Open vSwitch database management utility </p>
 <h2>SYNOPSIS</h2>
-<p> <code>ovsdb-tool </code>[<i>options</i>] <code>create </code>[<i>db</i> [<i>schema</i>]]<br />
- <code>ovsdb-tool </code>[<i>options</i>] <code>compact </code>[<i>db</i> [<i>target</i>]]<br />
- <code>ovsdb-tool </code>[<i>options</i>] <code>convert </code>[<i>db</i> [<i>schema </i>[<i>target</i>]]]<br />
- <code>ovsdb-tool </code>[<i>options</i>] <code>needs-conversion </code>[<i>db</i> [<i>schema</i>]]<br />
- <code>ovsdb-tool </code>[<i>options</i>] <code>db-version </code>[<i>db</i>]<br />
- <code>ovsdb-tool </code>[<i>options</i>] <code>schema-version </code>[<i>schema</i>]<br />
- <code>ovsdb-tool </code>[<i>options</i>] <code>db-cksum </code>[<i>db</i>]<br />
- <code>ovsdb-tool </code>[<i>options</i>] <code>schema-cksum </code>[<i>schema</i>]<br />
- <code>ovsdb-tool </code>[<i>options</i>] <code>query </code>[<i>db</i>] <i>transaction</i><br />
- <code>ovsdb-tool </code>[<i>options</i>] <code>transact </code>[<i>db</i>] <i>transaction</i><br />
- <code>ovsdb-tool </code>[<i>options</i>] [<code>-m</code> | <code>&#8211;more</code>]&#8230; <code>show-log </code>[<i>db</i>]<br />
+<p> <code>ovsdb-tool </code>[<i>options</i>] <code>create </code>[<i>db</i> [<i>schema</i>]]<br/>
+ <code>ovsdb-tool </code>[<i>options</i>] <code>compact </code>[<i>db</i> [<i>target</i>]]<br/>
+ <code>ovsdb-tool </code>[<i>options</i>] <code>convert </code>[<i>db</i> [<i>schema </i>[<i>target</i>]]]<br/>
+ <code>ovsdb-tool </code>[<i>options</i>] <code>needs-conversion </code>[<i>db</i> [<i>schema</i>]]<br/>
+ <code>ovsdb-tool </code>[<i>options</i>] <code>db-version </code>[<i>db</i>]<br/>
+ <code>ovsdb-tool </code>[<i>options</i>] <code>schema-version </code>[<i>schema</i>]<br/>
+ <code>ovsdb-tool </code>[<i>options</i>] <code>db-cksum </code>[<i>db</i>]<br/>
+ <code>ovsdb-tool </code>[<i>options</i>] <code>schema-cksum </code>[<i>schema</i>]<br/>
+ <code>ovsdb-tool </code>[<i>options</i>] <code>query </code>[<i>db</i>] <i>transaction</i><br/>
+ <code>ovsdb-tool </code>[<i>options</i>] <code>transact </code>[<i>db</i>] <i>transaction</i><br/>
+ <code>ovsdb-tool </code>[<i>options</i>] [<code>-m</code> | <code>&#8211;more</code>]&#8230; <code>show-log </code>[<i>db</i>]<br/>
  <code>ovsdb-tool help</code></p>
 <dl>
 <dt>Logging options:</dt>
-<dd> [<code>-v</code>[<i>module</i>[<code>:</code><i>destination</i>[<code>:</code><i>level</i>]]]]&#8230;<br />
- [<code>&#8211;verbose[=</code><i>module</i>[<code>:</code><i>destination</i>[<code>:</code><i>level</i>]]]]&#8230;<br />
+<dd> [<code>-v</code>[<i>module</i>[<code>:</code><i>destination</i>[<code>:</code><i>level</i>]]]]&#8230;<br/>
+ [<code>&#8211;verbose[=</code><i>module</i>[<code>:</code><i>destination</i>[<code>:</code><i>level</i>]]]]&#8230;<br/>
  [<code>&#8211;log-file</code>[<code>=</code><i>file</i>]]</dd>
 <dt>Common options:</dt>
 <dd> [<code>-h</code> | <code>&#8211;help</code>] [<code>-V</code> | <code>&#8211;version</code>] </dd>

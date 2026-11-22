@@ -10,12 +10,12 @@ description: "ql/math/interpolations/backwardflatinterpolation.hpp – backward-
 
 <p> ql/math/interpolations/backwardflatinterpolation.hpp &#8211; backward-flat interpolation between discrete points </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/math/interpolation.hpp&gt;<br />
+<p> #include &lt;ql/math/interpolation.hpp&gt;<br/>
  #include &lt;vector&gt; </p>
 <h3>Classes</h3>
-<p> class <code>BackwardFlatInterpolation</code><br />
- <i>Backward-flat interpolation between discrete points. </i><br />
- class <code>BackwardFlat</code><br />
+<p> class <code>BackwardFlatInterpolation</code><br/>
+ <i>Backward-flat interpolation between discrete points. </i><br/>
+ class <code>BackwardFlat</code><br/>
  <i>Backward-flat interpolation factory and traits. </i></p>
 <h2>Detailed Description</h2>
 <p> backward-flat interpolation between discrete points </p>

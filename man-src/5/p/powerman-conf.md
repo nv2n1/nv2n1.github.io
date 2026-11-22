@@ -35,7 +35,7 @@ device &quot;pow1&quot; &quot;baytech&quot; &quot;pow1:23&quot; # instantiate po
 node &quot;pengra[0-7]&quot; &quot;pow0&quot; &quot;[1-8]&quot; # map pengra0...pengra7 to pow0 plug 1-8
 node &quot;pengra[8-15]&quot; &quot;pow1&quot; &quot;[1-8]&quot; # map pengra8...pengra15 to pow1 plug 1-8</pre>
 <h2>Files</h2>
-<p>/etc/powerman/powerman.conf<br />
+<p>/etc/powerman/powerman.conf<br/>
  /etc/powerman/*.dev</p>
 <h2>Origin</h2>
 <p>PowerMan was originally developed by Andrew Uselton on LLNL&#8217;s Linux clusters. This software is open source and distributed under the terms of the GNU GPL.</p>

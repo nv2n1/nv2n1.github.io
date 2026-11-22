@@ -17,15 +17,15 @@ description: "perlutil – utilities packaged with the Perl distribution"
 <dt>perldoc</dt>
 <dd> The main interface to Perl&#8217;s documentation is <tt>&quot;perldoc&quot;</tt>, although if you&#8217;re reading this, it&#8217;s more than likely that you&#8217;ve already found it. <i>perldoc</i> will extract and format the documentation from any file in the current directory, any Perl module installed on the system, or any of the standard documentation pages, such as this one. Use <tt>&quot;perldoc &lt;name&gt;&quot;</tt> to get information on any of the utilities described in this document.</dd>
 <dt>pod2man and pod2text</dt>
-<dd> If it&#8217;s run from a terminal, <i>perldoc</i> will usually call <i>pod2man</i> to translate <font SIZE="-1">POD</font> (Plain Old Documentation &#8211; see perlpod for an explanation) into a manpage, and then run <i>man</i> to display it; if <i>man</i> isn&#8217;t available, <i>pod2text</i> will be used instead and the output piped through your favourite pager.</dd>
+<dd> If it&#8217;s run from a terminal, <i>perldoc</i> will usually call <i>pod2man</i> to translate POD (Plain Old Documentation &#8211; see perlpod for an explanation) into a manpage, and then run <i>man</i> to display it; if <i>man</i> isn&#8217;t available, <i>pod2text</i> will be used instead and the output piped through your favourite pager.</dd>
 <dt>pod2html</dt>
-<dd> As well as these two, there is another converter: <i>pod2html</i> will produce <font SIZE="-1">HTML</font> pages from <font SIZE="-1">POD.</font></dd>
+<dd> As well as these two, there is another converter: <i>pod2html</i> will produce HTML pages from POD.</dd>
 <dt>pod2usage</dt>
-<dd> If you just want to know how to use the utilities described here, <i>pod2usage</i> will just extract the &#8220;<font SIZE="-1">USAGE&#8221;</font> section; some of the utilities will automatically call <i>pod2usage</i> on themselves when you call them with <tt>&quot;-help&quot;</tt>.</dd>
+<dd> If you just want to know how to use the utilities described here, <i>pod2usage</i> will just extract the &#8220;USAGE&#8221; section; some of the utilities will automatically call <i>pod2usage</i> on themselves when you call them with <tt>&quot;-help&quot;</tt>.</dd>
 <dt>podselect</dt>
-<dd> <i>pod2usage</i> is a special case of <i>podselect</i>, a utility to extract named sections from documents written in <font SIZE="-1">POD.</font> For instance, while utilities have &#8220;<font SIZE="-1">USAGE&#8221;</font> sections, Perl modules usually have &#8220;<font SIZE="-1">SYNOPSIS&#8221;</font> sections: <tt>&quot;podselect -s &quot;SYNOPSIS&quot; ...&quot;</tt> will extract this section for a given file.</dd>
+<dd> <i>pod2usage</i> is a special case of <i>podselect</i>, a utility to extract named sections from documents written in POD. For instance, while utilities have &#8220;USAGE&#8221; sections, Perl modules usually have &#8220;SYNOPSIS&#8221; sections: <tt>&quot;podselect -s &quot;SYNOPSIS&quot; ...&quot;</tt> will extract this section for a given file.</dd>
 <dt>podchecker</dt>
-<dd> If you&#8217;re writing your own documentation in <font SIZE="-1">POD,</font> the <i>podchecker</i> utility will look for errors in your markup.</dd>
+<dd> If you&#8217;re writing your own documentation in POD, the <i>podchecker</i> utility will look for errors in your markup.</dd>
 <dt>splain</dt>
 <dd> <i>splain</i> is an interface to perldiag &#8211; paste in your error message to it, and it&#8217;ll explain it for you.</dd>
 <dt>&quot;roffitall&quot;</dt>
@@ -46,14 +46,14 @@ description: "perlutil – utilities packaged with the Perl distribution"
 <dt>perlthanks</dt>
 <dd> This program provides an easy way to send a thank-you message back to the authors and maintainers of perl. It&#8217;s just <i>perlbug</i> installed under another name.</dd>
 <dt>h2ph</dt>
-<dd> Back before Perl had the <font SIZE="-1">XS</font> system for connecting with C libraries, programmers used to get library constants by reading through the C header files. You may still see <tt>&quot;require 'syscall.ph'&quot;</tt> or similar around &#8211; the <i>.ph</i> file should be created by running <i>h2ph</i> on the corresponding <i>.h</i> file. See the <i>h2ph</i> documentation for more on how to convert a whole bunch of header files at once.</dd>
+<dd> Back before Perl had the XS system for connecting with C libraries, programmers used to get library constants by reading through the C header files. You may still see <tt>&quot;require 'syscall.ph'&quot;</tt> or similar around &#8211; the <i>.ph</i> file should be created by running <i>h2ph</i> on the corresponding <i>.h</i> file. See the <i>h2ph</i> documentation for more on how to convert a whole bunch of header files at once.</dd>
 <dt>h2xs</dt>
-<dd> <i>h2xs</i> converts C header files into <font SIZE="-1">XS</font> modules, and will try and write as much glue between C libraries and Perl modules as it can. It&#8217;s also very useful for creating skeletons of pure Perl modules.</dd>
+<dd> <i>h2xs</i> converts C header files into XS modules, and will try and write as much glue between C libraries and Perl modules as it can. It&#8217;s also very useful for creating skeletons of pure Perl modules.</dd>
 <dt>enc2xs</dt>
-<dd> <i>enc2xs</i> builds a Perl extension for use by Encode from either Unicode Character Mapping files (.ucm) or Tcl Encoding Files (.enc). Besides being used internally during the build process of the Encode module, you can use <i>enc2xs</i> to add your own encoding to perl. No knowledge of <font SIZE="-1">XS</font> is necessary.</dd>
+<dd> <i>enc2xs</i> builds a Perl extension for use by Encode from either Unicode Character Mapping files (.ucm) or Tcl Encoding Files (.enc). Besides being used internally during the build process of the Encode module, you can use <i>enc2xs</i> to add your own encoding to perl. No knowledge of XS is necessary.</dd>
 <dt>xsubpp</dt>
-<dd> <i>xsubpp</i> is a compiler to convert Perl <font SIZE="-1">XS</font> code into C code. It is typically run by the makefiles created by ExtUtils::MakeMaker. </dd>
-<p> <i>xsubpp</i> will compile <font SIZE="-1">XS</font> code into C code by embedding the constructs necessary to let C functions manipulate Perl values and creates the glue necessary to let Perl access those functions.</p>
+<dd> <i>xsubpp</i> is a compiler to convert Perl XS code into C code. It is typically run by the makefiles created by ExtUtils::MakeMaker. </dd>
+<p> <i>xsubpp</i> will compile XS code into C code by embedding the constructs necessary to let C functions manipulate Perl values and creates the glue necessary to let Perl access those functions.</p>
 <dt>prove</dt>
 <dd> <i>prove</i> is a command-line interface to the test-running functionality of <i>Test::Harness</i>. It&#8217;s an alternative to <tt>&quot;make test&quot;</tt>.</dd>
 <dt>corelist</dt>
@@ -66,18 +66,18 @@ description: "perlutil – utilities packaged with the Perl distribution"
 <dt>ptar</dt>
 <dd> <i>ptar</i> is a tar-like program, written in pure Perl.</dd>
 <dt>ptardiff</dt>
-<dd> <i>ptardiff</i> is a small utility that produces a diff between an extracted archive and an unextracted one. (Note that this utility requires the <tt>&quot;Text::Diff&quot;</tt> module to function properly; this module isn&#8217;t distributed with perl, but is available from the <font SIZE="-1">CPAN.</font>)</dd>
+<dd> <i>ptardiff</i> is a small utility that produces a diff between an extracted archive and an unextracted one. (Note that this utility requires the <tt>&quot;Text::Diff&quot;</tt> module to function properly; this module isn&#8217;t distributed with perl, but is available from the CPAN.)</dd>
 <dt>ptargrep</dt>
 <dd> <i>ptargrep</i> is a utility to apply pattern matching to the contents of files in a tar archive.</dd>
 <dt>shasum</dt>
-<dd> This utility, that comes with the <tt>&quot;Digest::SHA&quot;</tt> module, is used to print or verify <font SIZE="-1">SHA</font> checksums.</dd>
+<dd> This utility, that comes with the <tt>&quot;Digest::SHA&quot;</tt> module, is used to print or verify SHA checksums.</dd>
 <dt>zipdetails</dt>
 <dd> zipdetails displays information about the internal record structure of the zip file. It is not concerned with displaying any details of the compressed data stored in the zip file.</dd></dl>
 <h3>Installation</h3>
 <p> These utilities help manage extra Perl modules that don&#8217;t come with the perl distribution.</p>
 <dl>
 <dt>cpan</dt>
-<dd> <i>cpan</i> is a command-line interface to <font SIZE="-1">CPAN</font>.pm. It allows you to install modules or distributions from <font SIZE="-1">CPAN,</font> or just get information about them, and a lot more. It is similar to the command line mode of the <font SIZE="-1">CPAN</font> module, </dd>
+<dd> <i>cpan</i> is a command-line interface to CPAN.pm. It allows you to install modules or distributions from CPAN, or just get information about them, and a lot more. It is similar to the command line mode of the CPAN module, </dd>
 <pre>
     perl -MCPAN -e shell
 </pre>

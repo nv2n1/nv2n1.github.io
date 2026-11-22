@@ -10,7 +10,7 @@ description: "stbcon.f –"
 <p>stbcon.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>stbcon</code> (NORM, UPLO, DIAG, N, KD, AB, LDAB, RCOND, WORK, IWORK, INFO)<br />
+<p>subroutine <code>stbcon</code> (NORM, UPLO, DIAG, N, KD, AB, LDAB, RCOND, WORK, IWORK, INFO)<br/>
  <i></i><code>STBCON</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine stbcon (characterNORM, characterUPLO, characterDIAG, integerN, integerKD, real, dimension( ldab, * )AB, integerLDAB, realRCOND, real, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>

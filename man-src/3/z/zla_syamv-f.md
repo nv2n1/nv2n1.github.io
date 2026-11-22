@@ -10,7 +10,7 @@ description: "zla_syamv.f –"
 <p>zla_syamv.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zla_syamv</code> (UPLO, N, ALPHA, A, LDA, X, INCX, BETA, Y, INCY)<br />
+<p>subroutine <code>zla_syamv</code> (UPLO, N, ALPHA, A, LDA, X, INCX, BETA, Y, INCY)<br/>
  <i></i><code>ZLA_SYAMV</code> computes a matrix-vector product using a symmetric indefinite matrix to calculate error bounds.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zla_syamv (integerUPLO, integerN, double precisionALPHA, complex*16, dimension( lda, * )A, integerLDA, complex*16, dimension( * )X, integerINCX, double precisionBETA, double precision, dimension( * )Y, integerINCY)</h3>

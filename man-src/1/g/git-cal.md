@@ -10,18 +10,18 @@ description: "git-cal – A simple tool to view commits calendar (similar to git
 
 <p> git-cal &#8211; A simple tool to view commits calendar (similar to github contributions calendar) on command line </p>
 <h2>SYNOPSIS</h2>
-<p> &#8220;git-cal&#8221; is a tool to visualize the git commit history in github&#8217;s contribution calendar style. The calendar shows how frequently the commits are made over the past year or some choosen period Activity can be displayed using ascii, ansi or unicode characters, default is choosen based on <font SIZE="-1">ENV</font> </p>
+<p> &#8220;git-cal&#8221; is a tool to visualize the git commit history in github&#8217;s contribution calendar style. The calendar shows how frequently the commits are made over the past year or some choosen period Activity can be displayed using ascii, ansi or unicode characters, default is choosen based on ENV </p>
 <pre><code>
 git - cal git - cal-- period = &lt;1..12, -1.. - 11&gt;
                                    git - cal-- author = &lt;author&gt; --&lt;filepath&gt;
                                                             git - cal-- ascii git - cal-- ansi git - cal-- unicode
 </code></pre>
-<h3><font SIZE="-1">OPTIONS</font></h3>
+<h3>OPTIONS</h3>
 <dl>
 <dt>&#8211;ansi</dt>
-<dd> Display activity using <font SIZE="-1">ANSI</font> colors</dd>
+<dd> Display activity using ANSI colors</dd>
 <dt>&#8211;ascii</dt>
-<dd> Display activity using <font SIZE="-1">ASCII</font> characters instead of <font SIZE="-1">ANSI</font> colors.</dd>
+<dd> Display activity using ASCII characters instead of ANSI colors.</dd>
 <dt>&#8211;author=&lt;author&gt;</dt>
 <dd> View commits of a particular author.</dd>
 <dt>&#8211;period|p=&lt;n&gt;</dt>
@@ -40,14 +40,14 @@ git - cal git - cal-- period = &lt;1..12, -1.. - 11&gt;
 <dl>
 </dl>
 </dl>
-<h3><font SIZE="-1">ADDITIONAL OPTIONS</font></h3>
+<h3>ADDITIONAL OPTIONS</h3>
 <pre>
   -- filename to view the logs of a particular file or directory
 </pre>
 <h2>AUTHOR</h2>
 <p> Karthik katooru &lt;karthikkatooru [at] gmail.com&gt;</p>
 <h2>COPYRIGHT AND LICENSE</h2>
-<p> This program is free software; you can redistribute it and/or modify it under the <font SIZE="-1">MIT</font> License</p>
+<p> This program is free software; you can redistribute it and/or modify it under the MIT License</p>
 <h2>POD ERRORS</h2>
 <p> Hey! <code>The above document had some coding errors, which are explained below:</code></p>
 <dl>

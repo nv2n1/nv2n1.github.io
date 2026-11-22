@@ -9,13 +9,13 @@ description: "Font Path Functions – Functions that edit the paths being used t
 
 <p>Font Path Functions &#8211; Functions that edit the paths being used to load fonts. </p>
 <h3>Functions</h3>
-<p>EAPI void <code>evas_font_path_clear</code> (<code>Evas</code> *e)<br />
- <i>Removes all font paths loaded into memory for the given evas. </i><br />
- EAPI void <code>evas_font_path_append</code> (<code>Evas</code> *e, const char *path)<br />
- <i>Appends a font path to the list of font paths used by the given evas. </i><br />
- EAPI void <code>evas_font_path_prepend</code> (<code>Evas</code> *e, const char *path)<br />
- <i>Prepends a font path to the list of font paths used by the given evas. </i><br />
- EAPI const <code>Evas_List</code> * <code>evas_font_path_list</code> (const <code>Evas</code> *e)<br />
+<p>EAPI void <code>evas_font_path_clear</code> (<code>Evas</code> *e)<br/>
+ <i>Removes all font paths loaded into memory for the given evas. </i><br/>
+ EAPI void <code>evas_font_path_append</code> (<code>Evas</code> *e, const char *path)<br/>
+ <i>Appends a font path to the list of font paths used by the given evas. </i><br/>
+ EAPI void <code>evas_font_path_prepend</code> (<code>Evas</code> *e, const char *path)<br/>
+ <i>Prepends a font path to the list of font paths used by the given evas. </i><br/>
+ EAPI const <code>Evas_List</code> * <code>evas_font_path_list</code> (const <code>Evas</code> *e)<br/>
  <i>Retrieves the list of font paths used by the given evas. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that edit the paths being used to load fonts.</p>
@@ -24,7 +24,7 @@ description: "Font Path Functions – Functions that edit the paths being used t
 <p>Appends a font path to the list of font paths used by the given evas. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>e</i> The given evas.<br />
+<dd><i>e</i> The given evas.<br/>
  <i>path</i> The new font path.</dd></dl>
 <p> References evas_list_append().</p>
 <h3>EAPI void evas_font_path_clear (<code>Evas</code> * e)</h3>
@@ -46,7 +46,7 @@ description: "Font Path Functions – Functions that edit the paths being used t
 <p>Prepends a font path to the list of font paths used by the given evas. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>e</i> The given evas.<br />
+<dd><i>e</i> The given evas.<br/>
  <i>path</i> The new font path.</dd></dl>
 <p> References evas_list_prepend().</p>
 <h2>Author</h2>

@@ -50,26 +50,26 @@ recorded using the -a (system-wide) 'perf record' option.
 <dl>
 <dt>
 </dt><dd>
-&#8216;perf script report &lt;script&gt; [args]&#8217; to run and display the results<br />
-    of&lt;script&gt;<br />
-        .&lt;script&gt;is the name displayed in the output of &#8216;perf trace&#8211; list&#8217; i.e. the actual script name minus any language extension.The perf.data output from a previous run of &#8216;perf script record&lt;script&gt;&#8217; is used and should be present for this command to succeed.[args] refers to the(mainly optional) args expected by<br />
+&#8216;perf script report &lt;script&gt; [args]&#8217; to run and display the results<br/>
+    of&lt;script&gt;<br/>
+        .&lt;script&gt;is the name displayed in the output of &#8216;perf trace&#8211; list&#8217; i.e. the actual script name minus any language extension.The perf.data output from a previous run of &#8216;perf script record&lt;script&gt;&#8217; is used and should be present for this command to succeed.[args] refers to the(mainly optional) args expected by<br/>
     the script.
 </dd></dl>
 <dl>
 <dt>
 </dt><dd>
-&#8216;perf script &lt;script&gt; &lt;required-script-args&gt; &lt;command&gt;&#8217; to both<br />
-record the events required for &lt;script&gt; and to run the &lt;script&gt;<br />
-using &#8216;live-mode&#8217; i.e. without writing anything to disk.  &lt;script&gt;<br />
-is the name displayed in the output of &#8216;perf script &#8211;list&#8217; i.e. the<br />
-actual script name minus any language extension.  If &lt;command&gt; is<br />
-not specified, the events are recorded using the -a (system-wide)<br />
-&#8216;perf record&#8217; option.  If &lt;script&gt; has any required args, they<br />
-should be specified before &lt;command&gt;.  This mode doesn&#8217;t allow for<br />
-optional script args to be specified;<br />
-if optional<br />
-script args are<br />
-    desired,<br />
+&#8216;perf script &lt;script&gt; &lt;required-script-args&gt; &lt;command&gt;&#8217; to both<br/>
+record the events required for &lt;script&gt; and to run the &lt;script&gt;<br/>
+using &#8216;live-mode&#8217; i.e. without writing anything to disk.  &lt;script&gt;<br/>
+is the name displayed in the output of &#8216;perf script &#8211;list&#8217; i.e. the<br/>
+actual script name minus any language extension.  If &lt;command&gt; is<br/>
+not specified, the events are recorded using the -a (system-wide)<br/>
+&#8216;perf record&#8217; option.  If &lt;script&gt; has any required args, they<br/>
+should be specified before &lt;command&gt;.  This mode doesn&#8217;t allow for<br/>
+optional script args to be specified;<br/>
+if optional<br/>
+script args are<br/>
+    desired,<br/>
     they can be specified using separate &#8216;perf script record&#8217; and &#8216;perf script report&#8217; commands, with the stdout of the record step piped to the stdin of the report script, using the &#8216;-o -&#8216; and &#8216;-i -&#8216; options of the corresponding commands.
 </dd></dl>
 <dl>

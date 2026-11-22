@@ -110,9 +110,9 @@ description: "NetworkManager-dispatcher – Dispatch user scripts for NetworkMan
 <p> In case of VPN, VPN_IP_IFACE is set, and IP4_*, IP6_* variables with VPN prefix are exported too, like VPN_IP4_ADDRESS_0, VPN_IP4_NUM_ADDRESSES. </p>
 <p> Dispatcher scripts are run one at a time, but asynchronously from the main NetworkManager process, and will be killed if they run for too long. If your script might take arbitrarily long to complete, you should spawn a child process and have the parent return immediately. Scripts that are symbolic links pointing inside the /etc/NetworkManager/dispatcher.d/no-wait.d/ directory are run immediately, without waiting for the termination of previous scripts, and in parallel. Also beware that once a script is queued, it will always be run, even if a later event renders it obsolete. (Eg, if an interface goes up, and then back down again quickly, it is possible that one or more &quot;up&quot; scripts will be run after the interface has gone down.)</p>
 <h2>Bugs</h2>
-<p>Please report any bugs you find in NetworkManager at the m[blue]<code>NetworkManager issue tracker</code>m[]<font SIZE="-2">[1]</font>.</p>
+<p>Please report any bugs you find in NetworkManager at the m[blue]<code>NetworkManager issue tracker</code>m[][1].</p>
 <h2>See Also</h2>
-<p>m[blue]<code>NetworkManager home page</code>m[]<font SIZE="-2">[2]</font>, <code><a href="/docs/linux/man/8-networkmanager/">NetworkManager</a></code>(8),</p>
+<p>m[blue]<code>NetworkManager home page</code>m[][2], <code><a href="/docs/linux/man/8-networkmanager/">NetworkManager</a></code>(8),</p>
 <h2>Notes</h2>
 <dl>
 <dt> 1.</dt>

@@ -36,9 +36,9 @@ description: "sg_map26 – map SCSI generic (sg) device to corresponding device 
 <p>This utility is designed for the Linux 2.6 (and later) kernel series. It uses special file major and minor numbers (and whether the special is block or character) together with sysfs to do its mapping or matching. In the absence of any other information, device special files are assumed to be in the &#8216;/dev&#8217; directory while sysfs is assumed to be mounted at &#8216;/sys&#8217;. Device names in sysfs are predictable, given the corresponding major and minor number of the device. However, due to udev rules, the name of device special files can be anything the user desires (e.g. &#8216;/dev/sda&#8217; could be named &#8216;/dev/my_boot_disk&#8217;). When trying to find a resultant device special file, this utility uses the major and minor numbers (and whether a block or char device is sought) to search the device directory. </p>
 <p> This utility only shows one relationship at a time. To get an overview of all SCSI devices, with special file names and optionally the &quot;mapped&quot; sg device name, see the lsscsi utility.</p>
 <h2>Examples</h2>
-<p>Assume sg2 maps to sdb while dvd, cdrom and hdc are all matching.<br />
+<p>Assume sg2 maps to sdb while dvd, cdrom and hdc are all matching.<br/>
 &nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>sg_map26&nbsp;<wbr>/dev/sg2 </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>/dev/sdb<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>/dev/sdb<br/>
 &nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>sg_map26&nbsp;<wbr>/dev/sdb </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>/dev/sg2 </p>
 <pre><code># sg_map26 --result=0 /dev/sdb
@@ -47,7 +47,7 @@ description: "sg_map26 – map SCSI generic (sg) device to corresponding device 
 /sys/block/sda
 # sg_map26 --result=1 /dev/sdb
 /sys/class/scsi_generic/sg0</code></pre>
-<p> Now look at &#8216;/dev/hdc&#8217; and friends<br />
+<p> Now look at &#8216;/dev/hdc&#8217; and friends<br/>
 &nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>sg_map26&nbsp;<wbr>/dev/hdc </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&lt;error: a hd device does not map to a sg device&gt; </p>
 <pre><code># sg_map26 --result=3 /dev/hdc
@@ -69,7 +69,7 @@ description: "sg_map26 – map SCSI generic (sg) device to corresponding device 
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;dgilbert at interlog dot com&gt;.</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2005-2012 Douglas Gilbert<br />
+<p>Copyright &#169; 2005-2012 Douglas Gilbert<br/>
  This software is distributed under a FreeBSD license. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/7-udev/">udev</a>(7), lsscsi(lsscsi)</code> </p>

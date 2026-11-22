@@ -11,7 +11,7 @@ description: "sgees.f –"
 <p> sgees.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>sgees</code> (JOBVS, SORT, SELECT, N, A, LDA, SDIM, WR, WI, VS, LDVS, WORK, LWORK, BWORK, INFO)<br />
+<p> subroutine <code>sgees</code> (JOBVS, SORT, SELECT, N, A, LDA, SDIM, WR, WI, VS, LDVS, WORK, LWORK, BWORK, INFO)<br/>
  <i></i><code> SGEES computes the eigenvalues, the Schur form, and, optionally, the matrix of Schur vectors for GE matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sgees (characterJOBVS, characterSORT, logical, externalSELECT, integerN, real, dimension( lda, * )A, integerLDA, integerSDIM, real, dimension( * )WR, real, dimension( * )WI, real, dimension( ldvs, * )VS, integerLDVS, real, dimension( * )WORK, integerLWORK, logical, dimension( * )BWORK, integerINFO)</h3>
@@ -54,13 +54,13 @@ description: "sgees.f –"
           = 'S': Eigenvalues are ordered (see SELECT).
 </pre>
 <p> <i>SELECT</i> </p>
-<p>SELECT is LOGICAL FUNCTION of two REAL arguments<br />
-    SELECT must be declared EXTERNAL in the calling subroutine.If SORT = &#8216;S&#8217;,<br />
-                                                                  SELECT is used to select eigenvalues to sort<br />
-                                                                      to the top left of the Schur form.If SORT = &#8216;N&#8217;,<br />
-                                                                  SELECT is not referenced.An eigenvalue WR(j) + sqrt(-1) * WI(j)<br />
-is selected if SELECT (WR(j), WI(j)) is true;<br />
-i.e., if either one of a complex conjugate pair of eigenvalues is selected, then both complex eigenvalues are selected.Note that a selected complex eigenvalue may no longer satisfy SELECT(WR(j), WI(j)) =.TRUE.after ordering, since ordering may change the value of complex eigenvalues(especially if the eigenvalue is ill &#8211; conditioned);<br />
+<p>SELECT is LOGICAL FUNCTION of two REAL arguments<br/>
+    SELECT must be declared EXTERNAL in the calling subroutine.If SORT = &#8216;S&#8217;,<br/>
+                                                                  SELECT is used to select eigenvalues to sort<br/>
+                                                                      to the top left of the Schur form.If SORT = &#8216;N&#8217;,<br/>
+                                                                  SELECT is not referenced.An eigenvalue WR(j) + sqrt(-1) * WI(j)<br/>
+is selected if SELECT (WR(j), WI(j)) is true;<br/>
+i.e., if either one of a complex conjugate pair of eigenvalues is selected, then both complex eigenvalues are selected.Note that a selected complex eigenvalue may no longer satisfy SELECT(WR(j), WI(j)) =.TRUE.after ordering, since ordering may change the value of complex eigenvalues(especially if the eigenvalue is ill &#8211; conditioned);<br/>
 in this case INFO is set to N + 2(see INFO below).</p>
 <p> <i>N</i> </p>
 <pre>
@@ -109,9 +109,9 @@ in this case INFO is set to N + 2(see INFO below).</p>
           If JOBVS = 'N', VS is not referenced.
 </pre>
 <p> <i>LDVS</i> </p>
-<p>LDVS is INTEGER<br />
-        The leading dimension of the array VS.LDVS &gt;= 1;<br />
-if JOBVS<br />
+<p>LDVS is INTEGER<br/>
+        The leading dimension of the array VS.LDVS &gt;= 1;<br/>
+if JOBVS<br/>
 = &#8216;V&#8217;, LDVS &gt;= N.</p>
 <p> <i>WORK</i> </p>
 <pre>

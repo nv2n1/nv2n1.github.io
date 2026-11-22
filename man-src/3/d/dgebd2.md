@@ -11,7 +11,7 @@ description: "dgebd2.f –"
 <p> dgebd2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dgebd2</code> (M, N, A, LDA, D, E, TAUQ, TAUP, WORK, INFO)<br />
+<p> subroutine <code>dgebd2</code> (M, N, A, LDA, D, E, TAUQ, TAUP, WORK, INFO)<br/>
  <i></i><code>DGEBD2</code> reduces a general matrix to bidiagonal form using an unblocked algorithm.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dgebd2 (integerM, integerN, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( * )D, double precision, dimension( * )E, double precision, dimension( * )TAUQ, double precision, dimension( * )TAUP, double precision, dimension( * )WORK, integerINFO)</h3>
@@ -70,9 +70,9 @@ the
           D(i) = A(i,i).
 </pre>
 <p> <i>E</i> </p>
-<p>          E is DOUBLE PRECISION array, dimension (min(M,N)-1)<br />
-          The off-diagonal elements of the bidiagonal matrix B:<br />
-          if m &gt;= n, E(i) = A(i,i+1) for i = 1,2,&#8230;,n-1;<br />
+<p>          E is DOUBLE PRECISION array, dimension (min(M,N)-1)<br/>
+          The off-diagonal elements of the bidiagonal matrix B:<br/>
+          if m &gt;= n, E(i) = A(i,i+1) for i = 1,2,&#8230;,n-1;<br/>
           if m &lt; n, E(i) = A(i+1,i) for i = 1,2,&#8230;,m-1.</p>
 <p> <i>TAUQ</i> </p>
 <pre>

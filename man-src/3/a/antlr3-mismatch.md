@@ -13,17 +13,17 @@ description: "src/antlr3treeparser.c –"
 <h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3treeparser.h">antlr3treeparser.h</a>&gt; </p>
 <h3>Functions</h3>
-<p> ANTLR3_API void <code>antlr3MTNExceptionNew</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer)<br />
- <i>Creates a new Mismatched Tree Nde Exception and inserts in the recognizer exception stack. </i><br />
+<p> ANTLR3_API void <code>antlr3MTNExceptionNew</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer)<br/>
+ <i>Creates a new Mismatched Tree Nde Exception and inserts in the recognizer exception stack. </i><br/>
  ANTLR3_API <code>pANTLR3_TREE_PARSER</code> <code>antlr3TreeParserNewStream</code> (<code>ANTLR3_UINT32</code> sizeHint, <code>pANTLR3_COMMON_TREE_NODE_STREAM</code> ctnstream, <code>pANTLR3_RECOGNIZER_SHARED_STATE</code> state) </p>
 <p> static void <code>freeParser</code> (<code>pANTLR3_TREE_PARSER</code> parser) </p>
 <p> static void * <code>getCurrentInputSymbol</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer, <code>pANTLR3_INT_STREAM</code> istream) </p>
 <p> static void * <code>getMissingSymbol</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer, <code>pANTLR3_INT_STREAM</code> istream, <code>pANTLR3_EXCEPTION</code> e, <code>ANTLR3_UINT32</code> expectedTokenType, <code>pANTLR3_BITSET_LIST</code> follow) </p>
-<p> static <code>pANTLR3_COMMON_TREE_NODE_STREAM</code> <code>getTreeNodeStream</code> (<code>pANTLR3_TREE_PARSER</code> parser)<br />
- <i>Return a pointer to the input stream. </i><br />
- static void <code>mismatch</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer, <code>ANTLR3_UINT32</code> ttype, <code>pANTLR3_BITSET_LIST</code> follow)<br />
- <i>Override for standard base recognizer mismatch function as we have DOWN/UP nodes in the stream that have no line info, plus we want to alter the exception type. </i><br />
- static void <code>setTreeNodeStream</code> (<code>pANTLR3_TREE_PARSER</code> parser, <code>pANTLR3_COMMON_TREE_NODE_STREAM</code> input)<br />
+<p> static <code>pANTLR3_COMMON_TREE_NODE_STREAM</code> <code>getTreeNodeStream</code> (<code>pANTLR3_TREE_PARSER</code> parser)<br/>
+ <i>Return a pointer to the input stream. </i><br/>
+ static void <code>mismatch</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer, <code>ANTLR3_UINT32</code> ttype, <code>pANTLR3_BITSET_LIST</code> follow)<br/>
+ <i>Override for standard base recognizer mismatch function as we have DOWN/UP nodes in the stream that have no line info, plus we want to alter the exception type. </i><br/>
+ static void <code>setTreeNodeStream</code> (<code>pANTLR3_TREE_PARSER</code> parser, <code>pANTLR3_COMMON_TREE_NODE_STREAM</code> input)<br/>
  <i>Set the input stream and reset the parser. </i></p>
 <h2>Detailed Description</h2>
 <p> Implementation of the tree parser and overrides for the base recognizer. </p>

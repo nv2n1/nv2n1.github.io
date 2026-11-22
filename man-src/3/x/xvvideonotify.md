@@ -10,21 +10,21 @@ description: "XvVideoNotify – event generated for video processing"
 <p>XvVideoNotify &#8211; event generated for video processing</p>
 <h2>Synopsis</h2>
 <p><code>#include &lt;X11/extensions/Xvlib.h&gt;</code> </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>typedef union&nbsp;<wbr>{<br />
-&nbsp;<wbr>int type;<br />
-&nbsp;<wbr>XvVideoNotifyEvent xvvideo;<br />
-&nbsp;<wbr>XvPortNotifyEvent xvport;<br />
-&nbsp;<wbr>long pad[24];<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>typedef union&nbsp;<wbr>{<br/>
+&nbsp;<wbr>int type;<br/>
+&nbsp;<wbr>XvVideoNotifyEvent xvvideo;<br/>
+&nbsp;<wbr>XvPortNotifyEvent xvport;<br/>
+&nbsp;<wbr>long pad[24];<br/>
 &nbsp;<wbr>&nbsp;<wbr>}&nbsp;<wbr>XvEvent; </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>typedef struct&nbsp;<wbr>{<br />
-&nbsp;<wbr>int type;<br />
-&nbsp;<wbr>unsigned long serial;<br />
-&nbsp;<wbr>Bool send_event;<br />
-&nbsp;<wbr>Display&nbsp;<wbr>*display;<br />
-&nbsp;<wbr>Drawable drawable;<br />
-&nbsp;<wbr>unsigned long reason;<br />
-&nbsp;<wbr>XvPortID port_id;<br />
-&nbsp;<wbr>Time time;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>typedef struct&nbsp;<wbr>{<br/>
+&nbsp;<wbr>int type;<br/>
+&nbsp;<wbr>unsigned long serial;<br/>
+&nbsp;<wbr>Bool send_event;<br/>
+&nbsp;<wbr>Display&nbsp;<wbr>*display;<br/>
+&nbsp;<wbr>Drawable drawable;<br/>
+&nbsp;<wbr>unsigned long reason;<br/>
+&nbsp;<wbr>XvPortID port_id;<br/>
+&nbsp;<wbr>Time time;<br/>
 &nbsp;<wbr>&nbsp;<wbr>}&nbsp;<wbr>XvVideoNotifyEvent; </p>
 <dl COMPACT>
 <dt><i>type</i></dt>

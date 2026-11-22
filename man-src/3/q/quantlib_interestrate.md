@@ -12,9 +12,9 @@ description: "QuantLib::InterestRate – Concrete interest rate class."
 <p>#include &lt;ql/interestrate.hpp&gt; </p>
 <h3>Public Member Functions</h3>
 <p><code>constructors</code> </p>
-<p> <code>InterestRate</code> ()<br />
- <i>Default constructor returning a null interest rate. </i><br />
- <code>InterestRate</code> (<code>Rate</code> r, const <code>DayCounter</code> &amp;dc=<code>Actual365Fixed</code>(), Compounding comp=Continuous, <code>Frequency</code> freq=Annual)<br />
+<p> <code>InterestRate</code> ()<br/>
+ <i>Default constructor returning a null interest rate. </i><br/>
+ <code>InterestRate</code> (<code>Rate</code> r, const <code>DayCounter</code> &amp;dc=<code>Actual365Fixed</code>(), Compounding comp=Continuous, <code>Frequency</code> freq=Annual)<br/>
  <i>Standard constructor. </i> </p>
 <p> <code>conversions</code> </p>
 <p> <code>operator Rate</code> () const </p>
@@ -24,27 +24,27 @@ description: "QuantLib::InterestRate – Concrete interest rate class."
 <p> Compounding <code>compounding</code> () const </p>
 <p> <code>Frequency</code> <code>frequency</code> () const </p>
 <p> <code>discount/compound factor calculations</code> </p>
-<p> <code>DiscountFactor</code> <code>discountFactor</code> (<code>Time</code> t) const<br />
- <i>discount factor implied by the rate compounded at time t. </i><br />
- <code>DiscountFactor</code> <code>discountFactor</code> (const <code>Date</code> &amp;d1, const <code>Date</code> &amp;d2, const <code>Date</code> &amp;refStart=<code>Date</code>(), const <code>Date</code> &amp;refEnd=<code>Date</code>()) const<br />
- <i>discount factor implied by the rate compounded between two dates </i><br />
- Real <code>compoundFactor</code> (<code>Time</code> t) const<br />
- <i>compound factor implied by the rate compounded at time t. </i><br />
- Real <code>compoundFactor</code> (const <code>Date</code> &amp;d1, const <code>Date</code> &amp;d2, const <code>Date</code> &amp;refStart=<code>Date</code>(), const <code>Date</code> &amp;refEnd=<code>Date</code>()) const<br />
+<p> <code>DiscountFactor</code> <code>discountFactor</code> (<code>Time</code> t) const<br/>
+ <i>discount factor implied by the rate compounded at time t. </i><br/>
+ <code>DiscountFactor</code> <code>discountFactor</code> (const <code>Date</code> &amp;d1, const <code>Date</code> &amp;d2, const <code>Date</code> &amp;refStart=<code>Date</code>(), const <code>Date</code> &amp;refEnd=<code>Date</code>()) const<br/>
+ <i>discount factor implied by the rate compounded between two dates </i><br/>
+ Real <code>compoundFactor</code> (<code>Time</code> t) const<br/>
+ <i>compound factor implied by the rate compounded at time t. </i><br/>
+ Real <code>compoundFactor</code> (const <code>Date</code> &amp;d1, const <code>Date</code> &amp;d2, const <code>Date</code> &amp;refStart=<code>Date</code>(), const <code>Date</code> &amp;refEnd=<code>Date</code>()) const<br/>
  <i>compound factor implied by the rate compounded between two dates </i> </p>
 <p> <code>equivalent rate calculations</code> </p>
-<p> <code>InterestRate</code> <code>equivalentRate</code> (<code>Time</code> t, Compounding comp, <code>Frequency</code> freq=Annual) const<br />
- <i>equivalent interest rate for a compounding period t. </i><br />
- <code>InterestRate</code> <code>equivalentRate</code> (<code>Date</code> d1, <code>Date</code> d2, const <code>DayCounter</code> &amp;resultDC, Compounding comp, <code>Frequency</code> freq=Annual) const<br />
+<p> <code>InterestRate</code> <code>equivalentRate</code> (<code>Time</code> t, Compounding comp, <code>Frequency</code> freq=Annual) const<br/>
+ <i>equivalent interest rate for a compounding period t. </i><br/>
+ <code>InterestRate</code> <code>equivalentRate</code> (<code>Date</code> d1, <code>Date</code> d2, const <code>DayCounter</code> &amp;resultDC, Compounding comp, <code>Frequency</code> freq=Annual) const<br/>
  <i>equivalent rate for a compounding period between two dates </i></p>
 <h3>Static Public Member Functions</h3>
 <p><code>implied rate calculations</code> </p>
-<p> static <code>InterestRate</code> <code>impliedRate</code> (Real compound, <code>Time</code> t, const <code>DayCounter</code> &amp;resultDC, Compounding comp, <code>Frequency</code> freq=Annual)<br />
- <i>implied interest rate for a given compound factor at a given time. </i><br />
- static <code>InterestRate</code> <code>impliedRate</code> (Real compound, const <code>Date</code> &amp;d1, const <code>Date</code> &amp;d2, const <code>DayCounter</code> &amp;resultDC, Compounding comp, <code>Frequency</code> freq=Annual)<br />
+<p> static <code>InterestRate</code> <code>impliedRate</code> (Real compound, <code>Time</code> t, const <code>DayCounter</code> &amp;resultDC, Compounding comp, <code>Frequency</code> freq=Annual)<br/>
+ <i>implied interest rate for a given compound factor at a given time. </i><br/>
+ static <code>InterestRate</code> <code>impliedRate</code> (Real compound, const <code>Date</code> &amp;d1, const <code>Date</code> &amp;d2, const <code>DayCounter</code> &amp;resultDC, Compounding comp, <code>Frequency</code> freq=Annual)<br/>
  <i>implied rate for a given compound factor between two dates. </i></p>
 <h3>Related Functions</h3>
-<p>(Note that these are not member functions.)<br />
+<p>(Note that these are not member functions.)<br/>
  std::ostream &amp; <code>operator&lt;&lt;</code> (std::ostream &amp;, const <code>InterestRate</code> &amp;) </p>
 <h2>Detailed Description</h2>
 <p>Concrete interest rate class. </p>

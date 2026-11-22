@@ -72,8 +72,8 @@ description: "nsdb-delete-nsdb – remove all FedFS info from an NSDB"
 <h2>Examples</h2>
 <p>Suppose you are the FedFS administrator of the <i>example.net</i> FedFS domain and that you want to wipe the NCE <i>o=fedfs</i> from the LDAP server <i>ldap.example.net</i>.</p>
 <dl>
-<dd>$ nsdb-delete-nsdb -l ldap.example.net -D cn=Manager -e o=fedfs<br />
- Enter NSDB password:<br />
+<dd>$ nsdb-delete-nsdb -l ldap.example.net -D cn=Manager -e o=fedfs<br/>
+ Enter NSDB password:<br/>
  Successfully removed NCE </dd>
 </dl>
 <p> This action removes all FedFS records under <i>o=fedfs</i>. Compare with the action of the <code><a href="/docs/linux/man/8-nsdb-remove-nci/">nsdb-remove-nci</a></code>(8) command.</p>

@@ -49,7 +49,7 @@ url: "/docs/linux/man/8-sg_referrals/"
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;dgilbert at interlog dot com&gt;.  </p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2009-2012 Douglas Gilbert and Hannes Reinecke <br />
+<p> Copyright &#169; 2009-2012 Douglas Gilbert and Hannes Reinecke <br/>
  This software is distributed under a FreeBSD license. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-sg_vpd/">sg_vpd</a>(8)</code> </p>

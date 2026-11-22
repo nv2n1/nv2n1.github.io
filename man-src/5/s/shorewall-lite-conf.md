@@ -48,12 +48,12 @@ description: "shorewall-lite.conf – Shorewall Lite global configuration file"
 <dd>Shorewall has traditionally been very noisy (produced lots of output). You may set the default level of verbosity using the VERBOSITY OPTION. </dd>
 <p> Values are:</p>
 <dl>
-<dd>0 &#8211; Silent. You may make it more verbose using the -v<br />
+<dd>0 &#8211; Silent. You may make it more verbose using the -v<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>option</dd></dl>
 <dl>
 <dd>1 &#8211; Major progress messages displayed</dd></dl>
 <dl>
-<dd>2 &#8211; All progress messages displayed (old default<br />
+<dd>2 &#8211; All progress messages displayed (old default<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>behavior)</dd></dl>
 <p> If not specified, then 2 is assumed.</dl>
 <h2>Files</h2>

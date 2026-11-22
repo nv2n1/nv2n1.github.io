@@ -19,7 +19,7 @@ description: "sane-rts8891 – SANE backend for rts8891 based scanners"
  HP scanjet 4000c good
  HP scanjet 4470c good</pre>
 </dd></dl>
-<p> The options the backend supports can either be selected through command line options to programs like <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1) or through GUI elements in <code>xscanimage</code>(1) or <code><a href="/docs/linux/man/1-xsane/">xsane</a></code>(1).<br />
+<p> The options the backend supports can either be selected through command line options to programs like <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1) or through GUI elements in <code>xscanimage</code>(1) or <code><a href="/docs/linux/man/1-xsane/">xsane</a></code>(1).<br/>
  If you notice any strange behavior, please report to the backend maintainer or to the SANE mailing list. Valid command line options and their syntax can be listed by using</p>
 <dl>
 <dd>scanimage &#8211;help -d rts8891</dd></dl>

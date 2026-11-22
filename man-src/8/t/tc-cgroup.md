@@ -30,5 +30,5 @@ description: "cgroup – control group based traffic control filter"
 <dd>echo 1234 &gt; /sys/fs/cgroup/net_cls/foobar/tasks echo 5678 &gt; /sys/fs/cgroup/net_cls/foobar/tasks</dd></dl>
 <p> Now by simply attaching a <code>cgroup</code> filter to a <code>qdisc</code> makes packets from PIDs 1234 and 5678 be pushed into class 1:2. </p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-tc/">tc</a></code>(8), <code><a href="/docs/linux/man/8-tc-ematch/">tc-ematch</a></code>(8),<br />
+<p><code><a href="/docs/linux/man/8-tc/">tc</a></code>(8), <code><a href="/docs/linux/man/8-tc-ematch/">tc-ematch</a></code>(8),<br/>
  the file <i>Documentation/cgroups/net_cls.txt</i> of the Linux kernel tree </p>

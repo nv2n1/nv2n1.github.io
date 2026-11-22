@@ -9,7 +9,7 @@ description: "epylog – Syslog new log notifier and parser."
 
 <p><code>epylog</code> &#8211; Syslog new log notifier and parser.</p>
 <h2>Synopsis</h2>
-<p><code>epylog</code> [-c epylog.conf] [-d LOGLEVEL] [&#8211;last PERIOD]<br />
+<p><code>epylog</code> [-c epylog.conf] [-d LOGLEVEL] [&#8211;last PERIOD]<br/>
 &nbsp;<wbr>[&#8211;store-offsets]&nbsp;<wbr>[&#8211;quiet]&nbsp;<wbr>[&#8211;cron] </p>
 <h2>Description</h2>
 <p>Epylog is a new log notifier and parser which runs periodically out of cron, looks at your logs, processes the entries in order to present them in a more comprehensive format, and then provides you with the output. It is written specifically with large network clusters in mind where a lot of machines (around 50 and upwards) log to the same loghost using syslog or syslog-ng. Alternatively, Epylog can be invoked from the command line and provide a log report based on a certain provided time period. In this case it relies on syslog timestamps to find the offsets, as opposed to the end-of-log offsets stored during the last run, though this behavior is not as reliable and is easily thwarted by skewed clocks. </p>
@@ -39,14 +39,14 @@ description: "epylog – Syslog new log notifier and parser."
 <p> <code>epylog &#8211;last day &#8211;store-offsets</code> </p>
 </dl>
 <h2>Files</h2>
-<p><i>/etc/epylog/epylog.conf</i><br />
- <i>/usr/sbin/epylog</i><br />
- <i>/etc/cron.daily/epylog.cron</i><br />
- <i>/etc/epylog/*</i><br />
- <i>/var/lib/epylog/*</i><br />
+<p><i>/etc/epylog/epylog.conf</i><br/>
+ <i>/usr/sbin/epylog</i><br/>
+ <i>/etc/cron.daily/epylog.cron</i><br/>
+ <i>/etc/epylog/*</i><br/>
+ <i>/var/lib/epylog/*</i><br/>
  <i>/usr/share/epylog/modules/*</i></p>
 <h2>Examples</h2>
-<p>The useful way to run from a command line is with &#8211;last. E.g.: <code>epylog &#8211;last day</code><br />
+<p>The useful way to run from a command line is with &#8211;last. E.g.: <code>epylog &#8211;last day</code><br/>
  <code>epylog &#8211;last 2w</code> When running from cron, you want to store the offsets and not rely on timestamps. There is a mode that allows you to do this: <code>epylog &#8211;cron</code> </p>
 <h2>Authors</h2>
 <p>Konstantin Ryabitsev &lt;icon [at] linux.duke.edu&gt;</p>

@@ -14,10 +14,10 @@ description: "Gammu – Does some neat things with your cellular phone or modem.
 <h2>DESCRIPTION</h2>
 <p> This program is a tool for mobile phones. Many vendors and phones are supported, for actual listing see &lt;<a rel="nofollow" href="http://cihar.com/gammu/phonedb/">http://cihar.com/gammu/phonedb/</a>&gt;. </p>
 <h2>OPTIONS</h2>
-<p> Parameters before command configure gammu behaviour:<br />
- -c / &#8211;config &lt;filename&gt; &#8230; name of configuration file<br />
- -s / &#8211;section &lt;confign&gt; &#8230; section of config file to use, eg. 42<br />
- -d / &#8211;debug &lt;level&gt; &#8230; debug level (see <a href="/docs/linux/man/5-gammurc/">gammurc</a>(5) for possible values)<br />
+<p> Parameters before command configure gammu behaviour:<br/>
+ -c / &#8211;config &lt;filename&gt; &#8230; name of configuration file<br/>
+ -s / &#8211;section &lt;confign&gt; &#8230; section of config file to use, eg. 42<br/>
+ -d / &#8211;debug &lt;level&gt; &#8230; debug level (see <a href="/docs/linux/man/5-gammurc/">gammurc</a>(5) for possible values)<br/>
  -f / &#8211;debug-file &lt;filename&gt; &#8230; file for logging debug messages </p>
 <h3>Commands</h3>
 <p> Commands can be specified with or without leading &#8211;. </p>
@@ -228,39 +228,39 @@ description: "Gammu – Does some neat things with your cellular phone or modem.
 <p> Please note that this adds all content of backup file to phone and does not care about current data in the phone (no duplicates are detected). </p>
 <dt><code>backup</code><i> file [-yes]</i></dt>
 <dd> Backup your phone to file. It&#8217;s possible to backup (depends on phone and backup format): </dd>
-<p> * phonebook from SIM and phone memory<br />
- * calendar notes<br />
- * SMSC settings<br />
- * operator logo<br />
- * startup (static) logo or startup text<br />
- * WAP bookmarks<br />
- * WAP settings<br />
- * caller logos and groups<br />
+<p> * phonebook from SIM and phone memory<br/>
+ * calendar notes<br/>
+ * SMSC settings<br/>
+ * operator logo<br/>
+ * startup (static) logo or startup text<br/>
+ * WAP bookmarks<br/>
+ * WAP settings<br/>
+ * caller logos and groups<br/>
  * user ringtones </p>
 <p> There are various backup formats supported and the backup format is guessed based on file extension: </p>
-<p> * .lmb &#8211; Nokia backup, supports contacts, caller logos and startup logo.<br />
- * .vcs &#8211; vCalendar, supports calendar and todo.<br />
- * .vcf &#8211; vCard, supports contacts.<br />
- * .ldif &#8211; LDAP import, supports contacts.<br />
- * .ics &#8211; iCalendar, supports calendar and todo.<br />
+<p> * .lmb &#8211; Nokia backup, supports contacts, caller logos and startup logo.<br/>
+ * .vcs &#8211; vCalendar, supports calendar and todo.<br/>
+ * .vcf &#8211; vCard, supports contacts.<br/>
+ * .ldif &#8211; LDAP import, supports contacts.<br/>
+ * .ics &#8211; iCalendar, supports calendar and todo.<br/>
  * Any other extension is Gammu backup file and it supports all data mentioned above. </p>
 <p> <i>TIP:</i> if you will backup settings to Gammu text file, it will be possible to edit it. It&#8217;s easy: many things in this file will be written double &#8211; once in Unicode, once in ASCII. When you will remove Unicode version Gammu will use ASCII on <code>restore</code> (and you can easy edit ASCII text) and will convert it according to your OS locale. When will be available Unicode version of text, it will be used instead of ASCII (usefull with Unicode phones &#8211; it isn&#8217;t important, what locale is set in computer and no conversion Unicode -&gt; ASCII and ASCII -&gt; Unicode is done). </p>
 <p> <i>TIP:</i> you can use any editor with regular expressions function to edit backup text file. Example: TextPad 4.2.2 from <a rel="nofollow" href="http://www.textpad.com/">http://www.textpad.com/</a> with regular expressions based on POSIX standard P1003.2 is OK for it. Few examples for it: </p>
-<p> * to remove info about voice tags:<br />
+<p> * to remove info about voice tags:<br/>
  FROM: ^Entry\([0-9][0-9]\)VoiceTag = \(.*\)
-<br />
+<br/>
  TO: </p>
-<p> * to change all numbers starting from +3620, +3630, +3660, +3670 to +3620<br />
+<p> * to change all numbers starting from +3620, +3630, +3660, +3670 to +3620<br/>
  Find: Type = NumberGeneral
-Entry\([0-9][0-9]\)Text = &quot;\+36\(20\|30\|60\|70\)<br />
+Entry\([0-9][0-9]\)Text = &quot;\+36\(20\|30\|60\|70\)<br/>
  Repl: Type = NumberMobile
 Entry\1Text = &quot;\+3620 </p>
-<p> * to change phone numbers type to mobile for numbers starting from +3620, +3630,&#8230; and removing the corresponding TextUnicode line<br />
+<p> * to change phone numbers type to mobile for numbers starting from +3620, +3630,&#8230; and removing the corresponding TextUnicode line<br/>
  F: Type = NumberGeneral
 Entry\([0-9][0-9]\)Text = &quot;\+36\([2367]0\)\([^\&quot;]*\)&quot;
 Entry\([0-9][0-9]\)TextUnicode = \([^
 ]*\)
-<br />
+<br/>
  R: Type = NumberMobile
 Entry\1Text = &quot;\+36\2\3&quot;
  </p>
@@ -279,14 +279,14 @@ Entry\1Text = &quot;\+36\2\3&quot;
 </dd><dt><code>getmemory</code><i> DC|MC|RC|ON|VM|SM|ME|MT|FD|SL start [stop [-nonempty]]</i></dt>
 <dd> Get memory location from phone. </dd>
 <p> Locations are numerated from 1. </p>
-<p> <code>DC</code> = Dialled calls<br />
- <code>MC</code> = Missed calls<br />
- <code>RC</code> = Received calls<br />
- <code>ON</code> = Own numbers<br />
- <code>VM</code> = voice mailbox<br />
- <code>SM</code> = SIM phonebook<br />
- <code>ME</code> = phone internal phonebook<br />
- <code>FD</code> = fixed dialling<br />
+<p> <code>DC</code> = Dialled calls<br/>
+ <code>MC</code> = Missed calls<br/>
+ <code>RC</code> = Received calls<br/>
+ <code>ON</code> = Own numbers<br/>
+ <code>VM</code> = voice mailbox<br/>
+ <code>SM</code> = SIM phonebook<br/>
+ <code>ME</code> = phone internal phonebook<br/>
+ <code>FD</code> = fixed dialling<br/>
  <code>SL</code> = sent SMS log </p>
 <dt><code>getspeeddial</code><i> start [stop]</i></dt>
 <dd>
@@ -407,39 +407,39 @@ Entry\1Text = &quot;\+36\2\3&quot;
 <p> Please note that this adds all content of backup file to phone and does not care about current data in the phone (no duplicates are detected). </p>
 <dt><code>backup</code><i> file [-yes]</i></dt>
 <dd> Backup your phone to file. It&#8217;s possible to backup (depends on phone and backup format): </dd>
-<p> * phonebook from SIM and phone memory<br />
- * calendar notes<br />
- * SMSC settings<br />
- * operator logo<br />
- * startup (static) logo or startup text<br />
- * WAP bookmarks<br />
- * WAP settings<br />
- * caller logos and groups<br />
+<p> * phonebook from SIM and phone memory<br/>
+ * calendar notes<br/>
+ * SMSC settings<br/>
+ * operator logo<br/>
+ * startup (static) logo or startup text<br/>
+ * WAP bookmarks<br/>
+ * WAP settings<br/>
+ * caller logos and groups<br/>
  * user ringtones </p>
 <p> There are various backup formats supported and the backup format is guessed based on file extension: </p>
-<p> * .lmb &#8211; Nokia backup, supports contacts, caller logos and startup logo.<br />
- * .vcs &#8211; vCalendar, supports calendar and todo.<br />
- * .vcf &#8211; vCard, supports contacts.<br />
- * .ldif &#8211; LDAP import, supports contacts.<br />
- * .ics &#8211; iCalendar, supports calendar and todo.<br />
+<p> * .lmb &#8211; Nokia backup, supports contacts, caller logos and startup logo.<br/>
+ * .vcs &#8211; vCalendar, supports calendar and todo.<br/>
+ * .vcf &#8211; vCard, supports contacts.<br/>
+ * .ldif &#8211; LDAP import, supports contacts.<br/>
+ * .ics &#8211; iCalendar, supports calendar and todo.<br/>
  * Any other extension is Gammu backup file and it supports all data mentioned above. </p>
 <p> <i>TIP:</i> if you will backup settings to Gammu text file, it will be possible to edit it. It&#8217;s easy: many things in this file will be written double &#8211; once in Unicode, once in ASCII. When you will remove Unicode version Gammu will use ASCII on <code>restore</code> (and you can easy edit ASCII text) and will convert it according to your OS locale. When will be available Unicode version of text, it will be used instead of ASCII (usefull with Unicode phones &#8211; it isn&#8217;t important, what locale is set in computer and no conversion Unicode -&gt; ASCII and ASCII -&gt; Unicode is done). </p>
 <p> <i>TIP:</i> you can use any editor with regular expressions function to edit backup text file. Example: TextPad 4.2.2 from <a rel="nofollow" href="http://www.textpad.com/">http://www.textpad.com/</a> with regular expressions based on POSIX standard P1003.2 is OK for it. Few examples for it: </p>
-<p> * to remove info about voice tags:<br />
+<p> * to remove info about voice tags:<br/>
  FROM: ^Entry\([0-9][0-9]\)VoiceTag = \(.*\)
-<br />
+<br/>
  TO: </p>
-<p> * to change all numbers starting from +3620, +3630, +3660, +3670 to +3620<br />
+<p> * to change all numbers starting from +3620, +3630, +3660, +3670 to +3620<br/>
  Find: Type = NumberGeneral
-Entry\([0-9][0-9]\)Text = &quot;\+36\(20\|30\|60\|70\)<br />
+Entry\([0-9][0-9]\)Text = &quot;\+36\(20\|30\|60\|70\)<br/>
  Repl: Type = NumberMobile
 Entry\1Text = &quot;\+3620 </p>
-<p> * to change phone numbers type to mobile for numbers starting from +3620, +3630,&#8230; and removing the corresponding TextUnicode line<br />
+<p> * to change phone numbers type to mobile for numbers starting from +3620, +3630,&#8230; and removing the corresponding TextUnicode line<br/>
  F: Type = NumberGeneral
 Entry\([0-9][0-9]\)Text = &quot;\+36\([2367]0\)\([^\&quot;]*\)&quot;
 Entry\([0-9][0-9]\)TextUnicode = \([^
 ]*\)
-<br />
+<br/>
  R: Type = NumberMobile
 Entry\1Text = &quot;\+36\2\3&quot;
  </p>
@@ -493,39 +493,39 @@ Entry\1Text = &quot;\+36\2\3&quot;
 <p> Please note that this adds all content of backup file to phone and does not care about current data in the phone (no duplicates are detected). </p>
 <dt><code>backup</code><i> file [-yes]</i></dt>
 <dd> Backup your phone to file. It&#8217;s possible to backup (depends on phone and backup format): </dd>
-<p> * phonebook from SIM and phone memory<br />
- * calendar notes<br />
- * SMSC settings<br />
- * operator logo<br />
- * startup (static) logo or startup text<br />
- * WAP bookmarks<br />
- * WAP settings<br />
- * caller logos and groups<br />
+<p> * phonebook from SIM and phone memory<br/>
+ * calendar notes<br/>
+ * SMSC settings<br/>
+ * operator logo<br/>
+ * startup (static) logo or startup text<br/>
+ * WAP bookmarks<br/>
+ * WAP settings<br/>
+ * caller logos and groups<br/>
  * user ringtones </p>
 <p> There are various backup formats supported and the backup format is guessed based on file extension: </p>
-<p> * .lmb &#8211; Nokia backup, supports contacts, caller logos and startup logo.<br />
- * .vcs &#8211; vCalendar, supports calendar and todo.<br />
- * .vcf &#8211; vCard, supports contacts.<br />
- * .ldif &#8211; LDAP import, supports contacts.<br />
- * .ics &#8211; iCalendar, supports calendar and todo.<br />
+<p> * .lmb &#8211; Nokia backup, supports contacts, caller logos and startup logo.<br/>
+ * .vcs &#8211; vCalendar, supports calendar and todo.<br/>
+ * .vcf &#8211; vCard, supports contacts.<br/>
+ * .ldif &#8211; LDAP import, supports contacts.<br/>
+ * .ics &#8211; iCalendar, supports calendar and todo.<br/>
  * Any other extension is Gammu backup file and it supports all data mentioned above. </p>
 <p> <i>TIP:</i> if you will backup settings to Gammu text file, it will be possible to edit it. It&#8217;s easy: many things in this file will be written double &#8211; once in Unicode, once in ASCII. When you will remove Unicode version Gammu will use ASCII on <code>restore</code> (and you can easy edit ASCII text) and will convert it according to your OS locale. When will be available Unicode version of text, it will be used instead of ASCII (usefull with Unicode phones &#8211; it isn&#8217;t important, what locale is set in computer and no conversion Unicode -&gt; ASCII and ASCII -&gt; Unicode is done). </p>
 <p> <i>TIP:</i> you can use any editor with regular expressions function to edit backup text file. Example: TextPad 4.2.2 from <a rel="nofollow" href="http://www.textpad.com/">http://www.textpad.com/</a> with regular expressions based on POSIX standard P1003.2 is OK for it. Few examples for it: </p>
-<p> * to remove info about voice tags:<br />
+<p> * to remove info about voice tags:<br/>
  FROM: ^Entry\([0-9][0-9]\)VoiceTag = \(.*\)
-<br />
+<br/>
  TO: </p>
-<p> * to change all numbers starting from +3620, +3630, +3660, +3670 to +3620<br />
+<p> * to change all numbers starting from +3620, +3630, +3660, +3670 to +3620<br/>
  Find: Type = NumberGeneral
-Entry\([0-9][0-9]\)Text = &quot;\+36\(20\|30\|60\|70\)<br />
+Entry\([0-9][0-9]\)Text = &quot;\+36\(20\|30\|60\|70\)<br/>
  Repl: Type = NumberMobile
 Entry\1Text = &quot;\+3620 </p>
-<p> * to change phone numbers type to mobile for numbers starting from +3620, +3630,&#8230; and removing the corresponding TextUnicode line<br />
+<p> * to change phone numbers type to mobile for numbers starting from +3620, +3630,&#8230; and removing the corresponding TextUnicode line<br/>
  F: Type = NumberGeneral
 Entry\([0-9][0-9]\)Text = &quot;\+36\([2367]0\)\([^\&quot;]*\)&quot;
 Entry\([0-9][0-9]\)TextUnicode = \([^
 ]*\)
-<br />
+<br/>
  R: Type = NumberMobile
 Entry\1Text = &quot;\+36\2\3&quot;
  </p>
@@ -561,39 +561,39 @@ Entry\1Text = &quot;\+36\2\3&quot;
 <p> Please note that this adds all content of backup file to phone and does not care about current data in the phone (no duplicates are detected). </p>
 <dt><code>backup</code><i> file [-yes]</i></dt>
 <dd> Backup your phone to file. It&#8217;s possible to backup (depends on phone and backup format): </dd>
-<p> * phonebook from SIM and phone memory<br />
- * calendar notes<br />
- * SMSC settings<br />
- * operator logo<br />
- * startup (static) logo or startup text<br />
- * WAP bookmarks<br />
- * WAP settings<br />
- * caller logos and groups<br />
+<p> * phonebook from SIM and phone memory<br/>
+ * calendar notes<br/>
+ * SMSC settings<br/>
+ * operator logo<br/>
+ * startup (static) logo or startup text<br/>
+ * WAP bookmarks<br/>
+ * WAP settings<br/>
+ * caller logos and groups<br/>
  * user ringtones </p>
 <p> There are various backup formats supported and the backup format is guessed based on file extension: </p>
-<p> * .lmb &#8211; Nokia backup, supports contacts, caller logos and startup logo.<br />
- * .vcs &#8211; vCalendar, supports calendar and todo.<br />
- * .vcf &#8211; vCard, supports contacts.<br />
- * .ldif &#8211; LDAP import, supports contacts.<br />
- * .ics &#8211; iCalendar, supports calendar and todo.<br />
+<p> * .lmb &#8211; Nokia backup, supports contacts, caller logos and startup logo.<br/>
+ * .vcs &#8211; vCalendar, supports calendar and todo.<br/>
+ * .vcf &#8211; vCard, supports contacts.<br/>
+ * .ldif &#8211; LDAP import, supports contacts.<br/>
+ * .ics &#8211; iCalendar, supports calendar and todo.<br/>
  * Any other extension is Gammu backup file and it supports all data mentioned above. </p>
 <p> <i>TIP:</i> if you will backup settings to Gammu text file, it will be possible to edit it. It&#8217;s easy: many things in this file will be written double &#8211; once in Unicode, once in ASCII. When you will remove Unicode version Gammu will use ASCII on <code>restore</code> (and you can easy edit ASCII text) and will convert it according to your OS locale. When will be available Unicode version of text, it will be used instead of ASCII (usefull with Unicode phones &#8211; it isn&#8217;t important, what locale is set in computer and no conversion Unicode -&gt; ASCII and ASCII -&gt; Unicode is done). </p>
 <p> <i>TIP:</i> you can use any editor with regular expressions function to edit backup text file. Example: TextPad 4.2.2 from <a rel="nofollow" href="http://www.textpad.com/">http://www.textpad.com/</a> with regular expressions based on POSIX standard P1003.2 is OK for it. Few examples for it: </p>
-<p> * to remove info about voice tags:<br />
+<p> * to remove info about voice tags:<br/>
  FROM: ^Entry\([0-9][0-9]\)VoiceTag = \(.*\)
-<br />
+<br/>
  TO: </p>
-<p> * to change all numbers starting from +3620, +3630, +3660, +3670 to +3620<br />
+<p> * to change all numbers starting from +3620, +3630, +3660, +3670 to +3620<br/>
  Find: Type = NumberGeneral
-Entry\([0-9][0-9]\)Text = &quot;\+36\(20\|30\|60\|70\)<br />
+Entry\([0-9][0-9]\)Text = &quot;\+36\(20\|30\|60\|70\)<br/>
  Repl: Type = NumberMobile
 Entry\1Text = &quot;\+3620 </p>
-<p> * to change phone numbers type to mobile for numbers starting from +3620, +3630,&#8230; and removing the corresponding TextUnicode line<br />
+<p> * to change phone numbers type to mobile for numbers starting from +3620, +3630,&#8230; and removing the corresponding TextUnicode line<br/>
  F: Type = NumberGeneral
 Entry\([0-9][0-9]\)Text = &quot;\+36\([2367]0\)\([^\&quot;]*\)&quot;
 Entry\([0-9][0-9]\)TextUnicode = \([^
 ]*\)
-<br />
+<br/>
  R: Type = NumberMobile
 Entry\1Text = &quot;\+36\2\3&quot;
  </p>
@@ -650,39 +650,39 @@ Entry\1Text = &quot;\+36\2\3&quot;
 <p> Please note that this adds all content of backup file to phone and does not care about current data in the phone (no duplicates are detected). </p>
 <dt><code>backup</code><i> file [-yes]</i></dt>
 <dd> Backup your phone to file. It&#8217;s possible to backup (depends on phone and backup format): </dd>
-<p> * phonebook from SIM and phone memory<br />
- * calendar notes<br />
- * SMSC settings<br />
- * operator logo<br />
- * startup (static) logo or startup text<br />
- * WAP bookmarks<br />
- * WAP settings<br />
- * caller logos and groups<br />
+<p> * phonebook from SIM and phone memory<br/>
+ * calendar notes<br/>
+ * SMSC settings<br/>
+ * operator logo<br/>
+ * startup (static) logo or startup text<br/>
+ * WAP bookmarks<br/>
+ * WAP settings<br/>
+ * caller logos and groups<br/>
  * user ringtones </p>
 <p> There are various backup formats supported and the backup format is guessed based on file extension: </p>
-<p> * .lmb &#8211; Nokia backup, supports contacts, caller logos and startup logo.<br />
- * .vcs &#8211; vCalendar, supports calendar and todo.<br />
- * .vcf &#8211; vCard, supports contacts.<br />
- * .ldif &#8211; LDAP import, supports contacts.<br />
- * .ics &#8211; iCalendar, supports calendar and todo.<br />
+<p> * .lmb &#8211; Nokia backup, supports contacts, caller logos and startup logo.<br/>
+ * .vcs &#8211; vCalendar, supports calendar and todo.<br/>
+ * .vcf &#8211; vCard, supports contacts.<br/>
+ * .ldif &#8211; LDAP import, supports contacts.<br/>
+ * .ics &#8211; iCalendar, supports calendar and todo.<br/>
  * Any other extension is Gammu backup file and it supports all data mentioned above. </p>
 <p> <i>TIP:</i> if you will backup settings to Gammu text file, it will be possible to edit it. It&#8217;s easy: many things in this file will be written double &#8211; once in Unicode, once in ASCII. When you will remove Unicode version Gammu will use ASCII on <code>restore</code> (and you can easy edit ASCII text) and will convert it according to your OS locale. When will be available Unicode version of text, it will be used instead of ASCII (usefull with Unicode phones &#8211; it isn&#8217;t important, what locale is set in computer and no conversion Unicode -&gt; ASCII and ASCII -&gt; Unicode is done). </p>
 <p> <i>TIP:</i> you can use any editor with regular expressions function to edit backup text file. Example: TextPad 4.2.2 from <a rel="nofollow" href="http://www.textpad.com/">http://www.textpad.com/</a> with regular expressions based on POSIX standard P1003.2 is OK for it. Few examples for it: </p>
-<p> * to remove info about voice tags:<br />
+<p> * to remove info about voice tags:<br/>
  FROM: ^Entry\([0-9][0-9]\)VoiceTag = \(.*\)
-<br />
+<br/>
  TO: </p>
-<p> * to change all numbers starting from +3620, +3630, +3660, +3670 to +3620<br />
+<p> * to change all numbers starting from +3620, +3630, +3660, +3670 to +3620<br/>
  Find: Type = NumberGeneral
-Entry\([0-9][0-9]\)Text = &quot;\+36\(20\|30\|60\|70\)<br />
+Entry\([0-9][0-9]\)Text = &quot;\+36\(20\|30\|60\|70\)<br/>
  Repl: Type = NumberMobile
 Entry\1Text = &quot;\+3620 </p>
-<p> * to change phone numbers type to mobile for numbers starting from +3620, +3630,&#8230; and removing the corresponding TextUnicode line<br />
+<p> * to change phone numbers type to mobile for numbers starting from +3620, +3630,&#8230; and removing the corresponding TextUnicode line<br/>
  F: Type = NumberGeneral
 Entry\([0-9][0-9]\)Text = &quot;\+36\([2367]0\)\([^\&quot;]*\)&quot;
 Entry\([0-9][0-9]\)TextUnicode = \([^
 ]*\)
-<br />
+<br/>
  R: Type = NumberMobile
 Entry\1Text = &quot;\+36\2\3&quot;
  </p>
@@ -710,39 +710,39 @@ Entry\1Text = &quot;\+36\2\3&quot;
 <dd> Adds SMSes from file (format like backupsms uses) to selected folder in phone.</dd>
 <dt><code>backup</code><i> file [-yes]</i></dt>
 <dd> Backup your phone to file. It&#8217;s possible to backup (depends on phone and backup format): </dd>
-<p> * phonebook from SIM and phone memory<br />
- * calendar notes<br />
- * SMSC settings<br />
- * operator logo<br />
- * startup (static) logo or startup text<br />
- * WAP bookmarks<br />
- * WAP settings<br />
- * caller logos and groups<br />
+<p> * phonebook from SIM and phone memory<br/>
+ * calendar notes<br/>
+ * SMSC settings<br/>
+ * operator logo<br/>
+ * startup (static) logo or startup text<br/>
+ * WAP bookmarks<br/>
+ * WAP settings<br/>
+ * caller logos and groups<br/>
  * user ringtones </p>
 <p> There are various backup formats supported and the backup format is guessed based on file extension: </p>
-<p> * .lmb &#8211; Nokia backup, supports contacts, caller logos and startup logo.<br />
- * .vcs &#8211; vCalendar, supports calendar and todo.<br />
- * .vcf &#8211; vCard, supports contacts.<br />
- * .ldif &#8211; LDAP import, supports contacts.<br />
- * .ics &#8211; iCalendar, supports calendar and todo.<br />
+<p> * .lmb &#8211; Nokia backup, supports contacts, caller logos and startup logo.<br/>
+ * .vcs &#8211; vCalendar, supports calendar and todo.<br/>
+ * .vcf &#8211; vCard, supports contacts.<br/>
+ * .ldif &#8211; LDAP import, supports contacts.<br/>
+ * .ics &#8211; iCalendar, supports calendar and todo.<br/>
  * Any other extension is Gammu backup file and it supports all data mentioned above. </p>
 <p> <i>TIP:</i> if you will backup settings to Gammu text file, it will be possible to edit it. It&#8217;s easy: many things in this file will be written double &#8211; once in Unicode, once in ASCII. When you will remove Unicode version Gammu will use ASCII on <code>restore</code> (and you can easy edit ASCII text) and will convert it according to your OS locale. When will be available Unicode version of text, it will be used instead of ASCII (usefull with Unicode phones &#8211; it isn&#8217;t important, what locale is set in computer and no conversion Unicode -&gt; ASCII and ASCII -&gt; Unicode is done). </p>
 <p> <i>TIP:</i> you can use any editor with regular expressions function to edit backup text file. Example: TextPad 4.2.2 from <a rel="nofollow" href="http://www.textpad.com/">http://www.textpad.com/</a> with regular expressions based on POSIX standard P1003.2 is OK for it. Few examples for it: </p>
-<p> * to remove info about voice tags:<br />
+<p> * to remove info about voice tags:<br/>
  FROM: ^Entry\([0-9][0-9]\)VoiceTag = \(.*\)
-<br />
+<br/>
  TO: </p>
-<p> * to change all numbers starting from +3620, +3630, +3660, +3670 to +3620<br />
+<p> * to change all numbers starting from +3620, +3630, +3660, +3670 to +3620<br/>
  Find: Type = NumberGeneral
-Entry\([0-9][0-9]\)Text = &quot;\+36\(20\|30\|60\|70\)<br />
+Entry\([0-9][0-9]\)Text = &quot;\+36\(20\|30\|60\|70\)<br/>
  Repl: Type = NumberMobile
 Entry\1Text = &quot;\+3620 </p>
-<p> * to change phone numbers type to mobile for numbers starting from +3620, +3630,&#8230; and removing the corresponding TextUnicode line<br />
+<p> * to change phone numbers type to mobile for numbers starting from +3620, +3630,&#8230; and removing the corresponding TextUnicode line<br/>
  F: Type = NumberGeneral
 Entry\([0-9][0-9]\)Text = &quot;\+36\([2367]0\)\([^\&quot;]*\)&quot;
 Entry\([0-9][0-9]\)TextUnicode = \([^
 ]*\)
-<br />
+<br/>
  R: Type = NumberMobile
 Entry\1Text = &quot;\+36\2\3&quot;
  </p>
@@ -818,15 +818,15 @@ Entry\1Text = &quot;\+36\2\3&quot;
 <dd>
 </dd><dt><code>nokiasetphonemenus</code></dt>
 <dd> Enable all (?) possible menus for DCT3 Nokia phones: </dd>
-<p> 1. ALS (Alternative Line Service) option menu<br />
- 2. vibra menu for 3210<br />
- 3. 3315 features in 3310 5.45 and higher<br />
- 4. two additional games (React and Logic) for 3210 5.31 and higher<br />
- 5. WellMate menu for 6150<br />
+<p> 1. ALS (Alternative Line Service) option menu<br/>
+ 2. vibra menu for 3210<br/>
+ 3. 3315 features in 3310 5.45 and higher<br/>
+ 4. two additional games (React and Logic) for 3210 5.31 and higher<br/>
+ 5. WellMate menu for 6150<br/>
  6. NetMonitor </p>
 <p> and for DCT4: </p>
-<p> 1. ALS (Alternative Line Service) option menu<br />
- 2. Bluetooth, WAP bookmarks and settings menu, &#8230; (6310i)<br />
+<p> 1. ALS (Alternative Line Service) option menu<br/>
+ 2. Bluetooth, WAP bookmarks and settings menu, &#8230; (6310i)<br/>
  3. GPRS Always Online </p>
 <p>&nbsp;<wbr>&#8230; </p>
 <dt><code>nokiasetvibralevel</code><i> level</i></dt>
@@ -881,39 +881,39 @@ Entry\1Text = &quot;\+36\2\3&quot;
 <p> Please note that this adds all content of backup file to phone and does not care about current data in the phone (no duplicates are detected). </p>
 <dt><code>backup</code><i> file [-yes]</i></dt>
 <dd> Backup your phone to file. It&#8217;s possible to backup (depends on phone and backup format): </dd>
-<p> * phonebook from SIM and phone memory<br />
- * calendar notes<br />
- * SMSC settings<br />
- * operator logo<br />
- * startup (static) logo or startup text<br />
- * WAP bookmarks<br />
- * WAP settings<br />
- * caller logos and groups<br />
+<p> * phonebook from SIM and phone memory<br/>
+ * calendar notes<br/>
+ * SMSC settings<br/>
+ * operator logo<br/>
+ * startup (static) logo or startup text<br/>
+ * WAP bookmarks<br/>
+ * WAP settings<br/>
+ * caller logos and groups<br/>
  * user ringtones </p>
 <p> There are various backup formats supported and the backup format is guessed based on file extension: </p>
-<p> * .lmb &#8211; Nokia backup, supports contacts, caller logos and startup logo.<br />
- * .vcs &#8211; vCalendar, supports calendar and todo.<br />
- * .vcf &#8211; vCard, supports contacts.<br />
- * .ldif &#8211; LDAP import, supports contacts.<br />
- * .ics &#8211; iCalendar, supports calendar and todo.<br />
+<p> * .lmb &#8211; Nokia backup, supports contacts, caller logos and startup logo.<br/>
+ * .vcs &#8211; vCalendar, supports calendar and todo.<br/>
+ * .vcf &#8211; vCard, supports contacts.<br/>
+ * .ldif &#8211; LDAP import, supports contacts.<br/>
+ * .ics &#8211; iCalendar, supports calendar and todo.<br/>
  * Any other extension is Gammu backup file and it supports all data mentioned above. </p>
 <p> <i>TIP:</i> if you will backup settings to Gammu text file, it will be possible to edit it. It&#8217;s easy: many things in this file will be written double &#8211; once in Unicode, once in ASCII. When you will remove Unicode version Gammu will use ASCII on <code>restore</code> (and you can easy edit ASCII text) and will convert it according to your OS locale. When will be available Unicode version of text, it will be used instead of ASCII (usefull with Unicode phones &#8211; it isn&#8217;t important, what locale is set in computer and no conversion Unicode -&gt; ASCII and ASCII -&gt; Unicode is done). </p>
 <p> <i>TIP:</i> you can use any editor with regular expressions function to edit backup text file. Example: TextPad 4.2.2 from <a rel="nofollow" href="http://www.textpad.com/">http://www.textpad.com/</a> with regular expressions based on POSIX standard P1003.2 is OK for it. Few examples for it: </p>
-<p> * to remove info about voice tags:<br />
+<p> * to remove info about voice tags:<br/>
  FROM: ^Entry\([0-9][0-9]\)VoiceTag = \(.*\)
-<br />
+<br/>
  TO: </p>
-<p> * to change all numbers starting from +3620, +3630, +3660, +3670 to +3620<br />
+<p> * to change all numbers starting from +3620, +3630, +3660, +3670 to +3620<br/>
  Find: Type = NumberGeneral
-Entry\([0-9][0-9]\)Text = &quot;\+36\(20\|30\|60\|70\)<br />
+Entry\([0-9][0-9]\)Text = &quot;\+36\(20\|30\|60\|70\)<br/>
  Repl: Type = NumberMobile
 Entry\1Text = &quot;\+3620 </p>
-<p> * to change phone numbers type to mobile for numbers starting from +3620, +3630,&#8230; and removing the corresponding TextUnicode line<br />
+<p> * to change phone numbers type to mobile for numbers starting from +3620, +3630,&#8230; and removing the corresponding TextUnicode line<br/>
  F: Type = NumberGeneral
 Entry\([0-9][0-9]\)Text = &quot;\+36\([2367]0\)\([^\&quot;]*\)&quot;
 Entry\([0-9][0-9]\)TextUnicode = \([^
 ]*\)
-<br />
+<br/>
  R: Type = NumberMobile
 Entry\1Text = &quot;\+36\2\3&quot;
  </p>
@@ -994,39 +994,39 @@ Entry\1Text = &quot;\+36\2\3&quot;
 <p> Please note that this adds all content of backup file to phone and does not care about current data in the phone (no duplicates are detected). </p>
 <dt><code>backup</code><i> file [-yes]</i></dt>
 <dd> Backup your phone to file. It&#8217;s possible to backup (depends on phone and backup format): </dd>
-<p> * phonebook from SIM and phone memory<br />
- * calendar notes<br />
- * SMSC settings<br />
- * operator logo<br />
- * startup (static) logo or startup text<br />
- * WAP bookmarks<br />
- * WAP settings<br />
- * caller logos and groups<br />
+<p> * phonebook from SIM and phone memory<br/>
+ * calendar notes<br/>
+ * SMSC settings<br/>
+ * operator logo<br/>
+ * startup (static) logo or startup text<br/>
+ * WAP bookmarks<br/>
+ * WAP settings<br/>
+ * caller logos and groups<br/>
  * user ringtones </p>
 <p> There are various backup formats supported and the backup format is guessed based on file extension: </p>
-<p> * .lmb &#8211; Nokia backup, supports contacts, caller logos and startup logo.<br />
- * .vcs &#8211; vCalendar, supports calendar and todo.<br />
- * .vcf &#8211; vCard, supports contacts.<br />
- * .ldif &#8211; LDAP import, supports contacts.<br />
- * .ics &#8211; iCalendar, supports calendar and todo.<br />
+<p> * .lmb &#8211; Nokia backup, supports contacts, caller logos and startup logo.<br/>
+ * .vcs &#8211; vCalendar, supports calendar and todo.<br/>
+ * .vcf &#8211; vCard, supports contacts.<br/>
+ * .ldif &#8211; LDAP import, supports contacts.<br/>
+ * .ics &#8211; iCalendar, supports calendar and todo.<br/>
  * Any other extension is Gammu backup file and it supports all data mentioned above. </p>
 <p> <i>TIP:</i> if you will backup settings to Gammu text file, it will be possible to edit it. It&#8217;s easy: many things in this file will be written double &#8211; once in Unicode, once in ASCII. When you will remove Unicode version Gammu will use ASCII on <code>restore</code> (and you can easy edit ASCII text) and will convert it according to your OS locale. When will be available Unicode version of text, it will be used instead of ASCII (usefull with Unicode phones &#8211; it isn&#8217;t important, what locale is set in computer and no conversion Unicode -&gt; ASCII and ASCII -&gt; Unicode is done). </p>
 <p> <i>TIP:</i> you can use any editor with regular expressions function to edit backup text file. Example: TextPad 4.2.2 from <a rel="nofollow" href="http://www.textpad.com/">http://www.textpad.com/</a> with regular expressions based on POSIX standard P1003.2 is OK for it. Few examples for it: </p>
-<p> * to remove info about voice tags:<br />
+<p> * to remove info about voice tags:<br/>
  FROM: ^Entry\([0-9][0-9]\)VoiceTag = \(.*\)
-<br />
+<br/>
  TO: </p>
-<p> * to change all numbers starting from +3620, +3630, +3660, +3670 to +3620<br />
+<p> * to change all numbers starting from +3620, +3630, +3660, +3670 to +3620<br/>
  Find: Type = NumberGeneral
-Entry\([0-9][0-9]\)Text = &quot;\+36\(20\|30\|60\|70\)<br />
+Entry\([0-9][0-9]\)Text = &quot;\+36\(20\|30\|60\|70\)<br/>
  Repl: Type = NumberMobile
 Entry\1Text = &quot;\+3620 </p>
-<p> * to change phone numbers type to mobile for numbers starting from +3620, +3630,&#8230; and removing the corresponding TextUnicode line<br />
+<p> * to change phone numbers type to mobile for numbers starting from +3620, +3630,&#8230; and removing the corresponding TextUnicode line<br/>
  F: Type = NumberGeneral
 Entry\([0-9][0-9]\)Text = &quot;\+36\([2367]0\)\([^\&quot;]*\)&quot;
 Entry\([0-9][0-9]\)TextUnicode = \([^
 ]*\)
-<br />
+<br/>
  R: Type = NumberMobile
 Entry\1Text = &quot;\+36\2\3&quot;
  </p>
@@ -1068,18 +1068,18 @@ Entry\1Text = &quot;\+36\2\3&quot;
 <p> <code>PHONE:</code> </p>
 <p> <code>DEV:</code> </p>
 <p> <code>ALL:</code> </p>
-<p> Clear user settings<br />
- * removes or set logos to default<br />
- * set default phonebook and other menu settings<br />
- * clear T9 words,<br />
- * clear call register info<br />
- * set default profiles settings<br />
+<p> Clear user settings<br/>
+ * removes or set logos to default<br/>
+ * set default phonebook and other menu settings<br/>
+ * clear T9 words,<br/>
+ * clear call register info<br/>
+ * set default profiles settings<br/>
  * clear user ringtones </p>
-<p> <code>UIF:</code><br />
- * changes like after <code>ALL</code><br />
+<p> <code>UIF:</code><br/>
+ * changes like after <code>ALL</code><br/>
  * disables netmon and PPS (all &quot;hidden&quot; menus) </p>
-<p> <code>FACTORY:</code><br />
- * changes like after <code>UIF</code><br />
+<p> <code>FACTORY:</code><br/>
+ * changes like after <code>UIF</code><br/>
  * clear date/time </p>
 <dt><code>savesms PROFILE</code><i> [-folder id] [-unread] [-read] [-unsent] [-sent] [-sender number] [-smsname name] [-smscset number] [-smscnumber number] [-reply] [-maxsms num] [-name name] [-bitmap bitmap] [-ringtone ringtone]</i></dt>
 <dd> Read ringtone (RTTL) format and bitmap (Picture Image size) and name and save as Nokia profile. </dd>
@@ -1110,29 +1110,29 @@ Entry\1Text = &quot;\+36\2\3&quot;
 <dd>
 </dd><dt><code>nokiasetphonemenus</code></dt>
 <dd> Enable all (?) possible menus for DCT3 Nokia phones: </dd>
-<p> 1. ALS (Alternative Line Service) option menu<br />
- 2. vibra menu for 3210<br />
- 3. 3315 features in 3310 5.45 and higher<br />
- 4. two additional games (React and Logic) for 3210 5.31 and higher<br />
- 5. WellMate menu for 6150<br />
+<p> 1. ALS (Alternative Line Service) option menu<br/>
+ 2. vibra menu for 3210<br/>
+ 3. 3315 features in 3310 5.45 and higher<br/>
+ 4. two additional games (React and Logic) for 3210 5.31 and higher<br/>
+ 5. WellMate menu for 6150<br/>
  6. NetMonitor </p>
 <p> and for DCT4: </p>
-<p> 1. ALS (Alternative Line Service) option menu<br />
- 2. Bluetooth, WAP bookmarks and settings menu, &#8230; (6310i)<br />
+<p> 1. ALS (Alternative Line Service) option menu<br/>
+ 2. Bluetooth, WAP bookmarks and settings menu, &#8230; (6310i)<br/>
  3. GPRS Always Online </p>
 <p>&nbsp;<wbr>&#8230; </p>
 <dt><code>nokiasetvibralevel</code><i> level</i></dt>
 <dd> Set vibra power to &quot;level&quot; (given in percent) </dd>
 <dt><code>presskeysequence</code><i> mMnNpPuUdD+-123456789*0#gGrR&lt;&gt;[]hHcCjJfFoOmMdD@</i></dt>
 <dd> Press specified key sequence on phone keyboard </dd>
-<p> <code>mM</code> &#8211; Menu<br />
- <code>nN</code> &#8211; Names key<br />
- <code>pP</code> &#8211; Power<br />
- <code>uU</code> &#8211; Up<br />
- <code>dD</code> &#8211; Down<br />
- <code>+-</code> &#8211; +-<br />
- <code>gG</code> &#8211; Green<br />
- <code>rR</code> &#8211; Red<br />
+<p> <code>mM</code> &#8211; Menu<br/>
+ <code>nN</code> &#8211; Names key<br/>
+ <code>pP</code> &#8211; Power<br/>
+ <code>uU</code> &#8211; Up<br/>
+ <code>dD</code> &#8211; Down<br/>
+ <code>+-</code> &#8211; +-<br/>
+ <code>gG</code> &#8211; Green<br/>
+ <code>rR</code> &#8211; Red<br/>
  <code>123456789*0#</code> is numeric keyboard </p>
 <dt><code>reset</code><i> SOFT|HARD</i></dt>
 <dd> Make phone reset: soft (without asking for PIN) or hard (with PIN). </dd>
@@ -1152,10 +1152,10 @@ Entry\1Text = &quot;\+36\2\3&quot;
 <dd> Output version information and exit. </dd>
 </dl>
 <h2>FILES</h2>
-<p> <i>~/.gammurc</i><br />
- <i>/usr/share/doc/gammu/*</i><br />
- <i>/dev/ircomm?</i><br />
- <i>/dev/ttyS?</i><br />
+<p> <i>~/.gammurc</i><br/>
+ <i>/usr/share/doc/gammu/*</i><br/>
+ <i>/dev/ircomm?</i><br/>
+ <i>/dev/ttyS?</i><br/>
  <i>/dev/ttyACM?</i> </p>
 <h2>EXAMPLE</h2>
 <p> To check it out, you need to have configuration file for gammu, see <a href="/docs/linux/man/5-gammurc/">gammurc</a>(5) for more details about it. </p>
@@ -1180,14 +1180,14 @@ Entry\1Text = &quot;\+36\2\3&quot;
 <p> gammu savesms EMS -protected 2 -variablebitmaplong ala.bmp -toneSElong axelf.txt -toneSE ring.txt </p>
 </dd></dl>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2003-2009 Marcin Wiacek, Michal Cihar and other authors. License GPLv2: GNU GPL version 2 &lt;<a rel="nofollow" href="http://www.gnu.org/licenses/old-licenses/gpl-2.0.html">http://www.gnu.org/licenses/old-licenses/gpl-2.0.html</a>&gt;<br />
+<p> Copyright &#169; 2003-2009 Marcin Wiacek, Michal Cihar and other authors. License GPLv2: GNU GPL version 2 &lt;<a rel="nofollow" href="http://www.gnu.org/licenses/old-licenses/gpl-2.0.html">http://www.gnu.org/licenses/old-licenses/gpl-2.0.html</a>&gt;<br/>
  This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law. </p>
 <h2>REPORTING BUGS</h2>
 <p> There are definitely many bugs, reporting to author is welcome. Please include some useful information when sending bug reports (especially debug logs, operating system, it&#8217;s version and phone information are needed). </p>
 <p> To generate debug log, enable it in gammurc (alternatively you can do it on command line using -d textall -f /tmp/gammu.log): </p>
-<p>&nbsp;<wbr>[gammu]<br />
-&nbsp;<wbr>&#8230;your connection settings&#8230;<br />
-&nbsp;<wbr>logfile&nbsp;<wbr>=&nbsp;<wbr>/tmp/gammu.log<br />
+<p>&nbsp;<wbr>[gammu]<br/>
+&nbsp;<wbr>&#8230;your connection settings&#8230;<br/>
+&nbsp;<wbr>logfile&nbsp;<wbr>=&nbsp;<wbr>/tmp/gammu.log<br/>
 &nbsp;<wbr>logformat&nbsp;<wbr>=&nbsp;<wbr>textall </p>
 <p> With this settings, Gammu generates /tmp/gammu.log on each connection to phone and stores dump of communication there. You can also find some hints for improving support for your phone in this log. </p>
 <p> Please report bugs to &lt;<a rel="nofollow" href="http://bugs.cihar.com">http://bugs.cihar.com</a>&gt;. </p>

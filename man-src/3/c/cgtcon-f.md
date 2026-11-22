@@ -10,7 +10,7 @@ description: "cgtcon.f –"
 <p>cgtcon.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>cgtcon</code> (NORM, N, DL, D, DU, DU2, IPIV, ANORM, RCOND, WORK, INFO)<br />
+<p>subroutine <code>cgtcon</code> (NORM, N, DL, D, DU, DU2, IPIV, ANORM, RCOND, WORK, INFO)<br/>
  <i></i><code>CGTCON</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cgtcon (characterNORM, integerN, complex, dimension( * )DL, complex, dimension( * )D, complex, dimension( * )DU, complex, dimension( * )DU2, integer, dimension( * )IPIV, realANORM, realRCOND, complex, dimension( * )WORK, integerINFO)</h3>

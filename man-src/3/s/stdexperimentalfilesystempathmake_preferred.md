@@ -9,8 +9,8 @@ description: "std::experimental::filesystem::path::make_preferred – std::exper
 
 <p>std::experimental::filesystem::path::make_preferred &#8211; std::experimental::filesystem::path::make_preferred</p>
 <h2>Synopsis</h2>
-<p>path&amp; make_preferred() <code>(1)</code> (filesystem TS)<br />
-Converts all directory separators in path to the preferred directory separator.<br />
+<p>path&amp; make_preferred() <code>(1)</code> (filesystem TS)<br/>
+Converts all directory separators in path to the preferred directory separator.<br/>
 For example, on systems, where \ is the preferred separator, the path foo/bar will be converted to fooar. </p>
 <h2>Parameters</h2>
 <p><i>(none)</i></p>

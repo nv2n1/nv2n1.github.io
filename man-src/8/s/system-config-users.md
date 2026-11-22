@@ -15,13 +15,13 @@ description: "system-config-users – User and Group Management tool"
 <h2>Options</h2>
 <p>None</p>
 <h2>Files</h2>
-<p>/usr/bin/system-config-users<br />
+<p>/usr/bin/system-config-users<br/>
  /usr/share/doc/system-config-users*</p>
 <h2>Examples</h2>
 <p>To run the program type: system-config-users </p>
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;<a rel="nofollow" href="http://bugzilla.redhat.com">http://bugzilla.redhat.com</a>&gt;.</p>
 <h2>License And Authors</h2>
-<p><code>system-config-users</code> is licensed under the GNU Public License and is copyrighted by Red Hat, Inc.<br />
- Online Documentation by Tammy Fox &lt;tfox [at] redhat.com&gt;<br />
+<p><code>system-config-users</code> is licensed under the GNU Public License and is copyrighted by Red Hat, Inc.<br/>
+ Online Documentation by Tammy Fox &lt;tfox [at] redhat.com&gt;<br/>
  Manpage by Chris Spencer &lt;chris [at] spencer-family.org&gt;</p>

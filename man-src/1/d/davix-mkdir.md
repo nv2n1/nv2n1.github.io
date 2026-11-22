@@ -12,7 +12,7 @@ description: "davix-mkdir – Directory creation tool based on libdavix."
 <h2>SYNOPSIS</h2>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> davix-mkdir [options]&#8230; url</p>
 <h2>DESCRIPTION</h2>
-<p> <code>davix-mkdir</code> is a tool to creat directories or collections with HTTP, Webdav or REST compatible services.<br />
+<p> <code>davix-mkdir</code> is a tool to creat directories or collections with HTTP, Webdav or REST compatible services.<br/>
  The command supports the protocol Http (http(s)://), WebDav (dav(s)://) and S3 (s3(s)://). </p>
 <p> davix-mkdir is powered by libdavix. See <a href="/docs/linux/man/3-libdavix/">libdavix</a>(3) for details. </p>
 <h2>OPTIONS</h2>
@@ -182,9 +182,9 @@ description: "davix-mkdir – Directory creation tool based on libdavix."
 </dt><dd> Azure authentication key</dd></dl>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> </p>
 <h2>EXAMPLES</h2>
-<p> <code>Creat a directory over WebDav<br />
+<p> <code>Creat a directory over WebDav<br/>
 &nbsp;<wbr>&nbsp;<wbr>davix-mkdir&nbsp;<wbr><a href="dav://webdav.example.org/dir/directory_to_create">dav://webdav.example.org/dir/directory_to_create</a> </p>
-<p> Creat a directory on a Grid Storage with VOMS authentication<br />
+<p> Creat a directory on a Grid Storage with VOMS authentication<br/>
 &nbsp;<wbr>&nbsp;<wbr>davix-mkdir -P grid&nbsp;<wbr><a href="davs://grid-storage.example.org/dir1/directory_to_create">davs://grid-storage.example.org/dir1/directory_to_create</a> </p>
 <p> </code></p>
 <h2>SEE ALSO</h2>

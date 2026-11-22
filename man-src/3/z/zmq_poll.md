@@ -32,7 +32,7 @@ description: "zmq_poll – input/output multiplexing"
 <dl>
 <dd>For standard sockets, this flag is passed through <i>zmq_poll()</i> to the underlying <i>poll()</i> system call and generally means that some sort of error condition is present on the socket specified by <i>fd</i>. For 0MQ sockets this flag has no effect if set in <i>events</i>, and shall never be returned in <i>revents</i> by <i>zmq_poll()</i>.</dd></dl>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  The <i>zmq_poll()</i> function may be implemented or emulated using operating system interfaces other than <i>poll()</i>, and as such may be subject to the limits of those interfaces in ways not defined in this documentation. </dd>
 <h2>Return Value</h2>
 <p>Upon successful completion, the <i>zmq_poll()</i> function shall return the number of <code>zmq_pollitem_t</code> structures with events signaled in <i>revents</i> or 0 if no events have been signaled. Upon failure, <i>zmq_poll()</i> shall return -1 and set <i>errno</i> to one of the values defined below.</p>

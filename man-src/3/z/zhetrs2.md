@@ -10,7 +10,7 @@ description: "zhetrs2.f –"
 <p>zhetrs2.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zhetrs2</code> (UPLO, N, NRHS, A, LDA, IPIV, B, LDB, WORK, INFO)<br />
+<p>subroutine <code>zhetrs2</code> (UPLO, N, NRHS, A, LDA, IPIV, B, LDB, WORK, INFO)<br/>
  <i></i><code>ZHETRS2</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zhetrs2 (characterUPLO, integerN, integerNRHS, complex*16, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, complex*16, dimension( ldb, * )B, integerLDB, complex*16, dimension( * )WORK, integerINFO)</h3>

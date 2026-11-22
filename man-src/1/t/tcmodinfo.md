@@ -24,12 +24,12 @@ description: "tcmodinfo – Get and Set information in transcode modules"
 <dt><code>-t</code> <i>type</i></dt>
 <dd> Specify the <i>Type</i> of module to load. Default is filter modules. In current (1.1.0) release, tcmodinfo support &#8216;filter&#8217;, &#8216;encode&#8217; and &#8216;multiplex&#8217; module types. More types will be added in future releases, to cover all the transcode module range.</dd>
 <dt><code>-M</code> <i>parameter</i></dt>
-<dd> Print out the default setting of given parameter of a given (use -i/-t options too) module. If parameter isn&#8217;t known, nothing will be print out.<br />
+<dd> Print out the default setting of given parameter of a given (use -i/-t options too) module. If parameter isn&#8217;t known, nothing will be print out.<br/>
  Caution: -M can&#8217;t be used together with -C</dd>
 <dt><code>-C</code> <i>configuration string</i></dt>
-<dd> Request to configure the module using given configuration string. Meaning of configuration string is of course module dependent, but format is always<br />
- param1:key1=val1:param2:param3:key2=val2<br />
- This option is used for debug purposes, you usually shouldn&#8217;t need it.<br />
+<dd> Request to configure the module using given configuration string. Meaning of configuration string is of course module dependent, but format is always<br/>
+ param1:key1=val1:param2:param3:key2=val2<br/>
+ This option is used for debug purposes, you usually shouldn&#8217;t need it.<br/>
  Caution: -C can&#8217;t be used together with -M</dd>
 <dt><code>-s</code> <i>socket</i></dt>
 <dd> Connect to socket <i>socket</i>. You can use this socket to do runtime configuration of transcode. For all the boring details about the socket protocol have a look at /docs/filter-socket.txt. transcode has to be started with the <code>&#8211;socket</code> option to open the socket.</dd>
@@ -49,13 +49,13 @@ description: "tcmodinfo – Get and Set information in transcode modules"
 <p> same as above for raw multiplexor </p>
 <p> <code>tcmodinfo -i xvid -t encode</code> </p>
 <p> same as above for XviD encoder </p>
-<p> <code>transcode &#8211;socket /tmp/tc-socket &amp;</code><br />
+<p> <code>transcode &#8211;socket /tmp/tc-socket &amp;</code><br/>
  <code>echo help | tcmodinfo -s /tmp/tc-socket</code> </p>
 <p> prints the socket help text and exits. </p>
 <p> <code>tcmodinfo -s /tmp/tc-socket</code> </p>
 <p> Will drop you into an interactive &quot;shell&quot; where you can talk to the socket.</p>
 <h2>AUTHORS</h2>
-<p> <code>tcmodinfo</code> was written by Tilmann Bitterberg<br />
+<p> <code>tcmodinfo</code> was written by Tilmann Bitterberg<br/>
  &lt;transcode [at] tibit.org&gt; with contributions from many others. See AUTHORS for details.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-avimerge/">avimerge</a></code>(1), <code><a href="/docs/linux/man/1-avisplit/">avisplit</a></code>(1), <code><a href="/docs/linux/man/1-tccat/">tccat</a></code>(1), <code><a href="/docs/linux/man/1-tcdecode/">tcdecode</a></code>(1), <code><a href="/docs/linux/man/1-tcdemux/">tcdemux</a></code>(1), <code><a href="/docs/linux/man/1-tcextract/">tcextract</a></code>(1), <code><a href="/docs/linux/man/1-tcprobe/">tcprobe</a></code>(1), <code><a href="/docs/linux/man/1-tcscan/">tcscan</a></code>(1), <code><a href="/docs/linux/man/1-transcode/">transcode</a></code>(1) </p>

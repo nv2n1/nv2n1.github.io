@@ -144,10 +144,10 @@ description: "7zr – A file archiver with high compression ratio format"
 <dd> User stopped the process with control-C (or similar)</dd></dl>
 </dl>
 <h2>Backup and limitations</h2>
-<p> DO NOT USE the 7-zip format for backup purpose on Linux/Unix because :<br />
+<p> DO NOT USE the 7-zip format for backup purpose on Linux/Unix because :<br/>
 &nbsp;&#8211; 7-zip does not store the owner/group of the file. </p>
-<p> On Linux/Unix, in order to backup directories you must use tar :<br />
-&nbsp;&#8211; to backup a directory&nbsp;<wbr>&nbsp;: tar cf &#8211; directory | 7zr a -si directory.tar.7z<br />
+<p> On Linux/Unix, in order to backup directories you must use tar :<br/>
+&nbsp;&#8211; to backup a directory&nbsp;<wbr>&nbsp;: tar cf &#8211; directory | 7zr a -si directory.tar.7z<br/>
 &nbsp;&#8211; to restore your backup : 7zr x -so directory.tar.7z | tar xf &#8211; </p>
 <p> If you want to send files and directories (not the owner of file) to others Unix/MacOS/Windows users, you can use the 7-zip format. </p>
 <p>&nbsp;<wbr>&nbsp;example : 7zr a directory.7z&nbsp;<wbr>&nbsp;directory </p>

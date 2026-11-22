@@ -28,12 +28,12 @@ description: "config – The SELinux sub-system configuration file."
 <h2>File Format</h2>
 <p>The <i>config</i> file supports the following parameters: </p>
 <dl>
-<dd><code>SELINUX = </code><i>enforcing</i> | <i>permissive</i> | <i>disabled</i><br />
- <code>SELINUXTYPE = </code><i>policy_name</i><br />
- <code>SETLOCALDEFS = </code><i>0</i> | <i>1</i><br />
- <code>REQUIREUSERS = </code><i>0</i> | <i>1</i><br />
+<dd><code>SELINUX = </code><i>enforcing</i> | <i>permissive</i> | <i>disabled</i><br/>
+ <code>SELINUXTYPE = </code><i>policy_name</i><br/>
+ <code>SETLOCALDEFS = </code><i>0</i> | <i>1</i><br/>
+ <code>REQUIREUSERS = </code><i>0</i> | <i>1</i><br/>
  <code>AUTORELABEL = </code><i>0</i> | <i>1</i></dd></dl>
-<p> Where:<br />
+<p> Where:<br/>
  <code>SELINUX</code></p>
 <dl>
 <dd>This entry can contain one of three values:</dd>
@@ -90,7 +90,7 @@ description: "config – The SELinux sub-system configuration file."
 <h2>Example</h2>
 <p>This example <i>config</i> file shows the minimum contents for a system to run SELinux in enforcing mode, with a <i>policy_name</i> of &#8216;targeted&#8217;:</p>
 <dl>
-<dd>SELINUX = enforcing<br />
+<dd>SELINUX = enforcing<br/>
  SELINUXTYPE = targeted</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-selinux/">selinux</a></code>(8), <code><a href="/docs/linux/man/8-sestatus/">sestatus</a></code>(8), <code><a href="/docs/linux/man/3-selinux_path/">selinux_path</a></code>(3), <code>selinux_policy_root_path</code>(3), <code><a href="/docs/linux/man/3-selinux_binary_policy_path/">selinux_binary_policy_path</a></code>(3), <code><a href="/docs/linux/man/3-getseuserbyname/">getseuserbyname</a></code>(3), <code><a href="/docs/linux/man/8-pam/">PAM</a></code>(8), <code><a href="/docs/linux/man/8-fixfiles/">fixfiles</a></code>(8), <code><a href="/docs/linux/man/3-selinux_mkload_policy/">selinux_mkload_policy</a></code>(3), <code><a href="/docs/linux/man/3-selinux_getpolicytype/">selinux_getpolicytype</a></code>(3), <code><a href="/docs/linux/man/3-security_policyvers/">security_policyvers</a></code>(3), <code><a href="/docs/linux/man/3-selinux_getenforcemode/">selinux_getenforcemode</a></code>(3), <code><a href="/docs/linux/man/5-seusers/">seusers</a></code>(5), <code><a href="/docs/linux/man/5-booleans/">booleans</a></code>(5), <code><a href="/docs/linux/man/5-local-users/">local.users</a></code>(5) </p>

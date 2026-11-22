@@ -72,10 +72,10 @@ description: "opacabletest"
 <p> The HFI -SW cable test requires that the <code>FF_MPI_APPS_DIR</code> is set, and it contains a pre-built copy of the mpi_apps for an appropriate message passing interface (MPI). </p>
 <p> The ISL cable test started by this tool assumes that the master Host Subnet Manager (HSM) is running on this host. If using the Embedded Subnet Manager (ESM), or if a different host is the master HSM, the ISL cable test must be controlled by the switch CLI, or by Intel(R) Omni-Path Fabric Suite FastFabric on the master HSM respectively.</p>
 <h2>Examples</h2>
-<p>opacabletest -A start<br />
- opacabletest -f good -A start<br />
- opacabletest -h &#8216;arwen elrond&#8217; start_fi<br />
- HOSTS=&#8217;arwen elrond&#8217; opacabletest stop<br />
+<p>opacabletest -A start<br/>
+ opacabletest -f good -A start<br/>
+ opacabletest -h &#8216;arwen elrond&#8217; start_fi<br/>
+ HOSTS=&#8217;arwen elrond&#8217; opacabletest stop<br/>
  opacabletest -A</p>
 <h2>Environment Variables</h2>
 <p>The following environment variables are also used by this command:</p>

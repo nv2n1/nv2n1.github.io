@@ -13,27 +13,27 @@ description: "ANTLR3_TOPO_struct –"
 <h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3collections.h">antlr3collections.h</a>&gt;</p>
 <h3>Data Fields</h3>
-<p> void(* <code>addEdge</code> )(struct <code>ANTLR3_TOPO_struct</code> *topo, <code>ANTLR3_UINT32</code> edge, <code>ANTLR3_UINT32</code> dependency)<br />
- <i>A method that adds an edge from one node to another. </i><br />
- <code>pANTLR3_UINT32</code> <code>cycle</code><br />
- <i>A vector used to detect cycles in the edge dependecies. </i><br />
- <code>ANTLR3_UINT32</code> <code>cycleMark</code><br />
- <i>A watermark used to accumulate potential cycles in the cycle array. </i><br />
- <code>pANTLR3_BITSET</code> * <code>edges</code><br />
- <i>A vector of vectors of edges, built by calling the addEdge method() to indicate that node number n depends on node number m. </i><br />
- void(* <code>free</code> )(struct <code>ANTLR3_TOPO_struct</code> *topo)<br />
- <i>A method to free this structure and any associated memory. </i><br />
- <code>ANTLR3_BOOLEAN</code> <code>hasCycle</code><br />
- <i>A flag that indicates the algorithm found a cycle in the edges such as 9-&gt;8-&gt;1-&gt;9 If this flag is set after you have called one of the sort routines then the detected cycle will be contained in the cycle array and cycleLimit will point to the one after the last entry in the cycle. </i><br />
- <code>ANTLR3_UINT32</code> <code>limit</code><br />
- <i>One more than the largest node index that is contained in edges/sorted. </i><br />
- <code>pANTLR3_UINT32</code> <code>sorted</code><br />
- <i>A vector used to build up the sorted output order. </i><br />
- <code>pANTLR3_UINT32</code>(* <code>sortToArray</code> )(struct <code>ANTLR3_TOPO_struct</code> *topo)<br />
- <i>A method that returns a pointer to an array of sorted node indexes. </i><br />
- void(* <code>sortVector</code> )(struct <code>ANTLR3_TOPO_struct</code> *topo, <code>pANTLR3_VECTOR</code> v)<br />
- <i>A method that sorts the supplied ANTLR3_VECTOR in place based on the previously supplied edge data. </i><br />
- <code>pANTLR3_BITSET</code> <code>visited</code><br />
+<p> void(* <code>addEdge</code> )(struct <code>ANTLR3_TOPO_struct</code> *topo, <code>ANTLR3_UINT32</code> edge, <code>ANTLR3_UINT32</code> dependency)<br/>
+ <i>A method that adds an edge from one node to another. </i><br/>
+ <code>pANTLR3_UINT32</code> <code>cycle</code><br/>
+ <i>A vector used to detect cycles in the edge dependecies. </i><br/>
+ <code>ANTLR3_UINT32</code> <code>cycleMark</code><br/>
+ <i>A watermark used to accumulate potential cycles in the cycle array. </i><br/>
+ <code>pANTLR3_BITSET</code> * <code>edges</code><br/>
+ <i>A vector of vectors of edges, built by calling the addEdge method() to indicate that node number n depends on node number m. </i><br/>
+ void(* <code>free</code> )(struct <code>ANTLR3_TOPO_struct</code> *topo)<br/>
+ <i>A method to free this structure and any associated memory. </i><br/>
+ <code>ANTLR3_BOOLEAN</code> <code>hasCycle</code><br/>
+ <i>A flag that indicates the algorithm found a cycle in the edges such as 9-&gt;8-&gt;1-&gt;9 If this flag is set after you have called one of the sort routines then the detected cycle will be contained in the cycle array and cycleLimit will point to the one after the last entry in the cycle. </i><br/>
+ <code>ANTLR3_UINT32</code> <code>limit</code><br/>
+ <i>One more than the largest node index that is contained in edges/sorted. </i><br/>
+ <code>pANTLR3_UINT32</code> <code>sorted</code><br/>
+ <i>A vector used to build up the sorted output order. </i><br/>
+ <code>pANTLR3_UINT32</code>(* <code>sortToArray</code> )(struct <code>ANTLR3_TOPO_struct</code> *topo)<br/>
+ <i>A method that returns a pointer to an array of sorted node indexes. </i><br/>
+ void(* <code>sortVector</code> )(struct <code>ANTLR3_TOPO_struct</code> *topo, <code>pANTLR3_VECTOR</code> v)<br/>
+ <i>A method that sorts the supplied ANTLR3_VECTOR in place based on the previously supplied edge data. </i><br/>
+ <code>pANTLR3_BITSET</code> <code>visited</code><br/>
  <i>The set of visited nodes as determined by a set entry in the bitmap. </i></p>
 <h2>Detailed Description</h2>
 <p> A topological sort system that given a set of dependencies of a node m on node n, can sort them in dependency order. </p>

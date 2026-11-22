@@ -9,11 +9,11 @@ description: "Public Variable Access Functions – In an Embryo program, a globa
 
 <p>Public Variable Access Functions &#8211; In an Embryo program, a global variable can be declared public, as described in <code>Scope</code>. </p>
 <h3>Functions</h3>
-<p>EAPI Embryo_Cell <code>embryo_program_variable_find</code> (Embryo_Program *ep, const char *name)<br />
- <i>Retrieves the location of the public variable in the given program with the given name. </i><br />
- EAPI int <code>embryo_program_variable_count_get</code> (Embryo_Program *ep)<br />
- <i>Retrieves the number of public variables in the given program. </i><br />
- EAPI Embryo_Cell <code>embryo_program_variable_get</code> (Embryo_Program *ep, int num)<br />
+<p>EAPI Embryo_Cell <code>embryo_program_variable_find</code> (Embryo_Program *ep, const char *name)<br/>
+ <i>Retrieves the location of the public variable in the given program with the given name. </i><br/>
+ EAPI int <code>embryo_program_variable_count_get</code> (Embryo_Program *ep)<br/>
+ <i>Retrieves the number of public variables in the given program. </i><br/>
+ EAPI Embryo_Cell <code>embryo_program_variable_get</code> (Embryo_Program *ep, int num)<br/>
  <i>Retrieves the location of the public variable in the given program with the given identifier. </i></p>
 <h2>Detailed Description</h2>
 <p>In an Embryo program, a global variable can be declared public, as described in <code>Scope</code>. </p>
@@ -31,7 +31,7 @@ description: "Public Variable Access Functions – In an Embryo program, a globa
 <p>Retrieves the location of the public variable in the given program with the given name. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ep</i> The given program.<br />
+<dd><i>ep</i> The given program.<br/>
  <i>name</i> The given name.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -41,7 +41,7 @@ description: "Public Variable Access Functions – In an Embryo program, a globa
 <p>Retrieves the location of the public variable in the given program with the given identifier. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ep</i> The given program.<br />
+<dd><i>ep</i> The given program.<br/>
  <i>num</i> The identifier of the public variable.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

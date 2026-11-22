@@ -45,26 +45,26 @@ MEUCIAMdLS/vXrrtWFepwe...
 </pre>
 </dd></dl>
 <h2>OPTIONS</h2>
-<p> <code>-v, &#8211;verbose</code><br />
+<p> <code>-v, &#8211;verbose</code><br/>
 &nbsp;<wbr>&nbsp;Print extra information about the key and signature to stderr when signing. </p>
-<p> <code>-b, &#8211;binary</code><br />
+<p> <code>-b, &#8211;binary</code><br/>
 &nbsp;<wbr>&nbsp;Don&#8217;t base64-encode the signature before outputting it. </p>
-<p> <code>-i KEY, &#8211;identity=KEY</code><br />
-&nbsp;<wbr>&nbsp;Select the key to be used for signing.&nbsp;<code>KEY</code>&nbsp;must be a relative or absolute<br />
-&nbsp;<wbr>&nbsp;filesystem path to the key file. Any format supported by the&nbsp;<code>sshpk</code>&nbsp;library<br />
+<p> <code>-i KEY, &#8211;identity=KEY</code><br/>
+&nbsp;<wbr>&nbsp;Select the key to be used for signing.&nbsp;<code>KEY</code>&nbsp;must be a relative or absolute<br/>
+&nbsp;<wbr>&nbsp;filesystem path to the key file. Any format supported by the&nbsp;<code>sshpk</code>&nbsp;library<br/>
 &nbsp;<wbr>&nbsp;is supported, including OpenSSH formats and standard PEM PKCS. </p>
-<p> <code>-f PATH, &#8211;file=PATH</code><br />
+<p> <code>-f PATH, &#8211;file=PATH</code><br/>
 &nbsp;<wbr>&nbsp;Input file to sign instead of stdin. </p>
-<p> <code>-o PATH, &#8211;out=PATH</code><br />
+<p> <code>-o PATH, &#8211;out=PATH</code><br/>
 &nbsp;<wbr>&nbsp;Output file to save signature in instead of stdout. </p>
-<p> <code>-H HASH, &#8211;hash=HASH</code><br />
-&nbsp;<wbr>&nbsp;Set the hash algorithm to be used for signing. This should be one of&nbsp;<code>sha1</code>,<br />
-&nbsp;<wbr>&nbsp;<code>sha256</code>&nbsp;or&nbsp;<code>sha512</code>. Some key types may place restrictions on which hash<br />
+<p> <code>-H HASH, &#8211;hash=HASH</code><br/>
+&nbsp;<wbr>&nbsp;Set the hash algorithm to be used for signing. This should be one of&nbsp;<code>sha1</code>,<br/>
+&nbsp;<wbr>&nbsp;<code>sha256</code>&nbsp;or&nbsp;<code>sha512</code>. Some key types may place restrictions on which hash<br/>
 &nbsp;<wbr>&nbsp;algorithms may be used&nbsp;(e.g. ED25519 keys can only use SHA-512). </p>
-<p> <code>-t FORMAT, &#8211;format=FORMAT</code><br />
-&nbsp;<wbr>&nbsp;Choose the signature format to use, from&nbsp;<code>asn1</code>,&nbsp;<code>ssh</code>&nbsp;or&nbsp;<code>raw</code>&nbsp;(only for<br />
-&nbsp;<wbr>&nbsp;ED25519 signatures). The&nbsp;<code>asn1</code>&nbsp;format is the default, as it is the format<br />
-&nbsp;<wbr>&nbsp;used with TLS and typically the standard in most non-SSH libraries&nbsp;(e.g.<br />
+<p> <code>-t FORMAT, &#8211;format=FORMAT</code><br/>
+&nbsp;<wbr>&nbsp;Choose the signature format to use, from&nbsp;<code>asn1</code>,&nbsp;<code>ssh</code>&nbsp;or&nbsp;<code>raw</code>&nbsp;(only for<br/>
+&nbsp;<wbr>&nbsp;ED25519 signatures). The&nbsp;<code>asn1</code>&nbsp;format is the default, as it is the format<br/>
+&nbsp;<wbr>&nbsp;used with TLS and typically the standard in most non-SSH libraries&nbsp;(e.g.<br/>
 &nbsp;<wbr>&nbsp;OpenSSL). The&nbsp;<code>ssh</code>&nbsp;format is used in the SSH protocol and by the ssh-agent.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-sshpk-verify/">sshpk-verify</a>(1)</p>

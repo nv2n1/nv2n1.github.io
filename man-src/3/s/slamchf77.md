@@ -10,17 +10,17 @@ description: "slamchf77.f –"
 <p>slamchf77.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>REAL function <code>slamch</code> (CMACH)<br />
- <i></i><code>SLAMCHF77</code> deprecated<br />
- subroutine <code>slamc1</code> (BETA, T, RND, IEEE1)<br />
- <i></i><code>SLAMC1</code><br />
- subroutine <code>slamc2</code> (BETA, T, RND, EPS, EMIN, RMIN, EMAX, RMAX)<br />
- <i></i><code>SLAMC2</code><br />
- REAL function <code>slamc3</code> (A, B)<br />
- <i></i><code>SLAMC3</code><br />
- subroutine <code>slamc4</code> (EMIN, START, BASE)<br />
- <i></i><code>SLAMC4</code><br />
- subroutine <code>slamc5</code> (BETA, P, EMIN, IEEE, EMAX, RMAX)<br />
+<p>REAL function <code>slamch</code> (CMACH)<br/>
+ <i></i><code>SLAMCHF77</code> deprecated<br/>
+ subroutine <code>slamc1</code> (BETA, T, RND, IEEE1)<br/>
+ <i></i><code>SLAMC1</code><br/>
+ subroutine <code>slamc2</code> (BETA, T, RND, EPS, EMIN, RMIN, EMAX, RMAX)<br/>
+ <i></i><code>SLAMC2</code><br/>
+ REAL function <code>slamc3</code> (A, B)<br/>
+ <i></i><code>SLAMC3</code><br/>
+ subroutine <code>slamc4</code> (EMIN, START, BASE)<br/>
+ <i></i><code>SLAMC4</code><br/>
+ subroutine <code>slamc5</code> (BETA, P, EMIN, IEEE, EMAX, RMAX)<br/>
  <i></i><code>SLAMC5</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slamc1 (integerBETA, integerT, logicalRND, logicalIEEE1)</h3>
@@ -109,7 +109,7 @@ description: "slamchf77.f –"
  might hold one of these in a register.</pre>
 <p><code>Parameters:</code></p>
 <dl>
-<dd><i>A</i><br />
+<dd><i>A</i><br/>
  <i>B</i> </dd>
 <pre> The values A and B.</pre>
 <p>&nbsp;<wbr></dl>

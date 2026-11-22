@@ -52,7 +52,7 @@ url: "/docs/linux/man/1-feh/"
 <dd> <p> When viewing multiple files in a slideshow, randomise the file list before displaying. </p>
  </dd>
 <dt><code>-f, --filelist FILE</code></dt>
-<dd> <p> This option is similar to the playlists used by music software. If FILE exists, it will be read for a list of files to load, in the order they appear. The format is a list of image filenames, absolute or relative to the current directory, one filename per line. <br />
+<dd> <p> This option is similar to the playlists used by music software. If FILE exists, it will be read for a list of files to load, in the order they appear. The format is a list of image filenames, absolute or relative to the current directory, one filename per line. <br/>
  If FILE doesn&#8217;t exist, it will be created from the internal filelist at the end of a viewing session. This is best used to store the results of complex sorts (-Spixels for example) for later viewing. Any changes to the internal filelist (such as deleting a file or it being pruned for being unloadable) will be saved to FILE when feh exits. You can add files to filelists by specifying them on the commandline when also specifying the list. </p>
  </dd>
 <dt><code>-p, --preload</code></dt>
@@ -113,8 +113,8 @@ url: "/docs/linux/man/1-feh/"
 <dd> <p> Reverse the sort order. Use this to invert the order of the filelist. Eg to sort in reverse width order, use <code>-nSwidth</code> </p>
  </dd>
 <dt><code>-A, --action ACTION</code></dt>
-<dd> <p> Specify a string as an action to perform on the image. In slideshow or multiwindow modes, the action will be run when the enter key is pressed, in list mode, the action will be run for each file listed. The action will be executed by /bin/sh. Use format specifiers to refer to image info. See FORMAT SPECIFIERS for examples <br />
- Eg. feh -A &quot;mv %f ~/images/%n&quot; * <br />
+<dd> <p> Specify a string as an action to perform on the image. In slideshow or multiwindow modes, the action will be run when the enter key is pressed, in list mode, the action will be run for each file listed. The action will be executed by /bin/sh. Use format specifiers to refer to image info. See FORMAT SPECIFIERS for examples <br/>
+ Eg. feh -A &quot;mv %f ~/images/%n&quot; * <br/>
  In slideshow mode, the next image will be shown after running the action, in multiwindow mode, the window will be closed. </p>
  </dd>
 <dt><code>--action1...9</code></dt>
@@ -199,22 +199,22 @@ url: "/docs/linux/man/1-feh/"
 <dd> <p> Hide the mouse pointer in full screen mode (useful for slideshows etc). </p>
  </dd></dl>
 <h2>FORMAT SPECIFIERS</h2>
-<p> <code>%f</code> image path/filename <br />
- <code>%n</code> image name <br />
- <code>%s</code> image size (bytes) <br />
- <code>%p</code> image pixel size <br />
- <code>%w</code> image width <br />
- <code>%h</code> image height <br />
- <code>%t</code> image format <br />
- <code>%P</code> prints feh <br />
- <code>%v</code> prints the version <br />
- <code>%m</code> prints the mode (slideshow, multiwindow...) <br />
- <code>%l</code> prints the total number of files in the filelist <br />
- <code>%u</code> prints the current file number <br />
+<p> <code>%f</code> image path/filename <br/>
+ <code>%n</code> image name <br/>
+ <code>%s</code> image size (bytes) <br/>
+ <code>%p</code> image pixel size <br/>
+ <code>%w</code> image width <br/>
+ <code>%h</code> image height <br/>
+ <code>%t</code> image format <br/>
+ <code>%P</code> prints feh <br/>
+ <code>%v</code> prints the version <br/>
+ <code>%m</code> prints the mode (slideshow, multiwindow...) <br/>
+ <code>%l</code> prints the total number of files in the filelist <br/>
+ <code>%u</code> prints the current file number <br/>
  </p>
 <pre><code>\n newline
 </code></pre>
-<p> <br />
+<p> <br/>
  Eg. feh -A &quot;mv %f ~/images/%n&quot; *  </p>
 <h2>MONTAGE MODE OPTIONS</h2>
 <dl>
@@ -260,15 +260,15 @@ url: "/docs/linux/man/1-feh/"
 <dd> <p> Use FONT to print a title on the index, if no font is specified, a title will not be printed </p>
  </dd></dl>
 <h2>CONFIG FILE SYNTAX</h2>
-<p> The feh config file allows the naming of option groups, or themes. If <code>$HOME/.fehrc</code> exists, or if not, but <code>/etc/fehrc</code> exists, feh will look in it for theme name/options pairs. If neither $HOME/.fehrc or /etc/fehrc exist, feh will create a default one in ~/.fehrc. An example entry would be: <br />
- <code>imagemap -rVq --thumb-width 40 --thumb-height 30</code> <br />
- You can then use this theme in two ways. Either <br />
- <code>feh --theme imagemap *.jpg</code> <br />
- or you can create a symbolic link to feh with the name of the options you want it to use. So from the example above: <br />
- <code>ln -s `which feh` ~/bin/imagemap</code> <br />
- Now I just run <code>imagemap *.jpg</code> to use those options. A cooler example is <br />
- <code>mkindex -iVO index.jpg --title-font 20thcent/24 .</code> <br />
- Notice the &#8216;.&#8216; at the end. Now with a symlink I can create a mkindex command which will create an index.jpg in the current directory. I just run <code>mkindex</code> to do it. <br />
+<p> The feh config file allows the naming of option groups, or themes. If <code>$HOME/.fehrc</code> exists, or if not, but <code>/etc/fehrc</code> exists, feh will look in it for theme name/options pairs. If neither $HOME/.fehrc or /etc/fehrc exist, feh will create a default one in ~/.fehrc. An example entry would be: <br/>
+ <code>imagemap -rVq --thumb-width 40 --thumb-height 30</code> <br/>
+ You can then use this theme in two ways. Either <br/>
+ <code>feh --theme imagemap *.jpg</code> <br/>
+ or you can create a symbolic link to feh with the name of the options you want it to use. So from the example above: <br/>
+ <code>ln -s `which feh` ~/bin/imagemap</code> <br/>
+ Now I just run <code>imagemap *.jpg</code> to use those options. A cooler example is <br/>
+ <code>mkindex -iVO index.jpg --title-font 20thcent/24 .</code> <br/>
+ Notice the &#8216;.&#8216; at the end. Now with a symlink I can create a mkindex command which will create an index.jpg in the current directory. I just run <code>mkindex</code> to do it. <br/>
  You can combine these themes with commandline options, they will be combined. So in the example above, typing <code>mkindex -q</code> will create and index, suppressing error messages. An example.fehrc is provided with a couple of cool examples.  </p>
 <h2>SLIDESHOW KEYS</h2>
 <p> The default mode for viewing mulitple images is Slideshow mode When viewing a slideshow, the following keys may be used: </p>
@@ -384,5 +384,5 @@ url: "/docs/linux/man/1-feh/"
 <p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: </p>
 <p>The above copyright notice and this permission notice shall be included in all copies of the Software and its documentation and acknowledgment shall be given in the documentation and software packages that this Software was used. </p>
 <p>THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. </p>
-<p>Email bugs and feature requests to <br />
+<p>Email bugs and feature requests to <br/>
  <code>&lt;feh_sucks [at] linuxbrit.co.uk&gt;</code> </p>

@@ -10,13 +10,13 @@ description: "ql/termstructures/inflation/inflationhelpers.hpp – Bootstrap hel
 
 <p> ql/termstructures/inflation/inflationhelpers.hpp &#8211; Bootstrap helpers for inflation term structures. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/termstructures/bootstraphelper.hpp&gt;<br />
- #include &lt;ql/instruments/zerocouponinflationswap.hpp&gt;<br />
+<p> #include &lt;ql/termstructures/bootstraphelper.hpp&gt;<br/>
+ #include &lt;ql/instruments/zerocouponinflationswap.hpp&gt;<br/>
  #include &lt;ql/instruments/yearonyearinflationswap.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>ZciisInflationHelper</code><br />
- <i>Zero-coupon inflation-swap bootstrap helper. </i><br />
- class <code>YyiisInflationHelper</code><br />
+<p> class <code>ZciisInflationHelper</code><br/>
+ <i>Zero-coupon inflation-swap bootstrap helper. </i><br/>
+ class <code>YyiisInflationHelper</code><br/>
  <i>Year-on-year inflation-swap bootstrap helper. </i></p>
 <h2>Detailed Description</h2>
 <p> Bootstrap helpers for inflation term structures. </p>

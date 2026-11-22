@@ -10,32 +10,32 @@ description: "Condition Variables –"
 
 <p> Condition Variables &#8211; </p>
 <h3>Data Structures</h3>
-<p> union <code>globus_cond_t</code><br />
- <i>Condition variable. </i><br />
- union <code>globus_condattr_t</code><br />
+<p> union <code>globus_cond_t</code><br/>
+ <i>Condition variable. </i><br/>
+ union <code>globus_condattr_t</code><br/>
  <i>Condition variable attribute. </i></p>
 <h3>Functions</h3>
-<p> int <code>globus_cond_init</code> (<code>globus_cond_t</code> *cond, <code>globus_condattr_t</code> *attr)<br />
+<p> int <code>globus_cond_init</code> (<code>globus_cond_t</code> *cond, <code>globus_condattr_t</code> *attr)<br/>
  <i>Initialize a condition variable</i> </p>
-<p> The <code>globus_cond_init()</code> function creates a condition variable that can be used for event signalling between threads. &quot;<br />
- int <code>globus_cond_destroy</code> (<code>globus_cond_t</code> *cond)<br />
- <i>Destroy a condition variable. </i><br />
- int <code>globus_cond_wait</code> (<code>globus_cond_t</code> *cond, <code>globus_mutex_t</code> *mutex)<br />
- <i>Wait for a condition to be signalled. </i><br />
- int <code>globus_cond_timedwait</code> (<code>globus_cond_t</code> *cond, <code>globus_mutex_t</code> *mutex, globus_abstime_t *abstime)<br />
- <i>Wait for a condition to be signalled. </i><br />
- int <code>globus_cond_signal</code> (<code>globus_cond_t</code> *cond)<br />
- <i>Signal a condition to a thread. </i><br />
- int <code>globus_cond_broadcast</code> (<code>globus_cond_t</code> *cond)<br />
- <i>Signal a condition to multiple threads. </i><br />
- int <code>globus_condattr_init</code> (<code>globus_condattr_t</code> *cond_attr)<br />
- <i>Initialize a condition variable attribute. </i><br />
- int <code>globus_condattr_destroy</code> (<code>globus_condattr_t</code> *cond_attr)<br />
- <i>Destroy a condition attribute. </i><br />
- int <code>globus_condattr_setspace</code> (<code>globus_condattr_t</code> *cond_attr, int space)<br />
+<p> The <code>globus_cond_init()</code> function creates a condition variable that can be used for event signalling between threads. &quot;<br/>
+ int <code>globus_cond_destroy</code> (<code>globus_cond_t</code> *cond)<br/>
+ <i>Destroy a condition variable. </i><br/>
+ int <code>globus_cond_wait</code> (<code>globus_cond_t</code> *cond, <code>globus_mutex_t</code> *mutex)<br/>
+ <i>Wait for a condition to be signalled. </i><br/>
+ int <code>globus_cond_timedwait</code> (<code>globus_cond_t</code> *cond, <code>globus_mutex_t</code> *mutex, globus_abstime_t *abstime)<br/>
+ <i>Wait for a condition to be signalled. </i><br/>
+ int <code>globus_cond_signal</code> (<code>globus_cond_t</code> *cond)<br/>
+ <i>Signal a condition to a thread. </i><br/>
+ int <code>globus_cond_broadcast</code> (<code>globus_cond_t</code> *cond)<br/>
+ <i>Signal a condition to multiple threads. </i><br/>
+ int <code>globus_condattr_init</code> (<code>globus_condattr_t</code> *cond_attr)<br/>
+ <i>Initialize a condition variable attribute. </i><br/>
+ int <code>globus_condattr_destroy</code> (<code>globus_condattr_t</code> *cond_attr)<br/>
+ <i>Destroy a condition attribute. </i><br/>
+ int <code>globus_condattr_setspace</code> (<code>globus_condattr_t</code> *cond_attr, int space)<br/>
  <i>Set callback space associated with a condition variable attribute</i> </p>
-<p> The <code>globus_condattr_setspace()</code> function sets the callback space to use with condition variables created with this attribute. Callback spaces are used to control how callbacks are issued to different threads. See <code>Callback Spaces </code> for more information on callback spaces. &quot;<br />
- int <code>globus_condattr_getspace</code> (<code>globus_condattr_t</code> *cond_attr, int *space)<br />
+<p> The <code>globus_condattr_setspace()</code> function sets the callback space to use with condition variables created with this attribute. Callback spaces are used to control how callbacks are issued to different threads. See <code>Callback Spaces </code> for more information on callback spaces. &quot;<br/>
+ int <code>globus_condattr_getspace</code> (<code>globus_condattr_t</code> *cond_attr, int *space)<br/>
  <i>Get callback space associated with a condition variable attribute</i> </p>
 <p> The <code>globus_condattr_getspace()</code> function copies the value of the callback space associated with a condition variable attribute to the integer pointed to by the <i>space</i> parameter. &quot;</p>
 <h2>Detailed Description</h2>
@@ -68,7 +68,7 @@ description: "Condition Variables –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>cond</i> Pointer to the condition variable to initialize.<br />
+</dt><dd> <i>cond</i> Pointer to the condition variable to initialize.<br/>
  <i>attr</i> Condition variable attributes.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -89,8 +89,8 @@ description: "Condition Variables –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>cond</i> The condition variable to wait for.<br />
- <i>mutex</i> The mutex associated with the condition state.<br />
+</dt><dd> <i>cond</i> The condition variable to wait for.<br/>
+ <i>mutex</i> The mutex associated with the condition state.<br/>
  <i>abstime</i> The absolute time to wait until.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -101,7 +101,7 @@ description: "Condition Variables –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>cond</i> The condition variable to wait for.<br />
+</dt><dd> <i>cond</i> The condition variable to wait for.<br/>
  <i>mutex</i> The mutex associated with the condition state.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -123,7 +123,7 @@ description: "Condition Variables –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>cond_attr</i> Condition variable attribute to modify.<br />
+</dt><dd> <i>cond_attr</i> Condition variable attribute to modify.<br/>
  <i>space</i> Pointer to an integer to be set to point to the callback space associated with cond_attr.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -145,7 +145,7 @@ description: "Condition Variables –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>cond_attr</i> Condition variable attribute to modify.<br />
+</dt><dd> <i>cond_attr</i> Condition variable attribute to modify.<br/>
  <i>space</i> Callback space to associate with the attribute.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

@@ -31,7 +31,7 @@ description: "fedfs-null – send a FEDFS_NULL ADMIN protocol request"
 <h2>Examples</h2>
 <p>Suppose you are the FedFS administrator of the <i>example.net</i> FedFS domain and that you want to know if the FedFS ADMIN service on the file server <i>fs.example.net</i> is operational. Use:</p>
 <dl>
-<dd>$ fedfs-null -h fs.example.net<br />
+<dd>$ fedfs-null -h fs.example.net<br/>
  Call completed successfully</dd></dl>
 <h2>Security</h2>
 <p>By default, or if the <code>sys</code> and <code>unix</code> flavors are specified with the <code>&#8211;security=</code><i>flavor</i> option, the <code><a href="/docs/linux/man/8-fedfs-create-junction/">fedfs-create-junction</a></code>(8) command uses AUTH_SYS security for the Remote Procedure Call. AUTH_SYS has known weaknesses and should be avoided on untrusted networks. </p>

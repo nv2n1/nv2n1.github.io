@@ -10,7 +10,7 @@ description: "XkbIgnoreExtension – Prevents core X library keyboard functions 
 <p>XkbIgnoreExtension &#8211; Prevents core X library keyboard functions from using the X Keyboard Extension </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Bool XkbIgnoreExtension</code> <code>(Bool *</code><i>ignore</i><code>);</code><br />
+<dt> <code>Bool XkbIgnoreExtension</code> <code>(Bool *</code><i>ignore</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

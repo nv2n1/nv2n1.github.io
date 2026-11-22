@@ -10,13 +10,13 @@ description: "ql/patterns/observable.hpp – observer/observable pattern"
 
 <p> ql/patterns/observable.hpp &#8211; observer/observable pattern </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/errors.hpp&gt;<br />
- #include &lt;boost/shared_ptr.hpp&gt;<br />
+<p> #include &lt;ql/errors.hpp&gt;<br/>
+ #include &lt;boost/shared_ptr.hpp&gt;<br/>
  #include &lt;list&gt; </p>
 <h3>Classes</h3>
-<p> class <code>Observable</code><br />
- <i>Object that notifies its changes to a set of observables. </i><br />
- class <code>Observer</code><br />
+<p> class <code>Observable</code><br/>
+ <i>Object that notifies its changes to a set of observables. </i><br/>
+ class <code>Observer</code><br/>
  <i>Object that gets notified when a given observable changes. </i></p>
 <h2>Detailed Description</h2>
 <p> observer/observable pattern </p>

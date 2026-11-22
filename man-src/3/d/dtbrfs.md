@@ -11,7 +11,7 @@ description: "dtbrfs.f –"
 <p> dtbrfs.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dtbrfs</code> (UPLO, TRANS, DIAG, N, KD, NRHS, AB, LDAB, B, LDB, X, LDX, FERR, BERR, WORK, IWORK, INFO)<br />
+<p> subroutine <code>dtbrfs</code> (UPLO, TRANS, DIAG, N, KD, NRHS, AB, LDAB, B, LDB, X, LDX, FERR, BERR, WORK, IWORK, INFO)<br/>
  <i></i><code>DTBRFS</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dtbrfs (characterUPLO, characterTRANS, characterDIAG, integerN, integerKD, integerNRHS, double precision, dimension( ldab, * )AB, integerLDAB, double precision, dimension( ldb, * )B, integerLDB, double precision, dimension( ldx, * )X, integerLDX, double precision, dimension( * )FERR, double precision, dimension( * )BERR, double precision, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>

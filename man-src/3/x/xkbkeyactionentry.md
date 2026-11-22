@@ -10,7 +10,7 @@ description: "XkbKeyActionEntry – Returns a pointer to the key action correspo
 <p>XkbKeyActionEntry &#8211; Returns a pointer to the key action corresponding to group grp and shift level lvl from the two-dimensional table of key actions associated with the key corresponding to keycode </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>XkbAction * XkbKeyActionEntry</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>KeyCode </code><i>keycode</i><code>,</code> <code>int </code><i>shift</i><code>,</code> <code>int </code><i>grp</i><code>);</code><br />
+<dt> <code>XkbAction * XkbKeyActionEntry</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>KeyCode </code><i>keycode</i><code>,</code> <code>int </code><i>shift</i><code>,</code> <code>int </code><i>grp</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

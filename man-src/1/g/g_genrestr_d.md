@@ -18,32 +18,32 @@ description: "genrestr – generates position restraints or distance restraints 
 <p> The -of option produces an index file that can be used for freezing atoms. In this case the input file must be a pdb file. </p>
 <p> With the <code> -disre</code> option half a matrix of distance restraints is generated instead of position restraints. With this matrix, that one typically would apply to C-alpha atoms in a protein, one can maintain the overall conformation of a protein without tieing it to a specific position (as with position restraints).</p>
 <h2>FILES</h2>
-<p> <code>-f</code><i> conf.gro</i> <code>Input</code><br />
+<p> <code>-f</code><i> conf.gro</i> <code>Input</code><br/>
 &nbsp;<wbr>Structure file: gro g96 pdb tpr tpb tpa&nbsp;<wbr> </p>
-<p> <code>-n</code><i> index.ndx</i> <code>Input, Opt.</code><br />
+<p> <code>-n</code><i> index.ndx</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Index file&nbsp;<wbr> </p>
-<p> <code>-o</code><i> posre.itp</i> <code>Output</code><br />
+<p> <code>-o</code><i> posre.itp</i> <code>Output</code><br/>
 &nbsp;<wbr>Include file for topology&nbsp;<wbr> </p>
-<p> <code>-of</code><i> freeze.ndx</i> <code>Output, Opt.</code><br />
+<p> <code>-of</code><i> freeze.ndx</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>Index file&nbsp;<wbr> </p>
 <h2>OTHER OPTIONS</h2>
-<p> <code>-[no]h</code><i>no </i><br />
+<p> <code>-[no]h</code><i>no </i><br/>
 &nbsp;<wbr>Print help info and quit </p>
-<p> <code>-nice</code><i> int</i><code> 0</code><br />
+<p> <code>-nice</code><i> int</i><code> 0</code><br/>
 &nbsp;<wbr>Set the nicelevel </p>
-<p> <code>-fc</code><i> vector</i><code> 1000 1000 1000</code><br />
+<p> <code>-fc</code><i> vector</i><code> 1000 1000 1000</code><br/>
 &nbsp;<wbr>force constants&nbsp;<wbr>(kJ mol-1 nm-2) </p>
-<p> <code>-freeze</code><i> real</i><code> 0 </code><br />
+<p> <code>-freeze</code><i> real</i><code> 0 </code><br/>
 &nbsp;<wbr>if the -of option or this one is given an index file will be written containing atom numbers of all atoms that have a B-factor less than the level given here </p>
-<p> <code>-[no]disre</code><i>no </i><br />
+<p> <code>-[no]disre</code><i>no </i><br/>
 &nbsp;<wbr>Generate a distance restraint matrix for all the atoms in index </p>
-<p> <code>-disre_dist</code><i> real</i><code> 0.1 </code><br />
+<p> <code>-disre_dist</code><i> real</i><code> 0.1 </code><br/>
 &nbsp;<wbr>Distance range around the actual distance for generating distance restraints </p>
-<p> <code>-disre_frac</code><i> real</i><code> 0 </code><br />
+<p> <code>-disre_frac</code><i> real</i><code> 0 </code><br/>
 &nbsp;<wbr>Fraction of distance to be used as interval rather than a fixed distance. If the fraction of the distance that you specify here is less than the distance given in the previous option, that one is used instead. </p>
-<p> <code>-disre_up2</code><i> real</i><code> 1 </code><br />
+<p> <code>-disre_up2</code><i> real</i><code> 1 </code><br/>
 &nbsp;<wbr>Distance between upper bound for distance restraints, and the distance at which the force becomes constant&nbsp;<wbr>(see manual) </p>
-<p> <code>-[no]constr</code><i>no </i><br />
+<p> <code>-[no]constr</code><i>no </i><br/>
 &nbsp;<wbr>Generate a constraint matrix rather than distance restraints </p>
 <h2>SEE ALSO</h2>
 <p> <code>gromacs(7)</code> </p>

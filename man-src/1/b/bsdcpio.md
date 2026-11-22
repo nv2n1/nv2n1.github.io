@@ -10,8 +10,8 @@ description: "cpio – copy files to and from archives"
 
 <p> <code>cpio</code> &#8211; copy files to and from archives</p>
 <h2>SYNOPSIS</h2>
-<p> Br q Fl i [<i>options</i> ] [<i>pattern &#8230;</i> ] [<i>&lt; archive</i> ]<br />
- Br q Fl o [<i>options</i> ] <i>&lt; name-list</i> [<i>&gt; archive</i> ]<br />
+<p> Br q Fl i [<i>options</i> ] [<i>pattern &#8230;</i> ] [<i>&lt; archive</i> ]<br/>
+ Br q Fl o [<i>options</i> ] <i>&lt; name-list</i> [<i>&gt; archive</i> ]<br/>
  Br q Fl p [<i>options</i> ] <i>dest-dir</i> <i>&lt; name-list</i></p>
 <h2>DESCRIPTION</h2>
 <p> copies files between archives and directories. This implementation can extract from tar, pax, cpio, zip, jar, ar, and ISO 9660 cdrom images and can create tar, pax, cpio, ar, and shar archives. </p>

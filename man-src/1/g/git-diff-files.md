@@ -343,7 +343,7 @@ git diff - files[-q][-0 | -1 | -2 | -3 | -c | --cc][&lt;common diff options&gt;]
 <dl>
 <dt>
 </dt><dd>
-+ return frotz(nitfol, two-&gt;ptr, 1, 0);<br />
++ return frotz(nitfol, two-&gt;ptr, 1, 0);<br/>
 &#8230; &#8211; hit = frotz(nitfol, mf2.ptr, 1, 0);
 </dd></dl>
 <p> While <code>git log -G&quot;frotz\(nitfol&quot;</code> will show this commit, <code>git log -S&quot;frotz\(nitfol&quot; &#8211;pickaxe-regex</code> will not (because the number of occurrences of that string did not change). </p>
@@ -705,26 +705,26 @@ rename to a
 <dl>
 <dt>
 </dt><dd>
-diff&#8211; combined describe.c<br />
-    index fabadb8,<br />
-    cc95eb0..4866510 &#8212; -a / describe.c++ + b / describe.c<br />
-                                                @ @ @-98,<br />
-    20 &#8211; 98, 12 + 98, 20 @ @ @ return (a_date &gt; b_date) ? -1 : (a_date == b_date) ? 0<br />
-                                                                                  : 1;<br />
-}<br />
-&#8211; static void describe(char *arg) &#8211; static void describe(struct commit *cmit, int last_one)++ static void describe(char *arg, int last_one)<br />
-{<br />
-    +unsigned char sha1[20];<br />
-    +struct commit *cmit;<br />
-    struct commit_list *list;<br />
-    static int initialized = 0;<br />
-    struct commit_name *n;<br />
-    +if (get_sha1(arg, sha1) &lt; 0) + usage(describe_usage);<br />
-    +cmit = lookup_commit_reference(sha1);<br />
-    +if (!cmit) + usage(describe_usage);<br />
-    +if (!initialized)<br />
-    {<br />
-        initialized = 1;<br />
+diff&#8211; combined describe.c<br/>
+    index fabadb8,<br/>
+    cc95eb0..4866510 &#8212; -a / describe.c++ + b / describe.c<br/>
+                                                @ @ @-98,<br/>
+    20 &#8211; 98, 12 + 98, 20 @ @ @ return (a_date &gt; b_date) ? -1 : (a_date == b_date) ? 0<br/>
+                                                                                  : 1;<br/>
+}<br/>
+&#8211; static void describe(char *arg) &#8211; static void describe(struct commit *cmit, int last_one)++ static void describe(char *arg, int last_one)<br/>
+{<br/>
+    +unsigned char sha1[20];<br/>
+    +struct commit *cmit;<br/>
+    struct commit_list *list;<br/>
+    static int initialized = 0;<br/>
+    struct commit_name *n;<br/>
+    +if (get_sha1(arg, sha1) &lt; 0) + usage(describe_usage);<br/>
+    +cmit = lookup_commit_reference(sha1);<br/>
+    +if (!cmit) + usage(describe_usage);<br/>
+    +if (!initialized)<br/>
+    {<br/>
+        initialized = 1;<br/>
         for_each_ref(get_name);
 </dd></dl>
 <dl>

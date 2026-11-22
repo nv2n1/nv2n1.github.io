@@ -9,15 +9,15 @@ description: "Hash Data Functions – Functions that add, access or remove data 
 
 <p>Hash Data Functions &#8211; Functions that add, access or remove data from hashes. </p>
 <h3>Functions</h3>
-<p>EAPI <code>Evas_Hash</code> * <code>evas_hash_add</code> (<code>Evas_Hash</code> *hash, const char *key, const void *data)<br />
- <i>Adds an entry to the given hash table. </i><br />
- EAPI <code>Evas_Hash</code> * <code>evas_hash_direct_add</code> (<code>Evas_Hash</code> *hash, const char *key, const void *data)<br />
- <i>Adds an entry to the given hash table and does not duplicate the string key. </i><br />
- EAPI <code>Evas_Hash</code> * <code>evas_hash_del</code> (<code>Evas_Hash</code> *hash, const char *key, const void *data)<br />
- <i>Removes the entry identified by </i>key or data from the given hash table.<br />
- EAPI void * <code>evas_hash_find</code> (const <code>Evas_Hash</code> *hash, const char *key)<br />
- <i>Retrieves a specific entry in the given hash table. </i><br />
- EAPI void * <code>evas_hash_modify</code> (<code>Evas_Hash</code> *hash, const char *key, const void *data)<br />
+<p>EAPI <code>Evas_Hash</code> * <code>evas_hash_add</code> (<code>Evas_Hash</code> *hash, const char *key, const void *data)<br/>
+ <i>Adds an entry to the given hash table. </i><br/>
+ EAPI <code>Evas_Hash</code> * <code>evas_hash_direct_add</code> (<code>Evas_Hash</code> *hash, const char *key, const void *data)<br/>
+ <i>Adds an entry to the given hash table and does not duplicate the string key. </i><br/>
+ EAPI <code>Evas_Hash</code> * <code>evas_hash_del</code> (<code>Evas_Hash</code> *hash, const char *key, const void *data)<br/>
+ <i>Removes the entry identified by </i>key or data from the given hash table.<br/>
+ EAPI void * <code>evas_hash_find</code> (const <code>Evas_Hash</code> *hash, const char *key)<br/>
+ <i>Retrieves a specific entry in the given hash table. </i><br/>
+ EAPI void * <code>evas_hash_modify</code> (<code>Evas_Hash</code> *hash, const char *key, const void *data)<br/>
  <i>Modifies the entry pointer at the specified key and returns the old entry. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that add, access or remove data from hashes. </p>
@@ -54,8 +54,8 @@ description: "Hash Data Functions – Functions that add, access or remove data 
 <p> <code>evas_hash_alloc_error</code> should be used to determine if an allocation error occurred during this function. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>hash</i> The given hash table. Can be NULL, in which case a new hash table is allocated and returned.<br />
- <i>key</i> A unique string. Can be NULL.<br />
+<dd><i>hash</i> The given hash table. Can be NULL, in which case a new hash table is allocated and returned.<br/>
+ <i>key</i> A unique string. Can be NULL.<br/>
  <i>data</i> Data to associate with the string given by key.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -66,8 +66,8 @@ description: "Hash Data Functions – Functions that add, access or remove data 
 <p> If key is NULL, then data is used to find a match to remove. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>hash</i> The given hash table.<br />
- <i>key</i> The key string. Can be NULL.<br />
+<dd><i>hash</i> The given hash table.<br/>
+ <i>key</i> The key string. Can be NULL.<br/>
  <i>data</i> The data pointer to remove if key is NULL. Otherwise, not required and can be NULL.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -80,8 +80,8 @@ description: "Hash Data Functions – Functions that add, access or remove data 
 <p> <code>evas_hash_alloc_error</code> should be used to determine if an allocation error occurred during this function. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>hash</i> The given hash table. Can be NULL, in which case a new hash table is allocated and returned.<br />
- <i>key</i> A unique string. Can be NULL.<br />
+<dd><i>hash</i> The given hash table. Can be NULL, in which case a new hash table is allocated and returned.<br/>
+ <i>key</i> A unique string. Can be NULL.<br/>
  <i>data</i> Data to associate with the string given by key.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -90,7 +90,7 @@ description: "Hash Data Functions – Functions that add, access or remove data 
 <p>Retrieves a specific entry in the given hash table. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>hash</i> The given hash table.<br />
+<dd><i>hash</i> The given hash table.<br/>
  <i>key</i> The key string of the entry to find.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -100,8 +100,8 @@ description: "Hash Data Functions – Functions that add, access or remove data 
 <p>Modifies the entry pointer at the specified key and returns the old entry. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>hash</i> The given hash table.<br />
- <i>key</i> The key string of the entry to modify.<br />
+<dd><i>hash</i> The given hash table.<br/>
+ <i>key</i> The key string of the entry to modify.<br/>
  <i>data</i> The data to replace the old entry, if it exists.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

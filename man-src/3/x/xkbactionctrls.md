@@ -10,7 +10,7 @@ description: "XkbActionCtrls – Returns the ctrls fields of act converted to an
 <p>XkbActionCtrls &#8211; Returns the ctrls fields of act converted to an unsigned int </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>unsigned int XkbActionCtrls</code> <code>(XkbCtrlsAction </code><i>act</i><code>);</code><br />
+<dt> <code>unsigned int XkbActionCtrls</code> <code>(XkbCtrlsAction </code><i>act</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
@@ -47,8 +47,8 @@ description: "XkbActionCtrls – Returns the ctrls fields of act converted to an
 </tr>
 <tr VALIGN=top>
 <td>XkbSA_LockControls</td>
-<td> If the XkbSA_LockNoLock bit is not set in the flags field, a key press enables any controls specified in the ctrls fields that were not already enabled at the time of the key press.<br />
- If the XkbSA_LockNoUnlock bit is not set in the flags field, a key release disables any controls specified in the ctrls fields that were not already disabled at the time of the key press.<br />
+<td> If the XkbSA_LockNoLock bit is not set in the flags field, a key press enables any controls specified in the ctrls fields that were not already enabled at the time of the key press.<br/>
+ If the XkbSA_LockNoUnlock bit is not set in the flags field, a key release disables any controls specified in the ctrls fields that were not already disabled at the time of the key press.<br/>
  This action can cause XkbControlsNotify events.
 </td>
 </tr>

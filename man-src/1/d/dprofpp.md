@@ -38,7 +38,7 @@ description: "dprofpp – display perl profile data"
 <pre>
         $ dprofpp -u -p test.pl
 </pre>
-<p> Consult &#8220;<font SIZE="-1">PROFILE</font> <font SIZE="-1">FORMAT</font>&#8221; in Devel::DProf for a description of the raw profile.</p>
+<p> Consult &#8220;PROFILE FORMAT&#8221; in Devel::DProf for a description of the raw profile.</p>
 <h2>OUTPUT</h2>
 <p> Columns are:</p>
 <dl>
@@ -70,7 +70,7 @@ description: "dprofpp – display perl profile data"
 <dt><code>-E</code></dt>
 <dd> (default) Display all subroutine times exclusive of child subroutine times.</dd>
 <dt><code>-F</code></dt>
-<dd> Force the generation of fake exit timestamps if dprofpp reports that the profile is garbled. This is only useful if dprofpp determines that the profile is garbled due to missing exit timestamps. You&#8217;re on your own if you do this. Consult the <font SIZE="-1">BUGS</font> section.</dd>
+<dd> Force the generation of fake exit timestamps if dprofpp reports that the profile is garbled. This is only useful if dprofpp determines that the profile is garbled due to missing exit timestamps. You&#8217;re on your own if you do this. Consult the BUGS section.</dd>
 <dt><code>-I</code></dt>
 <dd> Display all subroutine times inclusive of child subroutine times.</dd>
 <dt><code>-l</code></dt>
@@ -100,7 +100,7 @@ description: "dprofpp – display perl profile data"
 <dt><code>-u</code></dt>
 <dd> Display user times rather than user+system times.</dd>
 <dt><code>-V</code></dt>
-<dd> Print dprofpp&#8217;s version number and exit. If a raw profile is found then its <font SIZE="-1">XS_VERSION</font> variable will be displayed, too.</dd>
+<dd> Print dprofpp&#8217;s version number and exit. If a raw profile is found then its XS_VERSION variable will be displayed, too.</dd>
 <dt><code>-v</code></dt>
 <dd> Sort by average time spent in subroutines during each call. This may help identify candidates for inlining.</dd>
 <dt><code>-z</code></dt>
@@ -125,11 +125,11 @@ description: "dprofpp – display perl profile data"
 <dt><code>-H</code></dt>
 <dd> Display long help and exit.</dd></dl>
 <h2>ENVIRONMENT</h2>
-<p> The environment variable <font SIZE="-1"><code>DPROFPP_OPTS</code></font> can be set to a string containing options for dprofpp. You might use this if you prefer <code>-I</code> over <code>-E</code> or if you want <code>-F</code> on all the time. </p>
+<p> The environment variable <code>DPROFPP_OPTS</code> can be set to a string containing options for dprofpp. You might use this if you prefer <code>-I</code> over <code>-E</code> or if you want <code>-F</code> on all the time. </p>
 <p> This was added fairly lazily, so there are some undesirable side effects. Options on the commandline should override options in DPROFPP_OPTS&#8211;but don&#8217;t count on that in this version.</p>
 <h2>BUGS</h2>
 <p> Applications which call <i>_exit()</i> or <i>exec()</i> from within a subroutine will leave an incomplete profile. See the <code>-F</code> option. </p>
-<p> Any bugs in Devel::DProf, or any profiler generating the profile data, could be visible here. See &#8220;<font SIZE="-1">BUGS</font>&#8221; in Devel::DProf. </p>
+<p> Any bugs in Devel::DProf, or any profiler generating the profile data, could be visible here. See &#8220;BUGS&#8221; in Devel::DProf. </p>
 <p> Mail bug reports and feature requests to the perl5-porters mailing list at <i>&lt;perl5-porters [at] perl.org&gt;</i>. Bug reports should include the output of the <code>-V</code> option.</p>
 <h2>FILES</h2>
 <pre>

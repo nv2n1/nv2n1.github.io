@@ -12,10 +12,10 @@ description: "xz, unxz, xzcat, lzma, unlzma, lzcat – Compress or decompress .x
 <h2>SYNOPSIS</h2>
 <p> <code>xz</code> [<i>option&#8230;</i>] [<i>file&#8230;</i>]</p>
 <h2>COMMAND ALIASES</h2>
-<p> <code>unxz</code> is equivalent to <code>xz &#8211;decompress</code>.<br />
- <code>xzcat</code> is equivalent to <code>xz &#8211;decompress &#8211;stdout</code>.<br />
- <code>lzma</code> is equivalent to <code>xz &#8211;format=lzma</code>.<br />
- <code>unlzma</code> is equivalent to <code>xz &#8211;format=lzma &#8211;decompress</code>.<br />
+<p> <code>unxz</code> is equivalent to <code>xz &#8211;decompress</code>.<br/>
+ <code>xzcat</code> is equivalent to <code>xz &#8211;decompress &#8211;stdout</code>.<br/>
+ <code>lzma</code> is equivalent to <code>xz &#8211;format=lzma</code>.<br/>
+ <code>unlzma</code> is equivalent to <code>xz &#8211;format=lzma &#8211;decompress</code>.<br/>
  <code>lzcat</code> is equivalent to <code>xz &#8211;format=lzma &#8211;decompress &#8211;stdout</code>. </p>
 <p> When writing scripts that need to decompress files, it is recommended to always use the name <code>xz</code> with appropriate arguments (<code>xz -d</code> or <code>xz -dc</code>) instead of the names <code>unxz</code> and <code>xzcat</code>.</p>
 <h2>DESCRIPTION</h2>
@@ -498,32 +498,32 @@ description: "xz, unxz, xzcat, lzma, unlzma, lzcat – Compress or decompress .x
 <dl>
 <dl>
 <dt><code>hc3</code></dt>
-<dd> Hash Chain with 2- and 3-byte hashing<br />
- Minimum value for <i>nice</i>: 3<br />
- Memory usage:<br />
- <i>dict</i> * 7.5 (if <i>dict</i> &lt;= 16 MiB);<br />
+<dd> Hash Chain with 2- and 3-byte hashing<br/>
+ Minimum value for <i>nice</i>: 3<br/>
+ Memory usage:<br/>
+ <i>dict</i> * 7.5 (if <i>dict</i> &lt;= 16 MiB);<br/>
  <i>dict</i> * 5.5 + 64 MiB (if <i>dict</i> &gt; 16 MiB)</dd>
 <dt><code>hc4</code></dt>
-<dd> Hash Chain with 2-, 3-, and 4-byte hashing<br />
- Minimum value for <i>nice</i>: 4<br />
- Memory usage:<br />
- <i>dict</i> * 7.5 (if <i>dict</i> &lt;= 32 MiB);<br />
+<dd> Hash Chain with 2-, 3-, and 4-byte hashing<br/>
+ Minimum value for <i>nice</i>: 4<br/>
+ Memory usage:<br/>
+ <i>dict</i> * 7.5 (if <i>dict</i> &lt;= 32 MiB);<br/>
  <i>dict</i> * 6.5 (if <i>dict</i> &gt; 32 MiB)</dd>
 <dt><code>bt2</code></dt>
-<dd> Binary Tree with 2-byte hashing<br />
- Minimum value for <i>nice</i>: 2<br />
+<dd> Binary Tree with 2-byte hashing<br/>
+ Minimum value for <i>nice</i>: 2<br/>
  Memory usage: <i>dict</i> * 9.5</dd>
 <dt><code>bt3</code></dt>
-<dd> Binary Tree with 2- and 3-byte hashing<br />
- Minimum value for <i>nice</i>: 3<br />
- Memory usage:<br />
- <i>dict</i> * 11.5 (if <i>dict</i> &lt;= 16 MiB);<br />
+<dd> Binary Tree with 2- and 3-byte hashing<br/>
+ Minimum value for <i>nice</i>: 3<br/>
+ Memory usage:<br/>
+ <i>dict</i> * 11.5 (if <i>dict</i> &lt;= 16 MiB);<br/>
  <i>dict</i> * 9.5 + 64 MiB (if <i>dict</i> &gt; 16 MiB)</dd>
 <dt><code>bt4</code></dt>
-<dd> Binary Tree with 2-, 3-, and 4-byte hashing<br />
- Minimum value for <i>nice</i>: 4<br />
- Memory usage:<br />
- <i>dict</i> * 11.5 (if <i>dict</i> &lt;= 32 MiB);<br />
+<dd> Binary Tree with 2-, 3-, and 4-byte hashing<br/>
+ Minimum value for <i>nice</i>: 4<br/>
+ Memory usage:<br/>
+ <i>dict</i> * 11.5 (if <i>dict</i> &lt;= 32 MiB);<br/>
  <i>dict</i> * 10.5 (if <i>dict</i> &gt; 32 MiB)</dd></dl>
 </dl>
 <dt><code>mode=</code><i>mode</i></dt>
@@ -688,7 +688,7 @@ description: "xz, unxz, xzcat, lzma, unlzma, lzcat – Compress or decompress .x
 <p> The robot mode is activated with the <code>&#8211;robot</code> option. It makes the output of <code>xz</code> easier to parse by other programs. Currently <code>&#8211;robot</code> is supported only together with <code>&#8211;version</code>, <code>&#8211;info-memory</code>, and <code>&#8211;list</code>. It will be supported for compression and decompression in the future.</p>
 <h3>Version</h3>
 <p> <code>xz &#8211;robot &#8211;version</code> will print the version number of <code>xz</code> and liblzma in the following format: </p>
-<p> <code>XZ_VERSION=</code><i>XYYYZZZS</i><br />
+<p> <code>XZ_VERSION=</code><i>XYYYZZZS</i><br/>
  <code>LIBLZMA_VERSION=</code><i>XYYYZZZS</i></p>
 <dl>
 <dt><i>X</i></dt>
@@ -1115,11 +1115,11 @@ xz-- robot-- list *.xz | awk '/^totals/{print $5-$4}'
 <dl>
 <dt>
 </dt><dd>
-<p>if<br />
-    !eval &#8220;$(xz &#8211;robot &#8211;version 2&gt; /dev/null)&#8221; ||<br />
-        [&#8220;$XZ_VERSION&#8221; &#8211; lt 50000002];<br />
-then<br />
-    echo &#8220;Your xz is too old.&#8221; fi<br />
+<p>if<br/>
+    !eval &#8220;$(xz &#8211;robot &#8211;version 2&gt; /dev/null)&#8221; ||<br/>
+        [&#8220;$XZ_VERSION&#8221; &#8211; lt 50000002];<br/>
+then<br/>
+    echo &#8220;Your xz is too old.&#8221; fi<br/>
         unset XZ_VERSION LIBLZMA_VERSION
 </dd></dl>
 <p> Set a memory usage limit for decompression using <code>XZ_OPT</code>, but if a limit has already been set, don&#8217;t increase it:</p>
@@ -1249,6 +1249,6 @@ xz --delta=dist=3 --lzma2=pb=0 foo.tiff
 <p> If multiple images have been put into a single archive (for example, <code>.tar</code>), the Delta filter will work on that too as long as all images have the same number of bytes per pixel.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-xzdec/">xzdec</a></code>(1), <code><a href="/docs/linux/man/1-xzdiff/">xzdiff</a></code>(1), <code><a href="/docs/linux/man/1-xzgrep/">xzgrep</a></code>(1), <code><a href="/docs/linux/man/1-xzless/">xzless</a></code>(1), <code><a href="/docs/linux/man/1-xzmore/">xzmore</a></code>(1), <code><a href="/docs/linux/man/1-gzip/">gzip</a></code>(1), <code><a href="/docs/linux/man/1-bzip2/">bzip2</a></code>(1), <code><a href="/docs/linux/man/1-7z/">7z</a></code>(1) </p>
-<p> XZ Utils: &lt;<a rel="nofollow" href="https://tukaani.org/xz/">https://tukaani.org/xz/</a>&gt;<br />
- XZ Embedded: &lt;<a rel="nofollow" href="https://tukaani.org/xz/embedded.html">https://tukaani.org/xz/embedded.html</a>&gt;<br />
+<p> XZ Utils: &lt;<a rel="nofollow" href="https://tukaani.org/xz/">https://tukaani.org/xz/</a>&gt;<br/>
+ XZ Embedded: &lt;<a rel="nofollow" href="https://tukaani.org/xz/embedded.html">https://tukaani.org/xz/embedded.html</a>&gt;<br/>
  LZMA SDK: &lt;<a rel="nofollow" href="http://7-zip.org/sdk.html">http://7-zip.org/sdk.html</a>&gt; </p>

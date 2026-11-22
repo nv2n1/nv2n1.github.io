@@ -17,7 +17,7 @@ description: "pamrgbatopng – convert PAM color/transparency image to PNG"
 <p> <code>pamrgbatopng</code> reads a PAM image with the RGB_ALPHA tuple type (a color visual image with transparency) and produces an equivalent PNG image as output. </p>
 <p> The input image if from the file named by the <i>pamfile</i> argument, or Standard Input if you don&#8217;t specify <i>pamfile</i>. The output goes to Standard Output. </p>
 <p> The maxval of the input image must be 255. You can use <code>pamdepth</code> to change the maxval of an image to 255 if necessary. </p>
-<p> <code><a href="/docs/linux/man/1-pnmtopng/">pnmtopng</a></code>(1)<br />
+<p> <code><a href="/docs/linux/man/1-pnmtopng/">pnmtopng</a></code>(1)<br/>
 &nbsp;<wbr>is a much more powerful program for generating PNG images from Netpbm images, but it cannot take PAM images with transparency as input. To supply transparency information, you must supply it in a separate PGM image. That makes it considerably less convenient to use. </p>
 <p> (But note that <code>pnmtopng</code> takes PAM images, even with RGB_ALPHA tuple type just fine &#8212; it just ignores the alpha plane). </p>
 <p> Netpbm&#8217;s strategic direction is to add to <code>pnmtopng</code> all the capabilities of <code>pamrgbatopng</code> and retire <code>pamrgbatopng</code>. But there&#8217;s no telling when that will happen. </p>

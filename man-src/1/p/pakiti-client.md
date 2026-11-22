@@ -10,9 +10,9 @@ description: "pakiti-client – report the list of installed packages to a colle
 
 <p> pakiti-client &#8211; report the list of installed packages to a collecting server </p>
 <h2>SYNOPSIS</h2>
-<p> <code>pakiti-client</code> [<i></i><font SIZE="-1"><i>OPTIONS</i></font><i></i>]</p>
+<p> <code>pakiti-client</code> [<i></i><i>OPTIONS</i><i></i>]</p>
 <h2>DESCRIPTION</h2>
-<p> <code>pakiti-client</code> finds the list of installed packages (i.e. <tt>&quot;rpm -qa&quot;</tt> on an RPM-based system) and formats it in a report that it sends (using a <font SIZE="-1">POST</font> request) to a collecting server (see the <code>&#8211;url</code> option) and/or writes to a file (see the <code>&#8211;output</code> option). </p>
+<p> <code>pakiti-client</code> finds the list of installed packages (i.e. <tt>&quot;rpm -qa&quot;</tt> on an RPM-based system) and formats it in a report that it sends (using a POST request) to a collecting server (see the <code>&#8211;url</code> option) and/or writes to a file (see the <code>&#8211;output</code> option). </p>
 <p> In addition to the list of installed packages, the report also contains information about the submitting machine:</p>
 <dl>
 <dt>&bull;</dt>
@@ -40,45 +40,45 @@ description: "pakiti-client – report the list of installed packages to a colle
 </pre>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;config</code>, <code>&#8211;conf</code> <i></i><font SIZE="-1"><i>PATH</i></font><i></i></dt>
+<dt><code>&#8211;config</code>, <code>&#8211;conf</code> <i></i><i>PATH</i><i></i></dt>
 <dd> use this configuration file before processing the command line parameters</dd>
-<dt><code>&#8211;curl</code> <i></i><font SIZE="-1"><i>PATH</i></font><i></i></dt>
+<dt><code>&#8211;curl</code> <i></i><i>PATH</i><i></i></dt>
 <dd> set the path of the <tt>&quot;curl&quot;</tt> command to use</dd>
-<dt><code>&#8211;dpkg-query</code> <i></i><font SIZE="-1"><i>PATH</i></font><i></i></dt>
+<dt><code>&#8211;dpkg-query</code> <i></i><i>PATH</i><i></i></dt>
 <dd> set the path of the <tt>&quot;dpkg-query&quot;</tt> command to use</dd>
-<dt><code>&#8211;encrypt</code> <i></i><font SIZE="-1"><i>PATH</i></font><i></i>|<i></i><font SIZE="-1"><i>STRING</i></font><i></i></dt>
-<dd> use this certificate to encrypt the report; the value can either be the path of the file containing the certificate or the certificate itself as multi-line <font SIZE="-1">ASCII</font> armored contents</dd>
-<dt><code>&#8211;expect</code> <i></i><font SIZE="-1"><i>STRING</i></font><i></i></dt>
+<dt><code>&#8211;encrypt</code> <i></i><i>PATH</i><i></i>|<i></i><i>STRING</i><i></i></dt>
+<dd> use this certificate to encrypt the report; the value can either be the path of the file containing the certificate or the certificate itself as multi-line ASCII armored contents</dd>
+<dt><code>&#8211;expect</code> <i></i><i>STRING</i><i></i></dt>
 <dd> set the response string to expect from the server in case of success (default: <tt>&quot;OK&quot;</tt>)</dd>
 <dt><code>&#8211;help</code>, <code>-h</code>, <code>-?</code></dt>
 <dd> show some help</dd>
-<dt><code>&#8211;host</code> <i></i><font SIZE="-1"><i>STRING</i></font><i></i></dt>
+<dt><code>&#8211;host</code> <i></i><i>STRING</i><i></i></dt>
 <dd> set the host name to use in the report</dd>
-<dt><code>&#8211;hostname</code> <i></i><font SIZE="-1"><i>PATH</i></font><i></i></dt>
+<dt><code>&#8211;hostname</code> <i></i><i>PATH</i><i></i></dt>
 <dd> set the path of the <tt>&quot;hostname&quot;</tt> command to use</dd>
-<dt><code>&#8211;input</code>, <code>-i</code> <i></i><font SIZE="-1"><i>PATH</i></font><i></i></dt>
+<dt><code>&#8211;input</code>, <code>-i</code> <i></i><i>PATH</i><i></i></dt>
 <dd> do not prepare a new report but, instead, read the report from the given file</dd>
-<dt><code>&#8211;lsb_release</code> <i></i><font SIZE="-1"><i>PATH</i></font><i></i></dt>
+<dt><code>&#8211;lsb_release</code> <i></i><i>PATH</i><i></i></dt>
 <dd> set the path of the <tt>&quot;lsb_release&quot;</tt> command to use</dd>
 <dt><code>&#8211;manual</code>, <code>-m</code></dt>
 <dd> show this manual</dd>
-<dt><code>&#8211;openssl</code> <i></i><font SIZE="-1"><i>PATH</i></font><i></i></dt>
+<dt><code>&#8211;openssl</code> <i></i><i>PATH</i><i></i></dt>
 <dd> set the path of the <tt>&quot;openssl&quot;</tt> command to use</dd>
-<dt><code>&#8211;output</code>, <code>-o</code> <i></i><font SIZE="-1"><i>PATH</i></font><i></i></dt>
+<dt><code>&#8211;output</code>, <code>-o</code> <i></i><i>PATH</i><i></i></dt>
 <dd> write the prepared report to the given file</dd>
-<dt><code>&#8211;rndsleep</code>, <code>-r</code> <i></i><font SIZE="-1"><i>NUMBER</i></font><i></i></dt>
+<dt><code>&#8211;rndsleep</code>, <code>-r</code> <i></i><i>NUMBER</i><i></i></dt>
 <dd> sleep for a random amount of seconds, up to the given number (useful when <code>pakiti-client</code> is invoked by <tt>&quot;cron&quot;</tt>)</dd>
-<dt><code>&#8211;rpm</code> <i></i><font SIZE="-1"><i>PATH</i></font><i></i></dt>
+<dt><code>&#8211;rpm</code> <i></i><i>PATH</i><i></i></dt>
 <dd> set the path of the <tt>&quot;rpm&quot;</tt> command to use</dd>
-<dt><code>&#8211;site</code> <i></i><font SIZE="-1"><i>NAME</i></font><i></i></dt>
+<dt><code>&#8211;site</code> <i></i><i>NAME</i><i></i></dt>
 <dd> set the site name to use in the report</dd>
-<dt><code>&#8211;tag</code> <i></i><font SIZE="-1"><i>STRING</i></font><i></i></dt>
+<dt><code>&#8211;tag</code> <i></i><i>STRING</i><i></i></dt>
 <dd> set the tag used by the collecting server to group reports</dd>
-<dt><code>&#8211;uname</code> <i></i><font SIZE="-1"><i>PATH</i></font><i></i></dt>
+<dt><code>&#8211;uname</code> <i></i><i>PATH</i><i></i></dt>
 <dd> set the path of the <tt>&quot;uname&quot;</tt> command to use</dd>
-<dt><code>&#8211;url</code> <i></i><font SIZE="-1"><i>URL</i></font><i></i></dt>
-<dd> send the prepared report to the collecting server at the given <font SIZE="-1">URL</font></dd>
-<dt><code>&#8211;wget</code> <i></i><font SIZE="-1"><i>PATH</i></font><i></i></dt>
+<dt><code>&#8211;url</code> <i></i><i>URL</i><i></i></dt>
+<dd> send the prepared report to the collecting server at the given URL</dd>
+<dt><code>&#8211;wget</code> <i></i><i>PATH</i><i></i></dt>
 <dd> set the path of the <tt>&quot;wget&quot;</tt> command to use</dd></dl>
 <h2>CONFIGURATION FILE</h2>
 <p> <code>pakiti-client</code> can read its options from a configuration file (see the <code>&#8211;config</code> option). </p>
@@ -99,6 +99,6 @@ url = http : // some.where.org:8080/some/path
 <h2>AUTHOR</h2>
 <p> Lionel Cons &lt;<a rel="nofollow" href="http://cern.ch/lionel.cons">http://cern.ch/lionel.cons</a>&gt;</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright (C) <font SIZE="-1">CERN 2014-2015</font> </p>
+<p> Copyright (C) CERN 2014-2015 </p>
 <p> Licensed under the Apache License, Version 2.0 (the &#8220;License&#8221;); you may not use this file except in compliance with the License. You may obtain a copy of the License at: &lt;<a rel="nofollow" href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a>&gt;. </p>
-<p> Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &#8220;<font SIZE="-1">AS IS&#8221; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,</font> either express or implied. See the License for the specific language governing permissions and limitations under the License. </p>
+<p> Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &#8220;AS IS&#8221; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. </p>

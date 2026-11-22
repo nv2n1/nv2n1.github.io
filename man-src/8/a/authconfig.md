@@ -26,9 +26,9 @@ description: "authconfig, authconfig-tui – an interface for configuring system
 <h2>Notes</h2>
 <p>The <code>authconfig-tui</code> is deprecated. No new configuration settings will be supported by its text user interface. Use <code>system-config-authentication</code> GUI application or the command line options instead. </p>
 <p> The <code>/usr/bin/authconfig</code> uses the <code>consolehelper</code> to authenticate as the system user before it starts up. If you want to run it directly without the authentication as the system user, run the <code>/usr/sbin/authconfig</code> command. </p>
-<p> The SSSD service is enabled and possibly started by authconfig when at least two of the following three conditions are met:<br />
- 1) /etc/sssd/sssd.conf file exists (or is configured via the implicit SSSD support)<br />
- 2) SSSD authentication is enabled (pam_sss.so is used in PAM configuration)<br />
+<p> The SSSD service is enabled and possibly started by authconfig when at least two of the following three conditions are met:<br/>
+ 1) /etc/sssd/sssd.conf file exists (or is configured via the implicit SSSD support)<br/>
+ 2) SSSD authentication is enabled (pam_sss.so is used in PAM configuration)<br/>
  3) SSSD is enabled for user identity (nsswitch.conf contains sss) </p>
 <p> When <code>&#8211;update</code> action is used the enablement or disablement and possible restart of services happens only in case the changed configuration options affect the service to be restarted. This means that if for example the ypbind service is enabled with <code>authconfig &#8211;update &#8211;nostart &#8211;enablenis</code> but not started and you run the same command without the <code>&#8211;nostart</code> later the ypbind service will not be started because no configuration change affecting ypbind happened.</p>
 <h2>Return Codes</h2>

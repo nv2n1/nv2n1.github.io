@@ -11,7 +11,7 @@ modemtest - Tool to examining your modem through Perl's Device::SerialPort
 
 <h2>SYNOPSIS</h2>
 
- modemtest [<font SIZE="-1">OPTS</font>] [<font SIZE="-1">DEVICE</font> [<font SIZE="-1">BAUD</font> [<font SIZE="-1">DATA</font> [<font SIZE="-1">PARITY</font> [<font SIZE="-1">STOP</font> [<font SIZE="-1">FLOW</font>]]]]]] 
+ modemtest [OPTS] [DEVICE [BAUD [DATA [PARITY [STOP [FLOW]]]]]] 
 
  <pre>
  DEVICE    Device to use as a serial port (default: &quot;/dev/modem&quot;)
@@ -27,7 +27,7 @@ modemtest - Tool to examining your modem through Perl's Device::SerialPort
 
 <h2>DESCRIPTION</h2>
 
- Some systems, serial ports, and modem behave in strange ways. To test the capabilities of Perl's Device::SerialPort, this tool queries the system settings for the given <font SIZE="-1">DEVICE,</font> and attempts to set up the port and send the initialization string ``<font SIZE="-1">ATE1''</font> to the modem, reporting the results seen.
+ Some systems, serial ports, and modem behave in strange ways. To test the capabilities of Perl's Device::SerialPort, this tool queries the system settings for the given DEVICE, and attempts to set up the port and send the initialization string ``ATE1'' to the modem, reporting the results seen.
 
 <h2>SEE ALSO</h2>
 

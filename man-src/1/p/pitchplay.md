@@ -14,7 +14,7 @@ description: "pitchplay – wrapper script to play audio tracks with cdda2wav wi
 <h2>DESCRIPTION</h2>
 <p> <code>pitchplay</code> allows playback of audio tracks with cdda2wav with pitches specified in percentage with 100% being the original pitch, 50% being one octave lower, 200% one octave higher. </p>
 <h2>EXAMPLES</h2>
-<p> <code>pitchplay</code> 1 90 3 140 5 50<br />
+<p> <code>pitchplay</code> 1 90 3 140 5 50<br/>
  will play track 1 with a pitch of 90%, track 3 with a pitch of 140%, and track 5 with a pitch of 50%. </p>
 <h2>SEE ALSO</h2>
 <p> cdda2wav(1) </p>

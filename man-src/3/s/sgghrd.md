@@ -11,7 +11,7 @@ description: "sgghrd.f –"
 <p> sgghrd.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>sgghrd</code> (COMPQ, COMPZ, N, ILO, IHI, A, LDA, B, LDB, Q, LDQ, Z, LDZ, INFO)<br />
+<p> subroutine <code>sgghrd</code> (COMPQ, COMPZ, N, ILO, IHI, A, LDA, B, LDB, Q, LDQ, Z, LDZ, INFO)<br/>
  <i></i><code>SGGHRD</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sgghrd (characterCOMPQ, characterCOMPZ, integerN, integerILO, integerIHI, real, dimension( lda, * )A, integerLDA, real, dimension( ldb, * )B, integerLDB, real, dimension( ldq, * )Q, integerLDQ, real, dimension( ldz, * )Z, integerLDZ, integerINFO)</h3>
@@ -117,11 +117,11 @@ ILO = 1 and IHI = 0, if N = 0.
           The leading dimension of the array B.  LDB &gt;= max(1,N).
 </pre>
 <p> <i>Q</i> </p>
-<p>Q is REAL array, dimension(LDQ, N) On entry, if COMPQ = &#8216;V&#8217;, the orthogonal matrix Q1,<br />
+<p>Q is REAL array, dimension(LDQ, N) On entry, if COMPQ = &#8216;V&#8217;, the orthogonal matrix Q1,<br/>
                                                 typically from the QR factorization of B.On exit, if COMPQ = &#8216;I&#8217;, the orthogonal matrix Q, and if COMPQ = &#8216;V&#8217;, the product Q1 *Q.Not referenced if COMPQ = &#8216;N&#8217;.</p>
 <p> <i>LDQ</i> </p>
-<p>LDQ is INTEGER<br />
-        The leading dimension of the array Q.LDQ &gt;= N if COMPQ = &#8216;V&#8217; or &#8216;I&#8217;;<br />
+<p>LDQ is INTEGER<br/>
+        The leading dimension of the array Q.LDQ &gt;= N if COMPQ = &#8216;V&#8217; or &#8216;I&#8217;;<br/>
 LDQ &gt;= 1 otherwise.</p>
 <p> <i>Z</i> </p>
 <p>Z is REAL array, dimension(LDZ, N) On entry, if COMPZ = &#8216;V&#8217;, the orthogonal matrix Z1.On exit, if COMPZ = &#8216;I&#8217;, the orthogonal matrix Z, and if COMPZ = &#8216;V&#8217;, the product Z1 *Z.Not referenced if COMPZ = &#8216;N&#8217;.</p>

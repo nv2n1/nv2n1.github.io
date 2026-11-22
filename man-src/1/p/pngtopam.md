@@ -20,7 +20,7 @@ description: "pngtopam – convert a PNG image into a Netpbm image"
 <dl>
 <dt><code>-verbose</code></dt>
 <dd> Display various information about the input PNG image and the conversion process. </dd>
-<p> If you want even more information about the PNG image, use <code>pngcheck</code> (not part of Netpbm).<br />
+<p> If you want even more information about the PNG image, use <code>pngcheck</code> (not part of Netpbm).<br/>
 &nbsp;<wbr>&nbsp;<wbr></p>
 <dt><code>-alphapam</code></dt>
 <dd> Produce a single output image containing the main image (foreground) and the alpha channel or transparency mask. This image is in the PAM format with tuple type of either GRAYSCALE_ALPHA (which has a depth of 2 channels) or RGB_ALPHA (which has a depth of 4 channels). </dd>
@@ -80,7 +80,7 @@ description: "pngtopam – convert a PNG image into a Netpbm image"
 <p> The program could be much faster, with a bit of code optimizing. As with any Netpbm program, speed always takes a back seat to quick present and future development. </p>
 <h2>HISTORY</h2>
 <p> <code>pngtopam</code> was new in Netpbm 10.44, as a replacement for <code>pngtopnm</code>. The main improvement over <code>pngtopnm</code> was that it could generate a PAM image with a transparency channel, whereas with <code>pngtopnm</code>, you would have to extract the transparency channel as a separate file, in a separate run. </p>
-<p> <code>pngtopnm</code> was new in Netpbm 8.1 (March 2000), the first big change to the package in Netpbm&#8217;s renaissance. It and <code>pnmtopng</code> were simply copied from the <code>pnmtopng</code> package (1)<br />
+<p> <code>pngtopnm</code> was new in Netpbm 8.1 (March 2000), the first big change to the package in Netpbm&#8217;s renaissance. It and <code>pnmtopng</code> were simply copied from the <code>pnmtopng</code> package (1)<br/>
 &nbsp;<wbr>by Greg Roelofs.&nbsp;<wbr>&nbsp;<wbr>Those were based on simpler reference applications by Alexander Lehmann &lt;alex [at] hal.rhein-main.de&gt; and Willem van Schaik &lt;willem [at] schaik.com&gt; and distributed with their PNG library. </p>
 <p> Nearly all of the code has changed since it was copied from the <code>pnmtopng</code> package, most of it just to improve maintainability. </p>
 <h2>AUTHORS</h2>

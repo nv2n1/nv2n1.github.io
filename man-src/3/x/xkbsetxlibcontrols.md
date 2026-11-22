@@ -10,7 +10,7 @@ description: "XkbSetXlibControls – Changes the state of the Library Controls"
 <p>XkbSetXlibControls &#8211; Changes the state of the Library Controls </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>unsigned int XkbSetXlibControls</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned long </code><i>bits_to_change</i><code>,</code> <code>unsigned long </code><i>values_for_bits</i><code>);</code><br />
+<dt> <code>unsigned int XkbSetXlibControls</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned long </code><i>bits_to_change</i><code>,</code> <code>unsigned long </code><i>values_for_bits</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

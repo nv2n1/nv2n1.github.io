@@ -16,10 +16,10 @@ description: "grantpt – grant access to the slave pseudoterminal"
 <p> <code>grantpt</code>(): </p>
 <dl>
 <dt>
-</dt><dd> Since glibc 2.24:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_XOPEN_SOURCE&nbsp;&gt;=&nbsp;500 ||<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(_XOPEN_SOURCE&nbsp;&amp;&amp;&nbsp;_XOPEN_SOURCE_EXTENDED)<br />
- Glibc 2.23 and earlier:<br />
+</dt><dd> Since glibc 2.24:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_XOPEN_SOURCE&nbsp;&gt;=&nbsp;500 ||<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(_XOPEN_SOURCE&nbsp;&amp;&amp;&nbsp;_XOPEN_SOURCE_EXTENDED)<br/>
+ Glibc 2.23 and earlier:<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_XOPEN_SOURCE</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code>grantpt</code>() function changes the mode and owner of the slave pseudoterminal device corresponding to the master pseudoterminal referred to by the file descriptor <i>fd</i>. The user ID of the slave is set to the real UID of the calling process. The group ID is set to an unspecified value (e.g., <i>tty</i>). The mode of the slave is set to 0620 (crw&#8211;w&#8212;-). </p>

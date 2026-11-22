@@ -11,7 +11,7 @@ description: "dtrsv.f –"
 <p> dtrsv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dtrsv</code> (UPLO, TRANS, DIAG, N, A, LDA, X, INCX)<br />
+<p> subroutine <code>dtrsv</code> (UPLO, TRANS, DIAG, N, A, LDA, X, INCX)<br/>
  <i></i><code>DTRSV</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dtrsv (characterUPLO, characterTRANS, characterDIAG, integerN, double precision, dimension(lda,*)A, integerLDA, double precision, dimension(*)X, integerINCX)</h3>

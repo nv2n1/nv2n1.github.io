@@ -10,7 +10,7 @@ description: "slarrk.f –"
 <p>slarrk.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>slarrk</code> (N, IW, GL, GU, D, E2, PIVMIN, RELTOL, W, WERR, INFO)<br />
+<p>subroutine <code>slarrk</code> (N, IW, GL, GU, D, E2, PIVMIN, RELTOL, W, WERR, INFO)<br/>
  <i></i><code>SLARRK</code> computes one eigenvalue of a symmetric tridiagonal matrix T to suitable accuracy.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slarrk (integerN, integerIW, realGL, realGU, real, dimension( * )D, real, dimension( * )E2, realPIVMIN, realRELTOL, realW, realWERR, integerINFO)</h3>

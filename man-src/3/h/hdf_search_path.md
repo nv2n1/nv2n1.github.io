@@ -17,8 +17,8 @@ description: "hdf_search_path – Find a file given a search path in HDF"
 NEOERR *hdf_search_path(HDF *hdf, const char *path, char *full);
 </code></pre>
 <h2>ARGUMENTS</h2>
-<p> hdf -&gt; the hdf dataset to use<br />
- path -&gt; the relative path<br />
+<p> hdf -&gt; the hdf dataset to use<br/>
+ path -&gt; the relative path<br/>
  full -&gt; a pointer to a _POSIX_PATH_MAX buffer </p>
 <h2>DESCRIPTION</h2>
 <p> hdf_search_path is a convenience/utility function that searches for relative filenames in a search path. The search path is the list given by the children of hdf.loadpaths. </p>

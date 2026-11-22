@@ -49,7 +49,7 @@ description: "Request Attributes –"
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GLOBUS_SUCCESS</i> The attribute was successfully destroyed.<br />
+</dt><dd> <i>GLOBUS_SUCCESS</i> The attribute was successfully destroyed.<br/>
  <i>GLOBUS_GASS_TRANSFER_ERROR_NULL_POINTER</i> The <i>attr</i> was GLOBUS_NULL.</dd></dl>
 <h3>int globus_gass_transfer_requestattr_init (globus_gass_transfer_requestattr_t *attr, char *url_scheme)</h3>
 <p> Initialize a request attribute. </p>
@@ -57,13 +57,13 @@ description: "Request Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>attr</i> The attribute set to be initialized.<br />
+</dt><dd> <i>attr</i> The attribute set to be initialized.<br/>
  <i>url_scheme</i> The scheme which which the attribute will be used for.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GLOBUS_SUCCESS</i> The attribute was successfully initialized.<br />
- <i>GLOBUS_GASS_TRANSFER_ERROR_NULL_POINTER</i> Either <i>attr</i> or <i>url_scheme</i> was GLOBUS_NULL.<br />
+</dt><dd> <i>GLOBUS_SUCCESS</i> The attribute was successfully initialized.<br/>
+ <i>GLOBUS_GASS_TRANSFER_ERROR_NULL_POINTER</i> Either <i>attr</i> or <i>url_scheme</i> was GLOBUS_NULL.<br/>
  <i>GLOBUS_GASS_TRANSFER_ERROR_NOT_IMPLEMENTED</i> No protocol module currently registered with GASS Transfer Library handles URLs with the specified <i>url_scheme</i>.</dd></dl>
 <h3>int globus_gass_transfer_requestattr_set_block_size (globus_gass_transfer_requestattr_t *attr, globus_size_tblock_size)</h3>
 <p> Set/Get the block size attribute for a GASS transfer attribute set. </p>
@@ -71,12 +71,12 @@ description: "Request Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>attr</i> The attribute set to query or modify.<br />
+</dt><dd> <i>attr</i> The attribute set to query or modify.<br/>
  <i>block_size</i> The data block size that should be used to process requests with this attribute set.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GLOBUS_SUCCESS</i> The attribute was successfully updated.<br />
+</dt><dd> <i>GLOBUS_SUCCESS</i> The attribute was successfully updated.<br/>
  <i>GLOBUS_GASS_TRANSFER_ERROR_NULL_POINTER</i> The <i>attr</i> was GLOBUS_NULL.</dd></dl>
 <h3>int globus_gass_transfer_requestattr_set_connection_reuse (globus_gass_transfer_requestattr_t *attr, globus_bool_tconnection_reuse)</h3>
 <p> Set/Get the connection reuse attribute for a GASS transfer attribute set. </p>
@@ -84,12 +84,12 @@ description: "Request Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>attr</i> The attribute set to query or modify.<br />
+</dt><dd> <i>attr</i> The attribute set to query or modify.<br/>
  <i>connection_reuse</i> The value of the connection reuse attribute.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GLOBUS_SUCCESS</i> The attribute was successfully updated.<br />
+</dt><dd> <i>GLOBUS_SUCCESS</i> The attribute was successfully updated.<br/>
  <i>GLOBUS_GASS_TRANSFER_ERROR_NULL_POINTER</i> The <i>attr</i> was GLOBUS_NULL.</dd></dl>
 <h3>int globus_gass_transfer_requestattr_set_file_mode (globus_gass_transfer_requestattr_t *attr, globus_gass_transfer_file_mode_tfile_mode)</h3>
 <p> Set/Get the file mode attribute for a GASS transfer attribute set. </p>
@@ -97,12 +97,12 @@ description: "Request Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>attr</i> The attribute set to query or modify.<br />
+</dt><dd> <i>attr</i> The attribute set to query or modify.<br/>
  <i>file_mode</i> The value of the file mode attribute.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GLOBUS_SUCCESS</i> The attribute was successfully updated.<br />
+</dt><dd> <i>GLOBUS_SUCCESS</i> The attribute was successfully updated.<br/>
  <i>GLOBUS_GASS_TRANSFER_ERROR_NULL_POINTER</i> The <i>attr</i> was GLOBUS_NULL.</dd></dl>
 <h3>int globus_gass_transfer_requestattr_set_proxy_url (globus_gass_transfer_requestattr_t *attr, char *proxy_url)</h3>
 <p> Set/Get the proxy server attribute for a GASS transfer attribute set. </p>
@@ -110,12 +110,12 @@ description: "Request Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>attr</i> The attribute set to be modified<br />
+</dt><dd> <i>attr</i> The attribute set to be modified<br/>
  <i>proxy_url</i> The new value of the proxy_url attribute. This may be GLOBUS_NULL if no proxy is to be used to access URLs with this attribute set.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GLOBUS_SUCCESS</i> The attribute was successfully updated.<br />
+</dt><dd> <i>GLOBUS_SUCCESS</i> The attribute was successfully updated.<br/>
  <i>GLOBUS_GASS_TRANSFER_ERROR_NULL_POINTER</i> The <i>attr</i> was GLOBUS_NULL.</dd></dl>
 <h3>int globus_gass_transfer_requestattr_set_socket_nodelay (globus_gass_transfer_requestattr_t *attr, globus_bool_tnodelay)</h3>
 <p> Set/Get the TCP nodelay attribute for a GASS transfer attribute set. </p>
@@ -123,12 +123,12 @@ description: "Request Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>attr</i> The attribute set to query or modify.<br />
+</dt><dd> <i>attr</i> The attribute set to query or modify.<br/>
  <i>nodelay</i> The value of the nodelay attribute.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GLOBUS_SUCCESS</i> The attribute was successfully updated.<br />
+</dt><dd> <i>GLOBUS_SUCCESS</i> The attribute was successfully updated.<br/>
  <i>GLOBUS_GASS_TRANSFER_ERROR_NULL_POINTER</i> The <i>attr</i> was GLOBUS_NULL.</dd></dl>
 <h3>int globus_gass_transfer_requestattr_set_socket_rcvbuf (globus_gass_transfer_requestattr_t *attr, intrcvbuf)</h3>
 <p> Set/Get the receive buffer size attribute for a GASS transfer attribute set. </p>
@@ -136,12 +136,12 @@ description: "Request Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>attr</i> The attribute set to query or modify.<br />
+</dt><dd> <i>attr</i> The attribute set to query or modify.<br/>
  <i>rcvbuf</i> The value of the socket buffer.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GLOBUS_SUCCESS</i> The attribute was successfully updated.<br />
+</dt><dd> <i>GLOBUS_SUCCESS</i> The attribute was successfully updated.<br/>
  <i>GLOBUS_GASS_TRANSFER_ERROR_NULL_POINTER</i> The <i>attr</i> was GLOBUS_NULL.</dd></dl>
 <h3>int globus_gass_transfer_requestattr_set_socket_sndbuf (globus_gass_transfer_requestattr_t *attr, intsndbuf)</h3>
 <p> Set/Get the send buffer size attribute for a GASS transfer attribute set. </p>
@@ -149,12 +149,12 @@ description: "Request Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>attr</i> The attribute set to query or modify.<br />
+</dt><dd> <i>attr</i> The attribute set to query or modify.<br/>
  <i>sndbuf</i> The value of the socket buffer.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GLOBUS_SUCCESS</i> The attribute was successfully updated.<br />
+</dt><dd> <i>GLOBUS_SUCCESS</i> The attribute was successfully updated.<br/>
  <i>GLOBUS_GASS_TRANSFER_ERROR_NULL_POINTER</i> The <i>attr</i> was GLOBUS_NULL.</dd></dl>
 <h3>int globus_gass_transfer_secure_requestattr_set_authorization (globus_gass_transfer_requestattr_t *attr, globus_gass_transfer_authorization_tmode, char *subject)</h3>
 <p> Set/Get the authorization attribute for a GASS transfer attribute set. </p>
@@ -162,13 +162,13 @@ description: "Request Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>attr</i> The attribute set to query or modify.<br />
- <i>mode</i> The authorization mode to use.<br />
+</dt><dd> <i>attr</i> The attribute set to query or modify.<br/>
+ <i>mode</i> The authorization mode to use.<br/>
  <i>subject</i> The subject name of the authorized subject, if <i>mode</i> is GLOBUS_GASS_TRANSFER_AUTHORIZE_SUBJECT</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GLOBUS_SUCCESS</i> The attribute was successfully updated.<br />
+</dt><dd> <i>GLOBUS_SUCCESS</i> The attribute was successfully updated.<br/>
  <i>GLOBUS_GASS_TRANSFER_ERROR_NULL_POINTER</i> The <i>attr</i> was GLOBUS_NULL.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gass_transfer from the source code. </p>

@@ -11,7 +11,7 @@ description: "chesvx.f –"
 <p> chesvx.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>chesvx</code> (FACT, UPLO, N, NRHS, A, LDA, AF, LDAF, IPIV, B, LDB, X, LDX, RCOND, FERR, BERR, WORK, LWORK, RWORK, INFO)<br />
+<p> subroutine <code>chesvx</code> (FACT, UPLO, N, NRHS, A, LDA, AF, LDAF, IPIV, B, LDB, X, LDX, RCOND, FERR, BERR, WORK, LWORK, RWORK, INFO)<br/>
  <i></i><code> CHESVX computes the solution to system of linear equations A * X = B for HE matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine chesvx (characterFACT, characterUPLO, integerN, integerNRHS, complex, dimension( lda, * )A, integerLDA, complex, dimension( ldaf, * )AF, integerLDAF, integer, dimension( * )IPIV, complex, dimension( ldb, * )B, integerLDB, complex, dimension( ldx, * )X, integerLDX, realRCOND, real, dimension( * )FERR, real, dimension( * )BERR, complex, dimension( * )WORK, integerLWORK, real, dimension( * )RWORK, integerINFO)</h3>

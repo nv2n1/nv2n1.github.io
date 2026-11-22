@@ -11,7 +11,7 @@ description: "dpptrf.f –"
 <p> dpptrf.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dpptrf</code> (UPLO, N, AP, INFO)<br />
+<p> subroutine <code>dpptrf</code> (UPLO, N, AP, INFO)<br/>
  <i></i><code>DPPTRF</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dpptrf (characterUPLO, integerN, double precision, dimension( * )AP, integerINFO)</h3>

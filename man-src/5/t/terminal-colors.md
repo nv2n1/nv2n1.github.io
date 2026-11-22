@@ -233,8 +233,8 @@ description: "terminal-colors.d – Configure output colorization for various ut
 <dd><code>echo &#8216;alert 37;41&#8217; &gt;&gt; /etc/terminal-colors.d/dmesg.scheme</code>
 </dd></dl>
 <h2>Files</h2>
-<p><code>$XDG_CONFIG_HOME/terminal-colors.d</code><br />
- <code>$HOME/.config/terminal-colors.d</code><br />
+<p><code>$XDG_CONFIG_HOME/terminal-colors.d</code><br/>
+ <code>$HOME/.config/terminal-colors.d</code><br/>
  <code>/etc/terminal-colors.d</code></p>
 <h2>Compatibility</h2>
 <p>The terminal-colors.d functionality is currently supported by all util-linux utilities which provides colorized output. For more details always see the COLORS section in the man page for the utility.</p>

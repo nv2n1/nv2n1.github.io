@@ -49,7 +49,7 @@ description: "showfont – font dumper for X font server"
 <dt><code>FONTSERVER</code></dt>
 <dd> the default X font server to contact. The server name must be specified in one of the formats defined in the <i>Font Server Names</i> section of <a href="/docs/linux/man/7-x/">X</a>(7).</dd></dl>
 <h2>COPYRIGHT</h2>
-<p> Copyright 1991, Network Computing Devices, Inc.<br />
+<p> Copyright 1991, Network Computing Devices, Inc.<br/>
  See <i><a href="/docs/linux/man/7-x/">X</a></i>(7) for a full statement of rights and permissions.</p>
 <h2>AUTHOR</h2>
 <p> Dave Lemke, Network Computing Devices, Inc. </p>

@@ -18,24 +18,24 @@ description: "QwtPointPolar –"
 <p> <code>QwtPointPolar</code> (const QPointF &amp;) </p>
 <p> void <code>setPoint</code> (const QPointF &amp;) </p>
 <p> QPointF <code>toPoint</code> () const </p>
-<p> bool <code>isValid</code> () const<br />
- <i>Returns true if </i><code>radius()</code> &gt;= 0.0.<br />
- bool <code>isNull</code> () const<br />
- <i>Returns true if </i><code>radius()</code> &gt;= 0.0.<br />
- double <code>radius</code> () const<br />
- <i>Returns the radius. </i><br />
- double <code>azimuth</code> () const<br />
- <i>Returns the azimuth. </i><br />
- double &amp; <code>rRadius</code> ()<br />
- <i>Returns the radius. </i><br />
- double &amp; <code>rAzimuth</code> ()<br />
- <i>Returns the azimuth. </i><br />
- void <code>setRadius</code> (double)<br />
- <i>Sets the radius to radius. </i><br />
- void <code>setAzimuth</code> (double)<br />
- <i>Sets the atimuth to atimuth. </i><br />
- bool <code>operator==</code> (const <code>QwtPointPolar</code> &amp;) const<br />
- <i>Compare 2 points. </i><br />
+<p> bool <code>isValid</code> () const<br/>
+ <i>Returns true if </i><code>radius()</code> &gt;= 0.0.<br/>
+ bool <code>isNull</code> () const<br/>
+ <i>Returns true if </i><code>radius()</code> &gt;= 0.0.<br/>
+ double <code>radius</code> () const<br/>
+ <i>Returns the radius. </i><br/>
+ double <code>azimuth</code> () const<br/>
+ <i>Returns the azimuth. </i><br/>
+ double &amp; <code>rRadius</code> ()<br/>
+ <i>Returns the radius. </i><br/>
+ double &amp; <code>rAzimuth</code> ()<br/>
+ <i>Returns the azimuth. </i><br/>
+ void <code>setRadius</code> (double)<br/>
+ <i>Sets the radius to radius. </i><br/>
+ void <code>setAzimuth</code> (double)<br/>
+ <i>Sets the atimuth to atimuth. </i><br/>
+ bool <code>operator==</code> (const <code>QwtPointPolar</code> &amp;) const<br/>
+ <i>Compare 2 points. </i><br/>
  bool <code>operator!=</code> (const <code>QwtPointPolar</code> &amp;) const </p>
 <p> <code>QwtPointPolar</code> <code>normalized</code> () const </p>
 <h2>Detailed Description</h2>
@@ -51,7 +51,7 @@ description: "QwtPointPolar –"
 <p>Constructs a point with coordinates specified by radius and azimuth. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>azimuth</i> Azimuth<br />
+<dd><i>azimuth</i> Azimuth<br/>
  <i>radius</i> Radius</dd></dl>
 <h3>QwtPointPolar::QwtPointPolar (const <code>QwtPointPolar</code> &amp;other) [inline]</h3>
 <p>Constructs a point using the values of the point specified. </p>

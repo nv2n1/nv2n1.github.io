@@ -10,7 +10,7 @@ description: "xio_driver/globus_xio_net_manager_driver.h –"
 <p>xio_driver/globus_xio_net_manager_driver.h &#8211; </p>
 <p> Network Manager XIO Driver.</p>
 <h2>Synopsis</h2>
-<p>#include &#8216;globus_common.h&#8217;<br />
+<p>#include &#8216;globus_common.h&#8217;<br/>
  #include &#8216;globus_net_manager_attr.h&#8217; </p>
 <h3>Enumerations</h3>
 <p>enum <code>globus_xio_net_manager_cntl_t</code> { <code>GLOBUS_XIO_NET_MANAGER_SET_TASK_ID</code>, <code>GLOBUS_XIO_NET_MANAGER_GET_TASK_ID</code> } </p>

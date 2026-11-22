@@ -71,9 +71,9 @@ description: "QwtLegendItem – A legend label."
 <h3>QwtLegendItem::QwtLegendItem (const <code>QwtSymbol</code> &amp; symbol, const QPen &amp; curvePen, const <code>QwtText</code> &amp; text, QWidget * parent = 0) [explicit]</h3>
 <p><code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>symbol</i> Curve symbol<br />
- <i>curvePen</i> Curve pen<br />
- <i>text</i> Label text<br />
+<dd><i>symbol</i> Curve symbol<br/>
+ <i>curvePen</i> Curve pen<br/>
+ <i>text</i> Label text<br/>
  <i>parent</i> Parent widget</dd></dl>
 <h3>QwtLegendItem::~QwtLegendItem () [virtual]</h3>
 <p>Destructor. </p>
@@ -93,13 +93,13 @@ description: "QwtLegendItem – A legend label."
 <p>Paint the identifier to a given rect. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
+<dd><i>painter</i> Painter<br/>
  <i>rect</i> Rect where to paint</dd></dl>
 <h3>void QwtLegendItem::drawItem (QPainter * painter, const QRect &amp; rect) const [virtual]</h3>
 <p>Draw the legend item to a given rect. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
+<dd><i>painter</i> Painter<br/>
  <i>rect</i> Rect where to paint the button</dd></dl>
 <h3>void QwtLegendItem::drawText (QPainter * painter, const QRect &amp; textRect) [protected, virtual]</h3>
 <p>Redraw the text. </p>

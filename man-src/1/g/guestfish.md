@@ -22,8 +22,8 @@ description: "guestfish – the guest filesystem shell"
 <p> Using <code>&quot;guestfish&quot;</code> in write mode on live virtual machines, or concurrently with other disk editing tools, can be dangerous, potentially causing disk corruption. The virtual machine must be shut down before you use this command, and disk images must not be edited concurrently. </p>
 <p> Use the <i>--ro</i> (read-only) option to use <code>&quot;guestfish&quot;</code> safely if the disk image or virtual machine might be live. You may see strange or inconsistent results if running concurrently with other changes, but with this option you won&#8217;t risk disk corruption.  </p>
 <h2>DESCRIPTION</h2>
-<p> Guestfish is a shell and command-line tool for examining and modifying virtual machine filesystems. It uses libguestfs and exposes all of the functionality of the guestfs <font SIZE="-1">API,</font> see <i>guestfs</i>(3). </p>
-<p> Guestfish gives you structured access to the libguestfs <font SIZE="-1">API,</font> from shell scripts or the command line or interactively. If you want to rescue a broken virtual machine image, you should look at the <i><a href="/docs/linux/man/1-virt-rescue/">virt-rescue</a></i>(1) command.  </p>
+<p> Guestfish is a shell and command-line tool for examining and modifying virtual machine filesystems. It uses libguestfs and exposes all of the functionality of the guestfs API, see <i>guestfs</i>(3). </p>
+<p> Guestfish gives you structured access to the libguestfs API, from shell scripts or the command line or interactively. If you want to rescue a broken virtual machine image, you should look at the <i><a href="/docs/linux/man/1-virt-rescue/">virt-rescue</a></i>(1) command.  </p>
 <h2>EXAMPLES</h2>
 <h3>As an interactive shell</h3>
 <pre><code> $ guestfish
@@ -54,7 +54,7 @@ description: "guestfish – the guest filesystem shell"
  write /etc/motd &quot;Welcome, new users&quot;
  _EOF_
 </code></pre>
-<p> List the <font SIZE="-1">LVM</font> logical volumes in a disk image: </p>
+<p> List the LVM logical volumes in a disk image: </p>
 <pre><code> guestfish -a disk.img --ro &lt;&lt;_EOF_
  run
  lvs
@@ -102,7 +102,7 @@ description: "guestfish – the guest filesystem shell"
 <pre><code> guestfish -N help | less
 </code></pre>
 <h3>Remote drives</h3>
-<p> Access a remote disk using <font SIZE="-1">NBD:</font> </p>
+<p> Access a remote disk using NBD: </p>
 <pre><code> guestfish -anbd://example.com
 </code></pre>
 <h3>Remote control</h3>
@@ -133,18 +133,18 @@ description: "guestfish – the guest filesystem shell"
 <p> The format of the disk image is auto-detected. To override this and force a particular format use the <i>--format=..</i> option. </p>
 <p> Using this flag is mostly equivalent to using the <code>&quot;add&quot;</code> command, with <code>&quot;readonly:true&quot;</code> if the <i>--ro</i> flag was given, and with <code>&quot;format:...&quot;</code> if the <i>--format=...</i> flag was given. </p>
  </dd>
-<dt><code>-a </code><font SIZE="-1"><code>URI</code></font></dt>
+<dt><code>-a </code><code>URI</code></dt>
 <dd>  </dd>
-<dt><code>--add </code><font SIZE="-1"><code>URI</code></font></dt>
-<dd> <p> Add a remote disk. See ``<font SIZE="-1">ADDING REMOTE STORAGE&#8217;&#8216;</font>. </p>
+<dt><code>--add </code><code>URI</code></dt>
+<dd> <p> Add a remote disk. See ``ADDING REMOTE STORAGE&#8217;&#8216;. </p>
  </dd>
-<dt><code>-c </code><font SIZE="-1"><code>URI</code></font></dt>
+<dt><code>-c </code><code>URI</code></dt>
 <dd>  </dd>
-<dt><code>--connect </code><font SIZE="-1"><code>URI</code></font></dt>
-<dd> <p> When used in conjunction with the <i>-d</i> option, this specifies the libvirt <font SIZE="-1">URI</font> to use. The default is to use the default libvirt connection. </p>
+<dt><code>--connect </code><code>URI</code></dt>
+<dd> <p> When used in conjunction with the <i>-d</i> option, this specifies the libvirt URI to use. The default is to use the default libvirt connection. </p>
  </dd>
 <dt><code>--csh</code></dt>
-<dd> <p> If using the <i>--listen</i> option and a csh-like shell, use this option. See section ``<font SIZE="-1">REMOTE CONTROL AND CSH&#8217;&#8216;</font> below. </p>
+<dd> <p> If using the <i>--listen</i> option and a csh-like shell, use this option. See section ``REMOTE CONTROL AND CSH&#8217;&#8216; below. </p>
  </dd>
 <dt><code>-d libvirt-domain</code></dt>
 <dd>  </dd>
@@ -174,7 +174,7 @@ description: "guestfish – the guest filesystem shell"
 <pre><code> guestfish --format=raw -a disk.img --format -a another.img
 </code></pre>
 <p> forces raw format (no auto-detection) for <i>disk.img</i> and reverts to auto-detection for <i>another.img</i>. </p>
-<p> If you have untrusted raw-format guest disk images, you should use this option to specify the disk format. This avoids a possible security problem with malicious guests (<font SIZE="-1">CVE-2010-3851</font>). See also ``add&#8217;&#8216;. </p>
+<p> If you have untrusted raw-format guest disk images, you should use this option to specify the disk format. This avoids a possible security problem with malicious guests (CVE-2010-3851). See also ``add&#8217;&#8216;. </p>
  </dd>
 <dt><code>-i</code></dt>
 <dd>  </dd>
@@ -199,10 +199,10 @@ description: "guestfish – the guest filesystem shell"
 <dd> <p> Read key or passphrase parameters from stdin. The default is to try to read passphrases from the user by opening <i>/dev/tty</i>. </p>
  </dd>
 <dt><code>--listen</code></dt>
-<dd> <p> Fork into the background and listen for remote commands. See section ``<font SIZE="-1">REMOTE CONTROL GUESTFISH OVER A SOCKET&#8217;&#8216;</font> below. </p>
+<dd> <p> Fork into the background and listen for remote commands. See section ``REMOTE CONTROL GUESTFISH OVER A SOCKET&#8217;&#8216; below. </p>
  </dd>
 <dt><code>--live</code></dt>
-<dd> <p> Connect to a live virtual machine. (Experimental, see ``<font SIZE="-1">ATTACHING TO RUNNING DAEMONS&#8217;&#8216;</font> in <i>guestfs</i>(3)). </p>
+<dd> <p> Connect to a live virtual machine. (Experimental, see ``ATTACHING TO RUNNING DAEMONS&#8217;&#8216; in <i>guestfs</i>(3)). </p>
  </dd>
 <dt><code>-m dev[:mountpoint[:options[:fstype]]]</code></dt>
 <dd>  </dd>
@@ -219,14 +219,14 @@ description: "guestfish – the guest filesystem shell"
 <p> The fourth part of the parameter is the filesystem driver to use, such as <code>&quot;ext3&quot;</code> or <code>&quot;ntfs&quot;</code>. This is rarely needed, but can be useful if multiple drivers are valid for a filesystem (eg: <code>&quot;ext2&quot;</code> and <code>&quot;ext3&quot;</code>), or if libguestfs misidentifies a filesystem. </p>
  </dd>
 <dt><code>--network</code></dt>
-<dd> <p> Enable <font SIZE="-1">QEMU</font> user networking in the guest. </p>
+<dd> <p> Enable QEMU user networking in the guest. </p>
  </dd>
 <dt><code>-N [filename=]type</code></dt>
 <dd>  </dd>
 <dt><code>--new [filename=]type</code></dt>
 <dd>  </dd>
 <dt><code>-N help</code></dt>
-<dd> <p> Prepare a fresh disk image formatted as ``type&#8217;&#8216;. This is an alternative to the <i>-a</i> option: whereas <i>-a</i> adds an existing disk, <i>-N</i> creates a preformatted disk with a filesystem and adds it. See ``<font SIZE="-1">PREPARED DISK IMAGES&#8217;&#8216;</font> below. </p>
+<dd> <p> Prepare a fresh disk image formatted as ``type&#8217;&#8216;. This is an alternative to the <i>-a</i> option: whereas <i>-a</i> adds an existing disk, <i>-N</i> creates a preformatted disk with a filesystem and adds it. See ``PREPARED DISK IMAGES&#8217;&#8216; below. </p>
  </dd>
 <dt><code>-n</code></dt>
 <dd>  </dd>
@@ -237,7 +237,7 @@ description: "guestfish – the guest filesystem shell"
 <dd> <p> Don&#8217;t tab-complete paths on the guest filesystem. It is useful to be able to hit the tab key to complete paths on the guest filesystem, but this causes extra ``hidden&#8217;&#8216; guestfs calls to be made, so this option is here to allow this feature to be disabled. </p>
  </dd>
 <dt><code>--pipe-error</code></dt>
-<dd> <p> If writes fail to pipe commands (see ``<font SIZE="-1">PIPES&#8217;&#8216;</font> below), then the command returns an error. </p>
+<dd> <p> If writes fail to pipe commands (see ``PIPES&#8217;&#8216; below), then the command returns an error. </p>
 <p> The default (also for historical reasons) is to ignore such errors so that: </p>
 <pre><code> &gt;&lt;fs&gt; command_with_lots_of_output | head
 </code></pre>
@@ -251,7 +251,7 @@ description: "guestfish – the guest filesystem shell"
 <dd> <p> Disable progress bars. </p>
  </dd>
 <dt><code>--remote[=pid]</code></dt>
-<dd> <p> Send remote commands to <code>$GUESTFISH_PID</code> or <code>&quot;pid&quot;</code>. See section ``<font SIZE="-1">REMOTE CONTROL GUESTFISH OVER A SOCKET&#8217;&#8216;</font> below. </p>
+<dd> <p> Send remote commands to <code>$GUESTFISH_PID</code> or <code>&quot;pid&quot;</code>. See section ``REMOTE CONTROL GUESTFISH OVER A SOCKET&#8217;&#8216; below. </p>
  </dd>
 <dt><code>-r</code></dt>
 <dd>  </dd>
@@ -259,7 +259,7 @@ description: "guestfish – the guest filesystem shell"
 <dd> <p> This changes the <i>-a</i>, <i>-d</i> and <i>-m</i> options so that disks are added and mounts are done read-only. </p>
 <p> The option must always be used if the disk image or virtual machine might be running, and is generally recommended in cases where you don&#8217;t need write access to the disk. </p>
 <p> Note that prepared disk images created with <i>-N</i> are not affected by this option. Also commands like <code>&quot;add&quot;</code> are not affected - you have to specify the <code>&quot;readonly:true&quot;</code> option explicitly if you need it. </p>
-<p> See also ``<font SIZE="-1">OPENING DISKS FOR READ AND WRITE&#8217;&#8216;</font> below. </p>
+<p> See also ``OPENING DISKS FOR READ AND WRITE&#8217;&#8216; below. </p>
  </dd>
 <dt><code>--selinux</code></dt>
 <dd> <p> This option is provided for backwards compatibility and does nothing. </p>
@@ -278,7 +278,7 @@ description: "guestfish – the guest filesystem shell"
 <dd>  </dd>
 <dt><code>--rw</code></dt>
 <dd> <p> This changes the <i>-a</i>, <i>-d</i> and <i>-m</i> options so that disks are added and mounts are done read-write. </p>
-<p> See ``<font SIZE="-1">OPENING DISKS FOR READ AND WRITE&#8217;&#8216;</font> below. </p>
+<p> See ``OPENING DISKS FOR READ AND WRITE&#8217;&#8216; below. </p>
  </dd>
 <dt><code>-x</code></dt>
 <dd> <p> Echo each command before executing it. </p>
@@ -310,7 +310,7 @@ description: "guestfish – the guest filesystem shell"
 <h2>OPENING DISKS FOR READ AND WRITE</h2>
 <p> The guestfish, <i><a href="/docs/linux/man/1-guestmount/">guestmount</a></i>(1) and <i><a href="/docs/linux/man/1-virt-rescue/">virt-rescue</a></i>(1) options <i>--ro</i> and <i>--rw</i> affect whether the other command line options <i>-a</i>, <i>-c</i>, <i>-d</i>, <i>-i</i> and <i>-m</i> open disk images read-only or for writing. </p>
 <p> In libguestfs ≤ 1.10, guestfish, guestmount and virt-rescue defaulted to opening disk images supplied on the command line for write. To open a disk image read-only you have to do <i>-a image --ro</i>. </p>
-<p> This matters: If you accidentally open a live <font SIZE="-1">VM</font> disk image writable then you will cause irreversible disk corruption. </p>
+<p> This matters: If you accidentally open a live VM disk image writable then you will cause irreversible disk corruption. </p>
 <p> In a future libguestfs we intend to change the default the other way. Disk images will be opened read-only. You will have to either specify <i>guestfish --rw</i>, <i>guestmount --rw</i>, <i>virt-rescue --rw</i>, or change the configuration file in order to get write access for disk images specified by those other command line options. </p>
 <p> This version of guestfish, guestmount and virt-rescue has a <i>--rw</i> option which does nothing (it is already the default). However it is highly recommended that you use this option to indicate that you need write access, and prepare your scripts for the day when this option will be required for write access. </p>
 <p> <code>Note:</code> This does <i>not</i> affect commands like ``add&#8217;&#8216; and ``mount&#8217;&#8216;, or any other libguestfs program apart from guestfish and guestmount.  </p>
@@ -325,7 +325,7 @@ description: "guestfish – the guest filesystem shell"
  command &quot;/bin/echo 'foo bar'&quot;
  command &quot;/bin/echo \'foo\'&quot;
 </code></pre>
-<font SIZE="-1"></font><h3>ESCAPE SEQUENCES IN DOUBLE QUOTED ARGUMENTS</h3>
+<h3>ESCAPE SEQUENCES IN DOUBLE QUOTED ARGUMENTS</h3>
 <p> In double-quoted arguments (only) use backslash to insert special characters: </p>
 <dl>
 <dt>&quot;\a&quot;</dt>
@@ -371,63 +371,63 @@ description: "guestfish – the guest filesystem shell"
 <p> Each optional argument can appear at most once. All optional arguments must appear after the required ones.  </p>
 <h2>NUMBERS</h2>
 <p> This section applies to all commands which can take integers as parameters.  </p>
-<font SIZE="-1"></font><h3>SIZE SUFFIX</h3>
+<h3>SIZE SUFFIX</h3>
 <p> When the command takes a parameter measured in bytes, you can use one of the following suffixes to specify kilobytes, megabytes and larger sizes: </p>
 <dl>
 <dt><code>k</code> or <code>K</code> or <code>KiB</code></dt>
 <dd> <p> The size in kilobytes (multiplied by 1024). </p>
  </dd>
-<dt><font SIZE="-1"><code>KB</code></font></dt>
-<dd> <p> The size in <font SIZE="-1">SI 1000</font> byte units. </p>
+<dt><code>KB</code></dt>
+<dd> <p> The size in SI 1000 byte units. </p>
  </dd>
 <dt><code>M</code> or <code>MiB</code></dt>
 <dd> <p> The size in megabytes (multiplied by 1048576). </p>
  </dd>
-<dt><font SIZE="-1"><code>MB</code></font></dt>
-<dd> <p> The size in <font SIZE="-1">SI 1000000</font> byte units. </p>
+<dt><code>MB</code></dt>
+<dd> <p> The size in SI 1000000 byte units. </p>
  </dd>
 <dt><code>G</code> or <code>GiB</code></dt>
 <dd> <p> The size in gigabytes (multiplied by 2**30). </p>
  </dd>
-<dt><font SIZE="-1"><code>GB</code></font></dt>
-<dd> <p> The size in <font SIZE="-1">SI</font> 10**9 byte units. </p>
+<dt><code>GB</code></dt>
+<dd> <p> The size in SI 10**9 byte units. </p>
  </dd>
 <dt><code>T</code> or <code>TiB</code></dt>
 <dd> <p> The size in terabytes (multiplied by 2**40). </p>
  </dd>
-<dt><font SIZE="-1"><code>TB</code></font></dt>
-<dd> <p> The size in <font SIZE="-1">SI</font> 10**12 byte units. </p>
+<dt><code>TB</code></dt>
+<dd> <p> The size in SI 10**12 byte units. </p>
  </dd>
 <dt><code>P</code> or <code>PiB</code></dt>
 <dd> <p> The size in petabytes (multiplied by 2**50). </p>
  </dd>
-<dt><font SIZE="-1"><code>PB</code></font></dt>
-<dd> <p> The size in <font SIZE="-1">SI</font> 10**15 byte units. </p>
+<dt><code>PB</code></dt>
+<dd> <p> The size in SI 10**15 byte units. </p>
  </dd>
 <dt><code>E</code> or <code>EiB</code></dt>
 <dd> <p> The size in exabytes (multiplied by 2**60). </p>
  </dd>
-<dt><font SIZE="-1"><code>EB</code></font></dt>
-<dd> <p> The size in <font SIZE="-1">SI</font> 10**18 byte units. </p>
+<dt><code>EB</code></dt>
+<dd> <p> The size in SI 10**18 byte units. </p>
  </dd>
 <dt><code>Z</code> or <code>ZiB</code></dt>
 <dd> <p> The size in zettabytes (multiplied by 2**70). </p>
  </dd>
-<dt><font SIZE="-1"><code>ZB</code></font></dt>
-<dd> <p> The size in <font SIZE="-1">SI</font> 10**21 byte units. </p>
+<dt><code>ZB</code></dt>
+<dd> <p> The size in SI 10**21 byte units. </p>
  </dd>
 <dt><code>Y</code> or <code>YiB</code></dt>
 <dd> <p> The size in yottabytes (multiplied by 2**80). </p>
  </dd>
-<dt><font SIZE="-1"><code>YB</code></font></dt>
-<dd> <p> The size in <font SIZE="-1">SI</font> 10**24 byte units. </p>
+<dt><code>YB</code></dt>
+<dd> <p> The size in SI 10**24 byte units. </p>
  </dd></dl>
 <p> For example: </p>
 <pre><code> truncate-size /file 1G
 </code></pre>
 <p> would truncate the file to 1 gigabyte. </p>
 <p> Be careful because a few commands take sizes in kilobytes or megabytes (eg. the parameter to ``memsize&#8217;&#8216; is specified in megabytes already). Adding a suffix will probably not do what you expect.  </p>
-<font SIZE="-1"></font><h3>OCTAL AND HEXADECIMAL NUMBERS</h3>
+<h3>OCTAL AND HEXADECIMAL NUMBERS</h3>
 <p> For specifying the radix (base) use the C convention: <code>0</code> to prefix an octal number or <code>&quot;0x&quot;</code> to prefix a hexadecimal number. For example: </p>
 <pre><code> 1234 decimal number 1234
  02322 octal number, equivalent to decimal 1234
@@ -439,7 +439,7 @@ description: "guestfish – the guest filesystem shell"
 </code></pre>
 <p> Commands that return numbers usually print them in decimal, but some commands print numbers in other radices (eg. <code>&quot;umask&quot;</code> prints the mode in octal, preceded by <code>0</code>).  </p>
 <h2>WILDCARDS AND GLOBBING</h2>
-<p> Neither guestfish nor the underlying guestfs <font SIZE="-1">API</font> performs wildcard expansion (globbing) by default. So for example the following will not do what you expect: </p>
+<p> Neither guestfish nor the underlying guestfs API performs wildcard expansion (globbing) by default. So for example the following will not do what you expect: </p>
 <pre><code> rm-rf /home/*
 </code></pre>
 <p> Assuming you don&#8217;t have a directory called literally <i>/home/*</i> then the above command will return an error. </p>
@@ -467,7 +467,7 @@ description: "guestfish – the guest filesystem shell"
 </code></pre>
 <p> will create a directory <code>&quot;local&quot;</code> on the host, and then export the contents of <i>/remote</i> on the mounted filesystem to <i>local/remote-data.tar.gz</i>. (See <code>&quot;tgz-out&quot;</code>). </p>
 <p> To change the local directory, use the <code>&quot;lcd&quot;</code> command. <code>&quot;!cd&quot;</code> will have no effect, due to the way that subprocesses work in Unix.  </p>
-<font SIZE="-1"></font><h3>LOCAL COMMANDS WITH INLINE EXECUTION</h3>
+<h3>LOCAL COMMANDS WITH INLINE EXECUTION</h3>
 <p> If a line starts with <i>&lt;!</i> then the shell command is executed (as for <i>!</i>), but subsequently any output (stdout) of the shell command is parsed and executed as guestfish commands. </p>
 <p> Thus you can use shell script to construct arbitrary guestfish commands which are then parsed by guestfish. </p>
 <p> For example it is tedious to create a sequence of files (eg. <i>/foo.1</i> through <i>/foo.100</i>) using guestfish commands alone. However this is simple if we use a shell script to create the guestfish commands for us: </p>
@@ -481,7 +481,7 @@ description: "guestfish – the guest filesystem shell"
 <p> Use <code>&quot;command &lt;space&gt; | command&quot;</code> to pipe the output of the first command (a guestfish command) to the second command (any host command). For example: </p>
 <pre><code> cat /etc/passwd | awk -F: '$3 == 0 { print }'
 </code></pre>
-<p> (where <code>&quot;cat&quot;</code> is the guestfish cat command, but <code>&quot;awk&quot;</code> is the host awk program). The above command would list all accounts in the guest filesystem which have <font SIZE="-1">UID 0,</font> ie. root accounts including backdoors. Other examples: </p>
+<p> (where <code>&quot;cat&quot;</code> is the guestfish cat command, but <code>&quot;awk&quot;</code> is the host awk program). The above command would list all accounts in the guest filesystem which have UID 0, ie. root accounts including backdoors. Other examples: </p>
 <pre><code> hexdump /bin/ls | head
  list-devices | tail -1
  tgz-out / - | tar ztf -
@@ -497,7 +497,7 @@ description: "guestfish – the guest filesystem shell"
 <pre><code> echo &quot;~&quot;
 </code></pre>
 <h2>ENCRYPTED DISKS</h2>
-<p> Libguestfs has some support for Linux guests encrypted according to the Linux Unified Key Setup (<font SIZE="-1">LUKS</font>) standard, which includes nearly all whole disk encryption systems used by modern Linux guests. Currently only LVM-on-LUKS is supported. </p>
+<p> Libguestfs has some support for Linux guests encrypted according to the Linux Unified Key Setup (LUKS) standard, which includes nearly all whole disk encryption systems used by modern Linux guests. Currently only LVM-on-LUKS is supported. </p>
 <p> Identify encrypted block devices and partitions using ``vfs-type&#8217;&#8216;: </p>
 <pre><code> &gt;&lt;fs&gt; vfs-type /dev/sda2
  crypto_LUKS
@@ -506,12 +506,12 @@ description: "guestfish – the guest filesystem shell"
 <pre><code> &gt;&lt;fs&gt; luks-open /dev/sda2 luksdev
  Enter key or passphrase (&quot;key&quot;): &lt;enter the passphrase&gt;
 </code></pre>
-<p> Finally you have to tell <font SIZE="-1">LVM</font> to scan for volume groups on the newly created mapper device: </p>
+<p> Finally you have to tell LVM to scan for volume groups on the newly created mapper device: </p>
 <pre><code> vgscan
  vg-activate-all true
 </code></pre>
 <p> The logical volume(s) can now be mounted in the usual way. </p>
-<p> Before closing a <font SIZE="-1">LUKS</font> device you must unmount any logical volumes on it and deactivate the volume groups by calling <code>&quot;vg-activate false VG&quot;</code> on each one. Then you can close the mapper device: </p>
+<p> Before closing a LUKS device you must unmount any logical volumes on it and deactivate the volume groups by calling <code>&quot;vg-activate false VG&quot;</code> on each one. Then you can close the mapper device: </p>
 <pre><code> vg-activate false /dev/VG
  luks-close /dev/mapper/luksdev
 </code></pre>
@@ -532,7 +532,7 @@ description: "guestfish – the guest filesystem shell"
 <p> reads stdin and creates from that a file <i>/foo</i> in the disk image, and: </p>
 <pre><code> tar-out /etc - | tar tf -
 </code></pre>
-<p> writes the tarball to stdout and then pipes that into the external ``tar&#8217;&#8216; command (see ``<font SIZE="-1">PIPES&#8217;&#8216;</font>). </p>
+<p> writes the tarball to stdout and then pipes that into the external ``tar&#8217;&#8216; command (see ``PIPES&#8217;&#8216;). </p>
 <p> When using <code>&quot;-&quot;</code> to read from stdin, the input is read up to the end of stdin. You can also use a special ``heredoc&#8217;&#8216;-like syntax to read up to some arbitrary end marker: </p>
 <pre><code> upload -&lt;&lt;END /foo
  input line 1
@@ -556,8 +556,8 @@ description: "guestfish – the guest filesystem shell"
 <p> To cause the server to exit, send it the exit command: </p>
 <pre><code> guestfish --remote exit
 </code></pre>
-<p> Note that the server will normally exit if there is an error in a command. You can change this in the usual way. See section ``<font SIZE="-1">EXIT ON ERROR BEHAVIOUR&#8217;&#8216;</font>.  </p>
-<font SIZE="-1"></font><h3>CONTROLLING MULTIPLE GUESTFISH PROCESSES</h3>
+<p> Note that the server will normally exit if there is an error in a command. You can change this in the usual way. See section ``EXIT ON ERROR BEHAVIOUR&#8217;&#8216;.  </p>
+<h3>CONTROLLING MULTIPLE GUESTFISH PROCESSES</h3>
 <p> The <code>&quot;eval&quot;</code> statement sets the environment variable <code>$GUESTFISH_PID</code>, which is how the <i>--remote</i> option knows where to send the commands. You can have several guestfish listener processes running using: </p>
 <pre><code> eval &quot;`guestfish --listen`&quot;
  pid1=$GUESTFISH_PID
@@ -567,15 +567,15 @@ description: "guestfish – the guest filesystem shell"
  guestfish --remote=$pid1 cmd
  guestfish --remote=$pid2 cmd
 </code></pre>
-<font SIZE="-1"></font><h3>REMOTE CONTROL AND CSH</h3>
+<h3>REMOTE CONTROL AND CSH</h3>
 <p> When using csh-like shells (csh, tcsh etc) you have to add the <i>--csh</i> option: </p>
 <pre><code> eval &quot;`guestfish --listen --csh`&quot;
 </code></pre>
-<font SIZE="-1"></font><h3>REMOTE CONTROL DETAILS</h3>
-<p> Remote control happens over a Unix domain socket called <i>/tmp/.guestfish-$UID/socket-$PID</i>, where <code>$UID</code> is the effective user <font SIZE="-1">ID</font> of the process, and <code>$PID</code> is the process <font SIZE="-1">ID</font> of the server. </p>
+<h3>REMOTE CONTROL DETAILS</h3>
+<p> Remote control happens over a Unix domain socket called <i>/tmp/.guestfish-$UID/socket-$PID</i>, where <code>$UID</code> is the effective user ID of the process, and <code>$PID</code> is the process ID of the server. </p>
 <p> Guestfish client and server versions must match exactly. </p>
-<p> Older versions of guestfish were vulnerable to <font SIZE="-1">CVE-2013-4419 </font>(see ``<font SIZE="-1">CVE-2013-4419&#8217;&#8216;</font> in <i>guestfs</i>(3)). This is fixed in the current version.  </p>
-<font SIZE="-1"></font><h3>USING REMOTE CONTROL ROBUSTLY FROM SHELL SCRIPTS</h3>
+<p> Older versions of guestfish were vulnerable to CVE-2013-4419 (see ``CVE-2013-4419&#8217;&#8216; in <i>guestfs</i>(3)). This is fixed in the current version.  </p>
+<h3>USING REMOTE CONTROL ROBUSTLY FROM SHELL SCRIPTS</h3>
 <p> From Bash, you can use the following code which creates a guestfish instance, correctly quotes the command line, handles failure to start, and cleans up guestfish when the script exits: </p>
 <pre><code> #!/bin/bash -
  set -e
@@ -598,7 +598,7 @@ description: "guestfish – the guest filesystem shell"
  guestfish --remote -- run
  # ...
 </code></pre>
-<font SIZE="-1"></font><i></i><font SIZE="-1"></font><h3>REMOTE CONTROL DOES NOT WORK WITH -a  ETC. OPTIONS</h3>
+<i></i><h3>REMOTE CONTROL DOES NOT WORK WITH -a  ETC. OPTIONS</h3>
 <p> Options such as <i>-a</i>, <i>--add</i>, <i>-N</i>, <i>--new</i> etc don&#8217;t interact properly with remote support. They are processed locally, and not sent through to the remote guestfish. In particular this won&#8217;t do what you expect: </p>
 <pre><code> guestfish --remote --add disk.img
 </code></pre>
@@ -609,7 +609,7 @@ description: "guestfish – the guest filesystem shell"
 <pre><code> guestfish --remote
  &gt;&lt;fs&gt; add disk.img
 </code></pre>
-<font SIZE="-1"></font><h3>REMOTE CONTROL RUN COMMAND HANGING</h3>
+<h3>REMOTE CONTROL RUN COMMAND HANGING</h3>
 <p> Using the <code>&quot;run&quot;</code> (or <code>&quot;launch&quot;</code>) command remotely in a command substitution context hangs, ie. don&#8217;t do (note the backquotes): </p>
 <pre><code> a=`guestfish --remote run`
 </code></pre>
@@ -620,7 +620,7 @@ description: "guestfish – the guest filesystem shell"
 <p> The type briefly describes how the disk should be sized, partitioned, how filesystem(s) should be created, and how content should be added. Optionally the type can be followed by extra parameters, separated by <code>&quot;:&quot;</code> (colon) characters. For example, <i>-N fs</i> creates a default 100MB, sparsely-allocated disk, containing a single partition, with the partition formatted as ext2. <i>-N fs:ext4:1G</i> is the same, but for an ext4 filesystem on a 1GB disk instead. </p>
 <p> Note that the prepared filesystem is not mounted. You would usually have to use the <code>&quot;mount /dev/sda1 /&quot;</code> command or add the <i>-m /dev/sda1</i> option. </p>
 <p> If any <i>-N</i> or <i>--new</i> options are given, the libguestfs appliance is automatically launched.  </p>
-<font SIZE="-1"></font><h3>EXAMPLES</h3>
+<h3>EXAMPLES</h3>
 <p> Create a 100MB disk with an ext4-formatted partition, called <i>test1.img</i> in the current directory: </p>
 <pre><code> guestfish -N fs:ext4
 </code></pre>
@@ -643,7 +643,7 @@ description: "guestfish – the guest filesystem shell"
 </code></pre>
 <code></code><h3>-N part - create a partitioned disk</h3>
 <p> <code>&quot;guestfish -N [</code>filename <code>=]part[:</code>size <code>[:</code>partition <code>]]&quot;</code> </p>
-<p> Create a disk with a single partition. By default the size of the disk is 100MB (the available space in the partition will be a tiny bit smaller) and the partition table will be <font SIZE="-1">MBR </font>(old DOS-style). </p>
+<p> Create a disk with a single partition. By default the size of the disk is 100MB (the available space in the partition will be a tiny bit smaller) and the partition table will be MBR (old DOS-style). </p>
 <p> These defaults can be changed by supplying optional parameters. </p>
 <p> The optional parameters are: </p>
 <pre><code> Name Default value
@@ -652,7 +652,7 @@ description: "guestfish – the guest filesystem shell"
 </code></pre>
 <code></code><h3>-N fs - create a filesystem</h3>
 <p> <code>&quot;guestfish -N [</code>filename <code>=]fs[:</code>filesystem <code>[:</code>size <code>[:</code>partition <code>]]]&quot;</code> </p>
-<p> Create a disk with a single partition, with the partition containing an empty filesystem. This defaults to creating a 100MB disk (the available space in the filesystem will be a tiny bit smaller) with an <font SIZE="-1">MBR </font>(old DOS-style) partition table and an ext2 filesystem. </p>
+<p> Create a disk with a single partition, with the partition containing an empty filesystem. This defaults to creating a 100MB disk (the available space in the filesystem will be a tiny bit smaller) with an MBR (old DOS-style) partition table and an ext2 filesystem. </p>
 <p> These defaults can be changed by supplying optional parameters. </p>
 <p> The optional parameters are: </p>
 <pre><code> Name Default value
@@ -662,7 +662,7 @@ description: "guestfish – the guest filesystem shell"
 </code></pre>
 <code></code><h3>-N lv - create a disk with logical volume</h3>
 <p> <code>&quot;guestfish -N [</code>filename <code>=]lv[:</code>name <code>[:</code>size <code>[:</code>partition <code>]]]&quot;</code> </p>
-<p> Create a disk with a single partition, set up the partition as an <font SIZE="-1">LVM2</font> physical volume, and place a volume group and logical volume on there. This defaults to creating a 100MB disk with the <font SIZE="-1">VG</font> and <font SIZE="-1">LV</font> called <code>&quot;/dev/VG/LV&quot;</code>. You can change the name of the <font SIZE="-1">VG</font> and <font SIZE="-1">LV</font> by supplying an alternate name as the first optional parameter. </p>
+<p> Create a disk with a single partition, set up the partition as an LVM2 physical volume, and place a volume group and logical volume on there. This defaults to creating a 100MB disk with the VG and LV called <code>&quot;/dev/VG/LV&quot;</code>. You can change the name of the VG and LV by supplying an alternate name as the first optional parameter. </p>
 <p> Note this does not create a filesystem. Use &#8216;lvfs&#8217; to do that. </p>
 <p> The optional parameters are: </p>
 <pre><code> Name Default value
@@ -672,7 +672,7 @@ description: "guestfish – the guest filesystem shell"
 </code></pre>
 <code></code><h3>-N lvfs - create a disk with logical volume and filesystem</h3>
 <p> <code>&quot;guestfish -N [</code>filename <code>=]lvfs[:</code>name <code>[:</code>filesystem <code>[:</code>size <code>[:</code>partition <code>]]]]&quot;</code> </p>
-<p> Create a disk with a single partition, set up the partition as an <font SIZE="-1">LVM2</font> physical volume, and place a volume group and logical volume on there. Then format the <font SIZE="-1">LV</font> with a filesystem. This defaults to creating a 100MB disk with the <font SIZE="-1">VG</font> and <font SIZE="-1">LV</font> called <code>&quot;/dev/VG/LV&quot;</code>, with an ext2 filesystem. </p>
+<p> Create a disk with a single partition, set up the partition as an LVM2 physical volume, and place a volume group and logical volume on there. Then format the LV with a filesystem. This defaults to creating a 100MB disk with the VG and LV called <code>&quot;/dev/VG/LV&quot;</code>, with an ext2 filesystem. </p>
 <p> The optional parameters are: </p>
 <pre><code> Name Default value
  name /dev/VG/LV the name of the VG and LV to use
@@ -691,7 +691,7 @@ description: "guestfish – the guest filesystem shell"
  bootsize 32M the size of the boot filesystem
  partition mbr partition table type
 </code></pre>
-<code></code><font SIZE="-1"></font><h3>-N bootrootlv - create a boot and root filesystem using LVM</h3>
+<code></code><h3>-N bootrootlv - create a boot and root filesystem using LVM</h3>
 <p> <code>&quot;guestfish -N [</code>filename <code>=]bootrootlv[:</code>name <code>[:</code>bootfs <code>[:</code>rootfs <code>[:</code>size <code>[:</code>bootsize <code>[:</code>partition <code>]]]]]]&quot;</code> </p>
 <p> This is the same as <code>&quot;bootroot&quot;</code> but the root filesystem (only) is placed on a logical volume, named by default <code>&quot;/dev/VG/LV&quot;</code>. There are several optional parameters which control the exact layout. </p>
 <p> The optional parameters are: </p>
@@ -704,14 +704,14 @@ description: "guestfish – the guest filesystem shell"
  partition mbr partition table type
 </code></pre>
 <h2>ADDING REMOTE STORAGE</h2>
-<p> <i>For API-level documentation on this topic, see ``guestfs_add_drive_opts&#8217;&#8216; in guestfs(3) and ``</i><font SIZE="-1"><i>REMOTE STORAGE&#8217;&#8216;</i></font><i> in guestfs(3)</i>. </p>
+<p> <i>For API-level documentation on this topic, see ``guestfs_add_drive_opts&#8217;&#8216; in guestfs(3) and ``</i><i>REMOTE STORAGE&#8217;&#8216;</i><i> in guestfs(3)</i>. </p>
 <p> On the command line, you can use the <i>-a</i> option to add network block devices using a URI-style format, for example: </p>
 <pre><code> guestfish -anbd://example.com
 </code></pre>
-<p> URIs <i>cannot</i> be used with the ``add&#8217;&#8216; command. The equivalent command using the <font SIZE="-1">API</font> directly is: </p>
+<p> URIs <i>cannot</i> be used with the ``add&#8217;&#8216; command. The equivalent command using the API directly is: </p>
 <pre><code> &gt;&lt;fs&gt; add /disk.img protocol:nbd server:tcp:example.com
 </code></pre>
-<p> The possible <i>-a </i><font SIZE="-1"><i>URI</i></font><i></i> formats are described below.  </p>
+<p> The possible <i>-a </i><i>URI</i><i></i> formats are described below.  </p>
 <code></code><h3>-a disk.img</h3>
 <code></code><h3>-a file:///path/to/disk.img</h3>
 <p> Add the local disk image (or device) called <i>disk.img</i>.  </p>
@@ -720,16 +720,16 @@ description: "guestfish – the guest filesystem shell"
 <code><a href="nbd://?socket=/socket"></a></code><h3>-a nbd://?socket=/socket</h3>
 <code><a href="nbd:///exportname?socket=/socket"></a></code><h3>-a nbd:///exportname?socket=/socket</h3>
 <p> Add a disk located on Network Block Device (nbd) storage. </p>
-<p> The <i>/exportname</i> part of the <font SIZE="-1">URI</font> specifies an <font SIZE="-1">NBD</font> export name, but is usually left empty. </p>
-<p> The optional <i>?socket</i> parameter can be used to specify a Unix domain socket that we talk to the <font SIZE="-1">NBD</font> server over. Note that you cannot mix server name (ie. <font SIZE="-1">TCP/IP</font>) and socket path. </p>
-<p> The equivalent <font SIZE="-1">API</font> command would be (no export name): </p>
+<p> The <i>/exportname</i> part of the URI specifies an NBD export name, but is usually left empty. </p>
+<p> The optional <i>?socket</i> parameter can be used to specify a Unix domain socket that we talk to the NBD server over. Note that you cannot mix server name (ie. TCP/IP) and socket path. </p>
+<p> The equivalent API command would be (no export name): </p>
 <pre><code> &gt;&lt;fs&gt; add &quot;&quot; protocol:nbd server:[tcp:example.com|unix:/socket]
 </code></pre>
 <code><a href="rbd:///pool/disk"></a></code><h3>-a rbd:///pool/disk</h3>
 <code><a href="rbd://example.com[:port]/pool/disk"></a></code><h3>-a rbd://example.com[:port]/pool/disk</h3>
 <p> Add a disk image located on a Ceph (RBD/librbd) storage volume. </p>
-<p> Although libguestfs and Ceph supports multiple servers, only a single server can be specified when using this <font SIZE="-1">URI</font> syntax. </p>
-<p> The equivalent <font SIZE="-1">API</font> command would be: </p>
+<p> Although libguestfs and Ceph supports multiple servers, only a single server can be specified when using this URI syntax. </p>
+<p> The equivalent API command would be: </p>
 <pre><code> &gt;&lt;fs&gt; add pool/disk protocol:rbd server:tcp:example.com:port
 </code></pre>
 <h2>PROGRESS BARS</h2>
@@ -764,7 +764,7 @@ description: "guestfish – the guest filesystem shell"
 <dd> <p> A bell character. </p>
  </dd>
 <dt>\e</dt>
-<dd> <p> An <font SIZE="-1">ASCII ESC </font>(escape) character. </p>
+<dd> <p> An ASCII ESC (escape) character. </p>
  </dd>
 <dt>\n</dt>
 <dd> <p> A newline. </p>
@@ -773,13 +773,13 @@ description: "guestfish – the guest filesystem shell"
 <dd> <p> A carriage return. </p>
  </dd>
 <dt>\NNN</dt>
-<dd> <p> The <font SIZE="-1">ASCII</font> character whose code is the octal value <font SIZE="-1">NNN.</font> </p>
+<dd> <p> The ASCII character whose code is the octal value NNN. </p>
  </dd>
 <dt>\xNN</dt>
-<dd> <p> The <font SIZE="-1">ASCII</font> character whose code is the hex value <font SIZE="-1">NN.</font> </p>
+<dd> <p> The ASCII character whose code is the hex value NN. </p>
  </dd></dl>
-<font SIZE="-1"></font><h3>EXAMPLES OF PROMPTS</h3>
-<p> Note these these require a terminal that supports <font SIZE="-1">ANSI</font> escape codes. </p>
+<h3>EXAMPLES OF PROMPTS</h3>
+<p> Note these these require a terminal that supports ANSI escape codes. </p>
 <dl>
 <dt>&bull;</dt>
 <dd> <pre><code> GUESTFISH_PS1='\[\e[1;30m\]&gt;&lt;fs&gt;\[\e[0;30m\] '
@@ -795,9 +795,9 @@ description: "guestfish – the guest filesystem shell"
 <p> Blue welcome text, green prompt, red commands, black command output. </p>
  </dd></dl>
 <h2>WINDOWS 8</h2>
-<p> Windows 8 ``fast startup&#8217;&#8216; can prevent guestfish from mounting <font SIZE="-1">NTFS</font> partitions. See ``<font SIZE="-1">WINDOWS HIBERNATION AND WINDOWS 8 FAST STARTUP&#8217;&#8216;</font> in <i>guestfs</i>(3).  </p>
+<p> Windows 8 ``fast startup&#8217;&#8216; can prevent guestfish from mounting NTFS partitions. See ``WINDOWS HIBERNATION AND WINDOWS 8 FAST STARTUP&#8217;&#8216; in <i>guestfs</i>(3).  </p>
 <h2>GUESTFISH COMMANDS</h2>
-<p> The commands in this section are guestfish convenience commands, in other words, they are not part of the <i>guestfs</i>(3) <font SIZE="-1">API.</font>  </p>
+<p> The commands in this section are guestfish convenience commands, in other words, they are not part of the <i>guestfs</i>(3) API.  </p>
 <h3>help</h3>
 <pre><code> help
  help cmd
@@ -814,7 +814,7 @@ description: "guestfish – the guest filesystem shell"
 <p> This creates an empty (zeroed) file of the given size, and then adds so it can be further examined. </p>
 <p> For more advanced image creation, see ``disk-create&#8217;&#8216;. </p>
 <p> Size can be specified using standard suffixes, eg. <code>&quot;1M&quot;</code>. </p>
-<p> To create a sparse file, use ``sparse&#8217;&#8216; instead. To create a prepared disk image, see ``<font SIZE="-1">PREPARED DISK IMAGES&#8217;&#8216;</font>.  </p>
+<p> To create a sparse file, use ``sparse&#8217;&#8216; instead. To create a prepared disk image, see ``PREPARED DISK IMAGES&#8217;&#8216;.  </p>
 <h3>copy-in</h3>
 <pre><code> copy-in local [local ...] /remotedir
 </code></pre>
@@ -839,7 +839,7 @@ description: "guestfish – the guest filesystem shell"
 <pre><code> display filename
 </code></pre>
 <p> Use <code>&quot;display&quot;</code> (a graphical display program) to display an image file. It downloads the file, and runs <code>&quot;display&quot;</code> on it. </p>
-<p> To use an alternative program, set the <code>&quot;GUESTFISH_DISPLAY_IMAGE&quot;</code> environment variable. For example to use the <font SIZE="-1">GNOME</font> display program: </p>
+<p> To use an alternative program, set the <code>&quot;GUESTFISH_DISPLAY_IMAGE&quot;</code> environment variable. For example to use the GNOME display program: </p>
 <pre><code> export GUESTFISH_DISPLAY_IMAGE=eog
 </code></pre>
 <p> See also <i><a href="/docs/linux/man/1-display/">display</a></i>(1).  </p>
@@ -857,7 +857,7 @@ description: "guestfish – the guest filesystem shell"
 <h3>event</h3>
 <pre><code> event name eventset &quot;shell script ...&quot;
 </code></pre>
-<p> Register a shell script fragment which is executed when an event is raised. See ``guestfs_set_event_callback&#8217;&#8216; in <i>guestfs</i>(3) for a discussion of the event <font SIZE="-1">API</font> in libguestfs. </p>
+<p> Register a shell script fragment which is executed when an event is raised. See ``guestfs_set_event_callback&#8217;&#8216; in <i>guestfs</i>(3) for a discussion of the event API in libguestfs. </p>
 <p> The <code>&quot;name&quot;</code> parameter is a name that you give to this event handler. It can be any string (even the empty string) and is simply there so you can delete the handler using the guestfish <code>&quot;delete-event&quot;</code> command. </p>
 <p> The <code>&quot;eventset&quot;</code> parameter is a comma-separated list of one or more events, for example <code>&quot;close&quot;</code> or <code>&quot;close,trace&quot;</code>. The special value <code>&quot;*&quot;</code> means all events. </p>
 <p> The third and final parameter is the shell script fragment (or any external command) that is executed when any of the events in the eventset occurs. It is executed using <code>&quot;$SHELL -c&quot;</code>, or if <code>$SHELL</code> is not set then <i>/bin/sh -c</i>. </p>
@@ -872,7 +872,7 @@ description: "guestfish – the guest filesystem shell"
 <pre><code> glob command args...
 </code></pre>
 <p> Expand wildcards in any paths in the args list, and run <code>&quot;command&quot;</code> repeatedly on each matching path. </p>
-<p> See ``<font SIZE="-1">WILDCARDS AND GLOBBING&#8217;&#8216;</font>.  </p>
+<p> See ``WILDCARDS AND GLOBBING&#8217;&#8216;.  </p>
 <h3>hexedit</h3>
 <pre><code> hexedit &lt;filename|device&gt;
  hexedit &lt;filename|device&gt; &lt;max&gt;
@@ -934,7 +934,7 @@ description: "guestfish – the guest filesystem shell"
 <pre><code> supported
 </code></pre>
 <p> This command returns a list of the optional groups known to the daemon, and indicates which ones are supported by this build of the libguestfs appliance. </p>
-<p> See also ``<font SIZE="-1">AVAILABILITY&#8217;&#8216;</font> in <i>guestfs</i>(3).  </p>
+<p> See also ``AVAILABILITY&#8217;&#8216; in <i>guestfs</i>(3).  </p>
 <h3>time</h3>
 <pre><code> time command args...
 </code></pre>
@@ -947,39 +947,39 @@ description: "guestfish – the guest filesystem shell"
 <h3>acl-delete-def-file</h3>
 <pre><code> acl-delete-def-file dir
 </code></pre>
-<p> This function deletes the default <font SIZE="-1">POSIX</font> Access Control List (<font SIZE="-1">ACL</font>) attached to directory <code>&quot;dir&quot;</code>. </p>
+<p> This function deletes the default POSIX Access Control List (ACL) attached to directory <code>&quot;dir&quot;</code>. </p>
 <p> This command depends on the feature <code>&quot;acl&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>acl-get-file</h3>
 <pre><code> acl-get-file path acltype
 </code></pre>
-<p> This function returns the <font SIZE="-1">POSIX</font> Access Control List (<font SIZE="-1">ACL</font>) attached to <code>&quot;path&quot;</code>. The <font SIZE="-1">ACL</font> is returned in ``long text form&#8217;&#8216; (see <i><a href="/docs/linux/man/5-acl/">acl</a></i>(5)). </p>
+<p> This function returns the POSIX Access Control List (ACL) attached to <code>&quot;path&quot;</code>. The ACL is returned in ``long text form&#8217;&#8216; (see <i><a href="/docs/linux/man/5-acl/">acl</a></i>(5)). </p>
 <p> The <code>&quot;acltype&quot;</code> parameter may be: </p>
 <dl>
 <dt>&quot;access&quot;</dt>
-<dd> <p> Return the ordinary (access) <font SIZE="-1">ACL</font> for any file, directory or other filesystem object. </p>
+<dd> <p> Return the ordinary (access) ACL for any file, directory or other filesystem object. </p>
  </dd>
 <dt>&quot;default&quot;</dt>
-<dd> <p> Return the default <font SIZE="-1">ACL. </font> Normally this only makes sense if <code>&quot;path&quot;</code> is a directory. </p>
+<dd> <p> Return the default ACL.  Normally this only makes sense if <code>&quot;path&quot;</code> is a directory. </p>
  </dd></dl>
 <p> This command depends on the feature <code>&quot;acl&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>acl-set-file</h3>
 <pre><code> acl-set-file path acltype acl
 </code></pre>
-<p> This function sets the <font SIZE="-1">POSIX</font> Access Control List (<font SIZE="-1">ACL</font>) attached to <code>&quot;path&quot;</code>. </p>
+<p> This function sets the POSIX Access Control List (ACL) attached to <code>&quot;path&quot;</code>. </p>
 <p> The <code>&quot;acltype&quot;</code> parameter may be: </p>
 <dl>
 <dt>&quot;access&quot;</dt>
-<dd> <p> Set the ordinary (access) <font SIZE="-1">ACL</font> for any file, directory or other filesystem object. </p>
+<dd> <p> Set the ordinary (access) ACL for any file, directory or other filesystem object. </p>
  </dd>
 <dt>&quot;default&quot;</dt>
-<dd> <p> Set the default <font SIZE="-1">ACL. </font> Normally this only makes sense if <code>&quot;path&quot;</code> is a directory. </p>
+<dd> <p> Set the default ACL.  Normally this only makes sense if <code>&quot;path&quot;</code> is a directory. </p>
  </dd></dl>
-<p> The <code>&quot;acl&quot;</code> parameter is the new <font SIZE="-1">ACL</font> in either ``long text form&#8217;&#8216; or ``short text form&#8217;&#8216; (see <i><a href="/docs/linux/man/5-acl/">acl</a></i>(5)). The new <font SIZE="-1">ACL</font> completely replaces any previous <font SIZE="-1">ACL</font> on the file. The <font SIZE="-1">ACL</font> must contain the full Unix permissions (eg. <code>&quot;u::rwx,g::rx,o::rx&quot;</code>). </p>
-<p> If you are specifying individual users or groups, then the mask field is also required (eg. <code>&quot;m::rwx&quot;</code>), followed by the <code>&quot;u:</code>ID <code>:...&quot;</code> and/or <code>&quot;g:</code>ID <code>:...&quot;</code> field(s). A full <font SIZE="-1">ACL</font> string might therefore look like this: </p>
+<p> The <code>&quot;acl&quot;</code> parameter is the new ACL in either ``long text form&#8217;&#8216; or ``short text form&#8217;&#8216; (see <i><a href="/docs/linux/man/5-acl/">acl</a></i>(5)). The new ACL completely replaces any previous ACL on the file. The ACL must contain the full Unix permissions (eg. <code>&quot;u::rwx,g::rx,o::rx&quot;</code>). </p>
+<p> If you are specifying individual users or groups, then the mask field is also required (eg. <code>&quot;m::rwx&quot;</code>), followed by the <code>&quot;u:</code>ID <code>:...&quot;</code> and/or <code>&quot;g:</code>ID <code>:...&quot;</code> field(s). A full ACL string might therefore look like this: </p>
 <pre><code> u::rwx,g::rwx,o::rwx,m::rwx,u:500:rwx,g:500:rwx
  \ Unix permissions / \mask/ \ ACL /
 </code></pre>
-<p> You should use numeric UIDs and GIDs. To map usernames and groupnames to the correct numeric <font SIZE="-1">ID</font> in the context of the guest, use the Augeas functions (see ``aug-init&#8217;&#8216;). </p>
+<p> You should use numeric UIDs and GIDs. To map usernames and groupnames to the correct numeric ID in the context of the guest, use the Augeas functions (see ``aug-init&#8217;&#8216;). </p>
 <p> This command depends on the feature <code>&quot;acl&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>add-cdrom</h3>
 <pre><code> add-cdrom filename
@@ -987,19 +987,19 @@ description: "guestfish – the guest filesystem shell"
 <p> This function adds a virtual CD-ROM disk image to the guest. </p>
 <p> The image is added as read-only drive, so this function is equivalent of ``add-drive-ro&#8217;&#8216;. </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``add-drive-ro&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
 <h3>add-domain</h3>
 <h3>domain</h3>
 <pre><code> add-domain dom [libvirturi:..] [readonly:true|false] [iface:..] [live:true|false] [allowuuid:true|false] [readonlydisk:..] [cachemode:..] [discard:..] [copyonread:true|false]
 </code></pre>
-<p> This function adds the disk(s) attached to the named libvirt domain <code>&quot;dom&quot;</code>. It works by connecting to libvirt, requesting the domain and domain <font SIZE="-1">XML</font> from libvirt, parsing it for disks, and calling ``add-drive-opts&#8217;&#8216; on each one. </p>
+<p> This function adds the disk(s) attached to the named libvirt domain <code>&quot;dom&quot;</code>. It works by connecting to libvirt, requesting the domain and domain XML from libvirt, parsing it for disks, and calling ``add-drive-opts&#8217;&#8216; on each one. </p>
 <p> The number of disks added is returned. This operation is atomic: if an error is returned, then no disks are added. </p>
 <p> This function does some minimal checks to make sure the libvirt domain is not running (unless <code>&quot;readonly&quot;</code> is true). In a future version we will try to acquire the libvirt lock on each disk. </p>
 <p> Disks must be accessible locally. This often means that adding disks from a remote libvirt connection (see <a rel="nofollow" href="http://libvirt.org/remote.html)">http://libvirt.org/remote.html)</a> will fail unless those disks are accessible via the same device path locally too. </p>
-<p> The optional <code>&quot;libvirturi&quot;</code> parameter sets the libvirt <font SIZE="-1">URI </font>(see <a rel="nofollow" href="http://libvirt.org/uri.html">http://libvirt.org/uri.html</a>). If this is not set then we connect to the default libvirt <font SIZE="-1">URI </font>(or one set through an environment variable, see the libvirt documentation for full details). </p>
-<p> The optional <code>&quot;live&quot;</code> flag controls whether this call will try to connect to a running virtual machine <code>&quot;guestfsd&quot;</code> process if it sees a suitable &lt;channel&gt; element in the libvirt <font SIZE="-1">XML</font> definition. The default (if the flag is omitted) is never to try. See ``<font SIZE="-1">ATTACHING TO RUNNING DAEMONS&#8217;&#8216;</font> in <i>guestfs</i>(3) for more information. </p>
-<p> If the <code>&quot;allowuuid&quot;</code> flag is true (default is false) then a <font SIZE="-1">UUID </font><i>may</i> be passed instead of the domain name. The <code>&quot;dom&quot;</code> string is treated as a <font SIZE="-1">UUID</font> first and looked up, and if that lookup fails then we treat <code>&quot;dom&quot;</code> as a name as usual. </p>
-<p> The optional <code>&quot;readonlydisk&quot;</code> parameter controls what we do for disks which are marked &lt;readonly/&gt; in the libvirt <font SIZE="-1">XML.</font> Possible values are: </p>
+<p> The optional <code>&quot;libvirturi&quot;</code> parameter sets the libvirt URI (see <a rel="nofollow" href="http://libvirt.org/uri.html">http://libvirt.org/uri.html</a>). If this is not set then we connect to the default libvirt URI (or one set through an environment variable, see the libvirt documentation for full details). </p>
+<p> The optional <code>&quot;live&quot;</code> flag controls whether this call will try to connect to a running virtual machine <code>&quot;guestfsd&quot;</code> process if it sees a suitable &lt;channel&gt; element in the libvirt XML definition. The default (if the flag is omitted) is never to try. See ``ATTACHING TO RUNNING DAEMONS&#8217;&#8216; in <i>guestfs</i>(3) for more information. </p>
+<p> If the <code>&quot;allowuuid&quot;</code> flag is true (default is false) then a UUID <i>may</i> be passed instead of the domain name. The <code>&quot;dom&quot;</code> string is treated as a UUID first and looked up, and if that lookup fails then we treat <code>&quot;dom&quot;</code> as a name as usual. </p>
+<p> The optional <code>&quot;readonlydisk&quot;</code> parameter controls what we do for disks which are marked &lt;readonly/&gt; in the libvirt XML. Possible values are: </p>
 <dl>
 <dt>readonlydisk = &quot;error&quot;</dt>
 <dd> <p> If <code>&quot;readonly&quot;</code> is false: </p>
@@ -1024,18 +1024,18 @@ description: "guestfish – the guest filesystem shell"
 <p> Disks with the &lt;readonly/&gt; flag are skipped. </p>
  </dd></dl>
 <p> The other optional parameters are passed directly through to ``add-drive-opts&#8217;&#8216;. </p>
-<p> This command has one or more optional arguments. See ``<font SIZE="-1">OPTIONAL ARGUMENTS&#8217;&#8216;</font>.  </p>
+<p> This command has one or more optional arguments. See ``OPTIONAL ARGUMENTS&#8217;&#8216;.  </p>
 <h3>add-drive</h3>
 <h3>add</h3>
 <h3>add-drive-opts</h3>
 <pre><code> add-drive filename [readonly:true|false] [format:..] [iface:..] [name:..] [label:..] [protocol:..] [server:..] [username:..] [secret:..] [cachemode:..] [discard:..] [copyonread:true|false]
 </code></pre>
 <p> This function adds a disk image called <i>filename</i> to the handle. <i>filename</i> may be a regular host file or a host device. </p>
-<p> When this function is called before ``launch&#8217;&#8216; (the usual case) then the first time you call this function, the disk appears in the <font SIZE="-1">API</font> as <i>/dev/sda</i>, the second time as <i>/dev/sdb</i>, and so on. </p>
-<p> In libguestfs ≥ 1.20 you can also call this function after launch (with some restrictions). This is called ``hotplugging&#8217;&#8216;. When hotplugging, you must specify a <code>&quot;label&quot;</code> so that the new disk gets a predictable name. For more information see ``<font SIZE="-1">HOTPLUGGING&#8217;&#8216;</font> in <i>guestfs</i>(3). </p>
+<p> When this function is called before ``launch&#8217;&#8216; (the usual case) then the first time you call this function, the disk appears in the API as <i>/dev/sda</i>, the second time as <i>/dev/sdb</i>, and so on. </p>
+<p> In libguestfs ≥ 1.20 you can also call this function after launch (with some restrictions). This is called ``hotplugging&#8217;&#8216;. When hotplugging, you must specify a <code>&quot;label&quot;</code> so that the new disk gets a predictable name. For more information see ``HOTPLUGGING&#8217;&#8216; in <i>guestfs</i>(3). </p>
 <p> You don&#8217;t necessarily need to be root when using libguestfs. However you obviously do need sufficient permissions to access the filename for whatever operations you want to perform (ie. read access if you just want to read the image or write access if you want to modify the image). </p>
 <p> This call checks that <i>filename</i> exists. </p>
-<p> <i>filename</i> may be the special string <code>&quot;/dev/null&quot;</code>. See ``<font SIZE="-1">NULL DISKS&#8217;&#8216;</font> in <i>guestfs</i>(3). </p>
+<p> <i>filename</i> may be the special string <code>&quot;/dev/null&quot;</code>. See ``NULL DISKS&#8217;&#8216; in <i>guestfs</i>(3). </p>
 <p> The optional arguments are: </p>
 <dl>
 <dt>&quot;readonly&quot;</dt>
@@ -1043,7 +1043,7 @@ description: "guestfish – the guest filesystem shell"
  </dd>
 <dt>&quot;format&quot;</dt>
 <dd> <p> This forces the image format. If you omit this (or use ``add-drive&#8217;&#8216; or ``add-drive-ro&#8217;&#8216;) then the format is automatically detected. Possible formats include <code>&quot;raw&quot;</code> and <code>&quot;qcow2&quot;</code>. </p>
-<p> Automatic detection of the format opens you up to a potential security hole when dealing with untrusted raw-format images. See <font SIZE="-1">CVE-2010-3851</font> and RHBZ#642934. Specifying the format closes this security hole. </p>
+<p> Automatic detection of the format opens you up to a potential security hole when dealing with untrusted raw-format images. See CVE-2010-3851 and RHBZ#642934. Specifying the format closes this security hole. </p>
  </dd>
 <dt>&quot;iface&quot;</dt>
 <dd> <p> This rarely-used option lets you emulate the behaviour of the deprecated ``add-drive-with-if&#8217;&#8216; call (q.v.) </p>
@@ -1052,12 +1052,12 @@ description: "guestfish – the guest filesystem shell"
 <dd> <p> The name the drive had in the original guest, e.g. <i>/dev/sdb</i>. This is used as a hint to the guest inspection process if it is available. </p>
  </dd>
 <dt>&quot;label&quot;</dt>
-<dd> <p> Give the disk a label. The label should be a unique, short string using <i>only</i> <font SIZE="-1">ASCII</font> characters <code>&quot;[a-zA-Z]&quot;</code>. As well as its usual name in the <font SIZE="-1">API </font>(such as <i>/dev/sda</i>), the drive will also be named <i>/dev/disk/guestfs/label</i>. </p>
-<p> See ``<font SIZE="-1">DISK LABELS&#8217;&#8216;</font> in <i>guestfs</i>(3). </p>
+<dd> <p> Give the disk a label. The label should be a unique, short string using <i>only</i> ASCII characters <code>&quot;[a-zA-Z]&quot;</code>. As well as its usual name in the API (such as <i>/dev/sda</i>), the drive will also be named <i>/dev/disk/guestfs/label</i>. </p>
+<p> See ``DISK LABELS&#8217;&#8216; in <i>guestfs</i>(3). </p>
  </dd>
 <dt>&quot;protocol&quot;</dt>
 <dd> <p> The optional protocol argument can be used to select an alternate source protocol. </p>
-<p> See also: ``<font SIZE="-1">REMOTE STORAGE&#8217;&#8216;</font> in <i>guestfs</i>(3). </p>
+<p> See also: ``REMOTE STORAGE&#8217;&#8216; in <i>guestfs</i>(3). </p>
  </dd>
 <dl>
 <dd>  </dd>
@@ -1067,11 +1067,11 @@ description: "guestfish – the guest filesystem shell"
  </dd>
 <dt>&quot;protocol = &quot;nbd&quot;&quot;</dt>
 <dd> <p> Connect to the Network Block Device server. The <code>&quot;server&quot;</code> parameter must also be supplied - see below. </p>
-<p> See also: ``<font SIZE="-1">NETWORK BLOCK DEVICE&#8217;&#8216;</font> in <i>guestfs</i>(3). </p>
+<p> See also: ``NETWORK BLOCK DEVICE&#8217;&#8216; in <i>guestfs</i>(3). </p>
  </dd>
 <dt>&quot;protocol = &quot;rbd&quot;&quot;</dt>
 <dd> <p> Connect to the Ceph (librbd/RBD) server. The <code>&quot;server&quot;</code> parameter must also be supplied - see below. The <code>&quot;username&quot;</code> parameter may be supplied. See below. The <code>&quot;secret&quot;</code> parameter may be supplied. See below. </p>
-<p> See also: ``<font SIZE="-1">CEPH&#8217;&#8216;</font> in <i>guestfs</i>(3). </p>
+<p> See also: ``CEPH&#8217;&#8216; in <i>guestfs</i>(3). </p>
  </dd></dl>
 </dl>
 <dl>
@@ -1109,8 +1109,8 @@ description: "guestfish – the guest filesystem shell"
 <dl>
 <dt>&quot;cachemode = &quot;writeback&quot;&quot;</dt>
 <dd> <p> This is the default. </p>
-<p> Write operations in the <font SIZE="-1">API</font> do not return until a <i><a href="/docs/linux/man/2-write/">write</a></i>(2) call has completed in the host [but note this does not imply that anything gets written to disk]. </p>
-<p> Sync operations in the <font SIZE="-1">API,</font> including implicit syncs caused by filesystem journalling, will not return until an <i><a href="/docs/linux/man/2-fdatasync/">fdatasync</a></i>(2) call has completed in the host, indicating that data has been committed to disk. </p>
+<p> Write operations in the API do not return until a <i><a href="/docs/linux/man/2-write/">write</a></i>(2) call has completed in the host [but note this does not imply that anything gets written to disk]. </p>
+<p> Sync operations in the API, including implicit syncs caused by filesystem journalling, will not return until an <i><a href="/docs/linux/man/2-fdatasync/">fdatasync</a></i>(2) call has completed in the host, indicating that data has been committed to disk. </p>
  </dd>
 <dt>&quot;cachemode = &quot;unsafe&quot;&quot;</dt>
 <dd> <p> In this mode, there are no guarantees. Libguestfs may cache anything and ignore sync requests. This is suitable only for scratch or temporary disks. </p>
@@ -1142,7 +1142,7 @@ description: "guestfish – the guest filesystem shell"
 <dd> <p> The boolean parameter <code>&quot;copyonread&quot;</code> enables copy-on-read support. This only affects disk formats which have backing files, and causes reads to be stored in the overlay layer, speeding up multiple reads of the same area of disk. </p>
 <p> The default is false. </p>
  </dd></dl>
-<p> This command has one or more optional arguments. See ``<font SIZE="-1">OPTIONAL ARGUMENTS&#8217;&#8216;</font>.  </p>
+<p> This command has one or more optional arguments. See ``OPTIONAL ARGUMENTS&#8217;&#8216;.  </p>
 <h3>add-drive-ro</h3>
 <h3>add-ro</h3>
 <pre><code> add-drive-ro filename
@@ -1151,22 +1151,22 @@ description: "guestfish – the guest filesystem shell"
 <h3>add-drive-ro-with-if</h3>
 <pre><code> add-drive-ro-with-if filename iface
 </code></pre>
-<p> This is the same as ``add-drive-ro&#8217;&#8216; but it allows you to specify the <font SIZE="-1">QEMU</font> interface emulation to use at run time. </p>
+<p> This is the same as ``add-drive-ro&#8217;&#8216; but it allows you to specify the QEMU interface emulation to use at run time. </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``add-drive&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
 <h3>add-drive-scratch</h3>
 <h3>scratch</h3>
 <pre><code> add-drive-scratch size [name:..] [label:..]
 </code></pre>
 <p> This command adds a temporary scratch drive to the handle. The <code>&quot;size&quot;</code> parameter is the virtual size (in bytes). The scratch drive is blank initially (all reads return zeroes until you start writing to it). The drive is deleted when the handle is closed. </p>
 <p> The optional arguments <code>&quot;name&quot;</code> and <code>&quot;label&quot;</code> are passed through to ``add-drive&#8217;&#8216;. </p>
-<p> This command has one or more optional arguments. See ``<font SIZE="-1">OPTIONAL ARGUMENTS&#8217;&#8216;</font>.  </p>
+<p> This command has one or more optional arguments. See ``OPTIONAL ARGUMENTS&#8217;&#8216;.  </p>
 <h3>add-drive-with-if</h3>
 <pre><code> add-drive-with-if filename iface
 </code></pre>
-<p> This is the same as ``add-drive&#8217;&#8216; but it allows you to specify the <font SIZE="-1">QEMU</font> interface emulation to use at run time. </p>
+<p> This is the same as ``add-drive&#8217;&#8216; but it allows you to specify the QEMU interface emulation to use at run time. </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``add-drive&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
 <h3>aug-clear</h3>
 <pre><code> aug-clear augpath
 </code></pre>
@@ -1184,7 +1184,7 @@ description: "guestfish – the guest filesystem shell"
 <h3>aug-defvar</h3>
 <pre><code> aug-defvar name expr
 </code></pre>
-<p> Defines an Augeas variable <code>&quot;name&quot;</code> whose value is the result of evaluating <code>&quot;expr&quot;</code>. If <code>&quot;expr&quot;</code> is <font SIZE="-1">NULL,</font> then <code>&quot;name&quot;</code> is undefined. </p>
+<p> Defines an Augeas variable <code>&quot;name&quot;</code> whose value is the result of evaluating <code>&quot;expr&quot;</code>. If <code>&quot;expr&quot;</code> is NULL, then <code>&quot;name&quot;</code> is undefined. </p>
 <p> On success this returns the number of nodes in <code>&quot;expr&quot;</code>, or <code>0</code> if <code>&quot;expr&quot;</code> evaluates to something which is not a nodeset.  </p>
 <h3>aug-get</h3>
 <pre><code> aug-get augpath
@@ -1195,7 +1195,7 @@ description: "guestfish – the guest filesystem shell"
 </code></pre>
 <p> Create a new Augeas handle for editing configuration files. If there was any previous Augeas handle associated with this guestfs session, then it is closed. </p>
 <p> You must call this before using any other ``aug-*&#8216;&#8216; commands. </p>
-<p> <code>&quot;root&quot;</code> is the filesystem root. <code>&quot;root&quot;</code> must not be <font SIZE="-1">NULL,</font> use <i>/</i> instead. </p>
+<p> <code>&quot;root&quot;</code> is the filesystem root. <code>&quot;root&quot;</code> must not be NULL, use <i>/</i> instead. </p>
 <p> The flags are the same as the flags defined in &lt;augeas.h&gt;, the logical <i>or</i> of the following integers: </p>
 <dl>
 <dt>&quot;AUG_SAVE_BACKUP&quot; = 1</dt>
@@ -1259,7 +1259,7 @@ description: "guestfish – the guest filesystem shell"
 <pre><code> aug-set augpath val
 </code></pre>
 <p> Set the value associated with <code>&quot;path&quot;</code> to <code>&quot;val&quot;</code>. </p>
-<p> In the Augeas <font SIZE="-1">API,</font> it is possible to clear a node by setting the value to <font SIZE="-1">NULL. </font> Due to an oversight in the libguestfs <font SIZE="-1">API</font> you cannot do that with this call. Instead you must use the ``aug-clear&#8217;&#8216; call.  </p>
+<p> In the Augeas API, it is possible to clear a node by setting the value to NULL.  Due to an oversight in the libguestfs API you cannot do that with this call. Instead you must use the ``aug-clear&#8217;&#8216; call.  </p>
 <h3>aug-setm</h3>
 <pre><code> aug-setm base sub val
 </code></pre>
@@ -1269,7 +1269,7 @@ description: "guestfish – the guest filesystem shell"
 <pre><code> available 'groups ...'
 </code></pre>
 <p> This command is used to check the availability of some groups of functionality in the appliance, which not all builds of the libguestfs appliance will be able to provide. </p>
-<p> The libguestfs groups, and the functions that those groups correspond to, are listed in ``<font SIZE="-1">AVAILABILITY&#8217;&#8216;</font> in <i>guestfs</i>(3). You can also fetch this list at runtime by calling ``available-all-groups&#8217;&#8216;. </p>
+<p> The libguestfs groups, and the functions that those groups correspond to, are listed in ``AVAILABILITY&#8217;&#8216; in <i>guestfs</i>(3). You can also fetch this list at runtime by calling ``available-all-groups&#8217;&#8216;. </p>
 <p> The argument <code>&quot;groups&quot;</code> is a list of group names, eg: <code>&quot;[&quot;inotify&quot;, &quot;augeas&quot;]&quot;</code> would check for the availability of the Linux inotify functions and Augeas (configuration file editing) functions. </p>
 <p> The command returns no error if <i>all</i> requested groups are available. </p>
 <p> It fails with an error if one or more of the requested groups is unavailable in the appliance. </p>
@@ -1277,14 +1277,14 @@ description: "guestfish – the guest filesystem shell"
 <p> <i>Notes:</i> </p>
 <dl>
 <dt>&bull;</dt>
-<dd> <p> ``feature-available&#8217;&#8216; is the same as this call, but with a slightly simpler to use <font SIZE="-1">API:</font> that call returns a boolean true/false instead of throwing an error. </p>
+<dd> <p> ``feature-available&#8217;&#8216; is the same as this call, but with a slightly simpler to use API: that call returns a boolean true/false instead of throwing an error. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> You must call ``launch&#8217;&#8216; before calling this function. </p>
 <p> The reason is because we don&#8217;t know what groups are supported by the appliance/daemon until it is running and can be queried. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> If a group of functions is available, this does not necessarily mean that they will work. You still have to check for errors when calling individual <font SIZE="-1">API</font> functions even if they are available. </p>
+<dd> <p> If a group of functions is available, this does not necessarily mean that they will work. You still have to check for errors when calling individual API functions even if they are available. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> It is usually the job of distro packagers to build complete functionality into the libguestfs appliance. Upstream libguestfs, if built from source with all requirements satisfied, will support everything. </p>
@@ -1297,7 +1297,7 @@ description: "guestfish – the guest filesystem shell"
 <pre><code> available-all-groups
 </code></pre>
 <p> This command returns a list of all optional groups that this daemon knows about. Note this returns both supported and unsupported groups. To find out which ones the daemon can actually support you have to call ``available&#8217;&#8216; / ``feature-available&#8217;&#8216; on each member of the returned list. </p>
-<p> See also ``available&#8217;&#8216;, ``feature-available&#8217;&#8216; and ``<font SIZE="-1">AVAILABILITY&#8217;&#8216;</font> in <i>guestfs</i>(3).  </p>
+<p> See also ``available&#8217;&#8216;, ``feature-available&#8217;&#8216; and ``AVAILABILITY&#8217;&#8216; in <i>guestfs</i>(3).  </p>
 <h3>base64-in</h3>
 <pre><code> base64-in (base64file|-) filename
 </code></pre>
@@ -1335,7 +1335,7 @@ description: "guestfish – the guest filesystem shell"
 <dd> <p> The version of blkid command. </p>
  </dd>
 <dt>&quot;TYPE&quot;</dt>
-<dd> <p> The filesystem type or <font SIZE="-1">RAID</font> of this device. </p>
+<dd> <p> The filesystem type or RAID of this device. </p>
  </dd>
 <dt>&quot;USAGE&quot;</dt>
 <dd> <p> The usage of this device, for example <code>&quot;filesystem&quot;</code> or <code>&quot;raid&quot;</code>. </p>
@@ -1385,7 +1385,7 @@ description: "guestfish – the guest filesystem shell"
 <p> This call does nothing and has never done anything because of a bug in blockdev. <code>Do not use it.</code> </p>
 <p> If you need to set the filesystem block size, use the <code>&quot;blocksize&quot;</code> option of ``mkfs&#8217;&#8216;. </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``mkfs&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
 <h3>blockdev-setra</h3>
 <pre><code> blockdev-setra device sectors
 </code></pre>
@@ -1441,7 +1441,7 @@ description: "guestfish – the guest filesystem shell"
 <pre><code> btrfs-filesystem-defragment path [flush:true|false] [compress:..]
 </code></pre>
 <p> Defragment a file or directory on a btrfs filesystem. compress is one of zlib or lzo. </p>
-<p> This command has one or more optional arguments. See ``<font SIZE="-1">OPTIONAL ARGUMENTS&#8217;&#8216;</font>. </p>
+<p> This command has one or more optional arguments. See ``OPTIONAL ARGUMENTS&#8217;&#8216;. </p>
 <p> This command depends on the feature <code>&quot;btrfs&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>btrfs-filesystem-resize</h3>
 <pre><code> btrfs-filesystem-resize mountpoint [size:N]
@@ -1454,7 +1454,7 @@ description: "guestfish – the guest filesystem shell"
 <dd> <p> The new size (in bytes) of the filesystem. If omitted, the filesystem is resized to the maximum size. </p>
  </dd></dl>
 <p> See also <i><a href="/docs/linux/man/8-btrfs/">btrfs</a></i>(8). </p>
-<p> This command has one or more optional arguments. See ``<font SIZE="-1">OPTIONAL ARGUMENTS&#8217;&#8216;</font>. </p>
+<p> This command has one or more optional arguments. See ``OPTIONAL ARGUMENTS&#8217;&#8216;. </p>
 <p> This command depends on the feature <code>&quot;btrfs&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>btrfs-filesystem-sync</h3>
 <pre><code> btrfs-filesystem-sync fs
@@ -1465,13 +1465,13 @@ description: "guestfish – the guest filesystem shell"
 <pre><code> btrfs-fsck device [superblock:N] [repair:true|false]
 </code></pre>
 <p> Used to check a btrfs filesystem, <code>&quot;device&quot;</code> is the device file where the filesystem is stored. </p>
-<p> This command has one or more optional arguments. See ``<font SIZE="-1">OPTIONAL ARGUMENTS&#8217;&#8216;</font>. </p>
+<p> This command has one or more optional arguments. See ``OPTIONAL ARGUMENTS&#8217;&#8216;. </p>
 <p> This command depends on the feature <code>&quot;btrfs&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>btrfs-image</h3>
 <pre><code> btrfs-image 'source ...' image [compresslevel:N]
 </code></pre>
 <p> This is used to create an image of a btrfs filesystem. All data will be zeroed, but metadata and the like is preserved. </p>
-<p> This command has one or more optional arguments. See ``<font SIZE="-1">OPTIONAL ARGUMENTS&#8217;&#8216;</font>. </p>
+<p> This command has one or more optional arguments. See ``OPTIONAL ARGUMENTS&#8217;&#8216;. </p>
 <p> This command depends on the feature <code>&quot;btrfs&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>btrfs-qgroup-assign</h3>
 <pre><code> btrfs-qgroup-assign src dst path
@@ -1542,7 +1542,7 @@ description: "guestfish – the guest filesystem shell"
 <h3>btrfs-scrub-start</h3>
 <pre><code> btrfs-scrub-start path
 </code></pre>
-<p> Reads all the data and metadata on the filesystem, and uses checksums and the duplicate copies from <font SIZE="-1">RAID</font> storage to identify and repair any corrupt data. </p>
+<p> Reads all the data and metadata on the filesystem, and uses checksums and the duplicate copies from RAID storage to identify and repair any corrupt data. </p>
 <p> This command depends on the feature <code>&quot;btrfs&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>btrfs-scrub-status</h3>
 <pre><code> btrfs-scrub-status path
@@ -1559,7 +1559,7 @@ description: "guestfish – the guest filesystem shell"
 <pre><code> btrfs-subvolume-create dest [qgroupid:..]
 </code></pre>
 <p> Create a btrfs subvolume. The <code>&quot;dest&quot;</code> argument is the destination directory and the name of the subvolume, in the form <i>/path/to/dest/name</i>. The optional parameter <code>&quot;qgroupid&quot;</code> represents the qgroup which the newly created subvolume will be added to. </p>
-<p> This command has one or more optional arguments. See ``<font SIZE="-1">OPTIONAL ARGUMENTS&#8217;&#8216;</font>. </p>
+<p> This command has one or more optional arguments. See ``OPTIONAL ARGUMENTS&#8217;&#8216;. </p>
 <p> This command depends on the feature <code>&quot;btrfs&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>btrfs-subvolume-delete</h3>
 <pre><code> btrfs-subvolume-delete subvolume
@@ -1591,7 +1591,7 @@ description: "guestfish – the guest filesystem shell"
 <pre><code> btrfs-subvolume-snapshot source dest [ro:true|false] [qgroupid:..]
 </code></pre>
 <p> Create a snapshot of the btrfs subvolume <code>&quot;source&quot;</code>. The <code>&quot;dest&quot;</code> argument is the destination directory and the name of the snapshot, in the form <i>/path/to/dest/name</i>. By default the newly created snapshot is writable, if the value of optional parameter <code>&quot;ro&quot;</code> is true, then a readonly snapshot is created. The optional parameter <code>&quot;qgroupid&quot;</code> represents the qgroup which the newly created snapshot will be added to. </p>
-<p> This command has one or more optional arguments. See ``<font SIZE="-1">OPTIONAL ARGUMENTS&#8217;&#8216;</font>. </p>
+<p> This command has one or more optional arguments. See ``OPTIONAL ARGUMENTS&#8217;&#8216;. </p>
 <p> This command depends on the feature <code>&quot;btrfs&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>btrfstune-enable-extended-inode-refs</h3>
 <pre><code> btrfstune-enable-extended-inode-refs device
@@ -1620,7 +1620,7 @@ description: "guestfish – the guest filesystem shell"
 <dt><i>/dev/hdX</i></dt>
 <dd>  </dd>
 <dt><i>/dev/vdX</i></dt>
-<dd> <p> These are returned as <i>/dev/sdX</i>. Note this works for device names and partition names. This is approximately the reverse of the algorithm described in ``<font SIZE="-1">BLOCK DEVICE NAMING&#8217;&#8216;</font> in <i>guestfs</i>(3). </p>
+<dd> <p> These are returned as <i>/dev/sdX</i>. Note this works for device names and partition names. This is approximately the reverse of the algorithm described in ``BLOCK DEVICE NAMING&#8217;&#8216; in <i>guestfs</i>(3). </p>
  </dd>
 <dt><i>/dev/mapper/VG-LV</i></dt>
 <dd>  </dd>
@@ -1655,7 +1655,7 @@ description: "guestfish – the guest filesystem shell"
 <dd> <p> ``Windows/System32/NoSuchFile&#8217;&#8216; </p>
  </dd>
 <dt>&quot;case-sensitive-path&quot; (&quot;/windows/system33/netkvm.sys&quot;)</dt>
-<dd> <p> <i></i><font SIZE="-1"><i>ERROR</i></font><i></i> </p>
+<dd> <p> <i></i><i>ERROR</i><i></i> </p>
  </dd></dl>
 <p> <i>Note</i>: Because of the above behaviour, ``case-sensitive-path&#8217;&#8216; cannot be used to check for the existence of a file. </p>
 <p> <i>Note</i>: This function does not handle drive names, backslashes etc. </p>
@@ -1668,29 +1668,29 @@ description: "guestfish – the guest filesystem shell"
 <h3>checksum</h3>
 <pre><code> checksum csumtype path
 </code></pre>
-<p> This call computes the <font SIZE="-1">MD5,</font> SHAx or <font SIZE="-1">CRC</font> checksum of the file named <code>&quot;path&quot;</code>. </p>
+<p> This call computes the MD5, SHAx or CRC checksum of the file named <code>&quot;path&quot;</code>. </p>
 <p> The type of checksum to compute is given by the <code>&quot;csumtype&quot;</code> parameter which must have one of the following values: </p>
 <dl>
 <dt>&quot;crc&quot;</dt>
-<dd> <p> Compute the cyclic redundancy check (<font SIZE="-1">CRC</font>) specified by <font SIZE="-1">POSIX</font> for the <code>&quot;cksum&quot;</code> command. </p>
+<dd> <p> Compute the cyclic redundancy check (CRC) specified by POSIX for the <code>&quot;cksum&quot;</code> command. </p>
  </dd>
 <dt>&quot;md5&quot;</dt>
-<dd> <p> Compute the <font SIZE="-1">MD5</font> hash (using the <code>&quot;md5sum&quot;</code> program). </p>
+<dd> <p> Compute the MD5 hash (using the <code>&quot;md5sum&quot;</code> program). </p>
  </dd>
 <dt>&quot;sha1&quot;</dt>
-<dd> <p> Compute the <font SIZE="-1">SHA1</font> hash (using the <code>&quot;sha1sum&quot;</code> program). </p>
+<dd> <p> Compute the SHA1 hash (using the <code>&quot;sha1sum&quot;</code> program). </p>
  </dd>
 <dt>&quot;sha224&quot;</dt>
-<dd> <p> Compute the <font SIZE="-1">SHA224</font> hash (using the <code>&quot;sha224sum&quot;</code> program). </p>
+<dd> <p> Compute the SHA224 hash (using the <code>&quot;sha224sum&quot;</code> program). </p>
  </dd>
 <dt>&quot;sha256&quot;</dt>
-<dd> <p> Compute the <font SIZE="-1">SHA256</font> hash (using the <code>&quot;sha256sum&quot;</code> program). </p>
+<dd> <p> Compute the SHA256 hash (using the <code>&quot;sha256sum&quot;</code> program). </p>
  </dd>
 <dt>&quot;sha384&quot;</dt>
-<dd> <p> Compute the <font SIZE="-1">SHA384</font> hash (using the <code>&quot;sha384sum&quot;</code> program). </p>
+<dd> <p> Compute the SHA384 hash (using the <code>&quot;sha384sum&quot;</code> program). </p>
  </dd>
 <dt>&quot;sha512&quot;</dt>
-<dd> <p> Compute the <font SIZE="-1">SHA512</font> hash (using the <code>&quot;sha512sum&quot;</code> program). </p>
+<dd> <p> Compute the SHA512 hash (using the <code>&quot;sha512sum&quot;</code> program). </p>
  </dd></dl>
 <p> The checksum is returned as a printable string. </p>
 <p> To get the checksum for a device, use ``checksum-device&#8217;&#8216;. </p>
@@ -1698,12 +1698,12 @@ description: "guestfish – the guest filesystem shell"
 <h3>checksum-device</h3>
 <pre><code> checksum-device csumtype device
 </code></pre>
-<p> This call computes the <font SIZE="-1">MD5,</font> SHAx or <font SIZE="-1">CRC</font> checksum of the contents of the device named <code>&quot;device&quot;</code>. For the types of checksums supported see the ``checksum&#8217;&#8216; command.  </p>
+<p> This call computes the MD5, SHAx or CRC checksum of the contents of the device named <code>&quot;device&quot;</code>. For the types of checksums supported see the ``checksum&#8217;&#8216; command.  </p>
 <h3>checksums-out</h3>
 <pre><code> checksums-out csumtype directory (sumsfile|-)
 </code></pre>
 <p> This command computes the checksums of all regular files in <i>directory</i> and then emits a list of those checksums to the local output file <code>&quot;sumsfile&quot;</code>. </p>
-<p> This can be used for verifying the integrity of a virtual machine. However to be properly secure you should pay attention to the output of the checksum command (it uses the ones from <font SIZE="-1">GNU</font> coreutils). In particular when the filename is not printable, coreutils uses a special backslash syntax. For more information, see the <font SIZE="-1">GNU</font> coreutils info file. </p>
+<p> This can be used for verifying the integrity of a virtual machine. However to be properly secure you should pay attention to the output of the checksum command (it uses the ones from GNU coreutils). In particular when the filename is not printable, coreutils uses a special backslash syntax. For more information, see the GNU coreutils info file. </p>
 <p> Use <code>&quot;-&quot;</code> instead of a filename to read/write from stdin/stdout.  </p>
 <h3>chmod</h3>
 <pre><code> chmod mode path
@@ -1721,7 +1721,7 @@ description: "guestfish – the guest filesystem shell"
 </code></pre>
 <p> If there is a backend setting string matching <code>&quot;name&quot;</code> or beginning with <code>&quot;name=&quot;</code>, then that string is removed from the backend settings. </p>
 <p> This call returns the number of strings which were removed (which may be 0, 1 or greater than 1). </p>
-<p> See ``<font SIZE="-1">BACKEND&#8217;&#8216;</font> in <i>guestfs</i>(3), ``<font SIZE="-1">BACKEND SETTINGS&#8217;&#8216;</font> in <i>guestfs</i>(3).  </p>
+<p> See ``BACKEND&#8217;&#8216; in <i>guestfs</i>(3), ``BACKEND SETTINGS&#8217;&#8216; in <i>guestfs</i>(3).  </p>
 <h3>command</h3>
 <pre><code> command 'arguments ...'
 </code></pre>
@@ -1731,20 +1731,20 @@ description: "guestfish – the guest filesystem shell"
 <p> If the command returns a non-zero exit status, then this function returns an error message. The error message string is the content of <i>stderr</i> from the command. </p>
 <p> The <code>$PATH</code> environment variable will contain at least <i>/usr/bin</i> and <i>/bin</i>. If you require a program from another location, you should provide the full path in the first parameter. </p>
 <p> Shared libraries and data files required by the program must be available on filesystems which are mounted in the correct places. It is the caller&#8217;s responsibility to ensure all filesystems that are needed are mounted at the right locations. </p>
-<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``<font SIZE="-1">PROTOCOL LIMITS&#8217;&#8216;</font> in <i>guestfs</i>(3).  </p>
+<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``PROTOCOL LIMITS&#8217;&#8216; in <i>guestfs</i>(3).  </p>
 <h3>command-lines</h3>
 <pre><code> command-lines 'arguments ...'
 </code></pre>
 <p> This is the same as ``command&#8217;&#8216;, but splits the result into a list of lines. </p>
 <p> See also: ``sh-lines&#8217;&#8216; </p>
-<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``<font SIZE="-1">PROTOCOL LIMITS&#8217;&#8216;</font> in <i>guestfs</i>(3).  </p>
+<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``PROTOCOL LIMITS&#8217;&#8216; in <i>guestfs</i>(3).  </p>
 <h3>compress-device-out</h3>
 <pre><code> compress-device-out ctype device (zdevice|-) [level:N]
 </code></pre>
 <p> This command compresses <code>&quot;device&quot;</code> and writes it out to the local file <code>&quot;zdevice&quot;</code>. </p>
 <p> The <code>&quot;ctype&quot;</code> and optional <code>&quot;level&quot;</code> parameters have the same meaning as in ``compress-out&#8217;&#8216;. </p>
 <p> Use <code>&quot;-&quot;</code> instead of a filename to read/write from stdin/stdout. </p>
-<p> This command has one or more optional arguments. See ``<font SIZE="-1">OPTIONAL ARGUMENTS&#8217;&#8216;</font>.  </p>
+<p> This command has one or more optional arguments. See ``OPTIONAL ARGUMENTS&#8217;&#8216;.  </p>
 <h3>compress-out</h3>
 <pre><code> compress-out ctype file (zfile|-) [level:N]
 </code></pre>
@@ -1752,13 +1752,13 @@ description: "guestfish – the guest filesystem shell"
 <p> The compression program used is controlled by the <code>&quot;ctype&quot;</code> parameter. Currently this includes: <code>&quot;compress&quot;</code>, <code>&quot;gzip&quot;</code>, <code>&quot;bzip2&quot;</code>, <code>&quot;xz&quot;</code> or <code>&quot;lzop&quot;</code>. Some compression types may not be supported by particular builds of libguestfs, in which case you will get an error containing the substring ``not supported&#8217;&#8216;. </p>
 <p> The optional <code>&quot;level&quot;</code> parameter controls compression level. The meaning and default for this parameter depends on the compression program being used. </p>
 <p> Use <code>&quot;-&quot;</code> instead of a filename to read/write from stdin/stdout. </p>
-<p> This command has one or more optional arguments. See ``<font SIZE="-1">OPTIONAL ARGUMENTS&#8217;&#8216;</font>.  </p>
+<p> This command has one or more optional arguments. See ``OPTIONAL ARGUMENTS&#8217;&#8216;.  </p>
 <h3>config</h3>
 <pre><code> config hvparam hvvalue
 </code></pre>
 <p> This can be used to add arbitrary hypervisor parameters of the form <i>-param value</i>. Actually it&#8217;s not quite arbitrary - we prevent you from setting some parameters which would interfere with parameters that we use. </p>
 <p> The first character of <code>&quot;hvparam&quot;</code> string must be a <code>&quot;-&quot;</code> (dash). </p>
-<p> <code>&quot;hvvalue&quot;</code> can be <font SIZE="-1">NULL.</font>  </p>
+<p> <code>&quot;hvvalue&quot;</code> can be NULL.  </p>
 <h3>copy-attributes</h3>
 <pre><code> copy-attributes src dest [all:true|false] [mode:true|false] [xattributes:true|false] [ownership:true|false]
 </code></pre>
@@ -1767,7 +1767,7 @@ description: "guestfish – the guest filesystem shell"
 <p> The optional arguments specify which attributes can be copied: </p>
 <dl>
 <dt>&quot;mode&quot;</dt>
-<dd> <p> Copy part of the file mode from <code>&quot;source&quot;</code> to <code>&quot;destination&quot;</code>. Only the <font SIZE="-1">UNIX</font> permissions and the sticky/setuid/setgid bits can be copied. </p>
+<dd> <p> Copy part of the file mode from <code>&quot;source&quot;</code> to <code>&quot;destination&quot;</code>. Only the UNIX permissions and the sticky/setuid/setgid bits can be copied. </p>
  </dd>
 <dt>&quot;xattributes&quot;</dt>
 <dd> <p> Copy the Linux extended attributes (xattrs) from <code>&quot;source&quot;</code> to <code>&quot;destination&quot;</code>. This flag does nothing if the <i>linuxxattrs</i> feature is not available (see ``feature-available&#8217;&#8216;). </p>
@@ -1778,7 +1778,7 @@ description: "guestfish – the guest filesystem shell"
 <dt>&quot;all&quot;</dt>
 <dd> <p> Copy <code>all</code> the attributes from <code>&quot;source&quot;</code> to <code>&quot;destination&quot;</code>. Enabling it enables all the other flags, if they are not specified already. </p>
  </dd></dl>
-<p> This command has one or more optional arguments. See ``<font SIZE="-1">OPTIONAL ARGUMENTS&#8217;&#8216;</font>.  </p>
+<p> This command has one or more optional arguments. See ``OPTIONAL ARGUMENTS&#8217;&#8216;.  </p>
 <h3>copy-device-to-device</h3>
 <pre><code> copy-device-to-device src dest [srcoffset:N] [destoffset:N] [size:N] [sparse:true|false] [append:true|false]
 </code></pre>
@@ -1788,30 +1788,30 @@ description: "guestfish – the guest filesystem shell"
 <p> If the destination is a file, it is created if required. If the destination file is not large enough, it is extended. </p>
 <p> If the destination is a file and the <code>&quot;append&quot;</code> flag is not set, then the destination file is truncated. If the <code>&quot;append&quot;</code> flag is set, then the copy appends to the destination file. The <code>&quot;append&quot;</code> flag currently cannot be set for devices. </p>
 <p> If the <code>&quot;sparse&quot;</code> flag is true then the call avoids writing blocks that contain only zeroes, which can help in some situations where the backing disk is thin-provisioned. Note that unless the target is already zeroed, using this option will result in incorrect copying. </p>
-<p> This command has one or more optional arguments. See ``<font SIZE="-1">OPTIONAL ARGUMENTS&#8217;&#8216;</font>.  </p>
+<p> This command has one or more optional arguments. See ``OPTIONAL ARGUMENTS&#8217;&#8216;.  </p>
 <h3>copy-device-to-file</h3>
 <pre><code> copy-device-to-file src dest [srcoffset:N] [destoffset:N] [size:N] [sparse:true|false] [append:true|false]
 </code></pre>
 <p> See ``copy-device-to-device&#8217;&#8216; for a general overview of this call. </p>
-<p> This command has one or more optional arguments. See ``<font SIZE="-1">OPTIONAL ARGUMENTS&#8217;&#8216;</font>.  </p>
+<p> This command has one or more optional arguments. See ``OPTIONAL ARGUMENTS&#8217;&#8216;.  </p>
 <h3>copy-file-to-device</h3>
 <pre><code> copy-file-to-device src dest [srcoffset:N] [destoffset:N] [size:N] [sparse:true|false] [append:true|false]
 </code></pre>
 <p> See ``copy-device-to-device&#8217;&#8216; for a general overview of this call. </p>
-<p> This command has one or more optional arguments. See ``<font SIZE="-1">OPTIONAL ARGUMENTS&#8217;&#8216;</font>.  </p>
+<p> This command has one or more optional arguments. See ``OPTIONAL ARGUMENTS&#8217;&#8216;.  </p>
 <h3>copy-file-to-file</h3>
 <pre><code> copy-file-to-file src dest [srcoffset:N] [destoffset:N] [size:N] [sparse:true|false] [append:true|false]
 </code></pre>
 <p> See ``copy-device-to-device&#8217;&#8216; for a general overview of this call. </p>
 <p> This is <code>not</code> the function you want for copying files. This is for copying blocks within existing files. See ``cp&#8217;&#8216;, ``cp-a&#8217;&#8216; and ``mv&#8217;&#8216; for general file copying and moving functions. </p>
-<p> This command has one or more optional arguments. See ``<font SIZE="-1">OPTIONAL ARGUMENTS&#8217;&#8216;</font>.  </p>
+<p> This command has one or more optional arguments. See ``OPTIONAL ARGUMENTS&#8217;&#8216;.  </p>
 <h3>copy-size</h3>
 <pre><code> copy-size src dest size
 </code></pre>
 <p> This command copies exactly <code>&quot;size&quot;</code> bytes from one source device or file <code>&quot;src&quot;</code> to another destination device or file <code>&quot;dest&quot;</code>. </p>
 <p> Note this will fail if the source is too short or if the destination is not large enough. </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``copy-device-to-device&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
 <h3>cp</h3>
 <pre><code> cp src dest
 </code></pre>
@@ -1824,7 +1824,7 @@ description: "guestfish – the guest filesystem shell"
 <pre><code> cp-r src dest
 </code></pre>
 <p> This copies a file or directory from <code>&quot;src&quot;</code> to <code>&quot;dest&quot;</code> recursively using the <code>&quot;cp -rP&quot;</code> command. </p>
-<p> Most users should use ``cp-a&#8217;&#8216; instead. This command is useful when you don&#8217;t want to preserve permissions, because the target filesystem does not support it (primarily when writing to <font SIZE="-1">DOS FAT</font> filesystems).  </p>
+<p> Most users should use ``cp-a&#8217;&#8216; instead. This command is useful when you don&#8217;t want to preserve permissions, because the target filesystem does not support it (primarily when writing to DOS FAT filesystems).  </p>
 <h3>cpio-out</h3>
 <pre><code> cpio-out directory (cpiofile|-) [format:..]
 </code></pre>
@@ -1832,21 +1832,21 @@ description: "guestfish – the guest filesystem shell"
 <p> The optional <code>&quot;format&quot;</code> parameter can be used to select the format. Only the following formats are currently permitted: </p>
 <dl>
 <dt>&quot;newc&quot;</dt>
-<dd> <p> New (<font SIZE="-1">SVR4</font>) portable format. This format happens to be compatible with the cpio-like format used by the Linux kernel for initramfs. </p>
+<dd> <p> New (SVR4) portable format. This format happens to be compatible with the cpio-like format used by the Linux kernel for initramfs. </p>
 <p> This is the default format. </p>
  </dd>
 <dt>&quot;crc&quot;</dt>
-<dd> <p> New (<font SIZE="-1">SVR4</font>) portable format with a checksum. </p>
+<dd> <p> New (SVR4) portable format with a checksum. </p>
  </dd></dl>
 <p> Use <code>&quot;-&quot;</code> instead of a filename to read/write from stdin/stdout. </p>
-<p> This command has one or more optional arguments. See ``<font SIZE="-1">OPTIONAL ARGUMENTS&#8217;&#8216;</font>.  </p>
+<p> This command has one or more optional arguments. See ``OPTIONAL ARGUMENTS&#8217;&#8216;.  </p>
 <h3>dd</h3>
 <pre><code> dd src dest
 </code></pre>
 <p> This command copies from one source device or file <code>&quot;src&quot;</code> to another destination device or file <code>&quot;dest&quot;</code>. Normally you would use this to copy to or from a device or partition, for example to duplicate a filesystem. </p>
 <p> If the destination is a device, it must be as large or larger than the source file or device, otherwise the copy will fail. This command cannot do partial copies (see ``copy-device-to-device&#8217;&#8216;). </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``copy-device-to-device&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
 <h3>device-index</h3>
 <pre><code> device-index device
 </code></pre>
@@ -1882,23 +1882,23 @@ description: "guestfish – the guest filesystem shell"
 <dd> <p> <code>&quot;qcow2&quot;</code> only: Change the qcow2 cluster size. The default is 65536 (bytes) and this setting may be any power of two between 512 and 2097152. </p>
  </dd></dl>
 <p> Note that this call does not add the new disk to the handle. You may need to call ``add-drive-opts&#8217;&#8216; separately. </p>
-<p> This command has one or more optional arguments. See ``<font SIZE="-1">OPTIONAL ARGUMENTS&#8217;&#8216;</font>.  </p>
+<p> This command has one or more optional arguments. See ``OPTIONAL ARGUMENTS&#8217;&#8216;.  </p>
 <h3>disk-format</h3>
 <pre><code> disk-format filename
 </code></pre>
 <p> Detect and return the format of the disk image called <i>filename</i>. <i>filename</i> can also be a host device, etc. If the format of the image could not be detected, then <code>&quot;unknown&quot;</code> is returned. </p>
-<p> Note that detecting the disk format can be insecure under some circumstances. See ``<font SIZE="-1">CVE-2010-3851&#8217;&#8216;</font> in <i>guestfs</i>(3). </p>
-<p> See also: ``<font SIZE="-1">DISK IMAGE FORMATS&#8217;&#8216;</font> in <i>guestfs</i>(3)  </p>
+<p> Note that detecting the disk format can be insecure under some circumstances. See ``CVE-2010-3851&#8217;&#8216; in <i>guestfs</i>(3). </p>
+<p> See also: ``DISK IMAGE FORMATS&#8217;&#8216; in <i>guestfs</i>(3)  </p>
 <h3>disk-has-backing-file</h3>
 <pre><code> disk-has-backing-file filename
 </code></pre>
 <p> Detect and return whether the disk image <i>filename</i> has a backing file. </p>
-<p> Note that detecting disk features can be insecure under some circumstances. See ``<font SIZE="-1">CVE-2010-3851&#8217;&#8216;</font> in <i>guestfs</i>(3).  </p>
+<p> Note that detecting disk features can be insecure under some circumstances. See ``CVE-2010-3851&#8217;&#8216; in <i>guestfs</i>(3).  </p>
 <h3>disk-virtual-size</h3>
 <pre><code> disk-virtual-size filename
 </code></pre>
 <p> Detect and return the virtual size in bytes of the disk image called <i>filename</i>. </p>
-<p> Note that detecting disk features can be insecure under some circumstances. See ``<font SIZE="-1">CVE-2010-3851&#8217;&#8216;</font> in <i>guestfs</i>(3).  </p>
+<p> Note that detecting disk features can be insecure under some circumstances. See ``CVE-2010-3851&#8217;&#8216; in <i>guestfs</i>(3).  </p>
 <h3>dmesg</h3>
 <pre><code> dmesg
 </code></pre>
@@ -1944,13 +1944,13 @@ description: "guestfish – the guest filesystem shell"
 <dd> <p> Assume an answer of &#8216;yes&#8217; to all questions; allows e2fsck to be used non-interactively. </p>
 <p> This option may not be specified at the same time as the <code>&quot;correct&quot;</code> option. </p>
  </dd></dl>
-<p> This command has one or more optional arguments. See ``<font SIZE="-1">OPTIONAL ARGUMENTS&#8217;&#8216;</font>.  </p>
+<p> This command has one or more optional arguments. See ``OPTIONAL ARGUMENTS&#8217;&#8216;.  </p>
 <h3>e2fsck-f</h3>
 <pre><code> e2fsck-f device
 </code></pre>
 <p> This runs <code>&quot;e2fsck -p -f device&quot;</code>, ie. runs the ext2/ext3 filesystem checker on <code>&quot;device&quot;</code>, noninteractively (<i>-p</i>), even if the filesystem appears to be clean (<i>-f</i>). </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``e2fsck&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
 <h3>echo-daemon</h3>
 <pre><code> echo-daemon 'words ...'
 </code></pre>
@@ -1961,16 +1961,16 @@ description: "guestfish – the guest filesystem shell"
 <pre><code> egrep regex path
 </code></pre>
 <p> This calls the external <code>&quot;egrep&quot;</code> program and returns the matching lines. </p>
-<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``<font SIZE="-1">PROTOCOL LIMITS&#8217;&#8216;</font> in <i>guestfs</i>(3). </p>
+<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``PROTOCOL LIMITS&#8217;&#8216; in <i>guestfs</i>(3). </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``grep&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
 <h3>egrepi</h3>
 <pre><code> egrepi regex path
 </code></pre>
 <p> This calls the external <code>&quot;egrep -i&quot;</code> program and returns the matching lines. </p>
-<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``<font SIZE="-1">PROTOCOL LIMITS&#8217;&#8216;</font> in <i>guestfs</i>(3). </p>
+<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``PROTOCOL LIMITS&#8217;&#8216; in <i>guestfs</i>(3). </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``grep&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
 <h3>equal</h3>
 <pre><code> equal file1 file2
 </code></pre>
@@ -1984,10 +1984,10 @@ description: "guestfish – the guest filesystem shell"
 <h3>extlinux</h3>
 <pre><code> extlinux directory
 </code></pre>
-<p> Install the <font SIZE="-1">SYSLINUX</font> bootloader on the device mounted at <i>directory</i>. Unlike ``syslinux&#8217;&#8216; which requires a <font SIZE="-1">FAT</font> filesystem, this can be used on an ext2/3/4 or btrfs filesystem. </p>
+<p> Install the SYSLINUX bootloader on the device mounted at <i>directory</i>. Unlike ``syslinux&#8217;&#8216; which requires a FAT filesystem, this can be used on an ext2/3/4 or btrfs filesystem. </p>
 <p> The <i>directory</i> parameter can be either a mountpoint, or a directory within the mountpoint. </p>
-<p> You also have to mark the partition as ``active&#8217;&#8216; (``part-set-bootable&#8217;&#8216;) and a Master Boot Record must be installed (eg. using ``pwrite-device&#8217;&#8216;) on the first sector of the whole disk. The <font SIZE="-1">SYSLINUX</font> package comes with some suitable Master Boot Records. See the <i><a href="/docs/linux/man/1-extlinux/">extlinux</a></i>(1) man page for further information. </p>
-<p> Additional configuration can be supplied to <font SIZE="-1">SYSLINUX</font> by placing a file called <i>extlinux.conf</i> on the filesystem under <i>directory</i>. For further information about the contents of this file, see <i><a href="/docs/linux/man/1-extlinux/">extlinux</a></i>(1). </p>
+<p> You also have to mark the partition as ``active&#8217;&#8216; (``part-set-bootable&#8217;&#8216;) and a Master Boot Record must be installed (eg. using ``pwrite-device&#8217;&#8216;) on the first sector of the whole disk. The SYSLINUX package comes with some suitable Master Boot Records. See the <i><a href="/docs/linux/man/1-extlinux/">extlinux</a></i>(1) man page for further information. </p>
+<p> Additional configuration can be supplied to SYSLINUX by placing a file called <i>extlinux.conf</i> on the filesystem under <i>directory</i>. For further information about the contents of this file, see <i><a href="/docs/linux/man/1-extlinux/">extlinux</a></i>(1). </p>
 <p> See also ``syslinux&#8217;&#8216;. </p>
 <p> This command depends on the feature <code>&quot;extlinux&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>fallocate</h3>
@@ -1996,7 +1996,7 @@ description: "guestfish – the guest filesystem shell"
 <p> This command preallocates a file (containing zero bytes) named <code>&quot;path&quot;</code> of size <code>&quot;len&quot;</code> bytes. If the file exists already, it is overwritten. </p>
 <p> Do not confuse this with the guestfish-specific <code>&quot;alloc&quot;</code> command which allocates a file in the host and attaches it as a device. </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``fallocate64&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
 <h3>fallocate64</h3>
 <pre><code> fallocate64 path len
 </code></pre>
@@ -2012,23 +2012,23 @@ description: "guestfish – the guest filesystem shell"
 <pre><code> fgrep pattern path
 </code></pre>
 <p> This calls the external <code>&quot;fgrep&quot;</code> program and returns the matching lines. </p>
-<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``<font SIZE="-1">PROTOCOL LIMITS&#8217;&#8216;</font> in <i>guestfs</i>(3). </p>
+<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``PROTOCOL LIMITS&#8217;&#8216; in <i>guestfs</i>(3). </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``grep&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
 <h3>fgrepi</h3>
 <pre><code> fgrepi pattern path
 </code></pre>
 <p> This calls the external <code>&quot;fgrep -i&quot;</code> program and returns the matching lines. </p>
-<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``<font SIZE="-1">PROTOCOL LIMITS&#8217;&#8216;</font> in <i>guestfs</i>(3). </p>
+<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``PROTOCOL LIMITS&#8217;&#8216; in <i>guestfs</i>(3). </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``grep&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
 <h3>file</h3>
 <pre><code> file path
 </code></pre>
 <p> This call uses the standard <i><a href="/docs/linux/man/1-file/">file</a></i>(1) command to determine the type or contents of the file. </p>
 <p> This call will also transparently look inside various types of compressed file. </p>
 <p> The exact command which runs is <code>&quot;file -zb path&quot;</code>. Note in particular that the filename is not prepended to the output (the <i>-b</i> option). </p>
-<p> The output depends on the output of the underlying <i><a href="/docs/linux/man/1-file/">file</a></i>(1) command and it can change in future in ways beyond our control. In other words, the output is not guaranteed by the <font SIZE="-1">ABI.</font> </p>
+<p> The output depends on the output of the underlying <i><a href="/docs/linux/man/1-file/">file</a></i>(1) command and it can change in future in ways beyond our control. In other words, the output is not guaranteed by the ABI. </p>
 <p> See also: <i><a href="/docs/linux/man/1-file/">file</a></i>(1), ``vfs-type&#8217;&#8216;, ``lstat&#8217;&#8216;, ``is-file&#8217;&#8216;, ``is-blockdev&#8217;&#8216; (etc), ``is-zero&#8217;&#8216;.  </p>
 <h3>file-architecture</h3>
 <pre><code> file-architecture filename
@@ -2043,25 +2043,25 @@ description: "guestfish – the guest filesystem shell"
 <dd> <p> 64 bit x86-64. </p>
  </dd>
 <dt>&quot;sparc&quot;</dt>
-<dd> <p> 32 bit <font SIZE="-1">SPARC.</font> </p>
+<dd> <p> 32 bit SPARC. </p>
  </dd>
 <dt>&quot;sparc64&quot;</dt>
-<dd> <p> 64 bit <font SIZE="-1">SPARC V9</font> and above. </p>
+<dd> <p> 64 bit SPARC V9 and above. </p>
  </dd>
 <dt>&quot;ia64&quot;</dt>
 <dd> <p> Intel Itanium. </p>
  </dd>
 <dt>&quot;ppc&quot;</dt>
-<dd> <p> 32 bit Power <font SIZE="-1">PC.</font> </p>
+<dd> <p> 32 bit Power PC. </p>
  </dd>
 <dt>&quot;ppc64&quot;</dt>
-<dd> <p> 64 bit Power <font SIZE="-1">PC.</font> </p>
+<dd> <p> 64 bit Power PC. </p>
  </dd>
 <dt>&quot;arm&quot;</dt>
-<dd> <p> 32 bit <font SIZE="-1">ARM.</font> </p>
+<dd> <p> 32 bit ARM. </p>
  </dd>
 <dt>&quot;aarch64&quot;</dt>
-<dd> <p> 64 bit <font SIZE="-1">ARM.</font> </p>
+<dd> <p> 64 bit ARM. </p>
  </dd></dl>
 <p> Libguestfs may return other architecture strings in future. </p>
 <p> The function works on at least the following types of files: </p>
@@ -2095,7 +2095,7 @@ description: "guestfish – the guest filesystem shell"
 <dd> <p> static libraries (libfoo.a) </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Linux old-style initrd as compressed ext2 filesystem (<font SIZE="-1">RHEL 3</font>) </p>
+<dd> <p> Linux old-style initrd as compressed ext2 filesystem (RHEL 3) </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> x86 Linux vmlinuz kernels </p>
@@ -2112,7 +2112,7 @@ description: "guestfish – the guest filesystem shell"
 <p> Check whether libguestfs supports the named filesystem. The argument <code>&quot;filesystem&quot;</code> is a filesystem name, such as <code>&quot;ext3&quot;</code>. </p>
 <p> You must call ``launch&#8217;&#8216; before using this command. </p>
 <p> This is mainly useful as a negative test. If this returns true, it doesn&#8217;t mean that a particular filesystem can be created or mounted, since filesystems can fail for other reasons such as it being a later version of the filesystem, or having incompatible features, or lacking the right mkfs.&lt;<i>fs</i>&gt; tool. </p>
-<p> See also ``available&#8217;&#8216;, ``feature-available&#8217;&#8216;, ``<font SIZE="-1">AVAILABILITY&#8217;&#8216;</font> in <i>guestfs</i>(3).  </p>
+<p> See also ``available&#8217;&#8216;, ``feature-available&#8217;&#8216;, ``AVAILABILITY&#8217;&#8216; in <i>guestfs</i>(3).  </p>
 <h3>fill</h3>
 <pre><code> fill c len path
 </code></pre>
@@ -2167,8 +2167,8 @@ description: "guestfish – the guest filesystem shell"
 <h3>findfs-uuid</h3>
 <pre><code> findfs-uuid uuid
 </code></pre>
-<p> This command searches the filesystems and returns the one which has the given <font SIZE="-1">UUID. </font> An error is returned if no such filesystem can be found. </p>
-<p> To find the <font SIZE="-1">UUID</font> of a filesystem, use ``vfs-uuid&#8217;&#8216;.  </p>
+<p> This command searches the filesystems and returns the one which has the given UUID.  An error is returned if no such filesystem can be found. </p>
+<p> To find the UUID of a filesystem, use ``vfs-uuid&#8217;&#8216;.  </p>
 <h3>fsck</h3>
 <pre><code> fsck fstype device
 </code></pre>
@@ -2183,7 +2183,7 @@ description: "guestfish – the guest filesystem shell"
 <dd> <p> A non-zero return code can mean ``success&#8217;&#8216;, for example if errors have been corrected on the filesystem. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Checking or repairing <font SIZE="-1">NTFS</font> volumes is not supported (by linux-ntfs). </p>
+<dd> <p> Checking or repairing NTFS volumes is not supported (by linux-ntfs). </p>
  </dd></dl>
 <p> This command is entirely equivalent to running <code>&quot;fsck -a -t fstype device&quot;</code>.  </p>
 <h3>fstrim</h3>
@@ -2192,9 +2192,9 @@ description: "guestfish – the guest filesystem shell"
 <p> Trim the free space in the filesystem mounted on <code>&quot;mountpoint&quot;</code>. The filesystem must be mounted read-write. </p>
 <p> The filesystem contents are not affected, but any free space in the filesystem is ``trimmed&#8217;&#8216;, that is, given back to the host device, thus making disk images more sparse, allowing unused space in qcow2 files to be reused, etc. </p>
 <p> This operation requires support in libguestfs, the mounted filesystem, the host filesystem, qemu and the host kernel. If this support isn&#8217;t present it may give an error or even appear to run but do nothing. </p>
-<p> In the case where the kernel vfs driver does not support trimming, this call will fail with errno set to <code>&quot;ENOTSUP&quot;</code>. Currently this happens when trying to trim <font SIZE="-1">FAT</font> filesystems. </p>
+<p> In the case where the kernel vfs driver does not support trimming, this call will fail with errno set to <code>&quot;ENOTSUP&quot;</code>. Currently this happens when trying to trim FAT filesystems. </p>
 <p> See also ``zero-free-space&#8217;&#8216;. That is a slightly different operation that turns free space in the filesystem into zeroes. It is valid to call ``fstrim&#8217;&#8216; either instead of, or after calling ``zero-free-space&#8217;&#8216;. </p>
-<p> This command has one or more optional arguments. See ``<font SIZE="-1">OPTIONAL ARGUMENTS&#8217;&#8216;</font>. </p>
+<p> This command has one or more optional arguments. See ``OPTIONAL ARGUMENTS&#8217;&#8216;. </p>
 <p> This command depends on the feature <code>&quot;fstrim&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>get-append</h3>
 <pre><code> get-append
@@ -2205,9 +2205,9 @@ description: "guestfish – the guest filesystem shell"
 <pre><code> get-attach-method
 </code></pre>
 <p> Return the current backend. </p>
-<p> See ``set-backend&#8217;&#8216; and ``<font SIZE="-1">BACKEND&#8217;&#8216;</font> in <i>guestfs</i>(3). </p>
+<p> See ``set-backend&#8217;&#8216; and ``BACKEND&#8217;&#8216; in <i>guestfs</i>(3). </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``get-backend&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
 <h3>get-autosync</h3>
 <pre><code> get-autosync
 </code></pre>
@@ -2217,19 +2217,19 @@ description: "guestfish – the guest filesystem shell"
 </code></pre>
 <p> Return the current backend. </p>
 <p> This handle property was previously called the ``attach method&#8217;&#8216;. </p>
-<p> See ``set-backend&#8217;&#8216; and ``<font SIZE="-1">BACKEND&#8217;&#8216;</font> in <i>guestfs</i>(3).  </p>
+<p> See ``set-backend&#8217;&#8216; and ``BACKEND&#8217;&#8216; in <i>guestfs</i>(3).  </p>
 <h3>get-backend-setting</h3>
 <pre><code> get-backend-setting name
 </code></pre>
 <p> Find a backend setting string which is either <code>&quot;name&quot;</code> or begins with <code>&quot;name=&quot;</code>. If <code>&quot;name&quot;</code>, this returns the string <code>&quot;1&quot;</code>. If <code>&quot;name=&quot;</code>, this returns the part after the equals sign (which may be an empty string). </p>
 <p> If no such setting is found, this function throws an error. The errno (see ``last-errno&#8217;&#8216;) will be <code>&quot;ESRCH&quot;</code> in this case. </p>
-<p> See ``<font SIZE="-1">BACKEND&#8217;&#8216;</font> in <i>guestfs</i>(3), ``<font SIZE="-1">BACKEND SETTINGS&#8217;&#8216;</font> in <i>guestfs</i>(3).  </p>
+<p> See ``BACKEND&#8217;&#8216; in <i>guestfs</i>(3), ``BACKEND SETTINGS&#8217;&#8216; in <i>guestfs</i>(3).  </p>
 <h3>get-backend-settings</h3>
 <pre><code> get-backend-settings
 </code></pre>
 <p> Return the current backend settings. </p>
 <p> This call returns all backend settings strings. If you want to find a single backend setting, see ``get-backend-setting&#8217;&#8216;. </p>
-<p> See ``<font SIZE="-1">BACKEND&#8217;&#8216;</font> in <i>guestfs</i>(3), ``<font SIZE="-1">BACKEND SETTINGS&#8217;&#8216;</font> in <i>guestfs</i>(3).  </p>
+<p> See ``BACKEND&#8217;&#8216; in <i>guestfs</i>(3), ``BACKEND SETTINGS&#8217;&#8216; in <i>guestfs</i>(3).  </p>
 <h3>get-cachedir</h3>
 <pre><code> get-cachedir
 </code></pre>
@@ -2306,7 +2306,7 @@ description: "guestfish – the guest filesystem shell"
 <h3>get-e2generation</h3>
 <pre><code> get-e2generation file
 </code></pre>
-<p> This returns the ext2 file generation of a file. The generation (which used to be called the ``version&#8217;&#8216;) is a number associated with an inode. This is most commonly used by <font SIZE="-1">NFS</font> servers. </p>
+<p> This returns the ext2 file generation of a file. The generation (which used to be called the ``version&#8217;&#8216;) is a number associated with an inode. This is most commonly used by NFS servers. </p>
 <p> The generation is only present when the file is located on an ext2/3/4 filesystem. Using this call on other filesystem types will result in an error. </p>
 <p> See ``set-e2generation&#8217;&#8216;.  </p>
 <h3>get-e2label</h3>
@@ -2314,13 +2314,13 @@ description: "guestfish – the guest filesystem shell"
 </code></pre>
 <p> This returns the ext2/3/4 filesystem label of the filesystem on <code>&quot;device&quot;</code>. </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``vfs-label&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
 <h3>get-e2uuid</h3>
 <pre><code> get-e2uuid device
 </code></pre>
-<p> This returns the ext2/3/4 filesystem <font SIZE="-1">UUID</font> of the filesystem on <code>&quot;device&quot;</code>. </p>
+<p> This returns the ext2/3/4 filesystem UUID of the filesystem on <code>&quot;device&quot;</code>. </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``vfs-uuid&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
 <h3>get-hv</h3>
 <pre><code> get-hv
 </code></pre>
@@ -2334,23 +2334,23 @@ description: "guestfish – the guest filesystem shell"
 <pre><code> get-libvirt-requested-credential-challenge index
 </code></pre>
 <p> Get the challenge (provided by libvirt) for the <code>&quot;index&quot;</code>&#8216;th requested credential. If libvirt did not provide a challenge, this returns the empty string <code>&quot;&quot;</code>. </p>
-<p> See ``<font SIZE="-1">LIBVIRT AUTHENTICATION&#8217;&#8216;</font> in <i>guestfs</i>(3) for documentation and example code.  </p>
+<p> See ``LIBVIRT AUTHENTICATION&#8217;&#8216; in <i>guestfs</i>(3) for documentation and example code.  </p>
 <h3>get-libvirt-requested-credential-defresult</h3>
 <pre><code> get-libvirt-requested-credential-defresult index
 </code></pre>
 <p> Get the default result (provided by libvirt) for the <code>&quot;index&quot;</code>&#8216;th requested credential. If libvirt did not provide a default result, this returns the empty string <code>&quot;&quot;</code>. </p>
-<p> See ``<font SIZE="-1">LIBVIRT AUTHENTICATION&#8217;&#8216;</font> in <i>guestfs</i>(3) for documentation and example code.  </p>
+<p> See ``LIBVIRT AUTHENTICATION&#8217;&#8216; in <i>guestfs</i>(3) for documentation and example code.  </p>
 <h3>get-libvirt-requested-credential-prompt</h3>
 <pre><code> get-libvirt-requested-credential-prompt index
 </code></pre>
 <p> Get the prompt (provided by libvirt) for the <code>&quot;index&quot;</code>&#8216;th requested credential. If libvirt did not provide a prompt, this returns the empty string <code>&quot;&quot;</code>. </p>
-<p> See ``<font SIZE="-1">LIBVIRT AUTHENTICATION&#8217;&#8216;</font> in <i>guestfs</i>(3) for documentation and example code.  </p>
+<p> See ``LIBVIRT AUTHENTICATION&#8217;&#8216; in <i>guestfs</i>(3) for documentation and example code.  </p>
 <h3>get-libvirt-requested-credentials</h3>
 <pre><code> get-libvirt-requested-credentials
 </code></pre>
 <p> This should only be called during the event callback for events of type <code>&quot;GUESTFS_EVENT_LIBVIRT_AUTH&quot;</code>. </p>
 <p> Return the list of credentials requested by libvirt. Possible values are a subset of the strings provided when you called ``set-libvirt-supported-credentials&#8217;&#8216;. </p>
-<p> See ``<font SIZE="-1">LIBVIRT AUTHENTICATION&#8217;&#8216;</font> in <i>guestfs</i>(3) for documentation and example code.  </p>
+<p> See ``LIBVIRT AUTHENTICATION&#8217;&#8216; in <i>guestfs</i>(3) for documentation and example code.  </p>
 <h3>get-memsize</h3>
 <pre><code> get-memsize
 </code></pre>
@@ -2374,7 +2374,7 @@ description: "guestfish – the guest filesystem shell"
 <h3>pid</h3>
 <pre><code> get-pid
 </code></pre>
-<p> Return the process <font SIZE="-1">ID</font> of the hypervisor. If there is no hypervisor running, then this will return an error. </p>
+<p> Return the process ID of the hypervisor. If there is no hypervisor running, then this will return an error. </p>
 <p> This is an internal call used for debugging and testing.  </p>
 <h3>get-program</h3>
 <pre><code> get-program
@@ -2386,7 +2386,7 @@ description: "guestfish – the guest filesystem shell"
 <p> Return the current hypervisor binary (usually qemu). </p>
 <p> This is always non-NULL. If it wasn&#8217;t set already, then this will return the default qemu binary name. </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``get-hv&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
 <h3>get-recovery-proc</h3>
 <pre><code> get-recovery-proc
 </code></pre>
@@ -2397,7 +2397,7 @@ description: "guestfish – the guest filesystem shell"
 <p> This returns the current setting of the selinux flag which is passed to the appliance at boot time. See ``set-selinux&#8217;&#8216;. </p>
 <p> For more information on the architecture of libguestfs, see <i>guestfs</i>(3). </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``selinux-relabel&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
 <h3>get-smp</h3>
 <pre><code> get-smp
 </code></pre>
@@ -2422,9 +2422,9 @@ description: "guestfish – the guest filesystem shell"
 <pre><code> getcon
 </code></pre>
 <p> This gets the SELinux security context of the daemon. </p>
-<p> See the documentation about <font SIZE="-1">SELINUX</font> in <i>guestfs</i>(3), and ``setcon&#8217;&#8216; </p>
+<p> See the documentation about SELINUX in <i>guestfs</i>(3), and ``setcon&#8217;&#8216; </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``selinux-relabel&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions. </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions. </p>
 <p> This command depends on the feature <code>&quot;selinux&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>getxattr</h3>
 <pre><code> getxattr path name
@@ -2450,7 +2450,7 @@ description: "guestfish – the guest filesystem shell"
 <p> It is just a wrapper around the C <i><a href="/docs/linux/man/3-glob/">glob</a></i>(3) function with flags <code>&quot;GLOB_MARK|GLOB_BRACE&quot;</code>. See that manual page for more details. </p>
 <p> <code>&quot;directoryslash&quot;</code> controls whether use the <code>&quot;GLOB_MARK&quot;</code> flag for <i><a href="/docs/linux/man/3-glob/">glob</a></i>(3), and it defaults to true. It can be explicitly set as off to return no trailing slashes in filenames of directories. </p>
 <p> Notice that there is no equivalent command for expanding a device name (eg. <i>/dev/sd*</i>). Use ``list-devices&#8217;&#8216;, ``list-partitions&#8217;&#8216; etc functions instead. </p>
-<p> This command has one or more optional arguments. See ``<font SIZE="-1">OPTIONAL ARGUMENTS&#8217;&#8216;</font>.  </p>
+<p> This command has one or more optional arguments. See ``OPTIONAL ARGUMENTS&#8217;&#8216;.  </p>
 <h3>grep</h3>
 <h3>grep-opts</h3>
 <pre><code> grep regex path [extended:true|false] [fixed:true|false] [insensitive:true|false] [compressed:true|false]
@@ -2470,23 +2470,23 @@ description: "guestfish – the guest filesystem shell"
 <dt>&quot;compressed&quot;</dt>
 <dd> <p> Use <code>&quot;zgrep&quot;</code> instead of <code>&quot;grep&quot;</code>. This allows the input to be compress- or gzip-compressed. </p>
  </dd></dl>
-<p> This command has one or more optional arguments. See ``<font SIZE="-1">OPTIONAL ARGUMENTS&#8217;&#8216;</font>. </p>
-<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``<font SIZE="-1">PROTOCOL LIMITS&#8217;&#8216;</font> in <i>guestfs</i>(3).  </p>
+<p> This command has one or more optional arguments. See ``OPTIONAL ARGUMENTS&#8217;&#8216;. </p>
+<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``PROTOCOL LIMITS&#8217;&#8216; in <i>guestfs</i>(3).  </p>
 <h3>grepi</h3>
 <pre><code> grepi regex path
 </code></pre>
 <p> This calls the external <code>&quot;grep -i&quot;</code> program and returns the matching lines. </p>
-<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``<font SIZE="-1">PROTOCOL LIMITS&#8217;&#8216;</font> in <i>guestfs</i>(3). </p>
+<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``PROTOCOL LIMITS&#8217;&#8216; in <i>guestfs</i>(3). </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``grep&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
 <h3>grub-install</h3>
 <pre><code> grub-install root device
 </code></pre>
-<p> This command installs <font SIZE="-1">GRUB 1 </font>(the Grand Unified Bootloader) on <code>&quot;device&quot;</code>, with the root directory being <code>&quot;root&quot;</code>. </p>
+<p> This command installs GRUB 1 (the Grand Unified Bootloader) on <code>&quot;device&quot;</code>, with the root directory being <code>&quot;root&quot;</code>. </p>
 <p> Notes: </p>
 <dl>
 <dt>&bull;</dt>
-<dd> <p> There is currently no way in the <font SIZE="-1">API</font> to install grub2, which is used by most modern Linux guests. It is possible to run the grub2 command from the guest, although see the caveats in ``<font SIZE="-1">RUNNING COMMANDS&#8217;&#8216;</font> in <i>guestfs</i>(3). </p>
+<dd> <p> There is currently no way in the API to install grub2, which is used by most modern Linux guests. It is possible to run the grub2 command from the guest, although see the caveats in ``RUNNING COMMANDS&#8217;&#8216; in <i>guestfs</i>(3). </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> This uses <code>&quot;grub-install&quot;</code> from the host. Unfortunately grub is not always compatible with itself, so this only works in rather narrow circumstances. Careful testing with each guest version is advisable. </p>
@@ -2502,19 +2502,19 @@ description: "guestfish – the guest filesystem shell"
 <pre><code> head path
 </code></pre>
 <p> This command returns up to the first 10 lines of a file as a list of strings. </p>
-<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``<font SIZE="-1">PROTOCOL LIMITS&#8217;&#8216;</font> in <i>guestfs</i>(3).  </p>
+<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``PROTOCOL LIMITS&#8217;&#8216; in <i>guestfs</i>(3).  </p>
 <h3>head-n</h3>
 <pre><code> head-n nrlines path
 </code></pre>
 <p> If the parameter <code>&quot;nrlines&quot;</code> is a positive number, this returns the first <code>&quot;nrlines&quot;</code> lines of the file <code>&quot;path&quot;</code>. </p>
 <p> If the parameter <code>&quot;nrlines&quot;</code> is a negative number, this returns lines from the file <code>&quot;path&quot;</code>, excluding the last <code>&quot;nrlines&quot;</code> lines. </p>
 <p> If the parameter <code>&quot;nrlines&quot;</code> is zero, this returns an empty list. </p>
-<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``<font SIZE="-1">PROTOCOL LIMITS&#8217;&#8216;</font> in <i>guestfs</i>(3).  </p>
+<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``PROTOCOL LIMITS&#8217;&#8216; in <i>guestfs</i>(3).  </p>
 <h3>hexdump</h3>
 <pre><code> hexdump path
 </code></pre>
 <p> This runs <code>&quot;hexdump -C&quot;</code> on the given <code>&quot;path&quot;</code>. The result is the human-readable, canonical hex dump of the file. </p>
-<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``<font SIZE="-1">PROTOCOL LIMITS&#8217;&#8216;</font> in <i>guestfs</i>(3).  </p>
+<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``PROTOCOL LIMITS&#8217;&#8216; in <i>guestfs</i>(3).  </p>
 <h3>hivex-close</h3>
 <pre><code> hivex-close
 </code></pre>
@@ -2587,7 +2587,7 @@ description: "guestfish – the guest filesystem shell"
 </code></pre>
 <p> Open the Windows Registry hive file named <i>filename</i>. If there was any previous hivex handle associated with this guestfs session, then it is closed. </p>
 <p> This is a wrapper around the <i><a href="/docs/linux/man/3-hivex/">hivex</a></i>(3) call of the same name. </p>
-<p> This command has one or more optional arguments. See ``<font SIZE="-1">OPTIONAL ARGUMENTS&#8217;&#8216;</font>. </p>
+<p> This command has one or more optional arguments. See ``OPTIONAL ARGUMENTS&#8217;&#8216;. </p>
 <p> This command depends on the feature <code>&quot;hivex&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>hivex-root</h3>
 <pre><code> hivex-root
@@ -2610,7 +2610,7 @@ description: "guestfish – the guest filesystem shell"
 <h3>hivex-value-utf8</h3>
 <pre><code> hivex-value-utf8 valueh
 </code></pre>
-<p> This calls ``hivex-value-value&#8217;&#8216; (which returns the data field from a hivex value tuple). It then assumes that the field is a <font SIZE="-1">UTF-16LE</font> string and converts the result to <font SIZE="-1">UTF-8 </font>(or if this is not possible, it returns an error). </p>
+<p> This calls ``hivex-value-value&#8217;&#8216; (which returns the data field from a hivex value tuple). It then assumes that the field is a UTF-16LE string and converts the result to UTF-8 (or if this is not possible, it returns an error). </p>
 <p> This is useful for reading strings out of the Windows registry. However it is not foolproof because the registry is not strongly-typed and fields can contain arbitrary or unexpected data. </p>
 <p> This command depends on the feature <code>&quot;hivex&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>hivex-value-value</h3>
@@ -2628,7 +2628,7 @@ description: "guestfish – the guest filesystem shell"
 <pre><code> initrd-cat /boot/initrd-&lt;version&gt;.img init
 </code></pre>
 <p> See also ``initrd-list&#8217;&#8216;. </p>
-<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``<font SIZE="-1">PROTOCOL LIMITS&#8217;&#8216;</font> in <i>guestfs</i>(3).  </p>
+<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``PROTOCOL LIMITS&#8217;&#8216; in <i>guestfs</i>(3).  </p>
 <h3>initrd-list</h3>
 <pre><code> initrd-list path
 </code></pre>
@@ -2640,7 +2640,7 @@ description: "guestfish – the guest filesystem shell"
 </code></pre>
 <p> Watch <code>&quot;path&quot;</code> for the events listed in <code>&quot;mask&quot;</code>. </p>
 <p> Note that if <code>&quot;path&quot;</code> is a directory then events within that directory are watched, but this does <i>not</i> happen recursively (in subdirectories). </p>
-<p> Note for non-C or non-Linux callers: the inotify events are defined by the Linux kernel <font SIZE="-1">ABI</font> and are listed in <i>/usr/include/sys/inotify.h</i>. </p>
+<p> Note for non-C or non-Linux callers: the inotify events are defined by the Linux kernel ABI and are listed in <i>/usr/include/sys/inotify.h</i>. </p>
 <p> This command depends on the feature <code>&quot;inotify&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>inotify-close</h3>
 <pre><code> inotify-close
@@ -2679,7 +2679,7 @@ description: "guestfish – the guest filesystem shell"
 </code></pre>
 <p> This returns the architecture of the inspected operating system. The possible return values are listed under ``file-architecture&#8217;&#8216;. </p>
 <p> If the architecture could not be determined, then the string <code>&quot;unknown&quot;</code> is returned. </p>
-<p> Please read ``<font SIZE="-1">INSPECTION&#8217;&#8216;</font> in <i>guestfs</i>(3) for more details.  </p>
+<p> Please read ``INSPECTION&#8217;&#8216; in <i>guestfs</i>(3) for more details.  </p>
 <h3>inspect-get-distro</h3>
 <pre><code> inspect-get-distro root
 </code></pre>
@@ -2690,7 +2690,7 @@ description: "guestfish – the guest filesystem shell"
 <dd> <p> Alpine Linux. </p>
  </dd>
 <dt>&quot;altlinux&quot;</dt>
-<dd> <p> <font SIZE="-1">ALT</font> Linux. </p>
+<dd> <p> ALT Linux. </p>
  </dd>
 <dt>&quot;archlinux&quot;</dt>
 <dd> <p> Arch Linux. </p>
@@ -2753,7 +2753,7 @@ description: "guestfish – the guest filesystem shell"
 <dd> <p> Pardus. </p>
  </dd>
 <dt>&quot;pldlinux&quot;</dt>
-<dd> <p> <font SIZE="-1">PLD</font> Linux. </p>
+<dd> <p> PLD Linux. </p>
  </dd>
 <dt>&quot;redhat-based&quot;</dt>
 <dd> <p> Some Red Hat-derived distro. </p>
@@ -2783,29 +2783,29 @@ description: "guestfish – the guest filesystem shell"
 <dd> <p> The distro could not be determined. </p>
  </dd>
 <dt>&quot;windows&quot;</dt>
-<dd> <p> Windows does not have distributions. This string is returned if the <font SIZE="-1">OS</font> type is Windows. </p>
+<dd> <p> Windows does not have distributions. This string is returned if the OS type is Windows. </p>
  </dd></dl>
 <p> Future versions of libguestfs may return other strings here. The caller should be prepared to handle any string. </p>
-<p> Please read ``<font SIZE="-1">INSPECTION&#8217;&#8216;</font> in <i>guestfs</i>(3) for more details.  </p>
+<p> Please read ``INSPECTION&#8217;&#8216; in <i>guestfs</i>(3) for more details.  </p>
 <h3>inspect-get-drive-mappings</h3>
 <pre><code> inspect-get-drive-mappings root
 </code></pre>
-<p> This call is useful for Windows which uses a primitive system of assigning drive letters (like <i>C:\</i>) to partitions. This inspection <font SIZE="-1">API</font> examines the Windows Registry to find out how disks/partitions are mapped to drive letters, and returns a hash table as in the example below: </p>
+<p> This call is useful for Windows which uses a primitive system of assigning drive letters (like <i>C:\</i>) to partitions. This inspection API examines the Windows Registry to find out how disks/partitions are mapped to drive letters, and returns a hash table as in the example below: </p>
 <pre><code> C =&gt; /dev/vda2
  E =&gt; /dev/vdb1
  F =&gt; /dev/vdc1
 </code></pre>
 <p> Note that keys are drive letters. For Windows, the key is case insensitive and just contains the drive letter, without the customary colon separator character. </p>
-<p> In future we may support other operating systems that also used drive letters, but the keys for those might not be case insensitive and might be longer than 1 character. For example in <font SIZE="-1">OS-9,</font> hard drives were named <code>&quot;h0&quot;</code>, <code>&quot;h1&quot;</code> etc. </p>
+<p> In future we may support other operating systems that also used drive letters, but the keys for those might not be case insensitive and might be longer than 1 character. For example in OS-9, hard drives were named <code>&quot;h0&quot;</code>, <code>&quot;h1&quot;</code> etc. </p>
 <p> For Windows guests, currently only hard drive mappings are returned. Removable disks (eg. DVD-ROMs) are ignored. </p>
 <p> For guests that do not use drive mappings, or if the drive mappings could not be determined, this returns an empty hash table. </p>
-<p> Please read ``<font SIZE="-1">INSPECTION&#8217;&#8216;</font> in <i>guestfs</i>(3) for more details. See also ``inspect-get-mountpoints&#8217;&#8216;, ``inspect-get-filesystems&#8217;&#8216;.  </p>
+<p> Please read ``INSPECTION&#8217;&#8216; in <i>guestfs</i>(3) for more details. See also ``inspect-get-mountpoints&#8217;&#8216;, ``inspect-get-filesystems&#8217;&#8216;.  </p>
 <h3>inspect-get-filesystems</h3>
 <pre><code> inspect-get-filesystems root
 </code></pre>
 <p> This returns a list of all the filesystems that we think are associated with this operating system. This includes the root filesystem, other ordinary filesystems, and non-mounted devices like swap partitions. </p>
 <p> In the case of a multi-boot virtual machine, it is possible for a filesystem to be shared between operating systems. </p>
-<p> Please read ``<font SIZE="-1">INSPECTION&#8217;&#8216;</font> in <i>guestfs</i>(3) for more details. See also ``inspect-get-mountpoints&#8217;&#8216;.  </p>
+<p> Please read ``INSPECTION&#8217;&#8216; in <i>guestfs</i>(3) for more details. See also ``inspect-get-mountpoints&#8217;&#8216;.  </p>
 <h3>inspect-get-format</h3>
 <pre><code> inspect-get-format root
 </code></pre>
@@ -2816,23 +2816,23 @@ description: "guestfish – the guest filesystem shell"
 <dd> <p> This is an installed operating system. </p>
  </dd>
 <dt>&quot;installer&quot;</dt>
-<dd> <p> The disk image being inspected is not an installed operating system, but a <i>bootable</i> install disk, live <font SIZE="-1">CD,</font> or similar. </p>
+<dd> <p> The disk image being inspected is not an installed operating system, but a <i>bootable</i> install disk, live CD, or similar. </p>
  </dd>
 <dt>&quot;unknown&quot;</dt>
 <dd> <p> The format of this disk image is not known. </p>
  </dd></dl>
 <p> Future versions of libguestfs may return other strings here. The caller should be prepared to handle any string. </p>
-<p> Please read ``<font SIZE="-1">INSPECTION&#8217;&#8216;</font> in <i>guestfs</i>(3) for more details.  </p>
+<p> Please read ``INSPECTION&#8217;&#8216; in <i>guestfs</i>(3) for more details.  </p>
 <h3>inspect-get-hostname</h3>
 <pre><code> inspect-get-hostname root
 </code></pre>
 <p> This function returns the hostname of the operating system as found by inspection of the guest&#8217;s configuration files. </p>
 <p> If the hostname could not be determined, then the string <code>&quot;unknown&quot;</code> is returned. </p>
-<p> Please read ``<font SIZE="-1">INSPECTION&#8217;&#8216;</font> in <i>guestfs</i>(3) for more details.  </p>
+<p> Please read ``INSPECTION&#8217;&#8216; in <i>guestfs</i>(3) for more details.  </p>
 <h3>inspect-get-icon</h3>
 <pre><code> inspect-get-icon root [favicon:true|false] [highquality:true|false]
 </code></pre>
-<p> This function returns an icon corresponding to the inspected operating system. The icon is returned as a buffer containing a <font SIZE="-1">PNG</font> image (re-encoded to <font SIZE="-1">PNG</font> if necessary). </p>
+<p> This function returns an icon corresponding to the inspected operating system. The icon is returned as a buffer containing a PNG image (re-encoded to PNG if necessary). </p>
 <p> If it was not possible to get an icon this function returns a zero-length (non-NULL) buffer. <i>Callers must check for this case</i>. </p>
 <p> Libguestfs will start by looking for a file called <i>/etc/favicon.png</i> or <i>C:\etc\favicon.png</i> and if it has the correct format, the contents of this file will be returned. You can disable favicons by passing the optional <code>&quot;favicon&quot;</code> boolean as false (default is true). </p>
 <p> If finding the favicon fails, then we look in other places in the guest for a suitable icon. </p>
@@ -2840,13 +2840,13 @@ description: "guestfish – the guest filesystem shell"
 <p> Notes: </p>
 <dl>
 <dt>&bull;</dt>
-<dd> <p> Unlike most other inspection <font SIZE="-1">API</font> calls, the guest&#8217;s disks must be mounted up before you call this, since it needs to read information from the guest filesystem during the call. </p>
+<dd> <p> Unlike most other inspection API calls, the guest&#8217;s disks must be mounted up before you call this, since it needs to read information from the guest filesystem during the call. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <code>Security:</code> The icon data comes from the untrusted guest, and should be treated with caution. <font SIZE="-1">PNG</font> files have been known to contain exploits. Ensure that libpng (or other relevant libraries) are fully up to date before trying to process or display the icon. </p>
+<dd> <p> <code>Security:</code> The icon data comes from the untrusted guest, and should be treated with caution. PNG files have been known to contain exploits. Ensure that libpng (or other relevant libraries) are fully up to date before trying to process or display the icon. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> The <font SIZE="-1">PNG</font> image returned can be any size. It might not be square. Libguestfs tries to return the largest, highest quality icon available. The application must scale the icon to the required size. </p>
+<dd> <p> The PNG image returned can be any size. It might not be square. Libguestfs tries to return the largest, highest quality icon available. The application must scale the icon to the required size. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Extracting icons from Windows guests requires the external <code>&quot;wrestool&quot;</code> program from the <code>&quot;icoutils&quot;</code> package, and several programs (<code>&quot;bmptopnm&quot;</code>, <code>&quot;pnmtopng&quot;</code>, <code>&quot;pamcut&quot;</code>) from the <code>&quot;netpbm&quot;</code> package. These must be installed separately. </p>
@@ -2854,20 +2854,20 @@ description: "guestfish – the guest filesystem shell"
 <dt>&bull;</dt>
 <dd> <p> Operating system icons are usually trademarks. Seek legal advice before using trademarks in applications. </p>
  </dd></dl>
-<p> This command has one or more optional arguments. See ``<font SIZE="-1">OPTIONAL ARGUMENTS&#8217;&#8216;</font>.  </p>
+<p> This command has one or more optional arguments. See ``OPTIONAL ARGUMENTS&#8217;&#8216;.  </p>
 <h3>inspect-get-major-version</h3>
 <pre><code> inspect-get-major-version root
 </code></pre>
 <p> This returns the major version number of the inspected operating system. </p>
-<p> Windows uses a consistent versioning scheme which is <i>not</i> reflected in the popular public names used by the operating system. Notably the operating system known as ``Windows 7&#8217;&#8216; is really version 6.1 (ie. major = 6, minor = 1). You can find out the real versions corresponding to releases of Windows by consulting Wikipedia or <font SIZE="-1">MSDN.</font> </p>
+<p> Windows uses a consistent versioning scheme which is <i>not</i> reflected in the popular public names used by the operating system. Notably the operating system known as ``Windows 7&#8217;&#8216; is really version 6.1 (ie. major = 6, minor = 1). You can find out the real versions corresponding to releases of Windows by consulting Wikipedia or MSDN. </p>
 <p> If the version could not be determined, then <code>0</code> is returned. </p>
-<p> Please read ``<font SIZE="-1">INSPECTION&#8217;&#8216;</font> in <i>guestfs</i>(3) for more details.  </p>
+<p> Please read ``INSPECTION&#8217;&#8216; in <i>guestfs</i>(3) for more details.  </p>
 <h3>inspect-get-minor-version</h3>
 <pre><code> inspect-get-minor-version root
 </code></pre>
 <p> This returns the minor version number of the inspected operating system. </p>
 <p> If the version could not be determined, then <code>0</code> is returned. </p>
-<p> Please read ``<font SIZE="-1">INSPECTION&#8217;&#8216;</font> in <i>guestfs</i>(3) for more details. See also ``inspect-get-major-version&#8217;&#8216;.  </p>
+<p> Please read ``INSPECTION&#8217;&#8216; in <i>guestfs</i>(3) for more details. See also ``inspect-get-major-version&#8217;&#8216;.  </p>
 <h3>inspect-get-mountpoints</h3>
 <pre><code> inspect-get-mountpoints root
 </code></pre>
@@ -2875,27 +2875,27 @@ description: "guestfish – the guest filesystem shell"
 <p> Each element in the returned hashtable has a key which is the path of the mountpoint (eg. <i>/boot</i>) and a value which is the filesystem that would be mounted there (eg. <i>/dev/sda1</i>). </p>
 <p> Non-mounted devices such as swap devices are <i>not</i> returned in this list. </p>
 <p> For operating systems like Windows which still use drive letters, this call will only return an entry for the first drive ``mounted on&#8217;&#8216; <i>/</i>. For information about the mapping of drive letters to partitions, see ``inspect-get-drive-mappings&#8217;&#8216;. </p>
-<p> Please read ``<font SIZE="-1">INSPECTION&#8217;&#8216;</font> in <i>guestfs</i>(3) for more details. See also ``inspect-get-filesystems&#8217;&#8216;.  </p>
+<p> Please read ``INSPECTION&#8217;&#8216; in <i>guestfs</i>(3) for more details. See also ``inspect-get-filesystems&#8217;&#8216;.  </p>
 <h3>inspect-get-package-format</h3>
 <pre><code> inspect-get-package-format root
 </code></pre>
 <p> This function and ``inspect-get-package-management&#8217;&#8216; return the package format and package management tool used by the inspected operating system. For example for Fedora these functions would return <code>&quot;rpm&quot;</code> (package format), and <code>&quot;yum&quot;</code> or <code>&quot;dnf&quot;</code> (package management). </p>
 <p> This returns the string <code>&quot;unknown&quot;</code> if we could not determine the package format <i>or</i> if the operating system does not have a real packaging system (eg. Windows). </p>
 <p> Possible strings include: <code>&quot;rpm&quot;</code>, <code>&quot;deb&quot;</code>, <code>&quot;ebuild&quot;</code>, <code>&quot;pisi&quot;</code>, <code>&quot;pacman&quot;</code>, <code>&quot;pkgsrc&quot;</code>, <code>&quot;apk&quot;</code>. Future versions of libguestfs may return other strings. </p>
-<p> Please read ``<font SIZE="-1">INSPECTION&#8217;&#8216;</font> in <i>guestfs</i>(3) for more details.  </p>
+<p> Please read ``INSPECTION&#8217;&#8216; in <i>guestfs</i>(3) for more details.  </p>
 <h3>inspect-get-package-management</h3>
 <pre><code> inspect-get-package-management root
 </code></pre>
 <p> ``inspect-get-package-format&#8217;&#8216; and this function return the package format and package management tool used by the inspected operating system. For example for Fedora these functions would return <code>&quot;rpm&quot;</code> (package format), and <code>&quot;yum&quot;</code> or <code>&quot;dnf&quot;</code> (package management). </p>
 <p> This returns the string <code>&quot;unknown&quot;</code> if we could not determine the package management tool <i>or</i> if the operating system does not have a real packaging system (eg. Windows). </p>
 <p> Possible strings include: <code>&quot;yum&quot;</code>, <code>&quot;dnf&quot;</code>, <code>&quot;up2date&quot;</code>, <code>&quot;apt&quot;</code> (for all Debian derivatives), <code>&quot;portage&quot;</code>, <code>&quot;pisi&quot;</code>, <code>&quot;pacman&quot;</code>, <code>&quot;urpmi&quot;</code>, <code>&quot;zypper&quot;</code>, <code>&quot;apk&quot;</code>. Future versions of libguestfs may return other strings. </p>
-<p> Please read ``<font SIZE="-1">INSPECTION&#8217;&#8216;</font> in <i>guestfs</i>(3) for more details.  </p>
+<p> Please read ``INSPECTION&#8217;&#8216; in <i>guestfs</i>(3) for more details.  </p>
 <h3>inspect-get-product-name</h3>
 <pre><code> inspect-get-product-name root
 </code></pre>
 <p> This returns the product name of the inspected operating system. The product name is generally some freeform string which can be displayed to the user, but should not be parsed by programs. </p>
 <p> If the product name could not be determined, then the string <code>&quot;unknown&quot;</code> is returned. </p>
-<p> Please read ``<font SIZE="-1">INSPECTION&#8217;&#8216;</font> in <i>guestfs</i>(3) for more details.  </p>
+<p> Please read ``INSPECTION&#8217;&#8216; in <i>guestfs</i>(3) for more details.  </p>
 <h3>inspect-get-product-variant</h3>
 <pre><code> inspect-get-product-variant root
 </code></pre>
@@ -2903,13 +2903,13 @@ description: "guestfish – the guest filesystem shell"
 <p> For Windows guests, this returns the contents of the Registry key <code>&quot;HKLM\Software\Microsoft\Windows NT\CurrentVersion&quot;</code> <code>&quot;InstallationType&quot;</code> which is usually a string such as <code>&quot;Client&quot;</code> or <code>&quot;Server&quot;</code> (other values are possible). This can be used to distinguish consumer and enterprise versions of Windows that have the same version number (for example, Windows 7 and Windows 2008 Server are both version 6.1, but the former is <code>&quot;Client&quot;</code> and the latter is <code>&quot;Server&quot;</code>). </p>
 <p> For enterprise Linux guests, in future we intend this to return the product variant such as <code>&quot;Desktop&quot;</code>, <code>&quot;Server&quot;</code> and so on. But this is not implemented at present. </p>
 <p> If the product variant could not be determined, then the string <code>&quot;unknown&quot;</code> is returned. </p>
-<p> Please read ``<font SIZE="-1">INSPECTION&#8217;&#8216;</font> in <i>guestfs</i>(3) for more details. See also ``inspect-get-product-name&#8217;&#8216;, ``inspect-get-major-version&#8217;&#8216;.  </p>
+<p> Please read ``INSPECTION&#8217;&#8216; in <i>guestfs</i>(3) for more details. See also ``inspect-get-product-name&#8217;&#8216;, ``inspect-get-major-version&#8217;&#8216;.  </p>
 <h3>inspect-get-roots</h3>
 <pre><code> inspect-get-roots
 </code></pre>
 <p> This function is a convenient way to get the list of root devices, as returned from a previous call to ``inspect-os&#8217;&#8216;, but without redoing the whole inspection process. </p>
 <p> This returns an empty list if either no root devices were found or the caller has not called ``inspect-os&#8217;&#8216;. </p>
-<p> Please read ``<font SIZE="-1">INSPECTION&#8217;&#8216;</font> in <i>guestfs</i>(3) for more details.  </p>
+<p> Please read ``INSPECTION&#8217;&#8216; in <i>guestfs</i>(3) for more details.  </p>
 <h3>inspect-get-type</h3>
 <pre><code> inspect-get-type root
 </code></pre>
@@ -2937,45 +2937,45 @@ description: "guestfish – the guest filesystem shell"
 <dd> <p> MS-DOS, FreeDOS and others. </p>
  </dd>
 <dt>&quot;minix&quot;</dt>
-<dd> <p> <font SIZE="-1">MINIX.</font> </p>
+<dd> <p> MINIX. </p>
  </dd>
 <dt>&quot;unknown&quot;</dt>
 <dd> <p> The operating system type could not be determined. </p>
  </dd></dl>
 <p> Future versions of libguestfs may return other strings here. The caller should be prepared to handle any string. </p>
-<p> Please read ``<font SIZE="-1">INSPECTION&#8217;&#8216;</font> in <i>guestfs</i>(3) for more details.  </p>
+<p> Please read ``INSPECTION&#8217;&#8216; in <i>guestfs</i>(3) for more details.  </p>
 <h3>inspect-get-windows-current-control-set</h3>
 <pre><code> inspect-get-windows-current-control-set root
 </code></pre>
 <p> This returns the Windows CurrentControlSet of the inspected guest. The CurrentControlSet is a registry key name such as <code>&quot;ControlSet001&quot;</code>. </p>
 <p> This call assumes that the guest is Windows and that the Registry could be examined by inspection. If this is not the case then an error is returned. </p>
-<p> Please read ``<font SIZE="-1">INSPECTION&#8217;&#8216;</font> in <i>guestfs</i>(3) for more details.  </p>
+<p> Please read ``INSPECTION&#8217;&#8216; in <i>guestfs</i>(3) for more details.  </p>
 <h3>inspect-get-windows-systemroot</h3>
 <pre><code> inspect-get-windows-systemroot root
 </code></pre>
 <p> This returns the Windows systemroot of the inspected guest. The systemroot is a directory path such as <i>/WINDOWS</i>. </p>
 <p> This call assumes that the guest is Windows and that the systemroot could be determined by inspection. If this is not the case then an error is returned. </p>
-<p> Please read ``<font SIZE="-1">INSPECTION&#8217;&#8216;</font> in <i>guestfs</i>(3) for more details.  </p>
+<p> Please read ``INSPECTION&#8217;&#8216; in <i>guestfs</i>(3) for more details.  </p>
 <h3>inspect-is-live</h3>
 <pre><code> inspect-is-live root
 </code></pre>
 <p> If ``inspect-get-format&#8217;&#8216; returns <code>&quot;installer&quot;</code> (this is an install disk), then this returns true if a live image was detected on the disk. </p>
-<p> Please read ``<font SIZE="-1">INSPECTION&#8217;&#8216;</font> in <i>guestfs</i>(3) for more details.  </p>
+<p> Please read ``INSPECTION&#8217;&#8216; in <i>guestfs</i>(3) for more details.  </p>
 <h3>inspect-is-multipart</h3>
 <pre><code> inspect-is-multipart root
 </code></pre>
 <p> If ``inspect-get-format&#8217;&#8216; returns <code>&quot;installer&quot;</code> (this is an install disk), then this returns true if the disk is part of a set. </p>
-<p> Please read ``<font SIZE="-1">INSPECTION&#8217;&#8216;</font> in <i>guestfs</i>(3) for more details.  </p>
+<p> Please read ``INSPECTION&#8217;&#8216; in <i>guestfs</i>(3) for more details.  </p>
 <h3>inspect-is-netinst</h3>
 <pre><code> inspect-is-netinst root
 </code></pre>
-<p> If ``inspect-get-format&#8217;&#8216; returns <code>&quot;installer&quot;</code> (this is an install disk), then this returns true if the disk is a network installer, ie. not a self-contained install <font SIZE="-1">CD</font> but one which is likely to require network access to complete the install. </p>
-<p> Please read ``<font SIZE="-1">INSPECTION&#8217;&#8216;</font> in <i>guestfs</i>(3) for more details.  </p>
+<p> If ``inspect-get-format&#8217;&#8216; returns <code>&quot;installer&quot;</code> (this is an install disk), then this returns true if the disk is a network installer, ie. not a self-contained install CD but one which is likely to require network access to complete the install. </p>
+<p> Please read ``INSPECTION&#8217;&#8216; in <i>guestfs</i>(3) for more details.  </p>
 <h3>inspect-list-applications</h3>
 <pre><code> inspect-list-applications root
 </code></pre>
 <p> Return the list of applications installed in the operating system. </p>
-<p> <i>Note:</i> This call works differently from other parts of the inspection <font SIZE="-1">API. </font> You have to call ``inspect-os&#8217;&#8216;, then ``inspect-get-mountpoints&#8217;&#8216;, then mount up the disks, before calling this. Listing applications is a significantly more difficult operation which requires access to the full filesystem. Also note that unlike the other ``inspect-get-*&#8216;&#8216; calls which are just returning data cached in the libguestfs handle, this call actually reads parts of the mounted filesystems during the call. </p>
+<p> <i>Note:</i> This call works differently from other parts of the inspection API.  You have to call ``inspect-os&#8217;&#8216;, then ``inspect-get-mountpoints&#8217;&#8216;, then mount up the disks, before calling this. Listing applications is a significantly more difficult operation which requires access to the full filesystem. Also note that unlike the other ``inspect-get-*&#8216;&#8216; calls which are just returning data cached in the libguestfs handle, this call actually reads parts of the mounted filesystems during the call. </p>
 <p> This returns an empty list if the inspection code was not able to determine the list of applications. </p>
 <p> The application structure contains the following fields: </p>
 <dl>
@@ -3006,7 +3006,7 @@ description: "guestfish – the guest filesystem shell"
 <dd> <p> The name of the publisher of the application, for package managers that use this. If unavailable this is returned as an empty string <code>&quot;&quot;</code>. </p>
  </dd>
 <dt>&quot;app_url&quot;</dt>
-<dd> <p> The <font SIZE="-1">URL </font>(eg. upstream <font SIZE="-1">URL</font>) of the application. If unavailable this is returned as an empty string <code>&quot;&quot;</code>. </p>
+<dd> <p> The URL (eg. upstream URL) of the application. If unavailable this is returned as an empty string <code>&quot;&quot;</code>. </p>
  </dd>
 <dt>&quot;app_source_package&quot;</dt>
 <dd> <p> For packaging systems which support this, the name of the source package. If unavailable this is returned as an empty string <code>&quot;&quot;</code>. </p>
@@ -3017,14 +3017,14 @@ description: "guestfish – the guest filesystem shell"
 <dt>&quot;app_description&quot;</dt>
 <dd> <p> A longer description of the application or package. If unavailable this is returned as an empty string <code>&quot;&quot;</code>. </p>
  </dd></dl>
-<p> Please read ``<font SIZE="-1">INSPECTION&#8217;&#8216;</font> in <i>guestfs</i>(3) for more details. </p>
+<p> Please read ``INSPECTION&#8217;&#8216; in <i>guestfs</i>(3) for more details. </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``inspect-list-applications2&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
 <h3>inspect-list-applications2</h3>
 <pre><code> inspect-list-applications2 root
 </code></pre>
 <p> Return the list of applications installed in the operating system. </p>
-<p> <i>Note:</i> This call works differently from other parts of the inspection <font SIZE="-1">API. </font> You have to call ``inspect-os&#8217;&#8216;, then ``inspect-get-mountpoints&#8217;&#8216;, then mount up the disks, before calling this. Listing applications is a significantly more difficult operation which requires access to the full filesystem. Also note that unlike the other ``inspect-get-*&#8216;&#8216; calls which are just returning data cached in the libguestfs handle, this call actually reads parts of the mounted filesystems during the call. </p>
+<p> <i>Note:</i> This call works differently from other parts of the inspection API.  You have to call ``inspect-os&#8217;&#8216;, then ``inspect-get-mountpoints&#8217;&#8216;, then mount up the disks, before calling this. Listing applications is a significantly more difficult operation which requires access to the full filesystem. Also note that unlike the other ``inspect-get-*&#8216;&#8216; calls which are just returning data cached in the libguestfs handle, this call actually reads parts of the mounted filesystems during the call. </p>
 <p> This returns an empty list if the inspection code was not able to determine the list of applications. </p>
 <p> The application structure contains the following fields: </p>
 <dl>
@@ -3058,7 +3058,7 @@ description: "guestfish – the guest filesystem shell"
 <dd> <p> The name of the publisher of the application, for package managers that use this. If unavailable this is returned as an empty string <code>&quot;&quot;</code>. </p>
  </dd>
 <dt>&quot;app2_url&quot;</dt>
-<dd> <p> The <font SIZE="-1">URL </font>(eg. upstream <font SIZE="-1">URL</font>) of the application. If unavailable this is returned as an empty string <code>&quot;&quot;</code>. </p>
+<dd> <p> The URL (eg. upstream URL) of the application. If unavailable this is returned as an empty string <code>&quot;&quot;</code>. </p>
  </dd>
 <dt>&quot;app2_source_package&quot;</dt>
 <dd> <p> For packaging systems which support this, the name of the source package. If unavailable this is returned as an empty string <code>&quot;&quot;</code>. </p>
@@ -3069,7 +3069,7 @@ description: "guestfish – the guest filesystem shell"
 <dt>&quot;app2_description&quot;</dt>
 <dd> <p> A longer description of the application or package. If unavailable this is returned as an empty string <code>&quot;&quot;</code>. </p>
  </dd></dl>
-<p> Please read ``<font SIZE="-1">INSPECTION&#8217;&#8216;</font> in <i>guestfs</i>(3) for more details.  </p>
+<p> Please read ``INSPECTION&#8217;&#8216; in <i>guestfs</i>(3) for more details.  </p>
 <h3>inspect-os</h3>
 <pre><code> inspect-os
 </code></pre>
@@ -3079,7 +3079,7 @@ description: "guestfish – the guest filesystem shell"
 <p> You can pass the root string(s) returned to other ``inspect-get-*&#8216;&#8216; functions in order to query further information about each operating system, such as the name and version. </p>
 <p> This function uses other libguestfs features such as ``mount-ro&#8217;&#8216; and ``umount-all&#8217;&#8216; in order to mount and unmount filesystems and look at the contents. This should be called with no disks currently mounted. The function may also use Augeas, so any existing Augeas handle will be closed. </p>
 <p> This function cannot decrypt encrypted disks. The caller must do that first (supplying the necessary keys) if the disk is encrypted. </p>
-<p> Please read ``<font SIZE="-1">INSPECTION&#8217;&#8216;</font> in <i>guestfs</i>(3) for more details. </p>
+<p> Please read ``INSPECTION&#8217;&#8216; in <i>guestfs</i>(3) for more details. </p>
 <p> See also ``list-filesystems&#8217;&#8216;.  </p>
 <h3>is-blockdev</h3>
 <h3>is-blockdev-opts</h3>
@@ -3089,7 +3089,7 @@ description: "guestfish – the guest filesystem shell"
 <p> If the optional flag <code>&quot;followsymlinks&quot;</code> is true, then a symlink (or chain of symlinks) that ends with a block device also causes the function to return true. </p>
 <p> This call only looks at files within the guest filesystem. Libguestfs partitions and block devices (eg. <i>/dev/sda</i>) cannot be used as the <code>&quot;path&quot;</code> parameter of this call. </p>
 <p> See also ``stat&#8217;&#8216;. </p>
-<p> This command has one or more optional arguments. See ``<font SIZE="-1">OPTIONAL ARGUMENTS&#8217;&#8216;</font>.  </p>
+<p> This command has one or more optional arguments. See ``OPTIONAL ARGUMENTS&#8217;&#8216;.  </p>
 <h3>is-chardev</h3>
 <h3>is-chardev-opts</h3>
 <pre><code> is-chardev path [followsymlinks:true|false]
@@ -3097,7 +3097,7 @@ description: "guestfish – the guest filesystem shell"
 <p> This returns <code>&quot;true&quot;</code> if and only if there is a character device with the given <code>&quot;path&quot;</code> name. </p>
 <p> If the optional flag <code>&quot;followsymlinks&quot;</code> is true, then a symlink (or chain of symlinks) that ends with a chardev also causes the function to return true. </p>
 <p> See also ``stat&#8217;&#8216;. </p>
-<p> This command has one or more optional arguments. See ``<font SIZE="-1">OPTIONAL ARGUMENTS&#8217;&#8216;</font>.  </p>
+<p> This command has one or more optional arguments. See ``OPTIONAL ARGUMENTS&#8217;&#8216;.  </p>
 <h3>is-config</h3>
 <pre><code> is-config
 </code></pre>
@@ -3110,15 +3110,15 @@ description: "guestfish – the guest filesystem shell"
 <p> This returns <code>&quot;true&quot;</code> if and only if there is a directory with the given <code>&quot;path&quot;</code> name. Note that it returns false for other objects like files. </p>
 <p> If the optional flag <code>&quot;followsymlinks&quot;</code> is true, then a symlink (or chain of symlinks) that ends with a directory also causes the function to return true. </p>
 <p> See also ``stat&#8217;&#8216;. </p>
-<p> This command has one or more optional arguments. See ``<font SIZE="-1">OPTIONAL ARGUMENTS&#8217;&#8216;</font>.  </p>
+<p> This command has one or more optional arguments. See ``OPTIONAL ARGUMENTS&#8217;&#8216;.  </p>
 <h3>is-fifo</h3>
 <h3>is-fifo-opts</h3>
 <pre><code> is-fifo path [followsymlinks:true|false]
 </code></pre>
-<p> This returns <code>&quot;true&quot;</code> if and only if there is a <font SIZE="-1">FIFO </font>(named pipe) with the given <code>&quot;path&quot;</code> name. </p>
-<p> If the optional flag <code>&quot;followsymlinks&quot;</code> is true, then a symlink (or chain of symlinks) that ends with a <font SIZE="-1">FIFO</font> also causes the function to return true. </p>
+<p> This returns <code>&quot;true&quot;</code> if and only if there is a FIFO (named pipe) with the given <code>&quot;path&quot;</code> name. </p>
+<p> If the optional flag <code>&quot;followsymlinks&quot;</code> is true, then a symlink (or chain of symlinks) that ends with a FIFO also causes the function to return true. </p>
 <p> See also ``stat&#8217;&#8216;. </p>
-<p> This command has one or more optional arguments. See ``<font SIZE="-1">OPTIONAL ARGUMENTS&#8217;&#8216;</font>.  </p>
+<p> This command has one or more optional arguments. See ``OPTIONAL ARGUMENTS&#8217;&#8216;.  </p>
 <h3>is-file</h3>
 <h3>is-file-opts</h3>
 <pre><code> is-file path [followsymlinks:true|false]
@@ -3126,7 +3126,7 @@ description: "guestfish – the guest filesystem shell"
 <p> This returns <code>&quot;true&quot;</code> if and only if there is a regular file with the given <code>&quot;path&quot;</code> name. Note that it returns false for other objects like directories. </p>
 <p> If the optional flag <code>&quot;followsymlinks&quot;</code> is true, then a symlink (or chain of symlinks) that ends with a file also causes the function to return true. </p>
 <p> See also ``stat&#8217;&#8216;. </p>
-<p> This command has one or more optional arguments. See ``<font SIZE="-1">OPTIONAL ARGUMENTS&#8217;&#8216;</font>.  </p>
+<p> This command has one or more optional arguments. See ``OPTIONAL ARGUMENTS&#8217;&#8216;.  </p>
 <h3>is-lv</h3>
 <pre><code> is-lv device
 </code></pre>
@@ -3138,7 +3138,7 @@ description: "guestfish – the guest filesystem shell"
 <p> This returns <code>&quot;true&quot;</code> if and only if there is a Unix domain socket with the given <code>&quot;path&quot;</code> name. </p>
 <p> If the optional flag <code>&quot;followsymlinks&quot;</code> is true, then a symlink (or chain of symlinks) that ends with a socket also causes the function to return true. </p>
 <p> See also ``stat&#8217;&#8216;. </p>
-<p> This command has one or more optional arguments. See ``<font SIZE="-1">OPTIONAL ARGUMENTS&#8217;&#8216;</font>.  </p>
+<p> This command has one or more optional arguments. See ``OPTIONAL ARGUMENTS&#8217;&#8216;.  </p>
 <h3>is-symlink</h3>
 <pre><code> is-symlink path
 </code></pre>
@@ -3160,12 +3160,12 @@ description: "guestfish – the guest filesystem shell"
 <h3>isoinfo</h3>
 <pre><code> isoinfo isofile
 </code></pre>
-<p> This is the same as ``isoinfo-device&#8217;&#8216; except that it works for an <font SIZE="-1">ISO</font> file located inside some other mounted filesystem. Note that in the common case where you have added an <font SIZE="-1">ISO</font> file as a libguestfs device, you would <i>not</i> call this. Instead you would call ``isoinfo-device&#8217;&#8216;.  </p>
+<p> This is the same as ``isoinfo-device&#8217;&#8216; except that it works for an ISO file located inside some other mounted filesystem. Note that in the common case where you have added an ISO file as a libguestfs device, you would <i>not</i> call this. Instead you would call ``isoinfo-device&#8217;&#8216;.  </p>
 <h3>isoinfo-device</h3>
 <pre><code> isoinfo-device device
 </code></pre>
-<p> <code>&quot;device&quot;</code> is an <font SIZE="-1">ISO</font> device. This returns a struct of information read from the primary volume descriptor (the <font SIZE="-1">ISO</font> equivalent of the superblock) of the device. </p>
-<p> Usually it is more efficient to use the <i><a href="/docs/linux/man/1-isoinfo/">isoinfo</a></i>(1) command with the <i>-d</i> option on the host to analyze <font SIZE="-1">ISO</font> files, instead of going through libguestfs. </p>
+<p> <code>&quot;device&quot;</code> is an ISO device. This returns a struct of information read from the primary volume descriptor (the ISO equivalent of the superblock) of the device. </p>
+<p> Usually it is more efficient to use the <i><a href="/docs/linux/man/1-isoinfo/">isoinfo</a></i>(1) command with the <i>-d</i> option on the host to analyze ISO files, instead of going through libguestfs. </p>
 <p> For information on the primary volume descriptor fields, see <a rel="nofollow" href="http://wiki.osdev.org/ISO_9660#The_Primary_Volume_Descriptor">http://wiki.osdev.org/ISO_9660#The_Primary_Volume_Descriptor</a>  </p>
 <h3>journal-close</h3>
 <pre><code> journal-close
@@ -3222,7 +3222,7 @@ description: "guestfish – the guest filesystem shell"
 <p> This kills the hypervisor. </p>
 <p> Do not call this. See: ``shutdown&#8217;&#8216; instead. </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``shutdown&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
 <h3>launch</h3>
 <h3>run</h3>
 <pre><code> launch
@@ -3244,17 +3244,17 @@ description: "guestfish – the guest filesystem shell"
 <h3>ldmtool-diskgroup-disks</h3>
 <pre><code> ldmtool-diskgroup-disks diskgroup
 </code></pre>
-<p> Return the disks in a Windows dynamic disk group. The <code>&quot;diskgroup&quot;</code> parameter should be the <font SIZE="-1">GUID</font> of a disk group, one element from the list returned by ``ldmtool-scan&#8217;&#8216;. </p>
+<p> Return the disks in a Windows dynamic disk group. The <code>&quot;diskgroup&quot;</code> parameter should be the GUID of a disk group, one element from the list returned by ``ldmtool-scan&#8217;&#8216;. </p>
 <p> This command depends on the feature <code>&quot;ldm&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>ldmtool-diskgroup-name</h3>
 <pre><code> ldmtool-diskgroup-name diskgroup
 </code></pre>
-<p> Return the name of a Windows dynamic disk group. The <code>&quot;diskgroup&quot;</code> parameter should be the <font SIZE="-1">GUID</font> of a disk group, one element from the list returned by ``ldmtool-scan&#8217;&#8216;. </p>
+<p> Return the name of a Windows dynamic disk group. The <code>&quot;diskgroup&quot;</code> parameter should be the GUID of a disk group, one element from the list returned by ``ldmtool-scan&#8217;&#8216;. </p>
 <p> This command depends on the feature <code>&quot;ldm&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>ldmtool-diskgroup-volumes</h3>
 <pre><code> ldmtool-diskgroup-volumes diskgroup
 </code></pre>
-<p> Return the volumes in a Windows dynamic disk group. The <code>&quot;diskgroup&quot;</code> parameter should be the <font SIZE="-1">GUID</font> of a disk group, one element from the list returned by ``ldmtool-scan&#8217;&#8216;. </p>
+<p> Return the volumes in a Windows dynamic disk group. The <code>&quot;diskgroup&quot;</code> parameter should be the GUID of a disk group, one element from the list returned by ``ldmtool-scan&#8217;&#8216;. </p>
 <p> This command depends on the feature <code>&quot;ldm&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>ldmtool-remove-all</h3>
 <pre><code> ldmtool-remove-all
@@ -3276,17 +3276,17 @@ description: "guestfish – the guest filesystem shell"
 <h3>ldmtool-volume-hint</h3>
 <pre><code> ldmtool-volume-hint diskgroup volume
 </code></pre>
-<p> Return the hint field of the volume named <code>&quot;volume&quot;</code> in the disk group with <font SIZE="-1">GUID </font><code>&quot;diskgroup&quot;</code>. This may not be defined, in which case the empty string is returned. The hint field is often, though not always, the name of a Windows drive, eg. <code>&quot;E:&quot;</code>. </p>
+<p> Return the hint field of the volume named <code>&quot;volume&quot;</code> in the disk group with GUID <code>&quot;diskgroup&quot;</code>. This may not be defined, in which case the empty string is returned. The hint field is often, though not always, the name of a Windows drive, eg. <code>&quot;E:&quot;</code>. </p>
 <p> This command depends on the feature <code>&quot;ldm&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>ldmtool-volume-partitions</h3>
 <pre><code> ldmtool-volume-partitions diskgroup volume
 </code></pre>
-<p> Return the list of partitions in the volume named <code>&quot;volume&quot;</code> in the disk group with <font SIZE="-1">GUID </font><code>&quot;diskgroup&quot;</code>. </p>
+<p> Return the list of partitions in the volume named <code>&quot;volume&quot;</code> in the disk group with GUID <code>&quot;diskgroup&quot;</code>. </p>
 <p> This command depends on the feature <code>&quot;ldm&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>ldmtool-volume-type</h3>
 <pre><code> ldmtool-volume-type diskgroup volume
 </code></pre>
-<p> Return the type of the volume named <code>&quot;volume&quot;</code> in the disk group with <font SIZE="-1">GUID </font><code>&quot;diskgroup&quot;</code>. </p>
+<p> Return the type of the volume named <code>&quot;volume&quot;</code> in the disk group with GUID <code>&quot;diskgroup&quot;</code>. </p>
 <p> Possible volume types that can be returned here include: <code>&quot;simple&quot;</code>, <code>&quot;spanned&quot;</code>, <code>&quot;striped&quot;</code>, <code>&quot;mirrored&quot;</code>, <code>&quot;raid5&quot;</code>. Other types may also be returned. </p>
 <p> This command depends on the feature <code>&quot;ldm&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>lgetxattr</h3>
@@ -3365,7 +3365,7 @@ description: "guestfish – the guest filesystem shell"
 <p> List the files in <i>directory</i> in the format of &#8216;ls -laZ&#8217;. </p>
 <p> This command is mostly useful for interactive sessions. It is <i>not</i> intended that you try to parse the output string. </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``lgetxattrs&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
 <h3>ln</h3>
 <pre><code> ln target linkname
 </code></pre>
@@ -3410,7 +3410,7 @@ description: "guestfish – the guest filesystem shell"
 <p> This is the same as ``stat&#8217;&#8216; except that if <code>&quot;path&quot;</code> is a symbolic link, then the link is stat-ed, not the file it refers to. </p>
 <p> This is the same as the <i><a href="/docs/linux/man/2-lstat/">lstat</a></i>(2) system call. </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``lstatns&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
 <h3>lstatlist</h3>
 <pre><code> lstatlist path 'names ...'
 </code></pre>
@@ -3418,7 +3418,7 @@ description: "guestfish – the guest filesystem shell"
 <p> On return you get a list of stat structs, with a one-to-one correspondence to the <code>&quot;names&quot;</code> list. If any name did not exist or could not be lstat&#8217;d, then the <code>&quot;st_ino&quot;</code> field of that structure is set to <code>&quot;-1&quot;</code>. </p>
 <p> This call is intended for programs that want to efficiently list a directory contents without making many round-trips. See also ``lxattrlist&#8217;&#8216; for a similarly efficient call for getting extended attributes. </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``lstatnslist&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
 <h3>lstatns</h3>
 <pre><code> lstatns path
 </code></pre>
@@ -3434,19 +3434,19 @@ description: "guestfish – the guest filesystem shell"
 <h3>luks-add-key</h3>
 <pre><code> luks-add-key device keyslot
 </code></pre>
-<p> This command adds a new key on <font SIZE="-1">LUKS</font> device <code>&quot;device&quot;</code>. <code>&quot;key&quot;</code> is any existing key, and is used to access the device. <code>&quot;newkey&quot;</code> is the new key to add. <code>&quot;keyslot&quot;</code> is the key slot that will be replaced. </p>
+<p> This command adds a new key on LUKS device <code>&quot;device&quot;</code>. <code>&quot;key&quot;</code> is any existing key, and is used to access the device. <code>&quot;newkey&quot;</code> is the new key to add. <code>&quot;keyslot&quot;</code> is the key slot that will be replaced. </p>
 <p> Note that if <code>&quot;keyslot&quot;</code> already contains a key, then this command will fail. You have to use ``luks-kill-slot&#8217;&#8216; first to remove that key. </p>
 <p> This command has one or more key or passphrase parameters. Guestfish will prompt for these separately. </p>
 <p> This command depends on the feature <code>&quot;luks&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>luks-close</h3>
 <pre><code> luks-close device
 </code></pre>
-<p> This closes a <font SIZE="-1">LUKS</font> device that was created earlier by ``luks-open&#8217;&#8216; or ``luks-open-ro&#8217;&#8216;. The <code>&quot;device&quot;</code> parameter must be the name of the <font SIZE="-1">LUKS</font> mapping device (ie. <i>/dev/mapper/mapname</i>) and <i>not</i> the name of the underlying block device. </p>
+<p> This closes a LUKS device that was created earlier by ``luks-open&#8217;&#8216; or ``luks-open-ro&#8217;&#8216;. The <code>&quot;device&quot;</code> parameter must be the name of the LUKS mapping device (ie. <i>/dev/mapper/mapname</i>) and <i>not</i> the name of the underlying block device. </p>
 <p> This command depends on the feature <code>&quot;luks&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>luks-format</h3>
 <pre><code> luks-format device keyslot
 </code></pre>
-<p> This command erases existing data on <code>&quot;device&quot;</code> and formats the device as a <font SIZE="-1">LUKS</font> encrypted device. <code>&quot;key&quot;</code> is the initial key, which is added to key slot <code>&quot;slot&quot;</code>. (<font SIZE="-1">LUKS</font> supports 8 key slots, numbered 0-7). </p>
+<p> This command erases existing data on <code>&quot;device&quot;</code> and formats the device as a LUKS encrypted device. <code>&quot;key&quot;</code> is the initial key, which is added to key slot <code>&quot;slot&quot;</code>. (LUKS supports 8 key slots, numbered 0-7). </p>
 <p> This command has one or more key or passphrase parameters. Guestfish will prompt for these separately. </p>
 <p> This command depends on the feature <code>&quot;luks&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>luks-format-cipher</h3>
@@ -3458,17 +3458,17 @@ description: "guestfish – the guest filesystem shell"
 <h3>luks-kill-slot</h3>
 <pre><code> luks-kill-slot device keyslot
 </code></pre>
-<p> This command deletes the key in key slot <code>&quot;keyslot&quot;</code> from the encrypted <font SIZE="-1">LUKS</font> device <code>&quot;device&quot;</code>. <code>&quot;key&quot;</code> must be one of the <i>other</i> keys. </p>
+<p> This command deletes the key in key slot <code>&quot;keyslot&quot;</code> from the encrypted LUKS device <code>&quot;device&quot;</code>. <code>&quot;key&quot;</code> must be one of the <i>other</i> keys. </p>
 <p> This command has one or more key or passphrase parameters. Guestfish will prompt for these separately. </p>
 <p> This command depends on the feature <code>&quot;luks&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>luks-open</h3>
 <pre><code> luks-open device mapname
 </code></pre>
-<p> This command opens a block device which has been encrypted according to the Linux Unified Key Setup (<font SIZE="-1">LUKS</font>) standard. </p>
+<p> This command opens a block device which has been encrypted according to the Linux Unified Key Setup (LUKS) standard. </p>
 <p> <code>&quot;device&quot;</code> is the encrypted block device or partition. </p>
-<p> The caller must supply one of the keys associated with the <font SIZE="-1">LUKS</font> block device, in the <code>&quot;key&quot;</code> parameter. </p>
+<p> The caller must supply one of the keys associated with the LUKS block device, in the <code>&quot;key&quot;</code> parameter. </p>
 <p> This creates a new block device called <i>/dev/mapper/mapname</i>. Reads and writes to this block device are decrypted from and encrypted to the underlying <code>&quot;device&quot;</code> respectively. </p>
-<p> If this block device contains <font SIZE="-1">LVM</font> volume groups, then calling ``vgscan&#8217;&#8216; followed by ``vg-activate-all&#8217;&#8216; will make them visible. </p>
+<p> If this block device contains LVM volume groups, then calling ``vgscan&#8217;&#8216; followed by ``vg-activate-all&#8217;&#8216; will make them visible. </p>
 <p> Use ``list-dm-devices&#8217;&#8216; to list all device mapper devices. </p>
 <p> This command has one or more key or passphrase parameters. Guestfish will prompt for these separately. </p>
 <p> This command depends on the feature <code>&quot;luks&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
@@ -3481,12 +3481,12 @@ description: "guestfish – the guest filesystem shell"
 <h3>lvcreate</h3>
 <pre><code> lvcreate logvol volgroup mbytes
 </code></pre>
-<p> This creates an <font SIZE="-1">LVM</font> logical volume called <code>&quot;logvol&quot;</code> on the volume group <code>&quot;volgroup&quot;</code>, with <code>&quot;size&quot;</code> megabytes. </p>
+<p> This creates an LVM logical volume called <code>&quot;logvol&quot;</code> on the volume group <code>&quot;volgroup&quot;</code>, with <code>&quot;size&quot;</code> megabytes. </p>
 <p> This command depends on the feature <code>&quot;lvm2&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>lvcreate-free</h3>
 <pre><code> lvcreate-free logvol volgroup percent
 </code></pre>
-<p> Create an <font SIZE="-1">LVM</font> logical volume called <i>/dev/volgroup/logvol</i>, using approximately <code>&quot;percent&quot;</code> % of the free space remaining in the volume group. Most usefully, when <code>&quot;percent&quot;</code> is <code>100</code> this will create the largest possible <font SIZE="-1">LV.</font> </p>
+<p> Create an LVM logical volume called <i>/dev/volgroup/logvol</i>, using approximately <code>&quot;percent&quot;</code> % of the free space remaining in the volume group. Most usefully, when <code>&quot;percent&quot;</code> is <code>100</code> this will create the largest possible LV. </p>
 <p> This command depends on the feature <code>&quot;lvm2&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>lvm-canonical-lv-name</h3>
 <pre><code> lvm-canonical-lv-name lvname
@@ -3497,27 +3497,27 @@ description: "guestfish – the guest filesystem shell"
 <h3>lvm-clear-filter</h3>
 <pre><code> lvm-clear-filter
 </code></pre>
-<p> This undoes the effect of ``lvm-set-filter&#8217;&#8216;. <font SIZE="-1">LVM</font> will be able to see every block device. </p>
-<p> This command also clears the <font SIZE="-1">LVM</font> cache and performs a volume group scan.  </p>
+<p> This undoes the effect of ``lvm-set-filter&#8217;&#8216;. LVM will be able to see every block device. </p>
+<p> This command also clears the LVM cache and performs a volume group scan.  </p>
 <h3>lvm-remove-all</h3>
 <pre><code> lvm-remove-all
 </code></pre>
-<p> This command removes all <font SIZE="-1">LVM</font> logical volumes, volume groups and physical volumes. </p>
+<p> This command removes all LVM logical volumes, volume groups and physical volumes. </p>
 <p> This command depends on the feature <code>&quot;lvm2&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>lvm-set-filter</h3>
 <pre><code> lvm-set-filter 'devices ...'
 </code></pre>
-<p> This sets the <font SIZE="-1">LVM</font> device filter so that <font SIZE="-1">LVM</font> will only be able to ``see&#8217;&#8216; the block devices in the list <code>&quot;devices&quot;</code>, and will ignore all other attached block devices. </p>
-<p> Where disk image(s) contain duplicate PVs or VGs, this command is useful to get <font SIZE="-1">LVM</font> to ignore the duplicates, otherwise <font SIZE="-1">LVM</font> can get confused. Note also there are two types of duplication possible: either cloned PVs/VGs which have identical UUIDs; or VGs that are not cloned but just happen to have the same name. In normal operation you cannot create this situation, but you can do it outside <font SIZE="-1">LVM,</font> eg. by cloning disk images or by bit twiddling inside the <font SIZE="-1">LVM</font> metadata. </p>
-<p> This command also clears the <font SIZE="-1">LVM</font> cache and performs a volume group scan. </p>
+<p> This sets the LVM device filter so that LVM will only be able to ``see&#8217;&#8216; the block devices in the list <code>&quot;devices&quot;</code>, and will ignore all other attached block devices. </p>
+<p> Where disk image(s) contain duplicate PVs or VGs, this command is useful to get LVM to ignore the duplicates, otherwise LVM can get confused. Note also there are two types of duplication possible: either cloned PVs/VGs which have identical UUIDs; or VGs that are not cloned but just happen to have the same name. In normal operation you cannot create this situation, but you can do it outside LVM, eg. by cloning disk images or by bit twiddling inside the LVM metadata. </p>
+<p> This command also clears the LVM cache and performs a volume group scan. </p>
 <p> You can filter whole block devices or individual partitions. </p>
-<p> You cannot use this if any <font SIZE="-1">VG</font> is currently in use (eg. contains a mounted filesystem), even if you are not filtering out that <font SIZE="-1">VG.</font> </p>
+<p> You cannot use this if any VG is currently in use (eg. contains a mounted filesystem), even if you are not filtering out that VG. </p>
 <p> This command depends on the feature <code>&quot;lvm2&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>lvremove</h3>
 <pre><code> lvremove device
 </code></pre>
-<p> Remove an <font SIZE="-1">LVM</font> logical volume <code>&quot;device&quot;</code>, where <code>&quot;device&quot;</code> is the path to the <font SIZE="-1">LV,</font> such as <i>/dev/VG/LV</i>. </p>
-<p> You can also remove all LVs in a volume group by specifying the <font SIZE="-1">VG</font> name, <i>/dev/VG</i>. </p>
+<p> Remove an LVM logical volume <code>&quot;device&quot;</code>, where <code>&quot;device&quot;</code> is the path to the LV, such as <i>/dev/VG/LV</i>. </p>
+<p> You can also remove all LVs in a volume group by specifying the VG name, <i>/dev/VG</i>. </p>
 <p> This command depends on the feature <code>&quot;lvm2&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>lvrename</h3>
 <pre><code> lvrename logvol newlogvol
@@ -3526,7 +3526,7 @@ description: "guestfish – the guest filesystem shell"
 <h3>lvresize</h3>
 <pre><code> lvresize device mbytes
 </code></pre>
-<p> This resizes (expands or shrinks) an existing <font SIZE="-1">LVM</font> logical volume to <code>&quot;mbytes&quot;</code>. When reducing, data in the reduced part is lost. </p>
+<p> This resizes (expands or shrinks) an existing LVM logical volume to <code>&quot;mbytes&quot;</code>. When reducing, data in the reduced part is lost. </p>
 <p> This command depends on the feature <code>&quot;lvm2&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>lvresize-free</h3>
 <pre><code> lvresize-free lv percent
@@ -3548,7 +3548,7 @@ description: "guestfish – the guest filesystem shell"
 <h3>lvuuid</h3>
 <pre><code> lvuuid device
 </code></pre>
-<p> This command returns the <font SIZE="-1">UUID</font> of the <font SIZE="-1">LVM LV </font><code>&quot;device&quot;</code>.  </p>
+<p> This command returns the UUID of the LVM LV <code>&quot;device&quot;</code>.  </p>
 <h3>lxattrlist</h3>
 <pre><code> lxattrlist path 'names ...'
 </code></pre>
@@ -3561,11 +3561,11 @@ description: "guestfish – the guest filesystem shell"
 </code></pre>
 <p> Return the maximum number of disks that may be added to a handle (eg. by ``add-drive-opts&#8217;&#8216; and similar calls). </p>
 <p> This function was added in libguestfs 1.19.7. In previous versions of libguestfs the limit was 25. </p>
-<p> See ``<font SIZE="-1">MAXIMUM NUMBER OF DISKS&#8217;&#8216;</font> in <i>guestfs</i>(3) for additional information on this topic.  </p>
+<p> See ``MAXIMUM NUMBER OF DISKS&#8217;&#8216; in <i>guestfs</i>(3) for additional information on this topic.  </p>
 <h3>md-create</h3>
 <pre><code> md-create name 'devices ...' [missingbitmap:N] [nrdevices:N] [spare:N] [chunk:N] [level:..]
 </code></pre>
-<p> Create a Linux md (<font SIZE="-1">RAID</font>) device named <code>&quot;name&quot;</code> on the devices in the list <code>&quot;devices&quot;</code>. </p>
+<p> Create a Linux md (RAID) device named <code>&quot;name&quot;</code> on the devices in the list <code>&quot;devices&quot;</code>. </p>
 <p> The optional parameters are: </p>
 <dl>
 <dt>&quot;missingbitmap&quot;</dt>
@@ -3577,7 +3577,7 @@ description: "guestfish – the guest filesystem shell"
 <p> The length of <code>&quot;devices&quot;</code> + the number of bits set in <code>&quot;missingbitmap&quot;</code> must equal <code>&quot;nrdevices&quot;</code> + <code>&quot;spare&quot;</code>. </p>
  </dd>
 <dt>&quot;nrdevices&quot;</dt>
-<dd> <p> The number of active <font SIZE="-1">RAID</font> devices. </p>
+<dd> <p> The number of active RAID devices. </p>
 <p> If not set, this defaults to the length of <code>&quot;devices&quot;</code> plus the number of bits set in <code>&quot;missingbitmap&quot;</code>. </p>
  </dd>
 <dt>&quot;spare&quot;</dt>
@@ -3588,10 +3588,10 @@ description: "guestfish – the guest filesystem shell"
 <dd> <p> The chunk size in bytes. </p>
  </dd>
 <dt>&quot;level&quot;</dt>
-<dd> <p> The <font SIZE="-1">RAID</font> level, which can be one of: <i>linear</i>, <i>raid0</i>, <i>0</i>, <i>stripe</i>, <i>raid1</i>, <i>1</i>, <i>mirror</i>, <i>raid4</i>, <i>4</i>, <i>raid5</i>, <i>5</i>, <i>raid6</i>, <i>6</i>, <i>raid10</i>, <i>10</i>. Some of these are synonymous, and more levels may be added in future. </p>
+<dd> <p> The RAID level, which can be one of: <i>linear</i>, <i>raid0</i>, <i>0</i>, <i>stripe</i>, <i>raid1</i>, <i>1</i>, <i>mirror</i>, <i>raid4</i>, <i>4</i>, <i>raid5</i>, <i>5</i>, <i>raid6</i>, <i>6</i>, <i>raid10</i>, <i>10</i>. Some of these are synonymous, and more levels may be added in future. </p>
 <p> If not set, this defaults to <code>&quot;raid1&quot;</code>. </p>
  </dd></dl>
-<p> This command has one or more optional arguments. See ``<font SIZE="-1">OPTIONAL ARGUMENTS&#8217;&#8216;</font>. </p>
+<p> This command has one or more optional arguments. See ``OPTIONAL ARGUMENTS&#8217;&#8216;. </p>
 <p> This command depends on the feature <code>&quot;mdadm&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>md-detail</h3>
 <pre><code> md-detail md
@@ -3599,26 +3599,26 @@ description: "guestfish – the guest filesystem shell"
 <p> This command exposes the output of &#8216;mdadm -DY &lt;md&gt;&#8216;. The following fields are usually present in the returned hash. Other fields may also be present. </p>
 <dl>
 <dt>&quot;level&quot;</dt>
-<dd> <p> The raid level of the <font SIZE="-1">MD</font> device. </p>
+<dd> <p> The raid level of the MD device. </p>
  </dd>
 <dt>&quot;devices&quot;</dt>
-<dd> <p> The number of underlying devices in the <font SIZE="-1">MD</font> device. </p>
+<dd> <p> The number of underlying devices in the MD device. </p>
  </dd>
 <dt>&quot;metadata&quot;</dt>
 <dd> <p> The metadata version used. </p>
  </dd>
 <dt>&quot;uuid&quot;</dt>
-<dd> <p> The <font SIZE="-1">UUID</font> of the <font SIZE="-1">MD</font> device. </p>
+<dd> <p> The UUID of the MD device. </p>
  </dd>
 <dt>&quot;name&quot;</dt>
-<dd> <p> The name of the <font SIZE="-1">MD</font> device. </p>
+<dd> <p> The name of the MD device. </p>
  </dd></dl>
 <p> This command depends on the feature <code>&quot;mdadm&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>md-stat</h3>
 <pre><code> md-stat md
 </code></pre>
-<p> This call returns a list of the underlying devices which make up the single software <font SIZE="-1">RAID</font> array device <code>&quot;md&quot;</code>. </p>
-<p> To get a list of software <font SIZE="-1">RAID</font> devices, call ``list-md-devices&#8217;&#8216;. </p>
+<p> This call returns a list of the underlying devices which make up the single software RAID array device <code>&quot;md&quot;</code>. </p>
+<p> To get a list of software RAID devices, call ``list-md-devices&#8217;&#8216;. </p>
 <p> Each structure returned corresponds to one device along with additional status information: </p>
 <dl>
 <dt>&quot;mdstat_device&quot;</dt>
@@ -3640,7 +3640,7 @@ description: "guestfish – the guest filesystem shell"
 <dd> <p> device is faulty </p>
  </dd>
 <dt>&quot;S&quot;</dt>
-<dd> <p> device is a <font SIZE="-1">RAID</font> spare </p>
+<dd> <p> device is a RAID spare </p>
  </dd>
 <dt>&quot;R&quot;</dt>
 <dd> <p> replacement </p>
@@ -3653,7 +3653,7 @@ description: "guestfish – the guest filesystem shell"
 <h3>md-stop</h3>
 <pre><code> md-stop md
 </code></pre>
-<p> This command deactivates the <font SIZE="-1">MD</font> array named <code>&quot;md&quot;</code>. The device is stopped, but it is not destroyed or zeroed. </p>
+<p> This command deactivates the MD array named <code>&quot;md&quot;</code>. The device is stopped, but it is not destroyed or zeroed. </p>
 <p> This command depends on the feature <code>&quot;mdadm&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>mkdir</h3>
 <pre><code> mkdir path
@@ -3672,7 +3672,7 @@ description: "guestfish – the guest filesystem shell"
 <h3>mkdtemp</h3>
 <pre><code> mkdtemp tmpl
 </code></pre>
-<p> This command creates a temporary directory. The <code>&quot;tmpl&quot;</code> parameter should be a full pathname for the temporary directory name with the final six characters being ``<font SIZE="-1">XXXXXX&#8217;&#8216;.</font> </p>
+<p> This command creates a temporary directory. The <code>&quot;tmpl&quot;</code> parameter should be a full pathname for the temporary directory name with the final six characters being ``XXXXXX&#8217;&#8216;. </p>
 <p> For example: ``/tmp/myprogXXXXXX&#8217;&#8216; or ``/Temp/myprogXXXXXX&#8217;&#8216;, the second one being suitable for Windows filesystems. </p>
 <p> The name of the temporary directory that was created is returned. </p>
 <p> The temporary directory is created with mode 0700 and is owned by root. </p>
@@ -3683,7 +3683,7 @@ description: "guestfish – the guest filesystem shell"
 </code></pre>
 <p> <code>&quot;mke2fs&quot;</code> is used to create an ext2, ext3, or ext4 filesystem on <code>&quot;device&quot;</code>. </p>
 <p> The optional <code>&quot;blockscount&quot;</code> is the size of the filesystem in blocks. If omitted it defaults to the size of <code>&quot;device&quot;</code>. Note if the filesystem is too small to contain a journal, <code>&quot;mke2fs&quot;</code> will silently create an ext2 filesystem instead. </p>
-<p> This command has one or more optional arguments. See ``<font SIZE="-1">OPTIONAL ARGUMENTS&#8217;&#8216;</font>.  </p>
+<p> This command has one or more optional arguments. See ``OPTIONAL ARGUMENTS&#8217;&#8216;.  </p>
 <h3>mke2fs-J</h3>
 <pre><code> mke2fs-J fstype blocksize device journal
 </code></pre>
@@ -3692,21 +3692,21 @@ description: "guestfish – the guest filesystem shell"
 </code></pre>
 <p> See also ``mke2journal&#8217;&#8216;. </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``mke2fs&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
 <h3>mke2fs-JL</h3>
 <pre><code> mke2fs-JL fstype blocksize device label
 </code></pre>
 <p> This creates an ext2/3/4 filesystem on <code>&quot;device&quot;</code> with an external journal on the journal labeled <code>&quot;label&quot;</code>. </p>
 <p> See also ``mke2journal-L&#8217;&#8216;. </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``mke2fs&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
 <h3>mke2fs-JU</h3>
 <pre><code> mke2fs-JU fstype blocksize device uuid
 </code></pre>
-<p> This creates an ext2/3/4 filesystem on <code>&quot;device&quot;</code> with an external journal on the journal with <font SIZE="-1">UUID </font><code>&quot;uuid&quot;</code>. </p>
+<p> This creates an ext2/3/4 filesystem on <code>&quot;device&quot;</code> with an external journal on the journal with UUID <code>&quot;uuid&quot;</code>. </p>
 <p> See also ``mke2journal-U&#8217;&#8216;. </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``mke2fs&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions. </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions. </p>
 <p> This command depends on the feature <code>&quot;linuxfsuuid&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>mke2journal</h3>
 <pre><code> mke2journal blocksize device
@@ -3715,24 +3715,24 @@ description: "guestfish – the guest filesystem shell"
 <pre><code> mke2fs -O journal_dev -b blocksize device
 </code></pre>
 <p> <i>This function is deprecated.</i> In new code, use the ``mke2fs&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
 <h3>mke2journal-L</h3>
 <pre><code> mke2journal-L blocksize label device
 </code></pre>
 <p> This creates an ext2 external journal on <code>&quot;device&quot;</code> with label <code>&quot;label&quot;</code>. </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``mke2fs&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
 <h3>mke2journal-U</h3>
 <pre><code> mke2journal-U blocksize uuid device
 </code></pre>
-<p> This creates an ext2 external journal on <code>&quot;device&quot;</code> with <font SIZE="-1">UUID </font><code>&quot;uuid&quot;</code>. </p>
+<p> This creates an ext2 external journal on <code>&quot;device&quot;</code> with UUID <code>&quot;uuid&quot;</code>. </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``mke2fs&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions. </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions. </p>
 <p> This command depends on the feature <code>&quot;linuxfsuuid&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>mkfifo</h3>
 <pre><code> mkfifo mode path
 </code></pre>
-<p> This call creates a <font SIZE="-1">FIFO </font>(named pipe) called <code>&quot;path&quot;</code> with mode <code>&quot;mode&quot;</code>. It is just a convenient wrapper around ``mknod&#8217;&#8216;. </p>
+<p> This call creates a FIFO (named pipe) called <code>&quot;path&quot;</code> with mode <code>&quot;mode&quot;</code>. It is just a convenient wrapper around ``mknod&#8217;&#8216;. </p>
 <p> Unlike with ``mknod&#8217;&#8216;, <code>&quot;mode&quot;</code> <code>must</code> contain only permissions bits. </p>
 <p> The mode actually set is affected by the umask. </p>
 <p> This command depends on the feature <code>&quot;mknod&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
@@ -3745,8 +3745,8 @@ description: "guestfish – the guest filesystem shell"
 <dl>
 <dt>&quot;blocksize&quot;</dt>
 <dd> <p> The filesystem block size. Supported block sizes depend on the filesystem type, but typically they are <code>1024</code>, <code>2048</code> or <code>4096</code> for Linux ext2/3 filesystems. </p>
-<p> For <font SIZE="-1">VFAT</font> and <font SIZE="-1">NTFS</font> the <code>&quot;blocksize&quot;</code> parameter is treated as the requested cluster size. </p>
-<p> For <font SIZE="-1">UFS</font> block sizes, please see <i>mkfs.ufs</i>(8). </p>
+<p> For VFAT and NTFS the <code>&quot;blocksize&quot;</code> parameter is treated as the requested cluster size. </p>
+<p> For UFS block sizes, please see <i>mkfs.ufs</i>(8). </p>
  </dd>
 <dt>&quot;features&quot;</dt>
 <dd> <p> This passes the <i>-O</i> parameter to the external mkfs program. </p>
@@ -3759,21 +3759,21 @@ description: "guestfish – the guest filesystem shell"
 <dt>&quot;sectorsize&quot;</dt>
 <dd> <p> This passes the <i>-S</i> parameter to external <i>mkfs.ufs</i>(8) program, which sets sector size for ufs filesystem. </p>
  </dd></dl>
-<p> This command has one or more optional arguments. See ``<font SIZE="-1">OPTIONAL ARGUMENTS&#8217;&#8216;</font>.  </p>
+<p> This command has one or more optional arguments. See ``OPTIONAL ARGUMENTS&#8217;&#8216;.  </p>
 <h3>mkfs-b</h3>
 <pre><code> mkfs-b fstype blocksize device
 </code></pre>
 <p> This call is similar to ``mkfs&#8217;&#8216;, but it allows you to control the block size of the resulting filesystem. Supported block sizes depend on the filesystem type, but typically they are <code>1024</code>, <code>2048</code> or <code>4096</code> only. </p>
-<p> For <font SIZE="-1">VFAT</font> and <font SIZE="-1">NTFS</font> the <code>&quot;blocksize&quot;</code> parameter is treated as the requested cluster size. </p>
+<p> For VFAT and NTFS the <code>&quot;blocksize&quot;</code> parameter is treated as the requested cluster size. </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``mkfs&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
 <h3>mkfs-btrfs</h3>
 <pre><code> mkfs-btrfs 'devices ...' [allocstart:N] [bytecount:N] [datatype:..] [leafsize:N] [label:..] [metadata:..] [nodesize:N] [sectorsize:N]
 </code></pre>
 <p> Create a btrfs filesystem, allowing all configurables to be set. For more information on the optional arguments, see <i>mkfs.btrfs</i>(8). </p>
 <p> Since btrfs filesystems can span multiple devices, this takes a non-empty list of devices. </p>
 <p> To create general filesystems, use ``mkfs&#8217;&#8216;. </p>
-<p> This command has one or more optional arguments. See ``<font SIZE="-1">OPTIONAL ARGUMENTS&#8217;&#8216;</font>. </p>
+<p> This command has one or more optional arguments. See ``OPTIONAL ARGUMENTS&#8217;&#8216;. </p>
 <p> This command depends on the feature <code>&quot;btrfs&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>mklost-and-found</h3>
 <pre><code> mklost-and-found mountpoint
@@ -3784,7 +3784,7 @@ description: "guestfish – the guest filesystem shell"
 </code></pre>
 <p> ``mkmountpoint&#8217;&#8216; and ``rmmountpoint&#8217;&#8216; are specialized calls that can be used to create extra mountpoints before mounting the first filesystem. </p>
 <p> These calls are <i>only</i> necessary in some very limited circumstances, mainly the case where you want to mount a mix of unrelated and/or read-only filesystems together. </p>
-<p> For example, live CDs often contain a ``Russian doll&#8217;&#8216; nest of filesystems, an <font SIZE="-1">ISO</font> outer layer, with a squashfs image inside, with an ext2/3 image inside that. You can unpack this as follows in guestfish: </p>
+<p> For example, live CDs often contain a ``Russian doll&#8217;&#8216; nest of filesystems, an ISO outer layer, with a squashfs image inside, with an ext2/3 image inside that. You can unpack this as follows in guestfish: </p>
 <pre><code> add-ro Fedora-11-i686-Live.iso
  run
  mkmountpoint /cd
@@ -3804,7 +3804,7 @@ description: "guestfish – the guest filesystem shell"
 </code></pre>
 <p> This call creates block or character special devices, or named pipes (FIFOs). </p>
 <p> The <code>&quot;mode&quot;</code> parameter should be the mode, using the standard constants. <code>&quot;devmajor&quot;</code> and <code>&quot;devminor&quot;</code> are the device major and minor numbers, only used when creating block and character special devices. </p>
-<p> Note that, just like <i><a href="/docs/linux/man/2-mknod/">mknod</a></i>(2), the mode must be bitwise <font SIZE="-1">OR</font>&#8216;d with S_IFBLK, S_IFCHR, S_IFIFO or S_IFSOCK (otherwise this call just creates a regular file). These constants are available in the standard Linux header files, or you can use ``mknod-b&#8217;&#8216;, ``mknod-c&#8217;&#8216; or ``mkfifo&#8217;&#8216; which are wrappers around this command which bitwise <font SIZE="-1">OR</font> in the appropriate constant for you. </p>
+<p> Note that, just like <i><a href="/docs/linux/man/2-mknod/">mknod</a></i>(2), the mode must be bitwise OR&#8216;d with S_IFBLK, S_IFCHR, S_IFIFO or S_IFSOCK (otherwise this call just creates a regular file). These constants are available in the standard Linux header files, or you can use ``mknod-b&#8217;&#8216;, ``mknod-c&#8217;&#8216; or ``mkfifo&#8217;&#8216; which are wrappers around this command which bitwise OR in the appropriate constant for you. </p>
 <p> The mode actually set is affected by the umask. </p>
 <p> This command depends on the feature <code>&quot;mknod&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>mknod-b</h3>
@@ -3826,21 +3826,21 @@ description: "guestfish – the guest filesystem shell"
 <pre><code> mkswap device [label:..] [uuid:..]
 </code></pre>
 <p> Create a Linux swap partition on <code>&quot;device&quot;</code>. </p>
-<p> The option arguments <code>&quot;label&quot;</code> and <code>&quot;uuid&quot;</code> allow you to set the label and/or <font SIZE="-1">UUID</font> of the new swap partition. </p>
-<p> This command has one or more optional arguments. See ``<font SIZE="-1">OPTIONAL ARGUMENTS&#8217;&#8216;</font>.  </p>
+<p> The option arguments <code>&quot;label&quot;</code> and <code>&quot;uuid&quot;</code> allow you to set the label and/or UUID of the new swap partition. </p>
+<p> This command has one or more optional arguments. See ``OPTIONAL ARGUMENTS&#8217;&#8216;.  </p>
 <h3>mkswap-L</h3>
 <pre><code> mkswap-L label device
 </code></pre>
 <p> Create a swap partition on <code>&quot;device&quot;</code> with label <code>&quot;label&quot;</code>. </p>
 <p> Note that you cannot attach a swap label to a block device (eg. <i>/dev/sda</i>), just to a partition. This appears to be a limitation of the kernel or swap tools. </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``mkswap&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
 <h3>mkswap-U</h3>
 <pre><code> mkswap-U uuid device
 </code></pre>
-<p> Create a swap partition on <code>&quot;device&quot;</code> with <font SIZE="-1">UUID </font><code>&quot;uuid&quot;</code>. </p>
+<p> Create a swap partition on <code>&quot;device&quot;</code> with UUID <code>&quot;uuid&quot;</code>. </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``mkswap&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions. </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions. </p>
 <p> This command depends on the feature <code>&quot;linuxfsuuid&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>mkswap-file</h3>
 <pre><code> mkswap-file path
@@ -3850,14 +3850,14 @@ description: "guestfish – the guest filesystem shell"
 <h3>mktemp</h3>
 <pre><code> mktemp tmpl [suffix:..]
 </code></pre>
-<p> This command creates a temporary file. The <code>&quot;tmpl&quot;</code> parameter should be a full pathname for the temporary directory name with the final six characters being ``<font SIZE="-1">XXXXXX&#8217;&#8216;.</font> </p>
+<p> This command creates a temporary file. The <code>&quot;tmpl&quot;</code> parameter should be a full pathname for the temporary directory name with the final six characters being ``XXXXXX&#8217;&#8216;. </p>
 <p> For example: ``/tmp/myprogXXXXXX&#8217;&#8216; or ``/Temp/myprogXXXXXX&#8217;&#8216;, the second one being suitable for Windows filesystems. </p>
 <p> The name of the temporary file that was created is returned. </p>
 <p> The temporary file is created with mode 0600 and is owned by root. </p>
 <p> The caller is responsible for deleting the temporary file after use. </p>
 <p> If the optional <code>&quot;suffix&quot;</code> parameter is given, then the suffix (eg. <code>&quot;.txt&quot;</code>) is appended to the temporary name. </p>
 <p> See also: ``mkdtemp&#8217;&#8216;. </p>
-<p> This command has one or more optional arguments. See ``<font SIZE="-1">OPTIONAL ARGUMENTS&#8217;&#8216;</font>.  </p>
+<p> This command has one or more optional arguments. See ``OPTIONAL ARGUMENTS&#8217;&#8216;.  </p>
 <h3>modprobe</h3>
 <pre><code> modprobe modulename
 </code></pre>
@@ -3866,7 +3866,7 @@ description: "guestfish – the guest filesystem shell"
 <h3>mount</h3>
 <pre><code> mount mountable mountpoint
 </code></pre>
-<p> Mount a guest disk at a position in the filesystem. Block devices are named <i>/dev/sda</i>, <i>/dev/sdb</i> and so on, as they were added to the guest. If those block devices contain partitions, they will have the usual names (eg. <i>/dev/sda1</i>). Also <font SIZE="-1">LVM </font><i>/dev/VG/LV</i>-style names can be used, or &#8216;mountable&#8217; strings returned by ``list-filesystems&#8217;&#8216; or ``inspect-get-mountpoints&#8217;&#8216;. </p>
+<p> Mount a guest disk at a position in the filesystem. Block devices are named <i>/dev/sda</i>, <i>/dev/sdb</i> and so on, as they were added to the guest. If those block devices contain partitions, they will have the usual names (eg. <i>/dev/sda1</i>). Also LVM <i>/dev/VG/LV</i>-style names can be used, or &#8216;mountable&#8217; strings returned by ``list-filesystems&#8217;&#8216; or ``inspect-get-mountpoints&#8217;&#8216;. </p>
 <p> The rules are the same as for <i><a href="/docs/linux/man/2-mount/">mount</a></i>(2): A filesystem must first be mounted on <i>/</i> before others can be mounted. Other filesystems can only be mounted on directories which already exist. </p>
 <p> The mounted filesystem is writable, if we have sufficient permissions on the underlying device. </p>
 <p> Before libguestfs 1.13.16, this call implicitly added the options <code>&quot;sync&quot;</code> and <code>&quot;noatime&quot;</code>. The <code>&quot;sync&quot;</code> option greatly slowed writes and caused many problems for users. If your program might need to work with older versions of libguestfs, use ``mount-options&#8217;&#8216; instead (using an empty string for the first parameter if you don&#8217;t want any options).  </p>
@@ -3877,18 +3877,18 @@ description: "guestfish – the guest filesystem shell"
 <p> If the optional <code>&quot;readonly&quot;</code> flag is set to true, then writes to the filesystem return error <code>&quot;EROFS&quot;</code>. </p>
 <p> <code>&quot;options&quot;</code> is a comma-separated list of mount options. See <i><a href="/docs/linux/man/1-guestmount/">guestmount</a></i>(1) for some useful options. </p>
 <p> <code>&quot;cachetimeout&quot;</code> sets the timeout (in seconds) for cached directory entries. The default is 60 seconds. See <i><a href="/docs/linux/man/1-guestmount/">guestmount</a></i>(1) for further information. </p>
-<p> If <code>&quot;debugcalls&quot;</code> is set to true, then additional debugging information is generated for every <font SIZE="-1">FUSE</font> call. </p>
+<p> If <code>&quot;debugcalls&quot;</code> is set to true, then additional debugging information is generated for every FUSE call. </p>
 <p> When ``mount-local&#8217;&#8216; returns, the filesystem is ready, but is not processing requests (access to it will block). You have to call ``mount-local-run&#8217;&#8216; to run the main loop. </p>
-<p> See ``<font SIZE="-1">MOUNT LOCAL&#8217;&#8216;</font> in <i>guestfs</i>(3) for full documentation. </p>
-<p> This command has one or more optional arguments. See ``<font SIZE="-1">OPTIONAL ARGUMENTS&#8217;&#8216;</font>.  </p>
+<p> See ``MOUNT LOCAL&#8217;&#8216; in <i>guestfs</i>(3) for full documentation. </p>
+<p> This command has one or more optional arguments. See ``OPTIONAL ARGUMENTS&#8217;&#8216;.  </p>
 <h3>mount-local-run</h3>
 <pre><code> mount-local-run
 </code></pre>
 <p> Run the main loop which translates kernel calls to libguestfs calls. </p>
 <p> This should only be called after ``mount-local&#8217;&#8216; returns successfully. The call will not return until the filesystem is unmounted. </p>
 <p> <code>Note</code> you must <i>not</i> make concurrent libguestfs calls on the same handle from another thread. </p>
-<p> You may call this from a different thread than the one which called ``mount-local&#8217;&#8216;, subject to the usual rules for threads and libguestfs (see ``<font SIZE="-1">MULTIPLE HANDLES AND MULTIPLE THREADS&#8217;&#8216;</font> in <i>guestfs</i>(3)). </p>
-<p> See ``<font SIZE="-1">MOUNT LOCAL&#8217;&#8216;</font> in <i>guestfs</i>(3) for full documentation.  </p>
+<p> You may call this from a different thread than the one which called ``mount-local&#8217;&#8216;, subject to the usual rules for threads and libguestfs (see ``MULTIPLE HANDLES AND MULTIPLE THREADS&#8217;&#8216; in <i>guestfs</i>(3)). </p>
+<p> See ``MOUNT LOCAL&#8217;&#8216; in <i>guestfs</i>(3) for full documentation.  </p>
 <h3>mount-loop</h3>
 <pre><code> mount-loop file mountpoint
 </code></pre>
@@ -3929,7 +3929,7 @@ description: "guestfish – the guest filesystem shell"
 <h3>ntfs-3g-probe</h3>
 <pre><code> ntfs-3g-probe true|false device
 </code></pre>
-<p> This command runs the <i>ntfs-3g.probe</i>(8) command which probes an <font SIZE="-1">NTFS </font><code>&quot;device&quot;</code> for mountability. (Not all <font SIZE="-1">NTFS</font> volumes can be mounted read-write, and some cannot be mounted at all). </p>
+<p> This command runs the <i>ntfs-3g.probe</i>(8) command which probes an NTFS <code>&quot;device&quot;</code> for mountability. (Not all NTFS volumes can be mounted read-write, and some cannot be mounted at all). </p>
 <p> <code>&quot;rw&quot;</code> is a boolean flag. Set it to true if you want to test if the volume can be mounted read-write. Set it to false if you want to test if the volume can be mounted read-only. </p>
 <p> The return value is an integer which <code>0</code> if the operation would succeed, or some non-zero value documented in the <i>ntfs-3g.probe</i>(8) manual page. </p>
 <p> This command depends on the feature <code>&quot;ntfs3g&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
@@ -3942,26 +3942,26 @@ description: "guestfish – the guest filesystem shell"
 <h3>ntfsclone-out</h3>
 <pre><code> ntfsclone-out device (backupfile|-) [metadataonly:true|false] [rescue:true|false] [ignorefscheck:true|false] [preservetimestamps:true|false] [force:true|false]
 </code></pre>
-<p> Stream the <font SIZE="-1">NTFS</font> filesystem <code>&quot;device&quot;</code> to the local file <code>&quot;backupfile&quot;</code>. The format used for the backup file is a special format used by the <i><a href="/docs/linux/man/8-ntfsclone/">ntfsclone</a></i>(8) tool. </p>
+<p> Stream the NTFS filesystem <code>&quot;device&quot;</code> to the local file <code>&quot;backupfile&quot;</code>. The format used for the backup file is a special format used by the <i><a href="/docs/linux/man/8-ntfsclone/">ntfsclone</a></i>(8) tool. </p>
 <p> If the optional <code>&quot;metadataonly&quot;</code> flag is true, then <i>only</i> the metadata is saved, losing all the user data (this is useful for diagnosing some filesystem problems). </p>
 <p> The optional <code>&quot;rescue&quot;</code>, <code>&quot;ignorefscheck&quot;</code>, <code>&quot;preservetimestamps&quot;</code> and <code>&quot;force&quot;</code> flags have precise meanings detailed in the <i><a href="/docs/linux/man/8-ntfsclone/">ntfsclone</a></i>(8) man page. </p>
 <p> Use ``ntfsclone-in&#8217;&#8216; to restore the file back to a libguestfs device. </p>
 <p> Use <code>&quot;-&quot;</code> instead of a filename to read/write from stdin/stdout. </p>
-<p> This command has one or more optional arguments. See ``<font SIZE="-1">OPTIONAL ARGUMENTS&#8217;&#8216;</font>. </p>
+<p> This command has one or more optional arguments. See ``OPTIONAL ARGUMENTS&#8217;&#8216;. </p>
 <p> This command depends on the feature <code>&quot;ntfs3g&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>ntfsfix</h3>
 <pre><code> ntfsfix device [clearbadsectors:true|false]
 </code></pre>
-<p> This command repairs some fundamental <font SIZE="-1">NTFS</font> inconsistencies, resets the <font SIZE="-1">NTFS</font> journal file, and schedules an <font SIZE="-1">NTFS</font> consistency check for the first boot into Windows. </p>
+<p> This command repairs some fundamental NTFS inconsistencies, resets the NTFS journal file, and schedules an NTFS consistency check for the first boot into Windows. </p>
 <p> This is <i>not</i> an equivalent of Windows <code>&quot;chkdsk&quot;</code>. It does <i>not</i> scan the filesystem for inconsistencies. </p>
 <p> The optional <code>&quot;clearbadsectors&quot;</code> flag clears the list of bad sectors. This is useful after cloning a disk with bad sectors to a new disk. </p>
-<p> This command has one or more optional arguments. See ``<font SIZE="-1">OPTIONAL ARGUMENTS&#8217;&#8216;</font>. </p>
+<p> This command has one or more optional arguments. See ``OPTIONAL ARGUMENTS&#8217;&#8216;. </p>
 <p> This command depends on the feature <code>&quot;ntfs3g&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>ntfsresize</h3>
 <h3>ntfsresize-opts</h3>
 <pre><code> ntfsresize device [size:N] [force:true|false]
 </code></pre>
-<p> This command resizes an <font SIZE="-1">NTFS</font> filesystem, expanding or shrinking it to the size of the underlying device. </p>
+<p> This command resizes an NTFS filesystem, expanding or shrinking it to the size of the underlying device. </p>
 <p> The optional parameters are: </p>
 <dl>
 <dt>&quot;size&quot;</dt>
@@ -3972,21 +3972,21 @@ description: "guestfish – the guest filesystem shell"
 <p> After the resize operation, the filesystem is always marked as requiring a consistency check (for safety). You have to boot into Windows to perform this check and clear this condition. If you <i>don&#8217;t</i> set the <code>&quot;force&quot;</code> option then it is not possible to call ``ntfsresize&#8217;&#8216; multiple times on a single filesystem without booting into Windows between each resize. </p>
  </dd></dl>
 <p> See also <i><a href="/docs/linux/man/8-ntfsresize/">ntfsresize</a></i>(8). </p>
-<p> This command has one or more optional arguments. See ``<font SIZE="-1">OPTIONAL ARGUMENTS&#8217;&#8216;</font>. </p>
+<p> This command has one or more optional arguments. See ``OPTIONAL ARGUMENTS&#8217;&#8216;. </p>
 <p> This command depends on the feature <code>&quot;ntfsprogs&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>ntfsresize-size</h3>
 <pre><code> ntfsresize-size device size
 </code></pre>
 <p> This command is the same as ``ntfsresize&#8217;&#8216; except that it allows you to specify the new size (in bytes) explicitly. </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``ntfsresize&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions. </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions. </p>
 <p> This command depends on the feature <code>&quot;ntfsprogs&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>parse-environment</h3>
 <pre><code> parse-environment
 </code></pre>
 <p> Parse the program&#8217;s environment and set flags in the handle accordingly. For example if <code>&quot;LIBGUESTFS_DEBUG=1&quot;</code> then the &#8216;verbose&#8217; flag is set in the handle. </p>
 <p> <i>Most programs do not need to call this</i>. It is done implicitly when you call ``create&#8217;&#8216;. </p>
-<p> See ``<font SIZE="-1">ENVIRONMENT VARIABLES&#8217;&#8216;</font> in <i>guestfs</i>(3) for a list of environment variables that can affect libguestfs handles. See also ``guestfs_create_flags&#8217;&#8216; in <i>guestfs</i>(3), and ``parse-environment-list&#8217;&#8216;.  </p>
+<p> See ``ENVIRONMENT VARIABLES&#8217;&#8216; in <i>guestfs</i>(3) for a list of environment variables that can affect libguestfs handles. See also ``guestfs_create_flags&#8217;&#8216; in <i>guestfs</i>(3), and ``parse-environment-list&#8217;&#8216;.  </p>
 <h3>parse-environment-list</h3>
 <pre><code> parse-environment-list 'environment ...'
 </code></pre>
@@ -3996,14 +3996,14 @@ description: "guestfish – the guest filesystem shell"
 <pre><code> part-add device prlogex startsect endsect
 </code></pre>
 <p> This command adds a partition to <code>&quot;device&quot;</code>. If there is no partition table on the device, call ``part-init&#8217;&#8216; first. </p>
-<p> The <code>&quot;prlogex&quot;</code> parameter is the type of partition. Normally you should pass <code>&quot;p&quot;</code> or <code>&quot;primary&quot;</code> here, but <font SIZE="-1">MBR</font> partition tables also support <code>&quot;l&quot;</code> (or <code>&quot;logical&quot;</code>) and <code>&quot;e&quot;</code> (or <code>&quot;extended&quot;</code>) partition types. </p>
+<p> The <code>&quot;prlogex&quot;</code> parameter is the type of partition. Normally you should pass <code>&quot;p&quot;</code> or <code>&quot;primary&quot;</code> here, but MBR partition tables also support <code>&quot;l&quot;</code> (or <code>&quot;logical&quot;</code>) and <code>&quot;e&quot;</code> (or <code>&quot;extended&quot;</code>) partition types. </p>
 <p> <code>&quot;startsect&quot;</code> and <code>&quot;endsect&quot;</code> are the start and end of the partition in <i>sectors</i>. <code>&quot;endsect&quot;</code> may be negative, which means it counts backwards from the end of the disk (<code>&quot;-1&quot;</code> is the last sector). </p>
 <p> Creating a partition which covers the whole disk is not so easy. Use ``part-disk&#8217;&#8216; to do that.  </p>
 <h3>part-del</h3>
 <pre><code> part-del device partnum
 </code></pre>
 <p> This command deletes the partition numbered <code>&quot;partnum&quot;</code> on <code>&quot;device&quot;</code>. </p>
-<p> Note that in the case of <font SIZE="-1">MBR</font> partitioning, deleting an extended partition also deletes any logical partitions it contains.  </p>
+<p> Note that in the case of MBR partitioning, deleting an extended partition also deletes any logical partitions it contains.  </p>
 <h3>part-disk</h3>
 <pre><code> part-disk device parttype
 </code></pre>
@@ -4017,22 +4017,22 @@ description: "guestfish – the guest filesystem shell"
 <h3>part-get-gpt-guid</h3>
 <pre><code> part-get-gpt-guid device partnum
 </code></pre>
-<p> Return the <font SIZE="-1">GUID</font> of numbered <font SIZE="-1">GPT</font> partition <code>&quot;partnum&quot;</code>. </p>
+<p> Return the GUID of numbered GPT partition <code>&quot;partnum&quot;</code>. </p>
 <p> This command depends on the feature <code>&quot;gdisk&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>part-get-gpt-type</h3>
 <pre><code> part-get-gpt-type device partnum
 </code></pre>
-<p> Return the type <font SIZE="-1">GUID</font> of numbered <font SIZE="-1">GPT</font> partition <code>&quot;partnum&quot;</code>. For <font SIZE="-1">MBR</font> partitions, return an appropriate <font SIZE="-1">GUID</font> corresponding to the <font SIZE="-1">MBR</font> type. Behaviour is undefined for other partition types. </p>
+<p> Return the type GUID of numbered GPT partition <code>&quot;partnum&quot;</code>. For MBR partitions, return an appropriate GUID corresponding to the MBR type. Behaviour is undefined for other partition types. </p>
 <p> This command depends on the feature <code>&quot;gdisk&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>part-get-mbr-id</h3>
 <pre><code> part-get-mbr-id device partnum
 </code></pre>
-<p> Returns the <font SIZE="-1">MBR</font> type byte (also known as the <font SIZE="-1">ID</font> byte) from the numbered partition <code>&quot;partnum&quot;</code>. </p>
-<p> Note that only <font SIZE="-1">MBR </font>(old DOS-style) partitions have type bytes. You will get undefined results for other partition table types (see ``part-get-parttype&#8217;&#8216;).  </p>
+<p> Returns the MBR type byte (also known as the ID byte) from the numbered partition <code>&quot;partnum&quot;</code>. </p>
+<p> Note that only MBR (old DOS-style) partitions have type bytes. You will get undefined results for other partition table types (see ``part-get-parttype&#8217;&#8216;).  </p>
 <h3>part-get-mbr-part-type</h3>
 <pre><code> part-get-mbr-part-type device partnum
 </code></pre>
-<p> This returns the partition type of an <font SIZE="-1">MBR</font> partition numbered <code>&quot;partnum&quot;</code> on device <code>&quot;device&quot;</code>. </p>
+<p> This returns the partition type of an MBR partition numbered <code>&quot;partnum&quot;</code> on device <code>&quot;device&quot;</code>. </p>
 <p> It returns <code>&quot;primary&quot;</code>, <code>&quot;logical&quot;</code>, or <code>&quot;extended&quot;</code>.  </p>
 <h3>part-get-name</h3>
 <pre><code> part-get-name device partnum
@@ -4043,7 +4043,7 @@ description: "guestfish – the guest filesystem shell"
 <pre><code> part-get-parttype device
 </code></pre>
 <p> This command examines the partition table on <code>&quot;device&quot;</code> and returns the partition table type (format) being used. </p>
-<p> Common return values include: <code>&quot;msdos&quot;</code> (a DOS/Windows style <font SIZE="-1">MBR</font> partition table), <code>&quot;gpt&quot;</code> (a GPT/EFI-style partition table). Other values are possible, although unusual. See ``part-init&#8217;&#8216; for a full list.  </p>
+<p> Common return values include: <code>&quot;msdos&quot;</code> (a DOS/Windows style MBR partition table), <code>&quot;gpt&quot;</code> (a GPT/EFI-style partition table). Other values are possible, although unusual. See ``part-init&#8217;&#8216; for a full list.  </p>
 <h3>part-init</h3>
 <pre><code> part-init device parttype
 </code></pre>
@@ -4054,18 +4054,18 @@ description: "guestfish – the guest filesystem shell"
 <dt><code>efi</code></dt>
 <dd>  </dd>
 <dt><code>gpt</code></dt>
-<dd> <p> Intel <font SIZE="-1">EFI / GPT</font> partition table. </p>
-<p> This is recommended for &gt;= 2 <font SIZE="-1">TB</font> partitions that will be accessed from Linux and Intel-based Mac <font SIZE="-1">OS X. </font> It also has limited backwards compatibility with the <code>&quot;mbr&quot;</code> format. </p>
+<dd> <p> Intel EFI / GPT partition table. </p>
+<p> This is recommended for &gt;= 2 TB partitions that will be accessed from Linux and Intel-based Mac OS X.  It also has limited backwards compatibility with the <code>&quot;mbr&quot;</code> format. </p>
  </dd>
 <dt><code>mbr</code></dt>
 <dd>  </dd>
 <dt><code>msdos</code></dt>
-<dd> <p> The standard <font SIZE="-1">PC </font>``Master Boot Record&#8217;&#8216; (<font SIZE="-1">MBR</font>) format used by MS-DOS and Windows. This partition type will <code>only</code> work for device sizes up to 2 <font SIZE="-1">TB. </font> For large disks we recommend using <code>&quot;gpt&quot;</code>. </p>
+<dd> <p> The standard PC ``Master Boot Record&#8217;&#8216; (MBR) format used by MS-DOS and Windows. This partition type will <code>only</code> work for device sizes up to 2 TB.  For large disks we recommend using <code>&quot;gpt&quot;</code>. </p>
  </dd></dl>
 <p> Other partition table types that may work but are not supported include: </p>
 <dl>
 <dt><code>aix</code></dt>
-<dd> <p> <font SIZE="-1">AIX</font> disk labels. </p>
+<dd> <p> AIX disk labels. </p>
  </dd>
 <dt><code>amiga</code></dt>
 <dd>  </dd>
@@ -4073,19 +4073,19 @@ description: "guestfish – the guest filesystem shell"
 <dd> <p> Amiga ``Rigid Disk Block&#8217;&#8216; format. </p>
  </dd>
 <dt><code>bsd</code></dt>
-<dd> <p> <font SIZE="-1">BSD</font> disk labels. </p>
+<dd> <p> BSD disk labels. </p>
  </dd>
 <dt><code>dasd</code></dt>
-<dd> <p> <font SIZE="-1">DASD,</font> used on <font SIZE="-1">IBM</font> mainframes. </p>
+<dd> <p> DASD, used on IBM mainframes. </p>
  </dd>
 <dt><code>dvh</code></dt>
-<dd> <p> <font SIZE="-1">MIPS/SGI</font> volumes. </p>
+<dd> <p> MIPS/SGI volumes. </p>
  </dd>
 <dt><code>mac</code></dt>
 <dd> <p> Old Mac partition format. Modern Macs use <code>&quot;gpt&quot;</code>. </p>
  </dd>
 <dt><code>pc98</code></dt>
-<dd> <p> <font SIZE="-1">NEC PC-98</font> format, common in Japan apparently. </p>
+<dd> <p> NEC PC-98 format, common in Japan apparently. </p>
  </dd>
 <dt><code>sun</code></dt>
 <dd> <p> Sun disk labels. </p>
@@ -4116,19 +4116,19 @@ description: "guestfish – the guest filesystem shell"
 <h3>part-set-gpt-guid</h3>
 <pre><code> part-set-gpt-guid device partnum guid
 </code></pre>
-<p> Set the <font SIZE="-1">GUID</font> of numbered <font SIZE="-1">GPT</font> partition <code>&quot;partnum&quot;</code> to <code>&quot;guid&quot;</code>. Return an error if the partition table of <code>&quot;device&quot;</code> isn&#8217;t <font SIZE="-1">GPT,</font> or if <code>&quot;guid&quot;</code> is not a valid <font SIZE="-1">GUID.</font> </p>
+<p> Set the GUID of numbered GPT partition <code>&quot;partnum&quot;</code> to <code>&quot;guid&quot;</code>. Return an error if the partition table of <code>&quot;device&quot;</code> isn&#8217;t GPT, or if <code>&quot;guid&quot;</code> is not a valid GUID. </p>
 <p> This command depends on the feature <code>&quot;gdisk&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>part-set-gpt-type</h3>
 <pre><code> part-set-gpt-type device partnum guid
 </code></pre>
-<p> Set the type <font SIZE="-1">GUID</font> of numbered <font SIZE="-1">GPT</font> partition <code>&quot;partnum&quot;</code> to <code>&quot;guid&quot;</code>. Return an error if the partition table of <code>&quot;device&quot;</code> isn&#8217;t <font SIZE="-1">GPT,</font> or if <code>&quot;guid&quot;</code> is not a valid <font SIZE="-1">GUID.</font> </p>
+<p> Set the type GUID of numbered GPT partition <code>&quot;partnum&quot;</code> to <code>&quot;guid&quot;</code>. Return an error if the partition table of <code>&quot;device&quot;</code> isn&#8217;t GPT, or if <code>&quot;guid&quot;</code> is not a valid GUID. </p>
 <p> See <a rel="nofollow" href="http://en.wikipedia.org/wiki/GUID_Partition_Table#Partition_type_GUIDs">http://en.wikipedia.org/wiki/GUID_Partition_Table#Partition_type_GUIDs</a> for a useful list of type GUIDs. </p>
 <p> This command depends on the feature <code>&quot;gdisk&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>part-set-mbr-id</h3>
 <pre><code> part-set-mbr-id device partnum idbyte
 </code></pre>
-<p> Sets the <font SIZE="-1">MBR</font> type byte (also known as the <font SIZE="-1">ID</font> byte) of the numbered partition <code>&quot;partnum&quot;</code> to <code>&quot;idbyte&quot;</code>. Note that the type bytes quoted in most documentation are in fact hexadecimal numbers, but usually documented without any leading ``0x&#8217;&#8216; which might be confusing. </p>
-<p> Note that only <font SIZE="-1">MBR </font>(old DOS-style) partitions have type bytes. You will get undefined results for other partition table types (see ``part-get-parttype&#8217;&#8216;).  </p>
+<p> Sets the MBR type byte (also known as the ID byte) of the numbered partition <code>&quot;partnum&quot;</code> to <code>&quot;idbyte&quot;</code>. Note that the type bytes quoted in most documentation are in fact hexadecimal numbers, but usually documented without any leading ``0x&#8217;&#8216; which might be confusing. </p>
+<p> Note that only MBR (old DOS-style) partitions have type bytes. You will get undefined results for other partition table types (see ``part-get-parttype&#8217;&#8216;).  </p>
 <h3>part-set-name</h3>
 <pre><code> part-set-name device partnum name
 </code></pre>
@@ -4156,18 +4156,18 @@ description: "guestfish – the guest filesystem shell"
 <p> This command lets you read part of a file. It reads <code>&quot;count&quot;</code> bytes of the file, starting at <code>&quot;offset&quot;</code>, from file <code>&quot;path&quot;</code>. </p>
 <p> This may read fewer bytes than requested. For further details see the <i><a href="/docs/linux/man/2-pread/">pread</a></i>(2) system call. </p>
 <p> See also ``pwrite&#8217;&#8216;, ``pread-device&#8217;&#8216;. </p>
-<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``<font SIZE="-1">PROTOCOL LIMITS&#8217;&#8216;</font> in <i>guestfs</i>(3).  </p>
+<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``PROTOCOL LIMITS&#8217;&#8216; in <i>guestfs</i>(3).  </p>
 <h3>pread-device</h3>
 <pre><code> pread-device device count offset
 </code></pre>
 <p> This command lets you read part of a block device. It reads <code>&quot;count&quot;</code> bytes of <code>&quot;device&quot;</code>, starting at <code>&quot;offset&quot;</code>. </p>
 <p> This may read fewer bytes than requested. For further details see the <i><a href="/docs/linux/man/2-pread/">pread</a></i>(2) system call. </p>
 <p> See also ``pread&#8217;&#8216;. </p>
-<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``<font SIZE="-1">PROTOCOL LIMITS&#8217;&#8216;</font> in <i>guestfs</i>(3).  </p>
+<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``PROTOCOL LIMITS&#8217;&#8216; in <i>guestfs</i>(3).  </p>
 <h3>pvchange-uuid</h3>
 <pre><code> pvchange-uuid device
 </code></pre>
-<p> Generate a new random <font SIZE="-1">UUID</font> for the physical volume <code>&quot;device&quot;</code>. </p>
+<p> Generate a new random UUID for the physical volume <code>&quot;device&quot;</code>. </p>
 <p> This command depends on the feature <code>&quot;lvm2&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>pvchange-uuid-all</h3>
 <pre><code> pvchange-uuid-all
@@ -4177,18 +4177,18 @@ description: "guestfish – the guest filesystem shell"
 <h3>pvcreate</h3>
 <pre><code> pvcreate device
 </code></pre>
-<p> This creates an <font SIZE="-1">LVM</font> physical volume on the named <code>&quot;device&quot;</code>, where <code>&quot;device&quot;</code> should usually be a partition name such as <i>/dev/sda1</i>. </p>
+<p> This creates an LVM physical volume on the named <code>&quot;device&quot;</code>, where <code>&quot;device&quot;</code> should usually be a partition name such as <i>/dev/sda1</i>. </p>
 <p> This command depends on the feature <code>&quot;lvm2&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>pvremove</h3>
 <pre><code> pvremove device
 </code></pre>
-<p> This wipes a physical volume <code>&quot;device&quot;</code> so that <font SIZE="-1">LVM</font> will no longer recognise it. </p>
+<p> This wipes a physical volume <code>&quot;device&quot;</code> so that LVM will no longer recognise it. </p>
 <p> The implementation uses the <code>&quot;pvremove&quot;</code> command which refuses to wipe physical volumes that contain any volume groups, so you have to remove those first. </p>
 <p> This command depends on the feature <code>&quot;lvm2&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>pvresize</h3>
 <pre><code> pvresize device
 </code></pre>
-<p> This resizes (expands or shrinks) an existing <font SIZE="-1">LVM</font> physical volume to match the new size of the underlying device. </p>
+<p> This resizes (expands or shrinks) an existing LVM physical volume to match the new size of the underlying device. </p>
 <p> This command depends on the feature <code>&quot;lvm2&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>pvresize-size</h3>
 <pre><code> pvresize-size device size
@@ -4210,26 +4210,26 @@ description: "guestfish – the guest filesystem shell"
 <h3>pvuuid</h3>
 <pre><code> pvuuid device
 </code></pre>
-<p> This command returns the <font SIZE="-1">UUID</font> of the <font SIZE="-1">LVM PV </font><code>&quot;device&quot;</code>.  </p>
+<p> This command returns the UUID of the LVM PV <code>&quot;device&quot;</code>.  </p>
 <h3>pwrite</h3>
 <pre><code> pwrite path content offset
 </code></pre>
 <p> This command writes to part of a file. It writes the data buffer <code>&quot;content&quot;</code> to the file <code>&quot;path&quot;</code> starting at offset <code>&quot;offset&quot;</code>. </p>
 <p> This command implements the <i><a href="/docs/linux/man/2-pwrite/">pwrite</a></i>(2) system call, and like that system call it may not write the full data requested. The return value is the number of bytes that were actually written to the file. This could even be 0, although short writes are unlikely for regular files in ordinary circumstances. </p>
 <p> See also ``pread&#8217;&#8216;, ``pwrite-device&#8217;&#8216;. </p>
-<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``<font SIZE="-1">PROTOCOL LIMITS&#8217;&#8216;</font> in <i>guestfs</i>(3).  </p>
+<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``PROTOCOL LIMITS&#8217;&#8216; in <i>guestfs</i>(3).  </p>
 <h3>pwrite-device</h3>
 <pre><code> pwrite-device device content offset
 </code></pre>
 <p> This command writes to part of a device. It writes the data buffer <code>&quot;content&quot;</code> to <code>&quot;device&quot;</code> starting at offset <code>&quot;offset&quot;</code>. </p>
 <p> This command implements the <i><a href="/docs/linux/man/2-pwrite/">pwrite</a></i>(2) system call, and like that system call it may not write the full data requested (although short writes to disk devices and partitions are probably impossible with standard Linux kernels). </p>
 <p> See also ``pwrite&#8217;&#8216;. </p>
-<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``<font SIZE="-1">PROTOCOL LIMITS&#8217;&#8216;</font> in <i>guestfs</i>(3).  </p>
+<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``PROTOCOL LIMITS&#8217;&#8216; in <i>guestfs</i>(3).  </p>
 <h3>read-file</h3>
 <pre><code> read-file path
 </code></pre>
 <p> This calls returns the contents of the file <code>&quot;path&quot;</code> as a buffer. </p>
-<p> Unlike ``cat&#8217;&#8216;, this function can correctly handle files that contain embedded <font SIZE="-1">ASCII NUL</font> characters.  </p>
+<p> Unlike ``cat&#8217;&#8216;, this function can correctly handle files that contain embedded ASCII NUL characters.  </p>
 <h3>read-lines</h3>
 <pre><code> read-lines path
 </code></pre>
@@ -4253,7 +4253,7 @@ description: "guestfish – the guest filesystem shell"
 <dd> <p> Directory </p>
  </dd>
 <dt>&#8216;f&#8217;</dt>
-<dd> <p> <font SIZE="-1">FIFO </font>(named pipe) </p>
+<dd> <p> FIFO (named pipe) </p>
  </dd>
 <dt>&#8216;l&#8217;</dt>
 <dd> <p> Symbolic link </p>
@@ -4271,7 +4271,7 @@ description: "guestfish – the guest filesystem shell"
 <dd> <p> The <i><a href="/docs/linux/man/3-readdir/">readdir</a></i>(3) call returned a <code>&quot;d_type&quot;</code> field with an unexpected value </p>
  </dd></dl>
 <p> This function is primarily intended for use by programs. To get a simple list of names, use ``ls&#8217;&#8216;. To get a printable directory for human consumption, use ``ll&#8217;&#8216;. </p>
-<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``<font SIZE="-1">PROTOCOL LIMITS&#8217;&#8216;</font> in <i>guestfs</i>(3).  </p>
+<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``PROTOCOL LIMITS&#8217;&#8216; in <i>guestfs</i>(3).  </p>
 <h3>readlink</h3>
 <pre><code> readlink path
 </code></pre>
@@ -4292,13 +4292,13 @@ description: "guestfish – the guest filesystem shell"
 </code></pre>
 <p> This call allows you to change the <code>&quot;rw&quot;</code> (readonly/read-write) flag on an already mounted filesystem at <code>&quot;mountpoint&quot;</code>, converting a readonly filesystem to be read-write, or vice-versa. </p>
 <p> Note that at the moment you must supply the ``optional&#8217;&#8216; <code>&quot;rw&quot;</code> parameter. In future we may allow other flags to be adjusted. </p>
-<p> This command has one or more optional arguments. See ``<font SIZE="-1">OPTIONAL ARGUMENTS&#8217;&#8216;</font>.  </p>
+<p> This command has one or more optional arguments. See ``OPTIONAL ARGUMENTS&#8217;&#8216;.  </p>
 <h3>remove-drive</h3>
 <pre><code> remove-drive label
 </code></pre>
 <p> This function is conceptually the opposite of ``add-drive-opts&#8217;&#8216;. It removes the drive that was previously added with label <code>&quot;label&quot;</code>. </p>
 <p> Note that in order to remove drives, you have to add them with labels (see the optional <code>&quot;label&quot;</code> argument to ``add-drive-opts&#8217;&#8216;). If you didn&#8217;t use a label, then they cannot be removed. </p>
-<p> You can call this function before or after launching the handle. If called after launch, if the backend supports it, we try to hot unplug the drive: see ``<font SIZE="-1">HOTPLUGGING&#8217;&#8216;</font> in <i>guestfs</i>(3). The disk <code>must not</code> be in use (eg. mounted) when you do this. We try to detect if the disk is in use and stop you from doing this.  </p>
+<p> You can call this function before or after launching the handle. If called after launch, if the backend supports it, we try to hot unplug the drive: see ``HOTPLUGGING&#8217;&#8216; in <i>guestfs</i>(3). The disk <code>must not</code> be in use (eg. mounted) when you do this. We try to detect if the disk is in use and stop you from doing this.  </p>
 <h3>removexattr</h3>
 <pre><code> removexattr xattr path
 </code></pre>
@@ -4313,18 +4313,18 @@ description: "guestfish – the guest filesystem shell"
 <pre><code> resize2fs device
 </code></pre>
 <p> This resizes an ext2, ext3 or ext4 filesystem to match the size of the underlying device. </p>
-<p> See also ``<font SIZE="-1">RESIZE2FS ERRORS&#8217;&#8216;</font> in <i>guestfs</i>(3).  </p>
+<p> See also ``RESIZE2FS ERRORS&#8217;&#8216; in <i>guestfs</i>(3).  </p>
 <h3>resize2fs-M</h3>
 <pre><code> resize2fs-M device
 </code></pre>
 <p> This command is the same as ``resize2fs&#8217;&#8216;, but the filesystem is resized to its minimum size. This works like the <i>-M</i> option to the <code>&quot;resize2fs&quot;</code> command. </p>
 <p> To get the resulting size of the filesystem you should call ``tune2fs-l&#8217;&#8216; and read the <code>&quot;Block size&quot;</code> and <code>&quot;Block count&quot;</code> values. These two numbers, multiplied together, give the resulting size of the minimal filesystem in bytes. </p>
-<p> See also ``<font SIZE="-1">RESIZE2FS ERRORS&#8217;&#8216;</font> in <i>guestfs</i>(3).  </p>
+<p> See also ``RESIZE2FS ERRORS&#8217;&#8216; in <i>guestfs</i>(3).  </p>
 <h3>resize2fs-size</h3>
 <pre><code> resize2fs-size device size
 </code></pre>
 <p> This command is the same as ``resize2fs&#8217;&#8216; except that it allows you to specify the new size (in bytes) explicitly. </p>
-<p> See also ``<font SIZE="-1">RESIZE2FS ERRORS&#8217;&#8216;</font> in <i>guestfs</i>(3).  </p>
+<p> See also ``RESIZE2FS ERRORS&#8217;&#8216; in <i>guestfs</i>(3).  </p>
 <h3>rm</h3>
 <pre><code> rm path
 </code></pre>
@@ -4360,7 +4360,7 @@ description: "guestfish – the guest filesystem shell"
 <dt>&quot;deletedest&quot;</dt>
 <dd> <p> Delete files at the destination that do not exist at the source. </p>
  </dd></dl>
-<p> This command has one or more optional arguments. See ``<font SIZE="-1">OPTIONAL ARGUMENTS&#8217;&#8216;</font>. </p>
+<p> This command has one or more optional arguments. See ``OPTIONAL ARGUMENTS&#8217;&#8216;. </p>
 <p> This command depends on the feature <code>&quot;rsync&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>rsync-in</h3>
 <pre><code> rsync-in remote dest [archive:true|false] [deletedest:true|false]
@@ -4370,7 +4370,7 @@ description: "guestfish – the guest filesystem shell"
 <p> Files are copied from the remote server and directory specified by <code>&quot;remote&quot;</code> to the destination directory <code>&quot;dest&quot;</code>. </p>
 <p> The format of the remote server string is defined by <i><a href="/docs/linux/man/1-rsync/">rsync</a></i>(1). Note that there is no way to supply a password or passphrase so the target must be set up not to require one. </p>
 <p> The optional arguments are the same as those of ``rsync&#8217;&#8216;. </p>
-<p> This command has one or more optional arguments. See ``<font SIZE="-1">OPTIONAL ARGUMENTS&#8217;&#8216;</font>. </p>
+<p> This command has one or more optional arguments. See ``OPTIONAL ARGUMENTS&#8217;&#8216;. </p>
 <p> This command depends on the feature <code>&quot;rsync&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>rsync-out</h3>
 <pre><code> rsync-out src remote [archive:true|false] [deletedest:true|false]
@@ -4380,10 +4380,10 @@ description: "guestfish – the guest filesystem shell"
 <p> Files are copied from the source directory <code>&quot;src&quot;</code> to the remote server and directory specified by <code>&quot;remote&quot;</code>. </p>
 <p> The format of the remote server string is defined by <i><a href="/docs/linux/man/1-rsync/">rsync</a></i>(1). Note that there is no way to supply a password or passphrase so the target must be set up not to require one. </p>
 <p> The optional arguments are the same as those of ``rsync&#8217;&#8216;. </p>
-<p> Globbing does not happen on the <code>&quot;src&quot;</code> parameter. In programs which use the <font SIZE="-1">API</font> directly you have to expand wildcards yourself (see ``glob-expand&#8217;&#8216;). In guestfish you can use the <code>&quot;glob&quot;</code> command (see ``glob&#8217;&#8216;), for example: </p>
+<p> Globbing does not happen on the <code>&quot;src&quot;</code> parameter. In programs which use the API directly you have to expand wildcards yourself (see ``glob-expand&#8217;&#8216;). In guestfish you can use the <code>&quot;glob&quot;</code> command (see ``glob&#8217;&#8216;), for example: </p>
 <pre><code> &gt;&lt;fs&gt; glob rsync-out /*rsync://remote/
 </code></pre>
-<p> This command has one or more optional arguments. See ``<font SIZE="-1">OPTIONAL ARGUMENTS&#8217;&#8216;</font>. </p>
+<p> This command has one or more optional arguments. See ``OPTIONAL ARGUMENTS&#8217;&#8216;. </p>
 <p> This command depends on the feature <code>&quot;rsync&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>scrub-device</h3>
 <pre><code> scrub-device device
@@ -4411,7 +4411,7 @@ description: "guestfish – the guest filesystem shell"
 <p> The <code>&quot;specfile&quot;</code> parameter controls the policy spec file used. You have to parse <code>&quot;/etc/selinux/config&quot;</code> to find the correct SELinux policy and then pass the spec file, usually: <code>&quot;/etc/selinux/&quot;</code> + <i>selinuxtype</i> + <code>&quot;/contexts/files/file_contexts&quot;</code>. </p>
 <p> The required <code>&quot;path&quot;</code> parameter is the top level directory where relabelling starts. Normally you should pass <code>&quot;path&quot;</code> as <code>&quot;/&quot;</code> to relabel the whole guest filesystem. </p>
 <p> The optional <code>&quot;force&quot;</code> boolean controls whether the context is reset for customizable files, and also whether the user, role and range parts of the file context is changed. </p>
-<p> This command has one or more optional arguments. See ``<font SIZE="-1">OPTIONAL ARGUMENTS&#8217;&#8216;</font>. </p>
+<p> This command has one or more optional arguments. See ``OPTIONAL ARGUMENTS&#8217;&#8216;. </p>
 <p> This command depends on the feature <code>&quot;selinuxrelabel&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>set-append</h3>
 <h3>append</h3>
@@ -4425,9 +4425,9 @@ description: "guestfish – the guest filesystem shell"
 <pre><code> set-attach-method backend
 </code></pre>
 <p> Set the method that libguestfs uses to connect to the backend guestfsd daemon. </p>
-<p> See ``<font SIZE="-1">BACKEND&#8217;&#8216;</font> in <i>guestfs</i>(3). </p>
+<p> See ``BACKEND&#8217;&#8216; in <i>guestfs</i>(3). </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``set-backend&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
 <h3>set-autosync</h3>
 <h3>autosync</h3>
 <pre><code> set-autosync true|false
@@ -4440,24 +4440,24 @@ description: "guestfish – the guest filesystem shell"
 </code></pre>
 <p> Set the method that libguestfs uses to connect to the backend guestfsd daemon. </p>
 <p> This handle property was previously called the ``attach method&#8217;&#8216;. </p>
-<p> See ``<font SIZE="-1">BACKEND&#8217;&#8216;</font> in <i>guestfs</i>(3).  </p>
+<p> See ``BACKEND&#8217;&#8216; in <i>guestfs</i>(3).  </p>
 <h3>set-backend-setting</h3>
 <pre><code> set-backend-setting name val
 </code></pre>
 <p> Append <code>&quot;name=value&quot;</code> to the backend settings string list. However if a string already exists matching <code>&quot;name&quot;</code> or beginning with <code>&quot;name=&quot;</code>, then that setting is replaced. </p>
-<p> See ``<font SIZE="-1">BACKEND&#8217;&#8216;</font> in <i>guestfs</i>(3), ``<font SIZE="-1">BACKEND SETTINGS&#8217;&#8216;</font> in <i>guestfs</i>(3).  </p>
+<p> See ``BACKEND&#8217;&#8216; in <i>guestfs</i>(3), ``BACKEND SETTINGS&#8217;&#8216; in <i>guestfs</i>(3).  </p>
 <h3>set-backend-settings</h3>
 <pre><code> set-backend-settings 'settings ...'
 </code></pre>
 <p> Set a list of zero or more settings which are passed through to the current backend. Each setting is a string which is interpreted in a backend-specific way, or ignored if not understood by the backend. </p>
 <p> The default value is an empty list, unless the environment variable <code>&quot;LIBGUESTFS_BACKEND_SETTINGS&quot;</code> was set when the handle was created. This environment variable contains a colon-separated list of settings. </p>
 <p> This call replaces all backend settings. If you want to replace a single backend setting, see ``set-backend-setting&#8217;&#8216;. If you want to clear a single backend setting, see ``clear-backend-setting&#8217;&#8216;. </p>
-<p> See ``<font SIZE="-1">BACKEND&#8217;&#8216;</font> in <i>guestfs</i>(3), ``<font SIZE="-1">BACKEND SETTINGS&#8217;&#8216;</font> in <i>guestfs</i>(3).  </p>
+<p> See ``BACKEND&#8217;&#8216; in <i>guestfs</i>(3), ``BACKEND SETTINGS&#8217;&#8216; in <i>guestfs</i>(3).  </p>
 <h3>set-cachedir</h3>
 <h3>cachedir</h3>
 <pre><code> set-cachedir cachedir
 </code></pre>
-<p> Set the directory used by the handle to store the appliance cache, when using a supermin appliance. The appliance is cached and shared between all handles which have the same effective user <font SIZE="-1">ID.</font> </p>
+<p> Set the directory used by the handle to store the appliance cache, when using a supermin appliance. The appliance is cached and shared between all handles which have the same effective user ID. </p>
 <p> The environment variables <code>&quot;LIBGUESTFS_CACHEDIR&quot;</code> and <code>&quot;TMPDIR&quot;</code> control the default value: If <code>&quot;LIBGUESTFS_CACHEDIR&quot;</code> is set, then that is the default. Else if <code>&quot;TMPDIR&quot;</code> is set, then that is the default. Else <i>/var/tmp</i> is the default.  </p>
 <h3>set-direct</h3>
 <h3>direct</h3>
@@ -4476,7 +4476,7 @@ description: "guestfish – the guest filesystem shell"
 <p> If <code>&quot;clear&quot;</code> is true, then the <code>&quot;attrs&quot;</code> listed are cleared in the inode. </p>
 <p> In both cases, other attributes not present in the <code>&quot;attrs&quot;</code> string are left unchanged. </p>
 <p> These attributes are only present when the file is located on an ext2/3/4 filesystem. Using this call on other filesystem types will result in an error. </p>
-<p> This command has one or more optional arguments. See ``<font SIZE="-1">OPTIONAL ARGUMENTS&#8217;&#8216;</font>.  </p>
+<p> This command has one or more optional arguments. See ``OPTIONAL ARGUMENTS&#8217;&#8216;.  </p>
 <h3>set-e2generation</h3>
 <pre><code> set-e2generation file generation
 </code></pre>
@@ -4488,14 +4488,14 @@ description: "guestfish – the guest filesystem shell"
 <p> This sets the ext2/3/4 filesystem label of the filesystem on <code>&quot;device&quot;</code> to <code>&quot;label&quot;</code>. Filesystem labels are limited to 16 characters. </p>
 <p> You can use either ``tune2fs-l&#8217;&#8216; or ``get-e2label&#8217;&#8216; to return the existing label on a filesystem. </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``set-label&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
 <h3>set-e2uuid</h3>
 <pre><code> set-e2uuid device uuid
 </code></pre>
-<p> This sets the ext2/3/4 filesystem <font SIZE="-1">UUID</font> of the filesystem on <code>&quot;device&quot;</code> to <code>&quot;uuid&quot;</code>. The format of the <font SIZE="-1">UUID</font> and alternatives such as <code>&quot;clear&quot;</code>, <code>&quot;random&quot;</code> and <code>&quot;time&quot;</code> are described in the <i><a href="/docs/linux/man/8-tune2fs/">tune2fs</a></i>(8) manpage. </p>
-<p> You can use ``vfs-uuid&#8217;&#8216; to return the existing <font SIZE="-1">UUID</font> of a filesystem. </p>
+<p> This sets the ext2/3/4 filesystem UUID of the filesystem on <code>&quot;device&quot;</code> to <code>&quot;uuid&quot;</code>. The format of the UUID and alternatives such as <code>&quot;clear&quot;</code>, <code>&quot;random&quot;</code> and <code>&quot;time&quot;</code> are described in the <i><a href="/docs/linux/man/8-tune2fs/">tune2fs</a></i>(8) manpage. </p>
+<p> You can use ``vfs-uuid&#8217;&#8216; to return the existing UUID of a filesystem. </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``set-uuid&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
 <h3>set-hv</h3>
 <h3>hv</h3>
 <pre><code> set-hv hv
@@ -4518,7 +4518,7 @@ description: "guestfish – the guest filesystem shell"
  libguestfs: trace: ID: get_tmpdir = &quot;/tmp&quot;
 </code></pre>
 <p> where <code>&quot;ID&quot;</code> is the identifier string set by this call. </p>
-<p> The identifier must only contain alphanumeric <font SIZE="-1">ASCII</font> characters, underscore and minus sign. The default is the empty string. </p>
+<p> The identifier must only contain alphanumeric ASCII characters, underscore and minus sign. The default is the empty string. </p>
 <p> See also ``set-program&#8217;&#8216;, ``set-trace&#8217;&#8216;, ``get-identifier&#8217;&#8216;.  </p>
 <h3>set-label</h3>
 <pre><code> set-label mountable label
@@ -4529,10 +4529,10 @@ description: "guestfish – the guest filesystem shell"
 <dt>ext2, ext3, ext4</dt>
 <dd> <p> Labels are limited to 16 bytes. </p>
  </dd>
-<dt><font SIZE="-1">NTFS</font></dt>
+<dt>NTFS</dt>
 <dd> <p> Labels are limited to 128 unicode characters. </p>
  </dd>
-<dt><font SIZE="-1">XFS</font></dt>
+<dt>XFS</dt>
 <dd> <p> The label is limited to 12 bytes. The filesystem must not be mounted when trying to set the label. </p>
  </dd>
 <dt>btrfs</dt>
@@ -4541,13 +4541,13 @@ description: "guestfish – the guest filesystem shell"
 <dt>fat</dt>
 <dd> <p> The label is limited to 11 bytes. </p>
  </dd></dl>
-<p> If there is no support for changing the label for the type of the specified filesystem, set_label will fail and set errno as <font SIZE="-1">ENOTSUP.</font> </p>
+<p> If there is no support for changing the label for the type of the specified filesystem, set_label will fail and set errno as ENOTSUP. </p>
 <p> To read the label on a filesystem, call ``vfs-label&#8217;&#8216;.  </p>
 <h3>set-libvirt-requested-credential</h3>
 <pre><code> set-libvirt-requested-credential index cred
 </code></pre>
 <p> After requesting the <code>&quot;index&quot;</code>&#8216;th credential from the user, call this function to pass the answer back to libvirt. </p>
-<p> See ``<font SIZE="-1">LIBVIRT AUTHENTICATION&#8217;&#8216;</font> in <i>guestfs</i>(3) for documentation and example code.  </p>
+<p> See ``LIBVIRT AUTHENTICATION&#8217;&#8216; in <i>guestfs</i>(3) for documentation and example code.  </p>
 <h3>set-libvirt-supported-credentials</h3>
 <pre><code> set-libvirt-supported-credentials 'creds ...'
 </code></pre>
@@ -4573,7 +4573,7 @@ description: "guestfish – the guest filesystem shell"
 <dt>&quot;external&quot;</dt>
 <dd>  </dd></dl>
 <p> See libvirt documentation for the meaning of these credential types. </p>
-<p> See ``<font SIZE="-1">LIBVIRT AUTHENTICATION&#8217;&#8216;</font> in <i>guestfs</i>(3) for documentation and example code.  </p>
+<p> See ``LIBVIRT AUTHENTICATION&#8217;&#8216; in <i>guestfs</i>(3) for documentation and example code.  </p>
 <h3>set-memsize</h3>
 <h3>memsize</h3>
 <pre><code> set-memsize memsize
@@ -4586,7 +4586,7 @@ description: "guestfish – the guest filesystem shell"
 <pre><code> set-network true|false
 </code></pre>
 <p> If <code>&quot;network&quot;</code> is true, then the network is enabled in the libguestfs appliance. The default is false. </p>
-<p> This affects whether commands are able to access the network (see ``<font SIZE="-1">RUNNING COMMANDS&#8217;&#8216;</font> in <i>guestfs</i>(3)). </p>
+<p> This affects whether commands are able to access the network (see ``RUNNING COMMANDS&#8217;&#8216; in <i>guestfs</i>(3)). </p>
 <p> You must call this before calling ``launch&#8217;&#8216;, otherwise it has no effect.  </p>
 <h3>set-path</h3>
 <h3>path</h3>
@@ -4618,7 +4618,7 @@ description: "guestfish – the guest filesystem shell"
 <p> Setting <code>&quot;hv&quot;</code> to <code>&quot;NULL&quot;</code> restores the default qemu binary. </p>
 <p> Note that you should call this function as early as possible after creating the handle. This is because some pre-launch operations depend on testing qemu features (by running <code>&quot;qemu -help&quot;</code>). If the qemu binary changes, we don&#8217;t retest features, and so you might see inconsistent results. Using the environment variable <code>&quot;LIBGUESTFS_HV&quot;</code> is safest of all since that picks the qemu binary at the same time as the handle is created. </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``set-hv&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
 <h3>set-recovery-proc</h3>
 <h3>recovery-proc</h3>
 <pre><code> set-recovery-proc true|false
@@ -4634,7 +4634,7 @@ description: "guestfish – the guest filesystem shell"
 <p> Note that if SELinux is enabled, it is always in Permissive mode (<code>&quot;enforcing=0&quot;</code>). </p>
 <p> For more information on the architecture of libguestfs, see <i>guestfs</i>(3). </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``selinux-relabel&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
 <h3>set-smp</h3>
 <h3>smp</h3>
 <pre><code> set-smp smp
@@ -4652,21 +4652,21 @@ description: "guestfish – the guest filesystem shell"
 <pre><code> set-trace true|false
 </code></pre>
 <p> If the command trace flag is set to 1, then libguestfs calls, parameters and return values are traced. </p>
-<p> If you want to trace C <font SIZE="-1">API</font> calls into libguestfs (and other libraries) then possibly a better way is to use the external <i><a href="/docs/linux/man/1-ltrace/">ltrace</a></i>(1) command. </p>
+<p> If you want to trace C API calls into libguestfs (and other libraries) then possibly a better way is to use the external <i><a href="/docs/linux/man/1-ltrace/">ltrace</a></i>(1) command. </p>
 <p> Command traces are disabled unless the environment variable <code>&quot;LIBGUESTFS_TRACE&quot;</code> is defined and set to <code>1</code>. </p>
 <p> Trace messages are normally sent to <code>&quot;stderr&quot;</code>, unless you register a callback to send them somewhere else (see ``set-event-callback&#8217;&#8216;).  </p>
 <h3>set-uuid</h3>
 <pre><code> set-uuid device uuid
 </code></pre>
-<p> Set the filesystem <font SIZE="-1">UUID</font> on <code>&quot;device&quot;</code> to <code>&quot;uuid&quot;</code>. If this fails and the errno is <font SIZE="-1">ENOTSUP,</font> means that there is no support for changing the <font SIZE="-1">UUID</font> for the type of the specified filesystem. </p>
+<p> Set the filesystem UUID on <code>&quot;device&quot;</code> to <code>&quot;uuid&quot;</code>. If this fails and the errno is ENOTSUP, means that there is no support for changing the UUID for the type of the specified filesystem. </p>
 <p> Only some filesystem types support setting UUIDs. </p>
-<p> To read the <font SIZE="-1">UUID</font> on a filesystem, call ``vfs-uuid&#8217;&#8216;.  </p>
+<p> To read the UUID on a filesystem, call ``vfs-uuid&#8217;&#8216;.  </p>
 <h3>set-uuid-random</h3>
 <pre><code> set-uuid-random device
 </code></pre>
-<p> Set the filesystem <font SIZE="-1">UUID</font> on <code>&quot;device&quot;</code> to a random <font SIZE="-1">UUID.</font> If this fails and the errno is <font SIZE="-1">ENOTSUP,</font> means that there is no support for changing the <font SIZE="-1">UUID</font> for the type of the specified filesystem. </p>
+<p> Set the filesystem UUID on <code>&quot;device&quot;</code> to a random UUID. If this fails and the errno is ENOTSUP, means that there is no support for changing the UUID for the type of the specified filesystem. </p>
 <p> Only some filesystem types support setting UUIDs. </p>
-<p> To read the <font SIZE="-1">UUID</font> on a filesystem, call ``vfs-uuid&#8217;&#8216;.  </p>
+<p> To read the UUID on a filesystem, call ``vfs-uuid&#8217;&#8216;.  </p>
 <h3>set-verbose</h3>
 <h3>verbose</h3>
 <pre><code> set-verbose true|false
@@ -4678,9 +4678,9 @@ description: "guestfish – the guest filesystem shell"
 <pre><code> setcon context
 </code></pre>
 <p> This sets the SELinux security context of the daemon to the string <code>&quot;context&quot;</code>. </p>
-<p> See the documentation about <font SIZE="-1">SELINUX</font> in <i>guestfs</i>(3). </p>
+<p> See the documentation about SELINUX in <i>guestfs</i>(3). </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``selinux-relabel&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions. </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions. </p>
 <p> This command depends on the feature <code>&quot;selinux&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>setxattr</h3>
 <pre><code> setxattr xattr val vallen path
@@ -4698,14 +4698,14 @@ description: "guestfish – the guest filesystem shell"
 <p> To create a single partition occupying the whole disk, you would pass <code>&quot;lines&quot;</code> as a single element list, when the single element being the string <code>&quot;,&quot;</code> (comma). </p>
 <p> See also: ``sfdisk-l&#8217;&#8216;, ``sfdisk-N&#8217;&#8216;, ``part-init&#8217;&#8216; </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``part-add&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
 <h3>sfdiskM</h3>
 <pre><code> sfdiskM device 'lines ...'
 </code></pre>
 <p> This is a simplified interface to the ``sfdisk&#8217;&#8216; command, where partition sizes are specified in megabytes only (rounded to the nearest cylinder) and you don&#8217;t need to specify the cyls, heads and sectors parameters which were rarely if ever used anyway. </p>
 <p> See also: ``sfdisk&#8217;&#8216;, the <i><a href="/docs/linux/man/8-sfdisk/">sfdisk</a></i>(8) manpage and ``part-disk&#8217;&#8216; </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``part-add&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
 <h3>sfdisk-N</h3>
 <pre><code> sfdisk-N device partnum cyls heads sectors line
 </code></pre>
@@ -4713,7 +4713,7 @@ description: "guestfish – the guest filesystem shell"
 <p> For other parameters, see ``sfdisk&#8217;&#8216;. You should usually pass <code>0</code> for the cyls/heads/sectors parameters. </p>
 <p> See also: ``part-add&#8217;&#8216; </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``part-add&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
 <h3>sfdisk-disk-geometry</h3>
 <pre><code> sfdisk-disk-geometry device
 </code></pre>
@@ -4730,7 +4730,7 @@ description: "guestfish – the guest filesystem shell"
 <p> This displays the partition table on <code>&quot;device&quot;</code>, in the human-readable output of the <i><a href="/docs/linux/man/8-sfdisk/">sfdisk</a></i>(8) command. It is not intended to be parsed. </p>
 <p> See also: ``part-list&#8217;&#8216; </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``part-list&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
 <h3>sh</h3>
 <pre><code> sh command
 </code></pre>
@@ -4763,7 +4763,7 @@ description: "guestfish – the guest filesystem shell"
 <p> Returns file information for the given <code>&quot;path&quot;</code>. </p>
 <p> This is the same as the <i><a href="/docs/linux/man/2-stat/">stat</a></i>(2) system call. </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``statns&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
 <h3>statns</h3>
 <pre><code> statns path
 </code></pre>
@@ -4778,8 +4778,8 @@ description: "guestfish – the guest filesystem shell"
 <pre><code> strings path
 </code></pre>
 <p> This runs the <i><a href="/docs/linux/man/1-strings/">strings</a></i>(1) command on a file and returns the list of printable strings found. </p>
-<p> The <code>&quot;strings&quot;</code> command has, in the past, had problems with parsing untrusted files. These are mitigated in the current version of libguestfs, but see ``<font SIZE="-1">CVE-2014-8484&#8217;&#8216;</font> in <i>guestfs</i>(3). </p>
-<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``<font SIZE="-1">PROTOCOL LIMITS&#8217;&#8216;</font> in <i>guestfs</i>(3).  </p>
+<p> The <code>&quot;strings&quot;</code> command has, in the past, had problems with parsing untrusted files. These are mitigated in the current version of libguestfs, but see ``CVE-2014-8484&#8217;&#8216; in <i>guestfs</i>(3). </p>
+<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``PROTOCOL LIMITS&#8217;&#8216; in <i>guestfs</i>(3).  </p>
 <h3>strings-e</h3>
 <pre><code> strings-e encoding path
 </code></pre>
@@ -4787,26 +4787,26 @@ description: "guestfish – the guest filesystem shell"
 <p> Allowed encodings are: </p>
 <dl>
 <dt>s</dt>
-<dd> <p> Single 7-bit-byte characters like <font SIZE="-1">ASCII</font> and the ASCII-compatible parts of <font SIZE="-1">ISO-8859-X </font>(this is what ``strings&#8217;&#8216; uses). </p>
+<dd> <p> Single 7-bit-byte characters like ASCII and the ASCII-compatible parts of ISO-8859-X (this is what ``strings&#8217;&#8216; uses). </p>
  </dd>
 <dt>S</dt>
 <dd> <p> Single 8-bit-byte characters. </p>
  </dd>
 <dt>b</dt>
-<dd> <p> 16-bit big endian strings such as those encoded in <font SIZE="-1">UTF-16BE</font> or <font SIZE="-1">UCS-2BE.</font> </p>
+<dd> <p> 16-bit big endian strings such as those encoded in UTF-16BE or UCS-2BE. </p>
  </dd>
 <dt>l (lower case letter L)</dt>
-<dd> <p> 16-bit little endian such as <font SIZE="-1">UTF-16LE</font> and <font SIZE="-1">UCS-2LE.</font> This is useful for examining binaries in Windows guests. </p>
+<dd> <p> 16-bit little endian such as UTF-16LE and UCS-2LE. This is useful for examining binaries in Windows guests. </p>
  </dd>
 <dt>B</dt>
-<dd> <p> 32-bit big endian such as <font SIZE="-1">UCS-4BE.</font> </p>
+<dd> <p> 32-bit big endian such as UCS-4BE. </p>
  </dd>
 <dt>L</dt>
-<dd> <p> 32-bit little endian such as <font SIZE="-1">UCS-4LE.</font> </p>
+<dd> <p> 32-bit little endian such as UCS-4LE. </p>
  </dd></dl>
-<p> The returned strings are transcoded to <font SIZE="-1">UTF-8.</font> </p>
-<p> The <code>&quot;strings&quot;</code> command has, in the past, had problems with parsing untrusted files. These are mitigated in the current version of libguestfs, but see ``<font SIZE="-1">CVE-2014-8484&#8217;&#8216;</font> in <i>guestfs</i>(3). </p>
-<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``<font SIZE="-1">PROTOCOL LIMITS&#8217;&#8216;</font> in <i>guestfs</i>(3).  </p>
+<p> The returned strings are transcoded to UTF-8. </p>
+<p> The <code>&quot;strings&quot;</code> command has, in the past, had problems with parsing untrusted files. These are mitigated in the current version of libguestfs, but see ``CVE-2014-8484&#8217;&#8216; in <i>guestfs</i>(3). </p>
+<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``PROTOCOL LIMITS&#8217;&#8216; in <i>guestfs</i>(3).  </p>
 <h3>swapoff-device</h3>
 <pre><code> swapoff-device device
 </code></pre>
@@ -4822,7 +4822,7 @@ description: "guestfish – the guest filesystem shell"
 <h3>swapoff-uuid</h3>
 <pre><code> swapoff-uuid uuid
 </code></pre>
-<p> This command disables the libguestfs appliance swap partition with the given <font SIZE="-1">UUID.</font> </p>
+<p> This command disables the libguestfs appliance swap partition with the given UUID. </p>
 <p> This command depends on the feature <code>&quot;linuxfsuuid&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>swapon-device</h3>
 <pre><code> swapon-device device
@@ -4840,7 +4840,7 @@ description: "guestfish – the guest filesystem shell"
 <h3>swapon-uuid</h3>
 <pre><code> swapon-uuid uuid
 </code></pre>
-<p> This command enables swap to a swap partition with the given <font SIZE="-1">UUID.</font> See ``swapon-device&#8217;&#8216; for other notes. </p>
+<p> This command enables swap to a swap partition with the given UUID. See ``swapon-device&#8217;&#8216; for other notes. </p>
 <p> This command depends on the feature <code>&quot;linuxfsuuid&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>sync</h3>
 <pre><code> sync
@@ -4850,29 +4850,29 @@ description: "guestfish – the guest filesystem shell"
 <h3>syslinux</h3>
 <pre><code> syslinux device [directory:..]
 </code></pre>
-<p> Install the <font SIZE="-1">SYSLINUX</font> bootloader on <code>&quot;device&quot;</code>. </p>
-<p> The device parameter must be either a whole disk formatted as a <font SIZE="-1">FAT</font> filesystem, or a partition formatted as a <font SIZE="-1">FAT</font> filesystem. In the latter case, the partition should be marked as ``active&#8217;&#8216; (``part-set-bootable&#8217;&#8216;) and a Master Boot Record must be installed (eg. using ``pwrite-device&#8217;&#8216;) on the first sector of the whole disk. The <font SIZE="-1">SYSLINUX</font> package comes with some suitable Master Boot Records. See the <i><a href="/docs/linux/man/1-syslinux/">syslinux</a></i>(1) man page for further information. </p>
+<p> Install the SYSLINUX bootloader on <code>&quot;device&quot;</code>. </p>
+<p> The device parameter must be either a whole disk formatted as a FAT filesystem, or a partition formatted as a FAT filesystem. In the latter case, the partition should be marked as ``active&#8217;&#8216; (``part-set-bootable&#8217;&#8216;) and a Master Boot Record must be installed (eg. using ``pwrite-device&#8217;&#8216;) on the first sector of the whole disk. The SYSLINUX package comes with some suitable Master Boot Records. See the <i><a href="/docs/linux/man/1-syslinux/">syslinux</a></i>(1) man page for further information. </p>
 <p> The optional arguments are: </p>
 <dl>
 <dt><i>directory</i></dt>
-<dd> <p> Install <font SIZE="-1">SYSLINUX</font> in the named subdirectory, instead of in the root directory of the <font SIZE="-1">FAT</font> filesystem. </p>
+<dd> <p> Install SYSLINUX in the named subdirectory, instead of in the root directory of the FAT filesystem. </p>
  </dd></dl>
-<p> Additional configuration can be supplied to <font SIZE="-1">SYSLINUX</font> by placing a file called <i>syslinux.cfg</i> on the <font SIZE="-1">FAT</font> filesystem, either in the root directory, or under <i>directory</i> if that optional argument is being used. For further information about the contents of this file, see <i><a href="/docs/linux/man/1-syslinux/">syslinux</a></i>(1). </p>
+<p> Additional configuration can be supplied to SYSLINUX by placing a file called <i>syslinux.cfg</i> on the FAT filesystem, either in the root directory, or under <i>directory</i> if that optional argument is being used. For further information about the contents of this file, see <i><a href="/docs/linux/man/1-syslinux/">syslinux</a></i>(1). </p>
 <p> See also ``extlinux&#8217;&#8216;. </p>
-<p> This command has one or more optional arguments. See ``<font SIZE="-1">OPTIONAL ARGUMENTS&#8217;&#8216;</font>. </p>
+<p> This command has one or more optional arguments. See ``OPTIONAL ARGUMENTS&#8217;&#8216;. </p>
 <p> This command depends on the feature <code>&quot;syslinux&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>tail</h3>
 <pre><code> tail path
 </code></pre>
 <p> This command returns up to the last 10 lines of a file as a list of strings. </p>
-<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``<font SIZE="-1">PROTOCOL LIMITS&#8217;&#8216;</font> in <i>guestfs</i>(3).  </p>
+<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``PROTOCOL LIMITS&#8217;&#8216; in <i>guestfs</i>(3).  </p>
 <h3>tail-n</h3>
 <pre><code> tail-n nrlines path
 </code></pre>
 <p> If the parameter <code>&quot;nrlines&quot;</code> is a positive number, this returns the last <code>&quot;nrlines&quot;</code> lines of the file <code>&quot;path&quot;</code>. </p>
 <p> If the parameter <code>&quot;nrlines&quot;</code> is a negative number, this returns lines from the file <code>&quot;path&quot;</code>, starting with the <code>&quot;-nrlines&quot;</code>th line. </p>
 <p> If the parameter <code>&quot;nrlines&quot;</code> is zero, this returns an empty list. </p>
-<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``<font SIZE="-1">PROTOCOL LIMITS&#8217;&#8216;</font> in <i>guestfs</i>(3).  </p>
+<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``PROTOCOL LIMITS&#8217;&#8216; in <i>guestfs</i>(3).  </p>
 <h3>tar-in</h3>
 <h3>tar-in-opts</h3>
 <pre><code> tar-in (tarfile|-) directory [compress:..] [xattrs:true|false] [selinux:true|false] [acls:true|false]
@@ -4888,10 +4888,10 @@ description: "guestfish – the guest filesystem shell"
 <dd> <p> If set to true, SELinux contexts are restored from the tar file. </p>
  </dd>
 <dt>&quot;acls&quot;</dt>
-<dd> <p> If set to true, <font SIZE="-1">POSIX</font> ACLs are restored from the tar file. </p>
+<dd> <p> If set to true, POSIX ACLs are restored from the tar file. </p>
  </dd></dl>
 <p> Use <code>&quot;-&quot;</code> instead of a filename to read/write from stdin/stdout. </p>
-<p> This command has one or more optional arguments. See ``<font SIZE="-1">OPTIONAL ARGUMENTS&#8217;&#8216;</font>.  </p>
+<p> This command has one or more optional arguments. See ``OPTIONAL ARGUMENTS&#8217;&#8216;.  </p>
 <h3>tar-out</h3>
 <h3>tar-out-opts</h3>
 <pre><code> tar-out directory (tarfile|-) [compress:..] [numericowner:true|false] [excludes:..] [xattrs:true|false] [selinux:true|false] [acls:true|false]
@@ -4904,7 +4904,7 @@ description: "guestfish – the guest filesystem shell"
 <dd> <p> A list of wildcards. Files are excluded if they match any of the wildcards. </p>
  </dd>
 <dt>&quot;numericowner&quot;</dt>
-<dd> <p> If set to true, the output tar file will contain <font SIZE="-1">UID/GID</font> numbers instead of user/group names. </p>
+<dd> <p> If set to true, the output tar file will contain UID/GID numbers instead of user/group names. </p>
  </dd>
 <dt>&quot;xattrs&quot;</dt>
 <dd> <p> If set to true, extended attributes are saved in the output tar. </p>
@@ -4913,24 +4913,24 @@ description: "guestfish – the guest filesystem shell"
 <dd> <p> If set to true, SELinux contexts are saved in the output tar. </p>
  </dd>
 <dt>&quot;acls&quot;</dt>
-<dd> <p> If set to true, <font SIZE="-1">POSIX</font> ACLs are saved in the output tar. </p>
+<dd> <p> If set to true, POSIX ACLs are saved in the output tar. </p>
  </dd></dl>
 <p> Use <code>&quot;-&quot;</code> instead of a filename to read/write from stdin/stdout. </p>
-<p> This command has one or more optional arguments. See ``<font SIZE="-1">OPTIONAL ARGUMENTS&#8217;&#8216;</font>.  </p>
+<p> This command has one or more optional arguments. See ``OPTIONAL ARGUMENTS&#8217;&#8216;.  </p>
 <h3>tgz-in</h3>
 <pre><code> tgz-in (tarball|-) directory
 </code></pre>
 <p> This command uploads and unpacks local file <code>&quot;tarball&quot;</code> (a <i>gzip compressed</i> tar file) into <i>directory</i>. </p>
 <p> Use <code>&quot;-&quot;</code> instead of a filename to read/write from stdin/stdout. </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``tar-in&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
 <h3>tgz-out</h3>
 <pre><code> tgz-out directory (tarball|-)
 </code></pre>
 <p> This command packs the contents of <i>directory</i> and downloads it to local file <code>&quot;tarball&quot;</code>. </p>
 <p> Use <code>&quot;-&quot;</code> instead of a filename to read/write from stdin/stdout. </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``tar-out&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
 <h3>touch</h3>
 <pre><code> touch path
 </code></pre>
@@ -4983,7 +4983,7 @@ description: "guestfish – the guest filesystem shell"
 <dd> <p> Set the user who can use the reserved filesystem blocks. This is the same as the tune2fs <code>&quot;-u&quot;</code> option except that it can only be specified as a number. </p>
  </dd></dl>
 <p> To get the current values of filesystem parameters, see ``tune2fs-l&#8217;&#8216;. For precise details of how tune2fs works, see the <i><a href="/docs/linux/man/8-tune2fs/">tune2fs</a></i>(8) man page. </p>
-<p> This command has one or more optional arguments. See ``<font SIZE="-1">OPTIONAL ARGUMENTS&#8217;&#8216;</font>.  </p>
+<p> This command has one or more optional arguments. See ``OPTIONAL ARGUMENTS&#8217;&#8216;.  </p>
 <h3>tune2fs-l</h3>
 <pre><code> tune2fs-l device
 </code></pre>
@@ -4995,7 +4995,7 @@ description: "guestfish – the guest filesystem shell"
 <p> This command uploads and unpacks local file <code>&quot;tarball&quot;</code> (an <i>xz compressed</i> tar file) into <i>directory</i>. </p>
 <p> Use <code>&quot;-&quot;</code> instead of a filename to read/write from stdin/stdout. </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``tar-in&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions. </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions. </p>
 <p> This command depends on the feature <code>&quot;xz&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>txz-out</h3>
 <pre><code> txz-out directory (tarball|-)
@@ -5003,7 +5003,7 @@ description: "guestfish – the guest filesystem shell"
 <p> This command packs the contents of <i>directory</i> and downloads it to local file <code>&quot;tarball&quot;</code> (as an xz compressed tar archive). </p>
 <p> Use <code>&quot;-&quot;</code> instead of a filename to read/write from stdin/stdout. </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``tar-out&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions. </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions. </p>
 <p> This command depends on the feature <code>&quot;xz&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>umask</h3>
 <pre><code> umask mask
@@ -5019,7 +5019,7 @@ description: "guestfish – the guest filesystem shell"
 <pre><code> umount pathordevice [force:true|false] [lazyunmount:true|false]
 </code></pre>
 <p> This unmounts the given filesystem. The filesystem may be specified either by its mountpoint (path) or the device which contains the filesystem. </p>
-<p> This command has one or more optional arguments. See ``<font SIZE="-1">OPTIONAL ARGUMENTS&#8217;&#8216;</font>.  </p>
+<p> This command has one or more optional arguments. See ``OPTIONAL ARGUMENTS&#8217;&#8216;.  </p>
 <h3>umount-all</h3>
 <h3>unmount-all</h3>
 <pre><code> umount-all
@@ -5030,8 +5030,8 @@ description: "guestfish – the guest filesystem shell"
 <pre><code> umount-local [retry:true|false]
 </code></pre>
 <p> If libguestfs is exporting the filesystem on a local mountpoint, then this unmounts it. </p>
-<p> See ``<font SIZE="-1">MOUNT LOCAL&#8217;&#8216;</font> in <i>guestfs</i>(3) for full documentation. </p>
-<p> This command has one or more optional arguments. See ``<font SIZE="-1">OPTIONAL ARGUMENTS&#8217;&#8216;</font>.  </p>
+<p> See ``MOUNT LOCAL&#8217;&#8216; in <i>guestfs</i>(3) for full documentation. </p>
+<p> This command has one or more optional arguments. See ``OPTIONAL ARGUMENTS&#8217;&#8216;.  </p>
 <h3>upload</h3>
 <pre><code> upload (filename|-) remotefilename
 </code></pre>
@@ -5068,7 +5068,7 @@ description: "guestfish – the guest filesystem shell"
 <h3>utsname</h3>
 <pre><code> utsname
 </code></pre>
-<p> This returns the kernel version of the appliance, where this is available. This information is only useful for debugging. Nothing in the returned structure is defined by the <font SIZE="-1">API.</font>  </p>
+<p> This returns the kernel version of the appliance, where this is available. This information is only useful for debugging. Nothing in the returned structure is defined by the API.  </p>
 <h3>version</h3>
 <pre><code> version
 </code></pre>
@@ -5077,7 +5077,7 @@ description: "guestfish – the guest filesystem shell"
 <p> This call was added in version <code>1.0.58</code>. In previous versions of libguestfs there was no way to get the version number. From C code you can use dynamic linker functions to find out if this symbol exists (if it doesn&#8217;t, then it&#8217;s an earlier version). </p>
 <p> The call returns a structure with four elements. The first three (<code>&quot;major&quot;</code>, <code>&quot;minor&quot;</code> and <code>&quot;release&quot;</code>) are numbers and correspond to the usual version triplet. The fourth element (<code>&quot;extra&quot;</code>) is a string and is normally empty, but may be used for distro-specific information. </p>
 <p> To construct the original version string: <code>&quot;$major.$minor.$release$extra&quot;</code> </p>
-<p> See also: ``<font SIZE="-1">LIBGUESTFS VERSION NUMBERS&#8217;&#8216;</font> in <i>guestfs</i>(3). </p>
+<p> See also: ``LIBGUESTFS VERSION NUMBERS&#8217;&#8216; in <i>guestfs</i>(3). </p>
 <p> <i>Note:</i> Don&#8217;t use this call to test for availability of features. In enterprise distributions we backport features from later versions into earlier versions, making this an unreliable way to test for features. Use ``available&#8217;&#8216; or ``feature-available&#8217;&#8216; instead.  </p>
 <h3>vfs-label</h3>
 <pre><code> vfs-label mountable
@@ -5089,20 +5089,20 @@ description: "guestfish – the guest filesystem shell"
 <pre><code> vfs-minimum-size mountable
 </code></pre>
 <p> Get the minimum size of filesystem in bytes. This is the minimum possible size for filesystem shrinking. </p>
-<p> If getting minimum size of specified filesystem is not supported, this will fail and set errno as <font SIZE="-1">ENOTSUP.</font> </p>
+<p> If getting minimum size of specified filesystem is not supported, this will fail and set errno as ENOTSUP. </p>
 <p> See also <i><a href="/docs/linux/man/8-ntfsresize/">ntfsresize</a></i>(8), <i><a href="/docs/linux/man/8-resize2fs/">resize2fs</a></i>(8), <i><a href="/docs/linux/man/8-btrfs/">btrfs</a></i>(8), <i><a href="/docs/linux/man/8-xfs_info/">xfs_info</a></i>(8).  </p>
 <h3>vfs-type</h3>
 <pre><code> vfs-type mountable
 </code></pre>
 <p> This command gets the filesystem type corresponding to the filesystem on <code>&quot;mountable&quot;</code>. </p>
-<p> For most filesystems, the result is the name of the Linux <font SIZE="-1">VFS</font> module which would be used to mount this filesystem if you mounted it without specifying the filesystem type. For example a string such as <code>&quot;ext3&quot;</code> or <code>&quot;ntfs&quot;</code>.  </p>
+<p> For most filesystems, the result is the name of the Linux VFS module which would be used to mount this filesystem if you mounted it without specifying the filesystem type. For example a string such as <code>&quot;ext3&quot;</code> or <code>&quot;ntfs&quot;</code>.  </p>
 <h3>vfs-uuid</h3>
 <h3>get-uuid</h3>
 <pre><code> vfs-uuid mountable
 </code></pre>
-<p> This returns the filesystem <font SIZE="-1">UUID</font> of the filesystem on <code>&quot;mountable&quot;</code>. </p>
-<p> If the filesystem does not have a <font SIZE="-1">UUID,</font> this returns the empty string. </p>
-<p> To find a filesystem from the <font SIZE="-1">UUID,</font> use ``findfs-uuid&#8217;&#8216;.  </p>
+<p> This returns the filesystem UUID of the filesystem on <code>&quot;mountable&quot;</code>. </p>
+<p> If the filesystem does not have a UUID, this returns the empty string. </p>
+<p> To find a filesystem from the UUID, use ``findfs-uuid&#8217;&#8216;.  </p>
 <h3>vg-activate</h3>
 <pre><code> vg-activate true|false 'volgroups ...'
 </code></pre>
@@ -5119,7 +5119,7 @@ description: "guestfish – the guest filesystem shell"
 <h3>vgchange-uuid</h3>
 <pre><code> vgchange-uuid vg
 </code></pre>
-<p> Generate a new random <font SIZE="-1">UUID</font> for the volume group <code>&quot;vg&quot;</code>. </p>
+<p> Generate a new random UUID for the volume group <code>&quot;vg&quot;</code>. </p>
 <p> This command depends on the feature <code>&quot;lvm2&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>vgchange-uuid-all</h3>
 <pre><code> vgchange-uuid-all
@@ -5129,30 +5129,30 @@ description: "guestfish – the guest filesystem shell"
 <h3>vgcreate</h3>
 <pre><code> vgcreate volgroup 'physvols ...'
 </code></pre>
-<p> This creates an <font SIZE="-1">LVM</font> volume group called <code>&quot;volgroup&quot;</code> from the non-empty list of physical volumes <code>&quot;physvols&quot;</code>. </p>
+<p> This creates an LVM volume group called <code>&quot;volgroup&quot;</code> from the non-empty list of physical volumes <code>&quot;physvols&quot;</code>. </p>
 <p> This command depends on the feature <code>&quot;lvm2&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>vglvuuids</h3>
 <pre><code> vglvuuids vgname
 </code></pre>
-<p> Given a <font SIZE="-1">VG</font> called <code>&quot;vgname&quot;</code>, this returns the UUIDs of all the logical volumes created in this volume group. </p>
+<p> Given a VG called <code>&quot;vgname&quot;</code>, this returns the UUIDs of all the logical volumes created in this volume group. </p>
 <p> You can use this along with ``lvs&#8217;&#8216; and ``lvuuid&#8217;&#8216; calls to associate logical volumes and volume groups. </p>
 <p> See also ``vgpvuuids&#8217;&#8216;.  </p>
 <h3>vgmeta</h3>
 <pre><code> vgmeta vgname
 </code></pre>
-<p> <code>&quot;vgname&quot;</code> is an <font SIZE="-1">LVM</font> volume group. This command examines the volume group and returns its metadata. </p>
-<p> Note that the metadata is an internal structure used by <font SIZE="-1">LVM,</font> subject to change at any time, and is provided for information only. </p>
+<p> <code>&quot;vgname&quot;</code> is an LVM volume group. This command examines the volume group and returns its metadata. </p>
+<p> Note that the metadata is an internal structure used by LVM, subject to change at any time, and is provided for information only. </p>
 <p> This command depends on the feature <code>&quot;lvm2&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>vgpvuuids</h3>
 <pre><code> vgpvuuids vgname
 </code></pre>
-<p> Given a <font SIZE="-1">VG</font> called <code>&quot;vgname&quot;</code>, this returns the UUIDs of all the physical volumes that this volume group resides on. </p>
+<p> Given a VG called <code>&quot;vgname&quot;</code>, this returns the UUIDs of all the physical volumes that this volume group resides on. </p>
 <p> You can use this along with ``pvs&#8217;&#8216; and ``pvuuid&#8217;&#8216; calls to associate physical volumes and volume groups. </p>
 <p> See also ``vglvuuids&#8217;&#8216;.  </p>
 <h3>vgremove</h3>
 <pre><code> vgremove vgname
 </code></pre>
-<p> Remove an <font SIZE="-1">LVM</font> volume group <code>&quot;vgname&quot;</code>, (for example <code>&quot;VG&quot;</code>). </p>
+<p> Remove an LVM volume group <code>&quot;vgname&quot;</code>, (for example <code>&quot;VG&quot;</code>). </p>
 <p> This also forcibly removes all logical volumes in the volume group (if any). </p>
 <p> This command depends on the feature <code>&quot;lvm2&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>vgrename</h3>
@@ -5174,11 +5174,11 @@ description: "guestfish – the guest filesystem shell"
 <h3>vgscan</h3>
 <pre><code> vgscan
 </code></pre>
-<p> This rescans all block devices and rebuilds the list of <font SIZE="-1">LVM</font> physical volumes, volume groups and logical volumes.  </p>
+<p> This rescans all block devices and rebuilds the list of LVM physical volumes, volume groups and logical volumes.  </p>
 <h3>vguuid</h3>
 <pre><code> vguuid vgname
 </code></pre>
-<p> This command returns the <font SIZE="-1">UUID</font> of the <font SIZE="-1">LVM VG</font> named <code>&quot;vgname&quot;</code>.  </p>
+<p> This command returns the UUID of the LVM VG named <code>&quot;vgname&quot;</code>.  </p>
 <h3>wc-c</h3>
 <pre><code> wc-c path
 </code></pre>
@@ -5194,7 +5194,7 @@ description: "guestfish – the guest filesystem shell"
 <h3>wipefs</h3>
 <pre><code> wipefs device
 </code></pre>
-<p> This command erases filesystem or <font SIZE="-1">RAID</font> signatures from the specified <code>&quot;device&quot;</code> to make the filesystem invisible to libblkid. </p>
+<p> This command erases filesystem or RAID signatures from the specified <code>&quot;device&quot;</code> to make the filesystem invisible to libblkid. </p>
 <p> This does not erase the filesystem itself nor any other data from the <code>&quot;device&quot;</code>. </p>
 <p> Compare with ``zero&#8217;&#8216; which zeroes the first few blocks of a device. </p>
 <p> This command depends on the feature <code>&quot;wipefs&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
@@ -5212,55 +5212,55 @@ description: "guestfish – the guest filesystem shell"
 <pre><code> write-file path content size
 </code></pre>
 <p> This call creates a file called <code>&quot;path&quot;</code>. The contents of the file is the string <code>&quot;content&quot;</code> (which can contain any 8 bit data), with length <code>&quot;size&quot;</code>. </p>
-<p> As a special case, if <code>&quot;size&quot;</code> is <code>0</code> then the length is calculated using <code>&quot;strlen&quot;</code> (so in this case the content cannot contain embedded <font SIZE="-1">ASCII</font> NULs). </p>
-<p> <i></i><font SIZE="-1"><i>NB.</i></font><i></i> Owing to a bug, writing content containing <font SIZE="-1">ASCII NUL</font> characters does <i>not</i> work, even if the length is specified. </p>
-<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``<font SIZE="-1">PROTOCOL LIMITS&#8217;&#8216;</font> in <i>guestfs</i>(3). </p>
+<p> As a special case, if <code>&quot;size&quot;</code> is <code>0</code> then the length is calculated using <code>&quot;strlen&quot;</code> (so in this case the content cannot contain embedded ASCII NULs). </p>
+<p> <i></i><i>NB.</i><i></i> Owing to a bug, writing content containing ASCII NUL characters does <i>not</i> work, even if the length is specified. </p>
+<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``PROTOCOL LIMITS&#8217;&#8216; in <i>guestfs</i>(3). </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``write&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions.  </p>
 <h3>xfs-admin</h3>
 <pre><code> xfs-admin device [extunwritten:true|false] [imgfile:true|false] [v2log:true|false] [projid32bit:true|false] [lazycounter:true|false] [label:..] [uuid:..]
 </code></pre>
-<p> Change the parameters of the <font SIZE="-1">XFS</font> filesystem on <code>&quot;device&quot;</code>. </p>
+<p> Change the parameters of the XFS filesystem on <code>&quot;device&quot;</code>. </p>
 <p> Devices that are mounted cannot be modified. Administrators must unmount filesystems before this call can modify parameters. </p>
 <p> Some of the parameters of a mounted filesystem can be examined and modified using the ``xfs-info&#8217;&#8216; and ``xfs-growfs&#8217;&#8216; calls. </p>
-<p> This command has one or more optional arguments. See ``<font SIZE="-1">OPTIONAL ARGUMENTS&#8217;&#8216;</font>. </p>
+<p> This command has one or more optional arguments. See ``OPTIONAL ARGUMENTS&#8217;&#8216;. </p>
 <p> This command depends on the feature <code>&quot;xfs&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>xfs-growfs</h3>
 <pre><code> xfs-growfs path [datasec:true|false] [logsec:true|false] [rtsec:true|false] [datasize:N] [logsize:N] [rtsize:N] [rtextsize:N] [maxpct:N]
 </code></pre>
-<p> Grow the <font SIZE="-1">XFS</font> filesystem mounted at <code>&quot;path&quot;</code>. </p>
+<p> Grow the XFS filesystem mounted at <code>&quot;path&quot;</code>. </p>
 <p> The returned struct contains geometry information. Missing fields are returned as <code>&quot;-1&quot;</code> (for numeric fields) or empty string. </p>
-<p> This command has one or more optional arguments. See ``<font SIZE="-1">OPTIONAL ARGUMENTS&#8217;&#8216;</font>. </p>
+<p> This command has one or more optional arguments. See ``OPTIONAL ARGUMENTS&#8217;&#8216;. </p>
 <p> This command depends on the feature <code>&quot;xfs&quot;</code>. See also ``feature-available&#8217;&#8216;.  </p>
 <h3>xfs-info</h3>
 <pre><code> xfs-info pathordevice
 </code></pre>
-<p> <code>&quot;pathordevice&quot;</code> is a mounted <font SIZE="-1">XFS</font> filesystem or a device containing an <font SIZE="-1">XFS</font> filesystem. This command returns the geometry of the filesystem. </p>
+<p> <code>&quot;pathordevice&quot;</code> is a mounted XFS filesystem or a device containing an XFS filesystem. This command returns the geometry of the filesystem. </p>
 <p> The returned struct contains geometry information. Missing fields are returned as <code>&quot;-1&quot;</code> (for numeric fields) or empty string. </p>
 <p> This command depends on the feature <code>&quot;xfs&quot;</code>. See also ``feature-available&#8217;&#8216;. &nbsp;<wbr> </p>
 <h3>xfs-repair</h3>
 <pre><code> xfs-repair device [forcelogzero:true|false] [nomodify:true|false] [noprefetch:true|false] [forcegeometry:true|false] [maxmem:N] [ihashsize:N] [bhashsize:N] [agstride:N] [logdev:..] [rtdev:..]
 </code></pre>
-<p> Repair corrupt or damaged <font SIZE="-1">XFS</font> filesystem on <code>&quot;device&quot;</code>. </p>
+<p> Repair corrupt or damaged XFS filesystem on <code>&quot;device&quot;</code>. </p>
 <p> The filesystem is specified using the <code>&quot;device&quot;</code> argument which should be the device name of the disk partition or volume containing the filesystem. If given the name of a block device, <code>&quot;xfs_repair&quot;</code> will attempt to find the raw device associated with the specified block device and will use the raw device instead. </p>
 <p> Regardless, the filesystem to be repaired must be unmounted, otherwise, the resulting filesystem may be inconsistent or corrupt. </p>
 <p> The returned status indicates whether filesystem corruption was detected (returns <code>1</code>) or was not detected (returns <code>0</code>). </p>
-<p> This command has one or more optional arguments. See ``<font SIZE="-1">OPTIONAL ARGUMENTS&#8217;&#8216;</font>. </p>
+<p> This command has one or more optional arguments. See ``OPTIONAL ARGUMENTS&#8217;&#8216;. </p>
 <p> This command depends on the feature <code>&quot;xfs&quot;</code>. See also ``feature-available&#8217;&#8216;. &nbsp;<wbr> </p>
 <h3>zegrep</h3>
 <pre><code> zegrep regex path
 </code></pre>
 <p> This calls the external <code>&quot;zegrep&quot;</code> program and returns the matching lines. </p>
-<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``<font SIZE="-1">PROTOCOL LIMITS&#8217;&#8216;</font> in <i>guestfs</i>(3). </p>
+<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``PROTOCOL LIMITS&#8217;&#8216; in <i>guestfs</i>(3). </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``grep&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions. &nbsp;<wbr> </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions. &nbsp;<wbr> </p>
 <h3>zegrepi</h3>
 <pre><code> zegrepi regex path
 </code></pre>
 <p> This calls the external <code>&quot;zegrep -i&quot;</code> program and returns the matching lines. </p>
-<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``<font SIZE="-1">PROTOCOL LIMITS&#8217;&#8216;</font> in <i>guestfs</i>(3). </p>
+<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``PROTOCOL LIMITS&#8217;&#8216; in <i>guestfs</i>(3). </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``grep&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions. &nbsp;<wbr> </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions. &nbsp;<wbr> </p>
 <h3>zero</h3>
 <pre><code> zero device
 </code></pre>
@@ -5290,16 +5290,16 @@ description: "guestfish – the guest filesystem shell"
 <pre><code> zfgrep pattern path
 </code></pre>
 <p> This calls the external <code>&quot;zfgrep&quot;</code> program and returns the matching lines. </p>
-<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``<font SIZE="-1">PROTOCOL LIMITS&#8217;&#8216;</font> in <i>guestfs</i>(3). </p>
+<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``PROTOCOL LIMITS&#8217;&#8216; in <i>guestfs</i>(3). </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``grep&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions. &nbsp;<wbr> </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions. &nbsp;<wbr> </p>
 <h3>zfgrepi</h3>
 <pre><code> zfgrepi pattern path
 </code></pre>
 <p> This calls the external <code>&quot;zfgrep -i&quot;</code> program and returns the matching lines. </p>
-<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``<font SIZE="-1">PROTOCOL LIMITS&#8217;&#8216;</font> in <i>guestfs</i>(3). </p>
+<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``PROTOCOL LIMITS&#8217;&#8216; in <i>guestfs</i>(3). </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``grep&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions. &nbsp;<wbr> </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions. &nbsp;<wbr> </p>
 <h3>zfile</h3>
 <pre><code> zfile meth path
 </code></pre>
@@ -5307,109 +5307,109 @@ description: "guestfish – the guest filesystem shell"
 <p> <code>&quot;method&quot;</code> must be one of <code>&quot;gzip&quot;</code>, <code>&quot;compress&quot;</code> or <code>&quot;bzip2&quot;</code>. </p>
 <p> Since 1.0.63, use ``file&#8217;&#8216; instead which can now process compressed files. </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``file&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions. &nbsp;<wbr> </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions. &nbsp;<wbr> </p>
 <h3>zgrep</h3>
 <pre><code> zgrep regex path
 </code></pre>
 <p> This calls the external <code>&quot;zgrep&quot;</code> program and returns the matching lines. </p>
-<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``<font SIZE="-1">PROTOCOL LIMITS&#8217;&#8216;</font> in <i>guestfs</i>(3). </p>
+<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``PROTOCOL LIMITS&#8217;&#8216; in <i>guestfs</i>(3). </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``grep&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions. &nbsp;<wbr> </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions. &nbsp;<wbr> </p>
 <h3>zgrepi</h3>
 <pre><code> zgrepi regex path
 </code></pre>
 <p> This calls the external <code>&quot;zgrep -i&quot;</code> program and returns the matching lines. </p>
-<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``<font SIZE="-1">PROTOCOL LIMITS&#8217;&#8216;</font> in <i>guestfs</i>(3). </p>
+<p> Because of the message protocol, there is a transfer limit of somewhere between 2MB and 4MB. See ``PROTOCOL LIMITS&#8217;&#8216; in <i>guestfs</i>(3). </p>
 <p> <i>This function is deprecated.</i> In new code, use the ``grep&#8217;&#8216; call instead. </p>
-<p> Deprecated functions will not be removed from the <font SIZE="-1">API,</font> but the fact that they are deprecated indicates that there are problems with correct use of these functions. &nbsp;<wbr> </p>
+<p> Deprecated functions will not be removed from the API, but the fact that they are deprecated indicates that there are problems with correct use of these functions. &nbsp;<wbr> </p>
 <h2>EXIT STATUS</h2>
 <p> guestfish returns 0 if the commands completed without error, or 1 if there was an error. &nbsp;<wbr> </p>
 <h2>ENVIRONMENT VARIABLES</h2>
 <dl>
-<dt><font SIZE="-1">EDITOR</font></dt>
+<dt>EDITOR</dt>
 <dd> <p> The <code>&quot;edit&quot;</code> command uses <code>$EDITOR</code> as the editor. If not set, it uses <code>&quot;vi&quot;</code>. </p>
  </dd>
-<dt><font SIZE="-1">GUESTFISH_DISPLAY_IMAGE</font></dt>
+<dt>GUESTFISH_DISPLAY_IMAGE</dt>
 <dd> <p> The <code>&quot;display&quot;</code> command uses <code>$GUESTFISH_DISPLAY_IMAGE</code> to display images. If not set, it uses <i><a href="/docs/linux/man/1-display/">display</a></i>(1). </p>
  </dd>
-<dt><font SIZE="-1">GUESTFISH_INIT</font></dt>
-<dd> <p> Printed when guestfish starts. See ``<font SIZE="-1">PROMPT&#8217;&#8216;</font>. </p>
+<dt>GUESTFISH_INIT</dt>
+<dd> <p> Printed when guestfish starts. See ``PROMPT&#8217;&#8216;. </p>
  </dd>
-<dt><font SIZE="-1">GUESTFISH_OUTPUT</font></dt>
-<dd> <p> Printed before guestfish output. See ``<font SIZE="-1">PROMPT&#8217;&#8216;</font>. </p>
+<dt>GUESTFISH_OUTPUT</dt>
+<dd> <p> Printed before guestfish output. See ``PROMPT&#8217;&#8216;. </p>
  </dd>
-<dt><font SIZE="-1">GUESTFISH_PID</font></dt>
-<dd> <p> Used with the <i>--remote</i> option to specify the remote guestfish process to control. See section ``<font SIZE="-1">REMOTE CONTROL GUESTFISH OVER A SOCKET&#8217;&#8216;</font>. </p>
+<dt>GUESTFISH_PID</dt>
+<dd> <p> Used with the <i>--remote</i> option to specify the remote guestfish process to control. See section ``REMOTE CONTROL GUESTFISH OVER A SOCKET&#8217;&#8216;. </p>
  </dd>
-<dt><font SIZE="-1">GUESTFISH_PS1</font></dt>
-<dd> <p> Set the command prompt. See ``<font SIZE="-1">PROMPT&#8217;&#8216;</font>. </p>
+<dt>GUESTFISH_PS1</dt>
+<dd> <p> Set the command prompt. See ``PROMPT&#8217;&#8216;. </p>
  </dd>
-<dt><font SIZE="-1">GUESTFISH_RESTORE</font></dt>
-<dd> <p> Printed before guestfish exits. See ``<font SIZE="-1">PROMPT&#8217;&#8216;</font>. </p>
+<dt>GUESTFISH_RESTORE</dt>
+<dd> <p> Printed before guestfish exits. See ``PROMPT&#8217;&#8216;. </p>
  </dd>
-<dt><font SIZE="-1">HEXEDITOR</font></dt>
+<dt>HEXEDITOR</dt>
 <dd> <p> The ``hexedit&#8217;&#8216; command uses <code>$HEXEDITOR</code> as the external hex editor. If not specified, the external <i><a href="/docs/linux/man/1-hexedit/">hexedit</a></i>(1) program is used. </p>
  </dd>
-<dt><font SIZE="-1">HOME</font></dt>
-<dd> <p> If compiled with <font SIZE="-1">GNU</font> readline support, various files in the home directory can be used. See ``<font SIZE="-1">FILES&#8217;&#8216;</font>. </p>
+<dt>HOME</dt>
+<dd> <p> If compiled with GNU readline support, various files in the home directory can be used. See ``FILES&#8217;&#8216;. </p>
  </dd>
-<dt><font SIZE="-1">LIBGUESTFS_APPEND</font></dt>
+<dt>LIBGUESTFS_APPEND</dt>
 <dd> <p> Pass additional options to the guest kernel. </p>
  </dd>
-<dt><font SIZE="-1">LIBGUESTFS_ATTACH_METHOD</font></dt>
+<dt>LIBGUESTFS_ATTACH_METHOD</dt>
 <dd> <p> This is the old way to set <code>&quot;LIBGUESTFS_BACKEND&quot;</code>. </p>
  </dd>
-<dt><font SIZE="-1">LIBGUESTFS_BACKEND</font></dt>
+<dt>LIBGUESTFS_BACKEND</dt>
 <dd> <p> Choose the default way to create the appliance. See ``guestfs_set_backend&#8217;&#8216; in <i>guestfs</i>(3). </p>
  </dd>
-<dt><font SIZE="-1">LIBGUESTFS_BACKEND_SETTINGS</font></dt>
-<dd> <p> A colon-separated list of backend-specific settings. See ``<font SIZE="-1">BACKEND&#8217;&#8216;</font> in <i>guestfs</i>(3), ``<font SIZE="-1">BACKEND SETTINGS&#8217;&#8216;</font> in <i>guestfs</i>(3). </p>
+<dt>LIBGUESTFS_BACKEND_SETTINGS</dt>
+<dd> <p> A colon-separated list of backend-specific settings. See ``BACKEND&#8217;&#8216; in <i>guestfs</i>(3), ``BACKEND SETTINGS&#8217;&#8216; in <i>guestfs</i>(3). </p>
  </dd>
-<dt><font SIZE="-1">LIBGUESTFS_CACHEDIR</font></dt>
-<dd> <p> The location where libguestfs will cache its appliance, when using a supermin appliance. The appliance is cached and shared between all handles which have the same effective user <font SIZE="-1">ID.</font> </p>
+<dt>LIBGUESTFS_CACHEDIR</dt>
+<dd> <p> The location where libguestfs will cache its appliance, when using a supermin appliance. The appliance is cached and shared between all handles which have the same effective user ID. </p>
 <p> If <code>&quot;LIBGUESTFS_CACHEDIR&quot;</code> is not set, then <code>&quot;TMPDIR&quot;</code> is used. If <code>&quot;TMPDIR&quot;</code> is not set, then <i>/var/tmp</i> is used. </p>
-<p> See also ``<font SIZE="-1">LIBGUESTFS_TMPDIR&#8217;&#8216;</font>, ``set-cachedir&#8217;&#8216;. </p>
+<p> See also ``LIBGUESTFS_TMPDIR&#8217;&#8216;, ``set-cachedir&#8217;&#8216;. </p>
  </dd>
-<dt><font SIZE="-1">LIBGUESTFS_DEBUG</font></dt>
+<dt>LIBGUESTFS_DEBUG</dt>
 <dd> <p> Set <code>&quot;LIBGUESTFS_DEBUG=1&quot;</code> to enable verbose messages. This has the same effect as using the <code>-v</code> option. </p>
  </dd>
-<dt><font SIZE="-1">LIBGUESTFS_HV</font></dt>
+<dt>LIBGUESTFS_HV</dt>
 <dd> <p> Set the default hypervisor (usually qemu) binary that libguestfs uses. If not set, then the qemu which was found at compile time by the configure script is used. </p>
  </dd>
-<dt><font SIZE="-1">LIBGUESTFS_MEMSIZE</font></dt>
+<dt>LIBGUESTFS_MEMSIZE</dt>
 <dd> <p> Set the memory allocated to the qemu process, in megabytes. For example: </p>
 <pre><code> LIBGUESTFS_MEMSIZE=700
 </code></pre>
  </dd>
-<dt><font SIZE="-1">LIBGUESTFS_PATH</font></dt>
+<dt>LIBGUESTFS_PATH</dt>
 <dd> <p> Set the path that guestfish uses to search for kernel and initrd.img. See the discussion of paths in <i>guestfs</i>(3). </p>
  </dd>
-<dt><font SIZE="-1">LIBGUESTFS_QEMU</font></dt>
+<dt>LIBGUESTFS_QEMU</dt>
 <dd> <p> This is the old way to set <code>&quot;LIBGUESTFS_HV&quot;</code>. </p>
  </dd>
-<dt><font SIZE="-1">LIBGUESTFS_TMPDIR</font></dt>
+<dt>LIBGUESTFS_TMPDIR</dt>
 <dd> <p> The location where libguestfs will store temporary files used by each handle. </p>
 <p> If <code>&quot;LIBGUESTFS_TMPDIR&quot;</code> is not set, then <code>&quot;TMPDIR&quot;</code> is used. If <code>&quot;TMPDIR&quot;</code> is not set, then <i>/tmp</i> is used. </p>
-<p> See also ``<font SIZE="-1">LIBGUESTFS_CACHEDIR&#8217;&#8216;</font>, ``set-tmpdir&#8217;&#8216;. </p>
+<p> See also ``LIBGUESTFS_CACHEDIR&#8217;&#8216;, ``set-tmpdir&#8217;&#8216;. </p>
  </dd>
-<dt><font SIZE="-1">LIBGUESTFS_TRACE</font></dt>
+<dt>LIBGUESTFS_TRACE</dt>
 <dd> <p> Set <code>&quot;LIBGUESTFS_TRACE=1&quot;</code> to enable command traces. </p>
  </dd>
-<dt><font SIZE="-1">PAGER</font></dt>
+<dt>PAGER</dt>
 <dd> <p> The <code>&quot;more&quot;</code> command uses <code>$PAGER</code> as the pager. If not set, it uses <code>&quot;more&quot;</code>. </p>
  </dd>
-<dt><font SIZE="-1">PATH</font></dt>
+<dt>PATH</dt>
 <dd> <p> Libguestfs and guestfish may run some external programs, and rely on <code>$PATH</code> being set to a reasonable value. If using the libvirt backend, libvirt will not work at all unless <code>$PATH</code> contains the path of qemu/KVM. </p>
  </dd>
-<dt><font SIZE="-1">SUPERMIN_KERNEL</font></dt>
+<dt>SUPERMIN_KERNEL</dt>
 <dd>  </dd>
-<dt><font SIZE="-1">SUPERMIN_KERNEL_VERSION</font></dt>
+<dt>SUPERMIN_KERNEL_VERSION</dt>
 <dd>  </dd>
-<dt><font SIZE="-1">SUPERMIN_MODULES</font></dt>
+<dt>SUPERMIN_MODULES</dt>
 <dd> <p> These three environment variables allow the kernel that libguestfs uses in the appliance to be selected. If <code>$SUPERMIN_KERNEL</code> is not set, then the most recent host kernel is chosen. For more information about kernel selection, see <i><a href="/docs/linux/man/1-supermin/">supermin</a></i>(1). </p>
  </dd>
-<dt><font SIZE="-1">TMPDIR</font></dt>
-<dd> <p> See ``<font SIZE="-1">LIBGUESTFS_CACHEDIR&#8217;&#8216;</font>, ``<font SIZE="-1">LIBGUESTFS_TMPDIR&#8217;&#8216;</font>. </p>
+<dt>TMPDIR</dt>
+<dd> <p> See ``LIBGUESTFS_CACHEDIR&#8217;&#8216;, ``LIBGUESTFS_TMPDIR&#8217;&#8216;. </p>
  </dd></dl>
 <p> &nbsp;<wbr> </p>
 <h2>FILES</h2>
@@ -5425,12 +5425,12 @@ description: "guestfish – the guest filesystem shell"
 <p> See <i>libguestfs-tools.conf</i>(5). </p>
  </dd>
 <dt>$HOME/.guestfish</dt>
-<dd> <p> If compiled with <font SIZE="-1">GNU</font> readline support, then the command history is saved in this file. </p>
+<dd> <p> If compiled with GNU readline support, then the command history is saved in this file. </p>
  </dd>
 <dt>$HOME/.inputrc</dt>
 <dd>  </dd>
 <dt>/etc/inputrc</dt>
-<dd> <p> If compiled with <font SIZE="-1">GNU</font> readline support, then these files can be used to configure readline. For further information, please see ``<font SIZE="-1">INITIALIZATION FILE&#8217;&#8216;</font> in <i><a href="/docs/linux/man/3-readline/">readline</a></i>(3). </p>
+<dd> <p> If compiled with GNU readline support, then these files can be used to configure readline. For further information, please see ``INITIALIZATION FILE&#8217;&#8216; in <i><a href="/docs/linux/man/3-readline/">readline</a></i>(3). </p>
 <p> To write rules which only apply to guestfish, use: </p>
 <pre><code> $if guestfish
  ...
@@ -5463,9 +5463,9 @@ description: "guestfish – the guest filesystem shell"
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2009-2016 Red Hat Inc. &nbsp;<wbr> </p>
 <h2>LICENSE</h2>
-<p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
-<p> This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE. </font> See the <font SIZE="-1">GNU</font> General Public License for more details. </p>
-<p> You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, <font SIZE="-1">MA 02110-1301 USA.</font> &nbsp;<wbr> </p>
+<p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
+<p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. </p>
+<p> You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA. &nbsp;<wbr> </p>
 <h2>BUGS</h2>
 <p> To get a list of bugs against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/buglist.cgi?component=libguestfs">https://bugzilla.redhat.com/buglist.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>
 <p> To report a new bug against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs">https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>

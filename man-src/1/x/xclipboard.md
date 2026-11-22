@@ -82,6 +82,6 @@ XClipboard  xclipboard
 <dt><i>/etc/X11/app-defaults/XClipboard</i></dt>
 <dd> specifies required resources</dd></dl>
 <h2>AUTHOR</h2>
-<p> Ralph R. Swick, DEC/MIT Project Athena<br />
- Chris D. Peterson, MIT X Consortium<br />
+<p> Ralph R. Swick, DEC/MIT Project Athena<br/>
+ Chris D. Peterson, MIT X Consortium<br/>
  Keith Packard, MIT X Consortium </p>

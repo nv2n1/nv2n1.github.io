@@ -12,12 +12,12 @@ description: "rrdlastupdate – Return the most recent update to an RRD"
 <h2>SYNOPSIS</h2>
 <p> <code>rrdtool</code> <code>lastupdate</code> <i>filename</i> [<code>&#8211;daemon</code>&nbsp;<wbr><i>address</i>]</p>
 <h2>DESCRIPTION</h2>
-<p> The <code>lastupdate</code> function returns the <font SIZE="-1">UNIX</font> timestamp and the value stored for each datum in the most recent update of an <font SIZE="-1">RRD</font>.</p>
+<p> The <code>lastupdate</code> function returns the UNIX timestamp and the value stored for each datum in the most recent update of an RRD.</p>
 <dl>
 <dt><i>filename</i></dt>
-<dd> The name of the <font SIZE="-1"><code>RRD</code></font> that contains the data.</dd>
+<dd> The name of the <code>RRD</code> that contains the data.</dd>
 <dt><code>&#8211;daemon</code> <i>address</i></dt>
-<dd> Address of the rrdcached daemon. If specified, a <tt>&quot;flush&quot;</tt> command is sent to the server before reading the <font SIZE="-1">RRD</font> files. This allows <code>rrdtool</code> to return fresh data even if the daemon is configured to cache values for a long time. For a list of accepted formats, see the <code>-l</code> option in the rrdcached manual. </dd>
+<dd> Address of the rrdcached daemon. If specified, a <tt>&quot;flush&quot;</tt> command is sent to the server before reading the RRD files. This allows <code>rrdtool</code> to return fresh data even if the daemon is configured to cache values for a long time. For a list of accepted formats, see the <code>-l</code> option in the rrdcached manual. </dd>
 <pre>
  rrdtool lastupdate --daemon unix:/var/run/rrdcached.sock /var/lib/rrd/foo.rrd
 </pre>
@@ -25,7 +25,7 @@ description: "rrdlastupdate – Return the most recent update to an RRD"
 <h2>ENVIRONMENT VARIABLES</h2>
 <p> The following environment variables may be used to change the behavior of <tt>&quot;rrdtool lastupdate&quot;</tt>:</p>
 <dl>
-<dt><font SIZE="-1"><code>RRDCACHED_ADDRESS</code></font></dt>
+<dt><code>RRDCACHED_ADDRESS</code></dt>
 <dd> If this environment variable is set it will have the same effect as specifying the <tt>&quot;--daemon&quot;</tt> option on the command line. If both are present, the command line argument takes precedence.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Andy Riebs &lt;andy.riebs [at] hp.com&gt; </p>

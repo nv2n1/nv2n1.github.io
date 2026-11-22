@@ -51,8 +51,8 @@ watch * -new {
 }
 </pre>
 <p> The flag &quot;-display&quot; describes a command to be executed every time the newsgroup is reported as having unread news. The special command &quot;display&quot; is the default command. It schedules $newsgroup to be written to tknewsbiff&#8217;s display when it is rewritten. For example, by explicitly providing a -display flag that omits the display command, you can disable the display of newsgroups that are already reported via -new. </p>
-<p>watch dc.dining &#8211; new {exec play yumyum.au} &#8211; display<br />
-{<br />
+<p>watch dc.dining &#8211; new {exec play yumyum.au} &#8211; display<br/>
+{<br/>
 }</p>
 <p> If you want to execute an action repeatedly and <i>still</i> display the newsgroup in the default manner, explicitly invoke the display command via the -display flag. For example: </p>
 <pre>

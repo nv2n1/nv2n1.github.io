@@ -165,13 +165,13 @@ enemies - of - carlotta-- name = moviefans[at] example.com-- list
 <p> For Courier-MTA, the instructions are similar to the Qmail ones above. If your user name is joe and you wish to run the joe-fans email list, you need to create the two files .courier-fans and .courier-fans-default in your home directory with the content </p>
 <dl>
 <dt>
-</dt><dd> |enemies-of-carlotta &#8211;is-list &#8211;name $RECIPIENT || exit 67<br />
+</dt><dd> |enemies-of-carlotta &#8211;is-list &#8211;name $RECIPIENT || exit 67<br/>
  |enemies-of-carlotta &#8211;incoming</dd></dl>
 <p> (The former file needs only the second line, but the first line does no harm and it is easier to keep track of things when the files have the same content. Note that $RECIPIENT should be included verbatim, it is not a metavariable for you to expand.) </p>
 <p> If you are running a virtual domain configured so that all mail to the domain @example.com is delivered to joe-exampledotcom, you need to create the files .courier-exampledotcom-fans and </p>
 <dl>
 <dt>
-</dt><dd> |enemies-of-carlotta &#8211;is-list &#8211;name $RECIPIENT &#8211;skip-prefix=joe-exampledotcom || exit 67<br />
+</dt><dd> |enemies-of-carlotta &#8211;is-list &#8211;name $RECIPIENT &#8211;skip-prefix=joe-exampledotcom || exit 67<br/>
  |enemies-of-carlotta &#8211;incoming &#8211;skip-prefix=joe-exampledotcom</dd></dl>
 <p> If the virtual domain is for list use only, then it is sufficient to create only the file .courier-exampledotcom-default containing the latter two lines.</p>
 <h2>POSTFIX</h2>
@@ -182,13 +182,13 @@ enemies - of - carlotta-- name = moviefans[at] example.com-- list
 <p> and then a <i>.procmailrc</i> file containing </p>
 <dl>
 <dt>
-</dt><dd> :0<br />
- * ? enemies-of-carlotta &#8211;name=$RECIPIENT &#8211;is-list<br />
+</dt><dd> :0<br/>
+ * ? enemies-of-carlotta &#8211;name=$RECIPIENT &#8211;is-list<br/>
  | enemies-of-carlotta &#8211;incoming</dd></dl>
 <p> To use Enemies of Carlotta with a Postfix virtual domain, you need to set up a <i>virtual regular expression map</i>, typically called <i>/etc/postfix/virtual_regexp</i> (add <i>virtual_maps = regexp:/etc/postfix/virtual_regexp</i> to your <i>/etc/postfix/main.cf</i> file to enable it). The regexp file needs to do ugly things to preserve the recipient address. Add the following to the regexp file: </p>
 <dl>
 <dt>
-</dt><dd> /^your.virtual.domain$/ dummy<br />
+</dt><dd> /^your.virtual.domain$/ dummy<br/>
  /^(yourlist|yourlist-.*)@(your.virtual.domain)$/ joe+virtual-$1</dd></dl>
 <p> That&#8217;s two lines. Use <code>joe-virtual</code> instead, if <i>recipient_delimiter</i> for your Postfix is configured to a minus instead of a plus.. Then, in your <i>.procmailrc</i> file, add the <i>&#8211;skip-prefix=joe-virtual-</i> and <i>&#8211;domain=your.virtual.domain</i> options to both calls to <code>enemies-of-carlotta</code>. </p>
 <p> (Yes, I think these things are much too complicated, too.)</p>

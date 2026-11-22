@@ -58,6 +58,6 @@ description: "mmpfb – creates single-master fonts from multiple master fonts"
 <dd> You tried to reduce the number of subroutines to less than <i>N</i> using the <code>&#8211;subrs</code> option, but the font needs at least <i>N</i> to function. The output font will have <i>N</i> subroutines.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Eddie Kohler, ekohler [at] gmail.com </p>
-<p> The latest version is available from:<br />
+<p> The latest version is available from:<br/>
  <a rel="nofollow" href="http://www.lcdf.org/type/">http://www.lcdf.org/type/</a> </p>
 <p> Thanks to Melissa O&#8217;Neill for suggestions and patient debugging. </p>

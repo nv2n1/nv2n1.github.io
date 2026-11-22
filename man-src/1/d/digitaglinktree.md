@@ -16,7 +16,7 @@ description: "digitaglinktree – Export tag structure of photos in digikam to t
 <p> <code>[-r</code><i> rootdir]</i> </p>
 <p> <code>[-H|-f|-a|-v|-C]</code> </p>
 <h2>DESCRIPTION</h2>
-<p> <code>digitaglinktree </code> will create a linktree for all photos in a digikam database that have tags set on them. Tags (like eg. &quot;family&quot;, &quot;events&quot;, &#8230;) are used in digikam to create virtual folders containing images that all have one or more tags assigned. Please note: Photos that have no tags at all assigned are silently ignored by this script. The program will not modify or even touch your original photos managed by digikam.<br />
+<p> <code>digitaglinktree </code> will create a linktree for all photos in a digikam database that have tags set on them. Tags (like eg. &quot;family&quot;, &quot;events&quot;, &#8230;) are used in digikam to create virtual folders containing images that all have one or more tags assigned. Please note: Photos that have no tags at all assigned are silently ignored by this script. The program will not modify or even touch your original photos managed by digikam.<br/>
 &nbsp;<wbr> </p>
 <p> The script can be used in two ways: If you call it using Option -l <i>taglinkdir</i> the script will create the user specified directory <i>taglinkdir</i> and inside this directory it will create sub directories for digikam tags set on the photos. Inside these subdirectories it will finally place symbolic or hard links (see -H) to photos having the tags in question. As a result you will see the tags of your photos as folders and in these folders you will find links to your original photos. </p>
 <p> In this way you can access the collection of all images that share a certain tag by changing directory to the folder with the tags name created by this script. This allows you e.g. to run JAlbum a photo album software that needs to find the pictures to be put into a web album in the filesystem because JAlbum cannot access digikams virtual folders directly. </p>
@@ -64,17 +64,17 @@ description: "digitaglinktree – Export tag structure of photos in digikam to t
 <p> for digikam version 0.7x. </p>
 <h2>EXAMPLE</h2>
 <p> A call to digitaglinktree is shown below: </p>
-<p> digiTagLinktree -l /home/user/tags<br />
+<p> digiTagLinktree -l /home/user/tags<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-d&nbsp;<wbr>/home/user/photos/digikam.db </p>
 <p> In this example we assume that you are running digikam version 0.10 or higher so that no option -r was used to specify the photo root dir. Instead this information will automatically be fetched from digikams database. </p>
 <p> In case you want to run the script on a digikam database that was created by digikam version 0.9 or earlier you have to use -r to specify the root directory where you keep all your photos that are managed by digikam: </p>
-<p> digiTagLinktree -l /home/user/tags<br />
+<p> digiTagLinktree -l /home/user/tags<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-d&nbsp;<wbr>/home/user/photos/digikam.db </p>
 <p> In this example digikams photo root denoted by -r is /home/user/photos. </p>
 <p> Option -l /home/user/tags tells the script that all the subdirectories and symbolic links will be placed in the directory /home/user/tags. The folder was chosen so that the tags-directory is not under digikams photo root. You may put the tags folder inside digikams photoroot but this is not the preferred method. Because the link directory contains only links this tag structure does hardly need any additional space on your harddisk. </p>
 <p> digiTagLinktree -r /home/user/photos -l /home/user/tags <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> -d /home/user/photos/digikam.db</p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-i People,Place<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-M 2<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-i People,Place<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-M 2<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-Y </p>
 <p> In this example if you have an image with the tags People/me, Place/home from 1970 it will create the following directory (link to the image under _all directory) </p>
 <p> /home/user/tags/Date/1970/_all/ </p>

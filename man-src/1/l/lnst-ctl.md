@@ -59,25 +59,25 @@ description: "lnst-ctl – Linux Network Stack Test controller"
 <p> At last, when the <i>ACTION</i> is set to <code>match_setup,</code> <code>lnst-ctl</code> will only try to match the configuration in the recipe with its local pools and print the resulting match, in case it was successful or an appropriate error message, in case it was not. </p>
 <h2>CONFIGURATION</h2>
 <p> <code>lnst-ctl</code> will look for configuration in the following locations: </p>
-<p> <i>/etc/lnst-ctl.conf</i><br />
+<p> <i>/etc/lnst-ctl.conf</i><br/>
  <i>~/.lnst/lnst-ctl.conf</i> </p>
 <p> For further description of file format or configuration options available, please refer to the configuration file itself, where each option is documented. </p>
 <h2>EXIT STATUS</h2>
 <p> <code>lnst-ctl</code> will terminate with one of the following statuses: </p>
-<p>&nbsp;<wbr>0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>All tests passed, no errors encountered<br />
-&nbsp;<wbr>1&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>At least one test failed<br />
+<p>&nbsp;<wbr>0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>All tests passed, no errors encountered<br/>
+&nbsp;<wbr>1&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>At least one test failed<br/>
 &nbsp;<wbr>2&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>There was an error during the execution </p>
 <h2>INTERNET RESOURCES</h2>
-<p> Project Homepage: <a rel="nofollow" href="http://lnst-project.org/">http://lnst-project.org/</a><br />
- Online Documentation: <a rel="nofollow" href="https://github.com/jpirko/lnst/wiki#learn">https://github.com/jpirko/lnst/wiki#learn</a><br />
- Git Source Tree: <a rel="nofollow" href="https://github.com/jpirko/lnst">https://github.com/jpirko/lnst</a><br />
+<p> Project Homepage: <a rel="nofollow" href="http://lnst-project.org/">http://lnst-project.org/</a><br/>
+ Online Documentation: <a rel="nofollow" href="https://github.com/jpirko/lnst/wiki#learn">https://github.com/jpirko/lnst/wiki#learn</a><br/>
+ Git Source Tree: <a rel="nofollow" href="https://github.com/jpirko/lnst">https://github.com/jpirko/lnst</a><br/>
  Mailing List: &lt;lnst-developers [at] lists.fedorahosted.org&gt; </p>
 <h2>AUTHORS</h2>
-<p> <code>Jiri Pirko</code> &lt;jiri [at] resnulli.us&gt;<br />
- <code>Jan Tluka</code> &lt;jtluka [at] redhat.com&gt;<br />
- <code>Ondrej Lichtner</code> &lt;olichtne [at] redhat.com&gt;<br />
- <code>Jiri Prochazka</code> &lt;jprochaz [at] redhat.com&gt;<br />
- <code>Jiri Zupka</code> &lt;jzupka [at] redhat.com&gt;<br />
+<p> <code>Jiri Pirko</code> &lt;jiri [at] resnulli.us&gt;<br/>
+ <code>Jan Tluka</code> &lt;jtluka [at] redhat.com&gt;<br/>
+ <code>Ondrej Lichtner</code> &lt;olichtne [at] redhat.com&gt;<br/>
+ <code>Jiri Prochazka</code> &lt;jprochaz [at] redhat.com&gt;<br/>
+ <code>Jiri Zupka</code> &lt;jzupka [at] redhat.com&gt;<br/>
  <code>Radek Pazdera</code> &lt;radek [at] pazdera.co.uk&gt;</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2011-2015 Red Hat, Inc. </p>

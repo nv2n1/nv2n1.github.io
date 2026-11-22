@@ -53,6 +53,6 @@ po4a-normalize - normalize a documentation file by parsing it in po4a, and writi
 
 <h2>COPYRIGHT AND LICENSE</h2>
 
- Copyright 2002, 2003, 2004 by <font SIZE="-1">SPI</font>, inc. 
+ Copyright 2002, 2003, 2004 by SPI, inc. 
 
- This program is free software; you may redistribute it and/or modify it under the terms of <font SIZE="-1">GPL</font> (see the <font SIZE="-1">COPYING</font> file).
+ This program is free software; you may redistribute it and/or modify it under the terms of GPL (see the COPYING file).

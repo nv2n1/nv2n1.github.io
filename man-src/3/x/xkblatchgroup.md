@@ -10,7 +10,7 @@ description: "XkbLatchGroup – Latches the keysym group"
 <p>XkbLatchGroup &#8211; Latches the keysym group </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Bool XkbLatchGroup</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>,</code> <code>unsigned int </code><i>group</i><code>);</code><br />
+<dt> <code>Bool XkbLatchGroup</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>,</code> <code>unsigned int </code><i>group</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

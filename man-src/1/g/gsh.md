@@ -81,5 +81,5 @@ description: "gsh – Group Shell"
 <dt><code>:upload LOCAL_PATH</code></dt>
 <dd> Upload the specified local path to enabled remote shells.</dd></dl>
 <h2>AUTHOR</h2>
-<p> Guillaume Chazarain &lt;guichaz [at] gmail.com&gt;<br />
+<p> Guillaume Chazarain &lt;guichaz [at] gmail.com&gt;<br/>
  See <a rel="nofollow" href="http://guichaz.free.fr/gsh">http://guichaz.free.fr/gsh</a> </p>

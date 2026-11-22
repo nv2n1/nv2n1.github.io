@@ -14,7 +14,7 @@ description: "dh_installtex – register Type 1 fonts, hyphenation patterns, or 
 <h2>DESCRIPTION</h2>
 <p> dh_installtex is a debhelper program that is responsible for updating the ls-R databases, registering map files, new formats, and new hyphenation patterns with TeX. </p>
 <p> Your package should depend on an appropriate version of tex-common so that the update-* commands are available. (This program adds that dependency to ${misc:Depends}.) </p>
-<p> <font SIZE="-1"><code>WARNING</code></font> This program does <code>not</code> check for the actual existence of any input files in <font SIZE="-1">TEXMF</font> trees. If you call it without any further specification on which packages to work on (using <tt>&quot;-p&quot;</tt> or <tt>&quot;-N&quot;</tt>) it will add calls to management functions to <code>all</code> packages. In this case don&#8217;t forget to add ${misc:Depends} to all packages&#8217; dependencies.</p>
+<p> <code>WARNING</code> This program does <code>not</code> check for the actual existence of any input files in TEXMF trees. If you call it without any further specification on which packages to work on (using <tt>&quot;-p&quot;</tt> or <tt>&quot;-N&quot;</tt>) it will add calls to management functions to <code>all</code> packages. In this case don&#8217;t forget to add ${misc:Depends} to all packages&#8217; dependencies.</p>
 <h2>SIMPLE USAGE: Registering Files</h2>
 <p> If you only install files into /usr/share/texmf, nothing has to be done, tex-common will automatically detect changes and run mktexlsr.</p>
 <h2>COMPLEX USAGE: Registering fonts, hyphenation patterns and formats</h2>
@@ -67,4 +67,4 @@ description: "dh_installtex – register Type 1 fonts, hyphenation patterns, or 
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/7-debhelper/">debhelper</a></code>(7)</p>
 <h2>AUTHOR</h2>
-<p> This program and its documentation was written by Norbert Preining for the Debian Operating System and both are licensed under the <font SIZE="-1">GNU</font> General Public License Version 2 or later. </p>
+<p> This program and its documentation was written by Norbert Preining for the Debian Operating System and both are licensed under the GNU General Public License Version 2 or later. </p>

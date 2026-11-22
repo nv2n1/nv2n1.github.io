@@ -59,7 +59,7 @@ description: "kdeinit5 – Launcher for applications built with kdeinit support,
 <h2>See Also</h2>
 <p>kded5, kdekillall</p>
 <h2>Bugs</h2>
-<p>Please use m[blue]<code>KDE&#8217;s bugtracker</code>m[]<font SIZE="-2">[1]</font> to report bugs.</p>
+<p>Please use m[blue]<code>KDE&#8217;s bugtracker</code>m[][1] to report bugs.</p>
 <h2>Authors</h2>
 <p><code>Waldo Bastian</code> &lt;bastian [at] kde.org&gt;</p>
 <dl>

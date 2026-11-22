@@ -29,21 +29,21 @@ description: "lvm.conf — Configuration file for LVM2"
 <dt><code>value</code> = <code>section</code> | <code>assignment</code></dt>
 <dd>A value can either be a new section, or an assignment.</dd>
 <dt><code>section</code> = <code>identifier</code> &#8216;<code>{</code>&#8216; <code>value</code>* &#8216;<code>}</code>&#8216;</dt>
-<dd>A section is groups associated values together.<br />
- It is denoted by a name and delimited by curly brackets.<br />
+<dd>A section is groups associated values together.<br/>
+ It is denoted by a name and delimited by curly brackets.<br/>
  e.g.<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>backup {</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>&#8230;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>}</p>
 <dt><code>assignment</code> = <code>identifier</code> &#8216;<code>=</code>&#8216; ( <code>array</code> | <code>type</code> )</dt>
-<dd>An assignment associates a type with an identifier.<br />
+<dd>An assignment associates a type with an identifier.<br/>
  e.g.<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>level = 7</dd>
 <dt><code>array</code> = &#8216;<code>[</code>&#8216; ( <code>type</code> &#8216;<code>,</code>&#8216;)* <code>type</code> &#8216;<code>]</code>&#8216; | &#8216;<code>[</code>&#8216; &#8216;<code>]</code>&#8216;</dt>
-<dd>Inhomogeneous arrays are supported.<br />
- Elements must be separated by commas.<br />
+<dd>Inhomogeneous arrays are supported.<br/>
+ Elements must be separated by commas.<br/>
  An empty array is acceptable.</dd>
 <dt><code>type</code> = <code>integer</code> | <code>float</code> | <code>string</code></dt>
-<dd><code>integer</code> = [0-9]*<br />
- <code>float</code> = [0-9]*&#8217;<code>.</code>&#8216;[0-9]*<br />
+<dd><code>integer</code> = [0-9]*<br/>
+ <code>float</code> = [0-9]*&#8217;<code>.</code>&#8216;[0-9]*<br/>
  <code>string </code>= &#8221;.*&#8221;</dd>
 <dd>Strings must be enclosed in double quotes. </dd>
 </dl>
@@ -54,9 +54,9 @@ description: "lvm.conf — Configuration file for LVM2"
 <dd>
 </dd><dd><code>dir</code> &#8212; Directory in which to create volume group device nodes. Defaults to &quot;/dev&quot;. Commands also accept this as a prefix on volume group names.</dd>
 <dd><code>scan</code> &#8212; List of directories to scan recursively for LVM physical volumes. Devices in directories outside this hierarchy will be ignored. Defaults to &quot;/dev&quot;.</dd>
-<dd><code>preferred_names</code> &#8212; List of patterns compared in turn against all the pathnames referencing the same device in in the scanned directories. The pathname that matches the earliest pattern in the list is the one used in any output. As an example, if device-mapper multipathing is used, the following will select multipath device names:<br />
+<dd><code>preferred_names</code> &#8212; List of patterns compared in turn against all the pathnames referencing the same device in in the scanned directories. The pathname that matches the earliest pattern in the list is the one used in any output. As an example, if device-mapper multipathing is used, the following will select multipath device names:<br/>
  <code>devices { preferred_names = [ &quot;^/dev/mapper/mpath&quot; ] }</code></dd>
-<dd><code>filter</code> &#8212; List of patterns to apply to devices found by a scan. Patterns are regular expressions delimited by any character and preceded by <code>a</code> (for accept) or <code>r</code> (for reject). The list is traversed in order, and the first regex that matches determines if the device will be accepted or rejected (ignored). Devices that don&#8217;t match any patterns are accepted. If you want to reject patterns that don&#8217;t match, end the list with &quot;r/.*/&quot;. If there are several names for the same device (e.g. symbolic links in /dev), if the first matching pattern in the list for any of the names is an <code>a</code> pattern, the device is accepted; otherwise if the first matching pattern in the list for any of the names is an <code>r</code> pattern it is rejected; otherwise it is accepted. As an example, to ignore /dev/cdrom you could use:<br />
+<dd><code>filter</code> &#8212; List of patterns to apply to devices found by a scan. Patterns are regular expressions delimited by any character and preceded by <code>a</code> (for accept) or <code>r</code> (for reject). The list is traversed in order, and the first regex that matches determines if the device will be accepted or rejected (ignored). Devices that don&#8217;t match any patterns are accepted. If you want to reject patterns that don&#8217;t match, end the list with &quot;r/.*/&quot;. If there are several names for the same device (e.g. symbolic links in /dev), if the first matching pattern in the list for any of the names is an <code>a</code> pattern, the device is accepted; otherwise if the first matching pattern in the list for any of the names is an <code>r</code> pattern it is rejected; otherwise it is accepted. As an example, to ignore /dev/cdrom you could use:<br/>
  <code>devices { filter=[&quot;r|cdrom|&quot;] }</code></dd>
 <dd><code>global_filter</code> &#8212; Since &quot;filter&quot; might get overridden from the command line, it is not suitable for system-wide device filtering (udev rules, lvmetad). To hide devices from LVM-specific udev processing and/or from lvmetad, you need to set global_filter. The syntax is the same as for normal &quot;filter&quot; above. Devices that fail the global_filter are not even opened by LVM.</dd>
 <dd><code>cache_dir</code> &#8212; Persistent filter cache file directory. Defaults to &quot;/etc/lvm/cache&quot;.</dd>
@@ -117,7 +117,7 @@ description: "lvm.conf — Configuration file for LVM2"
 <dd><code>wait_for_locks</code> &#8212; When set to 1, the default, the tools wait if a lock request cannot be satisfied immediately. When set to 0, the operation is aborted instead.</dd>
 <dd><code>locking_dir</code> &#8212; The directory LVM2 places its file locks if <code>locking_type</code> is set to 1. The default is <code>/var/lock/lvm</code>.</dd>
 <dd><code>locking_library</code> &#8212; The name of the external locking library to load if <code>locking_type</code> is set to 2. The default is <code>liblvm2clusterlock.so</code>. If you need to write such a library, look at the lib/locking source code directory.</dd>
-<dd><code>use_lvmetad</code> &#8212; Whether to use (trust) a running instance of lvmetad. If this is set to 0, all commands fall back to the usual scanning mechanisms. When set to 1 <code>and</code> when lvmetad is running (it is not auto-started), the volume group metadata and PV state flags are obtained from the lvmetad instance and no scanning is done by the individual commands. In a setup with lvmetad, lvmetad udev rules <code>must</code> be set up for LVM to work correctly. Without proper udev rules, all changes in block device configuration will be <code>ignored</code> until a manual &#8216;pvscan &#8211;cache&#8217; is performed.<br />
+<dd><code>use_lvmetad</code> &#8212; Whether to use (trust) a running instance of lvmetad. If this is set to 0, all commands fall back to the usual scanning mechanisms. When set to 1 <code>and</code> when lvmetad is running (it is not auto-started), the volume group metadata and PV state flags are obtained from the lvmetad instance and no scanning is done by the individual commands. In a setup with lvmetad, lvmetad udev rules <code>must</code> be set up for LVM to work correctly. Without proper udev rules, all changes in block device configuration will be <code>ignored</code> until a manual &#8216;pvscan &#8211;cache&#8217; is performed.<br/>
  If lvmetad has been running while use_lvmetad was 0, it <code>MUST</code> be stopped before changing use_lvmetad to 1 and started again afterwards.</dd>
 <dt><code>tags</code> &#8212; Host tag settings</dt>
 <dd>
@@ -145,10 +145,10 @@ description: "lvm.conf — Configuration file for LVM2"
 <dd><code>vgmetadatacopies</code> &#8212; When creating a volume group using the LVM2 metadata format, this is the default number of copies of metadata desired across all the physical volumes in the volume group. If set to a non-zero value, LVM will automatically set or clear the metadataignore flag on the physical volumes (see <code>pvcreate</code> and <code>pvchange</code> <code>&#8211;metadataignore</code>) in order to achieve the desired number of metadata copies. An LVM command that adds or removes physical volumes (for example, <code>vgextend</code>, <code>vgreduce</code>, <code>vgsplit</code>, or <code>vgmerge</code>), may cause LVM to automatically set or clear the metadataignore flags. Also, if physical volumes go missing or reappear, or a new number of copies is explicitly set (see <code>vgchange &#8211;vgmetadatacopies</code>), LVM may adjust the metadataignore flags. Set <code>vgmetadatacopies</code> to 0 instructs LVM not to set or clear the metadataignore flags automatically. You may set a value larger than the sum of all metadata areas on all physical volumes. The value can be overridden on the command line with <code>&#8211;vgmetadatacopies</code> for various commands (for example, <code>vgcreate</code> and <code>vgchange</code>), and can be queryied with the <code>vg_mda_copies</code> field of <code>vgs</code>. This option is useful for volume groups containing large numbers of physical volumes with metadata as it may be used to minimize metadata read and write overhead.</dd>
 <dd><code>dirs</code> &#8212; List of directories holding live copies of LVM2 metadata as text files. These directories must not be on logical volumes. It is possible to use LVM2 with a couple of directories here, preferably on different (non-logical-volume) filesystems and with no other on-disk metadata, <code>pvmetadatacopies = 0</code>. Alternatively these directories can be in addition to the on-disk metadata areas. This feature was created during the development of the LVM2 metadata before the new on-disk metadata areas were designed and no longer gets tested. It is not supported under low-memory conditions, and it is important never to edit these metadata files unless you fully understand how things work: to make changes you should always use the tools as normal, or else vgcfgbackup, edit backup, vgcfgrestore.</dd></dl>
 <h2>Files</h2>
-<p><i>/etc/lvm/lvm.conf</i><br />
- <i>/etc/lvm/archive</i><br />
- <i>/etc/lvm/backup</i><br />
- <i>/etc/lvm/cache/.cache</i><br />
+<p><i>/etc/lvm/lvm.conf</i><br/>
+ <i>/etc/lvm/archive</i><br/>
+ <i>/etc/lvm/backup</i><br/>
+ <i>/etc/lvm/cache/.cache</i><br/>
  <i>/run/lock/lvm</i></p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-lvm/">lvm</a></code>(8), <code><a href="/docs/linux/man/2-umask/">umask</a></code>(2), <code><a href="/docs/linux/man/2-uname/">uname</a></code>(2), <code><a href="/docs/linux/man/3-dlopen/">dlopen</a></code>(3), <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3), <code>syslog.conf</code>(5) </p>

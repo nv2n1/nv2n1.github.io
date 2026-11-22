@@ -27,11 +27,11 @@ perlport - Writing portable Perl
 </dt><dd> Don't be fooled into thinking that it is hard to create portable Perl code. It isn't. Perl tries its level-best to bridge the gaps between what's available on different platforms, and all the means available to use those features. Thus almost all Perl code runs on any machine without modification. But there are some significant issues in writing portable code, and this document is entirely about those issues.</dd></dl>
  
 
- Here's the general rule: When you approach a task commonly done using a whole range of platforms, think about writing portable code. That way, you don't sacrifice much by way of the implementation choices you can avail yourself of, and at the same time you can give your users lots of platform choices. On the other hand, when you have to take advantage of some unique feature of a particular platform, as is often the case with systems programming (whether for Unix, Windows, <font SIZE="-1">VMS,</font> etc.), consider writing platform-specific code. 
+ Here's the general rule: When you approach a task commonly done using a whole range of platforms, think about writing portable code. That way, you don't sacrifice much by way of the implementation choices you can avail yourself of, and at the same time you can give your users lots of platform choices. On the other hand, when you have to take advantage of some unique feature of a particular platform, as is often the case with systems programming (whether for Unix, Windows, VMS, etc.), consider writing platform-specific code. 
 
  When the code will run on only two or three operating systems, you may need to consider only the differences of those particular systems. The important thing is to decide where the code will run and to be deliberate in your decision. 
 
- The material below is separated into three main sections: main issues of portability (``<font SIZE="-1">ISSUES''</font>), platform-specific issues (``<font SIZE="-1">PLATFORMS''</font>), and built-in Perl functions that behave differently on various ports (``<font SIZE="-1">FUNCTION IMPLEMENTATIONS''</font>). 
+ The material below is separated into three main sections: main issues of portability (``ISSUES''), platform-specific issues (``PLATFORMS''), and built-in Perl functions that behave differently on various ports (``FUNCTION IMPLEMENTATIONS''). 
 
  This information should not be considered complete; it includes possibly transient information about idiosyncrasies of some of the ports, almost all of which are in a state of constant evolution. Thus, this material should be considered a perpetual work in progress (<tt>&quot;&lt;IMG SRC=&quot;yellow_sign.gif&quot; ALT=&quot;Under Construction&quot;&gt;&quot;</tt>).
 
@@ -39,9 +39,9 @@ perlport - Writing portable Perl
 
 <h3>Newlines</h3>
 
- In most operating systems, lines in files are terminated by newlines. Just what is used as a newline may vary from <font SIZE="-1">OS</font> to <font SIZE="-1">OS.</font> Unix traditionally uses <tt>&quot;\012&quot;</tt>, one type of DOSish I/O uses <tt>&quot;\015\012&quot;</tt>, Mac OS uses <tt>&quot;\015&quot;</tt>, and z/OS uses <tt>&quot;\025&quot;</tt>. 
+ In most operating systems, lines in files are terminated by newlines. Just what is used as a newline may vary from OS to OS. Unix traditionally uses <tt>&quot;\012&quot;</tt>, one type of DOSish I/O uses <tt>&quot;\015\012&quot;</tt>, Mac OS uses <tt>&quot;\015&quot;</tt>, and z/OS uses <tt>&quot;\025&quot;</tt>. 
 
- Perl uses <tt>&quot;\n&quot;</tt> to represent the ``logical'' newline, where what is logical may depend on the platform in use. In MacPerl, <tt>&quot;\n&quot;</tt> always means <tt>&quot;\015&quot;</tt>. On <font SIZE="-1">EBCDIC</font> platforms, <tt>&quot;\n&quot;</tt> could be <tt>&quot;\025&quot;</tt> or <tt>&quot;\045&quot;</tt>. In DOSish perls, <tt>&quot;\n&quot;</tt> usually means <tt>&quot;\012&quot;</tt>, but when accessing a file in ``text'' mode, perl uses the <tt>&quot;:crlf&quot;</tt> layer that translates it to (or from) <tt>&quot;\015\012&quot;</tt>, depending on whether you're reading or writing. Unix does the same thing on ttys in canonical mode. <tt>&quot;\015\012&quot;</tt> is commonly referred to as <font SIZE="-1">CRLF.</font> 
+ Perl uses <tt>&quot;\n&quot;</tt> to represent the ``logical'' newline, where what is logical may depend on the platform in use. In MacPerl, <tt>&quot;\n&quot;</tt> always means <tt>&quot;\015&quot;</tt>. On EBCDIC platforms, <tt>&quot;\n&quot;</tt> could be <tt>&quot;\025&quot;</tt> or <tt>&quot;\045&quot;</tt>. In DOSish perls, <tt>&quot;\n&quot;</tt> usually means <tt>&quot;\012&quot;</tt>, but when accessing a file in ``text'' mode, perl uses the <tt>&quot;:crlf&quot;</tt> layer that translates it to (or from) <tt>&quot;\015\012&quot;</tt>, depending on whether you're reading or writing. Unix does the same thing on ttys in canonical mode. <tt>&quot;\015\012&quot;</tt> is commonly referred to as CRLF. 
 
  To trim trailing newlines from text lines use <tt>&quot;chomp&quot;</tt>. With default settings that function looks for a trailing <tt>&quot;\n&quot;</tt> character and thus trims in a portable way. 
 
@@ -71,7 +71,7 @@ perlport - Writing portable Perl
     }
 </pre> 
 
- Because both <font SIZE="-1">CRLF</font> and <font SIZE="-1">LF</font> end in <font SIZE="-1">LF,</font> the input record separator can be set to <font SIZE="-1">LF</font> and any <font SIZE="-1">CR</font> stripped later. Better to write: 
+ Because both CRLF and LF end in LF, the input record separator can be set to LF and any CR stripped later. Better to write: 
 
  <pre><code>
 use Socket qw(
@@ -95,7 +95,7 @@ local($ /) = LF;
     return $data;
 </pre> 
 
- Some of this may be confusing. Here's a handy reference to the <font SIZE="-1">ASCII CR</font> and <font SIZE="-1">LF</font> characters. You can print it out and stick it in your wallet. 
+ Some of this may be confusing. Here's a handy reference to the ASCII CR and LF characters. You can print it out and stick it in your wallet. 
 
  
 LF eq  \012 eq  \x0A eq  \cJ eq chr(10) eq ASCII 10 CR eq  \015 eq  \x0D eq  \cM eq chr(13) eq ASCII 13 | Unix | DOS | Mac |
@@ -107,9 +107,9 @@ LF eq  \012 eq  \x0A eq  \cJ eq chr(10) eq ASCII 10 CR eq  \015 eq  \x0D eq  \cM
     -- -- -- -- -- -- -- -- -- -- -- -- -- -*text - mode STDIO
  
 
- The Unix column assumes that you are not accessing a serial line (like a tty) in canonical mode. If you are, then <font SIZE="-1">CR</font> on input becomes ``\n'', and ``\n'' on output becomes <font SIZE="-1">CRLF.</font> 
+ The Unix column assumes that you are not accessing a serial line (like a tty) in canonical mode. If you are, then CR on input becomes ``\n'', and ``\n'' on output becomes CRLF. 
 
- These are just the most common definitions of <tt>&quot;\n&quot;</tt> and <tt>&quot;\r&quot;</tt> in Perl. There may well be others. For example, on an <font SIZE="-1">EBCDIC</font> implementation such as z/OS (<font SIZE="-1">OS/390</font>) or <font SIZE="-1">OS/400</font> (using the <font SIZE="-1">ILE,</font> the <font SIZE="-1">PASE</font> is ASCII-based) the above material is similar to ``Unix'' but the code numbers change: 
+ These are just the most common definitions of <tt>&quot;\n&quot;</tt> and <tt>&quot;\r&quot;</tt> in Perl. There may well be others. For example, on an EBCDIC implementation such as z/OS (OS/390) or OS/400 (using the ILE, the PASE is ASCII-based) the above material is similar to ``Unix'' but the code numbers change: 
 
  
 LF eq  \025 eq  \x15 eq  \cU eq chr(21) eq CP - 1047 21 LF eq  \045 eq  \x25 eq chr(37) eq CP - 0037 37 CR eq  \015 eq  \x0D eq  \cM eq chr(13) eq CP - 1047 13 CR eq  \015 eq  \x0D eq  \cM eq chr(13) eq CP - 0037 13 | z / OS | OS / 400 |
@@ -123,9 +123,9 @@ LF eq  \025 eq  \x15 eq  \cU eq chr(21) eq CP - 1047 21 LF eq  \045 eq  \x25 eq 
 
 <h3>Numbers endianness and Width</h3>
 
- Different CPUs store integers and floating point numbers in different orders (called <i>endianness</i>) and widths (32-bit and 64-bit being the most common today). This affects your programs when they attempt to transfer numbers in binary format from one <font SIZE="-1">CPU</font> architecture to another, usually either ``live'' via network connection, or by storing the numbers to secondary storage such as a disk file or tape. 
+ Different CPUs store integers and floating point numbers in different orders (called <i>endianness</i>) and widths (32-bit and 64-bit being the most common today). This affects your programs when they attempt to transfer numbers in binary format from one CPU architecture to another, usually either ``live'' via network connection, or by storing the numbers to secondary storage such as a disk file or tape. 
 
- Conflicting storage orders make an utter mess out of the numbers. If a little-endian host (Intel, <font SIZE="-1">VAX</font>) stores 0x12345678 (305419896 in decimal), a big-endian host (Motorola, Sparc, <font SIZE="-1">PA</font>) reads it as 0x78563412 (2018915346 in decimal). Alpha and <font SIZE="-1">MIPS</font> can be either: Digital/Compaq used/uses them in little-endian mode; SGI/Cray uses them in big-endian mode. To avoid this problem in network (socket) connections use the <tt>&quot;pack&quot;</tt> and <tt>&quot;unpack&quot;</tt> formats <tt>&quot;n&quot;</tt> and <tt>&quot;N&quot;</tt>, the ``network'' orders. These are guaranteed to be portable. 
+ Conflicting storage orders make an utter mess out of the numbers. If a little-endian host (Intel, VAX) stores 0x12345678 (305419896 in decimal), a big-endian host (Motorola, Sparc, PA) reads it as 0x78563412 (2018915346 in decimal). Alpha and MIPS can be either: Digital/Compaq used/uses them in little-endian mode; SGI/Cray uses them in big-endian mode. To avoid this problem in network (socket) connections use the <tt>&quot;pack&quot;</tt> and <tt>&quot;unpack&quot;</tt> formats <tt>&quot;n&quot;</tt> and <tt>&quot;N&quot;</tt>, the ``network'' orders. These are guaranteed to be portable. 
 
  As of Perl 5.10.0, you can also use the <tt>&quot;&gt;&quot;</tt> and <tt>&quot;&lt;&quot;</tt> modifiers to force big- or little-endian byte-order. This is useful if you want to store signed integers or 64-bit integers, for example. 
 
@@ -152,19 +152,19 @@ $is_little_endian = unpack("h*", pack("s", 1)) = ~ / ^1 / ;
 
  Most platforms these days structure files in a hierarchical fashion. So, it is reasonably safe to assume that all platforms support the notion of a ``path'' to uniquely identify a file on the system. How that path is really written, though, differs considerably. 
 
- Although similar, file path specifications differ between Unix, Windows, Mac OS, <font SIZE="-1">OS/2, VMS, VOS,</font> RISC OS, and probably others. Unix, for example, is one of the few OSes that has the elegant idea of a single root directory. 
+ Although similar, file path specifications differ between Unix, Windows, Mac OS, OS/2, VMS, VOS, RISC OS, and probably others. Unix, for example, is one of the few OSes that has the elegant idea of a single root directory. 
 
- <font SIZE="-1">DOS, OS/2, VMS, VOS,</font> and Windows can work similarly to Unix with <tt>&quot;/&quot;</tt> as path separator, or in their own idiosyncratic ways (such as having several root directories and various ``unrooted'' device files such <font SIZE="-1">NIL:</font> and <font SIZE="-1">LPT:</font>). 
+ DOS, OS/2, VMS, VOS, and Windows can work similarly to Unix with <tt>&quot;/&quot;</tt> as path separator, or in their own idiosyncratic ways (such as having several root directories and various ``unrooted'' device files such NIL: and LPT:). 
 
  Mac OS 9 and earlier used <tt>&quot;:&quot;</tt> as a path separator instead of <tt>&quot;/&quot;</tt>. 
 
  The filesystem may support neither hard links (<tt>&quot;link&quot;</tt>) nor symbolic links (<tt>&quot;symlink&quot;</tt>, <tt>&quot;readlink&quot;</tt>, <tt>&quot;lstat&quot;</tt>). 
 
- The filesystem may support neither access timestamp nor change timestamp (meaning that about the only portable timestamp is the modification timestamp), or one second granularity of any timestamps (e.g. the <font SIZE="-1">FAT</font> filesystem limits the time granularity to two seconds). 
+ The filesystem may support neither access timestamp nor change timestamp (meaning that about the only portable timestamp is the modification timestamp), or one second granularity of any timestamps (e.g. the FAT filesystem limits the time granularity to two seconds). 
 
  The ``inode change timestamp'' (the <tt>&quot;-C&quot;</tt> filetest) may really be the ``creation timestamp'' (which it is not in Unix). 
 
- <font SIZE="-1">VOS</font> perl can emulate Unix filenames with <tt>&quot;/&quot;</tt> as path separator. The native pathname characters greater-than, less-than, number-sign, and percent-sign are always accepted. 
+ VOS perl can emulate Unix filenames with <tt>&quot;/&quot;</tt> as path separator. The native pathname characters greater-than, less-than, number-sign, and percent-sign are always accepted. 
 
  RISC OS perl can emulate Unix filenames with <tt>&quot;/&quot;</tt> as path separator, or go native and use <tt>&quot;.&quot;</tt> for path separator and <tt>&quot;:&quot;</tt> to signal filesystems and disk names. 
 
@@ -189,7 +189,7 @@ chdir(updir());
 
  Also of use is <tt>&quot;File::Basename&quot;</tt> from the standard distribution, which splits a pathname into pieces (base filename, full path to directory, and file suffix). 
 
- Even when on a single platform (if you can call Unix a single platform), remember not to count on the existence or the contents of particular system-specific files or directories, like <i>/etc/passwd</i>, <i>/etc/sendmail.conf</i>, <i>/etc/resolv.conf</i>, or even <i>/tmp/</i>. For example, <i>/etc/passwd</i> may exist but not contain the encrypted passwords, because the system is using some form of enhanced security. Or it may not contain all the accounts, because the system is using <font SIZE="-1">NIS.</font> If code does need to rely on such a file, include a description of the file and its format in the code's documentation, then make it easy for the user to override the default location of the file. 
+ Even when on a single platform (if you can call Unix a single platform), remember not to count on the existence or the contents of particular system-specific files or directories, like <i>/etc/passwd</i>, <i>/etc/sendmail.conf</i>, <i>/etc/resolv.conf</i>, or even <i>/tmp/</i>. For example, <i>/etc/passwd</i> may exist but not contain the encrypted passwords, because the system is using some form of enhanced security. Or it may not contain all the accounts, because the system is using NIS. If code does need to rely on such a file, include a description of the file and its format in the code's documentation, then make it easy for the user to override the default location of the file. 
 
  Don't assume a text file will end with a newline. They should, but people forget. 
 
@@ -199,7 +199,7 @@ chdir(updir());
 
  Whitespace in filenames is tolerated on most systems, but not all, and even on systems where it might be tolerated, some utilities might become confused by such whitespace. 
 
- Many systems (<font SIZE="-1">DOS, VMS ODS-2</font>) cannot have more than one <tt>&quot;.&quot;</tt> in their filenames. 
+ Many systems (DOS, VMS ODS-2) cannot have more than one <tt>&quot;.&quot;</tt> in their filenames. 
 
  Don't assume <tt>&quot;&gt;&quot;</tt> won't be the first character of a filename. Always use the three-arg version of <tt>&quot;open&quot;</tt>: 
 
@@ -209,11 +209,11 @@ chdir(updir());
 
  Two-arg <tt>&quot;open&quot;</tt> is magic and can translate characters like <tt>&quot;&gt;&quot;</tt>, <tt>&quot;&lt;&quot;</tt>, and <tt>&quot;|&quot;</tt> in filenames, which is usually the wrong thing to do. <tt>&quot;sysopen&quot;</tt> and three-arg <tt>&quot;open&quot;</tt> don't have this problem. 
 
- Don't use <tt>&quot;:&quot;</tt> as a part of a filename since many systems use that for their own semantics (Mac <font SIZE="-1">OS</font> Classic for separating pathname components, many networking schemes and utilities for separating the nodename and the pathname, and so on). For the same reasons, avoid <tt>&quot;@&quot;</tt>, <tt>&quot;;&quot;</tt> and <tt>&quot;|&quot;</tt>. 
+ Don't use <tt>&quot;:&quot;</tt> as a part of a filename since many systems use that for their own semantics (Mac OS Classic for separating pathname components, many networking schemes and utilities for separating the nodename and the pathname, and so on). For the same reasons, avoid <tt>&quot;@&quot;</tt>, <tt>&quot;;&quot;</tt> and <tt>&quot;|&quot;</tt>. 
 
  Don't assume that in pathnames you can collapse two leading slashes <tt>&quot;//&quot;</tt> into one: some networking and clustering filesystems have special semantics for that. Let the operating system sort it out. 
 
- The <i>portable filename characters</i> as defined by <font SIZE="-1">ANSI C</font> are 
+ The <i>portable filename characters</i> as defined by ANSI C are 
 
  <pre>
  a b c d e f g h i j k l m n o p q r s t u v w x y z
@@ -226,15 +226,15 @@ chdir(updir());
 
 <h3>System Interaction</h3>
 
- Not all platforms provide a command line. These are usually platforms that rely primarily on a Graphical User Interface (<font SIZE="-1">GUI</font>) for user interaction. A program requiring a command line interface might not work everywhere. This is probably for the user of the program to deal with, so don't stay up late worrying about it. 
+ Not all platforms provide a command line. These are usually platforms that rely primarily on a Graphical User Interface (GUI) for user interaction. A program requiring a command line interface might not work everywhere. This is probably for the user of the program to deal with, so don't stay up late worrying about it. 
 
  Some platforms can't delete or rename files held open by the system, this limitation may also apply to changing filesystem metainformation like file permissions or owners. Remember to <tt>&quot;close&quot;</tt> files when you are done with them. Don't <tt>&quot;unlink&quot;</tt> or <tt>&quot;rename&quot;</tt> an open file. Don't <tt>&quot;tie&quot;</tt> or <tt>&quot;open&quot;</tt> a file already tied or opened; <tt>&quot;untie&quot;</tt> or <tt>&quot;close&quot;</tt> it first. 
 
  Don't open the same file more than once at a time for writing, as some operating systems put mandatory locks on such files. 
 
- Don't assume that write/modify permission on a directory gives the right to add or delete files/directories in that directory. That is filesystem specific: in some filesystems you need write/modify permission also (or even just) in the file/directory itself. In some filesystems (<font SIZE="-1">AFS, DFS</font>) the permission to add/delete directory entries is a completely separate permission. 
+ Don't assume that write/modify permission on a directory gives the right to add or delete files/directories in that directory. That is filesystem specific: in some filesystems you need write/modify permission also (or even just) in the file/directory itself. In some filesystems (AFS, DFS) the permission to add/delete directory entries is a completely separate permission. 
 
- Don't assume that a single <tt>&quot;unlink&quot;</tt> completely gets rid of the file: some filesystems (most notably the ones in <font SIZE="-1">VMS</font>) have versioned filesystems, and <tt>&quot;unlink&quot;</tt> removes only the most recent one (it doesn't remove all the versions because by default the native tools on those platforms remove just the most recent version, too). The portable idiom to remove all the versions of a file is 
+ Don't assume that a single <tt>&quot;unlink&quot;</tt> completely gets rid of the file: some filesystems (most notably the ones in VMS) have versioned filesystems, and <tt>&quot;unlink&quot;</tt> removes only the most recent one (it doesn't remove all the versions because by default the native tools on those platforms remove just the most recent version, too). The portable idiom to remove all the versions of a file is 
 
  <pre>
     1 while unlink &quot;file&quot;;
@@ -242,11 +242,11 @@ chdir(updir());
 
  This will terminate if the file is undeletable for some reason (protected, not there, and so on). 
 
- Don't count on a specific environment variable existing in <tt>%ENV</tt>. Don't count on <tt>%ENV</tt> entries being case-sensitive, or even case-preserving. Don't try to clear <tt>%ENV</tt> by saying <tt>&quot;%ENV = ();&quot;</tt>, or, if you really have to, make it conditional on <tt>&quot;$^O ne 'VMS'&quot;</tt> since in <font SIZE="-1">VMS</font> the <tt>%ENV</tt> table is much more than a per-process key-value string table. 
+ Don't count on a specific environment variable existing in <tt>%ENV</tt>. Don't count on <tt>%ENV</tt> entries being case-sensitive, or even case-preserving. Don't try to clear <tt>%ENV</tt> by saying <tt>&quot;%ENV = ();&quot;</tt>, or, if you really have to, make it conditional on <tt>&quot;$^O ne 'VMS'&quot;</tt> since in VMS the <tt>%ENV</tt> table is much more than a per-process key-value string table. 
 
- On <font SIZE="-1">VMS,</font> some entries in the <tt>%ENV</tt> hash are dynamically created when their key is used on a read if they did not previously exist. The values for <tt>$ENV{HOME}</tt>, <tt>$ENV{TERM}</tt>, <tt>$ENV{PATH}</tt>, and <tt>$ENV{USER}</tt>, are known to be dynamically generated. The specific names that are dynamically generated may vary with the version of the C library on <font SIZE="-1">VMS,</font> and more may exist than are documented. 
+ On VMS, some entries in the <tt>%ENV</tt> hash are dynamically created when their key is used on a read if they did not previously exist. The values for <tt>$ENV{HOME}</tt>, <tt>$ENV{TERM}</tt>, <tt>$ENV{PATH}</tt>, and <tt>$ENV{USER}</tt>, are known to be dynamically generated. The specific names that are dynamically generated may vary with the version of the C library on VMS, and more may exist than are documented. 
 
- On <font SIZE="-1">VMS</font> by default, changes to the <tt>%ENV</tt> hash persist after perl exits. Subsequent invocations of perl in the same process can inadvertently inherit environment settings that were meant to be temporary. 
+ On VMS by default, changes to the <tt>%ENV</tt> hash persist after perl exits. Subsequent invocations of perl in the same process can inadvertently inherit environment settings that were meant to be temporary. 
 
  Don't count on signals or <tt>%SIG</tt> for anything. 
 
@@ -258,7 +258,7 @@ chdir(updir());
 
 <h3>Command names versus file pathnames</h3>
 
- Don't assume that the name used to invoke a command or program with <tt>&quot;system&quot;</tt> or <tt>&quot;exec&quot;</tt> can also be used to test for the existence of the file that holds the executable code for that command or program. First, many systems have ``internal'' commands that are built-in to the shell or <font SIZE="-1">OS</font> and while these commands can be invoked, there is no corresponding file. Second, some operating systems (e.g., Cygwin, <font SIZE="-1">DJGPP, OS/2,</font> and <font SIZE="-1">VOS</font>) have required suffixes for executable files; these suffixes are generally permitted on the command name but are not required. Thus, a command like <tt>&quot;perl&quot;</tt> might exist in a file named <i>perl</i>, <i>perl.exe</i>, or <i>perl.pm</i>, depending on the operating system. The variable <tt>$Config{_exe}</tt> in the <tt>&quot;Config&quot;</tt> module holds the executable suffix, if any. Third, the <font SIZE="-1">VMS</font> port carefully sets up <tt>$^X</tt> and <tt>$Config{perlpath}</tt> so that no further processing is required. This is just as well, because the matching regular expression used below would then have to deal with a possible trailing version number in the <font SIZE="-1">VMS</font> file name. 
+ Don't assume that the name used to invoke a command or program with <tt>&quot;system&quot;</tt> or <tt>&quot;exec&quot;</tt> can also be used to test for the existence of the file that holds the executable code for that command or program. First, many systems have ``internal'' commands that are built-in to the shell or OS and while these commands can be invoked, there is no corresponding file. Second, some operating systems (e.g., Cygwin, DJGPP, OS/2, and VOS) have required suffixes for executable files; these suffixes are generally permitted on the command name but are not required. Thus, a command like <tt>&quot;perl&quot;</tt> might exist in a file named <i>perl</i>, <i>perl.exe</i>, or <i>perl.pm</i>, depending on the operating system. The variable <tt>$Config{_exe}</tt> in the <tt>&quot;Config&quot;</tt> module holds the executable suffix, if any. Third, the VMS port carefully sets up <tt>$^X</tt> and <tt>$Config{perlpath}</tt> so that no further processing is required. This is just as well, because the matching regular expression used below would then have to deal with a possible trailing version number in the VMS file name. 
 
  To convert <tt>$^X</tt> to a file pathname, taking account of the requirements of the various operating system possibilities, say: 
 
@@ -296,11 +296,11 @@ if ($ ^ O ne 'VMS') {
 
  Don't assume that you can reach outside world through any other port than 80, or some web proxy. ftp is blocked by many firewalls. 
 
- Don't assume that you can send email by connecting to the local <font SIZE="-1">SMTP</font> port. 
+ Don't assume that you can send email by connecting to the local SMTP port. 
 
  Don't assume that you can reach yourself or any node by the name 'localhost'. The same goes for '127.0.0.1'. You will have to try both. 
 
- Don't assume that the host has only one network card, or that it can't bind to many virtual <font SIZE="-1">IP</font> addresses. 
+ Don't assume that the host has only one network card, or that it can't bind to many virtual IP addresses. 
 
  Don't assume a particular network device name. 
 
@@ -310,15 +310,15 @@ if ($ ^ O ne 'VMS') {
 
  Don't assume that any particular port (service) will respond. 
 
- Don't assume that <tt>&quot;Sys::Hostname&quot;</tt> (or any other <font SIZE="-1">API</font> or command) returns either a fully qualified hostname or a non-qualified hostname: it all depends on how the system had been configured. Also remember that for things such as <font SIZE="-1">DHCP</font> and <font SIZE="-1">NAT,</font> the hostname you get back might not be very useful. 
+ Don't assume that <tt>&quot;Sys::Hostname&quot;</tt> (or any other API or command) returns either a fully qualified hostname or a non-qualified hostname: it all depends on how the system had been configured. Also remember that for things such as DHCP and NAT, the hostname you get back might not be very useful. 
 
  All the above <i>don't</i>s may look daunting, and they are, but the key is to degrade gracefully if one cannot reach the particular network service one wants. Croaking or hanging do not look very professional.
 
-<h3>Interprocess Communication (<font SIZE="-1">IPC</font>)</h3>
+<h3>Interprocess Communication (IPC)</h3>
 
  In general, don't directly access the system in code meant to be portable. That means, no <tt>&quot;system&quot;</tt>, <tt>&quot;exec&quot;</tt>, <tt>&quot;fork&quot;</tt>, <tt>&quot;pipe&quot;</tt>, <tt>&quot;``&quot;</tt> or <tt>&quot;qx//&quot;</tt>, <tt>&quot;open&quot;</tt> with a <tt>&quot;|&quot;</tt>, nor any of the other things that makes being a Perl hacker worth being. 
 
- Commands that launch external processes are generally supported on most platforms (though many of them do not support any type of forking). The problem with using them arises from what you invoke them on. External tools are often named differently on different platforms, may not be available in the same location, might accept different arguments, can behave differently, and often present their results in a platform-dependent way. Thus, you should seldom depend on them to produce consistent results. (Then again, if you're calling <tt>&quot;netstat -a&quot;</tt>, you probably don't expect it to run on both Unix and <font SIZE="-1">CP/M.</font>) 
+ Commands that launch external processes are generally supported on most platforms (though many of them do not support any type of forking). The problem with using them arises from what you invoke them on. External tools are often named differently on different platforms, may not be available in the same location, might accept different arguments, can behave differently, and often present their results in a platform-dependent way. Thus, you should seldom depend on them to produce consistent results. (Then again, if you're calling <tt>&quot;netstat -a&quot;</tt>, you probably don't expect it to run on both Unix and CP/M.) 
 
  One especially common bit of Perl code is opening a pipe to <b>sendmail</b>: 
 
@@ -327,33 +327,33 @@ if ($ ^ O ne 'VMS') {
         or die &quot;cannot fork sendmail: $!&quot;;
 </pre> 
 
- This is fine for systems programming when sendmail is known to be available. But it is not fine for many non-Unix systems, and even some Unix systems that may not have sendmail installed. If a portable solution is needed, see the various distributions on <font SIZE="-1">CPAN</font> that deal with it. <tt>&quot;Mail::Mailer&quot;</tt> and <tt>&quot;Mail::Send&quot;</tt> in the <tt>&quot;MailTools&quot;</tt> distribution are commonly used, and provide several mailing methods, including <tt>&quot;mail&quot;</tt>, <tt>&quot;sendmail&quot;</tt>, and direct <font SIZE="-1">SMTP</font> (via <tt>&quot;Net::SMTP&quot;</tt>) if a mail transfer agent is not available. <tt>&quot;Mail::Sendmail&quot;</tt> is a standalone module that provides simple, platform-independent mailing. 
+ This is fine for systems programming when sendmail is known to be available. But it is not fine for many non-Unix systems, and even some Unix systems that may not have sendmail installed. If a portable solution is needed, see the various distributions on CPAN that deal with it. <tt>&quot;Mail::Mailer&quot;</tt> and <tt>&quot;Mail::Send&quot;</tt> in the <tt>&quot;MailTools&quot;</tt> distribution are commonly used, and provide several mailing methods, including <tt>&quot;mail&quot;</tt>, <tt>&quot;sendmail&quot;</tt>, and direct SMTP (via <tt>&quot;Net::SMTP&quot;</tt>) if a mail transfer agent is not available. <tt>&quot;Mail::Sendmail&quot;</tt> is a standalone module that provides simple, platform-independent mailing. 
 
- The Unix System V <font SIZE="-1">IPC</font> (<tt>&quot;msg*(), sem*(), shm*()&quot;</tt>) is not available even on all Unix platforms. 
+ The Unix System V IPC (<tt>&quot;msg*(), sem*(), shm*()&quot;</tt>) is not available even on all Unix platforms. 
 
  Do not use either the bare result of <tt>&quot;pack(&quot;N&quot;, 10, 20, 30, 40)&quot;</tt> or bare v-strings (such as <tt>&quot;v10.20.30.40&quot;</tt>) to represent IPv4 addresses: both forms just pack the four bytes into network order. That this would be equal to the C language <tt>&quot;in_addr&quot;</tt> struct (which is what the socket code internally uses) is not guaranteed. To be portable use the routines of the <tt>&quot;Socket&quot;</tt> module, such as <tt>&quot;inet_aton&quot;</tt>, <tt>&quot;inet_ntoa&quot;</tt>, and <tt>&quot;sockaddr_in&quot;</tt>. 
 
  The rule of thumb for portable code is: Do it all in portable Perl, or use a module (that may internally implement it with platform-specific code, but exposes a common interface).
 
-<h3>External Subroutines (<font SIZE="-1">XS</font>)</h3>
+<h3>External Subroutines (XS)</h3>
 
- <font SIZE="-1">XS</font> code can usually be made to work with any platform, but dependent libraries, header files, etc., might not be readily available or portable, or the <font SIZE="-1">XS</font> code itself might be platform-specific, just as Perl code might be. If the libraries and headers are portable, then it is normally reasonable to make sure the <font SIZE="-1">XS</font> code is portable, too. 
+ XS code can usually be made to work with any platform, but dependent libraries, header files, etc., might not be readily available or portable, or the XS code itself might be platform-specific, just as Perl code might be. If the libraries and headers are portable, then it is normally reasonable to make sure the XS code is portable, too. 
 
- A different type of portability issue arises when writing <font SIZE="-1">XS</font> code: availability of a C compiler on the end-user's system. C brings with it its own portability issues, and writing <font SIZE="-1">XS</font> code will expose you to some of those. Writing purely in Perl is an easier way to achieve portability.
+ A different type of portability issue arises when writing XS code: availability of a C compiler on the end-user's system. C brings with it its own portability issues, and writing XS code will expose you to some of those. Writing purely in Perl is an easier way to achieve portability.
 
 <h3>Standard Modules</h3>
 
- In general, the standard modules work across platforms. Notable exceptions are the <tt>&quot;CPAN&quot;</tt> module (which currently makes connections to external programs that may not be available), platform-specific modules (like <tt>&quot;ExtUtils::MM_VMS&quot;</tt>), and <font SIZE="-1">DBM</font> modules. 
+ In general, the standard modules work across platforms. Notable exceptions are the <tt>&quot;CPAN&quot;</tt> module (which currently makes connections to external programs that may not be available), platform-specific modules (like <tt>&quot;ExtUtils::MM_VMS&quot;</tt>), and DBM modules. 
 
- There is no one <font SIZE="-1">DBM</font> module available on all platforms. <tt>&quot;SDBM_File&quot;</tt> and the others are generally available on all Unix and DOSish ports, but not in MacPerl, where only <tt>&quot;NDBM_File&quot;</tt> and <tt>&quot;DB_File&quot;</tt> are available. 
+ There is no one DBM module available on all platforms. <tt>&quot;SDBM_File&quot;</tt> and the others are generally available on all Unix and DOSish ports, but not in MacPerl, where only <tt>&quot;NDBM_File&quot;</tt> and <tt>&quot;DB_File&quot;</tt> are available. 
 
- The good news is that at least some <font SIZE="-1">DBM</font> module should be available, and <tt>&quot;AnyDBM_File&quot;</tt> will use whichever module it can find. Of course, then the code needs to be fairly strict, dropping to the greatest common factor (e.g., not exceeding 1K for each record), so that it will work with any <font SIZE="-1">DBM</font> module. See AnyDBM_File for more details.
+ The good news is that at least some DBM module should be available, and <tt>&quot;AnyDBM_File&quot;</tt> will use whichever module it can find. Of course, then the code needs to be fairly strict, dropping to the greatest common factor (e.g., not exceeding 1K for each record), so that it will work with any DBM module. See AnyDBM_File for more details.
 
 <h3>Time and Date</h3>
 
- The system's notion of time of day and calendar date is controlled in widely different ways. Don't assume the timezone is stored in <tt>$ENV{TZ}</tt>, and even if it is, don't assume that you can control the timezone through that variable. Don't assume anything about the three-letter timezone abbreviations (for example that <font SIZE="-1">MST</font> would be the Mountain Standard Time, it's been known to stand for Moscow Standard Time). If you need to use timezones, express them in some unambiguous format like the exact number of minutes offset from <font SIZE="-1">UTC,</font> or the <font SIZE="-1">POSIX</font> timezone format. 
+ The system's notion of time of day and calendar date is controlled in widely different ways. Don't assume the timezone is stored in <tt>$ENV{TZ}</tt>, and even if it is, don't assume that you can control the timezone through that variable. Don't assume anything about the three-letter timezone abbreviations (for example that MST would be the Mountain Standard Time, it's been known to stand for Moscow Standard Time). If you need to use timezones, express them in some unambiguous format like the exact number of minutes offset from UTC, or the POSIX timezone format. 
 
- Don't assume that the epoch starts at 00:00:00, January 1, 1970, because that is <font SIZE="-1">OS-</font> and implementation-specific. It is better to store a date in an unambiguous representation. The <font SIZE="-1">ISO 8601</font> standard defines YYYY-MM-DD as the date format, or <font SIZE="-1">YYYY-MM-DDTHH:MM:SS</font> (that's a literal ``T'' separating the date from the time). Please do use the <font SIZE="-1">ISO 8601</font> instead of making us guess what date 02/03/04 might be. <font SIZE="-1">ISO 8601</font> even sorts nicely as-is. A text representation (like ``1987-12-18'') can be easily converted into an OS-specific value using a module like <tt>&quot;Time::Piece&quot;</tt> (see ``Date Parsing'' in Time::Piece) or <tt>&quot;Date::Parse&quot;</tt>. An array of values, such as those returned by <tt>&quot;localtime&quot;</tt>, can be converted to an OS-specific representation using <tt>&quot;Time::Local&quot;</tt>. 
+ Don't assume that the epoch starts at 00:00:00, January 1, 1970, because that is OS- and implementation-specific. It is better to store a date in an unambiguous representation. The ISO 8601 standard defines YYYY-MM-DD as the date format, or YYYY-MM-DDTHH:MM:SS (that's a literal ``T'' separating the date from the time). Please do use the ISO 8601 instead of making us guess what date 02/03/04 might be. ISO 8601 even sorts nicely as-is. A text representation (like ``1987-12-18'') can be easily converted into an OS-specific value using a module like <tt>&quot;Time::Piece&quot;</tt> (see ``Date Parsing'' in Time::Piece) or <tt>&quot;Date::Parse&quot;</tt>. An array of values, such as those returned by <tt>&quot;localtime&quot;</tt>, can be converted to an OS-specific representation using <tt>&quot;Time::Local&quot;</tt>. 
 
  When calculating specific times, such as for tests in time or date modules, it may be appropriate to calculate an offset for the epoch. 
 
@@ -362,7 +362,7 @@ use Time::Local qw(timegm);
 my $offset = timegm(0, 0, 0, 1, 0, 70);
  
 
- The value for <tt>$offset</tt> in Unix will be <tt>0</tt>, but in Mac <font SIZE="-1">OS</font> Classic will be some large number. <tt>$offset</tt> can then be added to a Unix time value to get what should be the proper value on any system.
+ The value for <tt>$offset</tt> in Unix will be <tt>0</tt>, but in Mac OS Classic will be some large number. <tt>$offset</tt> can then be added to a Unix time value to get what should be the proper value on any system.
 
 <h3>Character sets and character encoding</h3>
 
@@ -376,11 +376,11 @@ my $offset = timegm(0, 0, 0, 1, 0, 70);
 
 <h3>Internationalisation</h3>
 
- If you may assume <font SIZE="-1">POSIX</font> (a rather large assumption), you may read more about the <font SIZE="-1">POSIX</font> locale system from perllocale. The locale system at least attempts to make things a little bit more portable, or at least more convenient and native-friendly for non-English users. The system affects character sets and encoding, and date and time formatting---amongst other things. 
+ If you may assume POSIX (a rather large assumption), you may read more about the POSIX locale system from perllocale. The locale system at least attempts to make things a little bit more portable, or at least more convenient and native-friendly for non-English users. The system affects character sets and encoding, and date and time formatting---amongst other things. 
 
  If you really want to be international, you should consider Unicode. See perluniintro and perlunicode for more information. 
 
- By default Perl assumes your source code is written in an 8-bit <font SIZE="-1">ASCII</font> superset. To embed Unicode characters in your strings and regexes, you can use the <tt>&quot;\x{HH}&quot;</tt> or (more portably) <tt>&quot;\N{U+HH}&quot;</tt> notations. You can also use the <tt>&quot;utf8&quot;</tt> pragma and write your code in <font SIZE="-1">UTF-8,</font> which lets you use Unicode characters directly (not just in quoted constructs but also in identifiers).
+ By default Perl assumes your source code is written in an 8-bit ASCII superset. To embed Unicode characters in your strings and regexes, you can use the <tt>&quot;\x{HH}&quot;</tt> or (more portably) <tt>&quot;\N{U+HH}&quot;</tt> notations. You can also use the <tt>&quot;utf8&quot;</tt> pragma and write your code in UTF-8, which lets you use Unicode characters directly (not just in quoted constructs but also in identifiers).
 
 <h3>System Resources</h3>
 
@@ -399,7 +399,7 @@ my @lines = &lt;$very_large_file&gt;;
 
  Most multi-user platforms provide basic levels of security, usually implemented at the filesystem level. Some, however, unfortunately do not. Thus the notion of user id, or ``home'' directory, or even the state of being logged-in, may be unrecognizable on many platforms. If you write programs that are security-conscious, it is usually best to know what type of system you will be running under so that you can write code explicitly for that platform (or class of platforms). 
 
- Don't assume the Unix filesystem access semantics: the operating system or the filesystem may be using some <font SIZE="-1">ACL</font> systems, which are richer languages than the usual <tt>&quot;rwx&quot;</tt>. Even if the <tt>&quot;rwx&quot;</tt> exist, their semantics might be different. 
+ Don't assume the Unix filesystem access semantics: the operating system or the filesystem may be using some ACL systems, which are richer languages than the usual <tt>&quot;rwx&quot;</tt>. Even if the <tt>&quot;rwx&quot;</tt> exist, their semantics might be different. 
 
  (From the security viewpoint, testing for permissions before attempting to do something is silly anyway: if one tries this, there is potential for race conditions. Someone or something might change the permissions between the permissions check and the actual operation. Just try the operation.) 
 
@@ -409,7 +409,7 @@ my @lines = &lt;$very_large_file&gt;;
 
 <h3>Style</h3>
 
- For those times when it is necessary to have platform-specific code, consider keeping the platform-specific code in one place, making porting to other platforms easier. Use the <tt>&quot;Config&quot;</tt> module and the special variable <tt>$^O</tt> to differentiate platforms, as described in ``<font SIZE="-1">PLATFORMS''</font>. 
+ For those times when it is necessary to have platform-specific code, consider keeping the platform-specific code in one place, making porting to other platforms easier. Use the <tt>&quot;Config&quot;</tt> module and the special variable <tt>$^O</tt> to differentiate platforms, as described in ``PLATFORMS''. 
 
  Beware of the ``else syndrome'': 
 
@@ -427,7 +427,7 @@ if ($ ^ O eq 'MSWin32') {
 
 <h2>CPAN Testers</h2>
 
- Modules uploaded to <font SIZE="-1">CPAN</font> are tested by a variety of volunteers on different platforms. These <font SIZE="-1">CPAN</font> testers are notified by mail of each new upload, and reply to the list with <font SIZE="-1">PASS, FAIL, NA</font> (not applicable to this platform), or <font SIZE="-1">UNKNOWN</font> (unknown), along with any relevant notations. 
+ Modules uploaded to CPAN are tested by a variety of volunteers on different platforms. These CPAN testers are notified by mail of each new upload, and reply to the list with PASS, FAIL, NA (not applicable to this platform), or UNKNOWN (unknown), along with any relevant notations. 
 
  The purpose of the testing is twofold: one, to help developers fix any problems in their code that crop up because of lack of testing on other platforms; two, to provide users with information about whether a given module works on a given platform. 
 
@@ -481,9 +481,9 @@ uname $ ^ O $Config
 
  Because the value of <tt>$Config{archname}</tt> may depend on the hardware architecture, it can vary more than the value of <tt>$^O</tt>.
 
-<h3><font SIZE="-1">DOS</font> and Derivatives</h3>
+<h3>DOS and Derivatives</h3>
 
- Perl has long been ported to Intel-style microcomputers running under systems like PC-DOS, MS-DOS, <font SIZE="-1">OS/2,</font> and most Windows platforms you can bring yourself to mention (except for Windows <font SIZE="-1">CE,</font> if you count that). Users familiar with <i></i><font SIZE="-1"><i>COMMAND.COM</i></font><i></i> or <i></i><font SIZE="-1"><i>CMD.EXE</i></font><i></i> style shells should be aware that each of these file specifications may have subtle differences: 
+ Perl has long been ported to Intel-style microcomputers running under systems like PC-DOS, MS-DOS, OS/2, and most Windows platforms you can bring yourself to mention (except for Windows CE, if you count that). Users familiar with <i></i><i>COMMAND.COM</i><i></i> or <i></i><i>CMD.EXE</i><i></i> style shells should be aware that each of these file specifications may have subtle differences: 
 
  
 my $filespec0 = "c:/foo/bar/file.txt";
@@ -492,11 +492,11 @@ my $filespec2 = 'c:\foo\bar\file.txt';
 my $filespec3 = 'c:\\foo\\bar\\file.txt';
  
 
- System calls accept either <tt>&quot;/&quot;</tt> or <tt>&quot;\&quot;</tt> as the path separator. However, many command-line utilities of <font SIZE="-1">DOS</font> vintage treat <tt>&quot;/&quot;</tt> as the option prefix, so may get confused by filenames containing <tt>&quot;/&quot;</tt>. Aside from calling any external programs, <tt>&quot;/&quot;</tt> will work just fine, and probably better, as it is more consistent with popular usage, and avoids the problem of remembering what to backwhack and what not to. 
+ System calls accept either <tt>&quot;/&quot;</tt> or <tt>&quot;\&quot;</tt> as the path separator. However, many command-line utilities of DOS vintage treat <tt>&quot;/&quot;</tt> as the option prefix, so may get confused by filenames containing <tt>&quot;/&quot;</tt>. Aside from calling any external programs, <tt>&quot;/&quot;</tt> will work just fine, and probably better, as it is more consistent with popular usage, and avoids the problem of remembering what to backwhack and what not to. 
 
- The <font SIZE="-1">DOS FAT</font> filesystem can accommodate only ``8.3'' style filenames. Under the ``case-insensitive, but case-preserving'' <font SIZE="-1">HPFS</font> (<font SIZE="-1">OS/2</font>) and <font SIZE="-1">NTFS</font> (<font SIZE="-1">NT</font>) filesystems you may have to be careful about case returned with functions like <tt>&quot;readdir&quot;</tt> or used with functions like <tt>&quot;open&quot;</tt> or <tt>&quot;opendir&quot;</tt>. 
+ The DOS FAT filesystem can accommodate only ``8.3'' style filenames. Under the ``case-insensitive, but case-preserving'' HPFS (OS/2) and NTFS (NT) filesystems you may have to be careful about case returned with functions like <tt>&quot;readdir&quot;</tt> or used with functions like <tt>&quot;open&quot;</tt> or <tt>&quot;opendir&quot;</tt>. 
 
- <font SIZE="-1">DOS</font> also treats several filenames as special, such as <i></i><font SIZE="-1"><i>AUX</i></font><i></i>, <i></i><font SIZE="-1"><i>PRN</i></font><i></i>, <i></i><font SIZE="-1"><i>NUL</i></font><i></i>, <i></i><font SIZE="-1"><i>CON</i></font><i></i>, <i></i><font SIZE="-1"><i>COM1</i></font><i></i>, <i></i><font SIZE="-1"><i>LPT1</i></font><i></i>, <i></i><font SIZE="-1"><i>LPT2</i></font><i></i>, etc. Unfortunately, sometimes these filenames won't even work if you include an explicit directory prefix. It is best to avoid such filenames, if you want your code to be portable to <font SIZE="-1">DOS</font> and its derivatives. It's hard to know what these all are, unfortunately. 
+ DOS also treats several filenames as special, such as <i></i><i>AUX</i><i></i>, <i></i><i>PRN</i><i></i>, <i></i><i>NUL</i><i></i>, <i></i><i>CON</i><i></i>, <i></i><i>COM1</i><i></i>, <i></i><i>LPT1</i><i></i>, <i></i><i>LPT2</i><i></i>, etc. Unfortunately, sometimes these filenames won't even work if you include an explicit directory prefix. It is best to avoid such filenames, if you want your code to be portable to DOS and its derivatives. It's hard to know what these all are, unfortunately. 
 
  Users of these operating systems may also wish to make use of scripts such as <i>pl2bat.bat</i> to put wrappers around your scripts. 
 
@@ -508,7 +508,7 @@ my $filespec3 = 'c:\\foo\\bar\\file.txt';
 OS $ ^ O $Config{archname} ID Version-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -MS - DOS dos ? PC - DOS dos ? OS / 2 os2 ? Windows 3.1 ? ? 0 3 01 Windows 95 MSWin32 MSWin32 - x86 1 4 00 Windows 98 MSWin32 MSWin32 - x86 1 4 10 Windows ME MSWin32 MSWin32 - x86 1 ? Windows NT MSWin32 MSWin32 - x86 2 4 xx Windows NT MSWin32 MSWin32 - ALPHA 2 4 xx Windows NT MSWin32 MSWin32 - ppc 2 4 xx Windows 2000 MSWin32 MSWin32 - x86 2 5 00 Windows XP MSWin32 MSWin32 - x86 2 5 01 Windows 2003 MSWin32 MSWin32 - x86 2 5 02 Windows Vista MSWin32 MSWin32 - x86 2 6 00 Windows 7 MSWin32 MSWin32 - x86 2 6 01 Windows 7 MSWin32 MSWin32 - x64 2 6 01 Windows 2008 MSWin32 MSWin32 - x86 2 6 01 Windows 2008 MSWin32 MSWin32 - x64 2 6 01 Windows CE MSWin32 ? 3 Cygwin cygwin cygwin
  
 
- The various MSWin32 Perl's can distinguish the <font SIZE="-1">OS</font> they are running on via the value of the fifth element of the list returned from <tt>&quot;Win32::GetOSVersion()&quot;</tt>. For example: 
+ The various MSWin32 Perl's can distinguish the OS they are running on via the value of the fifth element of the list returned from <tt>&quot;Win32::GetOSVersion()&quot;</tt>. For example: 
 
  
 if ($ ^ O eq 'MSWin32') {
@@ -524,20 +524,20 @@ if ($ ^ O eq 'MSWin32') {
     Windows NT|moonru|5.0|Build 2195 (Service Pack 2)|x86
 </pre> 
 
- Errors set by Winsock functions are now put directly into <tt>$^E</tt>, and the relevant <tt>&quot;WSAE*&quot;</tt> error codes are now exported from the Errno and <font SIZE="-1">POSIX</font> modules for testing this against. 
+ Errors set by Winsock functions are now put directly into <tt>$^E</tt>, and the relevant <tt>&quot;WSAE*&quot;</tt> error codes are now exported from the Errno and POSIX modules for testing this against. 
 
- The previous behavior of putting the errors (converted to POSIX-style <tt>&quot;E*&quot;</tt> error codes since Perl 5.20.0) into <tt>$!</tt> was buggy due to the non-equivalence of like-named Winsock and <font SIZE="-1">POSIX</font> error constants, a relationship between which has unfortunately been established in one way or another since Perl 5.8.0. 
+ The previous behavior of putting the errors (converted to POSIX-style <tt>&quot;E*&quot;</tt> error codes since Perl 5.20.0) into <tt>$!</tt> was buggy due to the non-equivalence of like-named Winsock and POSIX error constants, a relationship between which has unfortunately been established in one way or another since Perl 5.8.0. 
 
- The new behavior provides a much more robust solution for checking Winsock errors in portable software without accidentally matching <font SIZE="-1">POSIX</font> tests that were intended for other OSes and may have different meanings for Winsock. 
+ The new behavior provides a much more robust solution for checking Winsock errors in portable software without accidentally matching POSIX tests that were intended for other OSes and may have different meanings for Winsock. 
 
  The old behavior is currently retained, warts and all, for backwards compatibility, but users are encouraged to change any code that tests <tt>$!</tt> against <tt>&quot;E*&quot;</tt> constants for Winsock errors to instead test <tt>$^E</tt> against <tt>&quot;WSAE*&quot;</tt> constants. After a suitable deprecation period, which started with Perl 5.24, the old behavior may be removed, leaving <tt>$!</tt> unchanged after Winsock function calls, to avoid any possible confusion over which error variable to check. 
 
  Also see:
 <dl>
 <dt>&bull;
-</dt><dd> The djgpp environment for <font SIZE="-1">DOS,</font> &lt;<a rel="nofollow" HREF="http://www.delorie.com/djgpp/">http://www.delorie.com/djgpp/</a>&gt; and perldos.
+</dt><dd> The djgpp environment for DOS, &lt;<a rel="nofollow" HREF="http://www.delorie.com/djgpp/">http://www.delorie.com/djgpp/</a>&gt; and perldos.
 </dd><dt>&bull;
-</dt><dd> The <font SIZE="-1">EMX</font> environment for <font SIZE="-1">DOS, OS/2,</font> etc. emx [at] iaehv.nl, &lt;<a HREF="ftp://hobbes.nmsu.edu/pub/os2/dev/emx/">ftp://hobbes.nmsu.edu/pub/os2/dev/emx/</a>&gt; Also perlos2.
+</dt><dd> The EMX environment for DOS, OS/2, etc. emx [at] iaehv.nl, &lt;<a HREF="ftp://hobbes.nmsu.edu/pub/os2/dev/emx/">ftp://hobbes.nmsu.edu/pub/os2/dev/emx/</a>&gt; Also perlos2.
 </dd><dt>&bull;
 </dt><dd> Build instructions for Win32 in perlwin32, or under the Cygnus environment in perlcygwin.
 </dd><dt>&bull;
@@ -545,26 +545,26 @@ if ($ ^ O eq 'MSWin32') {
 </dd><dt>&bull;
 </dt><dd> The ActiveState Pages, &lt;<a rel="nofollow" HREF="http://www.activestate.com/">http://www.activestate.com/</a>&gt;
 </dd><dt>&bull;
-</dt><dd> The Cygwin environment for Win32; <i></i><font SIZE="-1"><i>README</i></font><i>.cygwin</i> (installed as perlcygwin), &lt;<a rel="nofollow" HREF="http://www.cygwin.com/">http://www.cygwin.com/</a>&gt;
+</dt><dd> The Cygwin environment for Win32; <i></i><i>README</i><i>.cygwin</i> (installed as perlcygwin), &lt;<a rel="nofollow" HREF="http://www.cygwin.com/">http://www.cygwin.com/</a>&gt;
 </dd><dt>&bull;
 </dt><dd> The U/WIN environment for Win32, &lt;<a rel="nofollow" HREF="http://www.research.att.com/sw/tools/uwin/">http://www.research.att.com/sw/tools/uwin/</a>&gt;
 </dd><dt>&bull;
-</dt><dd> Build instructions for <font SIZE="-1">OS/2,</font> perlos2</dd></dl>
+</dt><dd> Build instructions for OS/2, perlos2</dd></dl>
 
-<h3><font SIZE="-1">VMS</font></h3>
+<h3>VMS</h3>
 
- Perl on <font SIZE="-1">VMS</font> is discussed in perlvms in the Perl distribution. 
+ Perl on VMS is discussed in perlvms in the Perl distribution. 
 
- The official name of <font SIZE="-1">VMS</font> as of this writing is OpenVMS. 
+ The official name of VMS as of this writing is OpenVMS. 
 
- Interacting with Perl from the Digital Command Language (<font SIZE="-1">DCL</font>) shell often requires a different set of quotation marks than Unix shells do. For example: 
+ Interacting with Perl from the Digital Command Language (DCL) shell often requires a different set of quotation marks than Unix shells do. For example: 
 
  <pre>
     $ perl -e &quot;print &quot;&quot;Hello, world.\n&quot;&quot;&quot;
     Hello, world.
 </pre> 
 
- There are several ways to wrap your Perl scripts in <font SIZE="-1">DCL</font> <i>.COM</i> files, if you are so inclined. For example: 
+ There are several ways to wrap your Perl scripts in DCL <i>.COM</i> files, if you are so inclined. For example: 
 
  
 $ write sys$output "Hello from DCL!" $ if p1.eqs."" $ then perl - x 'f$environment("PROCEDURE") $ else perl - x - 'p1 ' p2 'p3 ' p4 'p5 ' p6 'p7 ' p8 $ deck / dollars = "__END__"
@@ -576,9 +576,9 @@ $ endif
 
  Do take care with <tt>&quot;$ ASSIGN/nolog/user SYS$COMMAND: SYS$INPUT&quot;</tt> if your Perl-in-DCL script expects to do things like <tt>&quot;$read = &lt;STDIN&gt;;&quot;</tt>. 
 
- The <font SIZE="-1">VMS</font> operating system has two filesystems, designated by their on-disk structure (<font SIZE="-1">ODS</font>) level: <font SIZE="-1">ODS-2</font> and its successor <font SIZE="-1">ODS-5.</font> The initial port of Perl to <font SIZE="-1">VMS</font> pre-dates <font SIZE="-1">ODS-5,</font> but all current testing and development assumes <font SIZE="-1">ODS-5</font> and its capabilities, including case preservation, extended characters in filespecs, and names up to 8192 bytes long. 
+ The VMS operating system has two filesystems, designated by their on-disk structure (ODS) level: ODS-2 and its successor ODS-5. The initial port of Perl to VMS pre-dates ODS-5, but all current testing and development assumes ODS-5 and its capabilities, including case preservation, extended characters in filespecs, and names up to 8192 bytes long. 
 
- Perl on <font SIZE="-1">VMS</font> can accept either <font SIZE="-1">VMS-</font> or Unix-style file specifications as in either of the following: 
+ Perl on VMS can accept either VMS- or Unix-style file specifications as in either of the following: 
 
  <pre>
     $ perl -ne &quot;print if /perl_setup/i&quot; SYS$LOGIN:LOGIN.COM
@@ -594,28 +594,28 @@ $ endif
 
  In general, the easiest path to portability is always to specify filenames in Unix format unless they will need to be processed by native commands or utilities. Because of this latter consideration, the File::Spec module by default returns native format specifications regardless of input format. This default may be reversed so that filenames are always reported in Unix format by specifying the <tt>&quot;DECC$FILENAME_UNIX_REPORT&quot;</tt> feature logical in the environment. 
 
- The file type, or extension, is always present in a VMS-format file specification even if it's zero-length. This means that, by default, <tt>&quot;readdir&quot;</tt> will return a trailing dot on a file with no extension, so where you would see <tt>&quot;a&quot;</tt> on Unix you'll see <tt>&quot;a.&quot;</tt> on <font SIZE="-1">VMS.</font> However, the trailing dot may be suppressed by enabling the <tt>&quot;DECC$READDIR_DROPDOTNOTYPE&quot;</tt> feature in the environment (see the <font SIZE="-1">CRTL</font> documentation on feature logical names). 
+ The file type, or extension, is always present in a VMS-format file specification even if it's zero-length. This means that, by default, <tt>&quot;readdir&quot;</tt> will return a trailing dot on a file with no extension, so where you would see <tt>&quot;a&quot;</tt> on Unix you'll see <tt>&quot;a.&quot;</tt> on VMS. However, the trailing dot may be suppressed by enabling the <tt>&quot;DECC$READDIR_DROPDOTNOTYPE&quot;</tt> feature in the environment (see the CRTL documentation on feature logical names). 
 
- What <tt>&quot;\n&quot;</tt> represents depends on the type of file opened. It usually represents <tt>&quot;\012&quot;</tt> but it could also be <tt>&quot;\015&quot;</tt>, <tt>&quot;\012&quot;</tt>, <tt>&quot;\015\012&quot;</tt>, <tt>&quot;\000&quot;</tt>, <tt>&quot;\040&quot;</tt>, or nothing depending on the file organization and record format. The <tt>&quot;VMS::Stdio&quot;</tt> module provides access to the special <tt>&quot;fopen()&quot;</tt> requirements of files with unusual attributes on <font SIZE="-1">VMS.</font> 
+ What <tt>&quot;\n&quot;</tt> represents depends on the type of file opened. It usually represents <tt>&quot;\012&quot;</tt> but it could also be <tt>&quot;\015&quot;</tt>, <tt>&quot;\012&quot;</tt>, <tt>&quot;\015\012&quot;</tt>, <tt>&quot;\000&quot;</tt>, <tt>&quot;\040&quot;</tt>, or nothing depending on the file organization and record format. The <tt>&quot;VMS::Stdio&quot;</tt> module provides access to the special <tt>&quot;fopen()&quot;</tt> requirements of files with unusual attributes on VMS. 
 
- The value of <tt>$^O</tt> on OpenVMS is ``<font SIZE="-1">VMS''.</font> To determine the architecture that you are running on refer to <tt>$Config{archname}</tt>. 
+ The value of <tt>$^O</tt> on OpenVMS is ``VMS''. To determine the architecture that you are running on refer to <tt>$Config{archname}</tt>. 
 
- On <font SIZE="-1">VMS,</font> perl determines the <font SIZE="-1">UTC</font> offset from the <tt>&quot;SYS$TIMEZONE_DIFFERENTIAL&quot;</tt> logical name. Although the <font SIZE="-1">VMS</font> epoch began at 17-NOV-1858 00:00:00.00, calls to <tt>&quot;localtime&quot;</tt> are adjusted to count offsets from 01-JAN-1970 00:00:00.00, just like Unix. 
+ On VMS, perl determines the UTC offset from the <tt>&quot;SYS$TIMEZONE_DIFFERENTIAL&quot;</tt> logical name. Although the VMS epoch began at 17-NOV-1858 00:00:00.00, calls to <tt>&quot;localtime&quot;</tt> are adjusted to count offsets from 01-JAN-1970 00:00:00.00, just like Unix. 
 
  Also see:
 <dl>
 <dt>&bull;
-</dt><dd> <i></i><font SIZE="-1"><i>README</i></font><i>.vms</i> (installed as <i>README_vms</i>), perlvms
+</dt><dd> <i></i><i>README</i><i>.vms</i> (installed as <i>README_vms</i>), perlvms
 </dd><dt>&bull;
 </dt><dd> vmsperl list, vmsperl-subscribe [at] perl.org
 </dd><dt>&bull;
 </dt><dd> vmsperl on the web, &lt;<a rel="nofollow" HREF="http://www.sidhe.org/vmsperl/index.html">http://www.sidhe.org/vmsperl/index.html</a>&gt;
 </dd><dt>&bull;
-</dt><dd> <font SIZE="-1">VMS</font> Software Inc. web site, &lt;<a rel="nofollow" HREF="http://www.vmssoftware.com">http://www.vmssoftware.com</a>&gt;</dd></dl>
+</dt><dd> VMS Software Inc. web site, &lt;<a rel="nofollow" HREF="http://www.vmssoftware.com">http://www.vmssoftware.com</a>&gt;</dd></dl>
 
-<h3><font SIZE="-1">VOS</font></h3>
+<h3>VOS</h3>
 
- Perl on <font SIZE="-1">VOS</font> (also known as OpenVOS) is discussed in <i></i><font SIZE="-1"><i>README</i></font><i>.vos</i> in the Perl distribution (installed as perlvos). Perl on <font SIZE="-1">VOS</font> can accept either <font SIZE="-1">VOS-</font> or Unix-style file specifications as in either of the following: 
+ Perl on VOS (also known as OpenVOS) is discussed in <i></i><i>README</i><i>.vos</i> in the Perl distribution (installed as perlvos). Perl on VOS can accept either VOS- or Unix-style file specifications as in either of the following: 
 
  <pre>
     $ perl -ne &quot;print if /perl_setup/i&quot; &gt;system&gt;notices
@@ -628,35 +628,35 @@ $ endif
     $ perl -ne &quot;print if /perl_setup/i&quot; &gt;system/notices
 </pre> 
 
- Even though <font SIZE="-1">VOS</font> allows the slash character to appear in object names, because the <font SIZE="-1">VOS</font> port of Perl interprets it as a pathname delimiting character, <font SIZE="-1">VOS</font> files, directories, or links whose names contain a slash character cannot be processed. Such files must be renamed before they can be processed by Perl. 
+ Even though VOS allows the slash character to appear in object names, because the VOS port of Perl interprets it as a pathname delimiting character, VOS files, directories, or links whose names contain a slash character cannot be processed. Such files must be renamed before they can be processed by Perl. 
 
- Older releases of <font SIZE="-1">VOS</font> (prior to OpenVOS Release 17.0) limit file names to 32 or fewer characters, prohibit file names from starting with a <tt>&quot;-&quot;</tt> character, and prohibit file names from containing <tt>&quot; &quot;</tt> (space) or any character from the set <tt>&quot;!#%&amp;'()*;&lt;=&gt;?&quot;</tt>. 
+ Older releases of VOS (prior to OpenVOS Release 17.0) limit file names to 32 or fewer characters, prohibit file names from starting with a <tt>&quot;-&quot;</tt> character, and prohibit file names from containing <tt>&quot; &quot;</tt> (space) or any character from the set <tt>&quot;!#%&amp;'()*;&lt;=&gt;?&quot;</tt>. 
 
- Newer releases of <font SIZE="-1">VOS</font> (OpenVOS Release 17.0 or later) support a feature known as extended names. On these releases, file names can contain up to 255 characters, are prohibited from starting with a <tt>&quot;-&quot;</tt> character, and the set of prohibited characters is reduced to <tt>&quot;#%*&lt;&gt;?&quot;</tt>. There are restrictions involving spaces and apostrophes: these characters must not begin or end a name, nor can they immediately precede or follow a period. Additionally, a space must not immediately precede another space or hyphen. Specifically, the following character combinations are prohibited: space-space, space-hyphen, period-space, space-period, period-apostrophe, apostrophe-period, leading or trailing space, and leading or trailing apostrophe. Although an extended file name is limited to 255 characters, a path name is still limited to 256 characters. 
+ Newer releases of VOS (OpenVOS Release 17.0 or later) support a feature known as extended names. On these releases, file names can contain up to 255 characters, are prohibited from starting with a <tt>&quot;-&quot;</tt> character, and the set of prohibited characters is reduced to <tt>&quot;#%*&lt;&gt;?&quot;</tt>. There are restrictions involving spaces and apostrophes: these characters must not begin or end a name, nor can they immediately precede or follow a period. Additionally, a space must not immediately precede another space or hyphen. Specifically, the following character combinations are prohibited: space-space, space-hyphen, period-space, space-period, period-apostrophe, apostrophe-period, leading or trailing space, and leading or trailing apostrophe. Although an extended file name is limited to 255 characters, a path name is still limited to 256 characters. 
 
- The value of <tt>$^O</tt> on <font SIZE="-1">VOS</font> is ``vos''. To determine the architecture that you are running on refer to <tt>$Config{archname}</tt>. 
+ The value of <tt>$^O</tt> on VOS is ``vos''. To determine the architecture that you are running on refer to <tt>$Config{archname}</tt>. 
 
  Also see:
 <dl>
 <dt>&bull;
-</dt><dd> <i></i><font SIZE="-1"><i>README</i></font><i>.vos</i> (installed as perlvos)
+</dt><dd> <i></i><i>README</i><i>.vos</i> (installed as perlvos)
 </dd><dt>&bull;
-</dt><dd> The <font SIZE="-1">VOS</font> mailing list. 
- There is no specific mailing list for Perl on <font SIZE="-1">VOS.</font> You can contact the Stratus Technologies Customer Assistance Center (<font SIZE="-1">CAC</font>) for your region, or you can use the contact information located in the distribution files on the Stratus Anonymous <font SIZE="-1">FTP</font> site.
+</dt><dd> The VOS mailing list. 
+ There is no specific mailing list for Perl on VOS. You can contact the Stratus Technologies Customer Assistance Center (CAC) for your region, or you can use the contact information located in the distribution files on the Stratus Anonymous FTP site.
 </dd><dt>&bull;
 </dt><dd> Stratus Technologies on the web at &lt;<a rel="nofollow" HREF="http://www.stratus.com">http://www.stratus.com</a>&gt;
 </dd><dt>&bull;
-</dt><dd> <font SIZE="-1">VOS</font> Open-Source Software on the web at &lt;<a rel="nofollow" HREF="http://ftp.stratus.com/pub/vos/vos.html">http://ftp.stratus.com/pub/vos/vos.html</a>&gt;</dd></dl>
+</dt><dd> VOS Open-Source Software on the web at &lt;<a rel="nofollow" HREF="http://ftp.stratus.com/pub/vos/vos.html">http://ftp.stratus.com/pub/vos/vos.html</a>&gt;</dd></dl>
 
-<h3><font SIZE="-1">EBCDIC</font> Platforms</h3>
+<h3>EBCDIC Platforms</h3>
 
- v5.22 core Perl runs on z/OS (formerly <font SIZE="-1">OS/390</font>). Theoretically it could run on the successors of <font SIZE="-1">OS/400</font> on <font SIZE="-1">AS/400</font> minicomputers as well as <font SIZE="-1">VM/ESA,</font> and <font SIZE="-1">BS2000</font> for S/390 Mainframes. Such computers use <font SIZE="-1">EBCDIC</font> character sets internally (usually Character Code Set <font SIZE="-1">ID 0037</font> for <font SIZE="-1">OS/400</font> and either 1047 or POSIX-BC for S/390 systems). 
+ v5.22 core Perl runs on z/OS (formerly OS/390). Theoretically it could run on the successors of OS/400 on AS/400 minicomputers as well as VM/ESA, and BS2000 for S/390 Mainframes. Such computers use EBCDIC character sets internally (usually Character Code Set ID 0037 for OS/400 and either 1047 or POSIX-BC for S/390 systems). 
 
  The rest of this section may need updating, but we don't know what it should say. Please email comments to perlbug [at] perl.org &lt;mailto:perlbug [at] perl.org&gt;. 
 
- On the mainframe Perl currently works under the ``Unix system services for <font SIZE="-1">OS/390''</font> (formerly known as OpenEdition), <font SIZE="-1">VM/ESA</font> OpenEdition, or the <font SIZE="-1">BS200</font> POSIX-BC system (<font SIZE="-1">BS2000</font> is supported in Perl 5.6 and greater). See perlos390 for details. Note that for <font SIZE="-1">OS/400</font> there is also a port of Perl 5.8.1/5.10.0 or later to the <font SIZE="-1">PASE</font> which is ASCII-based (as opposed to <font SIZE="-1">ILE</font> which is EBCDIC-based), see perlos400. 
+ On the mainframe Perl currently works under the ``Unix system services for OS/390'' (formerly known as OpenEdition), VM/ESA OpenEdition, or the BS200 POSIX-BC system (BS2000 is supported in Perl 5.6 and greater). See perlos390 for details. Note that for OS/400 there is also a port of Perl 5.8.1/5.10.0 or later to the PASE which is ASCII-based (as opposed to ILE which is EBCDIC-based), see perlos400. 
 
- As of R2.5 of <font SIZE="-1">USS</font> for <font SIZE="-1">OS/390</font> and Version 2.3 of <font SIZE="-1">VM/ESA</font> these Unix sub-systems do not support the <tt>&quot;#!&quot;</tt> shebang trick for script invocation. Hence, on <font SIZE="-1">OS/390</font> and <font SIZE="-1">VM/ESA</font> Perl scripts can be executed with a header similar to the following simple script: 
+ As of R2.5 of USS for OS/390 and Version 2.3 of VM/ESA these Unix sub-systems do not support the <tt>&quot;#!&quot;</tt> shebang trick for script invocation. Hence, on OS/390 and VM/ESA Perl scripts can be executed with a header similar to the following simple script: 
 
  
     : # use perl
@@ -666,9 +666,9 @@ $ endif
     print "Hello from perl!\n";
  
 
- <font SIZE="-1">OS/390</font> will support the <tt>&quot;#!&quot;</tt> shebang trick in release 2.8 and beyond. Calls to <tt>&quot;system&quot;</tt> and backticks can use <font SIZE="-1">POSIX</font> shell syntax on all S/390 systems. 
+ OS/390 will support the <tt>&quot;#!&quot;</tt> shebang trick in release 2.8 and beyond. Calls to <tt>&quot;system&quot;</tt> and backticks can use POSIX shell syntax on all S/390 systems. 
 
- On the <font SIZE="-1">AS/400,</font> if <font SIZE="-1">PERL5</font> is in your library list, you may need to wrap your Perl scripts in a <font SIZE="-1">CL</font> procedure to invoke them like so: 
+ On the AS/400, if PERL5 is in your library list, you may need to wrap your Perl scripts in a CL procedure to invoke them like so: 
 
  <pre>
     BEGIN
@@ -676,11 +676,11 @@ $ endif
     ENDPGM
 </pre> 
 
- This will invoke the Perl script <i>hello.pl</i> in the root of the QOpenSys file system. On the <font SIZE="-1">AS/400</font> calls to <tt>&quot;system&quot;</tt> or backticks must use <font SIZE="-1">CL</font> syntax. 
+ This will invoke the Perl script <i>hello.pl</i> in the root of the QOpenSys file system. On the AS/400 calls to <tt>&quot;system&quot;</tt> or backticks must use CL syntax. 
 
- On these platforms, bear in mind that the <font SIZE="-1">EBCDIC</font> character set may have an effect on what happens with some Perl functions (such as <tt>&quot;chr&quot;</tt>, <tt>&quot;pack&quot;</tt>, <tt>&quot;print&quot;</tt>, <tt>&quot;printf&quot;</tt>, <tt>&quot;ord&quot;</tt>, <tt>&quot;sort&quot;</tt>, <tt>&quot;sprintf&quot;</tt>, <tt>&quot;unpack&quot;</tt>), as well as bit-fiddling with <font SIZE="-1">ASCII</font> constants using operators like <tt>&quot;^&quot;</tt>, <tt>&quot;&amp;&quot;</tt> and <tt>&quot;|&quot;</tt>, not to mention dealing with socket interfaces to <font SIZE="-1">ASCII</font> computers (see ``Newlines''). 
+ On these platforms, bear in mind that the EBCDIC character set may have an effect on what happens with some Perl functions (such as <tt>&quot;chr&quot;</tt>, <tt>&quot;pack&quot;</tt>, <tt>&quot;print&quot;</tt>, <tt>&quot;printf&quot;</tt>, <tt>&quot;ord&quot;</tt>, <tt>&quot;sort&quot;</tt>, <tt>&quot;sprintf&quot;</tt>, <tt>&quot;unpack&quot;</tt>), as well as bit-fiddling with ASCII constants using operators like <tt>&quot;^&quot;</tt>, <tt>&quot;&amp;&quot;</tt> and <tt>&quot;|&quot;</tt>, not to mention dealing with socket interfaces to ASCII computers (see ``Newlines''). 
 
- Fortunately, most web servers for the mainframe will correctly translate the <tt>&quot;\n&quot;</tt> in the following statement to its <font SIZE="-1">ASCII</font> equivalent (<tt>&quot;\r&quot;</tt> is the same under both Unix and z/OS): 
+ Fortunately, most web servers for the mainframe will correctly translate the <tt>&quot;\n&quot;</tt> in the following statement to its ASCII equivalent (<tt>&quot;\r&quot;</tt> is the same under both Unix and z/OS): 
 
  <pre>
     print &quot;Content-type: text/html\r\n\r\n&quot;;
@@ -699,7 +699,7 @@ uname $ ^ O $Config
     BC posix - bc BS2000 - posix - bc
  
 
- Some simple tricks for determining if you are running on an <font SIZE="-1">EBCDIC</font> platform could include any of the following (perhaps all): 
+ Some simple tricks for determining if you are running on an EBCDIC platform could include any of the following (perhaps all): 
 
  
 if ("\t" eq "\005") {
@@ -713,20 +713,20 @@ if (chr(169) eq 'z') {
 }
  
 
- One thing you may not want to rely on is the <font SIZE="-1">EBCDIC</font> encoding of punctuation characters since these may differ from code page to code page (and once your module or script is rumoured to work with <font SIZE="-1">EBCDIC,</font> folks will want it to work with all <font SIZE="-1">EBCDIC</font> character sets). 
+ One thing you may not want to rely on is the EBCDIC encoding of punctuation characters since these may differ from code page to code page (and once your module or script is rumoured to work with EBCDIC, folks will want it to work with all EBCDIC character sets). 
 
  Also see:
 <dl>
 <dt>&bull;
 </dt><dd> perlos390, perlos400, perlbs2000, perlebcdic.
 </dd><dt>&bull;
-</dt><dd> The perl-mvs [at] perl.org list is for discussion of porting issues as well as general usage issues for all <font SIZE="-1">EBCDIC</font> Perls. Send a message body of ``subscribe perl-mvs'' to majordomo [at] perl.org.
+</dt><dd> The perl-mvs [at] perl.org list is for discussion of porting issues as well as general usage issues for all EBCDIC Perls. Send a message body of ``subscribe perl-mvs'' to majordomo [at] perl.org.
 </dd><dt>&bull;
-</dt><dd> <font SIZE="-1">AS/400</font> Perl information at &lt;<a rel="nofollow" HREF="http://as400.rochester.ibm.com/">http://as400.rochester.ibm.com/</a>&gt; as well as on <font SIZE="-1">CPAN</font> in the <i>ports/</i> directory.</dd></dl>
+</dt><dd> AS/400 Perl information at &lt;<a rel="nofollow" HREF="http://as400.rochester.ibm.com/">http://as400.rochester.ibm.com/</a>&gt; as well as on CPAN in the <i>ports/</i> directory.</dd></dl>
 
-<h3>Acorn <font SIZE="-1">RISC OS</font></h3>
+<h3>Acorn RISC OS</h3>
 
- Because Acorns use <font SIZE="-1">ASCII</font> with newlines (<tt>&quot;\n&quot;</tt>) in text files as <tt>&quot;\012&quot;</tt> like Unix, and because Unix filename emulation is turned on by default, most simple scripts will probably work ``out of the box''. The native filesystem is modular, and individual filesystems are free to be case-sensitive or insensitive, and are usually case-preserving. Some native filesystems have name length limits, which file and directory names are silently truncated to fit. Scripts should be aware that the standard filesystem currently has a name length limit of <b>10</b> characters, with up to 77 items in a directory, but other filesystems may not impose such limitations. 
+ Because Acorns use ASCII with newlines (<tt>&quot;\n&quot;</tt>) in text files as <tt>&quot;\012&quot;</tt> like Unix, and because Unix filename emulation is turned on by default, most simple scripts will probably work ``out of the box''. The native filesystem is modular, and individual filesystems are free to be case-sensitive or insensitive, and are usually case-preserving. Some native filesystems have name length limits, which file and directory names are silently truncated to fit. Scripts should be aware that the standard filesystem currently has a name length limit of <b>10</b> characters, with up to 77 items in a directory, but other filesystems may not impose such limitations. 
 
  Native filenames are of the form 
 
@@ -772,15 +772,15 @@ if (chr(169) eq 'z') {
 
  The desire of users to express filenames of the form <tt>&quot;&lt;Foo$Dir&gt;.Bar&quot;</tt> on the command line unquoted causes problems, too: <tt>&quot;``&quot;</tt> command output capture has to perform a guessing game. It assumes that a string <tt>&quot;&lt;[^&lt;&gt;]+\$[^&lt;&gt;]&gt;&quot;</tt> is a reference to an environment variable, whereas anything else involving <tt>&quot;&lt;&quot;</tt> or <tt>&quot;&gt;&quot;</tt> is redirection, and generally manages to be 99% right. Of course, the problem remains that scripts cannot rely on any Unix tools being available, or that any tools found have Unix-like command line arguments. 
 
- Extensions and <font SIZE="-1">XS</font> are, in theory, buildable by anyone using free tools. In practice, many don't, as users of the Acorn platform are used to binary distributions. MakeMaker does run, but no available make currently copes with MakeMaker's makefiles; even if and when this should be fixed, the lack of a Unix-like shell will cause problems with makefile rules, especially lines of the form <tt>&quot;cd sdbm &amp;&amp; make all&quot;</tt>, and anything using quoting. 
+ Extensions and XS are, in theory, buildable by anyone using free tools. In practice, many don't, as users of the Acorn platform are used to binary distributions. MakeMaker does run, but no available make currently copes with MakeMaker's makefiles; even if and when this should be fixed, the lack of a Unix-like shell will cause problems with makefile rules, especially lines of the form <tt>&quot;cd sdbm &amp;&amp; make all&quot;</tt>, and anything using quoting. 
 
  ``RISC OS'' is the proper name for the operating system, but the value in <tt>$^O</tt> is ``riscos'' (because we don't like shouting).
 
 <h3>Other perls</h3>
 
- Perl has been ported to many platforms that do not fit into any of the categories listed above. Some, such as AmigaOS, <font SIZE="-1">QNX,</font> Plan 9, and <font SIZE="-1">VOS,</font> have been well-integrated into the standard Perl source code kit. You may need to see the <i>ports/</i> directory on <font SIZE="-1">CPAN</font> for information, and possibly binaries, for the likes of: aos, Atari <font SIZE="-1">ST,</font> lynxos, riscos, Novell Netware, Tandem Guardian, <i>etc.</i> (Yes, we know that some of these OSes may fall under the Unix category, but we are not a standards body.) 
+ Perl has been ported to many platforms that do not fit into any of the categories listed above. Some, such as AmigaOS, QNX, Plan 9, and VOS, have been well-integrated into the standard Perl source code kit. You may need to see the <i>ports/</i> directory on CPAN for information, and possibly binaries, for the likes of: aos, Atari ST, lynxos, riscos, Novell Netware, Tandem Guardian, <i>etc.</i> (Yes, we know that some of these OSes may fall under the Unix category, but we are not a standards body.) 
 
- Some approximate operating system names and their <tt>$^O</tt> values in the ``<font SIZE="-1">OTHER''</font> category include: 
+ Some approximate operating system names and their <tt>$^O</tt> values in the ``OTHER'' category include: 
 
  
 OS $ ^ O $Config
@@ -793,17 +793,17 @@ OS $ ^ O $Config
  See also:
 <dl>
 <dt>&bull;
-</dt><dd> Amiga, <i></i><font SIZE="-1"><i>README</i></font><i>.amiga</i> (installed as perlamiga).
+</dt><dd> Amiga, <i></i><i>README</i><i>.amiga</i> (installed as perlamiga).
 </dd><dt>&bull;
-</dt><dd> A free perl5-based <font SIZE="-1">PERL.NLM</font> for Novell Netware is available in precompiled binary and source code form from &lt;<a rel="nofollow" HREF="http://www.novell.com/">http://www.novell.com/</a>&gt; as well as from <font SIZE="-1">CPAN.</font>
+</dt><dd> A free perl5-based PERL.NLM for Novell Netware is available in precompiled binary and source code form from &lt;<a rel="nofollow" HREF="http://www.novell.com/">http://www.novell.com/</a>&gt; as well as from CPAN.
 </dd><dt>&bull;
-</dt><dd> Plan 9, <i></i><font SIZE="-1"><i>README</i></font><i>.plan9</i></dd></dl>
+</dt><dd> Plan 9, <i></i><i>README</i><i>.plan9</i></dd></dl>
 
 <h2>FUNCTION IMPLEMENTATIONS</h2>
 
  Listed below are functions that are either completely unimplemented or else have been implemented differently on various platforms. Preceding each description will be, in parentheses, a list of platforms that the description applies to. 
 
- The list may well be incomplete, or even wrong in some places. When in doubt, consult the platform-specific <font SIZE="-1">README</font> files in the Perl source distribution, and any other documentation resources accompanying a given port. 
+ The list may well be incomplete, or even wrong in some places. When in doubt, consult the platform-specific README files in the Perl source distribution, and any other documentation resources accompanying a given port. 
 
  Be aware, moreover, that even among Unix-ish systems there are variations. 
 
@@ -813,13 +813,13 @@ OS $ ^ O $Config
 
 <dl>
 <dt>-X
-</dt><dd> (Win32) <tt>&quot;-w&quot;</tt> only inspects the read-only file attribute (<font SIZE="-1">FILE_ATTRIBUTE_READONLY</font>), which determines whether the directory can be deleted, not whether it can be written to. Directories always have read and write access unless denied by discretionary access control lists (DACLs). 
- (<font SIZE="-1">VMS</font>) <tt>&quot;-r&quot;</tt>, <tt>&quot;-w&quot;</tt>, <tt>&quot;-x&quot;</tt>, and <tt>&quot;-o&quot;</tt> tell whether the file is accessible, which may not reflect UIC-based file protections. 
+</dt><dd> (Win32) <tt>&quot;-w&quot;</tt> only inspects the read-only file attribute (FILE_ATTRIBUTE_READONLY), which determines whether the directory can be deleted, not whether it can be written to. Directories always have read and write access unless denied by discretionary access control lists (DACLs). 
+ (VMS) <tt>&quot;-r&quot;</tt>, <tt>&quot;-w&quot;</tt>, <tt>&quot;-x&quot;</tt>, and <tt>&quot;-o&quot;</tt> tell whether the file is accessible, which may not reflect UIC-based file protections. 
  (RISC OS) <tt>&quot;-s&quot;</tt> by name on an open file will return the space reserved on disk, rather than the current extent. <tt>&quot;-s&quot;</tt> on an open filehandle returns the current size. 
- (Win32, <font SIZE="-1">VMS,</font> RISC OS) <tt>&quot;-R&quot;</tt>, <tt>&quot;-W&quot;</tt>, <tt>&quot;-X&quot;</tt>, <tt>&quot;-O&quot;</tt> are indistinguishable from <tt>&quot;-r&quot;</tt>, <tt>&quot;-w&quot;</tt>, <tt>&quot;-x&quot;</tt>, <tt>&quot;-o&quot;</tt>. 
- (Win32, <font SIZE="-1">VMS,</font> RISC OS) <tt>&quot;-g&quot;</tt>, <tt>&quot;-k&quot;</tt>, <tt>&quot;-l&quot;</tt>, <tt>&quot;-u&quot;</tt>, <tt>&quot;-A&quot;</tt> are not particularly meaningful. 
- (<font SIZE="-1">VMS,</font> RISC OS) <tt>&quot;-p&quot;</tt> is not particularly meaningful. 
- (<font SIZE="-1">VMS</font>) <tt>&quot;-d&quot;</tt> is true if passed a device spec without an explicit directory. 
+ (Win32, VMS, RISC OS) <tt>&quot;-R&quot;</tt>, <tt>&quot;-W&quot;</tt>, <tt>&quot;-X&quot;</tt>, <tt>&quot;-O&quot;</tt> are indistinguishable from <tt>&quot;-r&quot;</tt>, <tt>&quot;-w&quot;</tt>, <tt>&quot;-x&quot;</tt>, <tt>&quot;-o&quot;</tt>. 
+ (Win32, VMS, RISC OS) <tt>&quot;-g&quot;</tt>, <tt>&quot;-k&quot;</tt>, <tt>&quot;-l&quot;</tt>, <tt>&quot;-u&quot;</tt>, <tt>&quot;-A&quot;</tt> are not particularly meaningful. 
+ (VMS, RISC OS) <tt>&quot;-p&quot;</tt> is not particularly meaningful. 
+ (VMS) <tt>&quot;-d&quot;</tt> is true if passed a device spec without an explicit directory. 
  (Win32) <tt>&quot;-x&quot;</tt> (or <tt>&quot;-X&quot;</tt>) determine if a file ends in one of the executable suffixes. <tt>&quot;-S&quot;</tt> is meaningless. 
  (RISC OS) <tt>&quot;-x&quot;</tt> (or <tt>&quot;-X&quot;</tt>) determine if a file has an executable file type.
 </dd><dt>alarm
@@ -829,39 +829,39 @@ OS $ ^ O $Config
  The current version of the standards for <tt>&quot;atan2&quot;</tt> is available at &lt;<a rel="nofollow" HREF="http://www.opengroup.org/onlinepubs/009695399/functions/atan2.html">http://www.opengroup.org/onlinepubs/009695399/functions/atan2.html</a>&gt;.
 </dd><dt>binmode
 </dt><dd> (RISC OS) Meaningless. 
- (<font SIZE="-1">VMS</font>) Reopens file and restores pointer; if function fails, underlying filehandle may be closed, or pointer may be in a different position. 
+ (VMS) Reopens file and restores pointer; if function fails, underlying filehandle may be closed, or pointer may be in a different position. 
  (Win32) The value returned by <tt>&quot;tell&quot;</tt> may be affected after the call, and the filehandle may be flushed.
 </dd><dt>chmod
 </dt><dd> (Win32) Only good for changing ``owner'' read-write access; ``group'' and ``other'' bits are meaningless. 
  (RISC OS) Only good for changing ``owner'' and ``other'' read-write access. 
- (<font SIZE="-1">VOS</font>) Access permissions are mapped onto <font SIZE="-1">VOS</font> access-control list changes. 
- (Cygwin) The actual permissions set depend on the value of the <tt>&quot;CYGWIN&quot;</tt> variable in the <font SIZE="-1">SYSTEM</font> environment settings. 
+ (VOS) Access permissions are mapped onto VOS access-control list changes. 
+ (Cygwin) The actual permissions set depend on the value of the <tt>&quot;CYGWIN&quot;</tt> variable in the SYSTEM environment settings. 
  (Android) Setting the exec bit on some locations (generally <i>/sdcard</i>) will return true but not actually set the bit. 
- (<font SIZE="-1">VMS</font>) A mode argument of zero sets permissions to the user's default permission mask rather than disabling all permissions.
+ (VMS) A mode argument of zero sets permissions to the user's default permission mask rather than disabling all permissions.
 </dd><dt>chown
 </dt><dd> (Plan 9, RISC OS) Not implemented. 
  (Win32) Does nothing, but won't fail. 
- (<font SIZE="-1">VOS</font>) A little funky, because <font SIZE="-1">VOS</font>'s notion of ownership is a little funky.
+ (VOS) A little funky, because VOS's notion of ownership is a little funky.
 </dd><dt>chroot
-</dt><dd> (Win32, <font SIZE="-1">VMS,</font> Plan 9, RISC OS, <font SIZE="-1">VOS</font>) Not implemented.
+</dt><dd> (Win32, VMS, Plan 9, RISC OS, VOS) Not implemented.
 </dd><dt>crypt
 </dt><dd> (Win32) May not be available if library or source was not provided when building perl. 
  (Android) Not implemented.
 </dd><dt>dbmclose
-</dt><dd> (<font SIZE="-1">VMS,</font> Plan 9, <font SIZE="-1">VOS</font>) Not implemented.
+</dt><dd> (VMS, Plan 9, VOS) Not implemented.
 </dd><dt>dbmopen
-</dt><dd> (<font SIZE="-1">VMS,</font> Plan 9, <font SIZE="-1">VOS</font>) Not implemented.
+</dt><dd> (VMS, Plan 9, VOS) Not implemented.
 </dd><dt>dump
 </dt><dd> (RISC OS) Not useful. 
  (Cygwin, Win32) Not supported. 
- (<font SIZE="-1">VMS</font>) Invokes <font SIZE="-1">VMS</font> debugger.
+ (VMS) Invokes VMS debugger.
 </dd><dt>exec
 </dt><dd> (Win32) <tt>&quot;exec LIST&quot;</tt> without the use of indirect object syntax (<tt>&quot;exec PROGRAM LIST&quot;</tt>) may fall back to trying the shell if the first <tt>&quot;spawn()&quot;</tt> fails. 
- Note that the list form of <b>exec()</b> is emulated since the Win32 <font SIZE="-1">API</font> <b>CreateProcess()</b> accepts a simple string rather than an array of command-line arguments. This may have security implications for your code. 
+ Note that the list form of <b>exec()</b> is emulated since the Win32 API <b>CreateProcess()</b> accepts a simple string rather than an array of command-line arguments. This may have security implications for your code. 
  (SunOS, Solaris, HP-UX) Does not automatically flush output handles on some platforms. 
- (Symbian <font SIZE="-1">OS</font>) Not supported.
+ (Symbian OS) Not supported.
 </dd><dt>exit
-</dt><dd> (<font SIZE="-1">VMS</font>) Emulates Unix <tt>&quot;exit&quot;</tt> (which considers <tt>&quot;exit 1&quot;</tt> to indicate an error) by mapping the <tt>1</tt> to <tt>&quot;SS$_ABORT&quot;</tt> (<tt>44</tt>). This behavior may be overridden with the pragma <tt>&quot;use vmsish 'exit'&quot;</tt>. As with the <font SIZE="-1">CRTL</font>'s <tt>&quot;exit()&quot;</tt> function, <tt>&quot;exit 0&quot;</tt> is also mapped to an exit status of <tt>&quot;SS$_NORMAL&quot;</tt> (<tt>1</tt>); this mapping cannot be overridden. Any other argument to <tt>&quot;exit&quot;</tt> is used directly as Perl's exit status. On <font SIZE="-1">VMS,</font> unless the future <font SIZE="-1">POSIX_EXIT</font> mode is enabled, the exit code should always be a valid <font SIZE="-1">VMS</font> exit code and not a generic number. When the <font SIZE="-1">POSIX_EXIT</font> mode is enabled, a generic number will be encoded in a method compatible with the C library _POSIX_EXIT macro so that it can be decoded by other programs, particularly ones written in C, like the <font SIZE="-1">GNV</font> package. 
+</dt><dd> (VMS) Emulates Unix <tt>&quot;exit&quot;</tt> (which considers <tt>&quot;exit 1&quot;</tt> to indicate an error) by mapping the <tt>1</tt> to <tt>&quot;SS$_ABORT&quot;</tt> (<tt>44</tt>). This behavior may be overridden with the pragma <tt>&quot;use vmsish 'exit'&quot;</tt>. As with the CRTL's <tt>&quot;exit()&quot;</tt> function, <tt>&quot;exit 0&quot;</tt> is also mapped to an exit status of <tt>&quot;SS$_NORMAL&quot;</tt> (<tt>1</tt>); this mapping cannot be overridden. Any other argument to <tt>&quot;exit&quot;</tt> is used directly as Perl's exit status. On VMS, unless the future POSIX_EXIT mode is enabled, the exit code should always be a valid VMS exit code and not a generic number. When the POSIX_EXIT mode is enabled, a generic number will be encoded in a method compatible with the C library _POSIX_EXIT macro so that it can be decoded by other programs, particularly ones written in C, like the GNV package. 
  (Solaris) <tt>&quot;exit&quot;</tt> resets file pointers, which is a problem when called from a child process (created by <tt>&quot;fork&quot;</tt>) in <tt>&quot;BEGIN&quot;</tt>. A workaround is to use <tt>&quot;POSIX::_exit&quot;</tt>. 
  <pre><code>
 exit unless $Config{archname} = ~ /\bsolaris\b / ;
@@ -870,33 +870,33 @@ POSIX::_exit(0);
 </code></pre>
 </dd><dt>fcntl
 </dt><dd> (Win32) Not implemented. 
- (<font SIZE="-1">VMS</font>) Some functions available based on the version of <font SIZE="-1">VMS.</font>
+ (VMS) Some functions available based on the version of VMS.
 </dd><dt>flock
-</dt><dd> (<font SIZE="-1">VMS,</font> RISC OS, <font SIZE="-1">VOS</font>) Not implemented.
+</dt><dd> (VMS, RISC OS, VOS) Not implemented.
 </dd><dt>fork
-</dt><dd> (AmigaOS, RISC OS, <font SIZE="-1">VMS</font>) Not implemented. 
+</dt><dd> (AmigaOS, RISC OS, VMS) Not implemented. 
  (Win32) Emulated using multiple interpreters. See perlfork. 
  (SunOS, Solaris, HP-UX) Does not automatically flush output handles on some platforms.
 </dd><dt>getlogin
 </dt><dd> (RISC OS) Not implemented.
 </dd><dt>getpgrp
-</dt><dd> (Win32, <font SIZE="-1">VMS,</font> RISC OS) Not implemented.
+</dt><dd> (Win32, VMS, RISC OS) Not implemented.
 </dd><dt>getppid
 </dt><dd> (Win32, RISC OS) Not implemented.
 </dd><dt>getpriority
-</dt><dd> (Win32, <font SIZE="-1">VMS,</font> RISC OS, <font SIZE="-1">VOS</font>) Not implemented.
+</dt><dd> (Win32, VMS, RISC OS, VOS) Not implemented.
 </dd><dt>getpwnam
 </dt><dd> (Win32) Not implemented. 
  (RISC OS) Not useful.
 </dd><dt>getgrnam
-</dt><dd> (Win32, <font SIZE="-1">VMS,</font> RISC OS) Not implemented.
+</dt><dd> (Win32, VMS, RISC OS) Not implemented.
 </dd><dt>getnetbyname
 </dt><dd> (Android, Win32, Plan 9) Not implemented.
 </dd><dt>getpwuid
 </dt><dd> (Win32) Not implemented. 
  (RISC OS) Not useful.
 </dd><dt>getgrgid
-</dt><dd> (Win32, <font SIZE="-1">VMS,</font> RISC OS) Not implemented.
+</dt><dd> (Win32, VMS, RISC OS) Not implemented.
 </dd><dt>getnetbyaddr
 </dt><dd> (Android, Win32, Plan 9) Not implemented.
 </dd><dt>getprotobynumber
@@ -904,7 +904,7 @@ POSIX::_exit(0);
 </dd><dt>getpwent
 </dt><dd> (Android, Win32) Not implemented.
 </dd><dt>getgrent
-</dt><dd> (Android, Win32, <font SIZE="-1">VMS</font>) Not implemented.
+</dt><dd> (Android, Win32, VMS) Not implemented.
 </dd><dt>gethostbyname
 </dt><dd> (Irix 5) <tt>&quot;gethostbyname('localhost')&quot;</tt> does not work everywhere: you may have to use <tt>&quot;gethostbyname('127.0.0.1')&quot;</tt>.
 </dd><dt>gethostent
@@ -929,7 +929,7 @@ POSIX::_exit(0);
 </dt><dd> (Win32) Not implemented. 
  (Android) Either not implemented or a no-op.
 </dd><dt>endgrent
-</dt><dd> (Android, RISC OS, <font SIZE="-1">VMS,</font> Win32) Not implemented.
+</dt><dd> (Android, RISC OS, VMS, Win32) Not implemented.
 </dd><dt>endhostent
 </dt><dd> (Android, Win32) Not implemented.
 </dd><dt>endnetent
@@ -944,21 +944,21 @@ POSIX::_exit(0);
 </dt><dd> This operator is implemented via the <tt>&quot;File::Glob&quot;</tt> extension on most platforms. See File::Glob for portability information.
 </dd><dt>gmtime
 </dt><dd> In theory, <tt>&quot;gmtime&quot;</tt> is reliable from -2**63 to 2**63-1. However, because work-arounds in the implementation use floating point numbers, it will become inaccurate as the time gets larger. This is a bug and will be fixed in the future. 
- (<font SIZE="-1">VOS</font>) Time values are 32-bit quantities.
+ (VOS) Time values are 32-bit quantities.
 </dd><dt>ioctl
-</dt><dd> (<font SIZE="-1">VMS</font>) Not implemented. 
- (Win32) Available only for socket handles, and it does what the <tt>&quot;ioctlsocket()&quot;</tt> call in the Winsock <font SIZE="-1">API</font> does. 
+</dt><dd> (VMS) Not implemented. 
+ (Win32) Available only for socket handles, and it does what the <tt>&quot;ioctlsocket()&quot;</tt> call in the Winsock API does. 
  (RISC OS) Available only for socket handles.
 </dd><dt>kill
 </dt><dd> (RISC OS) Not implemented, hence not useful for taint checking. 
  (Win32) <tt>&quot;kill&quot;</tt> doesn't send a signal to the identified process like it does on Unix platforms. Instead <tt>&quot;kill($sig, $pid)&quot;</tt> terminates the process identified by <tt>$pid</tt>, and makes it exit immediately with exit status <tt>$sig</tt>. As in Unix, if <tt>$sig</tt> is 0 and the specified process exists, it returns true without actually terminating it. 
  (Win32) <tt>&quot;kill(-9, $pid)&quot;</tt> will terminate the process specified by <tt>$pid</tt> and recursively all child processes owned by it. This is different from the Unix semantics, where the signal will be delivered to all processes in the same process group as the process specified by <tt>$pid</tt>. 
- (<font SIZE="-1">VMS</font>) A pid of -1 indicating all processes on the system is not currently supported.
+ (VMS) A pid of -1 indicating all processes on the system is not currently supported.
 </dd><dt>link
-</dt><dd> (RISC OS, <font SIZE="-1">VOS</font>) Not implemented. 
+</dt><dd> (RISC OS, VOS) Not implemented. 
  (AmigaOS) Link count not updated because hard links are not quite that hard (They are sort of half-way between hard and soft links). 
- (Win32) Hard links are implemented on Win32 under <font SIZE="-1">NTFS</font> only. They are natively supported on Windows 2000 and later. On Windows <font SIZE="-1">NT</font> they are implemented using the Windows <font SIZE="-1">POSIX</font> subsystem support and the Perl process will need Administrator or Backup Operator privileges to create hard links. 
- (<font SIZE="-1">VMS</font>) Available on 64 bit OpenVMS 8.2 and later.
+ (Win32) Hard links are implemented on Win32 under NTFS only. They are natively supported on Windows 2000 and later. On Windows NT they are implemented using the Windows POSIX subsystem support and the Perl process will need Administrator or Backup Operator privileges to create hard links. 
+ (VMS) Available on 64 bit OpenVMS 8.2 and later.
 </dd><dt>localtime
 </dt><dd> <tt>&quot;localtime&quot;</tt> has the same range as ``gmtime'', but because time zone rules change, its accuracy for historical and future times may degrade but usually by no more than an hour.
 </dd><dt>lstat
@@ -971,19 +971,19 @@ POSIX::_exit(0);
 </dd><dt>msgsnd
 </dt><dd>
 </dd><dt>msgrcv
-</dt><dd> (Android, Win32, <font SIZE="-1">VMS,</font> Plan 9, RISC OS, <font SIZE="-1">VOS</font>) Not implemented.
+</dt><dd> (Android, Win32, VMS, Plan 9, RISC OS, VOS) Not implemented.
 </dd><dt>open
 </dt><dd> (RISC OS) Open modes <tt>&quot;|-&quot;</tt> and <tt>&quot;-|&quot;</tt> are unsupported. 
  (SunOS, Solaris, HP-UX) Opening a process does not automatically flush output handles on some platforms. 
- (Win32) Both of modes <tt>&quot;|-&quot;</tt> and <tt>&quot;-|&quot;</tt> are supported, but the list form is emulated since the Win32 <font SIZE="-1">API</font> <b>CreateProcess()</b> accepts a simple string rather than an array of arguments. This may have security implications for your code.
+ (Win32) Both of modes <tt>&quot;|-&quot;</tt> and <tt>&quot;-|&quot;</tt> are supported, but the list form is emulated since the Win32 API <b>CreateProcess()</b> accepts a simple string rather than an array of arguments. This may have security implications for your code.
 </dd><dt>readlink
-</dt><dd> (Win32, <font SIZE="-1">VMS,</font> RISC OS) Not implemented.
+</dt><dd> (Win32, VMS, RISC OS) Not implemented.
 </dd><dt>rename
 </dt><dd> (Win32) Can't move directories between directories on different logical volumes.
 </dd><dt>rewinddir
 </dt><dd> (Win32) Will not cause <tt>&quot;readdir&quot;</tt> to re-read the directory stream. The entries already read before the <tt>&quot;rewinddir&quot;</tt> call will just be returned again from a cache buffer.
 </dd><dt>select
-</dt><dd> (Win32, <font SIZE="-1">VMS</font>) Only implemented on sockets. 
+</dt><dd> (Win32, VMS) Only implemented on sockets. 
  (RISC OS) Only reliable on sockets. 
  Note that the <tt>&quot;select FILEHANDLE&quot;</tt> form is generally portable.
 </dd><dt>semctl
@@ -991,13 +991,13 @@ POSIX::_exit(0);
 </dd><dt>semget
 </dt><dd>
 </dd><dt>semop
-</dt><dd> (Android, Win32, <font SIZE="-1">VMS,</font> RISC OS) Not implemented.
+</dt><dd> (Android, Win32, VMS, RISC OS) Not implemented.
 </dd><dt>setgrent
-</dt><dd> (Android, <font SIZE="-1">VMS,</font> Win32, RISC OS) Not implemented.
+</dt><dd> (Android, VMS, Win32, RISC OS) Not implemented.
 </dd><dt>setpgrp
-</dt><dd> (Win32, <font SIZE="-1">VMS,</font> RISC OS, <font SIZE="-1">VOS</font>) Not implemented.
+</dt><dd> (Win32, VMS, RISC OS, VOS) Not implemented.
 </dd><dt>setpriority
-</dt><dd> (Win32, <font SIZE="-1">VMS,</font> RISC OS, <font SIZE="-1">VOS</font>) Not implemented.
+</dt><dd> (Win32, VMS, RISC OS, VOS) Not implemented.
 </dd><dt>setpwent
 </dt><dd> (Android, Win32, RISC OS) Not implemented.
 </dd><dt>setsockopt
@@ -1009,51 +1009,51 @@ POSIX::_exit(0);
 </dd><dt>shmread
 </dt><dd>
 </dd><dt>shmwrite
-</dt><dd> (Android, Win32, <font SIZE="-1">VMS,</font> RISC OS) Not implemented.
+</dt><dd> (Android, Win32, VMS, RISC OS) Not implemented.
 </dd><dt>sleep
 </dt><dd> (Win32) Emulated using synchronization functions such that it can be interrupted by <tt>&quot;alarm&quot;</tt>, and limited to a maximum of 4294967 seconds, approximately 49 days.
 </dd><dt>socketpair
 </dt><dd> (RISC OS) Not implemented. 
- (<font SIZE="-1">VMS</font>) Available on 64 bit OpenVMS 8.2 and later.
+ (VMS) Available on 64 bit OpenVMS 8.2 and later.
 </dd><dt>stat
 </dt><dd> Platforms that do not have <tt>&quot;rdev&quot;</tt>, <tt>&quot;blksize&quot;</tt>, or <tt>&quot;blocks&quot;</tt> will return these as <tt>''</tt>, so numeric comparison or manipulation of these fields may cause 'not numeric' warnings. 
- (Mac OS X) <tt>&quot;ctime&quot;</tt> not supported on <font SIZE="-1">UFS.</font> 
+ (Mac OS X) <tt>&quot;ctime&quot;</tt> not supported on UFS. 
  (Win32) <tt>&quot;ctime&quot;</tt> is creation time instead of inode change time. 
  (Win32) <tt>&quot;dev&quot;</tt> and <tt>&quot;ino&quot;</tt> are not meaningful. 
- (<font SIZE="-1">VMS</font>) <tt>&quot;dev&quot;</tt> and <tt>&quot;ino&quot;</tt> are not necessarily reliable. 
+ (VMS) <tt>&quot;dev&quot;</tt> and <tt>&quot;ino&quot;</tt> are not necessarily reliable. 
  (RISC OS) <tt>&quot;mtime&quot;</tt>, <tt>&quot;atime&quot;</tt> and <tt>&quot;ctime&quot;</tt> all return the last modification time. <tt>&quot;dev&quot;</tt> and <tt>&quot;ino&quot;</tt> are not necessarily reliable. 
- (<font SIZE="-1">OS/2</font>) <tt>&quot;dev&quot;</tt>, <tt>&quot;rdev&quot;</tt>, <tt>&quot;blksize&quot;</tt>, and <tt>&quot;blocks&quot;</tt> are not available. <tt>&quot;ino&quot;</tt> is not meaningful and will differ between stat calls on the same file. 
+ (OS/2) <tt>&quot;dev&quot;</tt>, <tt>&quot;rdev&quot;</tt>, <tt>&quot;blksize&quot;</tt>, and <tt>&quot;blocks&quot;</tt> are not available. <tt>&quot;ino&quot;</tt> is not meaningful and will differ between stat calls on the same file. 
  (Cygwin) Some versions of cygwin when doing a <tt>&quot;stat(&quot;foo&quot;)&quot;</tt> and not finding it may then attempt to <tt>&quot;stat(&quot;foo.exe&quot;)&quot;</tt>. 
  (Win32) <tt>&quot;stat&quot;</tt> needs to open the file to determine the link count and update attributes that may have been changed through hard links. Setting <tt>&quot;${^WIN32_SLOPPY_STAT}&quot;</tt> to a true value speeds up <tt>&quot;stat&quot;</tt> by not performing this operation.
 </dd><dt>symlink
 </dt><dd> (Win32, RISC OS) Not implemented. 
- (<font SIZE="-1">VMS</font>) Implemented on 64 bit <font SIZE="-1">VMS 8.3.</font> <font SIZE="-1">VMS</font> requires the symbolic link to be in Unix syntax if it is intended to resolve to a valid path.
+ (VMS) Implemented on 64 bit VMS 8.3. VMS requires the symbolic link to be in Unix syntax if it is intended to resolve to a valid path.
 </dd><dt>syscall
-</dt><dd> (Win32, <font SIZE="-1">VMS,</font> RISC OS, <font SIZE="-1">VOS</font>) Not implemented.
+</dt><dd> (Win32, VMS, RISC OS, VOS) Not implemented.
 </dd><dt>sysopen
-</dt><dd> (Mac OS, <font SIZE="-1">OS/390</font>) The traditional <tt>0</tt>, <tt>1</tt>, and <tt>2</tt> MODEs are implemented with different numeric values on some systems. The flags exported by <tt>&quot;Fcntl&quot;</tt> (<tt>&quot;O_RDONLY&quot;</tt>, <tt>&quot;O_WRONLY&quot;</tt>, <tt>&quot;O_RDWR&quot;</tt>) should work everywhere though.
+</dt><dd> (Mac OS, OS/390) The traditional <tt>0</tt>, <tt>1</tt>, and <tt>2</tt> MODEs are implemented with different numeric values on some systems. The flags exported by <tt>&quot;Fcntl&quot;</tt> (<tt>&quot;O_RDONLY&quot;</tt>, <tt>&quot;O_WRONLY&quot;</tt>, <tt>&quot;O_RDWR&quot;</tt>) should work everywhere though.
 </dd><dt>system
 </dt><dd> (Win32) As an optimization, may not call the command shell specified in <tt>$ENV{PERL5SHELL}</tt>. <tt>&quot;system(1, @args)&quot;</tt> spawns an external process and immediately returns its process designator, without waiting for it to terminate. Return value may be used subsequently in <tt>&quot;wait&quot;</tt> or <tt>&quot;waitpid&quot;</tt>. Failure to <tt>&quot;spawn()&quot;</tt> a subprocess is indicated by setting <tt>$?</tt> to <tt>&quot;255 &lt;&lt; 8&quot;</tt>. <tt>$?</tt> is set in a way compatible with Unix (i.e. the exit status of the subprocess is obtained by <tt>&quot;$? &gt;&gt; 8&quot;</tt>, as described in the documentation). 
- Note that the list form of <b>system()</b> is emulated since the Win32 <font SIZE="-1">API</font> <b>CreateProcess()</b> accepts a simple string rather than an array of command-line arguments. This may have security implications for your code. 
+ Note that the list form of <b>system()</b> is emulated since the Win32 API <b>CreateProcess()</b> accepts a simple string rather than an array of command-line arguments. This may have security implications for your code. 
  (RISC OS) There is no shell to process metacharacters, and the native standard is to pass a command line terminated by ``\n'' ``\r'' or ``\0'' to the spawned program. Redirection such as <tt>&quot;&gt; foo&quot;</tt> is performed (if at all) by the run time library of the spawned program. <tt>&quot;system LIST&quot;</tt> will call the Unix emulation library's <tt>&quot;exec&quot;</tt> emulation, which attempts to provide emulation of the stdin, stdout, stderr in force in the parent, provided the child program uses a compatible version of the emulation library. <tt>&quot;system SCALAR&quot;</tt> will call the native command line directly and no such emulation of a child Unix program will occur. Mileage <b>will</b> vary. 
  (Win32) <tt>&quot;system LIST&quot;</tt> without the use of indirect object syntax (<tt>&quot;system PROGRAM LIST&quot;</tt>) may fall back to trying the shell if the first <tt>&quot;spawn()&quot;</tt> fails. 
  (SunOS, Solaris, HP-UX) Does not automatically flush output handles on some platforms. 
- (<font SIZE="-1">VMS</font>) As with Win32, <tt>&quot;system(1, @args)&quot;</tt> spawns an external process and immediately returns its process designator without waiting for the process to terminate. In this case the return value may be used subsequently in <tt>&quot;wait&quot;</tt> or <tt>&quot;waitpid&quot;</tt>. Otherwise the return value is POSIX-like (shifted up by 8 bits), which only allows room for a made-up value derived from the severity bits of the native 32-bit condition code (unless overridden by <tt>&quot;use vmsish 'status'&quot;</tt>). If the native condition code is one that has a <font SIZE="-1">POSIX</font> value encoded, the <font SIZE="-1">POSIX</font> value will be decoded to extract the expected exit value. For more details see ``$?'' in perlvms.
+ (VMS) As with Win32, <tt>&quot;system(1, @args)&quot;</tt> spawns an external process and immediately returns its process designator without waiting for the process to terminate. In this case the return value may be used subsequently in <tt>&quot;wait&quot;</tt> or <tt>&quot;waitpid&quot;</tt>. Otherwise the return value is POSIX-like (shifted up by 8 bits), which only allows room for a made-up value derived from the severity bits of the native 32-bit condition code (unless overridden by <tt>&quot;use vmsish 'status'&quot;</tt>). If the native condition code is one that has a POSIX value encoded, the POSIX value will be decoded to extract the expected exit value. For more details see ``$?'' in perlvms.
 </dd><dt>telldir
 </dt><dd> (Android) Not implemented.
 </dd><dt>times
-</dt><dd> (Win32) ``Cumulative'' times will be bogus. On anything other than Windows <font SIZE="-1">NT</font> or Windows 2000, ``system'' time will be bogus, and ``user'' time is actually the time returned by the <tt>&quot;clock()&quot;</tt> function in the C runtime library. 
+</dt><dd> (Win32) ``Cumulative'' times will be bogus. On anything other than Windows NT or Windows 2000, ``system'' time will be bogus, and ``user'' time is actually the time returned by the <tt>&quot;clock()&quot;</tt> function in the C runtime library. 
  (RISC OS) Not useful.
 </dd><dt>truncate
-</dt><dd> (Older versions of <font SIZE="-1">VMS</font>) Not implemented. 
- (<font SIZE="-1">VOS</font>) Truncation to same-or-shorter lengths only. 
- (Win32) If a <font SIZE="-1">FILEHANDLE</font> is supplied, it must be writable and opened in append mode (i.e., use <tt>&quot;open(my $fh, '&gt;&gt;', 'filename')&quot;</tt> or <tt>&quot;sysopen(my $fh, ..., O_APPEND|O_RDWR)&quot;</tt>. If a filename is supplied, it should not be held open elsewhere.
+</dt><dd> (Older versions of VMS) Not implemented. 
+ (VOS) Truncation to same-or-shorter lengths only. 
+ (Win32) If a FILEHANDLE is supplied, it must be writable and opened in append mode (i.e., use <tt>&quot;open(my $fh, '&gt;&gt;', 'filename')&quot;</tt> or <tt>&quot;sysopen(my $fh, ..., O_APPEND|O_RDWR)&quot;</tt>. If a filename is supplied, it should not be held open elsewhere.
 </dd><dt>umask
 </dt><dd> Returns <tt>&quot;undef&quot;</tt> where unavailable. 
  (AmigaOS) <tt>&quot;umask&quot;</tt> works but the correct permissions are set only when the file is finally closed.
 </dd><dt>utime
-</dt><dd> (<font SIZE="-1">VMS,</font> RISC OS) Only the modification time is updated. 
- (Win32) May not behave as expected. Behavior depends on the C runtime library's implementation of <tt>&quot;utime()&quot;</tt>, and the filesystem being used. The <font SIZE="-1">FAT</font> filesystem typically does not support an ``access time'' field, and it may limit timestamps to a granularity of two seconds.
+</dt><dd> (VMS, RISC OS) Only the modification time is updated. 
+ (Win32) May not behave as expected. Behavior depends on the C runtime library's implementation of <tt>&quot;utime()&quot;</tt>, and the filesystem being used. The FAT filesystem typically does not support an ``access time'' field, and it may limit timestamps to a granularity of two seconds.
 </dd><dt>wait
 </dt><dd>
 </dd><dt>waitpid
@@ -1064,11 +1064,11 @@ POSIX::_exit(0);
 
  The following platforms are known to build Perl 5.12 (as of April 2010, its release date) from the standard source code distribution available at &lt;<a rel="nofollow" HREF="http://www.cpan.org/src">http://www.cpan.org/src</a>&gt;
 <dl>
-<dt>Linux (x86, <font SIZE="-1">ARM, IA64</font>)
+<dt>Linux (x86, ARM, IA64)
 </dt><dd>
 </dd><dt>HP-UX
 </dt><dd>
-</dd><dt><font SIZE="-1">AIX</font>
+</dd><dt>AIX
 </dt><dd>
 </dd><dt>Win32
 </dt><dd>
@@ -1076,7 +1076,7 @@ POSIX::_exit(0);
 <dl>
 <dt>Windows 2000
 </dt><dd>
-</dd><dt>Windows <font SIZE="-1">XP</font>
+</dd><dt>Windows XP
 </dt><dd>
 </dd><dt>Windows Server 2003
 </dt><dd>
@@ -1106,7 +1106,7 @@ POSIX::_exit(0);
 <dl>
 </dl>
 
-<dt>Solaris (x86, <font SIZE="-1">SPARC</font>)
+<dt>Solaris (x86, SPARC)
 </dt><dd>
 </dd><dt>OpenVMS
 </dt><dd>
@@ -1135,13 +1135,13 @@ POSIX::_exit(0);
 </dt><dd>
 </dd><dt>OpenBSD
 </dt><dd>
-</dd><dt>Dragonfly <font SIZE="-1">BSD</font>
+</dd><dt>Dragonfly BSD
 </dt><dd>
-</dd><dt>Midnight <font SIZE="-1">BSD</font>
+</dd><dt>Midnight BSD
 </dt><dd>
-</dd><dt><font SIZE="-1">QNX</font> Neutrino <font SIZE="-1">RTOS</font> (6.5.0)
+</dd><dt>QNX Neutrino RTOS (6.5.0)
 </dt><dd>
-</dd><dt>MirOS <font SIZE="-1">BSD</font>
+</dd><dt>MirOS BSD
 </dt><dd>
 </dd><dt>Stratus OpenVOS (17.0 or later)
 </dt><dd> Caveats:
@@ -1156,16 +1156,16 @@ POSIX::_exit(0);
 
 <dt>Symbian (Series 60 v3, 3.2 and 5 - what else?)
 </dt><dd>
-</dd><dt>Stratus <font SIZE="-1">VOS /</font> OpenVOS
+</dd><dt>Stratus VOS / OpenVOS
 </dt><dd>
-</dd><dt><font SIZE="-1">AIX</font>
+</dd><dt>AIX
 </dt><dd>
 </dd><dt>Android
 </dt><dd>
 </dd><dt>FreeMINT
 </dt><dd> Perl now builds with FreeMiNT/Atari. It fails a few tests, that needs some investigation. 
 
- The FreeMiNT port uses <font SIZE="-1">GNU</font> dld for loadable module capabilities. So ensure you have that library installed when building perl.</dd></dl>
+ The FreeMiNT port uses GNU dld for loadable module capabilities. So ensure you have that library installed when building perl.</dd></dl>
 
 <h2>EOL Platforms</h2>
 
@@ -1173,7 +1173,7 @@ POSIX::_exit(0);
 
  The following platforms were supported by a previous version of Perl but have been officially removed from Perl's source code as of 5.20:
 <dl>
-<dt><font SIZE="-1">AT&amp;T</font> 3b1
+<dt>AT&amp;T 3b1
 </dt><dd></dd></dl>
 
 <h3>(Perl 5.14)</h3>
@@ -1184,9 +1184,9 @@ POSIX::_exit(0);
 </dt><dd>
 </dd><dt>Windows 98
 </dt><dd>
-</dd><dt>Windows <font SIZE="-1">ME</font>
+</dd><dt>Windows ME
 </dt><dd>
-</dd><dt>Windows <font SIZE="-1">NT4</font>
+</dd><dt>Windows NT4
 </dt><dd></dd></dl>
 
 <h3>(Perl 5.12)</h3>
@@ -1197,7 +1197,7 @@ POSIX::_exit(0);
 </dt><dd>
 </dd><dt>Apollo Domain/OS
 </dt><dd>
-</dd><dt>Apple Mac <font SIZE="-1">OS 8/9</font>
+</dd><dt>Apple Mac OS 8/9
 </dt><dd>
 </dd><dt>Tenon Machten
 </dt><dd></dd></dl>

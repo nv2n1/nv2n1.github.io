@@ -41,8 +41,8 @@ description: "XDrawRectangle, XDrawRectangles, XRectangle – draw rectangles an
 <p> <code>XDrawRectangle</code> and <code>XDrawRectangles</code> can generate <code>BadDrawable</code>, <code>BadGC</code>, and <code>BadMatch</code> errors.</p>
 <h2>Structures</h2>
 <p>The <code>XRectangle</code> structure contains: </p>
-<p> typedef struct {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;short x, y;<br />
+<p> typedef struct {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;short x, y;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short width, height; } XRectangle; </p>
 <p> All x and y members are signed integers. The width and height members are 16-bit unsigned integers. You should be careful not to generate coordinates and sizes out of the 16-bit ranges, because the protocol only has 16-bit fields for these values.</p>
 <h2>Diagnostics</h2>
@@ -56,5 +56,5 @@ description: "XDrawRectangle, XDrawRectangles, XRectangle – draw rectangles an
 <dt><code>BadMatch</code></dt>
 <dd>Some argument or pair of arguments has the correct type and range but fails to match in some other way required by the request.</dd></dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xdrawarc/">XDrawArc</a>(3), <a href="/docs/linux/man/3-xdrawline/">XDrawLine</a>(3), <a href="/docs/linux/man/3-xdrawpoint/">XDrawPoint</a>(3)<br />
+<p><a href="/docs/linux/man/3-xdrawarc/">XDrawArc</a>(3), <a href="/docs/linux/man/3-xdrawline/">XDrawLine</a>(3), <a href="/docs/linux/man/3-xdrawpoint/">XDrawPoint</a>(3)<br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

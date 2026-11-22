@@ -12,7 +12,7 @@ description: "udp-sender – broadcast file on a LAN"
 <h2>SYNOPSIS</h2>
 <p> udp-sender [&#8211;file <i>file</i>] [&#8211;full-duplex] [&#8211;half-duplex] [&#8211;pipe <i>pipe</i>] [&#8211;portbase <i>portbase</i>] [&#8211;blocksize <i>size</i>] [&#8211;interface <i>net-interface</i>] [&#8211;mcast-data-address <i>data-mcast-address</i>] [&#8211;mcast-rdv-address <i>mcast-rdv-address</i>] [&#8211;max-bitrate <i>bitrate</i>] [&#8211;pointopoint] [&#8211;async] [&#8211;log <i>file</i>] [&#8211;min-slice-size <i>min</i>] [&#8211;max-slice-size <i>max</i>] [&#8211;slice-size] [&#8211;ttl <i>time-to-live</i>] [&#8211;fec <i>stripes</i>x<i>redundancy</i>/<i>stripesize</i>] [&#8211;print-seed] [&#8211;rexmit-hello-interval <i>interval</i>] [&#8211;autostart <i>autostart</i>] [&#8211;broadcast] [&#8211;min-receivers receivers] [&#8211;min-wait <i>sec</i>] [&#8211;max-wait <i>sec</i>] [&#8211;nokbd] [&#8211;retries-until-drop <i>n</i>] [&#8211;bw-period <i>n</i>] [&#8211;rate-governor <i>module.so:key1=value1,key2=value2</i>] [&#8211;stat-period <i>n</i>] [&#8211;print-uncompressed-position <i>flag</i>]</p>
 <h2>DESCRIPTION</h2>
-<p> <tt>&quot;Udp-sender&quot;</tt> is used to broadcast a file (for instance a disk image) to multiple <tt>&quot;udp-receivers&quot;</tt> on the local <font SIZE="-1">LAN.</font> In order to do this, it uses Ethernet multicast or broadcast, so that all receivers profit from the same physical datastream. Thus, sending to 10 destinations does not take more time than it would take to send just 2.</p>
+<p> <tt>&quot;Udp-sender&quot;</tt> is used to broadcast a file (for instance a disk image) to multiple <tt>&quot;udp-receivers&quot;</tt> on the local LAN. In order to do this, it uses Ethernet multicast or broadcast, so that all receivers profit from the same physical datastream. Thus, sending to 10 destinations does not take more time than it would take to send just 2.</p>
 <h2>OPTIONS</h2>
 <h3>Basic options</h3>
 <dl>
@@ -37,14 +37,14 @@ description: "udp-sender – broadcast file on a LAN"
 <p> The following networking options should be supplied only on the sender:</p>
 <dl>
 <dt>&#8211;mcast-data-address <i>address</i></dt>
-<dd> Uses the given address for multicasting the data. If not specified, the program will automatically derive a multicast address from its own <font SIZE="-1">IP </font>(by keeping the last 27 bits of the <font SIZE="-1">IP</font> and then prepending 232).</dd>
+<dd> Uses the given address for multicasting the data. If not specified, the program will automatically derive a multicast address from its own IP (by keeping the last 27 bits of the IP and then prepending 232).</dd>
 <dt>&#8211;pointopoint</dt>
 <dd> Point-to-point mode. Only a single receiver is allowed, but the data will be directly send to this receiver (in unicast mode), rather than multicast/broadcast all over the place. If no async mode is chosen, and there happens to be only one receiver, point-to-point is activated automatically.</dd>
 <dt>&#8211;nopointopoint</dt>
 <dd> Don&#8217;t use point-to-point, even if there is only one single receiver.</dd>
 <dt>&#8211;full-duplex</dt>
 <dd> Use this option if you use a full-duplex network. T-base-10 or 100 is full duplex if equipped with a switch. Hub based networks, or T-base-2 networks (coaxial cable) are only <code>half-duplex</code> and you should not use this option with these networks, or else you may experience a 10% performance hit. </dd>
-<p> N.B. On high-latency <font SIZE="-1">WAN</font> links, the full-duplex option can lead to substantial performance improvements, because it allows udp-sender to send more data while it is still waiting for the previous batch to get acknowledged.</p>
+<p> N.B. On high-latency WAN links, the full-duplex option can lead to substantial performance improvements, because it allows udp-sender to send more data while it is still waiting for the previous batch to get acknowledged.</p>
 <dt>&#8211;half-duplex</dt>
 <dd> Use half duplex mode (needed for Hub based or T-base-2 networks). This is the default behavior in this version of udpcast.</dd>
 <dt>&#8211;broadcast</dt>
@@ -62,16 +62,16 @@ description: "udp-sender – broadcast file on a LAN"
 <dt>&#8211;max-bitrate <i>bitrate</i></dt>
 <dd> Limits bandwidth used by udpcast. Useful in asynchronous mode, or else the sender may send too fast for the switch and/or receiver to keep up. Bitrate may be expressed in bits per second (&#8211;bitrate 5000000), kilobits per second (<tt>&quot;--bitrate 5000k&quot;</tt>) or megabits per second (<tt>&quot;--bitrate 5m&quot;</tt>). This is the raw bitrate, including packet headers, forward error correction, retransmissions, etc. Actual payload bitrate will be lower.</dd>
 <dt>&#8211;fec <i>interleave&quot;x&quot;redundancy</i>&quot;/&quot;<i>stripesize</i></dt>
-<dd> Enables forward error correction. The goal of forward error correction is to transmit redundant data, in order to make up for packets lost in transit. Indeed, in unidirectional mode, the receivers have no way of requesting retransmission of lost packets, thus the only way to address packet loss is to include redundant information to begin with. The algorithm is designed in such a way that if <i>r</i> redundant packets are transmitted, that those can be used to compensate for the loss of <i>any</i> r packets in the same <font SIZE="-1">FEC</font> group (stripe). </dd>
-<p> In order to increase robustness of the <font SIZE="-1">FEC</font> algorithm against burst packet losses, each <i>slice</i> is divided in <i>interleave</i> stripes. Each stripe has <i>stripesize</i> blocks (if not specified, stripesize is calculated by diving <i>slice-size</i> by <i>interleave</i>). For each stripe, <i>redundancy</i> <font SIZE="-1">FEC</font> packets are added. Stripes are organized in such a fashion that consecutive packets belong to different stripes. This way, we ensure that burst losses affect different stripes, rather than using all <font SIZE="-1">FEC</font> packets of a single stripe. Example: <tt>&quot;--fec 8x8/128&quot;</tt></p>
+<dd> Enables forward error correction. The goal of forward error correction is to transmit redundant data, in order to make up for packets lost in transit. Indeed, in unidirectional mode, the receivers have no way of requesting retransmission of lost packets, thus the only way to address packet loss is to include redundant information to begin with. The algorithm is designed in such a way that if <i>r</i> redundant packets are transmitted, that those can be used to compensate for the loss of <i>any</i> r packets in the same FEC group (stripe). </dd>
+<p> In order to increase robustness of the FEC algorithm against burst packet losses, each <i>slice</i> is divided in <i>interleave</i> stripes. Each stripe has <i>stripesize</i> blocks (if not specified, stripesize is calculated by diving <i>slice-size</i> by <i>interleave</i>). For each stripe, <i>redundancy</i> FEC packets are added. Stripes are organized in such a fashion that consecutive packets belong to different stripes. This way, we ensure that burst losses affect different stripes, rather than using all FEC packets of a single stripe. Example: <tt>&quot;--fec 8x8/128&quot;</tt></p>
 <dt>&#8211;rate-governor <i>module.so:key1=value1,key2=value2</i></dt>
 <dd> Applies a dynamically loadable rate governor. <i>module.so</i> is the name of the preloadable module, which is followed by a number of property assignments (<i>key1=value1</i>). The rate governor controls the transmission rate according to various criteria, such as congestion information received from a routing or encapsulating device. See comments in <tt>&quot;/usr/include/udpcast/rateGovernor.h&quot;</tt> and example in <tt>&quot;examples/rateGovernor&quot;</tt> for more details</dd>
 <dt>&#8211;rexmit-hello-interval <i>timeout</i></dt>
-<dd> If set, rebroadcasts the <font SIZE="-1">HELLO</font> packet used for initiating the casting each <i>timeout</i> milliseconds. </dd>
+<dd> If set, rebroadcasts the HELLO packet used for initiating the casting each <i>timeout</i> milliseconds. </dd>
 <p> This option is useful together with <i>asyc mode</i>, because with async mode the receiver won&#8217;t send a connection request to the sender (and hence won&#8217;t get a connection reply). In <i>async mode</i>, the receivers get all needed information from the <i>hello</i> packet instead, and are thus particularly dependant on the reception of this packet, makeing retransmission useful. </p>
 <p> This option is also useful on networks where packet loss is so high that even with connection requests, sender and receiver would not find each other otherwise.</p>
 <dt>&#8211;retries-until-drop <i>retries</i></dt>
-<dd> How many time to send a <font SIZE="-1">REQACK</font> until dropping a receiver. Lower retrycounts make <tt>&quot;udp-sender&quot;</tt> faster to react to crashed receivers, but they also increase the probability of false alerts (dropping receivers that are not actually crashed, but merely slow to respond for whatever reason)</dd>
+<dd> How many time to send a REQACK until dropping a receiver. Lower retrycounts make <tt>&quot;udp-sender&quot;</tt> faster to react to crashed receivers, but they also increase the probability of false alerts (dropping receivers that are not actually crashed, but merely slow to respond for whatever reason)</dd>
 <dt>&#8211;streaming</dt>
 <dd> Allows receivers to join an ongoing transmission mid through</dd></dl>
 <h3>Keyboardless mode</h3>
@@ -135,12 +135,12 @@ description: "udp-sender – broadcast file on a LAN"
 <dt>&#8211;bw-period <i>seconds</i></dt>
 <dd> Every so much seconds, log instantenous bandwidth seen during that period. Note: this is different from the bandwidth displayed to stderr of the receiver, which is the average since start of transmission.</dd></dl>
 <h3>Tuning options (sender)</h3>
-<p> The following tuning options are all about slice size. Udpcast groups its data in <i>slices</i>, which are a series of blocks (<font SIZE="-1">UDP</font> packets). These groups are relevant for</p>
+<p> The following tuning options are all about slice size. Udpcast groups its data in <i>slices</i>, which are a series of blocks (UDP packets). These groups are relevant for</p>
 <dl>
 <dt>&bull;</dt>
 <dd> data retransmission: after each slice, the server asks the receivers whether they have received all blocks, and if needed retransmits what has been missing</dd>
 <dt>&bull;</dt>
-<dd> forward error correction: each slice has its set of data blocks, and matching <font SIZE="-1">FEC</font> blocks.</dd>
+<dd> forward error correction: each slice has its set of data blocks, and matching FEC blocks.</dd>
 <dt>&#8211;min-slice-size <i>size</i></dt>
 <dd> minimum slice size (expressed in blocks). Default is 16. When dynamically adjusting slice size (only in non-duplex mode), never use smaller slices than this. Ignored in duplex mode (default).</dd>
 <dt>&#8211;max-slice-size <i>size</i></dt>
@@ -153,17 +153,17 @@ description: "udp-sender – broadcast file on a LAN"
 <p> There are three parameters on which to act:</p>
 <dl>
 <dt>redundancy</dt>
-<dd> This influences how much extra packets are included per stripe. The higher this is, the more redundancy there is, which means that the transmission becomes more robust against loss. However, <font SIZE="-1">CPU</font> time necessary is also proportional to redundancy (a factor to consider on slow <font SIZE="-1">PC</font>&#8216;s), and of course, a higher redundancy augments the amount of data to be transmitted.</dd>
+<dd> This influences how much extra packets are included per stripe. The higher this is, the more redundancy there is, which means that the transmission becomes more robust against loss. However, CPU time necessary is also proportional to redundancy (a factor to consider on slow PC&#8216;s), and of course, a higher redundancy augments the amount of data to be transmitted.</dd>
 <dt>interleave</dt>
 <dd> This influences among how many stripes the data is divided. Higher interleave improves robustness against burst loss (for example, 64 packets in a row&#8230;). It doesn&#8217;t increase robustness against randomly spread packet loss. <code>Note</code>: interleave bigger than 8 will force a smaller stripesize, due to the fact that slicesize is limited to 1024.</dd>
 <dt>stripesize</dt>
-<dd> How many data blocks there are in a stripe. Due to the algorithm used, this cannot be more than 128. Reducing stripe size is an indirect way of augmenting (relative) redundancy, without incurring the <font SIZE="-1">CPU</font> penalty of larger (absolute) redundancy. However, a larger absolute redundancy is still preferable over a smaller stripesize, because it improves robustness against clustered losses. For instance, if 8/128 is preferable over 4/64, because with 8/128 the 8 <font SIZE="-1">FEC</font> packets can be used to compensate for the loss of any of the 128 data packets, whereas with 4/64, each group of 4 <font SIZE="-1">FEC</font> packets can only be used against its own set of 64 data packets. If for instance the first 8 packets were lost, they would be recoverable with 8/128, but not with 4/64.</dd></dl>
+<dd> How many data blocks there are in a stripe. Due to the algorithm used, this cannot be more than 128. Reducing stripe size is an indirect way of augmenting (relative) redundancy, without incurring the CPU penalty of larger (absolute) redundancy. However, a larger absolute redundancy is still preferable over a smaller stripesize, because it improves robustness against clustered losses. For instance, if 8/128 is preferable over 4/64, because with 8/128 the 8 FEC packets can be used to compensate for the loss of any of the 128 data packets, whereas with 4/64, each group of 4 FEC packets can only be used against its own set of 64 data packets. If for instance the first 8 packets were lost, they would be recoverable with 8/128, but not with 4/64.</dd></dl>
 <p> Considering these, change parameters as follows:</p>
 <dl>
 <dt>&bull;</dt>
 <dd> If you observe long stretches of lost packets, increase interleave</dd>
 <dt>&bull;</dt>
-<dd> If you observe that transfer is slowed down by <font SIZE="-1">CPU</font> saturation, decrease redundancy and stripesize proportionnally.</dd>
+<dd> If you observe that transfer is slowed down by CPU saturation, decrease redundancy and stripesize proportionnally.</dd>
 <dt>&bull;</dt>
 <dd> If you observe big <i>variations</i> in packet loss rate, increase redundancy and stripesize proportionnally.</dd>
 <dt>&bull;</dt>

@@ -10,7 +10,7 @@ description: "chpev.f –"
 <p>chpev.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>chpev</code> (JOBZ, UPLO, N, AP, W, Z, LDZ, WORK, RWORK, INFO)<br />
+<p>subroutine <code>chpev</code> (JOBZ, UPLO, N, AP, W, Z, LDZ, WORK, RWORK, INFO)<br/>
  <i></i><code> CHPEV computes the eigenvalues and, optionally, the left and/or right eigenvectors for OTHER matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine chpev (characterJOBZ, characterUPLO, integerN, complex, dimension( * )AP, real, dimension( * )W, complex, dimension( ldz, * )Z, integerLDZ, complex, dimension( * )WORK, real, dimension( * )RWORK, integerINFO)</h3>

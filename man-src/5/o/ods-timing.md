@@ -9,8 +9,8 @@ description: "ods-timing – OpenDNSSEC timing specification"
 
 <p><code>ods-timing</code> &#8211; OpenDNSSEC timing specification</p>
 <h2>Synopsis</h2>
-<p><code>/etc/opendnssec/conf.xml</code><br />
- <code>/etc/opendnssec/kasp.xml</code><br />
+<p><code>/etc/opendnssec/conf.xml</code><br/>
+ <code>/etc/opendnssec/kasp.xml</code><br/>
  <code>/etc/opendnssec/zonelist.xml</code></p>
 <h2>Description</h2>
 <p>The configuration files of OpenDNSSEC need to have timing descriptions, notably for periods. These descriptions follow ISO 8601 with exceptions for the duration of a month and a year, as these periods would be allowed to vary if ISO 8601 were strictly adhered to. </p>

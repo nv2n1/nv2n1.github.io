@@ -35,7 +35,7 @@ description: "haveged – Generate random numbers and feed linux random device."
 <dd>Set file path for the daemon pid file. Default is &quot;/var/run/haveged.pid&quot;,</dd>
 <dt>-r n, &#8211;run=n</dt>
 <dd>Set run level for daemon interface: </dd>
-<p> n = 0 Run as daemon &#8211; must be root. Fills /dev/random when the supply of random bits<br />
+<p> n = 0 Run as daemon &#8211; must be root. Fills /dev/random when the supply of random bits<br/>
 &nbsp;<wbr>falls below the low water mark of the device.&nbsp;<wbr> </p>
 <p> n = 1 Display configuration info and terminate. </p>
 <p> n &gt; 1 Write &lt;n&gt; kb of output. Deprecated (use &#8211;number instead), only provided for backward compatibility. </p>

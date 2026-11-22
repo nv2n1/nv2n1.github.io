@@ -16,7 +16,7 @@ description: "fftw-wisdom-to-conf – generate FFTW wisdom (pre-planned transfor
 <p> The reason to do this is that, if you only need transforms of a limited set of sizes and types, and if you are statically linking your program, then using a configuration file generated from wisdom for those types can substantially reduce the size of your executable. (Otherwise, because of FFTW&#8217;s dynamic nature, all of FFTW&#8217;s transform code must be linked into any program using FFTW.) </p>
 <p> FFTW is a free library to compute discrete Fourier transforms in one or more dimensions, for arbitrary sizes, and of both real and complex data, among other related operations. More information on FFTW can be found at the FFTW home page: <i><a rel="nofollow" href="http://www.fftw.org">http://www.fftw.org</a></i> </p>
 <p> <i>fftw-wisdom-to-conf</i> reads wisdom from standard input and writes the configuration to standard output. It can easily be combined with the <i>fftw-wisdom</i> tool, for example: </p>
-<p> fftw-wisdom -n cof1024 cob1024 -o wisdom<br />
+<p> fftw-wisdom -n cof1024 cob1024 -o wisdom<br/>
  fftw-wisdom-to-conf &lt; wisdom &gt; conf.c </p>
 <p> will create a configuration &quot;conf.c&quot; containing only those parts of FFTW needed for the optimized complex forwards and backwards out-of-place transforms of size 1024 (also saving the wisdom itself in &quot;wisdom&quot;). </p>
 <p> Alternatively, you can run your actual program, export wisdom for all plans that were created (ideally in FFTW_PATIENT or FFTW_EXHAUSTIVE mode), use this as input for <i>fftw-wisdom-to-conf</i>, and then re-link your program with the resulting configuration routine. </p>
@@ -31,7 +31,7 @@ description: "fftw-wisdom-to-conf – generate FFTW wisdom (pre-planned transfor
 <p> Send bug reports to fftw [at] fftw.org.</p>
 <h2>AUTHORS</h2>
 <p> Written by Steven G. Johnson and Matteo Frigo. </p>
-<p> Copyright (c) 2003, 2007-11 Matteo Frigo<br />
+<p> Copyright (c) 2003, 2007-11 Matteo Frigo<br/>
  Copyright (c) 2003, 2007-11 Massachusetts Institute of Technology</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-fftw-wisdom/">fftw-wisdom</a>(1) </p>

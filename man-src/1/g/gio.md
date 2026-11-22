@@ -54,7 +54,7 @@ description: "gio – GIO commandline tool"
 <dt>
 </dt><dd> Copies one or more files from <i>SOURCE</i> to <i>DESTINATION</i>. If more than one source is specified, the destination must be a directory. </dd>
 <p> The <code>copy</code> command is similar to the traditional <code>cp</code> utility. </p>
-<p> <font SIZE="+1"> <code>Options</code></p>
+<p>  <code>Options</code></p>
 <dl>
 <dt>
 </dt><dd>
@@ -93,7 +93,7 @@ description: "gio – GIO commandline tool"
 <dt>
 </dt><dd> Shows information about the given locations. </dd>
 <p> The <code>info</code> command is similar to the traditional <code>ls</code> utility. </p>
-<p> </font><font SIZE="+2"> <code>Options</code></p>
+<p>  <code>Options</code></p>
 <dl>
 <dt>
 </dt><dd>
@@ -127,7 +127,7 @@ description: "gio – GIO commandline tool"
 <dt>
 </dt><dd> Lists the contents of the given locations. If no location is given, the contents of the current directory are shown. </dd>
 <p> The <code>list</code> command is similar to the traditional <code>ls</code> utility. </p>
-<p> </font><font SIZE="+3"> <code>Options</code></p>
+<p>  <code>Options</code></p>
 <dl>
 <dt>
 </dt><dd>
@@ -169,7 +169,7 @@ description: "gio – GIO commandline tool"
 <dt>
 </dt><dd> Creates directories. </dd>
 <p> The <code>mkdir</code> command is similar to the traditional <code>mkdir</code> utility. </p>
-<p> </font><font SIZE="+4"> <code>Options</code></p>
+<p>  <code>Options</code></p>
 <dl>
 <dt>
 </dt><dd>
@@ -184,7 +184,7 @@ description: "gio – GIO commandline tool"
 <dt>
 </dt><dd> Monitors files or directories for changes, such as creation deletion, content and attribute changes, and mount and unmount operations affecting the monitored locations. </dd>
 <p> The <code>monitor</code> command uses the GIO file monitoring APIs to do its job. GIO has different implementations for different platforms. The most common implementation on Linux uses inotify. </p>
-<p> </font><font SIZE="+5"> <code>Options</code></p>
+<p>  <code>Options</code></p>
 <dl>
 <dt>
 </dt><dd>
@@ -220,7 +220,7 @@ description: "gio – GIO commandline tool"
 </dt><dd> Provides commandline access to various aspects of GIO&#8217;s mounting functionality. </dd>
 <p> Mounting refers to the traditional concept of arranging multiple file systems and devices in a single tree, rooted at /. Classical mounting happens in the kernel and is controlled by the mount utility. GIO expands this concept by introducing mount daemons that can make file systems available to GIO applications without kernel involvement. </p>
 <p> GIO mounts can require authentication, and the <code>mount</code> command may ask for user IDs, passwords, and so on, when required. </p>
-<p> </font><font SIZE="+6"> <code>Options</code></p>
+<p>  <code>Options</code></p>
 <dl>
 <dt>
 </dt><dd>
@@ -287,7 +287,7 @@ description: "gio – GIO commandline tool"
 <dt>
 </dt><dd> Moves one or more files from <i>SOURCE</i> to <i>DESTINATION</i>. If more than one source is specified, the destination must be a directory. </dd>
 <p> The <code>move</code> command is similar to the traditional <code>mv</code> utility. </p>
-<p> </font><font SIZE="+7"> <code>Options</code></p>
+<p>  <code>Options</code></p>
 <dl>
 <dt>
 </dt><dd>
@@ -332,7 +332,7 @@ description: "gio – GIO commandline tool"
 <p> This command removes files irreversibly. If you want a reversible way to remove files, see the <code>trash</code> command. </p>
 <p> Note that not all URI schemes that are supported by GIO may allow deletion of files. </p>
 <p> The <code>remove</code> command is similar to the traditional <code>rm</code> utility. </p>
-<p> </font><font SIZE="+8"> <code>Options</code></p>
+<p>  <code>Options</code></p>
 <dl>
 <dt>
 </dt><dd>
@@ -347,7 +347,7 @@ description: "gio – GIO commandline tool"
 <dt>
 </dt><dd> Reads from standard input and saves the data to the given location. </dd>
 <p> This is similar to just redirecting output to a file using traditional shell syntax, but the <code>save</code> command allows saving to location that GIO can write to. </p>
-<p> </font><font SIZE="+9"> <code>Options</code></p>
+<p>  <code>Options</code></p>
 <dl>
 <dt>
 </dt><dd>
@@ -449,7 +449,7 @@ description: "gio – GIO commandline tool"
 </dt><dd> Follow symbolic links.</dd></dl>
 </dl>
 </dl>
-<p> </font></p>
+<p> </p>
 <h2>EXIT STATUS</h2>
 <p> On success 0 is returned, a non-zero failure code otherwise.</p>
 <h2>SEE ALSO</h2>

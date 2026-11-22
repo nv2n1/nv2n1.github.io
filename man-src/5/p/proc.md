@@ -143,18 +143,18 @@ description: "proc – process information pseudo-filesystem"
 <dd>  Under Linux 2.2 and later, this file is a symbolic link containing the actual pathname of the executed command. This symbolic link can be dereferenced normally; attempting to open it will open the executable. You can even type <i>/proc/[pid]/exe</i> to run another copy of the same executable that is being run by process [pid]. If the pathname has been unlinked, the symbolic link will contain the string &#8216;(deleted)&#8216; appended to the original pathname. In a multithreaded process, the contents of this symbolic link are not available if the main thread has already terminated (typically by calling <code><a href="/docs/linux/man/3-pthread_exit/">pthread_exit</a></code>(3)).  </dd>
 <dd>  Permission to dereference or read (<code><a href="/docs/linux/man/2-readlink/">readlink</a></code>(2)) this symbolic link is governed by a ptrace access mode <code>PTRACE_MODE_READ_FSCREDS</code> check; see <code><a href="/docs/linux/man/2-ptrace/">ptrace</a></code>(2).  </dd>
 <dd>  Under Linux 2.0 and earlier, <i>/proc/[pid]/exe</i> is a pointer to the binary which was executed, and appears as a symbolic link. A <code><a href="/docs/linux/man/2-readlink/">readlink</a></code>(2) call on this file under Linux 2.0 returns a string in the format:  </dd>
-<dd>  <br />
+<dd>  <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[device]:inode  </dd>
 <dd>  For example, [0301]:1502 would be inode 1502 on device major 03 (IDE, MFM, etc. drives) minor 01 (first partition on the first drive).  </dd>
 <dd>  <code><a href="/docs/linux/man/1-find/">find</a></code>(1) with the <i>-inum</i> option can be used to locate the file.  </dd>
 <dt><i>/proc/[pid]/fd/</i> </dt>
 <dd>  This is a subdirectory containing one entry for each file which the process has open, named by its file descriptor, and which is a symbolic link to the actual file. Thus, 0 is standard input, 1 standard output, 2 standard error, and so on.  </dd>
 <dd>  For file descriptors for pipes and sockets, the entries will be symbolic links whose content is the file type with the inode. A <code><a href="/docs/linux/man/2-readlink/">readlink</a></code>(2) call on this file returns a string in the format:  </dd>
-<dd>  <br />
+<dd>  <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;type:[inode]  </dd>
 <dd>  For example, <i>socket:[2248868]</i> will be a socket and its inode is 2248868. For sockets, that inode can be used to find more information in one of the files under <i>/proc/net/</i>.  </dd>
 <dd>  For file descriptors that have no corresponding inode (e.g., file descriptors produced by <code><a href="/docs/linux/man/2-bpf/">bpf</a></code>(2), <code><a href="/docs/linux/man/2-epoll_create/">epoll_create</a></code>(2), <code><a href="/docs/linux/man/2-eventfd/">eventfd</a></code>(2), <code><a href="/docs/linux/man/2-inotify_init/">inotify_init</a></code>(2), <code><a href="/docs/linux/man/2-perf_event_open/">perf_event_open</a></code>(2), <code><a href="/docs/linux/man/2-signalfd/">signalfd</a></code>(2), <code><a href="/docs/linux/man/2-timerfd_create/">timerfd_create</a></code>(2), and <code><a href="/docs/linux/man/2-userfaultfd/">userfaultfd</a></code>(2)), the entry will be a symbolic link with contents of the form  </dd>
-<dd>  <br />
+<dd>  <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;anon_inode:&lt;file-type&gt;  </dd>
 <dd>  In many cases (but not all), the <i>file-type</i> is surrounded by square brackets.  </dd>
 <dd>  For example, an epoll file descriptor will have a symbolic link whose content is the string <i>anon_inode:[eventpoll]</i>.  </dd>
@@ -186,28 +186,28 @@ description: "proc – process information pseudo-filesystem"
 <dd>  This field, present since Linux 3.15, is the ID of the mount point containing this file. See the description of <i>/proc/[pid]/mountinfo</i>.  </dd></dl>
  </dl>
  <dd>  For eventfd file descriptors (see <code><a href="/docs/linux/man/2-eventfd/">eventfd</a></code>(2)), we see (since Linux 3.8) the following fields:  </dd>
-<dd>  pos:<code>&nbsp;</code>0<br />
- flags:<code>&nbsp;<wbr>&nbsp;</code>02<br />
- mnt_id:<code>&nbsp;</code>10<br />
+<dd>  pos:<code>&nbsp;</code>0<br/>
+ flags:<code>&nbsp;<wbr>&nbsp;</code>02<br/>
+ mnt_id:<code>&nbsp;</code>10<br/>
  eventfd-count: 40  </dd>
 <dd>  <i>eventfd-count</i> is the current value of the eventfd counter, in hexadecimal.  </dd>
 <dd>  For epoll file descriptors (see <code><a href="/docs/linux/man/7-epoll/">epoll</a></code>(7)), we see (since Linux 3.8) the following fields:  </dd>
-<dd>  pos:<code>&nbsp;</code>0<br />
- flags:<code>&nbsp;<wbr>&nbsp;</code>02<br />
- mnt_id:<code>&nbsp;</code>10<br />
+<dd>  pos:<code>&nbsp;</code>0<br/>
+ flags:<code>&nbsp;<wbr>&nbsp;</code>02<br/>
+ mnt_id:<code>&nbsp;</code>10<br/>
  tfd: 9 events: 19 data: 74253d2500000009 tfd: 7 events: 19 data: 74253d2500000007  </dd>
 <dd>  Each of the lines beginning <i>tfd</i> describes one of the file descriptors being monitored via the epoll file descriptor (see <code><a href="/docs/linux/man/2-epoll_ctl/">epoll_ctl</a></code>(2) for some details). The <i>tfd</i> field is the number of the file descriptor. The <i>events</i> field is a hexadecimal mask of the events being monitored for this file descriptor. The <i>data</i> field is the data value associated with this file descriptor.  </dd>
 <dd>  For signalfd file descriptors (see <code><a href="/docs/linux/man/2-signalfd/">signalfd</a></code>(2)), we see (since Linux 3.8) the following fields:  </dd>
-<dd>  pos:<code>&nbsp;</code>0<br />
- flags:<code>&nbsp;<wbr>&nbsp;</code>02<br />
- mnt_id:<code>&nbsp;</code>10<br />
- sigmask:<code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code>0000000000000006<br />
+<dd>  pos:<code>&nbsp;</code>0<br/>
+ flags:<code>&nbsp;<wbr>&nbsp;</code>02<br/>
+ mnt_id:<code>&nbsp;</code>10<br/>
+ sigmask:<code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code>0000000000000006<br/>
   </dd>
 <dd>  <i>sigmask</i> is the hexadecimal mask of signals that are accepted via this signalfd file descriptor. (In this example, bits 2 and 3 are set, corresponding to the signals <code>SIGINT</code> and <code>SIGQUIT</code>; see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7).)  </dd>
 <dd>  For inotify file descriptors (see <code><a href="/docs/linux/man/7-inotify/">inotify</a></code>(7)), we see (since Linux 3.8) the following fields:  </dd>
-<dd>  pos:<code>&nbsp;</code>0<br />
- flags:<code>&nbsp;<wbr>&nbsp;</code>00<br />
- mnt_id:<code>&nbsp;</code>11<br />
+<dd>  pos:<code>&nbsp;</code>0<br/>
+ flags:<code>&nbsp;<wbr>&nbsp;</code>00<br/>
+ mnt_id:<code>&nbsp;</code>11<br/>
  inotify wd:2 ino:7ef82a sdev:800001 mask:800afff ignored_mask:0 fhandle-bytes:8 fhandle-type:1 f_handle:2af87e00220ffd73 inotify wd:1 ino:192627 sdev:800001 mask:800afff ignored_mask:0 fhandle-bytes:8 fhandle-type:1 f_handle:27261900802dfd73  </dd>
 <dd>  Each of the lines beginning with &quot;inotify&quot; displays information about one file or directory that is being monitored. The fields in this line are as follows:  </dd>
 <dl>
@@ -224,9 +224,9 @@ description: "proc – process information pseudo-filesystem"
  </dl>
  <dd>  If the kernel was built with exportfs support, the path to the target file is exposed as a file handle, via three hexadecimal fields: <i>fhandle-bytes</i>, <i>fhandle-type</i>, and <i>f_handle</i>.  </dd>
 <dd>  For fanotify file descriptors (see <code><a href="/docs/linux/man/7-fanotify/">fanotify</a></code>(7)), we see (since Linux 3.8) the following fields:  </dd>
-<dd>  pos:<code>&nbsp;</code>0<br />
- flags:<code>&nbsp;<wbr>&nbsp;</code>02<br />
- mnt_id:<code>&nbsp;</code>11<br />
+<dd>  pos:<code>&nbsp;</code>0<br/>
+ flags:<code>&nbsp;<wbr>&nbsp;</code>02<br/>
+ mnt_id:<code>&nbsp;</code>11<br/>
  fanotify flags:0 event-flags:88002 fanotify ino:19264f sdev:800001 mflags:0 mask:1 ignored_mask:0 fhandle-bytes:8 fhandle-type:1 f_handle:4f261900a82dfd73  </dd>
 <dd>  The fourth line displays information defined when the fanotify group was created via <code><a href="/docs/linux/man/2-fanotify_init/">fanotify_init</a></code>(2):  </dd>
 <dl>
@@ -295,10 +295,10 @@ description: "proc – process information pseudo-filesystem"
 <dd>  This file displays the soft limit, hard limit, and units of measurement for each of the process&#8217;s resource limits (see <code><a href="/docs/linux/man/2-getrlimit/">getrlimit</a></code>(2)). Up to and including Linux 2.6.35, this file is protected to allow reading only by the real UID of the process. Since Linux 2.6.36, this file is readable by all users on the system.  </dd>
 <dt><i>/proc/[pid]/map_files/</i> (since kernel 3.3) </dt>
 <dd>  This subdirectory contains entries corresponding to memory-mapped files (see <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2)). Entries are named by memory region start and end address pair (expressed as hexadecimal numbers), and are symbolic links to the mapped files themselves. Here is an example, with the output wrapped and reformatted to fit on an 80-column display:  </dd>
-<dd>  #<code> ls -l /proc/self/map_files/</code> lr--------. 1 root root 64 Apr 16 21:31 <br />
+<dd>  #<code> ls -l /proc/self/map_files/</code> lr--------. 1 root root 64 Apr 16 21:31 <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;3252e00000-3252e20000 -&gt;&nbsp;/usr/lib64/ld-2.15.so ...  </dd>
 <dd>  Although these entries are present for memory regions that were mapped with the <code>MAP_FILE</code> flag, the way anonymous shared memory (regions created with the <code>MAP_ANON | MAP_SHARED</code> flags) is implemented in Linux means that such regions also appear on this directory. Here is an example where the target file is the deleted <i>/dev/zero</i> one:  </dd>
-<dd>  lrw-------. 1 root root 64 Apr 16 21:33 <br />
+<dd>  lrw-------. 1 root root 64 Apr 16 21:33 <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;7fc075d2f000-7fc075e6f000 -&gt;&nbsp;/dev/zero&nbsp;(deleted)  </dd>
 <dd>  Permission to access this file is governed by a ptrace access mode <code>PTRACE_MODE_READ_FSCREDS</code> check; see <code><a href="/docs/linux/man/2-ptrace/">ptrace</a></code>(2).  </dd>
 <dd>  Until kernel version 4.3, this directory appeared only if the <code>CONFIG_CHECKPOINT_RESTORE</code> kernel configuration option was enabled.  </dd>
@@ -461,7 +461,7 @@ description: "proc – process information pseudo-filesystem"
 <dd>  Note however that this file is not merely a symbolic link. It provides the same view of the filesystem (including namespaces and the set of per-process mounts) as the process itself. An example illustrates this point. In one terminal, we start a shell in new user and mount namespaces, and in that shell we create some new mount points:  </dd>
 <dd>  $ <code>PS1=&#8216;sh1# &#8216; unshare -Urnm</code> sh1# <code>mount -t tmpfs tmpfs /etc</code> # Mount empty tmpfs at /etc sh1# <code>mount --bind /usr /dev</code> # Mount /usr at /dev sh1# <code>echo $$</code> 27123  </dd>
 <dd>  In a second terminal window, in the initial mount namespace, we look at the contents of the corresponding mounts in the initial and new namespaces:  </dd>
-<dd>  $ <code>PS1=&#8216;sh2# &#8216; sudo sh</code> sh2# <code>ls /etc | wc -l</code> # In initial NS 309 sh2# <code>ls /proc/27123/root/etc | wc -l</code> # /etc in other NS 0 # The empty tmpfs dir sh2# <code>ls /dev | wc -l</code> # In initial NS 205 sh2# <code>ls /proc/27123/root/dev | wc -l</code> # /dev in other NS 11 # Actually bind <br />
+<dd>  $ <code>PS1=&#8216;sh2# &#8216; sudo sh</code> sh2# <code>ls /etc | wc -l</code> # In initial NS 309 sh2# <code>ls /proc/27123/root/etc | wc -l</code> # /etc in other NS 0 # The empty tmpfs dir sh2# <code>ls /dev | wc -l</code> # In initial NS 205 sh2# <code>ls /proc/27123/root/dev | wc -l</code> # /dev in other NS 11 # Actually bind <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;#&nbsp;mounted to&nbsp;/usr sh2# <code>ls /usr | wc -l</code> # /usr in initial NS 11  </dd>
 <dd>  In a multithreaded process, the contents of the <i>/proc/[pid]/root</i> symbolic link are not available if the main thread has already terminated (typically by calling <code><a href="/docs/linux/man/3-pthread_exit/">pthread_exit</a></code>(3)).  </dd>
 <dd>  Permission to dereference or read (<code><a href="/docs/linux/man/2-readlink/">readlink</a></code>(2)) this symbolic link is governed by a ptrace access mode <code>PTRACE_MODE_READ_FSCREDS</code> check; see <code><a href="/docs/linux/man/2-ptrace/">ptrace</a></code>(2).  </dd>
@@ -478,38 +478,38 @@ description: "proc – process information pseudo-filesystem"
 <dd>  The &quot;Locked&quot; indicates whether the mapping is locked in memory or not.  </dd>
 <dd>  The &quot;ProtectionKey&quot; line (available since Linux 4.9, on x86 only) contains the memory protection key (see <code><a href="/docs/linux/man/7-pkeys/">pkeys</a></code>(7)) associated with the virtual memory area. This entry is present only if the kernel was built with the <code>CONFIG_X86_INTEL_MEMORY_PROTECTION_KEYS</code> configuration option (since Linux 4.6).  </dd>
 <dd>  The &quot;VmFlags&quot; line (available since Linux 3.8) represents the kernel flags associated with the virtual memory area, encoded using the following two-letter codes:  </dd>
-<dd>  <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;rd&nbsp;<wbr>&nbsp;- readable <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;wr&nbsp;<wbr>&nbsp;- writable <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;ex&nbsp;<wbr>&nbsp;- executable <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sh&nbsp;<wbr>&nbsp;- shared <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;mr&nbsp;<wbr>&nbsp;- may read <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;mw&nbsp;<wbr>&nbsp;- may write <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;me&nbsp;<wbr>&nbsp;- may execute <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;ms&nbsp;<wbr>&nbsp;- may share <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;gd&nbsp;<wbr>&nbsp;- stack segment grows down <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;pf&nbsp;<wbr>&nbsp;- pure PFN range <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;dw&nbsp;<wbr>&nbsp;- disabled write to the mapped file <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;lo&nbsp;<wbr>&nbsp;- pages are locked in memory <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;io&nbsp;<wbr>&nbsp;- memory mapped I/O area <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sr&nbsp;<wbr>&nbsp;- sequential read advise provided <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;rr&nbsp;<wbr>&nbsp;- random read advise provided <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;dc&nbsp;<wbr>&nbsp;- do not copy area on fork <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;de&nbsp;<wbr>&nbsp;- do not expand area on remapping <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;ac&nbsp;<wbr>&nbsp;- area is accountable <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;nr&nbsp;<wbr>&nbsp;- swap space is not reserved for the area <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;ht&nbsp;<wbr>&nbsp;- area uses huge tlb pages <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sf&nbsp;<wbr>&nbsp;- perform synchronous page faults&nbsp;(since Linux 4.15) <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;nl&nbsp;<wbr>&nbsp;- non-linear mapping&nbsp;(removed in Linux 4.0) <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;ar&nbsp;<wbr>&nbsp;- architecture specific flag <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;wf&nbsp;<wbr>&nbsp;- wipe on fork&nbsp;(since Linux 4.14) <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;dd&nbsp;<wbr>&nbsp;- do not include area into core dump <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sd&nbsp;<wbr>&nbsp;- soft-dirty flag&nbsp;(since Linux 3.13) <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;mm&nbsp;<wbr>&nbsp;- mixed map area <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;hg&nbsp;<wbr>&nbsp;- huge page advise flag <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;nh&nbsp;<wbr>&nbsp;- no-huge page advise flag <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;mg&nbsp;<wbr>&nbsp;- mergeable advise flag <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;um&nbsp;<wbr>&nbsp;- userfaultfd missing pages tracking&nbsp;(since Linux 4.3) <br />
+<dd>  <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;rd&nbsp;<wbr>&nbsp;- readable <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;wr&nbsp;<wbr>&nbsp;- writable <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;ex&nbsp;<wbr>&nbsp;- executable <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sh&nbsp;<wbr>&nbsp;- shared <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;mr&nbsp;<wbr>&nbsp;- may read <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;mw&nbsp;<wbr>&nbsp;- may write <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;me&nbsp;<wbr>&nbsp;- may execute <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;ms&nbsp;<wbr>&nbsp;- may share <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;gd&nbsp;<wbr>&nbsp;- stack segment grows down <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;pf&nbsp;<wbr>&nbsp;- pure PFN range <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;dw&nbsp;<wbr>&nbsp;- disabled write to the mapped file <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;lo&nbsp;<wbr>&nbsp;- pages are locked in memory <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;io&nbsp;<wbr>&nbsp;- memory mapped I/O area <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sr&nbsp;<wbr>&nbsp;- sequential read advise provided <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;rr&nbsp;<wbr>&nbsp;- random read advise provided <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;dc&nbsp;<wbr>&nbsp;- do not copy area on fork <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;de&nbsp;<wbr>&nbsp;- do not expand area on remapping <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;ac&nbsp;<wbr>&nbsp;- area is accountable <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;nr&nbsp;<wbr>&nbsp;- swap space is not reserved for the area <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;ht&nbsp;<wbr>&nbsp;- area uses huge tlb pages <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sf&nbsp;<wbr>&nbsp;- perform synchronous page faults&nbsp;(since Linux 4.15) <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;nl&nbsp;<wbr>&nbsp;- non-linear mapping&nbsp;(removed in Linux 4.0) <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;ar&nbsp;<wbr>&nbsp;- architecture specific flag <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;wf&nbsp;<wbr>&nbsp;- wipe on fork&nbsp;(since Linux 4.14) <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;dd&nbsp;<wbr>&nbsp;- do not include area into core dump <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sd&nbsp;<wbr>&nbsp;- soft-dirty flag&nbsp;(since Linux 3.13) <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;mm&nbsp;<wbr>&nbsp;- mixed map area <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;hg&nbsp;<wbr>&nbsp;- huge page advise flag <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;nh&nbsp;<wbr>&nbsp;- no-huge page advise flag <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;mg&nbsp;<wbr>&nbsp;- mergeable advise flag <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;um&nbsp;<wbr>&nbsp;- userfaultfd missing pages tracking&nbsp;(since Linux 4.3) <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uw&nbsp;<wbr>&nbsp;- userfaultfd wprotect pages tracking&nbsp;(since Linux 4.3)  </dd>
 <dd>  The <i>/proc/[pid]/smaps</i> file is present only if the <code>CONFIG_PROC_PAGE_MONITOR</code> kernel configuration option is enabled.  </dd>
 <dt><i>/proc/[pid]/stack</i> (since Linux 2.6.29) </dt>
@@ -522,7 +522,7 @@ description: "proc – process information pseudo-filesystem"
 <dd>   </dd>
 <dl>
  <dt>(1) <i>pid</i> &nbsp;%d</dt>
-<dd>  <br />
+<dd>  <br/>
  The process ID.  </dd>
 <dt>(2) <i>comm</i> &nbsp;%s</dt>
 <dd>  The filename of the executable, in parentheses. Strings longer than <code>TASK_COMM_LEN</code> (16) characters (including the terminating null byte) are silently truncated. This is visible whether or not the executable is swapped out.  </dd>
@@ -661,34 +661,34 @@ description: "proc – process information pseudo-filesystem"
  </dl>
  <dt><i>/proc/[pid]/statm</i> </dt>
 <dd>  Provides information about memory usage, measured in pages. The columns are:  </dd>
-<dd>  size (1) total program size <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(same as VmSize in&nbsp;<i>/proc/[pid]/status</i>) resident (2) resident set size <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(inaccurate;&nbsp;same as VmRSS in&nbsp;<i>/proc/[pid]/status</i>) shared (3) number of resident shared pages <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(i.e., backed by a file) <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(inaccurate;&nbsp;same as RssFile+RssShmem in <br />
+<dd>  size (1) total program size <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(same as VmSize in&nbsp;<i>/proc/[pid]/status</i>) resident (2) resident set size <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(inaccurate;&nbsp;same as VmRSS in&nbsp;<i>/proc/[pid]/status</i>) shared (3) number of resident shared pages <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(i.e., backed by a file) <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(inaccurate;&nbsp;same as RssFile+RssShmem in <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>/proc/[pid]/status</i>) text (4) text (code) lib (5) library (unused since Linux 2.6; always 0) data (6) data + stack dt (7) dirty pages (unused since Linux 2.6; always 0)  </dd>
 <dd>  Some of these values are inaccurate because of a kernel-internal scalability optimization. If accurate values are required, use <i>/proc/[pid]/smaps</i> or <i>/proc/[pid]/smaps_rollup</i> instead, which are much slower but provide accurate, detailed information.  </dd>
 <dt><i>/proc/[pid]/status</i> </dt>
 <dd>  Provides much of the information in <i>/proc/[pid]/stat</i> and <i>/proc/[pid]/statm</i> in a format that&#8217;s easier for humans to parse. Here&#8217;s an example:  </dd>
-<dd>  $<code> cat /proc/$$/status</code> Name: bash Umask: 0022 State: S (sleeping) Tgid: 17248 Ngid: 0 Pid: 17248 PPid: 17200 TracerPid: 0 Uid: 1000 1000 1000 1000 Gid: 100 100 100 100 FDSize: 256 Groups: 16 33 100 NStgid: 17248 NSpid: 17248 NSpgid: 17248 NSsid: 17200 VmPeak:<code>&nbsp;</code> 131168 kB<br />
- VmSize:<code>&nbsp;</code> 131168 kB<br />
- VmLck:<code>&nbsp;<wbr>&nbsp;</code> 0 kB<br />
- VmPin:<code>&nbsp;<wbr>&nbsp;</code> 0 kB<br />
- VmHWM:<code>&nbsp;<wbr>&nbsp;</code> 13484 kB<br />
- VmRSS:<code>&nbsp;<wbr>&nbsp;</code> 13484 kB<br />
- RssAnon:<code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code> 10264 kB<br />
- RssFile:<code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code> 3220 kB<br />
- RssShmem:<code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code> 0 kB<br />
- VmData:<code>&nbsp;</code> 10332 kB<br />
- VmStk:<code>&nbsp;<wbr>&nbsp;</code> 136 kB<br />
- VmExe:<code>&nbsp;<wbr>&nbsp;</code> 992 kB<br />
- VmLib:<code>&nbsp;<wbr>&nbsp;</code> 2104 kB<br />
- VmPTE:<code>&nbsp;<wbr>&nbsp;</code> 76 kB<br />
- VmPMD:<code>&nbsp;<wbr>&nbsp;</code> 12 kB<br />
- VmSwap:<code>&nbsp;</code> 0 kB<br />
- HugetlbPages: 0 kB <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code># 4.4<br />
- CoreDumping:<code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code>0 # 4.15<br />
- Threads: 1 SigQ: 0/3067 SigPnd: 0000000000000000 ShdPnd: 0000000000000000 SigBlk: 0000000000010000 SigIgn: 0000000000384004 SigCgt: 000000004b813efb CapInh: 0000000000000000 CapPrm: 0000000000000000 CapEff: 0000000000000000 CapBnd: ffffffffffffffff CapAmb:<code>&nbsp;</code>0000000000000000<br />
+<dd>  $<code> cat /proc/$$/status</code> Name: bash Umask: 0022 State: S (sleeping) Tgid: 17248 Ngid: 0 Pid: 17248 PPid: 17200 TracerPid: 0 Uid: 1000 1000 1000 1000 Gid: 100 100 100 100 FDSize: 256 Groups: 16 33 100 NStgid: 17248 NSpid: 17248 NSpgid: 17248 NSsid: 17200 VmPeak:<code>&nbsp;</code> 131168 kB<br/>
+ VmSize:<code>&nbsp;</code> 131168 kB<br/>
+ VmLck:<code>&nbsp;<wbr>&nbsp;</code> 0 kB<br/>
+ VmPin:<code>&nbsp;<wbr>&nbsp;</code> 0 kB<br/>
+ VmHWM:<code>&nbsp;<wbr>&nbsp;</code> 13484 kB<br/>
+ VmRSS:<code>&nbsp;<wbr>&nbsp;</code> 13484 kB<br/>
+ RssAnon:<code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code> 10264 kB<br/>
+ RssFile:<code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code> 3220 kB<br/>
+ RssShmem:<code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code> 0 kB<br/>
+ VmData:<code>&nbsp;</code> 10332 kB<br/>
+ VmStk:<code>&nbsp;<wbr>&nbsp;</code> 136 kB<br/>
+ VmExe:<code>&nbsp;<wbr>&nbsp;</code> 992 kB<br/>
+ VmLib:<code>&nbsp;<wbr>&nbsp;</code> 2104 kB<br/>
+ VmPTE:<code>&nbsp;<wbr>&nbsp;</code> 76 kB<br/>
+ VmPMD:<code>&nbsp;<wbr>&nbsp;</code> 12 kB<br/>
+ VmSwap:<code>&nbsp;</code> 0 kB<br/>
+ HugetlbPages: 0 kB <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code># 4.4<br/>
+ CoreDumping:<code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</code>0 # 4.15<br/>
+ Threads: 1 SigQ: 0/3067 SigPnd: 0000000000000000 ShdPnd: 0000000000000000 SigBlk: 0000000000010000 SigIgn: 0000000000384004 SigCgt: 000000004b813efb CapInh: 0000000000000000 CapPrm: 0000000000000000 CapEff: 0000000000000000 CapBnd: ffffffffffffffff CapAmb:<code>&nbsp;</code>0000000000000000<br/>
  NoNewPrivs: 0 Seccomp: 0 Speculation_Store_Bypass: vulnerable Cpus_allowed: 00000001 Cpus_allowed_list: 0 Mems_allowed: 1 Mems_allowed_list: 0 voluntary_ctxt_switches: 150 nonvoluntary_ctxt_switches: 545  </dd>
 <dd>  The fields are as follows:  </dd>
 <dl>
@@ -832,7 +832,7 @@ description: "proc – process information pseudo-filesystem"
 <dd>  Advanced power management version and battery information when <code>CONFIG_APM</code> is defined at kernel compilation time.  </dd>
 <dt><i>/proc/buddyinfo</i> </dt>
 <dd>  This file contains information which is used for diagnosing memory fragmentation issues. Each line starts with the identification of the node and the name of the zone which together identify a memory region. This is then followed by the count of available chunks of a certain order in which these zones are split. The size in bytes of a certain order is given by the formula:  </dd>
-<dd>  <br />
+<dd>  <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(2^order)&nbsp;*&nbsp;PAGE_SIZE  </dd>
 <dd>  The binary buddy allocator algorithm inside the kernel will split one chunk into two chunks of a smaller order (thus with half the size) or combine two contiguous chunks into one larger chunk of a higher order (thus with double the size) to satisfy allocation requests and to counter memory fragmentation. The order matches the column number, when starting to count at zero.  </dd>
 <dd>  For example on an x86-64 system: Node 0, zone DMA 1 1 1 0 2 1 1 0 1 1 3 Node 0, zone DMA32 65 47 4 81 52 28 13 10 5 1 404 Node 0, zone Normal 216 55 189 101 84 38 37 27 5 3 587  </dd>
@@ -908,32 +908,32 @@ description: "proc – process information pseudo-filesystem"
 <dd>  The <i>/proc/kpagecount</i> file is present only if the <code>CONFIG_PROC_PAGE_MONITOR</code> kernel configuration option is enabled.  </dd>
 <dt><i>/proc/kpageflags</i> (since Linux 2.6.25) </dt>
 <dd>  This file contains 64-bit masks corresponding to each physical page frame; it is indexed by page frame number (see the discussion of <i>/proc/[pid]/pagemap</i>). The bits are as follows:  </dd>
-<dd>  <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0 &#8211; KPF_LOCKED <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;1 &#8211; KPF_ERROR <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;2 &#8211; KPF_REFERENCED <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;3 &#8211; KPF_UPTODATE <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;4 &#8211; KPF_DIRTY <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;5 &#8211; KPF_LRU <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;6 &#8211; KPF_ACTIVE <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;7 &#8211; KPF_SLAB <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;8 &#8211; KPF_WRITEBACK <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;9 &#8211; KPF_RECLAIM <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;10 &#8211; KPF_BUDDY <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;11 &#8211; KPF_MMAP&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(since Linux 2.6.31) <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;12 &#8211; KPF_ANON&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(since Linux 2.6.31) <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;13 &#8211; KPF_SWAPCACHE&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(since Linux 2.6.31) <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;14 &#8211; KPF_SWAPBACKED&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(since Linux 2.6.31) <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;15 &#8211; KPF_COMPOUND_HEAD&nbsp;<wbr>&nbsp;(since Linux 2.6.31) <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;16 &#8211; KPF_COMPOUND_TAIL&nbsp;<wbr>&nbsp;(since Linux 2.6.31) <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;17 &#8211; KPF_HUGE&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(since Linux 2.6.31) <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;18 &#8211; KPF_UNEVICTABLE&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(since Linux 2.6.31) <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;19 &#8211; KPF_HWPOISON&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(since Linux 2.6.31) <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;20 &#8211; KPF_NOPAGE&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(since Linux 2.6.31) <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;21 &#8211; KPF_KSM&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(since Linux 2.6.32) <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;22 &#8211; KPF_THP&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(since Linux 3.4) <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;23 &#8211; KPF_BALLOON&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(since Linux 3.18) <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;24 &#8211; KPF_ZERO_PAGE&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(since Linux 4.0) <br />
+<dd>  <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0 &#8211; KPF_LOCKED <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;1 &#8211; KPF_ERROR <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;2 &#8211; KPF_REFERENCED <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;3 &#8211; KPF_UPTODATE <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;4 &#8211; KPF_DIRTY <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;5 &#8211; KPF_LRU <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;6 &#8211; KPF_ACTIVE <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;7 &#8211; KPF_SLAB <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;8 &#8211; KPF_WRITEBACK <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;9 &#8211; KPF_RECLAIM <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;10 &#8211; KPF_BUDDY <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;11 &#8211; KPF_MMAP&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(since Linux 2.6.31) <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;12 &#8211; KPF_ANON&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(since Linux 2.6.31) <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;13 &#8211; KPF_SWAPCACHE&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(since Linux 2.6.31) <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;14 &#8211; KPF_SWAPBACKED&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(since Linux 2.6.31) <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;15 &#8211; KPF_COMPOUND_HEAD&nbsp;<wbr>&nbsp;(since Linux 2.6.31) <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;16 &#8211; KPF_COMPOUND_TAIL&nbsp;<wbr>&nbsp;(since Linux 2.6.31) <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;17 &#8211; KPF_HUGE&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(since Linux 2.6.31) <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;18 &#8211; KPF_UNEVICTABLE&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(since Linux 2.6.31) <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;19 &#8211; KPF_HWPOISON&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(since Linux 2.6.31) <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;20 &#8211; KPF_NOPAGE&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(since Linux 2.6.31) <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;21 &#8211; KPF_KSM&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(since Linux 2.6.32) <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;22 &#8211; KPF_THP&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(since Linux 3.4) <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;23 &#8211; KPF_BALLOON&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(since Linux 3.18) <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;24 &#8211; KPF_ZERO_PAGE&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(since Linux 4.0) <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;25 &#8211; KPF_IDLE&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(since Linux 4.3)  </dd>
 <dd>  For further details on the meanings of these bits, see the kernel source file <i>Documentation/admin-guide/mm/pagemap.rst</i>. Before kernel 2.6.29, <code>KPF_WRITEBACK</code>, <code>KPF_RECLAIM</code>, <code>KPF_BUDDY</code>, and <code>KPF_LOCKED</code> did not report correctly.  </dd>
 <dd>  The <i>/proc/kpageflags</i> file is present only if the <code>CONFIG_PROC_PAGE_MONITOR</code> kernel configuration option is enabled.  </dd>
@@ -1133,11 +1133,11 @@ description: "proc – process information pseudo-filesystem"
 <dd>  Here &quot;IP address&quot; is the IPv4 address of the machine and the &quot;HW type&quot; is the hardware type of the address from RFC 826. The flags are the internal flags of the ARP structure (as defined in <i>/usr/include/linux/if_arp.h</i>) and the &quot;HW address&quot; is the data link layer mapping for that IP address if it is known.  </dd>
 <dt><i>/proc/net/dev</i> </dt>
 <dd>  The dev pseudo-file contains network device status information. This gives the number of received and sent packets, the number of errors and collisions and other basic statistics. These are used by the <code><a href="/docs/linux/man/8-ifconfig/">ifconfig</a></code>(8) program to report device status. The format is:  </dd>
-<dd>  Inter-| Receive | Transmit <br />
-&nbsp;face |bytes&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;packets errs drop fifo frame compressed multicast|bytes&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;packets errs drop fifo colls carrier compressed <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;lo: 2776770&nbsp;<wbr>&nbsp;<wbr>&nbsp;11307&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;2776770&nbsp;<wbr>&nbsp;<wbr>&nbsp;11307&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0 <br />
-&nbsp;<wbr>&nbsp;eth0: 1215645&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;2751&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;1782404&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;4324&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;427&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0 <br />
-&nbsp;<wbr>&nbsp;ppp0: 1622270&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;5552&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;1&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;354130&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;5669&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0 <br />
+<dd>  Inter-| Receive | Transmit <br/>
+&nbsp;face |bytes&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;packets errs drop fifo frame compressed multicast|bytes&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;packets errs drop fifo colls carrier compressed <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;lo: 2776770&nbsp;<wbr>&nbsp;<wbr>&nbsp;11307&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;2776770&nbsp;<wbr>&nbsp;<wbr>&nbsp;11307&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0 <br/>
+&nbsp;<wbr>&nbsp;eth0: 1215645&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;2751&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;1782404&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;4324&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;427&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0 <br/>
+&nbsp;<wbr>&nbsp;ppp0: 1622270&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;5552&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;1&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;354130&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;5669&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0 <br/>
 &nbsp;<wbr>&nbsp;tap0:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;7714&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;81&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;7714&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;81&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0  </dd>
 <dt><i>/proc/net/dev_mcast</i> </dt>
 <dd>  Defined in <i>/usr/src/linux/net/core/dev_mcast.c</i>:  </dd>
@@ -1154,14 +1154,14 @@ description: "proc – process information pseudo-filesystem"
 <dd>  Holds a dump of the TCP socket table. Much of the information is not of use apart from debugging. The &quot;sl&quot; value is the kernel hash slot for the socket, the &quot;local_address&quot; is the local address and port number pair. The &quot;rem_address&quot; is the remote address and port number pair (if connected). &quot;St&quot; is the internal status of the socket. The &quot;tx_queue&quot; and &quot;rx_queue&quot; are the outgoing and incoming data queue in terms of kernel memory usage. The &quot;tr&quot;, &quot;tm-&gt;when&quot;, and &quot;rexmits&quot; fields hold internal information of the kernel socket state and are useful only for debugging. The &quot;uid&quot; field holds the effective UID of the creator of the socket.  </dd>
 <dt><i>/proc/net/udp</i> </dt>
 <dd>  Holds a dump of the UDP socket table. Much of the information is not of use apart from debugging. The &quot;sl&quot; value is the kernel hash slot for the socket, the &quot;local_address&quot; is the local address and port number pair. The &quot;rem_address&quot; is the remote address and port number pair (if connected). &quot;St&quot; is the internal status of the socket. The &quot;tx_queue&quot; and &quot;rx_queue&quot; are the outgoing and incoming data queue in terms of kernel memory usage. The &quot;tr&quot;, &quot;tm-&gt;when&quot;, and &quot;rexmits&quot; fields are not used by UDP. The &quot;uid&quot; field holds the effective UID of the creator of the socket. The format is:  </dd>
-<dd>  sl local_address rem_address st tx_queue rx_queue tr rexmits tm-&gt;when uid <br />
-&nbsp;1: 01642C89:0201 0C642C89:03FF 01 00000000:00000001 01:000071BA 00000000 0 <br />
-&nbsp;1: 00000000:0801 00000000:0000 0A 00000000:00000000 00:00000000 6F000100 0 <br />
+<dd>  sl local_address rem_address st tx_queue rx_queue tr rexmits tm-&gt;when uid <br/>
+&nbsp;1: 01642C89:0201 0C642C89:03FF 01 00000000:00000001 01:000071BA 00000000 0 <br/>
+&nbsp;1: 00000000:0801 00000000:0000 0A 00000000:00000000 00:00000000 6F000100 0 <br/>
 &nbsp;1: 00000000:0201 00000000:0000 0A 00000000:00000000 00:00000000 00000000 0  </dd>
 <dt><i>/proc/net/unix</i> </dt>
 <dd>  Lists the UNIX domain sockets present within the system and their status. The format is:  </dd>
-<dd>  Num RefCount Protocol Flags Type St Inode Path <br />
-&nbsp;0: 00000002 00000000 00000000 0001 03&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;42 <br />
+<dd>  Num RefCount Protocol Flags Type St Inode Path <br/>
+&nbsp;0: 00000002 00000000 00000000 0001 03&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;42 <br/>
 &nbsp;1: 00000001 00000000 00010000 0001 01&nbsp;<wbr>&nbsp;1948&nbsp;/dev/printer  </dd>
 <dd>  The fields are as follows:  </dd>
 <dl>
@@ -1186,8 +1186,8 @@ description: "proc – process information pseudo-filesystem"
  </dl>
  <dt><i>/proc/net/netfilter/nfnetlink_queue</i> </dt>
 <dd>  This file contains information about netfilter user-space queueing, if used. Each line represents a queue. Queues that have not been subscribed to by user space are not shown.  </dd>
-<dd>  <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;1&nbsp;<wbr>&nbsp;<wbr>&nbsp;4207&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;2 65535&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;1 <br />
+<dd>  <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;1&nbsp;<wbr>&nbsp;<wbr>&nbsp;4207&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;2 65535&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0&nbsp;<wbr>&nbsp;1 <br/>
 &nbsp;<wbr>&nbsp;(1)&nbsp;<wbr>&nbsp;<wbr>&nbsp;(2)&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(3)(4)&nbsp;<wbr>&nbsp;(5)&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(6)&nbsp;<wbr>&nbsp;<wbr>&nbsp;(7)&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(8)  </dd>
 <dd>  The fields in each line are:  </dd>
 <dl>
@@ -1281,7 +1281,7 @@ description: "proc – process information pseudo-filesystem"
 <dd>  The number of swap pages that have been brought in and out.  </dd>
 <dd>  <i>intr 1462898</i> This line shows counts of interrupts serviced since boot time, for each of the possible system interrupts. The first column is the total of all interrupts serviced including unnumbered architecture specific interrupts; each subsequent column is the total for that particular numbered interrupt. Unnumbered interrupts are not shown, only summed into the total.  </dd>
 <dt><i>disk_io: (2,0):(31,30,5764,1,2) (3,0):</i>...</dt>
-<dd>  (major,disk_idx):(noinfo, read_io_ops, blks_read, write_io_ops, blks_written) <br />
+<dd>  (major,disk_idx):(noinfo, read_io_ops, blks_read, write_io_ops, blks_written) <br/>
  (Linux 2.4 only)  </dd>
 <dt><i>ctxt 115315</i></dt>
 <dd>  The number of context switches that the system underwent.  </dd>
@@ -1637,7 +1637,7 @@ description: "proc – process information pseudo-filesystem"
  <dd>  This file is present only if the <code>CONFIG_MAGIC_SYSRQ</code> kernel configuration option is enabled. For further details see the Linux kernel source file <i>Documentation/admin-guide/sysrq.rst</i> (or <i>Documentation/sysrq.txt</i> before Linux 4.10).  </dd>
 <dt><i>/proc/sys/kernel/version</i> </dt>
 <dd>  This file contains a string such as:  </dd>
-<dd>  <br />
+<dd>  <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;#5 Wed Feb 25 21:49:24 MET 1998  </dd>
 <dd>  The &quot;#5&quot; means that this is the fifth kernel built from this source base and the date following it indicates the time the kernel was built.  </dd>
 <dt><i>/proc/sys/kernel/threads-max</i> (since Linux 2.3.11) </dt>
@@ -1673,13 +1673,13 @@ description: "proc – process information pseudo-filesystem"
 <dt><i>/proc/sys/vm/drop_caches</i> (since Linux 2.6.16) </dt>
 <dd>  Writing to this file causes the kernel to drop clean caches, dentries, and inodes from memory, causing that memory to become free. This can be useful for memory management testing and performing reproducible filesystem benchmarks. Because writing to this file causes the benefits of caching to be lost, it can degrade overall system performance.  </dd>
 <dd>  To free pagecache, use:  </dd>
-<dd>  <br />
+<dd>  <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;echo 1&nbsp;&gt;&nbsp;/proc/sys/vm/drop_caches  </dd>
 <dd>  To free dentries and inodes, use:  </dd>
-<dd>  <br />
+<dd>  <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;echo 2&nbsp;&gt;&nbsp;/proc/sys/vm/drop_caches  </dd>
 <dd>  To free pagecache, dentries and inodes, use:  </dd>
-<dd>  <br />
+<dd>  <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;echo 3&nbsp;&gt;&nbsp;/proc/sys/vm/drop_caches  </dd>
 <dd>  Because writing to this file is a nondestructive operation and dirty objects are not freeable, the user should run <code><a href="/docs/linux/man/1-sync/">sync</a></code>(1) first.  </dd>
 <dt><i>/proc/sys/vm/legacy_va_layout</i> (since Linux 2.6.9) </dt>
@@ -1729,15 +1729,15 @@ description: "proc – process information pseudo-filesystem"
 <dl>
 <dd>   </dd>
 <dl>
- <dd>  0: heuristic overcommit (this is the default) <br />
- 1: always overcommit, never check <br />
+ <dd>  0: heuristic overcommit (this is the default) <br/>
+ 1: always overcommit, never check <br/>
  2: always check, never overcommit  </dd></dl>
  </dl>
  <dd>  In mode 0, calls of <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) with <code>MAP_NORESERVE</code> are not checked, and the default check is very weak, leading to the risk of getting a process &quot;OOM-killed&quot;.  </dd>
 <dd>  In mode 1, the kernel pretends there is always enough memory, until memory actually runs out. One use case for this mode is scientific computing applications that employ large sparse arrays. In Linux kernel versions before 2.6.0, any nonzero value implies mode 1.  </dd>
 <dd>  In mode 2 (available since Linux 2.6), the total virtual address space that can be allocated (<i>CommitLimit</i> in <i>/proc/meminfo</i>) is calculated as  </dd>
-<dd>  <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;CommitLimit&nbsp;=&nbsp;(total_RAM &#8211; total_huge_TLB)&nbsp;* <br />
+<dd>  <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;CommitLimit&nbsp;=&nbsp;(total_RAM &#8211; total_huge_TLB)&nbsp;* <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;overcommit_ratio&nbsp;/&nbsp;100&nbsp;+&nbsp;total_swap  </dd>
 <dd>  where:  </dd>
 <dl>
@@ -1754,7 +1754,7 @@ description: "proc – process information pseudo-filesystem"
  </dl>
  <dd>  For example, on a system with 16 GB of physical RAM, 16 GB of swap, no space dedicated to huge pages, and an <i>overcommit_ratio</i> of 50, this formula yields a <i>CommitLimit</i> of 24 GB.  </dd>
 <dd>  Since Linux 3.14, if the value in <i>/proc/sys/vm/overcommit_kbytes</i> is nonzero, then <i>CommitLimit</i> is instead calculated as:  </dd>
-<dd>  <br />
+<dd>  <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;CommitLimit&nbsp;=&nbsp;overcommit_kbytes&nbsp;+&nbsp;total_swap  </dd>
 <dd>  See also the description of <i>/proc/sys/vm/admin_reserve_kbytes</i> and <i>/proc/sys/vm/user_reserve_kbytes</i>.  </dd>
 <dt><i>/proc/sys/vm/overcommit_ratio</i> (since Linux 2.6.0) </dt>
@@ -1794,13 +1794,13 @@ description: "proc – process information pseudo-filesystem"
 <dd>  $ cat /proc/timer_stats  </dd>
 <dd>  While sampling is enabled, each readout from <i>/proc/timer_stats</i> will see newly updated statistics. Once sampling is disabled, the sampled information is kept until a new sample period is started. This allows multiple readouts.  </dd>
 <dd>  Sample output from <i>/proc/timer_stats</i>:  </dd>
-<dd>  $<code> cat /proc/timer_stats</code> Timer Stats Version: v0.3 Sample period: 1.764 s Collection: active <br />
-&nbsp;<wbr>&nbsp;255,&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0 swapper/3&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;hrtimer_start_range_ns&nbsp;(tick_sched_timer) <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;71,&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0 swapper/1&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;hrtimer_start_range_ns&nbsp;(tick_sched_timer) <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;58,&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0 swapper/0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;hrtimer_start_range_ns&nbsp;(tick_sched_timer) <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;4,&nbsp;<wbr>&nbsp;1694 gnome-shell&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;mod_delayed_work_on&nbsp;(delayed_work_timer_fn) <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;17,&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;7 rcu_sched&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;rcu_gp_kthread&nbsp;(process_timeout) ... <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;1,&nbsp;<wbr>&nbsp;4911 kworker/u16:0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;mod_delayed_work_on&nbsp;(delayed_work_timer_fn) <br />
+<dd>  $<code> cat /proc/timer_stats</code> Timer Stats Version: v0.3 Sample period: 1.764 s Collection: active <br/>
+&nbsp;<wbr>&nbsp;255,&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0 swapper/3&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;hrtimer_start_range_ns&nbsp;(tick_sched_timer) <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;71,&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0 swapper/1&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;hrtimer_start_range_ns&nbsp;(tick_sched_timer) <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;58,&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0 swapper/0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;hrtimer_start_range_ns&nbsp;(tick_sched_timer) <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;4,&nbsp;<wbr>&nbsp;1694 gnome-shell&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;mod_delayed_work_on&nbsp;(delayed_work_timer_fn) <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;17,&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;7 rcu_sched&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;rcu_gp_kthread&nbsp;(process_timeout) ... <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;1,&nbsp;<wbr>&nbsp;4911 kworker/u16:0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;mod_delayed_work_on&nbsp;(delayed_work_timer_fn) <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;1D,&nbsp;<wbr>&nbsp;2522 kworker/0:0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;queue_delayed_work_on&nbsp;(delayed_work_timer_fn) 1029 total events, 583.333 events/sec  </dd>
 <dd>  The output columns are:  </dd>
 <dl>

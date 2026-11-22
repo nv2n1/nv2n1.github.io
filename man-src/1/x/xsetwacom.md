@@ -82,10 +82,10 @@ description: "xsetwacom – commandline utility to query and modify wacom driver
 <dt><code>RawSample</code> level</dt>
 <dd> Set the sample window size (a sliding average sampling window) for incoming input tool raw data points. Default: 4, range of 1 to 20.</dd>
 <dt><code>Rotate</code> none|half|cw|ccw</dt>
-<dd> Set the tablet to the given rotation:<br />
-&nbsp;<wbr>&nbsp;none: the tablet is not rotated and uses its natural rotation<br />
-&nbsp;<wbr>&nbsp;half: the tablet is rotated by 180 degrees&nbsp;(upside-down)<br />
-&nbsp;<wbr>&nbsp;cw: the tablet is rotated 90 degrees clockwise<br />
+<dd> Set the tablet to the given rotation:<br/>
+&nbsp;<wbr>&nbsp;none: the tablet is not rotated and uses its natural rotation<br/>
+&nbsp;<wbr>&nbsp;half: the tablet is rotated by 180 degrees&nbsp;(upside-down)<br/>
+&nbsp;<wbr>&nbsp;cw: the tablet is rotated 90 degrees clockwise<br/>
 &nbsp;<wbr>&nbsp;ccw: the tablet is rotated 90 degrees counter-clockwise </dd>
 <p> Rotation is a tablet-wide option: rotation of one tool affects all other tools associated with the same tablet. When the tablet is physically rotated, rotate any tool to the corresponding orientation. Default: none</p>
 <dt><code>Suppress</code> level</dt>

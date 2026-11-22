@@ -9,7 +9,7 @@ description: "mmv_stats_init – create and initialize Memory Mapped Value file"
 
 <p><code>mmv_stats_init</code> &#8211; create and initialize Memory Mapped Value file</p>
 <h2>C Synopsis</h2>
-<p><code> #include &lt;pcp/pmapi.h&gt;<br />
+<p><code> #include &lt;pcp/pmapi.h&gt;<br/>
  #include &lt;pcp/mmv_stats.h&gt; </p>
 <p> void *mmv_stats_init(const char *</code><i>name</i>, int <i>cluster</i>, mmv_stats_flags_t&nbsp;<wbr><i>flags</i>, const mmv_metric_t&nbsp;<wbr>*<i>stats</i>, int&nbsp;<wbr><i>nstats</i>, mmv_indom_t&nbsp;<wbr>*<i>indoms</i>, int&nbsp;<wbr><i>nindoms</i>); </p>
 <p> cc &#8230; -lpcp_mmv -lpcp</p>

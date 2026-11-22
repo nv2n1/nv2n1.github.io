@@ -39,7 +39,7 @@ description: "update-mime – create or update MIME information"
 <dt><code>test=&lt;conditional&gt;</code></dt>
 <dd>The &quot;test&quot; option may be used to test some external condition (e.g., the machine architecture, or the window system in use) to determine whether or not the mailcap line applies. It specifies a program to be run to test some condition. If the test fails, a subsequent mailcap entry will be sought. Multiple test options are not permitted &#8212; since a test can call a program, it can already be arbitrarily complex. </dd>
 <p> <code>Note:</code> When testing for X by looking at the <i>DISPLAY</i> environment variable, please use one of: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;test=test -z&nbsp;&quot;$DISPLAY&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(no X)<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;test=test -z&nbsp;&quot;$DISPLAY&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(no X)<br/>
 &nbsp;<wbr>&nbsp;or&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;test=test -n&nbsp;&quot;$DISPLAY&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(have X) </p>
 <p> Many programs recognize these strings and optimize for them.</p>
 <dt><code>needsterminal</code></dt>

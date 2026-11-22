@@ -23,7 +23,7 @@ description: "ndb_print_schema_file – print NDB schema file contents"
 ndb_print_schema_file <i>file_name</i>
 </pre>
 </dd></dl>
-<p> <i>file_name</i> is the name of a cluster schema file. For more information about cluster schema files, see m[blue]<code>Cluster Data Node FileSystemDir Files</code>m[]<font SIZE="-2">[1]</font>. </p>
+<p> <i>file_name</i> is the name of a cluster schema file. For more information about cluster schema files, see m[blue]<code>Cluster Data Node FileSystemDir Files</code>m[][1]. </p>
 <p> Like <code>ndb_print_backup_file</code> and <code>ndb_print_sys_file</code> (and unlike most of the other NDB utilities that are intended to be run on a management server host or to connect to a management server) <code>ndb_schema_backup_file</code> must be run on a cluster data node, since it accesses the data node file system directly. Because it does not make use of the management server, this utility can be used when the management server is not running, and even when the cluster has been completely shut down. </p>
 <p> <code>Additional Options</code>: None.</p>
 <h2>COPYRIGHT</h2>

@@ -9,8 +9,8 @@ description: "md – Multiple Device driver aka Linux Software RAID"
 
 <p>md &#8211; Multiple Device driver aka Linux Software RAID</p>
 <h2>Synopsis</h2>
-<p><code>/dev/md</code><i>n</i><br />
- <code>/dev/md/</code><i>n</i><br />
+<p><code>/dev/md</code><i>n</i><br/>
+ <code>/dev/md/</code><i>n</i><br/>
  <code>/dev/md/</code>name</p>
 <h2>Description</h2>
 <p>The <code>md</code> driver provides virtual devices that are created from one or more independent underlying devices. This array of devices often contains redundancy and the devices are often disk drives, hence the acronym RAID which stands for a Redundant Array of Independent Disks. <code>md</code> supports RAID levels 1 (mirroring), 4 (striped array with parity device), 5 (striped array with distributed parity information), 6 (striped array with distributed dual redundancy information), and 10 (striped and mirrored). If some number of underlying devices fails while using one of these levels, the array will continue to function; this number is one for RAID levels 4 and 5, two for RAID level 6, and all but one (N-1) for RAID level 1, and dependent on configuration for level 10. <code>md</code> also supports a number of pseudo RAID (non-redundant) configurations including RAID0 (striped array), LINEAR (catenated array), MULTIPATH (a set of different interfaces to the same device), and FAULTY (a layer over a single device into which errors can be injected).</p>
@@ -49,14 +49,14 @@ description: "md – Multiple Device driver aka Linux Software RAID"
 <h3>Raid6</h3>
 <p>RAID6 is similar to RAID5, but can handle the loss of any <i>two</i> devices without data loss. Accordingly, it requires N+2 drives to store N drives worth of data. The performance for RAID6 is slightly lower but comparable to RAID5 in normal mode and single disk failure mode. It is very slow in dual disk failure mode, however.</p>
 <h3>Raid10</h3>
-<p>RAID10 provides a combination of RAID1 and RAID0, and is sometimes known as RAID1+0. Every datablock is duplicated some number of times, and the resulting collection of datablocks are distributed over multiple drives. When configuring a RAID10 array, it is necessary to specify the number of replicas of each data block that are required (this will usually be 2) and whether their layout should be &quot;near&quot;, &quot;far&quot; or &quot;offset&quot; (with &quot;offset&quot; being available since Linux 2.6.18). <code>About the RAID10 Layout Examples:</code><br />
- The examples below visualise the chunk distribution on the underlying devices for the respective layout. For simplicity it is assumed that the size of the chunks equals the size of the blocks of the underlying devices as well as those of the RAID10 device exported by the kernel (for example <code>/dev/md/</code>name).<br />
- Therefore the chunks&nbsp;/&nbsp;chunk numbers map directly to the blocks&nbsp;/block addresses of the exported RAID10 device. Decimal numbers (0, 1, 2, &#8230;) are the chunks of the RAID10 and due to the above assumption also the blocks and block addresses of the exported RAID10 device.<br />
- Repeated numbers mean copies of a chunk&nbsp;/&nbsp;block (obviously on different underlying devices).<br />
+<p>RAID10 provides a combination of RAID1 and RAID0, and is sometimes known as RAID1+0. Every datablock is duplicated some number of times, and the resulting collection of datablocks are distributed over multiple drives. When configuring a RAID10 array, it is necessary to specify the number of replicas of each data block that are required (this will usually be 2) and whether their layout should be &quot;near&quot;, &quot;far&quot; or &quot;offset&quot; (with &quot;offset&quot; being available since Linux 2.6.18). <code>About the RAID10 Layout Examples:</code><br/>
+ The examples below visualise the chunk distribution on the underlying devices for the respective layout. For simplicity it is assumed that the size of the chunks equals the size of the blocks of the underlying devices as well as those of the RAID10 device exported by the kernel (for example <code>/dev/md/</code>name).<br/>
+ Therefore the chunks&nbsp;/&nbsp;chunk numbers map directly to the blocks&nbsp;/block addresses of the exported RAID10 device. Decimal numbers (0, 1, 2, &#8230;) are the chunks of the RAID10 and due to the above assumption also the blocks and block addresses of the exported RAID10 device.<br/>
+ Repeated numbers mean copies of a chunk&nbsp;/&nbsp;block (obviously on different underlying devices).<br/>
  Hexadecimal numbers (0x00, 0x01, 0x02, &#8230;) are the block addresses of the underlying devices.</p>
 <dl>
 <dt><code> &quot;near&quot; Layout</code></dt>
-<dd>When &quot;near&quot; replicas are chosen, the multiple copies of a given chunk are laid out consecutively (&quot;as close to each other as possible&quot;) across the stripes of the array. With an even number of devices, they will likely (unless some misalignment is present) lay at the very same offset on the different devices.<br />
+<dd>When &quot;near&quot; replicas are chosen, the multiple copies of a given chunk are laid out consecutively (&quot;as close to each other as possible&quot;) across the stripes of the array. With an even number of devices, they will likely (unless some misalignment is present) lay at the very same offset on the different devices.<br/>
  This is as the &quot;classic&quot; RAID1+0; that is two groups of mirrored devices (in the example below the groups Device&nbsp;#1&nbsp;/&nbsp;#2 and Device&nbsp;#3&nbsp;/&nbsp;#4 are each a RAID1) both in turn forming a striped RAID0. <code>Example with 2 copies per chunk and an even number&nbsp;(4) of devices:</code> </dd>
 <table>
 <tr VALIGN=top>
@@ -279,12 +279,12 @@ description: "md – Multiple Device driver aka Linux Software RAID"
 </tr>
 </table>
 <dt><code> &quot;far&quot; Layout</code></dt>
-<dd>When &quot;far&quot; replicas are chosen, the multiple copies of a given chunk are laid out quite distant (&quot;as far as reasonably possible&quot;) from each other. First a complete sequence of all data blocks (that is all the data one sees on the exported RAID10 block device) is striped over the devices. Then another (though &quot;shifted&quot;) complete sequence of all data blocks; and so on (in the case of more than 2 copies per chunk). The &quot;shift&quot; needed to prevent placing copies of the same chunks on the same devices is actually a cyclic permutation with offset 1 of each of the stripes within a complete sequence of chunks.<br />
- The offset 1 is relative to the previous complete sequence of chunks, so in case of more than 2 copies per chunk one gets the following offsets:<br />
- 1. complete sequence of chunks: offset&nbsp;=&nbsp;<wbr>&nbsp;0<br />
- 2. complete sequence of chunks: offset&nbsp;=&nbsp;<wbr>&nbsp;1<br />
+<dd>When &quot;far&quot; replicas are chosen, the multiple copies of a given chunk are laid out quite distant (&quot;as far as reasonably possible&quot;) from each other. First a complete sequence of all data blocks (that is all the data one sees on the exported RAID10 block device) is striped over the devices. Then another (though &quot;shifted&quot;) complete sequence of all data blocks; and so on (in the case of more than 2 copies per chunk). The &quot;shift&quot; needed to prevent placing copies of the same chunks on the same devices is actually a cyclic permutation with offset 1 of each of the stripes within a complete sequence of chunks.<br/>
+ The offset 1 is relative to the previous complete sequence of chunks, so in case of more than 2 copies per chunk one gets the following offsets:<br/>
+ 1. complete sequence of chunks: offset&nbsp;=&nbsp;<wbr>&nbsp;0<br/>
+ 2. complete sequence of chunks: offset&nbsp;=&nbsp;<wbr>&nbsp;1<br/>
  3. complete sequence of chunks: offset&nbsp;=&nbsp;<wbr>&nbsp;2 </dd>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;:<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;:<br/>
  n. complete sequence of chunks: offset&nbsp;=&nbsp;n-1 <code>Example with 2 copies per chunk and an even number&nbsp;(4) of devices:</code> </p>
 <table>
 <tr VALIGN=top>
@@ -697,16 +697,16 @@ description: "md – Multiple Device driver aka Linux Software RAID"
 <td></td>
 </tr>
 </table>
-<p> With [#]&nbsp;being the complete sequence of chunks and [#]~&nbsp;the cyclic permutation with offset 1 thereof (in the case of more than 2 copies per chunk there would be ([#]~)~,&nbsp;(([#]~)~)~, &#8230;). The advantage of this layout is that MD can easily spread sequential reads over the devices, making them similar to RAID0 in terms of speed.<br />
+<p> With [#]&nbsp;being the complete sequence of chunks and [#]~&nbsp;the cyclic permutation with offset 1 thereof (in the case of more than 2 copies per chunk there would be ([#]~)~,&nbsp;(([#]~)~)~, &#8230;). The advantage of this layout is that MD can easily spread sequential reads over the devices, making them similar to RAID0 in terms of speed.<br/>
  The cost is more seeking for writes, making them substantially slower.</p>
 <dt><code>&quot;offset&quot; Layout</code></dt>
-<dd>When &quot;offset&quot; replicas are chosen, all the copies of a given chunk are striped consecutively (&quot;offset by the stripe length after each other&quot;) over the devices. Explained in detail, &lt;number of devices&gt; consecutive chunks are striped over the devices, immediately followed by a &quot;shifted&quot; copy of these chunks (and by further such &quot;shifted&quot; copies in the case of more than 2 copies per chunk).<br />
- This pattern repeats for all further consecutive chunks of the exported RAID10 device (in other words: all further data blocks). The &quot;shift&quot; needed to prevent placing copies of the same chunks on the same devices is actually a cyclic permutation with offset 1 of each of the striped copies of &lt;number of devices&gt; consecutive chunks.<br />
- The offset 1 is relative to the previous striped copy of &lt;number of devices&gt; consecutive chunks, so in case of more than 2 copies per chunk one gets the following offsets:<br />
- 1.&nbsp;&lt;number of devices&gt; consecutive chunks: offset&nbsp;=&nbsp;<wbr>&nbsp;0<br />
- 2.&nbsp;&lt;number of devices&gt; consecutive chunks: offset&nbsp;=&nbsp;<wbr>&nbsp;1<br />
+<dd>When &quot;offset&quot; replicas are chosen, all the copies of a given chunk are striped consecutively (&quot;offset by the stripe length after each other&quot;) over the devices. Explained in detail, &lt;number of devices&gt; consecutive chunks are striped over the devices, immediately followed by a &quot;shifted&quot; copy of these chunks (and by further such &quot;shifted&quot; copies in the case of more than 2 copies per chunk).<br/>
+ This pattern repeats for all further consecutive chunks of the exported RAID10 device (in other words: all further data blocks). The &quot;shift&quot; needed to prevent placing copies of the same chunks on the same devices is actually a cyclic permutation with offset 1 of each of the striped copies of &lt;number of devices&gt; consecutive chunks.<br/>
+ The offset 1 is relative to the previous striped copy of &lt;number of devices&gt; consecutive chunks, so in case of more than 2 copies per chunk one gets the following offsets:<br/>
+ 1.&nbsp;&lt;number of devices&gt; consecutive chunks: offset&nbsp;=&nbsp;<wbr>&nbsp;0<br/>
+ 2.&nbsp;&lt;number of devices&gt; consecutive chunks: offset&nbsp;=&nbsp;<wbr>&nbsp;1<br/>
  3.&nbsp;&lt;number of devices&gt; consecutive chunks: offset&nbsp;=&nbsp;<wbr>&nbsp;2 </dd>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;:<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;:<br/>
  n.&nbsp;&lt;number of devices&gt; consecutive chunks: offset&nbsp;=&nbsp;n-1 <code>Example with 2 copies per chunk and an even number&nbsp;(4) of devices:</code> </p>
 <table>
 <tr VALIGN=top>

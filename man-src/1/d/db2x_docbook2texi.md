@@ -194,10 +194,10 @@ reference.
 <dd> The rest of the Unicode text is converted to some other character set (encoding). For example, a French document with accented characters (such as &eacute;) might be converted to ISO Latin 1. </dd>
 <p> This step is applied after <code>utf8trans</code> character mapping, using the <code><a href="/docs/linux/man/1-iconv/">iconv</a></code>(1) encoding conversion tool. Both <code><a href="/docs/linux/man/1-db2x_manxml/">db2x_manxml</a></code>(1) and <code><a href="/docs/linux/man/1-db2x_texixml/">db2x_texixml</a></code>(1) can call <code><a href="/docs/linux/man/1-iconv/">iconv</a></code>(1) automatically when producing their output.</dl>
 <h2>FILES</h2>
-<p> <i>/usr/local/share/docbook2X/xslt/texi/docbook.xsl</i><br />
- <i>/usr/local/share/docbook2X/xslt/backend/db2x_texixml.xsl</i><br />
- <i>/usr/local/share/docbook2X/xslt/catalog.xml</i><br />
- <i>/usr/local/share/docbook2X/charmaps/texi.charmap.xml</i><br />
+<p> <i>/usr/local/share/docbook2X/xslt/texi/docbook.xsl</i><br/>
+ <i>/usr/local/share/docbook2X/xslt/backend/db2x_texixml.xsl</i><br/>
+ <i>/usr/local/share/docbook2X/xslt/catalog.xml</i><br/>
+ <i>/usr/local/share/docbook2X/charmaps/texi.charmap.xml</i><br/>
  <i>/usr/local/share/docbook2X/charmaps/texi.charmap.xml</i> </p>
 <p> The above files are distributed and installed by the docbook2X package.</p>
 <h2>NOTES</h2>

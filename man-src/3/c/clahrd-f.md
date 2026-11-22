@@ -10,7 +10,7 @@ description: "clahrd.f –"
 <p>clahrd.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>clahrd</code> (N, K, NB, A, LDA, TAU, T, LDT, Y, LDY)<br />
+<p>subroutine <code>clahrd</code> (N, K, NB, A, LDA, TAU, T, LDT, Y, LDY)<br/>
  <i></i><code>CLAHRD</code> reduces the first nb columns of a general rectangular matrix A so that elements below the k-th subdiagonal are zero, and returns auxiliary matrices which are needed to apply the transformation to the unreduced part of A.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine clahrd (integerN, integerK, integerNB, complex, dimension( lda, * )A, integerLDA, complex, dimension( nb )TAU, complex, dimension( ldt, nb )T, integerLDT, complex, dimension( ldy, nb )Y, integerLDY)</h3>

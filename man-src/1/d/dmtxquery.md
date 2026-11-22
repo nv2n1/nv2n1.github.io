@@ -21,11 +21,11 @@ description: "dmtxquery – extract information from dmtxread output"
 <p> message.<code>N</code>.barcode.count count of all barcodes in Nth message </p>
 <p> message.<code>N</code>.barcode.<code>M</code> Mth barcode of Nth message, print all </p>
 <p> message.<code>N</code>.barcode.<code>M</code>.<code>BPROP</code> Mth barcode of Nth message, print BPROP </p>
-<p> <code>BPROP</code> barcode properties:<br />
-message&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>message_number&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>message_position<br />
-matrix_size&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>data_codewords&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>error_codewords<br />
+<p> <code>BPROP</code> barcode properties:<br/>
+message&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>message_number&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>message_position<br/>
+matrix_size&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>data_codewords&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>error_codewords<br/>
 rotation&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>data_regions_count&nbsp;<wbr>&nbsp;<wbr>interleaved_blocks </p>
-<p> <code>MPROP</code> message properties:<br />
+<p> <code>MPROP</code> message properties:<br/>
 message&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>data_codeword&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>error_codeword</p>
 <h2>OPTIONS</h2>
 <dl>

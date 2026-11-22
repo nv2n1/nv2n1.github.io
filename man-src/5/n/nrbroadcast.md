@@ -29,7 +29,7 @@ description: "nrbroadcast – NET/ROM routing broadcast configuration file."
 <dd>whether the routes to all of my nodes in my routing table, or just the nodes resident on my machine are to be broadcast.</dd></dl>
 </dl>
 <h2>Files</h2>
-<p>/etc/ax25/nrbroadcast<br />
+<p>/etc/ax25/nrbroadcast<br/>
  /etc/ax25/axports</p>
 <h2>See Also</h2>
 <p><code>call</code>(1), <code><a href="/docs/linux/man/4-netrom/">netrom</a></code>(4), <code><a href="/docs/linux/man/5-axports/">axports</a></code>(5), <code><a href="/docs/linux/man/8-netromd/">netromd</a></code>(8), <code><a href="/docs/linux/man/8-nrparms/">nrparms</a></code>(8). </p>

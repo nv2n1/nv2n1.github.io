@@ -15,17 +15,17 @@ description: "sc::BendSimpleCo –"
 <p> Inherits <code>sc::SimpleCo</code>.</p>
 <h3>Public Member Functions</h3>
 <p><code>BendSimpleCo</code> (const <code>BendSimpleCo</code> &amp;) </p>
-<p> <code>BendSimpleCo</code> (const char *, int, int, int)<br />
- <i>This constructor takes a string containing a label, and three integers a, b, and c which give the indices of the atoms involved in the angle abc. </i><br />
- <code>BendSimpleCo</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br />
- <i>The </i><code>KeyVal</code> constructor.<br />
- const char * <code>ctype</code> () const<br />
- <i>Always returns the string &#8216;BEND&#8217;. </i><br />
- double <code>radians</code> () const<br />
- <i>Returns the value of the angle abc in radians. </i><br />
- double <code>degrees</code> () const<br />
- <i>Returns the value of the angle abc in degrees. </i><br />
- double <code>preferred_value</code> () const<br />
+<p> <code>BendSimpleCo</code> (const char *, int, int, int)<br/>
+ <i>This constructor takes a string containing a label, and three integers a, b, and c which give the indices of the atoms involved in the angle abc. </i><br/>
+ <code>BendSimpleCo</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br/>
+ <i>The </i><code>KeyVal</code> constructor.<br/>
+ const char * <code>ctype</code> () const<br/>
+ <i>Always returns the string &#8216;BEND&#8217;. </i><br/>
+ double <code>radians</code> () const<br/>
+ <i>Returns the value of the angle abc in radians. </i><br/>
+ double <code>degrees</code> () const<br/>
+ <i>Returns the value of the angle abc in degrees. </i><br/>
+ double <code>preferred_value</code> () const<br/>
  <i>Returns the value of the angle abc in degrees. </i></p>
 <h2>Detailed Description</h2>
 <p>The <code>BendSimpleCo</code> class describes an bend internal coordinate of a molecule. </p>

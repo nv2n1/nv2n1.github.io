@@ -10,7 +10,7 @@ description: "sgeequ.f –"
 <p>sgeequ.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>sgeequ</code> (M, N, A, LDA, R, C, ROWCND, COLCND, AMAX, INFO)<br />
+<p>subroutine <code>sgeequ</code> (M, N, A, LDA, R, C, ROWCND, COLCND, AMAX, INFO)<br/>
  <i></i><code>SGEEQU</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sgeequ (integerM, integerN, real, dimension( lda, * )A, integerLDA, real, dimension( * )R, real, dimension( * )C, realROWCND, realCOLCND, realAMAX, integerINFO)</h3>

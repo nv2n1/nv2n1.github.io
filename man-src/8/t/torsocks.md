@@ -9,7 +9,7 @@ description: "torsocks — Library for intercepting outgoing network connections
 
 <p>torsocks &#8212; Library for intercepting outgoing network connections and redirecting them through the Tor SOCKS proxy.</p>
 <h2>Description</h2>
-<p>Torsocks library overloads the libc symbols use for Internet communication such as <code><a href="/docs/linux/man/2-connect/">connect</a>(2)</code> system call. Using that technique, the library sends everything through the Tor network including DNS resolution done by the application. For DNS, <code><a href="/docs/linux/man/3-gethostbyname/">gethostbyname</a>(3)</code> family functions are rerouted through Tor. Please note that the ISC res_* API is currently not supported. Here is an example on how to use torsocks library with <code><a href="/docs/linux/man/1-ssh/">ssh</a>(1)</code>:<br />
+<p>Torsocks library overloads the libc symbols use for Internet communication such as <code><a href="/docs/linux/man/2-connect/">connect</a>(2)</code> system call. Using that technique, the library sends everything through the Tor network including DNS resolution done by the application. For DNS, <code><a href="/docs/linux/man/3-gethostbyname/">gethostbyname</a>(3)</code> family functions are rerouted through Tor. Please note that the ISC res_* API is currently not supported. Here is an example on how to use torsocks library with <code><a href="/docs/linux/man/1-ssh/">ssh</a>(1)</code>:<br/>
  $ LD_PRELOAD=/path/to/libtorsocks.so ssh -l kalexander -p 1234 prism.nsa.gov [&#8230;] </p>
 <h2>Shell Usage</h2>
 <p>Set LD_PRELOAD to load the library then use applications as normal. The syntax to force preload of the library for different shells is specified below: </p>

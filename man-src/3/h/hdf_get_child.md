@@ -17,7 +17,7 @@ description: "hdf_get_child – return the first child of the named node"
 HDF *hdf_get_child(HDF *hdf, const char *name);
 </code></pre>
 <h2>ARGUMENTS</h2>
-<p> hdf -&gt; the dataset node to start from<br />
+<p> hdf -&gt; the dataset node to start from<br/>
  name -&gt; the name to walk to </p>
 <h2>DESCRIPTION</h2>
 <p> hdf_get_child will walk the dataset starting at hdf to name, and return the first child of that node </p>

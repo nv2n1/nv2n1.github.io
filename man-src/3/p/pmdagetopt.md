@@ -9,8 +9,8 @@ description: "pmdaGetOpt, pmdaGetOptions – get options from arguments, parsing
 
 <p><code>pmdaGetOpt</code>, <code>pmdaGetOptions</code> &#8211; get options from arguments, parsing generic PMDA options</p>
 <h2>C Synopsis</h2>
-<p><code> #include &lt;pcp/pmapi.h&gt;<br />
- #include &lt;pcp/impl.h&gt;<br />
+<p><code> #include &lt;pcp/pmapi.h&gt;<br/>
+ #include &lt;pcp/impl.h&gt;<br/>
  #include &lt;pcp/pmda.h&gt; </p>
 <p> int pmdaGetOptions(int </code><i>argc</i>, char *const *<i>argv</i>, pmdaOptions *<i>opts</i>, pmdaInterface&nbsp;<wbr>*<i>dispatch</i>); </p>
 <p> int pmdaGetOpt(int <i>argc</i>, char *const *<i>argv</i>, const char&nbsp;<wbr>*<i>optstring</i>, pmdaInterface&nbsp;<wbr>*<i>dispatch</i>, int&nbsp;<wbr>*<i>err</i>); </p>

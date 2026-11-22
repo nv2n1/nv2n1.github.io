@@ -14,13 +14,13 @@ description: "QwtAbstractScaleDraw –"
 <p> Inherited by <code>QwtRoundScaleDraw</code>, and <code>QwtScaleDraw</code>.</p>
 <h3>Public Types</h3>
 <p>enum <code>ScaleComponent</code> { <code>Backbone</code> = 0x01, <code>Ticks</code> = 0x02, <code>Labels</code> = 0x04 } </p>
-<p> typedef QFlags&lt; <code>ScaleComponent</code> &gt; <code>ScaleComponents</code><br />
+<p> typedef QFlags&lt; <code>ScaleComponent</code> &gt; <code>ScaleComponents</code><br/>
  <i>Scale components. </i></p>
 <h3>Public Member Functions</h3>
-<p><code>QwtAbstractScaleDraw</code> ()<br />
- <i>Constructor. </i><br />
- virtual <code>~QwtAbstractScaleDraw</code> ()<br />
- <i>Destructor. </i><br />
+<p><code>QwtAbstractScaleDraw</code> ()<br/>
+ <i>Constructor. </i><br/>
+ virtual <code>~QwtAbstractScaleDraw</code> ()<br/>
+ <i>Destructor. </i><br/>
  void <code>setScaleDiv</code> (const <code>QwtScaleDiv</code> &amp;s) </p>
 <p> const <code>QwtScaleDiv</code> &amp; <code>scaleDiv</code> () const </p>
 <p> void <code>setTransformation</code> (<code>QwtTransform</code> *) </p>
@@ -31,27 +31,27 @@ description: "QwtAbstractScaleDraw –"
 <p> void <code>setTickLength</code> (<code>QwtScaleDiv::TickType</code>, double length) </p>
 <p> double <code>tickLength</code> (<code>QwtScaleDiv::TickType</code>) const </p>
 <p> double <code>maxTickLength</code> () const </p>
-<p> void <code>setSpacing</code> (double margin)<br />
- <i>Set the spacing between tick and labels. </i><br />
- double <code>spacing</code> () const<br />
- <i>Get the spacing. </i><br />
- void <code>setPenWidth</code> (int width)<br />
- <i>Specify the width of the scale pen. </i><br />
+<p> void <code>setSpacing</code> (double margin)<br/>
+ <i>Set the spacing between tick and labels. </i><br/>
+ double <code>spacing</code> () const<br/>
+ <i>Get the spacing. </i><br/>
+ void <code>setPenWidth</code> (int width)<br/>
+ <i>Specify the width of the scale pen. </i><br/>
  int <code>penWidth</code> () const </p>
-<p> virtual void <code>draw</code> (QPainter *, const QPalette &amp;) const<br />
- <i>Draw the scale. </i><br />
- virtual <code>QwtText</code> <code>label</code> (double) const<br />
- <i>Convert a value into its representing label. </i><br />
+<p> virtual void <code>draw</code> (QPainter *, const QPalette &amp;) const<br/>
+ <i>Draw the scale. </i><br/>
+ virtual <code>QwtText</code> <code>label</code> (double) const<br/>
+ <i>Convert a value into its representing label. </i><br/>
  virtual double <code>extent</code> (const QFont &amp;font) const =0 </p>
-<p> void <code>setMinimumExtent</code> (double)<br />
- <i>Set a minimum for the extent. </i><br />
+<p> void <code>setMinimumExtent</code> (double)<br/>
+ <i>Set a minimum for the extent. </i><br/>
  double <code>minimumExtent</code> () const </p>
 <h3>Protected Member Functions</h3>
 <p>virtual void <code>drawTick</code> (QPainter *painter, double value, double len) const =0 </p>
 <p> virtual void <code>drawBackbone</code> (QPainter *painter) const =0 </p>
 <p> virtual void <code>drawLabel</code> (QPainter *painter, double value) const =0 </p>
 <p> void <code>invalidateCache</code> () </p>
-<p> const <code>QwtText</code> &amp; <code>tickLabel</code> (const QFont &amp;, double value) const<br />
+<p> const <code>QwtText</code> &amp; <code>tickLabel</code> (const QFont &amp;, double value) const<br/>
  <i>Convert a value into its representing label and cache it. </i></p>
 <h2>Detailed Description</h2>
 <p>A abstract base class for drawing scales. </p>
@@ -79,7 +79,7 @@ description: "QwtAbstractScaleDraw –"
 <p>Draw the scale. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> The painter<br />
+<dd><i>painter</i> The painter<br/>
  <i>palette</i> Palette, text color is used for the labels, foreground color for ticks and backbone</dd></dl>
 <h3>virtual void QwtAbstractScaleDraw::drawBackbone (QPainter *painter) const [protected], [pure virtual]</h3>
 <p>Draws the baseline of the scale </p>
@@ -94,7 +94,7 @@ description: "QwtAbstractScaleDraw –"
 <p>Draws the label for a major scale tick </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
+<dd><i>painter</i> Painter<br/>
  <i>value</i> Value</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -104,8 +104,8 @@ description: "QwtAbstractScaleDraw –"
 <p>Draw a tick </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>value</i> Value of the tick<br />
+<dd><i>painter</i> Painter<br/>
+ <i>value</i> Value of the tick<br/>
  <i>len</i> Length of the tick</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -115,7 +115,7 @@ description: "QwtAbstractScaleDraw –"
 <p>En/Disable a component of the scale </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>component</i> Scale component<br />
+<dd><i>component</i> Scale component<br/>
  <i>enable</i> On/Off</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -224,7 +224,7 @@ description: "QwtAbstractScaleDraw –"
 <p>Set the length of the ticks </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>tickType</i> Tick type<br />
+<dd><i>tickType</i> Tick type<br/>
  <i>length</i> New length</dd></dl>
 <p> <code>Warning:</code></p>
 <dl COMPACT>
@@ -246,7 +246,7 @@ description: "QwtAbstractScaleDraw –"
 <p>Convert a value into its representing label and cache it. The conversion between value and label is called very often in the layout and painting code. Unfortunately the calculation of the label sizes might be slow (really slow for rich text in Qt4), so it&#8217;s necessary to cache the labels. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>font</i> Font<br />
+<dd><i>font</i> Font<br/>
  <i>value</i> Value</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

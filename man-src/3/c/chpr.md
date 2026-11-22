@@ -11,7 +11,7 @@ description: "chpr.f –"
 <p> chpr.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>chpr</code> (UPLO, N, ALPHA, X, INCX, AP)<br />
+<p> subroutine <code>chpr</code> (UPLO, N, ALPHA, X, INCX, AP)<br/>
  <i></i><code>CHPR</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine chpr (characterUPLO, integerN, realALPHA, complex, dimension(*)X, integerINCX, complex, dimension(*)AP)</h3>

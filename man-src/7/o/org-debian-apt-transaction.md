@@ -19,7 +19,7 @@ description: "org.debian.apt.transaction – the main interface of an aptdaemon 
 <dd>Continue a paused transaction which is waiting for the given <i>medium</i>. </dd>
 <p> If a media change is required to e.g. install packages from a CD/DVD the transaction will be paused and the RequiredMedium property changed to an array of the <i>medium label</i> and its <i>mount point</i>. Furthermore the MediumRequired signal will be emitted.</dl>
 <dt><code>ResolveConfigFileConflict</code></dt>
-<dd><code>ResolveConfigFilePrompt (in &#8216;s&#8217; </code><i>config</i><code>,</code><br />
+<dd><code>ResolveConfigFilePrompt (in &#8216;s&#8217; </code><i>config</i><code>,</code><br/>
  <code> in &#8216;s&#8217; </code><i>answer</i><code>)</code></dd>
 <dl>
 <dd>Continue a paused transaction which is waiting for an answer to handle a configuration file conflict. <i>Config</i> is the path to the current configuration file and <i>answer</i> can be either &quot;replace&quot; or &quot;keep&quot;. </dd>
@@ -44,17 +44,17 @@ description: "org.debian.apt.transaction – the main interface of an aptdaemon 
 <dl>
 <dd>The signal will be emitted when the transaction has been processed. The <i>exit_state</i> indicates if the transaction was completed, cancelled or failed.</dd></dl>
 <dt><code>MediumRequired</code></dt>
-<dd><code>MediumRequired (&#8216;s&#8217; </code><i>label</i><code>,</code><br />
+<dd><code>MediumRequired (&#8216;s&#8217; </code><i>label</i><code>,</code><br/>
  <code> &#8216;s&#8217; </code><i>mount_point</i><code>)</code></dd>
 <dl>
 <dd>The signal will be emitted if the transaction has been paused and waits for a media change to install packages.</dd></dl>
 <dt><code>ConfigFileConflict</code></dt>
-<dd><code>ConfigFileConflict (&#8216;s&#8217; </code><i>old</i><code>,</code><br />
+<dd><code>ConfigFileConflict (&#8216;s&#8217; </code><i>old</i><code>,</code><br/>
  <code> &#8216;s&#8217; </code><i>new</i><code>)</code></dd>
 <dl>
 <dd>The signal will be emitted if the transaction has been paused because a <i>new</i> configuration file is shipped in a package which would override changes by the user in the <i>old</i> configuration file.</dd></dl>
 <dt><code>PropertyChanged</code></dt>
-<dd><code>PropertyChanged (&#8216;s&#8217;</code><i> property_name ,</i><br />
+<dd><code>PropertyChanged (&#8216;s&#8217;</code><i> property_name ,</i><br/>
  <code> &#8216;v&#8217; </code><i>value</i><code>)</code></dd>
 <dl>
 <dd>The signal will be emitted if one of the following properties has changed.</dd></dl>

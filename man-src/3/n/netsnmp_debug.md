@@ -21,11 +21,11 @@ initializes the stash_cache helper which then registers a stash_cache handler as
 void netsnmp_init_helpers (void)
 call the initialization sequence for all handlers with init_ routines.
 Functions</code></pre>
-<p> <code>netsnmp_mib_handler</code> * <code>netsnmp_get_debug_handler</code> (void)<br />
- <i>returns a debug handler that can be injected into a given handler chain. </i><br />
+<p> <code>netsnmp_mib_handler</code> * <code>netsnmp_get_debug_handler</code> (void)<br/>
+ <i>returns a debug handler that can be injected into a given handler chain. </i><br/>
  void <code>debug_print_requests</code> (<code>netsnmp_request_info</code> *requests) </p>
 <p> int <code>netsnmp_debug_helper</code> (<code>netsnmp_mib_handler</code> *handler, <code>netsnmp_handler_registration</code> *reginfo, <code>netsnmp_agent_request_info</code> *reqinfo, <code>netsnmp_request_info</code> *requests) </p>
-<p> void <code>netsnmp_init_debug_helper</code> (void)<br />
+<p> void <code>netsnmp_init_debug_helper</code> (void)<br/>
  <i>initializes the debug helper which then registers a debug handler as a run-time injectable handler for configuration file use. </i></p>
 <h2>Detailed Description</h2>
 <p>Print out debugging information about the handler chain being called. </p>

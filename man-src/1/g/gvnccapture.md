@@ -11,11 +11,11 @@ gvnccapture - VNC screenshot capture
 
 <h2>SYNOPSIS</h2>
 
- gvnccapture [<font SIZE="-1">OPTION</font>]... [<font SIZE="-1">HOST</font>][:DISPLAY] <font SIZE="-1">FILENAME</font>
+ gvnccapture [OPTION]... [HOST][:DISPLAY] FILENAME
 
 <h2>DESCRIPTION</h2>
 
- Capture a screenshot of the <font SIZE="-1">VNC</font> desktop at <font SIZE="-1">HOST:DISPLAY</font> saving to the image file <font SIZE="-1">FILENAME.</font> If <font SIZE="-1">HOST</font> is omitted it defaults to ``localhost'', if :DISPLAY is omitted, it defaults to ``:1''. <font SIZE="-1">FILENAME</font> must end in a known image format extension (eg ``.png'', ``.jpeg''). Supported options are
+ Capture a screenshot of the VNC desktop at HOST:DISPLAY saving to the image file FILENAME. If HOST is omitted it defaults to ``localhost'', if :DISPLAY is omitted, it defaults to ``:1''. FILENAME must end in a known image format extension (eg ``.png'', ``.jpeg''). Supported options are
 <dl>
 <dt>--help, -?
 </dt><dd> Display command line help information
@@ -45,9 +45,9 @@ gvnccapture - VNC screenshot capture
 
  Copyright (C) 2010 Daniel P. Berrange &lt;dan [at] berrange.com&gt;. 
 
- License LGPLv2+: <font SIZE="-1">GNU</font> Lesser <font SIZE="-1">GPL</font> version 2 or later &lt;<a rel="nofollow" HREF="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt;. 
+ License LGPLv2+: GNU Lesser GPL version 2 or later &lt;<a rel="nofollow" HREF="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt;. 
 
- This is free software: you are free to change and redistribute it. There is <font SIZE="-1">NO WARRANTY,</font> to the extent permitted by law.
+ This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.
 
 <h2>SEE ALSO</h2>
 

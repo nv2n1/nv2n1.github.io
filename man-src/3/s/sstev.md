@@ -11,7 +11,7 @@ description: "sstev.f –"
 <p> sstev.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>sstev</code> (JOBZ, N, D, E, Z, LDZ, WORK, INFO)<br />
+<p> subroutine <code>sstev</code> (JOBZ, N, D, E, Z, LDZ, WORK, INFO)<br/>
  <i></i><code> SSTEV computes the eigenvalues and, optionally, the left and/or right eigenvectors for OTHER matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sstev (characterJOBZ, integerN, real, dimension( * )D, real, dimension( * )E, real, dimension( ldz, * )Z, integerLDZ, real, dimension( * )WORK, integerINFO)</h3>

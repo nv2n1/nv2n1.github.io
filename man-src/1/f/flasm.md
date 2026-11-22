@@ -14,40 +14,40 @@ description: "flasm – A swf bytecode assembler/disassembler"
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-d</code></dt>
-<dd> Disassemble the given <font SIZE="-1">SWF</font> file to the console</dd>
+<dd> Disassemble the given SWF file to the console</dd>
 <dt><code>-a</code></dt>
 <dd> Assemble the given flasm project</dd>
 <dt><code>-u</code></dt>
-<dd> Update <font SIZE="-1">SWF</font>, replace flasm macros</dd>
+<dd> Update SWF, replace flasm macros</dd>
 <dt><code>-b</code></dt>
 <dd> generate __bytecode__ instruction or byte sequence</dd>
 <dt><code>-z</code></dt>
-<dd> ompress <font SIZE="-1">SWF</font> with Zlib</dd>
+<dd> ompress SWF with Zlib</dd>
 <dt><code>-x</code></dt>
-<dd> Decompress <font SIZE="-1">SWF</font></dd></dl>
+<dd> Decompress SWF</dd></dl>
 <h2>EXAMPLES</h2>
 <p> <i>flasm</i> <code>-d</code> foo.swf </p>
 <p> Disassemble foo.swf to the console. To see action offsets in disassembly set showoffset and hexoffset options in <code>flasm.ini</code>. </p>
 <p> <i>flasm</i> <code>-d</code> foo.swf &gt; foo.flm </p>
 <p> Disassemble foo.swf, redirect the output to foo.flm. Alternatively you can simply call <i>flasm</i> without command: <i>flasm</i> foo.swf creates foo.flm in the same directory. </p>
 <p> <i>flasm</i> <code>-a</code> foo.flm </p>
-<p> Assemble foo.flm and update the <font SIZE="-1">SWF</font> defined inside. The backup of original <font SIZE="-1">SWF</font> is created with .$wf extension. </p>
+<p> Assemble foo.flm and update the SWF defined inside. The backup of original SWF is created with .$wf extension. </p>
 <p> <i>flasm</i> <code>-u</code> foo.swf </p>
-<p> Disassemble foo.swf to the temporary file. Execute <i>flasm</i> macros embedded in <font SIZE="-1">SWF</font>. Make trivial optimizations automatically: remove double nots, replace 0.0 with 0, rebuild constant pools, clear register arguments. Create .$wf backup, update the original <font SIZE="-1">SWF</font>. </p>
-<p> It&#8217;s a good idea to update the final version of <font SIZE="-1">SWF</font> with <i>flasm</i> -u. Don&#8217;t expect the <font SIZE="-1">SWF</font> to be noticeably faster, it will just make it a bit smaller. </p>
+<p> Disassemble foo.swf to the temporary file. Execute <i>flasm</i> macros embedded in SWF. Make trivial optimizations automatically: remove double nots, replace 0.0 with 0, rebuild constant pools, clear register arguments. Create .$wf backup, update the original SWF. </p>
+<p> It&#8217;s a good idea to update the final version of SWF with <i>flasm</i> -u. Don&#8217;t expect the SWF to be noticeably faster, it will just make it a bit smaller. </p>
 <p> <i>flasm</i> <code>-b</code> foo.txt </p>
 <p> produce __bytecode__ instruction or byte sequence, depending on boutput setting in <code>flasm.ini</code>. Takes as input a simple action list without any movie or frame declarations. Output is sent to console. Redirect it to file if you wish: <i>flasm</i> -b foo.txt &gt; foo.as When boutput is set to 1, <i>Flasm</i> produces binary output </p>
 <p> <i>flasm</i> <code>-x</code> foo.swf </p>
 <p> Decompress foo.swf, create .$wf backup. </p>
 <p> <i>flasm</i> <code>-z</code> foo.swf </p>
-<p> Compress foo.swf, create .$wf backup. Source <font SIZE="-1">SWF</font> doesn&#8217;t have to be Flash <font SIZE="-1">MX/MX</font> 2004 file. However, only Flash <font SIZE="-1">MX/MX</font> 2004 player will be able to play the resulting compressed file. </p>
+<p> Compress foo.swf, create .$wf backup. Source SWF doesn&#8217;t have to be Flash MX/MX 2004 file. However, only Flash MX/MX 2004 player will be able to play the resulting compressed file. </p>
 <p> <i>flasm</i> settings are read from <code>flasm.ini</code>. There aren&#8217;t many of them, and they are commented. You may, for example, switch bytecode offsets on and off there.</p>
 <h2>DESCRIPTION</h2>
-<p> <i>flasm</i> disassembles your entire <font SIZE="-1">SWF</font> including all the timelines and events. Looking at disassembly, you learn how the Flash compiler works, which improves your ActionScript skills. You can also do some optimizations on the disassembled code by hand or adjust the code as you wish. <i>flasm</i> then applies your changes to the original <font SIZE="-1">SWF</font>, replacing original actions. </p>
-<p> It&#8217;s also possible to embed <i>flasm</i> actions in your ActionScript, making optimizing of large projects more comfortable. <i>flasm</i> is not a decompiler. What you get is the human readable representation of <font SIZE="-1">SWF</font> bytecodes, not ActionScript source. If you&#8217;re looking for a decompiler, Flare may suit your needs. However, Flare can&#8217;t alter the <font SIZE="-1">SWF</font>.</p>
+<p> <i>flasm</i> disassembles your entire SWF including all the timelines and events. Looking at disassembly, you learn how the Flash compiler works, which improves your ActionScript skills. You can also do some optimizations on the disassembled code by hand or adjust the code as you wish. <i>flasm</i> then applies your changes to the original SWF, replacing original actions. </p>
+<p> It&#8217;s also possible to embed <i>flasm</i> actions in your ActionScript, making optimizing of large projects more comfortable. <i>flasm</i> is not a decompiler. What you get is the human readable representation of SWF bytecodes, not ActionScript source. If you&#8217;re looking for a decompiler, Flare may suit your needs. However, Flare can&#8217;t alter the SWF.</p>
 <h2>URL</h2>
 <p> <i><a rel="nofollow" href="http://www.nowrap.de/flasm.html">http://www.nowrap.de/flasm.html</a></i></p>
 <h2>AUTHORS</h2>
-<p> Copyright (c) 2001 Opaque Industries<br />
+<p> Copyright (c) 2001 Opaque Industries<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(c)&nbsp;<wbr>2002-2004 Igor Kogan </p>
-<p> All rights reserved. See <font SIZE="-1">LICENSE</font>.TXT for terms of use. </p>
+<p> All rights reserved. See LICENSE.TXT for terms of use. </p>

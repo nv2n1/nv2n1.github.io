@@ -8,7 +8,7 @@ url: "/docs/linux/man/1-extlinux/"
 description: "extlinux – install the SYSLINUX bootloader on an ext2/ext3/ext4/btrfs/xfs filesystem"
 ---
 
-<p> extlinux &#8211; install the <font SIZE="-1">SYSLINUX</font> bootloader on an ext2/ext3/ext4/btrfs/xfs filesystem </p>
+<p> extlinux &#8211; install the SYSLINUX bootloader on an ext2/ext3/ext4/btrfs/xfs filesystem </p>
 <h2>SYNOPSIS</h2>
 <p> <code>extlinux</code> [<i>options</i>] <i>directory</i></p>
 <h2>DESCRIPTION</h2>
@@ -46,8 +46,8 @@ description: "extlinux – install the SYSLINUX bootloader on an ext2/ext3/ext4/
 <h2>LIMITATIONS</h2>
 <p> Booting from XFS only works when an MBR partition table is used (not on GPT partition tables).</p>
 <h2>BUGS</h2>
-<p> I would appreciate hearing of any problems you have with <font SIZE="-1">SYSLINUX</font>. I would also like to hear from you if you have successfully used <font SIZE="-1">SYSLINUX</font>, especially if you are using it for a distribution. </p>
+<p> I would appreciate hearing of any problems you have with SYSLINUX. I would also like to hear from you if you have successfully used SYSLINUX, especially if you are using it for a distribution. </p>
 <p> If you are reporting problems, please include all possible information about your system and your BIOS; the vast majority of all problems reported turn out to be BIOS or hardware bugs, and I need as much information as possible in order to diagnose the problems. </p>
-<p> There is a mailing list for discussion among <font SIZE="-1">SYSLINUX</font> users and for announcements of new and test versions. You can subscribe to this mailing list</p>
+<p> There is a mailing list for discussion among SYSLINUX users and for announcements of new and test versions. You can subscribe to this mailing list</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-syslinux/">syslinux</a></code>(1) </p>

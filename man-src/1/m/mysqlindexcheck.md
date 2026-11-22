@@ -56,7 +56,7 @@ description: "mysqlindexcheck – Identify Potentially Redundant Table Indexes"
 <dt>
 </dt><dd> &bull; <code>vertical</code> </dd>
 <p> Display output in single-column format like that of the \G command for the <code>mysql</code> monitor.</dl>
-<p> Note: The <code>&#8211;best</code> and <code>&#8211;worst</code> lists cannot be printed as SQL statements.<br />
+<p> Note: The <code>&#8211;best</code> and <code>&#8211;worst</code> lists cannot be printed as SQL statements.<br/>
 OPTIONS </p>
 <p> <code>mysqlindexcheck</code> accepts the following command-line options: </p>
 <dl>
@@ -106,7 +106,7 @@ OPTIONS </p>
 <p>NOTES </p>
 <p> You must provide connection parameters (user, host, password, and so forth) for an account that has the appropriate privileges to read all objects accessed during the operation. </p>
 <p> For the <code>&#8211;format</code> option, the permitted values are not case sensitive. In addition, values may be specified as any unambiguous prefix of a valid value. For example, <code>&#8211;format=g</code> specifies the grid format. An error occurs if a prefix matches more than one valid value. </p>
-<p> The path to the MySQL client tools should be included in the PATH environment variable in order to use the authentication mechanism with login-paths. This will allow the utility to use the my_print_defaults tools which is required to read the login-path values from the login configuration file (.mylogin.cnf).<br />
+<p> The path to the MySQL client tools should be included in the PATH environment variable in order to use the authentication mechanism with login-paths. This will allow the utility to use the my_print_defaults tools which is required to read the login-path values from the login configuration file (.mylogin.cnf).<br/>
 EXAMPLES </p>
 <p> To check all tables in the employees database on the local server to see the possible redundant and duplicate indexes, use this command: </p>
 <dl>

@@ -26,21 +26,21 @@ extern "C" inline int foz()
     return 1234;
 }
 </code></pre>
-<p>// test.cpp<br />
-#include &#8220;test.h&#8221;<br />
-int bar = 42;<br />
-int foo()<br />
-{<br />
-    return bar;<br />
-}<br />
-int baz()<br />
-{<br />
-    volatile int k = 42;<br />
-    return foz() + k;<br />
-}<br />
-int main()<br />
-{<br />
-    return foo() + baz();<br />
+<p>// test.cpp<br/>
+#include &#8220;test.h&#8221;<br/>
+int bar = 42;<br/>
+int foo()<br/>
+{<br/>
+    return bar;<br/>
+}<br/>
+int baz()<br/>
+{<br/>
+    volatile int k = 42;<br/>
+    return foz() + k;<br/>
+}<br/>
+int main()<br/>
+{<br/>
+    return foo() + baz();<br/>
 }</p>
 <p> These files are built as follows: </p>
 <pre>
@@ -103,14 +103,14 @@ bar
 </pre>
 <p> Example 5 &#8211; path-style options: </p>
 <p> This example uses the same source file as above, but the source file’s full path is /tmp/foo/test.cpp and is compiled as follows. The first case shows the default absolute path, the second –basenames, and the third shows –relativenames. </p>
-<p>$ pwd / tmp<br />
-            $ clang &#8211;<br />
-    g foo / test.cpp &#8211; o test.elf $ llvm &#8211; symbolizer&#8211; obj = test.elf 0x4004a0 main / tmp / foo / test.cpp : 15 : 0 $ llvm &#8211; symbolizer&#8211; obj = test.elf 0x4004a0 &#8211;basenames<br />
-                                                                                                                                                     main<br />
-                                                                                                                                                         test.cpp : 15 : 0 $ llvm &#8211;<br />
-                                                                                                                                                 symbolizer&#8211; obj = test.elf 0x4004a0 &#8211;relativenames<br />
-                                                                                                                                                                        main<br />
-                                                                                                                                                                            foo /<br />
+<p>$ pwd / tmp<br/>
+            $ clang &#8211;<br/>
+    g foo / test.cpp &#8211; o test.elf $ llvm &#8211; symbolizer&#8211; obj = test.elf 0x4004a0 main / tmp / foo / test.cpp : 15 : 0 $ llvm &#8211; symbolizer&#8211; obj = test.elf 0x4004a0 &#8211;basenames<br/>
+                                                                                                                                                     main<br/>
+                                                                                                                                                         test.cpp : 15 : 0 $ llvm &#8211;<br/>
+                                                                                                                                                 symbolizer&#8211; obj = test.elf 0x4004a0 &#8211;relativenames<br/>
+                                                                                                                                                                        main<br/>
+                                                                                                                                                                            foo /<br/>
                                                                                                                                                                     test.cpp : 15 : 0</p>
 <h2>OPTIONS</h2>
 <dl>
@@ -148,63 +148,63 @@ bar
 <dd> Prints an address’s debug-data discriminator when it is non-zero. One way to produce discriminators is to compile with clang’s -fdebug-info-for-profiling.</dd>
 <dt><code>JSON</code> style provides a machine readable output in JSON. If addresses are</dt>
 <dd> supplied via stdin, the output JSON will be a series of individual objects. Otherwise, all results will be contained in a single array. </dd>
-<p>$ llvm-symbolizer &#8211;obj=inlined.elf 0x4004be 0x400486 -p<br />
-baz() at /tmp/test.cpp:11:18<br />
- (inlined by) main at /tmp/test.cpp:15:0<br />
-foo() at /tmp/test.cpp:6:3<br />
-$ llvm-symbolizer &#8211;output-style=LLVM &#8211;obj=inlined.elf 0x4004be 0x400486 -p &#8211;no-inlines<br />
-main at /tmp/test.cpp:11:18<br />
-foo() at /tmp/test.cpp:6:3<br />
-$ llvm-symbolizer &#8211;output-style=GNU &#8211;obj=inlined.elf 0x4004be 0x400486 -p &#8211;no-inlines<br />
-baz() at /tmp/test.cpp:11<br />
-foo() at /tmp/test.cpp:6<br />
-$ clang -g -fdebug-info-for-profiling test.cpp -o profiling.elf<br />
-$ llvm-symbolizer &#8211;output-style=GNU &#8211;obj=profiling.elf 0x401167 -p &#8211;no-inlines<br />
-main at /tmp/test.cpp:15 (discriminator 2)<br />
-$ llvm-symbolizer &#8211;output-style=JSON &#8211;obj=inlined.elf 0x4004be 0x400486 -p<br />
-[<br />
-  {<br />
-    &#8220;Address&#8221;: &#8220;0x4004be&#8221;,<br />
-    &#8220;ModuleName&#8221;: &#8220;inlined.elf&#8221;,<br />
-    &#8220;Symbol&#8221;: [<br />
-      {<br />
-        &#8220;Column&#8221;: 18,<br />
-        &#8220;Discriminator&#8221;: 0,<br />
-        &#8220;FileName&#8221;: &#8220;/tmp/test.cpp&#8221;,<br />
-        &#8220;FunctionName&#8221;: &#8220;baz()&#8221;,<br />
-        &#8220;Line&#8221;: 11,<br />
-        &#8220;StartAddress&#8221;: &#8220;0x4004be&#8221;,<br />
-        &#8220;StartFileName&#8221;: &#8220;/tmp/test.cpp&#8221;,<br />
-        &#8220;StartLine&#8221;: 9<br />
-      },<br />
-      {<br />
-        &#8220;Column&#8221;: 0,<br />
-        &#8220;Discriminator&#8221;: 0,<br />
-        &#8220;FileName&#8221;: &#8220;/tmp/test.cpp&#8221;,<br />
-        &#8220;FunctionName&#8221;: &#8220;main&#8221;,<br />
-        &#8220;Line&#8221;: 15,<br />
-        &#8220;StartAddress&#8221;: &#8220;0x4004be&#8221;,<br />
-        &#8220;StartFileName&#8221;: &#8220;/tmp/test.cpp&#8221;,<br />
-        &#8220;StartLine&#8221;: 14<br />
-      }<br />
-    ]<br />
-  },<br />
-  {<br />
-    &#8220;Address&#8221;: &#8220;0x400486&#8221;,<br />
-    &#8220;ModuleName&#8221;: &#8220;inlined.elf&#8221;,<br />
-    &#8220;Symbol&#8221;: [<br />
-      {<br />
-        &#8220;Column&#8221;: 3,<br />
-        &#8220;Discriminator&#8221;: 0,<br />
-        &#8220;FileName&#8221;: &#8220;/tmp/test.cpp&#8221;,<br />
-        &#8220;FunctionName&#8221;: &#8220;foo()&#8221;,<br />
-        &#8220;Line&#8221;: 6,<br />
-        &#8220;StartAddress&#8221;: &#8220;0x400486&#8221;,<br />
-        &#8220;StartFileName&#8221;: &#8220;/tmp/test.cpp&#8221;,<br />
-        &#8220;StartLine&#8221;: 5<br />
-      }<br />
-    ]<br />
-  }<br />
+<p>$ llvm-symbolizer &#8211;obj=inlined.elf 0x4004be 0x400486 -p<br/>
+baz() at /tmp/test.cpp:11:18<br/>
+ (inlined by) main at /tmp/test.cpp:15:0<br/>
+foo() at /tmp/test.cpp:6:3<br/>
+$ llvm-symbolizer &#8211;output-style=LLVM &#8211;obj=inlined.elf 0x4004be 0x400486 -p &#8211;no-inlines<br/>
+main at /tmp/test.cpp:11:18<br/>
+foo() at /tmp/test.cpp:6:3<br/>
+$ llvm-symbolizer &#8211;output-style=GNU &#8211;obj=inlined.elf 0x4004be 0x400486 -p &#8211;no-inlines<br/>
+baz() at /tmp/test.cpp:11<br/>
+foo() at /tmp/test.cpp:6<br/>
+$ clang -g -fdebug-info-for-profiling test.cpp -o profiling.elf<br/>
+$ llvm-symbolizer &#8211;output-style=GNU &#8211;obj=profiling.elf 0x401167 -p &#8211;no-inlines<br/>
+main at /tmp/test.cpp:15 (discriminator 2)<br/>
+$ llvm-symbolizer &#8211;output-style=JSON &#8211;obj=inlined.elf 0x4004be 0x400486 -p<br/>
+[<br/>
+  {<br/>
+    &#8220;Address&#8221;: &#8220;0x4004be&#8221;,<br/>
+    &#8220;ModuleName&#8221;: &#8220;inlined.elf&#8221;,<br/>
+    &#8220;Symbol&#8221;: [<br/>
+      {<br/>
+        &#8220;Column&#8221;: 18,<br/>
+        &#8220;Discriminator&#8221;: 0,<br/>
+        &#8220;FileName&#8221;: &#8220;/tmp/test.cpp&#8221;,<br/>
+        &#8220;FunctionName&#8221;: &#8220;baz()&#8221;,<br/>
+        &#8220;Line&#8221;: 11,<br/>
+        &#8220;StartAddress&#8221;: &#8220;0x4004be&#8221;,<br/>
+        &#8220;StartFileName&#8221;: &#8220;/tmp/test.cpp&#8221;,<br/>
+        &#8220;StartLine&#8221;: 9<br/>
+      },<br/>
+      {<br/>
+        &#8220;Column&#8221;: 0,<br/>
+        &#8220;Discriminator&#8221;: 0,<br/>
+        &#8220;FileName&#8221;: &#8220;/tmp/test.cpp&#8221;,<br/>
+        &#8220;FunctionName&#8221;: &#8220;main&#8221;,<br/>
+        &#8220;Line&#8221;: 15,<br/>
+        &#8220;StartAddress&#8221;: &#8220;0x4004be&#8221;,<br/>
+        &#8220;StartFileName&#8221;: &#8220;/tmp/test.cpp&#8221;,<br/>
+        &#8220;StartLine&#8221;: 14<br/>
+      }<br/>
+    ]<br/>
+  },<br/>
+  {<br/>
+    &#8220;Address&#8221;: &#8220;0x400486&#8221;,<br/>
+    &#8220;ModuleName&#8221;: &#8220;inlined.elf&#8221;,<br/>
+    &#8220;Symbol&#8221;: [<br/>
+      {<br/>
+        &#8220;Column&#8221;: 3,<br/>
+        &#8220;Discriminator&#8221;: 0,<br/>
+        &#8220;FileName&#8221;: &#8220;/tmp/test.cpp&#8221;,<br/>
+        &#8220;FunctionName&#8221;: &#8220;foo()&#8221;,<br/>
+        &#8220;Line&#8221;: 6,<br/>
+        &#8220;StartAddress&#8221;: &#8220;0x400486&#8221;,<br/>
+        &#8220;StartFileName&#8221;: &#8220;/tmp/test.cpp&#8221;,<br/>
+        &#8220;StartLine&#8221;: 5<br/>
+      }<br/>
+    ]<br/>
+  }<br/>
 ]</p>
 <dt><code>&#8211;pretty-print, -p</code></dt>
 <dd> Print human readable output. If <i>&#8211;inlining</i> is specified, the enclosing scope is prefixed by (inlined by). For JSON output, the option will cause JSON to be indented and split over new lines. Otherwise, the JSON output will be printed in a compact form. </dd>

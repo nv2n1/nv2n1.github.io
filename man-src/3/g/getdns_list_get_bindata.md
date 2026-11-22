@@ -13,49 +13,49 @@ description: "getdns_list_get, getdns_list_get_bindata, getdns_list_get_data_typ
 <p> DNS Resolver library (libgetdns, -lgetdns) </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;getdns.h&gt; </p>
-<p> getdns_return_t<br />
+<p> getdns_return_t<br/>
  <code>getdns_list_get_bindata</code> (getdns_list *this_list,</p>
 <dl>
 <dt>
-</dt><dd> size_t index,<br />
+</dt><dd> size_t index,<br/>
  getdns_bindata **answer)</dd></dl>
-<p> getdns_return_t<br />
+<p> getdns_return_t<br/>
  <code>getdns_list_get_data_type</code> (getdns_list *this_list,</p>
 <dl>
 <dt>
-</dt><dd> size_t index,<br />
+</dt><dd> size_t index,<br/>
  getdns_data_type *answer)</dd></dl>
-<p> getdns_return_t<br />
+<p> getdns_return_t<br/>
  <code>getdns_list_get_dict</code> (getdns_list *this_list,</p>
 <dl>
 <dt>
-</dt><dd> size_t index,<br />
+</dt><dd> size_t index,<br/>
  getdns_dict **answer)</dd></dl>
-<p> getdns_return_t<br />
+<p> getdns_return_t<br/>
  <code>getdns_list_get_length</code> (getdns_list *this_list,</p>
 <dl>
 <dt>
 </dt><dd> size_t *answer)</dd></dl>
-<p> getdns_return_t<br />
+<p> getdns_return_t<br/>
  <code>getdns_list_get_list</code> (getdns_list *this_list,</p>
 <dl>
 <dt>
-</dt><dd> size_t index,<br />
+</dt><dd> size_t index,<br/>
  getdns_list **answer)</dd></dl>
-<p> getdns_return_t<br />
+<p> getdns_return_t<br/>
  <code>getdns_list_get_int</code> (getdns_list *this_list,</p>
 <dl>
 <dt>
-</dt><dd> size_t index,<br />
+</dt><dd> size_t index,<br/>
  uint32_t *answer)</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The getdns_list type is used to manage heterogeneous lists in which the objects are each one of the data types:</p>
 <dl>
 <dt>
 </dt><dd>
- getdns_bindata<br />
- getdns_dict<br />
- getdns_list<br />
+ getdns_bindata<br/>
+ getdns_dict<br/>
+ getdns_list<br/>
  uint32_t</dd></dl>
 <p> <i>this_list</i> the list from which to retrieve the object </p>
 <p> <i>index</i> the numeric index (0 based) of the item in the list you would like copied to answer </p>

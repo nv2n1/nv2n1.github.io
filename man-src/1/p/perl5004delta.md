@@ -12,17 +12,17 @@ description: "perl5004delta – what’s new for perl5.004"
 <h2>DESCRIPTION</h2>
 <p> This document describes differences between the 5.003 release (as documented in <i>Programming Perl</i>, second edition&#8212;the Camel Book) and this one.</p>
 <h2>Supported Environments</h2>
-<p> Perl5.004 builds out of the box on Unix, Plan 9, LynxOS, <font SIZE="-1">VMS, OS/2, QNX,</font> AmigaOS, and Windows <font SIZE="-1">NT.</font> Perl runs on Windows 95 as well, but it cannot be built there, for lack of a reasonable command interpreter.</p>
+<p> Perl5.004 builds out of the box on Unix, Plan 9, LynxOS, VMS, OS/2, QNX, AmigaOS, and Windows NT. Perl runs on Windows 95 as well, but it cannot be built there, for lack of a reasonable command interpreter.</p>
 <h2>Core Changes</h2>
 <p> Most importantly, many bugs were fixed, including several security problems. See the <i>Changes</i> file in the distribution for details.</p>
 <h3>List assignment to %ENV works</h3>
-<p> <tt>&quot;%ENV = ()&quot;</tt> and <tt>&quot;%ENV = @list&quot;</tt> now work as expected (except on <font SIZE="-1">VMS</font> where it generates a fatal error).</p>
+<p> <tt>&quot;%ENV = ()&quot;</tt> and <tt>&quot;%ENV = @list&quot;</tt> now work as expected (except on VMS where it generates a fatal error).</p>
 <h3>Change to Can&#8217;t locate Foo.pm in @INC error</h3>
 <p> The error &#8220;Can&#8217;t locate Foo.pm in <tt>@INC</tt>&#8221; now lists the contents of <tt>@INC</tt> for easier debugging.</p>
 <h3>Compilation option: Binary compatibility with 5.003</h3>
 <p> There is a new Configure question that asks if you want to maintain binary compatibility with Perl 5.003. If you choose binary compatibility, you do not have to recompile your extensions, but you might have symbol conflicts if you embed Perl in another application, just as in the 5.003 release. By default, binary compatibility is preserved at the expense of symbol table pollution.</p>
 <h3>$PERL5OPT environment variable</h3>
-<p> You may now put Perl options in the <tt>$PERL5OPT</tt> environment variable. Unless Perl is running with taint checks, it will interpret this variable as if its contents had appeared on a &#8220;#!perl&#8221; line at the beginning of your script, except that hyphens are optional. <font SIZE="-1">PERL5OPT</font> may only be used to set the following switches: <code>-[DIMUdmw]</code>.</p>
+<p> You may now put Perl options in the <tt>$PERL5OPT</tt> environment variable. Unless Perl is running with taint checks, it will interpret this variable as if its contents had appeared on a &#8220;#!perl&#8221; line at the beginning of your script, except that hyphens are optional. PERL5OPT may only be used to set the following switches: <code>-[DIMUdmw]</code>.</p>
 <h3>Limitations on <code>-M</code>, <code>-m</code>, and <code>-T</code> options</h3>
 <p> The <tt>&quot;-M&quot;</tt> and <tt>&quot;-m&quot;</tt> options are no longer allowed on the <tt>&quot;#!&quot;</tt> line of a script. If a script needs a module, it should invoke it with the <tt>&quot;use&quot;</tt> pragma. </p>
 <p> The <code>-T</code> option is also forbidden on the <tt>&quot;#!&quot;</tt> line of a script, unless it was present on the Perl command line. Due to the way <tt>&quot;#!&quot;</tt> works, this usually means that <code>-T</code> must be in the first argument. Thus: </p>
@@ -67,10 +67,10 @@ change($a{b});
 <p> The documentation for Perl 5.0 has always stated that <tt>$.</tt> is <i>not</i> reset when an already-open file handle is reopened with no intervening call to <tt>&quot;close&quot;</tt>. Due to a bug, perl versions 5.000 through 5.003 <i>did</i> reset <tt>$.</tt> under that circumstance; Perl 5.004 does not.</p>
 <h3>wantarray may return undef</h3>
 <p> The <tt>&quot;wantarray&quot;</tt> operator returns true if a subroutine is expected to return a list, and false otherwise. In Perl 5.004, <tt>&quot;wantarray&quot;</tt> can also return the undefined value if a subroutine&#8217;s return value will not be used at all, which allows subroutines to avoid a time-consuming calculation of a return value if it isn&#8217;t going to be used.</p>
-<h3>eval EXPR determines value of <font SIZE="-1">EXPR</font> in scalar context</h3>
-<p> Perl (version 5) used to determine the value of <font SIZE="-1">EXPR</font> inconsistently, sometimes incorrectly using the surrounding context for the determination. Now, the value of <font SIZE="-1">EXPR</font> (before being parsed by eval) is always determined in a scalar context. Once parsed, it is executed as before, by providing the context that the scope surrounding the eval provided. This change makes the behavior Perl4 compatible, besides fixing bugs resulting from the inconsistent behavior. This program: </p>
-<p>@a = qw(time now is time);<br />
-print eval @a;<br />
+<h3>eval EXPR determines value of EXPR in scalar context</h3>
+<p> Perl (version 5) used to determine the value of EXPR inconsistently, sometimes incorrectly using the surrounding context for the determination. Now, the value of EXPR (before being parsed by eval) is always determined in a scalar context. Once parsed, it is executed as before, by providing the context that the scope surrounding the eval provided. This change makes the behavior Perl4 compatible, besides fixing bugs resulting from the inconsistent behavior. This program: </p>
+<p>@a = qw(time now is time);<br/>
+print eval @a;<br/>
 print &#8216;|&#8217;, scalar eval @a;</p>
 <p> used to print something like &#8220;timenowis881399109|4&#8221;, but now (and in perl4) prints &#8220;4|4&#8221;.</p>
 <h3>Changes to tainting checks</h3>
@@ -84,17 +84,17 @@ print &#8216;|&#8217;, scalar eval @a;</p>
 <dt>No spawning if tainted $TERM doesn&#8217;t look like a terminal name</dt>
 <dd> Some termcap libraries do unsafe things with <tt>$TERM</tt>. However, it would be unnecessarily harsh to treat all <tt>$TERM</tt> values as unsafe, since only shell metacharacters can cause trouble in <tt>$TERM</tt>. So a tainted <tt>$TERM</tt> is considered to be safe if it contains only alphanumerics, underscores, dashes, and colons, and unsafe if it contains other characters (including whitespace).</dd></dl>
 <h3>New Opcode module and revised Safe module</h3>
-<p> A new Opcode module supports the creation, manipulation and application of opcode masks. The revised Safe module has a new <font SIZE="-1">API</font> and is implemented using the new Opcode module. Please read the new Opcode and Safe documentation.</p>
+<p> A new Opcode module supports the creation, manipulation and application of opcode masks. The revised Safe module has a new API and is implemented using the new Opcode module. Please read the new Opcode and Safe documentation.</p>
 <h3>Embedding improvements</h3>
 <p> In older versions of Perl it was not possible to create more than one Perl interpreter instance inside a single process without leaking like a sieve and/or crashing. The bugs that caused this behavior have all been fixed. However, you still must take care when embedding Perl in a C program. See the updated perlembed manpage for tips on how to manage your interpreters.</p>
 <h3>Internal change: FileHandle class based on IO::* classes</h3>
 <p> File handles are now stored internally as type IO::Handle. The FileHandle module is still supported for backwards compatibility, but it is now merely a front end to the IO::* modules, specifically IO::Handle, IO::Seekable, and IO::File. We suggest, but do not require, that you use the IO::* modules in new code. </p>
 <p> In harmony with this change, <tt>*GLOB{FILEHANDLE}</tt> is now just a backward-compatible synonym for <tt>*GLOB{IO}</tt>.</p>
 <h3>Internal change: PerlIO abstraction interface</h3>
-<p> It is now possible to build Perl with <font SIZE="-1">AT&amp;T</font>&#8216;s sfio <font SIZE="-1">IO</font> package instead of stdio. See perlapio for more details, and the <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to use it.</p>
+<p> It is now possible to build Perl with AT&amp;T&#8216;s sfio IO package instead of stdio. See perlapio for more details, and the <i></i><i>INSTALL</i><i></i> file for how to use it.</p>
 <h3>New and changed syntax</h3>
 <dl>
-<dt>$coderef-&gt;(<font SIZE="-1">PARAMS</font>)</dt>
+<dt>$coderef-&gt;(PARAMS)</dt>
 <dd> A subroutine reference may now be suffixed with an arrow and a (possibly empty) parameter list. This syntax denotes a call of the referenced subroutine, with the given parameters (if any). </dd>
 <p> This new syntax follows the pattern of <tt>&quot;$hashref-&gt;{FOO}&quot;</tt> and <tt>&quot;$aryref-&gt;[$foo]&quot;</tt>: You may now write <tt>&quot;&amp;$subref($foo)&quot;</tt> as <tt>&quot;$subref-&gt;($foo)&quot;</tt>. All these arrow terms may be chained; thus, <tt>&quot;&amp;{$table-&gt;{FOO}}($bar)&quot;</tt> may now be written <tt>&quot;$table-&gt;{FOO}-&gt;($bar)&quot;</tt>.</dl>
 <h3>New and changed builtin constants</h3>
@@ -112,7 +112,7 @@ print &#8216;|&#8217;, scalar eval @a;</p>
 <pre>
     $^M = 'a' x (1&lt;&lt;16);
 </pre>
-<p> would allocate a 64K buffer for use when in emergency. See the <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for information on how to enable this option. As a disincentive to casual use of this advanced feature, there is no <tt>&quot;use English&quot;</tt> long name for this variable.</dl>
+<p> would allocate a 64K buffer for use when in emergency. See the <i></i><i>INSTALL</i><i></i> file for information on how to enable this option. As a disincentive to casual use of this advanced feature, there is no <tt>&quot;use English&quot;</tt> long name for this variable.</dl>
 <h3>New and changed builtin functions</h3>
 <dl>
 <dt>delete on slices</dt>
@@ -144,45 +144,45 @@ print &#8216;|&#8217;, scalar eval @a;</p>
 <p> then <tt>%hash</tt> will have at least 200 buckets allocated for it. These buckets will be retained even if you do <tt>&quot;%hash = ()&quot;</tt>; use <tt>&quot;undef %hash&quot;</tt> if you want to free the storage while <tt>%hash</tt> is still in scope. You can&#8217;t shrink the number of buckets allocated for the hash using <tt>&quot;keys&quot;</tt> in this way (but you needn&#8217;t worry about doing this by accident, as trying has no effect).</p>
 <dt><code>my()</code> in Control Structures</dt>
 <dd> You can now use <code>my()</code> (with or without the parentheses) in the control expressions of control structures such as: </dd>
-<p>while (defined(my $line = &lt;&gt;)) {<br />
-    $line = lc $line;<br />
-}<br />
-continue<br />
-{<br />
-    print $line;<br />
-}<br />
-    if ((my $answer = &lt;STDIN&gt;) =~ /^y(es)?$/i) {<br />
-        user_agrees();<br />
-    } elsif ($answer =~ /^n(o)?$/i)<br />
-    {<br />
-        user_disagrees();<br />
-    }<br />
-    else<br />
-    {<br />
-        chomp $answer;<br />
-        die &#8220;`$answer&#8217; is neither `yes&#8217; nor `no'&#8221;;<br />
+<p>while (defined(my $line = &lt;&gt;)) {<br/>
+    $line = lc $line;<br/>
+}<br/>
+continue<br/>
+{<br/>
+    print $line;<br/>
+}<br/>
+    if ((my $answer = &lt;STDIN&gt;) =~ /^y(es)?$/i) {<br/>
+        user_agrees();<br/>
+    } elsif ($answer =~ /^n(o)?$/i)<br/>
+    {<br/>
+        user_disagrees();<br/>
+    }<br/>
+    else<br/>
+    {<br/>
+        chomp $answer;<br/>
+        die &#8220;`$answer&#8217; is neither `yes&#8217; nor `no'&#8221;;<br/>
     }</p>
 <p> Also, you can declare a foreach loop control variable as lexical by preceding it with the word &#8220;my&#8221;. For example, in: </p>
-<p>foreach<br />
-    my $i(1, 2, 3)<br />
-    {<br />
-        some_function();<br />
+<p>foreach<br/>
+    my $i(1, 2, 3)<br/>
+    {<br/>
+        some_function();<br/>
     }</p>
 <p> <tt>$i</tt> is a lexical variable, and the scope of <tt>$i</tt> extends to the end of the loop, but not beyond it. </p>
 <p> Note that you still cannot use <code>my()</code> on global punctuation variables such as <tt>$_</tt> and the like.</p>
 <dt><code>pack()</code> and <code>unpack()</code></dt>
-<dd> A new format &#8216;w&#8217; represents a <font SIZE="-1">BER</font> compressed integer (as defined in <font SIZE="-1">ASN.1</font>). Its format is a sequence of one or more bytes, each of which provides seven bits of the total value, with the most significant first. Bit eight of each byte is set, except for the last byte, in which bit eight is clear. </dd>
-<p> If &#8216;p&#8217; or &#8216;P&#8217; are given undef as values, they now generate a <font SIZE="-1">NULL</font> pointer. </p>
+<dd> A new format &#8216;w&#8217; represents a BER compressed integer (as defined in ASN.1). Its format is a sequence of one or more bytes, each of which provides seven bits of the total value, with the most significant first. Bit eight of each byte is set, except for the last byte, in which bit eight is clear. </dd>
+<p> If &#8216;p&#8217; or &#8216;P&#8217; are given undef as values, they now generate a NULL pointer. </p>
 <p> Both <code>pack()</code> and <code>unpack()</code> now fail when their templates contain invalid types. (Invalid types used to be ignored.)</p>
 <dt><code>sysseek()</code></dt>
 <dd> The new <code>sysseek()</code> operator is a variant of <code>seek()</code> that sets and gets the file&#8217;s system read/write position, using the <code><a href="/docs/linux/man/2-lseek/">lseek</a></code>(2) system call. It is the only reliable way to seek before using <code>sysread()</code> or <code>syswrite()</code>. Its return value is the new position, or the undefined value on failure.</dd>
-<dt>use <font SIZE="-1">VERSION</font></dt>
-<dd> If the first argument to <tt>&quot;use&quot;</tt> is a number, it is treated as a version number instead of a module name. If the version of the Perl interpreter is less than <font SIZE="-1">VERSION,</font> then an error message is printed and Perl exits immediately. Because <tt>&quot;use&quot;</tt> occurs at compile time, this check happens immediately during the compilation process, unlike <tt>&quot;require VERSION&quot;</tt>, which waits until runtime for the check. This is often useful if you need to check the current Perl version before <tt>&quot;use&quot;</tt>ing library modules which have changed in incompatible ways from older versions of Perl. (We try not to do this more than we have to.)</dd>
-<dt>use Module <font SIZE="-1">VERSION LIST</font></dt>
-<dd> If the <font SIZE="-1">VERSION</font> argument is present between Module and <font SIZE="-1">LIST,</font> then the <tt>&quot;use&quot;</tt> will call the <font SIZE="-1">VERSION</font> method in class Module with the given version as an argument. The default <font SIZE="-1">VERSION</font> method, inherited from the <font SIZE="-1">UNIVERSAL</font> class, croaks if the given version is larger than the value of the variable <tt>$Module::VERSION</tt>. (Note that there is not a comma after <font SIZE="-1">VERSION</font>!) </dd>
+<dt>use VERSION</dt>
+<dd> If the first argument to <tt>&quot;use&quot;</tt> is a number, it is treated as a version number instead of a module name. If the version of the Perl interpreter is less than VERSION, then an error message is printed and Perl exits immediately. Because <tt>&quot;use&quot;</tt> occurs at compile time, this check happens immediately during the compilation process, unlike <tt>&quot;require VERSION&quot;</tt>, which waits until runtime for the check. This is often useful if you need to check the current Perl version before <tt>&quot;use&quot;</tt>ing library modules which have changed in incompatible ways from older versions of Perl. (We try not to do this more than we have to.)</dd>
+<dt>use Module VERSION LIST</dt>
+<dd> If the VERSION argument is present between Module and LIST, then the <tt>&quot;use&quot;</tt> will call the VERSION method in class Module with the given version as an argument. The default VERSION method, inherited from the UNIVERSAL class, croaks if the given version is larger than the value of the variable <tt>$Module::VERSION</tt>. (Note that there is not a comma after VERSION!) </dd>
 <p> This version-checking mechanism is similar to the one currently used in the Exporter module, but it is faster and can be used with modules that don&#8217;t use the Exporter. It is the recommended method for new code.</p>
-<dt>prototype(<font SIZE="-1">FUNCTION</font>)</dt>
-<dd> Returns the prototype of a function as a string (or <tt>&quot;undef&quot;</tt> if the function has no prototype). <font SIZE="-1">FUNCTION</font> is a reference to or the name of the function whose prototype you want to retrieve. (Not actually new; just never documented before.)</dd>
+<dt>prototype(FUNCTION)</dt>
+<dd> Returns the prototype of a function as a string (or <tt>&quot;undef&quot;</tt> if the function has no prototype). FUNCTION is a reference to or the name of the function whose prototype you want to retrieve. (Not actually new; just never documented before.)</dd>
 <dt>srand</dt>
 <dd> The default seed for <tt>&quot;srand&quot;</tt>, which used to be <tt>&quot;time&quot;</tt>, has been changed. Now it&#8217;s a heady mix of difficult-to-predict system-dependent values, which should be sufficient for most everyday purposes. </dd>
 <p> Previous to version 5.004, calling <tt>&quot;rand&quot;</tt> without first calling <tt>&quot;srand&quot;</tt> would yield the same sequence of random numbers on most or all machines. Now, when perl sees that you&#8217;re calling <tt>&quot;rand&quot;</tt> and haven&#8217;t yet called <tt>&quot;srand&quot;</tt>, it calls <tt>&quot;srand&quot;</tt> with the default seed. You should still call <tt>&quot;srand&quot;</tt> manually if your code might ever be run on a pre-5.004 system, of course, or if you want a seed other than the default.</p>
@@ -196,105 +196,105 @@ continue<br />
 <dd> Prior to the 5.004 release, nested anonymous functions didn&#8217;t work right. They do now.</dd>
 <dt>formats work right on changing lexicals</dt>
 <dd> Just like anonymous functions that contain lexical variables that change (like a lexical index variable for a <tt>&quot;foreach&quot;</tt> loop), formats now work properly. For example, this silently failed before (printed only zeros), but is fine now: </dd>
-<p>my $i;<br />
-foreach<br />
-    $i(1..10)<br />
-    {<br />
-        write;<br />
-    }<br />
-format =<br />
-    my i is @ #$i<br />
+<p>my $i;<br/>
+foreach<br/>
+    $i(1..10)<br/>
+    {<br/>
+        write;<br/>
+    }<br/>
+format =<br/>
+    my i is @ #$i<br/>
         .</p>
 <p> However, it still fails (without a warning) if the foreach is within a subroutine: </p>
-<p>my $i;<br />
-sub foo<br />
-{<br />
-    foreach<br />
-        $i(1..10)<br />
-        {<br />
-            write;<br />
-        }<br />
-}<br />
-foo;<br />
-format =<br />
-    my i is @ #$i<br />
+<p>my $i;<br/>
+sub foo<br/>
+{<br/>
+    foreach<br/>
+        $i(1..10)<br/>
+        {<br/>
+            write;<br/>
+        }<br/>
+}<br/>
+foo;<br/>
+format =<br/>
+    my i is @ #$i<br/>
         .
 </dl>
 <h3>New builtin methods</h3>
 <p> The <tt>&quot;UNIVERSAL&quot;</tt> package automatically contains the following methods that are inherited by all other classes:</p>
 <dl>
-<dt>isa(<font SIZE="-1">CLASS</font>)</dt>
+<dt>isa(CLASS)</dt>
 <dd> <tt>&quot;isa&quot;</tt> returns <i>true</i> if its object is blessed into a subclass of <tt>&quot;CLASS&quot;</tt> </dd>
 <p> <tt>&quot;isa&quot;</tt> is also exportable and can be called as a sub with two arguments. This allows the ability to check what a reference points to. Example: </p>
-<p>use UNIVERSAL qw(isa);<br />
-if (isa($ref, &#8216;ARRAY&#8217;)) {<br />
-    &#8230;<br />
+<p>use UNIVERSAL qw(isa);<br/>
+if (isa($ref, &#8216;ARRAY&#8217;)) {<br/>
+    &#8230;<br/>
 }</p>
-<dt>can(<font SIZE="-1">METHOD</font>)</dt>
+<dt>can(METHOD)</dt>
 <dd> <tt>&quot;can&quot;</tt> checks to see if its object has a method called <tt>&quot;METHOD&quot;</tt>, if it does then a reference to the sub is returned; if it does not then <i>undef</i> is returned.</dd>
-<dt><font SIZE="-1">VERSION</font>( [<font SIZE="-1">NEED</font>] )</dt>
-<dd> <tt>&quot;VERSION&quot;</tt> returns the version number of the class (package). If the <font SIZE="-1">NEED</font> argument is given then it will check that the current version (as defined by the <tt>$VERSION</tt> variable in the given package) not less than <font SIZE="-1">NEED</font>; it will die if this is not the case. This method is normally called as a class method. This method is called automatically by the <tt>&quot;VERSION&quot;</tt> form of <tt>&quot;use&quot;</tt>. </dd>
-<p>use A 1.2 qw(some imported subs);<br />
-#implies:<br />
+<dt>VERSION( [NEED] )</dt>
+<dd> <tt>&quot;VERSION&quot;</tt> returns the version number of the class (package). If the NEED argument is given then it will check that the current version (as defined by the <tt>$VERSION</tt> variable in the given package) not less than NEED; it will die if this is not the case. This method is normally called as a class method. This method is called automatically by the <tt>&quot;VERSION&quot;</tt> form of <tt>&quot;use&quot;</tt>. </dd>
+<p>use A 1.2 qw(some imported subs);<br/>
+#implies:<br/>
 A-&gt;VERSION(1.2);
 </dl>
-<p> <font SIZE="-1"><code>NOTE:</code></font> <tt>&quot;can&quot;</tt> directly uses Perl&#8217;s internal code for method lookup, and <tt>&quot;isa&quot;</tt> uses a very similar method and caching strategy. This may cause strange effects if the Perl code dynamically changes <tt>@ISA</tt> in any package. </p>
-<p> You may add other methods to the <font SIZE="-1">UNIVERSAL</font> class via Perl or <font SIZE="-1">XS</font> code. You do not need to <tt>&quot;use UNIVERSAL&quot;</tt> in order to make these methods available to your program. This is necessary only if you wish to have <tt>&quot;isa&quot;</tt> available as a plain subroutine in the current package.</p>
-<h3><font SIZE="-1">TIEHANDLE</font> now supported</h3>
+<p> <code>NOTE:</code> <tt>&quot;can&quot;</tt> directly uses Perl&#8217;s internal code for method lookup, and <tt>&quot;isa&quot;</tt> uses a very similar method and caching strategy. This may cause strange effects if the Perl code dynamically changes <tt>@ISA</tt> in any package. </p>
+<p> You may add other methods to the UNIVERSAL class via Perl or XS code. You do not need to <tt>&quot;use UNIVERSAL&quot;</tt> in order to make these methods available to your program. This is necessary only if you wish to have <tt>&quot;isa&quot;</tt> available as a plain subroutine in the current package.</p>
+<h3>TIEHANDLE now supported</h3>
 <p> See perltie for other kinds of <code>tie()</code>s.</p>
 <dl>
-<dt><font SIZE="-1">TIEHANDLE</font> classname, <font SIZE="-1">LIST</font></dt>
+<dt>TIEHANDLE classname, LIST</dt>
 <dd> This is the constructor for the class. That means it is expected to return an object of some sort. The reference can be used to hold some internal information. </dd>
-<p>sub TIEHANDLE<br />
-{<br />
+<p>sub TIEHANDLE<br/>
+{<br/>
     print &#8220;&lt;shout&gt;
-&#8221;;<br />
-    my $i;<br />
-    return bless \$i, shift;<br />
+&#8221;;<br/>
+    my $i;<br/>
+    return bless \$i, shift;<br/>
 }</p>
-<dt><font SIZE="-1">PRINT</font> this, <font SIZE="-1">LIST</font></dt>
+<dt>PRINT this, LIST</dt>
 <dd> This method will be triggered every time the tied handle is printed to. Beyond its self reference it also expects the list that was passed to the print function. </dd>
-<p>sub PRINT<br />
-{<br />
-    $r = shift;<br />
-    $$r++;<br />
-    return print join(<br />
-               $, = &gt; map { uc } @_),<br />
-           $\;<br />
+<p>sub PRINT<br/>
+{<br/>
+    $r = shift;<br/>
+    $$r++;<br/>
+    return print join(<br/>
+               $, = &gt; map { uc } @_),<br/>
+           $\;<br/>
 }</p>
-<dt><font SIZE="-1">PRINTF</font> this, <font SIZE="-1">LIST</font></dt>
+<dt>PRINTF this, LIST</dt>
 <dd> This method will be triggered every time the tied handle is printed to with the <tt>&quot;printf()&quot;</tt> function. Beyond its self reference it also expects the format and list that was passed to the printf function. </dd>
-<p>sub PRINTF<br />
-{<br />
-    shift;<br />
-    my $fmt = shift;<br />
+<p>sub PRINTF<br/>
+{<br/>
+    shift;<br/>
+    my $fmt = shift;<br/>
     print sprintf($fmt, @_).&#8221;
-&#8221;;<br />
+&#8221;;<br/>
 }</p>
-<dt><font SIZE="-1">READ</font> this <font SIZE="-1">LIST</font></dt>
+<dt>READ this LIST</dt>
 <dd> This method will be called when the handle is read from via the <tt>&quot;read&quot;</tt> or <tt>&quot;sysread&quot;</tt> functions. </dd>
-<p>sub READ<br />
-{<br />
-    $r = shift;<br />
-    my($buf, $len, $offset) = @_;<br />
-    print &#8220;READ called, \$buf=$buf, \$len=$len, \$offset=$offset&#8221;;<br />
+<p>sub READ<br/>
+{<br/>
+    $r = shift;<br/>
+    my($buf, $len, $offset) = @_;<br/>
+    print &#8220;READ called, \$buf=$buf, \$len=$len, \$offset=$offset&#8221;;<br/>
 }</p>
-<dt><font SIZE="-1">READLINE</font> this</dt>
+<dt>READLINE this</dt>
 <dd> This method will be called when the handle is read from. The method should return undef when there is no more data. </dd>
-<p>sub READLINE<br />
-{<br />
-    $r = shift;<br />
+<p>sub READLINE<br/>
+{<br/>
+    $r = shift;<br/>
     return &#8220;PRINT called $$r times
-&#8221;<br />
+&#8221;<br/>
 }</p>
-<dt><font SIZE="-1">GETC</font> this</dt>
+<dt>GETC this</dt>
 <dd> This method will be called when the <tt>&quot;getc&quot;</tt> function is called. </dd>
-<p>sub GETC<br />
-{<br />
-    print &#8220;Don&#8217;t GETC, Get Perl&#8221;;<br />
-    return &#8220;a&#8221;;<br />
+<p>sub GETC<br/>
+{<br/>
+    print &#8220;Don&#8217;t GETC, Get Perl&#8221;;<br/>
+    return &#8220;a&#8221;;<br/>
 }</p>
-<dt><font SIZE="-1">DESTROY</font> this</dt>
+<dt>DESTROY this</dt>
 <dd> As with the other types of ties, this method will be called when the tied handle is about to be destroyed. This is useful for debugging and possibly for cleaning up. </dd>
 <pre>
     sub DESTROY {
@@ -326,80 +326,80 @@ A-&gt;VERSION(1.2);
 <h2>Support for More Operating Systems</h2>
 <p> Support for the following operating systems is new in Perl 5.004.</p>
 <h3>Win32</h3>
-<p> Perl 5.004 now includes support for building a &#8220;native&#8221; perl under Windows <font SIZE="-1">NT,</font> using the Microsoft Visual C<font SIZE="-2">++</font> compiler (versions 2.0 and above) or the Borland C<font SIZE="-2">++</font> compiler (versions 5.02 and above). The resulting perl can be used under Windows 95 (if it is installed in the same directory locations as it got installed in Windows <font SIZE="-1">NT</font>). This port includes support for perl extension building tools like ExtUtils::MakeMaker and h2xs, so that many extensions available on the Comprehensive Perl Archive Network (<font SIZE="-1">CPAN</font>) can now be readily built under Windows <font SIZE="-1">NT.</font> See <a rel="nofollow" href="http://www.perl.com/">http://www.perl.com/</a> for more information on <font SIZE="-1">CPAN</font> and <i></i><font SIZE="-1"><i>README</i></font><i>.win32</i> in the perl distribution for more details on how to get started with building this port. </p>
-<p> There is also support for building perl under the Cygwin32 environment. Cygwin32 is a set of <font SIZE="-1">GNU</font> tools that make it possible to compile and run many Unix programs under Windows <font SIZE="-1">NT</font> by providing a mostly Unix-like interface for compilation and execution. See <i></i><font SIZE="-1"><i>README</i></font><i>.cygwin32</i> in the perl distribution for more details on this port and how to obtain the Cygwin32 toolkit.</p>
+<p> Perl 5.004 now includes support for building a &#8220;native&#8221; perl under Windows NT, using the Microsoft Visual C++ compiler (versions 2.0 and above) or the Borland C++ compiler (versions 5.02 and above). The resulting perl can be used under Windows 95 (if it is installed in the same directory locations as it got installed in Windows NT). This port includes support for perl extension building tools like ExtUtils::MakeMaker and h2xs, so that many extensions available on the Comprehensive Perl Archive Network (CPAN) can now be readily built under Windows NT. See <a rel="nofollow" href="http://www.perl.com/">http://www.perl.com/</a> for more information on CPAN and <i></i><i>README</i><i>.win32</i> in the perl distribution for more details on how to get started with building this port. </p>
+<p> There is also support for building perl under the Cygwin32 environment. Cygwin32 is a set of GNU tools that make it possible to compile and run many Unix programs under Windows NT by providing a mostly Unix-like interface for compilation and execution. See <i></i><i>README</i><i>.cygwin32</i> in the perl distribution for more details on this port and how to obtain the Cygwin32 toolkit.</p>
 <h3>Plan 9</h3>
-<p> See <i></i><font SIZE="-1"><i>README</i></font><i>.plan9</i> in the perl distribution.</p>
-<h3><font SIZE="-1">QNX</font></h3>
-<p> See <i></i><font SIZE="-1"><i>README</i></font><i>.qnx</i> in the perl distribution.</p>
+<p> See <i></i><i>README</i><i>.plan9</i> in the perl distribution.</p>
+<h3>QNX</h3>
+<p> See <i></i><i>README</i><i>.qnx</i> in the perl distribution.</p>
 <h3>AmigaOS</h3>
-<p> See <i></i><font SIZE="-1"><i>README</i></font><i>.amigaos</i> in the perl distribution.</p>
+<p> See <i></i><i>README</i><i>.amigaos</i> in the perl distribution.</p>
 <h2>Pragmata</h2>
 <p> Six new pragmatic modules exist:</p>
 <dl>
-<dt>use autouse <font SIZE="-1">MODULE</font> =&gt; qw(sub1 sub2 sub3)</dt>
-<dd> Defers <tt>&quot;require MODULE&quot;</tt> until someone calls one of the specified subroutines (which must be exported by <font SIZE="-1">MODULE</font>). This pragma should be used with caution, and only when necessary.</dd>
+<dt>use autouse MODULE =&gt; qw(sub1 sub2 sub3)</dt>
+<dd> Defers <tt>&quot;require MODULE&quot;</tt> until someone calls one of the specified subroutines (which must be exported by MODULE). This pragma should be used with caution, and only when necessary.</dd>
 <dt>use blib</dt>
 <dd>
 </dd><dt>use blib &#8216;dir&#8217;</dt>
 <dd> Looks for MakeMaker-like <i>&#8216;blib&#8217;</i> directory structure starting in <i>dir</i> (or current directory) and working back up to five levels of parent directories. </dd>
 <p> Intended for use on command line with <code>-M</code> option as a way of testing arbitrary scripts against an uninstalled version of a package.</p>
-<dt>use constant <font SIZE="-1">NAME</font> =&gt; <font SIZE="-1">VALUE</font></dt>
+<dt>use constant NAME =&gt; VALUE</dt>
 <dd> Provides a convenient interface for creating compile-time constants, See &#8220;Constant Functions&#8221; in perlsub.</dd>
 <dt>use locale</dt>
-<dd> Tells the compiler to enable (or disable) the use of <font SIZE="-1">POSIX</font> locales for builtin operations. </dd>
-<p> When <tt>&quot;use locale&quot;</tt> is in effect, the current <font SIZE="-1">LC_CTYPE</font> locale is used for regular expressions and case mapping; <font SIZE="-1">LC_COLLATE</font> for string ordering; and <font SIZE="-1">LC_NUMERIC</font> for numeric formatting in printf and sprintf (but <code>not</code> in print). <font SIZE="-1">LC_NUMERIC</font> is always used in write, since lexical scoping of formats is problematic at best. </p>
-<p> Each <tt>&quot;use locale&quot;</tt> or <tt>&quot;no locale&quot;</tt> affects statements to the end of the enclosing <font SIZE="-1">BLOCK</font> or, if not inside a <font SIZE="-1">BLOCK,</font> to the end of the current file. Locales can be switched and queried with <code>POSIX::setlocale()</code>. </p>
+<dd> Tells the compiler to enable (or disable) the use of POSIX locales for builtin operations. </dd>
+<p> When <tt>&quot;use locale&quot;</tt> is in effect, the current LC_CTYPE locale is used for regular expressions and case mapping; LC_COLLATE for string ordering; and LC_NUMERIC for numeric formatting in printf and sprintf (but <code>not</code> in print). LC_NUMERIC is always used in write, since lexical scoping of formats is problematic at best. </p>
+<p> Each <tt>&quot;use locale&quot;</tt> or <tt>&quot;no locale&quot;</tt> affects statements to the end of the enclosing BLOCK or, if not inside a BLOCK, to the end of the current file. Locales can be switched and queried with <code>POSIX::setlocale()</code>. </p>
 <p> See perllocale for more information.</p>
 <dt>use ops</dt>
 <dd> Disable unsafe opcodes, or any named opcodes, when compiling Perl code.</dd>
 <dt>use vmsish</dt>
-<dd> Enable VMS-specific language features. Currently, there are three VMS-specific features available: &#8216;status&#8217;, which makes <tt>$?</tt> and <tt>&quot;system&quot;</tt> return genuine <font SIZE="-1">VMS</font> status values instead of emulating <font SIZE="-1">POSIX</font>; &#8216;exit&#8217;, which makes <tt>&quot;exit&quot;</tt> take a genuine <font SIZE="-1">VMS</font> status value instead of assuming that <tt>&quot;exit 1&quot;</tt> is an error; and &#8216;time&#8217;, which makes all times relative to the local time zone, in the <font SIZE="-1">VMS</font> tradition.</dd></dl>
+<dd> Enable VMS-specific language features. Currently, there are three VMS-specific features available: &#8216;status&#8217;, which makes <tt>$?</tt> and <tt>&quot;system&quot;</tt> return genuine VMS status values instead of emulating POSIX; &#8216;exit&#8217;, which makes <tt>&quot;exit&quot;</tt> take a genuine VMS status value instead of assuming that <tt>&quot;exit 1&quot;</tt> is an error; and &#8216;time&#8217;, which makes all times relative to the local time zone, in the VMS tradition.</dd></dl>
 <h2>Modules</h2>
 <h3>Required Updates</h3>
 <p> Though Perl 5.004 is compatible with almost all modules that work with Perl 5.003, there are a few exceptions: </p>
-<p>    Module   Required Version for Perl 5.004<br />
-    &#8212;&#8212;   &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-<br />
-    Filter   Filter-1.12<br />
-    LWP      libwww-perl-5.08<br />
+<p>    Module   Required Version for Perl 5.004<br/>
+    &#8212;&#8212;   &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-<br/>
+    Filter   Filter-1.12<br/>
+    LWP      libwww-perl-5.08<br/>
     Tk       Tk400.202 (-w makes noise)</p>
 <p> Also, the majordomo mailing list program, version 1.94.1, doesn&#8217;t work with Perl 5.004 (nor with perl 4), because it executes an invalid regular expression. This bug is fixed in majordomo version 1.94.2.</p>
 <h3>Installation directories</h3>
 <p> The <i>installperl</i> script now places the Perl source files for extensions in the architecture-specific library directory, which is where the shared libraries for extensions have always been. This change is intended to allow administrators to keep the Perl 5.004 library directory unchanged from a previous version, without running the risk of binary incompatibility between extensions&#8217; Perl source and shared libraries.</p>
 <h3>Module information summary</h3>
 <p> Brand new modules, arranged by topic rather than strictly alphabetically: </p>
-<p>    CGI.pm               Web server interface (&#8220;Common Gateway Interface&#8221;)<br />
-    CGI/Apache.pm        Support for Apache&#8217;s Perl module<br />
-    CGI/Carp.pm          Log server errors with helpful context<br />
-    CGI/Fast.pm          Support for FastCGI (persistent server process)<br />
-    CGI/Push.pm          Support for server push<br />
-    CGI/Switch.pm        Simple interface for multiple server types<br />
-    CPAN                 Interface to Comprehensive Perl Archive Network<br />
-    CPAN::FirstTime      Utility for creating CPAN configuration file<br />
-    CPAN::Nox            Runs CPAN while avoiding compiled extensions<br />
-    IO.pm                Top-level interface to IO::* classes<br />
-    IO/File.pm           IO::File extension Perl module<br />
-    IO/Handle.pm         IO::Handle extension Perl module<br />
-    IO/Pipe.pm           IO::Pipe extension Perl module<br />
-    IO/Seekable.pm       IO::Seekable extension Perl module<br />
-    IO/Select.pm         IO::Select extension Perl module<br />
-    IO/Socket.pm         IO::Socket extension Perl module<br />
-    Opcode.pm            Disable named opcodes when compiling Perl code<br />
-    ExtUtils/Embed.pm    Utilities for embedding Perl in C programs<br />
-    ExtUtils/testlib.pm  Fixes up @INC to use just-built extension<br />
-    FindBin.pm           Find path of currently executing program<br />
-    Class/Struct.pm      Declare struct-like datatypes as Perl classes<br />
-    File/stat.pm         By-name interface to Perl&#8217;s builtin stat<br />
-    Net/hostent.pm       By-name interface to Perl&#8217;s builtin gethost*<br />
-    Net/netent.pm        By-name interface to Perl&#8217;s builtin getnet*<br />
-    Net/protoent.pm      By-name interface to Perl&#8217;s builtin getproto*<br />
-    Net/servent.pm       By-name interface to Perl&#8217;s builtin getserv*<br />
-    Time/gmtime.pm       By-name interface to Perl&#8217;s builtin gmtime<br />
-    Time/localtime.pm    By-name interface to Perl&#8217;s builtin localtime<br />
-    Time/tm.pm           Internal object for Time::{gm,local}time<br />
-    User/grent.pm        By-name interface to Perl&#8217;s builtin getgr*<br />
-    User/pwent.pm        By-name interface to Perl&#8217;s builtin getpw*<br />
-    Tie/RefHash.pm       Base class for tied hashes with references as keys<br />
+<p>    CGI.pm               Web server interface (&#8220;Common Gateway Interface&#8221;)<br/>
+    CGI/Apache.pm        Support for Apache&#8217;s Perl module<br/>
+    CGI/Carp.pm          Log server errors with helpful context<br/>
+    CGI/Fast.pm          Support for FastCGI (persistent server process)<br/>
+    CGI/Push.pm          Support for server push<br/>
+    CGI/Switch.pm        Simple interface for multiple server types<br/>
+    CPAN                 Interface to Comprehensive Perl Archive Network<br/>
+    CPAN::FirstTime      Utility for creating CPAN configuration file<br/>
+    CPAN::Nox            Runs CPAN while avoiding compiled extensions<br/>
+    IO.pm                Top-level interface to IO::* classes<br/>
+    IO/File.pm           IO::File extension Perl module<br/>
+    IO/Handle.pm         IO::Handle extension Perl module<br/>
+    IO/Pipe.pm           IO::Pipe extension Perl module<br/>
+    IO/Seekable.pm       IO::Seekable extension Perl module<br/>
+    IO/Select.pm         IO::Select extension Perl module<br/>
+    IO/Socket.pm         IO::Socket extension Perl module<br/>
+    Opcode.pm            Disable named opcodes when compiling Perl code<br/>
+    ExtUtils/Embed.pm    Utilities for embedding Perl in C programs<br/>
+    ExtUtils/testlib.pm  Fixes up @INC to use just-built extension<br/>
+    FindBin.pm           Find path of currently executing program<br/>
+    Class/Struct.pm      Declare struct-like datatypes as Perl classes<br/>
+    File/stat.pm         By-name interface to Perl&#8217;s builtin stat<br/>
+    Net/hostent.pm       By-name interface to Perl&#8217;s builtin gethost*<br/>
+    Net/netent.pm        By-name interface to Perl&#8217;s builtin getnet*<br/>
+    Net/protoent.pm      By-name interface to Perl&#8217;s builtin getproto*<br/>
+    Net/servent.pm       By-name interface to Perl&#8217;s builtin getserv*<br/>
+    Time/gmtime.pm       By-name interface to Perl&#8217;s builtin gmtime<br/>
+    Time/localtime.pm    By-name interface to Perl&#8217;s builtin localtime<br/>
+    Time/tm.pm           Internal object for Time::{gm,local}time<br/>
+    User/grent.pm        By-name interface to Perl&#8217;s builtin getgr*<br/>
+    User/pwent.pm        By-name interface to Perl&#8217;s builtin getpw*<br/>
+    Tie/RefHash.pm       Base class for tied hashes with references as keys<br/>
     UNIVERSAL.pm         Base class for *ALL* classes</p>
 <h3>Fcntl</h3>
 <p> New constants in the existing Fcntl modules are now supported, provided that your operating system happens to support them: </p>
@@ -414,8 +414,8 @@ A-&gt;VERSION(1.2);
         LOCK_SH LOCK_EX LOCK_NB LOCK_UN
 </pre>
 <p> These constants are defined in all environments (because where there is no <code>flock()</code> system call, Perl emulates it). However, for historical reasons, these constants are not exported unless they are explicitly requested with the &#8220;:flock&#8221; tag (e.g. <tt>&quot;use Fcntl ':flock'&quot;</tt>).</p>
-<h3><font SIZE="-1">IO</font></h3>
-<p> The <font SIZE="-1">IO</font> module provides a simple mechanism to load all the <font SIZE="-1">IO</font> modules at one go. Currently this includes: </p>
+<h3>IO</h3>
+<p> The IO module provides a simple mechanism to load all the IO modules at one go. Currently this includes: </p>
 <pre>
      IO::Handle
      IO::Seekable
@@ -453,16 +453,16 @@ A-&gt;VERSION(1.2);
 <dt>&bull;</dt>
 <dd> By public demand, added support for the standard hash function <code>exists()</code>.</dd>
 <dt>&bull;</dt>
-<dd> Made it compatible with Berkeley <font SIZE="-1">DB 1.86.</font></dd>
+<dd> Made it compatible with Berkeley DB 1.86.</dd>
 <dt>&bull;</dt>
-<dd> Made negative subscripts work with <font SIZE="-1">RECNO</font> interface.</dd>
+<dd> Made negative subscripts work with RECNO interface.</dd>
 <dt>&bull;</dt>
 <dd> Changed the default flags from O_RDWR to O_CREAT|O_RDWR and the default mode from 0640 to 0666.</dd>
 <dt>&bull;</dt>
 <dd> Made DB_File automatically import the <code>open()</code> constants (O_RDWR, O_CREAT etc.) from Fcntl, if available.</dd>
 <dt>&bull;</dt>
 <dd> Updated documentation.</dd></dl>
-<p> Refer to the <font SIZE="-1">HISTORY</font> section in DB_File.pm for a complete list of changes. Everything after DB_File 1.01 has been added since 5.003.</p>
+<p> Refer to the HISTORY section in DB_File.pm for a complete list of changes. Everything after DB_File 1.01 has been added since 5.003.</p>
 <h3>Net::Ping</h3>
 <p> Major rewrite &#8211; support added for both udp echo and real icmp pings.</p>
 <h3>Object-oriented overrides for builtin operators</h3>
@@ -479,29 +479,29 @@ A-&gt;VERSION(1.2);
     User::pwent
 </pre>
 <p> For example, you can now say </p>
-<p>use File::stat;<br />
-use User::pwent;<br />
+<p>use File::stat;<br/>
+use User::pwent;<br/>
 $his = (stat($filename)-&gt;st_uid == pwent($whoever)-&gt;pw_uid);</p>
 <h2>Utility Changes</h2>
 <h3>pod2html</h3>
 <dl>
-<dt>Sends converted <font SIZE="-1">HTML</font> to standard output</dt>
-<dd> The <i>pod2html</i> utility included with Perl 5.004 is entirely new. By default, it sends the converted <font SIZE="-1">HTML</font> to its standard output, instead of writing it to a file like Perl 5.003&#8217;s <i>pod2html</i> did. Use the <code>&#8211;outfile=FILENAME</code> option to write to a file.</dd></dl>
+<dt>Sends converted HTML to standard output</dt>
+<dd> The <i>pod2html</i> utility included with Perl 5.004 is entirely new. By default, it sends the converted HTML to its standard output, instead of writing it to a file like Perl 5.003&#8217;s <i>pod2html</i> did. Use the <code>&#8211;outfile=FILENAME</code> option to write to a file.</dd></dl>
 <h3>xsubpp</h3>
 <dl>
 <dt>&quot;void&quot; XSUBs now default to returning nothing</dt>
-<dd> Due to a documentation/implementation bug in previous versions of Perl, XSUBs with a return type of <tt>&quot;void&quot;</tt> have actually been returning one value. Usually that value was the <font SIZE="-1">GV</font> for the <font SIZE="-1">XSUB,</font> but sometimes it was some already freed or reused value, which would sometimes lead to program failure. </dd>
-<p> In Perl 5.004, if an <font SIZE="-1">XSUB</font> is declared as returning <tt>&quot;void&quot;</tt>, it actually returns no value, i.e. an empty list (though there is a backward-compatibility exception; see below). If your <font SIZE="-1">XSUB</font> really does return an <font SIZE="-1">SV,</font> you should give it a return type of <tt>&quot;SV *&quot;</tt>. </p>
-<p> For backward compatibility, <i>xsubpp</i> tries to guess whether a <tt>&quot;void&quot;</tt> <font SIZE="-1">XSUB</font> is really <tt>&quot;void&quot;</tt> or if it wants to return an <tt>&quot;SV *&quot;</tt>. It does so by examining the text of the <font SIZE="-1">XSUB:</font> if <i>xsubpp</i> finds what looks like an assignment to <tt>ST(0)</tt>, it assumes that the <font SIZE="-1">XSUB</font>&#8216;s return type is really <tt>&quot;SV *&quot;</tt>.</dl>
+<dd> Due to a documentation/implementation bug in previous versions of Perl, XSUBs with a return type of <tt>&quot;void&quot;</tt> have actually been returning one value. Usually that value was the GV for the XSUB, but sometimes it was some already freed or reused value, which would sometimes lead to program failure. </dd>
+<p> In Perl 5.004, if an XSUB is declared as returning <tt>&quot;void&quot;</tt>, it actually returns no value, i.e. an empty list (though there is a backward-compatibility exception; see below). If your XSUB really does return an SV, you should give it a return type of <tt>&quot;SV *&quot;</tt>. </p>
+<p> For backward compatibility, <i>xsubpp</i> tries to guess whether a <tt>&quot;void&quot;</tt> XSUB is really <tt>&quot;void&quot;</tt> or if it wants to return an <tt>&quot;SV *&quot;</tt>. It does so by examining the text of the XSUB: if <i>xsubpp</i> finds what looks like an assignment to <tt>ST(0)</tt>, it assumes that the XSUB&#8216;s return type is really <tt>&quot;SV *&quot;</tt>.</dl>
 <h2>C Language API Changes</h2>
 <dl>
 <dt>&quot;gv_fetchmethod&quot; and &quot;perl_call_sv&quot;</dt>
-<dd> The <tt>&quot;gv_fetchmethod&quot;</tt> function finds a method for an object, just like in Perl 5.003. The <font SIZE="-1">GV</font> it returns may be a method cache entry. However, in Perl 5.004, method cache entries are not visible to users; therefore, they can no longer be passed directly to <tt>&quot;perl_call_sv&quot;</tt>. Instead, you should use the <tt>&quot;GvCV&quot;</tt> macro on the <font SIZE="-1">GV</font> to extract its <font SIZE="-1">CV,</font> and pass the <font SIZE="-1">CV</font> to <tt>&quot;perl_call_sv&quot;</tt>. </dd>
+<dd> The <tt>&quot;gv_fetchmethod&quot;</tt> function finds a method for an object, just like in Perl 5.003. The GV it returns may be a method cache entry. However, in Perl 5.004, method cache entries are not visible to users; therefore, they can no longer be passed directly to <tt>&quot;perl_call_sv&quot;</tt>. Instead, you should use the <tt>&quot;GvCV&quot;</tt> macro on the GV to extract its CV, and pass the CV to <tt>&quot;perl_call_sv&quot;</tt>. </dd>
 <p> The most likely symptom of passing the result of <tt>&quot;gv_fetchmethod&quot;</tt> to <tt>&quot;perl_call_sv&quot;</tt> is Perl&#8217;s producing an &#8220;Undefined subroutine called&#8221; error on the <i>second</i> call to a given method (since there is no cache on the first call).</p>
 <dt>&quot;perl_eval_pv&quot;</dt>
 <dd> A new function handy for eval&#8217;ing strings of Perl code inside C code. This function returns the value from the eval statement, which can be used instead of fetching globals from the symbol table. See perlguts, perlembed and perlcall for details and examples.</dd>
-<dt>Extended <font SIZE="-1">API</font> for manipulating hashes</dt>
-<dd> Internal handling of hash keys has changed. The old hashtable <font SIZE="-1">API</font> is still fully supported, and will likely remain so. The additions to the <font SIZE="-1">API</font> allow passing keys as <tt>&quot;SV*&quot;</tt>s, so that <tt>&quot;tied&quot;</tt> hashes can be given real scalars as keys rather than plain strings (nontied hashes still can only use strings as keys). New extensions must use the new hash access functions and macros if they wish to use <tt>&quot;SV*&quot;</tt> keys. These additions also make it feasible to manipulate <tt>&quot;HE*&quot;</tt>s (hash entries), which can be more efficient. See perlguts for details.</dd></dl>
+<dt>Extended API for manipulating hashes</dt>
+<dd> Internal handling of hash keys has changed. The old hashtable API is still fully supported, and will likely remain so. The additions to the API allow passing keys as <tt>&quot;SV*&quot;</tt>s, so that <tt>&quot;tied&quot;</tt> hashes can be given real scalars as keys rather than plain strings (nontied hashes still can only use strings as keys). New extensions must use the new hash access functions and macros if they wish to use <tt>&quot;SV*&quot;</tt> keys. These additions also make it feasible to manipulate <tt>&quot;HE*&quot;</tt>s (hash entries), which can be more efficient. See perlguts for details.</dd></dl>
 <h2>Documentation Changes</h2>
 <p> Many of the base and library pods were updated. These new pods are included in section 1:</p>
 <dl>
@@ -512,9 +512,9 @@ $his = (stat($filename)-&gt;st_uid == pwent($whoever)-&gt;pw_uid);</p>
 <dt>perllocale</dt>
 <dd> Locale support (internationalization and localization).</dd>
 <dt>perltoot</dt>
-<dd> Tutorial on Perl <font SIZE="-1">OO</font> programming.</dd>
+<dd> Tutorial on Perl OO programming.</dd>
 <dt>perlapio</dt>
-<dd> Perl internal <font SIZE="-1">IO</font> abstraction interface.</dd>
+<dd> Perl internal IO abstraction interface.</dd>
 <dt>perlmodlib</dt>
 <dd> Perl module library and recommended practice for module creation. Extracted from perlmod (which is much smaller as a result).</dd>
 <dt>perldebug</dt>
@@ -535,17 +535,17 @@ $his = (stat($filename)-&gt;st_uid == pwent($whoever)-&gt;pw_uid);</p>
 <dl>
 <dt>&quot;my&quot; variable %s masks earlier declaration in same scope</dt>
 <dd> (W) A lexical variable has been redeclared in the same scope, effectively eliminating all access to the previous instance. This is almost always a typographical error. Note that the earlier variable will still exist until the end of the scope or until all closure referents to it are destroyed.</dd>
-<dt>%s argument is not a <font SIZE="-1">HASH</font> element or slice</dt>
+<dt>%s argument is not a HASH element or slice</dt>
 <dd> (F) The argument to <code>delete()</code> must be either a hash element, such as </dd>
 <p>$foo{$bar} $ref-&gt;[12] -&gt; { &#8220;susie&#8221; }</p>
 <p> or a hash slice, such as </p>
-<p>@foo<br />
-{<br />
-    $bar, $baz, $xyzzy<br />
-}<br />
-@{$ref-&gt;[12]}<br />
-{<br />
-    &#8220;susie&#8221;, &#8220;queue&#8221;<br />
+<p>@foo<br/>
+{<br/>
+    $bar, $baz, $xyzzy<br/>
+}<br/>
+@{$ref-&gt;[12]}<br/>
+{<br/>
+    &#8220;susie&#8221;, &#8220;queue&#8221;<br/>
 }</p>
 <dt>Allocation too large: %lx</dt>
 <dd> (X) You can&#8217;t allocate more than 64K on an MS-DOS machine.</dd>
@@ -579,8 +579,8 @@ $his = (stat($filename)-&gt;st_uid == pwent($whoever)-&gt;pw_uid);</p>
 <dd> (F) Perl limits identifiers (names for variables, functions, etc.) to 252 characters for simple names, somewhat more for compound names (like <tt>$A::B</tt>). You&#8217;ve exceeded Perl&#8217;s limits. Future versions of Perl are likely to eliminate these arbitrary limitations.</dd>
 <dt>Illegal character %s (carriage return)</dt>
 <dd> (F) A carriage return character was found in the input. This is an error, and not a warning, because carriage return characters can break multi-line strings, including here documents (e.g., <tt>&quot;print &lt;&lt;EOF;&quot;</tt>).</dd>
-<dt>Illegal switch in <font SIZE="-1">PERL5OPT:</font> %s</dt>
-<dd> (X) The <font SIZE="-1">PERL5OPT</font> environment variable may only be used to set the following switches: <code>-[DIMUdmw]</code>.</dd>
+<dt>Illegal switch in PERL5OPT: %s</dt>
+<dd> (X) The PERL5OPT environment variable may only be used to set the following switches: <code>-[DIMUdmw]</code>.</dd>
 <dt>Integer overflow in hex number</dt>
 <dd> (S) The literal hex number you have specified is too big for your architecture. On a 32-bit architecture the largest hex literal is 0xFFFFFFFF.</dd>
 <dt>Integer overflow in octal number</dt>
@@ -651,12 +651,12 @@ $his = (stat($filename)-&gt;st_uid == pwent($whoever)-&gt;pw_uid);</p>
 <dd> (F) The Perl parser has no idea what to do with the specified character in your Perl script (or eval). Perhaps you tried to run a compressed script, a binary program, or a directory as a Perl program.</dd>
 <dt>Unsupported function fork</dt>
 <dd> (F) Your version of executable does not support forking. </dd>
-<p> Note that under some systems, like <font SIZE="-1">OS/2,</font> there may be different flavors of Perl executables, some of which may support fork, some not. Try changing the name you call Perl by to <tt>&quot;perl_&quot;</tt>, <tt>&quot;perl__&quot;</tt>, and so on.</p>
+<p> Note that under some systems, like OS/2, there may be different flavors of Perl executables, some of which may support fork, some not. Try changing the name you call Perl by to <tt>&quot;perl_&quot;</tt>, <tt>&quot;perl__&quot;</tt>, and so on.</p>
 <dt>Use of &quot;$$&lt;digit&gt;&quot; to mean &quot;${$}&lt;digit&gt;&quot; is deprecated</dt>
 <dd> (D) Perl versions before 5.004 misinterpreted any type marker followed by &#8220;$&#8221; and a digit. For example, &#8220;$$0&#8221; was incorrectly taken to mean &#8220;${$}0&#8221; instead of &#8220;${$0}&#8221;. This bug is (mostly) fixed in Perl 5.004. </dd>
 <p> However, the developers of Perl 5.004 could not fix this bug completely, because at least two widely-used modules depend on the old meaning of &#8220;$$0&#8221; in a string. So Perl 5.004 still interprets &#8220;$$&lt;digit&gt;&#8221; in the old (broken) way inside strings; but it generates this message as a warning. And in Perl 5.005, this special treatment will cease.</p>
 <dt>Value of %s can be &quot;0&quot;; test with <code>defined()</code></dt>
-<dd> (W) In a conditional expression, you used &lt;<font SIZE="-1">HANDLE</font>&gt;, &lt;*&gt; (glob), <tt>&quot;each()&quot;</tt>, or <tt>&quot;readdir()&quot;</tt> as a boolean value. Each of these constructs can return a value of &#8220;0&#8221;; that would make the conditional expression false, which is probably not what you intended. When using these constructs in conditional expressions, test their values with the <tt>&quot;defined&quot;</tt> operator.</dd>
+<dd> (W) In a conditional expression, you used &lt;HANDLE&gt;, &lt;*&gt; (glob), <tt>&quot;each()&quot;</tt>, or <tt>&quot;readdir()&quot;</tt> as a boolean value. Each of these constructs can return a value of &#8220;0&#8221;; that would make the conditional expression false, which is probably not what you intended. When using these constructs in conditional expressions, test their values with the <tt>&quot;defined&quot;</tt> operator.</dd>
 <dt>Variable &quot;%s&quot; may be unavailable</dt>
 <dd> (W) An inner (nested) <i>anonymous</i> subroutine is inside a <i>named</i> subroutine, and outside that is another subroutine; and the anonymous (innermost) subroutine is referencing a lexical variable defined in the outermost subroutine. For example: </dd>
 <pre><code>
@@ -682,11 +682,11 @@ sub outermost
 <dt>Warning: something&#8217;s wrong</dt>
 <dd> (W) You passed <code>warn()</code> an empty string (the equivalent of <tt>&quot;warn &quot;&quot;&quot;</tt>) or you called it with no args and <tt>$_</tt> was empty.</dd>
 <dt>Ill-formed logical name |%s| in prime_env_iter</dt>
-<dd> (W) A warning peculiar to <font SIZE="-1">VMS.</font> A logical name was encountered when preparing to iterate over <tt>%ENV</tt> which violates the syntactic rules governing logical names. Since it cannot be translated normally, it is skipped, and will not appear in <tt>%ENV</tt>. This may be a benign occurrence, as some software packages might directly modify logical name tables and introduce nonstandard names, or it may indicate that a logical name table has been corrupted.</dd>
+<dd> (W) A warning peculiar to VMS. A logical name was encountered when preparing to iterate over <tt>%ENV</tt> which violates the syntactic rules governing logical names. Since it cannot be translated normally, it is skipped, and will not appear in <tt>%ENV</tt>. This may be a benign occurrence, as some software packages might directly modify logical name tables and introduce nonstandard names, or it may indicate that a logical name table has been corrupted.</dd>
 <dt>Got an error from DosAllocMem</dt>
-<dd> (P) An error peculiar to <font SIZE="-1">OS/2.</font> Most probably you&#8217;re using an obsolete version of Perl, and this should not happen anyway.</dd>
-<dt>Malformed <font SIZE="-1">PERLLIB_PREFIX</font></dt>
-<dd> (F) An error peculiar to <font SIZE="-1">OS/2.</font> <font SIZE="-1">PERLLIB_PREFIX</font> should be of the form </dd>
+<dd> (P) An error peculiar to OS/2. Most probably you&#8217;re using an obsolete version of Perl, and this should not happen anyway.</dd>
+<dt>Malformed PERLLIB_PREFIX</dt>
+<dd> (F) An error peculiar to OS/2. PERLLIB_PREFIX should be of the form </dd>
 <pre>
     prefix1;prefix2
 </pre>
@@ -694,19 +694,19 @@ sub outermost
 <pre>
     prefix1 prefix2
 </pre>
-<p> with nonempty prefix1 and prefix2. If <tt>&quot;prefix1&quot;</tt> is indeed a prefix of a builtin library search path, prefix2 is substituted. The error may appear if components are not found, or are too long. See &#8220;<font SIZE="-1">PERLLIB_PREFIX&#8221;</font> in <i></i><font SIZE="-1"><i>README</i></font><i>.os2</i>.</p>
-<dt><font SIZE="-1">PERL_SH_DIR</font> too long</dt>
-<dd> (F) An error peculiar to <font SIZE="-1">OS/2. PERL_SH_DIR</font> is the directory to find the <tt>&quot;sh&quot;</tt>-shell in. See &#8220;<font SIZE="-1">PERL_SH_DIR&#8221;</font> in <i></i><font SIZE="-1"><i>README</i></font><i>.os2</i>.</dd>
+<p> with nonempty prefix1 and prefix2. If <tt>&quot;prefix1&quot;</tt> is indeed a prefix of a builtin library search path, prefix2 is substituted. The error may appear if components are not found, or are too long. See &#8220;PERLLIB_PREFIX&#8221; in <i></i><i>README</i><i>.os2</i>.</p>
+<dt>PERL_SH_DIR too long</dt>
+<dd> (F) An error peculiar to OS/2. PERL_SH_DIR is the directory to find the <tt>&quot;sh&quot;</tt>-shell in. See &#8220;PERL_SH_DIR&#8221; in <i></i><i>README</i><i>.os2</i>.</dd>
 <dt>Process terminated by SIG%s</dt>
-<dd> (W) This is a standard message issued by <font SIZE="-1">OS/2</font> applications, while *nix applications die in silence. It is considered a feature of the <font SIZE="-1">OS/2</font> port. One can easily disable this by appropriate sighandlers, see &#8220;Signals&#8221; in perlipc. See also &#8220;Process terminated by <font SIZE="-1">SIGTERM/SIGINT&#8221;</font> in <i></i><font SIZE="-1"><i>README</i></font><i>.os2</i>.</dd></dl>
+<dd> (W) This is a standard message issued by OS/2 applications, while *nix applications die in silence. It is considered a feature of the OS/2 port. One can easily disable this by appropriate sighandlers, see &#8220;Signals&#8221; in perlipc. See also &#8220;Process terminated by SIGTERM/SIGINT&#8221; in <i></i><i>README</i><i>.os2</i>.</dd></dl>
 <h2>BUGS</h2>
 <p> If you find what you think is a bug, you might check the headers of recently posted articles in the comp.lang.perl.misc newsgroup. There may also be information at <a rel="nofollow" href="http://www.perl.com/perl/">http://www.perl.com/perl/</a> , the Perl Home Page. </p>
 <p> If you believe you have an unreported bug, please run the <code>perlbug</code> program included with your release. Make sure you trim your bug down to a tiny but sufficient test case. Your bug report, along with the output of <tt>&quot;perl -V&quot;</tt>, will be sent off to &lt;<i>perlbug [at] perl.com</i>&gt; to be analysed by the Perl porting team.</p>
 <h2>SEE ALSO</h2>
 <p> The <i>Changes</i> file for exhaustive details on what changed. </p>
-<p> The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. This file has been significantly updated for 5.004, so even veteran users should look through it. </p>
-<p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
+<p> The <i></i><i>INSTALL</i><i></i> file for how to build Perl. This file has been significantly updated for 5.004, so even veteran users should look through it. </p>
+<p> The <i></i><i>README</i><i></i> file for general stuff. </p>
 <p> The <i>Copying</i> file for copyright information.</p>
 <h2>HISTORY</h2>
 <p> Constructed by Tom Christiansen, grabbing material with permission from innumerable contributors, with kibitzing by more than a few Perl porters. </p>
-<p> Last update: Wed May 14 11:14:09 <font SIZE="-1">EDT 1997</font> </p>
+<p> Last update: Wed May 14 11:14:09 EDT 1997 </p>

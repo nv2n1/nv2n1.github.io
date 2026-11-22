@@ -84,7 +84,7 @@ description: "xdg-email – command line tool for sending mail using the user’
 <dt>
 </dt><dd> No permission to read one of the files passed on the command line.</dd></dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-xdg-open/">xdg-open</a></code>(1), <code><a href="/docs/linux/man/1-xdg-mime/">xdg-mime</a></code>(1), m[blue]<code>MIME applications associations specification</code>m[]<font SIZE="-2">[1]</font>, m[blue]<code>RFC 6068 &#8211; The &#8216;mailto&#8217; URI Scheme</code>m[]<font SIZE="-2">[2]</font></p>
+<p> <code><a href="/docs/linux/man/1-xdg-open/">xdg-open</a></code>(1), <code><a href="/docs/linux/man/1-xdg-mime/">xdg-mime</a></code>(1), m[blue]<code>MIME applications associations specification</code>m[][1], m[blue]<code>RFC 6068 &#8211; The &#8216;mailto&#8217; URI Scheme</code>m[][2]</p>
 <h2>EXAMPLES</h2>
 <dl>
 <dt>

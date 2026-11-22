@@ -10,26 +10,26 @@ description: "sosreport – Collect and package diagnostic and support data"
 
 <p> sosreport &#8211; Collect and package diagnostic and support data</p>
 <h2>SYNOPSIS</h2>
-<p> <code>sosreport</code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-l|&#8211;list-plugins]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-n|&#8211;skip-plugins plugin-names]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-e|&#8211;enable-plugins plugin-names]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-o|&#8211;only-plugins plugin-names]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-a|&#8211;alloptions]&nbsp;<wbr>[-v|&#8211;verbose]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-k plug.opt|&#8211;plugin-option plug.opt]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&#8211;no-report]&nbsp;<wbr>[&#8211;config-file conf]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&#8211;batch]&nbsp;<wbr>[&#8211;build]&nbsp;<wbr>[&#8211;debug]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&#8211;name name]&nbsp;<wbr>[&#8211;case-id id]&nbsp;<wbr>[&#8211;ticket-number nr]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-s|&#8211;sysroot SYSROOT]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-c|&#8211;chroot&nbsp;<wbr>{auto|always|never}<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&#8211;tmp-dir directory]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-p|&#8211;profile profile-name]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&#8211;list-profiles]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&#8211;verify]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&#8211;log-size]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&#8211;all-logs]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-z|&#8211;compression-type method]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&#8211;experimental]<br />
+<p> <code>sosreport</code><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-l|&#8211;list-plugins]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-n|&#8211;skip-plugins plugin-names]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-e|&#8211;enable-plugins plugin-names]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-o|&#8211;only-plugins plugin-names]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-a|&#8211;alloptions]&nbsp;<wbr>[-v|&#8211;verbose]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-k plug.opt|&#8211;plugin-option plug.opt]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&#8211;no-report]&nbsp;<wbr>[&#8211;config-file conf]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&#8211;batch]&nbsp;<wbr>[&#8211;build]&nbsp;<wbr>[&#8211;debug]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&#8211;name name]&nbsp;<wbr>[&#8211;case-id id]&nbsp;<wbr>[&#8211;ticket-number nr]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-s|&#8211;sysroot SYSROOT]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-c|&#8211;chroot&nbsp;<wbr>{auto|always|never}<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&#8211;tmp-dir directory]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-p|&#8211;profile profile-name]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&#8211;list-profiles]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&#8211;verify]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&#8211;log-size]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&#8211;all-logs]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-z|&#8211;compression-type method]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&#8211;experimental]<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-h|&#8211;help] </p>
 <h2>DESCRIPTION</h2>
 <p> <code>sosreport</code> generates an archive of configuration and diagnostic information from the running system. The archive may be stored locally or centrally for recording or tracking purposes or may be sent to technical support representatives, developers or system administrators to assist with technical fault-finding and debugging. </p>

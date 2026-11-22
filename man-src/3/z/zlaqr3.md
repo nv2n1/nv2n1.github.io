@@ -10,7 +10,7 @@ description: "zlaqr3.f –"
 <p>zlaqr3.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlaqr3</code> (WANTT, WANTZ, N, KTOP, KBOT, NW, H, LDH, ILOZ, IHIZ, Z, LDZ, NS, ND, SH, V, LDV, NH, T, LDT, NV, WV, LDWV, WORK, LWORK)<br />
+<p>subroutine <code>zlaqr3</code> (WANTT, WANTZ, N, KTOP, KBOT, NW, H, LDH, ILOZ, IHIZ, Z, LDZ, NS, ND, SH, V, LDV, NH, T, LDT, NV, WV, LDWV, WORK, LWORK)<br/>
  <i></i><code>ZLAQR3</code> performs the unitary similarity transformation of a Hessenberg matrix to detect and deflate fully converged eigenvalues from a trailing principal submatrix (aggressive early deflation).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlaqr3 (logicalWANTT, logicalWANTZ, integerN, integerKTOP, integerKBOT, integerNW, complex*16, dimension( ldh, * )H, integerLDH, integerILOZ, integerIHIZ, complex*16, dimension( ldz, * )Z, integerLDZ, integerNS, integerND, complex*16, dimension( * )SH, complex*16, dimension( ldv, * )V, integerLDV, integerNH, complex*16, dimension( ldt, * )T, integerLDT, integerNV, complex*16, dimension( ldwv, * )WV, integerLDWV, complex*16, dimension( * )WORK, integerLWORK)</h3>

@@ -15,26 +15,26 @@ description: "sctp – SCTP protocol."
 sctp_socket = socket(PF_INET, SOCK_STREAM, IPPROTO_SCTP);
 sctp_socket = socket(PF_INET, SOCK_SEQPACKET, IPPROTO_SCTP);</code></pre>
 <h2>Description</h2>
-<p>This is an implementation of the SCTP protocol as defined in RFC2960 and RFC3309. It is a message oriented, reliable transport protocol with direct support for multihoming that runs on top of <code><a href="/docs/linux/man/7-ip/">ip</a></code>(7), and supports both v4 and v6 versions. Like TCP, SCTP provides reliable, connection oriented data delivery with congestion control. Unlike TCP, SCTP also provides message boundary preservation, ordered and unordered message delivery, multi-streaming and multi-homing. Detection of data corruption, loss of data and duplication of data is achieved by using checksums and sequence numbers. A selective retransmission mechanism is applied to correct loss or corruption of data. This implementation supports a mapping of SCTP into sockets API as defined in the draft-ietf-tsvwg-sctpsocket-10.txt(Sockets API extensions for SCTP). Two styles of interfaces are supported. A <code>one-to-many</code> style interface with 1 to MANY relationship between socket and associations where the outbound association setup is implicit. The syntax of a one-to-many style socket() call is sd = socket(PF_INET, SOCK_STREAM, IPPROTO_SCTP); A typical server in this style uses the following socket calls in sequence to prepare an endpoint for servicing requests.<br />
-&nbsp;<wbr>&nbsp;<wbr>1. socket()<br />
-&nbsp;<wbr>&nbsp;<wbr>2. bind()<br />
-&nbsp;<wbr>&nbsp;<wbr>3. listen()<br />
-&nbsp;<wbr>&nbsp;<wbr>4. recvmsg()<br />
-&nbsp;<wbr>&nbsp;<wbr>5. sendmsg()<br />
-&nbsp;<wbr>&nbsp;<wbr>6. close() A typical client uses the following calls in sequence to setup an association with a server to request services.<br />
-&nbsp;<wbr>&nbsp;<wbr>1. socket()<br />
-&nbsp;<wbr>&nbsp;<wbr>2. sendmsg()<br />
-&nbsp;<wbr>&nbsp;<wbr>3. recvmsg()<br />
+<p>This is an implementation of the SCTP protocol as defined in RFC2960 and RFC3309. It is a message oriented, reliable transport protocol with direct support for multihoming that runs on top of <code><a href="/docs/linux/man/7-ip/">ip</a></code>(7), and supports both v4 and v6 versions. Like TCP, SCTP provides reliable, connection oriented data delivery with congestion control. Unlike TCP, SCTP also provides message boundary preservation, ordered and unordered message delivery, multi-streaming and multi-homing. Detection of data corruption, loss of data and duplication of data is achieved by using checksums and sequence numbers. A selective retransmission mechanism is applied to correct loss or corruption of data. This implementation supports a mapping of SCTP into sockets API as defined in the draft-ietf-tsvwg-sctpsocket-10.txt(Sockets API extensions for SCTP). Two styles of interfaces are supported. A <code>one-to-many</code> style interface with 1 to MANY relationship between socket and associations where the outbound association setup is implicit. The syntax of a one-to-many style socket() call is sd = socket(PF_INET, SOCK_STREAM, IPPROTO_SCTP); A typical server in this style uses the following socket calls in sequence to prepare an endpoint for servicing requests.<br/>
+&nbsp;<wbr>&nbsp;<wbr>1. socket()<br/>
+&nbsp;<wbr>&nbsp;<wbr>2. bind()<br/>
+&nbsp;<wbr>&nbsp;<wbr>3. listen()<br/>
+&nbsp;<wbr>&nbsp;<wbr>4. recvmsg()<br/>
+&nbsp;<wbr>&nbsp;<wbr>5. sendmsg()<br/>
+&nbsp;<wbr>&nbsp;<wbr>6. close() A typical client uses the following calls in sequence to setup an association with a server to request services.<br/>
+&nbsp;<wbr>&nbsp;<wbr>1. socket()<br/>
+&nbsp;<wbr>&nbsp;<wbr>2. sendmsg()<br/>
+&nbsp;<wbr>&nbsp;<wbr>3. recvmsg()<br/>
 &nbsp;<wbr>&nbsp;<wbr>4. close() A <code>one-to-one style</code> interface with a 1 to 1 relationship between socket and association which enables existing TCP applications to be ported to SCTP with very little effort. The syntax of a one-to-one style socket() call is </p>
 <pre><code>sd = socket(PF_INET, SOCK_STREAM, IPPROTO_SCTP);</code></pre>
-<p> A typical server in one-to-one style uses the following system call sequence to prepare an SCTP endpoint for servicing requests:<br />
-&nbsp;<wbr>&nbsp;<wbr>1. socket()<br />
-&nbsp;<wbr>&nbsp;<wbr>2. bind()<br />
-&nbsp;<wbr>&nbsp;<wbr>3. listen()<br />
-&nbsp;<wbr>&nbsp;<wbr>4. accept() The accept() call blocks until a new association is set up. It returns with a new socket descriptor. The server then uses the new socket descriptor to communicate with the client, using recv() and send() calls to get requests and send back responses. Then it calls<br />
-&nbsp;<wbr>&nbsp;<wbr>5. close() to terminate the association. A typical client uses the following system call sequence to setup an association with a server to request services:<br />
-&nbsp;<wbr>&nbsp;<wbr>1. socket()<br />
-&nbsp;<wbr>&nbsp;<wbr>2. connect() After returning from connect(), the client uses send() and recv() calls to send out requests and receive responses from the server. The client calls<br />
+<p> A typical server in one-to-one style uses the following system call sequence to prepare an SCTP endpoint for servicing requests:<br/>
+&nbsp;<wbr>&nbsp;<wbr>1. socket()<br/>
+&nbsp;<wbr>&nbsp;<wbr>2. bind()<br/>
+&nbsp;<wbr>&nbsp;<wbr>3. listen()<br/>
+&nbsp;<wbr>&nbsp;<wbr>4. accept() The accept() call blocks until a new association is set up. It returns with a new socket descriptor. The server then uses the new socket descriptor to communicate with the client, using recv() and send() calls to get requests and send back responses. Then it calls<br/>
+&nbsp;<wbr>&nbsp;<wbr>5. close() to terminate the association. A typical client uses the following system call sequence to setup an association with a server to request services:<br/>
+&nbsp;<wbr>&nbsp;<wbr>1. socket()<br/>
+&nbsp;<wbr>&nbsp;<wbr>2. connect() After returning from connect(), the client uses send() and recv() calls to send out requests and receive responses from the server. The client calls<br/>
 &nbsp;<wbr>&nbsp;<wbr>3. close() to terminate this association when done.</p>
 <h2>Address Formats</h2>
 <p>SCTP is built on top of IP (see <code><a href="/docs/linux/man/7-ip/">ip</a></code>(7)). The address formats defined by <code><a href="/docs/linux/man/7-ip/">ip</a></code>(7) apply to SCTP. SCTP only supports point-to-point communication; broadcasting and multicasting are not supported.</p>
@@ -111,7 +111,7 @@ sctp_socket = socket(PF_INET, SOCK_SEQPACKET, IPPROTO_SCTP);</code></pre>
 <dt><code>SCTP_PEER_ADDR_PARAMS</code></dt>
 <dd>Using this option, applications can enable or disable heartbeats for any peer address of an association, modify an address&#8217;s heartbeat interval, force a heartbeat to be sent immediately, and adjust the address&#8217;s maximum number of retransmissions sent before an address is considered unreachable. The structure sctp_paddrparams defined in /usr/include/netinet/sctp.h is used to access and modify an address&#8217;s parameters.</dd>
 <dt><code>SCTP_DEFAULT_SEND_PARAM</code></dt>
-<dd>Applications that wish to use the sendto() system call may wish to specify a default set of parameters that would normally be supplied through the inclusion of ancillary data. This socket option allows such an application to set the default sctp_sndrcvinfo structure. The application that wishes to use this socket option simply passes in to this call the sctp_sndrcvinfo structure defined in /usr/include/netinet/sctp.h. The input parameters accepted by this call include sinfo_stream, sinfo_flags, sinfo_ppid, sinfo_context, sinfo_timetolive. The user must set the sinfo_assoc_id field to identify the<br />
+<dd>Applications that wish to use the sendto() system call may wish to specify a default set of parameters that would normally be supplied through the inclusion of ancillary data. This socket option allows such an application to set the default sctp_sndrcvinfo structure. The application that wishes to use this socket option simply passes in to this call the sctp_sndrcvinfo structure defined in /usr/include/netinet/sctp.h. The input parameters accepted by this call include sinfo_stream, sinfo_flags, sinfo_ppid, sinfo_context, sinfo_timetolive. The user must set the sinfo_assoc_id field to identify the<br/>
 &nbsp;<wbr>association to affect if the caller is using the one-to-many style.</dd>
 <dt><code>SCTP_EVENTS</code></dt>
 <dd>This socket option is used to specify various notifications and ancillary data the user wishes to receive. The structure sctp_event_subscribe defined in /usr/include/netinet/sctp.h is used to access or modify the events of interest to the user.</dd>

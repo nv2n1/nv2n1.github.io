@@ -11,7 +11,7 @@ description: "ilaclr.f –"
 <p> ilaclr.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> INTEGER function <code>ilaclr</code> (M, N, A, LDA)<br />
+<p> INTEGER function <code>ilaclr</code> (M, N, A, LDA)<br/>
  <i></i><code>ILACLR</code> scans a matrix for its last non-zero row.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>INTEGER function ilaclr (integerM, integerN, complex, dimension( lda, * )A, integerLDA)</h3>

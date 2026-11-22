@@ -14,15 +14,15 @@ description: "sc::StateInFile –"
 #include &lt;state_file.h&gt;</code></pre>
 <p> Inherits <code>sc::StateIn</code>. Inherited by <code>sc::StateInBin</code>, and <code>sc::StateInText</code>.</p>
 <h3>Public Member Functions</h3>
-<p><code>StateInFile</code> ()<br />
- <i>State information will be obtained from cin. </i><br />
- <code>StateInFile</code> (std::istream &amp;s)<br />
- <i>State information will be obtained from fp. </i><br />
- <code>StateInFile</code> (const char *name)<br />
- <i>State information will be obtained from name. </i><br />
- virtual int <code>open</code> (const char *name)<br />
- <i>State information will be obtained from name. </i><br />
- virtual void <code>close</code> ()<br />
+<p><code>StateInFile</code> ()<br/>
+ <i>State information will be obtained from cin. </i><br/>
+ <code>StateInFile</code> (std::istream &amp;s)<br/>
+ <i>State information will be obtained from fp. </i><br/>
+ <code>StateInFile</code> (const char *name)<br/>
+ <i>State information will be obtained from name. </i><br/>
+ virtual int <code>open</code> (const char *name)<br/>
+ <i>State information will be obtained from name. </i><br/>
+ virtual void <code>close</code> ()<br/>
  <i>Close the output file. </i></p>
 <h3>Protected Attributes</h3>
 <pre><code>int opened_

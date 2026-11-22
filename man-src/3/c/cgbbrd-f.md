@@ -10,7 +10,7 @@ description: "cgbbrd.f –"
 <p>cgbbrd.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>cgbbrd</code> (VECT, M, N, NCC, KL, KU, AB, LDAB, D, E, Q, LDQ, PT, LDPT, C, LDC, WORK, RWORK, INFO)<br />
+<p>subroutine <code>cgbbrd</code> (VECT, M, N, NCC, KL, KU, AB, LDAB, D, E, Q, LDQ, PT, LDPT, C, LDC, WORK, RWORK, INFO)<br/>
  <i></i><code>CGBBRD</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cgbbrd (characterVECT, integerM, integerN, integerNCC, integerKL, integerKU, complex, dimension( ldab, * )AB, integerLDAB, real, dimension( * )D, real, dimension( * )E, complex, dimension( ldq, * )Q, integerLDQ, complex, dimension( ldpt, * )PT, integerLDPT, complex, dimension( ldc, * )C, integerLDC, complex, dimension( * )WORK, real, dimension( * )RWORK, integerINFO)</h3>

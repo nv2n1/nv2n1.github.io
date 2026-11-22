@@ -21,7 +21,7 @@ description: "zmq_msg_send – send a message part on a socket"
 <dd>Specifies that the message being sent is a multi-part message, and that further message parts are to follow. Refer to the section regarding multi-part messages below for a detailed description.</dd></dl>
 <p> The <i>zmq_msg_t</i> structure passed to <i>zmq_msg_send()</i> is nullified during the call. If you want to send the same message to multiple sockets you have to copy it using (e.g. using <i>zmq_msg_copy()</i>). </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> A successful invocation of <i>zmq_msg_send()</i> does not indicate that the message has been transmitted to the network, only that it has been queued on the <i>socket</i> and 0MQ has assumed responsibility for the message. You do not need to call <i>zmq_msg_close()</i> after a successful <i>zmq_msg_send()</i>. </p>
 </dl>
 <h3>Multi-part messages</h3>
@@ -55,11 +55,11 @@ description: "zmq_msg_send – send a message part on a socket"
 <dl>
 <dd>The message cannot be routed.</dd></dl>
 <h2>Example</h2>
-<p><code>Filling in a message and sending it to a socket</code>. /* Send a multi-part message consisting of three parts to socket */<br />
-rc = zmq_msg_send (&amp;part1, socket, ZMQ_SNDMORE);<br />
-rc = zmq_msg_send (&amp;part2, socket, ZMQ_SNDMORE);<br />
-/* Final part; no more parts to follow */<br />
-rc = zmq_msg_send (&amp;part3, socket, 0);<br />
+<p><code>Filling in a message and sending it to a socket</code>. /* Send a multi-part message consisting of three parts to socket */<br/>
+rc = zmq_msg_send (&amp;part1, socket, ZMQ_SNDMORE);<br/>
+rc = zmq_msg_send (&amp;part2, socket, ZMQ_SNDMORE);<br/>
+/* Final part; no more parts to follow */<br/>
+rc = zmq_msg_send (&amp;part3, socket, 0);<br/>
  <code>Sending a multi-part message</code>. </p>
 <pre><code>/* Send a multi-part message consisting of three parts to socket */
 rc = zmq_msg_send (&amp;part1, socket, ZMQ_SNDMORE);

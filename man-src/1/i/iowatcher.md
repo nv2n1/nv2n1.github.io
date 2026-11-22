@@ -56,7 +56,7 @@ description: "iowatcher – Create visualizations from blktrace results"
 <dt><code>-N, &#8211;no-graph</code> &lt;type&gt;</dt>
 <dd> Remove a single graph from the output (see GRAPHS). This may also be used more than once.</dd></dl>
 <h2>GRAPHS</h2>
-<p> Choices for -O and -N are:<br />
+<p> Choices for -O and -N are:<br/>
 io, tput, latency, queue_depth, iops, cpu-sys, cpu-io, cpu-irq, cpu-user, cpu-soft </p>
 <h2>EXAMPLES</h2>
 <p> Generate graph from the existing trace.dump: </p>

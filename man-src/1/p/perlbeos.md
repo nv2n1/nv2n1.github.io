@@ -17,7 +17,7 @@ perlbeos - Perl version 5.8+ on BeOS
 
 <h3>Requirements</h3>
 
- I have built and tested Perl 5.8.6 and 5.9.1 under BeOS R5 x86 net server. I can't say anything with regard to <font SIZE="-1">PPC</font>. Since Perl 5.8.0 had been released for BeOS <font SIZE="-1">BONE</font>, I suspect, there is a good chance, that it still compiles on a <font SIZE="-1">BONE</font> system. The only change I've made, that affects <font SIZE="-1">BONE</font> systems is the recognition of whether it is a <font SIZE="-1">BONE</font> system or not in <i>hints/beos.sh</i>. Now network socket support should remain enabled on <font SIZE="-1">BONE</font> systems. This might as well break the build, though. 
+ I have built and tested Perl 5.8.6 and 5.9.1 under BeOS R5 x86 net server. I can't say anything with regard to PPC. Since Perl 5.8.0 had been released for BeOS BONE, I suspect, there is a good chance, that it still compiles on a BONE system. The only change I've made, that affects BONE systems is the recognition of whether it is a BONE system or not in <i>hints/beos.sh</i>. Now network socket support should remain enabled on BONE systems. This might as well break the build, though. 
 
  As more recent versions of autoconf require <i>flock()</i> support, I wrote a <i>flock()</i> emulation (flock_server) and released it on BeBits: 
 
@@ -82,7 +82,7 @@ perlbeos - Perl version 5.8+ on BeOS
 <dt>&bull;
 </dt><dd> Network socket support is disabled for BeOS R5 net server. I didn't dare yet to try enabling it and see what problems occur.
 </dd><dt>&bull;
-</dt><dd> The <font SIZE="-1">LFS</font> (large file support) tests (<i>t/op/lfs</i> and <i>xt/Fcntl/t/syslfs</i>) are disabled as seeking beyond 2 <font SIZE="-1">GB</font> is broken according to jhi [at] iki.fi who was the last one checking the BeOS port and updating this file before me. Haven't checked this myself.
+</dt><dd> The LFS (large file support) tests (<i>t/op/lfs</i> and <i>xt/Fcntl/t/syslfs</i>) are disabled as seeking beyond 2 GB is broken according to jhi [at] iki.fi who was the last one checking the BeOS port and updating this file before me. Haven't checked this myself.
 </dd><dt>&bull;
 </dt><dd> The <i>t/io/fflush</i> test fails at #6. As far as I can tell, this is caused by a bug in the BeOS pipes implementation that occurs when starting other child processes. In the particular test case a <tt>&quot;system(&quot;perl -e 0&quot;)&quot;</tt> flushes the stdout pipe of another child process.
 </dd><dt>&bull;

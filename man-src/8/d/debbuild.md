@@ -17,7 +17,7 @@ description: "debbuild — Build Debian-compatible .deb packages from RPM .spec 
  debbuild --nobuild file.spec
  debbuild {--install|-i} foo.sdeb</pre>
 <h2>Description</h2>
-<p><code>debbuild</code> attempts to build Debian-friendly semi-native packages from <font SIZE="-1">RPM</font> spec files, RPM-friendly tarballs, and <font SIZE="-1">RPM</font> source packages (.src.rpm files). It accepts <i>most</i> of the options <code>rpmbuild</code> does, and should be able to interpret most spec files usefully. Perl modules should be handled via CPAN+dh-make-perl instead as it’s simpler than even tweaking a .spec template. </p>
+<p><code>debbuild</code> attempts to build Debian-friendly semi-native packages from RPM spec files, RPM-friendly tarballs, and RPM source packages (.src.rpm files). It accepts <i>most</i> of the options <code>rpmbuild</code> does, and should be able to interpret most spec files usefully. Perl modules should be handled via CPAN+dh-make-perl instead as it’s simpler than even tweaking a .spec template. </p>
 <p> As far as possible, the command-line options are identical to those from <code>rpmbuild</code>, although several <code>rpmbuild</code> options are not supported: </p>
 <pre> --clean
  --rmsource
@@ -34,7 +34,7 @@ description: "debbuild — Build Debian-compatible .deb packages from RPM .spec 
 <dl>
 <dt>&bull;</dt>
 <dd>Either you have rights to do as you please under /usr/src/debian, or you have created a file <i>~/.debmacros</i> containing a suitable “%_topdir” definition. </dd>
-<p> Both <code>rpmbuild</code> and <code>debbuild</code> require the directories %_topdir<code>/{</code><font SIZE="-1"><code>BUILD,SOURCES,SPECS</code></font><code>}</code>. However, where <code>rpmbuild</code> requires the %_topdir<code>/{</code><font SIZE="-1"><code>RPMS,SRPMS</code></font><code>}</code> directories, <code>debbuild</code> requires %_topdir<code>/{</code><font SIZE="-1"><code>DEBS,SDEBS</code></font><code>}</code> instead. Create them in advance; <i>some</i> subdirectories are created automatically as needed, but most are not.</p>
+<p> Both <code>rpmbuild</code> and <code>debbuild</code> require the directories %_topdir<code>/{</code><code>BUILD,SOURCES,SPECS</code><code>}</code>. However, where <code>rpmbuild</code> requires the %_topdir<code>/{</code><code>RPMS,SRPMS</code><code>}</code> directories, <code>debbuild</code> requires %_topdir<code>/{</code><code>DEBS,SDEBS</code><code>}</code> instead. Create them in advance; <i>some</i> subdirectories are created automatically as needed, but most are not.</p>
 <dt>&bull;</dt>
 <dd><code>/var/tmp</code> must allow script execution – <code>rpmbuild</code> and <code>debbuild</code> both rely on creating and executing shell scripts for much of their functionality. By default, <code>debbuild</code> also creates install trees under <code>/var/tmp</code> – however this is (almost) entirely under the control of the package’s .spec file.</dd>
 <dt>&bull;</dt>

@@ -57,10 +57,10 @@ description: "pki –signcrl – Issue a Certificate Revocation List (CRL) using
 <dd>Hexadecimal encoded serial number of the certificate to revoke.</dd></dl>
 <h2>Examples</h2>
 <p>Revoke a certificate: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>pki &#8211;signcrl &#8211;cacert ca_cert.der &#8211;cakey ca_key.der&nbsp;<wbr>\<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>pki &#8211;signcrl &#8211;cacert ca_cert.der &#8211;cakey ca_key.der&nbsp;<wbr>\<br/>
 &#8211;reason superseded &#8211;cert cert.der&nbsp;<wbr>&gt;&nbsp;<wbr>crl.der </p>
 <p> Update an existing CRL with two new revocations, using the certificate&#8217;s serial number, but no reason: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>pki &#8211;signcrl &#8211;cacert ca_cert.der &#8211;cakey ca_key.der&nbsp;<wbr>\<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>pki &#8211;signcrl &#8211;cacert ca_cert.der &#8211;cakey ca_key.der&nbsp;<wbr>\<br/>
 &#8211;lastcrl old_crl.der &#8211;serial 0123 &#8211;serial 0345&nbsp;<wbr>&gt;&nbsp;<wbr>crl.der </p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-pki/">pki</a></code>(1)</p>

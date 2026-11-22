@@ -11,7 +11,7 @@ description: "dgbequb.f –"
 <p> dgbequb.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dgbequb</code> (M, N, KL, KU, AB, LDAB, R, C, ROWCND, COLCND, AMAX, INFO)<br />
+<p> subroutine <code>dgbequb</code> (M, N, KL, KU, AB, LDAB, R, C, ROWCND, COLCND, AMAX, INFO)<br/>
  <i></i><code>DGBEQUB</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dgbequb (integerM, integerN, integerKL, integerKU, double precision, dimension( ldab, * )AB, integerLDAB, double precision, dimension( * )R, double precision, dimension( * )C, double precisionROWCND, double precisionCOLCND, double precisionAMAX, integerINFO)</h3>

@@ -39,7 +39,7 @@ description: "idate – A Gregorian/Meladi to/from Hijri/Islamic date converter"
 <h2>AUTHOR</h2>
 <p> Written by Nadim Shaikli as part of the Arabeyes.org project.</p>
 <h2>COPYRIGHT</h2>
-<p> <code>idate</code> is subject to the GNU General Public License (GPL).<br />
+<p> <code>idate</code> is subject to the GNU General Public License (GPL).<br/>
  Copyright &#169; 2005, Arabeyes, Nadim Shaikli.</p>
 <h2>SEE ALSO</h2>
 <p> The ITL library (libitl) from the Islamic Tools and Libraries project. It is the underlying requirement for <code>idate</code> to function. The ITL library was created and is hosted at <code><a rel="nofollow" href="http://www.arabeyes.org">www.arabeyes.org</a></code>. </p>

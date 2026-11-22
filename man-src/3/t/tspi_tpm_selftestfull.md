@@ -7,7 +7,7 @@ url: "/docs/linux/man/3-tspi_tpm_selftestfull/"
 description: "Tspi_TPM_SelfTestFull – perform a self-test of each internal TPM function"
 ---
 
-<p>TCG Software Stack Developer&#8217;s Reference<br />
+<p>TCG Software Stack Developer&#8217;s Reference<br/>
  </center></p>
 <h2>Name</h2>
 <p>Tspi_TPM_SelfTestFull &#8211; perform a self-test of each internal TPM function </p>
@@ -28,9 +28,9 @@ description: "Tspi_TPM_SelfTestFull – perform a self-test of each internal TPM
 <h2>Return Codes</h2>
 <p><code>Tspi_TPM_GetStatus</code> returns TSS_SUCCESS on success, otherwise one of the following values is returned:</p>
 <dl COMPACT>
-<dt><font SIZE="-1">TSS_E_INVALID_HANDLE</font></dt>
+<dt>TSS_E_INVALID_HANDLE</dt>
 <dd><i>hTPM</i> is not a valid handle. </dd>
-<dt><font SIZE="-1">TSS_E_INTERNAL_ERROR</font></dt>
+<dt>TSS_E_INTERNAL_ERROR</dt>
 <dd>An internal SW error has been detected. </dd>
 </dl>
 <h2>Conforming To</h2>

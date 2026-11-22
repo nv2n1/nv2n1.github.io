@@ -36,13 +36,13 @@ description: "ogmmerge – Merge multimedia streams into an OGG/OGM file"
 <dt><code>-T</code>, <code>&#8211;notext</code></dt>
 <dd> Don&#8217;t copy any text stream from this file.</dd>
 <dt><code>-s</code>, <code>&#8211;sync</code> &lt;<i>d</i>[,<i>o</i>[/<i>p</i>]]&gt;</dt>
-<dd> Synchronize manually, delay the audio stream by <i>d</i> ms.<br />
- <i>d</i> &gt; 0: Pad with silent samples.<br />
- <i>d</i> &lt; 0: Remove samples from the beginning.<br />
- <i>o</i>/<i>p</i>: adjust the timestamps by <i>o</i>/<i>p</i> to fix linear drifts. <i>p</i> defaults to 1000 if omitted. Both <i>o</i> and <i>p</i> can be floating point numbers.<br />
+<dd> Synchronize manually, delay the audio stream by <i>d</i> ms.<br/>
+ <i>d</i> &gt; 0: Pad with silent samples.<br/>
+ <i>d</i> &lt; 0: Remove samples from the beginning.<br/>
+ <i>o</i>/<i>p</i>: adjust the timestamps by <i>o</i>/<i>p</i> to fix linear drifts. <i>p</i> defaults to 1000 if omitted. Both <i>o</i> and <i>p</i> can be floating point numbers.<br/>
  Defaults: no manual synch correction (which is the same as <i>d</i> = 0 and <i>o</i>/<i>p</i> = 1.0).</dd>
 <dt><code>-r</code>, <code>&#8211;range</code> &lt;<i>start</i>&#8211;<i>end</i>&gt;</dt>
-<dd> Only process from <i>start</i> to <i>end</i>. Both values take the form &#8216;<i>HH:MM:SS.mmm</i>&#8216; or &#8216;<i>SS.mmm</i>&#8216;, e.g. &#8217;00:01:00.500&#8217; or &#8216;60.500&#8217;. If one of <i>start</i> or <i>end</i> is omitted then it defaults to 0 or to end of the file respectively.<br />
+<dd> Only process from <i>start</i> to <i>end</i>. Both values take the form &#8216;<i>HH:MM:SS.mmm</i>&#8216; or &#8216;<i>SS.mmm</i>&#8216;, e.g. &#8217;00:01:00.500&#8217; or &#8216;60.500&#8217;. If one of <i>start</i> or <i>end</i> is omitted then it defaults to 0 or to end of the file respectively.<br/>
  If you want to split a file into smaller ones I strongly suggest you use <code><a href="/docs/linux/man/1-ogmsplit/">ogmsplit</a>(1)</code> as it can do a much better job than using the <code>-r</code> option.</dd>
 <dt><code>-c</code>, <code>&#8211;comment</code> &#8216;<i>A=B#C=D</i>&#8216; or &#8216;<i>@filename</i>&#8216;</dt>
 <dd> Set additional comment fields for the streams. Sensitive values would be &#8216;<i>LANGUAGE=English</i>&#8216; or &#8216;<i>TITLE=Ally McBeal</i>&#8216;. If the parameter starts with &#8216;@&#8217; then the comments will be read from a file with the same name without the leading &#8216;@&#8217;. <code>-c</code> can be specified multiple times per file. The comments will all be concatenated.</dd>
@@ -72,7 +72,7 @@ description: "ogmmerge – Merge multimedia streams into an OGG/OGM file"
 <p> If your AVI already contains an audio track then it will be copied aswell (if <code>ogmmerge</code> supports the audio format). To avoid that simply do </p>
 <p> $ <code>ogmmerge -o MyMovie-with-sound.ogm -A MyMovie.avi MyMovie.ogg</code> </p>
 <p> After some minutes of consideration you rip another audio track, e.g. the director&#8217;s comments or another language to <i>MyMovie-add-audio.wav</i>. Encode it again and join it up with the other file: </p>
-<p> $ <code>oggenc -q4 -oMyMovie-add-audio.ogg MyMovie-add-audio.wav</code><br />
+<p> $ <code>oggenc -q4 -oMyMovie-add-audio.ogg MyMovie-add-audio.wav</code><br/>
  $ <code>ogmmerge -o MM-complete.ogm MyMovie-with-sound.ogm MyMovie-add-audio.ogg</code> </p>
 <p> The same result can be achieved with </p>
 <p> $ <code>ogmmerge -o MM-complete.ogm -A MyMovie.avi MyMovie.ogg \</code> </p>
@@ -88,18 +88,18 @@ description: "ogmmerge – Merge multimedia streams into an OGG/OGM file"
 <p> For text subtitles you can either use some Windows software (like <code>SubRipper</code>) or the <code>subrip</code> package found in <code><a href="/docs/linux/man/1-transcode/">transcode</a>(1)</code>&#8216;s sources (in <code>contrib/subrip</code>). The general process is:</p>
 <dl>
 <dt>1.</dt>
-<dd> extract a raw subtitle stream from the source:<br />
+<dd> extract a raw subtitle stream from the source:<br/>
  $ <code>tccat -i /path/to/copied/dvd/ -T 1 -L | \ </dd>
 <p>&nbsp;<wbr>tcextract -x ps1 -t vob -a 0x20 |&nbsp;<wbr>\ </p>
 <p>&nbsp;<wbr>subtitle2pgm -o mymovie</code></p>
 <dt>2.</dt>
-<dd> convert the resulting PGM images to text with <code>gocr</code>:<br />
+<dd> convert the resulting PGM images to text with <code>gocr</code>:<br/>
  $ <code>pgm2txt mymovie</code></dd>
 <dt>3.</dt>
-<dd> spell-check the resulting text files:<br />
+<dd> spell-check the resulting text files:<br/>
  $ <code>ispell -d american *txt</code></dd>
 <dt>4.</dt>
-<dd> convert the text files to a SRT file:<br />
+<dd> convert the text files to a SRT file:<br/>
  $ <code>srttool -s -w -i mymovie.srtx -o mymovie.srt</code></dd></dl>
 <p> The resulting file can be used as another input file for <code>ogmmerge</code>: </p>
 <p> $ <code>ogmmerge -o mymovie.ogm -c &#8216;TITLE=My Movie&#8217; mymovie.avi \ </p>
@@ -109,9 +109,9 @@ description: "ogmmerge – Merge multimedia streams into an OGG/OGM file"
 <p> The overhead is defined as <i>file size</i> &#8211; <i>raw stream size</i>. <code>mencoder</code> prints the raw stream size after encoding, so you&#8217;ll be able to get that information rather easily. </p>
 <p> Most of the times you want to calculate the overhead prior to encoding in order to adjust the bitrate accordingly. Unfortunately the overhead per frame is not constant &#8211; only the percentage is constant. This percentage is calculated as 100 * (<i>OGG size</i> &#8211; <i>raw size</i>) / <i>raw size</i> and seems to be somewhere between <code>1.1%</code> and <code>1.2%</code>. This depends on the number of streams and the stream types used. </p>
 <p> The <i>raw size</i> itself can be approximated by </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><i>frames</i>&nbsp;<wbr>*&nbsp;<wbr><i>vbitrate</i><br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><i>frames</i>&nbsp;<wbr>*&nbsp;<wbr><i>vbitrate</i><br/>
  <i>raw size</i> = ( &#8212;&#8212;&#8212;&#8212;&#8212;&#8211; + <i>length</i> * <i>abitrate</i> ) / 8 * 1000 * 1024 </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><i>frames per sec</i><br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><i>frames per sec</i><br/>
  assuming that <i>vbitrate</i> and <i>abitrate</i> are given in kbit/s = 1000 bit/s, and <i>length</i> is given in seconds.</p>
 <h2>NOTES</h2>
 <p> What works:</p>
@@ -150,9 +150,9 @@ description: "ogmmerge – Merge multimedia streams into an OGG/OGM file"
 <dd> support for other subtitle formats</dd></dl>
 <h2>CHAPTERS</h2>
 <p> <code>ogmmerge</code> supports chapter information as generated by <code><a href="/docs/linux/man/1-dvdxchap/">dvdxchap</a>(1)</code>. The format is very simple: </p>
-<p> CHAPTER01=HH:MM:SS.sss<br />
- CHAPTER01NAME=the first chapter<br />
- CHAPTER02=HH:MM:SS.sss<br />
+<p> CHAPTER01=HH:MM:SS.sss<br/>
+ CHAPTER01NAME=the first chapter<br/>
+ CHAPTER02=HH:MM:SS.sss<br/>
  CHAPTER02NAME=another chapter </p>
 <p> with HH = hour, MM = minute, SS = seconds, sss = milliseconds. </p>
 <p> The chapter information is stored in the video stream&#8217;s comments. Therefore you could also specify the chapters with <i>-c CHAPTER01=&#8230;</i> Using a chapter file has an advantage: If the video stream&#8217;s comments already contain chapter information and the command line contains a chapter information file then the existing chapter information will be completely replaced.</p>
@@ -172,7 +172,7 @@ description: "ogmmerge – Merge multimedia streams into an OGG/OGM file"
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>+-&gt;&nbsp;<wbr>&nbsp;<wbr>p_video </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>+-&gt;&nbsp;<wbr>&nbsp;<wbr>r_avi&nbsp;<wbr>&nbsp;<wbr>-+ </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>|&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>+-&gt;&nbsp;<wbr>&nbsp;<wbr>p_pcm </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>|<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>|<br/>
  <code>ogmmerge</code> -+-&gt; r_ogm &#8212;&gt; p_vorbis </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>| </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>|&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>+-&gt;&nbsp;<wbr>&nbsp;<wbr>p_video </p>

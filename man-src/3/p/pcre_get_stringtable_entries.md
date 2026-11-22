@@ -21,10 +21,10 @@ description: "PCRE – Perl-compatible regular expressions"
 </code></pre>
 <h2>DESCRIPTION</h2>
 <p>This convenience function finds, for a compiled pattern, the first and last entries for a given name in the table that translates capturing parenthesis names into numbers. When names are required to be unique (PCRE_DUPNAMES is <i>not</i> set), it is usually easier to use <code>pcre[16|32]_get_stringnumber()</code> instead. </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;<i>code</i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Compiled regular expression <br />
-&nbsp;<wbr>&nbsp;<i>name</i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Name whose entries required <br />
-&nbsp;<wbr>&nbsp;<i>first</i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Where to return a pointer to the first entry <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;<i>code</i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Compiled regular expression <br/>
+&nbsp;<wbr>&nbsp;<i>name</i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Name whose entries required <br/>
+&nbsp;<wbr>&nbsp;<i>first</i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Where to return a pointer to the first entry <br/>
 &nbsp;<wbr>&nbsp;<i>last</i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Where to return a pointer to the last entry </p>
 <p>The yield of the function is the length of each entry, or PCRE_ERROR_NOSUBSTRING if none are found. </p>
 <p>There is a complete description of the PCRE native API, including the format of the table entries, in the <code>pcreapi</code> page, and a description of the POSIX API in the <code>pcreposix</code> page. </p>

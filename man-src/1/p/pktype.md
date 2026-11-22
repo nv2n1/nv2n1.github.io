@@ -20,7 +20,7 @@ description: "pktype – verify and translate a packed font bitmap file to plain
 <p> <code>pktype</code> looks for <i>pk_file</i> in the usual places according to Kpathsea. </p>
 <p> See <code><a href="/docs/linux/man/1-tex/">tex</a></code>(1) for the details of the searching.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-dvitype/">dvitype</a></code>(1), <code><a href="/docs/linux/man/1-gftopk/">gftopk</a></code>(1), <code><a href="/docs/linux/man/1-gftype/">gftype</a></code>(1).<br />
+<p> <code><a href="/docs/linux/man/1-dvitype/">dvitype</a></code>(1), <code><a href="/docs/linux/man/1-gftopk/">gftopk</a></code>(1), <code><a href="/docs/linux/man/1-gftype/">gftype</a></code>(1).<br/>
  Donald E. Knuth et al., <i>Metafontware</i>.</p>
 <h2>AUTHORS</h2>
 <p> Tomas Rokicki wrote the program, Donald E. Knuth originally ported it to Unix, Pierre MacKay originally adapted it for compilation with Web2c. </p>

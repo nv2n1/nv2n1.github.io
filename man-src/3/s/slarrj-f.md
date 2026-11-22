@@ -10,7 +10,7 @@ description: "slarrj.f –"
 <p>slarrj.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>slarrj</code> (N, D, E2, IFIRST, ILAST, RTOL, OFFSET, W, WERR, WORK, IWORK, PIVMIN, SPDIAM, INFO)<br />
+<p>subroutine <code>slarrj</code> (N, D, E2, IFIRST, ILAST, RTOL, OFFSET, W, WERR, WORK, IWORK, PIVMIN, SPDIAM, INFO)<br/>
  <i></i><code>SLARRJ</code> performs refinement of the initial estimates of the eigenvalues of the matrix T.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slarrj (integerN, real, dimension( * )D, real, dimension( * )E2, integerIFIRST, integerILAST, realRTOL, integerOFFSET, real, dimension( * )W, real, dimension( * )WERR, real, dimension( * )WORK, integer, dimension( * )IWORK, realPIVMIN, realSPDIAM, integerINFO)</h3>

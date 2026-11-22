@@ -11,7 +11,7 @@ description: "spptri.f –"
 <p> spptri.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>spptri</code> (UPLO, N, AP, INFO)<br />
+<p> subroutine <code>spptri</code> (UPLO, N, AP, INFO)<br/>
  <i></i><code>SPPTRI</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine spptri (characterUPLO, integerN, real, dimension( * )AP, integerINFO)</h3>

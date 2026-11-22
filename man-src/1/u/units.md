@@ -143,7 +143,7 @@ You want: inch
 <p> In the US, the acre is officially defined in terms of the US survey foot, but &#8216;units&#8217; uses a definition based on the international foot. If you want the official US acre use &#8216;USacre&#8217; and similarly use &#8216;USacrefoot&#8217; for the official US version of that unit. The difference between these units is about 4 parts per million. </p>
 <h2>UNIT EXPRESSIONS</h2>
 <h3>Operators</h3>
-<p> You can enter more complicated units by combining units with operations such as powers, multiplication, division, addition, subtraction, and parentheses for grouping. You can use the customary symbols for these operators when &#8216;units&#8217; is invoked with its default options. Additionally, &#8216;units&#8217; supports some extensions, including high priority multiplication using a space, and a high priority numerical<br />
+<p> You can enter more complicated units by combining units with operations such as powers, multiplication, division, addition, subtraction, and parentheses for grouping. You can use the customary symbols for these operators when &#8216;units&#8217; is invoked with its default options. Additionally, &#8216;units&#8217; supports some extensions, including high priority multiplication using a space, and a high priority numerical<br/>
 &nbsp;<wbr>division operator &#8216;(&#8216;| that can simplify some expressions. </p>
 <p> Powers of units can be specified using the &#8216;^&#8217; character as shown in the following example, or by simple concatenation of a unit and its exponent: &#8216;cm3&#8217; is equivalent to &#8216;cm^3&#8217;; if the exponent is more than one digit, the &#8216;^&#8217; is required. An exponent like &#8216;2^3^2&#8217; is evaluated right to left as usual. The &#8216;^&#8217; operator has the second highest precedence. You can also use &#8216;**&#8217; as an exponent operator. </p>
 <pre>
@@ -448,13 +448,13 @@ min;
 sec 7 hr + 13 min + 54.84 sec
 </code></pre>
 <p> In North America, recipes for cooking typically measure ingredients by volume, and use units that are not always convenient multiples of each other. Suppose that you have a recipe for 6 and you wish to make a portion for 1. If the recipe calls for 2 1/2 cups of an ingredient, you might wish to know the measurements in terms of measuring devices you have available, you could use &#8216;units&#8217; and enter </p>
-<p>You have : (2 + 1 | 2) cup / 6 You want : cup;<br />
-1 | 2 cup;<br />
-1 | 3 cup;<br />
-1 | 4 cup;<br />
-tbsp;<br />
-tsp;<br />
-1 | 2 tsp;<br />
+<p>You have : (2 + 1 | 2) cup / 6 You want : cup;<br/>
+1 | 2 cup;<br/>
+1 | 3 cup;<br/>
+1 | 4 cup;<br/>
+tbsp;<br/>
+tsp;<br/>
+1 | 2 tsp;<br/>
 1 | 4 tsp 1 | 3 cup + 1 tbsp + 1 tsp</p>
 <p> By default, if a unit in a list begins with fraction of the form 1|<i>x</i> and its multiplier is an integer, the fraction is given as the product of the multiplier and the numerator; for example, </p>
 <pre>
@@ -476,14 +476,14 @@ You want: 1|2 cup;1|3 cup;1|4 cup
 </pre>
 <p> A user-specified fractional unit with a numerator other than 1 is never overridden, however&#8212;if a unit list specifies &#8216;3|4 cup;1|2 cup&#8217;, a result equivalent to 1 1/2 cups will always be shown as &#8216;2 * 3|4 cup&#8217; whether or not the &#8216;&#8211;show-factor&#8217; option is given. </p>
 <p> Some applications for unit lists may be less obvious. Suppose that you have a postal scale and wish to ensure that it&#8217;s accurate at 1 oz, but have only metric calibration weights. You might try </p>
-<p>You have : 1 oz<br />
-    You want : 100 g;<br />
-50 g;<br />
-20 g;<br />
-10 g;<br />
-5 g;<br />
-2 g;<br />
-1 g;<br />
+<p>You have : 1 oz<br/>
+    You want : 100 g;<br/>
+50 g;<br/>
+20 g;<br/>
+10 g;<br/>
+5 g;<br/>
+2 g;<br/>
+1 g;<br/>
 20 g + 5 g + 2 g + 1 g + 0.34952312 * 1 g</p>
 <p> You might then place one each of the 20 g, 5 g, 2 g, and 1 g weights on the scale and hope that it indicates close to </p>
 <pre>
@@ -493,13 +493,13 @@ You want: oz;
 </pre>
 <p> Appending &#8216;;&#8217; to &#8216;oz&#8217; forces a one-line display that includes the unit; here the integer part of the result is zero, so it is not displayed. </p>
 <p> A unit list such as </p>
-<p>cup;<br />
-1 | 2 cup;<br />
-1 | 3 cup;<br />
-1 | 4 cup;<br />
-tbsp;<br />
-tsp;<br />
-1 | 2 tsp;<br />
+<p>cup;<br/>
+1 | 2 cup;<br/>
+1 | 3 cup;<br/>
+1 | 4 cup;<br/>
+tbsp;<br/>
+tsp;<br/>
+1 | 2 tsp;<br/>
 1 | 4 tsp</p>
 <p> can be tedious to enter. The &#8216;units&#8217; program provides shorthand names for some common combinations: </p>
 <pre>
@@ -530,13 +530,13 @@ You want: day;min;sec
 365;348;45.974678
 </pre>
 <p> Unlike the case of regular output, zeros <i>are</i> included in this output list: </p>
-<p>You have : liter<br />
-               You want : cup;<br />
-1 | 2 cup;<br />
-1 | 4 cup;<br />
-tbsp 4;<br />
-0;<br />
-0;<br />
+<p>You have : liter<br/>
+               You want : cup;<br/>
+1 | 2 cup;<br/>
+1 | 4 cup;<br/>
+tbsp 4;<br/>
+0;<br/>
+0;<br/>
 3.6280454</p>
 <h2>INVOKING UNITS</h2>
 <p> You invoke &#8216;units&#8217; like this: </p>
@@ -665,10 +665,10 @@ x(tempF) = (tempF+(-stdtemp))/degF + 32
 </pre>
 <p> This inverse definition takes an absolute temperature as its argument and converts it to the Fahrenheit temperature. The inverse can be omitted by leaving out the &#8216;;&#8217; character, but then conversions to the unit will be impossible. If the inverse is omitted then the &#8216;&#8211;check&#8217; option will display a warning. It is up to you to calculate and enter the correct inverse function to obtain proper conversions. The &#8216;&#8211;check&#8217; option tests the inverse at one point and prints an error if it is not valid there, but this is not a guarantee that your inverse is correct. </p>
 <p> If you wish to make synonyms for nonlinear units, you still need to define both the forward and inverse functions. Inverse functions can be obtained using the &#8216;~&#8217; operator. So to create a synonym for &#8216;tempF&#8217; you could write </p>
-<p>fahrenheit(x) units = [1; K] tempF(x);<br />
+<p>fahrenheit(x) units = [1; K] tempF(x);<br/>
 ~tempF(fahrenheit)</p>
 <p> You may define a function whose range and domain do not cover all of the real numbers. In this case &#8216;units&#8217; can handle errors better if you specify an appropriate range and domain. You specify the range and domain as shown below. </p>
-<p>baume(d) units = [1; g / cm ^ 3] domain = [ 0, 130.5 ] range = [ 1, 10 ](145 / (145 &#8211; d)) g / cm ^ 3;<br />
+<p>baume(d) units = [1; g / cm ^ 3] domain = [ 0, 130.5 ] range = [ 1, 10 ](145 / (145 &#8211; d)) g / cm ^ 3;<br/>
 (baume + -g / cm ^ 3)145 / baume</p>
 <p> In this example the domain is specified after the &#8216;domain=&#8217; with the endpoints given in brackets. One of the end points can be omitted to get an interval that goes to infinity. So the range could be specified as nonnegative by writing &#8216;range=[0,]&#8217;. Both the range and domain are optional and can appear independently and in any order along with the &#8216;units&#8217; specification. The values in the range and domain are attached to the units given in the &#8216;units&#8217; specification. If you don&#8217;t specify the units then the parameter inputs are reduced to primitive units for the numeric comparison to the values you give in the range or domain. In this case you should only use &#8216;range&#8217; or &#8216;domain&#8217; if the endpoints are zero and infinity. </p>
 <p> Specifying the range and domain allows &#8216;units&#8217; to perform better error checking and give more helpful error messages when you invoke nonlinear units conversions outside of their bounds. It also enables the &#8216;-c&#8217; option to find a point in the domain to use for its point check of your inverse definition. </p>

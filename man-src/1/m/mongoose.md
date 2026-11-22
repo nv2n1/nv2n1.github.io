@@ -10,8 +10,8 @@ description: "mongoose – lightweight web server"
 
 <p> <code>mongoose</code> &#8211; lightweight web server</p>
 <h2>SYNOPSIS</h2>
-<p> [<i>config_file</i> ]<br />
- [<i>OPTIONS</i> ]<br />
+<p> [<i>config_file</i> ]<br/>
+ [<i>OPTIONS</i> ]<br/>
  &#8211;<code>A </code><i>htpasswd_file domain_name user_name password</i></p>
 <h2>DESCRIPTION</h2>
 <p> is small, fast and easy to use web server with CGI, SSL, MD5 authorization, and basic SSI support. </p>

@@ -33,8 +33,8 @@ SWEETS := {
 <h2>Examples</h2>
 <p>The following performs stateless NAT for incoming packets from 192.0.2.100 to new destination 198.51.100.1. Assuming these are UDP packets, both IP and UDP checksums have to be recalculated:</p>
 <dl>
-<dd># tc qdisc add dev eth0 ingress handle ffff: # tc filter add dev eth0 prio 1 protocol ip parent ffff: \ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>u32 match ip src 192.0.2.100/32 flowid :1 \<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>action pedit munge ip dst set 198.51.100.1 pipe \<br />
+<dd># tc qdisc add dev eth0 ingress handle ffff: # tc filter add dev eth0 prio 1 protocol ip parent ffff: \ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>u32 match ip src 192.0.2.100/32 flowid :1 \<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>action pedit munge ip dst set 198.51.100.1 pipe \<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>csum ip and udp
 </dd></dl>
 <h2>See Also</h2>

@@ -89,6 +89,6 @@ description: "arc – pc archive utility"
 <p> There shouldn&#8217;t be any problems, (hah!) but if you find any, please send them to me at: </p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>hyc [at] hanauma.jpl.nasa.gov</p>
 <h2>AUTHORS</h2>
-<p> Original MSDOS program by Thom Henderson<br />
+<p> Original MSDOS program by Thom Henderson<br/>
  COPYRIGHT(C) 1985-87 by System Enhancement Associates; ALL RIGHTS RESERVED </p>
 <p> Original Lempel-Zev code derived from compress 4.0. Modified to support Squashing by Dan Lanciani (ddl [at] harvard.edu) Ported from MSDOS by Howard Chu, with help from John Gilmore (hoptoad!gnu), James Turner (daisy!turner) and others. </p>

@@ -57,102 +57,102 @@ description: "krb5_introduction – Introduction to the Kerberos 5 API"
     *
 </code></pre>
 <p> Now the client wants to connect to the host at the other end. The preferred way of doing this is using getaddrinfo (for operating system that have this function implemented), since getaddrinfo is neutral to the address type and can use any protocol that is available. </p>
-<p>*struct addrinfo *ai, *a;<br />
-*struct addrinfo hints;<br />
-*int error;<br />
-**memset(&amp;hints, 0, sizeof(hints));<br />
-*hints.ai_socktype = SOCK_STREAM;<br />
-*hints.ai_protocol = IPPROTO_TCP;<br />
-**error = getaddrinfo(hostname, &#8220;pop3&#8221;, &amp;hints, &amp;ai);<br />
-*if (error) * errx(1, &#8220;%s: %s&#8221;, hostname, gai_strerror(error));<br />
-**for (a = ai; a != NULL; a = a-&gt;ai_next)<br />
-{<br />
-    *int s;<br />
-    **s = socket(a-&gt;ai_family, a-&gt;ai_socktype, a-&gt;ai_protocol);<br />
-    *if (s &lt; 0) * continue;<br />
-    *if (connect(s, a-&gt;ai_addr, a-&gt;ai_addrlen) &lt; 0)<br />
-    {<br />
-        *warn(&#8220;connect(%s)&#8221;, hostname);<br />
-        *close(s);<br />
-        *continue;<br />
-        *<br />
-    }<br />
-    *freeaddrinfo(ai);<br />
-    *ai = NULL;<br />
-    *<br />
-}<br />
-*if (ai)<br />
-{<br />
-    *freeaddrinfo(ai);<br />
-    *errx(&#8220;failed to contact %s&#8221;, hostname);<br />
-    *<br />
-}<br />
+<p>*struct addrinfo *ai, *a;<br/>
+*struct addrinfo hints;<br/>
+*int error;<br/>
+**memset(&amp;hints, 0, sizeof(hints));<br/>
+*hints.ai_socktype = SOCK_STREAM;<br/>
+*hints.ai_protocol = IPPROTO_TCP;<br/>
+**error = getaddrinfo(hostname, &#8220;pop3&#8221;, &amp;hints, &amp;ai);<br/>
+*if (error) * errx(1, &#8220;%s: %s&#8221;, hostname, gai_strerror(error));<br/>
+**for (a = ai; a != NULL; a = a-&gt;ai_next)<br/>
+{<br/>
+    *int s;<br/>
+    **s = socket(a-&gt;ai_family, a-&gt;ai_socktype, a-&gt;ai_protocol);<br/>
+    *if (s &lt; 0) * continue;<br/>
+    *if (connect(s, a-&gt;ai_addr, a-&gt;ai_addrlen) &lt; 0)<br/>
+    {<br/>
+        *warn(&#8220;connect(%s)&#8221;, hostname);<br/>
+        *close(s);<br/>
+        *continue;<br/>
+        *<br/>
+    }<br/>
+    *freeaddrinfo(ai);<br/>
+    *ai = NULL;<br/>
+    *<br/>
+}<br/>
+*if (ai)<br/>
+{<br/>
+    *freeaddrinfo(ai);<br/>
+    *errx(&#8220;failed to contact %s&#8221;, hostname);<br/>
+    *<br/>
+}<br/>
 *</p>
 <p> Before authenticating, an authentication context needs to be created. This context keeps all information for one (to be) authenticated connection (see krb5_auth_context). </p>
-<p>*status = krb5_auth_con_init(context, &amp;auth_context);<br />
-*if (status) * krb5_err(context, 1, status, &#8220;krb5_auth_con_init&#8221;);<br />
+<p>*status = krb5_auth_con_init(context, &amp;auth_context);<br/>
+*if (status) * krb5_err(context, 1, status, &#8220;krb5_auth_con_init&#8221;);<br/>
 *</p>
 <p> For setting the address in the authentication there is a help function krb5_auth_con_setaddrs_from_fd() that does everything that is needed when given a connected file descriptor to the socket. </p>
-<p>*status = krb5_auth_con_setaddrs_from_fd(context,<br />
-                                         *auth_context,<br />
-                                         *&amp;sock);<br />
-*if (status) * krb5_err(context, 1, status,<br />
-                        *&#8221;krb5_auth_con_setaddrs_from_fd&#8221;);<br />
+<p>*status = krb5_auth_con_setaddrs_from_fd(context,<br/>
+                                         *auth_context,<br/>
+                                         *&amp;sock);<br/>
+*if (status) * krb5_err(context, 1, status,<br/>
+                        *&#8221;krb5_auth_con_setaddrs_from_fd&#8221;);<br/>
 *</p>
 <p> The next step is to build a server principal for the service we want to connect to. (See also <code>krb5_sname_to_principal()</code>.) </p>
-<p>*status = krb5_sname_to_principal(context,<br />
-                                  *hostname,<br />
-                                  *service,<br />
-                                  *KRB5_NT_SRV_HST,<br />
-                                  *&amp;server);<br />
-*if (status) * krb5_err(context, 1, status, &#8220;krb5_sname_to_principal&#8221;);<br />
+<p>*status = krb5_sname_to_principal(context,<br/>
+                                  *hostname,<br/>
+                                  *service,<br/>
+                                  *KRB5_NT_SRV_HST,<br/>
+                                  *&amp;server);<br/>
+*if (status) * krb5_err(context, 1, status, &#8220;krb5_sname_to_principal&#8221;);<br/>
 *</p>
 <p> The client principal is not passed to krb5_sendauth() function, this causes the krb5_sendauth() function to try to figure it out itself. </p>
 <p> The server program is using the function krb5_recvauth() to receive the Kerberos 5 authenticator. </p>
 <p> In this case, mutual authentication will be tried. That means that the server will authenticate to the client. Using mutual authentication is required to avoid man-in-the-middle attacks, since it enables the user to verify that they are talking to the right server (a server that knows the key). </p>
 <p> If you are using a non-blocking socket you will need to do all work of krb5_sendauth() yourself. Basically you need to send over the authenticator from krb5_mk_req() and, in case of mutual authentication, verifying the result from the server with krb5_rd_rep(). </p>
-<p>*status = krb5_sendauth(context,<br />
-                        *&amp;auth_context,<br />
-                        *&amp;sock,<br />
-                        *VERSION,<br />
-                        *NULL,<br />
-                        *server,<br />
-                        *AP_OPTS_MUTUAL_REQUIRED,<br />
-                        *NULL,<br />
-                        *NULL,<br />
-                        *NULL,<br />
-                        *NULL,<br />
-                        *NULL,<br />
-                        *NULL);<br />
-*if (status) * krb5_err(context, 1, status, &#8220;krb5_sendauth&#8221;);<br />
+<p>*status = krb5_sendauth(context,<br/>
+                        *&amp;auth_context,<br/>
+                        *&amp;sock,<br/>
+                        *VERSION,<br/>
+                        *NULL,<br/>
+                        *server,<br/>
+                        *AP_OPTS_MUTUAL_REQUIRED,<br/>
+                        *NULL,<br/>
+                        *NULL,<br/>
+                        *NULL,<br/>
+                        *NULL,<br/>
+                        *NULL,<br/>
+                        *NULL);<br/>
+*if (status) * krb5_err(context, 1, status, &#8220;krb5_sendauth&#8221;);<br/>
 *</p>
 <p> Once authentication has been performed, it is time to send some data. First we create a krb5_data structure, then we sign it with krb5_mk_safe() using the auth_context that contains the session-key that was exchanged in the krb5_sendauth()/krb5_recvauth() authentication sequence. </p>
-<p>*data.data = &#8220;hej&#8221;;<br />
-*data.length = 3;<br />
-**krb5_data_zero(&amp;packet);<br />
-**status = krb5_mk_safe(context,<br />
-                        *auth_context,<br />
-                        *&amp;data,<br />
-                        *&amp;packet,<br />
-                        *NULL);<br />
-*if (status) * krb5_err(context, 1, status, &#8220;krb5_mk_safe&#8221;);<br />
+<p>*data.data = &#8220;hej&#8221;;<br/>
+*data.length = 3;<br/>
+**krb5_data_zero(&amp;packet);<br/>
+**status = krb5_mk_safe(context,<br/>
+                        *auth_context,<br/>
+                        *&amp;data,<br/>
+                        *&amp;packet,<br/>
+                        *NULL);<br/>
+*if (status) * krb5_err(context, 1, status, &#8220;krb5_mk_safe&#8221;);<br/>
 *</p>
 <p> And send it over the network. </p>
-<p>*len = packet.length;<br />
-*net_len = htonl(len);<br />
-**if (krb5_net_write(context, &amp;sock, &amp;net_len, 4) != 4) * err(1, &#8220;krb5_net_write&#8221;);<br />
-*if (krb5_net_write(context, &amp;sock, packet.data, len) != len) * err(1, &#8220;krb5_net_write&#8221;);<br />
+<p>*len = packet.length;<br/>
+*net_len = htonl(len);<br/>
+**if (krb5_net_write(context, &amp;sock, &amp;net_len, 4) != 4) * err(1, &#8220;krb5_net_write&#8221;);<br/>
+*if (krb5_net_write(context, &amp;sock, packet.data, len) != len) * err(1, &#8220;krb5_net_write&#8221;);<br/>
 *</p>
 <p> To send encrypted (and signed) data krb5_mk_priv() should be used instead. krb5_mk_priv() works the same way as krb5_mk_safe(), with the exception that it encrypts the data in addition to signing it. </p>
-<p>*data.data = &#8220;hemligt&#8221;;<br />
-*data.length = 7;<br />
-**krb5_data_free(&amp;packet);<br />
-**status = krb5_mk_priv(context,<br />
-                        *auth_context,<br />
-                        *&amp;data,<br />
-                        *&amp;packet,<br />
-                        *NULL);<br />
-*if (status) * krb5_err(context, 1, status, &#8220;krb5_mk_priv&#8221;);<br />
+<p>*data.data = &#8220;hemligt&#8221;;<br/>
+*data.length = 7;<br/>
+**krb5_data_free(&amp;packet);<br/>
+**status = krb5_mk_priv(context,<br/>
+                        *auth_context,<br/>
+                        *&amp;data,<br/>
+                        *&amp;packet,<br/>
+                        *NULL);<br/>
+*if (status) * krb5_err(context, 1, status, &#8220;krb5_mk_priv&#8221;);<br/>
 *</p>
 <p> And send it over the network. </p>
 <pre><code>

@@ -35,11 +35,11 @@ description: "GSQL – an integrated database development environment for GNOME"
 <h2>PLUGINS</h2>
 <p> <code>GSQL</code> allows for dynamic loading of plugins to add extra functionality to <code>GSQL</code>. See <a rel="nofollow" href="http://gsql.org/development/">http://gsql.org/development/</a> page for more information on developing plugins. </p>
 <h2>BUGS&#8217;n&#8217;PATCHES</h2>
-<p> If you fix a bug in <code>GSQL</code> (or otherwise enhance it), please submit a patch (using <i>svn diff &gt; my.diff</i> against the latest SVN revision) at<br />
+<p> If you fix a bug in <code>GSQL</code> (or otherwise enhance it), please submit a patch (using <i>svn diff &gt; my.diff</i> against the latest SVN revision) at<br/>
  <i><a rel="nofollow" href="http://code.google.com/p/gsql/issues/list">http://code.google.com/p/gsql/issues/list</a></i> </p>
 <p> Before sending a bug report, please verify that you have the latest version of <code>GSQL</code>. Many bugs (major and minor) are fixed at each release, and if yours is out of date, the problem may already have been solved. </p>
 <h2>SEE ALSO</h2>
-<p> <i><a rel="nofollow" href="http://gsql.org/">http://gsql.org/</a></i><br />
+<p> <i><a rel="nofollow" href="http://gsql.org/">http://gsql.org/</a></i><br/>
  <i><a rel="nofollow" href="http://code.google.com/p/gsql/">http://code.google.com/p/gsql/</a></i> </p>
 <h2>LICENSE</h2>
 <p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>

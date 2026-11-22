@@ -13,7 +13,7 @@ description: "certutil – Manage keys and certificate in both NSS databases and
 <dl>
 <dt> <code>certutil</code> [<i>options</i>] [[<i>arguments</i>]]</dt></dl>
 <h2>STATUS</h2>
-<dd>This documentation is still work in progress. Please contribute to the initial review in m[blue]<code>Mozilla NSS bug 836477</code>m[]<font SIZE="-2">[1]</font></dd>
+<dd>This documentation is still work in progress. Please contribute to the initial review in m[blue]<code>Mozilla NSS bug 836477</code>m[][1]</dd>
 <h2>DESCRIPTION</h2>
 <p> The Certificate Database Tool, <code>certutil</code>, is a command-line utility that can create and modify certificate and key databases. It can specifically list, generate, modify, or delete certificates, create or change the password, generate new public and private key pairs, display the contents of the key database, or delete key pairs within the key database. </p>
 <p> Certificate issuance, part of the key and certificate management process, requires that keys and certificates be created in the key database. This document discusses certificate and key database management. For information on the security module database management, see the <code>modutil</code> manpage.</p>
@@ -633,7 +633,7 @@ Certificate Authority - Example Domain                       CT,C,C
 <dl>
 <dt>
 </dt><dd>
-$ certutil &#8211; L &#8211; d sql : $HOME / nssdb &#8211; a &#8211; n my &#8211; ca &#8211; cert&#8211; &#8212; -BEGIN CERTIFICATE&#8211; &#8212; -MIIB1DCCAT2gAwIBAgICDkIwDQYJKoZIhvcNAQEFBQAwFTETMBEGA1UEAxMKRXhh bXBsZSBDQTAeFw0xMzAzMTMxOTEwMjlaFw0xMzA2MTMxOTEwMjlaMBUxEzARBgNV BAMTCkV4YW1wbGUgQ0EwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAJ4Kzqvz JyBVgFqDXRYSyTBNw1DrxUU / 3GvWA / ngjAwHEv0Cul / 6sO / gsCvnABHiH6unns6x XRzPORlC2WY3gkk7vmlsLvYpyecNazAi / NAwVnU / 66HOsaoVFWE+gBQo99UrN2yk 0BiK / GMFlLm5dXQROgA9ZKKyFdI0LIXtf6SbAgMBAAGjMzAxMBEGCWCGSAGG + EIB AQQEAwIHADAMBgNVHRMEBTADAQH / MA4GA1UdDwEB / wQEAwICBDANBgkqhkiG9w0B AQUFAAOBgQA6chkzkACN281d1jKMrc + RHG2UMaQyxiteaLVZO + Ro1nnRUvseDf09 XKYFwPMJjWCihVku6bw / ihZfuMHhxK22Nue6inNQ6eDu7WmrqL8z3iUrQwxs + WiF ob2rb8XRVVJkzXdXxlk4uo3UtNvw8sAz7sWD71qxKaIHU5q49zijfg ==<br />
+$ certutil &#8211; L &#8211; d sql : $HOME / nssdb &#8211; a &#8211; n my &#8211; ca &#8211; cert&#8211; &#8212; -BEGIN CERTIFICATE&#8211; &#8212; -MIIB1DCCAT2gAwIBAgICDkIwDQYJKoZIhvcNAQEFBQAwFTETMBEGA1UEAxMKRXhh bXBsZSBDQTAeFw0xMzAzMTMxOTEwMjlaFw0xMzA2MTMxOTEwMjlaMBUxEzARBgNV BAMTCkV4YW1wbGUgQ0EwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAJ4Kzqvz JyBVgFqDXRYSyTBNw1DrxUU / 3GvWA / ngjAwHEv0Cul / 6sO / gsCvnABHiH6unns6x XRzPORlC2WY3gkk7vmlsLvYpyecNazAi / NAwVnU / 66HOsaoVFWE+gBQo99UrN2yk 0BiK / GMFlLm5dXQROgA9ZKKyFdI0LIXtf6SbAgMBAAGjMzAxMBEGCWCGSAGG + EIB AQQEAwIHADAMBgNVHRMEBTADAQH / MA4GA1UdDwEB / wQEAwICBDANBgkqhkiG9w0B AQUFAAOBgQA6chkzkACN281d1jKMrc + RHG2UMaQyxiteaLVZO + Ro1nnRUvseDf09 XKYFwPMJjWCihVku6bw / ihZfuMHhxK22Nue6inNQ6eDu7WmrqL8z3iUrQwxs + WiF ob2rb8XRVVJkzXdXxlk4uo3UtNvw8sAz7sWD71qxKaIHU5q49zijfg ==<br/>
     &#8212; &#8212; -END CERTIFICATE&#8211; &#8212; &#8211;
 </dd></dl>
 <p> For a human-readable display </p>
@@ -816,7 +816,7 @@ $ certutil -M -n &quot;My CA Certificate&quot; -d sql:/home/my/sharednssdb -t &q
 <dl>
 <dt>
 </dt><dd>
-$ certutil &#8211; d sql : / home / my / sharednssdb &#8211; O &#8211; n &#8220;jsmith [at] example.com&#8221;<br />
+$ certutil &#8211; d sql : / home / my / sharednssdb &#8211; O &#8211; n &#8220;jsmith [at] example.com&#8221;<br/>
                                                        &#8220;Builtin Object Token:Thawte Personal Freemail CA&#8221;[E = personal &#8211; freemail[at] thawte.com, CN = Thawte Personal Freemail CA, OU = Certification Services Division, O = Thawte Consulting, L = Cape Town, ST = Western Cape, C = ZA] &#8220;Thawte Personal Freemail Issuing CA &#8211; Thawte Consulting&#8221;[CN = Thawte Personal Freemail Issuing CA, O = Thawte Consulting(Pty) Ltd., C = ZA] &#8220;(null)&#8221;[E = jsmith[at] example.com, CN = Thawte Freemail Member]
 </dd></dl>
 <p> <code>Resetting a Token</code> </p>

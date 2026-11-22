@@ -48,10 +48,10 @@ edac_for_each_mc_info(edac_handle *edac, edac_mc *mc,
 <dl>
 <dt>
 </dt><dd>
-struct edac_totals {<br />
-    unsigned int ce_total;         /* Total corrected errors   */<br />
-    unsigned int ue_total;         /* Total uncorrected errors */<br />
-    unsigned int pci_parity_total; /* Total PCI Parity errors  */<br />
+struct edac_totals {<br/>
+    unsigned int ce_total;         /* Total corrected errors   */<br/>
+    unsigned int ue_total;         /* Total uncorrected errors */<br/>
+    unsigned int pci_parity_total; /* Total PCI Parity errors  */<br/>
 };
 </dd></dl>
 <h2>MEMORY CONTROLLER INFORMATION</h2>
@@ -60,41 +60,41 @@ struct edac_totals {<br />
 <dl>
 <dt>
 </dt><dd>
-int i = 0;<br />
-edac_mc *mc;<br />
-while ((mc = edac_next_mc(edac)))<br />
-    i++;<br />
+int i = 0;<br/>
+edac_mc *mc;<br/>
+while ((mc = edac_next_mc(edac)))<br/>
+    i++;<br/>
 return (i);
 </dd></dl>
 <p> To query information about an <code>edac_mc</code>, use the <code>edac_mc_get_info</code> function. This function fills in the given <code>info</code> structure, which is of type <code>edac_mc_info</code>: </p>
 <dl>
 <dt>
 </dt><dd>
-struct edac_mc_info {<br />
-    char id[];                    /* Id of memory controller */<br />
-    char mc_name[];               /* Name of MC              */<br />
-    unsigned int size_mb;         /* Amount of RAM in MB     */<br />
-    unsigned int ce_count;        /* Corrected error count   */<br />
-    unsigned int ce_noinfo_count; /* noinfo Corrected errors */<br />
-    unsigned int ue_count;        /* Uncorrected error count */<br />
-    unsigned int ue_noinfo_count; /* noinfo Uncorrected errors*/<br />
+struct edac_mc_info {<br/>
+    char id[];                    /* Id of memory controller */<br/>
+    char mc_name[];               /* Name of MC              */<br/>
+    unsigned int size_mb;         /* Amount of RAM in MB     */<br/>
+    unsigned int ce_count;        /* Corrected error count   */<br/>
+    unsigned int ce_noinfo_count; /* noinfo Corrected errors */<br/>
+    unsigned int ue_count;        /* Uncorrected error count */<br/>
+    unsigned int ue_noinfo_count; /* noinfo Uncorrected errors*/<br/>
 };
 </dd></dl>
 <p> The function <code>edac_next_mc_info</code>() can be used to loop through all EDAC memory controllers and obtain MC information in a single call. It is a combined <code>edac_next_mc</code>() and <code>edac_mc_get_info</code>(). </p>
 <p> The function <code>edac_handle_reset</code>() will reset the internal memory controller iterator in the <i>libedac</i> handle. A subsequent call to <code>edac_next_mc</code>() would thus return the first EDAC MC. </p>
-<p> A convenience macro, <code>edac_for_each_mc_info</code>(), is provided which defines a for loop that iterates through all memory controller<br />
+<p> A convenience macro, <code>edac_for_each_mc_info</code>(), is provided which defines a for loop that iterates through all memory controller<br/>
 &nbsp;<wbr>objects for a given EDAC handle, returning the MC information in the <i>info</i> structure on each iteration. For example (assuming initialized <i>libedac</i> handle <i>edac</i>): </p>
 <dl>
 <dt>
 </dt><dd>
-edac_mc *mc;<br />
-struct edac_mc_info info;<br />
-int count = 0;<br />
-edac_for_each_mc_info(edac, mc, info)<br />
-{<br />
-    count++;<br />
+edac_mc *mc;<br/>
+struct edac_mc_info info;<br/>
+int count = 0;<br/>
+edac_for_each_mc_info(edac, mc, info)<br/>
+{<br/>
+    count++;<br/>
     printf(&#8220;MC info: id=%s name=%s
-&#8221;, info.id, info.mc_name);<br />
+&#8221;, info.id, info.mc_name);<br/>
 }
 </dd></dl>
 <h2>CSROW INFORMATION</h2>
@@ -103,18 +103,18 @@ edac_for_each_mc_info(edac, mc, info)<br />
 <dl>
 <dt>
 </dt><dd>
-struct edac_csrow_info {<br />
-    char id[];             /* CSROW Identity (e.g. csrow0)  */<br />
-    unsigned int size_mb;  /* CSROW size in MB              */<br />
-    unsigned int ce_count; /* Total corrected errors        */<br />
-    unsigned int ue_count; /* Total uncorrected errors      */<br />
-    struct edac_channel channel[EDAC_MAX_CHANNELS];<br />
-};<br />
-struct edac_channel {<br />
-    int valid;             /* Is this channel valid */<br />
-    unsigned int ce_count; /* Corrected error count */<br />
-    int dimm_label_valid;  /* Is DIMM label valid?  */<br />
-    char dimm_label[];     /* DIMM name             */<br />
+struct edac_csrow_info {<br/>
+    char id[];             /* CSROW Identity (e.g. csrow0)  */<br/>
+    unsigned int size_mb;  /* CSROW size in MB              */<br/>
+    unsigned int ce_count; /* Total corrected errors        */<br/>
+    unsigned int ue_count; /* Total uncorrected errors      */<br/>
+    struct edac_channel channel[EDAC_MAX_CHANNELS];<br/>
+};<br/>
+struct edac_channel {<br/>
+    int valid;             /* Is this channel valid */<br/>
+    unsigned int ce_count; /* Corrected error count */<br/>
+    int dimm_label_valid;  /* Is DIMM label valid?  */<br/>
+    char dimm_label[];     /* DIMM name             */<br/>
 };
 </dd></dl>
 <p> The <code>edac_next_csrow_info</code>() function is a combined version of <code>edac_next_csrow</code>() and <code>edac_csrow_get_info</code>() for convenience. </p>
@@ -125,20 +125,20 @@ struct edac_channel {<br />
 <dl>
 <dt>
 </dt><dd>
-edac_handle *edac;<br />
-if (!(edac = edac_handle_create())) {<br />
+edac_handle *edac;<br/>
+if (!(edac = edac_handle_create())) {<br/>
     fprintf(stderr, &#8220;edac_handle_create: Out of memory!
-&#8221;);<br />
-    exit(1);<br />
-}<br />
-if (edac_handle_init(edac) &lt; 0) {<br />
+&#8221;);<br/>
+    exit(1);<br/>
+}<br/>
+if (edac_handle_init(edac) &lt; 0) {<br/>
     fprintf(stderr, &#8220;Unable to get EDAC data: %s
-&#8221;,<br />
-            edac_strerror(edac));<br />
-    exit(1);<br />
-}<br />
+&#8221;,<br/>
+            edac_strerror(edac));<br/>
+    exit(1);<br/>
+}<br/>
 printf(&#8220;EDAC initialized with %d MCs
-&#8221;, edac_mc_count(edac));<br />
+&#8221;, edac_mc_count(edac));<br/>
 edac_handle_destroy(edac);
 </dd></dl>
 <p> Report all DIMM labels for MC:csrow:channel combinations </p>

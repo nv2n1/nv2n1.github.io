@@ -87,187 +87,187 @@ description: "Finch – A Pimpin’ Penguin console frontend to libpurple. Insta
 <dl>
 <dt>A sample file looks like:</dt>
 <dd>
- [Finch]<br />
- color-available = green; black<br />
- color-away = blue; black<br />
- color-idle = gray; black<br />
- color-offline = red; black<br />
- color-message-sent = cyan; default<br />
- color-message-received = red; default<br />
- color-message-highlight = black; green<br />
- color-message-action = yellow; default<br />
- color-timestamp = blue; default<br />
+ [Finch]<br/>
+ color-available = green; black<br/>
+ color-away = blue; black<br/>
+ color-idle = gray; black<br/>
+ color-offline = red; black<br/>
+ color-message-sent = cyan; default<br/>
+ color-message-received = red; default<br/>
+ color-message-highlight = black; green<br/>
+ color-message-action = yellow; default<br/>
+ color-timestamp = blue; default<br/>
  #See below for details on color </dd>
-<p> [general]<br />
- shadow = 0<br />
- # There is experimental mouse support<br />
- mouse = 1<br />
- # To use some custom window-manager<br />
- wm = /usr/local/lib/gnt/s.so<br />
- # There&#8217;s also a custom window manager called irssi.so<br />
- # Remember window-positions based on the titles (on by default)<br />
- remember_position = 1<br />
- # Use borderless one-line high buttons<br />
+<p> [general]<br/>
+ shadow = 0<br/>
+ # There is experimental mouse support<br/>
+ mouse = 1<br/>
+ # To use some custom window-manager<br/>
+ wm = /usr/local/lib/gnt/s.so<br/>
+ # There&#8217;s also a custom window manager called irssi.so<br/>
+ # Remember window-positions based on the titles (on by default)<br/>
+ remember_position = 1<br/>
+ # Use borderless one-line high buttons<br/>
  small-button = true </p>
-<p> # Workspaces are created simply by adding Workspace-X groups as follows:<br />
- [Workspace-1]<br />
- name = blist<br />
- # window-names specifies that windows with these semi-colon separated names are placed into this workspace<br />
+<p> # Workspaces are created simply by adding Workspace-X groups as follows:<br/>
+ [Workspace-1]<br/>
+ name = blist<br/>
+ # window-names specifies that windows with these semi-colon separated names are placed into this workspace<br/>
  window-names = buddylist;debug-window </p>
-<p> [Workspace-2]<br />
- name = IM<br />
- window-names = conversation-window<br />
- # window-titles specifies that windows with these semi-colon separated titles are placed into this workspace. These are matched as substrings. Window titles take precedence over names.<br />
+<p> [Workspace-2]<br/>
+ name = IM<br/>
+ window-names = conversation-window<br/>
+ # window-titles specifies that windows with these semi-colon separated titles are placed into this workspace. These are matched as substrings. Window titles take precedence over names.<br/>
  window-titles = Preferences;Pounce </p>
-<p> [colors]<br />
- # The RGB values range in [0, 1000]<br />
- black = 0; 0; 0<br />
- red = 1000; 0; 0<br />
- green = 0; 1000; 0<br />
- blue = 250; 250; 700<br />
- white = 1000; 1000; 1000<br />
- gray = 700; 700; 700<br />
+<p> [colors]<br/>
+ # The RGB values range in [0, 1000]<br/>
+ black = 0; 0; 0<br/>
+ red = 1000; 0; 0<br/>
+ green = 0; 1000; 0<br/>
+ blue = 250; 250; 700<br/>
+ white = 1000; 1000; 1000<br/>
+ gray = 700; 700; 700<br/>
  darkgray = 256; 256; 256 </p>
-<p> [colorpairs]<br />
- normal = white; black<br />
- highlight = white; blue<br />
- highlightd = black; gray<br />
- shadow = black; darkgray<br />
- title = white; blue<br />
- titled = white; gray<br />
- text = white; blue<br />
- disabled = gray; black<br />
+<p> [colorpairs]<br/>
+ normal = white; black<br/>
+ highlight = white; blue<br/>
+ highlightd = black; gray<br/>
+ shadow = black; darkgray<br/>
+ title = white; blue<br/>
+ titled = white; gray<br/>
+ text = white; blue<br/>
+ disabled = gray; black<br/>
  urgent = green; black </p>
-<p> # Remap some keys for GntEntry<br />
- [GntEntry::remap]<br />
- # Remap the up-arrow to the left-arrow<br />
- ^[[A = ^[[D<br />
- # Remap the down-arrow to the right-arrow<br />
- ^[[B = ^[[C<br />
- # Remap &#8216;a&#8217; to &#8216;bcd&#8217;<br />
- a = bcd<br />
- # Completely ignore the key &#8216;q&#8217;<br />
- q =<br />
- # But the following will NOT work<br />
+<p> # Remap some keys for GntEntry<br/>
+ [GntEntry::remap]<br/>
+ # Remap the up-arrow to the left-arrow<br/>
+ ^[[A = ^[[D<br/>
+ # Remap the down-arrow to the right-arrow<br/>
+ ^[[B = ^[[C<br/>
+ # Remap &#8216;a&#8217; to &#8216;bcd&#8217;<br/>
+ a = bcd<br/>
+ # Completely ignore the key &#8216;q&#8217;<br/>
+ q =<br/>
+ # But the following will NOT work<br/>
  #abc = bcd </p>
-<p> # Hitting &#8216;space&#8217; will activate a button<br />
- [GntButton::remap]<br />
+<p> # Hitting &#8216;space&#8217; will activate a button<br/>
+ [GntButton::remap]<br/>
  \ = 
  </p>
 </dl>
 <h2>Widget Actions</h2>
 <p> You can specifiy key-bindings for specific widgets. The following entries in <i>~/.gntrc</i> correspond to the default keybindings for the actions: </p>
-<p> [GntBox::binding]<br />
- tab = focus-next<br />
- right = focus-next<br />
+<p> [GntBox::binding]<br/>
+ tab = focus-next<br/>
+ right = focus-next<br/>
  left = focus-prev </p>
-<p> [GntComboBox::binding]<br />
- down = dropdown<br />
+<p> [GntComboBox::binding]<br/>
+ down = dropdown<br/>
  up = dropdown </p>
-<p> [GntEntry::binding]<br />
- c-a = cursor-home<br />
- home = cursor-home<br />
- c-e = cursor-end<br />
- end = cursor-end<br />
- backspace = delete-prev<br />
- del = delete-next<br />
- c-d = delete-next<br />
- c-u = delete-start<br />
- c-k = delete-end<br />
- c-b = cursor-prev<br />
- left = cursor-prev<br />
- c-f = cursor-next<br />
- right = cursor-next<br />
- tab = suggest-show<br />
- down = suggest-next<br />
- up = suggest-prev<br />
- page-down = suggest-next-page<br />
- page-up = suggest-prev-page<br />
- c-w = delete-prev-word<br />
- a-b = cursor-prev-word<br />
- a-f = cursor-next-word<br />
- a-d = delete-next-word<br />
- c-v = clipboard-paste<br />
- c-p = history-prev<br />
- c-n = history-next<br />
- c-r = history-search<br />
- c-up = history-prev<br />
+<p> [GntEntry::binding]<br/>
+ c-a = cursor-home<br/>
+ home = cursor-home<br/>
+ c-e = cursor-end<br/>
+ end = cursor-end<br/>
+ backspace = delete-prev<br/>
+ del = delete-next<br/>
+ c-d = delete-next<br/>
+ c-u = delete-start<br/>
+ c-k = delete-end<br/>
+ c-b = cursor-prev<br/>
+ left = cursor-prev<br/>
+ c-f = cursor-next<br/>
+ right = cursor-next<br/>
+ tab = suggest-show<br/>
+ down = suggest-next<br/>
+ up = suggest-prev<br/>
+ page-down = suggest-next-page<br/>
+ page-up = suggest-prev-page<br/>
+ c-w = delete-prev-word<br/>
+ a-b = cursor-prev-word<br/>
+ a-f = cursor-next-word<br/>
+ a-d = delete-next-word<br/>
+ c-v = clipboard-paste<br/>
+ c-p = history-prev<br/>
+ c-n = history-next<br/>
+ c-r = history-search<br/>
+ c-up = history-prev<br/>
  c-down = history-next </p>
-<p> [GntTree::binding]<br />
- up = move-up<br />
- down = move-down<br />
- c-n = move-down<br />
- c-p = move-up<br />
- pageup = page-up<br />
- pagedown = page-down<br />
- backspace = move-parent<br />
- home = move-first<br />
- end = move-last<br />
- # Following is the default binding for the context-menu<br />
- menu = context-menu<br />
- # The following will let you open the context-menu in the buddylist with c-b<br />
+<p> [GntTree::binding]<br/>
+ up = move-up<br/>
+ down = move-down<br/>
+ c-n = move-down<br/>
+ c-p = move-up<br/>
+ pageup = page-up<br/>
+ pagedown = page-down<br/>
+ backspace = move-parent<br/>
+ home = move-first<br/>
+ end = move-last<br/>
+ # Following is the default binding for the context-menu<br/>
+ menu = context-menu<br/>
+ # The following will let you open the context-menu in the buddylist with c-b<br/>
  # c-b = context-menu </p>
-<p> [GntWidget::binding]<br />
- f11 = context-menu<br />
+<p> [GntWidget::binding]<br/>
+ f11 = context-menu<br/>
  c-x = context-menu </p>
-<p> [GntWindow::binding]<br />
- c-o = show-menu<br />
+<p> [GntWindow::binding]<br/>
+ c-o = show-menu<br/>
  f10 = show-menu </p>
 <p> The <code>c-</code> corresponds to the <code>Control</code> key. You can also use <code>ctrl-</code> or <code>ctr-</code> or <code>ctl-</code> to indicate a combination. For alt-keys, you can use one of <code>a-</code>, <code>alt-</code>, <code>m-</code> or <code>meta-</code>. You can also use <code>home</code>, <code>end</code>, <code>left</code>, <code>right</code> etc. keys. </p>
 <p> To unbind a key which has a default binding, you simply bind it to the empty string. For example, to unbind <code>Alt + q</code> from the Quit function, you would use: </p>
-<p> [GntWM::binding]<br />
+<p> [GntWM::binding]<br/>
  a-q = </p>
 <h2>Menus</h2>
 <p> You can also specify key-bindings to trigger specific menuitems in windows. For example, the following entry in <i>~/.gntrc</i> will bind <code>Ctrl + t</code> to the &#8216;Send IM&#8230;&#8217; item in the buddylist: </p>
-<p> [buddylist::menu]<br />
+<p> [buddylist::menu]<br/>
  c-t = send-im </p>
 <p> The following is the list of IDs of the current menuitems in the buddylist: </p>
-<p> send-im<br />
- join-chat<br />
- show-empty-groups<br />
- show-offline-buddies<br />
- sort-status<br />
- sort-alpha<br />
- sort-log<br />
- add-buddy<br />
- add-chat<br />
+<p> send-im<br/>
+ join-chat<br/>
+ show-empty-groups<br/>
+ show-offline-buddies<br/>
+ sort-status<br/>
+ sort-alpha<br/>
+ sort-log<br/>
+ add-buddy<br/>
+ add-chat<br/>
  add-group </p>
 <h2>Mouse Support</h2>
 <p> There is experimental mouse support. You can focus windows, activate buttons, select rows in a list, scroll using the wheel-scroll etc. Selecting text in a text-view copies it to the gnt clipboard. Mouse support is disabled by default, so you need to enable it in <i>~/.gntrc</i> (see the sample above). </p>
 <h2>Window Management</h2>
 <p> The default window management is very limited. But it is possible to write custom window managers to suit your needs. There is a sample window-manager included (named <i>s.so</i>) which adds a little &#8216;close-button&#8217; for the windows, removes the borders from the buddylist and pops up new windows in the middle of the screen, instead of at the upper-left corder. It is provided as a sample simple manager, but it should be possible to write more complex managers, and it&#8217;s very possible that the window-manager API will need to be enhanced. Look at the sample <i>~/.gntrc</i> file above to see how to select a window-manager. </p>
 <p> It is also possible to rebind the window-manager actions in <i>~/.gntrc</i>, eg: </p>
-<p> [GntWM::binding]<br />
- a-n = window-next<br />
- a-p = window-prev<br />
- a-c = window-close<br />
- a-w = window-list<br />
- a-d = dump-screen<br />
- a-, = shift-left<br />
- a-. = shift-right<br />
- a-a = action-list<br />
- a-m = start-move<br />
- a-r = start-resize<br />
- a-q = wm-quit<br />
- a-l = refresh-screen<br />
- a-s = workspace-list<br />
- a-t = window-tag<br />
- a-T = place-tagged<br />
- a-C = toggle-clipboard<br />
- a-/ = help-for-widget<br />
- a-c-j = window-scroll-down<br />
- a-c-k = window-scroll-up<br />
- # The following action is still incomplete, and doesn&#8217;t have a default binding<br />
- # switch-window-n<br />
+<p> [GntWM::binding]<br/>
+ a-n = window-next<br/>
+ a-p = window-prev<br/>
+ a-c = window-close<br/>
+ a-w = window-list<br/>
+ a-d = dump-screen<br/>
+ a-, = shift-left<br/>
+ a-. = shift-right<br/>
+ a-a = action-list<br/>
+ a-m = start-move<br/>
+ a-r = start-resize<br/>
+ a-q = wm-quit<br/>
+ a-l = refresh-screen<br/>
+ a-s = workspace-list<br/>
+ a-t = window-tag<br/>
+ a-T = place-tagged<br/>
+ a-C = toggle-clipboard<br/>
+ a-/ = help-for-widget<br/>
+ a-c-j = window-scroll-down<br/>
+ a-c-k = window-scroll-up<br/>
+ # The following action is still incomplete, and doesn&#8217;t have a default binding<br/>
+ # switch-window-n<br/>
  # Other actions: window-next-urgent, window-prev-urgent </p>
-<p> # For the sample custom window manager<br />
- [GntS::binding]<br />
+<p> # For the sample custom window manager<br/>
+ [GntS::binding]<br/>
  a-b = toggle-buddylist </p>
-<p> # For the irssi window manager<br />
- [Irssi::binding]<br />
- a-L = move-right<br />
- a-H = move-left<br />
- a-J = move-down<br />
+<p> # For the irssi window manager<br/>
+ [Irssi::binding]<br/>
+ a-L = move-right<br/>
+ a-H = move-left<br/>
+ a-J = move-down<br/>
  a-K = move-up </p>
 <h2>Conversation Commands</h2>
 <p> There are a few helpful commands in addition to the regular commands. You can use these from any conversation to access other windows. </p>
@@ -286,19 +286,19 @@ description: "Finch – A Pimpin’ Penguin console frontend to libpurple. Insta
 <dd> for the status window. </dd>
 </dl>
 <h2>FAQ</h2>
-<p> FAQ for <code>finch</code> is located at<br />
+<p> FAQ for <code>finch</code> is located at<br/>
  <i><a rel="nofollow" href="http://developer.pidgin.im/wiki/Using%20Finch">http://developer.pidgin.im/wiki/Using%20Finch</a></i> </p>
 <h2>BUGS</h2>
-<p> Known bugs are listed at<br />
+<p> Known bugs are listed at<br/>
  <i><a rel="nofollow" href="http://developer.pidgin.im/query?status=new">http://developer.pidgin.im/query?status=new</a>&amp;status=assigned&amp;status=reopened&amp;component=finch+%28gnt%2Fncurses%29&amp;order=priority</i> </p>
 <p> Before sending a bug report, please verify that you have the latest version of <code>finch</code> and libpurple. Many bugs (major and minor) are fixed at each release, and if yours is out of date, the problem may already have been solved. </p>
 <h2>PATCHES</h2>
 <p> If you fix a bug in <code>finch</code> (or otherwise enhance it), please submit a patch (using <code>mtn diff &gt; my.diff</code> against the latest version from the Monotone repository) at <i><a rel="nofollow" href="http://developer.pidgin.im/simpleticket">http://developer.pidgin.im/simpleticket</a></i> </p>
 <p> You are also encouraged to drop by at <code>#pidgin</code> on <i>irc.freenode.net</i> to discuss development. </p>
 <h2>SEE ALSO</h2>
-<p> <i><a rel="nofollow" href="http://pidgin.im/">http://pidgin.im/</a></i><br />
- <i><a rel="nofollow" href="http://developer.pidgin.im/">http://developer.pidgin.im/</a></i><br />
- <code>purple-remote</code>(1)<br />
+<p> <i><a rel="nofollow" href="http://pidgin.im/">http://pidgin.im/</a></i><br/>
+ <i><a rel="nofollow" href="http://developer.pidgin.im/">http://developer.pidgin.im/</a></i><br/>
+ <code>purple-remote</code>(1)<br/>
  <code><a href="/docs/linux/man/1-pidgin/">pidgin</a></code>(1) </p>
 <h2>LICENSE</h2>
 <p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>

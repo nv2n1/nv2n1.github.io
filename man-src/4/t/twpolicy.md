@@ -17,18 +17,18 @@ description: "twpolicy – Tripwire policy file reference"
 <p>The basic components of policy files are comments, rules, directives, and variables. Each of these components is described in greater detail below.</p>
 <h3>Comments</h3>
 <p>In a policy file, any text following a &#8216;#&#8217;, up to the next line break, is considered a comment. Example: </p>
-<p> <font SIZE="-1"> </font></p>
+<p>  </p>
 <pre># This is a comment.
 /bin -&gt; $(ReadOnly); # A comment can go here, too.</pre>
 <h3>Rules</h3>
 <p>Policy rules determine whether and to what extent <i>Tripwire</i> will check particular files and directories. There are two kinds of policy rules recognized by <i>Tripwire</i>: </p>
-<p> 1) Normal rules define which properties of a particular file or directory tree <i>Tripwire</i> scans.<br />
+<p> 1) Normal rules define which properties of a particular file or directory tree <i>Tripwire</i> scans.<br/>
  2) Stop points tell <i>Tripwire</i> not to scan a particular file or directory.</p>
 <h3>Normal Rules</h3>
-<p>The format for a normal rule is:<br />
+<p>The format for a normal rule is:<br/>
  <i>object_name</i> -&gt; <i>property_mask</i>;<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></p>
 <p> where the <i>object_name</i> is the fully qualified pathname for a directory or file, and <i>property_mask</i> specifies what properties of an object to examine or ignore. The &#8216;-&gt;&#8217; token separates the pathname and the property mask. Whitespace must separate the object name and &#8216;-&gt;&#8217; token. A semicolon must terminate the rule. If the pathname specified is a directory, the directory and all of its descendants will be scanned with the indicated property mask. If the pathname refers to an individual file, only that file will be scanned with the specified property mask. Examples: </p>
-<p> <font SIZE="-1"> </font></p>
+<p>  </p>
 <pre># Defines Tripwire behavior for entire /bin directory tree.
 /bin -&gt; $(ReadOnly);
 # Defines Tripwire behavior for a single file. In this case,
@@ -39,35 +39,35 @@ description: "twpolicy – Tripwire policy file reference"
 /etc -&gt; $(mask1);
 /etc/passwd -&gt; $(mask2);</pre>
 <p>Only one rule may be associated with any given object. If any object has more than one rule in a policy file, <i>Tripwire</i> will print an error message and exit without scanning any files. For example: </p>
-<p> <font SIZE="-1"> </font></p>
+<p>  </p>
 <pre># This is an example of an illegal construct.
 /usr/bin -&gt; $(mask3);
 /usr/bin -&gt; $(mask4);</pre>
 <h3>Object Names</h3>
 <p>In this document, policy file objects are fully qualified pathnames of files and directories. Environment variables are not allowed for security reasons. Examples: </p>
-<p> <font SIZE="-1"> </font></p>
+<p>  </p>
 <pre>/etc # valid object name.
 /etc/passwd # valid object name.
 $HOME # not valid.</pre>
 <h3>Property Masks</h3>
 <p>Property masks designate which <i>Tripwire</i> properties of a given object should be examined. A property mask consists of a series of single-character symbols, each of which may be preceded by an optional plus or minus sign. Each character symbol stands for a particular <i>Tripwire</i> property to be examined during integrity checking. If the character is preceded by a plus, checking is done for that property; if preceded by a minus, checking is not done for that property. For example: </p>
-<p> <font SIZE="-1"> </font></p>
+<p>  </p>
 <pre>+p # compare permissions.
 -p # ignore permissions.</pre>
 <p>Each rule in the policy file must have a property mask. Examples: </p>
-<p> <font SIZE="-1"> </font></p>
+<p>  </p>
 <pre>/etc -&gt; $(IgnoreAll); #valid property mask.
 /etc -&gt; +p-p; #valid property mask.
 /etc -&gt; ; #invalid property mask.</pre>
 <p>Characters in a property mask without a preceding plus or minus sign are assumed to be plus. If a property is not specified in the property mask, it is ignored, which is equivalent to turning it off with the minus sign. Examples: </p>
-<p> <font SIZE="-1"> </font></p>
+<p>  </p>
 <pre># Examine permissions and link count.
 # All three of the following are equivalent.
 +p+n
 pn
 pn-g</pre>
 <p>Characters used in property masks, with descriptions: </p>
-<p> <font SIZE="-1"> </font></p>
+<p>  </p>
 <pre>- Ignore the following properties 
 + Record and check the following properties
 a Access timestamp 
@@ -90,7 +90,7 @@ S SHA hash value</pre>
 <h3>Stop Points</h3>
 <p>Stop points are used to specify specific files or directories that <i>Tripwire</i> should not scan. The syntax for stop points is: </p>
 <pre>! <i>object_name</i> ; </pre>
-<p>For example: <font SIZE="-1"> </font></p>
+<p>For example:  </p>
 <pre>!/etc/init.d; 
 # The directory /etc/init.d will not be scanned.
 /etc -&gt; $(ReadOnly);
@@ -99,14 +99,14 @@ S SHA hash value</pre>
 # Scan all of /etc, but do not scan two particular 
 # files in the /etc hierarchy.</pre>
 <h3>Rule Attributes</h3>
-<p>Rule attributes work with normal rules to modify their behavior or provide additional information. Multiple attributes can be assigned to each rule. Rule attributes are not case-sensitive. Rule attributes may be applied to a single rule using the following syntax:<br />
- <i>object_name</i> -&gt; <i>property_mask</i> (<i>rule attribute</i> = <i>value</i>); For example: <font SIZE="-1"> </font></p>
+<p>Rule attributes work with normal rules to modify their behavior or provide additional information. Multiple attributes can be assigned to each rule. Rule attributes are not case-sensitive. Rule attributes may be applied to a single rule using the following syntax:<br/>
+ <i>object_name</i> -&gt; <i>property_mask</i> (<i>rule attribute</i> = <i>value</i>); For example:  </p>
 <pre>/usr/lib -&gt; $(ReadOnly) (emailto = admin [at] foo.com, severity = 80);
 #This rule will notify the admin if any violations of the 
 #rule occur and designate the severity as 80.</pre>
-<p>Rule attributes can also be specified for a group of rules, using the format:<br />
- (<i>attribute list</i>)<br />
- { <i>rule list</i>; } For example: <font SIZE="-1"> </font></p>
+<p>Rule attributes can also be specified for a group of rules, using the format:<br/>
+ (<i>attribute list</i>)<br/>
+ { <i>rule list</i>; } For example:  </p>
 <pre>(emailto = admin [at] foo.com, severity = 80)
 {
  /usr/lib -&gt; $(ReadOnly);
@@ -115,30 +115,30 @@ S SHA hash value</pre>
 <p> The following four rule attributes are supported by <i>Tripwire</i>:</p>
 <dl>
 <dt><tt>rulename</tt></dt>
-<dd>The <tt>rulename</tt> attribute is used to associate a rule or set of rules with a specific name. In a report file, this name will be associated with violations to the specified rule. This feature is useful if you want to track certain objects within a large <i>Tripwire</i> database. For instance, if you associate the rule name &quot;watchme&quot; with important files, you can sort through the <i>Tripwire</i> report using &quot;watchme&quot; as a sorting key.<br />
- Example: <font SIZE="-1"> </font></dd>
+<dd>The <tt>rulename</tt> attribute is used to associate a rule or set of rules with a specific name. In a report file, this name will be associated with violations to the specified rule. This feature is useful if you want to track certain objects within a large <i>Tripwire</i> database. For instance, if you associate the rule name &quot;watchme&quot; with important files, you can sort through the <i>Tripwire</i> report using &quot;watchme&quot; as a sorting key.<br/>
+ Example:  </dd>
 <pre>/etc -&gt; +ug (rulename=watchme);</pre>
 <dt><tt>emailto</tt></dt>
-<dd>The <tt>emailto</tt> attribute associates one or more email addresses with a rule or group of rules. When an integrity check is run with the <code>&#8211;email-report</code> option and a rule is violated, a report of that violation will be sent to the specified email address(es), using the report format specified by the <tt>EMAILREPORTLEVEL</tt> variable in the configuration file.<br />
- Example: <font SIZE="-1"> </font></dd>
+<dd>The <tt>emailto</tt> attribute associates one or more email addresses with a rule or group of rules. When an integrity check is run with the <code>&#8211;email-report</code> option and a rule is violated, a report of that violation will be sent to the specified email address(es), using the report format specified by the <tt>EMAILREPORTLEVEL</tt> variable in the configuration file.<br/>
+ Example:  </dd>
 <pre>/etc -&gt; +ug (emailto=admin [at] domain.com);</pre>
-<dd>To specify multiple email addresses, include them as a quoted, semicolon-delimited list. <font SIZE="-1"> </font></dd>
+<dd>To specify multiple email addresses, include them as a quoted, semicolon-delimited list.  </dd>
 <pre>/etc -&gt; +ug (emailto=&quot;admin [at] foo.com;admin2 [at] foo.com&quot;);</pre>
 <dt><tt>severity</tt></dt>
-<dd>The <tt>severity</tt> attribute associates a numeric severity level with a rule. When <i>Tripwire</i> is run in Integrity Checking mode, it is possible to specify that only rules exceeding a certain severity level are used. The default severity level is 0, and values can range from 0 to 1,000,000.<br />
- Example: <font SIZE="-1"> </font></dd>
+<dd>The <tt>severity</tt> attribute associates a numeric severity level with a rule. When <i>Tripwire</i> is run in Integrity Checking mode, it is possible to specify that only rules exceeding a certain severity level are used. The default severity level is 0, and values can range from 0 to 1,000,000.<br/>
+ Example:  </dd>
 <pre>/etc -&gt; +ug (severity=50);</pre>
 <dt><tt>recurse</tt></dt>
 <dd>The <tt>recurse</tt> attribute specifies how a rule will scan directories. Valid values for <tt>recurse</tt> are <i>true</i>, <i>false</i>, or a number from -1 to 1,000,000. If <tt>recurse</tt> is set to <i>true</i> (or -1), tripwire will recursively scan the entire contents of the directory (both files and subdirectories). When <tt>recurse</tt> is set to <i>false</i> (or 0), and the rule refers to a directory, <i>Tripwire</i> will scan the inode of the directory but none of the files or subdirectories contained therein. For positive <tt>recurse</tt> value <i>n</i>, the rule will monitor all objects up to <i>n</i> levels below the start point. Stop points within the recursed directory still apply, and will prevent the specified file or directory from being scanned.</dd>
-<dd>When a rule refers to a file, specifying the <tt>recurse</tt> attribute has no effect&#8211;files will be scanned no matter what value is given for <tt>recurse</tt>. The default value for <tt>recurse</tt> is <i>true</i>.<br />
- Example: <font SIZE="-1"> </font></dd>
+<dd>When a rule refers to a file, specifying the <tt>recurse</tt> attribute has no effect&#8211;files will be scanned no matter what value is given for <tt>recurse</tt>. The default value for <tt>recurse</tt> is <i>true</i>.<br/>
+ Example:  </dd>
 <pre>/etc -&gt; +ug (recurse=2);</pre>
 </dl>
 <h3>Directives</h3>
 <p><i>Tripwire</i> supports a small number of directives that allow conditional interpretation of the policy file and certain diagnostic and debugging operations. The primary purpose of directives is to support sharing of a policy file among multiple machines. Directives use the following syntax: </p>
 <pre>@@ <i>directive_name</i> [<i>arguments</i>]</pre>
 <p>Where the directive name is one of the directives listed below: </p>
-<p> <font SIZE="-1"> </font></p>
+<p>  </p>
 <pre>@@section # Designates a section of the policy file.
 @@ifhost # Allow conditional interpretation
 @@else # of the policy file.
@@ -148,7 +148,7 @@ S SHA hash value</pre>
 @@end # Marks the logical end-of-file.</pre>
 <p>The @@section directive is used to designate sections of the policy file that are OS-specific. With <i>Tripwire 2.4</i>, valid arguments for the @@section directive are <tt>FS</tt> and <tt>GLOBAL</tt>. If no @@section directive is specified, <tt>FS</tt> will be assumed. If the argument to the @@section directive is either <tt>NTFS</tt> or <tt>NTREG</tt> (which have meaning only on Windows NT systems), <i>Tripwire</i> will skip all policy file text down to the next valid @@section directive. Any other argument will cause an error. </p>
 <p> The @@ifhost, @@else, and @@endif directives are used to allow conditional interpretation of the policy file. With the @@ifhost directive, multiple hostnames can be expressed as arguments, but they must be separated by an &#8216;||&#8217;, interpreted as the logical &#8216;OR&#8217;. This example illustrates how one might employ directives to use one policy file with multiple hosts. </p>
-<p> <font SIZE="-1"> </font></p>
+<p>  </p>
 <pre>@@ifhost spock || kirk
  /bin -&gt; $(ReadOnly);
 @@endif
@@ -168,7 +168,7 @@ S SHA hash value</pre>
 <p>Variable substitution is legal anywhere that a string could appear. The syntax for variable substitution is: </p>
 <pre>$( <i>variable</i> )</pre>
 <p>Examples of variable definition and variable substitution on the left, right, and both sides of rules. Note that variable names are case sensitive. </p>
-<p> <font SIZE="-1"> </font></p>
+<p>  </p>
 <pre>param1 = +SMCH; # Set variable param1.
 dir1 = /etc/inet; # Set variable dir1.
 DIR1 = /etc/init.d; # Variables are case sensitive.
@@ -178,23 +178,23 @@ $(DIR1) -&gt; $(param1); # Double substitution.</pre>
 <p>A number of variables are predefined by <i>Tripwire</i> and may not be changed. These variables represent different ways that files can change, and can be used on the right side of rules to design a policy file quickly.</p>
 <dl>
 <dt>ReadOnly</dt>
-<dd>ReadOnly is good for files that are widely available but are intended to be read-only.<br />
- Value: <font SIZE="-1"> +pinugtsdbmCM-rlacSH </font></dd>
+<dd>ReadOnly is good for files that are widely available but are intended to be read-only.<br/>
+ Value:  +pinugtsdbmCM-rlacSH </dd>
 <dt>Dynamic</dt>
-<dd>Dynamic is good for monitoring user directories and files that tend to be dynamic in behavior.<br />
- Value: <font SIZE="-1"> +pinugtd-srlbamcCMSH </font></dd>
+<dd>Dynamic is good for monitoring user directories and files that tend to be dynamic in behavior.<br/>
+ Value:  +pinugtd-srlbamcCMSH </dd>
 <dt>Growing</dt>
-<dd>The Growing variable is intended for files that should only get larger.<br />
- Value: <font SIZE="-1"> +pinugtdl-srbamcCMSH </font></dd>
+<dd>The Growing variable is intended for files that should only get larger.<br/>
+ Value:  +pinugtdl-srbamcCMSH </dd>
 <dt>Device</dt>
-<dd>Device is good for devices or other files that <i>Tripwire</i> should not attempt to open.<br />
- Value: <font SIZE="-1"> +pugsdr-intlbamcCMSH </font></dd>
+<dd>Device is good for devices or other files that <i>Tripwire</i> should not attempt to open.<br/>
+ Value:  +pugsdr-intlbamcCMSH </dd>
 <dt>IgnoreAll</dt>
-<dd>IgnoreAll tracks a file&#8217;s presence or absence, but doesn&#8217;t check any other properties.<br />
- Value: <font SIZE="-1"> -pinugtsdrlbamcCMSH </font></dd>
+<dd>IgnoreAll tracks a file&#8217;s presence or absence, but doesn&#8217;t check any other properties.<br/>
+ Value:  -pinugtsdrlbamcCMSH </dd>
 <dt>IgnoreNone</dt>
-<dd>IgnoreNone turns on all properties and provides a convenient starting point for defining your own property masks. (For example,&nbsp;<wbr><tt>mymask&nbsp;<wbr>=&nbsp;<wbr>$(IgnoreNone)&nbsp;<wbr>-ar;</tt>)<br />
- Value: <font SIZE="-1"> +pinugtsdrbamcCMSH-l </font></dd></dl>
+<dd>IgnoreNone turns on all properties and provides a convenient starting point for defining your own property masks. (For example,&nbsp;<wbr><tt>mymask&nbsp;<wbr>=&nbsp;<wbr>$(IgnoreNone)&nbsp;<wbr>-ar;</tt>)<br/>
+ Value:  +pinugtsdrbamcCMSH-l </dd></dl>
 <h2>Version Information</h2>
 <p>This man page describes <i>Tripwire 2.4</i>.</p>
 <h2>Authors</h2>

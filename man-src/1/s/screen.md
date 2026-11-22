@@ -10,8 +10,8 @@ description: "screen – screen manager with VT100/ANSI terminal emulation"
 
 <p> screen &#8211; screen manager with VT100/ANSI terminal emulation </p>
 <h2>SYNOPSIS</h2>
-<p> <code>screen</code> [ <code>&#8211;</code><i>options</i> ] [ <i>cmd</i> [ <i>args</i> ] ]<br />
- <code>screen -r</code> [[<i>pid</i><code>.</code>]<i>tty</i>[<code>.</code><i>host</i>]]<br />
+<p> <code>screen</code> [ <code>&#8211;</code><i>options</i> ] [ <i>cmd</i> [ <i>args</i> ] ]<br/>
+ <code>screen -r</code> [[<i>pid</i><code>.</code>]<i>tty</i>[<code>.</code><i>host</i>]]<br/>
  <code>screen -r</code> <i>sessionowner</i><code>/</code>[[<i>pid</i><code>.</code>]<i>tty</i>[<code>.</code><i>host</i>]] </p>
 <h2>DESCRIPTION</h2>
 <p> <i>Screen</i> is a full-screen window manager that multiplexes a physical terminal between several processes (typically interactive shells). Each virtual terminal provides the functions of a DEC VT100 terminal and, in addition, several control functions from the ISO 6429 (ECMA 48, ANSI X3.64) and ISO 2022 standards (e.g. insert/delete line and support for multiple character sets). There is a scrollback history buffer for each virtual terminal and a copy-and-paste mechanism that allows moving text regions between windows. </p>
@@ -85,14 +85,14 @@ description: "screen – screen manager with VT100/ANSI terminal emulation"
 <dd> Suppress printing of error messages. In combination with -ls the exit value is as follows: 9 indicates a directory without sessions. 10 indicates a directory with running but not attachable sessions. 11 (or more) indicates 1 (or more) usable sessions. In combination with -r the exit value is as follows: 10 indicates that there is no session to resume. 12 (or more) indicates that there are 2 (or more) sessions to resume and you should specify which one to choose. In all other cases -q has no effect.</dd>
 <dt><code>-Q</code></dt>
 <dd> Some commands now can be queried from a remote session using this flag, e.g. screen -Q windows. The commands will send the response to the stdout of the querying process. If there was an error in the command, then the querying process will exit with a non-zero status. </dd>
-<p> The commands that can be queried now are:<br />
-&nbsp;<code>echo</code><br />
-&nbsp;<code>info</code><br />
-&nbsp;<code>lastmsg</code><br />
-&nbsp;<code>number</code><br />
-&nbsp;<code>select</code><br />
-&nbsp;<code>time</code><br />
-&nbsp;<code>title</code><br />
+<p> The commands that can be queried now are:<br/>
+&nbsp;<code>echo</code><br/>
+&nbsp;<code>info</code><br/>
+&nbsp;<code>lastmsg</code><br/>
+&nbsp;<code>number</code><br/>
+&nbsp;<code>select</code><br/>
+&nbsp;<code>time</code><br/>
+&nbsp;<code>title</code><br/>
 &nbsp;<code>windows</code></p>
 <dt><code>-r</code> [<i>pid.tty.host</i>]</dt>
 <dd>
@@ -220,7 +220,7 @@ description: "screen – screen manager with VT100/ANSI terminal emulation"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code> C-a b,<br />
+<td><code> C-a b,<br/>
  C-a C-b </code></td>
 <td>(break)</td>
 <td> Send a break to window.
@@ -243,7 +243,7 @@ description: "screen – screen manager with VT100/ANSI terminal emulation"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code> C-a c,<br />
+<td><code> C-a c,<br/>
  C-a C-c </code></td>
 <td>(screen)</td>
 <td> Create a new window with a shell and switch to that window.
@@ -266,7 +266,7 @@ description: "screen – screen manager with VT100/ANSI terminal emulation"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code> C-a d,<br />
+<td><code> C-a d,<br/>
  C-a C-d </code></td>
 <td>(detach)</td>
 <td> Detach <i>screen</i> from this terminal.
@@ -289,7 +289,7 @@ description: "screen – screen manager with VT100/ANSI terminal emulation"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code> C-a f,<br />
+<td><code> C-a f,<br/>
  C-a C-f </code></td>
 <td>(flow)</td>
 <td> Toggle flow <i>on</i>, <i>off</i> or <i>auto</i>.
@@ -345,7 +345,7 @@ description: "screen – screen manager with VT100/ANSI terminal emulation"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code> C-a i,<br />
+<td><code> C-a i,<br/>
  C-a C-i </code></td>
 <td>(info)</td>
 <td> Show info about this window.
@@ -357,7 +357,7 @@ description: "screen – screen manager with VT100/ANSI terminal emulation"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code> C-a k,<br />
+<td><code> C-a k,<br/>
  C-a C-k </code></td>
 <td>(kill)</td>
 <td> Destroy current window.
@@ -369,7 +369,7 @@ description: "screen – screen manager with VT100/ANSI terminal emulation"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code> C-a l,<br />
+<td><code> C-a l,<br/>
  C-a C-l </code></td>
 <td>(redisplay)</td>
 <td> Fully refresh current window.
@@ -392,7 +392,7 @@ description: "screen – screen manager with VT100/ANSI terminal emulation"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code> C-a m,<br />
+<td><code> C-a m,<br/>
  C-a C-m </code></td>
 <td>(lastmsg)</td>
 <td> Repeat the last message displayed in the message line.
@@ -415,8 +415,8 @@ description: "screen – screen manager with VT100/ANSI terminal emulation"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code> C-a space,<br />
- C-a n,<br />
+<td><code> C-a space,<br/>
+ C-a n,<br/>
  C-a C-n </code></td>
 <td>(next)</td>
 <td> Switch to the next window.
@@ -439,9 +439,9 @@ description: "screen – screen manager with VT100/ANSI terminal emulation"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code> C-a backspace,<br />
- C-a C-h,<br />
- C-a p,<br />
+<td><code> C-a backspace,<br/>
+ C-a C-h,<br/>
+ C-a p,<br/>
  C-a C-p </code></td>
 <td>(prev)</td>
 <td> Switch to the previous window (opposite of <code>C-a n</code>).
@@ -453,7 +453,7 @@ description: "screen – screen manager with VT100/ANSI terminal emulation"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code> C-a q,<br />
+<td><code> C-a q,<br/>
  C-a C-q </code></td>
 <td>(xon)</td>
 <td> Send a control-q to the current window.
@@ -476,7 +476,7 @@ description: "screen – screen manager with VT100/ANSI terminal emulation"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code> C-a r,<br />
+<td><code> C-a r,<br/>
  C-a C-r </code></td>
 <td>(wrap)</td>
 <td> Toggle the current window&#8217;s line-wrap setting (turn the current window&#8217;s automatic margins on and off).
@@ -488,7 +488,7 @@ description: "screen – screen manager with VT100/ANSI terminal emulation"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code> C-a s,<br />
+<td><code> C-a s,<br/>
  C-a C-s; </code></td>
 <td>(xoff)</td>
 <td> Send a control-s to the current window.
@@ -511,7 +511,7 @@ description: "screen – screen manager with VT100/ANSI terminal emulation"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code> C-a t,<br />
+<td><code> C-a t,<br/>
  C-a C-t </code></td>
 <td>(time)</td>
 <td> Show system information.
@@ -540,7 +540,7 @@ description: "screen – screen manager with VT100/ANSI terminal emulation"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code> C-a w,<br />
+<td><code> C-a w,<br/>
  C-a C-w </code></td>
 <td>(windows)</td>
 <td> Show a list of window.
@@ -585,7 +585,7 @@ description: "screen – screen manager with VT100/ANSI terminal emulation"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code> C-a z,<br />
+<td><code> C-a z,<br/>
  C-a C-z </code></td>
 <td>(suspend)</td>
 <td> Suspend <i>screen</i>. Your system must support BSD-style job-control.
@@ -652,8 +652,8 @@ description: "screen – screen manager with VT100/ANSI terminal emulation"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code> C-a [,<br />
- C-a C-[,<br />
+<td><code> C-a [,<br/>
+ C-a C-[,<br/>
  C-a esc </code></td>
 <td>(copy)</td>
 <td> Enter copy/scrollback mode.
@@ -665,7 +665,7 @@ description: "screen – screen manager with VT100/ANSI terminal emulation"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code> C-a C-],<br />
+<td><code> C-a C-],<br/>
  C-a ] </code></td>
 <td>(paste .)</td>
 <td> Write the contents of the paste buffer to the stdin queue of the current window.
@@ -677,7 +677,7 @@ description: "screen – screen manager with VT100/ANSI terminal emulation"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code> C-a {,<br />
+<td><code> C-a {,<br/>
  C-a } </code></td>
 <td>(history)</td>
 <td> Copy and paste a previous (command) line.
@@ -1029,7 +1029,7 @@ description: "screen – screen manager with VT100/ANSI terminal emulation"
 </dd><dl>
 <dt>
 </dt><dd>
-<p> Change the current character set slot designation and charset mapping. The first four character of <i>set</i> are treated as charset designators while the fifth and sixth character must be in range &#8216;0&#8217; to &#8216;3&#8217; and set the GL/GR charset mapping. On every position a &#8216;.&#8217; may be used to indicate that the corresponding charset/mapping should not be changed (<i>set</i> is padded to six characters internally by appending &#8216;.&#8217; chars). New windows have &quot;BBBB02&quot; as default charset, unless a encoding command is active.<br />
+<p> Change the current character set slot designation and charset mapping. The first four character of <i>set</i> are treated as charset designators while the fifth and sixth character must be in range &#8216;0&#8217; to &#8216;3&#8217; and set the GL/GR charset mapping. On every position a &#8216;.&#8217; may be used to indicate that the corresponding charset/mapping should not be changed (<i>set</i> is padded to six characters internally by appending &#8216;.&#8217; chars). New windows have &quot;BBBB02&quot; as default charset, unless a encoding command is active.<br/>
  The current setting can be viewed with the info command.</dd></dl>
 <dt><i></i><code>chdir</code> [<i>directory</i>]</dt>
 <dd>
@@ -1086,7 +1086,7 @@ description: "screen – screen manager with VT100/ANSI terminal emulation"
 </dd><dl>
 <dt>
 </dt><dd>
-<p> Enter copy/scrollback mode. This allows you to copy text from the current window and its history into the paste buffer. In this mode a vi-like `full screen editor&#8217; is active:<br />
+<p> Enter copy/scrollback mode. This allows you to copy text from the current window and its history into the paste buffer. In this mode a vi-like `full screen editor&#8217; is active:<br/>
  The editor&#8217;s movement keys are: </p>
 <table>
 <tr VALIGN=top>
@@ -1095,7 +1095,7 @@ description: "screen – screen manager with VT100/ANSI terminal emulation"
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>h</code>, <code>C-h</code>,<br />
+<td> <code>h</code>, <code>C-h</code>,<br/>
  <code>left arrow</code> </td>
 <td>move the cursor left.
 </td>
@@ -1106,7 +1106,7 @@ description: "screen – screen manager with VT100/ANSI terminal emulation"
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>j</code>, <code>C-n</code>,<br />
+<td> <code>j</code>, <code>C-n</code>,<br/>
  <code>down arrow</code> </td>
 <td>move the cursor down.
 </td>
@@ -1117,7 +1117,7 @@ description: "screen – screen manager with VT100/ANSI terminal emulation"
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>k</code>, <code>C-p</code>,<br />
+<td> <code>k</code>, <code>C-p</code>,<br/>
  <code>up arrow</code> </td>
 <td>move the cursor up.
 </td>
@@ -1128,7 +1128,7 @@ description: "screen – screen manager with VT100/ANSI terminal emulation"
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>l</code> (&#8216;el&#8217;),<br />
+<td> <code>l</code> (&#8216;el&#8217;),<br/>
  <code>right arrow</code> </td>
 <td>move the cursor right.
 </td>
@@ -2183,7 +2183,7 @@ xterm 80x42 jnhollma@/dev/ttyp5     0(m11)   &amp;R.x
 </dd><dl>
 <dt>
 </dt><dd>
-<p> Changes the kind of error messages used by <i>screen</i>. When you are familiar with the game nethack, you may enjoy the nethack-style messages which will often blur the facts a little, but are much funnier to read. Anyway, standard messages often tend to be unclear as well.<br />
+<p> Changes the kind of error messages used by <i>screen</i>. When you are familiar with the game nethack, you may enjoy the nethack-style messages which will often blur the facts a little, but are much funnier to read. Anyway, standard messages often tend to be unclear as well.<br/>
  This option is only available if <i>screen</i> was compiled with the NETHACK flag defined. The default setting is then determined by the presence of the environment variable $NETHACKOPTIONS and the file ~/.nethackrc &#8211; if either one is present, the default is <code>on</code>.</dd></dl>
 <dt><code>next</code></dt>
 <dd>
@@ -3056,8 +3056,8 @@ termcap vt*  LP
 <dd> default color</dd>
 <dt>.</dt>
 <dd> leave color unchanged</dd></dl>
-<p> The capitalized versions of the letter specify bright colors. You can also use the pseudo-color &#8216;i&#8217; to set just the brightness and leave the color unchanged.<br />
- A one digit/letter color description is treated as foreground or background color dependent on the current attributes: if reverse mode is set, the background color is changed instead of the foreground color. If you don&#8217;t like this, prefix the color with a .. If you want the same behavior for two-letter color descriptions, also prefix them with a ..<br />
+<p> The capitalized versions of the letter specify bright colors. You can also use the pseudo-color &#8216;i&#8217; to set just the brightness and leave the color unchanged.<br/>
+ A one digit/letter color description is treated as foreground or background color dependent on the current attributes: if reverse mode is set, the background color is changed instead of the foreground color. If you don&#8217;t like this, prefix the color with a .. If you want the same behavior for two-letter color descriptions, also prefix them with a ..<br/>
  As a special case, %{-} restores the attributes and colors that were set before the last change was made (i.e., pops one level of the color-change stack). </p>
 <p> Examples:</p>
 <dl>
@@ -3120,7 +3120,7 @@ set prompt = '^[[0000m^[k^[\% '
 </pre>
 <p> (I used \134 to output a `\&#8217; because of a bug in bash v1.04). </p>
 <h2>THE VIRTUAL TERMINAL</h2>
-<p> Each window in a <i>screen</i> session emulates a VT100 terminal, with some extra functions added. The VT100 emulator is hard-coded, no other terminal types can be emulated.<br />
+<p> Each window in a <i>screen</i> session emulates a VT100 terminal, with some extra functions added. The VT100 emulator is hard-coded, no other terminal types can be emulated.<br/>
  Usually <i>screen</i> tries to emulate as much of the VT100/ANSI standard as possible. But if your terminal lacks certain capabilities, the emulation may not be complete. In these cases <i>screen</i> has to tell the applications that some of the features are missing. This is no problem on machines using termcap, because <i>screen</i> can use the $TERMCAP variable to customize the standard <i>screen</i> termcap. </p>
 <p> But if you do a rlogin on another machine or your machine supports only terminfo this method fails. Because of this, <i>screen</i> offers a way to deal with these cases. Here is how it works: </p>
 <p> When <i>screen</i> tries to figure out a terminal name for itself, it first looks for an entry named screen.&lt;term&gt;, where &lt;term&gt; is the contents of your $TERM variable. If no such entry exists, <i>screen</i> tries screen (or screen-w if the terminal is wide (132 cols or more)). If even this entry cannot be found, vt100 is used as a substitute. </p>
@@ -3181,14 +3181,14 @@ set prompt = '^[[0000m^[k^[\% '
 <dt><code>ESC k</code></dt>
 <dd> A.k.a. Definition String</dd>
 <dt><code>ESC P</code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>(A)</dt>
-<dd> Device Control String.<br />
+<dd> Device Control String.<br/>
  Outputs a string directly to the host terminal without interpretation.</dd>
 <dt><code>ESC _</code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>(A)</dt>
 <dd> Application Program Command (Hardstatus)</dd>
 <dt><code>ESC ] 0 ; string ^G</code>(A)</dt>
 <dd> Operating System Command (Hardstatus, xterm title hack)</dd>
 <dt><code>ESC ] 83 ; cmd ^G</code><tt>&nbsp;<wbr>&nbsp;</tt>(A)</dt>
-<dd> Execute screen command. This only works if multi-user support is<br />
+<dd> Execute screen command. This only works if multi-user support is<br/>
  compiled into screen. The pseudo-user :window: is used to check the access control list. Use addacl :window: -rwx #? to create a user with no rights and allow only the needed commands.</dd>
 <dt><code>Control-N</code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>(A)</dt>
 <dd> Lock Shift G1 (SO)</dd>
@@ -3693,28 +3693,28 @@ set prompt = '^[[0000m^[k^[\% '
 <p> The following table describes all terminal capabilities that are recognized by <i>screen</i> and are not in the <a href="/docs/linux/man/5-termcap/">termcap</a>(5) manual. You can place these capabilities in your termcap entries (in `/etc/termcap&#8217;) or use them with the commands `termcap&#8217;, `terminfo&#8217; and `termcapinfo&#8217; in your screenrc files. It is often not possible to place these capabilities in the terminfo database. </p>
 <dl>
 <dt><code>LP</code><i><tt>&nbsp;<wbr>&nbsp;</tt>(bool)</i></dt>
-<dd> Terminal has VT100 style margins (`magic margins&#8217;). Note that<br />
+<dd> Terminal has VT100 style margins (`magic margins&#8217;). Note that<br/>
  this capability is obsolete because <i>screen</i> uses the standard &#8216;xn&#8217; instead.</dd>
 <dt><code>Z0</code><i><tt>&nbsp;<wbr>&nbsp;</tt>(str)</i></dt>
 <dd> Change width to 132 columns.</dd>
 <dt><code>Z1</code><i><tt>&nbsp;<wbr>&nbsp;</tt>(str)</i></dt>
 <dd> Change width to 80 columns.</dd>
 <dt><code>WS</code><i><tt>&nbsp;<wbr>&nbsp;</tt>(str)</i></dt>
-<dd> Resize display. This capability has the desired width and height as<br />
+<dd> Resize display. This capability has the desired width and height as<br/>
  arguments. <i>SunView(tm)</i> example: &#8216;\E[8;%d;%dt&#8217;.</dd>
 <dt><code>NF</code><i><tt>&nbsp;<wbr>&nbsp;</tt>(bool)</i></dt>
-<dd> Terminal doesn&#8217;t need flow control. Send ^S and ^Q direct to<br />
+<dd> Terminal doesn&#8217;t need flow control. Send ^S and ^Q direct to<br/>
  the application. Same as &#8216;flow off&#8217;. The opposite of this capability is &#8216;nx&#8217;.</dd>
 <dt><code>G0</code><i><tt>&nbsp;<wbr>&nbsp;</tt>(bool)</i></dt>
 <dd> Terminal can deal with ISO 2022 font selection sequences.</dd>
 <dt><code>S0</code><i><tt>&nbsp;<wbr>&nbsp;</tt>(str)</i></dt>
-<dd> Switch charset &#8216;G0&#8217; to the specified charset. Default<br />
+<dd> Switch charset &#8216;G0&#8217; to the specified charset. Default<br/>
  is &#8216;\E(%.&#8217;.</dd>
 <dt><code>E0</code><i><tt>&nbsp;<wbr>&nbsp;</tt>(str)</i></dt>
-<dd> Switch charset &#8216;G0&#8217; back to standard charset. Default<br />
+<dd> Switch charset &#8216;G0&#8217; back to standard charset. Default<br/>
  is &#8216;\E(B&#8217;.</dd>
 <dt><code>C0</code><i><tt>&nbsp;<wbr>&nbsp;</tt>(str)</i></dt>
-<dd> Use the string as a conversion table for font &#8216;0&#8217;. See<br />
+<dd> Use the string as a conversion table for font &#8216;0&#8217;. See<br/>
  the &#8216;ac&#8217; capability for more details.</dd>
 <dt><code>CS</code><i><tt>&nbsp;<wbr>&nbsp;</tt>(str)</i></dt>
 <dd> Switch cursor-keys to application mode.</dd>
@@ -3725,17 +3725,17 @@ set prompt = '^[[0000m^[k^[\% '
 <dt><code>OL</code><i><tt>&nbsp;<wbr>&nbsp;</tt>(num)</i></dt>
 <dd> Set the output buffer limit. See the &#8216;obuflimit&#8217; command for more details.</dd>
 <dt><code>KJ</code><i><tt>&nbsp;<wbr>&nbsp;</tt>(str)</i></dt>
-<dd> Set the encoding of the terminal. See the &#8216;encoding&#8217; command for<br />
+<dd> Set the encoding of the terminal. See the &#8216;encoding&#8217; command for<br/>
  valid encodings.</dd>
 <dt><code>AF</code><i><tt>&nbsp;<wbr>&nbsp;</tt>(str)</i></dt>
-<dd> Change character foreground color in an ANSI conform way. This<br />
+<dd> Change character foreground color in an ANSI conform way. This<br/>
  capability will almost always be set to &#8216;\E[3%dm&#8217; (&#8216;\E[3%p1%dm&#8217; on terminfo machines).</dd>
 <dt><code>AB</code><i><tt>&nbsp;<wbr>&nbsp;</tt>(str)</i></dt>
 <dd> Same as &#8216;AF&#8217;, but change background color.</dd>
 <dt><code>AX</code><i><tt>&nbsp;<wbr>&nbsp;</tt>(bool)</i></dt>
 <dd> Does understand ANSI set default fg/bg color (\E[39m / \E[49m).</dd>
 <dt><code>XC</code><i><tt>&nbsp;<wbr>&nbsp;</tt>(str)</i></dt>
-<dd> Describe a translation of characters to strings depending on the<br />
+<dd> Describe a translation of characters to strings depending on the<br/>
  current font. More details follow in the next section.</dd>
 <dt><code>XT</code><i><tt>&nbsp;<wbr>&nbsp;</tt>(bool)</i></dt>
 <dd> Terminal understands special xterm sequences (OSC, mouse tracking).</dd>
@@ -3746,7 +3746,7 @@ set prompt = '^[[0000m^[k^[\% '
 </dl>
 <h2>CHARACTER TRANSLATION</h2>
 <p> <i>Screen</i> has a powerful mechanism to translate characters to arbitrary strings depending on the current font and terminal type. Use this feature if you want to work with a common standard character set (say ISO8851-latin1) even on terminals that scatter the more unusual characters over several national language font pages. </p>
-<p> Syntax:<br />
+<p> Syntax:<br/>
 XC = &lt;charset &#8211; mapping&gt;{, , &lt;charset &#8211; mapping&gt;}&lt;charset &#8211; mapping&gt; : = &lt;designator&gt;&lt;template&gt;{, &lt;mapping&gt;}&lt;mapping&gt; : = &lt;char &#8211; to &#8211; be &#8211; mapped&gt;&lt;template &#8211; arg&gt;</p>
 <p> The things in braces may be repeated any number of times. </p>
 <p> A <i>&lt;charset-mapping&gt;</i> tells <i>screen</i> how to map characters in font <i>&lt;designator&gt;</i> (&#8216;B&#8217;: Ascii, &#8216;A&#8217;: UK, &#8216;K&#8217;: German, etc.) to strings. Every <i>&lt;mapping&gt;</i> describes to what string a single character will be translated. A template mechanism is used, as most of the time the codes have a lot in common (for example strings to switch to and from another charset). Each occurrence of &#8216;%&#8217; in <i>&lt;template&gt;</i> gets substituted with the <i>&lt;template-arg&gt;</i> specified together with the character. If your strings are not similar at all, then use &#8216;%&#8217; as a template and place the full string in <i>&lt;template-arg&gt;</i>. A quoting mechanism was added to make it possible to use a real &#8216;%&#8217;. The &#8216;\&#8217; character quotes the special characters &#8216;\&#8217;, &#8216;%&#8217;, and &#8216;,&#8217;. </p>

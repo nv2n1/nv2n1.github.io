@@ -10,7 +10,7 @@ description: "shgeqz.f –"
 <p>shgeqz.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>shgeqz</code> (JOB, COMPQ, COMPZ, N, ILO, IHI, H, LDH, T, LDT, ALPHAR, ALPHAI, BETA, Q, LDQ, Z, LDZ, WORK, LWORK, INFO)<br />
+<p>subroutine <code>shgeqz</code> (JOB, COMPQ, COMPZ, N, ILO, IHI, H, LDH, T, LDT, ALPHAR, ALPHAI, BETA, Q, LDQ, Z, LDZ, WORK, LWORK, INFO)<br/>
  <i></i><code>SHGEQZ</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine shgeqz (characterJOB, characterCOMPQ, characterCOMPZ, integerN, integerILO, integerIHI, real, dimension( ldh, * )H, integerLDH, real, dimension( ldt, * )T, integerLDT, real, dimension( * )ALPHAR, real, dimension( * )ALPHAI, real, dimension( * )BETA, real, dimension( ldq, * )Q, integerLDQ, real, dimension( ldz, * )Z, integerLDZ, real, dimension( * )WORK, integerLWORK, integerINFO)</h3>

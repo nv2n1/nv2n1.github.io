@@ -10,7 +10,7 @@ description: "XkbAddGeomColor – Add one color name to an existing keyboard geo
 <p>XkbAddGeomColor &#8211; Add one color name to an existing keyboard geometry description </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>XkbColorPtr XkbAddGeomColor</code> <code>(XkbGeometryPtr </code><i>geom</i><code>,</code> <code>char *</code><i>spec</i><code>,</code> <code>unsigned int </code><i>pixel</i><code>);</code><br />
+<dt> <code>XkbColorPtr XkbAddGeomColor</code> <code>(XkbGeometryPtr </code><i>geom</i><code>,</code> <code>char *</code><i>spec</i><code>,</code> <code>unsigned int </code><i>pixel</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

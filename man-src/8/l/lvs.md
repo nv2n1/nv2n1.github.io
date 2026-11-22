@@ -17,47 +17,47 @@ description: "lvs – Display information about logical volumes"
 <h2>Usage</h2>
 <p><code>lvs</code> </p>
 <dl>
-<dd>[ <code>-H</code>|<code>&#8211;history</code> ]<br />
- [ <code>-a</code>|<code>&#8211;all</code> ]<br />
- [ <code>-o</code>|<code>&#8211;options</code> <i>String</i> ]<br />
- [ <code>-S</code>|<code>&#8211;select</code> <i>String</i> ]<br />
- [ <code>-O</code>|<code>&#8211;sort</code> <i>String</i> ]<br />
- [ <code>&#8211;segments</code> ]<br />
- [ <code>&#8211;aligned</code> ]<br />
- [ <code>&#8211;binary</code> ]<br />
- [ <code>&#8211;configreport</code> <code>log</code>|<code>vg</code>|<code>lv</code>|<code>pv</code>|<code>pvseg</code>|<code>seg</code> ]<br />
- [ <code>&#8211;foreign</code> ]<br />
- [ <code>&#8211;ignorelockingfailure</code> ]<br />
- [ <code>&#8211;logonly</code> ]<br />
- [ <code>&#8211;nameprefixes</code> ]<br />
- [ <code>&#8211;noheadings</code> ]<br />
- [ <code>&#8211;nosuffix</code> ]<br />
- [ <code>&#8211;readonly</code> ]<br />
- [ <code>&#8211;reportformat</code> <code>basic</code>|<code>json</code> ]<br />
- [ <code>&#8211;rows</code> ]<br />
- [ <code>&#8211;separator</code> <i>String</i> ]<br />
- [ <code>&#8211;shared</code> ]<br />
- [ <code>&#8211;unbuffered</code> ]<br />
- [ <code>&#8211;units</code> <code>r</code>|<code>R</code>|<code>h</code>|<code>H</code>|<code>b</code>|<code>B</code>|<code>s</code>|<code>S</code>|<code>k</code>|<code>K</code>|<code>m</code>|<code>M</code>|<code>g</code>|<code>G</code>|<code>t</code>|<code>T</code>|<code>p</code>|<code>P</code>|<code>e</code>|<code>E</code> ]<br />
- [ <code>&#8211;unquoted</code> ]<br />
+<dd>[ <code>-H</code>|<code>&#8211;history</code> ]<br/>
+ [ <code>-a</code>|<code>&#8211;all</code> ]<br/>
+ [ <code>-o</code>|<code>&#8211;options</code> <i>String</i> ]<br/>
+ [ <code>-S</code>|<code>&#8211;select</code> <i>String</i> ]<br/>
+ [ <code>-O</code>|<code>&#8211;sort</code> <i>String</i> ]<br/>
+ [ <code>&#8211;segments</code> ]<br/>
+ [ <code>&#8211;aligned</code> ]<br/>
+ [ <code>&#8211;binary</code> ]<br/>
+ [ <code>&#8211;configreport</code> <code>log</code>|<code>vg</code>|<code>lv</code>|<code>pv</code>|<code>pvseg</code>|<code>seg</code> ]<br/>
+ [ <code>&#8211;foreign</code> ]<br/>
+ [ <code>&#8211;ignorelockingfailure</code> ]<br/>
+ [ <code>&#8211;logonly</code> ]<br/>
+ [ <code>&#8211;nameprefixes</code> ]<br/>
+ [ <code>&#8211;noheadings</code> ]<br/>
+ [ <code>&#8211;nosuffix</code> ]<br/>
+ [ <code>&#8211;readonly</code> ]<br/>
+ [ <code>&#8211;reportformat</code> <code>basic</code>|<code>json</code> ]<br/>
+ [ <code>&#8211;rows</code> ]<br/>
+ [ <code>&#8211;separator</code> <i>String</i> ]<br/>
+ [ <code>&#8211;shared</code> ]<br/>
+ [ <code>&#8211;unbuffered</code> ]<br/>
+ [ <code>&#8211;units</code> <code>r</code>|<code>R</code>|<code>h</code>|<code>H</code>|<code>b</code>|<code>B</code>|<code>s</code>|<code>S</code>|<code>k</code>|<code>K</code>|<code>m</code>|<code>M</code>|<code>g</code>|<code>G</code>|<code>t</code>|<code>T</code>|<code>p</code>|<code>P</code>|<code>e</code>|<code>E</code> ]<br/>
+ [ <code>&#8211;unquoted</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <dl>
 <dd>[ <i>VG</i>|<i>LV</i>|<i>Tag</i> &#8230; ]</dd></dl>
 <p> Common options for lvm:</p>
 <dl>
-<dd>[ <code>-d</code>|<code>&#8211;debug</code> ]<br />
- [ <code>-h</code>|<code>&#8211;help</code> ]<br />
- [ <code>-q</code>|<code>&#8211;quiet</code> ]<br />
- [ <code>-t</code>|<code>&#8211;test</code> ]<br />
- [ <code>-v</code>|<code>&#8211;verbose</code> ]<br />
- [ <code>-y</code>|<code>&#8211;yes</code> ]<br />
- [ <code>&#8211;commandprofile</code> <i>String</i> ]<br />
- [ <code>&#8211;config</code> <i>String</i> ]<br />
- [ <code>&#8211;driverloaded</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;lockopt</code> <i>String</i> ]<br />
- [ <code>&#8211;longhelp</code> ]<br />
- [ <code>&#8211;nolocking</code> ]<br />
- [ <code>&#8211;profile</code> <i>String</i> ]<br />
+<dd>[ <code>-d</code>|<code>&#8211;debug</code> ]<br/>
+ [ <code>-h</code>|<code>&#8211;help</code> ]<br/>
+ [ <code>-q</code>|<code>&#8211;quiet</code> ]<br/>
+ [ <code>-t</code>|<code>&#8211;test</code> ]<br/>
+ [ <code>-v</code>|<code>&#8211;verbose</code> ]<br/>
+ [ <code>-y</code>|<code>&#8211;yes</code> ]<br/>
+ [ <code>&#8211;commandprofile</code> <i>String</i> ]<br/>
+ [ <code>&#8211;config</code> <i>String</i> ]<br/>
+ [ <code>&#8211;driverloaded</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;lockopt</code> <i>String</i> ]<br/>
+ [ <code>&#8211;longhelp</code> ]<br/>
+ [ <code>&#8211;nolocking</code> ]<br/>
+ [ <code>&#8211;profile</code> <i>String</i> ]<br/>
  [ <code>&#8211;version</code> ]</dd></dl>
 <h2>Options</h2>
 <dl>
@@ -212,13 +212,13 @@ description: "lvs – Display information about logical volumes"
 <dd>Newly-allocated data blocks are overwritten with blocks of (z)eroes before use.</dd>
 <dt>9</dt>
 <dd>Volume Health, where there are currently three groups of attributes identified:</dd>
-<dd>Common ones for all Logical Volumes: (p)artial, (X) unknown.<br />
+<dd>Common ones for all Logical Volumes: (p)artial, (X) unknown.<br/>
  (p)artial signifies that one or more of the Physical Volumes this Logical Volume uses is missing from the system. (X) unknown signifies the status is unknown.</dd>
-<dd>Related to RAID Logical Volumes: (r)efresh needed, (m)ismatches exist, (w)ritemostly.<br />
+<dd>Related to RAID Logical Volumes: (r)efresh needed, (m)ismatches exist, (w)ritemostly.<br/>
  (r)efresh signifies that one or more of the Physical Volumes this RAID Logical Volume uses had suffered a write error. The write error could be due to a temporary failure of that Physical Volume or an indication that it is failing. The device should be refreshed or replaced. (m)ismatches signifies that the RAID logical volume has portions of the array that are not coherent. Inconsistencies are detected by initiating a &quot;check&quot; on a RAID logical volume. (The scrubbing operations, &quot;check&quot; and &quot;repair&quot;, can be performed on a RAID logical volume via the &#8216;lvchange&#8217; command.) (w)ritemostly signifies the devices in a RAID 1 logical volume that have been marked write-mostly. Re(s)haping signifies a RAID Logical Volume is either undergoing a stripe addition/removal, a stripe size or RAID algorithm change. (R)emove after reshape signifies freed striped raid images to be removed.</dd>
-<dd>Related to Thin pool Logical Volumes: (F)ailed, out of (D)ata space, (M)etadata read only.<br />
+<dd>Related to Thin pool Logical Volumes: (F)ailed, out of (D)ata space, (M)etadata read only.<br/>
  (F)ailed is set if thin pool encounters serious failures and hence no further I/O is permitted at all. The out of (D)ata space is set if thin pool has run out of data space. (M)etadata read only signifies that thin pool encounters certain types of failures but it&#8217;s still possible to do reads at least, but no metadata changes are allowed.</dd>
-<dd>Related to Thin Logical Volumes: (F)ailed.<br />
+<dd>Related to Thin Logical Volumes: (F)ailed.<br/>
  (F)ailed is set when related thin pool enters Failed state and no further I/O is permitted at all.</dd>
 <dt>10</dt>
 <dd>s(k)ip activation: this volume is flagged to be skipped during activation.</dd></dl>

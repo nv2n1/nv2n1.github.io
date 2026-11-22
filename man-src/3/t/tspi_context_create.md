@@ -25,7 +25,7 @@ description: "Tspi_Context_Create – create a TSP context handle."
 <h2>Return Codes</h2>
 <p><code>Tspi_Context_Create</code> returns TSS_SUCCESS on success, otherwise one of the following values are returned:</p>
 <dl COMPACT>
-<dt><font SIZE="-1">TSS_E_INTERNAL_ERROR &#8211; An internal error occurred in the TSS.</font></dt>
+<dt>TSS_E_INTERNAL_ERROR &#8211; An internal error occurred in the TSS.</dt>
 <dd></dd></dl>
 <h2>Conforming To</h2>
 <p><code>Tspi_Context_Create</code> conforms to the Trusted Computing Group Software Specification version 1.1 Golden</p>

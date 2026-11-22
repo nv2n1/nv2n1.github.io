@@ -95,12 +95,12 @@ description: "gbdfed – GTK-based BDF font editor"
  </dd></dl>
 <dl>
 <dt><i>Save &lt;Ctrl+S&gt;</i></dt>
-<dd> <p> Save the current font. If the current font does not have a file name, a file selection dialog will pop up so a file name can be entered. <br />
+<dd> <p> Save the current font. If the current font does not have a file name, a file selection dialog will pop up so a file name can be entered. <br/>
  When the font is saved, it will automatically generate a list of _XFREE86_GLYPH_RANGE properties containing a list of glyph codes available in the font. </p>
  </dd></dl>
 <dl>
 <dt><i>Save As &lt;Ctrl+W&gt;</i></dt>
-<dd> <p> Save the current font with some other name. <br />
+<dd> <p> Save the current font with some other name. <br/>
  When the font is saved, it will automatically generate a list of _XFREE86_GLYPH_RANGE properties containing a list of glyph codes available in the font. </p>
  </dd></dl>
 <p> The <i>Import</i> submenu of the <i>File</i> menu has the following entries: </p>
@@ -127,14 +127,14 @@ description: "gbdfed – GTK-based BDF font editor"
 <dd> <p> <i>PSF &lt;Ctrl+F&gt;</i> This will export the current BDF font or the currently selected glyphs to a PSF2 font. Glyphs in PSF fonts are usually arranged in a specific way to make them work properly with the basic display driver. Many of these fonts come with mapping tables attached that indicate which Unicode characters a glyph can be used for. The mapping table allows the console to attempt to display Unicode text. </p>
 <p> During the export, an option menu will let you select whether to: </p>
  </dd>
-<dd> <p> Export Font with Mapping Table <br />
- Export Font Only <br />
+<dd> <p> Export Font with Mapping Table <br/>
+ Export Font Only <br/>
  Export Mapping Table Only </p>
  </dd>
 <dd> <p> Only the first 512 glyphs will be exported to the font. </p>
  </dd></dl>
 <dl>
-<dd> <p> <i>HEX</i> <br />
+<dd> <p> <i>HEX</i> <br/>
  This will export the current BDF font into the HEX format (see <a rel="nofollow" href="http://czyborra.com/unifont/">http://czyborra.com/unifont/</a>). </p>
  </dd></dl>
 <dl>
@@ -266,7 +266,7 @@ description: "gbdfed – GTK-based BDF font editor"
 <p> The <i>File</i> menu has the following entries: </p>
 <dl>
 <dt><i>Update &lt;Ctrl+S&gt;</i></dt>
-<dd> <p> This will update the Font Grid with the modified glyph. <br />
+<dd> <p> This will update the Font Grid with the modified glyph. <br/>
  To the right of the Glyph Name field is a button that performs the same function. </p>
  </dd></dl>
 <dl>
@@ -304,12 +304,12 @@ description: "gbdfed – GTK-based BDF font editor"
  </dd></dl>
 <dl>
 <dt><i>Next Glyph &lt;Ctrl+N&gt;</i></dt>
-<dd> <p> This will move the Glyph Editor to the next glyph position in the Font Grid. If the current glyph has been modified, a save prompt will appear before moving to the next glyph. <br />
+<dd> <p> This will move the Glyph Editor to the next glyph position in the Font Grid. If the current glyph has been modified, a save prompt will appear before moving to the next glyph. <br/>
  To the right of the Glyph Name field is a button that performs the same function. </p>
  </dd></dl>
 <dl>
 <dt><i>Previous Glyph &lt;Ctrl+P&gt;</i></dt>
-<dd> <p> This will move the Glyph Editor to the previous glyph position in the Font Grid. If the current glyph has been modified, a save prompt will appear before moving to the previous glyph. <br />
+<dd> <p> This will move the Glyph Editor to the previous glyph position in the Font Grid. If the current glyph has been modified, a save prompt will appear before moving to the previous glyph. <br/>
  To the right of the Glyph Name field is a button that performs the same function. </p>
  </dd></dl>
 <p> The <i>Operation</i> menu has the following entries: </p>
@@ -349,53 +349,53 @@ description: "gbdfed – GTK-based BDF font editor"
 <p> When the mouse is used to shift the bitmap using one of the buttons, holding the mouse down will cause the activity to repeat. </p>
 <h2>PROPERTIES</h2>
 <h2>SEE ALSO</h2>
-<p> xmbdfed(1), xfed(1), <a href="/docs/linux/man/1-bdftopcf/">bdftopcf</a>(1), bdftosnf(1), <a href="/docs/linux/man/1-psfaddtable/">psfaddtable</a>(1), <a href="/docs/linux/man/1-psfgettable/">psfgettable</a>(1), <a href="/docs/linux/man/1-fontforge/">fontforge</a>(1) <br />
- <i>Glyph Bitmap Distribution Format (BDF) Specification</i>, Application Note 5005, Adobe System Inc, 1993 <br />
+<p> xmbdfed(1), xfed(1), <a href="/docs/linux/man/1-bdftopcf/">bdftopcf</a>(1), bdftosnf(1), <a href="/docs/linux/man/1-psfaddtable/">psfaddtable</a>(1), <a href="/docs/linux/man/1-psfgettable/">psfgettable</a>(1), <a href="/docs/linux/man/1-fontforge/">fontforge</a>(1) <br/>
+ <i>Glyph Bitmap Distribution Format (BDF) Specification</i>, Application Note 5005, Adobe System Inc, 1993 <br/>
  <i>X Logical Font Description</i>, X Consortium </p>
 <h2>ACKNOWLEDGMENTS</h2>
-<p> Ross Patterson for his HBF code. <br />
- der Mouse for his &quot;getbdf&quot; code. <br />
+<p> Ross Patterson for his HBF code. <br/>
+ der Mouse for his &quot;getbdf&quot; code. <br/>
  K. Carothers and A. Korobka for their &quot;fnt2bdf&quot; code in Wine. </p>
-<p> Mike Stroyan &lt;mike_stroyan [at] fc.hp.com&gt; for patches. <br />
- Primoz Peterlin &lt;primoz.peterlin [at] biofiz.mf.uni-lj.si&gt; for this manual page. <br />
- Danny Backx &lt;u27113 [at] kb.be&gt; for the LessTif Imakefile. <br />
- Donald Page &lt;donaldp [at] sco.com&gt; for patches. <br />
- Michal Szymanski &lt;msz [at] sirius.astrouw.edu.pl&gt; for problem reports. <br />
- Werner Lemberg &lt;a7971428 [at] unet.univie.ac.at&gt; for problem reports. <br />
- William F. Maton &lt;wmaton [at] enterprise.ic.gc.ca&gt; for problem reports. <br />
- Ivan Nejgebauer &lt;ian [at] uns.ns.ac.yu&gt; for problem reports. <br />
- Solofo &lt;solofo [at] mpi-sb.mpg.de&gt; for problem reports. <br />
- Dave Bodenstab &lt;imdave [at] mcs.net&gt; for patches. <br />
- W. Chao &lt;wchao [at] HRZ.Uni-Bielefeld.DE&gt; for Makefile changes and problem report. <br />
- Andreas Reuter &lt;ar205 [at] bonzo.geowiss.nat.tu-bs.de&gt; for problem reports. <br />
- Leonard Dickens &lt;leonard [at] saul.hipgraphics.com&gt; for IRIX 6.3 Makefile changes. <br />
- Markus Kuhn &lt;Markus.Kuhn [at] cl.cam.ac.uk&gt; for suggestions. <br />
- Jim Knoble &lt;jmknoble [at] pobox.com&gt; for dialog geometry fixes. <br />
- Darren Stuart Embry &lt;dsembr01 [at] ox.slug.louisville.edu&gt; for HP/UX 10.20 X11R6 Makefile additions. <br />
- Vladimir Volovich &lt;vvv [at] vvv.vsu.ru&gt; for pointing out something I forgot to test. <br />
- Ben Fry &lt;fry [at] media.mit.edu&gt; for IRIX 6.5.2 variables for the Makefile. <br />
- J.H.M. Dassen (Ray) &lt;jdassen [at] debian.org&gt; for bug fixes. <br />
- Robert Brady &lt;rwb197 [at] ecs.soton.ac.uk&gt; for pointing out a problem. <br />
- Stefan Monnier &lt;monnier [at] cs.yale.edu&gt; for a bug report. <br />
- Humphrey Clerx &lt;humphrey.clerx [at] eurocontrol.be&gt; for a bug report. <br />
- Rudolf Cejka &lt;cejkar [at] dcse.fee.vutbr.cz&gt; for bug fixes and a suggestion. <br />
- Baruch Even &lt;baruch [at] ev-en.org&gt; for a bug fix. <br />
- Sergey Vlasov &lt;vsu [at] mivlgu.murom.ru&gt; for bug fixes. <br />
- Daniel Neuburger &lt;daniel.neuburger [at] lmco.com&gt; for bug fixes. <br />
- Pierre HANSER &lt;Pierre.Hanser [at] sxb.bsf.alcatel.fr&gt; for a bug fix. <br />
- Patrick Hagglund &lt;patrik.hagglund [at] bredband.net&gt; for FreeType 2 support. <br />
- James Cloos &lt;cloos [at] jhcloos.com&gt; for pointing out problems. <br />
- Ming Hua &lt;minghua [at] rice.edu&gt; for pointing out problems. <br />
- Viktor Urban &lt;viktor [at] icc-atcsolutions.com&gt; for pointing out problems. <br />
- Jiri &quot;BlueBear&quot; Dluhos &lt;modry.medved [at] seznam.cz&gt; for providing 64-bit fixes. <br />
- Jan Engelhardt &lt;jengelh [at] linux01.gwdg.de&gt; help text improvements and missing prototype. <br />
- Daniel Richard G. &lt;skunk [at] iSKUNK.ORG&gt; for help on 64-bit architectures. <br />
- Baruch Even &lt;baruch [at] ev-en.org&gt; for help on 64-bit architectures. <br />
- Ming Hua &lt;minghua.debian [at] gmail.com&gt; for an unsuspected warning. <br />
- Ryan Hill &lt;dirtyepic [at] gentoo.org&gt; for import dialog crash report. <br />
- Don Knuth (<a rel="nofollow" href="https://bugs.launchpad.net/ubuntu/+source/gbdfed/+bug/172836)">https://bugs.launchpad.net/ubuntu/+source/gbdfed/+bug/172836)</a> for reporting spelling, gramatical and behavior problems. <br />
- Tim Allen &lt;screwtape [at] froup.com&gt; for discovering glyph and font spacing bugs. <br />
- Daniel Quarras &lt;dqarras [at] yahoo.com&gt; for discovering a PSF unicode map editing problem. <br />
+<p> Mike Stroyan &lt;mike_stroyan [at] fc.hp.com&gt; for patches. <br/>
+ Primoz Peterlin &lt;primoz.peterlin [at] biofiz.mf.uni-lj.si&gt; for this manual page. <br/>
+ Danny Backx &lt;u27113 [at] kb.be&gt; for the LessTif Imakefile. <br/>
+ Donald Page &lt;donaldp [at] sco.com&gt; for patches. <br/>
+ Michal Szymanski &lt;msz [at] sirius.astrouw.edu.pl&gt; for problem reports. <br/>
+ Werner Lemberg &lt;a7971428 [at] unet.univie.ac.at&gt; for problem reports. <br/>
+ William F. Maton &lt;wmaton [at] enterprise.ic.gc.ca&gt; for problem reports. <br/>
+ Ivan Nejgebauer &lt;ian [at] uns.ns.ac.yu&gt; for problem reports. <br/>
+ Solofo &lt;solofo [at] mpi-sb.mpg.de&gt; for problem reports. <br/>
+ Dave Bodenstab &lt;imdave [at] mcs.net&gt; for patches. <br/>
+ W. Chao &lt;wchao [at] HRZ.Uni-Bielefeld.DE&gt; for Makefile changes and problem report. <br/>
+ Andreas Reuter &lt;ar205 [at] bonzo.geowiss.nat.tu-bs.de&gt; for problem reports. <br/>
+ Leonard Dickens &lt;leonard [at] saul.hipgraphics.com&gt; for IRIX 6.3 Makefile changes. <br/>
+ Markus Kuhn &lt;Markus.Kuhn [at] cl.cam.ac.uk&gt; for suggestions. <br/>
+ Jim Knoble &lt;jmknoble [at] pobox.com&gt; for dialog geometry fixes. <br/>
+ Darren Stuart Embry &lt;dsembr01 [at] ox.slug.louisville.edu&gt; for HP/UX 10.20 X11R6 Makefile additions. <br/>
+ Vladimir Volovich &lt;vvv [at] vvv.vsu.ru&gt; for pointing out something I forgot to test. <br/>
+ Ben Fry &lt;fry [at] media.mit.edu&gt; for IRIX 6.5.2 variables for the Makefile. <br/>
+ J.H.M. Dassen (Ray) &lt;jdassen [at] debian.org&gt; for bug fixes. <br/>
+ Robert Brady &lt;rwb197 [at] ecs.soton.ac.uk&gt; for pointing out a problem. <br/>
+ Stefan Monnier &lt;monnier [at] cs.yale.edu&gt; for a bug report. <br/>
+ Humphrey Clerx &lt;humphrey.clerx [at] eurocontrol.be&gt; for a bug report. <br/>
+ Rudolf Cejka &lt;cejkar [at] dcse.fee.vutbr.cz&gt; for bug fixes and a suggestion. <br/>
+ Baruch Even &lt;baruch [at] ev-en.org&gt; for a bug fix. <br/>
+ Sergey Vlasov &lt;vsu [at] mivlgu.murom.ru&gt; for bug fixes. <br/>
+ Daniel Neuburger &lt;daniel.neuburger [at] lmco.com&gt; for bug fixes. <br/>
+ Pierre HANSER &lt;Pierre.Hanser [at] sxb.bsf.alcatel.fr&gt; for a bug fix. <br/>
+ Patrick Hagglund &lt;patrik.hagglund [at] bredband.net&gt; for FreeType 2 support. <br/>
+ James Cloos &lt;cloos [at] jhcloos.com&gt; for pointing out problems. <br/>
+ Ming Hua &lt;minghua [at] rice.edu&gt; for pointing out problems. <br/>
+ Viktor Urban &lt;viktor [at] icc-atcsolutions.com&gt; for pointing out problems. <br/>
+ Jiri &quot;BlueBear&quot; Dluhos &lt;modry.medved [at] seznam.cz&gt; for providing 64-bit fixes. <br/>
+ Jan Engelhardt &lt;jengelh [at] linux01.gwdg.de&gt; help text improvements and missing prototype. <br/>
+ Daniel Richard G. &lt;skunk [at] iSKUNK.ORG&gt; for help on 64-bit architectures. <br/>
+ Baruch Even &lt;baruch [at] ev-en.org&gt; for help on 64-bit architectures. <br/>
+ Ming Hua &lt;minghua.debian [at] gmail.com&gt; for an unsuspected warning. <br/>
+ Ryan Hill &lt;dirtyepic [at] gentoo.org&gt; for import dialog crash report. <br/>
+ Don Knuth (<a rel="nofollow" href="https://bugs.launchpad.net/ubuntu/+source/gbdfed/+bug/172836)">https://bugs.launchpad.net/ubuntu/+source/gbdfed/+bug/172836)</a> for reporting spelling, gramatical and behavior problems. <br/>
+ Tim Allen &lt;screwtape [at] froup.com&gt; for discovering glyph and font spacing bugs. <br/>
+ Daniel Quarras &lt;dqarras [at] yahoo.com&gt; for discovering a PSF unicode map editing problem. <br/>
  Bertrand Janin &lt;tamentis [at] neopulsar.org&gt; for improving the GlyphEditor user interface. </p>
 <h2>AUTHOR</h2>
 <p> Mark Leisher &lt;mleisher [at] gmail.com&gt; </p>

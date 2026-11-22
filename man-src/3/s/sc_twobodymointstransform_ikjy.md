@@ -16,15 +16,15 @@ description: "sc::TwoBodyMOIntsTransform_ikjy –"
 <h3>Public Member Functions</h3>
 <p><code>TwoBodyMOIntsTransform_ikjy</code> (<code>StateIn</code> &amp;) </p>
 <p> <code>TwoBodyMOIntsTransform_ikjy</code> (const std::string &amp;name, const <code>Ref</code>&lt; <code>MOIntsTransformFactory</code> &gt; &amp;factory, const <code>Ref</code>&lt; <code>MOIndexSpace</code> &gt; &amp;space1, const <code>Ref</code>&lt; <code>MOIndexSpace</code> &gt; &amp;space2, const <code>Ref</code>&lt; <code>MOIndexSpace</code> &gt; &amp;space3, const <code>Ref</code>&lt; <code>MOIndexSpace</code> &gt; &amp;space4) </p>
-<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br />
- <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br />
- std::string <code>type</code> () const<br />
- <i>Implementation of </i><code>TwoBodyMOIntsTransform::type()</code>.<br />
- const size_t <code>memgrp_blksize</code> () const<br />
- <i>Returns the number of bytes allocated for each ij-block of integrals of one type in </i><code>MemoryGrp</code>.<br />
- void <code>compute</code> ()<br />
- <i>Computes transformed integrals. </i><br />
- void <code>check_int_symm</code> (double threshold=<code>TwoBodyMOIntsTransform::zero_integral</code>) const throw (ProgrammingError)<br />
+<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br/>
+ <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br/>
+ std::string <code>type</code> () const<br/>
+ <i>Implementation of </i><code>TwoBodyMOIntsTransform::type()</code>.<br/>
+ const size_t <code>memgrp_blksize</code> () const<br/>
+ <i>Returns the number of bytes allocated for each ij-block of integrals of one type in </i><code>MemoryGrp</code>.<br/>
+ void <code>compute</code> ()<br/>
+ <i>Computes transformed integrals. </i><br/>
+ void <code>check_int_symm</code> (double threshold=<code>TwoBodyMOIntsTransform::zero_integral</code>) const throw (ProgrammingError)<br/>
  <i>Check symmetry of transformed integrals. </i></p>
 <h2>Detailed Description</h2>
 <p><code>TwoBodyMOIntsTransform_ikjy</code> computes (ik|jy) integrals using parallel integrals-direct AO-&gt;MO transformation.</p>

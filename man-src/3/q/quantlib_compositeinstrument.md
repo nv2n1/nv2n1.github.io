@@ -12,13 +12,13 @@ description: "QuantLib::CompositeInstrument – Composite instrument"
 <p>#include &lt;ql/instruments/compositeinstrument.hpp&gt; </p>
 <p> Inherits <code>QuantLib::Instrument</code>. </p>
 <h3>Public Member Functions</h3>
-<p>void <code>add</code> (const boost::shared_ptr&lt; <code>Instrument</code> &gt; &amp;instrument, <code>Real</code> multiplier=1.0)<br />
- <i>adds an instrument to the composite </i><br />
- void <code>subtract</code> (const boost::shared_ptr&lt; <code>Instrument</code> &gt; &amp;instrument, <code>Real</code> multiplier=1.0)<br />
+<p>void <code>add</code> (const boost::shared_ptr&lt; <code>Instrument</code> &gt; &amp;instrument, <code>Real</code> multiplier=1.0)<br/>
+ <i>adds an instrument to the composite </i><br/>
+ void <code>subtract</code> (const boost::shared_ptr&lt; <code>Instrument</code> &gt; &amp;instrument, <code>Real</code> multiplier=1.0)<br/>
  <i>shorts an instrument from the composite </i></p>
 <h3>Instrument interface</h3>
-<p>bool <code>isExpired</code> () const<br />
- <i>returns whether the instrument is still tradable. </i><br />
+<p>bool <code>isExpired</code> () const<br/>
+ <i>returns whether the instrument is still tradable. </i><br/>
  void <code>performCalculations</code> () const </p>
 <h2>Detailed Description</h2>
 <p>Composite instrument </p>

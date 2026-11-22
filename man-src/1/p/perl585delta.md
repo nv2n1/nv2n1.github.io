@@ -20,7 +20,7 @@ description: "perl585delta – what is new for perl v5.8.5"
 <dt>&bull;</dt>
 <dd> Carp improved to work nicely with Safe. Carp&#8217;s message reporting should now be anomaly free &#8211; it will always print out line number information.</dd>
 <dt>&bull;</dt>
-<dd> <font SIZE="-1">CGI</font> upgraded to version 3.05</dd>
+<dd> CGI upgraded to version 3.05</dd>
 <dt>&bull;</dt>
 <dd> charnames now avoids clobbering <tt>$_</tt></dd>
 <dt>&bull;</dt>
@@ -57,7 +57,7 @@ description: "perl585delta – what is new for perl v5.8.5"
 <h3>Perl&#8217;s debugger</h3>
 <p> The debugger can now emulate stepping backwards, by restarting and rerunning all bar the last command from a saved command history.</p>
 <h3>h2ph</h3>
-<p> <i>h2ph</i> is now able to understand a very limited set of C inline functions &#8212; basically, the inline functions that look like <font SIZE="-1">CPP</font> macros. This has been introduced to deal with some of the headers of the newest versions of the glibc. The standard warning still applies; to quote <i>h2ph</i>&#8216;s documentation, <i>you may need to dicker with the files produced</i>.</p>
+<p> <i>h2ph</i> is now able to understand a very limited set of C inline functions &#8212; basically, the inline functions that look like CPP macros. This has been introduced to deal with some of the headers of the newest versions of the glibc. The standard warning still applies; to quote <i>h2ph</i>&#8216;s documentation, <i>you may need to dicker with the files produced</i>.</p>
 <h2>Installation and Configuration Improvements</h2>
 <p> Perl 5.8.5 should build cleanly from source on LynxOS.</p>
 <h2>Selected Bug Fixes</h2>
@@ -71,7 +71,7 @@ description: "perl585delta – what is new for perl v5.8.5"
 <dt>&bull;</dt>
 <dd> The optimisation for unnecessary assignments introduced in 5.8.4 could give spurious warnings. This has been fixed.</dd>
 <dt>&bull;</dt>
-<dd> Perl should now correctly detect and read BOM-marked and (BOMless) <font SIZE="-1">UTF-16</font> scripts of either endianness.</dd>
+<dd> Perl should now correctly detect and read BOM-marked and (BOMless) UTF-16 scripts of either endianness.</dd>
 <dt>&bull;</dt>
 <dd> Creating a new thread when weak references exist was buggy, and would often cause warnings at interpreter destruction time. The known bug is now fixed.</dd>
 <dt>&bull;</dt>
@@ -118,6 +118,6 @@ description: "perl585delta – what is new for perl v5.8.5"
 <p> If you believe you have an unreported bug, please run the <code>perlbug</code> program included with your release. Be sure to trim your bug down to a tiny but sufficient test case. Your bug report, along with the output of <tt>&quot;perl -V&quot;</tt>, will be sent off to perlbug [at] perl.org to be analysed by the Perl porting team. You can browse and search the Perl 5 bugs at <a rel="nofollow" href="http://bugs.perl.org/">http://bugs.perl.org/</a></p>
 <h2>SEE ALSO</h2>
 <p> The <i>Changes</i> file for exhaustive details on what changed. </p>
-<p> The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. </p>
-<p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
+<p> The <i></i><i>INSTALL</i><i></i> file for how to build Perl. </p>
+<p> The <i></i><i>README</i><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information. </p>

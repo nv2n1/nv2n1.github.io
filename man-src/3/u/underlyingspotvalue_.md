@@ -14,22 +14,22 @@ void performCalculations () const
 Protected Attributes</code></pre>
 <p> Inherits <code>QuantLib::Instrument</code>. Inherited by <code>FixedRateBondForward</code>, and ForwardRateAgreement.</p>
 <h3>Public Member Functions</h3>
-<p>virtual <code>Real</code> <code>spotValue</code> () const =0<br />
- <i>returns spot value/price of an underlying financial instrument </i><br />
- virtual <code>Real</code> <code>spotIncome</code> (const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;incomeDiscountCurve) const =0<br />
+<p>virtual <code>Real</code> <code>spotValue</code> () const =0<br/>
+ <i>returns spot value/price of an underlying financial instrument </i><br/>
+ virtual <code>Real</code> <code>spotIncome</code> (const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;incomeDiscountCurve) const =0<br/>
  <i>NPV of income/dividends/storage-costs etc. of underlying instrument. </i> <code>Inspectors</code> </p>
 <p> virtual <code>Date</code> <code>settlementDate</code> () const </p>
 <p> const <code>Calendar</code> &amp; <code>calendar</code> () const </p>
 <p> <code>BusinessDayConvention</code> <code>businessDayConvention</code> () const </p>
 <p> const <code>DayCounter</code> &amp; <code>dayCounter</code> () const </p>
-<p> <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; <code>discountCurve</code> () const<br />
- <i>term structure relevant to the contract (e.g. repo curve) </i><br />
- <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; <code>incomeDiscountCurve</code> () const<br />
- <i>term structure that discounts the underlying&#8217;s income cash flows </i><br />
- bool <code>isExpired</code> () const<br />
+<p> <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; <code>discountCurve</code> () const<br/>
+ <i>term structure relevant to the contract (e.g. repo curve) </i><br/>
+ <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; <code>incomeDiscountCurve</code> () const<br/>
+ <i>term structure that discounts the underlying&#8217;s income cash flows </i><br/>
+ bool <code>isExpired</code> () const<br/>
  <i>returns whether the instrument is still tradable. </i> <code>Calculations</code> </p>
-<p> virtual <code>Real</code> <code>forwardValue</code> () const<br />
- <i>forward value/price of underlying, discounting income/dividends </i><br />
+<p> virtual <code>Real</code> <code>forwardValue</code> () const<br/>
+ <i>forward value/price of underlying, discounting income/dividends </i><br/>
  <code>InterestRate</code> <code>impliedYield</code> (<code>Real</code> underlyingSpotValue, <code>Real</code> forwardValue, <code>Date</code> settlementDate, Compounding compoundingConvention, <code>DayCounter</code> dayCounter)</p>
 <h3>Protected Member Functions</h3>
 <pre><code>Forward (const DayCounter &amp;dayCounter, const Calendar &amp;calendar, BusinessDayConvention businessDayConvention, Natural settlementDays, const boost::shared_ptr&lt; Payoff &gt; &amp;payoff, const Date &amp;valueDate, const Date &amp;maturityDate, const Handle&lt; YieldTermStructure &gt; &amp;discountCurve=Handle&lt; YieldTermStructure &gt;())
@@ -43,8 +43,8 @@ Protected Attributes</code></pre>
 <p> <code>Natural</code> <code>settlementDays_</code> </p>
 <p> boost::shared_ptr&lt; <code>Payoff</code> &gt; <code>payoff_</code> </p>
 <p> <code>Date</code> <code>valueDate_</code> </p>
-<p> <code>Date</code> <code>maturityDate_</code><br />
- <i>maturityDate of the forward contract or delivery date of underlying </i><br />
+<p> <code>Date</code> <code>maturityDate_</code><br/>
+ <i>maturityDate of the forward contract or delivery date of underlying </i><br/>
  <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; <code>discountCurve_</code> </p>
 <p> <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; <code>incomeDiscountCurve_</code></p>
 <h2>Detailed Description</h2>

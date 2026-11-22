@@ -66,5 +66,5 @@ description: "XmbLookupString, XwcLookupString, Xutf8LookupString – obtain com
 <p> It does not make any difference if the input context passed as an argument to <code>XmbLookupString</code>, <code>XwcLookupString</code> and <code>Xutf8LookupString</code> is the one currently in possession of the focus or not. Input may have been composed within an input context before it lost the focus, and that input may be returned on subsequent calls to <code>XmbLookupString</code>, <code>XwcLookupString</code> or <code>Xutf8LookupString</code> even though it does not have any more keyboard focus. </p>
 <p> The function <code>Xutf8LookupString</code> is an extension introduced by The XFree86 Project, Inc., in their 4.0.2 release. Its presence is indicated by the macro <code>X_HAVE_UTF8_STRING</code>.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xlookupkeysym/">XLookupKeysym</a>(3), <a href="/docs/linux/man/5-compose/">Compose</a>(5)<br />
+<p><a href="/docs/linux/man/3-xlookupkeysym/">XLookupKeysym</a>(3), <a href="/docs/linux/man/5-compose/">Compose</a>(5)<br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

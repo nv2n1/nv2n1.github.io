@@ -39,19 +39,19 @@ description: "XDRIVER – GRASS Monitor – driver to display GRASS maps in X11 
 <p>&nbsp;<wbr>&nbsp;<wbr>define the upper position of GRASS monitor&nbsp;<wbr>(<i>removed?</i>)</dl>
 </dl>
 <h3>Set the XDRIVER size</h3>
-<p> # bash shell syntax:<br />
- export GRASS_WIDTH=xxx<br />
+<p> # bash shell syntax:<br/>
+ export GRASS_WIDTH=xxx<br/>
  export GRASS_HEIGHT=yyy </p>
-<p> # c shell syntax:<br />
- setenv GRASS_WIDTH xxx<br />
- setenv GRASS_HEIGHT yyy<br />
+<p> # c shell syntax:<br/>
+ setenv GRASS_WIDTH xxx<br/>
+ setenv GRASS_HEIGHT yyy<br/>
  To control the XDRIVER, use the d.mon module. </p>
 <p> The maximum color depth depends on the current X Server settings.</p>
 <h2>SEE ALSO</h2>
-<p> <i> HTML map driver, PNG driver, PostScript driver<br />
+<p> <i> HTML map driver, PNG driver, PostScript driver<br/>
  d.frame, d.mon, g.region </i> </p>
 <h2>AUTHORS</h2>
-<p> CERL<br />
- various improvements from several authors.<br />
+<p> CERL<br/>
+ various improvements from several authors.<br/>
  Rewritten 2001 by Glynn Clements </p>
 <p> <i>Last changed: $Date: 2007-05-14 08:26:06 +0200 (Mon, 14 May 2007) $</i> </p>

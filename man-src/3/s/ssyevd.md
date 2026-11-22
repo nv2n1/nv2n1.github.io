@@ -11,7 +11,7 @@ description: "ssyevd.f –"
 <p> ssyevd.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>ssyevd</code> (JOBZ, UPLO, N, A, LDA, W, WORK, LWORK, IWORK, LIWORK, INFO)<br />
+<p> subroutine <code>ssyevd</code> (JOBZ, UPLO, N, A, LDA, W, WORK, LWORK, IWORK, LIWORK, INFO)<br/>
  <i></i><code> SSYEVD computes the eigenvalues and, optionally, the left and/or right eigenvectors for SY matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ssyevd (characterJOBZ, characterUPLO, integerN, real, dimension( lda, * )A, integerLDA, real, dimension( * )W, real, dimension( * )WORK, integerLWORK, integer, dimension( * )IWORK, integerLIWORK, integerINFO)</h3>

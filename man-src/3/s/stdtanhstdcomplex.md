@@ -17,29 +17,29 @@ description: "std::tanh(std::complex) – std::tanh(std::complex)"
 <h2>Parameters</h2>
 <p>z &#8211; complex value</p>
 <h2>Return value</h2>
-<p>If no errors occur, complex hyperbolic tangent of z is returned<br />
-Error handling and special values<br />
-Errors are reported consistent with math_errhandling<br />
-If the implementation supports IEEE floating-point arithmetic,<br />
-* std::tanh(std::conj(z)) == std::conj(std::tanh(z))<br />
-* std::tanh(-z) == -std::tanh(z)<br />
-* If z is (+0,+0), the result is (+0,+0)<br />
-* If z is (x,+∞) (for any[1] finite x), the result is (NaN,NaN) and FE_INVALID is raised<br />
-* If z is (x,NaN) (for any[2] finite x), the result is (NaN,NaN) and FE_INVALID may be raised<br />
-* If z is (+∞,y) (for any finite positive y), the result is (1,+0)<br />
-* If z is (+∞,+∞), the result is (1,±0) (the sign of the imaginary part is unspecified)<br />
-* If z is (+∞,NaN), the result is (1,±0) (the sign of the imaginary part is unspecified)<br />
-* If z is (NaN,+0), the result is (NaN,+0)<br />
-* If z is (NaN,y) (for any non-zero y), the result is (NaN,NaN) and FE_INVALID may be raised<br />
-* If z is (NaN,NaN), the result is (NaN,NaN)<br />
-&nbsp;<wbr>&nbsp;1. ↑ per C11_DR471, this only holds for non-zero x. If z is (0,∞), the result should be (0,NaN)<br />
+<p>If no errors occur, complex hyperbolic tangent of z is returned<br/>
+Error handling and special values<br/>
+Errors are reported consistent with math_errhandling<br/>
+If the implementation supports IEEE floating-point arithmetic,<br/>
+* std::tanh(std::conj(z)) == std::conj(std::tanh(z))<br/>
+* std::tanh(-z) == -std::tanh(z)<br/>
+* If z is (+0,+0), the result is (+0,+0)<br/>
+* If z is (x,+∞) (for any[1] finite x), the result is (NaN,NaN) and FE_INVALID is raised<br/>
+* If z is (x,NaN) (for any[2] finite x), the result is (NaN,NaN) and FE_INVALID may be raised<br/>
+* If z is (+∞,y) (for any finite positive y), the result is (1,+0)<br/>
+* If z is (+∞,+∞), the result is (1,±0) (the sign of the imaginary part is unspecified)<br/>
+* If z is (+∞,NaN), the result is (1,±0) (the sign of the imaginary part is unspecified)<br/>
+* If z is (NaN,+0), the result is (NaN,+0)<br/>
+* If z is (NaN,y) (for any non-zero y), the result is (NaN,NaN) and FE_INVALID may be raised<br/>
+* If z is (NaN,NaN), the result is (NaN,NaN)<br/>
+&nbsp;<wbr>&nbsp;1. ↑ per C11_DR471, this only holds for non-zero x. If z is (0,∞), the result should be (0,NaN)<br/>
 &nbsp;<wbr>&nbsp;2. ↑ per C11_DR471, this only holds for non-zero x. If z is (0,NaN), the result should be (0,NaN) </p>
 <h2>Notes</h2>
-<p>Mathematical definition of hyperbolic tangent is tanh z =<br />
-ez<br />
--e-z<br />
-ez<br />
-+e-z<br />
+<p>Mathematical definition of hyperbolic tangent is tanh z =<br/>
+ez<br/>
+-e-z<br/>
+ez<br/>
++e-z<br/>
 Hyperbolic tangent is an analytical function on the complex plain and has no branch cuts. It is periodic with respect to the imaginary component, with period πi, and has poles of the first order along the imaginary line, at coordinates (0, π(1/2 + n)). However no common floating-point representation is able to represent π/2 exactly, thus there is no value of the argument for which a pole error occurs. </p>
 <h2>Example</h2>
 <p>// Run this code </p>
@@ -60,21 +60,21 @@ int main()
 }
 </code></pre>
 <h2>Output:</h2>
-<p>&nbsp;<wbr>&nbsp;tanh(1.000000,0.000000) = (0.761594,0.000000) (tanh<code>(1)</code> = 0.761594)<br />
+<p>&nbsp;<wbr>&nbsp;tanh(1.000000,0.000000) = (0.761594,0.000000) (tanh<code>(1)</code> = 0.761594)<br/>
 &nbsp;<wbr>&nbsp;tanh(0.000000,1.000000) = (0.000000,1.557408) ( tan<code>(1)</code> = 1.557408)</p>
 <h2>See also</h2>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;computes hyperbolic sine of a complex number (sh(z))<br />
-sinh(std::complex) <i>(function template)</i><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;computes hyperbolic cosine of a complex number (ch(z))<br />
-cosh(std::complex) <i>(function template)</i><br />
-atanh(std::complex) computes area hyperbolic tangent of a complex number<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(function template)</i><br />
-<i>(C++11)</i><br />
-tanh<br />
-tanhf<br />
-tanhl hyperbolic tangent<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(function)</i><br />
-<i>(C++11)</i><br />
-<i>(C++11)</i><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;applies the function std::tanh to each element of valarray<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;computes hyperbolic sine of a complex number (sh(z))<br/>
+sinh(std::complex) <i>(function template)</i><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;computes hyperbolic cosine of a complex number (ch(z))<br/>
+cosh(std::complex) <i>(function template)</i><br/>
+atanh(std::complex) computes area hyperbolic tangent of a complex number<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(function template)</i><br/>
+<i>(C++11)</i><br/>
+tanh<br/>
+tanhf<br/>
+tanhl hyperbolic tangent<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(function)</i><br/>
+<i>(C++11)</i><br/>
+<i>(C++11)</i><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;applies the function std::tanh to each element of valarray<br/>
 tanh(std::valarray) <i>(function template)</i> </p>

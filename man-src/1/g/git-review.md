@@ -10,13 +10,13 @@ description: "git-review – Submit changes to Gerrit for review"
 
 <p> <code>git-review</code> &#8211; Submit changes to Gerrit for review</p>
 <h2>SYNOPSIS</h2>
-<p> [-<code>r </code><i>remote</i> ] [-<code>uv</code> ] &#8211;<code>d </code><i>change</i> [<i>branch</i> ]<br />
- [-<code>r </code><i>remote</i> ] [-<code>uv</code> ] &#8211;<code>x </code><i>change</i> [<i>branch</i> ]<br />
- [-<code>r </code><i>remote</i> ] [-<code>uv</code> ] &#8211;<code>N </code><i>change</i> [<i>branch</i> ]<br />
- [-<code>r </code><i>remote</i> ] [-<code>uv</code> ] &#8211;<code>X </code><i>change</i> [<i>branch</i> ]<br />
- [-<code>r </code><i>remote</i> ] [-<code>uv</code> ] &#8211;<code>m</code> <i>change-ps-range</i> [<i>branch</i> ]<br />
- [-<code>r </code><i>remote</i> ] [-<code>fnuv</code> ] &#8211;<code>s</code> [<i>branch</i> ]<br />
- [-<code>fnuvDR</code> ] [-<code>r </code><i>remote</i> ] [-<code>t </code><i>topic</i> ] [<i>branch</i> ]<br />
+<p> [-<code>r </code><i>remote</i> ] [-<code>uv</code> ] &#8211;<code>d </code><i>change</i> [<i>branch</i> ]<br/>
+ [-<code>r </code><i>remote</i> ] [-<code>uv</code> ] &#8211;<code>x </code><i>change</i> [<i>branch</i> ]<br/>
+ [-<code>r </code><i>remote</i> ] [-<code>uv</code> ] &#8211;<code>N </code><i>change</i> [<i>branch</i> ]<br/>
+ [-<code>r </code><i>remote</i> ] [-<code>uv</code> ] &#8211;<code>X </code><i>change</i> [<i>branch</i> ]<br/>
+ [-<code>r </code><i>remote</i> ] [-<code>uv</code> ] &#8211;<code>m</code> <i>change-ps-range</i> [<i>branch</i> ]<br/>
+ [-<code>r </code><i>remote</i> ] [-<code>fnuv</code> ] &#8211;<code>s</code> [<i>branch</i> ]<br/>
+ [-<code>fnuvDR</code> ] [-<code>r </code><i>remote</i> ] [-<code>t </code><i>topic</i> ] [<i>branch</i> ]<br/>
  &#8211;<code>-version</code></p>
 <h2>DESCRIPTION</h2>
 <p> automates and streamlines some of the tasks involved with submitting local changes to a Gerrit server for review. It is designed to make it easier to comprehend Gerrit, especially for users that have recently switched to Git from another version control system. </p>

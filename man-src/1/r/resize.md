@@ -13,19 +13,19 @@ description: "resize – set environment and terminal settings to current xterm 
 <p> <code>resize</code> [ <code>-v</code> | <code>-u</code> | <code>-c</code> ] [ <code>-s</code> [ <i>row col</i> ] ]</p>
 <h2>DESCRIPTION</h2>
 <p> <i>Resize</i> prints a shell command for setting the appropriate environment variables to indicate the current size of <i>xterm</i> window from which the command is run. </p>
-<p> <i>Resize</i> determines the command through several steps:<br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 first, it finds the name of the user&#8217;s shell program. It uses the <code>SHELL</code> variable if set, otherwise it uses the user&#8217;s data from /etc/passwd.<br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 then it decides whether to use Bourne shell syntax or C-Shell syntax. It uses a built-in table of known shells, which can be overridden by the <code>-u</code> and <code>-c</code> options.<br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 then <i>resize</i> asks the operating system for the terminal settings. This is the same information which can be manipulated using <i>stty</i>.<br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 then <i>resize</i> asks the terminal for its size in characters. Depending on whether the &quot;<code>-s</code> option is given, <i>resize</i> uses a different escape sequence to ask for this information.<br />
+<p> <i>Resize</i> determines the command through several steps:<br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 first, it finds the name of the user&#8217;s shell program. It uses the <code>SHELL</code> variable if set, otherwise it uses the user&#8217;s data from /etc/passwd.<br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 then it decides whether to use Bourne shell syntax or C-Shell syntax. It uses a built-in table of known shells, which can be overridden by the <code>-u</code> and <code>-c</code> options.<br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 then <i>resize</i> asks the operating system for the terminal settings. This is the same information which can be manipulated using <i>stty</i>.<br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 then <i>resize</i> asks the terminal for its size in characters. Depending on whether the &quot;<code>-s</code> option is given, <i>resize</i> uses a different escape sequence to ask for this information.<br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 at this point, <i>resize</i> attempts to update the terminal settings to reflect the terminal window&#8217;s size in pixels:</p>
 <dl>
 <dt>
 </dt><dd>
-&nbsp;.IP&nbsp;&bull;&nbsp;4 if the <code>-s</code> option is used, <i>resize</i> then asks the terminal for its size in pixels.<br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 otherwise, <i>resize</i> asks the operating system for the information and updates that after ensuring that the window&#8217;s dimensions are a multiple of the character height and width.<br />
+&nbsp;.IP&nbsp;&bull;&nbsp;4 if the <code>-s</code> option is used, <i>resize</i> then asks the terminal for its size in pixels.<br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 otherwise, <i>resize</i> asks the operating system for the information and updates that after ensuring that the window&#8217;s dimensions are a multiple of the character height and width.<br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 in either case, the updated terminal settings are done using a different system call than used for <i>stty</i>.</dd></dl>
-<p>&nbsp;.IP&nbsp;&bull;&nbsp;4 then <i>resize</i> updates the terminal settings to reflect any altered values such as its size in rows or columns. This affects the values shown by <i>stty</i>.<br />
+<p>&nbsp;.IP&nbsp;&bull;&nbsp;4 then <i>resize</i> updates the terminal settings to reflect any altered values such as its size in rows or columns. This affects the values shown by <i>stty</i>.<br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 finally, <i>resize</i> generates shell commands for setting the environment variables, and writes that to the standard output.</p>
 <h2>EXAMPLES</h2>
 <p> For <i>resize</i>&#8216;s output to take effect, <i>resize</i> must either be evaluated as part of the command line (usually done with a shell alias or function) or else redirected to a file which can then be read in. From the C shell (usually known as <i>/bin/csh</i>), the following alias could be defined in the user&#8217;s <i>.cshrc</i>: </p>
@@ -71,7 +71,7 @@ description: "resize – set environment and terminal settings to current xterm 
 <dl>
 <dt>
 </dt><dd>
-&nbsp;.IP&nbsp;&bull;&nbsp;4 first checking if <code>$SHELL</code> is set, and using that,<br />
+&nbsp;.IP&nbsp;&bull;&nbsp;4 first checking if <code>$SHELL</code> is set, and using that,<br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 otherwise <i>resize</i> looks in the password file (/etc/passwd).</dd></dl>
 <dt>
 </dt><dd> Generally Bourne-shell variants (including <i>ksh</i>) do not modify <code>$SHELL</code>, so it is possible for <i>resize</i> to be confused if one runs <i>resize</i> from a Bourne shell spawned from a C shell.</dd>
@@ -84,11 +84,11 @@ description: "resize – set environment and terminal settings to current xterm 
 <dt>COLUMNS, LINES</dt>
 <dd> <i>Resize</i>&#8216;s generated shell command sets these variables on systems using terminfo. Many applications (including the curses library) use those variables when set to override their screensize.</dd></dl>
 <h2>SEE ALSO</h2>
-<p> use_env(3x)<br />
- <a href="/docs/linux/man/1-csh/">csh</a>(1), <a href="/docs/linux/man/1-stty/">stty</a>(1), <a href="/docs/linux/man/1-tset/">tset</a>(1)<br />
+<p> use_env(3x)<br/>
+ <a href="/docs/linux/man/1-csh/">csh</a>(1), <a href="/docs/linux/man/1-stty/">stty</a>(1), <a href="/docs/linux/man/1-tset/">tset</a>(1)<br/>
  <a href="/docs/linux/man/1-xterm/">xterm</a>(1)</p>
 <h2>AUTHORS</h2>
-<p> Mark Vandevoorde (MIT-Athena), Edward Moy (Berkeley)<br />
- Thomas Dickey (invisible-island.net).<br />
- Copyright (c) 1984, 1985 by X Consortium<br />
+<p> Mark Vandevoorde (MIT-Athena), Edward Moy (Berkeley)<br/>
+ Thomas Dickey (invisible-island.net).<br/>
+ Copyright (c) 1984, 1985 by X Consortium<br/>
  See <i><a href="/docs/linux/man/7-x/">X</a></i>(7) for a complete copyright notice. </p>

@@ -11,7 +11,7 @@ description: "sgesdd.f –"
 <p> sgesdd.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>sgesdd</code> (JOBZ, M, N, A, LDA, S, U, LDU, VT, LDVT, WORK, LWORK, IWORK, INFO)<br />
+<p> subroutine <code>sgesdd</code> (JOBZ, M, N, A, LDA, S, U, LDU, VT, LDVT, WORK, LWORK, IWORK, INFO)<br/>
  <i></i><code>SGESDD</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sgesdd (characterJOBZ, integerM, integerN, real, dimension( lda, * )A, integerLDA, real, dimension( * )S, real, dimension( ldu, * )U, integerLDU, real, dimension( ldvt, * )VT, integerLDVT, real, dimension( * )WORK, integerLWORK, integer, dimension( * )IWORK, integerINFO)</h3>
@@ -98,31 +98,31 @@ description: "sgesdd.f –"
           The singular values of A, sorted so that S(i) &gt;= S(i+1).
 </pre>
 <p> <i>U</i> </p>
-<p>U is REAL array, dimension(LDU, UCOL)<br />
-                     UCOL = M if JOBZ = &#8216;A&#8217; or JOBZ = &#8216;O&#8217; and M &lt; N;<br />
-UCOL = min(M, N) if JOBZ = &#8216;S&#8217;.If JOBZ = &#8216;A&#8217; or JOBZ = &#8216;O&#8217; and M &lt; N, U contains the M &#8211; by &#8211; M orthogonal matrix U;<br />
-if JOBZ<br />
-    = &#8216;S&#8217;, U contains the first min(M, N) columns of U(the left singular vectors, stored columnwise);<br />
-if JOBZ<br />
+<p>U is REAL array, dimension(LDU, UCOL)<br/>
+                     UCOL = M if JOBZ = &#8216;A&#8217; or JOBZ = &#8216;O&#8217; and M &lt; N;<br/>
+UCOL = min(M, N) if JOBZ = &#8216;S&#8217;.If JOBZ = &#8216;A&#8217; or JOBZ = &#8216;O&#8217; and M &lt; N, U contains the M &#8211; by &#8211; M orthogonal matrix U;<br/>
+if JOBZ<br/>
+    = &#8216;S&#8217;, U contains the first min(M, N) columns of U(the left singular vectors, stored columnwise);<br/>
+if JOBZ<br/>
 = &#8216;O&#8217; and M &gt;= N, or JOBZ = &#8216;N&#8217;, U is not referenced.</p>
 <p> <i>LDU</i> </p>
-<p>LDU is INTEGER<br />
-        The leading dimension of the array U.LDU &gt;= 1;<br />
-if JOBZ<br />
+<p>LDU is INTEGER<br/>
+        The leading dimension of the array U.LDU &gt;= 1;<br/>
+if JOBZ<br/>
 = &#8216;S&#8217; or &#8216;A&#8217; or JOBZ = &#8216;O&#8217; and M &lt; N, LDU &gt;= M.</p>
 <p> <i>VT</i> </p>
-<p>VT is REAL array, dimension(LDVT, N) If JOBZ = &#8216;A&#8217; or JOBZ = &#8216;O&#8217; and M &gt;= N, VT contains the N &#8211; by &#8211; N orthogonal matrix V **T;<br />
-if JOBZ<br />
-    = &#8216;S&#8217;, VT contains the first min(M, N) rows of<br />
-        V **T(the right singular vectors, stored rowwise);<br />
-if JOBZ<br />
+<p>VT is REAL array, dimension(LDVT, N) If JOBZ = &#8216;A&#8217; or JOBZ = &#8216;O&#8217; and M &gt;= N, VT contains the N &#8211; by &#8211; N orthogonal matrix V **T;<br/>
+if JOBZ<br/>
+    = &#8216;S&#8217;, VT contains the first min(M, N) rows of<br/>
+        V **T(the right singular vectors, stored rowwise);<br/>
+if JOBZ<br/>
 = &#8216;O&#8217; and M &lt; N, or JOBZ = &#8216;N&#8217;, VT is not referenced.</p>
 <p> <i>LDVT</i> </p>
-<p>LDVT is INTEGER<br />
-        The leading dimension of the array VT.LDVT &gt;= 1;<br />
-if JOBZ<br />
-    = &#8216;A&#8217; or JOBZ = &#8216;O&#8217; and M &gt;= N, LDVT &gt;= N;<br />
-if JOBZ<br />
+<p>LDVT is INTEGER<br/>
+        The leading dimension of the array VT.LDVT &gt;= 1;<br/>
+if JOBZ<br/>
+    = &#8216;A&#8217; or JOBZ = &#8216;O&#8217; and M &gt;= N, LDVT &gt;= N;<br/>
+if JOBZ<br/>
 = &#8216;S&#8217;, LDVT &gt;= min(M, N).</p>
 <p> <i>WORK</i> </p>
 <pre>

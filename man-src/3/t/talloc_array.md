@@ -9,7 +9,7 @@ description: "The talloc array functions – Talloc contains some handy helpers 
 
 <p>The talloc array functions &#8211; Talloc contains some handy helpers for handling Arrays conveniently.</p>
 <h3>Modules</h3>
-<p><code>The talloc string functions.</code><br />
+<p><code>The talloc string functions.</code><br/>
  <i>talloc string allocation and manipulation functions. </i></p>
 <h3>Functions</h3>
 <pre><code>void * talloc_array (const void *ctx,#type, unsigned count)
@@ -38,8 +38,8 @@ Provide a function version of talloc_realloc_size.</code></pre>
 <p>except that it provides integer overflow protection for the multiply, returning NULL if the multiply overflows. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>ctx</i> The talloc context to hang the result off.<br />
- <i>type</i> The type that we want to allocate.<br />
+<dd><i>ctx</i> The talloc context to hang the result off.<br/>
+ <i>type</i> The type that we want to allocate.<br/>
  <i>count</i> The number of &#8216;type&#8217; elements you want to allocate.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -65,8 +65,8 @@ Provide a function version of talloc_realloc_size.</code></pre>
 <p>Allocate an array into a typed pointer. The macro should be used when you have a pointer to an array and want to allocate memory of an array to point at with this pointer. When compiling with gcc &gt;= 3 it is typesafe. Note this is a wrapper of <code>talloc_array_size()</code> and <code>talloc_get_name()</code> will return the current location in the source file and not the type. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>ctx</i> The talloc context to hang the result off.<br />
- <i>ptr</i> The pointer you want to assign the result to.<br />
+<dd><i>ctx</i> The talloc context to hang the result off.<br/>
+ <i>ptr</i> The pointer you want to assign the result to.<br/>
  <i>count</i> The number of elements you want to allocate.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -75,8 +75,8 @@ Provide a function version of talloc_realloc_size.</code></pre>
 <p>Allocate an array. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>ctx</i> The talloc context to hang the result off.<br />
- <i>size</i> The size of an array element.<br />
+<dd><i>ctx</i> The talloc context to hang the result off.<br/>
+ <i>size</i> The size of an array element.<br/>
  <i>count</i> The number of elements you want to allocate.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -91,9 +91,9 @@ Provide a function version of talloc_realloc_size.</code></pre>
 <p>The &#8216;context&#8217; argument is only used if &#8216;ptr&#8217; is NULL, otherwise it is ignored. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>ctx</i> The parent context used if ptr is NULL.<br />
- <i>ptr</i> The chunk to be resized.<br />
- <i>type</i> The type of the array element inside ptr.<br />
+<dd><i>ctx</i> The parent context used if ptr is NULL.<br/>
+ <i>ptr</i> The chunk to be resized.<br/>
+ <i>type</i> The type of the array element inside ptr.<br/>
  <i>count</i> The intended number of array elements.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -102,8 +102,8 @@ Provide a function version of talloc_realloc_size.</code></pre>
 <p>Provide a function version of talloc_realloc_size. This is a non-macro version of <code>talloc_realloc()</code>, which is useful as libraries sometimes want a ralloc function pointer. A realloc() implementation encapsulates the functionality of malloc(), free() and realloc() in one call, which is why it is useful to be able to pass around a single function pointer. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>context</i> The parent context used if ptr is NULL.<br />
- <i>ptr</i> The chunk to be resized.<br />
+<dd><i>context</i> The parent context used if ptr is NULL.<br/>
+ <i>ptr</i> The chunk to be resized.<br/>
  <i>size</i> The new chunk size.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -112,8 +112,8 @@ Provide a function version of talloc_realloc_size.</code></pre>
 <p>Untyped realloc to change the size of a talloc array. The macro is useful when the type is not known so the typesafe <code>talloc_realloc()</code> cannot be used. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>ctx</i> The parent context used if &#8216;ptr&#8217; is NULL.<br />
- <i>ptr</i> The chunk to be resized.<br />
+<dd><i>ctx</i> The parent context used if &#8216;ptr&#8217; is NULL.<br/>
+ <i>ptr</i> The chunk to be resized.<br/>
  <i>size</i> The new chunk size.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -122,8 +122,8 @@ Provide a function version of talloc_realloc_size.</code></pre>
 <p>Allocate a zero-initialized array. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>ctx</i> The talloc context to hang the result off.<br />
- <i>type</i> The type that we want to allocate.<br />
+<dd><i>ctx</i> The talloc context to hang the result off.<br/>
+ <i>type</i> The type that we want to allocate.<br/>
  <i>count</i> The number of &#8216;type&#8217; elements you want to allocate.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

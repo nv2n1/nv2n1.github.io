@@ -9,8 +9,8 @@ description: "ovs-appctl – utility for configuring running Open vSwitch daemon
 
 <p>ovs-appctl &#8211; utility for configuring running Open vSwitch daemons</p>
 <h2>Synopsis</h2>
-<p><code>ovs-appctl</code> [<code>&#8211;target=</code><i>target</i> | <code>-t</code> <i>target</i>] <i>command </i>[<i>arg</i>&#8230;]<br />
- <code>ovs-appctl</code> &#8211;help<br />
+<p><code>ovs-appctl</code> [<code>&#8211;target=</code><i>target</i> | <code>-t</code> <i>target</i>] <i>command </i>[<i>arg</i>&#8230;]<br/>
+ <code>ovs-appctl</code> &#8211;help<br/>
  <code>ovs-appctl</code> &#8211;version</p>
 <h2>Description</h2>
 <p>Open vSwitch daemons accept certain commands at runtime to control their behavior and query their settings. Every daemon accepts a common set of commands documented under <code>COMMON COMMANDS</code> below. Some daemons support additional commands documented in their own manpages. <code>ovs-vswitchd</code> in particular accepts a number of additional commands documented in <code><a href="/docs/linux/man/8-ovs-vswitchd/">ovs-vswitchd</a></code>(8). </p>

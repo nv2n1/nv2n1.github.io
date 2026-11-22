@@ -30,7 +30,7 @@ description: "qgpureset – reset GPU error counts"
 <h2>STANDARD ERROR</h2>
 <p> The qgpureset command will write a diagnostic messages to standard error for each error occurrence.</p>
 <h2>EXIT STATUS</h2>
-<p> Upon successful processing of all the operands presented to the<br />
+<p> Upon successful processing of all the operands presented to the<br/>
 &nbsp;<wbr>qgpureset command, the exit status will be a value of zero. </p>
 <p> If the qgpureset command fails to process any operand, the command exits with a value greater than zero.</p>
 <h2>SEE ALSO</h2>

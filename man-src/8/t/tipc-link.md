@@ -9,11 +9,11 @@ description: "tipc-link – show links or modify link properties"
 
 <p>tipc-link &#8211; show links or modify link properties</p>
 <h2>Synopsis</h2>
-<p> <code>tipc link set</code><br />
- [ <code>{ </code>priority <i>PRIORITY</i> | <code>tolerance</code> <i>TOLERANCE</i> | <code>window</code> <i>WINDOW </i>} <code>link </code><i>LINK</i><code> ]</code> |<br />
- [ { <code>broadcast</code> [ <i>BROADCAST</i> | <i>REPLICAST</i> | <i>AUTOSELECT</i> [ <code>ratio</code> <i>SIZE</i> ] <code>]</code> } <code>]</code><br />
- <code>tipc link get</code><br />
- [ <code>{ </code>priority<code> | </code>tolerance<code> | </code>window<code> } </code>link <i>LINK</i> ] |<br />
+<p> <code>tipc link set</code><br/>
+ [ <code>{ </code>priority <i>PRIORITY</i> | <code>tolerance</code> <i>TOLERANCE</i> | <code>window</code> <i>WINDOW </i>} <code>link </code><i>LINK</i><code> ]</code> |<br/>
+ [ { <code>broadcast</code> [ <i>BROADCAST</i> | <i>REPLICAST</i> | <i>AUTOSELECT</i> [ <code>ratio</code> <i>SIZE</i> ] <code>]</code> } <code>]</code><br/>
+ <code>tipc link get</code><br/>
+ [ <code>{ </code>priority<code> | </code>tolerance<code> | </code>window<code> } </code>link <i>LINK</i> ] |<br/>
  [ <code>{</code> broadcast <code>}</code> ] </p>
 <pre><code>tipc link statistics
 { show [ link
@@ -27,8 +27,8 @@ description: "tipc-link – show links or modify link properties"
 tipc link monitor get
 { threshold }</code></pre>
 <p> <code>tipc link monitor summary</code> </p>
-<p> <code>tipc link monitor list</code><br />
- [ <code>media </code> { <code>eth</code> | <code>ib</code> } <code>device</code> <i>DEVICE</i> ] |<br />
+<p> <code>tipc link monitor list</code><br/>
+ [ <code>media </code> { <code>eth</code> | <code>ib</code> } <code>device</code> <i>DEVICE</i> ] |<br/>
  [ <code>media udp name</code> <i>NAME</i> ] </p>
 <h2>Options</h2>
 <p>Options (flags) that can be passed anywhere in the command chain.</p>
@@ -56,12 +56,12 @@ tipc link monitor get
 <dt><code>Bundles</code></dt>
 <dd>Represented in the form <code>bundles</code>/<code>bundled</code>. If a link becomes congested the link will attempt to bundle data from small <code>bundled</code> packets into <code>bundles</code> of full MTU size packets before they are transmitted.</dd>
 <dt><code>Profile</code></dt>
-<dd>Shows the <code>average</code> packet size in octets/bytes for a <code>sample</code> of packets. It also shows the packet size distribution of the <code>sampled</code> packets in the intervals 0-64 bytes<br />
- 64-256 bytes<br />
- 256-1024 bytes<br />
- 1024-4096 bytes<br />
- 4096-16384 bytes<br />
- 16384-32768 bytes<br />
+<dd>Shows the <code>average</code> packet size in octets/bytes for a <code>sample</code> of packets. It also shows the packet size distribution of the <code>sampled</code> packets in the intervals 0-64 bytes<br/>
+ 64-256 bytes<br/>
+ 256-1024 bytes<br/>
+ 1024-4096 bytes<br/>
+ 4096-16384 bytes<br/>
+ 16384-32768 bytes<br/>
  32768-66000 bytes</dd>
 <dt><code>Message counters</code></dt>
 <dd><code>states</code> &#8211; Number of link state messages <code>probes</code> &#8211; Link state messages with probe flag set. Typically sent when a link is idle <code>nacks</code> &#8211; Number of negative acknowledgement (NACK) packets sent and received by the link <code>defs</code> &#8211; Number of packets received out of order <code>dups</code> &#8211; Number of duplicate packets received</dd>

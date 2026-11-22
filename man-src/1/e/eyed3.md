@@ -9,7 +9,7 @@ description: "eyeD3 – displays and manipulates id3-tags on mp3 files"
 
 <p><code>eyeD3</code> &#8211; displays and manipulates id3-tags on mp3 files</p>
 <h2>Synopsis</h2>
-<p><code>eyeD3</code> [<i>options</i>] file [<i>file&#8230;</i>]<br />
+<p><code>eyeD3</code> [<i>options</i>] file [<i>file&#8230;</i>]<br/>
  <code>eyeD3</code> [<i>options</i>] dir [<i>dir&#8230;</i>] </p>
 <h2>Description</h2>
 <p><code>eyeD3</code> Manipulates ID3 tags in mp3 files and is able to read/write and convert between ID3 v1.0, v1.1, v2.3 and v2.4 tags. High-level access is provided to most frames, including APIC (i.e., images) frames. </p>

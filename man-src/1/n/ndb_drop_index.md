@@ -28,7 +28,7 @@ ndb_drop_index -c <i>connect_string</i> <i>table_name</i> <i>index</i> -d <i>db_
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Warning</code> </font> </dd>
+  <code>Warning</code>  </dd>
 <p> <i>Operations performed on Cluster table indexes using the NDB API are not visible to MySQL and make the table unusable by a MySQL server</i>. If you use this program to drop an index, then try to access the table from an SQL node, an error results, as shown here: </p>
 </dl>
 <dl>
@@ -61,7 +61,7 @@ mysql&gt; SELECT * FROM dogs; ERROR 1296 (HY000): Got error 4243 'Index not foun
 </dl>
 <p> In such a case, your <i>only</i> option for making the table available to MySQL again is to drop the table and re-create it. You can use either the SQL statementDROP TABLE or the <code>ndb_drop_table</code> utility (see <code><a href="/docs/linux/man/1-ndb_drop_table/">ndb_drop_table</a></code>(1)) to drop the table.  </p>
 <h2>COPYRIGHT</h2>
-<p> <br />
+<p> <br/>
  </p>
 <p> Copyright &#169; 2008, 2010, Oracle and/or its affiliates. All rights reserved. </p>
 <p> This documentation is free software; you can redistribute it and/or modify it only under the terms of the GNU General Public License as published by the Free Software Foundation; version 2 of the License. </p>

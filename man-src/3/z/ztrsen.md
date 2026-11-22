@@ -10,7 +10,7 @@ description: "ztrsen.f –"
 <p>ztrsen.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>ztrsen</code> (JOB, COMPQ, SELECT, N, T, LDT, Q, LDQ, W, M, S, SEP, WORK, LWORK, INFO)<br />
+<p>subroutine <code>ztrsen</code> (JOB, COMPQ, SELECT, N, T, LDT, Q, LDQ, W, M, S, SEP, WORK, LWORK, INFO)<br/>
  <i></i><code>ZTRSEN</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ztrsen (characterJOB, characterCOMPQ, logical, dimension( * )SELECT, integerN, complex*16, dimension( ldt, * )T, integerLDT, complex*16, dimension( ldq, * )Q, integerLDQ, complex*16, dimension( * )W, integerM, double precisionS, double precisionSEP, complex*16, dimension( * )WORK, integerLWORK, integerINFO)</h3>

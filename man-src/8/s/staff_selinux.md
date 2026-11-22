@@ -16,7 +16,7 @@ description: "staff_u – Administrator’s unprivileged user – Security Enhan
 <p>The SELinux user staff can execute sudo. </p>
 <p> You can set up sudo to allow staff to transition to an administrative domain: </p>
 <p> Add one or more of the following record to sudoers using visudo. </p>
-<p> USERNAME ALL=(ALL) ROLE=webadm_r TYPE=webadm_t COMMAND<br />
+<p> USERNAME ALL=(ALL) ROLE=webadm_r TYPE=webadm_t COMMAND<br/>
  sudo will run COMMAND as staff_u:webadm_r:webadm_t:LEVEL </p>
 <p> You might also need to add one or more of these new roles to your SELinux user record. </p>
 <p> List the SELinux roles your SELinux user can reach by executing: </p>
@@ -24,7 +24,7 @@ description: "staff_u – Administrator’s unprivileged user – Security Enhan
 <p> Modify the roles list and add staff_r to this list. </p>
 <p> <code>$ semanage user -m -R &#8216;staff_r webadm_r unconfined_r sysadm_r secadm_r logadm_r dbadm_r auditadm_r&#8217; staff_u</code> </p>
 <p> For more details you can see semanage man page. </p>
-<p> USERNAME ALL=(ALL) ROLE=unconfined_r TYPE=unconfined_t COMMAND<br />
+<p> USERNAME ALL=(ALL) ROLE=unconfined_r TYPE=unconfined_t COMMAND<br/>
  sudo will run COMMAND as staff_u:unconfined_r:unconfined_t:LEVEL </p>
 <p> You might also need to add one or more of these new roles to your SELinux user record. </p>
 <p> List the SELinux roles your SELinux user can reach by executing: </p>
@@ -32,7 +32,7 @@ description: "staff_u – Administrator’s unprivileged user – Security Enhan
 <p> Modify the roles list and add staff_r to this list. </p>
 <p> <code>$ semanage user -m -R &#8216;staff_r webadm_r unconfined_r sysadm_r secadm_r logadm_r dbadm_r auditadm_r&#8217; staff_u</code> </p>
 <p> For more details you can see semanage man page. </p>
-<p> USERNAME ALL=(ALL) ROLE=sysadm_r TYPE=sysadm_t COMMAND<br />
+<p> USERNAME ALL=(ALL) ROLE=sysadm_r TYPE=sysadm_t COMMAND<br/>
  sudo will run COMMAND as staff_u:sysadm_r:sysadm_t:LEVEL </p>
 <p> You might also need to add one or more of these new roles to your SELinux user record. </p>
 <p> List the SELinux roles your SELinux user can reach by executing: </p>
@@ -40,7 +40,7 @@ description: "staff_u – Administrator’s unprivileged user – Security Enhan
 <p> Modify the roles list and add staff_r to this list. </p>
 <p> <code>$ semanage user -m -R &#8216;staff_r webadm_r unconfined_r sysadm_r secadm_r logadm_r dbadm_r auditadm_r&#8217; staff_u</code> </p>
 <p> For more details you can see semanage man page. </p>
-<p> USERNAME ALL=(ALL) ROLE=secadm_r TYPE=secadm_t COMMAND<br />
+<p> USERNAME ALL=(ALL) ROLE=secadm_r TYPE=secadm_t COMMAND<br/>
  sudo will run COMMAND as staff_u:secadm_r:secadm_t:LEVEL </p>
 <p> You might also need to add one or more of these new roles to your SELinux user record. </p>
 <p> List the SELinux roles your SELinux user can reach by executing: </p>
@@ -48,7 +48,7 @@ description: "staff_u – Administrator’s unprivileged user – Security Enhan
 <p> Modify the roles list and add staff_r to this list. </p>
 <p> <code>$ semanage user -m -R &#8216;staff_r webadm_r unconfined_r sysadm_r secadm_r logadm_r dbadm_r auditadm_r&#8217; staff_u</code> </p>
 <p> For more details you can see semanage man page. </p>
-<p> USERNAME ALL=(ALL) ROLE=logadm_r TYPE=logadm_t COMMAND<br />
+<p> USERNAME ALL=(ALL) ROLE=logadm_r TYPE=logadm_t COMMAND<br/>
  sudo will run COMMAND as staff_u:logadm_r:logadm_t:LEVEL </p>
 <p> You might also need to add one or more of these new roles to your SELinux user record. </p>
 <p> List the SELinux roles your SELinux user can reach by executing: </p>
@@ -56,7 +56,7 @@ description: "staff_u – Administrator’s unprivileged user – Security Enhan
 <p> Modify the roles list and add staff_r to this list. </p>
 <p> <code>$ semanage user -m -R &#8216;staff_r webadm_r unconfined_r sysadm_r secadm_r logadm_r dbadm_r auditadm_r&#8217; staff_u</code> </p>
 <p> For more details you can see semanage man page. </p>
-<p> USERNAME ALL=(ALL) ROLE=dbadm_r TYPE=dbadm_t COMMAND<br />
+<p> USERNAME ALL=(ALL) ROLE=dbadm_r TYPE=dbadm_t COMMAND<br/>
  sudo will run COMMAND as staff_u:dbadm_r:dbadm_t:LEVEL </p>
 <p> You might also need to add one or more of these new roles to your SELinux user record. </p>
 <p> List the SELinux roles your SELinux user can reach by executing: </p>
@@ -64,7 +64,7 @@ description: "staff_u – Administrator’s unprivileged user – Security Enhan
 <p> Modify the roles list and add staff_r to this list. </p>
 <p> <code>$ semanage user -m -R &#8216;staff_r webadm_r unconfined_r sysadm_r secadm_r logadm_r dbadm_r auditadm_r&#8217; staff_u</code> </p>
 <p> For more details you can see semanage man page. </p>
-<p> USERNAME ALL=(ALL) ROLE=auditadm_r TYPE=auditadm_t COMMAND<br />
+<p> USERNAME ALL=(ALL) ROLE=auditadm_r TYPE=auditadm_t COMMAND<br/>
  sudo will run COMMAND as staff_u:auditadm_r:auditadm_t:LEVEL </p>
 <p> You might also need to add one or more of these new roles to your SELinux user record. </p>
 <p> List the SELinux roles your SELinux user can reach by executing: </p>

@@ -19,37 +19,37 @@ url: "/docs/linux/man/3-xcursorlibraryloadcursor/"
 <h3>CURSOR FILES</h3>
 <p> Xcursor defines a new format for cursors on disk. Each file holds one or more cursor images. Each cursor image is tagged with a nominal size so that the best size can be selected automatically. Multiple cursors of the same nominal size can be loaded together; applications are expected to use them as an animated sequence. </p>
 <p> Cursor files are stored as a header containing a table of contents followed by a sequence of chunks. The table of contents indicates the type, subtype and position in the file of each chunk. The file header looks like: </p>
-<p> <i>magic</i>: CARD32 &#8216;Xcur&#8217; (0x58, 0x63, 0x75, 0x72) <br />
- <i>header</i>: CARD32 bytes in this header <br />
- <i>version</i>: CARD32 file version number <br />
- <i>ntoc</i>: CARD32 number of toc entries <br />
+<p> <i>magic</i>: CARD32 &#8216;Xcur&#8217; (0x58, 0x63, 0x75, 0x72) <br/>
+ <i>header</i>: CARD32 bytes in this header <br/>
+ <i>version</i>: CARD32 file version number <br/>
+ <i>ntoc</i>: CARD32 number of toc entries <br/>
  <i>toc</i>: LISTofTOC table of contents </p>
 <p> Each table of contents entry looks like: </p>
-<p> <i>type</i>: CARD32 entry type <br />
- <i>subtype</i>: CARD32 type-specific label &#8211; size for images <br />
+<p> <i>type</i>: CARD32 entry type <br/>
+ <i>subtype</i>: CARD32 type-specific label &#8211; size for images <br/>
  <i>position</i>: CARD32 absolute byte position of table in file </p>
 <p> Each chunk in the file has set of common header fields followed by additional type-specific fields: </p>
-<p> <i>header</i>: CARD32 bytes in chunk header (including type-specific fields) <br />
- <i>type</i>: CARD32 must match type in TOC for this chunk <br />
- <i>subtype</i>: CARD32 must match subtype in TOC for this chunk <br />
+<p> <i>header</i>: CARD32 bytes in chunk header (including type-specific fields) <br/>
+ <i>type</i>: CARD32 must match type in TOC for this chunk <br/>
+ <i>subtype</i>: CARD32 must match subtype in TOC for this chunk <br/>
  <i>version</i>: CARD32 version number for this chunk type </p>
 <p> There are currently two chunk types defined for cursor files; comments and images. Comments look like: </p>
-<p> <i>header</i>: 20 Comment headers are 20 bytes <br />
- <i>type</i>: 0xfffe0001 Comment type is 0xfffe0001 <br />
- <i>subtype</i>: { 1 (COPYRIGHT), 2 (LICENSE), 3 (OTHER) } <br />
- <i>version</i>: 1 <br />
- <i>length</i>: CARD32 byte length of UTF-8 string <br />
+<p> <i>header</i>: 20 Comment headers are 20 bytes <br/>
+ <i>type</i>: 0xfffe0001 Comment type is 0xfffe0001 <br/>
+ <i>subtype</i>: { 1 (COPYRIGHT), 2 (LICENSE), 3 (OTHER) } <br/>
+ <i>version</i>: 1 <br/>
+ <i>length</i>: CARD32 byte length of UTF-8 string <br/>
  <i>string</i>: LISTofCARD8 UTF-8 string </p>
 <p> Images look like: </p>
-<p> <i>header</i>: 36 Image headers are 36 bytes <br />
- <i>type</i>: 0xfffd0002 Image type is 0xfffd0002 <br />
- <i>subtype</i>: CARD32 Image subtype is the nominal size <br />
- <i>version</i>: 1 <br />
- <i>width</i>: CARD32 Must be less than or equal to 0x7fff <br />
- <i>height</i>: CARD32 Must be less than or equal to 0x7fff <br />
- <i>xhot</i>: CARD32 Must be less than or equal to width <br />
- <i>yhot</i>: CARD32 Must be less than or equal to height <br />
- <i>delay</i>: CARD32 Delay between animation frames in milliseconds <br />
+<p> <i>header</i>: 36 Image headers are 36 bytes <br/>
+ <i>type</i>: 0xfffd0002 Image type is 0xfffd0002 <br/>
+ <i>subtype</i>: CARD32 Image subtype is the nominal size <br/>
+ <i>version</i>: 1 <br/>
+ <i>width</i>: CARD32 Must be less than or equal to 0x7fff <br/>
+ <i>height</i>: CARD32 Must be less than or equal to 0x7fff <br/>
+ <i>xhot</i>: CARD32 Must be less than or equal to width <br/>
+ <i>yhot</i>: CARD32 Must be less than or equal to height <br/>
+ <i>delay</i>: CARD32 Delay between animation frames in milliseconds <br/>
  <i>pixels</i>: LISTofCARD32 Packed ARGB format pixels </p>
 <h3>THEMES</h3>
 <p> Xcursor (mostly) follows the freedesktop.org spec for theming icons. The default search path it uses is ~/.icons, /usr/share/icons, /usr/share/pixmaps. Within each of these directories, it searches for a directory using the theme name. Within the theme directory, it looks for cursor files in the &#8216;cursors&#8217; subdirectory. It uses the first cursor file found along the path. </p>
@@ -109,19 +109,19 @@ url: "/docs/linux/man/3-xcursorlibraryloadcursor/"
 <h3>Object Management</h3>
 <dl>
 <dt>XcursorImage *XcursorImageCreate (int width, int height)</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  </p>
  </dd>
 <dd> <p> void XcursorImageDestroy (XcursorImage *image) Allocate and free images. On allocation, the hotspot and the pixels are left uninitialized. The size is set to the maximum of width and height. </p>
  </dd>
 <dt>XcursorImages *XcursorImagesCreate (int size)</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  </p>
  </dd>
 <dd> <p> void XcursorImagesDestroy (XcursorImages *images) Allocate and free arrays to hold multiple cursor images. On allocation, nimage is set to zero. </p>
  </dd>
 <dt>XcursorCursors *XcursorCursorsCreate (Display *dpy, int size)</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  </p>
  </dd>
 <dd> <p> void XcursorCursorsDestroy (XcursorCursors *cursors) Allocate and free arrays to hold multiple cursors. On allocation, ncursor is set to zero, ref is set to one. </p>
@@ -129,52 +129,52 @@ url: "/docs/linux/man/3-xcursorlibraryloadcursor/"
 <h3>Reading and writing images.</h3>
 <dl>
 <dt>XcursorImage *XcursorXcFileLoadImage (XcursorFile *file, int size)</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  </p>
  </dd>
-<dd> <p> XcursorImages *XcursorXcFileLoadImages (XcursorFile *file, int size) <br />
+<dd> <p> XcursorImages *XcursorXcFileLoadImages (XcursorFile *file, int size) <br/>
  </p>
  </dd>
-<dd> <p> XcursorImages *XcursorXcFileLoadAllImages (XcursorFile *file) <br />
+<dd> <p> XcursorImages *XcursorXcFileLoadAllImages (XcursorFile *file) <br/>
  </p>
  </dd>
-<dd> <p> XcursorBool XcursorXcFileLoad (XcursorFile *file, XcursorComments **commentsp, XcursorImages **imagesp) <br />
+<dd> <p> XcursorBool XcursorXcFileLoad (XcursorFile *file, XcursorComments **commentsp, XcursorImages **imagesp) <br/>
  </p>
  </dd>
 <dd> <p> XcursorBool XcursorXcFileSave (XcursorFile *file, const XcursorComments *comments, const XcursorImages *images) These read and write cursors from an XcursorFile handle. After reading, the file pointer will be left at some random place in the file. </p>
  </dd>
 <dt>XcursorImage *XcursorFileLoadImage (FILE *file, int size)</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  </p>
  </dd>
-<dd> <p> XcursorImages *XcursorFileLoadImages (FILE *file, int size) <br />
+<dd> <p> XcursorImages *XcursorFileLoadImages (FILE *file, int size) <br/>
  </p>
  </dd>
-<dd> <p> XcursorImages *XcursorFileLoadAllImages (FILE *file) <br />
+<dd> <p> XcursorImages *XcursorFileLoadAllImages (FILE *file) <br/>
  </p>
  </dd>
-<dd> <p> XcursorBool XcursorFileLoad (FILE *file, XcursorComments **commentsp, XcursorImages **imagesp) <br />
+<dd> <p> XcursorBool XcursorFileLoad (FILE *file, XcursorComments **commentsp, XcursorImages **imagesp) <br/>
  </p>
  </dd>
-<dd> <p> XcursorBool XcursorFileSaveImages (FILE *file, const XcursorImages *images) <br />
+<dd> <p> XcursorBool XcursorFileSaveImages (FILE *file, const XcursorImages *images) <br/>
  </p>
  </dd>
 <dd> <p> XcursorBool XcursorFileSave (FILE * file, const XcursorComments *comments, const XcursorImages *images) These read and write cursors from a stdio FILE handle. Writing flushes before returning so that any errors should be detected. </p>
  </dd>
 <dt>XcursorImage *XcursorFilenameLoadImage (const char *filename, int size)</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  </p>
  </dd>
-<dd> <p> XcursorImages *XcursorFilenameLoadImages (const char *filename, int size) <br />
+<dd> <p> XcursorImages *XcursorFilenameLoadImages (const char *filename, int size) <br/>
  </p>
  </dd>
-<dd> <p> XcursorImages *XcursorFilenameLoadAllImages (FILE *file) <br />
+<dd> <p> XcursorImages *XcursorFilenameLoadAllImages (FILE *file) <br/>
  </p>
  </dd>
-<dd> <p> XcursorBool XcursorFilenameLoad (const char *file, XcursorComments **commentsp, XcursorImages **imagesp) <br />
+<dd> <p> XcursorBool XcursorFilenameLoad (const char *file, XcursorComments **commentsp, XcursorImages **imagesp) <br/>
  </p>
  </dd>
-<dd> <p> XcursorBool XcursorFilenameSaveImages (const char *filename, const XcursorImages *images) <br />
+<dd> <p> XcursorBool XcursorFilenameSaveImages (const char *filename, const XcursorImages *images) <br/>
  </p>
  </dd>
 <dd> <p> XcursorBool XcursorFilenameSave (const char *file, const XcursorComments *comments, const XcursorImages *images) These parallel the stdio FILE interfaces above, but take filenames. </p>
@@ -182,7 +182,7 @@ url: "/docs/linux/man/3-xcursorlibraryloadcursor/"
 <h3>Reading library images</h3>
 <dl>
 <dt>XcursorImage *XcursorLibraryLoadImage (const char *name, const char *theme, int size)</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  </p>
  </dd>
 <dd> <p> XcursorImages *XcursorLibraryLoadImages (const char *name, const char *theme, int size) These search the library path, loading the first file found. If &#8216;theme&#8217; is not NULL, these functions first try appending -theme to name and then name alone. </p>
@@ -190,13 +190,13 @@ url: "/docs/linux/man/3-xcursorlibraryloadcursor/"
 <h3>Cursor APIs</h3>
 <dl>
 <dt>Cursor XcursorFilenameLoadCursor (Display *dpy, const char *file)</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  </p>
  </dd>
 <dd> <p> XcursorCursors *XcursorFilenameLoadCursors (Display *dpy, const char *file) These load cursors from the specified file. </p>
  </dd>
 <dt>Cursor XcursorLibraryLoadCursor (Display *dpy, const char *name)</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  </p>
  </dd>
 <dd> <p> XcursorCursors *XcursorLibraryLoadCursors (Display *dpy, const char *name) These load cursors using the specified library name. The theme comes from the display. </p>
@@ -204,13 +204,13 @@ url: "/docs/linux/man/3-xcursorlibraryloadcursor/"
 <h3>X Cursor Name APIs</h3>
 <dl>
 <dt>XcursorImage *XcursorShapeLoadImage (unsigned int shape, const char *theme, int size)</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  </p>
  </dd>
 <dd> <p> XcursorImages *XcursorShapeLoadImages (unsigned int shape, const char *theme, int size) These map &#8216;shape&#8217; to a library name using the standard X cursor names and then load the images. </p>
  </dd>
 <dt>Cursor XcursorShapeLoadCursor (Display *dpy, unsigned int shape)</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
  </p>
  </dd>
 <dd> <p> XcursorCursors *XcursorShapeLoadCursors (Display *dpy, unsigned int shape) These map &#8216;shape&#8217; to a library name and then load the cursors. </p>

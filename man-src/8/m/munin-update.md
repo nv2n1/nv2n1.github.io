@@ -50,11 +50,11 @@ description: "munin-update – A program to gather data from machines running mu
  /var/log/munin/munin-update
  /var/run/munin/*</pre>
 <h2>Bugs</h2>
-<p>For a list of bugs concerning munin-update, see <font SIZE="-1">FI</font>. </p>
+<p>For a list of bugs concerning munin-update, see FI. </p>
 <p> Please report bugs in the bug tracker at &lt;<a rel="nofollow" href="http://munin-monitoring.org/">http://munin-monitoring.org/</a>&gt;.</p>
 <h2>Authors</h2>
-<p>The Munin Team. <font SIZE="-1">FIX</font></p>
+<p>The Munin Team. FIX</p>
 <h2>Copyright</h2>
-<p>Copyright X 2002-2009 Jimmy Olsen, Audun Ytterdal, Tore Andersson, Kjell-Magne Oierud, Linpro <font SIZE="-1">AS,</font> Redpill Linpro <font SIZE="-1">AS</font> </p>
-<p> This is free software; see the source for copying conditions. There is <font SIZE="-1">NO</font> warranty; not even for <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE.</font> </p>
-<p> This program is released under the <font SIZE="-1">GNU</font> General Public License.</p>
+<p>Copyright X 2002-2009 Jimmy Olsen, Audun Ytterdal, Tore Andersson, Kjell-Magne Oierud, Linpro AS, Redpill Linpro AS </p>
+<p> This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>
+<p> This program is released under the GNU General Public License.</p>

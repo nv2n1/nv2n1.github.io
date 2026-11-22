@@ -47,14 +47,14 @@ description: "saned – SANE network daemon"
 <p> The access list is a list of host names, IP addresses or IP subnets (CIDR notation) that are permitted to use local SANE devices. IPv6 addresses must be enclosed in brackets, and should always be specified in their compressed form. Connections from localhost are always permitted. Empty lines and lines starting with a hash mark (#) are ignored. A line containing the single character &#8220;+&#8221; is interpreted to match any hostname. This allows any remote machine to use your scanner and may present a security risk, so this shouldn&#8217;t be used unless you know what you&#8217;re doing. </p>
 <p> A sample configuration file is shown below: </p>
 <dl>
-<dd># Daemon options<br />
- data_portrange = 10000 &#8211; 10100<br />
- # Access list<br />
- scan-client.somedomain.firm<br />
- # this is a comment<br />
- 192.168.0.1<br />
- 192.168.2.12/29<br />
- [::1]<br />
+<dd># Daemon options<br/>
+ data_portrange = 10000 &#8211; 10100<br/>
+ # Access list<br/>
+ scan-client.somedomain.firm<br/>
+ # this is a comment<br/>
+ 192.168.0.1<br/>
+ 192.168.2.12/29<br/>
+ [::1]<br/>
  [2001:db8:185e::42:12]/64</dd></dl>
 <p> The case of the host names does not matter, so AHost.COM is considered identical to ahost.com.</p>
 <h2>Server Daemon Configuration</h2>
@@ -177,7 +177,7 @@ Also=saned.socket</pre>
 <dd>This environment variable specifies the list of directories that may contain the configuration file. On *NIX systems, the directories are separated by a colon (`:&#8217;), under OS/2, they are separated by a semi-colon (`;&#8217;). If this variable is not set, the configuration file is searched in two default directories: first, the current working directory (&quot;.&quot;) and then in <i>/etc/sane.d</i>. If the value of the environment variable ends with the directory separator character, then the default directories are searched after the explicitly specified directories. For example, setting <code>SANE_CONFIG_DIR</code> to &quot;/tmp/config:&quot; would result in directories <i>tmp/config</i>, <i>.</i>, and <i>/etc/sane.d</i> being searched (in this order). </dd>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1), <code>xscanimage</code>(1), <code><a href="/docs/linux/man/1-xcam/">xcam</a></code>(1), <code><a href="/docs/linux/man/5-sane-dll/">sane-dll</a></code>(5), <code><a href="/docs/linux/man/5-sane-net/">sane-net</a></code>(5), <code>sane-backendname</code>(5), <code>inetd</code>(8), <code><a href="/docs/linux/man/8-xinetd/">xinetd</a></code>(8), <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1)<br />
+<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1), <code>xscanimage</code>(1), <code><a href="/docs/linux/man/1-xcam/">xcam</a></code>(1), <code><a href="/docs/linux/man/5-sane-dll/">sane-dll</a></code>(5), <code><a href="/docs/linux/man/5-sane-net/">sane-net</a></code>(5), <code>sane-backendname</code>(5), <code>inetd</code>(8), <code><a href="/docs/linux/man/8-xinetd/">xinetd</a></code>(8), <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1)<br/>
  <i><a rel="nofollow" href="http://www.penguin-breeder.org/?page=sane-net">http://www.penguin-breeder.org/?page=sane-net</a></i></p>
 <h2>Author</h2>
 <p>David Mosberger</p>

@@ -9,18 +9,18 @@ description: "httpd – Apache Hypertext Transfer Protocol Server"
 
 <p>httpd &#8211; Apache Hypertext Transfer Protocol Server</p>
 <h2>Synopsis</h2>
-<p> <code>httpd</code> [ &#8211;<code>d</code> <i>serverroot</i> ] [ &#8211;<code>f</code> <i>config</i> ] [ &#8211;<code>C</code> <i>directive</i> ] [ &#8211;<code>c</code> <i>directive</i> ] [ &#8211;<code>D</code> <i>parameter</i> ] [ &#8211;<code>e</code> <i>level</i> ] [ &#8211;<code>E</code> <i>file</i> ] [ <code>-k</code> start|restart|graceful|stop|graceful-stop ] [ &#8211;<code>R</code> <i>directory</i> ] [ &#8211;<code>h</code> ] [ &#8211;<code>l</code> ] [ &#8211;<code>L</code> ] [ &#8211;<code>S</code> ] [ &#8211;<code>t</code> ] [ &#8211;<code>v</code> ] [ &#8211;<code>V</code> ] [ &#8211;<code>X</code> ] [ &#8211;<code>M</code> ] [ &#8211;<code>T</code> ]<br />
-&nbsp;<wbr> On Windows systems, the following additional arguments are available:<br />
-&nbsp;<wbr> <code>httpd</code> [ &#8211;<code>k</code> install|config|uninstall ] [ &#8211;<code>n</code> <i>name</i> ] [ &#8211;<code>w</code> ]<br />
+<p> <code>httpd</code> [ &#8211;<code>d</code> <i>serverroot</i> ] [ &#8211;<code>f</code> <i>config</i> ] [ &#8211;<code>C</code> <i>directive</i> ] [ &#8211;<code>c</code> <i>directive</i> ] [ &#8211;<code>D</code> <i>parameter</i> ] [ &#8211;<code>e</code> <i>level</i> ] [ &#8211;<code>E</code> <i>file</i> ] [ <code>-k</code> start|restart|graceful|stop|graceful-stop ] [ &#8211;<code>R</code> <i>directory</i> ] [ &#8211;<code>h</code> ] [ &#8211;<code>l</code> ] [ &#8211;<code>L</code> ] [ &#8211;<code>S</code> ] [ &#8211;<code>t</code> ] [ &#8211;<code>v</code> ] [ &#8211;<code>V</code> ] [ &#8211;<code>X</code> ] [ &#8211;<code>M</code> ] [ &#8211;<code>T</code> ]<br/>
+&nbsp;<wbr> On Windows systems, the following additional arguments are available:<br/>
+&nbsp;<wbr> <code>httpd</code> [ &#8211;<code>k</code> install|config|uninstall ] [ &#8211;<code>n</code> <i>name</i> ] [ &#8211;<code>w</code> ]<br/>
 &nbsp;<wbr> </p>
 <h2>Summary</h2>
 <p>&nbsp;<wbr> </p>
-<p> httpd is the Apache HyperText Transfer Protocol (HTTP) server program. It is designed to be run as a standalone daemon process. When used like this it will create a pool of child processes or threads to handle requests.<br />
+<p> httpd is the Apache HyperText Transfer Protocol (HTTP) server program. It is designed to be run as a standalone daemon process. When used like this it will create a pool of child processes or threads to handle requests.<br/>
 &nbsp;<wbr> </p>
-<p> In general, httpd should not be invoked directly, but rather should be invoked via apachectl on Unix-based systems or as a service on Windows NT, 2000 and XP and as a console application on Windows 9x and ME.<br />
+<p> In general, httpd should not be invoked directly, but rather should be invoked via apachectl on Unix-based systems or as a service on Windows NT, 2000 and XP and as a console application on Windows 9x and ME.<br/>
 &nbsp;<wbr></p>
 <h2>Options</h2>
-<p>&nbsp;<wbr><br />
+<p>&nbsp;<wbr><br/>
 &nbsp;<wbr></p>
 <dl>
 <dt>-d <i>serverroot</i></dt>
@@ -58,10 +58,10 @@ description: "httpd – Apache Hypertext Transfer Protocol Server"
 <dt>-V</dt>
 <dd>Print the version and build parameters of httpd, and then exit.</dd>
 <dt>-X</dt>
-<dd>Run httpd in debug mode. Only one worker will be started and the server will not detach from the console.<br />
+<dd>Run httpd in debug mode. Only one worker will be started and the server will not detach from the console.<br/>
 &nbsp;<wbr></dd></dl>
-<p> The following arguments are available only on the Windows platform:<br />
-&nbsp;<wbr><br />
+<p> The following arguments are available only on the Windows platform:<br/>
+&nbsp;<wbr><br/>
 &nbsp;<wbr></p>
 <dl>
 <dt>-k install|config|uninstall</dt>
@@ -69,6 +69,6 @@ description: "httpd – Apache Hypertext Transfer Protocol Server"
 <dt>-n <i>name</i></dt>
 <dd>The <i>name</i> of the Apache httpd service to signal.</dd>
 <dt>-w</dt>
-<dd>Keep the console window open on error so that the error message can be read.<br />
+<dd>Keep the console window open on error so that the error message can be read.<br/>
 &nbsp;<wbr> </dd>
 </dl>

@@ -39,8 +39,8 @@ description: "gtk-gnutella – A Gnutella client for Gtk+"
 <dd> Show a summary of all supported options.</dd>
 <dt><code>&#8211;log-stderr, &#8211;log-stdout</code></dt>
 <dd> These options allow you to log everything which is written to stderr respectively stdout to some files. A typical use would look like this: </dd>
-<p>gtk-gnutella &#8211;daemonize&nbsp;<wbr>&nbsp;<wbr>\<br />
-&nbsp;<wbr>&nbsp;<wbr>&#8211;log-stderr&nbsp;<wbr>~/logs/gtkg.stderr&nbsp;<wbr>\<br />
+<p>gtk-gnutella &#8211;daemonize&nbsp;<wbr>&nbsp;<wbr>\<br/>
+&nbsp;<wbr>&nbsp;<wbr>&#8211;log-stderr&nbsp;<wbr>~/logs/gtkg.stderr&nbsp;<wbr>\<br/>
 &nbsp;<wbr>&nbsp;<wbr>&#8211;log-stdout&nbsp;<wbr>~/logs/gtkg.stdout </p>
 <p> Redirecting these log messages also works without <code>&#8211;daemonize.</code> Of course, log files can become large and you might want to archive them or delete them periodically. After moving or deleting the log files, you can send <i>gtk-gnutella</i> a SIGHUP signal to create new log files.</p>
 <dt><code>&#8211;log-supervise</code></dt>
@@ -157,7 +157,7 @@ description: "gtk-gnutella – A Gnutella client for Gtk+"
 <p> Additional information about gnutella is available at <code><a rel="nofollow" href="http://www.the\-gdf.org/">http://www.the\-gdf.org/</a></code> <code><a rel="nofollow" href="http://www.infoanarchy.org/en/Gnutella">http://www.infoanarchy.org/en/Gnutella</a></code> <code><a rel="nofollow" href="http://rfc\-gnutella.sourceforge.net/">http://rfc\-gnutella.sourceforge.net/</a></code></p>
 <h2>AUTHORS</h2>
 <p> Yann Grossel wrote the original <code>gtk-gnutella</code> which was running as a Gnutella 0.4 client in 2000. </p>
-<p> Raphael Manfredi &lt;Raphael_Manfredi [at] pobox.com&gt; is the current maintainer and project leader (since version 0.14, released early September 2001).<br />
+<p> Raphael Manfredi &lt;Raphael_Manfredi [at] pobox.com&gt; is the current maintainer and project leader (since version 0.14, released early September 2001).<br/>
  For support, please contact the developer list, which can be reached at &lt;gtk-gnutella-devel [at] lists.sourceforge.net&gt;. </p>
 <p> For a full list of contributors, open the &quot;About&quot; menu. </p>
 <p> Brian St. Pierre &lt;bstpierre [at] bstpierre.org&gt; wrote the initial version of this manpage.</p>

@@ -10,10 +10,10 @@ description: "arm4_daemon – ARM 4 collection agent"
 
 <p> arm4_daemon &#8211; ARM 4 collection agent</p>
 <h2>SYNOPSIS</h2>
-<p> <code>arm4_daemon</code> <i>&#8211;help|-h</i><br />
- <code>arm4_daemon</code> <i>&#8211;version|-V</i><br />
- <code>arm4_daemon</code> [<i>&#8211;verbose|-v</i>] [<i>&#8211;debug|-d</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<i>&#8211;config|-C config_file</i>]<br />
+<p> <code>arm4_daemon</code> <i>&#8211;help|-h</i><br/>
+ <code>arm4_daemon</code> <i>&#8211;version|-V</i><br/>
+ <code>arm4_daemon</code> [<i>&#8211;verbose|-v</i>] [<i>&#8211;debug|-d</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<i>&#8211;config|-C config_file</i>]<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<i>&#8211;stats|-s</i>]&nbsp;<wbr>[<i>&#8211;off|-o</i>]</p>
 <h2>DESCRIPTION</h2>
 <p> The <code>arm4_daemon</code> program collects <i>ARM 4</i> measurement data from the <i>ARM 4</i> libraries and saves the measurements in a local database. While there will normally be many instances of the instrumented applications, there will typically be only one instance of the <code>arm4_daemon</code> running at a time.</p>

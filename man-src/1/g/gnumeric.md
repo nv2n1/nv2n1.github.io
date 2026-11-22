@@ -106,10 +106,10 @@ description: "gnumeric – a GNOME spreadsheet application."
 <p> The copyright on the <code>gnumeric</code> software and source code is held by the individual authors as is documented in the source code. </p>
 <h2>AUTHORS</h2>
 <h3>Gnumeric</h3>
-<p> Jody Goldberg &lt;jody [at] gnome.org&gt;<br />
- Miguel de Icaza &lt;miguel [at] gnome.org&gt;<br />
+<p> Jody Goldberg &lt;jody [at] gnome.org&gt;<br/>
+ Miguel de Icaza &lt;miguel [at] gnome.org&gt;<br/>
  Morten Welinder &lt;terra [at] gnome.org&gt; </p>
 <p> &#8212; and many others. For a more complete list, see the About dialog.</p>
 <h3>This manual page</h3>
-<p> Jan Schaumann &lt;jschauma [at] netmeister.org&gt;<br />
+<p> Jan Schaumann &lt;jschauma [at] netmeister.org&gt;<br/>
  Adrian Custer &lt;acuster [at] gnome.org&gt; </p>

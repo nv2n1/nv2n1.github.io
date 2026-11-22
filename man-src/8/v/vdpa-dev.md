@@ -17,9 +17,9 @@ dev
 OPTIONS := {
     -V[ersion]
 }</code></pre>
-<p> <code>vdpa dev show</code> [ <i>DEV</i> ]<br />
- <code>vdpa dev help</code><br />
- <code>vdpa dev add</code> <code>name</code> <i>NAME</i> <code>mgmtdev</code> <i>MGMTDEV</i><br />
+<p> <code>vdpa dev show</code> [ <i>DEV</i> ]<br/>
+ <code>vdpa dev help</code><br/>
+ <code>vdpa dev add</code> <code>name</code> <i>NAME</i> <code>mgmtdev</code> <i>MGMTDEV</i><br/>
  <code>vdpa dev del</code> <i>DEV</i> </p>
 <h2>Description</h2>
 <h3>vdpa dev show &#8211; display vdpa device attributes</h3>

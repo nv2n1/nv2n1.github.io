@@ -19,10 +19,10 @@ description: "mysql – the MySQL command-line client"
 <p> If you have problems due to insufficient memory for large result sets, use the <code>--quick</code> option. This forces <code>mysql</code> to retrieve results from the server a row at a time rather than retrieving the entire result set and buffering it in memory before displaying it. This is done by returning the result set using the mysql_use_result() C API function in the client/server library rather than mysql_store_result(). </p>
  </dd>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Note</code> </font> <br />
+<dd> <p> <br/>
+  <code>Note</code>  <br/>
  </p>
-<p> Alternatively, MySQL Shell offers access to the X DevAPI. For details, see m[blue]<code>MySQL Shell 8.0 (part of MySQL 8.0)</code>m[]<font SIZE="-2">[1]</font>. </p>
+<p> Alternatively, MySQL Shell offers access to the X DevAPI. For details, see m[blue]<code>MySQL Shell 8.0 (part of MySQL 8.0)</code>m[][1]. </p>
  </dd></dl>
 <p> Using <code>mysql</code> is very easy. Invoke it from the prompt of your command interpreter as follows: </p>
 <dl>
@@ -54,8 +54,8 @@ description: "mysql – the MySQL command-line client"
 <p> To complete a name, enter the first part and press Tab. If the name is unambiguous, <code>mysql</code> completes it. Otherwise, you can press Tab again to see the possible names that begin with what you have typed so far. Completion does not occur if there is no default database. </p>
  </dd>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Note</code> </font> <br />
+<dd> <p> <br/>
+  <code>Note</code>  <br/>
  This feature requires a MySQL client that is compiled with the <code>readline</code> library. Typically, the <code>readline</code> library is not available on Windows. </p>
  </dd></dl>
 </dl>
@@ -104,8 +104,8 @@ description: "mysql – the MySQL command-line client"
 <p> Whether to strip or preserve comments in statements sent to the server. The default is <code>--skip-comments</code> (strip comments), enable with <code>--comments</code> (preserve comments). </p>
  </dd>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Note</code> </font> <br />
+<dd> <p> <br/>
+  <code>Note</code>  <br/>
  The <code>mysql</code> client always passes optimizer hints to the server, regardless of whether this option is given. </p>
 <p> Comment stripping is deprecated. This feature and the options to control it will be removed in a future MySQL release. </p>
  </dd></dl>
@@ -414,8 +414,8 @@ CHAR(92)
 <dd> <p> &bull; STRICT: Enable "strict" FIPS mode. </p>
  </dd></dl>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Note</code> </font> <br />
+<dd> <p> <br/>
+  <code>Note</code>  <br/>
  If the OpenSSL FIPS Object Module is not available, the only permitted value for <code>--ssl-fips-mode</code> is OFF. In this case, setting <code>--ssl-fips-mode</code> to ON or STRICT causes the client to produce a warning at startup and to operate in non-FIPS mode. </p>
  </dd></dl>
 </dl>
@@ -2872,7 +2872,7 @@ mysql&gt; SELECT * FROM t; +------+
 <p> If it is desirable for <code>mysql</code> not to interpret short-form commands within comments, a partial workaround is to use the <code>--binary-mode</code> option, which causes all <code>mysql</code> commands to be disabled except \C and \d in noninteractive mode (for input piped to <code>mysql</code> or loaded using the source command). </p>
  </dd></dl>
 <h2>COPYRIGHT</h2>
-<p> <br />
+<p> <br/>
  </p>
 <p> Copyright &#169; 1997, 2020, Oracle and/or its affiliates. All rights reserved. </p>
 <p> This documentation is free software; you can redistribute it and/or modify it only under the terms of the GNU General Public License as published by the Free Software Foundation; version 2 of the License. </p>

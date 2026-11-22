@@ -9,7 +9,7 @@ description: "std::experimental::latch::is_ready – std::experimental::latch::i
 
 <p>std::experimental::latch::is_ready &#8211; std::experimental::latch::is_ready</p>
 <h2>Synopsis</h2>
-<p>bool is_ready() const noexcept; <code>(1)</code> (concurrency TS)<br />
+<p>bool is_ready() const noexcept; <code>(1)</code> (concurrency TS)<br/>
 Returns true if the internal counter equals zero. </p>
 <h2>Parameters</h2>
 <p><i>(none)</i></p>

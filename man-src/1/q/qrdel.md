@@ -16,7 +16,7 @@ description: "qrdel – delete xxQS_NAMExx Advance Reservations (AR)"
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-f</code></dt>
-<dd> Force action. The AR and the jobs using the AR are deleted from the xxQS_NAMExx queuing system even if the controlling the AR jobs does not respond to the delete request sent by the<br />
+<dd> Force action. The AR and the jobs using the AR are deleted from the xxQS_NAMExx queuing system even if the controlling the AR jobs does not respond to the delete request sent by the<br/>
  Users who have with neither xxQS_NAMExx manager nor operator status can only use the <code>-f</code> option for their own ARs.</dd>
 <dt><code>-help</code></dt>
 <dd> Prints a list of all options.</dd>

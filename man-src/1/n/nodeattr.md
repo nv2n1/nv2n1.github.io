@@ -10,15 +10,15 @@ description: "nodeattr – query genders file"
 
 <p> nodeattr &#8211; query genders file</p>
 <h2>SYNOPSIS</h2>
-<p> <code>nodeattr</code> <i>[-f genders] [-q | -c | -n | -s] [-X exclude_query] query</i><br />
- <code>nodeattr</code> <i>[-f genders] [-q | -c | -n | -s] -A</i><br />
- <code>nodeattr</code> <i>[-f genders] [-v] [node] attr[=val]</i><br />
- <code>nodeattr</code> <i>[-f genders] -Q [node] query</i><br />
- <code>nodeattr</code> <i>[-f genders] -V [-U] attr</i><br />
- <code>nodeattr</code> <i>[-f genders] -l [node]</i><br />
- <code>nodeattr</code> <i>[-f genders] -k</i><br />
- <code>nodeattr</code> <i>[-f genders] -d genders</i><br />
- <code>nodeattr</code> <i>[-f genders] &#8211;expand</i><br />
+<p> <code>nodeattr</code> <i>[-f genders] [-q | -c | -n | -s] [-X exclude_query] query</i><br/>
+ <code>nodeattr</code> <i>[-f genders] [-q | -c | -n | -s] -A</i><br/>
+ <code>nodeattr</code> <i>[-f genders] [-v] [node] attr[=val]</i><br/>
+ <code>nodeattr</code> <i>[-f genders] -Q [node] query</i><br/>
+ <code>nodeattr</code> <i>[-f genders] -V [-U] attr</i><br/>
+ <code>nodeattr</code> <i>[-f genders] -l [node]</i><br/>
+ <code>nodeattr</code> <i>[-f genders] -k</i><br/>
+ <code>nodeattr</code> <i>[-f genders] -d genders</i><br/>
+ <code>nodeattr</code> <i>[-f genders] &#8211;expand</i><br/>
  <code>nodeattr</code> <i>[-f genders] &#8211;compress</i> </p>
 <h2>DESCRIPTION</h2>
 <p> When invoked with the <i>-q</i> , <i>-c</i> , <i>-n</i> , or <i>-s</i> arguments, <code>nodeattr</code> reads the genders file and outputs a list of nodes that match the specified query. The nodes are listed in hostlist format, comma separated lists, newline separated lists, or space separated lists respectively. Genders queries will query the genders database for a set of nodes based on the union, intersection, difference, or complement of genders attributes and values. The set operation union is represented by two pipe symbols (&#8216;||&#8217;), intersection by two ampersand symbols (&#8216;&amp;&amp;&#8217;), difference by two minus symbols (&#8216;&#8211;&#8216;), and complement by a tilde (&#8216;~&#8217;). Parentheses may be used to change the order of operations. The <i>-X</i> argument and query can be used to exclude nodes from the resulting output. A query can be replaced with the <i>-A</i> option to cause <code>nodeattr</code> to print all the nodes listed in the genders database. </p>

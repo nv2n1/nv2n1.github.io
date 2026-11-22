@@ -147,10 +147,10 @@ token: value
 <dl>
 <dt>
 </dt><dd>
-$ git config trailer.sign.key &#8220;Signed-off-by&#8221; $ cat msg.txt<br />
-        subject<br />
-            message<br />
-                $ cat msg.txt |<br />
+$ git config trailer.sign.key &#8220;Signed-off-by&#8221; $ cat msg.txt<br/>
+        subject<br/>
+            message<br/>
+                $ cat msg.txt |<br/>
     git interpret &#8211; trailers&#8211; trailer &#8216;sign: Alice &lt;alice [at] example.com&gt;&#8217; &#8211;trailer &#8216;sign: Bob &lt;bob [at] example.com&gt;&#8217; subject message Signed &#8211; off &#8211; by : Alice&lt;alice[at] example.com&gt; Signed &#8211; off &#8211; by : Bob&lt;bob[at] example.com&gt;
 </dd></dl>
 </dl>
@@ -160,10 +160,10 @@ $ git config trailer.sign.key &#8220;Signed-off-by&#8221; $ cat msg.txt<br />
 <dl>
 <dt>
 </dt><dd>
-$ cat msg.txt<br />
-        subject<br />
-            message<br />
-                Signed &#8211;<br />
+$ cat msg.txt<br/>
+        subject<br/>
+            message<br/>
+                Signed &#8211;<br/>
     off &#8211; by : Bob&lt;bob[at] example.com&gt; $ git interpret &#8211; trailers&#8211; trailer &#8216;Acked-by: Alice &lt;alice [at] example.com&gt;&#8217; &#8211;in &#8211; place msg.txt $ cat msg.txt subject message Signed &#8211; off &#8211; by : Bob&lt;bob[at] example.com&gt; Acked &#8211; by : Alice&lt;alice[at] example.com&gt;
 </dd></dl>
 </dl>
@@ -182,17 +182,17 @@ $ git format &#8211; patch &#8211; 1 0001 &#8211; foo.patch $ git interpret &#82
 <dl>
 <dt>
 </dt><dd>
-$ git config trailer.sign.key &#8220;Signed-off-by: &#8221; $ git config trailer.sign.ifmissing add<br />
-                $ git config trailer.sign.ifexists doNothing<br />
-                    $ git config trailer.sign.command &#8216;echo &#8220;$(git config user.name) &lt;$(git config user.email)&gt;&#8221;&#8216; $ git interpret &#8211;<br />
-            trailers<br />
-        &lt;&lt; EOF &gt;<br />
-    EOF<br />
-                Signed &#8211;<br />
-            off &#8211; by : Bob&lt;bob[at] example.com&gt; $ git interpret &#8211; trailers<br />
-        &lt;&lt; EOF &gt;<br />
-    Signed &#8211; off &#8211; by : Alice&lt;alice[at] example.com&gt; &gt; EOF<br />
-                                                               Signed &#8211;<br />
+$ git config trailer.sign.key &#8220;Signed-off-by: &#8221; $ git config trailer.sign.ifmissing add<br/>
+                $ git config trailer.sign.ifexists doNothing<br/>
+                    $ git config trailer.sign.command &#8216;echo &#8220;$(git config user.name) &lt;$(git config user.email)&gt;&#8221;&#8216; $ git interpret &#8211;<br/>
+            trailers<br/>
+        &lt;&lt; EOF &gt;<br/>
+    EOF<br/>
+                Signed &#8211;<br/>
+            off &#8211; by : Bob&lt;bob[at] example.com&gt; $ git interpret &#8211; trailers<br/>
+        &lt;&lt; EOF &gt;<br/>
+    Signed &#8211; off &#8211; by : Alice&lt;alice[at] example.com&gt; &gt; EOF<br/>
+                                                               Signed &#8211;<br/>
                                                            off &#8211; by : Alice&lt;alice[at] example.com&gt;
 </dd></dl>
 </dl>
@@ -217,15 +217,15 @@ Fix #42
 <dl>
 <dt>
 </dt><dd>
-$ cat ~ / bin / glog &#8211; find &#8211; author<br />
-#!/ bin / sh<br />
-                                  test &#8211;<br />
-    n &#8220;$1&#8221; &amp;&amp;git log&#8211; author = &#8220;$1&#8221; &#8211;pretty = &#8220;%an &lt;%ae&gt;&#8221; &#8211; 1 || true $ git config trailer.help.key &#8220;Helped-by: &#8221; $ git config trailer.help.ifExists &#8220;addIfDifferentNeighbor&#8221; $ git config trailer.help.cmd &#8220;~/bin/glog-find-author&#8221; $ git interpret &#8211; trailers&#8211; trailer = &#8220;help:Junio&#8221; &#8211;trailer = &#8220;help:Couder&#8221; &lt;&lt; EOF &gt; subject &gt;&gt; message &gt;&gt; EOF<br />
-                                                                                                                                                                                                                                                                                                                                                            subject<br />
-                                                                                                                                                                                                                                                                                                                                                                message<br />
-                                                                                                                                                                                                                                                                                                                                                                    Helped &#8211;<br />
-                                                                                                                                                                                                                                                                                                                                                        by : Junio C Hamano&lt;gitster[at] pobox.com&gt;<br />
-                                                                                                                                                                                                                                                                                                                                                                 Helped &#8211;<br />
+$ cat ~ / bin / glog &#8211; find &#8211; author<br/>
+#!/ bin / sh<br/>
+                                  test &#8211;<br/>
+    n &#8220;$1&#8221; &amp;&amp;git log&#8211; author = &#8220;$1&#8221; &#8211;pretty = &#8220;%an &lt;%ae&gt;&#8221; &#8211; 1 || true $ git config trailer.help.key &#8220;Helped-by: &#8221; $ git config trailer.help.ifExists &#8220;addIfDifferentNeighbor&#8221; $ git config trailer.help.cmd &#8220;~/bin/glog-find-author&#8221; $ git interpret &#8211; trailers&#8211; trailer = &#8220;help:Junio&#8221; &#8211;trailer = &#8220;help:Couder&#8221; &lt;&lt; EOF &gt; subject &gt;&gt; message &gt;&gt; EOF<br/>
+                                                                                                                                                                                                                                                                                                                                                            subject<br/>
+                                                                                                                                                                                                                                                                                                                                                                message<br/>
+                                                                                                                                                                                                                                                                                                                                                                    Helped &#8211;<br/>
+                                                                                                                                                                                                                                                                                                                                                        by : Junio C Hamano&lt;gitster[at] pobox.com&gt;<br/>
+                                                                                                                                                                                                                                                                                                                                                                 Helped &#8211;<br/>
                                                                                                                                                                                                                                                                                                                                                              by : Christian Couder&lt;christian.couder[at] gmail.com&gt;
 </dd></dl>
 </dl>
@@ -235,13 +235,13 @@ $ cat ~ / bin / glog &#8211; find &#8211; author<br />
 <dl>
 <dt>
 </dt><dd>
-$ cat ~ / bin / glog &#8211; grep<br />
-#!/ bin / sh<br />
-                           test &#8211;<br />
-    n &#8220;$1&#8221; &amp;&amp;git log&#8211; grep &#8220;$1&#8221; &#8211;pretty = reference &#8211; 1 || true $ git config trailer.ref.key &#8220;Reference-to: &#8221; $ git config trailer.ref.ifExists &#8220;replace&#8221; $ git config trailer.ref.cmd &#8220;~/bin/glog-grep&#8221; $ git interpret &#8211; trailers&#8211; trailer = &#8220;ref:Add copyright notices.&#8221; &lt;&lt; EOF &gt; subject &gt;&gt; message &gt;&gt; EOF<br />
-                                                                                                                                                                                                                                                                                                                      subject<br />
-                                                                                                                                                                                                                                                                                                                          message<br />
-                                                                                                                                                                                                                                                                                                                              Reference &#8211;<br />
+$ cat ~ / bin / glog &#8211; grep<br/>
+#!/ bin / sh<br/>
+                           test &#8211;<br/>
+    n &#8220;$1&#8221; &amp;&amp;git log&#8211; grep &#8220;$1&#8221; &#8211;pretty = reference &#8211; 1 || true $ git config trailer.ref.key &#8220;Reference-to: &#8221; $ git config trailer.ref.ifExists &#8220;replace&#8221; $ git config trailer.ref.cmd &#8220;~/bin/glog-grep&#8221; $ git interpret &#8211; trailers&#8211; trailer = &#8220;ref:Add copyright notices.&#8221; &lt;&lt; EOF &gt; subject &gt;&gt; message &gt;&gt; EOF<br/>
+                                                                                                                                                                                                                                                                                                                      subject<br/>
+                                                                                                                                                                                                                                                                                                                          message<br/>
+                                                                                                                                                                                                                                                                                                                              Reference &#8211;<br/>
                                                                                                                                                                                                                                                                                                                   to : 8bc9a0c769(Add copyright notices., 2005 &#8211; 04 &#8211; 07)
 </dd></dl>
 </dl>

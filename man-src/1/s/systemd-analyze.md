@@ -327,15 +327,15 @@ NAutoVTs=8
 <dl>
 <dt>
 </dt><dd>
-$ cat./ user.slice<br />
-            [Unit] WhatIsThis = 11 Documentation = man : nosuchfile(1)<br />
-                                                             Requires = different.service<br />
-                                                                            [Service] Description = x<br />
-                                                                                                            $ systemd &#8211;<br />
-                                                                                                        analyze verify./ user.slice<br />
-                                                                                                                         [./ user.slice:9] Unknown lvalue &#8216;WhatIsThis&#8217; in section &#8216;Unit&#8217;<br />
-                                                                                                                         [./ user.slice:13] Unknown section &#8216;Service&#8217;.Ignoring.Error : org.freedesktop.systemd1.LoadFailed : Unit different.service failed to load : No such file or<br />
-                                                                                                    directory.Failed to create user.slice / start : Invalid argument<br />
+$ cat./ user.slice<br/>
+            [Unit] WhatIsThis = 11 Documentation = man : nosuchfile(1)<br/>
+                                                             Requires = different.service<br/>
+                                                                            [Service] Description = x<br/>
+                                                                                                            $ systemd &#8211;<br/>
+                                                                                                        analyze verify./ user.slice<br/>
+                                                                                                                         [./ user.slice:9] Unknown lvalue &#8216;WhatIsThis&#8217; in section &#8216;Unit&#8217;<br/>
+                                                                                                                         [./ user.slice:13] Unknown section &#8216;Service&#8217;.Ignoring.Error : org.freedesktop.systemd1.LoadFailed : Unit different.service failed to load : No such file or<br/>
+                                                                                                    directory.Failed to create user.slice / start : Invalid argument<br/>
                                                                                                                                                         user.slice : man nosuchfile(1) command failed with code 16
 </dd></dl>
 <p> <code>Example 17. Missing service units</code> </p>

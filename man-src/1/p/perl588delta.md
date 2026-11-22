@@ -125,7 +125,7 @@ description: "perl588delta – what is new for perl v5.8.8"
 <dt>&bull;</dt>
 <dd> <tt>&quot;canonpath()&quot;</tt> on Win32 now collapses <i>foo\..</i> sections correctly.</dd>
 <dt>&bull;</dt>
-<dd> Improved behaviour on Symbian <font SIZE="-1">OS.</font></dd>
+<dd> Improved behaviour on Symbian OS.</dd>
 <dt>&bull;</dt>
 <dd> Enhanced documentation and typo fixes</dd>
 <dt>&bull;</dt>
@@ -160,7 +160,7 @@ description: "perl588delta – what is new for perl v5.8.8"
 <dl>
 <dl>
 <dt>&bull;</dt>
-<dd> Adds support for Berkeley <font SIZE="-1">DB 4.4.</font></dd></dl>
+<dd> Adds support for Berkeley DB 4.4.</dd></dl>
 </dl>
 <dl>
 </dl>
@@ -211,7 +211,7 @@ description: "perl588delta – what is new for perl v5.8.8"
 <dl>
 <dl>
 <dt>&bull;</dt>
-<dd> The constructor now knows which module implements <font SIZE="-1">SHA-224</font></dd>
+<dd> The constructor now knows which module implements SHA-224</dd>
 <dt>&bull;</dt>
 <dd> Documentation tweaks and typo fixes</dd></dl>
 </dl>
@@ -224,7 +224,7 @@ description: "perl588delta – what is new for perl v5.8.8"
 <dt>&bull;</dt>
 <dd> <tt>&quot;XSLoader&quot;</tt> is now used for faster loading</dd>
 <dt>&bull;</dt>
-<dd> Enhanced documentation including <font SIZE="-1">MD5</font> weaknesses discovered lately</dd></dl>
+<dd> Enhanced documentation including MD5 weaknesses discovered lately</dd></dl>
 </dl>
 <dl>
 </dl>
@@ -257,7 +257,7 @@ description: "perl588delta – what is new for perl v5.8.8"
 <dt>&bull;</dt>
 <dd> A coderef is now acceptable for <tt>&quot;CHECK&quot;</tt>!</dd>
 <dt>&bull;</dt>
-<dd> 3 new characters added to the <font SIZE="-1">ISO-8859-7</font> encoding</dd>
+<dd> 3 new characters added to the ISO-8859-7 encoding</dd>
 <dt>&bull;</dt>
 <dd> New encoding <tt>&quot;MIME-Header-ISO_2022_JP&quot;</tt> added</dd>
 <dt>&bull;</dt>
@@ -373,7 +373,7 @@ description: "perl588delta – what is new for perl v5.8.8"
 <dl>
 <dl>
 <dt>&bull;</dt>
-<dd> <font SIZE="-1">POD</font> formatting errors in the documentation fixed</dd></dl>
+<dd> POD formatting errors in the documentation fixed</dd></dl>
 </dl>
 <dl>
 </dl>
@@ -586,7 +586,7 @@ description: "perl588delta – what is new for perl v5.8.8"
 <dl>
 <dl>
 <dt>&bull;</dt>
-<dd> <font SIZE="-1">HTML</font> output will now correctly link to <tt>&quot;=item&quot;</tt>s on the same page, and should be valid <font SIZE="-1">XHTML.</font></dd>
+<dd> HTML output will now correctly link to <tt>&quot;=item&quot;</tt>s on the same page, and should be valid XHTML.</dd>
 <dt>&bull;</dt>
 <dd> Variable names are recognized as intended</dd>
 <dt>&bull;</dt>
@@ -607,7 +607,7 @@ description: "perl588delta – what is new for perl v5.8.8"
 <dt>&bull;</dt>
 <dd> New <tt>&quot;-noperldoc&quot;</tt> switch for <tt>&quot;pod2usage&quot;</tt></dd>
 <dt>&bull;</dt>
-<dd> Arbitrary <font SIZE="-1">URL</font> schemes now allowed</dd>
+<dd> Arbitrary URL schemes now allowed</dd>
 <dt>&bull;</dt>
 <dd> Documentation typos fixed</dd></dl>
 </dl>
@@ -785,7 +785,7 @@ description: "perl588delta – what is new for perl v5.8.8"
 <dt>&bull;</dt>
 <dd> Documentation changes only</dd>
 <dt>&bull;</dt>
-<dd> Note: An improved implementation of <tt>&quot;threads::shared&quot;</tt> is available on <font SIZE="-1">CPAN</font> &#8211; this will be merged into 5.8.9 if it proves stable.</dd></dl>
+<dd> Note: An improved implementation of <tt>&quot;threads::shared&quot;</tt> is available on CPAN &#8211; this will be merged into 5.8.9 if it proves stable.</dd></dl>
 </dl>
 <dl>
 </dl>
@@ -805,7 +805,7 @@ description: "perl588delta – what is new for perl v5.8.8"
 <dt>&bull;</dt>
 <dd> <tt>&quot;clock_nanosleep()&quot;</tt> and <tt>&quot;clock()&quot;</tt> functions added</dd>
 <dt>&bull;</dt>
-<dd> Support for the <font SIZE="-1">POSIX</font> <tt>&quot;clock_gettime()&quot;</tt> and <tt>&quot;clock_getres()&quot;</tt> has been added</dd>
+<dd> Support for the POSIX <tt>&quot;clock_gettime()&quot;</tt> and <tt>&quot;clock_getres()&quot;</tt> has been added</dd>
 <dt>&bull;</dt>
 <dd> Return <tt>&quot;undef&quot;</tt> or an empty list if the C <tt>&quot;gettimeofday()&quot;</tt> function fails</dd>
 <dt>&bull;</dt>
@@ -822,7 +822,7 @@ description: "perl588delta – what is new for perl v5.8.8"
 <dl>
 <dl>
 <dt>&bull;</dt>
-<dd> Now implements <font SIZE="-1">UCA</font> Revision 14 (based on Unicode 4.1.0).</dd>
+<dd> Now implements UCA Revision 14 (based on Unicode 4.1.0).</dd>
 <dt>&bull;</dt>
 <dd> <tt>&quot;Unicode::Collate-&gt;new&quot;</tt> method no longer overwrites user&#8217;s <tt>$_</tt></dd>
 <dt>&bull;</dt>
@@ -921,8 +921,8 @@ description: "perl588delta – what is new for perl v5.8.8"
 <p> Parallel makes should work properly now, although there may still be problems if <tt>&quot;make test&quot;</tt> is instructed to run in parallel. </p>
 <p> Building with Borland&#8217;s compilers on Win32 should work more smoothly. In particular Steve Hay has worked to side step many warnings emitted by their compilers and at least one C compiler internal error. </p>
 <p> <tt>&quot;Configure&quot;</tt> will now detect <tt>&quot;clearenv&quot;</tt> and <tt>&quot;unsetenv&quot;</tt>, thanks to a patch from Alan Burlison. It will also probe for <tt>&quot;futimes&quot;</tt> and whether <tt>&quot;sprintf&quot;</tt> correctly returns the length of the formatted string, which will both be used in perl 5.8.9. </p>
-<p> There are improved hints for next-3.0, vmesa, <font SIZE="-1">IX,</font> Darwin, Solaris, Linux, <font SIZE="-1">DEC/OSF,</font> HP-UX and MPE/iX </p>
-<p> Perl extensions on Windows now can be statically built into the Perl <font SIZE="-1">DLL,</font> thanks to a work by Vadim Konovalov. (This improvement was actually in 5.8.7, but was accidentally omitted from perl587delta).</p>
+<p> There are improved hints for next-3.0, vmesa, IX, Darwin, Solaris, Linux, DEC/OSF, HP-UX and MPE/iX </p>
+<p> Perl extensions on Windows now can be statically built into the Perl DLL, thanks to a work by Vadim Konovalov. (This improvement was actually in 5.8.7, but was accidentally omitted from perl587delta).</p>
 <h2>Selected Bug Fixes</h2>
 <h3>no warnings &#8216;category&#8217; works correctly with -w</h3>
 <p> Previously when running with warnings enabled globally via <tt>&quot;-w&quot;</tt>, selective disabling of specific warning categories would actually turn off all warnings. This is now fixed; now <tt>&quot;no warnings 'io';&quot;</tt> will only turn off warnings in the <tt>&quot;io&quot;</tt> class. Previously it would erroneously turn off all warnings. </p>
@@ -939,7 +939,7 @@ description: "perl588delta – what is new for perl v5.8.8"
 <dt>&bull;</dt>
 <dd> <tt>&quot;FindBin&quot;</tt> now works better with directories where access rights are more restrictive than usual.</dd>
 <dt>&bull;</dt>
-<dd> Several memory leaks in ithreads were closed. An improved implementation of <tt>&quot;threads::shared&quot;</tt> is available on <font SIZE="-1">CPAN</font> &#8211; this will be merged into 5.8.9 if it proves stable.</dd>
+<dd> Several memory leaks in ithreads were closed. An improved implementation of <tt>&quot;threads::shared&quot;</tt> is available on CPAN &#8211; this will be merged into 5.8.9 if it proves stable.</dd>
 <dt>&bull;</dt>
 <dd> Trailing spaces are now trimmed from <tt>$!</tt> and <tt>$^E</tt>.</dd>
 <dt>&bull;</dt>
@@ -953,11 +953,11 @@ description: "perl588delta – what is new for perl v5.8.8"
 <dt>&bull;</dt>
 <dd> The value of the <tt>&quot;open&quot;</tt> pragma is no longer ignored for three-argument opens.</dd>
 <dt>&bull;</dt>
-<dd> The optimisation of <tt>&quot;for (reverse @a)&quot;</tt> introduced in perl 5.8.6 could misbehave when the array had undefined elements and was used in <font SIZE="-1">LVALUE</font> context. Dave Mitchell provided a fix.</dd>
+<dd> The optimisation of <tt>&quot;for (reverse @a)&quot;</tt> introduced in perl 5.8.6 could misbehave when the array had undefined elements and was used in LVALUE context. Dave Mitchell provided a fix.</dd>
 <dt>&bull;</dt>
-<dd> Some case insensitive matches between <font SIZE="-1">UTF-8</font> encoded data and 8 bit regexps, and vice versa, could give malformed character warnings. These have been fixed by Dave Mitchell and Yves Orton.</dd>
+<dd> Some case insensitive matches between UTF-8 encoded data and 8 bit regexps, and vice versa, could give malformed character warnings. These have been fixed by Dave Mitchell and Yves Orton.</dd>
 <dt>&bull;</dt>
-<dd> <tt>&quot;lcfirst&quot;</tt> and <tt>&quot;ucfirst&quot;</tt> could corrupt the string for certain cases where the length <font SIZE="-1">UTF-8</font> encoding of the string in lower case, upper case or title case differed. This was fixed by Nicholas Clark.</dd>
+<dd> <tt>&quot;lcfirst&quot;</tt> and <tt>&quot;ucfirst&quot;</tt> could corrupt the string for certain cases where the length UTF-8 encoding of the string in lower case, upper case or title case differed. This was fixed by Nicholas Clark.</dd>
 <dt>&bull;</dt>
 <dd> Perl will now use the C library calls <tt>&quot;unsetenv&quot;</tt> and <tt>&quot;clearenv&quot;</tt> if present to delete keys from <tt>%ENV</tt> and delete <tt>%ENV</tt> entirely, thanks to a patch from Alan Burlison.</dd></dl>
 <h2>New or Changed Diagnostics</h2>
@@ -986,14 +986,14 @@ vec($rin, fileno(STDIN), 1) = 1;
 <p> This syntax error indicates that the lexer couldn&#8217;t find the final delimiter of a <tt>&quot;?PATTERN?&quot;</tt> construct. Mentioning the ternary operator in this error message makes it easier to diagnose syntax errors.</p>
 <h2>Changed Internals</h2>
 <p> There has been a fair amount of refactoring of the <tt>&quot;C&quot;</tt> source code, partly to make it tidier and more maintainable. The resulting object code and the <tt>&quot;perl&quot;</tt> binary may well be smaller than 5.8.7, in particular due to a change contributed by Dave Mitchell which reworked the warnings code to be significantly smaller. Apart from being smaller and possibly faster, there should be no user-detectable changes. </p>
-<p> Andy Lester supplied many improvements to determine which function parameters and local variables could actually be declared <tt>&quot;const&quot;</tt> to the C compiler. Steve Peters provided new <tt>*_set</tt> macros and reworked the core to use these rather than assigning to macros in <font SIZE="-1">LVALUE</font> context. </p>
+<p> Andy Lester supplied many improvements to determine which function parameters and local variables could actually be declared <tt>&quot;const&quot;</tt> to the C compiler. Steve Peters provided new <tt>*_set</tt> macros and reworked the core to use these rather than assigning to macros in LVALUE context. </p>
 <p> Dave Mitchell improved the lexer debugging output under <tt>&quot;-DT&quot;</tt> </p>
 <p> Nicholas Clark changed the string buffer allocation so that it is now rounded up to the next multiple of 4 (or 8 on platforms with 64 bit pointers). This should reduce the number of calls to <tt>&quot;realloc&quot;</tt> without actually using any extra memory. </p>
 <p> The <tt>&quot;HV&quot;</tt>&#8216;s array of <tt>&quot;HE*&quot;</tt>s is now allocated at the correct (minimal) size, thanks to another change by Nicholas Clark. Compile with <tt>&quot;-DPERL_USE_LARGE_HV_ALLOC&quot;</tt> to use the old, sloppier, default. </p>
-<p> For <font SIZE="-1">XS</font> or embedding debugging purposes, if perl is compiled with <tt>&quot;-DDEBUG_LEAKING_SCALARS_FORK_DUMP&quot;</tt> in addition to <tt>&quot;-DDEBUG_LEAKING_SCALARS&quot;</tt> then a child process is <tt>&quot;fork&quot;</tt>ed just before global destruction, which is used to display the values of any scalars found to have leaked at the end of global destruction. Without this, the scalars have already been freed sufficiently at the point of detection that it is impossible to produce any meaningful dump of their contents. This feature was implemented by the indefatigable Nicholas Clark, based on an idea by Mike Giroux.</p>
+<p> For XS or embedding debugging purposes, if perl is compiled with <tt>&quot;-DDEBUG_LEAKING_SCALARS_FORK_DUMP&quot;</tt> in addition to <tt>&quot;-DDEBUG_LEAKING_SCALARS&quot;</tt> then a child process is <tt>&quot;fork&quot;</tt>ed just before global destruction, which is used to display the values of any scalars found to have leaked at the end of global destruction. Without this, the scalars have already been freed sufficiently at the point of detection that it is impossible to produce any meaningful dump of their contents. This feature was implemented by the indefatigable Nicholas Clark, based on an idea by Mike Giroux.</p>
 <h2>Platform Specific Problems</h2>
-<p> The optimiser on HP-UX 11.23 (Itanium 2) is currently partly disabled (scaled down to +O1) when using <font SIZE="-1">HP</font> C-ANSI-C; the cause of problems at higher optimisation levels is still unclear. </p>
-<p> There are a handful of remaining test failures on <font SIZE="-1">VMS,</font> mostly due to test fixes and minor module tweaks with too many dependencies to integrate into this release from the development stream, where they have all been corrected. The following is a list of expected failures with the patch number of the fix where that is known: </p>
+<p> The optimiser on HP-UX 11.23 (Itanium 2) is currently partly disabled (scaled down to +O1) when using HP C-ANSI-C; the cause of problems at higher optimisation levels is still unclear. </p>
+<p> There are a handful of remaining test failures on VMS, mostly due to test fixes and minor module tweaks with too many dependencies to integrate into this release from the development stream, where they have all been corrected. The following is a list of expected failures with the patch number of the fix where that is known: </p>
 <pre>
     ext/Devel/PPPort/t/ppphtest.t  #26913
     ext/List/Util/t/p_tainted.t    #26912
@@ -1007,6 +1007,6 @@ vec($rin, fileno(STDIN), 1) = 1;
 <p> If you believe you have an unreported bug, please run the <code>perlbug</code> program included with your release. Be sure to trim your bug down to a tiny but sufficient test case. Your bug report, along with the output of <tt>&quot;perl -V&quot;</tt>, will be sent off to perlbug [at] perl.org to be analysed by the Perl porting team. You can browse and search the Perl 5 bugs at <a rel="nofollow" href="http://bugs.perl.org/">http://bugs.perl.org/</a></p>
 <h2>SEE ALSO</h2>
 <p> The <i>Changes</i> file for exhaustive details on what changed. </p>
-<p> The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. </p>
-<p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
+<p> The <i></i><i>INSTALL</i><i></i> file for how to build Perl. </p>
+<p> The <i></i><i>README</i><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information. </p>

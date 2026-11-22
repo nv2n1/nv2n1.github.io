@@ -19,8 +19,8 @@ int PAPI_num_counters( void );</pre>
 <dd>Initializes the library to PAPI_HIGH_LEVEL_INITED if necessary.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>PAPI_EINVAL</i> <code>papi.h</code> is different from the version used to compile the PAPI library.<br />
- <i>PAPI_ENOMEM</i> Insufficient memory to complete the operation.<br />
+<dd><i>PAPI_EINVAL</i> <code>papi.h</code> is different from the version used to compile the PAPI library.<br/>
+ <i>PAPI_ENOMEM</i> Insufficient memory to complete the operation.<br/>
  <i>PAPI_ESYS</i> A system or C library call failed inside PAPI, see the errno variable.</dd></dl>
 <p> <code>Examples:</code></p>
 <dl COMPACT>

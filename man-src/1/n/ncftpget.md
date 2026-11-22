@@ -86,8 +86,8 @@ description: "ncftpget – Internet file transfer program for scripts"
 <dl>
 <dt>
 </dt><dd>
-<p> $ cd /tmp<br />
- $ ncftpget <a href="ftp://ftp.ncftp.com/pub/ncftp/ncftp.tar.Z">ftp://ftp.ncftp.com/pub/ncftp/ncftp.tar.Z</a><br />
+<p> $ cd /tmp<br/>
+ $ ncftpget <a href="ftp://ftp.ncftp.com/pub/ncftp/ncftp.tar.Z">ftp://ftp.ncftp.com/pub/ncftp/ncftp.tar.Z</a><br/>
  $ zcat nc<a href="ftp://ftp.tar.Z">ftp.tar.Z</a> | tar xf &#8211;
 </dd></dl>
 <p> By default the program tries to open the remote host and login anonymously, but you can specify a username and password information. The <code>-u</code> option is used to specify the username to login as, and the <code>-p</code> option is used to specify the password. If you are running the program from the shell, you may omit the <code>-p</code> option and the program will prompt you for the password. </p>
@@ -96,8 +96,8 @@ description: "ncftpget – Internet file transfer program for scripts"
 <dl>
 <dt>
 </dt><dd>
-<p> host sphygmomanometer.nc<a href="ftp://ftp.com">ftp.com</a><br />
- user gleason<br />
+<p> host sphygmomanometer.nc<a href="ftp://ftp.com">ftp.com</a><br/>
+ user gleason<br/>
  pass mypasswd </p>
 </dd></dl>
 <p> Don&#8217;t forget to change the permissions on this file so no one else can read them. </p>
@@ -105,21 +105,21 @@ description: "ncftpget – Internet file transfer program for scripts"
 <dl>
 <dt>
 </dt><dd>
-<p> $ ncftpget -d stdout bowser.nintendo.co.jp . /pub/README<br />
- 220: FTP server ready.<br />
- Connected to bowser.nintendo.co.jp.<br />
- Cmd: USER anonymous<br />
- 331: Guest login ok, send your complete e-mail address as password.<br />
- Cmd: PASS xxxxxxxx<br />
- 230: Welcome!<br />
- Logged in to bowser.nintendo.co.jp as anonymous.<br />
- Cmd: TYPE I<br />
- 200: Type set to I.<br />
- Cmd: PORT 192,168,9,37,6,76<br />
- 200: PORT command successful.<br />
- Cmd: RETR /pub/README<br />
- 550: /pub/README: File in use.<br />
- Cmd: QUIT<br />
+<p> $ ncftpget -d stdout bowser.nintendo.co.jp . /pub/README<br/>
+ 220: FTP server ready.<br/>
+ Connected to bowser.nintendo.co.jp.<br/>
+ Cmd: USER anonymous<br/>
+ 331: Guest login ok, send your complete e-mail address as password.<br/>
+ Cmd: PASS xxxxxxxx<br/>
+ 230: Welcome!<br/>
+ Logged in to bowser.nintendo.co.jp as anonymous.<br/>
+ Cmd: TYPE I<br/>
+ 200: Type set to I.<br/>
+ Cmd: PORT 192,168,9,37,6,76<br/>
+ 200: PORT command successful.<br/>
+ Cmd: RETR /pub/README<br/>
+ 550: /pub/README: File in use.<br/>
+ Cmd: QUIT<br/>
  221: Goodbye.
 </dd></dl>
 <p> Using ASCII mode is helpful when the text format of your host differs from that of the remote host. For example, if you are retrieving a .TXT file from a Windows-based host to a UNIX system, you could use the <code>-a</code> flag which would use ASCII transfer mode so that the file created on the UNIX system would be in the UNIX text format instead of the MS-DOS text format. </p>

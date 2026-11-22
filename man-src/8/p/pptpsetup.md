@@ -17,23 +17,23 @@ pptpsetup - Point-to-Point Tunneling Protocol setup
 
 <h2>Description</h2>
 
-<font SIZE="-1">PPTP</font> Client is a Linux, FreeBSD, NetBSD and OpenBSD client for the proprietary Microsoft Point-to-Point Tunneling Protocol, <font SIZE="-1">PPTP.</font> 
+PPTP Client is a Linux, FreeBSD, NetBSD and OpenBSD client for the proprietary Microsoft Point-to-Point Tunneling Protocol, PPTP. 
 
- This script configures <font SIZE="-1">PPTP</font> Client on Linux.
+ This script configures PPTP Client on Linux.
 
 <h2>Options</h2>
 
-<dl><dt>--create <font SIZE="-1">TUNNEL</font>
-</dt><dd>create a tunnel named <font SIZE="-1">TUNNEL</font>
-</dd><dt>--delete <font SIZE="-1">TUNNEL</font>
-</dt><dd>delete the file /etc/ppp/peers/TUNNEL and any lines from /etc/ppp/chap-secrets that contains ``<font SIZE="-1">TUNNEL''</font> as a single word
-</dd><dt>--server <font SIZE="-1">SERVER</font>
-</dt><dd>the <font SIZE="-1">IP</font> address or host name of the server
-</dd><dt>--domain <font SIZE="-1">DOMAIN</font>
+<dl><dt>--create TUNNEL
+</dt><dd>create a tunnel named TUNNEL
+</dd><dt>--delete TUNNEL
+</dt><dd>delete the file /etc/ppp/peers/TUNNEL and any lines from /etc/ppp/chap-secrets that contains ``TUNNEL'' as a single word
+</dd><dt>--server SERVER
+</dt><dd>the IP address or host name of the server
+</dd><dt>--domain DOMAIN
 </dt><dd>the authentication domain name (optional)
-</dd><dt>--username <font SIZE="-1">USERNAME</font>
+</dd><dt>--username USERNAME
 </dt><dd>the username you are to use
-</dd><dt>--password <font SIZE="-1">PASSWORD</font>
+</dd><dt>--password PASSWORD
 </dt><dd>the password you are to use. If you don't specify a password, pptpsetup will ask for one.
 </dd><dt>--encrypt
 </dt><dd>whether encryption is required
@@ -42,13 +42,13 @@ pptpsetup - Point-to-Point Tunneling Protocol setup
 
 <h2>Author</h2>
 
-Nelson Ferraz &lt;nferraz at gmail.com&gt;, based on James Cameron's <font SIZE="-1">PPTP</font> Client Debian <font SIZE="-1">HOWTO.</font>
+Nelson Ferraz &lt;nferraz at gmail.com&gt;, based on James Cameron's PPTP Client Debian HOWTO.
 
 <h2>See Also</h2>
 
-<dl><dt><font SIZE="-1">PPTP</font> Client Debian <font SIZE="-1">HOWTO</font>
+<dl><dt>PPTP Client Debian HOWTO
 </dt><dd><a rel="nofollow" HREF="http://pptpclient.sourceforge.net/howto-debian.phtml">http://pptpclient.sourceforge.net/howto-debian.phtml</a>
-</dd><dt><font SIZE="-1">PPTP</font> Client Diagnosis <font SIZE="-1">HOWTO</font>
+</dd><dt>PPTP Client Diagnosis HOWTO
 </dt><dd><a rel="nofollow" HREF="http://pptpclient.sourceforge.net/howto-diagnosis.phtml">http://pptpclient.sourceforge.net/howto-diagnosis.phtml</a></dd></dl>
 
 <h2>Copyright</h2>
@@ -57,8 +57,8 @@ pptpsetup - Point-to-Point Tunneling Protocol setup
 
  Copyright (C) 2006 Nelson Ferraz 
 
- This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. 
+ This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. 
 
- This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE.</font> See the <font SIZE="-1">GNU</font> General Public License for more details. 
+ This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. 
 
- You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, <font SIZE="-1">MA</font> 02110-1301 <font SIZE="-1">USA</font>
+ You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA

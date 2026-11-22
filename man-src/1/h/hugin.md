@@ -12,8 +12,8 @@ description: "hugin – Hugin panorama creator"
 <h2>SYNOPSIS</h2>
 <p> <code>hugin</code> <i>project_file|image files &#8230;</i></p>
 <h2>DESCRIPTION</h2>
-<p> Hugin is a <font SIZE="-1">GUI</font> tool for panorama creation. </p>
-<p> This man page is a stub, complete documentation of the <font SIZE="-1">GUI</font> can be found in the online manual available in the Help menu. Moreover there are related <font SIZE="-1">CLI</font> tools listed below in the <font SIZE="-1">SEE ALSO</font> section.</p>
+<p> Hugin is a GUI tool for panorama creation. </p>
+<p> This man page is a stub, complete documentation of the GUI can be found in the online manual available in the Help menu. Moreover there are related CLI tools listed below in the SEE ALSO section.</p>
 <h2>OPTIONS</h2>
 <p> Hugin has no command-line options.</p>
 <h2>SEE ALSO</h2>

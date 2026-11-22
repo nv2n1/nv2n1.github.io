@@ -14,7 +14,7 @@ description: "mysql_plugin – configure MySQL server plugins"
 <dt> <code>mysql_plugin [</code><i>options</i><code>] </code><i>plugin</i><code> {ENABLE|DISABLE}</code></dt></dl>
 <h2>DESCRIPTION</h2>
 <dl>
-<dd> <font SIZE="+1"> <code>Note</code> </font></dd>
+<dd>  <code>Note</code> </dd>
 <dd>
 <p> <code>mysql_plugin</code></p>
 </dd><dd>is deprecated as of MySQL 5.7.11 and removed in MySQL 8.0. Alternatives include loading plugins at server startup using the <code>&#8211;plugin-load</code> or <code>&#8211;plugin-load-add</code> option, or at runtime using the INSTALL PLUGIN statement. </dd>

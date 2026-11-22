@@ -12,7 +12,7 @@ description: "pkcs11_eventmgr – SmartCard PKCS#11 Event Manager"
 <h2>SYNTAX</h2>
 <p> pkcs11_eventmgr [<i>[no]debug</i>] [<i>[no]daemon</i>] [<i>polling_time=&lt;secs&gt;</i> ] [<i>expire_time=&lt;secs&gt;</i>] [<i>pkcs11_module=&lt;module&gt;</i> ] [<i>config_file=&lt;filename&gt;</i>]</p>
 <h2>DESCRIPTION</h2>
-<p> card_eventmgr is a SmartCard Monitoring that listen to the status of the card reader and dispatch actions on several events. card_eventmgr can be used to several actions, like lock screen on card removal<br />
+<p> card_eventmgr is a SmartCard Monitoring that listen to the status of the card reader and dispatch actions on several events. card_eventmgr can be used to several actions, like lock screen on card removal<br/>
  Three events are supported: card insert, card removal and timeout on removed card. Actions to take are specified in the configuration file</p>
 <h2>OPTIONS</h2>
 <dl>
@@ -37,12 +37,12 @@ description: "pkcs11_eventmgr – SmartCard PKCS#11 Event Manager"
 <p> Alternativly you can specify options: </p>
 <p> pkcs11_eventmgr nodebug nodaemon polling_time=5 config_file=${HOME}/.pkcs11_eventmgr.conf</p>
 <h2>BUGS</h2>
-<p> Some PKCS#11 Libraries fails on card removal and re-insert. to avoid this, pkcs11_eventmgr try to re-initialize stuff by calling C_Finalize() and C_Initialize() on card removal<br />
- Some apps like [<i>xscreensaver-command</i>] may fail due to external events ( eg: try to unlock an unlocked session ). In this case, command incorrectly returns error code.<br />
+<p> Some PKCS#11 Libraries fails on card removal and re-insert. to avoid this, pkcs11_eventmgr try to re-initialize stuff by calling C_Finalize() and C_Initialize() on card removal<br/>
+ Some apps like [<i>xscreensaver-command</i>] may fail due to external events ( eg: try to unlock an unlocked session ). In this case, command incorrectly returns error code.<br/>
  User shoult take care on this circumstance</p>
 <h2>AUTHORS</h2>
 <p> Juan Antonio Martinez &lt;jonsito [at] teleline.es&gt;</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/8-pam_pkcs11/">pam_pkcs11</a>(8), card_eventmgr(5)<br />
- README.eventmgr<br />
+<p> <a href="/docs/linux/man/8-pam_pkcs11/">pam_pkcs11</a>(8), card_eventmgr(5)<br/>
+ README.eventmgr<br/>
  PAM-PKCS11 User Manual </p>

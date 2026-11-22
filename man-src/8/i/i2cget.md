@@ -9,7 +9,7 @@ description: "i2cget – read from I2C/SMBus chip registers"
 
 <p>i2cget &#8211; read from I2C/SMBus chip registers </p>
 <h2>Synopsis</h2>
-<p><code>i2cget</code> [<code>-f</code>] [<code>-y</code>] <i>i2cbus</i> <i>chip-address</i> [<i>data-address </i>[<i>mode</i>]]<br />
+<p><code>i2cget</code> [<code>-f</code>] [<code>-y</code>] <i>i2cbus</i> <i>chip-address</i> [<i>data-address </i>[<i>mode</i>]]<br/>
  <code>i2cget</code> <code>-V</code> </p>
 <h2>Description</h2>
 <p>i2cget is a small helper program to read registers visible through the I2C bus (or SMBus). </p>

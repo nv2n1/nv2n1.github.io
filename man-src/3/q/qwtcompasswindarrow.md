@@ -13,7 +13,7 @@ description: "QwtCompassWindArrow –"
 <p>#include &lt;qwt_dial_needle.h&gt; </p>
 <p> Inherits <code>QwtDialNeedle</code>.</p>
 <h3>Public Types</h3>
-<p>enum <code>Style</code> { <code>Style1</code>, <code>Style2</code> }<br />
+<p>enum <code>Style</code> { <code>Style1</code>, <code>Style2</code> }<br/>
  <i>Style of the arrow. </i></p>
 <h3>Public Member Functions</h3>
 <p><code>QwtCompassWindArrow</code> (<code>Style</code>, const QColor &amp;light=Qt::white, const QColor &amp;dark=Qt::gray) </p>
@@ -46,16 +46,16 @@ description: "QwtCompassWindArrow –"
 <p>Constructor </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>style</i> Arrow style<br />
- <i>light</i> Light color<br />
+<dd><i>style</i> Arrow style<br/>
+ <i>light</i> Light color<br/>
  <i>dark</i> Dark color</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>void QwtCompassWindArrow::drawNeedle (QPainter *painter, doublelength, QPalette::ColorGroupcolorGroup) const [protected], [virtual]</h3>
 <p>Draw the needle </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>length</i> Length of the needle<br />
+<dd><i>painter</i> Painter<br/>
+ <i>length</i> Length of the needle<br/>
  <i>colorGroup</i> Color group, used for painting</dd></dl>
 <p> Implements <code>QwtDialNeedle</code>. </p>
 <h2>Author</h2>

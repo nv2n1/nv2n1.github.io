@@ -12,7 +12,7 @@ description: "perl570delta – what’s new for perl v5.7.0"
 <h2>DESCRIPTION</h2>
 <p> This document describes differences between the 5.6.0 release and the 5.7.0 release.  </p>
 <h2>Security Vulnerability Closed</h2>
-<p> A potential security vulnerability in the optional suidperl component of Perl has been identified. suidperl is neither built nor installed by default. As of September the 2nd, 2000, the only known vulnerable platform is Linux, most likely all Linux distributions. <font SIZE="-1">CERT</font> and various vendors have been alerted about the vulnerability. </p>
+<p> A potential security vulnerability in the optional suidperl component of Perl has been identified. suidperl is neither built nor installed by default. As of September the 2nd, 2000, the only known vulnerable platform is Linux, most likely all Linux distributions. CERT and various vendors have been alerted about the vulnerability. </p>
 <p> The problem was caused by Perl trying to report a suspected security exploit attempt using an external program, /bin/mail. On Linux platforms the /bin/mail program had an undocumented feature which when combined with suidperl gave access to a root shell, resulting in a serious compromise instead of reporting the exploit attempt. If you don&#8217;t have /bin/mail, or if you have &#8216;safe setuid scripts&#8217;, or if suidperl is not installed, you are safe. </p>
 <p> The exploit attempt reporting feature has been completely removed from the Perl 5.7.0 release, so that particular vulnerability isn&#8217;t there anymore. However, further security vulnerabilities are, unfortunately, always possible. The suidperl code is being reviewed and if deemed too risky to continue to be supported, it may be completely removed from future releases. In any case, suidperl should only be used by security experts who know exactly what they are doing and why they are using suidperl instead of some other solution such as sudo ( see <a rel="nofollow" href="http://www.courtesan.com/sudo/">http://www.courtesan.com/sudo/</a> ).  </p>
 <h2>Incompatible Changes</h2>
@@ -21,10 +21,10 @@ description: "perl570delta – what’s new for perl v5.7.0"
 <dd> <p> Arrays now always interpolate into double-quoted strings: constructs like ``foo@bar&#8217;&#8216; now always assume <code>@bar</code> is an array, whether or not the compiler has seen use of <code>@bar</code>. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> The semantics of bless(<font SIZE="-1">REF</font>, <font SIZE="-1">REF</font>) were unclear and until someone proves it to make some sense, it is forbidden. </p>
+<dd> <p> The semantics of bless(REF, REF) were unclear and until someone proves it to make some sense, it is forbidden. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> A reference to a reference now stringify as ``<font SIZE="-1">REF</font>(0x81485ec)&#8216;&#8216; instead of ``<font SIZE="-1">SCALAR</font>(0x81485ec)&#8216;&#8216; in order to be more consistent with the return value of <i>ref()</i>. </p>
+<dd> <p> A reference to a reference now stringify as ``REF(0x81485ec)&#8216;&#8216; instead of ``SCALAR(0x81485ec)&#8216;&#8216; in order to be more consistent with the return value of <i>ref()</i>. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> The very dusty examples in the eg/ directory have been removed. Suggestions for new shiny examples welcome but the main issue is that the examples need to be documented, tested and (most importantly) maintained. </p>
@@ -33,16 +33,16 @@ description: "perl570delta – what’s new for perl v5.7.0"
 <dd> <p> The obsolete chat2 library that should never have been allowed to escape the laboratory has been decommissioned. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> The unimplemented <font SIZE="-1">POSIX</font> regex features [[.cc.]] and [[=c=]] are still recognised but now cause fatal errors. The previous behaviour of ignoring them by default and warning if requested was unacceptable since it, in a way, falsely promised that the features could be used. </p>
+<dd> <p> The unimplemented POSIX regex features [[.cc.]] and [[=c=]] are still recognised but now cause fatal errors. The previous behaviour of ignoring them by default and warning if requested was unacceptable since it, in a way, falsely promised that the features could be used. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> The (bogus) escape sequences \8 and \9 now give an optional warning (``Unrecognized escape passed through&#8217;&#8216;). There is no need to \-escape any <code>&quot;\w&quot;</code> character. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> lstat(<font SIZE="-1">FILEHANDLE</font>) now gives a warning because the operation makes no sense. In future releases this may become a fatal error. </p>
+<dd> <p> lstat(FILEHANDLE) now gives a warning because the operation makes no sense. In future releases this may become a fatal error. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> The long deprecated uppercase aliases for the string comparison operators (<font SIZE="-1">EQ</font>, <font SIZE="-1">NE</font>, <font SIZE="-1">LT</font>, <font SIZE="-1">LE</font>, <font SIZE="-1">GE</font>, <font SIZE="-1">GT</font>) have now been removed. </p>
+<dd> <p> The long deprecated uppercase aliases for the string comparison operators (EQ, NE, LT, LE, GE, GT) have now been removed. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> The regular expression captured submatches ($1, <code>$2</code>, ...) are now more consistently unset if the match fails, instead of leaving false data lying around in them. </p>
@@ -65,13 +65,13 @@ description: "perl570delta – what’s new for perl v5.7.0"
 <dd> <p> The numerical comparison operators return <code>&quot;undef&quot;</code> if either operand is a NaN. Previously the behaviour was unspecified. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <code>&quot;pack(&#8216;U0a*&#8216;, ...)&quot;</code> can now be used to force a string to <font SIZE="-1">UTF-8</font>. </p>
+<dd> <p> <code>&quot;pack(&#8216;U0a*&#8216;, ...)&quot;</code> can now be used to force a string to UTF-8. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> prototype(\&amp;) is now available. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> There is now an <font SIZE="-1">UNTIE</font> method. </p>
+<dd> <p> There is now an UNTIE method. </p>
  </dd></dl>
 <h2>Modules and Pragmata</h2>
 <h3>New Modules</h3>
@@ -85,10 +85,10 @@ description: "perl570delta – what’s new for perl v5.7.0"
 <h3>Updated And Improved Modules and Pragmata</h3>
 <dl>
 <dt>&bull;</dt>
-<dd> <p> The following independently supported modules have been updated to newer versions from <font SIZE="-1">CPAN:</font> <font SIZE="-1">CGI</font>, <font SIZE="-1">CPAN</font>, DB_File, File::Spec, Getopt::Long, the podlators bundle, Pod::LaTeX, Pod::Parser, Term::ANSIColor, Test. </p>
+<dd> <p> The following independently supported modules have been updated to newer versions from CPAN: CGI, CPAN, DB_File, File::Spec, Getopt::Long, the podlators bundle, Pod::LaTeX, Pod::Parser, Term::ANSIColor, Test. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Bug fixes and minor enhancements have been applied to B::Deparse, Data::Dumper, IO::Poll, IO::Socket::INET, Math::BigFloat, Math::Complex, Math::Trig, Net::protoent, the re pragma, SelfLoader, Sys::SysLog, Test::Harness, Text::Wrap, <font SIZE="-1">UNIVERSAL</font>, and the warnings pragma. </p>
+<dd> <p> Bug fixes and minor enhancements have been applied to B::Deparse, Data::Dumper, IO::Poll, IO::Socket::INET, Math::BigFloat, Math::Complex, Math::Trig, Net::protoent, the re pragma, SelfLoader, Sys::SysLog, Test::Harness, Text::Wrap, UNIVERSAL, and the warnings pragma. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> The <i>attributes::reftype()</i> now works on tied arguments. </p>
@@ -118,7 +118,7 @@ description: "perl570delta – what’s new for perl v5.7.0"
 <dd> <p> <code>%INC</code> now localised in a Safe compartment so that use/require work. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> The Shell module now has an <font SIZE="-1">OO</font> interface. </p>
+<dd> <p> The Shell module now has an OO interface. </p>
  </dd></dl>
 <h2>Utility Changes</h2>
 <dl>
@@ -132,7 +132,7 @@ description: "perl570delta – what’s new for perl v5.7.0"
 <dd> <p> The perlcc utility has been rewritten and its user interface (that is, command line) is much more like that of the Unix C compiler, cc. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> The xsubpp utility for extension writers now understands <font SIZE="-1">POD</font> documentation embedded in the *.xs files. </p>
+<dd> <p> The xsubpp utility for extension writers now understands POD documentation embedded in the *.xs files. </p>
  </dd></dl>
 <h2>New Documentation</h2>
 <dl>
@@ -143,13 +143,13 @@ description: "perl570delta – what’s new for perl v5.7.0"
 <dd> <p> perldebtut is a Perl debugging tutorial. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> perlebcdic contains considerations for running Perl on <font SIZE="-1">EBCDIC</font> platforms. Note that unfortunately <font SIZE="-1">EBCDIC</font> platforms that used to supported back in Perl 5.005 are still unsupported by Perl 5.7.0; the plan, however, is to bring them back to the fold. </p>
+<dd> <p> perlebcdic contains considerations for running Perl on EBCDIC platforms. Note that unfortunately EBCDIC platforms that used to supported back in Perl 5.005 are still unsupported by Perl 5.7.0; the plan, however, is to bring them back to the fold. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> perlnewmod tells about writing and submitting a new module. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> perlposix-bc explains using Perl on the POSIX-BC platform (an <font SIZE="-1">EBCDIC</font> mainframe platform). </p>
+<dd> <p> perlposix-bc explains using Perl on the POSIX-BC platform (an EBCDIC mainframe platform). </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> perlretut is a regular expression tutorial. </p>
@@ -172,16 +172,16 @@ description: "perl570delta – what’s new for perl v5.7.0"
 <h3>Generic Improvements</h3>
 <dl>
 <dt>&bull;</dt>
-<dd> <p> <font SIZE="-1">INSTALL</font> now explains how you can configure Perl to use 64-bit integers even on non-64-bit platforms. </p>
+<dd> <p> INSTALL now explains how you can configure Perl to use 64-bit integers even on non-64-bit platforms. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Policy.sh policy change: if you are reusing a Policy.sh file (see <font SIZE="-1">INSTALL</font>) and you use Configure -Dprefix=/foo/bar and in the old Policy <code>$prefix</code> eq <code>$siteprefix</code> and <code>$prefix</code> eq <code>$vendorprefix</code>, all of them will now be changed to the new prefix, /foo/bar. (Previously only <code>$prefix</code> changed.) If you do not like this new behaviour, specify prefix, siteprefix, and vendorprefix explicitly. </p>
+<dd> <p> Policy.sh policy change: if you are reusing a Policy.sh file (see INSTALL) and you use Configure -Dprefix=/foo/bar and in the old Policy <code>$prefix</code> eq <code>$siteprefix</code> and <code>$prefix</code> eq <code>$vendorprefix</code>, all of them will now be changed to the new prefix, /foo/bar. (Previously only <code>$prefix</code> changed.) If you do not like this new behaviour, specify prefix, siteprefix, and vendorprefix explicitly. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> A new optional location for Perl libraries, otherlibdirs, is available. It can be used for example for vendor add-ons without disturbing Perl&#8217;s own library directories. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> In many platforms the vendor-supplied &#8216;cc&#8217; is too stripped-down to build Perl (basically, &#8216;cc&#8217; doesn&#8217;t do <font SIZE="-1">ANSI</font> C). If this seems to be the case and &#8216;cc&#8217; does not seem to be the <font SIZE="-1">GNU</font> C compiler &#8216;gcc&#8217;, an automatic attempt is made to find and use &#8216;gcc&#8217; instead. </p>
+<dd> <p> In many platforms the vendor-supplied &#8216;cc&#8217; is too stripped-down to build Perl (basically, &#8216;cc&#8217; doesn&#8217;t do ANSI C). If this seems to be the case and &#8216;cc&#8217; does not seem to be the GNU C compiler &#8216;gcc&#8217;, an automatic attempt is made to find and use &#8216;gcc&#8217; instead. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> gcc needs to closely track the operating system release to avoid build problems. If Configure finds that gcc was built for a different operating system release than is running, it now gives a clearly visible warning that there may be trouble ahead. </p>
@@ -196,7 +196,7 @@ description: "perl570delta – what’s new for perl v5.7.0"
 <dd> <p> configure.gnu now works with options with whitespace in them. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> installperl now outputs everything to <font SIZE="-1">STDERR</font>. </p>
+<dd> <p> installperl now outputs everything to STDERR. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> <code>$Config</code>{byteorder} is now computed dynamically (this is more robust with ``fat binaries&#8217;&#8216; where an executable image contains binaries for more than one binary platform.) </p>
@@ -252,7 +252,7 @@ description: "perl570delta – what’s new for perl v5.7.0"
 <dd> <p> <i>sort()</i> arguments are now compiled in the right wantarray context (they were accidentally using the context of the <i>sort()</i> itself). </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Changed the <font SIZE="-1">POSIX</font> character class <code>&quot;[[:space:]]&quot;</code> to include the (very rare) vertical tab character. Added a new POSIX-ish character class <code>&quot;[[:blank:]]&quot;</code> which stands for horizontal whitespace (currently, the space and the tab). </p>
+<dd> <p> Changed the POSIX character class <code>&quot;[[:space:]]&quot;</code> to include the (very rare) vertical tab character. Added a new POSIX-ish character class <code>&quot;[[:blank:]]&quot;</code> which stands for horizontal whitespace (currently, the space and the tab). </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> <code>$AUTOLOAD</code>, <i>sort()</i>, <i>lock()</i>, and spawning subprocesses in multiple threads simultaneously are now thread-safe. </p>
@@ -267,7 +267,7 @@ description: "perl570delta – what’s new for perl v5.7.0"
 <dd>  </dd>
 <dl>
 <dt>&bull;</dt>
-<dd> <p> BOMs (byte order marks) in the beginning of Perl files (scripts, modules) should now be transparently skipped. <font SIZE="-1">UTF-16</font> (<font SIZE="-1">UCS-2</font>) encoded Perl files should now be read correctly. </p>
+<dd> <p> BOMs (byte order marks) in the beginning of Perl files (scripts, modules) should now be transparently skipped. UTF-16 (UCS-2) encoded Perl files should now be read correctly. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> The character tables have been updated to Unicode 3.0.1. </p>
@@ -282,7 +282,7 @@ description: "perl570delta – what’s new for perl v5.7.0"
 <dd> <p> <code>&quot;IsAlnum&quot;</code>, <code>&quot;IsAlpha&quot;</code>, and <code>&quot;IsWord&quot;</code> now match titlecase. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Concatenation with the <code>&quot;.&quot;</code> operator or via variable interpolation, <code>&quot;eq&quot;</code>, <code>&quot;substr&quot;</code>, <code>&quot;reverse&quot;</code>, <code>&quot;quotemeta&quot;</code>, the <code>&quot;x&quot;</code> operator, substitution with <code>&quot;s///&quot;</code>, single-quoted <font SIZE="-1">UTF-8</font>, should now work---in theory. </p>
+<dd> <p> Concatenation with the <code>&quot;.&quot;</code> operator or via variable interpolation, <code>&quot;eq&quot;</code>, <code>&quot;substr&quot;</code>, <code>&quot;reverse&quot;</code>, <code>&quot;quotemeta&quot;</code>, the <code>&quot;x&quot;</code> operator, substitution with <code>&quot;s///&quot;</code>, single-quoted UTF-8, should now work---in theory. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> The <code>&quot;tr///&quot;</code> operator now works <i>slightly</i> better but is still rather broken. Note that the <code>&quot;tr///CU&quot;</code> functionality has been removed (but see pack(&#8216;U0&#8217;, ...)). </p>
@@ -302,7 +302,7 @@ description: "perl570delta – what’s new for perl v5.7.0"
 <h3>Platform Specific Changes and Fixes</h3>
 <dl>
 <dt>&bull;</dt>
-<dd> <p> <font SIZE="-1">BSDI</font> 4.* </p>
+<dd> <p> BSDI 4.* </p>
 <p> Perl now works on post-4.0 BSD/OSes. </p>
  </dd>
 <dt>&bull;</dt>
@@ -314,8 +314,8 @@ description: "perl570delta – what’s new for perl v5.7.0"
 <p> Numerous updates; currently synchronised with Cygwin 1.1.4. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <font SIZE="-1">EPOC</font> </p>
-<p> <font SIZE="-1">EPOC</font> update after Perl 5.6.0. See <font SIZE="-1">README</font>.epoc. </p>
+<dd> <p> EPOC </p>
+<p> EPOC update after Perl 5.6.0. See README.epoc. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> FreeBSD 3.* </p>
@@ -323,38 +323,38 @@ description: "perl570delta – what’s new for perl v5.7.0"
  </dd>
 <dt>&bull;</dt>
 <dd> <p> HP-UX </p>
-<p> <font SIZE="-1">README</font>.hpux updated; <code>&quot;Configure -Duse64bitall&quot;</code> now almost works. </p>
+<p> README.hpux updated; <code>&quot;Configure -Duse64bitall&quot;</code> now almost works. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <font SIZE="-1">IRIX</font> </p>
+<dd> <p> IRIX </p>
 <p> Numerous compilation flag and hint enhancements; accidental mixing of 32-bit and 64-bit libraries (a doomed attempt) made much harder. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Linux </p>
-<p> Long doubles should now work (see <font SIZE="-1">INSTALL</font>). </p>
+<p> Long doubles should now work (see INSTALL). </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Mac <font SIZE="-1">OS</font> Classic </p>
-<p> Compilation of the standard Perl distribution in Mac <font SIZE="-1">OS</font> Classic should now work if you have the Metrowerks development environment and the missing Mac-specific toolkit bits. Contact the macperl mailing list for details. </p>
+<dd> <p> Mac OS Classic </p>
+<p> Compilation of the standard Perl distribution in Mac OS Classic should now work if you have the Metrowerks development environment and the missing Mac-specific toolkit bits. Contact the macperl mailing list for details. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> MPE/iX </p>
-<p> MPE/iX update after Perl 5.6.0. See <font SIZE="-1">README</font>.mpeix. </p>
+<p> MPE/iX update after Perl 5.6.0. See README.mpeix. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> NetBSD/sparc </p>
 <p> Perl now works on NetBSD/sparc. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <font SIZE="-1">OS/2</font> </p>
-<p> Now works with usethreads (see <font SIZE="-1">INSTALL</font>). </p>
+<dd> <p> OS/2 </p>
+<p> Now works with usethreads (see INSTALL). </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Solaris </p>
 <p> 64-bitness using the Sun Workshop compiler now works. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Tru64 (aka Digital <font SIZE="-1">UNIX</font>, aka <font SIZE="-1">DEC</font> <font SIZE="-1">OSF/1</font>) </p>
+<dd> <p> Tru64 (aka Digital UNIX, aka DEC OSF/1) </p>
 <p> The operating system version letter now recorded in <code>$Config</code>{osvers}. Allow compiling with gcc (previously explicitly forbidden). Compiling with gcc still not recommended because buggy code results, even with gcc 2.95.2. </p>
  </dd>
 <dt>&bull;</dt>
@@ -362,8 +362,8 @@ description: "perl570delta – what’s new for perl v5.7.0"
 <p> Fixed various alignment problems that lead into core dumps either during build or later; no longer dies on math errors at runtime; now using full quad integers (64 bits), previously was using only 46 bit integers for speed. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <font SIZE="-1">VMS</font> </p>
-<p> <i>chdir()</i> now works better despite a <font SIZE="-1">CRT</font> bug; now works with <font SIZE="-1">MULTIPLICITY</font> (see <font SIZE="-1">INSTALL</font>); now works with Perl&#8217;s malloc. </p>
+<dd> <p> VMS </p>
+<p> <i>chdir()</i> now works better despite a CRT bug; now works with MULTIPLICITY (see INSTALL); now works with Perl&#8217;s malloc. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Windows </p>
@@ -381,13 +381,13 @@ description: "perl570delta – what’s new for perl v5.7.0"
 <dd> <p> New <code>%ENV</code> entries now propagate to subprocesses. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <code>$ENV</code>{<font SIZE="-1">LIB</font>} now used to search for libs under Visual C. </p>
+<dd> <p> <code>$ENV</code>{LIB} now used to search for libs under Visual C. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> A failed (pseudo)fork now returns undef and sets errno to <font SIZE="-1">EAGAIN</font>. </p>
+<dd> <p> A failed (pseudo)fork now returns undef and sets errno to EAGAIN. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Allow <font SIZE="-1">REG_EXPAND_SZ</font> keys in the registry. </p>
+<dd> <p> Allow REG_EXPAND_SZ keys in the registry. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Can now <i>send()</i> from all threads, not just the first one. </p>
@@ -402,7 +402,7 @@ description: "perl570delta – what’s new for perl v5.7.0"
 <dd> <p> <code>&quot;File::Spec-&gt;tmpdir()&quot;</code> now prefers C:/temp over /tmp (works better when perl is running as service). </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Better <font SIZE="-1">UNC</font> path handling under ithreads. </p>
+<dd> <p> Better UNC path handling under ithreads. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> <i>wait()</i> and <i>waitpid()</i> now work much better. </p>
@@ -421,13 +421,13 @@ description: "perl570delta – what’s new for perl v5.7.0"
 <h2>Changed Internals</h2>
 <dl>
 <dt>&bull;</dt>
-<dd> <p> perlapi.pod (a companion to perlguts) now attempts to document the internal <font SIZE="-1">API</font>. </p>
+<dd> <p> perlapi.pod (a companion to perlguts) now attempts to document the internal API. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> You can now build a really minimal perl called microperl. Building microperl does not require even running Configure; <code>&quot;make -f Makefile.micro&quot;</code> should be enough. Beware: microperl makes many assumptions, some of which may be too bold; the resulting executable may crash or otherwise misbehave in wondrous ways. For careful hackers only. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Added <i>rsignal()</i>, <i>whichsig()</i>, <i>do_join()</i> to the publicised <font SIZE="-1">API</font>. </p>
+<dd> <p> Added <i>rsignal()</i>, <i>whichsig()</i>, <i>do_join()</i> to the publicised API. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Made possible to propagate customised exceptions via <i>croak()</i>ing. </p>
@@ -441,12 +441,12 @@ description: "perl570delta – what’s new for perl v5.7.0"
 <h2>Known Problems</h2>
 <h3>Unicode Support Still Far From Perfect</h3>
 <p> We&#8217;re working on it. Stay tuned.  </p>
-<font SIZE="-1"></font><h3>EBCDIC Still A Lost Platform</h3>
+<h3>EBCDIC Still A Lost Platform</h3>
 <p> The plan is to bring them back.  </p>
 <h3>Building Extensions Can Fail Because Of Largefiles</h3>
 <p> Certain extensions like mod_perl and BSD::Resource are known to have issues with `largefiles&#8217;, a change brought by Perl 5.6.0 in which file offsets default to 64 bits wide, where supported. Modules may fail to compile at all or compile and work incorrectly. Currently there is no good solution for the problem, but Configure now provides appropriate non-largefile ccflags, ldflags, libswanted, and libs in the <code>%Config</code> hash (e.g., <code>$Config</code>{ccflags_nolargefiles}) so the extensions that are having problems can try configuring themselves without the largefileness. This is admittedly not a clean solution, and the solution may not even work at all. One potential failure is whether one can (or, if one can, whether it&#8217;s a good idea) link together at all binaries with different ideas about file offsets, all this is platform-dependent.  </p>
 <h3>ftmp-security tests warn 'system possibly insecure'</h3>
-<p> Don&#8217;t panic. Read <font SIZE="-1">INSTALL</font> &#8216;make test&#8217; section instead.  </p>
+<p> Don&#8217;t panic. Read INSTALL &#8216;make test&#8217; section instead.  </p>
 <h3>Test lib/posix Subtest 9 Fails In LP64-Configured HP-UX</h3>
 <p> If perl is configured with -Duse64bitall, the successful result of the subtest 10 of lib/posix may arrive before the successful result of the subtest 9, which confuses the test harness so much that it thinks the subtest 9 failed.  </p>
 <h3>Long Doubles Still Don't Work In Solaris</h3>
@@ -457,14 +457,14 @@ description: "perl570delta – what’s new for perl v5.7.0"
 <p> If any Storable tests fail the use of Storable is not advisable. </p>
 <dl>
 <dt>&bull;</dt>
-<dd> <p> Many Storable tests fail on <font SIZE="-1">AIX</font> configured with 64 bit integers. </p>
-<p> So far unidentified problems break Storable in <font SIZE="-1">AIX</font> if Perl is configured to use 64 bit integers. <font SIZE="-1">AIX</font> in 32-bit mode works and other 64-bit platforms work with Storable. </p>
+<dd> <p> Many Storable tests fail on AIX configured with 64 bit integers. </p>
+<p> So far unidentified problems break Storable in AIX if Perl is configured to use 64 bit integers. AIX in 32-bit mode works and other 64-bit platforms work with Storable. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <font SIZE="-1">DOS</font> <font SIZE="-1">DJGPP</font> may hang when testing Storable. </p>
+<dd> <p> DOS DJGPP may hang when testing Storable. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> st-06compat fails in <font SIZE="-1">UNICOS</font> and UNICOS/mk. </p>
+<dd> <p> st-06compat fails in UNICOS and UNICOS/mk. </p>
 <p> This means that you cannot read old (pre-Storable-0.7) Storable images made in other platforms. </p>
  </dd>
 <dt>&bull;</dt>
@@ -496,8 +496,8 @@ description: "perl570delta – what’s new for perl v5.7.0"
 <p> If you believe you have an unreported bug, please run the <code>perlbug</code> program included with your release. Be sure to trim your bug down to a tiny but sufficient test case. Your bug report, along with the output of <code>&quot;perl -V&quot;</code>, will be sent off to perlbug [at] perl.org to be analysed by the Perl porting team.  </p>
 <h2>SEE ALSO</h2>
 <p> The <i>Changes</i> file for exhaustive details on what changed. </p>
-<p> The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. </p>
-<p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
+<p> The <i></i><i>INSTALL</i><i></i> file for how to build Perl. </p>
+<p> The <i></i><i>README</i><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information.  </p>
 <h2>HISTORY</h2>
 <p> Written by Jarkko Hietaniemi &lt;<i>jhi [at] iki.fi</i>&gt;, with many contributions from The Perl Porters and Perl Users submitting feedback and patches. </p>

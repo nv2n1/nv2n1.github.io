@@ -16,7 +16,7 @@ description: "gitrevisions – Specifying revisions and ranges for Git"
 <h2>Specifying Revisions</h2>
 <p>A revision parameter <i>&lt;rev&gt;</i> typically, but not necessarily, names a commit object. It uses what is called an <i>extended SHA-1</i> syntax. Here are various ways to spell object names. The ones listed near the end of this list name trees and blobs contained in a commit. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> This document shows the &quot;raw&quot; syntax as seen by git. The shell and other UIs might require additional quoting to protect special characters and to avoid word splitting. </p>
 </dl>
 <p> <i>&lt;sha1&gt;</i>, e.g. <i>dae86e1950b1277e545cee180551750029cfe735</i>, <i>dae86e</i></p>

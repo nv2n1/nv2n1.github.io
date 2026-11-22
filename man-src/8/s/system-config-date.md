@@ -15,7 +15,7 @@ description: "system-config-date – graphical interface for changing system dat
 <h2>Options</h2>
 <p>None</p>
 <h2>Files</h2>
-<p><i>/usr/bin/system-config-date</i><br />
+<p><i>/usr/bin/system-config-date</i><br/>
  <i>/usr/share/system-config-date/*</i></p>
 <h2>Examples</h2>
 <p>To run the program type: system-config-date </p>

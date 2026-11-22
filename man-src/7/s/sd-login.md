@@ -13,7 +13,7 @@ description: "sd-login – APIs for tracking logins"
 pkg-config --cflags --libs libsystemd-login</code></pre>
 <h2>Description</h2>
 <dd>sd-login.h provides APIs to introspect and monitor seat, login session and user status information on the local system. </dd>
-<p> See m[blue]<code>Multi-Seat on Linux</code>m[]<font SIZE="-2">[1]</font> for an introduction into multi-seat support on Linux, the background for this set of APIs. </p>
+<p> See m[blue]<code>Multi-Seat on Linux</code>m[][1] for an introduction into multi-seat support on Linux, the background for this set of APIs. </p>
 <p> Note that these APIs only allow purely passive access and monitoring of seats, sessions and users. To actively make changes to the seat configuration, terminate login sessions, or switch session on a seat you need to utilize the D-Bus API of systemd-logind, instead. </p>
 <p> These functions synchronously access data in /proc, /sys/fs/cgroup and /run. All of these are virtual file systems, hence the runtime cost of the accesses is relatively cheap. </p>
 <p> It is possible (and often a very good choice) to mix calls to the synchronous interface of sd-login.h with the asynchronous D-Bus interface of systemd-logind. However, if this is done you need to think a bit about possible races since the stream of events from D-Bus and from sd-login.h interfaces such as the login monitor are asynchronous and not ordered against each other. </p>

@@ -13,7 +13,7 @@ description: "nerr_error_string"
 void nerr_error_string(NEOERR *err, STRING *str);
 </code></pre>
 <h2>Arguments</h2>
-<p>err &#8211; error<br />
+<p>err &#8211; error<br/>
  str &#8211; string to which the data is appended</p>
 <h2>Description</h2>
 <p>returns the string associated with an error (the bottom level of the error chain) </p>

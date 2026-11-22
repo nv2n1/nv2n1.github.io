@@ -90,11 +90,11 @@ description: "veritysetup – manage dm-verity (block level verification) volume
 <dt></dt></dl>
 <h2>Return Codes</h2>
 <dd>Veritysetup returns 0 on success and a non-zero value on error. </dd>
-<p> Error codes are:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;1 wrong parameters<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;2 no permission<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;3 out of memory<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;4 wrong device specified<br />
+<p> Error codes are:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;1 wrong parameters<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;2 no permission<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;3 out of memory<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;4 wrong device specified<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;5 device already exists or device is busy.</p>
 <h2>Examples</h2>
 <p><code>veritysetup &#8211;data-blocks=256 format &lt;data_device&gt; &lt;hash_device&gt;</code> Calculates and stores verification data on hash_device for the first 256 blocks (of block-size). If hash_device does not exist, it is created (as file image). <code>veritysetup format &lt;data_device&gt; &lt;hash_device&gt;</code> Calculates and stores verification data on hash_device for the whole data_device. <code>veritysetup &#8211;data-blocks=256 &#8211;hash-offset=1052672 format &lt;device&gt; &lt;device&gt;</code> Verification data (hashes) is stored on the same device as data (starting at hash-offset). Hash-offset must be greater than number of blocks in data-area. <code>veritysetup &#8211;data-blocks=256 &#8211;hash-offset=1052672 create test-device &lt;device&gt; &lt;device&gt; &lt;root_hash&gt;</code> Activates the verity device named test-device. Options &#8211;data-blocks and &#8211;hash-offset are the same as in the format command. The &lt;root_hash&gt; was calculated in format command. <code>veritysetup &#8211;data-blocks=256 &#8211;hash-offset=1052672 verify &lt;data_device&gt; &lt;hash_device&gt; &lt;root_hash&gt;</code> Verifies device without activation (in userspace). <code>veritysetup &#8211;fec-device=&lt;fec_device&gt; &#8211;fec-roots=10 format &lt;data_device&gt; &lt;hash_device&gt;</code> Calculates and stores verification and encoding data for data_device. </p>
@@ -104,7 +104,7 @@ description: "veritysetup – manage dm-verity (block level verification) volume
 <p>The first implementation of veritysetup was written by Chrome OS authors. </p>
 <p> This version is based on verification code written by Mikulas Patocka &lt;mpatocka [at] redhat.com&gt; and rewritten for libcryptsetup by Milan Broz &lt;gmazyland [at] gmail.com&gt;.</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2012-2018 Red Hat, Inc.<br />
+<p>Copyright &#169; 2012-2018 Red Hat, Inc.<br/>
  Copyright &#169; 2012-2018 Milan Broz </p>
 <p> This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>See Also</h2>

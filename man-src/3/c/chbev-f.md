@@ -10,7 +10,7 @@ description: "chbev.f –"
 <p>chbev.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>chbev</code> (JOBZ, UPLO, N, KD, AB, LDAB, W, Z, LDZ, WORK, RWORK, INFO)<br />
+<p>subroutine <code>chbev</code> (JOBZ, UPLO, N, KD, AB, LDAB, W, Z, LDZ, WORK, RWORK, INFO)<br/>
  <i></i><code> CHBEV computes the eigenvalues and, optionally, the left and/or right eigenvectors for OTHER matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine chbev (characterJOBZ, characterUPLO, integerN, integerKD, complex, dimension( ldab, * )AB, integerLDAB, real, dimension( * )W, complex, dimension( ldz, * )Z, integerLDZ, complex, dimension( * )WORK, real, dimension( * )RWORK, integerINFO)</h3>

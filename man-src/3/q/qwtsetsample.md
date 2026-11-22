@@ -14,15 +14,15 @@ description: "QwtSetSample –"
 <h3>Public Member Functions</h3>
 <p><code>QwtSetSample</code> () </p>
 <p> <code>QwtSetSample</code> (double, const QVector&lt; double &gt; &amp;=QVector&lt; double &gt;()) </p>
-<p> bool <code>operator==</code> (const <code>QwtSetSample</code> &amp;other) const<br />
- <i>Compare operator. </i><br />
- bool <code>operator!=</code> (const <code>QwtSetSample</code> &amp;other) const<br />
- <i>Compare operator. </i><br />
+<p> bool <code>operator==</code> (const <code>QwtSetSample</code> &amp;other) const<br/>
+ <i>Compare operator. </i><br/>
+ bool <code>operator!=</code> (const <code>QwtSetSample</code> &amp;other) const<br/>
+ <i>Compare operator. </i><br/>
  double <code>added</code> () const </p>
 <h3>Public Attributes</h3>
-<p>double <code>value</code><br />
- <i>value </i><br />
- QVector&lt; double &gt; <code>set</code><br />
+<p>double <code>value</code><br/>
+ <i>value </i><br/>
+ QVector&lt; double &gt; <code>set</code><br/>
  <i>Vector of values associated to value. </i></p>
 <h2>Detailed Description</h2>
 <p>A sample of the types (x1&#8230;xn, y) or (x, y1..yn)</p>
@@ -33,7 +33,7 @@ description: "QwtSetSample –"
 <p>Constructor </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>v</i> Value<br />
+<dd><i>v</i> Value<br/>
  <i>s</i> Set of values</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>double QwtSetSample::added () const [inline]</h3>

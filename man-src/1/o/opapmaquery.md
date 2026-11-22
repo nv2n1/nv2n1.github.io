@@ -11,7 +11,7 @@ description: "opapmaquery"
 <p> opapmaquery </p>
 <p> <code>(All)</code> Performs individual PMA queries against a specific LID. It is very useful in displaying port runtime information.</p>
 <h2>Syntax</h2>
-<p> opapmaquery [-v] [-s <i>sl</i>] [-l <i>lid</i>] [-h <i>hfi</i>] [-p <i>port</i>] [-o <i>otype</i>]<br />
+<p> opapmaquery [-v] [-s <i>sl</i>] [-l <i>lid</i>] [-h <i>hfi</i>] [-p <i>port</i>] [-o <i>otype</i>]<br/>
  [-m <i>port</i>] [-n <i>mask</i>] [-e <i>mask</i>] [-w <i>mask</i>] </p>
 <h2>Options</h2>
 <dl>
@@ -169,22 +169,22 @@ description: "opapmaquery"
 </dl>
 <h2>Examples</h2>
 <p> opapmaquery -o classportinfo </p>
-<p> opapmaquery -o getportstatus<br />
+<p> opapmaquery -o getportstatus<br/>
  # get data and error counts, local port </p>
-<p> opapmaquery -o getdatacounters -n 0x2<br />
+<p> opapmaquery -o getdatacounters -n 0x2<br/>
  # get data counts, local port 1 </p>
-<p> opapmaquery -o geterrorcounters -n 0x2<br />
+<p> opapmaquery -o geterrorcounters -n 0x2<br/>
  # get error counts, local port 1 </p>
-<p> opapmaquery -o clearportstatus -n 0x2<br />
+<p> opapmaquery -o clearportstatus -n 0x2<br/>
  # clear all counters local port 1 </p>
-<p> opapmaquery -o geterrorinfo -n 0x2<br />
+<p> opapmaquery -o geterrorinfo -n 0x2<br/>
  # get error info for local port 1 </p>
-<p> opapmaquery -o clearerrorinfo -n 0x2<br />
+<p> opapmaquery -o clearerrorinfo -n 0x2<br/>
  # clear all error info, local port 1 </p>
 <p> <code>Additional Examples</code> </p>
-<p> opapmaquery -o getdatacounters -l 6 -n 0x7e -w 0x1<br />
+<p> opapmaquery -o getdatacounters -l 6 -n 0x7e -w 0x1<br/>
  # for device at LID 6, get data counters on ports 1-6, inclusive of VL 0 data </p>
-<p> opapmaquery -o clearportstatus -l 6 -n 0x2 -e 0x1ffff<br />
+<p> opapmaquery -o clearportstatus -l 6 -n 0x2 -e 0x1ffff<br/>
  # for device at LID 6, on port 1, clear only error counters </p>
-<p> opapmaquery -o clearerrorinfo -l 6 -n 0x2 -e 0x04000000<br />
+<p> opapmaquery -o clearerrorinfo -l 6 -n 0x2 -e 0x04000000<br/>
  # for device at LID 6, on ports 1, clear uncorrectable error info </p>

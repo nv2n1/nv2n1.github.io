@@ -15,7 +15,7 @@ struct ttyent *getttynam(const char *name);
 int setttyent(void);
 int endttyent(void);</code></pre>
 <h2>Description</h2>
-<p>These functions provide an interface to the file <code>_PATH_TTYS</code> (e.g., <i>/etc/ttys</i>). The function <code>setttyent</code>() opens the file or rewinds it if already open. The function <code>endttyent</code>() closes the file. The function <code>getttynam</code>() searches for a given terminal name in the file. It returns a pointer to a <i>ttyent</i> structure (description below). The function <code>getttyent</code>() opens the file <code>_PATH_TTYS</code> (if necessary) and returns the first entry. If the file is already open, the next entry. The <i>ttyent</i> structure has the form: #define TTY_ON     0x01  /* enable logins (start ty_getty program) */<br />
+<p>These functions provide an interface to the file <code>_PATH_TTYS</code> (e.g., <i>/etc/ttys</i>). The function <code>setttyent</code>() opens the file or rewinds it if already open. The function <code>endttyent</code>() closes the file. The function <code>getttynam</code>() searches for a given terminal name in the file. It returns a pointer to a <i>ttyent</i> structure (description below). The function <code>getttyent</code>() opens the file <code>_PATH_TTYS</code> (if necessary) and returns the first entry. If the file is already open, the next entry. The <i>ttyent</i> structure has the form: #define TTY_ON     0x01  /* enable logins (start ty_getty program) */<br/>
 #define TTY_SECURE 0x02  /* allow UID 0 to login */ <i>ty_status</i> can be: </p>
 <pre><code>#define TTY_ON     0x01  /* enable logins (start ty_getty program) */
 #define TTY_SECURE 0x02  /* allow UID 0 to login */</code></pre>

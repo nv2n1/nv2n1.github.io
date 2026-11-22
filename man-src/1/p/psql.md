@@ -111,8 +111,8 @@ EOF
 <dd> <p> Runs in single-line mode where a newline terminates an SQL command, as a semicolon does. </p>
  </dd>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Note</code> </font> <br />
+<dd> <p> <br/>
+  <code>Note</code>  <br/>
  This mode is provided for those who insist on it, but you are not necessarily encouraged to use it. In particular, if you mix SQL and meta-commands on a line the order of execution might not always be clear to the inexperienced user. </p>
  </dd></dl>
 </dl>
@@ -233,8 +233,8 @@ testdb=&gt;
 <dd> <p> Changes the current working directory to <i>directory</i>. Without argument, changes to the current user&#8217;s home directory. </p>
  </dd>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Tip</code> </font> <br />
+<dd> <p> <br/>
+  <code>Tip</code>  <br/>
  To print your current working directory, use \! pwd. </p>
  </dd></dl>
 </dl>
@@ -249,8 +249,8 @@ testdb=&gt;
 <p> \copy ... from stdin | to stdout reads/writes based on the command input and output respectively. All rows are read from the same source that issued the command, continuing until \. is read or the stream reaches EOF. Output is sent to the same place as command output. To read/write from psql&#8217;s standard input or output, use pstdin or pstdout. This option is useful for populating tables in-line within a SQL script file. </p>
  </dd>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Tip</code> </font> <br />
+<dd> <p> <br/>
+  <code>Tip</code>  <br/>
  This operation is not as efficient as the SQL <code>COPY</code> command because all data must pass through the client/server connection. For large amounts of data the SQL command might be preferable. </p>
  </dd></dl>
 </dl>
@@ -266,8 +266,8 @@ testdb=&gt;
 <p> By default, only user-created objects are shown; supply a pattern or the S modifier to include system objects. </p>
  </dd>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Note</code> </font> <br />
+<dd> <p> <br/>
+  <code>Note</code>  <br/>
  If <code>\d</code> is used without a <i>pattern</i> argument, it is equivalent to <code>\dtvsE</code> which will show a list of all visible tables, views, sequences and foreign tables. This is purely a convenience measure. </p>
  </dd></dl>
 </dl>
@@ -319,8 +319,8 @@ testdb=&gt;
 <dd> <p> Lists user mappings (mnemonic: "external users"). If <i>pattern</i> is specified, only those mappings whose user names match the pattern are listed. If the form \deu+ is used, additional information about each mapping is shown. </p>
  </dd>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Caution</code> </font> <br />
+<dd> <p> <br/>
+  <code>Caution</code>  <br/>
  \deu+ might also display the user name and password of the remote user, so care should be taken not to disclose them. </p>
  </dd></dl>
 </dl>
@@ -333,8 +333,8 @@ testdb=&gt;
 <dd> <p> Lists functions, together with their arguments, return types, and function types, which are classified as "agg" (aggregate), "normal", "trigger", or "window". To display only functions of specific type(s), add the corresponding letters a, n, t, or w to the command. If <i>pattern</i> is specified, only functions whose names match the pattern are shown. If the form \df+ is used, additional information about each function, including volatility, language, source code and description, is shown. By default, only user-created objects are shown; supply a pattern or the S modifier to include system objects. </p>
  </dd>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Tip</code> </font> <br />
+<dd> <p> <br/>
+  <code>Tip</code>  <br/>
  To look up functions taking arguments or returning values of a specific type, use your pager&#8217;s search capability to scroll through the \df output. </p>
  </dd></dl>
 </dl>
@@ -407,8 +407,8 @@ testdb=&gt;
 <p> If a line number is specified, psql will position the cursor on the specified line of the file or query buffer. Note that if a single all-digits argument is given, psql assumes it is a line number, not a file name. </p>
  </dd>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Tip</code> </font> <br />
+<dd> <p> <br/>
+  <code>Tip</code>  <br/>
  See under ENVIRONMENT for how to configure and customize your editor. </p>
  </dd></dl>
 </dl>
@@ -422,8 +422,8 @@ testdb=&gt;
  </dd></dl>
 <p> If the first argument is an unquoted -n the trailing newline is not written. </p>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Tip</code> </font> <br />
+<dd> <p> <br/>
+  <code>Tip</code>  <br/>
  If you use the <code>\o</code> command to redirect your query output you might wish to use <code>\qecho</code> instead of this command. </p>
  </dd></dl>
 </dl>
@@ -435,8 +435,8 @@ testdb=&gt;
 <p> If a line number is specified, psql will position the cursor on the specified line of the function body. (Note that the function body typically does not begin on the first line of the file.) </p>
  </dd>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Tip</code> </font> <br />
+<dd> <p> <br/>
+  <code>Tip</code>  <br/>
  See under ENVIRONMENT for how to configure and customize your editor. </p>
  </dd></dl>
 </dl>
@@ -457,8 +457,8 @@ testdb=&gt;
 <dd> <p> Gives syntax help on the specified SQL command. If <i>command</i> is not specified, then psql will list all the commands for which syntax help is available. If <i>command</i> is an asterisk (*), then syntax help on all SQL commands is shown. </p>
  </dd>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Note</code> </font> <br />
+<dd> <p> <br/>
+  <code>Note</code>  <br/>
  To simplify typing, commands that consists of several words do not have to be quoted. Thus it is fine to type <code>\help alter table</code>. </p>
  </dd></dl>
 </dl>
@@ -472,8 +472,8 @@ testdb=&gt;
 <p> If <i>filename</i> is - (hyphen), then standard input is read until an EOF indication or <code>\q</code> meta-command. This can be used to intersperse interactive input with input from files. Note that Readline behavior will be used only if it is active at the outermost level. </p>
  </dd>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Note</code> </font> <br />
+<dd> <p> <br/>
+  <code>Note</code>  <br/>
  If you want to see the lines on the screen as they are read you must set the variable <i>ECHO</i> to all. </p>
  </dd></dl>
 </dl>
@@ -490,8 +490,8 @@ testdb=&gt;
 <dd> <p> Reads the large object with OID <i>loid</i> from the database and writes it to <i>filename</i>. Note that this is subtly different from the server function <code>lo_export</code>, which acts with the permissions of the user that the database server runs as and on the server&#8217;s file system. </p>
  </dd>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Tip</code> </font> <br />
+<dd> <p> <br/>
+  <code>Tip</code>  <br/>
  Use <code>\lo_list</code> to find out the large object&#8217;s OID. </p>
  </dd></dl>
 </dl>
@@ -515,8 +515,8 @@ testdb=&gt;
 <dd> <p> Deletes the large object with OID <i>loid</i> from the database. </p>
  </dd>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Tip</code> </font> <br />
+<dd> <p> <br/>
+  <code>Tip</code>  <br/>
  Use <code>\lo_list</code> to find out the large object&#8217;s OID. </p>
  </dd></dl>
 </dl>
@@ -526,8 +526,8 @@ testdb=&gt;
 <p> "Query results" includes all tables, command responses, and notices obtained from the database server, as well as output of various backslash commands that query the database (such as <code>\d</code>), but not error messages. </p>
  </dd>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Tip</code> </font> <br />
+<dd> <p> <br/>
+  <code>Tip</code>  <br/>
  To intersperse text output in between query results, use <code>\qecho</code>. </p>
  </dd></dl>
 </dl>
@@ -624,13 +624,13 @@ testdb=&gt;
  </dd></dl>
 <p> Illustrations of how these different formats look can be seen in the EXAMPLES section. </p>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Tip</code> </font> <br />
+<dd> <p> <br/>
+  <code>Tip</code>  <br/>
  There are various shortcut commands for <code>\pset</code>. See <code>\a</code>, <code>\C</code>, <code>\H</code>, <code>\t</code>, <code>\T</code>, and <code>\x</code>. </p>
  </dd></dl>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Note</code> </font> <br />
+<dd> <p> <br/>
+  <code>Note</code>  <br/>
  It is an error to call <code>\pset</code> without any arguments. In the future this case might show the current status of all printing options. </p>
  </dd></dl>
 </dl>
@@ -658,8 +658,8 @@ testdb=&gt;
 <p> Although you are welcome to set any variable to anything you want, psql treats several variables as special. They are documented in the section about variables. </p>
  </dd>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Note</code> </font> <br />
+<dd> <p> <br/>
+  <code>Note</code>  <br/>
  This command is unrelated to the SQL command <code><a href="/docs/linux/man/7-SET/">SET</a></code>(7). </p>
  </dd></dl>
 </dl>
@@ -715,8 +715,8 @@ testdb=&gt;
 <dl>
 <dd> <p> Shows help information about the backslash commands. </p>
  </dd></dl>
-<p> <br />
- <font SIZE="+1"> <code>Patterns</code> </p>
+<p> <br/>
+  <code>Patterns</code> </p>
 <dl>
 <dd> <p> The various \d commands accept a <i>pattern</i> parameter to specify the object name(s) to be displayed. In the simplest case, a pattern is just the exact name of the object. The characters within a pattern are normally folded to lower case, just as in SQL names; for example, \dt FOO will display the table named foo. As in SQL names, placing double quotes around a pattern stops folding to lower case. Should you need to include an actual double quote character in a pattern, write it as a pair of double quotes within a double-quote sequence; again this is in accord with the rules for SQL quoted identifiers. For example, \dt &quot;FOO&quot;&quot;BAR&quot; will display the table named FOO&quot;BAR (not foo&quot;bar). Unlike the normal rules for SQL names, you can put double quotes around just part of a pattern, for instance \dt FOO&quot;FOO&quot;BAR will display the table named fooFOObar. </p>
 <p> Whenever the <i>pattern</i> parameter is omitted completely, the \d commands display all objects that are visible in the current schema search path --- this is equivalent to using * as the pattern. (An object is said to be visible if its containing schema is in the search path and no object of the same kind and name appears earlier in the search path. This is equivalent to the statement that the object can be referenced by name without explicit schema qualification.) To see all objects in the database regardless of visibility, use *.* as the pattern. </p>
@@ -724,16 +724,16 @@ testdb=&gt;
 <p> A pattern that contains a dot (.) is interpreted as a schema name pattern followed by an object name pattern. For example, \dt foo*.*bar* displays all tables whose table name includes bar that are in schemas whose schema name starts with foo. When no dot appears, then the pattern matches only objects that are visible in the current schema search path. Again, a dot within double quotes loses its special meaning and is matched literally. </p>
 <p> Advanced users can use regular-expression notations such as character classes, for example [0-9] to match any digit. All regular expression special characters work as specified in Section 9.7.3, "POSIX Regular Expressions", in the documentation, except for . which is taken as a separator as mentioned above, * which is translated to the regular-expression notation .*, ? which is translated to ., and $ which is matched literally. You can emulate these pattern characters at need by writing ? for ., (<i>R</i>+|) for <i>R</i>*, or (<i>R</i>|) for <i>R</i>?. $ is not needed as a regular-expression character since the pattern must match the whole name, unlike the usual interpretation of regular expressions (in other words, $ is automatically appended to your pattern). Write * at the beginning and/or end if you don&#8217;t wish the pattern to be anchored. Note that within double quotes, all regular expression special characters lose their special meanings and are matched literally. Also, the regular expression special characters are matched literally in operator name patterns (i.e., the argument of \do). </p>
  </dd></dl>
-<p> </font> </p>
+<p>  </p>
 <h3>Advanced Features</h3>
-<p> <br />
- <font SIZE="+1"> <code>Variables</code> </p>
+<p> <br/>
+  <code>Variables</code> </p>
 <dl>
 <dd> <p> psql provides variable substitution features similar to common Unix command shells. Variables are simply name/value pairs, where the value can be any string of any length. The name must consist of letters (including non-Latin letters), digits, and underscores. </p>
 <p> To set a variable, use the psql meta-command <code>\set</code>. For example, </p>
  </dd>
 <dl>
-<dd> <p> </font> </p>
+<dd> <p>  </p>
 <pre><code>testdb=&gt; \set foo bar 
 </code></pre>
  </dd></dl>
@@ -745,8 +745,8 @@ testdb=&gt;
 <p> This works in both regular SQL commands and meta-commands; there is more detail in SQL Interpolation, below. </p>
 <p> If you call <code>\set</code> without a second argument, the variable is set, with an empty string as value. To unset (i.e., delete) a variable, use the command <code>\unset</code>. To show the values of all variables, call <code>\set</code> without any argument. </p>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Note</code> </font> <br />
+<dd> <p> <br/>
+  <code>Note</code>  <br/>
  </p>
 <p> The arguments of <code>\set</code> are subject to the same substitution rules as with other commands. Thus you can construct interesting references such as \set :foo &#8216;something&#8217; and get "soft links" or "variable variables" of Perl or PHP fame, respectively. Unfortunately (or fortunately?), there is no way to do anything useful with these constructs. On the other hand, \set bar :foo is a perfectly valid way to copy a variable. </p>
  </dd></dl>
@@ -756,13 +756,13 @@ testdb=&gt;
 <dd> <p> When on (the default), each SQL command is automatically committed upon successful completion. To postpone commit in this mode, you must enter a <code>BEGIN</code> or <code>START TRANSACTION</code> SQL command. When off or unset, SQL commands are not committed until you explicitly issue <code>COMMIT</code> or <code>END</code>. The autocommit-off mode works by issuing an implicit <code>BEGIN</code> for you, just before any command that is not already in a transaction block and is not itself a <code>BEGIN</code> or other transaction-control command, nor a command that cannot be executed inside a transaction block (such as <code>VACUUM</code>). </p>
  </dd>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Note</code> </font> <br />
+<dd> <p> <br/>
+  <code>Note</code>  <br/>
  In autocommit-off mode, you must explicitly abandon any failed transaction by entering <code>ABORT</code> or <code>ROLLBACK</code>. Also keep in mind that if you exit the session without committing, your work will be lost. </p>
  </dd></dl>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Note</code> </font> <br />
+<dd> <p> <br/>
+  <code>Note</code>  <br/>
  The autocommit-on mode is PostgreSQL&#8217;s traditional behavior, but autocommit-off is closer to the SQL spec. If you prefer autocommit-off, you might wish to set it in the system-wide psqlrc file or your ~/.psqlrc file. </p>
  </dd></dl>
 </dl>
@@ -791,8 +791,8 @@ testdb=&gt;
 <dd> <p> If this variable is set to an integer value &gt; 0, the results of <code>SELECT</code> queries are fetched and displayed in groups of that many rows, rather than the default behavior of collecting the entire result set before display. Therefore only a limited amount of memory is used, regardless of the size of the result set. Settings of 100 to 1000 are commonly used when enabling this feature. Keep in mind that when using this feature, a query might fail after having already displayed some rows. </p>
  </dd>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Tip</code> </font> <br />
+<dd> <p> <br/>
+  <code>Tip</code>  <br/>
  Although you can use any output format with this feature, the default aligned format tends to look bad because each group of <i>FETCH_COUNT</i> rows will be formatted separately, leading to varying column widths across the row groups. The other output formats work better. </p>
  </dd></dl>
 </dl>
@@ -801,8 +801,8 @@ testdb=&gt;
 <dd> <p> If this variable is set to ignorespace, lines which begin with a space are not entered into the history list. If set to a value of ignoredups, lines matching the previous history line are not entered. A value of ignoreboth combines the two options. If unset, or if set to any other value than those above, all lines read in interactive mode are saved on the history list. </p>
  </dd>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Note</code> </font> <br />
+<dd> <p> <br/>
+  <code>Note</code>  <br/>
  This feature was shamelessly plagiarized from Bash. </p>
  </dd></dl>
 </dl>
@@ -816,8 +816,8 @@ testdb=&gt;
  </dd></dl>
 <p> in ~/.psqlrc will cause psql to maintain a separate history for each database. </p>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Note</code> </font> <br />
+<dd> <p> <br/>
+  <code>Note</code>  <br/>
  This feature was shamelessly plagiarized from Bash. </p>
  </dd></dl>
 </dl>
@@ -826,8 +826,8 @@ testdb=&gt;
 <dd> <p> The number of commands to store in the command history. The default value is 500. </p>
  </dd>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Note</code> </font> <br />
+<dd> <p> <br/>
+  <code>Note</code>  <br/>
  This feature was shamelessly plagiarized from Bash. </p>
  </dd></dl>
 </dl>
@@ -840,8 +840,8 @@ testdb=&gt;
 <dd> <p> If unset, sending an EOF character (usually Control+D) to an interactive session of psql will terminate the application. If set to a numeric value, that many EOF characters are ignored before the application terminates. If the variable is set but has no numeric value, the default is 10. </p>
  </dd>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Note</code> </font> <br />
+<dd> <p> <br/>
+  <code>Note</code>  <br/>
  This feature was shamelessly plagiarized from Bash. </p>
  </dd></dl>
 </dl>
@@ -886,13 +886,13 @@ testdb=&gt;
 <dd> <p> This variable can be set to the values default, verbose, or terse to control the verbosity of error reports. </p>
  </dd></dl>
 </dl>
-<p> <br />
- <font SIZE="+1"> <code>SQL Interpolation</code> </p>
+<p> <br/>
+  <code>SQL Interpolation</code> </p>
 <dl>
 <dd> <p> A key feature of psql variables is that you can substitute ("interpolate") them into regular SQL statements, as well as the arguments of meta-commands. Furthermore, psql provides facilities for ensuring that variable values used as SQL literals and identifiers are properly quoted. The syntax for interpolating a value without any quoting is to prepend the variable name with a colon (:). For example, </p>
  </dd>
 <dl>
-<dd> <p> </font> </p>
+<dd> <p>  </p>
 <pre><code>testdb=&gt; \set foo 'my_table' testdb=&gt; SELECT * FROM :foo; 
 </code></pre>
  </dd></dl>
@@ -912,8 +912,8 @@ testdb=&gt;
 <p> Since colons can legally appear in SQL commands, an apparent attempt at interpolation (that is, :name, :&#8216;name&#8217;, or :&quot;name&quot;) is not replaced unless the named variable is currently set. In any case, you can escape a colon with a backslash to protect it from substitution. </p>
 <p> The colon syntax for variables is standard SQL for embedded query languages, such as ECPG. The colon syntaxes for array slices and type casts are PostgreSQL extensions, which can sometimes conflict with the standard usage. The colon-quote syntax for escaping a variable&#8217;s value as an SQL literal or identifier is a psql extension. </dl>
  </p>
-<p> <br />
- <font SIZE="+1"> <code>Prompting</code> </p>
+<p> <br/>
+  <code>Prompting</code> </p>
 <dl>
 <dd> <p> The prompts psql issues can be customized to your preference. The three variables <i>PROMPT1</i>, <i>PROMPT2</i>, and <i>PROMPT3</i> contain strings and special escape sequences that describe the appearance of the prompt. Prompt 1 is the normal prompt that is issued when psql requests a new command. Prompt 2 is issued when more input is expected during command entry, for example because the command was not terminated with a semicolon or a quote was not closed. Prompt 3 is issued when you are running an SQL <code>COPY FROM STDIN</code> command and you need to type in a row value on the terminal. </p>
 <p> The value of the selected prompt variable is printed literally, except where a percent sign (%) is encountered. Depending on the next character, certain other text is substituted instead. Defined substitutions are: </p>
@@ -971,26 +971,26 @@ testdb=&gt;
 <dd> <p> Prompts can contain terminal control characters which, for example, change the color, background, or style of the prompt text, or change the title of the terminal window. In order for the line editing features of Readline to work properly, these non-printing control characters must be designated as invisible by surrounding them with %[ and %]. Multiple pairs of these can occur within the prompt. For example: </p>
  </dd>
 <dl>
-<dd> <p> </font> </p>
+<dd> <p>  </p>
 <pre><code>testdb=&gt; \set PROMPT1 '%[%033[1;33;40m%]%n@%/%R%[%033[0m%]%# '
 </code></pre>
  </dd></dl>
 <p> results in a boldfaced (1;) yellow-on-black (33;40) prompt on VT100-compatible, color-capable terminals. </dl>
  To insert a percent sign into your prompt, write %%. The default prompts are &#8216;%/%R%# &#8216; for prompts 1 and 2, and &#8216;&gt;&gt; &#8216; for prompt 3. </p>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Note</code> </font> <br />
+<dd> <p> <br/>
+  <code>Note</code>  <br/>
  </p>
 <p> This feature was shamelessly plagiarized from tcsh. </p>
  </dd></dl>
 </dl>
-<p> <br />
- <font SIZE="+1"> <code>Command-Line Editing</code> </p>
+<p> <br/>
+  <code>Command-Line Editing</code> </p>
 <dl>
 <dd> <p> psql supports the Readline library for convenient line editing and retrieval. The command history is automatically saved when psql exits and is reloaded when psql starts up. Tab-completion is also supported, although the completion logic makes no claim to be an SQL parser. If for some reason you do not like the tab completion, you can turn it off by putting this in a file named .inputrc in your home directory: </p>
  </dd>
 <dl>
-<dd> <p> </font> </p>
+<dd> <p>  </p>
 <pre><code>$if psql
 set disable-completion on
 $endif

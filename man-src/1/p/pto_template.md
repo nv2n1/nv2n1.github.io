@@ -12,7 +12,7 @@ description: "pto_template – Apply a template file"
 <h2>SYNOPSIS</h2>
 <p> <code>pto_template</code> [options] input.pto</p>
 <h2>DESCRIPTION</h2>
-<p> <code>pto_template</code> adds a template file to <font SIZE="-1">PTO</font></p>
+<p> <code>pto_template</code> adds a template file to PTO</p>
 <h2>USAGE</h2>
 <pre>
    pto_template --template=template.pto
@@ -20,7 +20,7 @@ description: "pto_template – Apply a template file"
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-o</code> | &#8211;output=file.pto</dt>
-<dd> Output Hugin <font SIZE="-1">PTO</font> file. Default: &lt;filename&gt;_template.pto</dd>
+<dd> Output Hugin PTO file. Default: &lt;filename&gt;_template.pto</dd>
 <dt><code>&#8211;template=template.pto</code></dt>
 <dd> Apply the given template file.</dd>
 <dt><code>-h</code> | &#8211;help</dt>

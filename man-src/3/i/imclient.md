@@ -44,9 +44,9 @@ description: "imclient library – authenticating callback interface to IMAP/IMS
 <dt><code>imclient_addcallback()</dt>
 <dd> Adds an untagged data callback to the imclient</code> connection. The function <code>imclient_addcallback</code> takes callbacks of the type <code>imclient_proc_t</code> which is defined to be: typedef void imclient_proc_t (struct imclient *imclient, void *rock, struct imclient_reply *reply); </dd>
 <p> and <code>struct imclient_reply *</code> is defined to be: </p>
-<p> struct imclient_reply {<br />
-&nbsp;<wbr>char&nbsp;<wbr>*keyword;<br />
-&nbsp;<wbr>long msgno;<br />
+<p> struct imclient_reply {<br/>
+&nbsp;<wbr>char&nbsp;<wbr>*keyword;<br/>
+&nbsp;<wbr>long msgno;<br/>
 &nbsp;<wbr>char&nbsp;<wbr>*text; }; </p>
 <p> After the first argument <code>imclient,</code> there can be zero or more instances of the set of <code>keyword,</code> <code>flags,</code> <code>proc,</code> and <code>rock,</code> each adding or changing a single callback. Each instance adds or changes the callback for <code>keyword. </code> The argument, <code>flags,</code> specifies information about the parsing of the untagged data. <code>proc</code> and <code>rock</code> specify the callback function and rock to invoke when the untagged data is received. <code>proc</code> may be a null pointer, in which case no function is invoked. The callback function may not call the functions <code>imclient_close(), imclient_send(), imclient_eof(),</code> <code>imclient_processoneevent(),</code> or <code>imclient_authenticate()</code> on the connection. The callback function may over write the text of untagged data.</p>
 <dt><code>imclient_send()</dt>

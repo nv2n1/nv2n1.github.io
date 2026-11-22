@@ -22,7 +22,7 @@ Real hazardRateImpl (Time) const
 instantaneous hazard rate at a given time</code></pre>
 <p> Inherits <code>QuantLib::DefaultProbabilityTermStructure</code>. Inherited by <code>InterpolatedDefaultDensityCurve&lt; Interpolator &gt;</code>.</p>
 <h3>Public Member Functions</h3>
-<p><code>Constructors</code><br />
+<p><code>Constructors</code><br/>
  See the <code>TermStructure</code> documentation for issues regarding constructors. </p>
 <pre><code>DefaultDensityStructure (const DayCounter &amp;dc=DayCounter())
 default constructor

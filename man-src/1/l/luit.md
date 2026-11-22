@@ -68,7 +68,7 @@ description: "luit – Locale and ISO 2022 support for Unicode terminals"
 <dt><code>-olog</code><i> filename</i></dt>
 <dd> Log into <i>filename</i> all the bytes sent to the terminal emulator.</dd>
 <dt><code>-alias</code><i> filename</i></dt>
-<dd> the locale alias file<br />
+<dd> the locale alias file<br/>
  (default: /usr/share/X11/locale/locale.alias).</dd>
 <dt><code>&#8212;</code></dt>
 <dd> End of options.</dd></dl>

@@ -12,42 +12,42 @@ description: "QwtText –"
 <h2>Synopsis</h2>
 <p>#include &lt;qwt_text.h&gt;</p>
 <h3>Public Types</h3>
-<p>enum <code>TextFormat</code> { <code>AutoText</code> = 0, <code>PlainText</code>, <code>RichText</code>, <code>MathMLText</code>, <code>TeXText</code>, <code>OtherFormat</code> = 100 }<br />
- <i>Text format. </i><br />
- enum <code>PaintAttribute</code> { <code>PaintUsingTextFont</code> = 0x01, <code>PaintUsingTextColor</code> = 0x02, <code>PaintBackground</code> = 0x04 }<br />
- <i>Paint Attributes. </i><br />
- enum <code>LayoutAttribute</code> { <code>MinimumLayout</code> = 0x01 }<br />
- <i>Layout Attributes The layout attributes affects some aspects of the layout of the text. </i><br />
- typedef QFlags&lt; <code>PaintAttribute</code> &gt; <code>PaintAttributes</code><br />
- <i>Paint attributes. </i><br />
- typedef QFlags&lt; <code>LayoutAttribute</code> &gt; <code>LayoutAttributes</code><br />
+<p>enum <code>TextFormat</code> { <code>AutoText</code> = 0, <code>PlainText</code>, <code>RichText</code>, <code>MathMLText</code>, <code>TeXText</code>, <code>OtherFormat</code> = 100 }<br/>
+ <i>Text format. </i><br/>
+ enum <code>PaintAttribute</code> { <code>PaintUsingTextFont</code> = 0x01, <code>PaintUsingTextColor</code> = 0x02, <code>PaintBackground</code> = 0x04 }<br/>
+ <i>Paint Attributes. </i><br/>
+ enum <code>LayoutAttribute</code> { <code>MinimumLayout</code> = 0x01 }<br/>
+ <i>Layout Attributes The layout attributes affects some aspects of the layout of the text. </i><br/>
+ typedef QFlags&lt; <code>PaintAttribute</code> &gt; <code>PaintAttributes</code><br/>
+ <i>Paint attributes. </i><br/>
+ typedef QFlags&lt; <code>LayoutAttribute</code> &gt; <code>LayoutAttributes</code><br/>
  <i>Layout attributes. </i></p>
 <h3>Public Member Functions</h3>
 <p><code>QwtText</code> (const QString &amp;=QString::null, <code>TextFormat</code> textFormat=<code>AutoText</code>) </p>
-<p> <code>QwtText</code> (const <code>QwtText</code> &amp;)<br />
- <i>Copy constructor. </i><br />
- <code>~QwtText</code> ()<br />
- <i>Destructor. </i><br />
- <code>QwtText</code> &amp; <code>operator=</code> (const <code>QwtText</code> &amp;)<br />
- <i>Assignment operator. </i><br />
- bool <code>operator==</code> (const <code>QwtText</code> &amp;) const<br />
- <i>Relational operator. </i><br />
- bool <code>operator!=</code> (const <code>QwtText</code> &amp;) const<br />
- <i>Relational operator. </i><br />
+<p> <code>QwtText</code> (const <code>QwtText</code> &amp;)<br/>
+ <i>Copy constructor. </i><br/>
+ <code>~QwtText</code> ()<br/>
+ <i>Destructor. </i><br/>
+ <code>QwtText</code> &amp; <code>operator=</code> (const <code>QwtText</code> &amp;)<br/>
+ <i>Assignment operator. </i><br/>
+ bool <code>operator==</code> (const <code>QwtText</code> &amp;) const<br/>
+ <i>Relational operator. </i><br/>
+ bool <code>operator!=</code> (const <code>QwtText</code> &amp;) const<br/>
+ <i>Relational operator. </i><br/>
  void <code>setText</code> (const QString &amp;, <code>QwtText::TextFormat</code> textFormat=<code>AutoText</code>) </p>
 <p> QString <code>text</code> () const </p>
 <p> bool <code>isNull</code> () const </p>
 <p> bool <code>isEmpty</code> () const </p>
 <p> void <code>setFont</code> (const QFont &amp;) </p>
-<p> QFont <code>font</code> () const<br />
- <i>Return the font. </i><br />
+<p> QFont <code>font</code> () const<br/>
+ <i>Return the font. </i><br/>
  QFont <code>usedFont</code> (const QFont &amp;) const </p>
-<p> void <code>setRenderFlags</code> (int flags)<br />
- <i>Change the render flags. </i><br />
+<p> void <code>setRenderFlags</code> (int flags)<br/>
+ <i>Change the render flags. </i><br/>
  int <code>renderFlags</code> () const </p>
 <p> void <code>setColor</code> (const QColor &amp;) </p>
-<p> QColor <code>color</code> () const<br />
- <i>Return the pen color, used for painting the text. </i><br />
+<p> QColor <code>color</code> () const<br/>
+ <i>Return the pen color, used for painting the text. </i><br/>
  QColor <code>usedColor</code> (const QColor &amp;) const </p>
 <p> void <code>setBorderRadius</code> (double) </p>
 <p> double <code>borderRadius</code> () const </p>
@@ -64,8 +64,8 @@ description: "QwtText –"
 <p> void <code>draw</code> (QPainter *painter, const QRectF &amp;rect) const </p>
 <h3>Static Public Member Functions</h3>
 <p>static const <code>QwtTextEngine</code> * <code>textEngine</code> (const QString &amp;<code>text</code>, <code>QwtText::TextFormat</code>=<code>AutoText</code>) </p>
-<p> static const <code>QwtTextEngine</code> * <code>textEngine</code> (<code>QwtText::TextFormat</code>)<br />
- <i>Find the text engine for a text format. </i><br />
+<p> static const <code>QwtTextEngine</code> * <code>textEngine</code> (<code>QwtText::TextFormat</code>)<br/>
+ <i>Find the text engine for a text format. </i><br/>
  static void <code>setTextEngine</code> (<code>QwtText::TextFormat</code>, <code>QwtTextEngine</code> *) </p>
 <h2>Detailed Description</h2>
 <p>A class representing a text. </p>
@@ -139,7 +139,7 @@ description: "QwtText –"
 <p>Constructor </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>text</i> Text content<br />
+<dd><i>text</i> Text content<br/>
  <i>textFormat</i> Text format</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>QBrush QwtText::backgroundBrush () const</h3>
@@ -167,13 +167,13 @@ description: "QwtText –"
 <p>Draw a text into a rectangle </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
+<dd><i>painter</i> Painter<br/>
  <i>rect</i> Rectangle</dd></dl>
 <h3>double QwtText::heightForWidth (doublewidth, const QFont &amp;defaultFont = QFont()) const</h3>
 <p>Find the height for a given width </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>defaultFont</i> Font, used for the calculation if the text has no font<br />
+<dd><i>defaultFont</i> Font, used for the calculation if the text has no font<br/>
  <i>width</i> Width</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -237,7 +237,7 @@ description: "QwtText –"
 <p>Change a layout attribute </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>attribute</i> Layout attribute<br />
+<dd><i>attribute</i> Layout attribute<br/>
  <i>on</i> On/Off</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -246,7 +246,7 @@ description: "QwtText –"
 <p>Change a paint attribute </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>attribute</i> Paint attribute<br />
+<dd><i>attribute</i> Paint attribute<br/>
  <i>on</i> On/Off</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
@@ -269,7 +269,7 @@ description: "QwtText –"
 <p>Assign a new text content </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>text</i> Text content<br />
+<dd><i>text</i> Text content<br/>
  <i>textFormat</i> Text format</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -280,7 +280,7 @@ description: "QwtText –"
 <p> For <code>QwtText::PlainText</code> it is not allowed to assign a engine == NULL. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>format</i> Text format<br />
+<dd><i>format</i> Text format<br/>
  <i>engine</i> Text engine</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -323,7 +323,7 @@ description: "QwtText –"
 <p> If no text engine is registered for the format <code>QwtPlainTextEngine</code> is returnd. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>text</i> Text, needed in case of AutoText<br />
+<dd><i>text</i> Text, needed in case of AutoText<br/>
  <i>format</i> Text format</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

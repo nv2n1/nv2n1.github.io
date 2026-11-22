@@ -15,7 +15,7 @@ description: "QuantLib::Calendar::OrthodoxImpl – partial calendar implementati
 <h3>Protected Member Functions</h3>
 <p>bool <code>isWeekend</code> (<code>Weekday</code>) const </p>
 <h3>Static Protected Member Functions</h3>
-<p>static Day <code>easterMonday</code> (Year)<br />
+<p>static Day <code>easterMonday</code> (Year)<br/>
  <i>expressed relative to first day of year </i></p>
 <h2>Detailed Description</h2>
 <p>partial calendar implementation </p>

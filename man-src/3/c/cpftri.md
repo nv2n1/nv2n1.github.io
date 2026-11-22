@@ -11,7 +11,7 @@ description: "cpftri.f –"
 <p> cpftri.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cpftri</code> (TRANSR, UPLO, N, A, INFO)<br />
+<p> subroutine <code>cpftri</code> (TRANSR, UPLO, N, A, INFO)<br/>
  <i></i><code>CPFTRI</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cpftri (characterTRANSR, characterUPLO, integerN, complex, dimension( 0: * )A, integerINFO)</h3>

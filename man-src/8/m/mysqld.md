@@ -15,7 +15,7 @@ description: "mysqld – the MySQL server"
 <p><code>mysqld</code>, also known as MySQL Server, is the main program that does most of the work in a MySQL installation. MySQL Server manages access to the MySQL data directory that contains databases and tables. The data directory is also the default location for other information such as log files and status files.</p>
 <dl>
 <dd>
-</dd><dd><font SIZE="+1"> <code>Note</code> </font></dd>
+</dd><dd> <code>Note</code> </dd>
 <dd>
 </dd><dd>Some installation packages contain a debugging version of the server named <code>mysqld-debug</code>. Invoke this version instead of <code>mysqld</code> for debugging support, memory allocation checking, and trace file support (see Section 28.5.1.2, &#8220;Creating Trace Files&#8221;).  When MySQL server starts, it listens for network connections from client programs and manages access to databases on behalf of those clients. The <code>mysqld</code> program has many options that can be specified at startup. For a complete list of options, run this command:</dd>
 <dl>

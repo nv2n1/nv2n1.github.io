@@ -19,7 +19,7 @@ description: "tmail – Mail Delivery Module"
 <p> The <code>-b</code> flag specifies a format to create INBOX if INBOX does not already exist. This flag requires privileges, and can not be used with <code>-I</code>. The argument is a format name such as mix, mbx, etc. </p>
 <p> The <code>-D</code> flag specifies debugging; this enables additional message telemetry. </p>
 <p> The <code>-f</code> or <code>-r</code> flag is used by the mail delivery program to specify a Return-Path. The header </p>
-<p>Return-Path:&nbsp;<wbr>&lt;<i>from_name</i>&gt;&nbsp;<wbr><br />
+<p>Return-Path:&nbsp;<wbr>&lt;<i>from_name</i>&gt;&nbsp;<wbr><br/>
  is prepended to the message before delivery. </p>
 <p> The <code>-I</code> flag is used by the mail delivery program to specify an alternative INBOX name. This flag requires privileges, and can not be used with <code>-b</code>. This affects the location and format of INBOX. If specified, it should be in one of three forms: </p>
 <p> The first form of argument to <code>-I</code> is the string &quot;INBOX&quot;, which means to write to the system default inbox using the system default mailbox format. These system defaults are defined when the c-client library is built. </p>
@@ -56,5 +56,5 @@ Mlocal, P=/usr/local/etc/tmail, F=lsDFMAw5:/|@qPrn+,
 <h2>AUTHOR</h2>
 <p> Mark Crispin, MRC [at] CAC.Washington.EDU</p>
 <h2>SEE ALSO</h2>
-<p> binmail(1)<br />
+<p> binmail(1)<br/>
  sendmail(8) </p>

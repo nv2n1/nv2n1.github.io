@@ -19,7 +19,7 @@ perl5282delta - what is new for perl v5.28.2
 
 <h3>Any set of digits in the Common script are legal in a script run of another script</h3>
 
- There are several sets of digits in the Common script. <tt>&quot;[0-9]&quot;</tt> is the most familiar. But there are also <tt>&quot;[\x{FF10}-\x{FF19}]&quot;</tt> (<font SIZE="-1">FULLWIDTH DIGIT ZERO</font> - <font SIZE="-1">FULLWIDTH DIGIT NINE</font>), and several sets for use in mathematical notation, such as the <font SIZE="-1">MATHEMATICAL</font> DOUBLE-STRUCK DIGITs. Any of these sets should be able to appear in script runs of, say, Greek. But the previous design overlooked all but the <font SIZE="-1">ASCII</font> digits <tt>&quot;[0-9]&quot;</tt>, so the design was flawed. This has been fixed, so is both a bug fix and an incompatibility. 
+ There are several sets of digits in the Common script. <tt>&quot;[0-9]&quot;</tt> is the most familiar. But there are also <tt>&quot;[\x{FF10}-\x{FF19}]&quot;</tt> (FULLWIDTH DIGIT ZERO - FULLWIDTH DIGIT NINE), and several sets for use in mathematical notation, such as the MATHEMATICAL DOUBLE-STRUCK DIGITs. Any of these sets should be able to appear in script runs of, say, Greek. But the previous design overlooked all but the ASCII digits <tt>&quot;[0-9]&quot;</tt>, so the design was flawed. This has been fixed, so is both a bug fix and an incompatibility. 
 
  All digits in a run still have to come from the same set of ten digits. 
 
@@ -43,10 +43,10 @@ perl5282delta - what is new for perl v5.28.2
 
 <dl>
 <dt>Windows
-</dt><dd> The Windows Server 2003 <font SIZE="-1">SP1</font> Platform <font SIZE="-1">SDK</font> build, with its early x64 compiler and tools, was accidentally broken in Perl 5.27.9. This has now been fixed.
-</dd><dt>Mac <font SIZE="-1">OS X</font>
-</dt><dd> Perl's build and testing process on Mac <font SIZE="-1">OS X</font> for <tt>&quot;-Duseshrplib&quot;</tt> builds is now compatible with Mac <font SIZE="-1">OS X</font> System Integrity Protection (<font SIZE="-1">SIP</font>). 
- <font SIZE="-1">SIP</font> prevents binaries in <i>/bin</i> (and a few other places) being passed the <tt>&quot;DYLD_LIBRARY_PATH&quot;</tt> environment variable. For our purposes this prevents <tt>&quot;DYLD_LIBRARY_PATH&quot;</tt> from being passed to the shell, which prevents that variable being passed to the testing or build process, so running <tt>&quot;perl&quot;</tt> couldn't find <i>libperl.dylib</i>. 
+</dt><dd> The Windows Server 2003 SP1 Platform SDK build, with its early x64 compiler and tools, was accidentally broken in Perl 5.27.9. This has now been fixed.
+</dd><dt>Mac OS X
+</dt><dd> Perl's build and testing process on Mac OS X for <tt>&quot;-Duseshrplib&quot;</tt> builds is now compatible with Mac OS X System Integrity Protection (SIP). 
+ SIP prevents binaries in <i>/bin</i> (and a few other places) being passed the <tt>&quot;DYLD_LIBRARY_PATH&quot;</tt> environment variable. For our purposes this prevents <tt>&quot;DYLD_LIBRARY_PATH&quot;</tt> from being passed to the shell, which prevents that variable being passed to the testing or build process, so running <tt>&quot;perl&quot;</tt> couldn't find <i>libperl.dylib</i>. 
  To work around that, the initial build of the <i>perl</i> executable expects to find <i>libperl.dylib</i> in the build directory, and the library path is then adjusted during installation to point to the installed library. 
  [perl #126706] &lt;<a rel="nofollow" HREF="https://rt.perl.org/Ticket/Display.html?id=126706">https://rt.perl.org/Ticket/Display.html?id=126706</a>&gt;</dd></dl>
 
@@ -72,7 +72,7 @@ perl5282delta - what is new for perl v5.28.2
 </pre> 
  because the child's stdin would be closed on exec. This has now been fixed.
 </dd><dt>&bull;
-</dt><dd> <tt>&quot;pack &quot;u&quot;, &quot;invalid uuencoding&quot;&quot;</tt> now properly <font SIZE="-1">NUL</font> terminates the zero-length <font SIZE="-1">SV</font> produced. 
+</dt><dd> <tt>&quot;pack &quot;u&quot;, &quot;invalid uuencoding&quot;&quot;</tt> now properly NUL terminates the zero-length SV produced. 
  [perl #132655] &lt;<a rel="nofollow" HREF="https://rt.perl.org/Ticket/Display.html?id=132655">https://rt.perl.org/Ticket/Display.html?id=132655</a>&gt;
 </dd><dt>&bull;
 </dt><dd> Failing to compile a format now aborts compilation. Like other errors in sub-parses this could leave the parser in a strange state, possibly crashing perl if compilation continued. 
@@ -92,9 +92,9 @@ perl5282delta - what is new for perl v5.28.2
 
  The list above is almost certainly incomplete as it is automatically generated from version control history. In particular, it does not include the names of the (very much appreciated) contributors who reported issues to the Perl bug tracker. 
 
- Many of the changes included in this version originated in the <font SIZE="-1">CPAN</font> modules included in Perl's core. We're grateful to the entire <font SIZE="-1">CPAN</font> community for helping Perl to flourish. 
+ Many of the changes included in this version originated in the CPAN modules included in Perl's core. We're grateful to the entire CPAN community for helping Perl to flourish. 
 
- For a more complete list of all of Perl's historical contributors, please see the <i></i><font SIZE="-1"><i>AUTHORS</i></font><i></i> file in the Perl source distribution.
+ For a more complete list of all of Perl's historical contributors, please see the <i></i><i>AUTHORS</i><i></i> file in the Perl source distribution.
 
 <h2>Reporting Bugs</h2>
 
@@ -102,7 +102,7 @@ perl5282delta - what is new for perl v5.28.2
 
  If you believe you have an unreported bug, please run the perlbug program included with your release. Be sure to trim your bug down to a tiny but sufficient test case. Your bug report, along with the output of <tt>&quot;perl -V&quot;</tt>, will be sent off to perlbug [at] perl.org to be analysed by the Perl porting team. 
 
- If the bug you are reporting has security implications which make it inappropriate to send to a publicly archived mailing list, then see ``<font SIZE="-1">SECURITY VULNERABILITY CONTACT INFORMATION''</font> in perlsec for details of how to report the issue.
+ If the bug you are reporting has security implications which make it inappropriate to send to a publicly archived mailing list, then see ``SECURITY VULNERABILITY CONTACT INFORMATION'' in perlsec for details of how to report the issue.
 
 <h2>Give Thanks</h2>
 
@@ -118,8 +118,8 @@ perl5282delta - what is new for perl v5.28.2
 
  The <i>Changes</i> file for an explanation of how to view exhaustive details on what changed. 
 
- The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. 
+ The <i></i><i>INSTALL</i><i></i> file for how to build Perl. 
 
- The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. 
+ The <i></i><i>README</i><i></i> file for general stuff. 
 
  The <i>Artistic</i> and <i>Copying</i> files for copyright information.

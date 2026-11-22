@@ -11,7 +11,7 @@ description: "dpprfs.f –"
 <p> dpprfs.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dpprfs</code> (UPLO, N, NRHS, AP, AFP, B, LDB, X, LDX, FERR, BERR, WORK, IWORK, INFO)<br />
+<p> subroutine <code>dpprfs</code> (UPLO, N, NRHS, AP, AFP, B, LDB, X, LDX, FERR, BERR, WORK, IWORK, INFO)<br/>
  <i></i><code>DPPRFS</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dpprfs (characterUPLO, integerN, integerNRHS, double precision, dimension( * )AP, double precision, dimension( * )AFP, double precision, dimension( ldb, * )B, integerLDB, double precision, dimension( ldx, * )X, integerLDX, double precision, dimension( * )FERR, double precision, dimension( * )BERR, double precision, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>

@@ -15,34 +15,34 @@ description: "g_h2order – computes the orientation of water molecules"
 <h2>DESCRIPTION</h2>
 <p> Compute the orientation of water molecules with respect to the normal of the box. The program determines the average cosine of the angle between de dipole moment of water and an axis of the box. The box is divided in slices and the average orientation per slice is printed. Each water molecule is assigned to a slice, per time frame, based on the position of the oxygen. When -nm is used the angle between the water dipole and the axis from the center of mass to the oxygen is calculated instead of the angle between the dipole and a box axis.</p>
 <h2>FILES</h2>
-<p> <code>-f</code><i> traj.xtc</i> <code>Input</code><br />
+<p> <code>-f</code><i> traj.xtc</i> <code>Input</code><br/>
 &nbsp;<wbr>Trajectory: xtc trr trj gro g96 pdb cpt&nbsp;<wbr> </p>
-<p> <code>-n</code><i> index.ndx</i> <code>Input</code><br />
+<p> <code>-n</code><i> index.ndx</i> <code>Input</code><br/>
 &nbsp;<wbr>Index file&nbsp;<wbr> </p>
-<p> <code>-nm</code><i> index.ndx</i> <code>Input, Opt.</code><br />
+<p> <code>-nm</code><i> index.ndx</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Index file&nbsp;<wbr> </p>
-<p> <code>-s</code><i> topol.tpr</i> <code>Input</code><br />
+<p> <code>-s</code><i> topol.tpr</i> <code>Input</code><br/>
 &nbsp;<wbr>Run input file: tpr tpb tpa&nbsp;<wbr> </p>
-<p> <code>-o</code><i> order.xvg</i> <code>Output</code><br />
+<p> <code>-o</code><i> order.xvg</i> <code>Output</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
 <h2>OTHER OPTIONS</h2>
-<p> <code>-[no]h</code><i>no </i><br />
+<p> <code>-[no]h</code><i>no </i><br/>
 &nbsp;<wbr>Print help info and quit </p>
-<p> <code>-nice</code><i> int</i><code> 19</code><br />
+<p> <code>-nice</code><i> int</i><code> 19</code><br/>
 &nbsp;<wbr>Set the nicelevel </p>
-<p> <code>-b</code><i> time</i><code> 0 </code><br />
+<p> <code>-b</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>First frame&nbsp;<wbr>(ps)&nbsp;<wbr>to read from trajectory </p>
-<p> <code>-e</code><i> time</i><code> 0 </code><br />
+<p> <code>-e</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>Last frame&nbsp;<wbr>(ps)&nbsp;<wbr>to read from trajectory </p>
-<p> <code>-dt</code><i> time</i><code> 0 </code><br />
+<p> <code>-dt</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>Only use frame when t MOD dt&nbsp;<wbr>=&nbsp;<wbr>first time&nbsp;<wbr>(ps) </p>
-<p> <code>-[no]w</code><i>no </i><br />
+<p> <code>-[no]w</code><i>no </i><br/>
 &nbsp;<wbr>View output xvg, xpm, eps and pdb files </p>
-<p> <code>-[no]xvgr</code><i>yes </i><br />
+<p> <code>-[no]xvgr</code><i>yes </i><br/>
 &nbsp;<wbr>Add specific codes&nbsp;<wbr>(legends etc.)&nbsp;<wbr>in the output xvg files for the xmgrace program </p>
-<p> <code>-d</code><i> string</i><code> Z</code><br />
+<p> <code>-d</code><i> string</i><code> Z</code><br/>
 &nbsp;<wbr>Take the normal on the membrane in direction X, Y or Z. </p>
-<p> <code>-sl</code><i> int</i><code> 0</code><br />
+<p> <code>-sl</code><i> int</i><code> 0</code><br/>
 &nbsp;<wbr>Calculate order parameter as function of boxlength, dividing the box in nr slices. </p>
 <h2>KNOWN PROBLEMS</h2>
 <p> &#8211; The program assigns whole water molecules to a slice, based on the firstatom of three in the index file group. It assumes an order O,H,H.Name is not important, but the order is. If this demand is not met,assigning molecules to slices is different. </p>

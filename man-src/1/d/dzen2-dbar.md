@@ -34,13 +34,13 @@ description: "dzen2-dbar – simple gadget that you can use in combination with 
 <h2>USAGE EXAMPLES</h2>
 <dl>
 <dt><code>Static 0% and 100% mark or single value input:</code></dt>
-<dd> Command: echo 25 | dbar -m 100 -l Sometext<br />
+<dd> Command: echo 25 | dbar -m 100 -l Sometext<br/>
  Output: Sometext 25% [====== ]</dd>
 <dt><code>If your 100% mark changes dynamically or 2-values input:</code></dt>
-<dd> Command: echo &quot;50 150&quot; | dbar<br />
+<dd> Command: echo &quot;50 150&quot; | dbar<br/>
  Output: 33% [======== ]</dd>
 <dt><code>If your value range is not between [0, maxval] or 3-values input:</code></dt>
-<dd> Command: echo &quot;50 -25 150&quot; | dbar<br />
+<dd> Command: echo &quot;50 -25 150&quot; | dbar<br/>
  Output: 43% [=========== ]</dd></dl>
 <p> Dbar was written by Robert Manea. </p>
 <p> This manual page was written by bertagaz &lt;bertagaz [at] ptitcanardnoir.org&gt;, for the Debian project (but may be used by others). </p>

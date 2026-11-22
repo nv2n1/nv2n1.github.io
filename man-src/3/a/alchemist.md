@@ -75,188 +75,188 @@ description: "alchemist.h –"
 <h3>Enumerations</h3>
 <p> enum <code>AdmDataType</code> { <code>ADM_TYPE_UNKNOWN</code> = 0, <code>ADM_TYPE_LIST</code> = 1, <code>ADM_TYPE_COPY</code> = 2, <code>ADM_TYPE_INT</code> = 3, <code>ADM_TYPE_FLOAT</code> = 4, <code>ADM_TYPE_BOOL</code> = 5, <code>ADM_TYPE_STRING</code> = 6, <code>ADM_TYPE_BASE64</code> = 7 } </p>
 <h3>Functions</h3>
-<p> void <code>AdmError_create</code> (<code>AdmError</code> **error, int num, const char *format,&#8230;)<br />
- <i>Allocate new AdmError structure. </i><br />
- void <code>AdmError_ref</code> (<code>AdmError</code> *error)<br />
- <i>Increment the ref count of an AdmError structure. </i><br />
- void <code>AdmError_unref</code> (<code>AdmError</code> *error)<br />
- <i>Decrement the ref count of an AdmError structure. </i><br />
- const char * <code>AdmError_strerr</code> (<code>AdmError</code> *error)<br />
- <i>String description of error. </i><br />
- int <code>AdmError_errno</code> (<code>AdmError</code> *error)<br />
- <i>Integer error code of error. </i><br />
+<p> void <code>AdmError_create</code> (<code>AdmError</code> **error, int num, const char *format,&#8230;)<br/>
+ <i>Allocate new AdmError structure. </i><br/>
+ void <code>AdmError_ref</code> (<code>AdmError</code> *error)<br/>
+ <i>Increment the ref count of an AdmError structure. </i><br/>
+ void <code>AdmError_unref</code> (<code>AdmError</code> *error)<br/>
+ <i>Decrement the ref count of an AdmError structure. </i><br/>
+ const char * <code>AdmError_strerr</code> (<code>AdmError</code> *error)<br/>
+ <i>String description of error. </i><br/>
+ int <code>AdmError_errno</code> (<code>AdmError</code> *error)<br/>
+ <i>Integer error code of error. </i><br/>
  <code>AdmRefStr</code> * <code>AdmRefStr_ref</code> (<code>AdmRefStr</code> *refstr) </p>
 <p> void <code>AdmRefStr_unref</code> (<code>AdmRefStr</code> *refstr) </p>
 <p> size_t <code>AdmRefStr_len</code> (<code>AdmRefStr</code> *refstr) </p>
-<p> <code>AdmRefStr</code> * <code>AdmRefStr_get</code> (const char *str, int force)<br />
- <i>Get an AdmRefStr. </i><br />
- <code>AdmRefStr</code> * <code>AdmRefStr_nget</code> (const char *str, size_t len, int force)<br />
- <i>Get an AdmRefStr, by length. </i><br />
- <code>AdmContext</code> * <code>AdmContext_new</code> (const char *name, unsigned int serial, <code>AdmError</code> **error)<br />
- <i>AdmContext constructor. </i><br />
- <code>AdmContext</code> * <code>AdmContext_ref</code> (<code>AdmContext</code> *context, <code>AdmError</code> **error)<br />
- <i>AdmContext reference increment. </i><br />
- void <code>AdmContext_unref</code> (<code>AdmContext</code> *context, <code>AdmError</code> **error)<br />
- <i>AdmContext reference decrement. </i><br />
- <code>AdmContext</code> * <code>AdmContext_copy</code> (<code>AdmContext</code> *context, <code>AdmError</code> **error)<br />
- <i>AdmContext copy operator. </i><br />
- <code>AdmContext</code> * <code>AdmContext_merge</code> (const char *name, unsigned int serial, <code>AdmContext</code> *contextA, <code>AdmContext</code> *contextB, <code>AdmError</code> **error)<br />
- <i>AdmContext merge operator. </i><br />
- void <code>AdmContext_flatten</code> (<code>AdmContext</code> *context, <code>AdmError</code> **error)<br />
- <i>AdmContext flatten operator. </i><br />
- void <code>AdmContext_strip</code> (<code>AdmContext</code> *context, <code>AdmError</code> **error)<br />
- <i>AdmContext strip function. </i><br />
+<p> <code>AdmRefStr</code> * <code>AdmRefStr_get</code> (const char *str, int force)<br/>
+ <i>Get an AdmRefStr. </i><br/>
+ <code>AdmRefStr</code> * <code>AdmRefStr_nget</code> (const char *str, size_t len, int force)<br/>
+ <i>Get an AdmRefStr, by length. </i><br/>
+ <code>AdmContext</code> * <code>AdmContext_new</code> (const char *name, unsigned int serial, <code>AdmError</code> **error)<br/>
+ <i>AdmContext constructor. </i><br/>
+ <code>AdmContext</code> * <code>AdmContext_ref</code> (<code>AdmContext</code> *context, <code>AdmError</code> **error)<br/>
+ <i>AdmContext reference increment. </i><br/>
+ void <code>AdmContext_unref</code> (<code>AdmContext</code> *context, <code>AdmError</code> **error)<br/>
+ <i>AdmContext reference decrement. </i><br/>
+ <code>AdmContext</code> * <code>AdmContext_copy</code> (<code>AdmContext</code> *context, <code>AdmError</code> **error)<br/>
+ <i>AdmContext copy operator. </i><br/>
+ <code>AdmContext</code> * <code>AdmContext_merge</code> (const char *name, unsigned int serial, <code>AdmContext</code> *contextA, <code>AdmContext</code> *contextB, <code>AdmError</code> **error)<br/>
+ <i>AdmContext merge operator. </i><br/>
+ void <code>AdmContext_flatten</code> (<code>AdmContext</code> *context, <code>AdmError</code> **error)<br/>
+ <i>AdmContext flatten operator. </i><br/>
+ void <code>AdmContext_strip</code> (<code>AdmContext</code> *context, <code>AdmError</code> **error)<br/>
+ <i>AdmContext strip function. </i><br/>
  char * <code>AdmContext_toXML</code> (<code>AdmContext</code> *context, <code>AdmError</code> **error) </p>
 <p> <code>AdmContext</code> * <code>AdmContext_fromXML</code> (const char *xml, <code>AdmError</code> **error) </p>
 <p> int <code>AdmContext_readFromFile</code> (<code>AdmContext</code> **context, const char *path, <code>AdmError</code> **error) </p>
 <p> int <code>AdmContext_writeToFile</code> (<code>AdmContext</code> *context, const char *path, int mode, uid_t uid, gid_t gid, <code>AdmError</code> **error) </p>
-<p> <code>AdmRefStr</code> * <code>AdmContext_getMask</code> (<code>AdmContext</code> *context, unsigned int index, <code>AdmError</code> **error)<br />
- <i>AdmContext mask set accessor. </i><br />
- int <code>AdmContext_setMask</code> (<code>AdmContext</code> *context, const char *path, <code>AdmError</code> **error)<br />
- <i>AdmContext mask set mutator. </i><br />
- int <code>AdmContext_clearMaskByIndex</code> (<code>AdmContext</code> *context, unsigned int index, <code>AdmError</code> **error)<br />
- <i>AdmContext mask set element index remove. </i><br />
- int <code>AdmContext_clearMaskByPath</code> (<code>AdmContext</code> *context, const char *path, <code>AdmError</code> **error)<br />
- <i>AdmContext mask set element data path remove. </i><br />
- unsigned int <code>AdmContext_getNumMasks</code> (<code>AdmContext</code> *context, <code>AdmError</code> **error)<br />
- <i>AdmContext mask set length aggregator. </i><br />
- <code>AdmIdentity</code> * <code>AdmContext_getIdentityRoot</code> (<code>AdmContext</code> *context, <code>AdmError</code> **error)<br />
- <i>AdmContext identity root accessor. </i><br />
- <code>AdmIdentity</code> * <code>AdmIdentity_getParentA</code> (<code>AdmIdentity</code> *identity, <code>AdmError</code> **error)<br />
- <i>AdmIdentity parentA accessor. </i><br />
- <code>AdmIdentity</code> * <code>AdmIdentity_getParentB</code> (<code>AdmIdentity</code> *identity, <code>AdmError</code> **error)<br />
- <i>AdmIdentity parentB accessor. </i><br />
- <code>AdmRefStr</code> * <code>AdmIdentity_getName</code> (<code>AdmIdentity</code> *identity, <code>AdmError</code> **error)<br />
- <i>AdmIdentity name accessor. </i><br />
- int <code>AdmIdentity_setName</code> (<code>AdmIdentity</code> *identity, const char *name, <code>AdmError</code> **error)<br />
- <i>AdmIdentity name mutator. </i><br />
- unsigned int <code>AdmIdentity_getSerial</code> (<code>AdmIdentity</code> *identity, <code>AdmError</code> **error)<br />
- <i>AdmIdentity serial number accessor. </i><br />
- int <code>AdmIdentity_setSerial</code> (<code>AdmIdentity</code> *identity, unsigned int serial, <code>AdmError</code> **error)<br />
- <i>AdmIdentity serial number mutator. </i><br />
- <code>AdmIdentity</code> * <code>AdmIdentity_ref</code> (<code>AdmIdentity</code> *identity, <code>AdmError</code> **error)<br />
- <i>AdmIdentity reference increment. </i><br />
- void <code>AdmIdentity_unref</code> (<code>AdmIdentity</code> *identity, <code>AdmError</code> **error)<br />
- <i>AdmIdentity reference decrement. </i><br />
- <code>AdmContext</code> * <code>AdmIdentity_getContext</code> (<code>AdmIdentity</code> *identity, <code>AdmError</code> **error)<br />
- <i>AdmIdentity context accessor. </i><br />
- int <code>AdmIdentity_isAlive</code> (<code>AdmIdentity</code> *identity, <code>AdmError</code> **error)<br />
- <i>AdmIdentity reference check. </i><br />
- <code>AdmData</code> * <code>AdmContext_getDataRoot</code> (<code>AdmContext</code> *context, <code>AdmError</code> **error)<br />
- <i>AdmContext data root accessor. </i><br />
- <code>AdmData</code> * <code>AdmData_getContainer</code> (<code>AdmData</code> *data, <code>AdmError</code> **error)<br />
- <i>AdmData container accessor. </i><br />
- <code>AdmData</code> * <code>AdmData_getPrev</code> (<code>AdmData</code> *data, int wrap, <code>AdmError</code> **error)<br />
- <i>get the previous sibling of an AdmData element </i><br />
- <code>AdmData</code> * <code>AdmData_getNext</code> (<code>AdmData</code> *data, int wrap, <code>AdmError</code> **error)<br />
- <i>get the next sibling of an AdmData element </i><br />
- <code>AdmContext</code> * <code>AdmData_getContext</code> (<code>AdmData</code> *data, <code>AdmError</code> **error)<br />
- <i>AdmData context accessor. </i><br />
- <code>AdmData</code> * <code>AdmContext_getDataByPath</code> (<code>AdmContext</code> *context, const char *path, <code>AdmError</code> **error)<br />
- <i>AdmData path lookup. </i><br />
- <code>AdmDataType</code> <code>AdmData_getType</code> (<code>AdmData</code> *data, <code>AdmError</code> **error)<br />
- <i>AdmData type accessor. </i><br />
- <code>AdmData</code> * <code>AdmData_ref</code> (<code>AdmData</code> *data, <code>AdmError</code> **error)<br />
- <i>AdmData reference increment. </i><br />
- void <code>AdmData_unref</code> (<code>AdmData</code> *data, <code>AdmError</code> **error)<br />
- <i>AdmData reference decrement. </i><br />
- int <code>AdmData_isAlive</code> (<code>AdmData</code> *data, <code>AdmError</code> **error)<br />
- <i>AdmData reference check. </i><br />
- int <code>AdmData_unlink</code> (<code>AdmData</code> *data, <code>AdmError</code> **error)<br />
- <i>AdmData unlink operator. </i><br />
- int <code>AdmData_validName</code> (const char *name)<br />
- <i>Checks a string for name validity. </i><br />
- <code>AdmRefStr</code> * <code>AdmData_getName</code> (<code>AdmData</code> *data, <code>AdmError</code> **error)<br />
- <i>AdmData name accessor. </i><br />
- int <code>AdmData_setName</code> (<code>AdmData</code> *data, const char *name, <code>AdmError</code> **error)<br />
- <i>AdmData name mutator. </i><br />
- <code>AdmRefStr</code> * <code>AdmData_getSource</code> (<code>AdmData</code> *data, <code>AdmError</code> **error)<br />
- <i>AdmData source accessor. </i><br />
- int <code>AdmData_setSource</code> (<code>AdmData</code> *data, const char *source, <code>AdmError</code> **error)<br />
- <i>AdmData source mutator. </i><br />
- int <code>AdmData_isProtected</code> (<code>AdmData</code> *data, <code>AdmError</code> **error)<br />
- <i>AdmData protected verification. </i><br />
- int <code>AdmData_setProtected</code> (<code>AdmData</code> *data, int state, <code>AdmError</code> **error)<br />
- <i>AdmData protected mutator. </i><br />
- int <code>AdmList_isAnonymous</code> (<code>AdmList</code> *list, <code>AdmError</code> **error)<br />
- <i>AdmList anonymous verification. </i><br />
- int <code>AdmList_setAnonymous</code> (<code>AdmList</code> *list, int state, <code>AdmError</code> **error)<br />
- <i>AdmList anonymous mutator. </i><br />
- int <code>AdmList_isAtomic</code> (<code>AdmList</code> *list, <code>AdmError</code> **error)<br />
- <i>AdmList atomic verification. </i><br />
- int <code>AdmList_setAtomic</code> (<code>AdmList</code> *list, int state, <code>AdmError</code> **error)<br />
- <i>AdmList atomic mutator. </i><br />
- int <code>AdmList_isPrepend</code> (<code>AdmList</code> *list, <code>AdmError</code> **error)<br />
- <i>AdmList prepend verification. </i><br />
- int <code>AdmList_setPrepend</code> (<code>AdmList</code> *list, int state, <code>AdmError</code> **error)<br />
- <i>AdmList prepend mutator. </i><br />
- unsigned int <code>AdmList_getNumData</code> (<code>AdmList</code> *list, <code>AdmError</code> **error)<br />
- <i>AdmList length aggregator. </i><br />
- <code>AdmData</code> * <code>AdmList_getDataByIndex</code> (<code>AdmList</code> *list, unsigned int index, <code>AdmError</code> **error)<br />
- <i>AdmList child index accessor. </i><br />
- <code>AdmData</code> * <code>AdmList_getDataByName</code> (<code>AdmList</code> *list, const char *name, <code>AdmError</code> **error)<br />
- <i>AdmList child name accessor. </i><br />
- <code>AdmData</code> * <code>AdmList_getDataByPath</code> (<code>AdmList</code> *list, const char *path, <code>AdmError</code> **error)<br />
- <i>AdmList child data path accessor. </i><br />
- <code>AdmData</code> * <code>AdmList_addData</code> (<code>AdmList</code> *list, <code>AdmDataType</code> type, const char *name, <code>AdmError</code> **error)<br />
- <i>AdmList add child operator. </i><br />
- int <code>AdmList_moveData</code> (<code>AdmList</code> *list, <code>AdmData</code> *data, unsigned int index, <code>AdmError</code> **error)<br />
- <i>AdmList child move operator. </i><br />
- <code>AdmData</code> * <code>AdmList_copyData</code> (<code>AdmList</code> *list, <code>AdmData</code> *data, <code>AdmError</code> **error)<br />
- <i>AdmList copy data operator. </i><br />
- <code>AdmData</code> * <code>AdmList_renameCopyData</code> (<code>AdmList</code> *list, <code>AdmData</code> *data, const char *name, <code>AdmError</code> **error)<br />
- <i>AdmList copy data operator. </i><br />
- unsigned int <code>AdmData_getPos</code> (<code>AdmData</code> *data, <code>AdmError</code> **error)<br />
- <i>AdmList child position operator. </i><br />
- int <code>AdmInt_getValue</code> (<code>AdmInt</code> *int_scalar, <code>AdmError</code> **error)<br />
- <i>get an AdmInt&#8217;s value </i><br />
- int <code>AdmInt_setValue</code> (<code>AdmInt</code> *int_scalar, int value, <code>AdmError</code> **error)<br />
- <i>set an AdmInt&#8217;s value </i><br />
- double <code>AdmFloat_getValue</code> (<code>AdmFloat</code> *float_scalar, <code>AdmError</code> **error)<br />
- <i>get an AdmFloat&#8217;s value </i><br />
- int <code>AdmFloat_setValue</code> (<code>AdmFloat</code> *float_scalar, double value, <code>AdmError</code> **error)<br />
- <i>set an AdmFloat&#8217;s value </i><br />
- int <code>AdmBool_getValue</code> (<code>AdmBool</code> *bool_scalar, <code>AdmError</code> **error)<br />
- <i>get an AdmBool&#8217;s value </i><br />
- int <code>AdmBool_setValue</code> (<code>AdmBool</code> *bool_scalar, int value, <code>AdmError</code> **error)<br />
- <i>set an AdmBool&#8217;s value </i><br />
- <code>AdmRefStr</code> * <code>AdmString_getValue</code> (<code>AdmString</code> *string_scalar, <code>AdmError</code> **error)<br />
- <i>get an AdmString&#8217;s value </i><br />
+<p> <code>AdmRefStr</code> * <code>AdmContext_getMask</code> (<code>AdmContext</code> *context, unsigned int index, <code>AdmError</code> **error)<br/>
+ <i>AdmContext mask set accessor. </i><br/>
+ int <code>AdmContext_setMask</code> (<code>AdmContext</code> *context, const char *path, <code>AdmError</code> **error)<br/>
+ <i>AdmContext mask set mutator. </i><br/>
+ int <code>AdmContext_clearMaskByIndex</code> (<code>AdmContext</code> *context, unsigned int index, <code>AdmError</code> **error)<br/>
+ <i>AdmContext mask set element index remove. </i><br/>
+ int <code>AdmContext_clearMaskByPath</code> (<code>AdmContext</code> *context, const char *path, <code>AdmError</code> **error)<br/>
+ <i>AdmContext mask set element data path remove. </i><br/>
+ unsigned int <code>AdmContext_getNumMasks</code> (<code>AdmContext</code> *context, <code>AdmError</code> **error)<br/>
+ <i>AdmContext mask set length aggregator. </i><br/>
+ <code>AdmIdentity</code> * <code>AdmContext_getIdentityRoot</code> (<code>AdmContext</code> *context, <code>AdmError</code> **error)<br/>
+ <i>AdmContext identity root accessor. </i><br/>
+ <code>AdmIdentity</code> * <code>AdmIdentity_getParentA</code> (<code>AdmIdentity</code> *identity, <code>AdmError</code> **error)<br/>
+ <i>AdmIdentity parentA accessor. </i><br/>
+ <code>AdmIdentity</code> * <code>AdmIdentity_getParentB</code> (<code>AdmIdentity</code> *identity, <code>AdmError</code> **error)<br/>
+ <i>AdmIdentity parentB accessor. </i><br/>
+ <code>AdmRefStr</code> * <code>AdmIdentity_getName</code> (<code>AdmIdentity</code> *identity, <code>AdmError</code> **error)<br/>
+ <i>AdmIdentity name accessor. </i><br/>
+ int <code>AdmIdentity_setName</code> (<code>AdmIdentity</code> *identity, const char *name, <code>AdmError</code> **error)<br/>
+ <i>AdmIdentity name mutator. </i><br/>
+ unsigned int <code>AdmIdentity_getSerial</code> (<code>AdmIdentity</code> *identity, <code>AdmError</code> **error)<br/>
+ <i>AdmIdentity serial number accessor. </i><br/>
+ int <code>AdmIdentity_setSerial</code> (<code>AdmIdentity</code> *identity, unsigned int serial, <code>AdmError</code> **error)<br/>
+ <i>AdmIdentity serial number mutator. </i><br/>
+ <code>AdmIdentity</code> * <code>AdmIdentity_ref</code> (<code>AdmIdentity</code> *identity, <code>AdmError</code> **error)<br/>
+ <i>AdmIdentity reference increment. </i><br/>
+ void <code>AdmIdentity_unref</code> (<code>AdmIdentity</code> *identity, <code>AdmError</code> **error)<br/>
+ <i>AdmIdentity reference decrement. </i><br/>
+ <code>AdmContext</code> * <code>AdmIdentity_getContext</code> (<code>AdmIdentity</code> *identity, <code>AdmError</code> **error)<br/>
+ <i>AdmIdentity context accessor. </i><br/>
+ int <code>AdmIdentity_isAlive</code> (<code>AdmIdentity</code> *identity, <code>AdmError</code> **error)<br/>
+ <i>AdmIdentity reference check. </i><br/>
+ <code>AdmData</code> * <code>AdmContext_getDataRoot</code> (<code>AdmContext</code> *context, <code>AdmError</code> **error)<br/>
+ <i>AdmContext data root accessor. </i><br/>
+ <code>AdmData</code> * <code>AdmData_getContainer</code> (<code>AdmData</code> *data, <code>AdmError</code> **error)<br/>
+ <i>AdmData container accessor. </i><br/>
+ <code>AdmData</code> * <code>AdmData_getPrev</code> (<code>AdmData</code> *data, int wrap, <code>AdmError</code> **error)<br/>
+ <i>get the previous sibling of an AdmData element </i><br/>
+ <code>AdmData</code> * <code>AdmData_getNext</code> (<code>AdmData</code> *data, int wrap, <code>AdmError</code> **error)<br/>
+ <i>get the next sibling of an AdmData element </i><br/>
+ <code>AdmContext</code> * <code>AdmData_getContext</code> (<code>AdmData</code> *data, <code>AdmError</code> **error)<br/>
+ <i>AdmData context accessor. </i><br/>
+ <code>AdmData</code> * <code>AdmContext_getDataByPath</code> (<code>AdmContext</code> *context, const char *path, <code>AdmError</code> **error)<br/>
+ <i>AdmData path lookup. </i><br/>
+ <code>AdmDataType</code> <code>AdmData_getType</code> (<code>AdmData</code> *data, <code>AdmError</code> **error)<br/>
+ <i>AdmData type accessor. </i><br/>
+ <code>AdmData</code> * <code>AdmData_ref</code> (<code>AdmData</code> *data, <code>AdmError</code> **error)<br/>
+ <i>AdmData reference increment. </i><br/>
+ void <code>AdmData_unref</code> (<code>AdmData</code> *data, <code>AdmError</code> **error)<br/>
+ <i>AdmData reference decrement. </i><br/>
+ int <code>AdmData_isAlive</code> (<code>AdmData</code> *data, <code>AdmError</code> **error)<br/>
+ <i>AdmData reference check. </i><br/>
+ int <code>AdmData_unlink</code> (<code>AdmData</code> *data, <code>AdmError</code> **error)<br/>
+ <i>AdmData unlink operator. </i><br/>
+ int <code>AdmData_validName</code> (const char *name)<br/>
+ <i>Checks a string for name validity. </i><br/>
+ <code>AdmRefStr</code> * <code>AdmData_getName</code> (<code>AdmData</code> *data, <code>AdmError</code> **error)<br/>
+ <i>AdmData name accessor. </i><br/>
+ int <code>AdmData_setName</code> (<code>AdmData</code> *data, const char *name, <code>AdmError</code> **error)<br/>
+ <i>AdmData name mutator. </i><br/>
+ <code>AdmRefStr</code> * <code>AdmData_getSource</code> (<code>AdmData</code> *data, <code>AdmError</code> **error)<br/>
+ <i>AdmData source accessor. </i><br/>
+ int <code>AdmData_setSource</code> (<code>AdmData</code> *data, const char *source, <code>AdmError</code> **error)<br/>
+ <i>AdmData source mutator. </i><br/>
+ int <code>AdmData_isProtected</code> (<code>AdmData</code> *data, <code>AdmError</code> **error)<br/>
+ <i>AdmData protected verification. </i><br/>
+ int <code>AdmData_setProtected</code> (<code>AdmData</code> *data, int state, <code>AdmError</code> **error)<br/>
+ <i>AdmData protected mutator. </i><br/>
+ int <code>AdmList_isAnonymous</code> (<code>AdmList</code> *list, <code>AdmError</code> **error)<br/>
+ <i>AdmList anonymous verification. </i><br/>
+ int <code>AdmList_setAnonymous</code> (<code>AdmList</code> *list, int state, <code>AdmError</code> **error)<br/>
+ <i>AdmList anonymous mutator. </i><br/>
+ int <code>AdmList_isAtomic</code> (<code>AdmList</code> *list, <code>AdmError</code> **error)<br/>
+ <i>AdmList atomic verification. </i><br/>
+ int <code>AdmList_setAtomic</code> (<code>AdmList</code> *list, int state, <code>AdmError</code> **error)<br/>
+ <i>AdmList atomic mutator. </i><br/>
+ int <code>AdmList_isPrepend</code> (<code>AdmList</code> *list, <code>AdmError</code> **error)<br/>
+ <i>AdmList prepend verification. </i><br/>
+ int <code>AdmList_setPrepend</code> (<code>AdmList</code> *list, int state, <code>AdmError</code> **error)<br/>
+ <i>AdmList prepend mutator. </i><br/>
+ unsigned int <code>AdmList_getNumData</code> (<code>AdmList</code> *list, <code>AdmError</code> **error)<br/>
+ <i>AdmList length aggregator. </i><br/>
+ <code>AdmData</code> * <code>AdmList_getDataByIndex</code> (<code>AdmList</code> *list, unsigned int index, <code>AdmError</code> **error)<br/>
+ <i>AdmList child index accessor. </i><br/>
+ <code>AdmData</code> * <code>AdmList_getDataByName</code> (<code>AdmList</code> *list, const char *name, <code>AdmError</code> **error)<br/>
+ <i>AdmList child name accessor. </i><br/>
+ <code>AdmData</code> * <code>AdmList_getDataByPath</code> (<code>AdmList</code> *list, const char *path, <code>AdmError</code> **error)<br/>
+ <i>AdmList child data path accessor. </i><br/>
+ <code>AdmData</code> * <code>AdmList_addData</code> (<code>AdmList</code> *list, <code>AdmDataType</code> type, const char *name, <code>AdmError</code> **error)<br/>
+ <i>AdmList add child operator. </i><br/>
+ int <code>AdmList_moveData</code> (<code>AdmList</code> *list, <code>AdmData</code> *data, unsigned int index, <code>AdmError</code> **error)<br/>
+ <i>AdmList child move operator. </i><br/>
+ <code>AdmData</code> * <code>AdmList_copyData</code> (<code>AdmList</code> *list, <code>AdmData</code> *data, <code>AdmError</code> **error)<br/>
+ <i>AdmList copy data operator. </i><br/>
+ <code>AdmData</code> * <code>AdmList_renameCopyData</code> (<code>AdmList</code> *list, <code>AdmData</code> *data, const char *name, <code>AdmError</code> **error)<br/>
+ <i>AdmList copy data operator. </i><br/>
+ unsigned int <code>AdmData_getPos</code> (<code>AdmData</code> *data, <code>AdmError</code> **error)<br/>
+ <i>AdmList child position operator. </i><br/>
+ int <code>AdmInt_getValue</code> (<code>AdmInt</code> *int_scalar, <code>AdmError</code> **error)<br/>
+ <i>get an AdmInt&#8217;s value </i><br/>
+ int <code>AdmInt_setValue</code> (<code>AdmInt</code> *int_scalar, int value, <code>AdmError</code> **error)<br/>
+ <i>set an AdmInt&#8217;s value </i><br/>
+ double <code>AdmFloat_getValue</code> (<code>AdmFloat</code> *float_scalar, <code>AdmError</code> **error)<br/>
+ <i>get an AdmFloat&#8217;s value </i><br/>
+ int <code>AdmFloat_setValue</code> (<code>AdmFloat</code> *float_scalar, double value, <code>AdmError</code> **error)<br/>
+ <i>set an AdmFloat&#8217;s value </i><br/>
+ int <code>AdmBool_getValue</code> (<code>AdmBool</code> *bool_scalar, <code>AdmError</code> **error)<br/>
+ <i>get an AdmBool&#8217;s value </i><br/>
+ int <code>AdmBool_setValue</code> (<code>AdmBool</code> *bool_scalar, int value, <code>AdmError</code> **error)<br/>
+ <i>set an AdmBool&#8217;s value </i><br/>
+ <code>AdmRefStr</code> * <code>AdmString_getValue</code> (<code>AdmString</code> *string_scalar, <code>AdmError</code> **error)<br/>
+ <i>get an AdmString&#8217;s value </i><br/>
  int <code>AdmString_setValue</code> (<code>AdmString</code> *string_scalar, const char *value, <code>AdmError</code> **error) </p>
 <p> <code>AdmRefStr</code> * <code>AdmBase64_getValue</code> (<code>AdmBase64</code> *base64_scalar, <code>AdmError</code> **error) </p>
-<p> int <code>AdmBase64_setValue</code> (<code>AdmBase64</code> *base64_scalar, const char *value, <code>AdmError</code> **error)<br />
- <i>Set the value of an AdmBase64 element. </i><br />
- size_t <code>AdmBase64_getBinValue</code> (<code>AdmBase64</code> *base64_scalar, void **value, <code>AdmError</code> **error)<br />
- <i>Get the binary value of an AdmBase64 element. </i><br />
- int <code>AdmBase64_setBinValue</code> (<code>AdmBase64</code> *base64_scalar, const void *value, size_t size, <code>AdmError</code> **error)<br />
- <i>Set the value of an AdmBase64 element. </i><br />
- <code>AdmRefStr</code> * <code>AdmCopy_getValue</code> (<code>AdmCopy</code> *copy_scalar, <code>AdmError</code> **error)<br />
- <i>Get the value of an AdmCopy element. </i><br />
- int <code>AdmCopy_setValue</code> (<code>AdmCopy</code> *copy_scalar, const char *value, <code>AdmError</code> **error)<br />
- <i>Set the value of an AdmCopy element. </i><br />
+<p> int <code>AdmBase64_setValue</code> (<code>AdmBase64</code> *base64_scalar, const char *value, <code>AdmError</code> **error)<br/>
+ <i>Set the value of an AdmBase64 element. </i><br/>
+ size_t <code>AdmBase64_getBinValue</code> (<code>AdmBase64</code> *base64_scalar, void **value, <code>AdmError</code> **error)<br/>
+ <i>Get the binary value of an AdmBase64 element. </i><br/>
+ int <code>AdmBase64_setBinValue</code> (<code>AdmBase64</code> *base64_scalar, const void *value, size_t size, <code>AdmError</code> **error)<br/>
+ <i>Set the value of an AdmBase64 element. </i><br/>
+ <code>AdmRefStr</code> * <code>AdmCopy_getValue</code> (<code>AdmCopy</code> *copy_scalar, <code>AdmError</code> **error)<br/>
+ <i>Get the value of an AdmCopy element. </i><br/>
+ int <code>AdmCopy_setValue</code> (<code>AdmCopy</code> *copy_scalar, const char *value, <code>AdmError</code> **error)<br/>
+ <i>Set the value of an AdmCopy element. </i><br/>
  <code>AdmRefStr</code> * <code>AdmBlackBox_getCacheDir</code> (<code>AdmError</code> **error) </p>
 <p> int <code>AdmBlackBox_setCacheDir</code> (const char *path, <code>AdmError</code> **error) </p>
 <p> <code>AdmBlackBox</code> * <code>AdmBlackBox_getBox</code> (<code>AdmList</code> *box_cfg, <code>AdmError</code> **error) </p>
-<p> <code>adm_bb_cap_t</code> <code>AdmBlackBox_caps</code> (<code>AdmBlackBox</code> *box, <code>AdmError</code> **error)<br />
- <i>AdmBlackBox capability querry. </i><br />
- void <code>AdmBlackBox_ref</code> (<code>AdmBlackBox</code> *box, <code>AdmError</code> **error)<br />
- <i>AdmBlackbox reference increment. </i><br />
- void <code>AdmBlackBox_unref</code> (<code>AdmBlackBox</code> *box, <code>AdmError</code> **error)<br />
- <i>AdmBlackbox reference decrement. </i><br />
- <code>AdmContext</code> * <code>AdmBlackBox_read</code> (<code>AdmBlackBox</code> *box, <code>AdmError</code> **error)<br />
- <i>AdmBlackbox read operator. </i><br />
- int <code>AdmBlackBox_listSerial</code> (<code>AdmBlackBox</code> *box, unsigned int *array, unsigned int array_len, unsigned int top_serial, <code>AdmError</code> **error)<br />
- <i>AdmBlackbox serial list request. </i><br />
- <code>AdmContext</code> * <code>AdmBlackBox_readSerial</code> (<code>AdmBlackBox</code> *box, unsigned int serial, <code>AdmError</code> **error)<br />
- <i>AdmBlackbox serial list request. </i><br />
- int <code>AdmBlackBox_write</code> (<code>AdmBlackBox</code> *box, <code>AdmContext</code> *context, <code>AdmError</code> **error)<br />
- <i>AdmBlackbox write operator. </i><br />
- unsigned int <code>AdmBlackBox_getMark</code> (<code>AdmBlackBox</code> *box, const char *mark, <code>AdmError</code> **error)<br />
- <i>AdmBlackBox mark accessor. </i><br />
- int <code>AdmBlackBox_setMark</code> (<code>AdmBlackBox</code> *box, const char *mark, <code>AdmError</code> **error)<br />
- <i>AdmBlackBox mark mutator. </i><br />
- int <code>AdmBlackBox_clearMark</code> (<code>AdmBlackBox</code> *box, const char *mark, <code>AdmError</code> **error)<br />
- <i>AdmBlackbox mark destructor. </i><br />
+<p> <code>adm_bb_cap_t</code> <code>AdmBlackBox_caps</code> (<code>AdmBlackBox</code> *box, <code>AdmError</code> **error)<br/>
+ <i>AdmBlackBox capability querry. </i><br/>
+ void <code>AdmBlackBox_ref</code> (<code>AdmBlackBox</code> *box, <code>AdmError</code> **error)<br/>
+ <i>AdmBlackbox reference increment. </i><br/>
+ void <code>AdmBlackBox_unref</code> (<code>AdmBlackBox</code> *box, <code>AdmError</code> **error)<br/>
+ <i>AdmBlackbox reference decrement. </i><br/>
+ <code>AdmContext</code> * <code>AdmBlackBox_read</code> (<code>AdmBlackBox</code> *box, <code>AdmError</code> **error)<br/>
+ <i>AdmBlackbox read operator. </i><br/>
+ int <code>AdmBlackBox_listSerial</code> (<code>AdmBlackBox</code> *box, unsigned int *array, unsigned int array_len, unsigned int top_serial, <code>AdmError</code> **error)<br/>
+ <i>AdmBlackbox serial list request. </i><br/>
+ <code>AdmContext</code> * <code>AdmBlackBox_readSerial</code> (<code>AdmBlackBox</code> *box, unsigned int serial, <code>AdmError</code> **error)<br/>
+ <i>AdmBlackbox serial list request. </i><br/>
+ int <code>AdmBlackBox_write</code> (<code>AdmBlackBox</code> *box, <code>AdmContext</code> *context, <code>AdmError</code> **error)<br/>
+ <i>AdmBlackbox write operator. </i><br/>
+ unsigned int <code>AdmBlackBox_getMark</code> (<code>AdmBlackBox</code> *box, const char *mark, <code>AdmError</code> **error)<br/>
+ <i>AdmBlackBox mark accessor. </i><br/>
+ int <code>AdmBlackBox_setMark</code> (<code>AdmBlackBox</code> *box, const char *mark, <code>AdmError</code> **error)<br/>
+ <i>AdmBlackBox mark mutator. </i><br/>
+ int <code>AdmBlackBox_clearMark</code> (<code>AdmBlackBox</code> *box, const char *mark, <code>AdmError</code> **error)<br/>
+ <i>AdmBlackbox mark destructor. </i><br/>
  <code>AdmRefStr</code> * <code>AdmSwitchboard_getSwbDir</code> (<code>AdmError</code> **error) </p>
 <p> int <code>AdmSwitchboard_setSwbDir</code> (const char *path, <code>AdmError</code> **error) </p>
 <p> int <code>AdmSwitchboard_markNsp</code> (const char *namespace, const char *subspace, const char *mark, <code>AdmError</code> **error) </p>
@@ -267,10 +267,10 @@ description: "alchemist.h –"
 <p> <code>AdmContext</code> * <code>AdmSwitchboard_readNspWithConfig</code> (<code>AdmList</code> *namespace_cfg, const char *subspace, unsigned int depth, <code>AdmError</code> **error) </p>
 <p> int <code>AdmSwitchboard_writeNsp</code> (const char *namespace, const char *subspace, <code>AdmContext</code> *context, <code>AdmError</code> **error) </p>
 <p> int <code>AdmSwitchboard_writeNspWithConfig</code> (<code>AdmList</code> *namespace_cfg, const char *subspace, <code>AdmContext</code> *context, <code>AdmError</code> **error) </p>
-<p> <code>AdmContext</code> * <code>AdmSwitchboard_readNspCtx</code> (const char *namespace, <code>AdmError</code> **error)<br />
- <i>read a switchboard namespace configuration from the system </i><br />
- int <code>AdmSwitchboard_writeNspCtx</code> (const char *namespace, <code>AdmContext</code> *namespace_ctx, int mode, uid_t uid, gid_t gid, <code>AdmError</code> **error)<br />
- <i>writes a switchboard namespace configuration to the system </i><br />
+<p> <code>AdmContext</code> * <code>AdmSwitchboard_readNspCtx</code> (const char *namespace, <code>AdmError</code> **error)<br/>
+ <i>read a switchboard namespace configuration from the system </i><br/>
+ int <code>AdmSwitchboard_writeNspCtx</code> (const char *namespace, <code>AdmContext</code> *namespace_ctx, int mode, uid_t uid, gid_t gid, <code>AdmError</code> **error)<br/>
+ <i>writes a switchboard namespace configuration to the system </i><br/>
  <code>AdmList</code> * <code>AdmSwitchboard_getNspCfg</code> (<code>AdmContext</code> *namespace_ctx, const char *namespace, <code>AdmError</code> **error) </p>
 <p> <code>AdmList</code> * <code>AdmSwitchboard_getSubspCfg</code> (<code>AdmList</code> *namespace_cfg, const char *subspace, <code>AdmError</code> **error) </p>
 <p> <code>AdmBlackBox</code> * <code>AdmSwitchboard_getBox</code> (<code>AdmList</code> *subspace_cfg, const char *box_name, <code>AdmError</code> **error) </p>
@@ -400,9 +400,9 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>error</i> The pointer to the AdmError pointer in which the newly allocated AdmError structure will be returned.<br />
- <i>num</i> The integer error code of the new AdmError structure.<br />
- <i>format</i> The output format in <a href="/docs/linux/man/3-printf/">printf</a>(3) format.<br />
+</dt><dd> <i>error</i> The pointer to the AdmError pointer in which the newly allocated AdmError structure will be returned.<br/>
+ <i>num</i> The integer error code of the new AdmError structure.<br/>
+ <i>format</i> The output format in <a href="/docs/linux/man/3-printf/">printf</a>(3) format.<br/>
  <i>&#8230;</i> The variable arguments for the <a href="/docs/linux/man/3-printf/">printf</a>(3) format.</dd></dl>
 <h3>void AdmError_ref (<code>AdmError</code> * error)</h3>
 <p> <code>Parameters:</code></p>
@@ -454,7 +454,7 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>str</i> the string to match the AdmRefStr to<br />
+</dt><dd> <i>str</i> the string to match the AdmRefStr to<br/>
  <i>force</i> if we should create a matching AdmRefStr if one does not already exist</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -464,8 +464,8 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>str</i> the string to match the AdmRefStr to<br />
- <i>len</i> the lenght of the string, as strlen would report it<br />
+</dt><dd> <i>str</i> the string to match the AdmRefStr to<br/>
+ <i>len</i> the lenght of the string, as strlen would report it<br/>
  <i>force</i> if we should create a matching AdmRefStr if one does not already exist</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -477,8 +477,8 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>name</i> The name of the new AdmContext.<br />
- <i>serial</i> The serial number of the new AdmContext.<br />
+</dt><dd> <i>name</i> The name of the new AdmContext.<br/>
+ <i>serial</i> The serial number of the new AdmContext.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -490,7 +490,7 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> The AdmContext to increase the reference to.<br />
+</dt><dd> <i>context</i> The AdmContext to increase the reference to.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -502,14 +502,14 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> The AdmContext to decrease the reference to.<br />
+</dt><dd> <i>context</i> The AdmContext to decrease the reference to.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <h3><code>AdmContext</code>* AdmContext_copy (<code>AdmContext</code> * context, <code>AdmError</code> ** error)</h3>
 <p> This function creates a full depth copy of an AdmContext element. It is one of the AdmContext refing functions. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> The pointer to the AdmContext element to be copied.<br />
+</dt><dd> <i>context</i> The pointer to the AdmContext element to be copied.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -521,10 +521,10 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>name</i> The name of the new AdmContext.<br />
- <i>serial</i> The serial number of the new AdmContext.<br />
- <i>contextA</i> The pointer to the first AdmContext element.<br />
- <i>contextB</i> The pointer to the second AdmContext element.<br />
+</dt><dd> <i>name</i> The name of the new AdmContext.<br/>
+ <i>serial</i> The serial number of the new AdmContext.<br/>
+ <i>contextA</i> The pointer to the first AdmContext element.<br/>
+ <i>contextB</i> The pointer to the second AdmContext element.<br/>
  <i>error</i> Optional pointer to an AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -536,7 +536,7 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> The pointer to the AdmContext element.<br />
+</dt><dd> <i>context</i> The pointer to the AdmContext element.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <h3>void AdmContext_strip (<code>AdmContext</code> * context, <code>AdmError</code> ** error)</h3>
 <p> AdmContext_strip: strip an AdmContext&#8217;s id tree. </p>
@@ -544,7 +544,7 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> The pointer to the AdmContext element.<br />
+</dt><dd> <i>context</i> The pointer to the AdmContext element.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <h3>char* AdmContext_toXML (<code>AdmContext</code> * context, <code>AdmError</code> ** error)</h3>
 <h3><code>AdmContext</code>* AdmContext_fromXML (const char * xml, <code>AdmError</code> ** error)</h3>
@@ -557,8 +557,8 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> The AdmContext to use.<br />
- <i>index</i> The index of the mask set element to get.<br />
+</dt><dd> <i>context</i> The AdmContext to use.<br/>
+ <i>index</i> The index of the mask set element to get.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -570,8 +570,8 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> The AdmContext to use.<br />
- <i>path</i> The string of the mask set element to be added.<br />
+</dt><dd> <i>context</i> The AdmContext to use.<br/>
+ <i>path</i> The string of the mask set element to be added.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -587,8 +587,8 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> The AdmContext to use.<br />
- <i>index</i> The index of the mask set element to remove.<br />
+</dt><dd> <i>context</i> The AdmContext to use.<br/>
+ <i>index</i> The index of the mask set element to remove.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -600,8 +600,8 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> The AdmContext to use.<br />
- <i>path</i> The data path of the mask set element to remove.<br />
+</dt><dd> <i>context</i> The AdmContext to use.<br/>
+ <i>path</i> The data path of the mask set element to remove.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -613,7 +613,7 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> The AdmContext to use.<br />
+</dt><dd> <i>context</i> The AdmContext to use.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -625,7 +625,7 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> The AdmContext of which we want to get the root AdmIdentity.<br />
+</dt><dd> <i>context</i> The AdmContext of which we want to get the root AdmIdentity.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -637,7 +637,7 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>identity</i> The AdmIdentity of which to get the first parent.<br />
+</dt><dd> <i>identity</i> The AdmIdentity of which to get the first parent.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -649,7 +649,7 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>identity</i> The AdmIdentity of which to get the second parent.<br />
+</dt><dd> <i>identity</i> The AdmIdentity of which to get the second parent.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -662,7 +662,7 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>identity</i> The AdmIdentity of which to get the name.<br />
+</dt><dd> <i>identity</i> The AdmIdentity of which to get the name.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -674,8 +674,8 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>identity</i> The AdmIdentity of which to set the name.<br />
- <i>name</i> The new name of the AdmIdentity.<br />
+</dt><dd> <i>identity</i> The AdmIdentity of which to set the name.<br/>
+ <i>name</i> The new name of the AdmIdentity.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -687,7 +687,7 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>identity</i> The AdmIdentity of which to get the serial number.<br />
+</dt><dd> <i>identity</i> The AdmIdentity of which to get the serial number.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -699,8 +699,8 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>identity</i> The AdmIdentity of which to set the serial number.<br />
- <i>name</i> The new serial number of the AdmIdentity.<br />
+</dt><dd> <i>identity</i> The AdmIdentity of which to set the serial number.<br/>
+ <i>name</i> The new serial number of the AdmIdentity.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -712,7 +712,7 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>identity</i> The AdmIdentity to increase the reference to.<br />
+</dt><dd> <i>identity</i> The AdmIdentity to increase the reference to.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -724,7 +724,7 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>identity</i> The AdmIdentity to decrease the reference to.<br />
+</dt><dd> <i>identity</i> The AdmIdentity to decrease the reference to.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <h3><code>AdmContext</code>* AdmIdentity_getContext (<code>AdmIdentity</code> * identity, <code>AdmError</code> ** error)</h3>
 <p> AdmIdentity_getContext: Get the context of an AdmIdentity element. </p>
@@ -732,7 +732,7 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>id</i> The pointer to the AdmIdentity element.<br />
+</dt><dd> <i>id</i> The pointer to the AdmIdentity element.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -745,7 +745,7 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>identity</i> The AdmIdentity to check.<br />
+</dt><dd> <i>identity</i> The AdmIdentity to check.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -757,7 +757,7 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> The AdmContext of which we want to get the AdmData root.<br />
+</dt><dd> <i>context</i> The AdmContext of which we want to get the AdmData root.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -769,7 +769,7 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>data</i> The AdmData of which we want to get the container (parent).<br />
+</dt><dd> <i>data</i> The AdmData of which we want to get the container (parent).<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -779,8 +779,8 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>data</i> The AdmData element<br />
- <i>wrap</i> specify if we should wrap round the begining of the list<br />
+</dt><dd> <i>data</i> The AdmData element<br/>
+ <i>wrap</i> specify if we should wrap round the begining of the list<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -790,8 +790,8 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>data</i> The AdmData element<br />
- <i>wrap</i> specify if we should wrap round the end of the list<br />
+</dt><dd> <i>data</i> The AdmData element<br/>
+ <i>wrap</i> specify if we should wrap round the end of the list<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -803,7 +803,7 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>data</i> The AdmData of which we want to get the context.<br />
+</dt><dd> <i>data</i> The AdmData of which we want to get the context.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -815,8 +815,8 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> The AdmContext we want to search.<br />
- <i>path</i> The data path of the AdmData element to look up.<br />
+</dt><dd> <i>context</i> The AdmContext we want to search.<br/>
+ <i>path</i> The data path of the AdmData element to look up.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -828,7 +828,7 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>data</i> The AdmData of which we want to get the data type.<br />
+</dt><dd> <i>data</i> The AdmData of which we want to get the data type.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -840,7 +840,7 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>data</i> The AdmData to increase the reference to.<br />
+</dt><dd> <i>data</i> The AdmData to increase the reference to.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -852,7 +852,7 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>data</i> The AdmData to decrease the reference to.<br />
+</dt><dd> <i>data</i> The AdmData to decrease the reference to.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <h3>int AdmData_isAlive (<code>AdmData</code> * data, <code>AdmError</code> ** error)</h3>
 <p> AdmData_isAlive: check the lifecycle status of an AdmData element. </p>
@@ -861,7 +861,7 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>data</i> The AdmData to check.<br />
+</dt><dd> <i>data</i> The AdmData to check.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -873,7 +873,7 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>data</i> The AdmData to unlink.<br />
+</dt><dd> <i>data</i> The AdmData to unlink.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -896,7 +896,7 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>data</i> The AdmData of which we want to get the name.<br />
+</dt><dd> <i>data</i> The AdmData of which we want to get the name.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -909,8 +909,8 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>data</i> The AdmData of which we want to set the name.<br />
- <i>name</i> The new name of the AdmData element.<br />
+</dt><dd> <i>data</i> The AdmData of which we want to set the name.<br/>
+ <i>name</i> The new name of the AdmData element.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -923,7 +923,7 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>data</i> The AdmData of which we want to get the source.<br />
+</dt><dd> <i>data</i> The AdmData of which we want to get the source.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -936,8 +936,8 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>data</i> The AdmData of which we want to set the source.<br />
- <i>name</i> The new source of the AdmData element.<br />
+</dt><dd> <i>data</i> The AdmData of which we want to set the source.<br/>
+ <i>name</i> The new source of the AdmData element.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -949,7 +949,7 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>data</i> The AdmData which we want to check for the protected flag.<br />
+</dt><dd> <i>data</i> The AdmData which we want to check for the protected flag.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -962,8 +962,8 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>data</i> The AdmData of which we want to set the protected flag.<br />
- <i>state</i> The new protection state of the AdmData element.<br />
+</dt><dd> <i>data</i> The AdmData of which we want to set the protected flag.<br/>
+ <i>state</i> The new protection state of the AdmData element.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -975,7 +975,7 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>list</i> The AdmList which we want to check for the anonymous flag.<br />
+</dt><dd> <i>list</i> The AdmList which we want to check for the anonymous flag.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -988,8 +988,8 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>list</i> The AdmList of which we want to set the anonymous flag.<br />
- <i>state</i> The new anonymous state of the AdmList element.<br />
+</dt><dd> <i>list</i> The AdmList of which we want to set the anonymous flag.<br/>
+ <i>state</i> The new anonymous state of the AdmList element.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1001,7 +1001,7 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>list</i> The AdmList which we want to check for the atomic flag.<br />
+</dt><dd> <i>list</i> The AdmList which we want to check for the atomic flag.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1014,8 +1014,8 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>list</i> The AdmList of which we want to set the atomic flag.<br />
- <i>state</i> The new atomic state of the AdmList element.<br />
+</dt><dd> <i>list</i> The AdmList of which we want to set the atomic flag.<br/>
+ <i>state</i> The new atomic state of the AdmList element.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1027,7 +1027,7 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>list</i> The AdmList which we want to check for the prepend flag.<br />
+</dt><dd> <i>list</i> The AdmList which we want to check for the prepend flag.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1040,8 +1040,8 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>list</i> The AdmList of which we want to set the prepend flag.<br />
- <i>state</i> The new prepend state of the AdmList element.<br />
+</dt><dd> <i>list</i> The AdmList of which we want to set the prepend flag.<br/>
+ <i>state</i> The new prepend state of the AdmList element.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1053,7 +1053,7 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>list</i> The AdmList which we want to count.<br />
+</dt><dd> <i>list</i> The AdmList which we want to count.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1065,8 +1065,8 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>list</i> The AdmList which we want to access.<br />
- <i>index</i> The index of the child we want to get.<br />
+</dt><dd> <i>list</i> The AdmList which we want to access.<br/>
+ <i>index</i> The index of the child we want to get.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1078,8 +1078,8 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>list</i> The AdmList which we want to access.<br />
- <i>name</i> The name of the child we want to get.<br />
+</dt><dd> <i>list</i> The AdmList which we want to access.<br/>
+ <i>name</i> The name of the child we want to get.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1091,8 +1091,8 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>list</i> The AdmList which we want to access.<br />
- <i>path</i> The data path of the child we want to get.<br />
+</dt><dd> <i>list</i> The AdmList which we want to access.<br/>
+ <i>path</i> The data path of the child we want to get.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1106,9 +1106,9 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>list</i> The AdmList to which we want to add a new child.<br />
- <i>type</i> The AdmData type of the new child to be added.<br />
- <i>name</i> The name of the new child to be added.<br />
+</dt><dd> <i>list</i> The AdmList to which we want to add a new child.<br/>
+ <i>type</i> The AdmData type of the new child to be added.<br/>
+ <i>name</i> The name of the new child to be added.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1120,9 +1120,9 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>list</i> The AdmList which we want to move in.<br />
- <i>data</i> The AdmData pointer of the child we want to move.<br />
- <i>index</i> The index to where we want to move the child.<br />
+</dt><dd> <i>list</i> The AdmList which we want to move in.<br/>
+ <i>data</i> The AdmData pointer of the child we want to move.<br/>
+ <i>index</i> The index to where we want to move the child.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1134,8 +1134,8 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>list</i> The AdmList to append the data to.<br />
- <i>data</i> The AdmData element to recursively copy and append to the list.<br />
+</dt><dd> <i>list</i> The AdmList to append the data to.<br/>
+ <i>data</i> The AdmData element to recursively copy and append to the list.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1147,9 +1147,9 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>list</i> The AdmList to append the data to.<br />
- <i>data</i> The AdmData element to recursively copy and append to the list.<br />
- <i>name</i> The new name to use.<br />
+</dt><dd> <i>list</i> The AdmList to append the data to.<br/>
+ <i>data</i> The AdmData element to recursively copy and append to the list.<br/>
+ <i>name</i> The new name to use.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1161,7 +1161,7 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>data</i> The AdmData of which we want to know the index.<br />
+</dt><dd> <i>data</i> The AdmData of which we want to know the index.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1172,7 +1172,7 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>int_scalar</i> a pointer to an AdmInt node<br />
+</dt><dd> <i>int_scalar</i> a pointer to an AdmInt node<br/>
  <i>error</i> an optional pointer to an AdmError pointer</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1188,8 +1188,8 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>int_scalar</i> a pointer to an AdmInt node<br />
- <i>value</i> the integer value to set the node to<br />
+</dt><dd> <i>int_scalar</i> a pointer to an AdmInt node<br/>
+ <i>value</i> the integer value to set the node to<br/>
  <i>error</i> an optional pointer to an AdmError pointer</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1205,7 +1205,7 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>float_scalar</i> a pointer to an AdmFloat node<br />
+</dt><dd> <i>float_scalar</i> a pointer to an AdmFloat node<br/>
  <i>error</i> an optional pointer to an AdmError pointer</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1221,8 +1221,8 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>float_scalar</i> a pointer to an AdmFloat element<br />
- <i>value</i> the double value to set the node with<br />
+</dt><dd> <i>float_scalar</i> a pointer to an AdmFloat element<br/>
+ <i>value</i> the double value to set the node with<br/>
  <i>error</i> an optional pointer to an AdmError pointer</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1238,7 +1238,7 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>bool_scalar</i> a pointer to an AdmBool node<br />
+</dt><dd> <i>bool_scalar</i> a pointer to an AdmBool node<br/>
  <i>error</i> an optional pointer to an AdmError pointer</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1254,8 +1254,8 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>bool_scalar</i> a pointer to an AdmBool node<br />
- <i>value</i> the value to set the node to as an int<br />
+</dt><dd> <i>bool_scalar</i> a pointer to an AdmBool node<br/>
+ <i>value</i> the value to set the node to as an int<br/>
  <i>error</i> an optional pointer to an AdmError pointer</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1273,7 +1273,7 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>string_scalar</i> The pointer to the AdmString element<br />
+</dt><dd> <i>string_scalar</i> The pointer to the AdmString element<br/>
  <i>error</i> optional pointer to an AdmError pointer</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1285,8 +1285,8 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>string_scalar</i> The pointer to the AdmString element.<br />
- <i>value</i> The pointer to the string.<br />
+</dt><dd> <i>string_scalar</i> The pointer to the AdmString element.<br/>
+ <i>value</i> The pointer to the string.<br/>
  <i>error</i> optional pointer to an AdmError pointer</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1301,8 +1301,8 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>base64_scalar</i> a pointer to an AdmBase64 element<br />
- <i>value</i> a pointer to a base64 encoded binary string<br />
+</dt><dd> <i>base64_scalar</i> a pointer to an AdmBase64 element<br/>
+ <i>value</i> a pointer to a base64 encoded binary string<br/>
  <i>error</i> an optional AdmError</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1312,8 +1312,8 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>base64_scalar</i> a pointer to an AdmBase64 element<br />
- <i>value</i> a pointer to a void pointer to return the address of the new buffer.<br />
+</dt><dd> <i>base64_scalar</i> a pointer to an AdmBase64 element<br/>
+ <i>value</i> a pointer to a void pointer to return the address of the new buffer.<br/>
  <i>error</i> an optional AdmError</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1326,9 +1326,9 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>base64_scalar</i> a pointer to an AdmBase64 element<br />
- <i>value</i> a pointer to a binary string<br />
- <i>size</i> the size of the binary string<br />
+</dt><dd> <i>base64_scalar</i> a pointer to an AdmBase64 element<br/>
+ <i>value</i> a pointer to a binary string<br/>
+ <i>size</i> the size of the binary string<br/>
  <i>error</i> an optional AdmError</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1340,7 +1340,7 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>copy_scalar</i> a pointer to an AdmCopy element<br />
+</dt><dd> <i>copy_scalar</i> a pointer to an AdmCopy element<br/>
  <i>error</i> an optional GError</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1351,8 +1351,8 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>copy_scalar</i> a pointer to an AdmCopy element<br />
- <i>value</i> a pointer to a valid path string<br />
+</dt><dd> <i>copy_scalar</i> a pointer to an AdmCopy element<br/>
+ <i>value</i> a pointer to a valid path string<br/>
  <i>error</i> an optional GError</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1377,7 +1377,7 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>path</i> the cache directory you want to use<br />
+</dt><dd> <i>path</i> the cache directory you want to use<br/>
  <i>error</i> an optional pointer to an AdmError pointer</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1393,7 +1393,7 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>box</i> The AdmBlackBox to check<br />
+</dt><dd> <i>box</i> The AdmBlackBox to check<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1404,21 +1404,21 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>box</i> The AdmBlackBox to increase the reference to.<br />
+</dt><dd> <i>box</i> The AdmBlackBox to increase the reference to.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <h3>void AdmBlackBox_unref (<code>AdmBlackBox</code> * box, <code>AdmError</code> ** error)</h3>
 <p> Decrease reference to given AdmBlackBox element. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>box</i> The AdmBlackBox to decrease the reference to.<br />
+</dt><dd> <i>box</i> The AdmBlackBox to decrease the reference to.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <h3><code>AdmContext</code>* AdmBlackBox_read (<code>AdmBlackBox</code> * box, <code>AdmError</code> ** error)</h3>
 <p> Tries to read the most current context from the given AdmBlackBox and return it. The BlackBox may not be able to be readable in which case NULL will be returned. Also it may allow caching and do so transparently. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>box</i> The AdmBlackBox to read from.<br />
+</dt><dd> <i>box</i> The AdmBlackBox to read from.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1429,10 +1429,10 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>box</i> The AdmBlackBox to get the list of serial numbers from.<br />
- <i>array</i> The pointer to the preallocated array of int values to be filled with the serial numbers.<br />
- <i>array_len</i> The size of the perallocated array.<br />
- <i>top_serial</i> The highest serial number that we request. Only serial numbers below that will be returned. Use 0 to request the newest (highest) serial numbers.<br />
+</dt><dd> <i>box</i> The AdmBlackBox to get the list of serial numbers from.<br/>
+ <i>array</i> The pointer to the preallocated array of int values to be filled with the serial numbers.<br/>
+ <i>array_len</i> The size of the perallocated array.<br/>
+ <i>top_serial</i> The highest serial number that we request. Only serial numbers below that will be returned. Use 0 to request the newest (highest) serial numbers.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1447,8 +1447,8 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>box</i> The AdmBlackBox to read the context from.<br />
- <i>serial</i> The serial number of the context we request.<br />
+</dt><dd> <i>box</i> The AdmBlackBox to read the context from.<br/>
+ <i>serial</i> The serial number of the context we request.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1459,8 +1459,8 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>box</i> The AdmBlackBox to write to.<br />
- <i>context</i> The AdmContext to be written to the box.<br />
+</dt><dd> <i>box</i> The AdmBlackBox to write to.<br/>
+ <i>context</i> The AdmContext to be written to the box.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1471,8 +1471,8 @@ description: "alchemist.h –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>box</i> The AdmBlackBox from which to get the marked serial.<br />
- <i>mark</i> The mark string.<br />
+</dt><dd> <i>box</i> The AdmBlackBox from which to get the marked serial.<br/>
+ <i>mark</i> The mark string.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1491,8 +1491,8 @@ AdmBlackBox_setMark(box_p, 'app1_mark_string', error);
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>box</i> The AdmBlackBox which we want to mark.<br />
- <i>mark</i> The mark string.<br />
+</dt><dd> <i>box</i> The AdmBlackBox which we want to mark.<br/>
+ <i>mark</i> The mark string.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1503,8 +1503,8 @@ AdmBlackBox_setMark(box_p, 'app1_mark_string', error);
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>box</i> The AdmBlackBox where we want to clear its mark.<br />
- <i>mark</i> The mark string.<br />
+</dt><dd> <i>box</i> The AdmBlackBox where we want to clear its mark.<br/>
+ <i>mark</i> The mark string.<br/>
  <i>error</i> Optional pointer to AdmError pointer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1529,7 +1529,7 @@ AdmBlackBox_setMark(box_p, 'app1_mark_string', error);
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>path</i> the swb directory you want to use<br />
+</dt><dd> <i>path</i> the swb directory you want to use<br/>
  <i>error</i> an optional pointer to an AdmError pointer</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1548,9 +1548,9 @@ AdmBlackBox_setMark(box_p, 'app1_mark_string', error);
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>namespace</i> the namespace to read<br />
- <i>subspace</i> the box set to extract, NULL uses the default &#8216;config&#8217; set<br />
- <i>depth</i> the number of boxes in the namespace to read, 0 means all.<br />
+</dt><dd> <i>namespace</i> the namespace to read<br/>
+ <i>subspace</i> the box set to extract, NULL uses the default &#8216;config&#8217; set<br/>
+ <i>depth</i> the number of boxes in the namespace to read, 0 means all.<br/>
  <i>error</i> an optional pointer to an AdmError pointer</dd></dl>
 <h3><code>AdmContext</code>* AdmSwitchboard_readNspWithConfig (<code>AdmList</code> * namespace_cfg, const char * subspace, unsigned int depth, <code>AdmError</code> ** error)</h3>
 <h3>int AdmSwitchboard_writeNsp (const char * namespace, const char * subspace, <code>AdmContext</code> * context, <code>AdmError</code> ** error)</h3>
@@ -1558,16 +1558,16 @@ AdmBlackBox_setMark(box_p, 'app1_mark_string', error);
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>namespace</i> the namespace to write<br />
- <i>subspace</i> the box set to extract, NULL uses the default &#8216;config&#8217; set<br />
- <i>context</i> the context to write<br />
+</dt><dd> <i>namespace</i> the namespace to write<br/>
+ <i>subspace</i> the box set to extract, NULL uses the default &#8216;config&#8217; set<br/>
+ <i>context</i> the context to write<br/>
  <i>error</i> an optional pointer to an AdmError pointer</dd></dl>
 <h3>int AdmSwitchboard_writeNspWithConfig (<code>AdmList</code> * namespace_cfg, const char * subspace, <code>AdmContext</code> * context, <code>AdmError</code> ** error)</h3>
 <h3><code>AdmContext</code>* AdmSwitchboard_readNspCtx (const char * namespace, <code>AdmError</code> ** error)</h3>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>namespace</i> the name of the namespace to read<br />
+</dt><dd> <i>namespace</i> the name of the namespace to read<br/>
  <i>error</i> an optional pointer to an AdmError pointer</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1577,11 +1577,11 @@ AdmBlackBox_setMark(box_p, 'app1_mark_string', error);
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>namespace</i> the name of the namespace to read<br />
- <i>context</i> the configuration context to write<br />
- <i>mode</i> the file mode to write the context out with<br />
- <i>uid</i> the uid to write the file with, -1 for dont care<br />
- <i>gid</i> the gid to write the file with, -1 for dont care<br />
+</dt><dd> <i>namespace</i> the name of the namespace to read<br/>
+ <i>context</i> the configuration context to write<br/>
+ <i>mode</i> the file mode to write the context out with<br/>
+ <i>uid</i> the uid to write the file with, -1 for dont care<br/>
+ <i>gid</i> the gid to write the file with, -1 for dont care<br/>
  <i>error</i> an optional pointer to an AdmError pointer</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -1592,22 +1592,22 @@ AdmBlackBox_setMark(box_p, 'app1_mark_string', error);
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>namespace</i> the namespace to extract<br />
+</dt><dd> <i>namespace</i> the namespace to extract<br/>
  <i>config</i> the namespace config context</dd></dl>
 <h3><code>AdmList</code>* AdmSwitchboard_getSubspCfg (<code>AdmList</code> * namespace_cfg, const char * subspace, <code>AdmError</code> ** error)</h3>
 <p> extract a box set from a namespace config </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>subspace</i> the box set to extract, NULL uses the default &#8216;config&#8217; set<br />
- <i>namespace</i> the namespace used<br />
+</dt><dd> <i>subspace</i> the box set to extract, NULL uses the default &#8216;config&#8217; set<br/>
+ <i>namespace</i> the namespace used<br/>
  <i>config</i> the namespace config context</dd></dl>
 <h3><code>AdmBlackBox</code>* AdmSwitchboard_getBox (<code>AdmList</code> * subspace_cfg, const char * box_name, <code>AdmError</code> ** error)</h3>
 <p> extract a box_config set from a namespace config </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>box_name</i> the box to extract<br />
+</dt><dd> <i>box_name</i> the box to extract<br/>
  <i>subspace_cfg</i> the subspace config no use</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Alchemist from the source code. </p>

@@ -9,7 +9,7 @@ description: "basic_ldap_auth – LDAP authentication helper for Squid"
 
 <p>basic_ldap_auth &#8211; LDAP authentication helper for Squid</p>
 <h2>Synopsis</h2>
-<p><code>basic_ldap_auth</code> <code>-b base DN</code> <code>attribute</code> <code>]&nbsp;<wbr>[</code> options <code>]&nbsp;<wbr>[</code> LDAP server name <code>[:</code> port <code>]|</code> URI <code>]&#8230;</code><br />
+<p><code>basic_ldap_auth</code> <code>-b base DN</code> <code>attribute</code> <code>]&nbsp;<wbr>[</code> options <code>]&nbsp;<wbr>[</code> LDAP server name <code>[:</code> port <code>]|</code> URI <code>]&#8230;</code><br/>
  <code>basic_ldap_auth</code> <code>-b base DN</code> <code>LDAP search filter</code> <code>options</code> <code>]&nbsp;<wbr>[</code> LDAP server name <code>[:</code> port <code>]|</code> URI <code>]&#8230;</code></p>
 <h2>Description</h2>
 <p><code>basic_ldap_auth</code> allows Squid to connect to a LDAP directory to validate the user name and password of Basic HTTP authentication. LDAP options are specified as parameters on the command line, while the username(s) and password(s) to be checked against the LDAP directory are specified on subsequent lines of input to the helper, one username/password pair per line separated by a space. </p>
@@ -20,11 +20,11 @@ description: "basic_ldap_auth – LDAP authentication helper for Squid"
 <dt><code>-b basedn</code></dt>
 <dd><code>REQUIRED.</code> Specifies the base DN under which the users are located.</dd>
 <dt><code>-f filter</code></dt>
-<dd>LDAP search <code>filter</code> to locate the user DN. Required if the users are in a hierarchy below the base DN, or if the login name is not what builds the user specific part of the users DN.<br />
- The search filter can contain up to 15 occurrences of <code>%s</code> which will be replaced by the username, as in <code>for RFC2037 directories. For a detailed description of LDAP search</code> filter syntax see RFC2254.<br />
+<dd>LDAP search <code>filter</code> to locate the user DN. Required if the users are in a hierarchy below the base DN, or if the login name is not what builds the user specific part of the users DN.<br/>
+ The search filter can contain up to 15 occurrences of <code>%s</code> which will be replaced by the username, as in <code>for RFC2037 directories. For a detailed description of LDAP search</code> filter syntax see RFC2254.<br/>
  Will crash if other <code>%</code> values than <code>%s</code> are used, or if more than 15 <code>%s</code> are used.</dd>
 <dt><code>-u userattr</code></dt>
-<dd>Specifies the name of the DN attribute that contains the username/login. Combined with the base DN to construct the users DN when no search filter is specified ( <code>-f</code> option). Defaults to <code>uid</code><br />
+<dd>Specifies the name of the DN attribute that contains the username/login. Combined with the base DN to construct the users DN when no search filter is specified ( <code>-f</code> option). Defaults to <code>uid</code><br/>
  <code>Note:</code> This can only be done if all your users are located directly under the same position in the LDAP tree and the login name is used for naming each user object. If your LDAP tree does not match these criterias or if you want to filter who are valid users then you need to use a search filter to search for your users DN ( <code>-f</code> option).</dd>
 <dt><code>-U passwordattr</code></dt>
 <dd>Use <i>ldap_compare</i> instead of <i>ldap_simple_bind</i> to verify the users password. <code>passwordattr</code> is the LDAP attribute storing the users password.</dd>
@@ -34,10 +34,10 @@ description: "basic_ldap_auth – LDAP authentication helper for Squid"
 <dd><code>one</code> level below the base object or</dd>
 <dd><code>sub</code>tree below the base object</dd>
 <dt><code>-D binddn -w password</code></dt>
-<dd>The DN and password to bind as while performing searches. Required by the <code>-f</code> flag if the directory does not allow anonymous searches.<br />
+<dd>The DN and password to bind as while performing searches. Required by the <code>-f</code> flag if the directory does not allow anonymous searches.<br/>
  As the password needs to be printed in plain text in your Squid configuration it is strongly recommended to use a account with minimal associated privileges. This to limit the damage in case someone could get hold of a copy of your Squid configuration file.</dd>
 <dt><code>-D binddn -W secretfile </code></dt>
-<dd>The DN and the name of a file containing the password to bind as while performing searches.<br />
+<dd>The DN and the name of a file containing the password to bind as while performing searches.<br/>
  Less insecure version of the former parameter pair with two advantages: The password does not occur in the process listing, and the password is not being compromised if someone gets the squid configuration file without getting the secretfile.</dd>
 <dt><code>-P</code></dt>
 <dd>Use a persistent LDAP connection. Normally the LDAP connection is only open while validating a username to preserve resources at the LDAP server. This option causes the LDAP connection to be kept open, allowing it to be reused for further user validations. Recommended for larger installations.</dd>
@@ -101,10 +101,10 @@ description: "basic_ldap_auth – LDAP authentication helper for Squid"
 <h2>Author</h2>
 <p>This program is written by <i>Glenn Newton &lt;gnewton [at] wapiti.cisti.nrc.ca&gt;</i> <i>Henrik Nordstrom &lt;hno [at] squid-cache.org&gt;</i> This manual is written by <i>Henrik Nordstrom &lt;hno [at] squid-cache.org&gt;</i></p>
 <h2>Copyright</h2>
-<p>&nbsp;<wbr>*&nbsp;<wbr>Copyright&nbsp;<wbr>(C)&nbsp;<wbr>1996-2016 The Squid Software Foundation and contributors<br />
-&nbsp;<wbr>*<br />
-&nbsp;<wbr>*&nbsp;<wbr>Squid software is distributed under GPLv2+&nbsp;<wbr>license and includes<br />
-&nbsp;<wbr>*&nbsp;<wbr>contributions from numerous individuals and organizations.<br />
+<p>&nbsp;<wbr>*&nbsp;<wbr>Copyright&nbsp;<wbr>(C)&nbsp;<wbr>1996-2016 The Squid Software Foundation and contributors<br/>
+&nbsp;<wbr>*<br/>
+&nbsp;<wbr>*&nbsp;<wbr>Squid software is distributed under GPLv2+&nbsp;<wbr>license and includes<br/>
+&nbsp;<wbr>*&nbsp;<wbr>contributions from numerous individuals and organizations.<br/>
 &nbsp;<wbr>*&nbsp;<wbr>Please see the COPYING and CONTRIBUTORS files for details. </p>
 <p> This program and documentation is copyright to the authors named above. </p>
 <p> Distributed under the GNU General Public License (GNU GPL) version 2 or later (GPLv2+).</p>
@@ -117,8 +117,8 @@ description: "basic_ldap_auth – LDAP authentication helper for Squid"
 <p> Report serious security bugs to <i>Squid Bugs &lt;squid-bugs [at] squid-cache.org&gt;</i> </p>
 <p> Report ideas for new improvements to the <i>Squid Developers mailing list</i> &lt;squid-dev [at] squid-cache.org&gt;</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-squid/">squid</a></code>(8), <code><a href="/docs/linux/man/1-ldapsearch/">ldapsearch</a></code>(1), <code>GPL</code>(7),<br />
- Your favorite LDAP documentation.<br />
- <code>RFC2254</code> &#8211; The String Representation of LDAP Search Filters,<br />
- The Squid FAQ wiki <a rel="nofollow" href="http://wiki.squid-cache.org/SquidFaq">http://wiki.squid-cache.org/SquidFaq</a><br />
+<p><code><a href="/docs/linux/man/8-squid/">squid</a></code>(8), <code><a href="/docs/linux/man/1-ldapsearch/">ldapsearch</a></code>(1), <code>GPL</code>(7),<br/>
+ Your favorite LDAP documentation.<br/>
+ <code>RFC2254</code> &#8211; The String Representation of LDAP Search Filters,<br/>
+ The Squid FAQ wiki <a rel="nofollow" href="http://wiki.squid-cache.org/SquidFaq">http://wiki.squid-cache.org/SquidFaq</a><br/>
  The Squid Configuration Manual <a rel="nofollow" href="http://www.squid-cache.org/Doc/config/">http://www.squid-cache.org/Doc/config/</a> </p>

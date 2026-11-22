@@ -10,7 +10,7 @@ description: "zlaed0.f –"
 <p>zlaed0.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlaed0</code> (QSIZ, N, D, E, Q, LDQ, QSTORE, LDQS, RWORK, IWORK, INFO)<br />
+<p>subroutine <code>zlaed0</code> (QSIZ, N, D, E, Q, LDQ, QSTORE, LDQS, RWORK, IWORK, INFO)<br/>
  <i></i><code>ZLAED0</code> used by sstedc. Computes all eigenvalues and corresponding eigenvectors of an unreduced symmetric tridiagonal matrix using the divide and conquer method.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlaed0 (integerQSIZ, integerN, double precision, dimension( * )D, double precision, dimension( * )E, complex*16, dimension( ldq, * )Q, integerLDQ, complex*16, dimension( ldqs, * )QSTORE, integerLDQS, double precision, dimension( * )RWORK, integer, dimension( * )IWORK, integerINFO)</h3>

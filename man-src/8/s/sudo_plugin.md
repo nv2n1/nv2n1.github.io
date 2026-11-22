@@ -367,54 +367,54 @@ description: "sudo_plugin – Sudo Plugin API"
 </dd><dt><code>errstr</code></dt>
 <dd>If the Fn init_session function returns a value other than 1, the plugin may store a message describing the failure or error in Fa errstr . The <code>sudo</code> front-end will then pass this value to any registered audit plugins. The string stored in Fa errstr must remain valid until the plugin&#8217;s Fn close function is called. NOTE: the Fa errstr parameter is only available starting with API version 1.15. A plugin <code>must</code> check the API version specified by the <code>sudo</code> front-end before using Fa errstr . Failure to do so may result in a crash.</dd></dl>
 <p> Policy Plugin Version Macros</p>
-<p>/* Plugin API version major/minor. */<br />
-#define SUDO_API_VERSION_MAJOR 1<br />
-#define SUDO_API_VERSION_MINOR 13<br />
-#define SUDO_API_MKVERSION(x, y) ((x &lt;&lt; 16) | y)<br />
-#define SUDO_API_VERSION SUDO_API_MKVERSION(SUDO_API_VERSION_MAJOR, \<br />
+<p>/* Plugin API version major/minor. */<br/>
+#define SUDO_API_VERSION_MAJOR 1<br/>
+#define SUDO_API_VERSION_MINOR 13<br/>
+#define SUDO_API_MKVERSION(x, y) ((x &lt;&lt; 16) | y)<br/>
+#define SUDO_API_VERSION SUDO_API_MKVERSION(SUDO_API_VERSION_MAJOR, \<br/>
                                             SUDO_API_VERSION_MINOR)</p>
-<p>/* Getters and setters for API version */<br />
-#define SUDO_API_VERSION_GET_MAJOR(v) ((v) &gt;&gt; 16)<br />
-#define SUDO_API_VERSION_GET_MINOR(v) ((v)&amp;0xffff)<br />
-#define SUDO_API_VERSION_SET_MAJOR(vp, n)         \<br />
-    do {                                          \<br />
-        *(vp) = (*(vp)&amp;0x0000ffff) | ((n) &lt;&lt; 16); \<br />
-    } while (0)<br />
-#define SUDO_API_VERSION_SET_MINOR(vp, n) \<br />
-    do {                                  \<br />
-        *(vp) = (*(vp)&amp;0xffff0000) | (n); \<br />
+<p>/* Getters and setters for API version */<br/>
+#define SUDO_API_VERSION_GET_MAJOR(v) ((v) &gt;&gt; 16)<br/>
+#define SUDO_API_VERSION_GET_MINOR(v) ((v)&amp;0xffff)<br/>
+#define SUDO_API_VERSION_SET_MAJOR(vp, n)         \<br/>
+    do {                                          \<br/>
+        *(vp) = (*(vp)&amp;0x0000ffff) | ((n) &lt;&lt; 16); \<br/>
+    } while (0)<br/>
+#define SUDO_API_VERSION_SET_MINOR(vp, n) \<br/>
+    do {                                  \<br/>
+        *(vp) = (*(vp)&amp;0xffff0000) | (n); \<br/>
     } while (0)</p>
-<p>        I /<br />
+<p>        I /<br/>
     O plugin API</p>
-<p>    struct io_plugin {<br />
-#define SUDO_IO_PLUGIN 2<br />
-    unsigned int type;    /* always SUDO_IO_PLUGIN */<br />
-    unsigned int version; /* always SUDO_API_VERSION */<br />
-    int (*open)(unsigned int version, sudo_conv_t conversation,<br />
-                sudo_printf_t plugin_printf, char *const settings[],<br />
-                char *const user_info[], char *const command_info[],<br />
-                int argc, char *const argv[], char *const user_env[],<br />
-                char *const plugin_options[], const char **errstr);<br />
-    void (*close)(int exit_status, int error); /* wait status or error */<br />
-    int (*show_version)(int verbose);<br />
-    int (*log_ttyin)(const char *buf, unsigned int len,<br />
-                     const char **errstr);<br />
-    int (*log_ttyout)(const char *buf, unsigned int len,<br />
-                      const char **errstr);<br />
-    int (*log_stdin)(const char *buf, unsigned int len,<br />
-                     const char **errstr);<br />
-    int (*log_stdout)(const char *buf, unsigned int len,<br />
-                      const char **errstr);<br />
-    int (*log_stderr)(const char *buf, unsigned int len,<br />
-                      const char **errstr);<br />
-    void (*register_hooks)(int version,<br />
-                           int (*register_hook)(struct sudo_hook *hook));<br />
-    void (*deregister_hooks)(int version,<br />
-                             int (*deregister_hook)(struct sudo_hook *hook));<br />
-    int (*change_winsize)(unsigned int lines, unsigned int cols,<br />
-                          const char **errstr);<br />
-    int (*log_suspend)(int signo, const char **errstr);<br />
-    struct sudo_plugin_event *(*event_alloc)(void);<br />
+<p>    struct io_plugin {<br/>
+#define SUDO_IO_PLUGIN 2<br/>
+    unsigned int type;    /* always SUDO_IO_PLUGIN */<br/>
+    unsigned int version; /* always SUDO_API_VERSION */<br/>
+    int (*open)(unsigned int version, sudo_conv_t conversation,<br/>
+                sudo_printf_t plugin_printf, char *const settings[],<br/>
+                char *const user_info[], char *const command_info[],<br/>
+                int argc, char *const argv[], char *const user_env[],<br/>
+                char *const plugin_options[], const char **errstr);<br/>
+    void (*close)(int exit_status, int error); /* wait status or error */<br/>
+    int (*show_version)(int verbose);<br/>
+    int (*log_ttyin)(const char *buf, unsigned int len,<br/>
+                     const char **errstr);<br/>
+    int (*log_ttyout)(const char *buf, unsigned int len,<br/>
+                      const char **errstr);<br/>
+    int (*log_stdin)(const char *buf, unsigned int len,<br/>
+                     const char **errstr);<br/>
+    int (*log_stdout)(const char *buf, unsigned int len,<br/>
+                      const char **errstr);<br/>
+    int (*log_stderr)(const char *buf, unsigned int len,<br/>
+                      const char **errstr);<br/>
+    void (*register_hooks)(int version,<br/>
+                           int (*register_hook)(struct sudo_hook *hook));<br/>
+    void (*deregister_hooks)(int version,<br/>
+                             int (*deregister_hook)(struct sudo_hook *hook));<br/>
+    int (*change_winsize)(unsigned int lines, unsigned int cols,<br/>
+                          const char **errstr);<br/>
+    int (*log_suspend)(int signo, const char **errstr);<br/>
+    struct sudo_plugin_event *(*event_alloc)(void);<br/>
 }; When an I/O plugin is loaded, <code>sudo</code> runs the command in a pseudo-terminal. This makes it possible to log the input and output from the user&#8217;s session. If any of the standard input, standard output, or standard error do not correspond to a tty, <code>sudo</code> will open a pipe to capture the I/O for logging before passing it on. The log_ttyin function receives the raw user input from the terminal device (note that this will include input even when echo is disabled, such as when a password is read). The log_ttyout function receives output from the pseudo-terminal that is suitable for replaying the user&#8217;s session at a later time. The Fn log_stdin , Fn log_stdout , and Fn log_stderr functions are only called if the standard input, standard output, or standard error respectively correspond to something other than a tty. Any of the logging functions may be set to the <code>NULL</code> pointer if no logging is to be performed. If the open function returns 0, no I/O will be sent to the plugin. If a logging function returns an error (-1) the running command will be terminated and all of the plugin&#8217;s logging functions will be disabled. Other I/O logging plugins will still receive any remaining input or output that has not yet been processed. If an input logging function rejects the data by returning 0, the command will be terminated and the data will not be passed to the command, though it will still be sent to any other I/O logging plugins. If an output logging function rejects the data by returning 0, the command will be terminated and the data will not be written to the terminal, though it will still be sent to any other I/O logging plugins. The audit_plugin struct has the following fields:</p>
 <dl>
 <dt><code>type</code></dt>
@@ -464,7 +464,7 @@ description: "sudo_plugin – Sudo Plugin API"
 <dt><code>show_version</code></dt>
 <dd>
 <pre>int (*show_version)(int verbose);</pre>
-<p>The Fn show_version function is called by <code>sudo</code> when the user specifies the &#8211;<code>V</code> option. The plugin may display its version information to the user via the Fn conversation or Fn plugin_printf function using <code>SUDO_CONV_INFO_MSG</code> Returns 1 on success, 0 on failure, -1 if a general error occurred,<br />
+<p>The Fn show_version function is called by <code>sudo</code> when the user specifies the &#8211;<code>V</code> option. The plugin may display its version information to the user via the Fn conversation or Fn plugin_printf function using <code>SUDO_CONV_INFO_MSG</code> Returns 1 on success, 0 on failure, -1 if a general error occurred,<br/>
     or -2 if there was a usage error, although the return value is currently ignored.log_ttyin</p>
 <p>                                      int(*log_ttyin)(const char *buf, unsigned int len, const char **errstr); The Fn log_ttyin function is called whenever data can be read from the user but before it is passed to the running command. This allows the plugin to reject data if it chooses to (for instance if the input contains banned content). Returns 1 if the data should be passed to the command, 0 if the data is rejected (which will terminate the running command), or -1 if an error occurred. The function arguments are as follows:</p>
 </dd><dl>
@@ -553,37 +553,37 @@ description: "sudo_plugin – Sudo Plugin API"
 <p>The Fn event_alloc function is used to allocate a <code>struct sudo_plugin_event</code> which provides access to the main <code>sudo</code> event loop. Unlike the other fields, the Fn event_alloc pointer is filled in by the <code>sudo</code> front-end, not by the plugin. See the Sx Event API section below for more information about events. NOTE: the Fn event_alloc function is only available starting with API version 1.15. If the <code>sudo</code> front-end doesn&#8217;t support API version 1.15 or higher, Fn event_alloc will not be set.</dd></dl>
 <p> <i>I/O Plugin Version Macros</i> Same as for the Sx Policy plugin API .</dl>
 <p> Audit plugin API</p>
-<p>/* Audit plugin close function status types. */<br />
-#define SUDO_PLUGIN_NO_STATUS 0<br />
-#define SUDO_PLUGIN_WAIT_STATUS 1<br />
-#define SUDO_PLUGIN_EXEC_ERROR 2<br />
+<p>/* Audit plugin close function status types. */<br/>
+#define SUDO_PLUGIN_NO_STATUS 0<br/>
+#define SUDO_PLUGIN_WAIT_STATUS 1<br/>
+#define SUDO_PLUGIN_EXEC_ERROR 2<br/>
 #define SUDO_PLUGIN_SUDO_ERROR 3</p>
-<p>#define SUDO_AUDIT_PLUGIN 3<br />
-    struct audit_plugin {<br />
-    unsigned int type;    /* always SUDO_AUDIT_PLUGIN */<br />
-    unsigned int version; /* always SUDO_API_VERSION */<br />
-    int (*open)(unsigned int version, sudo_conv_t conversation,<br />
-                sudo_printf_t sudo_printf, char *const settings[],<br />
-                char *const user_info[], int submit_optind,<br />
-                char *const submit_argv[], char *const submit_envp[],<br />
-                char *const plugin_options[], const char **errstr);<br />
-    void (*close)(int status_type, int status);<br />
-    int (*accept)(const char *plugin_name,<br />
-                  unsigned int plugin_type, char *const command_info[],<br />
-                  char *const run_argv[], char *const run_envp[],<br />
-                  const char **errstr);<br />
-    int (*reject)(const char *plugin_name, unsigned int plugin_type,<br />
-                  const char *audit_msg, char *const command_info[],<br />
-                  const char **errstr);<br />
-    int (*error)(const char *plugin_name, unsigned int plugin_type,<br />
-                 const char *audit_msg, char *const command_info[],<br />
-                 const char **errstr);<br />
-    int (*show_version)(int verbose);<br />
-    void (*register_hooks)(int version,<br />
-                           int (*register_hook)(struct sudo_hook *hook));<br />
-    void (*deregister_hooks)(int version,<br />
-                             int (*deregister_hook)(struct sudo_hook *hook));<br />
-    struct sudo_plugin_event *(*event_alloc)(void);<br />
+<p>#define SUDO_AUDIT_PLUGIN 3<br/>
+    struct audit_plugin {<br/>
+    unsigned int type;    /* always SUDO_AUDIT_PLUGIN */<br/>
+    unsigned int version; /* always SUDO_API_VERSION */<br/>
+    int (*open)(unsigned int version, sudo_conv_t conversation,<br/>
+                sudo_printf_t sudo_printf, char *const settings[],<br/>
+                char *const user_info[], int submit_optind,<br/>
+                char *const submit_argv[], char *const submit_envp[],<br/>
+                char *const plugin_options[], const char **errstr);<br/>
+    void (*close)(int status_type, int status);<br/>
+    int (*accept)(const char *plugin_name,<br/>
+                  unsigned int plugin_type, char *const command_info[],<br/>
+                  char *const run_argv[], char *const run_envp[],<br/>
+                  const char **errstr);<br/>
+    int (*reject)(const char *plugin_name, unsigned int plugin_type,<br/>
+                  const char *audit_msg, char *const command_info[],<br/>
+                  const char **errstr);<br/>
+    int (*error)(const char *plugin_name, unsigned int plugin_type,<br/>
+                 const char *audit_msg, char *const command_info[],<br/>
+                 const char **errstr);<br/>
+    int (*show_version)(int verbose);<br/>
+    void (*register_hooks)(int version,<br/>
+                           int (*register_hook)(struct sudo_hook *hook));<br/>
+    void (*deregister_hooks)(int version,<br/>
+                             int (*deregister_hook)(struct sudo_hook *hook));<br/>
+    struct sudo_plugin_event *(*event_alloc)(void);<br/>
 } An audit plugin can be used to log successful and unsuccessful attempts to run <code>sudo</code> independent of the policy or any I/O plugins. Multiple audit plugins may be specified in sudo.conf5. The audit_plugin struct has the following fields:</p>
 <dl>
 <dt><code>type</code></dt>
@@ -684,35 +684,35 @@ description: "sudo_plugin – Sudo Plugin API"
 <dt><code>show_version</code></dt>
 <dd>
 <pre>int (*show_version)(int verbose);</pre>
-<p>The Fn show_version function is called by <code>sudo</code> when the user specifies the &#8211;<code>V</code> option. The plugin may display its version information to the user via the Fn conversation or Fn plugin_printf function using <code>SUDO_CONV_INFO_MSG</code> If the user requests detailed version information, the verbose flag will be set. Returns 1 on success, 0 on failure, -1 if a general error occurred,<br />
-or -2 if there was a usage error, although the return value is currently<br />
-ignored.<br />
+<p>The Fn show_version function is called by <code>sudo</code> when the user specifies the &#8211;<code>V</code> option. The plugin may display its version information to the user via the Fn conversation or Fn plugin_printf function using <code>SUDO_CONV_INFO_MSG</code> If the user requests detailed version information, the verbose flag will be set. Returns 1 on success, 0 on failure, -1 if a general error occurred,<br/>
+or -2 if there was a usage error, although the return value is currently<br/>
+ignored.<br/>
 register_hooks</p>
-<p>See the<br />
+<p>See the<br/>
 Sx Policy plugin API</p>
-<p>section for a description of<br />
+<p>section for a description of<br/>
 register_hooks</p>
 <p>deregister_hooks</p>
-<p>See the<br />
+<p>See the<br/>
 Sx Policy plugin API</p>
-<p>section for a description of<br />
+<p>section for a description of<br/>
 deregister_hooks</p>
 <p>event_alloc</p>
 <p>struct sudo_plugin_event * (*event_alloc)(void); The Fn event_alloc function is used to allocate a <code>struct sudo_plugin_event</code> which provides access to the main <code>sudo</code> event loop. Unlike the other fields, the Fn event_alloc pointer is filled in by the <code>sudo</code> front-end, not by the plugin. See the Sx Event API section below for more information about events. NOTE: the Fn event_alloc function is only available starting with API version 1.17. If the <code>sudo</code> front-end doesn&#8217;t support API version 1.17 or higher, Fn event_alloc will not be set.</dd></dl>
 <p> Approval plugin API</p>
-<p>    struct approval_plugin {<br />
-#define SUDO_APPROVAL_PLUGIN 4<br />
-    unsigned int type;    /* always SUDO_APPROVAL_PLUGIN */<br />
-    unsigned int version; /* always SUDO_API_VERSION */<br />
-    int (*open)(unsigned int version, sudo_conv_t conversation,<br />
-                sudo_printf_t sudo_printf, char *const settings[],<br />
-                char *const user_info[], int submit_optind,<br />
-                char *const submit_argv[], char *const submit_envp[],<br />
-                char *const plugin_options[], const char **errstr);<br />
-    void (*close)(void);<br />
-    int (*check)(char *const command_info[], char *const run_argv[],<br />
-                 char *const run_envp[], const char **errstr);<br />
-    int (*show_version)(int verbose);<br />
+<p>    struct approval_plugin {<br/>
+#define SUDO_APPROVAL_PLUGIN 4<br/>
+    unsigned int type;    /* always SUDO_APPROVAL_PLUGIN */<br/>
+    unsigned int version; /* always SUDO_API_VERSION */<br/>
+    int (*open)(unsigned int version, sudo_conv_t conversation,<br/>
+                sudo_printf_t sudo_printf, char *const settings[],<br/>
+                char *const user_info[], int submit_optind,<br/>
+                char *const submit_argv[], char *const submit_envp[],<br/>
+                char *const plugin_options[], const char **errstr);<br/>
+    void (*close)(void);<br/>
+    int (*check)(char *const command_info[], char *const run_argv[],<br/>
+                 char *const run_envp[], const char **errstr);<br/>
+    int (*show_version)(int verbose);<br/>
 }; An approval plugin can be used to apply extra constraints after a command has been accepted by the policy plugin. Unlike the other plugin types, it does not remain open until the command completes. The plugin is opened before a call to Fn check or Fn show_version and closed shortly thereafter (audit plugin functions must be called before the plugin is closed). Multiple approval plugins may be specified in sudo.conf5. The approval_plugin struct has the following fields:</p>
 <dl>
 <dt><code>type</code></dt>
@@ -835,10 +835,10 @@ in_progress = 1;
 in_progress = 0;
 return SUDO_HOOK_RET_STOP;</pre>
 <p>Hook API Version Macros</p>
-<p>/* Hook API version major/minor */<br />
-#define SUDO_HOOK_VERSION_MAJOR 1<br />
-#define SUDO_HOOK_VERSION_MINOR 0<br />
-#define SUDO_HOOK_VERSION SUDO_API_MKVERSION(SUDO_HOOK_VERSION_MAJOR,\<br />
+<p>/* Hook API version major/minor */<br/>
+#define SUDO_HOOK_VERSION_MAJOR 1<br/>
+#define SUDO_HOOK_VERSION_MINOR 0<br/>
+#define SUDO_HOOK_VERSION SUDO_API_MKVERSION(SUDO_HOOK_VERSION_MAJOR,\<br/>
 SUDO_HOOK_VERSION_MINOR) For getters and setters see the Sx Policy plugin API .</p>
 <h3>Event API</h3>
 <p>When <code>sudo</code> runs a command, it uses an event loop to service signals and I/O. Events may be triggered based on time, a file or socket descriptor becoming ready, or due to receipt of a signal. Starting with API version 1.15, it is possible for a plugin to participate in this event loop by calling the Fn event_alloc function. <i>Event structure</i> Events are described by the following structure: </p>

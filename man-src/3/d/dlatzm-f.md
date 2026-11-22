@@ -10,7 +10,7 @@ description: "dlatzm.f –"
 <p>dlatzm.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dlatzm</code> (SIDE, M, N, V, INCV, TAU, C1, C2, LDC, WORK)<br />
+<p>subroutine <code>dlatzm</code> (SIDE, M, N, V, INCV, TAU, C1, C2, LDC, WORK)<br/>
  <i></i><code>DLATZM</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlatzm (characterSIDE, integerM, integerN, double precision, dimension( * )V, integerINCV, double precisionTAU, double precision, dimension( ldc, * )C1, double precision, dimension( ldc, * )C2, integerLDC, double precision, dimension( * )WORK)</h3>

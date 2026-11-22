@@ -11,9 +11,9 @@ description: "ipmiutil_discover – discover IPMI LAN-enabled nodes"
 <h2>Synopsis</h2>
 <p><code>idiscover [-abegisx]</code> </p>
 <h2>Description</h2>
-<p><i>idiscover</i> is a program that uses IPMI LAN commands to discover any nodes on the LAN that are available, by probing the RMCP port (623.) on those nodes. This utility uses IPMI LAN, so no IPMI drivers are needed. There are three methods that can be used:<br />
- -a = broadcast RMCP ping method (default)<br />
- -g = GetChannelAuthCap command method<br />
+<p><i>idiscover</i> is a program that uses IPMI LAN commands to discover any nodes on the LAN that are available, by probing the RMCP port (623.) on those nodes. This utility uses IPMI LAN, so no IPMI drivers are needed. There are three methods that can be used:<br/>
+ -a = broadcast RMCP ping method (default)<br/>
+ -g = GetChannelAuthCap command method<br/>
  else = specific RMCP ping method A beginning IP address can be specified with -b for broadcast and specific methods. An ending IP can be specified for non-broadcast methods. </p>
 <h2>Options</h2>
 <p>Command line options are described below.</p>
@@ -36,11 +36,11 @@ description: "ipmiutil_discover – discover IPMI LAN-enabled nodes"
 <dd>Causes extra debug messages to be displayed. </dd>
 </dl>
 <h2>Examples</h2>
-<p>&nbsp;<wbr>idiscover -a -b 192.168.1.255<br />
- Sends a broadcast RMCP ping to discover IPMI LAN nodes on the specified subnet.<br />
-&nbsp;<wbr>idiscover -b 192.168.1.100 -e 192.168.1.254<br />
- Sends RMCP pings to a range of IP addresses.<br />
-&nbsp;<wbr>idiscover -g -b 192.168.1.100 -e 192.168.1.254<br />
+<p>&nbsp;<wbr>idiscover -a -b 192.168.1.255<br/>
+ Sends a broadcast RMCP ping to discover IPMI LAN nodes on the specified subnet.<br/>
+&nbsp;<wbr>idiscover -b 192.168.1.100 -e 192.168.1.254<br/>
+ Sends RMCP pings to a range of IP addresses.<br/>
+&nbsp;<wbr>idiscover -g -b 192.168.1.100 -e 192.168.1.254<br/>
  Sends GetChannelAuthCap commands to a range of IP addresses. </p>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/8-ipmiutil/">ipmiutil</a>(8) <a href="/docs/linux/man/8-ialarms/">ialarms</a>(8) <a href="/docs/linux/man/8-iconfig/">iconfig</a>(8) <a href="/docs/linux/man/8-icmd/">icmd</a>(8) <a href="/docs/linux/man/8-ievents/">ievents</a>(8) <a href="/docs/linux/man/8-ifru/">ifru</a>(8) <a href="/docs/linux/man/8-igetevent/">igetevent</a>(8) <a href="/docs/linux/man/8-ihealth/">ihealth</a>(8) <a href="/docs/linux/man/8-ilan/">ilan</a>(8) <a href="/docs/linux/man/8-ireset/">ireset</a>(8) <a href="/docs/linux/man/8-isel/">isel</a>(8) <a href="/docs/linux/man/8-isensor/">isensor</a>(8) <a href="/docs/linux/man/8-iserial/">iserial</a>(8) <a href="/docs/linux/man/8-isol/">isol</a>(8) <a href="/docs/linux/man/8-iwdt/">iwdt</a>(8) </p>

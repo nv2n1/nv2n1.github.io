@@ -22,7 +22,7 @@ description: "ftpcount – show current number of connections for each proftpd s
 <dt><code>-S,&#8211;server</code><i> server-name</i></dt>
 <dd> Specify the ServerName for a specific virtual host. If used, <i>ftpcount</i> will only show the session count for the given virtual host.</dd></dl>
 <h2>FILES</h2>
-<p> <code>/usr/bin/ftpcount</code><br />
+<p> <code>/usr/bin/ftpcount</code><br/>
  <code>/run/proftpd/proftpd.scoreboard</code></p>
 <h2>AUTHORS</h2>
 <p> ProFTPD is written and maintained by a number of people, full credits can be found on <code><a rel="nofollow" href="http://www.proftpd.org/credits.html">http://www.proftpd.org/credits.html</a></code></p>

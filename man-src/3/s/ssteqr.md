@@ -11,7 +11,7 @@ description: "ssteqr.f –"
 <p> ssteqr.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>ssteqr</code> (COMPZ, N, D, E, Z, LDZ, WORK, INFO)<br />
+<p> subroutine <code>ssteqr</code> (COMPZ, N, D, E, Z, LDZ, WORK, INFO)<br/>
  <i></i><code>SSTEQR</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ssteqr (characterCOMPZ, integerN, real, dimension( * )D, real, dimension( * )E, real, dimension( ldz, * )Z, integerLDZ, real, dimension( * )WORK, integerINFO)</h3>

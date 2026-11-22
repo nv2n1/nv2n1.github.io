@@ -57,7 +57,7 @@ description: "aptitude – high-level interface to the package manager"
 <dd>Mark &lt;<i>package</i>&gt; as having been manually installed.</dd></dl>
 <p> As a special case, &#8220;<code>install</code>&#8221; with no arguments will act on any stored/pending actions. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  Once you enter <code>Y</code> at the final confirmation prompt, the &#8220;<code>install</code>&#8221; command will modify <code>aptitude</code>&#8216;s stored information about what actions to perform. Therefore, if you issue (e.g.) the command &#8220;<code>aptitude install foo bar</code>&#8221; and then abort the installation once <code>aptitude</code> has started downloading and installing packages, you will need to run &#8220;<code>aptitude remove foo bar</code>&#8221; to cancel that order. </dd>
 </dl>
 </dl>
@@ -90,7 +90,7 @@ description: "aptitude – high-level interface to the package manager"
 <dd>Upgrades installed packages to their most recent version, removing or installing packages as necessary. This command is less conservative than <code>safe-upgrade</code> and thus more likely to perform unwanted actions. However, it is capable of upgrading packages that <code>safe-upgrade</code> cannot upgrade. </dd>
 <p> If no &lt;<i>package</i>&gt;s are listed on the command line, <code>aptitude</code> will attempt to upgrade every package that can be upgraded. Otherwise, <code>aptitude</code> will attempt to upgrade only the packages which it is instructed to upgrade. The &lt;<i>package</i>&gt;s can be extended with suffixes in the same manner as arguments to <code>aptitude install</code>, so you can also give additional instructions to <code>aptitude</code> here; for instance, <code>aptitude full-upgrade bash dash-</code> will attempt to upgrade the bash package and remove the dash package. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  This command was originally named <code>dist-upgrade</code> for historical reasons, and <code>aptitude</code> still recognizes <code>dist-upgrade</code> as a synonym for <code>full-upgrade</code>. </dd>
 </dl>
 </dl>
@@ -104,7 +104,7 @@ description: "aptitude – high-level interface to the package manager"
 <dl>
 <dd>Searches for packages matching one of the patterns supplied on the command line. All packages which match any of the given patterns will be displayed; for instance, &#8220;<code>aptitude search &#8216;~N&#8217; edit</code>&#8221; will list all &#8220;new&#8221; packages and all packages whose name contains &#8220;edit&#8221;. For more information on search patterns, see the section &#8220;Search Patterns&#8221; in the <code>aptitude</code> reference manual. </dd>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  In the example above, &#8220;<code>aptitude search &#8216;~N&#8217; edit</code>&#8221; has two arguments after <code>search</code> and thus is searching for <i>two</i> patterns: &#8220;<code>~N</code>&#8221; and &#8220;<code>edit</code>&#8220;. As described in the search pattern reference, a <i>single</i> pattern composed of two sub-patterns separated by a space (such as &#8220;<code>~N edit</code>&#8220;) matches only if <i>both</i> patterns match. Thus, the command &#8220;<code>aptitude search &#8216;~N edit&#8217;</code>&#8221; will only show &#8220;new&#8221; packages whose name contains &#8220;edit&#8221;. </dd>
 </dl>
 <p> Unless you pass the <code>-F</code> option, the output of <code>aptitude search</code> will look something like this: </p>
@@ -189,7 +189,7 @@ i A texlive-latex-extra Conflicts textopo</pre>
 <p> If one or more &lt;<i>pattern</i>&gt;s are present, then <code>aptitude</code> will begin its search at these patterns; that is, the first package in the chain it prints will be a package matching the pattern in question. The patterns are considered to be package names unless they contain a tilde character (&#8220;<code>~</code>&#8220;) or a question mark (&#8220;<code>?</code>&#8220;), in which case they are treated as search patterns (see the section &#8220;Search Patterns&#8221; in the <code>aptitude</code> reference manual). </p>
 <p> If no patterns are present, then <code>aptitude</code> will search for dependency chains beginning at manually installed packages. This effectively shows the packages that have caused or would cause a given package to be installed. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  <code>aptitude why</code> does not perform full dependency resolution; it only displays direct relationships between packages. For instance, if A requires B, C requires D, and B and C conflict, &#8220;<code>aptitude why-not D</code>&#8221; will not produce the answer &#8220;A depends on B, B conflicts with C, and D depends on C&#8221;. </dd>
 </dl>
 <p> By default <code>aptitude</code> outputs only the &#8220;most installed, strongest, tightest, shortest&#8221; dependency chain. That is, it looks for a chain that only contains packages which are installed or will be installed; it looks for the strongest possible dependencies under that restriction; it looks for chains that avoid ORed dependencies and Provides; and it looks for the shortest dependency chain meeting those criteria. These rules are progressively weakened until a match is found. </p>

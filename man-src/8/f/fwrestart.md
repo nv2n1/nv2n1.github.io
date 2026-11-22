@@ -13,7 +13,7 @@ description: "fwrestart – Re-initialize the firewall rules, disabling firewall
 <h2>Description</h2>
 <p>fwrestart uses terminal auto-response codes to safely re-start firewall rules over a remote shell session. It sends a request to your terminal (xterm, for example), which responds back automatically. When that response is received, ensuring that fwrestart can communicate with the terminal, fwrestart then issues a command to restart the firewall. It then tries another request to the terminal, and if that is not received within 5 seconds, a command is run to clear the firewall and an appropriate error is generated. The goal is to be able to automatically detect when changes to the firewall block the administrative shell session, and to take corrective action. By default the commands used to restart and clear the firewall are &quot;/sbin/service iptables start&quot; and &quot;/sbin/service iptables stop&quot;. These commands can be changed by modifying the values of &quot;fwRestartCmd&quot; and &quot;fwClearCmd&quot; at the beginning of the fwrestart script. </p>
 <h2>Examples</h2>
-<p>Re-load firewall rules, checking to ensure that the new rules don&#8217;t block the current session:<br />
+<p>Re-load firewall rules, checking to ensure that the new rules don&#8217;t block the current session:<br/>
 fwrestart </p>
 <h2>Environment</h2>
 <p>A KRUD installation (<a rel="nofollow" href="http://www.tummy.com/krud">http://www.tummy.com/krud</a>).</p>

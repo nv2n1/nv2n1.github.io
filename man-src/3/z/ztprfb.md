@@ -10,7 +10,7 @@ description: "ztprfb.f –"
 <p>ztprfb.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>ztprfb</code> (SIDE, TRANS, DIRECT, STOREV, M, N, K, L, V, LDV, T, LDT, A, LDA, B, LDB, WORK, LDWORK)<br />
+<p>subroutine <code>ztprfb</code> (SIDE, TRANS, DIRECT, STOREV, M, N, K, L, V, LDV, T, LDT, A, LDA, B, LDB, WORK, LDWORK)<br/>
  <i></i><code>ZTPRFB</code> applies a real or complex &#8216;triangular-pentagonal&#8217; blocked reflector to a real or complex matrix, which is composed of two blocks.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ztprfb (characterSIDE, characterTRANS, characterDIRECT, characterSTOREV, integerM, integerN, integerK, integerL, complex*16, dimension( ldv, * )V, integerLDV, complex*16, dimension( ldt, * )T, integerLDT, complex*16, dimension( lda, * )A, integerLDA, complex*16, dimension( ldb, * )B, integerLDB, complex*16, dimension( ldwork, * )WORK, integerLDWORK)</h3>

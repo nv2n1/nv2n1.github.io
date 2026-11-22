@@ -10,7 +10,7 @@ description: "spotrs.f –"
 <p>spotrs.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>spotrs</code> (UPLO, N, NRHS, A, LDA, B, LDB, INFO)<br />
+<p>subroutine <code>spotrs</code> (UPLO, N, NRHS, A, LDA, B, LDB, INFO)<br/>
  <i></i><code>SPOTRS</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine spotrs (characterUPLO, integerN, integerNRHS, real, dimension( lda, * )A, integerLDA, real, dimension( ldb, * )B, integerLDB, integerINFO)</h3>

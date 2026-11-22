@@ -32,16 +32,16 @@ description: "update-desktop-database – Build cache database of MIME types han
 <dl>
 <dt>
 </dt><dd>
-&nbsp;[MIME Cache]<br />
-&nbsp;application/x-shellscript=gedit.desktop;<br />
-&nbsp;text/plain=gedit.desktop;gvim.desktop;<br />
+&nbsp;[MIME Cache]<br/>
+&nbsp;application/x-shellscript=gedit.desktop;<br/>
+&nbsp;text/plain=gedit.desktop;gvim.desktop;<br/>
 &nbsp;video/webm=totem.desktop;</dd></dl>
 <p> This cache database is created with three desktop files, each containing a <code>MimeType</code> key:</p>
 <dl>
 <dt>
 </dt><dd>
-&nbsp;<code>gedit.desktop</code>: MimeType=text/plain;application/x-shellscript;<br />
-&nbsp;<code>gvim.desktop</code>: MimeType=text/plain;<br />
+&nbsp;<code>gedit.desktop</code>: MimeType=text/plain;application/x-shellscript;<br/>
+&nbsp;<code>gvim.desktop</code>: MimeType=text/plain;<br/>
 &nbsp;<code>totem.desktop</code>: MimeType=video/webm;</dd></dl>
 <h2>FILES</h2>
 <p> <code>$XDG_DATA_DIRS/applications/mimeinfo.cache</code></p>

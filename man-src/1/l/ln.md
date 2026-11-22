@@ -10,9 +10,9 @@ description: "ln – make links between files"
 
 <p> ln &#8211; make links between files </p>
 <h2>SYNOPSIS</h2>
-<p> <code>ln</code> [<i>,OPTION/</i>]&#8230; [<i>,-T/</i>] <i>,TARGET LINK_NAME/</i><br />
- <code>ln</code> [<i>,OPTION/</i>]&#8230; <i>,TARGET/</i><br />
- <code>ln</code> [<i>,OPTION/</i>]&#8230; <i>,TARGET/</i>&#8230; <i>,DIRECTORY/</i><br />
+<p> <code>ln</code> [<i>,OPTION/</i>]&#8230; [<i>,-T/</i>] <i>,TARGET LINK_NAME/</i><br/>
+ <code>ln</code> [<i>,OPTION/</i>]&#8230; <i>,TARGET/</i><br/>
+ <code>ln</code> [<i>,OPTION/</i>]&#8230; <i>,TARGET/</i>&#8230; <i>,DIRECTORY/</i><br/>
  <code>ln</code> [<i>,OPTION/</i>]&#8230; <i>,-t DIRECTORY TARGET/</i>&#8230;</p>
 <h2>DESCRIPTION</h2>
 <p> In the 1st form, create a link to TARGET with the name LINK_NAME. In the 2nd form, create a link to TARGET in the current directory. In the 3rd and 4th forms, create links to each TARGET in DIRECTORY. Create hard links by default, symbolic links with <code>&#8211;symbolic</code>. By default, each destination (name of new link) should not already exist. When creating hard links, each TARGET must exist. Symbolic links can hold arbitrary text; if later resolved, a relative link is interpreted in relation to its parent directory. </p>
@@ -64,12 +64,12 @@ description: "ln – make links between files"
 <h2>AUTHOR</h2>
 <p> Written by Mike Parker and David MacKenzie.</p>
 <h2>REPORTING BUGS</h2>
-<p> GNU coreutils online help: &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/">https://www.gnu.org/software/coreutils/</a>&gt;<br />
+<p> GNU coreutils online help: &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/">https://www.gnu.org/software/coreutils/</a>&gt;<br/>
  Report any translation bugs to &lt;<a rel="nofollow" href="https://translationproject.org/team/">https://translationproject.org/team/</a>&gt;</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2020 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="https://gnu.org/licenses/gpl.html">https://gnu.org/licenses/gpl.html</a>&gt;.<br />
+<p> Copyright &#169; 2020 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="https://gnu.org/licenses/gpl.html">https://gnu.org/licenses/gpl.html</a>&gt;.<br/>
  This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/2-link/">link</a>(2), <a href="/docs/linux/man/2-symlink/">symlink</a>(2) </p>
-<p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/ln">https://www.gnu.org/software/coreutils/ln</a>&gt;<br />
+<p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/ln">https://www.gnu.org/software/coreutils/ln</a>&gt;<br/>
  or available locally via: info &#8216;(coreutils) ln invocation&#8217; </p>

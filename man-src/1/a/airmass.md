@@ -10,7 +10,7 @@ description: "airmass – Computing airmass coefficient"
 
 <p> airmass &#8211; Computing airmass coefficient</p>
 <h2>SYNOPSIS</h2>
-<p> <code>airmass </code><i>[options] source_file &#8230;</i> &#8211; batch mode<br />
+<p> <code>airmass </code><i>[options] source_file &#8230;</i> &#8211; batch mode<br/>
  <code>airmass </code><i>[options]</i> &#8211; terminal mode </p>
 <h2>DESCRIPTION</h2>
 <p> The Airmass program computes value of the airmass coefficient (X) from given julian date, object&#8217;s coordinates and observer&#8217;s coordinates. It works either in batch mode, where the table stored in file is converted and saved to another file, or in terminal mode, where the user enters simple commands and queries by keyboard. </p>

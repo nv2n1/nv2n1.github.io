@@ -96,21 +96,21 @@ description: "perl5101delta – what is new for perl v5.10.1"
 <p> An environment variable is used, rather than parallel make itself, because TAP::Harness needs to be able to schedule individual non-conflicting test scripts itself, and there is no standard interface to <code>&quot;make&quot;</code> utilities to interact with their job schedulers. </p>
 <p> Note that currently some test scripts may fail when run in parallel (most notably <code>&quot;ext/IO/t/io_dir.t&quot;</code>). If necessary run just the failing scripts again sequentially and see if the failures go away.  </p>
 <h3>DTrace support</h3>
-<p> Some support for DTrace has been added. See ``DTrace support&#8217;&#8216; in <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i>.  </p>
-<font SIZE="-1"></font><h3>Support for configure_requires in CPAN module metadata</h3>
-<p> Both <code>&quot;CPAN&quot;</code> and <code>&quot;CPANPLUS&quot;</code> now support the <code>&quot;configure_requires&quot;</code> keyword in the <code>&quot;META.yml&quot;</code> metadata file included in most recent <font SIZE="-1">CPAN</font> distributions. This allows distribution authors to specify configuration prerequisites that must be installed before running <i>Makefile.PL</i> or <i>Build.PL</i>. </p>
-<p> See the documentation for <code>&quot;ExtUtils::MakeMaker&quot;</code> or <code>&quot;Module::Build&quot;</code> for more on how to specify <code>&quot;configure_requires&quot;</code> when creating a distribution for <font SIZE="-1">CPAN.</font>  </p>
+<p> Some support for DTrace has been added. See ``DTrace support&#8217;&#8216; in <i></i><i>INSTALL</i><i></i>.  </p>
+<h3>Support for configure_requires in CPAN module metadata</h3>
+<p> Both <code>&quot;CPAN&quot;</code> and <code>&quot;CPANPLUS&quot;</code> now support the <code>&quot;configure_requires&quot;</code> keyword in the <code>&quot;META.yml&quot;</code> metadata file included in most recent CPAN distributions. This allows distribution authors to specify configuration prerequisites that must be installed before running <i>Makefile.PL</i> or <i>Build.PL</i>. </p>
+<p> See the documentation for <code>&quot;ExtUtils::MakeMaker&quot;</code> or <code>&quot;Module::Build&quot;</code> for more on how to specify <code>&quot;configure_requires&quot;</code> when creating a distribution for CPAN.  </p>
 <h2>Modules and Pragmata</h2>
 <h3>New Modules and Pragmata</h3>
 <dl>
 <dt>&quot;autodie&quot;</dt>
-<dd> <p> This is a new lexically-scoped alternative for the <code>&quot;Fatal&quot;</code> module. The bundled version is 2.06_01. Note that in this release, using a string eval when <code>&quot;autodie&quot;</code> is in effect can cause the autodie behaviour to leak into the surrounding scope. See ``<font SIZE="-1">BUGS&#8217;&#8216;</font> in autodie for more details. </p>
+<dd> <p> This is a new lexically-scoped alternative for the <code>&quot;Fatal&quot;</code> module. The bundled version is 2.06_01. Note that in this release, using a string eval when <code>&quot;autodie&quot;</code> is in effect can cause the autodie behaviour to leak into the surrounding scope. See ``BUGS&#8217;&#8216; in autodie for more details. </p>
  </dd>
 <dt>&quot;Compress::Raw::Bzip2&quot;</dt>
 <dd> <p> This has been added to the core (version 2.020). </p>
  </dd>
 <dt>&quot;parent&quot;</dt>
-<dd> <p> This pragma establishes an <font SIZE="-1">ISA</font> relationship with base classes at compile time. It provides the key feature of <code>&quot;base&quot;</code> without the feature creep. </p>
+<dd> <p> This pragma establishes an ISA relationship with base classes at compile time. It provides the key feature of <code>&quot;base&quot;</code> without the feature creep. </p>
  </dd>
 <dt>&quot;Parse::CPAN::Meta&quot;</dt>
 <dd> <p> This has been added to the core (version 1.39). </p>
@@ -262,7 +262,7 @@ description: "perl5101delta – what is new for perl v5.10.1"
 <dd> <p> Upgraded from version 1.13 to 1.16. </p>
  </dd>
 <dt>&quot;ExtUtils::Constant&quot;</dt>
-<dd> <p> Upgraded from 0.20 to 0.22. (Note that neither of these versions are available on <font SIZE="-1">CPAN.</font>) </p>
+<dd> <p> Upgraded from 0.20 to 0.22. (Note that neither of these versions are available on CPAN.) </p>
  </dd>
 <dt>&quot;ExtUtils::Embed&quot;</dt>
 <dd> <p> Upgraded from version 1.27 to 1.28. </p>
@@ -339,7 +339,7 @@ description: "perl5101delta – what is new for perl v5.10.1"
  </dd>
 <dt>&quot;IO&quot;</dt>
 <dd> <p> Upgraded from version 1.23_01 to 1.25. </p>
-<p> This makes non-blocking mode work on Windows in <code>&quot;IO::Socket::INET&quot;</code> [<font SIZE="-1">CPAN</font> #43573]. </p>
+<p> This makes non-blocking mode work on Windows in <code>&quot;IO::Socket::INET&quot;</code> [CPAN #43573]. </p>
  </dd>
 <dt>&quot;IO::Compress::*&quot;</dt>
 <dd> <p> Upgraded from version 2.008 to 2.020. </p>
@@ -493,7 +493,7 @@ description: "perl5101delta – what is new for perl v5.10.1"
  </dd>
 <dt>&quot;Test::Harness&quot;</dt>
 <dd> <p> Upgraded from version 2.64 to 3.17. </p>
-<p> Note that one side-effect of the 2.x to 3.x upgrade is that the experimental <code>&quot;Test::Harness::Straps&quot;</code> module (and its supporting <code>&quot;Assert&quot;</code>, <code>&quot;Iterator&quot;</code>, <code>&quot;Point&quot;</code> and <code>&quot;Results&quot;</code> modules) have been removed. If you still need this, then they are available in the (unmaintained) <code>&quot;Test-Harness-Straps&quot;</code> distribution on <font SIZE="-1">CPAN.</font> </p>
+<p> Note that one side-effect of the 2.x to 3.x upgrade is that the experimental <code>&quot;Test::Harness::Straps&quot;</code> module (and its supporting <code>&quot;Assert&quot;</code>, <code>&quot;Iterator&quot;</code>, <code>&quot;Point&quot;</code> and <code>&quot;Results&quot;</code> modules) have been removed. If you still need this, then they are available in the (unmaintained) <code>&quot;Test-Harness-Straps&quot;</code> distribution on CPAN. </p>
  </dd>
 <dt>&quot;Test::Simple&quot;</dt>
 <dd> <p> Upgraded from version 0.72 to 0.92. </p>
@@ -539,7 +539,7 @@ description: "perl5101delta – what is new for perl v5.10.1"
  </dd>
 <dt>&quot;Unicode::UCD&quot;</dt>
 <dd> <p> Upgraded from version 0.25 to 0.27. </p>
-<p> <code>&quot;charinfo()&quot;</code> now works on Unified <font SIZE="-1">CJK</font> code points added to later versions of Unicode. </p>
+<p> <code>&quot;charinfo()&quot;</code> now works on Unified CJK code points added to later versions of Unicode. </p>
 <p> <code>&quot;casefold()&quot;</code> has new fields returned to provide both a simpler interface and previously missing information. The old fields are retained for backwards compatibility. Information about Turkic-specific code points is now returned. </p>
 <p> The documentation has been corrected and expanded. </p>
  </dd>
@@ -562,7 +562,7 @@ description: "perl5101delta – what is new for perl v5.10.1"
  </dd>
 <dt><i>h2xs</i></dt>
 <dd> <p> No longer incorrectly treats enum values like macros (Daniel Burr). </p>
-<p> Now handles C<font SIZE="-2">++</font> style constants (<code>&quot;//&quot;</code>) properly in enums. (A patch from Rainer Weikusat was used; Daniel Burr also proposed a similar fix). </p>
+<p> Now handles C++ style constants (<code>&quot;//&quot;</code>) properly in enums. (A patch from Rainer Weikusat was used; Daniel Burr also proposed a similar fix). </p>
  </dd>
 <dt><i>perl5db.pl</i></dt>
 <dd> <p> <code>&quot;LVALUE&quot;</code> subroutines now work under the debugger. </p>
@@ -611,19 +611,19 @@ description: "perl5101delta – what is new for perl v5.10.1"
 <p> If <code>&quot;vendorlib&quot;</code> and <code>&quot;vendorarch&quot;</code> are the same, then they are only added to <code>@INC</code> once. </p>
 <p> <code>$Config{usedevel}</code> and the C-level <code>&quot;PERL_USE_DEVEL&quot;</code> are now defined if perl is built with <code>&quot;-Dusedevel&quot;</code>. </p>
 <p> <i>Configure</i> will enable use of <code>&quot;-fstack-protector&quot;</code>, to provide protection against stack-smashing attacks, if the compiler supports it. </p>
-<p> <i>Configure</i> will now determine the correct prototypes for re-entrant functions, and for <code>&quot;gconvert&quot;</code>, if you are using a C<font SIZE="-2">++</font> compiler rather than a C compiler. </p>
+<p> <i>Configure</i> will now determine the correct prototypes for re-entrant functions, and for <code>&quot;gconvert&quot;</code>, if you are using a C++ compiler rather than a C compiler. </p>
 <p> On Unix, if you build from a tree containing a git repository, the configuration process will note the commit hash you have checked out, for display in the output of <code>&quot;perl -v&quot;</code> and <code>&quot;perl -V&quot;</code>. Unpushed local commits are automatically added to the list of local patches displayed by <code>&quot;perl -V&quot;</code>.  </p>
 <h3>Compilation improvements</h3>
 <p> As part of the flattening of <i>ext</i>, all extensions on all platforms are built by <i>make_ext.pl</i>. This replaces the Unix-specific <i>ext/util/make_ext</i>, VMS-specific <i>make_ext.com</i> and Win32-specific <i>win32/buildext.pl</i>.  </p>
 <h3>Platform Specific Changes</h3>
 <dl>
-<dt><font SIZE="-1">AIX</font></dt>
-<dd> <p> Removed <i>libbsd</i> for <font SIZE="-1">AIX 5L</font> and 6.1. Only <code>flock()</code> was used from <i>libbsd</i>. </p>
-<p> Removed <i>libgdbm</i> for <font SIZE="-1">AIX 5L</font> and 6.1. The <i>libgdbm</i> is delivered as an optional package with the <font SIZE="-1">AIX</font> Toolbox. Unfortunately the 64 bit version is broken. </p>
-<p> Hints changes mean that <font SIZE="-1">AIX 4.2</font> should work again. </p>
+<dt>AIX</dt>
+<dd> <p> Removed <i>libbsd</i> for AIX 5L and 6.1. Only <code>flock()</code> was used from <i>libbsd</i>. </p>
+<p> Removed <i>libgdbm</i> for AIX 5L and 6.1. The <i>libgdbm</i> is delivered as an optional package with the AIX Toolbox. Unfortunately the 64 bit version is broken. </p>
+<p> Hints changes mean that AIX 4.2 should work again. </p>
  </dd>
 <dt>Cygwin</dt>
-<dd> <p> On Cygwin we now strip the last number from the <font SIZE="-1">DLL.</font> This has been the behaviour in the cygwin.com build for years. The hints files have been updated. </p>
+<dd> <p> On Cygwin we now strip the last number from the DLL. This has been the behaviour in the cygwin.com build for years. The hints files have been updated. </p>
  </dd>
 <dt>FreeBSD</dt>
 <dd> <p> The hints files now identify the correct threading libraries on FreeBSD 7 and later. </p>
@@ -634,26 +634,26 @@ description: "perl5101delta – what is new for perl v5.10.1"
 <dt>Haiku</dt>
 <dd> <p> Patches from the Haiku maintainers have been merged in. Perl should now build on Haiku. </p>
  </dd>
-<dt>MirOS <font SIZE="-1">BSD</font></dt>
-<dd> <p> Perl should now build on MirOS <font SIZE="-1">BSD.</font> </p>
+<dt>MirOS BSD</dt>
+<dd> <p> Perl should now build on MirOS BSD. </p>
  </dd>
 <dt>NetBSD</dt>
 <dd> <p> Hints now supports versions 5.*. </p>
  </dd>
-<dt>Stratus <font SIZE="-1">VOS</font></dt>
+<dt>Stratus VOS</dt>
 <dd> <p> Various changes from Stratus have been merged in. </p>
  </dd>
 <dt>Symbian</dt>
-<dd> <p> There is now support for Symbian S60 3.2 <font SIZE="-1">SDK</font> and S60 5.0 <font SIZE="-1">SDK.</font> </p>
+<dd> <p> There is now support for Symbian S60 3.2 SDK and S60 5.0 SDK. </p>
  </dd>
 <dt>Win32</dt>
 <dd> <p> Improved message window handling means that <code>&quot;alarm&quot;</code> and <code>&quot;kill&quot;</code> messages will no longer be dropped under race conditions. </p>
  </dd>
-<dt><font SIZE="-1">VMS</font></dt>
+<dt>VMS</dt>
 <dd> <p> Reads from the in-memory temporary files of <code>&quot;PerlIO::scalar&quot;</code> used to fail if <code>$/</code> was set to a numeric reference (to indicate record-style reads). This is now fixed. </p>
-<p> <font SIZE="-1">VMS</font> now supports <code>&quot;getgrgid&quot;</code>. </p>
-<p> Many improvements and cleanups have been made to the <font SIZE="-1">VMS</font> file name handling and conversion code. </p>
-<p> Enabling the <code>&quot;PERL_VMS_POSIX_EXIT&quot;</code> logical name now encodes a <font SIZE="-1">POSIX</font> exit status in a <font SIZE="-1">VMS</font> condition value for better interaction with <font SIZE="-1">GNV</font>&#8216;s bash shell and other utilities that depend on <font SIZE="-1">POSIX</font> exit values. See ``$?&#8216;&#8216; in perlvms for details. </p>
+<p> VMS now supports <code>&quot;getgrgid&quot;</code>. </p>
+<p> Many improvements and cleanups have been made to the VMS file name handling and conversion code. </p>
+<p> Enabling the <code>&quot;PERL_VMS_POSIX_EXIT&quot;</code> logical name now encodes a POSIX exit status in a VMS condition value for better interaction with GNV&#8216;s bash shell and other utilities that depend on POSIX exit values. See ``$?&#8216;&#8216; in perlvms for details. </p>
  </dd></dl>
 <h2>Selected Bug Fixes</h2>
 <dl>
@@ -661,34 +661,34 @@ description: "perl5101delta – what is new for perl v5.10.1"
 <dd> <p> 5.10.0 inadvertently disabled an optimisation, which caused a measurable performance drop in list assignment, such as is often used to assign function parameters from <code>@_</code>. The optimisation has been re-instated, and the performance regression fixed. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Fixed memory leak on <code>&quot;while (1) { map 1, 1 }&quot;</code> [<font SIZE="-1">RT</font> #53038]. </p>
+<dd> <p> Fixed memory leak on <code>&quot;while (1) { map 1, 1 }&quot;</code> [RT #53038]. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Some potential coredumps in PerlIO fixed [<font SIZE="-1">RT</font> #57322,54828]. </p>
+<dd> <p> Some potential coredumps in PerlIO fixed [RT #57322,54828]. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> The debugger now works with lvalue subroutines. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> The debugger&#8217;s <code>&quot;m&quot;</code> command was broken on modules that defined constants [<font SIZE="-1">RT</font> #61222]. </p>
+<dd> <p> The debugger&#8217;s <code>&quot;m&quot;</code> command was broken on modules that defined constants [RT #61222]. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <code>&quot;crypt()&quot;</code> and string complement could return tainted values for untainted arguments [<font SIZE="-1">RT</font> #59998]. </p>
+<dd> <p> <code>&quot;crypt()&quot;</code> and string complement could return tainted values for untainted arguments [RT #59998]. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> The <code>&quot;-i.suffix&quot;</code> command-line switch now recreates the file using restricted permissions, before changing its mode to match the original file. This eliminates a potential race condition [<font SIZE="-1">RT</font> #60904]. </p>
+<dd> <p> The <code>&quot;-i.suffix&quot;</code> command-line switch now recreates the file using restricted permissions, before changing its mode to match the original file. This eliminates a potential race condition [RT #60904]. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> On some Unix systems, the value in <code>$?</code> would not have the top bit set (<code>&quot;$? &amp; 128&quot;</code>) even if the child core dumped. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Under some circumstances, $^R could incorrectly become undefined [<font SIZE="-1">RT</font> #57042]. </p>
+<dd> <p> Under some circumstances, $^R could incorrectly become undefined [RT #57042]. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> (<font SIZE="-1">XS</font>) In various hash functions, passing a pre-computed hash to when the key is <font SIZE="-1">UTF-8</font> might result in an incorrect lookup. </p>
+<dd> <p> (XS) In various hash functions, passing a pre-computed hash to when the key is UTF-8 might result in an incorrect lookup. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> (<font SIZE="-1">XS</font>) Including <i></i><font SIZE="-1"><i>XSUB</i></font><i>.h</i> before <i>perl.h</i> gave a compile-time error [<font SIZE="-1">RT</font> #57176]. </p>
+<dd> <p> (XS) Including <i></i><i>XSUB</i><i>.h</i> before <i>perl.h</i> gave a compile-time error [RT #57176]. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> <code>&quot;$object-&gt;isa(&#8216;Foo&#8217;)&quot;</code> would report false if the package <code>&quot;Foo&quot;</code> didn&#8217;t exist, even if the object&#8217;s <code>@ISA</code> contained <code>&quot;Foo&quot;</code>. </p>
@@ -697,20 +697,20 @@ description: "perl5101delta – what is new for perl v5.10.1"
 <dd> <p> Various bugs in the new-to 5.10.0 mro code, triggered by manipulating <code>@ISA</code>, have been found and fixed. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Bitwise operations on references could crash the interpreter, e.g. <code>&quot;$x=\$y; $x |= &quot;foo&quot;&quot;</code> [<font SIZE="-1">RT</font> #54956]. </p>
+<dd> <p> Bitwise operations on references could crash the interpreter, e.g. <code>&quot;$x=\$y; $x |= &quot;foo&quot;&quot;</code> [RT #54956]. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Patterns including alternation might be sensitive to the internal <font SIZE="-1">UTF-8</font> representation, e.g. </p>
+<dd> <p> Patterns including alternation might be sensitive to the internal UTF-8 representation, e.g. </p>
 <pre><code>    my $byte = chr(192);
     my $utf8 = chr(192); utf8::upgrade($utf8);
     $utf8 =~ /$byte|X}/i; # failed in 5.10.0
 </code></pre>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Within UTF8-encoded Perl source files (i.e. where <code>&quot;use utf8&quot;</code> is in effect), double-quoted literal strings could be corrupted where a <code>&quot;\xNN&quot;</code>, <code>&quot;\0NNN&quot;</code> or <code>&quot;\N{}&quot;</code> is followed by a literal character with ordinal value greater than 255 [<font SIZE="-1">RT</font> #59908]. </p>
+<dd> <p> Within UTF8-encoded Perl source files (i.e. where <code>&quot;use utf8&quot;</code> is in effect), double-quoted literal strings could be corrupted where a <code>&quot;\xNN&quot;</code>, <code>&quot;\0NNN&quot;</code> or <code>&quot;\N{}&quot;</code> is followed by a literal character with ordinal value greater than 255 [RT #59908]. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <code>&quot;B::Deparse&quot;</code> failed to correctly deparse various constructs: <code>&quot;readpipe STRING&quot;</code> [<font SIZE="-1">RT</font> #62428], <code>&quot;CORE::require(STRING)&quot;</code> [<font SIZE="-1">RT</font> #62488], <code>&quot;sub foo(_)&quot;</code> [<font SIZE="-1">RT</font> #62484]. </p>
+<dd> <p> <code>&quot;B::Deparse&quot;</code> failed to correctly deparse various constructs: <code>&quot;readpipe STRING&quot;</code> [RT #62428], <code>&quot;CORE::require(STRING)&quot;</code> [RT #62488], <code>&quot;sub foo(_)&quot;</code> [RT #62484]. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Using <code>&quot;setpgrp()&quot;</code> with no arguments could corrupt the perl stack. </p>
@@ -719,15 +719,15 @@ description: "perl5101delta – what is new for perl v5.10.1"
 <dd> <p> The block form of <code>&quot;eval&quot;</code> is now specifically trappable by <code>&quot;Safe&quot;</code> and <code>&quot;ops&quot;</code>. Previously it was erroneously treated like string <code>&quot;eval&quot;</code>. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> In 5.10.0, the two characters <code>&quot;[~&quot;</code> were sometimes parsed as the smart match operator (<code>&quot;~~&quot;</code>) [<font SIZE="-1">RT</font> #63854]. </p>
+<dd> <p> In 5.10.0, the two characters <code>&quot;[~&quot;</code> were sometimes parsed as the smart match operator (<code>&quot;~~&quot;</code>) [RT #63854]. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> In 5.10.0, the <code>&quot;*&quot;</code> quantifier in patterns was sometimes treated as <code>&quot;{0,32767}&quot;</code> [<font SIZE="-1">RT</font> #60034, #60464]. For example, this match would fail: </p>
+<dd> <p> In 5.10.0, the <code>&quot;*&quot;</code> quantifier in patterns was sometimes treated as <code>&quot;{0,32767}&quot;</code> [RT #60034, #60464]. For example, this match would fail: </p>
 <pre><code>    (&quot;ab&quot; x 32768) =~ /^(ab)*$/
 </code></pre>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <code>&quot;shmget&quot;</code> was limited to a 32 bit segment size on a 64 bit <font SIZE="-1">OS</font> [<font SIZE="-1">RT</font> #63924]. </p>
+<dd> <p> <code>&quot;shmget&quot;</code> was limited to a 32 bit segment size on a 64 bit OS [RT #63924]. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Using <code>&quot;next&quot;</code> or <code>&quot;last&quot;</code> to exit a <code>&quot;given&quot;</code> block no longer produces a spurious warning like the following: </p>
@@ -735,7 +735,7 @@ description: "perl5101delta – what is new for perl v5.10.1"
 </code></pre>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> On Windows, <code>&#8216;.\foo&#8217;</code> and <code>&#8216;..\foo&#8217;</code> were treated differently than <code>&#8216;./foo&#8217;</code> and <code>&#8216;../foo&#8217;</code> by <code>&quot;do&quot;</code> and <code>&quot;require&quot;</code> [<font SIZE="-1">RT</font> #63492]. </p>
+<dd> <p> On Windows, <code>&#8216;.\foo&#8217;</code> and <code>&#8216;..\foo&#8217;</code> were treated differently than <code>&#8216;./foo&#8217;</code> and <code>&#8216;../foo&#8217;</code> by <code>&quot;do&quot;</code> and <code>&quot;require&quot;</code> [RT #63492]. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Assigning a format to a glob could corrupt the format; e.g.: </p>
@@ -746,19 +746,19 @@ description: "perl5101delta – what is new for perl v5.10.1"
 <dd> <p> Attempting to coerce a typeglob to a string or number could cause an assertion failure. The correct error message is now generated, <code>&quot;Can&#8217;t coerce GLOB to </code>$type <code>&quot;</code>. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Under <code>&quot;use filetest &#8216;access&#8217;&quot;</code>, <code>&quot;-x&quot;</code> was using the wrong access mode. This has been fixed [<font SIZE="-1">RT</font> #49003]. </p>
+<dd> <p> Under <code>&quot;use filetest &#8216;access&#8217;&quot;</code>, <code>&quot;-x&quot;</code> was using the wrong access mode. This has been fixed [RT #49003]. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> <code>&quot;length&quot;</code> on a tied scalar that returned a Unicode value would not be correct the first time. This has been fixed. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Using an array <code>&quot;tie&quot;</code> inside in array <code>&quot;tie&quot;</code> could <font SIZE="-1">SEGV.</font> This has been fixed. [<font SIZE="-1">RT</font> #51636] </p>
+<dd> <p> Using an array <code>&quot;tie&quot;</code> inside in array <code>&quot;tie&quot;</code> could SEGV. This has been fixed. [RT #51636] </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> A race condition inside <code>&quot;PerlIOStdio_close()&quot;</code> has been identified and fixed. This used to cause various threading issues, including SEGVs. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> In <code>&quot;unpack&quot;</code>, the use of <code>&quot;()&quot;</code> groups in scalar context was internally placing a list on the interpreter&#8217;s stack, which manifested in various ways, including SEGVs. This is now fixed [<font SIZE="-1">RT</font> #50256]. </p>
+<dd> <p> In <code>&quot;unpack&quot;</code>, the use of <code>&quot;()&quot;</code> groups in scalar context was internally placing a list on the interpreter&#8217;s stack, which manifested in various ways, including SEGVs. This is now fixed [RT #50256]. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Magic was called twice in <code>&quot;substr&quot;</code>, <code>&quot;\&amp;$x&quot;</code>, <code>&quot;tie $x, $m&quot;</code> and <code>&quot;chop&quot;</code>. These have all been fixed. </p>
@@ -773,56 +773,56 @@ description: "perl5101delta – what is new for perl v5.10.1"
 <dd> <p> The <code>&quot;..&quot;</code> operator now works correctly with ranges whose ends are at or close to the values of the smallest and largest integers. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <code>&quot;binmode STDIN, &#8216;:raw&#8217;&quot;</code> could lead to segmentation faults on some platforms. This has been fixed [<font SIZE="-1">RT</font> #54828]. </p>
+<dd> <p> <code>&quot;binmode STDIN, &#8216;:raw&#8217;&quot;</code> could lead to segmentation faults on some platforms. This has been fixed [RT #54828]. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> An off-by-one error meant that <code>&quot;index $str, ...&quot;</code> was effectively being executed as <code>&quot;index &quot;$str\0&quot;, ...&quot;</code>. This has been fixed [<font SIZE="-1">RT</font> #53746]. </p>
+<dd> <p> An off-by-one error meant that <code>&quot;index $str, ...&quot;</code> was effectively being executed as <code>&quot;index &quot;$str\0&quot;, ...&quot;</code>. This has been fixed [RT #53746]. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Various leaks associated with named captures in regexes have been fixed [<font SIZE="-1">RT</font> #57024]. </p>
+<dd> <p> Various leaks associated with named captures in regexes have been fixed [RT #57024]. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> A weak reference to a hash would leak. This was affecting <code>&quot;DBI&quot;</code> [<font SIZE="-1">RT</font> #56908]. </p>
+<dd> <p> A weak reference to a hash would leak. This was affecting <code>&quot;DBI&quot;</code> [RT #56908]. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Using (?|) in a regex could cause a segfault [<font SIZE="-1">RT</font> #59734]. </p>
+<dd> <p> Using (?|) in a regex could cause a segfault [RT #59734]. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Use of a <font SIZE="-1">UTF-8</font> <code>&quot;tr//&quot;</code> within a closure could cause a segfault [<font SIZE="-1">RT</font> #61520]. </p>
+<dd> <p> Use of a UTF-8 <code>&quot;tr//&quot;</code> within a closure could cause a segfault [RT #61520]. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Calling <code>&quot;sv_chop()&quot;</code> or otherwise upgrading an <font SIZE="-1">SV</font> could result in an unaligned 64-bit access on the <font SIZE="-1">SPARC</font> architecture [<font SIZE="-1">RT</font> #60574]. </p>
+<dd> <p> Calling <code>&quot;sv_chop()&quot;</code> or otherwise upgrading an SV could result in an unaligned 64-bit access on the SPARC architecture [RT #60574]. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> In the 5.10.0 release, <code>&quot;inc_version_list&quot;</code> would incorrectly list <code>&quot;5.10.*&quot;</code> after <code>&quot;5.8.*&quot;</code>; this affected the <code>@INC</code> search order [<font SIZE="-1">RT</font> #67628]. </p>
+<dd> <p> In the 5.10.0 release, <code>&quot;inc_version_list&quot;</code> would incorrectly list <code>&quot;5.10.*&quot;</code> after <code>&quot;5.8.*&quot;</code>; this affected the <code>@INC</code> search order [RT #67628]. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> In 5.10.0, <code>&quot;pack &quot;a*&quot;, $tainted_value&quot;</code> returned a non-tainted value [<font SIZE="-1">RT</font> #52552]. </p>
+<dd> <p> In 5.10.0, <code>&quot;pack &quot;a*&quot;, $tainted_value&quot;</code> returned a non-tainted value [RT #52552]. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> In 5.10.0, <code>&quot;printf&quot;</code> and <code>&quot;sprintf&quot;</code> could produce the fatal error <code>&quot;panic: utf8_mg_pos_cache_update&quot;</code> when printing <font SIZE="-1">UTF-8</font> strings [<font SIZE="-1">RT</font> #62666]. </p>
+<dd> <p> In 5.10.0, <code>&quot;printf&quot;</code> and <code>&quot;sprintf&quot;</code> could produce the fatal error <code>&quot;panic: utf8_mg_pos_cache_update&quot;</code> when printing UTF-8 strings [RT #62666]. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> In the 5.10.0 release, a dynamically created <code>&quot;AUTOLOAD&quot;</code> method might be missed (method cache issue) [<font SIZE="-1">RT</font> #60220,60232]. </p>
+<dd> <p> In the 5.10.0 release, a dynamically created <code>&quot;AUTOLOAD&quot;</code> method might be missed (method cache issue) [RT #60220,60232]. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> In the 5.10.0 release, a combination of <code>&quot;use feature&quot;</code> and <code>&quot;//ee&quot;</code> could cause a memory leak [<font SIZE="-1">RT</font> #63110]. </p>
+<dd> <p> In the 5.10.0 release, a combination of <code>&quot;use feature&quot;</code> and <code>&quot;//ee&quot;</code> could cause a memory leak [RT #63110]. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <code>&quot;-C&quot;</code> on the shebang (<code>&quot;#!&quot;</code>) line is once more permitted if it is also specified on the command line. <code>&quot;-C&quot;</code> on the shebang line used to be a silent no-op <i>if</i> it was not also on the command line, so perl 5.10.0 disallowed it, which broke some scripts. Now perl checks whether it is also on the command line and only dies if it is not [<font SIZE="-1">RT</font> #67880]. </p>
+<dd> <p> <code>&quot;-C&quot;</code> on the shebang (<code>&quot;#!&quot;</code>) line is once more permitted if it is also specified on the command line. <code>&quot;-C&quot;</code> on the shebang line used to be a silent no-op <i>if</i> it was not also on the command line, so perl 5.10.0 disallowed it, which broke some scripts. Now perl checks whether it is also on the command line and only dies if it is not [RT #67880]. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> In 5.10.0, certain types of re-entrant regular expression could crash, or cause the following assertion failure [<font SIZE="-1">RT</font> #60508]: </p>
+<dd> <p> In 5.10.0, certain types of re-entrant regular expression could crash, or cause the following assertion failure [RT #60508]: </p>
 <pre><code>    Assertion rx-&gt;sublen &gt;= (s - rx-&gt;subbeg) + i failed
 </code></pre>
  </dd></dl>
 <h2>New or Changed Diagnostics</h2>
 <dl>
 <dt>&quot;panic: sv_chop %s&quot;</dt>
-<dd> <p> This new fatal error occurs when the C routine <code>&quot;Perl_sv_chop()&quot;</code> was passed a position that is not within the scalar&#8217;s string buffer. This could be caused by buggy <font SIZE="-1">XS</font> code, and at this point recovery is not possible. </p>
+<dd> <p> This new fatal error occurs when the C routine <code>&quot;Perl_sv_chop()&quot;</code> was passed a position that is not within the scalar&#8217;s string buffer. This could be caused by buggy XS code, and at this point recovery is not possible. </p>
  </dd>
 <dt>&quot;Can&#8217;t locate package %s for the parents of %s&quot;</dt>
-<dd> <p> This warning has been removed. In general, it only got produced in conjunction with other warnings, and removing it allowed an <font SIZE="-1">ISA</font> lookup optimisation to be added. </p>
+<dd> <p> This warning has been removed. In general, it only got produced in conjunction with other warnings, and removing it allowed an ISA lookup optimisation to be added. </p>
  </dd>
 <dt>&quot;v-string in use/require is non-portable&quot;</dt>
 <dd> <p> This warning has been removed. </p>
@@ -836,7 +836,7 @@ description: "perl5101delta – what is new for perl v5.10.1"
 <dd> <p> The J.R.R. Tolkien quotes at the head of C source file have been checked and proper citations added, thanks to a patch from Tom Christiansen. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <code>&quot;vcroak()&quot;</code> now accepts a null first argument. In addition, a full audit was made of the ``not <font SIZE="-1">NULL&#8217;&#8216;</font> compiler annotations, and those for several other internal functions were corrected. </p>
+<dd> <p> <code>&quot;vcroak()&quot;</code> now accepts a null first argument. In addition, a full audit was made of the ``not NULL&#8217;&#8216; compiler annotations, and those for several other internal functions were corrected. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> New macros <code>&quot;dSAVEDERRNO&quot;</code>, <code>&quot;dSAVE_ERRNO&quot;</code>, <code>&quot;SAVE_ERRNO&quot;</code>, <code>&quot;RESTORE_ERRNO&quot;</code> have been added to formalise the temporary saving of the <code>&quot;errno&quot;</code> variable. </p>
@@ -855,10 +855,10 @@ description: "perl5101delta – what is new for perl v5.10.1"
 <dd>  </dd>
 <dl>
 <dt>&quot;SVf_UTF8&quot;</dt>
-<dd> <p> This will call <code>&quot;SvUTF8_on()&quot;</code> for you. (Note that this does not convert an sequence of <font SIZE="-1">ISO 8859-1</font> characters to <font SIZE="-1">UTF-8</font>). A wrapper, <code>&quot;newSVpvn_utf8()&quot;</code> is available for this. </p>
+<dd> <p> This will call <code>&quot;SvUTF8_on()&quot;</code> for you. (Note that this does not convert an sequence of ISO 8859-1 characters to UTF-8). A wrapper, <code>&quot;newSVpvn_utf8()&quot;</code> is available for this. </p>
  </dd>
 <dt>&quot;SVs_TEMP&quot;</dt>
-<dd> <p> Call <code>&quot;sv_2mortal()&quot;</code> on the new <font SIZE="-1">SV.</font> </p>
+<dd> <p> Call <code>&quot;sv_2mortal()&quot;</code> on the new SV. </p>
  </dd></dl>
 </dl>
 <dl>
@@ -871,7 +871,7 @@ description: "perl5101delta – what is new for perl v5.10.1"
 <dd> <p> The functions <code>&quot;PerlIO_find_layer&quot;</code> and <code>&quot;PerlIO_list_alloc&quot;</code> are now exported. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <code>&quot;PL_na&quot;</code> has been exterminated from the core code, replaced by local <font SIZE="-1">STRLEN</font> temporaries, or <code>&quot;*_nolen()&quot;</code> calls. Either approach is faster than <code>&quot;PL_na&quot;</code>, which is a pointer deference into the interpreter structure under ithreads, and a global variable otherwise. </p>
+<dd> <p> <code>&quot;PL_na&quot;</code> has been exterminated from the core code, replaced by local STRLEN temporaries, or <code>&quot;*_nolen()&quot;</code> calls. Either approach is faster than <code>&quot;PL_na&quot;</code>, which is a pointer deference into the interpreter structure under ithreads, and a global variable otherwise. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> <code>&quot;Perl_mg_free()&quot;</code> used to leave freed memory accessible via <code>SvMAGIC()</code> on the scalar. It now updates the linked list to remove each piece of magic as it is freed. </p>
@@ -883,10 +883,10 @@ description: "perl5101delta – what is new for perl v5.10.1"
 <dd> <p> <code>&quot;Perl_mg_magical()&quot;</code> would sometimes incorrectly turn on <code>&quot;SvRMAGICAL()&quot;</code>. This has been fixed. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> The <i>public</i> <font SIZE="-1">IV</font> and <font SIZE="-1">NV</font> flags are now not set if the string value has trailing ``garbage&#8217;&#8216;. This behaviour is consistent with not setting the public <font SIZE="-1">IV</font> or <font SIZE="-1">NV</font> flags if the value is out of range for the type. </p>
+<dd> <p> The <i>public</i> IV and NV flags are now not set if the string value has trailing ``garbage&#8217;&#8216;. This behaviour is consistent with not setting the public IV or NV flags if the value is out of range for the type. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> <font SIZE="-1">SV</font> allocation tracing has been added to the diagnostics enabled by <code>&quot;-Dm&quot;</code>. The tracing can alternatively output via the <code>&quot;PERL_MEM_LOG&quot;</code> mechanism, if that was enabled when the <i>perl</i> binary was compiled. </p>
+<dd> <p> SV allocation tracing has been added to the diagnostics enabled by <code>&quot;-Dm&quot;</code>. The tracing can alternatively output via the <code>&quot;PERL_MEM_LOG&quot;</code> mechanism, if that was enabled when the <i>perl</i> binary was compiled. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Uses of <code>&quot;Nullav&quot;</code>, <code>&quot;Nullcv&quot;</code>, <code>&quot;Nullhv&quot;</code>, <code>&quot;Nullop&quot;</code>, <code>&quot;Nullsv&quot;</code> etc have been replaced by <code>&quot;NULL&quot;</code> in the core code, and non-dual-life modules, as <code>&quot;NULL&quot;</code> is clearer to those unfamiliar with the core code. </p>
@@ -904,7 +904,7 @@ description: "perl5101delta – what is new for perl v5.10.1"
 <dd> <p> A new tool, <code>&quot;Porting/expand-macro.pl&quot;</code> has been added, that allows you to view how a C preprocessor macro would be expanded when compiled. This is handy when trying to decode the macro hell that is the perl guts. </p>
  </dd></dl>
 <h2>New Tests</h2>
-<p> Many modules updated from <font SIZE="-1">CPAN</font> incorporate new tests. </p>
+<p> Many modules updated from CPAN incorporate new tests. </p>
 <p> Several tests that have the potential to hang forever if they fail now incorporate a ``watchdog&#8217;&#8216; functionality that will kill them after a timeout, which helps ensure that <code>&quot;make test&quot;</code> and <code>&quot;make test_harness&quot;</code> run to completion automatically. (Jerry Hedden). </p>
 <p> Some core-specific tests have been added: </p>
 <dl>
@@ -957,7 +957,7 @@ description: "perl5101delta – what is new for perl v5.10.1"
 <dd> <p> Test the tied methods of <code>&quot;Tie::Hash::NamedCapture&quot;</code>. </p>
  </dd>
 <dt>t/op/reg_posixcc.t</dt>
-<dd> <p> Check that <font SIZE="-1">POSIX</font> character classes behave consistently. </p>
+<dd> <p> Check that POSIX character classes behave consistently. </p>
  </dd>
 <dt>t/op/re.t</dt>
 <dd> <p> Check that exportable <code>&quot;re&quot;</code> functions in <i>universal.c</i> work. </p>
@@ -981,13 +981,13 @@ description: "perl5101delta – what is new for perl v5.10.1"
 <p> This is a list of some significant unfixed bugs, which are regressions from either 5.10.0 or 5.8.x. </p>
 <dl>
 <dt>&bull;</dt>
-<dd> <p> <code>&quot;List::Util::first&quot;</code> misbehaves in the presence of a lexical <code>$_</code> (typically introduced by <code>&quot;my $_&quot;</code> or implicitly by <code>&quot;given&quot;</code>). The variable which gets set for each iteration is the package variable <code>$_</code>, not the lexical <code>$_</code> [<font SIZE="-1">RT</font> #67694]. </p>
+<dd> <p> <code>&quot;List::Util::first&quot;</code> misbehaves in the presence of a lexical <code>$_</code> (typically introduced by <code>&quot;my $_&quot;</code> or implicitly by <code>&quot;given&quot;</code>). The variable which gets set for each iteration is the package variable <code>$_</code>, not the lexical <code>$_</code> [RT #67694]. </p>
 <p> A similar issue may occur in other modules that provide functions which take a block as their first argument, like </p>
 <pre><code>    foo { ... $_ ...} list
 </code></pre>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> The <code>&quot;charnames&quot;</code> pragma may generate a run-time error when a regex is interpolated [<font SIZE="-1">RT</font> #56444]: </p>
+<dd> <p> The <code>&quot;charnames&quot;</code> pragma may generate a run-time error when a regex is interpolated [RT #56444]: </p>
 <pre><code>    use charnames ':full';
     my $r1 = qr/\N{THAI CHARACTER SARA I}/;
     &quot;foo&quot; =~ $r1; # okay
@@ -999,7 +999,7 @@ description: "perl5101delta – what is new for perl v5.10.1"
 </code></pre>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Some regexes may run much more slowly when run in a child thread compared with the thread the pattern was compiled into [<font SIZE="-1">RT</font> #55600]. </p>
+<dd> <p> Some regexes may run much more slowly when run in a child thread compared with the thread the pattern was compiled into [RT #55600]. </p>
  </dd></dl>
 <h2>Deprecations</h2>
 <p> The following items are now deprecated. </p>
@@ -1011,19 +1011,19 @@ description: "perl5101delta – what is new for perl v5.10.1"
 <dd> <p> <code>&quot;suidperl&quot;</code> will be removed in 5.12.0. This provides a mechanism to emulate setuid permission bits on systems that don&#8217;t support it properly. </p>
  </dd></dl>
 <h2>Acknowledgements</h2>
-<p> Some of the work in this release was funded by a <font SIZE="-1">TPF</font> grant. </p>
+<p> Some of the work in this release was funded by a TPF grant. </p>
 <p> Nicholas Clark officially retired from maintenance pumpking duty at the end of 2008; however in reality he has put much effort in since then to help get 5.10.1 into a fit state to be released, including writing a considerable chunk of this perldelta. </p>
-<p> Steffen Mueller and David Golden in particular helped getting <font SIZE="-1">CPAN</font> modules polished and synchronised with their in-core equivalents. </p>
-<p> Craig Berry was tireless in getting maint to run under <font SIZE="-1">VMS,</font> no matter how many times we broke it for him. </p>
-<p> The other core committers contributed most of the changes, and applied most of the patches sent in by the hundreds of contributors listed in <i></i><font SIZE="-1"><i>AUTHORS</i></font><i></i>. </p>
+<p> Steffen Mueller and David Golden in particular helped getting CPAN modules polished and synchronised with their in-core equivalents. </p>
+<p> Craig Berry was tireless in getting maint to run under VMS, no matter how many times we broke it for him. </p>
+<p> The other core committers contributed most of the changes, and applied most of the patches sent in by the hundreds of contributors listed in <i></i><i>AUTHORS</i><i></i>. </p>
 <p> (Sorry to all the people I haven&#8217;t mentioned by name). </p>
 <p> Finally, thanks to Larry Wall, without whom none of this would be necessary.  </p>
 <h2>Reporting Bugs</h2>
 <p> If you find what you think is a bug, you might check the articles recently posted to the comp.lang.perl.misc newsgroup and the perl bug database at <a rel="nofollow" href="http://rt.perl.org/perlbug/">http://rt.perl.org/perlbug/</a> . There may also be information at <a rel="nofollow" href="http://www.perl.org/">http://www.perl.org/</a> , the Perl Home Page. </p>
 <p> If you believe you have an unreported bug, please run the <code>perlbug</code> program included with your release. Be sure to trim your bug down to a tiny but sufficient test case. Your bug report, along with the output of <code>&quot;perl -V&quot;</code>, will be sent off to perlbug [at] perl.org to be analysed by the Perl porting team. </p>
-<p> If the bug you are reporting has security implications, which make it inappropriate to send to a publicly archived mailing list, then please send it to perl5-security-report [at] perl.org. This points to a closed subscription unarchived mailing list, which includes all the core committers, who will be able to help assess the impact of issues, figure out a resolution, and help co-ordinate the release of patches to mitigate or fix the problem across all platforms on which Perl is supported. Please only use this address for security issues in the Perl core, not for modules independently distributed on <font SIZE="-1">CPAN.</font>  </p>
+<p> If the bug you are reporting has security implications, which make it inappropriate to send to a publicly archived mailing list, then please send it to perl5-security-report [at] perl.org. This points to a closed subscription unarchived mailing list, which includes all the core committers, who will be able to help assess the impact of issues, figure out a resolution, and help co-ordinate the release of patches to mitigate or fix the problem across all platforms on which Perl is supported. Please only use this address for security issues in the Perl core, not for modules independently distributed on CPAN.  </p>
 <h2>SEE ALSO</h2>
 <p> The <i>Changes</i> file for an explanation of how to view exhaustive details on what changed. </p>
-<p> The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. </p>
-<p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
+<p> The <i></i><i>INSTALL</i><i></i> file for how to build Perl. </p>
+<p> The <i></i><i>README</i><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information. </p>

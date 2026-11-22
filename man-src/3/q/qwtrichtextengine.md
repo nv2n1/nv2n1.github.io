@@ -13,8 +13,8 @@ description: "QwtRichTextEngine –"
 <p>#include &lt;qwt_text_engine.h&gt; </p>
 <p> Inherits <code>QwtTextEngine</code>.</p>
 <h3>Public Member Functions</h3>
-<p><code>QwtRichTextEngine</code> ()<br />
- <i>Constructor. </i><br />
+<p><code>QwtRichTextEngine</code> ()<br/>
+ <i>Constructor. </i><br/>
  virtual double <code>heightForWidth</code> (const QFont &amp;font, int flags, const QString &amp;text, double width) const </p>
 <p> virtual QSizeF <code>textSize</code> (const QFont &amp;font, int flags, const QString &amp;text) const </p>
 <p> virtual void <code>draw</code> (QPainter *painter, const QRectF &amp;rect, int flags, const QString &amp;text) const </p>
@@ -29,18 +29,18 @@ description: "QwtRichTextEngine –"
 <p>Draw the text in a clipping rectangle </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>rect</i> Clipping rectangle<br />
- <i>flags</i> Bitwise OR of the flags like in for QPainter::drawText()<br />
+<dd><i>painter</i> Painter<br/>
+ <i>rect</i> Clipping rectangle<br/>
+ <i>flags</i> Bitwise OR of the flags like in for QPainter::drawText()<br/>
  <i>text</i> Text to be rendered</dd></dl>
 <p> Implements <code>QwtTextEngine</code>.</p>
 <h3>double QwtRichTextEngine::heightForWidth (const QFont &amp;font, intflags, const QString &amp;text, doublewidth) const [virtual]</h3>
 <p>Find the height for a given width </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>font</i> Font of the text<br />
- <i>flags</i> Bitwise OR of the flags used like in QPainter::drawText()<br />
- <i>text</i> Text to be rendered<br />
+<dd><i>font</i> Font of the text<br/>
+ <i>flags</i> Bitwise OR of the flags used like in QPainter::drawText()<br/>
+ <i>text</i> Text to be rendered<br/>
  <i>width</i> Width</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -59,17 +59,17 @@ description: "QwtRichTextEngine –"
 <p>Return margins around the texts </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>left</i> Return 0<br />
- <i>right</i> Return 0<br />
- <i>top</i> Return 0<br />
+<dd><i>left</i> Return 0<br/>
+ <i>right</i> Return 0<br/>
+ <i>top</i> Return 0<br/>
  <i>bottom</i> Return 0</dd></dl>
 <p> Implements <code>QwtTextEngine</code>.</p>
 <h3>QSizeF QwtRichTextEngine::textSize (const QFont &amp;font, intflags, const QString &amp;text) const [virtual]</h3>
 <p>Returns the size, that is needed to render text </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>font</i> Font of the text<br />
- <i>flags</i> Bitwise OR of the flags used like in QPainter::drawText()<br />
+<dd><i>font</i> Font of the text<br/>
+ <i>flags</i> Bitwise OR of the flags used like in QPainter::drawText()<br/>
  <i>text</i> Text to be rendered</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

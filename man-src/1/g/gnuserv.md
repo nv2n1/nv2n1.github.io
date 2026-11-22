@@ -10,9 +10,9 @@ description: "gnuserv, gnuclient – Server and Clients for XEmacs"
 
 <p> gnuserv, gnuclient &#8211; Server and Clients for XEmacs </p>
 <h2>SYNOPSIS</h2>
-<p> <code>gnuclient</code> [-nw] [-display display] [-q] [-v] [-l library] [-batch] [-f function] [-eval form] [-h hostname] [-p port] [-r remote-pathname] [[+line] file] &#8230;<br />
- <code>gnudoit [-q] </code> form<br />
- <code>gnuserv</code><br />
+<p> <code>gnuclient</code> [-nw] [-display display] [-q] [-v] [-l library] [-batch] [-f function] [-eval form] [-h hostname] [-p port] [-r remote-pathname] [[+line] file] &#8230;<br/>
+ <code>gnudoit [-q] </code> form<br/>
+ <code>gnuserv</code><br/>
  <code>gnuattach </code> Removed as of gnuserv 3.x</p>
 <h2>DESCRIPTION</h2>
 <p> <i>gnuserv</i> is a server program run as a subprocess of XEmacs to handle all incoming and outgoing requests from <i>gnuclient</i>. It is not usually invoked directly, but is started from XEmacs by loading the <i>gnuserv</i> package and evaluating the Lisp form (gnuserv-start). </p>
@@ -20,7 +20,7 @@ description: "gnuserv, gnuclient – Server and Clients for XEmacs"
 <p> <i>gnudoit</i> is a shell script frontend to &#8220;gnuclient -batch -eval form&#8221;. Its use is deprecated. Try to get used to calling gnuclient directly. </p>
 <p> <i>gnuattach</i> no longer exists. Its functionality has been replaced by <i>gnuclient -nw</i>.</p>
 <h2>OPTIONS</h2>
-<p> <i>gnuclient</i> supports as many of the command line options of Emacs as make sense in this context. In addition it adds a few of its own.<br />
+<p> <i>gnuclient</i> supports as many of the command line options of Emacs as make sense in this context. In addition it adds a few of its own.<br/>
  For backward compatibility, &#8220;long&#8221; options (.e., with doubled hyphen) may be specified using a single hyphen instead of a doubled one. Similarly, the &#8220;-nw&#8221; option is a historical artifact: a multiletter option with no double-hyphen version.</p>
 <dl>
 <dt><code>-nw</code></dt>
@@ -44,7 +44,7 @@ description: "gnuserv, gnuclient – Server and Clients for XEmacs"
 <p> An Internet address (&#8220;dotted-quad&#8221;) may be specified instead of a hostname. IPv6 support is not robust. </p>
 <p> A hostname of <code>unix</code> can be used to specify that the connection to the server should use a Unix-domain socket (if supported) rather than an Internet-domain socket.</p>
 <dt><code>-p</code><i> port</i></dt>
-<dd> Used only with Internet-domain sockets, this option specifies the service port used to communicate between server and clients. If this option is not specified, then the value of the environment variable GNU_PORT is used, if set, otherwise a service called &#8220;gnuserv&#8221; is looked up in the services database. Finally, if no other value can be found for the port, then a default port is used which is usually 21490 + uid.<br />
+<dd> Used only with Internet-domain sockets, this option specifies the service port used to communicate between server and clients. If this option is not specified, then the value of the environment variable GNU_PORT is used, if set, otherwise a service called &#8220;gnuserv&#8221; is looked up in the services database. Finally, if no other value can be found for the port, then a default port is used which is usually 21490 + uid.<br/>
  Note that since <i>gnuserv</i> doesn&#8217;t allow command-line options, the port for it will have to be specified via one of the alternative methods.</dd>
 <dt><code>-r</code><i> pathname</i></dt>
 <dd> Used only with Internet-domain sockets, the pathname argument may be needed to inform XEmacs how to reach the root directory of a remote machine. <i>gnuclient</i> prepends this string to each path argument given. For example, if you were trying to edit a file on a client machine called otter, whose root directory was accessible from the server machine via the path /net/otter, then this argument should be set to &#8216;/net/otter&#8217;. If this option is omitted, then the value is taken from the environment variable GNU_NODE, if set, or the empty string otherwise.</dd>
@@ -58,8 +58,8 @@ description: "gnuserv, gnuclient – Server and Clients for XEmacs"
 <h2>EXAMPLE</h2>
 <dl>
 <dt>
-</dt><dd> gnuclient -q -f mh-smail<br />
- gnuclient -h cuckoo -r /ange [at] otter: /tmp/*<br />
+</dt><dd> gnuclient -q -f mh-smail<br/>
+ gnuclient -h cuckoo -r /ange [at] otter: /tmp/*<br/>
  gnuclient -nw ../src/listproc.c</dd></dl>
 <p> More examples and sample wrapper scripts are provided in the etc/gnuserv directory of the XEmacs installation. </p>
 <h2>SYSV IPC</h2>
@@ -77,8 +77,8 @@ description: "gnuserv, gnuclient – Server and Clients for XEmacs"
 <dd> When the <i>gnuserv</i> server is started, it looks for a cookie defined for display 999 on the machine where it is running. If the cookie is found, it will be stored for use as the authentication cookie. These cookies are defined in an authorization file (usually ~/.Xauthority) that is manipulated by the X11 <a href="/docs/linux/man/1-xauth/">xauth</a>(1) program. For example, a machine &quot;kali&quot; which runs an emacs that invokes <i>gnuserv</i> should respond as follows (at the shell prompt) when set up correctly.</dd></dl>
 <dl>
 <dt>
-</dt><dd> kali% xauth list<br />
- GS65.SP.CS.CMU.EDU:0 MIT-MAGIC-COOKIE-1 11223344<br />
+</dt><dd> kali% xauth list<br/>
+ GS65.SP.CS.CMU.EDU:0 MIT-MAGIC-COOKIE-1 11223344<br/>
  KALI.FTM.CS.CMU.EDU:999 MIT-MAGIC-COOKIE-1 1234</dd></dl>
 <dl>
 <dt>

@@ -15,7 +15,7 @@ description: "systemd-ask-password-console.service, systemd-ask-password-console
 <p> systemd-ask-password-wall.path</p>
 <h2>Description</h2>
 <p>systemd-ask-password-console.service is a system service that queries the user for system passwords (such as hard disk encryption keys and SSL certificate passphrases) on the console. It is intended to be used during boot to ensure proper handling of passwords necessary for boot. systemd-ask-password-wall.service is a system service that informs all logged in users for system passwords via <code><a href="/docs/linux/man/1-wall/">wall</a></code>(1). It is intended to be used after boot to ensure that users are properly notified. </p>
-<p> See the m[blue]<code>developer documentation</code>m[]<font SIZE="-2">[1]</font> for more information about the system password logic. </p>
+<p> See the m[blue]<code>developer documentation</code>m[][1] for more information about the system password logic. </p>
 <p> Note that these services invoke <code><a href="/docs/linux/man/1-systemd-tty-ask-password-agent/">systemd-tty-ask-password-agent</a></code>(1) with either the <code>&#8211;watch &#8211;console</code> or <code>&#8211;watch &#8211;wall</code> command line parameters.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/1-systemd-tty-ask-password-agent/">systemd-tty-ask-password-agent</a></code>(1), <code><a href="/docs/linux/man/1-wall/">wall</a></code>(1)</p>

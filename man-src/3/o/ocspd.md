@@ -12,17 +12,17 @@ url: "/docs/linux/man/3-ocspd/"
 <h2>Description</h2>
 <p> A configuration file is divided into a number of sections. Each section starts with a line <code>[ section_name ]</code> and ends when a new section is started or end of file is reached. A section name can consist of alphanumeric characters and underscores. </p>
 <p> The first section of a configuration file is special and is referred to as the <code>default</code> section this is usually unnamed and is from the start of file until the first named section. When a name is being looked up it is first looked up in a named section (if any) and then the default section. </p>
-<p> The environment is mapped onto a section called <font SIZE="-1"><code>ENV</code></font>. </p>
+<p> The environment is mapped onto a section called <code>ENV</code>. </p>
 <p> Comments can be included by preceding them with the <code>#</code> character </p>
 <p> Each section in a configuration file consists of a number of name and value pairs of the form <code>name=value</code> </p>
 <p> The <code>name</code> string can contain any alphanumeric characters as well as a few punctuation symbols such as <code>.</code> <code>,</code> <code>;</code> and <code>_</code>. </p>
 <p> The <code>value</code> string consists of the string following the <code>=</code> character until end of line with any leading and trailing white space removed. </p>
-<p> The value string undergoes variable expansion. This can be done by including the form $var or <code>${var}</code>: this will substitute the value of the named variable in the current section. It is also possible to substitute a value from another section using the syntax $section::name or <code>${section::name}</code>. By using the form $ENV::name environment variables can be substituted. It is also possible to assign values to environment variables by using the name <code>ENV::name</code>, this will work if the program looks up environment variables using the <font SIZE="-1"><code>CONF</code></font> library instead of calling getenv() directly. </p>
+<p> The value string undergoes variable expansion. This can be done by including the form $var or <code>${var}</code>: this will substitute the value of the named variable in the current section. It is also possible to substitute a value from another section using the syntax $section::name or <code>${section::name}</code>. By using the form $ENV::name environment variables can be substituted. It is also possible to assign values to environment variables by using the name <code>ENV::name</code>, this will work if the program looks up environment variables using the <code>CONF</code> library instead of calling getenv() directly. </p>
 <p> It is possible to escape certain characters by using any kind of quote or the <code>\</code> character. By making the last character of a line a <code>\</code> a <code>value</code> string can be spread across multiple lines. In addition the sequences <code>
 </code>, <code>
 </code>, <code></code> and <code>	</code> are recognized.</p>
 <h2>Notes</h2>
-<p> If a configuration file attempts to expand a variable that doesn&#8217;t exist then an error is flagged and the file will not load. This can happen if an attempt is made to expand an environment variable that doesn&#8217;t exist. For example the default OpenSSL master configuration file used the value of <font SIZE="-1"><code>HOME</code></font> which may not be defined on non Unix systems.</p>
+<p> If a configuration file attempts to expand a variable that doesn&#8217;t exist then an error is flagged and the file will not load. This can happen if an attempt is made to expand an environment variable that doesn&#8217;t exist. For example the default OpenSSL master configuration file used the value of <code>HOME</code> which may not be defined on non Unix systems.</p>
 <h2>Example</h2>
 <p> Following is a sample configuration file: </p>
 <pre>
@@ -124,20 +124,20 @@ url: "/docs/linux/man/3-ocspd/"
 <dt><code>pidfile</code></dt>
 <dd> path to the pid file where the responder will write its pid when starting.</dd>
 <dt><code>user</code></dt>
-<dd> user id the responder will try to run as, this must be a valid <font SIZE="-1">UID</font>. If not specified the responder will run as the user who started the daemon.</dd>
+<dd> user id the responder will try to run as, this must be a valid UID. If not specified the responder will run as the user who started the daemon.</dd>
 <dt><code>group</code></dt>
-<dd> group id the responder will try to run as, this must be a valid <font SIZE="-1">GID</font>. If not specified the responder will run as the user who started the daemon.</dd>
+<dd> group id the responder will try to run as, this must be a valid GID. If not specified the responder will run as the user who started the daemon.</dd>
 <dt><code>bind</code></dt>
 <dd> address to listen to. You can force the responder to listen to just one of the available addresses. If you want the responder to listen to every available interface, simply use &#8216;*&#8217; (default).</dd>
 <dt><code>port</code></dt>
 <dd> specifies the port to listen to.</dd>
 <dt><code>threads_num</code></dt>
 <dd> Number of threads that shall be created at startup time, the more threads, the better for handling very high traffic. We expect to have better performances on multi-threaded machines and processors. </dd>
-<p> From version 1.5+ the server is not pre-forked, instead it is a pre-threaded one. In order to run the server needs support for <font SIZE="-1">POSIX1</font>.c as found in most modern UNiX systems.</p>
+<p> From version 1.5+ the server is not pre-forked, instead it is a pre-threaded one. In order to run the server needs support for POSIX1.c as found in most modern UNiX systems.</p>
 <dt><code>max_client_num</code></dt>
 <dd> Size of the system socket queue: when all service threads are busy, up to this number of unserved requests are accepted in queue and will be processed as soon as a thread becomes available; additional connection requests will be denied. Default: 30.</dd>
 <dt><code>chroot_dir</code></dt>
-<dd> Chroot the application into the specified directory, watch out because if you chroot the application, all the paths should be relative to the new root for <font SIZE="-1">CRL</font> reloading or (better solution) you have to download the CRLs from <font SIZE="-1">HTTP</font> or <font SIZE="-1">LDAP</font>. If you chroot and you do not provide support for privileges dropping, privileges will not be dropped and an error will be written in the logfile, but the server will continue to run assuming the <i>chroot()</i> is sufficiently isolated to prevent abuse of the machine.</dd>
+<dd> Chroot the application into the specified directory, watch out because if you chroot the application, all the paths should be relative to the new root for CRL reloading or (better solution) you have to download the CRLs from HTTP or LDAP. If you chroot and you do not provide support for privileges dropping, privileges will not be dropped and an error will be written in the logfile, but the server will continue to run assuming the <i>chroot()</i> is sufficiently isolated to prevent abuse of the machine.</dd>
 <dt><code>max_req_size</code></dt>
 <dd> maximum size of received request, if a received request is bigger it will be trashed. Usually simple requests are 200/300 bytes long (more or less).</dd></dl>
 </dl>
@@ -152,7 +152,7 @@ url: "/docs/linux/man/3-ocspd/"
 <dl COMPACT>
 <dl COMPACT>
 <dt><code>ocsp_add_response_certs</code></dt>
-<dd> specifies path to a file containing certificates to be added to the response (usually the whole certification chain). Certificates have to be in <font SIZE="-1">PEM</font> format one after another (a simple cat of the certificates will do fine).</dd>
+<dd> specifies path to a file containing certificates to be added to the response (usually the whole certification chain). Certificates have to be in PEM format one after another (a simple cat of the certificates will do fine).</dd>
 <dt><code>ocsp_add_response_keyid</code></dt>
 <dd> specifies if adding of the key id to the response.</dd>
 <dt><code>next_update_days</code></dt>
@@ -160,28 +160,28 @@ url: "/docs/linux/man/3-ocspd/"
 <dt><code>next_update_mins</code></dt>
 <dd> specifies the number of minutes till next update is available. A response will be valid in the period following the request till the days+mins.</dd>
 <dt><code>ca_url</code></dt>
-<dd> specifies the <font SIZE="-1">URI</font> where the <font SIZE="-1">CA</font> certificate (which identifies the single <font SIZE="-1">CA</font>) is located. Three different protocols are implemented ( file:// http:// or ldap:// ). If file is chosen, then the parameter should carry the path to the <font SIZE="-1">CA</font> file (i.e. file:///etc/ocspd/certs/ca.pem). If ldap or http is chosen, you can specify the address, and the port of the server where to connect to (i.e. <a href="ldap://server.addr:port">ldap://server.addr:port</a>).</dd>
+<dd> specifies the URI where the CA certificate (which identifies the single CA) is located. Three different protocols are implemented ( file:// http:// or ldap:// ). If file is chosen, then the parameter should carry the path to the CA file (i.e. file:///etc/ocspd/certs/ca.pem). If ldap or http is chosen, you can specify the address, and the port of the server where to connect to (i.e. <a href="ldap://server.addr:port">ldap://server.addr:port</a>).</dd>
 <dt><code>crl_url</code></dt>
-<dd> specifies the <font SIZE="-1">URI</font> where the <font SIZE="-1">CRL</font> (list of revoked certificates, actually used for building responses) is located. Three different protocols are actually implemented ( file:// http:// or ldap:// ). If file is chosen, then the parameter should have the path to the crl file (i.e. file:///etc/ocspd/crls/cacrl.pem). If ldap or http is chosen, you can specify the address, and the port of the server where to connect to (i.e. <a href="ldap://server.addr:port">ldap://server.addr:port</a>).</dd>
+<dd> specifies the URI where the CRL (list of revoked certificates, actually used for building responses) is located. Three different protocols are actually implemented ( file:// http:// or ldap:// ). If file is chosen, then the parameter should have the path to the crl file (i.e. file:///etc/ocspd/crls/cacrl.pem). If ldap or http is chosen, you can specify the address, and the port of the server where to connect to (i.e. <a href="ldap://server.addr:port">ldap://server.addr:port</a>).</dd>
 <dt><code>crl_entry_dn</code></dt>
-<dd> specifies, if ldap:// protocol is chosen within the <code>crl_url</code> parameter, the entry where to look for the certificateRevocationList attribute where the <font SIZE="-1">CRL</font> should be present (usually this is also the base of the <font SIZE="-1">LDAP</font> tree, but different installations are also possible).</dd></dl>
+<dd> specifies, if ldap:// protocol is chosen within the <code>crl_url</code> parameter, the entry where to look for the certificateRevocationList attribute where the CRL should be present (usually this is also the base of the LDAP tree, but different installations are also possible).</dd></dl>
 </dl>
 <dl COMPACT>
 </dl>
-<dt><font SIZE="-1"><code>ENGINE</code></font><code> section</code></dt>
+<dt><code>ENGINE</code><code> section</code></dt>
 <dd>
 </dd><dl COMPACT>
 <dl COMPACT>
 <dt><code>engine_id</code></dt>
-<dd> Specifies the <font SIZE="-1">ENGINE</font> id to be used &#8211; check OpenSSL and your <font SIZE="-1">HSM</font> vendor to get more info about this parameter.</dd>
+<dd> Specifies the ENGINE id to be used &#8211; check OpenSSL and your HSM vendor to get more info about this parameter.</dd>
 <dt><code>engine_pre</code></dt>
-<dd> Some <font SIZE="-1">HSM</font> need initialisation before access to the crypto accelerated functions is granted. It is possible, by using the &#8216;engine_pre&#8217; options to issue needed commands directly to the <font SIZE="-1">HSM</font>. </dd>
-<p> The format is as follows:<br />
-0.engine_pre&nbsp;<wbr>=&nbsp;<wbr>cmd:values<br />
-1.engine_pre&nbsp;<wbr>=&nbsp;<wbr>cmd2:values<br />
+<dd> Some HSM need initialisation before access to the crypto accelerated functions is granted. It is possible, by using the &#8216;engine_pre&#8217; options to issue needed commands directly to the HSM. </dd>
+<p> The format is as follows:<br/>
+0.engine_pre&nbsp;<wbr>=&nbsp;<wbr>cmd:values<br/>
+1.engine_pre&nbsp;<wbr>=&nbsp;<wbr>cmd2:values<br/>
 &#8230; It is possible to have as many commands as needed.</p>
 <dt><code>engine_post</code></dt>
-<dd> Some HSMs need to perform commands after the <font SIZE="-1">ENGINE</font> initialisation which are taken from the &#8216;engine_post&#8217; option. Usage and format is exactly the same as &#8216;engine_pre&#8217;, the difference is that commands are sent to the <font SIZE="-1">HSM</font> after the <i>ENGINE_init()</i> function. Refer to your <font SIZE="-1">HSM</font> documentation for more informations</dd></dl>
+<dd> Some HSMs need to perform commands after the ENGINE initialisation which are taken from the &#8216;engine_post&#8217; option. Usage and format is exactly the same as &#8216;engine_pre&#8217;, the difference is that commands are sent to the HSM after the <i>ENGINE_init()</i> function. Refer to your HSM documentation for more informations</dd></dl>
 </dl>
 <dl COMPACT>
 </dl>

@@ -15,23 +15,23 @@ description: "QwtDynGridLayout –"
 <h3>Public Member Functions</h3>
 <p><code>QwtDynGridLayout</code> (QWidget *, int margin=0, int space=-1) </p>
 <p> <code>QwtDynGridLayout</code> (int space=-1) </p>
-<p> virtual <code>~QwtDynGridLayout</code> ()<br />
- <i>Destructor. </i><br />
- virtual void <code>invalidate</code> ()<br />
- <i>Invalidate all internal caches. </i><br />
+<p> virtual <code>~QwtDynGridLayout</code> ()<br/>
+ <i>Destructor. </i><br/>
+ virtual void <code>invalidate</code> ()<br/>
+ <i>Invalidate all internal caches. </i><br/>
  void <code>setMaxColumns</code> (uint maxCols) </p>
-<p> uint <code>maxColumns</code> () const<br />
- <i>Return the upper limit for the number of columns. </i><br />
+<p> uint <code>maxColumns</code> () const<br/>
+ <i>Return the upper limit for the number of columns. </i><br/>
  uint <code>numRows</code> () const </p>
 <p> uint <code>numColumns</code> () const </p>
-<p> virtual void <code>addItem</code> (QLayoutItem *)<br />
- <i>Add an item to the next free position. </i><br />
+<p> virtual void <code>addItem</code> (QLayoutItem *)<br/>
+ <i>Add an item to the next free position. </i><br/>
  virtual QLayoutItem * <code>itemAt</code> (int index) const </p>
 <p> virtual QLayoutItem * <code>takeAt</code> (int index) </p>
 <p> virtual int <code>count</code> () const </p>
 <p> void <code>setExpandingDirections</code> (Qt::Orientations) </p>
-<p> virtual Qt::Orientations <code>expandingDirections</code> () const<br />
- <i>Returns whether this layout can make use of more space than </i><code>sizeHint()</code>.<br />
+<p> virtual Qt::Orientations <code>expandingDirections</code> () const<br/>
+ <i>Returns whether this layout can make use of more space than </i><code>sizeHint()</code>.<br/>
  QList&lt; QRect &gt; <code>layoutItems</code> (const QRect &amp;, uint numCols) const </p>
 <p> virtual int <code>maxItemWidth</code> () const </p>
 <p> virtual void <code>setGeometry</code> (const QRect &amp;rect) </p>
@@ -40,7 +40,7 @@ description: "QwtDynGridLayout –"
 <p> virtual QSize <code>sizeHint</code> () const </p>
 <p> virtual bool <code>isEmpty</code> () const </p>
 <p> uint <code>itemCount</code> () const </p>
-<p> virtual uint <code>columnsForWidth</code> (int width) const<br />
+<p> virtual uint <code>columnsForWidth</code> (int width) const<br/>
  <i>Calculate the number of columns for a given width. </i></p>
 <h3>Protected Member Functions</h3>
 <p>void <code>layoutGrid</code> (uint numCols, QVector&lt; int &gt; &amp;rowHeight, QVector&lt; int &gt; &amp;colWidth) const </p>
@@ -52,8 +52,8 @@ description: "QwtDynGridLayout –"
 <h3>QwtDynGridLayout::QwtDynGridLayout (QWidget *parent, intmargin = 0, intspacing = -1) [explicit]</h3>
 <p><code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>parent</i> Parent widget<br />
- <i>margin</i> Margin<br />
+<dd><i>parent</i> Parent widget<br/>
+ <i>margin</i> Margin<br/>
  <i>spacing</i> Spacing</dd></dl>
 <h3>QwtDynGridLayout::QwtDynGridLayout (intspacing = -1) [explicit]</h3>
 <p><code>Parameters:</code></p>
@@ -125,14 +125,14 @@ description: "QwtDynGridLayout –"
 <p>Calculate the dimensions for the columns and rows for a grid of numColumns columns. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>numColumns</i> Number of columns.<br />
- <i>rowHeight</i> Array where to fill in the calculated row heights.<br />
+<dd><i>numColumns</i> Number of columns.<br/>
+ <i>rowHeight</i> Array where to fill in the calculated row heights.<br/>
  <i>colWidth</i> Array where to fill in the calculated column widths.</dd></dl>
 <h3>QList&lt; QRect &gt; QwtDynGridLayout::layoutItems (const QRect &amp;rect, uintnumColumns) const</h3>
 <p>Calculate the geometries of the layout items for a layout with numColumns columns and a given rectangle. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>rect</i> Rect where to place the items<br />
+<dd><i>rect</i> Rect where to place the items<br/>
  <i>numColumns</i> Number of columns</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -202,9 +202,9 @@ description: "QwtDynGridLayout –"
 <p>Stretch columns in case of expanding() &amp; QSizePolicy::Horizontal and rows in case of expanding() &amp; QSizePolicy::Vertical to fill the entire rect. Rows and columns are stretched with the same factor. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>rect</i> Bounding rectangle<br />
- <i>numColumns</i> Number of columns<br />
- <i>rowHeight</i> Array to be filled with the calculated row heights<br />
+<dd><i>rect</i> Bounding rectangle<br/>
+ <i>numColumns</i> Number of columns<br/>
+ <i>rowHeight</i> Array to be filled with the calculated row heights<br/>
  <i>colWidth</i> Array to be filled with the calculated column widths</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>

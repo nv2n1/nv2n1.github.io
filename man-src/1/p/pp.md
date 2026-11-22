@@ -13,7 +13,7 @@ description: "pp – Prints certificates, keys, crls, and pkcs7 files"
 <dl>
 <dt> <code>pp -t type [-a] [-i input] [-o output] [-u] [-w]</code></dt></dl>
 <h2>STATUS</h2>
-<dd>This documentation is still work in progress. Please contribute to the initial review in m[blue]<code>Mozilla NSS bug 836477</code>m[]<font SIZE="-2">[1]</font></dd>
+<dd>This documentation is still work in progress. Please contribute to the initial review in m[blue]<code>Mozilla NSS bug 836477</code>m[][1]</dd>
 <h2>DESCRIPTION</h2>
 <p> <code>pp </code>pretty-prints private and public key, certificate, certificate-request, pkcs7 or crl files</p>
 <h2>OPTIONS</h2>
@@ -43,8 +43,8 @@ description: "pp – Prints certificates, keys, crls, and pkcs7 files"
 <dt>
 </dt><dd> Don&#8217;t wrap long output lines</dd></dl>
 <h2>ADDITIONAL RESOURCES</h2>
-<p> NSS is maintained in conjunction with PKI and security-related projects through Mozilla and Fedora. The most closely-related project is Dogtag PKI, with a project wiki at m[blue]<code>PKI Wiki</code>m[]<font SIZE="-2">[2]</font>. </p>
-<p> For information specifically about NSS, the NSS project wiki is located at m[blue]<code>Mozilla NSS site</code>m[]<font SIZE="-2">[3]</font>. The NSS site relates directly to NSS code changes and releases. </p>
+<p> NSS is maintained in conjunction with PKI and security-related projects through Mozilla and Fedora. The most closely-related project is Dogtag PKI, with a project wiki at m[blue]<code>PKI Wiki</code>m[][2]. </p>
+<p> For information specifically about NSS, the NSS project wiki is located at m[blue]<code>Mozilla NSS site</code>m[][3]. The NSS site relates directly to NSS code changes and releases. </p>
 <p> Mailing lists: pki-devel [at] redhat.com and pki-users [at] redhat.com </p>
 <p> IRC: Freenode at #dogtag-pki</p>
 <h2>AUTHORS</h2>

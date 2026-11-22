@@ -12,7 +12,7 @@ description: "lircrcd – daemon to handle consistent .lircrc state among client
 <h2>SYNOPSIS</h2>
 <p> <code>lircrcd</code> [<i>options</i>] <i>config-file</i></p>
 <h2>DESCRIPTION</h2>
-<p> <code>lircrcd</code> reads the given .lircrc config file and synchronises the mode that the LIRC clients using this config file (<code><a href="/docs/linux/man/1-irexec/">irexec</a></code>(1), <code><a href="/docs/linux/man/1-irxevent/">irxevent</a></code>(1) , etc.) are in. Using <code>lircrcd</code> has to be explicitly enabled in the config file by adding the following line at the beginning of the file:<br />
+<p> <code>lircrcd</code> reads the given .lircrc config file and synchronises the mode that the LIRC clients using this config file (<code><a href="/docs/linux/man/1-irexec/">irexec</a></code>(1), <code><a href="/docs/linux/man/1-irxevent/">irxevent</a></code>(1) , etc.) are in. Using <code>lircrcd</code> has to be explicitly enabled in the config file by adding the following line at the beginning of the file:<br/>
  #! lircrcd</p>
 <dl>
 <dt><code>-h</code> <code>&#8211;help</code></dt>

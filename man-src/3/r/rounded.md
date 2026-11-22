@@ -41,15 +41,15 @@ static UnitOfMeasure baseUnitOfMeasure</code></pre>
 <h3>Public Member Functions</h3>
 <p><code>Constructors</code> </p>
 <p> <code>Quantity</code> () </p>
-<p> <code>Quantity</code> (const <code>CommodityType</code> &amp;commodityType, const <code>UnitOfMeasure</code> &amp;unitOfMeasure, Real amount)<br />
- <code>Inspectors</code><br />
+<p> <code>Quantity</code> (const <code>CommodityType</code> &amp;commodityType, const <code>UnitOfMeasure</code> &amp;unitOfMeasure, Real amount)<br/>
+ <code>Inspectors</code><br/>
  Quantity operator+ () const</p>
 <p>Quantity operator- () const</p>
 <p>Quantity &amp; operator+= (const Quantity &amp;)</p>
 <p>Quantity &amp; operator-= (const Quantity &amp;)</p>
 <p>Quantity &amp; operator*= (Real)</p>
 <p>Quantity &amp; operator/= (Real)</p>
-<p>Friends<br />
+<p>Friends<br/>
 std::ostream &amp; operator&lt;&lt; (std::ostream &amp;, const Quantity &amp;)</p>
 <p>Related Functions</p>
 <p>(Note that these are not member functions.)</p>
@@ -71,7 +71,7 @@ std::ostream &amp; operator&lt;&lt; (std::ostream &amp;, const Quantity &amp;)</
 <p>These parameters are used for combining quantity amounts in different currencies</p>
 <p>enum ConversionType { NoConversion, BaseUnitOfMeasureConversion, AutomatedConversion }</p>
 <p>static ConversionType conversionType</p>
-<p>static UnitOfMeasure baseUnitOfMeasure <code>Quantity arithmetics</code><br />
+<p>static UnitOfMeasure baseUnitOfMeasure <code>Quantity arithmetics</code><br/>
  See below for non-member functions and for settings which determine the behavior of the operators. </p>
 <pre><code>Quantity operator+ () const
 Quantity operator- () const

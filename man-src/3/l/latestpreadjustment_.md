@@ -18,13 +18,13 @@ description: "QuantLib::DiscretizedAsset – Discretized asset class used by num
 <p> const <code>Array</code> &amp; <code>values</code> () const </p>
 <p> <code>Array</code> &amp; <code>values</code> () </p>
 <p> const boost::shared_ptr&lt; <code>Lattice</code> &gt; &amp; <code>method</code> () const </p>
-<p> <code>High-level interface</code><br />
+<p> <code>High-level interface</code><br/>
  Users of discretized assets should use these methods in order to initialize, evolve and take the present value of the assets. They call the corresponding methods in the <code>Lattice</code> interface, to which we refer for documentation. </p>
 <p> void <code>initialize</code> (const boost::shared_ptr&lt; <code>Lattice</code> &gt; &amp;, Time t) </p>
 <p> void <code>rollback</code> (Time to) </p>
 <p> void <code>partialRollback</code> (Time to) </p>
 <p> Real <code>presentValue</code> () </p>
-<p> <code>Low-level interface</code><br />
+<p> <code>Low-level interface</code><br/>
  These methods (that developers should override when deriving from <code>DiscretizedAsset</code>) are to be used by numerical methods and not directly by users, with the exception of <code>adjustValues()</code>, <code>preAdjustValues()</code> and <code>postAdjustValues()</code> that can be used together with partialRollback(). </p>
 <p> virtual void <code>reset</code> (Size size)=0 </p>
 <p> void <code>preAdjustValues</code> () </p>

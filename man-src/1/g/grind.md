@@ -60,7 +60,7 @@ description: "grind – process WordNet lexicographer files"
 <h3>Sense Numbers</h3>
 <p> Senses are generally ordered from most to least frequently used, with the most common sense numbered <code>1</code>. Frequency of use is determined by the number of times a sense is tagged in the various semantic concordance texts. Senses that are not semantically tagged follow the ordered senses in an arbitrary order. Note that this ordering is only an estimate based on usage in a small corpus. </p>
 <p> The <i>tagsense_cnt</i> field for each entry in the <code>index.</code><i>pos</i> files indicates how many of the senses in the list have been tagged. </p>
-<p> The <code>cntlist</code> file provided with the database lists the number of times each sense is tagged in the semantic concordances. <code>grind()</code> uses the data from <code>cntlist</code> to order the senses of each word. When the <code>index</code>.<i>pos</i> files are generated, the <i>synset_offset</i>s are output in sense number order, with sense 1 first in the list. Senses with the same number of semantic tags are assigned unique but consecutive sense numbers. The WordNet <font SIZE="-1"><code>OVERVIEW</code></font> search displays all senses of the specified word, in all syntactic categories, and indicates which of the senses are represented in the semantically tagged texts.</p>
+<p> The <code>cntlist</code> file provided with the database lists the number of times each sense is tagged in the semantic concordances. <code>grind()</code> uses the data from <code>cntlist</code> to order the senses of each word. When the <code>index</code>.<i>pos</i> files are generated, the <i>synset_offset</i>s are output in sense number order, with sense 1 first in the list. Senses with the same number of semantic tags are assigned unique but consecutive sense numbers. The WordNet <code>OVERVIEW</code> search displays all senses of the specified word, in all syntactic categories, and indicates which of the senses are represented in the semantically tagged texts.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-v</code></dt>
@@ -80,7 +80,7 @@ description: "grind – process WordNet lexicographer files"
 <dt><code>-n</code></dt>
 <dd> Generate nominalization (derivational morphology) links in database.</dd>
 <dt><i>filename</i></dt>
-<dd> Input file of the form described in <font SIZE="-1"><code>Input Files.</code></font></dd></dl>
+<dd> Input file of the form described in <code>Input Files.</code></dd></dl>
 <h2>FILES</h2>
 <dl>
 <dt><i>pos</i>.*</dt>

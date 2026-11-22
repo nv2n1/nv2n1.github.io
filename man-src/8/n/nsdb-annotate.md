@@ -86,11 +86,11 @@ description: "nsdb-annotate – modify an fedfsAnnotation attribute"
 <h2>Examples</h2>
 <p>Suppose you are the FedFS administrator of the <i>example.net</i> FedFS domain and that you want to modify the record for FSN UUID dc25a644-06e4-11e0-ae55-000c29dc7f8a on the LDAP server <i>nsdb.example.net</i>. You might use:</p>
 <dl>
-<dd>$ nsdb-annotate -l nsdb.example.net \<br />
+<dd>$ nsdb-annotate -l nsdb.example.net \<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>-k readonly -v yes -D cn=Manager \</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>fedfsFsnUuid=dc25a644-06e4-\</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>11e0-ae55-000c29dc7f8a,o=fedfs</p>
-<p> Enter NSDB password:<br />
+<p> Enter NSDB password:<br/>
  Successfully updated annotation &quot;readonly&quot; = &quot;yes&quot; for </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>fedfsFsnUuid=dc25a644-06e4-11e0-ae55-000c29dc7f8a,o=fedfs </p>
 </dl>

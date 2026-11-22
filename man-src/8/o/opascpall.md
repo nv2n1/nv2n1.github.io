@@ -36,14 +36,14 @@ description: "opascpall (Linux) Copies files or directories from the current sys
 &nbsp;<wbr><i>dest_file</i>&nbsp;<wbr>or&nbsp;<wbr>&nbsp;<wbr><i>dest_dir</i>&nbsp;<wbr></dt>
 <dd>Name of the file or directory on the destination system to copy to, relative to the home directory of the specified user. An absolute path name may be specified.</dd></dl>
 <h2>Example</h2>
-<p># copy a single file<br />
- opascpall MPI-PMB /root/MPI-PMB<br />
- # efficiently copy an entire directory tree<br />
- opascpall -t -p /usr/lib/opa-ff/src/mpi_apps /usr/lib/opa-ff/src/mpi_apps<br />
- # copy a group of files<br />
- opascpall a b c /root/tools/<br />
- # copy to an explitly specified set of hosts<br />
- opascpall -h &#8216;arwen elrond&#8217; a b c /root/tools<br />
+<p># copy a single file<br/>
+ opascpall MPI-PMB /root/MPI-PMB<br/>
+ # efficiently copy an entire directory tree<br/>
+ opascpall -t -p /usr/lib/opa-ff/src/mpi_apps /usr/lib/opa-ff/src/mpi_apps<br/>
+ # copy a group of files<br/>
+ opascpall a b c /root/tools/<br/>
+ # copy to an explitly specified set of hosts<br/>
+ opascpall -h &#8216;arwen elrond&#8217; a b c /root/tools<br/>
  HOSTS=&#8217;arwen elrond&#8217; opascpall a b c /root/tools</p>
 <h2>Environment Variables</h2>
 <p>The following environment variables are also used by this command:</p>

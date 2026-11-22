@@ -25,10 +25,10 @@ int getnetbyaddr_r(uint32_t net, int type,
                    int *h_errnop);
 </code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
-<p> <code>getnetent_r</code>(), <code>getnetbyname_r</code>(), <code>getnetbyaddr_r</code>():<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Since glibc 2.19:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.19 and earlier:<br />
+<p> <code>getnetent_r</code>(), <code>getnetbyname_r</code>(), <code>getnetbyaddr_r</code>():<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Since glibc 2.19:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.19 and earlier:<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</p>
 <h2>DESCRIPTION</h2>
 <p> The <code>getnetent_r</code>(), <code>getnetbyname_r</code>(), and <code>getnetbyaddr_r</code>() functions are the reentrant equivalents of, respectively, <code><a href="/docs/linux/man/3-getnetent/">getnetent</a></code>(3), <code><a href="/docs/linux/man/3-getnetbyname/">getnetbyname</a></code>(3), and <code>getnetbynumber</code>(3). They differ in the way that the <i>netent</i> structure is returned, and in the function calling signature and return value. This manual page describes just the differences from the nonreentrant functions. </p>

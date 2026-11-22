@@ -13,21 +13,21 @@ description: "getdns_hostname, getdns_hostname_sync — get hostname by address"
 <p> DNS Resolver library (libgetdns, -lgetdns) </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;getdns.h&gt; </p>
-<p> getdns_return_t<br />
+<p> getdns_return_t<br/>
  <code>getdns_hostname</code> (getdns_context *context,</p>
 <dl>
 <dt>
-</dt><dd> getdns_dict *address,<br />
- getdns_dict *extensions,<br />
- void *userarg,<br />
- getdns_transaction_t *transaction_id,<br />
+</dt><dd> getdns_dict *address,<br/>
+ getdns_dict *extensions,<br/>
+ void *userarg,<br/>
+ getdns_transaction_t *transaction_id,<br/>
  getdns_callback_t callbackfn)</dd></dl>
-<p> getdns_return_t<br />
+<p> getdns_return_t<br/>
  <code>getdns_hostname_sync</code> (getdns_context *context,</p>
 <dl>
 <dt>
-</dt><dd> getdns_dict *address,<br />
- getdns_dict *extensions,<br />
+</dt><dd> getdns_dict *address,<br/>
+ getdns_dict *extensions,<br/>
  getdns_dict **response)</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <a href="/docs/linux/man/3-getdns_hostname/">getdns_hostname</a>(3) and getdns_hostname_sync functions provide public entry points into the getdns API library to retrieve the host name given an address. </p>
@@ -65,7 +65,7 @@ description: "getdns_hostname, getdns_hostname_sync — get hostname by address"
 <h2>EXAMPLES</h2>
 <p> TBD </p>
 <h2>FILES</h2>
-<p> /etc/hosts<br />
+<p> /etc/hosts<br/>
  /etc/resolv.conf </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libgetdns/">libgetdns</a></code>(3), <code><a href="/docs/linux/man/3-getdns_context/">getdns_context</a></code>(3), <code>getdns_free_sync_request_memory</code>(3), <code><a href="/docs/linux/man/3-getdns_general/">getdns_general</a></code>(3), <code><a href="/docs/linux/man/3-getdns_address/">getdns_address</a></code>(3), <code><a href="/docs/linux/man/3-getdns_service/">getdns_service</a></code>(3), </p>

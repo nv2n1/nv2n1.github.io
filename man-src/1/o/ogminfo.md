@@ -32,7 +32,7 @@ description: "ogminfo – Print information about streams in OGG/OGM files"
 <dt>level 1</dt>
 <dd> will also print each stream&#8217;s header and comment packets&#8217; contents. These two modes will not process the whole file (as opposed to all other modes) if the comment packets are placed correctly.</dd>
 <dt>level 2</dt>
-<dd> will print a line for each OGG packet it encounters containing the stream the packet belongs to, the payload size, the packet&#8217;s granulepos, the packet&#8217;s number, its start time, its end time and several flags. The flags may include &#8216;sync_ok&#8217; or &#8216;OUT_OF_SYNC&#8217; which indicates whether the packet&#8217;s placement in the file is correct according to its granulepos. Other flags are &#8216;IS_SYNCPOINT&#8217; or &#8216;EOS&#8217;.<br />
+<dd> will print a line for each OGG packet it encounters containing the stream the packet belongs to, the payload size, the packet&#8217;s granulepos, the packet&#8217;s number, its start time, its end time and several flags. The flags may include &#8216;sync_ok&#8217; or &#8216;OUT_OF_SYNC&#8217; which indicates whether the packet&#8217;s placement in the file is correct according to its granulepos. Other flags are &#8216;IS_SYNCPOINT&#8217; or &#8216;EOS&#8217;.<br/>
  level 2 and above automatically imply <code>&#8211;summary</code>.</dd>
 <dt>level 3</dt>
 <dd> also prints a line whenever a new OGG page was read completely along with the page&#8217;s exact position in the file it was read from.</dd>

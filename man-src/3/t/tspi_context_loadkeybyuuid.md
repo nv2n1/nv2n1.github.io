@@ -32,11 +32,11 @@ description: "Tspi_Context_LoadKeyByUUID – load a key that’s been registered
 <h2>Return Codes</h2>
 <p><code>Tspi_Context_LoadKeyByUUID</code> returns TSS_SUCCESS on success, otherwise one of the following values are returned:</p>
 <dl COMPACT>
-<dt><font SIZE="-1">TSS_E_INVALID_HANDLE &#8211; <i>hContext</i> is an invalid handle.</font></dt>
+<dt>TSS_E_INVALID_HANDLE &#8211; <i>hContext</i> is an invalid handle.</dt>
 <dd>
-</dd><dt><font SIZE="-1">TSS_E_BAD_PARAMETER &#8211; <i>persistentStorageType</i> is not valid.</font></dt>
+</dd><dt>TSS_E_BAD_PARAMETER &#8211; <i>persistentStorageType</i> is not valid.</dt>
 <dd>
-</dd><dt><font SIZE="-1">TSS_E_INTERNAL_ERROR</font></dt>
+</dd><dt>TSS_E_INTERNAL_ERROR</dt>
 <dd>An error occurred internal to the TSS.</dd></dl>
 <h2>Conforming To</h2>
 <p><code>Tspi_Context_LoadKeyByUUID</code> conforms to the Trusted Computing Group Software Specification version 1.1 Golden</p>

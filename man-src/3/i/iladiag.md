@@ -11,7 +11,7 @@ description: "iladiag.f –"
 <p> iladiag.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> INTEGER function <code>iladiag</code> (DIAG)<br />
+<p> INTEGER function <code>iladiag</code> (DIAG)<br/>
  <i></i><code>ILADIAG</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>INTEGER function iladiag (characterDIAG)</h3>

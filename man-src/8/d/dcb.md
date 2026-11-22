@@ -14,7 +14,7 @@ description: "dcb – show / manipulate DCB (Data Center Bridging) settings"
 { app | buffer | ets | maxrate | pfc }
 { COMMAND | help }
 </code></pre>
-<p> <code>dcb</code> [ <code>-force</code> ] <code>-batch </code><i>filename</i><br />
+<p> <code>dcb</code> [ <code>-force</code> ] <code>-batch </code><i>filename</i><br/>
  <code>dcb</code> [ <i>OPTIONS</i> ] <code>help</code> </p>
 <h2>Options</h2>
 <dl>

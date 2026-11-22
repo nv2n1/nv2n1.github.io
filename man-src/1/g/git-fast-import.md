@@ -233,24 +233,24 @@ already trusted to run their own code.
 <p> The <code>data</code> command following <code>committer</code> must supply the commit message (see below for <code>data</code> command syntax). To import an empty commit message use a 0 length data. Commit messages are free-form and are not interpreted by Git. Currently they must be encoded in UTF-8, as fast-import does not permit other encodings to be specified. </p>
 <p> Zero or more <code>filemodify</code>, <code>filedelete</code>, <code>filecopy</code>, <code>filerename</code>, <code>filedeleteall</code> and <code>notemodify</code> commands may be included to update the contents of the branch prior to creating the commit. These commands may be supplied in any order. However it is recommended that a <code>filedeleteall</code> command precede all <code>filemodify</code>, <code>filecopy</code>, <code>filerename</code> and <code>notemodify</code> commands in the same commit, as <code>filedeleteall</code> wipes the branch clean (see below). </p>
 <p> The <code>LF</code> after the command is optional (it used to be required). Note that for reasons of backward compatibility, if the commit ends with a <code>data</code> command (i.e. it has no <code>from</code>, <code>merge</code>, <code>filemodify</code>, <code>filedelete</code>, <code>filecopy</code>, <code>filerename</code>, <code>filedeleteall</code> or <code>notemodify</code> commands) then two <code>LF</code> commands may appear at the end of the command instead of just one. </p>
-<p> <font SIZE="+1"> <code>author</code></p>
+<p>  <code>author</code></p>
 <dl>
 <dt>
 </dt><dd>
 <p> An <code>author</code> command may optionally appear, if the author information might differ from the committer information. If <code>author</code> is omitted then fast-import will automatically use the committer&#8217;s information for the author portion of the commit. See below for a description of the fields in <code>author</code>, as they are identical to <code>committer</code>.</dd></dl>
-<p> </font><font SIZE="+2"> <code>committer</code></p>
+<p>  <code>committer</code></p>
 <dl>
 <dt>
 </dt><dd>
 <p> The <code>committer</code> command indicates who made this commit, and when they made it. </p>
 <p> Here <code>&lt;name&gt;</code> is the person&#8217;s display name (for example &#8220;Com M Itter&#8221;) and <code>&lt;email&gt;</code> is the person&#8217;s email address (&#8220;cm [at] example.com&#8221;). <code>LT</code> and <code>GT</code> are the literal less-than (<) and greater-than (>) symbols. These are required to delimit the email address from the other fields in the line. Note that <code>&lt;name&gt;</code> and <code>&lt;email&gt;</code> are free-form and may contain any sequence of bytes, except <code>LT</code>, <code>GT</code> and <code>LF</code>. <code>&lt;name&gt;</code> is typically UTF-8 encoded. </p>
 <p> The time of the change is specified by <code>&lt;when&gt;</code> using the date format that was selected by the &#8211;date-format=&lt;fmt&gt; command-line option. See &#8220;Date Formats&#8221; above for the set of supported formats, and their syntax.</dd></dl>
-<p> </font><font SIZE="+3"> <code>encoding</code></p>
+<p>  <code>encoding</code></p>
 <dl>
 <dt>
 </dt><dd>
 <p> The optional <code>encoding</code> command indicates the encoding of the commit message. Most commits are UTF-8 and the encoding is omitted, but this allows importing commit messages into git without first reencoding them.</dd></dl>
-<p> </font><font SIZE="+4"> <code>from</code></p>
+<p>  <code>from</code></p>
 <dl>
 <dt>
 </dt><dd>
@@ -278,19 +278,19 @@ already trusted to run their own code.
 <p> The special case of restarting an incremental import from the current branch value should be written as: </p>
 <dl>
 <dt>
-</dt><dd> </font></dd>
+</dt><dd> </dd>
 <pre>
         from refs/heads/branch^0
 </pre>
 </dl>
 <p> The <code>^0</code> suffix is necessary as fast-import does not permit a branch to start from itself, and the branch is created in memory before the <code>from</code> command is even read from the input. Adding <code>^0</code> will force fast-import to resolve the commit through Git&#8217;s revision parsing library, rather than its internal branch table, thereby loading in the existing value of the branch.</dl>
-<p> <font SIZE="+1"> <code>merge</code></p>
+<p>  <code>merge</code></p>
 <dl>
 <dt>
 </dt><dd>
 <p> Includes one additional ancestor commit. The additional ancestry link does not change the way the tree state is built at this commit. If the <code>from</code> command is omitted when creating a new branch, the first <code>merge</code> commit will be the first ancestor of the current commit, and the branch will start out with no files. An unlimited number of <code>merge</code> commands per commit are permitted by fast-import, thereby establishing an n-way merge. </p>
 <p> Here <code>&lt;commit-ish&gt;</code> is any of the commit specification expressions also accepted by <code>from</code> (see above).</dd></dl>
-<p> </font><font SIZE="+2"> <code>filemodify</code></p>
+<p>  <code>filemodify</code></p>
 <dl>
 <dt>
 </dt><dd>
@@ -301,7 +301,7 @@ already trusted to run their own code.
 </dt><dd> The data content for the file was already supplied by a prior <code>blob</code> command. The frontend just needs to connect it. </dd>
 <dl>
 <dt>
-</dt><dd> </font></dd>
+</dt><dd> </dd>
 <pre>
         'M' SP &lt;mode&gt; SP &lt;dataref&gt; SP &lt;path&gt; LF
 </pre>
@@ -355,41 +355,41 @@ already trusted to run their own code.
 </dt><dd> &bull; contain the special component <code>.</code> or <code>..</code> (e.g. <code>foo/./bar</code> and <code>foo/../bar</code> are invalid).</dd></dl>
 <p> The root of the tree can be represented by an empty string as <code>&lt;path&gt;</code>. </p>
 <p> It is recommended that <code>&lt;path&gt;</code> always be encoded using UTF-8.</dl>
-<p> <font SIZE="+1"> <code>filedelete</code></p>
+<p>  <code>filedelete</code></p>
 <dl>
 <dt>
 </dt><dd>
 <p> Included in a <code>commit</code> command to remove a file or recursively delete an entire directory from the branch. If the file or directory removal makes its parent directory empty, the parent directory will be automatically removed too. This cascades up the tree until the first non-empty directory or the root is reached. </p>
 </dd><dl>
 <dt>
-</dt><dd> </font></dd>
+</dt><dd> </dd>
 <pre>
         'D' SP &lt;path&gt; LF
 </pre>
 </dl>
 <p> here <code>&lt;path&gt;</code> is the complete path of the file or subdirectory to be removed from the branch. See <code>filemodify</code> above for a detailed description of <code>&lt;path&gt;</code>.</dl>
-<p> <font SIZE="+1"> <code>filecopy</code></p>
+<p>  <code>filecopy</code></p>
 <dl>
 <dt>
 </dt><dd>
 <p> Recursively copies an existing file or subdirectory to a different location within the branch. The existing file or directory must exist. If the destination exists it will be completely replaced by the content copied from the source. </p>
 </dd><dl>
 <dt>
-</dt><dd> </font></dd>
+</dt><dd> </dd>
 <pre>
         'C' SP &lt;path&gt; SP &lt;path&gt; LF
 </pre>
 </dl>
 <p> here the first <code>&lt;path&gt;</code> is the source location and the second <code>&lt;path&gt;</code> is the destination. See <code>filemodify</code> above for a detailed description of what <code>&lt;path&gt;</code> may look like. To use a source path that contains SP the path must be quoted. </p>
 <p> A <code>filecopy</code> command takes effect immediately. Once the source location has been copied to the destination any future commands applied to the source location will not impact the destination of the copy.</dl>
-<p> <font SIZE="+1"> <code>filerename</code></p>
+<p>  <code>filerename</code></p>
 <dl>
 <dt>
 </dt><dd>
 <p> Renames an existing file or subdirectory to a different location within the branch. The existing file or directory must exist. If the destination exists it will be replaced by the source directory. </p>
 </dd><dl>
 <dt>
-</dt><dd> </font></dd>
+</dt><dd> </dd>
 <pre>
         'R' SP &lt;path&gt; SP &lt;path&gt; LF
 </pre>
@@ -397,21 +397,21 @@ already trusted to run their own code.
 <p> here the first <code>&lt;path&gt;</code> is the source location and the second <code>&lt;path&gt;</code> is the destination. See <code>filemodify</code> above for a detailed description of what <code>&lt;path&gt;</code> may look like. To use a source path that contains SP the path must be quoted. </p>
 <p> A <code>filerename</code> command takes effect immediately. Once the source location has been renamed to the destination any future commands applied to the source location will create new files there and not impact the destination of the rename. </p>
 <p> Note that a <code>filerename</code> is the same as a <code>filecopy</code> followed by a <code>filedelete</code> of the source location. There is a slight performance advantage to using <code>filerename</code>, but the advantage is so small that it is never worth trying to convert a delete/add pair in source material into a rename for fast-import. This <code>filerename</code> command is provided just to simplify frontends that already have rename information and don&#8217;t want bother with decomposing it into a <code>filecopy</code> followed by a <code>filedelete</code>.</dl>
-<p> <font SIZE="+1"> <code>filedeleteall</code></p>
+<p>  <code>filedeleteall</code></p>
 <dl>
 <dt>
 </dt><dd>
 <p> Included in a <code>commit</code> command to remove all files (and also all directories) from the branch. This command resets the internal branch structure to have no files in it, allowing the frontend to subsequently add all interesting files from scratch. </p>
 </dd><dl>
 <dt>
-</dt><dd> </font></dd>
+</dt><dd> </dd>
 <pre>
         'deleteall' LF
 </pre>
 </dl>
 <p> This command is extremely useful if the frontend does not know (or does not care to know) what files are currently on the branch, and therefore cannot generate the proper <code>filedelete</code> commands to update the content. </p>
 <p> Issuing a <code>filedeleteall</code> followed by the needed <code>filemodify</code> commands to set the correct content will produce the same results as sending only the needed <code>filemodify</code> and <code>filedelete</code> commands. The <code>filedeleteall</code> approach may however require fast-import to use slightly more memory per active branch (less than 1 MiB for even most large projects); so frontends that can easily obtain only the affected paths for a commit are encouraged to do so.</dl>
-<p> <font SIZE="+1"> <code>notemodify</code></p>
+<p>  <code>notemodify</code></p>
 <dl>
 <dt>
 </dt><dd>
@@ -422,7 +422,7 @@ already trusted to run their own code.
 </dt><dd> The data content for the note was already supplied by a prior <code>blob</code> command. The frontend just needs to connect it to the commit that is to be annotated. </dd>
 <dl>
 <dt>
-</dt><dd> </font></dd>
+</dt><dd> </dd>
 <pre>
         'N' SP &lt;dataref&gt; SP &lt;commit-ish&gt; LF
 </pre>

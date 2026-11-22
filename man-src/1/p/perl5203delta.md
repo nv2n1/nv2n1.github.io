@@ -19,7 +19,7 @@ description: "perl5203delta – what is new for perl v5.20.3"
 <dl>
 <dt>&bull;</dt>
 <dd> Errno has been upgraded from version 1.20_05 to 1.20_06. </dd>
-<p> Add <code>-P</code> to the pre-processor command-line on <font SIZE="-1">GCC 5.</font> <font SIZE="-1">GCC</font> added extra line directives, breaking parsing of error code definitions. [perl #123784] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=123784">https://rt.perl.org/Ticket/Display.html?id=123784</a>&gt;</p>
+<p> Add <code>-P</code> to the pre-processor command-line on GCC 5. GCC added extra line directives, breaking parsing of error code definitions. [perl #123784] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=123784">https://rt.perl.org/Ticket/Display.html?id=123784</a>&gt;</p>
 <dt>&bull;</dt>
 <dd> Module::CoreList has been upgraded from version 5.20150214 to 5.20150822. </dd>
 <p> Updated to cover the latest releases of Perl.</p>
@@ -35,7 +35,7 @@ description: "perl5203delta – what is new for perl v5.20.3"
 <p> <i>perlguts</i></p>
 <dl>
 <dt>&bull;</dt>
-<dd> The <font SIZE="-1">OOK</font> example has been updated to account for <font SIZE="-1">COW</font> changes and a change in the storage of the offset.</dd></dl>
+<dd> The OOK example has been updated to account for COW changes and a change in the storage of the offset.</dd></dl>
 <p> <i>perlhacktips</i></p>
 <dl>
 <dt>&bull;</dt>
@@ -43,7 +43,7 @@ description: "perl5203delta – what is new for perl v5.20.3"
 <p> <i>perlpodspec</i></p>
 <dl>
 <dt>&bull;</dt>
-<dd> The specification of the <font SIZE="-1">POD</font> language is changing so that the default encoding of PODs that aren&#8217;t in <font SIZE="-1">UTF-8</font> (unless otherwise indicated) is <font SIZE="-1">CP1252</font> instead of <font SIZE="-1">ISO-8859-1</font> (Latin1).</dd></dl>
+<dd> The specification of the POD language is changing so that the default encoding of PODs that aren&#8217;t in UTF-8 (unless otherwise indicated) is CP1252 instead of ISO-8859-1 (Latin1).</dd></dl>
 <h2>Utility Changes</h2>
 <h3>h2ph</h3>
 <dl>
@@ -63,9 +63,9 @@ description: "perl5203delta – what is new for perl v5.20.3"
 </dd><dl>
 <dl>
 <dt>&bull;</dt>
-<dd> Previously, when compiling with a 64-bit Visual C<font SIZE="-2">++</font>, every Perl <font SIZE="-1">XS</font> module (including <font SIZE="-1">CPAN</font> ones) and Perl aware C file would unconditionally have around a dozen warnings from <i>hv_func.h</i>. These warnings have been silenced. <font SIZE="-1">GCC</font> (all bitness) and 32-bit Visual C<font SIZE="-2">++</font> were not affected.</dd>
+<dd> Previously, when compiling with a 64-bit Visual C++, every Perl XS module (including CPAN ones) and Perl aware C file would unconditionally have around a dozen warnings from <i>hv_func.h</i>. These warnings have been silenced. GCC (all bitness) and 32-bit Visual C++ were not affected.</dd>
 <dt>&bull;</dt>
-<dd> <code>miniperl.exe</code> is now built with <code>-fno-strict-aliasing</code>, allowing 64-bit builds to complete with <font SIZE="-1">GCC 4.8.</font> [perl #123976] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=123976">https://rt.perl.org/Ticket/Display.html?id=123976</a>&gt;</dd></dl>
+<dd> <code>miniperl.exe</code> is now built with <code>-fno-strict-aliasing</code>, allowing 64-bit builds to complete with GCC 4.8. [perl #123976] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=123976">https://rt.perl.org/Ticket/Display.html?id=123976</a>&gt;</dd></dl>
 </dl>
 <dl>
 </dl>
@@ -83,9 +83,9 @@ description: "perl5203delta – what is new for perl v5.20.3"
 <dt>&bull;</dt>
 <dd> Several cases of data used to store environment variable contents in core C code being potentially overwritten before being used have been fixed. [perl #123748] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=123748">https://rt.perl.org/Ticket/Display.html?id=123748</a>&gt;</dd>
 <dt>&bull;</dt>
-<dd> <font SIZE="-1">UTF-8</font> variable names used in array indexes, unquoted <font SIZE="-1">UTF-8</font> HERE-document terminators and <font SIZE="-1">UTF-8</font> function names all now work correctly. [perl #124113] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=124113">https://rt.perl.org/Ticket/Display.html?id=124113</a>&gt;</dd>
+<dd> UTF-8 variable names used in array indexes, unquoted UTF-8 HERE-document terminators and UTF-8 function names all now work correctly. [perl #124113] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=124113">https://rt.perl.org/Ticket/Display.html?id=124113</a>&gt;</dd>
 <dt>&bull;</dt>
-<dd> A subtle bug introduced in Perl 5.20.2 involving <font SIZE="-1">UTF-8</font> in regular expressions and sometimes causing a crash has been fixed. A new test script has been added to test this fix; see under &#8220;Testing&#8221;. [perl #124109] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=124109">https://rt.perl.org/Ticket/Display.html?id=124109</a>&gt;</dd>
+<dd> A subtle bug introduced in Perl 5.20.2 involving UTF-8 in regular expressions and sometimes causing a crash has been fixed. A new test script has been added to test this fix; see under &#8220;Testing&#8221;. [perl #124109] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=124109">https://rt.perl.org/Ticket/Display.html?id=124109</a>&gt;</dd>
 <dt>&bull;</dt>
 <dd> Some patterns starting with <tt>&quot;/.*..../&quot;</tt> matched against long strings have been slow since Perl 5.8, and some of the form <tt>&quot;/.*..../i&quot;</tt> have been slow since Perl 5.18. They are now all fast again. [perl #123743] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=123743">https://rt.perl.org/Ticket/Display.html?id=123743</a>&gt;</dd>
 <dt>&bull;</dt>
@@ -95,7 +95,7 @@ description: "perl5203delta – what is new for perl v5.20.3"
 <dt>&bull;</dt>
 <dd> A crash with <tt>&quot;%::=(); J-&gt;${\&quot;::&quot;}&quot;</tt> has been fixed. [perl #125541] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=125541">https://rt.perl.org/Ticket/Display.html?id=125541</a>&gt;</dd>
 <dt>&bull;</dt>
-<dd> Regular expression possessive quantifier Perl 5.20 regression now fixed. <tt>&quot;qr/&quot;</tt><i></i><font SIZE="-1"><i>PAT</i></font><i></i><tt>&quot;{&quot;</tt><i>min</i>,<i>max</i><tt>&quot;}+&quot;</tt><tt>&quot;/&quot;</tt> is supposed to behave identically to <tt>&quot;qr/(?&gt;&quot;</tt><i></i><font SIZE="-1"><i>PAT</i></font><i></i><tt>&quot;{&quot;</tt><i>min</i>,<i>max</i><tt>&quot;})/&quot;</tt>. Since Perl 5.20, this didn&#8217;t work if <i>min</i> and <i>max</i> were equal. [perl #125825] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=125825">https://rt.perl.org/Ticket/Display.html?id=125825</a>&gt;</dd>
+<dd> Regular expression possessive quantifier Perl 5.20 regression now fixed. <tt>&quot;qr/&quot;</tt><i></i><i>PAT</i><i></i><tt>&quot;{&quot;</tt><i>min</i>,<i>max</i><tt>&quot;}+&quot;</tt><tt>&quot;/&quot;</tt> is supposed to behave identically to <tt>&quot;qr/(?&gt;&quot;</tt><i></i><i>PAT</i><i></i><tt>&quot;{&quot;</tt><i>min</i>,<i>max</i><tt>&quot;})/&quot;</tt>. Since Perl 5.20, this didn&#8217;t work if <i>min</i> and <i>max</i> were equal. [perl #125825] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=125825">https://rt.perl.org/Ticket/Display.html?id=125825</a>&gt;</dd>
 <dt>&bull;</dt>
 <dd> Code like <tt>&quot;/$a[/&quot;</tt> used to read the next line of input and treat it as though it came immediately after the opening bracket. Some invalid code consequently would parse and run, but some code caused crashes, so this is now disallowed. [perl #123712] &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=123712">https://rt.perl.org/Ticket/Display.html?id=123712</a>&gt;</dd></dl>
 <h2>Acknowledgements</h2>
@@ -104,14 +104,14 @@ description: "perl5203delta – what is new for perl v5.20.3"
 <p> Perl continues to flourish into its third decade thanks to a vibrant community of users and developers. The following people are known to have contributed the improvements that became Perl 5.20.3: </p>
 <p> Alex Vandiver, Andy Dougherty, Aristotle Pagaltzis, Chris &#8216;BinGOs&#8217; Williams, Craig A. Berry, Dagfinn Ilmari Mannsåker, Daniel Dragan, David Mitchell, Father Chrysostomos, H.Merijn Brand, James E Keenan, James McCoy, Jarkko Hietaniemi, Karen Etheridge, Karl Williamson, kmx, Lajos Veres, Lukas Mai, Matthew Horsfall, Petr Písař, Randy Stauner, Ricardo Signes, Sawyer X, Steve Hay, Tony Cook, Yves Orton. </p>
 <p> The list above is almost certainly incomplete as it is automatically generated from version control history. In particular, it does not include the names of the (very much appreciated) contributors who reported issues to the Perl bug tracker. </p>
-<p> Many of the changes included in this version originated in the <font SIZE="-1">CPAN</font> modules included in Perl&#8217;s core. We&#8217;re grateful to the entire <font SIZE="-1">CPAN</font> community for helping Perl to flourish. </p>
-<p> For a more complete list of all of Perl&#8217;s historical contributors, please see the <i></i><font SIZE="-1"><i>AUTHORS</i></font><i></i> file in the Perl source distribution.</p>
+<p> Many of the changes included in this version originated in the CPAN modules included in Perl&#8217;s core. We&#8217;re grateful to the entire CPAN community for helping Perl to flourish. </p>
+<p> For a more complete list of all of Perl&#8217;s historical contributors, please see the <i></i><i>AUTHORS</i><i></i> file in the Perl source distribution.</p>
 <h2>Reporting Bugs</h2>
 <p> If you find what you think is a bug, you might check the articles recently posted to the comp.lang.perl.misc newsgroup and the perl bug database at <a rel="nofollow" href="https://rt.perl.org/">https://rt.perl.org/</a> . There may also be information at <a rel="nofollow" href="http://www.perl.org/">http://www.perl.org/</a> , the Perl Home Page. </p>
 <p> If you believe you have an unreported bug, please run the perlbug program included with your release. Be sure to trim your bug down to a tiny but sufficient test case. Your bug report, along with the output of <tt>&quot;perl -V&quot;</tt>, will be sent off to perlbug [at] perl.org to be analysed by the Perl porting team. </p>
-<p> If the bug you are reporting has security implications, which make it inappropriate to send to a publicly archived mailing list, then please send it to perl5-security-report [at] perl.org. This points to a closed subscription unarchived mailing list, which includes all the core committers, who will be able to help assess the impact of issues, figure out a resolution, and help co-ordinate the release of patches to mitigate or fix the problem across all platforms on which Perl is supported. Please only use this address for security issues in the Perl core, not for modules independently distributed on <font SIZE="-1">CPAN.</font></p>
+<p> If the bug you are reporting has security implications, which make it inappropriate to send to a publicly archived mailing list, then please send it to perl5-security-report [at] perl.org. This points to a closed subscription unarchived mailing list, which includes all the core committers, who will be able to help assess the impact of issues, figure out a resolution, and help co-ordinate the release of patches to mitigate or fix the problem across all platforms on which Perl is supported. Please only use this address for security issues in the Perl core, not for modules independently distributed on CPAN.</p>
 <h2>SEE ALSO</h2>
 <p> The <i>Changes</i> file for an explanation of how to view exhaustive details on what changed. </p>
-<p> The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. </p>
-<p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
+<p> The <i></i><i>INSTALL</i><i></i> file for how to build Perl. </p>
+<p> The <i></i><i>README</i><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information. </p>

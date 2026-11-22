@@ -11,7 +11,7 @@ description: "dtprfb.f –"
 <p> dtprfb.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dtprfb</code> (SIDE, TRANS, DIRECT, STOREV, M, N, K, L, V, LDV, T, LDT, A, LDA, B, LDB, WORK, LDWORK)<br />
+<p> subroutine <code>dtprfb</code> (SIDE, TRANS, DIRECT, STOREV, M, N, K, L, V, LDV, T, LDT, A, LDA, B, LDB, WORK, LDWORK)<br/>
  <i></i><code>DTPRFB</code> applies a real or complex &#8216;triangular-pentagonal&#8217; blocked reflector to a real or complex matrix, which is composed of two blocks.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dtprfb (characterSIDE, characterTRANS, characterDIRECT, characterSTOREV, integerM, integerN, integerK, integerL, double precision, dimension( ldv, * )V, integerLDV, double precision, dimension( ldt, * )T, integerLDT, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( ldb, * )B, integerLDB, double precision, dimension( ldwork, * )WORK, integerLDWORK)</h3>
@@ -122,9 +122,9 @@ if STOREV
           H*C or H**T*C or C*H or C*H**T.  See Futher Details.
 </pre>
 <p> <i>LDA</i> </p>
-<p>LDA is INTEGER<br />
-    The leading dimension of the array A.If SIDE = &#8216;L&#8217;,<br />
-                                            LDC &gt;= max(1, K);<br />
+<p>LDA is INTEGER<br/>
+    The leading dimension of the array A.If SIDE = &#8216;L&#8217;,<br/>
+                                            LDC &gt;= max(1, K);<br/>
 If SIDE = &#8216;R&#8217;, LDC &gt;= max(1, M).</p>
 <p> <i>B</i> </p>
 <pre>
@@ -146,10 +146,10 @@ If SIDE = &#8216;R&#8217;, LDC &gt;= max(1, M).</p>
           (LDWORK,K) if SIDE = 'R'.
 </pre>
 <p> <i>LDWORK</i> </p>
-<p>LDWORK is INTEGER<br />
-    The leading dimension of the array WORK.If SIDE = &#8216;L&#8217;,<br />
-                                               LDWORK &gt;= K;<br />
-if SIDE<br />
+<p>LDWORK is INTEGER<br/>
+    The leading dimension of the array WORK.If SIDE = &#8216;L&#8217;,<br/>
+                                               LDWORK &gt;= K;<br/>
+if SIDE<br/>
 = &#8216;R&#8217;, LDWORK &gt;= M.</p>
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>

@@ -13,17 +13,17 @@ description: "QwtDialNeedle –"
 <p>#include &lt;qwt_dial_needle.h&gt; </p>
 <p> Inherited by <code>QwtCompassMagnetNeedle</code>, <code>QwtCompassWindArrow</code>, and <code>QwtDialSimpleNeedle</code>.</p>
 <h3>Public Member Functions</h3>
-<p><code>QwtDialNeedle</code> ()<br />
- <i>Constructor. </i><br />
- virtual <code>~QwtDialNeedle</code> ()<br />
- <i>Destructor. </i><br />
+<p><code>QwtDialNeedle</code> ()<br/>
+ <i>Constructor. </i><br/>
+ virtual <code>~QwtDialNeedle</code> ()<br/>
+ <i>Destructor. </i><br/>
  virtual void <code>setPalette</code> (const QPalette &amp;) </p>
 <p> const QPalette &amp; <code>palette</code> () const </p>
 <p> virtual void <code>draw</code> (QPainter *painter, const QPointF &amp;center, double length, double direction, QPalette::ColorGroup=QPalette::Active) const </p>
 <h3>Protected Member Functions</h3>
-<p>virtual void <code>drawNeedle</code> (QPainter *painter, double length, QPalette::ColorGroup colorGroup) const =0<br />
- <i>Draw the needle. </i><br />
- virtual void <code>drawKnob</code> (QPainter *, double width, const QBrush &amp;, bool sunken) const<br />
+<p>virtual void <code>drawNeedle</code> (QPainter *painter, double length, QPalette::ColorGroup colorGroup) const =0<br/>
+ <i>Draw the needle. </i><br/>
+ virtual void <code>drawKnob</code> (QPainter *, double width, const QBrush &amp;, bool sunken) const<br/>
  <i>Draw the knob. </i></p>
 <h2>Detailed Description</h2>
 <p>Base class for needles that can be used in a <code>QwtDial</code>. </p>
@@ -36,18 +36,18 @@ description: "QwtDialNeedle –"
 <p>Draw the needle </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>center</i> Center of the dial, start position for the needle<br />
- <i>length</i> Length of the needle<br />
- <i>direction</i> Direction of the needle, in degrees counter clockwise<br />
+<dd><i>painter</i> Painter<br/>
+ <i>center</i> Center of the dial, start position for the needle<br/>
+ <i>length</i> Length of the needle<br/>
+ <i>direction</i> Direction of the needle, in degrees counter clockwise<br/>
  <i>colorGroup</i> Color group, used for painting</dd></dl>
 <h3>virtual void QwtDialNeedle::drawNeedle (QPainter *painter, doublelength, QPalette::ColorGroupcolorGroup) const [protected], [pure virtual]</h3>
 <p>Draw the needle. The origin of the needle is at position (0.0, 0.0 ) pointing in direction 0.0 ( = east ). </p>
 <p> The painter is already initialized with translation and rotation. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>length</i> Length of the needle<br />
+<dd><i>painter</i> Painter<br/>
+ <i>length</i> Length of the needle<br/>
  <i>colorGroup</i> Color group, used for painting</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>

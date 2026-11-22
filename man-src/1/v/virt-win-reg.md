@@ -17,7 +17,7 @@ description: "virt-win-reg – Export and merge Windows Registry entries from a 
  virt-win-reg [--options] disk.img ... # instead of domname
 </code></pre>
 <h2>WARNING</h2>
-<p> You must <i>not</i> use <code>&quot;virt-win-reg&quot;</code> with the <i>--merge</i> option on live virtual machines. If you do this, you <i>will</i> get irreversible disk corruption in the <font SIZE="-1">VM. </font><code>&quot;virt-win-reg&quot;</code> tries to stop you from doing this, but doesn&#8217;t catch all cases. </p>
+<p> You must <i>not</i> use <code>&quot;virt-win-reg&quot;</code> with the <i>--merge</i> option on live virtual machines. If you do this, you <i>will</i> get irreversible disk corruption in the VM. <code>&quot;virt-win-reg&quot;</code> tries to stop you from doing this, but doesn&#8217;t catch all cases. </p>
 <p> Modifying the Windows Registry is an inherently risky operation. The format is deliberately obscure and undocumented, and Registry changes can leave the system unbootable. Therefore when using the <i>--merge</i> option, make sure you have a reliable backup first.  </p>
 <h2>DESCRIPTION</h2>
 <p> This program can export and merge Windows Registry entries from a Windows guest. </p>
@@ -33,7 +33,7 @@ description: "virt-win-reg – Export and merge Windows Registry entries from a 
 <p> With <i>--merge</i>, you can merge a textual regedit file into the Windows Registry: </p>
 <pre><code> $ virt-win-reg --merge Windows7 changes.reg
 </code></pre>
-<font SIZE="-1"></font><h3>NOTE</h3>
+<h3>NOTE</h3>
 <p> This program is only meant for simple access to the registry. If you want to do complicated things with the registry, we suggest you download the Registry hive files from the guest using <i>libguestfs</i>(3) or <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1) and access them locally, eg. using <i><a href="/docs/linux/man/3-hivex/">hivex</a></i>(3), <i><a href="/docs/linux/man/1-hivexsh/">hivexsh</a></i>(1) or <i><a href="/docs/linux/man/1-hivexregedit/">hivexregedit</a></i>(1).  </p>
 <h2>OPTIONS</h2>
 <dl>
@@ -46,10 +46,10 @@ description: "virt-win-reg – Export and merge Windows Registry entries from a 
 <dt><code>--debug</code></dt>
 <dd> <p> Enable debugging messages. </p>
  </dd>
-<dt><code>-c </code><font SIZE="-1"><code>URI</code></font></dt>
+<dt><code>-c </code><code>URI</code></dt>
 <dd>  </dd>
-<dt><code>--connect </code><font SIZE="-1"><code>URI</code></font></dt>
-<dd> <p> If using libvirt, connect to the given <i></i><font SIZE="-1"><i>URI</i></font><i></i>. If omitted, then we connect to the default libvirt hypervisor. </p>
+<dt><code>--connect </code><code>URI</code></dt>
+<dd> <p> If using libvirt, connect to the given <i></i><i>URI</i><i></i>. If omitted, then we connect to the default libvirt hypervisor. </p>
 <p> If you specify guest block devices directly, then libvirt is not used at all. </p>
  </dd>
 <dt><code>--format</code> raw</dt>
@@ -62,18 +62,18 @@ description: "virt-win-reg – Export and merge Windows Registry entries from a 
 <p> Note that <i>--merge</i> is <i>unsafe</i> to use on live virtual machines, and will result in disk corruption. However exporting (without this flag) is always safe. </p>
  </dd>
 <dt><code>--encoding</code> UTF-16LE|ASCII</dt>
-<dd> <p> When merging (only), you may need to specify the encoding for strings to be used in the hive file. This is explained in detail in ``<font SIZE="-1">ENCODING STRINGS&#8217;&#8216;</font> in <i>Win::Hivex::Regedit</i>(3). </p>
-<p> The default is to use <font SIZE="-1">UTF-16LE,</font> which should work with recent versions of Windows. </p>
+<dd> <p> When merging (only), you may need to specify the encoding for strings to be used in the hive file. This is explained in detail in ``ENCODING STRINGS&#8217;&#8216; in <i>Win::Hivex::Regedit</i>(3). </p>
+<p> The default is to use UTF-16LE, which should work with recent versions of Windows. </p>
  </dd>
 <dt><code>--unsafe-printable-strings</code></dt>
-<dd> <p> When exporting (only), assume strings are <font SIZE="-1">UTF-16LE</font> and print them as strings instead of hex sequences. Remove the final zero codepoint from strings if present. </p>
+<dd> <p> When exporting (only), assume strings are UTF-16LE and print them as strings instead of hex sequences. Remove the final zero codepoint from strings if present. </p>
 <p> This is unsafe and does not preserve the fidelity of strings in the original Registry for various reasons: </p>
  </dd>
 <dl>
 <dd>  </dd>
 <dl>
 <dt>&bull;</dt>
-<dd> <p> Assumes the original encoding is <font SIZE="-1">UTF-16LE. ASCII</font> strings and strings in other encodings will be corrupted by this transformation. </p>
+<dd> <p> Assumes the original encoding is UTF-16LE. ASCII strings and strings in other encodings will be corrupted by this transformation. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Assumes that everything which has type 1 or 2 is really a string and that everything else is not a string, but the type field in real Registries is not reliable. </p>
@@ -83,12 +83,12 @@ description: "virt-win-reg – Export and merge Windows Registry entries from a 
  </dd></dl>
 </dl>
 <dl>
-<dd> <p> This all happens because the Registry itself contains no information about how strings are encoded (see ``<font SIZE="-1">ENCODING STRINGS&#8217;&#8216;</font> in <i>Win::Hivex::Regedit</i>(3)). </p>
+<dd> <p> This all happens because the Registry itself contains no information about how strings are encoded (see ``ENCODING STRINGS&#8217;&#8216; in <i>Win::Hivex::Regedit</i>(3)). </p>
 <p> You should only use this option for quick hacking and debugging of the Registry contents, and <i>never</i> use it if the output is going to be passed into another program or stored in another Registry. </p>
  </dd></dl>
 </dl>
 <h2>SUPPORTED SYSTEMS</h2>
-<p> The program currently supports Windows NT-derived guests starting with Windows <font SIZE="-1">XP</font> through to at least Windows 8. </p>
+<p> The program currently supports Windows NT-derived guests starting with Windows XP through to at least Windows 8. </p>
 <p> The following Registry keys are supported: </p>
 <dl>
 <dt>&quot;HKEY_LOCAL_MACHINE\SAM&quot;</dt>
@@ -102,17 +102,17 @@ description: "virt-win-reg – Export and merge Windows Registry entries from a 
 <dt>&quot;HKEY_USERS\.DEFAULT&quot;</dt>
 <dd>  </dd>
 <dt>&quot;HKEY_USERS\SID <code>&quot;</dt>
-<dd> <p> where </code><i></i><font SIZE="-1"><i>SID</i></font><i></i> is a Windows User <font SIZE="-1">SID </font>(eg. <code>&quot;S-1-5-18&quot;</code>). </p>
+<dd> <p> where </code><i></i><i>SID</i><i></i> is a Windows User SID (eg. <code>&quot;S-1-5-18&quot;</code>). </p>
  </dd>
 <dt>&quot;HKEY_USERS\username <code>&quot;</dt>
 <dd> <p> where </code><i>username</i> is a local user name (this is a libguestfs extension). </p>
  </dd></dl>
 <p> You can use <code>&quot;HKLM&quot;</code> as a shorthand for <code>&quot;HKEY_LOCAL_MACHINE&quot;</code>, and <code>&quot;HKU&quot;</code> for <code>&quot;HKEY_USERS&quot;</code>. </p>
 <p> The literal keys <code>&quot;HKEY_USERS\$SID&quot;</code> and <code>&quot;HKEY_CURRENT_USER&quot;</code> are not supported (there is no ``current user&#8217;&#8216;).  </p>
-<font SIZE="-1"></font><h3>WINDOWS 8</h3>
-<p> Windows 8 ``fast startup&#8217;&#8216; can prevent virt-win-reg from being able to edit the Registry. See ``<font SIZE="-1">WINDOWS HIBERNATION AND WINDOWS 8 FAST STARTUP&#8217;&#8216;</font> in <i>guestfs</i>(3).  </p>
+<h3>WINDOWS 8</h3>
+<p> Windows 8 ``fast startup&#8217;&#8216; can prevent virt-win-reg from being able to edit the Registry. See ``WINDOWS HIBERNATION AND WINDOWS 8 FAST STARTUP&#8217;&#8216; in <i>guestfs</i>(3).  </p>
 <h2>ENCODING</h2>
-<p> <code>&quot;virt-win-reg&quot;</code> expects that regedit files have already been reencoded in the local encoding. Usually on Linux hosts, this means <font SIZE="-1">UTF-8</font> with Unix-style line endings. Since Windows regedit files are often in <font SIZE="-1">UTF-16LE</font> with Windows-style line endings, you may need to reencode the whole file before or after processing. </p>
+<p> <code>&quot;virt-win-reg&quot;</code> expects that regedit files have already been reencoded in the local encoding. Usually on Linux hosts, this means UTF-8 with Unix-style line endings. Since Windows regedit files are often in UTF-16LE with Windows-style line endings, you may need to reencode the whole file before or after processing. </p>
 <p> To reencode a file from Windows format to Linux (before processing it with the <i>--merge</i> option), you would do something like this: </p>
 <pre><code> iconv -f utf-16le -t utf-8 &lt; win.reg | dos2unix &gt; linux.reg
 </code></pre>
@@ -120,7 +120,7 @@ description: "virt-win-reg – Export and merge Windows Registry entries from a 
 <pre><code> unix2dos linux.reg | iconv -f utf-8 -t utf-16le &gt; win.reg
 </code></pre>
 <p> For more information about encoding, see <i>Win::Hivex::Regedit</i>(3). </p>
-<p> If you are unsure about the current encoding, use the <i><a href="/docs/linux/man/1-file/">file</a></i>(1) command. Recent versions of Windows regedit.exe produce a <font SIZE="-1">UTF-16LE</font> file with Windows-style (<font SIZE="-1">CRLF</font>) line endings, like this: </p>
+<p> If you are unsure about the current encoding, use the <i><a href="/docs/linux/man/1-file/">file</a></i>(1) command. Recent versions of Windows regedit.exe produce a UTF-16LE file with Windows-style (CRLF) line endings, like this: </p>
 <pre><code> $ file software.reg
  software.reg: Little-endian UTF-16 Unicode text, with very long lines,
  with CRLF line terminators
@@ -148,8 +148,8 @@ description: "virt-win-reg – Export and merge Windows Registry entries from a 
 </code></pre>
 <h2>WINDOWS TIPS</h2>
 <p> Note that some of these tips modify the guest disk image. The guest <i>must</i> be shut off, else you will get disk corruption.  </p>
-<font SIZE="-1"></font><h3>RUNNING A BATCH SCRIPT WHEN A USER LOGS IN</h3>
-<p> Prepare a <font SIZE="-1">DOS</font> batch script, VBScript or executable. Upload this using <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1). For this example the script is called <code>&quot;test.bat&quot;</code> and it is uploaded into <code>&quot;C:\&quot;</code>: </p>
+<h3>RUNNING A BATCH SCRIPT WHEN A USER LOGS IN</h3>
+<p> Prepare a DOS batch script, VBScript or executable. Upload this using <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1). For this example the script is called <code>&quot;test.bat&quot;</code> and it is uploaded into <code>&quot;C:\&quot;</code>: </p>
 <pre><code> guestfish -i -d WindowsGuest upload test.bat /test.bat
 </code></pre>
 <p> Prepare a regedit file containing the registry change: </p>
@@ -162,7 +162,7 @@ description: "virt-win-reg – Export and merge Windows Registry entries from a 
 <p> Now update the registry: </p>
 <pre><code> virt-win-reg --merge WindowsGuest test.reg
 </code></pre>
-<font SIZE="-1"></font><h3>INSTALLING A SERVICE</h3>
+<h3>INSTALLING A SERVICE</h3>
 <p> This section assumes you are familiar with Windows services, and you either have a program which handles the Windows Service Control Protocol directly or you want to run any program using a service wrapper like SrvAny or the free RHSrvAny. </p>
 <p> First upload the program and optionally the service wrapper. In this case the test program is called <code>&quot;test.exe&quot;</code> and we are using the RHSrvAny wrapper: </p>
 <pre><code> guestfish -i -d WindowsGuest &lt;&lt;EOF
@@ -193,7 +193,7 @@ description: "virt-win-reg – Export and merge Windows Registry entries from a 
 <dd> <p> <code>&quot;ObjectName&quot;</code> controls the privileges that the service will have. An alternative is <code>&quot;ObjectName&quot;=&quot;LocalSystem&quot;</code> which would be the most privileged account. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> For the meaning of the magic numbers, see this Microsoft <font SIZE="-1">KB</font> article: <a rel="nofollow" href="http://support.microsoft.com/kb/103000.">http://support.microsoft.com/kb/103000.</a> </p>
+<dd> <p> For the meaning of the magic numbers, see this Microsoft KB article: <a rel="nofollow" href="http://support.microsoft.com/kb/103000.">http://support.microsoft.com/kb/103000.</a> </p>
  </dd></dl>
 <p> Update the registry: </p>
 <pre><code> virt-win-reg --merge WindowsGuest service.reg
@@ -208,9 +208,9 @@ description: "virt-win-reg – Export and merge Windows Registry entries from a 
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2010 Red Hat Inc.  </p>
 <h2>LICENSE</h2>
-<p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
-<p> This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE. </font> See the <font SIZE="-1">GNU</font> General Public License for more details. </p>
-<p> You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, <font SIZE="-1">MA 02110-1301 USA.</font>  </p>
+<p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
+<p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. </p>
+<p> You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.  </p>
 <h2>BUGS</h2>
 <p> To get a list of bugs against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/buglist.cgi?component=libguestfs">https://bugzilla.redhat.com/buglist.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>
 <p> To report a new bug against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs">https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>

@@ -16,54 +16,54 @@ description: "docker-build – Build a new image from the source code at PATH"
 <p> Warning, this will send a lot of data to the Docker daemon depending on the contents of the current directory. The build is run by the Docker daemon, not by the CLI, so the whole context must be transferred to the daemon. The Docker CLI reports &quot;Sending build context to Docker daemon&quot; when the context is sent to the daemon. </p>
 <p> When the URL to a tarball archive or to a single Dockerfile is given, no context is sent from the client to the Docker daemon. In this case, the Dockerfile at the root of the archive and the rest of the archive will get used as the context of the build. When a Git repository is set as the <code>URL</code>, the repository is cloned locally and then sent as the context. </p>
 <h2>OPTIONS</h2>
-<p> <code>-f</code>, <code>&#8211;file</code>=<i>PATH/Dockerfile</i><br />
-Path to the Dockerfile to use. If the path is a relative path and you are<br />
-building from a local directory, then the path must be relative to that<br />
-directory. If you are building from a remote URL pointing to either a<br />
-tarball or a Git repository, then the path must be relative to the root of<br />
-the remote context. In all cases, the file must be within the build context.<br />
+<p> <code>-f</code>, <code>&#8211;file</code>=<i>PATH/Dockerfile</i><br/>
+Path to the Dockerfile to use. If the path is a relative path and you are<br/>
+building from a local directory, then the path must be relative to that<br/>
+directory. If you are building from a remote URL pointing to either a<br/>
+tarball or a Git repository, then the path must be relative to the root of<br/>
+the remote context. In all cases, the file must be within the build context.<br/>
 The default is&nbsp;<wbr><i>Dockerfile</i>. </p>
-<p> <code>&#8211;build-arg</code>=<i>variable</i><br />
+<p> <code>&#8211;build-arg</code>=<i>variable</i><br/>
 name and value of a&nbsp;<wbr><code>buildarg</code>. </p>
-<p> For example, if you want to pass a value for http_proxy, use<br />
+<p> For example, if you want to pass a value for http_proxy, use<br/>
 &#8211;build-arg=http_proxy=&quot;<a rel="nofollow" href="http://some.proxy.url">http://some.proxy.url</a>&quot; </p>
-<p> Users pass these values at build-time. Docker uses the buildargs as the<br />
-environment context for command(s)&nbsp;<wbr>run via the Dockerfile&#8217;s RUN instruction<br />
-or for variable expansion in other Dockerfile instructions. This is not meant<br />
+<p> Users pass these values at build-time. Docker uses the buildargs as the<br/>
+environment context for command(s)&nbsp;<wbr>run via the Dockerfile&#8217;s RUN instruction<br/>
+or for variable expansion in other Dockerfile instructions. This is not meant<br/>
 for passing secret values.&nbsp;<wbr> &lt;/reference/builder/#arg&gt; </p>
-<p> <code>&#8211;force-rm</code>=<i>true</i>|<i>false</i><br />
+<p> <code>&#8211;force-rm</code>=<i>true</i>|<i>false</i><br/>
 Always remove intermediate containers, even after unsuccessful builds. The default is&nbsp;<wbr><i>false</i>. </p>
-<p> <code>&#8211;isolation</code>=&quot;<i>default</i>&quot;<br />
+<p> <code>&#8211;isolation</code>=&quot;<i>default</i>&quot;<br/>
 Isolation specifies the type of isolation technology used by containers. </p>
-<p> <code>&#8211;label</code>=<i>label</i><br />
+<p> <code>&#8211;label</code>=<i>label</i><br/>
 Set metadata for an image </p>
-<p> <code>&#8211;no-cache</code>=<i>true</i>|<i>false</i><br />
+<p> <code>&#8211;no-cache</code>=<i>true</i>|<i>false</i><br/>
 Do not use cache when building the image. The default is&nbsp;<wbr><i>false</i>. </p>
-<p> <code>&#8211;help</code><br />
+<p> <code>&#8211;help</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Print usage statement </p>
-<p> <code>&#8211;pull</code>=<i>true</i>|<i>false</i><br />
+<p> <code>&#8211;pull</code>=<i>true</i>|<i>false</i><br/>
 Always attempt to pull a newer version of the image. The default is&nbsp;<wbr><i>false</i>. </p>
-<p> <code>-q</code>, <code>&#8211;quiet</code>=<i>true</i>|<i>false</i><br />
+<p> <code>-q</code>, <code>&#8211;quiet</code>=<i>true</i>|<i>false</i><br/>
 Suppress the build output and print image ID on success. The default is&nbsp;<wbr><i>false</i>. </p>
-<p> <code>&#8211;rm</code>=<i>true</i>|<i>false</i><br />
+<p> <code>&#8211;rm</code>=<i>true</i>|<i>false</i><br/>
 Remove intermediate containers after a successful build. The default is&nbsp;<wbr><i>true</i>. </p>
-<p> <code>-t</code>, <code>&#8211;tag</code>=&quot;&quot;<br />
-Repository names&nbsp;<wbr>(and optionally with tags)&nbsp;<wbr>to be applied to the resulting<br />
-image in case of success. Refer to&nbsp;<wbr><code><a href="/docs/linux/man/1-docker-tag/">docker-tag</a>(1)</code>&nbsp;<wbr>for more information<br />
+<p> <code>-t</code>, <code>&#8211;tag</code>=&quot;&quot;<br/>
+Repository names&nbsp;<wbr>(and optionally with tags)&nbsp;<wbr>to be applied to the resulting<br/>
+image in case of success. Refer to&nbsp;<wbr><code><a href="/docs/linux/man/1-docker-tag/">docker-tag</a>(1)</code>&nbsp;<wbr>for more information<br/>
 about valid tag names. </p>
-<p> <code>-m</code>, <code>&#8211;memory</code>=<i>MEMORY</i><br />
+<p> <code>-m</code>, <code>&#8211;memory</code>=<i>MEMORY</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>Memory limit </p>
-<p> <code>&#8211;memory-swap</code>=<i>LIMIT</i><br />
+<p> <code>&#8211;memory-swap</code>=<i>LIMIT</i><br/>
 A limit value equal to memory plus swap. Must be used with the&nbsp;<wbr>&nbsp;<wbr><code>-m</code> (<code>&#8211;memory</code>) flag. The swap LIMIT should always be larger than <code>-m</code> (<code>&#8211;memory</code>) value. </p>
 <p> The format of LIMIT is &lt;number&gt;[&lt;unit&gt;]. Unit can be b (bytes), k (kilobytes), m (megabytes), or g (gigabytes). If you don&#8217;t specify a unit, b is used. Set LIMIT to -1 to enable unlimited swap. </p>
-<p> <code>&#8211;shm-size</code>=<i>SHM-SIZE</i><br />
-&nbsp;<wbr>&nbsp;<wbr>Size of&nbsp;<wbr>/dev/shm. The format is&nbsp;<wbr>&lt;number&gt;&lt;unit&gt;. number must be greater than 0.<br />
-&nbsp;<wbr>&nbsp;<wbr>Unit is optional and can be b&nbsp;<wbr>(bytes), k&nbsp;<wbr>(kilobytes), m&nbsp;<wbr>(megabytes), or g&nbsp;<wbr>(gigabytes). If you omit the unit, the system uses bytes.<br />
+<p> <code>&#8211;shm-size</code>=<i>SHM-SIZE</i><br/>
+&nbsp;<wbr>&nbsp;<wbr>Size of&nbsp;<wbr>/dev/shm. The format is&nbsp;<wbr>&lt;number&gt;&lt;unit&gt;. number must be greater than 0.<br/>
+&nbsp;<wbr>&nbsp;<wbr>Unit is optional and can be b&nbsp;<wbr>(bytes), k&nbsp;<wbr>(kilobytes), m&nbsp;<wbr>(megabytes), or g&nbsp;<wbr>(gigabytes). If you omit the unit, the system uses bytes.<br/>
 &nbsp;<wbr>&nbsp;<wbr>If you omit the size entirely, the system uses 64m. </p>
-<p> <code>&#8211;cpu-shares</code>=<i>0</i><br />
+<p> <code>&#8211;cpu-shares</code>=<i>0</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>CPU shares&nbsp;<wbr>(relative weight). </p>
-<p> By default, all containers get the same proportion of CPU cycles.<br />
-&nbsp;<wbr>&nbsp;<wbr>CPU shares is a&nbsp;<wbr>&#8216;relative weight&#8217;, relative to the default setting of 1024.<br />
+<p> By default, all containers get the same proportion of CPU cycles.<br/>
+&nbsp;<wbr>&nbsp;<wbr>CPU shares is a&nbsp;<wbr>&#8216;relative weight&#8217;, relative to the default setting of 1024.<br/>
 &nbsp;<wbr>&nbsp;<wbr>This default value is defined here: </p>
 <dl>
 <dt>
@@ -73,9 +73,9 @@ A limit value equal to memory plus swap. Must be used with the&nbsp;<wbr>&nbsp;<
    1024
 </pre>
 </dd></dl>
-<p> You can change this proportion by adjusting the container&#8217;s CPU share<br />
+<p> You can change this proportion by adjusting the container&#8217;s CPU share<br/>
 &nbsp;<wbr>&nbsp;<wbr>weighting relative to the weighting of all other running containers. </p>
-<p> To modify the proportion from the default of 1024, use the <code>&#8211;cpu-shares</code><br />
+<p> To modify the proportion from the default of 1024, use the <code>&#8211;cpu-shares</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>flag to set the weighting to 2 or higher. </p>
 <dl>
 <dt>
@@ -92,43 +92,43 @@ Container CPU share Flag
 40 % of CPU-- cpu - shares = 410(410 is 40 % of 1024)
 </code></pre>
 </dd></dl>
-<p> The proportion is only applied when CPU-intensive processes are running.<br />
-&nbsp;<wbr>&nbsp;<wbr>When tasks in one container are idle, the other containers can use the<br />
-&nbsp;<wbr>&nbsp;<wbr>left-over CPU time. The actual amount of CPU time used varies depending on<br />
+<p> The proportion is only applied when CPU-intensive processes are running.<br/>
+&nbsp;<wbr>&nbsp;<wbr>When tasks in one container are idle, the other containers can use the<br/>
+&nbsp;<wbr>&nbsp;<wbr>left-over CPU time. The actual amount of CPU time used varies depending on<br/>
 &nbsp;<wbr>&nbsp;<wbr>the number of containers running on the system. </p>
-<p> For example, consider three containers, where one has <code>&#8211;cpu-shares=1024</code> and<br />
-&nbsp;<wbr>&nbsp;<wbr>two others have&nbsp;<wbr><code>&#8211;cpu-shares=512</code>. When processes in all three<br />
-&nbsp;<wbr>&nbsp;<wbr>containers attempt to use 100%&nbsp;<wbr>of CPU, the first container would receive<br />
-&nbsp;<wbr>&nbsp;<wbr>50%&nbsp;<wbr>of the total CPU time. If you add a fourth container with&nbsp;<wbr><code>&#8211;cpu-shares=1024</code>,<br />
-&nbsp;<wbr>&nbsp;<wbr>the first container only gets 33%&nbsp;<wbr>of the CPU. The remaining containers<br />
+<p> For example, consider three containers, where one has <code>&#8211;cpu-shares=1024</code> and<br/>
+&nbsp;<wbr>&nbsp;<wbr>two others have&nbsp;<wbr><code>&#8211;cpu-shares=512</code>. When processes in all three<br/>
+&nbsp;<wbr>&nbsp;<wbr>containers attempt to use 100%&nbsp;<wbr>of CPU, the first container would receive<br/>
+&nbsp;<wbr>&nbsp;<wbr>50%&nbsp;<wbr>of the total CPU time. If you add a fourth container with&nbsp;<wbr><code>&#8211;cpu-shares=1024</code>,<br/>
+&nbsp;<wbr>&nbsp;<wbr>the first container only gets 33%&nbsp;<wbr>of the CPU. The remaining containers<br/>
 &nbsp;<wbr>&nbsp;<wbr>receive 16.5%, 16.5%&nbsp;<wbr>and 33%&nbsp;<wbr>of the CPU. </p>
 <dl>
 <dt>
 </dt><dd>
-<p>Container CPU share Flag CPU time<br />
-{<br />
-    C0<br />
-}<br />
-100 % &#8211;cpu &#8211; shares = 1024 33 %<br />
-{<br />
-    C1<br />
-}<br />
-50 % &#8211;cpu &#8211; shares = 512 16.5 %<br />
-{<br />
-    C2<br />
-}<br />
-50 % &#8211;cpu &#8211; shares = 512 16.5 %<br />
-{<br />
-    C4<br />
-}<br />
+<p>Container CPU share Flag CPU time<br/>
+{<br/>
+    C0<br/>
+}<br/>
+100 % &#8211;cpu &#8211; shares = 1024 33 %<br/>
+{<br/>
+    C1<br/>
+}<br/>
+50 % &#8211;cpu &#8211; shares = 512 16.5 %<br/>
+{<br/>
+    C2<br/>
+}<br/>
+50 % &#8211;cpu &#8211; shares = 512 16.5 %<br/>
+{<br/>
+    C4<br/>
+}<br/>
 100 % &#8211;cpu &#8211; shares = 1024 33 %
 </dd></dl>
-<p> On a multi-core system, the shares of CPU time are distributed across the CPU<br />
-&nbsp;<wbr>&nbsp;<wbr>cores. Even if a container is limited to less than 100%&nbsp;<wbr>of CPU time, it can<br />
+<p> On a multi-core system, the shares of CPU time are distributed across the CPU<br/>
+&nbsp;<wbr>&nbsp;<wbr>cores. Even if a container is limited to less than 100%&nbsp;<wbr>of CPU time, it can<br/>
 &nbsp;<wbr>&nbsp;<wbr>use 100%&nbsp;<wbr>of each individual CPU core. </p>
-<p> For example, consider a system with more than three cores. If you start one<br />
-&nbsp;<wbr>&nbsp;<wbr>container&nbsp;<wbr><code>{C0}</code>&nbsp;<wbr>with&nbsp;<wbr><code>&#8211;cpu-shares=512</code>&nbsp;<wbr>running one process, and another container<br />
-&nbsp;<wbr>&nbsp;<wbr><code>{C1}</code>&nbsp;<wbr>with&nbsp;<wbr><code>&#8211;cpu-shares=1024</code>&nbsp;<wbr>running two processes, this can result in the following<br />
+<p> For example, consider a system with more than three cores. If you start one<br/>
+&nbsp;<wbr>&nbsp;<wbr>container&nbsp;<wbr><code>{C0}</code>&nbsp;<wbr>with&nbsp;<wbr><code>&#8211;cpu-shares=512</code>&nbsp;<wbr>running one process, and another container<br/>
+&nbsp;<wbr>&nbsp;<wbr><code>{C1}</code>&nbsp;<wbr>with&nbsp;<wbr><code>&#8211;cpu-shares=1024</code>&nbsp;<wbr>running two processes, this can result in the following<br/>
 &nbsp;<wbr>&nbsp;<wbr>division of CPU shares: </p>
 <dl>
 <dt>
@@ -149,23 +149,23 @@ PID container CPU CPU share 100
 2 100 % of CPU2
 </code></pre>
 </dd></dl>
-<p> <code>&#8211;cpu-period</code>=<i>0</i><br />
+<p> <code>&#8211;cpu-period</code>=<i>0</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>Limit the CPU CFS&nbsp;<wbr>(Completely Fair Scheduler)&nbsp;<wbr>period. </p>
-<p> Limit the container&#8217;s CPU usage. This flag causes the kernel to restrict the<br />
+<p> Limit the container&#8217;s CPU usage. This flag causes the kernel to restrict the<br/>
 &nbsp;<wbr>&nbsp;<wbr>container&#8217;s CPU usage to the period you specify. </p>
-<p> <code>&#8211;cpu-quota</code>=<i>0</i><br />
+<p> <code>&#8211;cpu-quota</code>=<i>0</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>Limit the CPU CFS&nbsp;<wbr>(Completely Fair Scheduler)&nbsp;<wbr>quota. </p>
 <p> By default, containers run with the full CPU resource. This flag causes the kernel to restrict the container&#8217;s CPU usage to the quota you specify. </p>
-<p> <code>&#8211;cpuset-cpus</code>=<i>CPUSET-CPUS</i><br />
+<p> <code>&#8211;cpuset-cpus</code>=<i>CPUSET-CPUS</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>CPUs in which to allow execution&nbsp;<wbr>(0-3, 0,1). </p>
-<p> <code>&#8211;cpuset-mems</code>=<i>CPUSET-MEMS</i><br />
-&nbsp;<wbr>&nbsp;<wbr>Memory nodes&nbsp;<wbr>(MEMs)&nbsp;<wbr>in which to allow execution&nbsp;<wbr>(0-3, 0,1). Only effective on<br />
+<p> <code>&#8211;cpuset-mems</code>=<i>CPUSET-MEMS</i><br/>
+&nbsp;<wbr>&nbsp;<wbr>Memory nodes&nbsp;<wbr>(MEMs)&nbsp;<wbr>in which to allow execution&nbsp;<wbr>(0-3, 0,1). Only effective on<br/>
 &nbsp;<wbr>&nbsp;<wbr>NUMA systems. </p>
 <p> For example, if you have four memory nodes on your system (0-3), use &#8211;cpuset-mems=0,1 to ensure the processes in your Docker container only use memory from the first two memory nodes. </p>
-<p> <code>&#8211;cgroup-parent</code>=<i>CGROUP-PARENT</i><br />
+<p> <code>&#8211;cgroup-parent</code>=<i>CGROUP-PARENT</i><br/>
 &nbsp;<wbr>&nbsp;<wbr>Path to cgroups under which the container&#8217;s cgroup are created. </p>
 <p> If the path is not absolute, the path is considered relative to the cgroups path of the init process. Cgroups are created if they do not already exist. </p>
-<p> <code>&#8211;ulimit</code>=[]<br />
+<p> <code>&#8211;ulimit</code>=[]<br/>
 &nbsp;<wbr>&nbsp;<wbr>Ulimit options </p>
 <p> +<code>-v</code>, <code>&#8211;volume</code>=[] Create a bind mount + (format: host-dir:container-dir[:&lt;suffix options&gt;], where suffix options +are comma delimited and selected from [ro] and [z|Z].). Read-write mode isn&#8217;t supported at build time. +In case rw is specified a warning is printed during the build and it will be changed to ro preserving any SELinux mode provided. + </p>
 <p> For more information about ulimit see &lt;<a rel="nofollow" href="https://docs.docker.com/reference/commandline/run/#setting-ulimits-in-a-container">https://docs.docker.com/reference/commandline/run/#setting-ulimits-in-a-container</a>&gt; </p>

@@ -26,12 +26,12 @@ description: "odf2xml – Create OpenDocument XML file from OD? package"
 <h2>Example</h2>
 <dl>
 <dt>
-</dt><dd> <font SIZE="-1"> </font></dd>
+</dt><dd>  </dd>
 <pre>
 odf2xml -o file.xml  testdocument.odt
 </pre>
-<p> <font SIZE="+1"></dl>
-<p> </font></p>
+<p> </dl>
+<p> </p>
 <h2>See Also</h2>
 <p> <code><a href="/docs/linux/man/1-xml2odf/">xml2odf</a></code>(1)</p>
 <h2>Bugs</h2>

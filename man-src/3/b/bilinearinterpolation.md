@@ -12,9 +12,9 @@ description: "ql/math/interpolations/bilinearinterpolation.hpp – bilinear inte
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/interpolations/interpolation2d.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>BilinearInterpolation</code><br />
- <i>bilinear interpolation between discrete points </i><br />
- class <code>Bilinear</code><br />
+<p> class <code>BilinearInterpolation</code><br/>
+ <i>bilinear interpolation between discrete points </i><br/>
+ class <code>Bilinear</code><br/>
  <i>bilinear-interpolation factory </i></p>
 <h2>Detailed Description</h2>
 <p> bilinear interpolation between discrete points </p>

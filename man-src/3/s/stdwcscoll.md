@@ -15,8 +15,8 @@ description: "std::wcscoll – std::wcscoll"
 <h2>Parameters</h2>
 <p>lhs, rhs &#8211; pointers to the null-terminated wide strings to compare</p>
 <h2>Return value</h2>
-<p>Negative value if lhs is less than (precedes) rhs.<br />
-0 if lhs is equal to rhs.<br />
+<p>Negative value if lhs is less than (precedes) rhs.<br/>
+0 if lhs is equal to rhs.<br/>
 Positive value if lhs is greater than (follows) rhs. </p>
 <h2>Notes</h2>
 <p>Collation order is the dictionary order: the position of the letter in the national alphabet (its equivalence class) has higher priority than its case or variant. Within an equivalence class, lowercase characters collate before their uppercase equivalents and locale-specific order may apply to the characters with diacritics. In some locales, groups of characters compare as single collation units. For example, &quot;ch&quot; in Czech follows &quot;h&quot; and precedes &quot;i&quot;, and &quot;dzs&quot; in Hungarian follows &quot;dz&quot; and precedes &quot;g&quot;. </p>
@@ -50,15 +50,15 @@ int main()
 }
 </code></pre>
 <h2>Output:</h2>
-<p>&nbsp;<wbr>&nbsp;In the American locale: chrt before hrnec<br />
-&nbsp;<wbr>&nbsp;In the Czech locale: hrnec before chrt<br />
-&nbsp;<wbr>&nbsp;In the American locale: ängel before år<br />
+<p>&nbsp;<wbr>&nbsp;In the American locale: chrt before hrnec<br/>
+&nbsp;<wbr>&nbsp;In the Czech locale: hrnec before chrt<br/>
+&nbsp;<wbr>&nbsp;In the American locale: ängel before år<br/>
 &nbsp;<wbr>&nbsp;In the Swedish locale: år before ängel</p>
 <h2>See also</h2>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;compares two strings in accordance to the current locale<br />
-strcoll <i>(function)</i><br />
-do_compare compares two strings using this facet&#8217;s collation rules<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(virtual protected member function of std::collate&lt;CharT&gt;)</i><br />
-<code>[virtual]</code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;transform a wide string so that wcscmp would produce the same result as wcscoll<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;compares two strings in accordance to the current locale<br/>
+strcoll <i>(function)</i><br/>
+do_compare compares two strings using this facet&#8217;s collation rules<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(virtual protected member function of std::collate&lt;CharT&gt;)</i><br/>
+<code>[virtual]</code><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;transform a wide string so that wcscmp would produce the same result as wcscoll<br/>
 wcsxfrm <i>(function)</i> </p>

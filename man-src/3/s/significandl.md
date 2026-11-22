@@ -15,7 +15,7 @@ float significandf(float x);
 long double significandl(long double x);</code></pre>
 <p> Link with <i>-lm</i>. Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>significand</code>(), <code>significandf</code>(), <code>significandl</code>():</p>
 <dl>
-<dd>/* Since glibc 2.19: */ _DEFAULT_SOURCE<br />
+<dd>/* Since glibc 2.19: */ _DEFAULT_SOURCE<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
 <h2>Description</h2>
 <p>These functions return the mantissa of <i>x</i> scaled to the range [1,2). They are equivalent to </p>
@@ -31,8 +31,8 @@ long double significandl(long double x);</code></pre>
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>significand</code>(),<br />
- <code>significandf</code>(),<br />
+<td> <code>significand</code>(),<br/>
+ <code>significandf</code>(),<br/>
  <code>significandl</code>() </td>
 <td>Thread safety</td>
 <td>MT-Safe

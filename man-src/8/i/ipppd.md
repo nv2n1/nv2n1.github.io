@@ -293,9 +293,9 @@ description: "ipppd – (ISDN) Point to Point Protocol daemon"
 <dd><i>interface-name tty-device speed network-number local-IPX-node-address remote-IPX-node-address local-IPX-routing-protocol remote-IPX-routing-protocol local-IPX-router-name remote-IPX-router-name ipparam ipppd-pid</i></dd>
 <dd>and with its standard input, output and error streams redirected to <code>/dev/null</code>. </dd>
 <dd>The local-IPX-routing-protocol and remote-IPX-routing-protocol field may be one of the following:</dd>
-<dd>NONE to indicate that there is no routing protocol<br />
- RIP to indicate that RIP/SAP should be used<br />
- NLSP to indicate that Novell NLSP should be used<br />
+<dd>NONE to indicate that there is no routing protocol<br/>
+ RIP to indicate that RIP/SAP should be used<br/>
+ NLSP to indicate that Novell NLSP should be used<br/>
  RIP NLSP to indicate that both RIP/SAP and NLSP should be used </dd>
 <dd>This program or script is executed with the same real and effective user-ID as <i>ipppd</i>, that is, at least the effective user-ID and possibly the real user-ID will be <code>root</code>. This is so that it can be used to manipulate routes, run privileged daemons (e.g. <code>ripd</code>), etc. Be careful that the contents of the /etc/ppp/ipx-up and /etc/ppp/ipx-down scripts do not compromise your system&#8217;s security.</dd>
 <dt><code>/etc/ppp/ipx-down</code></dt>
@@ -305,13 +305,13 @@ description: "ipppd – (ISDN) Point to Point Protocol daemon"
 <dt><code>/etc/ppp/auth-down</code></dt>
 <dd>This program or script is executed after a disconnection with the following parameters: <i>interface name,</i> <i>authentication user name,</i> <i>username of ipppd,</i> <i>devicename,</i> <i>speed,</i> <i>remote number</i></dd>
 <dt><code>/etc/ppp/auth-fail</code></dt>
-<dd>This program or script is executed after a authentication failure with the following parameters: <i>interface name,</i> <i>authentication user name,</i> <i>username of ipppd,</i> <i>devicename,</i> <i>speed,</i> <i>remote number,</i> <i>failure reason</i><br />
-&nbsp;<wbr>Valid reasons are:&nbsp;<wbr><br />
-&nbsp;<wbr>&nbsp;<wbr>1&nbsp;<wbr>=&nbsp;<wbr>Timeout during pap auth<br />
-&nbsp;<wbr>&nbsp;<wbr>2&nbsp;<wbr>=&nbsp;<wbr>pap protocol rejected<br />
-&nbsp;<wbr>&nbsp;<wbr>3&nbsp;<wbr>=&nbsp;<wbr>pap secrets invalid<br />
-&nbsp;<wbr>&nbsp;<wbr>9&nbsp;<wbr>=&nbsp;<wbr>Timeout during chap auth<br />
-&nbsp;<wbr>10&nbsp;<wbr>=&nbsp;<wbr>chap protocol rejected<br />
+<dd>This program or script is executed after a authentication failure with the following parameters: <i>interface name,</i> <i>authentication user name,</i> <i>username of ipppd,</i> <i>devicename,</i> <i>speed,</i> <i>remote number,</i> <i>failure reason</i><br/>
+&nbsp;<wbr>Valid reasons are:&nbsp;<wbr><br/>
+&nbsp;<wbr>&nbsp;<wbr>1&nbsp;<wbr>=&nbsp;<wbr>Timeout during pap auth<br/>
+&nbsp;<wbr>&nbsp;<wbr>2&nbsp;<wbr>=&nbsp;<wbr>pap protocol rejected<br/>
+&nbsp;<wbr>&nbsp;<wbr>3&nbsp;<wbr>=&nbsp;<wbr>pap secrets invalid<br/>
+&nbsp;<wbr>&nbsp;<wbr>9&nbsp;<wbr>=&nbsp;<wbr>Timeout during chap auth<br/>
+&nbsp;<wbr>10&nbsp;<wbr>=&nbsp;<wbr>chap protocol rejected<br/>
 &nbsp;<wbr>11&nbsp;<wbr>=&nbsp;<wbr>chap secrets invalid</dd>
 <dt><code>/etc/ppp/pap-secrets</code></dt>
 <dd>Usernames, passwords and IP addresses for PAP authentication.</dd>

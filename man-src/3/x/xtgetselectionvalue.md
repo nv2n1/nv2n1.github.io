@@ -37,6 +37,6 @@ description: "XtGetSelectionValue, XtGetSelectionValues – obtain selection val
 <p>The <code>XtGetSelectionValue</code> function requests the value of the selection that has been converted to the target type. The specified callback will be called some time after <code>XtGetSelectionValue</code> is called; in fact, it may be called before or after <code>XtGetSelectionValue</code> returns. </p>
 <p> The <code>XtGetSelectionValues</code> function is similar to <code>XtGetSelectionValue</code> except that it takes a list of target types and a list of client data and obtains the current value of the selection converted to each of the targets. The effect is as if each target were specified in a separate call to <code>XtGetSelectionValue</code>. The callback is called once with the corresponding client data for each target. <code>XtGetSelectionValues</code> does guarantee that all the conversions will use the same selection value because the ownership of the selection cannot change in the middle of the list, as would be when calling <code>XtGetSelectionValue</code> repeatedly.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xtappgetselectiontimeout/">XtAppGetSelectionTimeout</a>(3), <a href="/docs/linux/man/3-xtownselection/">XtOwnSelection</a>(3)<br />
- <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><a href="/docs/linux/man/3-xtappgetselectiontimeout/">XtAppGetSelectionTimeout</a>(3), <a href="/docs/linux/man/3-xtownselection/">XtOwnSelection</a>(3)<br/>
+ <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

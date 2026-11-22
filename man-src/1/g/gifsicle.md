@@ -493,17 +493,17 @@ anim.gif  anim.gif.000  anim.gif.001  anim.gif.002  anim.gif.003
 <p> Some optimized output GIFs may appear incorrectly on some GIF implementations (for example, Java&#8217;s); see the <code>&#8211;careful</code> option. </p>
 <p> Please email suggestions, additions, patches and bugs to ekohler [at] gmail.com.</p>
 <h2>SEE ALSO</h2>
-<p> For a tutorial on GIF images and animations, you might try some of the resources listed on-line at webreference.com:<br />
+<p> For a tutorial on GIF images and animations, you might try some of the resources listed on-line at webreference.com:<br/>
  <a rel="nofollow" href="http://www.webreference.com/authoring/graphics/animation.html">http://www.webreference.com/authoring/graphics/animation.html</a></p>
 <h2>AUTHORS</h2>
-<p> Eddie Kohler &lt;ekohler [at] gmail.com&gt;<br />
- <a rel="nofollow" href="http://www.read.seas.harvard.edu/~kohler/">http://www.read.seas.harvard.edu/~kohler/</a><br />
+<p> Eddie Kohler &lt;ekohler [at] gmail.com&gt;<br/>
+ <a rel="nofollow" href="http://www.read.seas.harvard.edu/~kohler/">http://www.read.seas.harvard.edu/~kohler/</a><br/>
  He wrote it. </p>
-<p> Anne Dudfield &lt;annied [at] frii.com&gt;<br />
- <a rel="nofollow" href="http://www.frii.com/~annied/">http://www.frii.com/~annied/</a><br />
+<p> Anne Dudfield &lt;annied [at] frii.com&gt;<br/>
+ <a rel="nofollow" href="http://www.frii.com/~annied/">http://www.frii.com/~annied/</a><br/>
  She named it. </p>
-<p> Hans Dinsen-Hansen &lt;dino [at] danbbs.dk&gt;<br />
- <a rel="nofollow" href="http://www.danbbs.dk/~dino/">http://www.danbbs.dk/~dino/</a><br />
+<p> Hans Dinsen-Hansen &lt;dino [at] danbbs.dk&gt;<br/>
+ <a rel="nofollow" href="http://www.danbbs.dk/~dino/">http://www.danbbs.dk/~dino/</a><br/>
  Adaptive tree method for GIF writing. </p>
-<p> <a rel="nofollow" href="http://www.lcdf.org/gifsicle/">http://www.lcdf.org/gifsicle/</a><br />
+<p> <a rel="nofollow" href="http://www.lcdf.org/gifsicle/">http://www.lcdf.org/gifsicle/</a><br/>
  The <code>gifsicle</code> home page. </p>

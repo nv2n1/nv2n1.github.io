@@ -12,17 +12,17 @@ description: "cfg_value_t – Data structure holding the value of a fundamental 
 <h2>SYNOPSIS</h2>
 <p> #include &lt;confuse.h&gt; </p>
 <h3>Data Fields</h3>
-<p> long int <code>number</code><br />
- <i>integer value </i><br />
- double <code>fpnumber</code><br />
- <i>floating point value </i><br />
- <code>cfg_bool_t</code> <code>boolean</code><br />
- <i>boolean value </i><br />
- char * <code>string</code><br />
- <i>string value </i><br />
- <code>cfg_t</code> * <code>section</code><br />
- <i>section value </i><br />
- void * <code>ptr</code><br />
+<p> long int <code>number</code><br/>
+ <i>integer value </i><br/>
+ double <code>fpnumber</code><br/>
+ <i>floating point value </i><br/>
+ <code>cfg_bool_t</code> <code>boolean</code><br/>
+ <i>boolean value </i><br/>
+ char * <code>string</code><br/>
+ <i>string value </i><br/>
+ <code>cfg_t</code> * <code>section</code><br/>
+ <i>section value </i><br/>
+ void * <code>ptr</code><br/>
  <i>user-defined value </i></p>
 <h2>Detailed Description</h2>
 <p> Data structure holding the value of a fundamental option value. </p>

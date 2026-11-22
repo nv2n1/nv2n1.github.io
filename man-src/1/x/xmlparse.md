@@ -10,7 +10,7 @@ description: "xmlparse – error-check and validate XML documents"
 
 <p> xmlparse &#8211; error-check and validate XML documents </p>
 <h2>SYNOPSIS</h2>
-<p> <code>xmlparse</code><br />
+<p> <code>xmlparse</code><br/>
 &nbsp;<wbr><i>filename</i> </p>
 <h2>DESCRIPTION</h2>
 <p> Parses the given file, validating it against its DTD if found. Prints messages about any errors, otherwise returns silently. (Value 0 is always returned in any case.) The parse of the file is discarded. </p>

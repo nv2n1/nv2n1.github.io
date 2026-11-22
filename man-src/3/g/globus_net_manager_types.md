@@ -11,10 +11,10 @@ description: "Net Manager Data Types –"
 <p> Net Manager Data Types &#8211; </p>
 <p> Net Manager Data Types.</p>
 <h3>Data Structures</h3>
-<p> struct <code>globus_net_manager_s</code><br />
+<p> struct <code>globus_net_manager_s</code><br/>
  <i>Net Manager Definition. </i></p>
 <h3>Typedefs</h3>
-<p> typedef struct <code>globus_net_manager_s</code> <code>globus_net_manager_t</code><br />
+<p> typedef struct <code>globus_net_manager_s</code> <code>globus_net_manager_t</code><br/>
  <i>Net Manager Definition. </i></p>
 <h2>Detailed Description</h2>
 <p> Net Manager Data Types. </p>

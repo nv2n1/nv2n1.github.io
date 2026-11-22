@@ -29,7 +29,7 @@ description: "a2enmod, a2dismod – enable or disable an apache2 module"
 <p><code>a2enmod</code> and <code>a2dismod</code> exit with status 0 if all <i>module</i>s are processed successfully, 1 if errors occur, 2 if an invalid option was used.</p>
 <h2>Examples</h2>
 <dl>
-<dd><code>a2enmod imagemap</code><br />
+<dd><code>a2enmod imagemap</code><br/>
  <code>a2dismod mime_magic</code></dd></dl>
 <p> Enables the <code>mod_imagemap</code> module, and disables the <code>mod_mime_magic</code> module.</p>
 <h2>Files</h2>

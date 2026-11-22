@@ -14,7 +14,7 @@ description: "dcb-maxrate – show / manipulate port maxrate settings of the DCB
 maxrate
 { COMMAND | help }
 </code></pre>
-<p> <code>dcb maxrate show dev</code> DEV [ <code>tc-maxrate</code> ]<br />
+<p> <code>dcb maxrate show dev</code> DEV [ <code>tc-maxrate</code> ]<br/>
  <code>dcb maxrate set dev</code> DEV [ <code>tc-maxrate</code> <i>RATE-MAP</i> ] </p>
 <pre><code>RATE-MAP := [ RATE-MAP ] RATE-MAPPING
 RATE-MAPPING := { TC | all }:RATE
@@ -34,7 +34,7 @@ RATE := { INTEGER[bit] | INTEGERKbit |
 <p>Set rates of all traffic classes to 25Gbps, except for TC 6, which will have the rate of 100Gbps: </p>
 <p> # dcb maxrate set dev eth0 tc-maxrate all:25Gbit 6:100Gbit </p>
 <p> Show what was set: </p>
-<p> # dcb maxrate show dev eth0<br />
+<p> # dcb maxrate show dev eth0<br/>
  tc-maxrate 0:25Gbit 1:25Gbit 2:25Gbit 3:25Gbit 4:25Gbit 5:25Gbit 6:100Gbit 7:25Gbit</p>
 <h2>Exit Status</h2>
 <p>Exit status is 0 if command was successful or a positive integer upon failure.</p>

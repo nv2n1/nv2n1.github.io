@@ -10,7 +10,7 @@ description: "spbtrs.f –"
 <p>spbtrs.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>spbtrs</code> (UPLO, N, KD, NRHS, AB, LDAB, B, LDB, INFO)<br />
+<p>subroutine <code>spbtrs</code> (UPLO, N, KD, NRHS, AB, LDAB, B, LDB, INFO)<br/>
  <i></i><code>SPBTRS</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine spbtrs (characterUPLO, integerN, integerKD, integerNRHS, real, dimension( ldab, * )AB, integerLDAB, real, dimension( ldb, * )B, integerLDB, integerINFO)</h3>

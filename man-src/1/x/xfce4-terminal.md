@@ -193,7 +193,7 @@ description: "xfce4-terminal – A Terminal emulator for X"
 <dt>
 </dt><dd> Opens a new terminal window with a geometry of 80 columns and 40 rows and two tabs in it, where the first tab runs <code>mutt</code> and the second tab runs <code>mc</code>.</dd></dl>
 <h2>ENVIRONMENT</h2>
-<p> xfce4-terminal uses the Basedir Specification as defined on m[blue]<code>Freedesktop.org</code>m[]<font SIZE="-2">[1]</font> to locate its data and configuration files. This means that file locations will be specified as a path relative to the directories described in the specification. </p>
+<p> xfce4-terminal uses the Basedir Specification as defined on m[blue]<code>Freedesktop.org</code>m[][1] to locate its data and configuration files. This means that file locations will be specified as a path relative to the directories described in the specification. </p>
 <p> <i>${XDG_CONFIG_HOME}</i></p>
 <dl>
 <dt>
@@ -230,7 +230,7 @@ description: "xfce4-terminal – A Terminal emulator for X"
 <dl>
 <dt>
 </dt><dd> Developer</dd></dl>
-<p> <code>Benedikt Meurer</code> &lt;benny [at] xfce.org&gt;<br />
+<p> <code>Benedikt Meurer</code> &lt;benny [at] xfce.org&gt;<br/>
  Software developer, os-cillation, System development,</p>
 <dl>
 <dt>

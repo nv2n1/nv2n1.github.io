@@ -9,9 +9,9 @@ description: "Ecore Config App Library Functions – Functions that are used to 
 
 <p>Ecore Config App Library Functions &#8211; Functions that are used to start up and shutdown the Enlightened Property Library when used directly by an application. </p>
 <h3>Functions</h3>
-<p>EAPI int <code>ecore_config_init</code> (const char *name)<br />
- <i>Initializes the Enlightened Property Library. </i><br />
- EAPI int <code>ecore_config_shutdown</code> (void)<br />
+<p>EAPI int <code>ecore_config_init</code> (const char *name)<br/>
+ <i>Initializes the Enlightened Property Library. </i><br/>
+ EAPI int <code>ecore_config_shutdown</code> (void)<br/>
  <i>Frees memory and shuts down the library for an application. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that are used to start up and shutdown the Enlightened Property Library when used directly by an application.</p>

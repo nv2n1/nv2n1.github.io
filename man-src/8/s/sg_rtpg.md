@@ -39,7 +39,7 @@ description: "sg_rtpg – send SCSI REPORT TARGET PORT GROUPS command"
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;dgilbert at interlog dot com&gt;.</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2004-2012 Christophe Varoqui and Douglas Gilbert<br />
+<p>Copyright &#169; 2004-2012 Christophe Varoqui and Douglas Gilbert<br/>
  This software is distributed under a FreeBSD license. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>See Also</h2>
 <p><code>sg_inq(sg3_utils)</code> </p>

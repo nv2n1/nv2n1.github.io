@@ -42,7 +42,7 @@ description: "doveadm-mailbox – Commands related to handling mailboxes"
 <dd> The option&#8217;s argument is either an absolute path to a local UNIX domain socket, or a hostname and port (<i>hostname</i>:<i>port</i>), in order to connect a remote host via a TCP socket. </dd>
 <p> This allows an administrator to execute <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) mail commands through the given socket.</p>
 <dt><code>-u&nbsp;<wbr></code><i>user/mask</i></dt>
-<dd> Run the <i>command</i> only for the given <i>user</i>. It&#8217;s also possible to use &#8216;<code>*</code>&#8216; and &#8216;<code>?</code>&#8216; wildcards (e.g. -u *@example.org).<br />
+<dd> Run the <i>command</i> only for the given <i>user</i>. It&#8217;s also possible to use &#8216;<code>*</code>&#8216; and &#8216;<code>?</code>&#8216; wildcards (e.g. -u *@example.org).<br/>
  When neither the <code>-A</code> option nor <code>-u&nbsp;<wbr></code><i>user</i> was specified, the <i>command</i> will be executed with the environment of the currently logged in user.</dd></dl>
 <h2>ARGUMENTS</h2>
 <dl>
@@ -59,11 +59,11 @@ description: "doveadm-mailbox – Commands related to handling mailboxes"
 <dd> When this option was given, the created mailboxes will be also added to the user&#8217;s subscriptions.</dd></dl>
 <h3>mailbox delete</h3>
 <p> <code>doveadm mailbox delete</code> [<code>-A</code>|<code>-u</code> <i>user</i>] [<code>-S</code> <i>socket_path</i>] [<code>-s</code>] <i>mailbox&nbsp;<wbr></i>&#8230; </p>
-<p> This command deletes a mailbox and expunges all the messages it contains. If the mailbox has any children, they won&#8217;t be deleted.<br />
+<p> This command deletes a mailbox and expunges all the messages it contains. If the mailbox has any children, they won&#8217;t be deleted.<br/>
  When the <code>-s</code> option is present, the deleted mailboxes will be also unsubscribed.</p>
 <h3>mailbox list</h3>
 <p> <code>doveadm mailbox list</code> [<code>-7</code>|<code>-8</code>] [<code>-A</code>|<code>-u</code> <i>user</i>] [<code>-S</code> <i>socket_path</i>] [<code>-s</code>] [<i>mailbox</i> &#8230;] </p>
-<p> To get an overview of existing mailboxes use this command. It&#8217;s also possible to use wildcards in the <i>mailbox</i> name.<br />
+<p> To get an overview of existing mailboxes use this command. It&#8217;s also possible to use wildcards in the <i>mailbox</i> name.<br/>
  When the <code>-s</code> option is present, only subscribed mailboxes will be listed. Listed subscriptions may also contain mailboxes that are already deleted. </p>
 <dl>
 <dt><code>-7</code></dt>
@@ -82,11 +82,11 @@ description: "doveadm-mailbox – Commands related to handling mailboxes"
 <dd> One or more mailbox names that should be converted.</dd></dl>
 <h3>mailbox rename</h3>
 <p> <code>doveadm mailbox rename</code> [<code>-A</code>|<code>-u</code> <i>user</i>] [<code>-S</code> <i>socket_path</i>] [<code>-s</code>] <i>old_name</i> <i>new_name</i> </p>
-<p> The <code>mailbox rename</code> command is used to rename the mailbox <i>old_name</i> to <i>new_name</i>.<br />
+<p> The <code>mailbox rename</code> command is used to rename the mailbox <i>old_name</i> to <i>new_name</i>.<br/>
  When the <code>-s</code> option is given, <i>old_name</i> will be unsubscribed and <i>new_name</i> will be subscribed.</p>
 <h3>mailbox status</h3>
 <p> <code>doveadm</code> [<code>-f</code> <i>formatter</i>] <code>mailbox status</code> [<code>-A</code>|<code>-u</code> <i>user</i>] [<code>-S</code> <i>socket_path</i>] [<code>-t</code>] <i>fields mailbox&nbsp;<wbr></i>&#8230; </p>
-<p> Show the <code>status</code> of one or more mailboxes. The <i>mailbox</i> name may also contain wildcards.<br />
+<p> Show the <code>status</code> of one or more mailboxes. The <i>mailbox</i> name may also contain wildcards.<br/>
  This command uses by default the output <i>formatter</i> <code>flow</code>.</p>
 <dl>
 <dt><code>-t</code></dt>

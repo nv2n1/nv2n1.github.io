@@ -17,7 +17,7 @@ description: "pamrecolor – alter colors without affecting luminance"
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pamrecolor</code> changes an image&#8217;s colors to be as close as possible to given target colors but with the constraint that the luminance not be modified. That is, the original image and the target image will look identical if both are converted to grayscale (e.g. with <code><a href="/docs/linux/man/1-ppmtopgm/">ppmtopgm</a></code>(1) ). You can have <code>pamrecolor</code> select target colors randomly, specify a single hue for the entire image, or take the target colors from a target image. </p>
 <p> <code>pamrecolor</code> works on pseudo-Netpbm images based on arbitrary color spaces. You can define the color space explicitly or choose on of many that <code>pamrecolor</code> knows by name. </p>
-<p> The output is a PAM image on standard output. Options control the exact format of the PAM. If you want a PNM (PBM, PGM, or PPM) image, use <code><a href="/docs/linux/man/1-pamtopnm/">pamtopnm</a></code>(1)<br />
+<p> The output is a PAM image on standard output. Options control the exact format of the PAM. If you want a PNM (PBM, PGM, or PPM) image, use <code><a href="/docs/linux/man/1-pamtopnm/">pamtopnm</a></code>(1)<br/>
 &nbsp;<wbr>on the output.&nbsp;<wbr>&nbsp;<wbr>There is no need to convert if you will use the image as input to a current Netpbm program, but many other programs don&#8217;t know what a PAM is. </p>
 <h2>OPTIONS</h2>
 <dl>
@@ -50,7 +50,7 @@ description: "pamrecolor – alter colors without affecting luminance"
 <dd>
 &nbsp;<wbr>&nbsp;<wbr> Wide-gamut RGB with a D50 reference white </dd>
 <p> The default is &lt;q&gt;ntsc&lt;/q&gt; because this is the color space that the Netpbm format of Netpbm and many other graphics utilities. As a counterexample, GIMP uses sRGB as its native color space. </p>
-<p> The luminance values <code>pamrecolor</code> uses for each of the above come from Bruce Lindbloom&#8217;s Computing RGB-to-XYZ and XYZ-to-RGB matrices (1)<br />
+<p> The luminance values <code>pamrecolor</code> uses for each of the above come from Bruce Lindbloom&#8217;s Computing RGB-to-XYZ and XYZ-to-RGB matrices (1)<br/>
 &nbsp;<wbr>page. </p>
 <dt><code>&#8211;rmult</code>=<i>fraction</i></dt>
 <dd>

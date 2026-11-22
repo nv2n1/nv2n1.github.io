@@ -9,9 +9,9 @@ description: "tpm_nvread"
 
 <p>tpm_nvread</p>
 <h2>Synopsis</h2>
-<p><code>tpm_nvread [</code><font SIZE="-1"><code>OPTIONS</code></font><code>]</code></p>
+<p><code>tpm_nvread [</code><code>OPTIONS</code><code>]</code></p>
 <h2>Description</h2>
-<p><code>tpm_nvread</code> reads data from an <font SIZE="-1">NVRAM</font> area and either displays them or writes them into a file. The user must provide the index of the <font SIZE="-1">NVRAM</font> area. If the user provided the number of bytes to read then this will be the maximum number of bytes that will be read from the <font SIZE="-1">NVRAM</font> area, otherwise the whole <font SIZE="-1">NVRAM</font> area will be read. Some <font SIZE="-1">NVRAM</font> areas only allow read sizes of zero, i.e., <font SIZE="-1">NVRAM</font> area with index 0. Optionally an offset into the <font SIZE="-1">NVRAM</font> area can be given where the reading of the data is to start. If the <font SIZE="-1">NVRAM</font> area has permission bits set that require owner or <font SIZE="-1">NVRAM</font> area authentication, then the password must be provided via the password option. </p>
+<p><code>tpm_nvread</code> reads data from an NVRAM area and either displays them or writes them into a file. The user must provide the index of the NVRAM area. If the user provided the number of bytes to read then this will be the maximum number of bytes that will be read from the NVRAM area, otherwise the whole NVRAM area will be read. Some NVRAM areas only allow read sizes of zero, i.e., NVRAM area with index 0. Optionally an offset into the NVRAM area can be given where the reading of the data is to start. If the NVRAM area has permission bits set that require owner or NVRAM area authentication, then the password must be provided via the password option. </p>
 <p> The following options are supported:</p>
 <dl>
 <dt><code>-h, &#8211;help</code></dt>
@@ -21,18 +21,18 @@ description: "tpm_nvread"
 <dt><code>-l, &#8211;log [none|error|info|debug]</code></dt>
 <dd>Set logging level.</dd>
 <dt><code>-u, &#8211;unicode</code></dt>
-<dd>Use <font SIZE="-1">TSS</font> <font SIZE="-1">UNICODE</font> encoding for passwords to comply with applications using <font SIZE="-1">TSS</font> popup boxes</dd>
+<dd>Use TSS UNICODE encoding for passwords to comply with applications using TSS popup boxes</dd>
 <dt><code>-z, &#8211;well-known</code></dt>
-<dd>Use a secret of all zeros (20 bytes of zeros) as either the <font SIZE="-1">NVRAM</font> area or owner secret.</dd>
+<dd>Use a secret of all zeros (20 bytes of zeros) as either the NVRAM area or owner secret.</dd>
 <dt><code>-p, &#8211;password</code></dt>
-<dd>Depending on what type of authentication is required for the <font SIZE="-1">NVRAM</font> area, this must either be the <font SIZE="-1">NVRAM</font> area or owner password. </dd>
+<dd>Depending on what type of authentication is required for the NVRAM area, this must either be the NVRAM area or owner password. </dd>
 <p> A password may be directly provided for example by using &#8216;&#8211;password=password&#8217; or &#8216;-ppassword&#8217;. If no password is provided then the program will prompt the user for the password.</p>
 <dt><code>-i, &#8211;index</code></dt>
-<dd>The index of the <font SIZE="-1">NVRAM</font> area. The parameter may either be a decimal number or a hexadecimal number starting with &#8216;0x&#8217;.</dd>
+<dd>The index of the NVRAM area. The parameter may either be a decimal number or a hexadecimal number starting with &#8216;0x&#8217;.</dd>
 <dt><code>-s, &#8211;size</code></dt>
-<dd>The number of bytes to read from the <font SIZE="-1">NVRAM</font> area. The parameter may either be a decimal number or a hexadecimal number starting with &#8216;0x&#8217;.</dd>
+<dd>The number of bytes to read from the NVRAM area. The parameter may either be a decimal number or a hexadecimal number starting with &#8216;0x&#8217;.</dd>
 <dt><code>-n, &#8211;offset</code> (optional parameter)</dt>
-<dd>The offset into the <font SIZE="-1">NVRAM</font> area from where to start reading. The parameter may either be a decimal number or a hexadecimal number starting with &#8216;0x&#8217;.</dd>
+<dd>The offset into the NVRAM area from where to start reading. The parameter may either be a decimal number or a hexadecimal number starting with &#8216;0x&#8217;.</dd>
 <dt><code>-f, &#8211;filename</code> (optional parameter)</dt>
 <dd>The name of a file the read data will be written into. If no filename is given the data will be printed to stdout.</dd></dl>
 <h2>See Also</h2>

@@ -231,7 +231,7 @@ description: "netcdf – Unidata’s Network Common Data Form (netCDF) library i
 <dd>is the netCDF ID returned from a previous, successful call to <code>nf_open()</code> or <code>nf_create()</code></dd>
 <dt>character*(*) <i>name</i></dt>
 <dd>is the name of a dimension, variable, or attribute. The names of dimensions, variables and attributes consist of arbitrary sequences of alphanumeric characters (as well as underscore &#8216;_&#8217;, period &#8216;.&#8217; and hyphen &#8216;-&#8216;), beginning with a letter or underscore. (However names commencing with underscore are reserved for system use.) Case is significant in netCDF names. A zero-length name is not allowed. </dd>
-<p> The maximum allowable number of characters<br />
+<p> The maximum allowable number of characters<br/>
 &nbsp;<wbr>is&nbsp;<wbr><code>NF_MAX_NAME</code>.</p>
 <dt>integer <i>xtype</i></dt>
 <dd>specifies the external data type of a netCDF variable or attribute and is one of the following: <code>NF_BYTE</code>, <code>NF_CHAR</code>, <code>NF_SHORT</code>, <code>NF_INT</code>, <code>NF_FLOAT</code>, or <code>NF_DOUBLE</code>. These are used to specify 8-bit integers, characters, 16-bit integers, 32-bit integers, 32-bit IEEE floating point numbers, and 64-bit IEEE floating-point numbers, respectively. </dd>

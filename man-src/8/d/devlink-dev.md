@@ -17,9 +17,9 @@ dev
 OPTIONS := {
     -V[ersion] |
     -n[no-nice-names] }</code></pre>
-<p> <code>devlink dev show</code> [ <i>DEV</i> ]<br />
- <code>devlink dev help</code><br />
- <code>devlink dev eswitch set</code> <i>DEV</i> [ <code>mode</code> { <code>legacy</code> | <code>switchdev</code> } ] [ <code>inline-mode</code> { <code>none</code> | <code>link</code> | <code>network</code> | <code>transport</code> } ] [ <code>encap-mode</code> { <code>none</code> | <code>basic</code> } ]<br />
+<p> <code>devlink dev show</code> [ <i>DEV</i> ]<br/>
+ <code>devlink dev help</code><br/>
+ <code>devlink dev eswitch set</code> <i>DEV</i> [ <code>mode</code> { <code>legacy</code> | <code>switchdev</code> } ] [ <code>inline-mode</code> { <code>none</code> | <code>link</code> | <code>network</code> | <code>transport</code> } ] [ <code>encap-mode</code> { <code>none</code> | <code>basic</code> } ]<br/>
  <code>devlink dev eswitch show</code> <i>DEV</i> </p>
 <pre><code>devlink dev param set
 DEV
@@ -28,9 +28,9 @@ PARAMETER
 value
 VALUE
 cmode { runtime | driverinit | permanent }</code></pre>
-<p> <code>devlink dev param show</code> [ <i>DEV</i> <code>name</code> <i>PARAMETER</i> ]<br />
- <code>devlink dev reload</code> <i>DEV</i> [ <code>netns</code> { <i>PID</i> | <i>NAME</i> | <i>ID</i> } ] [ <code>action</code> { <code>driver_reinit</code> | <code>fw_activate</code> } ] [ <code>limit no_reset</code> ]<br />
- <code>devlink dev info</code> [ <i>DEV</i> ]<br />
+<p> <code>devlink dev param show</code> [ <i>DEV</i> <code>name</code> <i>PARAMETER</i> ]<br/>
+ <code>devlink dev reload</code> <i>DEV</i> [ <code>netns</code> { <i>PID</i> | <i>NAME</i> | <i>ID</i> } ] [ <code>action</code> { <code>driver_reinit</code> | <code>fw_activate</code> } ] [ <code>limit no_reset</code> ]<br/>
+ <code>devlink dev info</code> [ <i>DEV</i> ]<br/>
  <code>devlink dev flash</code> <i>DEV</i> <code>file</code> <i>PATH</i> [ <code>target</code> <i>ID</i> ] </p>
 <h2>Description</h2>
 <h3>devlink dev show &#8211; display devlink device attributes</h3>
@@ -84,9 +84,9 @@ cmode { runtime | driverinit | permanent }</code></pre>
 <dd>Performs hot reload of specified devlink device.</dd></dl>
 <p> devlink dev flash pci/0000:01:00.0 file firmware.bin</p>
 <dl>
-<dd>Flashes the specified devlink device with provided firmware file name. If the driver supports it, user gets updates about the flash status. For example:<br />
- Preparing to flash<br />
- Flashing 100%<br />
+<dd>Flashes the specified devlink device with provided firmware file name. If the driver supports it, user gets updates about the flash status. For example:<br/>
+ Preparing to flash<br/>
+ Flashing 100%<br/>
  Flashing done</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-devlink/">devlink</a></code>(8), <code><a href="/docs/linux/man/8-devlink-port/">devlink-port</a></code>(8), <code><a href="/docs/linux/man/8-devlink-sb/">devlink-sb</a></code>(8), <code><a href="/docs/linux/man/8-devlink-monitor/">devlink-monitor</a></code>(8), </p>

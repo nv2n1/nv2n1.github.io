@@ -9,11 +9,11 @@ description: "Object Callback Functions – Functions that add and remove callba
 
 <p>Object Callback Functions &#8211; Functions that add and remove callbacks to evas objects. </p>
 <h3>Functions</h3>
-<p>EAPI void <code>evas_object_event_callback_add</code> (<code>Evas_Object</code> *obj, <code>Evas_Callback_Type</code> type, void(*func)(void *data, <code>Evas</code> *e, <code>Evas_Object</code> *obj, void *event_info), const void *data)<br />
- <i>Add a callback function to an object. </i><br />
- EAPI void * <code>evas_object_event_callback_del</code> (<code>Evas_Object</code> *obj, <code>Evas_Callback_Type</code> type, void(*func)(void *data, <code>Evas</code> *e, <code>Evas_Object</code> *obj, void *event_info))<br />
- <i>Delete a callback function from an object. </i><br />
- EAPI void * <code>evas_object_event_callback_del_full</code> (<code>Evas_Object</code> *obj, <code>Evas_Callback_Type</code> type, void(*func)(void *data, <code>Evas</code> *e, <code>Evas_Object</code> *obj, void *event_info), const void *data)<br />
+<p>EAPI void <code>evas_object_event_callback_add</code> (<code>Evas_Object</code> *obj, <code>Evas_Callback_Type</code> type, void(*func)(void *data, <code>Evas</code> *e, <code>Evas_Object</code> *obj, void *event_info), const void *data)<br/>
+ <i>Add a callback function to an object. </i><br/>
+ EAPI void * <code>evas_object_event_callback_del</code> (<code>Evas_Object</code> *obj, <code>Evas_Callback_Type</code> type, void(*func)(void *data, <code>Evas</code> *e, <code>Evas_Object</code> *obj, void *event_info))<br/>
+ <i>Delete a callback function from an object. </i><br/>
+ EAPI void * <code>evas_object_event_callback_del_full</code> (<code>Evas_Object</code> *obj, <code>Evas_Callback_Type</code> type, void(*func)(void *data, <code>Evas</code> *e, <code>Evas_Object</code> *obj, void *event_info), const void *data)<br/>
  <i>Delete a callback function from an object. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that add and remove callbacks to evas objects.</p>
@@ -25,9 +25,9 @@ description: "Object Callback Functions – Functions that add and remove callba
 <dd>Move this next code example and most of the documentation for this next function into the group documentation.</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>obj</i> Object to attach a callback to<br />
- <i>type</i> The type of event that will trigger the callback<br />
- <i>func</i> The function to be called when the event is triggered<br />
+<dd><i>obj</i> Object to attach a callback to<br/>
+ <i>type</i> The type of event that will trigger the callback<br/>
+ <i>func</i> The function to be called when the event is triggered<br/>
  <i>data</i> The data pointer to be passed to func</dd></dl>
 <p> This function adds a function callback to an object when the event of type type occurs on object obj. The function is func. </p>
 <p> In the event of a memory allocation error during addition of the callback to the object, <code>evas_alloc_error()</code> should be used to determine the nature of the error, if any, and the program should sensibly try and recover. </p>
@@ -87,8 +87,8 @@ description: "Object Callback Functions – Functions that add and remove callba
 <p>Delete a callback function from an object. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>obj</i> Object to remove a callback from<br />
- <i>type</i> The type of event that was triggering the callback<br />
+<dd><i>obj</i> Object to remove a callback from<br/>
+ <i>type</i> The type of event that was triggering the callback<br/>
  <i>func</i> The function that was to be called when the event was triggered</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -104,9 +104,9 @@ description: "Object Callback Functions – Functions that add and remove callba
 <p>Delete a callback function from an object. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>obj</i> Object to remove a callback from<br />
- <i>type</i> The type of event that was triggering the callback<br />
- <i>func</i> The function that was to be called when the event was triggered<br />
+<dd><i>obj</i> Object to remove a callback from<br/>
+ <i>type</i> The type of event that was triggering the callback<br/>
+ <i>func</i> The function that was to be called when the event was triggered<br/>
  <i>data</i> The data pointer that was to be passed to the callback</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

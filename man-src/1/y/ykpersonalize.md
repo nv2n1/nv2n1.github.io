@@ -62,17 +62,17 @@ description: "ykpersonalize – personalize YubiKey OTP tokens"
 </dd><dl>
 <dl>
 <dt><code>-m mode</code></dt>
-<dd> set device configuration for the YubiKey. It is parsed in the form <i>mode:cr_timeout:autoeject_timeout</i><br />
- where mode is:<br />
- 0 OTP device only.<br />
- 1 CCID device only.<br />
- 2 OTP/CCID composite device.<br />
- 3 U2F device only.<br />
- 4 OTP/U2F composite device.<br />
- 5 U2F/CCID composite device.<br />
- 6 OTP/U2F/CCID composite device.<br />
- Add 80 to set MODE_FLAG_EJECT, for example: 81<br />
- cr_timeout is the timeout in seconds for the YubiKey to wait on button press for challenge response (default is 15)<br />
+<dd> set device configuration for the YubiKey. It is parsed in the form <i>mode:cr_timeout:autoeject_timeout</i><br/>
+ where mode is:<br/>
+ 0 OTP device only.<br/>
+ 1 CCID device only.<br/>
+ 2 OTP/CCID composite device.<br/>
+ 3 U2F device only.<br/>
+ 4 OTP/U2F composite device.<br/>
+ 5 U2F/CCID composite device.<br/>
+ 6 OTP/U2F/CCID composite device.<br/>
+ Add 80 to set MODE_FLAG_EJECT, for example: 81<br/>
+ cr_timeout is the timeout in seconds for the YubiKey to wait on button press for challenge response (default is 15)<br/>
  autoeject_timeout is the timeout in seconds before the card is automatically ejected in mode 81</dd>
 <dt><code>-n URI</code></dt>
 <dd> Program NFC NDEF URI</dd>
@@ -84,21 +84,21 @@ description: "ykpersonalize – personalize YubiKey OTP tokens"
 </dd><dl>
 <dl>
 <dt><code>-S</code><i>0605&#8230;</i></dt>
-<dd> set the scanmap to be used with the YubiKey NEO. It must be 45 unique bytes as 90 characters. Leave argument empty to reset to the YubiKey&#8217;s default. The scanmap must be sent in the order:<br />
+<dd> set the scanmap to be used with the YubiKey NEO. It must be 45 unique bytes as 90 characters. Leave argument empty to reset to the YubiKey&#8217;s default. The scanmap must be sent in the order:<br/>
  <i>cbdefghijklnrtuvCBDEFGHIJKLNRTUV0123456789!	
-</i>.<br />
- the default scanmap in the YubiKey is:<br />
- <i>06050708090a0b0c0d0e0f111517181986858788898a8b8c8d8e8f<br />
- 9195979899271e1f202122232425269e2b28</i><br />
- an example for simplified us dvorak would be:<br />
- <i>0c110b071c180d0a0619130f120e09378c918b879c988d8a869993<br />
- 8f928e89b7271e1f202122232425269e2b28</i><br />
- or for a french azerty keyboard (digits are shifted):<br />
- <i>06050708090a0b0c0d0e0f111517181986858788898a8b8c8d8e8f<br />
- 9195979899a79e9fa0a1a2a3a4a5a6382b28</i><br />
- and a turkish example (has a dotless i instead of usual i):<br />
- <i>06050708090a0b340d0e0f111517181986858788898a8b8c8d8e8f<br />
- 9195979899271e1f202122232425269e2b28</i><br />
+</i>.<br/>
+ the default scanmap in the YubiKey is:<br/>
+ <i>06050708090a0b0c0d0e0f111517181986858788898a8b8c8d8e8f<br/>
+ 9195979899271e1f202122232425269e2b28</i><br/>
+ an example for simplified us dvorak would be:<br/>
+ <i>0c110b071c180d0a0619130f120e09378c918b879c988d8a869993<br/>
+ 8f928e89b7271e1f202122232425269e2b28</i><br/>
+ or for a french azerty keyboard (digits are shifted):<br/>
+ <i>06050708090a0b0c0d0e0f111517181986858788898a8b8c8d8e8f<br/>
+ 9195979899a79e9fa0a1a2a3a4a5a6382b28</i><br/>
+ and a turkish example (has a dotless i instead of usual i):<br/>
+ <i>06050708090a0b340d0e0f111517181986858788898a8b8c8d8e8f<br/>
+ 9195979899271e1f202122232425269e2b28</i><br/>
  Note that you must remove any whitespace present in these examples before using the values.</dd></dl>
 </dl>
 <dt><code>YubiKey 2.3 and above</code></dt>

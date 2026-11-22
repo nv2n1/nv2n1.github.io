@@ -35,9 +35,9 @@ VanillaSwap(Type type, Real nominal, const Schedule &amp;fixedSchedule, Rate fix
     void fetchResults(const PricingEngine::results *) const</code></pre>
 <p> Inherits <code>QuantLib::Swap</code>.</p>
 <h3>Classes</h3>
-<p>class <code>arguments</code><br />
- <i>Arguments for simple swap calculation </i><br />
- class <code>results</code><br />
+<p>class <code>arguments</code><br/>
+ <i>Arguments for simple swap calculation </i><br/>
+ class <code>results</code><br/>
  <i>Results from simple swap calculation </i></p>
 <h3>Public Types</h3>
 <pre><code>enum Type { Receiver = -1,

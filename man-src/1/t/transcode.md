@@ -593,8 +593,8 @@ description: "transcode – LINUX video stream processing tool"
 <dl>
 <dt>
 </dt><dd>
-&#8211;export_prof svcd clip top / bot &#8211; 96;<br />
-resizes to 480&#215;576 &#8211;export_prof vcd &#8211; ntsc clip top / bot &#8211; 96;<br />
+&#8211;export_prof svcd clip top / bot &#8211; 96;<br/>
+resizes to 480&#215;576 &#8211;export_prof vcd &#8211; ntsc clip top / bot &#8211; 96;<br/>
 resizes to 352&#215;240
 </dd></dl>
 <p> This enables simpilified commandlines where transcode tries to set sensible values for mpeg export. When you don&#8217;t specify an export module with -y, mpeg2enc will be used. </p>
@@ -673,8 +673,8 @@ resizes to 352&#215;240
 <dl>
 <dt>
 </dt><dd>
-+ &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+ +&#8211; -480 &#8212; &#8212; -+ | | | black |<br />
-    | 720&#215;306 = 2.35:1 |-&gt;- Z 480&#215;480 &#8211;keep_asr-&gt;| &#8212; &#8212; &#8212; &#8212; &#8212; -4 | | | 480&#215;204 8 + &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+ | &#8212; &#8212; &#8212; &#8212; &#8212; -0 | black |<br />
++ &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+ +&#8211; -480 &#8212; &#8212; -+ | | | black |<br/>
+    | 720&#215;306 = 2.35:1 |-&gt;- Z 480&#215;480 &#8211;keep_asr-&gt;| &#8212; &#8212; &#8212; &#8212; &#8212; -4 | | | 480&#215;204 8 + &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+ | &#8212; &#8212; &#8212; &#8212; &#8212; -0 | black |<br/>
                      +&#8211; &#8212; &#8212; &#8212; &#8212; -+
 </dd></dl>
 <p> Consider <code>&#8211;keep_asr</code> a wrapper for calculating <code>-Y</code> options and <code>-Z</code> options.</dl>

@@ -13,10 +13,10 @@ description: "ql/math/statistics/riskstatistics.hpp – empirical-distribution r
 #include &lt;ql/math/functional.hpp&gt;
 #include &lt;ql/math/statistics/gaussianstatistics.hpp&gt;</code></pre>
 <h3>Classes</h3>
-<p>class <code>GenericRiskStatistics&lt; S &gt;</code><br />
+<p>class <code>GenericRiskStatistics&lt; S &gt;</code><br/>
  <i>empirical-distribution risk measures </i></p>
 <h3>Typedefs</h3>
-<p>typedef GenericRiskStatistics&lt; GaussianStatistics &gt; <code>RiskStatistics</code><br />
+<p>typedef GenericRiskStatistics&lt; GaussianStatistics &gt; <code>RiskStatistics</code><br/>
  <i>default risk measures tool </i></p>
 <h2>Detailed Description</h2>
 <p>empirical-distribution risk measures</p>

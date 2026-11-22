@@ -19,5 +19,5 @@ const char *ares_strerror(int code)
 <h2>NOTES</h2>
 <p> This function is not compatible with ares, it takes a different set of arguments.</p>
 <h2>AUTHOR</h2>
-<p> Greg Hudson, MIT Information Systems<br />
+<p> Greg Hudson, MIT Information Systems<br/>
  Copyright 1998 by the Massachusetts Institute of Technology. </p>

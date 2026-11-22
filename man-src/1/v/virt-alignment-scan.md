@@ -48,7 +48,7 @@ virt - alignment - scan[--options] - d domname virt - alignment - scan[--options
 <dl>
 <dt>col 1</dt>
 <dd> The device and partition name (eg. <i>/dev/sda1</i> meaning the first partition on the first block device). </dd>
-<p> When listing all libvirt domains (no <i>-a</i> or <i>-d</i> option given) this column is prefixed by the libvirt name or <font SIZE="-1">UUID </font>(if <i>&#8211;uuid</i> is given). eg: <tt>&quot;WinXP:/dev/sda1&quot;</tt></p>
+<p> When listing all libvirt domains (no <i>-a</i> or <i>-d</i> option given) this column is prefixed by the libvirt name or UUID (if <i>&#8211;uuid</i> is given). eg: <tt>&quot;WinXP:/dev/sda1&quot;</tt></p>
 <dt>col 2</dt>
 <dd> the start of the partition in bytes</dd>
 <dt>col 3</dt>
@@ -57,7 +57,7 @@ virt - alignment - scan[--options] - d domname virt - alignment - scan[--options
 <dd> <tt>&quot;ok&quot;</tt> if the alignment is best for performance, or <tt>&quot;bad&quot;</tt> if the alignment can cause performance problems</dd>
 <dt>cols 5+</dt>
 <dd> optional free-text explanation.</dd></dl>
-<p> The exit code from the program changes depending on whether poorly aligned partitions were found. See &#8220;<font SIZE="-1">EXIT STATUS&#8221;</font> below. </p>
+<p> The exit code from the program changes depending on whether poorly aligned partitions were found. See &#8220;EXIT STATUS&#8221; below. </p>
 <p> If you just want the exit code with no output, use the <i>-q</i> option.</p>
 <h2>OPTIONS</h2>
 <dl>
@@ -68,14 +68,14 @@ virt - alignment - scan[--options] - d domname virt - alignment - scan[--options
 </dd><dt><code>&#8211;add</code> file</dt>
 <dd> Add <i>file</i> which should be a disk image from a virtual machine. </dd>
 <p> The format of the disk image is auto-detected. To override this and force a particular format use the <i>&#8211;format=..</i> option.</p>
-<dt><code>-a </code><font SIZE="-1"><code>URI</code></font></dt>
+<dt><code>-a </code><code>URI</code></dt>
 <dd>
-</dd><dt><code>&#8211;add </code><font SIZE="-1"><code>URI</code></font></dt>
-<dd> Add a remote disk. See &#8220;<font SIZE="-1">ADDING REMOTE STORAGE&#8221;</font> in <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1).</dd>
-<dt><code>-c</code> <font SIZE="-1">URI</font></dt>
+</dd><dt><code>&#8211;add </code><code>URI</code></dt>
+<dd> Add a remote disk. See &#8220;ADDING REMOTE STORAGE&#8221; in <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1).</dd>
+<dt><code>-c</code> URI</dt>
 <dd>
-</dd><dt><code>&#8211;connect</code> <font SIZE="-1">URI</font></dt>
-<dd> If using libvirt, connect to the given <i></i><font SIZE="-1"><i>URI</i></font><i></i>. If omitted, then we connect to the default libvirt hypervisor. </dd>
+</dd><dt><code>&#8211;connect</code> URI</dt>
+<dd> If using libvirt, connect to the given <i></i><i>URI</i><i></i>. If omitted, then we connect to the default libvirt hypervisor. </dd>
 <p> If you specify guest block devices directly (<i>-a</i>), then libvirt is not used at all.</p>
 <dt><code>-d</code> guest</dt>
 <dd>
@@ -94,14 +94,14 @@ virt - alignment - scan[--options] - d domname virt - alignment - scan[--options
  virt-alignment-scan --format=raw -a disk.img --format -a another.img
 </pre>
 <p> forces raw format (no auto-detection) for <i>disk.img</i> and reverts to auto-detection for <i>another.img</i>. </p>
-<p> If you have untrusted raw-format guest disk images, you should use this option to specify the disk format. This avoids a possible security problem with malicious guests (<font SIZE="-1">CVE-2010-3851</font>).</p>
+<p> If you have untrusted raw-format guest disk images, you should use this option to specify the disk format. This avoids a possible security problem with malicious guests (CVE-2010-3851).</p>
 <dt><code>-P</code> nr_threads</dt>
 <dd> Since libguestfs 1.22, virt-alignment-scan is multithreaded and examines guests in parallel. By default the number of threads to use is chosen based on the amount of free memory available at the time that virt-alignment-scan is started. You can force virt-alignment-scan to use at most <tt>&quot;nr_threads&quot;</tt> by using the <i>-P</i> option. </dd>
 <p> Note that <i>-P 0</i> means to autodetect, and <i>-P 1</i> means to use a single thread.</p>
 <dt><code>-q</code></dt>
 <dd>
 </dd><dt><code>&#8211;quiet</code></dt>
-<dd> Don&#8217;t produce any output. Just set the exit code (see &#8220;<font SIZE="-1">EXIT STATUS&#8221;</font> below).</dd>
+<dd> Don&#8217;t produce any output. Just set the exit code (see &#8220;EXIT STATUS&#8221; below).</dd>
 <dt><code>&#8211;uuid</code></dt>
 <dd> Print UUIDs instead of names. This is useful for following a guest even when the guest is migrated or renamed, or when two guests happen to have the same name. </dd>
 <p> This option only applies when listing all libvirt domains (when no <i>-a</i> or <i>-d</i> options are specified).</p>
@@ -114,14 +114,14 @@ virt - alignment - scan[--options] - d domname virt - alignment - scan[--options
 </dd><dt><code>&#8211;version</code></dt>
 <dd> Display version number and exit.</dd>
 <dt><code>-x</code></dt>
-<dd> Enable tracing of libguestfs <font SIZE="-1">API</font> calls.</dd></dl>
+<dd> Enable tracing of libguestfs API calls.</dd></dl>
 <h2>RECOMMENDED ALIGNMENT</h2>
-<p> Operating systems older than Windows 2008 and Linux before ca.2010 place the first sector of the first partition at sector 63, with a 512 byte sector size. This happens because of a historical accident. Drives have to report a cylinder / head / sector (<font SIZE="-1">CHS</font>) geometry to the <font SIZE="-1">BIOS. </font> The geometry is completely meaningless on modern drives, but it happens that the geometry reported always has 63 sectors per track. The operating system therefore places the first partition at the start of the second &#8220;track&#8221;, at sector 63. </p>
-<p> When the guest <font SIZE="-1">OS</font> is virtualized, the host operating system and hypervisor may prefer accesses aligned to one of:</p>
+<p> Operating systems older than Windows 2008 and Linux before ca.2010 place the first sector of the first partition at sector 63, with a 512 byte sector size. This happens because of a historical accident. Drives have to report a cylinder / head / sector (CHS) geometry to the BIOS.  The geometry is completely meaningless on modern drives, but it happens that the geometry reported always has 63 sectors per track. The operating system therefore places the first partition at the start of the second &#8220;track&#8221;, at sector 63. </p>
+<p> When the guest OS is virtualized, the host operating system and hypervisor may prefer accesses aligned to one of:</p>
 <dl>
 <dt>&bull;</dt>
 <dd> 512 bytes </dd>
-<p> if the host <font SIZE="-1">OS</font> uses local storage directly on hard drive partitions, and the hard drive has 512 byte physical sectors.</p>
+<p> if the host OS uses local storage directly on hard drive partitions, and the hard drive has 512 byte physical sectors.</p>
 <dt>&bull;</dt>
 <dd> 4 Kbytes </dd>
 <p> for local storage on new hard drives with 4Kbyte physical sectors; for file-backed storage on filesystems with 4Kbyte block size; or for some types of network-attached storage.</p>
@@ -130,7 +130,7 @@ virt - alignment - scan[--options] - d domname virt - alignment - scan[--options
 <p> for high-end network-attached storage. This is the optimal block size for some NetApp hardware.</p>
 <dt>&bull;</dt>
 <dd> 1 Mbyte </dd>
-<p> see &#8220;1 <font SIZE="-1">MB PARTITION ALIGNMENT&#8221;</font> below.</dl>
+<p> see &#8220;1 MB PARTITION ALIGNMENT&#8221; below.</dl>
 <p> Partitions which are not aligned correctly to the underlying storage cause extra I/O. For example: </p>
 <pre>
                        sect#63
@@ -143,7 +143,7 @@ virt - alignment - scan[--options] - d domname virt - alignment - scan[--options
   ─ ┴─────────────────────────┴─────────────────────────┴ ─ ─
 </pre>
 <p> In this example, each time a 4K guest block is read, two blocks on the host must be accessed (so twice as much I/O is done). When a 4K guest block is written, two host blocks must first be read, the old and new data combined, and the two blocks written back (4x I/O).</p>
-<h3><font SIZE="-1">LINUX HOST BLOCK AND I/O SIZE</font></h3>
+<h3>LINUX HOST BLOCK AND I/O SIZE</h3>
 <p> New versions of the Linux kernel expose the physical and logical block size, and minimum and recommended I/O size. </p>
 <p> For a typical consumer hard drive with 512 byte sectors: </p>
 <pre>
@@ -171,7 +171,7 @@ virt - alignment - scan[--options] - d domname virt - alignment - scan[--options
  $ cat /sys/block/sda/queue/optimal_io_size
  0
 </pre>
-<p> For a NetApp <font SIZE="-1">LUN:</font> </p>
+<p> For a NetApp LUN: </p>
 <pre>
  $ cat /sys/block/sdc/queue/logical_block_size
  512
@@ -185,12 +185,12 @@ virt - alignment - scan[--options] - d domname virt - alignment - scan[--options
 <p> The NetApp allows 512 byte accesses (but they will be very inefficient), prefers a minimum 4K I/O size, but the optimal I/O size is 64K. </p>
 <p> For detailed information about what these numbers mean, see <a rel="nofollow" href="http://docs.redhat.com/docs/en-US/Red_Hat_Enterprise_Linux/6/html/Storage_Administration_Guide/newstorage-iolimits.html">http://docs.redhat.com/docs/en-US/Red_Hat_Enterprise_Linux/6/html/Storage_Administration_Guide/newstorage-iolimits.html</a> </p>
 <p> [Thanks to Matt Booth for providing 4K drive data. Thanks to Mike Snitzer for providing NetApp data and additional information.]</p>
-<h3>1 <font SIZE="-1">MB PARTITION ALIGNMENT</font></h3>
-<p> Microsoft picked 1 <font SIZE="-1">MB</font> as the default alignment for all partitions starting with Windows 2008 Server, and Linux has followed this. </p>
+<h3>1 MB PARTITION ALIGNMENT</h3>
+<p> Microsoft picked 1 MB as the default alignment for all partitions starting with Windows 2008 Server, and Linux has followed this. </p>
 <p> Assuming 512 byte sectors in the guest, you will now see the first partition starting at sector 2048, and subsequent partitions (if any) will start at a multiple of 2048 sectors. </p>
-<p> 1 <font SIZE="-1">MB</font> alignment is compatible with all current alignment requirements (4K, 64K) and provides room for future growth in physical block sizes.</p>
-<h3><font SIZE="-1">SETTING ALIGNMENT</font></h3>
-<p> <i><a href="/docs/linux/man/1-virt-resize/">virt-resize</a></i>(1) can change the alignment of the partitions of some guests. Currently it can fully align all the partitions of all Windows guests, and it will fix the bootloader where necessary. For Linux guests, it can align the second and subsequent partitions, so the majority of <font SIZE="-1">OS</font> accesses except at boot will be aligned. </p>
+<p> 1 MB alignment is compatible with all current alignment requirements (4K, 64K) and provides room for future growth in physical block sizes.</p>
+<h3>SETTING ALIGNMENT</h3>
+<p> <i><a href="/docs/linux/man/1-virt-resize/">virt-resize</a></i>(1) can change the alignment of the partitions of some guests. Currently it can fully align all the partitions of all Windows guests, and it will fix the bootloader where necessary. For Linux guests, it can align the second and subsequent partitions, so the majority of OS accesses except at boot will be aligned. </p>
 <p> Another way to correct partition alignment problems is to reinstall your guest operating systems. If you install operating systems from templates, ensure these have correct partition alignment too. </p>
 <p> For older versions of Windows, the following NetApp document contains useful information: <a rel="nofollow" href="http://media.netapp.com/documents/tr-3747.pdf">http://media.netapp.com/documents/tr-3747.pdf</a> </p>
 <p> For Red Hat Enterprise Linux ≤ 5, use a Kickstart script that contains an explicit <tt>%pre</tt> section that creates aligned partitions using <i><a href="/docs/linux/man/8-parted/">parted</a></i>(8). Do not use the Kickstart <tt>&quot;part&quot;</tt> command. The NetApp document above contains an example.</p>
@@ -216,9 +216,9 @@ virt - alignment - scan[--options] - d domname virt - alignment - scan[--options
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2011 Red Hat Inc.</p>
 <h2>LICENSE</h2>
-<p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
-<p> This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE. </font> See the <font SIZE="-1">GNU</font> General Public License for more details. </p>
-<p> You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, <font SIZE="-1">MA 02110-1301 USA.</font></p>
+<p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
+<p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. </p>
+<p> You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.</p>
 <h2>BUGS</h2>
 <p> To get a list of bugs against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/buglist.cgi?component=libguestfs">https://bugzilla.redhat.com/buglist.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>
 <p> To report a new bug against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs">https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>

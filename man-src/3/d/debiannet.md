@@ -9,7 +9,7 @@ description: "DebianNet – create, remove, enable or disable entry in /etc/inet
 
 <p>DebianNet &#8211; create, remove, enable or disable entry in /etc/inetd. </p>
 <h2>Description</h2>
-<p>You can use the functions in <code>DebianNet</code> to to add, remove, enable or disable entries in the <i>/etc/inetd.conf</i> file. After the <i>/etc/inetd.conf</i> file has been changed, a <font SIZE="-1"><code>SIGHUP</code></font> signal will be sent to the inetd process to make sure that inetd will use the new <i>/etc/inetd.conf</i> file. The functions can also be used to add entries that are commented out by default. They will be treated like normal entries. That also means that if you already have an entry that is commented out you can&#8217;t add an entry for the same service without removing the old one first. </p>
+<p>You can use the functions in <code>DebianNet</code> to to add, remove, enable or disable entries in the <i>/etc/inetd.conf</i> file. After the <i>/etc/inetd.conf</i> file has been changed, a <code>SIGHUP</code> signal will be sent to the inetd process to make sure that inetd will use the new <i>/etc/inetd.conf</i> file. The functions can also be used to add entries that are commented out by default. They will be treated like normal entries. That also means that if you already have an entry that is commented out you can&#8217;t add an entry for the same service without removing the old one first. </p>
 <p> The <code>DebianNet</code> functions treat entries that are commented out by a single &#8216;<code>#</code>&#8216; character as entries that have been commented out by a user. It will not change such entries. </p>
 <p> For shell scripts you can also use the <code>update-inetd</code> command. See <code><a href="/docs/linux/man/8-update-inetd/">update-inetd</a></code>(8) for further information.</p>
 <h2>Variables</h2>
@@ -29,7 +29,7 @@ description: "DebianNet – create, remove, enable or disable entry in /etc/inet
 <h2>Functions</h2>
 <dl COMPACT>
 <dt>$rc = DebianNet::add_service($newentry, $group)</dt>
-<dd>Add <tt>$newentry</tt> to the group <tt>$group</tt> of the <i>/etc/inetd.conf</i> file. If the entry already exist it will be enabled (it will also detect entries with different program options). Using <tt>$group</tt> is optional (the default group is the group <font SIZE="-1">OTHER</font>). If the group does not exist the entry will be placed at the end of the file. </dd>
+<dd>Add <tt>$newentry</tt> to the group <tt>$group</tt> of the <i>/etc/inetd.conf</i> file. If the entry already exist it will be enabled (it will also detect entries with different program options). Using <tt>$group</tt> is optional (the default group is the group OTHER). If the group does not exist the entry will be placed at the end of the file. </dd>
 <p> Returns 1 on success, and -1 on failure. This function might call <code>exit</code>() due to debconf prompt answers.</p>
 <dt>$rc = DebianNet::remove_service($entry)</dt>
 <dd>Remove <tt>$entry</tt> from <i>/etc/inetd.conf</i>. You can use a regular expression to remove the entry. </dd>

@@ -24,9 +24,9 @@ description: "dh_autoreconf – Call autoreconf -f -i and keep track of the chan
 <dd> Exclude files that contain &#8220;item&#8221; anywhere in their filename from being checked for changes. This means that those files won&#8217;t be deleted by <tt>&quot;dh_autoreconf_clean&quot;</tt> even if there are changes. You may use this option multiple times to build up a list of things to exclude. </dd>
 <p> Starting with version 3, the directories of common version control systems such as cvs, git, hg, svn, and bzr are excluded automatically.</p>
 <dt><code>&#8211;mode=</code><i>mode</i></dt>
-<dd> Change the way in which modifications to files are detected. The default mode is <i>md5</i> for using <font SIZE="-1">MD5</font> checksums, but there is also <i>timesize</i> for using the time of the last modification and the file size.</dd>
+<dd> Change the way in which modifications to files are detected. The default mode is <i>md5</i> for using MD5 checksums, but there is also <i>timesize</i> for using the time of the last modification and the file size.</dd>
 <dt><code>&#8211;as-needed</code></dt>
-<dd> Enable support for -Wl,&#8211;as-needed in all ltmain.sh files identical to the one of the libtool package. This only works in the <font SIZE="-1">MD5</font> mode (the default one). The changes are reverted in dh_autoreconf_clean. You should not prevent <font SIZE="-1">LIBTOOLIZE</font> from running with this, as it only works correctly with libtoolize running.</dd>
+<dd> Enable support for -Wl,&#8211;as-needed in all ltmain.sh files identical to the one of the libtool package. This only works in the MD5 mode (the default one). The changes are reverted in dh_autoreconf_clean. You should not prevent LIBTOOLIZE from running with this, as it only works correctly with libtoolize running.</dd>
 <dt><code>-D</code><i>dir</i> <code>&#8211;sourcedirectory</code>=<i>dir</i></dt>
 <dd> Run everything in the source directory. Supported only in debhelper compat level 10 for backwards compatibility.</dd>
 <dt><i>program</i> <code>&#8212;</code> <i>params</i></dt>

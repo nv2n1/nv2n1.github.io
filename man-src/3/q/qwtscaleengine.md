@@ -14,35 +14,35 @@ description: "QwtScaleEngine –"
 <p> Inherited by <code>QwtLinearScaleEngine</code>, and <code>QwtLogScaleEngine</code>.</p>
 <h3>Public Types</h3>
 <p>enum <code>Attribute</code> { <code>NoAttribute</code> = 0x00, <code>IncludeReference</code> = 0x01, <code>Symmetric</code> = 0x02, <code>Floating</code> = 0x04, <code>Inverted</code> = 0x08 } </p>
-<p> typedef QFlags&lt; <code>Attribute</code> &gt; <code>Attributes</code><br />
+<p> typedef QFlags&lt; <code>Attribute</code> &gt; <code>Attributes</code><br/>
  <i>Layout attributes. </i></p>
 <h3>Public Member Functions</h3>
 <p><code>QwtScaleEngine</code> (uint <code>base</code>=10) </p>
-<p> virtual <code>~QwtScaleEngine</code> ()<br />
- <i>Destructor. </i><br />
+<p> virtual <code>~QwtScaleEngine</code> ()<br/>
+ <i>Destructor. </i><br/>
  void <code>setBase</code> (uint <code>base</code>) </p>
 <p> uint <code>base</code> () const </p>
 <p> void <code>setAttribute</code> (<code>Attribute</code>, bool on=true) </p>
 <p> bool <code>testAttribute</code> (<code>Attribute</code>) const </p>
 <p> void <code>setAttributes</code> (<code>Attributes</code>) </p>
 <p> <code>Attributes</code> <code>attributes</code> () const </p>
-<p> void <code>setReference</code> (double <code>reference</code>)<br />
- <i>Specify a reference point. </i><br />
+<p> void <code>setReference</code> (double <code>reference</code>)<br/>
+ <i>Specify a reference point. </i><br/>
  double <code>reference</code> () const </p>
-<p> void <code>setMargins</code> (double lower, double upper)<br />
- <i>Specify margins at the scale&#8217;s endpoints. </i><br />
+<p> void <code>setMargins</code> (double lower, double upper)<br/>
+ <i>Specify margins at the scale&#8217;s endpoints. </i><br/>
  double <code>lowerMargin</code> () const </p>
 <p> double <code>upperMargin</code> () const </p>
 <p> virtual void <code>autoScale</code> (int maxNumSteps, double &amp;x1, double &amp;x2, double &amp;stepSize) const =0 </p>
-<p> virtual <code>QwtScaleDiv</code> <code>divideScale</code> (double x1, double x2, int maxMajorSteps, int maxMinorSteps, double stepSize=0.0) const =0<br />
- <i>Calculate a scale division. </i><br />
+<p> virtual <code>QwtScaleDiv</code> <code>divideScale</code> (double x1, double x2, int maxMajorSteps, int maxMinorSteps, double stepSize=0.0) const =0<br/>
+ <i>Calculate a scale division. </i><br/>
  void <code>setTransformation</code> (<code>QwtTransform</code> *) </p>
 <p> <code>QwtTransform</code> * <code>transformation</code> () const </p>
 <h3>Protected Member Functions</h3>
 <p>bool <code>contains</code> (const <code>QwtInterval</code> &amp;, double val) const </p>
 <p> QList&lt; double &gt; <code>strip</code> (const QList&lt; double &gt; &amp;, const <code>QwtInterval</code> &amp;) const </p>
 <p> double <code>divideInterval</code> (double interval, int numSteps) const </p>
-<p> <code>QwtInterval</code> <code>buildInterval</code> (double v) const<br />
+<p> <code>QwtInterval</code> <code>buildInterval</code> (double v) const<br/>
  <i>Build an interval around a value. </i></p>
 <h2>Detailed Description</h2>
 <p>Base class for scale engines. </p>
@@ -88,9 +88,9 @@ description: "QwtScaleEngine –"
 <p>Align and divide an interval </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>maxNumSteps</i> Max. number of steps<br />
- <i>x1</i> First limit of the interval (In/Out)<br />
- <i>x2</i> Second limit of the interval (In/Out)<br />
+<dd><i>maxNumSteps</i> Max. number of steps<br/>
+ <i>x1</i> First limit of the interval (In/Out)<br/>
+ <i>x2</i> Second limit of the interval (In/Out)<br/>
  <i>stepSize</i> Step size (Return value)</dd></dl>
 <p> Implemented in <code>QwtLogScaleEngine</code>, <code>QwtLinearScaleEngine</code>, and <code>QwtDateScaleEngine</code>.</p>
 <h3>uint QwtScaleEngine::base () const</h3>
@@ -112,7 +112,7 @@ description: "QwtScaleEngine –"
 <p>Check if an interval &#8216;contains&#8217; a value </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>interval</i> Interval<br />
+<dd><i>interval</i> Interval<br/>
  <i>value</i> Value</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -121,7 +121,7 @@ description: "QwtScaleEngine –"
 <p>Calculate a step size for an interval size </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>intervalSize</i> Interval size<br />
+<dd><i>intervalSize</i> Interval size<br/>
  <i>numSteps</i> Number of steps</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -130,10 +130,10 @@ description: "QwtScaleEngine –"
 <p>Calculate a scale division. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>x1</i> First interval limit<br />
- <i>x2</i> Second interval limit<br />
- <i>maxMajorSteps</i> Maximum for the number of major steps<br />
- <i>maxMinorSteps</i> Maximum number of minor steps<br />
+<dd><i>x1</i> First interval limit<br/>
+ <i>x2</i> Second interval limit<br/>
+ <i>maxMajorSteps</i> Maximum for the number of major steps<br/>
+ <i>maxMinorSteps</i> Maximum number of minor steps<br/>
  <i>stepSize</i> Step size. If stepSize == 0.0, the scaleEngine calculates one.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -157,7 +157,7 @@ description: "QwtScaleEngine –"
 <p>Change a scale attribute </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>attribute</i> Attribute to change<br />
+<dd><i>attribute</i> Attribute to change<br/>
  <i>on</i> On/Off</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -184,7 +184,7 @@ description: "QwtScaleEngine –"
 <p>Specify margins at the scale&#8217;s endpoints. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>lower</i> minimum distance between the scale&#8217;s lower boundary and the smallest enclosed value<br />
+<dd><i>lower</i> minimum distance between the scale&#8217;s lower boundary and the smallest enclosed value<br/>
  <i>upper</i> minimum distance between the scale&#8217;s upper boundary and the greatest enclosed value</dd></dl>
 <p> Margins can be used to leave a minimum amount of space between the enclosed intervals and the boundaries of the scale. </p>
 <p> <code>Warning:</code></p>
@@ -220,7 +220,7 @@ description: "QwtScaleEngine –"
 <p>Remove ticks from a list, that are not inside an interval </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ticks</i> Tick list<br />
+<dd><i>ticks</i> Tick list<br/>
  <i>interval</i> Interval</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

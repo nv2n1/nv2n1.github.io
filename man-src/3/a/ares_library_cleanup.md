@@ -30,5 +30,5 @@ void ares_library_cleanup(void)
 <p> <code><a href="/docs/linux/man/3-ares_library_init/">ares_library_init</a>(3),</code> <code><a href="/docs/linux/man/3-ares_cancel/">ares_cancel</a>(3)</code></p>
 <h2>AUTHOR</h2>
 <p> Yang Tse </p>
-<p> Copyright 1998 by the Massachusetts Institute of Technology.<br />
+<p> Copyright 1998 by the Massachusetts Institute of Technology.<br/>
  Copyright (C) 2004-2009 by Daniel Stenberg. </p>

@@ -12,12 +12,12 @@ description: "ncidmodules.conf – ncid module configuration file"
 <p>The <i>ncidmodules.conf</i> file contains the configuration information for a <i>ncid</i>, output module and its init or rc file. Use <i>ncidmodules.conf</i> to to configure ncid for a particular output module, but use <i>ncid.conf</i> to configure ncid everytime it is started. For example, use <i>ncid.conf</i> to configure ncid for the server address, but use <i>ncidmodules.conf</i> to configure ncid to for ncid-page. </p>
 <p> The <i>ncidmodules.conf</i> file is used to set options for:</p>
 <dl>
-<dd><i>ncid-kpopup</i><br />
- <i>ncid-mythtv</i><br />
- <i>ncid-page</i><br />
- <i>ncid-samba</i><br />
- <i>ncid-speak</i><br />
- <i>ncid-tivo</i><br />
+<dd><i>ncid-kpopup</i><br/>
+ <i>ncid-mythtv</i><br/>
+ <i>ncid-page</i><br/>
+ <i>ncid-samba</i><br/>
+ <i>ncid-speak</i><br/>
+ <i>ncid-tivo</i><br/>
  <i>ncid-yac</i></dd></dl>
 <p> The <i>ncidmodules.conf</i> file understands 3 types of lines:</p>
 <dl>

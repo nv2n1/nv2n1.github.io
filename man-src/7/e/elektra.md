@@ -240,7 +240,7 @@ description: "elektra – A framework to store configuration atoms hierarchicall
 <h2>See Also</h2>
 <p><code>kdb</code>(1), <code><a href="/docs/linux/man/5-elektra/">elektra</a></code>(5)</p>
 <h2>Author</h2>
-<p><code>Avi Alkalay</code> &lt;avi at unix.sh&gt;<br />
+<p><code>Avi Alkalay</code> &lt;avi at unix.sh&gt;<br/>
  Linux Market Developer, Senior IT and Software Architect, IBM Linux Impact Team :: <i>ibm.com/linux</i> </p>
 <dl>
 <dd>Author.</dd></dl>

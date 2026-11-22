@@ -85,7 +85,7 @@ description: "ncgen – From a CDL file generate a netCDF-3 file, a netCDF-4 fil
 </dd><dt><code>_Format attribute (see below).</code></dt>
 <dd>
 </dd><dt><code>Occurrence of netcdf-4 constructs in the input CDL.</code></dt>
-<dd> The term &quot;netCDF-4 constructs&quot; means constructs from the enhanced data model, not just special performance-related attributes such as<br />
+<dd> The term &quot;netCDF-4 constructs&quot; means constructs from the enhanced data model, not just special performance-related attributes such as<br/>
 &nbsp;<wbr>_ChunkSizes,&nbsp;<wbr>_DeflateLevel,&nbsp;<wbr>_Endianness, etc.</dd></dl>
 <p> The rules are as follows, in order of application.</p>
 <dl>
@@ -207,14 +207,14 @@ x : a = ...
 </dt><dl>
 <dt>
 </dt><dd>
-netcdf&#8230;<br />
-{<br />
-    &#8230; variables : int dimensions;<br />
-dimensions:<br />
-    attribute = 0; // this will cause an error<br />
-dimensions:<br />
-    attribute = 0; // this is ok.<br />
-    &#8230;<br />
+netcdf&#8230;<br/>
+{<br/>
+    &#8230; variables : int dimensions;<br/>
+dimensions:<br/>
+    attribute = 0; // this will cause an error<br/>
+dimensions:<br/>
+    attribute = 0; // this is ok.<br/>
+    &#8230;<br/>
 }
 </dd></dl>
 </dl>
@@ -223,8 +223,8 @@ dimensions:<br />
 <dl>
 <dt>
 </dt><dd>
-char characters<br />
-        byte 8 &#8211;<br />
+char characters<br/>
+        byte 8 &#8211;<br/>
     bit data short 16 &#8211; bit signed integers int 32 &#8211; bit signed integers long(synonymous with int) int64 64 &#8211; bit signed integers float IEEE single precision floating point(32 bits) real(synonymous with float) double IEEE double precision floating point(64 bits) ubyte unsigned 8 &#8211; bit data ushort 16 &#8211; bit unsigned integers uint 32 &#8211; bit unsigned integers uint64 64 &#8211; bit unsigned integers string arbitrary length strings
 </dd></dl>
 <p> CDL supports a superset of the primitive data types of C. The names for the primitive data types are reserved words in CDL, so the names of variables, dimensions, and attributes must not be primitive type names. In declarations, type names may be specified in either upper or lower case. </p>
@@ -239,7 +239,7 @@ char characters<br />
 <p> Strings are assumed by default to be encoded using UTF-8. Note that this means that multi-byte UTF-8 encodings may be present in the string, so it is possible that the number of distinct UTF-8 characters in a string is smaller than the number of 8-bit bytes used to store the string. </p>
 <h3>CDL Constants</h3>
 <p> Constants assigned to attributes or variables may be of any of the basic netCDF types. The syntax for constants is similar to C syntax, except that type suffixes must be appended to shorts and floats to distinguish them from longs and doubles. </p>
-<p> A <i>byte</i> constant is represented by<br />
+<p> A <i>byte</i> constant is represented by<br/>
 &nbsp;<wbr>an integer constant with a&nbsp;<wbr>`b&#8217;&nbsp;<wbr>(or `B&#8217;) appended. In the old netCDF-2 API, byte constants could also be represented using single characters or standard C character escape sequences such as `a&#8217; or `. This is still supported for backward compatibility, but deprecated to make the distinction clear between the numeric byte type and the textual char type. Example byte constants include:</p>
 <dl>
 <dt>
@@ -323,11 +323,11 @@ lines
 <p> <i>Opaque</i> constants are represented as sequences of hexadecimal digits preceded by 0X or 0x: 0xaa34ffff, for example. These constants can still be used as integer constants and will be either truncated or extended as necessary.</p>
 <h3>Compound Constant Expressions</h3>
 <p> In order to assign values to variables (or attributes) whose type is user-defined type, the constant notation has been extended to include sequences of constants enclosed in curly brackets (e.g. &quot;{&quot;&#8230;&quot;}&quot;). Such a constant is called a compound constant, and compound constants can be nested. </p>
-<p> Given a type &quot;T(*) vlen_t&quot;, where T is some other arbitrary base type, constants for this should be specified as follows.<br />
-vlen_t var[2] = {t11, t12, &#8230; t1N}, {t21, t22, &#8230; t2m};<br />
+<p> Given a type &quot;T(*) vlen_t&quot;, where T is some other arbitrary base type, constants for this should be specified as follows.<br/>
+vlen_t var[2] = {t11, t12, &#8230; t1N}, {t21, t22, &#8230; t2m};<br/>
  The values tij, are assumed to be constants of type T. </p>
-<p> Given a type &quot;compound cmpd_t {T1 f1; T2 f2&#8230;Tn fn}&quot;, where the Ti are other arbitrary base types, constants for this should be specified as follows.<br />
-cmpd_t var[2] = {t11, t12, &#8230; t1N}, {t21, t22, &#8230; t2n};<br />
+<p> Given a type &quot;compound cmpd_t {T1 f1; T2 f2&#8230;Tn fn}&quot;, where the Ti are other arbitrary base types, constants for this should be specified as follows.<br/>
+cmpd_t var[2] = {t11, t12, &#8230; t1N}, {t21, t22, &#8230; t2n};<br/>
  The values tij, are assumed to be constants of type Ti. If the fields are missing, then they will be set using any specified or default fill value for the field&#8217;s base type. </p>
 <p> The general set of rules for using braces are defined in the <code>Specifying</code> <code>Datalists</code> section below. </p>
 <h3>Scoping Rules</h3>
@@ -396,14 +396,14 @@ cmpd_t var[2] = {t11, t12, &#8230; t1N}, {t21, t22, &#8230; t2n};<br />
 <dl>
 <dt>
 </dt><dd>
-dimensions : u = UNLIMITED;<br />
-d1 = 1;<br />
-d2 = 2;<br />
-d3 = 3;<br />
-d4 = 4;<br />
-d5 = 5;<br />
-u2 = UNLIMITED;<br />
-variables : char var(d4, d5);<br />
+dimensions : u = UNLIMITED;<br/>
+d1 = 1;<br/>
+d2 = 2;<br/>
+d3 = 3;<br/>
+d4 = 4;<br/>
+d5 = 5;<br/>
+u2 = UNLIMITED;<br/>
+variables : char var(d4, d5);<br/>
 datalist : var = &#8220;1&#8221;, &#8220;two&#8221;, &#8220;three&#8221;;
 </dd></dl>
 <p> We have twenty elements of var to fill (d5 X d4) and we have three strings of length 1, 3, 5. How do we assign the characters in the strings to the twenty elements? </p>
@@ -431,9 +431,9 @@ datalist : var = &#8220;1&#8221;, &#8220;two&#8221;, &#8220;three&#8221;;
 <dd> For the case of character typed vlen, &quot;char(*) vlen_t&quot; for example. we simply concatenate all the constants with no filling at all.</dd>
 <dt>3.</dt>
 <dd> For the case of a character typed attribute, we simply concatenate all the constants.</dd></dl>
-<p> In netcdf-4, dimensions other than the first can be unlimited. Of course by the rules above, the interior unlimited instances must be delimited by {&#8230;}. For example.<br />
-variables : char var(u, u2);<br />
-datalist : var = {&#8220;1&#8221;, &#8220;two&#8221;}, {&#8220;three&#8221;};<br />
+<p> In netcdf-4, dimensions other than the first can be unlimited. Of course by the rules above, the interior unlimited instances must be delimited by {&#8230;}. For example.<br/>
+variables : char var(u, u2);<br/>
+datalist : var = {&#8220;1&#8221;, &#8220;two&#8221;}, {&#8220;three&#8221;};<br/>
  In this case u will have the effective length of two. Within each instance of u2, the rules above will apply, leading to this. datalist: var={&quot;1&quot;,&quot;t&quot;,&quot;w&quot;,&quot;o&quot;}, {&quot;t&quot;,&quot;h&quot;,&quot;r&quot;,&quot;e&quot;,&quot;e&quot;}; The effective size of u2 will be the max of the two instance lengths (five in this case) and the shorter will be padded to produce this. datalist: var={&quot;1&quot;,&quot;t&quot;,&quot;w&quot;,&quot;o&quot;,&quot;\0&quot;}, {&quot;t&quot;,&quot;h&quot;,&quot;r&quot;,&quot;e&quot;,&quot;e&quot;}; </p>
 <p> Consider an even more complicated case. </p>
 <pre><code>variables: char var(u,u2,u3);

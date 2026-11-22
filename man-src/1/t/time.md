@@ -12,9 +12,9 @@ description: "time – run programs and summarize system resource usage"
 <h2>SYNOPSIS</h2>
 <dl>
 <dt><code>time</code></dt>
-<dd> [ <code>-apqvV</code> ] [ <code>-f</code><i> FORMAT</i> ] [ <code>-o</code><i> FILE</i> ]<br />
- [ <code>&#8211;append</code> ] [ <code>&#8211;verbose</code> ] [ <code>&#8211;quiet</code> ] [ <code>&#8211;portability</code> ]<br />
- [ <code>&#8211;format=</code><i>FORMAT</i> ] [ <code>&#8211;output=</code><i>FILE</i> ] [ <code>&#8211;version</code> ]<br />
+<dd> [ <code>-apqvV</code> ] [ <code>-f</code><i> FORMAT</i> ] [ <code>-o</code><i> FILE</i> ]<br/>
+ [ <code>&#8211;append</code> ] [ <code>&#8211;verbose</code> ] [ <code>&#8211;quiet</code> ] [ <code>&#8211;portability</code> ]<br/>
+ [ <code>&#8211;format=</code><i>FORMAT</i> ] [ <code>&#8211;output=</code><i>FILE</i> ] [ <code>&#8211;version</code> ]<br/>
  [ <code>&#8211;help</code> ] <i>COMMAND</i> [ <i>ARGS</i> ]</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>time</code> run the program <i>COMMAND</i> with any given arguments <i>ARG&#8230;</i>. When <i>COMMAND</i> finishes, <code>time</code> displays information about resources used by <i>COMMAND</i> (on the standard error output, by default). If <i>COMMAND</i> exits with non-zero status, <code>time</code> displays a warning message and the exit status. </p>
@@ -31,9 +31,9 @@ description: "time – run programs and summarize system resource usage"
 <dt><code>&#8211;help</code></dt>
 <dd> Print a summary of the command line options and exit.</dd>
 <dt><code>-p</code>, <code>&#8211;portability</code></dt>
-<dd> Use the following format string, for conformance with POSIX standard 1003.2:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;real&nbsp;%e<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;user&nbsp;%U<br />
+<dd> Use the following format string, for conformance with POSIX standard 1003.2:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;real&nbsp;%e<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;user&nbsp;%U<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sys&nbsp;%S</dd>
 <dt><code>-v</code>, <code>&#8211;verbose</code></dt>
 <dd> Use the built-in verbose format, which displays each available piece of information on the program&#8217;s resource use on its own line, with an English description of its meaning.</dd>
@@ -43,8 +43,8 @@ description: "time – run programs and summarize system resource usage"
 <dd> Print the version number of <code>time</code> and exit. </dd>
 </dl>
 <h2>FORMATTING THE OUTPUT</h2>
-<p> The format string <i>FORMAT</i> controls the contents of the <code>time</code> output. The format string can be set using the `-f&#8217; or `&#8211;format&#8217;, `-v&#8217; or `&#8211;verbose&#8217;, or `-p&#8217; or `&#8211;portability&#8217; options. If they are not given, but the <i>TIME</i> environment variable is set, its value is used as the format string. Otherwise, a built-in default format is used. The default format is:<br />
-&nbsp;<wbr>&nbsp;%Uuser&nbsp;%Ssystem&nbsp;%Eelapsed&nbsp;%PCPU&nbsp;(%Xtext+%Ddata&nbsp;%Mmax)k<br />
+<p> The format string <i>FORMAT</i> controls the contents of the <code>time</code> output. The format string can be set using the `-f&#8217; or `&#8211;format&#8217;, `-v&#8217; or `&#8211;verbose&#8217;, or `-p&#8217; or `&#8211;portability&#8217; options. If they are not given, but the <i>TIME</i> environment variable is set, its value is used as the format string. Otherwise, a built-in default format is used. The default format is:<br/>
+&nbsp;<wbr>&nbsp;%Uuser&nbsp;%Ssystem&nbsp;%Eelapsed&nbsp;%PCPU&nbsp;(%Xtext+%Ddata&nbsp;%Mmax)k<br/>
 &nbsp;<wbr>&nbsp;%Iinputs+%Ooutputs&nbsp;(%Fmajor+%Rminor)pagefaults&nbsp;%Wswaps </p>
 <p> The format string usually consists of `resource specifiers&#8217; interspersed with plain text. A percent sign (`%&#8217;) in the format string causes the following character to be interpreted as a resource specifier, which is similar to the formatting characters in the <code><a href="/docs/linux/man/3-printf/">printf</a></code>(3) function. </p>
 <p> A backslash (`\&#8217;) introduces a `backslash escape&#8217;, which is translated into a single printing character upon output. `	&#8217; outputs a tab character, `
@@ -110,15 +110,15 @@ description: "time – run programs and summarize system resource usage"
 </dl>
 </dl>
 <h2>EXAMPLES</h2>
-<p> To run the command `wc /etc/hosts&#8217; and show the default information:<br />
+<p> To run the command `wc /etc/hosts&#8217; and show the default information:<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;time wc&nbsp;/etc/hosts </p>
-<p> To run the command `ls -Fs&#8217; and show just the user, system, and total time:<br />
+<p> To run the command `ls -Fs&#8217; and show just the user, system, and total time:<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;time -f&nbsp;&quot;	%E real,	%U user,	%S sys&quot;&nbsp;ls -Fs </p>
-<p> To edit the file BORK and have `time&#8217; append the elapsed time and number of signals to the file `log&#8217;, reading the format string from the environment variable `TIME&#8217;:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;export TIME=&quot;	%E,	%k&quot;&nbsp;#&nbsp;If using bash or ksh<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;setenv TIME&nbsp;&quot;	%E,	%k&quot;&nbsp;#&nbsp;If using csh or tcsh<br />
+<p> To edit the file BORK and have `time&#8217; append the elapsed time and number of signals to the file `log&#8217;, reading the format string from the environment variable `TIME&#8217;:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;export TIME=&quot;	%E,	%k&quot;&nbsp;#&nbsp;If using bash or ksh<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;setenv TIME&nbsp;&quot;	%E,	%k&quot;&nbsp;#&nbsp;If using csh or tcsh<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;time -a -o log emacs bork </p>
-<p> Users of the <code>bash</code> shell need to use an explicit path in order to run the external <code>time</code> command and not the shell builtin variant. On system where <code>time</code> is installed in <i>/usr/bin</i>, the first example would become<br />
+<p> Users of the <code>bash</code> shell need to use an explicit path in order to run the external <code>time</code> command and not the shell builtin variant. On system where <code>time</code> is installed in <i>/usr/bin</i>, the first example would become<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/usr/bin/time wc&nbsp;/etc/hosts </p>
 <h2>ACCURACY</h2>
 <p> The elapsed time is not collected atomically with the execution of the program; as a result, in bizarre circumstances (if the <code>time</code> command gets stopped or swapped out in between when the program being timed exits and when <code>time</code> calculates how long it took to run), it could be much larger than the actual execution time. </p>

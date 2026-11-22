@@ -11,7 +11,7 @@ description: "dlanv2.f –"
 <p> dlanv2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dlanv2</code> (A, B, C, D, RT1R, RT1I, RT2R, RT2I, CS, SN)<br />
+<p> subroutine <code>dlanv2</code> (A, B, C, D, RT1R, RT1I, RT2R, RT2I, CS, SN)<br/>
  <i></i><code>DLANV2</code> computes the Schur factorization of a real 2-by-2 nonsymmetric matrix in standard form.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlanv2 (double precisionA, double precisionB, double precisionC, double precisionD, double precisionRT1R, double precisionRT1I, double precisionRT2R, double precisionRT2I, double precisionCS, double precisionSN)</h3>

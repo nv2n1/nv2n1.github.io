@@ -10,7 +10,7 @@ description: "zhpmv.f –"
 <p>zhpmv.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zhpmv</code> (UPLO, N, ALPHA, AP, X, INCX, BETA, Y, INCY)<br />
+<p>subroutine <code>zhpmv</code> (UPLO, N, ALPHA, AP, X, INCX, BETA, Y, INCY)<br/>
  <i></i><code>ZHPMV</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zhpmv (characterUPLO, integerN, complex*16ALPHA, complex*16, dimension(*)AP, complex*16, dimension(*)X, integerINCX, complex*16BETA, complex*16, dimension(*)Y, integerINCY)</h3>

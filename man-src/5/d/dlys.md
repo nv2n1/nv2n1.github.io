@@ -12,7 +12,7 @@ description: "dlys – format of .dlys files read by the SCALD simulator and tim
 
 <p> The SCALD simulator and timing verifier can accept information about the actual delays of wires in a circuit. This delay information is described in a <code>.dlys</code> file, which consists of a sequence of records, one for each electrical net. Each record begins with the signal name for the net (note that this is the SCALD signal name, i.e, the name given by the user to the entire net, and not usually the name of one of the pins in the net), followed by an <code>=</code>, then a comma-separated list of the terminals in the net and their associated delay, with the list terminated by a semicolon. The end of the file is marked with a second semicolon. </p>
 <p>The elements of the comma-separated list for each net take the form </p>
-<p> <br />
+<p> <br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> <i>location</i><code> [</code><i>min</i><code>:</code><i>max</i><code>]</code> </p>
 <p>where <i>location</i> is the full hierarchical SCALD name of the physical pin to which the delay is computed, and <i>min</i> and <i>max</i> are the best-case and worst-case wire delay in nanoseconds (both are floating-point numbers). The assumption is that only a single driver exists per net, so all delays are computed from this driver. If a net has multiple drivers, then the interpretation of delays is up to the program reading this file (e.g, <i>min</i> delays are taken from the fastest driver, <i>max</i> from the slowest). </p>
 <p>Here is an example <code>.dlys</code> file: </p>

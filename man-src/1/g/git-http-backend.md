@@ -102,22 +102,22 @@ RewriteCond % {QUERY_STRING} service = git - receive - pack[OR] RewriteCond % {R
 <dl>
 <dt>
 </dt><dd>
-ScriptAliasMatch<br />
-        &#8220;(?x)^/git/(.*/(HEAD | \<br />
-                        info/refs | \<br />
-                        objects/(info/[^/]+ | \<br />
-                                 [0-9a-f]{2}/[0-9a-f]{38} | \<br />
-                                 pack/pack-[0-9a-f]{40}\.(pack|idx)) | \<br />
-                        git-(upload|receive)-pack))$&#8221; /<br />
-        usr / libexec / git &#8211;<br />
+ScriptAliasMatch<br/>
+        &#8220;(?x)^/git/(.*/(HEAD | \<br/>
+                        info/refs | \<br/>
+                        objects/(info/[^/]+ | \<br/>
+                                 [0-9a-f]{2}/[0-9a-f]{38} | \<br/>
+                                 pack/pack-[0-9a-f]{40}\.(pack|idx)) | \<br/>
+                        git-(upload|receive)-pack))$&#8221; /<br/>
+        usr / libexec / git &#8211;<br/>
     core / git &#8211; http &#8211; backend / $1 ScriptAlias / git / / var / www / cgi &#8211; bin / gitweb.cgi /
 </dd></dl>
 <p> To serve multiple repositories from different <code><a href="/docs/linux/man/7-gitnamespaces/">gitnamespaces</a></code>(7) in a single repository: </p>
 <dl>
 <dt>
 </dt><dd>
-SetEnvIf Request_URI &#8220;^/git/([^/]*)&#8221; GIT_NAMESPACE = $1<br />
-                                                         ScriptAliasMatch ^<br />
+SetEnvIf Request_URI &#8220;^/git/([^/]*)&#8221; GIT_NAMESPACE = $1<br/>
+                                                         ScriptAliasMatch ^<br/>
                                                      / git / [^ / ] * (.*) / usr / libexec / git &#8211; core / git &#8211; http &#8211; backend / storage.git$1
 </dd></dl>
 </dl>
@@ -128,23 +128,23 @@ SetEnvIf Request_URI &#8220;^/git/([^/]*)&#8221; GIT_NAMESPACE = $1<br />
 <dl>
 <dt>
 </dt><dd>
-SetEnv GIT_PROJECT_ROOT / var / www / git AliasMatch ^ / git / (<br />
-                                                                   .*/ objects / [0 &#8211; 9a &#8211; f] { 2 } / [0 &#8211; 9a &#8211; f] { 38 }) $<br />
-                                                           / var / www / git / $1 AliasMatch<br />
+SetEnv GIT_PROJECT_ROOT / var / www / git AliasMatch ^ / git / (<br/>
+                                                                   .*/ objects / [0 &#8211; 9a &#8211; f] { 2 } / [0 &#8211; 9a &#8211; f] { 38 }) $<br/>
+                                                           / var / www / git / $1 AliasMatch<br/>
     ^ / git / (.*/ objects / pack / pack &#8211; [0 &#8211; 9a &#8211; f] { 40 }.(pack | idx)) $ / var / www / git / $1 ScriptAlias / git / / usr / libexec / git &#8211; core / git &#8211; http &#8211; backend /
 </dd></dl>
 <p> This can be combined with the gitweb configuration: </p>
 <dl>
 <dt>
 </dt><dd>
-SetEnv GIT_PROJECT_ROOT / var / www / git AliasMatch ^ / git / (<br />
-                                                                   .*/ objects / [0 &#8211; 9a &#8211; f] { 2 } / [0 &#8211; 9a &#8211; f] { 38 }) $<br />
-                                                           / var / www / git / $1 AliasMatch<br />
-    ^ / git / (.*/ objects / pack / pack &#8211; [0 &#8211; 9a &#8211; f] { 40 }.(pack | idx)) $ / var / www / git / $1 ScriptAliasMatch &#8220;(?x)^/git/(.*/(HEAD | \<br />
-                        info/refs | \<br />
-                        objects/info/[^/]+ | \<br />
-                        git-(upload|receive)-pack))$&#8221; /<br />
-              usr / libexec / git<br />
+SetEnv GIT_PROJECT_ROOT / var / www / git AliasMatch ^ / git / (<br/>
+                                                                   .*/ objects / [0 &#8211; 9a &#8211; f] { 2 } / [0 &#8211; 9a &#8211; f] { 38 }) $<br/>
+                                                           / var / www / git / $1 AliasMatch<br/>
+    ^ / git / (.*/ objects / pack / pack &#8211; [0 &#8211; 9a &#8211; f] { 40 }.(pack | idx)) $ / var / www / git / $1 ScriptAliasMatch &#8220;(?x)^/git/(.*/(HEAD | \<br/>
+                        info/refs | \<br/>
+                        objects/info/[^/]+ | \<br/>
+                        git-(upload|receive)-pack))$&#8221; /<br/>
+              usr / libexec / git<br/>
           &#8211; core / git &#8211; http &#8211; backend / $1 ScriptAlias / git / / var / www / cgi &#8211; bin / gitweb.cgi /
 </dd></dl>
 </dl>
@@ -155,23 +155,23 @@ SetEnv GIT_PROJECT_ROOT / var / www / git AliasMatch ^ / git / (<br />
 <dl>
 <dt>
 </dt><dd>
-alias.url += (&#8220;/git&#8221; = &gt; &#8220;/usr/lib/git-core/git-http-backend&#8221;)<br />
-    $HTTP[&#8220;url&#8221;] = ~&#8221;^/git&#8221;<br />
-{<br />
-    cgi.assign = (&#8220;&#8221; = &gt; &#8220;&#8221;)<br />
-                     setenv.add &#8211;<br />
-                 environment = (&#8220;GIT_PROJECT_ROOT&#8221; = &gt; &#8220;/var/www/git&#8221;,<br />
-                                &#8220;GIT_HTTP_EXPORT_ALL&#8221; = &gt; &#8220;&#8221;)<br />
+alias.url += (&#8220;/git&#8221; = &gt; &#8220;/usr/lib/git-core/git-http-backend&#8221;)<br/>
+    $HTTP[&#8220;url&#8221;] = ~&#8221;^/git&#8221;<br/>
+{<br/>
+    cgi.assign = (&#8220;&#8221; = &gt; &#8220;&#8221;)<br/>
+                     setenv.add &#8211;<br/>
+                 environment = (&#8220;GIT_PROJECT_ROOT&#8221; = &gt; &#8220;/var/www/git&#8221;,<br/>
+                                &#8220;GIT_HTTP_EXPORT_ALL&#8221; = &gt; &#8220;&#8221;)<br/>
 }
 </dd></dl>
 <p> To enable anonymous read access but authenticated write access: </p>
 <dl>
 <dt>
 </dt><dd>
-$HTTP[&#8220;querystring&#8221;] = ~&#8221;service=git-receive-pack&#8221; {<br />
-    include &#8220;git-auth.conf&#8221;} $HTTP[&#8220;url&#8221;] = ~&#8221;^/git/.*/git-receive-pack$&#8221;<br />
-{<br />
-    include &#8220;git-auth.conf&#8221;<br />
+$HTTP[&#8220;querystring&#8221;] = ~&#8221;service=git-receive-pack&#8221; {<br/>
+    include &#8220;git-auth.conf&#8221;} $HTTP[&#8220;url&#8221;] = ~&#8221;^/git/.*/git-receive-pack$&#8221;<br/>
+{<br/>
+    include &#8220;git-auth.conf&#8221;<br/>
 }
 </dd></dl>
 <p> where <code>git-auth.conf</code> looks something like: </p>

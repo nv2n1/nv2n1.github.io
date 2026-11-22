@@ -17,7 +17,7 @@ description: "apachetop – display real-time web server statistics"
 <dt>-f logfile</dt>
 <dd> Select which file to watch. Specify this option multiple times to watch multiple files.</dd>
 <dt>-H hits | -T time</dt>
-<dd> These options are mutually exclusive. Specify only one, if any at all. They work as follows. ApacheTop maintains a table of information internally containing all the relevant information about the hits it&#8217;s seen. This table can only be a finite size, so you need to decide how big it&#8217;s going to be. You have two options. You can either: Use -H to say &quot;remember &lt;this many&gt; hits&quot; or<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>Use -T to say &quot;remember all hits in &lt;this many&gt; seconds&quot;<br />
+<dd> These options are mutually exclusive. Specify only one, if any at all. They work as follows. ApacheTop maintains a table of information internally containing all the relevant information about the hits it&#8217;s seen. This table can only be a finite size, so you need to decide how big it&#8217;s going to be. You have two options. You can either: Use -H to say &quot;remember &lt;this many&gt; hits&quot; or<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>Use -T to say &quot;remember all hits in &lt;this many&gt; seconds&quot;<br/>
  The default (at the moment) is to remember hits for 30 seconds. Setting this too large (whichever option you choose) will cause ApacheTop to use more memory and more CPU time. My experimentation finds that remembering no more than around 5000 requests works well.</dd>
 <dt>-q</dt>
 <dd> Instructs ApacheTop to keep the querystrings, not remove them.</dd>

@@ -108,7 +108,7 @@ description: "iasl – ACPI Source Language compiler/decompiler"
 <dt><code>-db</code></dt>
 <dd> Do not translate Buffers to Resource Templates</dd>
 <dt><code>-dc [&lt;file&gt;]</code></dt>
-<dd> Disassemble AML and immediately compile it<br />
+<dd> Disassemble AML and immediately compile it<br/>
  (Obtain DSDT from current system if no input file)</dd>
 <dt><code>-e [&lt;file1&gt;,&lt;file2&gt;]</code></dt>
 <dd> Include ACPI table(s) for external symbol resolution</dd>

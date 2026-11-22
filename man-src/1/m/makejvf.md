@@ -70,9 +70,9 @@ description: "makejvf – Make Japanese VF file from Japanese TeX TFM file"
 <dl>
 <dt>With <code>-t</code> option, you can give <code>makejvf</code> a custom settings for generating VF. The syntax is:</dt>
 <dd>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;%&nbsp;comment line<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;%&nbsp;comment line<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;MOVE<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>&lt;code&gt;<tt>&nbsp;<wbr>&nbsp;</tt>&lt;right&gt;<tt>&nbsp;</tt>&lt;down&gt;</p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;REPLACE<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>&lt;code&gt;<tt>&nbsp;<wbr>&nbsp;</tt>&lt;new code&gt;</p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;CHARSET<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>&lt;code&gt;,&lt;code&gt;,&lt;code&gt;..&lt;code&gt;,&lt;code&gt;,</p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;+<tt>&nbsp;<wbr>&nbsp;</tt>&lt;code&gt;,&lt;code&gt;..&lt;code&gt;</p>
@@ -84,7 +84,7 @@ description: "makejvf – Make Japanese VF file from Japanese TeX TFM file"
 <dd>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&lt;<a rel="nofollow" href="https://github.com/texjporg/uptex-fonts">https://github.com/texjporg/uptex-fonts</a>&gt;.</dd></dl>
 <h2>SEE ALSO</h2>
-<p> More detailed description of <code>makejvf</code> in Japanese is available at<br />
+<p> More detailed description of <code>makejvf</code> in Japanese is available at<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$TEXMFDIST/doc/fonts/ptex-fonts/README_makejvf</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Japanese TeX Development Community &lt;<a rel="nofollow" href="https://texjp.org">https://texjp.org</a>&gt;. For more information, see GitHub repository &lt;<a rel="nofollow" href="https://github.com/texjporg/ptex-fonts">https://github.com/texjporg/ptex-fonts</a>&gt;.</p>

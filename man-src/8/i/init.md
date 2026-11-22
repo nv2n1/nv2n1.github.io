@@ -111,8 +111,8 @@ description: "init – Upstart process management daemon"
 </tr>
 </table>
 </table>
-<p> Key:<br />
-&nbsp;<wbr>&nbsp;<wbr>(*)&nbsp;<wbr>If there is a&nbsp;<wbr><code>script</code>&nbsp;<wbr>or&nbsp;<wbr><code>exec</code>&nbsp;<wbr>section and this process is running,<br />
+<p> Key:<br/>
+&nbsp;<wbr>&nbsp;<wbr>(*)&nbsp;<wbr>If there is a&nbsp;<wbr><code>script</code>&nbsp;<wbr>or&nbsp;<wbr><code>exec</code>&nbsp;<wbr>section and this process is running,<br/>
 &nbsp;<wbr>&nbsp;<wbr>state will be&nbsp;<wbr>&#8216;pre-stop&#8217;, else it will be&nbsp;<wbr>&#8216;stopping&#8217;.</p>
 <h3>Job Lifecycle</h3>
 <dl>
@@ -252,7 +252,7 @@ description: "init – Upstart process management daemon"
 <h2>Reporting Bugs</h2>
 <p>Report bugs at &lt;<code><a rel="nofollow" href="https://launchpad.net/upstart/+bugs">https://launchpad.net/upstart/+bugs</a></code>&gt;</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2009-2013 Canonical Ltd.<br />
+<p>Copyright &#169; 2009-2013 Canonical Ltd.<br/>
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/7-all-swaps/">all-swaps</a></code>(7), <code><a href="/docs/linux/man/7-control-alt-delete/">control-alt-delete</a></code>(7), <code><a href="/docs/linux/man/1-dbus-daemon/">dbus-daemon</a></code>(1), <code><a href="/docs/linux/man/7-dbus-event/">dbus-event</a></code>(7), <code>dconf-event</code>(7), <code><a href="/docs/linux/man/7-file-event/">file-event</a></code>(7), <code><a href="/docs/linux/man/7-filesystem/">filesystem</a></code>(7), <code><a href="/docs/linux/man/5-init/">init</a></code>(5), <code><a href="/docs/linux/man/8-init/">init</a></code>(8), <code><a href="/docs/linux/man/8-initctl/">initctl</a></code>(8), <code><a href="/docs/linux/man/7-keyboard-request/">keyboard-request</a></code>(7), <code><a href="/docs/linux/man/7-local-filesystems/">local-filesystems</a></code>(7), <code><a href="/docs/linux/man/8-mountall/">mountall</a></code>(8), <code><a href="/docs/linux/man/7-mounted/">mounted</a></code>(7), <code><a href="/docs/linux/man/7-mounting/">mounting</a></code>(7), <code><a href="/docs/linux/man/7-power-status-changed/">power-status-changed</a></code>(7), <code><a href="/docs/linux/man/7-remote-filesystems/">remote-filesystems</a></code>(7), <code><a href="/docs/linux/man/7-runlevel/">runlevel</a></code>(7), <code><a href="/docs/linux/man/8-shutdown/">shutdown</a></code>(8), <code><a href="/docs/linux/man/7-socket-event/">socket-event</a></code>(7), <code><a href="/docs/linux/man/7-started/">started</a></code>(7), <code><a href="/docs/linux/man/7-starting/">starting</a></code>(7), <code><a href="/docs/linux/man/7-startup/">startup</a></code>(7), <code><a href="/docs/linux/man/7-stopped/">stopped</a></code>(7), <code><a href="/docs/linux/man/7-stopping/">stopping</a></code>(7), <code><a href="/docs/linux/man/8-telinit/">telinit</a></code>(8), <code><a href="/docs/linux/man/8-upstart-dbus-bridge/">upstart-dbus-bridge</a></code>(8), <code>upstart-dconf-bridge</code>(8), <code><a href="/docs/linux/man/8-upstart-event-bridge/">upstart-event-bridge</a></code>(8), <code><a href="/docs/linux/man/7-upstart-events/">upstart-events</a></code>(7), <code><a href="/docs/linux/man/8-upstart-file-bridge/">upstart-file-bridge</a></code>(8), <code><a href="/docs/linux/man/8-upstart-local-bridge/">upstart-local-bridge</a></code>(8), <code><a href="/docs/linux/man/8-upstart-socket-bridge/">upstart-socket-bridge</a></code>(8), <code><a href="/docs/linux/man/8-upstart-udev-bridge/">upstart-udev-bridge</a></code>(8), <code><a href="/docs/linux/man/7-virtual-filesystems/">virtual-filesystems</a></code>(7). </p>

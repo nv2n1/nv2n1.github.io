@@ -45,5 +45,5 @@ Erik Troan&lt;ewt[at] redhat.com&gt;
 <h2>REPORTING BUGS</h2>
 <p> Report bugs at <a rel="nofollow" href="http://bugzilla.redhat.com/">http://bugzilla.redhat.com/</a></p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 1997-2008 Red Hat, Inc.<br />
+<p> Copyright &#169; 1997-2008 Red Hat, Inc.<br/>
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>

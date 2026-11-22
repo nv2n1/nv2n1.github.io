@@ -18,7 +18,7 @@ description: "ndb_restore – restore a MySQL Cluster backup"
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> Before using <code>ndb_restore</code>, it is recommended that the cluster be running in single user mode, unless you are restoring multiple data nodes in parallel. See Section 17.5.6, lqMySQL Cluster Single User Moderq, for more information about single user mode. </p>
 </dl>
 <p> The following table includes options that are specific to the MySQL Cluster native backup restoration program <code>ndb_restore</code>. Additional descriptions follow the table. For options common to all MySQL Cluster programs, see Section 17.4.2, lqOptions Common to MySQL Cluster Programsrq. </p>
@@ -55,14 +55,14 @@ shell&gt; <code>ndb_mgm -e &quot;SHOW&quot;</code>
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> Although you can promote CHAR columns to VARCHAR and BINARY columns to VARBINARY, you cannot promote VARCHAR columns to CHAR or VARBINARY columns to BINARY. </p>
 </dl>
 <p> The <code>-b</code> option is used to specify the ID or sequence number of the backup, and is the same number shown by the management client in the Backup <i>backup_id</i> completed message displayed upon completion of a backup. (See Section 17.5.3.2, lqUsing The MySQL Cluster Management Client to Create a Backuprq.) </p>
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Important</code> </font> </dd>
+  <code>Important</code>  </dd>
 <p> When restoring cluster backups, you must be sure to restore all data nodes from backups having the same backup ID. Using files from different backups will at best result in restoring the cluster to an inconsistent state, and may fail altogether. </p>
 </dl>
 <p> <code>&#8211;restore_epoch</code> (short form: <code>-e</code>) adds (or restores) epoch information to the cluster replication status table. This is useful for starting replication on a MySQL Cluster replication slave. When this option is used, the row in the mysql.ndb_apply_status having 0 in the id column is updated if it already exists; such a row is inserted if it does not already exist. (See Section 17.6.9, lqMySQL Cluster Backups With MySQL Cluster Replicationrq.) </p>
@@ -70,7 +70,7 @@ shell&gt; <code>ndb_mgm -e &quot;SHOW&quot;</code>
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> Previous to MySQL 5.1.17 and MySQL Cluster NDB 6.1.5, the path to the backup directory was specified as shown here, with <code>backup_path=</code> being optional: </p>
 <dl>
 <dt>
@@ -85,7 +85,7 @@ shell&gt; <code>ndb_mgm -e &quot;SHOW&quot;</code>
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Important</code> </font> </dd>
+  <code>Important</code>  </dd>
 <p> It is not possible to restore a backup made from a newer version of MySQL Cluster using an older version of <code>ndb_restore</code>. You can restore a backup made from a newer version of MySQL to an older cluster, but you must use a copy of <code>ndb_restore</code> from the newer MySQL Cluster version to do so. </p>
 <p> For example, to restore a cluster backup taken from a cluster running MySQL Cluster NDB 6.2.15 to a cluster running MySQL 5.1.20, you must use a copy of <code>ndb_restore</code> from the MySQL Cluster NDB 6.2.15 distribution. </p>
 </dl>
@@ -260,7 +260,7 @@ shell&gt; <code>ndb_mgm -e &quot;SHOW&quot;</code>
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> If a table has no explicit primary key, then the output generated when using the <code>&#8211;print_data</code> option includes the table&#8217;s hidden primary key. </p>
 </dl>
 <p> Beginning with MySQL 5.1.18, it is possible to restore selected databases, or to restore selected tables from a given database using the syntax shown here: </p>
@@ -339,34 +339,34 @@ ndb_restore other_options db_name, [db_name[, &#8230;] | tbl_name[, tbl_name][, 
 </tr>
 <tr VALIGN=top>
 <td> <code>&#8211;include-databases=db1</code> </td>
-<td> Only tables in database db1 are restored; all tables<br />
+<td> Only tables in database db1 are restored; all tables<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>in all other databases are ignored
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>&#8211;include-databases=db1,db2</code> (or<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><code>&#8211;include-databases=db1</code><br />
+<td> <code>&#8211;include-databases=db1,db2</code> (or<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><code>&#8211;include-databases=db1</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><code>&#8211;include-databases=db2</code>) </td>
-<td> Only tables in databases db1 and<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>db2 are restored;&nbsp;<wbr>all tables in all<br />
+<td> Only tables in databases db1 and<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>db2 are restored;&nbsp;<wbr>all tables in all<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>other databases are ignored
 </td>
 </tr>
 <tr VALIGN=top>
 <td> <code>&#8211;include-tables=db1.t1</code> </td>
-<td> Only table t1 in database db1 is<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>restored;&nbsp;<wbr>no other tables in db1 or<br />
+<td> Only table t1 in database db1 is<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>restored;&nbsp;<wbr>no other tables in db1 or<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>in any other database are restored
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>&#8211;include-tables=db1.t2,db2.t1</code> (or<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><code>&#8211;include-tables=db1.t2</code><br />
+<td> <code>&#8211;include-tables=db1.t2,db2.t1</code> (or<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><code>&#8211;include-tables=db1.t2</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><code>&#8211;include-tables=db2.t1</code>) </td>
-<td> Only the table t2 in database db1<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>and the table t1 in database<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>db2 are restored;&nbsp;<wbr>no other tables<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>in db1, db2, or<br />
+<td> Only the table t2 in database db1<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>and the table t1 in database<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>db2 are restored;&nbsp;<wbr>no other tables<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>in db1, db2, or<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>any other database are restored
 </td>
 </tr>
@@ -381,8 +381,8 @@ shell &gt; ndb_restore[&#8230;]&#8211; include &#8211; databases = db1, db2&#821
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
-<p> Prior to MySQL Cluster NDB 6.3.29 and MySQL Cluster NDB 7.0.10, multiple <code>&#8211;include-*</code> options were not handled correctly, and the result of the options shown in the previous example was that only the tables db3.t1 and db3.t2 were actually restored. (m[blue]<code>Bug#48907</code>m[]<font SIZE="-2">[1]</font>) </p>
+  <code>Note</code>  </dd>
+<p> Prior to MySQL Cluster NDB 6.3.29 and MySQL Cluster NDB 7.0.10, multiple <code>&#8211;include-*</code> options were not handled correctly, and the result of the options shown in the previous example was that only the tables db3.t1 and db3.t2 were actually restored. (m[blue]<code>Bug#48907</code>m[][1]) </p>
 </dl>
 <p> <code>&#8211;exclude-databases=</code><i>db_name</i><code>[,</code><i>db_name</i><code>][,&#8230;]</code> </p>
 <table BORDER>
@@ -447,38 +447,38 @@ shell &gt; ndb_restore[&#8230;]&#8211; include &#8211; databases = db1, db2&#821
 </tr>
 <tr VALIGN=top>
 <td> <code>&#8211;exclude-databases=db1</code> </td>
-<td> All tables in all databases except db1 are restored;<br />
+<td> All tables in all databases except db1 are restored;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>no tables in db1 are restored
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>&#8211;exclude-databases=db1,db2</code> (or<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><code>&#8211;exclude-databases=db1</code><br />
+<td> <code>&#8211;exclude-databases=db1,db2</code> (or<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><code>&#8211;exclude-databases=db1</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><code>&#8211;exclude-databases=db2</code>) </td>
-<td> All tables in all databases except db1 and<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>db2 are restored;&nbsp;<wbr>no tables in<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>db1 or db2 are<br />
+<td> All tables in all databases except db1 and<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>db2 are restored;&nbsp;<wbr>no tables in<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>db1 or db2 are<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>restored
 </td>
 </tr>
 <tr VALIGN=top>
 <td> <code>&#8211;exclude-tables=db1.t1</code> </td>
-<td> All tables except t1 in database<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>db1 are restored;&nbsp;<wbr>all other tables<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>in db1 are restored;&nbsp;<wbr>all tables in<br />
+<td> All tables except t1 in database<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>db1 are restored;&nbsp;<wbr>all other tables<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>in db1 are restored;&nbsp;<wbr>all tables in<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>all other databases are restored
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>&#8211;exclude-tables=db1.t2,db2.t1</code> (or<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><code>&#8211;exclude-tables=db1.t2</code><br />
+<td> <code>&#8211;exclude-tables=db1.t2,db2.t1</code> (or<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><code>&#8211;exclude-tables=db1.t2</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><code>&#8211;exclude-tables=db2.t1)</code> </td>
-<td> All tables in database db1 except for<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>t2 and all tables in database<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>db2 except for table<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>t1 are restored;&nbsp;<wbr>no other tables in<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>db1 or db2 are<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>restored;&nbsp;<wbr>all tables in all other databases are<br />
+<td> All tables in database db1 except for<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>t2 and all tables in database<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>db2 except for table<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>t1 are restored;&nbsp;<wbr>no other tables in<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>db1 or db2 are<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>restored;&nbsp;<wbr>all tables in all other databases are<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>restored
 </td>
 </tr>
@@ -495,8 +495,8 @@ shell &gt; ndb_restore[...]-- exclude - databases = db1, db2-- exclude - tables 
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
-<p> Prior to MySQL Cluster NDB 6.3.29 and MySQL Cluster NDB 7.0.10, multiple <code>&#8211;exclude-*</code> options were not handled correctly, with the result that the options shown in the previous example caused ndb_restore to exclude only the tables db3.t1 and db3.t2. (m[blue]<code>Bug#48907</code>m[]<font SIZE="-2">[1]</font>) </p>
+  <code>Note</code>  </dd>
+<p> Prior to MySQL Cluster NDB 6.3.29 and MySQL Cluster NDB 7.0.10, multiple <code>&#8211;exclude-*</code> options were not handled correctly, with the result that the options shown in the previous example caused ndb_restore to exclude only the tables db3.t1 and db3.t2. (m[blue]<code>Bug#48907</code>m[][1]) </p>
 </dl>
 <p> Beginning with MySQL Cluster NDB 6.3.29 and MySQL Cluster NDB 7.0.10, you can use <code>&#8211;include-*</code> and <code>&#8211;exclude-*</code> options together, subject to the following rules: </p>
 <dl>
@@ -527,8 +527,8 @@ shell &gt; ndb_restore[...]-- exclude - databases = db1, db2-- exclude - tables 
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
-<p> Prior to MySQL Cluster NDB 6.3.29 and MySQL Cluster NDB 7.0.10, it was not possible to use <code>&#8211;include-databases</code> or <code>&#8211;include-tables</code> together with <code>&#8211;exclude-databases</code> or <code>&#8211;exclude-tables</code>, as these combinations were evaluated inconsistently. (m[blue]<code>Bug#48907</code>m[]<font SIZE="-2">[1]</font>) </p>
+  <code>Note</code>  </dd>
+<p> Prior to MySQL Cluster NDB 6.3.29 and MySQL Cluster NDB 7.0.10, it was not possible to use <code>&#8211;include-databases</code> or <code>&#8211;include-tables</code> together with <code>&#8211;exclude-databases</code> or <code>&#8211;exclude-tables</code>, as these combinations were evaluated inconsistently. (m[blue]<code>Bug#48907</code>m[][1]) </p>
 </dl>
 <p> <code>&#8211;exclude-missing-columns</code> </p>
 <table BORDER>
@@ -576,7 +576,7 @@ shell &gt; ndb_restore[...]-- exclude - databases = db1, db2-- exclude - tables 
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Important</code> </font> </dd>
+  <code>Important</code>  </dd>
 <p> After using <code>ndb_restore</code> to initialize a MySQL Cluster for use in circular replication, binary logs on the SQL node acting as the replication slave are not automatically created, and you must cause them to be created manually. In order to cause the binary logs to be created, issue a SHOW TABLES statement on that SQL node before running START SLAVE. </p>
 <p> This is a known issue with MySQL Cluster management, which we intend to address in a future release. </p>
 </dl>

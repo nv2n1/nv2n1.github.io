@@ -83,5 +83,5 @@ description: "XDrawArc, XDrawArcs, XArc – draw arcs and arc structure"
 <dt><code>BadMatch</code></dt>
 <dd>Some argument or pair of arguments has the correct type and range but fails to match in some other way required by the request.</dd></dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xdrawline/">XDrawLine</a>(3), <a href="/docs/linux/man/3-xdrawpoint/">XDrawPoint</a>(3), <a href="/docs/linux/man/3-xdrawrectangle/">XDrawRectangle</a>(3)<br />
+<p><a href="/docs/linux/man/3-xdrawline/">XDrawLine</a>(3), <a href="/docs/linux/man/3-xdrawpoint/">XDrawPoint</a>(3), <a href="/docs/linux/man/3-xdrawrectangle/">XDrawRectangle</a>(3)<br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

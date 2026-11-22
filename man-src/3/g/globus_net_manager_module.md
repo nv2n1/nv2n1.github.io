@@ -10,24 +10,24 @@ description: "Net Manager –"
 <p>Net Manager &#8211; </p>
 <p> Net Manager API.</p>
 <h3>Modules</h3>
-<p><code>Attributes</code><br />
- <i>Net Manager Attribute Management Functions. </i><br />
- <code>Context</code><br />
- <i>Net Manager Context Management Functions. </i><br />
- <code>Function Signatures</code><br />
+<p><code>Attributes</code><br/>
+ <i>Net Manager Attribute Management Functions. </i><br/>
+ <code>Context</code><br/>
+ <i>Net Manager Context Management Functions. </i><br/>
+ <code>Function Signatures</code><br/>
  <i>Net Manager Function Signatures</i> </p>
-<p> Function signatures for the Net Manager interface. <code>Net Manager Implementation Tutorial</code>. &quot;<br />
- <code>Python Module</code><br />
- <i>Net Manager Python Module. </i><br />
- <code>Globus XIO Net Manager Driver</code><br />
+<p> Function signatures for the Net Manager interface. <code>Net Manager Implementation Tutorial</code>. &quot;<br/>
+ <code>Python Module</code><br/>
+ <i>Net Manager Python Module. </i><br/>
+ <code>Globus XIO Net Manager Driver</code><br/>
  <i>Net Manager XIO Driver. </i></p>
 <h3>Macros</h3>
-<p>#define <code>GLOBUS_NET_MANAGER_MODULE</code><br />
+<p>#define <code>GLOBUS_NET_MANAGER_MODULE</code><br/>
  <i>Module descriptor. </i></p>
 <h3>Functions</h3>
-<p>globus_result_t <code>globus_net_manager_register</code> (<code>globus_net_manager_t</code> *manager, globus_module_descriptor_t *module)<br />
- <i>Register a network manager. </i><br />
- globus_result_t <code>globus_net_manager_unregister</code> (<code>globus_net_manager_t</code> *manager)<br />
+<p>globus_result_t <code>globus_net_manager_register</code> (<code>globus_net_manager_t</code> *manager, globus_module_descriptor_t *module)<br/>
+ <i>Register a network manager. </i><br/>
+ globus_result_t <code>globus_net_manager_unregister</code> (<code>globus_net_manager_t</code> *manager)<br/>
  <i>Unregister a network manager. </i></p>
 <h2>Detailed Description</h2>
 <p>Net Manager API. </p>
@@ -47,7 +47,7 @@ description: "Net Manager –"
 <p>Register a network manager. The <code>globus_net_manager_register()</code> function adds this network manager to those which will be called by the network manager interface when network events occur. This is typically called by the network manager when its module is activated. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>manager</i> Manager information to register.<br />
+<dd><i>manager</i> Manager information to register.<br/>
  <i>module</i> Module descriptor to register. Use GlobusExtensionMyModule(module name)</dd></dl>
 <h3>globus_result_t globus_net_manager_unregister (<code>globus_net_manager_t</code> *manager)</h3>
 <p>Unregister a network manager. The <code>globus_net_manager_unregister()</code> function removes this network manager from those which will be called by the network manager interface when network events occur. This is typically called by the network manager when its module is deactivated. </p>

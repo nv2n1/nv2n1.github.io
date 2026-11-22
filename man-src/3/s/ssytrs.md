@@ -11,7 +11,7 @@ description: "ssytrs.f –"
 <p> ssytrs.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>ssytrs</code> (UPLO, N, NRHS, A, LDA, IPIV, B, LDB, INFO)<br />
+<p> subroutine <code>ssytrs</code> (UPLO, N, NRHS, A, LDA, IPIV, B, LDB, INFO)<br/>
  <i></i><code>SSYTRS</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ssytrs (characterUPLO, integerN, integerNRHS, real, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, real, dimension( ldb, * )B, integerLDB, integerINFO)</h3>

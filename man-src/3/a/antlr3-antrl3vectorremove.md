@@ -10,50 +10,50 @@ description: "src/antlr3collections.c –"
 <p>src/antlr3collections.c &#8211; </p>
 <p> Provides a number of useful functions that are roughly equivalent to java HashTable and List for the purposes of Antlr 3 C runtime.</p>
 <h2>Synopsis</h2>
-<p> #include &lt;<a href="file:/usr/include/antlr3.h">antlr3.h</a>&gt;<br />
+<p> #include &lt;<a href="file:/usr/include/antlr3.h">antlr3.h</a>&gt;<br/>
  #include &#8216;antlr3collections.h&#8217; </p>
 <h3>Functions</h3>
 <p> static void <code>addEdge</code> (<code>pANTLR3_TOPO</code> topo, <code>ANTLR3_UINT32</code> edge, <code>ANTLR3_UINT32</code> dependency) </p>
-<p> static void <code>antlr3EnumFree</code> (<code>pANTLR3_HASH_ENUM</code> en)<br />
- <i>Frees up the memory structures that represent a hash table enumeration. </i><br />
- <code>pANTLR3_HASH_ENUM</code> <code>antlr3EnumNew</code> (<code>pANTLR3_HASH_TABLE</code> table)<br />
- <i>Creates an enumeration structure to traverse the hash table. </i><br />
- static int <code>antlr3EnumNext</code> (<code>pANTLR3_HASH_ENUM</code> en, <code>pANTLR3_HASH_KEY</code> *key, void **data)<br />
- <i>Return the next entry in the hashtable being traversed by the supplied enumeration. </i><br />
- static void <code>antlr3EnumNextEntry</code> (<code>pANTLR3_HASH_ENUM</code> en)<br />
- <i>Local function to advance the entry pointer of an enumeration structure to the next valid entry (if there is one). </i><br />
- ANTLR3_API <code>ANTLR3_UINT32</code> <code>antlr3Hash</code> (void *key, <code>ANTLR3_UINT32</code> keylen)<br />
- <i>Given an input key of arbitrary length, return a hash value of it. </i><br />
- static void <code>antlr3HashDelete</code> (<code>pANTLR3_HASH_TABLE</code> table, void *key)<br />
- <i>Takes the element with the supplied key out of the list, and deletes the data calling the supplied free() routine if any. </i><br />
- static void <code>antlr3HashDeleteI</code> (<code>pANTLR3_HASH_TABLE</code> table, <code>ANTLR3_INTKEY</code> key)<br />
- <i>Takes the element with the supplied key out of the list, and deletes the data calling the supplied free() routine if any. </i><br />
+<p> static void <code>antlr3EnumFree</code> (<code>pANTLR3_HASH_ENUM</code> en)<br/>
+ <i>Frees up the memory structures that represent a hash table enumeration. </i><br/>
+ <code>pANTLR3_HASH_ENUM</code> <code>antlr3EnumNew</code> (<code>pANTLR3_HASH_TABLE</code> table)<br/>
+ <i>Creates an enumeration structure to traverse the hash table. </i><br/>
+ static int <code>antlr3EnumNext</code> (<code>pANTLR3_HASH_ENUM</code> en, <code>pANTLR3_HASH_KEY</code> *key, void **data)<br/>
+ <i>Return the next entry in the hashtable being traversed by the supplied enumeration. </i><br/>
+ static void <code>antlr3EnumNextEntry</code> (<code>pANTLR3_HASH_ENUM</code> en)<br/>
+ <i>Local function to advance the entry pointer of an enumeration structure to the next valid entry (if there is one). </i><br/>
+ ANTLR3_API <code>ANTLR3_UINT32</code> <code>antlr3Hash</code> (void *key, <code>ANTLR3_UINT32</code> keylen)<br/>
+ <i>Given an input key of arbitrary length, return a hash value of it. </i><br/>
+ static void <code>antlr3HashDelete</code> (<code>pANTLR3_HASH_TABLE</code> table, void *key)<br/>
+ <i>Takes the element with the supplied key out of the list, and deletes the data calling the supplied free() routine if any. </i><br/>
+ static void <code>antlr3HashDeleteI</code> (<code>pANTLR3_HASH_TABLE</code> table, <code>ANTLR3_INTKEY</code> key)<br/>
+ <i>Takes the element with the supplied key out of the list, and deletes the data calling the supplied free() routine if any. </i><br/>
  static void <code>antlr3HashFree</code> (<code>pANTLR3_HASH_TABLE</code> table) </p>
-<p> static void * <code>antlr3HashGet</code> (<code>pANTLR3_HASH_TABLE</code> table, void *key)<br />
- <i>Return the element pointer in the hash table for a particular key value, or NULL if it don&#8217;t exist (or was itself NULL). </i><br />
- static void * <code>antlr3HashGetI</code> (<code>pANTLR3_HASH_TABLE</code> table, <code>ANTLR3_INTKEY</code> key)<br />
- <i>Return the element pointer in the hash table for a particular key value, or NULL if it don&#8217;t exist (or was itself NULL). </i><br />
- static <code>ANTLR3_INT32</code> <code>antlr3HashPut</code> (<code>pANTLR3_HASH_TABLE</code> table, void *key, void *element, void(ANTLR3_CDECL *freeptr)(void *))<br />
- <i>Add the element pointer in to the table, based upon the hash of the provided key. </i><br />
- static <code>ANTLR3_INT32</code> <code>antlr3HashPutI</code> (<code>pANTLR3_HASH_TABLE</code> table, <code>ANTLR3_INTKEY</code> key, void *element, void(ANTLR3_CDECL *freeptr)(void *))<br />
- <i>Add the element pointer in to the table, based upon the hash of the provided key. </i><br />
- static <code>pANTLR3_HASH_ENTRY</code> <code>antlr3HashRemove</code> (<code>pANTLR3_HASH_TABLE</code> table, void *key)<br />
- <i>Remove the element in the hash table for a particular key value, if it exists &#8211; no error if it does not. </i><br />
- static <code>pANTLR3_HASH_ENTRY</code> <code>antlr3HashRemoveI</code> (<code>pANTLR3_HASH_TABLE</code> table, <code>ANTLR3_INTKEY</code> key)<br />
- <i>Remove a numeric keyed entry from a hash table if it exists, no error if it does not exist. </i><br />
- static <code>ANTLR3_UINT32</code> <code>antlr3HashSize</code> (<code>pANTLR3_HASH_TABLE</code> table)<br />
- <i>return the current size of the hash table </i><br />
+<p> static void * <code>antlr3HashGet</code> (<code>pANTLR3_HASH_TABLE</code> table, void *key)<br/>
+ <i>Return the element pointer in the hash table for a particular key value, or NULL if it don&#8217;t exist (or was itself NULL). </i><br/>
+ static void * <code>antlr3HashGetI</code> (<code>pANTLR3_HASH_TABLE</code> table, <code>ANTLR3_INTKEY</code> key)<br/>
+ <i>Return the element pointer in the hash table for a particular key value, or NULL if it don&#8217;t exist (or was itself NULL). </i><br/>
+ static <code>ANTLR3_INT32</code> <code>antlr3HashPut</code> (<code>pANTLR3_HASH_TABLE</code> table, void *key, void *element, void(ANTLR3_CDECL *freeptr)(void *))<br/>
+ <i>Add the element pointer in to the table, based upon the hash of the provided key. </i><br/>
+ static <code>ANTLR3_INT32</code> <code>antlr3HashPutI</code> (<code>pANTLR3_HASH_TABLE</code> table, <code>ANTLR3_INTKEY</code> key, void *element, void(ANTLR3_CDECL *freeptr)(void *))<br/>
+ <i>Add the element pointer in to the table, based upon the hash of the provided key. </i><br/>
+ static <code>pANTLR3_HASH_ENTRY</code> <code>antlr3HashRemove</code> (<code>pANTLR3_HASH_TABLE</code> table, void *key)<br/>
+ <i>Remove the element in the hash table for a particular key value, if it exists &#8211; no error if it does not. </i><br/>
+ static <code>pANTLR3_HASH_ENTRY</code> <code>antlr3HashRemoveI</code> (<code>pANTLR3_HASH_TABLE</code> table, <code>ANTLR3_INTKEY</code> key)<br/>
+ <i>Remove a numeric keyed entry from a hash table if it exists, no error if it does not exist. </i><br/>
+ static <code>ANTLR3_UINT32</code> <code>antlr3HashSize</code> (<code>pANTLR3_HASH_TABLE</code> table)<br/>
+ <i>return the current size of the hash table </i><br/>
  <code>pANTLR3_HASH_TABLE</code> <code>antlr3HashTableNew</code> (<code>ANTLR3_UINT32</code> sizeHint) </p>
 <p> <code>pANTLR3_INT_TRIE</code> <code>antlr3IntTrieNew</code> (<code>ANTLR3_UINT32</code> depth) </p>
-<p> static <code>ANTLR3_INT32</code> <code>antlr3ListAdd</code> (<code>pANTLR3_LIST</code> list, void *element, void(ANTLR3_CDECL *freeptr)(void *))<br />
- <i>Add the supplied element to the list, at the next available key. </i><br />
+<p> static <code>ANTLR3_INT32</code> <code>antlr3ListAdd</code> (<code>pANTLR3_LIST</code> list, void *element, void(ANTLR3_CDECL *freeptr)(void *))<br/>
+ <i>Add the supplied element to the list, at the next available key. </i><br/>
  static void <code>antlr3ListDelete</code> (<code>pANTLR3_LIST</code> list, <code>ANTLR3_INTKEY</code> key) </p>
 <p> static void <code>antlr3ListFree</code> (<code>pANTLR3_LIST</code> list) </p>
 <p> static void * <code>antlr3ListGet</code> (<code>pANTLR3_LIST</code> list, <code>ANTLR3_INTKEY</code> key) </p>
 <p> ANTLR3_API <code>pANTLR3_LIST</code> <code>antlr3ListNew</code> (<code>ANTLR3_UINT32</code> sizeHint) </p>
 <p> static <code>ANTLR3_INT32</code> <code>antlr3ListPut</code> (<code>pANTLR3_LIST</code> list, <code>ANTLR3_INTKEY</code> key, void *element, void(ANTLR3_CDECL *freeptr)(void *)) </p>
-<p> static void * <code>antlr3ListRemove</code> (<code>pANTLR3_LIST</code> list, <code>ANTLR3_INTKEY</code> key)<br />
- <i>Remove from the list, but don&#8217;t free the element, just send it back to the caller. </i><br />
+<p> static void * <code>antlr3ListRemove</code> (<code>pANTLR3_LIST</code> list, <code>ANTLR3_INTKEY</code> key)<br/>
+ <i>Remove from the list, but don&#8217;t free the element, just send it back to the caller. </i><br/>
  static <code>ANTLR3_UINT32</code> <code>antlr3ListSize</code> (<code>pANTLR3_LIST</code> list) </p>
 <p> ANTLR3_API void <code>antlr3SetVectorApi</code> (<code>pANTLR3_VECTOR</code> vector, <code>ANTLR3_UINT32</code> sizeHint) </p>
 <p> static void <code>antlr3StackFree</code> (<code>pANTLR3_STACK</code> stack) </p>
@@ -63,47 +63,47 @@ description: "src/antlr3collections.c –"
 <p> static void * <code>antlr3StackPop</code> (<code>pANTLR3_STACK</code> stack) </p>
 <p> static <code>ANTLR3_BOOLEAN</code> <code>antlr3StackPush</code> (<code>pANTLR3_STACK</code> stack, void *element, void(ANTLR3_CDECL *freeptr)(void *)) </p>
 <p> static <code>ANTLR3_UINT32</code> <code>antlr3StackSize</code> (<code>pANTLR3_STACK</code> stack) </p>
-<p> ANTLR3_API <code>pANTLR3_TOPO</code> <code>antlr3TopoNew</code> ()<br />
- <i>Allocate and initialize a new ANTLR3 topological sorter, which can be used to define edges that identify numerical node indexes that depend on other numerical node indexes, which can then be sorted topologically such that any node is sorted after all its dependent nodes. </i><br />
- static <code>ANTLR3_UINT32</code> <code>antlr3VectorAdd</code> (<code>pANTLR3_VECTOR</code> vector, void *element, void(ANTLR3_CDECL *freeptr)(void *))<br />
- <i>Add the supplied pointer and freeing function pointer to the list, expanding the vector if needed. </i><br />
+<p> ANTLR3_API <code>pANTLR3_TOPO</code> <code>antlr3TopoNew</code> ()<br/>
+ <i>Allocate and initialize a new ANTLR3 topological sorter, which can be used to define edges that identify numerical node indexes that depend on other numerical node indexes, which can then be sorted topologically such that any node is sorted after all its dependent nodes. </i><br/>
+ static <code>ANTLR3_UINT32</code> <code>antlr3VectorAdd</code> (<code>pANTLR3_VECTOR</code> vector, void *element, void(ANTLR3_CDECL *freeptr)(void *))<br/>
+ <i>Add the supplied pointer and freeing function pointer to the list, expanding the vector if needed. </i><br/>
  static void <code>antlr3VectorClear</code> (<code>pANTLR3_VECTOR</code> vector) </p>
 <p> static void <code>antlr3VectorDel</code> (<code>pANTLR3_VECTOR</code> vector, <code>ANTLR3_UINT32</code> entry) </p>
-<p> ANTLR3_API <code>pANTLR3_VECTOR_FACTORY</code> <code>antlr3VectorFactoryNew</code> (<code>ANTLR3_UINT32</code> sizeHint)<br />
- <i>Vector factory creation. </i><br />
+<p> ANTLR3_API <code>pANTLR3_VECTOR_FACTORY</code> <code>antlr3VectorFactoryNew</code> (<code>ANTLR3_UINT32</code> sizeHint)<br/>
+ <i>Vector factory creation. </i><br/>
  static void ANTLR3_CDECL <code>antlr3VectorFree</code> (<code>pANTLR3_VECTOR</code> vector) </p>
 <p> static void * <code>antlr3VectorGet</code> (<code>pANTLR3_VECTOR</code> vector, <code>ANTLR3_UINT32</code> entry) </p>
 <p> ANTLR3_API <code>pANTLR3_VECTOR</code> <code>antlr3VectorNew</code> (<code>ANTLR3_UINT32</code> sizeHint) </p>
 <p> static void <code>antlr3VectorResize</code> (<code>pANTLR3_VECTOR</code> vector, <code>ANTLR3_UINT32</code> hint) </p>
-<p> static <code>ANTLR3_UINT32</code> <code>antlr3VectorSet</code> (<code>pANTLR3_VECTOR</code> vector, <code>ANTLR3_UINT32</code> entry, void *element, void(ANTLR3_CDECL *freeptr)(void *), <code>ANTLR3_BOOLEAN</code> freeExisting)<br />
- <i>Replace the element at the specified entry point with the supplied entry. </i><br />
+<p> static <code>ANTLR3_UINT32</code> <code>antlr3VectorSet</code> (<code>pANTLR3_VECTOR</code> vector, <code>ANTLR3_UINT32</code> entry, void *element, void(ANTLR3_CDECL *freeptr)(void *), <code>ANTLR3_BOOLEAN</code> freeExisting)<br/>
+ <i>Replace the element at the specified entry point with the supplied entry. </i><br/>
  static <code>ANTLR3_UINT32</code> <code>antlr3VectorSize</code> (<code>pANTLR3_VECTOR</code> vector) </p>
-<p> static <code>ANTLR3_BOOLEAN</code> <code>antlr3VectorSwap</code> (<code>pANTLR3_VECTOR</code> vector, <code>ANTLR3_UINT32</code> entry1, <code>ANTLR3_UINT32</code> entry2)<br />
- <i>Replace the element at the specified entry point with the supplied entry. </i><br />
- static void * <code>antrl3VectorRemove</code> (<code>pANTLR3_VECTOR</code> vector, <code>ANTLR3_UINT32</code> entry)<br />
- <i>Remove the entry from the vector, but do not free any entry, even if it has a free pointer. </i><br />
+<p> static <code>ANTLR3_BOOLEAN</code> <code>antlr3VectorSwap</code> (<code>pANTLR3_VECTOR</code> vector, <code>ANTLR3_UINT32</code> entry1, <code>ANTLR3_UINT32</code> entry2)<br/>
+ <i>Replace the element at the specified entry point with the supplied entry. </i><br/>
+ static void * <code>antrl3VectorRemove</code> (<code>pANTLR3_VECTOR</code> vector, <code>ANTLR3_UINT32</code> entry)<br/>
+ <i>Remove the entry from the vector, but do not free any entry, even if it has a free pointer. </i><br/>
  static void <code>closeVectorFactory</code> (<code>pANTLR3_VECTOR_FACTORY</code> factory) </p>
-<p> static void <code>DFS</code> (<code>pANTLR3_TOPO</code> topo, <code>ANTLR3_UINT32</code> node)<br />
- <i>Given a starting node, descend its dependent nodes (ones that it has edges to) until we find one without edges. </i><br />
- static void <code>freeIntNode</code> (<code>pANTLR3_INT_TRIE_NODE</code> node)<br />
- <i>Release memory allocated to this tree. </i><br />
+<p> static void <code>DFS</code> (<code>pANTLR3_TOPO</code> topo, <code>ANTLR3_UINT32</code> node)<br/>
+ <i>Given a starting node, descend its dependent nodes (ones that it has edges to) until we find one without edges. </i><br/>
+ static void <code>freeIntNode</code> (<code>pANTLR3_INT_TRIE_NODE</code> node)<br/>
+ <i>Release memory allocated to this tree. </i><br/>
  static void <code>freeTopo</code> (<code>pANTLR3_TOPO</code> topo) </p>
-<p> static <code>ANTLR3_BOOLEAN</code> <code>intTrieAdd</code> (<code>pANTLR3_INT_TRIE</code> trie, <code>ANTLR3_INTKEY</code> key, <code>ANTLR3_UINT32</code> type, <code>ANTLR3_INTKEY</code> intVal, void *data, void(ANTLR3_CDECL *freeptr)(void *))<br />
- <i>Add an entry into the INT trie. </i><br />
+<p> static <code>ANTLR3_BOOLEAN</code> <code>intTrieAdd</code> (<code>pANTLR3_INT_TRIE</code> trie, <code>ANTLR3_INTKEY</code> key, <code>ANTLR3_UINT32</code> type, <code>ANTLR3_INTKEY</code> intVal, void *data, void(ANTLR3_CDECL *freeptr)(void *))<br/>
+ <i>Add an entry into the INT trie. </i><br/>
  static <code>ANTLR3_BOOLEAN</code> <code>intTrieDel</code> (<code>pANTLR3_INT_TRIE</code> trie, <code>ANTLR3_INTKEY</code> key) </p>
-<p> static void <code>intTrieFree</code> (<code>pANTLR3_INT_TRIE</code> trie)<br />
- <i>Called to free all nodes and the structure itself. </i><br />
- static <code>pANTLR3_TRIE_ENTRY</code> <code>intTrieGet</code> (<code>pANTLR3_INT_TRIE</code> trie, <code>ANTLR3_INTKEY</code> key)<br />
- <i>Search the int Trie and return a pointer to the first bucket indexed by the key if it is contained in the trie, otherwise NULL. </i><br />
+<p> static void <code>intTrieFree</code> (<code>pANTLR3_INT_TRIE</code> trie)<br/>
+ <i>Called to free all nodes and the structure itself. </i><br/>
+ static <code>pANTLR3_TRIE_ENTRY</code> <code>intTrieGet</code> (<code>pANTLR3_INT_TRIE</code> trie, <code>ANTLR3_INTKEY</code> key)<br/>
+ <i>Search the int Trie and return a pointer to the first bucket indexed by the key if it is contained in the trie, otherwise NULL. </i><br/>
  static void <code>newPool</code> (<code>pANTLR3_VECTOR_FACTORY</code> factory) </p>
 <p> static <code>pANTLR3_VECTOR</code> <code>newVector</code> (<code>pANTLR3_VECTOR_FACTORY</code> factory) </p>
 <p> static void <code>returnVector</code> (<code>pANTLR3_VECTOR_FACTORY</code> factory, <code>pANTLR3_VECTOR</code> vector) </p>
 <p> static <code>pANTLR3_UINT32</code> <code>sortToArray</code> (<code>pANTLR3_TOPO</code> topo) </p>
 <p> static void <code>sortVector</code> (<code>pANTLR3_TOPO</code> topo, <code>pANTLR3_VECTOR</code> v) </p>
 <h3>Variables</h3>
-<p> static <code>ANTLR3_UINT8</code> <code>bitIndex</code> [256]<br />
- <i>Array of left most significant bit positions for an 8 bit element provides an efficient way to find the highest bit that is set in an n byte value (n&gt;0). </i><br />
- static <code>ANTLR3_UINT64</code> <code>bitMask</code> [64]<br />
+<p> static <code>ANTLR3_UINT8</code> <code>bitIndex</code> [256]<br/>
+ <i>Array of left most significant bit positions for an 8 bit element provides an efficient way to find the highest bit that is set in an n byte value (n&gt;0). </i><br/>
+ static <code>ANTLR3_UINT64</code> <code>bitMask</code> [64]<br/>
  <i>Rather than use the bit index of a trie node to shift 0x01 left that many times, then &amp; with the result, it is faster to use the bit index as an index into this table which holds precomputed masks for any of the 64 bits we need to mask off singly. </i></p>
 <h2>Detailed Description</h2>
 <p> Provides a number of useful functions that are roughly equivalent to java HashTable and List for the purposes of Antlr 3 C runtime. </p>
@@ -134,8 +134,8 @@ description: "src/antlr3collections.c –"
 <p> Return the next entry in the hashtable being traversed by the supplied enumeration. <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-</dt><dd> <i>en</i> Pointer to the enumeration tracking structure<br />
- <i>key</i> Pointer to void pointer, where the key pointer is returned.<br />
+</dt><dd> <i>en</i> Pointer to the enumeration tracking structure<br/>
+ <i>key</i> Pointer to void pointer, where the key pointer is returned.<br/>
  <i>data</i> Pointer to void pointer where the data pointer is returned.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

@@ -41,19 +41,19 @@ description: "scrot – capture a screenshot using imlib2"
 <dd> prevent beeping.</dd></dl>
 <h2>SPECIAL STRINGS</h2>
 <p> Both the <code>&#8211;exec</code> and <code>filename</code> parameters can take format specifiers that are expanded by scrot when encountered. There are two types of format specifier. Characters preceded by a &#8216;%&#8217; are interpretted by strftime(2). See man strftime for examples. These options may be used to refer to the current date and time. The second kind are internal to scrot and are prefixed by &#8216;$&#8217; The following specifiers are recognised: </p>
-<p> <code>$f</code> image path/filename (ignored when used in the filename)<br />
- <code>$n</code> image name (ignored when used in the filename)<br />
- <code>$s</code> image size (bytes) (ignored when used in the filename)<br />
- <code>$p</code> image pixel size<br />
- <code>$w</code> image width<br />
- <code>$h</code> image height<br />
- <code>$t</code> image format<br />
+<p> <code>$f</code> image path/filename (ignored when used in the filename)<br/>
+ <code>$n</code> image name (ignored when used in the filename)<br/>
+ <code>$s</code> image size (bytes) (ignored when used in the filename)<br/>
+ <code>$p</code> image pixel size<br/>
+ <code>$w</code> image width<br/>
+ <code>$h</code> image height<br/>
+ <code>$t</code> image format<br/>
  <code>$$</code> prints a literal &#8216;$&#8217; </p>
 <pre>
  prints a newline (ignored when used in the filename)
 </pre>
 <h2>EXAMPLE</h2>
-<p> scrot &#8216;%Y-%m-%d_$wx$h.png&#8217; -e &#8216;mv $f ~/shots/&#8217;<br />
+<p> scrot &#8216;%Y-%m-%d_$wx$h.png&#8217; -e &#8216;mv $f ~/shots/&#8217;<br/>
  This would create a file called something like 2000-10-30_2560x1024.png and move it to your shots directory.</p>
 <h2>BUGS</h2>
 <p> None known.</p>
@@ -62,5 +62,5 @@ description: "scrot – capture a screenshot using imlib2"
 <p> Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: </p>
 <p> The above copyright notice and this permission notice shall be included in all copies of the Software, its documentation and marketing &amp; publicity materials, and acknowledgment shall be given in the documentation, materials and software packages that this Software was used. </p>
 <p> THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. </p>
-<p> Email bugs and feature requests to<br />
+<p> Email bugs and feature requests to<br/>
  <code>&lt;scrot_sucks [at] linuxbrit.co.uk&gt;</code> </p>

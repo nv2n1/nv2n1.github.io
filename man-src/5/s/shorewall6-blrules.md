@@ -16,19 +16,19 @@ blrules - shorewall6 Blacklist file
 
 <dd>This file is used to perform zone-specific blacklisting and whitelisting. 
 
- Rules in this file are applied depending on the setting of BLACKLISTNEWONLY in m[blue]<b>shorewall6.conf</b>m[]<font SIZE="-2">[1]</font>(5). If BLACKLISTNEWONLY=No, then they are applied regardless of the connection tracking state of the packet. If BLACKLISTNEWONLY=Yes, they are applied to connections in the NEW and INVALID states. 
+ Rules in this file are applied depending on the setting of BLACKLISTNEWONLY in m[blue]<b>shorewall6.conf</b>m[][1](5). If BLACKLISTNEWONLY=No, then they are applied regardless of the connection tracking state of the packet. If BLACKLISTNEWONLY=Yes, they are applied to connections in the NEW and INVALID states. 
 
- The format of rules in this file is the same as the format of rules in m[blue]<b>shorewall6-rules</b>m[]<font SIZE="-2">[2]</font>(5). The difference in the two files lies in the ACTION (first) column. 
+ The format of rules in this file is the same as the format of rules in m[blue]<b>shorewall6-rules</b>m[][2](5). The difference in the two files lies in the ACTION (first) column. 
 
  <b>ACTION- {</b><b>ACCEPT</b><b>|BLACKLIST|blacklog|CONTINUE|DROP|A_DROP|REJECT|A_REJECT|</b><b>WHITELIST</b><b>|</b><b>LOG</b><b>|</b><b>QUEUE</b><b>|</b><b>NFQUEUE</b><b>[</b><b>(</b><i>queuenumber</i><b>)</b><b>]</b><b>|[?]COMMENT</b><b>|</b><i>action</i><b>|</b><i>macro</i><b>[</b><b>(</b><i>target</i><b>)</b><b>]}</b><b>[:</b><b>{</b><i>log-level</i><b>|</b><b>none</b><b>}[</b><b>!</b><b>][</b><b>:</b><i>tag</i><b>]]</b>
 </dd><dl><dd>Specifies the action to be taken if the packet matches the rule. Must be one of the following. 
  <b>BLACKLIST</b>
 </dd><dl><dd>Added in Shorewall 4.5.3. This is actually a macro that expands as follows: 
-</dd><dl><dd>&bull; If BLACKLIST_LOGLEVEL is specified in m[blue]<b>shorewall6.conf</b>m[]<font SIZE="-2">[1]</font>(5), then the macro expands to <b>blacklog</b>.</dd></dl><dl><dd>&bull; Otherwise it expands to the action specified for BLACKLIST_DISPOSITION in m[blue]<b>shorewall6.conf</b>m[]<font SIZE="-2">[1]</font>(5).</dd></dl></dl>
+</dd><dl><dd>&bull; If BLACKLIST_LOGLEVEL is specified in m[blue]<b>shorewall6.conf</b>m[][1](5), then the macro expands to <b>blacklog</b>.</dd></dl><dl><dd>&bull; Otherwise it expands to the action specified for BLACKLIST_DISPOSITION in m[blue]<b>shorewall6.conf</b>m[][1](5).</dd></dl></dl>
  
 
  <b>blacklog</b>
-<dl><dd>May only be used if BLACKLIST_LOGLEVEL is specified in m[blue]<b>shorewall6.conf</b>m[]<font SIZE="-2">[1]</font>(5). Logs, audits (if specified) and applies the BLACKLIST_DISPOSITION specified in m[blue]<b>shorewall6.conf</b>m[]<font SIZE="-2">[1]</font> (5).</dd></dl>
+<dl><dd>May only be used if BLACKLIST_LOGLEVEL is specified in m[blue]<b>shorewall6.conf</b>m[][1](5). Logs, audits (if specified) and applies the BLACKLIST_DISPOSITION specified in m[blue]<b>shorewall6.conf</b>m[][1] (5).</dd></dl>
  
 
  <b>ACCEPT|CONTINUE|WHITELIST</b>
@@ -60,7 +60,7 @@ blrules - shorewall6 Blacklist file
  
 
  <b>NFLOG</b>[(<i>nflog-parameters</i>)]
-<dl><dd>queues matching packets to a back end logging daemon via a netlink socket then continues to the next rule. See m[blue]<b><a rel="nofollow" HREF="http://www.shorewall.net/shorewall_logging.html">http://www.shorewall.net/shorewall_logging.html</a></b>m[]<font SIZE="-2">[3]</font>.</dd></dl>
+<dl><dd>queues matching packets to a back end logging daemon via a netlink socket then continues to the next rule. See m[blue]<b><a rel="nofollow" HREF="http://www.shorewall.net/shorewall_logging.html">http://www.shorewall.net/shorewall_logging.html</a></b>m[][3].</dd></dl>
  
 
  <b>NFQUEUE</b>
@@ -72,7 +72,7 @@ blrules - shorewall6 Blacklist file
  
 
  <i>action</i>
-<dl><dd>The name of an <i>action</i> declared in m[blue]<b>shorewall6-actions</b>m[]<font SIZE="-2">[4]</font>(5) or in /usr/share/shorewall6/actions.std.</dd></dl>
+<dl><dd>The name of an <i>action</i> declared in m[blue]<b>shorewall6-actions</b>m[][4](5) or in /usr/share/shorewall6/actions.std.</dd></dl>
  
 
  <i>macro</i>
@@ -82,17 +82,17 @@ blrules - shorewall6 Blacklist file
 
  The <b>ACTION</b> may optionally be followed by &quot;:&quot; and a syslog log level (e.g, REJECT:info or Web(ACCEPT):debug). This causes the packet to be logged at the specified level. 
 
- If the <b>ACTION</b> names an <i>action</i> declared in m[blue]<b>shorewall6-actions</b>m[]<font SIZE="-2">[4]</font>(5) or in /usr/share/shorewall6/actions.std then: 
+ If the <b>ACTION</b> names an <i>action</i> declared in m[blue]<b>shorewall6-actions</b>m[][4](5) or in /usr/share/shorewall6/actions.std then: 
 
 <dl><dd>&bull; If the log level is followed by &quot;!' then all rules in the action are logged at the log level.</dd></dl><dl><dd>&bull; If the log level is not followed by &quot;!&quot; then only those rules in the action that do not specify logging are logged at the specified level.</dd></dl><dl><dd>&bull; The special log level <b>none!</b> suppresses logging by the action.</dd></dl>
  
 
  You may also specify <b>NFLOG</b> (must be in upper case) as a log level.This will log to the NFLOG target for routing to a separate log through use of ulogd (m[blue]<b><a rel="nofollow" HREF="http://www.netfilter.org/projects/ulogd/index.html">http://www.netfilter.org/projects/ulogd/index.html</a></b>m[]). 
 
- Actions specifying logging may be followed by a log tag (a string of alphanumeric characters) which is appended to the string generated by the LOGPREFIX (in m[blue]<b>shorewall6.conf</b>m[]<font SIZE="-2">[1]</font>(5)).</dl>
+ Actions specifying logging may be followed by a log tag (a string of alphanumeric characters) which is appended to the string generated by the LOGPREFIX (in m[blue]<b>shorewall6.conf</b>m[][1](5)).</dl>
  
 
- For the remaining columns, see m[blue]<b>shorewall6-rules (5)</b>m[]<font SIZE="-2">[2]</font>.
+ For the remaining columns, see m[blue]<b>shorewall6-rules (5)</b>m[][2].
 
 <h2>Example</h2>
 
@@ -111,9 +111,9 @@ Example 1:
 
 <h2>See Also</h2>
 
-m[blue]<b><a rel="nofollow" HREF="http://www.shorewall.net/blacklisting_support.htm">http://www.shorewall.net/blacklisting_support.htm</a></b>m[]<font SIZE="-2">[5]</font> 
+m[blue]<b><a rel="nofollow" HREF="http://www.shorewall.net/blacklisting_support.htm">http://www.shorewall.net/blacklisting_support.htm</a></b>m[][5] 
 
- m[blue]<b><a rel="nofollow" HREF="http://www.shorewall.net/configuration_file_basics.htm#Pairs">http://www.shorewall.net/configuration_file_basics.htm#Pairs</a></b>m[]<font SIZE="-2">[6]</font> 
+ m[blue]<b><a rel="nofollow" HREF="http://www.shorewall.net/configuration_file_basics.htm#Pairs">http://www.shorewall.net/configuration_file_basics.htm#Pairs</a></b>m[][6] 
 
  <a HREF="/docs/linux/man/8-shorewall6/">shorewall6</a>(8), <a HREF="/docs/linux/man/5-shorewall6-accounting/">shorewall6-accounting</a>(5), <a HREF="/docs/linux/man/5-shorewall6-actions/">shorewall6-actions</a>(5), <a HREF="/docs/linux/man/5-shorewall6-hosts/">shorewall6-hosts</a>(5), <a HREF="/docs/linux/man/5-shorewall6-interfaces/">shorewall6-interfaces</a>(5), <a HREF="/docs/linux/man/5-shorewall6-maclist/">shorewall6-maclist</a>(5), <a HREF="/docs/linux/man/5-shorewall6-netmap/">shorewall6-netmap</a>(5),<a HREF="/docs/linux/man/5-shorewall6-params/">shorewall6-params</a>(5), <a HREF="/docs/linux/man/5-shorewall6-policy/">shorewall6-policy</a>(5), <a HREF="/docs/linux/man/5-shorewall6-providers/">shorewall6-providers</a>(5), <a HREF="/docs/linux/man/5-shorewall6-rtrules/">shorewall6-rtrules</a>(5), shorewall6-routestopped(5), <a HREF="/docs/linux/man/5-shorewall6-rules/">shorewall6-rules</a>(5), <a HREF="/docs/linux/man/5-shorewall6-conf/">shorewall6.conf</a>(5), <a HREF="/docs/linux/man/5-shorewall6-secmarks/">shorewall6-secmarks</a>(5), <a HREF="/docs/linux/man/5-shorewall6-tcclasses/">shorewall6-tcclasses</a>(5), <a HREF="/docs/linux/man/5-shorewall6-tcdevices/">shorewall6-tcdevices</a>(5), <a HREF="/docs/linux/man/5-shorewall6-mangle/">shorewall6-mangle</a>(5), shorewall6-tos(5), <a HREF="/docs/linux/man/5-shorewall6-tunnels/">shorewall6-tunnels</a>(5), <a HREF="/docs/linux/man/5-shorewall6-zones/">shorewall6-zones</a>(5)
 

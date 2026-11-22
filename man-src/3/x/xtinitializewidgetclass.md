@@ -20,5 +20,5 @@ description: "XtInitializeWidgetClass – initialize a widget class"
 <p>If the specified widget class is already initialized, <code>XtInitializeWidgetClass</code> returns immediately. </p>
 <p> If the class initialization procedure registers type converters, these type converters are not available until the first object of the class or subclass is created or <code>XtInitializeWidgetClass</code> is called.</p>
 <h2>See Also</h2>
-<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

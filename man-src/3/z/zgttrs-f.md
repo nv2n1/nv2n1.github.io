@@ -10,7 +10,7 @@ description: "zgttrs.f –"
 <p>zgttrs.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zgttrs</code> (TRANS, N, NRHS, DL, D, DU, DU2, IPIV, B, LDB, INFO)<br />
+<p>subroutine <code>zgttrs</code> (TRANS, N, NRHS, DL, D, DU, DU2, IPIV, B, LDB, INFO)<br/>
  <i></i><code>ZGTTRS</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zgttrs (characterTRANS, integerN, integerNRHS, complex*16, dimension( * )DL, complex*16, dimension( * )D, complex*16, dimension( * )DU, complex*16, dimension( * )DU2, integer, dimension( * )IPIV, complex*16, dimension( ldb, * )B, integerLDB, integerINFO)</h3>

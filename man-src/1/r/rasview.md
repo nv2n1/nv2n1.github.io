@@ -39,6 +39,6 @@ description: "rasview – Raster file previewer for the X Window System."
 <h2>BUGS/CAVEATS</h2>
 <p> <code>rasview </code> does not respond to redraw events.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright (C) 1987-2009<br />
+<p> Copyright (C) 1987-2009<br/>
  University Corporation for Atmospheric Research </p>
 <p> The use of this Software is governed by a License Agreement. </p>

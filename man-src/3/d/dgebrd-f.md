@@ -10,7 +10,7 @@ description: "dgebrd.f –"
 <p>dgebrd.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dgebrd</code> (M, N, A, LDA, D, E, TAUQ, TAUP, WORK, LWORK, INFO)<br />
+<p>subroutine <code>dgebrd</code> (M, N, A, LDA, D, E, TAUQ, TAUP, WORK, LWORK, INFO)<br/>
  <i></i><code>DGEBRD</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dgebrd (integerM, integerN, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( * )D, double precision, dimension( * )E, double precision, dimension( * )TAUQ, double precision, dimension( * )TAUP, double precision, dimension( * )WORK, integerLWORK, integerINFO)</h3>

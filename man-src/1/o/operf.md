@@ -27,8 +27,8 @@ description: "operf – Performance profiler tool for Linux"
 <dt><code>&#8211;vmlinux / k </code><i>vmlinux_path</i></dt>
 <dd> A vmlinux file that matches the running kernel that has symbol and/or debuginfo. Kernel samples will be attributed to this binary, allowing post-processing tools (like opreport) to attribute samples to the appropriate kernel symbols.</dd>
 <dt><code>&#8211;events / -e </code><i>event1[,event2[,&#8230;]]</i></dt>
-<dd> This option is for passing a comma-separated list of event specifications for profiling. Each event spec is of the form:<br />
- <i> name:count[:unitmask[:kernel[:user]]]</i><br />
+<dd> This option is for passing a comma-separated list of event specifications for profiling. Each event spec is of the form:<br/>
+ <i> name:count[:unitmask[:kernel[:user]]]</i><br/>
  You can specify unit mask values using either a numerical value (hex values <i>must</i> begin with &quot;0x&quot;) or a symbolic name (if the <i>name=&lt;um_name&gt;</i> field is shown in the <code>ophelp</code> output). For some named unit masks, the hex value is not unique; thus, OProfile tools enforce specifying such unit masks value by name.</dd></dl>
 <dl>
 <dt>
@@ -46,7 +46,7 @@ description: "operf – Performance profiler tool for Linux"
 <dt><code>&#8211;lazy-conversion / -l</code></dt>
 <dd> Use this option to reduce the overhead of <code>operf</code> during profiling. Normally, profile data received from the kernel is converted to OProfile format during profiling time. This is typically not an issue when profiling a single application. But when using the <i>&#8211;system-wide</i> option, this on-the-fly conversion process can cause noticeable overhead, particularly on busy multi-processor systems. The <i>&#8211;lazy-conversion</i> option directs <code>operf</code> to wait until profiling is completed to do the conversion of profile data. </dd>
 <dt><code>&#8211;append / -a</code></dt>
-<dd> By default, <i>operf</i> moves old profile data from &lt;session_dir&gt;/samples/current to &lt;session_dir&gt;/samples/previous. If a &#8216;previous&#8217; profile already existed, it will be replaced. If the <i>&#8211;append</i> option is passed, old profile data is left in place and new profile data will be added to it, and the &#8216;previous&#8217; profile (if one existed) will remain untouched. To access the &#8216;previous&#8217; profile, simply add a session specification to the normal invocation of oprofile post-processing tools. For example:<br />
+<dd> By default, <i>operf</i> moves old profile data from &lt;session_dir&gt;/samples/current to &lt;session_dir&gt;/samples/previous. If a &#8216;previous&#8217; profile already existed, it will be replaced. If the <i>&#8211;append</i> option is passed, old profile data is left in place and new profile data will be added to it, and the &#8216;previous&#8217; profile (if one existed) will remain untouched. To access the &#8216;previous&#8217; profile, simply add a session specification to the normal invocation of oprofile post-processing tools. For example:<br/>
  <code> opreport</code> <code>session:previous</code> </dd>
 <dt><code>&#8211;verbose / -V </code><i>level</i></dt>
 <dd> A comma-separated list of debugging control values, used to increase the verbosity of the output. Valid values are: debug, record, convert, misc, sfile, arcs, or the special value, &#8216;all&#8217;. </dd>

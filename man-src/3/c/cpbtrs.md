@@ -11,7 +11,7 @@ description: "cpbtrs.f –"
 <p> cpbtrs.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cpbtrs</code> (UPLO, N, KD, NRHS, AB, LDAB, B, LDB, INFO)<br />
+<p> subroutine <code>cpbtrs</code> (UPLO, N, KD, NRHS, AB, LDAB, B, LDB, INFO)<br/>
  <i></i><code>CPBTRS</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cpbtrs (characterUPLO, integerN, integerKD, integerNRHS, complex, dimension( ldab, * )AB, integerLDAB, complex, dimension( ldb, * )B, integerLDB, integerINFO)</h3>

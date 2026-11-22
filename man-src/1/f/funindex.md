@@ -29,11 +29,11 @@ NB : these options are not compatible with Funtools processing.Please
                         : long) "
 </code></pre>
 <h2>DESCRIPTION</h2>
-<p> The funindex script creates an index for the specified column (key) by running funtable -s (sort) and then saving the column value and the record number for each sorted row. This index will be used automatically<br />
+<p> The funindex script creates an index for the specified column (key) by running funtable -s (sort) and then saving the column value and the record number for each sorted row. This index will be used automatically<br/>
 &nbsp;<wbr>by funtools filtering of that column, provided the index file&#8217;s modification date is later than that of the data file. </p>
-<p> The first required argument is the name of the <font SIZE="-1">FITS</font> binary table to index. Please note that text files cannot be indexed at this time. The second required argument is the column (key) name to index. While multiple keys can be specified in principle, the funtools index processing assume a single key and will not recognize files containing multiple keys. </p>
+<p> The first required argument is the name of the FITS binary table to index. Please note that text files cannot be indexed at this time. The second required argument is the column (key) name to index. While multiple keys can be specified in principle, the funtools index processing assume a single key and will not recognize files containing multiple keys. </p>
 <p> By default, the output index file name is [root]_[key].idx, where [root] is the root of the input file. Funtools looks for this specific file name when deciding whether to use an index for faster filtering. Therefore, the optional third argument (output file name) should not be used for funtools processing. </p>
-<p> For example, to create an index on column Y for a given <font SIZE="-1">FITS</font> file, use: </p>
+<p> For example, to create an index on column Y for a given FITS file, use: </p>
 <pre>
   funindex foo.fits Y
 </pre>

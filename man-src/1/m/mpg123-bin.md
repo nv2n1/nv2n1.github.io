@@ -238,5 +238,5 @@ description: "mpg123 – play audio MPEG 1.0/2.0/2.5 stream (layers 1, 2 and 3)"
 <h2>License</h2>
 <p><code>mpg123</code> is licensed under the GNU Lesser/Library General Public License, LGPL, version 2.1 .</p>
 <h2>Website</h2>
-<p><a rel="nofollow" href="http://www.mpg123.org">http://www.mpg123.org</a><br />
+<p><a rel="nofollow" href="http://www.mpg123.org">http://www.mpg123.org</a><br/>
  <a rel="nofollow" href="http://sourceforge.net/projects/mpg123">http://sourceforge.net/projects/mpg123</a></p>

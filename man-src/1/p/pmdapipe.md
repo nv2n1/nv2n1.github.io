@@ -58,9 +58,9 @@ description: "pmdapipe – command output capture performance metrics domain age
 <p> Access for users or groups are allowed or disallowed by specifying statements of the form:</p>
 <dl>
 <dt>
-</dt><dd> <code>allow user</code> <i>username</i> <code>:</code> <i>instance</i><br />
- <code>disallow user</code> <i>username</i> <code>:</code> <i>instance</i><br />
- <code>allow group</code> <i>groupname</i> <code>:</code> <i>instance</i><br />
+</dt><dd> <code>allow user</code> <i>username</i> <code>:</code> <i>instance</i><br/>
+ <code>disallow user</code> <i>username</i> <code>:</code> <i>instance</i><br/>
+ <code>allow group</code> <i>groupname</i> <code>:</code> <i>instance</i><br/>
  <code>disallow group</code> <i>groupname</i> <code>:</code> <i>instance</i></dd></dl>
 <p> The <i>username</i> and <i>groupname</i> names will be verified using the local <code>/etc/passwd</code> and <code>/etc/groups</code> files (or an alternative directory service), using the <code><a href="/docs/linux/man/3-getpwent/">getpwent</a></code>(3) and <code><a href="/docs/linux/man/3-getgrent/">getgrent</a></code>(3) routines. </p>
 <p> The wildcard &#8220;*&#8221; can be used to refer to all <i>instance</i> names.</p>

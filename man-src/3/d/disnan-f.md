@@ -10,7 +10,7 @@ description: "disnan.f –"
 <p>disnan.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>LOGICAL function <code>disnan</code> (DIN)<br />
+<p>LOGICAL function <code>disnan</code> (DIN)<br/>
  <i></i><code>DISNAN</code> tests input for NaN.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>LOGICAL function disnan (double precisionDIN)</h3>

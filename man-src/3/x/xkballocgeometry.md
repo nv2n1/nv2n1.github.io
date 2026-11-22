@@ -10,7 +10,7 @@ description: "XkbAllocGeometry – Allocate an entire geometry"
 <p>XkbAllocGeometry &#8211; Allocate an entire geometry </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Status XkbAllocGeometry</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>XkbGeometrySizesPtr </code><i>sizes</i><code>);</code><br />
+<dt> <code>Status XkbAllocGeometry</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>XkbGeometrySizesPtr </code><i>sizes</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

@@ -10,7 +10,7 @@ description: "setgid – set group identity"
 
 <p> setgid &#8211; set group identity </p>
 <h2>SYNOPSIS</h2>
-<p> <code>#include &lt;sys/types.h&gt;</code><br />
+<p> <code>#include &lt;sys/types.h&gt;</code><br/>
  <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>int setgid(gid_t </code><i>gid</i><code>);</code></p>
 <h2>DESCRIPTION</h2>

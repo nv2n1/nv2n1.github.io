@@ -215,7 +215,7 @@ description: "sed – stream editor for filtering and transforming text"
 <p> This sed program was built with SELinux support. SELinux is enabled on this system. </p>
 <p> GNU sed home page: &lt;<a rel="nofollow" href="https://www.gnu.org/software/sed/">https://www.gnu.org/software/sed/</a>&gt;. General help using GNU software: &lt;<a rel="nofollow" href="https://www.gnu.org/gethelp/">https://www.gnu.org/gethelp/</a>&gt;. E-mail bug reports to: &lt;bug-sed [at] gnu.org&gt;.  </p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2020 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="https://gnu.org/licenses/gpl.html">https://gnu.org/licenses/gpl.html</a>&gt;. <br />
+<p> Copyright &#169; 2020 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="https://gnu.org/licenses/gpl.html">https://gnu.org/licenses/gpl.html</a>&gt;. <br/>
  This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.  </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-awk/">awk</a></code>(1), <code><a href="/docs/linux/man/1-ed/">ed</a></code>(1), <code><a href="/docs/linux/man/1-grep/">grep</a></code>(1), <code><a href="/docs/linux/man/1-tr/">tr</a></code>(1), <code><a href="/docs/linux/man/1-perlre/">perlre</a></code>(1), sed.info, any of various books on <i>sed</i>, the <i>sed</i> FAQ (<a rel="nofollow" href="http://sed.sf.net/grabbag/tutorials/sedfaq.txt">http://sed.sf.net/grabbag/tutorials/sedfaq.txt</a>), <a rel="nofollow" href="http://sed.sf.net/grabbag/.">http://sed.sf.net/grabbag/.</a> </p>

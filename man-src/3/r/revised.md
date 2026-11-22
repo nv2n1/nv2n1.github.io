@@ -10,67 +10,67 @@ description: "QuantLib::InflationIndex – Base class for inflation-rate indexes
 
 <p>QuantLib::InflationIndex &#8211; Base class for inflation-rate indexes,. </p>
 
-<p> <br />
+<p> <br/>
  </p>
 <p>#include &lt;ql/indexes/inflationindex.hpp&gt; </p>
 <p>Inherits <code>QuantLib::Index</code>, and <code>QuantLib::Observer</code>. </p>
 <p>Inherited by <code>YoYInflationIndex</code>, and <code>ZeroInflationIndex</code>. </p>
 <h3>Public Member Functions</h3>
-<p> <br />
- <code>InflationIndex</code> (const std::string &amp;familyName, const <code>Region</code> &amp;region, bool revised, bool interpolated, <code>Frequency</code> frequency, const <code>Period</code> &amp;availabilitiyLag, const <code>Currency</code> &amp;currency) <br />
+<p> <br/>
+ <code>InflationIndex</code> (const std::string &amp;familyName, const <code>Region</code> &amp;region, bool revised, bool interpolated, <code>Frequency</code> frequency, const <code>Period</code> &amp;availabilitiyLag, const <code>Currency</code> &amp;currency) <br/>
  </p>
-<p> <code>Index interface</code> <br />
+<p> <code>Index interface</code> <br/>
  </p>
-<p> <br />
- std::string <code>name</code> () const <br />
- <i>Returns the name of the index. </i> <br />
- <code>Calendar</code> <code>fixingCalendar</code> () const <br />
- <br />
- bool <code>isValidFixingDate</code> (const <code>Date</code> &amp;fixingDate) const <br />
- <i>returns TRUE if the fixing date is a valid one </i> <br />
- virtual Rate <code>fixing</code> (const <code>Date</code> &amp;fixingDate, bool forecastTodaysFixing=false) const =0 <br />
- <br />
- void <code>addFixing</code> (const <code>Date</code> &amp;fixingDate, Rate fixing, bool forceOverwrite=false) <br />
+<p> <br/>
+ std::string <code>name</code> () const <br/>
+ <i>Returns the name of the index. </i> <br/>
+ <code>Calendar</code> <code>fixingCalendar</code> () const <br/>
+ <br/>
+ bool <code>isValidFixingDate</code> (const <code>Date</code> &amp;fixingDate) const <br/>
+ <i>returns TRUE if the fixing date is a valid one </i> <br/>
+ virtual Rate <code>fixing</code> (const <code>Date</code> &amp;fixingDate, bool forecastTodaysFixing=false) const =0 <br/>
+ <br/>
+ void <code>addFixing</code> (const <code>Date</code> &amp;fixingDate, Rate fixing, bool forceOverwrite=false) <br/>
  </p>
-<p> <code>Observer interface</code> <br />
+<p> <code>Observer interface</code> <br/>
  </p>
-<p> <br />
- void <code>update</code> () <br />
+<p> <br/>
+ void <code>update</code> () <br/>
  </p>
-<p> <code>Inspectors</code> <br />
+<p> <code>Inspectors</code> <br/>
  </p>
-<p> <br />
- std::string <code>familyName</code> () const <br />
- <br />
- <code>Region</code> <code>region</code> () const <br />
- <br />
- bool <code>revised</code> () const <br />
- <br />
- bool <code>interpolated</code> () const <br />
- <br />
- <code>Frequency</code> <code>frequency</code> () const <br />
- <br />
- <code>Period</code> <code>availabilityLag</code> () const <br />
- <br />
- <code>Currency</code> <code>currency</code> () const <br />
+<p> <br/>
+ std::string <code>familyName</code> () const <br/>
+ <br/>
+ <code>Region</code> <code>region</code> () const <br/>
+ <br/>
+ bool <code>revised</code> () const <br/>
+ <br/>
+ bool <code>interpolated</code> () const <br/>
+ <br/>
+ <code>Frequency</code> <code>frequency</code> () const <br/>
+ <br/>
+ <code>Period</code> <code>availabilityLag</code> () const <br/>
+ <br/>
+ <code>Currency</code> <code>currency</code> () const <br/>
   </p>
 <h3>Protected Attributes</h3>
-<p> <br />
- <code>Date</code> <code>referenceDate_</code> <br />
- <br />
- std::string <code>familyName_</code> <br />
- <br />
- <code>Region</code> <code>region_</code> <br />
- <br />
- bool <code>revised_</code> <br />
- <br />
- bool <code>interpolated_</code> <br />
- <br />
- <code>Frequency</code> <code>frequency_</code> <br />
- <br />
- <code>Period</code> <code>availabilityLag_</code> <br />
- <br />
- <code>Currency</code> <code>currency_</code> <br />
+<p> <br/>
+ <code>Date</code> <code>referenceDate_</code> <br/>
+ <br/>
+ std::string <code>familyName_</code> <br/>
+ <br/>
+ <code>Region</code> <code>region_</code> <br/>
+ <br/>
+ bool <code>revised_</code> <br/>
+ <br/>
+ bool <code>interpolated_</code> <br/>
+ <br/>
+ <code>Frequency</code> <code>frequency_</code> <br/>
+ <br/>
+ <code>Period</code> <code>availabilityLag_</code> <br/>
+ <br/>
+ <code>Currency</code> <code>currency_</code> <br/>
   </p>
 <h2>Detailed Description</h2>
 <p>Base class for inflation-rate indexes,.  </p>

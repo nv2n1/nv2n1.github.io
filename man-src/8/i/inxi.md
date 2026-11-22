@@ -23,7 +23,7 @@ description: "inxi – Info script for console and IRC."
 <dt><code>-b </code></dt>
 <dd>Shows basic output, short form (previously -d). Same as: inxi -v 2</dd>
 <dt><code>-c </code>[<code>0</code>&#8211;<code>32</code>]</dt>
-<dd>Available color schemes. Scheme number is required.<br />
+<dd>Available color schemes. Scheme number is required.<br/>
 &nbsp;<wbr>&nbsp;<wbr> Supported color schemes: 0-32. </dd>
 <dt><code>-c </code>[<code>94</code>&#8211;<code>99</code>]</dt>
 <dd>Color selectors run a color selector option prior to inxi starting which lets you set the config file value for the selection. </dd>

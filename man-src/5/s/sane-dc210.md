@@ -19,11 +19,11 @@ description: "sane-dc210 – SANE backend for Kodak DC210 Digital Camera"
 <p> <code>breakpause</code> specifies how many usec (1,000,000ths of a second) between sending the &quot;back to default&quot; break and sending commands. </p>
 <p> Empty lines and lines starting with a hash mark (#) are ignored. A sample configuration file is shown below: </p>
 <dl>
-<dd>port=/dev/ttyS0<br />
- # this is a comment<br />
- baud=115200<br />
- dumpinquiry<br />
- cmdrespause=125000<br />
+<dd>port=/dev/ttyS0<br/>
+ # this is a comment<br/>
+ baud=115200<br/>
+ dumpinquiry<br/>
+ cmdrespause=125000<br/>
  breakpause=1000000</dd></dl>
 <h2>Files</h2>
 <dl>

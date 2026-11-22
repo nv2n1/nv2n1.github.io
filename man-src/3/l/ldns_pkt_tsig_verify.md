@@ -10,7 +10,7 @@ description: "ldns_pkt_tsig_verify, ldns_pkt_tsig_sign"
 
 <p> ldns_pkt_tsig_verify, ldns_pkt_tsig_sign </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> bool ldns_pkt_tsig_verify(ldns_pkt *pkt, uint8_t *wire, size_t wire_size, const char *key_name, const char *key_data, ldns_rdf *mac); </p>

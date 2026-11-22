@@ -27,7 +27,7 @@ description: "rabbitmq-server – start RabbitMQ AMQP server"
 <p> RABBITMQ_NODENAME</p>
 <dl>
 <dt>
-</dt><dd> Defaults to rabbit. This can be useful if you want to run more than one node per machine &#8211; <code>RABBITMQ_NODENAME</code> should be unique per erlang-node-and-machine combination. See the m[blue]<code>clustering on a single machine guide</code>m[]<font SIZE="-2">[1]</font> for details.</dd></dl>
+</dt><dd> Defaults to rabbit. This can be useful if you want to run more than one node per machine &#8211; <code>RABBITMQ_NODENAME</code> should be unique per erlang-node-and-machine combination. See the m[blue]<code>clustering on a single machine guide</code>m[][1] for details.</dd></dl>
 <p> RABBITMQ_NODE_IP_ADDRESS</p>
 <dl>
 <dt>

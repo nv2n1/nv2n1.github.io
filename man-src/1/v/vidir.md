@@ -31,10 +31,10 @@ description: "vidir – edit directories and filenames"
 <dd> Edit all files under the current directory and subdirectories.</dd></dl>
 <h2>ENVIRONMENT VARIABLES</h2>
 <dl>
-<dt><font SIZE="-1">EDITOR</font></dt>
+<dt>EDITOR</dt>
 <dd> Editor to use.</dd>
-<dt><font SIZE="-1">VISUAL</font></dt>
+<dt>VISUAL</dt>
 <dd> Also supported to determine what editor to use.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Copyright 2006 by Joey Hess &lt;id [at] joeyh.name&gt; </p>
-<p> Licensed under the <font SIZE="-1">GNU GPL.</font> </p>
+<p> Licensed under the GNU GPL. </p>

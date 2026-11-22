@@ -10,7 +10,7 @@ description: "hashdeep – Compute, compare, or audit multiple message digests"
 
 <p> hashdeep &#8211; Compute, compare, or audit multiple message digests</p>
 <h2>SYNOPSIS</h2>
-<p> <code>hashdeep </code> -V | -h<br />
+<p> <code>hashdeep </code> -V | -h<br/>
  <code>hashdeep</code> [-c &lt;alg1&gt;[,&lt;alg2&gt;]] [-k &lt;file&gt;] [-i &lt;size&gt;] [-f &lt;file&gt;] [-o &lt;fbcplsde&gt;] [-amxwMXreEspblvv] [-F&lt;bum&gt;] [-j &lt;num&gt;] [<code>FILES</code>] </p>
 <h2>DESCRIPTION</h2>
 <p> Computes multiple hashes, or message digests, for any number of files while optionally recursively digging through the directory structure. By default the program computes MD5 and SHA-256 hashes, equivalent to -c md5,sha256. Can also take a list of known hashes and display the filenames of input files whose hashes either do or do not match any of the known hashes. Can also use a list of known hashes to audit a set of FILES. Errors are reported to standard error. If no FILES are specified, reads from standard input. </p>
@@ -21,17 +21,17 @@ description: "hashdeep – Compute, compare, or audit multiple message digests"
 <dd> Load a file of known hashes. This flag is required when using any of the matching or audit modes (i.e. -m, -x, -M, -X, or -a) This flag may be used more than once to add multiple sets of known hashes. </dd>
 <p> Loading sets with different hash algorithms can sometimes generate spurrious hash collisions. For example, let&#8217;s say we have two hash sets, A and B, which have some overlapping files. For example, the file /usr/bin/bad is in both sets. In A we&#8217;ve recorded the MD5 and SHA-256. In B we&#8217;ve recorded the MD5, SHA-1, and SHA-256. Because these two records are different, they will both be loaded. When the program computes all three hashes and compares them to the set of knowns, we will get an exact match from the record in B and a collision from the record in A. </p>
 <dt><code>-a </code></dt>
-<dd> Audit mode. Each input file is compared against the set of knowns. An audit is said to pass if each input file is matched against exactly one file in set of knowns. Any collisions, new files, or missing files will make the audit fail. Using this flag alone produces a message, either &quot;Audit passed&quot; or &quot;Audit Failed&quot;. Use the verbose modes, -v, for more details. Using -v prints the number of files in each category. Using -v a second time prints any discrepancies. Using -v a third time prints the results for every file examined and every known file.<br />
+<dd> Audit mode. Each input file is compared against the set of knowns. An audit is said to pass if each input file is matched against exactly one file in set of knowns. Any collisions, new files, or missing files will make the audit fail. Using this flag alone produces a message, either &quot;Audit passed&quot; or &quot;Audit Failed&quot;. Use the verbose modes, -v, for more details. Using -v prints the number of files in each category. Using -v a second time prints any discrepancies. Using -v a third time prints the results for every file examined and every known file.<br/>
  Due to limitations in the program, any filenames with Unicode characters will appear to have moved during an audit. See the section &quot;UNICODE SUPPORT&quot; below. </dd>
 <dt><code>-m </code></dt>
-<dd> Positive matching, requires at least one use of the -k flag. The input files are examined one at a time, and only those files that match the list of known hashes are output. The only acceptable format for known hashes is the output of previous hashdeep runs.<br />
- If standard input is used with the -m flag, displays &quot;stdin&quot; if the input matches one of the hashes in the list of known hashes. If the hash does not match, the program displays no output.<br />
+<dd> Positive matching, requires at least one use of the -k flag. The input files are examined one at a time, and only those files that match the list of known hashes are output. The only acceptable format for known hashes is the output of previous hashdeep runs.<br/>
+ If standard input is used with the -m flag, displays &quot;stdin&quot; if the input matches one of the hashes in the list of known hashes. If the hash does not match, the program displays no output.<br/>
  This flag may not be used in conjunction with the -x, -X, or -a flags. See the section &quot;UNICODE SUPPORT&quot; below. </dd>
 <dt><code>-x </code></dt>
-<dd> Negative matching. Same as the -m flag above, but does negative matching. That is, only those files NOT in the list of known hashes are displayed.<br />
+<dd> Negative matching. Same as the -m flag above, but does negative matching. That is, only those files NOT in the list of known hashes are displayed.<br/>
  This flag may not be used in conjunction with the -m, -M, or -a flags. See the section &quot;UNICODE SUPPORT&quot; below. </dd>
 <dt><code>-f</code> &lt;file&gt;</dt>
-<dd> Takes a list of files to be hashed from the specified file. Each line is assumed to be a filename. This flag can only be used once per invocation. If it&#8217;s used a second time, the second instance will clobber the first.<br />
+<dd> Takes a list of files to be hashed from the specified file. Each line is assumed to be a filename. This flag can only be used once per invocation. If it&#8217;s used a second time, the second instance will clobber the first.<br/>
  Note that you can still use other flags, such as the -m or -x modes, and submit additional FILES on the command line. </dd>
 <dt><code>-w </code></dt>
 <dd> When used with positive matching modes (-m,-M) displays the filename of the known hash that matched the input file. See the section &quot;UNICODE SUPPORT&quot; below. </dd>
@@ -46,14 +46,14 @@ description: "hashdeep – Compute, compare, or audit multiple message digests"
 <dt><code>-i &lt;size&gt; </code></dt>
 <dd> Size threshold mode. Only hash files smaller than the given the threshold. Sizes may be specified using IEC multipliers b,k,m,g,t,p, and e. </dd>
 <dt><code>-o</code> &lt;bcpflsd&gt;</dt>
-<dd> Enables expert mode. Allows the user specify which (and only which) types of files are processed. Directory processing is still controlled with the -r flag. The expert mode options allowed are:<br />
- f &#8211; Regular files<br />
- b &#8211; Block Devices<br />
- c &#8211; Character Devices<br />
- p &#8211; Named Pipes<br />
- l &#8211; Symbolic Links<br />
- s &#8211; Sockets<br />
- d &#8211; Solaris Doors<br />
+<dd> Enables expert mode. Allows the user specify which (and only which) types of files are processed. Directory processing is still controlled with the -r flag. The expert mode options allowed are:<br/>
+ f &#8211; Regular files<br/>
+ b &#8211; Block Devices<br/>
+ c &#8211; Character Devices<br/>
+ p &#8211; Named Pipes<br/>
+ l &#8211; Symbolic Links<br/>
+ s &#8211; Sockets<br/>
+ d &#8211; Solaris Doors<br/>
  e &#8211; Windows PE executables </dd>
 <dt><code>-s</code></dt>
 <dd> Enables silent mode. All error messages are supressed. </dd>
@@ -111,13 +111,13 @@ description: "hashdeep – Compute, compare, or audit multiple message digests"
 <p> There is NO warranty for this program; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>
 <h2>SEE ALSO</h2>
 <p> More information and installation instructions can be found in the README file. Current versions of both documents can be found on the project homepage: <a rel="nofollow" href="http://md5deep.sourceforge.net/">http://md5deep.sourceforge.net/</a> </p>
-<p> The MD5 specification, RFC 1321, is available at<br />
+<p> The MD5 specification, RFC 1321, is available at<br/>
  <a rel="nofollow" href="http://www.ietf.org/rfc/rfc1321.txt">http://www.ietf.org/rfc/rfc1321.txt</a> </p>
-<p> The SHA-1 specification, RFC 3174, is available at<br />
+<p> The SHA-1 specification, RFC 3174, is available at<br/>
  <a rel="nofollow" href="http://www.faqs.org/rfcs/rfc3174.html">http://www.faqs.org/rfcs/rfc3174.html</a> </p>
-<p> The SHA-256 specification, FIPS 180-2, is available at<br />
+<p> The SHA-256 specification, FIPS 180-2, is available at<br/>
  <a rel="nofollow" href="http://csrc.nist.gov/publications/fips/fips180-2/fips180-2.pdf">http://csrc.nist.gov/publications/fips/fips180-2/fips180-2.pdf</a> </p>
-<p> The Tiger specification is available at<br />
+<p> The Tiger specification is available at<br/>
  <a rel="nofollow" href="http://www.cs.technion.ac.il/~biham/Reports/Tiger/">http://www.cs.technion.ac.il/~biham/Reports/Tiger/</a> </p>
-<p> The Whirlpool specification is available at<br />
+<p> The Whirlpool specification is available at<br/>
  <a rel="nofollow" href="http://planeta.terra.com.br/informatica/paulobarreto/WhirlpoolPage.html">http://planeta.terra.com.br/informatica/paulobarreto/WhirlpoolPage.html</a> </p>

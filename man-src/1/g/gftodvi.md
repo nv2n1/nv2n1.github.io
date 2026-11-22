@@ -20,7 +20,7 @@ description: "gftodvi – make proof sheets from generic font files"
 <p> &nbsp;<wbr>&nbsp; Special font substitution: grayfont black </p>
 <p> &nbsp;<wbr>&nbsp; OK; any more? grayfontarea /home/art/don/ </p>
 <p> &nbsp;<wbr>&nbsp; OK; any more? slantfont /home/fonts/slantimagen6 </p>
-<p> &nbsp;<wbr>&nbsp; OK; any more? &lt;RET&gt;<br />
+<p> &nbsp;<wbr>&nbsp; OK; any more? &lt;RET&gt;<br/>
  will use <i>/home/art/don/black</i> as the `gray&#8217; font and <i>/home/fonts/slantimagen6</i> as the `slant&#8217; font (this name indicates a font for lines with slope 1/6 at the resolution of an Imagen printer). </p>
 <p> The <i>gf_file_name</i> on the command line must be complete. Because the resolution is part of the extension, it would not make sense to append a default extension as is done with TeX or DVI-reading software. The output file name uses the same root as the <i>gf</i> file, with the <code>.dvi</code> extension added. For example, the input file <i>cmr10.2602gf</i> would become <i>cmr10.dvi</i>.</p>
 <h2>OPTIONS</h2>
@@ -36,8 +36,8 @@ description: "gftodvi – make proof sheets from generic font files"
 <dt><i>{gray.mf,&#8230;}</i></dt>
 <dd> The Metafont sources.</dd></dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-tex/">tex</a></code>(1), <code><a href="/docs/linux/man/1-mf/">mf</a></code>(1).<br />
- Donald E. Knuth, <i>The Metafontbook</i> (Volume C of <i>Computers and Typesetting</i>), Addison-Wesley, 1986, ISBN 0-201-13445-4.<br />
+<p> <code><a href="/docs/linux/man/1-tex/">tex</a></code>(1), <code><a href="/docs/linux/man/1-mf/">mf</a></code>(1).<br/>
+ Donald E. Knuth, <i>The Metafontbook</i> (Volume C of <i>Computers and Typesetting</i>), Addison-Wesley, 1986, ISBN 0-201-13445-4.<br/>
  Donald E. Knuth et al., <i>Metafontware</i>.</p>
 <h2>AUTHORS</h2>
 <p> Donald E. Knuth wrote and still maintains the program. It was published as part of the <i>Metafontware</i> technical report. Paul Richards originally ported it to Unix. Bug reports should go to tex-k [at] tug.org (<a rel="nofollow" href="https://lists.tug.org/tex-k">https://lists.tug.org/tex-k</a>). </p>

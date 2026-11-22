@@ -16,7 +16,7 @@ description: "QuantLib::FlatHazardRate – flat hazard-rate curve"
 <p> <code>FlatHazardRate</code> (const <code>Handle</code>&lt; <code>Quote</code> &gt; &amp;hazardRate, const <code>DayCounter</code> &amp;) </p>
 <p> <code>FlatHazardRate</code> (const <code>Date</code> &amp;todaysDate, const <code>Handle</code>&lt; <code>Quote</code> &gt; &amp;hazardRate, const <code>DayCounter</code> &amp;) </p>
 <p> <code>TermStructure interface</code> </p>
-<p> <code>Date</code> <code>maxDate</code> () const<br />
+<p> <code>Date</code> <code>maxDate</code> () const<br/>
  <i>the latest date for which the curve can return values </i></p>
 <h2>Detailed Description</h2>
 <p>flat hazard-rate curve </p>

@@ -11,15 +11,15 @@ description: "WFMath::Segment – A line segment embedded in dim dimensions."
 <h2>Synopsis</h2>
 <p>#include &lt;<a href="file:/usr/include/segment.h">segment.h</a>&gt; </p>
 <h3>Public Member Functions</h3>
-<p><code>Segment</code> ()<br />
- <i>construct an uninitialized segment </i><br />
- <code>Segment</code> (const <code>Point</code>&lt; dim &gt; &amp;p1, const <code>Point</code>&lt; dim &gt; &amp;p2)<br />
- <i>construct a segment with endpoints p1 and p2 </i><br />
- <code>Segment</code> (const <code>Segment</code> &amp;s)<br />
- <i>construct a copy of a segment </i><br />
- const <code>Point</code>&lt; dim &gt; &amp; <code>endpoint</code> (const int i) const<br />
- <i>get one end of the segment </i><br />
- <code>Point</code>&lt; dim &gt; &amp; <code>endpoint</code> (const int i)<br />
+<p><code>Segment</code> ()<br/>
+ <i>construct an uninitialized segment </i><br/>
+ <code>Segment</code> (const <code>Point</code>&lt; dim &gt; &amp;p1, const <code>Point</code>&lt; dim &gt; &amp;p2)<br/>
+ <i>construct a segment with endpoints p1 and p2 </i><br/>
+ <code>Segment</code> (const <code>Segment</code> &amp;s)<br/>
+ <i>construct a copy of a segment </i><br/>
+ const <code>Point</code>&lt; dim &gt; &amp; <code>endpoint</code> (const int i) const<br/>
+ <i>get one end of the segment </i><br/>
+ <code>Point</code>&lt; dim &gt; &amp; <code>endpoint</code> (const int i)<br/>
  <i>get one end of the segment </i></p>
 <h2>Detailed Description</h2>
 <h3>template&lt;const int dim&gt; class WFMath::Segment&lt; dim &gt;</h3>

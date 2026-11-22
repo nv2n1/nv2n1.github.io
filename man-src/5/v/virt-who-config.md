@@ -89,14 +89,14 @@ description: "virt-who-config – configuration for virt-who"
 <dd>Property that should be used as identification of the hypervisor. Can be one of following: <code>uuid</code>, <code>hostname</code>, <code>hwuuid</code>. Note that some virtualization backends don&#8217;t have all of them implemented. Default is <code>uuid</code>. <code>hwuuid</code> is applicable to esx and rhevm only. This property is meant to be set up before initial run of virt-who. Changing it later will result in duplicated entries in the subscription manager. </dd>
 </dl>
 <h2>Example</h2>
-<p>[test-esx]<br />
- type=esx<br />
- server=1.2.3.4<br />
- username=admin<br />
- password=password<br />
- owner=test<br />
- env=staging<br />
- rhsm_username=admin<br />
+<p>[test-esx]<br/>
+ type=esx<br/>
+ server=1.2.3.4<br/>
+ username=admin<br/>
+ password=password<br/>
+ owner=test<br/>
+ env=staging<br/>
+ rhsm_username=admin<br/>
  rhsm_password=password </p>
 <h2>Backend Specific Options</h2>
 <h3>Esx Backend</h3>
@@ -116,9 +116,9 @@ description: "virt-who-config – configuration for virt-who"
 </dl>
 <h3>Fake Backend</h3>
 <p>Fake backend reads host/guests associations from the file on disk, for example: </p>
-<p> [fake-virt]<br />
- type=fake<br />
- file=/path/to/json<br />
+<p> [fake-virt]<br/>
+ type=fake<br/>
+ file=/path/to/json<br/>
  is_hypervisor=True </p>
 <dl>
 <dt><code>type</code></dt>
@@ -126,8 +126,8 @@ description: "virt-who-config – configuration for virt-who"
 <dt><code>is_hypervisor</code></dt>
 <dd>If true (default), the option determines that the fake data are fetched from multihost environment. </dd>
 <dt><code>file</code></dt>
-<dd>Absolute path to the JSON file that has the same structure as file returned from <code>virt-who &#8211;print</code> command, for example:<br />
- {<br />
+<dd>Absolute path to the JSON file that has the same structure as file returned from <code>virt-who &#8211;print</code> command, for example:<br/>
+ {<br/>
 &nbsp;<wbr>&quot;hypervisors&quot;:&nbsp;<wbr>[ </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>{ </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&quot;uuid&quot;:&nbsp;<wbr>&quot;7e98b6ea-0af1-4afa-b846-919549bb0fe2&quot;, </p>
@@ -139,7 +139,7 @@ description: "virt-who-config – configuration for virt-who"
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>] </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>}, </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&#8230; </p>
-<p>&nbsp;<wbr>]<br />
+<p>&nbsp;<wbr>]<br/>
  } </p>
 </dl>
 <h2>Author</h2>

@@ -10,7 +10,7 @@ description: "zlals0.f –"
 <p>zlals0.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlals0</code> (ICOMPQ, NL, NR, SQRE, NRHS, B, LDB, BX, LDBX, PERM, GIVPTR, GIVCOL, LDGCOL, GIVNUM, LDGNUM, POLES, DIFL, DIFR, Z, K, C, S, RWORK, INFO)<br />
+<p>subroutine <code>zlals0</code> (ICOMPQ, NL, NR, SQRE, NRHS, B, LDB, BX, LDBX, PERM, GIVPTR, GIVCOL, LDGCOL, GIVNUM, LDGNUM, POLES, DIFL, DIFR, Z, K, C, S, RWORK, INFO)<br/>
  <i></i><code>ZLALS0</code> applies back multiplying factors in solving the least squares problem using divide and conquer SVD approach. Used by sgelsd.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlals0 (integerICOMPQ, integerNL, integerNR, integerSQRE, integerNRHS, complex*16, dimension( ldb, * )B, integerLDB, complex*16, dimension( ldbx, * )BX, integerLDBX, integer, dimension( * )PERM, integerGIVPTR, integer, dimension( ldgcol, * )GIVCOL, integerLDGCOL, double precision, dimension( ldgnum, * )GIVNUM, integerLDGNUM, double precision, dimension( ldgnum, * )POLES, double precision, dimension( * )DIFL, double precision, dimension( ldgnum, * )DIFR, double precision, dimension( * )Z, integerK, double precisionC, double precisionS, double precision, dimension( * )RWORK, integerINFO)</h3>

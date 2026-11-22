@@ -19,7 +19,7 @@ ttree[options][files]
 
  The <i>ttree</i> script is used to process entire directory trees containing template files. The resulting output from processing each file is then written to a corresponding file in a destination directory. The script compares the modification times of source and destination files (where they already exist) and processes only those files that have been modified. In other words, it is the equivalent of 'make' for the Template Toolkit. 
 
- It supports a number of options which can be used to configure behaviour, define locations and set Template Toolkit options. The script first reads the <i>.ttreerc</i> configuration file in the <font SIZE="-1">HOME</font> directory, or an alternative file specified in the <font SIZE="-1">TTREERC</font> environment variable. Then, it processes any command line arguments, including any additional configuration files specified via the <tt>&quot;-f&quot;</tt> (file) option.
+ It supports a number of options which can be used to configure behaviour, define locations and set Template Toolkit options. The script first reads the <i>.ttreerc</i> configuration file in the HOME directory, or an alternative file specified in the TTREERC environment variable. Then, it processes any command line arguments, including any additional configuration files specified via the <tt>&quot;-f&quot;</tt> (file) option.
 
 <h3>The <i>.ttreerc</i> Configuration File</h3>
 

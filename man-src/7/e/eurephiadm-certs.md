@@ -27,19 +27,19 @@ description: "eurephiadm certs – Certificate management for eurephia"
 <dd>Decide the sort order of the certificate list</dd></dl>
 <p> Available sort keys are:</p>
 <dl>
-<dd><code>certid</code><br />
+<dd><code>certid</code><br/>
 &nbsp;<wbr>Numeric certificate ID</dd>
-<dd><code>depth</code><br />
+<dd><code>depth</code><br/>
 &nbsp;<wbr>Certificate depth</dd>
-<dd><code>digest</code><br />
+<dd><code>digest</code><br/>
 &nbsp;<wbr>Certificate SHA1 digest</dd>
-<dd><code>cname</code><br />
+<dd><code>cname</code><br/>
 &nbsp;<wbr>Certificate Common Name field</dd>
-<dd><code>org</code><br />
+<dd><code>org</code><br/>
 &nbsp;<wbr>Certificate organisation field</dd>
-<dd><code>email</code><br />
+<dd><code>email</code><br/>
 &nbsp;<wbr>Certificate e-mail address field</dd>
-<dd><code>registered</code><br />
+<dd><code>registered</code><br/>
 &nbsp;<wbr>When the certificate was registered in eurephia.</dd></dl>
 <h2>Add Mode</h2>
 <p>The add mode will register a new certificate.</p>

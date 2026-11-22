@@ -9,8 +9,8 @@ description: "pmiWrite – flush data to a LOGIMPORT archive"
 
 <p><code>pmiWrite</code> &#8211; flush data to a LOGIMPORT archive</p>
 <h2>C Synopsis</h2>
-<p><code> #include &lt;pcp/pmapi.h&gt;<br />
- #include &lt;pcp/impl.h&gt;<br />
+<p><code> #include &lt;pcp/pmapi.h&gt;<br/>
+ #include &lt;pcp/impl.h&gt;<br/>
  #include &lt;pcp/import.h&gt; </p>
 <p> int pmiWrite(int </code><i>sec</i>, int <i>usec</i>); </p>
 <p> cc &#8230; -lpcp_import -lpcp</p>

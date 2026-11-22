@@ -10,7 +10,7 @@ description: "ldns_pkt_edns, ldns_pkt_edns_udp_size, ldns_pkt_edns_extended_rcod
 
 <p> ldns_pkt_edns, ldns_pkt_edns_udp_size, ldns_pkt_edns_extended_rcode, ldns_pkt_edns_version, ldns_pkt_edns_z, ldns_pkt_edns_data, ldns_pkt_set_edns_udp_size, ldns_pkt_set_edns_extended_rcode, ldns_pkt_set_edns_version, ldns_pkt_set_edns_z, ldns_pkt_set_edns_data </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> bool ldns_pkt_edns(const ldns_pkt *packet); </p>

@@ -13,8 +13,8 @@ description: "skipInsert – insert an item."
 </code></pre>
 <pre>NEOERR *skipInsert(skipList list, UINT32 key, void *value, int allowUpdate);</pre>
 <h2>Arguments</h2>
-<p>list &#8211; list to add pair to.<br />
- key &#8211; key identifying &lt;value&gt;.<br />
+<p>list &#8211; list to add pair to.<br/>
+ key &#8211; key identifying &lt;value&gt;.<br/>
  value &#8211; value to store (may NOT be NULL)</p>
 <h2>Description</h2>
 <p>Inserts the &lt;key&gt;/&lt;value&gt; pair into the &lt;list&gt;. Key values 0 and -1 are reserved (and illegal). If key is already in list, and &lt;allowUpdate&gt; is true, value is updated, otherwise SKIPERR_EXISTS is returned. MT-Level: Safe if &lt;list&gt; thread-safe. </p>

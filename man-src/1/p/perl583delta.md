@@ -21,10 +21,10 @@ description: "perl583delta – what is new for perl v5.8.3"
         ...
     }
 </pre>
-<p> The old behaviour was that <tt>%tied_hash</tt> would return whatever would have been returned for that hash before the hash was tied (so usually 0). The new behaviour in the absence of a <font SIZE="-1">SCALAR</font> method is to return <font SIZE="-1">TRUE</font> if in the middle of an <tt>&quot;each&quot;</tt> iteration, and otherwise call <font SIZE="-1">FIRSTKEY</font> to check if the hash is empty (making sure that a subsequent <tt>&quot;each&quot;</tt> will also begin by calling <font SIZE="-1">FIRSTKEY</font>). Please see &#8220;<font SIZE="-1">SCALAR&#8221;</font> in perltie for the full details and caveats.</p>
+<p> The old behaviour was that <tt>%tied_hash</tt> would return whatever would have been returned for that hash before the hash was tied (so usually 0). The new behaviour in the absence of a SCALAR method is to return TRUE if in the middle of an <tt>&quot;each&quot;</tt> iteration, and otherwise call FIRSTKEY to check if the hash is empty (making sure that a subsequent <tt>&quot;each&quot;</tt> will also begin by calling FIRSTKEY). Please see &#8220;SCALAR&#8221; in perltie for the full details and caveats.</p>
 <h2>Modules and Pragmata</h2>
 <dl>
-<dt><font SIZE="-1">CGI</font></dt>
+<dt>CGI</dt>
 <dd>
 </dd><dt>Cwd</dt>
 <dd>
@@ -46,7 +46,7 @@ description: "perl583delta – what is new for perl v5.8.3"
 <dd>
 </dd><dt>Pod::Perldoc</dt>
 <dd>
-</dd><dt><font SIZE="-1">POSIX</font></dt>
+</dd><dt>POSIX</dt>
 <dd>
 </dd><dt>Unicode::Collate</dt>
 <dd>
@@ -58,24 +58,24 @@ description: "perl583delta – what is new for perl v5.8.3"
 <dd> <tt>&quot;cond_wait&quot;</tt> has a new two argument form. <tt>&quot;cond_timedwait&quot;</tt> has been added.</dd></dl>
 <h2>Utility Changes</h2>
 <p> <tt>&quot;find2perl&quot;</tt> now assumes <tt>&quot;-print&quot;</tt> as a default action. Previously, it needed to be specified explicitly. </p>
-<p> A new utility, <tt>&quot;prove&quot;</tt>, makes it easy to run an individual regression test at the command line. <tt>&quot;prove&quot;</tt> is part of Test::Harness, which users of earlier Perl versions can install from <font SIZE="-1">CPAN.</font></p>
+<p> A new utility, <tt>&quot;prove&quot;</tt>, makes it easy to run an individual regression test at the command line. <tt>&quot;prove&quot;</tt> is part of Test::Harness, which users of earlier Perl versions can install from CPAN.</p>
 <h2>New Documentation</h2>
 <p> The documentation has been revised in places to produce more standard manpages. </p>
-<p> The documentation for the special code blocks (<font SIZE="-1">BEGIN, CHECK, INIT, END</font>) has been improved.</p>
+<p> The documentation for the special code blocks (BEGIN, CHECK, INIT, END) has been improved.</p>
 <h2>Installation and Configuration Improvements</h2>
 <p> Perl now builds on OpenVMS I64</p>
 <h2>Selected Bug Fixes</h2>
-<p> Using <code>substr()</code> on a <font SIZE="-1">UTF8</font> string could cause subsequent accesses on that string to return garbage. This was due to incorrect <font SIZE="-1">UTF8</font> offsets being cached, and is now fixed. </p>
-<p> <code>join()</code> could return garbage when the same <code>join()</code> statement was used to process 8 bit data having earlier processed <font SIZE="-1">UTF8</font> data, due to the flags on that statement&#8217;s temporary workspace not being reset correctly. This is now fixed. </p>
+<p> Using <code>substr()</code> on a UTF8 string could cause subsequent accesses on that string to return garbage. This was due to incorrect UTF8 offsets being cached, and is now fixed. </p>
+<p> <code>join()</code> could return garbage when the same <code>join()</code> statement was used to process 8 bit data having earlier processed UTF8 data, due to the flags on that statement&#8217;s temporary workspace not being reset correctly. This is now fixed. </p>
 <p> <tt>&quot;$a .. $b&quot;</tt> will now work as expected when either <tt>$a</tt> or <tt>$b</tt> is <tt>&quot;undef&quot;</tt> </p>
 <p> Using Unicode keys with tied hashes should now work correctly. </p>
 <p> Reading $^E now preserves $!. Previously, the C code implementing $^E did not preserve <tt>&quot;errno&quot;</tt>, so reading $^E could cause <tt>&quot;errno&quot;</tt> and therefore <tt>$!</tt> to change unexpectedly. </p>
-<p> Reentrant functions will (once more) work with C<font SIZE="-2">++</font>. 5.8.2 introduced a bugfix which accidentally broke the compilation of Perl extensions written in C<font SIZE="-2">++</font></p>
+<p> Reentrant functions will (once more) work with C++. 5.8.2 introduced a bugfix which accidentally broke the compilation of Perl extensions written in C++</p>
 <h2>New or Changed Diagnostics</h2>
-<p> The fatal error &#8220;<font SIZE="-1">DESTROY</font> created new reference to dead object&#8221; is now documented in perldiag.</p>
+<p> The fatal error &#8220;DESTROY created new reference to dead object&#8221; is now documented in perldiag.</p>
 <h2>Changed Internals</h2>
 <p> The hash code has been refactored to reduce source duplication. The external interface is unchanged, and aside from the bug fixes described above, there should be no change in behaviour. </p>
-<p> <tt>&quot;hv_clear_placeholders&quot;</tt> is now part of the perl <font SIZE="-1">API</font> </p>
+<p> <tt>&quot;hv_clear_placeholders&quot;</tt> is now part of the perl API </p>
 <p> Some C macros have been tidied. In particular macros which create temporary local variables now name these variables more defensively, which should avoid bugs where names clash. </p>
 <p> &lt;signal.h&gt; is now always included.</p>
 <h2>Configuration and Building</h2>
@@ -90,12 +90,12 @@ description: "perl583delta – what is new for perl v5.8.3"
 <h2>Future Directions</h2>
 <p> Code freeze for the next maintenance release (5.8.4) is on March 31st 2004, with release expected by mid April. Similarly 5.8.5&#8217;s freeze will be at the end of June, with release by mid July.</p>
 <h2>Obituary</h2>
-<p> Iain &#8216;Spoon&#8217; Truskett, Perl hacker, author of perlreref and contributor to <font SIZE="-1">CPAN,</font> died suddenly on 29th December 2003, aged 24. He will be missed.</p>
+<p> Iain &#8216;Spoon&#8217; Truskett, Perl hacker, author of perlreref and contributor to CPAN, died suddenly on 29th December 2003, aged 24. He will be missed.</p>
 <h2>Reporting Bugs</h2>
 <p> If you find what you think is a bug, you might check the articles recently posted to the comp.lang.perl.misc newsgroup and the perl bug database at <a rel="nofollow" href="http://bugs.perl.org.">http://bugs.perl.org.</a> There may also be information at <a rel="nofollow" href="http://www.perl.org,">http://www.perl.org,</a> the Perl Home Page. </p>
 <p> If you believe you have an unreported bug, please run the <code>perlbug</code> program included with your release. Be sure to trim your bug down to a tiny but sufficient test case. Your bug report, along with the output of <tt>&quot;perl -V&quot;</tt>, will be sent off to perlbug [at] perl.org to be analysed by the Perl porting team. You can browse and search the Perl 5 bugs at <a rel="nofollow" href="http://bugs.perl.org/">http://bugs.perl.org/</a></p>
 <h2>SEE ALSO</h2>
 <p> The <i>Changes</i> file for exhaustive details on what changed. </p>
-<p> The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. </p>
-<p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
+<p> The <i></i><i>INSTALL</i><i></i> file for how to build Perl. </p>
+<p> The <i></i><i>README</i><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information. </p>

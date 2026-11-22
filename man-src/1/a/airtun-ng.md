@@ -42,21 +42,21 @@ description: "airtun-ng – a virtual tunnel interface creator for aircrack-ng"
 <h2>EXAMPLES</h2>
 <p> <code>airtun-ng</code> -a 00:14:22:56:F3:4E -t 0 -y keystream.xor wlan0 </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-airbase-ng/">airbase-ng</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-aircrack-ng/">aircrack-ng</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-airdecap-ng/">airdecap-ng</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-airdecloak-ng/">airdecloak-ng</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-airdriver-ng/">airdriver-ng</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-aireplay-ng/">aireplay-ng</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-airmon-ng/">airmon-ng</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-airodump-ng/">airodump-ng</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-airolib-ng/">airolib-ng</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-airserv-ng/">airserv-ng</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-buddy-ng/">buddy-ng</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-easside-ng/">easside-ng</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-ivstools/">ivstools</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-kstats/">kstats</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-makeivs-ng/">makeivs-ng</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-packetforge-ng/">packetforge-ng</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-tkiptun-ng/">tkiptun-ng</a>(1)</code><br />
+<p> <code><a href="/docs/linux/man/1-airbase-ng/">airbase-ng</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-aircrack-ng/">aircrack-ng</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-airdecap-ng/">airdecap-ng</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-airdecloak-ng/">airdecloak-ng</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-airdriver-ng/">airdriver-ng</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-aireplay-ng/">aireplay-ng</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-airmon-ng/">airmon-ng</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-airodump-ng/">airodump-ng</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-airolib-ng/">airolib-ng</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-airserv-ng/">airserv-ng</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-buddy-ng/">buddy-ng</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-easside-ng/">easside-ng</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-ivstools/">ivstools</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-kstats/">kstats</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-makeivs-ng/">makeivs-ng</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-packetforge-ng/">packetforge-ng</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-tkiptun-ng/">tkiptun-ng</a>(1)</code><br/>
  <code><a href="/docs/linux/man/1-wesside-ng/">wesside-ng</a>(1)</code> </p>

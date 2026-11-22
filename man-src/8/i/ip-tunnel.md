@@ -9,15 +9,15 @@ description: "ip-tunnel – tunnel configuration"
 
 <p>ip-tunnel &#8211; tunnel configuration</p>
 <h2>Synopsis</h2>
-<p><code>ip tunnel help</code><br />
- <code>ip </code> [ <i>OPTIONS</i> ] <code>tunnel</code> { <code>add</code> | <code>change</code> | <code>del</code> | <code>show</code> | <code>prl</code> | <code>6rd</code> } [ <i>NAME</i> ]<br />
- [ <code>mode</code> <i>MODE</i> ] [ <code>remote</code> <i>ADDR</i> ] [ <code>local</code> <i>ADDR</i> ]<br />
- [ [<code>i</code>|<code>o</code>]<code>seq</code> ] [ [<code>i</code>|<code>o</code>]<code>key</code> <i>KEY</i> ] [ [<code>i</code>|<code>o</code>]<code>csum</code> ] ]<br />
- [ <code>encaplimit</code> <i>ELIM</i> ] [ <code>ttl</code>|<code>hoplimit</code> <i>TTL</i> ]<br />
- [ <code>tos</code> <i>TOS</i> ] [ <code>flowlabel</code> <i>FLOWLABEL</i> ]<br />
- [ <code>prl-default</code> <i>ADDR</i> ] [ <code>prl-nodefault</code> <i>ADDR</i> ] [ <code>prl-delete</code> <i>ADDR</i> ]<br />
- [ <code>6rd-prefix</code> <i>ADDR</i> ] [ <code>6rd-relay_prefix</code> <i>ADDR</i> ] [ <code>6rd-reset</code> ]<br />
- [ [<code>no</code>]<code>pmtudisc</code> ] [ [<code>no</code>]<code>ignore-df</code> ] [ [<code>no</code>]<code>allow-localremote</code> ]<br />
+<p><code>ip tunnel help</code><br/>
+ <code>ip </code> [ <i>OPTIONS</i> ] <code>tunnel</code> { <code>add</code> | <code>change</code> | <code>del</code> | <code>show</code> | <code>prl</code> | <code>6rd</code> } [ <i>NAME</i> ]<br/>
+ [ <code>mode</code> <i>MODE</i> ] [ <code>remote</code> <i>ADDR</i> ] [ <code>local</code> <i>ADDR</i> ]<br/>
+ [ [<code>i</code>|<code>o</code>]<code>seq</code> ] [ [<code>i</code>|<code>o</code>]<code>key</code> <i>KEY</i> ] [ [<code>i</code>|<code>o</code>]<code>csum</code> ] ]<br/>
+ [ <code>encaplimit</code> <i>ELIM</i> ] [ <code>ttl</code>|<code>hoplimit</code> <i>TTL</i> ]<br/>
+ [ <code>tos</code> <i>TOS</i> ] [ <code>flowlabel</code> <i>FLOWLABEL</i> ]<br/>
+ [ <code>prl-default</code> <i>ADDR</i> ] [ <code>prl-nodefault</code> <i>ADDR</i> ] [ <code>prl-delete</code> <i>ADDR</i> ]<br/>
+ [ <code>6rd-prefix</code> <i>ADDR</i> ] [ <code>6rd-relay_prefix</code> <i>ADDR</i> ] [ <code>6rd-reset</code> ]<br/>
+ [ [<code>no</code>]<code>pmtudisc</code> ] [ [<code>no</code>]<code>ignore-df</code> ] [ [<code>no</code>]<code>allow-localremote</code> ]<br/>
  [ <code>dev</code> <i>PHYS_DEV</i> ] </p>
 <pre><code>MODE :=
 { ipip | gre | sit | isatap | vti | ip6ip6 | ipip6 | ip6gre | vti6 | any }
@@ -51,8 +51,8 @@ KEY := { DOTTED_QUAD | NUMBER }
 <dt><code>name</code><i> NAME </i><code>(default)</code></dt>
 <dd>select the tunnel device name.</dd>
 <dt><code>mode</code><i> MODE</i></dt>
-<dd>set the tunnel mode. Available modes depend on the encapsulating address family.<br />
- Modes for IPv4 encapsulation available: <code>ipip</code>, <code>sit</code>, <code>isatap</code>, <code>vti</code>, and <code>gre</code>.<br />
+<dd>set the tunnel mode. Available modes depend on the encapsulating address family.<br/>
+ Modes for IPv4 encapsulation available: <code>ipip</code>, <code>sit</code>, <code>isatap</code>, <code>vti</code>, and <code>gre</code>.<br/>
  Modes for IPv6 encapsulation available: <code>ip6ip6</code>, <code>ipip6</code>, <code>ip6gre</code>, <code>vti6</code>, and <code>any</code>.</dd>
 <dt><code>remote</code><i> ADDRESS</i></dt>
 <dd>set the remote endpoint of the tunnel.</dd>

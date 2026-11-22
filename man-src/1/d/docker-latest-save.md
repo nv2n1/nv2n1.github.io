@@ -15,9 +15,9 @@ description: "docker-save – Save one or more images to a tar archive (streamed
 <p> Produces a tarred repository to the standard output stream. Contains all parent layers, and all tags + versions, or specified repo:tag. </p>
 <p> Stream to a file instead of STDOUT by using <code>-o</code>. </p>
 <h2>OPTIONS</h2>
-<p> <code>&#8211;help</code><br />
+<p> <code>&#8211;help</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Print usage statement </p>
-<p> <code>-o</code>, <code>&#8211;output</code>=&quot;&quot;<br />
+<p> <code>-o</code>, <code>&#8211;output</code>=&quot;&quot;<br/>
 Write to a file, instead of STDOUT </p>
 <h2>EXAMPLES</h2>
 <p> Save all fedora repository images to a fedora-all.tar and save the latest fedora image to a fedora-latest.tar: </p>

@@ -13,8 +13,8 @@ description: "glutShowOverlay – Make an overlay visible."
 <h2>Synopsis</h2>
 <p>In openglut.h Ft void Fn glutShowOverlay void</p>
 <h2>Description</h2>
-<p>Causes a previously-hidden overlay to become apparent. Applies to the Bf Li<br />
-&nbsp;<wbr>current window Ef<br />
+<p>Causes a previously-hidden overlay to become apparent. Applies to the Bf Li<br/>
+&nbsp;<wbr>current window Ef<br/>
 &nbsp;<wbr>. </p>
 <h2>Caveats</h2>
 <p>Unimplemented. </p>

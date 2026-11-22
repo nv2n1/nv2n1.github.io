@@ -13,12 +13,12 @@ description: "glutSetWindowStayOnTop – Set stay on top mode for current window
 <h2>Synopsis</h2>
 <p>In openglut.h Ft void Fn glutSetWindowStayOnTop int enable</p>
 <h2>Parameters</h2>
-<p>Bf Em<br />
-&nbsp;<wbr>enable Ef<br />
-&nbsp;<wbr>Either&nbsp;<wbr> Bf Sy<br />
-&nbsp;<wbr>GL_TRUE Ef<br />
-&nbsp;<wbr>or&nbsp;<wbr> Bf Sy<br />
-&nbsp;<wbr>GL_FALSE Ef<br />
+<p>Bf Em<br/>
+&nbsp;<wbr>enable Ef<br/>
+&nbsp;<wbr>Either&nbsp;<wbr> Bf Sy<br/>
+&nbsp;<wbr>GL_TRUE Ef<br/>
+&nbsp;<wbr>or&nbsp;<wbr> Bf Sy<br/>
+&nbsp;<wbr>GL_FALSE Ef<br/>
 &nbsp;<wbr></p>
 <h2>Description</h2>
 <h2>Caveats</h2>

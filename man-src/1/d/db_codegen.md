@@ -58,21 +58,21 @@ DB      *data_two;
 </blockquote>
 <p> For example, the following input would create a database environment which contains three databases: </p>
 <blockquote><p>
-environment myenv<br />
-{<br />
-    database data_one{<br />
-        type btree} database data_two{<br />
-        type btree} database data_three<br />
-    {<br />
-        type btree<br />
-    }<br />
+environment myenv<br/>
+{<br/>
+    database data_one{<br/>
+        type btree} database data_two{<br/>
+        type btree} database data_three<br/>
+    {<br/>
+        type btree<br/>
+    }<br/>
 }
  </p></blockquote>
 <p> In this case, the public Vt DB_ENV and Vt DB handles would be: </p>
 <blockquote><p>
-DB_ENV *myenv_dbenv;<br />
-DB *myenv_data_one;<br />
-DB *myenv_data_two;<br />
+DB_ENV *myenv_dbenv;<br/>
+DB *myenv_data_one;<br/>
+DB *myenv_data_two;<br/>
 DB *myenv_data_three;
  </p></blockquote>
 <p> A variety of keywords can be specified for the databases and the environments. For example, the cache size can be specified for the database environment, and the page size can be specified for the database, as well as for secondary relationships: </p>

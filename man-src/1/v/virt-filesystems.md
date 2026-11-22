@@ -68,10 +68,10 @@ $ virt - filesystems - a win.img-- all-- long --uuid - h Name Type VFS Label Siz
 </dd><dt><code>&#8211;add</code> file</dt>
 <dd> Add <i>file</i> which should be a disk image from a virtual machine. If the virtual machine has multiple block devices, you must supply all of them with separate <i>-a</i> options. </dd>
 <p> The format of the disk image is auto-detected. To override this and force a particular format use the <i>&#8211;format=..</i> option.</p>
-<dt><code>-a </code><font SIZE="-1"><code>URI</code></font></dt>
+<dt><code>-a </code><code>URI</code></dt>
 <dd>
-</dd><dt><code>&#8211;add </code><font SIZE="-1"><code>URI</code></font></dt>
-<dd> Add a remote disk. See &#8220;<font SIZE="-1">ADDING REMOTE STORAGE&#8221;</font> in <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1).</dd>
+</dd><dt><code>&#8211;add </code><code>URI</code></dt>
+<dd> Add a remote disk. See &#8220;ADDING REMOTE STORAGE&#8221; in <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1).</dd>
 <dt><code>&#8211;all</code></dt>
 <dd> Display everything. This is currently the same as specifying these options: <i>&#8211;filesystems</i>, <i>&#8211;extra</i>, <i>&#8211;partitions</i>, <i>&#8211;block-devices</i>, <i>&#8211;logical-volumes</i>, <i>&#8211;volume-groups</i>, <i>&#8211;physical-volumes</i>. (More may be added to this list in future). </dd>
 <p> See also <i>&#8211;long</i>.</p>
@@ -79,13 +79,13 @@ $ virt - filesystems - a win.img-- all-- long --uuid - h Name Type VFS Label Siz
 <dd>
 </dd><dt><code>&#8211;block-devices</code></dt>
 <dd> Display block devices.</dd>
-<dt><code>-c</code> <font SIZE="-1">URI</font></dt>
+<dt><code>-c</code> URI</dt>
 <dd>
-</dd><dt><code>&#8211;connect</code> <font SIZE="-1">URI</font></dt>
-<dd> If using libvirt, connect to the given <i></i><font SIZE="-1"><i>URI</i></font><i></i>. If omitted, then we connect to the default libvirt hypervisor. </dd>
+</dd><dt><code>&#8211;connect</code> URI</dt>
+<dd> If using libvirt, connect to the given <i></i><i>URI</i><i></i>. If omitted, then we connect to the default libvirt hypervisor. </dd>
 <p> If you specify guest block devices directly (<i>-a</i>), then libvirt is not used at all.</p>
 <dt><code>&#8211;csv</code></dt>
-<dd> Write out the results in <font SIZE="-1">CSV</font> format (comma-separated values). This format can be imported easily into databases and spreadsheets, but read &#8220;<font SIZE="-1">NOTE ABOUT CSV FORMAT&#8221;</font> below.</dd>
+<dd> Write out the results in CSV format (comma-separated values). This format can be imported easily into databases and spreadsheets, but read &#8220;NOTE ABOUT CSV FORMAT&#8221; below.</dd>
 <dt><code>-d</code> guest</dt>
 <dd>
 </dd><dt><code>&#8211;domain</code> guest</dt>
@@ -111,7 +111,7 @@ $ virt - filesystems - a win.img-- all-- long --uuid - h Name Type VFS Label Siz
  virt-filesystems --format=raw -a disk.img --format -a another.img
 </pre>
 <p> forces raw format (no auto-detection) for <i>disk.img</i> and reverts to auto-detection for <i>another.img</i>. </p>
-<p> If you have untrusted raw-format guest disk images, you should use this option to specify the disk format. This avoids a possible security problem with malicious guests (<font SIZE="-1">CVE-2010-3851</font>).</p>
+<p> If you have untrusted raw-format guest disk images, you should use this option to specify the disk format. This avoids a possible security problem with malicious guests (CVE-2010-3851).</p>
 <dt><code>-h</code></dt>
 <dd>
 </dd><dt><code>&#8211;human-readable</code></dt>
@@ -131,7 +131,7 @@ $ virt - filesystems - a win.img-- all-- long --uuid - h Name Type VFS Label Siz
 </dd><dt><code>&#8211;logvols</code></dt>
 <dd>
 </dd><dt><code>&#8211;logical-volumes</code></dt>
-<dd> Display <font SIZE="-1">LVM</font> logical volumes. In this mode, these are displayed irrespective of whether the LVs contain filesystems.</dd>
+<dd> Display LVM logical volumes. In this mode, these are displayed irrespective of whether the LVs contain filesystems.</dd>
 <dt><code>&#8211;no-title</code></dt>
 <dd> In <i>&#8211;long</i> mode, don&#8217;t add a title row. </dd>
 <p> Note that the order of the columns is not fixed, and may change in future versions of virt-filesystems, so using this option may give you unexpected surprises.</p>
@@ -144,7 +144,7 @@ $ virt - filesystems - a win.img-- all-- long --uuid - h Name Type VFS Label Siz
 </dd><dt><code>&#8211;physvols</code></dt>
 <dd>
 </dd><dt><code>&#8211;physical-volumes</code></dt>
-<dd> Display <font SIZE="-1">LVM</font> physical volumes.</dd>
+<dd> Display LVM physical volumes.</dd>
 <dt><code>&#8211;uuid</code></dt>
 <dd>
 </dd><dt><code>&#8211;uuids</code></dt>
@@ -162,36 +162,36 @@ $ virt - filesystems - a win.img-- all-- long --uuid - h Name Type VFS Label Siz
 </dd><dt><code>&#8211;volgroups</code></dt>
 <dd>
 </dd><dt><code>&#8211;volume-groups</code></dt>
-<dd> Display <font SIZE="-1">LVM</font> volume groups.</dd>
+<dd> Display LVM volume groups.</dd>
 <dt><code>-x</code></dt>
-<dd> Enable tracing of libguestfs <font SIZE="-1">API</font> calls.</dd></dl>
+<dd> Enable tracing of libguestfs API calls.</dd></dl>
 <h2>COLUMNS</h2>
 <p> Note that columns in the output are subject to reordering and change in future versions of this tool.</p>
 <dl>
 <dt><code>Name</code></dt>
-<dd> The filesystem, partition, block device or <font SIZE="-1">LVM</font> name. </dd>
+<dd> The filesystem, partition, block device or LVM name. </dd>
 <p> For device and partition names these are displayed as canonical libguestfs names, so that for example <i>/dev/sda2</i> is the second partition on the first device. </p>
 <p> If the <i>&#8211;long</i> option is <code>not</code> specified, then only the name column is shown in the output.</p>
 <dt><code>Type</code></dt>
 <dd> The object type, for example <tt>&quot;filesystem&quot;</tt>, <tt>&quot;lv&quot;</tt>, <tt>&quot;device&quot;</tt> etc.</dd>
-<dt><font SIZE="-1"><code>VFS</code></font></dt>
+<dt><code>VFS</code></dt>
 <dd> If there is a filesystem, then this column displays the filesystem type if one could be detected, eg. <tt>&quot;ext4&quot;</tt>.</dd>
 <dt><code>Label</code></dt>
 <dd> If the object has a label (used for identifying and mounting filesystems) then this column contains the label.</dd>
-<dt><font SIZE="-1"><code>MBR</code></font></dt>
+<dt><code>MBR</code></dt>
 <dd> The partition type byte, displayed as a two digit hexadecimal number. A comprehensive list of partition types can be found here: <a rel="nofollow" href="http://www.win.tue.nl/~aeb/partitions/partition_types-1.html">http://www.win.tue.nl/~aeb/partitions/partition_types-1.html</a> </dd>
-<p> This is only applicable for <font SIZE="-1">DOS </font>(<font SIZE="-1">MBR</font>) partitions.</p>
+<p> This is only applicable for DOS (MBR) partitions.</p>
 <dt><code>Size</code></dt>
 <dd> The size of the object in bytes. If the <i>&#8211;human</i> option is used then the size is displayed in a human-readable form.</dd>
 <dt><code>Parent</code></dt>
 <dd> The parent column records the parent relationship between objects. </dd>
 <p> For example, if the object is a partition, then this column contains the name of the containing device. If the object is a logical volume, then this column is the name of the volume group. </p>
 <p> If there is more than one parent, then this column is (internal to the column) a comma-separated list, eg. <tt>&quot;/dev/sda,/dev/sdb&quot;</tt>.</p>
-<dt><font SIZE="-1"><code>UUID</code></font></dt>
-<dd> If the object has a <font SIZE="-1">UUID </font>(used for identifying and mounting filesystems and block devices) then this column contains the <font SIZE="-1">UUID</font> as a string. </dd>
-<p> The <font SIZE="-1">UUID</font> is only displayed if the <i>&#8211;uuid</i> option is given.</dl>
+<dt><code>UUID</code></dt>
+<dd> If the object has a UUID (used for identifying and mounting filesystems and block devices) then this column contains the UUID as a string. </dd>
+<p> The UUID is only displayed if the <i>&#8211;uuid</i> option is given.</dl>
 <h2>NOTE ABOUT CSV FORMAT</h2>
-<p> Comma-separated values (<font SIZE="-1">CSV</font>) is a deceptive format. It <i>seems</i> like it should be easy to parse, but it is definitely not easy to parse. </p>
+<p> Comma-separated values (CSV) is a deceptive format. It <i>seems</i> like it should be easy to parse, but it is definitely not easy to parse. </p>
 <p> Myth: Just split fields at commas. Reality: This does <i>not</i> work reliably. This example has two columns: </p>
 <pre>
  &quot;foo,bar&quot;,baz
@@ -202,8 +202,8 @@ $ virt - filesystems - a win.img-- all-- long --uuid - h Name Type VFS Label Siz
  bar&quot;,baz
 </pre>
 <p> For shell scripts, use <tt>&quot;csvtool&quot;</tt> (<a rel="nofollow" href="https://github.com/Chris00/ocaml-csv">https://github.com/Chris00/ocaml-csv</a> also packaged in major Linux distributions). </p>
-<p> For other languages, use a <font SIZE="-1">CSV</font> processing library (eg. <tt>&quot;Text::CSV&quot;</tt> for Perl or Python&#8217;s built-in csv library). </p>
-<p> Most spreadsheets and databases can import <font SIZE="-1">CSV</font> directly.</p>
+<p> For other languages, use a CSV processing library (eg. <tt>&quot;Text::CSV&quot;</tt> for Perl or Python&#8217;s built-in csv library). </p>
+<p> Most spreadsheets and databases can import CSV directly.</p>
 <h2>EXIT STATUS</h2>
 <p> This program returns 0 if successful, or non-zero if there was an error.</p>
 <h2>SEE ALSO</h2>
@@ -213,9 +213,9 @@ $ virt - filesystems - a win.img-- all-- long --uuid - h Name Type VFS Label Siz
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2010-2012 Red Hat Inc.</p>
 <h2>LICENSE</h2>
-<p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
-<p> This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE. </font> See the <font SIZE="-1">GNU</font> General Public License for more details. </p>
-<p> You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, <font SIZE="-1">MA 02110-1301 USA.</font></p>
+<p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
+<p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. </p>
+<p> You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.</p>
 <h2>BUGS</h2>
 <p> To get a list of bugs against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/buglist.cgi?component=libguestfs">https://bugzilla.redhat.com/buglist.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>
 <p> To report a new bug against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs">https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>

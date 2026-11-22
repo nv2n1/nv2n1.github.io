@@ -9,7 +9,7 @@ description: "ntfsresize – resize an NTFS filesystem without data loss"
 
 <p>ntfsresize &#8211; resize an NTFS filesystem without data loss</p>
 <h2>Synopsis</h2>
-<p><code>ntfsresize</code> [<i>OPTIONS</i>] <code>&#8211;info(-mb-only)</code> <i>DEVICE</i><br />
+<p><code>ntfsresize</code> [<i>OPTIONS</i>] <code>&#8211;info(-mb-only)</code> <i>DEVICE</i><br/>
  <code>ntfsresize</code> [<i>OPTIONS</i>] [<code>&#8211;size </code><i>SIZE</i>[<code>k</code>|<code>M</code>|<code>G</code>]] <i>DEVICE</i></p>
 <h2>Description</h2>
 <p>The <code>ntfsresize</code> program safely resizes Windows XP, Windows Server 2003, Windows 2000, Windows NT4 and Longhorn NTFS filesystems without data loss. All NTFS versions are supported, used by 32-bit and 64-bit Windows. <code>Defragmentation is NOT required prior to resizing</code> because the program can relocate any data if needed, without risking data integrity. </p>
@@ -62,7 +62,7 @@ description: "ntfsresize – resize an NTFS filesystem without data loss"
 <h2>Exit Codes</h2>
 <p>The exit code is 0 on success, non-zero otherwise.</p>
 <h2>Known Issues</h2>
-<p>No reliability problem is known. If you find a bug please send an email describing the problem to the development team at:<br />
+<p>No reliability problem is known. If you find a bug please send an email describing the problem to the development team at:<br/>
  ntfs-3g-devel [at] lists.sf.net </p>
 <p> There are a few very rarely met restrictions at present: filesystems having unknown bad sectors, relocation of the first MFT extent and resizing into the middle of a $MFTMirr extent aren&#8217;t supported yet. These cases are detected and resizing is restricted to a safe size or the closest safe size is displayed. </p>
 <p> <code>Ntfsresize</code> schedules an NTFS consistency check and after the first boot into Windows you must see <code>chkdsk</code> running on a blue background. This is intentional and no need to worry about it. Windows may force a quick reboot after the consistency check. Moreover after repartitioning your disk and depending on the hardware configuration, the Windows message <code>System Settings Change</code> may also appear. Just acknowledge it and reboot again. </p>
@@ -72,7 +72,7 @@ description: "ntfsresize – resize an NTFS filesystem without data loss"
 <h2>Acknowledgement</h2>
 <p>Many thanks to Anton Altaparmakov and Richard Russon for libntfs, the excellent documentation and comments, to Gergely Madarasz, Dewey M. Sasser and Miguel Lastra and his colleagues at the University of Granada for their continuous and highly valuable help, furthermore to Erik Meade, Martin Fick, Sandro Hawke, Dave Croal, Lorrin Nelson, Geert Hendrickx, Robert Bjorkman and Richard Burdick for beta testing the relocation support, to Florian Eyben, Fritz Oppliger, Richard Ebling, Sid-Ahmed Touati, Jan Kiszka, Benjamin Redelings, Christopher Haney, Ryan Durk, Ralf Beyer, Scott Hansen, Alan Evans for the valued contributions and to Theodore Ts&#8217;o whose <code><a href="/docs/linux/man/8-resize2fs/">resize2fs</a></code>(8) man page originally formed the basis of this page.</p>
 <h2>Availability</h2>
-<p><code>ntfsresize</code> is part of the <code>ntfs-3g</code> package and is available from:<br />
+<p><code>ntfsresize</code> is part of the <code>ntfs-3g</code> package and is available from:<br/>
  <a rel="nofollow" href="https://github.com/tuxera/ntfs-3g/wiki/">https://github.com/tuxera/ntfs-3g/wiki/</a></p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-fdisk/">fdisk</a></code>(8), <code><a href="/docs/linux/man/8-cfdisk/">cfdisk</a></code>(8), <code><a href="/docs/linux/man/8-sfdisk/">sfdisk</a></code>(8), <code><a href="/docs/linux/man/8-parted/">parted</a></code>(8), <code>evms</code>(8), <code><a href="/docs/linux/man/8-ntfsclone/">ntfsclone</a></code>(8), <code><a href="/docs/linux/man/8-mkntfs/">mkntfs</a></code>(8), <code><a href="/docs/linux/man/8-ntfsprogs/">ntfsprogs</a></code>(8) </p>

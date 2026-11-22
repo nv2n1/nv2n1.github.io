@@ -14,7 +14,7 @@ description: "docker-port – List port mappings for the CONTAINER, or lookup th
 <h2>DESCRIPTION</h2>
 <p> List port mappings for the CONTAINER, or lookup the public-facing port that is NAT-ed to the PRIVATE_PORT </p>
 <h2>OPTIONS</h2>
-<p> <code>&#8211;help</code><br />
+<p> <code>&#8211;help</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Print usage statement </p>
 <h2>EXAMPLES</h2>
 <dl>

@@ -191,11 +191,11 @@ description: "virt-who – Agent for reporting virtual guest IDs to Subscription
 <h2>Security</h2>
 <p>Virt-who may present security concerns in some scenarios because it needs access to every hypervisor in the environment. To minimize security risk, virt-who is a network client, not a server. It only does outbound connections to find and register new hypervisors and does not need access to any virtual machines. To further reduce risk, deploy virt-who in a small virtual machine with a minimal installation and lock it down from any unsolicited inbound network connections. </p>
 <p> Here is a list of ports that need to be open for different hypervisors: </p>
-<p>&nbsp;<wbr>VMWare ESX/vCenter: 443/tcp<br />
-&nbsp;<wbr>Hyper-V: 5985/tcp<br />
-&nbsp;<wbr>RHEV-M: 443/tcp or 8443/tcp&nbsp;<wbr>(depending on version)<br />
-&nbsp;<wbr>XenServer: 443/tcp<br />
-&nbsp;<wbr>libvirt: depending on transport type, default&nbsp;<wbr>(for remote connections)&nbsp;<wbr>is qemu over ssh on port 22<br />
+<p>&nbsp;<wbr>VMWare ESX/vCenter: 443/tcp<br/>
+&nbsp;<wbr>Hyper-V: 5985/tcp<br/>
+&nbsp;<wbr>RHEV-M: 443/tcp or 8443/tcp&nbsp;<wbr>(depending on version)<br/>
+&nbsp;<wbr>XenServer: 443/tcp<br/>
+&nbsp;<wbr>libvirt: depending on transport type, default&nbsp;<wbr>(for remote connections)&nbsp;<wbr>is qemu over ssh on port 22<br/>
 &nbsp;<wbr>local libvirt and vdsm use local connections and don&#8217;t need open ports </p>
 <p> virt-who also needs to have access to Subscription Asset Manager, Satellite 5, or Satellite 6. Default port is 443/tcp. All the ports might be changed by system administrators. </p>
 <p> Using the same network for machine running virt-who as for hypervisor management software instead of production VM networks is suggested.</p>

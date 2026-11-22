@@ -27,7 +27,7 @@ description: "leaf – Lightweight Editor of Ascii(and more) Files"
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> <code>leaf</code> is frequently used to edit plain text email message content. Because email messages assign some semantical meaning to lines of text that start with spaces or &quot;&gt;&quot; characters, CTRL-J will not rejustify lines of text that begin with a &quot;&gt;&quot; or a space. These lines will be considered paragraph boundaries, in addition to blank lines. </p>
 </dl>
 <h3>Spell checking</h3>

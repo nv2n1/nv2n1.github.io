@@ -10,11 +10,11 @@ description: "sslsplit — transparent SSL/TLS interception"
 
 <p> sslsplit &#8212; transparent SSL/TLS interception</p>
 <h2>SYNOPSIS</h2>
-<p> <code>sslsplit</code> [<code>-kCKwWOPZdDgGsrReumjplLSFi</code>] <code>-c</code> <i>pem</i> <i>proxyspecs</i> [&#8230;]<br />
- <code>sslsplit</code> [<code>-kCKwWOPZdDgGsrReumjplLSFi</code>] <code>-c</code> <i>pem</i> <code>-t</code> <i>dir</i> <i>proxyspecs</i> [&#8230;]<br />
- <code>sslsplit</code> [<code>-OPZwWdDgGsrReumjplLSFi</code>] <code>-t</code> <i>dir</i> <i>proxyspecs</i> [&#8230;]<br />
- <code>sslsplit -E</code><br />
- <code>sslsplit -V</code><br />
+<p> <code>sslsplit</code> [<code>-kCKwWOPZdDgGsrReumjplLSFi</code>] <code>-c</code> <i>pem</i> <i>proxyspecs</i> [&#8230;]<br/>
+ <code>sslsplit</code> [<code>-kCKwWOPZdDgGsrReumjplLSFi</code>] <code>-c</code> <i>pem</i> <code>-t</code> <i>dir</i> <i>proxyspecs</i> [&#8230;]<br/>
+ <code>sslsplit</code> [<code>-OPZwWdDgGsrReumjplLSFi</code>] <code>-t</code> <i>dir</i> <i>proxyspecs</i> [&#8230;]<br/>
+ <code>sslsplit -E</code><br/>
+ <code>sslsplit -V</code><br/>
  <code>sslsplit -h</code> </p>
 <h2>DESCRIPTION</h2>
 <p> SSLsplit is a tool for man-in-the-middle attacks against SSL/TLS encrypted network connections. It is intended to be useful for network forensics, application security analysis and penetration testing. </p>
@@ -88,10 +88,10 @@ description: "sslsplit — transparent SSL/TLS interception"
 <dd> Disable SSL/TLS compression on all connections. This is useful if your limiting factor is CPU, not network bandwidth. The <code>-Z</code> option is only available if SSLsplit was built against a version of OpenSSL which supports disabling compression.</dd></dl>
 <h2>PROXY SPECIFICATIONS</h2>
 <p> Proxy specifications (<i>proxyspecs</i>) consist of the connection type, listen address and static forward address or address resolution mechanism (NAT engine, SNI DNS lookup): </p>
-<p> <code>https</code> <i>listenaddr port</i> [<i>nat-engine</i>|<i>fwdaddr port</i>|<code>sni</code> <i>port</i>]<br />
- <code>ssl</code> <i>listenaddr port</i> [<i>nat-engine</i>|<i>fwdaddr port</i>|<code>sni</code> <i>port</i>]<br />
- <code>http</code> <i>listenaddr port</i> [<i>nat-engine</i>|<i>fwdaddr port</i>]<br />
- <code>tcp</code> <i>listenaddr port</i> [<i>nat-engine</i>|<i>fwdaddr port</i>]<br />
+<p> <code>https</code> <i>listenaddr port</i> [<i>nat-engine</i>|<i>fwdaddr port</i>|<code>sni</code> <i>port</i>]<br/>
+ <code>ssl</code> <i>listenaddr port</i> [<i>nat-engine</i>|<i>fwdaddr port</i>|<code>sni</code> <i>port</i>]<br/>
+ <code>http</code> <i>listenaddr port</i> [<i>nat-engine</i>|<i>fwdaddr port</i>]<br/>
+ <code>tcp</code> <i>listenaddr port</i> [<i>nat-engine</i>|<i>fwdaddr port</i>]<br/>
  <code>autossl</code> <i>listenaddr port</i> [<i>nat-engine</i>|<i>fwdaddr port</i>]</p>
 <dl>
 <dt><code>https</code></dt>

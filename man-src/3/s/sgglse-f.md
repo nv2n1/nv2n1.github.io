@@ -10,7 +10,7 @@ description: "sgglse.f –"
 <p>sgglse.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>sgglse</code> (M, N, P, A, LDA, B, LDB, C, D, X, WORK, LWORK, INFO)<br />
+<p>subroutine <code>sgglse</code> (M, N, P, A, LDA, B, LDB, C, D, X, WORK, LWORK, INFO)<br/>
  <i></i><code> SGGLSE solves overdetermined or underdetermined systems for OTHER matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sgglse (integerM, integerN, integerP, real, dimension( lda, * )A, integerLDA, real, dimension( ldb, * )B, integerLDB, real, dimension( * )C, real, dimension( * )D, real, dimension( * )X, real, dimension( * )WORK, integerLWORK, integerINFO)</h3>

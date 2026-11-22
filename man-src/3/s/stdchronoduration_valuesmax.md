@@ -17,12 +17,12 @@ static constexpr Rep max() noexcept;  (since C++20)</code></pre>
 <h2>Return value</h2>
 <p>returns std::numeric_limits&lt;Rep&gt;::max() </p>
 <h2>See also</h2>
-<p>max returns the special duration value max<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member function of std::chrono::duration&lt;Rep,Period&gt;)</i><br />
-<code>[static]</code><br />
-zero returns a zero-length representation<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member function)</i><br />
-<code>[static]</code><br />
-min returns the smallest possible representation<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member function)</i><br />
+<p>max returns the special duration value max<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member function of std::chrono::duration&lt;Rep,Period&gt;)</i><br/>
+<code>[static]</code><br/>
+zero returns a zero-length representation<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member function)</i><br/>
+<code>[static]</code><br/>
+min returns the smallest possible representation<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member function)</i><br/>
 <code>[static]</code> </p>

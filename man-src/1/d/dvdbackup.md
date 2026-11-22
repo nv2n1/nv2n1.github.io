@@ -49,7 +49,7 @@ description: "dvdbackup – Tool to backup DVDs"
 <dt><code>-p, &#8211;progress</code></dt>
 <dd> print progress information while copying VOBs</dd></dl>
 <h2>Option notes</h2>
-<p> <code>-a</code> is option to the <code>-F</code> switch and has no effect on other options<br />
+<p> <code>-a</code> is option to the <code>-F</code> switch and has no effect on other options<br/>
  <code>-s</code> and <code>-e</code> should preferably be used together with <code>-t</code></p>
 <h2>General backup information</h2>
 <p> If your backup directory is /my/dvd/backup/dir/ specified with the <code>-o</code> flag, then dvdbackup will create a DVD-Video structure under /my/dvd/backup/dir/TITLE_NAME/VIDEO_TS. If the <code>-o</code> flag is omitted, the current directory is used. </p>
@@ -72,8 +72,8 @@ description: "dvdbackup – Tool to backup DVDs"
 <dd> backups the title 1. This action backups all cells that forms the specified title. Note that there can be sector gaps in between one cell and another. dvdbackup will backup all sectors that belongs to the title but will skip sectors that are not a part of the title.</dd>
 <dt><code>dvdbackup -t </code><i>1</i><code> -s </code><i>20</i><code> -e </code><i>25</dt>
 <dd> This action will backup chapter 20 to 25 in title 1, as with the backup of a title there can be sector gaps between one chapter (cell) and on other. dvdbackup will backup all sectors that belongs to the title 1 chapter 20 to 25 but will skip sectors that are not a part of the title 1 chapter 20 to 25. </dd>
-<p> To backup a single chapter e.g. chapter 20 do </i><code>-s</code> 20 <code>-e</code> 20.<br />
- To backup from chapter 20 to the end chapter use only <code>-s</code> 20.<br />
+<p> To backup a single chapter e.g. chapter 20 do </i><code>-s</code> 20 <code>-e</code> 20.<br/>
+ To backup from chapter 20 to the end chapter use only <code>-s</code> 20.<br/>
  To backup to chapter 20 from the first chapter use only <code>-e</code> 20. </p>
 <p> You can skip the <code>-t</code> switch and let the program guess the title although it is not recommended. </p>
 <p> If you specify a chapter that is higher than the last chapter of the title dvdbackup will truncate to the highest chapter of the title.</dl>

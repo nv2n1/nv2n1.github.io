@@ -187,7 +187,7 @@ description: "bmake – maintain program dependencies"
 <dt><i>.MAKE.PPID</i></dt>
 <dd> The parent process-id of <code>.</code></dd>
 <dt><i>.MAKE.JOB.PREFIX</i></dt>
-<dd> If is run with <i>j</i> then output for each target is prefixed with a token `&#8212;&#8216; target &#8212; the first part of which can be controlled via <i>.MAKE.JOB.PREFIX</i><br />
+<dd> If is run with <i>j</i> then output for each target is prefixed with a token `&#8212;&#8216; target &#8212; the first part of which can be controlled via <i>.MAKE.JOB.PREFIX</i><br/>
  For example: <code>.MAKE.JOB.PREFIX=${.newline}&#8212;${.MAKE:T}[${.MAKE.PID}]</code> would produce tokens like `&#8212;make[1234]&#8217; target &#8212; making it easier to track the degree of parallelism being achieved.</dd>
 <dt><code>MAKEFLAGS</code></dt>
 <dd> The environment variable `<code>MAKEFLAGS</code> &#8216; may contain anything that may be specified on <code>&#8216;s</code> command line. Anything specified on <code>&#8216;s</code> command line is appended to the `<code>MAKEFLAGS</code> &#8216; variable which is then entered into the environment for all programs which executes.</dd>
@@ -455,7 +455,7 @@ b: b1
 b1:
         echo b1
 </pre>
-<p> the output is always `a&#8217; , `b1&#8242; , `b&#8217; , `x&#8217;<br />
+<p> the output is always `a&#8217; , `b1&#8242; , `b&#8217; , `x&#8217;<br/>
  The ordering imposed by <code>.WAIT</code> is only relevant for parallel makes.</dl>
 <h2>SPECIAL TARGETS</h2>
 <p> Special targets may not be included with other targets, i.e. they must be the only target specified.</p>

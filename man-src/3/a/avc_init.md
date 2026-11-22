@@ -10,11 +10,11 @@ description: "avc_init – legacy userspace SELinux AVC setup"
 
 <p> avc_init &#8211; legacy userspace SELinux AVC setup </p>
 <h2>SYNOPSIS</h2>
-<p> <code>#include &lt;selinux/selinux.h&gt;</code><br />
+<p> <code>#include &lt;selinux/selinux.h&gt;</code><br/>
  <code>#include &lt;selinux/avc.h&gt;</code> </p>
-<p> <code>int avc_init(const char *</code><i>msgprefix</i><code>,</code> <code>const struct avc_memory_callback *</code><i>mem_callbacks</i><code>,</code><br />
- <code>const struct avc_log_callback *</code><i>log_callbacks</i><code>,</code><br />
- <code>const struct avc_thread_callback *</code><i>thread_callbacks</i><code>,</code><br />
+<p> <code>int avc_init(const char *</code><i>msgprefix</i><code>,</code> <code>const struct avc_memory_callback *</code><i>mem_callbacks</i><code>,</code><br/>
+ <code>const struct avc_log_callback *</code><i>log_callbacks</i><code>,</code><br/>
+ <code>const struct avc_thread_callback *</code><i>thread_callbacks</i><code>,</code><br/>
  <code>const struct avc_lock_callback *</code><i>lock_callbacks</i><code>);</code></p>
 <h2>DESCRIPTION</h2>
 <p> <code>avc_init</code>() is deprecated; please use <code><a href="/docs/linux/man/3-avc_open/">avc_open</a></code>(3) in conjunction with <code><a href="/docs/linux/man/3-selinux_set_callback/">selinux_set_callback</a></code>(3) in all new code. </p>
@@ -37,11 +37,11 @@ struct avc_memory_callback {
 <dl>
 <dt>
 </dt><dd>
-struct avc_log_callback {<br />
-    void (*func_log)(const char *fmt, &#8230;);<br />
-    void (*func_audit)(void *auditdata,<br />
-                       security_class_t class,<br />
-                       char *msgbuf, size_t msgbufsize);<br />
+struct avc_log_callback {<br/>
+    void (*func_log)(const char *fmt, &#8230;);<br/>
+    void (*func_audit)(void *auditdata,<br/>
+                       security_class_t class,<br/>
+                       char *msgbuf, size_t msgbufsize);<br/>
 };
 </dd></dl>
 <p> The <code>func_log</code> callback should accept a <code><a href="/docs/linux/man/3-printf/">printf</a></code>(3) style format and arguments and log them as desired. The default behavior prints the message on the standard error. The <code>func_audit</code> callback should interpret the <i>auditdata</i> parameter for the given <i>class</i>, printing a human-readable interpretation to <i>msgbuf</i> using no more than <i>msgbufsize</i> characters. The default behavior is to ignore <i>auditdata</i>. </p>
@@ -49,9 +49,9 @@ struct avc_log_callback {<br />
 <dl>
 <dt>
 </dt><dd>
-struct avc_thread_callback {<br />
-    void *(*func_create_thread)(void (*run)(void));<br />
-    void (*func_stop_thread)(void *thread);<br />
+struct avc_thread_callback {<br/>
+    void *(*func_create_thread)(void (*run)(void));<br/>
+    void (*func_stop_thread)(void *thread);<br/>
 };
 </dd></dl>
 <p> The <code>func_create_thread</code> callback should create a new thread and return a pointer which references it. The thread should execute the <i>run</i> argument, which does not return under normal conditions. The <code>func_stop_thread</code> callback should cancel the running thread referenced by <i>thread</i>. By default, threading is not used; see <code>NETLINK NOTIFICATION</code> below. </p>

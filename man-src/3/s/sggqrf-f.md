@@ -10,7 +10,7 @@ description: "sggqrf.f –"
 <p>sggqrf.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>sggqrf</code> (N, M, P, A, LDA, TAUA, B, LDB, TAUB, WORK, LWORK, INFO)<br />
+<p>subroutine <code>sggqrf</code> (N, M, P, A, LDA, TAUA, B, LDB, TAUB, WORK, LWORK, INFO)<br/>
  <i></i><code>SGGQRF</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sggqrf (integerN, integerM, integerP, real, dimension( lda, * )A, integerLDA, real, dimension( * )TAUA, real, dimension( ldb, * )B, integerLDB, real, dimension( * )TAUB, real, dimension( * )WORK, integerLWORK, integerINFO)</h3>

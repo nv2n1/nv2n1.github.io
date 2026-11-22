@@ -10,7 +10,7 @@ description: "GHC – the Glasgow Haskell Compiler"
 
 <p> GHC &#8211; the Glasgow Haskell Compiler </p>
 <h2>SYNOPSIS</h2>
-<p> <code>ghc</code> [<i>option</i>|<i>filename</i>]&#8230;<br />
+<p> <code>ghc</code> [<i>option</i>|<i>filename</i>]&#8230;<br/>
  <code>ghci</code> [<i>option</i>|<i>filename</i>]&#8230; </p>
 <h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>ghc</code> and <code>ghci</code> commands. Note that <code>ghci</code> is not yet available on all architectures. Extensive documentation is available in various other formats including DVI, PostScript and HTML; see below. </p>
@@ -42,9 +42,9 @@ description: "GHC – the Glasgow Haskell Compiler"
 <h3>Redirecting output</h3>
 <p> -hcsuf <i>suffix</i> -hidir <i>dir</i> -hisuf <i>suffix</i> -o <i>filename</i> -odir <i>dir</i> -ohi <i>filename</i> -osuf <i>suffix</i> -stubdir <i>dir</i> -dumpdir <i>dir</i> -outputdir <i>dir</i> </p>
 <h3>Keeping intermediate files</h3>
-<p> -keep-hc-file or<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-keep-hc-files&nbsp;<wbr>&nbsp;<wbr>-keep-llvm-file or<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-keep-llvm-files&nbsp;<wbr>&nbsp;<wbr>-keep-s-file or<br />
+<p> -keep-hc-file or<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-keep-hc-files&nbsp;<wbr>&nbsp;<wbr>-keep-llvm-file or<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-keep-llvm-files&nbsp;<wbr>&nbsp;<wbr>-keep-s-file or<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-keep-s-files&nbsp;<wbr>&nbsp;<wbr>-keep-tmp-files&nbsp;<wbr>&nbsp;<wbr> </p>
 <h3>Temporary files</h3>
 <p> -tmpdir </p>
@@ -888,7 +888,7 @@ description: "GHC – the Glasgow Haskell Compiler"
 <h2>FILES</h2>
 <p> <i>/usr/lib64</i> </p>
 <h2>COPYRIGHT</h2>
-<p> Copyright 2002, The University Court of the University of Glasgow.<br />
+<p> Copyright 2002, The University Court of the University of Glasgow.<br/>
  All rights reserved. </p>
 <h2>AUTHOR</h2>
 <p> This manual page was generated from the XML documentation of GHC with blood, sweat, tears and a breaks-if-you-look-at-it-the-wrong-way XSL stylesheet originally written by Michael Weber &lt;michaelw [at] debian.org&gt; for the Debian GNU/Linux system (but may be used by others). </p>

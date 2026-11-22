@@ -13,18 +13,18 @@ description: "QwtLogTransform –"
 <p>#include &lt;qwt_transform.h&gt; </p>
 <p> Inherits <code>QwtTransform</code>.</p>
 <h3>Public Member Functions</h3>
-<p><code>QwtLogTransform</code> ()<br />
- <i>Constructor. </i><br />
- virtual <code>~QwtLogTransform</code> ()<br />
- <i>Destructor. </i><br />
+<p><code>QwtLogTransform</code> ()<br/>
+ <i>Constructor. </i><br/>
+ virtual <code>~QwtLogTransform</code> ()<br/>
+ <i>Destructor. </i><br/>
  virtual double <code>transform</code> (double value) const </p>
 <p> virtual double <code>invTransform</code> (double value) const </p>
 <p> virtual double <code>bounded</code> (double value) const </p>
 <p> virtual <code>QwtTransform</code> * <code>copy</code> () const </p>
 <h3>Public Attributes</h3>
-<p>QT_STATIC_CONST double <code>LogMin</code> = 1.0e-150<br />
- <i>Smallest allowed value for logarithmic scales: 1.0e-150. </i><br />
- QT_STATIC_CONST double <code>LogMax</code> = 1.0e150<br />
+<p>QT_STATIC_CONST double <code>LogMin</code> = 1.0e-150<br/>
+ <i>Smallest allowed value for logarithmic scales: 1.0e-150. </i><br/>
+ QT_STATIC_CONST double <code>LogMax</code> = 1.0e150<br/>
  <i>Largest allowed value for logarithmic scales: 1.0e150. </i></p>
 <h2>Detailed Description</h2>
 <p>Logarithmic transformation. </p>

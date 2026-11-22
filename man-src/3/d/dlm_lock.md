@@ -80,50 +80,50 @@ int dlm_ls_lockx(dlm_lshandle_t lockspace,
   LKM_PWMODE    Protected write
   LKM_EXMODE    Exclusive
 </pre>
-<p> <code>flags</code> Affect the operation of the lock call:<br />
-LKF_NOQUEUE Don&#8217;t queue the lock. If it cannot be granted return &#8211; EAGAIN<br />
-                                                                       LKF_CONVERT Convert an existing lock<br />
-                                                                           LKF_VALBLK Lock has a value block<br />
-                                                                               LKF_QUECVT Put conversion to the back of the queue<br />
-                                                                                   LKF_EXPEDITE Grant a NL lock immediately regardless of other locks<br />
-                                                                                       on the conversion queue<br />
-                                                                                           LKF_PERSISTENT Specifies a lock that will not be unlocked when the<br />
-                                                                                               process exits; it will become an orphan lock.<br />
-  LKF_CONVDEADLK  Enable internal conversion deadlock resolution where<br />
-                  the lock&#8217;s granted mode may be set to NL and<br />
-                  DLM_SBF_DEMOTED is returned in lksb.sb_flags.<br />
-  LKF_NODLCKWT    Do not consider this lock when trying to detect<br />
-                  deadlock conditions.<br />
-  LKF_NODLCKBLK   Not implemented<br />
-  LKF_NOQUEUEBAST Send blocking ASTs even for NOQUEUE operations<br />
-  LKF_HEADQUE     Add locks to the head of the convert or waiting queue<br />
-  LKF_NOORDER     Avoid the VMS rules on grant order<br />
-  LKF_ALTPR       If the requested mode can&#8217;t be granted (generally CW),<br />
-                  try to grant in PR and return DLM_SBF_ALTMODE.<br />
-  LKF_ALTCW       If the requested mode can&#8217;t be granted (generally PR),<br />
-                  try to grant in CW and return DLM_SBF_ALTMODE.<br />
+<p> <code>flags</code> Affect the operation of the lock call:<br/>
+LKF_NOQUEUE Don&#8217;t queue the lock. If it cannot be granted return &#8211; EAGAIN<br/>
+                                                                       LKF_CONVERT Convert an existing lock<br/>
+                                                                           LKF_VALBLK Lock has a value block<br/>
+                                                                               LKF_QUECVT Put conversion to the back of the queue<br/>
+                                                                                   LKF_EXPEDITE Grant a NL lock immediately regardless of other locks<br/>
+                                                                                       on the conversion queue<br/>
+                                                                                           LKF_PERSISTENT Specifies a lock that will not be unlocked when the<br/>
+                                                                                               process exits; it will become an orphan lock.<br/>
+  LKF_CONVDEADLK  Enable internal conversion deadlock resolution where<br/>
+                  the lock&#8217;s granted mode may be set to NL and<br/>
+                  DLM_SBF_DEMOTED is returned in lksb.sb_flags.<br/>
+  LKF_NODLCKWT    Do not consider this lock when trying to detect<br/>
+                  deadlock conditions.<br/>
+  LKF_NODLCKBLK   Not implemented<br/>
+  LKF_NOQUEUEBAST Send blocking ASTs even for NOQUEUE operations<br/>
+  LKF_HEADQUE     Add locks to the head of the convert or waiting queue<br/>
+  LKF_NOORDER     Avoid the VMS rules on grant order<br/>
+  LKF_ALTPR       If the requested mode can&#8217;t be granted (generally CW),<br/>
+                  try to grant in PR and return DLM_SBF_ALTMODE.<br/>
+  LKF_ALTCW       If the requested mode can&#8217;t be granted (generally PR),<br/>
+                  try to grant in CW and return DLM_SBF_ALTMODE.<br/>
   LKF_TIMEOUT     The lock will time out per the timeout arg.</p>
-<p> <code>lksb</code> Lock Status block<br />
+<p> <code>lksb</code> Lock Status block<br/>
  This structure contains the returned lock ID, the actual status of the lock operation (all lock ops are asynchronous) and the value block if LKF_VALBLK is set. </p>
-<p> <code>name</code><br />
+<p> <code>name</code><br/>
  Name of the lock. Can be binary, max 64 bytes. Ignored for lock conversions. (Should be a string to work with debugging tools.) </p>
-<p> <code>namelen<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></code><br />
+<p> <code>namelen<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></code><br/>
  Length of the above name. Ignored for lock conversions.</p>
-<p> <code>parent<tt>&nbsp;<wbr></tt></code><br />
+<p> <code>parent<tt>&nbsp;<wbr></tt></code><br/>
  ID of parent lock or NULL if this is a top-level lock. This is currently unused.</p>
-<p> <code>ast<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></code><br />
- Address of AST routine to be called when the lock operation<br />
+<p> <code>ast<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></code><br/>
+ Address of AST routine to be called when the lock operation<br/>
  completes. The final completion status of the lock will be in the lksb. the AST routine must not be NULL. </p>
-<p> <code>astargs<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></code><br />
- Argument to pass to the AST routine (most people pass the lksb<br />
+<p> <code>astargs<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></code><br/>
+ Argument to pass to the AST routine (most people pass the lksb<br/>
  in here but it can be anything you like.) </p>
-<p> <code>bast</code><br />
+<p> <code>bast</code><br/>
  Blocking AST routine. address of a function to call if this lock is blocking another. The function will be called with astargs. </p>
-<p> <code>range</code><br />
+<p> <code>range</code><br/>
  This is unused. </p>
-<p> <code>xid</code><br />
+<p> <code>xid</code><br/>
  Optional transaction ID for deadlock detection. </p>
-<p> <code>timeout</code><br />
+<p> <code>timeout</code><br/>
  Timeout in centiseconds. If it takes longer than this to acquire the lock (usually because it is already blocked by another lock), then the AST will trigger with ETIMEDOUT as the status. If the lock operation is a conversion then the lock will remain at its current status. If this is a new lock then the lock will not exist and any LKB in the lksb will be invalid. This is ignored without the LKF_TIMEOUT flag. </p>
 <h3>Return values</h3>
 <p> 0 is returned if the call completed successfully. If not, -1 is returned and errno is set to one of the following: </p>
@@ -144,13 +144,13 @@ EDEADLOCK       The lock operation is causing a deadlock and has been
 If an error is returned in the AST, then lksb.sb_status is set to the one of the above values instead of zero.
 </pre>
 <h3>Structures</h3>
-<p>struct dlm_lksb {<br />
-    int sb_status;    /* Final status of lock operation */<br />
-    uint32_t sb_lkid; /* ID of lock. Returned from dlm_lock()<br />
-                         on first use. Used as input to<br />
-                         dlm_lock() for a conversion operation */<br />
-    char sb_flags;    /* Completion flags, see above */<br />
-    char sb_lvbptr;   /* Optional pointer to lock value block */<br />
+<p>struct dlm_lksb {<br/>
+    int sb_status;    /* Final status of lock operation */<br/>
+    uint32_t sb_lkid; /* ID of lock. Returned from dlm_lock()<br/>
+                         on first use. Used as input to<br/>
+                         dlm_lock() for a conversion operation */<br/>
+    char sb_flags;    /* Completion flags, see above */<br/>
+    char sb_lvbptr;   /* Optional pointer to lock value block */<br/>
 };</p>
 <h2>EXAMPLE</h2>
 <pre><code>

@@ -197,7 +197,7 @@ class FooType
         &lt;/list&gt;
 </pre>
 <dt><i>&lt;para&gt;XML_TEXT&lt;/para&gt;</i></dt>
-<dd> Insert a paragraph of <i>XML_TEXT</i><br />
+<dd> Insert a paragraph of <i>XML_TEXT</i><br/>
 &nbsp;<wbr>. This is for use within other tags, such as <i>&lt;example/&gt;</i> , <i>&lt;remarks/&gt;</i> , <i>&lt;returns/&gt;</i> , <i>&lt;term/&gt;</i> and <i>&lt;description/&gt;</i> (see <i>&lt;list/&gt;</i> , above), and most other elements. </dd>
 <p> For example, </p>
 <pre>

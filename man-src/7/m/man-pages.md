@@ -281,16 +281,16 @@ description: "man-pages – conventions for writing Linux man pages"
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.SS Unicode under Linux</p>
 <h3>Indentation of structure definitions, shell session logs, and so on</h3>
 <p>When structure definitions, shell session logs, and so on are included in running text, indent them by 4 spaces (i.e., a block enclosed by <i>.in&nbsp;+4n</i> and <i>.in</i>), format them using the <i>.EX</i> and <i>EE</i> macros, and surround them with suitable paragraph markers (either <i>.PP</i> or <i>.IP</i>). For example: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.PP<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.in&nbsp;+4n<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.EX<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;main(int argc, char&nbsp;*argv[])<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;{<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;return 0;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;}<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.EE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.in<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.PP<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.in&nbsp;+4n<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.EX<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;main(int argc, char&nbsp;*argv[])<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;{<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;return 0;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;}<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.EE<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.in<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.PP</p>
 <h3>Preferred terms</h3>
 <p>The following table lists some preferred terms to use in man pages, mainly to ensure consistency across pages. </p>
@@ -567,9 +567,9 @@ description: "man-pages – conventions for writing Linux man pages"
 </table>
 <h3>Trademarks</h3>
 <p>Use the correct spelling and case for trademarks. The following is a list of the correct spellings of various relevant trademarks that are sometimes misspelled: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;DG/UX<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;HP-UX<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;UNIX<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;DG/UX<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;HP-UX<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;UNIX<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;UnixWare</p>
 <h3>NULL, NUL, null pointer, and null character</h3>
 <p>A <i>null pointer</i> is a pointer that points to nothing, and is normally indicated by the constant <i>NULL</i>. On the other hand, <i>NUL</i> is the <i>null byte,</i> a byte with the value 0, represented in C via the character constant <i>&#8216;</i>\0&#8217;</i>. </p>
@@ -577,7 +577,7 @@ description: "man-pages – conventions for writing Linux man pages"
 <p> The preferred term for the byte is &quot;null byte&quot;. Avoid writing &quot;NUL&quot;, since it is too easily confused with &quot;NULL&quot;. Avoid also the terms &quot;zero byte&quot; and &quot;null character&quot;. The byte that terminates a C string should be described as &quot;the terminating null byte&quot;; strings may be described as &quot;null-terminated&quot;, but avoid the use of &quot;NUL-terminated&quot;.  </p>
 <h3>Hyperlinks</h3>
 <p> For hyperlinks, use the <i>.UR</i>/<i>.UE</i> macro pair (see <code><a href="/docs/linux/man/7-groff_man/">groff_man</a></code>(7)). This produces proper hyperlinks that can be used in a web browser, when rendering a page with, say: </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;BROWSER=firefox man -H pagename  </p>
 <h3>Use of e.g., i.e., etc., a.k.a., and similar</h3>
 <p> In general, the use of abbreviations such as &quot;e.g.&quot;, &quot;i.e.&quot;, &quot;etc.&quot;, &quot;cf.&quot;, and &quot;a.k.a.&quot; should be avoided, in favor of suitable full wordings (&quot;for example&quot;, &quot;that is&quot;, &quot;and so on&quot;, &quot;compare to&quot;, &quot;also known as&quot;). </p>
@@ -587,50 +587,50 @@ description: "man-pages – conventions for writing Linux man pages"
 <p> The way to write an em-dash---the glyph that appears at either end of this subphrase---in *roff is with the macro &quot;\(em&quot;. (On an ASCII terminal, an em-dash typically renders as two hyphens, but in other typographical contexts it renders as a long dash.) Em-dashes should be written <i>without</i> surrounding spaces.  </p>
 <h3>Hyphenation of attributive compounds</h3>
 <p> Compound terms should be hyphenated when used attributively (i.e., to qualify a following noun). Some examples: </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;32-bit value <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;command-line argument <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;floating-point number <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;run-time check <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;user-space function <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;32-bit value <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;command-line argument <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;floating-point number <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;run-time check <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;user-space function <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;wide-character string  </p>
 <h3>Hyphenation with multi, non, pre, re, sub, and so on</h3>
 <p> The general tendency in modern English is not to hyphenate after prefixes such as &quot;multi&quot;, &quot;non&quot;, &quot;pre&quot;, &quot;re&quot;, &quot;sub&quot;, and so on. Manual pages should generally follow this rule when these prefixes are used in natural English constructions with simple suffixes. The following list gives some examples of the preferred forms: </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;interprocess <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;multithreaded <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;multiprocess <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;nonblocking <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;nondefault <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;nonempty <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;noninteractive <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;nonnegative <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;nonportable <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;nonzero <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;preallocated <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;precreate <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;prerecorded <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;reestablished <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;reinitialize <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;rearm <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;reread <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;subcomponent <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;subdirectory <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;interprocess <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;multithreaded <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;multiprocess <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;nonblocking <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;nondefault <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;nonempty <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;noninteractive <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;nonnegative <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;nonportable <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;nonzero <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;preallocated <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;precreate <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;prerecorded <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;reestablished <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;reinitialize <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;rearm <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;reread <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;subcomponent <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;subdirectory <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;subsystem </p>
 <p> Hyphens should be retained when the prefixes are used in nonstandard English words, with trademarks, proper nouns, acronyms, or compound terms. Some examples: </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;non-ASCII <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;non-English <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;non-NULL <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;non-ASCII <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;non-English <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;non-NULL <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;non-real-time </p>
 <p> Finally, note that &quot;re-create&quot; and &quot;recreate&quot; are two different verbs, and the former is probably what you want.  </p>
 <h3>Generating optimal glyphs</h3>
 <p> Where a real minus character is required (e.g., for numbers such as -1, for man page cross references such as <code><a href="/docs/linux/man/7-utf-8/">utf-8</a></code>(7), or when writing options that have a leading dash, such as in <i>ls -l),</i> use the following form in the man page source: </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;\- </p>
 <p> This guideline applies also to code examples. </p>
 <p> To produce unslanted single quotes that render well in ASCII, UTF-8, and PDF, use &quot;\(aq&quot; (&quot;apostrophe quote&quot;); for example </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;\(aqC\(aq </p>
 <p> where <i>C</i> is the quoted character. This guideline applies also to character constants used in code examples. </p>
 <p> Where a proper caret (ha) that renders well in both a terminal and PDF is required, use &quot;\(ha&quot;. This is especially necessary in code samples, to get a nicely rendered caret when rendering to PDF. </p>
@@ -662,27 +662,27 @@ description: "man-pages – conventions for writing Linux man pages"
 <dt>*</dt>
 <dd> <p> Example programs should be laid out according to Kernighan and Ritchie style, with 4-space indents. (Avoid the use of TAB characters in source code!) The following command can be used to format your source code to something close to the preferred style: </p>
  </dd>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;indent -npro -kr -i4 -ts4 -sob -l72 -ss -nut -psl prog.c </p>
  </dd>
 <dt>*</dt>
 <dd> <p> For consistency, all example programs should terminate using either of: </p>
  </dd>
-<dd> <p> <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_SUCCESS); <br />
+<dd> <p> <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_SUCCESS); <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_FAILURE); </p>
  </dd>
 <dd> <p> Avoid using the following forms to terminate a program: </p>
  </dd>
-<dd> <p> <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(0); <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<a href="/docs/linux/man/1-exit/">exit</a>(1); <br />
+<dd> <p> <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(0); <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<a href="/docs/linux/man/1-exit/">exit</a>(1); <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;return n; </p>
  </dd>
 <dt>*</dt>
 <dd> <p> If there is extensive explanatory text before the program source code, mark off the source code with a subsection heading <i>Program source</i>, as in: </p>
  </dd>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.SS Program source </p>
  </dd>
 <dd> <p> Always do this if the explanatory text includes a shell session log. </p>

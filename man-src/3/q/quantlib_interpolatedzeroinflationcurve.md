@@ -14,9 +14,9 @@ description: "QuantLib::InterpolatedZeroInflationCurve – Inflation term struct
 <h3>Public Member Functions</h3>
 <p><code>InterpolatedZeroInflationCurve</code> (const <code>Date</code> &amp;referenceDate, const <code>Calendar</code> &amp;calendar, const <code>DayCounter</code> &amp;dayCounter, const <code>Period</code> &amp;lag, <code>Frequency</code> frequency, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;yTS, const std::vector&lt; <code>Date</code> &gt; &amp;dates, const std::vector&lt; Rate &gt; &amp;rates, const Interpolator &amp;interpolator=Interpolator()) </p>
 <p> <code>InflationTermStructure interface</code> </p>
-<p> <code>Date</code> <code>baseDate</code> () const<br />
- <i>minimum (base) date </i><br />
- <code>Date</code> <code>maxDate</code> () const<br />
+<p> <code>Date</code> <code>baseDate</code> () const<br/>
+ <i>minimum (base) date </i><br/>
+ <code>Date</code> <code>maxDate</code> () const<br/>
  <i>the latest date for which the curve can return values </i> </p>
 <p> <code>Inspectors</code> </p>
 <p> const std::vector&lt; <code>Date</code> &gt; &amp; <code>dates</code> () const </p>
@@ -26,7 +26,7 @@ description: "QuantLib::InterpolatedZeroInflationCurve – Inflation term struct
 <h3>Protected Member Functions</h3>
 <p><code>InterpolatedZeroInflationCurve</code> (const <code>Date</code> &amp;referenceDate, const <code>Calendar</code> &amp;calendar, const <code>DayCounter</code> &amp;dayCounter, const <code>Period</code> &amp;lag, <code>Frequency</code> frequency, Rate baseZeroRate, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;yTS, const Interpolator &amp;interpolator=Interpolator()) </p>
 <p> <code>ZeroInflationTermStructure Interface</code> </p>
-<p> Rate <code>zeroRateImpl</code> (Time t) const<br />
+<p> Rate <code>zeroRateImpl</code> (Time t) const<br/>
  <i>to be defined in derived classes </i></p>
 <h3>Protected Attributes</h3>
 <p>std::vector&lt; <code>Date</code> &gt; <code>dates_</code> </p>

@@ -10,7 +10,7 @@ description: "jackd – JACK Audio Connection Kit sound server"
 
 <p> jackd &#8211; JACK Audio Connection Kit sound server</p>
 <h2>SYNOPSIS</h2>
-<p> <code>jackd</code> [<i>options</i>] <code>-d</code><i> backend </i> [<i>backend-parameters</i>]<br />
+<p> <code>jackd</code> [<i>options</i>] <code>-d</code><i> backend </i> [<i>backend-parameters</i>]<br/>
  <code>jackd &#8211;help</code></p>
 <h2>DESCRIPTION</h2>
 <p> <code>jackd</code> is the JACK audio server daemon, a low-latency audio server. Originally written for the GNU/Linux operating system, it also supports Mac OS X and various Unix platforms. JACK can connect a number of different client applications to an audio device and also to each other. Most clients are external, running in their own processes as normal applications. JACK also supports internal clients, which run within the <code>jackd</code> process using a loadable &quot;plugin&quot; interface. </p>
@@ -267,14 +267,14 @@ description: "jackd – JACK Audio Connection Kit sound server"
 <p> Print usage message for the parameters specific to each backend.</p>
 <dl>
 <dt>
-</dt><dd> <code>jackd -d alsa &#8211;help</code><br />
- <code>jackd -d coreaudio &#8211;help</code><br />
- <code>jackd -d net &#8211;help</code><br />
- <code>jackd -d dummy &#8211;help</code><br />
- <code>jackd -d firewire &#8211;help</code><br />
- <code>jackd -d freebob &#8211;help</code><br />
- <code>jackd -d oss &#8211;help</code><br />
- <code>jackd -d sun &#8211;help</code><br />
+</dt><dd> <code>jackd -d alsa &#8211;help</code><br/>
+ <code>jackd -d coreaudio &#8211;help</code><br/>
+ <code>jackd -d net &#8211;help</code><br/>
+ <code>jackd -d dummy &#8211;help</code><br/>
+ <code>jackd -d firewire &#8211;help</code><br/>
+ <code>jackd -d freebob &#8211;help</code><br/>
+ <code>jackd -d oss &#8211;help</code><br/>
+ <code>jackd -d sun &#8211;help</code><br/>
  <code>jackd -d portaudio &#8211;help</code></dd></dl>
 <p> Run the JACK daemon with realtime priority using the first ALSA hardware card defined in <code>/etc/modules.conf</code>.</p>
 <dl>
@@ -306,16 +306,16 @@ description: "jackd – JACK Audio Connection Kit sound server"
 <p> To change where JACK looks for the backend drivers, set <code>$JACK_DRIVER_DIR</code>. </p>
 <p> <code>$JACK_DEFAULT_SERVER</code> specifies the default server name. If not defined, the string &quot;default&quot; is used. If set in their respective environments, this affects <code>jackd</code> unless its <code>&#8211;name</code> parameter is set, and all JACK clients unless they pass an explicit name to <code>jack_client_open()</code>. </p>
 <h2>SEE ALSO:</h2>
-<p> <i><a rel="nofollow" href="http://www.jackaudio.org">http://www.jackaudio.org</a></i><br />
+<p> <i><a rel="nofollow" href="http://www.jackaudio.org">http://www.jackaudio.org</a></i><br/>
  The official JACK website with news, docs and a list of JACK clients. </p>
-<p> <i><a rel="nofollow" href="http://jackaudio.org/email">http://jackaudio.org/email</a></i><br />
+<p> <i><a rel="nofollow" href="http://jackaudio.org/email">http://jackaudio.org/email</a></i><br/>
  The JACK developers&#8217; mailing list. Subscribe, to take part in development of JACK or JACK clients. User questions are also welcome, there is no user-specific mailing list. </p>
-<p> <i><a rel="nofollow" href="http://www.jackosx.com/">http://www.jackosx.com/</a></i><br />
+<p> <i><a rel="nofollow" href="http://www.jackosx.com/">http://www.jackosx.com/</a></i><br/>
  Tools specific to the Mac OS X version of JACK. </p>
-<p> <i><a rel="nofollow" href="http://www.alsa-project.org">http://www.alsa-project.org</a></i><br />
+<p> <i><a rel="nofollow" href="http://www.alsa-project.org">http://www.alsa-project.org</a></i><br/>
  The Advanced Linux Sound Architecture.</p>
 <h2>BUGS</h2>
-<p> Please report bugs to<br />
+<p> Please report bugs to<br/>
  <i><a rel="nofollow" href="http://trac.jackaudio.org/">http://trac.jackaudio.org/</a></i></p>
 <h2>AUTHORS</h2>
 <p> Architect and original implementor: Paul Davis </p>

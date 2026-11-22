@@ -244,10 +244,10 @@ procenv - l
 <h2>AUTHORS</h2>
 <p> Written by James Hunt &lt;<code>jamesodhunt [at] ubuntu.com</code>&gt; and Kees Cook &lt;<code>kees [at] ubuntu.com</code>&gt;.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2012-2014 James Hunt &lt;<code>jamesodhunt [at] ubuntu.com</code>&gt; and Kees Cook &lt;<code>kees [at] ubuntu.com</code>&gt;.<br />
+<p> Copyright &#169; 2012-2014 James Hunt &lt;<code>jamesodhunt [at] ubuntu.com</code>&gt; and Kees Cook &lt;<code>kees [at] ubuntu.com</code>&gt;.<br/>
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>LICENSE</h2>
-<p> GNU GPL version 3 or later &lt;<a rel="nofollow" href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt;.<br />
+<p> GNU GPL version 3 or later &lt;<a rel="nofollow" href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt;.<br/>
  This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/7-capabilities/">capabilities</a></code>(7) (Linux), <code>capsicum</code>(4) (BSD), <code><a href="/docs/linux/man/1-cc/">cc</a></code>(1), <code><a href="/docs/linux/man/7-credentials/">credentials</a></code>(7), <code><a href="/docs/linux/man/1-date/">date</a></code>(1), <code><a href="/docs/linux/man/1-env/">env</a></code>(1), <code>exec</code>(P), <code><a href="/docs/linux/man/1-getconf/">getconf</a></code>(1), <code><a href="/docs/linux/man/1-groups/">groups</a></code>(1), <code><a href="/docs/linux/man/8-ifconfig/">ifconfig</a></code>(8), <code>ip</code>(9), <code><a href="/docs/linux/man/1-ipcs/">ipcs</a></code>(1), <code><a href="/docs/linux/man/1-kill/">kill</a></code>(1), <code><a href="/docs/linux/man/1-ldd/">ldd</a></code>(1), <code><a href="/docs/linux/man/1-locale/">locale</a></code>(1), <code><a href="/docs/linux/man/1-ls/">ls</a></code>(1), <code><a href="/docs/linux/man/1-mount/">mount</a></code>(1), <code><a href="/docs/linux/man/5-proc/">proc</a></code>(5), <code><a href="/docs/linux/man/1-ps/">ps</a></code>(1), <code>rights</code>(4)(BSD), <code><a href="/docs/linux/man/1-sh/">sh</a></code>(1), <code><a href="/docs/linux/man/1-stat/">stat</a></code>(1), <code><a href="/docs/linux/man/1-stty/">stty</a></code>(1), <code>umask</code>(P), <code><a href="/docs/linux/man/1-uname/">uname</a></code>(1) </p>

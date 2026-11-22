@@ -18,9 +18,9 @@ Test::Manifest - interact with a t/test_manifest file
  In t/test_manifest, simply list the tests that you want to run. Their order in the file is the order in which they run. You can comment lines with a #, just like in Perl, and Test::Manifest will strip leading and trailing whitespace from each line. It also checks that the specified file is actually in the t/ directory. If the file does not exist, it does not put its name in the list of test files to run. 
 
  Optionally, you can add a number after the test name in test_manifest to define sets of tests. See <i>get_t_files()</i> for more information.
-<h2>Functions</h2><dl COMPACT><dt>run_t_manifest( <font SIZE="-1">TEST_VERBOSE</font>, <font SIZE="-1">INST_LIB</font>, <font SIZE="-1">INST_ARCHLIB</font>, <font SIZE="-1">TEST_LEVEL</font> )
+<h2>Functions</h2><dl COMPACT><dt>run_t_manifest( TEST_VERBOSE, INST_LIB, INST_ARCHLIB, TEST_LEVEL )
 </dt><dd>Run all of the files in t/test_manifest through Test::Harness:runtests in the order they appear in the file. 
- <pre> eval &quot;use Test::Manifest&quot;;</pre></dd><dt>get_t_files( [<font SIZE="-1">LEVEL</font>] )
+ <pre> eval &quot;use Test::Manifest&quot;;</pre></dd><dt>get_t_files( [LEVEL] )
 </dt><dd>In scalar context it returns a single string that you can use directly in <i>WriteMakefile()</i>. In list context it returns a list of the files it found in t/test_manifest. 
  If a t/test_manifest file does not exist, <i>get_t_files()</i> returns nothing. 
  <i>get_t_files()</i> warns you if it can't find t/test_manifest, or if entries start with ``t/''. It skips blank lines, and strips Perl style comments from the file. 
@@ -32,14 +32,14 @@ Test::Manifest - interact with a t/test_manifest file
  ;skip
  skip_this
  ;unskip
- run_this2</pre>To select sets of tests, specify the level in the variable <font SIZE="-1">TEST_LEVEL</font> during `make test`. 
+ run_this2</pre>To select sets of tests, specify the level in the variable TEST_LEVEL during `make test`. 
  <pre> make test # run all tests no matter the level
  make test TEST_LEVEL=2 # run all tests level 2 and below</pre></dd><dt><i>make_test_manifest()</i>
 </dt><dd>Creates the test_manifest file in the t directory by reading the contents of the t directory. 
- <font SIZE="-1">TO</font> <font SIZE="-1">DO:</font> specify tests in argument lists. 
- <font SIZE="-1">TO</font> <font SIZE="-1">DO:</font> specify files to skip.
+ TO DO: specify tests in argument lists. 
+ TO DO: specify files to skip.
 </dd><dt><i>manifest_name()</i>
-</dt><dd>Returns the name of the test manifest file, relative to t/</dd></dl><h2>Source Availability</h2>This source is part of a SourceForge project which always has the latest sources in <font SIZE="-1">CVS</font>, as well as all of the previous releases. 
+</dt><dd>Returns the name of the test manifest file, relative to t/</dd></dl><h2>Source Availability</h2>This source is part of a SourceForge project which always has the latest sources in CVS, as well as all of the previous releases. 
 
  <pre> <a rel="nofollow" HREF="http://sourceforge.net/projects/brian-d-foy/">http://sourceforge.net/projects/brian-d-foy/</a></pre>If, for some reason, I disappear from the world, one of the other members of the project can shepherd this module appropriately.
 <h2>Credits</h2>Matt Vanderpol suggested and supplied a patch for the ;include feature.

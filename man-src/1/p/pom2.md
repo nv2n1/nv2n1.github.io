@@ -20,7 +20,7 @@ pom2 - convert POD to Text, HTML, etc., with Pod::POM
 
 <h2>DESCRIPTION</h2>
 
- This script uses <tt>&quot;Pod::POM&quot;</tt> to convert a Pod document into text, <font SIZE="-1">HTML,</font> back into Pod (e.g. to normalise a document to fix any markup errors), or any other format for which you have a view module. 
+ This script uses <tt>&quot;Pod::POM&quot;</tt> to convert a Pod document into text, HTML, back into Pod (e.g. to normalise a document to fix any markup errors), or any other format for which you have a view module. 
 
  If the viewer is not one of the viewers bundled with <tt>&quot;Pod::POM&quot;</tt>, the script searches for an installed <tt>&quot;Pod::POM::View&quot;</tt> module that matches the specified format. For example if you have <tt>&quot;Pod::POM::View::DocBook&quot;</tt> installed then you could say: 
 

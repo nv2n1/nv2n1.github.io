@@ -59,7 +59,7 @@ description: "kdeinit4 – KDE process launcher."
 <h2>See Also</h2>
 <p>kded, kdekillall</p>
 <h2>Bugs</h2>
-<p>There are probably tons of bugs. Use m[blue]<code>bugs.kde.org</code>m[]<font SIZE="-2">[1]</font> to report them.</p>
+<p>There are probably tons of bugs. Use m[blue]<code>bugs.kde.org</code>m[][1] to report them.</p>
 <h2>Authors</h2>
 <p><code>Waldo Bastian</code> &lt;bastian [at] kde.org&gt;</p>
 <dl>

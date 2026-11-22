@@ -45,8 +45,8 @@ description: "buffer – very fast reblocking program"
 <h2>EXAMPLES</h2>
 <p> $ <code>buffer &lt; /etc/termcap &gt; /dev/rst8</code> </p>
 <p> $ <code>tar cf &#8211; . | rsh somehost &#8216;buffer &gt; /dev/rst8&#8217;</code> </p>
-<p> $ <code>dump fu &#8211; | rsh somehost &#8216;buffer -s 16k &gt; /dev/nrst8&#8217;</code><br />
- $ <code>tar cf &#8211; . | buffer |<br />
+<p> $ <code>dump fu &#8211; | rsh somehost &#8216;buffer -s 16k &gt; /dev/nrst8&#8217;</code><br/>
+ $ <code>tar cf &#8211; . | buffer |<br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rsh somehost &#8216;buffer -S 500K -p 75 &gt; /dev/rst0&#8217;</code></p>
 <h2>BUGS</h2>
 <p> Internally, for printing purposes, buffer counts in terms of the number of kilobytes output. If the blocksize you use is not a whole number of kilobytes then the numbers printed will be inaccurate. </p>

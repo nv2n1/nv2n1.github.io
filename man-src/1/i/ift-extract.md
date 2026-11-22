@@ -16,9 +16,9 @@ description: "ift-extract.info – ift-extract.info"
 <p> Command line options: see &#8220;Options&#8221; </p>
 <p> See also &#8220;Copying&#8221;</p>
 <h2>1 Finding the Apple driver</h2>
-<p> ift-extract extract Built-in iSight firmware from Apple iSight driver. This driver is located at /System/Library/Extensions/IOUSBFamily.kext/Contents/PlugIns/AppleUSBVideoSupport.kext/Contents/MacOS/AppleUSBVideoSupport on your Mac <font SIZE="-1">OS</font> X root partition. </p>
+<p> ift-extract extract Built-in iSight firmware from Apple iSight driver. This driver is located at /System/Library/Extensions/IOUSBFamily.kext/Contents/PlugIns/AppleUSBVideoSupport.kext/Contents/MacOS/AppleUSBVideoSupport on your Mac OS X root partition. </p>
 <p> There is several version of this driver depending on driver version or host architecture (PowerPC or x86). Thus, ift-extract must determine know the variant of the driver in order to properly extract the firmware. </p>
-<p> Any AppleUSBVideoSupport file starting with those shipped with iMac G5 iSight must work. If not, please report unknown AppleUSBVideoSupport at bugreport mail address with machine type and <font SIZE="-1">OS</font> X version.</p>
+<p> Any AppleUSBVideoSupport file starting with those shipped with iMac G5 iSight must work. If not, please report unknown AppleUSBVideoSupport at bugreport mail address with machine type and OS X version.</p>
 <h2>2 Command line options</h2>
 <p> `<code>-a</code>&#8216; `<code>&#8211;apple-driver</code>&#8216; Apple driver filename where to extract the firmware. </p>
 <p> `<code>-d</code>&#8216; `<code>&#8211;output-directory</code>&#8216; The directory where to output the firmware. Defaults to /lib/firmware. </p>

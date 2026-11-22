@@ -15,8 +15,8 @@ description: "QuantLib::LiborForwardModel – Libor forward model"
 <p><code>LiborForwardModel</code> (const boost::shared_ptr&lt; <code>LiborForwardModelProcess</code> &gt; &amp;process, const boost::shared_ptr&lt; <code>LmVolatilityModel</code> &gt; &amp;volaModel, const boost::shared_ptr&lt; <code>LmCorrelationModel</code> &gt; &amp;corrModel) </p>
 <p> <code>Rate</code> <code>S_0</code> (Size alpha, Size beta) const </p>
 <p> virtual boost::shared_ptr&lt; <code>SwaptionVolatilityMatrix</code> &gt; <code>getSwaptionVolatilityMatrix</code> () const </p>
-<p> <code>DiscountFactor</code> <code>discount</code> (Time t) const<br />
- <i>Implied discount curve. </i><br />
+<p> <code>DiscountFactor</code> <code>discount</code> (Time t) const<br/>
+ <i>Implied discount curve. </i><br/>
  Real <code>discountBond</code> (Time now, Time maturity, <code>Array</code> factors) const </p>
 <p> Real <code>discountBondOption</code> (Option::Type type, Real strike, Time maturity, Time bondMaturity) const </p>
 <p> void <code>setParams</code> (const <code>Array</code> &amp;params) </p>

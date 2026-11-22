@@ -84,8 +84,8 @@ description: "dvipost, pptex, pplatex – post processing of dvi files"
 <p> The use of <code>cbstart</code> and <code>cbend</code> allows to set additional attributes to the marked text, depending on the dvi driver. </p>
 <p> If <code>dvips</code> is used as dvi driver and the preamble of the LaTeX source contains </p>
 <dl>
-<dd> <p> <code>\usepackage{dvipost}</code> <br />
- <code>\dvipost{cbstart color push Blue}</code> <br />
+<dd> <p> <code>\usepackage{dvipost}</code> <br/>
+ <code>\dvipost{cbstart color push Blue}</code> <br/>
  <code>\dvipost{cbend color pop}</code> </p>
  </dd></dl>
 <p> the marked text is colored blue. </p>

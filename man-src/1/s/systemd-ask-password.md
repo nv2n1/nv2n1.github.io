@@ -33,14 +33,14 @@ description: "systemd-ask-password – Query the user for a system password"
 <dt>
 </dt><dd> &bull; A command line agent which can be started temporarily to process queued password requests &#8212; <code>systemd-tty-ask-password-agent &#8211;query</code>.</dd></dl>
 <p> Answering system-wide password queries is a privileged operation, hence all the agents listed above (except for the last one), run as privileged system services. The last one also needs elevated privileges, so should be run through <code><a href="/docs/linux/man/8-sudo/">sudo</a></code>(8) or similar. </p>
-<p> Additional password agents may be implemented according to the m[blue]<code>systemd Password Agent Specification</code>m[]<font SIZE="-2">[1]</font>. </p>
+<p> Additional password agents may be implemented according to the m[blue]<code>systemd Password Agent Specification</code>m[][1]. </p>
 <p> If a password is queried on a TTY, the user may press TAB to hide the asterisks normally shown for each character typed. Pressing Backspace as first key achieves the same effect.</p>
 <h2>OPTIONS</h2>
 <p> The following options are understood: </p>
 <p> <code>&#8211;icon=</code></p>
 <dl>
 <dt>
-</dt><dd> Specify an icon name alongside the password query, which may be used in all agents supporting graphical display. The icon name should follow the m[blue]<code>XDG Icon Naming Specification</code>m[]<font SIZE="-2">[2]</font>.</dd></dl>
+</dt><dd> Specify an icon name alongside the password query, which may be used in all agents supporting graphical display. The icon name should follow the m[blue]<code>XDG Icon Naming Specification</code>m[][2].</dd></dl>
 <p> <code>&#8211;id=</code></p>
 <dl>
 <dt>

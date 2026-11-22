@@ -11,8 +11,8 @@ description: "putenv – change or add an environment variable"
 <h2>Synopsis</h2>
 <pre><code>#include &lt;stdlib.h&gt;
 int putenv(char *string);</code></pre>
-<p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>putenv</code>(): _XOPEN_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc since 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
+<p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>putenv</code>(): _XOPEN_SOURCE<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc since 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_SVID_SOURCE</p>
 <h2>Description</h2>
 <p>The <code>putenv</code>() function adds or changes the value of environment variables. The argument <i>string</i> is of the form <i>name</i>=<i>value</i>. If <i>name</i> does not already exist in the environment, then <i>string</i> is added to the environment. If <i>name</i> does exist, then the value of <i>name</i> in the environment is changed to <i>value</i>. The string pointed to by <i>string</i> becomes part of the environment, so altering the string changes the environment.</p>

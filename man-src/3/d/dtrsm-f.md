@@ -10,7 +10,7 @@ description: "dtrsm.f –"
 <p>dtrsm.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dtrsm</code> (SIDE, UPLO, TRANSA, DIAG, M, N, ALPHA, A, LDA, B, LDB)<br />
+<p>subroutine <code>dtrsm</code> (SIDE, UPLO, TRANSA, DIAG, M, N, ALPHA, A, LDA, B, LDB)<br/>
  <i></i><code>DTRSM</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dtrsm (characterSIDE, characterUPLO, characterTRANSA, characterDIAG, integerM, integerN, double precisionALPHA, double precision, dimension(lda,*)A, integerLDA, double precision, dimension(ldb,*)B, integerLDB)</h3>

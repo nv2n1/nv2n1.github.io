@@ -10,19 +10,19 @@ description: "include/antlr3bitset.h –"
 <p>include/antlr3bitset.h &#8211; </p>
 <p> Defines the basic structures of an ANTLR3 bitset.</p>
 <h2>Synopsis</h2>
-<p>#include &lt;<a href="file:/usr/include/antlr3defs.h">antlr3defs.h</a>&gt;<br />
+<p>#include &lt;<a href="file:/usr/include/antlr3defs.h">antlr3defs.h</a>&gt;<br/>
  #include &lt;<a href="file:/usr/include/antlr3collections.h">antlr3collections.h</a>&gt; </p>
 <h3>Data Structures</h3>
 <p>struct <code>ANTLR3_BITSET_LIST_struct</code> </p>
 <p> struct <code>ANTLR3_BITSET_struct</code> </p>
 <h3>Defines</h3>
-<p>#define <code>ANTLR3_BITSET_BITS</code> 64<br />
- <i>How many bits in the elements. </i><br />
- #define <code>ANTLR3_BITSET_LOG_BITS</code> 6<br />
- <i>log2 of ANTLR3_BITSET_BITS 2^ANTLR3_BITSET_LOG_BITS = ANTLR3_BITSET_BITS </i><br />
- #define <code>ANTLR3_BITSET_MOD_MASK</code> ANTLR3_BITSET_BITS &#8211; 1<br />
- <i>We will often need to do a mod operator (i mod nbits). </i><br />
- #define <code>ANTLR3_BITSET_NIBBLE</code> 4<br />
+<p>#define <code>ANTLR3_BITSET_BITS</code> 64<br/>
+ <i>How many bits in the elements. </i><br/>
+ #define <code>ANTLR3_BITSET_LOG_BITS</code> 6<br/>
+ <i>log2 of ANTLR3_BITSET_BITS 2^ANTLR3_BITSET_LOG_BITS = ANTLR3_BITSET_BITS </i><br/>
+ #define <code>ANTLR3_BITSET_MOD_MASK</code> ANTLR3_BITSET_BITS &#8211; 1<br/>
+ <i>We will often need to do a mod operator (i mod nbits). </i><br/>
+ #define <code>ANTLR3_BITSET_NIBBLE</code> 4<br/>
  <i>How many bits in a nible of bits. </i></p>
 <h3>Typedefs</h3>
 <p>typedef struct <code>ANTLR3_BITSET_struct</code> <code>ANTLR3_BITSET</code> </p>

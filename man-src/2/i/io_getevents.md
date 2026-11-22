@@ -21,8 +21,8 @@ int io_getevents(aio_context_t ctx_id, long min_nr, long nr,
 <p> <i>Note</i>: this page describes the raw Linux system call interface. The wrapper function provided by <i>libaio</i> uses a different type for the <i>ctx_id</i> argument. See NOTES. </p>
 <p> The <code>io_getevents</code>() system call attempts to read at least <i>min_nr</i> events and up to <i>nr</i> events from the completion queue of the AIO context specified by <i>ctx_id</i>. </p>
 <p> The <i>timeout</i> argument specifies the amount of time to wait for events, and is specified as a relative timeout in a structure of the following form: </p>
-<p> struct timespec {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;time_t tv_sec;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;seconds&nbsp;*/<br />
+<p> struct timespec {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;time_t tv_sec;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;seconds&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;long&nbsp;<wbr>&nbsp;<wbr>&nbsp;tv_nsec;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;nanoseconds&nbsp;[0 .. 999999999]&nbsp;*/ }; </p>
 <p> The specified time will be rounded up to the system clock granularity and is guaranteed not to expire early. </p>
 <p> Specifying <i>timeout</i> as NULL means block indefinitely until at least <i>min_nr</i> events have been obtained.</p>

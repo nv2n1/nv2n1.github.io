@@ -14,13 +14,13 @@ description: "sc::MCSearch –"
 #include &lt;mcsearch.h&gt;</code></pre>
 <p> Inherits <code>sc::LineOpt</code>.</p>
 <h3>Public Member Functions</h3>
-<p><code>MCSearch</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br />
- <i>The </i><code>MCSearch</code> <code>KeyVal</code> CTOR does not read any input.<br />
- int <code>update</code> ()<br />
- <i>Take a step. </i><br />
- void <code>init</code> (<code>RefSCVector</code> &amp;direction)<br />
- <i>Initializes the line search object. </i><br />
- void <code>init</code> (<code>RefSCVector</code> &amp;direction, <code>Ref</code>&lt; <code>Function</code> &gt; function)<br />
+<p><code>MCSearch</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br/>
+ <i>The </i><code>MCSearch</code> <code>KeyVal</code> CTOR does not read any input.<br/>
+ int <code>update</code> ()<br/>
+ <i>Take a step. </i><br/>
+ void <code>init</code> (<code>RefSCVector</code> &amp;direction)<br/>
+ <i>Initializes the line search object. </i><br/>
+ void <code>init</code> (<code>RefSCVector</code> &amp;direction, <code>Ref</code>&lt; <code>Function</code> &gt; function)<br/>
  <i>Initializes the line search object. </i></p>
 <h3>Protected Member Functions</h3>
 <pre><code>void mcstep (double *stx, double *fx, double *dx, double *sty, double *fy, double *dy, double *stp, double *fp, double *dp, bool *brackt, double *stpmin, double *stpmax, int *info)

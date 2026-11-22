@@ -73,8 +73,8 @@ description: "makedepf90 – creates Makefile dependency list for Fortran source
 <dt><code>-o</code><i> name</i></dt>
 <dd> This option will cause <i>makedepf90</i> to define the Makefile macro <code>FOBJ</code>=<i>objectfiles</i>, and a dependency line + rule for the final linking process to create the executable <i>name</i>. To set the linking rule, use the option <code>-l</code>.</dd>
 <dt><code>-l</code><i> rule</i></dt>
-<dd> Use <i>rule</i> when linking the executable. The default is<br />
- <code>$(FC) -o $@ $(FFLAGS) $(LDFLAGS) $(FOBJ) $(LIBS)</code>.<br />
+<dd> Use <i>rule</i> when linking the executable. The default is<br/>
+ <code>$(FC) -o $@ $(FFLAGS) $(LDFLAGS) $(FOBJ) $(LIBS)</code>.<br/>
  This option has no effect unless <code>-o</code> is used.</dd>
 <dt><code>-coco</code></dt>
 <dd> Look for <code>coco</code>(1) set-files (<code>coco</code> ??include:s are supported automatically). This option implies <code>-free</code>.</dd>
@@ -90,36 +90,36 @@ description: "makedepf90 – creates Makefile dependency list for Fortran source
 <h2>EXAMPLES</h2>
 <h3>Basic Usage</h3>
 <p> Here&#8217;s an example of basic <i>makedepf90</i> usage together with <code><a href="/docs/linux/man/1-make/">make</a></code>(1). Create a file named <code>Makefile</code> with the following contents: </p>
-<p> &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-<br />
-&nbsp;<wbr><br />
-&nbsp;<wbr>#&nbsp;<wbr>FC&nbsp;<wbr>=&nbsp;<wbr>the compiler to use<br />
+<p> &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-<br/>
+&nbsp;<wbr><br/>
+&nbsp;<wbr>#&nbsp;<wbr>FC&nbsp;<wbr>=&nbsp;<wbr>the compiler to use<br/>
 &nbsp;<wbr>FC=f90 </p>
-<p>&nbsp;<wbr>#&nbsp;<wbr>Compiler options<br />
+<p>&nbsp;<wbr>#&nbsp;<wbr>Compiler options<br/>
 &nbsp;<wbr>FFLAGS=-O </p>
-<p>&nbsp;<wbr>#&nbsp;<wbr>List libraries used by the program here<br />
+<p>&nbsp;<wbr>#&nbsp;<wbr>List libraries used by the program here<br/>
 &nbsp;<wbr>LIBS= </p>
-<p>&nbsp;<wbr>#&nbsp;<wbr>Suffix-rules:&nbsp;<wbr>&nbsp;<wbr>Begin by throwing away all old suffix-<br />
-&nbsp;<wbr>#&nbsp;<wbr>rules, and then create new ones for compiling&nbsp;<wbr><br />
-&nbsp;<wbr>#&nbsp;<wbr>*.f90-files.<br />
-&nbsp;<wbr>.SUFFIXES:<br />
+<p>&nbsp;<wbr>#&nbsp;<wbr>Suffix-rules:&nbsp;<wbr>&nbsp;<wbr>Begin by throwing away all old suffix-<br/>
+&nbsp;<wbr>#&nbsp;<wbr>rules, and then create new ones for compiling&nbsp;<wbr><br/>
+&nbsp;<wbr>#&nbsp;<wbr>*.f90-files.<br/>
+&nbsp;<wbr>.SUFFIXES:<br/>
 &nbsp;<wbr>.SUFFIXES: .f90 .o </p>
-<p>&nbsp;<wbr>.f90.o:<br />
+<p>&nbsp;<wbr>.f90.o:<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>$(FC) -c $(FFLAGS) $&lt;</p>
-<p>&nbsp;<wbr>#&nbsp;<wbr>Include the dependency-list created by makedepf90 below<br />
+<p>&nbsp;<wbr>#&nbsp;<wbr>Include the dependency-list created by makedepf90 below<br/>
 &nbsp;<wbr>include .depend </p>
-<p>&nbsp;<wbr>#&nbsp;<wbr>target&nbsp;<wbr>&#8216;clean&#8217;&nbsp;<wbr>for deleting object-&nbsp;<wbr>*.mod- and other&nbsp;<wbr><br />
-&nbsp;<wbr>#&nbsp;<wbr>unwanted files<br />
-&nbsp;<wbr>clean:<br />
+<p>&nbsp;<wbr>#&nbsp;<wbr>target&nbsp;<wbr>&#8216;clean&#8217;&nbsp;<wbr>for deleting object-&nbsp;<wbr>*.mod- and other&nbsp;<wbr><br/>
+&nbsp;<wbr>#&nbsp;<wbr>unwanted files<br/>
+&nbsp;<wbr>clean:<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>rm -f *.o *.mod core</p>
-<p>&nbsp;<wbr>#&nbsp;<wbr>Create a dependency list using makedepf90.&nbsp;<wbr>&nbsp;<wbr>All files&nbsp;<wbr><br />
-&nbsp;<wbr>#&nbsp;<wbr>that needs to be compiled to build the program,&nbsp;<wbr><br />
-&nbsp;<wbr>#&nbsp;<wbr>i.e all source files except include files, should&nbsp;<wbr><br />
-&nbsp;<wbr>#&nbsp;<wbr>be given on the command line to makedepf90.&nbsp;<wbr>&nbsp;<wbr><br />
-&nbsp;<wbr>#<br />
-&nbsp;<wbr>#&nbsp;<wbr>The argument to the&nbsp;<wbr>&#8216;-o&#8217;&nbsp;<wbr>option will be the name of the<br />
-&nbsp;<wbr>#&nbsp;<wbr>resulting program when running&nbsp;<wbr>&#8216;make&#8217;, in this case&nbsp;<wbr><br />
-&nbsp;<wbr>#&nbsp;<wbr>&#8216;foobar&#8217;<br />
-&nbsp;<wbr>depend .depend:<br />
+<p>&nbsp;<wbr>#&nbsp;<wbr>Create a dependency list using makedepf90.&nbsp;<wbr>&nbsp;<wbr>All files&nbsp;<wbr><br/>
+&nbsp;<wbr>#&nbsp;<wbr>that needs to be compiled to build the program,&nbsp;<wbr><br/>
+&nbsp;<wbr>#&nbsp;<wbr>i.e all source files except include files, should&nbsp;<wbr><br/>
+&nbsp;<wbr>#&nbsp;<wbr>be given on the command line to makedepf90.&nbsp;<wbr>&nbsp;<wbr><br/>
+&nbsp;<wbr>#<br/>
+&nbsp;<wbr>#&nbsp;<wbr>The argument to the&nbsp;<wbr>&#8216;-o&#8217;&nbsp;<wbr>option will be the name of the<br/>
+&nbsp;<wbr>#&nbsp;<wbr>resulting program when running&nbsp;<wbr>&#8216;make&#8217;, in this case&nbsp;<wbr><br/>
+&nbsp;<wbr>#&nbsp;<wbr>&#8216;foobar&#8217;<br/>
+&nbsp;<wbr>depend .depend:<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>makedepf90 -o foobar *.f90 &gt; .depend</p>
 <p> &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211; </p>
 <p> (Note that all the indented lines should be indented with tabs, not spaces) </p>
@@ -127,20 +127,20 @@ description: "makedepf90 – creates Makefile dependency list for Fortran source
 <p> The dependency list <i>.depend</i> will be (re)created if <i>.depend</i> doesn&#8217;t exist, or if the command <code>make depend</code> is run. This should be done every time changes has been made to the program that affect the dependencies of the files (e.g if new source files has been added to the project).</p>
 <h3>Example With Coco</h3>
 <p> If you are using a pre-processor, things might get more complicated. If you are lucky, your compiler supports your pre-processor and runs it on your code automatically, but if it doesn&#8217;t, you have to give the commands to run the pre-processor yourself. Below is an example of an Makefile for <code>coco</code>(1)-users. </p>
-<p> &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;<br />
+<p> &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;<br/>
 &nbsp;<wbr>FC=f90 </p>
 <p>&nbsp;<wbr>FFLAGS=-O </p>
 <p>&nbsp;<wbr>PREPROCESSOR=coco </p>
-<p>&nbsp;<wbr>.SUFFIXES:<br />
+<p>&nbsp;<wbr>.SUFFIXES:<br/>
 &nbsp;<wbr>.SUFFIXES: .f .f90 .o </p>
-<p>&nbsp;<wbr>#&nbsp;<wbr>Files ending in .f90 are compiled directly &#8230;<br />
+<p>&nbsp;<wbr>#&nbsp;<wbr>Files ending in .f90 are compiled directly &#8230;<br/>
 &nbsp;<wbr>.f90.o: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>$(FC)&nbsp;<wbr>-c&nbsp;<wbr>$(FFLAGS)&nbsp;<wbr>$&lt; </p>
-<p>&nbsp;<wbr>#&nbsp;<wbr>&#8230; while those ending in .f are preprocessed first.<br />
+<p>&nbsp;<wbr>#&nbsp;<wbr>&#8230; while those ending in .f are preprocessed first.<br/>
 &nbsp;<wbr>.f.o: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>$(PREPROCESSOR)&nbsp;<wbr>$*;&nbsp;<wbr>$(FC)&nbsp;<wbr>-c&nbsp;<wbr>$(FFLAGS)&nbsp;<wbr>$*.f90 </p>
 <p>&nbsp;<wbr>include .depend </p>
-<p>&nbsp;<wbr>clean:<br />
+<p>&nbsp;<wbr>clean:<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>rm -f *.o *.mod core</p>
 <p>&nbsp;<wbr>depend .depend: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>makedepf90 -coco -o foobar&nbsp;<wbr>*.f90&nbsp;<wbr>*.f&nbsp;<wbr>&gt;&nbsp;<wbr>.depend </p>
@@ -157,7 +157,7 @@ description: "makedepf90 – creates Makefile dependency list for Fortran source
 <p> The include file search algorithm is broken. I may fix it some day. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-make/">make</a></code>(1), <code>f90</code>(1), <code><a href="/docs/linux/man/1-cpp/">cpp</a></code>(1), <code>fpp</code>(1), <code>f90ppr</code>(1), <code>coco</code>(1) </p>
-<p> The makedepf90 web site is found at<br />
+<p> The makedepf90 web site is found at<br/>
  <a rel="nofollow" href="http://www.iki.fi/erik.edelmann/makedepf90">http://www.iki.fi/erik.edelmann/makedepf90</a> </p>
 <h2>COPYING</h2>
 <p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License version 2 as published by the Free Software Foundation. </p>

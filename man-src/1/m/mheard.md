@@ -46,7 +46,7 @@ description: "mheard – display AX.25 calls recently heard."
 <dt><code>-v</code></dt>
 <dd> Display the version.</dd></dl>
 <h2>FILES</h2>
-<p> /var/ax25/mheard/mheard.dat<br />
+<p> /var/ax25/mheard/mheard.dat<br/>
  /etc/ax25/axports</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/4-ax25/">ax25</a></code>(4), <code><a href="/docs/linux/man/8-mheardd/">mheardd</a></code>(8).</p>

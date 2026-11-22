@@ -112,7 +112,7 @@ description: "mknmz – an indexer of Namazu"
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;<a rel="nofollow" href="http://www.namazu.org/trac-namazu/trac.cgi">http://www.namazu.org/trac-namazu/trac.cgi</a>&gt; or &lt;bug-namazu [at] namazu.org&gt;.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 1997-1999 Satoru Takabayashi All rights reserved.<br />
+<p> Copyright &#169; 1997-1999 Satoru Takabayashi All rights reserved.<br/>
  Copyright &#169; 2000-2009 Namazu Project All rights reserved. </p>
 <p> This is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2, or (at your option) any later version. </p>
 <p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. </p>

@@ -16,13 +16,13 @@ export LC_CTYPE=ja_JP.EUC-JP; printf &quot;\33]701;$LC_CTYPE&quot;
 # set window title
 printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 <h2>Description</h2>
-<p>This document contains the <font SIZE="-1">FAQ,</font> the <font SIZE="-1">RXVT TECHNICAL REFERENCE</font> documenting all escape sequences, and other background information. </p>
+<p>This document contains the FAQ, the RXVT TECHNICAL REFERENCE documenting all escape sequences, and other background information. </p>
 <p> The newest version of this document is also available on the World Wide Web at &lt;<a rel="nofollow" href="http://pod.tst.eu/http://cvs.schmorp.de/rxvt-unicode/doc/rxvt.7.pod">http://pod.tst.eu/http://cvs.schmorp.de/rxvt-unicode/doc/rxvt.7.pod</a>&gt;. </p>
 <p> The main manual page for urxvt256c itself is available at &lt;<a rel="nofollow" href="http://pod.tst.eu/http://cvs.schmorp.de/rxvt-unicode/doc/rxvt.1.pod">http://pod.tst.eu/http://cvs.schmorp.de/rxvt-unicode/doc/rxvt.1.pod</a>&gt;.</p>
 <h2>Rxvt-Unicode/Urxvt Frequently Asked Questions</h2>
 <h3>Meta, Features &amp; Commandline Issues</h3>
 <p><i>My question isn&#8217;t answered here, can I ask a human?</i> </p>
-<p> Before sending me mail, you could go to <font SIZE="-1">IRC: </font><tt>&quot;irc.freenode.net&quot;</tt>, channel <tt>&quot;#rxvt-unicode&quot;</tt> has some rxvt-unicode enthusiasts that might be interested in learning about new and exciting problems (but not FAQs :). </p>
+<p> Before sending me mail, you could go to IRC: <tt>&quot;irc.freenode.net&quot;</tt>, channel <tt>&quot;#rxvt-unicode&quot;</tt> has some rxvt-unicode enthusiasts that might be interested in learning about new and exciting problems (but not FAQs :). </p>
 <p> <i>I use Gentoo, and I have a problem&#8230;</i> </p>
 <p> There are two big problems with Gentoo Linux: first, most if not all Gentoo systems are completely broken (missing or mismatched header files, broken compiler etc. are just the tip of the iceberg); secondly, it should be called Gentoo GNU/Linux. </p>
 <p> For these reasons, it is impossible to support rxvt-unicode on Gentoo. Problems appearing on Gentoo systems will usually simply be ignored unless they can be reproduced on non-Gentoo systems. </p>
@@ -48,9 +48,9 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
  fi</pre>
 <p>This tries to create a new terminal, and if fails with exit status 2, meaning it couldn&#8217;t connect to the daemon, it will start the daemon and re-run the command. Subsequent invocations of the script will re-use the existing daemon. </p>
 <p> <i>How do I distinguish whether I&#8217;m running rxvt-unicode or a regular xterm? I need this to decide about setting colours etc.</i> </p>
-<p> The original rxvt and rxvt-unicode always export the variable &#8220;<font SIZE="-1">COLORTERM&#8221;,</font> so you can check and see if that is set. Note that several programs, <font SIZE="-1">JED,</font> slrn, Midnight Commander automatically check this variable to decide whether or not to use colour. </p>
-<p> <i>How do I set the correct, full </i><font SIZE="-1"><i>IP</i></font><i> address for the </i><font SIZE="-1"><i>DISPLAY</i></font><i> variable?</i> </p>
-<p> If you&#8217;ve compiled rxvt-unicode with <font SIZE="-1">DISPLAY_IS_IP</font> and have enabled insecure mode then it is possible to use the following shell script snippets to correctly set the display. If your version of rxvt-unicode wasn&#8217;t also compiled with <font SIZE="-1">ESCZ_ANSWER </font>(as assumed in these snippets) then the <font SIZE="-1">COLORTERM</font> variable can be used to distinguish rxvt-unicode from a regular xterm. </p>
+<p> The original rxvt and rxvt-unicode always export the variable &#8220;COLORTERM&#8221;, so you can check and see if that is set. Note that several programs, JED, slrn, Midnight Commander automatically check this variable to decide whether or not to use colour. </p>
+<p> <i>How do I set the correct, full </i><i>IP</i><i> address for the </i><i>DISPLAY</i><i> variable?</i> </p>
+<p> If you&#8217;ve compiled rxvt-unicode with DISPLAY_IS_IP and have enabled insecure mode then it is possible to use the following shell script snippets to correctly set the display. If your version of rxvt-unicode wasn&#8217;t also compiled with ESCZ_ANSWER (as assumed in these snippets) then the COLORTERM variable can be used to distinguish rxvt-unicode from a regular xterm. </p>
 <p> Courtesy of Chuck Blake &lt;cblake [at] BBN.COM&gt; with the following shell script snippets: </p>
 <pre> # Bourne/Korn/POSIX family of shells:
  [ ${TERM:-foo} = foo ] &amp;&amp; TERM=xterm # assume an xterm if we don't know
@@ -67,7 +67,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 <p><i>How do I compile the manual pages on my own?</i> </p>
 <p> You need to have a recent version of perl installed as <i>/usr/bin/perl</i>, one that comes with <i>pod2man</i>, <i>pod2text</i> and <i>pod2xhtml</i> (from <i>Pod::Xhtml</i>). Then go to the doc subdirectory and enter <tt>&quot;make alldoc&quot;</tt>. </p>
 <p> <i>Isn&#8217;t rxvt-unicode supposed to be small? Don&#8217;t all those features bloat?</i> </p>
-<p> I often get asked about this, and I think, no, they didn&#8217;t cause extra bloat. If you compare a minimal rxvt and a minimal urxvt, you can see that the urxvt binary is larger (due to some encoding tables always being compiled in), but it actually uses less memory (<font SIZE="-1">RSS</font>) after startup. Even with <tt>&quot;--disable-everything&quot;</tt>, this comparison is a bit unfair, as many features unique to urxvt (locale, encoding conversion, iso14755 etc.) are already in use in this mode. </p>
+<p> I often get asked about this, and I think, no, they didn&#8217;t cause extra bloat. If you compare a minimal rxvt and a minimal urxvt, you can see that the urxvt binary is larger (due to some encoding tables always being compiled in), but it actually uses less memory (RSS) after startup. Even with <tt>&quot;--disable-everything&quot;</tt>, this comparison is a bit unfair, as many features unique to urxvt (locale, encoding conversion, iso14755 etc.) are already in use in this mode. </p>
 <pre> text data bss drs rss filename
  98398 1664 24 15695 1824 rxvt --disable-everything
  188985 9048 66616 18222 1788 urxvt --disable-everything</pre>
@@ -75,13 +75,13 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 <pre> text data bss drs rss filename
  163431 2152 24 20123 2060 rxvt --enable-everything
  1035683 49680 66648 29096 3680 urxvt --enable-everything</pre>
-<p>The very large size of the text section is explained by the east-asian encoding tables, which, if unused, take up disk space but nothing else and can be compiled out unless you rely on X11 core fonts that use those encodings. The <font SIZE="-1">BSS</font> size comes from the 64k emergency buffer that my c++ compiler allocates (but of course doesn&#8217;t use unless you are out of memory). Also, using an xft font instead of a core font immediately adds a few megabytes of <font SIZE="-1">RSS.</font> Xft indeed is responsible for a lot of <font SIZE="-1">RSS</font> even when not used. </p>
+<p>The very large size of the text section is explained by the east-asian encoding tables, which, if unused, take up disk space but nothing else and can be compiled out unless you rely on X11 core fonts that use those encodings. The BSS size comes from the 64k emergency buffer that my c++ compiler allocates (but of course doesn&#8217;t use unless you are out of memory). Also, using an xft font instead of a core font immediately adds a few megabytes of RSS. Xft indeed is responsible for a lot of RSS even when not used. </p>
 <p> Of course, due to every character using two or four bytes instead of one, a large scrollback buffer will ultimately make rxvt-unicode use more memory. </p>
 <p> Compared to e.g. Eterm (5112k), aterm (3132k) and xterm (4680k), this still fares rather well. And compared to some monsters like gnome-terminal (21152k + extra 4204k in separate processes) or konsole (22200k + extra 43180k in daemons that stay around after exit, plus half a minute of startup time, including the hundreds of warnings it spits out), it fares extremely well *g*. </p>
-<p> <i>Why C<font SIZE="-2">++</font>, isn&#8217;t that unportable/bloated/uncool?</i> </p>
-<p> Is this a question? :) It comes up very often. The simple answer is: I had to write it, and C<font SIZE="-2">++</font> allowed me to write and maintain it in a fraction of the time and effort (which is a scarce resource for me). Put even shorter: It simply wouldn&#8217;t exist without C<font SIZE="-2">++</font>. </p>
-<p> My personal stance on this is that C<font SIZE="-2">++</font> is less portable than C, but in the case of rxvt-unicode this hardly matters, as its portability limits are defined by things like X11, pseudo terminals, locale support and unix domain sockets, which are all less portable than C<font SIZE="-2">++</font> itself. </p>
-<p> Regarding the bloat, see the above question: It&#8217;s easy to write programs in C that use gobs of memory, and certainly possible to write programs in C<font SIZE="-2">++</font> that don&#8217;t. C<font SIZE="-2">++</font> also often comes with large libraries, but this is not necessarily the case with <font SIZE="-1">GCC.</font> Here is what rxvt links against on my system with a minimal config: </p>
+<p> <i>Why C++, isn&#8217;t that unportable/bloated/uncool?</i> </p>
+<p> Is this a question? :) It comes up very often. The simple answer is: I had to write it, and C++ allowed me to write and maintain it in a fraction of the time and effort (which is a scarce resource for me). Put even shorter: It simply wouldn&#8217;t exist without C++. </p>
+<p> My personal stance on this is that C++ is less portable than C, but in the case of rxvt-unicode this hardly matters, as its portability limits are defined by things like X11, pseudo terminals, locale support and unix domain sockets, which are all less portable than C++ itself. </p>
+<p> Regarding the bloat, see the above question: It&#8217;s easy to write programs in C that use gobs of memory, and certainly possible to write programs in C++ that don&#8217;t. C++ also often comes with large libraries, but this is not necessarily the case with GCC. Here is what rxvt links against on my system with a minimal config: </p>
 <pre> libX11.so.6 =&gt; /usr/X11R6/lib/libX11.so.6 (0x00002aaaaabc3000)
  libc.so.6 =&gt; /lib/libc.so.6 (0x00002aaaaadde000)
  libdl.so.2 =&gt; /lib/libdl.so.2 (0x00002aaaab01d000)
@@ -100,14 +100,14 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 <p> 1. Use transparent mode: </p>
 <pre> Esetroot wallpaper.jpg
  urxvt -tr -tint red -sh 40</pre>
-<p>That works. If you think it doesn&#8217;t, you lack transparency and tinting support, or you are unable to read. This method requires that the background-setting program sets the _XROOTPMAP_ID or <font SIZE="-1">ESETROOT_PMAP_ID</font> property. Compatible programs are Esetroot, hsetroot and feh. </p>
+<p>That works. If you think it doesn&#8217;t, you lack transparency and tinting support, or you are unable to read. This method requires that the background-setting program sets the _XROOTPMAP_ID or ESETROOT_PMAP_ID property. Compatible programs are Esetroot, hsetroot and feh. </p>
 <p> 2. Use a simple pixmap and emulate pseudo-transparency. This enables you to use effects other than tinting and shading: Just shade/tint/whatever your picture with gimp or any other tool: </p>
 <pre> convert wallpaper.jpg -blur 20x20 -modulate 30 background.jpg
  urxvt -pixmap &quot;background.jpg;:root&quot;</pre>
 <p>That works. If you think it doesn&#8217;t, you lack GDK-PixBuf support, or you are unable to read. </p>
-<p> 3. Use an <font SIZE="-1">ARGB</font> visual: </p>
+<p> 3. Use an ARGB visual: </p>
 <pre> urxvt -depth 32 -fg grey90 -bg rgba:0000/0000/4444/cccc</pre>
-<p>This requires <font SIZE="-1">XFT</font> support, and the support of your X-server. If that doesn&#8217;t work for you, blame Xorg and Keith Packard. <font SIZE="-1">ARGB</font> visuals aren&#8217;t there yet, no matter what they claim. Rxvt-Unicode contains the necessary bugfixes and workarounds for Xft and Xlib to make it work, but that doesn&#8217;t mean that your <font SIZE="-1">WM</font> has the required kludges in place. </p>
+<p>This requires XFT support, and the support of your X-server. If that doesn&#8217;t work for you, blame Xorg and Keith Packard. ARGB visuals aren&#8217;t there yet, no matter what they claim. Rxvt-Unicode contains the necessary bugfixes and workarounds for Xft and Xlib to make it work, but that doesn&#8217;t mean that your WM has the required kludges in place. </p>
 <p> 4. Use xcompmgr and let it do the job: </p>
 <pre> xprop -frame -f _NET_WM_WINDOW_OPACITY 32c \
  -set _NET_WM_WINDOW_OPACITY 0xc0000000</pre>
@@ -128,7 +128,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 <p> Yes, using an escape sequence. Try something like this, which has the same effect as using the <tt>&quot;-fn&quot;</tt> switch, and takes effect immediately: </p>
 <pre> printf '\33]50;%s' &quot;9x15bold,xft:Kochi Gothic&quot;</pre>
 <p>This is useful if you e.g. work primarily with japanese (and prefer a japanese font), but you have to switch to chinese temporarily, where japanese fonts would only be in your way. </p>
-<p> You can think of this as a kind of manual <font SIZE="-1">ISO-2022</font> switching. </p>
+<p> You can think of this as a kind of manual ISO-2022 switching. </p>
 <p> <i>Why do italic characters look as if clipped?</i> </p>
 <p> Many fonts have difficulties with italic characters and hinting. For example, the otherwise very nicely hinted font <tt>&quot;xft:Bitstream Vera Sans Mono&quot;</tt> completely fails in its italic face. A workaround might be to enable freetype autohinting, i.e. like this: </p>
 <pre> URxvt.italicFont: xft:Bitstream Vera Sans Mono:italic:autohint=true
@@ -141,12 +141,12 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 <p> <i>What&#8217;s with this bold/blink stuff?</i> </p>
 <p> If no bold colour is set via <tt>&quot;colorBD:&quot;</tt>, bold will invert text using the standard foreground colour. </p>
 <p> For the standard background colour, blinking will actually make the text blink when compiled with <tt>&quot;--enable-text-blink&quot;</tt>. Without <tt>&quot;--enable-text-blink&quot;</tt>, the blink attribute will be ignored. </p>
-<p> On <font SIZE="-1">ANSI</font> colours, bold/blink attributes are used to set high-intensity foreground/background colours. </p>
+<p> On ANSI colours, bold/blink attributes are used to set high-intensity foreground/background colours. </p>
 <p> color0-7 are the low-intensity colours. </p>
 <p> color8-15 are the corresponding high-intensity colours. </p>
 <p> <i>I don&#8217;t like the screen colours. How do I change them?</i> </p>
 <p> You can change the screen colours at run-time using <i>~/.Xdefaults</i> resources (or as long-options). </p>
-<p> Here are values that are supposed to resemble a <font SIZE="-1">VGA</font> screen, including the murky brown that passes for low-intensity yellow: </p>
+<p> Here are values that are supposed to resemble a VGA screen, including the murky brown that passes for low-intensity yellow: </p>
 <pre> URxvt.color0: #000000
  URxvt.color1: #A80000
  URxvt.color2: #00A800
@@ -216,7 +216,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 <p>Please also note that the <i>LeftClick Shift-LeftClick</i> combination also selects words like the old code. </p>
 <p> <i>I don&#8217;t like the new selection/popups/hotkeys/perl, how do I change/disable it?</i> </p>
 <p> You can disable the perl extension completely by setting the <code>perl-ext-common</code> resource to the empty string, which also keeps rxvt-unicode from initialising perl, saving memory. </p>
-<p> If you only want to disable specific features, you first have to identify which perl extension is responsible. For this, read the section <font SIZE="-1"><code>PREPACKAGED EXTENSIONS</code></font> in the urxvt<i>perl</i>(3) manpage. For example, to disable the <code>selection-popup</code> and <code>option-popup</code>, specify this <code>perl-ext-common</code> resource: </p>
+<p> If you only want to disable specific features, you first have to identify which perl extension is responsible. For this, read the section <code>PREPACKAGED EXTENSIONS</code> in the urxvt<i>perl</i>(3) manpage. For example, to disable the <code>selection-popup</code> and <code>option-popup</code>, specify this <code>perl-ext-common</code> resource: </p>
 <pre> URxvt.perl-ext-common: default,-selection-popup,-option-popup</pre>
 <p>This will keep the default extensions, but disable the two popup extensions. Some extensions can also be configured, for example, scrollback search mode is triggered by <code>M-s</code>. You can move it to any other combination either by setting the <code>searchable-scrollback</code> resource: </p>
 <pre> URxvt.searchable-scrollback: CM-s</pre>
@@ -232,14 +232,14 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 <p> The most common causes for this are that either your locale is not set correctly, or you specified a <code>preeditType</code> that is not supported by your input method. For example, if you specified <code>OverTheSpot</code> and your input method (e.g. the default input method handling Compose keys) does not support this (for instance because it is not visual), then rxvt-unicode will continue without an input method. </p>
 <p> In this case either do not specify a <code>preeditType</code> or specify more than one pre-edit style, such as <code>OverTheSpot,Root,None</code>. </p>
 <p> If it still doesn&#8217;t work, then maybe your input method doesn&#8217;t support compose sequences &#8211; to fall back to the built-in one, make sure you don&#8217;t specify an input method via <tt>&quot;-im&quot;</tt> or <tt>&quot;XMODIFIERS&quot;</tt>. </p>
-<p> <i>I cannot type </i>&quot;Ctrl-Shift-2&quot;<i> to get an </i><font SIZE="-1"><i>ASCII NUL</i></font><i> character due to </i><font SIZE="-1"><i>ISO 14755</i></font><i></i> </p>
-<p> Either try <tt>&quot;Ctrl-2&quot;</tt> alone (it often is mapped to <font SIZE="-1">ASCII NUL</font> even on international keyboards) or simply use <font SIZE="-1">ISO 14755</font> support to your advantage, typing &lt;Ctrl-Shift-0&gt; to get a <font SIZE="-1">ASCII NUL.</font> This works for other codes, too, such as <tt>&quot;Ctrl-Shift-1-d&quot;</tt> to type the default telnet escape character and so on. </p>
+<p> <i>I cannot type </i>&quot;Ctrl-Shift-2&quot;<i> to get an </i><i>ASCII NUL</i><i> character due to </i><i>ISO 14755</i><i></i> </p>
+<p> Either try <tt>&quot;Ctrl-2&quot;</tt> alone (it often is mapped to ASCII NUL even on international keyboards) or simply use ISO 14755 support to your advantage, typing &lt;Ctrl-Shift-0&gt; to get a ASCII NUL. This works for other codes, too, such as <tt>&quot;Ctrl-Shift-1-d&quot;</tt> to type the default telnet escape character and so on. </p>
 <p> <i>Mouse cut/paste suddenly no longer works.</i> </p>
 <p> Make sure that mouse reporting is actually turned off since killing some editors prematurely may leave it active. I&#8217;ve heard that tcsh may use mouse reporting unless it is otherwise specified. A quick check is to see if cut/paste works when the Alt or Shift keys are pressed. </p>
 <p> <i>What&#8217;s with the strange Backspace/Delete key behaviour?</i> </p>
 <p> Assuming that the physical Backspace key corresponds to the Backspace keysym (not likely for Linux &#8230; see the following question) there are two standard values that can be used for Backspace: <tt>&quot;^H&quot;</tt> and <tt>&quot;^?&quot;</tt>. </p>
 <p> Historically, either value is correct, but rxvt-unicode adopts the debian policy of using <tt>&quot;^?&quot;</tt> when unsure, because it&#8217;s the one and only correct choice :). </p>
-<p> It is possible to toggle between <tt>&quot;^H&quot;</tt> and <tt>&quot;^?&quot;</tt> with the <font SIZE="-1">DECBKM</font> private mode: </p>
+<p> It is possible to toggle between <tt>&quot;^H&quot;</tt> and <tt>&quot;^?&quot;</tt> with the DECBKM private mode: </p>
 <pre> # use Backspace = ^H
  $ stty erase ^H
  $ printf &quot;[?67h&quot;
@@ -249,7 +249,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 <p>This helps satisfy some of the Backspace discrepancies that occur, but if you use Backspace = <tt>&quot;^H&quot;</tt>, make sure that the termcap/terminfo value properly reflects that. </p>
 <p> The Delete key is a another casualty of the ill-defined Backspace problem. To avoid confusion between the Backspace and Delete keys, the Delete key has been assigned an escape sequence to match the vt100 for Execute (<tt>&quot;ESC [ 3 ~&quot;</tt>) and is in the supplied termcap/terminfo. </p>
 <p> Some other Backspace problems: </p>
-<p> some editors use termcap/terminfo, some editors (vim I&#8217;m told) expect Backspace = ^H, <font SIZE="-1">GNU</font> Emacs (and Emacs-like editors) use ^H for help. </p>
+<p> some editors use termcap/terminfo, some editors (vim I&#8217;m told) expect Backspace = ^H, GNU Emacs (and Emacs-like editors) use ^H for help. </p>
 <p> Perhaps someday this will all be resolved in a consistent manner. </p>
 <p> <i>I don&#8217;t like the key-bindings. How do I change them?</i> </p>
 <p> There are some compile-time selections available via configure. Unless you have run &#8220;configure&#8221; with the <tt>&quot;--disable-resources&quot;</tt> option you can use the `keysym&#8217; resource to alter the keystrings associated with keysyms. </p>
@@ -263,7 +263,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
  URxvt.keysym.Right: [C
  URxvt.keysym.Left: [D</pre>
 <p>See some more examples in the documentation for the <code>keysym</code> resource. </p>
-<p> <i>I&#8217;m using keyboard model </i><font SIZE="-1"><i>XXX</i></font><i> that has extra Prior/Next/Insert keys. How do I make use of them? For example, the Sun Keyboard type 4 has the following map</i> </p>
+<p> <i>I&#8217;m using keyboard model </i><i>XXX</i><i> that has extra Prior/Next/Insert keys. How do I make use of them? For example, the Sun Keyboard type 4 has the following map</i> </p>
 <pre> KP_Insert == Insert
  F22 == Print
  F27 == Home
@@ -310,7 +310,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 <pre> URxvt.saveLines: 8192</pre>
 <p>A large scrollback buffer is essential. Really. </p>
 <pre> URxvt.mapAlert: true</pre>
-<p>The only case I use it is for my <font SIZE="-1">IRC</font> window, which I like to keep iconified till people msg me (which beeps). </p>
+<p>The only case I use it is for my IRC window, which I like to keep iconified till people msg me (which beeps). </p>
 <pre> URxvt.visualBell: true</pre>
 <p>The audible bell is often annoying, especially when in a crowd. </p>
 <pre> URxvt.insecure: true</pre>
@@ -328,7 +328,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
  urxvt.boldItalicFont: xft:Bitstream Vera Sans Mono:bold:italic:autohint=true</pre>
 <p>I wrote rxvt-unicode to be able to specify fonts exactly. So don&#8217;t be overwhelmed. A special note: the <tt>&quot;9x15bold&quot;</tt> mentioned above is actually the version from XFree-3.3, as XFree-4 replaced it by a totally different font (different glyphs for <tt>&quot;;&quot;</tt> and many other harmless characters), while the second font is actually the <tt>&quot;9x15bold&quot;</tt> from XFree4/XOrg. The bold version has less chars than the medium version, so I use it for rare characters, too. When editing sources with vim, I use italic for comments and other stuff, which looks quite good with Bitstream Vera anti-aliased. </p>
 <p> Terminus is a quite bad font (many very wrong glyphs), but for most of my purposes, it works, and gives a different look, as my normal (Non-bold) font is already bold, and I want to see a difference between bold and normal fonts. </p>
-<p> Please note that I used the <tt>&quot;urxvt&quot;</tt> instance name and not the <tt>&quot;URxvt&quot;</tt> class name. That is because I use different configs for different purposes, for example, my <font SIZE="-1">IRC</font> window is started with <tt>&quot;-name IRC&quot;</tt>, and uses these defaults: </p>
+<p> Please note that I used the <tt>&quot;urxvt&quot;</tt> instance name and not the <tt>&quot;URxvt&quot;</tt> class name. That is because I use different configs for different purposes, for example, my IRC window is started with <tt>&quot;-name IRC&quot;</tt>, and uses these defaults: </p>
 <pre> IRC*title: IRC
  IRC*geometry: 87x12+535+542
  IRC*saveLines: 0
@@ -347,7 +347,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
  URxvt.keysym.C-M-p: perl:test</pre>
 <p>The first for keysym definitions allow me to quickly bring some windows in the layout I like most. Ion users might start laughing but will stop immediately when I tell them that I use my own Fvwm2 module for much the same effect as Ion provides, and I only very rarely use the above key combinations :-&gt; </p>
 <p> <i>Why doesn&#8217;t rxvt-unicode read my resources?</i> </p>
-<p> Well, why, indeed? It does, in a way very similar to other X applications. Most importantly, this means that if you or your <font SIZE="-1">OS</font> loads resources into the X display (the right way to do it), rxvt-unicode will ignore any resource files in your home directory. It will only read <i></i>$HOME<i>/.Xdefaults</i> when no resources are attached to the display. </p>
+<p> Well, why, indeed? It does, in a way very similar to other X applications. Most importantly, this means that if you or your OS loads resources into the X display (the right way to do it), rxvt-unicode will ignore any resource files in your home directory. It will only read <i></i>$HOME<i>/.Xdefaults</i> when no resources are attached to the display. </p>
 <p> If you have or use an <i></i>$HOME<i>/.Xresources</i> file, chances are that resources are loaded into your X-server. In this case, you have to re-login after every change (or run <i>xrdb -merge </i>$HOME<i>/.Xresources</i>). </p>
 <p> Also consider the form resources have to use: </p>
 <pre> URxvt.resource: value</pre>
@@ -359,7 +359,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
  infocmp rxvt-unicode | ssh $REMOTE &quot;mkdir -p .terminfo &amp;&amp; cat &gt;/tmp/ti &amp;&amp; tic /tmp/ti&quot;</pre>
 <p>One some systems you might need to set <tt>$TERMINFO</tt> to the full path of <i></i>$HOME<i>/.terminfo</i> for this to work. </p>
 <p> If you cannot or do not want to do this, then you can simply set <tt>&quot;TERM=rxvt&quot;</tt> or even <tt>&quot;TERM=xterm&quot;</tt>, and live with the small number of problems arising, which includes wrong keymapping, less and different colours and some refresh errors in fullscreen applications. It&#8217;s a nice quick-and-dirty workaround for rare cases, though. </p>
-<p> If you always want to do this (and are fine with the consequences) you can either recompile rxvt-unicode with the desired <font SIZE="-1">TERM</font> value or use a resource to set it: </p>
+<p> If you always want to do this (and are fine with the consequences) you can either recompile rxvt-unicode with the desired TERM value or use a resource to set it: </p>
 <pre> URxvt.termName: rxvt</pre>
 <p>If you don&#8217;t plan to use <code>rxvt</code> (quite common&#8230;) you could also replace the rxvt terminfo file with the rxvt-unicode one and use <tt>&quot;TERM=rxvt&quot;</tt>. </p>
 <p> <i>nano fails with &#8220;Error opening terminal: rxvt-unicode&#8221;</i> </p>
@@ -374,7 +374,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 <pre> infocmp -C rxvt-unicode</pre>
 <p>Or you could use the termcap entry in doc/etc/rxvt-unicode.termcap, generated by the command above. </p>
 <p> <i>Why does </i>&quot;ls&quot;<i> no longer have coloured output?</i> </p>
-<p> The <tt>&quot;ls&quot;</tt> in the <font SIZE="-1">GNU</font> coreutils unfortunately doesn&#8217;t use terminfo to decide whether a terminal has colour, but uses its own configuration file. Needless to say, <tt>&quot;rxvt-unicode&quot;</tt> is not in its default file (among with most other terminals supporting colour). Either add: </p>
+<p> The <tt>&quot;ls&quot;</tt> in the GNU coreutils unfortunately doesn&#8217;t use terminfo to decide whether a terminal has colour, but uses its own configuration file. Needless to say, <tt>&quot;rxvt-unicode&quot;</tt> is not in its default file (among with most other terminals supporting colour). Either add: </p>
 <pre> TERM rxvt-unicode</pre>
 <p>to <tt>&quot;/etc/DIR_COLORS&quot;</tt> or simply add: </p>
 <pre> alias ls='ls --color=auto'</pre>
@@ -400,7 +400,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 <p> <i>How does rxvt-unicode determine the encoding to use?</i> </p>
 <p> See next entry. </p>
 <p> <i>Is there an option to switch encodings?</i> </p>
-<p> Unlike some other terminals, rxvt-unicode has no encoding switch, and no specific &#8220;utf-8&#8221; mode, such as xterm. In fact, it doesn&#8217;t even know about <font SIZE="-1">UTF-8</font> or any other encodings with respect to terminal I/O. </p>
+<p> Unlike some other terminals, rxvt-unicode has no encoding switch, and no specific &#8220;utf-8&#8221; mode, such as xterm. In fact, it doesn&#8217;t even know about UTF-8 or any other encodings with respect to terminal I/O. </p>
 <p> The reasons is that there exists a perfectly fine mechanism for selecting the encoding, doing I/O and (most important) communicating this to all applications so everybody agrees on character properties such as width and code number. This mechanism is the <i>locale</i>. Applications not using that info will have problems (for example, <tt>&quot;xterm&quot;</tt> gets the width of characters wrong as it uses its own, locale-independent table under all locales). </p>
 <p> Rxvt-unicode uses the <tt>&quot;LC_CTYPE&quot;</tt> locale category to select encoding. All programs doing the same (that is, most) will automatically agree in the interpretation of characters. </p>
 <p> Unfortunately, there is no system-independent way to select locales, nor is there a standard on how locale specifiers will look like. </p>
@@ -411,7 +411,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 <p> Yes, using an escape sequence. Try something like this, which sets rxvt-unicode&#8217;s idea of <tt>&quot;LC_CTYPE&quot;</tt>. </p>
 <pre> printf '\33]701;%s' ja_JP.SJIS</pre>
 <p>See also the previous answer. </p>
-<p> Sometimes this capability is rather handy when you want to work in one locale (e.g. <tt>&quot;de_DE.UTF-8&quot;</tt>) but some programs don&#8217;t support it (e.g. <font SIZE="-1">UTF-8</font>). For example, I use this script to start <tt>&quot;xjdic&quot;</tt>, which first switches to a locale supported by xjdic and back later: </p>
+<p> Sometimes this capability is rather handy when you want to work in one locale (e.g. <tt>&quot;de_DE.UTF-8&quot;</tt>) but some programs don&#8217;t support it (e.g. UTF-8). For example, I use this script to start <tt>&quot;xjdic&quot;</tt>, which first switches to a locale supported by xjdic and back later: </p>
 <pre> printf '\33]701;%s' ja_JP.SJIS
  xjdic -js
  printf '\33]701;%s' de_DE.UTF-8</pre>
@@ -420,38 +420,38 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 <p> Try a search engine, as this is slightly different for every input method server. </p>
 <p> Here is a checklist:</p>
 <dl>
-<dt>&#8211; Make sure your locale <i>and</i> the imLocale are supported on your <font SIZE="-1">OS.</font></dt>
-<dd>Try <tt>&quot;locale -a&quot;</tt> or check the documentation for your <font SIZE="-1">OS.</font></dd>
-<dt>&#8211; Make sure your locale or imLocale matches a locale supported by your <font SIZE="-1">XIM.</font></dt>
-<dd>For example, <code>kinput2</code> does not support <font SIZE="-1">UTF-8</font> locales, you should use <tt>&quot;ja_JP.EUC-JP&quot;</tt> or equivalent.</dd>
-<dt>&#8211; Make sure your <font SIZE="-1">XIM</font> server is actually running.</dt>
+<dt>&#8211; Make sure your locale <i>and</i> the imLocale are supported on your OS.</dt>
+<dd>Try <tt>&quot;locale -a&quot;</tt> or check the documentation for your OS.</dd>
+<dt>&#8211; Make sure your locale or imLocale matches a locale supported by your XIM.</dt>
+<dd>For example, <code>kinput2</code> does not support UTF-8 locales, you should use <tt>&quot;ja_JP.EUC-JP&quot;</tt> or equivalent.</dd>
+<dt>&#8211; Make sure your XIM server is actually running.</dt>
 <dd>
 </dd><dt>&#8211; Make sure the &quot;XMODIFIERS&quot; environment variable is set correctly when <i>starting</i> rxvt-unicode.</dt>
 <dd>When you want to use e.g. <code>kinput2</code>, it must be set to <tt>&quot;@im=kinput2&quot;</tt>. For <code>scim</code>, use <tt>&quot;@im=SCIM&quot;</tt>. You can see what input method servers are running with this command: </dd>
 <pre> xprop -root XIM_SERVERS</pre>
 </dl>
-<p> <i>My input method wants &lt;some encoding&gt; but I want </i><font SIZE="-1"><i>UTF-8,</i></font><i> what can I do?</i> </p>
+<p> <i>My input method wants &lt;some encoding&gt; but I want </i><i>UTF-8,</i><i> what can I do?</i> </p>
 <p> You can specify separate locales for the input method and the rest of the terminal, using the resource <tt>&quot;imlocale&quot;</tt>: </p>
 <pre> URxvt.imlocale: ja_JP.EUC-JP</pre>
 <p>Now you can start your terminal with <tt>&quot;LC_CTYPE=ja_JP.UTF-8&quot;</tt> and still use your input method. Please note, however, that, depending on your Xlib version, you may not be able to input characters outside <tt>&quot;EUC-JP&quot;</tt> in a normal way then, as your input method limits you. </p>
 <p> <i>Rxvt-unicode crashes when the X Input Method changes or exits.</i> </p>
-<p> Unfortunately, this is unavoidable, as the <font SIZE="-1">XIM</font> protocol is racy by design. Applications can avoid some crashes at the expense of memory leaks, and Input Methods can avoid some crashes by careful ordering at exit time. <code>kinput2</code> (and derived input methods) generally succeeds, while <font SIZE="-1"><code>SCIM</code></font> (or similar input methods) fails. In the end, however, crashes cannot be completely avoided even if both sides cooperate. </p>
+<p> Unfortunately, this is unavoidable, as the XIM protocol is racy by design. Applications can avoid some crashes at the expense of memory leaks, and Input Methods can avoid some crashes by careful ordering at exit time. <code>kinput2</code> (and derived input methods) generally succeeds, while <code>SCIM</code> (or similar input methods) fails. In the end, however, crashes cannot be completely avoided even if both sides cooperate. </p>
 <p> So the only workaround is not to kill your Input Method Servers.</p>
 <h3>Operating Systems / Package Maintaining</h3>
-<p><i>I am maintaining rxvt-unicode for distribution/OS </i><font SIZE="-1"><i>XXX,</i></font><i> any recommendation?</i> </p>
+<p><i>I am maintaining rxvt-unicode for distribution/OS </i><i>XXX,</i><i> any recommendation?</i> </p>
 <p> You should build one binary with the default options. <i>configure</i> now enables most useful options, and the trend goes to making them runtime-switchable, too, so there is usually no drawback to enabling them, except higher disk and possibly memory usage. The perl interpreter should be enabled, as important functionality (menus, selection, likely more in the future) depends on it. </p>
 <p> You should not overwrite the <tt>&quot;perl-ext-common&quot;</tt> and <tt>&quot;perl-ext&quot;</tt> resources system-wide (except maybe with <tt>&quot;defaults&quot;</tt>). This will result in useful behaviour. If your distribution aims at low memory, add an empty <tt>&quot;perl-ext-common&quot;</tt> resource to the app-defaults file. This will keep the perl interpreter disabled until the user enables it. </p>
 <p> If you can/want build more binaries, I recommend building a minimal one with <tt>&quot;--disable-everything&quot;</tt> (very useful) and a maximal one with <tt>&quot;--enable-everything&quot;</tt> (less useful, it will be very big due to a lot of encodings built-in that increase download times and are rarely used). </p>
-<p> <i>I need to make it setuid/setgid to support utmp/ptys on my </i><font SIZE="-1"><i>OS,</i></font><i> is this safe?</i> </p>
-<p> It should be, starting with release 7.1. You are encouraged to properly install urxvt with privileges necessary for your <font SIZE="-1">OS</font> now. </p>
+<p> <i>I need to make it setuid/setgid to support utmp/ptys on my </i><i>OS,</i><i> is this safe?</i> </p>
+<p> It should be, starting with release 7.1. You are encouraged to properly install urxvt with privileges necessary for your OS now. </p>
 <p> When rxvt-unicode detects that it runs setuid or setgid, it will fork into a helper process for privileged operations (pty handling on some systems, utmp/wtmp/lastlog handling on others) and drop privileges immediately. This is much safer than most other terminals that keep privileges while running (but is more relevant to urxvt, as it contains things as perl interpreters, which might be &#8220;helpful&#8221; to attackers). </p>
 <p> This forking is done as the very first within <i>main()</i>, which is very early and reduces possible bugs to initialisation code run before <i>main()</i>, or things like the dynamic loader of your system, which should result in very little risk. </p>
 <p> <i>I am on FreeBSD and rxvt-unicode does not seem to work at all.</i> </p>
 <p> Rxvt-unicode requires the symbol <tt>&quot;__STDC_ISO_10646__&quot;</tt> to be defined in your compile environment, or an implementation that implements it, whether it defines the symbol or not. <tt>&quot;__STDC_ISO_10646__&quot;</tt> requires that <code>wchar_t</code> is represented as unicode. </p>
 <p> As you might have guessed, FreeBSD does neither define this symbol nor does it support it. Instead, it uses its own internal representation of <code>wchar_t</code>. This is, of course, completely fine with respect to standards. </p>
 <p> However, that means rxvt-unicode only works in <tt>&quot;POSIX&quot;</tt>, <tt>&quot;ISO-8859-1&quot;</tt> and <tt>&quot;UTF-8&quot;</tt> locales under FreeBSD (which all use Unicode as <code>wchar_t</code>). </p>
-<p> <tt>&quot;__STDC_ISO_10646__&quot;</tt> is the only sane way to support multi-language apps in an <font SIZE="-1">OS,</font> as using a locale-dependent (and non-standardized) representation of <code>wchar_t</code> makes it impossible to convert between <code>wchar_t</code> (as used by X11 and your applications) and any other encoding without implementing OS-specific-wrappers for each and every locale. There simply are no APIs to convert <code>wchar_t</code> into anything except the current locale encoding. </p>
-<p> Some applications (such as the formidable <code>mlterm</code>) work around this by carrying their own replacement functions for character set handling with them, and either implementing OS-dependent hacks or doing multiple conversions (which is slow and unreliable in case the <font SIZE="-1">OS</font> implements encodings slightly different than the terminal emulator). </p>
+<p> <tt>&quot;__STDC_ISO_10646__&quot;</tt> is the only sane way to support multi-language apps in an OS, as using a locale-dependent (and non-standardized) representation of <code>wchar_t</code> makes it impossible to convert between <code>wchar_t</code> (as used by X11 and your applications) and any other encoding without implementing OS-specific-wrappers for each and every locale. There simply are no APIs to convert <code>wchar_t</code> into anything except the current locale encoding. </p>
+<p> Some applications (such as the formidable <code>mlterm</code>) work around this by carrying their own replacement functions for character set handling with them, and either implementing OS-dependent hacks or doing multiple conversions (which is slow and unreliable in case the OS implements encodings slightly different than the terminal emulator). </p>
 <p> The rxvt-unicode author insists that the right way to fix this is in the system libraries once and for all, instead of forcing every app to carry complete replacements for them :) </p>
 <p> <i>How can I use rxvt-unicode under cygwin?</i> </p>
 <p> rxvt-unicode should compile and run out of the box on cygwin, using the X11 libraries that come with cygwin. libW11 emulation is no longer supported (and makes no sense, either, as it only supported a single font). I recommend starting the X-server in <tt>&quot;-multiwindow&quot;</tt> or <tt>&quot;-rootless&quot;</tt> mode instead, which will result in similar look&amp;feel as the old libW11 emulation. </p>
@@ -477,19 +477,19 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 <h3>Values</h3>
 <dl>
 <dt><code>&quot;ENQ&quot;</code></dt>
-<dd>Enquiry (Ctrl-E) = Send Device Attributes (<font SIZE="-1">DA</font>) request attributes from terminal. See &quot;ESC [ Ps c&quot;.</dd>
+<dd>Enquiry (Ctrl-E) = Send Device Attributes (DA) request attributes from terminal. See &quot;ESC [ Ps c&quot;.</dd>
 <dt><code>&quot;BEL&quot;</code></dt>
 <dd>Bell (Ctrl-G)</dd>
 <dt><code>&quot;BS&quot;</code></dt>
 <dd>Backspace (Ctrl-H)</dd>
 <dt><code>&quot;TAB&quot;</code></dt>
-<dd>Horizontal Tab (<font SIZE="-1">HT</font>) (Ctrl-I)</dd>
+<dd>Horizontal Tab (HT) (Ctrl-I)</dd>
 <dt><code>&quot;LF&quot;</code></dt>
-<dd>Line Feed or New Line (<font SIZE="-1">NL</font>) (Ctrl-J)</dd>
+<dd>Line Feed or New Line (NL) (Ctrl-J)</dd>
 <dt><code>&quot;VT&quot;</code></dt>
 <dd>Vertical Tab (Ctrl-K) same as &quot;LF&quot;</dd>
 <dt><code>&quot;FF&quot;</code></dt>
-<dd>Form Feed or New Page (<font SIZE="-1">NP</font>) (Ctrl-L) same as &quot;LF&quot;</dd>
+<dd>Form Feed or New Page (NP) (Ctrl-L) same as &quot;LF&quot;</dd>
 <dt><code>&quot;CR&quot;</code></dt>
 <dd>Carriage Return (Ctrl-M)</dd>
 <dt><code>&quot;SO&quot;</code></dt>
@@ -501,44 +501,44 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 <h3>Escape Sequences</h3>
 <dl>
 <dt><code>&quot;ESC # 8&quot;</code></dt>
-<dd><font SIZE="-1">DEC</font> Screen Alignment Test (<font SIZE="-1">DECALN</font>)</dd>
+<dd>DEC Screen Alignment Test (DECALN)</dd>
 <dt><code>&quot;ESC 7&quot;</code></dt>
-<dd>Save Cursor (<font SIZE="-1">SC</font>)</dd>
+<dd>Save Cursor (SC)</dd>
 <dt><code>&quot;ESC 8&quot;</code></dt>
 <dd>Restore Cursor</dd>
 <dt><code>&quot;ESC =&quot;</code></dt>
-<dd>Application Keypad (<font SIZE="-1">SMKX</font>). See also next sequence.</dd>
+<dd>Application Keypad (SMKX). See also next sequence.</dd>
 <dt><code>&quot;ESC &gt;&quot;</code></dt>
-<dd>Normal Keypad (<font SIZE="-1">RMKX</font>) </dd>
+<dd>Normal Keypad (RMKX) </dd>
 <p> <code>Note:</code> numbers or control functions are generated by the numeric keypad in normal or application mode, respectively (see Key Codes).</p>
 <dt><code>&quot;ESC D&quot;</code></dt>
-<dd>Index (<font SIZE="-1">IND</font>)</dd>
+<dd>Index (IND)</dd>
 <dt><code>&quot;ESC E&quot;</code></dt>
-<dd>Next Line (<font SIZE="-1">NEL</font>)</dd>
+<dd>Next Line (NEL)</dd>
 <dt><code>&quot;ESC H&quot;</code></dt>
-<dd>Tab Set (<font SIZE="-1">HTS</font>)</dd>
+<dd>Tab Set (HTS)</dd>
 <dt><code>&quot;ESC M&quot;</code></dt>
-<dd>Reverse Index (<font SIZE="-1">RI</font>)</dd>
+<dd>Reverse Index (RI)</dd>
 <dt><code>&quot;ESC N&quot;</code></dt>
-<dd>Single Shift Select of G2 Character Set (<font SIZE="-1">SS2</font>): affects next character only <i>unimplemented</i></dd>
+<dd>Single Shift Select of G2 Character Set (SS2): affects next character only <i>unimplemented</i></dd>
 <dt><code>&quot;ESC O&quot;</code></dt>
-<dd>Single Shift Select of G3 Character Set (<font SIZE="-1">SS3</font>): affects next character only <i>unimplemented</i></dd>
+<dd>Single Shift Select of G3 Character Set (SS3): affects next character only <i>unimplemented</i></dd>
 <dt><code>&quot;ESC Z&quot;</code></dt>
 <dd>Obsolete form of returns: &quot;ESC [ ? 1 ; 2 C&quot; <i>rxvt-unicode compile-time option</i></dd>
 <dt><code>&quot;ESC c&quot;</code></dt>
-<dd>Full reset (<font SIZE="-1">RIS</font>)</dd>
+<dd>Full reset (RIS)</dd>
 <dt><code>&quot;ESC n&quot;</code></dt>
-<dd>Invoke the G2 Character Set (<font SIZE="-1">LS2</font>)</dd>
+<dd>Invoke the G2 Character Set (LS2)</dd>
 <dt><code>&quot;ESC o&quot;</code></dt>
-<dd>Invoke the G3 Character Set (<font SIZE="-1">LS3</font>)</dd>
+<dd>Invoke the G3 Character Set (LS3)</dd>
 <dt><code>&quot;ESC ( C&quot;</code></dt>
-<dd>Designate G0 Character Set (<font SIZE="-1">ISO 2022</font>), see below for values of <tt>&quot;C&quot;</tt>.</dd>
+<dd>Designate G0 Character Set (ISO 2022), see below for values of <tt>&quot;C&quot;</tt>.</dd>
 <dt><code>&quot;ESC ) C&quot;</code></dt>
-<dd>Designate G1 Character Set (<font SIZE="-1">ISO 2022</font>), see below for values of <tt>&quot;C&quot;</tt>.</dd>
+<dd>Designate G1 Character Set (ISO 2022), see below for values of <tt>&quot;C&quot;</tt>.</dd>
 <dt><code>&quot;ESC * C&quot;</code></dt>
-<dd>Designate G2 Character Set (<font SIZE="-1">ISO 2022</font>), see below for values of <tt>&quot;C&quot;</tt>.</dd>
+<dd>Designate G2 Character Set (ISO 2022), see below for values of <tt>&quot;C&quot;</tt>.</dd>
 <dt><code>&quot;ESC + C&quot;</code></dt>
-<dd>Designate G3 Character Set (<font SIZE="-1">ISO 2022</font>), see below for values of <tt>&quot;C&quot;</tt>.</dd>
+<dd>Designate G3 Character Set (ISO 2022), see below for values of <tt>&quot;C&quot;</tt>.</dd>
 <dt><code>&quot;ESC $ C&quot;</code></dt>
 <dd>Designate Kanji Character Set </dd>
 <p> Where &quot;C&quot; is one of: </p>
@@ -580,30 +580,30 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </tr>
 </table>
 </dl>
-<h3><font SIZE="-1">CSI </font>(Command Sequence Introducer) Sequences</h3>
+<h3>CSI (Command Sequence Introducer) Sequences</h3>
 <dl>
 <dt><code>&quot;ESC [ Ps @&quot;</code></dt>
-<dd>Insert &quot;Ps&quot; (Blank) Character(s) [default: 1] (<font SIZE="-1">ICH</font>)</dd>
+<dd>Insert &quot;Ps&quot; (Blank) Character(s) [default: 1] (ICH)</dd>
 <dt><code>&quot;ESC [ Ps A&quot;</code></dt>
-<dd>Cursor Up &quot;Ps&quot; Times [default: 1] (<font SIZE="-1">CUU</font>)</dd>
+<dd>Cursor Up &quot;Ps&quot; Times [default: 1] (CUU)</dd>
 <dt><code>&quot;ESC [ Ps B&quot;</code></dt>
-<dd>Cursor Down &quot;Ps&quot; Times [default: 1] (<font SIZE="-1">CUD</font>)</dd>
+<dd>Cursor Down &quot;Ps&quot; Times [default: 1] (CUD)</dd>
 <dt><code>&quot;ESC [ Ps C&quot;</code></dt>
-<dd>Cursor Forward &quot;Ps&quot; Times [default: 1] (<font SIZE="-1">CUF</font>)</dd>
+<dd>Cursor Forward &quot;Ps&quot; Times [default: 1] (CUF)</dd>
 <dt><code>&quot;ESC [ Ps D&quot;</code></dt>
-<dd>Cursor Backward &quot;Ps&quot; Times [default: 1] (<font SIZE="-1">CUB</font>)</dd>
+<dd>Cursor Backward &quot;Ps&quot; Times [default: 1] (CUB)</dd>
 <dt><code>&quot;ESC [ Ps E&quot;</code></dt>
 <dd>Cursor Down &quot;Ps&quot; Times [default: 1] and to first column</dd>
 <dt><code>&quot;ESC [ Ps F&quot;</code></dt>
 <dd>Cursor Up &quot;Ps&quot; Times [default: 1] and to first column</dd>
 <dt><code>&quot;ESC [ Ps G&quot;</code></dt>
-<dd>Cursor to Column &quot;Ps&quot; (<font SIZE="-1">HPA</font>)</dd>
+<dd>Cursor to Column &quot;Ps&quot; (HPA)</dd>
 <dt><code>&quot;ESC [ Ps;Ps H&quot;</code></dt>
-<dd>Cursor Position [row;column] [default: 1;1] (<font SIZE="-1">CUP</font>)</dd>
+<dd>Cursor Position [row;column] [default: 1;1] (CUP)</dd>
 <dt><code>&quot;ESC [ Ps I&quot;</code></dt>
 <dd>Move forward &quot;Ps&quot; tab stops [default: 1]</dd>
 <dt><code>&quot;ESC [ Ps J&quot;</code></dt>
-<dd>Erase in Display (<font SIZE="-1">ED</font>) </dd>
+<dd>Erase in Display (ED) </dd>
 <table>
 <tr VALIGN=top>
 <td>Ps = 0</td>
@@ -622,7 +622,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </tr>
 </table>
 <dt><code>&quot;ESC [ Ps K&quot;</code></dt>
-<dd>Erase in Line (<font SIZE="-1">EL</font>) </dd>
+<dd>Erase in Line (EL) </dd>
 <table>
 <tr VALIGN=top>
 <td>Ps = 0</td>
@@ -661,11 +661,11 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </tr>
 </table>
 <dt><code>&quot;ESC [ Ps L&quot;</code></dt>
-<dd>Insert &quot;Ps&quot; Line(s) [default: 1] (<font SIZE="-1">IL</font>)</dd>
+<dd>Insert &quot;Ps&quot; Line(s) [default: 1] (IL)</dd>
 <dt><code>&quot;ESC [ Ps M&quot;</code></dt>
-<dd>Delete &quot;Ps&quot; Line(s) [default: 1] (<font SIZE="-1">DL</font>)</dd>
+<dd>Delete &quot;Ps&quot; Line(s) [default: 1] (DL)</dd>
 <dt><code>&quot;ESC [ Ps P&quot;</code></dt>
-<dd>Delete &quot;Ps&quot; Character(s) [default: 1] (<font SIZE="-1">DCH</font>)</dd>
+<dd>Delete &quot;Ps&quot; Character(s) [default: 1] (DCH)</dd>
 <dt><code>&quot;ESC [ Ps;Ps;Ps;Ps;Ps T&quot;</code></dt>
 <dd>Initiate . <i>unimplemented</i> Parameters are [func;startx;starty;firstrow;lastrow].</dd>
 <dt><code>&quot;ESC [ Ps W&quot;</code></dt>
@@ -688,7 +688,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </tr>
 </table>
 <dt><code>&quot;ESC [ Ps X&quot;</code></dt>
-<dd>Erase &quot;Ps&quot; Character(s) [default: 1] (<font SIZE="-1">ECH</font>)</dd>
+<dd>Erase &quot;Ps&quot; Character(s) [default: 1] (ECH)</dd>
 <dt><code>&quot;ESC [ Ps Z&quot;</code></dt>
 <dd>Move backward &quot;Ps&quot; [default: 1] tab stops</dd>
 <dt><code>&quot;ESC [ Ps &#8216;&quot;</code></dt>
@@ -696,15 +696,15 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 <dt><code>&quot;ESC [ Ps a&quot;</code></dt>
 <dd>See &quot;ESC [ Ps C&quot;</dd>
 <dt><code>&quot;ESC [ Ps c&quot;</code></dt>
-<dd>Send Device Attributes (<font SIZE="-1">DA</font>) &quot;Ps = 0&quot; (or omitted): request attributes from terminal returns: &quot;ESC [ ? 1 ; 2 c&quot; (&#8220;I am a <font SIZE="-1">VT100</font> with Advanced Video Option&#8221;)</dd>
+<dd>Send Device Attributes (DA) &quot;Ps = 0&quot; (or omitted): request attributes from terminal returns: &quot;ESC [ ? 1 ; 2 c&quot; (&#8220;I am a VT100 with Advanced Video Option&#8221;)</dd>
 <dt><code>&quot;ESC [ Ps d&quot;</code></dt>
-<dd>Cursor to Line &quot;Ps&quot; (<font SIZE="-1">VPA</font>)</dd>
+<dd>Cursor to Line &quot;Ps&quot; (VPA)</dd>
 <dt><code>&quot;ESC [ Ps e&quot;</code></dt>
 <dd>See &quot;ESC [ Ps A&quot;</dd>
 <dt><code>&quot;ESC [ Ps;Ps f&quot;</code></dt>
-<dd>Horizontal and Vertical Position [row;column] (<font SIZE="-1">HVP</font>) [default: 1;1]</dd>
+<dd>Horizontal and Vertical Position [row;column] (HVP) [default: 1;1]</dd>
 <dt><code>&quot;ESC [ Ps g&quot;</code></dt>
-<dd>Tab Clear (<font SIZE="-1">TBC</font>) </dd>
+<dd>Tab Clear (TBC) </dd>
 <table>
 <tr VALIGN=top>
 <td>Ps = 0</td>
@@ -718,7 +718,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </tr>
 </table>
 <dt><code>&quot;ESC [ Pm h&quot;</code></dt>
-<dd>Set Mode (<font SIZE="-1">SM</font>). See &quot;ESC [ Pm l&quot; sequence for description of <tt>&quot;Pm&quot;</tt>.</dd>
+<dd>Set Mode (SM). See &quot;ESC [ Pm l&quot; sequence for description of <tt>&quot;Pm&quot;</tt>.</dd>
 <dt><code>&quot;ESC [ Ps i&quot;</code></dt>
 <dd>Printing. See also the <tt>&quot;print-pipe&quot;</tt> resource. </dd>
 <table>
@@ -739,7 +739,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </tr>
 </table>
 <dt><code>&quot;ESC [ Pm l&quot;</code></dt>
-<dd>Reset Mode (<font SIZE="-1">RM</font>)</dd>
+<dd>Reset Mode (RM)</dd>
 <dl>
 <dd>
 </dd><dl>
@@ -776,7 +776,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 <dl>
 <dd></dd></dl>
 <dt><code>&quot;ESC [ Pm m&quot;</code></dt>
-<dd>Character Attributes (<font SIZE="-1">SGR</font>) </dd>
+<dd>Character Attributes (SGR) </dd>
 <table>
 <tr VALIGN=top>
 <td>Pm = 0</td>
@@ -915,7 +915,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </tr>
 </table>
 <dt><code>&quot;ESC [ Ps n&quot;</code></dt>
-<dd>Device Status Report (<font SIZE="-1">DSR</font>) </dd>
+<dd>Device Status Report (DSR) </dd>
 <table>
 <tr VALIGN=top>
 <td>Ps = 5</td>
@@ -939,7 +939,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </tr>
 </table>
 <dt><code>&quot;ESC [ Ps SP q&quot;</code></dt>
-<dd>Set Cursor Style (<font SIZE="-1">DECSCUSR</font>) </dd>
+<dd>Set Cursor Style (DECSCUSR) </dd>
 <table>
 <tr VALIGN=top>
 <td>Ps = 0</td>
@@ -978,9 +978,9 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </tr>
 </table>
 <dt><code>&quot;ESC [ Ps;Ps r&quot;</code></dt>
-<dd>Set Scrolling Region [top;bottom] [default: full size of window] (<font SIZE="-1">CSR</font>)</dd>
+<dd>Set Scrolling Region [top;bottom] [default: full size of window] (CSR)</dd>
 <dt><code>&quot;ESC [ s&quot;</code></dt>
-<dd>Save Cursor (<font SIZE="-1">SC</font>)</dd>
+<dd>Save Cursor (SC)</dd>
 <dt><code>&quot;ESC [ Ps;Pt t&quot;</code></dt>
 <dd>Window Operations </dd>
 <table>
@@ -1068,23 +1068,23 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 <dt><code>&quot;ESC [ u&quot;</code></dt>
 <dd>Restore Cursor</dd>
 <dt><code>&quot;ESC [ Ps x&quot;</code></dt>
-<dd>Request Terminal Parameters (<font SIZE="-1">DECREQTPARM</font>)</dd></dl>
-<h3><font SIZE="-1">DEC</font> Private Modes</h3>
+<dd>Request Terminal Parameters (DECREQTPARM)</dd></dl>
+<h3>DEC Private Modes</h3>
 <dl>
 <dt><code>&quot;ESC [ ? Pm h&quot;</code></dt>
-<dd><font SIZE="-1">DEC</font> Private Mode Set (<font SIZE="-1">DECSET</font>)</dd>
+<dd>DEC Private Mode Set (DECSET)</dd>
 <dt><code>&quot;ESC [ ? Pm l&quot;</code></dt>
-<dd><font SIZE="-1">DEC</font> Private Mode Reset (<font SIZE="-1">DECRST</font>)</dd>
+<dd>DEC Private Mode Reset (DECRST)</dd>
 <dt><code>&quot;ESC [ ? Pm r&quot;</code></dt>
-<dd>Restore previously saved <font SIZE="-1">DEC</font> Private Mode Values.</dd>
+<dd>Restore previously saved DEC Private Mode Values.</dd>
 <dt><code>&quot;ESC [ ? Pm s&quot;</code></dt>
-<dd>Save <font SIZE="-1">DEC</font> Private Mode Values.</dd>
+<dd>Save DEC Private Mode Values.</dd>
 <dt><code>&quot;ESC [ ? Pm t&quot;</code></dt>
-<dd>Toggle <font SIZE="-1">DEC</font> Private Mode Values (rxvt extension). <i>where</i></dd>
+<dd>Toggle DEC Private Mode Values (rxvt extension). <i>where</i></dd>
 <dl>
 <dd>
 </dd><dl>
-<dt><code>&quot;Pm = 1&quot;</code> (<font SIZE="-1">DECCKM</font>)</dt>
+<dt><code>&quot;Pm = 1&quot;</code> (DECCKM)</dt>
 <dd>
 <table>
 <tr VALIGN=top>
@@ -1098,7 +1098,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-</dd><dt><code>&quot;Pm = 2&quot;</code> (<font SIZE="-1">DECANM</font>)</dt>
+</dd><dt><code>&quot;Pm = 2&quot;</code> (DECANM)</dt>
 <dd>
 <table>
 <tr VALIGN=top>
@@ -1112,7 +1112,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-</dd><dt><code>&quot;Pm = 3&quot;</code> (<font SIZE="-1">DECCOLM</font>)</dt>
+</dd><dt><code>&quot;Pm = 3&quot;</code> (DECCOLM)</dt>
 <dd>
 <table>
 <tr VALIGN=top>
@@ -1126,7 +1126,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-</dd><dt><code>&quot;Pm = 4&quot;</code> (<font SIZE="-1">DECSCLM</font>)</dt>
+</dd><dt><code>&quot;Pm = 4&quot;</code> (DECSCLM)</dt>
 <dd>
 <table>
 <tr VALIGN=top>
@@ -1140,7 +1140,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-</dd><dt><code>&quot;Pm = 5&quot;</code> (<font SIZE="-1">DECSCNM</font>)</dt>
+</dd><dt><code>&quot;Pm = 5&quot;</code> (DECSCNM)</dt>
 <dd>
 <table>
 <tr VALIGN=top>
@@ -1154,7 +1154,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-</dd><dt><code>&quot;Pm = 6&quot;</code> (<font SIZE="-1">DECOM</font>)</dt>
+</dd><dt><code>&quot;Pm = 6&quot;</code> (DECOM)</dt>
 <dd>
 <table>
 <tr VALIGN=top>
@@ -1168,7 +1168,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-</dd><dt><code>&quot;Pm = 7&quot;</code> (<font SIZE="-1">DECAWM</font>)</dt>
+</dd><dt><code>&quot;Pm = 7&quot;</code> (DECAWM)</dt>
 <dd>
 <table>
 <tr VALIGN=top>
@@ -1182,7 +1182,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-</dd><dt><code>&quot;Pm = 8&quot;</code> (<font SIZE="-1">DECARM</font>) <i>unimplemented</i></dt>
+</dd><dt><code>&quot;Pm = 8&quot;</code> (DECARM) <i>unimplemented</i></dt>
 <dd>
 <table>
 <tr VALIGN=top>
@@ -1210,7 +1210,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-</dd><dt><code>&quot;Pm = 12&quot;</code> (<font SIZE="-1">AT&amp;T 610,</font> XTerm)</dt>
+</dd><dt><code>&quot;Pm = 12&quot;</code> (AT&amp;T 610, XTerm)</dt>
 <dd>
 <table>
 <tr VALIGN=top>
@@ -1224,7 +1224,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-</dd><dt><code>&quot;Pm = 25&quot;</code> (<font SIZE="-1">DECTCEM</font>)</dt>
+</dd><dt><code>&quot;Pm = 25&quot;</code> (DECTCEM)</dt>
 <dd>
 <table>
 <tr VALIGN=top>
@@ -1267,7 +1267,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </tr>
 </table>
 </dd><dt><code>&quot;Pm = 38&quot;</code> <i>unimplemented</i></dt>
-<dd>Enter Tektronix Mode (<font SIZE="-1">DECTEK</font>)</dd>
+<dd>Enter Tektronix Mode (DECTEK)</dd>
 <dt><code>&quot;Pm = 40&quot;</code></dt>
 <dd>
 <table>
@@ -1326,7 +1326,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-</dd><dt><code>&quot;Pm = 66&quot;</code> (<font SIZE="-1">DECNKM</font>)</dt>
+</dd><dt><code>&quot;Pm = 66&quot;</code> (DECNKM)</dt>
 <dd>
 <table>
 <tr VALIGN=top>
@@ -1340,7 +1340,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-</dd><dt><code>&quot;Pm = 67&quot;</code> (<font SIZE="-1">DECBKM</font>)</dt>
+</dd><dt><code>&quot;Pm = 67&quot;</code> (DECBKM)</dt>
 <dd>
 <table>
 <tr VALIGN=top>
@@ -1424,7 +1424,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-</dd><dt><code>&quot;Pm = 1005&quot;</code> (X11 XTerm <font SIZE="-1">UTF-8</font> mouse mode) (Compile frills)</dt>
+</dd><dt><code>&quot;Pm = 1005&quot;</code> (X11 XTerm UTF-8 mouse mode) (Compile frills)</dt>
 <dd>Try to avoid this mode, it doesn&#8217;t work sensibly in non-UTF-8 locales. Use mode <tt>1015</tt> instead. </dd>
 <p> Unlike XTerm, coordinates larger than 2015) will work fine. </p>
 <table>
@@ -1521,7 +1521,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-</dd><dt><code>&quot;Pm = 1048&quot;</code> (X11 XTerm alternate <font SIZE="-1">DECSC</font>)</dt>
+</dd><dt><code>&quot;Pm = 1048&quot;</code> (X11 XTerm alternate DECSC)</dt>
 <dd>
 <table>
 <tr VALIGN=top>
@@ -1571,7 +1571,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 <h3>XTerm Operating System Commands</h3>
 <dl>
 <dt><code>&quot;ESC ] Ps;Pt ST&quot;</code></dt>
-<dd>Set XTerm Parameters. 8-bit <font SIZE="-1">ST:</font> 0x9c, 7-bit <font SIZE="-1">ST</font> sequence: <font SIZE="-1">ESC</font> \ (0x1b, 0x5c), backwards compatible terminator <font SIZE="-1">BEL </font>(0x07) is also accepted. any <code>octet</code> can be escaped by prefixing it with <font SIZE="-1">SYN </font>(0x16, ^V). </dd>
+<dd>Set XTerm Parameters. 8-bit ST: 0x9c, 7-bit ST sequence: ESC \ (0x1b, 0x5c), backwards compatible terminator BEL (0x07) is also accepted. any <code>octet</code> can be escaped by prefixing it with SYN (0x16, ^V). </dd>
 <table>
 <tr VALIGN=top>
 <td>Ps = 0</td>
@@ -1731,7 +1731,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </table>
 </dl>
 <h2>Background Image</h2>
-<p>For the <font SIZE="-1">BACKGROUND IMAGE</font> XTerm escape sequence &quot;ESC ] 20 ; Pt ST&quot; the value of &quot;Pt&quot; can be one of the following commands:</p>
+<p>For the BACKGROUND IMAGE XTerm escape sequence &quot;ESC ] 20 ; Pt ST&quot; the value of &quot;Pt&quot; can be one of the following commands:</p>
 <dl>
 <dt><code>&quot;?&quot;</code></dt>
 <dd>display scale and position in the title</dd>
@@ -2323,7 +2323,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </tr>
 </table>
 <dt>&#8211;enable-xim (default: on)</dt>
-<dd>Add support for <font SIZE="-1">XIM </font>(X Input Method) protocol. This allows using alternative input methods (e.g. kinput2) and will also correctly set up the input for people using dead keys or compose keys.</dd>
+<dd>Add support for XIM (X Input Method) protocol. This allows using alternative input methods (e.g. kinput2) and will also correctly set up the input for people using dead keys or compose keys.</dd>
 <dt>&#8211;enable-unicode3 (default: off)</dt>
 <dd>Recommended to stay off unless you really need non-BMP characters. </dd>
 <p> Enable direct support for displaying unicode codepoints above 65535 (the basic multilingual page). This increases storage requirements per character from 2 to 4 bytes. X11 fonts do not yet support these extra characters, but Xft does. </p>
@@ -2334,7 +2334,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 <p> This option will also enable storage (but not display) of characters beyond plane 0 (&gt;65535) when &#8211;enable-unicode3 was not specified. </p>
 <p> The combining table also contains entries for arabic presentation forms, but these are not currently used. Bug me if you want these to be used (and tell me how these are to be used&#8230;).</p>
 <dt>&#8211;enable-fallback[=CLASS] (default: Rxvt)</dt>
-<dd>When reading resource settings, also read settings for class <font SIZE="-1">CLASS.</font> To disable resource fallback use &#8211;disable-fallback.</dd>
+<dd>When reading resource settings, also read settings for class CLASS. To disable resource fallback use &#8211;disable-fallback.</dd>
 <dt>&#8211;with-res-name=NAME (default: urxvt)</dt>
 <dd>Use the given name as default application name when reading resources. Specify &#8211;with-res-name=rxvt to replace rxvt.</dd>
 <dt>&#8211;with-res-class=CLASS (default: URxvt)</dt>
@@ -2346,11 +2346,11 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 <dt>&#8211;enable-lastlog (default: on)</dt>
 <dd>Write user and tty to lastlog file (used by programs like <i>lastlogin</i>) at start of rxvt execution. This option requires &#8211;enable-utmp to also be specified.</dd>
 <dt>&#8211;enable-pixbuf (default: on)</dt>
-<dd>Add support for GDK-PixBuf to be used for background images. It adds support for many file formats including <font SIZE="-1">JPG, PNG, TIFF, GIF, XPM, BMP, ICO</font> and <font SIZE="-1">TGA.</font></dd>
+<dd>Add support for GDK-PixBuf to be used for background images. It adds support for many file formats including JPG, PNG, TIFF, GIF, XPM, BMP, ICO and TGA.</dd>
 <dt>&#8211;enable-startup-notification (default: on)</dt>
 <dd>Add support for freedesktop startup notifications. This allows window managers to display some kind of progress indicator during startup.</dd>
 <dt>&#8211;enable-transparency (default: on)</dt>
-<dd>Add support for using the root pixmap as background to simulate transparency. Note that this feature depends on libXrender and on the availability of the <font SIZE="-1">RENDER</font> extension in the X server.</dd>
+<dd>Add support for using the root pixmap as background to simulate transparency. Note that this feature depends on libXrender and on the availability of the RENDER extension in the X server.</dd>
 <dt>&#8211;enable-fading (default: on)</dt>
 <dd>Add support for fading the text when focus is lost.</dd>
 <dt>&#8211;enable-rxvt-scroll (default: on)</dt>
@@ -2403,7 +2403,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
  trailing space removal for selections
  verbose X error handling</pre>
 <dt>&#8211;enable-iso14755 (default: on)</dt>
-<dd>Enable extended <font SIZE="-1">ISO 14755</font> support (see <a href="/docs/linux/man/1-urxvt256c/">urxvt256c</a>(1)). Basic support (section 5.1) is enabled by <tt>&quot;--enable-frills&quot;</tt>, while support for 5.2, 5.3 and 5.4 is enabled with this switch.</dd>
+<dd>Enable extended ISO 14755 support (see <a href="/docs/linux/man/1-urxvt256c/">urxvt256c</a>(1)). Basic support (section 5.1) is enabled by <tt>&quot;--enable-frills&quot;</tt>, while support for 5.2, 5.3 and 5.4 is enabled with this switch.</dd>
 <dt>&#8211;enable-keepscrolling (default: on)</dt>
 <dd>Add support for continual scrolling of the display when you hold the mouse button down on a scrollbar arrow.</dd>
 <dt>&#8211;enable-selectionscrolling (default: on)</dt>
@@ -2429,9 +2429,9 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 <dt>&#8211;with-name=NAME (default: urxvt)</dt>
 <dd>Set the basename for the installed binaries, resulting in <tt>&quot;urxvt&quot;</tt>, <tt>&quot;urxvtd&quot;</tt> etc.). Specify <tt>&quot;--with-name=rxvt&quot;</tt> to replace with <tt>&quot;rxvt&quot;</tt>.</dd>
 <dt>&#8211;with-term=NAME (default: rxvt-unicode)</dt>
-<dd>Change the environmental variable for the terminal to <font SIZE="-1">NAME.</font></dd>
+<dd>Change the environmental variable for the terminal to NAME.</dd>
 <dt>&#8211;with-terminfo=PATH</dt>
-<dd>Change the environmental variable for the path to the terminfo tree to <font SIZE="-1">PATH.</font></dd>
+<dd>Change the environmental variable for the path to the terminfo tree to PATH.</dd>
 <dt>&#8211;with-x</dt>
 <dd>Use the X Window System (pretty much default, eh?).</dd></dl>
 <h2>Authors</h2>

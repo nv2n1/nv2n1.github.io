@@ -14,7 +14,7 @@ description: "mysql_install_db – initialize MySQL data directory"
 <dt> <code>mysql_install_db [</code><i>options</i><code>]</code></dt></dl>
 <h2>DESCRIPTION</h2>
 <dl>
-<dd> <font SIZE="+1"> <code>Note</code> </font></dd>
+<dd>  <code>Note</code> </dd>
 <dd>
 <p> <code>mysql_install_db</code></p>
 </dd><dd>is deprecated as of MySQL 5.7.6 because its functionality has been integrated into <code>mysqld</code>, the MySQL server. To initialize a MySQL installation, invoke <code>mysqld</code> with the <code>&#8211;initialize</code> or <code>&#8211;initialize-insecure</code> option. For more information, see Section 2.10.1, &#8220;Initializing the Data Directory&#8221;. <code>mysql_install_db</code> will be removed in a future MySQL release. </dd>
@@ -85,7 +85,7 @@ description: "mysql_install_db – initialize MySQL data directory"
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Important</code> </font> </dd>
+  <code>Important</code>  </dd>
 <p> When <code>mysql_install_db</code> generates a random password for the administrative account, it is necessary after <code>mysql_install_db</code> has been run to start the server, connect using the administrative account with the password written to the .mysql_secret file, and specify a new administrative password. Until this is done, the administrative account cannot be used for anything else. To change the password, you can use the SET PASSWORD statement (for example, with the <code>mysql</code> or <code>mysqladmin</code> client). After resetting the password, remove the .mysql_secret file; otherwise, if you run <code>mysql_secure_installation</code>, that command may see the file and expire the root password again as part of ensuring secure deployment. </p>
 </dl>
 <p> Invocation Syntax.PP Several changes to <code>mysql_install_db</code> were made in MySQL 5.7.5 that affect the invocation syntax. Change location to the MySQL installation directory and use the command appropriate to your version of MySQL: </p>
@@ -131,14 +131,14 @@ shell&gt; <code>bin/mysql_install_db --user=mysql \</code>
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> After <code>mysql_install_db</code> sets up the InnoDB system tablespace, changes to some tablespace characteristics require setting up a whole new instance. This includes the file name of the first file in the system tablespace and the number of undo logs. If you do not want to use the default values, make sure that the settings for the innodb_data_file_path and innodb_log_file_size configuration parameters are in place in the MySQL configuration file before running <code>mysql_install_db</code>. Also make sure to specify as necessary other parameters that affect the creation and location of InnoDB files, such as innodb_data_home_dir and innodb_log_group_home_dir. </p>
 <p> If those options are in your configuration file but that file is not in a location that MySQL reads by default, specify the file location using the <code>&#8211;defaults-extra-file</code> option when you run <code>mysql_install_db</code>. </p>
 </dl>
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> If you have set a custom TMPDIR environment variable when performing the installation, and the specified directory is not accessible, <code>mysql_install_db</code> may fail. If so, unset TMPDIR or set TMPDIR to point to the system temporary directory (usually /tmp). </p>
 </dl>
 <p> Administrative Account Creation.PP <code>mysql_install_db</code> creates an administrative account named &#8216;root&#8217;@&#8217;localhost&#8217; by default. (Before MySQL 5.7.4, <code>mysql_install_db</code> creates additional root accounts, such as &#8216;root&#8217;@&#8217;127.0.0.1&#8217;. This is no longer done.) </p>
@@ -161,7 +161,7 @@ shell&gt; <code>bin/mysql_install_db --user=mysql \</code>
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> As of MySQL 5.7.18, my-default.cnf is no longer included in or installed by distribution packages. </p>
 </dl>
 <p> With one exception, the settings in the default option file are commented and have no effect. The exception is that the file sets the sql_mode system variable to NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES. This setting produces a server configuration that results in errors rather than warnings for bad data in operations that modify transactional tables. See Section 5.1.10, &#8220;Server SQL Modes&#8221;. Command Options.PP <code>mysql_install_db</code> supports the following options, which can be specified on the command line or in the [mysql_install_db] group of an option file. For information about option files used by MySQL programs, see Section 4.2.2.2, &#8220;Using Option Files&#8221;. </p>
@@ -206,7 +206,7 @@ shell&gt; <code>bin/mysql_install_db --user=mysql \</code>
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  As of MySQL 5.7.5, the <code>&#8211;datadir</code> option is mandatory and the data directory must not already exist. (It remains true that the parent directory must exist.) </dd>
 </dl>
 </dl>
@@ -242,7 +242,7 @@ shell&gt; <code>bin/mysql_install_db --user=mysql \</code>
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  The <code>&#8211;insecure</code> option was added in MySQL 5.7.5, replacing the <code>&#8211;skip-random-passwords</code> option. </dd>
 </dl>
 <p> If <code>&#8211;insecure</code> is <i>not</i> given, it is necessary after <code>mysql_install_db</code> has been run to start the server, connect using the administrative account with the password written to the .mysql_secret file, and specify a new administrative password. Until this is done, the administrative account cannot be used for anything else. To change the password, you can use the SET PASSWORD statement (for example, with the <code>mysql</code> or <code>mysqladmin</code> client). After resetting the password, remove the .mysql_secret file; otherwise, if you run <code>mysql_secure_installation</code>, that command may see the file and expire the root password again as part of ensuring secure deployment.</dl>
@@ -310,7 +310,7 @@ shell&gt; <code>bin/mysql_install_db --user=mysql \</code>
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  This option was removed in MySQL 5.7.4 and replaced with <code>&#8211;skip-random-passwords</code>, which was in turn removed in MySQL 5.7.5 and replaced with <code>&#8211;insecure</code>. </dd>
 </dl>
 <p> On Unix platforms, this option provides for more secure MySQL installation. Invoking <code>mysql_install_db</code> with <code>&#8211;random-passwords</code> causes it to perform the following actions in addition to its normal operation: </p>
@@ -343,7 +343,7 @@ shell&gt; <code>bin/mysql_install_db --user=mysql \</code>
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  The <code>&#8211;skip-random-passwords</code> option was added in MySQL 5.7.4, replacing the <code>&#8211;random-passwords</code> option. <code>&#8211;skip-random-passwords</code> was in turn removed in MySQL 5.7.5 and replaced with <code>&#8211;insecure</code>. </dd>
 </dl>
 <p> As of MySQL 5.7.4, MySQL deployments produced using <code>mysql_install_db</code> are secure by default. When invoked <i>without</i> the <code>&#8211;skip-random-passwords</code> option, <code>mysql_install_db</code> uses these default deployment characteristics: </p>

@@ -84,5 +84,5 @@ description: "btool – Barry Project’s program to interface with BlackBerry h
 <h2>AUTHOR</h2>
 <p> <code>btool</code> is part of the Barry project. This manual page was written by Ian Darwin and Chris Frey.</p>
 <h2>SEE ALSO</h2>
-<p> <a rel="nofollow" href="http://www.netdirect.ca/software/packages/barry">http://www.netdirect.ca/software/packages/barry</a><br />
+<p> <a rel="nofollow" href="http://www.netdirect.ca/software/packages/barry">http://www.netdirect.ca/software/packages/barry</a><br/>
  Especially the caveats, and the call for developers and others to help with the project. </p>

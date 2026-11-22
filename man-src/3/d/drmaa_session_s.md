@@ -13,27 +13,27 @@ description: "drmaa_session_s –"
 <h2>SYNOPSIS</h2>
 <p> #include &lt;drmaa_impl.h&gt;</p>
 <h3>Data Fields</h3>
-<p> int <code>pbs_conn</code><br />
- <i>PBS connection (or -1). </i><br />
- char * <code>contact</code><br />
- <i>Contact to PBS server &#8212; `host[:port]&#8217;. </i><br />
- <code>drmaa_job_template_t</code> * <code>jt_list</code><br />
+<p> int <code>pbs_conn</code><br/>
+ <i>PBS connection (or -1). </i><br/>
+ char * <code>contact</code><br/>
+ <i>Contact to PBS server &#8212; `host[:port]&#8217;. </i><br/>
+ <code>drmaa_job_template_t</code> * <code>jt_list</code><br/>
  <i></i> </p>
 <pre>
              Cyclic list (with sentinel) of job
 </pre>
-<p>&nbsp;<wbr>templates created in this DRMAA session.&nbsp;<wbr>&quot;<br />
- <code>drmaa_job_t</code> ** <code>job_hashtab</code><br />
+<p>&nbsp;<wbr>templates created in this DRMAA session.&nbsp;<wbr>&quot;<br/>
+ <code>drmaa_job_t</code> ** <code>job_hashtab</code><br/>
  <i></i> </p>
 <pre>
                Hash table of jobs
 </pre>
-<p>&nbsp;<wbr>which have to be remembered in DRMAA session&nbsp;<wbr>(was submitted in this session and its status was not removed).&nbsp;<wbr>&quot;<br />
- int <code>next_time_label</code><br />
- <i>Will be assigned to next submitted job. </i><br />
- pthread_mutex_t <code>conn_mutex</code><br />
- <i>Mutex for PBS connection. </i><br />
- pthread_mutex_t <code>jobs_mutex</code><br />
+<p>&nbsp;<wbr>which have to be remembered in DRMAA session&nbsp;<wbr>(was submitted in this session and its status was not removed).&nbsp;<wbr>&quot;<br/>
+ int <code>next_time_label</code><br/>
+ <i>Will be assigned to next submitted job. </i><br/>
+ pthread_mutex_t <code>conn_mutex</code><br/>
+ <i>Mutex for PBS connection. </i><br/>
+ pthread_mutex_t <code>jobs_mutex</code><br/>
  <i></i> </p>
 <pre>
                Mutex for #jt_list, #job_list

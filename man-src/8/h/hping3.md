@@ -12,17 +12,17 @@ description: "hping3 – send (almost) arbitrary TCP/IP packets to network hosts
 <p><code>hping3</code> [ <code>-hvnqVDzZ012WrfxykQbFSRPAUXYjJBuTG</code> ] [ <code>-c</code> <i>count</i> ] [ <code>-i</code> <i>wait</i> ] [ <code>&#8211;fast</code> ] [ <code>-I</code> <i>interface</i> ] [ <code>-9</code> <i>signature</i> ] [ <code>-a</code> <i>host</i> ] [ <code>-t</code> <i>ttl</i> ] [ <code>-N</code> <i>ip id</i> ] [ <code>-H</code> <i>ip protocol</i> ] [ <code>-g</code> <i>fragoff</i> ] [ <code>-m</code> <i>mtu</i> ] [ <code>-o</code> <i>tos</i> ] [ <code>-C</code> <i>icmp type</i> ] [ <code>-K</code> <i>icmp code</i> ] [ <code>-s</code> <i>source port</i> ] [ <code>-p[+][+]</code> <i>dest port</i> ] [ <code>-w</code> <i>tcp window</i> ] [ <code>-O</code> <i>tcp offset</i> ] [ <code>-M</code> <i>tcp sequence number</i> ] [ <code>-L</code> <i>tcp ack</i> ] [ <code>-d</code> <i>data size</i> ] [ <code>-E</code> <i>filename</i> ] [ <code>-e</code> <i>signature</i> ] [ <code>&#8211;icmp-ipver</code> <i>version</i> ] [ <code>&#8211;icmp-iphlen</code> <i>length</i> ] [ <code>&#8211;icmp-iplen</code> <i>length</i> ] [ <code>&#8211;icmp-ipid</code> <i>id</i> ] [ <code>&#8211;icmp-ipproto</code> <i>protocol</i> ] [ <code>&#8211;icmp-cksum</code> <i>checksum</i> ] [ <code>&#8211;icmp-ts</code> ] [ <code>&#8211;icmp-addr</code> ] [ <code>&#8211;tcpexitcode</code> ] [ <code>&#8211;tcp-timestamp</code> ] [ <code>&#8211;tr-stop</code> ] [ <code>&#8211;tr-keep-ttl</code> ] [ <code>&#8211;tr-no-rtt</code> ] [ <code>&#8211;rand-dest</code> ] [ <code>&#8211;rand-source</code> ] [ <code>&#8211;beep</code> ] hostname</p>
 <h2>Description</h2>
 <p>hping3 is a network tool able to send custom TCP/IP packets and to display target replies like ping program does with ICMP replies. hping3 handle fragmentation, arbitrary packets body and size and can be used in order to transfer files encapsulated under supported protocols. Using hping3 you are able to perform at least the following stuff: </p>
-<p>&nbsp;<wbr>&#8211; Test firewall rules<br />
-&nbsp;<wbr>&#8211; Advanced port scanning<br />
-&nbsp;<wbr>&#8211; Test net performance using different protocols,<br />
-packet size, TOS&nbsp;<wbr>(type of service)&nbsp;<wbr>and fragmentation.<br />
-&nbsp;<wbr>&#8211; Path MTU discovery<br />
-&nbsp;<wbr>&#8211; Transferring files between even really fascist firewall<br />
-rules.<br />
-&nbsp;<wbr>&#8211; Traceroute-like under different protocols.<br />
-&nbsp;<wbr>&#8211; Firewalk-like usage.<br />
-&nbsp;<wbr>&#8211; Remote OS fingerprinting.<br />
-&nbsp;<wbr>&#8211; TCP/IP stack auditing.<br />
+<p>&nbsp;<wbr>&#8211; Test firewall rules<br/>
+&nbsp;<wbr>&#8211; Advanced port scanning<br/>
+&nbsp;<wbr>&#8211; Test net performance using different protocols,<br/>
+packet size, TOS&nbsp;<wbr>(type of service)&nbsp;<wbr>and fragmentation.<br/>
+&nbsp;<wbr>&#8211; Path MTU discovery<br/>
+&nbsp;<wbr>&#8211; Transferring files between even really fascist firewall<br/>
+rules.<br/>
+&nbsp;<wbr>&#8211; Traceroute-like under different protocols.<br/>
+&nbsp;<wbr>&#8211; Firewalk-like usage.<br/>
+&nbsp;<wbr>&#8211; Remote OS fingerprinting.<br/>
+&nbsp;<wbr>&#8211; TCP/IP stack auditing.<br/>
 &nbsp;<wbr>&#8211; A lot of others. </p>
 <p> <i>It&#8217;s also a good didactic tool to learn TCP/IP</i>. hping3 is developed and maintained by antirez [at] invece.org and is licensed under GPL version 2. Development is open so you can send me patches, suggestion and affronts without inhibitions.</p>
 <h2>Hping Site</h2>
@@ -70,11 +70,11 @@ rules.<br />
 <dt><i>-2 &#8211;udp</i></dt>
 <dd>UDP mode, by default hping3 will send udp to target host&#8217;s port 0. UDP header tunable options are the following: <code>&#8211;baseport, &#8211;destport, &#8211;keep.</code></dd>
 <dt><i>-8 &#8211;scan</i></dt>
-<dd>Scan mode, the option expects an argument that describes groups of ports to scan. port groups are comma separated: a number describes just a single port, so 1,2,3 means port 1, 2 and 3. ranges are specified using a start-end notation, like 1-1000, that tell hping to scan ports between 1 and 1000 (included). the special word <code>all</code> is an alias for 0-65535, while the special word <code>known</code> includes all the ports listed in /etc/services.<br />
- Groups can be combined, so the following command line will scan ports between 1 and 1000 AND port 8888 AND ports listed in /etc/services: <code>hping &#8211;scan 1-1000,8888,known -S target.host.com</code><br />
- Groups can be negated (subtracted) using a ! character as prefix, so the following command line will scan all the ports NOT listed in /etc/services in the range 1-1024: <code>hping &#8211;scan &#8216;1-1024,!known&#8217; -S target.host.com</code><br />
- Keep in mind that while hping seems much more like a port scanner in this mode, most of the hping switches are still honored, so for example to perform a SYN scan you need to specify the <code>-S</code> option, you can change the TCP windows size, TTL, control the IP fragmentation as usually, and so on. The only real difference is that the standard hping behaviors are encapsulated into a scanning algorithm.<br />
- <code>Tech note</code>: The scan mode uses a two-processes design, with shared memory for synchronization. The scanning algorithm is still not optimal, but already quite fast.<br />
+<dd>Scan mode, the option expects an argument that describes groups of ports to scan. port groups are comma separated: a number describes just a single port, so 1,2,3 means port 1, 2 and 3. ranges are specified using a start-end notation, like 1-1000, that tell hping to scan ports between 1 and 1000 (included). the special word <code>all</code> is an alias for 0-65535, while the special word <code>known</code> includes all the ports listed in /etc/services.<br/>
+ Groups can be combined, so the following command line will scan ports between 1 and 1000 AND port 8888 AND ports listed in /etc/services: <code>hping &#8211;scan 1-1000,8888,known -S target.host.com</code><br/>
+ Groups can be negated (subtracted) using a ! character as prefix, so the following command line will scan all the ports NOT listed in /etc/services in the range 1-1024: <code>hping &#8211;scan &#8216;1-1024,!known&#8217; -S target.host.com</code><br/>
+ Keep in mind that while hping seems much more like a port scanner in this mode, most of the hping switches are still honored, so for example to perform a SYN scan you need to specify the <code>-S</code> option, you can change the TCP windows size, TTL, control the IP fragmentation as usually, and so on. The only real difference is that the standard hping behaviors are encapsulated into a scanning algorithm.<br/>
+ <code>Tech note</code>: The scan mode uses a two-processes design, with shared memory for synchronization. The scanning algorithm is still not optimal, but already quite fast.<br/>
  <code>Hint</code>: unlike most scanners, hping shows some interesting info about received packets, the IP ID, TCP win, TTL, and so on, don&#8217;t forget to look at this additional information when you perform a scan! Sometimes they shows interesting details.</dd>
 <dt><i>-9 &#8211;listen signature</i></dt>
 <dd>HPING3 listen mode, using this option hping3 waits for packet that contain <i>signature</i> and dump from <i>signature</i> end to packet&#8217;s end. For example if hping3 &#8211;listen TEST reads a packet that contain <code>234-09sdflkjs45-TESThello_world</code> it will display <code>hello_world</code>.</dd></dl>
@@ -85,7 +85,7 @@ rules.<br />
 <dt><i>&#8211;rand-source</i></dt>
 <dd>This option enables the <code>random source mode</code>. hping will send packets with random source address. It is interesting to use this option to stress firewall state tables, and other per-ip basis dynamic tables inside the TCP/IP stacks and firewall software.</dd>
 <dt><i>&#8211;rand-dest</i></dt>
-<dd>This option enables the <code>random destination mode</code>. hping will send the packets to random addresses obtained following the rule you specify as the target host. You need to specify a numerical IP address as target host like <code>10.0.0.x</code>. All the occurrences of <code>x</code> will be replaced with a random number in the range 0-255. So to obtain Internet IP addresses in the whole IPv4 space use something like <code>hping x.x.x.x &#8211;rand-dest</code>. If you are not sure about what kind of addresses your rule is generating try to use the <code>&#8211;debug</code> switch to display every new destination address generated. When this option is turned on, matching packets will be accept from all the destinations.<br />
+<dd>This option enables the <code>random destination mode</code>. hping will send the packets to random addresses obtained following the rule you specify as the target host. You need to specify a numerical IP address as target host like <code>10.0.0.x</code>. All the occurrences of <code>x</code> will be replaced with a random number in the range 0-255. So to obtain Internet IP addresses in the whole IPv4 space use something like <code>hping x.x.x.x &#8211;rand-dest</code>. If you are not sure about what kind of addresses your rule is generating try to use the <code>&#8211;debug</code> switch to display every new destination address generated. When this option is turned on, matching packets will be accept from all the destinations.<br/>
  <code>Warning</code>: when this option is enabled hping can&#8217;t detect the right outgoing interface for the packets, so you should use the <code>&#8211;interface</code> option to select the desired outgoing interface.</dd>
 <dt><i>-t &#8211;ttl time to live</i></dt>
 <dd>Using this option you can set <code>TTL (time to live)</code> of outgoing packets, it&#8217;s likely that you will use this with <code>&#8211;traceroute</code> or <code>&#8211;bind</code> options. If in doubt try `<code>hping3 some.host.com -t 1 &#8211;traceroute</code>&#8216;.</dd>

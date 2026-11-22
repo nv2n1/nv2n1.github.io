@@ -11,7 +11,7 @@ description: "cgebd2.f –"
 <p> cgebd2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cgebd2</code> (M, N, A, LDA, D, E, TAUQ, TAUP, WORK, INFO)<br />
+<p> subroutine <code>cgebd2</code> (M, N, A, LDA, D, E, TAUQ, TAUP, WORK, INFO)<br/>
  <i></i><code>CGEBD2</code> reduces a general matrix to bidiagonal form using an unblocked algorithm.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cgebd2 (integerM, integerN, complex, dimension( lda, * )A, integerLDA, real, dimension( * )D, real, dimension( * )E, complex, dimension( * )TAUQ, complex, dimension( * )TAUP, complex, dimension( * )WORK, integerINFO)</h3>

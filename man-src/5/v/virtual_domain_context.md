@@ -25,7 +25,7 @@ description: "virtual_domain_context – The SELinux virtual machine domain cont
 <dd>A user, role, type and optional range (for MCS/MLS) separated by colons (:) that can be used as a virtual domain context.</dd></dl>
 </dl>
 <h2>Example</h2>
-<p># ./contexts/virtual_domain_context<br />
+<p># ./contexts/virtual_domain_context<br/>
  system_u:object_r:svirt_t:s0</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-selinux/">selinux</a></code>(8), <code><a href="/docs/linux/man/8-libvirtd/">libvirtd</a></code>(8), <code>selinux_virtual_domain_context_path</code>(3), <code><a href="/docs/linux/man/5-selinux_config/">selinux_config</a></code>(5) </p>

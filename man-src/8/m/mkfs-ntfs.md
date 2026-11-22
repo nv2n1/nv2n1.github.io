@@ -104,12 +104,12 @@ description: "mkntfs – create an NTFS file system"
 <p>When applying chkdsk to a file system, it sometimes throws a warning &quot;Correcting errors in the uppercase file.&quot; The uppercase file is created while formatting and it defines the mapping of lower case characters to upper case ones, as needed to sort file names in directories. The warning means that the uppercase file defined on the file system is not the same as the one used by the Windows OS on which chkdsk is running, and this may happen because newer versions of Windows take into account new characters defined by the Unicode consortium. </p>
 <p> Currently, mkntfs creates the uppercase table so that no warning is thrown by Windows Vista, Windows 7 or Windows 8. A warning may be thrown by other Windows versions, or if chkdsk is applied in succession on different Windows versions.</p>
 <h2>Bugs</h2>
-<p>If you find a bug please send an email describing the problem to the development team:<br />
+<p>If you find a bug please send an email describing the problem to the development team:<br/>
  ntfs-3g-devel [at] lists.sf.net</p>
 <h2>Authors</h2>
 <p><code>mkntfs</code> was written by Anton Altaparmakov, Richard Russon, Erik Sornes and Szabolcs Szakacsits. It was ported to ntfs-3g by Erik Larsson and Jean-Pierre Andre.</p>
 <h2>Availability</h2>
-<p><code>mkntfs</code> is part of the <code>ntfs-3g</code> package and is available from:<br />
+<p><code>mkntfs</code> is part of the <code>ntfs-3g</code> package and is available from:<br/>
  <a rel="nofollow" href="https://github.com/tuxera/ntfs-3g/wiki/">https://github.com/tuxera/ntfs-3g/wiki/</a></p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-badblocks/">badblocks</a></code>(8), <code><a href="/docs/linux/man/8-ntfsprogs/">ntfsprogs</a></code>(8) </p>

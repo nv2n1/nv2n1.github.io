@@ -14,9 +14,9 @@ description: "QuantLib::LastFixingQuote – Quote adapter for the last fixing av
 <h3>Public Member Functions</h3>
 <p><code>LastFixingQuote</code> (const boost::shared_ptr&lt; <code>Index</code> &gt; &amp;index) </p>
 <p> <code>Quote interface</code> </p>
-<p> <code>Real</code> <code>value</code> () const<br />
- <i>returns the current value </i><br />
- bool <code>isValid</code> () const<br />
+<p> <code>Real</code> <code>value</code> () const<br/>
+ <i>returns the current value </i><br/>
+ bool <code>isValid</code> () const<br/>
  <i>returns true if the </i><code>Quote</code> holds a valid value </p>
 <p> <code>Observer interface</code> </p>
 <p> void <code>update</code> () </p>

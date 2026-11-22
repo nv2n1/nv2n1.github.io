@@ -11,7 +11,7 @@ description: "cgees.f –"
 <p> cgees.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cgees</code> (JOBVS, SORT, SELECT, N, A, LDA, SDIM, W, VS, LDVS, WORK, LWORK, RWORK, BWORK, INFO)<br />
+<p> subroutine <code>cgees</code> (JOBVS, SORT, SELECT, N, A, LDA, SDIM, W, VS, LDVS, WORK, LWORK, RWORK, BWORK, INFO)<br/>
  <i></i><code> CGEES computes the eigenvalues, the Schur form, and, optionally, the matrix of Schur vectors for GE matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cgees (characterJOBVS, characterSORT, logical, externalSELECT, integerN, complex, dimension( lda, * )A, integerLDA, integerSDIM, complex, dimension( * )W, complex, dimension( ldvs, * )VS, integerLDVS, complex, dimension( * )WORK, integerLWORK, real, dimension( * )RWORK, logical, dimension( * )BWORK, integerINFO)</h3>

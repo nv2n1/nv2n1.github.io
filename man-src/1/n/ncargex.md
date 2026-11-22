@@ -299,6 +299,6 @@ ncargex[-A][-E][-F][-P][-T]
 <p> Online: <code>ncargf77(1NCARG),</code> <code>ncargcc(1NCARG),</code> <code>ncargfile(1NCARG),</code> <code>ng4ex(1NCARG),</code> <code>ncarg_cbind(5NCARG),</code> <code>ncargintro(5NCARG)</code> </p>
 <p> Hardcopy: NCAR Graphics Fundamentals, UNIX Version</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright (C) 1987-2002<br />
- University Corporation for Atmospheric Research<br />
+<p> Copyright (C) 1987-2002<br/>
+ University Corporation for Atmospheric Research<br/>
  The use of this Software is governed by a License Agreement. </p>

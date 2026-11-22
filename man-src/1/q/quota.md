@@ -10,9 +10,9 @@ description: "quota – display disk usage and limits"
 
 <p> quota &#8211; display disk usage and limits</p>
 <h2>SYNOPSIS</h2>
-<p> <code>quota</code> [ <code>-F</code> <i>format-name</i> ] [ <code>-guqvswi</code> ] [ <code>-l</code>&nbsp;<wbr>| [ <code>-QAm</code> ]]<br />
- <code>quota</code> [ <code>-F</code> <i>format-name</i> ] [ <code>-qvswi</code> ] [ <code>-l</code>&nbsp;<wbr>| [ <code>-QAm</code> ]] <code>-u</code> <i>user</i>&#8230;<br />
- <code>quota</code> [ <code>-F</code> <i>format-name</i> ] [ <code>-qvswi</code> ] [ <code>-l</code>&nbsp;<wbr>| [ <code>-QAm</code> ]] <code>-g</code> <i>group</i>&#8230;<br />
+<p> <code>quota</code> [ <code>-F</code> <i>format-name</i> ] [ <code>-guqvswi</code> ] [ <code>-l</code>&nbsp;<wbr>| [ <code>-QAm</code> ]]<br/>
+ <code>quota</code> [ <code>-F</code> <i>format-name</i> ] [ <code>-qvswi</code> ] [ <code>-l</code>&nbsp;<wbr>| [ <code>-QAm</code> ]] <code>-u</code> <i>user</i>&#8230;<br/>
+ <code>quota</code> [ <code>-F</code> <i>format-name</i> ] [ <code>-qvswi</code> ] [ <code>-l</code>&nbsp;<wbr>| [ <code>-QAm</code> ]] <code>-g</code> <i>group</i>&#8230;<br/>
  <code>quota</code> [ <code>-F</code> <i>format-name</i> ] [ <code>-qvswugQm</code> ] <code>-f</code> <i>filesystem</i>&#8230;</p>
 <h2>DESCRIPTION</h2>
 <p> <code>quota</code> displays users&#8217; disk usage and limits. By default only the user quotas are printed. </p>

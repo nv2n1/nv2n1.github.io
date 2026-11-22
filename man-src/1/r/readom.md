@@ -132,7 +132,7 @@ D-13353 Berlin
 Germany
 </pre>
 <p> This is application is a spinoff from the original implementation of readcd delivered in the cdrtools package [1] created by Joerg Schilling, who deserves the most credits for its success. However, he is not involved into the development of this spinoff and therefore he shall not be made responsible for any problem caused by it. Do not try to get support from the original author! </p>
-<p> Additional information can be found on:<br />
+<p> Additional information can be found on:<br/>
  <a rel="nofollow" href="https://alioth.debian.org/projects/debburn/">https://alioth.debian.org/projects/debburn/</a> </p>
 <p> If you have support questions, send them to </p>
 <p> <code>debburn-devel [at] lists.alioth.debian.org</code> </p>

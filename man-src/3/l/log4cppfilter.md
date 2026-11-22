@@ -14,22 +14,22 @@ description: "log4cpp::Filter –"
 <h3>Public Types</h3>
 <p>enum <code>Decision</code> { <code>DENY</code> = -1, <code>NEUTRAL</code> = 0, <code>ACCEPT</code> = 1 } </p>
 <h3>Public Member Functions</h3>
-<p><code>Filter</code> ()<br />
- <i>Default Constructor for </i><code>Filter</code>.<br />
- virtual <code>~Filter</code> ()<br />
- <i>Destructor for </i><code>Filter</code>.<br />
- virtual void <code>setChainedFilter</code> (<code>Filter</code> *filter)<br />
- <i>Set the next </i><code>Filter</code> in the <code>Filter</code> chain.<br />
- virtual <code>Filter</code> * <code>getChainedFilter</code> ()<br />
- <i>Get the next </i><code>Filter</code> in the <code>Filter</code> chain.<br />
- virtual <code>Filter</code> * <code>getEndOfChain</code> ()<br />
- <i>Get the last </i><code>Filter</code> in the <code>Filter</code> chain.<br />
- virtual void <code>appendChainedFilter</code> (<code>Filter</code> *filter)<br />
- <i>Add a </i><code>Filter</code> to the end of the <code>Filter</code> chain.<br />
- virtual <code>Decision</code> <code>decide</code> (const <code>LoggingEvent</code> &amp;event)<br />
+<p><code>Filter</code> ()<br/>
+ <i>Default Constructor for </i><code>Filter</code>.<br/>
+ virtual <code>~Filter</code> ()<br/>
+ <i>Destructor for </i><code>Filter</code>.<br/>
+ virtual void <code>setChainedFilter</code> (<code>Filter</code> *filter)<br/>
+ <i>Set the next </i><code>Filter</code> in the <code>Filter</code> chain.<br/>
+ virtual <code>Filter</code> * <code>getChainedFilter</code> ()<br/>
+ <i>Get the next </i><code>Filter</code> in the <code>Filter</code> chain.<br/>
+ virtual <code>Filter</code> * <code>getEndOfChain</code> ()<br/>
+ <i>Get the last </i><code>Filter</code> in the <code>Filter</code> chain.<br/>
+ virtual void <code>appendChainedFilter</code> (<code>Filter</code> *filter)<br/>
+ <i>Add a </i><code>Filter</code> to the end of the <code>Filter</code> chain.<br/>
+ virtual <code>Decision</code> <code>decide</code> (const <code>LoggingEvent</code> &amp;event)<br/>
  <i>Decide whether to accept or deny a </i><code>LoggingEvent</code>.</p>
 <h3>Protected Member Functions</h3>
-<p>virtual <code>Decision</code> <code>_decide</code> (const <code>LoggingEvent</code> &amp;event)=0<br />
+<p>virtual <code>Decision</code> <code>_decide</code> (const <code>LoggingEvent</code> &amp;event)=0<br/>
  <i>Decide whether </i><code>this</code> <code>Filter</code> accepts or denies the given <code>LoggingEvent</code>.</p>
 <h2>Detailed Description</h2>
 <p>Users should extend this class to implement customized logging event filtering. </p>

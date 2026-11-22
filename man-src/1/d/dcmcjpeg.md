@@ -40,278 +40,278 @@ dcmfile-out  DICOM output filename
           use config file f for the logger
 </code></pre>
 <h3>input options</h3>
-<p>input file format : +f&#8211; read &#8211; file<br />
-                                    read file format or<br />
-    data set(default) + fo&#8211; read &#8211; file &#8211; only read file format only<br />
-        &#8211; f&#8211; read &#8211; dataset read data set without file meta information input transfer syntax : -t = &#8211;read &#8211; xfer &#8211; auto use TS recognition(default) &#8211; td&#8211; read &#8211; xfer &#8211; detect ignore TS specified in the file meta header<br />
-                                                                                                          &#8211; te&#8211; read &#8211; xfer &#8211; little read with explicit VR little endian TS<br />
-                                                                                                          &#8211; tb&#8211; read &#8211; xfer &#8211; big read with explicit VR big endian TS<br />
-                                                                                                          &#8211; ti&#8211; read &#8211; xfer &#8211; implicit read with implicit VR little endian TS compatibility(ignored by + tl)<br />
-    : +Ma&#8211; accept &#8211; acr &#8211; nema accept ACR &#8211; NEMA images without photometric interpretation<br />
-#Enables compatibility for old ACR &#8211; NEMA images without photometric<br />
-#information(only pseudo lossless encoder)<br />
-      + Mp&#8211; accept &#8211; palettes accept incorrect palette attribute tags(0028, 111x) and<br />
-                                                                                                      (0028, 121x)<br />
-#If enabled, incorrect palette attribute tags are accepted<br />
+<p>input file format : +f&#8211; read &#8211; file<br/>
+                                    read file format or<br/>
+    data set(default) + fo&#8211; read &#8211; file &#8211; only read file format only<br/>
+        &#8211; f&#8211; read &#8211; dataset read data set without file meta information input transfer syntax : -t = &#8211;read &#8211; xfer &#8211; auto use TS recognition(default) &#8211; td&#8211; read &#8211; xfer &#8211; detect ignore TS specified in the file meta header<br/>
+                                                                                                          &#8211; te&#8211; read &#8211; xfer &#8211; little read with explicit VR little endian TS<br/>
+                                                                                                          &#8211; tb&#8211; read &#8211; xfer &#8211; big read with explicit VR big endian TS<br/>
+                                                                                                          &#8211; ti&#8211; read &#8211; xfer &#8211; implicit read with implicit VR little endian TS compatibility(ignored by + tl)<br/>
+    : +Ma&#8211; accept &#8211; acr &#8211; nema accept ACR &#8211; NEMA images without photometric interpretation<br/>
+#Enables compatibility for old ACR &#8211; NEMA images without photometric<br/>
+#information(only pseudo lossless encoder)<br/>
+      + Mp&#8211; accept &#8211; palettes accept incorrect palette attribute tags(0028, 111x) and<br/>
+                                                                                                      (0028, 121x)<br/>
+#If enabled, incorrect palette attribute tags are accepted<br/>
 #(only pseudo lossless encoder)</p>
 <h3>JPEG encoding options</h3>
-<p>JPEG process:<br />
-  +e1   &#8211;encode-lossless-sv1<br />
-          encode lossless sv1 (default)<br />
-#This option selects the JPEG Lossless, Non &#8211; Hierarchical, First &#8211; Order<br />
-#Prediction(Process 14 Selection Value 1) Transfer Syntax for<br />
-#Lossless JPEG Image Compression.<br />
-  +el   &#8211;encode-lossless<br />
-          encode lossless<br />
-#This option selects the JPEG Lossless, Non &#8211; Hierarchical(Process 14)<br />
-#Transfer Syntax for Lossless JPEG Image Compression.<br />
-  +eb   &#8211;encode-baseline<br />
-          encode baseline<br />
-#This option selects the JPEG Baseline(Process 1) Transfer Syntax<br />
-#for Lossy JPEG 8 Bit Image Compression.<br />
-  +ee   &#8211;encode-extended<br />
-          encode extended sequential<br />
-#This option selects the JPEG Extended(Process 2 &amp; 4) Transfer<br />
-#Syntax for Lossy JPEG Image Compression.<br />
-  +es   &#8211;encode-spectral<br />
-          encode spectral selection<br />
-#This option selects the JPEG Spectral Selection, Non &#8211; Hierarchical<br />
-#(Process 6 &amp; 8) Transfer Syntax for Lossy JPEG Image Compression.<br />
-  +ep   &#8211;encode-progressive<br />
-          encode progressive<br />
-#This option selects the JPEG Full Progression, Non &#8211; Hierarchical<br />
-#(Process 10 &amp; 12) Transfer Syntax for Lossy JPEG Image Compression.<br />
-lossless JPEG codec selection:<br />
-  +tl   &#8211;true-lossless<br />
-          true lossless codec (default)<br />
-#This option selects an encoder, that guarantees truely lossless<br />
-#image compression.See NOTES for further information.<br />
-  +pl   &#8211;pseudo-lossless<br />
-          old pseudo-lossless codec<br />
-#Old encoder, that uses lossless compression algorithms, but can<br />
-#cause lossy images because of internal color space transformations<br />
-#etc.Higher compression ratio than&#8211; true &#8211; lossless in most cases.<br />
-lossless JPEG representation:<br />
-  +sv   &#8211;selection-value  [sv]: integer (1..7, default: 6)<br />
-          use selection value sv only with &#8211;encode-lossless<br />
-#This option selects the selection value for lossless JPEG.<br />
-  +pt   &#8211;point-transform  [pt]: integer (0..15, default: 0)<br />
-          use point transform pt<br />
-#This option selects the point transform for lossless JPEG.<br />
-#WARNING : Using this option with a value other than zero causes<br />
-#a loss of precision, i.e.makes the compression &#8220;lossy&#8221;.<br />
-lossy JPEG representation:<br />
-  +q    &#8211;quality  [q]: integer (0..100, default: 90)<br />
-          use quality factor q<br />
-#This option selects the quality factor used to determine the<br />
-#quantization table inside the JPEG compressor, which affects<br />
-#compression ratio and image quality in lossy JPEG.<br />
-#See documentation of the Independent JPEG Group for details.<br />
-  +sm   &#8211;smooth  [s]: integer (0..100, default: 0)<br />
-          use smoothing factor s<br />
-#This option enables a smoothing(low &#8211; pass filter) of the image data<br />
-#prior to compression.Increases the compression ratio at the expense<br />
-#of image quality.<br />
-other JPEG options:<br />
-  +ho   &#8211;huffman-optimize<br />
-          optimize huffman tables (default)<br />
-#This option enables an optimization of the huffman tables during<br />
-#image compression.It results in a slightly smaller image at a small<br />
-#increase of CPU time.Always on if bits / sample is larger than 8.<br />
-  -ho   &#8211;huffman-standard<br />
-          use standard huffman tables if 8 bits/sample<br />
-#This option disables an optimization of the huffman tables during<br />
-#image compression.<br />
-compressed bits per sample (always +ba with +tl):<br />
-  +ba   &#8211;bits-auto<br />
-          choose bits/sample automatically (default)<br />
-  +be   &#8211;bits-force-8<br />
-          force 8 bits/sample<br />
-  +bt   &#8211;bits-force-12<br />
-          force 12 bits/sample (not with baseline)<br />
-  +bs   &#8211;bits-force-16<br />
-          force 16 bits/sample (lossless only)<br />
-compression color space conversion (overriden by +tl):<br />
-  +cy   &#8211;color-ybr<br />
-          use YCbCr for color images if lossy (default)<br />
-#This option enables a transformation of the color space to YCbCr<br />
-#prior to image compression for color images in lossy JPEG.<br />
-  +cr   &#8211;color-rgb<br />
-          use RGB for color images if lossy<br />
-#This option prevents the transformation of the color space to YCbCr<br />
-#prior to image compression for color images in lossy JPEG.It causes<br />
-#lossy image compression in the RGB color space which is not<br />
-#recommendable.<br />
-  +cm   &#8211;monochrome<br />
-          convert color images to monochrome<br />
-#This option forces a conversion of color images to monochrome<br />
-#prior to compression.<br />
-decompression color space conversion<br />
-(if input is compressed; always +cn with +tl):<br />
-  +cp   &#8211;conv-photometric<br />
-          convert if YCbCr photometric interpretation (default)<br />
-#This option describes the behavior of dcmcjpeg when a compressed<br />
-#image is read and decompressed prior to re &#8211; compression.If the<br />
-#compressed image uses YBR_FULL or YBR_FULL_422 photometric<br />
-#interpretation, it is converted to RGB during decompression.<br />
-  +cl   &#8211;conv-lossy<br />
-          convert YCbCr to RGB if lossy JPEG<br />
-#If the compressed image is encoded in lossy JPEG, assume YCbCr<br />
-#color model and convert to RGB.<br />
-  +cg   &#8211;conv-guess<br />
-          convert to RGB if YCbCr is guessed by library<br />
-#If the underlying JPEG library &#8220;guesses&#8221; the color space of the<br />
-#compressed image to be YCbCr, convert to RGB.<br />
-  +cgl  &#8211;conv-guess-lossy<br />
-          convert to RGB if lossy JPEG and YCbCr is<br />
-          guessed by the underlying JPEG library<br />
-#If the compressed image is encoded in lossy JPEG and the underlying<br />
-#JPEG library &#8220;guesses&#8221; the color space to be YCbCr, convert to RGB.<br />
-  +ca   &#8211;conv-always<br />
-          always convert YCbCr to RGB<br />
-#If the compressed image is a color image, assume YCbCr color model<br />
-#and convert to RGB.<br />
-  +cn   &#8211;conv-never<br />
-          never convert color space<br />
-#Never convert color space during decompression.<br />
-standard YCbCr component subsampling (not with +tl):<br />
-  +s4   &#8211;sample-444<br />
-          4:4:4 sampling with YBR_FULL (default)<br />
-#This option disables color component subsampling for compression in<br />
-#the YCbCr color space.The DICOM photometric interpretation is<br />
-#encoded as YBR_FULL.<br />
-  +s2   &#8211;sample-422<br />
-          4:2:2 subsampling with YBR_FULL_422<br />
-#This option enables a 4 : 2 : 2 color component subsampling for<br />
-#compression in the YCbCr color space.The DICOM photometric<br />
-#interpretation is encoded as YBR_FULL.<br />
-non-standard YCbCr component subsampling (not with +tl):<br />
-  +n2   &#8211;nonstd-422-full<br />
-          4:2:2 subsampling with YBR_FULL<br />
-#This option enables a 4 : 2 : 2 color component subsampling for<br />
-#compression in the YCbCr color space.The DICOM photometric<br />
-#interpretation is encoded as YBR_FULL which violates DICOM rules.<br />
-  +n1   &#8211;nonstd-411-full<br />
-          4:1:1 subsampling with YBR_FULL<br />
-#This option enables a 4 : 1 : 1 color component subsampling for<br />
-#compression in the YCbCr color space.The DICOM photometric<br />
-#interpretation is encoded as YBR_FULL which violates DICOM rules.<br />
-  +np   &#8211;nonstd-411<br />
-          4:1:1 subsampling with YBR_FULL_422<br />
-#This option enables a 4 : 1 : 1 color component subsampling for<br />
-#compression in the YCbCr color space.The DICOM photometric<br />
+<p>JPEG process:<br/>
+  +e1   &#8211;encode-lossless-sv1<br/>
+          encode lossless sv1 (default)<br/>
+#This option selects the JPEG Lossless, Non &#8211; Hierarchical, First &#8211; Order<br/>
+#Prediction(Process 14 Selection Value 1) Transfer Syntax for<br/>
+#Lossless JPEG Image Compression.<br/>
+  +el   &#8211;encode-lossless<br/>
+          encode lossless<br/>
+#This option selects the JPEG Lossless, Non &#8211; Hierarchical(Process 14)<br/>
+#Transfer Syntax for Lossless JPEG Image Compression.<br/>
+  +eb   &#8211;encode-baseline<br/>
+          encode baseline<br/>
+#This option selects the JPEG Baseline(Process 1) Transfer Syntax<br/>
+#for Lossy JPEG 8 Bit Image Compression.<br/>
+  +ee   &#8211;encode-extended<br/>
+          encode extended sequential<br/>
+#This option selects the JPEG Extended(Process 2 &amp; 4) Transfer<br/>
+#Syntax for Lossy JPEG Image Compression.<br/>
+  +es   &#8211;encode-spectral<br/>
+          encode spectral selection<br/>
+#This option selects the JPEG Spectral Selection, Non &#8211; Hierarchical<br/>
+#(Process 6 &amp; 8) Transfer Syntax for Lossy JPEG Image Compression.<br/>
+  +ep   &#8211;encode-progressive<br/>
+          encode progressive<br/>
+#This option selects the JPEG Full Progression, Non &#8211; Hierarchical<br/>
+#(Process 10 &amp; 12) Transfer Syntax for Lossy JPEG Image Compression.<br/>
+lossless JPEG codec selection:<br/>
+  +tl   &#8211;true-lossless<br/>
+          true lossless codec (default)<br/>
+#This option selects an encoder, that guarantees truely lossless<br/>
+#image compression.See NOTES for further information.<br/>
+  +pl   &#8211;pseudo-lossless<br/>
+          old pseudo-lossless codec<br/>
+#Old encoder, that uses lossless compression algorithms, but can<br/>
+#cause lossy images because of internal color space transformations<br/>
+#etc.Higher compression ratio than&#8211; true &#8211; lossless in most cases.<br/>
+lossless JPEG representation:<br/>
+  +sv   &#8211;selection-value  [sv]: integer (1..7, default: 6)<br/>
+          use selection value sv only with &#8211;encode-lossless<br/>
+#This option selects the selection value for lossless JPEG.<br/>
+  +pt   &#8211;point-transform  [pt]: integer (0..15, default: 0)<br/>
+          use point transform pt<br/>
+#This option selects the point transform for lossless JPEG.<br/>
+#WARNING : Using this option with a value other than zero causes<br/>
+#a loss of precision, i.e.makes the compression &#8220;lossy&#8221;.<br/>
+lossy JPEG representation:<br/>
+  +q    &#8211;quality  [q]: integer (0..100, default: 90)<br/>
+          use quality factor q<br/>
+#This option selects the quality factor used to determine the<br/>
+#quantization table inside the JPEG compressor, which affects<br/>
+#compression ratio and image quality in lossy JPEG.<br/>
+#See documentation of the Independent JPEG Group for details.<br/>
+  +sm   &#8211;smooth  [s]: integer (0..100, default: 0)<br/>
+          use smoothing factor s<br/>
+#This option enables a smoothing(low &#8211; pass filter) of the image data<br/>
+#prior to compression.Increases the compression ratio at the expense<br/>
+#of image quality.<br/>
+other JPEG options:<br/>
+  +ho   &#8211;huffman-optimize<br/>
+          optimize huffman tables (default)<br/>
+#This option enables an optimization of the huffman tables during<br/>
+#image compression.It results in a slightly smaller image at a small<br/>
+#increase of CPU time.Always on if bits / sample is larger than 8.<br/>
+  -ho   &#8211;huffman-standard<br/>
+          use standard huffman tables if 8 bits/sample<br/>
+#This option disables an optimization of the huffman tables during<br/>
+#image compression.<br/>
+compressed bits per sample (always +ba with +tl):<br/>
+  +ba   &#8211;bits-auto<br/>
+          choose bits/sample automatically (default)<br/>
+  +be   &#8211;bits-force-8<br/>
+          force 8 bits/sample<br/>
+  +bt   &#8211;bits-force-12<br/>
+          force 12 bits/sample (not with baseline)<br/>
+  +bs   &#8211;bits-force-16<br/>
+          force 16 bits/sample (lossless only)<br/>
+compression color space conversion (overriden by +tl):<br/>
+  +cy   &#8211;color-ybr<br/>
+          use YCbCr for color images if lossy (default)<br/>
+#This option enables a transformation of the color space to YCbCr<br/>
+#prior to image compression for color images in lossy JPEG.<br/>
+  +cr   &#8211;color-rgb<br/>
+          use RGB for color images if lossy<br/>
+#This option prevents the transformation of the color space to YCbCr<br/>
+#prior to image compression for color images in lossy JPEG.It causes<br/>
+#lossy image compression in the RGB color space which is not<br/>
+#recommendable.<br/>
+  +cm   &#8211;monochrome<br/>
+          convert color images to monochrome<br/>
+#This option forces a conversion of color images to monochrome<br/>
+#prior to compression.<br/>
+decompression color space conversion<br/>
+(if input is compressed; always +cn with +tl):<br/>
+  +cp   &#8211;conv-photometric<br/>
+          convert if YCbCr photometric interpretation (default)<br/>
+#This option describes the behavior of dcmcjpeg when a compressed<br/>
+#image is read and decompressed prior to re &#8211; compression.If the<br/>
+#compressed image uses YBR_FULL or YBR_FULL_422 photometric<br/>
+#interpretation, it is converted to RGB during decompression.<br/>
+  +cl   &#8211;conv-lossy<br/>
+          convert YCbCr to RGB if lossy JPEG<br/>
+#If the compressed image is encoded in lossy JPEG, assume YCbCr<br/>
+#color model and convert to RGB.<br/>
+  +cg   &#8211;conv-guess<br/>
+          convert to RGB if YCbCr is guessed by library<br/>
+#If the underlying JPEG library &#8220;guesses&#8221; the color space of the<br/>
+#compressed image to be YCbCr, convert to RGB.<br/>
+  +cgl  &#8211;conv-guess-lossy<br/>
+          convert to RGB if lossy JPEG and YCbCr is<br/>
+          guessed by the underlying JPEG library<br/>
+#If the compressed image is encoded in lossy JPEG and the underlying<br/>
+#JPEG library &#8220;guesses&#8221; the color space to be YCbCr, convert to RGB.<br/>
+  +ca   &#8211;conv-always<br/>
+          always convert YCbCr to RGB<br/>
+#If the compressed image is a color image, assume YCbCr color model<br/>
+#and convert to RGB.<br/>
+  +cn   &#8211;conv-never<br/>
+          never convert color space<br/>
+#Never convert color space during decompression.<br/>
+standard YCbCr component subsampling (not with +tl):<br/>
+  +s4   &#8211;sample-444<br/>
+          4:4:4 sampling with YBR_FULL (default)<br/>
+#This option disables color component subsampling for compression in<br/>
+#the YCbCr color space.The DICOM photometric interpretation is<br/>
+#encoded as YBR_FULL.<br/>
+  +s2   &#8211;sample-422<br/>
+          4:2:2 subsampling with YBR_FULL_422<br/>
+#This option enables a 4 : 2 : 2 color component subsampling for<br/>
+#compression in the YCbCr color space.The DICOM photometric<br/>
+#interpretation is encoded as YBR_FULL.<br/>
+non-standard YCbCr component subsampling (not with +tl):<br/>
+  +n2   &#8211;nonstd-422-full<br/>
+          4:2:2 subsampling with YBR_FULL<br/>
+#This option enables a 4 : 2 : 2 color component subsampling for<br/>
+#compression in the YCbCr color space.The DICOM photometric<br/>
+#interpretation is encoded as YBR_FULL which violates DICOM rules.<br/>
+  +n1   &#8211;nonstd-411-full<br/>
+          4:1:1 subsampling with YBR_FULL<br/>
+#This option enables a 4 : 1 : 1 color component subsampling for<br/>
+#compression in the YCbCr color space.The DICOM photometric<br/>
+#interpretation is encoded as YBR_FULL which violates DICOM rules.<br/>
+  +np   &#8211;nonstd-411<br/>
+          4:1:1 subsampling with YBR_FULL_422<br/>
+#This option enables a 4 : 1 : 1 color component subsampling for<br/>
+#compression in the YCbCr color space.The DICOM photometric<br/>
 #interpretation is encoded as YBR_FULL_422 which violates DICOM rules.</p>
 <h3>encapsulated pixel data encoding options</h3>
-<p>encapsulated pixel data fragmentation:<br />
-  +ff   &#8211;fragment-per-frame<br />
-          encode each frame as one fragment (default)<br />
-#This option causes the creation of one compressed fragment for each<br />
-#frame(recommended).<br />
-  +fs   &#8211;fragment-size  [s]ize: integer<br />
-          limit fragment size to s kbytes<br />
-#This option limits the fragment size which may cause the creation of<br />
-#multiple fragments per frame.<br />
-basic offset table encoding:<br />
-  +ot   &#8211;offset-table-create<br />
-          create offset table (default)<br />
-#This option causes the creation of a valid offset table for the<br />
-#compressed JPEG fragments.<br />
-  -ot   &#8211;offset-table-empty<br />
-          leave offset table empty<br />
-#This option causes the creation of an empty offset table<br />
-#for the compressed JPEG fragments.<br />
-VOI windowing for monochrome images (not with +tl):<br />
-  -W    &#8211;no-windowing<br />
-          no VOI windowing (default)<br />
-#No window level / width is &#8220;burned&#8221; into monochrome images prior to<br />
-#compression.See notes below on pixel scaling and rescale slope<br />
-#and intercept encoding.<br />
-  +Wi   &#8211;use-window  [n]umber: integer<br />
-          use the n-th VOI window from image file<br />
-#Apply the n &#8211; th window center / width encoded in the image data prior<br />
-#to compression.<br />
-  +Wl   &#8211;use-voi-lut  [n]umber: integer<br />
-          use the n-th VOI look up table from image file<br />
-#Apply the n &#8211; th VOI LUT encoded in the image data prior<br />
-#to compression.<br />
-  +Wm   &#8211;min-max-window<br />
-          compute VOI window using min-max algorithm<br />
-#Compute and apply a window center and width that covers the<br />
-#range from the smallest to the largest occuring pixel value.<br />
-  +Wn   &#8211;min-max-window-n<br />
-          compute VOI window using min-max algorithm,<br />
-          ignoring extreme values<br />
-#Compute and apply a window center and width that covers the<br />
-#range from the second smallest to the second largest occuring<br />
-#pixel value.This is useful if the background is set to an<br />
-#artificial black(padding value) or if white overlays are burned<br />
-#into the image data which should not be considered for the window<br />
-#computation.<br />
-  +Wr   &#8211;roi-min-max-window  [l]eft [t]op [w]idth [h]eight: integer<br />
-          compute ROI window using min-max algorithm,<br />
-          region of interest is specified by l,t,w,h<br />
-#This option works like&#8211; min &#8211; max &#8211; window but only considers the given<br />
-#region of interest inside the image.<br />
-  +Wh   &#8211;histogram-window  [n]umber: integer<br />
-          compute VOI window using Histogram algorithm,<br />
-          ignoring n percent<br />
-#Compute a histogram of the image data and apply window center<br />
-#and width such than n % of the image data are ignored for the window<br />
-#computation<br />
-  +Ww   &#8211;set-window  [c]enter [w]idth: float<br />
-          compute VOI window using center c and width w<br />
-#Apply the given window center / width prior to compression.<br />
-pixel scaling for monochrome images (&#8211;no-windowing; ignored by +tl):<br />
-  +sp   &#8211;scaling-pixel<br />
-          scale using min/max pixel value (default)<br />
-#Monochrome image pixel values are always scaled to make use of the<br />
-#pixel range available with the selected JPEG process as good as<br />
-#possible.This option selects a scaling based on the minimum and<br />
-#maximum pixel value occuring in the image.This often leads to<br />
-#significantly better image quality, but may cause different<br />
-#compressed images within one series to have different values for<br />
-#rescale slope and intercept, which is a problem if a presentation<br />
-#state for one series is to be created.<br />
-  +sr   &#8211;scaling-range<br />
-          scale using min/max range<br />
-#This options selects a scaling based on the pixel range as defined<br />
-#by the stored bits, pixel representation and modality transform,<br />
-#without consideration of the minimum and maximum value really<br />
-#used within the image.<br />
-rescale slope/intercept encoding for monochrome (-W; ignored by +tl):<br />
-  +ri   &#8211;rescale-identity<br />
-          encode identity modality rescale (default)<br />
-          Never used for CT images<br />
-#This options prevents the creation of a modality transformation<br />
-#other than an identity transformation(which is required for<br />
-#many DICOM IODs).Window center / width settings encoded<br />
-#in the image are adapted, VOI LUTs are removed.<br />
-  +rm   &#8211;rescale-map<br />
-          use modality rescale to scale pixel range<br />
-          Never used for XA/RF/XA Biplane images<br />
-#This option causes the creation of a modality rescale slope and<br />
-#intercept that maps the decompressed image data back to their<br />
-#original range.This keeps all VOI transformations valid but<br />
-#requires that the DICOM IOD supports a modality rescale slope<br />
-#and intercept transformation other than identity.<br />
-SOP Class UID:<br />
-  +cd   &#8211;class-default<br />
-          keep SOP Class UID (default)<br />
-#Keep the SOP Class UID of the source image.<br />
-  +cs   &#8211;class-sc<br />
-          convert to Secondary Capture Image (implies &#8211;uid-always)<br />
-#Convert the image to Secondary Capture.In addition to the SOP<br />
-#Class UID, all attributes required for a valid secondary capture<br />
-#image are added.A new SOP instance UID is always assigned.<br />
-SOP Instance UID:<br />
-  +ud   &#8211;uid-default<br />
-          assign new UID if lossy compression (default)<br />
-#Assigns a new SOP instance UID if the compression is lossy.<br />
-  +ua   &#8211;uid-always<br />
-          always assign new UID<br />
-#Unconditionally assigns a new SOP instance UID.<br />
-  +un   &#8211;uid-never<br />
-          never assign new UID<br />
+<p>encapsulated pixel data fragmentation:<br/>
+  +ff   &#8211;fragment-per-frame<br/>
+          encode each frame as one fragment (default)<br/>
+#This option causes the creation of one compressed fragment for each<br/>
+#frame(recommended).<br/>
+  +fs   &#8211;fragment-size  [s]ize: integer<br/>
+          limit fragment size to s kbytes<br/>
+#This option limits the fragment size which may cause the creation of<br/>
+#multiple fragments per frame.<br/>
+basic offset table encoding:<br/>
+  +ot   &#8211;offset-table-create<br/>
+          create offset table (default)<br/>
+#This option causes the creation of a valid offset table for the<br/>
+#compressed JPEG fragments.<br/>
+  -ot   &#8211;offset-table-empty<br/>
+          leave offset table empty<br/>
+#This option causes the creation of an empty offset table<br/>
+#for the compressed JPEG fragments.<br/>
+VOI windowing for monochrome images (not with +tl):<br/>
+  -W    &#8211;no-windowing<br/>
+          no VOI windowing (default)<br/>
+#No window level / width is &#8220;burned&#8221; into monochrome images prior to<br/>
+#compression.See notes below on pixel scaling and rescale slope<br/>
+#and intercept encoding.<br/>
+  +Wi   &#8211;use-window  [n]umber: integer<br/>
+          use the n-th VOI window from image file<br/>
+#Apply the n &#8211; th window center / width encoded in the image data prior<br/>
+#to compression.<br/>
+  +Wl   &#8211;use-voi-lut  [n]umber: integer<br/>
+          use the n-th VOI look up table from image file<br/>
+#Apply the n &#8211; th VOI LUT encoded in the image data prior<br/>
+#to compression.<br/>
+  +Wm   &#8211;min-max-window<br/>
+          compute VOI window using min-max algorithm<br/>
+#Compute and apply a window center and width that covers the<br/>
+#range from the smallest to the largest occuring pixel value.<br/>
+  +Wn   &#8211;min-max-window-n<br/>
+          compute VOI window using min-max algorithm,<br/>
+          ignoring extreme values<br/>
+#Compute and apply a window center and width that covers the<br/>
+#range from the second smallest to the second largest occuring<br/>
+#pixel value.This is useful if the background is set to an<br/>
+#artificial black(padding value) or if white overlays are burned<br/>
+#into the image data which should not be considered for the window<br/>
+#computation.<br/>
+  +Wr   &#8211;roi-min-max-window  [l]eft [t]op [w]idth [h]eight: integer<br/>
+          compute ROI window using min-max algorithm,<br/>
+          region of interest is specified by l,t,w,h<br/>
+#This option works like&#8211; min &#8211; max &#8211; window but only considers the given<br/>
+#region of interest inside the image.<br/>
+  +Wh   &#8211;histogram-window  [n]umber: integer<br/>
+          compute VOI window using Histogram algorithm,<br/>
+          ignoring n percent<br/>
+#Compute a histogram of the image data and apply window center<br/>
+#and width such than n % of the image data are ignored for the window<br/>
+#computation<br/>
+  +Ww   &#8211;set-window  [c]enter [w]idth: float<br/>
+          compute VOI window using center c and width w<br/>
+#Apply the given window center / width prior to compression.<br/>
+pixel scaling for monochrome images (&#8211;no-windowing; ignored by +tl):<br/>
+  +sp   &#8211;scaling-pixel<br/>
+          scale using min/max pixel value (default)<br/>
+#Monochrome image pixel values are always scaled to make use of the<br/>
+#pixel range available with the selected JPEG process as good as<br/>
+#possible.This option selects a scaling based on the minimum and<br/>
+#maximum pixel value occuring in the image.This often leads to<br/>
+#significantly better image quality, but may cause different<br/>
+#compressed images within one series to have different values for<br/>
+#rescale slope and intercept, which is a problem if a presentation<br/>
+#state for one series is to be created.<br/>
+  +sr   &#8211;scaling-range<br/>
+          scale using min/max range<br/>
+#This options selects a scaling based on the pixel range as defined<br/>
+#by the stored bits, pixel representation and modality transform,<br/>
+#without consideration of the minimum and maximum value really<br/>
+#used within the image.<br/>
+rescale slope/intercept encoding for monochrome (-W; ignored by +tl):<br/>
+  +ri   &#8211;rescale-identity<br/>
+          encode identity modality rescale (default)<br/>
+          Never used for CT images<br/>
+#This options prevents the creation of a modality transformation<br/>
+#other than an identity transformation(which is required for<br/>
+#many DICOM IODs).Window center / width settings encoded<br/>
+#in the image are adapted, VOI LUTs are removed.<br/>
+  +rm   &#8211;rescale-map<br/>
+          use modality rescale to scale pixel range<br/>
+          Never used for XA/RF/XA Biplane images<br/>
+#This option causes the creation of a modality rescale slope and<br/>
+#intercept that maps the decompressed image data back to their<br/>
+#original range.This keeps all VOI transformations valid but<br/>
+#requires that the DICOM IOD supports a modality rescale slope<br/>
+#and intercept transformation other than identity.<br/>
+SOP Class UID:<br/>
+  +cd   &#8211;class-default<br/>
+          keep SOP Class UID (default)<br/>
+#Keep the SOP Class UID of the source image.<br/>
+  +cs   &#8211;class-sc<br/>
+          convert to Secondary Capture Image (implies &#8211;uid-always)<br/>
+#Convert the image to Secondary Capture.In addition to the SOP<br/>
+#Class UID, all attributes required for a valid secondary capture<br/>
+#image are added.A new SOP instance UID is always assigned.<br/>
+SOP Instance UID:<br/>
+  +ud   &#8211;uid-default<br/>
+          assign new UID if lossy compression (default)<br/>
+#Assigns a new SOP instance UID if the compression is lossy.<br/>
+  +ua   &#8211;uid-always<br/>
+          always assign new UID<br/>
+#Unconditionally assigns a new SOP instance UID.<br/>
+  +un   &#8211;uid-never<br/>
+          never assign new UID<br/>
 #Never assigns a new SOP instance UID.</p>
 <h3>output options</h3>
 <pre><code>

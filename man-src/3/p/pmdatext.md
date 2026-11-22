@@ -9,8 +9,8 @@ description: "pmdaText – extract metric help text for a PMDA"
 
 <p><code>pmdaText</code> &#8211; extract metric help text for a PMDA</p>
 <h2>C Synopsis</h2>
-<p><code> #include &lt;pcp/pmapi.h&gt;<br />
- #include &lt;pcp/impl.h&gt;<br />
+<p><code> #include &lt;pcp/pmapi.h&gt;<br/>
+ #include &lt;pcp/impl.h&gt;<br/>
  #include &lt;pcp/pmda.h&gt; </p>
 <p> int pmdaText(int </code><i>ident</i>, int <i>type</i>, char **<i>buffer</i>, pmdaExt *<i>pmda</i>); </p>
 <p> cc &#8230; -lpcp_pmda -lpcp</p>

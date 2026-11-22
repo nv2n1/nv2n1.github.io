@@ -15,15 +15,15 @@ description: "yuvscaler – UPscales or DOWNscales a YUV4MPEG2 stream to a speci
 <p> <code>yuvscaler</code> is a general (UP or DOWN) scaling utility that is provided to allow conversion between different video formats. It reads in a YUV4MPEG2 format stream from stdin (such as that produced by <code>lav2yuv</code>) and outputs such stream to stdout (e.g. to be consumed by <code>mpeg2enc</code>). The most common use of yuvscaler is to generate input suitable for MPEG encoding to VCD or SVCD formats using <code><a href="/docs/linux/man/1-mpeg2enc/">mpeg2enc</a></code>(1). </p>
 <p> <code>yuvscaler</code> will automatically take into account PAL/SECAM and NTSC format, as well as widescreen (16:9) format and interlacing. Use of yuvscaler was designed to be straightforward. </p>
 <h2>EXAMPLES</h2>
-<p> <code>VCD encoding:</code><br />
+<p> <code>VCD encoding:</code><br/>
  lav2yuv my-file.avi | yuvscaler -O VCD | mpeg2enc -f 1 -o vcd.%d.m1v </p>
-<p> <code>SVCD encoding:</code><br />
+<p> <code>SVCD encoding:</code><br/>
  lav2yuv my-file.qt | yuvscaler -O SVCD | mpeg2enc -f 4 -o svcd.%d.m2v </p>
-<p> <code>Encoding anamorphic 16:9 as letterboxed VCD:</code><br />
+<p> <code>Encoding anamorphic 16:9 as letterboxed VCD:</code><br/>
  lav2yuv my-ana16-9.eli | yuvscaler -M WIDE2VCD | mpeg2enc -f 1 -o letterbox_vcd.%d.m1v </p>
-<p> <code>Encoding anamorphic 16:9 as letterboxed SVCD:</code><br />
+<p> <code>Encoding anamorphic 16:9 as letterboxed SVCD:</code><br/>
  lav2yuv my-ana16-9.eli | yuvscaler -M WIDE2STD -O SVCD | mpeg2enc -f 4 -o letterbox_svcd.%d.m2v </p>
-<p> <code>Encoding anamorphic 16:9 as letterboxed DVD:</code><br />
+<p> <code>Encoding anamorphic 16:9 as letterboxed DVD:</code><br/>
  lav2yuv my-ana16-9.eli | yuvscaler -M WIDE2STD -O DVD | mpeg2enc -f 8 -o letterbox_dvd.%d.m2v </p>
 <h2>OPTIONS</h2>
 <dl>
@@ -102,8 +102,8 @@ description: "yuvscaler – UPscales or DOWNscales a YUV4MPEG2 stream to a speci
 </dt><dd> RATIO_1_1_1_1 =&gt; copy useful input part of possible several files into output frames </dd>
 </dl>
 <h2>AUTHOR</h2>
-<p> This man page was written by Xavier Biquard et al.<br />
- If you have questions, remarks, problems or you just want to contact the developers, the main mailing list for the MJPEG-tools is:<br />
+<p> This man page was written by Xavier Biquard et al.<br/>
+ If you have questions, remarks, problems or you just want to contact the developers, the main mailing list for the MJPEG-tools is:<br/>
 &nbsp;<wbr>&nbsp;<wbr><i>mjpeg-users [at] lists.sourceforge.net</i> </p>
 <dl>
 <dt>For more info, see our website at</dt>

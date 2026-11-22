@@ -10,18 +10,18 @@ description: "osinfo-db-validate – Validate libosinfo XML data files"
 
 <p> osinfo-db-validate &#8211; Validate libosinfo XML data files </p>
 <h2>SYNOPSIS</h2>
-<p> osinfo-db-validate [<font SIZE="-1">OPTIONS&#8230;</font>] </p>
-<p> osinfo-db-validate [<font SIZE="-1">OPTIONS&#8230;</font>] <font SIZE="-1">LOCAL-PATH1</font> [<font SIZE="-1">LOCAL-PATH2&#8230;</font>] </p>
-<p> osinfo-db-validate [<font SIZE="-1">OPTIONS&#8230;</font>] <font SIZE="-1">URI1</font> [<font SIZE="-1">URI2&#8230;</font>]</p>
+<p> osinfo-db-validate [OPTIONS&#8230;] </p>
+<p> osinfo-db-validate [OPTIONS&#8230;] LOCAL-PATH1 [LOCAL-PATH2&#8230;] </p>
+<p> osinfo-db-validate [OPTIONS&#8230;] URI1 [URI2&#8230;]</p>
 <h2>DESCRIPTION</h2>
-<p> The <code>osinfo-db-validate</code> tool is able to validate <font SIZE="-1">XML</font> files in one of the osinfo database locations for compliance with the <font SIZE="-1">RNG</font> schema.</p>
+<p> The <code>osinfo-db-validate</code> tool is able to validate XML files in one of the osinfo database locations for compliance with the RNG schema.</p>
 <dl>
 <dt><code>system</code></dt>
-<dd> This is the primary system-wide database location, intended for use by operating system vendors distributing database files in the native package format. The <font SIZE="-1">RNG</font> schema is expected to be present in this location.</dd>
+<dd> This is the primary system-wide database location, intended for use by operating system vendors distributing database files in the native package format. The RNG schema is expected to be present in this location.</dd>
 <dt><code>local</code></dt>
-<dd> This is the secondary system-wide database location, intended for use by system administrators wishing to provide an updated database for all users. This location may provide an <font SIZE="-1">RNG</font> schema override, otherwise the <font SIZE="-1">RNG</font> schema from the system location will be used.</dd>
+<dd> This is the secondary system-wide database location, intended for use by system administrators wishing to provide an updated database for all users. This location may provide an RNG schema override, otherwise the RNG schema from the system location will be used.</dd>
 <dt><code>user</code></dt>
-<dd> This is the user private database location, intended for use by unprivileged local users wishing to provide applications they use with an updated database. This location may provide an <font SIZE="-1">RNG</font> schema override, otherwise the <font SIZE="-1">RNG</font> schema from the local location will be used, or failing that the system location.</dd></dl>
+<dd> This is the user private database location, intended for use by unprivileged local users wishing to provide applications they use with an updated database. This location may provide an RNG schema override, otherwise the RNG schema from the local location will be used, or failing that the system location.</dd></dl>
 <p> If run by a privileged account (ie root), the <code>local</code> database location will be validate by default, otherwise the <code>user</code> location will be validated. </p>
 <p> Alternatively it is possible to directly provide a list of files to be validated using the (<tt>&quot;LOCAL-PATH1&quot;</tt> or <tt>&quot;URI1&quot;</tt>) arguments. </p>
 <p> Any validation errors will be displayed on the console when detected.</p>
@@ -34,7 +34,7 @@ description: "osinfo-db-validate – Validate libosinfo XML data files"
 <dt><code>&#8211;system</code></dt>
 <dd> Override the default behaviour to force validating files from the <code>system</code> database location.</dd>
 <dt><code>&#8211;dir=PATH</code></dt>
-<dd> Override the default behaviour to force validating files from the custom directory <font SIZE="-1"><code>PATH</code></font>.</dd>
+<dd> Override the default behaviour to force validating files from the custom directory <code>PATH</code>.</dd>
 <dt><code>&#8211;root=PATH</code></dt>
 <dd> Prefix the database location with the root directory given by <tt>&quot;PATH&quot;</tt>. This is useful when wishing to validate files that are in a chroot environment or equivalent.</dd>
 <dt><code>-v</code>, <code>&#8211;verbose</code></dt>
@@ -48,4 +48,4 @@ description: "osinfo-db-validate – Validate libosinfo XML data files"
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2012-2016 Red Hat, Inc.</p>
 <h2>LICENSE</h2>
-<p> <tt>&quot;osinfo-db-validate&quot;</tt> is distributed under the terms of the <font SIZE="-1">GNU LGPL</font> v2+ license. This is free software; see the source for copying conditions. There is <font SIZE="-1">NO</font> warranty; not even for <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE</font> </p>
+<p> <tt>&quot;osinfo-db-validate&quot;</tt> is distributed under the terms of the GNU LGPL v2+ license. This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE </p>

@@ -21,15 +21,15 @@ description: "QuantLib::GenericGaussianStatistics – Statistics tool for gaussi
 <p> Real <code>gaussianRegret</code> (Real target) const </p>
 <p> Real <code>gaussianPercentile</code> (Real percentile) const </p>
 <p> Real <code>gaussianTopPercentile</code> (Real percentile) const </p>
-<p> Real <code>gaussianPotentialUpside</code> (Real percentile) const<br />
- <i>gaussian-assumption Potential-Upside at a given percentile </i><br />
- Real <code>gaussianValueAtRisk</code> (Real percentile) const<br />
- <i>gaussian-assumption Value-At-Risk at a given percentile </i><br />
- Real <code>gaussianExpectedShortfall</code> (Real percentile) const<br />
- <i>gaussian-assumption Expected Shortfall at a given percentile </i><br />
- Real <code>gaussianShortfall</code> (Real target) const<br />
- <i>gaussian-assumption Shortfall (observations below target) </i><br />
- Real <code>gaussianAverageShortfall</code> (Real target) const<br />
+<p> Real <code>gaussianPotentialUpside</code> (Real percentile) const<br/>
+ <i>gaussian-assumption Potential-Upside at a given percentile </i><br/>
+ Real <code>gaussianValueAtRisk</code> (Real percentile) const<br/>
+ <i>gaussian-assumption Value-At-Risk at a given percentile </i><br/>
+ Real <code>gaussianExpectedShortfall</code> (Real percentile) const<br/>
+ <i>gaussian-assumption Expected Shortfall at a given percentile </i><br/>
+ Real <code>gaussianShortfall</code> (Real target) const<br/>
+ <i>gaussian-assumption Shortfall (observations below target) </i><br/>
+ Real <code>gaussianAverageShortfall</code> (Real target) const<br/>
  <i>gaussian-assumption </i><code>Average</code> Shortfall (averaged shortfallness)</p>
 <h2>Detailed Description</h2>
 <h3>template&lt;class Stat&gt; class QuantLib::GenericGaussianStatistics&lt; Stat &gt;</h3>
@@ -44,7 +44,7 @@ description: "QuantLib::GenericGaussianStatistics – Statistics tool for gaussi
 <p>returns the variance of observations below target [ ac{um w_i (min(0, x_i-target))^2 }{um w_i}. ] </p>
 <p> See Dembo, Freeman &#8216;The Rules Of Risk&#8217;, Wiley (2001)</p>
 <h3>Real gaussianPercentile (Real percentile) const</h3>
-<p>gaussian-assumption y-th percentile, defined as the value x such that [ y = ac{1}{qrt{2<br />
+<p>gaussian-assumption y-th percentile, defined as the value x such that [ y = ac{1}{qrt{2<br/>
  i}} int_{-infty}^{x} \xp (-u^2/2) du ] </p>
 <p> <code>Precondition:</code> </p>
 <dl>

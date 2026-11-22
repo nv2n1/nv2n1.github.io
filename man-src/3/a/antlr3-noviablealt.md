@@ -9,15 +9,15 @@ description: "src/antlr3cyclicdfa.c –"
 
 <p>src/antlr3cyclicdfa.c &#8211; </p>
 <h2>Synopsis</h2>
-<p>#include &lt;<a href="file:/usr/include/antlr3defs.h">antlr3defs.h</a>&gt;<br />
+<p>#include &lt;<a href="file:/usr/include/antlr3defs.h">antlr3defs.h</a>&gt;<br/>
  #include &lt;<a href="file:/usr/include/antlr3cyclicdfa.h">antlr3cyclicdfa.h</a>&gt; </p>
 <h3>Functions</h3>
-<p>ANTLR3_API <code>ANTLR3_INT32</code> <code>antlr3dfapredict</code> (void *ctx, <code>pANTLR3_BASE_RECOGNIZER</code> rec, <code>pANTLR3_INT_STREAM</code> is, <code>pANTLR3_CYCLIC_DFA</code> cdfa)<br />
- <i>From the input stream, predict what alternative will succeed using this DFA (representing the covering regular approximation to the underlying CFL). </i><br />
- ANTLR3_API <code>ANTLR3_INT32</code> <code>antlr3dfaspecialStateTransition</code> (void *ctx, <code>pANTLR3_BASE_RECOGNIZER</code> recognizer, <code>pANTLR3_INT_STREAM</code> is, <code>pANTLR3_CYCLIC_DFA</code> dfa, <code>ANTLR3_INT32</code> s)<br />
- <i>Default special state implementation. </i><br />
+<p>ANTLR3_API <code>ANTLR3_INT32</code> <code>antlr3dfapredict</code> (void *ctx, <code>pANTLR3_BASE_RECOGNIZER</code> rec, <code>pANTLR3_INT_STREAM</code> is, <code>pANTLR3_CYCLIC_DFA</code> cdfa)<br/>
+ <i>From the input stream, predict what alternative will succeed using this DFA (representing the covering regular approximation to the underlying CFL). </i><br/>
+ ANTLR3_API <code>ANTLR3_INT32</code> <code>antlr3dfaspecialStateTransition</code> (void *ctx, <code>pANTLR3_BASE_RECOGNIZER</code> recognizer, <code>pANTLR3_INT_STREAM</code> is, <code>pANTLR3_CYCLIC_DFA</code> dfa, <code>ANTLR3_INT32</code> s)<br/>
+ <i>Default special state implementation. </i><br/>
  ANTLR3_API <code>ANTLR3_INT32</code> <code>antlr3dfaspecialTransition</code> (void *ctx, <code>pANTLR3_BASE_RECOGNIZER</code> recognizer, <code>pANTLR3_INT_STREAM</code> is, <code>pANTLR3_CYCLIC_DFA</code> dfa, <code>ANTLR3_INT32</code> s) </p>
-<p> static void <code>noViableAlt</code> (<code>pANTLR3_BASE_RECOGNIZER</code> rec, <code>pANTLR3_CYCLIC_DFA</code> cdfa, <code>ANTLR3_UINT32</code> s)<br />
+<p> static void <code>noViableAlt</code> (<code>pANTLR3_BASE_RECOGNIZER</code> rec, <code>pANTLR3_CYCLIC_DFA</code> cdfa, <code>ANTLR3_UINT32</code> s)<br/>
  <i>Support functions for traversing cyclic DFA states as laid out in static initialized structures by the code generator. </i></p>
 <h2>Function Documentation</h2>
 <h3>ANTLR3_API <code>ANTLR3_INT32</code> antlr3dfapredict (void * ctx, <code>pANTLR3_BASE_RECOGNIZER</code> rec, <code>pANTLR3_INT_STREAM</code> is, <code>pANTLR3_CYCLIC_DFA</code> cdfa)</h3>

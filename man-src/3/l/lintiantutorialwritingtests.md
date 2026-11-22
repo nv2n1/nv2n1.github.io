@@ -29,7 +29,7 @@ description: "Lintian::Tutorial::WritingTests — Short tutorial on writing test
 <p> These tests look to match the literal output of Lintian. These tests are useful as general false positives. They also catch Lintian messages unrelated to tags.</dl>
 <p> With this in mind, let us move on to the scope.</p>
 <h3>Scope of the tutorial</h3>
-<p><font SIZE="-1">WARNING: THE REMAINDER OF THIS TUTORIAL IS OUT OF DATE.</font> </p>
+<p>WARNING: THE REMAINDER OF THIS TUTORIAL IS OUT OF DATE. </p>
 <p> The &#8220;tests&#8221; suite alone is fairly complex on its own. To keep things simple, the tutorial will limit itself to creating a &#8220;native&#8221; package with no special requirements in the &#8220;tests&#8221; suite. </p>
 <p> In particular, note that the tags <i>must not</i> be <i>pedantic</i> for this to work. If you followed the check writing tutorial and made the tags pedantic, please change them into &#8220;I&#8221;, &#8220;W&#8221; or &#8220;E&#8221; tags. </p>
 <p> Once the basics are covered, you should be better equipped to deal with the other (&#8220;tag testing&#8221;) suites or using other features of the &#8220;tests&#8221; suite (e.g. pedantic tags).</p>
@@ -208,7 +208,7 @@ description: "Lintian::Tutorial::WritingTests — Short tutorial on writing test
 <dt>&#8211;</dt>
 <dd>pre_build / pre_upstream (optional, special case usage) </dd>
 <p> If present and executable, these scripts can be used to mess with the package directory and (what will become) the upstream tarball. </p>
-<p> Their common use case is to create files in the tarballs that cannot (or preferably should not) be included in the revision control system. Common cases include &#8220;binary&#8221;, &#8220;minimized&#8221; files or files with &#8220;weird&#8221; names such as backslashes or non <font SIZE="-1">UTF-8</font> characters. </p>
+<p> Their common use case is to create files in the tarballs that cannot (or preferably should not) be included in the revision control system. Common cases include &#8220;binary&#8221;, &#8220;minimized&#8221; files or files with &#8220;weird&#8221; names such as backslashes or non UTF-8 characters. </p>
 <p> Both scripts receive a directory as first argument, which is the directory they should work on. For:</p>
 <dl COMPACT>
 <dd>

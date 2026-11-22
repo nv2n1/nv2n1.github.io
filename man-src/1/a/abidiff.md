@@ -182,30 +182,30 @@ $ cat - n test - v0.cc 1 // Compile this with:
 </code></pre>
 <dt>2.</dt>
 <dd> Detecting another change in a sub-type of a function: </dd>
-<p>$ cat &#8211; n test &#8211; v0.cc 1 // Compile this with:<br />
-                 2       //   g++ -g -Wall -shared -o libtest-v0.so test-v0.cc<br />
-                 3 4 struct S0 5<br />
-{<br />
-    6 int m0;<br />
-    7<br />
-};<br />
-8 9 void 10 foo(S0 &amp; /*parameter_name*/) 11 {<br />
-    12 // do something with parameter_name.<br />
-    13} $<br />
-    $ cat<br />
-    &#8211; n test &#8211; v1.cc 1 // Compile this with:<br />
-               2       //   g++ -g -Wall -shared -o libtest-v1.so test-v1.cc<br />
-               3 4 struct S0 5<br />
-{<br />
-    6 char inserted_member;<br />
-    7 int m0;<br />
-    8<br />
-};<br />
-9 10 void 11 foo(S0 &amp; /*parameter_name*/) 12 {<br />
-    13 // do something with parameter_name.<br />
-    14} $<br />
-    $ g++ &#8211;<br />
-    g &#8211; Wall &#8211; shared &#8211; o libtest &#8211; v0.so test &#8211; v0.cc $ g++ &#8211; g &#8211; Wall &#8211; shared &#8211; o libtest &#8211; v1.so test &#8211; v1.cc $ $../ build / tools / abidiff libtest &#8211; v0.so libtest &#8211; v1.so Functions changes summary : 0 Removed,<br />
+<p>$ cat &#8211; n test &#8211; v0.cc 1 // Compile this with:<br/>
+                 2       //   g++ -g -Wall -shared -o libtest-v0.so test-v0.cc<br/>
+                 3 4 struct S0 5<br/>
+{<br/>
+    6 int m0;<br/>
+    7<br/>
+};<br/>
+8 9 void 10 foo(S0 &amp; /*parameter_name*/) 11 {<br/>
+    12 // do something with parameter_name.<br/>
+    13} $<br/>
+    $ cat<br/>
+    &#8211; n test &#8211; v1.cc 1 // Compile this with:<br/>
+               2       //   g++ -g -Wall -shared -o libtest-v1.so test-v1.cc<br/>
+               3 4 struct S0 5<br/>
+{<br/>
+    6 char inserted_member;<br/>
+    7 int m0;<br/>
+    8<br/>
+};<br/>
+9 10 void 11 foo(S0 &amp; /*parameter_name*/) 12 {<br/>
+    13 // do something with parameter_name.<br/>
+    14} $<br/>
+    $ g++ &#8211;<br/>
+    g &#8211; Wall &#8211; shared &#8211; o libtest &#8211; v0.so test &#8211; v0.cc $ g++ &#8211; g &#8211; Wall &#8211; shared &#8211; o libtest &#8211; v1.so test &#8211; v1.cc $ $../ build / tools / abidiff libtest &#8211; v0.so libtest &#8211; v1.so Functions changes summary : 0 Removed,<br/>
     1 Changed, 0 Added function Variables changes summary : 0 Removed, 0 Changed, 0 Added variable 1 function with some indirect sub &#8211; type change : [C] &#8216;function void foo(S0&amp;)&#8217; has some indirect sub &#8211; type changes : parameter 0 of type &#8216;S0&amp;&#8217; has sub &#8211; type changes : in referenced type &#8216;struct S0&#8217; : size changed from 32 to 64 bits 1 data member insertion : &#8216;char S0::inserted_member&#8217;, at offset 0(in bits)1 data member change : &#8216;int S0::m0&#8217; offset changed from 0 to 32 $</p>
 <dt>3.</dt>
 <dd> Detecting that functions got removed or added to a library: </dd>

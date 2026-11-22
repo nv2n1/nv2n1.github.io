@@ -9,9 +9,9 @@ description: "isdn_audio – audio extension of ttyI ISDN character devices"
 
 <p>isdn_audio &#8211; audio extension of ttyI ISDN character devices</p>
 <h2>Description</h2>
-<p>This document describes the audio related extensions of the modem emulation, provided by <i>/dev/ttyIx</i>. The <font SIZE="-1">ISDN</font> tty devices are equipped with a modem emulation implementing a set of traditional and some special AT commands. This provides easy use together with almost all communication software that uses modem commands: <code><a href="/docs/linux/man/1-minicom/">minicom</a></code>(1), <code>seyon</code>(1), <code>XCept</code>(1), <code><a href="/docs/linux/man/8-uucico/">uucico</a></code>(8), <code><a href="/docs/linux/man/8-mgetty/">mgetty</a></code>(8), <code>dip</code>(8), <code><a href="/docs/linux/man/8-pppd/">pppd</a></code>(8) and more. When enabled during kernel configuration, the emulator is capable of a reduced set of commands to support audio. To use audio features, an <font SIZE="-1">ISDN</font> card with a audio-capable low-level driver is needed. Currently the only audio-capable drivers are the teles and HiSax driver. The port speed of the <font SIZE="-1">ISDN</font> tty devices is always 64000 bps. </p>
+<p>This document describes the audio related extensions of the modem emulation, provided by <i>/dev/ttyIx</i>. The ISDN tty devices are equipped with a modem emulation implementing a set of traditional and some special AT commands. This provides easy use together with almost all communication software that uses modem commands: <code><a href="/docs/linux/man/1-minicom/">minicom</a></code>(1), <code>seyon</code>(1), <code>XCept</code>(1), <code><a href="/docs/linux/man/8-uucico/">uucico</a></code>(8), <code><a href="/docs/linux/man/8-mgetty/">mgetty</a></code>(8), <code>dip</code>(8), <code><a href="/docs/linux/man/8-pppd/">pppd</a></code>(8) and more. When enabled during kernel configuration, the emulator is capable of a reduced set of commands to support audio. To use audio features, an ISDN card with a audio-capable low-level driver is needed. Currently the only audio-capable drivers are the teles and HiSax driver. The port speed of the ISDN tty devices is always 64000 bps. </p>
 <h2>Audio Related At Command Set</h2>
-<p>This description does <code>not</code> include the standard AT command set. For a description of the standard AT command set, provided by the Linux <font SIZE="-1">ISDN</font> subsystem, see <code><a href="/docs/linux/man/4-ttyi/">ttyI</a></code>(4). All commands starting with <code>AT+</code> except <code>AT+FCLASS</code> are enabled only, if audio mode is active. The following <code>audio related AT commands</code> are supported by <font SIZE="-1">ISDN</font> tty devices:</p>
+<p>This description does <code>not</code> include the standard AT command set. For a description of the standard AT command set, provided by the Linux ISDN subsystem, see <code><a href="/docs/linux/man/4-ttyi/">ttyI</a></code>(4). All commands starting with <code>AT+</code> except <code>AT+FCLASS</code> are enabled only, if audio mode is active. The following <code>audio related AT commands</code> are supported by ISDN tty devices:</p>
 <dl>
 <dt><code>AT+FCLASS=0</code></dt>
 <dd>Disable audio mode (default). This command sets register <i>18</i> to <i>4</i>.</dd>
@@ -32,7 +32,7 @@ description: "isdn_audio – audio extension of ttyI ISDN character devices"
 <dt><code>AT+VLS=</code><i>x</i></dt>
 <dd>Select line <i>x</i>, where <i>x</i> is one of the following:</dd>
 <dl>
-<dd>0 = No device.<br />
+<dd>0 = No device.<br/>
  2 = Phone line.</dd></dl>
 <dt><code>AT+VLS=?</code></dt>
 <dd>Always showing &quot;0,2&quot;.</dd>
@@ -43,9 +43,9 @@ description: "isdn_audio – audio extension of ttyI ISDN character devices"
 <dt><code>AT+VSD=</code><i>x</i><code>,</code><i>y</i></dt>
 <dd>Set silence-detection parameters.</dd>
 <dl>
-<dd>Possible parameters:<br />
- <i>x</i> = 0 &#8230; 31 sensitivity threshold level.<br />
- (default 0 , deactivated)<br />
+<dd>Possible parameters:<br/>
+ <i>x</i> = 0 &#8230; 31 sensitivity threshold level.<br/>
+ (default 0 , deactivated)<br/>
  <i>y</i> = 0 &#8230; 255 range of interval in units of 0.1 second. (default 70)</dd></dl>
 <dt><code>AT+VSD=?</code></dt>
 <dd>Show possible parameters.</dd>
@@ -54,10 +54,10 @@ description: "isdn_audio – audio extension of ttyI ISDN character devices"
 <dt><code>AT+VSM=</code><i>x</i></dt>
 <dd>Select audio data format to <i>x</i>, where <i>x</i> is:</dd>
 <dl>
-<dd>2 = ADPCM-2<br />
- 3 = ADPCM-3<br />
- 4 = ADPCM-4<br />
- 5 = aLAW<br />
+<dd>2 = ADPCM-2<br/>
+ 3 = ADPCM-3<br/>
+ 4 = ADPCM-4<br/>
+ 5 = aLAW<br/>
  6 = uLAW</dd></dl>
 <dt><code>AT+VSM=?</code></dt>
 <dd>Show possible audio data formats.</dd>

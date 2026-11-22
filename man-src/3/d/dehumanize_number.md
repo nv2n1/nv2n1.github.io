@@ -32,7 +32,7 @@ description: "dehumanize_number humanize_number – format a number into a human
 <dd>
 </dd><dt><code>Eexa1152921504606846976</code></dt>
 <dd></dd></dl>
-<p> Fa len must be at least 4 plus the length of<br />
+<p> Fa len must be at least 4 plus the length of<br/>
  Fa suffix , in order to ensure a useful result is generated into Fa buffer . To use a specific prefix, specify this as Fa scale (Multiplier = 1024 ^ scale). This can not be combined with any of the Fa scale flags below. </p>
 <p> The following flags may be passed in scale</p>
 <dl>

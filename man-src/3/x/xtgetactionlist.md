@@ -23,5 +23,5 @@ description: "XtGetActionList – obtain class action list"
 <h2>Description</h2>
 <p><code>XtGetActionList</code> returns the action table defined by the specified widget class. This table does not include actions defined by the superclasses. If <i>widget_class</i> is not initialized, or is not <code>coreWidgetClass</code> or a subclass thereof, or if the class does not define any actions, *<i>actions_return</i> will be NULL and *<i>num_actions_return</i> will be zero. If *<i>actions_return</i> is non-NULL the client is responsible for freeing the table using <code>XtFree</code> when it is no longer needed.</p>
 <h2>See Also</h2>
-<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

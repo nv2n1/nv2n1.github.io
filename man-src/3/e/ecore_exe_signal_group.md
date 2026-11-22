@@ -9,21 +9,21 @@ description: "Spawned Process Signal Functions – Functions that send signals t
 
 <p>Spawned Process Signal Functions &#8211; Functions that send signals to spawned processes. </p>
 <h3>Functions</h3>
-<p>EAPI void <code>ecore_exe_pause</code> (<code>Ecore_Exe</code> *exe)<br />
- <i>Pauses the given process by sending it a </i>SIGSTOP signal.<br />
- EAPI void <code>ecore_exe_continue</code> (<code>Ecore_Exe</code> *exe)<br />
- <i>Continues the given paused process by sending it a </i>SIGCONT signal.<br />
- EAPI void <code>ecore_exe_interrupt</code> (<code>Ecore_Exe</code> *exe)<br />
- <i>Sends the given spawned process a interrupt (</i>SIGINT) signal.<br />
- EAPI void <code>ecore_exe_quit</code> (<code>Ecore_Exe</code> *exe)<br />
- <i>Sends the given spawned process a quit (</i>SIGQUIT) signal.<br />
- EAPI void <code>ecore_exe_terminate</code> (<code>Ecore_Exe</code> *exe)<br />
- <i>Sends the given spawned process a terminate (</i>SIGTERM) signal.<br />
- EAPI void <code>ecore_exe_kill</code> (<code>Ecore_Exe</code> *exe)<br />
- <i>Kills the given spawned process by sending it a </i>SIGKILL signal.<br />
- EAPI void <code>ecore_exe_signal</code> (<code>Ecore_Exe</code> *exe, int num)<br />
- <i>Sends a </i>SIGUSR signal to the given spawned process.<br />
- EAPI void <code>ecore_exe_hup</code> (<code>Ecore_Exe</code> *exe)<br />
+<p>EAPI void <code>ecore_exe_pause</code> (<code>Ecore_Exe</code> *exe)<br/>
+ <i>Pauses the given process by sending it a </i>SIGSTOP signal.<br/>
+ EAPI void <code>ecore_exe_continue</code> (<code>Ecore_Exe</code> *exe)<br/>
+ <i>Continues the given paused process by sending it a </i>SIGCONT signal.<br/>
+ EAPI void <code>ecore_exe_interrupt</code> (<code>Ecore_Exe</code> *exe)<br/>
+ <i>Sends the given spawned process a interrupt (</i>SIGINT) signal.<br/>
+ EAPI void <code>ecore_exe_quit</code> (<code>Ecore_Exe</code> *exe)<br/>
+ <i>Sends the given spawned process a quit (</i>SIGQUIT) signal.<br/>
+ EAPI void <code>ecore_exe_terminate</code> (<code>Ecore_Exe</code> *exe)<br/>
+ <i>Sends the given spawned process a terminate (</i>SIGTERM) signal.<br/>
+ EAPI void <code>ecore_exe_kill</code> (<code>Ecore_Exe</code> *exe)<br/>
+ <i>Kills the given spawned process by sending it a </i>SIGKILL signal.<br/>
+ EAPI void <code>ecore_exe_signal</code> (<code>Ecore_Exe</code> *exe, int num)<br/>
+ <i>Sends a </i>SIGUSR signal to the given spawned process.<br/>
+ EAPI void <code>ecore_exe_hup</code> (<code>Ecore_Exe</code> *exe)<br/>
  <i>Sends a </i>SIGHUP signal to the given spawned process.</p>
 <h2>Detailed Description</h2>
 <p>Functions that send signals to spawned processes.</p>
@@ -63,7 +63,7 @@ description: "Spawned Process Signal Functions – Functions that send signals t
 <p>Sends a SIGUSR signal to the given spawned process. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>exe</i> Process handle to the given process.<br />
+<dd><i>exe</i> Process handle to the given process.<br/>
  <i>num</i> The number user signal to send. Must be either 1 or 2, or the signal will be ignored.</dd></dl>
 <h3>EAPI void ecore_exe_terminate (<code>Ecore_Exe</code> * exe)</h3>
 <p>Sends the given spawned process a terminate (SIGTERM) signal. </p>

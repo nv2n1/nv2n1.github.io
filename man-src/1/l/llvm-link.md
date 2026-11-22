@@ -12,7 +12,7 @@ description: "llvm-link – LLVM linker"
 <h2>SYNOPSIS</h2>
 <p> <code>llvm-link</code> [<i>options</i>] <i>filename &#8230;</i></p>
 <h2>DESCRIPTION</h2>
-<p> <code>llvm-link</code> takes several <font SIZE="-1">LLVM</font> bitcode files and links them together into a single <font SIZE="-1">LLVM</font> bitcode file. It writes the output file to standard output, unless the <code>-o</code> option is used to specify a filename. </p>
+<p> <code>llvm-link</code> takes several LLVM bitcode files and links them together into a single LLVM bitcode file. It writes the output file to standard output, unless the <code>-o</code> option is used to specify a filename. </p>
 <p> <code>llvm-link</code> attempts to load the input files from the current directory. If that fails, it looks for each file in each of the directories specified by the <code>-L</code> options on the command line. The library search paths are global; each one is searched for every input file if necessary. The directories are searched in the order they were specified on the command line.</p>
 <h2>OPTIONS</h2>
 <dl>
@@ -23,7 +23,7 @@ description: "llvm-link – LLVM linker"
 <dt><code>-o</code> <i>filename</i></dt>
 <dd> Specify the output file name. If <i>filename</i> is <tt>&quot;-&quot;</tt>, then <code>llvm-link</code> will write its output to standard output.</dd>
 <dt><code>-S</code></dt>
-<dd> Write output in <font SIZE="-1">LLVM</font> intermediate language (instead of bitcode).</dd>
+<dd> Write output in LLVM intermediate language (instead of bitcode).</dd>
 <dt><code>-d</code></dt>
 <dd> If specified, <code>llvm-link</code> prints a human-readable version of the output bitcode file to standard error.</dd>
 <dt><code>-help</code></dt>
@@ -35,4 +35,4 @@ description: "llvm-link – LLVM linker"
 <h2>SEE ALSO</h2>
 <p> gccld</p>
 <h2>AUTHORS</h2>
-<p> Maintained by the <font SIZE="-1">LLVM</font> Team (&lt;<a rel="nofollow" href="http://llvm.org">http://llvm.org</a>&gt;). </p>
+<p> Maintained by the LLVM Team (&lt;<a rel="nofollow" href="http://llvm.org">http://llvm.org</a>&gt;). </p>

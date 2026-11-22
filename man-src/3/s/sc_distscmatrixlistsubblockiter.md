@@ -12,9 +12,9 @@ description: "sc::DistSCMatrixListSubblockIter –"
 <p> Inherits <code>sc::SCMatrixListSubblockIter</code>.</p>
 <h3>Public Member Functions</h3>
 <p><code>DistSCMatrixListSubblockIter</code> (Access, const <code>Ref</code>&lt; <code>SCMatrixBlockList</code> &gt; &amp;locallist, const <code>Ref</code>&lt; <code>MessageGrp</code> &gt; &amp;grp) </p>
-<p> void <code>begin</code> ()<br />
- <i>Start at the beginning. </i><br />
- void <code>next</code> ()<br />
+<p> void <code>begin</code> ()<br/>
+ <i>Start at the beginning. </i><br/>
+ void <code>next</code> ()<br/>
  <i>Proceed to the next block. </i></p>
 <h3>Protected Member Functions</h3>
 <pre><code>void maybe_advance_list ()

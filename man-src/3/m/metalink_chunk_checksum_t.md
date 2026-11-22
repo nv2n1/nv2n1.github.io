@@ -14,8 +14,8 @@ description: "metalink_chunk_checksum_t – The structure that holds piece hashe
 <h2>DESCRIPTION</h2>
 <p> <code>metalink_chunk_checksum_t</code> is a structure that holds piece hashes for a resource. It contains length of piece and a message digest algorithm name and each hash value which is stored in <code><a href="/docs/linux/man/3-metalink_piece_hash_t/">metalink_piece_hash_t</a></code>(3). </p>
 <h2>STRUCTURE MEMBERS</h2>
-<p> char *type;<br />
- int length;<br />
+<p> char *type;<br/>
+ int length;<br/>
  metalink_piece_hash_t **piece_hashes; </p>
 <h3>type</h3>
 <p> Null terminated string of a message digest algorithm name used to calculate hash value for a resource. </p>

@@ -9,8 +9,8 @@ description: "fxload – Firmware download to EZ-USB devices"
 
 <p>fxload &#8211; Firmware download to EZ-USB devices</p>
 <h2>Synopsis</h2>
-<p><code>fxload</code> <code>[ -v ]</code> <code>[ -D </code><i>devpath</i><code> ]</code> <code>[ -I </code><i>hexfile</i><code> ]</code> <code>[ -2 ]</code> <code>[ -t </code><i>type</i><code> ]</code> <code>[ -c </code><i>config</i><code> ]</code> <code>[ -s </code><i>loader</i><code> ]</code><br />
- <code>fxload</code> <code>[ -D </code><i>devpath</i><code> ]</code> <code>[ -L </code><i>link</i><code> ]</code> <code>[ -m </code><i>mode</i><code> ]</code><br />
+<p><code>fxload</code> <code>[ -v ]</code> <code>[ -D </code><i>devpath</i><code> ]</code> <code>[ -I </code><i>hexfile</i><code> ]</code> <code>[ -2 ]</code> <code>[ -t </code><i>type</i><code> ]</code> <code>[ -c </code><i>config</i><code> ]</code> <code>[ -s </code><i>loader</i><code> ]</code><br/>
+ <code>fxload</code> <code>[ -D </code><i>devpath</i><code> ]</code> <code>[ -L </code><i>link</i><code> ]</code> <code>[ -m </code><i>mode</i><code> ]</code><br/>
  <code>fxload</code> <code>[ -V ]</code> <code>[ -? ]</code></p>
 <h2>Description</h2>
 <p><code>fxload</code> is a program which downloads firmware to USB devices based on AnchorChips EZ-USB, Cypress EZ-USB FX, or Cypress EZ-USB FX2 microcontrollers. These have 8-bit 8051 cores with special extensions for USB I/O. The FX2 supports high speed USB 2.0 transfers (480 Mbit/sec) as well as full speed USB 1.1 transfers (12 Mbit/sec), while the earlier parts supports only full speed transfers. These controllers have several package options, and can be set up with external memory (on-chip memory is usually about 8K), EEPROMs, and ROMs when device costs allow. </p>

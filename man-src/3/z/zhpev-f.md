@@ -10,7 +10,7 @@ description: "zhpev.f –"
 <p>zhpev.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zhpev</code> (JOBZ, UPLO, N, AP, W, Z, LDZ, WORK, RWORK, INFO)<br />
+<p>subroutine <code>zhpev</code> (JOBZ, UPLO, N, AP, W, Z, LDZ, WORK, RWORK, INFO)<br/>
  <i></i><code> ZHPEV computes the eigenvalues and, optionally, the left and/or right eigenvectors for OTHER matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zhpev (characterJOBZ, characterUPLO, integerN, complex*16, dimension( * )AP, double precision, dimension( * )W, complex*16, dimension( ldz, * )Z, integerLDZ, complex*16, dimension( * )WORK, double precision, dimension( * )RWORK, integerINFO)</h3>

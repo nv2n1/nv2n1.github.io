@@ -11,7 +11,7 @@ description: "ssyr2k.f –"
 <p> ssyr2k.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>ssyr2k</code> (UPLO, TRANS, N, K, ALPHA, A, LDA, B, LDB, BETA, C, LDC)<br />
+<p> subroutine <code>ssyr2k</code> (UPLO, TRANS, N, K, ALPHA, A, LDA, B, LDB, BETA, C, LDC)<br/>
  <i></i><code>SSYR2K</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ssyr2k (characterUPLO, characterTRANS, integerN, integerK, realALPHA, real, dimension(lda,*)A, integerLDA, real, dimension(ldb,*)B, integerLDB, realBETA, real, dimension(ldc,*)C, integerLDC)</h3>

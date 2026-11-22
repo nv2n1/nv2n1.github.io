@@ -64,19 +64,19 @@ description: "rustdoc – generate documentation from Rust source code"
 <p> The rustdoc tool can generate output in either an HTML or JSON format. </p>
 <p> If using an HTML format, then the specified output destination will be the root directory of an HTML structure for all the documentation. Pages will be placed into this directory, and source files will also possibly be rendered into it as well. </p>
 <p> If using a JSON format, then the specified output destination will have the rustdoc output serialized as JSON into it. This output format exists to pre-compile documentation for crates, and for usage in non-rustdoc tools. The JSON output is the following hash: </p>
-<p>&nbsp;<wbr>{<br />
-&nbsp;<wbr>&nbsp;<wbr>&quot;schema&quot;: VERSION,<br />
-&nbsp;<wbr>&nbsp;<wbr>&quot;crate&quot;: &#8230;,<br />
-&nbsp;<wbr>&nbsp;<wbr>&quot;plugins&quot;: &#8230;,<br />
+<p>&nbsp;<wbr>{<br/>
+&nbsp;<wbr>&nbsp;<wbr>&quot;schema&quot;: VERSION,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&quot;crate&quot;: &#8230;,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&quot;plugins&quot;: &#8230;,<br/>
 &nbsp;<wbr>} </p>
 <p> The schema version indicates what the structure of crate/plugins will look like. Within a schema version the structure will remain the same. The <i>crate</i> field will contain all relevant documentation for the source being documented, and the <i>plugins</i> field will contain the output of the plugins run over the crate. </p>
 <h2>EXAMPLES</h2>
-<p> To generate documentation for the source in the current directory:<br />
+<p> To generate documentation for the source in the current directory:<br/>
 &nbsp;<wbr>$&nbsp;<wbr>rustdoc hello.rs </p>
-<p> List all available passes that rustdoc has, along with default passes:<br />
+<p> List all available passes that rustdoc has, along with default passes:<br/>
 &nbsp;<wbr>$&nbsp;<wbr>rustdoc &#8211;passes list </p>
-<p> To precompile the documentation for a crate, and then use it to render html at a later date:<br />
-&nbsp;<wbr>$&nbsp;<wbr>rustdoc -w json hello.rs<br />
+<p> To precompile the documentation for a crate, and then use it to render html at a later date:<br/>
+&nbsp;<wbr>$&nbsp;<wbr>rustdoc -w json hello.rs<br/>
 &nbsp;<wbr>$&nbsp;<wbr>rustdoc doc.json </p>
 <p> The generated HTML can be viewed with any standard web browser. </p>
 <h2>SEE ALSO</h2>

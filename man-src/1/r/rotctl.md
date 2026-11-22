@@ -72,7 +72,7 @@ description: "rotctl – control antenna rotators"
 <dt><code>K, park</code></dt>
 <dd> Park the antenna.</dd>
 <dt><code>C, set_conf &#8216;Token&#8217; &#8216;Value&#8217;</code></dt>
-<dd> Set a configuration parameter. It is safe to give &quot;Token&quot; a value of &#8216;0&#8217; (zero). &quot;Value&quot; may be a string up to 20 characters.<br />
+<dd> Set a configuration parameter. It is safe to give &quot;Token&quot; a value of &#8216;0&#8217; (zero). &quot;Value&quot; may be a string up to 20 characters.<br/>
  See -L output</dd>
 <dt><code>R, reset &#8216;Reset&#8217;</code></dt>
 <dd> Reset the rotator. </dd>
@@ -81,7 +81,7 @@ description: "rotctl – control antenna rotators"
 <dd> Get misc information on the rotator. </dd>
 <p> At the moment returns &#8216;Model Name&#8217;.</p>
 <dt><code>w, send_cmd &#8216;Cmd&#8217;</code></dt>
-<dd> Send raw command string to the rotator.<br />
+<dd> Send raw command string to the rotator.<br/>
  &lt;CR&gt; (or send-cmd-term, see <i>-t</i> option) is appended automatically at the end of the command for text protocols. For binary protocols, enter values as ��</dd></dl>
 <p> <code>Locator Commands</code> </p>
 <p> These commands offer conversions of Degrees Minutes Seconds to other formats, Maidenhead square locator conversions and distance and azimuth conversions.</p>
@@ -134,9 +134,9 @@ Latitude: -84.999991
 <p> The <code>-v</code>, <code>&#8211;version</code> option allows different levels of diagnostics to be output to <code>stderr</code> and correspond to -v for BUG, -vv for ERR, -vvv for WARN, -vvvv for VERBOSE, or -vvvvv for TRACE. </p>
 <p> A given verbose level is useful for providing needed debugging information to the email address below. For example, TRACE output shows all of the values sent to and received from the radio which is very useful for radio backend library development and may be requested by the developers.</p>
 <h2>EXIT STATUS</h2>
-<p> <code>rotctl</code> exits with:<br />
- 0 if all operations completed normally;<br />
- 1 if there was an invalid command line option or argument;<br />
+<p> <code>rotctl</code> exits with:<br/>
+ 0 if all operations completed normally;<br/>
+ 1 if there was an invalid command line option or argument;<br/>
  2 if an error was returned by <code>Hamlib</code>.</p>
 <h2>BUGS</h2>
 <p> This suspiciously empty section&#8230;</p>
@@ -147,8 +147,8 @@ Latitude: -84.999991
 <p> Written by Stephane Fillod, Nate Bargmann, and the Hamlib Group </p>
 <p> &lt;<a rel="nofollow" href="http://www.hamlib.org">http://www.hamlib.org</a>&gt;.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2000-2010 Stephane Fillod<br />
- Copyright &#169; 2011-2012 Nate Bargmann<br />
+<p> Copyright &#169; 2000-2010 Stephane Fillod<br/>
+ Copyright &#169; 2011-2012 Nate Bargmann<br/>
  Copyright &#169; 2000-2010 the Hamlib Group </p>
 <p> This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>SEE ALSO</h2>

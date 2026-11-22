@@ -10,54 +10,54 @@ description: "readelf – display information about ELF files"
 
 <p> readelf &#8211; display information about ELF files </p>
 <h2>SYNOPSIS</h2>
-<p> readelf [<code>-a</code>|<code>&#8211;all</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-h</code>|<code>&#8211;file-header</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-l</code>|<code>&#8211;program-headers</code>|<code>&#8211;segments</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-S</code>|<code>&#8211;section-headers</code>|<code>&#8211;sections</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-g</code>|<code>&#8211;section-groups</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-t</code>|<code>&#8211;section-details</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-e</code>|<code>&#8211;headers</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-s</code>|<code>&#8211;syms</code>|<code>&#8211;symbols</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>&#8211;dyn-syms</code>|<code>&#8211;lto-syms</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>&#8211;sym-base=[0|8|10|16]</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>&#8211;demangle</code><i>=style</i>|<code>&#8211;no-demangle</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>&#8211;quiet</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>&#8211;recurse-limit</code>|<code>&#8211;no-recurse-limit</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-U</code>&nbsp;<i>method</i>|<code>&#8211;unicode=</code><i>method</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-n</code>|<code>&#8211;notes</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-r</code>|<code>&#8211;relocs</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-u</code>|<code>&#8211;unwind</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-d</code>|<code>&#8211;dynamic</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-V</code>|<code>&#8211;version-info</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-A</code>|<code>&#8211;arch-specific</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-D</code>|<code>&#8211;use-dynamic</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-L</code>|<code>&#8211;lint</code>|<code>&#8211;enable-checks</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-x</code>&nbsp;&lt;number or name&gt;|<code>&#8211;hex-dump=</code>&lt;number or name&gt;]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-p</code>&nbsp;&lt;number or name&gt;|<code>&#8211;string-dump=</code>&lt;number or name&gt;]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-R</code>&nbsp;&lt;number or name&gt;|<code>&#8211;relocated-dump=</code>&lt;number or name&gt;]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-z</code>|<code>&#8211;decompress</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-c</code>|<code>&#8211;archive-index</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-w[lLiaprmfFsoORtUuTgAck]</code>|<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>&#8211;debug-dump</code>[=rawline,=decodedline,=info,=abbrev,=pubnames,=aranges,=macro,=frames,=frames-interp,=str,=str-offsets,=loc,=Ranges,=pubtypes,=trace_info,=trace_abbrev,=trace_aranges,=gdb_index,=addr,=cu_index,=links]]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-wK</code>|<code>&#8211;debug-dump=follow-links</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-wN</code>|<code>&#8211;debug-dump=no-follow-links</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-P</code>|<code>&#8211;process-links</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>&#8211;dwarf-depth=</code><i>n</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>&#8211;dwarf-start=</code><i>n</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>&#8211;ctf=</code><i>section</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>&#8211;ctf-parent=</code><i>section</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>&#8211;ctf-symbols=</code><i>section</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>&#8211;ctf-strings=</code><i>section</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-I</code>|<code>&#8211;histogram</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-v</code>|<code>&#8211;version</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-W</code>|<code>&#8211;wide</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-T</code>|<code>&#8211;silent-truncation</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-H</code>|<code>&#8211;help</code>]<br />
+<p> readelf [<code>-a</code>|<code>&#8211;all</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-h</code>|<code>&#8211;file-header</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-l</code>|<code>&#8211;program-headers</code>|<code>&#8211;segments</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-S</code>|<code>&#8211;section-headers</code>|<code>&#8211;sections</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-g</code>|<code>&#8211;section-groups</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-t</code>|<code>&#8211;section-details</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-e</code>|<code>&#8211;headers</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-s</code>|<code>&#8211;syms</code>|<code>&#8211;symbols</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>&#8211;dyn-syms</code>|<code>&#8211;lto-syms</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>&#8211;sym-base=[0|8|10|16]</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>&#8211;demangle</code><i>=style</i>|<code>&#8211;no-demangle</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>&#8211;quiet</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>&#8211;recurse-limit</code>|<code>&#8211;no-recurse-limit</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-U</code>&nbsp;<i>method</i>|<code>&#8211;unicode=</code><i>method</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-n</code>|<code>&#8211;notes</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-r</code>|<code>&#8211;relocs</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-u</code>|<code>&#8211;unwind</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-d</code>|<code>&#8211;dynamic</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-V</code>|<code>&#8211;version-info</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-A</code>|<code>&#8211;arch-specific</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-D</code>|<code>&#8211;use-dynamic</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-L</code>|<code>&#8211;lint</code>|<code>&#8211;enable-checks</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-x</code>&nbsp;&lt;number or name&gt;|<code>&#8211;hex-dump=</code>&lt;number or name&gt;]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-p</code>&nbsp;&lt;number or name&gt;|<code>&#8211;string-dump=</code>&lt;number or name&gt;]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-R</code>&nbsp;&lt;number or name&gt;|<code>&#8211;relocated-dump=</code>&lt;number or name&gt;]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-z</code>|<code>&#8211;decompress</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-c</code>|<code>&#8211;archive-index</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-w[lLiaprmfFsoORtUuTgAck]</code>|<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>&#8211;debug-dump</code>[=rawline,=decodedline,=info,=abbrev,=pubnames,=aranges,=macro,=frames,=frames-interp,=str,=str-offsets,=loc,=Ranges,=pubtypes,=trace_info,=trace_abbrev,=trace_aranges,=gdb_index,=addr,=cu_index,=links]]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-wK</code>|<code>&#8211;debug-dump=follow-links</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-wN</code>|<code>&#8211;debug-dump=no-follow-links</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-P</code>|<code>&#8211;process-links</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>&#8211;dwarf-depth=</code><i>n</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>&#8211;dwarf-start=</code><i>n</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>&#8211;ctf=</code><i>section</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>&#8211;ctf-parent=</code><i>section</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>&#8211;ctf-symbols=</code><i>section</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>&#8211;ctf-strings=</code><i>section</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-I</code>|<code>&#8211;histogram</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-v</code>|<code>&#8211;version</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-W</code>|<code>&#8211;wide</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-T</code>|<code>&#8211;silent-truncation</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-H</code>|<code>&#8211;help</code>]<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>elffile</i>&#8230;</p>
 <h2>DESCRIPTION</h2>
-<p> <code>readelf</code> displays information about one or more <font SIZE="-1">ELF</font> format object files. The options control what particular information to display. </p>
-<p> <i>elffile</i>&#8230; are the object files to be examined. 32-bit and 64-bit <font SIZE="-1">ELF</font> files are supported, as are archives containing <font SIZE="-1">ELF</font> files. </p>
-<p> This program performs a similar function to <code>objdump</code> but it goes into more detail and it exists independently of the <font SIZE="-1">BFD</font> library, so if there is a bug in <font SIZE="-1">BFD</font> then readelf will not be affected.</p>
+<p> <code>readelf</code> displays information about one or more ELF format object files. The options control what particular information to display. </p>
+<p> <i>elffile</i>&#8230; are the object files to be examined. 32-bit and 64-bit ELF files are supported, as are archives containing ELF files. </p>
+<p> This program performs a similar function to <code>objdump</code> but it goes into more detail and it exists independently of the BFD library, so if there is a bug in BFD then readelf will not be affected.</p>
 <h2>OPTIONS</h2>
 <p> The long and short forms of options, shown here as alternatives, are equivalent. At least one option besides <code>-v</code> or <code>-H</code> must be given.</p>
 <dl>
@@ -69,7 +69,7 @@ description: "readelf – display information about ELF files"
 <dt><code>-h</code></dt>
 <dd>
 </dd><dt><code>&#8211;file-header</code></dt>
-<dd> Displays the information contained in the <font SIZE="-1">ELF</font> header at the start of the file.</dd>
+<dd> Displays the information contained in the ELF header at the start of the file.</dd>
 <dt><code>-l</code></dt>
 <dd>
 </dd><dt><code>&#8211;program-headers</code></dt>
@@ -101,13 +101,13 @@ description: "readelf – display information about ELF files"
 <dt><code>&#8211;dyn-syms</code></dt>
 <dd> Displays the entries in dynamic symbol table section of the file, if it has one. The output format is the same as the format used by the <code>&#8211;syms</code> option.</dd>
 <dt><code>&#8211;lto-syms</code></dt>
-<dd> Displays the contents of any <font SIZE="-1">LTO</font> symbol tables in the file.</dd>
+<dd> Displays the contents of any LTO symbol tables in the file.</dd>
 <dt><code>&#8211;sym-base=[0|8|10|16]</code></dt>
 <dd> Forces the size field of the symbol table to use the given base. Any unrecognized options will be treated as <code>0</code>. <code>&#8211;sym-base=0</code> represents the default and legacy behaviour. This will output sizes as decimal for numbers less than 100000. For sizes 100000 and greater hexadecimal notation will be used with a 0x prefix. <code>&#8211;sym-base=8</code> will give the symbol sizes in octal. <code>&#8211;sym-base=10</code> will always give the symbol sizes in decimal. <code>&#8211;sym-base=16</code> will always give the symbol sizes in hexadecimal with a 0x prefix.</dd>
 <dt><code>-C</code></dt>
 <dd>
 </dd><dt><code>&#8211;demangle[=</code><i>style</i><code>]</code></dt>
-<dd> Decode (<i>demangle</i>) low-level symbol names into user-level names. This makes C<font SIZE="-2">++</font> function names readable. Different compilers have different mangling styles. The optional demangling style argument can be used to choose an appropriate demangling style for your compiler.</dd>
+<dd> Decode (<i>demangle</i>) low-level symbol names into user-level names. This makes C++ function names readable. Different compilers have different mangling styles. The optional demangling style argument can be used to choose an appropriate demangling style for your compiler.</dd>
 <dt><code>&#8211;no-demangle</code></dt>
 <dd> Do not demangle low-level symbol names. This is the default.</dd>
 <dt><code>&#8211;recurse-limit</code></dt>
@@ -122,7 +122,7 @@ description: "readelf – display information about ELF files"
 <dt><code>-U</code> <i>[d|i|l|e|x|h]</i></dt>
 <dd>
 </dd><dt><code>&#8211;unicode=[default|invalid|locale|escape|hex|highlight]</code></dt>
-<dd> Controls the display of non-ASCII characters in identifier names. The default (<code>&#8211;unicode=locale</code> or <code>&#8211;unicode=default</code>) is to treat them as multibyte characters and display them in the current locale. All other versions of this option treat the bytes as <font SIZE="-1">UTF-8</font> encoded values and attempt to interpret them. If they cannot be interpreted or if the <code>&#8211;unicode=invalid</code> option is used then they are displayed as a sequence of hex bytes, encloses in curly parethesis characters. </dd>
+<dd> Controls the display of non-ASCII characters in identifier names. The default (<code>&#8211;unicode=locale</code> or <code>&#8211;unicode=default</code>) is to treat them as multibyte characters and display them in the current locale. All other versions of this option treat the bytes as UTF-8 encoded values and attempt to interpret them. If they cannot be interpreted or if the <code>&#8211;unicode=invalid</code> option is used then they are displayed as a sequence of hex bytes, encloses in curly parethesis characters. </dd>
 <p> Using the <code>&#8211;unicode=escape</code> option will display the characters as as unicode escape sequences (<i></i><i>\uxxxx</i>). Using the <code>--unicode=hex</code> will display the characters as hex byte sequences enclosed between angle brackets. </p>
 <p> Using the <code>--unicode=highlight</code> will display the characters as unicode escape sequences but it will also highlighted them in red, assuming that colouring is supported by the output device. The colouring is intended to draw attention to the presence of unicode sequences when they might not be expected. </p>
 <dt><code>-e</code></dt>
@@ -133,7 +133,7 @@ description: "readelf – display information about ELF files"
 <dt><code>-n</code></dt>
 <dd>  </dd>
 <dt><code>--notes</code></dt>
-<dd> <p> Displays the contents of the <font SIZE="-1">NOTE</font> segments and/or sections, if any. </p>
+<dd> <p> Displays the contents of the NOTE segments and/or sections, if any. </p>
  </dd>
 <dt><code>-r</code></dt>
 <dd>  </dd>
@@ -143,7 +143,7 @@ description: "readelf – display information about ELF files"
 <dt><code>-u</code></dt>
 <dd>  </dd>
 <dt><code>--unwind</code></dt>
-<dd> <p> Displays the contents of the file&#8217;s unwind section, if it has one. Only the unwind sections for <font SIZE="-1">IA64 ELF</font> files, as well as <font SIZE="-1">ARM</font> unwind tables (<code>&quot;.ARM.exidx&quot;</code> / <code>&quot;.ARM.extab&quot;</code>) are currently supported. If support is not yet implemented for your architecture you could try dumping the contents of the <i>.eh_frames</i> section using the <code>--debug-dump=frames</code> or <code>--debug-dump=frames-interp</code> options. </p>
+<dd> <p> Displays the contents of the file&#8217;s unwind section, if it has one. Only the unwind sections for IA64 ELF files, as well as ARM unwind tables (<code>&quot;.ARM.exidx&quot;</code> / <code>&quot;.ARM.extab&quot;</code>) are currently supported. If support is not yet implemented for your architecture you could try dumping the contents of the <i>.eh_frames</i> section using the <code>--debug-dump=frames</code> or <code>--debug-dump=frames-interp</code> options. </p>
  </dd>
 <dt><code>-d</code></dt>
 <dd>  </dd>
@@ -196,12 +196,12 @@ description: "readelf – display information about ELF files"
 <dt><code>-c</code></dt>
 <dd>  </dd>
 <dt><code>--archive-index</code></dt>
-<dd> <p> Displays the file symbol index information contained in the header part of binary archives. Performs the same function as the <code>t</code> command to <code>ar</code>, but without using the <font SIZE="-1">BFD</font> library. </p>
+<dd> <p> Displays the file symbol index information contained in the header part of binary archives. Performs the same function as the <code>t</code> command to <code>ar</code>, but without using the BFD library. </p>
  </dd>
 <dt><code>-w[lLiaprmfFsOoRtUuTgAckK]</code></dt>
 <dd>  </dd>
 <dt><code>--debug-dump[=rawline,=decodedline,=info,=abbrev,=pubnames,=aranges,=macro,=frames,=frames-interp,=str,=str-offsets,=loc,=Ranges,=pubtypes,=trace_info,=trace_abbrev,=trace_aranges,=gdb_index,=addr,=cu_index,=links,=follow-links]</code></dt>
-<dd> <p> Displays the contents of the <font SIZE="-1">DWARF</font> debug sections in the file, if any are present. Compressed debug sections are automatically decompressed (temporarily) before they are displayed. If one or more of the optional letters or words follows the switch then only those type(s) of data will be dumped. The letters and words refer to the following information: </p>
+<dd> <p> Displays the contents of the DWARF debug sections in the file, if any are present. Compressed debug sections are automatically decompressed (temporarily) before they are displayed. If one or more of the optional letters or words follows the switch then only those type(s) of data will be dumped. The letters and words refer to the following information: </p>
  </dd>
 <dl>
 <dd>  </dd>
@@ -250,7 +250,7 @@ description: "readelf – display information about ELF files"
 <dd>  </dd>
 <dt>&quot;=follow-links&quot;</dt>
 <dd> <p> Display the contents of any selected debug sections that are found in linked, separate debug info file(s). This can result in multiple versions of the same debug section being displayed if it exists in more than one file. </p>
-<p> In addition, when displaying <font SIZE="-1">DWARF</font> attributes, if a form is found that references the separate debug info file, then the referenced contents will also be displayed. </p>
+<p> In addition, when displaying DWARF attributes, if a form is found that references the separate debug info file, then the referenced contents will also be displayed. </p>
 <p> Note &#8211; in some distributions this option is enabled by default. It can be disabled via the <code>N</code> debug option. The default can be chosen when configuring the binutils via the <code>--enable-follow-debug-links=yes</code> or <code>--enable-follow-debug-links=no</code> options. If these are not used then the default is to enable the following of debug links. </p>
  </dd>
 <dt>&quot;N&quot;</dt>
@@ -332,8 +332,8 @@ description: "readelf – display information about ELF files"
 <p> With a non-zero value for <i>n</i>, DIEs at or deeper than <i>n</i> levels will not be printed. The range for <i>n</i> is zero-based. </p>
  </dd>
 <dt><code>--dwarf-start=</code><i>n</i></dt>
-<dd> <p> Print only DIEs beginning with the <font SIZE="-1">DIE</font> numbered <i>n</i>. This is only useful with <code>--debug-dump=info</code>. </p>
-<p> If specified, this option will suppress printing of any header information and all DIEs before the <font SIZE="-1">DIE</font> numbered <i>n</i>. Only siblings and children of the specified <font SIZE="-1">DIE</font> will be printed. </p>
+<dd> <p> Print only DIEs beginning with the DIE numbered <i>n</i>. This is only useful with <code>--debug-dump=info</code>. </p>
+<p> If specified, this option will suppress printing of any header information and all DIEs before the DIE numbered <i>n</i>. Only siblings and children of the specified DIE will be printed. </p>
 <p> This can be used in conjunction with <code>--dwarf-depth</code>. </p>
  </dd>
 <dt><code>-P</code></dt>
@@ -342,16 +342,16 @@ description: "readelf – display information about ELF files"
 <dd> <p> Display the contents of non-debug sections found in separate debuginfo files that are linked to the main file. This option automatically implies the <code>-wK</code> option, and only sections requested by other command line options will be displayed. </p>
  </dd>
 <dt><code>--ctf[=</code><i>section</i><code>]</code></dt>
-<dd> <p> Display the contents of the specified <font SIZE="-1">CTF</font> section. <font SIZE="-1">CTF</font> sections themselves contain many subsections, all of which are displayed in order. </p>
+<dd> <p> Display the contents of the specified CTF section. CTF sections themselves contain many subsections, all of which are displayed in order. </p>
 <p> By default, display the name of the section named <i>.ctf</i>, which is the name emitted by <code>ld</code>. </p>
  </dd>
 <dt><code>--ctf-parent=</code><i>member</i></dt>
-<dd> <p> If the <font SIZE="-1">CTF</font> section contains ambiguously-defined types, it will consist of an archive of many <font SIZE="-1">CTF</font> dictionaries, all inheriting from one dictionary containing unambiguous types. This member is by default named <i>.ctf</i>, like the section containing it, but it is possible to change this name using the <code>&quot;ctf_link_set_memb_name_changer&quot;</code> function at link time. When looking at <font SIZE="-1">CTF</font> archives that have been created by a linker that uses the name changer to rename the parent archive member, <code>--ctf-parent</code> can be used to specify the name used for the parent. </p>
+<dd> <p> If the CTF section contains ambiguously-defined types, it will consist of an archive of many CTF dictionaries, all inheriting from one dictionary containing unambiguous types. This member is by default named <i>.ctf</i>, like the section containing it, but it is possible to change this name using the <code>&quot;ctf_link_set_memb_name_changer&quot;</code> function at link time. When looking at CTF archives that have been created by a linker that uses the name changer to rename the parent archive member, <code>--ctf-parent</code> can be used to specify the name used for the parent. </p>
  </dd>
 <dt><code>--ctf-symbols=</code><i>section</i></dt>
 <dd>  </dd>
 <dt><code>--ctf-strings=</code><i>section</i></dt>
-<dd> <p> Specify the name of another section from which the <font SIZE="-1">CTF</font> file can inherit strings and symbols. By default, the <code>&quot;.symtab&quot;</code> and its linked string table are used. </p>
+<dd> <p> Specify the name of another section from which the CTF file can inherit strings and symbols. By default, the <code>&quot;.symtab&quot;</code> and its linked string table are used. </p>
 <p> If either of <code>--ctf-symbols</code> or <code>--ctf-strings</code> is specified, the other must be specified as well. </p>
  </dd>
 <dt><code>-I</code></dt>
@@ -367,7 +367,7 @@ description: "readelf – display information about ELF files"
 <dt><code>-W</code></dt>
 <dd>  </dd>
 <dt><code>--wide</code></dt>
-<dd> <p> Don&#8217;t break output lines to fit into 80 columns. By default <code>readelf</code> breaks section header and segment listing lines for 64-bit <font SIZE="-1">ELF</font> files, so that they fit into 80 columns. This option causes <code>readelf</code> to print each section header resp. each segment one a single line, which is far more readable on terminals wider than 80 columns. </p>
+<dd> <p> Don&#8217;t break output lines to fit into 80 columns. By default <code>readelf</code> breaks section header and segment listing lines for 64-bit ELF files, so that they fit into 80 columns. This option causes <code>readelf</code> to print each section header resp. each segment one a single line, which is far more readable on terminals wider than 80 columns. </p>
  </dd>
 <dt><code>-T</code></dt>
 <dd>  </dd>
@@ -387,4 +387,4 @@ description: "readelf – display information about ELF files"
 <p> <code><a href="/docs/linux/man/1-objdump/">objdump</a></code>(1), and the Info entries for <i>binutils</i>.  </p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 1991-2022 Free Software Foundation, Inc. </p>
-<p> Permission is granted to copy, distribute and/or modify this document under the terms of the <font SIZE="-1">GNU</font> Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts. A copy of the license is included in the section entitled ``<font SIZE="-1">GNU</font> Free Documentation License&#8217;&#8216;. </p>
+<p> Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts. A copy of the license is included in the section entitled ``GNU Free Documentation License&#8217;&#8216;. </p>

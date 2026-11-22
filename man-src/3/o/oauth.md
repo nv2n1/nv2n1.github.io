@@ -14,88 +14,88 @@ description: "src/oauth.h –"
 <p> #define <code>OA_GCC_VERSION_AT_LEAST</code>(x, y) 0 </p>
 <p> #define <code>attribute_deprecated</code> </p>
 <h3>Enumerations</h3>
-<p> enum <code>OAuthMethod</code> { <code>OA_HMAC</code> = 0, <code>OA_RSA</code>, <code>OA_PLAINTEXT</code> }<br />
+<p> enum <code>OAuthMethod</code> { <code>OA_HMAC</code> = 0, <code>OA_RSA</code>, <code>OA_PLAINTEXT</code> }<br/>
  <i>signature method to used for signing the request. </i></p>
 <h3>Functions</h3>
-<p> char * <code>oauth_encode_base64</code> (int size, const unsigned char *src)<br />
- <i>Base64 encode and return size data in &#8216;src&#8217;. </i><br />
- int <code>oauth_decode_base64</code> (unsigned char *dest, const char *src)<br />
- <i>Decode the base64 encoded string &#8216;src&#8217; into the memory pointed to by &#8216;dest&#8217;. </i><br />
- char * <code>oauth_url_escape</code> (const char *string)<br />
- <i>Escape &#8216;string&#8217; according to RFC3986 and <a rel="nofollow" href="http://oauth.net/core/1.0/#encoding_parameters.">http://oauth.net/core/1.0/#encoding_parameters.</a> </i><br />
- char * <code>oauth_url_unescape</code> (const char *string, size_t *olen)<br />
- <i>Parse RFC3986 encoded &#8216;string&#8217; back to unescaped version. </i><br />
- char * <code>oauth_sign_hmac_sha1</code> (const char *m, const char *k)<br />
- <i>returns base64 encoded HMAC-SHA1 signature for given message and key. </i><br />
- char * <code>oauth_sign_hmac_sha1_raw</code> (const char *m, const size_t ml, const char *k, const size_t kl)<br />
- <i>same as </i><code>oauth_sign_hmac_sha1</code> but allows to specify length of message and key (in case they contain null chars).<br />
- char * <code>oauth_sign_plaintext</code> (const char *m, const char *k)<br />
- <i>returns plaintext signature for the given key. </i><br />
- char * <code>oauth_sign_rsa_sha1</code> (const char *m, const char *k)<br />
- <i>returns RSA-SHA1 signature for given data. </i><br />
- int <code>oauth_verify_rsa_sha1</code> (const char *m, const char *c, const char *s)<br />
- <i>verify RSA-SHA1 signature. </i><br />
- char * <code>oauth_catenc</code> (int len,&#8230;)<br />
- <i>url-escape strings and concatenate with &#8216;&amp;&#8217; separator. </i><br />
- int <code>oauth_split_url_parameters</code> (const char *url, char ***argv)<br />
- <i>splits the given url into a parameter array. </i><br />
- int <code>oauth_split_post_paramters</code> (const char *url, char ***argv, short qesc)<br />
- <i>splits the given url into a parameter array. </i><br />
- char * <code>oauth_serialize_url</code> (int argc, int start, char **argv)<br />
- <i>build a url query string from an array. </i><br />
- char * <code>oauth_serialize_url_sep</code> (int argc, int start, char **argv, char *sep, int mod)<br />
- <i>encode query parameters from an array. </i><br />
- char * <code>oauth_serialize_url_parameters</code> (int argc, char **argv)<br />
- <i>build a query parameter string from an array. </i><br />
- char * <code>oauth_gen_nonce</code> ()<br />
- <i>generate a random string between 15 and 32 chars length and return a pointer to it. </i><br />
- int <code>oauth_cmpstringp</code> (const void *p1, const void *p2)<br />
- <i>string compare function for oauth parameters. </i><br />
- int <code>oauth_param_exists</code> (char **argv, int argc, char *key)<br />
- <i>search array for parameter key. </i><br />
- void <code>oauth_add_param_to_array</code> (int *argcp, char ***argvp, const char *addparam)<br />
- <i>add query parameter to array </i><br />
- void <code>oauth_free_array</code> (int *argcp, char ***argvp)<br />
- <i>free array args </i><br />
- int <code>oauth_time_independent_equals_n</code> (const char *a, const char *b, size_t len_a, size_t len_b)<br />
- <i>compare two strings in constant-time (as to not let an attacker guess how many leading chars are correct: <a rel="nofollow" href="http://rdist.root.org/2010/01/07/timing-independent-array-comparison/">http://rdist.root.org/2010/01/07/timing-independent-array-comparison/</a> ) </i><br />
+<p> char * <code>oauth_encode_base64</code> (int size, const unsigned char *src)<br/>
+ <i>Base64 encode and return size data in &#8216;src&#8217;. </i><br/>
+ int <code>oauth_decode_base64</code> (unsigned char *dest, const char *src)<br/>
+ <i>Decode the base64 encoded string &#8216;src&#8217; into the memory pointed to by &#8216;dest&#8217;. </i><br/>
+ char * <code>oauth_url_escape</code> (const char *string)<br/>
+ <i>Escape &#8216;string&#8217; according to RFC3986 and <a rel="nofollow" href="http://oauth.net/core/1.0/#encoding_parameters.">http://oauth.net/core/1.0/#encoding_parameters.</a> </i><br/>
+ char * <code>oauth_url_unescape</code> (const char *string, size_t *olen)<br/>
+ <i>Parse RFC3986 encoded &#8216;string&#8217; back to unescaped version. </i><br/>
+ char * <code>oauth_sign_hmac_sha1</code> (const char *m, const char *k)<br/>
+ <i>returns base64 encoded HMAC-SHA1 signature for given message and key. </i><br/>
+ char * <code>oauth_sign_hmac_sha1_raw</code> (const char *m, const size_t ml, const char *k, const size_t kl)<br/>
+ <i>same as </i><code>oauth_sign_hmac_sha1</code> but allows to specify length of message and key (in case they contain null chars).<br/>
+ char * <code>oauth_sign_plaintext</code> (const char *m, const char *k)<br/>
+ <i>returns plaintext signature for the given key. </i><br/>
+ char * <code>oauth_sign_rsa_sha1</code> (const char *m, const char *k)<br/>
+ <i>returns RSA-SHA1 signature for given data. </i><br/>
+ int <code>oauth_verify_rsa_sha1</code> (const char *m, const char *c, const char *s)<br/>
+ <i>verify RSA-SHA1 signature. </i><br/>
+ char * <code>oauth_catenc</code> (int len,&#8230;)<br/>
+ <i>url-escape strings and concatenate with &#8216;&amp;&#8217; separator. </i><br/>
+ int <code>oauth_split_url_parameters</code> (const char *url, char ***argv)<br/>
+ <i>splits the given url into a parameter array. </i><br/>
+ int <code>oauth_split_post_paramters</code> (const char *url, char ***argv, short qesc)<br/>
+ <i>splits the given url into a parameter array. </i><br/>
+ char * <code>oauth_serialize_url</code> (int argc, int start, char **argv)<br/>
+ <i>build a url query string from an array. </i><br/>
+ char * <code>oauth_serialize_url_sep</code> (int argc, int start, char **argv, char *sep, int mod)<br/>
+ <i>encode query parameters from an array. </i><br/>
+ char * <code>oauth_serialize_url_parameters</code> (int argc, char **argv)<br/>
+ <i>build a query parameter string from an array. </i><br/>
+ char * <code>oauth_gen_nonce</code> ()<br/>
+ <i>generate a random string between 15 and 32 chars length and return a pointer to it. </i><br/>
+ int <code>oauth_cmpstringp</code> (const void *p1, const void *p2)<br/>
+ <i>string compare function for oauth parameters. </i><br/>
+ int <code>oauth_param_exists</code> (char **argv, int argc, char *key)<br/>
+ <i>search array for parameter key. </i><br/>
+ void <code>oauth_add_param_to_array</code> (int *argcp, char ***argvp, const char *addparam)<br/>
+ <i>add query parameter to array </i><br/>
+ void <code>oauth_free_array</code> (int *argcp, char ***argvp)<br/>
+ <i>free array args </i><br/>
+ int <code>oauth_time_independent_equals_n</code> (const char *a, const char *b, size_t len_a, size_t len_b)<br/>
+ <i>compare two strings in constant-time (as to not let an attacker guess how many leading chars are correct: <a rel="nofollow" href="http://rdist.root.org/2010/01/07/timing-independent-array-comparison/">http://rdist.root.org/2010/01/07/timing-independent-array-comparison/</a> ) </i><br/>
  int <code>oauth_time_indepenent_equals_n</code> (const char *a, const char *b, size_t len_a, size_t len_b) attribute_deprecated </p>
-<p> int <code>oauth_time_independent_equals</code> (const char *a, const char *b)<br />
- <i>compare two strings in constant-time. </i><br />
+<p> int <code>oauth_time_independent_equals</code> (const char *a, const char *b)<br/>
+ <i>compare two strings in constant-time. </i><br/>
  int <code>oauth_time_indepenent_equals</code> (const char *a, const char *b) attribute_deprecated </p>
-<p> char * <code>oauth_sign_url2</code> (const char *url, char **postargs, <code>OAuthMethod</code> method, const char *http_method, const char *c_key, const char *c_secret, const char *t_key, const char *t_secret)<br />
- <i>calculate OAuth-signature for a given HTTP request URL, parameters and oauth-tokens. </i><br />
+<p> char * <code>oauth_sign_url2</code> (const char *url, char **postargs, <code>OAuthMethod</code> method, const char *http_method, const char *c_key, const char *c_secret, const char *t_key, const char *t_secret)<br/>
+ <i>calculate OAuth-signature for a given HTTP request URL, parameters and oauth-tokens. </i><br/>
  char * <code>oauth_sign_url</code> (const char *url, char **postargs, <code>OAuthMethod</code> method, const char *c_key, const char *c_secret, const char *t_key, const char *t_secret) attribute_deprecated </p>
-<p> void <code>oauth_sign_array2_process</code> (int *argcp, char ***argvp, char **postargs, <code>OAuthMethod</code> method, const char *http_method, const char *c_key, const char *c_secret, const char *t_key, const char *t_secret)<br />
- <i>the back-end behind by /ref oauth_sign_array2. </i><br />
- char * <code>oauth_sign_array2</code> (int *argcp, char ***argvp, char **postargs, <code>OAuthMethod</code> method, const char *http_method, const char *c_key, const char *c_secret, const char *t_key, const char *t_secret)<br />
- <i>same as /ref oauth_sign_url with the url already split into parameter array </i><br />
+<p> void <code>oauth_sign_array2_process</code> (int *argcp, char ***argvp, char **postargs, <code>OAuthMethod</code> method, const char *http_method, const char *c_key, const char *c_secret, const char *t_key, const char *t_secret)<br/>
+ <i>the back-end behind by /ref oauth_sign_array2. </i><br/>
+ char * <code>oauth_sign_array2</code> (int *argcp, char ***argvp, char **postargs, <code>OAuthMethod</code> method, const char *http_method, const char *c_key, const char *c_secret, const char *t_key, const char *t_secret)<br/>
+ <i>same as /ref oauth_sign_url with the url already split into parameter array </i><br/>
  char * <code>oauth_sign_array</code> (int *argcp, char ***argvp, char **postargs, <code>OAuthMethod</code> method, const char *c_key, const char *c_secret, const char *t_key, const char *t_secret) attribute_deprecated </p>
-<p> char * <code>oauth_body_hash_file</code> (char *filename)<br />
- <i>calculate body hash (sha1sum) of given file and return a oauth_body_hash=xxxx parameter to be added to the request. </i><br />
- char * <code>oauth_body_hash_data</code> (size_t length, const char *data)<br />
- <i>calculate body hash (sha1sum) of given data and return a oauth_body_hash=xxxx parameter to be added to the request. </i><br />
- char * <code>oauth_body_hash_encode</code> (size_t len, unsigned char *digest)<br />
- <i>base64 encode digest, free it and return a URL parameter with the oauth_body_hash. </i><br />
- char * <code>oauth_sign_xmpp</code> (const char *xml, <code>OAuthMethod</code> method, const char *c_secret, const char *t_secret)<br />
- <i>xep-0235 &#8211; TODO </i><br />
- char * <code>oauth_http_get</code> (const char *u, const char *q)<br />
- <i>do a HTTP GET request, wait for it to finish and return the content of the reply. </i><br />
- char * <code>oauth_http_get2</code> (const char *u, const char *q, const char *customheader)<br />
- <i>do a HTTP GET request, wait for it to finish and return the content of the reply. </i><br />
- char * <code>oauth_http_post</code> (const char *u, const char *p)<br />
- <i>do a HTTP POST request, wait for it to finish and return the content of the reply. </i><br />
- char * <code>oauth_http_post2</code> (const char *u, const char *p, const char *customheader)<br />
- <i>do a HTTP POST request, wait for it to finish and return the content of the reply. </i><br />
- char * <code>oauth_post_file</code> (const char *u, const char *fn, const size_t len, const char *customheader)<br />
- <i>http post raw data from file. </i><br />
- char * <code>oauth_post_data</code> (const char *u, const char *data, size_t len, const char *customheader)<br />
- <i>http post raw data the returned string needs to be freed by the caller (requires libcurl) </i><br />
- char * <code>oauth_post_data_with_callback</code> (const char *u, const char *data, size_t len, const char *customheader, void(*callback)(void *, int, size_t, size_t), void *callback_data)<br />
- <i>http post raw data, with callback. </i><br />
- char * <code>oauth_send_data</code> (const char *u, const char *data, size_t len, const char *customheader, const char *httpMethod)<br />
- <i>http send raw data. </i><br />
- char * <code>oauth_send_data_with_callback</code> (const char *u, const char *data, size_t len, const char *customheader, void(*callback)(void *, int, size_t, size_t), void *callback_data, const char *httpMethod)<br />
+<p> char * <code>oauth_body_hash_file</code> (char *filename)<br/>
+ <i>calculate body hash (sha1sum) of given file and return a oauth_body_hash=xxxx parameter to be added to the request. </i><br/>
+ char * <code>oauth_body_hash_data</code> (size_t length, const char *data)<br/>
+ <i>calculate body hash (sha1sum) of given data and return a oauth_body_hash=xxxx parameter to be added to the request. </i><br/>
+ char * <code>oauth_body_hash_encode</code> (size_t len, unsigned char *digest)<br/>
+ <i>base64 encode digest, free it and return a URL parameter with the oauth_body_hash. </i><br/>
+ char * <code>oauth_sign_xmpp</code> (const char *xml, <code>OAuthMethod</code> method, const char *c_secret, const char *t_secret)<br/>
+ <i>xep-0235 &#8211; TODO </i><br/>
+ char * <code>oauth_http_get</code> (const char *u, const char *q)<br/>
+ <i>do a HTTP GET request, wait for it to finish and return the content of the reply. </i><br/>
+ char * <code>oauth_http_get2</code> (const char *u, const char *q, const char *customheader)<br/>
+ <i>do a HTTP GET request, wait for it to finish and return the content of the reply. </i><br/>
+ char * <code>oauth_http_post</code> (const char *u, const char *p)<br/>
+ <i>do a HTTP POST request, wait for it to finish and return the content of the reply. </i><br/>
+ char * <code>oauth_http_post2</code> (const char *u, const char *p, const char *customheader)<br/>
+ <i>do a HTTP POST request, wait for it to finish and return the content of the reply. </i><br/>
+ char * <code>oauth_post_file</code> (const char *u, const char *fn, const size_t len, const char *customheader)<br/>
+ <i>http post raw data from file. </i><br/>
+ char * <code>oauth_post_data</code> (const char *u, const char *data, size_t len, const char *customheader)<br/>
+ <i>http post raw data the returned string needs to be freed by the caller (requires libcurl) </i><br/>
+ char * <code>oauth_post_data_with_callback</code> (const char *u, const char *data, size_t len, const char *customheader, void(*callback)(void *, int, size_t, size_t), void *callback_data)<br/>
+ <i>http post raw data, with callback. </i><br/>
+ char * <code>oauth_send_data</code> (const char *u, const char *data, size_t len, const char *customheader, const char *httpMethod)<br/>
+ <i>http send raw data. </i><br/>
+ char * <code>oauth_send_data_with_callback</code> (const char *u, const char *data, size_t len, const char *customheader, void(*callback)(void *, int, size_t, size_t), void *callback_data, const char *httpMethod)<br/>
  <i>http post raw data, with callback. </i></p>
 <h2>Detailed Description</h2>
 <p> OAuth.net implementation in POSIX-C. </p>
@@ -130,8 +130,8 @@ description: "src/oauth.h –"
 <p> add query parameter to array <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-</dt><dd> <i>argcp</i> pointer to array length int<br />
- <i>argvp</i> pointer to array values<br />
+</dt><dd> <i>argcp</i> pointer to array length int<br/>
+ <i>argvp</i> pointer to array values<br/>
  <i>addparam</i> parameter to add (eg. &#8216;foo=bar&#8217;)</dd></dl>
 <h3>char* oauth_body_hash_data (size_t length, const char * data)</h3>
 <p> calculate body hash (sha1sum) of given data and return a oauth_body_hash=xxxx parameter to be added to the request. The returned string needs to be freed by the calling function. The returned string is not yet url-escaped and suitable to be passed as argument to <code>oauth_catenc</code>. </p>
@@ -139,7 +139,7 @@ description: "src/oauth.h –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-</dt><dd> <i>length</i> length of the data parameter in bytes<br />
+</dt><dd> <i>length</i> length of the data parameter in bytes<br/>
  <i>data</i> to calculate the hash for</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -151,7 +151,7 @@ description: "src/oauth.h –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-</dt><dd> <i>len</i> length of the digest to encode<br />
+</dt><dd> <i>len</i> length of the digest to encode<br/>
  <i>digest</i> hash value to encode</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -187,7 +187,7 @@ description: "src/oauth.h –"
 <p> Decode the base64 encoded string &#8216;src&#8217; into the memory pointed to by &#8216;dest&#8217;. <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-</dt><dd> <i>dest</i> Pointer to memory for holding the decoded string. Must be large enough to receive the decoded string.<br />
+</dt><dd> <i>dest</i> Pointer to memory for holding the decoded string. Must be large enough to receive the decoded string.<br/>
  <i>src</i> A base64 encoded string.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -198,7 +198,7 @@ description: "src/oauth.h –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-</dt><dd> <i>size</i> The size of the data in src<br />
+</dt><dd> <i>size</i> The size of the data in src<br/>
  <i>src</i> The data to be base64 encode</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -208,7 +208,7 @@ description: "src/oauth.h –"
 <p> free array args <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-</dt><dd> <i>argcp</i> pointer to array length int<br />
+</dt><dd> <i>argcp</i> pointer to array length int<br/>
  <i>argvp</i> pointer to array values to be free()d</dd></dl>
 <p> <code>Examples: </code> <code>tests/oauthtest2.c</code>.</p>
 <h3>char* oauth_gen_nonce ()</h3>
@@ -226,7 +226,7 @@ description: "src/oauth.h –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-</dt><dd> <i>u</i> base url to get<br />
+</dt><dd> <i>u</i> base url to get<br/>
  <i>q</i> query string to send along with the HTTP request or NULL.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -240,8 +240,8 @@ description: "src/oauth.h –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-</dt><dd> <i>u</i> base url to get<br />
- <i>q</i> query string to send along with the HTTP request or NULL.<br />
+</dt><dd> <i>u</i> base url to get<br/>
+ <i>q</i> query string to send along with the HTTP request or NULL.<br/>
  <i>customheader</i> specify custom HTTP header (or NULL for none) Multiple header elements can be passed separating them with &#8216;
 &#8217;</dd></dl>
 <p> <code>Returns:</code></p>
@@ -258,7 +258,7 @@ description: "src/oauth.h –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-</dt><dd> <i>u</i> url to query<br />
+</dt><dd> <i>u</i> url to query<br/>
  <i>p</i> postargs to send along with the HTTP request.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -272,8 +272,8 @@ description: "src/oauth.h –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-</dt><dd> <i>u</i> url to query<br />
- <i>p</i> postargs to send along with the HTTP request.<br />
+</dt><dd> <i>u</i> url to query<br/>
+ <i>p</i> postargs to send along with the HTTP request.<br/>
  <i>customheader</i> specify custom HTTP header (or NULL for none) Multiple header elements can be passed separating them with &#8216;
 &#8217;</dd></dl>
 <p> <code>Returns:</code></p>
@@ -284,8 +284,8 @@ description: "src/oauth.h –"
 <p> search array for parameter key. <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-</dt><dd> <i>argv</i> length of array to search<br />
- <i>argc</i> parameter array to search<br />
+</dt><dd> <i>argv</i> length of array to search<br/>
+ <i>argc</i> parameter array to search<br/>
  <i>key</i> key of parameter to check.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -296,9 +296,9 @@ description: "src/oauth.h –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-</dt><dd> <i>u</i> url to retrieve<br />
- <i>data</i> data to post<br />
- <i>len</i> length of the data in bytes.<br />
+</dt><dd> <i>u</i> url to retrieve<br/>
+ <i>data</i> data to post<br/>
+ <i>len</i> length of the data in bytes.<br/>
  <i>customheader</i> specify custom HTTP header (or NULL for default) Multiple header elements can be passed separating them with &#8216;
 &#8217;</dd></dl>
 <p> <code>Returns:</code></p>
@@ -312,12 +312,12 @@ description: "src/oauth.h –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-</dt><dd> <i>u</i> url to retrieve<br />
- <i>data</i> data to post along<br />
- <i>len</i> length of the file in bytes. set to &#8216;0&#8217; for autodetection<br />
+</dt><dd> <i>u</i> url to retrieve<br/>
+ <i>data</i> data to post along<br/>
+ <i>len</i> length of the file in bytes. set to &#8216;0&#8217; for autodetection<br/>
  <i>customheader</i> specify custom HTTP header (or NULL for default) Multiple header elements can be passed separating them with &#8216;
-&#8217;<br />
- <i>callback</i> specify the callback function<br />
+&#8217;<br/>
+ <i>callback</i> specify the callback function<br/>
  <i>callback_data</i> specify data to pass to the callback function</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -329,9 +329,9 @@ description: "src/oauth.h –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-</dt><dd> <i>u</i> url to retrieve<br />
- <i>fn</i> filename of the file to post along<br />
- <i>len</i> length of the file in bytes. set to &#8216;0&#8217; for autodetection<br />
+</dt><dd> <i>u</i> url to retrieve<br/>
+ <i>fn</i> filename of the file to post along<br/>
+ <i>len</i> length of the file in bytes. set to &#8216;0&#8217; for autodetection<br/>
  <i>customheader</i> specify custom HTTP header (or NULL for default). Multiple header elements can be passed separating them with &#8216;
 &#8217;</dd></dl>
 <p> <code>Returns:</code></p>
@@ -345,11 +345,11 @@ description: "src/oauth.h –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-</dt><dd> <i>u</i> url to retrieve<br />
- <i>data</i> data to post<br />
- <i>len</i> length of the data in bytes.<br />
+</dt><dd> <i>u</i> url to retrieve<br/>
+ <i>data</i> data to post<br/>
+ <i>len</i> length of the data in bytes.<br/>
  <i>customheader</i> specify custom HTTP header (or NULL for default) Multiple header elements can be passed separating them with &#8216;
-&#8217;<br />
+&#8217;<br/>
  <i>httpMethod</i> specify http verb (&#8216;GET&#8217;/&#8217;POST&#8217;/&#8217;PUT&#8217;/&#8217;DELETE&#8217;) to be used. if httpMethod is NULL, a POST is executed.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -361,13 +361,13 @@ description: "src/oauth.h –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-</dt><dd> <i>u</i> url to retrieve<br />
- <i>data</i> data to post along<br />
- <i>len</i> length of the file in bytes. set to &#8216;0&#8217; for autodetection<br />
+</dt><dd> <i>u</i> url to retrieve<br/>
+ <i>data</i> data to post along<br/>
+ <i>len</i> length of the file in bytes. set to &#8216;0&#8217; for autodetection<br/>
  <i>customheader</i> specify custom HTTP header (or NULL for default) Multiple header elements can be passed separating them with &#8216;
-&#8217;<br />
- <i>callback</i> specify the callback function<br />
- <i>callback_data</i> specify data to pass to the callback function<br />
+&#8217;<br/>
+ <i>callback</i> specify the callback function<br/>
+ <i>callback_data</i> specify data to pass to the callback function<br/>
  <i>httpMethod</i> specify http verb (&#8216;GET&#8217;/&#8217;POST&#8217;/&#8217;PUT&#8217;/&#8217;DELETE&#8217;) to be used.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -377,8 +377,8 @@ description: "src/oauth.h –"
 <p> build a url query string from an array. <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-</dt><dd> <i>argc</i> the total number of elements in the array<br />
- <i>start</i> element in the array at which to start concatenating.<br />
+</dt><dd> <i>argc</i> the total number of elements in the array<br/>
+ <i>start</i> element in the array at which to start concatenating.<br/>
  <i>argv</i> parameter-array to concatenate.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -389,7 +389,7 @@ description: "src/oauth.h –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-</dt><dd> <i>argc</i> the total number of elements in the array<br />
+</dt><dd> <i>argc</i> the total number of elements in the array<br/>
  <i>argv</i> parameter-array to concatenate.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -399,10 +399,10 @@ description: "src/oauth.h –"
 <p> encode query parameters from an array. <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-</dt><dd> <i>argc</i> the total number of elements in the array<br />
- <i>start</i> element in the array at which to start concatenating.<br />
- <i>argv</i> parameter-array to concatenate.<br />
- <i>sep</i> separator for parameters (usually &#8216;&amp;&#8217;)<br />
+</dt><dd> <i>argc</i> the total number of elements in the array<br/>
+ <i>start</i> element in the array at which to start concatenating.<br/>
+ <i>argv</i> parameter-array to concatenate.<br/>
+ <i>sep</i> separator for parameters (usually &#8216;&amp;&#8217;)<br/>
  <i>mod</i> &#8211; bitwise modifiers: 1: skip all values that start with &#8216;oauth_&#8217; 2: skip all values that don&#8217;t start with &#8216;oauth_&#8217; 4: double quotation marks are added around values (use with sep &#8216;, &#8216; for HTTP Authorization header).</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -417,14 +417,14 @@ description: "src/oauth.h –"
 <p> same as /ref oauth_sign_url with the url already split into parameter array <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-</dt><dd> <i>argcp</i> pointer to array length int<br />
- <i>argvp</i> pointer to array values (argv[0]=&#8217;<a rel="nofollow" href="http://example.org:80/'">http://example.org:80/&#8217;</a> argv[1]=&#8217;first=QueryParamater&#8217; .. the array is modified: fi. oauth_ parameters are added) These arrays can be generated with /ref oauth_split_url_parameters or /ref oauth_split_post_paramters.<br />
- <i>postargs</i> This parameter points to an area where the return value is stored. If &#8216;postargs&#8217; is NULL, no value is stored.<br />
- <i>method</i> specify the signature method to use. It is of type <code>OAuthMethod</code> and most likely <code>OA_HMAC</code>.<br />
- <i>http_method</i> The HTTP request method to use (ie &#8216;GET&#8217;, &#8216;PUT&#8217;,..) If NULL is given as &#8216;http_method&#8217; this defaults to &#8216;GET&#8217; when &#8216;postargs&#8217; is also NULL and when postargs is not NULL &#8216;POST&#8217; is used.<br />
- <i>c_key</i> consumer key<br />
- <i>c_secret</i> consumer secret<br />
- <i>t_key</i> token key<br />
+</dt><dd> <i>argcp</i> pointer to array length int<br/>
+ <i>argvp</i> pointer to array values (argv[0]=&#8217;<a rel="nofollow" href="http://example.org:80/'">http://example.org:80/&#8217;</a> argv[1]=&#8217;first=QueryParamater&#8217; .. the array is modified: fi. oauth_ parameters are added) These arrays can be generated with /ref oauth_split_url_parameters or /ref oauth_split_post_paramters.<br/>
+ <i>postargs</i> This parameter points to an area where the return value is stored. If &#8216;postargs&#8217; is NULL, no value is stored.<br/>
+ <i>method</i> specify the signature method to use. It is of type <code>OAuthMethod</code> and most likely <code>OA_HMAC</code>.<br/>
+ <i>http_method</i> The HTTP request method to use (ie &#8216;GET&#8217;, &#8216;PUT&#8217;,..) If NULL is given as &#8216;http_method&#8217; this defaults to &#8216;GET&#8217; when &#8216;postargs&#8217; is also NULL and when postargs is not NULL &#8216;POST&#8217; is used.<br/>
+ <i>c_key</i> consumer key<br/>
+ <i>c_secret</i> consumer secret<br/>
+ <i>t_key</i> token key<br/>
  <i>t_secret</i> token secret</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -436,14 +436,14 @@ description: "src/oauth.h –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-</dt><dd> <i>argcp</i> pointer to array length int<br />
- <i>argvp</i> pointer to array values (argv[0]=&#8217;<a rel="nofollow" href="http://example.org:80/'">http://example.org:80/&#8217;</a> argv[1]=&#8217;first=QueryParamater&#8217; .. the array is modified: fi. oauth_ parameters are added) These arrays can be generated with /ref oauth_split_url_parameters or /ref oauth_split_post_paramters.<br />
- <i>postargs</i> This parameter points to an area where the return value is stored. If &#8216;postargs&#8217; is NULL, no value is stored.<br />
- <i>method</i> specify the signature method to use. It is of type <code>OAuthMethod</code> and most likely <code>OA_HMAC</code>.<br />
- <i>http_method</i> The HTTP request method to use (ie &#8216;GET&#8217;, &#8216;PUT&#8217;,..) If NULL is given as &#8216;http_method&#8217; this defaults to &#8216;GET&#8217; when &#8216;postargs&#8217; is also NULL and when postargs is not NULL &#8216;POST&#8217; is used.<br />
- <i>c_key</i> consumer key<br />
- <i>c_secret</i> consumer secret<br />
- <i>t_key</i> token key<br />
+</dt><dd> <i>argcp</i> pointer to array length int<br/>
+ <i>argvp</i> pointer to array values (argv[0]=&#8217;<a rel="nofollow" href="http://example.org:80/'">http://example.org:80/&#8217;</a> argv[1]=&#8217;first=QueryParamater&#8217; .. the array is modified: fi. oauth_ parameters are added) These arrays can be generated with /ref oauth_split_url_parameters or /ref oauth_split_post_paramters.<br/>
+ <i>postargs</i> This parameter points to an area where the return value is stored. If &#8216;postargs&#8217; is NULL, no value is stored.<br/>
+ <i>method</i> specify the signature method to use. It is of type <code>OAuthMethod</code> and most likely <code>OA_HMAC</code>.<br/>
+ <i>http_method</i> The HTTP request method to use (ie &#8216;GET&#8217;, &#8216;PUT&#8217;,..) If NULL is given as &#8216;http_method&#8217; this defaults to &#8216;GET&#8217; when &#8216;postargs&#8217; is also NULL and when postargs is not NULL &#8216;POST&#8217; is used.<br/>
+ <i>c_key</i> consumer key<br/>
+ <i>c_secret</i> consumer secret<br/>
+ <i>t_key</i> token key<br/>
  <i>t_secret</i> token secret</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -456,7 +456,7 @@ description: "src/oauth.h –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-</dt><dd> <i>m</i> message to be signed<br />
+</dt><dd> <i>m</i> message to be signed<br/>
  <i>k</i> key used for signing</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -467,9 +467,9 @@ description: "src/oauth.h –"
 <p> same as <code>oauth_sign_hmac_sha1</code> but allows to specify length of message and key (in case they contain null chars). <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-</dt><dd> <i>m</i> message to be signed<br />
- <i>ml</i> length of message<br />
- <i>k</i> key used for signing<br />
+</dt><dd> <i>m</i> message to be signed<br/>
+ <i>ml</i> length of message<br/>
+ <i>k</i> key used for signing<br/>
  <i>kl</i> length of key</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -480,7 +480,7 @@ description: "src/oauth.h –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-</dt><dd> <i>m</i> message to be signed<br />
+</dt><dd> <i>m</i> message to be signed<br/>
  <i>k</i> key used for signing</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -491,7 +491,7 @@ description: "src/oauth.h –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-</dt><dd> <i>m</i> message to be signed<br />
+</dt><dd> <i>m</i> message to be signed<br/>
  <i>k</i> private-key PKCS and Base64-encoded</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -508,13 +508,13 @@ description: "src/oauth.h –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-</dt><dd> <i>url</i> The request URL to be signed. append all GET or POST query-parameters separated by either &#8216;?&#8217; or &#8216;&amp;&#8217; to this parameter.<br />
- <i>postargs</i> This parameter points to an area where the return value is stored. If &#8216;postargs&#8217; is NULL, no value is stored.<br />
- <i>method</i> specify the signature method to use. It is of type <code>OAuthMethod</code> and most likely <code>OA_HMAC</code>.<br />
- <i>http_method</i> The HTTP request method to use (ie &#8216;GET&#8217;, &#8216;PUT&#8217;,..) If NULL is given as &#8216;http_method&#8217; this defaults to &#8216;GET&#8217; when &#8216;postargs&#8217; is also NULL and when postargs is not NULL &#8216;POST&#8217; is used.<br />
- <i>c_key</i> consumer key<br />
- <i>c_secret</i> consumer secret<br />
- <i>t_key</i> token key<br />
+</dt><dd> <i>url</i> The request URL to be signed. append all GET or POST query-parameters separated by either &#8216;?&#8217; or &#8216;&amp;&#8217; to this parameter.<br/>
+ <i>postargs</i> This parameter points to an area where the return value is stored. If &#8216;postargs&#8217; is NULL, no value is stored.<br/>
+ <i>method</i> specify the signature method to use. It is of type <code>OAuthMethod</code> and most likely <code>OA_HMAC</code>.<br/>
+ <i>http_method</i> The HTTP request method to use (ie &#8216;GET&#8217;, &#8216;PUT&#8217;,..) If NULL is given as &#8216;http_method&#8217; this defaults to &#8216;GET&#8217; when &#8216;postargs&#8217; is also NULL and when postargs is not NULL &#8216;POST&#8217; is used.<br/>
+ <i>c_key</i> consumer key<br/>
+ <i>c_secret</i> consumer secret<br/>
+ <i>t_key</i> token key<br/>
  <i>t_secret</i> token secret</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -528,8 +528,8 @@ description: "src/oauth.h –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-</dt><dd> <i>url</i> the url or query-string to parse.<br />
- <i>argv</i> pointer to a (char *) array where the results are stored. The array is re-allocated to match the number of parameters and each parameter-string is allocated with strdup. &#8211; The memory needs to be freed by the caller.<br />
+</dt><dd> <i>url</i> the url or query-string to parse.<br/>
+ <i>argv</i> pointer to a (char *) array where the results are stored. The array is re-allocated to match the number of parameters and each parameter-string is allocated with strdup. &#8211; The memory needs to be freed by the caller.<br/>
  <i>qesc</i> use query parameter escape (vs post-param-escape) &#8211; if set to 1 all &#8216;+&#8217; are treated as spaces &#8216; &#8216;</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -540,7 +540,7 @@ description: "src/oauth.h –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-</dt><dd> <i>url</i> the url or query-string to parse; may be NULL<br />
+</dt><dd> <i>url</i> the url or query-string to parse; may be NULL<br/>
  <i>argv</i> pointer to a (char *) array where the results are stored. The array is re-allocated to match the number of parameters and each parameter-string is allocated with strdup. &#8211; The memory needs to be freed by the caller.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -552,16 +552,16 @@ description: "src/oauth.h –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-</dt><dd> <i>a</i> string to compare<br />
+</dt><dd> <i>a</i> string to compare<br/>
  <i>b</i> string to compare</dd></dl>
 <p> returns 0 (false) if strings are not equal, and 1 (true) if strings are equal.</p>
 <h3>int oauth_time_independent_equals_n (const char * a, const char * b, size_t len_a, size_t len_b)</h3>
 <p> compare two strings in constant-time (as to not let an attacker guess how many leading chars are correct: <a rel="nofollow" href="http://rdist.root.org/2010/01/07/timing-independent-array-comparison/">http://rdist.root.org/2010/01/07/timing-independent-array-comparison/</a> ) <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-</dt><dd> <i>a</i> string to compare<br />
- <i>b</i> string to compare<br />
- <i>len_a</i> length of string a<br />
+</dt><dd> <i>a</i> string to compare<br/>
+ <i>b</i> string to compare<br/>
+ <i>len_a</i> length of string a<br/>
  <i>len_b</i> length of string b</dd></dl>
 <p> returns 0 (false) if strings are not equal, and 1 (true) if strings are equal.</p>
 <h3>int oauth_time_indepenent_equals (const char * a, const char * b)<code>Deprecated</code></h3>
@@ -585,7 +585,7 @@ description: "src/oauth.h –"
 <p> Parse RFC3986 encoded &#8216;string&#8217; back to unescaped version. <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-</dt><dd> <i>string</i> The data to be unescaped<br />
+</dt><dd> <i>string</i> The data to be unescaped<br/>
  <i>olen</i> unless NULL the length of the returned string is stored there.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -596,8 +596,8 @@ description: "src/oauth.h –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-</dt><dd> <i>m</i> message to be verified<br />
- <i>c</i> public-key or x509 certificate<br />
+</dt><dd> <i>m</i> message to be verified<br/>
+ <i>c</i> public-key or x509 certificate<br/>
  <i>s</i> base64 encoded signature</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

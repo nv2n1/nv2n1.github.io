@@ -500,7 +500,7 @@ description: "ovs-vsctl – utility for querying and configuring ovs-vswitchd"
 <h2>Examples</h2>
 <p>Create a new bridge named br0 and add port eth0 to it:</p>
 <dl>
-<dd><code>ovs-vsctl add-br br0</code><br />
+<dd><code>ovs-vsctl add-br br0</code><br/>
  <code>ovs-vsctl add-port br0 eth0</code></dd></dl>
 <p> Alternatively, perform both operations in a single atomic transaction:</p>
 <dl>

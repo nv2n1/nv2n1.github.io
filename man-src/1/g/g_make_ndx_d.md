@@ -17,18 +17,18 @@ description: "make_ndx – makes index files"
 <p> When no index file is supplied, also make_ndx will generate the default groups. With the index editor you can select on atom, residue and chain names and numbers. When a run input file is supplied you can also select on atom type. You can use NOT, AND and OR, you can split groups into chains, residues or atoms. You can delete and rename groups. </p>
 <p> The atom numbering in the editor and the index file starts at 1.</p>
 <h2>FILES</h2>
-<p> <code>-f</code><i> conf.gro</i> <code>Input, Opt.</code><br />
+<p> <code>-f</code><i> conf.gro</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Structure file: gro g96 pdb tpr tpb tpa&nbsp;<wbr> </p>
-<p> <code>-n</code><i> index.ndx</i> <code>Input, Opt., Mult.</code><br />
+<p> <code>-n</code><i> index.ndx</i> <code>Input, Opt., Mult.</code><br/>
 &nbsp;<wbr>Index file&nbsp;<wbr> </p>
-<p> <code>-o</code><i> index.ndx</i> <code>Output</code><br />
+<p> <code>-o</code><i> index.ndx</i> <code>Output</code><br/>
 &nbsp;<wbr>Index file&nbsp;<wbr> </p>
 <h2>OTHER OPTIONS</h2>
-<p> <code>-[no]h</code><i>no </i><br />
+<p> <code>-[no]h</code><i>no </i><br/>
 &nbsp;<wbr>Print help info and quit </p>
-<p> <code>-nice</code><i> int</i><code> 0</code><br />
+<p> <code>-nice</code><i> int</i><code> 0</code><br/>
 &nbsp;<wbr>Set the nicelevel </p>
-<p> <code>-natoms</code><i> int</i><code> 0</code><br />
+<p> <code>-natoms</code><i> int</i><code> 0</code><br/>
 &nbsp;<wbr>set number of atoms&nbsp;<wbr>(default: read from coordinate or index file) </p>
 <h2>SEE ALSO</h2>
 <p> <code>gromacs(7)</code> </p>

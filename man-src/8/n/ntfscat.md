@@ -126,7 +126,7 @@ description: "ntfscat – print NTFS files and streams on the standard output"
 </tr>
 </table>
 </table>
-<p> <code>Notes</code> The attribute names may be given without the leading $ symbol.<br />
+<p> <code>Notes</code> The attribute names may be given without the leading $ symbol.<br/>
  If you use the $ symbol, you must quote the name to prevent the shell interpreting the name.</p>
 <dt><code>-n</code>, <code>&#8211;attribute-name</code> NAME</dt>
 <dd>Display this named attribute, stream.</dd>
@@ -153,12 +153,12 @@ description: "ntfscat – print NTFS files and streams on the standard output"
 <dl>
 <dd><code>ntfscat /dev/hda1 -a INDEX_ROOT -i 5 | hexdump -C</code> </dd>
 <h2>Bugs</h2>
-<p>There are no known problems with <code>ntfscat</code>. If you find a bug please send an email describing the problem to the development team:<br />
+<p>There are no known problems with <code>ntfscat</code>. If you find a bug please send an email describing the problem to the development team:<br/>
  ntfs-3g-devel [at] lists.sf.net</p>
 <h2>Authors</h2>
 <p><code>ntfscat</code> was written by Richard Russon, Anton Altaparmakov and Szabolcs Szakacsits. It was ported to ntfs-3g by Erik Larsson.</p>
 <h2>Availability</h2>
-<p><code>ntfscat</code> is part of the <code>ntfs-3g</code> package and is available from:<br />
+<p><code>ntfscat</code> is part of the <code>ntfs-3g</code> package and is available from:<br/>
  <a rel="nofollow" href="https://github.com/tuxera/ntfs-3g/wiki/">https://github.com/tuxera/ntfs-3g/wiki/</a></p>
 <h2>See Also</h2>
 <p>Read <code><a href="/docs/linux/man/8-libntfs/">libntfs</a></code>(8) for details how to access encrypted files. <code><a href="/docs/linux/man/8-libntfs/">libntfs</a></code>(8), <code><a href="/docs/linux/man/8-ntfsls/">ntfsls</a></code>(8), <code><a href="/docs/linux/man/8-ntfsprogs/">ntfsprogs</a></code>(8) </p>

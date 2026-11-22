@@ -14,19 +14,19 @@ description: "QwtRoundScaleDraw –"
 <p> Inherits <code>QwtAbstractScaleDraw</code>. </p>
 <p> Inherited by QwtAnalogClockScaleDraw, and <code>QwtCompassScaleDraw</code>.</p>
 <h3>Public Member Functions</h3>
-<p><code>QwtRoundScaleDraw</code> ()<br />
- <i>Constructor. </i><br />
- virtual <code>~QwtRoundScaleDraw</code> ()<br />
- <i>Destructor. </i><br />
+<p><code>QwtRoundScaleDraw</code> ()<br/>
+ <i>Constructor. </i><br/>
+ virtual <code>~QwtRoundScaleDraw</code> ()<br/>
+ <i>Destructor. </i><br/>
  void <code>setRadius</code> (double <code>radius</code>) </p>
 <p> double <code>radius</code> () const </p>
-<p> void <code>moveCenter</code> (double x, double y)<br />
- <i>Move the center of the scale draw, leaving the radius unchanged. </i><br />
+<p> void <code>moveCenter</code> (double x, double y)<br/>
+ <i>Move the center of the scale draw, leaving the radius unchanged. </i><br/>
  void <code>moveCenter</code> (const QPointF &amp;) </p>
-<p> QPointF <code>center</code> () const<br />
- <i>Get the center of the scale. </i><br />
- void <code>setAngleRange</code> (double angle1, double angle2)<br />
- <i>Adjust the baseline circle segment for round scales. </i><br />
+<p> QPointF <code>center</code> () const<br/>
+ <i>Get the center of the scale. </i><br/>
+ void <code>setAngleRange</code> (double angle1, double angle2)<br/>
+ <i>Adjust the baseline circle segment for round scales. </i><br/>
  virtual double <code>extent</code> (const QFont &amp;) const </p>
 <h3>Protected Member Functions</h3>
 <p>virtual void <code>drawTick</code> (QPainter *, double val, double len) const </p>
@@ -54,7 +54,7 @@ description: "QwtRoundScaleDraw –"
 <p>Draws the label for a major scale tick </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
+<dd><i>painter</i> Painter<br/>
  <i>value</i> Value</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -64,8 +64,8 @@ description: "QwtRoundScaleDraw –"
 <p>Draw a tick </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>value</i> Value of the tick<br />
+<dd><i>painter</i> Painter<br/>
+ <i>value</i> Value of the tick<br/>
  <i>len</i> Lenght of the tick</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -108,7 +108,7 @@ description: "QwtRoundScaleDraw –"
 <p>Adjust the baseline circle segment for round scales. The baseline will be drawn from min(angle1,angle2) to max(angle1, angle2). The default setting is [ -135, 135 ]. An angle of 0 degrees corresponds to the 12 o&#8217;clock position, and positive angles count in a clockwise direction. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>angle1</i><br />
+<dd><i>angle1</i><br/>
  <i>angle2</i> boundaries of the angle interval in degrees.</dd></dl>
 <p> <code>Warning:</code></p>
 <dl COMPACT>

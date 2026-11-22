@@ -22,8 +22,8 @@ description: "amrecover – Amanda index database browser"
 <h2>OPTIONS</h2>
  </dd>
 <dl>
-<dd> <p> <br />
- <font SIZE="+1"> <code>Note</code> </font> <br />
+<dd> <p> <br/>
+  <code>Note</code>  <br/>
  </p>
 <p>The Default values are those set at compile-time. Use <code>amrestore</code> to recover client-encrypted or client-custom-compressed tapes. </p>
  </dd></dl>

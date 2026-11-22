@@ -38,28 +38,28 @@ global {
 }</code></pre>
 <dt><code>machineid</code></dt>
 <dd>The content of /etc/machine-id is used as the system ID if available. See <code><a href="/docs/linux/man/5-machine-id/">machine-id</a></code>(5) and <code><a href="/docs/linux/man/1-systemd-machine-id-setup/">systemd-machine-id-setup</a></code>(1) to check if machine-id is available on the host. lvm.conf</dd>
-<p>global {<br />
-    system_id_source = &quot;machineid&quot;<br />
+<p>global {<br/>
+    system_id_source = &quot;machineid&quot;<br/>
 }</p>
 <dt><code>uname</code></dt>
 <dd>The string utsname.nodename from <code><a href="/docs/linux/man/2-uname/">uname</a></code>(2) is used as the system ID. A uname beginning with &quot;localhost&quot; is ignored and equivalent to none. lvm.conf</dd>
-<p>global {<br />
-    system_id_source = &quot;uname&quot;<br />
+<p>global {<br/>
+    system_id_source = &quot;uname&quot;<br/>
 }</p>
 <dt><code>lvmlocal</code></dt>
 <dd>The system ID is defined in lvmlocal.conf local/system_id. lvm.conf</dd>
-<p>global {<br />
-    system_id_source = &quot;lvmlocal&quot;<br />
-}<br />
+<p>global {<br/>
+    system_id_source = &quot;lvmlocal&quot;<br/>
+}<br/>
 lvmlocal.conf</p>
-<p>local {<br />
-    system_id = &quot;example_name&quot;<br />
+<p>local {<br/>
+    system_id = &quot;example_name&quot;<br/>
 }</p>
 <dt><code>file</code></dt>
 <dd>The system ID is defined in a file specified by lvm.conf global/system_id_file. lvm.conf</dd>
-<p>global {<br />
-    system_id_source = &quot;file&quot;<br />
-    system_id_file = &quot;/path/to/file&quot;<br />
+<p>global {<br/>
+    system_id_source = &quot;file&quot;<br/>
+    system_id_file = &quot;/path/to/file&quot;<br/>
 }</p>
 <p> Changing system_id_source will likely cause the system ID of the host to change, which will prevent the host from using VGs that it previously used (see extra_system_ids below to handle this.) If a system_id_source other than none fails to produce a system ID value, it is the equivalent of having none. The host will be allowed to access VGs with no system ID, but will not be allowed to access VGs with a system ID set.</p>
 <h3>Overriding system ID</h3>
@@ -68,7 +68,7 @@ lvmlocal.conf</p>
 local {
     extra_system_ids = [ &quot;my_other_name&quot; ]
 }</code></pre>
-<p> A safer option may be configuring the extra values as needed on the command line as:<br />
+<p> A safer option may be configuring the extra values as needed on the command line as:<br/>
  <code>&#8211;config &#8216;local/extra_system_ids=[&quot;</code><i>id</i><code>&quot;]&#8217;</code></p>
 <h3>vgcreate</h3>
 <p>In vgcreate, the host running the command assigns its own system ID to the new VG. To override this and set another system ID: <code>vgcreate &#8211;systemid</code> <i>SystemID VG PVs</i> Overriding the host&#8217;s system ID makes it possible for a host to create a VG that it may not be able to use. Another host with a system ID matching the one specified may not recognize the new VG without manually rescanning devices. If the &#8211;systemid argument is an empty string (&quot;&quot;), the VG is created with no system ID, making it accessible to other hosts (see warnings above.)</p>

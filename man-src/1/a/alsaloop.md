@@ -22,9 +22,9 @@ description: "alsaloop – command-line PCM loopback"
 </dd><dt><i>-g &lt;file&gt;</i> | <i>&#8211;config=&lt;file&gt;</i></dt>
 <dd>
 <p> Use given configuration file. The syntax of this file is simple: one line contains the command line options for one job. The &#8216;#&#8217; means comment and rest of line is ignored. Example: </p>
-<p>&nbsp;<wbr>&nbsp;#&nbsp;First line &#8211; comment, second line &#8211; first job<br />
-&nbsp;<wbr>&nbsp;-C hw:1,0 -P hw:0,0 -t 50000 -T 1<br />
-&nbsp;<wbr>&nbsp;#&nbsp;Third line &#8211; comment, fourth line &#8211; second job<br />
+<p>&nbsp;<wbr>&nbsp;#&nbsp;First line &#8211; comment, second line &#8211; first job<br/>
+&nbsp;<wbr>&nbsp;-C hw:1,0 -P hw:0,0 -t 50000 -T 1<br/>
+&nbsp;<wbr>&nbsp;#&nbsp;Third line &#8211; comment, fourth line &#8211; second job<br/>
 &nbsp;<wbr>&nbsp;-C hw:1,1 -P hw:0,1 -t 40000 -T 2 </p>
 </dd><dt><i>-d</i> | <i>&#8211;daemonize</i></dt>
 <dd>
@@ -65,11 +65,11 @@ description: "alsaloop – command-line PCM loopback"
 </dd><dt><i>-A &lt;converter&gt;</i> | <i>&#8211;samplerate=&lt;converter&gt;</i></dt>
 <dd>
 <p> Use libsamplerate and choose a converter: </p>
-<p>&nbsp;<wbr>&nbsp;0 or sincbest&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; best quality<br />
-&nbsp;<wbr>&nbsp;1 or sincmedium&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; medium quality<br />
-&nbsp;<wbr>&nbsp;2 or sincfastest&nbsp;<wbr>&nbsp;&#8211; lowest quality<br />
-&nbsp;<wbr>&nbsp;3 or zerohold&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; hold zero samples<br />
-&nbsp;<wbr>&nbsp;4 or linear&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; worst quality &#8211; linear resampling<br />
+<p>&nbsp;<wbr>&nbsp;0 or sincbest&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; best quality<br/>
+&nbsp;<wbr>&nbsp;1 or sincmedium&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; medium quality<br/>
+&nbsp;<wbr>&nbsp;2 or sincfastest&nbsp;<wbr>&nbsp;&#8211; lowest quality<br/>
+&nbsp;<wbr>&nbsp;3 or zerohold&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; hold zero samples<br/>
+&nbsp;<wbr>&nbsp;4 or linear&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; worst quality &#8211; linear resampling<br/>
 &nbsp;<wbr>&nbsp;5 or auto&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; choose best method </p>
 </dd><dt><i>-B &lt;size&gt;</i> | <i>&#8211;buffer=&lt;size&gt;</i></dt>
 <dd>
@@ -85,19 +85,19 @@ description: "alsaloop – command-line PCM loopback"
 <p> Non-block mode (very early process wakeup). Eats more CPU. </p>
 </dd><dt><i>-S &lt;mode&gt;</i> | <i>&#8211;sync=&lt;mode&gt;</i></dt>
 <dd>
-<p> Sync mode specification for capture to playback stream:<br />
-&nbsp;<wbr>&nbsp;0 or none&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; do not touch the stream<br />
-&nbsp;<wbr>&nbsp;1 or simple&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; add or remove samples to keep<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;both streams synchronized<br />
-&nbsp;<wbr>&nbsp;2 or captshift&nbsp;<wbr>&nbsp;&#8211; use driver for the capture device<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(if supported)&nbsp;to compensate<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;the rate shift<br />
-&nbsp;<wbr>&nbsp;3 or playshift&nbsp;<wbr>&nbsp;&#8211; use driver for the playback device<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(if supported)&nbsp;to compensate<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;the rate shift<br />
-&nbsp;<wbr>&nbsp;4 or samplerate &#8211; use samplerate library to do rate resampling<br />
-&nbsp;<wbr>&nbsp;5 or auto&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; automatically selects the best method<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;in this order: captshift, playshift,<br />
+<p> Sync mode specification for capture to playback stream:<br/>
+&nbsp;<wbr>&nbsp;0 or none&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; do not touch the stream<br/>
+&nbsp;<wbr>&nbsp;1 or simple&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; add or remove samples to keep<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;both streams synchronized<br/>
+&nbsp;<wbr>&nbsp;2 or captshift&nbsp;<wbr>&nbsp;&#8211; use driver for the capture device<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(if supported)&nbsp;to compensate<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;the rate shift<br/>
+&nbsp;<wbr>&nbsp;3 or playshift&nbsp;<wbr>&nbsp;&#8211; use driver for the playback device<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(if supported)&nbsp;to compensate<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;the rate shift<br/>
+&nbsp;<wbr>&nbsp;4 or samplerate &#8211; use samplerate library to do rate resampling<br/>
+&nbsp;<wbr>&nbsp;5 or auto&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; automatically selects the best method<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;in this order: captshift, playshift,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;samplerate, simple </p>
 </dd><dt><i>-T &lt;num&gt;</i> | <i>&#8211;thread=&lt;num&gt;</i></dt>
 <dd>
@@ -105,23 +105,23 @@ description: "alsaloop – command-line PCM loopback"
 </dd><dt><i>-m &lt;mixid&gt;</i> | <i>&#8211;mixer=&lt;midid&gt;</i></dt>
 <dd>
 <p> Redirect mixer control from the playback card to the capture card. Format of <i>mixid</i> is SRCID(PLAYBACK)[@DSTID(PLAYBACK)]: </p>
-<p>&nbsp;<wbr>&nbsp;&quot;name=&#8217;Master Playback Switch&#8217;@name=&#8217;Another Switch&#8217;&quot;<br />
+<p>&nbsp;<wbr>&nbsp;&quot;name=&#8217;Master Playback Switch&#8217;@name=&#8217;Another Switch&#8217;&quot;<br/>
 &nbsp;<wbr>&nbsp;&quot;name=&#8217;PCM Playback Volume&#8217;&quot; </p>
 <p> Known attributes: </p>
-<p>&nbsp;<wbr>&nbsp;name&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; control ID name<br />
-&nbsp;<wbr>&nbsp;index&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; control ID index<br />
-&nbsp;<wbr>&nbsp;device&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; control ID device<br />
-&nbsp;<wbr>&nbsp;subdevice &#8211; control ID subdevice<br />
-&nbsp;<wbr>&nbsp;iface&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; control ID interface<br />
+<p>&nbsp;<wbr>&nbsp;name&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; control ID name<br/>
+&nbsp;<wbr>&nbsp;index&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; control ID index<br/>
+&nbsp;<wbr>&nbsp;device&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; control ID device<br/>
+&nbsp;<wbr>&nbsp;subdevice &#8211; control ID subdevice<br/>
+&nbsp;<wbr>&nbsp;iface&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; control ID interface<br/>
 &nbsp;<wbr>&nbsp;numid&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; control ID numid </p>
 </dd><dt><i>-O &lt;ossmixid&gt;</i> | <i>&#8211;ossmixer=&lt;midid&gt;</i></dt>
 <dd>
 <p> Redirect mixer control from the OSS Mixer emulation layer (capture card) to the ALSA layer (capture card). Format of <i>ossmixid</i> is ALSAID[,INDEX]@OSSID: </p>
-<p>&nbsp;<wbr>&nbsp;&quot;Master [at] VOLUME&quot;<br />
+<p>&nbsp;<wbr>&nbsp;&quot;Master [at] VOLUME&quot;<br/>
 &nbsp;<wbr>&nbsp;&quot;PCM,1@ALTPCM&quot; </p>
 <p> Known OSS attributes: </p>
-<p>&nbsp;<wbr>&nbsp;VOLUME, BASS, TREBLE, SYNTH, PCM, SPEAKER, LINE, MIC, CD, IMIX, ALTPCM,<br />
-&nbsp;<wbr>&nbsp;RECLEV, IGAIN, OGAIN, LINE1, LINE2, LINE3, DIGITAL1, DIGITAL2, DIGITAL3,<br />
+<p>&nbsp;<wbr>&nbsp;VOLUME, BASS, TREBLE, SYNTH, PCM, SPEAKER, LINE, MIC, CD, IMIX, ALTPCM,<br/>
+&nbsp;<wbr>&nbsp;RECLEV, IGAIN, OGAIN, LINE1, LINE2, LINE3, DIGITAL1, DIGITAL2, DIGITAL3,<br/>
 &nbsp;<wbr>&nbsp;PHONEIN, PHONEOUT, VIDEO, RADIO, MONITOR </p>
 </dd><dt><i>-v</i> | <i>&#8211;verbose</i></dt>
 <dd>

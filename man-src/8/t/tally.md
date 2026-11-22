@@ -24,7 +24,7 @@ description: "tally.control – Keep track of newsgroup creations and deletions"
  1 Control: newgroup misc.created</pre>
 </dl>
 <h2>History</h2>
-<p>Written by Landon Curt Noll &lt;chongo [at] toad.com&gt; and Rich <tt>$alz</tt> &lt;rsalz [at] uunet.uu.net&gt; for InterNetNews. Rewritten and converted to <font SIZE="-1">POD</font> by Julien Elie. </p>
+<p>Written by Landon Curt Noll &lt;chongo [at] toad.com&gt; and Rich <tt>$alz</tt> &lt;rsalz [at] uunet.uu.net&gt; for InterNetNews. Rewritten and converted to POD by Julien Elie. </p>
 <p> $Id: tally.control.pod 8357 2009-02-27 17:56:00Z iulius $</p>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/5-control-ctl/">control.ctl</a></i>(5), <i><a href="/docs/linux/man/8-news-daily/">news.daily</a></i>(8), <i><a href="/docs/linux/man/5-newslog/">newslog</a></i>(5), <i><a href="/docs/linux/man/8-scanlogs/">scanlogs</a></i>(8). </p>

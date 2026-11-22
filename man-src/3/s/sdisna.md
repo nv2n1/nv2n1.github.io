@@ -11,7 +11,7 @@ description: "sdisna.f –"
 <p> sdisna.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>sdisna</code> (JOB, M, N, D, SEP, INFO)<br />
+<p> subroutine <code>sdisna</code> (JOB, M, N, D, SEP, INFO)<br/>
  <i></i><code>SDISNA</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sdisna (characterJOB, integerM, integerN, real, dimension( * )D, real, dimension( * )SEP, integerINFO)</h3>

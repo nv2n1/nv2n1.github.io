@@ -21,7 +21,7 @@ description: "btrfs-replace – replace devices managed by btrfs with other devi
 <dd>Replace device of a btrfs filesystem. </dd>
 <p> On a live filesystem, duplicate the data to the target device which is currently stored on the source device. If the source device is not available anymore, or if the -r option is set, the data is built only using the RAID redundancy mechanisms. After completion of the operation, the source device is removed from the filesystem. If the <i>&lt;srcdev&gt;</i> is a numerical value, it is assumed to be the device id of the filesystem which is mounted at <i>&lt;path&gt;</i>, otherwise it is the path to the source device. If the source device is disconnected, from the system, you have to use the devid parameter format. The <i>&lt;targetdev&gt;</i> needs to be same size or larger than the <i>&lt;srcdev&gt;</i>. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  the filesystem has to be resized to fully take advantage of a larger target device; this can be achieved with <code>btrfs filesystem resize &lt;devid&gt;:max /path</code> </dd>
 </dl>
 <p> <code>Options</code> </p>

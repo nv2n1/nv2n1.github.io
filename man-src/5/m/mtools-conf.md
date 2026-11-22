@@ -42,11 +42,11 @@ description: "mtools.conf – mtools configuration files"
 <dd>If 1, uses the European notation for times (twenty four hour clock), else uses the UK/US notation (am/pm)</dd>
 <dt><tt>MTOOLS_LOCK_TIMEOUT</tt>&nbsp;</dt>
 <dd>How long, in seconds, to wait for a locked device to become free. Defaults to 30.</dd></dl>
-<p> Example: Inserting the following line into your configuration file instructs mtools to skip the sanity checks:<br />
+<p> Example: Inserting the following line into your configuration file instructs mtools to skip the sanity checks:<br/>
 &nbsp; </p>
 <pre><code> MTOOLS_SKIP_CHECK=1
 </code></pre>
-<p> Global variables may also be set via the environment:<br />
+<p> Global variables may also be set via the environment:<br/>
 &nbsp; </p>
 <pre><code> export MTOOLS_SKIP_CHECK=1
 </code></pre>
@@ -56,7 +56,7 @@ description: "mtools.conf – mtools configuration files"
 <dd>The format used for printing dates of files. By default, is dd-mm-yyyy.</dd></dl>
 <h3>Per drive flags and variables</h3>
 <h3>&nbsp;<wbr>&nbsp;General information</h3>
-<p>Per drive flags and values may be described in a drive section. A drive section starts with <tt>drive</tt> &quot;<i>driveletter</i>&quot; : Then follow variable-value pairs and flags. This is a sample drive description:<br />
+<p>Per drive flags and values may be described in a drive section. A drive section starts with <tt>drive</tt> &quot;<i>driveletter</i>&quot; : Then follow variable-value pairs and flags. This is a sample drive description:<br/>
 &nbsp; </p>
 <pre><code> drive a:
  file=&quot;/dev/fd0&quot; use_xdf=1
@@ -161,7 +161,7 @@ description: "mtools.conf – mtools configuration files"
 <dd>because there is no disk in the drive,</dd>
 <dt>3.&nbsp;</dt>
 <dd>or because of other problems.</dd></dl>
-<p> Multiple definitions are useful when using physical devices which are only able to support one single disk geometry. Example:<br />
+<p> Multiple definitions are useful when using physical devices which are only able to support one single disk geometry. Example:<br/>
 &nbsp; </p>
 <pre><code> drive a: file=&quot;/dev/fd0H1440&quot; 1.44m
  drive a: file=&quot;/dev/fd0H720&quot; 720k

@@ -18,7 +18,7 @@ description: "CartConvert — convert geodetic coordinates to geocentric or loca
 <dt><code>-r</code></dt>
 <dd>perform the reverse projection. <i>x</i>, <i>y</i>, <i>z</i> are given on standard input and each line of standard output gives <i>latitude</i>, <i>longitude</i>, <i>height</i>.</dd>
 <dt><code>-e</code></dt>
-<dd>specify the ellipsoid via <i>a</i> <i>f</i>; the equatorial radius is <i>a</i> and the flattening is <i>f</i>. Setting <i>f</i> = 0 results in a sphere. Specify <i>f</i> &lt; 0 for a prolate ellipsoid. A simple fraction, e.g., 1/297, is allowed for <i>f</i>. (Also, if <i>f</i> &gt; 1, the flattening is set to 1/<i>f</i>.) By default, the <font SIZE="-1">WGS84</font> ellipsoid is used, <i>a</i> = 6378137 m, <i>f</i> = 1/298.257223563.</dd>
+<dd>specify the ellipsoid via <i>a</i> <i>f</i>; the equatorial radius is <i>a</i> and the flattening is <i>f</i>. Setting <i>f</i> = 0 results in a sphere. Specify <i>f</i> &lt; 0 for a prolate ellipsoid. A simple fraction, e.g., 1/297, is allowed for <i>f</i>. (Also, if <i>f</i> &gt; 1, the flattening is set to 1/<i>f</i>.) By default, the WGS84 ellipsoid is used, <i>a</i> = 6378137 m, <i>f</i> = 1/298.257223563.</dd>
 <dt><code>&#8211;comment-delimiter</code></dt>
 <dd>set the comment delimiter to <i>commentdelim</i> (e.g., &#8220;#&#8221; or &#8220;//&#8221;). If set, the input lines will be scanned for this delimiter and, if found, the delimiter and the rest of the line will be removed prior to processing and subsequently appended to the output line (separated by a space).</dd>
 <dt><code>&#8211;version</code></dt>

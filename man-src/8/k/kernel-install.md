@@ -31,7 +31,7 @@ description: "kernel-install – Add and remove kernel and initramfs images to a
 <dl>
 <dd>&bull; 50-depmod.install runs <code><a href="/docs/linux/man/8-depmod/">depmod</a></code>(8) for the <i>KERNEL-VERSION</i>.</dd></dl>
 <dl>
-<dd>&bull; 90-loaderentry.install copies <i>KERNEL-IMAGE</i> to $BOOT/<i>MACHINE-ID</i>/<i>KERNEL-VERSION</i>/linux. If an <i>INITRD-FILE</i> is provided, it also copies <i>INITRD-FILE</i> to $BOOT/<i>MACHINE-ID</i>/<i>KERNEL_VERSION</i>/<i>INITRD-FILE</i>. It also creates a boot loader entry according to the m[blue]<code>Boot Loader Specification</code>m[]<font SIZE="-2">[1]</font> in $BOOT/loader/entries/<i>MACHINE-ID</i>&#8211;<i>KERNEL-VERSION</i>.conf. The title of the entry is the <i>PRETTY_NAME</i> parameter specified in /etc/os-release or /usr/lib/os-release (if the former is missing), or &quot;Linux <i>KERNEL-VERSION</i>&quot;, if unset. </dd>
+<dd>&bull; 90-loaderentry.install copies <i>KERNEL-IMAGE</i> to $BOOT/<i>MACHINE-ID</i>/<i>KERNEL-VERSION</i>/linux. If an <i>INITRD-FILE</i> is provided, it also copies <i>INITRD-FILE</i> to $BOOT/<i>MACHINE-ID</i>/<i>KERNEL_VERSION</i>/<i>INITRD-FILE</i>. It also creates a boot loader entry according to the m[blue]<code>Boot Loader Specification</code>m[][1] in $BOOT/loader/entries/<i>MACHINE-ID</i>&#8211;<i>KERNEL-VERSION</i>.conf. The title of the entry is the <i>PRETTY_NAME</i> parameter specified in /etc/os-release or /usr/lib/os-release (if the former is missing), or &quot;Linux <i>KERNEL-VERSION</i>&quot;, if unset. </dd>
 <p> If the entry directory $BOOT/<i>MACHINE-ID</i>/<i>KERNEL-VERSION</i>/ does not exist, this plugin does nothing.</dl>
 </dl>
 <p> <code>remove </code><i>KERNEL-VERSION</i></p>
@@ -49,7 +49,7 @@ description: "kernel-install – Add and remove kernel and initramfs images to a
 <dd>&bull; 90-loaderentry.install removes the file $BOOT/loader/entries/<i>MACHINE-ID</i>&#8211;<i>KERNEL-VERSION</i>.conf.</dd></dl>
 </dl>
 <h2>The Fi$Bootfr Partition</h2>
-<p>The partition where the kernels and m[blue]<code>Boot Loader Specification</code>m[]<font SIZE="-2">[1]</font> snippets are located is called <i>$BOOT</i>. <code>kernel-install</code> determines the location of this partition by checking /efi/, /boot/, and /boot/efi/ in turn. The first location where $BOOT/loader/entries/ or $BOOT/$MACHINE_ID/ exists is used.</p>
+<p>The partition where the kernels and m[blue]<code>Boot Loader Specification</code>m[][1] snippets are located is called <i>$BOOT</i>. <code>kernel-install</code> determines the location of this partition by checking /efi/, /boot/, and /boot/efi/ in turn. The first location where $BOOT/loader/entries/ or $BOOT/$MACHINE_ID/ exists is used.</p>
 <h2>Options</h2>
 <p>The following options are understood: </p>
 <p> <code>-v</code>, <code>&#8211;verbose</code></p>
@@ -79,7 +79,7 @@ description: "kernel-install – Add and remove kernel and initramfs images to a
 <dl>
 <dd>The content of the file specifies the operating system title <i>PRETTY_NAME</i>.</dd></dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/5-machine-id/">machine-id</a></code>(5), <code><a href="/docs/linux/man/5-os-release/">os-release</a></code>(5), <code><a href="/docs/linux/man/8-depmod/">depmod</a></code>(8), <code><a href="/docs/linux/man/7-systemd-boot/">systemd-boot</a></code>(7), m[blue]<code>Boot Loader Specification</code>m[]<font SIZE="-2">[1]</font></p>
+<p><code><a href="/docs/linux/man/5-machine-id/">machine-id</a></code>(5), <code><a href="/docs/linux/man/5-os-release/">os-release</a></code>(5), <code><a href="/docs/linux/man/8-depmod/">depmod</a></code>(8), <code><a href="/docs/linux/man/7-systemd-boot/">systemd-boot</a></code>(7), m[blue]<code>Boot Loader Specification</code>m[][1]</p>
 <h2>Notes</h2>
 <dl>
 <dt> 1.</dt>

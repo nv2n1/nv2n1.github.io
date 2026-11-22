@@ -41,11 +41,11 @@ mqd_t mq_open(const char *name, int oflag, mode_t mode,
 <dd> Open the queue in nonblocking mode. In circumstances where <code><a href="/docs/linux/man/3-mq_receive/">mq_receive</a></code>(3) and <code><a href="/docs/linux/man/3-mq_send/">mq_send</a></code>(3) would normally block, these functions instead fail with the error <code>EAGAIN</code>.</dd></dl>
 <p> If <code>O_CREAT</code> is specified in <i>oflag</i>, then two additional arguments must be supplied. The <i>mode</i> argument specifies the permissions to be placed on the new queue, as for <code><a href="/docs/linux/man/2-open/">open</a></code>(2). (Symbolic definitions for the permissions bits can be obtained by including <i>&lt;sys/stat.h&gt;</i>.) The permissions settings are masked against the process umask. </p>
 <p> The fields of the <i>struct mq_attr</i> pointed to <i>attr</i> specify the maximum number of messages and the maximum size of messages that the queue will allow. This structure is defined as follows: </p>
-<p> struct mq_attr {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;long mq_flags;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Flags&nbsp;(ignored for mq_open())&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;long mq_maxmsg;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Max.&nbsp;#&nbsp;of messages on queue&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;long mq_msgsize;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Max. message size&nbsp;(bytes)&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;long mq_curmsgs;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;#&nbsp;of messages currently in queue<br />
+<p> struct mq_attr {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;long mq_flags;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Flags&nbsp;(ignored for mq_open())&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;long mq_maxmsg;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Max.&nbsp;#&nbsp;of messages on queue&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;long mq_msgsize;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Max. message size&nbsp;(bytes)&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;long mq_curmsgs;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;#&nbsp;of messages currently in queue<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(ignored for mq_open())&nbsp;*/ }; </p>
 <p> Only the <i>mq_maxmsg</i> and <i>mq_msgsize</i> fields are employed when calling <code>mq_open</code>(); the values in the remaining fields are ignored. </p>
 <p> If <i>attr</i> is NULL, then the queue is created with implementation-defined default attributes. Since Linux 3.5, two <i>/proc</i> files can be used to control these defaults; see <code><a href="/docs/linux/man/7-mq_overview/">mq_overview</a></code>(7) for details.</p>

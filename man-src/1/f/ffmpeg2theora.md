@@ -34,7 +34,7 @@ description: "ffmpeg2theora – command-line converter to create Ogg Theora and 
 <h3>Video output options:</h3>
 <dl>
 <dt><code>-v, &#8211;videoquality</code></dt>
-<dd> [0 to 10] Set encoding quality for video (default: 6).<br />
+<dd> [0 to 10] Set encoding quality for video (default: 6).<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>use higher values for better quality</dd>
 <dt><code>-V, &#8211;videobitrate</code></dt>
 <dd> Set encoding bitrate for video (in kb/s).</dd>
@@ -83,7 +83,7 @@ description: "ffmpeg2theora – command-line converter to create Ogg Theora and 
 <h3>Audio output options:</h3>
 <dl>
 <dt><code>-a, &#8211;audioquality</code></dt>
-<dd> [-2 to 10] Set encoding quality for audio (default: 1).<br />
+<dd> [-2 to 10] Set encoding quality for audio (default: 1).<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>use higher values for better quality</dd>
 <dt><code>-A, &#8211;audiobitrate</code></dt>
 <dd> [32 to 500] Set encoding bitrate for audio (in kb/s).</dd>
@@ -102,7 +102,7 @@ description: "ffmpeg2theora – command-line converter to create Ogg Theora and 
 <dt><code>&#8211;no-deinterlace</code></dt>
 <dd> Force deinterlace off.</dd>
 <dt><code>&#8211;vhook</code></dt>
-<dd> you can use ffmpeg&#8217;s vhook system, example:<br />
+<dd> you can use ffmpeg&#8217;s vhook system, example:<br/>
 &nbsp;<wbr>ffmpeg2theora &#8211;vhook&nbsp;<wbr>&#8216;/path/watermark.so -f wm.gif&#8217;&nbsp;<wbr>input.dv</dd>
 <dt><code>-f, &#8211;format</code></dt>
 <dd> Specify input format.</dd>
@@ -175,22 +175,22 @@ description: "ffmpeg2theora – command-line converter to create Ogg Theora and 
 <dt><code>&#8211;frontend</code></dt>
 <dd> print status information in json, one json dict per line</dd></dl>
 <h2>EXAMPLES</h2>
-<p> Encode Videos:<br />
-&nbsp;<wbr>&nbsp;<wbr>ffmpeg2theora videoclip.avi&nbsp;<wbr>(will write output to videoclip.ogv)<br />
-&nbsp;<wbr>&nbsp;<wbr><br />
+<p> Encode Videos:<br/>
+&nbsp;<wbr>&nbsp;<wbr>ffmpeg2theora videoclip.avi&nbsp;<wbr>(will write output to videoclip.ogv)<br/>
+&nbsp;<wbr>&nbsp;<wbr><br/>
 &nbsp;<wbr>&nbsp;<wbr>cat something.dv | ffmpeg2theora -f dv -o output.ogv &#8211; </p>
-<p> Encode a series of images:<br />
+<p> Encode a series of images:<br/>
 &nbsp;<wbr>&nbsp;<wbr>ffmpeg2theora frame%06d.png -o output.ogv </p>
-<p> Live streaming from V4L Device:<br />
-&nbsp;<wbr>&nbsp;<wbr>ffmpeg2theora &#8211;no-skeleton&nbsp;<wbr>/dev/video0 -f video4linux&nbsp;<wbr>\<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;inputfps 15 -x 160 -y 128&nbsp;<wbr>\<br />
+<p> Live streaming from V4L Device:<br/>
+&nbsp;<wbr>&nbsp;<wbr>ffmpeg2theora &#8211;no-skeleton&nbsp;<wbr>/dev/video0 -f video4linux&nbsp;<wbr>\<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211;inputfps 15 -x 160 -y 128&nbsp;<wbr>\<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-o &#8211; | oggfwd icast2server 8000 password&nbsp;<wbr>/theora.ogv </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>(you might have to use video4linux2 depending on your hardware)<br />
-&nbsp;<wbr>&nbsp;<wbr> Live encoding from a DV camcorder (needs a fast machine):<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>(you might have to use video4linux2 depending on your hardware)<br/>
+&nbsp;<wbr>&nbsp;<wbr> Live encoding from a DV camcorder (needs a fast machine):<br/>
 &nbsp;<wbr>&nbsp;<wbr>dvgrab &#8211; | ffmpeg2theora -f dv -x 352 -y 288 -o output.ogv &#8211; </p>
-<p> Live encoding and streaming to icecast server:<br />
-&nbsp;<wbr>&nbsp;<wbr>dvgrab &#8211;format raw &#8211;&nbsp;<wbr>\<br />
-&nbsp;<wbr>&nbsp;<wbr>| ffmpeg2theora &#8211;no-skeleton -f dv -x 160 -y 128 -o&nbsp;<wbr>/dev/stdout &#8211;&nbsp;<wbr>\<br />
+<p> Live encoding and streaming to icecast server:<br/>
+&nbsp;<wbr>&nbsp;<wbr>dvgrab &#8211;format raw &#8211;&nbsp;<wbr>\<br/>
+&nbsp;<wbr>&nbsp;<wbr>| ffmpeg2theora &#8211;no-skeleton -f dv -x 160 -y 128 -o&nbsp;<wbr>/dev/stdout &#8211;&nbsp;<wbr>\<br/>
 &nbsp;<wbr>&nbsp;<wbr>| oggfwd icast2server 8000 password&nbsp;<wbr>/theora.ogv </p>
 <h2>AUTHOR</h2>
 <p> ffmpeg2theora was written by jan gerber &lt;j@v2v.cc&gt;. </p>

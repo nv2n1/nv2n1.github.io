@@ -10,15 +10,15 @@ description: "RSL Value Accessors –"
 
 <p> RSL Value Accessors &#8211; </p>
 <h3>Functions</h3>
-<p> int <code>globus_rsl_value_concatenation_set_left</code> (globus_rsl_value_t *concatenation_node, globus_rsl_value_t *new_left_node)<br />
- <i>Set the left-hand value of a concatenation. </i><br />
- int <code>globus_rsl_value_concatenation_set_right</code> (globus_rsl_value_t *concatenation_node, globus_rsl_value_t *new_right_node)<br />
- <i>Set the right-hand value of a concatenation. </i><br />
- int <code>globus_rsl_value_list_param_get</code> (globus_list_t *ast_node_list, int required_type, char ***value, int *value_ctr)<br />
- <i>Get the values of an RSL value list. </i><br />
- globus_list_t * <code>globus_rsl_param_get_values</code> (globus_rsl_t *ast_node, char *param)<br />
- <i>Get the list of values for an RSL attribute. </i><br />
- int <code>globus_rsl_param_get</code> (globus_rsl_t *ast_node, int param_type, char *param, char ***values)<br />
+<p> int <code>globus_rsl_value_concatenation_set_left</code> (globus_rsl_value_t *concatenation_node, globus_rsl_value_t *new_left_node)<br/>
+ <i>Set the left-hand value of a concatenation. </i><br/>
+ int <code>globus_rsl_value_concatenation_set_right</code> (globus_rsl_value_t *concatenation_node, globus_rsl_value_t *new_right_node)<br/>
+ <i>Set the right-hand value of a concatenation. </i><br/>
+ int <code>globus_rsl_value_list_param_get</code> (globus_list_t *ast_node_list, int required_type, char ***value, int *value_ctr)<br/>
+ <i>Get the values of an RSL value list. </i><br/>
+ globus_list_t * <code>globus_rsl_param_get_values</code> (globus_rsl_t *ast_node, char *param)<br/>
+ <i>Get the list of values for an RSL attribute. </i><br/>
+ int <code>globus_rsl_param_get</code> (globus_rsl_t *ast_node, int param_type, char *param, char ***values)<br/>
  <i>Get the value strings for an RSL attribute. </i></p>
 <h2>Detailed Description</h2>
 <h2>Function Documentation</h2>
@@ -27,9 +27,9 @@ description: "RSL Value Accessors –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>ast_node</i> A pointer to an RSL syntax tree that will be searched. This may be a relation or boolean RSL string.<br />
- <i>param_type</i> A flag indicating what type of values are expected for the RSL attribute named by the <i>param</i> parameter. This flag value may be <i>GLOBUS_RSL_PARAM_SINGLE_LITERAL</i>, <i>GLOBUS_RSL_PARAM_MULTI_LITERAL</i>, or <i>GLOBUS_RSL_PARAM_SEQUENCE</i>.<br />
- <i>param</i> A string pointing to the name of of the RSL attribute to search for.<br />
+</dt><dd> <i>ast_node</i> A pointer to an RSL syntax tree that will be searched. This may be a relation or boolean RSL string.<br/>
+ <i>param_type</i> A flag indicating what type of values are expected for the RSL attribute named by the <i>param</i> parameter. This flag value may be <i>GLOBUS_RSL_PARAM_SINGLE_LITERAL</i>, <i>GLOBUS_RSL_PARAM_MULTI_LITERAL</i>, or <i>GLOBUS_RSL_PARAM_SEQUENCE</i>.<br/>
+ <i>param</i> A string pointing to the name of of the RSL attribute to search for.<br/>
  <i>values</i> An output parameter pointing to an array of strings that will be allocated and contain pointers to the RSL value strings if they match the format specified by the <i>param_type</i> flag. The caller is responsible for freeing this array, but not the strings in the array.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -40,7 +40,7 @@ description: "RSL Value Accessors –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>ast_node</i> A pointer to an RSL syntax tree that will be searched. This may be a relation or boolean RSL string.<br />
+</dt><dd> <i>ast_node</i> A pointer to an RSL syntax tree that will be searched. This may be a relation or boolean RSL string.<br/>
  <i>param</i> The name of the attribute to search for in the parse tree pointed to by the <i>ast_node</i> parameter.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -51,7 +51,7 @@ description: "RSL Value Accessors –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>concatenation_node</i> A pointer to the RSL value concatenation node to modify.<br />
+</dt><dd> <i>concatenation_node</i> A pointer to the RSL value concatenation node to modify.<br/>
  <i>new_left_node</i> A pointer to the new left hand side of the concatenation.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -62,7 +62,7 @@ description: "RSL Value Accessors –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>concatenation_node</i> A pointer to the RSL value concatenation node to modify.<br />
+</dt><dd> <i>concatenation_node</i> A pointer to the RSL value concatenation node to modify.<br/>
  <i>new_right_node</i> A pointer to the new right hand side of the concatenation.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -73,9 +73,9 @@ description: "RSL Value Accessors –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>ast_node_list</i> A pointer to a list of globus_rsl_value_t pointers whose values will be copied to the <i>value</i> parameter array.<br />
- <i>required_type</i> A flag indicating whether the list is expected to contain literal strings or string pairs. This value may be one of <i>GLOBUS_RSL_VALUE_LITERAL</i> or <i>GLOBUS_RSL_VALUE_SEQUENCE</i>.<br />
- <i>value</i> An output parameter pointing to an array of strings. This array must be at least as large as the number of elements in the list pointed to by <i>ast_node_list</i>.<br />
+</dt><dd> <i>ast_node_list</i> A pointer to a list of globus_rsl_value_t pointers whose values will be copied to the <i>value</i> parameter array.<br/>
+ <i>required_type</i> A flag indicating whether the list is expected to contain literal strings or string pairs. This value may be one of <i>GLOBUS_RSL_VALUE_LITERAL</i> or <i>GLOBUS_RSL_VALUE_SEQUENCE</i>.<br/>
+ <i>value</i> An output parameter pointing to an array of strings. This array must be at least as large as the number of elements in the list pointed to by <i>ast_node_list</i>.<br/>
  <i>value_ctr</i> An output parameter pointing to an integer that will be incremented for each string copied into the <i>value</i> array.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

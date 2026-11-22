@@ -23,7 +23,7 @@ description: "gnutls_certificate_set_x509_key_file – API function"
 <dt>gnutls_x509_crt_fmt_t type</dt>
 <dd> is PEM or DER</dd></dl>
 <h2>DESCRIPTION</h2>
-<p> This function sets a certificate/private key pair in the gnutls_certificate_credentials_t structure. This function may be called more than once, in case multiple keys/certificates exist for the server. For clients that need to send more than its own end entity certificate, e.g., also an intermediate CA cert, then the<br />
+<p> This function sets a certificate/private key pair in the gnutls_certificate_credentials_t structure. This function may be called more than once, in case multiple keys/certificates exist for the server. For clients that need to send more than its own end entity certificate, e.g., also an intermediate CA cert, then the<br/>
 &nbsp;<wbr><i>certfile</i>&nbsp;<wbr>must contain the ordered certificate chain. </p>
 <p> Note that the names in the certificate provided will be considered when selecting the appropriate certificate to use (in case of multiple certificate/key pairs). </p>
 <p> This function can also accept URLs at <i>keyfile</i> and <i>certfile</i> . In that case it will import the private key and certificate indicated by the URLs. Note that the supported URLs are the ones indicated by <code>gnutls_url_is_supported()</code>. </p>
@@ -32,10 +32,10 @@ description: "gnutls_certificate_set_x509_key_file – API function"
 <h2>RETURNS</h2>
 <p> <code>GNUTLS_E_SUCCESS</code> (0) on success, or a negative error code.</p>
 <h2>REPORTING BUGS</h2>
-<p> Report bugs to &lt;bugs [at] gnutls.org&gt;.<br />
+<p> Report bugs to &lt;bugs [at] gnutls.org&gt;.<br/>
  Home page: <a rel="nofollow" href="http://www.gnutls.org">http://www.gnutls.org</a> </p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2001-2014 Free Software Foundation, Inc..<br />
+<p> Copyright &#169; 2001-2014 Free Software Foundation, Inc..<br/>
  Copying and distribution of this file, with or without modification, are permitted in any medium without royalty provided the copyright notice and this notice are preserved.</p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>

@@ -10,7 +10,7 @@ description: "dlasdq.f –"
 <p>dlasdq.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dlasdq</code> (UPLO, SQRE, N, NCVT, NRU, NCC, D, E, VT, LDVT, U, LDU, C, LDC, WORK, INFO)<br />
+<p>subroutine <code>dlasdq</code> (UPLO, SQRE, N, NCVT, NRU, NCC, D, E, VT, LDVT, U, LDU, C, LDC, WORK, INFO)<br/>
  <i></i><code>DLASDQ</code> computes the SVD of a real bidiagonal matrix with diagonal d and off-diagonal e. Used by sbdsdc.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlasdq (characterUPLO, integerSQRE, integerN, integerNCVT, integerNRU, integerNCC, double precision, dimension( * )D, double precision, dimension( * )E, double precision, dimension( ldvt, * )VT, integerLDVT, double precision, dimension( ldu, * )U, integerLDU, double precision, dimension( ldc, * )C, integerLDC, double precision, dimension( * )WORK, integerINFO)</h3>

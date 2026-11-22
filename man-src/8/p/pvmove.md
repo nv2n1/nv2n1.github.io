@@ -20,12 +20,12 @@ description: "pvmove – Move extents from one physical volume to another"
 <p>Move PV extents. </p>
 <p> <code>pvmove</code> <i>PV</i> </p>
 <dl>
-<dd>[ <code>-A</code>|<code>&#8211;autobackup</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>-n</code>|<code>&#8211;name</code> <i>LV</i> ]<br />
- [ <code>&#8211;alloc</code> <code>contiguous</code>|<code>cling</code>|<code>cling_by_tags</code>|<code>normal</code>|<code>anywhere</code>|<code>inherit</code> ]<br />
- [ <code>&#8211;atomic</code> ]<br />
- [ <code>&#8211;noudevsync</code> ]<br />
- [ <code>&#8211;reportformat</code> <code>basic</code>|<code>json</code> ]<br />
+<dd>[ <code>-A</code>|<code>&#8211;autobackup</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>-n</code>|<code>&#8211;name</code> <i>LV</i> ]<br/>
+ [ <code>&#8211;alloc</code> <code>contiguous</code>|<code>cling</code>|<code>cling_by_tags</code>|<code>normal</code>|<code>anywhere</code>|<code>inherit</code> ]<br/>
+ [ <code>&#8211;atomic</code> ]<br/>
+ [ <code>&#8211;noudevsync</code> ]<br/>
+ [ <code>&#8211;reportformat</code> <code>basic</code>|<code>json</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <dl>
 <dd>[ <i>PV</i> &#8230; ]</dd></dl>
@@ -35,24 +35,24 @@ description: "pvmove – Move extents from one physical volume to another"
 <dd>[ COMMON_OPTIONS ]</dd></dl>
 <p> Common options for command:</p>
 <dl>
-<dd>[ <code>-b</code>|<code>&#8211;background</code> ]<br />
- [ <code>-i</code>|<code>&#8211;interval</code> <i>Number</i> ]<br />
+<dd>[ <code>-b</code>|<code>&#8211;background</code> ]<br/>
+ [ <code>-i</code>|<code>&#8211;interval</code> <i>Number</i> ]<br/>
  [ <code>&#8211;abort</code> ]</dd></dl>
 <p> Common options for lvm:</p>
 <dl>
-<dd>[ <code>-d</code>|<code>&#8211;debug</code> ]<br />
- [ <code>-h</code>|<code>&#8211;help</code> ]<br />
- [ <code>-q</code>|<code>&#8211;quiet</code> ]<br />
- [ <code>-t</code>|<code>&#8211;test</code> ]<br />
- [ <code>-v</code>|<code>&#8211;verbose</code> ]<br />
- [ <code>-y</code>|<code>&#8211;yes</code> ]<br />
- [ <code>&#8211;commandprofile</code> <i>String</i> ]<br />
- [ <code>&#8211;config</code> <i>String</i> ]<br />
- [ <code>&#8211;driverloaded</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;lockopt</code> <i>String</i> ]<br />
- [ <code>&#8211;longhelp</code> ]<br />
- [ <code>&#8211;nolocking</code> ]<br />
- [ <code>&#8211;profile</code> <i>String</i> ]<br />
+<dd>[ <code>-d</code>|<code>&#8211;debug</code> ]<br/>
+ [ <code>-h</code>|<code>&#8211;help</code> ]<br/>
+ [ <code>-q</code>|<code>&#8211;quiet</code> ]<br/>
+ [ <code>-t</code>|<code>&#8211;test</code> ]<br/>
+ [ <code>-v</code>|<code>&#8211;verbose</code> ]<br/>
+ [ <code>-y</code>|<code>&#8211;yes</code> ]<br/>
+ [ <code>&#8211;commandprofile</code> <i>String</i> ]<br/>
+ [ <code>&#8211;config</code> <i>String</i> ]<br/>
+ [ <code>&#8211;driverloaded</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;lockopt</code> <i>String</i> ]<br/>
+ [ <code>&#8211;longhelp</code> ]<br/>
+ [ <code>&#8211;nolocking</code> ]<br/>
+ [ <code>&#8211;profile</code> <i>String</i> ]<br/>
  [ <code>&#8211;version</code> ]</dd></dl>
 <h2>Options</h2>
 <dl>
@@ -141,23 +141,23 @@ description: "pvmove – Move extents from one physical volume to another"
 <h2>Notes</h2>
 <p>pvmove works as follows: 1. A temporary &#8216;pvmove&#8217; LV is created to store details of all the data movements required. 2. Every LV in the VG is searched for contiguous data that need moving according to the command line arguments. For each piece of data found, a new segment is added to the end of the pvmove LV. This segment takes the form of a temporary mirror to copy the data from the original location to a newly allocated location. The original LV is updated to use the new temporary mirror segment in the pvmove LV instead of accessing the data directly. 3. The VG metadata is updated on disk. 4. The first segment of the pvmove LV is activated and starts to mirror the first part of the data. Only one segment is mirrored at once as this is usually more efficient. 5. A daemon repeatedly checks progress at the specified time interval. When it detects that the first temporary mirror is in sync, it breaks that mirror so that only the new location for that data gets used and writes a checkpoint into the VG metadata on disk. Then it activates the mirror for the next segment of the pvmove LV. 6. When there are no more segments left to be mirrored, the temporary LV is removed and the VG metadata is updated so that the LVs reflect the new data locations. Note that this new process cannot support the original LVM1 type of on-disk metadata. Metadata can be converted using <code><a href="/docs/linux/man/8-vgconvert/">vgconvert</a></code>(8). If the <code>&#8211;atomic</code> option is used, a slightly different approach is used for the move. Again, a temporary &#8216;pvmove&#8217; LV is created to store the details of all the data movements required. This temporary LV contains all the segments of the various LVs that need to be moved. However, in this case, an identical LV is allocated that contains the same number of segments and a mirror is created to copy the contents from the first temporary LV to the second. After a complete copy is made, the temporary LVs are removed, leaving behind the segments on the destination PV. If an abort is issued during the move, all LVs being moved will remain on the source PV. </p>
 <h2>Examples</h2>
-<p>Move all physical extents that are used by simple LVs on the specified PV to free physical extents elsewhere in the VG.<br />
+<p>Move all physical extents that are used by simple LVs on the specified PV to free physical extents elsewhere in the VG.<br/>
  <code>pvmove /dev/sdb1</code> </p>
-<p> Use a specific destination PV when moving physical extents.<br />
+<p> Use a specific destination PV when moving physical extents.<br/>
  <code>pvmove /dev/sdb1 /dev/sdc1</code> </p>
-<p> Move extents belonging to a single LV.<br />
+<p> Move extents belonging to a single LV.<br/>
  <code>pvmove -n lvol1 /dev/sdb1 /dev/sdc1</code> </p>
-<p> Rather than moving the contents of an entire device, it is possible to move a range of physical extents, for example numbers 1000 to 1999 inclusive on the specified PV.<br />
+<p> Rather than moving the contents of an entire device, it is possible to move a range of physical extents, for example numbers 1000 to 1999 inclusive on the specified PV.<br/>
  <code>pvmove /dev/sdb1:1000-1999</code> </p>
-<p> A range of physical extents to move can be specified as start+length. For example, starting from PE 1000. (Counting starts from 0, so this refers to the 1001st to the 2000th PE inclusive.)<br />
+<p> A range of physical extents to move can be specified as start+length. For example, starting from PE 1000. (Counting starts from 0, so this refers to the 1001st to the 2000th PE inclusive.)<br/>
  <code>pvmove /dev/sdb1:1000+1000</code> </p>
-<p> Move a range of physical extents to a specific PV (which must have sufficient free extents).<br />
+<p> Move a range of physical extents to a specific PV (which must have sufficient free extents).<br/>
  <code>pvmove /dev/sdb1:1000-1999 /dev/sdc1</code> </p>
-<p> Move a range of physical extents to specific new extents on a new PV.<br />
+<p> Move a range of physical extents to specific new extents on a new PV.<br/>
  <code>pvmove /dev/sdb1:1000-1999 /dev/sdc1:0-999</code> </p>
-<p> If the source and destination are on the same disk, the <code>anywhere</code> allocation policy is needed.<br />
+<p> If the source and destination are on the same disk, the <code>anywhere</code> allocation policy is needed.<br/>
  <code>pvmove &#8211;alloc anywhere /dev/sdb1:1000-1999 /dev/sdb1:0-999</code> </p>
-<p> The part of a specific LV present within in a range of physical extents can also be picked out and moved.<br />
+<p> The part of a specific LV present within in a range of physical extents can also be picked out and moved.<br/>
  <code>pvmove -n lvol1 /dev/sdb1:1000-1999 /dev/sdc1</code></p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-lvm/">lvm</a></code>(8) <code><a href="/docs/linux/man/5-lvm-conf/">lvm.conf</a></code>(5) <code><a href="/docs/linux/man/8-lvmconfig/">lvmconfig</a></code>(8) <code><a href="/docs/linux/man/8-pvchange/">pvchange</a></code>(8) <code><a href="/docs/linux/man/8-pvck/">pvck</a></code>(8) <code><a href="/docs/linux/man/8-pvcreate/">pvcreate</a></code>(8) <code><a href="/docs/linux/man/8-pvdisplay/">pvdisplay</a></code>(8) <code><a href="/docs/linux/man/8-pvmove/">pvmove</a></code>(8) <code><a href="/docs/linux/man/8-pvremove/">pvremove</a></code>(8) <code><a href="/docs/linux/man/8-pvresize/">pvresize</a></code>(8) <code><a href="/docs/linux/man/8-pvs/">pvs</a></code>(8) <code><a href="/docs/linux/man/8-pvscan/">pvscan</a></code>(8) <code><a href="/docs/linux/man/8-vgcfgbackup/">vgcfgbackup</a></code>(8) <code><a href="/docs/linux/man/8-vgcfgrestore/">vgcfgrestore</a></code>(8) <code><a href="/docs/linux/man/8-vgchange/">vgchange</a></code>(8) <code><a href="/docs/linux/man/8-vgck/">vgck</a></code>(8) <code><a href="/docs/linux/man/8-vgcreate/">vgcreate</a></code>(8) <code><a href="/docs/linux/man/8-vgconvert/">vgconvert</a></code>(8) <code><a href="/docs/linux/man/8-vgdisplay/">vgdisplay</a></code>(8) <code><a href="/docs/linux/man/8-vgexport/">vgexport</a></code>(8) <code><a href="/docs/linux/man/8-vgextend/">vgextend</a></code>(8) <code><a href="/docs/linux/man/8-vgimport/">vgimport</a></code>(8) <code><a href="/docs/linux/man/8-vgimportclone/">vgimportclone</a></code>(8) <code><a href="/docs/linux/man/8-vgmerge/">vgmerge</a></code>(8) <code><a href="/docs/linux/man/8-vgmknodes/">vgmknodes</a></code>(8) <code><a href="/docs/linux/man/8-vgreduce/">vgreduce</a></code>(8) <code><a href="/docs/linux/man/8-vgremove/">vgremove</a></code>(8) <code><a href="/docs/linux/man/8-vgrename/">vgrename</a></code>(8) <code><a href="/docs/linux/man/8-vgs/">vgs</a></code>(8) <code><a href="/docs/linux/man/8-vgscan/">vgscan</a></code>(8) <code><a href="/docs/linux/man/8-vgsplit/">vgsplit</a></code>(8) <code><a href="/docs/linux/man/8-lvcreate/">lvcreate</a></code>(8) <code><a href="/docs/linux/man/8-lvchange/">lvchange</a></code>(8) <code><a href="/docs/linux/man/8-lvconvert/">lvconvert</a></code>(8) <code><a href="/docs/linux/man/8-lvdisplay/">lvdisplay</a></code>(8) <code><a href="/docs/linux/man/8-lvextend/">lvextend</a></code>(8) <code><a href="/docs/linux/man/8-lvreduce/">lvreduce</a></code>(8) <code><a href="/docs/linux/man/8-lvremove/">lvremove</a></code>(8) <code><a href="/docs/linux/man/8-lvrename/">lvrename</a></code>(8) <code><a href="/docs/linux/man/8-lvresize/">lvresize</a></code>(8) <code><a href="/docs/linux/man/8-lvs/">lvs</a></code>(8) <code><a href="/docs/linux/man/8-lvscan/">lvscan</a></code>(8) <code><a href="/docs/linux/man/8-lvm-fullreport/">lvm-fullreport</a></code>(8) <code><a href="/docs/linux/man/8-lvm-lvpoll/">lvm-lvpoll</a></code>(8) <code><a href="/docs/linux/man/8-lvm2-activation-generator/">lvm2-activation-generator</a></code>(8) <code><a href="/docs/linux/man/8-blkdeactivate/">blkdeactivate</a></code>(8) <code><a href="/docs/linux/man/8-lvmdump/">lvmdump</a></code>(8) <code><a href="/docs/linux/man/8-dmeventd/">dmeventd</a></code>(8) <code><a href="/docs/linux/man/8-lvmpolld/">lvmpolld</a></code>(8) <code><a href="/docs/linux/man/8-lvmlockd/">lvmlockd</a></code>(8) <code><a href="/docs/linux/man/8-lvmlockctl/">lvmlockctl</a></code>(8) <code><a href="/docs/linux/man/8-cmirrord/">cmirrord</a></code>(8) <code>lvmdbusd</code>(8) <code><a href="/docs/linux/man/7-lvmsystemid/">lvmsystemid</a></code>(7) <code><a href="/docs/linux/man/7-lvmreport/">lvmreport</a></code>(7) <code><a href="/docs/linux/man/7-lvmraid/">lvmraid</a></code>(7) <code><a href="/docs/linux/man/7-lvmthin/">lvmthin</a></code>(7) <code><a href="/docs/linux/man/7-lvmcache/">lvmcache</a></code>(7) </p>

@@ -10,7 +10,7 @@ description: "slamrg.f –"
 <p>slamrg.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>slamrg</code> (N1, N2, A, STRD1, STRD2, INDEX)<br />
+<p>subroutine <code>slamrg</code> (N1, N2, A, STRD1, STRD2, INDEX)<br/>
  <i></i><code>SLAMRG</code> creates a permutation list to merge the entries of two independently sorted sets into a single set sorted in ascending order.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slamrg (integerN1, integerN2, real, dimension( * )A, integerSTRD1, integerSTRD2, integer, dimension( * )INDEX)</h3>

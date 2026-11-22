@@ -500,162 +500,162 @@ description: "xsdcxx – W3C XML Schema to C++ Compiler"
 <p> Type map files are used in C++/Parser to define a mapping between XML Schema and C++ types. The compiler uses this information to determine the return types of <code>post_*</code> functions in parser skeletons corresponding to XML Schema types as well as argument types for callbacks corresponding to elements and attributes of these types. </p>
 <p> The compiler has a set of predefined mapping rules that map built-in XML Schema types to suitable C++ types (discussed below) and all other types to <code>void</code>. By providing your own type maps you can override these predefined rules. The format of the type map file is presented below: </p>
 <dl>
-<dd> <p> <code>namespace</code> <i>schema-namespace</i> [ <i>cxx-namespace</i> ] <br />
- <code>{</code> <br />
- <br />
-&nbsp;<wbr>&nbsp;<wbr>( <code>include</code> <i>file-name</i><code>;</code> )* <br />
- <br />
-&nbsp;<wbr>&nbsp;<wbr>([ <code>type</code> ] <i>schema-type cxx-ret-type</i> [ <i>cxx-arg-type</i> ]<code>;</code> )* <br />
- <code>}</code> <br />
+<dd> <p> <code>namespace</code> <i>schema-namespace</i> [ <i>cxx-namespace</i> ] <br/>
+ <code>{</code> <br/>
+ <br/>
+&nbsp;<wbr>&nbsp;<wbr>( <code>include</code> <i>file-name</i><code>;</code> )* <br/>
+ <br/>
+&nbsp;<wbr>&nbsp;<wbr>([ <code>type</code> ] <i>schema-type cxx-ret-type</i> [ <i>cxx-arg-type</i> ]<code>;</code> )* <br/>
+ <code>}</code> <br/>
  </p>
  </dd></dl>
 <p> Both <i>schema-namespace</i> and <i>schema-type</i> are regex patterns while <i>cxx-namespace</i>, <i>cxx-ret-type</i>, and <i>cxx-arg-type</i> are regex pattern substitutions. All names can be optionally enclosed in &quot; &quot;, for example, to include white-spaces. </p>
 <p> <i>schema-namespace</i> determines XML Schema namespace. Optional <i>cxx-namespace</i> is prefixed to every C++ type name in this namespace declaration. <i>cxx-ret-type</i> is a C++ type name that is used as a return type for the <code>post_*</code> functions. Optional <i>cxx-arg-type</i> is an argument type for callback functions corresponding to elements and attributes of this type. If <i>cxx-arg-type</i> is not specified, it defaults to <i>cxx-ret-type</i> if <i>cxx-ret-type</i> ends with <code>*</code> or <code>&amp;</code> (that is, it is a pointer or a reference) and <code>const</code> <i>cxx-ret-type</i><code>&amp;</code> otherwise. <i>file-name</i> is a file name either in the &quot; &quot; or &lt; &gt; format and is added with the <code>#include</code> directive to the generated code. </p>
 <p> The <code>#</code> character starts a comment that ends with a new line or end of file. To specify a name that contains <code>#</code> enclose it in &quot; &quot;. For example: </p>
 <dl>
-<dd> <p> namespace <a rel="nofollow" href="http://www.example.com/xmlns/my">http://www.example.com/xmlns/my</a> my <br />
- { <br />
- <br />
-&nbsp;<wbr>&nbsp;<wbr>include&nbsp;<wbr>&quot;my.hxx&quot;; <br />
+<dd> <p> namespace <a rel="nofollow" href="http://www.example.com/xmlns/my">http://www.example.com/xmlns/my</a> my <br/>
+ { <br/>
+ <br/>
+&nbsp;<wbr>&nbsp;<wbr>include&nbsp;<wbr>&quot;my.hxx&quot;; <br/>
  </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>Pass apples by value. <br />
-&nbsp;<wbr>&nbsp;<wbr># <br />
-&nbsp;<wbr>&nbsp;<wbr>apple apple; <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>Pass apples by value. <br/>
+&nbsp;<wbr>&nbsp;<wbr># <br/>
+&nbsp;<wbr>&nbsp;<wbr>apple apple; <br/>
  </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>Pass oranges as pointers. <br />
-&nbsp;<wbr>&nbsp;<wbr># <br />
-&nbsp;<wbr>&nbsp;<wbr>orange orange_t*; <br />
- } <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>Pass oranges as pointers. <br/>
+&nbsp;<wbr>&nbsp;<wbr># <br/>
+&nbsp;<wbr>&nbsp;<wbr>orange orange_t*; <br/>
+ } <br/>
  </p>
  </dd></dl>
 <p> In the example above, for the <code><a rel="nofollow" href="http://www.example.com/xmlns/my#orange">http://www.example.com/xmlns/my#orange</a></code> XML Schema type, the <code>my::orange_t*</code> C++ type will be used as both return and argument types. </p>
 <p> Several namespace declarations can be specified in a single file. The namespace declaration can also be completely omitted to map types in a schema without a namespace. For instance: </p>
 <dl>
-<dd> <p> include &quot;my.hxx&quot;; <br />
- apple apple; <br />
+<dd> <p> include &quot;my.hxx&quot;; <br/>
+ apple apple; <br/>
  </p>
-<p> namespace <a rel="nofollow" href="http://www.example.com/xmlns/my">http://www.example.com/xmlns/my</a> <br />
- { <br />
- <br />
-&nbsp;<wbr>&nbsp;<wbr>orange&nbsp;<wbr>&quot;const orange_t*&quot;; <br />
- } <br />
+<p> namespace <a rel="nofollow" href="http://www.example.com/xmlns/my">http://www.example.com/xmlns/my</a> <br/>
+ { <br/>
+ <br/>
+&nbsp;<wbr>&nbsp;<wbr>orange&nbsp;<wbr>&quot;const orange_t*&quot;; <br/>
+ } <br/>
  </p>
  </dd></dl>
 <p> The compiler has a number of predefined mapping rules that can be presented as the following map files. The string-based XML Schema built-in types are mapped to either <code>std::string</code> or <code>std::wstring</code> depending on the character type selected with the <code>--char-type</code> option (<code>char</code> by default). </p>
 <dl>
-<dd> <p> namespace <a rel="nofollow" href="http://www.w3.org/2001/XMLSchema">http://www.w3.org/2001/XMLSchema</a> <br />
- { <br />
- <br />
-&nbsp;<wbr>&nbsp;<wbr>boolean bool bool; <br />
+<dd> <p> namespace <a rel="nofollow" href="http://www.w3.org/2001/XMLSchema">http://www.w3.org/2001/XMLSchema</a> <br/>
+ { <br/>
+ <br/>
+&nbsp;<wbr>&nbsp;<wbr>boolean bool bool; <br/>
  </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;<wbr>byte&nbsp;<wbr>&quot;signed char&quot;&nbsp;<wbr>&quot;signed char&quot;; <br />
- <br />
-&nbsp;<wbr>&nbsp;<wbr>unsignedByte&nbsp;<wbr>&quot;unsigned char&quot;&nbsp;<wbr>&quot;unsigned char&quot;; <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;<wbr>byte&nbsp;<wbr>&quot;signed char&quot;&nbsp;<wbr>&quot;signed char&quot;; <br/>
+ <br/>
+&nbsp;<wbr>&nbsp;<wbr>unsignedByte&nbsp;<wbr>&quot;unsigned char&quot;&nbsp;<wbr>&quot;unsigned char&quot;; <br/>
  </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;<wbr>short short short; <br />
- <br />
-&nbsp;<wbr>&nbsp;<wbr>unsignedShort&nbsp;<wbr>&quot;unsigned short&quot;&nbsp;<wbr>&quot;unsigned short&quot;; <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;<wbr>short short short; <br/>
+ <br/>
+&nbsp;<wbr>&nbsp;<wbr>unsignedShort&nbsp;<wbr>&quot;unsigned short&quot;&nbsp;<wbr>&quot;unsigned short&quot;; <br/>
  </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;<wbr>int int int; <br />
- <br />
-&nbsp;<wbr>&nbsp;<wbr>unsignedInt&nbsp;<wbr>&quot;unsigned int&quot;&nbsp;<wbr>&quot;unsigned int&quot;; <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;<wbr>int int int; <br/>
+ <br/>
+&nbsp;<wbr>&nbsp;<wbr>unsignedInt&nbsp;<wbr>&quot;unsigned int&quot;&nbsp;<wbr>&quot;unsigned int&quot;; <br/>
  </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;<wbr>long&nbsp;<wbr>&quot;long long&quot;&nbsp;<wbr>&quot;long long&quot;; <br />
- <br />
-&nbsp;<wbr>&nbsp;<wbr>unsignedLong&nbsp;<wbr>&quot;unsigned long long&quot;&nbsp;<wbr>&quot;unsigned long long&quot;; <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;<wbr>long&nbsp;<wbr>&quot;long long&quot;&nbsp;<wbr>&quot;long long&quot;; <br/>
+ <br/>
+&nbsp;<wbr>&nbsp;<wbr>unsignedLong&nbsp;<wbr>&quot;unsigned long long&quot;&nbsp;<wbr>&quot;unsigned long long&quot;; <br/>
  </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;<wbr>integer&nbsp;<wbr>&quot;long long&quot;&nbsp;<wbr>&quot;long long&quot;; <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;<wbr>integer&nbsp;<wbr>&quot;long long&quot;&nbsp;<wbr>&quot;long long&quot;; <br/>
  </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;<wbr>negativeInteger&nbsp;<wbr>&quot;long long&quot;&nbsp;<wbr>&quot;long long&quot;; <br />
- <br />
-&nbsp;<wbr>&nbsp;<wbr>nonPositiveInteger&nbsp;<wbr>&quot;long long&quot;&nbsp;<wbr>&quot;long long&quot;; <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;<wbr>negativeInteger&nbsp;<wbr>&quot;long long&quot;&nbsp;<wbr>&quot;long long&quot;; <br/>
+ <br/>
+&nbsp;<wbr>&nbsp;<wbr>nonPositiveInteger&nbsp;<wbr>&quot;long long&quot;&nbsp;<wbr>&quot;long long&quot;; <br/>
  </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;<wbr>positiveInteger&nbsp;<wbr>&quot;unsigned long long&quot;&nbsp;<wbr>&quot;unsigned long long&quot;; <br />
- <br />
-&nbsp;<wbr>&nbsp;<wbr>nonNegativeInteger&nbsp;<wbr>&quot;unsigned long long&quot;&nbsp;<wbr>&quot;unsigned long long&quot;; <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;<wbr>positiveInteger&nbsp;<wbr>&quot;unsigned long long&quot;&nbsp;<wbr>&quot;unsigned long long&quot;; <br/>
+ <br/>
+&nbsp;<wbr>&nbsp;<wbr>nonNegativeInteger&nbsp;<wbr>&quot;unsigned long long&quot;&nbsp;<wbr>&quot;unsigned long long&quot;; <br/>
  </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;<wbr>float float float; <br />
- <br />
-&nbsp;<wbr>&nbsp;<wbr>double double double; <br />
- <br />
-&nbsp;<wbr>&nbsp;<wbr>decimal double double; <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;<wbr>float float float; <br/>
+ <br/>
+&nbsp;<wbr>&nbsp;<wbr>double double double; <br/>
+ <br/>
+&nbsp;<wbr>&nbsp;<wbr>decimal double double; <br/>
  </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;<wbr>string std::string; <br />
- <br />
-&nbsp;<wbr>&nbsp;<wbr>normalizedString std::string; <br />
- <br />
-&nbsp;<wbr>&nbsp;<wbr>token std::string; <br />
- <br />
-&nbsp;<wbr>&nbsp;<wbr>Name std::string; <br />
- <br />
-&nbsp;<wbr>&nbsp;<wbr>NMTOKEN std::string; <br />
- <br />
-&nbsp;<wbr>&nbsp;<wbr>NCName std::string; <br />
- <br />
-&nbsp;<wbr>&nbsp;<wbr>ID std::string; <br />
- <br />
-&nbsp;<wbr>&nbsp;<wbr>IDREF std::string; <br />
- <br />
-&nbsp;<wbr>&nbsp;<wbr>language std::string; <br />
- <br />
-&nbsp;<wbr>&nbsp;<wbr>anyURI std::string; <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;<wbr>string std::string; <br/>
+ <br/>
+&nbsp;<wbr>&nbsp;<wbr>normalizedString std::string; <br/>
+ <br/>
+&nbsp;<wbr>&nbsp;<wbr>token std::string; <br/>
+ <br/>
+&nbsp;<wbr>&nbsp;<wbr>Name std::string; <br/>
+ <br/>
+&nbsp;<wbr>&nbsp;<wbr>NMTOKEN std::string; <br/>
+ <br/>
+&nbsp;<wbr>&nbsp;<wbr>NCName std::string; <br/>
+ <br/>
+&nbsp;<wbr>&nbsp;<wbr>ID std::string; <br/>
+ <br/>
+&nbsp;<wbr>&nbsp;<wbr>IDREF std::string; <br/>
+ <br/>
+&nbsp;<wbr>&nbsp;<wbr>language std::string; <br/>
+ <br/>
+&nbsp;<wbr>&nbsp;<wbr>anyURI std::string; <br/>
  </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;<wbr>NMTOKENS xml_schema::string_sequence; <br />
- <br />
-&nbsp;<wbr>&nbsp;<wbr>IDREFS xml_schema::string_sequence; <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;<wbr>NMTOKENS xml_schema::string_sequence; <br/>
+ <br/>
+&nbsp;<wbr>&nbsp;<wbr>IDREFS xml_schema::string_sequence; <br/>
  </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;<wbr>QName xml_schema::qname; <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;<wbr>QName xml_schema::qname; <br/>
  </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;<wbr>base64Binary std::auto_ptr&lt;xml_schema::buffer&gt; <br />
- <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>std::auto_ptr&lt;xml_schema::buffer&gt;; <br />
- <br />
-&nbsp;<wbr>&nbsp;<wbr>hexBinary std::auto_ptr&lt;xml_schema::buffer&gt; <br />
- <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>std::auto_ptr&lt;xml_schema::buffer&gt;; <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;<wbr>base64Binary std::auto_ptr&lt;xml_schema::buffer&gt; <br/>
+ <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>std::auto_ptr&lt;xml_schema::buffer&gt;; <br/>
+ <br/>
+&nbsp;<wbr>&nbsp;<wbr>hexBinary std::auto_ptr&lt;xml_schema::buffer&gt; <br/>
+ <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>std::auto_ptr&lt;xml_schema::buffer&gt;; <br/>
  </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;<wbr>date xml_schema::date; <br />
- <br />
-&nbsp;<wbr>&nbsp;<wbr>dateTime xml_schema::date_time; <br />
- <br />
-&nbsp;<wbr>&nbsp;<wbr>duration xml_schema::duration; <br />
- <br />
-&nbsp;<wbr>&nbsp;<wbr>gDay xml_schema::gday; <br />
- <br />
-&nbsp;<wbr>&nbsp;<wbr>gMonth xml_schema::gmonth; <br />
- <br />
-&nbsp;<wbr>&nbsp;<wbr>gMonthDay xml_schema::gmonth_day; <br />
- <br />
-&nbsp;<wbr>&nbsp;<wbr>gYear xml_schema::gyear; <br />
- <br />
-&nbsp;<wbr>&nbsp;<wbr>gYearMonth xml_schema::gyear_month; <br />
- <br />
-&nbsp;<wbr>&nbsp;<wbr>time xml_schema::time; <br />
- } <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;<wbr>date xml_schema::date; <br/>
+ <br/>
+&nbsp;<wbr>&nbsp;<wbr>dateTime xml_schema::date_time; <br/>
+ <br/>
+&nbsp;<wbr>&nbsp;<wbr>duration xml_schema::duration; <br/>
+ <br/>
+&nbsp;<wbr>&nbsp;<wbr>gDay xml_schema::gday; <br/>
+ <br/>
+&nbsp;<wbr>&nbsp;<wbr>gMonth xml_schema::gmonth; <br/>
+ <br/>
+&nbsp;<wbr>&nbsp;<wbr>gMonthDay xml_schema::gmonth_day; <br/>
+ <br/>
+&nbsp;<wbr>&nbsp;<wbr>gYear xml_schema::gyear; <br/>
+ <br/>
+&nbsp;<wbr>&nbsp;<wbr>gYearMonth xml_schema::gyear_month; <br/>
+ <br/>
+&nbsp;<wbr>&nbsp;<wbr>time xml_schema::time; <br/>
+ } <br/>
  </p>
  </dd></dl>
 <p> The last predefined rule maps anything that wasn&#8217;t mapped by previous rules to <code>void</code>: </p>
 <dl>
-<dd> <p> namespace .* <br />
- { <br />
- <br />
-&nbsp;<wbr>&nbsp;<wbr>.*&nbsp;<wbr>void void; <br />
- } <br />
+<dd> <p> namespace .* <br/>
+ { <br/>
+ <br/>
+&nbsp;<wbr>&nbsp;<wbr>.*&nbsp;<wbr>void void; <br/>
+ } <br/>
  </p>
  </dd></dl>
 <p> When you provide your own type maps with the <code>--type-map</code> option, they are evaluated first. This allows you to selectively override predefined rules. </p>

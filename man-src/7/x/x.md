@@ -496,17 +496,17 @@ Value = {&lt;any character except null or unescaped newline&gt;}</pre>
 <dd>Denotes the session manager to which the application should connect. See <code><a href="/docs/linux/man/1-xsm/">xsm</a></code>(1), <code><a href="/docs/linux/man/1-rstart/">rstart</a></code>(1).</dd>
 <dt><code>XF86BIGFONT_DISABLE</code></dt>
 <dd>Setting this variable to a non-empty value disables the XFree86-Bigfont extension. This extension is a mechanism to reduce the memory consumption of big fonts by use of shared memory.</dd></dl>
-<p> <code>XKB_FORCE</code><br />
- <code>XKB_DISABLE</code><br />
- <code>XKB_DEBUG</code><br />
- <code>_XKB_CHARSET</code><br />
- <code>_XKB_LOCALE_CHARSETS</code><br />
- <code>_XKB_OPTIONS_ENABLE</code><br />
- <code>_XKB_LATIN1_LOOKUP</code><br />
- <code>_XKB_CONSUME_LOOKUP_MODS</code><br />
- <code>_XKB_CONSUME_SHIFT_AND_LOCK</code><br />
- <code>_XKB_IGNORE_NEW_KEYBOARDS</code><br />
- <code>_XKB_CONTROL_FALLBACK</code><br />
+<p> <code>XKB_FORCE</code><br/>
+ <code>XKB_DISABLE</code><br/>
+ <code>XKB_DEBUG</code><br/>
+ <code>_XKB_CHARSET</code><br/>
+ <code>_XKB_LOCALE_CHARSETS</code><br/>
+ <code>_XKB_OPTIONS_ENABLE</code><br/>
+ <code>_XKB_LATIN1_LOOKUP</code><br/>
+ <code>_XKB_CONSUME_LOOKUP_MODS</code><br/>
+ <code>_XKB_CONSUME_SHIFT_AND_LOCK</code><br/>
+ <code>_XKB_IGNORE_NEW_KEYBOARDS</code><br/>
+ <code>_XKB_CONTROL_FALLBACK</code><br/>
  <code>_XKB_COMP_LED</code> <code>_XKB_COMP_FAIL_BEEP</code> </p>
 <p> These variables influence the X Keyboard Extension.</p>
 <h2>Examples</h2>

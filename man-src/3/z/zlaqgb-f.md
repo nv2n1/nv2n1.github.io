@@ -10,7 +10,7 @@ description: "zlaqgb.f –"
 <p>zlaqgb.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlaqgb</code> (M, N, KL, KU, AB, LDAB, R, C, ROWCND, COLCND, AMAX, EQUED)<br />
+<p>subroutine <code>zlaqgb</code> (M, N, KL, KU, AB, LDAB, R, C, ROWCND, COLCND, AMAX, EQUED)<br/>
  <i></i><code>ZLAQGB</code> scales a general band matrix, using row and column scaling factors computed by sgbequ.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlaqgb (integerM, integerN, integerKL, integerKU, complex*16, dimension( ldab, * )AB, integerLDAB, double precision, dimension( * )R, double precision, dimension( * )C, double precisionROWCND, double precisionCOLCND, double precisionAMAX, characterEQUED)</h3>

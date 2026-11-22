@@ -10,11 +10,11 @@ description: "hvmgr – administration utility for QDBM Hovel"
 
 <p> hvmgr &#8211; administration utility for QDBM Hovel </p>
 <h2>SYNOPSIS</h2>
-<p> <code>hvmgr create</code> [-qdbm <i>bnum dnum </i>] [-s] <i>name</i><br />
- <code>hvmgr store</code> [-qdbm] [-kx] [-vx|-vf] [-insert] <i>name</i> <i>key</i> <i>val</i><br />
- <code>hvmgr delete</code> [-qdbm] [-kx] <i>name</i> <i>key</i><br />
- <code>hvmgr fetch</code> [-qdbm] [-kx] [-ox] [-n] <i>name</i> <i>key</i><br />
- <code>hvmgr list</code> [-qdbm] [-ox] <i>name</i><br />
+<p> <code>hvmgr create</code> [-qdbm <i>bnum dnum </i>] [-s] <i>name</i><br/>
+ <code>hvmgr store</code> [-qdbm] [-kx] [-vx|-vf] [-insert] <i>name</i> <i>key</i> <i>val</i><br/>
+ <code>hvmgr delete</code> [-qdbm] [-kx] <i>name</i> <i>key</i><br/>
+ <code>hvmgr fetch</code> [-qdbm] [-kx] [-ox] [-n] <i>name</i> <i>key</i><br/>
+ <code>hvmgr list</code> [-qdbm] [-ox] <i>name</i><br/>
  <code>hvmgr optimize</code> [-qdbm] <i>name</i></p>
 <h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>hvmgr</code> commands. </p>

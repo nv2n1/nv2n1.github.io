@@ -13,13 +13,13 @@ description: "daala_comment –"
 <h2>SYNOPSIS</h2>
 <p> #include &lt;codec.h&gt;</p>
 <h3>Data Fields</h3>
-<p> char ** <code>user_comments</code><br />
- <i>The array of comment string vectors. </i><br />
- int * <code>comment_lengths</code><br />
- <i>An array of the corresponding lengths of each vector, in bytes. </i><br />
- int <code>comments</code><br />
- <i>The total number of comment strings. </i><br />
- char * <code>vendor</code><br />
+<p> char ** <code>user_comments</code><br/>
+ <i>The array of comment string vectors. </i><br/>
+ int * <code>comment_lengths</code><br/>
+ <i>An array of the corresponding lengths of each vector, in bytes. </i><br/>
+ int <code>comments</code><br/>
+ <i>The total number of comment strings. </i><br/>
+ char * <code>vendor</code><br/>
  <i>The null-terminated vendor string. </i></p>
 <h2>Detailed Description</h2>
 <p> The comment information. </p>

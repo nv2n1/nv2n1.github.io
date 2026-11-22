@@ -8,7 +8,7 @@ url: "/docs/linux/man/3-bug/"
 description: "bug – Known Bugs"
 ---
 
-<p> bug &#8211; Known Bugs<br />
+<p> bug &#8211; Known Bugs<br/>
 &nbsp;<wbr></p>
 <dl>
 <dt><code>Class AssetSwap</code></dt>

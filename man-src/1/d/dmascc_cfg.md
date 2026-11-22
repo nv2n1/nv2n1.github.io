@@ -24,24 +24,24 @@ description: "dmascc_cfg – Configure dmascc devices"
 <p> TX clock pin:</p>
 <dl>
 <dt>
-</dt><dd> 0x00 input<br />
- 0x05 output TX clock *<br />
- 0x06 output baud rate generator *<br />
+</dt><dd> 0x00 input<br/>
+ 0x05 output TX clock *<br/>
+ 0x06 output baud rate generator *<br/>
  0x07 output digital PLL *</dd></dl>
 <p> TX clock source:</p>
 <dl>
 <dt>
-</dt><dd> 0x00 RX clock pin<br />
- 0x08 TX clock pin #<br />
- 0x10 baud rate generator<br />
+</dt><dd> 0x00 RX clock pin<br/>
+ 0x08 TX clock pin #<br/>
+ 0x10 baud rate generator<br/>
  0x18 digital PLL +
 </dd></dl>
 <p> RX clock source:</p>
 <dl>
 <dt>
-</dt><dd> 0x00 RX clock pin<br />
- 0x20 TX clock pin<br />
- 0x40 baud rate generator<br />
+</dt><dd> 0x00 RX clock pin<br/>
+ 0x20 TX clock pin<br/>
+ 0x40 baud rate generator<br/>
  0x60 digital PLL +
 </dd></dl>
 <p> * Not allowed on PI2 Port A if J3 is installed. </p>

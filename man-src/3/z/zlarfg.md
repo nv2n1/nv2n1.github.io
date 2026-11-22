@@ -10,7 +10,7 @@ description: "zlarfg.f –"
 <p>zlarfg.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlarfg</code> (N, ALPHA, X, INCX, TAU)<br />
+<p>subroutine <code>zlarfg</code> (N, ALPHA, X, INCX, TAU)<br/>
  <i></i><code>ZLARFG</code> generates an elementary reflector (Householder matrix).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlarfg (integerN, complex*16ALPHA, complex*16, dimension( * )X, integerINCX, complex*16TAU)</h3>

@@ -80,7 +80,7 @@ description: "monkeysphere-host – Monkeysphere host key administration tool."
 <dd>A world-readable copy of the host&#8217;s OpenPGP certificates in ASCII armored format. This includes the certificates (including the public keys, servicename-based User IDs, and most recent relevant self-signatures) corresponding to every key used by Monkeysphere-enabled services on the host.</dd>
 <dt>/var/lib/monkeysphere/host/</dt>
 <dd>A locked directory (readable only by the superuser) containing copies of all imported secret keys (this is the host&#8217;s GNUPGHOME directory).</dd>
-<dt>/etc/monkeysphere/monkeysphere-host-x509-anchors.crt or<br />
+<dt>/etc/monkeysphere/monkeysphere-host-x509-anchors.crt or<br/>
  /etc/monkeysphere/monkeysphere-x509-anchors.crt</dt>
 <dd>If monkeysphere-host is configured to query an hkps keyserver for publish-keys, it will use the PEM-encoded X.509 Certificate Authority certificates in this file to validate any X.509 certificates used by the keyserver. If the monkeysphere-host-x509 file is present, the monkeysphere-x509 file will be ignored. </dd>
 </dl>

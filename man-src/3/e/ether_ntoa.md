@@ -31,7 +31,7 @@ struct ether_addr *ether_aton_r(const char *asc,
 <p> The <code>ether_line</code>() function parses a line in <i>/etc/ethers</i> format (ethernet address followed by whitespace followed by hostname; &#8216;#&#8217; introduces a comment) and returns an address and hostname pair, or nonzero if it cannot be parsed. The buffer pointed to by <i>hostname</i> must be sufficiently long, for example, have the same length as <i>line</i>. </p>
 <p> The functions <code>ether_ntoa_r</code>() and <code>ether_aton_r</code>() are reentrant thread-safe versions of <code>ether_ntoa</code>() and <code>ether_aton</code>() respectively, and do not use static buffers. </p>
 <p> The structure <i>ether_addr</i> is defined in <i>&lt;net/ethernet.h&gt;</i> as: </p>
-<p> struct ether_addr {<br />
+<p> struct ether_addr {<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint8_t ether_addr_octet[6]; }</p>
 <h2>ATTRIBUTES</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>

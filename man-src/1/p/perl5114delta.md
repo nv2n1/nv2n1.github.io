@@ -19,7 +19,7 @@ description: "perl5114delta – what is new for perl v5.11.4"
 <p> The version module adds <tt>&quot;version::is_strict&quot;</tt> and <tt>&quot;version::is_lax&quot;</tt> functions to check a scalar against these rules.</p>
 <h2>Core Enhancements</h2>
 <h3>Unicode properties</h3>
-<p> <tt>&quot;\p{XDigit}&quot;</tt> now matches the same characters as <tt>&quot;\p{Hex_Digit}&quot;</tt>. This means that in addition to the characters it currently matches, <tt>&quot;[A-Fa-f0-9]&quot;</tt>, it will also match their fullwidth equivalent forms, for example U+FF10: <font SIZE="-1">FULLWIDTH</font> <font SIZE="-1">DIGIT</font> <font SIZE="-1">ZERO</font>.</p>
+<p> <tt>&quot;\p{XDigit}&quot;</tt> now matches the same characters as <tt>&quot;\p{Hex_Digit}&quot;</tt>. This means that in addition to the characters it currently matches, <tt>&quot;[A-Fa-f0-9]&quot;</tt>, it will also match their fullwidth equivalent forms, for example U+FF10: FULLWIDTH DIGIT ZERO.</p>
 <h2>Modules and Pragmata</h2>
 <h3>Pragmata Changes</h3>
 <dl>
@@ -50,7 +50,7 @@ description: "perl5114delta – what is new for perl v5.11.4"
 <dd> Upgraded from version 0.36 to 0.3603.</dd>
 <dt>&quot;Safe&quot;</dt>
 <dd> Upgraded from version 2.20 to 2.21. </dd>
-<p> Anonymous coderefs created in Safe containers no longer get bogus arguments passed to them, fixing <font SIZE="-1">RT</font> #72068.</dl>
+<p> Anonymous coderefs created in Safe containers no longer get bogus arguments passed to them, fixing RT #72068.</dl>
 <h3>Removed Modules and Pragmata</h3>
 <dl>
 <dt>&quot;Devel::DProf::V&quot;</dt>
@@ -59,17 +59,17 @@ description: "perl5114delta – what is new for perl v5.11.4"
 <p> A significant fraction of the core documentation has been updated to clarify the behavior of Perl&#8217;s Unicode handling. </p>
 <p> Much of the remaining core documentation has been reviewed and edited for clarity, consistent use of language, and to fix the spelling of Tom Christiansen&#8217;s name.</p>
 <h3>Configuration improvements</h3>
-<p> <font SIZE="-1">USE_ATTRIBUTES_FOR_PERLIO</font> is now reported in the compile-time options listed by the <tt>&quot;-V&quot;</tt> switch.</p>
+<p> USE_ATTRIBUTES_FOR_PERLIO is now reported in the compile-time options listed by the <tt>&quot;-V&quot;</tt> switch.</p>
 <h3>Platform Specific Changes</h3>
 <dl>
-<dt><font SIZE="-1">VMS</font></dt>
-<dd> The default pipe buffer size on <font SIZE="-1">VMS</font> has been updated to 8192 on 64-bit systems.</dd></dl>
+<dt>VMS</dt>
+<dd> The default pipe buffer size on VMS has been updated to 8192 on 64-bit systems.</dd></dl>
 <h2>Selected Bug Fixes</h2>
 <dl>
 <dt>&bull;</dt>
-<dd> Tie::Hash::NamedCapture::* shouldn&#8217;t abort if passed bad input (<font SIZE="-1">RT</font> #71828)</dd>
+<dd> Tie::Hash::NamedCapture::* shouldn&#8217;t abort if passed bad input (RT #71828)</dd>
 <dt>&bull;</dt>
-<dd> <tt>@_</tt> and <tt>$_</tt> no longer leak under threads (<font SIZE="-1">RT</font> #34342 and #41138, also #70602, #70974)</dd></dl>
+<dd> <tt>@_</tt> and <tt>$_</tt> no longer leak under threads (RT #34342 and #41138, also #70602, #70974)</dd></dl>
 <h2>New or Changed Diagnostics</h2>
 <dl>
 <dt>New warning category &quot;illegalproto&quot;</dt>
@@ -88,9 +88,9 @@ description: "perl5114delta – what is new for perl v5.11.4"
 <h2>Changed Internals</h2>
 <dl>
 <dt>&bull;</dt>
-<dd> Perl_magic_setmglob now knows about globs, fixing <font SIZE="-1">RT</font> #71254.</dd></dl>
+<dd> Perl_magic_setmglob now knows about globs, fixing RT #71254.</dd></dl>
 <h2>Known Problems</h2>
-<p> Perl 5.11.4 is a development release leading up to Perl 5.12.0. Some notable known problems found in 5.11.4 are listed as dependencies of <font SIZE="-1">RT</font> #69710, the Perl 5 version 12 meta-ticket.</p>
+<p> Perl 5.11.4 is a development release leading up to Perl 5.12.0. Some notable known problems found in 5.11.4 are listed as dependencies of RT #69710, the Perl 5 version 12 meta-ticket.</p>
 <h2>Deprecations</h2>
 <p> The following items are now deprecated.</p>
 <dl>
@@ -99,13 +99,13 @@ description: "perl5114delta – what is new for perl v5.11.4"
 <h2>Acknowledgements</h2>
 <p> Perl 5.11.4 represents approximately one month of development since Perl 5.11.3 and contains 17682 lines of changes across 318 files from 40 authors and committers: </p>
 <p> Abigail, Andy Dougherty, brian d foy, Chris Williams, Craig A. Berry, David Golden, David Mitchell, Father Chrysostomos, Gerard Goossen, H.Merijn Brand, Jesse Vincent, Jim Cromie, Josh ben Jore, Karl Williamson, kmx, Matt S Trout, Nicholas Clark, Niko Tyni, Paul Marquess, Philip Hazel, Rafael Garcia-Suarez, Rainer Tammer, Reini Urban, Ricardo Signes, Shlomi Fish, Tim Bunce, Todd Rinaldo, Tom Christiansen, Tony Cook, Vincent Pit, and Zefram </p>
-<p> Many of the changes included in this version originated in the <font SIZE="-1">CPAN</font> modules included in Perl&#8217;s core. We&#8217;re grateful to the entire <font SIZE="-1">CPAN</font> community for helping Perl to flourish.</p>
+<p> Many of the changes included in this version originated in the CPAN modules included in Perl&#8217;s core. We&#8217;re grateful to the entire CPAN community for helping Perl to flourish.</p>
 <h2>Reporting Bugs</h2>
 <p> If you find what you think is a bug, you might check the articles recently posted to the comp.lang.perl.misc newsgroup and the perl bug database at &lt;<a rel="nofollow" href="http://rt.perl.org/perlbug/">http://rt.perl.org/perlbug/</a>&gt;. There may also be information at &lt;<a rel="nofollow" href="http://www.perl.org/">http://www.perl.org/</a>&gt;, the Perl Home Page. </p>
 <p> If you believe you have an unreported bug, please run the <code>perlbug</code> program included with your release. Be sure to trim your bug down to a tiny but sufficient test case. Your bug report, along with the output of <tt>&quot;perl -V&quot;</tt>, will be sent off to perlbug [at] perl.org to be analyzed by the Perl porting team. </p>
-<p> If the bug you are reporting has security implications, which make it inappropriate to send to a publicly archived mailing list, then please send it to perl5-security-report [at] perl.org. This points to a closed subscription unarchived mailing list, which includes all the core committers, who be able to help assess the impact of issues, figure out a resolution, and help co-ordinate the release of patches to mitigate or fix the problem across all platforms on which Perl is supported. Please only use this address for security issues in the Perl core, not for modules independently distributed on <font SIZE="-1">CPAN</font>.</p>
+<p> If the bug you are reporting has security implications, which make it inappropriate to send to a publicly archived mailing list, then please send it to perl5-security-report [at] perl.org. This points to a closed subscription unarchived mailing list, which includes all the core committers, who be able to help assess the impact of issues, figure out a resolution, and help co-ordinate the release of patches to mitigate or fix the problem across all platforms on which Perl is supported. Please only use this address for security issues in the Perl core, not for modules independently distributed on CPAN.</p>
 <h2>SEE ALSO</h2>
 <p> The <i>Changes</i> file for an explanation of how to view exhaustive details on what changed. </p>
-<p> The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. </p>
-<p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
+<p> The <i></i><i>INSTALL</i><i></i> file for how to build Perl. </p>
+<p> The <i></i><i>README</i><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information. </p>

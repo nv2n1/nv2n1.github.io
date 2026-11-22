@@ -29,6 +29,6 @@ description: "XtError, XtSetErrorHandler, XtSetWarningHandler, XtWarning – low
 <p> The <code>XtSetWarningHandler</code> function has been superceded by <code>XtAppSetWarningHandler</code>. </p>
 <p> The <code>XtWarning</code> function has been superceded by <code>XtAppWarning</code>.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/3-xtapperror/">XtAppError</a></code>(3)<br />
- <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><code><a href="/docs/linux/man/3-xtapperror/">XtAppError</a></code>(3)<br/>
+ <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

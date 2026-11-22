@@ -10,7 +10,7 @@ description: "sgehrd.f –"
 <p>sgehrd.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>sgehrd</code> (N, ILO, IHI, A, LDA, TAU, WORK, LWORK, INFO)<br />
+<p>subroutine <code>sgehrd</code> (N, ILO, IHI, A, LDA, TAU, WORK, LWORK, INFO)<br/>
  <i></i><code>SGEHRD</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sgehrd (integerN, integerILO, integerIHI, real, dimension( lda, * )A, integerLDA, real, dimension( * )TAU, real, dimension( * )WORK, integerLWORK, integerINFO)</h3>

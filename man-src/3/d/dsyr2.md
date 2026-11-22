@@ -11,7 +11,7 @@ description: "dsyr2.f –"
 <p> dsyr2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dsyr2</code> (UPLO, N, ALPHA, X, INCX, Y, INCY, A, LDA)<br />
+<p> subroutine <code>dsyr2</code> (UPLO, N, ALPHA, X, INCX, Y, INCY, A, LDA)<br/>
  <i></i><code>DSYR2</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dsyr2 (characterUPLO, integerN, double precisionALPHA, double precision, dimension(*)X, integerINCX, double precision, dimension(*)Y, integerINCY, double precision, dimension(lda,*)A, integerLDA)</h3>

@@ -13,25 +13,25 @@ description: "std::add_pointer – std::add_pointer"
     template &lt;class T&gt;
     (since C++ 11)
         struct add_pointer;</code></pre>
-<p>If T is a reference type, then provides the member typedef type which is a pointer to the referred type.<br />
-Otherwise, if T names an object type, a function type that is not cv- or ref-qualified, or a (possibly cv-qualified) void type, provides the member typedef type which is the type T*.<br />
+<p>If T is a reference type, then provides the member typedef type which is a pointer to the referred type.<br/>
+Otherwise, if T names an object type, a function type that is not cv- or ref-qualified, or a (possibly cv-qualified) void type, provides the member typedef type which is the type T*.<br/>
 Otherwise (if T is a cv- or ref-qualified function type), provides the member typedef type which is the type T. </p>
 <h2>Member types</h2>
-<p>Name Definition<br />
+<p>Name Definition<br/>
 type pointer to T or to the type referenced by T</p>
 <h2>Helper types</h2>
-<p>template&lt; class T &gt; <i>(since C++14)</i><br />
+<p>template&lt; class T &gt; <i>(since C++14)</i><br/>
 using add_pointer_t = typename add_pointer&lt;T&gt;::type;</p>
 <h2>Possible implementation</h2>
 <p>&nbsp;<wbr>&nbsp;namespace detail { </p>
-<p>&nbsp;<wbr>&nbsp;template &lt;class T&gt;<br />
+<p>&nbsp;<wbr>&nbsp;template &lt;class T&gt;<br/>
 &nbsp;<wbr>&nbsp;struct type_identity { using type = T; }; // or use std::type_identity <i>(since C++20)</i> </p>
-<p>&nbsp;<wbr>&nbsp;template &lt;class T&gt;<br />
-&nbsp;<wbr>&nbsp;auto try_add_pointer(int) -&gt; type_identity&lt;typename std::remove_reference&lt;T&gt;::type*&gt;;<br />
-&nbsp;<wbr>&nbsp;template &lt;class T&gt;<br />
+<p>&nbsp;<wbr>&nbsp;template &lt;class T&gt;<br/>
+&nbsp;<wbr>&nbsp;auto try_add_pointer(int) -&gt; type_identity&lt;typename std::remove_reference&lt;T&gt;::type*&gt;;<br/>
+&nbsp;<wbr>&nbsp;template &lt;class T&gt;<br/>
 &nbsp;<wbr>&nbsp;auto try_add_pointer(&#8230;) -&gt; type_identity&lt;T&gt;; </p>
 <p>&nbsp;<wbr>&nbsp;} // namespace detail </p>
-<p>&nbsp;<wbr>&nbsp;template &lt;class T&gt;<br />
+<p>&nbsp;<wbr>&nbsp;template &lt;class T&gt;<br/>
 &nbsp;<wbr>&nbsp;struct add_pointer : decltype(detail::try_add_pointer&lt;T&gt;<code>(0)</code>) {};</p>
 <h2>Example</h2>
 <p>// Run this code </p>
@@ -60,18 +60,18 @@ int main()
 }
 </code></pre>
 <h2>Output:</h2>
-<p>&nbsp;<wbr>&nbsp;i = 123<br />
-&nbsp;<wbr>&nbsp;*pi = 123<br />
+<p>&nbsp;<wbr>&nbsp;i = 123<br/>
+&nbsp;<wbr>&nbsp;*pi = 123<br/>
 &nbsp;<wbr>&nbsp;j = 123 </p>
 <p>Defect reports </p>
 <p>The following behavior-changing defect reports were applied retroactively to previously published C++ standards. </p>
-<p>DR Applied to Behavior as published Correct behavior<br />
-LWG_2101 C++11 std::add_pointer was required to produce Produces cv-/ref-qualified function types themselves.<br />
+<p>DR Applied to Behavior as published Correct behavior<br/>
+LWG_2101 C++11 std::add_pointer was required to produce Produces cv-/ref-qualified function types themselves.<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;pointer to cv-/ref-qualified function types.</p>
 <h2>See also</h2>
-<p>is_pointer checks if a type is a pointer type<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(class template)</i><br />
-<i>(C++11)</i><br />
-remove_pointer removes a pointer from the given type<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(class template)</i><br />
+<p>is_pointer checks if a type is a pointer type<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(class template)</i><br/>
+<i>(C++11)</i><br/>
+remove_pointer removes a pointer from the given type<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(class template)</i><br/>
 <i>(C++11)</i> </p>

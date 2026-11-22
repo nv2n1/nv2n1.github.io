@@ -15,10 +15,10 @@ description: "QwtColorMap –"
 <h3>Public Types</h3>
 <p>enum <code>Format</code> { <code>RGB</code>, <code>Indexed</code> } </p>
 <h3>Public Member Functions</h3>
-<p><code>QwtColorMap</code> (<code>Format</code>=<code>QwtColorMap::RGB</code>)<br />
- <i>Constructor. </i><br />
- virtual <code>~QwtColorMap</code> ()<br />
- <i>Destructor. </i><br />
+<p><code>QwtColorMap</code> (<code>Format</code>=<code>QwtColorMap::RGB</code>)<br/>
+ <i>Constructor. </i><br/>
+ virtual <code>~QwtColorMap</code> ()<br/>
+ <i>Destructor. </i><br/>
  <code>Format</code> <code>format</code> () const </p>
 <p> virtual QRgb <code>rgb</code> (const <code>QwtInterval</code> &amp;interval, double value) const =0 </p>
 <p> virtual unsigned char <code>colorIndex</code> (const <code>QwtInterval</code> &amp;interval, double value) const =0 </p>
@@ -54,7 +54,7 @@ description: "QwtColorMap –"
 <p>Map a value into a color </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>interval</i> Valid interval for values<br />
+<dd><i>interval</i> Valid interval for values<br/>
  <i>value</i> Value</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -66,7 +66,7 @@ description: "QwtColorMap –"
 <p>Map a value of a given interval into a color index </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>interval</i> Range for the values<br />
+<dd><i>interval</i> Range for the values<br/>
  <i>value</i> Value</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -92,7 +92,7 @@ description: "QwtColorMap –"
 <p>Map a value of a given interval into a RGB value. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>interval</i> Range for the values<br />
+<dd><i>interval</i> Range for the values<br/>
  <i>value</i> Value</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

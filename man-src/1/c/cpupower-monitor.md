@@ -11,7 +11,7 @@ description: "cpupower-monitor – Report processor frequency and idle statistic
 <p> cpupower-monitor &#8211; Report processor frequency and idle statistics</p>
 <h2>SYNOPSIS</h2>
 <p> <code> cpupower monitor</code> -l </p>
-<p> <code>cpupower monitor</code> [<code>-c</code>]<code>[</code>-m &lt;mon1&gt;,<code>[</code>&lt;mon2&gt;,&#8230;<code>]</code>] [<code>-i seconds</code>]<br />
+<p> <code>cpupower monitor</code> [<code>-c</code>]<code>[</code>-m &lt;mon1&gt;,<code>[</code>&lt;mon2&gt;,&#8230;<code>]</code>] [<code>-i seconds</code>]<br/>
  <code>cpupower monitor</code> [<code>-c</code>][<code>-m &lt;mon1&gt;,</code>[<code>&lt;mon2&gt;,&#8230;</code>]<code>]</code> command </p>
 <h2>DESCRIPTION</h2>
 <p> <code>cpupower-monitor </code> reports processor topology, frequency and idle power state statistics. Either <code>command</code> is forked and statistics are printed upon its completion, or statistics are printed periodically. </p>

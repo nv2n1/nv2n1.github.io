@@ -10,21 +10,21 @@ description: "stash_cache – Automatically caches data for certain handlers."
 <p>stash_cache &#8211; Automatically caches data for certain handlers.</p>
 <h3>Functions</h3>
 <p><code>netsnmp_stash_cache_info</code> * <code>netsnmp_get_new_stash_cache</code> (void) </p>
-<p> <code>netsnmp_mib_handler</code> * <code>netsnmp_get_timed_bare_stash_cache_handler</code> (int timeout, oid *rootoid, size_t rootoid_len)<br />
- <i>returns a stash_cache handler that can be injected into a given handler chain (with the specified timeout and root OID values), but *only* if that handler chain explicitly supports stash cache processing. </i><br />
- <code>netsnmp_mib_handler</code> * <code>netsnmp_get_bare_stash_cache_handler</code> (void)<br />
- <i>returns a single stash_cache handler that can be injected into a given handler chain (with a fixed timeout), but *only* if that handler chain explicitly supports stash cache processing. </i><br />
- <code>netsnmp_mib_handler</code> * <code>netsnmp_get_stash_cache_handler</code> (void)<br />
- <i>returns a stash_cache handler sub-chain that can be injected into a given (arbitrary) handler chain, using a fixed cache timeout. </i><br />
- <code>netsnmp_mib_handler</code> * <code>netsnmp_get_timed_stash_cache_handler</code> (int timeout, oid *rootoid, size_t rootoid_len)<br />
- <i>returns a stash_cache handler sub-chain that can be injected into a given (arbitrary) handler chain, using a configurable cache timeout. </i><br />
- <code>netsnmp_oid_stash_node</code> ** <code>netsnmp_extract_stash_cache</code> (<code>netsnmp_agent_request_info</code> *reqinfo)<br />
- <i>extracts a pointer to the stash_cache info from the reqinfo structure. </i><br />
+<p> <code>netsnmp_mib_handler</code> * <code>netsnmp_get_timed_bare_stash_cache_handler</code> (int timeout, oid *rootoid, size_t rootoid_len)<br/>
+ <i>returns a stash_cache handler that can be injected into a given handler chain (with the specified timeout and root OID values), but *only* if that handler chain explicitly supports stash cache processing. </i><br/>
+ <code>netsnmp_mib_handler</code> * <code>netsnmp_get_bare_stash_cache_handler</code> (void)<br/>
+ <i>returns a single stash_cache handler that can be injected into a given handler chain (with a fixed timeout), but *only* if that handler chain explicitly supports stash cache processing. </i><br/>
+ <code>netsnmp_mib_handler</code> * <code>netsnmp_get_stash_cache_handler</code> (void)<br/>
+ <i>returns a stash_cache handler sub-chain that can be injected into a given (arbitrary) handler chain, using a fixed cache timeout. </i><br/>
+ <code>netsnmp_mib_handler</code> * <code>netsnmp_get_timed_stash_cache_handler</code> (int timeout, oid *rootoid, size_t rootoid_len)<br/>
+ <i>returns a stash_cache handler sub-chain that can be injected into a given (arbitrary) handler chain, using a configurable cache timeout. </i><br/>
+ <code>netsnmp_oid_stash_node</code> ** <code>netsnmp_extract_stash_cache</code> (<code>netsnmp_agent_request_info</code> *reqinfo)<br/>
+ <i>extracts a pointer to the stash_cache info from the reqinfo structure. </i><br/>
  int <code>netsnmp_stash_cache_helper</code> (<code>netsnmp_mib_handler</code> *handler, <code>netsnmp_handler_registration</code> *reginfo, <code>netsnmp_agent_request_info</code> *reqinfo, <code>netsnmp_request_info</code> *requests) </p>
-<p> int <code>_netsnmp_stash_cache_load</code> (<code>netsnmp_cache</code> *cache, void *magic)<br />
- <i>updates a given cache depending on whether it needs to or not. </i><br />
+<p> int <code>_netsnmp_stash_cache_load</code> (<code>netsnmp_cache</code> *cache, void *magic)<br/>
+ <i>updates a given cache depending on whether it needs to or not. </i><br/>
  void <code>_netsnmp_stash_cache_free</code> (<code>netsnmp_cache</code> *cache, void *magic) </p>
-<p> void <code>netsnmp_init_stash_cache_helper</code> (void)<br />
+<p> void <code>netsnmp_init_stash_cache_helper</code> (void)<br/>
  <i>initializes the stash_cache helper which then registers a stash_cache handler as a run-time injectable handler for configuration file use. </i></p>
 <h2>Detailed Description</h2>
 <p>Automatically caches data for certain handlers. </p>

@@ -11,7 +11,7 @@ description: "cla_gerpvgrw.f –"
 <p> cla_gerpvgrw.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> REAL function <code>cla_gerpvgrw</code> (N, NCOLS, A, LDA, AF, LDAF)<br />
+<p> REAL function <code>cla_gerpvgrw</code> (N, NCOLS, A, LDA, AF, LDAF)<br/>
  <i></i><code>CLA_GERPVGRW</code> multiplies a square real matrix by a complex matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>REAL function cla_gerpvgrw (integerN, integerNCOLS, complex, dimension( lda, * )A, integerLDA, complex, dimension( ldaf, * )AF, integerLDAF)</h3>

@@ -253,47 +253,47 @@ lookup -v cse.unl.edu <a href="ftp://ftp.cs.unl.edu">ftp.cs.unl.edu</a>
 </dt><dd> prints:</dd>
 <dt>
 </dt><dd>
-cse.unl.edu : &amp;nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-Name : &amp;nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-cse.unl.edu<br />
-    &amp;nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-Address : &amp;nbsp;<br />
-&amp;nbsp;<br />
-129.93.33.1 ftp.cs.unl.edu : &amp;nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-Name : &amp;nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-typhoon.unl.edu<br />
-    &amp;nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-Alias : &amp;nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-ftp.cs.unl.edu<br />
-    &amp;nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-&amp;nbsp;<br />
-Address : &amp;nbsp;<br />
-&amp;nbsp;<br />
+cse.unl.edu : &amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+Name : &amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+cse.unl.edu<br/>
+    &amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+Address : &amp;nbsp;<br/>
+&amp;nbsp;<br/>
+129.93.33.1 ftp.cs.unl.edu : &amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+Name : &amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+typhoon.unl.edu<br/>
+    &amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+Alias : &amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+ftp.cs.unl.edu<br/>
+    &amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+&amp;nbsp;<br/>
+Address : &amp;nbsp;<br/>
+&amp;nbsp;<br/>
 129.93.33.24</dd>
 <dt>
 </dt><dd> You can also give <i>IP</i> addresses, so this would work too:</dd>

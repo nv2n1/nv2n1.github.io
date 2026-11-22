@@ -17,7 +17,7 @@ RESOURCE := {
 OPTIONS := {
     -j[son] |
     -d[etails] }</code></pre>
-<p> <code>rdma resource show</code> [ <i>DEV/PORT_INDEX</i> ]<br />
+<p> <code>rdma resource show</code> [ <i>DEV/PORT_INDEX</i> ]<br/>
  <code>rdma resource help</code> </p>
 <h2>Description</h2>
 <h3>rdma resource show &#8211; display rdma resource tracking information</h3>

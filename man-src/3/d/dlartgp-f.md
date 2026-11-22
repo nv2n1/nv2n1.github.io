@@ -10,7 +10,7 @@ description: "dlartgp.f –"
 <p>dlartgp.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dlartgp</code> (F, G, CS, SN, R)<br />
+<p>subroutine <code>dlartgp</code> (F, G, CS, SN, R)<br/>
  <i></i><code>DLARTGP</code> generates a plane rotation so that the diagonal is nonnegative.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlartgp (double precisionF, double precisionG, double precisionCS, double precisionSN, double precisionR)</h3>

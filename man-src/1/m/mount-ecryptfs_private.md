@@ -13,22 +13,22 @@ description: "mount.ecryptfs_private – eCryptfs private mount helper."
 <p> <code>NOTE:</code> This program will <code>not</code> dynamically load the relevant keys. For this reason, it is recommended that users use <code><a href="/docs/linux/man/1-ecryptfs-mount-private/">ecryptfs-mount-private</a></code>(1) instead! </p>
 <h2>Description</h2>
 <p><code>mount.ecryptfs_private</code> is a mount helper utility for non-root users to cryptographically mount a private directory, ~/Private by default. </p>
-<p> This program optionally takes one argument, ALIAS. If ALIAS is omitted, the program will default to using &quot;Private&quot; using:<br />
-&nbsp;&#8211;&nbsp;$HOME/.Private as the SOURCE<br />
-&nbsp;&#8211;&nbsp;$HOME/Private as the DESTINATION<br />
+<p> This program optionally takes one argument, ALIAS. If ALIAS is omitted, the program will default to using &quot;Private&quot; using:<br/>
+&nbsp;&#8211;&nbsp;$HOME/.Private as the SOURCE<br/>
+&nbsp;&#8211;&nbsp;$HOME/Private as the DESTINATION<br/>
 &nbsp;&#8211;&nbsp;$HOME/.ecryptfs/Private.sig for the key signatures. </p>
-<p> If ALIAS is specified, then the program will look for an <code><a href="/docs/linux/man/5-fstab/">fstab</a></code>(5) style configuration in:<br />
-&nbsp;&#8211;&nbsp;$HOME/.ecryptfs/ALIAS.conf and for key signature(s) in:<br />
+<p> If ALIAS is specified, then the program will look for an <code><a href="/docs/linux/man/5-fstab/">fstab</a></code>(5) style configuration in:<br/>
+&nbsp;&#8211;&nbsp;$HOME/.ecryptfs/ALIAS.conf and for key signature(s) in:<br/>
 &nbsp;&#8211;&nbsp;$HOME/.ecryptfs/ALIAS.sig </p>
-<p> The mounting will proceed if, and only if:<br />
-&nbsp;<wbr>&nbsp;&#8211; the required passphrase is in their kernel keyring, and<br />
-&nbsp;<wbr>&nbsp;&#8211; the current user owns both the SOURCE and DESTINATION mount points<br />
+<p> The mounting will proceed if, and only if:<br/>
+&nbsp;<wbr>&nbsp;&#8211; the required passphrase is in their kernel keyring, and<br/>
+&nbsp;<wbr>&nbsp;&#8211; the current user owns both the SOURCE and DESTINATION mount points<br/>
 &nbsp;<wbr>&nbsp;&#8211; the DESTINATION is not already mounted </p>
-<p> This program will:<br />
-&nbsp;<wbr>&nbsp;&#8211; mount SOURCE onto DESTINATION<br />
-&nbsp;<wbr>&nbsp;&#8211; as an ecryptfs filesystem<br />
-&nbsp;<wbr>&nbsp;&#8211; using the AES cipher<br />
-&nbsp;<wbr>&nbsp;&#8211; with a key length of 16 bytes<br />
+<p> This program will:<br/>
+&nbsp;<wbr>&nbsp;&#8211; mount SOURCE onto DESTINATION<br/>
+&nbsp;<wbr>&nbsp;&#8211; as an ecryptfs filesystem<br/>
+&nbsp;<wbr>&nbsp;&#8211; using the AES cipher<br/>
+&nbsp;<wbr>&nbsp;&#8211; with a key length of 16 bytes<br/>
 &nbsp;<wbr>&nbsp;&#8211; using the passphrase whose signature is in&nbsp;~/.ecryptfs/Private.sig </p>
 <p> The only setuid operation in this program is the call to <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8) or <code><a href="/docs/linux/man/8-umount/">umount</a></code>(8). </p>
 <p> The <code><a href="/docs/linux/man/1-ecryptfs-setup-private/">ecryptfs-setup-private</a></code>(1) utility will create the ~/.Private and ~/Private directories, generate a mount passphrase, wrap the passphrase, and write the ~/.ecryptfs/Private.sig. </p>

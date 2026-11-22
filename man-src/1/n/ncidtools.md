@@ -22,26 +22,26 @@ description: "cidlog – view Caller ID log file"
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-r</code></dt>
-<dd> Display the raw log file or alias definition.<br />
+<dd> Display the raw log file or alias definition.<br/>
  Default: format the log file or alias definition.</dd>
 <dt><code>-m</code></dt>
 <dd> Display messages sent.</dd>
 <dt><code>-a aliasfile</code></dt>
-<dd> Set the alias file to <i>aliasfile</i><br />
+<dd> Set the alias file to <i>aliasfile</i><br/>
  Default: /etc/ncid/ncidd.alias</dd>
 <dt><code>-c cidlog</code></dt>
-<dd> Set the CID call file to <i>cidlog</i><br />
+<dd> Set the CID call file to <i>cidlog</i><br/>
  Default: /var/log/cidcall.log</dd></dl>
 <h3>Arguments</h3>
 <dl>
 <dt><code>cidlog</code></dt>
-<dd> The CID call file.<br />
+<dd> The CID call file.<br/>
  Default: /var/log/cidcall.log</dd>
 <dt><code>configfile</code></dt>
-<dd> The ncidd configuration file.<br />
+<dd> The ncidd configuration file.<br/>
  Default: /etc/ncid/ncidd.conf</dd>
 <dt><code>newcidlog</code></dt>
-<dd> The updated CID log file.<br />
+<dd> The updated CID log file.<br/>
  Default: cidcall.log.new</dd></dl>
 <h2>SEE ALSO</h2>
 <p> ncidd.conf.5, ncidd.alias.5 </p>

@@ -11,7 +11,7 @@ description: "sane-ricoh – SANE backend for Ricoh flatbed scanners"
 <h2>Description</h2>
 <p>The <code>sane-ricoh</code> library implements a SANE (Scanner Access Now Easy) backend that provides access to the following Ricoh flatbed scanners:</p>
 <dl>
-<dd>IS50<br />
+<dd>IS50<br/>
  IS60
 </dd></dl>
 <h2>Device Names</h2>

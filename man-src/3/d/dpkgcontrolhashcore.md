@@ -35,7 +35,7 @@ Dpkg::Control::HashCore - parse and manipulate a block of RFC822-like fields
 </dd><dt>$c-&gt;parse($fh, $description)
 </dt><dd>Parse a control file from the given filehandle. Exits in case of errors. <tt>$description</tt> is used to describe the filehandle, ideally it's a filename or a description of where the data comes from. It's used in error messages. Returns true if some fields have been parsed.
 </dd><dt>$c-&gt;find_custom_field($name)
-</dt><dd>Scan the fields and look for a user specific field whose name matches the following regex: /X[<font SIZE="-1">SBC</font>]*-$name/i. Return the name of the field found or undef if nothing has been found.
+</dt><dd>Scan the fields and look for a user specific field whose name matches the following regex: /X[SBC]*-$name/i. Return the name of the field found or undef if nothing has been found.
 </dd><dt>$c-&gt;get_custom_field($name)
 </dt><dd>Identify a user field and retrieve its value.
 </dd><dt>$c-&gt;save($filename)

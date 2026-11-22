@@ -23,8 +23,8 @@ description: "qmsg – send message to pbs batch jobs"
 <p> If neither the <i> nor the option is specified, the message will be written to the standard error of the job. </i></p>
 <h2>OPERANDS</h2>
 <p> The first operand, <i> is the message to be written. If the string contains blanks, the string must be quoted. If the final character of the string is not a newline, a newline character will be added when written to the job&#8217;s file. </p>
-<p> All following operands are which specify the jobs to receive the message string. The qmsg command accepts one or more operands of the form:<br />
- </i><code><br />
+<p> All following operands are which specify the jobs to receive the message string. The qmsg command accepts one or more operands of the form:<br/>
+ </i><code><br/>
  </code></p>
 <h2>STANDARD ERROR</h2>
 <p> The qmsg command will write a diagnostic message to standard error for each error occurrence.</p>

@@ -10,7 +10,7 @@ description: "pmpause, pmsleep – portable subsecond-capable sleep"
 
 <p> <code>pmpause</code>, <code>pmsleep</code> &#8211; portable subsecond-capable sleep</p>
 <h2>SYNOPSIS</h2>
-<p> <code>$PCP_BINADM_DIR/pmpause</code><br />
+<p> <code>$PCP_BINADM_DIR/pmpause</code><br/>
  <code>$PCP_BINADM_DIR/pmsleep</code> <i>interval</i></p>
 <h2>DESCRIPTION</h2>
 <p> <code>pmpause</code> sleeps indefinitely, until interrupted by SIGKILL. </p>

@@ -79,14 +79,14 @@ description: "gammu-smsd – SMS daemon for Gammu"
 <h2>AUTHOR</h2>
 <p> gammu-smsd and this manual page were written by Michal Cihar &lt;michal [at] cihar.com&gt;.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2009 Michal Cihar and other authors. License GPLv2: GNU GPL version 2 &lt;<a rel="nofollow" href="http://www.gnu.org/licenses/old-licenses/gpl-2.0.html">http://www.gnu.org/licenses/old-licenses/gpl-2.0.html</a>&gt;<br />
+<p> Copyright &#169; 2009 Michal Cihar and other authors. License GPLv2: GNU GPL version 2 &lt;<a rel="nofollow" href="http://www.gnu.org/licenses/old-licenses/gpl-2.0.html">http://www.gnu.org/licenses/old-licenses/gpl-2.0.html</a>&gt;<br/>
  This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.</p>
 <h2>REPORTING BUGS</h2>
 <p> Please report bugs to &lt;<a rel="nofollow" href="http://bugs.cihar.com">http://bugs.cihar.com</a>&gt;. </p>
 <p> Before reporting a bug, please enable verbose logging in SMSD configuration: </p>
-<p>&nbsp;<wbr>[gammu]<br />
+<p>&nbsp;<wbr>[gammu]<br/>
 &nbsp;<wbr>logformat&nbsp;<wbr>=&nbsp;<wbr>textall </p>
-<p>&nbsp;<wbr>[smsd]<br />
-&nbsp;<wbr>debuglevel&nbsp;<wbr>=&nbsp;<wbr>255<br />
+<p>&nbsp;<wbr>[smsd]<br/>
+&nbsp;<wbr>debuglevel&nbsp;<wbr>=&nbsp;<wbr>255<br/>
 &nbsp;<wbr>logfile&nbsp;<wbr>=&nbsp;<wbr>smsd.log </p>
 <p> and include this verbose log within bug report. </p>

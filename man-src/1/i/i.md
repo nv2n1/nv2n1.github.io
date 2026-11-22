@@ -12,8 +12,8 @@ description: "i.zc – Zero-crossing \"edge detection\" raster function for imag
 <h2>KEYWORDS</h2>
 <p> imagery</p>
 <h2>SYNOPSIS</h2>
-<p> <code>i.zc</code><br />
- <code>i.zc help</code><br />
+<p> <code>i.zc</code><br/>
+ <code>i.zc help</code><br/>
  <code>i.zc input</code>=<i>string</i> <code>output</code>=<i>string</i> [<code>width</code>=<i>integer</i>] [<code>threshold</code>=<i>float</i>] [<code>orientations</code>=<i>integer</i>] [&#8211;<code>overwrite</code>] [&#8211;<code>verbose</code>] [&#8211;<code>quiet</code>]</p>
 <h3>Flags:</h3>
 <dl>
@@ -36,15 +36,15 @@ description: "i.zc – Zero-crossing \"edge detection\" raster function for imag
  Zero crossing raster map</dd>
 <dt><code>width</code>=<i>integer</i></dt>
 <dd>
- x-y extent of the Gaussian filter<br />
+ x-y extent of the Gaussian filter<br/>
  Default: <i>9</i></dd>
 <dt><code>threshold</code>=<i>float</i></dt>
 <dd>
- Sensitivity of Gaussian filter<br />
+ Sensitivity of Gaussian filter<br/>
  Default: <i>10</i></dd>
 <dt><code>orientations</code>=<i>integer</i></dt>
 <dd>
- Number of azimuth directions categorized<br />
+ Number of azimuth directions categorized<br/>
  Default: <i>1</i></dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <i>i.zc</i> is an image processing program used for edge detection. The raster map produced shows the location of dqboundaries&quot; on the input map. Boundaries tend to be found in regions of changing cell values and tend to run perpendicular to the direction of the slope. The algorithm used for edge detection is one of the &quot;zero-crossing&quot; algorithms and is discussed briefly below. </p>
@@ -60,15 +60,15 @@ description: "i.zc – Zero-crossing \"edge detection\" raster function for imag
  Name of raster map layer to be used for zero-crossing values.</dd>
 <dt><code>width=</code><i>value</i></dt>
 <dd>
- This parameter determines the x-y extent of the Gaussian filter. The default value is 9; higher and lower values can be tested by the user. Increasing the width will result in finding &quot;edges&quot; representing more gradual changes in cell values.<br />
+ This parameter determines the x-y extent of the Gaussian filter. The default value is 9; higher and lower values can be tested by the user. Increasing the width will result in finding &quot;edges&quot; representing more gradual changes in cell values.<br/>
  Default: 9</dd>
 <dt><code>threshold=</code><i>value</i></dt>
 <dd>
- This parameter determines the &quot;sensitivity&quot; of the Gaussian filter. The default value is 10; higher and lower values can be tested by the user. Increasing the threshold value will result in fewer edges being found.<br />
+ This parameter determines the &quot;sensitivity&quot; of the Gaussian filter. The default value is 10; higher and lower values can be tested by the user. Increasing the threshold value will result in fewer edges being found.<br/>
  Default: 10</dd>
 <dt><code>orientations=</code><i>value</i></dt>
 <dd>
- This value is the number of azimuth directions the cells on the output raster map layer are categorized into (similar to the aspect raster map layer produced by the <i>r.slope.aspect</i> program). For example, a value of 16 would result in detected edges being categorized into one of 16 bins depending on the direction of the edge at that point.<br />
+ This value is the number of azimuth directions the cells on the output raster map layer are categorized into (similar to the aspect raster map layer produced by the <i>r.slope.aspect</i> program). For example, a value of 16 would result in detected edges being categorized into one of 16 bins depending on the direction of the edge at that point.<br/>
  Default: 1</dd></dl>
 <p> The current region definition and mask settings are respected when reading the input map.</p>
 <h2>NOTES</h2>

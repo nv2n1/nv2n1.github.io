@@ -14,7 +14,7 @@ description: "PCRE2 – Perl-compatible regular expressions"
 <p> Another example is checking a user input string as it is typed, to ensure that it conforms to a required format. Invalid characters can be immediately diagnosed and rejected, giving instant feedback. </p>
 <p> Partial matching is a PCRE2-specific feature; it is not Perl-compatible. It is requested by setting one of the PCRE2_PARTIAL_HARD or PCRE2_PARTIAL_SOFT options when calling a matching function. The difference between the two options is whether or not a partial match is preferred to an alternative complete match, though the details differ between the two types of matching function. If both options are set, PCRE2_PARTIAL_HARD takes precedence. </p>
 <p> If you want to use partial matching with just-in-time optimized code, as well as setting a partial match option for the matching function, you must also call <code>pcre2_jit_compile()</code> with one or both of these options: </p>
-<p>&nbsp;<wbr>&nbsp;PCRE2_JIT_PARTIAL_HARD<br />
+<p>&nbsp;<wbr>&nbsp;PCRE2_JIT_PARTIAL_HARD<br/>
 &nbsp;<wbr>&nbsp;PCRE2_JIT_PARTIAL_SOFT </p>
 <p> PCRE2_JIT_COMPLETE should also be set if you are going to run non-partial matches on the same pattern. Separate code is compiled for each mode. If the appropriate JIT mode has not been compiled, interpretive matching code is used. </p>
 <p> Setting a partial matching option disables two of PCRE2&#8217;s standard optimization hints. PCRE2 remembers the last literal code unit in a pattern, and abandons matching immediately if it is not present in the subject string. This optimization cannot be used for a subject string that might match only partially. PCRE2 also remembers a minimum length of a matching string, and does not bother to run the matching function on shorter strings. This optimization is also disabled for partial matching.</p>
@@ -50,41 +50,41 @@ description: "PCRE2 – Perl-compatible regular expressions"
 <p> This matches either &quot;dog&quot; or &quot;dogsbody&quot;, greedily (that is, it prefers the longer string if possible). If it is matched against the string &quot;dog&quot; with PCRE2_PARTIAL_SOFT, it yields a complete match for &quot;dog&quot;. However, if PCRE2_PARTIAL_HARD is set, the result is PCRE2_ERROR_PARTIAL. On the other hand, if the pattern is made ungreedy the result is different: </p>
 <p>&nbsp;<wbr>&nbsp;/dog(sbody)??/ </p>
 <p> In this case the result is always a complete match because that is found first, and matching never continues after finding a complete match. It might be easier to follow this explanation by thinking of the two patterns like this: </p>
-<p>&nbsp;<wbr>&nbsp;/dog(sbody)?/&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;is the same as&nbsp;<wbr>&nbsp;/dogsbody|dog/<br />
+<p>&nbsp;<wbr>&nbsp;/dog(sbody)?/&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;is the same as&nbsp;<wbr>&nbsp;/dogsbody|dog/<br/>
 &nbsp;<wbr>&nbsp;/dog(sbody)??/&nbsp;<wbr>&nbsp;<wbr>&nbsp;is the same as&nbsp;<wbr>&nbsp;/dog|dogsbody/ </p>
 <p> The second pattern will never match &quot;dogsbody&quot;, because it will always find the shorter match first.</p>
 <h3>Example of partial matching using pcre2test</h3>
 <p>The <code>pcre2test</code> data modifiers <code>partial_hard</code> (or <code>ph</code>) and <code>partial_soft</code> (or <code>ps</code>) set PCRE2_PARTIAL_HARD and PCRE2_PARTIAL_SOFT, respectively, when calling <code>pcre2_match()</code>. Here is a run of <code>pcre2test</code> using a pattern that matches the whole subject in the form of a date: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;re&gt;&nbsp;/^\d?\d(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)\d\d$/<br />
-&nbsp;<wbr>&nbsp;data&gt;&nbsp;25dec3\=ph<br />
-&nbsp;<wbr>&nbsp;Partial match: 23dec3<br />
-&nbsp;<wbr>&nbsp;data&gt;&nbsp;3ju\=ph<br />
-&nbsp;<wbr>&nbsp;Partial match: 3ju<br />
-&nbsp;<wbr>&nbsp;data&gt;&nbsp;3juj\=ph<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;re&gt;&nbsp;/^\d?\d(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)\d\d$/<br/>
+&nbsp;<wbr>&nbsp;data&gt;&nbsp;25dec3\=ph<br/>
+&nbsp;<wbr>&nbsp;Partial match: 23dec3<br/>
+&nbsp;<wbr>&nbsp;data&gt;&nbsp;3ju\=ph<br/>
+&nbsp;<wbr>&nbsp;Partial match: 3ju<br/>
+&nbsp;<wbr>&nbsp;data&gt;&nbsp;3juj\=ph<br/>
 &nbsp;<wbr>&nbsp;No match </p>
 <p> This example gives the same results for both hard and soft partial matching options. Here is an example where there is a difference: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;re&gt;&nbsp;/^\d?\d(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)\d\d$/<br />
-&nbsp;<wbr>&nbsp;data&gt;&nbsp;25jun04\=ps<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;0: 25jun04<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;1: jun<br />
-&nbsp;<wbr>&nbsp;data&gt;&nbsp;25jun04\=ph<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;re&gt;&nbsp;/^\d?\d(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)\d\d$/<br/>
+&nbsp;<wbr>&nbsp;data&gt;&nbsp;25jun04\=ps<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;0: 25jun04<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;1: jun<br/>
+&nbsp;<wbr>&nbsp;data&gt;&nbsp;25jun04\=ph<br/>
 &nbsp;<wbr>&nbsp;Partial match: 25jun04 </p>
 <p> With PCRE2_PARTIAL_SOFT, the subject is matched completely. For PCRE2_PARTIAL_HARD, however, the subject is assumed not to be complete, so there is only a partial match.</p>
 <h2>MULTI-SEGMENT MATCHING WITH pcre2_match()</h2>
 <p>PCRE was not originally designed with multi-segment matching in mind. However, over time, features (including partial matching) that make multi-segment matching possible have been added. A very long string can be searched segment by segment by calling <code>pcre2_match()</code> repeatedly, with the aim of achieving the same results that would happen if the entire string was available for searching all the time. Normally, the strings that are being sought are much shorter than each individual segment, and are in the middle of very long strings, so the pattern is normally not anchored. </p>
 <p> Special logic must be implemented to handle a matched substring that spans a segment boundary. PCRE2_PARTIAL_HARD should be used, because it returns a partial match at the end of a segment whenever there is the possibility of changing the match by adding more characters. The PCRE2_NOTBOL option should also be set for all but the first segment. </p>
 <p> When a partial match occurs, the next segment must be added to the current subject and the match re-run, using the <i>startoffset</i> argument of <code>pcre2_match()</code> to begin at the point where the partial match started. For example: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;re&gt;&nbsp;/\d?\d(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)\d\d/<br />
-&nbsp;<wbr>&nbsp;data&gt;&nbsp;&#8230;the date is 23ja\=ph<br />
-&nbsp;<wbr>&nbsp;Partial match: 23ja<br />
-&nbsp;<wbr>&nbsp;data&gt;&nbsp;&#8230;the date is 23jan19 and on that day&#8230;\=offset=15<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;0: 23jan19<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;re&gt;&nbsp;/\d?\d(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)\d\d/<br/>
+&nbsp;<wbr>&nbsp;data&gt;&nbsp;&#8230;the date is 23ja\=ph<br/>
+&nbsp;<wbr>&nbsp;Partial match: 23ja<br/>
+&nbsp;<wbr>&nbsp;data&gt;&nbsp;&#8230;the date is 23jan19 and on that day&#8230;\=offset=15<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;0: 23jan19<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;1: jan </p>
 <p> Note the use of the <code>offset</code> modifier to start the new match where the partial match was found. In this example, the next segment was added to the one in which the partial match was found. This is the most straightforward approach, typically using a memory buffer that is twice the size of each segment. After a partial match, the first half of the buffer is discarded, the second half is moved to the start of the buffer, and a new segment is added before repeating the match as in the example above. After a no match, the entire buffer can be discarded. </p>
 <p> If there are memory constraints, you may want to discard text that precedes a partial match before adding the next segment. Unfortunately, this is not at present straightforward. In cases such as the above, where the pattern does not contain any lookbehinds, it is sufficient to retain only the partially matched substring. However, if the pattern contains a lookbehind assertion, characters that precede the start of the partial match may have been inspected during the matching process. When <code>pcre2test</code> displays a partial match, it indicates these characters with &#8216;&lt;&#8216; if the <code>allusedtext</code> modifier is set: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;re&gt;&nbsp;&quot;(?&lt;=123)abc&quot;<br />
-&nbsp;<wbr>&nbsp;data&gt;&nbsp;xx123ab\=ph,allusedtext<br />
-&nbsp;<wbr>&nbsp;Partial match: 123ab<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;re&gt;&nbsp;&quot;(?&lt;=123)abc&quot;<br/>
+&nbsp;<wbr>&nbsp;data&gt;&nbsp;xx123ab\=ph,allusedtext<br/>
+&nbsp;<wbr>&nbsp;Partial match: 123ab<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&lt;&lt;&lt; </p>
 <p> However, the allusedtext modifier is not available for JIT matching, because JIT matching does not record the first (or last) consulted characters. For this reason, this information is not available via the API. It is therefore not possible in general to obtain the exact number of characters that must be retained in order to get the right match result. If you cannot retain the entire segment, you must find some heuristic way of choosing. </p>
 <p> If you know the approximate length of the matching substrings, you can use that to decide how much text to retain. The only lookbehind information that is currently available via the API is the length of the longest individual lookbehind in a pattern, but this can be misleading if there are nested lookbehinds. The value returned by calling <code>pcre2_pattern_info()</code> with the PCRE2_INFO_MAXLOOKBEHIND option is the maximum number of characters (not code units) that any individual lookbehind moves back when it is processed. A pattern such as &quot;(?&lt;=(?&lt;!b)a)&quot; has a maximum lookbehind value of one, but inspects two characters before its starting point. </p>
@@ -97,10 +97,10 @@ description: "PCRE2 – Perl-compatible regular expressions"
 <p> Whereas the standard function stops as soon as it finds the complete match for &quot;dog&quot;, the DFA function also finds the partial match for &quot;dogsbody&quot;, and so returns that when PCRE2_PARTIAL_HARD is set.</p>
 <h2>MULTI-SEGMENT MATCHING WITH pcre2_dfa_match()</h2>
 <p>When a partial match has been found using the DFA matching function, it is possible to continue the match by providing additional subject data and calling the function again with the same compiled regular expression, this time setting the PCRE2_DFA_RESTART option. You must pass the same working space as before, because this is where details of the previous partial match are stored. You can set the PCRE2_PARTIAL_SOFT or PCRE2_PARTIAL_HARD options with PCRE2_DFA_RESTART to continue partial matching over multiple segments. Here is an example using <code>pcre2test</code>: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;re&gt;&nbsp;/^\d?\d(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)\d\d$/<br />
-&nbsp;<wbr>&nbsp;data&gt;&nbsp;23ja\=dfa,ps<br />
-&nbsp;<wbr>&nbsp;Partial match: 23ja<br />
-&nbsp;<wbr>&nbsp;data&gt;&nbsp;n05\=dfa,dfa_restart<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;re&gt;&nbsp;/^\d?\d(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)\d\d$/<br/>
+&nbsp;<wbr>&nbsp;data&gt;&nbsp;23ja\=dfa,ps<br/>
+&nbsp;<wbr>&nbsp;Partial match: 23ja<br/>
+&nbsp;<wbr>&nbsp;data&gt;&nbsp;n05\=dfa,dfa_restart<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;0: n05 </p>
 <p> The first call has &quot;23ja&quot; as the subject, and requests partial matching; the second call has &quot;n05&quot; as the subject for the continued (restarted) match. Notice that when the match is complete, only the last part is shown; PCRE2 does not retain the previously partially-matched string. It is up to the calling program to do that if it needs to. This means that, for an unanchored pattern, if a continued match fails, it is not possible to try again at a new starting point. All this facility is capable of doing is continuing with the previous match attempt. For example, consider this pattern: </p>
 <p>&nbsp;<wbr>&nbsp;1234|3789 </p>

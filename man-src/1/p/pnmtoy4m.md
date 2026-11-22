@@ -31,32 +31,32 @@ description: "pnmtoy4m – Convert PNM/PAM images to YUV4MPEG2 stream"
 <dt><code>-r</code></dt>
 <dd> Repeat last input frame until output is complete. If &#8216;-n 0&#8217; is also specified, last input frame will be repeated forever.</dd>
 <dt><code>-D</code><i> x</i></dt>
-<dd> Treat each PNM image as a single (de-interleaved) field instead of a full frame. The argument specifies the interpretation:<br />
-&nbsp;<wbr>t &#8211; the first image is a top-field<br />
+<dd> Treat each PNM image as a single (de-interleaved) field instead of a full frame. The argument specifies the interpretation:<br/>
+&nbsp;<wbr>t &#8211; the first image is a top-field<br/>
 &nbsp;<wbr>b &#8211; the first image is a bottom-field </dd>
 <p> With this option, two input images will be required per output frame. Be careful: mismatched &quot;-I&quot; and &quot;-D&quot; options can invert the temporal or spatial order of the fields (or both).</p>
 <dt><code>-F</code><i> n:d</i></dt>
-<dd> Set framerate encoded in output stream, as an exact integer ratio. (default: 30000:1001) Common rates are:<br />
-&nbsp;<wbr>24000:1001 &#8211; NTSC 3:2 pulldown converted film<br />
-&nbsp;<wbr>24:1 &#8211; native film<br />
-&nbsp;<wbr>25:1 &#8211; PAL/SECAM<br />
-&nbsp;<wbr>30000:1001 &#8211; NTSC video<br />
-&nbsp;<wbr>50:1 &#8211; PAL field rate<br />
+<dd> Set framerate encoded in output stream, as an exact integer ratio. (default: 30000:1001) Common rates are:<br/>
+&nbsp;<wbr>24000:1001 &#8211; NTSC 3:2 pulldown converted film<br/>
+&nbsp;<wbr>24:1 &#8211; native film<br/>
+&nbsp;<wbr>25:1 &#8211; PAL/SECAM<br/>
+&nbsp;<wbr>30000:1001 &#8211; NTSC video<br/>
+&nbsp;<wbr>50:1 &#8211; PAL field rate<br/>
 &nbsp;<wbr>60000:1001 &#8211; NTSC field rate</dd>
 <dt><code>-A</code><i> n:d</i></dt>
-<dd> Set pixel aspect ratio encoded in output stream, as an exact integer ratio. (default: 1:1) Common ratios are:<br />
-&nbsp;<wbr>&nbsp;<wbr>1:1&nbsp;<wbr>&nbsp;<wbr>&#8211; square pixels&nbsp;<wbr>(computer graphics)<br />
-&nbsp;<wbr>10:11 &#8211; CCIR-601 NTSC<br />
+<dd> Set pixel aspect ratio encoded in output stream, as an exact integer ratio. (default: 1:1) Common ratios are:<br/>
+&nbsp;<wbr>&nbsp;<wbr>1:1&nbsp;<wbr>&nbsp;<wbr>&#8211; square pixels&nbsp;<wbr>(computer graphics)<br/>
+&nbsp;<wbr>10:11 &#8211; CCIR-601 NTSC<br/>
 &nbsp;<wbr>59:54 &#8211; CCIR-601 PAL</dd>
 <dt><code>-I</code><i> x</i></dt>
-<dd> Set the output interlacing mode, encoded in the output stream. (Default is to match &quot;-D&quot; if given, or &#8216;p&#8217; if not.)<br />
-&nbsp;<wbr>p &#8211; progressive, non-interlaced<br />
-&nbsp;<wbr>t &#8211; top/upper-field-first interlaced<br />
+<dd> Set the output interlacing mode, encoded in the output stream. (Default is to match &quot;-D&quot; if given, or &#8216;p&#8217; if not.)<br/>
+&nbsp;<wbr>p &#8211; progressive, non-interlaced<br/>
+&nbsp;<wbr>t &#8211; top/upper-field-first interlaced<br/>
 &nbsp;<wbr>b &#8211; bottom/lower-field-first interlaced</dd>
 <dt><code>-v</code><i> [0,1,2]</i></dt>
-<dd> Set verbosity level.<br />
-&nbsp;<wbr>0&nbsp;<wbr>=&nbsp;<wbr>warnings and errors only.<br />
-&nbsp;<wbr>1&nbsp;<wbr>=&nbsp;<wbr>add informative messages, too.<br />
+<dd> Set verbosity level.<br/>
+&nbsp;<wbr>0&nbsp;<wbr>=&nbsp;<wbr>warnings and errors only.<br/>
+&nbsp;<wbr>1&nbsp;<wbr>=&nbsp;<wbr>add informative messages, too.<br/>
 &nbsp;<wbr>2&nbsp;<wbr>=&nbsp;<wbr>add chatty debugging message, too. </dd>
 </dl>
 <h2>EXAMPLES</h2>
@@ -69,8 +69,8 @@ description: "pnmtoy4m – Convert PNM/PAM images to YUV4MPEG2 stream"
 <dt>
 </dt><dd> ls *.tga | xargs -n1 tgatoppm | pnmtoy4m | yuvplay</dd></dl>
 <h2>AUTHOR</h2>
-<p> This manual page was written by Matt Marjanovic.<br />
- If you have questions, remarks, problems or you just want to contact the developers, the main mailing list for the MJPEG-tools is:<br />
+<p> This manual page was written by Matt Marjanovic.<br/>
+ If you have questions, remarks, problems or you just want to contact the developers, the main mailing list for the MJPEG-tools is:<br/>
 &nbsp;<wbr>&nbsp;<wbr><i>mjpeg-users [at] lists.sourceforge.net</i> </p>
 <dl>
 <dt>For more info, see our website at</dt>

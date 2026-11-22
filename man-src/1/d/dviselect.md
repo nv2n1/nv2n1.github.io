@@ -21,8 +21,8 @@ description: "dviselect – extract pages from DVI files"
 <h2>AUTHOR</h2>
 <p> Chris Torek, University of Maryland  </p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-dviconcat/">dviconcat</a>(1), <a href="/docs/linux/man/1-latex/">latex</a>(1), <a href="/docs/linux/man/1-tex/">tex</a>(1) <br />
- <i>MC-TeX User&#8217;s Guide</i> <br />
+<p> <a href="/docs/linux/man/1-dviconcat/">dviconcat</a>(1), <a href="/docs/linux/man/1-latex/">latex</a>(1), <a href="/docs/linux/man/1-tex/">tex</a>(1) <br/>
+ <i>MC-TeX User&#8217;s Guide</i> <br/>
  <i>The TeXbook</i>  </p>
 <h2>BUGS</h2>
 <p> A leading ``-&#8216;&#8216; ought to be allowed for negative numbers, but it is currently used as a synonym for ``:&#8216;&#8216;, for backwards compatibility. </p>

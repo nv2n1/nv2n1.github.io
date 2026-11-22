@@ -13,7 +13,7 @@ description: "integritysetup – manage dm-integrity (block level integrity) vol
 <h2>Description</h2>
 <p>Integritysetup is used to configure dm-integrity managed device-mapper mappings. Device-mapper integrity target provides read-write transparent integrity checking of block devices. The dm-integrity target emulates additional data integrity field per-sector. You can use this additional field directly with integritysetup utility, or indirectly (for authenticated encryption) through cryptsetup. Integritysetup supports these operations: <i>format</i> &lt;device&gt;</p>
 <dl>
-<dd>Formats &lt;device&gt; (calculates space and dm-integrity superblock and wipes the device). <code>&lt;options&gt;</code> can be [&#8211;data-device, &#8211;batch-mode, &#8211;no-wipe, &#8211;journal-size, &#8211;interleave-sectors, &#8211;tag-size, &#8211;integrity, &#8211;integrity-key-size, &#8211;integrity-key-file, &#8211;sector-size, &#8211;progress-frequency]  <i>open</i> &lt;device&gt; &lt;name&gt;<br />
+<dd>Formats &lt;device&gt; (calculates space and dm-integrity superblock and wipes the device). <code>&lt;options&gt;</code> can be [&#8211;data-device, &#8211;batch-mode, &#8211;no-wipe, &#8211;journal-size, &#8211;interleave-sectors, &#8211;tag-size, &#8211;integrity, &#8211;integrity-key-size, &#8211;integrity-key-file, &#8211;sector-size, &#8211;progress-frequency]  <i>open</i> &lt;device&gt; &lt;name&gt;<br/>
  <i>create</i> &lt;name&gt; &lt;device&gt; (<code>OBSOLETE syntax</code>)</dd>
 <dl>
 <dd>Open a mapping with &lt;name&gt; backed by device &lt;device&gt;. <code>&lt;options&gt;</code> can be [&#8211;data-device, &#8211;batch-mode, &#8211;journal-watermark, &#8211;journal-commit-time, &#8211;buffer-sectors, &#8211;integrity, &#8211;integrity-key-size, &#8211;integrity-key-file, &#8211;integrity-no-journal, &#8211;integrity-recalculate, &#8211;integrity-recovery-mode]  <i>close</i> &lt;name&gt;</dd>
@@ -97,11 +97,11 @@ description: "integritysetup – manage dm-integrity (block level integrity) vol
 </dl>
 <h2>Return Codes</h2>
 <p>Integritysetup returns 0 on success and a non-zero value on error. </p>
-<p> Error codes are:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;1 wrong parameters<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;2 no permission<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;3 out of memory<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;4 wrong device specified<br />
+<p> Error codes are:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;1 wrong parameters<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;2 no permission<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;3 out of memory<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;4 wrong device specified<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;5 device already exists, or device is busy.</p>
 <h2>Examples</h2>
 <p>Format the device with default standalone mode (CRC32C): <code>integritysetup format &lt;device&gt;</code> Open the device with default parameters: <code>integritysetup open &lt;device&gt; test</code> Format the device in standalone mode for use with HMAC(SHA256): <code>integritysetup format &lt;device&gt; &#8211;tag-size 32 &#8211;integrity hmac-sha256 &#8211;integrity-key-file &lt;keyfile&gt; &#8211;integrity-key-size &lt;key_bytes&gt;</code> Open (activate) the device with HMAC(SHA256) and HMAC key in file: <code>integritysetup open &lt;device&gt; test &#8211;integrity hmac-sha256 &#8211;integrity-key-file &lt;keyfile&gt; &#8211;integrity-key-size &lt;key_bytes&gt;</code> Dump dm-integrity superblock information: <code>integritysetup dump &lt;device&gt;</code> </p>
@@ -110,7 +110,7 @@ description: "integritysetup – manage dm-integrity (block level integrity) vol
 <h2>Authors</h2>
 <p>The integritysetup tool is written by Milan Broz &lt;gmazyland [at] gmail.com&gt; and is part of the cryptsetup project.</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2016-2019 Red Hat, Inc.<br />
+<p>Copyright &#169; 2016-2019 Red Hat, Inc.<br/>
  Copyright &#169; 2016-2019 Milan Broz </p>
 <p> This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>See Also</h2>

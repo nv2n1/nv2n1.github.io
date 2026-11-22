@@ -17,9 +17,9 @@ description: "QuantLib::ForwardSwapQuote – Quote for a forward starting swap."
 <p> const <code>Date</code> &amp; <code>startDate</code> () const </p>
 <p> const <code>Date</code> &amp; <code>fixingDate</code> () const </p>
 <p> <code>Quote interface</code> </p>
-<p> Real <code>value</code> () const<br />
- <i>returns the current value </i><br />
- bool <code>isValid</code> () const<br />
+<p> Real <code>value</code> () const<br/>
+ <i>returns the current value </i><br/>
+ bool <code>isValid</code> () const<br/>
  <i>returns true if the </i><code>Quote</code> holds a valid value </p>
 <p> <code>Observer interface</code> </p>
 <p> void <code>update</code> () </p>

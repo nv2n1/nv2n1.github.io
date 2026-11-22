@@ -11,8 +11,8 @@ description: "fmin, fminf, fminl – determine minimum of two floating-point num
 <p> fmin, fminf, fminl &#8211; determine minimum of two floating-point numbers </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;math.h&gt;</code> </p>
-<p> <code>double fmin(double </code><i>x</i><code>, double </code><i>y</i><code>);</code><br />
- <code>float fminf(float </code><i>x</i><code>, float </code><i>y</i><code>);</code><br />
+<p> <code>double fmin(double </code><i>x</i><code>, double </code><i>y</i><code>);</code><br/>
+ <code>float fminf(float </code><i>x</i><code>, float </code><i>y</i><code>);</code><br/>
  <code>long double fminl(long double </code><i>x</i><code>, long double </code><i>y</i><code>);</code> </p>
 <p> Link with <i>-lm</i>. </p>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>

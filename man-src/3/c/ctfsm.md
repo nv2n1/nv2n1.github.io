@@ -11,7 +11,7 @@ description: "ctfsm.f –"
 <p> ctfsm.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>ctfsm</code> (TRANSR, SIDE, UPLO, TRANS, DIAG, M, N, ALPHA, A, B, LDB)<br />
+<p> subroutine <code>ctfsm</code> (TRANSR, SIDE, UPLO, TRANS, DIAG, M, N, ALPHA, A, B, LDB)<br/>
  <i></i><code>CTFSM</code> solves a matrix equation (one operand is a triangular matrix in RFP format).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ctfsm (characterTRANSR, characterSIDE, characterUPLO, characterTRANS, characterDIAG, integerM, integerN, complexALPHA, complex, dimension( 0: * )A, complex, dimension( 0: ldb-1, 0: * )B, integerLDB)</h3>

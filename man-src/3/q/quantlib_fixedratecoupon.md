@@ -16,15 +16,15 @@ description: "QuantLib::FixedRateCoupon – Coupon paying a fixed interest rate"
 <p> <code>FixedRateCoupon</code> (<code>Real</code> nominal, const <code>Date</code> &amp;paymentDate, <code>Rate</code> rate, const <code>DayCounter</code> &amp;dayCounter, const <code>Date</code> &amp;accrualStartDate, const <code>Date</code> &amp;accrualEndDate, const <code>Date</code> &amp;refPeriodStart=<code>Date</code>(), const <code>Date</code> &amp;refPeriodEnd=<code>Date</code>()) </p>
 <p> <code>FixedRateCoupon</code> (<code>Real</code> nominal, const <code>Date</code> &amp;paymentDate, const <code>InterestRate</code> &amp;interestRate, const <code>DayCounter</code> &amp;dayCounter, const <code>Date</code> &amp;accrualStartDate, const <code>Date</code> &amp;accrualEndDate, const <code>Date</code> &amp;refPeriodStart=<code>Date</code>(), const <code>Date</code> &amp;refPeriodEnd=<code>Date</code>()) </p>
 <p> <code>CashFlow interface</code> </p>
-<p> <code>Real</code> <code>amount</code> () const<br />
+<p> <code>Real</code> <code>amount</code> () const<br/>
  <i>returns the amount of the cash flow </i> </p>
 <p> <code>Coupon interface</code> </p>
-<p> <code>Rate</code> <code>rate</code> () const<br />
- <i>accrued rate </i><br />
+<p> <code>Rate</code> <code>rate</code> () const<br/>
+ <i>accrued rate </i><br/>
  <code>InterestRate</code> <code>interestRate</code> () const </p>
-<p> <code>DayCounter</code> <code>dayCounter</code> () const<br />
- <i>day counter for accrual calculation </i><br />
- <code>Real</code> <code>accruedAmount</code> (const <code>Date</code> &amp;) const<br />
+<p> <code>DayCounter</code> <code>dayCounter</code> () const<br/>
+ <i>day counter for accrual calculation </i><br/>
+ <code>Real</code> <code>accruedAmount</code> (const <code>Date</code> &amp;) const<br/>
  <i>accrued amount at the given date </i> </p>
 <p> <code>Visitability</code> </p>
 <p> virtual void <code>accept</code> (<code>AcyclicVisitor</code> &amp;) </p>

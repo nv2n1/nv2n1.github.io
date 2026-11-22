@@ -88,9 +88,9 @@ description: "imake – C preprocessor interface to the make utility"
 <p> /tmp/IIf.XXXXXX<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>temporary Imakefile if specified Imakefile uses # comments</p>
 <p> /usr/bin/cpp<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>default C preprocessor</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-make/">make</a>(1), <a href="/docs/linux/man/1-xmkmf/">xmkmf</a>(1)<br />
- Paul DuBois, <i>imake-Related Software and Documentation,</i> <a rel="nofollow" href="http://www.snake.net/software/imake-stuff/">http://www.snake.net/software/imake-stuff/</a><br />
- Paul DuBois, <i>Software Portability with imake, Second Edition,</i> O&#8217;Reilly &amp; Associates, 1996.<br />
+<p> <a href="/docs/linux/man/1-make/">make</a>(1), <a href="/docs/linux/man/1-xmkmf/">xmkmf</a>(1)<br/>
+ Paul DuBois, <i>imake-Related Software and Documentation,</i> <a rel="nofollow" href="http://www.snake.net/software/imake-stuff/">http://www.snake.net/software/imake-stuff/</a><br/>
+ Paul DuBois, <i>Software Portability with imake, Second Edition,</i> O&#8217;Reilly &amp; Associates, 1996.<br/>
  S. I. Feldman, <i>Make &#8212; A Program for Maintaining Computer Programs</i></p>
 <h2>ENVIRONMENT VARIABLES</h2>
 <p> The following environment variables may be set, however their use is not recommended as they introduce dependencies that are not readily apparent when <i>imake</i> is run:</p>

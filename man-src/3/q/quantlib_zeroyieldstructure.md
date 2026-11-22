@@ -13,7 +13,7 @@ description: "QuantLib::ZeroYieldStructure – Zero-yield term structure."
 <p> Inherits <code>QuantLib::YieldTermStructure</code>. </p>
 <p> Inherited by <code>DriftTermStructure</code>, <code>InterpolatedZeroCurve&lt; Interpolator &gt;</code>, <code>PiecewiseZeroSpreadedTermStructure</code>, <code>QuantoTermStructure</code>, and <code>ZeroSpreadedTermStructure</code>. </p>
 <h3>Public Member Functions</h3>
-<p><code>Constructors</code><br />
+<p><code>Constructors</code><br/>
  See the <code>TermStructure</code> documentation for issues regarding constructors. </p>
 <p> <code>ZeroYieldStructure</code> (const <code>DayCounter</code> &amp;dc=<code>DayCounter</code>()) </p>
 <p> <code>ZeroYieldStructure</code> (const <code>Date</code> &amp;referenceDate, const <code>Calendar</code> &amp;calendar=<code>Calendar</code>(), const <code>DayCounter</code> &amp;dc=<code>DayCounter</code>()) </p>
@@ -21,7 +21,7 @@ description: "QuantLib::ZeroYieldStructure – Zero-yield term structure."
 <h3>Protected Member Functions</h3>
 <p><code>YieldTermStructure implementation</code> </p>
 <p> <code>DiscountFactor</code> <code>discountImpl</code> (Time) const </p>
-<p> virtual <code>Rate</code> <code>zeroYieldImpl</code> (Time) const =0<br />
+<p> virtual <code>Rate</code> <code>zeroYieldImpl</code> (Time) const =0<br/>
  <i>zero-yield calculation </i></p>
 <h2>Detailed Description</h2>
 <p>Zero-yield term structure. </p>

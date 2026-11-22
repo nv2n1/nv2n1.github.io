@@ -1971,7 +1971,7 @@ http.sslverify false
 <p> gpg.ssh.defaultKeyCommand: This command that will be run when user.signingkey is not set and a ssh signature is requested. On successful exit a valid ssh public key is expected in the first line of its output. To automatically use the first available key from your ssh-agent set this to &quot;ssh-add -L&quot;. </p>
 <p> gpg.ssh.allowedSignersFile </p>
 <dl>
-<dd> <p> A file containing ssh public keys which you are willing to trust. The file consists of one or more lines of principals followed by an ssh public key. e.g.: m[blue]<code>user1 [at] example.com</code>m[]<font SIZE="-2">[1]</font>,m[blue]<code>user2 [at] example.com</code>m[]<font SIZE="-2">[2]</font> ssh-rsa AAAAX1... See <a href="/docs/linux/man/1-ssh-keygen/">ssh-keygen</a>(1) &quot;ALLOWED SIGNERS&quot; for details. The principal is only used to identify the key and is available when verifying a signature. </p>
+<dd> <p> A file containing ssh public keys which you are willing to trust. The file consists of one or more lines of principals followed by an ssh public key. e.g.: m[blue]<code>user1 [at] example.com</code>m[][1],m[blue]<code>user2 [at] example.com</code>m[][2] ssh-rsa AAAAX1... See <a href="/docs/linux/man/1-ssh-keygen/">ssh-keygen</a>(1) &quot;ALLOWED SIGNERS&quot; for details. The principal is only used to identify the key and is available when verifying a signature. </p>
 <p> SSH has no concept of trust levels like gpg does. To be able to differentiate between valid signatures and trusted signatures the trust level of a signature verification is set to <code>fully</code> when the public key is present in the allowedSignersFile. Otherwise the trust level is <code>undefined</code> and git verify-commit/tag will fail. </p>
 <p> This file can be set to a location outside of the repository and every developer maintains their own trust store. A central repository server could generate this file automatically from ssh keys with push access to verify the code against. In a corporate setting this file is probably generated at a global location from automation that already handles developer ssh keys. </p>
 <p> A repository that only allows signed commits can store the file in the repository itself using a path relative to the top-level of the working tree. This way only committers with an already valid key can add or change keys in the keyring. </p>
@@ -2840,7 +2840,7 @@ http.sslverify false
  </dd></dl>
 <p> pack.writeReverseIndex </p>
 <dl>
-<dd> <p> When true, git will write a corresponding .rev file (see: m[blue]<code>Documentation/technical/pack-format.txt</code>m[]<font SIZE="-2">[3]</font>) for each new packfile that it writes in all places except for <code><a href="/docs/linux/man/1-git-fast-import/">git-fast-import</a></code>(1) and in the bulk checkin mechanism. Defaults to false. </p>
+<dd> <p> When true, git will write a corresponding .rev file (see: m[blue]<code>Documentation/technical/pack-format.txt</code>m[][3]) for each new packfile that it writes in all places except for <code><a href="/docs/linux/man/1-git-fast-import/">git-fast-import</a></code>(1) and in the bulk checkin mechanism. Defaults to false. </p>
  </dd></dl>
 <p> pager.&lt;cmd&gt; </p>
 <dl>
@@ -2896,7 +2896,7 @@ http.sslverify false
 <dd> <p> &bull; <code>1</code> - the original wire protocol with the addition of a version string in the initial response from the server. </p>
  </dd></dl>
 <dl>
-<dd> <p> &bull; <code>2</code> - m[blue]<code>wire protocol version 2</code>m[]<font SIZE="-2">[4]</font>. </p>
+<dd> <p> &bull; <code>2</code> - m[blue]<code>wire protocol version 2</code>m[][4]. </p>
  </dd></dl>
 </dl>
 <p> pull.ff </p>

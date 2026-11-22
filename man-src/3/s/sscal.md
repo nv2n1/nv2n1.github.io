@@ -11,7 +11,7 @@ description: "sscal.f –"
 <p> sscal.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>sscal</code> (N, SA, SX, INCX)<br />
+<p> subroutine <code>sscal</code> (N, SA, SX, INCX)<br/>
  <i></i><code>SSCAL</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sscal (integerN, realSA, real, dimension(*)SX, integerINCX)</h3>

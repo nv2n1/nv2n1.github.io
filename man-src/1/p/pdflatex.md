@@ -153,7 +153,7 @@ description: "pdftex – PDF output from TeX"
 <dd> <p> If set, its value, taken to be in epoch-seconds, will be used for the timestamps in the PDF output, such as the CreationDate and ModDate keys. This is useful for making reproducible builds. </p>
  </dd>
 <dt><code>FORCE_SOURCE_DATE</code></dt>
-<dd> <p> If set to the value &quot;1&quot;, the time-related TeX primitives (<i>\year</i>, <i>\month</i>, <i>\day</i>, <i>\time</i>) are also initialized from the value of SOURCE_DATE_EPOCH. This is not recommended if there is any viable alternative. <br />
+<dd> <p> If set to the value &quot;1&quot;, the time-related TeX primitives (<i>\year</i>, <i>\month</i>, <i>\day</i>, <i>\time</i>) are also initialized from the value of SOURCE_DATE_EPOCH. This is not recommended if there is any viable alternative. <br/>
  pdfTeX also has several primitives to support reproducible builds, which are preferable to setting these environment variables; see the main manual. </p>
  </dd></dl>
 <p> Many, many more environment variables may be consulted related to path searching. See the Kpathsea manual.  </p>
@@ -173,9 +173,9 @@ description: "pdftex – PDF output from TeX"
 <h2>BUGS</h2>
 <p> This version of pdfTeX fails to trap arithmetic overflow when dimensions are added or subtracted. Cases where this occurs are rare, but when it does the generated DVI or PDF file will be invalid.  </p>
 <h2>AVAILABILITY</h2>
-<p> pdfTeX is available for a large variety of machine architectures and operating systems. pdfTeX is part of all major TeX distributions. <br />
- The pdfTeX home page: <a rel="nofollow" href="http://www.pdftex.org.">http://www.pdftex.org.</a> <br />
- pdfTeX on CTAN: <a rel="nofollow" href="https://ctan.org/pkg/pdftex.">https://ctan.org/pkg/pdftex.</a> <br />
+<p> pdfTeX is available for a large variety of machine architectures and operating systems. pdfTeX is part of all major TeX distributions. <br/>
+ The pdfTeX home page: <a rel="nofollow" href="http://www.pdftex.org.">http://www.pdftex.org.</a> <br/>
+ pdfTeX on CTAN: <a rel="nofollow" href="https://ctan.org/pkg/pdftex.">https://ctan.org/pkg/pdftex.</a> <br/>
  pdfTeX mailing list for all discussion: <a rel="nofollow" href="https://lists.tug.org/pdftex.">https://lists.tug.org/pdftex.</a>  </p>
 <h2>SEE ALSO</h2>
 <p> This manual page is not meant to be exhaustive. The complete documentation for this version of pdfTeX can be found in the <i>pdfTeX user manual</i> and the Texinfo manuals <i>Kpathsea library</i>, <i>Web2C: A TeX implementation</i>. These manuals, and more, can be accessed from the pdfTeX or CTAN web pages given above. </p>

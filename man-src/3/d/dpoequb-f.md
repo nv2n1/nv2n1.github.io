@@ -10,7 +10,7 @@ description: "dpoequb.f –"
 <p>dpoequb.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dpoequb</code> (N, A, LDA, S, SCOND, AMAX, INFO)<br />
+<p>subroutine <code>dpoequb</code> (N, A, LDA, S, SCOND, AMAX, INFO)<br/>
  <i></i><code>DPOEQUB</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dpoequb (integerN, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( * )S, double precisionSCOND, double precisionAMAX, integerINFO)</h3>

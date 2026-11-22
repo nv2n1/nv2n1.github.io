@@ -24,13 +24,13 @@ description: "fragmaster – Using psfrag constructs with pdflatex"
 </code></pre>
 <h2>DESCRIPTION</h2>
 <p> <code>fragmaster</code> is a perl script that helps using psfrag constructs with <code>pdflatex</code>. </p>
-<p> <code>psfrag</code> is a LaTeX package which allows one to replace text elements in included <font SIZE="-1">EPS</font> graphics by arbitrary LaTeX output. Because <code>psfrag</code> uses PostScript for making the replacements, in principle you can&#8217;t use <code>psfrag</code> with <code>pdflatex</code> which doesn&#8217;t have any interfaces to PostScript. </p>
-<p> <code>fragmaster</code> produces a new <font SIZE="-1">EPS</font> from your original <font SIZE="-1">EPS</font> which already contains all those <code>psfrag</code> replacements. This new <font SIZE="-1">EPS</font> graphic actually can be converted to <font SIZE="-1">PDF</font> including all replacements. The resulting ``encapsulated&#8217;&#8216; <font SIZE="-1">PDF</font> can then be used with pdflatex. </p>
+<p> <code>psfrag</code> is a LaTeX package which allows one to replace text elements in included EPS graphics by arbitrary LaTeX output. Because <code>psfrag</code> uses PostScript for making the replacements, in principle you can&#8217;t use <code>psfrag</code> with <code>pdflatex</code> which doesn&#8217;t have any interfaces to PostScript. </p>
+<p> <code>fragmaster</code> produces a new EPS from your original EPS which already contains all those <code>psfrag</code> replacements. This new EPS graphic actually can be converted to PDF including all replacements. The resulting ``encapsulated&#8217;&#8216; PDF can then be used with pdflatex. </p>
 <p> <code>fragmaster</code> will scan the current directory for files which end in <i>_fm</i> and have a <i>_fm.eps</i> counterpart. Looking at the modification dates, the script checks if the output files have to be rebuilt and does so if necessary (a little like ``make&#8217;&#8216; would do it). </p>
 <p> In your LaTeX document you can include the produced graphics using </p>
 <pre><code> \includegraphics{&lt;graphics&gt;}
 </code></pre>
-<p> conveniently omitting file extension. <code>latex</code> will choose the <font SIZE="-1">EPS,</font> <code>pdflatex</code> will choose the <font SIZE="-1">PDF.</font>  </p>
+<p> conveniently omitting file extension. <code>latex</code> will choose the EPS, <code>pdflatex</code> will choose the PDF.  </p>
 <code></code><h3>fragmaster control file and other related files.</h3>
 <p> To use the script you have to create two files per graphic: </p>
 <pre><code>    * &lt;graphics&gt;_fm.eps: the EPS file itself,
@@ -64,17 +64,17 @@ description: "fragmaster – Using psfrag constructs with pdflatex"
 <p> You can set per-directory <code>&quot;fmclass:&quot;</code>, <code>&quot;fmclassopt:&quot;</code>, <code>&quot;fmopt:&quot;</code> and <code>&quot;head:/end head&quot;</code> options by means of a per-directory fragmaster control file <i>fragmaster.dfm</i> with similar syntax as above. You can use another file by means of the <code>--dirfm</code> option. Note that options set this way are mutually exclusive, any option set in per-file <i>_fm</i> file will completely override associated option in per-directory file, and options set in per-directory file will override initial defaults (<code>&quot;\documentclass[12pt]{article}&quot;</code>). Empty options are ignored. </p>
 <p> This is work in progress and still needs extensive checking. Double-check that modification date based rebuilds are working properly.  </p>
 <h2>KNOWN PROBLEMS</h2>
-<p> In case the <font SIZE="-1">EPS</font> will be produced as landscape graphics, i.e. <code>gv</code> shows <i>Landscape</i> instead of <i>Portrait</i> in the menu bar, and the graphic will end up turned around 90 degrees in your document, then it is likely that your original <font SIZE="-1">EPS</font> is wider than it is tall. In this case some (more recent) versions of <code>dvips</code> make the ``smart&#8217;&#8216; assumption that your graphic is landscape, even though the graphic&#8217;s proportions don&#8217;t tell anything about the orientation of its contents... This still can happen in case your input <font SIZE="-1">EPS</font> matches a standard paper size. </p>
+<p> In case the EPS will be produced as landscape graphics, i.e. <code>gv</code> shows <i>Landscape</i> instead of <i>Portrait</i> in the menu bar, and the graphic will end up turned around 90 degrees in your document, then it is likely that your original EPS is wider than it is tall. In this case some (more recent) versions of <code>dvips</code> make the ``smart&#8217;&#8216; assumption that your graphic is landscape, even though the graphic&#8217;s proportions don&#8217;t tell anything about the orientation of its contents... This still can happen in case your input EPS matches a standard paper size. </p>
 <p> Anyway, you can make <code>dvips</code> behave nicer by specifying the following line in <i>/usr/share/texmf/dvips/config/config.pdf</i> (or a local equivalent inside <i>/usr/local/share/texmf</i>): </p>
 <p> @ custom 0pt 0pt </p>
 <p> In the likely case that you&#8217;re wondering why, I&#8217;d recommend the <code>dvipsk</code> sources warmly to you...  </p>
 <h2>AUTHORS</h2>
 <p> Tilman Vogel &lt;tilman vogel web de&gt; (dot at dot) and Agustin Martin &lt;agustin6martin gmail com&gt; (at dot)  </p>
 <h2>HISTORY</h2>
-<p> This script was inspired by a posting from Karsten Roemke &lt;k roemke gmx de&gt; (dot at dot) with subject ``psfrag pdflatex, lange her&#8217;&#8216; in de.comp.text.tex on 2003-11-11 05:25:44 <font SIZE="-1">PST.</font> </p>
+<p> This script was inspired by a posting from Karsten Roemke &lt;k roemke gmx de&gt; (dot at dot) with subject ``psfrag pdflatex, lange her&#8217;&#8216; in de.comp.text.tex on 2003-11-11 05:25:44 PST. </p>
 <p> Karsten Roemke was inspired for his solution by postings from Thomas Wimmer.  </p>
 <h2>COPYRIGHT</h2>
 <pre><code> Copyright (C) 2004 Tilman Vogel
  Copyright (C) 2011-2015 Agustin Martin
 </code></pre>
-<p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
+<p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>

@@ -11,7 +11,7 @@ description: "ssygs2.f –"
 <p> ssygs2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>ssygs2</code> (ITYPE, UPLO, N, A, LDA, B, LDB, INFO)<br />
+<p> subroutine <code>ssygs2</code> (ITYPE, UPLO, N, A, LDA, B, LDB, INFO)<br/>
  <i></i><code>SSYGS2</code> reduces a symmetric definite generalized eigenproblem to standard form, using the factorization results obtained from spotrf (unblocked algorithm).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ssygs2 (integerITYPE, characterUPLO, integerN, real, dimension( lda, * )A, integerLDA, real, dimension( ldb, * )B, integerLDB, integerINFO)</h3>

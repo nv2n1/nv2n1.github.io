@@ -11,7 +11,7 @@ description: "dlaisnan.f –"
 <p> dlaisnan.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> LOGICAL function <code>dlaisnan</code> (DIN1, DIN2)<br />
+<p> LOGICAL function <code>dlaisnan</code> (DIN1, DIN2)<br/>
  <i></i><code>DLAISNAN</code> tests input for NaN by comparing two arguments for inequality.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>LOGICAL function dlaisnan (double precisionDIN1, double precisionDIN2)</h3>

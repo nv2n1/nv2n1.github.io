@@ -12,25 +12,25 @@ description: "firewalld.zones – firewalld zones"
 <h3>What is a zone?</h3>
 <p>A network zone defines the level of trust for network connections. This is a one to many relation, which means that a connection can only be part of one zone, but a zone can be used for many network connections. </p>
 <p> The zone defines the firewall features that are enabled in this zone: </p>
-<p> <font SIZE="+1"> <code>Predefined services</code></p>
+<p>  <code>Predefined services</code></p>
 <dl>
 <dd>A service is a combination of port and/or protocol entries. Optionally netfilter helper modules can be added and also a IPv4 and IPv6 destination address.</dd></dl>
-<p> </font><font SIZE="+2"> <code>Ports and protocols</code></p>
+<p>  <code>Ports and protocols</code></p>
 <dl>
 <dd>Definition of <i>tcp</i> or <i>udp</i> ports, where ports can be a single port or a port range.</dd></dl>
-<p> </font><font SIZE="+3"> <code>ICMP blocks</code></p>
+<p>  <code>ICMP blocks</code></p>
 <dl>
 <dd>Blocks selected Internet Control Message Protocol (ICMP) messages. These messages are either information requests or created as a reply to information requests or in error conditions.</dd></dl>
-<p> </font><font SIZE="+4"> <code>Masquerading</code></p>
+<p>  <code>Masquerading</code></p>
 <dl>
 <dd>The addresses of a private network are mapped to and hidden behind a public IP address. This is a form of address translation.</dd></dl>
-<p> </font><font SIZE="+5"> <code>Forward ports</code></p>
+<p>  <code>Forward ports</code></p>
 <dl>
 <dd>A forward port is either mapped to the same port on another host or to another port on the same host or to another port on another host.</dd></dl>
-<p> </font><font SIZE="+6"> <code>Rich language rules</code></p>
+<p>  <code>Rich language rules</code></p>
 <dl>
 <dd>The rich language extends the elements (service, port, icmp-block, masquerade and forward-port) with additional source and destination addresses, logging, actions and limits for logs and actions. It can also be used for host or network white and black listing (for more information, please have a look at <code><a href="/docs/linux/man/5-firewalld-richlanguage/">firewalld.richlanguage</a></code>(5)).</dd></dl>
-<p> For more information on the zone file format, please have a look at <code><a href="/docs/linux/man/5-firewalld-zone/">firewalld.zone</a></code>(5). </font></p>
+<p> For more information on the zone file format, please have a look at <code><a href="/docs/linux/man/5-firewalld-zone/">firewalld.zone</a></code>(5). </p>
 <h3>Which zones are available?</h3>
 <p>Here are the zones provided by firewalld sorted according to the default trust level of the zones from untrusted to trusted: </p>
 <p> drop</p>

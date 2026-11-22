@@ -17,8 +17,8 @@ description: "cs_register_fileload – register a fileload function"
 void cs_register_fileload(CSPARSE *parse, void *ctx, CSFILELOAD fileload);
 </code></pre>
 <h2>ARGUMENTS</h2>
-<p> parse &#8211; a pointer to an initialized CSPARSE structure<br />
- ctx &#8211; pointer that is passed to the CSFILELOAD function when called<br />
+<p> parse &#8211; a pointer to an initialized CSPARSE structure<br/>
+ ctx &#8211; pointer that is passed to the CSFILELOAD function when called<br/>
  fileload &#8211; a CSFILELOAD function </p>
 <h2>DESCRIPTION</h2>
 <p> cs_register_fileload registers a fileload function that overrides the built-in function. The built-in function uses hdf_search_path and ne_file_load (based on stat/open/read) to find and load the file on every template render. You can override this function if you wish to provide other template search functions, or load the template from an in-memory cache, etc. This fileload function will be used by cs_parse, including </p>

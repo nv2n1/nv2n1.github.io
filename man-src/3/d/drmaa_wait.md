@@ -20,45 +20,45 @@ char *error_diagnosis,
 size_t&amp;nbsp;error_diag_len
 </code></pre>
 <p> <code>);</code> </p>
-<p>int drmaa_wait(<br />
-const char *job_id,<br />
-char *job_id_out,<br />
-size_t job_id_out_len,<br />
-int *stat,<br />
-signed long timeout,<br />
-drmaa_attr_values_t **rusage,<br />
-char *error_diagnosis,<br />
-size_t&amp;nbsp;error_diagnois_len<br />
+<p>int drmaa_wait(<br/>
+const char *job_id,<br/>
+char *job_id_out,<br/>
+size_t job_id_out_len,<br/>
+int *stat,<br/>
+signed long timeout,<br/>
+drmaa_attr_values_t **rusage,<br/>
+char *error_diagnosis,<br/>
+size_t&amp;nbsp;error_diagnois_len<br/>
  <code>);</code> </p>
-<p>int drmaa_wifaborted(<br />
-int *aborted,<br />
-int&amp;nbsp;stat,<br />
-char *error_diagnosis,<br />
-size_t&amp;nbsp;error_diag_len<br />
+<p>int drmaa_wifaborted(<br/>
+int *aborted,<br/>
+int&amp;nbsp;stat,<br/>
+char *error_diagnosis,<br/>
+size_t&amp;nbsp;error_diag_len<br/>
  <code>);</code> </p>
-<p>int drmaa_wifexited(<br />
-int *exited,<br />
-int&amp;nbsp;stat,<br />
-char *error_diagnosis,<br />
-size_t&amp;nbsp;error_diag_len<br />
+<p>int drmaa_wifexited(<br/>
+int *exited,<br/>
+int&amp;nbsp;stat,<br/>
+char *error_diagnosis,<br/>
+size_t&amp;nbsp;error_diag_len<br/>
  <code>);</code> </p>
-<p>int drmaa_wifsignaled(<br />
-int *signaled,<br />
-int&amp;nbsp;stat,<br />
-char *error_diagnosis,<br />
-size_t&amp;nbsp;error_diag_len<br />
+<p>int drmaa_wifsignaled(<br/>
+int *signaled,<br/>
+int&amp;nbsp;stat,<br/>
+char *error_diagnosis,<br/>
+size_t&amp;nbsp;error_diag_len<br/>
  <code>);</code> </p>
-<p>int drmaa_wcoredump(<br />
-int *core_dumped,<br />
-int&amp;nbsp;stat,<br />
-char *error_diagnosis,<br />
-size_t&amp;nbsp;error_diag_len<br />
+<p>int drmaa_wcoredump(<br/>
+int *core_dumped,<br/>
+int&amp;nbsp;stat,<br/>
+char *error_diagnosis,<br/>
+size_t&amp;nbsp;error_diag_len<br/>
  <code>);</code> </p>
-<p>int drmaa_wexitstatus(<br />
-int *exit_status,<br />
-int&amp;nbsp;stat,<br />
-char *error_diagnosis,<br />
-size_t&amp;nbsp;error_diag_len<br />
+<p>int drmaa_wexitstatus(<br/>
+int *exit_status,<br/>
+int&amp;nbsp;stat,<br/>
+char *error_diagnosis,<br/>
+size_t&amp;nbsp;error_diag_len<br/>
  <code>);</code> </p>
 <pre><code>
 int drmaa_wtermsig(

@@ -10,9 +10,9 @@ description: "CMPIStatus – CMPIStatus class implementation"
 <p>CMPIStatus &#8211; CMPIStatus class implementation</p>
 <h2>Synopsis</h2>
 <h3>Public Attributes</h3>
-<p><code>CMPIrc</code> <code>rc;</code><br />
+<p><code>CMPIrc</code> <code>rc;</code><br/>
  <i>status code for operation. </i> </p>
-<p> <code>CMPIString</code> * <code>msg;</code><br />
+<p> <code>CMPIString</code> * <code>msg;</code><br/>
  <i>String description for status code, when errors occur. </i></p>
 <h2>Methods</h2>
 <h2>Description</h2>

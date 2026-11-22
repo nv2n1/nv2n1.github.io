@@ -9,8 +9,8 @@ description: "pmiEnd – finish up a LOGIMPORT archive"
 
 <p><code>pmiEnd</code> &#8211; finish up a LOGIMPORT archive</p>
 <h2>C Synopsis</h2>
-<p><code> #include &lt;pcp/pmapi.h&gt;<br />
- #include &lt;pcp/impl.h&gt;<br />
+<p><code> #include &lt;pcp/pmapi.h&gt;<br/>
+ #include &lt;pcp/impl.h&gt;<br/>
  #include &lt;pcp/import.h&gt; </p>
 <p> int pmiEnd(void); </p>
 <p> cc &#8230; -lpcp_import -lpcp </code></p>

@@ -37,5 +37,5 @@ description: "tap2rpm – create RPM packages which wrap .tap files"
 <h2>REPORTING BUGS</h2>
 <p> To report a bug, visit <i><a rel="nofollow" href="http://twistedmatrix.com/trac/wiki/TwistedDevelopment#FilingTickets">http://twistedmatrix.com/trac/wiki/TwistedDevelopment#FilingTickets</a></i> for more information.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2000-2009 Twisted Matrix Laboratories.<br />
+<p> Copyright &#169; 2000-2009 Twisted Matrix Laboratories.<br/>
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>

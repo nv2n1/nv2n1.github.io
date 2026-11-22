@@ -17,17 +17,17 @@ description: "QuantLib::BlackConstantVol – Constant Black volatility, no time-
 <p> <code>BlackConstantVol</code> (<code>Natural</code> settlementDays, const <code>Calendar</code> &amp;, Volatility volatility, const <code>DayCounter</code> &amp;dayCounter) </p>
 <p> <code>BlackConstantVol</code> (<code>Natural</code> settlementDays, const <code>Calendar</code> &amp;, const <code>Handle</code>&lt; <code>Quote</code> &gt; &amp;volatility, const <code>DayCounter</code> &amp;dayCounter) </p>
 <p> <code>TermStructure interface</code> </p>
-<p> <code>Date</code> <code>maxDate</code> () const<br />
+<p> <code>Date</code> <code>maxDate</code> () const<br/>
  <i>the latest date for which the curve can return values </i> </p>
 <p> <code>VolatilityTermStructure interface</code> </p>
-<p> Real <code>minStrike</code> () const<br />
- <i>the minimum strike for which the term structure can return vols </i><br />
- Real <code>maxStrike</code> () const<br />
+<p> Real <code>minStrike</code> () const<br/>
+ <i>the minimum strike for which the term structure can return vols </i><br/>
+ Real <code>maxStrike</code> () const<br/>
  <i>the maximum strike for which the term structure can return vols </i> </p>
 <p> <code>Visitability</code> </p>
 <p> virtual void <code>accept</code> (<code>AcyclicVisitor</code> &amp;) </p>
 <h3>Protected Member Functions</h3>
-<p>virtual Volatility <code>blackVolImpl</code> (Time t, Real) const<br />
+<p>virtual Volatility <code>blackVolImpl</code> (Time t, Real) const<br/>
  <i>Black volatility calculation. </i></p>
 <h2>Detailed Description</h2>
 <p>Constant Black volatility, no time-strike dependence. </p>

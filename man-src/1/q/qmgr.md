@@ -28,8 +28,8 @@ description: "qmgr – pbs batch system manager"
 <dt>-z</dt>
 <dd> No errors are written to standard error.</dd></dl>
 <h2>OPERANDS</h2>
-<p> The <i> operands identify the name of the batch server to which the administrator requests are sent. Each conforms to the following syntax:<br />
- </i><code><br />
+<p> The <i> operands identify the name of the batch server to which the administrator requests are sent. Each conforms to the following syntax:<br/>
+ </i><code><br/>
  where is the network name of the host on which the server is running and is the port number to which to connect. If is not specified, the default port number is used. </p>
 <p> If </code><i> is not specified, the administrator requests are sent to the local server. </i></p>
 <h2>STANDARD INPUT</h2>
@@ -71,7 +71,7 @@ description: "qmgr – pbs batch system manager"
 <dd> is a list of one or more names of specific objects The name list is in the form: </dd>
 <p> with no intervening white space. The name of an object is declared when the object is first created. If the name is @server, then all the objects of specified type at the server will be effected.</p>
 <dt>attr</dt>
-<dd> specifies the name of an attribute of the object which is to be set or modified. If the attribute is one which consist of a set of resources, then the attribute is specified in the form:<br />
+<dd> specifies the name of an attribute of the object which is to be set or modified. If the attribute is one which consist of a set of resources, then the attribute is specified in the form:<br/>
  &nbsp;<wbr>&nbsp;<wbr>attribute_name.resource_name</code> </dd>
 <dt>OP</dt>
 <dd> operation to be performed with the attribute and its value:</dd>

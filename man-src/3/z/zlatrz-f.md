@@ -10,7 +10,7 @@ description: "zlatrz.f –"
 <p>zlatrz.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlatrz</code> (M, N, L, A, LDA, TAU, WORK)<br />
+<p>subroutine <code>zlatrz</code> (M, N, L, A, LDA, TAU, WORK)<br/>
  <i></i><code>ZLATRZ</code> factors an upper trapezoidal matrix by means of unitary transformations.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlatrz (integerM, integerN, integerL, complex*16, dimension( lda, * )A, integerLDA, complex*16, dimension( * )TAU, complex*16, dimension( * )WORK)</h3>

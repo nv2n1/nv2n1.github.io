@@ -10,7 +10,7 @@ description: "dzsum1.f –"
 <p>dzsum1.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>DOUBLE PRECISION function <code>dzsum1</code> (N, CX, INCX)<br />
+<p>DOUBLE PRECISION function <code>dzsum1</code> (N, CX, INCX)<br/>
  <i></i><code>DZSUM1</code> forms the 1-norm of the complex vector using the true absolute value.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>DOUBLE PRECISION function dzsum1 (integerN, complex*16, dimension( * )CX, integerINCX)</h3>

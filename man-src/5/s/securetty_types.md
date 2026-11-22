@@ -24,9 +24,9 @@ description: "securetty_types – The SELinux secure tty type configuration file
 <dd>One or more type entries that are defined in the policy for secure tty devices.</dd></dl>
 </dl>
 <h2>Example</h2>
-<p># ./contexts/securetty_types<br />
- sysadm_tty_device_t<br />
- user_tty_device_t<br />
+<p># ./contexts/securetty_types<br/>
+ sysadm_tty_device_t<br/>
+ user_tty_device_t<br/>
  staff_tty_device_t</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-selinux/">selinux</a></code>(8), <code><a href="/docs/linux/man/3-selinux_securetty_types_path/">selinux_securetty_types_path</a></code>(3), <code><a href="/docs/linux/man/1-newrole/">newrole</a></code>(1), <code><a href="/docs/linux/man/3-selinux_check_securetty_context/">selinux_check_securetty_context</a></code>(3), <code><a href="/docs/linux/man/5-selinux_config/">selinux_config</a></code>(5) </p>

@@ -30,94 +30,94 @@ dcmfile-in  DICOM input filename(s) to be modified
 </pre>
 <h2>OPTIONS</h2>
 <h3>general options</h3>
-<p>&#8211; h&#8211; help<br />
-        print this help text and exit&#8211; version<br />
-            print version information and exit&#8211; arguments<br />
-                print expanded command line arguments &#8211;<br />
-    q&#8211; quiet<br />
-        quiet mode,<br />
-    print no warnings and errors &#8211; v&#8211; verbose<br />
-                                       verbose mode,<br />
-    print processing details &#8211; d&#8211; debug<br />
-                                   debug mode,<br />
-    print debug information &#8211; ll&#8211; log &#8211; level[l] evel:string<br />
-                                                       constant(fatal, error, warn, info, debug, trace)<br />
-          use level l for the logger<br />
-  -lc   &#8211;log-config  [f]ilename: string<br />
-          use config file f for the logger<br />
-  -ie   &#8211;ignore-errors<br />
-          continue with file, if modify error occurs<br />
-  -nb   &#8211;no-backup<br />
+<p>&#8211; h&#8211; help<br/>
+        print this help text and exit&#8211; version<br/>
+            print version information and exit&#8211; arguments<br/>
+                print expanded command line arguments &#8211;<br/>
+    q&#8211; quiet<br/>
+        quiet mode,<br/>
+    print no warnings and errors &#8211; v&#8211; verbose<br/>
+                                       verbose mode,<br/>
+    print processing details &#8211; d&#8211; debug<br/>
+                                   debug mode,<br/>
+    print debug information &#8211; ll&#8211; log &#8211; level[l] evel:string<br/>
+                                                       constant(fatal, error, warn, info, debug, trace)<br/>
+          use level l for the logger<br/>
+  -lc   &#8211;log-config  [f]ilename: string<br/>
+          use config file f for the logger<br/>
+  -ie   &#8211;ignore-errors<br/>
+          continue with file, if modify error occurs<br/>
+  -nb   &#8211;no-backup<br/>
           don&#8217;t backup files (DANGEROUS)</p>
 <h3>input options</h3>
-<p>input file format : +f&#8211; read &#8211; file<br />
-                                    read file format or<br />
-    data set(default) + fo&#8211; read &#8211; file &#8211; only read file format only<br />
-        &#8211; f&#8211; read &#8211; dataset read data set without file meta information input transfer syntax : -t = &#8211;read &#8211; xfer &#8211; auto use TS recognition(default) &#8211; td&#8211; read &#8211; xfer &#8211; detect ignore TS specified in the file meta header<br />
-                                                                                                      &#8211; te&#8211; read &#8211; xfer &#8211; little read with explicit VR little endian TS<br />
-                                                                                                      &#8211; tb&#8211; read &#8211; xfer &#8211; big read with explicit VR big endian TS<br />
+<p>input file format : +f&#8211; read &#8211; file<br/>
+                                    read file format or<br/>
+    data set(default) + fo&#8211; read &#8211; file &#8211; only read file format only<br/>
+        &#8211; f&#8211; read &#8211; dataset read data set without file meta information input transfer syntax : -t = &#8211;read &#8211; xfer &#8211; auto use TS recognition(default) &#8211; td&#8211; read &#8211; xfer &#8211; detect ignore TS specified in the file meta header<br/>
+                                                                                                      &#8211; te&#8211; read &#8211; xfer &#8211; little read with explicit VR little endian TS<br/>
+                                                                                                      &#8211; tb&#8211; read &#8211; xfer &#8211; big read with explicit VR big endian TS<br/>
                                                                                                       &#8211; ti&#8211; read &#8211; xfer &#8211; implicit read with implicit VR little endian TS parsing of odd &#8211; length attributes : +ao&#8211; accept &#8211; odd &#8211; length accept odd length attributes(default) + ae&#8211; assume &#8211; even &#8211; length assume real length is one byte larger automatic data correction : +dc&#8211; enable &#8211; correction enable automatic data correction(default) &#8211; dc&#8211; disable &#8211; correction disable automatic data correction bitstream format of deflated input : +bd&#8211; bitstream &#8211; deflated expect deflated bitstream(default) + bz&#8211; bitstream &#8211; zlib expect deflated zlib bitstream</p>
 <h3>processing options</h3>
-<p>insert mode : -i&#8211; insert &#8220;[t]ag-path=[v]alue&#8221; insert(or overwrite) path at position t with value v<br />
-              &#8211;<br />
-              if &#8211;insert &#8211; from &#8211; file &#8220;[t]ag-path=[f]ilename&#8221; insert(or overwrite) path at position t with value from file f<br />
-              &#8211;<br />
-              nrc&#8211; no &#8211; reserv &#8211; check do not check private reservations modify mode : -m&#8211; modify &#8220;[t]ag-path=[v]alue&#8221; modify tag at position t to value v<br />
-                                                                                        &#8211;<br />
-                                                                                        mf&#8211; modify &#8211; from &#8211; file &#8220;[t]ag-path=[f]ilename&#8221; modify tag at position t to value from file f<br />
-                                                                                        &#8211;<br />
-                                                                                        ma&#8211; modify &#8211; all &#8220;[t]ag=[v]alue&#8221; modify ALL matching tags t in file to value v erase mode : -e&#8211; erase &#8220;[t]ag-path&#8221; erase tag / item at position t<br />
-                                                                                        &#8211;<br />
-                                                                                        ea&#8211; erase &#8211; all &#8220;[t]ag&#8221; erase ALL matching tags t in file<br />
-                                                                                        &#8211;<br />
-                                                                                        ep&#8211; erase &#8211; private erase ALL private data from file unique identifier : -gst&#8211; gen &#8211; stud &#8211; uid generate new Study Instance UID<br />
-                                                                                                                                                                  &#8211;<br />
-                                                                                                                                                                  gse&#8211; gen &#8211; ser &#8211; uid generate new Series Instance UID<br />
-                                                                                                                                                                  &#8211;<br />
-                                                                                                                                                                  gin&#8211; gen &#8211; inst &#8211; uid generate new SOP Instance UID<br />
-                                                                                                                                                                  &#8211;<br />
-                                                                                                                                                                  nmu&#8211; no &#8211; meta &#8211; uid do not update metaheader UIDs if related UIDs in the dataset are modified other processing options : -imt&#8211; ignore &#8211; missing &#8211; tags treat &#8216;tag not found&#8217; as success when modifying<br />
-    or erasing in files<br />
+<p>insert mode : -i&#8211; insert &#8220;[t]ag-path=[v]alue&#8221; insert(or overwrite) path at position t with value v<br/>
+              &#8211;<br/>
+              if &#8211;insert &#8211; from &#8211; file &#8220;[t]ag-path=[f]ilename&#8221; insert(or overwrite) path at position t with value from file f<br/>
+              &#8211;<br/>
+              nrc&#8211; no &#8211; reserv &#8211; check do not check private reservations modify mode : -m&#8211; modify &#8220;[t]ag-path=[v]alue&#8221; modify tag at position t to value v<br/>
+                                                                                        &#8211;<br/>
+                                                                                        mf&#8211; modify &#8211; from &#8211; file &#8220;[t]ag-path=[f]ilename&#8221; modify tag at position t to value from file f<br/>
+                                                                                        &#8211;<br/>
+                                                                                        ma&#8211; modify &#8211; all &#8220;[t]ag=[v]alue&#8221; modify ALL matching tags t in file to value v erase mode : -e&#8211; erase &#8220;[t]ag-path&#8221; erase tag / item at position t<br/>
+                                                                                        &#8211;<br/>
+                                                                                        ea&#8211; erase &#8211; all &#8220;[t]ag&#8221; erase ALL matching tags t in file<br/>
+                                                                                        &#8211;<br/>
+                                                                                        ep&#8211; erase &#8211; private erase ALL private data from file unique identifier : -gst&#8211; gen &#8211; stud &#8211; uid generate new Study Instance UID<br/>
+                                                                                                                                                                  &#8211;<br/>
+                                                                                                                                                                  gse&#8211; gen &#8211; ser &#8211; uid generate new Series Instance UID<br/>
+                                                                                                                                                                  &#8211;<br/>
+                                                                                                                                                                  gin&#8211; gen &#8211; inst &#8211; uid generate new SOP Instance UID<br/>
+                                                                                                                                                                  &#8211;<br/>
+                                                                                                                                                                  nmu&#8211; no &#8211; meta &#8211; uid do not update metaheader UIDs if related UIDs in the dataset are modified other processing options : -imt&#8211; ignore &#8211; missing &#8211; tags treat &#8216;tag not found&#8217; as success when modifying<br/>
+    or erasing in files<br/>
            &#8211; iun&#8211; ignore &#8211; un &#8211; values do not try writing any values to elements having VR of UN</p>
 <h3>output options</h3>
-<p>output file format:<br />
-  +F    &#8211;write-file<br />
-          write file format (default)<br />
-  -F    &#8211;write-dataset<br />
-          write data set without file meta information<br />
-output transfer syntax:<br />
-  +t=   &#8211;write-xfer-same<br />
-          write with same TS as input (default)<br />
-  +te   &#8211;write-xfer-little<br />
-          write with explicit VR little endian TS<br />
-  +tb   &#8211;write-xfer-big<br />
-          write with explicit VR big endian TS<br />
-  +ti   &#8211;write-xfer-implicit<br />
-          write with implicit VR little endian TS<br />
-post-1993 value representations:<br />
-  +u    &#8211;enable-new-vr<br />
-          enable support for new VRs (UN/UT) (default)<br />
-  -u    &#8211;disable-new-vr<br />
-          disable support for new VRs, convert to OB<br />
-group length encoding:<br />
-  +g=   &#8211;group-length-recalc<br />
-          recalculate group lengths if present (default)<br />
-  +g    &#8211;group-length-create<br />
-          always write with group length elements<br />
-  -g    &#8211;group-length-remove<br />
-          always write without group length elements<br />
-length encoding in sequences and items:<br />
-  +le   &#8211;length-explicit<br />
-          write with explicit lengths (default)<br />
-  -le   &#8211;length-undefined<br />
-          write with undefined lengths<br />
-data set trailing padding (not with &#8211;write-dataset):<br />
-  -p=   &#8211;padding-retain<br />
-          do not change padding (default if not &#8211;write-dataset)<br />
-  -p    &#8211;padding-off<br />
-          no padding (implicit if &#8211;write-dataset)<br />
-  +p    &#8211;padding-create  [f]ile-pad [i]tem-pad: integer<br />
-          align file on multiple of f bytes and items on<br />
+<p>output file format:<br/>
+  +F    &#8211;write-file<br/>
+          write file format (default)<br/>
+  -F    &#8211;write-dataset<br/>
+          write data set without file meta information<br/>
+output transfer syntax:<br/>
+  +t=   &#8211;write-xfer-same<br/>
+          write with same TS as input (default)<br/>
+  +te   &#8211;write-xfer-little<br/>
+          write with explicit VR little endian TS<br/>
+  +tb   &#8211;write-xfer-big<br/>
+          write with explicit VR big endian TS<br/>
+  +ti   &#8211;write-xfer-implicit<br/>
+          write with implicit VR little endian TS<br/>
+post-1993 value representations:<br/>
+  +u    &#8211;enable-new-vr<br/>
+          enable support for new VRs (UN/UT) (default)<br/>
+  -u    &#8211;disable-new-vr<br/>
+          disable support for new VRs, convert to OB<br/>
+group length encoding:<br/>
+  +g=   &#8211;group-length-recalc<br/>
+          recalculate group lengths if present (default)<br/>
+  +g    &#8211;group-length-create<br/>
+          always write with group length elements<br/>
+  -g    &#8211;group-length-remove<br/>
+          always write without group length elements<br/>
+length encoding in sequences and items:<br/>
+  +le   &#8211;length-explicit<br/>
+          write with explicit lengths (default)<br/>
+  -le   &#8211;length-undefined<br/>
+          write with undefined lengths<br/>
+data set trailing padding (not with &#8211;write-dataset):<br/>
+  -p=   &#8211;padding-retain<br/>
+          do not change padding (default if not &#8211;write-dataset)<br/>
+  -p    &#8211;padding-off<br/>
+          no padding (implicit if &#8211;write-dataset)<br/>
+  +p    &#8211;padding-create  [f]ile-pad [i]tem-pad: integer<br/>
+          align file on multiple of f bytes and items on<br/>
           multiple of i bytes</p>
 <h2>PRIVATE TAGS</h2>
 <p> There are some issues you have to consider when working with private tags. However, the insertion or modification of a reservation tag (gggg,00xx) should always work.</p>

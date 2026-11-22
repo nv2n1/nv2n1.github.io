@@ -238,9 +238,9 @@ description: "conky – A system monitor for X originally based on the torsmo co
 <dt><code>templateN</code></dt>
 <dd> Define a template for later use inside TEXT segments. Substitute N by a digit between 0 and 9, inclusively. The value of the variable is being inserted into the stuff below TEXT at the corresponding position, but before some substitutions are applied: </dd>
 <p> &#8216;
-&#8217; -&gt; newline<br />
- &#8216;\&#8217; -&gt; backslash<br />
- &#8216;\ &#8216; -&gt; space<br />
+&#8217; -&gt; newline<br/>
+ &#8216;\&#8217; -&gt; backslash<br/>
+ &#8216;\ &#8216; -&gt; space<br/>
  &#8216;\N&#8217; -&gt; template argument N </p>
 <dt><code>text_buffer_size</code> <code>bytes</code></dt>
 <dd> Size of the standard text buffer (default is 256 bytes). This buffer is used for intermediary text, such as individual lines, output from $exec vars, and various other variables. Increasing the size of this buffer can drastically reduce Conky&#8217;s performance, but will allow for more text display per variable. The size of this buffer cannot be smaller than the default value of 256 bytes. </dd>
@@ -557,8 +557,8 @@ description: "conky – A system monitor for X originally based on the torsmo co
 <dd> if there is at least one default gateway, display everything between $if_gw and the matching $endif </dd>
 <dt><code>if_match</code> <code>expression</code></dt>
 <dd> Evaluates the given boolean expression, printing everything between $if_match and the matching $endif depending on whether the evaluation returns true or not. Valid expressions consist of a left side, an operator and a right side. Left and right sides are being parsed for contained text objects before evaluation. Recognised left and right side types are: </dd>
-<p> <code>double</code>Argument consists of only digits and a single dot.<br />
- <code>long</code>Argument consists of only digits.<br />
+<p> <code>double</code>Argument consists of only digits and a single dot.<br/>
+ <code>long</code>Argument consists of only digits.<br/>
  <code>string</code>Argument is enclosed in quotation marks (&quot;) </p>
 <p> Valid operands are: &#8216;&gt;&#8217;, &#8216;&lt;&#8216;, &#8216;&gt;=&#8217;, &#8216;&lt;=&#8217;, &#8216;==&#8217;, &#8216;!=&#8217;. </p>
 <dt><code>if_mixer_mute</code> <code>(mixer)</code></dt>
@@ -711,11 +711,11 @@ description: "conky – A system monitor for X originally based on the torsmo co
 <dd> Short hostname (same as &#8216;hostname -s&#8217; shell command). </dd>
 <dt><code>nvidia</code> <code>threshold</code> <code>temp</code> <code>ambient</code> <code>gpufreq</code> <code>memfreq</code> <code>imagequality</code></dt>
 <dd> Nvidia graficcard support for the XNVCtrl library. Each option can be shortened to the least significant part. Temperatures are printed as float, all other values as integer. </dd>
-<p> <code>threshold</code> <code>The thresholdtemperature at which the gpu slows down</code><br />
- <code>temp</code> <code>Gives the gpu current temperature</code><br />
- <code>ambient</code> <code>Gives current air temperature near GPU case</code><br />
- <code>gpufreq</code> <code>Gives the current gpu frequency</code><br />
- <code>memfreq</code> <code>Gives the current mem frequency</code><br />
+<p> <code>threshold</code> <code>The thresholdtemperature at which the gpu slows down</code><br/>
+ <code>temp</code> <code>Gives the gpu current temperature</code><br/>
+ <code>ambient</code> <code>Gives current air temperature near GPU case</code><br/>
+ <code>gpufreq</code> <code>Gives the current gpu frequency</code><br/>
+ <code>memfreq</code> <code>Gives the current mem frequency</code><br/>
  <code>imagequality</code> <code>Which imagequality should be chosen by OpenGL applications</code> </p>
 <dt><code>offset</code> <code>(pixels)</code></dt>
 <dd> Move text over by N pixels. See also $voffset. </dd>
@@ -723,8 +723,8 @@ description: "conky – A system monitor for X originally based on the torsmo co
 <dd> Change outline color </dd>
 <dt><code>pb_battery</code> <code>item</code></dt>
 <dd> If running on Apple powerbook/ibook, display information on battery status. The item parameter specifies, what information to display. Exactly one item must be specified. Valid items are: </dd>
-<p> <code>status</code> <code>Display if battery is fully charged, charging, discharging or absent (running on AC)</code><br />
- <code>percent</code> <code>Display charge of battery in percent, if charging or discharging. Nothing will be displayed, if battery is fully charged or absent.</code><br />
+<p> <code>status</code> <code>Display if battery is fully charged, charging, discharging or absent (running on AC)</code><br/>
+ <code>percent</code> <code>Display charge of battery in percent, if charging or discharging. Nothing will be displayed, if battery is fully charged or absent.</code><br/>
  <code>time</code> <code>Display the time remaining until the battery will be fully charged or discharged at current rate. Nothing is displayed, if battery is absent or if it&#8217;s present but fully charged and not discharging.</code> </p>
 <dt><code>pid_chroot</code> <code>pid</code></dt>
 <dd> Directory used as rootdirectory by the process (this will be &quot;/&quot; unless the process did a chroot syscall) </dd>
@@ -864,29 +864,29 @@ description: "conky – A system monitor for X originally based on the torsmo co
 <dd> Displays last N lines of supplied text file. The file is checked every &#8216;next_check&#8217; update. If next_check is not supplied, Conky defaults to 2. Max of 30 lines can be displayed, or until the text buffer is filled. </dd>
 <dt><code>tcp_portmon</code> <code>port_begin port_end item (index)</code></dt>
 <dd> TCP port (both IPv6 and IPv4) monitor for specified local ports. Port numbers must be in the range 1 to 65535. Valid items are: </dd>
-<p> <code>count</code> <code>Total number of connections in the range</code><br />
- <code>rip</code> <code>Remote ip address</code><br />
- <code>rhost</code> <code>Remote host name</code><br />
- <code>rport</code> <code>Remote port number</code><br />
- <code>rservice</code> <code>Remote service name from /etc/services</code><br />
- <code>lip</code> <code>Local ip address</code><br />
- <code>lhost</code> <code>Local host name</code><br />
- <code>lport</code> <code>Local port number</code><br />
+<p> <code>count</code> <code>Total number of connections in the range</code><br/>
+ <code>rip</code> <code>Remote ip address</code><br/>
+ <code>rhost</code> <code>Remote host name</code><br/>
+ <code>rport</code> <code>Remote port number</code><br/>
+ <code>rservice</code> <code>Remote service name from /etc/services</code><br/>
+ <code>lip</code> <code>Local ip address</code><br/>
+ <code>lhost</code> <code>Local host name</code><br/>
+ <code>lport</code> <code>Local port number</code><br/>
  <code>lservice</code> <code>Local service name from /etc/services</code> </p>
 <p> The connection index provides you with access to each connection in the port monitor. The monitor will return information for index values from 0 to n-1 connections. Values higher than n-1 are simply ignored. For the &quot;count&quot; item, the connection index must be omitted. It is required for all other items. </p>
 <p> Examples: </p>
-<p> <code>${tcp_portmon 6881 6999 count}</code> <code>Displays the number of connections in the bittorrent port range</code><br />
- <code>${tcp_portmon 22 22 rip 0}</code> <code>Displays the remote host ip of the first sshd connection</code><br />
- <code>${tcp_portmon 22 22 rip 9}</code> <code>Displays the remote host ip of the tenth sshd connection</code><br />
- <code>${tcp_portmon 1 1024 rhost 0}</code> <code>Displays the remote host name of the first connection on a privileged port</code><br />
- <code>${tcp_portmon 1 1024 rport 4}</code> <code>Displays the remote host port of the fifth connection on a privileged port</code><br />
+<p> <code>${tcp_portmon 6881 6999 count}</code> <code>Displays the number of connections in the bittorrent port range</code><br/>
+ <code>${tcp_portmon 22 22 rip 0}</code> <code>Displays the remote host ip of the first sshd connection</code><br/>
+ <code>${tcp_portmon 22 22 rip 9}</code> <code>Displays the remote host ip of the tenth sshd connection</code><br/>
+ <code>${tcp_portmon 1 1024 rhost 0}</code> <code>Displays the remote host name of the first connection on a privileged port</code><br/>
+ <code>${tcp_portmon 1 1024 rport 4}</code> <code>Displays the remote host port of the fifth connection on a privileged port</code><br/>
  <code>${tcp_portmon 1 65535 lservice 14}</code> <code>Displays the local service name of the fifteenth connection in the range of all ports</code> </p>
 <p> Note that port monitor variables which share the same port range actually refer to the same monitor, so many references to a single port range for different items and different indexes all use the same monitor internally. In other words, the program avoids creating redundant monitors.</p>
 <dt><code>templateN</code> <code>(arg1)</code> <code>(arg2)</code> <code>(arg3 &#8230;)</code></dt>
 <dd> Evaluate the content of the templateN configuration variable (where N is a value between 0 and 9, inclusively), applying substitutions as described in the documentation of the corresponding configuration variable. The number of arguments is optional, but must match the highest referred index in the template. You can use the same special sequences in each argument as the ones valid for a template definition, e.g. to allow an argument to contain a whitespace. Also simple nesting of templates is possible this way. </dd>
 <p> Here are some examples of template definitions: </p>
-<p> template0 $\1\2<br />
- template1 \1: ${fs_used \2} / ${fs_size \2}<br />
+<p> template0 $\1\2<br/>
+ template1 \1: ${fs_used \2} / ${fs_size \2}<br/>
  template2 \1 \2 </p>
 <p> The following list shows sample usage of the templates defined above, with the equivalent syntax when not using any template at all: </p>
 <table>
@@ -983,28 +983,28 @@ description: "conky – A system monitor for X originally based on the torsmo co
 <dt><code>weather</code> <code>URI locID data_type (interval_in_minutes)</code></dt>
 <dd> Download, parse and display METAR data. </dd>
 <p> For the &#8216;URI&#8217;, there are two possibilities: </p>
-<p> <a rel="nofollow" href="http://weather.noaa.gov/pub/data/observations/metar/stations/">http://weather.noaa.gov/pub/data/observations/metar/stations/</a><br />
+<p> <a rel="nofollow" href="http://weather.noaa.gov/pub/data/observations/metar/stations/">http://weather.noaa.gov/pub/data/observations/metar/stations/</a><br/>
  <a rel="nofollow" href="http://xoap.weather.com/weather/local/">http://xoap.weather.com/weather/local/</a> </p>
 <p> The first one is free to use but the second requires you to register and obtain your partner ID and license key. These two must be written, separated by a space, into a file called .xoaprc which needs to be placed into your home directory. </p>
 <p> &#8216;locID&#8217; must be a valid location identifier for the required uri. For the NOAA site this must be a valid ICAO (see for instance <a rel="nofollow" href="https://pilotweb.nas.faa.gov/qryhtml/icao/">https://pilotweb.nas.faa.gov/qryhtml/icao/</a>). For the weather.com site this must be a valid location ID (see for instance <a rel="nofollow" href="http://aspnetresources.com/tools/locid.aspx">http://aspnetresources.com/tools/locid.aspx</a>). </p>
 <p> &#8216;data_type&#8217; must be one of the following: </p>
-<p> <code>last_update</code> The date and time stamp of the data. The result depends on the URI used. For the NOAA site it is date (yyyy/mm/dd) and UTC time. For the weather.com one it is date ([m]m/[d]d/yy) and Local Time of the station.<br />
+<p> <code>last_update</code> The date and time stamp of the data. The result depends on the URI used. For the NOAA site it is date (yyyy/mm/dd) and UTC time. For the weather.com one it is date ([m]m/[d]d/yy) and Local Time of the station.<br/>
  <code>temperature</code> </p>
-<p> Air temperature (you can use the &#8216;temperature_unit&#8217; config setting to change units)<br />
+<p> Air temperature (you can use the &#8216;temperature_unit&#8217; config setting to change units)<br/>
  <code>cloud_cover</code> </p>
-<p> The highest cloud cover status<br />
+<p> The highest cloud cover status<br/>
  <code>pressure</code> </p>
-<p> Air pressure in millibar<br />
+<p> Air pressure in millibar<br/>
  <code>wind_speed</code> </p>
-<p> Wind speed in km/h<br />
+<p> Wind speed in km/h<br/>
  <code>wind_dir</code> </p>
-<p> Wind direction<br />
+<p> Wind direction<br/>
  <code>wind_dir_DEG</code> </p>
-<p> Compass wind direction<br />
+<p> Compass wind direction<br/>
  <code>humidity</code> </p>
-<p> Relative humidity in %<br />
+<p> Relative humidity in %<br/>
  <code>weather</code> </p>
-<p> Any relevant weather event (rain, snow, etc.). This is not used if you are querying the weather.com site since this data is aggregated into the cloud_cover one<br />
+<p> Any relevant weather event (rain, snow, etc.). This is not used if you are querying the weather.com site since this data is aggregated into the cloud_cover one<br/>
  <code>icon</code> </p>
 <p> Weather icon (only for <a rel="nofollow" href="http://www.weather.com">www.weather.com</a>). Can be used together with the icon kit provided upon registering to their service. </p>
 <p> &#8216;delay_in_minutes&#8217; (optional, default 30) cannot be less than 30 minutes. </p>
@@ -1016,16 +1016,16 @@ description: "conky – A system monitor for X originally based on the torsmo co
 <p> &#8216;locID&#8217;, see &#8216;weather&#8217; above. </p>
 <p> &#8216;day&#8217; is a number from 0 (today) to 4 (3 days after tomorrow). </p>
 <p> &#8216;data_type&#8217; must be one of the following: </p>
-<p> <code>day</code> <code>Day of the week</code><br />
- <code>date</code> <code>Date, in the form MMM DD (ie. Jul 14)</code><br />
- <code>low</code> <code>Minimun temperature (you can use the &#8216;temperature_unit&#8217; config setting to change units)</code><br />
- <code>hi</code> <code>Maximum temperature (you can use the &#8216;temperature_unit&#8217; config setting to change units)</code><br />
- <code>icon</code> <code>Weather icon. Can be used together with the icon kit provided upon registering to the weather.com service</code><br />
- <code>forecast</code> <code>Weather forecast (sunny, rainy, etc.)</code><br />
- <code>wind_speed</code> <code>Wind speed in km/h</code><br />
- <code>wind_dir</code> <code>Wind direction</code><br />
- <code>wind_dir_DEG</code> <code>Compass wind direction</code><br />
- <code>humidity</code> <code>Relative humidity in %</code><br />
+<p> <code>day</code> <code>Day of the week</code><br/>
+ <code>date</code> <code>Date, in the form MMM DD (ie. Jul 14)</code><br/>
+ <code>low</code> <code>Minimun temperature (you can use the &#8216;temperature_unit&#8217; config setting to change units)</code><br/>
+ <code>hi</code> <code>Maximum temperature (you can use the &#8216;temperature_unit&#8217; config setting to change units)</code><br/>
+ <code>icon</code> <code>Weather icon. Can be used together with the icon kit provided upon registering to the weather.com service</code><br/>
+ <code>forecast</code> <code>Weather forecast (sunny, rainy, etc.)</code><br/>
+ <code>wind_speed</code> <code>Wind speed in km/h</code><br/>
+ <code>wind_dir</code> <code>Wind direction</code><br/>
+ <code>wind_dir_DEG</code> <code>Compass wind direction</code><br/>
+ <code>humidity</code> <code>Relative humidity in %</code><br/>
  <code>precipitation</code> <code>Probability of having a precipitation (in %)</code> </p>
 <p> &#8216;delay_in_minutes&#8217; (optional, default 210) cannot be lower than 210 min. </p>
 <p> This object is threaded, and once a thread is created it can&#8217;t be explicitly destroyed. One thread will run for each URI specified. You can use any protocol that Curl supports. </p>
@@ -1134,22 +1134,22 @@ description: "conky – A system monitor for X originally based on the torsmo co
 <dd> Sets Conky&#8217;s update interval (in seconds) to &#8216;number&#8217;.</dd>
 <dt><code>conky_window</code> <code>table</code></dt>
 <dd> This table contains some information about Conky&#8217;s window. The following table describes the values contained: </dd>
-<p> <code>drawable</code> <code>Window&#8217;s drawable (Xlib Drawable), requires Lua extras enabled at compile time.</code><br />
- <code>visual</code> <code>Window&#8217;s visual (Xlib Visual), requires Lua extras enabled at compile time.</code><br />
- <code>display</code> <code>Window&#8217;s display (Xlib Display), requires Lua extras enabled at compile time.</code><br />
- <code>width</code> <code>Window width (in pixels).</code><br />
- <code>height</code> <code>Window height (in pixels).</code><br />
- <code>border_inner_margin</code> <code>Window&#8217;s inner border margin (in pixels).</code><br />
- <code>border_outer_margin</code> <code>Window&#8217;s outer border margin (in pixels).</code><br />
- <code>border_width</code> <code>Window&#8217;s border width (in pixels).</code><br />
- <code>text_start_x</code> <code>The x component of the starting coordinate of text drawing.</code><br />
- <code>text_start_y</code> <code>The y component of the starting coordinate of text drawing.</code><br />
- <code>text_width</code> <code>The width of the text drawing region.</code><br />
+<p> <code>drawable</code> <code>Window&#8217;s drawable (Xlib Drawable), requires Lua extras enabled at compile time.</code><br/>
+ <code>visual</code> <code>Window&#8217;s visual (Xlib Visual), requires Lua extras enabled at compile time.</code><br/>
+ <code>display</code> <code>Window&#8217;s display (Xlib Display), requires Lua extras enabled at compile time.</code><br/>
+ <code>width</code> <code>Window width (in pixels).</code><br/>
+ <code>height</code> <code>Window height (in pixels).</code><br/>
+ <code>border_inner_margin</code> <code>Window&#8217;s inner border margin (in pixels).</code><br/>
+ <code>border_outer_margin</code> <code>Window&#8217;s outer border margin (in pixels).</code><br/>
+ <code>border_width</code> <code>Window&#8217;s border width (in pixels).</code><br/>
+ <code>text_start_x</code> <code>The x component of the starting coordinate of text drawing.</code><br/>
+ <code>text_start_y</code> <code>The y component of the starting coordinate of text drawing.</code><br/>
+ <code>text_width</code> <code>The width of the text drawing region.</code><br/>
  <code>text_height</code> <code>The height of the text drawing region.</code> </p>
 <p> NOTE: This table is only defined when X support is enabled.</p>
 <dt><code>conky_info</code> <code>table</code></dt>
 <dd> This table contains some information about Conky&#8217;s internal data. The following table describes the values contained: </dd>
-<p> <code>update_interval</code> <code>Conky&#8217;s update interval (in seconds).</code><br />
+<p> <code>update_interval</code> <code>Conky&#8217;s update interval (in seconds).</code><br/>
  <code>uptime</code> <code>System uptime, in seconds.</code></p>
 <dt><code>conky_build_info</code> <code>string</code></dt>
 <dd> A string containing the build info for this particular instance of Conky, including the version, build date, and architecture.</dd>

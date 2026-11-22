@@ -15,21 +15,21 @@ description: "sc::auto_vec –"
 Public Types</code></pre>
 <p> typedef T <code>element_type</code></p>
 <h3>Public Member Functions</h3>
-<p><code>auto_vec</code> (T *d=0) throw ()<br />
- <i>Creates a new </i><code>auto_vec</code> for a vector, d, of type T.<br />
- <code>auto_vec</code> (<code>auto_vec</code> &amp;av) throw ()<br />
- <i>Create a </i><code>auto_vec</code>, transferring the storage from another.<br />
- <code>~auto_vec</code> () throw ()<br />
- <i>This will delete the vector. </i><br />
- <code>auto_vec</code> &amp; <code>operator=</code> (<code>auto_vec</code> &amp;av) throw ()<br />
- <i>This member transfers the data from av to this. </i><br />
- T * <code>get</code> () const throw ()<br />
- <i>Returns the pointer. </i><br />
- T &amp; <code>operator[]</code> (size_t i) throw ()<br />
- <i>Returns the i&#8217;th element. </i><br />
- T * <code>release</code> () throw ()<br />
- <i>Release ownership. </i><br />
- void <code>reset</code> (T *d=0) throw ()<br />
+<p><code>auto_vec</code> (T *d=0) throw ()<br/>
+ <i>Creates a new </i><code>auto_vec</code> for a vector, d, of type T.<br/>
+ <code>auto_vec</code> (<code>auto_vec</code> &amp;av) throw ()<br/>
+ <i>Create a </i><code>auto_vec</code>, transferring the storage from another.<br/>
+ <code>~auto_vec</code> () throw ()<br/>
+ <i>This will delete the vector. </i><br/>
+ <code>auto_vec</code> &amp; <code>operator=</code> (<code>auto_vec</code> &amp;av) throw ()<br/>
+ <i>This member transfers the data from av to this. </i><br/>
+ T * <code>get</code> () const throw ()<br/>
+ <i>Returns the pointer. </i><br/>
+ T &amp; <code>operator[]</code> (size_t i) throw ()<br/>
+ <i>Returns the i&#8217;th element. </i><br/>
+ T * <code>release</code> () throw ()<br/>
+ <i>Release ownership. </i><br/>
+ void <code>reset</code> (T *d=0) throw ()<br/>
  <i>Assign to a new value. </i></p>
 <h2>Detailed Description</h2>
 <h3>template&lt;class T&gt; class sc::auto_vec&lt; T &gt;</h3>

@@ -15,9 +15,9 @@ description: "libntfs – library for accessing and managing NTFS volumes"
 <h2>Authors</h2>
 <p><code>libntfs</code> was written by Anton Altaparmakov, Richard Russon, Szabolcs Szakacsits, Yuval Fledel and Yura Pakhuchiy.</p>
 <h2>Availability</h2>
-<p>The <code>ntfsprogs</code> can be downloaded from:<br />
+<p>The <code>ntfsprogs</code> can be downloaded from:<br/>
  <a rel="nofollow" href="http://www.linux-ntfs.org/content/view/19/37">http://www.linux-ntfs.org/content/view/19/37</a> </p>
-<p> These manual pages can be viewed online at:<br />
+<p> These manual pages can be viewed online at:<br/>
  <a rel="nofollow" href="http://man.linux-ntfs.org/">http://man.linux-ntfs.org/</a></p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-ntfsprogs/">ntfsprogs</a></code>(8), <code><a href="/docs/linux/man/8-libntfs-gnomevfs/">libntfs-gnomevfs</a></code>(8) </p>

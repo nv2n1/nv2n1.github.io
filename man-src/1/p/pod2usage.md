@@ -31,7 +31,7 @@ description: "pod2usage – print usage messages from embedded pod docs in files
     3 : print the entire manpage (similar to running pod2text)
 </pre>
 <dt><code>-pathlist</code> <i>dirlist</i></dt>
-<dd> Specifies one or more directories to search for the input file if it was not supplied with an absolute path. Each directory path in the given list should be separated by a &#8216;:&#8217; on Unix (&#8216;;&#8217; on MSWin32 and <font SIZE="-1">DOS</font>).</dd>
+<dd> Specifies one or more directories to search for the input file if it was not supplied with an absolute path. Each directory path in the given list should be separated by a &#8216;:&#8217; on Unix (&#8216;;&#8217; on MSWin32 and DOS).</dd>
 <dt><code>-formatter</code> <i>module</i></dt>
 <dd> Which text formatter to use. Default is Pod::Text, or for very old Perl versions Pod::PlainText. An alternative would be e.g. Pod::Text::Termcap.</dd>
 <dt><code>-utf8</code></dt>

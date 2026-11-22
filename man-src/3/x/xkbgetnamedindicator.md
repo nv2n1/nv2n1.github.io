@@ -11,7 +11,7 @@ description: "XkbGetNamedIndicator – Look up the indicator map and other infor
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>Bool XkbGetNamedDeviceIndicator</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>unsigned int </code><i>dev_spec</i><code>,</code> <code>unsigned int </code><i>led_class</i><code>,</code> <code>unsigned int </code><i>led_id</i><code>,</code> <code>Atom </code><i>name</i><code>,</code> <code>int *</code><i>ndx_rtrn</i><code>,</code> <code>Bool *</code><i>state_rtrn</i><code>,</code> <code>XkbIndicatorMapPtr </code><i>map_rtrn</i><code>,</code> <code>Bool *</code><i>real_rtrn</i><code>);</code></dt>
-<dt> <code>Bool XkbGetNamedIndicator</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>Atom </code><i>name</i><code>,</code> <code>int *</code><i>ndx_rtrn</i><code>,</code> <code>Bool *</code><i>state_rtrn</i><code>,</code> <code>XkbIndicatorMapPtr </code><i>map_rtrn</i><code>,</code> <code>Bool *</code><i>real_rtrn</i><code>);</code><br />
+<dt> <code>Bool XkbGetNamedIndicator</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>Atom </code><i>name</i><code>,</code> <code>int *</code><i>ndx_rtrn</i><code>,</code> <code>Bool *</code><i>state_rtrn</i><code>,</code> <code>XkbIndicatorMapPtr </code><i>map_rtrn</i><code>,</code> <code>Bool *</code><i>real_rtrn</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

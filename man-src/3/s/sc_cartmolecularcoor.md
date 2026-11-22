@@ -41,7 +41,7 @@ Calculate an approximate hessian and place the result in ``hessian''.
 RefSymmSCMatrix inverse_hessian (RefSymmSCMatrix &amp;)
 Given an Hessian, return the inverse of that hessian.
 Protected Member Functions</code></pre>
-<p> virtual void <code>init</code> ()<br />
+<p> virtual void <code>init</code> ()<br/>
  <i>Initializes the dimensions. </i></p>
 <h3>Protected Attributes</h3>
 <p><code>RefSCDimension</code> <code>dim_</code></p>

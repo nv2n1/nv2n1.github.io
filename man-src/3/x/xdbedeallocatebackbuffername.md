@@ -10,8 +10,8 @@ description: "XdbeDeallocateBackBufferName – frees a DBE buffer."
 <p>XdbeDeallocateBackBufferName &#8211; frees a DBE buffer. </p>
 <h2>Synopsis</h2>
 <p>#include &lt;X11/extensions/Xdbe.h&gt; </p>
-<p> Status XdbeDeallocateBackBufferName(<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Display&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;*dpy,<br />
+<p> Status XdbeDeallocateBackBufferName(<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Display&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;*dpy,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;XdbeBackBuffer buffer)</p>
 <h2>Description</h2>
 <p>This function frees a drawable ID, buffer, that was obtained via <code>XdbeAllocateBackBufferName().</code> The buffer must be a valid name for the back buffer of a window, or a protocol error results.</p>

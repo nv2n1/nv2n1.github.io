@@ -18,7 +18,7 @@ description: "mysqld_safe – MySQL server startup script"
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> For some Linux platforms, MySQL installation from RPM or Debian packages includes systemd support for managing MySQL server startup and shutdown. On these platforms, <code>mysqld_safe</code> is not installed because it is unnecessary. For more information, see Section 2.5.9, &#8220;Managing MySQL Server with systemd&#8221;. </p>
 </dl>
 <p> <code>mysqld_safe</code> tries to start an executable named <code>mysqld</code>. To override the default behavior and specify explicitly the name of the server you want to run, specify a <code>&#8211;mysqld</code> or <code>&#8211;mysqld-version</code> option to <code>mysqld_safe</code>. You can also use <code>&#8211;ledir</code> to indicate the directory where <code>mysqld_safe</code> should look for the server. </p>
@@ -50,7 +50,7 @@ log-error=error.log
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  The innodb_buffer_pool_in_core_file variable can be used to reduce the size of core files on operating systems that support it. For more information, see Section 15.8.3.7, &#8220;Excluding Buffer Pool Pages from Core Files&#8221;. </dd>
 </dl>
 </dl>
@@ -117,7 +117,7 @@ log-error=error.log
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  On systems that manage the server using systemd, <code>mysqld_safe</code> is not available. Instead, specify the allocation library by setting LD_PRELOAD in /etc/sysconfig/mysql. </dd>
 </dl>
 <p> Linux users can use the libtcmalloc_minimal.so library on any platform for which a tcmalloc package is installed in /usr/lib by adding these lines to the my.cnf file: </p>
@@ -165,7 +165,7 @@ malloc-lib=/opt/lib/libtcmalloc_minimal.so
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  You must start <code>mysqld_safe</code> as root for this to function properly. </dd>
 </dl>
 </dl>
@@ -258,7 +258,7 @@ shell&gt; <code>bin/mysqld_safe &amp;</code>
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> Controlling <code>mysqld</code> logging from <code>mysqld_safe</code> is deprecated. Use the server&#8217;s native syslog support instead. For more information, see Section 5.4.2.7, &#8220;Error Logging to the System Log&#8221;. </p>
 </dl>
 <h2>COPYRIGHT</h2>

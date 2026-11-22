@@ -30,9 +30,9 @@ description: "docker-network-rm – remove one or more networks"
 </dd></dl>
 <p> When you specify multiple networks, the command attempts to delete each in turn. If the deletion of one network fails, the command continues to the next on the list and tries to delete that. The command reports success or failure for each deletion. </p>
 <h2>OPTIONS</h2>
-<p> <code>NETWORK</code><br />
+<p> <code>NETWORK</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Specify network name or id </p>
-<p> <code>&#8211;help</code><br />
+<p> <code>&#8211;help</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Print usage statement </p>
 <h2>HISTORY</h2>
 <p> OCT 2015, created by Mary Anthony &lt;mary [at] docker.com&gt; </p>

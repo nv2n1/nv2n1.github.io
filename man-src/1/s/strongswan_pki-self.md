@@ -77,7 +77,7 @@ description: "pki –self – Create a self-signed certificate"
 <dd>User notice for certificatePolicy.</dd></dl>
 <h2>Examples</h2>
 <p>Generate a self-signed certificate using the given RSA key: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>pki &#8211;self &#8211;in key.der &#8211;dn&nbsp;<wbr>&quot;C=CH, O=strongSwan, CN=moon&quot;&nbsp;<wbr>\<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>pki &#8211;self &#8211;in key.der &#8211;dn&nbsp;<wbr>&quot;C=CH, O=strongSwan, CN=moon&quot;&nbsp;<wbr>\<br/>
 &#8211;san moon.strongswan.org&nbsp;<wbr>&gt;&nbsp;<wbr>cert.der</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-pki/">pki</a></code>(1)</p>

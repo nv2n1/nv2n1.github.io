@@ -11,7 +11,7 @@ description: "std::is_convertible< _From, _To > –"
 <h2>Synopsis</h2>
 <p> Inherits <code>std::integral_constant&lt; bool, __is_convertible_helper&lt; _From, _To &gt;::value &gt;</code>.</p>
 <h3>Public Types</h3>
-<p>typedef <code>integral_constant</code><br />
+<p>typedef <code>integral_constant</code><br/>
  &lt; bool, __v &gt; <code>type</code>&quot; </p>
 <p> typedef bool <code>value_type</code></p>
 <h3>Public Member Functions</h3>

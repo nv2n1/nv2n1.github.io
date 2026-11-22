@@ -18,5 +18,5 @@ description: "rtmsrv – a stub server"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-rtmpdump/">rtmpdump</a></code>(1)</p>
 <h2>AUTHORS</h2>
-<p> Andrej Stepanchuk, Howard Chu<br />
+<p> Andrej Stepanchuk, Howard Chu<br/>
  &lt;<a rel="nofollow" href="http://rtmpdump.mplayerhq.hu">http://rtmpdump.mplayerhq.hu</a>&gt; </p>

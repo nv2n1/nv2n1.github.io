@@ -9,8 +9,8 @@ description: "pmdaFetch, pmdaSetFetchCallBack – fill a pmResult structure with
 
 <p><code>pmdaFetch</code>, <code>pmdaSetFetchCallBack</code> &#8211; fill a pmResult structure with the requested metric values</p>
 <h2>C Synopsis</h2>
-<p><code> #include &lt;pcp/pmapi.h&gt;<br />
- #include &lt;pcp/impl.h&gt;<br />
+<p><code> #include &lt;pcp/pmapi.h&gt;<br/>
+ #include &lt;pcp/impl.h&gt;<br/>
  #include &lt;pcp/pmda.h&gt; </p>
 <p> int pmdaFetch(int </code><i>numpmid</i>, pmID *<i>pmidlist</i>, pmResult **<i>resp</i>, pmdaExt&nbsp;<wbr>*<i>pmda</i>); </p>
 <p> void pmdaSetFetchCallBack(pmdaInterface *<i>dispatch</i>, pmdaFetchCallBack&nbsp;<wbr><i>callback</i>); </p>

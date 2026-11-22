@@ -12,7 +12,7 @@ description: "httpie – CLI, cURL-like tool for humans"
 <h2>SYNOPSIS</h2>
 <dl>
 <dt><code>http</code></dt>
-<dd> [&#8211;json] [&#8211;form] [&#8211;pretty {all,colors,format,none}] [&#8211;style STYLE] [&#8211;print WHAT] [&#8211;verbose] [&#8211;headers] [&#8211;body] [&#8211;stream] [&#8211;output FILE] [&#8211;download] [&#8211;continue] [&#8211;session SESSION_NAME_OR_PATH | &#8211;session-read-only SESSION_NAME_OR_PATH] [&#8211;auth USER[:PASS]] [&#8211;auth-type {basic,digest}] [&#8211;proxy PROTOCOL:PROXY_URL] [&#8211;follow] [&#8211;verify VERIFY] [&#8211;cert CERT] [&#8211;cert-key CERT_KEY] [&#8211;timeout SECONDS] [&#8211;check-status] [&#8211;ignore-stdin] [&#8211;help] [&#8211;version] [&#8211;traceback] [&#8211;debug]<br />
+<dd> [&#8211;json] [&#8211;form] [&#8211;pretty {all,colors,format,none}] [&#8211;style STYLE] [&#8211;print WHAT] [&#8211;verbose] [&#8211;headers] [&#8211;body] [&#8211;stream] [&#8211;output FILE] [&#8211;download] [&#8211;continue] [&#8211;session SESSION_NAME_OR_PATH | &#8211;session-read-only SESSION_NAME_OR_PATH] [&#8211;auth USER[:PASS]] [&#8211;auth-type {basic,digest}] [&#8211;proxy PROTOCOL:PROXY_URL] [&#8211;follow] [&#8211;verify VERIFY] [&#8211;cert CERT] [&#8211;cert-key CERT_KEY] [&#8211;timeout SECONDS] [&#8211;check-status] [&#8211;ignore-stdin] [&#8211;help] [&#8211;version] [&#8211;traceback] [&#8211;debug]<br/>
  [METHOD] <i>URL</i> [REQUEST_ITEM [REQUEST_ITEM &#8230;]] </dd>
 </dl>
 <h2>DESCRIPTION</h2>
@@ -24,7 +24,7 @@ description: "httpie – CLI, cURL-like tool for humans"
 <dl>
 <dt>METHOD</dt>
 <dd>
-<p> The HTTP method to be used for the request (GET, POST, PUT, DELETE, &#8230;).<br />
+<p> The HTTP method to be used for the request (GET, POST, PUT, DELETE, &#8230;).<br/>
  This argument can be omitted in which case HTTPie will use POST if there is some data to be sent, otherwise GET: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<tt>$&nbsp;http example.org&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;#&nbsp;=&gt;&nbsp;GET</tt> </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<tt>$&nbsp;http example.org hello=world&nbsp;<wbr>&nbsp;<wbr>&nbsp;#&nbsp;=&gt;&nbsp;POST</tt> </p>
@@ -37,25 +37,25 @@ description: "httpie – CLI, cURL-like tool for humans"
 </dd><dt>REQUEST_ITEM</dt>
 <dd>
 <p> Optional key-value pairs to be included in the request. The separator used determines the type: </p>
-<p> <code>&#8216;:&#8217;</code> HTTP headers<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Referer:<a rel="nofollow" href="http://httpie.org">http://httpie.org</a><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Cookie:foo=bar<br />
+<p> <code>&#8216;:&#8217;</code> HTTP headers<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Referer:<a rel="nofollow" href="http://httpie.org">http://httpie.org</a><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Cookie:foo=bar<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;User-Agent:bacon/1.0 </p>
-<p> <code>&#8216;==&#8217;</code> URL parameters to be appended to the request URI<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;search==httpie<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; <code>&#8216;=&#8217;</code> Data fields to be serialized into a JSON object (with <code>&#8211;json</code>, <code>-j</code>) or form data (with <code>&#8211;form</code>, <code>-f</code>)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;name=HTTPie<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;language=Python<br />
+<p> <code>&#8216;==&#8217;</code> URL parameters to be appended to the request URI<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;search==httpie<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; <code>&#8216;=&#8217;</code> Data fields to be serialized into a JSON object (with <code>&#8211;json</code>, <code>-j</code>) or form data (with <code>&#8211;form</code>, <code>-f</code>)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;name=HTTPie<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;language=Python<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;description=&#8217;CLI HTTP client&#8217; </p>
-<p> <code>&#8216;:=&#8217;</code> Non-string JSON data fields (only with <code>&#8211;json</code>, <code>-j</code>)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;awesome:=true<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;amount:=42<br />
+<p> <code>&#8216;:=&#8217;</code> Non-string JSON data fields (only with <code>&#8211;json</code>, <code>-j</code>)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;awesome:=true<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;amount:=42<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;colors:='[&quot;red&quot;,&nbsp;&quot;green&quot;,&nbsp;&quot;blue&quot;]&#8217; </p>
-<p> <code>&#8216;@&#8217;</code> Form file fields (only with <code>&#8211;form</code>, <code>-f</code>)<br />
+<p> <code>&#8216;@&#8217;</code> Form file fields (only with <code>&#8211;form</code>, <code>-f</code>)<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;cs@~/Documents/CV.pdf </p>
-<p> <code>&#8216;=@&#8217;</code> A data field like &#8216;=&#8217;, but takes a file path and embeds its content:<br />
+<p> <code>&#8216;=@&#8217;</code> A data field like &#8216;=&#8217;, but takes a file path and embeds its content:<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;essay=@Documents/essay.txt </p>
-<p> <code>&#8216;:=@&#8217;</code> A raw JSON field like &#8216;:=&#8217;, but takes a file path and embeds its content:<br />
+<p> <code>&#8216;:=@&#8217;</code> A raw JSON field like &#8216;:=&#8217;, but takes a file path and embeds its content:<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;package:=@./package.json </p>
 <p> You can use a backslash to escape a colliding separator in the field name: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;field-name-with\:colon=value </p>

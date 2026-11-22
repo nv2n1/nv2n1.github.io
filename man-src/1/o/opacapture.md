@@ -56,5 +56,5 @@ description: "opacapture"
 <dd> The name of a file to be created by opacapture. The file name specified is overwritten if it already exists. Intel recommends using the .tgz suffix in the file name supplied. If the filename given does not have a .tgz suffix, the .tgz suffix is added. </dd>
 </dl>
 <h2>Examples</h2>
-<p> opacapture mycapture.tgz<br />
+<p> opacapture mycapture.tgz<br/>
  opacapture -d 3 030127capture.tgz </p>

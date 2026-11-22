@@ -27,8 +27,8 @@ description: "mq_send, mq_timedsend – send a message to a message queue"
 <p> The <i>msg_prio</i> argument is a nonnegative integer that specifies the priority of this message. Messages are placed on the queue in decreasing order of priority, with newer messages of the same priority being placed after older messages with the same priority. See <code><a href="/docs/linux/man/7-mq_overview/">mq_overview</a></code>(7) for details on the range for the message priority. </p>
 <p> If the message queue is already full (i.e., the number of messages on the queue equals the queue&#8217;s <i>mq_maxmsg</i> attribute), then, by default, <code>mq_send</code>() blocks until sufficient space becomes available to allow the message to be queued, or until the call is interrupted by a signal handler. If the <code>O_NONBLOCK</code> flag is enabled for the message queue description, then the call instead fails immediately with the error <code>EAGAIN</code>. </p>
 <p> <code>mq_timedsend</code>() behaves just like <code>mq_send</code>(), except that if the queue is full and the <code>O_NONBLOCK</code> flag is not enabled for the message queue description, then <i>abs_timeout</i> points to a structure which specifies how long the call will block. This value is an absolute timeout in seconds and nanoseconds since the Epoch, 1970-01-01 00:00:00 +0000 (UTC), specified in the following structure: </p>
-<p> struct timespec {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;time_t tv_sec;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;seconds&nbsp;*/<br />
+<p> struct timespec {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;time_t tv_sec;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;seconds&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;long&nbsp;<wbr>&nbsp;<wbr>&nbsp;tv_nsec;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;nanoseconds&nbsp;*/ }; </p>
 <p> If the message queue is full, and the timeout has already expired by the time of the call, <code>mq_timedsend</code>() returns immediately.</p>
 <h2>Return Value</h2>

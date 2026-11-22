@@ -11,17 +11,17 @@ description: "Proxy Operations –"
 <p> Proxy Operations &#8211; </p>
 <p> Initiate a proxy operation.</p>
 <h3>Functions</h3>
-<p> globus_result_t <code>globus_gsi_proxy_create_req</code> (<code>globus_gsi_proxy_handle_t</code> handle, BIO *output_bio)<br />
- <i>Create a proxy credential request. </i><br />
- globus_result_t <code>globus_gsi_proxy_inquire_req</code> (<code>globus_gsi_proxy_handle_t</code> handle, BIO *input_bio)<br />
- <i>Inquire a proxy credential request. </i><br />
- globus_result_t <code>globus_gsi_proxy_resign_cert</code> (<code>globus_gsi_proxy_handle_t</code> handle, globus_gsi_cred_handle_t issuer_credential, globus_gsi_cred_handle_t peer_credential, globus_gsi_cred_handle_t *resigned_credential)<br />
- <i>Resign an existing certificate into a proxy. </i><br />
- globus_result_t <code>globus_gsi_proxy_sign_req</code> (<code>globus_gsi_proxy_handle_t</code> handle, globus_gsi_cred_handle_t issuer_credential, BIO *output_bio)<br />
- <i>Sign a proxy certificate request. </i><br />
- globus_result_t <code>globus_gsi_proxy_create_signed</code> (<code>globus_gsi_proxy_handle_t</code> handle, globus_gsi_cred_handle_t issuer, globus_gsi_cred_handle_t *proxy_credential)<br />
- <i>Create Signed Proxy Certificate. </i><br />
- globus_result_t <code>globus_gsi_proxy_assemble_cred</code> (<code>globus_gsi_proxy_handle_t</code> handle, globus_gsi_cred_handle_t *proxy_credential, BIO *input_bio)<br />
+<p> globus_result_t <code>globus_gsi_proxy_create_req</code> (<code>globus_gsi_proxy_handle_t</code> handle, BIO *output_bio)<br/>
+ <i>Create a proxy credential request. </i><br/>
+ globus_result_t <code>globus_gsi_proxy_inquire_req</code> (<code>globus_gsi_proxy_handle_t</code> handle, BIO *input_bio)<br/>
+ <i>Inquire a proxy credential request. </i><br/>
+ globus_result_t <code>globus_gsi_proxy_resign_cert</code> (<code>globus_gsi_proxy_handle_t</code> handle, globus_gsi_cred_handle_t issuer_credential, globus_gsi_cred_handle_t peer_credential, globus_gsi_cred_handle_t *resigned_credential)<br/>
+ <i>Resign an existing certificate into a proxy. </i><br/>
+ globus_result_t <code>globus_gsi_proxy_sign_req</code> (<code>globus_gsi_proxy_handle_t</code> handle, globus_gsi_cred_handle_t issuer_credential, BIO *output_bio)<br/>
+ <i>Sign a proxy certificate request. </i><br/>
+ globus_result_t <code>globus_gsi_proxy_create_signed</code> (<code>globus_gsi_proxy_handle_t</code> handle, globus_gsi_cred_handle_t issuer, globus_gsi_cred_handle_t *proxy_credential)<br/>
+ <i>Create Signed Proxy Certificate. </i><br/>
+ globus_result_t <code>globus_gsi_proxy_assemble_cred</code> (<code>globus_gsi_proxy_handle_t</code> handle, globus_gsi_cred_handle_t *proxy_credential, BIO *input_bio)<br/>
  <i>Assemble a proxy credential. </i></p>
 <h2>Detailed Description</h2>
 <p> Initiate a proxy operation. </p>
@@ -32,8 +32,8 @@ description: "Proxy Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> A GSI Proxy handle to use for the assemble operation.<br />
- <i>proxy_credential</i> This parameter will contain the assembled credential upon successful return.<br />
+</dt><dd> <i>handle</i> A GSI Proxy handle to use for the assemble operation.<br/>
+ <i>proxy_credential</i> This parameter will contain the assembled credential upon successful return.<br/>
  <i>input_bio</i> A BIO to read a signed certificate and corresponding certificate chain from.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -46,7 +46,7 @@ description: "Proxy Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> A GSI Proxy handle to use for the request operation.<br />
+</dt><dd> <i>handle</i> A GSI Proxy handle to use for the request operation.<br/>
  <i>output_bio</i> A BIO to write the resulting request structure to.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -57,8 +57,8 @@ description: "Proxy Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The proxy handle used to create and sign the proxy certificate<br />
- <i>issuer</i> The issuing credential, used for signing the proxy certificate<br />
+</dt><dd> <i>handle</i> The proxy handle used to create and sign the proxy certificate<br/>
+ <i>issuer</i> The issuing credential, used for signing the proxy certificate<br/>
  <i>proxy_credential</i> The new proxy credential, containing the signed cert, private key, etc.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -69,7 +69,7 @@ description: "Proxy Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> A GSI Proxy handle to use for the inquire operation.<br />
+</dt><dd> <i>handle</i> A GSI Proxy handle to use for the inquire operation.<br/>
  <i>input_bio</i> A BIO to read a request structure from.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -80,9 +80,9 @@ description: "Proxy Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> A GSI Proxy handle to use for the signing operation.<br />
- <i>issuer_credential</i> The credential structure to be used for signing the proxy certificate.<br />
- <i>peer_credential</i> The credential structure that contains the certificate to be resigned.<br />
+</dt><dd> <i>handle</i> A GSI Proxy handle to use for the signing operation.<br/>
+ <i>issuer_credential</i> The credential structure to be used for signing the proxy certificate.<br/>
+ <i>peer_credential</i> The credential structure that contains the certificate to be resigned.<br/>
  <i>resigned_credential</i> A credential structure that upon return will contain the resigned certificate and associated certificate chain.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -93,8 +93,8 @@ description: "Proxy Operations –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> A GSI Proxy handle to use for the signing operation.<br />
- <i>issuer_credential</i> The credential structure to be used for signing the proxy certificate.<br />
+</dt><dd> <i>handle</i> A GSI Proxy handle to use for the signing operation.<br/>
+ <i>issuer_credential</i> The credential structure to be used for signing the proxy certificate.<br/>
  <i>output_bio</i> A BIO to write the resulting certificate to.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

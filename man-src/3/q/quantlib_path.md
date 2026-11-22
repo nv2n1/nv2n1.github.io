@@ -15,22 +15,22 @@ description: "QuantLib::Path – single-factor random walk"
 <p> <code>inspectors</code> </p>
 <p> bool <code>empty</code> () const </p>
 <p> Size <code>length</code> () const </p>
-<p> <code>Real</code> <code>operator[]</code> (Size i) const<br />
- <i>asset value at the $ i $-th point </i><br />
+<p> <code>Real</code> <code>operator[]</code> (Size i) const<br/>
+ <i>asset value at the $ i $-th point </i><br/>
  <code>Real</code> <code>at</code> (Size i) const </p>
 <p> <code>Real</code> &amp; <code>operator[]</code> (Size i) </p>
 <p> <code>Real</code> &amp; <code>at</code> (Size i) </p>
 <p> <code>Real</code> <code>value</code> (Size i) const </p>
 <p> <code>Real</code> &amp; <code>value</code> (Size i) </p>
-<p> <code>Time</code> <code>time</code> (Size i) const<br />
- <i>time at the $ i $-th point </i><br />
- <code>Real</code> <code>front</code> () const<br />
- <i>initial asset value </i><br />
+<p> <code>Time</code> <code>time</code> (Size i) const<br/>
+ <i>time at the $ i $-th point </i><br/>
+ <code>Real</code> <code>front</code> () const<br/>
+ <i>initial asset value </i><br/>
  <code>Real</code> &amp; <code>front</code> () </p>
-<p> <code>Real</code> <code>back</code> () const<br />
- <i>final asset value </i><br />
+<p> <code>Real</code> <code>back</code> () const<br/>
+ <i>final asset value </i><br/>
  <code>Real</code> &amp; <code>back</code> () </p>
-<p> const <code>TimeGrid</code> &amp; <code>timeGrid</code> () const<br />
+<p> const <code>TimeGrid</code> &amp; <code>timeGrid</code> () const<br/>
  <i>time grid </i></p>
 <h3>iterators</h3>
 <p>typedef Array::const_iterator <code>iterator</code> </p>

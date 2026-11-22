@@ -51,12 +51,12 @@ $ shigofumi -e 'convert /etc/passwd'
 <p> Set of available commands changes with context. E.g. If a message is loaded, commands for message operation like save to file will become available. Also meaning of the same command can change. E.g. <code>show</code> command will print list of incoming messages if such list is loaded; if a message is loaded, it will print the message. List of currently available commands can be obtained by <code>help</code> command. </p>
 <p> Syntax help for a command is printed after calling command with invalid option or by <code>help</code> command with interested command as first argument. Command option <code>-h</code> is reserved as invalid option and shows always command usage.</p>
 <h2>ISDS</h2>
-<p> ISDS (Informační systém datových schránek / Data Box Information System) is defined by m[blue]<code>Czech ISDS Act (300/2008 Coll.)</code>m[]<font SIZE="-2">[1]</font> and implied documents. Current implementation details are described in Provozní řád that can be downloaded from m[blue]<code>Dokumenty ke stažení section of ISDS Information Portal</code>m[]<font SIZE="-2">[2]</font>. </p>
+<p> ISDS (Informační systém datových schránek / Data Box Information System) is defined by m[blue]<code>Czech ISDS Act (300/2008 Coll.)</code>m[][1] and implied documents. Current implementation details are described in Provozní řád that can be downloaded from m[blue]<code>Dokumenty ke stažení section of ISDS Information Portal</code>m[][2]. </p>
 <p> The system is designed to deliver messages between public authorities (government, courts etc.) and other entities (corporations, persons, other government or municipality offices) in reliable and traceable way. </p>
 <p> Shigofumi implements following ISDS operations: Log in by name and password, Log in by name and password and one-time pasword, Log in by name and/or password and/or X.509 certificate, Listing incoming and outgoing message, Accepting commercial message, Retrieving incoming and outgoing message, Explicit marking a message as read, Verifying message hash, Getting message hash stored in ISDS, Verifying message authenticity, Retrieving delivery details, Getting message sender name, Sending a message to one or more recipients, Searching a box by any criteria, Searching a box by full-text, Getting a box status, Changing user password, Getting user password expiration time, Getting details about user&#8217;s box, Listing box users, Getting archive with list of all boxes, Re-signing message or delivery datails, Getting details about credit for sending commercial messages. </p>
 <p> In addition, Shigofumi can save a message and delivery details into local file and load it later again. Program can save each document into local file.</p>
 <h2>AUTHORIZED CONVERSION</h2>
-<p> Czech government offers a document conversion from digital to analogue form and vice versa preserving legal impacts. This is done at Czech POINT meeting place (in government, municipality or post office usually). Visit m[blue]<code>Czech POINT web site</code>m[]<font SIZE="-2">[3]</font> for more details. </p>
+<p> Czech government offers a document conversion from digital to analogue form and vice versa preserving legal impacts. This is done at Czech POINT meeting place (in government, municipality or post office usually). Visit m[blue]<code>Czech POINT web site</code>m[][3] for more details. </p>
 <p> Shigofumi allows to submit a digital document (local file or document delivered by an ISDS message) for authorized conversion into Czech POINT deposit. If deposit accepts the document, it will return a document identifier that user is required to tell to an officer in a office where he wants to obtain analogue version of his document. </p>
 <p> Please note the deposit keeps submitted document for limited period only. Old documents (30 days currently) are removed automatically. Note also PDF documents with valid digital signature can be converted only.</p>
 <h2>ENVIRONMENT</h2>
@@ -83,13 +83,13 @@ $ shigofumi -e 'convert /etc/passwd'
 <h2>NOTES</h2>
 <dl>
 <dt> 1.</dt>
-<dd> Czech<br />
+<dd> Czech<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>ISDS Act&nbsp;<wbr>(300/2008 Coll.)</dd>
 <dl>
 <dt>
 </dt><dd> <a rel="nofollow" href="http://portal.gov.cz/zakon/300/2008">http://portal.gov.cz/zakon/300/2008</a></dd></dl>
 <dt> 2.</dt>
-<dd> Dokumenty ke stažení section of<br />
+<dd> Dokumenty ke stažení section of<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>ISDS Information Portal</dd>
 <dl>
 <dt>

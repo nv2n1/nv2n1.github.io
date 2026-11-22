@@ -13,7 +13,7 @@ description: "dbmerge2 – merge exactly two inputs in sorted order based on the
 <pre><code>
 dbmerge2-- input A.fsdb-- input B.fsdb[-T TemporaryDirectory][-nNrR] column[column...]
 </code></pre>
-<p> or<br />
+<p> or<br/>
 &nbsp;<wbr>cat A.fsdb | dbmerge2 &#8211;input B.fsdb&nbsp;<wbr>[-T TemporaryDirectory]&nbsp;<wbr>[-nNrR]&nbsp;<wbr>column&nbsp;<wbr>[column&#8230;]</p>
 <h2>DESCRIPTION</h2>
 <p> Merge exactly two sorted input files, producing one sorted result. Inputs can both be specified with <tt>&quot;--input&quot;</tt>, or one can come from standard input and the other from <tt>&quot;--input&quot;</tt>. </p>
@@ -26,7 +26,7 @@ dbmerge2-- input A.fsdb-- input B.fsdb[-T TemporaryDirectory][-nNrR] column[colu
 <dt><code>&#8211;saveoutput $OUT_REF</code></dt>
 <dd> Save output writer (for integration with other fsdb filters).</dd>
 <dt>&lt;-T TmpDir&gt;</dt>
-<dd> where to put tmp files. Also uses environment variable <font SIZE="-1">TMPDIR,</font> if -T is not specified. Default is /tmp.</dd></dl>
+<dd> where to put tmp files. Also uses environment variable TMPDIR, if -T is not specified. Default is /tmp.</dd></dl>
 <p> Sort specification options (can be interspersed with column names):</p>
 <dl>
 <dt><code>-r</code> or <code>&#8211;descending</code></dt>
@@ -86,4 +86,4 @@ dbmerge2-- input A.fsdb-- input B.fsdb[-T TemporaryDirectory][-nNrR] column[colu
 <p> <i><a href="/docs/linux/man/1-dbmerge/">dbmerge</a></i>(1), <i><a href="/docs/linux/man/1-dbsort/">dbsort</a></i>(1), <i>Fsdb</i>(3)</p>
 <h2>AUTHOR and COPYRIGHT</h2>
 <p> Copyright (C) 1991-2015 by John Heidemann &lt;johnh [at] isi.edu&gt; </p>
-<p> This program is distributed under terms of the <font SIZE="-1">GNU</font> general public license, version 2. See the file <font SIZE="-1">COPYING</font> with the distribution for details. </p>
+<p> This program is distributed under terms of the GNU general public license, version 2. See the file COPYING with the distribution for details. </p>

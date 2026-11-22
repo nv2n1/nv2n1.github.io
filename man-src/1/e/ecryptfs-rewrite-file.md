@@ -14,8 +14,8 @@ description: "ecryptfs-rewrite-file – force a file to be rewritten (reencrypte
 <h2>DESCRIPTION</h2>
 <p> This script takes one or more files/directories/symlinks as arguments, moves each of them to a temporary file, and then moves them back to the original name. This causes the file to be rewritten (and reencrypted) in the lower filesystem. </p>
 <p> This script may be combined with <code><a href="/docs/linux/man/1-find/">find</a></code>(1) and <code><a href="/docs/linux/man/1-xargs/">xargs</a></code>(1) to rewrite an entire eCryptfs mountpoint, unmount, and sync: </p>
-<p>&nbsp;<wbr>&nbsp;find . -xdev -print0 | xargs -r -0&nbsp;/usr/bin/ecryptfs-rewrite-file<br />
-&nbsp;<wbr>&nbsp;ecryptfs-umount-private<br />
+<p>&nbsp;<wbr>&nbsp;find . -xdev -print0 | xargs -r -0&nbsp;/usr/bin/ecryptfs-rewrite-file<br/>
+&nbsp;<wbr>&nbsp;ecryptfs-umount-private<br/>
 &nbsp;<wbr>&nbsp;sync </p>
 <p> It is advised that this script is executed in runlevel 1 or 3, to avoid simultanteous writes and race conditions with targeted files. </p>
 <p> <code>USING THIS SCRIPT WHILE GNOME, KDE, OR OTHER APPLICATIONS ARE RUNNING MAY CAUSE DATA LOSS.</code> </p>

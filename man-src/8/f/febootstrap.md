@@ -16,10 +16,10 @@ description: "febootstrap – Bootstrap a basic Fedora system (like Debian deboo
  febootstrap rawhide /tmp/rawhide <a rel="nofollow" href="http://mymirror/rawhide/x86_64/os">http://mymirror/rawhide/x86_64/os</a>
  febootstrap --groupinstall=&quot;Mail Server&quot; fedora-10 /tmp/mailserver</pre>
 <h2>Description</h2>
-<p>febootstrap creates a Fedora root filesystem, based on the Fedora version specified by <i></i><font SIZE="-1"><i>REPO</i></font><i></i> under the directory specified by <i></i><font SIZE="-1"><i>TARGET</i></font><i></i>. Optionally <i></i><font SIZE="-1"><i>MIRROR</i></font><i></i> can point to a local mirror (otherwise the public Fedora mirrors are used). <i></i><font SIZE="-1"><i>REPO</i></font><i></i> names are <tt>&quot;fedora-</tt>VERSION<tt>&quot;</tt> (eg. <tt>&quot;fedora-10&quot;</tt>) or <tt>&quot;rawhide&quot;</tt>. </p>
+<p>febootstrap creates a Fedora root filesystem, based on the Fedora version specified by <i></i><i>REPO</i><i></i> under the directory specified by <i></i><i>TARGET</i><i></i>. Optionally <i></i><i>MIRROR</i><i></i> can point to a local mirror (otherwise the public Fedora mirrors are used). <i></i><i>REPO</i><i></i> names are <tt>&quot;fedora-</tt>VERSION<tt>&quot;</tt> (eg. <tt>&quot;fedora-10&quot;</tt>) or <tt>&quot;rawhide&quot;</tt>. </p>
 <p> febootstrap does <i>not</i> need to be run as root. If for some reason you do run it as root, then it works slightly differently and may have side effects such as stopping or starting system daemons. </p>
 <p> For more advanced needs, take a look at <i><a href="/docs/linux/man/1-mock/">mock</a></i>(1), <tt>&quot;livecd-creator&quot;</tt> and <i>thincrust.net</i>&#8216;s <tt>&quot;appliance-creator&quot;</tt>. </p>
-<p> The normal output is a root directory located at <i></i><font SIZE="-1"><i>TARGET</i></font><i></i> and a fakeroot logfile at <tt>&quot;</tt>TARGET<tt>/fakeroot.log&quot;</tt>.</p>
+<p> The normal output is a root directory located at <i></i><i>TARGET</i><i></i> and a fakeroot logfile at <tt>&quot;</tt>TARGET<tt>/fakeroot.log&quot;</tt>.</p>
 <h2>Options</h2>
 <dl>
 <dt><code>-i package</code></dt>
@@ -37,7 +37,7 @@ description: "febootstrap – Bootstrap a basic Fedora system (like Debian deboo
 <dt><code>-p proxyurl</code></dt>
 <dd>
 </dd><dt><code>&#8211;proxy=proxyurl</code></dt>
-<dd><font SIZE="-1">URL</font> to the proxy server that yum should use.</dd>
+<dd>URL to the proxy server that yum should use.</dd>
 <dt><code>-u source</code></dt>
 <dd>
 </dd><dt><code>&#8211;updates=source</code></dt>
@@ -45,10 +45,10 @@ description: "febootstrap – Bootstrap a basic Fedora system (like Debian deboo
 <dl>
 <dd>
 </dd><dl>
-<dt>-u <a rel="nofollow" href="http://...">http://&#8230;</a> (a <font SIZE="-1">URL</font>)</dt>
-<dd>Get updates from the specific <font SIZE="-1">URL</font>.</dd>
+<dt>-u <a rel="nofollow" href="http://...">http://&#8230;</a> (a URL)</dt>
+<dd>Get updates from the specific URL.</dd>
 <dt>-u updates-released-fN (an updates repository name)</dt>
-<dd>Get updates from the public mirrors of the named repository (eg. <tt>&quot;updates-released-f10&quot;</tt>). See <font SIZE="-1">REPOSITORIES</font> below.</dd>
+<dd>Get updates from the public mirrors of the named repository (eg. <tt>&quot;updates-released-f10&quot;</tt>). See REPOSITORIES below.</dd>
 <dt>-u none (default)</dt>
 <dd>Don&#8217;t add an updates repository. This is the default.</dd></dl>
 </dl>
@@ -56,14 +56,14 @@ description: "febootstrap – Bootstrap a basic Fedora system (like Debian deboo
 <dd></dd></dl>
 </dl>
 <h2>Repositories</h2>
-<p>You can list available repositories by visiting this <font SIZE="-1">URL:</font> </p>
+<p>You can list available repositories by visiting this URL: </p>
 <p> &lt;<a rel="nofollow" href="http://mirrors.fedoraproject.org/mirrorlist?repo=help">http://mirrors.fedoraproject.org/mirrorlist?repo=help</a>&amp;arch=i386&gt; </p>
 <p> (If necessary replace <tt>&quot;i386&quot;</tt> with your architecture, but it seems unlikely that this list will change based on architecture).</p>
 <h2>Running Extra Commands In The Root Filesystem</h2>
 <p>If you want to run further commands inside the root filesystem, for example additional <tt>&quot;yum&quot;</tt> installs, then use <tt>&quot;febootstrap-run&quot;</tt>. See the <i><a href="/docs/linux/man/8-febootstrap-run/">febootstrap-run</a></i>(8) manual page for more details. </p>
-<p> You have to be careful about modifying files in the root filesystem directly (without using <tt>&quot;febootstrap-run&quot;</tt>). It&#8217;s easy to confuse fakeroot and end up with the wrong permissions on files (see <font SIZE="-1">FAKEROOT</font> <font SIZE="-1">LOGFILE</font> below). </p>
+<p> You have to be careful about modifying files in the root filesystem directly (without using <tt>&quot;febootstrap-run&quot;</tt>). It&#8217;s easy to confuse fakeroot and end up with the wrong permissions on files (see FAKEROOT LOGFILE below). </p>
 <p> <tt>&quot;febootstrap-run&quot;</tt> runs the command inside the root filesystem, which means it won&#8217;t normally have access to files outside the root. You can use <tt>&quot;FAKECHROOT_EXCLUDE_PATH&quot;</tt> environment variable (see <i><a href="/docs/linux/man/1-fakechroot/">fakechroot</a></i>(1)) or copy files into the root first.</p>
-<h3><font SIZE="-1">FAKEROOT</font> <font SIZE="-1">LOGFILE</font></h3>
+<h3>FAKEROOT LOGFILE</h3>
 <p>When febootstrap is run as non-root (the normal case) we use fakeroot so that yum thinks it is running as root. Fakeroot keeps track of &#8220;real&#8221; file permissions in a log file which is saved into the target directory as <tt>&quot;</tt>TARGET<tt>/fakeroot.log&quot;</tt>. </p>
 <p> This logfile is indexed by inode number, which makes certain operations safe and other operations unsafe. Files should be replaced only by doing: </p>
 <pre> echo updated-content &gt; old-file</pre>
@@ -111,6 +111,6 @@ description: "febootstrap – Bootstrap a basic Fedora system (like Debian deboo
 <p>Richard W.M. Jones &lt;rjones @ redhat . com&gt;</p>
 <h2>Copyright</h2>
 <p>(C) Copyright 2009 Red Hat Inc., &lt;<a rel="nofollow" href="http://et.redhat.com/~rjones/febootstrap">http://et.redhat.com/~rjones/febootstrap</a>&gt;. </p>
-<p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
-<p> This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT</font> <font SIZE="-1">ANY</font> <font SIZE="-1">WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS</font> <font SIZE="-1">FOR</font> A <font SIZE="-1">PARTICULAR</font> <font SIZE="-1">PURPOSE</font>. See the <font SIZE="-1">GNU</font> General Public License for more details. </p>
-<p> You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, <font SIZE="-1">MA</font> 02139, <font SIZE="-1">USA</font>.</p>
+<p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
+<p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. </p>
+<p> You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.</p>

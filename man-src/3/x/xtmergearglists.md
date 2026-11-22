@@ -52,6 +52,6 @@ XtSetValues(Widget, args, XtNumber(args));</pre>
 <p> Note that you should not use auto-increment or auto-decrement within the first argument to <code>XtSetArg</code>. <code>XtSetArg</code> can be implemented as a macro that dereferences the first argument twice. </p>
 <p> The <code>XtMergeArgLists</code> function allocates enough storage to hold the combined <code>ArgList</code> structures and copies them into it. Note that it does not check for duplicate entries. When it is no longer needed, free the returned storage by using <code>XtFree</code>.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xtoffset/">XtOffset</a>(3)<br />
- <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><a href="/docs/linux/man/3-xtoffset/">XtOffset</a>(3)<br/>
+ <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

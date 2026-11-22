@@ -10,7 +10,7 @@ description: "ldns_rr_rrsig_typecovered, ldns_rr_rrsig_set_typecovered, ldns_rr_
 
 <p> ldns_rr_rrsig_typecovered, ldns_rr_rrsig_set_typecovered, ldns_rr_rrsig_algorithm, ldns_rr_rrsig_set_algorithm, ldns_rr_rrsig_labels, ldns_rr_rrsig_set_labels, ldns_rr_rrsig_origttl, ldns_rr_rrsig_set_origttl, ldns_rr_rrsig_expiration, ldns_rr_rrsig_set_expiration, ldns_rr_rrsig_inception, ldns_rr_rrsig_set_inception, ldns_rr_rrsig_keytag, ldns_rr_rrsig_set_keytag, ldns_rr_rrsig_signame, ldns_rr_rrsig_set_signame, ldns_rr_rrsig_sig, ldns_rr_rrsig_set_sig </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ldns_rdf* ldns_rr_rrsig_typecovered(const ldns_rr *r); </p>

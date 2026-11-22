@@ -19,10 +19,10 @@ description: "ffprobe – ffprobe media prober"
 <p> Options are used to list some of the formats supported by ffprobe or for specifying which information to display, and for setting how ffprobe will show it. </p>
 <p> ffprobe output is designed to be easily parsable by a textual filter, and consists of one or more sections of a form defined by the selected writer, which is specified by the <code>print_format</code> option. </p>
 <p> Sections may contain other nested sections, and are identified by a name (which may be shared by other sections), and an unique name. See the output of <code>sections</code>. </p>
-<p> Metadata tags stored in the container or in the streams are recognized and printed in the corresponding &#8220;<font SIZE="-1">FORMAT&#8221;, &#8220;STREAM&#8221;</font> or &#8220;<font SIZE="-1">PROGRAM_STREAM&#8221;</font> section.</p>
+<p> Metadata tags stored in the container or in the streams are recognized and printed in the corresponding &#8220;FORMAT&#8221;, &#8220;STREAM&#8221; or &#8220;PROGRAM_STREAM&#8221; section.</p>
 <h2>OPTIONS</h2>
-<p> All the numerical options, if not specified otherwise, accept a string representing a number as input, which may be followed by one of the <font SIZE="-1">SI</font> unit prefixes, for example: &#8216;K&#8217;, &#8216;M&#8217;, or &#8216;G&#8217;. </p>
-<p> If &#8216;i&#8217; is appended to the <font SIZE="-1">SI</font> unit prefix, the complete prefix will be interpreted as a unit prefix for binary multiples, which are based on powers of 1024 instead of powers of 1000. Appending &#8216;B&#8217; to the <font SIZE="-1">SI</font> unit prefix multiplies the value by 8. This allows using, for example: &#8216;<font SIZE="-1">KB</font>&#8216;, &#8216;MiB&#8217;, &#8216;G&#8217; and &#8216;B&#8217; as number suffixes. </p>
+<p> All the numerical options, if not specified otherwise, accept a string representing a number as input, which may be followed by one of the SI unit prefixes, for example: &#8216;K&#8217;, &#8216;M&#8217;, or &#8216;G&#8217;. </p>
+<p> If &#8216;i&#8217; is appended to the SI unit prefix, the complete prefix will be interpreted as a unit prefix for binary multiples, which are based on powers of 1024 instead of powers of 1000. Appending &#8216;B&#8217; to the SI unit prefix multiplies the value by 8. This allows using, for example: &#8216;KB&#8216;, &#8216;MiB&#8217;, &#8216;G&#8217; and &#8216;B&#8217; as number suffixes. </p>
 <p> Options which do not take arguments are boolean options, and set the corresponding value to true. They can be set to false by prefixing the option name with &#8220;no&#8221;. For example using &#8220;-nofoo&#8221; will set the boolean option with name &#8220;foo&#8221; to false.</p>
 <h3>Stream specifiers</h3>
 <p> Some options are applied per-stream, e.g. bitrate or codec. Stream specifiers are used to precisely specify which stream(s) a given option belongs to. </p>
@@ -32,13 +32,13 @@ description: "ffprobe – ffprobe media prober"
 <p> Possible forms of stream specifiers are:</p>
 <dl>
 <dt><i>stream_index</i></dt>
-<dd> Matches the stream with this index. E.g. <tt>&quot;-threads:1 4&quot;</tt> would set the thread count for the second stream to 4. If <i>stream_index</i> is used as an additional stream specifier (see below), then it selects stream number <i>stream_index</i> from the matching streams. Stream numbering is based on the order of the streams as detected by libavformat except when a program <font SIZE="-1">ID</font> is also specified. In this case it is based on the ordering of the streams in the program.</dd>
+<dd> Matches the stream with this index. E.g. <tt>&quot;-threads:1 4&quot;</tt> would set the thread count for the second stream to 4. If <i>stream_index</i> is used as an additional stream specifier (see below), then it selects stream number <i>stream_index</i> from the matching streams. Stream numbering is based on the order of the streams as detected by libavformat except when a program ID is also specified. In this case it is based on the ordering of the streams in the program.</dd>
 <dt><i>stream_type</i><code>[:</code><i>additional_stream_specifier</i><code>]</code></dt>
 <dd> <i>stream_type</i> is one of following: &#8216;v&#8217; or &#8216;V&#8217; for video, &#8216;a&#8217; for audio, &#8216;s&#8217; for subtitle, &#8216;d&#8217; for data, and &#8216;t&#8217; for attachments. &#8216;v&#8217; matches all video streams, &#8216;V&#8217; only matches video streams which are not attached pictures, video thumbnails or cover arts. If <i>additional_stream_specifier</i> is used, then it matches streams which both have this type and match the <i>additional_stream_specifier</i>. Otherwise, it matches all streams of the specified type.</dd>
 <dt><code>p:</code><i>program_id</i><code>[:</code><i>additional_stream_specifier</i><code>]</code></dt>
 <dd> Matches streams which are in the program with the id <i>program_id</i>. If <i>additional_stream_specifier</i> is used, then it matches streams which both are part of the program and match the <i>additional_stream_specifier</i>.</dd>
 <dt><code>#</code><i>stream_id</i> <code>or i:</code><i>stream_id</i></dt>
-<dd> Match the stream by stream id (e.g. <font SIZE="-1">PID</font> in MPEG-TS container).</dd>
+<dd> Match the stream by stream id (e.g. PID in MPEG-TS container).</dd>
 <dt><code>m:</code><i>key</i><code>[:</code><i>value</i><code>]</code></dt>
 <dd> Matches streams with the metadata tag <i>key</i> having the specified value. If <i>value</i> is not given, matches streams that contain the given tag with any value.</dd>
 <dt><code>u</code></dt>
@@ -164,10 +164,10 @@ description: "ffprobe – ffprobe media prober"
 <pre>
         ffmpeg [...] -loglevel +repeat
 </pre>
-<p> By default the program logs to stderr. If coloring is supported by the terminal, colors are used to mark errors and warnings. Log coloring can be disabled setting the environment variable <font SIZE="-1"><code>AV_LOG_FORCE_NOCOLOR</code></font>, or can be forced setting the environment variable <font SIZE="-1"><code>AV_LOG_FORCE_COLOR</code></font>.</dd></dl>
+<p> By default the program logs to stderr. If coloring is supported by the terminal, colors are used to mark errors and warnings. Log coloring can be disabled setting the environment variable <code>AV_LOG_FORCE_NOCOLOR</code>, or can be forced setting the environment variable <code>AV_LOG_FORCE_COLOR</code>.</dd></dl>
 <dt><code>-report</code></dt>
 <dd> Dump full command line and log output to a file named <tt>&quot;</tt>program<tt>-</tt>YYYYMMDD<tt>-</tt>HHMMSS<tt>.log&quot;</tt> in the current directory. This file can be useful for bug reports. It also implies <tt>&quot;-loglevel debug&quot;</tt>. </dd>
-<p> Setting the environment variable <font SIZE="-1"><code>FFREPORT</code></font> to any value has the same effect. If the value is a &#8216;:&#8217;-separated key=value sequence, these options will affect the report; option values must be escaped if they contain special characters or the options delimiter &#8216;:&#8217; (see the &#8220;Quoting and escaping&#8221; section in the ffmpeg-utils manual). </p>
+<p> Setting the environment variable <code>FFREPORT</code> to any value has the same effect. If the value is a &#8216;:&#8217;-separated key=value sequence, these options will affect the report; option values must be escaped if they contain special characters or the options delimiter &#8216;:&#8217; (see the &#8220;Quoting and escaping&#8221; section in the ffmpeg-utils manual). </p>
 <p> The following options are recognized:</p>
 <dl>
 <dl>
@@ -246,7 +246,7 @@ description: "ffprobe – ffprobe media prober"
 </dl>
 <dl>
 </dl>
-<dt><font SIZE="-1"><code>ARM</code></font></dt>
+<dt><code>ARM</code></dt>
 <dd>
 </dd><dl>
 <dl>
@@ -317,7 +317,7 @@ description: "ffprobe – ffprobe media prober"
 <dl>
 </dl>
 <dt><code>-max_alloc</code> <i>bytes</i></dt>
-<dd> Set the maximum size limit for allocating a block on the heap by ffmpeg&#8217;s family of malloc functions. Exercise <code>extreme caution</code> when using this option. Don&#8217;t use if you do not understand the full consequence of doing so. Default is <font SIZE="-1">INT_MAX.</font></dd></dl>
+<dd> Set the maximum size limit for allocating a block on the heap by ffmpeg&#8217;s family of malloc functions. Exercise <code>extreme caution</code> when using this option. Don&#8217;t use if you do not understand the full consequence of doing so. Default is INT_MAX.</dd></dl>
 <h3>AVOptions</h3>
 <p> These options are provided directly by the libavformat, libavdevice and libavcodec libraries. To see the list of available AVOptions, use the <code>-help</code> option. They are separated into two categories:</p>
 <dl>
@@ -325,7 +325,7 @@ description: "ffprobe – ffprobe media prober"
 <dd> These options can be set for any container, codec or device. Generic options are listed under AVFormatContext options for containers/devices and under AVCodecContext options for codecs.</dd>
 <dt><code>private</code></dt>
 <dd> These options are specific to the given container, device or codec. Private options are listed under their corresponding containers/devices/codecs.</dd></dl>
-<p> For example to write an ID3v2.3 header instead of a default ID3v2.4 to an <font SIZE="-1">MP3</font> file, use the <code>id3v2_version</code> private option of the <font SIZE="-1">MP3</font> muxer: </p>
+<p> For example to write an ID3v2.3 header instead of a default ID3v2.4 to an MP3 file, use the <code>id3v2_version</code> private option of the MP3 muxer: </p>
 <pre>
         ffmpeg -i input.flac -id3v2_version 3 out.mp3
 </pre>
@@ -343,17 +343,17 @@ description: "ffprobe – ffprobe media prober"
 <dt><code>-unit</code></dt>
 <dd> Show the unit of the displayed values.</dd>
 <dt><code>-prefix</code></dt>
-<dd> Use <font SIZE="-1">SI</font> prefixes for the displayed values. Unless the &#8220;-byte_binary_prefix&#8221; option is used all the prefixes are decimal.</dd>
+<dd> Use SI prefixes for the displayed values. Unless the &#8220;-byte_binary_prefix&#8221; option is used all the prefixes are decimal.</dd>
 <dt><code>-byte_binary_prefix</code></dt>
 <dd> Force the use of binary prefixes for byte values.</dd>
 <dt><code>-sexagesimal</code></dt>
-<dd> Use sexagesimal format <font SIZE="-1">HH:MM:SS.MICROSECONDS</font> for time values.</dd>
+<dd> Use sexagesimal format HH:MM:SS.MICROSECONDS for time values.</dd>
 <dt><code>-pretty</code></dt>
 <dd> Prettify the format of the displayed values, it corresponds to the options &#8220;-unit -prefix -byte_binary_prefix -sexagesimal&#8221;.</dd>
 <dt><code>-of, -print_format</code> <i>writer_name</i><code>[=</code><i>writer_options</i><code>]</code></dt>
 <dd> Set the output printing format. </dd>
 <p> <i>writer_name</i> specifies the name of the writer, and <i>writer_options</i> specifies the options to be passed to the writer. </p>
-<p> For example for printing the output in <font SIZE="-1">JSON</font> format, specify: </p>
+<p> For example for printing the output in JSON format, specify: </p>
 <pre>
         -print_format json
 </pre>
@@ -371,16 +371,16 @@ description: "ffprobe – ffprobe media prober"
         ffprobe -show_packets -select_streams v:1 INPUT
 </pre>
 <dt><code>-show_data</code></dt>
-<dd> Show payload data, as a hexadecimal and <font SIZE="-1">ASCII</font> dump. Coupled with <code>-show_packets</code>, it will dump the packets&#8217; data. Coupled with <code>-show_streams</code>, it will dump the codec extradata. </dd>
+<dd> Show payload data, as a hexadecimal and ASCII dump. Coupled with <code>-show_packets</code>, it will dump the packets&#8217; data. Coupled with <code>-show_streams</code>, it will dump the codec extradata. </dd>
 <p> The dump is printed as the &#8220;data&#8221; field. It may contain newlines.</p>
 <dt><code>-show_data_hash</code> <i>algorithm</i></dt>
 <dd> Show a hash of payload data, for packets with <code>-show_packets</code> and for codec extradata with <code>-show_streams</code>.</dd>
 <dt><code>-show_error</code></dt>
 <dd> Show information about the error found when trying to probe the input. </dd>
-<p> The error information is printed within a section with name &#8220;<font SIZE="-1">ERROR&#8221;.</font></p>
+<p> The error information is printed within a section with name &#8220;ERROR&#8221;.</p>
 <dt><code>-show_format</code></dt>
 <dd> Show information about the container format of the input multimedia stream. </dd>
-<p> All the container format information is printed within a section with name &#8220;<font SIZE="-1">FORMAT&#8221;.</font></p>
+<p> All the container format information is printed within a section with name &#8220;FORMAT&#8221;.</p>
 <dt><code>-show_format_entry</code> <i>name</i></dt>
 <dd> Like <code>-show_format</code>, but only prints the specified entry of the container format information, rather than all. This option may be given more than once, then all specified entries will be shown. </dd>
 <p> This option is deprecated, use <tt>&quot;show_entries&quot;</tt> instead.</p>
@@ -395,7 +395,7 @@ description: "ffprobe – ffprobe media prober"
         &lt;SECTION_ENTRY&gt;         ::= &lt;SECTION_NAME&gt;[=[&lt;LOCAL_SECTION_ENTRIES&gt;]]
         &lt;SECTION_ENTRIES&gt;       ::= &lt;SECTION_ENTRY&gt;[:&lt;SECTION_ENTRIES&gt;]
 </code></pre>
-<p> For example, to show only the index and type of each stream, and the <font SIZE="-1">PTS</font> time, duration time, and stream index of the packets, you can specify the argument: </p>
+<p> For example, to show only the index and type of each stream, and the PTS time, duration time, and stream index of the packets, you can specify the argument: </p>
 <pre>
         packet=pts_time,duration_time,stream_index : stream=index,codec_type
 </pre>
@@ -413,22 +413,22 @@ description: "ffprobe – ffprobe media prober"
 </pre>
 <dt><code>-show_packets</code></dt>
 <dd> Show information about each packet contained in the input multimedia stream. </dd>
-<p> The information for each single packet is printed within a dedicated section with name &#8220;<font SIZE="-1">PACKET&#8221;.</font></p>
+<p> The information for each single packet is printed within a dedicated section with name &#8220;PACKET&#8221;.</p>
 <dt><code>-show_frames</code></dt>
 <dd> Show information about each frame and subtitle contained in the input multimedia stream. </dd>
-<p> The information for each single frame is printed within a dedicated section with name &#8220;<font SIZE="-1">FRAME&#8221;</font> or &#8220;<font SIZE="-1">SUBTITLE&#8221;.</font></p>
+<p> The information for each single frame is printed within a dedicated section with name &#8220;FRAME&#8221; or &#8220;SUBTITLE&#8221;.</p>
 <dt><code>-show_log</code> <i>loglevel</i></dt>
 <dd> Show logging information from the decoder about each frame according to the value set in <i>loglevel</i>, (see <tt>&quot;-loglevel&quot;</tt>). This option requires <tt>&quot;-show_frames&quot;</tt>. </dd>
-<p> The information for each log message is printed within a dedicated section with name &#8220;<font SIZE="-1">LOG&#8221;.</font></p>
+<p> The information for each log message is printed within a dedicated section with name &#8220;LOG&#8221;.</p>
 <dt><code>-show_streams</code></dt>
 <dd> Show information about each media stream contained in the input multimedia stream. </dd>
-<p> Each media stream information is printed within a dedicated section with name &#8220;<font SIZE="-1">STREAM&#8221;.</font></p>
+<p> Each media stream information is printed within a dedicated section with name &#8220;STREAM&#8221;.</p>
 <dt><code>-show_programs</code></dt>
 <dd> Show information about programs and their streams contained in the input multimedia stream. </dd>
-<p> Each media stream information is printed within a dedicated section with name &#8220;<font SIZE="-1">PROGRAM_STREAM&#8221;.</font></p>
+<p> Each media stream information is printed within a dedicated section with name &#8220;PROGRAM_STREAM&#8221;.</p>
 <dt><code>-show_chapters</code></dt>
 <dd> Show information about chapters stored in the format. </dd>
-<p> Each chapter is printed within a dedicated section with name &#8220;<font SIZE="-1">CHAPTER&#8221;.</font></p>
+<p> Each chapter is printed within a dedicated section with name &#8220;CHAPTER&#8221;.</p>
 <dt><code>-count_frames</code></dt>
 <dd> Count the number of frames per stream and report it in the corresponding stream section.</dd>
 <dt><code>-count_packets</code></dt>
@@ -440,7 +440,7 @@ description: "ffprobe – ffprobe media prober"
 <p> The second part specifies the interval end position. It is interpreted as an absolute position, or as a relative offset from the current position if it is preceded by the &#8220;+&#8221; character. If the offset specification starts with &#8220;#&#8221;, it is interpreted as the number of packets to read (not including the flushing packets) from the interval start. If no second part is specified, the program will read until the end of the input. </p>
 <p> Note that seeking is not accurate, thus the actual interval start point may be different from the specified position. Also, when an interval duration is specified, the absolute end time will be computed by adding the duration to the interval start point found by seeking the file, rather than to the specified start value. </p>
 <p> The formal syntax is given by: </p>
-<p>        &lt;INTERVAL&gt;  ::= [&lt;START&gt;|+&lt;START_OFFSET&gt;][%[&lt;END&gt;|+&lt;END_OFFSET&gt;]]<br />
+<p>        &lt;INTERVAL&gt;  ::= [&lt;START&gt;|+&lt;START_OFFSET&gt;][%[&lt;END&gt;|+&lt;END_OFFSET&gt;]]<br/>
         &lt;INTERVALS&gt; ::= &lt;INTERVAL&gt;[,&lt;INTERVALS&gt;]</p>
 <p> A few examples follow.</p>
 <dl>
@@ -470,18 +470,18 @@ description: "ffprobe – ffprobe media prober"
 <dl>
 </dl>
 <dt><code>-show_private_data, -private</code></dt>
-<dd> Show private data, that is data depending on the format of the particular shown element. This option is enabled by default, but you may need to disable it for specific uses, for example when creating XSD-compliant <font SIZE="-1">XML</font> output.</dd>
+<dd> Show private data, that is data depending on the format of the particular shown element. This option is enabled by default, but you may need to disable it for specific uses, for example when creating XSD-compliant XML output.</dd>
 <dt><code>-show_program_version</code></dt>
 <dd> Show information related to program version. </dd>
-<p> Version information is printed within a section with name &#8220;<font SIZE="-1">PROGRAM_VERSION&#8221;.</font></p>
+<p> Version information is printed within a section with name &#8220;PROGRAM_VERSION&#8221;.</p>
 <dt><code>-show_library_versions</code></dt>
 <dd> Show information related to library versions. </dd>
-<p> Version information for each library is printed within a section with name &#8220;<font SIZE="-1">LIBRARY_VERSION&#8221;.</font></p>
+<p> Version information for each library is printed within a section with name &#8220;LIBRARY_VERSION&#8221;.</p>
 <dt><code>-show_versions</code></dt>
 <dd> Show information related to program and library versions. This is the equivalent of setting both <code>-show_program_version</code> and <code>-show_library_versions</code> options.</dd>
 <dt><code>-show_pixel_formats</code></dt>
 <dd> Show information about all pixel formats supported by FFmpeg. </dd>
-<p> Pixel format information for each format is printed within a section with name &#8220;<font SIZE="-1">PIXEL_FORMAT&#8221;.</font></p>
+<p> Pixel format information for each format is printed within a section with name &#8220;PIXEL_FORMAT&#8221;.</p>
 <dt><code>-bitexact</code></dt>
 <dd> Force bitexact output, useful to produce output which is not dependent on the specific build.</dd>
 <dt><code>-i</code> <i>input_url</i></dt>
@@ -497,11 +497,11 @@ description: "ffprobe – ffprobe media prober"
 <dl>
 <dl>
 <dt><code>fail</code></dt>
-<dd> The writer will fail immediately in case an invalid string (<font SIZE="-1">UTF-8</font>) sequence or code point is found in the input. This is especially useful to validate input metadata.</dd>
+<dd> The writer will fail immediately in case an invalid string (UTF-8) sequence or code point is found in the input. This is especially useful to validate input metadata.</dd>
 <dt><code>ignore</code></dt>
 <dd> Any validation error will be ignored. This will result in possibly broken output, especially with the json or xml writer.</dd>
 <dt><code>replace</code></dt>
-<dd> The writer will substitute invalid <font SIZE="-1">UTF-8</font> sequences or code points with the string specified with the <code>string_validation_replacement</code>.</dd></dl>
+<dd> The writer will substitute invalid UTF-8 sequences or code points with the string specified with the <code>string_validation_replacement</code>.</dd></dl>
 </dl>
 <dl>
 <dt>
@@ -518,7 +518,7 @@ description: "ffprobe – ffprobe media prober"
 [SECTION] key1 = val1... keyN = valN
     [/ SECTION]
 </code></pre>
-<p> Metadata tags are printed as a line in the corresponding <font SIZE="-1">FORMAT, STREAM</font> or <font SIZE="-1">PROGRAM_STREAM</font> section, and are prefixed by the string &#8220;<font SIZE="-1">TAG:&#8221;.</font> </p>
+<p> Metadata tags are printed as a line in the corresponding FORMAT, STREAM or PROGRAM_STREAM section, and are prefixed by the string &#8220;TAG:&#8221;. </p>
 <p> A description of the accepted options follows.</p>
 <dl>
 <dt><code>nokey, nk</code></dt>
@@ -526,7 +526,7 @@ description: "ffprobe – ffprobe media prober"
 <dt><code>noprint_wrappers, nw</code></dt>
 <dd> If set to 1 specify not to print the section header and footer. Default value is 0.</dd></dl>
 <h3>compact, csv</h3>
-<p> Compact and <font SIZE="-1">CSV</font> format. </p>
+<p> Compact and CSV format. </p>
 <p> The <tt>&quot;csv&quot;</tt> writer is equivalent to <tt>&quot;compact&quot;</tt>, but supports different defaults. </p>
 <p> Each section is printed on a single line. If no option is specified, the output has the form: </p>
 <pre>
@@ -547,13 +547,13 @@ description: "ffprobe – ffprobe media prober"
 <dt><code>c</code></dt>
 <dd> Perform C-like escaping. Strings containing a newline (<code>
 </code>), carriage return (<code>
-</code>), a tab (<code>	</code>), a form feed (<code></code>), the escaping character (<code>\</code>) or the item separator character <i></i><font SIZE="-1"><i>SEP</i></font><i></i> are escaped using C-like fashioned escaping, so that a newline is converted to the sequence <code>
+</code>), a tab (<code>	</code>), a form feed (<code></code>), the escaping character (<code>\</code>) or the item separator character <i></i><i>SEP</i><i></i> are escaped using C-like fashioned escaping, so that a newline is converted to the sequence <code>
 </code>, a carriage return to <code>
-</code>, <code>\</code> to <code>\</code> and the separator <i></i><font SIZE="-1"><i>SEP</i></font><i></i> is converted to <code>\</code><i></i><font SIZE="-1"><i>SEP</i></font><i></i>.</dd>
+</code>, <code>\</code> to <code>\</code> and the separator <i></i><i>SEP</i><i></i> is converted to <code>\</code><i></i><i>SEP</i><i></i>.</dd>
 <dt><code>csv</code></dt>
-<dd> Perform CSV-like escaping, as described in <font SIZE="-1">RFC4180.</font> Strings containing a newline (<code>
+<dd> Perform CSV-like escaping, as described in RFC4180. Strings containing a newline (<code>
 </code>), a carriage return (<code>
-</code>), a double quote (<code>&quot;</code>), or <i></i><font SIZE="-1"><i>SEP</i></font><i></i> are enclosed in double-quotes.</dd>
+</code>), a double quote (<code>&quot;</code>), or <i></i><i>SEP</i><i></i> are enclosed in double-quotes.</dd>
 <dt><code>none</code></dt>
 <dd> Perform no escaping.</dd></dl>
 </dl>
@@ -573,12 +573,12 @@ description: "ffprobe – ffprobe media prober"
 <dd> Specify if the section name specification should be hierarchical. If set to 1, and if there is more than one section in the current chapter, the section name will be prefixed by the name of the chapter. A value of 0 will disable this behavior. </dd>
 <p> Default value is 1.</dl>
 <h3>ini</h3>
-<p> <font SIZE="-1">INI</font> format output. </p>
-<p> Print output in an <font SIZE="-1">INI</font> based format. </p>
+<p> INI format output. </p>
+<p> Print output in an INI based format. </p>
 <p> The following conventions are adopted:</p>
 <dl>
 <dt>&bull;</dt>
-<dd> all key and values are <font SIZE="-1">UTF-8</font></dd>
+<dd> all key and values are UTF-8</dd>
 <dt>&bull;</dt>
 <dd> <code>.</code> is the subgroup separator</dd>
 <dt>&bull;</dt>
@@ -598,37 +598,37 @@ description: "ffprobe – ffprobe media prober"
 <dd> Specify if the section name specification should be hierarchical. If set to 1, and if there is more than one section in the current chapter, the section name will be prefixed by the name of the chapter. A value of 0 will disable this behavior. </dd>
 <p> Default value is 1.</dl>
 <h3>json</h3>
-<p> <font SIZE="-1">JSON</font> based format. </p>
-<p> Each section is printed using <font SIZE="-1">JSON</font> notation. </p>
+<p> JSON based format. </p>
+<p> Each section is printed using JSON notation. </p>
 <p> The description of the accepted options follows.</p>
 <dl>
 <dt><code>compact, c</code></dt>
 <dd> If set to 1 enable compact output, that is each section will be printed on a single line. Default value is 0.</dd></dl>
-<p> For more information about <font SIZE="-1">JSON,</font> see &lt;<code><a rel="nofollow" href="http://www.json.org/">http://www.json.org/</a></code>&gt;.</p>
+<p> For more information about JSON, see &lt;<code><a rel="nofollow" href="http://www.json.org/">http://www.json.org/</a></code>&gt;.</p>
 <h3>xml</h3>
-<p> <font SIZE="-1">XML</font> based format. </p>
-<p> The <font SIZE="-1">XML</font> output is described in the <font SIZE="-1">XML</font> schema description file <i>ffprobe.xsd</i> installed in the FFmpeg datadir. </p>
+<p> XML based format. </p>
+<p> The XML output is described in the XML schema description file <i>ffprobe.xsd</i> installed in the FFmpeg datadir. </p>
 <p> An updated version of the schema can be retrieved at the url &lt;<code><a rel="nofollow" href="http://www.ffmpeg.org/schema/ffprobe.xsd">http://www.ffmpeg.org/schema/ffprobe.xsd</a></code>&gt;, which redirects to the latest schema committed into the FFmpeg development source code tree. </p>
 <p> Note that the output issued will be compliant to the <i>ffprobe.xsd</i> schema only when no special global output options (<code>unit</code>, <code>prefix</code>, <code>byte_binary_prefix</code>, <code>sexagesimal</code> etc.) are specified. </p>
 <p> The description of the accepted options follows.</p>
 <dl>
 <dt><code>fully_qualified, q</code></dt>
-<dd> If set to 1 specify if the output should be fully qualified. Default value is 0. This is required for generating an <font SIZE="-1">XML</font> file which can be validated through an <font SIZE="-1">XSD</font> file.</dd>
+<dd> If set to 1 specify if the output should be fully qualified. Default value is 0. This is required for generating an XML file which can be validated through an XSD file.</dd>
 <dt><code>xsd_strict, x</code></dt>
-<dd> If set to 1 perform more checks for ensuring that the output is <font SIZE="-1">XSD</font> compliant. Default value is 0. This option automatically sets <code>fully_qualified</code> to 1.</dd></dl>
-<p> For more information about the <font SIZE="-1">XML</font> format, see &lt;<code><a rel="nofollow" href="https://www.w3.org/XML/">https://www.w3.org/XML/</a></code>&gt;.</p>
+<dd> If set to 1 perform more checks for ensuring that the output is XSD compliant. Default value is 0. This option automatically sets <code>fully_qualified</code> to 1.</dd></dl>
+<p> For more information about the XML format, see &lt;<code><a rel="nofollow" href="https://www.w3.org/XML/">https://www.w3.org/XML/</a></code>&gt;.</p>
 <h2>TIMECODE</h2>
 <p> <code>ffprobe</code> supports Timecode extraction:</p>
 <dl>
 <dt>&bull;</dt>
-<dd> <font SIZE="-1">MPEG1/2</font> timecode is extracted from the <font SIZE="-1">GOP,</font> and is available in the video stream details (<code>-show_streams</code>, see <i>timecode</i>).</dd>
+<dd> MPEG1/2 timecode is extracted from the GOP, and is available in the video stream details (<code>-show_streams</code>, see <i>timecode</i>).</dd>
 <dt>&bull;</dt>
-<dd> <font SIZE="-1">MOV</font> timecode is extracted from tmcd track, so is available in the tmcd stream metadata (<code>-show_streams</code>, see <i>TAG:timecode</i>).</dd>
+<dd> MOV timecode is extracted from tmcd track, so is available in the tmcd stream metadata (<code>-show_streams</code>, see <i>TAG:timecode</i>).</dd>
 <dt>&bull;</dt>
-<dd> <font SIZE="-1">DV, GXF</font> and <font SIZE="-1">AVI</font> timecodes are available in format metadata (<code>-show_format</code>, see <i>TAG:timecode</i>).</dd></dl>
+<dd> DV, GXF and AVI timecodes are available in format metadata (<code>-show_format</code>, see <i>TAG:timecode</i>).</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ffprobe-all/">ffprobe-all</a></code>(1), <code><a href="/docs/linux/man/1-ffmpeg/">ffmpeg</a></code>(1), <code><a href="/docs/linux/man/1-ffplay/">ffplay</a></code>(1), <code><a href="/docs/linux/man/1-ffmpeg-utils/">ffmpeg-utils</a></code>(1), <code><a href="/docs/linux/man/1-ffmpeg-scaler/">ffmpeg-scaler</a></code>(1), <code><a href="/docs/linux/man/1-ffmpeg-resampler/">ffmpeg-resampler</a></code>(1), <code><a href="/docs/linux/man/1-ffmpeg-codecs/">ffmpeg-codecs</a></code>(1), <code><a href="/docs/linux/man/1-ffmpeg-bitstream-filters/">ffmpeg-bitstream-filters</a></code>(1), <code><a href="/docs/linux/man/1-ffmpeg-formats/">ffmpeg-formats</a></code>(1), <code><a href="/docs/linux/man/1-ffmpeg-devices/">ffmpeg-devices</a></code>(1), <code><a href="/docs/linux/man/1-ffmpeg-protocols/">ffmpeg-protocols</a></code>(1), <code><a href="/docs/linux/man/1-ffmpeg-filters/">ffmpeg-filters</a></code>(1)</p>
 <h2>AUTHORS</h2>
 <p> The FFmpeg developers. </p>
 <p> For details about the authorship, see the Git history of the project (<a href="git://source.ffmpeg.org/ffmpeg">git://source.ffmpeg.org/ffmpeg</a>), e.g. by typing the command <code>git log</code> in the FFmpeg source directory, or browsing the online repository at &lt;<code><a rel="nofollow" href="http://source.ffmpeg.org">http://source.ffmpeg.org</a></code>&gt;. </p>
-<p> Maintainers for the specific components are listed in the file <i></i><font SIZE="-1"><i>MAINTAINERS</i></font><i></i> in the source code tree. </p>
+<p> Maintainers for the specific components are listed in the file <i></i><i>MAINTAINERS</i><i></i> in the source code tree. </p>

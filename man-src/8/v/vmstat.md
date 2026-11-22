@@ -114,7 +114,7 @@ pages: Number of pages with at least one active object</pre>
 <h2>Bugs</h2>
 <p>Does not tabulate the block io per device or count the number of system calls.</p>
 <h2>Authors</h2>
-<p>Written by Henry Ware<br />
+<p>Written by Henry Ware<br/>
  Fabian Fr&eacute;d&eacute;rick (diskstat, slab, partitions&#8230;)</p>
 <h2>Reporting Bugs</h2>
 <p>Please send bug reports to</p>

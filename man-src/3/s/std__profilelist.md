@@ -12,20 +12,20 @@ description: "std::__profile::list< _Tp, _Allocator > –"
 <p> Inherits list&lt; _Tp, _Allocator &gt;.</p>
 <h3>Public Types</h3>
 <p>typedef _Allocator <code>allocator_type</code> </p>
-<p> typedef __iterator_tracker<br />
- &lt; typename<br />
+<p> typedef __iterator_tracker<br/>
+ &lt; typename<br/>
  _Base::const_iterator, <code>list</code> &gt; <code>const_iterator</code>&quot; </p>
 <p> typedef _Base::const_pointer <code>const_pointer</code> </p>
 <p> typedef _Base::const_reference <code>const_reference</code> </p>
-<p> typedef <code>std::reverse_iterator</code><br />
+<p> typedef <code>std::reverse_iterator</code><br/>
  &lt; const_iterator &gt; <code>const_reverse_iterator</code>&quot; </p>
 <p> typedef _Base::difference_type <code>difference_type</code> </p>
-<p> typedef __iterator_tracker<br />
- &lt; typename _Base::iterator,<br />
+<p> typedef __iterator_tracker<br/>
+ &lt; typename _Base::iterator,<br/>
  <code>list</code> &gt; <code>iterator</code>&quot; </p>
 <p> typedef _Base::pointer <code>pointer</code> </p>
 <p> typedef _Base::reference <code>reference</code> </p>
-<p> typedef <code>std::reverse_iterator</code><br />
+<p> typedef <code>std::reverse_iterator</code><br/>
  &lt; iterator &gt; <code>reverse_iterator</code>&quot; </p>
 <p> typedef _Base::size_type <code>size_type</code> </p>
 <p> typedef _Tp <code>value_type</code></p>

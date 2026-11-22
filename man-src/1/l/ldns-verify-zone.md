@@ -38,13 +38,13 @@ description: "ldns-verify-zone – read a DNSSEC signed zone and verify it."
 <dd> Show the version and exit </dd>
 <dt><code>-V</code> <i>number</i></dt>
 <dd> Set the verbosity level (default 3): </dd>
-<p>&nbsp;<wbr>0: Be silent<br />
-&nbsp;<wbr>1: Print result, and any errors<br />
-&nbsp;<wbr>2: Same as 1 for now<br />
-&nbsp;<wbr>3: Print result, any errors, and the names that are<br />
-&nbsp;<wbr>being checked<br />
-&nbsp;<wbr>4: Same as 3 for now<br />
-&nbsp;<wbr>5: Print the zone after it has been read, the result,&nbsp;<wbr><br />
+<p>&nbsp;<wbr>0: Be silent<br/>
+&nbsp;<wbr>1: Print result, and any errors<br/>
+&nbsp;<wbr>2: Same as 1 for now<br/>
+&nbsp;<wbr>3: Print result, any errors, and the names that are<br/>
+&nbsp;<wbr>being checked<br/>
+&nbsp;<wbr>4: Same as 3 for now<br/>
+&nbsp;<wbr>5: Print the zone after it has been read, the result,&nbsp;<wbr><br/>
 &nbsp;<wbr>any errors, and the names that are being checked </p>
 </dl>
 <p> <i>period</i>s are given in ISO 8601 duration format:</p>

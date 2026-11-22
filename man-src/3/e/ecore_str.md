@@ -10,17 +10,17 @@ description: "Ecore_Str.h – Contains useful C string functions."
 <p>Ecore_Str.h &#8211; Contains useful C string functions. </p>
 <h2>Synopsis</h2>
 <h3>Functions</h3>
-<p>EAPI size_t <code>ecore_strlcpy</code> (char *dst, const char *src, size_t siz)<br />
- <i>copy a c-string </i><br />
- EAPI size_t <code>ecore_strlcat</code> (char *dst, const char *src, size_t siz)<br />
- <i>append a c-string </i><br />
- EAPI int <code>ecore_str_has_prefix</code> (const char *str, const char *prefix)<br />
- <i>checks if the string has the given prefix </i><br />
- EAPI int <code>ecore_str_has_suffix</code> (const char *str, const char *suffix)<br />
- <i>checks if the string has the given suffix </i><br />
- EAPI int <code>ecore_str_has_extension</code> (const char *str, const char *ext)<br />
- <i>This function does the same like </i><code>ecore_str_has_suffix()</code>, but with a case insensitive compare.<br />
- EAPI char ** <code>ecore_str_split</code> (const char *string, const char *delimiter, int max_tokens)<br />
+<p>EAPI size_t <code>ecore_strlcpy</code> (char *dst, const char *src, size_t siz)<br/>
+ <i>copy a c-string </i><br/>
+ EAPI size_t <code>ecore_strlcat</code> (char *dst, const char *src, size_t siz)<br/>
+ <i>append a c-string </i><br/>
+ EAPI int <code>ecore_str_has_prefix</code> (const char *str, const char *prefix)<br/>
+ <i>checks if the string has the given prefix </i><br/>
+ EAPI int <code>ecore_str_has_suffix</code> (const char *str, const char *suffix)<br/>
+ <i>checks if the string has the given suffix </i><br/>
+ EAPI int <code>ecore_str_has_extension</code> (const char *str, const char *ext)<br/>
+ <i>This function does the same like </i><code>ecore_str_has_suffix()</code>, but with a case insensitive compare.<br/>
+ EAPI char ** <code>ecore_str_split</code> (const char *string, const char *delimiter, int max_tokens)<br/>
  <i>Splits a string into a maximum of max_tokens pieces, using the given delimiter. </i></p>
 <h2>Detailed Description</h2>
 <p>Contains useful C string functions. </p>
@@ -29,7 +29,7 @@ description: "Ecore_Str.h – Contains useful C string functions."
 <p>This function does the same like <code>ecore_str_has_suffix()</code>, but with a case insensitive compare. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>str</i> the string to work with<br />
+<dd><i>str</i> the string to work with<br/>
  <i>ext</i> the extension to check for</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -38,7 +38,7 @@ description: "Ecore_Str.h – Contains useful C string functions."
 <p>checks if the string has the given prefix </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>str</i> the string to work with<br />
+<dd><i>str</i> the string to work with<br/>
  <i>prefix</i> the prefix to check for</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -47,7 +47,7 @@ description: "Ecore_Str.h – Contains useful C string functions."
 <p>checks if the string has the given suffix </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>str</i> the string to work with<br />
+<dd><i>str</i> the string to work with<br/>
  <i>suffix</i> the suffix to check for</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -57,8 +57,8 @@ description: "Ecore_Str.h – Contains useful C string functions."
 <p> If max_tokens is reached, the final string in the returned string array contains the remainder of string. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>str</i> A string to split.<br />
- <i>delim</i> A string which specifies the places at which to split the string. The delimiter is not included in any of the resulting strings, unless max_tokens is reached.<br />
+<dd><i>str</i> A string to split.<br/>
+ <i>delim</i> A string which specifies the places at which to split the string. The delimiter is not included in any of the resulting strings, unless max_tokens is reached.<br/>
  <i>max_tokens</i> The maximum number of strings to split string into. If this is less than 1, the string is split completely.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -67,8 +67,8 @@ description: "Ecore_Str.h – Contains useful C string functions."
 <p>append a c-string </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>dst</i> the destination<br />
- <i>src</i> the source<br />
+<dd><i>dst</i> the destination<br/>
+ <i>src</i> the source<br/>
  <i>siz</i> the size of the destination</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -77,8 +77,8 @@ description: "Ecore_Str.h – Contains useful C string functions."
 <p>copy a c-string </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>dst</i> the destination<br />
- <i>src</i> the source<br />
+<dd><i>dst</i> the destination<br/>
+ <i>src</i> the source<br/>
  <i>siz</i> the size of the destination</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

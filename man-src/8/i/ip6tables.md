@@ -153,7 +153,7 @@ description: "iptables/ip6tables — administration tool for IPv4/IPv6 packet fi
 <p>There are several other changes in iptables.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-iptables-apply/">iptables-apply</a></code>(8), <code><a href="/docs/linux/man/8-iptables-save/">iptables-save</a></code>(8), <code><a href="/docs/linux/man/8-iptables-restore/">iptables-restore</a></code>(8), <code><a href="/docs/linux/man/8-iptables-extensions/">iptables-extensions</a></code>(8), </p>
-<p> The packet-filtering-HOWTO details iptables usage for packet filtering, the NAT-HOWTO details NAT, the netfilter-extensions-HOWTO details the extensions that are not in the standard distribution, and the netfilter-hacking-HOWTO details the netfilter internals.<br />
+<p> The packet-filtering-HOWTO details iptables usage for packet filtering, the NAT-HOWTO details NAT, the netfilter-extensions-HOWTO details the extensions that are not in the standard distribution, and the netfilter-hacking-HOWTO details the netfilter internals.<br/>
  See <code><a rel="nofollow" href="http://www.netfilter.org/">http://www.netfilter.org/</a></code>.</p>
 <h2>Authors</h2>
 <p>Rusty Russell originally wrote iptables, in early consultation with Michael Neuling. </p>

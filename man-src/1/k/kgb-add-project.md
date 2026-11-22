@@ -26,7 +26,7 @@ description: "kgb-add-project – helper script for adding new projects to kgb-b
 <dt><code>project-id</code></dt>
 <dd> <code>project-id</code> to be added.</dd>
 <dt><code>irchannel</code></dt>
-<dd> <font SIZE="-1">IRC</font> channel where the new project sends its messages. If the channel doesn&#8217;t start with a character denoting <font SIZE="-1">IRC</font> channel (<tt>&quot;#&amp;+&quot;</tt>), then a hash sign is prepended.</dd>
+<dd> IRC channel where the new project sends its messages. If the channel doesn&#8217;t start with a character denoting IRC channel (<tt>&quot;#&amp;+&quot;</tt>), then a hash sign is prepended.</dd>
 <dt><code>password</code></dt>
 <dd> Password for the new project.</dd></dl>
 <h2>EXAMPLE</h2>
@@ -45,6 +45,6 @@ description: "kgb-add-project – helper script for adding new projects to kgb-b
 <dd></dd></dl>
 <h2>COPYRIGHT AND LICENSE</h2>
 <p> Copyright (C) 2012 Damyan Ivanov </p>
-<p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
-<p> This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE. </font> See the <font SIZE="-1">GNU</font> General Public License for more details. </p>
-<p> You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, <font SIZE="-1">MA 02110-1301, USA.</font> </p>
+<p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
+<p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. </p>
+<p> You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA. </p>

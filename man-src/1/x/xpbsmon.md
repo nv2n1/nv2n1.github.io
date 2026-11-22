@@ -35,8 +35,8 @@ description: "xpbsmon – GUI for displaying, monitoring the nodes/execution hos
 <p> This section describes the main parts of the <code>xpbsmon</code> display. The main window is composed of 3 distinct areas (subwindows) arranged vertically (one on top of another) in the following order:</p>
 <dl>
 <dt>
-</dt><dd> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1) Menu<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>2) Site Information<br />
+</dt><dd> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1) Menu<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>2) Site Information<br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>3) Info
 </dd></dl>
 <p> <code>Menu</code>. The Menu area is composed of a row of command buttons that signal some action with a click of the left mouse button. The buttons are:</p>
@@ -115,16 +115,16 @@ description: "xpbsmon – GUI for displaying, monitoring the nodes/execution hos
 <dd> If you need to monitor certain system resource parameters for each of the nodes, you need to specify query expressions containing resource queries to be sent to the individual PBS moms. For example, if you want to obtain memory usage, then select a node from the Nodes list, click on the <code>query..</code> button that accompanies the Nodes list, and this would bring up the Query Table dialog. Specify the following input: </dd>
 <dl>
 <dt>
-</dt><dd> Query_Expr: (availmem/totmem) * 100<br />
- Display_Info: Memory Usage:<br />
+</dt><dd> Query_Expr: (availmem/totmem) * 100<br/>
+ Display_Info: Memory Usage:<br/>
  Display_Type: SCALE</dd></dl>
 <dt>
 </dt><dd>
 <p> The above says to display the result of the &quot;Query_Expr&quot; in a scale widget calibrated over 100. The queries &quot;availmem&quot; and &quot;totmem&quot; will be sent to the PBS mom, and the expression is evaluated upon receiving all results from the mom. If you want to display the result of another query, say &quot;loadave&quot;, directly, then specify the following: </p>
 </dd><dl>
 <dt>
-</dt><dd> Query_Expr: loadave<br />
- Display_Info: Load Average:<br />
+</dt><dd> Query_Expr: loadave<br/>
+ Display_Info: Load Average:<br/>
  Display_Type: TEXT</dd></dl>
 <dt>
 </dt><dd>
@@ -333,13 +333,13 @@ description: "xpbsmon – GUI for displaying, monitoring the nodes/execution hos
 <dd> the separator character for each input within a curly-bracketed line of input of *siteInfo.</dd>
 <dt>*sitesInfo</dt>
 <dd> {&lt;site1name&gt;&lt;sep&gt;&lt;site1-display-type&gt;&lt;sep&gt;&lt;server-name&gt;&lt;sep&gt;&lt;server-display-label&gt;&lt;sep&gt;&lt;nodename&gt;&lt;sep&gt;&lt;nodetype&gt;&lt;sep&gt;&lt;node-query-expr&gt;} </dd>
-<p>&nbsp;<wbr>. . .<br />
+<p>&nbsp;<wbr>. . .<br/>
  {&lt;site2name&gt;&lt;sep&gt;&lt;site2-display-type&gt;&lt;sep&gt;&lt;server-name&gt;&lt;sep&gt;&lt;server-display-label&gt;&lt;sep&gt;&lt;nodename&gt;&lt;sep&gt;&lt;nodetype&gt;&lt;sep&gt;&lt;node-query-expr&gt;} </p>
 <p> information about a site where &lt;site1-display-type&gt; can be either {FULL,ICON}, &lt;nodetype&gt; can be {MOM, NOMOM}, and &lt;node-query-expr&gt; has the format: </p>
 <p> { {&lt;expr&gt;} {expr-label} &lt;output-format&gt;} </p>
 <p> where &lt;output-format&gt; could be {TEXT, SCALE}. It&#8217;s probably better to use the <code>Pref</code> dialog boxes in order to specify a value for this. </p>
 <p> Example: </p>
-<p> *rcSiteInfoDelimeterChar ;<br />
+<p> *rcSiteInfoDelimeterChar ;<br/>
  *sitesInfo: {Mars;ICON;newton;Newton;newton3;NOMOM;} {Langley;FULL;db;DB;db.OpenPBS.org;MOM;&#123;&#123; ( availmem / totmem ) * 100} {Memory Usage:} SCALE} &#123;&#123; ( loadave / ncpus ) * 100} {Cpu Usage:} SCALE} {ncpus {Number of Cpus:} TEXT} {physmem {Physical Memory:} TEXT} {idletime {Idle Time (s):} TEXT} {loadave {Load Avg:} TEXT}} {Mars;ICON;newton;Newton;newton4;NOMOM;} {Mars;ICON;newton;Newton;newton1;NOMOM;} {Mars;ICON;newton;Newton;newton2;NOMOM;} {Mars;ICON;b0101;DB;aspasia.OpenPBS.org;MOM;&#123;&#123; ( availmem / totmem ) * 100} {Memory Usage:} SCALE} &#123;&#123; ( loadave / ncpus ) * 100} {Cpu Usage:} SCALE} {ncpus {Number of Cpus:} TEXT} {physmem {Physical Memory:} TEXT} {idletime {Idle Time (s):} TEXT} {loadave {Load Avg:} TEXT}} {Mars;ICON;newton;Newton;newton7;NOMOM;}</dl>
 <h2>EXIT STATUS</h2>
 <p> Upon successful processing, the <code>xpbsmon</code> exit status will be a value of zero. </p>

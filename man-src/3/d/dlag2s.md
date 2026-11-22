@@ -11,7 +11,7 @@ description: "dlag2s.f –"
 <p> dlag2s.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dlag2s</code> (M, N, A, LDA, SA, LDSA, INFO)<br />
+<p> subroutine <code>dlag2s</code> (M, N, A, LDA, SA, LDSA, INFO)<br/>
  <i></i><code>DLAG2S</code> converts a double precision matrix to a single precision matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlag2s (integerM, integerN, double precision, dimension( lda, * )A, integerLDA, real, dimension( ldsa, * )SA, integerLDSA, integerINFO)</h3>

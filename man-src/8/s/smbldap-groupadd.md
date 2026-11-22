@@ -17,16 +17,16 @@ smbldap-groupadd [-g gid ] [-a] [-o] [-r rid] [-s sid] [-t group type] [-p] grou
 The smbldap-groupadd command creates a new group account using the values specified on the command line and the default values from the configuration file. The new group will be entered into the system files as needed. Available options are : 
 
  -g gid 
-The numerical value of the group's&nbsp;<wbr><font SIZE="-1">ID.</font>&nbsp;<wbr>This value must be 
+The numerical value of the group's&nbsp;<wbr>ID.&nbsp;<wbr>This value must be 
 unique, unless the -o option is used. The value must be non- 
-negative. The default is to use the smallest&nbsp;<wbr><font SIZE="-1">ID</font>&nbsp;<wbr>value greater 
+negative. The default is to use the smallest&nbsp;<wbr>ID&nbsp;<wbr>value greater 
 than 1000 and greater than every other group. 
 
  -a 
-add an automatic Security&nbsp;<wbr><font SIZE="-1">ID</font>&nbsp;<wbr>for the group&nbsp;<wbr>(<font SIZE="-1">SID</font>). 
+add an automatic Security&nbsp;<wbr>ID&nbsp;<wbr>for the group&nbsp;<wbr>(SID). 
 
  -b 
-the group is also a&nbsp;<wbr><font SIZE="-1">AIX</font>&nbsp;<wbr>group 
+the group is also a&nbsp;<wbr>AIX&nbsp;<wbr>group 
 
  -o 
 gid is not unique 
@@ -35,17 +35,17 @@ gid is not unique
 print the gidNumber to stdout 
 
  -s sid 
-set the group&nbsp;<wbr><font SIZE="-1">SID. 
-&nbsp;<wbr>&nbsp;<wbr></font>&nbsp;<wbr>The&nbsp;<wbr><font SIZE="-1">SID</font>&nbsp;<wbr>must be unique and defined with the domain Security&nbsp;<wbr><font SIZE="-1">ID 
-</font>($SID)&nbsp;<wbr>like sid=$SID-rid where rid is the group rid. 
+set the group&nbsp;<wbr>SID. 
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>The&nbsp;<wbr>SID&nbsp;<wbr>must be unique and defined with the domain Security&nbsp;<wbr>ID 
+($SID)&nbsp;<wbr>like sid=$SID-rid where rid is the group rid. 
 
  -r rid 
 set the group rid. 
-The&nbsp;<wbr><font SIZE="-1">SID</font>&nbsp;<wbr>is then calculated as sid=$SID-rid where&nbsp;<wbr><tt>$SID</tt>&nbsp;<wbr>is the 
-domain Security&nbsp;<wbr><font SIZE="-1">ID.</font> 
+The&nbsp;<wbr>SID&nbsp;<wbr>is then calculated as sid=$SID-rid where&nbsp;<wbr><tt>$SID</tt>&nbsp;<wbr>is the 
+domain Security&nbsp;<wbr>ID. 
 
  -t group type 
-set the&nbsp;<wbr><font SIZE="-1">NT</font>&nbsp;<wbr>Group type for the new group. Available values are 
+set the&nbsp;<wbr>NT&nbsp;<wbr>Group type for the new group. Available values are 
 2&nbsp;<wbr>(domain group), 4&nbsp;<wbr>(local group)&nbsp;<wbr>and 5&nbsp;<wbr>(builtin group). 
 The default group type is 2.
 

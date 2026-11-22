@@ -51,16 +51,16 @@ description: "pptpd – PPTP VPN daemon"
 <dd>displays the current version of the pptp daemon. </dd>
 </dl>
 <h2>Files</h2>
-<p>/etc/pptpd.conf<br />
+<p>/etc/pptpd.conf<br/>
  /var/run/pptpd.pid</p>
 <h2>Debugging</h2>
 <p>To turn on debugging, add &#8216;debug&#8217; to /etc/pptpd.conf and your PPP options file, and restart pptpd. </p>
 <p> Typically the PPP options file is options.pptpd in /etc/ppp, though on some distributions it may be pptpd-options. Use your package manager to find it, e.g. &#8216;rpm -ql pptpd | grep options&#8217; or &#8216;dpkg &#8211;listfiles pptpd | grep options&#8217;. </p>
 <p> You may need to configure syslogd to catch debug messages. e.g. edit /etc/syslog.conf and add something similar to the example below, then restart syslogd. </p>
-<p> # debug logging<br />
+<p> # debug logging<br/>
  *.debug;mail.none /var/log/debug </p>
 <p> This will log all debug information, except mail, to the file /var/log/debug. Note that this is a lot of information and might flood your disks. If performance is an issue, you can try turning off sync during your debugging, by prefixing the destination with &#8216;-&#8216;. </p>
-<p> # debug logging<br />
+<p> # debug logging<br/>
  *.debug;mail.none -/var/log/debug </p>
 <p> Disable this line and restart syslog after you are done debugging. See the syslog man pages for more details.</p>
 <h2>Authors</h2>

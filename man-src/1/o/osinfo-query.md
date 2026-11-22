@@ -10,9 +10,9 @@ description: "osinfo-query – Query information in the database"
 
 <p> osinfo-query &#8211; Query information in the database </p>
 <h2>SYNOPSIS</h2>
-<p> osinfo-query [<font SIZE="-1">OPTIONS&#8230;</font>] <font SIZE="-1">TYPE</font> [<font SIZE="-1">CONDITION-1</font> [<font SIZE="-1">CONDITION-2 &#8230;</font>]]</p>
+<p> osinfo-query [OPTIONS&#8230;] TYPE [CONDITION-1 [CONDITION-2 &#8230;]]</p>
 <h2>DESCRIPTION</h2>
-<p> The <tt>&quot;osinfo-query&quot;</tt> command allows extraction of information from the database. <font SIZE="-1"><code>TYPE</code></font> can be one of <tt>&quot;os&quot;</tt>, <tt>&quot;platform&quot;</tt>, <tt>&quot;device&quot;</tt>, or <tt>&quot;deployment&quot;</tt>. With no conditions specified, all entities of the given type will be listed. </p>
+<p> The <tt>&quot;osinfo-query&quot;</tt> command allows extraction of information from the database. <code>TYPE</code> can be one of <tt>&quot;os&quot;</tt>, <tt>&quot;platform&quot;</tt>, <tt>&quot;device&quot;</tt>, or <tt>&quot;deployment&quot;</tt>. With no conditions specified, all entities of the given type will be listed. </p>
 <pre><code>
 #List all operating systems
 $ osinfo - query os
@@ -20,7 +20,7 @@ $ osinfo - query os
     Name... -- -- -- -- -- -- -- -- -- -- --+-- -- -- -- -- -centos - 6.0 | CentOS 6.0 ... centos - 6.1 | CentOS 6.1 ......
 </code></pre>
 <p> Conditions allow filtering based on specific properties of an entity. For example, to filter only distros from the Fedora Project, use </p>
-<p>#List all operating systems<br />
+<p>#List all operating systems<br/>
 $ osinfo &#8211; query os vendor = &#8220;Fedora Project&#8221; Short ID | Name&#8230; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;fedora1 | Fedora Core 1 &#8230; fedora2 | Fedora Core 2 &#8230;&#8230;</p>
 <p> The set of fields which are printed can be controlled using the <tt>&quot;--fields&quot;</tt> command line argument: </p>
 <pre><code>
@@ -29,33 +29,33 @@ $ osinfo - query-- fields = short - id, version os vendor = "Fedora Project" Sho
 </code></pre>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-s </code><font SIZE="-1"><code>PROPERTY</code></font>, <code>&#8211;sort-key </code><font SIZE="-1"><code>PROPERTY</code></font></dt>
+<dt><code>-s </code><code>PROPERTY</code>, <code>&#8211;sort-key </code><code>PROPERTY</code></dt>
 <dd> Set the data sorting key. Defaults sorting the first column</dd>
-<dt><code>-f </code><font SIZE="-1"><code>PROPERTY1,PROPERTY2,&#8230;</code></font>, <code>&#8211;fields </code><font SIZE="-1"><code>PROPERTY1,PROPERTY2,&#8230;</code></font></dt>
+<dt><code>-f </code><code>PROPERTY1,PROPERTY2,&#8230;</code>, <code>&#8211;fields </code><code>PROPERTY1,PROPERTY2,&#8230;</code></dt>
 <dd> Set the visibility of properties in output</dd></dl>
 <h2>PROPERTY NAMES</h2>
-<h3><font SIZE="-1">OS</font></h3>
+<h3>OS</h3>
 <p> Valid property names for the <tt>&quot;os&quot;</tt> type are:</p>
 <dl>
 <dt><code>short-id</code></dt>
-<dd> The short <font SIZE="-1">OS</font> identifier</dd>
+<dd> The short OS identifier</dd>
 <dt><code>name</code></dt>
-<dd> The long <font SIZE="-1">OS</font> name</dd>
+<dd> The long OS name</dd>
 <dt><code>version</code></dt>
-<dd> The <font SIZE="-1">OS</font> version string</dd>
+<dd> The OS version string</dd>
 <dt><code>family</code></dt>
-<dd> The <font SIZE="-1">OS</font> kernel family</dd>
+<dd> The OS kernel family</dd>
 <dt><code>vendor</code></dt>
-<dd> The <font SIZE="-1">OS</font> vendor</dd>
+<dd> The OS vendor</dd>
 <dt><code>release-date</code></dt>
-<dd> The <font SIZE="-1">OS</font> release date</dd>
+<dd> The OS release date</dd>
 <dt><code>eol-date</code></dt>
-<dd> The <font SIZE="-1">OS</font> end-of-life date</dd>
+<dd> The OS end-of-life date</dd>
 <dt><code>codename</code></dt>
-<dd> The <font SIZE="-1">OS</font> code name</dd>
+<dd> The OS code name</dd>
 <dt><code>id</code></dt>
-<dd> The <font SIZE="-1">OS</font> identifier</dd></dl>
-<h3><font SIZE="-1">PLATFORM</font></h3>
+<dd> The OS identifier</dd></dl>
+<h3>PLATFORM</h3>
 <p> Valid property names for the <tt>&quot;platform&quot;</tt> type are:</p>
 <dl>
 <dt><code>short-id</code></dt>
@@ -74,7 +74,7 @@ $ osinfo - query-- fields = short - id, version os vendor = "Fedora Project" Sho
 <dd> The platform code name</dd>
 <dt><code>id</code></dt>
 <dd> The platform identifier</dd></dl>
-<h3><font SIZE="-1">DEVICE</font></h3>
+<h3>DEVICE</h3>
 <p> Valid property names for the <tt>&quot;device&quot;</tt> type are:</p>
 <dl>
 <dt><code>name</code></dt>
@@ -82,18 +82,18 @@ $ osinfo - query-- fields = short - id, version os vendor = "Fedora Project" Sho
 <dt><code>product</code></dt>
 <dd> The device product name</dd>
 <dt><code>product-id</code></dt>
-<dd> The device product <font SIZE="-1">ID</font> string</dd>
+<dd> The device product ID string</dd>
 <dt><code>vendor</code></dt>
 <dd> The device vendor name</dd>
 <dt><code>vendor-id</code></dt>
-<dd> The device vendor <font SIZE="-1">ID</font> string</dd>
+<dd> The device vendor ID string</dd>
 <dt><code>class</code></dt>
 <dd> The device type class</dd>
 <dt><code>bus</code></dt>
 <dd> The device bus type</dd>
 <dt><code>id</code></dt>
 <dd> The device identifier</dd></dl>
-<h3><font SIZE="-1">DEPLOYMENT</font></h3>
+<h3>DEPLOYMENT</h3>
 <p> Valid property names for the <tt>&quot;deployment&quot;</tt> type are:</p>
 <dl>
 <dt><code>id</code></dt>
@@ -107,4 +107,4 @@ $ osinfo - query-- fields = short - id, version os vendor = "Fedora Project" Sho
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2012, 2014 Red Hat, Inc.</p>
 <h2>LICENSE</h2>
-<p> <tt>&quot;osinfo-query&quot;</tt> is distributed under the termsof the <font SIZE="-1">GNU LGPL</font> v2+ license. This is free software; see the source for copying conditions. There is <font SIZE="-1">NO</font> warranty; not even for <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE</font> </p>
+<p> <tt>&quot;osinfo-query&quot;</tt> is distributed under the termsof the GNU LGPL v2+ license. This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE </p>

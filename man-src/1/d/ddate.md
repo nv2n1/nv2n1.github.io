@@ -63,14 +63,14 @@ description: "ddate – convert Gregorian dates to Discordian dates"
 <h2>NOTE</h2>
 <p> After `X-Day&#8217; passed without incident, the Church of the SubGenius declared that it had got the year upside down &#8211; X-Day is actually in 8661 AD rather than 1998 AD. Thus, the True X-Day is Cfn 40, 9827. </p>
 <h2>AUTHOR</h2>
-<p> Original program by Druel the Chaotic aka Jeremy Johnson (mpython [at] gnu.ai.mit.edu)<br />
- Major rewrite by Lee H:. O:. Smith, KYTP, aka Andrew Bulhak (acb [at] dev.null.org)<br />
+<p> Original program by Druel the Chaotic aka Jeremy Johnson (mpython [at] gnu.ai.mit.edu)<br/>
+ Major rewrite by Lee H:. O:. Smith, KYTP, aka Andrew Bulhak (acb [at] dev.null.org)<br/>
  Five tons of flax. </p>
 <h2>DISTRIBUTION POLICY</h2>
 <p> Public domain. All rites reversed. </p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-date/">date</a>(1),<br />
- <a rel="nofollow" href="http://www.subgenius.com/">http://www.subgenius.com/</a><br />
+<p> <a href="/docs/linux/man/1-date/">date</a>(1),<br/>
+ <a rel="nofollow" href="http://www.subgenius.com/">http://www.subgenius.com/</a><br/>
  Malaclypse the Younger, <i>Principia Discordia, Or How I Found Goddess And What I Did To Her When I Found Her</i> </p>
 <h2>AVAILABILITY</h2>
 <p> The ddate command is part of the util-linux package and is available from <a href="ftp://ftp.kernel.org/pub/linux/utils/util-linux/.">ftp://ftp.kernel.org/pub/linux/utils/util-linux/.</a> </p>

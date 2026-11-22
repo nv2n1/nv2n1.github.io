@@ -74,27 +74,27 @@ Checking Environment Variables == == == == == == == == == == == == == == ==
 <dl>
 <dt>
 </dt><dd>
-Checking Security Directories<br />
-=======================<br />
-Determining trusted cert path&#8230; /etc/grid-security/certificates<br />
-Checking for cog.properties&#8230; found<br />
-    WARNING: If the cog.properties file contains security properties,<br />
-             Java apps will ignore the security paths described in the GSI<br />
+Checking Security Directories<br/>
+=======================<br/>
+Determining trusted cert path&#8230; /etc/grid-security/certificates<br/>
+Checking for cog.properties&#8230; found<br/>
+    WARNING: If the cog.properties file contains security properties,<br/>
+             Java apps will ignore the security paths described in the GSI<br/>
              documentation
 </dd></dl>
 <dl>
 <dt>
 </dt><dd>
-Checking trusted certificates&#8230;<br />
-================================<br />
-Getting trusted certificate list&#8230;<br />
-Checking CA file /etc/grid-security/certificates/1c4f4c48.0&#8230; ok<br />
-Verifying certificate chain for &#8220;/etc/grid-security/certificates/1c3f2ca8.0&#8243;&#8230; ok<br />
-Checking CA file /etc/grid-security/certificates/9d8788eb.0&#8230; ok<br />
-Verifying certificate chain for &#8220;/etc/grid-security/certificates/9d8753eb.0&#8243;&#8230; failed<br />
-    globus_credential: Error verifying credential: Failed to verify credential<br />
-    globus_gsi_callback_module: Could not verify credential<br />
-    globus_gsi_callback_module: The certificate has expired:<br />
+Checking trusted certificates&#8230;<br/>
+================================<br/>
+Getting trusted certificate list&#8230;<br/>
+Checking CA file /etc/grid-security/certificates/1c4f4c48.0&#8230; ok<br/>
+Verifying certificate chain for &#8220;/etc/grid-security/certificates/1c3f2ca8.0&#8243;&#8230; ok<br/>
+Checking CA file /etc/grid-security/certificates/9d8788eb.0&#8230; ok<br/>
+Verifying certificate chain for &#8220;/etc/grid-security/certificates/9d8753eb.0&#8243;&#8230; failed<br/>
+    globus_credential: Error verifying credential: Failed to verify credential<br/>
+    globus_gsi_callback_module: Could not verify credential<br/>
+    globus_gsi_callback_module: The certificate has expired:<br/>
     Credential with subject: /DC=org/DC=example/OU=grid/CN=CA has expired.
 </dd></dl>
 <p> In this example, we show a user with a mismatched private key and certificate: </p>
@@ -108,18 +108,18 @@ Verifying certificate chain for &#8220;/etc/grid-security/certificates/9d8753eb.
 <dl>
 <dt>
 </dt><dd>
-Checking Environment Variables == == == == == == == == == == == == == == ==<br />
-    Checking if X509_CERT_DIR is set&#8230; no<br />
-        Checking if X509_USER_CERT is set&#8230; no<br />
-            Checking if X509_USER_KEY is set&#8230; no<br />
+Checking Environment Variables == == == == == == == == == == == == == == ==<br/>
+    Checking if X509_CERT_DIR is set&#8230; no<br/>
+        Checking if X509_USER_CERT is set&#8230; no<br/>
+            Checking if X509_USER_KEY is set&#8230; no<br/>
                 Checking if X509_USER_PROXY is set&#8230; no
 </dd></dl>
 <dl>
 <dt>
 </dt><dd>
-Checking Security Directories<br />
-=======================<br />
-Determining trusted cert path&#8230; /etc/grid-security/certificates<br />
+Checking Security Directories<br/>
+=======================<br/>
+Determining trusted cert path&#8230; /etc/grid-security/certificates<br/>
 Checking for cog.properties&#8230; not found
 </dd></dl>
 <dl>

@@ -27,50 +27,50 @@ with the linker flags -lnlopt -lm on Unix.</code></pre>
 <p> By changing the parameter <i>algorithm</i> among several predefined constants described below, one can switch easily between a variety of minimization algorithms. Some of these algorithms require the gradient (derivatives) of the function to be supplied via <i>f</i>, and other algorithms do not require derivatives. Some of the algorithms attempt to find a global optimum within the given bounds, and others find only a local optimum. Most of the algorithms only handle the case where there are no nonlinear constraints. The NLopt library is a wrapper around several free/open-source minimization packages, as well as some new implementations of published optimization algorithms. You could, of course, compile and call these packages separately, and in some cases this will provide greater flexibility than is available via NLopt. However, depending upon the specific function being optimized, the different algorithms will vary in effectiveness. The intent of NLopt is to allow you to quickly switch between algorithms in order to experiment with them for your problem, by providing a simple unified interface to these subroutines.</p>
 <h2>Objective Function</h2>
 <p>The objective function is specified by calling one of: </p>
-<p> <code> nlopt_result nlopt_set_min_objective(nlopt_opt </code><i>opt</i><code>,</code><br />
- <code> nlopt_func </code><i>f</i><code>,</code><br />
- <code> void* </code><i>f_data</i><code>);</code><br />
- <code> nlopt_result nlopt_set_max_objective(nlopt_opt </code><i>opt</i><code>,</code><br />
- <code> nlopt_func </code><i>f</i><code>,</code><br />
+<p> <code> nlopt_result nlopt_set_min_objective(nlopt_opt </code><i>opt</i><code>,</code><br/>
+ <code> nlopt_func </code><i>f</i><code>,</code><br/>
+ <code> void* </code><i>f_data</i><code>);</code><br/>
+ <code> nlopt_result nlopt_set_max_objective(nlopt_opt </code><i>opt</i><code>,</code><br/>
+ <code> nlopt_func </code><i>f</i><code>,</code><br/>
  <code> void* </code><i>f_data</i><code>);</code> </p>
 <p> depending on whether one wishes to minimize or maximize the objective function <i>f</i>, respectively. The function <i>f</i> should be of the form: </p>
-<p> <code> double f(unsigned </code><i>n</i><code>,</code><br />
- <code> const double* </code><i>x</i><code>,</code><br />
- <code> double* </code><i>grad</i><code>,</code><br />
+<p> <code> double f(unsigned </code><i>n</i><code>,</code><br/>
+ <code> const double* </code><i>x</i><code>,</code><br/>
+ <code> double* </code><i>grad</i><code>,</code><br/>
  <code> void* </code><i>f_data</i><code>);</code> </p>
 <p> The return value should be the value of the function at the point <i>x</i>, where <i>x</i> points to an array of length <i>n</i> of the design variables. The dimension <i>n</i> is identical to the one passed to <code>nlopt_create</code>. </p>
 <p> In addition, if the argument <i>grad</i> is not NULL, then <i>grad</i> points to an array of length <i>n</i> which should (upon return) be set to the gradient of the function with respect to the design variables at <i>x</i>. That is, <i>grad[i]</i> should upon return contain the partial derivative df/dx[i], for 0 &lt;= i &lt; n, if <i>grad</i> is non-NULL. Not all of the optimization algorithms (below) use the gradient information: for algorithms listed as &quot;derivative-free,&quot; the <i>grad</i> argument will always be NULL and need never be computed. (For algorithms that do use gradient information, however, <i>grad</i> may still be NULL for some calls.) </p>
 <p> The <i>f_data</i> argument is the same as the one passed to <code>nlopt_set_min_objective</code> or <code>nlopt_set_max_objective</code>, and may be used to pass any additional data through to the function. (That is, it may be a pointer to some caller-defined data structure/type containing information your function needs, which you convert from void* by a typecast.)</p>
 <h2>Bound Constraints</h2>
 <p>Most of the algorithms in NLopt are designed for minimization of functions with simple bound constraints on the inputs. That is, the input vectors x[i] are constrainted to lie in a hyperrectangle lb[i] &lt;= x[i] &lt;= ub[i] for 0 &lt;= i &lt; n. These bounds are specified by passing arrays <i>lb</i> and <i>ub</i> of length <i>n</i> to one or both of the functions: </p>
-<p> <code> nlopt_result nlopt_set_lower_bounds(nlopt_opt </code><i>opt</i><code>,</code><br />
- <code> const double* </code><i>lb</i><code>);</code><br />
- <code> nlopt_result nlopt_set_upper_bounds(nlopt_opt </code><i>opt</i><code>,</code><br />
+<p> <code> nlopt_result nlopt_set_lower_bounds(nlopt_opt </code><i>opt</i><code>,</code><br/>
+ <code> const double* </code><i>lb</i><code>);</code><br/>
+ <code> nlopt_result nlopt_set_upper_bounds(nlopt_opt </code><i>opt</i><code>,</code><br/>
  <code> const double* </code><i>ub</i><code>);</code> </p>
 <p> If a lower/upper bound is not set, the default is no bound (unconstrained, i.e. a bound of infinity); it is possible to have lower bounds but not upper bounds or vice versa. Alternatively, the user can call one of the above functions and explicitly pass a lower bound of -HUGE_VAL and/or an upper bound of +HUGE_VAL for some design variables to make them have no lower/upper bound, respectively. (HUGE_VAL is the standard C constant for a floating-point infinity, found in the math.h header file.) </p>
 <p> Note, however, that some of the algorithms in NLopt, in particular most of the global-optimization algorithms, do not support unconstrained optimization and will return an error if you do not supply finite lower and upper bounds. </p>
 <p> For convenience, the following two functions are supplied in order to set the lower/upper bounds for all design variables to a single constant (so that you don&#8217;t have to fill an array with a constant value): </p>
-<p> <code> nlopt_result nlopt_set_lower_bounds1(nlopt_opt </code><i>opt</i><code>,</code><br />
- <code> double </code><i>lb</i><code>);</code><br />
- <code> nlopt_result nlopt_set_upper_bounds1(nlopt_opt </code><i>opt</i><code>,</code><br />
+<p> <code> nlopt_result nlopt_set_lower_bounds1(nlopt_opt </code><i>opt</i><code>,</code><br/>
+ <code> double </code><i>lb</i><code>);</code><br/>
+ <code> nlopt_result nlopt_set_upper_bounds1(nlopt_opt </code><i>opt</i><code>,</code><br/>
  <code> double </code><i>ub</i><code>);</code></p>
 <h2>Nonlinear Constraints</h2>
 <p>Several of the algorithms in NLopt (MMA and ORIG_DIRECT) also support arbitrary nonlinear inequality constraints, and some also allow nonlinear equality constraints (COBYLA, SLSQP, ISRES, and AUGLAG). For these algorithms, you can specify as many nonlinear constraints as you wish by calling the following functions multiple times. </p>
 <p> In particular, a nonlinear inequality constraint of the form <i>fc</i>(<i>x</i>) &lt;= 0, where the function <i>fc</i> is of the same form as the objective function described above, can be specified by calling: </p>
-<p> <code> nlopt_result nlopt_add_inequality_constraint(nlopt_opt </code><i>opt</i><code>,</code><br />
- <code> nlopt_func </code><i>fc</i><code>,</code><br />
- <code> void* </code><i>fc_data</i><code>,</code><br />
+<p> <code> nlopt_result nlopt_add_inequality_constraint(nlopt_opt </code><i>opt</i><code>,</code><br/>
+ <code> nlopt_func </code><i>fc</i><code>,</code><br/>
+ <code> void* </code><i>fc_data</i><code>,</code><br/>
  <code> double </code><i>tol</i><code>);</code> </p>
 <p> Just as for the objective function, <i>fc_data</i> is a pointer to arbitrary user data that will be passed through to the <i>fc</i> function whenever it is called. The parameter <i>tol</i> is a tolerance that is used for the purpose of stopping criteria only: a point <i>x</i> is considered feasible for judging whether to stop the optimization if <i>fc</i>(<i>x</i>) &lt;= <i>tol</i>. A tolerance of zero means that NLopt will try not to consider any <i>x</i> to be converged unless <i>fc</i> is strictly non-positive; generally, at least a small positive tolerance is advisable to reduce sensitivity to rounding errors. </p>
 <p> A nonlinear equality constraint of the form <i>h</i>(<i>x</i>) = 0, where the function <i>h</i> is of the same form as the objective function described above, can be specified by calling: </p>
-<p> <code> nlopt_result nlopt_add_equality_constraint(nlopt_opt </code><i>opt</i><code>,</code><br />
- <code> nlopt_func </code><i>h</i><code>,</code><br />
- <code> void* </code><i>h_data</i><code>,</code><br />
+<p> <code> nlopt_result nlopt_add_equality_constraint(nlopt_opt </code><i>opt</i><code>,</code><br/>
+ <code> nlopt_func </code><i>h</i><code>,</code><br/>
+ <code> void* </code><i>h_data</i><code>,</code><br/>
  <code> double </code><i>tol</i><code>);</code> </p>
 <p> Just as for the objective function, <i>h_data</i> is a pointer to arbitrary user data that will be passed through to the <i>h</i> function whenever it is called. The parameter <i>tol</i> is a tolerance that is used for the purpose of stopping criteria only: a point <i>x</i> is considered feasible for judging whether to stop the optimization if |<i>h</i>(<i>x</i>)| &lt;= <i>tol</i>. For equality constraints, a small positive tolerance is strongly advised in order to allow NLopt to converge even if the equality constraint is slightly nonzero. </p>
 <p> (For any algorithm listed as &quot;derivative-free&quot; below, the <i>grad</i> argument to <i>fc</i> or <i>h</i> will always be NULL and need never be computed.) </p>
 <p> To remove all of the inequality and/or equality constraints from a given problem <i>opt</i>, you can call the following functions: </p>
-<p> <code> nlopt_result nlopt_remove_inequality_constraints(nlopt_opt </code><i>opt</i><code>);</code><br />
+<p> <code> nlopt_result nlopt_remove_inequality_constraints(nlopt_opt </code><i>opt</i><code>);</code><br/>
  <code> nlopt_result nlopt_remove_equality_constraints(nlopt_opt </code><i>opt</i><code>);</code></p>
 <h2>Algorithms</h2>
 <p>The <i>algorithm</i> parameter specifies the optimization algorithm (for more detail on these, see the README files in the source-code subdirectories), and can take on any of the following constant values. </p>
@@ -135,7 +135,7 @@ with the linker flags -lnlopt -lm on Unix.</code></pre>
 <dd><code> const double* </code><i>tol</i><code>);</code> </dd>
 <p> Set absolute tolerances on design variables. <i>tol</i> is a pointer to an array of length <i>n giving the tolerances: stop when an</i> optimization step (or an estimate of the optimum) changes every design variable <i>x</i>[i] by less than <i>tol</i>[i]. </p>
 <p> For convenience, the following function may be used to set the absolute tolerances in all <i>n</i> design variables to the same value: </p>
-<p> <code> nlopt_result nlopt_set_xtol_abs1(nlopt_opt </code><i>opt</i><code>,</code><br />
+<p> <code> nlopt_result nlopt_set_xtol_abs1(nlopt_opt </code><i>opt</i><code>,</code><br/>
  <code> double </code><i>tol</i><code>);</code> </p>
 <p> Criterion is disabled if <i>tol</i> is non-positive.</p>
 <dt><code>nlopt_result nlopt_set_maxeval(nlopt_opt </code><i>opt</i><code>,</code></dt>
@@ -174,21 +174,21 @@ with the linker flags -lnlopt -lm on Unix.</code></pre>
 <dd>Halted because the user called <code>nlopt_force_stop</code>(<i>opt</i>) on the optimization&#8217;s <code>nlopt_opt</code> object <i>opt</i> from the user&#8217;s objective function.</dd></dl>
 <h2>Local Optimizer</h2>
 <p>Some of the algorithms, especially MLSL and AUGLAG, use a different optimization algorithm as a subroutine, typically for local optimization. You can change the local search algorithm and its tolerances by calling: </p>
-<p> <code> nlopt_result nlopt_set_local_optimizer(nlopt_opt </code><i>opt</i><code>,</code><br />
+<p> <code> nlopt_result nlopt_set_local_optimizer(nlopt_opt </code><i>opt</i><code>,</code><br/>
  <code> const nlopt_opt </code><i>local_opt</i><code>);</code> </p>
 <p> Here, <i>local_opt</i> is another <code>nlopt_opt</code> object whose parameters are used to determine the local search algorithm and stopping criteria. (The objective function, bounds, and nonlinear-constraint parameters of <i>local_opt</i> are ignored.) The dimension <i>n</i> of <i>local_opt</i> must match that of <i>opt</i>. </p>
 <p> This function makes a copy of the <i>local_opt</i> object, so you can freely destroy your original <i>local_opt</i> afterwards.</p>
 <h2>Initial Step Size</h2>
 <p>For derivative-free local-optimization algorithms, the optimizer must somehow decide on some initial step size to perturb <i>x</i> by when it begins the optimization. This step size should be big enough that the value of the objective changes significantly, but not too big if you want to find the local optimum nearest to <i>x</i>. By default, NLopt chooses this initial step size heuristically from the bounds, tolerances, and other information, but this may not always be the best choice. </p>
 <p> You can modify the initial step size by calling: </p>
-<p> <code> nlopt_result nlopt_set_initial_step(nlopt_opt </code><i>opt</i><code>,</code><br />
+<p> <code> nlopt_result nlopt_set_initial_step(nlopt_opt </code><i>opt</i><code>,</code><br/>
  <code> const double* </code><i>dx</i><code>);</code> </p>
 <p> Here, <i>dx</i> is an array of length <i>n</i> containing the (nonzero) initial step size for each component of the design parameters <i>x</i>. For convenience, if you want to set the step sizes in every direction to be the same value, you can instead call: </p>
-<p> <code> nlopt_result nlopt_set_initial_step1(nlopt_opt </code><i>opt</i><code>,</code><br />
+<p> <code> nlopt_result nlopt_set_initial_step1(nlopt_opt </code><i>opt</i><code>,</code><br/>
  <code> double </code><i>dx</i><code>);</code></p>
 <h2>Stochastic Population</h2>
 <p>Several of the stochastic search algorithms (e.g., CRS, MLSL, and ISRES) start by generating some initial &quot;population&quot; of random points <i>x</i>. By default, this initial population size is chosen heuristically in some algorithm-specific way, but the initial population can by changed by calling: </p>
-<p> <code> nlopt_result nlopt_set_population(nlopt_opt </code><i>opt</i><code>,</code><br />
+<p> <code> nlopt_result nlopt_set_population(nlopt_opt </code><i>opt</i><code>,</code><br/>
  <code> unsigned </code><i>pop</i><code>);</code> </p>
 <p> (A <i>pop</i> of zero implies that the heuristic default will be used.)</p>
 <h2>Pseudorandom Numbers</h2>

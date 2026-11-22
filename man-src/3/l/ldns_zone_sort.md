@@ -10,7 +10,7 @@ description: "ldns_zone_sort, ldns_zone_glue_rr_list"
 
 <p> ldns_zone_sort, ldns_zone_glue_rr_list </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> void ldns_zone_sort(ldns_zone *zone); </p>

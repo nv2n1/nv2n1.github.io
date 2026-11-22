@@ -80,7 +80,7 @@ else
 
 <dl>
 <dt>&bull;
-</dt><dd> &lt;<a rel="nofollow" HREF="http://perlmonks.org/?node_id=216602">http://perlmonks.org/?node_id=216602</a>&gt; - the original <font SIZE="-1">PM</font> post
+</dt><dd> &lt;<a rel="nofollow" HREF="http://perlmonks.org/?node_id=216602">http://perlmonks.org/?node_id=216602</a>&gt; - the original PM post
 </dd><dt>&bull;
 </dt><dd> &lt;<a rel="nofollow" HREF="http://perlmonks.org/?node_id=238031">http://perlmonks.org/?node_id=238031</a>&gt; - Damian Conway's Perl 6 version
 </dd><dt>&bull;

@@ -12,12 +12,12 @@ description: "stunnel – universal SSL tunnel"
 <dl>
 <dt><code>Unix:</code></dt>
 <dd><code>stunnel</code> [&lt;filename&gt;] | -fd n | -help | -version | -sockets</dd>
-<dt><font SIZE="-1"><code>WIN32:</code></font></dt>
-<dd><code>stunnel</code> [ [-install | -uninstall | -start | -stop] | -exit]<br />
+<dt><code>WIN32:</code></dt>
+<dd><code>stunnel</code> [ [-install | -uninstall | -start | -stop] | -exit]<br/>
 &nbsp;<wbr>[-quiet]&nbsp;<wbr>[&lt;filename&gt;]&nbsp;<wbr>]&nbsp;<wbr>| -help | -version | -sockets</dd></dl>
 <h2>Description</h2>
-<p>The <code>stunnel</code> program is designed to work as <i></i><font SIZE="-1"><i>SSL</i></font><i></i> encryption wrapper between remote clients and local (<i>inetd</i>-startable) or remote servers. The concept is that having non-SSL aware daemons running on your system you can easily set them up to communicate with clients over secure <font SIZE="-1">SSL</font> channels. </p>
-<p> <code>stunnel</code> can be used to add <font SIZE="-1">SSL</font> functionality to commonly used <i>Inetd</i> daemons like <font SIZE="-1">POP-2</font>, <font SIZE="-1">POP-3</font>, and <font SIZE="-1">IMAP</font> servers, to standalone daemons like <font SIZE="-1">NNTP</font>, <font SIZE="-1">SMTP</font> and <font SIZE="-1">HTTP</font>, and in tunneling <font SIZE="-1">PPP</font> over network sockets without changes to the source code. </p>
+<p>The <code>stunnel</code> program is designed to work as <i></i><i>SSL</i><i></i> encryption wrapper between remote clients and local (<i>inetd</i>-startable) or remote servers. The concept is that having non-SSL aware daemons running on your system you can easily set them up to communicate with clients over secure SSL channels. </p>
+<p> <code>stunnel</code> can be used to add SSL functionality to commonly used <i>Inetd</i> daemons like POP-2, POP-3, and IMAP servers, to standalone daemons like NNTP, SMTP and HTTP, and in tunneling PPP over network sockets without changes to the source code. </p>
 <p> This product includes cryptographic software written by Eric Young (eay [at] cryptsoft.com)</p>
 <h2>Options</h2>
 <dl>
@@ -31,17 +31,17 @@ description: "stunnel – universal SSL tunnel"
 <dd>Print <code>stunnel</code> version and compile time defaults</dd>
 <dt><code>-sockets</code></dt>
 <dd>Print default socket options</dd>
-<dt><code>-install</code> (<font SIZE="-1">NT/2000/XP</font> only)</dt>
-<dd>Install <font SIZE="-1">NT</font> Service</dd>
-<dt><code>-uninstall</code> (<font SIZE="-1">NT/2000/XP</font> only)</dt>
-<dd>Uninstall <font SIZE="-1">NT</font> Service</dd>
-<dt><code>-start</code> (<font SIZE="-1">NT/2000/XP</font> only)</dt>
-<dd>Start <font SIZE="-1">NT</font> Service</dd>
-<dt><code>-stop</code> (<font SIZE="-1">NT/2000/XP</font> only)</dt>
-<dd>Stop <font SIZE="-1">NT</font> Service</dd>
+<dt><code>-install</code> (NT/2000/XP only)</dt>
+<dd>Install NT Service</dd>
+<dt><code>-uninstall</code> (NT/2000/XP only)</dt>
+<dd>Uninstall NT Service</dd>
+<dt><code>-start</code> (NT/2000/XP only)</dt>
+<dd>Start NT Service</dd>
+<dt><code>-stop</code> (NT/2000/XP only)</dt>
+<dd>Stop NT Service</dd>
 <dt><code>-exit</code> (Win32 only)</dt>
 <dd>Exit an already started stunnel</dd>
-<dt><code>-quiet</code> (<font SIZE="-1">NT/2000/XP</font> only)</dt>
+<dt><code>-quiet</code> (NT/2000/XP only)</dt>
 <dd>Don&#8217;t display any message boxes</dd></dl>
 <h2>Configuration File</h2>
 <p>Each line of the configuration file can be either:</p>
@@ -59,10 +59,10 @@ description: "stunnel – universal SSL tunnel"
 <dt>&bull;</dt>
 <dd>A port number.</dd>
 <dt>&bull;</dt>
-<dd>A colon-separated pair of <font SIZE="-1">IP</font> address (either IPv4, IPv6, or domain name) and port number.</dd>
+<dd>A colon-separated pair of IP address (either IPv4, IPv6, or domain name) and port number.</dd>
 <dt>&bull;</dt>
 <dd>A Unix socket path (Unix only).</dd></dl>
-<h3><font SIZE="-1">GLOBAL</font> <font SIZE="-1">OPTIONS</font></h3>
+<h3>GLOBAL OPTIONS</h3>
 <dl>
 <dt><code>chroot</code> = directory (Unix only)</dt>
 <dd>directory to chroot <code>stunnel</code> process </dd>
@@ -83,7 +83,7 @@ description: "stunnel – universal SSL tunnel"
 <dt><code>compression</code> = deflate | zlib | rle</dt>
 <dd>select data compression algorithm </dd>
 <p> default: no compression </p>
-<p> deflate is the standard compression method as described in <font SIZE="-1">RFC</font> 1951. </p>
+<p> deflate is the standard compression method as described in RFC 1951. </p>
 <p> zlib compression of <code>OpenSSL 0.9.8</code> or above is not backward compatible with <code>OpenSSL 0.9.7</code>. </p>
 <p> rle compression is currently not implemented by the <code>OpenSSL</code> library.</p>
 <dt><code>debug</code> = [facility.]level</dt>
@@ -91,7 +91,7 @@ description: "stunnel – universal SSL tunnel"
 <p> Level is a one of the syslog level names or numbers emerg (0), alert (1), crit (2), err (3), warning (4), notice (5), info (6), or debug (7). All logs for the specified level and all levels numerically less than it will be shown. Use <i>debug = debug</i> or <i>debug = 7</i> for greatest debugging output. The default is notice (5). </p>
 <p> The syslog facility &#8216;authpriv&#8217; will be used unless a facility name is supplied. (Facilities are not supported on Win32.) </p>
 <p> Case is ignored for both facilities and levels.</p>
-<dt><font SIZE="-1"><code>EGD</code></font> = egd path (Unix only)</dt>
+<dt><code>EGD</code> = egd path (Unix only)</dt>
 <dd>path to Entropy Gathering Daemon socket </dd>
 <p> Entropy Gathering Daemon socket to use to feed <code>OpenSSL</code> random number generator. (Available only if compiled with <code>OpenSSL 0.9.5a</code> or higher)</p>
 <dt><code>engine</code> = auto | &lt;engine id&gt;</dt>
@@ -110,10 +110,10 @@ description: "stunnel – universal SSL tunnel"
  key=id_45</pre>
 <dt><code>engineCtrl</code> = command[:parameter]</dt>
 <dd>control hardware engine </dd>
-<p> Special commands &#8220;<font SIZE="-1">LOAD</font>&#8221; and &#8220;<font SIZE="-1">INIT</font>&#8221; can be used to load and initialize the engine cryptogaphic module.</p>
+<p> Special commands &#8220;LOAD&#8221; and &#8220;INIT&#8221; can be used to load and initialize the engine cryptogaphic module.</p>
 <dt><code>fips</code> = yes | no</dt>
-<dd>Enable or disable <font SIZE="-1">FIPS</font> 140-2 mode. </dd>
-<p> This option allows to disable entering <font SIZE="-1">FIPS</font> mode if <code>stunnel</code> was compiled with <font SIZE="-1">FIPS</font> 140-2 support. </p>
+<dd>Enable or disable FIPS 140-2 mode. </dd>
+<p> This option allows to disable entering FIPS mode if <code>stunnel</code> was compiled with FIPS 140-2 support. </p>
 <p> default: yes</p>
 <dt><code>foreground</code> = yes | no (Unix only)</dt>
 <dd>foreground mode </dd>
@@ -128,15 +128,15 @@ description: "stunnel – universal SSL tunnel"
 <p> <i>pid</i> path is relative to <i>chroot</i> directory if specified.</p>
 <dt><code>RNDbytes</code> = bytes</dt>
 <dd>bytes to read from random seed files </dd>
-<p> Number of bytes of data read from random seed files. With <font SIZE="-1">SSL</font> versions less than <code>0.9.5a</code>, also determines how many bytes of data are considered sufficient to seed the <font SIZE="-1">PRNG</font>. More recent <code>OpenSSL</code> versions have a builtin function to determine when sufficient randomness is available.</p>
+<p> Number of bytes of data read from random seed files. With SSL versions less than <code>0.9.5a</code>, also determines how many bytes of data are considered sufficient to seed the PRNG. More recent <code>OpenSSL</code> versions have a builtin function to determine when sufficient randomness is available.</p>
 <dt><code>RNDfile</code> = file</dt>
 <dd>path to file with random seed data </dd>
-<p> The <font SIZE="-1">SSL</font> library will use data from this file first to seed the random number generator.</p>
+<p> The SSL library will use data from this file first to seed the random number generator.</p>
 <dt><code>RNDoverwrite</code> = yes | no</dt>
 <dd>overwrite the random seed files with new random data </dd>
 <p> default: yes</p>
 <dt><code>service</code> = servicename (Unix only)</dt>
-<dd>use specified string as <i>inetd</i> mode service name for <font SIZE="-1">TCP</font> Wrapper library </dd>
+<dd>use specified string as <i>inetd</i> mode service name for TCP Wrapper library </dd>
 <p> default: stunnel</p>
 <dt><code>setgid</code> = groupname (Unix only)</dt>
 <dd><i>setgid()</i> to groupname in daemon mode and clears all other groups</dd>
@@ -158,12 +158,12 @@ description: "stunnel – universal SSL tunnel"
 <dt><code>syslog</code> = yes | no (Unix only)</dt>
 <dd>enable logging via syslog </dd>
 <p> default: yes</p>
-<dt><code>taskbar</code> = yes | no (<font SIZE="-1">WIN32</font> only)</dt>
+<dt><code>taskbar</code> = yes | no (WIN32 only)</dt>
 <dd>enable the taskbar icon </dd>
 <p> default: yes</dl>
-<h3>SERVICE-LEVEL <font SIZE="-1">OPTIONS</font></h3>
-<p>Each configuration section begins with service name in square brackets. The service name is used for libwrap (<font SIZE="-1">TCP</font> Wrappers) access control and lets you distinguish <code>stunnel</code> services in your log files. </p>
-<p> Note that if you wish to run <code>stunnel</code> in <i>inetd</i> mode (where it is provided a network socket by a server such as <i>inetd</i>, <i>xinetd</i>, or <i>tcpserver</i>) then you should read the section entitled <i></i><font SIZE="-1"><i>INETD</i></font><i> </i><font SIZE="-1"><i>MODE</i></font><i></i> below.</p>
+<h3>SERVICE-LEVEL OPTIONS</h3>
+<p>Each configuration section begins with service name in square brackets. The service name is used for libwrap (TCP Wrappers) access control and lets you distinguish <code>stunnel</code> services in your log files. </p>
+<p> Note that if you wish to run <code>stunnel</code> in <i>inetd</i> mode (where it is provided a network socket by a server such as <i>inetd</i>, <i>xinetd</i>, or <i>tcpserver</i>) then you should read the section entitled <i></i><i>INETD</i><i> </i><i>MODE</i><i></i> below.</p>
 <dl>
 <dt><code>accept</code> = address</dt>
 <dd>accept connections on specified address </dd>
@@ -172,20 +172,20 @@ description: "stunnel – universal SSL tunnel"
 <pre> accept = :::port</pre>
 <dt><code>CApath</code> = directory</dt>
 <dd>Certificate Authority directory </dd>
-<p> This is the directory in which <code>stunnel</code> will look for certificates when using the <i>verify</i>. Note that the certificates in this directory should be named <font SIZE="-1">XXXXXXXX</font>.0 where <font SIZE="-1">XXXXXXXX</font> is the hash value of the <font SIZE="-1">DER</font> encoded subject of the cert. </p>
+<p> This is the directory in which <code>stunnel</code> will look for certificates when using the <i>verify</i>. Note that the certificates in this directory should be named XXXXXXXX.0 where XXXXXXXX is the hash value of the DER encoded subject of the cert. </p>
 <p> The hash algorithm has been changed in <code>OpenSSL 1.0.0</code>. It is required to c_rehash the directory on upgrade from <code>OpenSSL 0.x.x</code> to <code>OpenSSL 1.x.x</code>. </p>
 <p> <i>CApath</i> path is relative to <i>chroot</i> directory if specified.</p>
 <dt><code>CAfile</code> = certfile</dt>
 <dd>Certificate Authority file </dd>
-<p> This file contains multiple <font SIZE="-1">CA</font> certificates, used with the <i>verify</i>.</p>
+<p> This file contains multiple CA certificates, used with the <i>verify</i>.</p>
 <dt><code>cert</code> = pemfile</dt>
-<dd>certificate chain <font SIZE="-1">PEM</font> file name </dd>
-<p> A <font SIZE="-1">PEM</font> is always needed in server mode. Specifying this flag in client mode will use this certificate chain as a client side certificate chain. Using client side certs is optional. The certificates must be in <font SIZE="-1">PEM</font> format and must be sorted starting with the certificate to the highest level (root <font SIZE="-1">CA</font>).</p>
+<dd>certificate chain PEM file name </dd>
+<p> A PEM is always needed in server mode. Specifying this flag in client mode will use this certificate chain as a client side certificate chain. Using client side certs is optional. The certificates must be in PEM format and must be sorted starting with the certificate to the highest level (root CA).</p>
 <dt><code>ciphers</code> = cipherlist</dt>
-<dd>Select permitted <font SIZE="-1">SSL</font> ciphers </dd>
-<p> A colon delimited list of the ciphers to allow in the <font SIZE="-1">SSL</font> connection. For example <font SIZE="-1">DES-CBC3-SHA:IDEA-CBC-MD5</font></p>
+<dd>Select permitted SSL ciphers </dd>
+<p> A colon delimited list of the ciphers to allow in the SSL connection. For example DES-CBC3-SHA:IDEA-CBC-MD5</p>
 <dt><code>client</code> = yes | no</dt>
-<dd>client mode (remote service uses <font SIZE="-1">SSL</font>) </dd>
+<dd>client mode (remote service uses SSL) </dd>
 <p> default: no (server mode)</p>
 <dt><code>connect</code> = address</dt>
 <dd>connect to a remote address </dd>
@@ -194,20 +194,20 @@ description: "stunnel – universal SSL tunnel"
 <p> If host resolves to multiple addresses and/or if multiple <i>connect</i> options are specified, then the remote address is chosen using a round-robin algorithm.</p>
 <dt><code>CRLpath</code> = directory</dt>
 <dd>Certificate Revocation Lists directory </dd>
-<p> This is the directory in which <code>stunnel</code> will look for CRLs when using the <i>verify</i>. Note that the CRLs in this directory should be named <font SIZE="-1">XXXXXXXX</font>.r0 where <font SIZE="-1">XXXXXXXX</font> is the hash value of the <font SIZE="-1">CRL</font>. </p>
+<p> This is the directory in which <code>stunnel</code> will look for CRLs when using the <i>verify</i>. Note that the CRLs in this directory should be named XXXXXXXX.r0 where XXXXXXXX is the hash value of the CRL. </p>
 <p> The hash algorithm has been changed in <code>OpenSSL 1.0.0</code>. It is required to c_rehash the directory on upgrade from <code>OpenSSL 0.x.x</code> to <code>OpenSSL 1.x.x</code>. </p>
 <p> <i>CRLpath</i> path is relative to <i>chroot</i> directory if specified.</p>
 <dt><code>CRLfile</code> = certfile</dt>
 <dd>Certificate Revocation Lists file </dd>
 <p> This file contains multiple CRLs, used with the <i>verify</i>.</p>
 <dt><code>curve</code> = nid</dt>
-<dd>specify <font SIZE="-1">ECDH</font> curve name for server </dd>
+<dd>specify ECDH curve name for server </dd>
 <p> To get a list of supported curves use: </p>
 <pre> openssl ecparam -list_curves</pre>
 <p>default: prime256v1</p>
 <dt><code>delay</code> = yes | no</dt>
-<dd>delay <font SIZE="-1">DNS</font> lookup for &#8216;connect&#8217; option </dd>
-<p> This option is useful for dynamic <font SIZE="-1">DNS</font>, or when <font SIZE="-1">DNS</font> is not available during <code>stunnel</code> startup (road warrior <font SIZE="-1">VPN</font>, dial-up configurations).</p>
+<dd>delay DNS lookup for &#8216;connect&#8217; option </dd>
+<p> This option is useful for dynamic DNS, or when DNS is not available during <code>stunnel</code> startup (road warrior VPN, dial-up configurations).</p>
 <dt><code>engineNum</code> = engine number</dt>
 <dd>select engine number to read private key </dd>
 <p> The engines are numbered starting from 1.</p>
@@ -223,7 +223,7 @@ description: "stunnel – universal SSL tunnel"
  prio (priority) - use the order specified in config file</pre>
 <p>default: rr</p>
 <dt><code>ident</code> = username</dt>
-<dd>use <font SIZE="-1">IDENT</font> (<font SIZE="-1">RFC</font> 1413) username checking</dd>
+<dd>use IDENT (RFC 1413) username checking</dd>
 <dt><code>key</code> = keyfile</dt>
 <dd>private key for certificate specified with <i>cert</i> option </dd>
 <p> Private key is needed to authenticate certificate owner. Since this file should be kept secret it should only be readable to its owner. On Unix systems you can use the following command: </p>
@@ -233,64 +233,64 @@ description: "stunnel – universal SSL tunnel"
 <dd>Enable or disable the use of /etc/hosts.allow and /etc/hosts.deny. </dd>
 <p> default: yes</p>
 <dt><code>local</code> = host</dt>
-<dd><font SIZE="-1">IP</font> of the outgoing interface is used as source for remote connections. Use this option to bind a static local <font SIZE="-1">IP</font> address, instead.</dd>
+<dd>IP of the outgoing interface is used as source for remote connections. Use this option to bind a static local IP address, instead.</dd>
 <dt><code>sni</code> = service_name:server_name_pattern (server mode)</dt>
-<dd>Use the service as a slave service (a name-based virtual server) for Server Name Indication <font SIZE="-1">TLS</font> extension (<font SIZE="-1">RFC</font> 3546). </dd>
+<dd>Use the service as a slave service (a name-based virtual server) for Server Name Indication TLS extension (RFC 3546). </dd>
 <p> <i>service_name</i> specifies the master service that accepts client connections with <i>accept</i> option. <i>server_name_pattern</i> specifies the host name to be redirected. The pattern may start with &#8216;*&#8217; character, e.g. &#8216;*.example.com&#8217;. Multiple slave services are normally specified for a single master service. <i>sni</i> option can also be specified more than once within a single slave service. </p>
 <p> This service, as well as the master service, may not be configured in client mode. </p>
-<p> <i>connect</i> option of the slave service is ignored when <i>protocol</i> option is specified, as <i>protocol</i> connects remote host before <font SIZE="-1">TLS</font> handshake. </p>
-<p> Libwrap checks (Unix only) are performed twice: with master service name after <font SIZE="-1">TCP</font> connection is accepted, and with slave service name during <font SIZE="-1">TLS</font> handshake. </p>
+<p> <i>connect</i> option of the slave service is ignored when <i>protocol</i> option is specified, as <i>protocol</i> connects remote host before TLS handshake. </p>
+<p> Libwrap checks (Unix only) are performed twice: with master service name after TCP connection is accepted, and with slave service name during TLS handshake. </p>
 <p> Option <i>sni</i> is only available when compiled with <code>OpenSSL 1.0.0</code> and later.</p>
 <dt><code>sni</code> = server_name (client mode)</dt>
-<dd>Use the parameter as the value of <font SIZE="-1">TLS</font> Server Name Indication (<font SIZE="-1">RFC</font> 3546) extension. </dd>
+<dd>Use the parameter as the value of TLS Server Name Indication (RFC 3546) extension. </dd>
 <p> Option <i>sni</i> is only available when compiled with <code>OpenSSL 1.0.0</code> and later.</p>
-<dt><font SIZE="-1"><code>OCSP</code></font> = url</dt>
-<dd>select <font SIZE="-1">OCSP</font> server for certificate verification</dd>
+<dt><code>OCSP</code> = url</dt>
+<dd>select OCSP server for certificate verification</dd>
 <dt><code>OCSPflag</code> = flag</dt>
-<dd>specify <font SIZE="-1">OCSP</font> server flag </dd>
+<dd>specify OCSP server flag </dd>
 <p> Several <i>OCSPflag</i> can be used to specify multiple flags. </p>
-<p> currently supported flags: <font SIZE="-1">NOCERTS</font>, <font SIZE="-1">NOINTERN</font> <font SIZE="-1">NOSIGS</font>, <font SIZE="-1">NOCHAIN</font>, <font SIZE="-1">NOVERIFY</font>, <font SIZE="-1">NOEXPLICIT</font>, <font SIZE="-1">NOCASIGN</font>, <font SIZE="-1">NODELEGATED</font>, <font SIZE="-1">NOCHECKS</font>, <font SIZE="-1">TRUSTOTHER</font>, <font SIZE="-1">RESPID_KEY</font>, <font SIZE="-1">NOTIME</font></p>
+<p> currently supported flags: NOCERTS, NOINTERN NOSIGS, NOCHAIN, NOVERIFY, NOEXPLICIT, NOCASIGN, NODELEGATED, NOCHECKS, TRUSTOTHER, RESPID_KEY, NOTIME</p>
 <dt><code>options</code> = SSL_options</dt>
 <dd><code>OpenSSL</code> library options </dd>
-<p> The parameter is the <code>OpenSSL</code> option name as described in the <i>SSL_CTX_set_options(3ssl)</i> manual, but without <i></i><font SIZE="-1"><i>SSL_OP_</i></font><i></i> prefix. Several <i>options</i> can be used to specify multiple options. </p>
-<p> For example for compatibility with erroneous Eudora <font SIZE="-1">SSL</font> implementation the following option can be used: </p>
+<p> The parameter is the <code>OpenSSL</code> option name as described in the <i>SSL_CTX_set_options(3ssl)</i> manual, but without <i></i><i>SSL_OP_</i><i></i> prefix. Several <i>options</i> can be used to specify multiple options. </p>
+<p> For example for compatibility with erroneous Eudora SSL implementation the following option can be used: </p>
 <pre> options = DONT_INSERT_EMPTY_FRAGMENTS</pre>
 <dt><code>protocol</code> = proto</dt>
-<dd>application protocol to negotiate <font SIZE="-1">SSL</font> </dd>
-<p> This option enables initial, protocol-specific negotiation of the <font SIZE="-1">SSL/TLS</font> encryption. <i>protocol</i> option should not be used with <font SIZE="-1">SSL</font> encryption on a separate port. </p>
+<dd>application protocol to negotiate SSL </dd>
+<p> This option enables initial, protocol-specific negotiation of the SSL/TLS encryption. <i>protocol</i> option should not be used with SSL encryption on a separate port. </p>
 <p> Currently supported protocols:</p>
 <dl>
 <dd>
 </dd><dl>
 <dt><i>cifs</i></dt>
-<dd>Proprietary (undocummented) extension of <font SIZE="-1">CIFS</font> protocol implemented in Samba. Support for this extension was dropped in Samba 3.0.0.</dd>
+<dd>Proprietary (undocummented) extension of CIFS protocol implemented in Samba. Support for this extension was dropped in Samba 3.0.0.</dd>
 <dt><i>connect</i></dt>
-<dd>Based on <font SIZE="-1">RFC</font> 2817 &#8211; <i>Upgrading to </i><font SIZE="-1"><i>TLS</i></font><i> Within </i><font SIZE="-1"><i>HTTP/1</i></font><i>.1</i>, section 5.2 &#8211; <i>Requesting a Tunnel with </i><font SIZE="-1"><i>CONNECT</i></font><i></i> </dd>
+<dd>Based on RFC 2817 &#8211; <i>Upgrading to </i><i>TLS</i><i> Within </i><i>HTTP/1</i><i>.1</i>, section 5.2 &#8211; <i>Requesting a Tunnel with </i><i>CONNECT</i><i></i> </dd>
 <p> This protocol is only supported in client mode.</p>
 <dt><i>imap</i></dt>
-<dd>Based on <font SIZE="-1">RFC</font> 2595 &#8211; <i>Using </i><font SIZE="-1"><i>TLS</i></font><i> with </i><font SIZE="-1"><i>IMAP</i></font><i>, </i><font SIZE="-1"><i>POP3</i></font><i> and </i><font SIZE="-1"><i>ACAP</i></font><i></i></dd>
+<dd>Based on RFC 2595 &#8211; <i>Using </i><i>TLS</i><i> with </i><i>IMAP</i><i>, </i><i>POP3</i><i> and </i><i>ACAP</i><i></i></dd>
 <dt><i>nntp</i></dt>
-<dd>Based on <font SIZE="-1">RFC</font> 4642 &#8211; <i>Using Transport Layer Security (</i><font SIZE="-1"><i>TLS</i></font><i>) with Network News Transfer Protocol (</i><font SIZE="-1"><i>NNTP</i></font><i>)</i> </dd>
+<dd>Based on RFC 4642 &#8211; <i>Using Transport Layer Security (</i><i>TLS</i><i>) with Network News Transfer Protocol (</i><i>NNTP</i><i>)</i> </dd>
 <p> This protocol is only supported in client mode.</p>
 <dt><i>pgsql</i></dt>
 <dd>Based on <a rel="nofollow" href="http://www.postgresql.org/docs/8.3/static/protocol-flow.html#AEN73982">http://www.postgresql.org/docs/8.3/static/protocol-flow.html#AEN73982</a></dd>
 <dt><i>pop3</i></dt>
-<dd>Based on <font SIZE="-1">RFC</font> 2449 &#8211; <i></i><font SIZE="-1"><i>POP3</i></font><i> Extension Mechanism</i></dd>
+<dd>Based on RFC 2449 &#8211; <i></i><i>POP3</i><i> Extension Mechanism</i></dd>
 <dt><i>proxy</i></dt>
-<dd>Haproxy client <font SIZE="-1">IP</font> address <a rel="nofollow" href="http://haproxy.1wt.eu/download/1.5/doc/proxy-protocol.txt">http://haproxy.1wt.eu/download/1.5/doc/proxy-protocol.txt</a></dd>
+<dd>Haproxy client IP address <a rel="nofollow" href="http://haproxy.1wt.eu/download/1.5/doc/proxy-protocol.txt">http://haproxy.1wt.eu/download/1.5/doc/proxy-protocol.txt</a></dd>
 <dt><i>smtp</i></dt>
-<dd>Based on <font SIZE="-1">RFC</font> 2487 &#8211; <i></i><font SIZE="-1"><i>SMTP</i></font><i> Service Extension for Secure </i><font SIZE="-1"><i>SMTP</i></font><i> over </i><font SIZE="-1"><i>TLS</i></font><i></i></dd></dl>
+<dd>Based on RFC 2487 &#8211; <i></i><i>SMTP</i><i> Service Extension for Secure </i><i>SMTP</i><i> over </i><i>TLS</i><i></i></dd></dl>
 </dl>
 <dl>
 <dd></dd></dl>
 <dt><code>protocolAuthentication</code> = auth_type</dt>
 <dd>authentication type for protocol negotiations </dd>
-<p> currently supported: basic, <font SIZE="-1">NTLM</font> </p>
+<p> currently supported: basic, NTLM </p>
 <p> Currently authentication type only applies to the &#8216;connect&#8217; protocol. </p>
 <p> default: basic</p>
 <dt><code>protocolHost</code> = host:port</dt>
 <dd>destination address for protocol negotiations </dd>
-<p> <i>protocolHost</i> specifies the final <font SIZE="-1">SSL</font> server to be connected by the proxy, and not the proxy server directly connected by <code>stunnel</code>. The proxy server should be specified with the &#8216;connect&#8217; option. </p>
+<p> <i>protocolHost</i> specifies the final SSL server to be connected by the proxy, and not the proxy server directly connected by <code>stunnel</code>. The proxy server should be specified with the &#8216;connect&#8217; option. </p>
 <p> Currently protocol destination address only applies to &#8216;connect&#8217; protocol.</p>
 <dt><code>protocolPassword</code> = password</dt>
 <dd>password for protocol negotiations</dd>
@@ -299,14 +299,14 @@ description: "stunnel – universal SSL tunnel"
 <dt><code>pty</code> = yes | no (Unix only)</dt>
 <dd>allocate pseudo terminal for &#8216;exec&#8217; option</dd>
 <dt><code>renegotiation</code> = yes | no</dt>
-<dd>support <font SIZE="-1">SSL</font> renegotiation </dd>
-<p> Applications of the <font SIZE="-1">SSL</font> renegotiation include some authentication scenarios, or re-keying long lasting connections. </p>
+<dd>support SSL renegotiation </dd>
+<p> Applications of the SSL renegotiation include some authentication scenarios, or re-keying long lasting connections. </p>
 <p> On the other hand this feature can facilitate a trivial CPU-exhaustion DoS attack: </p>
 <p> <a rel="nofollow" href="http://vincent.bernat.im/en/blog/2011-ssl-dos-mitigation.html">http://vincent.bernat.im/en/blog/2011-ssl-dos-mitigation.html</a> </p>
-<p> Please note that disabling <font SIZE="-1">SSL</font> renegotiation does not fully mitigate this issue. </p>
+<p> Please note that disabling SSL renegotiation does not fully mitigate this issue. </p>
 <p> default: yes (if supported by <code>OpenSSL</code>)</p>
 <dt><code>reset</code> = yes | no</dt>
-<dd>attempt to use <font SIZE="-1">TCP</font> <font SIZE="-1">RST</font> flag to indicate an error </dd>
+<dd>attempt to use TCP RST flag to indicate an error </dd>
 <p> This option is not supported on some platforms. </p>
 <p> default: yes</p>
 <dt><code>retry</code> = yes | no</dt>
@@ -318,18 +318,18 @@ description: "stunnel – universal SSL tunnel"
 <p> The value of 0 can be used for unlimited size. It is not recommended for production use due to the risk of memory exhaustion DoS attack.</p>
 <dt><code>sessionCacheTimeout</code> = timeout</dt>
 <dd>session cache timeout </dd>
-<p> This is the number of seconds to keep cached <font SIZE="-1">SSL</font> sessions.</p>
+<p> This is the number of seconds to keep cached SSL sessions.</p>
 <dt><code>sessiond</code> = host:port</dt>
-<dd>address of sessiond <font SIZE="-1">SSL</font> cache server</dd>
+<dd>address of sessiond SSL cache server</dd>
 <dt><code>sslVersion</code> = version</dt>
-<dd>select version of <font SIZE="-1">SSL</font> protocol </dd>
+<dd>select version of SSL protocol </dd>
 <p> Allowed options: all, SSLv2, SSLv3, TLSv1, TLSv1.1, TLSv1.2</p>
-<dt><code>stack</code> = bytes (except for <font SIZE="-1">FORK</font> model)</dt>
+<dt><code>stack</code> = bytes (except for FORK model)</dt>
 <dd>thread stack size</dd>
 <dt><code>TIMEOUTbusy</code> = seconds</dt>
 <dd>time to wait for expected data</dd>
 <dt><code>TIMEOUTclose</code> = seconds</dt>
-<dd>time to wait for close_notify (set to 0 for buggy <font SIZE="-1">MSIE</font>)</dd>
+<dd>time to wait for close_notify (set to 0 for buggy MSIE)</dd>
 <dt><code>TIMEOUTconnect</code> = seconds</dt>
 <dd>time to wait to connect a remote host</dd>
 <dt><code>TIMEOUTidle</code> = seconds</dt>
@@ -343,7 +343,7 @@ description: "stunnel – universal SSL tunnel"
 <dt><i>none</i></dt>
 <dd>Disable transparent proxy support. This is the default.</dd>
 <dt><i>source</i></dt>
-<dd>Re-write address to appear as if wrapped daemon is connecting from the <font SIZE="-1">SSL</font> client machine instead of the machine running <code>stunnel</code>. </dd>
+<dd>Re-write address to appear as if wrapped daemon is connecting from the SSL client machine instead of the machine running <code>stunnel</code>. </dd>
 <p> This option is currently available in:</p>
 <dl>
 <dd>
@@ -365,7 +365,7 @@ description: "stunnel – universal SSL tunnel"
 <dt>Remote mode (<i>connect</i> option) on <i>FreeBSD &gt;=8.0</i></dt>
 <dd>This configuration requires additional firewall and routing setup. <code>stunnel</code> must also to be executed as root and without <i>setuid</i> option.</dd>
 <dt>Local mode (<i>exec</i> option)</dt>
-<dd>This configuration works by pre-loading <i>libstunnel.so</i> shared library. _RLD_LIST environment variable is used on Tru64, and <font SIZE="-1">LD_PRELOAD</font> variable on other platforms.</dd></dl>
+<dd>This configuration works by pre-loading <i>libstunnel.so</i> shared library. _RLD_LIST environment variable is used on Tru64, and LD_PRELOAD variable on other platforms.</dd></dl>
 </dl>
 <dl>
 <dd></dd></dl>
@@ -407,19 +407,19 @@ description: "stunnel – universal SSL tunnel"
 <dt>level 3</dt>
 <dd>Verify peer with locally installed certificate.</dd>
 <dt>level 4</dt>
-<dd>Ignore <font SIZE="-1">CA</font> chain and only verify peer certificate.</dd>
+<dd>Ignore CA chain and only verify peer certificate.</dd>
 <dt>default</dt>
 <dd>No verify.</dd></dl>
 </dl>
 <dl>
-<dd>It is important to understand, that this option was solely designed for access control and not for authorization. Specifically for level 2 every non-revoked certificate is accepted regardless of its Common Name. For this reason a dedicated <font SIZE="-1">CA</font> should be used with level 2, and not a generic <font SIZE="-1">CA</font> commonly used for webservers. Level 3 is preferred for point-to-point connections.</dd></dl>
+<dd>It is important to understand, that this option was solely designed for access control and not for authorization. Specifically for level 2 every non-revoked certificate is accepted regardless of its Common Name. For this reason a dedicated CA should be used with level 2, and not a generic CA commonly used for webservers. Level 3 is preferred for point-to-point connections.</dd></dl>
 </dl>
 <h2>Return Value</h2>
 <p><code>stunnel</code> returns zero on success, non-zero on error.</p>
 <h2>Signals</h2>
 <p>The following signals can be used to control <code>stunnel</code> in Unix environment:</p>
 <dl>
-<dt><font SIZE="-1">SIGHUP</font></dt>
+<dt>SIGHUP</dt>
 <dd>Force a reload of the configuration file. </dd>
 <p> Some global options will not be reloaded:</p>
 <dl>
@@ -439,13 +439,13 @@ description: "stunnel – universal SSL tunnel"
 <dl>
 <dd>The use of &#8216;setuid&#8217; option will also prevent <code>stunnel</code> from binding privileged (&lt;1024) ports during configuration reloading. </dd>
 <p> When &#8216;chroot&#8217; option is used, <code>stunnel</code> will look for all its files (including configuration file, certificates, log file and pid file) within the chroot jail.</dl>
-<dt><font SIZE="-1">SIGUSR1</font></dt>
+<dt>SIGUSR1</dt>
 <dd>Close and reopen <code>stunnel</code> log file. This function can be used for log rotation.</dd>
-<dt><font SIZE="-1">SIGTERM</font>, <font SIZE="-1">SIGQUIT</font>, <font SIZE="-1">SIGINT</font></dt>
+<dt>SIGTERM, SIGQUIT, SIGINT</dt>
 <dd>Shut <code>stunnel</code> down.</dd></dl>
 <p> The result of sending any other signals to the server is undefined.</p>
 <h2>Examples</h2>
-<p>In order to provide <font SIZE="-1">SSL</font> encapsulation to your local <i>imapd</i> service, use </p>
+<p>In order to provide SSL encapsulation to your local <i>imapd</i> service, use </p>
 <pre> [imapd]
  accept = 993
  exec = /usr/sbin/imapd
@@ -460,15 +460,15 @@ description: "stunnel – universal SSL tunnel"
 <pre> exec = /usr/sbin/imapd
  execargs = imapd</pre>
 <h2>Notes</h2>
-<h3><font SIZE="-1">RESTRICTIONS</font></h3>
-<p><code>stunnel</code> cannot be used for the <font SIZE="-1">FTP</font> daemon because of the nature of the <font SIZE="-1">FTP</font> protocol which utilizes multiple ports for data transfers. There are available <font SIZE="-1">SSL</font> enabled versions of <font SIZE="-1">FTP</font> and telnet daemons, however.</p>
-<h3><font SIZE="-1">INETD</font> <font SIZE="-1">MODE</font></h3>
+<h3>RESTRICTIONS</h3>
+<p><code>stunnel</code> cannot be used for the FTP daemon because of the nature of the FTP protocol which utilizes multiple ports for data transfers. There are available SSL enabled versions of FTP and telnet daemons, however.</p>
+<h3>INETD MODE</h3>
 <p>The most common use of <code>stunnel</code> is to listen on a network port and establish communication with either a new port via the connect option, or a new program via the <i>exec</i> option. However there is a special case when you wish to have some other program accept incoming connections and launch <code>stunnel</code>, for example with <i>inetd</i>, <i>xinetd</i>, or <i>tcpserver</i>. </p>
 <p> For example, if you have the following line in <i>inetd.conf</i>: </p>
 <pre> imaps stream tcp nowait root /usr/bin/stunnel stunnel /etc/stunnel/imaps.conf</pre>
-<p>In these cases, the <i>inetd</i>-style program is responsible for binding a network socket (<i>imaps</i> above) and handing it to <code>stunnel</code> when a connection is received. Thus you do not want <code>stunnel</code> to have any <i>accept</i> option. All the <i>Service Level Options</i> should be placed in the global options section, and no <i>[service_name]</i> section will be present. See the <i></i><font SIZE="-1"><i>EXAMPLES</i></font><i></i> section for example configurations.</p>
-<h3><font SIZE="-1">CERTIFICATES</font></h3>
-<p>Each <font SIZE="-1">SSL</font> enabled daemon needs to present a valid X.509 certificate to the peer. It also needs a private key to decrypt the incoming data. The easiest way to obtain a certificate and a key is to generate them with the free <code>OpenSSL</code> package. You can find more information on certificates generation on pages listed below. </p>
+<p>In these cases, the <i>inetd</i>-style program is responsible for binding a network socket (<i>imaps</i> above) and handing it to <code>stunnel</code> when a connection is received. Thus you do not want <code>stunnel</code> to have any <i>accept</i> option. All the <i>Service Level Options</i> should be placed in the global options section, and no <i>[service_name]</i> section will be present. See the <i></i><i>EXAMPLES</i><i></i> section for example configurations.</p>
+<h3>CERTIFICATES</h3>
+<p>Each SSL enabled daemon needs to present a valid X.509 certificate to the peer. It also needs a private key to decrypt the incoming data. The easiest way to obtain a certificate and a key is to generate them with the free <code>OpenSSL</code> package. You can find more information on certificates generation on pages listed below. </p>
 <p> The order of contents of the <i>.pem</i> file is important. It should contain the unencrypted private key first, then a signed certificate (not certificate request). There should be also empty lines after certificate and private key. Plaintext certificate information appended on the top of generated certificate should be discarded. So the file should look like this: </p>
 <pre> -----BEGIN RSA PRIVATE KEY-----
  [encoded key]
@@ -478,34 +478,34 @@ description: "stunnel – universal SSL tunnel"
  [encoded certificate]
  -----END CERTIFICATE-----
  [empty line]</pre>
-<h3><font SIZE="-1">RANDOMNESS</font></h3>
-<p><code>stunnel</code> needs to seed the <font SIZE="-1">PRNG</font> (pseudo random number generator) in order for <font SIZE="-1">SSL</font> to use good randomness. The following sources are loaded in order until sufficient random data has been gathered:</p>
+<h3>RANDOMNESS</h3>
+<p><code>stunnel</code> needs to seed the PRNG (pseudo random number generator) in order for SSL to use good randomness. The following sources are loaded in order until sufficient random data has been gathered:</p>
 <dl>
 <dt>&bull;</dt>
 <dd>The file specified with the <i>RNDfile</i> flag.</dd>
 <dt>&bull;</dt>
-<dd>The file specified by the <font SIZE="-1">RANDFILE</font> environment variable, if set.</dd>
+<dd>The file specified by the RANDFILE environment variable, if set.</dd>
 <dt>&bull;</dt>
-<dd>The file .rnd in your home directory, if <font SIZE="-1">RANDFILE</font> not set.</dd>
+<dd>The file .rnd in your home directory, if RANDFILE not set.</dd>
 <dt>&bull;</dt>
 <dd>The file specified with &#8216;&#8211;with-random&#8217; at compile time.</dd>
 <dt>&bull;</dt>
 <dd>The contents of the screen if running on Windows.</dd>
 <dt>&bull;</dt>
-<dd>The egd socket specified with the <i></i><font SIZE="-1"><i>EGD</i></font><i></i> flag.</dd>
+<dd>The egd socket specified with the <i></i><i>EGD</i><i></i> flag.</dd>
 <dt>&bull;</dt>
 <dd>The egd socket specified with &#8216;&#8211;with-egd-sock&#8217; at compile time.</dd>
 <dt>&bull;</dt>
 <dd>The /dev/urandom device.</dd></dl>
-<p> With recent (<code>OpenSSL 0.9.5a</code> or later) version of <font SIZE="-1">SSL</font> it will stop loading random data automatically when sufficient entropy has been gathered. With previous versions it will continue to gather from all the above sources since no <font SIZE="-1">SSL</font> function exists to tell when enough data is available. </p>
+<p> With recent (<code>OpenSSL 0.9.5a</code> or later) version of SSL it will stop loading random data automatically when sufficient entropy has been gathered. With previous versions it will continue to gather from all the above sources since no SSL function exists to tell when enough data is available. </p>
 <p> Note that on Windows machines that do not have console user interaction (mouse movements, creating windows, etc.) the screen contents are not variable enough to be sufficient, and you should provide a random file for use with the <i>RNDfile</i> flag. </p>
 <p> Note that the file specified with the <i>RNDfile</i> flag should contain random data &#8212; that means it should contain different information each time <code>stunnel</code> is run. This is handled automatically unless the <i>RNDoverwrite</i> flag is used. If you wish to update this file manually, the <i>openssl rand</i> command in recent versions of <code>OpenSSL</code>, would be useful. </p>
-<p> Important note: If /dev/urandom is available, <code>OpenSSL</code> often seeds the <font SIZE="-1">PRNG</font> with it while checking the random state. On systems with /dev/urandom <code>OpenSSL</code> is likely to use it even though it is listed at the very bottom of the list above. This is the behaviour of <code>OpenSSL</code> and not <code>stunnel</code>.</p>
-<h3><font SIZE="-1">DH</font> <font SIZE="-1">PARAMETERS</font></h3>
-<p>Stunnel 4.40 and later contains hardcoded 2048-bit <font SIZE="-1">DH</font> parameters. </p>
-<p> It is also possible to specify <font SIZE="-1">DH</font> parameters in the certificate file: </p>
+<p> Important note: If /dev/urandom is available, <code>OpenSSL</code> often seeds the PRNG with it while checking the random state. On systems with /dev/urandom <code>OpenSSL</code> is likely to use it even though it is listed at the very bottom of the list above. This is the behaviour of <code>OpenSSL</code> and not <code>stunnel</code>.</p>
+<h3>DH PARAMETERS</h3>
+<p>Stunnel 4.40 and later contains hardcoded 2048-bit DH parameters. </p>
+<p> It is also possible to specify DH parameters in the certificate file: </p>
 <pre> openssl dhparam 2048 &gt;&gt; stunnel.pem</pre>
-<p><font SIZE="-1">DH</font> parameter generation may take several minutes.</p>
+<p>DH parameter generation may take several minutes.</p>
 <h2>Files</h2>
 <dl>
 <dt><i>stunnel.conf</i></dt>

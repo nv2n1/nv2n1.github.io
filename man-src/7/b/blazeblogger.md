@@ -18,7 +18,7 @@ description: "BlazeBlogger – a CMS without boundaries"
 <p> <code>blaze-make</code> [<code>-cpqrtIFPV</code>] [<code>-b</code> <i>directory</i>] [<code>-d</code> <i>directory</i>] </p>
 <p> <code>blaze-log</code> [<code>-cqrsCV</code>] [<code>-b</code> <i>directory</i>] [<code>-n</code> <i>number</i>]</p>
 <h2>Description</h2>
-<p><code>BlazeBlogger</code> is a simple to use but capable <font SIZE="-1">CMS</font> for the command line. Being written in Perl as a cross-platform application and producing the static content without the need of database servers or server side scripting, it is literally a <font SIZE="-1">CMS</font> without boundaries suitable for a wide variety of web presentations, from personal weblog to a project page or even a company presentation.</p>
+<p><code>BlazeBlogger</code> is a simple to use but capable CMS for the command line. Being written in Perl as a cross-platform application and producing the static content without the need of database servers or server side scripting, it is literally a CMS without boundaries suitable for a wide variety of web presentations, from personal weblog to a project page or even a company presentation.</p>
 <h2>See Also</h2>
 <dl>
 <dt><code><a href="/docs/linux/man/7-blazeintro/">blazeintro</a></code>(7)</dt>
@@ -45,8 +45,8 @@ description: "BlazeBlogger – a CMS without boundaries"
 <p>To report bug or even send patch, either add new issue to the project bugtracker at &lt;<a rel="nofollow" href="http://code.google.com/p/blazeblogger/issues/">http://code.google.com/p/blazeblogger/issues/</a>&gt;, or visit the discussion group at &lt;<a rel="nofollow" href="http://groups.google.com/group/blazeblogger/">http://groups.google.com/group/blazeblogger/</a>&gt;. You can also contact the author directly via e-mail.</p>
 <h2>Author</h2>
 <p>Written by Jaromir Hradilek &lt;jhradilek [at] gmail.com&gt; </p>
-<p> Permission is granted to copy, distribute and/or modify this document under the terms of the <font SIZE="-1">GNU</font> Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. </p>
-<p> A copy of the license is included as a file called <font SIZE="-1">FDL</font> in the main directory of the BlazeBlogger source package.</p>
+<p> Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. </p>
+<p> A copy of the license is included as a file called FDL in the main directory of the BlazeBlogger source package.</p>
 <h2>Copyright</h2>
 <p>Copyright (C) 2008, 2009 Jaromir Hradilek </p>
-<p> This program is free software; see the source for copying conditions. It is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT</font> <font SIZE="-1">ANY</font> <font SIZE="-1">WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS</font> <font SIZE="-1">FOR</font> A <font SIZE="-1">PARTICULAR</font> <font SIZE="-1">PURPOSE</font>.</p>
+<p> This program is free software; see the source for copying conditions. It is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>

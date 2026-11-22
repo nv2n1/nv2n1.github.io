@@ -10,7 +10,7 @@ description: "slanv2.f –"
 <p>slanv2.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>slanv2</code> (A, B, C, D, RT1R, RT1I, RT2R, RT2I, CS, SN)<br />
+<p>subroutine <code>slanv2</code> (A, B, C, D, RT1R, RT1I, RT2R, RT2I, CS, SN)<br/>
  <i></i><code>SLANV2</code> computes the Schur factorization of a real 2-by-2 nonsymmetric matrix in standard form.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slanv2 (realA, realB, realC, realD, realRT1R, realRT1I, realRT2R, realRT2I, realCS, realSN)</h3>

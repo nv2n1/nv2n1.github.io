@@ -83,7 +83,7 @@ description: "hpsa – HP Smart Array SCSI driver"
 <dd>Returns PCI domain, bus, device and function and &quot;board ID&quot; (PCI subsystem ID).</dd>
 <dt><code>CCISS_GETDRIVVER</code></dt>
 <dd>Returns driver version in three bytes encoded as:</dd>
-<dd>(major_version &lt;&lt; 16) | (minor_version &lt;&lt; 8) |<br />
+<dd>(major_version &lt;&lt; 16) | (minor_version &lt;&lt; 8) |<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(subminor_version)</dd>
 <dt><code>CCISS_PASSTHRU</code>, <code>CCISS_BIG_PASSTHRU</code></dt>
 <dd>Allows &quot;BMIC&quot; and &quot;CISS&quot; commands to be passed through to the Smart Array. These are used extensively by the HP Array Configuration Utility, SNMP storage agents, and so on. See <i>cciss_vol_status</i> at for some examples.</dd></dl>

@@ -25,7 +25,7 @@ description: "ndbd_redo_log_reader – check and print content of cluster redo l
 ndbd_redo_log_reader <i>file_name</i> [<i>options</i>]
 </pre>
 </dd></dl>
-<p> <i>file_name</i> is the name of a cluster REDO log file. REDO log files are located in the numbered directories under the data node&#8217;s data directory (DataDir); the path under this directory to the REDO log files matches the pattern ndb_<i>#</i>_fs/D<i>#</i>/LCP/<i>#</i>/T<i>#</i>F<i>#</i>.Data. In each case, the <i>#</i> represents a number (not necessarily the same number). For more information, see m[blue]<code>Cluster Data Node FileSystemDir Files</code>m[]<font SIZE="-2">[1]</font>. </p>
+<p> <i>file_name</i> is the name of a cluster REDO log file. REDO log files are located in the numbered directories under the data node&#8217;s data directory (DataDir); the path under this directory to the REDO log files matches the pattern ndb_<i>#</i>_fs/D<i>#</i>/LCP/<i>#</i>/T<i>#</i>F<i>#</i>.Data. In each case, the <i>#</i> represents a number (not necessarily the same number). For more information, see m[blue]<code>Cluster Data Node FileSystemDir Files</code>m[][1]. </p>
 <p> The name of the file to be read may be followed by one or more of the options listed here: </p>
 <dl>
 <dt>

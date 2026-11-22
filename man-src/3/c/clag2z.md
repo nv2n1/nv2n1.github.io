@@ -11,7 +11,7 @@ description: "clag2z.f –"
 <p> clag2z.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>clag2z</code> (M, N, SA, LDSA, A, LDA, INFO)<br />
+<p> subroutine <code>clag2z</code> (M, N, SA, LDSA, A, LDA, INFO)<br/>
  <i></i><code>CLAG2Z</code> converts a complex single precision matrix to a complex double precision matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine clag2z (integerM, integerN, complex, dimension( ldsa, * )SA, integerLDSA, complex*16, dimension( lda, * )A, integerLDA, integerINFO)</h3>

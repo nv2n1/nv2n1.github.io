@@ -43,5 +43,5 @@ description: "t1asm – assemble PostScript Type 1 font"
 <p> <i>Adobe Type 1 Font Format</i> is available free from Adobe as a PDF file. <a rel="nofollow" href="http://partners.adobe.com/asn/developer/PDFS/TN/T1_SPEC.PDF">http://partners.adobe.com/asn/developer/PDFS/TN/T1_SPEC.PDF</a> </p>
 <p> <i>The Type 2 Charstring Format,</i> also available from Adobe as a PDF file, describes the newer Type 2 operators, which are also used in some multiple-master Type 1 fonts like Adobe Jenson and Kepler. <a rel="nofollow" href="http://partners.adobe.com/asn/developer/PDFS/TN/5177.Type2.pdf">http://partners.adobe.com/asn/developer/PDFS/TN/5177.Type2.pdf</a></p>
 <h2>AUTHORS</h2>
-<p> Lee Hetherington (ilh [at] lcs.mit.edu)<br />
+<p> Lee Hetherington (ilh [at] lcs.mit.edu)<br/>
  Eddie Kohler (ekohler [at] gmail.com) </p>

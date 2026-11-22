@@ -15,47 +15,47 @@ description: "QwtPlotMarker –"
 <h3>Public Types</h3>
 <p>enum <code>LineStyle</code> { <code>NoLine</code>, <code>HLine</code>, <code>VLine</code>, <code>Cross</code> } </p>
 <h3>Public Member Functions</h3>
-<p><code>QwtPlotMarker</code> (const QString &amp;<code>title</code>=QString::null)<br />
- <i>Sets alignment to Qt::AlignCenter, and style to </i><code>QwtPlotMarker::NoLine</code>.<br />
- <code>QwtPlotMarker</code> (const <code>QwtText</code> &amp;<code>title</code>)<br />
- <i>Sets alignment to Qt::AlignCenter, and style to </i><code>QwtPlotMarker::NoLine</code>.<br />
- virtual <code>~QwtPlotMarker</code> ()<br />
- <i>Destructor. </i><br />
+<p><code>QwtPlotMarker</code> (const QString &amp;<code>title</code>=QString::null)<br/>
+ <i>Sets alignment to Qt::AlignCenter, and style to </i><code>QwtPlotMarker::NoLine</code>.<br/>
+ <code>QwtPlotMarker</code> (const <code>QwtText</code> &amp;<code>title</code>)<br/>
+ <i>Sets alignment to Qt::AlignCenter, and style to </i><code>QwtPlotMarker::NoLine</code>.<br/>
+ virtual <code>~QwtPlotMarker</code> ()<br/>
+ <i>Destructor. </i><br/>
  virtual int <code>rtti</code> () const </p>
-<p> double <code>xValue</code> () const<br />
- <i>Return x Value. </i><br />
- double <code>yValue</code> () const<br />
- <i>Return y Value. </i><br />
- QPointF <code>value</code> () const<br />
- <i>Return Value. </i><br />
- void <code>setXValue</code> (double)<br />
- <i>Set X Value. </i><br />
- void <code>setYValue</code> (double)<br />
- <i>Set Y Value. </i><br />
- void <code>setValue</code> (double, double)<br />
- <i>Set Value. </i><br />
- void <code>setValue</code> (const QPointF &amp;)<br />
- <i>Set Value. </i><br />
- void <code>setLineStyle</code> (<code>LineStyle</code> st)<br />
- <i>Set the line style. </i><br />
+<p> double <code>xValue</code> () const<br/>
+ <i>Return x Value. </i><br/>
+ double <code>yValue</code> () const<br/>
+ <i>Return y Value. </i><br/>
+ QPointF <code>value</code> () const<br/>
+ <i>Return Value. </i><br/>
+ void <code>setXValue</code> (double)<br/>
+ <i>Set X Value. </i><br/>
+ void <code>setYValue</code> (double)<br/>
+ <i>Set Y Value. </i><br/>
+ void <code>setValue</code> (double, double)<br/>
+ <i>Set Value. </i><br/>
+ void <code>setValue</code> (const QPointF &amp;)<br/>
+ <i>Set Value. </i><br/>
+ void <code>setLineStyle</code> (<code>LineStyle</code> st)<br/>
+ <i>Set the line style. </i><br/>
  <code>LineStyle</code> <code>lineStyle</code> () const </p>
 <p> void <code>setLinePen</code> (const QColor &amp;, qreal width=0.0, Qt::PenStyle=Qt::SolidLine) </p>
 <p> void <code>setLinePen</code> (const QPen &amp;p) </p>
 <p> const QPen &amp; <code>linePen</code> () const </p>
-<p> void <code>setSymbol</code> (const <code>QwtSymbol</code> *)<br />
- <i>Assign a symbol. </i><br />
+<p> void <code>setSymbol</code> (const <code>QwtSymbol</code> *)<br/>
+ <i>Assign a symbol. </i><br/>
  const <code>QwtSymbol</code> * <code>symbol</code> () const </p>
-<p> void <code>setLabel</code> (const <code>QwtText</code> &amp;)<br />
- <i>Set the label. </i><br />
+<p> void <code>setLabel</code> (const <code>QwtText</code> &amp;)<br/>
+ <i>Set the label. </i><br/>
  <code>QwtText</code> <code>label</code> () const </p>
-<p> void <code>setLabelAlignment</code> (Qt::Alignment)<br />
- <i>Set the alignment of the label. </i><br />
+<p> void <code>setLabelAlignment</code> (Qt::Alignment)<br/>
+ <i>Set the alignment of the label. </i><br/>
  Qt::Alignment <code>labelAlignment</code> () const </p>
-<p> void <code>setLabelOrientation</code> (Qt::Orientation)<br />
- <i>Set the orientation of the label. </i><br />
+<p> void <code>setLabelOrientation</code> (Qt::Orientation)<br/>
+ <i>Set the orientation of the label. </i><br/>
  Qt::Orientation <code>labelOrientation</code> () const </p>
-<p> void <code>setSpacing</code> (int)<br />
- <i>Set the spacing. </i><br />
+<p> void <code>setSpacing</code> (int)<br/>
+ <i>Set the spacing. </i><br/>
  int <code>spacing</code> () const </p>
 <p> virtual void <code>draw</code> (QPainter *p, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;) const </p>
 <p> virtual QRectF <code>boundingRect</code> () const </p>
@@ -100,17 +100,17 @@ description: "QwtPlotMarker –"
 <p>Draw the marker </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>xMap</i> x Scale Map<br />
- <i>yMap</i> y Scale Map<br />
+<dd><i>painter</i> Painter<br/>
+ <i>xMap</i> x Scale Map<br/>
+ <i>yMap</i> y Scale Map<br/>
  <i>canvasRect</i> Contents rectangle of the canvas in painter coordinates</dd></dl>
 <p> Implements <code>QwtPlotItem</code>.</p>
 <h3>void QwtPlotMarker::drawLabel (QPainter *painter, const QRectF &amp;canvasRect, const QPointF &amp;pos) const [protected], [virtual]</h3>
 <p>Align and draw the text label of the marker </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>canvasRect</i> Contents rectangle of the canvas in painter coordinates<br />
+<dd><i>painter</i> Painter<br/>
+ <i>canvasRect</i> Contents rectangle of the canvas in painter coordinates<br/>
  <i>pos</i> Position of the marker, translated into widget coordinates</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -119,8 +119,8 @@ description: "QwtPlotMarker –"
 <p>Draw the lines marker </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>canvasRect</i> Contents rectangle of the canvas in painter coordinates<br />
+<dd><i>painter</i> Painter<br/>
+ <i>canvasRect</i> Contents rectangle of the canvas in painter coordinates<br/>
  <i>pos</i> Position of the marker, translated into widget coordinates</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -152,7 +152,7 @@ description: "QwtPlotMarker –"
 <dd>Icon representing the marker on the legend</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>index</i> Index of the legend entry ( usually there is only one )<br />
+<dd><i>index</i> Index of the legend entry ( usually there is only one )<br/>
  <i>size</i> Icon size</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -207,8 +207,8 @@ description: "QwtPlotMarker –"
 <p> In Qt5 the default pen width is 1.0 ( 0.0 in Qt4 ) what makes it non cosmetic ( see QPen::isCosmetic() ). This method has been introduced to hide this incompatibility. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>color</i> Pen color<br />
- <i>width</i> Pen width<br />
+<dd><i>color</i> Pen color<br/>
+ <i>width</i> Pen width<br/>
  <i>style</i> Pen style</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>

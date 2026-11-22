@@ -58,14 +58,14 @@ description: "ctags – Generate tag files for source code"
 </dt><dd> In the above example, the macro &quot;ARGDECL4&quot; would be mistakenly interpreted to be the name of the function instead of the correct name of &quot;foo&quot;. Specifying <code>-I</code> <i>ARGDECL4</i> results in the correct behavior. </dd>
 <dl>
 <dt>
-</dt><dd> /* creates an RCS version string in module */<br />
+</dt><dd> /* creates an RCS version string in module */<br/>
  MODULE_VERSION(&quot;$Revision: 750 $&quot;)</dd></dl>
 <dt>
 </dt><dd> In the above example the macro invocation looks too much like a function definition because it is not followed by a semicolon (indeed, it could even be followed by a global variable definition that would look much like a K&amp;R style function parameter declaration). In fact, this seeming function definition could possibly even cause the rest of the file to be skipped over while trying to complete the definition. Specifying <code>-I</code> <i>MODULE_VERSION+</i> would avoid such a problem. </dd>
 <dl>
 <dt>
 </dt><dd> CLASS Example { </dd>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;//&nbsp;your content here<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;//&nbsp;your content here<br/>
  };</dl>
 <dt>
 </dt><dd> The example above uses &quot;CLASS&quot; as a preprocessor macro which expands to something different for each platform. For instance CLASS may be defined as &quot;class __declspec(dllexport)&quot; on Win32 platforms and simply &quot;class&quot; on UNIX. Normally, the absence of the C++ keyword &quot;class&quot; would cause the source file to be incorrectly parsed. Correct behavior can be restored by specifying <code>-I</code> <i>CLASS=class</i>. </dd>
@@ -239,14 +239,14 @@ description: "ctags – Generate tag files for source code"
 <p> In general, <code>ctags</code> tries to be smart about conditional preprocessor directives. If a preprocessor conditional is encountered within a statement which defines a tag, <code>ctags</code> follows only the first branch of that conditional (except in the special case of &quot;#if 0&quot;, in which case it follows only the last branch). The reason for this is that failing to pursue only one branch can result in ambiguous syntax, as in the following example: </p>
 <dl>
 <dt>
-</dt><dd> #ifdef TWO_ALTERNATIVES<br />
- struct {<br />
- #else<br />
- union {<br />
+</dt><dd> #ifdef TWO_ALTERNATIVES<br/>
+ struct {<br/>
+ #else<br/>
+ union {<br/>
  #endif</dd>
 <dl>
 <dt>
-</dt><dd> short a;<br />
+</dt><dd> short a;<br/>
  long b;</dd></dl>
 <p> }</dl>
 <p> Both branches cannot be followed, or braces become unbalanced and <code>ctags</code> would be unable to make sense of the syntax. </p>
@@ -328,9 +328,9 @@ description: "ctags – Generate tag files for source code"
 <dl>
 <dt>
 </dt><dd> int variable; </dd>
-<p> /* &#8230; */<br />
- void foo(variable)<br />
- int variable;<br />
+<p> /* &#8230; */<br/>
+ void foo(variable)<br/>
+ int variable;<br/>
  {</p>
 <dl>
 <dt>
@@ -351,12 +351,12 @@ description: "ctags – Generate tag files for source code"
 <dd> On Unix-like hosts where mkstemp() is available, the value of this variable specifies the directory in which to place temporary files. This can be useful if the size of a temporary file becomes too large to fit on the partition holding the default temporary directory defined at compilation time. <code>ctags</code> creates temporary files only if either (1) an emacs-style tag file is being generated, (2) the tag file is being sent to standard output, or (3) the program was compiled to use an internal sort algorithm to sort the tag files instead of the the sort utility of the operating system. If the sort utility of the operating system is being used, it will generally observe this variable also. Note that if <code>ctags</code> is setuid, the value of TMPDIR will be ignored. </dd>
 </dl>
 <h2>FILES</h2>
-<p> <i>/ctags.cnf (on MSDOS, MSWindows only)</i><br />
- <i>/etc/ctags.conf</i><br />
- <i>/usr/local/etc/ctags.conf</i><br />
- <i>$HOME/.ctags</i><br />
- <i>$HOME/ctags.cnf (on MSDOS, MSWindows only)</i><br />
- <i>.ctags</i><br />
+<p> <i>/ctags.cnf (on MSDOS, MSWindows only)</i><br/>
+ <i>/etc/ctags.conf</i><br/>
+ <i>/usr/local/etc/ctags.conf</i><br/>
+ <i>$HOME/.ctags</i><br/>
+ <i>$HOME/ctags.cnf (on MSDOS, MSWindows only)</i><br/>
+ <i>.ctags</i><br/>
  <i>ctags.cnf (on MSDOS, MSWindows only)</i></p>
 <dl>
 <dt>
@@ -376,7 +376,7 @@ description: "ctags – Generate tag files for source code"
 <dt>
 </dt><dd> <a rel="nofollow" href="http://www.vim.org/">http://www.vim.org/</a></dd></dl>
 <h2>AUTHOR</h2>
-<p> Darren Hiebert &lt;dhiebert at users.sourceforge.net&gt;<br />
+<p> Darren Hiebert &lt;dhiebert at users.sourceforge.net&gt;<br/>
  <a rel="nofollow" href="http://DarrenHiebert.com/">http://DarrenHiebert.com/</a> </p>
 <h2>MOTIVATION</h2>
 <p> &quot;Think ye at all times of rendering some service to every member of the human race.&quot; </p>

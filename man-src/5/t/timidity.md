@@ -9,34 +9,34 @@ description: "timidity.cfg – configure file of TiMidity++"
 
 <p>timidity.cfg &#8211; configure file of TiMidity++</p>
 <h2>Description</h2>
-<p>The file <code>timidity.cfg</code> describes the runtime environments of <a href="/docs/linux/man/1-timidity/">timidity</a>(1): that are the path of sound font, instruments configurations, etc.<br />
- <code>TiMidity++</code> looks for the configuration file <code>timidity.cfg</code> at startup, before processing any options. If it can&#8217;t be accessed, and the library path is changed with a <code>-L</code> option on the command line, then the default file will be sought again along the new library path after processing all options, unless another configuration file was specified with the <code>-c</code> option.<br />
+<p>The file <code>timidity.cfg</code> describes the runtime environments of <a href="/docs/linux/man/1-timidity/">timidity</a>(1): that are the path of sound font, instruments configurations, etc.<br/>
+ <code>TiMidity++</code> looks for the configuration file <code>timidity.cfg</code> at startup, before processing any options. If it can&#8217;t be accessed, and the library path is changed with a <code>-L</code> option on the command line, then the default file will be sought again along the new library path after processing all options, unless another configuration file was specified with the <code>-c</code> option.<br/>
  Configuration files define the mapping of MIDI programs to instrument files. Multiple files may be specified, and statements in later ones will override earlier ones.</p>
 <h2>Variable</h2>
 <p>When alphanumeric and/or underscore `_&#8217; characters continue after dollar sign `$&#8217;, it is considered that the string is a variable and the configuration file is processed, it is transposed to another string. The variable name can also be written with an inside parenthesis, in order to separate from a following character. </p>
-<p> For example:<br />
- $variable<br />
+<p> For example:<br/>
+ $variable<br/>
  ${variable} # same as $variable </p>
-<p> For the moment, the command which newly defines variables is not prepared. The undefined variable is transposed to null string.<br />
+<p> For the moment, the command which newly defines variables is not prepared. The undefined variable is transposed to null string.<br/>
  The variable defined as a regular variable is the next only one.</p>
 <dl>
 <dt><code>$basedir</code></dt>
-<dd>Expresses the directory where the configuration file exists. By the command which mainly specifies a path, it uses in order to specify the relative path from a setting file.<br />
+<dd>Expresses the directory where the configuration file exists. By the command which mainly specifies a path, it uses in order to specify the relative path from a setting file.<br/>
  When a blank may be included in $basedir, it is necessary to bundle with &quot;&quot;. </dd>
-<p> For example:<br />
- In /usr/local/share/timidity/timidity.cfg<br />
+<p> For example:<br/>
+ In /usr/local/share/timidity/timidity.cfg<br/>
  dir $basedir/inst # source /usr/local/share/timidity/inst</dl>
 <h2>Syntax</h2>
 <p>The following statements can be used in a configuration file:</p>
 <dl>
 <dt><code>dir </code><i>directory [&#8230;]</i></dt>
-<dd>Adds <i>directory</i> to the search path in the same manner as the <code>-L</code> command line option.<br />
+<dd>Adds <i>directory</i> to the search path in the same manner as the <code>-L</code> command line option.<br/>
  Archive file are also allowed. </dd>
-<p> For example:<br />
- dir /usr/local/share/timidity/inst/foo.zip#<br />
- bank 0<br />
- 0 bar.pat<br />
- 1 baz.pat<br />
+<p> For example:<br/>
+ dir /usr/local/share/timidity/inst/foo.zip#<br/>
+ bank 0<br/>
+ 0 bar.pat<br/>
+ 1 baz.pat<br/>
  2 zoo.pat </p>
 <p> At first, <code>dir</code> specifies the archive name (followed by `#&#8217;) for the path of patch files same as directory name (in this case, /usr/local/share/timidity/inst/foo.zip). <code>TiMidity++</code> recognize the path is an archive file if the expression has the last character `#&#8217;, and also read the files contained in this archive file. In previous example the patch files bar.pat, baz.pat and zoo.pat contained in the foo.zip are also installed.</p>
 <dt><code>source </code><i>file [&#8230;]</i></dt>
@@ -147,7 +147,7 @@ description: "timidity.cfg – configure file of TiMidity++"
 <dl>
 <dt><code>#extension altassign </code><i>program1 program2 &#8230;</i></dt>
 <dd>Sets the alternate assign for drum set. For example, if you want to pronounce Hi-Hat cymbals (note number <code>42</code>, <code>44</code> and <code>46</code>) in the <code>drumset 0</code> exclusively to each others, specify: </dd>
-<p> drumset 0<br />
+<p> drumset 0<br/>
  altassign 42 44 46 </p>
 <p> Note that alternate assign of <code>drumset 0</code> is used by default.</p>
 <dt><code>#extension comm </code><i>program comment</i></dt>
@@ -178,8 +178,8 @@ description: "timidity.cfg – configure file of TiMidity++"
 <dd>Specifies whether redamper and half-damper are enable (<code>1</code>) or disable (<code>0</code>) on <i>progno</i>.</dd>
 <dt><code>#extension playnote </code><i>progno note</i></dt>
 <dd>Sets the frequency of pronounce to <code>note</code>. If the frequency of pronounce is specified by GS SysEx Play Note, the pitch is changed appropriately according to the value. <i>progno</i> can carry out package specification by `,&#8217; and/or [<i>start</i>]-[<i>end</i>]. If start and end are omitted, they are assumed to be <code>0</code> and <code>127</code> respectively. </dd>
-<p> For example:<br />
- drumset 0<br />
+<p> For example:<br/>
+ drumset 0<br/>
  #extension playnote -37,39,44-46,55-60</p>
 <dt><code>#extension delaysend </code><i>progno level</i></dt>
 <dd>
@@ -189,9 +189,9 @@ description: "timidity.cfg – configure file of TiMidity++"
 <dd>Sets the send level when drum part effect is enable. All initial value are <code>127</code>. If one of delay, chorus and reverb is at least set up, the effect which is not set as the tone will become the initial value <code>0</code>. <i>progno</i> can carry out package specification by `,&#8217; and/or [<i>start</i>]-[<i>end</i>]. If start and end are omitted, they are assumed to be <code>0</code> and <code>127</code> respectively.</dd>
 <dt><code>#extension rnddelay </code><i>progno msec</i></dt>
 <dd>For every pronunciation, it is random and less than a maximum of <i>msec</i> delay. The distribution of random value is pink noise (1/f fluctuation) rather than a white noise.</dd></dl>
-<p> These <code>#extension</code> statements are beginning with character `#&#8217; that is the comment flag of old TiMidity (version 0.2i or earlier). So these statements are treated as comment line.<br />
+<p> These <code>#extension</code> statements are beginning with character `#&#8217; that is the comment flag of old TiMidity (version 0.2i or earlier). So these statements are treated as comment line.<br/>
  The latest <code>TiMidity++</code> treats <code>#extension</code> as white-space. So you can omit it. </p>
-<p> If any file-name expression ended with character `|&#8217; (Ascii 0x7c), the file-name is treated as command and outputs of the command are also examined as arguments of statements.<br />
+<p> If any file-name expression ended with character `|&#8217; (Ascii 0x7c), the file-name is treated as command and outputs of the command are also examined as arguments of statements.<br/>
  <code>source</code> <i>command</i>| causes the output of <i>command</i> becomes the argument of <code>source</code>. It is convenient to choose settings of <code>TiMidity++</code> according to environment. In addition, if a space enters on the way like <i>command</i> |, it will be divided at the time of setting file reading, and will no longer be regarded as a command. This function is applicable to all the places that can specify a file name. </p>
 <dl>
 <dd>timidity &#8216;cat fild.mid|&#8217;</dd></dl>
@@ -203,7 +203,7 @@ description: "timidity.cfg – configure file of TiMidity++"
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/1-timidity/">timidity</a>(1), lsmidiprog(1), mididump(1), patinfo(1), sf2text(1), wav2pat(1)</p>
 <h2>Copyright</h2>
-<p>Copyright (C) 1999-2004 Masanao Izumo &lt;iz [at] onicos.co.jp&gt;<br />
+<p>Copyright (C) 1999-2004 Masanao Izumo &lt;iz [at] onicos.co.jp&gt;<br/>
  Copyright (C) 1995 Tuukka Toivonen &lt;tt [at] cgs.fi&gt; </p>
 <p> The original version was developed by Tuukka Toivonen &lt;tt [at] cgs.fi&gt; until the release of TiMidity-0.2i. His development was discontinued because of his being busy with work. </p>
 <p> This program is free software; you can redistribute it and/or modify it under the terms of the <i>GNU General Public License</i> as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>

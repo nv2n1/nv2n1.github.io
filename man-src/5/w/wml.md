@@ -82,17 +82,17 @@ NewString;</code></pre>
 <dd>Specifies the direction in which an input string is parsed when a compound string segment is created using this character set. The default is whatever <code>Direction</code> is specified.</dd>
 <dt><code>CharacterSize</code></dt>
 <dd>Specifies the number of bytes in each character of a compound string segment created using this character set. The default is <code>OneByte</code>.</dd></dl>
-<p> For example: CharacterSet<br />
-iso_latin1<br />
-{ XmStringCharsetName = &quot;ISO8859-1&quot;;<br />
-    Alias = &quot;ISOLatin1&quot;; };<br />
-iso_hebrew_lr<br />
-{ XmStringCharsetName = &quot;ISO8859-8&quot;;<br />
-    Alias = &quot;iso_latin8_lr&quot;;<br />
-    Direction = RightToLeft;<br />
-    ParseDirection = LeftToRight; };<br />
-ksc_korean<br />
-{ XmStringCharsetName = &quot;KSC5601.1987-0&quot;;<br />
+<p> For example: CharacterSet<br/>
+iso_latin1<br/>
+{ XmStringCharsetName = &quot;ISO8859-1&quot;;<br/>
+    Alias = &quot;ISOLatin1&quot;; };<br/>
+iso_hebrew_lr<br/>
+{ XmStringCharsetName = &quot;ISO8859-8&quot;;<br/>
+    Alias = &quot;iso_latin8_lr&quot;;<br/>
+    Direction = RightToLeft;<br/>
+    ParseDirection = LeftToRight; };<br/>
+ksc_korean<br/>
+{ XmStringCharsetName = &quot;KSC5601.1987-0&quot;;<br/>
     CharacterSize = TwoByte; };</p>
 <h3>Enumeration Set Definitions</h3>
 <p>Enumeration set definitions register the named constants used in the Motif Toolkit to specify some resource values. Enumeration set definitions have the following syntax: </p>
@@ -117,25 +117,25 @@ ksc_korean<br />
  NewCascadebutton;};</tt></pre>
 <p>Each control specified in the control list must be defined as a class in the file.</p>
 <h3>Class Definitions</h3>
-<p>Class definitions describe a particular widget class including its position in the class hierarchy, toolkit convenience function, resources, and controls. There should be one class definition for each widget or gadget in the widget set you want to support in UIL. Class definitions have the following syntax: Class class.name: MetaClass | Widget | Gadget<br />
-[{[<br />
-    SuperClass = class.name; |<br />
-    ParentClass = parent.class.name; |<br />
-    InternalLiteral = internal.name; |<br />
-    Alias = alias; |<br />
-    ConvenienceFunction = convenience.function; |<br />
-    WidgetClass = widget.class; |<br />
-    DocName = &quot;string&quot;; |<br />
-    DialogClass = True | False; |<br />
-    Resources { any.resource.name [{<br />
-        Default = new.default.value; |<br />
-        Exclude = True |<br />
-        False;<br />
-        [&#8230;]} ];<br />
-    [&#8230;]}; |<br />
-Controls { any.control.name; [&#8230;]};<br />
-Children { any.child.name; [&#8230;] };<br />
-[&#8230;]<br />
+<p>Class definitions describe a particular widget class including its position in the class hierarchy, toolkit convenience function, resources, and controls. There should be one class definition for each widget or gadget in the widget set you want to support in UIL. Class definitions have the following syntax: Class class.name: MetaClass | Widget | Gadget<br/>
+[{[<br/>
+    SuperClass = class.name; |<br/>
+    ParentClass = parent.class.name; |<br/>
+    InternalLiteral = internal.name; |<br/>
+    Alias = alias; |<br/>
+    ConvenienceFunction = convenience.function; |<br/>
+    WidgetClass = widget.class; |<br/>
+    DocName = &quot;string&quot;; |<br/>
+    DialogClass = True | False; |<br/>
+    Resources { any.resource.name [{<br/>
+        Default = new.default.value; |<br/>
+        Exclude = True |<br/>
+        False;<br/>
+        [&#8230;]} ];<br/>
+    [&#8230;]}; |<br/>
+Controls { any.control.name; [&#8230;]};<br/>
+Children { any.child.name; [&#8230;] };<br/>
+[&#8230;]<br/>
 ]}]; Class definitions start with the <code>Class</code> keyword. For each class defined, the name of the class and whether the class is a metaclass, widget, or gadget is listed. Each class definition can be further modified with the keywords described in the following list.</p>
 <dl>
 <dt><code>SuperClass</code></dt>
@@ -168,33 +168,33 @@ Children { any.child.name; [&#8230;] };<br />
 <dd>This lists the names of the automatically created children of this class, so that those children can be accessed in the UIL file.</dd>
 <dt><code>Controls</code></dt>
 <dd>This lists the controls that the widget class allows. The controls can be other classes or a control list from the control list definition.</dd></dl>
-<p> The following example uses the examples from the data type definitions and control list definitions above. Class<br />
-TopLevelWidget: MetaClass<br />
-{<br />
-    Resources<br />
-    {<br />
-        XtbNfirstResource;<br />
-        XtbNsecondResource;<br />
-    };<br />
-};<br />
-NewWidget: Widget<br />
-{<br />
-    SuperClass = TopLevelWidget;<br />
-    ConvenienceFunction =<br />
-    XtbCreateNewWidget;<br />
-    Resources<br />
-    {<br />
-        XtbNnewResource;<br />
-        XtbNfirstResource<br />
-        {Default=&quot;XtbNEW_VALUE&quot;;};<br />
-        XtbNsecondResource<br />
-        {Exclude=True;};<br />
-    };<br />
-    Controls<br />
-    {<br />
-        NewWidget;<br />
-        Buttons;<br />
-    };<br />
+<p> The following example uses the examples from the data type definitions and control list definitions above. Class<br/>
+TopLevelWidget: MetaClass<br/>
+{<br/>
+    Resources<br/>
+    {<br/>
+        XtbNfirstResource;<br/>
+        XtbNsecondResource;<br/>
+    };<br/>
+};<br/>
+NewWidget: Widget<br/>
+{<br/>
+    SuperClass = TopLevelWidget;<br/>
+    ConvenienceFunction =<br/>
+    XtbCreateNewWidget;<br/>
+    Resources<br/>
+    {<br/>
+        XtbNnewResource;<br/>
+        XtbNfirstResource<br/>
+        {Default=&quot;XtbNEW_VALUE&quot;;};<br/>
+        XtbNsecondResource<br/>
+        {Exclude=True;};<br/>
+    };<br/>
+    Controls<br/>
+    {<br/>
+        NewWidget;<br/>
+        Buttons;<br/>
+    };<br/>
 };</p>
 <h3>Child Definitions</h3>
 <p>Child definitions register the classes of automatically created children. Automatically created children are referenced elsewhere in a <code>uil</code> file using the <code>Children</code> keyword within a class definition. Child definitions have the following syntax: <code>Child</code> <code>child.name</code> <code>:</code> <code>class.name</code><code>;</code> [&#8230;] Where <code>child.name</code> is the name of the automatically created child and <code>class.name</code> is the name of the class of that child.</p>

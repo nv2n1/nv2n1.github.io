@@ -22,7 +22,7 @@ description: "machine-info – Local machine information file"
 <dd>A pretty human-readable UTF-8 machine identifier string. This should contain a name like &quot;Lennart&#8217;s Laptop&quot; which is useful to present to the user and does not suffer by the syntax limitations of internet domain names. If possible, the internet hostname as configured in /etc/hostname should be kept similar to this one. Example: if this value is &quot;Lennart&#8217;s Computer&quot; an Internet hostname of &quot;lennarts-computer&quot; might be a good choice. If this parameter is not set, an application should fall back to the Internet hostname for presentation purposes.</dd></dl>
 <p> <i>ICON_NAME=</i></p>
 <dl>
-<dd>An icon identifying this machine according to the m[blue]<code>XDG Icon Naming Specification</code>m[]<font SIZE="-2">[1]</font>. If this parameter is not set, an application should fall back to &quot;computer&quot; or a similar icon name.</dd></dl>
+<dd>An icon identifying this machine according to the m[blue]<code>XDG Icon Naming Specification</code>m[][1]. If this parameter is not set, an application should fall back to &quot;computer&quot; or a similar icon name.</dd></dl>
 <p> <i>CHASSIS=</i></p>
 <dl>
 <dd>The chassis type. Currently, the following chassis types are defined: &quot;desktop&quot;, &quot;laptop&quot;, &quot;convertible&quot;, &quot;server&quot;, &quot;tablet&quot;, &quot;handset&quot;, &quot;watch&quot;, and &quot;embedded&quot;, as well as the special chassis types &quot;vm&quot; and &quot;container&quot; for virtualized systems that lack an immediate physical chassis. </dd>

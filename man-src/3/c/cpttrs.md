@@ -11,7 +11,7 @@ description: "cpttrs.f –"
 <p> cpttrs.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cpttrs</code> (UPLO, N, NRHS, D, E, B, LDB, INFO)<br />
+<p> subroutine <code>cpttrs</code> (UPLO, N, NRHS, D, E, B, LDB, INFO)<br/>
  <i></i><code>CPTTRS</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cpttrs (characterUPLO, integerN, integerNRHS, real, dimension( * )D, complex, dimension( * )E, complex, dimension( ldb, * )B, integerLDB, integerINFO)</h3>

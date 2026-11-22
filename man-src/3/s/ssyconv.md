@@ -11,7 +11,7 @@ description: "ssyconv.f –"
 <p> ssyconv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>ssyconv</code> (UPLO, WAY, N, A, LDA, IPIV, WORK, INFO)<br />
+<p> subroutine <code>ssyconv</code> (UPLO, WAY, N, A, LDA, IPIV, WORK, INFO)<br/>
  <i></i><code>SSYCONV</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ssyconv (characterUPLO, characterWAY, integerN, real, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, real, dimension( * )WORK, integerINFO)</h3>

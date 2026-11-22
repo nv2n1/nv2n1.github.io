@@ -14,8 +14,8 @@ description: "QwtScaleArithmetic –"
 <h3>Static Public Member Functions</h3>
 <p>static double <code>ceilEps</code> (double value, double intervalSize) </p>
 <p> static double <code>floorEps</code> (double value, double intervalSize) </p>
-<p> static double <code>divideEps</code> (double interval, double steps)<br />
- <i>Divide an interval into steps. </i><br />
+<p> static double <code>divideEps</code> (double interval, double steps)<br/>
+ <i>Divide an interval into steps. </i><br/>
  static double <code>divideInterval</code> (double interval, int numSteps, uint base) </p>
 <h2>Detailed Description</h2>
 <p>Arithmetic including a tolerance.</p>
@@ -24,7 +24,7 @@ description: "QwtScaleArithmetic –"
 <p>Ceil a value, relative to an interval </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>value</i> Value to be ceiled<br />
+<dd><i>value</i> Value to be ceiled<br/>
  <i>intervalSize</i> Interval size</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -36,7 +36,7 @@ description: "QwtScaleArithmetic –"
 <p>Divide an interval into steps. $stepSize = (intervalSize &#8211; intervalSize * 10e^{-6}) / numSteps$ </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>intervalSize</i> Interval size<br />
+<dd><i>intervalSize</i> Interval size<br/>
  <i>numSteps</i> Number of steps</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -45,8 +45,8 @@ description: "QwtScaleArithmetic –"
 <p>Calculate a step size for a given interval </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>intervalSize</i> Interval size<br />
- <i>numSteps</i> Number of steps<br />
+<dd><i>intervalSize</i> Interval size<br/>
+ <i>numSteps</i> Number of steps<br/>
  <i>base</i> Base for the division ( usually 10 )</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -55,7 +55,7 @@ description: "QwtScaleArithmetic –"
 <p>Floor a value, relative to an interval </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>value</i> Value to be floored<br />
+<dd><i>value</i> Value to be floored<br/>
  <i>intervalSize</i> Interval size</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

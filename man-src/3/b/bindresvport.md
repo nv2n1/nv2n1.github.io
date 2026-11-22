@@ -42,7 +42,7 @@ int bindresvport(int sockfd, struct sockaddr_in *sin);
 <tr VALIGN=top>
 <td> <code>bindresvport</code>() </td>
 <td>Thread safety</td>
-<td> glibc &gt;= 2.17: MT-Safe<br />
+<td> glibc &gt;= 2.17: MT-Safe<br/>
  glibc &lt; 2.17: MT-Unsafe
 </td>
 </tr>

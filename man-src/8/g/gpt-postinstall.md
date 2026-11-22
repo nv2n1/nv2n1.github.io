@@ -21,7 +21,7 @@ description: "gpt-postinstall – Searches for post install scripts and executes
 <dt><code>-man</code></dt>
 <dd>Prints the manual page and exits.</dd>
 <dt><code>-version</code></dt>
-<dd>Prints the version of <font SIZE="-1">GPT</font> and exits.</dd>
+<dd>Prints the version of GPT and exits.</dd>
 <dt><code>-location</code></dt>
 <dd>Location indicates the path to the Globus installation that will be used.</dd></dl>
 <h2>See Also</h2>

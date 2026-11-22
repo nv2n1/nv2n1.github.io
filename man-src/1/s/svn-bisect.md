@@ -27,7 +27,7 @@ $ svn - bisect-- min 25000 --max 26000 start $ svn - bisect bad $ svn - bisect b
 
 <h2>OPTIONS</h2>
 
- Options <font SIZE="-1">MUST</font> be specified before subcommands, on the command line. Options specified after the subcommand will be passed to the subcommand; this is currently only useful for the ``run'' subcommand.
+ Options MUST be specified before subcommands, on the command line. Options specified after the subcommand will be passed to the subcommand; this is currently only useful for the ``run'' subcommand.
 <dl>
 <dt>--help
 </dt><dd> Use anywhere. Output a command list, or specific help for the given command.
@@ -251,11 +251,11 @@ svn - bisect skip[&lt;rev&gt;[&lt;rev&gt;...]]
 
  * An installation of Perl, version 5.8 or above 
 
- * The IO::All module, installed from <font SIZE="-1">CPAN</font> 
+ * The IO::All module, installed from CPAN 
 
- * The YAML::Syck module, installed from <font SIZE="-1">CPAN</font> 
+ * The YAML::Syck module, installed from CPAN 
 
- * The ``svn'' command somewhere in your <font SIZE="-1">PATH,</font> executable by the current user 
+ * The ``svn'' command somewhere in your PATH, executable by the current user 
 
  * A svn checkout with some history to bisect.
 
@@ -287,4 +287,4 @@ svn - bisect skip[&lt;rev&gt;[&lt;rev&gt;...]]
 
  This software is copyright (c) 2008 Mark Glines. 
 
- It is distributed under the terms of the Artistic License 2.0. For details, see the ``<font SIZE="-1">LICENSE''</font> file packaged alongside this tool.
+ It is distributed under the terms of the Artistic License 2.0. For details, see the ``LICENSE'' file packaged alongside this tool.

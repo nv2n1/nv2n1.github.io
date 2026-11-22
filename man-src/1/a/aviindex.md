@@ -73,7 +73,7 @@ transcode -V -i 3GBfile.avi --nav_seek 3GB.index \
 	-y xvid --lame_preset standard -o out.avi
 </pre>
 <h2>FORMAT</h2>
-<p> The format of the index file. The first 7 bytes in this file are &quot;AVIIDX1&quot; for easy detection and a comment of who created the file. The second line is a comment and describes the fields. Do not delete it. Each line (except the first 2) consists of exactly 8 fields all seperated by one space and describing one particular chunk of the AVI file.<br />
+<p> The format of the index file. The first 7 bytes in this file are &quot;AVIIDX1&quot; for easy detection and a comment of who created the file. The second line is a comment and describes the fields. Do not delete it. Each line (except the first 2) consists of exactly 8 fields all seperated by one space and describing one particular chunk of the AVI file.<br/>
  Here is an example of an AVI file with two audio tracks.</p>
 <dl>
 <dt>
@@ -100,7 +100,7 @@ TAG TYPE CHUNK CHUNK/TYPE POS LEN KEY MS
 <p> The field <i>KEY</i> holds information if this chunk is a keyframe. In the example above, all audio chunks are key-chunks, but only the first video frame is a key frame. This field is either 0 or 1. </p>
 <p> The field <i>MS</i> holds information about how many milliseconds have passed. This field may be 0.00 if unknown.</p>
 <h2>AUTHORS</h2>
-<p> <code>aviindex</code> was written by Tilmann Bitterberg &lt;transcode at tibit.org&gt;<br />
+<p> <code>aviindex</code> was written by Tilmann Bitterberg &lt;transcode at tibit.org&gt;<br/>
  and is part of transcode.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-avifix/">avifix</a></code>(1), <code><a href="/docs/linux/man/1-avisync/">avisync</a></code>(1), <code><a href="/docs/linux/man/1-avimerge/">avimerge</a></code>(1), <code><a href="/docs/linux/man/1-avisplit/">avisplit</a></code>(1), <code><a href="/docs/linux/man/1-tccat/">tccat</a></code>(1), <code><a href="/docs/linux/man/1-tcdecode/">tcdecode</a></code>(1), <code><a href="/docs/linux/man/1-tcdemux/">tcdemux</a></code>(1), <code><a href="/docs/linux/man/1-tcextract/">tcextract</a></code>(1), <code><a href="/docs/linux/man/1-tcprobe/">tcprobe</a></code>(1), <code><a href="/docs/linux/man/1-tcscan/">tcscan</a></code>(1), <code><a href="/docs/linux/man/1-transcode/">transcode</a></code>(1), <code><a href="/docs/linux/man/1-mplayer/">mplayer</a></code>(1) </p>

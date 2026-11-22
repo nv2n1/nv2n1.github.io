@@ -26,7 +26,7 @@ int tld_check_4z(const uint32_t *in, size_t *errpos, const Tld_table **overrides
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;bug-libidn [at] gnu.org&gt;. GNU Libidn home page: <a rel="nofollow" href="http://www.gnu.org/software/libidn/">http://www.gnu.org/software/libidn/</a> General help using GNU software: <a rel="nofollow" href="http://www.gnu.org/gethelp/">http://www.gnu.org/gethelp/</a></p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2002-2013 Simon Josefsson.<br />
+<p>Copyright &#169; 2002-2013 Simon Josefsson.<br/>
  Copying and distribution of this file, with or without modification, are permitted in any medium without royalty provided the copyright notice and this notice are preserved.</p>
 <h2>See Also</h2>
 <p>The full documentation for <code>libidn</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>libidn</code> programs are properly installed at your site, the command</p>

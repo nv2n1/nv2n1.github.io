@@ -13,7 +13,7 @@ description: "davix-http – HTTP query tool based on libdavix"
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> davix-http [options]&#8230; url</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> </p>
 <h2>DESCRIPTION</h2>
-<p> <code>davix-http</code> is a tool using libdavix for HTTP query executions<br />
+<p> <code>davix-http</code> is a tool using libdavix for HTTP query executions<br/>
  It can be used to interact with a RESTful webservices. </p>
 <p> See <a href="/docs/linux/man/3-libdavix/">libdavix</a>(3) for details. </p>
 <h2>OPTIONS</h2>
@@ -198,11 +198,11 @@ description: "davix-http – HTTP query tool based on libdavix"
 </dt><dd> Azure authentication key</dd></dl>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> </p>
 <h2>EXAMPLES</h2>
-<p> <code> Execute a GET Query in HTTP<br />
+<p> <code> Execute a GET Query in HTTP<br/>
 &nbsp;<wbr>&nbsp;<wbr>davix-http&nbsp;<wbr><a rel="nofollow" href="http://example.org/">http://example.org/</a> </p>
-<p> Execute a HEAD Query in HTTP + TLS with User auth<br />
+<p> Execute a HEAD Query in HTTP + TLS with User auth<br/>
 &nbsp;<wbr>&nbsp;<wbr>davix-http -X HEAD&nbsp;<wbr><a rel="nofollow" href="https://login:password@example.org">https://login:password@example.org</a> </p>
-<p> Execute a PUT Query with S3 over https and a basic content<br />
+<p> Execute a PUT Query with S3 over https and a basic content<br/>
 &nbsp;<wbr>&nbsp;<wbr>davix-http -X PUT s3s://bucket.example.org/mifile -d&nbsp;<wbr>&quot;Hello World&quot; </p>
 <p> </code></p>
 <h2>SEE ALSO</h2>

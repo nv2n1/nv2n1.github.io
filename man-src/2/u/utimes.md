@@ -23,13 +23,13 @@ int utimes(const char *filename, const struct timeval times[2]);
 <p> If <i>times</i> is NULL, then the access and modification times of the file are set to the current time. </p>
 <p> Changing timestamps is permitted when: either the process has appropriate privileges, or the effective user ID equals the user ID of the file, or <i>times</i> is NULL and the process has write permission for the file. </p>
 <p> The <i>utimbuf</i> structure is: </p>
-<p> struct utimbuf {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;time_t actime;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;access time&nbsp;*/<br />
+<p> struct utimbuf {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;time_t actime;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;access time&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;time_t modtime;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;modification time&nbsp;*/ }; </p>
 <p> The <code>utime</code>() system call allows specification of timestamps with a resolution of 1 second. </p>
 <p> The <code>utimes</code>() system call is similar, but the <i>times</i> argument refers to an array rather than a structure. The elements of this array are <i>timeval</i> structures, which allow a precision of 1 microsecond for specifying timestamps. The <i>timeval</i> structure is: </p>
-<p> struct timeval {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;long tv_sec;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;seconds&nbsp;*/<br />
+<p> struct timeval {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;long tv_sec;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;seconds&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;long tv_usec;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;microseconds&nbsp;*/ }; </p>
 <p> <i>times[0]</i> specifies the new access time, and <i>times[1]</i> specifies the new modification time. If <i>times</i> is NULL, then analogously to <code>utime</code>(), the access and modification times of the file are set to the current time.</p>
 <h2>RETURN VALUE</h2>

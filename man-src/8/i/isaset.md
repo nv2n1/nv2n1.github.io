@@ -9,7 +9,7 @@ description: "isaset – set ISA registers"
 
 <p>isaset &#8211; set ISA registers</p>
 <h2>Synopsis</h2>
-<p><code>isaset</code> [<code>-y</code>] [<code>-W</code>|<code>-L</code>] <i>addrreg</i> <i>datareg</i> <i>address</i> <i>value</i> [<i>mask</i>] #for I2C-like access<br />
+<p><code>isaset</code> [<code>-y</code>] [<code>-W</code>|<code>-L</code>] <i>addrreg</i> <i>datareg</i> <i>address</i> <i>value</i> [<i>mask</i>] #for I2C-like access<br/>
  <code>isaset</code> <code>-f</code> [<code>-y</code>] [<code>-W</code>|<code>-L</code>] <i>address</i> <i>value</i> [<i>mask</i>] #for flat address space </p>
 <h2>Description</h2>
 <p>isaset is a small helper program to set registers visible through the ISA bus. </p>

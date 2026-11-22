@@ -9,204 +9,204 @@ description: "bmc-config – BMC configuration file format and details"
 
 <p>bmc-config &#8211; BMC configuration file format and details</p>
 <h2>Description</h2>
-<p>Before many IPMI tools can be used over a network, a machine&#8217;s Baseboard Management Controller (BMC) must be configured. The configuration of a BMC can be quite daunting for those who do not know much about IPMI. This manpage hopes to provide enough information on BMC configuration so that you can configure the BMC for your system. When appropriate, typical BMC configurations will be suggested. The following is an example BMC configuration file partially generated from the <code>bmc-config(1)</code> command. This example configuration should be sufficient for most users after the appropriate local IP and MAC addresses are input. Following this example, separate sections of this manpage will discuss the different sections of the BMC configuration file in more detail with explanations of how the BMC can be configured for different environments. Note that many options may or may not be available on your particular machine. For example, Serial-Over-Lan (SOL) is available only on IPMI 2.0 machines. Therefore, if you are looking to configure an IPMI 1.5 machine, many of the SOL or IPMI 2.0 related options will be be unavailable to you. The number of configurable users may also vary for your particular machine. The below configuration file and most of this manpage assume the user is interested in configuring a BMC for use with IPMI over LAN. Various configuration options from <code>bmc-config(1)</code> have been left out or skipped because it is considered unnecessary. Future versions of this manpage will try to include more information.<br />
-&nbsp;<wbr>&nbsp;<wbr>Section User1<br />
-##&nbsp;<wbr>Give username<br />
-##&nbsp;<wbr>Username NULL<br />
-##&nbsp;<wbr>Give password or leave it blank to clear password<br />
-Password mypassword<br />
-##&nbsp;<wbr>Give password for IPMI 2.0 or blank to clear. MAX 20 chars.<br />
-&nbsp;<wbr>##&nbsp;<wbr>Password20<br />
-##&nbsp;<wbr>Possible values: Yes/No or blank to not set<br />
-Enable_User Yes<br />
-##&nbsp;<wbr>Possible values: Yes/No<br />
-Lan_Enable_Ipmi_Msgs Yes<br />
-##&nbsp;<wbr>Possible values: Callback/User/Operator/Administrator/OEM_Proprietary/No_Access<br />
-Lan_Privilege_Limit Administrator<br />
-&nbsp;<wbr>&nbsp;<wbr>##&nbsp;<wbr>Possible values: 0-17, 0 is unlimited;&nbsp;<wbr>May be reset to 0 if not specified<br />
-&nbsp;<wbr>&nbsp;<wbr>##&nbsp;<wbr>Lan_Session_Limit<br />
-##&nbsp;<wbr>Possible values: Yes/No<br />
-SOL_Payload_Access Yes<br />
-&nbsp;<wbr>&nbsp;<wbr>EndSection<br />
-&nbsp;<wbr>&nbsp;<wbr>Section User2<br />
-##&nbsp;<wbr>Give username<br />
-Username user2<br />
-##&nbsp;<wbr>Give password or leave it blank to clear password<br />
-Password userpass<br />
-##&nbsp;<wbr>Give password for IPMI 2.0 or blank to clear. MAX 20 chars.<br />
-##&nbsp;<wbr>Password20<br />
-##&nbsp;<wbr>Possible values: Yes/No or blank to not set<br />
-Enable_User No<br />
-##&nbsp;<wbr>Possible values: Yes/No<br />
-Lan_Enable_Ipmi_Msgs No<br />
-##&nbsp;<wbr>Possible values: Callback/User/Operator/Administrator/OEM_Proprietary/No_Access<br />
-Lan_Privilege_Limit No_Access<br />
-&nbsp;<wbr>&nbsp;<wbr>##&nbsp;<wbr>Possible values: 0-17, 0 is unlimited;&nbsp;<wbr>May be reset to 0 if not specified<br />
-&nbsp;<wbr>&nbsp;<wbr>##&nbsp;<wbr>Lan_Session_Limit<br />
-&nbsp;<wbr>&nbsp;<wbr>##&nbsp;<wbr>Possible values: Yes/No<br />
-&nbsp;<wbr>&nbsp;<wbr>SOL_Payload_Access No<br />
-&nbsp;<wbr>&nbsp;<wbr>EndSection<br />
-&nbsp;<wbr>&nbsp;<wbr>Section Lan_Channel<br />
-##&nbsp;<wbr>Possible values: Disabled/Pre_Boot_Only/Always_Available/Shared<br />
-Volatile_Access_Mode Always_Available<br />
-##&nbsp;<wbr>Possible values: Yes/No<br />
-Volatile_Enable_User_Level_Auth Yes<br />
-##&nbsp;<wbr>Possible values: Yes/No<br />
-Volatile_Enable_Per_Message_Auth Yes<br />
-##&nbsp;<wbr>Possible values: Yes/No<br />
-Volatile_Enable_Pef_Alerting No<br />
-##&nbsp;<wbr>Possible values: Callback/User/Operator/Administrator/OEM_Proprietary/No_Access<br />
-Volatile_Channel_Privilege_Limit Administrator<br />
-##&nbsp;<wbr>Possible values: Disabled/Pre_Boot_Only/Always_Available/Shared<br />
-Non_Volatile_Access_Mode Always_Available<br />
-##&nbsp;<wbr>Possible values: Yes/No<br />
-Non_Volatile_Enable_User_Level_Auth Yes<br />
-##&nbsp;<wbr>Possible values: Yes/No<br />
-Non_Volatile_Enable_Per_Message_Auth Yes<br />
-##&nbsp;<wbr>Possible values: Yes/No<br />
-Non_Volatile_Enable_Pef_Alerting No<br />
-##&nbsp;<wbr>Possible values: Callback/User/Operator/Administrator/OEM_Proprietary/No_Access<br />
-Non_Volatile_Channel_Privilege_Limit Administrator<br />
-&nbsp;<wbr>&nbsp;<wbr>EndSection<br />
-&nbsp;<wbr>&nbsp;<wbr>Section Lan_Conf<br />
-##&nbsp;<wbr>Possible values: Unspecified/Static/Use_DHCP/Use_BIOS/Use_Others<br />
-Ip_Address_Source Static<br />
-##&nbsp;<wbr>Give valid IP Address<br />
-Ip_Address 192.168.1.100<br />
-##&nbsp;<wbr>Give valid MAC Address<br />
-Mac_Address 00:0E:0E:FF:AA:12<br />
-##&nbsp;<wbr>Give valid Subnet mask<br />
-Subnet_Mask 255.255.255.0<br />
-##&nbsp;<wbr>Give valid IP Address<br />
-Default_Gateway_Ip_Address 192.168.1.1<br />
-##&nbsp;<wbr>Give valid MAC Address<br />
-Default_Gateway_Mac_Address 00:0E:0E:FF:AA:18<br />
-##&nbsp;<wbr>Give valid IP Address<br />
-Backup_Gateway_Ip_Address 192.168.1.2<br />
-##&nbsp;<wbr>Give valid MAC Address<br />
-Backup_Gateway_Mac_Address 00:0E:0E:FF:AA:15<br />
-&nbsp;<wbr>&nbsp;<wbr>EndSection<br />
-&nbsp;<wbr>&nbsp;<wbr>Section Lan_Conf_Auth<br />
-##&nbsp;<wbr>Possible values: Yes/No<br />
-Callback_Enable_Auth_Type_None No<br />
-##&nbsp;<wbr>Possible values: Yes/No<br />
-Callback_Enable_Auth_Type_Md2 No<br />
-##&nbsp;<wbr>Possible values: Yes/No<br />
-Callback_Enable_Auth_Type_Md5 No<br />
-##&nbsp;<wbr>Possible values: Yes/No<br />
-Callback_Enable_Auth_Type_Straight_Password No<br />
-##&nbsp;<wbr>Possible values: Yes/No<br />
-Callback_Enable_Auth_Type_Oem_Proprietary No<br />
-##&nbsp;<wbr>Possible values: Yes/No<br />
-User_Enable_Auth_Type_None No<br />
-##&nbsp;<wbr>Possible values: Yes/No<br />
-User_Enable_Auth_Type_Md2 Yes<br />
-##&nbsp;<wbr>Possible values: Yes/No<br />
-User_Enable_Auth_Type_Md5 Yes<br />
-##&nbsp;<wbr>Possible values: Yes/No<br />
-User_Enable_Auth_Type_Straight_Password No<br />
-##&nbsp;<wbr>Possible values: Yes/No<br />
-User_Enable_Auth_Type_Oem_Proprietary No<br />
-##&nbsp;<wbr>Possible values: Yes/No<br />
-Operator_Enable_Auth_Type_None No<br />
-##&nbsp;<wbr>Possible values: Yes/No<br />
-Operator_Enable_Auth_Type_Md2 Yes<br />
-##&nbsp;<wbr>Possible values: Yes/No<br />
-Operator_Enable_Auth_Type_Md5 Yes<br />
-##&nbsp;<wbr>Possible values: Yes/No<br />
-Operator_Enable_Auth_Type_Straight_Password No<br />
-##&nbsp;<wbr>Possible values: Yes/No<br />
-Operator_Enable_Auth_Type_Oem_Proprietary No<br />
-##&nbsp;<wbr>Possible values: Yes/No<br />
-Admin_Enable_Auth_Type_None No<br />
-##&nbsp;<wbr>Possible values: Yes/No<br />
-Admin_Enable_Auth_Type_Md2 Yes<br />
-##&nbsp;<wbr>Possible values: Yes/No<br />
-Admin_Enable_Auth_Type_Md5 Yes<br />
-##&nbsp;<wbr>Possible values: Yes/No<br />
-Admin_Enable_Auth_Type_Straight_Password No<br />
-##&nbsp;<wbr>Possible values: Yes/No<br />
-Admin_Enable_Auth_Type_Oem_Proprietary No<br />
-##&nbsp;<wbr>Possible values: Yes/No<br />
-Oem_Enable_Auth_Type_None No<br />
-##&nbsp;<wbr>Possible values: Yes/No<br />
-Oem_Enable_Auth_Type_Md2 No<br />
-##&nbsp;<wbr>Possible values: Yes/No<br />
-Oem_Enable_Auth_Type_Md5 No<br />
-##&nbsp;<wbr>Possible values: Yes/No<br />
-Oem_Enable_Auth_Type_Straight_Password No<br />
-##&nbsp;<wbr>Possible values: Yes/No<br />
-Oem_Enable_Auth_Type_Oem_Proprietary No<br />
-&nbsp;<wbr>&nbsp;<wbr>EndSection<br />
-&nbsp;<wbr>&nbsp;<wbr>Section Lan_Conf_Security_Keys<br />
-&nbsp;<wbr>&nbsp;<wbr>##&nbsp;<wbr>Give string or blank to clear. Max 20 chars<br />
-&nbsp;<wbr>&nbsp;<wbr>K_G<br />
-&nbsp;<wbr>&nbsp;<wbr>EndSection<br />
-&nbsp;<wbr>&nbsp;<wbr>Section Lan_Conf_Misc<br />
-##&nbsp;<wbr>Possible values: Yes/No<br />
-Enable_Gratuitous_Arps Yes<br />
-##&nbsp;<wbr>Possible values: Yes/No<br />
-Enable_Arp_Response No<br />
-##&nbsp;<wbr>Give valid number. Intervals are 500 ms.<br />
-Gratuitous_Arp_Interval 4<br />
-&nbsp;<wbr>&nbsp;<wbr>EndSection<br />
-&nbsp;<wbr>&nbsp;<wbr>Section Rmcpplus_Conf_Privilege<br />
-##&nbsp;<wbr>Possible values: Unused/User/Operator/Administrator/OEM_Proprietary<br />
-Maximum_Privilege_Cipher_Suite_Id_0 Unused<br />
-##&nbsp;<wbr>Possible values: Unused/User/Operator/Administrator/OEM_Proprietary<br />
-Maximum_Privilege_Cipher_Suite_Id_1 Unused<br />
-##&nbsp;<wbr>Possible values: Unused/User/Operator/Administrator/OEM_Proprietary<br />
-Maximum_Privilege_Cipher_Suite_Id_2 Unused<br />
-##&nbsp;<wbr>Possible values: Unused/User/Operator/Administrator/OEM_Proprietary<br />
-Maximum_Privilege_Cipher_Suite_Id_3 Administrator<br />
-##&nbsp;<wbr>Possible values: Unused/User/Operator/Administrator/OEM_Proprietary<br />
-Maximum_Privilege_Cipher_Suite_Id_4 Administrator<br />
-##&nbsp;<wbr>Possible values: Unused/User/Operator/Administrator/OEM_Proprietary<br />
-Maximum_Privilege_Cipher_Suite_Id_5 Administrator<br />
-##&nbsp;<wbr>Possible values: Unused/User/Operator/Administrator/OEM_Proprietary<br />
-Maximum_Privilege_Cipher_Suite_Id_6 Unused<br />
-##&nbsp;<wbr>Possible values: Unused/User/Operator/Administrator/OEM_Proprietary<br />
-Maximum_Privilege_Cipher_Suite_Id_7 Unused<br />
-##&nbsp;<wbr>Possible values: Unused/User/Operator/Administrator/OEM_Proprietary<br />
-Maximum_Privilege_Cipher_Suite_Id_8 Administrator<br />
-##&nbsp;<wbr>Possible values: Unused/User/Operator/Administrator/OEM_Proprietary<br />
-Maximum_Privilege_Cipher_Suite_Id_9 Administrator<br />
-##&nbsp;<wbr>Possible values: Unused/User/Operator/Administrator/OEM_Proprietary<br />
-Maximum_Privilege_Cipher_Suite_Id_10 Administrator<br />
-##&nbsp;<wbr>Possible values: Unused/User/Operator/Administrator/OEM_Proprietary<br />
-Maximum_Privilege_Cipher_Suite_Id_11 Unused<br />
-##&nbsp;<wbr>Possible values: Unused/User/Operator/Administrator/OEM_Proprietary<br />
-Maximum_Privilege_Cipher_Suite_Id_12 Administrator<br />
-##&nbsp;<wbr>Possible values: Unused/User/Operator/Administrator/OEM_Proprietary<br />
-Maximum_Privilege_Cipher_Suite_Id_13 Administrator<br />
-##&nbsp;<wbr>Possible values: Unused/User/Operator/Administrator/OEM_Proprietary<br />
-Maximum_Privilege_Cipher_Suite_Id_14 Administrator<br />
-&nbsp;<wbr>&nbsp;<wbr>EndSection<br />
-&nbsp;<wbr>&nbsp;<wbr>Section SOL_Conf<br />
-##&nbsp;<wbr>Possible values: Yes/No<br />
-Enable_SOL Yes<br />
-##&nbsp;<wbr>Possible values: Callback/User/Operator/Administrator/OEM_Proprietary<br />
-SOL_Privilege_Level Administrator<br />
-##&nbsp;<wbr>Possible values: Yes/No<br />
-Force_SOL_Payload_Authentication Yes<br />
-##&nbsp;<wbr>Possible values: Yes/No<br />
-Force_SOL_Payload_Encryption Yes<br />
-##&nbsp;<wbr>Give a valid integer. Each unit is 5ms<br />
-Character_Accumulate_Interval 50<br />
-##&nbsp;<wbr>Give a valid number<br />
-Character_Send_Threshold 100<br />
-##&nbsp;<wbr>Give a valid integer<br />
-SOL_Retry_Count 5<br />
-##&nbsp;<wbr>Give a valid integer. Interval unit is 10ms<br />
-SOL_Retry_Interval 50<br />
-##&nbsp;<wbr>Possible values: Serial/9600/19200/38400/57600/115200<br />
-Non_Volatile_Bit_Rate 115200<br />
-##&nbsp;<wbr>Possible values: Serial/9600/19200/38400/57600/115200<br />
-Volatile_Bit_Rate 115200<br />
-&nbsp;<wbr>&nbsp;<wbr>EndSection<br />
-&nbsp;<wbr>&nbsp;<wbr>Section Misc<br />
-##&nbsp;<wbr>Possible Values: Off_State_AC_Apply/Restore_State_AC_Apply/On_State_AC_Apply<br />
-Power_Restore_Policy Restore_State_Ac_Apply<br />
+<p>Before many IPMI tools can be used over a network, a machine&#8217;s Baseboard Management Controller (BMC) must be configured. The configuration of a BMC can be quite daunting for those who do not know much about IPMI. This manpage hopes to provide enough information on BMC configuration so that you can configure the BMC for your system. When appropriate, typical BMC configurations will be suggested. The following is an example BMC configuration file partially generated from the <code>bmc-config(1)</code> command. This example configuration should be sufficient for most users after the appropriate local IP and MAC addresses are input. Following this example, separate sections of this manpage will discuss the different sections of the BMC configuration file in more detail with explanations of how the BMC can be configured for different environments. Note that many options may or may not be available on your particular machine. For example, Serial-Over-Lan (SOL) is available only on IPMI 2.0 machines. Therefore, if you are looking to configure an IPMI 1.5 machine, many of the SOL or IPMI 2.0 related options will be be unavailable to you. The number of configurable users may also vary for your particular machine. The below configuration file and most of this manpage assume the user is interested in configuring a BMC for use with IPMI over LAN. Various configuration options from <code>bmc-config(1)</code> have been left out or skipped because it is considered unnecessary. Future versions of this manpage will try to include more information.<br/>
+&nbsp;<wbr>&nbsp;<wbr>Section User1<br/>
+##&nbsp;<wbr>Give username<br/>
+##&nbsp;<wbr>Username NULL<br/>
+##&nbsp;<wbr>Give password or leave it blank to clear password<br/>
+Password mypassword<br/>
+##&nbsp;<wbr>Give password for IPMI 2.0 or blank to clear. MAX 20 chars.<br/>
+&nbsp;<wbr>##&nbsp;<wbr>Password20<br/>
+##&nbsp;<wbr>Possible values: Yes/No or blank to not set<br/>
+Enable_User Yes<br/>
+##&nbsp;<wbr>Possible values: Yes/No<br/>
+Lan_Enable_Ipmi_Msgs Yes<br/>
+##&nbsp;<wbr>Possible values: Callback/User/Operator/Administrator/OEM_Proprietary/No_Access<br/>
+Lan_Privilege_Limit Administrator<br/>
+&nbsp;<wbr>&nbsp;<wbr>##&nbsp;<wbr>Possible values: 0-17, 0 is unlimited;&nbsp;<wbr>May be reset to 0 if not specified<br/>
+&nbsp;<wbr>&nbsp;<wbr>##&nbsp;<wbr>Lan_Session_Limit<br/>
+##&nbsp;<wbr>Possible values: Yes/No<br/>
+SOL_Payload_Access Yes<br/>
+&nbsp;<wbr>&nbsp;<wbr>EndSection<br/>
+&nbsp;<wbr>&nbsp;<wbr>Section User2<br/>
+##&nbsp;<wbr>Give username<br/>
+Username user2<br/>
+##&nbsp;<wbr>Give password or leave it blank to clear password<br/>
+Password userpass<br/>
+##&nbsp;<wbr>Give password for IPMI 2.0 or blank to clear. MAX 20 chars.<br/>
+##&nbsp;<wbr>Password20<br/>
+##&nbsp;<wbr>Possible values: Yes/No or blank to not set<br/>
+Enable_User No<br/>
+##&nbsp;<wbr>Possible values: Yes/No<br/>
+Lan_Enable_Ipmi_Msgs No<br/>
+##&nbsp;<wbr>Possible values: Callback/User/Operator/Administrator/OEM_Proprietary/No_Access<br/>
+Lan_Privilege_Limit No_Access<br/>
+&nbsp;<wbr>&nbsp;<wbr>##&nbsp;<wbr>Possible values: 0-17, 0 is unlimited;&nbsp;<wbr>May be reset to 0 if not specified<br/>
+&nbsp;<wbr>&nbsp;<wbr>##&nbsp;<wbr>Lan_Session_Limit<br/>
+&nbsp;<wbr>&nbsp;<wbr>##&nbsp;<wbr>Possible values: Yes/No<br/>
+&nbsp;<wbr>&nbsp;<wbr>SOL_Payload_Access No<br/>
+&nbsp;<wbr>&nbsp;<wbr>EndSection<br/>
+&nbsp;<wbr>&nbsp;<wbr>Section Lan_Channel<br/>
+##&nbsp;<wbr>Possible values: Disabled/Pre_Boot_Only/Always_Available/Shared<br/>
+Volatile_Access_Mode Always_Available<br/>
+##&nbsp;<wbr>Possible values: Yes/No<br/>
+Volatile_Enable_User_Level_Auth Yes<br/>
+##&nbsp;<wbr>Possible values: Yes/No<br/>
+Volatile_Enable_Per_Message_Auth Yes<br/>
+##&nbsp;<wbr>Possible values: Yes/No<br/>
+Volatile_Enable_Pef_Alerting No<br/>
+##&nbsp;<wbr>Possible values: Callback/User/Operator/Administrator/OEM_Proprietary/No_Access<br/>
+Volatile_Channel_Privilege_Limit Administrator<br/>
+##&nbsp;<wbr>Possible values: Disabled/Pre_Boot_Only/Always_Available/Shared<br/>
+Non_Volatile_Access_Mode Always_Available<br/>
+##&nbsp;<wbr>Possible values: Yes/No<br/>
+Non_Volatile_Enable_User_Level_Auth Yes<br/>
+##&nbsp;<wbr>Possible values: Yes/No<br/>
+Non_Volatile_Enable_Per_Message_Auth Yes<br/>
+##&nbsp;<wbr>Possible values: Yes/No<br/>
+Non_Volatile_Enable_Pef_Alerting No<br/>
+##&nbsp;<wbr>Possible values: Callback/User/Operator/Administrator/OEM_Proprietary/No_Access<br/>
+Non_Volatile_Channel_Privilege_Limit Administrator<br/>
+&nbsp;<wbr>&nbsp;<wbr>EndSection<br/>
+&nbsp;<wbr>&nbsp;<wbr>Section Lan_Conf<br/>
+##&nbsp;<wbr>Possible values: Unspecified/Static/Use_DHCP/Use_BIOS/Use_Others<br/>
+Ip_Address_Source Static<br/>
+##&nbsp;<wbr>Give valid IP Address<br/>
+Ip_Address 192.168.1.100<br/>
+##&nbsp;<wbr>Give valid MAC Address<br/>
+Mac_Address 00:0E:0E:FF:AA:12<br/>
+##&nbsp;<wbr>Give valid Subnet mask<br/>
+Subnet_Mask 255.255.255.0<br/>
+##&nbsp;<wbr>Give valid IP Address<br/>
+Default_Gateway_Ip_Address 192.168.1.1<br/>
+##&nbsp;<wbr>Give valid MAC Address<br/>
+Default_Gateway_Mac_Address 00:0E:0E:FF:AA:18<br/>
+##&nbsp;<wbr>Give valid IP Address<br/>
+Backup_Gateway_Ip_Address 192.168.1.2<br/>
+##&nbsp;<wbr>Give valid MAC Address<br/>
+Backup_Gateway_Mac_Address 00:0E:0E:FF:AA:15<br/>
+&nbsp;<wbr>&nbsp;<wbr>EndSection<br/>
+&nbsp;<wbr>&nbsp;<wbr>Section Lan_Conf_Auth<br/>
+##&nbsp;<wbr>Possible values: Yes/No<br/>
+Callback_Enable_Auth_Type_None No<br/>
+##&nbsp;<wbr>Possible values: Yes/No<br/>
+Callback_Enable_Auth_Type_Md2 No<br/>
+##&nbsp;<wbr>Possible values: Yes/No<br/>
+Callback_Enable_Auth_Type_Md5 No<br/>
+##&nbsp;<wbr>Possible values: Yes/No<br/>
+Callback_Enable_Auth_Type_Straight_Password No<br/>
+##&nbsp;<wbr>Possible values: Yes/No<br/>
+Callback_Enable_Auth_Type_Oem_Proprietary No<br/>
+##&nbsp;<wbr>Possible values: Yes/No<br/>
+User_Enable_Auth_Type_None No<br/>
+##&nbsp;<wbr>Possible values: Yes/No<br/>
+User_Enable_Auth_Type_Md2 Yes<br/>
+##&nbsp;<wbr>Possible values: Yes/No<br/>
+User_Enable_Auth_Type_Md5 Yes<br/>
+##&nbsp;<wbr>Possible values: Yes/No<br/>
+User_Enable_Auth_Type_Straight_Password No<br/>
+##&nbsp;<wbr>Possible values: Yes/No<br/>
+User_Enable_Auth_Type_Oem_Proprietary No<br/>
+##&nbsp;<wbr>Possible values: Yes/No<br/>
+Operator_Enable_Auth_Type_None No<br/>
+##&nbsp;<wbr>Possible values: Yes/No<br/>
+Operator_Enable_Auth_Type_Md2 Yes<br/>
+##&nbsp;<wbr>Possible values: Yes/No<br/>
+Operator_Enable_Auth_Type_Md5 Yes<br/>
+##&nbsp;<wbr>Possible values: Yes/No<br/>
+Operator_Enable_Auth_Type_Straight_Password No<br/>
+##&nbsp;<wbr>Possible values: Yes/No<br/>
+Operator_Enable_Auth_Type_Oem_Proprietary No<br/>
+##&nbsp;<wbr>Possible values: Yes/No<br/>
+Admin_Enable_Auth_Type_None No<br/>
+##&nbsp;<wbr>Possible values: Yes/No<br/>
+Admin_Enable_Auth_Type_Md2 Yes<br/>
+##&nbsp;<wbr>Possible values: Yes/No<br/>
+Admin_Enable_Auth_Type_Md5 Yes<br/>
+##&nbsp;<wbr>Possible values: Yes/No<br/>
+Admin_Enable_Auth_Type_Straight_Password No<br/>
+##&nbsp;<wbr>Possible values: Yes/No<br/>
+Admin_Enable_Auth_Type_Oem_Proprietary No<br/>
+##&nbsp;<wbr>Possible values: Yes/No<br/>
+Oem_Enable_Auth_Type_None No<br/>
+##&nbsp;<wbr>Possible values: Yes/No<br/>
+Oem_Enable_Auth_Type_Md2 No<br/>
+##&nbsp;<wbr>Possible values: Yes/No<br/>
+Oem_Enable_Auth_Type_Md5 No<br/>
+##&nbsp;<wbr>Possible values: Yes/No<br/>
+Oem_Enable_Auth_Type_Straight_Password No<br/>
+##&nbsp;<wbr>Possible values: Yes/No<br/>
+Oem_Enable_Auth_Type_Oem_Proprietary No<br/>
+&nbsp;<wbr>&nbsp;<wbr>EndSection<br/>
+&nbsp;<wbr>&nbsp;<wbr>Section Lan_Conf_Security_Keys<br/>
+&nbsp;<wbr>&nbsp;<wbr>##&nbsp;<wbr>Give string or blank to clear. Max 20 chars<br/>
+&nbsp;<wbr>&nbsp;<wbr>K_G<br/>
+&nbsp;<wbr>&nbsp;<wbr>EndSection<br/>
+&nbsp;<wbr>&nbsp;<wbr>Section Lan_Conf_Misc<br/>
+##&nbsp;<wbr>Possible values: Yes/No<br/>
+Enable_Gratuitous_Arps Yes<br/>
+##&nbsp;<wbr>Possible values: Yes/No<br/>
+Enable_Arp_Response No<br/>
+##&nbsp;<wbr>Give valid number. Intervals are 500 ms.<br/>
+Gratuitous_Arp_Interval 4<br/>
+&nbsp;<wbr>&nbsp;<wbr>EndSection<br/>
+&nbsp;<wbr>&nbsp;<wbr>Section Rmcpplus_Conf_Privilege<br/>
+##&nbsp;<wbr>Possible values: Unused/User/Operator/Administrator/OEM_Proprietary<br/>
+Maximum_Privilege_Cipher_Suite_Id_0 Unused<br/>
+##&nbsp;<wbr>Possible values: Unused/User/Operator/Administrator/OEM_Proprietary<br/>
+Maximum_Privilege_Cipher_Suite_Id_1 Unused<br/>
+##&nbsp;<wbr>Possible values: Unused/User/Operator/Administrator/OEM_Proprietary<br/>
+Maximum_Privilege_Cipher_Suite_Id_2 Unused<br/>
+##&nbsp;<wbr>Possible values: Unused/User/Operator/Administrator/OEM_Proprietary<br/>
+Maximum_Privilege_Cipher_Suite_Id_3 Administrator<br/>
+##&nbsp;<wbr>Possible values: Unused/User/Operator/Administrator/OEM_Proprietary<br/>
+Maximum_Privilege_Cipher_Suite_Id_4 Administrator<br/>
+##&nbsp;<wbr>Possible values: Unused/User/Operator/Administrator/OEM_Proprietary<br/>
+Maximum_Privilege_Cipher_Suite_Id_5 Administrator<br/>
+##&nbsp;<wbr>Possible values: Unused/User/Operator/Administrator/OEM_Proprietary<br/>
+Maximum_Privilege_Cipher_Suite_Id_6 Unused<br/>
+##&nbsp;<wbr>Possible values: Unused/User/Operator/Administrator/OEM_Proprietary<br/>
+Maximum_Privilege_Cipher_Suite_Id_7 Unused<br/>
+##&nbsp;<wbr>Possible values: Unused/User/Operator/Administrator/OEM_Proprietary<br/>
+Maximum_Privilege_Cipher_Suite_Id_8 Administrator<br/>
+##&nbsp;<wbr>Possible values: Unused/User/Operator/Administrator/OEM_Proprietary<br/>
+Maximum_Privilege_Cipher_Suite_Id_9 Administrator<br/>
+##&nbsp;<wbr>Possible values: Unused/User/Operator/Administrator/OEM_Proprietary<br/>
+Maximum_Privilege_Cipher_Suite_Id_10 Administrator<br/>
+##&nbsp;<wbr>Possible values: Unused/User/Operator/Administrator/OEM_Proprietary<br/>
+Maximum_Privilege_Cipher_Suite_Id_11 Unused<br/>
+##&nbsp;<wbr>Possible values: Unused/User/Operator/Administrator/OEM_Proprietary<br/>
+Maximum_Privilege_Cipher_Suite_Id_12 Administrator<br/>
+##&nbsp;<wbr>Possible values: Unused/User/Operator/Administrator/OEM_Proprietary<br/>
+Maximum_Privilege_Cipher_Suite_Id_13 Administrator<br/>
+##&nbsp;<wbr>Possible values: Unused/User/Operator/Administrator/OEM_Proprietary<br/>
+Maximum_Privilege_Cipher_Suite_Id_14 Administrator<br/>
+&nbsp;<wbr>&nbsp;<wbr>EndSection<br/>
+&nbsp;<wbr>&nbsp;<wbr>Section SOL_Conf<br/>
+##&nbsp;<wbr>Possible values: Yes/No<br/>
+Enable_SOL Yes<br/>
+##&nbsp;<wbr>Possible values: Callback/User/Operator/Administrator/OEM_Proprietary<br/>
+SOL_Privilege_Level Administrator<br/>
+##&nbsp;<wbr>Possible values: Yes/No<br/>
+Force_SOL_Payload_Authentication Yes<br/>
+##&nbsp;<wbr>Possible values: Yes/No<br/>
+Force_SOL_Payload_Encryption Yes<br/>
+##&nbsp;<wbr>Give a valid integer. Each unit is 5ms<br/>
+Character_Accumulate_Interval 50<br/>
+##&nbsp;<wbr>Give a valid number<br/>
+Character_Send_Threshold 100<br/>
+##&nbsp;<wbr>Give a valid integer<br/>
+SOL_Retry_Count 5<br/>
+##&nbsp;<wbr>Give a valid integer. Interval unit is 10ms<br/>
+SOL_Retry_Interval 50<br/>
+##&nbsp;<wbr>Possible values: Serial/9600/19200/38400/57600/115200<br/>
+Non_Volatile_Bit_Rate 115200<br/>
+##&nbsp;<wbr>Possible values: Serial/9600/19200/38400/57600/115200<br/>
+Volatile_Bit_Rate 115200<br/>
+&nbsp;<wbr>&nbsp;<wbr>EndSection<br/>
+&nbsp;<wbr>&nbsp;<wbr>Section Misc<br/>
+##&nbsp;<wbr>Possible Values: Off_State_AC_Apply/Restore_State_AC_Apply/On_State_AC_Apply<br/>
+Power_Restore_Policy Restore_State_Ac_Apply<br/>
 &nbsp;<wbr>&nbsp;<wbr>EndSection </p>
 <h2>Section User1, User2, &#8230;</h2>
 <p>The <i>User</i> sections of the BMC configuration file are for username configuration for IPMI over LAN communication. The number of users available to be configured on your system will vary by manufacturer. With the exception of the Username for User1, all sections are identical. </p>

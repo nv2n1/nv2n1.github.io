@@ -28,11 +28,11 @@ description: "sepolicy-network – Examine the SELinux Policy and generate a net
 <dd>Generate a report listing the SELinux port types associate with the specified port number. </dd>
 </dl>
 <h2>Examples</h2>
-<p><code>sepolicy network -p 22</code><br />
- 22: tcp ssh_port_t 22<br />
- 22: udp reserved_port_t 1-511<br />
- 22: tcp reserved_port_t 1-511 <code>sepolicy network -a /usr/sbin/sshd</code><br />
- sshd_t: tcp name_connect<br />
+<p><code>sepolicy network -p 22</code><br/>
+ 22: tcp ssh_port_t 22<br/>
+ 22: udp reserved_port_t 1-511<br/>
+ 22: tcp reserved_port_t 1-511 <code>sepolicy network -a /usr/sbin/sshd</code><br/>
+ sshd_t: tcp name_connect<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>111 (portmap_port_t)</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>53 (dns_port_t)</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>88, 750, 4444 (kerberos_port_t)</p>
@@ -41,14 +41,14 @@ description: "sepolicy-network – Examine the SELinux Policy and generate a net
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>32768-61000 (ephemeral_port_t)</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>all ports &lt; 1024 (reserved_port_type)</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>all ports with out defined types (port_t)</p>
-<p> sshd_t: tcp name_bind<br />
+<p> sshd_t: tcp name_bind<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>22 (ssh_port_t)</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>5900-5983, 5985-5999 (vnc_port_t)</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>6000-6020 (xserver_port_t)</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>32768-61000 (ephemeral_port_t)</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>all ports &gt; 500 and &lt; 1024 (rpc_port_type)</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>all ports with out defined types (port_t)</p>
-<p> sshd_t: udp name_bind<br />
+<p> sshd_t: udp name_bind<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>32768-61000 (ephemeral_port_t)</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>all ports &gt; 500 and &lt; 1024 (rpc_port_type)</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>all ports with out defined types (port_t)</p>

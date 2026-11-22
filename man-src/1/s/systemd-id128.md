@@ -37,7 +37,7 @@ description: "systemd-id128 – Generate and print sd-128 identifiers"
 <p> <code>-u</code>, <code>&#8211;uuid</code></p>
 <dl>
 <dt>
-</dt><dd> Generate output as an UUID formatted in the &quot;canonical representation&quot;, with five groups of digits separated by hyphens. See the m[blue]<code>wikipedia</code>m[]<font SIZE="-2">[1]</font> for more discussion.</dd></dl>
+</dt><dd> Generate output as an UUID formatted in the &quot;canonical representation&quot;, with five groups of digits separated by hyphens. See the m[blue]<code>wikipedia</code>m[][1] for more discussion.</dd></dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
 <dt>

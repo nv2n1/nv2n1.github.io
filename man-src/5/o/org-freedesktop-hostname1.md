@@ -67,7 +67,7 @@ description: "org.freedesktop.hostname1 – The D-Bus interface of systemd-hostn
  interface org.freedesktop.DBus.Properties { ... };
 };</pre>
 </dd></dl>
-<p> Whenever the hostname or other metadata is changed via the daemon, <code>PropertyChanged</code> signals are sent out to subscribed clients. Changing a hostname using this interface is authenticated via m[blue]<code>polkit</code>m[]<font SIZE="-2">[1]</font>.</p>
+<p> Whenever the hostname or other metadata is changed via the daemon, <code>PropertyChanged</code> signals are sent out to subscribed clients. Changing a hostname using this interface is authenticated via m[blue]<code>polkit</code>m[][1].</p>
 <h2>Semantics</h2>
 <p>The <i>StaticHostname</i> property exposes the &quot;static&quot; hostname configured in /etc/hostname. It is not always in sync with the current hostname as returned by the <code>gethostname</code>(3) system call. If no static hostname is configured this property will be the empty string. </p>
 <p> When <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1) or <code><a href="/docs/linux/man/8-systemd-hostnamed-service/">systemd-hostnamed.service</a></code>(8) set the hostname, this static hostname <i>has the highest priority</i>. </p>
@@ -132,7 +132,7 @@ description: "org.freedesktop.hostname1 – The D-Bus interface of systemd-hostn
 <dd>&bull; &quot;&#8230;zack!!! zack!&#8230;&quot; → &quot;zack-zack&quot;</dd></dl>
 <p> Of course, an already valid internet hostname label you enter and pass through this conversion should stay unmodified, so that users have direct control of it, if they want &#8212; by simply ignoring the fact that the pretty hostname is pretty and just edit it as if it was the normal internet name.</p>
 <h2>Versioning</h2>
-<p>These D-Bus interfaces follow m[blue]<code>the usual interface versioning guidelines</code>m[]<font SIZE="-2">[2]</font>.</p>
+<p>These D-Bus interfaces follow m[blue]<code>the usual interface versioning guidelines</code>m[][2].</p>
 <h2>Examples</h2>
 <p><code>Example 1. Introspect org.freedesktop.hostname1 on the bus</code> </p>
 <dl>
@@ -142,7 +142,7 @@ description: "org.freedesktop.hostname1 – The D-Bus interface of systemd-hostn
  --object-path /org/freedesktop/hostname1</pre>
 </dd></dl>
 <h2>See Also</h2>
-<p>David Zeuthen&#8217;s original Fedora m[blue]<code>Feature page about xdg-hostname</code>m[]<font SIZE="-2">[3]</font></p>
+<p>David Zeuthen&#8217;s original Fedora m[blue]<code>Feature page about xdg-hostname</code>m[][3]</p>
 <h2>Notes</h2>
 <dl>
 <dt> 1.</dt>

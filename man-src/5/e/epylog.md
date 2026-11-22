@@ -34,8 +34,8 @@ description: "epylog.conf – epylog configuration"
 <dt><code>include_unparsed</code></dt>
 <dd>Can be either &quot;yes&quot; or &quot;no&quot;. If &quot;no&quot; is specified, strings that didn&#8217;t match any of the modules will not be appended to the report. Not very wise! A good setting is &quot;yes&quot;.</dd>
 <dt><code>publishers</code></dt>
-<dd>Lists the publishers to use. The value is the name of the section where to look for the publisher configuration. E.g.:<br />
- <code>publishers = nfspub</code><br />
+<dd>Lists the publishers to use. The value is the name of the section where to look for the publisher configuration. E.g.:<br/>
+ <code>publishers = nfspub</code><br/>
  will look for a section called &quot;[nfspub]&quot; for publisher initialization. The name of the publisher has nothing to do with the method it uses for publishing. The fact that the default are named [file] and [mail] is only a matter of convenience. List multiple values separated by a comma. </dd>
 </dl>
 <h2>Mail Publisher</h2>
@@ -43,8 +43,8 @@ description: "epylog.conf – epylog configuration"
 <dt><code>method</code></dt>
 <dd>Method must be set to &quot;mail&quot; for this publisher to be considered a mail publisher.</dd>
 <dt><code>smtpserv</code></dt>
-<dd>Can be either a hostname of an SMTP server to use, or the location of a sendmail binary. If the value starts with a &quot;/&quot; it will be considered a path. E.g. valid entries:<br />
- <code>smtpserv = mail.example.com</code><br />
+<dd>Can be either a hostname of an SMTP server to use, or the location of a sendmail binary. If the value starts with a &quot;/&quot; it will be considered a path. E.g. valid entries:<br/>
+ <code>smtpserv = mail.example.com</code><br/>
  <code>smtpserv = /usr/sbin/sendmail -t</code></dd>
 <dt><code>mailto</code></dt>
 <dd>The list of email addresses where to mail the report. Separate multiple entries by a comma. If ommitted, &quot;root [at] localhost&quot; will be used.</dd>
@@ -72,8 +72,8 @@ description: "epylog.conf – epylog configuration"
 <dt><code>smtpserv</code></dt>
 <dd>Use this smtp server when sending notifications. Can be either a hostname or a path to sendmail. Defaults to &quot;/usr/sbin/sendmail -t&quot;.</dd>
 <dt><code>pubroot</code></dt>
-<dd>When generating a notification message, use this as publication root to make a link. E.g.:<br />
- <code>pubroot = <a rel="nofollow" href="http://www.example.com/epylog">http://www.example.com/epylog</a></code><br />
+<dd>When generating a notification message, use this as publication root to make a link. E.g.:<br/>
+ <code>pubroot = <a rel="nofollow" href="http://www.example.com/epylog">http://www.example.com/epylog</a></code><br/>
  will make a link: <a rel="nofollow" href="http://www.example.com/epylog/dirname/filename.html">http://www.example.com/epylog/dirname/filename.html</a> </dd>
 </dl>
 <h2>Comments</h2>

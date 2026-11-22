@@ -65,8 +65,8 @@ description: "util/sgeCA/sge_ca – xxQS_NAMExx CSP Support control command"
 <h2>Command Details</h2>
 <dl>
 <dt><code>sge_ca -init </code>[<code>-cadir</code> <i>dir</i>] [<code>-catop</code> <i>dir</i>] [<code>-calocaltop</code> <i>dir</i>] [<code>-adminuser</code> <i>admin</i>] [<code>-days</code> <i>num days</i>]</dt>
-<dd>The <code>-init</code> command creates a new xxQS_NAMExx certificate authority and its corresponding files. Usually &quot;<code>sge_ca -init</code>&quot; is run by user root on the master host. If the options <code>-adminuser</code>, <code>-cadir</code>, <code>-calocaltop</code>, and <code>-catop</code> are not used, and the xxQS_NAMExx environment variables SGE_ROOT, SGE_CELL and SGE_QMASTER_PORT are set, the CA directories are created in the following locations: <i>$SGE_ROOT/$SGE_CELL/common/sgeCA</i> (can be overruled by <code>-catop</code> <i>dir</i> or <code>-cadir</code> <i>dir</i>)<br />
- <i>/var/lib/sgeCA/port$SGE_QMASTER_PORT/$SGE_CELL</i> or <i>/var/lib/sgeCA/sge_qmaster/$SGE_CELL</i> (can be overruled by <code>-calocaltop</code> <i>dir</i> or <code>-cadir</code> <i>dir</i>).<br />
+<dd>The <code>-init</code> command creates a new xxQS_NAMExx certificate authority and its corresponding files. Usually &quot;<code>sge_ca -init</code>&quot; is run by user root on the master host. If the options <code>-adminuser</code>, <code>-cadir</code>, <code>-calocaltop</code>, and <code>-catop</code> are not used, and the xxQS_NAMExx environment variables SGE_ROOT, SGE_CELL and SGE_QMASTER_PORT are set, the CA directories are created in the following locations: <i>$SGE_ROOT/$SGE_CELL/common/sgeCA</i> (can be overruled by <code>-catop</code> <i>dir</i> or <code>-cadir</code> <i>dir</i>)<br/>
+ <i>/var/lib/sgeCA/port$SGE_QMASTER_PORT/$SGE_CELL</i> or <i>/var/lib/sgeCA/sge_qmaster/$SGE_CELL</i> (can be overruled by <code>-calocaltop</code> <i>dir</i> or <code>-cadir</code> <i>dir</i>).<br/>
  The following information must be delivered for the site: two letter country code, state, location, e.g. city or your building code, organization (e.g. your company name), organizational unit, e.g. your department, and email address of the CA administrator (you!).</dd></dl>
 <p> Certificates and keys are generated for the CA itself, the xxQS_NAMExx daemon, installation user (usually root), and finally for the admin user. </p>
 <p> How and where the certificates and keys are created can be influenced additionally by:</p>
@@ -146,8 +146,8 @@ description: "util/sgeCA/sge_ca – xxQS_NAMExx CSP Support control command"
 <dt># sge_ca -init -cadir /tmp -sha1 -encryptkey -days 31</dt>
 <dd>Create a CA infrastructure in /tmp with a certificate validity of 31 days using SHA-1 instead of MD5 as message digest. The keys are encrypted and a passphrase has to be entered during the creation of the different keys or during signing a certificate with the created CA key.</dd>
 <dt># sge_ca -usercert /tmp/myusers.txt -cadir /tmp</dt>
-<dd>/tmp/myusers.txt contains<br />
- user1:My User:user1 [at] myorg.org<br />
+<dd>/tmp/myusers.txt contains<br/>
+ user1:My User:user1 [at] myorg.org<br/>
  and user1 is a valid Unix user account. Create a key and certificate for user1.</dd>
 <dt># sge_ca -userks -cadir /tmp</dt>
 <dd>Create a keystore for all users of the simple CA. The keystore is stored under /tmp/userkeys/<i>user</i>/keystore.</dd>

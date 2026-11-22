@@ -19,12 +19,12 @@ const std::vector&lt; Time &gt; &amp; optionTimes () const</code></pre>
 <p>const std::vector&lt; Period &gt; &amp; optionTenorsInInterpolation () const</p>
 <p>const std::vector&lt; Date &gt; &amp; optionDates () const</p>
 <p>const std::vector&lt; Time &gt; &amp; optionTimes () const <code>TermStructure interface</code> </p>
-<p> virtual <code>Date</code> <code>maxDate</code> () const<br />
+<p> virtual <code>Date</code> <code>maxDate</code> () const<br/>
  <i>the latest date for which the curve can return values </i> <code>VolatilityTermStructure interface</code> </p>
-<p> <code>Real</code> <code>minStrike</code> () const<br />
- <i>the minimum strike for which the term structure can return vols </i><br />
- <code>Real</code> <code>maxStrike</code> () const<br />
- <i>the maximum strike for which the term structure can return vols </i> <code>LazyObject interface</code><br />
+<p> <code>Real</code> <code>minStrike</code> () const<br/>
+ <i>the minimum strike for which the term structure can return vols </i><br/>
+ <code>Real</code> <code>maxStrike</code> () const<br/>
+ <i>the maximum strike for which the term structure can return vols </i> <code>LazyObject interface</code><br/>
  const std::vector&lt; Period &gt; &amp; optionTenors () const</p>
 <p>const std::vector&lt; Period &gt; &amp; optionTenorsInInterpolation () const</p>
 <p>const std::vector&lt; Date &gt; &amp; optionDates () const</p>
@@ -37,9 +37,9 @@ const std::vector&lt; Time &gt; &amp; optionTimes () const</code></pre>
 <p> virtual void <code>accept</code> (<code>AcyclicVisitor</code> &amp;)</p>
 <h3>Protected Member Functions</h3>
 <p><code>BlackAtmVolCurve interface</code> </p>
-<p> virtual <code>Real</code> <code>atmVarianceImpl</code> (Time t) const<br />
- <i>spot at-the-money variance calculation (k adjusted) </i><br />
- virtual <code>Volatility</code> <code>atmVolImpl</code> (Time t) const<br />
+<p> virtual <code>Real</code> <code>atmVarianceImpl</code> (Time t) const<br/>
+ <i>spot at-the-money variance calculation (k adjusted) </i><br/>
+ virtual <code>Volatility</code> <code>atmVolImpl</code> (Time t) const<br/>
  <i>spot at-the-money volatility calculation (k adjusted) </i></p>
 <h2>Detailed Description</h2>
 <p>Abcd-interpolated at-the-money (no-smile) volatility curve. </p>

@@ -18,11 +18,11 @@ description: "QuantLib::ZeroInflationTermStructure – Interface for zero inflat
 <p> <code>ZeroInflationTermStructure</code> (const <code>Date</code> &amp;referenceDate, const <code>Calendar</code> &amp;calendar, const <code>DayCounter</code> &amp;dayCounter, const <code>Period</code> &amp;lag, <code>Frequency</code> frequency, <code>Rate</code> baseZeroRate, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;yTS) </p>
 <p> <code>ZeroInflationTermStructure</code> (<code>Natural</code> settlementDays, const <code>Calendar</code> &amp;calendar, const <code>DayCounter</code> &amp;dayCounter, const <code>Period</code> &amp;lag, <code>Frequency</code> frequency, <code>Rate</code> baseZeroRate, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;yTS) </p>
 <p> <code>Inspectors</code> </p>
-<p> <code>Rate</code> <code>zeroRate</code> (const <code>Date</code> &amp;d, bool extrapolate=false) const<br />
- <i>zero-coupon inflation rate </i><br />
+<p> <code>Rate</code> <code>zeroRate</code> (const <code>Date</code> &amp;d, bool extrapolate=false) const<br/>
+ <i>zero-coupon inflation rate </i><br/>
  <code>Rate</code> <code>zeroRate</code> (Time t, bool extrapolate=false) const </p>
 <h3>Protected Member Functions</h3>
-<p>virtual <code>Rate</code> <code>zeroRateImpl</code> (Time t) const =0<br />
+<p>virtual <code>Rate</code> <code>zeroRateImpl</code> (Time t) const =0<br/>
  <i>to be defined in derived classes </i></p>
 <h2>Detailed Description</h2>
 <p>Interface for zero inflation term structures.</p>

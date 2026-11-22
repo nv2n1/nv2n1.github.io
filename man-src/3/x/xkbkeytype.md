@@ -10,7 +10,7 @@ description: "XkbKeyType – Obtain the index of a key type or the pointer to a 
 <p>XkbKeyType &#8211; Obtain the index of a key type or the pointer to a key type </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>XkbKeyTypePtr XkbKeyType</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>KeyCode </code><i>keycode</i><code>,</code> <code>int </code><i>group</i><code>);</code><br />
+<dt> <code>XkbKeyTypePtr XkbKeyType</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>KeyCode </code><i>keycode</i><code>,</code> <code>int </code><i>group</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

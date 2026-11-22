@@ -61,8 +61,8 @@ description: "nfsref – manage NFS referrals"
 <h2>Examples</h2>
 <p>Suppose you have two file servers, <i>top.example.net</i> and <i>home.example.net</i>. You want all your clients to mount <i>top.example.net:/</i> and then see the files under <i>home.example.net:/</i> automatically in <i>top:/home</i>. On <i>top.example.net</i>, you might issue this command as root:</p>
 <dl>
-<dd># mkdir /home<br />
- # nfsref &#8211;type=nfs-basic add /home home.example.net /<br />
+<dd># mkdir /home<br/>
+ # nfsref &#8211;type=nfs-basic add /home home.example.net /<br/>
  Created junction /home. </dd>
 <h2>Files</h2>
 <dl>

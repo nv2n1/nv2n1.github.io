@@ -26,7 +26,7 @@ git bundle create[-q | --quiet | --progress | --all - progress][--all - progress
 <p> Like the the packed archive format itself bundles can either be self-contained, or be created using exclusions. See the &quot;OBJECT PREREQUISITES&quot; section below. </p>
 <p> Bundles created using revision exclusions are &quot;thin packs&quot; created using the <code>&#8211;thin</code> option to <code><a href="/docs/linux/man/1-git-pack-objects/">git-pack-objects</a></code>(1), and unbundled using the <code>&#8211;fix-thin</code> option to <code><a href="/docs/linux/man/1-git-index-pack/">git-index-pack</a></code>(1). </p>
 <p> There is no option to create a &quot;thick pack&quot; when using revision exclusions, and users should not be concerned about the difference. By using &quot;thin packs&quot;, bundles created using exclusions are smaller in size. That they&#8217;re &quot;thin&quot; under the hood is merely noted here as a curiosity, and as a reference to other documentation. </p>
-<p> See m[blue]<code>the bundle-format</code> documentationm[]<font SIZE="-2">[1]</font> for more details and the discussion of &quot;thin pack&quot; in m[blue]<code>the pack format documentation</code>m[]<font SIZE="-2">[2]</font> for further details.</p>
+<p> See m[blue]<code>the bundle-format</code> documentationm[][1] for more details and the discussion of &quot;thin pack&quot; in m[blue]<code>the pack format documentation</code>m[][2] for further details.</p>
 <h2>OPTIONS</h2>
 <p> create [options] &lt;file&gt; &lt;git-rev-list-args&gt;</p>
 <dl>

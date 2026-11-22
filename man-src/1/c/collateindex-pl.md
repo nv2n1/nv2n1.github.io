@@ -9,11 +9,11 @@ description: "collateindex.pl – generate DocBook index files"
 
 <p>collateindex.pl &#8211; generate DocBook index files</p>
 <h2>Synopsis</h2>
-<p><code>collateindex.pl</code> [<code>-f</code>] [<code>-g</code>] [<code>-i</code> <i>id</i>] [<code>-I</code> <i>scope</i>] [<code>-N</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>-o</code>&nbsp;<wbr><i>file</i>]&nbsp;<wbr>[<code>-p</code>]&nbsp;<wbr>[<code>-P</code>&nbsp;<wbr><i>file</i>]&nbsp;<wbr>[<code>-q</code>]&nbsp;<wbr>[<code>-s</code>&nbsp;<wbr><i>name</i>]<br />
+<p><code>collateindex.pl</code> [<code>-f</code>] [<code>-g</code>] [<code>-i</code> <i>id</i>] [<code>-I</code> <i>scope</i>] [<code>-N</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>-o</code>&nbsp;<wbr><i>file</i>]&nbsp;<wbr>[<code>-p</code>]&nbsp;<wbr>[<code>-P</code>&nbsp;<wbr><i>file</i>]&nbsp;<wbr>[<code>-q</code>]&nbsp;<wbr>[<code>-s</code>&nbsp;<wbr><i>name</i>]<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>-S</code>&nbsp;<wbr><i>scope</i>]&nbsp;<wbr>[<code>-t</code>&nbsp;<wbr><i>name</i>]&nbsp;<wbr>[<code>-x</code>]&nbsp;<wbr><i>file</i></p>
 <h2>Description</h2>
-<p><code>collateindex.pl</code> creates index data for DocBook <font SIZE="-1">XML</font> or <font SIZE="-1">SGML</font> files.</p>
+<p><code>collateindex.pl</code> creates index data for DocBook XML or SGML files.</p>
 <h2>Options</h2>
 <dl>
 <dt><code>-f</code></dt>
@@ -21,7 +21,7 @@ description: "collateindex.pl – generate DocBook index files"
 <dt><code>-g</code></dt>
 <dd>Group terms with IndexDiv based on the first letter of the term (or its SortAs attribute). (This might not handle all language environments.)</dd>
 <dt><code>-i</code> <i>id</i></dt>
-<dd>The <font SIZE="-1">ID</font> to use for the &lt;index&gt; tag.</dd>
+<dd>The ID to use for the &lt;index&gt; tag.</dd>
 <dt><code>-I</code> <i>scope</i></dt>
 <dd>The implied scope, must be <tt>&quot;all&quot;</tt>, <tt>&quot;local&quot;</tt>, or <tt>&quot;global&quot;</tt>. IndexTerms which do not specify a scope will have the implied scope. If unspecified, <tt>&quot;all&quot;</tt> is assumed.</dd>
 <dt><code>-N</code></dt>
@@ -45,9 +45,9 @@ description: "collateindex.pl – generate DocBook index files"
 <dt><code>-V</code></dt>
 <dd>Print version number and exit.</dd>
 <dt><i>file</i></dt>
-<dd>The file containing index data generated with the DocBook <font SIZE="-1">DSSSL</font> <font SIZE="-1">HTML</font> stylesheet (usually called <i></i><font SIZE="-1"><i>HTML</i></font><i>.index</i>).</dd></dl>
+<dd>The file containing index data generated with the DocBook DSSSL HTML stylesheet (usually called <i></i><i>HTML</i><i>.index</i>).</dd></dl>
 <h2>Example</h2>
-<p><code>collateindex.pl</code> <code>-o</code> <i>index.sgml</i> <i></i><font SIZE="-1"><i>HTML</i></font><i>.index</i></p>
+<p><code>collateindex.pl</code> <code>-o</code> <i>index.sgml</i> <i></i><i>HTML</i><i>.index</i></p>
 <h2>Exit Status</h2>
 <dl>
 <dt><code>0</code></dt>

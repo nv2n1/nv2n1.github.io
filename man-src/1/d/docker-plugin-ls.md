@@ -14,15 +14,15 @@ description: "docker-plugin-ls – List plugins"
 <h2>DESCRIPTION</h2>
 <p> Lists all the plugins that are currently installed. You can install plugins using the docker plugin install command. You can also filter using the -f or &#8211;filter flag. </p>
 <h2>Filters</h2>
-<p> Filter output based on these conditions:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; enabled=(true|false)&nbsp;&#8211; plugins that are enabled or not<br />
+<p> Filter output based on these conditions:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; enabled=(true|false)&nbsp;&#8211; plugins that are enabled or not<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; capability=&nbsp;&#8211; filters plugins based on capabilities&nbsp;(currently volumedriver, networkdriver, ipamdriver, or authz) </p>
 <h2>Format</h2>
-<p> Pretty-print plugins using a Go template.<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;Valid placeholders:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.ID &#8211; Plugin ID.<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.Name &#8211; Plugin Name.<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.Description &#8211; Plugin description.<br />
+<p> Pretty-print plugins using a Go template.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;Valid placeholders:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.ID &#8211; Plugin ID.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.Name &#8211; Plugin Name.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.Description &#8211; Plugin description.<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;.Enabled &#8211; Whether plugin is enabled or not. </p>
 <h2>EXAMPLES</h2>
 <h2>Display all plugins</h2>

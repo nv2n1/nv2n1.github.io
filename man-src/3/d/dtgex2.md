@@ -11,7 +11,7 @@ description: "dtgex2.f –"
 <p> dtgex2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dtgex2</code> (WANTQ, WANTZ, N, A, LDA, B, LDB, Q, LDQ, Z, LDZ, J1, N1, N2, WORK, LWORK, INFO)<br />
+<p> subroutine <code>dtgex2</code> (WANTQ, WANTZ, N, A, LDA, B, LDB, Q, LDQ, Z, LDZ, J1, N1, N2, WORK, LWORK, INFO)<br/>
  <i></i><code>DTGEX2</code> swaps adjacent diagonal blocks in an upper (quasi) triangular matrix pair by an orthogonal equivalence transformation.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dtgex2 (logicalWANTQ, logicalWANTZ, integerN, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( ldb, * )B, integerLDB, double precision, dimension( ldq, * )Q, integerLDQ, double precision, dimension( ldz, * )Z, integerLDZ, integerJ1, integerN1, integerN2, double precision, dimension( * )WORK, integerLWORK, integerINFO)</h3>

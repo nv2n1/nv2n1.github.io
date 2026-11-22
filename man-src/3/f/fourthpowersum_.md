@@ -14,10 +14,10 @@ description: "QuantLib::IncrementalStatistics – Statistics tool based on incre
 <p>typedef <code>Real</code> <code>value_type</code> </p>
 <h3>Public Member Functions</h3>
 <p><code>Inspectors</code> </p>
-<p> Size <code>samples</code> () const<br />
- <i>number of samples collected </i><br />
- <code>Real</code> <code>weightSum</code> () const<br />
- <i>sum of data weights </i><br />
+<p> Size <code>samples</code> () const<br/>
+ <i>number of samples collected </i><br/>
+ <code>Real</code> <code>weightSum</code> () const<br/>
+ <i>sum of data weights </i><br/>
  <code>Real</code> <code>mean</code> () const </p>
 <p> <code>Real</code> <code>variance</code> () const </p>
 <p> <code>Real</code> <code>standardDeviation</code> () const </p>
@@ -29,13 +29,13 @@ description: "QuantLib::IncrementalStatistics – Statistics tool based on incre
 <p> <code>Real</code> <code>downsideVariance</code> () const </p>
 <p> <code>Real</code> <code>downsideDeviation</code> () const </p>
 <p> <code>Modifiers</code> </p>
-<p> void <code>add</code> (<code>Real</code> value, <code>Real</code> weight=1.0)<br />
- <i>adds a datum to the set, possibly with a weight </i><br />
- template&lt;class DataIterator &gt; void <code>addSequence</code> (DataIterator begin, DataIterator end)<br />
- <i>adds a sequence of data to the set, with default weight </i><br />
- template&lt;class DataIterator , class WeightIterator &gt; void <code>addSequence</code> (DataIterator begin, DataIterator end, WeightIterator wbegin)<br />
- <i>adds a sequence of data to the set, each with its weight </i><br />
- void <code>reset</code> ()<br />
+<p> void <code>add</code> (<code>Real</code> value, <code>Real</code> weight=1.0)<br/>
+ <i>adds a datum to the set, possibly with a weight </i><br/>
+ template&lt;class DataIterator &gt; void <code>addSequence</code> (DataIterator begin, DataIterator end)<br/>
+ <i>adds a sequence of data to the set, with default weight </i><br/>
+ template&lt;class DataIterator , class WeightIterator &gt; void <code>addSequence</code> (DataIterator begin, DataIterator end, WeightIterator wbegin)<br/>
+ <i>adds a sequence of data to the set, each with its weight </i><br/>
+ void <code>reset</code> ()<br/>
  <i>resets the data to a null set </i></p>
 <h3>Protected Attributes</h3>
 <p>Size <code>sampleNumber_</code> </p>

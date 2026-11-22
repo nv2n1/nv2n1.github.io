@@ -88,7 +88,7 @@ description: "Error Data Accessors and Modifiers –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>error</i> The error object for which to set the causative error.<br />
+</dt><dd> <i>error</i> The error object for which to set the causative error.<br/>
  <i>causal_error</i> The causative error.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -99,7 +99,7 @@ description: "Error Data Accessors and Modifiers –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>error</i> The error object for which to set the description<br />
+</dt><dd> <i>error</i> The error object for which to set the description<br/>
  <i>long_desc_format</i> Longer format string giving a more detailed explanation of the error.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -110,8 +110,8 @@ description: "Error Data Accessors and Modifiers –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>error</i> The error object for which to set the description<br />
- <i>short_desc_format</i> Short format string giving a succinct description of the error. To be passed on to the user.<br />
+</dt><dd> <i>error</i> The error object for which to set the description<br/>
+ <i>short_desc_format</i> Short format string giving a succinct description of the error. To be passed on to the user.<br/>
  <i>&#8230;</i> Arguments for the format string.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -122,7 +122,7 @@ description: "Error Data Accessors and Modifiers –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>error</i> The error object for which to set the causative error<br />
+</dt><dd> <i>error</i> The error object for which to set the causative error<br/>
  <i>source_module</i> The originating module descriptor</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -133,7 +133,7 @@ description: "Error Data Accessors and Modifiers –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>error</i> The error object for which to set the error type<br />
+</dt><dd> <i>error</i> The error object for which to set the error type<br/>
  <i>type</i> The error type</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

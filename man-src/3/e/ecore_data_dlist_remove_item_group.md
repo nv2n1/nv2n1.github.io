@@ -9,13 +9,13 @@ description: "Doubly Linked List Removing Functions – Functions that remove no
 
 <p>Doubly Linked List Removing Functions &#8211; Functions that remove nodes from an Ecore_DList. </p>
 <h3>Functions</h3>
-<p>EAPI void * <code>ecore_dlist_remove</code> (Ecore_DList *list)<br />
- <i>Removes the current item from the given doubly linked list. </i><br />
- EAPI void * <code>ecore_dlist_first_remove</code> (Ecore_DList *list)<br />
- <i>Removes the first item from the given doubly linked list. </i><br />
- EAPI int <code>ecore_dlist_remove_destroy</code> (Ecore_DList *list)<br />
- <i>Removes and frees the data at the current position in the given doubly linked list. </i><br />
- EAPI void * <code>ecore_dlist_last_remove</code> (Ecore_DList *list)<br />
+<p>EAPI void * <code>ecore_dlist_remove</code> (Ecore_DList *list)<br/>
+ <i>Removes the current item from the given doubly linked list. </i><br/>
+ EAPI void * <code>ecore_dlist_first_remove</code> (Ecore_DList *list)<br/>
+ <i>Removes the first item from the given doubly linked list. </i><br/>
+ EAPI int <code>ecore_dlist_remove_destroy</code> (Ecore_DList *list)<br/>
+ <i>Removes and frees the data at the current position in the given doubly linked list. </i><br/>
+ EAPI void * <code>ecore_dlist_last_remove</code> (Ecore_DList *list)<br/>
  <i>Removes the last item from the given doubly linked list. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that remove nodes from an Ecore_DList.</p>

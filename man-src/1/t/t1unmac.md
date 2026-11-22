@@ -40,6 +40,6 @@ description: "t1unmac – translate a Mac PostScript Type 1 font into PFA or PFB
 </pre>
 <h2>SEE ALSO</h2>
 <h2>AUTHORS</h2>
-<p> Lee Hetherington (ilh [at] lcs.mit.edu)<br />
+<p> Lee Hetherington (ilh [at] lcs.mit.edu)<br/>
  Eddie Kohler (ekohler [at] gmail.com) </p>
 <p> Ported to Microsoft C/C++ Compiler and MS-DOS operating system by Kai-Uwe Herbing (herbing [at] netmbx.netmbx.de). </p>

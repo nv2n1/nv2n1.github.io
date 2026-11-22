@@ -10,7 +10,7 @@ description: "kwalletcli_getpin – command line interface to pinentry"
 
 <p> <code>kwalletcli_getpin</code> &#8211; command line interface to pinentry</p>
 <h2>SYNOPSIS</h2>
-<p> [-<code>q</code> ] [-<code>b | m | p </code><i>prompt</i> ] [-<code>E | e </code><i>errortext</i> ]<br />
+<p> [-<code>q</code> ] [-<code>b | m | p </code><i>prompt</i> ] [-<code>E | e </code><i>errortext</i> ]<br/>
  [-<code>N </code><i>NoText</i> ] [-<code>t </code><i>desctext</i> ] [-<code>Y </code><i>YesText</i> ]</p>
 <h2>DESCRIPTION</h2>
 <p> The utility is a shell wrapper speaking to <code>pinentry</code> using the Assuan protocol. It will ask the user for a passphrase and print it, without any trailing newline, to standard output. There are options for asking a boolean question or displaying a message. </p>

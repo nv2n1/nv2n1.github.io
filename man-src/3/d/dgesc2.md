@@ -11,7 +11,7 @@ description: "dgesc2.f –"
 <p> dgesc2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dgesc2</code> (N, A, LDA, RHS, IPIV, JPIV, SCALE)<br />
+<p> subroutine <code>dgesc2</code> (N, A, LDA, RHS, IPIV, JPIV, SCALE)<br/>
  <i></i><code>DGESC2</code> solves a system of linear equations using the LU factorization with complete pivoting computed by sgetc2.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dgesc2 (integerN, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( * )RHS, integer, dimension( * )IPIV, integer, dimension( * )JPIV, double precisionSCALE)</h3>

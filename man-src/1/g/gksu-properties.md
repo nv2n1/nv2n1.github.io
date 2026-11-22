@@ -17,6 +17,6 @@ description: "gksu-properties – Configure the behaviour of gksu"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gksu/">gksu</a></code>(1),&nbsp;<wbr><code>su</code>&nbsp;<wbr>(1),<code>&nbsp;<wbr><a href="/docs/linux/man/1-sudo/">sudo</a></code>(1) </p>
 <h2>AUTHORS</h2>
-<p> Gustavo Noronha Silva &lt;kov [at] debian.org&gt;<br />
+<p> Gustavo Noronha Silva &lt;kov [at] debian.org&gt;<br/>
  Allan Douglas &lt;allan_douglas [at] gmx.net&gt; </p>
 <p> This manual page was written by Francois Wendling &lt;frwendling [at] free.fr&gt; for the Debian GNU/Linux system (but may be used by others). </p>

@@ -49,9 +49,9 @@ int hivex_node_set_value(hive_h *h, hive_node_h node, const hive_set_value *val,
 
  Hivex is a library for extracting the contents of Windows Registry ``hive'' files. It is designed to be secure against buggy or malicious registry files. 
 
- Unlike other tools in this area, it doesn't use the textual .REG format, because parsing that is as much trouble as parsing the original binary format. Instead it makes the file available through a C <font SIZE="-1">API,</font> and then wraps this <font SIZE="-1">API</font> in higher level scripting and <font SIZE="-1">GUI</font> tools. 
+ Unlike other tools in this area, it doesn't use the textual .REG format, because parsing that is as much trouble as parsing the original binary format. Instead it makes the file available through a C API, and then wraps this API in higher level scripting and GUI tools. 
 
- There is a separate program to export the hive as <font SIZE="-1">XML </font>(see <i><a HREF="/docs/linux/man/1-hivexml/">hivexml</a></i>(1)), or to navigate the file (see <i><a HREF="/docs/linux/man/1-hivexsh/">hivexsh</a></i>(1)). There is also a Perl script to export and merge the file as a textual .REG (regedit) file, see <i><a HREF="/docs/linux/man/1-hivexregedit/">hivexregedit</a></i>(1). 
+ There is a separate program to export the hive as XML (see <i><a HREF="/docs/linux/man/1-hivexml/">hivexml</a></i>(1)), or to navigate the file (see <i><a HREF="/docs/linux/man/1-hivexsh/">hivexsh</a></i>(1)). There is also a Perl script to export and merge the file as a textual .REG (regedit) file, see <i><a HREF="/docs/linux/man/1-hivexregedit/">hivexregedit</a></i>(1). 
 
  If you just want to export or modify the Registry of a Windows virtual machine, you should look at <i><a HREF="/docs/linux/man/1-virt-win-reg/">virt-win-reg</a></i>(1). 
 
@@ -136,17 +136,17 @@ hive_h *hivex_open(const char *filename, int flags);
 
  Flags is an ORed list of the open flags (or <tt>0</tt> if you don't want to pass any flags). These flags are defined:
 <dl>
-<dt><font SIZE="-1">HIVEX_OPEN_VERBOSE</font>
+<dt>HIVEX_OPEN_VERBOSE
 </dt><dd> Verbose messages.
-</dd><dt><font SIZE="-1">HIVEX_OPEN_DEBUG</font>
+</dd><dt>HIVEX_OPEN_DEBUG
 </dt><dd> Very verbose messages, suitable for debugging problems in the library itself. 
  This is also selected if the <tt>&quot;HIVEX_DEBUG&quot;</tt> environment variable is set to 1.
-</dd><dt><font SIZE="-1">HIVEX_OPEN_WRITE</font>
+</dd><dt>HIVEX_OPEN_WRITE
 </dt><dd> Open the hive for writing. If omitted, the hive is read-only. 
- See ``<font SIZE="-1">WRITING TO HIVE FILES''</font> in <i><a HREF="/docs/linux/man/3-hivex/">hivex</a></i>(3).</dd></dl>
+ See ``WRITING TO HIVE FILES'' in <i><a HREF="/docs/linux/man/3-hivex/">hivex</a></i>(3).</dd></dl>
  
 
- Returns a new hive handle. On error this returns <font SIZE="-1">NULL</font> and sets errno.
+ Returns a new hive handle. On error this returns NULL and sets errno.
 
 <h3>hivex_close</h3>
 
@@ -156,7 +156,7 @@ int hivex_close(hive_h *h);
 
  Close a hive handle and free all associated resources. 
 
- Note that any uncommitted writes are <i>not</i> committed by this call, but instead are lost. See ``<font SIZE="-1">WRITING TO HIVE FILES''</font> in <i><a HREF="/docs/linux/man/3-hivex/">hivex</a></i>(3). 
+ Note that any uncommitted writes are <i>not</i> committed by this call, but instead are lost. See ``WRITING TO HIVE FILES'' in <i><a HREF="/docs/linux/man/3-hivex/">hivex</a></i>(3). 
 
  Returns 0 on success. On error this returns -1 and sets errno. 
 
@@ -192,9 +192,9 @@ char *hivex_node_name(hive_h *h, hive_node_h node);
 
  Note that the name of the root node is a dummy, such as <tt>&quot;$$$PROTO.HIV&quot;</tt> (other names are possible: it seems to depend on the tool or program that created the hive in the first place). You can only know the ``real'' name of the root node by knowing which registry file this hive originally comes from, which is knowledge that is outside the scope of this library. 
 
- The name is recoded to <font SIZE="-1">UTF-8</font> and may contain embedded <font SIZE="-1">NUL</font> characters. 
+ The name is recoded to UTF-8 and may contain embedded NUL characters. 
 
- Returns a string. The string must be freed by the caller when it is no longer needed. On error this returns <font SIZE="-1">NULL</font> and sets errno.
+ Returns a string. The string must be freed by the caller when it is no longer needed. On error this returns NULL and sets errno.
 
 <h3>hivex_node_name_len</h3>
 
@@ -224,7 +224,7 @@ char *hivex_node_name(hive_h *h, hive_node_h node);
 
  Return an array of nodes which are the subkeys (children) of <tt>&quot;node&quot;</tt>. 
 
- Returns a 0-terminated array of nodes. The array must be freed by the caller when it is no longer needed. On error this returns <font SIZE="-1">NULL</font> and sets errno.
+ Returns a 0-terminated array of nodes. The array must be freed by the caller when it is no longer needed. On error this returns NULL and sets errno.
 
 <h3>hivex_node_get_child</h3>
 
@@ -258,7 +258,7 @@ hive_node_h hivex_node_get_child(hive_h *h, hive_node_h node, const char *name);
 
  Return the array of (key, value) pairs attached to this node. 
 
- Returns a 0-terminated array of values. The array must be freed by the caller when it is no longer needed. On error this returns <font SIZE="-1">NULL</font> and sets errno.
+ Returns a 0-terminated array of values. The array must be freed by the caller when it is no longer needed. On error this returns NULL and sets errno.
 
 <h3>hivex_node_get_value</h3>
 
@@ -284,7 +284,7 @@ hive_value_h hivex_node_get_value(hive_h *h, hive_node_h node, const char *key);
 
  In the context of Windows Registries, a zero-length name means that this value is the default key for this node in the tree. This is usually written as <tt>&quot;@&quot;</tt>. 
 
- The key is recoded to <font SIZE="-1">UTF-8</font> and may contain embedded <font SIZE="-1">NUL</font> characters. 
+ The key is recoded to UTF-8 and may contain embedded NUL characters. 
 
  Returns a size. On error this returns 0 and sets errno.
 
@@ -294,13 +294,13 @@ hive_value_h hivex_node_get_value(hive_h *h, hive_node_h node, const char *key);
 char *hivex_value_key(hive_h *h, hive_value_h val);
  
 
- Return the key (name) of a (key, value) pair. The name is reencoded as <font SIZE="-1">UTF-8</font> and returned as a string. 
+ Return the key (name) of a (key, value) pair. The name is reencoded as UTF-8 and returned as a string. 
 
  The string should be freed by the caller when it is no longer needed. 
 
  Note that this function can return a zero-length string. In the context of Windows Registries, this means that this value is the default key for this node in the tree. This is usually written as <tt>&quot;@&quot;</tt>. 
 
- Returns a string. The string must be freed by the caller when it is no longer needed. On error this returns <font SIZE="-1">NULL</font> and sets errno.
+ Returns a string. The string must be freed by the caller when it is no longer needed. On error this returns NULL and sets errno.
 
 <h3>hivex_value_type</h3>
 
@@ -356,7 +356,7 @@ char *hivex_value_value(hive_h *h, hive_value_h val, hive_type *t, size_t *len);
 
  Return the value of this (key, value) pair. The value should be interpreted according to its type (see <tt>&quot;hive_type&quot;</tt>). 
 
- The value is returned as an array of bytes (of length <tt>&quot;len&quot;</tt>). The value must be freed by the caller when it is no longer needed. On error this returns <font SIZE="-1">NULL</font> and sets errno.
+ The value is returned as an array of bytes (of length <tt>&quot;len&quot;</tt>). The value must be freed by the caller when it is no longer needed. On error this returns NULL and sets errno.
 
 <h3>hivex_value_string</h3>
 
@@ -364,9 +364,9 @@ char *hivex_value_value(hive_h *h, hive_value_h val, hive_type *t, size_t *len);
 char *hivex_value_string(hive_h *h, hive_value_h val);
  
 
- If this value is a string, return the string reencoded as <font SIZE="-1">UTF-8 </font>(as a C string). This only works for values which have type <tt>&quot;hive_t_string&quot;</tt>, <tt>&quot;hive_t_expand_string&quot;</tt> or <tt>&quot;hive_t_link&quot;</tt>. 
+ If this value is a string, return the string reencoded as UTF-8 (as a C string). This only works for values which have type <tt>&quot;hive_t_string&quot;</tt>, <tt>&quot;hive_t_expand_string&quot;</tt> or <tt>&quot;hive_t_link&quot;</tt>. 
 
- Returns a string. The string must be freed by the caller when it is no longer needed. On error this returns <font SIZE="-1">NULL</font> and sets errno.
+ Returns a string. The string must be freed by the caller when it is no longer needed. On error this returns NULL and sets errno.
 
 <h3>hivex_value_multiple_strings</h3>
 
@@ -374,9 +374,9 @@ char *hivex_value_string(hive_h *h, hive_value_h val);
 char **hivex_value_multiple_strings(hive_h *h, hive_value_h val);
  
 
- If this value is a multiple-string, return the strings reencoded as <font SIZE="-1">UTF-8 </font>(in C, as a NULL-terminated array of C strings, in other language bindings, as a list of strings). This only works for values which have type <tt>&quot;hive_t_multiple_strings&quot;</tt>. 
+ If this value is a multiple-string, return the strings reencoded as UTF-8 (in C, as a NULL-terminated array of C strings, in other language bindings, as a list of strings). This only works for values which have type <tt>&quot;hive_t_multiple_strings&quot;</tt>. 
 
- Returns a NULL-terminated array of C strings. The strings and the array must all be freed by the caller when they are no longer needed. On error this returns <font SIZE="-1">NULL</font> and sets errno.
+ Returns a NULL-terminated array of C strings. The strings and the array must all be freed by the caller when they are no longer needed. On error this returns NULL and sets errno.
 
 <h3>hivex_value_dword</h3>
 
@@ -384,7 +384,7 @@ char **hivex_value_multiple_strings(hive_h *h, hive_value_h val);
  int32_t hivex_value_dword (hive_h *h, hive_value_h val);
 </pre> 
 
- If this value is a <font SIZE="-1">DWORD </font>(Windows int32), return it. This only works for values which have type <tt>&quot;hive_t_dword&quot;</tt> or <tt>&quot;hive_t_dword_be&quot;</tt>.
+ If this value is a DWORD (Windows int32), return it. This only works for values which have type <tt>&quot;hive_t_dword&quot;</tt> or <tt>&quot;hive_t_dword_be&quot;</tt>.
 
 <h3>hivex_value_qword</h3>
 
@@ -392,7 +392,7 @@ char **hivex_value_multiple_strings(hive_h *h, hive_value_h val);
  int64_t hivex_value_qword (hive_h *h, hive_value_h val);
 </pre> 
 
- If this value is a <font SIZE="-1">QWORD </font>(Windows int64), return it. This only works for values which have type <tt>&quot;hive_t_qword&quot;</tt>.
+ If this value is a QWORD (Windows int64), return it. This only works for values which have type <tt>&quot;hive_t_qword&quot;</tt>.
 
 <h3>hivex_commit</h3>
 
@@ -480,7 +480,7 @@ int hivex_node_set_value(hive_h *h, hive_node_h node, const hive_set_value *val,
 
  When deleting nodes, it is possible that this library may leave unreachable live blocks in the hive. This is because certain parts of the hive disk format such as security (sk) records and big data (db) records and classname fields are not well understood (and not documented at all) and we play it safe by not attempting to modify them. Apart from wasting a little bit of disk space, it is not thought that unreachable blocks are a problem.
 
-<h3><font SIZE="-1">WRITE OPERATIONS WHICH ARE NOT SUPPORTED</font></h3>
+<h3>WRITE OPERATIONS WHICH ARE NOT SUPPORTED</h3>
 
 <dl>
 <dt>&bull;
@@ -498,7 +498,7 @@ int hivex_node_set_value(hive_h *h, hive_node_h node, const hive_set_value *val,
 
  First you set up your own <tt>&quot;struct hivex_visitor&quot;</tt> with your callback functions. 
 
- Each of these callback functions should return 0 on success or -1 on error. If any callback returns -1, then the entire visit terminates immediately. If you don't need a callback function at all, set the function pointer to <font SIZE="-1">NULL.</font> 
+ Each of these callback functions should return 0 on success or -1 on error. If any callback returns -1, then the entire visit terminates immediately. If you don't need a callback function at all, set the function pointer to NULL. 
 
  
 struct hivex_visitor {
@@ -533,7 +533,7 @@ struct hivex_visitor {
 </dt><dd> 
 int hivex_visit(hive_h *h, const struct hivex_visitor *visitor, size_t len, void *opaque, int flags);
  Visit all the nodes recursively in the hive <tt>&quot;h&quot;</tt>. 
- <tt>&quot;visitor&quot;</tt> should be a <tt>&quot;hivex_visitor&quot;</tt> structure with callback fields filled in as required (unwanted callbacks can be set to <font SIZE="-1">NULL</font>). <tt>&quot;len&quot;</tt> must be the length of the 'visitor' struct (you should pass <tt>&quot;sizeof (struct hivex_visitor)&quot;</tt> for this). 
+ <tt>&quot;visitor&quot;</tt> should be a <tt>&quot;hivex_visitor&quot;</tt> structure with callback fields filled in as required (unwanted callbacks can be set to NULL). <tt>&quot;len&quot;</tt> must be the length of the 'visitor' struct (you should pass <tt>&quot;sizeof (struct hivex_visitor)&quot;</tt> for this). 
  This returns 0 if the whole recursive visit was completed successfully. On error this returns -1. If one of the callback functions returned an error than we don't touch errno. If the error was generated internally then we set errno. 
  You can skip bad registry entries by setting <tt>&quot;flag&quot;</tt> to <tt>&quot;HIVEX_VISIT_SKIP_BAD&quot;</tt>. If this flag is not set, then a bad registry causes the function to return an error immediately. 
  This function is robust if the registry contains cycles or pointers which are invalid or outside the registry. It detects these cases and returns an error.
@@ -555,11 +555,11 @@ int hivex_visit_node(hive_h *h, hive_node_h node, const struct hivex_visitor *vi
 
  The (key, value) pairs are the place where the useful data is stored in the registry. The key is always a string (possibly the empty string for the default key). The value is a typed object (eg. string, int32, binary, etc.).
 
-<h3><font SIZE="-1">RELATIONSHIP TO .REG FILES</font></h3>
+<h3>RELATIONSHIP TO .REG FILES</h3>
 
  The hivex C library does not care about or deal with Windows .REG files. Instead we push this complexity up to the Perl <i>Win::Hivex</i>(3) library and the Perl programs <i><a HREF="/docs/linux/man/1-hivexregedit/">hivexregedit</a></i>(1) and <i><a HREF="/docs/linux/man/1-virt-win-reg/">virt-win-reg</a></i>(1). Nevertheless it is useful to look at the relationship between the Registry and .REG files because they are so common. 
 
- A .REG file is a textual representation of the registry, or part of the registry. The actual registry hives that Windows uses are binary files. There are a number of Windows and Linux tools that let you generate .REG files, or merge .REG files back into the registry hives. Notable amongst them is Microsoft's <font SIZE="-1">REGEDIT</font> program (formerly known as <font SIZE="-1">REGEDT32</font>). 
+ A .REG file is a textual representation of the registry, or part of the registry. The actual registry hives that Windows uses are binary files. There are a number of Windows and Linux tools that let you generate .REG files, or merge .REG files back into the registry hives. Notable amongst them is Microsoft's REGEDIT program (formerly known as REGEDT32). 
 
  A typical .REG file will contain many sections looking like this: 
 
@@ -596,7 +596,7 @@ int hivex_visit_node(hive_h *h, hive_node_h node, const struct hivex_visitor *vi
  &quot;TileInfo&quot;=&quot;prop:System.FileCount&quot;
 </pre> 
 
- This is a regular (key, value) pair, with the value being a type 1 string. Note that inside the binary file the string is likely to be <font SIZE="-1">UTF-16LE</font> encoded. This library converts to and from <font SIZE="-1">UTF-8</font> strings transparently in some cases. 
+ This is a regular (key, value) pair, with the value being a type 1 string. Note that inside the binary file the string is likely to be UTF-16LE encoded. This library converts to and from UTF-8 strings transparently in some cases. 
 
  <pre>
  &quot;TilePath&quot;=str(2):&quot;%systemroot%\\system32&quot;
@@ -614,33 +614,33 @@ int hivex_visit_node(hive_h *h, hive_node_h node, const struct hivex_visitor *vi
  &quot;FriendlyTypeName&quot;=hex(2):40,00,....
 </pre> 
 
- This value is an expanded string (type 2) represented in the .REG file as a series of hex bytes. In this case the string appears to be a <font SIZE="-1">UTF-16LE</font> string.
+ This value is an expanded string (type 2) represented in the .REG file as a series of hex bytes. In this case the string appears to be a UTF-16LE string.
 
 <h2>NOTE ON THE USE OF ERRNO</h2>
 
  Many functions in this library set errno to indicate errors. These are the values of errno you may encounter (this list is not exhaustive):
 <dl>
-<dt><font SIZE="-1">ENOTSUP</font>
+<dt>ENOTSUP
 </dt><dd> Corrupt or unsupported Registry file format.
-</dd><dt><font SIZE="-1">HIVEX_NO_KEY</font>
+</dd><dt>HIVEX_NO_KEY
 </dt><dd> Missing root key.
-</dd><dt><font SIZE="-1">EINVAL</font>
+</dd><dt>EINVAL
 </dt><dd> Passed an invalid argument to the function.
-</dd><dt><font SIZE="-1">EFAULT</font>
+</dd><dt>EFAULT
 </dt><dd> Followed a Registry pointer which goes outside the registry or outside a registry block.
-</dd><dt><font SIZE="-1">ELOOP</font>
+</dd><dt>ELOOP
 </dt><dd> Registry contains cycles.
-</dd><dt><font SIZE="-1">ERANGE</font>
+</dd><dt>ERANGE
 </dt><dd> Field in the registry out of range.
-</dd><dt><font SIZE="-1">EEXIST</font>
+</dd><dt>EEXIST
 </dt><dd> Registry key already exists.
-</dd><dt><font SIZE="-1">EROFS</font>
+</dd><dt>EROFS
 </dt><dd> Tried to write to a registry which is not opened for writing.</dd></dl>
 
 <h2>ENVIRONMENT VARIABLES</h2>
 
 <dl>
-<dt><font SIZE="-1">HIVEX_DEBUG</font>
+<dt>HIVEX_DEBUG
 </dt><dd> Setting HIVEX_DEBUG=1 will enable very verbose messages. This is useful for debugging problems with the library itself.</dd></dl>
 
 <h2>SEE ALSO</h2>
@@ -659,9 +659,9 @@ int hivex_visit_node(hive_h *h, hive_node_h node, const struct hivex_visitor *vi
 
  Derived from code by Markus Stephany under a compatible license: Copyright (C) 2000-2004 Markus Stephany. 
 
- This library is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> Lesser General Public License as published by the Free Software Foundation; version 2.1 of the License only. 
+ This library is free software; you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation; version 2.1 of the License only. 
 
- This library is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE. </font> See the <font SIZE="-1">GNU</font> Lesser General Public License for more details. 
+ This library is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public License for more details. 
 
 
 

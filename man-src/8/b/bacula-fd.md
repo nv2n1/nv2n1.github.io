@@ -11,7 +11,7 @@ description: "bacula-fd – Bacula’s File Daemon"
 <h2>Synopsis</h2>
 <p><code>bacula-fd</code> [<i>options</i>]</p>
 <h2>Description</h2>
-<p>This manual page documents briefly the <code>bacula</code> command.<br />
+<p>This manual page documents briefly the <code>bacula</code> command.<br/>
  Bacula&#8217;s File Daemon acts as the interface between the Bacula network backup system and the filesystems to be backed up: it is responsible for reading/writing/verifying the files to be backup&#8217;d/verified/restored. Network transfer can optionally be compressed.</p>
 <h2>Options</h2>
 <dl>

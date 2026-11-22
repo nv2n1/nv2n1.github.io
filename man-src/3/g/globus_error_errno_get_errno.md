@@ -32,7 +32,7 @@ description: "Error Data Accessors and Modifiers –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>error</i> The error object for which to set the errno<br />
+</dt><dd> <i>error</i> The error object for which to set the errno<br/>
  <i>system_errno</i> The system errno</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

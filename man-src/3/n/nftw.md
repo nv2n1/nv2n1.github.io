@@ -37,9 +37,9 @@ int ftw(const char *dirpath,
 <dd><i>fpath</i> is a symbolic link, and <code>FTW_PHYS</code> was set in <i>flags</i>.</dd>
 <dt><code>FTW_SLN</code></dt>
 <dd><i>fpath</i> is a symbolic link pointing to a nonexistent file. (This occurs only if <code>FTW_PHYS</code> is not set.) In this case the <i>sb</i> argument passed to <i>fn</i>() contains information returned by performing <code><a href="/docs/linux/man/2-lstat/">lstat</a></code>(2) on the &quot;dangling&quot; symbolic link. (But see BUGS.)</dd></dl>
-<p> The fourth argument (<i>ftwbuf</i>) that <code>nftw</code>() supplies when calling <i>fn</i>() is a pointer to a structure of type <i>FTW</i>: struct FTW {<br />
-    int base;<br />
-    int level;<br />
+<p> The fourth argument (<i>ftwbuf</i>) that <code>nftw</code>() supplies when calling <i>fn</i>() is a pointer to a structure of type <i>FTW</i>: struct FTW {<br/>
+    int base;<br/>
+    int level;<br/>
 }; <i>base</i> is the offset of the filename (i.e., basename component) in the pathname given in <i>fpath</i>. <i>level</i> is the depth of <i>fpath</i> in the directory tree, relative to the root of the tree (<i>dirpath</i>, which has depth 0). To stop the tree walk, <i>fn</i>() returns a nonzero value; this value will become the return value of <code>nftw</code>(). As long as <i>fn</i>() returns 0, <code>nftw</code>() will continue either until it has traversed the entire tree, in which case it will return zero, or until it encounters an error (such as a <code><a href="/docs/linux/man/3-malloc/">malloc</a></code>(3) failure), in which case it will return -1. Because <code>nftw</code>() uses dynamic data structures, the only safe way to exit out of a tree walk is to return a nonzero value from <i>fn</i>(). To allow a signal to terminate the walk without causing a memory leak, have the handler set a global flag that is checked by <i>fn</i>(). <i>Don&#8217;t</i> use <code><a href="/docs/linux/man/3-longjmp/">longjmp</a></code>(3) unless the program is going to terminate. The <i>flags</i> argument of <code>nftw</code>() is formed by ORing zero or more of the following flags:</p>
 <dl>
 <dt><code>FTW_ACTIONRETVAL</code> (since glibc 2.3.3)</dt>

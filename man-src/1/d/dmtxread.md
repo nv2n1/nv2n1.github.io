@@ -36,10 +36,10 @@ description: "dmtxread – scan Data Matrix barcodes"
 <dt><code>-r</code>, <code>&#8211;resolution</code>=<i>N</i></dt>
 <dd> Decoding resolution in dots per inch (DPI). Only used for vectorial input images such as SVG, PDF, etc&#8230; This option accepts a single argument (eg: 300) as well as horizontal and vertical resolutions (eg: 300&#215;150). The default resolution is 72dpi.</dd>
 <dt><code>-s</code>, <code>&#8211;symbol-size</code>=<i>[asr|RxC]</i></dt>
-<dd> Only consider barcodes of specific size or shape.<br />
-a&nbsp;<wbr>=&nbsp;<wbr>All sizes&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[default]<br />
-s&nbsp;<wbr>=&nbsp;<wbr>Only squares<br />
-r&nbsp;<wbr>=&nbsp;<wbr>Only rectangles<br />
+<dd> Only consider barcodes of specific size or shape.<br/>
+a&nbsp;<wbr>=&nbsp;<wbr>All sizes&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[default]<br/>
+s&nbsp;<wbr>=&nbsp;<wbr>Only squares<br/>
+r&nbsp;<wbr>=&nbsp;<wbr>Only rectangles<br/>
 &nbsp;<wbr>RxC&nbsp;<wbr>=&nbsp;<wbr>Exactly this many rows and columns&nbsp;<wbr>(10&#215;10, 8&#215;18, etc&#8230;)</dd>
 <dt><code>-t</code>, <code>&#8211;threshold</code>=<i>N</i></dt>
 <dd> Set the minimum edge threshold as a percentage of maximum. For example, an edge between a pure white and pure black pixel would have an intensity of 100. Edges with intensities below the indicated threshold will be ignored by the decoding process. Lowering the threshold will increase the amount of work to be done, but may be necessary for low contrast or blurry images.</dd>
@@ -77,9 +77,9 @@ r&nbsp;<wbr>=&nbsp;<wbr>Only rectangles<br />
 <p> ISO/IEC 16022:2000 </p>
 <p> ANSI/AIM BC11 ISS</p>
 <h2>DIAGNOSTICS</h2>
-<p> Exit status has following possible meanings:<br />
-0&nbsp;<wbr>&nbsp;<wbr>At least one barcode was found and decoded<br />
-1&nbsp;<wbr>&nbsp;<wbr>No barcodes were found<br />
+<p> Exit status has following possible meanings:<br/>
+0&nbsp;<wbr>&nbsp;<wbr>At least one barcode was found and decoded<br/>
+1&nbsp;<wbr>&nbsp;<wbr>No barcodes were found<br/>
 &nbsp;<wbr>&nbsp;<wbr>&gt;1&nbsp;<wbr>&nbsp;<wbr>Error occurred that prevented command from executing normally</p>
 <h2>BUGS</h2>
 <p> Email bug reports to <i>mike [at] dragonflylogic.com</i></p>

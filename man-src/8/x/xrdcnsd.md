@@ -12,7 +12,7 @@ description: "XrdCnsd – Cluster Name Space daemon"
 <pre><code>XrdCnsd</code> [<i>options</i>]</pre>
 <h2>Description</h2>
 <p>The <code>XrdCnsd</code> daemon creates and maintains a file inventory for a data server. This is known as a server-side inventory (<code>ssi</code>) service. The daemon can also be run as a one-time command to repair inventory problems. Complete HTML documentation can be found at </p>
-<p> <center> <a rel="nofollow" href="http://xrootd.org/doc/prod/cms_config.htm">http://xrootd.org/doc/prod/cms_config.htm</a><br />
+<p> <center> <a rel="nofollow" href="http://xrootd.org/doc/prod/cms_config.htm">http://xrootd.org/doc/prod/cms_config.htm</a><br/>
  </center></p>
 <h2>Notes</h2>
 <p>The <code>cns_ssi</code> utility is used to display a server&#8217;s inventory of files. Documentation for all components associated with <code>XrdCnsd</code> can be found at <a rel="nofollow" href="http://xrootd.org/docs.html">http://xrootd.org/docs.html</a></p>
@@ -21,5 +21,5 @@ description: "XrdCnsd – Cluster Name Space daemon"
 <h2>License</h2>
 <p>License terms can be displayed by typing &quot;<code>xrootd -H</code>&quot;.</p>
 <h2>Support Level</h2>
-<p>The <code>XrdCnsd</code> daemon is supported by the xrootd collaboration. Contact information can be found at <center> <a rel="nofollow" href="http://xrootd.org/contact.html">http://xrootd.org/contact.html</a><br />
+<p>The <code>XrdCnsd</code> daemon is supported by the xrootd collaboration. Contact information can be found at <center> <a rel="nofollow" href="http://xrootd.org/contact.html">http://xrootd.org/contact.html</a><br/>
  </center></p>

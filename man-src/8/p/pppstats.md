@@ -9,7 +9,7 @@ description: "pppstats – print PPP statistics"
 
 <p>pppstats &#8211; print PPP statistics</p>
 <h2>Synopsis</h2>
-<p><code>pppstats</code> [ <code>-a</code> ] [ <code>-d</code> ] [ <code>-v</code> ] [ <code>-r</code> ] [ <code>-z</code> ] [ <code>-c</code> <i>&lt;count&gt;</i> ] [ <code>-w</code> <i>&lt;secs&gt;</i> ] [ <i>interface</i> ]<br />
+<p><code>pppstats</code> [ <code>-a</code> ] [ <code>-d</code> ] [ <code>-v</code> ] [ <code>-r</code> ] [ <code>-z</code> ] [ <code>-c</code> <i>&lt;count&gt;</i> ] [ <code>-w</code> <i>&lt;secs&gt;</i> ] [ <i>interface</i> ]<br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</p>
 <h2>Description</h2>
 <p>The <code>pppstats</code> utility reports PPP-related statistics at regular intervals for the specified PPP interface. If the interface is unspecified, it will default to ppp0. The display is split horizontally into input and output sections containing columns of statistics describing the properties and volume of packets received and transmitted by the interface. </p>

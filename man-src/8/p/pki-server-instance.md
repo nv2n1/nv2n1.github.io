@@ -54,11 +54,11 @@ description: "pki-server-instance – Command-Line Interface for managing Certif
 <p> <code>pki-server [CLI options] instance-nuxwdog-disable</code> &lt;instance ID&gt;</p>
 <dl>
 <dd>This command is to convert a CS instance to start with access to a password file, rather than using the <code>nuxwdog</code> daemon. See <code>pki-server nuxwdog</code>(8) for further details.</dd></dl>
-<p> <code>pki-server [CLI options] instance-externalcert-add</code> -i &lt;instance ID&gt;<br />
+<p> <code>pki-server [CLI options] instance-externalcert-add</code> -i &lt;instance ID&gt;<br/>
 &nbsp;<wbr>&#8211;cert-file&nbsp;<wbr>&lt;path&gt;&nbsp;<wbr>&#8211;trust-args&nbsp;<wbr>&lt;args&gt;&nbsp;<wbr>&#8211;nickname&nbsp;<wbr>&lt;nickname&gt;&nbsp;<wbr>&#8211;token&nbsp;<wbr>&lt;token&gt;</p>
 <dl>
 <dd>This command is to add a certificate to the certificate database for a CS instance. The certificate will be kept track of in the configuration file <code>external_certs.conf</code>, and will automatically be exported when the system certificates are exported. To update a certificate, the old one needs to be removed first using the delete command below. The trust arguments are those defined for NSS databases eg. &quot;C,c,c&quot;. See <code><a href="/docs/linux/man/1-certutil/">certutil</a>(1)</code> for more details.</dd></dl>
-<p> <code>pki-server [CLI options] instance-externalcert-del</code> -i &lt;instance ID&gt;<br />
+<p> <code>pki-server [CLI options] instance-externalcert-del</code> -i &lt;instance ID&gt;<br/>
 &nbsp;<wbr>&#8211;nickname&nbsp;<wbr>&lt;nickname&gt;&nbsp;<wbr>&#8211;token&nbsp;<wbr>&lt;token&gt;</p>
 <dl>
 <dd>This command is to remove a certificate from the certificate database for a CS instance.</dd></dl>

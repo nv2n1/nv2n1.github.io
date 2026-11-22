@@ -49,12 +49,12 @@ description: "ntfscluster – identify files in a specified region of an NTFS vo
 <dl>
 <dd><code>ntfscluster -c 0-500 /dev/hda1</code> </dd>
 <h2>Bugs</h2>
-<p>The <i>info</i> mode isn&#8217;t implemented yet. <code>ntfscluster</code> is quite limited, but it has no known bugs. If you find a bug please send an email describing the problem to the development team:<br />
+<p>The <i>info</i> mode isn&#8217;t implemented yet. <code>ntfscluster</code> is quite limited, but it has no known bugs. If you find a bug please send an email describing the problem to the development team:<br/>
  ntfs-3g-devel [at] lists.sf.net</p>
 <h2>Authors</h2>
 <p><code>ntfscluster</code> was written by Richard Russon, with contributions from Anton Altaparmakov. It was ported to ntfs-3g by Erik Larsson.</p>
 <h2>Availability</h2>
-<p><code>ntfscluster</code> is part of the <code>ntfs-3g</code> package and is available from:<br />
+<p><code>ntfscluster</code> is part of the <code>ntfs-3g</code> package and is available from:<br/>
  <a rel="nofollow" href="https://github.com/tuxera/ntfs-3g/wiki/">https://github.com/tuxera/ntfs-3g/wiki/</a></p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-ntfsinfo/">ntfsinfo</a></code>(8), <code><a href="/docs/linux/man/8-ntfsprogs/">ntfsprogs</a></code>(8) </p>

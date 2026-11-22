@@ -14,7 +14,7 @@ description: "dbcolsplittorows – split an existing column into multiple new ro
 <h2>DESCRIPTION</h2>
 <p> Split column into pieces, outputting one row for each piece. </p>
 <p> By default, any empty fields are ignored. If an empty field value is given with -e, then they produce output. </p>
-<p> When a null value is given, empty fields at the beginning and end of lines are suppressed (like perl split). Unlike perl, if <font SIZE="-1">ALL</font> fields are empty, we generate one (and not zero) empty fields.</p>
+<p> When a null value is given, empty fields at the beginning and end of lines are suppressed (like perl split). Unlike perl, if ALL fields are empty, we generate one (and not zero) empty fields.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-C S</code> or <code>&#8211;element-separator S</code></dt>
@@ -71,4 +71,4 @@ description: "dbcolsplittorows – split an existing column into multiple new ro
 <p> <i>Fsdb</i>(1). <i><a href="/docs/linux/man/1-dbcolmerge/">dbcolmerge</a></i>(1). <i><a href="/docs/linux/man/1-dbcolsplittocols/">dbcolsplittocols</a></i>(1). <i><a href="/docs/linux/man/1-dbcolrename/">dbcolrename</a></i>(1).</p>
 <h2>AUTHOR and COPYRIGHT</h2>
 <p> Copyright (C) 1991-2008 by John Heidemann &lt;johnh [at] isi.edu&gt; </p>
-<p> This program is distributed under terms of the <font SIZE="-1">GNU</font> general public license, version 2. See the file <font SIZE="-1">COPYING</font> with the distribution for details. </p>
+<p> This program is distributed under terms of the GNU general public license, version 2. See the file COPYING with the distribution for details. </p>

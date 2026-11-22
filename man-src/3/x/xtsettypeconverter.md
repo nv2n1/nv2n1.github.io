@@ -34,5 +34,5 @@ description: "XtAppSetTypeConverter, XtSetTypeConverter – register resource co
 <h2>Description</h2>
 <p><code>XtSetTypeConverter</code> registers the specified type converter and destructor in all application contexts created by the calling process, including any future application contexts that may be created. <code>XtAppSetTypeConverter</code> registers the specified type converter in the single application context specified. If the same <i>from_type</i> and <i>to_type</i> are specified in multiple calls to either function, the most recent overrides the previous ones.</p>
 <h2>See Also</h2>
-<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

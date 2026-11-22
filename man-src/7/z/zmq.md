@@ -25,14 +25,14 @@ description: "zmq – 0MQ lightweight messaging kernel"
 <p> Destroy a 0MQ context</p>
 <dl>
 <dd><code><a href="/docs/linux/man/3-zmq_ctx_shutdown/">zmq_ctx_shutdown</a></code>(3)<code><a href="/docs/linux/man/3-zmq_ctx_term/">zmq_ctx_term</a></code>(3)</dd></dl>
-<p> <font SIZE="+1"> <code>Thread safety</code></p>
+<p>  <code>Thread safety</code></p>
 <dl>
 <dd>A 0MQ <i>context</i> is thread safe and may be shared among as many application threads as necessary, without any additional locking required on the part of the caller. </dd>
 <p> Individual 0MQ <i>sockets</i> are <i>not</i> thread safe except in the case where full memory barriers are issued when migrating a socket from one thread to another. In practice this means applications can create a socket in one thread with <i>zmq_socket()</i> and then pass it to a <i>newly created</i> thread as part of thread initialization, for example via a structure passed as an argument to <i>pthread_create()</i>.</dl>
-<p> </font><font SIZE="+2"> <code>Multiple contexts</code></p>
+<p>  <code>Multiple contexts</code></p>
 <dl>
 <dd>Multiple <i>contexts</i> may coexist within a single application. Thus, an application can use 0MQ directly and at the same time make use of any number of additional libraries or components which themselves make use of 0MQ as long as the above guidelines regarding thread safety are adhered to.</dd></dl>
-<p> </font></p>
+<p> </p>
 <h3>Messages</h3>
 <p>A 0MQ message is a discrete unit of data passed between applications or components of the same application. 0MQ messages have no internal structure and from the point of view of 0MQ itself they are considered to be opaque binary data. </p>
 <p> The following functions are provided to work with messages: </p>
@@ -122,7 +122,7 @@ description: "zmq – 0MQ lightweight messaging kernel"
 <p>This page was written by the 0MQ community. To make a change please read the 0MQ Contribution Policy at m[blue]<code><a rel="nofollow" href="http://www.zeromq.org/docs:contributing">http://www.zeromq.org/docs:contributing</a></code>m[].</p>
 <h2>Resources</h2>
 <p>Main web site: m[blue]<code><a rel="nofollow" href="http://www.zeromq.org/">http://www.zeromq.org/</a></code>m[] </p>
-<p> Report bugs to the 0MQ development mailing list: &lt;m[blue]<code>zeromq-dev [at] lists.zeromq.org</code>m[]<font SIZE="-2">[1]</font>&gt;</p>
+<p> Report bugs to the 0MQ development mailing list: &lt;m[blue]<code>zeromq-dev [at] lists.zeromq.org</code>m[][1]&gt;</p>
 <h2>Copying</h2>
 <p>Free use of this software is granted under the terms of the GNU Lesser General Public License (LGPL). For details see the files COPYING and COPYING.LESSER included with the 0MQ distribution.</p>
 <h2>Notes</h2>

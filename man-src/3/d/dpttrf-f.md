@@ -10,7 +10,7 @@ description: "dpttrf.f –"
 <p>dpttrf.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dpttrf</code> (N, D, E, INFO)<br />
+<p>subroutine <code>dpttrf</code> (N, D, E, INFO)<br/>
  <i></i><code>DPTTRF</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dpttrf (integerN, double precision, dimension( * )D, double precision, dimension( * )E, integerINFO)</h3>

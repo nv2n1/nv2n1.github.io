@@ -37,5 +37,5 @@ description: "autovbox – ISDN voice box (sound converter)"
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-rmdtovbox/">rmdtovbox</a></i>(1), <i><a href="/docs/linux/man/1-vboxtoau/">vboxtoau</a></i>(1), <i><a href="/docs/linux/man/1-vboxmode/">vboxmode</a></i>(1), <i><a href="/docs/linux/man/1-vboxcnvt/">vboxcnvt</a></i>(1), <i><a href="/docs/linux/man/5-vbox/">vbox</a></i>(5).</p>
 <h2>AUTHOR</h2>
-<p> This manual page was written by Andreas Jellinghaus &lt;aj [at] dungeon.inka.de&gt;, for Debian GNU/Linux and isdn4linux.<br />
+<p> This manual page was written by Andreas Jellinghaus &lt;aj [at] dungeon.inka.de&gt;, for Debian GNU/Linux and isdn4linux.<br/>
  Now maintained by Paul Slootman &lt;paul [at] debian.org&gt;. </p>

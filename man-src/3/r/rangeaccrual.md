@@ -16,7 +16,7 @@ description: "ql/cashflows/rangeaccrual.hpp – range-accrual coupon"
 #include &lt;ql/time/schedule.hpp&gt;
 #include &lt;vector&gt;</code></pre>
 <h3>Classes</h3>
-<p>class <code>RangeAccrualLeg</code><br />
+<p>class <code>RangeAccrualLeg</code><br/>
  <i>helper class building a sequence of range-accrual floating-rate coupons </i></p>
 <h2>Detailed Description</h2>
 <p>range-accrual coupon</p>

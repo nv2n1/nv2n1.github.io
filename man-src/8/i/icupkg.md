@@ -48,7 +48,7 @@ description: "icupkg – extract or modify an ICU .dat archive"
 <p> Items must be listed relative to the package, and the <code>&#8211;sourcedir</code> or the <code>&#8211;destdir</code> path will be prepended. The paths are only prepended to item filenames while adding or extracting items, not to ICU .dat package or list filenames. </p>
 <p> Paths may contain <code>/</code> instead of the platform&#8217;s file separator character and are converted as appropriate.</p>
 <h2>Authors</h2>
-<p>Markus Scherer<br />
+<p>Markus Scherer<br/>
  George Rhoten</p>
 <h2>Version</h2>
 <p>1.0</p>

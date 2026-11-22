@@ -24,8 +24,8 @@ description: "//usr/$LIB/security/pam_krb5/pam_krb5_cchelper – Credential cach
 <dd>An optional numeric GID which the helper will attempt to switch to before creating a ccache. The helper continues in its task if the attempt fails. </dd>
 </dl>
 <h2>Operation</h2>
-<p>The helper will read contents from its standard input.<br />
- If input of suitable length is not read, the specified credential cache is deleted.<br />
+<p>The helper will read contents from its standard input.<br/>
+ If input of suitable length is not read, the specified credential cache is deleted.<br/>
  If input of suitable length is read, a temporary file is created and the input is stored to the file. If TYPE is FILE, the file&#8217;s name will be based on the pattern and the name of this new credential cache will be printed. If TYPE is not FILE, a new credential cache will be created and the contents of the temporary file will be treated as a credential cache whose contents will be copied into the new credential cache, whose name will be printed.</p>
 <h2>Files</h2>
 <p><i>//usr/$LIB/security/pam_krb5.so</i></p>

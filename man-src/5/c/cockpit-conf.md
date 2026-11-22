@@ -47,7 +47,7 @@ ProtocolHeader = X-Forwarded-Proto</pre>
 <dl>
 <dd>The root URL where you will be serving cockpit. When provided cockpit will expect all requests to be prefixed with the given url. This is mostly useful when you are using cockpit behind a reverse proxy, such as nginx. /cockpit/ and /cockpit+ are reserved and should not be used. For example /cockpit-new/ is ok. /cockpit/ and /cockpit+new/ are not.</dd></dl>
 <h2>Oauth</h2>
-<p>Cockpit can be configured to support the m[blue]<code>implicit grant</code>m[]<font SIZE="-2">[1]</font> OAuth authorization flow. When successful the resulting oauth token will be passed to cockpit-ws using the Bearer auth-scheme. For a login to be successful, cockpit will also need a to be configured to verify and allow Bearer tokens. </p>
+<p>Cockpit can be configured to support the m[blue]<code>implicit grant</code>m[][1] OAuth authorization flow. When successful the resulting oauth token will be passed to cockpit-ws using the Bearer auth-scheme. For a login to be successful, cockpit will also need a to be configured to verify and allow Bearer tokens. </p>
 <p> <code>URL</code></p>
 <dl>
 <dd>This is the url that cockpit will redirect the users browser to when it needs to obtain an oauth token. Cockpit will add a redirect_uri parameter to the url with the location of where the oauth provider should redirect to once a token has been obtained.</dd></dl>
@@ -58,9 +58,9 @@ ProtocolHeader = X-Forwarded-Proto</pre>
 <dl>
 <dd>When a oauth provider redirects a user back to cockpit, look for this parameter in the querystring or fragment portion of the url to find the access token. When not provided it will default to access_token</dd></dl>
 <h2>Bugs</h2>
-<p>Please send bug reports to either the distribution bug tracker or the m[blue]<code>upstream bug tracker</code>m[]<font SIZE="-2">[2]</font>.</p>
+<p>Please send bug reports to either the distribution bug tracker or the m[blue]<code>upstream bug tracker</code>m[][2].</p>
 <h2>Author</h2>
-<p>Cockpit has been written by many m[blue]<code>contributors</code>m[]<font SIZE="-2">[3]</font>.</p>
+<p>Cockpit has been written by many m[blue]<code>contributors</code>m[][3].</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-cockpit-ws/">cockpit-ws</a></code>(8)</p>
 <h2>Notes</h2>

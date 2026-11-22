@@ -9,8 +9,8 @@ description: "pmiPutResult – add a data record to a LOGIMPORT archive"
 
 <p><code>pmiPutResult</code> &#8211; add a data record to a LOGIMPORT archive</p>
 <h2>C Synopsis</h2>
-<p><code> #include &lt;pcp/pmapi.h&gt;<br />
- #include &lt;pcp/impl.h&gt;<br />
+<p><code> #include &lt;pcp/pmapi.h&gt;<br/>
+ #include &lt;pcp/impl.h&gt;<br/>
  #include &lt;pcp/import.h&gt; </p>
 <p> int pmiPutResult(const pmResult *</code><i>result</i>); </p>
 <p> cc &#8230; -lpcp_import -lpcp</p>

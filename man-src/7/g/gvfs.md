@@ -89,7 +89,7 @@ description: "gvfs – GIO virtual file system"
 <dl>
 <dd>This directory contains key files describing remote volume monitors.</dd></dl>
 <h2>See Also</h2>
-<p>m[blue]<code>GIO documentation</code>m[]<font SIZE="-2">[1]</font>, <code><a href="/docs/linux/man/1-gvfsd/">gvfsd</a></code>(1), <code><a href="/docs/linux/man/1-gvfsd-fuse/">gvfsd-fuse</a></code>(1), <code><a href="/docs/linux/man/1-gvfsd-metadata/">gvfsd-metadata</a></code>(1)</p>
+<p>m[blue]<code>GIO documentation</code>m[][1], <code><a href="/docs/linux/man/1-gvfsd/">gvfsd</a></code>(1), <code><a href="/docs/linux/man/1-gvfsd-fuse/">gvfsd-fuse</a></code>(1), <code><a href="/docs/linux/man/1-gvfsd-metadata/">gvfsd-metadata</a></code>(1)</p>
 <h2>Notes</h2>
 <dl>
 <dt> 1.</dt>

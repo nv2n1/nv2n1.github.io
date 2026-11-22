@@ -10,7 +10,7 @@ description: "ldns_dname_cat_clone, ldns_dname_cat"
 
 <p> ldns_dname_cat_clone, ldns_dname_cat </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ldns_rdf* ldns_dname_cat_clone(const ldns_rdf *rd1, const ldns_rdf *rd2); </p>

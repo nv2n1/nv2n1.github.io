@@ -10,7 +10,7 @@ description: "ldns_buffer_new, ldns_buffer_new_frm_data, ldns_buffer_clear, ldns
 
 <p> ldns_buffer_new, ldns_buffer_new_frm_data, ldns_buffer_clear, ldns_buffer_printf, ldns_buffer_free, ldns_buffer_export </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ldns_buffer* ldns_buffer_new(size_t capacity); </p>

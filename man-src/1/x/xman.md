@@ -287,7 +287,7 @@ Xman xman       <i>(This widget is never used)</i>
 <dt><code>XENVIRONMENT</code></dt>
 <dd> to get the name of a resource file that overrides the global resources stored in the RESOURCE_MANAGER property.</dd>
 <dt><code>XAPPLRESDIR</code></dt>
-<dd> A string that will have &#8220;Xman&#8221; appended to it. This string will be the full path name of a user app-defaults file to be merged into the resource database after the system app-defaults file, and before the resources that are attached to the display.<br />
+<dd> A string that will have &#8220;Xman&#8221; appended to it. This string will be the full path name of a user app-defaults file to be merged into the resource database after the system app-defaults file, and before the resources that are attached to the display.<br/>
  See <i><a href="/docs/linux/man/7-x/">X</a>(7)</i> for a full statement of rights and permissions.</dd></dl>
 <h2>AUTHORS</h2>
 <p> Chris Peterson, MIT X Consortium from the V10 version written by Barry Shein formerly of Boston University. Bug fixes and Linux support by Carlos A M dos Santos, for The XFree86 Project. </p>

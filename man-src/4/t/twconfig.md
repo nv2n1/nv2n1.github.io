@@ -16,17 +16,17 @@ description: "twconfig – Tripwire configuration file reference"
 <p>The <i>Tripwire</i> configuration file is structured as a list of keyword-value pairs, and may also contain comments and variable definitions. Any lines with &quot;#&quot; in the first column are treated as comments. </p>
 <p> The general syntax for variable definition is: </p>
 <pre><i>keyword</i> = <i>value</i></pre>
-<p>For example: <font SIZE="-1"> </font></p>
+<p>For example:  </p>
 <pre>ROOT = /usr/tripwire
 EDITOR = /usr/local/bin/jove</pre>
 <p>Variable substitution on the right hand side is permitted using the syntax: </p>
 <pre>$(<i> varname </i>)</pre>
-<p>For example: <font SIZE="-1"> </font></p>
+<p>For example:  </p>
 <pre>DBFILE = $(ROOT)/db/$(HOSTNAME).twd</pre>
 <p>Variable names are case-sensitive, and may contain all alphanumeric characters, underscores, the characters &quot;+-@:&quot;, and the period. Two variables are predefined in the configuration file, and may not be changed. <tt>HOSTNAME</tt> is the unqualified hostname that <i>Tripwire</i> is running on, and <tt>DATE</tt> is a string representation of the date and time.</p>
 <h3>Required Variables</h3>
 <p>The following variables must be set in order for <i>Tripwire</i> to operate. The values listed below are assigned during installation. </p>
-<p> <font SIZE="-1"> </font></p>
+<p>  </p>
 <pre>POLFILE Default = /etc/tripwire/tw.pol
 DBFILE Default = /var/lib/tripwire/$(HOSTNAME).twd
 REPORTFILE Default = /var/lib/tripwire/report/$(HOSTNAME)-$(DATE).twr
@@ -36,24 +36,24 @@ LOCALKEYFILE Default = /etc/tripwire/$(HOSTNAME)-local.key</pre>
 <p>The following variables are not required to run <i>Tripwire</i>, but some of the program&#8217;s functionality will be lost without them. The values assigned during installation are listed.</p>
 <dl>
 <dt><tt>EDITOR</tt></dt>
-<dd>Specifies an editor to be used in interactive modes. If <i>EDITOR</i> is not defined, and no editor is specified on the command line, using interactive modes will cause an error.<br />
+<dd>Specifies an editor to be used in interactive modes. If <i>EDITOR</i> is not defined, and no editor is specified on the command line, using interactive modes will cause an error.<br/>
  Initial value: <i>/bin/vi</i></dd>
 <dt><tt>TEMPDIRECTORY</tt></dt>
-<dd>This variable can be set to the location to which tripwire should write its temporary files. By default it is /tmp, which due to the default permissions can be very insecure. It is recommended that you use this configuration variable to provide tripwire with a secure place to write temporary files. The directory used should have its permissions set such that only the owning process can read/write to it, i.e. &quot;chmod 700&quot;.<br />
+<dd>This variable can be set to the location to which tripwire should write its temporary files. By default it is /tmp, which due to the default permissions can be very insecure. It is recommended that you use this configuration variable to provide tripwire with a secure place to write temporary files. The directory used should have its permissions set such that only the owning process can read/write to it, i.e. &quot;chmod 700&quot;.<br/>
  Initial value: <i>/tmp</i></dd>
 <dt><tt>GLOBALEMAIL</tt></dt>
-<dd>This variable is set to a list of email addresses separated by either a comma &quot;,&quot;, or semi-colon &quot;;&quot;. If a report would have normally been sent out, it will also be send to this list of recipients.<br />
+<dd>This variable is set to a list of email addresses separated by either a comma &quot;,&quot;, or semi-colon &quot;;&quot;. If a report would have normally been sent out, it will also be send to this list of recipients.<br/>
  Initial value: <i>none</i></dd>
 <dt><tt>LATEPROMPTING</tt></dt>
-<dd>Prompt for passphrase as late as possible to minimize the amount of time that the passphrase is stored in memory. If the value is <i>true</i> (case-sensitive), then late prompting is turned on. With any other value, or if the variable is removed from the configuration file, late prompting is turned off.<br />
+<dd>Prompt for passphrase as late as possible to minimize the amount of time that the passphrase is stored in memory. If the value is <i>true</i> (case-sensitive), then late prompting is turned on. With any other value, or if the variable is removed from the configuration file, late prompting is turned off.<br/>
  Initial value: <i>false</i></dd>
 <dt><tt>LOOSEDIRECTORYCHECKING</tt></dt>
 <dd>When a file is added or removed from a directory, <i>Tripwire</i> reports both the changes to the file itself, and the modification to the directory (size, num links, etc.). This can create redundant entries in <i>Tripwire</i> reports. With loose directory checking, Tripwire will not check directories for any properties that would change when a file was added or deleted. This includes: size, number of links, access time, change time, modification time, number of blocks, growing file, and all hashes.</dd>
 <dt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></dt>
-<dd>If the value for this variable is <i>true</i> (case-sensitive), then loose directory checking is turned on, and these properties will be ignored for all directories. With any other value, or if the variable is removed from the configuration file, loose directory checking is turned off. Turning loose directory checking on is equivalent to appending the following propertymask to the rules for all directory inodes: <font SIZE="-1"> -snacmblCMSH </font><br />
+<dd>If the value for this variable is <i>true</i> (case-sensitive), then loose directory checking is turned on, and these properties will be ignored for all directories. With any other value, or if the variable is removed from the configuration file, loose directory checking is turned off. Turning loose directory checking on is equivalent to appending the following propertymask to the rules for all directory inodes:  -snacmblCMSH <br/>
  Initial value: <i>false</i></dd>
 <dt><tt>SYSLOGREPORTING</tt></dt>
-<dd>If this variable is set to <i>true</i>, messages are sent to the syslog for four events: database initialization, integrity check completions, database updates, and policy updates. The syslog messages are sent from the &quot;user&quot; facility at the &quot;notice&quot; level. For more information, see the <code>syslogd</code>(1) man page and the <i>syslog.conf</i> file. The following illustrates the information logged in the syslog for each of the four events: <font SIZE="-1"> </font></dd>
+<dd>If this variable is set to <i>true</i>, messages are sent to the syslog for four events: database initialization, integrity check completions, database updates, and policy updates. The syslog messages are sent from the &quot;user&quot; facility at the &quot;notice&quot; level. For more information, see the <code>syslogd</code>(1) man page and the <i>syslog.conf</i> file. The following illustrates the information logged in the syslog for each of the four events:  </dd>
 <pre>Jun 18 14:09:42 lighthouse tripwire[9444]: Database initialized:
 /var/lib/tripwire/test.twd
 Jun 18 14:10:57 lighthouse tripwire[9671]: Integrity Check Complete:
@@ -62,41 +62,41 @@ Jun 18 14:11:19 lighthouse tripwire[9672]: Database Update Complete:
 /var/lib/tripwire/test.twd 
 Jun 18 14:18:26 lighthouse tripwire[9683]: Policy Update Complete:
 /var/lib/tripwire/test.twd </pre>
-<p>The letters in the Integrity Checking log correspond to # of violations, maximum severity level, and # of files added, deleted, and changed, respectively. With any value other than <i>true</i>, or if this variable is removed from the configuration file, syslog reporting will be turned off.<br />
+<p>The letters in the Integrity Checking log correspond to # of violations, maximum severity level, and # of files added, deleted, and changed, respectively. With any value other than <i>true</i>, or if this variable is removed from the configuration file, syslog reporting will be turned off.<br/>
  Initial value: <i>true</i></p>
 <dt><tt>REPORTLEVEL</tt></dt>
-<dd>Specifies the default level of report produced by the <code>twprint &#8211;print-report</code> mode. Valid values for this option are 0 to 4. The report level specified by this option can be overridden with the (<code>-t</code>&nbsp;<wbr>or&nbsp;<wbr><code>&#8211;report-level</code>) option on the command line. If this variable is not included in the configuration file, the default report level is 3. Note that only reports printed using the <code>twprint &#8211;print-report</code> mode are affected by this parameter; reports displayed by other modes and other commands are not affected.<br />
+<dd>Specifies the default level of report produced by the <code>twprint &#8211;print-report</code> mode. Valid values for this option are 0 to 4. The report level specified by this option can be overridden with the (<code>-t</code>&nbsp;<wbr>or&nbsp;<wbr><code>&#8211;report-level</code>) option on the command line. If this variable is not included in the configuration file, the default report level is 3. Note that only reports printed using the <code>twprint &#8211;print-report</code> mode are affected by this parameter; reports displayed by other modes and other commands are not affected.<br/>
  Initial value: <i>3</i></dd>
 <dt><tt>HASH_DIRECT_IO</tt></dt>
-<dd>Use direct i/o when hashing files. (Linux-only as of OST 2.4.3.2)<br />
+<dd>Use direct i/o when hashing files. (Linux-only as of OST 2.4.3.2)<br/>
  Initial value: <i>false</i></dd>
 <dt><tt>RESOLVE_IDS_TO_NAMES</tt></dt>
-<dd>Specifies whether to resolve uid/gid values to user &amp; group names. Static binaries may segfault while calling getpwuid/getgrgid in certain nsswitch.conf configurations, and setting this to false will bypass the name resolution step and prevent the segfault.<br />
+<dd>Specifies whether to resolve uid/gid values to user &amp; group names. Static binaries may segfault while calling getpwuid/getgrgid in certain nsswitch.conf configurations, and setting this to false will bypass the name resolution step and prevent the segfault.<br/>
  Initial value: <i>true</i></dd></dl>
 <h3>Email Notification Variables</h3>
 <dl>
 <dt><tt>MAILMETHOD</dt>
-<dd>Specifies the protocol to be used by </tt><i>Tripwire</i> for email notification. The only acceptable values for this field are <tt>SMTP</tt> or <tt>SENDMAIL</tt>. Any other value will produce an error message.<br />
+<dd>Specifies the protocol to be used by </tt><i>Tripwire</i> for email notification. The only acceptable values for this field are <tt>SMTP</tt> or <tt>SENDMAIL</tt>. Any other value will produce an error message.<br/>
  Initial value: <i>SENDMAIL</i></dd>
 <dt><tt>SMTPHOST</dt>
-<dd>Specifies the domain name or IP address of the SMTP server used for email notification. Ignored unless MAILMETHOD</tt> is set to <tt>SMTP</tt>.<br />
+<dd>Specifies the domain name or IP address of the SMTP server used for email notification. Ignored unless MAILMETHOD</tt> is set to <tt>SMTP</tt>.<br/>
  Initial value: <i>mail.domain.com</i></dd>
 <dt><tt>SMTPPORT</dt>
-<dd>Specifies the port number used with SMTP. Ignored unless MAILMETHOD</tt> is set to <tt>SMTP</tt>.<br />
+<dd>Specifies the port number used with SMTP. Ignored unless MAILMETHOD</tt> is set to <tt>SMTP</tt>.<br/>
  Initial value: <i>25</i></dd>
 <dt><tt>MAILPROGRAM</tt></dt>
-<dd>Specifies the program used for email reporting of rule violations if <tt>MAILMETHOD</tt> is set to <tt>SENDMAIL</tt>. The program must take an RFC822 style mail header, and recipients will be listed in the &quot;To:&quot; field of the mail header. Some mail programs interpret a line consisting of only a single period character to mean end-of-input, and all text after that is ignored. Since there is a small possibility that a <i>Tripwire</i> report would contain such a line, the mail program specified must be able to ignore lines that consist of a single period (the <code>-oi</code> option to sendmail produces this behavior).<br />
+<dd>Specifies the program used for email reporting of rule violations if <tt>MAILMETHOD</tt> is set to <tt>SENDMAIL</tt>. The program must take an RFC822 style mail header, and recipients will be listed in the &quot;To:&quot; field of the mail header. Some mail programs interpret a line consisting of only a single period character to mean end-of-input, and all text after that is ignored. Since there is a small possibility that a <i>Tripwire</i> report would contain such a line, the mail program specified must be able to ignore lines that consist of a single period (the <code>-oi</code> option to sendmail produces this behavior).<br/>
  Initial value: <i>/usr/lib/sendmail -oi -t</i></dd>
 <dt><tt>EMAILREPORTLEVEL</tt></dt>
-<dd>Specifies the default level of report produced by the <code>tripwire &#8211;check</code> mode email report. Valid values for this option are 0 to 4. The report level specified by this option can be overridden with the (<code>-t</code>&nbsp;<wbr>or&nbsp;<wbr><code>&#8211;email-report-level</code>) option on the command-line. If this variable is not included in the configuration file, the default report level is 3.<br />
+<dd>Specifies the default level of report produced by the <code>tripwire &#8211;check</code> mode email report. Valid values for this option are 0 to 4. The report level specified by this option can be overridden with the (<code>-t</code>&nbsp;<wbr>or&nbsp;<wbr><code>&#8211;email-report-level</code>) option on the command-line. If this variable is not included in the configuration file, the default report level is 3.<br/>
  Initial value: <i>3</i></dd>
 <dt><tt>MAILNOVIOLATIONS</tt></dt>
 <dd>This option controls the way that <i>Tripwire</i> sends email notification if no rule violations are found during an integrity check. If <tt>MAILNOVIOLATIONS</tt> is set to <i>false</i> and no violations are found, <i>Tripwire</i> will not send a report. With any other value, or if the variable is removed from the configuration file, <i>Tripwire</i> will send an email message stating that no violations were found.</dd>
 <dt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></dt>
-<dd>Mailing reports of no violations allows an administrator to distinguish between unattended integrity checks that are failing to run and integrity checks that are running but are not finding any violations. However, mailing no violations reports will increase the amount of data that must be processed.<br />
+<dd>Mailing reports of no violations allows an administrator to distinguish between unattended integrity checks that are failing to run and integrity checks that are running but are not finding any violations. However, mailing no violations reports will increase the amount of data that must be processed.<br/>
  Initial value: <i>true</i></dd>
 <dt><tt>MAILFROMADDRESS</tt></dt>
-<dd>Specifies the value of the &quot;From:&quot; field in email reports.<br />
+<dd>Specifies the value of the &quot;From:&quot; field in email reports.<br/>
  Initial value: <i>tripwire [at] hostname</i>, where &#8216;hostname&#8217; is the local machine name.</dd></dl>
 <h2>Version Information</h2>
 <p>This man page describes <i>Tripwire 2.4</i>.</p>

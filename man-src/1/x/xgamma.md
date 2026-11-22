@@ -53,5 +53,5 @@ description: "xgamma – Alter a monitor’s gamma correction through the X serv
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-xvidtune/">xvidtune</a>(1), <a href="/docs/linux/man/1-xrandr/">xrandr</a>(1)</p>
 <h2>AUTHORS</h2>
-<p> Kaleb S. Keithley, X Consortium.<br />
+<p> Kaleb S. Keithley, X Consortium.<br/>
  David Dawes, David Bateman </p>

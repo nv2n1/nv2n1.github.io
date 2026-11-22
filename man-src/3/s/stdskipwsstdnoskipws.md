@@ -9,13 +9,13 @@ description: "std::skipws,std::noskipws – std::skipws,std::noskipws"
 
 <p>std::skipws,std::noskipws &#8211; std::skipws,std::noskipws</p>
 <h2>Synopsis</h2>
-<p>Defined in header &lt;ios&gt;<br />
-std::ios_base&amp; skipws( std::ios_base&amp; str ); <code>(1)</code><br />
-std::ios_base&amp; noskipws( std::ios_base&amp; str ); <code>(2)</code><br />
-Enables or disables skipping of leading whitespace by the formatted input functions (enabled by default). Has no effect on output.<br />
-1) enables the skipws flag in the stream str as if by calling str.setf(std::ios_base::skipws)<br />
-2) disables the skipws flag in the stream str as if by calling str.unsetf(std::ios_base::skipws)<br />
-The whitespace skipping is performed by the constructor of std::basic_istream::sentry, which reads and discards the characters classified as whitespace by the std::ctype facet of the stream&#8217;s imbued locale.<br />
+<p>Defined in header &lt;ios&gt;<br/>
+std::ios_base&amp; skipws( std::ios_base&amp; str ); <code>(1)</code><br/>
+std::ios_base&amp; noskipws( std::ios_base&amp; str ); <code>(2)</code><br/>
+Enables or disables skipping of leading whitespace by the formatted input functions (enabled by default). Has no effect on output.<br/>
+1) enables the skipws flag in the stream str as if by calling str.setf(std::ios_base::skipws)<br/>
+2) disables the skipws flag in the stream str as if by calling str.unsetf(std::ios_base::skipws)<br/>
+The whitespace skipping is performed by the constructor of std::basic_istream::sentry, which reads and discards the characters classified as whitespace by the std::ctype facet of the stream&#8217;s imbued locale.<br/>
 This is an I/O manipulator, it may be called with an expression such as out &lt;&lt; std::noskipws for any out of type std::basic_ostream or with an expression such as in &gt;&gt; std::noskipws for any in of type std::basic_istream. </p>
 <h2>Parameters</h2>
 <p>str &#8211; reference to I/O stream</p>
@@ -37,10 +37,10 @@ int main()
 }
 </code></pre>
 <h2>Output:</h2>
-<p>&nbsp;<wbr>&nbsp;Default behavior: c1 = a c2 = b c3 = c<br />
+<p>&nbsp;<wbr>&nbsp;Default behavior: c1 = a c2 = b c3 = c<br/>
 &nbsp;<wbr>&nbsp;noskipws behavior: c1 = a c2 = c3 = b</p>
 <h2>See also</h2>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;clears the specified ios_base flags<br />
-resetiosflags <i>(function)</i><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sets the specified ios_base flags<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;clears the specified ios_base flags<br/>
+resetiosflags <i>(function)</i><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sets the specified ios_base flags<br/>
 setiosflags <i>(function)</i> </p>

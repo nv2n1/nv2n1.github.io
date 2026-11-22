@@ -13,9 +13,9 @@ description: "QuantLib::ConstrainedEvolver – Constrained market-model evolver.
 <p> Inherits <code>QuantLib::MarketModelEvolver</code>. </p>
 <p> Inherited by <code>LogNormalFwdRateEulerConstrained</code>. </p>
 <h3>Public Member Functions</h3>
-<p>virtual void <code>setConstraintType</code> (const std::vector&lt; Size &gt; &amp;startIndexOfSwapRate, const std::vector&lt; Size &gt; &amp;EndIndexOfSwapRate)=0<br />
- <i>call once </i><br />
- virtual void <code>setThisConstraint</code> (const std::vector&lt; Rate &gt; &amp;rateConstraints, const std::vector&lt; bool &gt; &amp;isConstraintActive)=0<br />
+<p>virtual void <code>setConstraintType</code> (const std::vector&lt; Size &gt; &amp;startIndexOfSwapRate, const std::vector&lt; Size &gt; &amp;EndIndexOfSwapRate)=0<br/>
+ <i>call once </i><br/>
+ virtual void <code>setThisConstraint</code> (const std::vector&lt; Rate &gt; &amp;rateConstraints, const std::vector&lt; bool &gt; &amp;isConstraintActive)=0<br/>
  <i>call before each path </i></p>
 <h2>Detailed Description</h2>
 <p>Constrained market-model evolver. </p>

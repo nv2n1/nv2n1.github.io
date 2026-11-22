@@ -23,9 +23,9 @@ description: "csv – process CSV files from the command line"
 #Converts the whole report to TSV(tab - separated values).
 </code></pre>
 <h2>DESCRIPTION</h2>
-<p> <font SIZE="-1">CSV </font>(comma-separated value) files are the lowest common denominator of structured data interchange formats. For such a humble file format, it is pretty difficult to get right: embedded quote marks and linebreaks, slipshod delimiters, and no One True Validity Test make <font SIZE="-1">CSV</font> data found in the wild hard to parse correctly. Text::CSV_XS provides flexible and performant access to <font SIZE="-1">CSV</font> files from Perl, but is cumbersome to use in one-liners and the command line. </p>
-<p> <code>csv</code> is intended to make commandline processing of <font SIZE="-1">CSV</font> files as easy as plain text is meant to be on Unix. Internally, it holds two Text::CSV objects (for input and for output), which have reasonable defaults but which you can reconfigure to suit your needs. Then you can extract just the fields you want, change the delimiter, clean up the data etc. </p>
-<p> In the simplest usage, <code>csv</code> filters stdio and takes a list of integers. These are 1-based column numbers to select from the input <font SIZE="-1">CSV</font> stream. Negative numbers are counted from the line end. Without any column list, <code>csv</code> selects all columns (this is still useful to normalize quoting style etc.).</p>
+<p> CSV (comma-separated value) files are the lowest common denominator of structured data interchange formats. For such a humble file format, it is pretty difficult to get right: embedded quote marks and linebreaks, slipshod delimiters, and no One True Validity Test make CSV data found in the wild hard to parse correctly. Text::CSV_XS provides flexible and performant access to CSV files from Perl, but is cumbersome to use in one-liners and the command line. </p>
+<p> <code>csv</code> is intended to make commandline processing of CSV files as easy as plain text is meant to be on Unix. Internally, it holds two Text::CSV objects (for input and for output), which have reasonable defaults but which you can reconfigure to suit your needs. Then you can extract just the fields you want, change the delimiter, clean up the data etc. </p>
+<p> In the simplest usage, <code>csv</code> filters stdio and takes a list of integers. These are 1-based column numbers to select from the input CSV stream. Negative numbers are counted from the line end. Without any column list, <code>csv</code> selects all columns (this is still useful to normalize quoting style etc.).</p>
 <h3>Command line options</h3>
 <p> The following options are passed to Text::CSV. When preceded by the prefix &#8220;output_&#8221;, the destination is affected. Otherwise these options affect both input and output.</p>
 <dl>
@@ -51,13 +51,13 @@ description: "csv – process CSV files from the command line"
 <dd>
 </dd><dt><code>&#8211;verbatim</code></dt>
 <dd></dd></dl>
-<p> <font SIZE="-1"><code>NOTE</code></font>: <i>binary</i> is set to 1 by default in <code>csv</code>. The other options have their Text::CSV defaults. </p>
+<p> <code>NOTE</code>: <i>binary</i> is set to 1 by default in <code>csv</code>. The other options have their Text::CSV defaults. </p>
 <p> The following additional options are available:</p>
 <dl>
 <dt><code>&#8211;input</code>, <code>-i</code></dt>
 <dd>
 </dd><dt><code>&#8211;output</code>, <code>-o</code></dt>
-<dd> Filenames for input and output. &#8220;-&#8221; means stdio. Useful to trigger <font SIZE="-1">TSV</font> mode (<tt>&quot;--from_tsv&quot;</tt> and <tt>&quot;--to_tsv&quot;</tt>).</dd>
+<dd> Filenames for input and output. &#8220;-&#8221; means stdio. Useful to trigger TSV mode (<tt>&quot;--from_tsv&quot;</tt> and <tt>&quot;--to_tsv&quot;</tt>).</dd>
 <dt><code>&#8211;columns</code>, <code>-c</code></dt>
 <dd> Column numbers may be specified using this option.</dd>
 <dt><code>&#8211;fields</code>, <code>-f</code></dt>
@@ -82,4 +82,4 @@ description: "csv – process CSV files from the command line"
 <p> Copyright 2013 Gaal Yahas. </p>
 <p> Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &#8220;Software&#8221;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: </p>
 <p> The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. </p>
-<p> <font SIZE="-1">THE SOFTWARE IS PROVIDED &#8220;AS IS&#8221;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</font> </p>
+<p> THE SOFTWARE IS PROVIDED &#8220;AS IS&#8221;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. </p>

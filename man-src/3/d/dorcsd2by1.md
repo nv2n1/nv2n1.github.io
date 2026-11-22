@@ -11,7 +11,7 @@ description: "dorcsd2by1.f –"
 <p> dorcsd2by1.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dorcsd2by1</code> (JOBU1, JOBU2, JOBV1T, M, P, Q, X11, LDX11, X21, LDX21, THETA, U1, LDU1, U2, LDU2, V1T, LDV1T, WORK, LWORK, IWORK, INFO)<br />
+<p> subroutine <code>dorcsd2by1</code> (JOBU1, JOBU2, JOBV1T, M, P, Q, X11, LDX11, X21, LDX21, THETA, U1, LDU1, U2, LDU2, V1T, LDV1T, WORK, LWORK, IWORK, INFO)<br/>
  <i></i><code>DORCSD2BY1</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dorcsd2by1 (characterJOBU1, characterJOBU2, characterJOBV1T, integerM, integerP, integerQ, double precision, dimension(ldx11,*)X11, integerLDX11, double precision, dimension(ldx21,*)X21, integerLDX21, double precision, dimension(*)THETA, double precision, dimension(ldu1,*)U1, integerLDU1, double precision, dimension(ldu2,*)U2, integerLDU2, double precision, dimension(ldv1t,*)V1T, integerLDV1T, double precision, dimension(*)WORK, integerLWORK, integer, dimension(*)IWORK, integerINFO)</h3>
@@ -142,7 +142,7 @@ otherwise : U1 is not computed.
       this value as the first entry of the work array, and no error
       message related to LWORK is issued by XERBLA.
 </pre>
-<p>&nbsp;<wbr><br />
+<p>&nbsp;<wbr><br/>
  <i>IWORK</i> </p>
 <pre>
           IWORK is INTEGER array, dimension (M-MIN(P,M-P,Q,M-Q))

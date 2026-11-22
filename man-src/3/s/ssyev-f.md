@@ -10,7 +10,7 @@ description: "ssyev.f –"
 <p>ssyev.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>ssyev</code> (JOBZ, UPLO, N, A, LDA, W, WORK, LWORK, INFO)<br />
+<p>subroutine <code>ssyev</code> (JOBZ, UPLO, N, A, LDA, W, WORK, LWORK, INFO)<br/>
  <i></i><code> SSYEV computes the eigenvalues and, optionally, the left and/or right eigenvectors for SY matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ssyev (characterJOBZ, characterUPLO, integerN, real, dimension( lda, * )A, integerLDA, real, dimension( * )W, real, dimension( * )WORK, integerLWORK, integerINFO)</h3>

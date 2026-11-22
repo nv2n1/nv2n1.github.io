@@ -18,7 +18,7 @@ description: "setpix – Set FITS or IRAF image values"
 <dt><code>filename </code></dt>
 <dd> Name of IRAF image header file or FITS file. This must be present.</dd>
 <dt><code>@coordfile </code></dt>
-<dd> Name of file containing lines of the format<br />
+<dd> Name of file containing lines of the format<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>xrange yrange value where xrange and yrange are of the format n or n-n or n,n,n or n-n,n-n and value my be integer or floating point. value will be converted to the type of the image. If a range is 0, the entire row or column specified by the other non-zero range will be set to the indicated value. If both ranges are zero, the entire image will be set to the specified value. New in version 2.6.4.</dd>
 <dt><code>xrange yrange value </code></dt>
 <dd> Image coordinate x and y ranges and the value to which that region will be set. Either one of these triplets or a file of triplets, specified by @filename, must be present. xrange and yrange are of the format n or n-n or n,n,n or n-n,n-n and value my be integer or floating point. value will be converted to the type of the image. If a range is 0, the entire row or column specified by the other non-zero range will be set to the indicated value. If both ranges are zero, the entire image will be set to the specified value. Ranges new in version 2.6.4.</dd>

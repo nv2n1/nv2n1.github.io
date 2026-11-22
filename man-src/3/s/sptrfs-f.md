@@ -10,7 +10,7 @@ description: "sptrfs.f –"
 <p>sptrfs.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>sptrfs</code> (N, NRHS, D, E, DF, EF, B, LDB, X, LDX, FERR, BERR, WORK, INFO)<br />
+<p> subroutine <code>sptrfs</code> (N, NRHS, D, E, DF, EF, B, LDB, X, LDX, FERR, BERR, WORK, INFO)<br/>
  <i></i><code>SPTRFS</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sptrfs (integerN, integerNRHS, real, dimension( * )D, real, dimension( * )E, real, dimension( * )DF, real, dimension( * )EF, real, dimension( ldb, * )B, integerLDB, real, dimension( ldx, * )X, integerLDX, real, dimension( * )FERR, real, dimension( * )BERR, real, dimension( * )WORK, integerINFO)</h3>

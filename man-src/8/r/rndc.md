@@ -154,6 +154,6 @@ description: "rndc – name server control utility"
 <h2>Author</h2>
 <p>Internet Systems Consortium</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2004, 2005, 2007, 2013 Internet Systems Consortium, Inc. (&quot;ISC&quot;)<br />
+<p>Copyright &#169; 2004, 2005, 2007, 2013 Internet Systems Consortium, Inc. (&quot;ISC&quot;)<br/>
  Copyright &#169; 2000, 2001 Internet Software Consortium.</p>
 </p>

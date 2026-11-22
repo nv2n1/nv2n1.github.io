@@ -7,7 +7,7 @@ url: "/docs/linux/man/3-tspi_key_unloadkey/"
 description: "Tspi_Key_UnloadKey – unload a key from the TPM"
 ---
 
-<p>TCG Software Stack Developer&#8217;s Reference<br />
+<p>TCG Software Stack Developer&#8217;s Reference<br/>
  </center></p>
 <h2>Name</h2>
 <p>Tspi_Key_UnloadKey &#8211; unload a key from the TPM </p>
@@ -28,11 +28,11 @@ description: "Tspi_Key_UnloadKey – unload a key from the TPM"
 <h2>Return Codes</h2>
 <p><code>Tspi_Key_UnloadKey</code> returns TSS_SUCCESS on success, otherwise one of the following values is returned:</p>
 <dl COMPACT>
-<dt><font SIZE="-1">TSS_E_INVALID_HANDLE</font></dt>
+<dt>TSS_E_INVALID_HANDLE</dt>
 <dd><i>hKey</i> is not a valid handle. </dd>
-<dt><font SIZE="-1">TSS_E_INTERNAL_ERROR</font></dt>
+<dt>TSS_E_INTERNAL_ERROR</dt>
 <dd>An internal SW error has been detected. </dd>
-<dt><font SIZE="-1">TSS_E_BAD_PARAMETER</font></dt>
+<dt>TSS_E_BAD_PARAMETER</dt>
 <dd>One or more parameters is bad. </dd>
 </dl>
 <h2>Conforming To</h2>

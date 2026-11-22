@@ -64,7 +64,7 @@ description: "xclock – analog / digital clock for X"
 <dt><code>hands (</code>class<code> Foreground)</code></dt>
 <dd> Specifies the color of the insides of the clock&#8217;s hands. The default depends on whether <i>reverseVideo</i> is specified. If <i>reverseVideo</i> is specified the default is <i>lwhite</i>, otherwise the default is <i>black</i>. Note that this resource is not used when Xrender is in effect.</dd>
 <dt><code>highlight (</code>class<code> Foreground)</code></dt>
-<dd> Specifies the color used to highlight the clock&#8217;s hands. The default is<br />
+<dd> Specifies the color used to highlight the clock&#8217;s hands. The default is<br/>
 &nbsp;depends on whether <i>reverseVideo</i> is specified. If <i>reverseVideo</i> is specified the default is <i>lwhite</i>, otherwise the default is <i>black</i>. Note that this resource is not used when Xrender is in effect.</dd>
 <dt><code>analog (</code>class<code> Boolean)</code></dt>
 <dd> Specifies whether or not an analog clock should be used instead of a digital one. The default is True.</dd>
@@ -120,6 +120,6 @@ XClock  xclock
 <p> <i>Xclock</i> believes the system clock. </p>
 <p> When in digital mode, the string should be centered automatically.</p>
 <h2>AUTHORS</h2>
-<p> Tony Della Fera (MIT-Athena, DEC)<br />
- Dave Mankins (MIT-Athena, BBN)<br />
+<p> Tony Della Fera (MIT-Athena, DEC)<br/>
+ Dave Mankins (MIT-Athena, BBN)<br/>
  Ed Moy (UC Berkeley) </p>

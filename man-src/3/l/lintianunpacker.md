@@ -31,34 +31,34 @@ Lintian::Unpacker -- Job handler to unpack collections
  $unpacker-&gt;process_tasks ();
  last if $done;
  }</pre><h2>Description</h2>An unpacker class to extract data from lab entries and make it available via Lintian::Collect.
-<h2>Class Methods</h2><dl COMPACT><dt>new (<font SIZE="-1">COLLMAP,</font> PROFILE[, <font SIZE="-1">OPTIONS</font>])
+<h2>Class Methods</h2><dl COMPACT><dt>new (COLLMAP, PROFILE[, OPTIONS])
 </dt><dd>Creates a new unpacker. 
- <font SIZE="-1">COLLMAP</font> is a Lintian::DepMap::Properties describing the dependencies between the collections. Each node in <font SIZE="-1">COLLMAP</font> must have a Lintian::CollScript as property. 
- <font SIZE="-1">OPTIONS</font> is an optional hashref containing optional configurations. If a key is not present, its value is assumed to be <tt>&quot;undef&quot;</tt> unless otherwise stated. The following key/values are available:
+ COLLMAP is a Lintian::DepMap::Properties describing the dependencies between the collections. Each node in COLLMAP must have a Lintian::CollScript as property. 
+ OPTIONS is an optional hashref containing optional configurations. If a key is not present, its value is assumed to be <tt>&quot;undef&quot;</tt> unless otherwise stated. The following key/values are available:
 </dd><dl COMPACT><dd></dd><dl COMPACT><dt>&quot;profile&quot;
 </dt><dd>If this key is present and its value is defined, the value must be Lintian::Profile. The unpacker will use the enabled checks of the Profile to determine what collections to use. 
- If ``profile'' is not present or its value is undefined, then all collections in <font SIZE="-1">COLLMAP</font> will be unpacked.
+ If ``profile'' is not present or its value is undefined, then all collections in COLLMAP will be unpacked.
 </dd><dt>&quot;extra-coll&quot;
 </dt><dd>If this key is present and its value is defined, it must be a reference to a hash table. The keys are considered names of ``extra'' collections to unpack. The values in this table is ignored. 
  Extra collections will be unpacked on top of other collections. 
- <font SIZE="-1">NB:</font> This value is ignored if ``profile'' is not given.
+ NB: This value is ignored if ``profile'' is not given.
 </dd><dt>&quot;jobs&quot;
-</dt><dd>This value is the max number of jobs to be run in parallel. Can be changed with the ``jobs'' method later. If omitted, it defaults to 0. Refer to ``jobs'' for more info.</dd></dl></dl><dl COMPACT><dd></dd></dl></dl><h2>Instance Methods</h2><dl COMPACT><dt>prepare_tasks (<font SIZE="-1">ERRHANDLER,</font> LAB-ENTRY...)
+</dt><dd>This value is the max number of jobs to be run in parallel. Can be changed with the ``jobs'' method later. If omitted, it defaults to 0. Refer to ``jobs'' for more info.</dd></dl></dl><dl COMPACT><dd></dd></dl></dl><h2>Instance Methods</h2><dl COMPACT><dt>prepare_tasks (ERRHANDLER, LAB-ENTRY...)
 </dt><dd>Prepare a number of lab entries for unpacking. 
- The <font SIZE="-1">ERRHANDLER</font> should be a code ref, which will be invoked in case that an entry is not in the laboratory and cannot be created (via the create method). It is invoked once per failed entry giving the entry as first (and only) argument. 
- If <font SIZE="-1">ERRHANDLER</font> returns normally, the entry is skipped (and will not be unpacked later). If <font SIZE="-1">ERRHANDLER</font> croaks/dies/etc., the method will attempt to update the status file for any entry it created before passing back the error to the caller (via die). 
+ The ERRHANDLER should be a code ref, which will be invoked in case that an entry is not in the laboratory and cannot be created (via the create method). It is invoked once per failed entry giving the entry as first (and only) argument. 
+ If ERRHANDLER returns normally, the entry is skipped (and will not be unpacked later). If ERRHANDLER croaks/dies/etc., the method will attempt to update the status file for any entry it created before passing back the error to the caller (via die). 
  LAB-ENTRY is an array of lab entries to be processed. They must be instances of Lintian::Lab::Entry, but do not have to exists. They will be created as needed. 
  Returns a truth value if at least one entry needs to be processed and it did not cause an error. Otherwise, it returns <tt>&quot;undef&quot;</tt>. 
- <font SIZE="-1">NB:</font> The status file is not updated for created entries on successful return. It should either be done by running the process_tasks method or manually.
-</dd><dt>process_tasks (<font SIZE="-1">HOOKS</font>)
+ NB: The status file is not updated for created entries on successful return. It should either be done by running the process_tasks method or manually.
+</dd><dt>process_tasks (HOOKS)
 </dt><dd>Process the current tasks. This method blocks until all tasks and jobs have terminated. 
  The return value is unspecified. 
- <font SIZE="-1">HOOKS</font> (if given) is a hashref of hooks. The following hooks are available:
-</dd><dl COMPACT><dd></dd><dl COMPACT><dt>coll-hook (<font SIZE="-1">LPKG, EVENT, COLL,</font> PID[, <font SIZE="-1">STATUS</font>])
+ HOOKS (if given) is a hashref of hooks. The following hooks are available:
+</dd><dl COMPACT><dd></dd><dl COMPACT><dt>coll-hook (LPKG, EVENT, COLL, PID[, STATUS])
 </dt><dd>Called each time a new collection job is started or finished. 
- <font SIZE="-1">LPKG</font> is the entry it is applied to. <font SIZE="-1">COLL</font> is the collection being applied. <font SIZE="-1">EVENT</font> is either ``start'' for a new job or ``finish'' for a job terminating. 
- <font SIZE="-1">PID</font> is the process id of the job. If <font SIZE="-1">EVENT</font> is ``start'' this can be -1 to signal a failure. 
- <font SIZE="-1">STATUS</font> is the exit status of the finishing job. It is only available if <font SIZE="-1">EVENT</font> is ``finish'' and if <font SIZE="-1">STATUS</font> is non-zero is considered an error.</dd></dl></dl><dl COMPACT><dd></dd></dl><dt>reset_worklist
+ LPKG is the entry it is applied to. COLL is the collection being applied. EVENT is either ``start'' for a new job or ``finish'' for a job terminating. 
+ PID is the process id of the job. If EVENT is ``start'' this can be -1 to signal a failure. 
+ STATUS is the exit status of the finishing job. It is only available if EVENT is ``finish'' and if STATUS is non-zero is considered an error.</dd></dl></dl><dl COMPACT><dd></dd></dl><dt>reset_worklist
 </dt><dd>Wait for all running jobs (see ``wait_for_jobs'') and discard the current worklist.
 </dd><dt>wait_for_jobs
 </dt><dd>Block and wait for all running jobs to terminate. Usually this is not needed unless process_tasks was interrupted somehow.

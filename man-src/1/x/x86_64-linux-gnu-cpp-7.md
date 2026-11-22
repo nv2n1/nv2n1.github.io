@@ -10,21 +10,21 @@ description: "cpp – The C Preprocessor"
 
 <p> cpp &#8211; The C Preprocessor </p>
 <h2>SYNOPSIS</h2>
-<p> cpp [<code>-D</code><i>macro</i>[=<i>defn</i>]&#8230;] [<code>-U</code><i>macro</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-I</code><i>dir</i>&#8230;]&nbsp;[<code>-iquote</code><i>dir</i>&#8230;]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-M</code>|<code>-MM</code>]&nbsp;[<code>-MG</code>]&nbsp;[<code>-MF</code>&nbsp;<i>filename</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-MP</code>]&nbsp;[<code>-MQ</code>&nbsp;<i>target</i>&#8230;]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-MT</code>&nbsp;<i>target</i>&#8230;]<br />
+<p> cpp [<code>-D</code><i>macro</i>[=<i>defn</i>]&#8230;] [<code>-U</code><i>macro</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-I</code><i>dir</i>&#8230;]&nbsp;[<code>-iquote</code><i>dir</i>&#8230;]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-M</code>|<code>-MM</code>]&nbsp;[<code>-MG</code>]&nbsp;[<code>-MF</code>&nbsp;<i>filename</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-MP</code>]&nbsp;[<code>-MQ</code>&nbsp;<i>target</i>&#8230;]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-MT</code>&nbsp;<i>target</i>&#8230;]<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>infile</i>&nbsp;[[<code>-o</code>]&nbsp;<i>outfile</i>] </p>
-<p> Only the most useful options are given above; see below for a more complete list of preprocessor-specific options. In addition, <code>cpp</code> accepts most <code>gcc</code> driver options, which are not listed here. Refer to the <font SIZE="-1">GCC</font> documentation for details.</p>
+<p> Only the most useful options are given above; see below for a more complete list of preprocessor-specific options. In addition, <code>cpp</code> accepts most <code>gcc</code> driver options, which are not listed here. Refer to the GCC documentation for details.</p>
 <h2>DESCRIPTION</h2>
 <p> The C preprocessor, often known as <i>cpp</i>, is a <i>macro processor</i> that is used automatically by the C compiler to transform your program before compilation. It is called a macro processor because it allows you to define <i>macros</i>, which are brief abbreviations for longer constructs. </p>
-<p> The C preprocessor is intended to be used only with C, C<font SIZE="-2">++</font>, and Objective-C source code. In the past, it has been abused as a general text processor. It will choke on input which does not obey C&#8217;s lexical rules. For example, apostrophes will be interpreted as the beginning of character constants, and cause errors. Also, you cannot rely on it preserving characteristics of the input which are not significant to C-family languages. If a Makefile is preprocessed, all the hard tabs will be removed, and the Makefile will not work. </p>
-<p> Having said that, you can often get away with using cpp on things which are not C. Other Algol-ish programming languages are often safe (Pascal, Ada, etc.) So is assembly, with caution. <code>-traditional-cpp</code> mode preserves more white space, and is otherwise more permissive. Many of the problems can be avoided by writing C or C<font SIZE="-2">++</font> style comments instead of native language comments, and keeping macros simple. </p>
-<p> Wherever possible, you should use a preprocessor geared to the language you are writing in. Modern versions of the <font SIZE="-1">GNU</font> assembler have macro facilities. Most high level programming languages have their own conditional compilation and inclusion mechanism. If all else fails, try a true general text processor, such as <font SIZE="-1">GNU M4.</font> </p>
-<p> C preprocessors vary in some details. This manual discusses the <font SIZE="-1">GNU C</font> preprocessor, which provides a small superset of the features of <font SIZE="-1">ISO</font> Standard C. In its default mode, the <font SIZE="-1">GNU C</font> preprocessor does not do a few things required by the standard. These are features which are rarely, if ever, used, and may cause surprising changes to the meaning of a program which does not expect them. To get strict <font SIZE="-1">ISO</font> Standard C, you should use the <code>-std=c90</code>, <code>-std=c99</code> or <code>-std=c11</code> options, depending on which version of the standard you want. To get all the mandatory diagnostics, you must also use <code>-pedantic</code>. </p>
-<p> This manual describes the behavior of the <font SIZE="-1">ISO</font> preprocessor. To minimize gratuitous differences, where the <font SIZE="-1">ISO</font> preprocessor&#8217;s behavior does not conflict with traditional semantics, the traditional preprocessor should behave the same way. The various differences that do exist are detailed in the section <code>Traditional Mode</code>. </p>
-<p> For clarity, unless noted otherwise, references to <font SIZE="-1"><code>CPP</code></font> in this manual refer to <font SIZE="-1">GNU CPP.</font></p>
+<p> The C preprocessor is intended to be used only with C, C++, and Objective-C source code. In the past, it has been abused as a general text processor. It will choke on input which does not obey C&#8217;s lexical rules. For example, apostrophes will be interpreted as the beginning of character constants, and cause errors. Also, you cannot rely on it preserving characteristics of the input which are not significant to C-family languages. If a Makefile is preprocessed, all the hard tabs will be removed, and the Makefile will not work. </p>
+<p> Having said that, you can often get away with using cpp on things which are not C. Other Algol-ish programming languages are often safe (Pascal, Ada, etc.) So is assembly, with caution. <code>-traditional-cpp</code> mode preserves more white space, and is otherwise more permissive. Many of the problems can be avoided by writing C or C++ style comments instead of native language comments, and keeping macros simple. </p>
+<p> Wherever possible, you should use a preprocessor geared to the language you are writing in. Modern versions of the GNU assembler have macro facilities. Most high level programming languages have their own conditional compilation and inclusion mechanism. If all else fails, try a true general text processor, such as GNU M4. </p>
+<p> C preprocessors vary in some details. This manual discusses the GNU C preprocessor, which provides a small superset of the features of ISO Standard C. In its default mode, the GNU C preprocessor does not do a few things required by the standard. These are features which are rarely, if ever, used, and may cause surprising changes to the meaning of a program which does not expect them. To get strict ISO Standard C, you should use the <code>-std=c90</code>, <code>-std=c99</code> or <code>-std=c11</code> options, depending on which version of the standard you want. To get all the mandatory diagnostics, you must also use <code>-pedantic</code>. </p>
+<p> This manual describes the behavior of the ISO preprocessor. To minimize gratuitous differences, where the ISO preprocessor&#8217;s behavior does not conflict with traditional semantics, the traditional preprocessor should behave the same way. The various differences that do exist are detailed in the section <code>Traditional Mode</code>. </p>
+<p> For clarity, unless noted otherwise, references to <code>CPP</code> in this manual refer to GNU CPP.</p>
 <h2>OPTIONS</h2>
 <p> The <code>cpp</code> command expects two file names as arguments, <i>infile</i> and <i>outfile</i>. The preprocessor reads <i>infile</i> together with any other files it specifies with <code>#include</code>. All the output generated by the combined input files is written in <i>outfile</i>. </p>
 <p> Either <i>infile</i> or <i>outfile</i> may be <code>&#8211;</code>, which as <i>infile</i> means to read from standard input and as <i>outfile</i> means to write to standard output. If either file is omitted, it means the same as if <code>&#8211;</code> had been specified for that file. You can also use the <code>-o</code> <i>outfile</i> option to specify the output file. </p>
@@ -49,11 +49,11 @@ description: "cpp – The C Preprocessor"
 <dt><code>-undef</code></dt>
 <dd> Do not predefine any system-specific or GCC-specific macros. The standard predefined macros remain defined.</dd>
 <dt><code>-pthread</code></dt>
-<dd> Define additional macros required for using the <font SIZE="-1">POSIX</font> threads library. You should use this option consistently for both compilation and linking. This option is supported on GNU/Linux targets, most other Unix derivatives, and also on x86 Cygwin and MinGW targets.</dd>
+<dd> Define additional macros required for using the POSIX threads library. You should use this option consistently for both compilation and linking. This option is supported on GNU/Linux targets, most other Unix derivatives, and also on x86 Cygwin and MinGW targets.</dd>
 <dt><code>-M</code></dt>
 <dd> Instead of outputting the result of preprocessing, output a rule suitable for <code>make</code> describing the dependencies of the main source file. The preprocessor outputs one <code>make</code> rule containing the object file name for that source file, a colon, and the names of all the included files, including those coming from <code>-include</code> or <code>-imacros</code> command-line options. </dd>
 <p> Unless specified explicitly (with <code>-MT</code> or <code>-MQ</code>), the object file name consists of the name of the source file with any suffix replaced with object file suffix and with any leading directory parts removed. If there are many included files then the rule is split into several lines using <code>\</code>-newline. The rule has no commands. </p>
-<p> This option does not suppress the preprocessor&#8217;s debug output, such as <code>-dM</code>. To avoid mixing such debug output with the dependency rules you should explicitly specify the dependency output file with <code>-MF</code>, or use an environment variable like <font SIZE="-1"><code>DEPENDENCIES_OUTPUT</code></font>. Debug output is still sent to the regular output stream as normal. </p>
+<p> This option does not suppress the preprocessor&#8217;s debug output, such as <code>-dM</code>. To avoid mixing such debug output with the dependency rules you should explicitly specify the dependency output file with <code>-MF</code>, or use an environment variable like <code>DEPENDENCIES_OUTPUT</code>. Debug output is still sent to the regular output stream as normal. </p>
 <p> Passing <code>-M</code> to the driver implies <code>-E</code>, and suppresses warnings with an implicit <code>-w</code>.</p>
 <dt><code>-MM</code></dt>
 <dd> Like <code>-M</code> but do not mention header files that are found in system header directories, nor header files that are included, directly or indirectly, from such a header. </dd>
@@ -65,14 +65,14 @@ description: "cpp – The C Preprocessor"
 <dd> In conjunction with an option such as <code>-M</code> requesting dependency generation, <code>-MG</code> assumes missing header files are generated files and adds them to the dependency list without raising an error. The dependency filename is taken directly from the <tt>&quot;#include&quot;</tt> directive without prepending any path. <code>-MG</code> also suppresses preprocessed output, as a missing header file renders this useless. </dd>
 <p> This feature is used in automatic updating of makefiles.</p>
 <dt><code>-MP</code></dt>
-<dd> This option instructs <font SIZE="-1">CPP</font> to add a phony target for each dependency other than the main file, causing each to depend on nothing. These dummy rules work around errors <code>make</code> gives if you remove header files without updating the <i>Makefile</i> to match. </dd>
+<dd> This option instructs CPP to add a phony target for each dependency other than the main file, causing each to depend on nothing. These dummy rules work around errors <code>make</code> gives if you remove header files without updating the <i>Makefile</i> to match. </dd>
 <p> This is typical output: </p>
 <pre>
         test.o: test.c test.h
         test.h:
 </pre>
 <dt><code>-MT</code> <i>target</i></dt>
-<dd> Change the target of the rule emitted by dependency generation. By default <font SIZE="-1">CPP</font> takes the name of the main input file, deletes any directory components and any file suffix such as <code>.c</code>, and appends the platform&#8217;s usual object suffix. The result is the target. </dd>
+<dd> Change the target of the rule emitted by dependency generation. By default CPP takes the name of the main input file, deletes any directory components and any file suffix such as <code>.c</code>, and appends the platform&#8217;s usual object suffix. The result is the target. </dd>
 <p> An <code>-MT</code> option sets the target to be exactly the string you specify. If you want multiple targets, you can specify them as a single argument to <code>-MT</code>, or use multiple <code>-MT</code> options. </p>
 <p> For example, <code>-MT&nbsp;&#8216;$(objpfx)foo.o&#8217;</code> might give </p>
 <pre>
@@ -92,7 +92,7 @@ description: "cpp – The C Preprocessor"
 <dd> Like <code>-MD</code> except mention only user header files, not system header files.</dd>
 <dt><code>-fpreprocessed</code></dt>
 <dd> Indicate to the preprocessor that the input file has already been preprocessed. This suppresses things like macro expansion, trigraph conversion, escaped newline splicing, and processing of most directives. The preprocessor still recognizes and removes comments, so that you can pass a file preprocessed with <code>-C</code> to the compiler without problems. In this mode the integrated preprocessor is little more than a tokenizer for the front ends. </dd>
-<p> <code>-fpreprocessed</code> is implicit if the input file has one of the extensions <code>.i</code>, <code>.ii</code> or <code>.mi</code>. These are the extensions that <font SIZE="-1">GCC</font> uses for preprocessed files created by <code>-save-temps</code>.</p>
+<p> <code>-fpreprocessed</code> is implicit if the input file has one of the extensions <code>.i</code>, <code>.ii</code> or <code>.mi</code>. These are the extensions that GCC uses for preprocessed files created by <code>-save-temps</code>.</p>
 <dt><code>-fdirectives-only</code></dt>
 <dd> When preprocessing, handle directives, but do not expand macros. </dd>
 <p> The option&#8217;s behavior depends on the <code>-E</code> and <code>-fpreprocessed</code> options. </p>
@@ -102,7 +102,7 @@ description: "cpp – The C Preprocessor"
 <dt><code>-fdollars-in-identifiers</code></dt>
 <dd> Accept <code>$</code> in identifiers.</dd>
 <dt><code>-fextended-identifiers</code></dt>
-<dd> Accept universal character names in identifiers. This option is enabled by default for C99 (and later C standard versions) and C<font SIZE="-2">++</font>.</dd>
+<dd> Accept universal character names in identifiers. This option is enabled by default for C99 (and later C standard versions) and C++.</dd>
 <dt><code>-fno-canonical-system-headers</code></dt>
 <dd> When preprocessing, do not shorten system header paths with canonicalization.</dd>
 <dt><code>-ftabstop=</code><i>width</i></dt>
@@ -111,13 +111,13 @@ description: "cpp – The C Preprocessor"
 <dd> Track locations of tokens across macro expansions. This allows the compiler to emit diagnostic about the current macro expansion stack when a compilation error occurs in a macro expansion. Using this option makes the preprocessor and the compiler consume more memory. The <i>level</i> parameter can be used to choose the level of precision of token location tracking thus decreasing the memory consumption if necessary. Value <code>0</code> of <i>level</i> de-activates this option. Value <code>1</code> tracks tokens locations in a degraded mode for the sake of minimal memory overhead. In this mode all tokens resulting from the expansion of an argument of a function-like macro have the same location. Value <code>2</code> tracks tokens locations completely. This value is the most memory hungry. When this option is given no argument, the default parameter value is <code>2</code>. </dd>
 <p> Note that <tt>&quot;-ftrack-macro-expansion=2&quot;</tt> is activated by default.</p>
 <dt><code>-fexec-charset=</code><i>charset</i></dt>
-<dd> Set the execution character set, used for string and character constants. The default is <font SIZE="-1">UTF-8.</font> <i>charset</i> can be any encoding supported by the system&#8217;s <tt>&quot;iconv&quot;</tt> library routine.</dd>
+<dd> Set the execution character set, used for string and character constants. The default is UTF-8. <i>charset</i> can be any encoding supported by the system&#8217;s <tt>&quot;iconv&quot;</tt> library routine.</dd>
 <dt><code>-fwide-exec-charset=</code><i>charset</i></dt>
-<dd> Set the wide execution character set, used for wide string and character constants. The default is <font SIZE="-1">UTF-32</font> or <font SIZE="-1">UTF-16,</font> whichever corresponds to the width of <tt>&quot;wchar_t&quot;</tt>. As with <code>-fexec-charset</code>, <i>charset</i> can be any encoding supported by the system&#8217;s <tt>&quot;iconv&quot;</tt> library routine; however, you will have problems with encodings that do not fit exactly in <tt>&quot;wchar_t&quot;</tt>.</dd>
+<dd> Set the wide execution character set, used for wide string and character constants. The default is UTF-32 or UTF-16, whichever corresponds to the width of <tt>&quot;wchar_t&quot;</tt>. As with <code>-fexec-charset</code>, <i>charset</i> can be any encoding supported by the system&#8217;s <tt>&quot;iconv&quot;</tt> library routine; however, you will have problems with encodings that do not fit exactly in <tt>&quot;wchar_t&quot;</tt>.</dd>
 <dt><code>-finput-charset=</code><i>charset</i></dt>
-<dd> Set the input character set, used for translation from the character set of the input file to the source character set used by <font SIZE="-1">GCC.</font> If the locale does not specify, or <font SIZE="-1">GCC</font> cannot get this information from the locale, the default is <font SIZE="-1">UTF-8.</font> This can be overridden by either the locale or this command-line option. Currently the command-line option takes precedence if there&#8217;s a conflict. <i>charset</i> can be any encoding supported by the system&#8217;s <tt>&quot;iconv&quot;</tt> library routine.</dd>
+<dd> Set the input character set, used for translation from the character set of the input file to the source character set used by GCC. If the locale does not specify, or GCC cannot get this information from the locale, the default is UTF-8. This can be overridden by either the locale or this command-line option. Currently the command-line option takes precedence if there&#8217;s a conflict. <i>charset</i> can be any encoding supported by the system&#8217;s <tt>&quot;iconv&quot;</tt> library routine.</dd>
 <dt><code>-fworking-directory</code></dt>
-<dd> Enable generation of linemarkers in the preprocessor output that let the compiler know the current working directory at the time of preprocessing. When this option is enabled, the preprocessor emits, after the initial linemarker, a second linemarker with the current working directory followed by two slashes. <font SIZE="-1">GCC</font> uses this directory, when it&#8217;s present in the preprocessed input, as the directory emitted as the current working directory in some debugging information formats. This option is implicitly enabled if debugging information is enabled, but this can be inhibited with the negated form <code>-fno-working-directory</code>. If the <code>-P</code> flag is present in the command line, this option has no effect, since no <tt>&quot;#line&quot;</tt> directives are emitted whatsoever.</dd>
+<dd> Enable generation of linemarkers in the preprocessor output that let the compiler know the current working directory at the time of preprocessing. When this option is enabled, the preprocessor emits, after the initial linemarker, a second linemarker with the current working directory followed by two slashes. GCC uses this directory, when it&#8217;s present in the preprocessed input, as the directory emitted as the current working directory in some debugging information formats. This option is implicitly enabled if debugging information is enabled, but this can be inhibited with the negated form <code>-fno-working-directory</code>. If the <code>-P</code> flag is present in the command line, this option has no effect, since no <tt>&quot;#line&quot;</tt> directives are emitted whatsoever.</dd>
 <dt><code>-A</code> <i>predicate</i><code>=</code><i>answer</i></dt>
 <dd> Make an assertion with the predicate <i>predicate</i> and answer <i>answer</i>. This form is preferred to the older form <code>-A</code> <i>predicate</i><code>(</code><i>answer</i><code>)</code>, which is still supported, because it does not use shell special characters.</dd>
 <dt><code>-A &#8211;</code><i>predicate</i><code>=</code><i>answer</i></dt>
@@ -127,24 +127,24 @@ description: "cpp – The C Preprocessor"
 <p> You should be prepared for side effects when using <code>-C</code>; it causes the preprocessor to treat comments as tokens in their own right. For example, comments appearing at the start of what would be a directive line have the effect of turning that line into an ordinary source line, since the first token on the line is no longer a <code>#</code>.</p>
 <dt><code>-CC</code></dt>
 <dd> Do not discard comments, including during macro expansion. This is like <code>-C</code>, except that comments contained within macros are also passed through to the output file where the macro is expanded. </dd>
-<p> In addition to the side-effects of the <code>-C</code> option, the <code>-CC</code> option causes all C<font SIZE="-2">++</font>-style comments inside a macro to be converted to C-style comments. This is to prevent later use of that macro from inadvertently commenting out the remainder of the source line. </p>
+<p> In addition to the side-effects of the <code>-C</code> option, the <code>-CC</code> option causes all C++-style comments inside a macro to be converted to C-style comments. This is to prevent later use of that macro from inadvertently commenting out the remainder of the source line. </p>
 <p> The <code>-CC</code> option is generally used to support lint comments.</p>
 <dt><code>-P</code></dt>
 <dd> Inhibit generation of linemarkers in the output from the preprocessor. This might be useful when running the preprocessor on something that is not C code, and will be sent to a program which might be confused by the linemarkers.</dd>
 <dt><code>-traditional</code></dt>
 <dd>
 </dd><dt><code>-traditional-cpp</code></dt>
-<dd> Try to imitate the behavior of pre-standard C preprocessors, as opposed to <font SIZE="-1">ISO C</font> preprocessors. </dd>
-<p> Note that <font SIZE="-1">GCC</font> does not otherwise attempt to emulate a pre-standard C compiler, and these options are only supported with the <code>-E</code> switch, or when invoking <font SIZE="-1">CPP</font> explicitly.</p>
+<dd> Try to imitate the behavior of pre-standard C preprocessors, as opposed to ISO C preprocessors. </dd>
+<p> Note that GCC does not otherwise attempt to emulate a pre-standard C compiler, and these options are only supported with the <code>-E</code> switch, or when invoking CPP explicitly.</p>
 <dt><code>-trigraphs</code></dt>
-<dd> Support <font SIZE="-1">ISO C</font> trigraphs. These are three-character sequences, all starting with <code>??</code>, that are defined by <font SIZE="-1">ISO C</font> to stand for single characters. For example, <code>??/</code> stands for <code>\</code>, so <code>&#8216;??/n&#8217;</code> is a character constant for a newline. </dd>
-<p> By default, <font SIZE="-1">GCC</font> ignores trigraphs, but in standard-conforming modes it converts them. See the <code>-std</code> and <code>-ansi</code> options.</p>
+<dd> Support ISO C trigraphs. These are three-character sequences, all starting with <code>??</code>, that are defined by ISO C to stand for single characters. For example, <code>??/</code> stands for <code>\</code>, so <code>&#8216;??/n&#8217;</code> is a character constant for a newline. </dd>
+<p> By default, GCC ignores trigraphs, but in standard-conforming modes it converts them. See the <code>-std</code> and <code>-ansi</code> options.</p>
 <dt><code>-remap</code></dt>
 <dd> Enable special code to work around file systems which only permit very short file names, such as MS-DOS.</dd>
 <dt><code>-H</code></dt>
 <dd> Print the name of each header file used, in addition to other normal activities. Each name is indented to show how deep in the <code>#include</code> stack it is. Precompiled header files are also printed, even if they are found to be invalid; an invalid precompiled header file is printed with <code>&#8230;x</code> and a valid one with <code>&#8230;!</code> .</dd>
 <dt><code>-d</code><i>letters</i></dt>
-<dd> Says to make debugging dumps during compilation as specified by <i>letters</i>. The flags documented here are those relevant to the preprocessor. Other <i>letters</i> are interpreted by the compiler proper, or reserved for future versions of <font SIZE="-1">GCC,</font> and so are silently ignored. If you specify <i>letters</i> whose behavior conflicts, the result is undefined.</dd>
+<dd> Says to make debugging dumps during compilation as specified by <i>letters</i>. The flags documented here are those relevant to the preprocessor. Other <i>letters</i> are interpreted by the compiler proper, or reserved for future versions of GCC, and so are silently ignored. If you specify <i>letters</i> whose behavior conflicts, the result is undefined.</dd>
 <dl>
 <dl>
 <dt><code>-dM</code></dt>
@@ -165,8 +165,8 @@ description: "cpp – The C Preprocessor"
 <dl>
 </dl>
 <dt><code>-fdebug-cpp</code></dt>
-<dd> This option is only useful for debugging <font SIZE="-1">GCC.</font> When used from <font SIZE="-1">CPP</font> or with <code>-E</code>, it dumps debugging information about location maps. Every token in the output is preceded by the dump of the map its location belongs to. </dd>
-<p> When used from <font SIZE="-1">GCC</font> without <code>-E</code>, this option has no effect.</p>
+<dd> This option is only useful for debugging GCC. When used from CPP or with <code>-E</code>, it dumps debugging information about location maps. Every token in the output is preceded by the dump of the map its location belongs to. </dd>
+<p> When used from GCC without <code>-E</code>, this option has no effect.</p>
 <dt><code>-I</code> <i>dir</i></dt>
 <dd>
 </dd><dt><code>-iquote</code> <i>dir</i></dt>
@@ -198,7 +198,7 @@ description: "cpp – The C Preprocessor"
 </dt><dd>
 <p> You can use <code>-I</code> to override a system header file, substituting your own version, since these directories are searched before the standard system header file directories. However, you should not use this option to add directories that contain vendor-supplied system header files; use <code>-isystem</code> for that. </p>
 <p> The <code>-isystem</code> and <code>-idirafter</code> options also mark the directory as a system directory, so that it gets the same special treatment that is applied to the standard system directories. </p>
-<p> If a standard system include directory, or a directory specified with <code>-isystem</code>, is also specified with <code>-I</code>, the <code>-I</code> option is ignored. The directory is still searched but as a system directory at its normal position in the system include chain. This is to ensure that <font SIZE="-1">GCC</font>&#8216;s procedure to fix buggy system headers and the ordering for the <tt>&quot;#include_next&quot;</tt> directive are not inadvertently changed. If you really need to change the search order for system directories, use the <code>-nostdinc</code> and/or <code>-isystem</code> options.</dd></dl>
+<p> If a standard system include directory, or a directory specified with <code>-isystem</code>, is also specified with <code>-I</code>, the <code>-I</code> option is ignored. The directory is still searched but as a system directory at its normal position in the system include chain. This is to ensure that GCC&#8216;s procedure to fix buggy system headers and the ordering for the <tt>&quot;#include_next&quot;</tt> directive are not inadvertently changed. If you really need to change the search order for system directories, use the <code>-nostdinc</code> and/or <code>-isystem</code> options.</dd></dl>
 <dt><code>-I-</code></dt>
 <dd> Split the include path. This option has been deprecated. Please use <code>-iquote</code> instead for <code>-I</code> directories before the <code>-I-</code> and remove the <code>-I-</code> option. </dd>
 <p> Any directories specified with <code>-I</code> options before <code>-I-</code> are searched only for headers requested with <tt>&quot;#include&nbsp;&quot;</tt>file<tt>&quot;&quot;</tt>; they are not searched for <tt>&quot;#include&nbsp;&lt;</tt>file<tt>&gt;&quot;</tt>. If additional directories are specified with <code>-I</code> options after the <code>-I-</code>, those directories are searched for all <code>#include</code> directives. </p>
@@ -212,11 +212,11 @@ description: "cpp – The C Preprocessor"
 <dt><code>-isysroot</code> <i>dir</i></dt>
 <dd> This option is like the <code>&#8211;sysroot</code> option, but applies only to header files (except for Darwin targets, where it applies to both header files and libraries). See the <code>&#8211;sysroot</code> option for more information.</dd>
 <dt><code>-imultilib</code> <i>dir</i></dt>
-<dd> Use <i>dir</i> as a subdirectory of the directory containing target-specific C<font SIZE="-2">++</font> headers.</dd>
+<dd> Use <i>dir</i> as a subdirectory of the directory containing target-specific C++ headers.</dd>
 <dt><code>-nostdinc</code></dt>
 <dd> Do not search the standard system directories for header files. Only the directories explicitly specified with <code>-I</code>, <code>-iquote</code>, <code>-isystem</code>, and/or <code>-idirafter</code> options (and the directory of the current file, if appropriate) are searched.</dd>
 <dt><code>-nostdinc++</code></dt>
-<dd> Do not search for header files in the C<font SIZE="-2">++</font>-specific standard directories, but do still search the other standard directories. (This option is used when building the C<font SIZE="-2">++</font> library.)</dd>
+<dd> Do not search for header files in the C++-specific standard directories, but do still search the other standard directories. (This option is used when building the C++ library.)</dd>
 <dt><code>-Wcomment</code></dt>
 <dd>
 </dd><dt><code>-Wcomments</code></dt>
@@ -247,40 +247,40 @@ description: "cpp – The C Preprocessor"
 </code></pre>
 <p> The second and third <tt>&quot;FOO&quot;</tt> should be in comments. This warning is on by default.</dl>
 <h2>ENVIRONMENT</h2>
-<p> This section describes the environment variables that affect how <font SIZE="-1">CPP</font> operates. You can use them to specify directories or prefixes to use when searching for include files, or to control dependency output. </p>
-<p> Note that you can also specify places to search using options such as <code>-I</code>, and control dependency output with options like <code>-M</code>. These take precedence over environment variables, which in turn take precedence over the configuration of <font SIZE="-1">GCC.</font></p>
+<p> This section describes the environment variables that affect how CPP operates. You can use them to specify directories or prefixes to use when searching for include files, or to control dependency output. </p>
+<p> Note that you can also specify places to search using options such as <code>-I</code>, and control dependency output with options like <code>-M</code>. These take precedence over environment variables, which in turn take precedence over the configuration of GCC.</p>
 <dl>
-<dt><font SIZE="-1"><code>CPATH</code></font></dt>
+<dt><code>CPATH</code></dt>
 <dd>
 </dd><dt><code>C_INCLUDE_PATH</code></dt>
 <dd>
-</dd><dt><font SIZE="-1"><code>CPLUS_INCLUDE_PATH</code></font></dt>
+</dd><dt><code>CPLUS_INCLUDE_PATH</code></dt>
 <dd>
-</dd><dt><font SIZE="-1"><code>OBJC_INCLUDE_PATH</code></font></dt>
-<dd> Each variable&#8217;s value is a list of directories separated by a special character, much like <font SIZE="-1"><code>PATH</code></font>, in which to look for header files. The special character, <tt>&quot;PATH_SEPARATOR&quot;</tt>, is target-dependent and determined at <font SIZE="-1">GCC</font> build time. For Microsoft Windows-based targets it is a semicolon, and for almost all other targets it is a colon. </dd>
-<p> <font SIZE="-1"><code>CPATH</code></font> specifies a list of directories to be searched as if specified with <code>-I</code>, but after any paths given with <code>-I</code> options on the command line. This environment variable is used regardless of which language is being preprocessed. </p>
+</dd><dt><code>OBJC_INCLUDE_PATH</code></dt>
+<dd> Each variable&#8217;s value is a list of directories separated by a special character, much like <code>PATH</code>, in which to look for header files. The special character, <tt>&quot;PATH_SEPARATOR&quot;</tt>, is target-dependent and determined at GCC build time. For Microsoft Windows-based targets it is a semicolon, and for almost all other targets it is a colon. </dd>
+<p> <code>CPATH</code> specifies a list of directories to be searched as if specified with <code>-I</code>, but after any paths given with <code>-I</code> options on the command line. This environment variable is used regardless of which language is being preprocessed. </p>
 <p> The remaining environment variables apply only when preprocessing the particular language indicated. Each specifies a list of directories to be searched as if specified with <code>-isystem</code>, but after any paths given with <code>-isystem</code> options on the command line. </p>
-<p> In all these variables, an empty element instructs the compiler to search its current working directory. Empty elements can appear at the beginning or end of a path. For instance, if the value of <font SIZE="-1"><code>CPATH</code></font> is <tt>&quot;:/special/include&quot;</tt>, that has the same effect as <code>-I. -I/special/include</code>.</p>
-<dt><font SIZE="-1"><code>DEPENDENCIES_OUTPUT</code></font></dt>
+<p> In all these variables, an empty element instructs the compiler to search its current working directory. Empty elements can appear at the beginning or end of a path. For instance, if the value of <code>CPATH</code> is <tt>&quot;:/special/include&quot;</tt>, that has the same effect as <code>-I. -I/special/include</code>.</p>
+<dt><code>DEPENDENCIES_OUTPUT</code></dt>
 <dd> If this variable is set, its value specifies how to output dependencies for Make based on the non-system header files processed by the compiler. System header files are ignored in the dependency output. </dd>
-<p> The value of <font SIZE="-1"><code>DEPENDENCIES_OUTPUT</code></font> can be just a file name, in which case the Make rules are written to that file, guessing the target name from the source file name. Or the value can have the form <i>file</i><i>target</i>, in which case the rules are written to file <i>file</i> using <i>target</i> as the target name. </p>
+<p> The value of <code>DEPENDENCIES_OUTPUT</code> can be just a file name, in which case the Make rules are written to that file, guessing the target name from the source file name. Or the value can have the form <i>file</i><i>target</i>, in which case the rules are written to file <i>file</i> using <i>target</i> as the target name. </p>
 <p> In other words, this environment variable is equivalent to combining the options <code>-MM</code> and <code>-MF</code>, with an optional <code>-MT</code> switch too.</p>
-<dt><font SIZE="-1"><code>SUNPRO_DEPENDENCIES</code></font></dt>
-<dd> This variable is the same as <font SIZE="-1"><code>DEPENDENCIES_OUTPUT</code></font> (see above), except that system header files are not ignored, so it implies <code>-M</code> rather than <code>-MM</code>. However, the dependence on the main input file is omitted.</dd>
-<dt><font SIZE="-1"><code>SOURCE_DATE_EPOCH</code></font></dt>
-<dd> If this variable is set, its value specifies a <font SIZE="-1">UNIX</font> timestamp to be used in replacement of the current date and time in the <tt>&quot;__DATE__&quot;</tt> and <tt>&quot;__TIME__&quot;</tt> macros, so that the embedded timestamps become reproducible. </dd>
-<p> The value of <font SIZE="-1"><code>SOURCE_DATE_EPOCH</code></font> must be a <font SIZE="-1">UNIX</font> timestamp, defined as the number of seconds (excluding leap seconds) since 01 Jan 1970 00:00:00 represented in <font SIZE="-1">ASCII</font>; identical to the output of @command<code>{date +%s</code>} on GNU/Linux and other systems that support the <tt>%s</tt> extension in the <tt>&quot;date&quot;</tt> command. </p>
+<dt><code>SUNPRO_DEPENDENCIES</code></dt>
+<dd> This variable is the same as <code>DEPENDENCIES_OUTPUT</code> (see above), except that system header files are not ignored, so it implies <code>-M</code> rather than <code>-MM</code>. However, the dependence on the main input file is omitted.</dd>
+<dt><code>SOURCE_DATE_EPOCH</code></dt>
+<dd> If this variable is set, its value specifies a UNIX timestamp to be used in replacement of the current date and time in the <tt>&quot;__DATE__&quot;</tt> and <tt>&quot;__TIME__&quot;</tt> macros, so that the embedded timestamps become reproducible. </dd>
+<p> The value of <code>SOURCE_DATE_EPOCH</code> must be a UNIX timestamp, defined as the number of seconds (excluding leap seconds) since 01 Jan 1970 00:00:00 represented in ASCII; identical to the output of @command<code>{date +%s</code>} on GNU/Linux and other systems that support the <tt>%s</tt> extension in the <tt>&quot;date&quot;</tt> command. </p>
 <p> The value should be a known timestamp such as the last modification time of the source or package and it should be set by the build process.</dl>
 <h2>SEE ALSO</h2>
 <p> <code>gpl</code>(7), <code>gfdl</code>(7), <code>fsf-funding</code>(7), <code><a href="/docs/linux/man/1-gcc/">gcc</a></code>(1), and the Info entries for <i>cpp</i> and <i>gcc</i>.</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 1987-2017 Free Software Foundation, Inc. </p>
-<p> Permission is granted to copy, distribute and/or modify this document under the terms of the <font SIZE="-1">GNU</font> Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation. A copy of the license is included in the man page <code>gfdl</code>(7). This manual contains no Invariant Sections. The Front-Cover Texts are (a) (see below), and the Back-Cover Texts are (b) (see below). </p>
-<p> (a) The <font SIZE="-1">FSF</font>&#8216;s Front-Cover Text is: </p>
+<p> Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation. A copy of the license is included in the man page <code>gfdl</code>(7). This manual contains no Invariant Sections. The Front-Cover Texts are (a) (see below), and the Back-Cover Texts are (b) (see below). </p>
+<p> (a) The FSF&#8216;s Front-Cover Text is: </p>
 <pre>
      A GNU Manual
 </pre>
-<p> (b) The <font SIZE="-1">FSF</font>&#8216;s Back-Cover Text is: </p>
+<p> (b) The FSF&#8216;s Back-Cover Text is: </p>
 <pre>
      You have freedom to copy and modify this GNU Manual, like GNU
      software.  Copies published by the Free Software Foundation raise

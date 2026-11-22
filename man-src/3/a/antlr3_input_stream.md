@@ -9,7 +9,7 @@ description: "ANTLR3_INPUT_STREAM – Input Stream Class Definition –"
 
 <p>ANTLR3_INPUT_STREAM &#8211; Input Stream Class Definition &#8211; </p>
 <h3>Typedefs</h3>
-<p>typedef struct <code>ANTLR3_INPUT_STREAM_struct</code> * <code>pANTLR3_INPUT_STREAM</code><br />
+<p>typedef struct <code>ANTLR3_INPUT_STREAM_struct</code> * <code>pANTLR3_INPUT_STREAM</code><br/>
  <i>Pointer to an instantiation of &#8216;class&#8217; </i><code>ANTLR3_INPUT_STREAM</code>.</p>
 <h2>Typedef Documentation</h2>
 <h3>typedef struct <code>ANTLR3_INPUT_STREAM_struct</code>* <code>pANTLR3_INPUT_STREAM</code></h3>

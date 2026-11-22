@@ -60,17 +60,17 @@ description: "staprun – systemtap runtime"
 <p> $ stap -p4 -m mod1 -e&nbsp;<wbr>&#8216;global var1=&quot;foo&quot;; probe begin{printf(&quot;%s
 &quot;, var1); exit()}&#8217; </p>
 <p> Running this with an additional module argument: </p>
-<p> $ staprun mod1.ko var1=&quot;HelloWorld&quot;<br />
+<p> $ staprun mod1.ko var1=&quot;HelloWorld&quot;<br/>
  HelloWorld </p>
 <p> Spaces and exclamation marks currently cannot be passed into global variables this way.</p>
 <h2>Examples</h2>
 <p>See the <i>stapex</i>(3stap) manual page for a collection of sample scripts. </p>
 <p> Here is a very basic example of how to use <i>staprun.</i> First, use <i>stap</i> to compile a script. The <i>stap</i> program will report the pathname to the resulting module. </p>
 <p> $ stap -p4 -e &#8216;probe begin { printf(&quot;Hello World!
-&quot;); exit() }&#8217;<br />
+&quot;); exit() }&#8217;<br/>
  /home/user/.systemtap/cache/85/stap_8553d83f78c_265.ko </p>
 <p> Run <i>staprun</i> with the pathname to the module as an argument. </p>
-<p> $ staprun /home/user/.systemtap/cache/85/stap_8553d83f78c_265.ko<br />
+<p> $ staprun /home/user/.systemtap/cache/85/stap_8553d83f78c_265.ko<br/>
  Hello World!</p>
 <h2>Module Detaching And Attaching</h2>
 <p>After the <i>staprun</i> program installs a Systemtap kernel module, users can detach from the kernel module and reattach to it later. The <code>-L</code> option loads the module and automatically detaches. Users can also detach from the kernel module interactively by sending the SIGQUIT signal from the keyboard (typically by typing Ctrl-\). </p>

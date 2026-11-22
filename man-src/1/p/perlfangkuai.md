@@ -15,7 +15,7 @@ tetris - A tetris game
 
 <h2>CONFIGURATION</h2>
 
- The configuration file should be the file with name ``.tetris'' under <font SIZE="-1">HOME</font> directory. Another option is using Tetris/Config.pm in any directory of <tt>@INC</tt>. 
+ The configuration file should be the file with name ``.tetris'' under HOME directory. Another option is using Tetris/Config.pm in any directory of <tt>@INC</tt>. 
 
  Here is an example of configuration: 
 &nbsp;<wbr>#&nbsp;<wbr>-*- perl -*- 
@@ -31,12 +31,12 @@ tetris - A tetris game
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>ord('n')&nbsp;<wbr>=&gt;&nbsp;<wbr>\&amp;new_game, 
 &nbsp;<wbr>&nbsp;<wbr>} 
 &nbsp;<wbr>); 
-&nbsp;<wbr>push&nbsp;<wbr>@$shapes, shape_from_string(&lt;&lt;<font SIZE="-1">SHAPE</font>); 
+&nbsp;<wbr>push&nbsp;<wbr>@$shapes, shape_from_string(&lt;&lt;SHAPE); 
 &nbsp;<wbr>0 0 8 0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0 8 0 0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0 8 8 8&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0 0 0 8 
 &nbsp;<wbr>0 0 8 0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0 8 8 8&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0 0 8 0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0 8 8 8 
 &nbsp;<wbr>0 8 8 8&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0 8 0 0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0 0 8 0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0 0 0 8 
 &nbsp;<wbr>0 0 0 0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0 0 0 0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0 0 0 0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0 0 0 0 
-&nbsp;<wbr><font SIZE="-1">SHAPE</font> 
+&nbsp;<wbr>SHAPE 
 
  <pre>
     push @$shapes, shape_from_string(&lt;&lt;SHAPE);
@@ -78,4 +78,4 @@ sub show_key
 }
 </code></pre> 
 
- Code to run after the <font SIZE="-1">GUI</font> setup, add to code ref <tt>$after_load_function</tt>.
+ Code to run after the GUI setup, add to code ref <tt>$after_load_function</tt>.

@@ -13,8 +13,8 @@ description: "ETS-{CFG|REC} – Show / manipulate ETS TLV configuration"
 <pre><code>CONFIG_ARG := {
     enableTx | willing | tsa | up2tc | numtcs | tcbw }
 </code></pre>
-<p> CONFIG_ARG=value<i> </i>&#8230;<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> <i>CONFIG_ARG</i> := <code>enableTx</code> = <code>{yes|no}</code> | <code>willing</code> = <code>{yes|no}</code> | <code>tsa</code> = <code>tc:{ets|strict|vendor},&#8230;</code> | <code>up2tc</code> = <code>priority:tc,&#8230;</code> | <code>tcbw</code> = <code>bw1,bw2,&#8230;</code> &lt;-c<i> </i>CONFIG_ARG<i> </i>&#8230;&gt; CONFIG_ARG=value<i> </i>&#8230;<br />
+<p> CONFIG_ARG=value<i> </i>&#8230;<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> <i>CONFIG_ARG</i> := <code>enableTx</code> = <code>{yes|no}</code> | <code>willing</code> = <code>{yes|no}</code> | <code>tsa</code> = <code>tc:{ets|strict|vendor},&#8230;</code> | <code>up2tc</code> = <code>priority:tc,&#8230;</code> | <code>tcbw</code> = <code>bw1,bw2,&#8230;</code> &lt;-c<i> </i>CONFIG_ARG<i> </i>&#8230;&gt; CONFIG_ARG=value<i> </i>&#8230;<br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> <i>CONFIG_ARG</i> := <code>enableTx</code> = <code>{yes|no}</code> | <code>tsa</code> = <code>tc:{ets|strict|vendor},&#8230;</code> | <code>up2tc</code> = <code>priority:tc,&#8230;</code> | <code>tcbw</code> = <code>bw1,bw2,&#8230;</code> </p>
 <h2>Description</h2>
 <p>The Enhanced Transmission Selection (ETS) feature has a recommendation TLV and a configuration TLV configured with ETS-REC and ETS-CFG respectively.</p>

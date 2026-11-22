@@ -75,16 +75,16 @@ description: "nsdb-update-nci – update NSDB container information on an LDAP s
 <h2>Examples</h2>
 <p>Suppose you are the FedFS administrator of the <i>example.net</i> FedFS domain and that you want to make the LDAP server <i>ldap.example.net</i> into an NSDB. After creating a naming context and root suffix object with a distinguished name of <i>o=fedfs</i> on the LDAP server, you might use:</p>
 <dl>
-<dd>$ nsdb-update-nci -l ldap.example.net -D cn=Manager -e o=fedfs<br />
- Enter NSDB password:<br />
+<dd>$ nsdb-update-nci -l ldap.example.net -D cn=Manager -e o=fedfs<br/>
+ Enter NSDB password:<br/>
  Successfully updated NCI </dd>
 </dl>
 <p> NSDB container information is inserted into <i>o=fedfs</i>, and this entry is changed to an NSDB Container Entry. </p>
 <p> To see the new container information, use <code><a href="/docs/linux/man/8-nsdb-nces/">nsdb-nces</a></code>(8). </p>
 <p> <i>o=fedfs</i> is a typical location for an NCE on an LDAP server. However, suppose that instead of creating such a typical NCE, you would prefer the entry <i>ou=fedfs,dc=example,dc=net</i> to contain FedFS information. Assuming your server set-up script has already created the <i>dc=example,dc=net</i> naming context and root object, and after creating a generic object with the distinguished name <i>ou=fedfs,dc=example,dc=net</i>, you might use:</p>
 <dl>
-<dd>$ nsdb-update-nci -e &quot;ou=fedfs,dc=example,dc=net&quot; -D cn=Manager<br />
- Enter NSDB password:<br />
+<dd>$ nsdb-update-nci -e &quot;ou=fedfs,dc=example,dc=net&quot; -D cn=Manager<br/>
+ Enter NSDB password:<br/>
  Successfully updated NCI </dd>
 </dl>
 <p> NSDB container information is inserted into <i>dc=example,dc=net</i>, and the entry at <i>ou=fedfs,dc=example,dc=net</i> is made into an NCE. </p>

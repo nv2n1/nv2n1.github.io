@@ -10,11 +10,11 @@ description: "ippfind – find internet printing protocol printers"
 
 <p> ippfind &#8211; find internet printing protocol printers </p>
 <h2>SYNOPSIS</h2>
-<p> <code>ippfind</code> [ <i>options</i> ] <i>regtype</i>[<code>,</code><i>subtype</i>][<code>.</code><i>domain</i><code>.</code>] &#8230; [ <i>expression</i><br />
-&nbsp;&#8230;&nbsp;]<br />
- <code>ippfind</code> [ <i>options</i> ] <i>name</i>[<code>.</code><i>regtype</i>[<code>.</code><i>domain</i><code>.</code>]] &#8230; [ <i>expression</i><br />
-&nbsp;&#8230;&nbsp;]<br />
- <code>ippfind</code> <code>&#8211;help</code><br />
+<p> <code>ippfind</code> [ <i>options</i> ] <i>regtype</i>[<code>,</code><i>subtype</i>][<code>.</code><i>domain</i><code>.</code>] &#8230; [ <i>expression</i><br/>
+&nbsp;&#8230;&nbsp;]<br/>
+ <code>ippfind</code> [ <i>options</i> ] <i>name</i>[<code>.</code><i>regtype</i>[<code>.</code><i>domain</i><code>.</code>]] &#8230; [ <i>expression</i><br/>
+&nbsp;&#8230;&nbsp;]<br/>
+ <code>ippfind</code> <code>&#8211;help</code><br/>
  <code>ippfind</code> <code>&#8211;version</code></p>
 <h2>DESCRIPTION</h2>
 <p> <code>ippfind</code> finds services registered with a DNS server or available through local devices. Its primary purpose is to find IPP printers and show their URIs, show their current status, or run commands.</p>

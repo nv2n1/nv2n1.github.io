@@ -47,7 +47,7 @@ description: "derb – disassemble a resource bundle"
  <dt><code>ICU_DATA</code> </dt>
 <dd>  Specifies the directory containing ICU data. Defaults to <code>${prefix}/share/icu/70.1/</code>. Some tools in ICU depend on the presence of the trailing slash. It is thus important to make sure that it is present if <code>ICU_DATA</code> is set.  </dd></dl>
   <h2>AUTHORS</h2>
- Vladimir Weinstein <br />
+ Vladimir Weinstein <br/>
  Yves Arrouye  <h2>VERSION</h2>
  1.0  <h2>COPYRIGHT</h2>
  Copyright (C) 2002 IBM, Inc. and others.  <h2>SEE ALSO</h2>

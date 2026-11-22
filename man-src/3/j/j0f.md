@@ -27,15 +27,15 @@ long double jnl(int n, long double x);
 <p> <code>j0</code>(), <code>j1</code>(), <code>jn</code>():</p>
 <dl>
 <dt>
-</dt><dd> _XOPEN_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
+</dt><dd> _XOPEN_SOURCE<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_SVID_SOURCE ||&nbsp;_BSD_SOURCE</dd></dl>
 <p> <code>j0f</code>(), <code>j0l</code>(), <code>j1f</code>(), <code>j1l</code>(), <code>jnf</code>(), <code>jnl</code>():</p>
 <dl>
 <dt>
-</dt><dd> _XOPEN_SOURCE &nbsp;&gt;=&nbsp;600<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;(_ISOC99_SOURCE&nbsp;&amp;&amp;&nbsp;_XOPEN_SOURCE)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
+</dt><dd> _XOPEN_SOURCE &nbsp;&gt;=&nbsp;600<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;(_ISOC99_SOURCE&nbsp;&amp;&amp;&nbsp;_XOPEN_SOURCE)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_SVID_SOURCE ||&nbsp;_BSD_SOURCE</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code>j0</code>() and <code>j1</code>() functions return Bessel functions of <i>x</i> of the first kind of orders 0 and 1, respectively. The <code>jn</code>() function returns the Bessel function of <i>x</i> of the first kind of order <i>n</i>. </p>

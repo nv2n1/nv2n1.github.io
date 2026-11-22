@@ -57,20 +57,20 @@ description: "nfstest_file – Find all packets for a specific file"
 <p> # Find all packets for file handle nfstest_file -p FH:0xc3f001b4 /tmp/trace.cap </p>
 <p> # Find all packets for file, including all operations for the given state id nfstest_file -p f00000001 &#8211;stid 0x0fd4 /tmp/trace.cap </p>
 <p> # Display all packets for file (one line per layer) nfstest_file -p f00000001 -v 2 /tmp/trace.cap </p>
-<p> # Display all packets for file<br />
+<p> # Display all packets for file<br/>
  # (real verbose, all items in each layer are displayed) nfstest_file -p f00000001 -v 4 /tmp/trace.cap </p>
 <p> # Display all packets for file (display both verbose level 1 and 2) nfstest_file -p f00000001 -v 3 /tmp/trace.cap </p>
-<p> # Display packets for file between packets 100 through 199<br />
+<p> # Display packets for file between packets 100 through 199<br/>
  $ nfstest_file -p f00000001 -s 100 -e 200 /tmp/trace.cap </p>
-<p> # Display all packets truncating all strings to 100 bytes<br />
- # This is useful when some packets are very large and there<br />
- # is no need to display all the data<br />
+<p> # Display all packets truncating all strings to 100 bytes<br/>
+ # This is useful when some packets are very large and there<br/>
+ # is no need to display all the data<br/>
  $ nfstest_file -p f00000001 &#8211;strsize 100 -v 2 /tmp/trace.cap </p>
-<p> # Display packets using India time zone<br />
- $ nfstest_file -p f00000001 &#8211;tz &quot;UTC-5:30&quot; /tmp/trace.cap<br />
+<p> # Display packets using India time zone<br/>
+ $ nfstest_file -p f00000001 &#8211;tz &quot;UTC-5:30&quot; /tmp/trace.cap<br/>
  $ nfstest_file -p f00000001 &#8211;tz &quot;Asia/Kolkata&quot; /tmp/trace.cap </p>
-<p> # Display all packets for file found in all trace files given<br />
- # The packets are displayed in order using their timestamps<br />
+<p> # Display all packets for file found in all trace files given<br/>
+ # The packets are displayed in order using their timestamps<br/>
  $ nfstest_file -p f00000001 trace1.cap trace2.cap trace3.cap</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-formatstr/">formatstr</a>(3),</code> <code><a href="/docs/linux/man/1-nfstest_alloc/">nfstest_alloc</a>(1),</code> <code><a href="/docs/linux/man/1-nfstest_cache/">nfstest_cache</a>(1),</code> <code><a href="/docs/linux/man/1-nfstest_delegation/">nfstest_delegation</a>(1),</code> <code><a href="/docs/linux/man/1-nfstest_dio/">nfstest_dio</a>(1),</code> <code><a href="/docs/linux/man/1-nfstest_interop/">nfstest_interop</a>(1),</code> <code><a href="/docs/linux/man/1-nfstest_io/">nfstest_io</a>(1),</code> <code><a href="/docs/linux/man/1-nfstest_lock/">nfstest_lock</a>(1),</code> <code><a href="/docs/linux/man/1-nfstest_pkt/">nfstest_pkt</a>(1),</code> <code><a href="/docs/linux/man/1-nfstest_pnfs/">nfstest_pnfs</a>(1),</code> <code><a href="/docs/linux/man/1-nfstest_posix/">nfstest_posix</a>(1),</code> <code><a href="/docs/linux/man/1-nfstest_sparse/">nfstest_sparse</a>(1),</code> <code><a href="/docs/linux/man/1-nfstest_xid/">nfstest_xid</a>(1),</code> <code><a href="/docs/linux/man/3-packet-nfs-nfs3_const/">packet.nfs.nfs3_const</a>(3),</code> <code><a href="/docs/linux/man/3-packet-nfs-nfs4_const/">packet.nfs.nfs4_const</a>(3),</code> <code><a href="/docs/linux/man/3-packet-pktt/">packet.pktt</a>(3),</code> <code><a href="/docs/linux/man/3-packet-utils/">packet.utils</a>(3)</code> </p>

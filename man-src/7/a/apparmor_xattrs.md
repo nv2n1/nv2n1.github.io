@@ -15,10 +15,10 @@ description: "apparmor_xattrs – AppArmor profile"
 # ...
 }</code></pre>
 <p> Note that &#8220;security.apparmor&#8221; and &#8220;trusted&#8221; are arbitrary, and profiles can match based on the value of any attribute. The xattrs value may also contain a path regex: profile trusted /usr/bin/* xattrs=(user.trust=&quot;tier/*&quot;) {</p>
-<p># &#8230;<br />
-} The <code><a href="/docs/linux/man/1-getfattr/">getfattr</a></code>(1) and <code><a href="/docs/linux/man/1-setfattr/">setfattr</a></code>(1) tools can be used to view and manage xattr values: $ setfattr -n &#8216;security.apparmor&#8217; -v &#8216;trusted&#8217; /usr/bin/example-tool<br />
-$ getfattr &#8211;absolute-names -d -m &#8211; /usr/bin/example-tool<br />
-# file: usr/bin/example-tool<br />
+<p># &#8230;<br/>
+} The <code><a href="/docs/linux/man/1-getfattr/">getfattr</a></code>(1) and <code><a href="/docs/linux/man/1-setfattr/">setfattr</a></code>(1) tools can be used to view and manage xattr values: $ setfattr -n &#8216;security.apparmor&#8217; -v &#8216;trusted&#8217; /usr/bin/example-tool<br/>
+$ getfattr &#8211;absolute-names -d -m &#8211; /usr/bin/example-tool<br/>
+# file: usr/bin/example-tool<br/>
 security.apparmor=&quot;trusted&quot; The priority of each profile is determined by the length of the path, then the number of xattrs specified. A more specific path is preferred over xattr matches: </p>
 <pre><code># Highest priority, longest path.
 profile example1 /usr/bin/example-tool {

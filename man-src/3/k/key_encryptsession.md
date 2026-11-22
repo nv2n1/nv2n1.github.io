@@ -35,10 +35,10 @@ description: "key_decryptsession, key_encryptsession, key_setsecret, key_gendes,
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>key_decryptsession</code>(),<br />
- <code>key_encryptsession</code>(),<br />
- <code>key_gendes</code>(),<br />
- <code>key_setsecret</code>(),<br />
+<td> <code>key_decryptsession</code>(),<br/>
+ <code>key_encryptsession</code>(),<br/>
+ <code>key_gendes</code>(),<br/>
+ <code>key_setsecret</code>(),<br/>
  <code>key_secretkey_is_set</code>() </td>
 <td>Thread safety</td>
 <td>MT-Safe

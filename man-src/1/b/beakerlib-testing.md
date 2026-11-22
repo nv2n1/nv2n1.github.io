@@ -14,23 +14,23 @@ description: "BeakerLib – testing – asserting functions, watchdog and report
 <h2>FUNCTIONS</h2>
 <h3>Manual Asserts</h3>
 <p> <i>rlPass</i> </p>
-<p> Manual assertion, asserts and logs <font SIZE="-1">PASS.</font> </p>
+<p> Manual assertion, asserts and logs PASS. </p>
 <pre>
     rlPass comment
 </pre>
 <dl>
 <dt>comment</dt>
 <dd> Short test summary.</dd></dl>
-<p> Returns 0 and asserts <font SIZE="-1">PASS.</font> </p>
+<p> Returns 0 and asserts PASS. </p>
 <p> <i>rlFail</i> </p>
-<p> Manual assertion, asserts and logs <font SIZE="-1">FAIL.</font> </p>
+<p> Manual assertion, asserts and logs FAIL. </p>
 <pre>
     rlFail comment
 </pre>
 <dl>
 <dt>comment</dt>
 <dd> Short test summary.</dd></dl>
-<p> Returns 1 and asserts <font SIZE="-1">FAIL.</font></p>
+<p> Returns 1 and asserts FAIL.</p>
 <h3>Arithmetic Asserts</h3>
 <p> <i>rlAssert0</i> </p>
 <p> Assertion checking for the equality of parameter to zero. </p>
@@ -42,7 +42,7 @@ description: "BeakerLib – testing – asserting functions, watchdog and report
 <dd> Short test summary, e.g. &#8220;Test if compilation ended successfully&#8221;.</dd>
 <dt>value</dt>
 <dd> Integer value (usually return code of a command).</dd></dl>
-<p> Returns 0 and asserts <font SIZE="-1">PASS</font> when <tt>&quot;value == 0&quot;</tt>. </p>
+<p> Returns 0 and asserts PASS when <tt>&quot;value == 0&quot;</tt>. </p>
 <p> <i>rlAssertEquals</i> </p>
 <p> Assertion checking for the equality of two parameters. </p>
 <pre>
@@ -55,7 +55,7 @@ description: "BeakerLib – testing – asserting functions, watchdog and report
 <dd> First parameter to compare, can be a number or a string</dd>
 <dt>value2</dt>
 <dd> Second parameter to compare, can be a number or a string</dd></dl>
-<p> Returns 0 and asserts <font SIZE="-1">PASS</font> when <tt>&quot;value1 == value2&quot;</tt>. </p>
+<p> Returns 0 and asserts PASS when <tt>&quot;value1 == value2&quot;</tt>. </p>
 <p> <i>rlAssertNotEquals</i> </p>
 <p> Assertion checking for the non-equality of two parameters. </p>
 <pre>
@@ -68,7 +68,7 @@ description: "BeakerLib – testing – asserting functions, watchdog and report
 <dd> First parameter to compare, can be a number or a string</dd>
 <dt>value2</dt>
 <dd> Second parameter to compare, can be a number or a string</dd></dl>
-<p> Returns 0 and asserts <font SIZE="-1">PASS</font> when <tt>&quot;value1 != value2&quot;</tt>. </p>
+<p> Returns 0 and asserts PASS when <tt>&quot;value1 != value2&quot;</tt>. </p>
 <p> <i>rlAssertGreater</i> </p>
 <p> Assertion checking whether first parameter is greater than the second one. </p>
 <pre>
@@ -81,7 +81,7 @@ description: "BeakerLib – testing – asserting functions, watchdog and report
 <dd> Integer value.</dd>
 <dt>value2</dt>
 <dd> Integer value.</dd></dl>
-<p> Returns 0 and asserts <font SIZE="-1">PASS</font> when <tt>&quot;value1 &gt; value2&quot;</tt>. </p>
+<p> Returns 0 and asserts PASS when <tt>&quot;value1 &gt; value2&quot;</tt>. </p>
 <p> <i>rlAssertGreaterOrEqual</i> </p>
 <p> Assertion checking whether first parameter is greater or equal to the second one. </p>
 <pre>
@@ -94,7 +94,7 @@ description: "BeakerLib – testing – asserting functions, watchdog and report
 <dd> Integer value.</dd>
 <dt>value2</dt>
 <dd> Integer value.</dd></dl>
-<p> Returns 0 and asserts <font SIZE="-1">PASS</font> when <tt>&quot;value1 &gt;= value2&quot;</tt>.</p>
+<p> Returns 0 and asserts PASS when <tt>&quot;value1 &gt;= value2&quot;</tt>.</p>
 <h3>File Asserts</h3>
 <p> <i>rlAssertExists</i> </p>
 <p> Assertion checking for the existence of a file or a directory. </p>
@@ -104,7 +104,7 @@ description: "BeakerLib – testing – asserting functions, watchdog and report
 <dl>
 <dt>file|directory</dt>
 <dd> Path to the file or directory.</dd></dl>
-<p> Returns 0 and asserts <font SIZE="-1">PASS</font> when <tt>&quot;file&quot;</tt> exists. </p>
+<p> Returns 0 and asserts PASS when <tt>&quot;file&quot;</tt> exists. </p>
 <p> <i>rlAssertNotExists</i> </p>
 <p> Assertion checking for the non-existence of a file or a directory. </p>
 <pre>
@@ -113,7 +113,7 @@ description: "BeakerLib – testing – asserting functions, watchdog and report
 <dl>
 <dt>file|directory</dt>
 <dd> Path to the file or directory.</dd></dl>
-<p> Returns 0 and asserts <font SIZE="-1">PASS</font> when <tt>&quot;file&quot;</tt> does not exist. </p>
+<p> Returns 0 and asserts PASS when <tt>&quot;file&quot;</tt> does not exist. </p>
 <p> <i>rlAssertGrep</i> </p>
 <p> Assertion checking if the file contains a pattern. </p>
 <pre>
@@ -126,7 +126,7 @@ description: "BeakerLib – testing – asserting functions, watchdog and report
 <dd> Path to the file.</dd>
 <dt>options</dt>
 <dd> Optional parameters to be passed to grep, default is <tt>&quot;-q&quot;</tt>. Can be used to perform case insensitive matches (-i), or using extended (-E) or perl (-P) regular expressions.</dd></dl>
-<p> Returns 0 and asserts <font SIZE="-1">PASS</font> when <tt>&quot;file&quot;</tt> exists and contains given <tt>&quot;pattern&quot;</tt>. </p>
+<p> Returns 0 and asserts PASS when <tt>&quot;file&quot;</tt> exists and contains given <tt>&quot;pattern&quot;</tt>. </p>
 <p> <i>rlAssertNotGrep</i> </p>
 <p> Assertion checking that the file does not contain a pattern. </p>
 <pre>
@@ -139,7 +139,7 @@ description: "BeakerLib – testing – asserting functions, watchdog and report
 <dd> Path to the file.</dd>
 <dt>options</dt>
 <dd> Optional parameters to be passed to grep, default is <tt>&quot;-q&quot;</tt>. Can be used to perform case insensitive matches (-i), or using extended (-E) or perl (-P) regular expressions.</dd></dl>
-<p> Returns 0 and asserts <font SIZE="-1">PASS</font> when <tt>&quot;file&quot;</tt> exists and does not contain given <tt>&quot;pattern&quot;</tt>. </p>
+<p> Returns 0 and asserts PASS when <tt>&quot;file&quot;</tt> exists and does not contain given <tt>&quot;pattern&quot;</tt>. </p>
 <p> <i>rlAssertDiffer</i> </p>
 <p> Assertion checking that two files differ (are not identical). </p>
 <pre>
@@ -150,7 +150,7 @@ description: "BeakerLib – testing – asserting functions, watchdog and report
 <dd> Path to first file1</dd>
 <dt>file2</dt>
 <dd> Path to second file</dd></dl>
-<p> Returns 0 and asserts <font SIZE="-1">PASS</font> when <tt>&quot;file1&quot;</tt> and <tt>&quot;file2&quot;</tt> differs. </p>
+<p> Returns 0 and asserts PASS when <tt>&quot;file1&quot;</tt> and <tt>&quot;file2&quot;</tt> differs. </p>
 <p> <i>rlAssertNotDiffer</i> </p>
 <p> Assertion checking that two files do not differ (are identical). </p>
 <pre>
@@ -161,7 +161,7 @@ description: "BeakerLib – testing – asserting functions, watchdog and report
 <dd> Path to first file1</dd>
 <dt>file2</dt>
 <dd> Path to second file</dd></dl>
-<p> Returns 0 and asserts <font SIZE="-1">PASS</font> when <tt>&quot;file1&quot;</tt> and <tt>&quot;file2&quot;</tt> do not differ.</p>
+<p> Returns 0 and asserts PASS when <tt>&quot;file1&quot;</tt> and <tt>&quot;file2&quot;</tt> do not differ.</p>
 <h3>Run, Watch, Report</h3>
 <p> <i>rlRun</i> </p>
 <p> Run command with optional comment and make sure its exit code matches expectations. </p>
@@ -170,7 +170,7 @@ rlRun[-t][-l][-c][-s] command[status[, status...]][comment]
 </code></pre>
 <dl>
 <dt>-t</dt>
-<dd> If specified, stdout and stderr of the command output will be tagged with strigs &#8216;<font SIZE="-1">STDOUT: </font>&#8216; and &#8216;<font SIZE="-1">STDERR: </font>&#8216;.</dd>
+<dd> If specified, stdout and stderr of the command output will be tagged with strigs &#8216;STDOUT: &#8216; and &#8216;STDERR: &#8216;.</dd>
 <dt>-l</dt>
 <dd> If specified, output of the command (tagged, if -t was specified) is logged using rlLog function. This is intended for short outputs, and therefore only last 50 lines are logged this way. Longer outputs should be analysed separately, or uploaded via rlFileSubmit or rlBundleLogs.</dd>
 <dt>-c</dt>
@@ -181,10 +181,10 @@ rlRun[-t][-l][-c][-s] command[status[, status...]][comment]
 <dt>command</dt>
 <dd> Command to run.</dd>
 <dt>status</dt>
-<dd> Expected exit code(s). Optional, default 0. If you expect more exit codes, separate them with comma (e.g. &#8220;0,1&#8221; when both 0 and 1 are <font SIZE="-1">OK</font> and expected), or use from-to notation (i.e. &#8220;2-5&#8221; for &#8220;2,3,4,5&#8221;), or combine them (e.g. &#8220;2-4,26&#8221; for &#8220;2,3,4,26&#8221;).</dd>
+<dd> Expected exit code(s). Optional, default 0. If you expect more exit codes, separate them with comma (e.g. &#8220;0,1&#8221; when both 0 and 1 are OK and expected), or use from-to notation (i.e. &#8220;2-5&#8221; for &#8220;2,3,4,5&#8221;), or combine them (e.g. &#8220;2-4,26&#8221; for &#8220;2,3,4,26&#8221;).</dd>
 <dt>comment</dt>
 <dd> Short summary describing the action (optional, but recommended &#8211; explain what are you doing here).</dd></dl>
-<p> Returns the exit code of the command run. Asserts <font SIZE="-1">PASS</font> when command\&#8217;s exit status is in the list of expected exit codes. </p>
+<p> Returns the exit code of the command run. Asserts PASS when command\&#8217;s exit status is in the list of expected exit codes. </p>
 <p> Note:</p>
 <dl>
 <dt>&bull;</dt>
@@ -201,9 +201,9 @@ rlRun[-t][-l][-c][-s] command[status[, status...]][comment]
 <dt>timeout</dt>
 <dd> Timeout to wait, in seconds.</dd>
 <dt>signal</dt>
-<dd> Signal to use (optional, default <font SIZE="-1">KILL</font>).</dd>
+<dd> Signal to use (optional, default KILL).</dd>
 <dt>callback</dt>
-<dd> Callback function to be called before the signal is send (optional, none by default). The callback function will have one argument available &#8212; <font SIZE="-1">PGID</font> of the process group.</dd></dl>
+<dd> Callback function to be called before the signal is send (optional, none by default). The callback function will have one argument available &#8212; PGID of the process group.</dd></dl>
 <p> Returns 0 if the command ends normally, without need to be killed. </p>
 <p> <i>rlReport</i> </p>
 <p> Report test result to the test harness. The command to be used for reporting is set by the respective plugin. You can also use the <tt>$BEAKERLIB_COMMAND_REPORT_RESULT</tt> variable to use your custom command. </p>
@@ -214,7 +214,7 @@ rlReport name result[score][log]
 <dt>name</dt>
 <dd> Name of the test result.</dd>
 <dt>result</dt>
-<dd> Result (one of <font SIZE="-1">PASS, WARN, FAIL</font>). If called with something else, will use <font SIZE="-1">WARN.</font></dd>
+<dd> Result (one of PASS, WARN, FAIL). If called with something else, will use WARN.</dd>
 <dt>score</dt>
 <dd> Test score (optional).</dd>
 <dt>log</dt>
@@ -236,15 +236,15 @@ rlReport name result[score][log]
 <p> Returns 0 if the expresison ver1 op ver2 is true; 1 if the expression is false and 2 if something went wrong.</p>
 <h3>Release Info</h3>
 <p> <i>rlIsRHEL</i> </p>
-<p> Check whether we&#8217;re running on <font SIZE="-1">RHEL.</font> With given number of version as parameter returns 0 if the particular <font SIZE="-1">RHEL</font> version is running. Multiple arguments can be passed separated with space as well as any particular release (5.1 5.2 5.3). Each version can have a prefix consisting of &#8216;&lt;&#8216;, &#8216;&lt;=&#8217;, &#8216;=&#8217;, &#8216;&gt;=&#8217;, &#8216;&gt;&#8217;, matching whenever the currently installed version is lesser, lesser or equal, equal, equal or greater, greater than the version specified as argument. Note that ie. &#8216;=5&#8217; (unlike just &#8216;5&#8217;) matches exactly 5 (5.0), not 5.N, where N &gt; 0. </p>
+<p> Check whether we&#8217;re running on RHEL. With given number of version as parameter returns 0 if the particular RHEL version is running. Multiple arguments can be passed separated with space as well as any particular release (5.1 5.2 5.3). Each version can have a prefix consisting of &#8216;&lt;&#8216;, &#8216;&lt;=&#8217;, &#8216;=&#8217;, &#8216;&gt;=&#8217;, &#8216;&gt;&#8217;, matching whenever the currently installed version is lesser, lesser or equal, equal, equal or greater, greater than the version specified as argument. Note that ie. &#8216;=5&#8217; (unlike just &#8216;5&#8217;) matches exactly 5 (5.0), not 5.N, where N &gt; 0. </p>
 <pre>
     rlIsRHEL
 </pre>
-<p> Returns 0 if we are running on <font SIZE="-1">RHEL.</font> </p>
+<p> Returns 0 if we are running on RHEL. </p>
 <pre>
     rlIsRHEL 4.8 5
 </pre>
-<p> Returns 0 if we are running <font SIZE="-1">RHEL 4.8</font> or any <font SIZE="-1">RHEL 5.</font> </p>
+<p> Returns 0 if we are running RHEL 4.8 or any RHEL 5. </p>
 <p> <i>rlIsFedora</i> </p>
 <p> Check whether we&#8217;re running on Fedora. With given number of version as parameter returns 0 if the particular Fedora version is running. Range matching can be used in the form used by rlIsRHEL. </p>
 <pre>

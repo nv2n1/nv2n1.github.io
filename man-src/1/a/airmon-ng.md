@@ -22,21 +22,21 @@ description: "airmon-ng – bash script designed to turn wireless cards into mon
 <h2>AUTHOR</h2>
 <p> This manual page was written by Adam Cecile &lt;gandalf [at] le-vert.net&gt; for the Debian system (but may be used by others). Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 or any later version published by the Free Software Foundation On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-airbase-ng/">airbase-ng</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-aircrack-ng/">aircrack-ng</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-airdecap-ng/">airdecap-ng</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-airdecloak-ng/">airdecloak-ng</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-airdriver-ng/">airdriver-ng</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-aireplay-ng/">aireplay-ng</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-airodump-ng/">airodump-ng</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-airolib-ng/">airolib-ng</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-airserv-ng/">airserv-ng</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-airtun-ng/">airtun-ng</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-buddy-ng/">buddy-ng</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-easside-ng/">easside-ng</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-ivstools/">ivstools</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-kstats/">kstats</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-makeivs-ng/">makeivs-ng</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-packetforge-ng/">packetforge-ng</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-tkiptun-ng/">tkiptun-ng</a>(1)</code><br />
+<p> <code><a href="/docs/linux/man/1-airbase-ng/">airbase-ng</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-aircrack-ng/">aircrack-ng</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-airdecap-ng/">airdecap-ng</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-airdecloak-ng/">airdecloak-ng</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-airdriver-ng/">airdriver-ng</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-aireplay-ng/">aireplay-ng</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-airodump-ng/">airodump-ng</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-airolib-ng/">airolib-ng</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-airserv-ng/">airserv-ng</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-airtun-ng/">airtun-ng</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-buddy-ng/">buddy-ng</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-easside-ng/">easside-ng</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-ivstools/">ivstools</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-kstats/">kstats</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-makeivs-ng/">makeivs-ng</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-packetforge-ng/">packetforge-ng</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-tkiptun-ng/">tkiptun-ng</a>(1)</code><br/>
  <code><a href="/docs/linux/man/1-wesside-ng/">wesside-ng</a>(1)</code> </p>

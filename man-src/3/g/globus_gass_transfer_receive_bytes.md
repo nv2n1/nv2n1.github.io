@@ -21,10 +21,10 @@ description: "Sending and Receiving Data –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>arg</i> The user_arg passed to the function which registered this callback. The user may use this value for any purpose.<br />
- <i>request</i> The request handle associated with this byte array.<br />
- <i>bytes</i> The byte array which was sent or received.<br />
- <i>length</i> The length of data which was sent or received.<br />
+</dt><dd> <i>arg</i> The user_arg passed to the function which registered this callback. The user may use this value for any purpose.<br/>
+ <i>request</i> The request handle associated with this byte array.<br/>
+ <i>bytes</i> The byte array which was sent or received.<br/>
+ <i>length</i> The length of data which was sent or received.<br/>
  <i>last_data</i> Boolean flag whether this is the final byte array for this request.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
@@ -39,20 +39,20 @@ description: "Sending and Receiving Data –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>request</i> The request handle with which this block of bytes is associated.<br />
- <i>bytes</i> A user-supplied buffer containing the data associated with the request.<br />
- <i>max_length</i> The length of the <i>bytes</i> array.<br />
- <i>wait_for_length</i> The minimum amount of data to wait for before invoking the <i>callback</i> function. A partial byte array of at least this amount will be returned in the callback, unless end-of-file is reached before this amount.<br />
- <i>callback</i> Function to call once the <i>bytes</i> array has been received.<br />
+</dt><dd> <i>request</i> The request handle with which this block of bytes is associated.<br/>
+ <i>bytes</i> A user-supplied buffer containing the data associated with the request.<br/>
+ <i>max_length</i> The length of the <i>bytes</i> array.<br/>
+ <i>wait_for_length</i> The minimum amount of data to wait for before invoking the <i>callback</i> function. A partial byte array of at least this amount will be returned in the callback, unless end-of-file is reached before this amount.<br/>
+ <i>callback</i> Function to call once the <i>bytes</i> array has been received.<br/>
  <i>user_arg</i> Argument to be passed to the <i>callback</i> function.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GLOBUS_SUCCESS</i> The <i>bytes</i> array was successfully registered with the GASS transfer library. The <i>callback</i> function will be invoked once it has been received.<br />
- <i>GLOBUS_GASS_TRANSFER_ERROR_NULL_POINTER</i> The <i>bytes</i> or <i>callback</i> parameter was NULL.<br />
- <i>GLOBUS_GASS_TRANSFER_ERROR_INVALID_USER</i> The <i>request</i> was invalid, or it is not one on which bytes can be sent.<br />
- <i>GLOBUS_GASS_TRANSFER_ERROR_NOT_INITIALIZED</i> The callback to a non-blocking file request has not been invoked yet, a blocking file request has not returned, or the request has not yet been authorized.<br />
- <i>GLOBUS_GASS_TRANSFER_ERROR_REQUEST_FAILED</i> The <i>request</i> has failed by either the client, server, or protocol module implementation.<br />
+</dt><dd> <i>GLOBUS_SUCCESS</i> The <i>bytes</i> array was successfully registered with the GASS transfer library. The <i>callback</i> function will be invoked once it has been received.<br/>
+ <i>GLOBUS_GASS_TRANSFER_ERROR_NULL_POINTER</i> The <i>bytes</i> or <i>callback</i> parameter was NULL.<br/>
+ <i>GLOBUS_GASS_TRANSFER_ERROR_INVALID_USER</i> The <i>request</i> was invalid, or it is not one on which bytes can be sent.<br/>
+ <i>GLOBUS_GASS_TRANSFER_ERROR_NOT_INITIALIZED</i> The callback to a non-blocking file request has not been invoked yet, a blocking file request has not returned, or the request has not yet been authorized.<br/>
+ <i>GLOBUS_GASS_TRANSFER_ERROR_REQUEST_FAILED</i> The <i>request</i> has failed by either the client, server, or protocol module implementation.<br/>
  <i>GLOBUS_GASS_TRANSFER_ERROR_DONE</i> The <i>request</i> has already been completed.</dd></dl>
 <h3>int globus_gass_transfer_send_bytes (<code>globus_gass_transfer_request_t</code>request, globus_byte_t *bytes, globus_size_tsend_length, globus_bool_tlast_data, <code>globus_gass_transfer_bytes_callback_t</code>callback, void *user_arg)</h3>
 <p> Send a byte array associated with a request handle. </p>
@@ -62,20 +62,20 @@ description: "Sending and Receiving Data –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>request</i> The request handle with which this block of bytes is associated.<br />
- <i>bytes</i> A user-supplied buffer containing the data associated with the request.<br />
- <i>send_length</i> The length of the <i>bytes</i> array.<br />
- <i>last_data</i> A flag to indicate whether this is the final block of data for the request. If this is true, then the <i>callback</i> function will be delayed until the server acknowledges that the file has been completely received.<br />
- <i>callback</i> Function to call once the <i>bytes</i> array has been sent.<br />
+</dt><dd> <i>request</i> The request handle with which this block of bytes is associated.<br/>
+ <i>bytes</i> A user-supplied buffer containing the data associated with the request.<br/>
+ <i>send_length</i> The length of the <i>bytes</i> array.<br/>
+ <i>last_data</i> A flag to indicate whether this is the final block of data for the request. If this is true, then the <i>callback</i> function will be delayed until the server acknowledges that the file has been completely received.<br/>
+ <i>callback</i> Function to call once the <i>bytes</i> array has been sent.<br/>
  <i>user_arg</i> Argument to be passed to the <i>callback</i> function.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GLOBUS_SUCCESS</i> The <i>bytes</i> array was successfully registered with the GASS transfer library. The <i>callback</i> function will be invoked once it has been sent.<br />
- <i>GLOBUS_GASS_TRANSFER_ERROR_NULL_POINTER</i> The <i>bytes</i> or <i>callback</i> parameter was NULL.<br />
- <i>GLOBUS_GASS_TRANSFER_ERROR_INVALID_USER</i> The <i>request</i> was invalid, or it is not one on which bytes can be sent.<br />
- <i>GLOBUS_GASS_TRANSFER_ERROR_NOT_INITIALIZED</i> The callback to a non-blocking file request has not been invoked yet, a blocking file request has not returned, or the request has not yet been authorized.<br />
- <i>GLOBUS_GASS_TRANSFER_ERROR_REQUEST_FAILED</i> The <i>request</i> has failed by either the client, server, or protocol module implementation.<br />
+</dt><dd> <i>GLOBUS_SUCCESS</i> The <i>bytes</i> array was successfully registered with the GASS transfer library. The <i>callback</i> function will be invoked once it has been sent.<br/>
+ <i>GLOBUS_GASS_TRANSFER_ERROR_NULL_POINTER</i> The <i>bytes</i> or <i>callback</i> parameter was NULL.<br/>
+ <i>GLOBUS_GASS_TRANSFER_ERROR_INVALID_USER</i> The <i>request</i> was invalid, or it is not one on which bytes can be sent.<br/>
+ <i>GLOBUS_GASS_TRANSFER_ERROR_NOT_INITIALIZED</i> The callback to a non-blocking file request has not been invoked yet, a blocking file request has not returned, or the request has not yet been authorized.<br/>
+ <i>GLOBUS_GASS_TRANSFER_ERROR_REQUEST_FAILED</i> The <i>request</i> has failed by either the client, server, or protocol module implementation.<br/>
  <i>GLOBUS_GASS_TRANSFER_ERROR_DONE</i> The <i>request</i> has already been completed.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gass_transfer from the source code. </p>

@@ -18,8 +18,8 @@ int getnameinfo(const struct sockaddr *addr, socklen_t addrlen,
                 char *serv, socklen_t servlen, int flags);
 </code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
-<p> <code>getnameinfo</code>():<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Since glibc 2.22:&nbsp;_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br />
+<p> <code>getnameinfo</code>():<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Since glibc 2.22:&nbsp;_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.21 and earlier:&nbsp;_POSIX_C_SOURCE</p>
 <h2>DESCRIPTION</h2>
 <p> The <code>getnameinfo</code>() function is the inverse of <code><a href="/docs/linux/man/3-getaddrinfo/">getaddrinfo</a></code>(3): it converts a socket address to a corresponding host and service, in a protocol-independent manner. It combines the functionality of <code><a href="/docs/linux/man/3-gethostbyaddr/">gethostbyaddr</a></code>(3) and <code><a href="/docs/linux/man/3-getservbyport/">getservbyport</a></code>(3), but unlike those functions, <code>getnameinfo</code>() is reentrant and allows programs to eliminate IPv4-versus-IPv6 dependencies. </p>
@@ -65,8 +65,8 @@ int getnameinfo(const struct sockaddr *addr, socklen_t addrlen,
 <dd> A system error occurred. The error code can be found in <i>errno</i>.</dd></dl>
 <p> The <code><a href="/docs/linux/man/3-gai_strerror/">gai_strerror</a></code>(3) function translates these error codes to a human readable string, suitable for error reporting.</p>
 <h2>FILES</h2>
-<p> <i>/etc/hosts</i><br />
- <i>/etc/nsswitch.conf</i><br />
+<p> <i>/etc/hosts</i><br/>
+ <i>/etc/nsswitch.conf</i><br/>
  <i>/etc/resolv.conf</i></p>
 <h2>VERSIONS</h2>
 <p> <code>getnameinfo</code>() is provided in glibc since version 2.1.</p>
@@ -97,15 +97,15 @@ int getnameinfo(const struct sockaddr *addr, socklen_t addrlen,
 <h2>EXAMPLES</h2>
 <p> The following code tries to get the numeric hostname and service name, for a given socket address. Note that there is no hardcoded reference to a particular address family. </p>
 <p> struct sockaddr *addr; /* input */ socklen_t addrlen; /* input */ char hbuf[NI_MAXHOST], sbuf[NI_MAXSERV]; </p>
-<p> if (getnameinfo(addr, addrlen, hbuf, sizeof(hbuf), sbuf,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sizeof(sbuf), NI_NUMERICHOST | NI_NUMERICSERV)&nbsp;==&nbsp;0)<br />
+<p> if (getnameinfo(addr, addrlen, hbuf, sizeof(hbuf), sbuf,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sizeof(sbuf), NI_NUMERICHOST | NI_NUMERICSERV)&nbsp;==&nbsp;0)<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;host=%s, serv=%s
 &quot;, hbuf, sbuf); </p>
 <p> The following version checks if the socket address has a reverse address mapping. </p>
 <p> struct sockaddr *addr; /* input */ socklen_t addrlen; /* input */ char hbuf[NI_MAXHOST]; </p>
-<p> if (getnameinfo(addr, addrlen, hbuf, sizeof(hbuf),<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;NULL, 0, NI_NAMEREQD))<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;could not resolve hostname&quot;); else<br />
+<p> if (getnameinfo(addr, addrlen, hbuf, sizeof(hbuf),<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;NULL, 0, NI_NAMEREQD))<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;could not resolve hostname&quot;); else<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;host=%s
 &quot;, hbuf); </p>
 <p> An example program using <code>getnameinfo</code>() can be found in <code><a href="/docs/linux/man/3-getaddrinfo/">getaddrinfo</a></code>(3).</p>

@@ -23,14 +23,14 @@ description: "miau.info – miau.info"
 <p> &#8220;What is this good for?&#8221;, you might ask. </p>
 <p> Well, let&#8217;s assume you&#8217;ve got a dialup-connection. If somebody performs a `<code>/WHOIS</code>&#8216; on you it shows something like &#8220;yournick is yournick!yourident [at] dialup66-r-v.isp.at&#8221;. </p>
 <p> If you are vain you don&#8217;t want people to see this stupid hostname. So you get a account on a machine with a cool hostname (from now on refered as middleman), get miau running there and a /whois on you will show middleman&#8217;s hostname, since the connection to the irc-server is actually originating from middleman. </p>
-<p> Another advantage is that network-attacks aren&#8217;t really destinating to <font SIZE="-1">YOUR</font> computer but to middleman, which is in theory a machine that can&#8217;t be brought down. </p>
+<p> Another advantage is that network-attacks aren&#8217;t really destinating to YOUR computer but to middleman, which is in theory a machine that can&#8217;t be brought down. </p>
 <p> 2 What makes miau special over other bouncers? ********************************************** </p>
 <p> miau is very straight and simple to set up and the probably most important and interesting feature is that miau keeps the middleman -&gt; irc-server connection up even after you disconnect with your client. </p>
 <p> This means miau prevents people from using your nick (this is especially handy on nets like IRCNet, since there are no services like on dalnet etc) and tells people who message you that you&#8217;re not here and logs what these people said. </p>
 <p> Upon your next connect to miau, it will let the channels you&#8217;ve been in in your last session pop up, which means that you&#8217;ll keep your status in these channels. </p>
 <p> Besides that miau&#8217;s got a sophisticated flood-protection making it (almost) impossible to disconnect miau. </p>
 <p> 3 Copyright *********** </p>
-<p> miau has been written by Tommi Saviranta &lt;wnd [at] iki.fi&gt;. miau branched from muh, see <a rel="nofollow" href="http://mind.riot.org/muh/.">http://mind.riot.org/muh/.</a> miau is licensed under the <font SIZE="-1">GPL</font>. See <font SIZE="-1">COPYING</font> for details.</p>
+<p> miau has been written by Tommi Saviranta &lt;wnd [at] iki.fi&gt;. miau branched from muh, see <a rel="nofollow" href="http://mind.riot.org/muh/.">http://mind.riot.org/muh/.</a> miau is licensed under the GPL. See COPYING for details.</p>
 <h2>4 Command Line Options</h2>
 <p> `<code>-f</code>&#8216; Stay in foreground (don&#8217;t fork) </p>
 <p> `<code>-d directory</code>&#8216; Specifies a different directory than the default for miaurc, messages and log </p>
@@ -39,18 +39,18 @@ description: "miau.info – miau.info"
 <h2>5 miau Commands</h2>
 <p> miau accepts following commands to be issued by the client via `/MIAU &lt;command&gt;&#8217;. </p>
 <p> Note that some IRC-clients might require a prefix such as `<code>/QUOTE</code>&#8216; or `<code>/RAW</code>&#8216; to send commands they don&#8217;t know about. </p>
-<p> `<font SIZE="-1"><code>HELP</code></font>&#8216; Display supported commands </p>
-<p> `<font SIZE="-1"><code>READ</code></font>&#8216; Read received messages </p>
-<p> `<font SIZE="-1"><code>DEL</code></font>&#8216; Delete all messages </p>
-<p> `<font SIZE="-1"><code>PRINT</code></font>&#8216; Prints miau&#8217;s server-list. Servers prefixed with &#8216;+&#8217; work, those with &#8216;-&#8216; don&#8217;t. </p>
-<p> `<font SIZE="-1"><code>JUMP</code></font><code> [servernumber]</code>&#8216; Jump to next server in serverlist. If `<code>servernumber</code>&#8216; (see `<font SIZE="-1"><code>PRINT</code></font>&#8216;) is specified, miau will jump to this server (even if marked as not working). </p>
-<p> `<font SIZE="-1"><code>REHASH</code></font>&#8216; Reread config-file. Note that this can also be performed by sending a `<font SIZE="-1"><code>SIGHUP</code></font>&#8216; to miau (see `<a href="/docs/linux/man/1-kill/">kill</a><code>(1)</code>&#8216;). If `<code>realname</code>&#8216; or `<code>username</code>&#8216; have been changed miau will reconnect to it&#8217;s current server. </p>
-<p> `<font SIZE="-1"><code>DIE</code></font><code> [reason]</code>&#8216; Terminate miau. A quit reason can be given after command. </p>
-<p> `<font SIZE="-1"><code>UPTIME</code></font>&#8216; Prints uptime of miau. </p>
+<p> `<code>HELP</code>&#8216; Display supported commands </p>
+<p> `<code>READ</code>&#8216; Read received messages </p>
+<p> `<code>DEL</code>&#8216; Delete all messages </p>
+<p> `<code>PRINT</code>&#8216; Prints miau&#8217;s server-list. Servers prefixed with &#8216;+&#8217; work, those with &#8216;-&#8216; don&#8217;t. </p>
+<p> `<code>JUMP</code><code> [servernumber]</code>&#8216; Jump to next server in serverlist. If `<code>servernumber</code>&#8216; (see `<code>PRINT</code>&#8216;) is specified, miau will jump to this server (even if marked as not working). </p>
+<p> `<code>REHASH</code>&#8216; Reread config-file. Note that this can also be performed by sending a `<code>SIGHUP</code>&#8216; to miau (see `<a href="/docs/linux/man/1-kill/">kill</a><code>(1)</code>&#8216;). If `<code>realname</code>&#8216; or `<code>username</code>&#8216; have been changed miau will reconnect to it&#8217;s current server. </p>
+<p> `<code>DIE</code><code> [reason]</code>&#8216; Terminate miau. A quit reason can be given after command. </p>
+<p> `<code>UPTIME</code>&#8216; Prints uptime of miau. </p>
 <p> This command might not be compiled in. </p>
-<p> `<font SIZE="-1"><code>PINGSTAT</code></font>&#8216; Prints ping statistics. </p>
+<p> `<code>PINGSTAT</code>&#8216; Prints ping statistics. </p>
 <p> This command might not be compiled in. </p>
-<p> `<font SIZE="-1"><code>DUMP</code></font>&#8216; Prints some of miau&#8217;s internal variables. Used for debugging. </p>
+<p> `<code>DUMP</code>&#8216; Prints some of miau&#8217;s internal variables. Used for debugging. </p>
 <p> This command might not be compiled in.</p>
 <h2>6 Installation</h2>
 <p> Create a `<code>.miau/</code>&#8216;-directory in your homedir and copy `<code>miaurc</code>&#8216; there (it will probably reside in `<code>/usr/share/miau</code>&#8216;, depending on your os/distribution). </p>
@@ -59,8 +59,8 @@ description: "miau.info – miau.info"
 <h2>7 miaurc Commands</h2>
 <p> There are numerous commands with which you can extensively customize miau&#8217;s behaviour. The must be placed in the `<code>miaurc</code>&#8216; that miau reads on startup, it is usually `<code>$HOME/.miau/miaurc</code>&#8216;. </p>
 <p> 8 Required settings ******************* </p>
-<p> `<code>nicknames = { &#8220;nick&#8221; }</code>&#8216; Your nickname (and secondary nicknames) on <font SIZE="-1">IRC</font>. If the primary nick (first nick on the list) is already on use, miau will try the others on the list. </p>
-<p> `<code>realname = &#8220;realname&#8221;</code>&#8216; Your &#8220;real&#8221; name (which will be shown by `<code>/WHOIS</code>&#8216;-command) on <font SIZE="-1">IRC</font>. </p>
+<p> `<code>nicknames = { &#8220;nick&#8221; }</code>&#8216; Your nickname (and secondary nicknames) on IRC. If the primary nick (first nick on the list) is already on use, miau will try the others on the list. </p>
+<p> `<code>realname = &#8220;realname&#8221;</code>&#8216; Your &#8220;real&#8221; name (which will be shown by `<code>/WHOIS</code>&#8216;-command) on IRC. </p>
 <p> `<code>username = &#8220;username&#8221;</code>&#8216; Your ident (matters only if you don&#8217;t have `<code>identd</code>&#8216; running). </p>
 <p> `<code>password = &#8220;password&#8221;</code>&#8216; The password miau will expect to receive from client when it&#8217;s registering with nick. If this is 13 characters long, miau assumed it&#8217;s crypted. miau can generate password-hashes with `<code>-c</code>&#8216; -switch, if it is compiled with that feature. </p>
 <p> `<code>listenport = &#8220;port&#8221;</code>&#8216; The port miau will wait for incoming connections. This is the port you connect your IRC-client to. </p>
@@ -69,7 +69,7 @@ description: "miau.info – miau.info"
 <p> Note: You can define &#8220;your&#8221; hostname with `<code>@@</code>&#8216;. Only the _last_ occurance of `<code>@@</code>&#8216; will be translated. </p>
 <p> 9 Optional settings ******************* </p>
 <p> `<code>statelog = &#8220;state&#8221;</code>&#8216; Should miau write state log to `<code>$MIAUDIR/log</code>&#8216;? When true, log will be written in this file. If set to false, the same stuff is printed on `<code>stdout</code>&#8216; (on terminal). </p>
-<p> `<code>listenhost = &#8220;host&#8221;</code>&#8216; Host miau uses to listen on. If you are compiled with <font SIZE="-1">IPV6</font> and need this to listen on an <font SIZE="-1">IPV4</font> port, you must use an <font SIZE="-1">IP</font> in the form `<code>::FFFF:127.0.0.1</code>&#8216;. </p>
+<p> `<code>listenhost = &#8220;host&#8221;</code>&#8216; Host miau uses to listen on. If you are compiled with IPV6 and need this to listen on an IPV4 port, you must use an IP in the form `<code>::FFFF:127.0.0.1</code>&#8216;. </p>
 <p> `<code>floodtimer = &#8220;number&#8221;</code>&#8216; Time it takes to send one message. When configuring flood-protection, this variable defined how fast you can send messages; how many seconds sending one message takes. See also `<code>burstsize</code>&#8216;. </p>
 <p> `<code>burstsize = &#8220;number&#8221;</code>&#8216; How many messages can be sent at once. When configuring flood-protection, this variable defined how many messages can be sent at once (in a burst). See also `<code>floodtimer</code>&#8216;. </p>
 <p> `<code>jointries = &#8220;number&#8221;</code>&#8216; Number of tries to join channel after dropping from server etc. miau tries to join channels once a minute. </p>
@@ -80,7 +80,7 @@ description: "miau.info – miau.info"
 <p> `<code>channels = { &#8220;channel&#8221;:&#8220;keyword&#8221; }</code>&#8216; List of channels to join. </p>
 <p> `<code>rejoin = &#8220;state&#8221;</code>&#8216; Rejoin channels after disconnecting from the server. If `<code>rejoin</code>&#8216; is set to `<code>true</code>&#8216;, channels defined in `<code>channels</code>&#8216;&quot; are also joined when client first time connects to miau. </p>
 <p> `<code>leave = &#8220;state&#8221;</code>&#8216; Leave channels when all clients have detached from miau. If `<code>leave</code>&#8216; is set to `<code>false</code>&#8216; and `<code>rejoin</code>&#8216; is set to `<code>true</code>&#8216;, channels defined at `<code>channels</code>&#8216; will be joined at miau startup. If both `<code>leave</code>&#8216; and `<code>rejoin</code>&#8216; is set to `<code>true</code>&#8216;, channels that are left at client detach, are rejoined when client attached back to miau. </p>
-<p> `<code>leavemsg = &#8220;message&#8221;</code>&#8216; Message miau will either use as PART-message or as <font SIZE="-1">ACTION</font> when all clients have detached from miau. If unset or set to empty, no message will be shown. Note that many people dislike event-based messages (which happens when `<code>leave</code>&#8216; is set to `<code>false</code>&#8216; and `<code>leavemsg</code>&#8216; is set). Note that commenting this option out and rehashing after `<code>leavemsg</code>&#8216; was set, this option is _not_ reverted. To disable `<code>leavemsg</code>&#8216; afterwards you need to write an empty string here and rehash. Also see `<code>usequitmsg</code>&#8216;. </p>
+<p> `<code>leavemsg = &#8220;message&#8221;</code>&#8216; Message miau will either use as PART-message or as ACTION when all clients have detached from miau. If unset or set to empty, no message will be shown. Note that many people dislike event-based messages (which happens when `<code>leave</code>&#8216; is set to `<code>false</code>&#8216; and `<code>leavemsg</code>&#8216; is set). Note that commenting this option out and rehashing after `<code>leavemsg</code>&#8216; was set, this option is _not_ reverted. To disable `<code>leavemsg</code>&#8216; afterwards you need to write an empty string here and rehash. Also see `<code>usequitmsg</code>&#8216;. </p>
 <p> `<code>awaymsg = &#8220;message&#8221;</code>&#8216; Text that will be set to miau&#8217;s away-reason when all clients have detached from miau. If unset or set to empty, AWAY-status will be left untouched. When any client attaches back to miau, AWAY-status will be reset. Note that is user sets him/herself away, miau will _not_ touch away-status nor message neither when connecting to or disconnected from miau. Also note that commenting this option out and rehashing after `<code>awaymsg</code>&#8216; was set, this option is _not_ reverted. To disable `<code>awaymsg</code>&#8216; afterwards you need to write an empty string here and rehash. Also see `<code>usequitmsg</code>&#8216;. </p>
 <p> `<code>usequitmsg = &#8220;state&#8221;</code>&#8216; Use last quit-reason as away-reason and/or leave-message (if respective options are enabled) when all clients have disconnected from miau. If quit-reason was empty, default values of awaymsg and leavemsg will be used, otherwise most recent quit-message overrides values in miaurc. </p>
 <p> `<code>autoaway = &#8220;mode&#8221;</code>&#8216; miau can set user away automatically. This option allows to define when to do that: `<code>never</code>&#8216; Never set user away automatically </p>
@@ -93,7 +93,7 @@ description: "miau.info – miau.info"
 <p> `<code>getnick = &#8220;selection&#8221;</code>&#8216; miau can try to reclaim your primary nick when it is lost. This option may be one of the following: `<code>never</code>&#8216; miau will not try to get your nick back </p>
 <p> `<code>detached</code>&#8216; miau will try to get your nick when no clients are attached </p>
 <p> `<code>attached</code>&#8216; miau will try to get your nick when there are one or more clients attached </p>
-<p> `<code>always</code>&#8216; miau will try to get your nick Note: do _not_ use options `<code>attached</code>&#8216; and `<code>always</code>&#8216; with clients (like irc-II <font SIZE="-1">EPIC</font>) that automatically change your nick when they receive `<font SIZE="-1"><code>ERR_NICKINUSE</code></font>&#8216; from the server &#8211; you might end up chaning your nick until server drops your connection due excess (nick) flood. </p>
+<p> `<code>always</code>&#8216; miau will try to get your nick Note: do _not_ use options `<code>attached</code>&#8216; and `<code>always</code>&#8216; with clients (like irc-II EPIC) that automatically change your nick when they receive `<code>ERR_NICKINUSE</code>&#8216; from the server &#8211; you might end up chaning your nick until server drops your connection due excess (nick) flood. </p>
 <p> `<code>getnickinterval = &#8220;seconds&#8221;</code>&#8216; Time between tries (in seconds) to obtain currently (possibly) lost primary nick. Don&#8217;t set it too low or you might get kicked out the server due to excess flood. </p>
 <p> `<code>antiidle = &#8220;minutes&#8221;</code>&#8216; Time between idle-timer resets in minutes. Set to 0 to disable. </p>
 <p> `<code>qloglength = &#8220;minutes&#8221;</code>&#8216; Age of oldest entry in quicklog in minutes. Set to zero to disable quicklog. </p>
@@ -117,7 +117,7 @@ description: "miau.info – miau.info"
 <p> `<code>usermode = &#8220;usermode(s)&#8221;</code>&#8216; Usermode that miau will request (if no clients are attached at the moment) from the server when connection to the server is established. Leave unset or set to empty to disable this feature. </p>
 <p> `<code>forwardmsg = &#8220;command&#8221;</code>&#8216; miau can collect the (private) messages within specified time (see `<code>forwardtime</code>&#8216;) and pipe them into the program specified. Leave this unset or set to empty to disable this feature. </p>
 <p> `<code>forwardtime = &#8220;seconds&#8221;</code>&#8216; Time in seconds after first inserted line into forwardmsg queue before piping the stuff out. Default is 180 seconds (or three mintues). </p>
-<p> `<code>ignore = { &#8220;mask&#8221;:&#8220;ignored&#8221; }</code>&#8216; List of users whose private messages (<font SIZE="-1">PRIVMSG</font>) and noticies (<font SIZE="-1">NOTICE</font>) are ignored when no clients are attached to miau. When `<code>ignored</code>&#8216; is left undefined, it is assumed to be `<code>true</code>&#8216;. Setting `<code>ignored</code>&#8216; to `<code>false</code>&#8216; means that this user will _not_ be ignored. This list is processed as a chain. </p>
+<p> `<code>ignore = { &#8220;mask&#8221;:&#8220;ignored&#8221; }</code>&#8216; List of users whose private messages (PRIVMSG) and noticies (NOTICE) are ignored when no clients are attached to miau. When `<code>ignored</code>&#8216; is left undefined, it is assumed to be `<code>true</code>&#8216;. Setting `<code>ignored</code>&#8216; to `<code>false</code>&#8216; means that this user will _not_ be ignored. This list is processed as a chain. </p>
 <p> Note: You can define &#8220;your&#8221; hostname with @@. Only the _last_ occurance of @@ will be translated. </p>
 <p> `<code>privlog = &#8220;mode&#8221;</code>&#8216; Whatever private messages should be logged in nick-specific files. Can be one of following: `<code>never</code>&#8216; never write private message logs </p>
 <p> `<code>detached</code>&#8216; write private message logs only when there are no clients connected </p>
@@ -140,12 +140,12 @@ description: "miau.info – miau.info"
 <p> `<code>A</code>&#8216; log when a client is attached </p>
 <p> `<code>D</code>&#8216; log when a client is detached </p>
 <p> `<code>C</code>&#8216; log continuously (status of clients doesn&#8217;t matter) </p>
-<p> Note that all channelless messages (such as <font SIZE="-1">QUIT</font>) are logged on every active channel. This is a feature, not a bug. </p>
+<p> Note that all channelless messages (such as QUIT) are logged on every active channel. This is a feature, not a bug. </p>
 <p> This option might not be compiled in. </p>
 <p> `<code>logsuffix = &#8220;suffix&#8221;</code>&#8216; When writing log to undefined logfile, each logfile consists of channel name followed by suffix. Suffix can be defined here. </p>
-<p> `<code>onconnect = { &#8220;mode&#8221;:&#8220;target/data&#8221;(:&#8220;data&#8221;) }</code>&#8216; When miau connects and registers user to server, miau can send pre-defined messages. User can define miau to send normal messages (`<font SIZE="-1"><code>PRIVMSG</code></font>&#8216;), notices (`<font SIZE="-1"><code>NOTICE</code></font>&#8216;) or arbitrary messages. </p>
-<p> Mode can be one of the following: `<code>p</code>&#8216; private message (`<font SIZE="-1"><code>PRIVMSG</code></font>&#8216;). </p>
-<p> `<code>n</code>&#8216; notice (`<font SIZE="-1"><code>NOTICE</code></font>&#8216;). Should be used with services and automatons, but unfortunately some network services can&#8217;t cope with notices. </p>
+<p> `<code>onconnect = { &#8220;mode&#8221;:&#8220;target/data&#8221;(:&#8220;data&#8221;) }</code>&#8216; When miau connects and registers user to server, miau can send pre-defined messages. User can define miau to send normal messages (`<code>PRIVMSG</code>&#8216;), notices (`<code>NOTICE</code>&#8216;) or arbitrary messages. </p>
+<p> Mode can be one of the following: `<code>p</code>&#8216; private message (`<code>PRIVMSG</code>&#8216;). </p>
+<p> `<code>n</code>&#8216; notice (`<code>NOTICE</code>&#8216;). Should be used with services and automatons, but unfortunately some network services can&#8217;t cope with notices. </p>
 <p> `<code>r</code>&#8216; &#8220;raw&#8221; message. This means user must provide complete message to send to the server. Using raw message user has complete control over what is being sent. If you don&#8217;t know what this is, you don&#8217;t need this. When using modes &quot;`<code>p</code>&#8216;&#8220; or &#8221;`<code>n</code>&#8216;&quot;, user must provide both message and target where as with raw messages only one parameter in addition to type should be given. </p>
 <p> This option might not be compiled in. </p>
 <p> `<code>automodes = { &#8220;mask&#8221;:&#8220;privilegded&#8221; }</code>&#8216; List of people who are automatically given certain privilege on channel. Mask is given in form of `<code>mode:nick!username [at] host/#channel</code>&#8216; (where `<code>mode</code>&#8216; is a single character) and list is processed as a chain. </p>
@@ -157,5 +157,5 @@ description: "miau.info – miau.info"
 <p> This feature might not be compiled in. </p>
 <p> `<code>dccbounce = &#8220;state&#8221;</code>&#8216; miau can bounce DCCs. Set to true to enable bouncing. You probably don&#8217;t need this. </p>
 <p> This option might not be compiled in. </p>
-<p> `<code>dccbindhost = &#8220;host&#8221;</code>&#8216; If miau has separate IPs for IRC-network and clients, you should enter <font SIZE="-1">IP</font> for clients here. </p>
+<p> `<code>dccbindhost = &#8220;host&#8221;</code>&#8216; If miau has separate IPs for IRC-network and clients, you should enter IP for clients here. </p>
 <p> This option might not be compiled in. </p>

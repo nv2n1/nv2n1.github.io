@@ -10,13 +10,13 @@ description: "Iterators –"
 
 <p> Iterators &#8211; </p>
 <h3>Functions</h3>
-<p> void * <code>globus_hashtable_first</code> (globus_hashtable_t *table)<br />
- <i>Initialize iterator to first hash table entry. </i><br />
- void * <code>globus_hashtable_next</code> (globus_hashtable_t *table)<br />
- <i>Increment hash table iterator. </i><br />
- void * <code>globus_hashtable_last</code> (globus_hashtable_t *table)<br />
- <i>Initialize iterator to last hash table entry. </i><br />
- void * <code>globus_hashtable_prev</code> (globus_hashtable_t *table)<br />
+<p> void * <code>globus_hashtable_first</code> (globus_hashtable_t *table)<br/>
+ <i>Initialize iterator to first hash table entry. </i><br/>
+ void * <code>globus_hashtable_next</code> (globus_hashtable_t *table)<br/>
+ <i>Increment hash table iterator. </i><br/>
+ void * <code>globus_hashtable_last</code> (globus_hashtable_t *table)<br/>
+ <i>Initialize iterator to last hash table entry. </i><br/>
+ void * <code>globus_hashtable_prev</code> (globus_hashtable_t *table)<br/>
  <i>Decrement hash table iterator. </i></p>
 <h2>Detailed Description</h2>
 <p> The iterator is initially NULL until one of <code>globus_hashtable_first()</code> or <code>globus_hashtable_last()</code> has been called. All other calls have no effect on iterator except for <code>globus_hashtable_remove()</code>. If the iterator points at the entry being removed, the iterator is moved to the next entry. </p>

@@ -10,54 +10,54 @@ description: "QuantLib::CappedFlooredCoupon – Capped and/or floored floating-r
 
 <p>QuantLib::CappedFlooredCoupon &#8211; Capped and/or floored floating-rate coupon. </p>
 
-<p> <br />
+<p> <br/>
  </p>
 <p>#include &lt;ql/cashflows/capflooredcoupon.hpp&gt; </p>
 <p>Inherits <code>QuantLib::FloatingRateCoupon</code>. </p>
 <p>Inherited by CappedFlooredCmsCoupon, and CappedFlooredIborCoupon. </p>
 <h3>Public Member Functions</h3>
-<p> <br />
- <code>CappedFlooredCoupon</code> (const boost::shared_ptr&lt; <code>FloatingRateCoupon</code> &gt; &amp;underlying, <code>Rate</code> cap=<code>Null</code>&lt; <code>Rate</code> &gt;(), <code>Rate</code> floor=<code>Null</code>&lt; <code>Rate</code> &gt;()) <br />
- <br />
- <code>Rate</code> <code>cap</code> () const <br />
- <i>cap </i> <br />
- <code>Rate</code> <code>floor</code> () const <br />
- <i>floor </i> <br />
- <code>Rate</code> <code>effectiveCap</code> () const <br />
- <i>effective cap of fixing </i> <br />
- <code>Rate</code> <code>effectiveFloor</code> () const <br />
+<p> <br/>
+ <code>CappedFlooredCoupon</code> (const boost::shared_ptr&lt; <code>FloatingRateCoupon</code> &gt; &amp;underlying, <code>Rate</code> cap=<code>Null</code>&lt; <code>Rate</code> &gt;(), <code>Rate</code> floor=<code>Null</code>&lt; <code>Rate</code> &gt;()) <br/>
+ <br/>
+ <code>Rate</code> <code>cap</code> () const <br/>
+ <i>cap </i> <br/>
+ <code>Rate</code> <code>floor</code> () const <br/>
+ <i>floor </i> <br/>
+ <code>Rate</code> <code>effectiveCap</code> () const <br/>
+ <i>effective cap of fixing </i> <br/>
+ <code>Rate</code> <code>effectiveFloor</code> () const <br/>
  <i>effective floor of fixing </i> </p>
-<p> <code>Coupon interface</code> <br />
+<p> <code>Coupon interface</code> <br/>
  </p>
-<p> <br />
- <code>Rate</code> <code>rate</code> () const <br />
- <i>accrued rate </i> <br />
- <code>Rate</code> <code>convexityAdjustment</code> () const <br />
+<p> <br/>
+ <code>Rate</code> <code>rate</code> () const <br/>
+ <i>accrued rate </i> <br/>
+ <code>Rate</code> <code>convexityAdjustment</code> () const <br/>
  <i>convexity adjustment </i> </p>
-<p> <code>Observer interface</code> <br />
+<p> <code>Observer interface</code> <br/>
  </p>
-<p> <br />
- void <code>update</code> () <br />
+<p> <br/>
+ void <code>update</code> () <br/>
   </p>
 <h3>Visitability</h3>
-<p> <br />
- boost::shared_ptr&lt; <code>FloatingRateCoupon</code> &gt; <code>underlying_</code> <br />
- <br />
- bool <code>isCapped_</code> <br />
- <br />
- bool <code>isFloored_</code> <br />
- <br />
- <code>Rate</code> <code>cap_</code> <br />
- <br />
- <code>Rate</code> <code>floor_</code> <br />
- <br />
- virtual void <code>accept</code> (<code>AcyclicVisitor</code> &amp;) <br />
- <br />
- bool <code>isCapped</code> () const <br />
- <br />
- bool <code>isFloored</code> () const <br />
- <br />
- void <code>setPricer</code> (const boost::shared_ptr&lt; <code>FloatingRateCouponPricer</code> &gt; &amp;pricer) <br />
+<p> <br/>
+ boost::shared_ptr&lt; <code>FloatingRateCoupon</code> &gt; <code>underlying_</code> <br/>
+ <br/>
+ bool <code>isCapped_</code> <br/>
+ <br/>
+ bool <code>isFloored_</code> <br/>
+ <br/>
+ <code>Rate</code> <code>cap_</code> <br/>
+ <br/>
+ <code>Rate</code> <code>floor_</code> <br/>
+ <br/>
+ virtual void <code>accept</code> (<code>AcyclicVisitor</code> &amp;) <br/>
+ <br/>
+ bool <code>isCapped</code> () const <br/>
+ <br/>
+ bool <code>isFloored</code> () const <br/>
+ <br/>
+ void <code>setPricer</code> (const boost::shared_ptr&lt; <code>FloatingRateCouponPricer</code> &gt; &amp;pricer) <br/>
   </p>
 <h2>Detailed Description</h2>
 <p>Capped and/or floored floating-rate coupon. </p>

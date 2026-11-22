@@ -10,7 +10,7 @@ description: "XkbLockGroup – Locks the keysym group"
 <p>XkbLockGroup &#8211; Locks the keysym group </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Bool XkbLockGroup</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>,</code> <code>unsigned int </code><i>group</i><code>);</code><br />
+<dt> <code>Bool XkbLockGroup</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>,</code> <code>unsigned int </code><i>group</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

@@ -12,7 +12,7 @@ description: "aireplay-ng – inject packets into a wireless network to generate
 <p><code>aireplay-ng</code> [options] &lt;replay interface&gt;</p>
 <h2>Description</h2>
 <p><code>aireplay-ng</code> is used to inject/replay frames. The primary function is to generate traffic for the later use in aircrack-ng for cracking the WEP and WPA-PSK keys. There are different attacks which can cause deauthentications for the purpose of capturing WPA handshake data, fake authentications, Interactive packet replay, hand-crafted ARP request injection and ARP-request reinjection. With the packetforge-ng tool it&#8217;s possible to create arbitrary frames. </p>
-<p> <code>aireplay-ng</code> supports single-NIC injection/monitor.<br />
+<p> <code>aireplay-ng</code> supports single-NIC injection/monitor.<br/>
  This feature needs driver patching.</p>
 <h2>Options</h2>
 <dl>
@@ -120,47 +120,47 @@ description: "aireplay-ng – inject packets into a wireless network to generate
 <p><code>Fragmentation:</code></p>
 <dl>
 <dt></dt></dl>
-<dd><i>Pros</i><br />
- &#8211; Can obtain the full packet length of 1500 bytes XOR. This means you can subsequently pretty well create any size of packet.<br />
- &#8211; May work where chopchop does not<br />
+<dd><i>Pros</i><br/>
+ &#8211; Can obtain the full packet length of 1500 bytes XOR. This means you can subsequently pretty well create any size of packet.<br/>
+ &#8211; May work where chopchop does not<br/>
  &#8211; Is extremely fast. It yields the XOR stream extremely quickly when successful.</dd>
 <dl>
 <dt></dt></dl>
-<dd><i>Cons</i><br />
- &#8211; Setup to execute the attack is more subject to the device drivers. For example, Atheros does not generate the correct packets unless the wireless card is set to the mac address you are spoofing.<br />
+<dd><i>Cons</i><br/>
+ &#8211; Setup to execute the attack is more subject to the device drivers. For example, Atheros does not generate the correct packets unless the wireless card is set to the mac address you are spoofing.<br/>
  &#8211; You need to be physically closer to the access point since if any packets are lost then the attack fails. </dd>
 <p> <code>Chopchop</code></p>
 <dl>
 <dt></dt></dl>
-<dd><i>Pro</i><br />
+<dd><i>Pro</i><br/>
  &#8211; May work where frag does not work.</dd>
 <dl>
 <dt></dt></dl>
-<dd><i>Cons</i><br />
- &#8211; Cannot be used against every access point.<br />
- &#8211; The maximum XOR bits is limited to the length of the packet you chopchop against.<br />
+<dd><i>Cons</i><br/>
+ &#8211; Cannot be used against every access point.<br/>
+ &#8211; The maximum XOR bits is limited to the length of the packet you chopchop against.<br/>
  &#8211; Much slower then the fragmentation attack.</dd>
 <h2>Author</h2>
 <p>This manual page was written by Adam Cecile &lt;gandalf [at] le-vert.net&gt; for the Debian system (but may be used by others). Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 or any later version published by the Free Software Foundation On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-airbase-ng/">airbase-ng</a>(8)</code><br />
- <code><a href="/docs/linux/man/8-airmon-ng/">airmon-ng</a>(8)</code><br />
- <code><a href="/docs/linux/man/8-airodump-ng/">airodump-ng</a>(8)</code><br />
- <code><a href="/docs/linux/man/8-airodump-ng-oui-update/">airodump-ng-oui-update</a>(8)</code><br />
- <code><a href="/docs/linux/man/8-airserv-ng/">airserv-ng</a>(8)</code><br />
- <code><a href="/docs/linux/man/8-airtun-ng/">airtun-ng</a>(8)</code><br />
- <code><a href="/docs/linux/man/8-besside-ng/">besside-ng</a>(8)</code><br />
- <code><a href="/docs/linux/man/8-easside-ng/">easside-ng</a>(8)</code><br />
- <code><a href="/docs/linux/man/8-tkiptun-ng/">tkiptun-ng</a>(8)</code><br />
- <code><a href="/docs/linux/man/8-wesside-ng/">wesside-ng</a>(8)</code><br />
- <code><a href="/docs/linux/man/1-aircrack-ng/">aircrack-ng</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-airdecap-ng/">airdecap-ng</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-airdecloak-ng/">airdecloak-ng</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-airolib-ng/">airolib-ng</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-besside-ng-crawler/">besside-ng-crawler</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-buddy-ng/">buddy-ng</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-ivstools/">ivstools</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-kstats/">kstats</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-makeivs-ng/">makeivs-ng</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-packetforge-ng/">packetforge-ng</a>(1)</code><br />
+<p><code><a href="/docs/linux/man/8-airbase-ng/">airbase-ng</a>(8)</code><br/>
+ <code><a href="/docs/linux/man/8-airmon-ng/">airmon-ng</a>(8)</code><br/>
+ <code><a href="/docs/linux/man/8-airodump-ng/">airodump-ng</a>(8)</code><br/>
+ <code><a href="/docs/linux/man/8-airodump-ng-oui-update/">airodump-ng-oui-update</a>(8)</code><br/>
+ <code><a href="/docs/linux/man/8-airserv-ng/">airserv-ng</a>(8)</code><br/>
+ <code><a href="/docs/linux/man/8-airtun-ng/">airtun-ng</a>(8)</code><br/>
+ <code><a href="/docs/linux/man/8-besside-ng/">besside-ng</a>(8)</code><br/>
+ <code><a href="/docs/linux/man/8-easside-ng/">easside-ng</a>(8)</code><br/>
+ <code><a href="/docs/linux/man/8-tkiptun-ng/">tkiptun-ng</a>(8)</code><br/>
+ <code><a href="/docs/linux/man/8-wesside-ng/">wesside-ng</a>(8)</code><br/>
+ <code><a href="/docs/linux/man/1-aircrack-ng/">aircrack-ng</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-airdecap-ng/">airdecap-ng</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-airdecloak-ng/">airdecloak-ng</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-airolib-ng/">airolib-ng</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-besside-ng-crawler/">besside-ng-crawler</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-buddy-ng/">buddy-ng</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-ivstools/">ivstools</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-kstats/">kstats</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-makeivs-ng/">makeivs-ng</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-packetforge-ng/">packetforge-ng</a>(1)</code><br/>
  <code><a href="/docs/linux/man/1-wpaclean/">wpaclean</a>(1)</code> </p>

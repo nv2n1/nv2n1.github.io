@@ -17,40 +17,40 @@ description: "QwtSlider –"
 <h3>Public Member Functions</h3>
 <p><code>QwtSlider</code> (QWidget *parent=NULL) </p>
 <p> <code>QwtSlider</code> (Qt::Orientation, QWidget *parent=NULL) </p>
-<p> virtual <code>~QwtSlider</code> ()<br />
- <i>Destructor. </i><br />
- void <code>setOrientation</code> (Qt::Orientation)<br />
- <i>Set the orientation. </i><br />
+<p> virtual <code>~QwtSlider</code> ()<br/>
+ <i>Destructor. </i><br/>
+ void <code>setOrientation</code> (Qt::Orientation)<br/>
+ <i>Set the orientation. </i><br/>
  Qt::Orientation <code>orientation</code> () const </p>
-<p> void <code>setScalePosition</code> (<code>ScalePosition</code>)<br />
- <i>Change the position of the scale. </i><br />
+<p> void <code>setScalePosition</code> (<code>ScalePosition</code>)<br/>
+ <i>Change the position of the scale. </i><br/>
  <code>ScalePosition</code> <code>scalePosition</code> () const </p>
 <p> void <code>setTrough</code> (bool) </p>
 <p> bool <code>hasTrough</code> () const </p>
 <p> void <code>setGroove</code> (bool) </p>
 <p> bool <code>hasGroove</code> () const </p>
-<p> void <code>setHandleSize</code> (const QSize &amp;)<br />
- <i>Set the slider&#8217;s handle size. </i><br />
+<p> void <code>setHandleSize</code> (const QSize &amp;)<br/>
+ <i>Set the slider&#8217;s handle size. </i><br/>
  QSize <code>handleSize</code> () const </p>
-<p> void <code>setBorderWidth</code> (int bw)<br />
- <i>Change the slider&#8217;s border width. </i><br />
+<p> void <code>setBorderWidth</code> (int bw)<br/>
+ <i>Change the slider&#8217;s border width. </i><br/>
  int <code>borderWidth</code> () const </p>
-<p> void <code>setSpacing</code> (int)<br />
- <i>Change the spacing between trough and scale. </i><br />
+<p> void <code>setSpacing</code> (int)<br/>
+ <i>Change the spacing between trough and scale. </i><br/>
  int <code>spacing</code> () const </p>
 <p> virtual QSize <code>sizeHint</code> () const </p>
 <p> virtual QSize <code>minimumSizeHint</code> () const </p>
-<p> void <code>setScaleDraw</code> (<code>QwtScaleDraw</code> *)<br />
- <i>Set a scale draw. </i><br />
+<p> void <code>setScaleDraw</code> (<code>QwtScaleDraw</code> *)<br/>
+ <i>Set a scale draw. </i><br/>
  const <code>QwtScaleDraw</code> * <code>scaleDraw</code> () const </p>
-<p> void <code>setUpdateInterval</code> (int)<br />
- <i>Specify the update interval for automatic scrolling. </i><br />
+<p> void <code>setUpdateInterval</code> (int)<br/>
+ <i>Specify the update interval for automatic scrolling. </i><br/>
  int <code>updateInterval</code> () const </p>
 <h3>Protected Member Functions</h3>
-<p>virtual double <code>scrolledTo</code> (const QPoint &amp;) const<br />
- <i>Determine the value for a new position of the slider handle. </i><br />
- virtual bool <code>isScrollPosition</code> (const QPoint &amp;) const<br />
- <i>Determine what to do when the user presses a mouse button. </i><br />
+<p>virtual double <code>scrolledTo</code> (const QPoint &amp;) const<br/>
+ <i>Determine the value for a new position of the slider handle. </i><br/>
+ virtual bool <code>isScrollPosition</code> (const QPoint &amp;) const<br/>
+ <i>Determine what to do when the user presses a mouse button. </i><br/>
  virtual void <code>drawSlider</code> (QPainter *, const QRect &amp;) const </p>
 <p> virtual void <code>drawHandle</code> (QPainter *, const QRect &amp;, int pos) const </p>
 <p> virtual void <code>mousePressEvent</code> (QMouseEvent *) </p>
@@ -59,8 +59,8 @@ description: "QwtSlider –"
 <p> virtual void <code>paintEvent</code> (QPaintEvent *) </p>
 <p> virtual void <code>changeEvent</code> (QEvent *) </p>
 <p> virtual void <code>timerEvent</code> (QTimerEvent *) </p>
-<p> virtual void <code>scaleChange</code> ()<br />
- <i>Notify changed scale. </i><br />
+<p> virtual void <code>scaleChange</code> ()<br/>
+ <i>Notify changed scale. </i><br/>
  QRect <code>sliderRect</code> () const </p>
 <p> QRect <code>handleRect</code> () const </p>
 <h3>Additional Inherited Members</h3>
@@ -99,7 +99,7 @@ description: "QwtSlider –"
 <p> The scale is initialized to [0.0, 100.0] and the value set to 0.0. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>parent</i> Parent widget<br />
+<dd><i>parent</i> Parent widget<br/>
  <i>orientation</i> Orientation of the slider.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>int QwtSlider::borderWidth () const</h3>
@@ -118,14 +118,14 @@ description: "QwtSlider –"
 <p>Draw the thumb at a position </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>handleRect</i> Bounding rectangle of the handle<br />
+<dd><i>painter</i> Painter<br/>
+ <i>handleRect</i> Bounding rectangle of the handle<br/>
  <i>pos</i> Position of the handle marker in widget coordinates</dd></dl>
 <h3>void QwtSlider::drawSlider (QPainter *painter, const QRect &amp;sliderRect) const [protected], [virtual]</h3>
 <p>Draw the slider into the specified rectangle. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
+<dd><i>painter</i> Painter<br/>
  <i>sliderRect</i> Bounding rectangle of the slider</dd></dl>
 <h3>QRect QwtSlider::handleRect () const [protected]</h3>
 <p><code>Returns:</code></p>

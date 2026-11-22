@@ -10,7 +10,7 @@ description: "zbdsqr.f –"
 <p>zbdsqr.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zbdsqr</code> (UPLO, N, NCVT, NRU, NCC, D, E, VT, LDVT, U, LDU, C, LDC, RWORK, INFO)<br />
+<p>subroutine <code>zbdsqr</code> (UPLO, N, NCVT, NRU, NCC, D, E, VT, LDVT, U, LDU, C, LDC, RWORK, INFO)<br/>
  <i></i><code>ZBDSQR</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zbdsqr (characterUPLO, integerN, integerNCVT, integerNRU, integerNCC, double precision, dimension( * )D, double precision, dimension( * )E, complex*16, dimension( ldvt, * )VT, integerLDVT, complex*16, dimension( ldu, * )U, integerLDU, complex*16, dimension( ldc, * )C, integerLDC, double precision, dimension( * )RWORK, integerINFO)</h3>

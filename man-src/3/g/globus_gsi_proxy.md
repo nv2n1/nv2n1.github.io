@@ -11,11 +11,11 @@ description: "Globus GSI Proxy API –"
 <p> Globus GSI Proxy API &#8211; </p>
 <h3>Modules</h3>
 <p> <code>Activation</code> </p>
-<p> <code>Handle Management</code><br />
- <i>Create/Destroy/Modify a GSI Proxy Handle. </i><br />
+<p> <code>Handle Management</code><br/>
+ <i>Create/Destroy/Modify a GSI Proxy Handle. </i><br/>
  <code>Handle Attributes</code> </p>
-<p> <code>Proxy Operations</code><br />
- <i>Initiate a proxy operation. </i><br />
+<p> <code>Proxy Operations</code><br/>
+ <i>Initiate a proxy operation. </i><br/>
  <code>Proxy Constants</code> </p>
 <h2>Detailed Description</h2>
 <p> The globus_gsi_proxy library is motivated by the desire to provide a abstraction layer for the proxy creation and delegation process. For background on this process please refer to the proxy certificate profile draft. </p>

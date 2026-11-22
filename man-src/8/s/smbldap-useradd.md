@@ -25,7 +25,7 @@ The user will have a Samba account&nbsp;<wbr>(and Unix).
 Can change password?&nbsp;<wbr>0 if no, 1 if yes. 
 
  -b 
-The user is an&nbsp;<wbr><font SIZE="-1">AIX</font>&nbsp;<wbr>account. 
+The user is an&nbsp;<wbr>AIX&nbsp;<wbr>account. 
 
  -B 
 Must change password?&nbsp;<wbr>0 if no, 1 if yes. 
@@ -34,7 +34,7 @@ Must change password?&nbsp;<wbr>0 if no, 1 if yes.
 The new user's comment field&nbsp;<wbr>(gecos). This option is for gecos only!&nbsp;<wbr>To set as user's full name use the -N and -S options. 
 
  -C sambaHomePath 
-<font SIZE="-1">SMB</font>&nbsp;<wbr>home share, like&nbsp;<wbr>'\\\\PDC-SRV\\homes'. 
+SMB&nbsp;<wbr>home share, like&nbsp;<wbr>'\\\\PDC-SRV\\homes'. 
 
  -d home_dir 
 The new user will be created using home_dir for the user's login directory. The default is to append the login name to userHomePrefix&nbsp;<wbr>(defined in the configuration file)&nbsp;<wbr>and use that as the login directory name. 
@@ -43,7 +43,7 @@ The new user will be created using home_dir for the user's login directory. The 
 Letter associated with home share, like&nbsp;<wbr>'H:'. 
 
  -E sambaLogonScript 
-Relative to the&nbsp;<wbr>[netlogon]&nbsp;<wbr>share&nbsp;<wbr>(<font SIZE="-1">DOS</font>&nbsp;<wbr>script to execute on login, like&nbsp;<wbr>'foo.bat'. 
+Relative to the&nbsp;<wbr>[netlogon]&nbsp;<wbr>share&nbsp;<wbr>(DOS&nbsp;<wbr>script to execute on login, like&nbsp;<wbr>'foo.bat'. 
 
  -F sambaProfilePath 
 Profile directory, like&nbsp;<wbr>'\\\\PDC-SRV\\profiles\\foo'. 
@@ -55,7 +55,7 @@ The group name or number of the user's initial login group. The group name must 
 A list of supplementary groups that the user is also a member of. Each group is separated from the next by a comma, with no intervening whitespace. The groups are subject to the same restrictions as the group given with the -g option. The default is for the user to belong only to the initial group. 
 
  -H sambaAcctFlags 
-Spaces and trailing bracket are ignored&nbsp;<wbr>(samba account control bits like&nbsp;<wbr>'[<font SIZE="-1">NDHTUMWSLKI</font>]'). 
+Spaces and trailing bracket are ignored&nbsp;<wbr>(samba account control bits like&nbsp;<wbr>'[NDHTUMWSLKI]'). 
 
  -i 
 Creates an interdomain trust account&nbsp;<wbr>(machine Workstation). A password will be asked for the trust account. 
@@ -70,7 +70,7 @@ The user's home directory will be created if it does not exist. The files contai
 E-mail addresses&nbsp;<wbr>(multiple addresses are separated by commas). 
 
  --non-unique 
-Allow the creation of a user account with a duplicate&nbsp;<wbr>(non-unique)&nbsp;<wbr><font SIZE="-1">UID.</font> 
+Allow the creation of a user account with a duplicate&nbsp;<wbr>(non-unique)&nbsp;<wbr>UID. 
 
  -n 
 Do not print banner message. 
@@ -88,7 +88,7 @@ localMailAddresses&nbsp;<wbr>(multiple addresses are separated by commas).
 Ends by invoking smbldap-passwd. 
 
  -p 
-Read password from&nbsp;<wbr><font SIZE="-1">STDIN</font>&nbsp;<wbr>without verification. 
+Read password from&nbsp;<wbr>STDIN&nbsp;<wbr>without verification. 
 
  -s shell 
 The name of the user's login shell. The default is to leave this field blank, which causes the system to select the default login shell. 
@@ -103,16 +103,16 @@ Wait&nbsp;<wbr>&lt;time&gt;&nbsp;<wbr>seconds before exiting script when adding 
 Forward address&nbsp;<wbr>(multiple addresses are separated by commas). 
 
  -u uid 
-The numerical value of the user's&nbsp;<wbr><font SIZE="-1">ID.</font>&nbsp;<wbr>This value must be unique, unless the --non-unique option is used. The value must be non-negative. The default is to use the smallest&nbsp;<wbr><font SIZE="-1">ID</font>&nbsp;<wbr>value greater than 1000 and greater than every other user. 
+The numerical value of the user's&nbsp;<wbr>ID.&nbsp;<wbr>This value must be unique, unless the --non-unique option is used. The value must be non-negative. The default is to use the smallest&nbsp;<wbr>ID&nbsp;<wbr>value greater than 1000 and greater than every other user. 
 
  -w/-W 
 Creates an account for a Samba machine&nbsp;<wbr>(Workstation), so that it can join a sambaDomainName. Normally -w is used for adding machines through Samba but -W can be used for manual addition of samba attributes. 
 
  -X encoding 
-Specify input encoding for givenname and surname&nbsp;<wbr>(default&nbsp;<wbr><font SIZE="-1">UTF-8</font>). 
+Specify input encoding for givenname and surname&nbsp;<wbr>(default&nbsp;<wbr>UTF-8). 
 
  -Z name=value 
-Specify custom&nbsp;<wbr><font SIZE="-1">LDAP</font>&nbsp;<wbr>attributes, using comma-separated name=value pairs.
+Specify custom&nbsp;<wbr>LDAP&nbsp;<wbr>attributes, using comma-separated name=value pairs.
 
 <h2>See Also</h2>
 

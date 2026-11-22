@@ -10,7 +10,7 @@ description: "cgtts2.f –"
 <p>cgtts2.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>cgtts2</code> (ITRANS, N, NRHS, DL, D, DU, DU2, IPIV, B, LDB)<br />
+<p>subroutine <code>cgtts2</code> (ITRANS, N, NRHS, DL, D, DU, DU2, IPIV, B, LDB)<br/>
  <i></i><code>CGTTS2</code> solves a system of linear equations with a tridiagonal matrix using the LU factorization computed by sgttrf.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cgtts2 (integerITRANS, integerN, integerNRHS, complex, dimension( * )DL, complex, dimension( * )D, complex, dimension( * )DU, complex, dimension( * )DU2, integer, dimension( * )IPIV, complex, dimension( ldb, * )B, integerLDB)</h3>

@@ -13,7 +13,7 @@ description: "getdns_pretty_print_dict — return a string representation of a g
 <p> DNS Resolver library (libgetdns, -lgetdns) </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;getdns.h&gt; </p>
-<p> getdns_list *<br />
+<p> getdns_list *<br/>
  <code>getdns_pretty_print_dict</code> (const getdns_dict *this_dict) </p>
 <h2>DESCRIPTION</h2>
 <p> Helper function that returns a string of nicely formatted data including all of the elements in the dict. </p>

@@ -27,15 +27,15 @@ description: "request-key.conf – Instantiation handler configuration file"
 <p> The program arguments can be substituted with various macros. Only complete argument substitution is supported &#8211; macro substitutions can&#8217;t be embedded. All macros begin with a percent character &#8216;%&#8217;. An argument beginning with two percent characters will have one of them discarded. </p>
 <p> The following macros are supported: </p>
 <dl>
-<dd>%o Operation type<br />
- %k Key ID<br />
- %t Key type<br />
- %d Key description<br />
- %c Callout information<br />
- %u Key UID<br />
- %g Key GID<br />
- %T Requestor&#8217;s thread keyring<br />
- %P Requestor&#8217;s process keyring<br />
+<dd>%o Operation type<br/>
+ %k Key ID<br/>
+ %t Key type<br/>
+ %d Key description<br/>
+ %c Callout information<br/>
+ %u Key UID<br/>
+ %g Key GID<br/>
+ %T Requestor&#8217;s thread keyring<br/>
+ %P Requestor&#8217;s process keyring<br/>
  %S Requestor&#8217;s session keyring</dd></dl>
 <p> There&#8217;s another macro substitution too that permits the interpolation of the contents of a key: </p>
 <dl>
@@ -44,9 +44,9 @@ description: "request-key.conf – Instantiation handler configuration file"
 <h2>Example</h2>
 <p>A basic file will be installed in the /etc. This will contain two debugging lines that can be used to test the installation: </p>
 <dl>
-<dd>create user debug:* negate /bin/keyctl negate %k 30 %S<br />
- create user debug:loop:* * |/bin/cat<br />
- create user debug:* * /usr/share/keyutils/request-key-debug.sh %k %d %c %S<br />
+<dd>create user debug:* negate /bin/keyctl negate %k 30 %S<br/>
+ create user debug:loop:* * |/bin/cat<br/>
+ create user debug:* * /usr/share/keyutils/request-key-debug.sh %k %d %c %S<br/>
  negate * * * /bin/keyctl negate %k 30 %S</dd></dl>
 <p> This is set up so that something like: </p>
 <dl>
@@ -59,7 +59,7 @@ description: "request-key.conf – Instantiation handler configuration file"
 <dd>keyctl request2 user debug:loop:zzzz abcdefghijkl</dd></dl>
 <p> will create an instantiated user-defined key with the callout information as the payload.</p>
 <h2>Files</h2>
-<p>/etc/request-key.conf<br />
+<p>/etc/request-key.conf<br/>
  /etc/request-key.d/*.conf</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-keyctl/">keyctl</a></code>(1), <code><a href="/docs/linux/man/5-request-key-conf/">request-key.conf</a></code>(5) </p>

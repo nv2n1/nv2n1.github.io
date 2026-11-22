@@ -21,7 +21,7 @@ description: "dspam_train – train a corpus of mail"
 <dd> Specifies the user to train, if omitted the current user name is used. </dd>
 <dt><code>-i</code>&nbsp;<wbr>index</dt>
 <dd> Use a index file instead of the usual spam_corpus and nonspam_corpus. </dd>
-<p> <code>index</code> : Path to the index file having the following format per line:<br />
+<p> <code>index</code> : Path to the index file having the following format per line:<br/>
  [class] [path to message] </p>
 <dt><code>spam_corpus</code></dt>
 <dd> Specifies either the pathname to the directory containing the corpus of spam, with each in a separate file (e.g. maildir format) or a path to the mailbox in the traditional Unix MBOX format. </dd>
@@ -36,7 +36,7 @@ description: "dspam_train – train a corpus of mail"
 <dd> Operation resulted in an error. </dd>
 </dl>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2002-2012 DSPAM Project<br />
+<p> Copyright &#169; 2002-2012 DSPAM Project<br/>
  All rights reserved. </p>
 <p> For more information, see <a rel="nofollow" href="http://dspam.sourceforge.net.">http://dspam.sourceforge.net.</a> </p>
 <h2>SEE ALSO</h2>

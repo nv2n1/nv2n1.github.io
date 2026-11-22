@@ -14,9 +14,9 @@ description: "glutEnterGameMode – Enter game mode"
 <p>In openglut.h Ft int Fn glutEnterGameMode void</p>
 <h2>Description</h2>
 <p>Any combination of the following may apply: </p>
-<p>&nbsp;<wbr>&#8211; Resolution change, possibly to the requested resolution, possibly to a &quot;nearest match&quot;.<br />
-&nbsp;<wbr>&#8211; Refresh frequency change.<br />
-&nbsp;<wbr>&#8211; A window with a drawable area equal to the requested screen resolution will be opened.<br />
+<p>&nbsp;<wbr>&#8211; Resolution change, possibly to the requested resolution, possibly to a &quot;nearest match&quot;.<br/>
+&nbsp;<wbr>&#8211; Refresh frequency change.<br/>
+&nbsp;<wbr>&#8211; A window with a drawable area equal to the requested screen resolution will be opened.<br/>
 &nbsp;<wbr>&#8211; The mouse may be restricted to operate within your window. </p>
 <h2>Caveats</h2>
 <p>Varies in behavior; X users can disable the resolution change by an OpenGLUT compile-time option. </p>

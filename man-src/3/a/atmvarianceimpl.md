@@ -12,12 +12,12 @@ description: "QuantLib::AbcdAtmVolCurve – Abcd-interpolated at-the-money (no-s
 <p>#include &lt;ql/experimental/volatility/abcdatmvolcurve.hpp&gt; </p>
 <p> Inherits <code>QuantLib::BlackAtmVolCurve</code>, and <code>QuantLib::LazyObject</code>. </p>
 <h3>Public Member Functions</h3>
-<p><code>AbcdAtmVolCurve</code> (<code>Natural</code> settlementDays, const <code>Calendar</code> &amp;cal, const std::vector&lt; <code>Period</code> &gt; &amp;optionTenors, const std::vector&lt; <code>Handle</code>&lt; <code>Quote</code> &gt; &gt; &amp;volsHandles, const std::vector&lt; bool &gt; inclusionInInterpolationFlag=std::vector&lt; bool &gt;(1, true), <code>BusinessDayConvention</code> bdc=Following, const <code>DayCounter</code> &amp;dc=<code>Actual365Fixed</code>())<br />
- <i>floating reference date, floating market data </i><br />
- std::vector&lt; <code>Real</code> &gt; <code>k</code> () const<br />
- <i>Returns k adjustment factors for option tenors used in interpolation. </i><br />
- <code>Real</code> <code>k</code> (Time t) const<br />
- <i>Returns k adjustment factor at time t. </i><br />
+<p><code>AbcdAtmVolCurve</code> (<code>Natural</code> settlementDays, const <code>Calendar</code> &amp;cal, const std::vector&lt; <code>Period</code> &gt; &amp;optionTenors, const std::vector&lt; <code>Handle</code>&lt; <code>Quote</code> &gt; &gt; &amp;volsHandles, const std::vector&lt; bool &gt; inclusionInInterpolationFlag=std::vector&lt; bool &gt;(1, true), <code>BusinessDayConvention</code> bdc=Following, const <code>DayCounter</code> &amp;dc=<code>Actual365Fixed</code>())<br/>
+ <i>floating reference date, floating market data </i><br/>
+ std::vector&lt; <code>Real</code> &gt; <code>k</code> () const<br/>
+ <i>Returns k adjustment factors for option tenors used in interpolation. </i><br/>
+ <code>Real</code> <code>k</code> (Time t) const<br/>
+ <i>Returns k adjustment factor at time t. </i><br/>
  <code>Real</code> <code>a</code> () const </p>
 <p> <code>Real</code> <code>b</code> () const </p>
 <p> <code>Real</code> <code>c</code> () const </p>
@@ -26,12 +26,12 @@ description: "QuantLib::AbcdAtmVolCurve – Abcd-interpolated at-the-money (no-s
 <p> <code>Real</code> <code>maxError</code> () const </p>
 <p> EndCriteria::Type <code>endCriteria</code> () const </p>
 <p> <code>TermStructure interface</code> </p>
-<p> virtual <code>Date</code> <code>maxDate</code> () const<br />
+<p> virtual <code>Date</code> <code>maxDate</code> () const<br/>
  <i>the latest date for which the curve can return values </i> </p>
 <p> <code>VolatilityTermStructure interface</code> </p>
-<p> <code>Real</code> <code>minStrike</code> () const<br />
- <i>the minimum strike for which the term structure can return vols </i><br />
- <code>Real</code> <code>maxStrike</code> () const<br />
+<p> <code>Real</code> <code>minStrike</code> () const<br/>
+ <i>the minimum strike for which the term structure can return vols </i><br/>
+ <code>Real</code> <code>maxStrike</code> () const<br/>
  <i>the maximum strike for which the term structure can return vols </i> </p>
 <p> <code>LazyObject interface</code> </p>
 <p> void <code>update</code> () </p>
@@ -45,9 +45,9 @@ description: "QuantLib::AbcdAtmVolCurve – Abcd-interpolated at-the-money (no-s
 <p> virtual void <code>accept</code> (<code>AcyclicVisitor</code> &amp;) </p>
 <h3>Protected Member Functions</h3>
 <p><code>BlackAtmVolCurve interface</code> </p>
-<p> virtual <code>Real</code> <code>atmVarianceImpl</code> (Time t) const<br />
- <i>spot at-the-money variance calculation (k adjusted) </i><br />
- virtual <code>Volatility</code> <code>atmVolImpl</code> (Time t) const<br />
+<p> virtual <code>Real</code> <code>atmVarianceImpl</code> (Time t) const<br/>
+ <i>spot at-the-money variance calculation (k adjusted) </i><br/>
+ virtual <code>Volatility</code> <code>atmVolImpl</code> (Time t) const<br/>
  <i>spot at-the-money volatility calculation (k adjusted) </i></p>
 <h2>Detailed Description</h2>
 <p>Abcd-interpolated at-the-money (no-smile) volatility curve. </p>

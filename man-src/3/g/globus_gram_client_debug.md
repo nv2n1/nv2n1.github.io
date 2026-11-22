@@ -14,17 +14,17 @@ description: "GRAM Client API –"
 <p> <code>GRAM Job Functions</code> </p>
 <p> <code>GRAM Client Attribute Functions</code> </p>
 <h3>Functions</h3>
-<p> void <code>globus_gram_client_debug</code> (void)<br />
- <i>Enable GRAM debugging. </i><br />
- int <code>globus_gram_client_version</code> (void)<br />
- <i>Return GRAM protocol version. </i><br />
- int <code>globus_gram_client_set_credentials</code> (gss_cred_id_t new_credentials)<br />
- <i>Set the default GRAM credential. </i><br />
- const char * <code>globus_gram_client_error_string</code> (int error_code)<br />
- <i>Get a description of a a GRAM error code. </i><br />
- int <code>globus_gram_client_job_contact_free</code> (char *job_contact)<br />
- <i>Free a job contact string. </i><br />
- void <code>globus_gram_client_job_info_destroy</code> (<code>globus_gram_client_job_info_t</code> *info)<br />
+<p> void <code>globus_gram_client_debug</code> (void)<br/>
+ <i>Enable GRAM debugging. </i><br/>
+ int <code>globus_gram_client_version</code> (void)<br/>
+ <i>Return GRAM protocol version. </i><br/>
+ int <code>globus_gram_client_set_credentials</code> (gss_cred_id_t new_credentials)<br/>
+ <i>Set the default GRAM credential. </i><br/>
+ const char * <code>globus_gram_client_error_string</code> (int error_code)<br/>
+ <i>Get a description of a a GRAM error code. </i><br/>
+ int <code>globus_gram_client_job_contact_free</code> (char *job_contact)<br/>
+ <i>Free a job contact string. </i><br/>
+ void <code>globus_gram_client_job_info_destroy</code> (<code>globus_gram_client_job_info_t</code> *info)<br/>
  <i>Free memory associated with a globus_gram_client_job_info_t structure. </i></p>
 <h2>Detailed Description</h2>
 <p> The resource management API provides function for requesting that a job be started or terminated, as well as for requesting information about the status of a job.</p>

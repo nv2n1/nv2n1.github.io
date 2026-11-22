@@ -18,11 +18,11 @@ description: "flawfinder – find potential security flaws (\"hits\") in source 
 <p> Once you&#8217;ve audited a program, you can mark source code lines that are actually fine but cause spurious warnings so that flawfinder will stop complaining about them. To mark a line so that these warnings are suppressed, put a specially-formatted comment either on the same line (after the source code) or all by itself in the previous line. The comment must have one of the two following formats: </p>
 <dl>
 <dt>*</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;<wbr>//&nbsp;<wbr>Flawfinder: ignore </p>
  </dd>
 <dt>*</dt>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;<wbr>/*&nbsp;<wbr>Flawfinder: ignore&nbsp;<wbr>*/ </p>
  </dd></dl>
 <p> Note that, for compatibility&#8217;s sake, you can replace &quot;Flawfinder:&quot; with &quot;ITS4:&quot; or &quot;RATS:&quot; in these specially-formatted comments. Since it&#8217;s possible that such lines are wrong, you can use the ``--neverignore&#8217;&#8216; option, which causes flawfinder to never ignore any line no matter what the comments say. Thus, responses that would otherwise be ignored would be included (or, more confusingly, --neverignore ignores the ignores). This comment syntax is actually a more general syntax for special directives to flawfinder, but currently only ignoring lines is supported. </p>
@@ -40,7 +40,7 @@ description: "flawfinder – find potential security flaws (\"hits\") in source 
 <p> Once you identify the problem and understand it, you can fix it. Occasionally you may want to re-do the analysis, both because the line numbers will change <i>and</i> to make sure that the new code doesn&#8217;t introduce yet a different vulnerability. </p>
 <p> If you&#8217;ve determined that some line isn&#8217;t really a problem, and you&#8217;re sure of it, you can insert just before or on the offending line a comment like </p>
 <dl>
-<dd> <p> <br />
+<dd> <p> <br/>
 &nbsp;<wbr>/*&nbsp;<wbr>Flawfinder: ignore&nbsp;<wbr>*/ </p>
  </dd></dl>
 <p> to keep them from showing up in the output. </p>

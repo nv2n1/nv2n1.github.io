@@ -11,7 +11,7 @@ description: "cher2k.f –"
 <p> cher2k.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cher2k</code> (UPLO, TRANS, N, K, ALPHA, A, LDA, B, LDB, BETA, C, LDC)<br />
+<p> subroutine <code>cher2k</code> (UPLO, TRANS, N, K, ALPHA, A, LDA, B, LDB, BETA, C, LDC)<br/>
  <i></i><code>CHER2K</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cher2k (characterUPLO, characterTRANS, integerN, integerK, complexALPHA, complex, dimension(lda,*)A, integerLDA, complex, dimension(ldb,*)B, integerLDB, realBETA, complex, dimension(ldc,*)C, integerLDC)</h3>

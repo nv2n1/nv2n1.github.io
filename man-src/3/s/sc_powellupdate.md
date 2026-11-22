@@ -16,8 +16,8 @@ description: "sc::PowellUpdate –"
 <h3>Public Member Functions</h3>
 <p><code>PowellUpdate</code> (<code>StateIn</code> &amp;) </p>
 <p> <code>PowellUpdate</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;) </p>
-<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br />
- <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br />
+<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br/>
+ <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br/>
  void <code>update</code> (const <code>RefSymmSCMatrix</code> &amp;ihessian, const <code>Ref</code>&lt; <code>Function</code> &gt; &amp;func, const <code>RefSCVector</code> &amp;xnew, const <code>RefSCVector</code> &amp;gnew) </p>
 <p> void <code>apply_transform</code> (const <code>Ref</code>&lt; <code>NonlinearTransform</code> &gt; &amp;)</p>
 <h3>Protected Attributes</h3>

@@ -12,10 +12,10 @@ description: "sc::LevelShift –"
 <p> Inherits <code>sc::BlockedSCElementOp</code>. Inherited by <code>sc::ALevelShift</code>, and <code>sc::BLevelShift</code>.</p>
 <h3>Public Member Functions</h3>
 <p><code>LevelShift</code> (<code>SCF</code> *) </p>
-<p> int <code>has_side_effects</code> ()<br />
- <i>By default this returns nonzero. </i><br />
+<p> int <code>has_side_effects</code> ()<br/>
+ <i>By default this returns nonzero. </i><br/>
  void <code>set_shift</code> (double) </p>
-<p> void <code>process</code> (<code>SCMatrixBlockIter</code> &amp;)<br />
+<p> void <code>process</code> (<code>SCMatrixBlockIter</code> &amp;)<br/>
  <i>This is the fallback routine to process blocks and is called by process_spec members that are not overridden. </i></p>
 <h3>Protected Attributes</h3>
 <p><code>SCF</code> * <code>scf_</code> </p>

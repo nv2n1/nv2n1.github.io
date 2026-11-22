@@ -13,10 +13,10 @@ description: "waffle – a library for selecting an OpenGL API and window system
 Link with -lwaffle-1.</code></pre>
 <h2>Description</h2>
 <p>Waffle is a cross-platform library that allows one to defer selection of an OpenGL API and of window system until runtime. For example, on Linux, Waffle enables an application to select X11/EGL with an OpenGL 3.3 core profile, Wayland with OpenGL ES2, and other window system / API combinations. </p>
-<p> Waffle&#8217;s immediate goal is to enable m[blue]<code>Piglit</code>m[]<font SIZE="-2">[1]</font>, m[blue]<code>Mesa</code>m[]<font SIZE="-2">[2]</font>&#8216;s OpenGL test suite, to test multiple OpenGL flavors in a cross-platform way, and to allow each Piglit test to choose its OpenGL API and window system at runtime. A future goal is to enable the ability to record, with another tool such as m[blue]<code>APITrace</code>m[]<font SIZE="-2">[3]</font>, an application&#8217;s OpenGL calls on one operating system or window system, and then replay that trace on a different system. </p>
-<p> m[blue]<code>waffle</code>m[]<font SIZE="-2">[4]</font>&#8216;s website.</p>
+<p> Waffle&#8217;s immediate goal is to enable m[blue]<code>Piglit</code>m[][1], m[blue]<code>Mesa</code>m[][2]&#8216;s OpenGL test suite, to test multiple OpenGL flavors in a cross-platform way, and to allow each Piglit test to choose its OpenGL API and window system at runtime. A future goal is to enable the ability to record, with another tool such as m[blue]<code>APITrace</code>m[][3], an application&#8217;s OpenGL calls on one operating system or window system, and then replay that trace on a different system. </p>
+<p> m[blue]<code>waffle</code>m[][4]&#8216;s website.</p>
 <h2>Examples</h2>
-<p>Your distribution should have installed example source code that demonstrates how to use waffle at /usr/share/doc/waffle-${version}/examples. You can also find m[blue]<code>examples</code>m[]<font SIZE="-2">[5]</font> in Waffle&#8217;s source repository.</p>
+<p>Your distribution should have installed example source code that demonstrates how to use waffle at /usr/share/doc/waffle-${version}/examples. You can also find m[blue]<code>examples</code>m[][5] in Waffle&#8217;s source repository.</p>
 <h2>Issues</h2>
 <p>Please report bugs or and feature requests to m[blue]<code><a rel="nofollow" href="https://github.com/waffle-gl/waffle/issues">https://github.com/waffle-gl/waffle/issues</a></code>m[].</p>
 <h2>See Also</h2>

@@ -225,7 +225,7 @@ prefix = $(git rev - parse-- show - prefix)
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> This document shows the &quot;raw&quot; syntax as seen by git. The shell and other UIs might require additional quoting to protect special characters and to avoid word splitting. </p>
 </dl>
 <p> <i>&lt;sha1&gt;</i>, e.g. <i>dae86e1950b1277e545cee180551750029cfe735</i>, <i>dae86e</i></p>
@@ -293,11 +293,11 @@ prefix = $(git rev - parse-- show - prefix)
 <dl>
 <dt>
 </dt><dd>
-$ git config push.default current<br />
-        $ git config remote.pushdefault myfork<br />
-            $ git switch &#8211;<br />
-    c mybranch origin / master<br />
-                            $ git rev &#8211;<br />
+$ git config push.default current<br/>
+        $ git config remote.pushdefault myfork<br/>
+            $ git switch &#8211;<br/>
+    c mybranch origin / master<br/>
+                            $ git rev &#8211;<br/>
     parse&#8211; symbolic &#8211; full &#8211; name @{upstream} refs / remotes / origin / master $ git rev &#8211; parse&#8211; symbolic &#8211; full &#8211; name @{push} refs / remotes / myfork / mybranch
 </dd></dl>
 <p> Note in the example that we set up a triangular workflow, where we pull from one location and push to another. In a non-triangular workflow, <i>@{push}</i> is the same as <i>@{upstream}</i>, and there is no need for it. </p>
@@ -514,20 +514,20 @@ $ git log A..B C..D
 <dl>
 <dt>
 </dt><dd>
-OPTS_SPEC = &#8220;\<br />
-some-command [&lt;options&gt;] &lt;args&gt;&#8230;<br />
-                some &#8211;<br />
-                command does foo and<br />
-            bar !&#8211;h,<br />
-    help show the help<br />
-        foo some nifty option&#8211; foo<br />
-            bar = some cool option&#8211; bar with an argument<br />
-                baz = arg another cool option&#8211; baz with a named argument<br />
-                    qux<br />
-    ? path qux may take a path argument but has meaning by itself<br />
-          An option group Header<br />
-              C<br />
-    ? option C with an optional argument &#8221;<br />
+OPTS_SPEC = &#8220;\<br/>
+some-command [&lt;options&gt;] &lt;args&gt;&#8230;<br/>
+                some &#8211;<br/>
+                command does foo and<br/>
+            bar !&#8211;h,<br/>
+    help show the help<br/>
+        foo some nifty option&#8211; foo<br/>
+            bar = some cool option&#8211; bar with an argument<br/>
+                baz = arg another cool option&#8211; baz with a named argument<br/>
+                    qux<br/>
+    ? path qux may take a path argument but has meaning by itself<br/>
+          An option group Header<br/>
+              C<br/>
+    ? option C with an optional argument &#8221;<br/>
     eval &#8220;$(echo &#8221; $OPTS_SPEC &#8221; | git rev-parse &#8211;parseopt &#8212; &#8221; $ @&#8221; || echo exit $?)&#8221;
 </dd></dl>
 <h3>Usage text</h3>
@@ -535,8 +535,8 @@ some-command [&lt;options&gt;] &lt;args&gt;&#8230;<br />
 <dl>
 <dt>
 </dt><dd>
-usage : some &#8211; command[&lt;options&gt;]&lt;args&gt;&#8230; some &#8211; command does foo and bar !-h, &#8211;help show the help&#8211; foo some nifty option&#8211; foo&#8211; bar&#8230; some cool option&#8211; bar with an argument&#8211; baz&lt;arg&gt; another cool option&#8211; baz with a named argument&#8211; qux[=&lt;path&gt;] qux may take a path argument but has meaning by itself<br />
-                                                                                        An option group Header &#8211;<br />
+usage : some &#8211; command[&lt;options&gt;]&lt;args&gt;&#8230; some &#8211; command does foo and bar !-h, &#8211;help show the help&#8211; foo some nifty option&#8211; foo&#8211; bar&#8230; some cool option&#8211; bar with an argument&#8211; baz&lt;arg&gt; another cool option&#8211; baz with a named argument&#8211; qux[=&lt;path&gt;] qux may take a path argument but has meaning by itself<br/>
+                                                                                        An option group Header &#8211;<br/>
                                                                                     C[&#8230;] option C with an optional argument
 </dd></dl>
 <h2>SQ-QUOTE</h2>

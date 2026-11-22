@@ -10,22 +10,22 @@ description: "gprof – display call graph profile data"
 
 <p> gprof &#8211; display call graph profile data </p>
 <h2>SYNOPSIS</h2>
-<p> gprof [ -[abcDhilLrsTvwxyz] ] [ -[ACeEfFJnNOpPqQZ][<i>name</i>] ]<br />
-&nbsp;<wbr>[&nbsp;<wbr>-I&nbsp;<wbr><i>dirs</i>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>-d[<i>num</i>]&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>-k&nbsp;<wbr><i>from/to</i>&nbsp;<wbr>]<br />
-&nbsp;<wbr>[&nbsp;<wbr>-m&nbsp;<wbr><i>min-count</i>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>-R&nbsp;<wbr><i>map_file</i>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>-t&nbsp;<wbr><i>table-length</i>&nbsp;<wbr>]<br />
-&nbsp;<wbr>[&nbsp;<wbr>&#8211;[no-]annotated-source[=<i>name</i>]&nbsp;<wbr>]&nbsp;<wbr><br />
-&nbsp;<wbr>[&nbsp;<wbr>&#8211;[no-]exec-counts[=<i>name</i>]&nbsp;<wbr>]<br />
-&nbsp;<wbr>[&nbsp;<wbr>&#8211;[no-]flat-profile[=<i>name</i>]&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>&#8211;[no-]graph[=<i>name</i>]&nbsp;<wbr>]<br />
-&nbsp;<wbr>[&nbsp;<wbr>&#8211;[no-]time=<i>name</i>]&nbsp;<wbr>[&nbsp;<wbr>&#8211;all-lines&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>&#8211;brief&nbsp;<wbr>]&nbsp;<wbr><br />
-&nbsp;<wbr>[&nbsp;<wbr>&#8211;debug[=<i>level</i>]&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>&#8211;function-ordering&nbsp;<wbr>]&nbsp;<wbr><br />
-&nbsp;<wbr>[&nbsp;<wbr>&#8211;file-ordering&nbsp;<wbr><i>map_file</i>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>&#8211;directory-path=<i>dirs</i>&nbsp;<wbr>]<br />
-&nbsp;<wbr>[&nbsp;<wbr>&#8211;display-unused-functions&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>&#8211;file-format=<i>name</i>&nbsp;<wbr>]<br />
-&nbsp;<wbr>[&nbsp;<wbr>&#8211;file-info&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>&#8211;help&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>&#8211;line&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>&#8211;min-count=<i>n</i>&nbsp;<wbr>]<br />
-&nbsp;<wbr>[&nbsp;<wbr>&#8211;no-static&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>&#8211;print-path&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>&#8211;separate-files&nbsp;<wbr>]<br />
-&nbsp;<wbr>[&nbsp;<wbr>&#8211;static-call-graph&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>&#8211;sum&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>&#8211;table-length=<i>len</i>&nbsp;<wbr>]<br />
-&nbsp;<wbr>[&nbsp;<wbr>&#8211;traditional&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>&#8211;version&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>&#8211;width=<i>n</i>&nbsp;<wbr>]<br />
-&nbsp;<wbr>[&nbsp;<wbr>&#8211;ignore-non-functions&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>&#8211;demangle[=<i></i><font SIZE="-1"><i>STYLE</i></font><i></i>]&nbsp;<wbr>]<br />
-&nbsp;<wbr>[&nbsp;<wbr>&#8211;no-demangle&nbsp;<wbr>]&nbsp;<wbr>[&#8211;external-symbol-table=name]&nbsp;<wbr><br />
+<p> gprof [ -[abcDhilLrsTvwxyz] ] [ -[ACeEfFJnNOpPqQZ][<i>name</i>] ]<br/>
+&nbsp;<wbr>[&nbsp;<wbr>-I&nbsp;<wbr><i>dirs</i>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>-d[<i>num</i>]&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>-k&nbsp;<wbr><i>from/to</i>&nbsp;<wbr>]<br/>
+&nbsp;<wbr>[&nbsp;<wbr>-m&nbsp;<wbr><i>min-count</i>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>-R&nbsp;<wbr><i>map_file</i>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>-t&nbsp;<wbr><i>table-length</i>&nbsp;<wbr>]<br/>
+&nbsp;<wbr>[&nbsp;<wbr>&#8211;[no-]annotated-source[=<i>name</i>]&nbsp;<wbr>]&nbsp;<wbr><br/>
+&nbsp;<wbr>[&nbsp;<wbr>&#8211;[no-]exec-counts[=<i>name</i>]&nbsp;<wbr>]<br/>
+&nbsp;<wbr>[&nbsp;<wbr>&#8211;[no-]flat-profile[=<i>name</i>]&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>&#8211;[no-]graph[=<i>name</i>]&nbsp;<wbr>]<br/>
+&nbsp;<wbr>[&nbsp;<wbr>&#8211;[no-]time=<i>name</i>]&nbsp;<wbr>[&nbsp;<wbr>&#8211;all-lines&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>&#8211;brief&nbsp;<wbr>]&nbsp;<wbr><br/>
+&nbsp;<wbr>[&nbsp;<wbr>&#8211;debug[=<i>level</i>]&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>&#8211;function-ordering&nbsp;<wbr>]&nbsp;<wbr><br/>
+&nbsp;<wbr>[&nbsp;<wbr>&#8211;file-ordering&nbsp;<wbr><i>map_file</i>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>&#8211;directory-path=<i>dirs</i>&nbsp;<wbr>]<br/>
+&nbsp;<wbr>[&nbsp;<wbr>&#8211;display-unused-functions&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>&#8211;file-format=<i>name</i>&nbsp;<wbr>]<br/>
+&nbsp;<wbr>[&nbsp;<wbr>&#8211;file-info&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>&#8211;help&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>&#8211;line&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>&#8211;min-count=<i>n</i>&nbsp;<wbr>]<br/>
+&nbsp;<wbr>[&nbsp;<wbr>&#8211;no-static&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>&#8211;print-path&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>&#8211;separate-files&nbsp;<wbr>]<br/>
+&nbsp;<wbr>[&nbsp;<wbr>&#8211;static-call-graph&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>&#8211;sum&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>&#8211;table-length=<i>len</i>&nbsp;<wbr>]<br/>
+&nbsp;<wbr>[&nbsp;<wbr>&#8211;traditional&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>&#8211;version&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>&#8211;width=<i>n</i>&nbsp;<wbr>]<br/>
+&nbsp;<wbr>[&nbsp;<wbr>&#8211;ignore-non-functions&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>&#8211;demangle[=<i></i><i>STYLE</i><i></i>]&nbsp;<wbr>]<br/>
+&nbsp;<wbr>[&nbsp;<wbr>&#8211;no-demangle&nbsp;<wbr>]&nbsp;<wbr>[&#8211;external-symbol-table=name]&nbsp;<wbr><br/>
 &nbsp;<wbr>[&nbsp;<wbr><i>image-file</i>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><i>profile-file</i>&nbsp;<wbr>&#8230;&nbsp;<wbr>]</p>
 <h2>DESCRIPTION</h2>
 <p> <tt>&quot;gprof&quot;</tt> produces an execution profile of C, Pascal, or Fortran77 programs. The effect of called routines is incorporated in the profile of each caller. The profile data is taken from the call graph profile file (<i>gmon.out</i> default) which is created by programs that are compiled with the <code>-pg</code> option of <tt>&quot;cc&quot;</tt>, <tt>&quot;pc&quot;</tt>, and <tt>&quot;f77&quot;</tt>. The <code>-pg</code> option also links in versions of the library routines that are compiled for profiling. <tt>&quot;Gprof&quot;</tt> reads the given object file (the default is <tt>&quot;a.out&quot;</tt>) and establishes the relation between its symbol table and the call graph profile from <i>gmon.out</i>. If more than one profile file is specified, the <tt>&quot;gprof&quot;</tt> output shows the sum of the profile information in the given profile files. </p>
@@ -59,7 +59,7 @@ description: "gprof – display call graph profile data"
 <dt>-I dirs<tt></dt>
 <dd>
 </dd><dt>--directory-path=</tt>dirs<tt></dt>
-<dd> The </tt><code>-I</code> option specifies a list of search directories in which to find source files. Environment variable <i></i><font SIZE="-1"><i>GPROF_PATH</i></font><i></i> can also be used to convey this information. Used mostly for annotated source output.</dd>
+<dd> The </tt><code>-I</code> option specifies a list of search directories in which to find source files. Environment variable <i></i><i>GPROF_PATH</i><i></i> can also be used to convey this information. Used mostly for annotated source output.</dd>
 <dt>-J[symspec<tt>]</dt>
 <dd>
 </dd><dt>--no-annotated-source[=</tt>symspec<tt>]</dt>
@@ -117,11 +117,11 @@ description: "gprof – display call graph profile data"
         c-decl.o:00000000 T print_lang_type
         ...
 </pre>
-<p> To create a <i>map_file</i> with <font SIZE="-1">GNU</font> <tt>&quot;nm&quot;</tt>, type a command like <tt>&quot;nm --extern-only --defined-only -v --print-file-name program-name&quot;</tt>.</p>
+<p> To create a <i>map_file</i> with GNU <tt>&quot;nm&quot;</tt>, type a command like <tt>&quot;nm --extern-only --defined-only -v --print-file-name program-name&quot;</tt>.</p>
 <dt>-T</dt>
 <dd>
 </dd><dt>&#8211;traditional</dt>
-<dd> The <code>-T</code> option causes <tt>&quot;gprof&quot;</tt> to print its output in &#8220;traditional&#8221; <font SIZE="-1">BSD</font> style.</dd>
+<dd> The <code>-T</code> option causes <tt>&quot;gprof&quot;</tt> to print its output in &#8220;traditional&#8221; BSD style.</dd>
 <dt>-w width<tt></dt>
 <dd>
 </dd><dt>--width=</tt>width<tt></dt>
@@ -133,7 +133,7 @@ description: "gprof – display call graph profile data"
 <dt>&#8211;demangle[=style<tt>]</dt>
 <dd>
 </dd><dt>--no-demangle</dt>
-<dd> These options control whether C<font SIZE="-2">++</font> symbol names should be demangled when printing output. The default is to demangle symbols. The &quot;--no-demangle&quot;</tt> option may be used to turn off demangling. Different compilers have different mangling styles. The optional demangling style argument can be used to choose an appropriate demangling style for your compiler.</dd></dl>
+<dd> These options control whether C++ symbol names should be demangled when printing output. The default is to demangle symbols. The &quot;--no-demangle&quot;</tt> option may be used to turn off demangling. Different compilers have different mangling styles. The optional demangling style argument can be used to choose an appropriate demangling style for your compiler.</dd></dl>
 <h2>Analysis Options</h2>
 <dl>
 <dt>-a</dt>
@@ -147,7 +147,7 @@ description: "gprof – display call graph profile data"
 <dt>-D</dt>
 <dd>
 </dd><dt>&#8211;ignore-non-functions</dt>
-<dd> The <code>-D</code> option causes <tt>&quot;gprof&quot;</tt> to ignore symbols which are not known to be functions. This option will give more accurate profile data on systems where it is supported (Solaris and <font SIZE="-1">HPUX</font> for example).</dd>
+<dd> The <code>-D</code> option causes <tt>&quot;gprof&quot;</tt> to ignore symbols which are not known to be functions. This option will give more accurate profile data on systems where it is supported (Solaris and HPUX for example).</dd>
 <dt>-k from<tt>/</tt>to<tt></dt>
 <dd> The </tt><code>-k</code> option allows you to delete from the call graph any arcs from symbols matching symspec <i>from</i> to those matching symspec <i>to</i>.</dd>
 <dt>-l</dt>
@@ -226,10 +226,10 @@ description: "gprof – display call graph profile data"
 <h2>SEE ALSO</h2>
 <p> <i>monitor</i>(3), <i>profil</i>(2), <i><a href="/docs/linux/man/1-cc/">cc</a></i>(1), <i>prof</i>(1), and the Info entry for <i>gprof</i>. </p>
 <p> &#8220;An Execution Profiler for Modular Programs&#8221;, by S. Graham, P. Kessler, M. McKusick; Software &#8211; Practice and Experience, Vol. 13, pp. 671-685, 1983. </p>
-<p> &#8220;gprof: A Call Graph Execution Profiler&#8221;, by S. Graham, P. Kessler, M. McKusick; Proceedings of the <font SIZE="-1">SIGPLAN</font> &#8217;82 Symposium on Compiler Construction, <font SIZE="-1">SIGPLAN</font> Notices, Vol. 17, No 6, pp. 120-126, June 1982.</p>
+<p> &#8220;gprof: A Call Graph Execution Profiler&#8221;, by S. Graham, P. Kessler, M. McKusick; Proceedings of the SIGPLAN &#8217;82 Symposium on Compiler Construction, SIGPLAN Notices, Vol. 17, No 6, pp. 120-126, June 1982.</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 1988, 92, 97, 98, 99, 2000, 2001, 2003, 2007, 2008, 2009 Free Software Foundation, Inc. </p>
-<p> Permission is granted to copy, distribute and/or modify this document under the terms of the <font SIZE="-1">GNU</font> Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts. A copy of the license is included in the section entitled &#8220;<font SIZE="-1">GNU</font> Free Documentation License&#8221;.</p>
+<p> Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts. A copy of the license is included in the section entitled &#8220;GNU Free Documentation License&#8221;.</p>
 <h2>POD ERRORS</h2>
 <p> Hey! <code>The above document had some coding errors, which are explained below:</code></p>
 <dl>

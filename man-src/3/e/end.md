@@ -32,21 +32,21 @@ description: "etext, edata, end – end of program segments"
 <p> At the start of program execution, the program break will be somewhere near <i>&amp;end</i> (perhaps at the start of the following page). However, the break will change as memory is allocated via <code><a href="/docs/linux/man/2-brk/">brk</a></code>(2) or <code><a href="/docs/linux/man/3-malloc/">malloc</a></code>(3). Use <code><a href="/docs/linux/man/2-sbrk/">sbrk</a></code>(2) with an argument of zero to find the current value of the program break.</p>
 <h2>EXAMPLES</h2>
 <p> When run, the program below produces output such as the following: </p>
-<p> $<code> ./a.out</code> First address past:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;program text&nbsp;(etext)&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0x8048568<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;initialized data&nbsp;(edata)&nbsp;<wbr>&nbsp;<wbr>&nbsp;0x804a01c<br />
+<p> $<code> ./a.out</code> First address past:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;program text&nbsp;(etext)&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0x8048568<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;initialized data&nbsp;(edata)&nbsp;<wbr>&nbsp;<wbr>&nbsp;0x804a01c<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uninitialized data&nbsp;(end)&nbsp;<wbr>&nbsp;<wbr>&nbsp;0x804a024</p>
 <h3>Program source</h3>
 <p> #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; </p>
-<p> extern char etext, edata, end; /* The symbols must have some type,<br />
+<p> extern char etext, edata, end; /* The symbols must have some type,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;or&nbsp;&quot;gcc -Wall&quot;&nbsp;complains&nbsp;*/ </p>
-<p> int main(int argc, char *argv[]) {<br />
+<p> int main(int argc, char *argv[]) {<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;First address past:
-&quot;);<br />
+&quot;);<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;program text&nbsp;(etext)&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;%10p
-&quot;,&nbsp;&amp;etext);<br />
+&quot;,&nbsp;&amp;etext);<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;initialized data&nbsp;(edata)&nbsp;<wbr>&nbsp;%10p
-&quot;,&nbsp;&amp;edata);<br />
+&quot;,&nbsp;&amp;edata);<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uninitialized data&nbsp;(end)&nbsp;<wbr>&nbsp;%10p
 &quot;,&nbsp;&amp;end); </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_SUCCESS); }</p>

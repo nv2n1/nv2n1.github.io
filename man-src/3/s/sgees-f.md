@@ -10,7 +10,7 @@ description: "sgees.f –"
 <p>sgees.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>sgees</code> (JOBVS, SORT, SELECT, N, A, LDA, SDIM, WR, WI, VS, LDVS, WORK, LWORK, BWORK, INFO)<br />
+<p>subroutine <code>sgees</code> (JOBVS, SORT, SELECT, N, A, LDA, SDIM, WR, WI, VS, LDVS, WORK, LWORK, BWORK, INFO)<br/>
  <i></i><code> SGEES computes the eigenvalues, the Schur form, and, optionally, the matrix of Schur vectors for GE matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sgees (characterJOBVS, characterSORT, logical, externalSELECT, integerN, real, dimension( lda, * )A, integerLDA, integerSDIM, real, dimension( * )WR, real, dimension( * )WI, real, dimension( ldvs, * )VS, integerLDVS, real, dimension( * )WORK, integerLWORK, logical, dimension( * )BWORK, integerINFO)</h3>

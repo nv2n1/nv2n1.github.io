@@ -67,7 +67,7 @@ o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; o / / o&#821
 <dl>
 <dt>
 </dt><dd>
-&#8212; -1 &#8212; -o&#8211; &#8211; A<br />
+&#8212; -1 &#8212; -o&#8211; &#8211; A<br/>
     \ / X / &#8212; -2 &#8212; -o&#8211; &#8211; o&#8211; &#8211; B
 </dd></dl>
 <p> both <i>1</i> and <i>2</i> are merge-bases of A and B. Neither one is better than the other (both are <i>best</i> merge bases). When the <code>&#8211;all</code> option is not given, it is unspecified which best one is output. </p>
@@ -102,7 +102,7 @@ fi
 </dt><dd>
 o&#8211; &#8211; B2 / &#8212; -o&#8211; &#8211; o&#8211; &#8211; B1&#8211; o&#8211; &#8211; o&#8211; &#8211; o&#8211; &#8211; B(origin / master)</dd>
 <p>                                                      B0</p>
-<p>    D0&#8211; &#8211;<br />
+<p>    D0&#8211; &#8211;<br/>
     D1&#8211; &#8211; D(topic)
 </dl>
 <p> where <code>origin/master</code> used to point at commits B0, B1, B2 and now it points at B, and your <code>topic</code> branch was started on top of it back when <code>origin/master</code> was at B0, and you built three commits, D0, D1, and D, on top of it. Imagine that you now want to rebase the work you did on the topic on top of the updated origin/master. </p>

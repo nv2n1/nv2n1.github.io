@@ -12,7 +12,7 @@ description: "smokeping_install – How to install SmokePing"
 <p>This document explains how to setup SmokePing at your site.</p>
 <h2>Description</h2>
 <h3>Prerequisites</h3>
-<p>SmokePing does not stand alone. It relies on various other tools and services being present. Apart from a Unix <font SIZE="-1">OS</font> and a working Perl installation you need the following components:</p>
+<p>SmokePing does not stand alone. It relies on various other tools and services being present. Apart from a Unix OS and a working Perl installation you need the following components:</p>
 <dl>
 <dt>RRDtool 1.2.x or later</dt>
 <dd>Smokeping uses RRDtool for logging and graphing. If your linux distro provides an rrdtool package with perl support, use this. If you want to get the latest and greatest version, compile your own: &lt;<a rel="nofollow" href="http://oss.oetiker.ch/rrdtool/">http://oss.oetiker.ch/rrdtool/</a>&gt;</dd>
@@ -27,13 +27,13 @@ description: "smokeping_install – How to install SmokePing"
 <p> You need this for the Curl probe.</p>
 <dt>dig (Optional)</dt>
 <dd>&lt;<a rel="nofollow" href="http://www.isc.org/sw/bind/">http://www.isc.org/sw/bind/</a>&gt; </dd>
-<p> You need this for the <font SIZE="-1">DNS</font> probe.</p>
-<dt><font SIZE="-1">SSH </font>(Optional)</dt>
+<p> You need this for the DNS probe.</p>
+<dt>SSH (Optional)</dt>
 <dd>&lt;<a rel="nofollow" href="http://www.openssh.org/">http://www.openssh.org/</a>&gt; </dd>
-<p> You need this for the <font SIZE="-1">SSH</font> probe.</p>
+<p> You need this for the SSH probe.</p>
 <dt>Webserver</dt>
 <dd>&lt;<a rel="nofollow" href="http://httpd.apache.org/">http://httpd.apache.org/</a>&gt; </dd>
-<p> Well I won&#8217;t get much into this. The important thing is, to have a webserver which allows you to run <font SIZE="-1">CGI</font> and preferably FastCGI scripts. If you are using Apache I strongly recommend using the <i>suexec</i> system for running <font SIZE="-1">CGI</font> scripts as a particular user. </p>
+<p> Well I won&#8217;t get much into this. The important thing is, to have a webserver which allows you to run CGI and preferably FastCGI scripts. If you are using Apache I strongly recommend using the <i>suexec</i> system for running CGI scripts as a particular user. </p>
 <p> See &lt;<a rel="nofollow" href="http://httpd.apache.org/mod_fcgid/mod/mod_fcgid.html">http://httpd.apache.org/mod_fcgid/mod/mod_fcgid.html</a>&gt; and &lt;<a rel="nofollow" href="http://httpd.apache.org/docs/2.2/mod/mod_suexec.html">http://httpd.apache.org/docs/2.2/mod/mod_suexec.html</a>&gt; for more information on this.</p>
 <dt>Perl 5.8.8 or later.</dt>
 <dd>If you still have an older version, maybe have a look at perlbrew.</dd>
@@ -42,16 +42,16 @@ description: "smokeping_install – How to install SmokePing"
 <dl>
 <dd>
 </dd><dl>
-<dt><font SIZE="-1">FCGI</font></dt>
+<dt>FCGI</dt>
 <dd>The module for supporting FastCGI operation.</dd>
-<dt><font SIZE="-1">CGI,</font> CGI::Fast</dt>
+<dt>CGI, CGI::Fast</dt>
 <dd>Perl CGI/FastCGI support. Might already be installed localy.</dd>
 <dt>Config::Grammar</dt>
 <dd>The configuration file parser used in smokeping</dd>
-<dt><font SIZE="-1">LWP</font></dt>
-<dd>The master/slave functionality introduced a dependency on LWP::UserAgent from the libwww-perl (also known as <font SIZE="-1">LWP</font>) library. The module is required even if the master/slave mode is not enabled.</dd>
+<dt>LWP</dt>
+<dd>The master/slave functionality introduced a dependency on LWP::UserAgent from the libwww-perl (also known as LWP) library. The module is required even if the master/slave mode is not enabled.</dd>
 <dt>Socket6 (optional)</dt>
-<dd>The Socket6 module enables smokeping to check hostnames that only resolve to an IPv6 address. If you probe such hosts using ie. the FPing6 probe and get warnings that those hosts don&#8217;t resolve to an <font SIZE="-1">IP</font> address, you need to install it.</dd>
+<dd>The Socket6 module enables smokeping to check hostnames that only resolve to an IPv6 address. If you probe such hosts using ie. the FPing6 probe and get warnings that those hosts don&#8217;t resolve to an IP address, you need to install it.</dd>
 <dt>Net::Telnet (optional)</dt>
 <dd>You need this for the TelnetIOSPing probe.</dd>
 <dt>Net::OpenSSH (optional)</dt>
@@ -59,9 +59,9 @@ description: "smokeping_install – How to install SmokePing"
 <dt>Net::DNS (optional)</dt>
 <dd>You need this for the AnotherDNS probe.</dd>
 <dt>Net::LDAP (optional)</dt>
-<dd>You need this for the <font SIZE="-1">LDAP</font> probe.</dd>
+<dd>You need this for the LDAP probe.</dd>
 <dt>IO::Socket::SSL (optional)</dt>
-<dd>You need this if you want the <font SIZE="-1">LDAP</font> probe to be able to use the &#8216;starttls&#8217; command.</dd>
+<dd>You need this if you want the LDAP probe to be able to use the &#8216;starttls&#8217; command.</dd>
 <dt>Authen::Radius (optional)</dt>
 <dd>You need this for the Radius probe.</dd></dl>
 </dl>
@@ -82,9 +82,9 @@ description: "smokeping_install – How to install SmokePing"
 <p> Edit the <i>smokeping.fcgi</i> script to point to your smokeping_cgi script. </p>
 <p> If you have no FastCGI support in your webserver, you may want to use the <i>smokeping.cgi</i> script.</p>
 <dt><i>etc/basepage.html</i></dt>
-<dd>Edit the html template to your likings. Please do not remove the link to the SmokePing counter and my name from the template. The content of the template will be renderd by smokeping.cgi. This means that all embedded links must be relative to smokeping.cgi. If you are using <font SIZE="-1">HTTP</font> authentication, then the template variable <tt>&quot;authuser&quot;</tt> will be populated from the <tt>$ENV{REMOTE_USER}</tt> environment variable.</dd>
+<dd>Edit the html template to your likings. Please do not remove the link to the SmokePing counter and my name from the template. The content of the template will be renderd by smokeping.cgi. This means that all embedded links must be relative to smokeping.cgi. If you are using HTTP authentication, then the template variable <tt>&quot;authuser&quot;</tt> will be populated from the <tt>$ENV{REMOTE_USER}</tt> environment variable.</dd>
 <dt><i>etc/smokemail</i></dt>
-<dd>If you are going to use the <font SIZE="-1"><code>DYNAMIC</code></font> <font SIZE="-1">IP</font> support, customize the contents of this file.</dd></dl>
+<dd>If you are going to use the <code>DYNAMIC</code> IP support, customize the contents of this file.</dd></dl>
 <h3>Starting the Smokeping Daemon</h3>
 <p>With all the scaffolding in place, you can now launch the smokeping daemon and have it gather data for you. First you may want to run it in debug mode to see what it is doing </p>
 <pre> ./bin/smokeping --config=/opt/smokeping/etc/config --debug</pre>
@@ -96,8 +96,8 @@ description: "smokeping_install – How to install SmokePing"
 <h2>Copyright</h2>
 <p>Copyright (c) 2001, 2011 by Tobias Oetiker. All right reserved.</p>
 <h2>License</h2>
-<p>This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
-<p> This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE. </font> See the <font SIZE="-1">GNU</font> General Public License for more details. </p>
-<p> You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, <font SIZE="-1">MA 02139, USA.</font></p>
+<p>This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
+<p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. </p>
+<p> You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.</p>
 <h2>Author</h2>
 <p>Tobias Oetiker &lt;tobi [at] oetiker.ch&gt;</p>

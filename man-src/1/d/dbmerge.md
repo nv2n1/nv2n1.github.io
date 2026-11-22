@@ -13,9 +13,9 @@ description: "dbmerge – merge all inputs in sorted order based on the the spec
 <pre><code>
 dbmerge-- input A.fsdb-- input B.fsdb[-T TemporaryDirectory][-nNrR] column[column...]
 </code></pre>
-<p> or<br />
+<p> or<br/>
 &nbsp;<wbr>cat A.fsdb | dbmerge &#8211;input &#8211; &#8211;input B.fsdb&nbsp;<wbr>[-T TemporaryDirectory]&nbsp;<wbr>[-nNrR]&nbsp;<wbr>column&nbsp;<wbr>[column&#8230;] </p>
-<p> or<br />
+<p> or<br/>
 &nbsp;<wbr>dbmerge&nbsp;<wbr>[-T TemporaryDirectory]&nbsp;<wbr>[-nNrR]&nbsp;<wbr>column&nbsp;<wbr>[column&#8230;]&nbsp;<wbr>&#8211;inputs A.fsdb&nbsp;<wbr>[B.fsdb &#8230;]</p>
 <h2>DESCRIPTION</h2>
 <p> Merge all provided, pre-sorted input files, producing one sorted result. Inputs can both be specified with <tt>&quot;--input&quot;</tt>, or one can come from standard input and the other from <tt>&quot;--input&quot;</tt>. With <tt>&quot;--xargs&quot;</tt>, each line of standard input is a filename for input. </p>
@@ -33,7 +33,7 @@ dbmerge-- input A.fsdb-- input B.fsdb[-T TemporaryDirectory][-nNrR] column[colum
 <dt><code>&#8211;removeinputs</code></dt>
 <dd> Delete the source files after they have been consumed. (Defaults off, leaving the inputs in place.)</dd>
 <dt><code>-T TmpDir</code></dt>
-<dd> where to put tmp files. Also uses environment variable <font SIZE="-1">TMPDIR,</font> if -T is not specified. Default is /tmp.</dd>
+<dd> where to put tmp files. Also uses environment variable TMPDIR, if -T is not specified. Default is /tmp.</dd>
 <dt><code>&#8211;parallelism</code> N</dt>
 <dd> Allow up to N merges to happen in parallel. Default is the number of CPUs in the machine.</dd>
 <dt><code>&#8211;endgame</code> (or <code>&#8211;noendgame</code>)</dt>
@@ -98,4 +98,4 @@ dbmerge-- input A.fsdb-- input B.fsdb[-T TemporaryDirectory][-nNrR] column[colum
 <p> <i><a href="/docs/linux/man/1-dbmerge2/">dbmerge2</a></i>(1), <i><a href="/docs/linux/man/1-dbsort/">dbsort</a></i>(1), <i>Fsdb</i>(3)</p>
 <h2>AUTHOR and COPYRIGHT</h2>
 <p> Copyright (C) 1991-2015 by John Heidemann &lt;johnh [at] isi.edu&gt; </p>
-<p> This program is distributed under terms of the <font SIZE="-1">GNU</font> general public license, version 2. See the file <font SIZE="-1">COPYING</font> with the distribution for details. </p>
+<p> This program is distributed under terms of the GNU general public license, version 2. See the file COPYING with the distribution for details. </p>

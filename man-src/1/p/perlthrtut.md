@@ -11,9 +11,9 @@ description: "perlthrtut – Tutorial on threads in Perl"
 <p> perlthrtut &#8211; Tutorial on threads in Perl </p>
 <h2>DESCRIPTION</h2>
 <p> This tutorial describes the use of Perl interpreter threads (sometimes referred to as <i>ithreads</i>). In this model, each thread runs in its own Perl interpreter, and any data sharing between threads must be explicit. The user-level interface for <i>ithreads</i> uses the threads class. </p>
-<p> <font SIZE="-1"><code>NOTE</code></font>: There was another older Perl threading flavor called the 5.005 model that used the threads class. This old model was known to have problems, is deprecated, and was removed for release 5.10. You are strongly encouraged to migrate any existing 5.005 threads code to the new model as soon as possible. </p>
+<p> <code>NOTE</code>: There was another older Perl threading flavor called the 5.005 model that used the threads class. This old model was known to have problems, is deprecated, and was removed for release 5.10. You are strongly encouraged to migrate any existing 5.005 threads code to the new model as soon as possible. </p>
 <p> You can see which (or neither) threading flavour you have by running <tt>&quot;perl -V&quot;</tt> and looking at the <tt>&quot;Platform&quot;</tt> section. If you have <tt>&quot;useithreads=define&quot;</tt> you have ithreads, if you have <tt>&quot;use5005threads=define&quot;</tt> you have 5.005 threads. If you have neither, you don&#8217;t have any thread support built in. If you have both, you are in trouble. </p>
-<p> The threads and threads::shared modules are included in the core Perl distribution. Additionally, they are maintained as a separate modules on <font SIZE="-1">CPAN,</font> so you can check there for any updates.</p>
+<p> The threads and threads::shared modules are included in the core Perl distribution. Additionally, they are maintained as a separate modules on CPAN, so you can check there for any updates.</p>
 <h2>What Is A Thread Anyway?</h2>
 <p> A thread is a flow of control through a program with a single execution point. </p>
 <p> Sounds an awful lot like a process, doesn&#8217;t it? Well, it should. Threads are one of the pieces of a process. Every process has at least one thread and, up until now, every process running Perl had only one thread. With 5.8, though, you can create extra threads. We&#8217;re going to show you how, when, and why.</p>
@@ -21,7 +21,7 @@ description: "perlthrtut – Tutorial on threads in Perl"
 <p> There are three basic ways that you can structure a threaded program. Which model you choose depends on what you need your program to do. For many non-trivial threaded programs, you&#8217;ll need to choose different models for different pieces of your program.</p>
 <h3>Boss/Worker</h3>
 <p> The boss/worker model usually has one <i>boss</i> thread and one or more <i>worker</i> threads. The boss thread gathers or generates tasks that need to be done, then parcels those tasks out to the appropriate worker thread. </p>
-<p> This model is common in <font SIZE="-1">GUI</font> and server programs, where a main thread waits for some event and then passes that event to the appropriate worker threads for processing. Once the event has been passed on, the boss thread goes back to waiting for another event. </p>
+<p> This model is common in GUI and server programs, where a main thread waits for some event and then passes that event to the appropriate worker threads for processing. Once the event has been passed on, the boss thread goes back to waiting for another event. </p>
 <p> The boss thread does relatively little work. While tasks aren&#8217;t necessarily performed faster than with any other method, it tends to have the best user-response times.</p>
 <h3>Work Crew</h3>
 <p> In the work crew model, several threads are created that do essentially the same thing to different pieces of data. It closely mirrors classical parallel processing and vector processors, where a large array of processors do the exact same thing to many pieces of data. </p>
@@ -31,12 +31,12 @@ description: "perlthrtut – Tutorial on threads in Perl"
 <p> This model makes the most sense if you have multiple processors so two or more threads will be executing in parallel, though it can often make sense in other contexts as well. It tends to keep the individual tasks small and simple, as well as allowing some parts of the pipeline to block (on I/O or system calls, for example) while other parts keep going. If you&#8217;re running different parts of the pipeline on different processors you may also take advantage of the caches on each processor. </p>
 <p> This model is also handy for a form of recursive programming where, rather than having a subroutine call itself, it instead creates another thread. Prime and Fibonacci generators both map well to this form of the pipeline model. (A version of a prime number generator is presented later on.)</p>
 <h2>What kind of threads are Perl threads?</h2>
-<p> If you have experience with other thread implementations, you might find that things aren&#8217;t quite what you expect. It&#8217;s very important to remember when dealing with Perl threads that <i>Perl Threads Are Not X Threads</i> for all values of X. They aren&#8217;t <font SIZE="-1">POSIX</font> threads, or DecThreads, or Java&#8217;s Green threads, or Win32 threads. There are similarities, and the broad concepts are the same, but if you start looking for implementation details you&#8217;re going to be either disappointed or confused. Possibly both. </p>
-<p> This is not to say that Perl threads are completely different from everything that&#8217;s ever come before. They&#8217;re not. Perl&#8217;s threading model owes a lot to other thread models, especially <font SIZE="-1">POSIX.</font> Just as Perl is not C, though, Perl threads are not <font SIZE="-1">POSIX</font> threads. So if you find yourself looking for mutexes, or thread priorities, it&#8217;s time to step back a bit and think about what you want to do and how Perl can do it. </p>
+<p> If you have experience with other thread implementations, you might find that things aren&#8217;t quite what you expect. It&#8217;s very important to remember when dealing with Perl threads that <i>Perl Threads Are Not X Threads</i> for all values of X. They aren&#8217;t POSIX threads, or DecThreads, or Java&#8217;s Green threads, or Win32 threads. There are similarities, and the broad concepts are the same, but if you start looking for implementation details you&#8217;re going to be either disappointed or confused. Possibly both. </p>
+<p> This is not to say that Perl threads are completely different from everything that&#8217;s ever come before. They&#8217;re not. Perl&#8217;s threading model owes a lot to other thread models, especially POSIX. Just as Perl is not C, though, Perl threads are not POSIX threads. So if you find yourself looking for mutexes, or thread priorities, it&#8217;s time to step back a bit and think about what you want to do and how Perl can do it. </p>
 <p> However, it is important to remember that Perl threads cannot magically do things unless your operating system&#8217;s threads allow it. So if your system blocks the entire process on <tt>&quot;sleep()&quot;</tt>, Perl usually will, as well. </p>
 <p> <code>Perl Threads Are Different.</code></p>
 <h2>Thread-Safe Modules</h2>
-<p> The addition of threads has changed Perl&#8217;s internals substantially. There are implications for people who write modules with <font SIZE="-1">XS</font> code or external libraries. However, since Perl data is not shared among threads by default, Perl modules stand a high chance of being thread-safe or can be made thread-safe easily. Modules that are not tagged as thread-safe should be tested or code reviewed before being used in production code. </p>
+<p> The addition of threads has changed Perl&#8217;s internals substantially. There are implications for people who write modules with XS code or external libraries. However, since Perl data is not shared among threads by default, Perl modules stand a high chance of being thread-safe or can be made thread-safe easily. Modules that are not tagged as thread-safe should be tested or code reviewed before being used in production code. </p>
 <p> Not all modules that you might use are thread-safe, and you should always assume a module is unsafe unless the documentation says otherwise. This includes modules that are distributed as part of the core. Threads are a relatively new feature, and even some of the standard modules aren&#8217;t thread-safe. </p>
 <p> Even if a module is thread-safe, it doesn&#8217;t mean that the module is optimized to work well with threads. A module could possibly be rewritten to utilize the new features in threaded Perl to increase performance in a threaded environment. </p>
 <p> If you&#8217;re using a module that&#8217;s not thread-safe for some reason, you can protect yourself by using it from one, and only one thread at all. If you need multiple threads to access such a module, you can use semaphores and lots of programming discipline to control access to it. Semaphores are covered in &#8220;Basic semaphores&#8221;. </p>
@@ -52,18 +52,18 @@ $Config{useithreads} or
     die('Recompile Perl with threads to run this program.');
 </code></pre>
 <p> A possibly-threaded program using a possibly-threaded module might have code like this: </p>
-<p>use Config;<br />
-use MyMod;<br />
-BEGIN<br />
-{<br />
-    if ($Config{useithreads}) {<br />
-#We have threads<br />
-        require MyMod_threaded;<br />
-import MyMod_threaded;<br />
-    } else {<br />
-        require MyMod_unthreaded;<br />
-import MyMod_unthreaded;<br />
-    }<br />
+<p>use Config;<br/>
+use MyMod;<br/>
+BEGIN<br/>
+{<br/>
+    if ($Config{useithreads}) {<br/>
+#We have threads<br/>
+        require MyMod_threaded;<br/>
+import MyMod_threaded;<br/>
+    } else {<br/>
+        require MyMod_unthreaded;<br/>
+import MyMod_unthreaded;<br/>
+    }<br/>
 }</p>
 <p> Since code that runs both with and without threads is usually pretty messy, it&#8217;s best to isolate the thread-specific code in its own module. In our example above, that&#8217;s what <tt>&quot;MyMod_threaded&quot;</tt> is, and it&#8217;s only imported if we&#8217;re running on a threaded Perl.</p>
 <h3>A Note about the Examples</h3>
@@ -71,88 +71,88 @@ import MyMod_unthreaded;<br />
 <h3>Creating Threads</h3>
 <p> The threads module provides the tools you need to create new threads. Like any other module, you need to tell Perl that you want to use it; <tt>&quot;use threads;&quot;</tt> imports all the pieces you need to create basic threads. </p>
 <p> The simplest, most straightforward way to create a thread is with <tt>&quot;create()&quot;</tt>: </p>
-<p>use threads;<br />
-my $thr = threads-&gt;create(\&amp; sub1);<br />
-sub sub1<br />
-{<br />
+<p>use threads;<br/>
+my $thr = threads-&gt;create(\&amp; sub1);<br/>
+sub sub1<br/>
+{<br/>
     print(&#8220;In the thread
-&#8221;);<br />
+&#8221;);<br/>
 }</p>
 <p> The <tt>&quot;create()&quot;</tt> method takes a reference to a subroutine and creates a new thread that starts executing in the referenced subroutine. Control then passes both to the subroutine and the caller. </p>
 <p> If you need to, your program can pass parameters to the subroutine as part of the thread startup. Just include the list of parameters as part of the <tt>&quot;threads-&gt;create()&quot;</tt> call, like this: </p>
-<p>use threads;<br />
-my $Param3 = &#8216;foo&#8217;;<br />
-my $thr1 = threads-&gt;create(\&amp; sub1, &#8216;Param 1&#8217;, &#8216;Param 2&#8217;, $Param3);<br />
-my @ParamList = (42, &#8216;Hello&#8217;, 3.14);<br />
-my $thr2 = threads-&gt;create(\&amp; sub1, @ParamList);<br />
-my $thr3 = threads-&gt;create(\&amp; sub1, qw(Param1 Param2 Param3));<br />
-sub sub1<br />
-{<br />
-    my @InboundParameters = @_;<br />
+<p>use threads;<br/>
+my $Param3 = &#8216;foo&#8217;;<br/>
+my $thr1 = threads-&gt;create(\&amp; sub1, &#8216;Param 1&#8217;, &#8216;Param 2&#8217;, $Param3);<br/>
+my @ParamList = (42, &#8216;Hello&#8217;, 3.14);<br/>
+my $thr2 = threads-&gt;create(\&amp; sub1, @ParamList);<br/>
+my $thr3 = threads-&gt;create(\&amp; sub1, qw(Param1 Param2 Param3));<br/>
+sub sub1<br/>
+{<br/>
+    my @InboundParameters = @_;<br/>
     print(&#8220;In the thread
-&#8221;);<br />
+&#8221;);<br/>
     print(&#8216;Got parameters &gt;&#8217;, join(&#8216;&lt;&gt;&#8217;, @InboundParameters), &#8220;&lt;
-&#8221;);<br />
+&#8221;);<br/>
 }</p>
 <p> The last example illustrates another feature of threads. You can spawn off several threads using the same subroutine. Each thread executes the same subroutine, but in a separate thread with a separate environment and potentially separate arguments. </p>
 <p> <tt>&quot;new()&quot;</tt> is a synonym for <tt>&quot;create()&quot;</tt>.</p>
 <h3>Waiting For A Thread To Exit</h3>
 <p> Since threads are also subroutines, they can return values. To wait for a thread to exit and extract any values it might return, you can use the <tt>&quot;join()&quot;</tt> method: </p>
-<p>use threads;<br />
-my($thr) = threads-&gt;create(\&amp; sub1);<br />
-my @ReturnData = $thr-&gt;join();<br />
+<p>use threads;<br/>
+my($thr) = threads-&gt;create(\&amp; sub1);<br/>
+my @ReturnData = $thr-&gt;join();<br/>
 print(&#8216;Thread returned &#8216;, join(&#8216;, &#8216;, @ReturnData), &#8220;
-&#8221;);<br />
-sub sub1<br />
-{<br />
-    return (&#8216;Fifty-six&#8217;, &#8216;foo&#8217;, 2);<br />
+&#8221;);<br/>
+sub sub1<br/>
+{<br/>
+    return (&#8216;Fifty-six&#8217;, &#8216;foo&#8217;, 2);<br/>
 }</p>
-<p> In the example above, the <tt>&quot;join()&quot;</tt> method returns as soon as the thread ends. In addition to waiting for a thread to finish and gathering up any values that the thread might have returned, <tt>&quot;join()&quot;</tt> also performs any <font SIZE="-1">OS</font> cleanup necessary for the thread. That cleanup might be important, especially for long-running programs that spawn lots of threads. If you don&#8217;t want the return values and don&#8217;t want to wait for the thread to finish, you should call the <tt>&quot;detach()&quot;</tt> method instead, as described next. </p>
-<p> <font SIZE="-1">NOTE:</font> In the example above, the thread returns a list, thus necessitating that the thread creation call be made in list context (i.e., <tt>&quot;my ($thr)&quot;</tt>). See &#8220;$thr-&gt;<code>join()</code>&#8221; in threads and &#8220;<font SIZE="-1">THREAD CONTEXT&#8221;</font> in threads for more details on thread context and return values.</p>
+<p> In the example above, the <tt>&quot;join()&quot;</tt> method returns as soon as the thread ends. In addition to waiting for a thread to finish and gathering up any values that the thread might have returned, <tt>&quot;join()&quot;</tt> also performs any OS cleanup necessary for the thread. That cleanup might be important, especially for long-running programs that spawn lots of threads. If you don&#8217;t want the return values and don&#8217;t want to wait for the thread to finish, you should call the <tt>&quot;detach()&quot;</tt> method instead, as described next. </p>
+<p> NOTE: In the example above, the thread returns a list, thus necessitating that the thread creation call be made in list context (i.e., <tt>&quot;my ($thr)&quot;</tt>). See &#8220;$thr-&gt;<code>join()</code>&#8221; in threads and &#8220;THREAD CONTEXT&#8221; in threads for more details on thread context and return values.</p>
 <h3>Ignoring A Thread</h3>
 <p> <tt>&quot;join()&quot;</tt> does three things: it waits for a thread to exit, cleans up after it, and returns any data the thread may have produced. But what if you&#8217;re not interested in the thread&#8217;s return values, and you don&#8217;t really care when the thread finishes? All you want is for the thread to get cleaned up after when it&#8217;s done. </p>
 <p> In this case, you use the <tt>&quot;detach()&quot;</tt> method. Once a thread is detached, it&#8217;ll run until it&#8217;s finished; then Perl will clean up after it automatically. </p>
-<p>use threads;<br />
-my $thr = threads-&gt;create(\&amp; sub1);<br />
-#Spawn the thread<br />
-    $thr-&gt;detach();<br />
-#Now we officially don&#8217;t care any more sleep(15);<br />
-#Let thread run for awhile<br />
-    sub sub1<br />
-{<br />
-    my $count = 0;<br />
-    while (1) {<br />
-        $count++;<br />
+<p>use threads;<br/>
+my $thr = threads-&gt;create(\&amp; sub1);<br/>
+#Spawn the thread<br/>
+    $thr-&gt;detach();<br/>
+#Now we officially don&#8217;t care any more sleep(15);<br/>
+#Let thread run for awhile<br/>
+    sub sub1<br/>
+{<br/>
+    my $count = 0;<br/>
+    while (1) {<br/>
+        $count++;<br/>
         print(&#8220;\$count is $count
-&#8221;);<br />
-        sleep(1);<br />
-    }<br />
+&#8221;);<br/>
+        sleep(1);<br/>
+    }<br/>
 }</p>
 <p> Once a thread is detached, it may not be joined, and any return data that it might have produced (if it was done and waiting for a join) is lost. </p>
 <p> <tt>&quot;detach()&quot;</tt> can also be called as a class method to allow a thread to detach itself: </p>
-<p>use threads;<br />
-my $thr = threads-&gt;create(\&amp; sub1);<br />
-sub sub1<br />
-{<br />
-    threads-&gt;detach();<br />
-#Do more work<br />
+<p>use threads;<br/>
+my $thr = threads-&gt;create(\&amp; sub1);<br/>
+sub sub1<br/>
+{<br/>
+    threads-&gt;detach();<br/>
+#Do more work<br/>
 }</p>
 <h3>Process and Thread Termination</h3>
 <p> With threads one must be careful to make sure they all have a chance to run to completion, assuming that is what you want. </p>
 <p> An action that terminates a process will terminate <i>all</i> running threads. <code>die()</code> and <code>exit()</code> have this property, and perl does an exit when the main thread exits, perhaps implicitly by falling off the end of your code, even if that&#8217;s not what you want. </p>
 <p> As an example of this case, this code prints the message &#8220;Perl exited with active threads: 2 running and unjoined&#8221;: </p>
-<p>use threads;<br />
-my $thr1 = threads-&gt;new (\&amp; thrsub, &#8220;test1&#8221;);<br />
-my $thr2 = threads-&gt;new (\&amp; thrsub, &#8220;test2&#8221;);<br />
-sub thrsub<br />
-{<br />
-    my($message) = @_;<br />
-    sleep 1;<br />
+<p>use threads;<br/>
+my $thr1 = threads-&gt;new (\&amp; thrsub, &#8220;test1&#8221;);<br/>
+my $thr2 = threads-&gt;new (\&amp; thrsub, &#8220;test2&#8221;);<br/>
+sub thrsub<br/>
+{<br/>
+    my($message) = @_;<br/>
+    sleep 1;<br/>
     print &#8220;thread $message
-&#8221;;<br />
+&#8221;;<br/>
 }</p>
 <p> But when the following lines are added at the end: </p>
-<p>$thr1-&gt;join();<br />
+<p>$thr1-&gt;join();<br/>
 $thr2-&gt;join();</p>
 <p> it prints two lines of output, a perhaps more useful outcome.</p>
 <h2>Threads And Data</h2>
@@ -160,64 +160,64 @@ $thr2-&gt;join();</p>
 <h3>Shared And Unshared Data</h3>
 <p> The biggest difference between Perl <i>ithreads</i> and the old 5.005 style threading, or for that matter, to most other threading systems out there, is that by default, no data is shared. When a new Perl thread is created, all the data associated with the current thread is copied to the new thread, and is subsequently private to that new thread! This is similar in feel to what happens when a Unix process forks, except that in this case, the data is just copied to a different part of memory within the same process rather than a real fork taking place. </p>
 <p> To make use of threading, however, one usually wants the threads to share at least some data between themselves. This is done with the threads::shared module and the <tt>&quot;:shared&quot;</tt> attribute: </p>
-<p>use threads;<br />
-use threads::shared;<br />
-my $foo : shared = 1;<br />
-my $bar = 1;<br />
-threads-&gt;create(sub { $foo++; $bar++; })-&gt;join();<br />
+<p>use threads;<br/>
+use threads::shared;<br/>
+my $foo : shared = 1;<br/>
+my $bar = 1;<br/>
+threads-&gt;create(sub { $foo++; $bar++; })-&gt;join();<br/>
 print(&#8220;$foo
-&#8221;);<br />
-#Prints 2 since $foo is shared<br />
+&#8221;);<br/>
+#Prints 2 since $foo is shared<br/>
     print(&#8220;$bar
-&#8221;);<br />
+&#8221;);<br/>
 #Prints 1 since $bar is not shared</p>
 <p> In the case of a shared array, all the array&#8217;s elements are shared, and for a shared hash, all the keys and values are shared. This places restrictions on what may be assigned to shared array and hash elements: only simple values or references to shared variables are allowed &#8211; this is so that a private variable can&#8217;t accidentally become shared. A bad assignment will cause the thread to die. For example: </p>
-<p>use threads;<br />
-use threads::shared;<br />
-my $var = 1;<br />
-my $svar : shared = 2;<br />
-my % hash : shared;<br />
-&#8230; create some threads&#8230; $hash{a} = 1;<br />
-#All threads see exists($hash{a})<br />
-#and $hash{a } == 1<br />
-    $hash{a } = $var;<br />
-#okay &#8211; copy &#8211; by &#8211; value : same effect as previous $hash{a } = $svar;<br />
-#okay &#8211; copy &#8211; by &#8211; value : same effect as previous $hash{a } = \$svar;<br />
-#okay &#8211; a reference to a shared variable<br />
-            $hash{a } = \$var;<br />
-#This will die delete ($hash{a});<br />
+<p>use threads;<br/>
+use threads::shared;<br/>
+my $var = 1;<br/>
+my $svar : shared = 2;<br/>
+my % hash : shared;<br/>
+&#8230; create some threads&#8230; $hash{a} = 1;<br/>
+#All threads see exists($hash{a})<br/>
+#and $hash{a } == 1<br/>
+    $hash{a } = $var;<br/>
+#okay &#8211; copy &#8211; by &#8211; value : same effect as previous $hash{a } = $svar;<br/>
+#okay &#8211; copy &#8211; by &#8211; value : same effect as previous $hash{a } = \$svar;<br/>
+#okay &#8211; a reference to a shared variable<br/>
+            $hash{a } = \$var;<br/>
+#This will die delete ($hash{a});<br/>
 #okay &#8211; all threads will see !exists($hash{a})</p>
 <p> Note that a shared variable guarantees that if two or more threads try to modify it at the same time, the internal state of the variable will not become corrupted. However, there are no guarantees beyond this, as explained in the next section.</p>
 <h3>Thread Pitfalls: Races</h3>
 <p> While threads bring a new set of useful tools, they also bring a number of pitfalls. One pitfall is the race condition: </p>
-<p>use threads;<br />
-use threads::shared;<br />
-my $x : shared = 1;<br />
-my $thr1 = threads-&gt;create(\&amp; sub1);<br />
-my $thr2 = threads-&gt;create(\&amp; sub2);<br />
-$thr1-&gt;join();<br />
-$thr2-&gt;join();<br />
+<p>use threads;<br/>
+use threads::shared;<br/>
+my $x : shared = 1;<br/>
+my $thr1 = threads-&gt;create(\&amp; sub1);<br/>
+my $thr2 = threads-&gt;create(\&amp; sub2);<br/>
+$thr1-&gt;join();<br/>
+$thr2-&gt;join();<br/>
 print(&#8220;$x
-&#8221;);<br />
-sub sub1<br />
-{<br />
-    my $foo = $x;<br />
-    $x = $foo + 1;<br />
-}<br />
-sub sub2<br />
-{<br />
-    my $bar = $x;<br />
-    $x = $bar + 1;<br />
+&#8221;);<br/>
+sub sub1<br/>
+{<br/>
+    my $foo = $x;<br/>
+    $x = $foo + 1;<br/>
+}<br/>
+sub sub2<br/>
+{<br/>
+    my $bar = $x;<br/>
+    $x = $bar + 1;<br/>
 }</p>
 <p> What do you think <tt>$x</tt> will be? The answer, unfortunately, is <i>it depends</i>. Both <tt>&quot;sub1()&quot;</tt> and <tt>&quot;sub2()&quot;</tt> access the global variable <tt>$x</tt>, once to read and once to write. Depending on factors ranging from your thread implementation&#8217;s scheduling algorithm to the phase of the moon, <tt>$x</tt> can be 2 or 3. </p>
 <p> Race conditions are caused by unsynchronized access to shared data. Without explicit synchronization, there&#8217;s no way to be sure that nothing has happened to the shared data between the time you access it and the time you update it. Even this simple code fragment has the possibility of error: </p>
-<p>use threads;<br />
-my $x : shared = 2;<br />
-my $y : shared;<br />
-my $z : shared;<br />
-my $thr1 = threads-&gt;create(sub { $y = $x; $x = $y + 1; });<br />
-my $thr2 = threads-&gt;create(sub { $z = $x; $x = $z + 1; });<br />
-$thr1-&gt;join();<br />
+<p>use threads;<br/>
+my $x : shared = 2;<br/>
+my $y : shared;<br/>
+my $z : shared;<br/>
+my $thr1 = threads-&gt;create(sub { $y = $x; $x = $y + 1; });<br/>
+my $thr2 = threads-&gt;create(sub { $z = $x; $x = $z + 1; });<br/>
+$thr1-&gt;join();<br/>
 $thr2-&gt;join();</p>
 <p> Two threads both access <tt>$x</tt>. Each thread can potentially be interrupted at any point, or be executed in any order. At the end, <tt>$x</tt> could be 3 or 4, and both <tt>$y</tt> and <tt>$z</tt> could be 2 or 3. </p>
 <p> Even <tt>&quot;$x += 5&quot;</tt> or <tt>&quot;$x++&quot;</tt> are not guaranteed to be atomic. </p>
@@ -226,79 +226,79 @@ $thr2-&gt;join();</p>
 <p> Perl provides a number of mechanisms to coordinate the interactions between themselves and their data, to avoid race conditions and the like. Some of these are designed to resemble the common techniques used in thread libraries such as <tt>&quot;pthreads&quot;</tt>; others are Perl-specific. Often, the standard techniques are clumsy and difficult to get right (such as condition waits). Where possible, it is usually easier to use Perlish techniques such as queues, which remove some of the hard work involved.</p>
 <h3>Controlling access: <code>lock()</code></h3>
 <p> The <tt>&quot;lock()&quot;</tt> function takes a shared variable and puts a lock on it. No other thread may lock the variable until the variable is unlocked by the thread holding the lock. Unlocking happens automatically when the locking thread exits the block that contains the call to the <tt>&quot;lock()&quot;</tt> function. Using <tt>&quot;lock()&quot;</tt> is straightforward: This example has several threads doing some calculations in parallel, and occasionally updating a running total: </p>
-<p>use threads;<br />
-use threads::shared;<br />
-my $total : shared = 0;<br />
-sub calc<br />
-{<br />
-    while (1) {<br />
-        my $result;<br />
-#(&#8230; do some calculations and set $result&#8230;)<br />
-        {<br />
-            lock($total);<br />
-#Block until we obtain the lock<br />
-                $total += $result;<br />
-        }<br />
-#Lock implicitly released at end of scope<br />
-                last if $result == 0;<br />
-    }<br />
-}<br />
-my $thr1 = threads-&gt;create(\&amp; calc);<br />
-my $thr2 = threads-&gt;create(\&amp; calc);<br />
-my $thr3 = threads-&gt;create(\&amp; calc);<br />
-$thr1-&gt;join();<br />
-$thr2-&gt;join();<br />
-$thr3-&gt;join();<br />
+<p>use threads;<br/>
+use threads::shared;<br/>
+my $total : shared = 0;<br/>
+sub calc<br/>
+{<br/>
+    while (1) {<br/>
+        my $result;<br/>
+#(&#8230; do some calculations and set $result&#8230;)<br/>
+        {<br/>
+            lock($total);<br/>
+#Block until we obtain the lock<br/>
+                $total += $result;<br/>
+        }<br/>
+#Lock implicitly released at end of scope<br/>
+                last if $result == 0;<br/>
+    }<br/>
+}<br/>
+my $thr1 = threads-&gt;create(\&amp; calc);<br/>
+my $thr2 = threads-&gt;create(\&amp; calc);<br/>
+my $thr3 = threads-&gt;create(\&amp; calc);<br/>
+$thr1-&gt;join();<br/>
+$thr2-&gt;join();<br/>
+$thr3-&gt;join();<br/>
 print(&#8220;total=$total
 &#8221;);</p>
 <p> <tt>&quot;lock()&quot;</tt> blocks the thread until the variable being locked is available. When <tt>&quot;lock()&quot;</tt> returns, your thread can be sure that no other thread can lock that variable until the block containing the lock exits. </p>
 <p> It&#8217;s important to note that locks don&#8217;t prevent access to the variable in question, only lock attempts. This is in keeping with Perl&#8217;s longstanding tradition of courteous programming, and the advisory file locking that <tt>&quot;flock()&quot;</tt> gives you. </p>
 <p> You may lock arrays and hashes as well as scalars. Locking an array, though, will not block subsequent locks on array elements, just lock attempts on the array itself. </p>
 <p> Locks are recursive, which means it&#8217;s okay for a thread to lock a variable more than once. The lock will last until the outermost <tt>&quot;lock()&quot;</tt> on the variable goes out of scope. For example: </p>
-<p>my $x : shared;<br />
-doit();<br />
-sub doit<br />
-{<br />
-    {<br />
-        {<br />
-            lock($x);<br />
-#Wait for lock<br />
-                lock($x);<br />
-#NOOP &#8211; we already have the lock<br />
-            {<br />
-                lock($x);<br />
-#NOOP<br />
-                {<br />
-                    lock($x);<br />
-#NOOP lockit_some_more();<br />
-                }<br />
-            }<br />
-        }<br />
-#*** Implicit unlock here ***<br />
-    }<br />
-}<br />
-sub lockit_some_more<br />
-{<br />
-    lock($x);<br />
-#NOOP<br />
-}<br />
+<p>my $x : shared;<br/>
+doit();<br/>
+sub doit<br/>
+{<br/>
+    {<br/>
+        {<br/>
+            lock($x);<br/>
+#Wait for lock<br/>
+                lock($x);<br/>
+#NOOP &#8211; we already have the lock<br/>
+            {<br/>
+                lock($x);<br/>
+#NOOP<br/>
+                {<br/>
+                    lock($x);<br/>
+#NOOP lockit_some_more();<br/>
+                }<br/>
+            }<br/>
+        }<br/>
+#*** Implicit unlock here ***<br/>
+    }<br/>
+}<br/>
+sub lockit_some_more<br/>
+{<br/>
+    lock($x);<br/>
+#NOOP<br/>
+}<br/>
 #Nothing happens here</p>
 <p> Note that there is no <tt>&quot;unlock()&quot;</tt> function &#8211; the only way to unlock a variable is to allow it to go out of scope. </p>
 <p> A lock can either be used to guard the data contained within the variable being locked, or it can be used to guard something else, like a section of code. In this latter case, the variable in question does not hold any useful data, and exists only for the purpose of being locked. In this respect, the variable behaves like the mutexes and basic semaphores of traditional thread libraries.</p>
 <h3>A Thread Pitfall: Deadlocks</h3>
 <p> Locks are a handy tool to synchronize access to data, and using them properly is the key to safe shared data. Unfortunately, locks aren&#8217;t without their dangers, especially when multiple locks are involved. Consider the following code: </p>
-<p>use threads;<br />
-my $x : shared = 4;<br />
-my $y : shared = &#8216;foo&#8217;;<br />
-my $thr1 = threads-&gt;create(sub {<br />
-    lock($x);<br />
-    sleep(20);<br />
-    lock($y);<br />
-});<br />
-my $thr2 = threads-&gt;create(sub {<br />
-    lock($y);<br />
-    sleep(20);<br />
-    lock($x);<br />
+<p>use threads;<br/>
+my $x : shared = 4;<br/>
+my $y : shared = &#8216;foo&#8217;;<br/>
+my $thr1 = threads-&gt;create(sub {<br/>
+    lock($x);<br/>
+    sleep(20);<br/>
+    lock($y);<br/>
+});<br/>
+my $thr2 = threads-&gt;create(sub {<br/>
+    lock($y);<br/>
+    sleep(20);<br/>
+    lock($x);<br/>
 });</p>
 <p> This program will probably hang until you kill it. The only way it won&#8217;t hang is if one of the two threads acquires both locks first. A guaranteed-to-hang version is more complicated, but the principle is the same. </p>
 <p> The first thread will grab a lock on <tt>$x</tt>, then, after a pause during which the second thread has probably had time to do some work, try to grab a lock on <tt>$y</tt>. Meanwhile, the second thread grabs a lock on <tt>$y</tt>, then later tries to grab a lock on <tt>$x</tt>. The second lock attempt for both threads will block, each waiting for the other to release its lock. </p>
@@ -307,19 +307,19 @@ my $thr2 = threads-&gt;create(sub {<br />
 <p> The other synchronization primitives described below can suffer from similar problems.</p>
 <h3>Queues: Passing Data Around</h3>
 <p> A queue is a special thread-safe object that lets you put data in one end and take it out the other without having to worry about synchronization issues. They&#8217;re pretty straightforward, and look like this: </p>
-<p>use threads;<br />
-use Thread::Queue;<br />
-my $DataQueue = Thread::Queue-&gt;new ();<br />
-my $thr = threads-&gt;create(sub {<br />
-    while (my $DataElement = $DataQueue-&gt;dequeue()) {<br />
+<p>use threads;<br/>
+use Thread::Queue;<br/>
+my $DataQueue = Thread::Queue-&gt;new ();<br/>
+my $thr = threads-&gt;create(sub {<br/>
+    while (my $DataElement = $DataQueue-&gt;dequeue()) {<br/>
         print(&#8220;Popped $DataElement off the queue
-&#8221;);<br />
-    }<br />
-});<br />
-$DataQueue-&gt;enqueue(12);<br />
-$DataQueue-&gt;enqueue(&#8220;A&#8221;, &#8220;B&#8221;, &#8220;C&#8221;);<br />
-sleep(10);<br />
-$DataQueue-&gt;enqueue(undef);<br />
+&#8221;);<br/>
+    }<br/>
+});<br/>
+$DataQueue-&gt;enqueue(12);<br/>
+$DataQueue-&gt;enqueue(&#8220;A&#8221;, &#8220;B&#8221;, &#8220;C&#8221;);<br/>
+sleep(10);<br/>
+$DataQueue-&gt;enqueue(undef);<br/>
 $thr-&gt;join();</p>
 <p> You create the queue with <tt>&quot;Thread::Queue-&gt;new()&quot;</tt>. Then you can add lists of scalars onto the end with <tt>&quot;enqueue()&quot;</tt>, and pop scalars off the front of it with <tt>&quot;dequeue()&quot;</tt>. A queue has no fixed size, and can grow as needed to hold everything pushed on to it. </p>
 <p> If a queue is empty, <tt>&quot;dequeue()&quot;</tt> blocks until another thread enqueues something. This makes queues ideal for event loops and other communications between threads.</p>
@@ -327,103 +327,103 @@ $thr-&gt;join();</p>
 <p> Semaphores are a kind of generic locking mechanism. In their most basic form, they behave very much like lockable scalars, except that they can&#8217;t hold data, and that they must be explicitly unlocked. In their advanced form, they act like a kind of counter, and can allow multiple threads to have the <i>lock</i> at any one time.</p>
 <h3>Basic semaphores</h3>
 <p> Semaphores have two methods, <tt>&quot;down()&quot;</tt> and <tt>&quot;up()&quot;</tt>: <tt>&quot;down()&quot;</tt> decrements the resource count, while <tt>&quot;up()&quot;</tt> increments it. Calls to <tt>&quot;down()&quot;</tt> will block if the semaphore&#8217;s current count would decrement below zero. This program gives a quick demonstration: </p>
-<p>use threads;<br />
-use Thread::Semaphore;<br />
-my $semaphore = Thread::Semaphore-&gt;new ();<br />
-my $GlobalVariable : shared = 0;<br />
-$thr1 = threads-&gt;create(\&amp; sample_sub, 1);<br />
-$thr2 = threads-&gt;create(\&amp; sample_sub, 2);<br />
-$thr3 = threads-&gt;create(\&amp; sample_sub, 3);<br />
-sub sample_sub<br />
-{<br />
-    my $SubNumber = shift(@_);<br />
-    my $TryCount = 10;<br />
-    my $LocalCopy;<br />
-    sleep(1);<br />
-    while ($TryCount&#8211;) {<br />
-        $semaphore-&gt;down();<br />
-        $LocalCopy = $GlobalVariable;<br />
-        print(&#8220;$TryCount tries left for sub $SubNumber &#8221;<br />
+<p>use threads;<br/>
+use Thread::Semaphore;<br/>
+my $semaphore = Thread::Semaphore-&gt;new ();<br/>
+my $GlobalVariable : shared = 0;<br/>
+$thr1 = threads-&gt;create(\&amp; sample_sub, 1);<br/>
+$thr2 = threads-&gt;create(\&amp; sample_sub, 2);<br/>
+$thr3 = threads-&gt;create(\&amp; sample_sub, 3);<br/>
+sub sample_sub<br/>
+{<br/>
+    my $SubNumber = shift(@_);<br/>
+    my $TryCount = 10;<br/>
+    my $LocalCopy;<br/>
+    sleep(1);<br/>
+    while ($TryCount&#8211;) {<br/>
+        $semaphore-&gt;down();<br/>
+        $LocalCopy = $GlobalVariable;<br/>
+        print(&#8220;$TryCount tries left for sub $SubNumber &#8221;<br/>
                   .&#8221;(\$GlobalVariable is $GlobalVariable)
-&#8221;);<br />
-        sleep(2);<br />
-        $LocalCopy++;<br />
-        $GlobalVariable = $LocalCopy;<br />
-        $semaphore-&gt;up();<br />
-    }<br />
-}<br />
-$thr1-&gt;join();<br />
-$thr2-&gt;join();<br />
+&#8221;);<br/>
+        sleep(2);<br/>
+        $LocalCopy++;<br/>
+        $GlobalVariable = $LocalCopy;<br/>
+        $semaphore-&gt;up();<br/>
+    }<br/>
+}<br/>
+$thr1-&gt;join();<br/>
+$thr2-&gt;join();<br/>
 $thr3-&gt;join();</p>
 <p> The three invocations of the subroutine all operate in sync. The semaphore, though, makes sure that only one thread is accessing the global variable at once.</p>
 <h3>Advanced Semaphores</h3>
 <p> By default, semaphores behave like locks, letting only one thread <tt>&quot;down()&quot;</tt> them at a time. However, there are other uses for semaphores. </p>
 <p> Each semaphore has a counter attached to it. By default, semaphores are created with the counter set to one, <tt>&quot;down()&quot;</tt> decrements the counter by one, and <tt>&quot;up()&quot;</tt> increments by one. However, we can override any or all of these defaults simply by passing in different values: </p>
-<p>use threads;<br />
-use Thread::Semaphore;<br />
-my $semaphore = Thread::Semaphore-&gt;new (5);<br />
-#Creates a semaphore with the counter set to five<br />
-my $thr1 = threads-&gt;create(\&amp; sub1);<br />
-my $thr2 = threads-&gt;create(\&amp; sub1);<br />
-sub sub1<br />
-{<br />
-    $semaphore-&gt;down(5);<br />
-#Decrements the counter by five<br />
-#Do stuff here<br />
-        $semaphore-&gt;up(5);<br />
-#Increment the counter by five<br />
-}<br />
-$thr1-&gt;detach();<br />
+<p>use threads;<br/>
+use Thread::Semaphore;<br/>
+my $semaphore = Thread::Semaphore-&gt;new (5);<br/>
+#Creates a semaphore with the counter set to five<br/>
+my $thr1 = threads-&gt;create(\&amp; sub1);<br/>
+my $thr2 = threads-&gt;create(\&amp; sub1);<br/>
+sub sub1<br/>
+{<br/>
+    $semaphore-&gt;down(5);<br/>
+#Decrements the counter by five<br/>
+#Do stuff here<br/>
+        $semaphore-&gt;up(5);<br/>
+#Increment the counter by five<br/>
+}<br/>
+$thr1-&gt;detach();<br/>
 $thr2-&gt;detach();</p>
 <p> If <tt>&quot;down()&quot;</tt> attempts to decrement the counter below zero, it blocks until the counter is large enough. Note that while a semaphore can be created with a starting count of zero, any <tt>&quot;up()&quot;</tt> or <tt>&quot;down()&quot;</tt> always changes the counter by at least one, and so <tt>&quot;$semaphore-&gt;down(0)&quot;</tt> is the same as <tt>&quot;$semaphore-&gt;down(1)&quot;</tt>. </p>
 <p> The question, of course, is why would you do something like this? Why create a semaphore with a starting count that&#8217;s not one, or why decrement or increment it by more than one? The answer is resource availability. Many resources that you want to manage access for can be safely used by more than one thread at once. </p>
-<p> For example, let&#8217;s take a <font SIZE="-1">GUI</font> driven program. It has a semaphore that it uses to synchronize access to the display, so only one thread is ever drawing at once. Handy, but of course you don&#8217;t want any thread to start drawing until things are properly set up. In this case, you can create a semaphore with a counter set to zero, and up it when things are ready for drawing. </p>
+<p> For example, let&#8217;s take a GUI driven program. It has a semaphore that it uses to synchronize access to the display, so only one thread is ever drawing at once. Handy, but of course you don&#8217;t want any thread to start drawing until things are properly set up. In this case, you can create a semaphore with a counter set to zero, and up it when things are ready for drawing. </p>
 <p> Semaphores with counters greater than one are also useful for establishing quotas. Say, for example, that you have a number of threads that can do I/O at once. You don&#8217;t want all the threads reading or writing at once though, since that can potentially swamp your I/O channels, or deplete your process&#8217;s quota of filehandles. You can use a semaphore initialized to the number of concurrent I/O requests (or open files) that you want at any one time, and have your threads quietly block and unblock themselves. </p>
 <p> Larger increments or decrements are handy in those cases where a thread needs to check out or return a number of resources at once.</p>
 <h3>Waiting for a Condition</h3>
 <p> The functions <tt>&quot;cond_wait()&quot;</tt> and <tt>&quot;cond_signal()&quot;</tt> can be used in conjunction with locks to notify co-operating threads that a resource has become available. They are very similar in use to the functions found in <tt>&quot;pthreads&quot;</tt>. However for most purposes, queues are simpler to use and more intuitive. See threads::shared for more details.</p>
 <h3>Giving up control</h3>
-<p> There are times when you may find it useful to have a thread explicitly give up the <font SIZE="-1">CPU</font> to another thread. You may be doing something processor-intensive and want to make sure that the user-interface thread gets called frequently. Regardless, there are times that you might want a thread to give up the processor. </p>
+<p> There are times when you may find it useful to have a thread explicitly give up the CPU to another thread. You may be doing something processor-intensive and want to make sure that the user-interface thread gets called frequently. Regardless, there are times that you might want a thread to give up the processor. </p>
 <p> Perl&#8217;s threading package provides the <tt>&quot;yield()&quot;</tt> function that does this. <tt>&quot;yield()&quot;</tt> is pretty straightforward, and works like this: </p>
-<p>use threads;<br />
-sub loop<br />
-{<br />
-    my $thread = shift;<br />
-    my $foo = 50;<br />
-    while ($foo&#8211;) {<br />
+<p>use threads;<br/>
+sub loop<br/>
+{<br/>
+    my $thread = shift;<br/>
+    my $foo = 50;<br/>
+    while ($foo&#8211;) {<br/>
         print(&#8220;In thread $thread
-&#8221;);<br />
-    }<br />
-    threads-&gt;yield();<br />
-    $foo = 50;<br />
-    while ($foo&#8211;) {<br />
+&#8221;);<br/>
+    }<br/>
+    threads-&gt;yield();<br/>
+    $foo = 50;<br/>
+    while ($foo&#8211;) {<br/>
         print(&#8220;In thread $thread
-&#8221;);<br />
-    }<br />
-}<br />
-my $thr1 = threads-&gt;create(\&amp; loop, &#8216;first&#8217;);<br />
-my $thr2 = threads-&gt;create(\&amp; loop, &#8216;second&#8217;);<br />
+&#8221;);<br/>
+    }<br/>
+}<br/>
+my $thr1 = threads-&gt;create(\&amp; loop, &#8216;first&#8217;);<br/>
+my $thr2 = threads-&gt;create(\&amp; loop, &#8216;second&#8217;);<br/>
 my $thr3 = threads-&gt;create(\&amp; loop, &#8216;third&#8217;);</p>
-<p> It is important to remember that <tt>&quot;yield()&quot;</tt> is only a hint to give up the <font SIZE="-1">CPU,</font> it depends on your hardware, <font SIZE="-1">OS</font> and threading libraries what actually happens. <code>On many operating systems, yield() is a no-op.</code> Therefore it is important to note that one should not build the scheduling of the threads around <tt>&quot;yield()&quot;</tt> calls. It might work on your platform but it won&#8217;t work on another platform.</p>
+<p> It is important to remember that <tt>&quot;yield()&quot;</tt> is only a hint to give up the CPU, it depends on your hardware, OS and threading libraries what actually happens. <code>On many operating systems, yield() is a no-op.</code> Therefore it is important to note that one should not build the scheduling of the threads around <tt>&quot;yield()&quot;</tt> calls. It might work on your platform but it won&#8217;t work on another platform.</p>
 <h2>General Thread Utility Routines</h2>
 <p> We&#8217;ve covered the workhorse parts of Perl&#8217;s threading package, and with these tools you should be well on your way to writing threaded code and packages. There are a few useful little pieces that didn&#8217;t really fit in anyplace else.</p>
 <h3>What Thread Am I In?</h3>
 <p> The <tt>&quot;threads-&gt;self()&quot;</tt> class method provides your program with a way to get an object representing the thread it&#8217;s currently in. You can use this object in the same way as the ones returned from thread creation.</p>
 <h3>Thread IDs</h3>
-<p> <tt>&quot;tid()&quot;</tt> is a thread object method that returns the thread <font SIZE="-1">ID</font> of the thread the object represents. Thread IDs are integers, with the main thread in a program being 0. Currently Perl assigns a unique <font SIZE="-1">TID</font> to every thread ever created in your program, assigning the first thread to be created a <font SIZE="-1">TID</font> of 1, and increasing the <font SIZE="-1">TID</font> by 1 for each new thread that&#8217;s created. When used as a class method, <tt>&quot;threads-&gt;tid()&quot;</tt> can be used by a thread to get its own <font SIZE="-1">TID.</font></p>
+<p> <tt>&quot;tid()&quot;</tt> is a thread object method that returns the thread ID of the thread the object represents. Thread IDs are integers, with the main thread in a program being 0. Currently Perl assigns a unique TID to every thread ever created in your program, assigning the first thread to be created a TID of 1, and increasing the TID by 1 for each new thread that&#8217;s created. When used as a class method, <tt>&quot;threads-&gt;tid()&quot;</tt> can be used by a thread to get its own TID.</p>
 <h3>Are These Threads The Same?</h3>
 <p> The <tt>&quot;equal()&quot;</tt> method takes two thread objects and returns true if the objects represent the same thread, and false if they don&#8217;t. </p>
 <p> Thread objects also have an overloaded <tt>&quot;==&quot;</tt> comparison so that you can do comparison on them as you would with normal objects.</p>
 <h3>What Threads Are Running?</h3>
 <p> <tt>&quot;threads-&gt;list()&quot;</tt> returns a list of thread objects, one for each thread that&#8217;s currently running and not detached. Handy for a number of things, including cleaning up at the end of your program (from the main Perl thread, of course): </p>
-<p>#Loop through all the threads<br />
-foreach<br />
-    my $thr(threads-&gt;list())<br />
-    {<br />
-        $thr-&gt;join();<br />
+<p>#Loop through all the threads<br/>
+foreach<br/>
+    my $thr(threads-&gt;list())<br/>
+    {<br/>
+        $thr-&gt;join();<br/>
     }</p>
 <p> If some threads have not finished running when the main Perl thread ends, Perl will warn you about it and die, since it is impossible for Perl to clean up itself while other threads are running. </p>
-<p> <font SIZE="-1">NOTE:</font> The main Perl thread (thread 0) is in a <i>detached</i> state, and so does not appear in the list returned by <tt>&quot;threads-&gt;list()&quot;</tt>.</p>
+<p> NOTE: The main Perl thread (thread 0) is in a <i>detached</i> state, and so does not appear in the list returned by <tt>&quot;threads-&gt;list()&quot;</tt>.</p>
 <h2>A Complete Example</h2>
 <p> Confused yet? It&#8217;s time for an example program to show some of the things we&#8217;ve covered. This program finds prime numbers using threads. </p>
 <pre><code>
@@ -481,16 +481,16 @@ foreach<br />
 <p> That&#8217;s how it works. It&#8217;s pretty simple; as with many Perl programs, the explanation is much longer than the program.</p>
 <h2>Different implementations of threads</h2>
 <p> Some background on thread implementations from the operating system viewpoint. There are three basic categories of threads: user-mode threads, kernel threads, and multiprocessor kernel threads. </p>
-<p> User-mode threads are threads that live entirely within a program and its libraries. In this model, the <font SIZE="-1">OS</font> knows nothing about threads. As far as it&#8217;s concerned, your process is just a process. </p>
-<p> This is the easiest way to implement threads, and the way most OSes start. The big disadvantage is that, since the <font SIZE="-1">OS</font> knows nothing about threads, if one thread blocks they all do. Typical blocking activities include most system calls, most I/O, and things like <tt>&quot;sleep()&quot;</tt>. </p>
-<p> Kernel threads are the next step in thread evolution. The <font SIZE="-1">OS</font> knows about kernel threads, and makes allowances for them. The main difference between a kernel thread and a user-mode thread is blocking. With kernel threads, things that block a single thread don&#8217;t block other threads. This is not the case with user-mode threads, where the kernel blocks at the process level and not the thread level. </p>
+<p> User-mode threads are threads that live entirely within a program and its libraries. In this model, the OS knows nothing about threads. As far as it&#8217;s concerned, your process is just a process. </p>
+<p> This is the easiest way to implement threads, and the way most OSes start. The big disadvantage is that, since the OS knows nothing about threads, if one thread blocks they all do. Typical blocking activities include most system calls, most I/O, and things like <tt>&quot;sleep()&quot;</tt>. </p>
+<p> Kernel threads are the next step in thread evolution. The OS knows about kernel threads, and makes allowances for them. The main difference between a kernel thread and a user-mode thread is blocking. With kernel threads, things that block a single thread don&#8217;t block other threads. This is not the case with user-mode threads, where the kernel blocks at the process level and not the thread level. </p>
 <p> This is a big step forward, and can give a threaded program quite a performance boost over non-threaded programs. Threads that block performing I/O, for example, won&#8217;t block threads that are doing other things. Each process still has only one thread running at once, though, regardless of how many CPUs a system might have. </p>
 <p> Since kernel threading can interrupt a thread at any time, they will uncover some of the implicit locking assumptions you may make in your program. For example, something as simple as <tt>&quot;$x = $x + 2&quot;</tt> can behave unpredictably with kernel threads if <tt>$x</tt> is visible to other threads, as another thread may have changed <tt>$x</tt> between the time it was fetched on the right hand side and the time the new value is stored. </p>
-<p> Multiprocessor kernel threads are the final step in thread support. With multiprocessor kernel threads on a machine with multiple CPUs, the <font SIZE="-1">OS</font> may schedule two or more threads to run simultaneously on different CPUs. </p>
+<p> Multiprocessor kernel threads are the final step in thread support. With multiprocessor kernel threads on a machine with multiple CPUs, the OS may schedule two or more threads to run simultaneously on different CPUs. </p>
 <p> This can give a serious performance boost to your threaded program, since more than one thread will be executing at the same time. As a tradeoff, though, any of those nagging synchronization issues that might not have shown with basic kernel threads will appear with a vengeance. </p>
-<p> In addition to the different levels of <font SIZE="-1">OS</font> involvement in threads, different OSes (and different thread implementations for a particular <font SIZE="-1">OS</font>) allocate <font SIZE="-1">CPU</font> cycles to threads in different ways. </p>
-<p> Cooperative multitasking systems have running threads give up control if one of two things happen. If a thread calls a yield function, it gives up control. It also gives up control if the thread does something that would cause it to block, such as perform I/O. In a cooperative multitasking implementation, one thread can starve all the others for <font SIZE="-1">CPU</font> time if it so chooses. </p>
-<p> Preemptive multitasking systems interrupt threads at regular intervals while the system decides which thread should run next. In a preemptive multitasking system, one thread usually won&#8217;t monopolize the <font SIZE="-1">CPU.</font> </p>
+<p> In addition to the different levels of OS involvement in threads, different OSes (and different thread implementations for a particular OS) allocate CPU cycles to threads in different ways. </p>
+<p> Cooperative multitasking systems have running threads give up control if one of two things happen. If a thread calls a yield function, it gives up control. It also gives up control if the thread does something that would cause it to block, such as perform I/O. In a cooperative multitasking implementation, one thread can starve all the others for CPU time if it so chooses. </p>
+<p> Preemptive multitasking systems interrupt threads at regular intervals while the system decides which thread should run next. In a preemptive multitasking system, one thread usually won&#8217;t monopolize the CPU. </p>
 <p> On some systems, there can be cooperative and preemptive threads running simultaneously. (Threads running with realtime priorities often behave cooperatively, for example, while threads running at normal priorities behave preemptively.) </p>
 <p> Most modern operating systems support preemptive multitasking nowadays.</p>
 <h2>Performance considerations</h2>
@@ -502,7 +502,7 @@ foreach<br />
 <p> Even more drastic example of a process-scope change is <tt>&quot;chroot()&quot;</tt>: the root directory of all the threads changes, and no thread can undo it (as opposed to <tt>&quot;chdir()&quot;</tt>). </p>
 <p> Further examples of process-scope changes include <tt>&quot;umask()&quot;</tt> and changing uids and gids. </p>
 <p> Thinking of mixing <tt>&quot;fork()&quot;</tt> and threads? Please lie down and wait until the feeling passes. Be aware that the semantics of <tt>&quot;fork()&quot;</tt> vary between platforms. For example, some Unix systems copy all the current threads into the child process, while others only copy the thread that called <tt>&quot;fork()&quot;</tt>. You have been warned! </p>
-<p> Similarly, mixing signals and threads may be problematic. Implementations are platform-dependent, and even the <font SIZE="-1">POSIX</font> semantics may not be what you expect (and Perl doesn&#8217;t even give you the full <font SIZE="-1">POSIX API</font>). For example, there is no way to guarantee that a signal sent to a multi-threaded Perl application will get intercepted by any particular thread. (However, a recently added feature does provide the capability to send signals between threads. See &#8220;<font SIZE="-1">THREAD SIGNALLING&#8221;</font> in threads for more details.)</p>
+<p> Similarly, mixing signals and threads may be problematic. Implementations are platform-dependent, and even the POSIX semantics may not be what you expect (and Perl doesn&#8217;t even give you the full POSIX API). For example, there is no way to guarantee that a signal sent to a multi-threaded Perl application will get intercepted by any particular thread. (However, a recently added feature does provide the capability to send signals between threads. See &#8220;THREAD SIGNALLING&#8221; in threads for more details.)</p>
 <h2>Thread-Safety of System Libraries</h2>
 <p> Whether various library calls are thread-safe is outside the control of Perl. Calls often suffering from not being thread-safe include: <tt>&quot;localtime()&quot;</tt>, <tt>&quot;gmtime()&quot;</tt>, functions fetching user, group and network information (such as <tt>&quot;getgrent()&quot;</tt>, <tt>&quot;gethostent()&quot;</tt>, <tt>&quot;getnetent()&quot;</tt> and so on), <tt>&quot;readdir()&quot;</tt>, <tt>&quot;rand()&quot;</tt>, and <tt>&quot;srand()&quot;</tt>. In general, calls that depend on some global external state. </p>
 <p> If the system Perl is compiled in has thread-safe variants of such calls, they will be used. Beyond that, Perl is at the mercy of the thread-safety or -unsafety of the calls. Please consult your C library call documentation. </p>
@@ -510,27 +510,27 @@ foreach<br />
 <h2>Conclusion</h2>
 <p> A complete thread tutorial could fill a book (and has, many times), but with what we&#8217;ve covered in this introduction, you should be well on your way to becoming a threaded Perl expert.</p>
 <h2>SEE ALSO</h2>
-<p> Annotated <font SIZE="-1">POD</font> for threads: &lt;<a rel="nofollow" href="http://annocpan.org/?mode=search">http://annocpan.org/?mode=search</a>&amp;field=Module&amp;name=threads&gt; </p>
-<p> Latest version of threads on <font SIZE="-1">CPAN:</font> &lt;<a rel="nofollow" href="http://search.cpan.org/search?module=threads">http://search.cpan.org/search?module=threads</a>&gt; </p>
-<p> Annotated <font SIZE="-1">POD</font> for threads::shared: &lt;<a rel="nofollow" href="http://annocpan.org/?mode=search">http://annocpan.org/?mode=search</a>&amp;field=Module&amp;name=threads%3A%3Ashared&gt; </p>
-<p> Latest version of threads::shared on <font SIZE="-1">CPAN:</font> &lt;<a rel="nofollow" href="http://search.cpan.org/search?module=threads%3A%3Ashared">http://search.cpan.org/search?module=threads%3A%3Ashared</a>&gt; </p>
+<p> Annotated POD for threads: &lt;<a rel="nofollow" href="http://annocpan.org/?mode=search">http://annocpan.org/?mode=search</a>&amp;field=Module&amp;name=threads&gt; </p>
+<p> Latest version of threads on CPAN: &lt;<a rel="nofollow" href="http://search.cpan.org/search?module=threads">http://search.cpan.org/search?module=threads</a>&gt; </p>
+<p> Annotated POD for threads::shared: &lt;<a rel="nofollow" href="http://annocpan.org/?mode=search">http://annocpan.org/?mode=search</a>&amp;field=Module&amp;name=threads%3A%3Ashared&gt; </p>
+<p> Latest version of threads::shared on CPAN: &lt;<a rel="nofollow" href="http://search.cpan.org/search?module=threads%3A%3Ashared">http://search.cpan.org/search?module=threads%3A%3Ashared</a>&gt; </p>
 <p> Perl threads mailing list: &lt;<a rel="nofollow" href="http://lists.perl.org/list/ithreads.html">http://lists.perl.org/list/ithreads.html</a>&gt;</p>
 <h2>Bibliography</h2>
 <p> Here&#8217;s a short bibliography courtesy of Jürgen Christoffel:</p>
 <h3>Introductory Texts</h3>
 <p> Birrell, Andrew D. An Introduction to Programming with Threads. Digital Equipment Corporation, 1989, DEC-SRC Research Report #35 online as &lt;<a href="ftp://ftp.dec.com/pub/DEC/SRC/research-reports/SRC-035.pdf">ftp://ftp.dec.com/pub/DEC/SRC/research-reports/SRC-035.pdf</a>&gt; (highly recommended) </p>
 <p> Robbins, Kay. A., and Steven Robbins. Practical Unix Programming: A Guide to Concurrency, Communication, and Multithreading. Prentice-Hall, 1996. </p>
-<p> Lewis, Bill, and Daniel J. Berg. Multithreaded Programming with Pthreads. Prentice Hall, 1997, <font SIZE="-1">ISBN 0-13-443698-9</font> (a well-written introduction to threads). </p>
-<p> Nelson, Greg (editor). Systems Programming with Modula-3. Prentice Hall, 1991, <font SIZE="-1">ISBN 0-13-590464-1.</font> </p>
-<p> Nichols, Bradford, Dick Buttlar, and Jacqueline Proulx Farrell. Pthreads Programming. O&#8217;Reilly &amp; Associates, 1996, <font SIZE="-1">ISBN 156592-115-1</font> (covers <font SIZE="-1">POSIX</font> threads).</p>
+<p> Lewis, Bill, and Daniel J. Berg. Multithreaded Programming with Pthreads. Prentice Hall, 1997, ISBN 0-13-443698-9 (a well-written introduction to threads). </p>
+<p> Nelson, Greg (editor). Systems Programming with Modula-3. Prentice Hall, 1991, ISBN 0-13-590464-1. </p>
+<p> Nichols, Bradford, Dick Buttlar, and Jacqueline Proulx Farrell. Pthreads Programming. O&#8217;Reilly &amp; Associates, 1996, ISBN 156592-115-1 (covers POSIX threads).</p>
 <h3>OS-Related References</h3>
-<p> Boykin, Joseph, David Kirschen, Alan Langerman, and Susan LoVerso. Programming under Mach. Addison-Wesley, 1994, <font SIZE="-1">ISBN 0-201-52739-1.</font> </p>
-<p> Tanenbaum, Andrew S. Distributed Operating Systems. Prentice Hall, 1995, <font SIZE="-1">ISBN 0-13-219908-4</font> (great textbook). </p>
-<p> Silberschatz, Abraham, and Peter B. Galvin. Operating System Concepts, 4th ed. Addison-Wesley, 1995, <font SIZE="-1">ISBN 0-201-59292-4</font></p>
+<p> Boykin, Joseph, David Kirschen, Alan Langerman, and Susan LoVerso. Programming under Mach. Addison-Wesley, 1994, ISBN 0-201-52739-1. </p>
+<p> Tanenbaum, Andrew S. Distributed Operating Systems. Prentice Hall, 1995, ISBN 0-13-219908-4 (great textbook). </p>
+<p> Silberschatz, Abraham, and Peter B. Galvin. Operating System Concepts, 4th ed. Addison-Wesley, 1995, ISBN 0-201-59292-4</p>
 <h3>Other References</h3>
-<p> Arnold, Ken and James Gosling. The Java Programming Language, 2nd ed. Addison-Wesley, 1998, <font SIZE="-1">ISBN 0-201-31006-6.</font> </p>
-<p> comp.programming.threads <font SIZE="-1">FAQ,</font> &lt;<a rel="nofollow" href="http://www.serpentine.com/~bos/threads-faq/">http://www.serpentine.com/~bos/threads-faq/</a>&gt; </p>
-<p> Le Sergent, T. and B. Berthomieu. &#8220;Incremental MultiThreaded Garbage Collection on Virtually Shared Memory Architectures&#8221; in Memory Management: Proc. of the International Workshop <font SIZE="-1">IWMM 92,</font> St. Malo, France, September 1992, Yves Bekkers and Jacques Cohen, eds. Springer, 1992, <font SIZE="-1">ISBN 3540-55940-X</font> (real-life thread applications). </p>
+<p> Arnold, Ken and James Gosling. The Java Programming Language, 2nd ed. Addison-Wesley, 1998, ISBN 0-201-31006-6. </p>
+<p> comp.programming.threads FAQ, &lt;<a rel="nofollow" href="http://www.serpentine.com/~bos/threads-faq/">http://www.serpentine.com/~bos/threads-faq/</a>&gt; </p>
+<p> Le Sergent, T. and B. Berthomieu. &#8220;Incremental MultiThreaded Garbage Collection on Virtually Shared Memory Architectures&#8221; in Memory Management: Proc. of the International Workshop IWMM 92, St. Malo, France, September 1992, Yves Bekkers and Jacques Cohen, eds. Springer, 1992, ISBN 3540-55940-X (real-life thread applications). </p>
 <p> Artur Bergman, &#8220;Where Wizards Fear To Tread&#8221;, June 11, 2002, &lt;<a rel="nofollow" href="http://www.perl.com/pub/a/2002/06/11/threads.html">http://www.perl.com/pub/a/2002/06/11/threads.html</a>&gt;</p>
 <h2>Acknowledgements</h2>
 <p> Thanks (in no particular order) to Chaim Frenkel, Steve Fink, Gurusamy Sarathy, Ilya Zakharevich, Benjamin Sugars, Jürgen Christoffel, Joshua Pritikin, and Alan Burlison, for their help in reality-checking and polishing this article. Big thanks to Tom Christiansen for his rewrite of the prime number generator.</p>

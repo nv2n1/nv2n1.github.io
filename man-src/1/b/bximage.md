@@ -32,7 +32,7 @@ description: "bximage – Interactive Disk Image Creator for Bochs"
 <h2>LICENSE</h2>
 <p> This program is distributed under the terms of the GNU Lesser General Public License as published by the Free Software Foundation. See the COPYING file located in /usr/share/doc/bochs-2.3.8/ for details on the license and the lack of warranty.</p>
 <h2>AVAILABILITY</h2>
-<p> The latest version of this program can be found at:<br />
+<p> The latest version of this program can be found at:<br/>
 &nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="http://bochs.sourceforge.net/getcurrent.html">http://bochs.sourceforge.net/getcurrent.html</a></p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-bochs/">bochs</a>(1), <a href="/docs/linux/man/5-bochsrc/">bochsrc</a>(5), bochs-dlx(1), <a href="/docs/linux/man/1-bxcommit/">bxcommit</a>(1) </p>

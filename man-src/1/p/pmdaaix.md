@@ -10,12 +10,12 @@ description: "pmdaaix, pmdadarwin, pmdafreebsd, pmdalinux, pmdanetbsd, pmdasolar
 
 <p> <code>pmdaaix</code>, <code>pmdadarwin</code>, <code>pmdafreebsd</code>, <code>pmdalinux</code>, <code>pmdanetbsd</code>, <code>pmdasolaris</code>, <code>pmdawindows</code> &#8211; operating system kernel performance metrics domain agents</p>
 <h2>SYNOPSIS</h2>
-<p> <code>$PCP_PMDAS_DIR/aix/pmdaaix</code> [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-U</code> <i>username</i>]<br />
- <code>$PCP_PMDAS_DIR/darwin/pmdadarwin</code> [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-U</code> <i>username</i>]<br />
- <code>$PCP_PMDAS_DIR/freebsd/pmdafreebsd</code> [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-U</code> <i>username</i>]<br />
- <code>$PCP_PMDAS_DIR/linux/pmdalinux</code> [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-U</code> <i>username</i>]<br />
- <code>$PCP_PMDAS_DIR/netbsd/pmdanetbsd</code> [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-U</code> <i>username</i>]<br />
- <code>$PCP_PMDAS_DIR/solaris/pmdasolaris</code> [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-U</code> <i>username</i>]<br />
+<p> <code>$PCP_PMDAS_DIR/aix/pmdaaix</code> [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-U</code> <i>username</i>]<br/>
+ <code>$PCP_PMDAS_DIR/darwin/pmdadarwin</code> [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-U</code> <i>username</i>]<br/>
+ <code>$PCP_PMDAS_DIR/freebsd/pmdafreebsd</code> [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-U</code> <i>username</i>]<br/>
+ <code>$PCP_PMDAS_DIR/linux/pmdalinux</code> [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-U</code> <i>username</i>]<br/>
+ <code>$PCP_PMDAS_DIR/netbsd/pmdanetbsd</code> [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-U</code> <i>username</i>]<br/>
+ <code>$PCP_PMDAS_DIR/solaris/pmdasolaris</code> [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-U</code> <i>username</i>]<br/>
  <code>$PCP_PMDAS_DIR/windows/pmdawindows</code> [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-U</code> <i>username</i>]</p>
 <h2>DESCRIPTION</h2>
 <p> Each supported platform has a kernel Performance Metrics Domain Agent (PMDA) which extracts performance metrics from the kernel of that platfrom. A variety of platform-specific metrics are available, with an equally varied set of access mechanisms &#8211; typically this involves special system calls, or reading from files in kernel virtual filesystems such as the Linux <i>sysfs</i> and <i>procfs</i> filesystems. </p>

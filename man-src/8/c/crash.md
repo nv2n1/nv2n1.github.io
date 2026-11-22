@@ -9,7 +9,7 @@ description: "crash – Analyze Linux crash dump data or a live system"
 
 <p>crash &#8211; Analyze Linux crash dump data or a live system</p>
 <h2>Synopsis</h2>
-<p><code>crash</code> [<i>OPTION</i>]&#8230; <i>NAMELIST MEMORY-IMAGE[@ADDRESS] (dumpfile form)</i><br />
+<p><code>crash</code> [<i>OPTION</i>]&#8230; <i>NAMELIST MEMORY-IMAGE[@ADDRESS] (dumpfile form)</i><br/>
  <code>crash</code> [<i>OPTION</i>]&#8230; <i>[NAMELIST] (live system form)</i></p>
 <h2>Description</h2>
 <p><code>Crash</code> is a tool for interactively analyzing the state of the Linux system while it is running, or after a kernel crash has occurred and a core dump has been created by the <i>netdump,</i> <i>diskdump,</i> <i>LKCD,</i> <i>kdump,</i> <i>xendump</i> or <i>kvmdump</i> facilities. It is loosely based on the SVR4 UNIX crash command, but has been significantly enhanced by completely merging it with the <code><a href="/docs/linux/man/1-gdb/">gdb</a>(1)</code> debugger. The marriage of the two effectively combines the kernel-specific nature of the traditional UNIX crash utility with the source code level debugging capabilities of <code><a href="/docs/linux/man/1-gdb/">gdb</a>(1). </code> </p>
@@ -27,7 +27,7 @@ description: "crash – Analyze Linux crash dump data or a live system"
 <p> An @ADDRESS value must be appended to the MEMORY-IMAGE if the dumpfile is a raw RAM dumpfile that has no header information describing the file contents. Multiple MEMORY-IMAGE [at] ADDRESS ordered pairs may be entered, with each dumpfile containing a contiguous block of RAM, where the ADDRESS value is the physical start address of the block expressed in hexadecimal. The physical address value(s) will be used to create a temporary ELF header in /var/tmp, which will only exist during the crash session. If a raw RAM dumpile represents a live memory source, such as that specified by the QEMU mem-path argument of a memory-backend-file object, then &quot;live:&quot; must be prepended to the MEMORY-IMAGE name.</p>
 <dt><code>mapfile</code></dt>
 <dd>If the NAMELIST file is not the same kernel that is running (live system form), or the kernel that was running when the system crashed (dumpfile form), then the <i>System.map</i> file of the original kernel should be entered on the command line.</dd></dl>
-<p> <code>-h</code><i>&nbsp;<wbr>[option]</i><br />
+<p> <code>-h</code><i>&nbsp;<wbr>[option]</i><br/>
  <code>&#8211;help</code><i>&nbsp;<wbr>[option]</i></p>
 <dl>
 <dd>Without an <i>option</i> argument, display a <code>crash</code> usage help message. If the <i>option</i> argument is a <code>crash</code> command name, the help page for that command is displayed. If it is the string &quot;input&quot;, a page describing the various <code>crash</code> command line input options is displayed. If it is the string &quot;output&quot;, a page describing command line output options is displayed. If it is the string &quot;all&quot;, then all of the possible help messages are displayed. After the help message is displayed, <code>crash</code> exits.</dd></dl>
@@ -58,7 +58,7 @@ description: "crash – Analyze Linux crash dump data or a live system"
 <dd>If a processor&#8217;s page size cannot be determined by the dumpfile, and the processor default cannot be used, use <i>page-size.</i></dd>
 <dt><code>-o</code><i>&nbsp;<wbr>filename</i></dt>
 <dd>Only used with the MEMORY-IMAGE [at] ADDRESS format for raw RAM dumpfiles, specifies a filename of a new ELF vmcore that will be created and used as the dumpfile. It will be saved to allow future use as a standalone vmcore, replacing the original raw RAM dumpfile.</dd></dl>
-<p> <code>-m </code><i>option=value</i><br />
+<p> <code>-m </code><i>option=value</i><br/>
  <code>&#8211;machdep </code><i>option=value</i></p>
 <dl>
 <dd>Pass an option and value pair to machine-dependent code. These architecture-specific option/pairs should only be required in very rare circumstances: </dd>
@@ -117,7 +117,7 @@ X86:
 <dd>Pass this flag to the embedded <code>gdb</code> module, which will override its two-stage strategy that it uses for reading symbol tables from the NAMELIST.</dd>
 <dt><code>&#8211;smp</code></dt>
 <dd>Specify that the system being analyzed is an SMP kernel.</dd></dl>
-<p> <code>-v</code><br />
+<p> <code>-v</code><br/>
  <code>&#8211;version</code></p>
 <dl>
 <dd>Display the version of the <code>crash</code> utility, the version of the embedded <code>gdb</code> module, GPL information, and copyright notices.</dd></dl>

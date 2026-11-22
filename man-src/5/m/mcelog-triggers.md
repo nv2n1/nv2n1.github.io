@@ -9,12 +9,12 @@ description: "mcelog.triggers – mcelog trigger scripts reference"
 
 <p>mcelog.triggers &#8211; mcelog trigger scripts reference</p>
 <h2>Synopsis</h2>
-<p><code>/etc/mcelog/bus-error-trigger</code><br />
- <code>/etc/mcelog/cache-error-trigger</code><br />
- <code>/etc/mcelog/dimm-error-trigger</code><br />
- <code>/etc/mcelog/iomca-error-trigger</code><br />
- <code>/etc/mcelog/page-error-trigger</code><br />
- <code>/etc/mcelog/socket-memory-error-trigger</code><br />
+<p><code>/etc/mcelog/bus-error-trigger</code><br/>
+ <code>/etc/mcelog/cache-error-trigger</code><br/>
+ <code>/etc/mcelog/dimm-error-trigger</code><br/>
+ <code>/etc/mcelog/iomca-error-trigger</code><br/>
+ <code>/etc/mcelog/page-error-trigger</code><br/>
+ <code>/etc/mcelog/socket-memory-error-trigger</code><br/>
  <code>/etc/mcelog/unknown-error-trigger</code></p>
 <h2>Description</h2>
 <p><code><a href="/docs/linux/man/8-mcelog/">mcelog</a>(8)</code> maintains thresholds of errors using a <i>leaky-bucket</i> algorithm. When the number of errors in a specific time window exceeds a pre-configured threshold a <i>trigger</i> will be executed. Triggers are usually shell scripts in the <code>/etc/mcelog </code> directory but can be also other internal actions. Thresholds and triggers can be configured in <code><a href="/docs/linux/man/5-mcelog-conf/">mcelog.conf</a>(5)</code> </p>

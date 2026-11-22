@@ -10,7 +10,7 @@ description: "XkbGetKeyActions – Update the actions (the key_acts array) for a
 <p>XkbGetKeyActions &#8211; Update the actions (the key_acts array) for a subset of the keys in a keyboard description </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Status XkbGetKeyActions</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>unsigned int </code><i>first</i><code>,</code> <code>unsigned int </code><i>num</i><code>,</code> <code>XkbDescPtr </code><i>xkb</i><code>);</code><br />
+<dt> <code>Status XkbGetKeyActions</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>unsigned int </code><i>first</i><code>,</code> <code>unsigned int </code><i>num</i><code>,</code> <code>XkbDescPtr </code><i>xkb</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

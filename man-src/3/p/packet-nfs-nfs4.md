@@ -3629,8 +3629,8 @@ description: "packet.nfs.nfs4 – NFSv4 decoding module"
 <h3>clientid4(unpack)</h3>
 <h3>deviceid4(unpack)</h3>
 <h3>fattr4(unpack)</h3>
-<p>struct fattr4 {<br />
-&nbsp;<wbr>bitmap4&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mask;<br />
+<p>struct fattr4 {<br/>
+&nbsp;<wbr>bitmap4&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mask;<br/>
 &nbsp;<wbr>attrlist4 values; };</p>
 <h3>fattr4_acl(unpack)</h3>
 <h3>fattr4_change(unpack)</h3>
@@ -3644,7 +3644,7 @@ description: "packet.nfs.nfs4 – NFSv4 decoding module"
 <h3>nfl_util4(unpack)</h3>
 <h3>nfs_fh4(unpack)</h3>
 <h3>notifylist4(unpack)</h3>
-<p>&nbsp;<wbr>Objects of type notify_&lt;&gt;4 and<br />
+<p>&nbsp;<wbr>Objects of type notify_&lt;&gt;4 and<br/>
 &nbsp;<wbr>notify_device_&lt;&gt;4 are encoded in this.</p>
 <h3>pathname4(unpack)</h3>
 <h3>sec_oid4(unpack)</h3>

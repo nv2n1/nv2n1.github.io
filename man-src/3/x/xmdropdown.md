@@ -1650,9 +1650,9 @@ description: "XmDropDown — The DropDown widget class"
 <p>The DropDown widget lays out its children (the label, text and arrow) in a row. The amount of space they are each allocated when the DropDown is not allowed to be the exact size it desires is determined using the following rules:</p>
 <dl COMPACT>
 <dd>1.<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>The arrow is always given its requested size.</dd>
-<dd>2.<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>If the combo box is bigger than it wants to be all extra space is given to the text<br />
+<dd>2.<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>If the combo box is bigger than it wants to be all extra space is given to the text<br/>
  widget.</dd>
-<dd>3.<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>If the combo box is smaller that is wants to be then the text and label widgets<br />
+<dd>3.<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>If the combo box is smaller that is wants to be then the text and label widgets<br/>
  are each sized smaller than they desire in exactly the same ratio. </dd>
 <p> For example: </p>
 <p> If the amount of space for the label and text is 100 pixels and the label wants to be 50 pixels wide and the text would like to be 100 pixels wide then the label will get 34 pixels and the text 66. </p>

@@ -12,14 +12,14 @@ description: "db.test – Test database driver, database must exist and set by d
 <h2>KEYWORDS</h2>
 <p> database, attribute table</p>
 <h2>SYNOPSIS</h2>
-<p> <code>db.test</code><br />
- <code>db.test help</code><br />
+<p> <code>db.test</code><br/>
+ <code>db.test help</code><br/>
  <code>db.test test</code>=<i>string</i> [&#8211;<code>verbose</code>] [&#8211;<code>quiet</code>]</p>
 <h3>Parameters:</h3>
 <dl>
 <dt><code>test</code>=<i>string</i></dt>
 <dd>
- Test name<br />
+ Test name<br/>
  Options: <i>test1</i></dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <i>db.test</i> tests database driver and database server running set of SQL queries. Database must exist and connection must be set by db.connect.</p>

@@ -31,11 +31,11 @@ description: "lav2wav – Extract the audio out of MJPEG container files to stdo
 <dd> If the file does not contain any sound lav2wav will generate silence with the values you supply the samplerate (sr), audio-bitsize (bs) and channel (ch). </dd>
 </dl>
 <h2>BUGS</h2>
-<p> The &quot;WAV&quot; file format (technically: RIFF) is really very much less than ideal for a tool intended to be used in pipelines as lav2wav is. The problem is that the header includes a field specifying the length of the file. This can&#8217;t be filled in except by seeking back to the begining and over-writing. If the output is unseekable (e.g. pipe) lav2wav simply writes a large length into the header and leaves it at that. Most tools like <a href="/docs/linux/man/1-sox/">sox</a>(1) or <a href="/docs/linux/man/1-mp2enc/">mp2enc</a>(1) either ignore the length field anyway or only give a warning.<br />
+<p> The &quot;WAV&quot; file format (technically: RIFF) is really very much less than ideal for a tool intended to be used in pipelines as lav2wav is. The problem is that the header includes a field specifying the length of the file. This can&#8217;t be filled in except by seeking back to the begining and over-writing. If the output is unseekable (e.g. pipe) lav2wav simply writes a large length into the header and leaves it at that. Most tools like <a href="/docs/linux/man/1-sox/">sox</a>(1) or <a href="/docs/linux/man/1-mp2enc/">mp2enc</a>(1) either ignore the length field anyway or only give a warning.<br/>
  The audio length is inacurate calculated when lav2wav generates silence. This happens only if you have NTSC framerate and than it creates for every hour of video 1.1498sec too less of silence. </p>
 <h2>AUTHOR</h2>
-<p> This man page was written by Bernhard Praschinger.<br />
- If you have questions, remarks, problems or you just want to contact the developers, the main mailing list for the MJPEG-tools is:<br />
+<p> This man page was written by Bernhard Praschinger.<br/>
+ If you have questions, remarks, problems or you just want to contact the developers, the main mailing list for the MJPEG-tools is:<br/>
 &nbsp;<wbr>&nbsp;<wbr><i>mjpeg-users [at] lists.sourceforge.net</i> </p>
 <dl>
 <dt>For more info, see our website at</dt>

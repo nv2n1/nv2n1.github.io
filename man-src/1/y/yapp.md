@@ -19,14 +19,14 @@ yapp - A perl frontend to the Parse::Yapp module
 
 <h2>DESCRIPTION</h2>
 
- yapp is a frontend to the Parse::Yapp module, which lets you compile Parse::Yapp grammar input files into Perl <font SIZE="-1"><i>LALR</i></font><i></i>(1) <font SIZE="-1">OO</font> parser modules.
+ yapp is a frontend to the Parse::Yapp module, which lets you compile Parse::Yapp grammar input files into Perl <i>LALR</i><i></i>(1) OO parser modules.
 
 <h2>OPTIONS</h2>
 
  Options, as of today, are all optionals :-)
 <dl>
 <dt><i>-v</i>
-</dt><dd> Creates a file <i>grammar</i>.output describing your parser. It will show you a summary of conflicts, rules, the <font SIZE="-1">DFA </font>(Deterministic Finite Automaton) states and overall usage of the parser.
+</dt><dd> Creates a file <i>grammar</i>.output describing your parser. It will show you a summary of conflicts, rules, the DFA (Deterministic Finite Automaton) states and overall usage of the parser.
 </dd><dt><i>-s</i>
 </dt><dd> Create a standalone module in which the driver is included. Note that if you have more than one parser module called from a program, to have it standalone, you need this option only for one of your parser module.
 </dd><dt><i>-n</i>

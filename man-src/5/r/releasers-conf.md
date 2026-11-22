@@ -44,7 +44,7 @@ placeholder_bz = 100000</pre>
 </dd></dl>
 <p> If you would like to build (ie &#8211; koji) against a different target than what is default for the FedoraGit/DistGit branch currently being worked on it can be done like the following example. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  The formatting of build_targets in the following example is git_branch:koji_build_target and the following custom build targets are just place holders for the example and aren&#8217;t likely to exist in Fedora&#8217;s koji </dd>
 </dl>
 <dl>
@@ -62,7 +62,7 @@ build_targets = master:custom-target el6:el6-custom-target f19:f19-custom-target
 <dl>
 <dd>Releaser which create src.rpm and submit them into Koji. Can submit more than one build at once. </dd>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  This is targeted for private instances of Koji. You can not submit regular build into Fedora Koji using this releaser, because Fedora Koji do not allow builds from src.rpm &#8211; for building into Fedora see FedoraGitReleaser above. </dd>
 </dl>
 <dl>

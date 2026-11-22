@@ -55,9 +55,9 @@ long keyctl_search(key_serial_t keyring, const char *type,
 <h2>LINKING</h2>
 <p> Although this is a Linux system call, it is not present in <i>libc</i> but can be found rather in <i>libkeyutils</i>. When linking, <code>-lkeyutils</code> should be specified to the linker.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-keyctl/">keyctl</a></code>(1),<br />
- <code><a href="/docs/linux/man/2-add_key/">add_key</a></code>(2),<br />
- <code><a href="/docs/linux/man/2-keyctl/">keyctl</a></code>(2),<br />
- <code><a href="/docs/linux/man/2-request_key/">request_key</a></code>(2),<br />
- <code><a href="/docs/linux/man/3-keyctl/">keyctl</a></code>(3),<br />
+<p> <code><a href="/docs/linux/man/1-keyctl/">keyctl</a></code>(1),<br/>
+ <code><a href="/docs/linux/man/2-add_key/">add_key</a></code>(2),<br/>
+ <code><a href="/docs/linux/man/2-keyctl/">keyctl</a></code>(2),<br/>
+ <code><a href="/docs/linux/man/2-request_key/">request_key</a></code>(2),<br/>
+ <code><a href="/docs/linux/man/3-keyctl/">keyctl</a></code>(3),<br/>
  <code><a href="/docs/linux/man/8-request-key/">request-key</a></code>(8) </p>

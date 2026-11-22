@@ -114,8 +114,8 @@ description: "mongoexport – MongoDB Export Utility"
 <p> The following <code>mongoexport</code> uses the <i>-q</i> option to export only the documents with the field <code>a</code> greater than or equal to (<code>$gte</code>) to <code>3</code>: </p>
 <p>mongoexport &#8211; d test &#8211; c records &#8211; q &#8220;{ a: { \$gte: 3 } } }&#8221; &#8211;out exportdir / myRecords.json</p>
 <p> The resulting file contains the following documents: </p>
-<p>{&#8220;_id&#8221; : {&#8220;$oid&#8221; : &#8220;520e6431b7fa4ea22d6b1872&#8221;}, &#8220;a&#8221; : 3, &#8220;b&#8221; : 3, &#8220;c&#8221; : 6} {<br />
-    &#8220;_id&#8221; : {&#8220;$oid&#8221; : &#8220;520e6445b7fa4ea22d6b1873&#8221;}, &#8220;a&#8221; : 5, &#8220;b&#8221; : 6, &#8220;c&#8221; : 8<br />
+<p>{&#8220;_id&#8221; : {&#8220;$oid&#8221; : &#8220;520e6431b7fa4ea22d6b1872&#8221;}, &#8220;a&#8221; : 3, &#8220;b&#8221; : 3, &#8220;c&#8221; : 6} {<br/>
+    &#8220;_id&#8221; : {&#8220;$oid&#8221; : &#8220;520e6445b7fa4ea22d6b1873&#8221;}, &#8220;a&#8221; : 5, &#8220;b&#8221; : 6, &#8220;c&#8221; : 8<br/>
 }</p>
 <p> You can sort the results with the <i>&#8211;sort</i> option to <code>mongoexport</code>.</p>
 <dt><code>&#8211;csv</code></dt>

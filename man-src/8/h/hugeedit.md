@@ -9,7 +9,7 @@ description: "hugeedit – Set default policy for backing text and data with hug
 
 <p>hugeedit &#8211; Set default policy for backing text and data with hugepages</p>
 <h2>Synopsis</h2>
-<p><code>hugeedit binary</code><br />
+<p><code>hugeedit binary</code><br/>
  <code>hugeedit [options] binary</code></p>
 <h2>Description</h2>
 <p><code>hugectl</code> runs processes with a specific policy for backing memory regions with hugepages. Ordinarily when processes are relinked with <code>libhugetlbfs</code> using the recommended linking method, either <code>hugectl</code> is required on each execution or environment variables must be set for each execution. <code>hugeedit</code> can be used to set bits in the ELF header that determine if the text or data segments are backed by default without further intervention. If no arguments are specified, <code>hugeedit</code> will display what the current defaults for each segment in a binary are. The available options are</p>

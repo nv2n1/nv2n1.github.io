@@ -18,9 +18,9 @@ clipjoin - Remove superfluous spaces from the clipboard.
     | .org/~ingy/Acme-YBFOD-0.11/
 </pre> 
 
- Getting that <font SIZE="-1">URL</font> to a browser is tedious. 
+ Getting that URL to a browser is tedious. 
 
- Another <font SIZE="-1">IRC</font> example is longer quotes: 
+ Another IRC example is longer quotes: 
 
  <pre>
   &lt;strunk&gt; Objective consideration of contemporary phenomena compels the

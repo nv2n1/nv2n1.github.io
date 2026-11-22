@@ -10,7 +10,7 @@ description: "sorghr.f –"
 <p>sorghr.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>sorghr</code> (N, ILO, IHI, A, LDA, TAU, WORK, LWORK, INFO)<br />
+<p>subroutine <code>sorghr</code> (N, ILO, IHI, A, LDA, TAU, WORK, LWORK, INFO)<br/>
  <i></i><code>SORGHR</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sorghr (integerN, integerILO, integerIHI, real, dimension( lda, * )A, integerLDA, real, dimension( * )TAU, real, dimension( * )WORK, integerLWORK, integerINFO)</h3>

@@ -10,15 +10,15 @@ description: "seteuid, setegid – set effective user or group ID"
 
 <p> seteuid, setegid &#8211; set effective user or group ID </p>
 <h2>SYNOPSIS</h2>
-<p> <code>#include &lt;sys/types.h&gt;</code><br />
+<p> <code>#include &lt;sys/types.h&gt;</code><br/>
  <code>#include &lt;unistd.h&gt;</code> </p>
-<p> <code>int seteuid(uid_t </code><i>euid</i><code>);</code><br />
+<p> <code>int seteuid(uid_t </code><i>euid</i><code>);</code><br/>
  <code>int setegid(gid_t </code><i>egid</i><code>);</code> </p>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
 <p> <code>seteuid</code>(), <code>setegid</code>():</p>
 <dl>
 <dt>
-</dt><dd> _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br />
+</dt><dd> _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>seteuid</code>() sets the effective user ID of the calling process. Unprivileged processes may only set the effective user ID to the real user ID, the effective user ID or the saved set-user-ID. </p>

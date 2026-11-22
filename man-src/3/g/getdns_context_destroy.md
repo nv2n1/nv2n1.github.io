@@ -12,46 +12,46 @@ url: "/docs/linux/man/3-getdns_context_destroy/"
 <p> DNS Resolver library (libgetdns, -lgetdns) </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;getdns.h&gt; </p>
-<p> getdns_return_t <br />
+<p> getdns_return_t <br/>
  <code>getdns_context_create</code> (getdns_context ** context, </p>
 <dl>
-<dd> <p> <br />
+<dd> <p> <br/>
  int set_from_os) </p>
  </dd></dl>
-<p> getdns_return_t <br />
+<p> getdns_return_t <br/>
  <code>getdns_context_create_with_memory_functions</code> (getdns_context ** context, </p>
 <dl>
-<dd> <p> <br />
- int set_from_os, <br />
- void *(*malloc) (size_t), <br />
- void *(*realloc) (void *, size_t), <br />
+<dd> <p> <br/>
+ int set_from_os, <br/>
+ void *(*malloc) (size_t), <br/>
+ void *(*realloc) (void *, size_t), <br/>
  void (*free) (void *)) </p>
  </dd></dl>
-<p> getdns_return_t <br />
+<p> getdns_return_t <br/>
  <code>getdns_context_create_with_extended_memory_functions</code> (getdns_context **context, </p>
 <dl>
-<dd> <p> <br />
- int set_from_os, <br />
- void *userarg, <br />
- void *(*malloc) (void *userarg, size_t), <br />
- void *(*realloc) (void *userarg, void *, size_t), <br />
+<dd> <p> <br/>
+ int set_from_os, <br/>
+ void *userarg, <br/>
+ void *(*malloc) (void *userarg, size_t), <br/>
+ void *(*realloc) (void *userarg, void *, size_t), <br/>
  void (*free) (void *userarg, void *)) </p>
  </dd></dl>
-<p> void <br />
+<p> void <br/>
  <code>getdns_context_destroy</code> (getdns_context *context) </p>
-<p> getdns_dict * <br />
+<p> getdns_dict * <br/>
  <code>getdns_context_get_api_information</code> (getdns_context *context) </p>
 <h2>DESCRIPTION</h2>
 <p> Calls to getdns functions require a DNS context, which is a group of API settings that affect how DNS calls are made. For most applications, a default context is sufficient. </p>
 <p> To create a new DNS context, use the function: </p>
 <dl>
-<dd> <p> <br />
+<dd> <p> <br/>
  getdns_return_t <code>getdns_context_create</code> (getdns_context_t *context, bool set_from_os) </p>
  </dd></dl>
 <p> The call to getdns_context_create immediately returns a context that can be used with other API calls; that context contains the API&#8217;s default values. Most applications will want set_from_os set to true. </p>
 <p> To clean up the context, including cleaning up all outstanding transactions that were called using this context, use the function: </p>
 <dl>
-<dd> <p> <br />
+<dd> <p> <br/>
  void <code>getdns_context_destroy</code> (getdns_context_t context) </p>
  </dd></dl>
 <p> When getdns_context_destroy() returns, the application knows that all outstanding transactions associated with this context will have been called; callbacks that had not been called before getdns_context_destroy() was called will be called with a callback_type of GETDNS_CALLBACK_CANCEL. getdns_context_destroy() returns after all of the needed cleanup is done and callbacks are made. </p>
@@ -103,8 +103,8 @@ url: "/docs/linux/man/3-getdns_context_destroy/"
 <h2>EXAMPLES</h2>
 <p> TBD </p>
 <h2>FILES</h2>
-<p> <br />
- /etc/hosts <br />
+<p> <br/>
+ /etc/hosts <br/>
  /etc/resolv.conf </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libgetdns/">libgetdns</a></code>(3), <code><a href="/docs/linux/man/3-getdns_address/">getdns_address</a></code>(3), <code><a href="/docs/linux/man/3-getdns_address_sync/">getdns_address_sync</a></code>(3), <code><a href="/docs/linux/man/3-getdns_context_set/">getdns_context_set</a></code>(3), <code><a href="/docs/linux/man/3-getdns_context_set_context_update_callback/">getdns_context_set_context_update_callback</a></code>(3), <code><a href="/docs/linux/man/3-getdns_general/">getdns_general</a></code>(3), <code><a href="/docs/linux/man/3-getdns_general_sync/">getdns_general_sync</a></code>(3), <code><a href="/docs/linux/man/3-getdns_hostname/">getdns_hostname</a></code>(3), <code><a href="/docs/linux/man/3-getdns_hostname_sync/">getdns_hostname_sync</a></code>(3), <code><a href="/docs/linux/man/3-getdns_service/">getdns_service</a></code>(3), <code><a href="/docs/linux/man/3-getdns_service_sync/">getdns_service_sync</a></code>(3). </p>

@@ -21,7 +21,7 @@ description: "PAPI_query_named_event –"
 <dd><i>EventName</i> &#8212; a defined event such as PAPI_TOT_INS.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>PAPI_EINVAL</i> One or more of the arguments is invalid.<br />
+<dd><i>PAPI_EINVAL</i> One or more of the arguments is invalid.<br/>
  <i>PAPI_ENOEVNT</i> The PAPI preset is not available on the underlying hardware.</dd></dl>
 <p> <code>Examples</code></p>
 <dl COMPACT>

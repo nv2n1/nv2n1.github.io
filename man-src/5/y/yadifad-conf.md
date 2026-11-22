@@ -37,7 +37,7 @@ description: "yadifad.conf – configuration file for yadifad(8)."
 <dd>Description of the key-templates needed if &#8216;dnssec policies&#8217; are used.</dd>
 <dt>&lt;denial&gt;</dt>
 <dd>Description of &#8216;denial&#8217;, this can be used in certain &#8216;dnssec policies&#8217;.</dd></dl>
-<p> The configuration supports included files.<br />
+<p> The configuration supports included files.<br/>
  example: include /etc/yadifa/conf.d/local.conf The configuration files can be nested. The configuration consists of:</p>
 <dl>
 <dt><code>*</code></dt>
@@ -172,7 +172,7 @@ include /etc/yadifa/conf.d/local.conf
 </dl>
 <dl>
 <dt><code>*</code></dt>
-<dd>Key<br />
+<dd>Key<br/>
  TSIG-key configuration
 </dd></dl>
 <dl>
@@ -202,7 +202,7 @@ include /etc/yadifa/conf.d/local.conf
 </dl>
 <dl>
 <dt><code>*</code></dt>
-<dd>ACL<br />
+<dd>ACL<br/>
  Access Control List definitions
 </dd></dl>
 <dl>
@@ -220,7 +220,7 @@ include /etc/yadifa/conf.d/local.conf
 &lt;/acl&gt;</pre>
 </dd><dl>
 <dt><code>*</code></dt>
-<dd>NSID<br />
+<dd>NSID<br/>
  DNS NameServer IDentifier
 </dd></dl>
 <dl>
@@ -246,7 +246,7 @@ include /etc/yadifa/conf.d/local.conf
 </dl>
 <dl>
 <dt><code>*</code></dt>
-<dd>RRL<br />
+<dd>RRL<br/>
  Response Rate Limiting</dd></dl>
 <pre>&lt;rrl&gt;
  # Number of identical responses per second before responses are being limited
@@ -405,8 +405,8 @@ include /etc/yadifa/conf.d/local.conf
 </dd><dl>
 <dt><code>*</code></dt>
 <dd>Channels</dd></dl>
-<p> Logging output-channel configurations: The &quot;name&quot; is arbitrary and is used in the &lt;loggers&gt;.<br />
- The &quot;stream-name&quot; defines the output type (ie: a file name or syslog).<br />
+<p> Logging output-channel configurations: The &quot;name&quot; is arbitrary and is used in the &lt;loggers&gt;.<br/>
+ The &quot;stream-name&quot; defines the output type (ie: a file name or syslog).<br/>
  The &quot;arguments&quot; are specific to the output type (ie: unix file access rights or syslog options and facilities).
  </dl>
 <dl>
@@ -428,7 +428,7 @@ include /etc/yadifa/conf.d/local.conf
 &lt;/channels&gt;</pre>
 </dd></dl>
 <dt>2.</dt>
-<dd>Example: YADIFA running in debug mode.<br />
+<dd>Example: YADIFA running in debug mode.<br/>
  This example shows the &quot;stderr&quot; and &quot;stdout&quot; which can also be used in the first example, but will output to the console.</dd>
 <dl>
 <dd>
@@ -441,8 +441,8 @@ include /etc/yadifa/conf.d/local.conf
 </dd><dl>
 <dt><code>*</code></dt>
 <dd>Loggers</dd></dl>
-<p> Logging input configurations: The &quot;bundle&quot; name is predefined: database, dnssec, server, statistics, system, zone.<br />
- The &quot;debuglevel&quot; uses the same names as syslog or &quot;*&quot; or &quot;all&quot; to filter the input.<br />
+<p> Logging input configurations: The &quot;bundle&quot; name is predefined: database, dnssec, server, statistics, system, zone.<br/>
+ The &quot;debuglevel&quot; uses the same names as syslog or &quot;*&quot; or &quot;all&quot; to filter the input.<br/>
  The &quot;channels&quot; are a comma-separated list of channels.</p>
 <dl>
 <dd>
@@ -548,11 +548,11 @@ include /etc/yadifa/conf.d/local.conf
 <p>There exists a mailinglist for questions relating to any program in the yadifa package: </p>
 <dl>
 <dt><code>*</code></dt>
-<dd><code>yadifa-users [at] mailinglists.yadifa.eu</code><br />
+<dd><code>yadifa-users [at] mailinglists.yadifa.eu</code><br/>
  for submitting questions/answers.</dd></dl>
 <dl>
 <dt><code>*</code></dt>
-<dd><code><a rel="nofollow" href="http://www.yadifa.eu/mailing-list-users">http://www.yadifa.eu/mailing-list-users</a></code><br />
+<dd><code><a rel="nofollow" href="http://www.yadifa.eu/mailing-list-users">http://www.yadifa.eu/mailing-list-users</a></code><br/>
  for subscription requests.</dd></dl>
 <p> If you would like to stay informed about new versions and official patches send a subscription request to via:</p>
 <dl>
@@ -562,13 +562,13 @@ include /etc/yadifa/conf.d/local.conf
 <h2>License And Copyright</h2>
 <dl>
 <dt>Copyright</dt>
-<dd>(C)2012-2016, EURid<br />
- B-1831 Diegem, Belgium<br />
+<dd>(C)2012-2016, EURid<br/>
+ B-1831 Diegem, Belgium<br/>
  <code>info [at] yadifa.eu</code></dd></dl>
 <h2>Authors</h2>
-<p>Gery Van Emelen<br />
- Email: <code>Gery.VanEmelen [at] EURid.eu</code><br />
- Eric Diaz Fernandez<br />
+<p>Gery Van Emelen<br/>
+ Email: <code>Gery.VanEmelen [at] EURid.eu</code><br/>
+ Eric Diaz Fernandez<br/>
  Email: <code>Eric.DiazFernandez [at] EURid.eu</code> </p>
 <p> WWW: <code><a rel="nofollow" href="http://www.EURid.eu">http://www.EURid.eu</a></code></p>
 </dl></dl></dl></dl></dl></dl></dl></dl></dl></dl>

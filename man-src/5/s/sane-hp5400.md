@@ -11,8 +11,8 @@ description: "sane-hp5400 – SANE backend for Hewlett-Packard 54XX scanners"
 <h2>Description</h2>
 <p>The <code>sane-hp5400</code> library implements a SANE (Scanner Access Now Easy) backend that provides access to the following Hewlett-Packard USB flatbed scanners:</p>
 <dl>
-<dd>ScanJet 5400C<br />
- ScanJet 5470C<br />
+<dd>ScanJet 5400C<br/>
+ ScanJet 5470C<br/>
  ScanJet 5490C</dd></dl>
 <p> More details can be found on the hp5400 backend homepage <i><a rel="nofollow" href="http://hp5400backend.sourceforge.net/">http://hp5400backend.sourceforge.net/</a></i>. This is ALPHA software. Keep your hand at the scanner&#8217;s plug and unplug it, if the head bumps at the end of the scan area. See also the BUGS section. If you own a scanner other than the ones listed above that works with this backend, please let us know this by sending the scanner&#8217;s exact model name and the USB vendor and device ids (e.g. from <i>/proc/bus/usb/devices</i>, <code><a href="/docs/linux/man/1-sane-find-scanner/">sane-find-scanner</a></code>(1) or syslog) to us. Even if the scanner&#8217;s name is only slightly different from the models mentioned above, please let us know. </p>
 <h2>Configuration</h2>
@@ -34,7 +34,7 @@ description: "sane-hp5400 – SANE backend for Hewlett-Packard 54XX scanners"
 <p> Example: export SANE_DEBUG_HP5400=4 </p>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/5-sane-usb/">sane-usb</a></code>(5), <code><a href="/docs/linux/man/1-sane-find-scanner/">sane-find-scanner</a></code>(1),<br />
+<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/5-sane-usb/">sane-usb</a></code>(5), <code><a href="/docs/linux/man/1-sane-find-scanner/">sane-find-scanner</a></code>(1),<br/>
  <i><a rel="nofollow" href="http://hp5400backend.sourceforge.net/">http://hp5400backend.sourceforge.net/</a></i> </p>
 <h2>Author</h2>
 <p>Martijn van Oosterhout &lt;<i>kleptog [at] svana.org</i>&gt;, Thomas Soumarmon &lt;<i>soumarmt [at] nerim.net</i>&gt;. Manpage by Henning Meier-Geinitz &lt;<i>henning [at] meier-geinitz.de</i>&gt;.</p>

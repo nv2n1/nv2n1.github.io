@@ -24,13 +24,13 @@ description: "MagneticField — compute the earth’s magnetic field"
  the vertical component of the field in nT (down is positive),
  the total field in nT.</pre>
 <p>If the <code>-r</code> option is given, a second line is printed giving the rates of change of these quantities in degrees/yr and nT/yr. </p>
-<p> The <font SIZE="-1">WGS84</font> ellipsoid is used, <i>a</i> = 6378137 m, <i>f</i> = 1/298.257223563.</p>
+<p> The WGS84 ellipsoid is used, <i>a</i> = 6378137 m, <i>f</i> = 1/298.257223563.</p>
 <h2>Options</h2>
 <dl>
 <dt><code>-n</code></dt>
-<dd>use magnetic field model <i>name</i> instead of the default <tt>&quot;wmm2015&quot;</tt>. See &#8220;<font SIZE="-1">MODELS&#8221;</font>.</dd>
+<dd>use magnetic field model <i>name</i> instead of the default <tt>&quot;wmm2015&quot;</tt>. See &#8220;MODELS&#8221;.</dd>
 <dt><code>-d</code></dt>
-<dd>read magnetic models from <i>dir</i> instead of the default. See &#8220;<font SIZE="-1">MODELS&#8221;</font>.</dd>
+<dd>read magnetic models from <i>dir</i> instead of the default. See &#8220;MODELS&#8221;.</dd>
 <dt><code>-t</code></dt>
 <dd>evaluate the field at <i>time</i> instead of reading the time from the input lines.</dd>
 <dt><code>-c</code></dt>
@@ -89,16 +89,16 @@ description: "MagneticField — compute the earth’s magnetic field"
 <p> Instructions for downloading and installing magnetic models are available at &lt;<a rel="nofollow" href="http://geographiclib.sf.net/html/magnetic.html#magneticinst">http://geographiclib.sf.net/html/magnetic.html#magneticinst</a>&gt;.</p>
 <h2>Environment</h2>
 <dl>
-<dt><font SIZE="-1"><code>GEOGRAPHICLIB_MAGNETIC_NAME</code></font></dt>
-<dd>Override the compile-time default magnetic name of <tt>&quot;wmm2015&quot;</tt>. The <code>-h</code> option reports the value of <font SIZE="-1"><code>GEOGRAPHICLIB_MAGNETIC_NAME</code></font>, if defined, otherwise it reports the compile-time value. If the <code>-n</code> <i>name</i> option is used, then <i>name</i> takes precedence.</dd>
-<dt><font SIZE="-1"><code>GEOGRAPHICLIB_MAGNETIC_PATH</code></font></dt>
-<dd>Override the compile-time default magnetic path. This is typically <tt>&quot;/usr/local/share/GeographicLib/magnetic&quot;</tt> on Unix-like systems and <tt>&quot;C:/ProgramData/GeographicLib/magnetic&quot;</tt> on Windows systems. The <code>-h</code> option reports the value of <font SIZE="-1"><code>GEOGRAPHICLIB_MAGNETIC_PATH</code></font>, if defined, otherwise it reports the compile-time value. If the <code>-d</code> <i>dir</i> option is used, then <i>dir</i> takes precedence.</dd>
-<dt><font SIZE="-1"><code>GEOGRAPHICLIB_DATA</code></font></dt>
-<dd>Another way of overriding the compile-time default magnetic path. If it is set (and if <font SIZE="-1"><code>GEOGRAPHICLIB_MAGNETIC_PATH</code></font> is not set), then $<font SIZE="-1"><code>GEOGRAPHICLIB_DATA</code></font>/magnetic is used.</dd></dl>
+<dt><code>GEOGRAPHICLIB_MAGNETIC_NAME</code></dt>
+<dd>Override the compile-time default magnetic name of <tt>&quot;wmm2015&quot;</tt>. The <code>-h</code> option reports the value of <code>GEOGRAPHICLIB_MAGNETIC_NAME</code>, if defined, otherwise it reports the compile-time value. If the <code>-n</code> <i>name</i> option is used, then <i>name</i> takes precedence.</dd>
+<dt><code>GEOGRAPHICLIB_MAGNETIC_PATH</code></dt>
+<dd>Override the compile-time default magnetic path. This is typically <tt>&quot;/usr/local/share/GeographicLib/magnetic&quot;</tt> on Unix-like systems and <tt>&quot;C:/ProgramData/GeographicLib/magnetic&quot;</tt> on Windows systems. The <code>-h</code> option reports the value of <code>GEOGRAPHICLIB_MAGNETIC_PATH</code>, if defined, otherwise it reports the compile-time value. If the <code>-d</code> <i>dir</i> option is used, then <i>dir</i> takes precedence.</dd>
+<dt><code>GEOGRAPHICLIB_DATA</code></dt>
+<dd>Another way of overriding the compile-time default magnetic path. If it is set (and if <code>GEOGRAPHICLIB_MAGNETIC_PATH</code> is not set), then $<code>GEOGRAPHICLIB_DATA</code>/magnetic is used.</dd></dl>
 <h2>Errors</h2>
 <p>An illegal line of input will print an error message to standard output beginning with <tt>&quot;ERROR:&quot;</tt> and causes <code>MagneticField</code> to return an exit code of 1. However, an error does not cause <code>MagneticField</code> to terminate; following lines will be converted. If <i>time</i> or <i>h</i> are outside the recommended ranges for the model (but inside the ranges increase by <i>tguard</i> and <i>hguard</i>), a warning is printed on standard error and the field (which may be inaccurate) is returned in the normal way.</p>
 <h2>Examples</h2>
-<p>The magnetic field from <font SIZE="-1">WMM2015</font> in Timbuktu on 2016-01-01 </p>
+<p>The magnetic field from WMM2015 in Timbuktu on 2016-01-01 </p>
 <pre> echo 2016-01-01 16:46:33N 3:00:34W 300 | MagneticField -r
  =&gt; -2.12 12.15 33871.9 33848.7 -1251.4 7293.9 34648.3
  0.09 -0.08 31.8 33.8 53.7 -41.4 22.3</pre>

@@ -28,7 +28,7 @@ description: "libgphoto2_port – cross-platform port access library"
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/3-libgphoto2/">libgphoto2</a>(3), The gPhoto2 Manual, [1]<i>gphoto website</i>, automatically generated API docs, [2]<i>libusb website</i></p>
 <h2>AUTHOR</h2>
-<p> The gPhoto2 Team.<br />
+<p> The gPhoto2 Team.<br/>
  Hans Ulrich Niedermann &lt;gp [at] n-dimensional.de&gt;. (man page)</p>
 <h2>REFERENCES</h2>
 <dl>

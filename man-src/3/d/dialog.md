@@ -10,8 +10,8 @@ description: "dialog – widgets and utilities for the dialog program"
 
 <p> dialog &#8211; widgets and utilities for the dialog program</p>
 <h2>SYNOPSIS</h2>
-<p> <code>cc [ flag &#8230; ] file &#8230; -ldialog [ library &#8230; ]</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>or<br />
+<p> <code>cc [ flag &#8230; ] file &#8230; -ldialog [ library &#8230; ]</code><br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>or<br/>
  <code>cc `dialog-config &#8211;cflags` file &#8230; `dialog-config &#8211;libs` ]</code> </p>
 <p> <code>#include &lt;dialog.h&gt;</code> </p>
 <p> <code>Dialog</code> is a program that will let you to present a variety of questions or display messages using dialog boxes from a shell script. It is built from the <code>dialog</code> library, which consists of several widgets as well as utility functions that are used by the widgets or the main program.</p>

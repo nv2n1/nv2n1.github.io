@@ -19,17 +19,17 @@ description: "collectd-java – Documentation of collectd’s \"java plugin\""
  &lt;/Plugin&gt;
  &lt;/Plugin&gt;</pre>
 <h2>Description</h2>
-<p>The <i>Java</i> plugin embeds a <i>Java Virtual Machine</i> (<font SIZE="-1">JVM</font>) into <i>collectd</i> and provides a Java interface to part of collectd&#8217;s <font SIZE="-1">API.</font> This makes it possible to write additions to the daemon in Java. </p>
+<p>The <i>Java</i> plugin embeds a <i>Java Virtual Machine</i> (JVM) into <i>collectd</i> and provides a Java interface to part of collectd&#8217;s API. This makes it possible to write additions to the daemon in Java. </p>
 <p> This plugin is similar in nature to, but shares no code with, the <i>Perl</i> plugin by Sebastian Harl, see <i><a href="/docs/linux/man/5-collectd-perl/">collectd-perl</a></i>(5) for details.</p>
 <h2>Configuration</h2>
-<p>A short outline of this plugin&#8217;s configuration can be seen in &#8220;<font SIZE="-1">SYNOPSIS&#8221;</font> above. For a complete list of all configuration options and their semantics please read &quot;Plugin <tt>&quot;java&quot;</tt>&quot; in <i><a href="/docs/linux/man/5-collectd-conf/">collectd.conf</a></i>(5).</p>
+<p>A short outline of this plugin&#8217;s configuration can be seen in &#8220;SYNOPSIS&#8221; above. For a complete list of all configuration options and their semantics please read &quot;Plugin <tt>&quot;java&quot;</tt>&quot; in <i><a href="/docs/linux/man/5-collectd-conf/">collectd.conf</a></i>(5).</p>
 <h2>Overview</h2>
 <p>When writing additions for collectd in Java, the underlying C base is mostly hidden from you. All complex data types are converted to their Java counterparts before they&#8217;re passed to your functions. These Java classes reside in the <i>org.collectd.api</i> namespace. </p>
 <p> The <i>Java</i> plugin will create one object of each class configured with the <code>LoadPlugin</code> option. The constructor of this class can then register &#8220;callback methods&#8221;, i. e. methods that will be called by the daemon when appropriate. </p>
 <p> The available classes are:</p>
 <dl>
 <dt><code>org.collectd.api.Collectd</code></dt>
-<dd>All <font SIZE="-1">API</font> functions exported to Java are implemented as static functions of this class. See &#8220;<font SIZE="-1">EXPORTED API FUNCTIONS&#8221;</font> below.</dd>
+<dd>All API functions exported to Java are implemented as static functions of this class. See &#8220;EXPORTED API FUNCTIONS&#8221; below.</dd>
 <dt><code>org.collectd.api.OConfigValue</code></dt>
 <dd>Corresponds to <tt>&quot;oconfig_value_t&quot;</tt>, defined in <i>src/liboconfig/oconfig.h</i>.</dd>
 <dt><code>org.collectd.api.OConfigItem</code></dt>
@@ -44,7 +44,7 @@ description: "collectd-java – Documentation of collectd’s \"java plugin\""
 <dd>Corresponds to <tt>&quot;notification_t&quot;</tt>, defined in <i>src/plugin.h</i>.</dd></dl>
 <p> In the remainder of this document, we&#8217;ll use the short form of these names, for example <code>ValueList</code>. In order to be able to use these abbreviated names, you need to <code>import</code> the classes.</p>
 <h2>Exported Api Functions</h2>
-<p>All collectd <font SIZE="-1">API</font> functions that are available to Java plugins are implemented as <i>public static</i> functions of the <code>Collectd</code> class. This makes calling these functions pretty straight forward. For example, to send an error message to the daemon, you&#8217;d do something like this: </p>
+<p>All collectd API functions that are available to Java plugins are implemented as <i>public static</i> functions of the <code>Collectd</code> class. This makes calling these functions pretty straight forward. For example, to send an error message to the daemon, you&#8217;d do something like this: </p>
 <pre> Collectd.logError (&quot;That wasn't chicken!&quot;);</pre>
 <p>The following are the currently exported functions.</p>
 <h3>registerConfig</h3>
@@ -106,22 +106,22 @@ description: "collectd-java – Documentation of collectd’s \"java plugin\""
 <p> Returns the appropriate <i>type</i> or <code>null</code> if the type is not defined.</p>
 <h3>logError</h3>
 <p>Signature: <i>void</i> <code>logError</code> (<i>String</i>) </p>
-<p> Sends a log message with severity <font SIZE="-1"><code>ERROR</code></font> to the daemon.</p>
+<p> Sends a log message with severity <code>ERROR</code> to the daemon.</p>
 <h3>logWarning</h3>
 <p>Signature: <i>void</i> <code>logWarning</code> (<i>String</i>) </p>
-<p> Sends a log message with severity <font SIZE="-1"><code>WARNING</code></font> to the daemon.</p>
+<p> Sends a log message with severity <code>WARNING</code> to the daemon.</p>
 <h3>logNotice</h3>
 <p>Signature: <i>void</i> <code>logNotice</code> (<i>String</i>) </p>
-<p> Sends a log message with severity <font SIZE="-1"><code>NOTICE</code></font> to the daemon.</p>
+<p> Sends a log message with severity <code>NOTICE</code> to the daemon.</p>
 <h3>logInfo</h3>
 <p>Signature: <i>void</i> <code>logInfo</code> (<i>String</i>) </p>
-<p> Sends a log message with severity <font SIZE="-1"><code>INFO</code></font> to the daemon.</p>
+<p> Sends a log message with severity <code>INFO</code> to the daemon.</p>
 <h3>logDebug</h3>
 <p>Signature: <i>void</i> <code>logDebug</code> (<i>String</i>) </p>
-<p> Sends a log message with severity <font SIZE="-1"><code>DEBUG</code></font> to the daemon.</p>
+<p> Sends a log message with severity <code>DEBUG</code> to the daemon.</p>
 <h2>Registering Callbacks</h2>
-<p>When starting up, collectd creates an object of each configured class. The constructor of this class should then register &#8220;callbacks&#8221; with the daemon, using the appropriate static functions in <code>Collectd</code>, see &#8220;<font SIZE="-1">EXPORTED API FUNCTIONS&#8221;</font> above. To register a callback, the object being passed to one of the register functions must implement an appropriate interface, which are all in the <code>org.collectd.api</code> namespace. </p>
-<p> A constructor may register any number of these callbacks, even none. An object without callback methods is never actively called by collectd, but may still call the exported <font SIZE="-1">API</font> functions. One could, for example, start a new thread in the constructor and dispatch (submit to the daemon) values asynchronously, whenever one is available. </p>
+<p>When starting up, collectd creates an object of each configured class. The constructor of this class should then register &#8220;callbacks&#8221; with the daemon, using the appropriate static functions in <code>Collectd</code>, see &#8220;EXPORTED API FUNCTIONS&#8221; above. To register a callback, the object being passed to one of the register functions must implement an appropriate interface, which are all in the <code>org.collectd.api</code> namespace. </p>
+<p> A constructor may register any number of these callbacks, even none. An object without callback methods is never actively called by collectd, but may still call the exported API functions. One could, for example, start a new thread in the constructor and dispatch (submit to the daemon) values asynchronously, whenever one is available. </p>
 <p> Each callback method is now explained in more detail:</p>
 <h3>config callback</h3>
 <p>Interface: <code>org.collectd.api.CollectdConfigInterface</code> </p>
@@ -244,8 +244,8 @@ description: "collectd-java – Documentation of collectd’s \"java plugin\""
 <h2>Plugins</h2>
 <p>The following plugins are implemented in <i>Java</i>. Both, the <code>LoadPlugin</code> option and the <code>Plugin</code> block must be inside the <code>&lt;Plugin java&gt;</code> block (see above).</p>
 <h3>GenericJMX plugin</h3>
-<p>The GenericJMX plugin reads <i>Managed Beans</i> (MBeans) from an <i>MBeanServer</i> using <font SIZE="-1">JMX. JMX</font> is a generic framework to provide and query various management information. The interface is used by Java processes to provide internal statistics as well as by the <i>Java Virtual Machine</i> (<font SIZE="-1">JVM</font>) to provide information about the memory used, threads and so on. </p>
-<p> The configuration of the <i>GenericJMX plugin</i> consists of two blocks: <i>MBean</i> blocks that define a mapping of MBean attributes to the XtypesX used by <i>collectd</i>, and <i>Connection</i> blocks which define the parameters needed to connect to an <i>MBeanServer</i> and what data to collect. The configuration of the <i></i><font SIZE="-1"><i>SNMP</i></font><i> plugin</i> is similar in nature, in case you know it. </p>
+<p>The GenericJMX plugin reads <i>Managed Beans</i> (MBeans) from an <i>MBeanServer</i> using JMX. JMX is a generic framework to provide and query various management information. The interface is used by Java processes to provide internal statistics as well as by the <i>Java Virtual Machine</i> (JVM) to provide information about the memory used, threads and so on. </p>
+<p> The configuration of the <i>GenericJMX plugin</i> consists of two blocks: <i>MBean</i> blocks that define a mapping of MBean attributes to the XtypesX used by <i>collectd</i>, and <i>Connection</i> blocks which define the parameters needed to connect to an <i>MBeanServer</i> and what data to collect. The configuration of the <i></i><i>SNMP</i><i> plugin</i> is similar in nature, in case you know it. </p>
 <p> <i>MBean blocks</i> </p>
 <p> <i>MBean</i> blocks specify what data is retrieved from <i>MBeans</i> and how that data is mapped on the <i>collectd</i> data types. The block requires one string argument, a name. This name is used in the <i>Connection</i> blocks (see below) to refer to a specific <i>MBean</i> block. Therefore, the names must be unique. </p>
 <p> The following options are recognized within <i>MBean</i> blocks:</p>
@@ -256,7 +256,7 @@ description: "collectd-java – Documentation of collectd’s \"java plugin\""
 <dt><code>InstancePrefix</code> <i>prefix</i></dt>
 <dd>Prefixes the generated <i>plugin instance</i> with <i>prefix</i>. <i>(optional)</i></dd>
 <dt><code>InstanceFrom</code> <i>property</i></dt>
-<dd>The <i>object names</i> used by <font SIZE="-1">JMX</font> to identify <i>MBeans</i> include so called <i>XpropertiesX</i> which are basically key-value-pairs. If the given object name is not unique and multiple MBeans are returned, the values of those properties usually differ. You can use this option to build the <i>plugin instance</i> from the appropriate property values. This option is optional and may be repeated to generate the <i>plugin instance</i> from multiple property values.</dd>
+<dd>The <i>object names</i> used by JMX to identify <i>MBeans</i> include so called <i>XpropertiesX</i> which are basically key-value-pairs. If the given object name is not unique and multiple MBeans are returned, the values of those properties usually differ. You can use this option to build the <i>plugin instance</i> from the appropriate property values. This option is optional and may be repeated to generate the <i>plugin instance</i> from multiple property values.</dd>
 <dt><code>&lt;value /&gt;</code> blocks</dt>
 <dd>The <i>value</i> blocks map one or more attributes of an <i>MBean</i> to a value list in <i>collectd</i>. There must be at least one Value block within each <i>MBean</i> block.</dd>
 <dl>
@@ -283,7 +283,7 @@ description: "collectd-java – Documentation of collectd’s \"java plugin\""
 <dl>
 <dt><code>Host</code> <i>name</i></dt>
 <dd>Host name used when dispatching the values to <i>collectd</i>. The option sets this field only, it is <i>not</i> used to connect to anything and doesn&#8217;t need to be a real, resolvable name.</dd>
-<dt><code>ServiceURL</code> <i></i><font SIZE="-1"><i>URL</i></font><i></i></dt>
+<dt><code>ServiceURL</code> <i></i><i>URL</i><i></i></dt>
 <dd>Specifies how the <i>MBeanServer</i> can be reached. Any string accepted by the <i>JMXServiceURL</i> is valid. </dd>
 <p> See also: &lt;<a rel="nofollow" href="http://java.sun.com/javase/6/docs/api/javax/management/remote/JMXServiceURL.html">http://java.sun.com/javase/6/docs/api/javax/management/remote/JMXServiceURL.html</a>&gt;</p>
 <dt><code>User</code> <i>name</i></dt>

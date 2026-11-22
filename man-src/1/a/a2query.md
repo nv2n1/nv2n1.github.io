@@ -10,26 +10,26 @@ description: "a2query – retrieve runtime configuration from a local Apache 2 H
 
 <p> a2query &#8211; retrieve runtime configuration from a local Apache 2 HTTP server </p>
 <h2>SYNOPSIS</h2>
-<p> <code>a2query</code> [-m [<i></i><font SIZE="-1"><i>MODULE</i></font><i></i>]] [-s [<i></i><font SIZE="-1"><i>SITE</i></font><i></i>]] [-c [<i></i><font SIZE="-1"><i>CONF</i></font><i></i>]] [-a] [-v] [-M] [-d] [-h]</p>
+<p> <code>a2query</code> [-m [<i></i><i>MODULE</i><i></i>]] [-s [<i></i><i>SITE</i><i></i>]] [-c [<i></i><i>CONF</i><i></i>]] [-a] [-v] [-M] [-d] [-h]</p>
 <h2>DESCRIPTION</h2>
-<p> <code>a2query</code> is a program designed to retrieve configuration values from a locally available Apache 2 <font SIZE="-1">HTTP</font> web server. It was designed to be as robust as possible by returning feasible values even if the Apache 2 syntax validator fails. </p>
+<p> <code>a2query</code> is a program designed to retrieve configuration values from a locally available Apache 2 HTTP web server. It was designed to be as robust as possible by returning feasible values even if the Apache 2 syntax validator fails. </p>
 <p> This program is primarily meant to be used from maintainer scripts.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt>-a</dt>
-<dd> Returns the Apache 2 &#8220;Module Magic Version&#8221; (<font SIZE="-1">API</font> version) number, the server was compiled with. The returned version does not contain any minor versions which are known to be compatible with the major version returned.</dd>
-<dt>-c [<i></i><font SIZE="-1"><i>CONF</i></font><i></i>]</dt>
-<dd> Checks whether the configuration <i></i><font SIZE="-1"><i>CONF</i></font><i></i> is enabled. If no argument was given, all enabled configuration files are being returned. <i></i><font SIZE="-1"><i>CONF</i></font><i></i> is compared by string comparison by ignoring a leading &#8220;mod_&#8221; prefix and possibly a &#8216;.conf&#8217; or &#8216;.load&#8217; suffix.</dd>
+<dd> Returns the Apache 2 &#8220;Module Magic Version&#8221; (API version) number, the server was compiled with. The returned version does not contain any minor versions which are known to be compatible with the major version returned.</dd>
+<dt>-c [<i></i><i>CONF</i><i></i>]</dt>
+<dd> Checks whether the configuration <i></i><i>CONF</i><i></i> is enabled. If no argument was given, all enabled configuration files are being returned. <i></i><i>CONF</i><i></i> is compared by string comparison by ignoring a leading &#8220;mod_&#8221; prefix and possibly a &#8216;.conf&#8217; or &#8216;.load&#8217; suffix.</dd>
 <dt>-h</dt>
 <dd> Displays a brief summary how the program can be called and exits.</dd>
-<dt>-m [<i></i><font SIZE="-1"><i>MODULE</i></font><i></i>]</dt>
-<dd> Checks whether the module <i></i><font SIZE="-1"><i>MODULE</i></font><i></i> is enabled, The argument is interpreted in the same way, as for configuration files queried by the -c switch.</dd>
+<dt>-m [<i></i><i>MODULE</i><i></i>]</dt>
+<dd> Checks whether the module <i></i><i>MODULE</i><i></i> is enabled, The argument is interpreted in the same way, as for configuration files queried by the -c switch.</dd>
 <dt>-M</dt>
-<dd> Returns the currently enabled Apache 2 <font SIZE="-1">MPM</font> (Multi Processing Module).</dd>
-<dt>-s [<i></i><font SIZE="-1"><i>SITE</i></font><i></i>]</dt>
-<dd> Checks whether the module <i></i><font SIZE="-1"><i>SITE</i></font><i></i> is enabled, The argument is interpreted in the same way, as for configuration files queried by the -c switch.</dd>
+<dd> Returns the currently enabled Apache 2 MPM (Multi Processing Module).</dd>
+<dt>-s [<i></i><i>SITE</i><i></i>]</dt>
+<dd> Checks whether the module <i></i><i>SITE</i><i></i> is enabled, The argument is interpreted in the same way, as for configuration files queried by the -c switch.</dd>
 <dt>-v</dt>
-<dd> returns the currently installed Apache 2 <font SIZE="-1">HTTP</font> server version</dd>
+<dd> returns the currently installed Apache 2 HTTP server version</dd>
 <dt>-q</dt>
 <dd> suppress any output. This is useful to invoke a2query from another script. This is useful if only the return code is of interest.</dd></dl>
 <h2>EXIT CODES</h2>

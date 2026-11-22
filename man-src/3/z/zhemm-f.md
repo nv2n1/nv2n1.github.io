@@ -10,7 +10,7 @@ description: "zhemm.f –"
 <p>zhemm.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zhemm</code> (SIDE, UPLO, M, N, ALPHA, A, LDA, B, LDB, BETA, C, LDC)<br />
+<p>subroutine <code>zhemm</code> (SIDE, UPLO, M, N, ALPHA, A, LDA, B, LDB, BETA, C, LDC)<br/>
  <i></i><code>ZHEMM</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zhemm (characterSIDE, characterUPLO, integerM, integerN, complex*16ALPHA, complex*16, dimension(lda,*)A, integerLDA, complex*16, dimension(ldb,*)B, integerLDB, complex*16BETA, complex*16, dimension(ldc,*)C, integerLDC)</h3>

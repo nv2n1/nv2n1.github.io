@@ -65,12 +65,12 @@ description: "csv2ods – Create OpenDocument spreadsheet from comma separated v
 <h2>Example</h2>
 <dl>
 <dt>
-</dt><dd> <font SIZE="-1"> </font></dd>
+</dt><dd>  </dd>
 <pre>
 csv2ods -i /etc/passwd -o accounts.odt -d:
 </pre>
-<p> <font SIZE="+1"></dl>
-<p> </font></p>
+<p> </dl>
+<p> </p>
 <h2>Author</h2>
 <p> <code>Agustin Henze</code> &lt;agustinhenze at gmail.com&gt;</p>
 <dl>

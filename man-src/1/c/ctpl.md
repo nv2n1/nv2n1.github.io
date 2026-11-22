@@ -33,10 +33,10 @@ description: "ctpl – CTPL command-line template parsing tool"
 <h2>TEMPLATE AND ENVIRONMENT DESCRIPTION SYNTAX</h2>
 <p> For the documentation about the syntax of templates and environment descriptions, see the CTPL library&#8217;s documentation. </p>
 <h2>REPORTING BUGS</h2>
-<p> Report CTPL bugs to ban [at] herbesfolles.org<br />
+<p> Report CTPL bugs to ban [at] herbesfolles.org<br/>
  CTPL home page: &lt;<a rel="nofollow" href="http://ctpl.tuxfamily.org">http://ctpl.tuxfamily.org</a>&gt; </p>
 <h2>AUTHOR</h2>
 <p> Colomban Wendling (ban [at] herbesfolles.org) </p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2010 Colomban Wendling. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt;.<br />
+<p> Copyright &#169; 2010 Colomban Wendling. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt;.<br/>
  This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law. </p>

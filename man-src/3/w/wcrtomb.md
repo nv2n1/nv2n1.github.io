@@ -15,7 +15,7 @@ size_t wcrtomb(char *s, wchar_t wc, mbstate_t *ps);</code></pre>
 <p>The main case for this function is when <i>s</i> is not NULL and <i>wc</i> is not a null wide character (L&#8217;\0&#8217;). In this case, the <code>wcrtomb</code>() function converts the wide character <i>wc</i> to its multibyte representation and stores it at the beginning of the character array pointed to by <i>s</i>. It updates the shift state <i>*ps</i>, and returns the length of said multibyte representation, that is, the number of bytes written at <i>s</i>. </p>
 <p> A different case is when <i>s</i> is not NULL, but <i>wc</i> is a null wide character (L&#8217;\0&#8217;). In this case, the <code>wcrtomb</code>() function stores at the character array pointed to by <i>s</i> the shift sequence needed to bring <i>*ps</i> back to the initial state, followed by a &#8216;\0&#8217; byte. It updates the shift state <i>*ps</i> (i.e., brings it into the initial state), and returns the length of the shift sequence plus one, that is, the number of bytes written at <i>s</i>. </p>
 <p> A third case is when <i>s</i> is NULL. In this case, <i>wc</i> is ignored, and the function effectively returns </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;wcrtomb(buf, L&#8217;\0&#8217;, ps) </p>
 <p> where <i>buf</i> is an internal anonymous buffer. </p>
 <p> In all of the above cases, if <i>ps</i> is NULL, a static anonymous state known only to the <code>wcrtomb</code>() function is used instead.  </p>

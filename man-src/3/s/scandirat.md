@@ -23,7 +23,7 @@ int scandirat(int dirfd, const char *dirp,
               int (*compar)(const struct dirent **, const struct dirent **));</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>scandir</code>(), <code>alphasort</code>(): </p>
 <dl>
-<dd>/* Since glibc 2.10: */ _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L<br />
+<dd>/* Since glibc 2.10: */ _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
 <p> <code>versionsort</code>(): _GNU_SOURCE <code>scandirat</code>(): _GNU_SOURCE</p>
 <h2>Description</h2>

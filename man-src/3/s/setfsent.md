@@ -39,15 +39,15 @@ int setfsent(void);</code></pre>
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>endfsent</code>(),<br />
+<td> <code>endfsent</code>(),<br/>
  <code>setfsent</code>() </td>
 <td>Thread safety</td>
 <td>MT-Unsafe race:fsent
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>getfsent</code>(),<br />
- <code>getfsspec</code>(),<br />
+<td> <code>getfsent</code>(),<br/>
+ <code>getfsspec</code>(),<br/>
  <code>getfsfile</code>() </td>
 <td>Thread safety</td>
 <td>MT-Unsafe race:fsent locale

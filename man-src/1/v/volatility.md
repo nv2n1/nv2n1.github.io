@@ -252,20 +252,20 @@ vol[option] vol - f[image]-- profile = [profile][plugin]
   different process's DTB when accessing data, supply the address to --dtb=ADDRESS.
 </pre>
 <p> Setting the KDBG address (this is a Windows-only <i>option</i>) </p>
-<p>  Volatility scans for the &#8216;_KDDEBUGGER_DATA64&#8217; structure using hard-coded signatures &#8220;KDBG&#8221; and<br />
-  a series of sanity checks. These signatures are not critical for the operating system to function<br />
-  properly, thus malware can overwrite them in attempt to throw off tools that do rely on the<br />
-  signature. Additionally, in some cases there may be more than one &#8216;_KDDEBUGGER_DATA64&#8217; (for<br />
-  example if you apply a major OS update and don&#8217;t reboot), which can cause confusion and lead to<br />
-  incorrect process and module listings, among other problems. If you know the address<br />
-  add &#8216;_KDDEBUGGER_DATA64&#8217;, you can specify it with &#8211;kdbg=ADDRESS and this override the automated<br />
-  scans. For more information, see the kdbgscan plugin.<br />
+<p>  Volatility scans for the &#8216;_KDDEBUGGER_DATA64&#8217; structure using hard-coded signatures &#8220;KDBG&#8221; and<br/>
+  a series of sanity checks. These signatures are not critical for the operating system to function<br/>
+  properly, thus malware can overwrite them in attempt to throw off tools that do rely on the<br/>
+  signature. Additionally, in some cases there may be more than one &#8216;_KDDEBUGGER_DATA64&#8217; (for<br/>
+  example if you apply a major OS update and don&#8217;t reboot), which can cause confusion and lead to<br/>
+  incorrect process and module listings, among other problems. If you know the address<br/>
+  add &#8216;_KDDEBUGGER_DATA64&#8217;, you can specify it with &#8211;kdbg=ADDRESS and this override the automated<br/>
+  scans. For more information, see the kdbgscan plugin.<br/>
  Setting the KPCR address (this is a Windows-only <i>option</i>) </p>
-<p>  There is one KPCR (Kernel Processor Control Region) for each CPU on a system. Some Volatility<br />
-  plugins display per-processor information. Thus if you want to display data for a specific CPU, for<br />
-  example CPU 3 instead of CPU 1, you can pass the address of that CPU&#8217;s KPCR with &#8211;kpcr=ADDRESS.<br />
-  To locate the KPCRs for all CPUs, see the kpcrscan plugin. Also note that starting in Volatility 2.2,<br />
-  many of the plugins such as idt and gdt automatically iterate through the list of KPCRs.<br />
+<p>  There is one KPCR (Kernel Processor Control Region) for each CPU on a system. Some Volatility<br/>
+  plugins display per-processor information. Thus if you want to display data for a specific CPU, for<br/>
+  example CPU 3 instead of CPU 1, you can pass the address of that CPU&#8217;s KPCR with &#8211;kpcr=ADDRESS.<br/>
+  To locate the KPCRs for all CPUs, see the kpcrscan plugin. Also note that starting in Volatility 2.2,<br/>
+  many of the plugins such as idt and gdt automatically iterate through the list of KPCRs.<br/>
  Enabling write support </p>
 <pre>
   Write support in Volatility should be used with caution. Therefore, to actually enable it, you must

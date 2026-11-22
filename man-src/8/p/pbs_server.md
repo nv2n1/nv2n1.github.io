@@ -16,7 +16,7 @@ description: "pbs_server – start a pbs batch server"
 <h2>Options</h2>
 <dl>
 <dt>-a active</dt>
-<dd>Specifies if scheduling is active or not. This sets the server attribute <i> </i><font SIZE="-1"><i> If the option argument is &quot;true&quot; (&quot;True&quot;, &quot;t&quot;, &quot;T&quot;, or &quot;1&quot;), the server is </i><code>active</code> and the PBS job scheduler will be called. If the argument is &quot;false&quot; (&quot;False&quot;, &quot;f&quot;, &quot;F&quot;, or &quot;0), the server is <code>idle</code>, and the scheduler will not be called and no jobs will be run. If this option is not specified, the server will retain the prior value of the <i> </i></font><font SIZE="-2"><i> attribute.</dd>
+<dd>Specifies if scheduling is active or not. This sets the server attribute <i> </i><i> If the option argument is &quot;true&quot; (&quot;True&quot;, &quot;t&quot;, &quot;T&quot;, or &quot;1&quot;), the server is </i><code>active</code> and the PBS job scheduler will be called. If the argument is &quot;false&quot; (&quot;False&quot;, &quot;f&quot;, &quot;F&quot;, or &quot;0), the server is <code>idle</code>, and the scheduler will not be called and no jobs will be run. If this option is not specified, the server will retain the prior value of the <i> </i><i> attribute.</dd>
 <dt>-c</dt>
 <dd>Wait 10 minutes before contacting moms. Any mom reporting in does not get pinged if starting </i><code>pbs_server</code> before moms.</dd>
 <dt>-d config_path</dt>
@@ -55,7 +55,7 @@ description: "pbs_server – start a pbs batch server"
 <dt>-H hostname</dt>
 <dd>Causes the server to start under a different hostname as obtained from <a href="/docs/linux/man/2-gethostname/">gethostname</a>(2). Useful for servers with multiple network interfaces to support connections from clients over an interface that has a hostname assigned that differs from the one that is returned by <a href="/docs/linux/man/2-gethostname/">gethostname</a>(2).</dd>
 <dt>-L logfile</dt>
-<dd>Specifies an absolute path name of the file to use as the log file. If not specified, the file is one named for the current date in the PBS_HOME/server_logs directory, see the </i></font><font SIZE="-3"><i> option.</dd>
+<dd>Specifies an absolute path name of the file to use as the log file. If not specified, the file is one named for the current date in the PBS_HOME/server_logs directory, see the </i><i> option.</dd>
 <dt>-M mom_port</dt>
 <dd>Specifies the host name and/or port number on which the server should connect the job executor, MOM. The option argument, is one of the forms: host_name, [:]port_number, or host_name:port_number. If host_name not specified, the local host is assumed. If port_number is not specified, the default port is assumed. See the -M option for <a href="/docs/linux/man/8-pbs_mom/">pbs_mom</a>(8).</dd>
 <dt>-R mom_RPPport</dt>
@@ -70,7 +70,7 @@ description: "pbs_server – start a pbs batch server"
 <dd>Prints help information.</dd>
 <dt>&#8211;version</dt>
 <dd>Shows version and commit information.</dd></dl>
-<p> </font></p>
+<p> </p>
 <h2>Files</h2>
 <dl>
 <dt>$PBS_SERVER_HOME/server_priv</dt>

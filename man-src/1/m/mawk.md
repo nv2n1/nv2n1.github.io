@@ -10,7 +10,7 @@ description: "mawk – pattern scanning and text processing language"
 
 <p> mawk - pattern scanning and text processing language </p>
 <h2>SYNOPSIS</h2>
-<p> <code>mawk</code> [-<code>W </code><i>option</i>] [-<code>F </code><i>value</i>] [-<code>v </code><i>var=value</i>] [--] &#8216;program text&#8217; [file ...] <br />
+<p> <code>mawk</code> [-<code>W </code><i>option</i>] [-<code>F </code><i>value</i>] [-<code>v </code><i>var=value</i>] [--] &#8216;program text&#8217; [file ...] <br/>
  <code>mawk</code> [-<code>W </code><i>option</i>] [-<code>F </code><i>value</i>] [-<code>v </code><i>var=value</i>] [-<code>f </code><i>program-file</i>] [--] [file ...]  </p>
 <h2>DESCRIPTION</h2>
 <p> <code>mawk</code> is an interpreter for the AWK Programming Language. The AWK language is useful for manipulation of data files, text retrieval and processing, and for prototyping and experimenting with algorithms. <code>mawk</code> is a <i>new awk</i> meaning it implements the AWK language as defined in Aho, Kernighan and Weinberger, <i>The AWK Programming Language,</i> Addison-Wesley Publishing, 1988 (hereafter referred to as the AWK book.) <code>mawk</code> conforms to the POSIX 1003.2 (draft 11.3) definition of the AWK language which contains a few features not described in the AWK book, and <code>mawk</code> provides a small number of extensions. </p>
@@ -90,7 +90,7 @@ expression , expression
 <h3>2. Data types, conversion and comparison</h3>
 <p> There are two basic data types, numeric and string. Numeric constants can be integer like -2, decimal like 1.08, or in scientific notation like -1.1e4 or .28E-3. All numbers are represented internally and all computations are done in floating point arithmetic. So for example, the expression 0.2e2 == 20 is true and true is represented as 1.0. </p>
 <p> String constants are enclosed in double quotes. </p>
-<p> <center> &quot;This is a string with a newline at the end.\n&quot;<br />
+<p> <center> &quot;This is a string with a newline at the end.\n&quot;<br/>
  </center> </p>
 <p> Strings can be continued across a line by escaping (\) the newline. The following escape sequences are recognized. </code> </p>
 <pre><code>        \\ \
@@ -372,9 +372,9 @@ expression , expression
 <dd> <p> formats the given timestamp using the format (passed to the C <code>strftime</code> function): </p>
  </dd>
 <dl>
-<dd> <p> <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 If the <i>format</i> parameter is missing, &quot;%c&quot; is used. <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 If the <i>timestamp</i> parameter is missing, the current value from <code>systime</code> is used. <br />
+<dd> <p> <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 If the <i>format</i> parameter is missing, &quot;%c&quot; is used. <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 If the <i>timestamp</i> parameter is missing, the current value from <code>systime</code> is used. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 If the <i>utc</i> parameter is present and nonzero, the result is in UTC. Otherwise local time is used. </p>
  </dd></dl>
 <dt>systime()</dt>
@@ -417,9 +417,9 @@ sqrt( x ) Returns square root of x .
 </dl>
 <p> The argument list to print or printf can optionally be enclosed in parentheses. Print formats numbers using <code>OFMT</code> or &quot;%d&quot; for exact integers. &quot;%c&quot; with a numeric argument prints the corresponding 8 bit character, with a string argument it prints the first character of the string. The output of print and printf can be redirected to a file or command by appending &gt; <i>file</i>, &gt;&gt; <i>file</i> or | <i>command</i> to the end of the print statement. Redirection opens <i>file</i> or <i>command</i> only once, subsequent redirections append to the already open stream. By convention, <code>mawk</code> associates the filename </p>
 <dl>
-<dd> <p> <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 &quot;/dev/stderr&quot; with stderr, <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 &quot;/dev/stdout&quot; with stdout, <br />
+<dd> <p> <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 &quot;/dev/stderr&quot; with stderr, <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 &quot;/dev/stdout&quot; with stdout, <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 &quot;-&quot; and &quot;/dev/stdin&quot; with stdin. </p>
  </dd></dl>
 <p> The association with stderr is especially useful because it allows print and printf to be redirected to stderr. These names can also be passed to functions. </p>
@@ -450,9 +450,9 @@ sqrt( x ) Returns square root of x .
 <p> Commands on the end of pipes are executed by /bin/sh. </p>
 <p> The function <code>close</code>(<i>expr</i>) closes the file or pipe associated with <i>expr</i>. Close returns 0 if <i>expr</i> is an open file, the exit status if <i>expr</i> is a piped command, and -1 otherwise. Close is used to reread a file or command, make sure the other end of an output pipe is finished or conserve file resources. </p>
 <p> The function <code>fflush</code>(<i>expr</i>) flushes the output file or pipe associated with <i>expr</i>. Fflush returns 0 if <i>expr</i> is an open output stream else -1. Fflush without an argument flushes stdout. Fflush with an empty argument (&quot;&quot;) flushes all open output. </p>
-<p> The function <code>system</code>(<i>expr</i>) uses the C runtime <code>system</code> call to execute <i>expr</i> and returns the corresponding wait status of the command as follows: <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 if the <code>system</code> call failed, setting the status to -1, <i>mawk</i> returns that value. <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 if the command exited normally, <i>mawk</i> returns its exit-status. <br />
+<p> The function <code>system</code>(<i>expr</i>) uses the C runtime <code>system</code> call to execute <i>expr</i> and returns the corresponding wait status of the command as follows: <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 if the <code>system</code> call failed, setting the status to -1, <i>mawk</i> returns that value. <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 if the command exited normally, <i>mawk</i> returns its exit-status. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 if the command exited due to a signal such as <code>SIGHUP</code>, <i>mawk</i> returns the signal number plus 256. </p>
 <p> Changes made to the <code>ENVIRON</code> array are not passed to commands executed with <code>system</code> or pipes.  </p>
 <h3>10. User defined functions</h3>
@@ -498,12 +498,12 @@ sqrt( x ) Returns square root of x .
 <h3>12. Multi-line records</h3>
 <p> Since mawk</code> interprets <code>RS</code> as a regular expression, multi-line records are easy. Setting <code>RS</code> = &quot;\n\n+&quot;, makes one or more blank lines separate records. If <code>FS</code> = &quot; &quot; (the default), then single newlines, by the rules for &lt;SPACE&gt; above, become space and single newlines are field separators. </p>
 <dl>
-<dd> <p> For example, if <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 a file is &quot;a b\nc\n\n&quot;, <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>RS</code> = &quot;\n\n+&quot; and <br />
+<dd> <p> For example, if <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 a file is &quot;a b\nc\n\n&quot;, <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 <code>RS</code> = &quot;\n\n+&quot; and <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 <code>FS</code> = &quot;&nbsp;&quot;, </p>
-<p> then there is one record ``a b\nc&#8217;&#8216; with three fields ``a&#8217;&#8216;, ``b&#8217;&#8216; and ``c&#8217;&#8216;: <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 Changing <code>FS</code> = ``\n&#8217;&#8216;, gives two fields ``a b&#8217;&#8216; and ``c&#8217;&#8216;; <br />
+<p> then there is one record ``a b\nc&#8217;&#8216; with three fields ``a&#8217;&#8216;, ``b&#8217;&#8216; and ``c&#8217;&#8216;: <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 Changing <code>FS</code> = ``\n&#8217;&#8216;, gives two fields ``a b&#8217;&#8216; and ``c&#8217;&#8216;; <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 changing <code>FS</code> = ``&#8216;&#8216;, gives one field identical to the record. </p>
  </dd></dl>
 <p> If you want lines with spaces or tabs to be considered blank, set <code>RS</code> = ``\n([&nbsp;\t]*\n)+&#8216;&#8216;. For compatibility with other awks, setting <code>RS</code> = &quot;&quot; has the same effect as if blank lines are stripped from the front and back of files and then records are determined as if <code>RS</code> = ``\n\n+&#8216;&#8216;. POSIX requires that ``\n&#8217;&#8216; always separates records when <code>RS</code> = &quot;&quot; regardless of the value of <code>FS</code>. <code>mawk</code> does not support this convention, because defining ``\n&#8217;&#8216; as &lt;SPACE&gt; makes it unnecessary. </p>
@@ -523,9 +523,9 @@ sqrt( x ) Returns square root of x .
         nextfile
         exit  opt_expr 
 </code></pre>
-<p> statements: <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 A <code>next</code> statement causes the next input record to be read and pattern testing to restart with the first <i>pattern {action}</i> pair in the program. <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 A <code>nextfile</code> statement tells <code>mawk</code> to stop processing the current input file. It then updates FILENAME to the next file listed on the command line, and resets FNR to 1. <br />
+<p> statements: <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 A <code>next</code> statement causes the next input record to be read and pattern testing to restart with the first <i>pattern {action}</i> pair in the program. <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 A <code>nextfile</code> statement tells <code>mawk</code> to stop processing the current input file. It then updates FILENAME to the next file listed on the command line, and resets FNR to 1. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 An <code>exit</code> statement causes immediate execution of the <code>END</code> actions or program termination if there are none or if the <code>exit</code> occurs in an <code>END</code> action. The <i>opt_expr</i> sets the exit value of the program unless overridden by a later <code>exit</code> or subsequent error.  </p>
 <h2>EXAMPLES</h2>
 <pre><code>1. emulate cat.
@@ -570,11 +570,11 @@ sqrt( x ) Returns square root of x .
 <h3>MAWK 1.3.3 versus POSIX 1003.2 Draft 11.3</h3>
 <p> The POSIX 1003.2(draft 11.3) definition of the AWK language is AWK as described in the AWK book with a few extensions that appeared in SystemVR4 nawk. The extensions are: </p>
 <dl>
-<dd> <p> <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 New functions: toupper() and tolower(). <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 New variables: ENVIRON[] and CONVFMT. <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 ANSI C conversion specifications for printf() and sprintf(). <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 New command options: -v var=value, multiple -f options and implementation options as arguments to -W. <br />
+<dd> <p> <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 New functions: toupper() and tolower(). <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 New variables: ENVIRON[] and CONVFMT. <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 ANSI C conversion specifications for printf() and sprintf(). <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 New command options: -v var=value, multiple -f options and implementation options as arguments to -W. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 For systems (MS-DOS or Windows) which provide a <i>setmode</i> function, an environment variable MAWKBINMODE and a built-in variable BINMODE. The bits of the BINMODE value tell <i>mawk</i> how to modify the <code>RS</code> and <code>ORS</code> variables: </p>
  </dd>
 <dl>
@@ -631,10 +631,10 @@ sqrt( x ) Returns square root of x .
 <h3>Subtle Differences not in POSIX or the AWK Book</h3>
 <p> Finally, here is how <code>mawk</code> handles exceptional cases not discussed in the AWK book or the POSIX draft. It is unsafe to assume consistency across awks and safe to skip to the next section. </p>
 <dl>
-<dd> <p> <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 substr(s, i, n) returns the characters of s in the intersection of the closed interval [1, length(s)] and the half-open interval [i, i+n). When this intersection is empty, the empty string is returned; so substr(&quot;ABC&quot;, 1, 0) = &quot;&quot; and substr(&quot;ABC&quot;, -4, 6) = &quot;A&quot;. <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 Every string, including the empty string, matches the empty string at the front so, s ~ // and s ~ &quot;&quot;, are always 1 as is match(s, //) and match(s, &quot;&quot;). The last two set <code>RLENGTH</code> to 0. <br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 index(s, t) is always the same as match(s, t1) where t1 is the same as t with metacharacters escaped. Hence consistency with match requires that index(s, &quot;&quot;) always returns 1. Also the condition, index(s,t) != 0 if and only t is a substring of s, requires index(&quot;&quot;,&quot;&quot;) = 1. <br />
+<dd> <p> <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 substr(s, i, n) returns the characters of s in the intersection of the closed interval [1, length(s)] and the half-open interval [i, i+n). When this intersection is empty, the empty string is returned; so substr(&quot;ABC&quot;, 1, 0) = &quot;&quot; and substr(&quot;ABC&quot;, -4, 6) = &quot;A&quot;. <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 Every string, including the empty string, matches the empty string at the front so, s ~ // and s ~ &quot;&quot;, are always 1 as is match(s, //) and match(s, &quot;&quot;). The last two set <code>RLENGTH</code> to 0. <br/>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 index(s, t) is always the same as match(s, t1) where t1 is the same as t with metacharacters escaped. Hence consistency with match requires that index(s, &quot;&quot;) always returns 1. Also the condition, index(s,t) != 0 if and only t is a substring of s, requires index(&quot;&quot;,&quot;&quot;) = 1. <br/>
 &nbsp;.IP&nbsp;&bull;&nbsp;4 If getline encounters end of file, getline var, leaves var unchanged. Similarly, on entry to the <code>END</code> actions, <code>$0</code>, the fields and <code>NF</code> have their value unaltered from the last record. </p>
  </dd></dl>
 <h2>ENVIRONMENT VARIABLES</h2>
@@ -678,5 +678,5 @@ sqrt( x ) Returns square root of x .
 <p> <code>mawk</code> implements printf() and sprintf() using the C library functions, printf and sprintf, so full ANSI compatibility requires an ANSI C library. In practice this means the h conversion qualifier may not be available. Also <code>mawk</code> inherits any bugs or limitations of the library functions. </p>
 <p> Implementors of the AWK language have shown a consistent lack of imagination when naming their programs.  </p>
 <h2>AUTHOR</h2>
-<p> Mike Brennan (brennan [at] whidbey.com). <br />
+<p> Mike Brennan (brennan [at] whidbey.com). <br/>
  Thomas E. Dickey &lt;dickey [at] invisible-island.net&gt;. </p>

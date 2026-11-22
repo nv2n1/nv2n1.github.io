@@ -11,25 +11,25 @@ description: "sane-mustek – SANE backend for Mustek SCSI flatbed scanners (and
 <h2>Description</h2>
 <p>The <code>sane-mustek</code> library implements a SANE (Scanner Access Now Easy) backend that provides access to Mustek (and some relabeled Trust and Primax) SCSI and parport flatbed scanners. At present, the following scanners are known to work more or less with this backend:</p>
 <dl>
-<dd>Paragon MFS-6000CX<br />
- Paragon MFS-12000CX<br />
- Paragon MFC-600S, 600 II CD, ScanMagic 600 II SP<br />
- Paragon MFC-800S, 800 II SP<br />
- Paragon MFS-6000SP<br />
- Paragon MFS-8000SP<br />
- Paragon MFS-1200SP, MFS-12000SP<br />
- ScanExpress 6000SP<br />
- ScanExpress 12000SP, 12000SP Plus, Paragon 1200 III SP, ScanMagic 9636S, 9636S Plus<br />
- Paragon 1200 LS<br />
- ScanExpress A3 SP<br />
- Paragon 1200 SP Pro<br />
- Paragon 1200 A3 Pro<br />
- Paragon 600 II EP<br />
- Paragon 600 II N<br />
- Trust Imagery 1200<br />
- Trust Imagery 1200 SP<br />
- Trust Imagery 4800 SP<br />
- Trust SCSI Connect 19200<br />
+<dd>Paragon MFS-6000CX<br/>
+ Paragon MFS-12000CX<br/>
+ Paragon MFC-600S, 600 II CD, ScanMagic 600 II SP<br/>
+ Paragon MFC-800S, 800 II SP<br/>
+ Paragon MFS-6000SP<br/>
+ Paragon MFS-8000SP<br/>
+ Paragon MFS-1200SP, MFS-12000SP<br/>
+ ScanExpress 6000SP<br/>
+ ScanExpress 12000SP, 12000SP Plus, Paragon 1200 III SP, ScanMagic 9636S, 9636S Plus<br/>
+ Paragon 1200 LS<br/>
+ ScanExpress A3 SP<br/>
+ Paragon 1200 SP Pro<br/>
+ Paragon 1200 A3 Pro<br/>
+ Paragon 600 II EP<br/>
+ Paragon 600 II N<br/>
+ Trust Imagery 1200<br/>
+ Trust Imagery 1200 SP<br/>
+ Trust Imagery 4800 SP<br/>
+ Trust SCSI Connect 19200<br/>
  Primax Compact 4800 SCSI
 </dd></dl>
 <p> More details can be found on the Mustek SCSI backend homepage <i><a rel="nofollow" href="http://www.meier-geinitz.de/sane/mustek-backend/">http://www.meier-geinitz.de/sane/mustek-backend/</a></i>. Don&#8217;t mix up MFS (Paragon), Pro and ScanExpress models! They&#8217;re completely different. Check the exact model name! Note that most of the above scanners come with a SCSI interface. The only non-SCSI scanners that have some support at this point is the 600 II N and 600 II EP scanners. The former one comes with its own parallel port adapter (i.e., it does <i>not</i> attach to the printer port). Both scanners use the SCSI protocol internally, too. More info on how to use these parallel port scanners can be found below in section <code>PARALLEL PORT SCANNERS</code>. Other parallel port scanners are not supported by this backend but you may be successful using the Mustek parallel port backend mustek_pp, see <code><a href="/docs/linux/man/5-sane-mustek_pp/">sane-mustek_pp</a></code>(5). USB scanners are also not supported by this backend but the ma1509, mustek_usb, gt68xx, and plustek backends include support for some of them, see <code><a href="/docs/linux/man/5-sane-ma1509/">sane-ma1509</a></code>(5), <code><a href="/docs/linux/man/5-sane-mustek_usb/">sane-mustek_usb</a></code>(5), <code><a href="/docs/linux/man/5-sane-gt68xx/">sane-gt68xx</a></code>(5), and <code><a href="/docs/linux/man/5-sane-plustek/">sane-plustek</a></code>(5). Mustek scanners have no protection against exceeding the physical scan area height. That is, if a scan is attempted with a height that exceeds the height of the scan surface, the scanner begins making loud noises and the scan mechanism may be damaged. Thus, if you hear such a noise, IMMEDIATELY turn off the scanner. This shouldn&#8217;t happen if your scanner is in the list of known scanners. There is more information in the <i>/usr/share/doc/libsane/PROBLEMS</i> file. If you own a Mustek (or Trust) scanner other than the ones listed above that works with this backend, please let us know by sending the scanner&#8217;s exact model name (look at the front and back of the scanner) and a debug output to <i>sane-devel [at] alioth-lists.debian.net</i>. You can get the debug output by setting the environment variable <code>SANE_DEBUG_MUSTEK</code> to 5 and showing the list of available scanners with <i>scanimage -L</i>. Please send all of it to the mailing list. You must be subscribed to sane-devel before you can send mail to the list. See <i><a rel="nofollow" href="http://www.sane-project.org/mailing-lists.html">http://www.sane-project.org/mailing-lists.html</a></i> for details. </p>
@@ -53,14 +53,14 @@ description: "sane-mustek – SANE backend for Mustek SCSI flatbed scanners (and
 <p> Finally, <code>force-wait</code> is a global option. If set, the backend will wait until the device is ready before sending the inquiry command. Further more the backend will force the scan slider to return to its starting position (not implemented for all scanners). This option may be necessary with the 600 II N or when <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1) is used multiple times (e.g. in scripts). The default is off (not set). </p>
 <p> A sample configuration file is shown below: </p>
 <dl>
-<dd># limit strip height of all scanners to 1.5 inches:<br />
+<dd># limit strip height of all scanners to 1.5 inches:<br/>
  option strip-height 1.5 </dd>
-<p> /dev/scanner # first Mustek scanner<br />
- # 1 MB buffer for /dev/scanner:<br />
- option buffersize 1024<br />
- /dev/sge # second Mustek scanner<br />
- # turn on fixes for /dev/sge:<br />
- option lineart-fix<br />
+<p> /dev/scanner # first Mustek scanner<br/>
+ # 1 MB buffer for /dev/scanner:<br/>
+ option buffersize 1024<br/>
+ /dev/sge # second Mustek scanner<br/>
+ # turn on fixes for /dev/sge:<br/>
+ option lineart-fix<br/>
  option linedistance-fix</dl>
 <h2>Scsi Adapter Tips</h2>
 <p>You need a SCSI adapter for the SCSI scanners. Even if the connector is the same as that of parallel port scanners, connecting it to the computers parallel port will NOT work. </p>
@@ -103,8 +103,8 @@ description: "sane-mustek – SANE backend for Mustek SCSI flatbed scanners (and
 <p>Example: export SANE_DEBUG_MUSTEK=4 </p>
 </dl>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/1-sane-find-scanner/">sane-find-scanner</a></code>(1), <code><a href="/docs/linux/man/5-sane-scsi/">sane-scsi</a></code>(5), <code><a href="/docs/linux/man/5-sane-mustek_usb/">sane-mustek_usb</a></code>(5), <code><a href="/docs/linux/man/5-sane-gt68xx/">sane-gt68xx</a></code>(5), <code><a href="/docs/linux/man/5-sane-plustek/">sane-plustek</a></code>(5), <code><a href="/docs/linux/man/5-sane-mustek_pp/">sane-mustek_pp</a></code>(5), <code><a href="/docs/linux/man/5-sane-ma1509/">sane-ma1509</a></code>(5), <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1), <code>xscanimage</code>(1)<br />
- <i>/usr/share/doc/libsane/mustek/mustek.CHANGES</i><br />
+<p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/1-sane-find-scanner/">sane-find-scanner</a></code>(1), <code><a href="/docs/linux/man/5-sane-scsi/">sane-scsi</a></code>(5), <code><a href="/docs/linux/man/5-sane-mustek_usb/">sane-mustek_usb</a></code>(5), <code><a href="/docs/linux/man/5-sane-gt68xx/">sane-gt68xx</a></code>(5), <code><a href="/docs/linux/man/5-sane-plustek/">sane-plustek</a></code>(5), <code><a href="/docs/linux/man/5-sane-mustek_pp/">sane-mustek_pp</a></code>(5), <code><a href="/docs/linux/man/5-sane-ma1509/">sane-ma1509</a></code>(5), <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1), <code>xscanimage</code>(1)<br/>
+ <i>/usr/share/doc/libsane/mustek/mustek.CHANGES</i><br/>
  <i><a rel="nofollow" href="http://www.meier-geinitz.de/sane/mustek-backend/">http://www.meier-geinitz.de/sane/mustek-backend/</a></i> </p>
 <h2>Author</h2>
 <p>David Mosberger, Andreas Czechanowski, Andreas Bolsch (SE extensions), Henning Meier-Geinitz, James Perry (600 II EP).</p>

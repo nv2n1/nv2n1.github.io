@@ -28,5 +28,5 @@ description: "XtAddGrab, XtRemoveGrab – redirect user input to a modal widget"
 <p> Regardless of where on the screen they occur, remap events are always delivered to the most recent widget in the active subset of the cascade that has spring_loaded <code>True</code>, if any such widget exists. </p>
 <p> The <code>XtRemoveGrab</code> function removes widgets from the modal cascade starting at the most recent widget up to and including the specified widget. It issues an error if the specified widget is not on the modal cascade.</p>
 <h2>See Also</h2>
-<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

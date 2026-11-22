@@ -13,8 +13,8 @@ description: "glutSolidTeapot – Draw a solid teapot."
 <h2>Synopsis</h2>
 <p>In openglut.h Ft void Fn glutSolidTeapot GLdouble size</p>
 <h2>Parameters</h2>
-<p>Bf Em<br />
-&nbsp;<wbr>size Ef<br />
+<p>Bf Em<br/>
+&nbsp;<wbr>size Ef<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Scale factor.</p>
 <h2>Description</h2>
 <p>Draws the standard Teapot, solid shaded, using OpenGL evaluators. This is the classic &quot;Utah Teapot&quot; of computer graphics. The base should lie in the xy-plane with &quot;up&quot; being along the positive z axis. </p>

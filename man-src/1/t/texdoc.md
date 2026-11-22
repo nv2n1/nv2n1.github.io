@@ -10,7 +10,7 @@ description: "texdoc – find & view documentation in TeX Live"
 
 <p> <code>texdoc</code> &#8211; find &amp; view documentation in TeX Live </p>
 <h2>SYNOPSIS</h2>
-<p> <code>texdoc</code> [OPTION]&#8230; NAME&#8230;<br />
+<p> <code>texdoc</code> [OPTION]&#8230; NAME&#8230;<br/>
  <code>texdoc</code> [OPTION]&#8230; ACTION</p>
 <h2>DESCRIPTION</h2>
 <p> Try to find appropriate TeX documentation for the specified NAME(s). Alternatively, perform the given ACTION and exit.</p>
@@ -37,7 +37,7 @@ description: "texdoc – find & view documentation in TeX Live"
 <dt><code>-D</code>, <code>&#8211;debug</code></dt>
 <dd> Activate all debug output (equal to &quot;&#8211;debug=all&quot;).</dd>
 <dt><code>-d</code> LIST, <code>&#8211;debug</code>=LIST</dt>
-<dd> Activate debug output restricted to the categories specified in LIST.<br />
+<dd> Activate debug output restricted to the categories specified in LIST.<br/>
  Available categories: <code>config</code>, <code>files</code>, <code>search</code>, <code>score</code>, <code>texdocs</code>, <code>tlpdb</code>, <code>version</code>, <code>view</code>, and <code>all</code> to activate all of these.</dd>
 <dt><code>-c</code> NAME=VALUE</dt>
 <dd> Set configuration item NAME to VALUE.</dd></dl>
@@ -86,12 +86,12 @@ description: "texdoc – find & view documentation in TeX Live"
 <dt>3</dt>
 <dd> No documentation found.</dd></dl>
 <h2>REPORTING BUGS</h2>
-<p> Report bugs to <i>texdoc [at] tug.org</i>.<br />
- Texdoc home page: <i><a rel="nofollow" href="http://tug.org/texdoc/">http://tug.org/texdoc/</a></i><br />
+<p> Report bugs to <i>texdoc [at] tug.org</i>.<br/>
+ Texdoc home page: <i><a rel="nofollow" href="http://tug.org/texdoc/">http://tug.org/texdoc/</a></i><br/>
  Source: <i><a rel="nofollow" href="https://github.com/TeX-Live/texdoc">https://github.com/TeX-Live/texdoc</a></i></p>
 <h2>COPYRIGHT</h2>
-<p> Copyright 2008-2021 Manuel Pe&#8217;gourie&#8217;-Gonnard, Takuto Asakura, the TeX Live Team.<br />
- License: GNU GPL version 3 or later <i><a rel="nofollow" href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a></i>.<br />
+<p> Copyright 2008-2021 Manuel Pe&#8217;gourie&#8217;-Gonnard, Takuto Asakura, the TeX Live Team.<br/>
+ License: GNU GPL version 3 or later <i><a rel="nofollow" href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a></i>.<br/>
  This is free software: you are free to change and redistribute it.</p>
 <h2>SEE ALSO</h2>
 <p> The full documentation is maintained as a PDF manual. The command</p>

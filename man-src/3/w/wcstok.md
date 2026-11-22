@@ -38,9 +38,9 @@ wchar_t *wcstok(wchar_t *wcs, const wchar_t *delim, wchar_t **ptr);</code></pre>
 <p> The original <i>wcs</i> wide-character string is destructively modified during the operation.  </p>
 <h2>EXAMPLES</h2>
 <p> The following code loops over the tokens contained in a wide-character string. </p>
-<p> wchar_t *wcs = ...; wchar_t *token; wchar_t *state; for (token = wcstok(wcs, &quot; \t\n&quot;, &amp;state); <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;token&nbsp;!=&nbsp;NULL; <br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;token&nbsp;=&nbsp;wcstok(NULL,&nbsp;&quot;&nbsp;\t\n&quot;,&nbsp;&amp;state))&nbsp;{ <br />
+<p> wchar_t *wcs = ...; wchar_t *token; wchar_t *state; for (token = wcstok(wcs, &quot; \t\n&quot;, &amp;state); <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;token&nbsp;!=&nbsp;NULL; <br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;token&nbsp;=&nbsp;wcstok(NULL,&nbsp;&quot;&nbsp;\t\n&quot;,&nbsp;&amp;state))&nbsp;{ <br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;... }  </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-strtok/">strtok</a></code>(3), <code><a href="/docs/linux/man/3-wcschr/">wcschr</a></code>(3)  </p>

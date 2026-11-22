@@ -12,20 +12,20 @@ description: "msmtp – An SMTP client"
 <h2>SYNOPSIS</h2>
 <dl>
 <dt>Sendmail mode (default):</dt>
-<dd> <code>msmtp</code> [option&#8230;] [&#8211;] recipient&#8230;<br />
+<dd> <code>msmtp</code> [option&#8230;] [&#8211;] recipient&#8230;<br/>
  <code>msmtp</code> [option&#8230;] -t [&#8211;] [recipient&#8230;]</dd>
 <dt>Server information mode:</dt>
 <dd> <code>msmtp</code> [option&#8230;] &#8211;serverinfo</dd>
 <dt>Remote Message Queue Starting mode:</dt>
 <dd> <code>msmtp</code> [option&#8230;] &#8211;rmqs=<i>host</i>|<i>@domain</i>|<i>#queue</i></dd></dl>
 <h2>DESCRIPTION</h2>
-<p> In the default sendmail mode, msmtp reads a mail from standard input and sends it to an SMTP server for delivery.<br />
- In server information mode, msmtp prints information about an SMTP server.<br />
+<p> In the default sendmail mode, msmtp reads a mail from standard input and sends it to an SMTP server for delivery.<br/>
+ In server information mode, msmtp prints information about an SMTP server.<br/>
  In Remote Message Queue Starting mode, msmtp sends a Remote Message Queue Starting request for a host, domain, or queue to an SMTP server.</p>
 <h2>EXIT STATUS</h2>
 <p> The standard sendmail exit status codes are used, as defined in sysexits.h.</p>
 <h2>OPTIONS</h2>
-<p> Options override configuration file settings.<br />
+<p> Options override configuration file settings.<br/>
  They are compatible with sendmail where appropriate.</p>
 <dl>
 <dt><code>General options</code></dt>
@@ -104,7 +104,7 @@ description: "msmtp – An SMTP client"
 <dt>&#8211;auto-from[=(<i>on</i>|<i>off</i>)]</dt>
 <dd> Enable or disable automatic envelope-from addresses. The default is off. See the <code>auto_from</code> command below.</dd>
 <dt>-f, &#8211;from=<i>address</dt>
-<dd> Set the envelope-from address. It is only used when auto_from</i> is off.<br />
+<dd> Set the envelope-from address. It is only used when auto_from</i> is off.<br/>
  If no account was chosen yet (with <code>&#8211;account</code> or <code>&#8211;host</code>), this option will choose the first account that has the given envelope-from address (set with the <code>from</code> command). If no such account is found, &quot;default&quot; is used.</dd>
 <dt>&#8211;maildomain=[<i>domain</i>]</dt>
 <dd> Set the domain part for generated envelope-from addresses. It is only used when <i>auto_from</i> is on. See the <code>maildomain</code> command below.</dd>
@@ -128,7 +128,7 @@ description: "msmtp – An SMTP client"
 <dd> This marks the end of options. All following arguments will be treated as recipient addresses, even if they start with a `-&#8216;.</dd></dl>
 </dl>
 </dl>
-<p> The following options are accepted but ignored for sendmail compatibility:<br />
+<p> The following options are accepted but ignored for sendmail compatibility:<br/>
  -B<i>type</i>, -bm, -F<i>name</i>, -G, -h<i>N</i>, -i, -L <i>tag</i>, -m, -n, -O <i>option=value</i>, -o<i>x</i> <i>value</i></p>
 <h2>USAGE</h2>
 <p> Normally, a system wide configuration file and/or a user configuration file contain information about which SMTP server to use (and how to use it), but almost all settings can also be configured on the command line. </p>
@@ -145,12 +145,12 @@ description: "msmtp – An SMTP client"
 <p> If none of the above options is used (or if no account has a matching <code>from</code> command), then the account &quot;default&quot; is used. </p>
 <p> Skip to the EXAMPLES section for a quick start.</p>
 <h2>CONFIGURATION FILES</h2>
-<p> If it exists and is readable, a system wide configuration file SYSCONFDIR/msmtprc will be loaded, where SYSCONFDIR depends on your platform. Use <code>&#8211;version</code> to find out which directory is used.<br />
+<p> If it exists and is readable, a system wide configuration file SYSCONFDIR/msmtprc will be loaded, where SYSCONFDIR depends on your platform. Use <code>&#8211;version</code> to find out which directory is used.<br/>
  If it exists and is readable, a user configuration file will be loaded (~/.msmtprc by default). Accounts defined in the user configuration file override accounts from the system configuration file. The user configuration file must have no more permissions than user read/write. Configuration data from either file can be changed by command line options. </p>
-<p> A configuration file is a simple text file. Empty lines and comment lines (whose first non-blank character is `#&#8217;) are ignored.<br />
- Every other line must contain a command and may contain an argument to that command.<br />
- The argument may be enclosed in double quotes (&quot;), for example if its first or last character is a blank.<br />
- If the first character of a filename is the tilde (~), this tilde will be replaced by HOME. If a command accepts the argument <i>on</i>, it also accepts an empty argument and treats that as if it was <i>on</i>.<br />
+<p> A configuration file is a simple text file. Empty lines and comment lines (whose first non-blank character is `#&#8217;) are ignored.<br/>
+ Every other line must contain a command and may contain an argument to that command.<br/>
+ The argument may be enclosed in double quotes (&quot;), for example if its first or last character is a blank.<br/>
+ If the first character of a filename is the tilde (~), this tilde will be replaced by HOME. If a command accepts the argument <i>on</i>, it also accepts an empty argument and treats that as if it was <i>on</i>.<br/>
  Commands form groups. Each group begins with the <code>account</code> command and defines the settings for one SMTP server. </p>
 <p> Skip to the EXAMPLES section for a quick start. </p>
 <p> Commands are as follows:</p>
@@ -158,14 +158,14 @@ description: "msmtp – An SMTP client"
 <dt>defaults</dt>
 <dd> Set defaults. The following configuration commands will set default values for all following account definitions in the current configuration file.</dd>
 <dt>account <i>name</i> [:<i>account</i>[,&#8230;]]</dt>
-<dd> Start a new account definition with the given name. The current default values are filled in.<br />
+<dd> Start a new account definition with the given name. The current default values are filled in.<br/>
  If a colon and a list of previously defined accounts is given after the account name, the new account, with the filled in default values, will inherit all settings from the accounts in the list.</dd>
 <dt>host <i>hostname</i></dt>
 <dd> The SMTP server to send the mail to. The argument may be a host name or a network address. Every account definition must contain this command.</dd>
 <dt>port <i>number</i></dt>
 <dd> The port that the SMTP server listens on. The default port will be acquired from your operating system&#8217;s service database: for SMTP, the service is &quot;smtp&quot; (default port 25), unless TLS without STARTTLS is used, in which case it is &quot;smtps&quot; (465). For LMTP, it is &quot;lmtp&quot;.</dd>
 <dt>timeout (<i>off</i>|<i>seconds</i>)</dt>
-<dd> Set or unset a network timeout, in seconds. The argument <i>off</i> means that no timeout will be set, which means that the operating system default will be used.<br />
+<dd> Set or unset a network timeout, in seconds. The argument <i>off</i> means that no timeout will be set, which means that the operating system default will be used.<br/>
  For compatibility with older versions, <code>connect_timeout</code> is accepted as an alias for this command.</dd>
 <dt>protocol (<i>smtp</i>|<i>lmtp</i>)</dt>
 <dd> Set the protocol to use. Currently only SMTP and LMTP are supported. SMTP is the default. See the <code>port</code> command above for default ports.</dd>
@@ -176,12 +176,12 @@ description: "msmtp – An SMTP client"
 <dt>maildomain [<i>domain</i>]</dt>
 <dd> Set a domain part for the generation of an envelope-from address. This is only used when <i>auto_from</i> is on. The domain may be empty.</dd>
 <dt>auth [(<i>on</i>|<i>off</i>|<i>method</i>)]</dt>
-<dd> This command enables or disables SMTP authentication. You should not need to set the method yourself; with the argument <i>on</i>, msmtp will choose the best one available for you (see below).<br />
- You probably need to set a username (with <code>user</code>) and password (with <code>password</code>). If no password is set but one is needed during authentication, msmtp will try to find it in ~/.netrc. If that fails, it will try to find it in SYSCONFDIR/netrc (use <code>&#8211;version</code> to find out what SYSCONFDIR is on your platform). If that fails, it will try to get it from a system specific keyring (if available). If that fails but a controlling terminal is available, msmtp will prompt you for it.<br />
- Currently supported keyrings are the Gnome Keyring and the Mac OS X Keychain. The script <code>msmtp-gnome-tool.py</code> can be used to manage Gnome Keyring passwords for msmtp. To manage Mac OS X Keychain passwords, use the Keychain Access GUI application. The <i>account name</i> is same as the msmtp <code>user</code> argument. The <i>keychain item name</i> is <code>smtp://&lt;hostname&gt;</code> where <code>&lt;hostname&gt;</code> matches the msmtp <code>host</code> argument.<br />
- Available authentication methods are <i>plain</i>, <i>scram-sha-1</i>, <i>cram-md5</i>, <i>gssapi</i>, <i>external</i>, <i>digest-md5</i>, <i>login</i>, and <i>ntlm</i>. Note that one or more of these methods may be unavailable due to lack of support in the underlying authentication library. Use the <code>&#8211;version</code> option to find out which methods are supported.<br />
- The <i>plain</i> and <i>login</i> methods send your authentication data in cleartext over the net, and the <i>ntlm</i> method may be vulnerable to attacks. These methods should therefore only be used together with the <code>tls</code> command.<br />
- If you don&#8217;t choose the method yourself, msmtp chooses the best secure method that the SMTP server supports. Secure means that your authentication data will not be sent in cleartext (or in an easily decryptable form) over the net. For TLS encrypted connections, every authentication method is secure in this sense. If TLS is not active, only gssapi, scram-sha-1, and cram-md5 are secure in this sense.<br />
+<dd> This command enables or disables SMTP authentication. You should not need to set the method yourself; with the argument <i>on</i>, msmtp will choose the best one available for you (see below).<br/>
+ You probably need to set a username (with <code>user</code>) and password (with <code>password</code>). If no password is set but one is needed during authentication, msmtp will try to find it in ~/.netrc. If that fails, it will try to find it in SYSCONFDIR/netrc (use <code>&#8211;version</code> to find out what SYSCONFDIR is on your platform). If that fails, it will try to get it from a system specific keyring (if available). If that fails but a controlling terminal is available, msmtp will prompt you for it.<br/>
+ Currently supported keyrings are the Gnome Keyring and the Mac OS X Keychain. The script <code>msmtp-gnome-tool.py</code> can be used to manage Gnome Keyring passwords for msmtp. To manage Mac OS X Keychain passwords, use the Keychain Access GUI application. The <i>account name</i> is same as the msmtp <code>user</code> argument. The <i>keychain item name</i> is <code>smtp://&lt;hostname&gt;</code> where <code>&lt;hostname&gt;</code> matches the msmtp <code>host</code> argument.<br/>
+ Available authentication methods are <i>plain</i>, <i>scram-sha-1</i>, <i>cram-md5</i>, <i>gssapi</i>, <i>external</i>, <i>digest-md5</i>, <i>login</i>, and <i>ntlm</i>. Note that one or more of these methods may be unavailable due to lack of support in the underlying authentication library. Use the <code>&#8211;version</code> option to find out which methods are supported.<br/>
+ The <i>plain</i> and <i>login</i> methods send your authentication data in cleartext over the net, and the <i>ntlm</i> method may be vulnerable to attacks. These methods should therefore only be used together with the <code>tls</code> command.<br/>
+ If you don&#8217;t choose the method yourself, msmtp chooses the best secure method that the SMTP server supports. Secure means that your authentication data will not be sent in cleartext (or in an easily decryptable form) over the net. For TLS encrypted connections, every authentication method is secure in this sense. If TLS is not active, only gssapi, scram-sha-1, and cram-md5 are secure in this sense.<br/>
  The <i>external</i> is special: the actual authentication happens outside of the SMTP protocol, typically by sending a TLS client certificate (see the <code>tls_cert_file</code> command). The <i>external</i> method merely confirms that this authentication succeeded for the given user (or, if no user name is given, confirms that authentication succeeded). This authentication method is not chosen automatically; you have to request it manually.</dd>
 <dt>user [<i>username</i>]</dt>
 <dd> Set your user name for SMTP authentication. An empty argument unsets the user name. Authentication must be activated with the <code>auth</code> command.</dd>
@@ -192,28 +192,28 @@ description: "msmtp – An SMTP client"
 <dt>ntlmdomain [<i>domain</i>]</dt>
 <dd> Set a domain for the <i>ntlm</i> authentication method. The default is to use no domain (equivalent to an empty argument), but some servers seem to require one, even if it is an arbitrary string.</dd>
 <dt>tls [(<i>on</i>|<i>off</i>)]</dt>
-<dd> This command enables or disables TLS (also known as SSL) encrypted connections to the SMTP server. Not every server supports TLS.<br />
+<dd> This command enables or disables TLS (also known as SSL) encrypted connections to the SMTP server. Not every server supports TLS.<br/>
  With TLS/SSL, the connection with the SMTP server will be protected against eavesdroppers and man-in-the-middle attacks. To use TLS/SSL, it is required to either use the <code>tls_trust_file</code> command (highly recommended) or to disable <code>tls_certcheck</code>.</dd>
 <dt>tls_starttls [(<i>on</i>|<i>off</i>)]</dt>
-<dd> By default, TLS encryption is activated using the STARTTLS SMTP command. By disabling this, TLS encryption is immediately started instead (this is known as SMTP tunneled through TLS/SSL). The default port is set to 465 for this mode of operation.<br />
+<dd> By default, TLS encryption is activated using the STARTTLS SMTP command. By disabling this, TLS encryption is immediately started instead (this is known as SMTP tunneled through TLS/SSL). The default port is set to 465 for this mode of operation.<br/>
  For compatibility with older versions, <code>tls_nostarttls</code> is accepted as an alias for <code>tls_starttls off</code>.</dd>
 <dt>tls_trust_file [<i>file</i>]</dt>
-<dd> This command activates strict server certificate verification.<br />
- The filename must be the absolute path name of a file in PEM format containing one or more certificates of trusted Certification Authorities (CAs).<br />
+<dd> This command activates strict server certificate verification.<br/>
+ The filename must be the absolute path name of a file in PEM format containing one or more certificates of trusted Certification Authorities (CAs).<br/>
  On Debian based systems, you can install the <code>ca-certificates</code> package and use the file <code>/etc/ssl/certs/ca-certificates.crt</code>.</dd>
 <dt>tls_crl_file [<i>file</i>]</dt>
 <dd> This command sets or unsets a certificate revocation list (CRL) file for TLS, to be used during strict server certificate verification as enabled by the <code>tls_trust_file</code> command. This allows the verification procedure to detect revoked certificates.</dd>
 <dt>tls_fingerprint [<i>fingerprint</i>]</dt>
-<dd> This command sets or unsets the fingerprint of a particular TLS certificate. This certificate will then be trusted, regardless of its contents. This can be used to trust broken certificates (e.g. with a non-matching hostname) or in situations where <code>tls_trust_file</code> cannot be used for some reason.<br />
- You can give either an SHA1 (recommended) or an MD5 fingerprint in the format 01:23:45:67:&#8230;<br />
+<dd> This command sets or unsets the fingerprint of a particular TLS certificate. This certificate will then be trusted, regardless of its contents. This can be used to trust broken certificates (e.g. with a non-matching hostname) or in situations where <code>tls_trust_file</code> cannot be used for some reason.<br/>
+ You can give either an SHA1 (recommended) or an MD5 fingerprint in the format 01:23:45:67:&#8230;<br/>
  You can use <code>&#8211;serverinfo &#8211;tls &#8211;tls-certcheck=off</code> to get the peer certificate&#8217;s fingerprints.</dd>
 <dt>tls_key_file [<i>file</i>]</dt>
 <dd> This command (together with the <code>tls_cert_file</code> command) enables msmtp to send a client certificate to the SMTP server if requested. The file must contain the private key of a certificate in PEM format. An empty argument disables this feature.</dd>
 <dt>tls_cert_file [<i>file</i>]</dt>
 <dd> This command (together with the <code>tls_key_file</code> command) enables msmtp to send a client certificate to the SMTP server if requested. The file must contain a certificate in PEM format. An empty argument disables this feature.</dd>
 <dt>tls_certcheck [(<i>on</i>|<i>off</i>)]</dt>
-<dd> This command enables or disables checks for the server certificate.<br />
- <code>WARNING</code>: When the checks are disabled, TLS/SSL sessions will be vulnerable to man-in-the-middle attacks!<br />
+<dd> This command enables or disables checks for the server certificate.<br/>
+ <code>WARNING</code>: When the checks are disabled, TLS/SSL sessions will be vulnerable to man-in-the-middle attacks!<br/>
  For compatibility with older versions, <code>tls_nocertcheck</code> is accepted as an alias for <code>tls_certcheck off</code>.</dd>
 <dt>tls_force_sslv3 [(<i>on</i>|<i>off</i>)]</dt>
 <dd> Force TLS/SSL version SSLv3. This might be needed to use SSL with some old and broken servers. Do not use this unless you have to.</dd>
@@ -230,73 +230,73 @@ description: "msmtp – An SMTP client"
 <dt>keepbcc [(<i>on</i>|<i>off</i>)]</dt>
 <dd> This command controls whether to remove or keep the Bcc header when sending a mail. The default is to remove it.</dd>
 <dt>logfile [<i>file</i>]</dt>
-<dd> An empty argument disables logging (this is the default).<br />
- When logging is enabled by choosing a log file, msmtp will append one line to the log file for each mail it tries to send via the account that this log file was chosen for.<br />
- The line will include the following information: date and time, host name of the SMTP server, whether TLS was used, whether authentication was used, authentication user name (only if authentication is used), envelope-from address, recipient addresses, size of the mail as transferred to the server (only if the delivery succeeded), SMTP status code and SMTP error message (only in case of failure and only if available), error message (only in case of failure and only if available), exit code (from sysexits.h; EX_OK indicates success).<br />
+<dd> An empty argument disables logging (this is the default).<br/>
+ When logging is enabled by choosing a log file, msmtp will append one line to the log file for each mail it tries to send via the account that this log file was chosen for.<br/>
+ The line will include the following information: date and time, host name of the SMTP server, whether TLS was used, whether authentication was used, authentication user name (only if authentication is used), envelope-from address, recipient addresses, size of the mail as transferred to the server (only if the delivery succeeded), SMTP status code and SMTP error message (only in case of failure and only if available), error message (only in case of failure and only if available), exit code (from sysexits.h; EX_OK indicates success).<br/>
  If the filename is a dash (-), msmtp prints the log line to the standard output.</dd>
 <dt>syslog [(<i>on</i>|<i>off</i>|<i>facility</i>)]</dt>
-<dd> Enable or disable syslog logging. The facility can be one of LOG_USER, LOG_MAIL, LOG_LOCAL0, &#8230;, LOG_LOCAL7. The default is LOG_USER.<br />
- Each time msmtp tries to send a mail via the account that contains this syslog command, it will log one entry to the syslog service with the chosen facility.<br />
+<dd> Enable or disable syslog logging. The facility can be one of LOG_USER, LOG_MAIL, LOG_LOCAL0, &#8230;, LOG_LOCAL7. The default is LOG_USER.<br/>
+ Each time msmtp tries to send a mail via the account that contains this syslog command, it will log one entry to the syslog service with the chosen facility.<br/>
  The line will include the following information: host name of the SMTP server, whether TLS was used, whether authentication was used, envelope-from address, recipient addresses, size of the mail as transferred to the server (only if the delivery succeeded), SMTP status code and SMTP error message (only in case of failure and only if available), error message (only in case of failure and only if available), exit code (from sysexits.h; EX_OK indicates success). </dd>
 <dt>aliases [<i>file</i>]</dt>
 <dd> Replace local recipients with addresses in the aliases file. The aliases file is a plain text file containing mappings between a local address and a list of domain addresses. A local address is defined as one without an `@&#8217; character and a domain address is one with an `@&#8217; character. The mappings are of the form: </dd>
-<p>&nbsp;<wbr>local: someone [at] example.com, person [at] domain.example<br />
- Multiple domain addresses are separated with commas. Comments start with `#&#8217; and continue to the end of the line.<br />
- The local address <i>default</i> has special significance and is matched if the local address is not found in the aliases file. If no <i>default</i> alias is found, then the local address is left as is.<br />
+<p>&nbsp;<wbr>local: someone [at] example.com, person [at] domain.example<br/>
+ Multiple domain addresses are separated with commas. Comments start with `#&#8217; and continue to the end of the line.<br/>
+ The local address <i>default</i> has special significance and is matched if the local address is not found in the aliases file. If no <i>default</i> alias is found, then the local address is left as is.<br/>
  An empty argument to the aliases command disables the replacement of local addresses. This is the default.
 </dl>
 <h2>EXAMPLES</h2>
 <p> <code>Configuration file</code> </p>
-<p> # Set default values for all following accounts.<br />
- defaults<br />
- tls on<br />
- tls_trust_file /etc/ssl/certs/ca-certificates.crt<br />
+<p> # Set default values for all following accounts.<br/>
+ defaults<br/>
+ tls on<br/>
+ tls_trust_file /etc/ssl/certs/ca-certificates.crt<br/>
  logfile ~/.msmtp.log </p>
-<p> # A freemail service<br />
- account freemail<br />
- host smtp.freemail.example<br />
- from joe_smith [at] freemail.example<br />
- auth on<br />
- user joe.smith<br />
+<p> # A freemail service<br/>
+ account freemail<br/>
+ host smtp.freemail.example<br/>
+ from joe_smith [at] freemail.example<br/>
+ auth on<br/>
+ user joe.smith<br/>
  password secret </p>
-<p> # A second mail address at the same freemail service<br />
- account freemail2 : freemail<br />
+<p> # A second mail address at the same freemail service<br/>
+ account freemail2 : freemail<br/>
  from joey [at] freemail.example </p>
-<p> # The SMTP server of the provider.<br />
- account provider<br />
- host mail.provider.example<br />
- from smithjoe [at] provider.example<br />
- auth on<br />
- user 123456789<br />
+<p> # The SMTP server of the provider.<br/>
+ account provider<br/>
+ host mail.provider.example<br/>
+ from smithjoe [at] provider.example<br/>
+ auth on<br/>
+ user 123456789<br/>
  passwordeval gpg -d ~/.msmtp.password.gpg </p>
-<p> # Set a default account<br />
+<p> # Set a default account<br/>
  account default : provider </p>
 <p> <code>Using msmtp with Mutt</code> </p>
-<p> Create a configuration file for msmtp and add the following lines to your Mutt configuration file:<br />
- <code>set sendmail=/path/to/msmtp</code><br />
- <code>set use_from=yes</code><br />
- <code>set realname=Your Name</code><br />
- <code>set from=you [at] example.com</code><br />
- <code>set envelope_from=yes</code><br />
- The envelope_from=yes option lets Mutt use the <code>-f</code> option of msmtp. Therefore msmtp chooses the first account that matches the from address you [at] example.com.<br />
- Alternatively, you can use the <code>-a</code> option:<br />
- <code>set sendmail=/path/to/msmtp -a my-account</code><br />
- Or set everything from the command line (but note that you cannot set a password this way):<br />
+<p> Create a configuration file for msmtp and add the following lines to your Mutt configuration file:<br/>
+ <code>set sendmail=/path/to/msmtp</code><br/>
+ <code>set use_from=yes</code><br/>
+ <code>set realname=Your Name</code><br/>
+ <code>set from=you [at] example.com</code><br/>
+ <code>set envelope_from=yes</code><br/>
+ The envelope_from=yes option lets Mutt use the <code>-f</code> option of msmtp. Therefore msmtp chooses the first account that matches the from address you [at] example.com.<br/>
+ Alternatively, you can use the <code>-a</code> option:<br/>
+ <code>set sendmail=/path/to/msmtp -a my-account</code><br/>
+ Or set everything from the command line (but note that you cannot set a password this way):<br/>
  <code>set sendmail=/path/to/msmtp &#8211;host=mailhub -f me [at] example.com &#8211;tls</code> <code>&#8211;tls-trust-file=trust.crt</code> </p>
-<p> If you have multiple mail accounts in your msmtp configuration file and let Mutt use the <code>-f</code> option to choose the right one, you can easily switch accounts in Mutt with the following Mutt configuration lines:<br />
- <code>macro generic&nbsp;<wbr>&lt;esc&gt;1 :set from=you [at] example.com</code><br />
- <code>macro generic&nbsp;<wbr>&lt;esc&gt;2 :set from=you [at] your-employer.example</code><br />
+<p> If you have multiple mail accounts in your msmtp configuration file and let Mutt use the <code>-f</code> option to choose the right one, you can easily switch accounts in Mutt with the following Mutt configuration lines:<br/>
+ <code>macro generic&nbsp;<wbr>&lt;esc&gt;1 :set from=you [at] example.com</code><br/>
+ <code>macro generic&nbsp;<wbr>&lt;esc&gt;2 :set from=you [at] your-employer.example</code><br/>
  <code>macro generic&nbsp;<wbr>&lt;esc&gt;3 :set from=you [at] some-other-provider.example</code> </p>
 <p> <code>Using msmtp with mail</code> </p>
-<p> Define a default account, and put the following in your ~/.mailrc:<br />
+<p> Define a default account, and put the following in your ~/.mailrc:<br/>
  <code>set sendmail=/path/to/msmtp</code> </p>
 <p> <code>Aliases file</code> </p>
 <p> # Example aliases file </p>
-<p> # Send root to Joe and Jane<br />
+<p> # Send root to Joe and Jane<br/>
  root: joe_smith [at] example.com, jane_chang [at] example.com </p>
-<p> # Send cron to Mark<br />
+<p> # Send cron to Mark<br/>
  cron: mark_jones [at] example.com </p>
-<p> # Send everything else to admin<br />
+<p> # Send everything else to admin<br/>
  default: admin [at] domain.example </p>
 <h2>FILES</h2>
 <dl>
@@ -311,12 +311,12 @@ description: "msmtp – An SMTP client"
 <dt>USER, LOGNAME</dt>
 <dd> These variables override the user&#8217;s login name when constructing an envelope-from address. LOGNAME is only used if USER is unset.</dd>
 <dt>TMPDIR</dt>
-<dd> Directory to create temporary files in. If this is unset, a system specific default directory is used.<br />
+<dd> Directory to create temporary files in. If this is unset, a system specific default directory is used.<br/>
  A temporary file is only created when the <code>-t/&#8211;read-recipients</code> or <code>&#8211;read-envelope-from</code> option is used. The file is then used to buffer the headers of the mail (but not the body, so the file won&#8217;t get very large).</dd>
 <dt>EMAIL, SMTPSERVER</dt>
 <dd> These environment variables are used only if neither <code>&#8211;host</code> nor <code>&#8211;account</code> is used and there is no default account defined in the configuration files. In this case, the host name is taken from SMTPSERVER, and the envelope from address is taken from EMAIL, unless overridden by <code>&#8211;from</code> or <code>&#8211;read-envelope-from</code>. Currently SMTPSERVER must contain a plain host name (no URL), and EMAIL must contain a plain address (no names or additional information).</dd></dl>
 <h2>AUTHORS</h2>
-<p> msmtp was written by Martin Lambers &lt;marlam [at] marlam.de&gt;.<br />
+<p> msmtp was written by Martin Lambers &lt;marlam [at] marlam.de&gt;.<br/>
  Other authors are listed in the AUTHORS file in the source distribution.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mutt/">mutt</a></code>(1), <code><a href="/docs/linux/man/1-mail/">mail</a></code>(1), <code>sendmail</code>(8), <code><a href="/docs/linux/man/5-netrc/">netrc</a></code>(5) or <code><a href="/docs/linux/man/1-ftp/">ftp</a></code>(1) </p>

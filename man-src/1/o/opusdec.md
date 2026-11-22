@@ -43,7 +43,7 @@ description: "opusdec – decode audio from Opus format to WAV (or simple audio 
 <dl>
 <dt>
 </dt><dd> opusdec input.opus output.wav</dd></dl>
-<p> Play a file <code>input.opus</code> and force output at 48000 regardless of the original sampling rate<br />
+<p> Play a file <code>input.opus</code> and force output at 48000 regardless of the original sampling rate<br/>
  <i>(48kHz output may be faster, due to avoiding resampling and some sound hardware produces higher quality output when run at 48kHz)</i></p>
 <dl>
 <dt>
@@ -52,13 +52,13 @@ description: "opusdec – decode audio from Opus format to WAV (or simple audio 
 <dl>
 <dt>
 </dt><dd> opusdec &#8211;force-wav input.opus &#8211; | opusenc &#8211;bitrate 64 &#8211; output.opus</dd></dl>
-<p> Play an http stream <code><a rel="nofollow" href="http://icecast.somwhere.org:8000/stream.opus">http://icecast.somwhere.org:8000/stream.opus</a></code> with the help of curl on a system with pulseaudio<br />
+<p> Play an http stream <code><a rel="nofollow" href="http://icecast.somwhere.org:8000/stream.opus">http://icecast.somwhere.org:8000/stream.opus</a></code> with the help of curl on a system with pulseaudio<br/>
  <i>(press ctrl-c to quit)</i></p>
 <dl>
 <dt>
 </dt><dd> curl <a rel="nofollow" href="http://icecast.somwhere.org:8000/stream.opus">http://icecast.somwhere.org:8000/stream.opus</a> | padsp opusdec &#8211;</dd></dl>
 <h2>AUTHORS</h2>
-<p> Jean-Marc Valin &lt;jmvalin [at] jmvalin.ca&gt;<br />
+<p> Jean-Marc Valin &lt;jmvalin [at] jmvalin.ca&gt;<br/>
  Gregory Maxwell &lt;greg [at] xiph.org&gt; </p>
 <h2>BUGS</h2>
 <p> Opusdec does not currently reject all invalid files which it should reject. It also doesn&#8217;t provide very helpful output for the corrupted files it does reject. Use <code><a href="/docs/linux/man/1-opusinfo/">opusinfo</a></code>(1) for somewhat better diagnostics. </p>

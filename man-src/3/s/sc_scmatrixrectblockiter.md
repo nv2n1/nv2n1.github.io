@@ -12,19 +12,19 @@ description: "sc::SCMatrixRectBlockIter –"
 <p> Inherits <code>sc::SCMatrixBlockIter</code>.</p>
 <h3>Public Member Functions</h3>
 <p><code>SCMatrixRectBlockIter</code> (<code>SCMatrixRectBlock</code> *) </p>
-<p> int <code>i</code> ()<br />
- <i>Returns the row index. </i><br />
- int <code>j</code> ()<br />
- <i>Returns the column index. </i><br />
- double <code>get</code> ()<br />
- <i>Return the value of the current element. </i><br />
- void <code>set</code> (double)<br />
- <i>Set the current element to val. </i><br />
- <code>operator int</code> ()<br />
- <i>Return nonzero if there are more elements. </i><br />
- void <code>operator++</code> ()<br />
- <i>Move to the next element. </i><br />
- void <code>reset</code> ()<br />
+<p> int <code>i</code> ()<br/>
+ <i>Returns the row index. </i><br/>
+ int <code>j</code> ()<br/>
+ <i>Returns the column index. </i><br/>
+ double <code>get</code> ()<br/>
+ <i>Return the value of the current element. </i><br/>
+ void <code>set</code> (double)<br/>
+ <i>Set the current element to val. </i><br/>
+ <code>operator int</code> ()<br/>
+ <i>Return nonzero if there are more elements. </i><br/>
+ void <code>operator++</code> ()<br/>
+ <i>Move to the next element. </i><br/>
+ void <code>reset</code> ()<br/>
  <i>Start the iteration over. </i> </p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for MPQC from the source code.</p>

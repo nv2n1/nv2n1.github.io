@@ -55,7 +55,7 @@ description: "mysqlpump – a database backup program"
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> <code>mysqlpump</code> uses MySQL features introduced in MySQL 5.7, and thus assumes use with MySQL 5.7 or higher. </p>
 </dl>
 <p> <code>mysqlpump</code> requires at least the SELECT privilege for dumped tables, SHOW VIEW for dumped views, TRIGGER for dumped triggers, and LOCK TABLES if the <code>&#8211;single-transaction</code> option is not used. The SELECT privilege on the mysql system database is required to dump user definitions. Certain options might require other privileges as noted in the option descriptions. </p>
@@ -63,7 +63,7 @@ description: "mysqlpump – a database backup program"
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> A dump made using PowerShell on Windows with output redirection creates a file that has UTF-16 encoding: </p>
 <dl>
 <dt>
@@ -426,13 +426,13 @@ shell&gt; <code>mysql &lt; dump.sql</code>
 </tr>
 <tr VALIGN=top>
 <td> ON </td>
-<td> Add a SET statement to the output. An error occurs if<br />
+<td> Add a SET statement to the output. An error occurs if<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;GTIDs are not enabled on the server.
 </td>
 </tr>
 <tr VALIGN=top>
 <td> AUTO </td>
-<td> Add a SET statement to the output if GTIDs are<br />
+<td> Add a SET statement to the output if GTIDs are<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;enabled on the server.
 </td>
 </tr>
@@ -488,7 +488,7 @@ shell&gt; <code>mysql &lt; dump.sql</code>
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  If the OpenSSL FIPS Object Module is not available, the only permitted value for <code>&#8211;ssl-fips-mode</code> is OFF. In this case, setting <code>&#8211;ssl-fips-mode</code> to ON or STRICT causes the client to produce a warning at startup and to operate in non-FIPS mode. </dd>
 </dl>
 </dl>

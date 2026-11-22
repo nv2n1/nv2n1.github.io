@@ -10,12 +10,12 @@ description: "osm2pgsql – Openstreetmap data to PostgreSQL converter."
 
 <p> osm2pgsql &#8211; Openstreetmap data to PostgreSQL converter. </p>
 <h2>SYNOPSIS</h2>
-<p> <code>osm2pgsql</code> [<i>options</i>]<i> planet.osm</i><br />
- <code>osm2pgsql</code> [<i>options</i>]<i> planet.osm.{gz,bz2,pbf}</i><br />
+<p> <code>osm2pgsql</code> [<i>options</i>]<i> planet.osm</i><br/>
+ <code>osm2pgsql</code> [<i>options</i>]<i> planet.osm.{gz,bz2,pbf}</i><br/>
  <code>osm2pgsql</code> [<i>options</i>]<i> file1.osm file2.osm file3.osm</i> </p>
 <h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>osm2pgsql</code> command. </p>
-<p> <code>osm2pgsql</code> imports data from OSM file(s) into a PostgreSQL database suitable for use by the Mapnik renderer or the Nominatim geocoder.<br />
+<p> <code>osm2pgsql</code> imports data from OSM file(s) into a PostgreSQL database suitable for use by the Mapnik renderer or the Nominatim geocoder.<br/>
  OSM planet snapshots can be downloaded from <a rel="nofollow" href="http://planet.openstreetmap.org/.">http://planet.openstreetmap.org/.</a> Partial planet files (&quot;extracts&quot;) for various countries are available, see <a rel="nofollow" href="http://wiki.openstreetmap.org/wiki/Planet.osm.">http://wiki.openstreetmap.org/wiki/Planet.osm.</a> </p>
 <p> Extracts in PBF (ProtoBufBinary) format are also available from <a rel="nofollow" href="http://download.geofabrik.de/osm/.">http://download.geofabrik.de/osm/.</a> </p>
 <p> When operating in &quot;slim&quot; mode (and on a database created in &quot;slim&quot; mode!), <code>osm2pgsql</code> can also process OSM change files (osc files), thereby bringing an existing database up to date. </p>
@@ -101,13 +101,13 @@ description: "osm2pgsql – Openstreetmap data to PostgreSQL converter."
 <dt><code>&nbsp;<wbr> </code>&#8211;flat-nodes /path/to/nodes.cache</dt>
 <dd> The flat-nodes mode is a separate method to store slim mode node information on disk. Instead of storing this information in the main PostgreSQL database, this mode creates its own separate custom database to store the information. As this custom database has application level knowledge about the data to store and is not general purpose, it can store the data much more efficiently. Storing the node information for the full planet requires about 100GB in PostgreSQL, the same data is stored in only ~16GB using the flat-nodes mode. This can also increase the speed of applying diff files. This option activates the flat-nodes mode and specifies the location of the database file. It is a single large &gt; 16GB file. This mode is only recommended for full planet imports as it doesn&#8217;t work well with small imports. The default is disabled.</dd>
 <dt><code>-h</code>|&#8211;help</dt>
-<dd> Help information.<br />
+<dd> Help information.<br/>
  Add <code>-v</code> to display supported projections.</dd>
 <dt><code>-v</code>|&#8211;verbose</dt>
 <dd> Verbose output.</dd></dl>
 <h2>SUPPORTED PROJECTIONS</h2>
-<p> Latlong (-l) SRS: 4326 (none)<br />
- Spherical Mercator (-m) SRS:3857 +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over<br />
+<p> Latlong (-l) SRS: 4326 (none)<br/>
+ Spherical Mercator (-m) SRS:3857 +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over<br/>
  EPSG-defined (-E) SRS: +init=epsg:(as given in parameter) </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-proj/">proj</a></code>(1), <code><a href="/docs/linux/man/1-postgres/">postgres</a></code>(1). </p>

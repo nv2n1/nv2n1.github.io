@@ -21,14 +21,14 @@ description: "Error Object Helper Functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>error</i> The error object for which to perform the check<br />
- <i>library</i> The library to check for<br />
- <i>function</i> The function to check for<br />
+</dt><dd> <i>error</i> The error object for which to perform the check<br/>
+ <i>library</i> The library to check for<br/>
+ <i>function</i> The function to check for<br/>
  <i>reason</i> The type to check for</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GLOBUS_TRUE</i> Error matched<br />
+</dt><dd> <i>GLOBUS_TRUE</i> Error matched<br/>
  <i>GLOBUS_FALSE</i> Error failed to match</dd></dl>
 <h3>globus_object_t* globus_error_wrap_openssl_error (globus_module_descriptor_t *base_source, interror_type, const char *source_file, const char *source_func, intsource_line, const char *format, &#8230;)</h3>
 <p> Wrap the OpenSSL error and create a wrapped globus error object from the error. </p>
@@ -36,11 +36,11 @@ description: "Error Object Helper Functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>base_source</i> The module that the error was generated from<br />
- <i>error_type</i> The type of error encapsulating the OpenSSL error<br />
- <i>source_file</i> Name of file. Use <code>FILE</code><br />
- <i>source_func</i> Name of function. Use _globus_func_name and declare your func with GlobusFuncName(&lt;name&gt;)<br />
- <i>source_line</i> Line number. Use <code>LINE</code><br />
+</dt><dd> <i>base_source</i> The module that the error was generated from<br/>
+ <i>error_type</i> The type of error encapsulating the OpenSSL error<br/>
+ <i>source_file</i> Name of file. Use <code>FILE</code><br/>
+ <i>source_func</i> Name of function. Use _globus_func_name and declare your func with GlobusFuncName(&lt;name&gt;)<br/>
+ <i>source_line</i> Line number. Use <code>LINE</code><br/>
  <i>format</i> format string for the description of the error entry point where the OpenSSL error occurred, should be followed by parameters to fill the format string (like in printf).</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

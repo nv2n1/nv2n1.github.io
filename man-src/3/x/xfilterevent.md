@@ -22,5 +22,5 @@ description: "XFilterEvent – filter X events for an input method"
 <p> If <code>XFilterEvent</code> returns <code>True</code>, then some input method has filtered the event, and the client should discard the event. If <code>XFilterEvent</code> returns <code>False</code>, then the client should continue processing the event. </p>
 <p> If a grab has occurred in the client and <code>XFilterEvent</code> returns <code>True</code>, the client should ungrab the keyboard.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xnextevent/">XNextEvent</a>(3)<br />
+<p><a href="/docs/linux/man/3-xnextevent/">XNextEvent</a>(3)<br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

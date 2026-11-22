@@ -21,6 +21,6 @@ description: "XtAddActions – register an action table"
 <h2>Description</h2>
 <p><code>XtAddActions</code> has been replaced by <code>XtAppAddActions</code>.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xtappaddactions/">XtAppAddActions</a>(3)<br />
- <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><a href="/docs/linux/man/3-xtappaddactions/">XtAppAddActions</a>(3)<br/>
+ <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

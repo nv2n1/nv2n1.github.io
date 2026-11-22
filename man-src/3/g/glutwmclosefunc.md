@@ -13,8 +13,8 @@ description: "glutWMCloseFunc – Window destruction callback."
 <h2>Synopsis</h2>
 <p>In openglut.h Ft void Fn glutWMCloseFunc void( *callback )( void )</p>
 <h2>Parameters</h2>
-<p>Bf Em<br />
-&nbsp;<wbr>callback Ef<br />
+<p>Bf Em<br/>
+&nbsp;<wbr>callback Ef<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Client window destruction hook.</p>
 <h2>Description</h2>
 <h2>See Also</h2>

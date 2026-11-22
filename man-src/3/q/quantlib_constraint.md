@@ -12,7 +12,7 @@ description: "QuantLib::Constraint – Base constraint class."
 <p>#include &lt;ql/math/optimization/constraint.hpp&gt; </p>
 <p> Inherited by <code>BoundaryConstraint</code>, PrivateConstraint, <code>CompositeConstraint</code>, FellerConstraint, <code>NoConstraint</code>, and <code>PositiveConstraint</code>. </p>
 <h3>Classes</h3>
-<p>class <code>Impl</code><br />
+<p>class <code>Impl</code><br/>
  <i>Base class for constraint implementations. </i></p>
 <h3>Public Member Functions</h3>
 <p>bool <code>empty</code> () const </p>

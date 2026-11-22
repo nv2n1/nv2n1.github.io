@@ -13,7 +13,7 @@ description: "ffmpeg-scaler – FFmpeg video scaling and pixel format converter"
 <p> The FFmpeg rescaler provides a high-level interface to the libswscale library image conversion utilities. In particular it allows one to perform image rescaling and pixel format conversion.</p>
 <h2>SCALER OPTIONS</h2>
 <p> The video scaler supports the following named options. </p>
-<p> Options may be set by specifying &#8211;<i>option</i> <i>value</i> in the FFmpeg tools, with a few API-only exceptions noted below. For programmatic use, they can be set explicitly in the <tt>&quot;SwsContext&quot;</tt> options or through the <i>libavutil/opt.h</i> <font SIZE="-1">API.</font></p>
+<p> Options may be set by specifying &#8211;<i>option</i> <i>value</i> in the FFmpeg tools, with a few API-only exceptions noted below. For programmatic use, they can be set explicitly in the <tt>&quot;SwsContext&quot;</tt> options or through the <i>libavutil/opt.h</i> API.</p>
 <dl>
 <dt><code>sws_flags</code></dt>
 <dd> Set the scaler flags. This is also used to set the scaling algorithm. Only a single algorithm should be selected. Default value is <code>bicubic</code>. </dd>
@@ -55,17 +55,17 @@ description: "ffmpeg-scaler – FFmpeg video scaling and pixel format converter"
 </dl>
 <dl>
 </dl>
-<dt><code>srcw</code> <i>(</i><font SIZE="-1"><i>API</i></font><i> only)</i></dt>
+<dt><code>srcw</code> <i>(</i><i>API</i><i> only)</i></dt>
 <dd> Set source width.</dd>
-<dt><code>srch</code> <i>(</i><font SIZE="-1"><i>API</i></font><i> only)</i></dt>
+<dt><code>srch</code> <i>(</i><i>API</i><i> only)</i></dt>
 <dd> Set source height.</dd>
-<dt><code>dstw</code> <i>(</i><font SIZE="-1"><i>API</i></font><i> only)</i></dt>
+<dt><code>dstw</code> <i>(</i><i>API</i><i> only)</i></dt>
 <dd> Set destination width.</dd>
-<dt><code>dsth</code> <i>(</i><font SIZE="-1"><i>API</i></font><i> only)</i></dt>
+<dt><code>dsth</code> <i>(</i><i>API</i><i> only)</i></dt>
 <dd> Set destination height.</dd>
-<dt><code>src_format</code> <i>(</i><font SIZE="-1"><i>API</i></font><i> only)</i></dt>
+<dt><code>src_format</code> <i>(</i><i>API</i><i> only)</i></dt>
 <dd> Set source pixel format (must be expressed as an integer).</dd>
-<dt><code>dst_format</code> <i>(</i><font SIZE="-1"><i>API</i></font><i> only)</i></dt>
+<dt><code>dst_format</code> <i>(</i><i>API</i><i> only)</i></dt>
 <dd> Set destination pixel format (must be expressed as an integer).</dd>
 <dt><code>src_range</code> <i>(boolean)</i></dt>
 <dd> If value is set to <tt>1</tt>, indicates source is full range. Default value is <tt>0</tt>, which indicates source is limited range.</dd>
@@ -111,4 +111,4 @@ description: "ffmpeg-scaler – FFmpeg video scaling and pixel format converter"
 <h2>AUTHORS</h2>
 <p> The FFmpeg developers. </p>
 <p> For details about the authorship, see the Git history of the project (<a href="git://source.ffmpeg.org/ffmpeg">git://source.ffmpeg.org/ffmpeg</a>), e.g. by typing the command <code>git log</code> in the FFmpeg source directory, or browsing the online repository at &lt;<code><a rel="nofollow" href="http://source.ffmpeg.org">http://source.ffmpeg.org</a></code>&gt;. </p>
-<p> Maintainers for the specific components are listed in the file <i></i><font SIZE="-1"><i>MAINTAINERS</i></font><i></i> in the source code tree. </p>
+<p> Maintainers for the specific components are listed in the file <i></i><i>MAINTAINERS</i><i></i> in the source code tree. </p>

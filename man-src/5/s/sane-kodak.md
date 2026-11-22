@@ -48,17 +48,17 @@ description: "sane-kodak – SANE backend for big Kodak flatbed and ADF scanners
 <h2>Environment</h2>
 <p>The backend uses a single environment variable, <code>SANE_DEBUG_KODAK</code>, which enables debugging output to stderr. Valid values are: </p>
 <dl>
-<dd>5 Errors<br />
- 10 Function trace<br />
- 15 Function detail<br />
- 20 Option commands<br />
- 25 SCSI trace<br />
- 30 SCSI detail<br />
+<dd>5 Errors<br/>
+ 10 Function trace<br/>
+ 15 Function detail<br/>
+ 20 Option commands<br/>
+ 25 SCSI trace<br/>
+ 30 SCSI detail<br/>
  35 Useless noise</dd></dl>
 <h2>Known Issues</h2>
 <p>Most hardware options are either not supported or not exposed for control by the user, including: multifeed detection, image compression, autocropping, endorser, thresholding, multi-stream, etc.</p>
 <h2>Credits</h2>
-<p>The various authors of the <code><a href="/docs/linux/man/5-sane-fujitsu/">sane-fujitsu</a></code>(5) backend provided useful code.<br />
+<p>The various authors of the <code><a href="/docs/linux/man/5-sane-fujitsu/">sane-fujitsu</a></code>(5) backend provided useful code.<br/>
  Kodak provided access to hardware, documentation and personnel.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/5-sane-scsi/">sane-scsi</a></code>(5), <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1) </p>

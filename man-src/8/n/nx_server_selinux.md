@@ -17,7 +17,7 @@ url: "/docs/linux/man/8-nx_server_selinux/"
 <p> <code>newrole -r nx_server_r -t nx_server_t</code> </p>
 <p> <code>sudo</code> is the preferred method to do transition from one role to another. You setup sudo to transition to nx_server_r by adding a similar line to the /etc/sudoers file. </p>
 <p> USERNAME ALL=(ALL) ROLE=nx_server_r TYPE=nx_server_t COMMAND </p>
-<p> <br />
+<p> <br/>
  sudo will run COMMAND as staff_u:nx_server_r:nx_server_t:LEVEL </p>
 <p> When using a a non login role, you need to setup SELinux so that your SELinux user can reach nx_server_r role. </p>
 <p> Execute the following to see all of the assigned SELinux roles: </p>
@@ -38,63 +38,63 @@ url: "/docs/linux/man/8-nx_server_selinux/"
 <p> <code>setsebool -P global_ssp 1</code> </p>
 <h2>MANAGED FILES</h2>
 <p> The SELinux process type nx_server_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
-<p> <br />
+<p> <br/>
  <code>nx_server_home_ssh_t</code> </p>
-<p> <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>/opt/NX/home/nx/.ssh(/.*)?<br />
- <br />
- <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>/usr/NX/home/nx/.ssh(/.*)?<br />
- <br />
- <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>/var/lib/nxserver/home/.ssh(/.*)?<br />
- <br />
+<p> <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>/opt/NX/home/nx/.ssh(/.*)?<br/>
+ <br/>
+ <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>/usr/NX/home/nx/.ssh(/.*)?<br/>
+ <br/>
+ <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>/var/lib/nxserver/home/.ssh(/.*)?<br/>
+ <br/>
  </p>
-<p> <br />
+<p> <br/>
  <code>nx_server_tmp_t</code> </p>
-<p> <br />
+<p> <br/>
  <code>nx_server_var_lib_t</code> </p>
-<p> <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>/opt/NX/home(/.*)?<br />
- <br />
- <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>/usr/NX/home(/.*)?<br />
- <br />
- <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>/var/lib/nxserver(/.*)?<br />
- <br />
+<p> <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>/opt/NX/home(/.*)?<br/>
+ <br/>
+ <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>/usr/NX/home(/.*)?<br/>
+ <br/>
+ <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>/var/lib/nxserver(/.*)?<br/>
+ <br/>
  </p>
-<p> <br />
+<p> <br/>
  <code>nx_server_var_run_t</code> </p>
-<p> <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>/opt/NX/var(/.*)?<br />
- <br />
+<p> <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>/opt/NX/var(/.*)?<br/>
+ <br/>
  </p>
-<p> <br />
+<p> <br/>
  <code>ssh_home_t</code> </p>
-<p> <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>/var/lib/[^/]+/.ssh(/.*)?<br />
- <br />
- <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>/root/.ssh(/.*)?<br />
- <br />
- <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>/var/lib/one/.ssh(/.*)?<br />
- <br />
- <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>/var/lib/pgsql/.ssh(/.*)?<br />
- <br />
- <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>/var/lib/openshift/[^/]+/.ssh(/.*)?<br />
- <br />
- <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>/var/lib/amanda/.ssh(/.*)?<br />
- <br />
- <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>/var/lib/stickshift/[^/]+/.ssh(/.*)?<br />
- <br />
- <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>/var/lib/gitolite/.ssh(/.*)?<br />
- <br />
- <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>/var/lib/nocpulse/.ssh(/.*)?<br />
- <br />
- <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>/var/lib/gitolite3/.ssh(/.*)?<br />
- <br />
- <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>/var/lib/openshift/gear/[^/]+/.ssh(/.*)?<br />
- <br />
- <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>/root/.shosts<br />
- <br />
- <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>/home/[^/]+/.ssh(/.*)?<br />
- <br />
- <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>/home/[^/]+/.ansible/cp/.*<br />
- <br />
- <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>/home/[^/]+/.shosts<br />
- <br />
+<p> <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>/var/lib/[^/]+/.ssh(/.*)?<br/>
+ <br/>
+ <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>/root/.ssh(/.*)?<br/>
+ <br/>
+ <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>/var/lib/one/.ssh(/.*)?<br/>
+ <br/>
+ <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>/var/lib/pgsql/.ssh(/.*)?<br/>
+ <br/>
+ <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>/var/lib/openshift/[^/]+/.ssh(/.*)?<br/>
+ <br/>
+ <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>/var/lib/amanda/.ssh(/.*)?<br/>
+ <br/>
+ <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>/var/lib/stickshift/[^/]+/.ssh(/.*)?<br/>
+ <br/>
+ <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>/var/lib/gitolite/.ssh(/.*)?<br/>
+ <br/>
+ <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>/var/lib/nocpulse/.ssh(/.*)?<br/>
+ <br/>
+ <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>/var/lib/gitolite3/.ssh(/.*)?<br/>
+ <br/>
+ <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>/var/lib/openshift/gear/[^/]+/.ssh(/.*)?<br/>
+ <br/>
+ <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>/root/.shosts<br/>
+ <br/>
+ <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>/home/[^/]+/.ssh(/.*)?<br/>
+ <br/>
+ <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>/home/[^/]+/.ansible/cp/.*<br/>
+ <br/>
+ <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>/home/[^/]+/.shosts<br/>
+ <br/>
  </p>
 <h2>COMMANDS</h2>
 <p> <code>semanage fcontext</code> can also be used to manipulate default file context mappings. </p>

@@ -37,7 +37,7 @@ description: "ip6sic – flood a node with IPv6 frames in an attempt to cause gr
 <dt><code>-r seed</code></dt>
 <dd> Set the randomization seed. This is useful for duplicating runs. </dd>
 <dt><code>-w pcap file</code></dt>
-<dd> Save every packet created to <code><br />
+<dd> Save every packet created to <code><br/>
  cap file</code> using libpcap. Note that this does not stop <code>ip6sic</code> from writing packets to the wire. </dd>
 <dt><code>-y max payload</code></dt>
 <dd> Set the maximum number of bytes in the payload, including the ethernet header. This is useful the the specified interface has a non-standard MTU. </dd>

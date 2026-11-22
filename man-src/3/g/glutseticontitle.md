@@ -13,12 +13,12 @@ description: "glutSetIconTitle – Requests changing the iconified title of the 
 <h2>Synopsis</h2>
 <p>In openglut.h Ft void Fn glutSetIconTitle const char* title</p>
 <h2>Parameters</h2>
-<p>Bf Em<br />
-&nbsp;<wbr>title Ef<br />
+<p>Bf Em<br/>
+&nbsp;<wbr>title Ef<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>New window title</p>
 <h2>Description</h2>
-<p>Requests that the window system change the title of the icon (or whatever) that is displayed when the Bf Li<br />
-&nbsp;<wbr>current window Ef<br />
+<p>Requests that the window system change the title of the icon (or whatever) that is displayed when the Bf Li<br/>
+&nbsp;<wbr>current window Ef<br/>
 &nbsp;<wbr>&nbsp;<wbr>is in iconified mode. </p>
 <p> As discussed under glutIconifyWindow(), most window systems allow a window to be placed in some kind of minimized, or iconified, state. In that state, the normal interior of the window is likely to be obscured, and the only clue about the window contents may be the window title. </p>
 <h2>Caveats</h2>

@@ -16,7 +16,7 @@ description: "QuantLib::FixedRateBondHelper – fixed-coupon bond helper"
 <p> <code>FixedRateBondHelper</code> (const <code>Handle</code>&lt; <code>Quote</code> &gt; &amp;cleanPrice, const boost::shared_ptr&lt; <code>FixedRateBond</code> &gt; &amp;bond) </p>
 <p> <code>BootstrapHelper interface</code> </p>
 <p> <code>Real</code> <code>impliedQuote</code> () const </p>
-<p> void <code>setTermStructure</code> (<code>YieldTermStructure</code> *)<br />
+<p> void <code>setTermStructure</code> (<code>YieldTermStructure</code> *)<br/>
  <i>sets the term structure to be used for pricing </i> </p>
 <p> <code>additional inspectors</code> </p>
 <p> boost::shared_ptr&lt; <code>FixedRateBond</code> &gt; <code>bond</code> () const </p>

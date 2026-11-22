@@ -92,7 +92,7 @@ description: "iostat – Report Central Processing Unit (CPU) statistics and inp
 <dt>%drqm</dt>
 <dd> The percentage of discard requests merged together before being sent to the device.</dd>
 <dt>areq-sz</dt>
-<dd> The average size (in kilobytes) of the I/O requests that were issued to the device.<br />
+<dd> The average size (in kilobytes) of the I/O requests that were issued to the device.<br/>
  Note: In previous versions, this field was known as avgrq-sz and was expressed in sectors.</dd>
 <dt>rareq-sz</dt>
 <dd> The average size (in kilobytes) of the read requests that were issued to the device.</dd>
@@ -111,7 +111,7 @@ description: "iostat – Report Central Processing Unit (CPU) statistics and inp
 <dt>f_await</dt>
 <dd> The average time (in milliseconds) for flush requests issued to the device to be served. The block layer combines flush requests and executes at most one at a time. Thus flush operations could be twice as long: Wait for current flush request, then execute it, then wait for the next one.</dd>
 <dt>aqu-sz</dt>
-<dd> The average queue length of the requests that were issued to the device.<br />
+<dd> The average queue length of the requests that were issued to the device.<br/>
  Note: In previous versions, this field was known as avgqu-sz.</dd>
 <dt>%util</dt>
 <dd> Percentage of elapsed time during which I/O requests were issued to the device (bandwidth utilization for the device). Device saturation occurs when this value is close to 100% for devices serving requests serially. But for devices serving requests in parallel, such as RAID arrays and modern SSDs, this number does not reflect their performance limits.</dd></dl>
@@ -131,10 +131,10 @@ description: "iostat – Report Central Processing Unit (CPU) statistics and inp
 <dt>
 </dt><dd> Specify an alternative directory for <code>iostat</code> to read devices statistics. Option <code>-f </code>tells <code>iostat </code>to use only the files located in the alternative directory, whereas option <code>+f</code> tells it to use both the standard kernel files and the files located in the alternative directory to read device statistics. </dd>
 <p> <i>directory</i> is a directory containing files with statistics for devices managed in userspace. It may contain: </p>
-<p> &#8211; a &quot;diskstats&quot; file whose format is compliant with that located in &quot;/proc&quot;,<br />
+<p> &#8211; a &quot;diskstats&quot; file whose format is compliant with that located in &quot;/proc&quot;,<br/>
  &#8211; statistics for individual devices contained in files whose format is compliant with that of files located in &quot;/sys&quot;. </p>
 <p> In particular, the following files located in <i>directory</i> may be used by <code>iostat</code>: </p>
-<p> <i>directory</i>/block/<i>device</i>/stat<br />
+<p> <i>directory</i>/block/<i>device</i>/stat<br/>
  <i>directory</i>/block/<i>device</i>/<i>partition</i>/stat </p>
 <p> <i>partition</i> files must have an entry in <i>directory</i>/dev/block/ directory, e.g.: </p>
 <p> <i>directory</i>/dev/block/<i>major</i>:<i>minor</i> &#8211;&gt; ../../block/<i>device</i>/<i>partition</i></dl>
@@ -179,7 +179,7 @@ description: "iostat – Report Central Processing Unit (CPU) statistics and inp
 <dt><code>POSIXLY_CORRECT</code></dt>
 <dd> When this variable is set, transfer rates are shown in 512-byte blocks instead of the default 1K blocks.</dd>
 <dt><code>S_COLORS</code></dt>
-<dd> By default statistics are displayed in color when the output is connected to a terminal. Use this variable to change the settings. Possible values for this variable are <i>never</i>, <i>always </i>or <i>auto</i> (the latter is equivalent to the default settings).<br />
+<dd> By default statistics are displayed in color when the output is connected to a terminal. Use this variable to change the settings. Possible values for this variable are <i>never</i>, <i>always </i>or <i>auto</i> (the latter is equivalent to the default settings).<br/>
  Please note that the color (being red, yellow, or some other color) used to display a value is not indicative of any kind of issue simply because of the color. It only indicates different ranges of values.</dd>
 <dt><code>S_COLORS_SGR</code></dt>
 <dd> Specify the colors and other attributes used to display statistics on the terminal. Its value is a colon-separated list of capabilities that defaults to <code>H=31;1:I=32;22:M=35;1:N=34;1:Z=34;22</code>. Supported capabilities are:</dd>
@@ -217,15 +217,15 @@ description: "iostat – Report Central Processing Unit (CPU) statistics and inp
 <p> Kernels older than 2.6.x are no longer supported. </p>
 <p> Although <code>iostat</code> speaks of kilobytes (kB), megabytes (MB)&#8230;, it actually uses kibibytes (kiB), mebibytes (MiB)&#8230; A kibibyte is equal to 1024 bytes, and a mebibyte is equal to 1024 kibibytes. </p>
 <h2>FILES</h2>
-<p> <i>/proc/stat </i>contains system statistics.<br />
- <i>/proc/uptime </i>contains system uptime.<br />
- <i>/proc/diskstats </i>contains disks statistics.<br />
- <i>/sys </i>contains statistics for block devices.<br />
- <i>/proc/self/mountstats </i>contains statistics for network filesystems.<br />
+<p> <i>/proc/stat </i>contains system statistics.<br/>
+ <i>/proc/uptime </i>contains system uptime.<br/>
+ <i>/proc/diskstats </i>contains disks statistics.<br/>
+ <i>/sys </i>contains statistics for block devices.<br/>
+ <i>/proc/self/mountstats </i>contains statistics for network filesystems.<br/>
  <i>/dev/disk </i>contains persistent device names. </p>
 <h2>AUTHOR</h2>
 <p> Sebastien Godard (sysstat &lt;at&gt; orange.fr) </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-sar/">sar</a></code>(1), <code><a href="/docs/linux/man/1-pidstat/">pidstat</a></code>(1), <code><a href="/docs/linux/man/1-mpstat/">mpstat</a></code>(1), <code><a href="/docs/linux/man/8-vmstat/">vmstat</a></code>(8), <code><a href="/docs/linux/man/1-tapestat/">tapestat</a></code>(1), <code><a href="/docs/linux/man/1-nfsiostat/">nfsiostat</a></code>(1), <code><a href="/docs/linux/man/1-cifsiostat/">cifsiostat</a></code>(1) </p>
-<p> <i><a rel="nofollow" href="https://github.com/sysstat/sysstat">https://github.com/sysstat/sysstat</a></i><br />
+<p> <i><a rel="nofollow" href="https://github.com/sysstat/sysstat">https://github.com/sysstat/sysstat</a></i><br/>
  <i><a rel="nofollow" href="http://pagesperso-orange.fr/sebastien.godard/">http://pagesperso-orange.fr/sebastien.godard/</a></i> </p>

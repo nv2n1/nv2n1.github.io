@@ -135,8 +135,8 @@ description: "qpidd – the Qpid AMQP Message Broker Daemon"
 <dt>
 </dt><dd> There is an environment variable for each option.</dd></dl>
 <p> The environment variable is the option name in uppercase, prefixed with QPID_ and &#8216;.&#8217; or &#8216;-&#8216; are replaced with &#8216;_&#8217;. Environment settings are over-ridden by command line settings. For example: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>export QPID_PORT=6000<br />
-&nbsp;<wbr>&nbsp;<wbr>export QPID_MAX_CONNECTIONS=10<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>export QPID_PORT=6000<br/>
+&nbsp;<wbr>&nbsp;<wbr>export QPID_MAX_CONNECTIONS=10<br/>
 &nbsp;<wbr>&nbsp;<wbr>export QPID_LOG_TO_FILE=/tmp/qpidd.log</p>
 <h2>FILES</h2>
 <p> <i>/etc/qpidd.conf</i></p>
@@ -145,9 +145,9 @@ description: "qpidd – the Qpid AMQP Message Broker Daemon"
 </dt><dd> Default configuration file.</dd></dl>
 <p> Configuration file settings are over-ridden by command line or environment variable settings. &#8216;&#8211;config &lt;file&gt;&#8217; or &#8216;export QPID_CONFIG=&lt;file&gt;&#8217; specifies an alternate file. </p>
 <p> Each line is a name=value pair. Blank lines and lines beginning with # are ignored. For example: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>My qpidd configuration file.<br />
-&nbsp;<wbr>&nbsp;<wbr>port=6000<br />
-&nbsp;<wbr>&nbsp;<wbr>max-connections=10<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>My qpidd configuration file.<br/>
+&nbsp;<wbr>&nbsp;<wbr>port=6000<br/>
+&nbsp;<wbr>&nbsp;<wbr>max-connections=10<br/>
 &nbsp;<wbr>&nbsp;<wbr>log-to-file=/tmp/qpidd.log</p>
 <h2>AUTHOR</h2>
 <p> The Apache Qpid Project, dev [at] qpid.apache.org</p>

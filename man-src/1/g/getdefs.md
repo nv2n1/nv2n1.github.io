@@ -26,15 +26,15 @@ description: "getdefs – AutoGen Definition Extraction Tool"
 <p> This option is used to create shorthand entries for nested definitions. For example, with: </p>
 <p> <i>using subblock thus</i> <code>&#8211;subblock=arg=argname,type,null</code> </p>
 <p> <i>and defining an </i><code>arg</code> thus <code>arg: this, char *</code> </p>
-<p> <i>will then expand to:</i> <code>arg = { argname = this; type = &quot;char *&quot;; @</code>;}<br />
- The &quot;this, char *&quot; string is separated at the commas, with the white space removed. You may use characters other than commas by starting the value string with a punctuation character other than a single or double quote character. You may also omit intermediate values by placing the commas next to each other with no intervening white space. For example, &quot;+mumble++yes+&quot; will expand to:<br />
+<p> <i>will then expand to:</i> <code>arg = { argname = this; type = &quot;char *&quot;; @</code>;}<br/>
+ The &quot;this, char *&quot; string is separated at the commas, with the white space removed. You may use characters other than commas by starting the value string with a punctuation character other than a single or double quote character. You may also omit intermediate values by placing the commas next to each other with no intervening white space. For example, &quot;+mumble++yes+&quot; will expand to:<br/>
  <code>arg = { argname = mumble; null = &quot;yes&quot;; @</code>;}.</p>
 <dt><code>listattr</code>=<i>def</i></dt>
 <dd> attribute with list of values. This option may appear an unlimited number of times. </dd>
-<p> This option is used to create shorthand entries for definitions that generally appear several times. That is, they tend to be a list of values. For example, with:<br />
- <code>listattr=foo</code> defined, the text:<br />
- <code>foo: this, is, a, multi-list</code> will then expand to:<br />
- <code>foo = &#8216;this&#8217;, &#8216;is&#8217;, &#8216;a&#8217;, &#8216;multi-list&#8217;;</code><br />
+<p> This option is used to create shorthand entries for definitions that generally appear several times. That is, they tend to be a list of values. For example, with:<br/>
+ <code>listattr=foo</code> defined, the text:<br/>
+ <code>foo: this, is, a, multi-list</code> will then expand to:<br/>
+ <code>foo = &#8216;this&#8217;, &#8216;is&#8217;, &#8216;a&#8217;, &#8216;multi-list&#8217;;</code><br/>
  The texts are separated by the commas, with the white space removed. You may use characters other than commas by starting the value string with a punctuation character other than a single or double quote character.</dl>
 <h3>specify how to number the definitions</h3>
 <dl>
@@ -42,8 +42,8 @@ description: "getdefs – AutoGen Definition Extraction Tool"
 <dd> Alphabetize or use named file. The <i>no-ordering</i> form will disable the option. This option is enabled by default. </dd>
 <p> By default, ordering is alphabetical by the entry name. Use, <code>no-ordering</code> if order is unimportant. Use <code>ordering</code> with no argument to order without case sensitivity. Use <code>ordering=&lt;file-name&gt;</code> if chronological order is important. getdefs will maintain the text content of <code>file-name</code>. <code>file-name</code> need not exist.</p>
 <dt><code>first-index</code>=<i>first-index</i></dt>
-<dd> The first index to apply to groups. This option takes an integer number as its argument. The default <i>first-index</i> for this option is:<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><br />
+<dd> The first index to apply to groups. This option takes an integer number as its argument. The default <i>first-index</i> for this option is:<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><br/>
 &nbsp;<wbr>0 </dd>
 <p> By default, the first occurrence of a named definition will have an index of zero. Sometimes, that needs to be a reserved value. Provide this option to specify a different starting point.</dl>
 <h3>Definition insertion options</h3>

@@ -13,7 +13,7 @@ description: "PAPIF_get_hardware_info –"
 <h2>Detailed Description</h2>
 <p><code>Fortran Interface:</code></p>
 <dl COMPACT>
-<dd>#include &#8216;fpapi.h&#8217;<br />
+<dd>#include &#8216;fpapi.h&#8217;<br/>
  <code>PAPIF_get_hardware_info</code>( C_INT ncpu, C_INT nnodes, C_INT totalcpus, </dd>
 <p>&nbsp;<wbr>C_INT vendor, C_STRING vendor_str, C_INT model, C_STRING model_str,&nbsp;<wbr> </p>
 <p>&nbsp;<wbr>C_FLOAT revision, C_FLOAT mhz&nbsp;<wbr>)</dl>

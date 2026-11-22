@@ -11,12 +11,12 @@ description: "yadifad – an authoritative Internet domain name server."
 <h2>Synopsis</h2>
 <p>yadifad [<code>&#8211;config|-c</code><i> configfile</i>] [<code>&#8211;daemon|-d</code>] [<code>-u</code><i> uid</i>] [<code>-g</code><i> gid</i>] [<code>-V</code>] [<code>-h</code>] </p>
 <h2>Description</h2>
-<p>yadifad is a Domain Name System (DNS) server, part of the YADIFA distribution from EURid vzw/asbl. The latest version of YADIFA can be found on:<br />
+<p>yadifad is a Domain Name System (DNS) server, part of the YADIFA distribution from EURid vzw/asbl. The latest version of YADIFA can be found on:<br/>
  <center> <code><a rel="nofollow" href="http://www.yadifa.eu/download">http://www.yadifa.eu/download</a></code></p>
-<p> yadifad<br />
- reads the zone files from yadifad.conf, and starts up an authoritative name server.<br />
+<p> yadifad<br/>
+ reads the zone files from yadifad.conf, and starts up an authoritative name server.<br/>
  It listens to UDP and TCP DNS queries and returns answers from its own database. </p>
-<p> yadifad<br />
+<p> yadifad<br/>
  knows the main DNS protocols: </p>
 <dl>
 <dt><code>*</code></dt>
@@ -30,7 +30,7 @@ description: "yadifad – an authoritative Internet domain name server."
 <dt><code>*</code></dt>
 <dd>NOTIFY
 </dd></dl>
-<p> yadifad<br />
+<p> yadifad<br/>
  works only with 1 CLASS:</p>
 <pre><br>
 <br>
@@ -117,11 +117,11 @@ OPT 41 6891<br>
 <p>There is a mailinglist for questions relating to any program in the yadifa package: </p>
 <dl>
 <dt><code>*</code></dt>
-<dd><code>yadifa-users [at] mailinglists.yadifa.eu</code><br />
+<dd><code>yadifa-users [at] mailinglists.yadifa.eu</code><br/>
  for submitting questions/answers.</dd></dl>
 <dl>
 <dt><code>*</code></dt>
-<dd><code><a rel="nofollow" href="http://www.yadifa.eu/mailing-list-users">http://www.yadifa.eu/mailing-list-users</a></code><br />
+<dd><code><a rel="nofollow" href="http://www.yadifa.eu/mailing-list-users">http://www.yadifa.eu/mailing-list-users</a></code><br/>
  for subscription requests.</dd></dl>
 <p> If you would like to stay informed about new versions and official patches send a subscription request to via:</p>
 <dl>
@@ -131,12 +131,12 @@ OPT 41 6891<br>
 <h2>License And Copyright</h2>
 <dl>
 <dt>Copyright</dt>
-<dd>(C) 2011-2016, EURid vzw/asbl<br />
- B-1831 Diegem, Belgium<br />
+<dd>(C) 2011-2016, EURid vzw/asbl<br/>
+ B-1831 Diegem, Belgium<br/>
  <code>info [at] yadifa.eu</code></dd></dl>
 <h2>Authors</h2>
-<p>Gery Van Emelen<br />
- Email: <code>Gery.VanEmelen [at] EURid.eu</code><br />
- Eric Diaz Fernandez<br />
+<p>Gery Van Emelen<br/>
+ Email: <code>Gery.VanEmelen [at] EURid.eu</code><br/>
+ Eric Diaz Fernandez<br/>
  Email: <code>Eric.DiazFernandez [at] EURid.eu</code> </p>
 <p> WWW: <code><a rel="nofollow" href="http://www.EURid.eu">http://www.EURid.eu</a></code></p>

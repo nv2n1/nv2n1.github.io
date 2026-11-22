@@ -76,7 +76,7 @@ description: "abrt_upload_watch_selinux – Security Enhanced Linux Policy for t
 <p> You can see the context of a file using the <code>-Z</code> option to <code>lsP Policy governs the access confined processes have to these files. SELinux abrt_upload_watch policy is very flexible allowing users to setup their abrt_upload_watch processes in as secure a method as possible. </p>
 <p> STANDARD FILE CONTEXT</code> </p>
 <p> SELinux defines the file context types for the abrt_upload_watch, if you wanted to store files with these types in a diffent paths, you need to execute the semanage command to sepecify alternate labeling and then use restorecon to put the labels on disk. </p>
-<p> <code>semanage fcontext -a -t abrt_upload_watch_tmp_t &#8216;/srv/myabrt_upload_watch_content(/.*)?&#8217;</code><br />
+<p> <code>semanage fcontext -a -t abrt_upload_watch_tmp_t &#8216;/srv/myabrt_upload_watch_content(/.*)?&#8217;</code><br/>
  <code>restorecon -R -v /srv/myabrt_upload_watch_content</code> </p>
 <p> Note: SELinux often uses regular expressions to specify labels that match multiple files. </p>
 <p> <i>The following file types are defined for abrt_upload_watch:</i> </p>
@@ -90,13 +90,13 @@ description: "abrt_upload_watch_selinux – Security Enhanced Linux Policy for t
 <dl>
 <dt>Allow abrt_upload_watch servers to read the /var/abrt_upload_watch directory by adding the public_content_t file type to the directory and by restoring the file type.</dt>
 <dd></dd></dl>
-<p> <code>semanage fcontext -a -t public_content_t &quot;/var/abrt_upload_watch(/.*)?&quot;</code><br />
+<p> <code>semanage fcontext -a -t public_content_t &quot;/var/abrt_upload_watch(/.*)?&quot;</code><br/>
  <code>restorecon -F -R -v /var/abrt_upload_watch</code></p>
 <dl>
 <dt>Allow abrt_upload_watch servers to read and write /var/abrt_upload_watch/incoming by adding the public_content_rw_t type to the directory and by restoring the file type. You also need to turn on the abrt_upload_watch_anon_write boolean.</dt>
 <dd></dd></dl>
-<p> <code>semanage fcontext -a -t public_content_rw_t &quot;/var/abrt_upload_watch/incoming(/.*)?&quot;</code><br />
- <code>restorecon -F -R -v /var/abrt_upload_watch/incoming</code><br />
+<p> <code>semanage fcontext -a -t public_content_rw_t &quot;/var/abrt_upload_watch/incoming(/.*)?&quot;</code><br/>
+ <code>restorecon -F -R -v /var/abrt_upload_watch/incoming</code><br/>
  <code>setsebool -P abrt_upload_watch_anon_write 1</code> </p>
 <p> If you want to determine whether abrt-handle-upload can modify public files used for public file transfer services in /var/spool/abrt-upload/., you must turn on the abrt_upload_watch_anon_write boolean. </p>
 <p> <code>setsebool -P abrt_upload_watch_anon_write 1</code></p>

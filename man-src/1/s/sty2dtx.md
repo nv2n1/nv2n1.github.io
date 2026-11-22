@@ -13,9 +13,9 @@ description: "sty2dtx — Converts a LaTeX .sty file to a documented .dtx file"
 <p> Version: v2.3</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 2010-2012 Martin Scharrer &lt;martin [at] scharrer-online.de&gt; </p>
-<p> This program is free software: you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. </p>
-<p> This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT</font> <font SIZE="-1">ANY</font> <font SIZE="-1">WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS</font> <font SIZE="-1">FOR</font> A <font SIZE="-1">PARTICULAR</font> <font SIZE="-1">PURPOSE</font>. See the <font SIZE="-1">GNU</font> General Public License for more details. </p>
-<p> You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program. If not, see &lt;<a rel="nofollow" href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>&gt;.</p>
+<p> This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. </p>
+<p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. </p>
+<p> You should have received a copy of the GNU General Public License along with this program. If not, see &lt;<a rel="nofollow" href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>&gt;.</p>
 <h2>DESCRIPTION</h2>
 <p> Converts a .sty file (LaTeX package) to .dtx format (documented LaTeX source), by surrounding macro definitions with &#8216;macro&#8217; and &#8216;macrocode&#8217; environments. The macro name is automatically inserted as an argument to the &#8216;macro&#8217; environemnt. Code lines outside macro definitions are wrapped only in &#8216;macrocode&#8217; environments. Empty lines are removed. The script is not thought to be fool proof and 100% accurate but rather as a good start to convert undocumented style files to .dtx files.</p>
 <h3>Basic Usage</h3>
@@ -74,18 +74,18 @@ ame
 </code></pre>
 <p> The following environment definitions are detected when they are at the start of a line: </p>
 <p>
-ewenvironment<br />
-{<br />
-    name<br />
-}<br />
+ewenvironment<br/>
+{<br/>
+    name<br/>
+}<br/>
 
-enewenvironemnt<br />
-{<br />
-    name<br />
-}<br />
-\provideenvironment<br />
-{<br />
-    name<br />
+enewenvironemnt<br/>
+{<br/>
+    name<br/>
+}<br/>
+\provideenvironment<br/>
+{<br/>
+    name<br/>
 }</p>
 <p> The macro and environment definition must either end at the same line or with a &#8216;<tt>&quot;}&quot;</tt>&#8216; on its own on a line.</p>
 <h2>USAGE</h2>
@@ -93,7 +93,7 @@ enewenvironemnt<br />
 <h3>Files</h3>
 <dl>
 <dt>&bull;</dt>
-<dd> can be &#8216;<tt>&quot;-&quot;</tt>&#8216; for <font SIZE="-1">STDIN</font> or <font SIZE="-1">STDOUT</font>, which is the default if no files are given</dd>
+<dd> can be &#8216;<tt>&quot;-&quot;</tt>&#8216; for STDIN or STDOUT, which is the default if no files are given</dd>
 <dt>&bull;</dt>
 <dd> multiple input files are merged to one output file</dd></dl>
 <h3>Variables</h3>
@@ -184,11 +184,11 @@ enewenvironemnt<br />
 <pre><code>
 sty2dtx.pl-- author Me-- email me[at] there.com mypkg.sty mypkg.dtx
 </code></pre>
-<p> Produce <font SIZE="-1">DTX</font> file for a class: </p>
+<p> Produce DTX file for a class: </p>
 <pre>
     sty2dtx.pl --type class mycls.sty mycls.dtx
 </pre>
 <h2>AUTHOR</h2>
 <p> Martin Scharrer </p>
 <p> E-mail: martin [at] scharrer-online.de </p>
-<p> <font SIZE="-1">WWW:</font> <a rel="nofollow" href="http://www.scharrer-online.de">http://www.scharrer-online.de</a> &lt;<a rel="nofollow" href="http://www.scharrer-online.de">http://www.scharrer-online.de</a>&gt; </p>
+<p> WWW: <a rel="nofollow" href="http://www.scharrer-online.de">http://www.scharrer-online.de</a> &lt;<a rel="nofollow" href="http://www.scharrer-online.de">http://www.scharrer-online.de</a>&gt; </p>

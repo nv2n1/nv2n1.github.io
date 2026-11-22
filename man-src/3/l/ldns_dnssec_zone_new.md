@@ -10,7 +10,7 @@ description: "ldns_dnssec_zone_find_rrset, ldns_dnssec_zone_new, ldns_dnssec_zon
 
 <p> ldns_dnssec_zone_find_rrset, ldns_dnssec_zone_new, ldns_dnssec_zone_free, ldns_dnssec_zone_add_rr, ldns_dnssec_zone_names_print, ldns_dnssec_zone_print, ldns_dnssec_zone_add_empty_nonterminals </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ldns_dnssec_rrsets* ldns_dnssec_zone_find_rrset(ldns_dnssec_zone *zone, ldns_rdf *dname, ldns_rr_type type); </p>

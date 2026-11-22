@@ -10,7 +10,7 @@ description: "XkbKeyHasActions – Determines if the key corresponding to keycod
 <p>XkbKeyHasActions &#8211; Determines if the key corresponding to <i>keycode</i> has any actions associated with it </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>int XkbKeyHasActions</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>KeyCode </code><i>keycode</i><code>);</code><br />
+<dt> <code>int XkbKeyHasActions</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>KeyCode </code><i>keycode</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

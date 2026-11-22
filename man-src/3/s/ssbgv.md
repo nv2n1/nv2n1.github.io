@@ -11,7 +11,7 @@ description: "ssbgv.f –"
 <p> ssbgv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>ssbgv</code> (JOBZ, UPLO, N, KA, KB, AB, LDAB, BB, LDBB, W, Z, LDZ, WORK, INFO)<br />
+<p> subroutine <code>ssbgv</code> (JOBZ, UPLO, N, KA, KB, AB, LDAB, BB, LDBB, W, Z, LDZ, WORK, INFO)<br/>
  <i></i><code>SSBGST</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ssbgv (characterJOBZ, characterUPLO, integerN, integerKA, integerKB, real, dimension( ldab, * )AB, integerLDAB, real, dimension( ldbb, * )BB, integerLDBB, real, dimension( * )W, real, dimension( ldz, * )Z, integerLDZ, real, dimension( * )WORK, integerINFO)</h3>
@@ -76,14 +76,14 @@ description: "ssbgv.f –"
           The leading dimension of the array AB.  LDAB &gt;= KA+1.
 </pre>
 <p> <i>BB</i> </p>
-<p>          BB is REAL array, dimension (LDBB, N)<br />
-          On entry, the upper or lower triangle of the symmetric band<br />
-          matrix B, stored in the first kb+1 rows of the array.  The<br />
-          j-th column of B is stored in the j-th column of the array BB<br />
-          as follows:<br />
-          if UPLO = &#8216;U&#8217;, BB(kb+1+i-j,j) = B(i,j) for max(1,j-kb)&lt;=i&lt;=j;<br />
-          if UPLO = &#8216;L&#8217;, BB(1+i-j,j)    = B(i,j) for j&lt;=i&lt;=min(n,j+kb).<br />
-          On exit, the factor S from the split Cholesky factorization<br />
+<p>          BB is REAL array, dimension (LDBB, N)<br/>
+          On entry, the upper or lower triangle of the symmetric band<br/>
+          matrix B, stored in the first kb+1 rows of the array.  The<br/>
+          j-th column of B is stored in the j-th column of the array BB<br/>
+          as follows:<br/>
+          if UPLO = &#8216;U&#8217;, BB(kb+1+i-j,j) = B(i,j) for max(1,j-kb)&lt;=i&lt;=j;<br/>
+          if UPLO = &#8216;L&#8217;, BB(1+i-j,j)    = B(i,j) for j&lt;=i&lt;=min(n,j+kb).<br/>
+          On exit, the factor S from the split Cholesky factorization<br/>
           B = S**T*S, as returned by SPBSTF.</p>
 <p> <i>LDBB</i> </p>
 <pre>

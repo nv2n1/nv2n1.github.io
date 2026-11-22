@@ -13,7 +13,7 @@ description: "yuvfps – Converts to a different frame rate"
 <p> <code>yuvfps </code> [<code>-r</code> <i>Num:Den</i>] [<code>-s</code> <i>Num:Den</i>] [<code>-i</code> <i>Interlacing</i>] [<code>-I</code> <i>Interlacing</i>] [<code>-c</code>] [<code>-n</code>] [<code>-w</code>] [<code>-v 0</code>&#8211;<code>2</code>] [<code>-h</code>] </p>
 <h2>DESCRIPTION</h2>
 <p> <code>yuvfps</code> is a general (UP or DOWN) resampling utility that is provided to allow the generation of video streams with the frame rates required for each standard video format. <code>yuvfps</code> reads a YUV4MPEG stream from the standard input and outputs a YUV4MPEG stream to the standard output in which frames from the original ones are skipped (downsampling) or duplicated (upsampling). This allows for other mjpegtools that require a specific frame rate to process the stream. </p>
-<p> <code>yuvfps</code> uses by default Bresenham&#8217;s algorithm to do the resampling so that the new video stream is similar to the original one. Note, however, that downscaling is a non-reversible operation because frames are dropped. Moreover, the resulting video stream may not have the exact same duration as the original one if the new frame rate is not a whole multiple of the original rate.<br />
+<p> <code>yuvfps</code> uses by default Bresenham&#8217;s algorithm to do the resampling so that the new video stream is similar to the original one. Note, however, that downscaling is a non-reversible operation because frames are dropped. Moreover, the resulting video stream may not have the exact same duration as the original one if the new frame rate is not a whole multiple of the original rate.<br/>
 &nbsp;<wbr>&nbsp;<wbr> As an alternative to simply dropping or duplicating frames each output frame/field can be produced as a weighted average of the two temporally closest input frames/fields. In this mode, <code>yuvfps</code> can also change the interlacing mode of the stream. </p>
 <p> <code>yuvfps</code> also can &quot;fix&quot; the framerate specified in the YUV4MPEG header. This allows for the generation of effects (fast-forwarding, slow motion) and also when the source stream has some framerate that is very close, but not exactly, the rate required for some standard video (for example, 24.9 vs 25). </p>
 <h2>OPTIONS</h2>
@@ -31,8 +31,8 @@ description: "yuvfps – Converts to a different frame rate"
 </dd><dt>
 </dt><dd> Specifies the interlacing mode of the resulting stream. The interlacing mode can be changed only when using the weighted average resampling mode (the -w option).</dd>
 <dt>
-</dt><dd> p &#8211; progressive (non-interlaced)<br />
- t &#8211; top-field first<br />
+</dt><dd> p &#8211; progressive (non-interlaced)<br/>
+ t &#8211; top-field first<br/>
  b &#8211; bottom-field first</dd>
 <dt><code>-I Interlacing</code></dt>
 <dd>
@@ -53,15 +53,15 @@ description: "yuvfps – Converts to a different frame rate"
 <dt><code>-v [0,1,2]</code></dt>
 <dd>
 </dd><dt>
-</dt><dd> Set verbosity level.<br />
-&nbsp;<wbr>0&nbsp;<wbr>=&nbsp;<wbr>warnings and error messages only.&nbsp;<wbr><br />
-&nbsp;<wbr>1&nbsp;<wbr>=&nbsp;<wbr>add informative messages, like the framerate conversation information.<br />
+</dt><dd> Set verbosity level.<br/>
+&nbsp;<wbr>0&nbsp;<wbr>=&nbsp;<wbr>warnings and error messages only.&nbsp;<wbr><br/>
+&nbsp;<wbr>1&nbsp;<wbr>=&nbsp;<wbr>add informative messages, like the framerate conversation information.<br/>
 &nbsp;<wbr>2&nbsp;<wbr>=&nbsp;<wbr>add chatty debugging message, too. </dd>
 </dl>
 <h2>AUTHOR</h2>
-<p> This man page was written by Alfonso García-Patiño Barbolani.<br />
- Johannes Lehtinen added information about the weighted average resampling mode and the related options.<br />
- If you have questions, remarks, problems or you just want to contact the developers, the main mailing list for the MJPEG-tools is:<br />
+<p> This man page was written by Alfonso García-Patiño Barbolani.<br/>
+ Johannes Lehtinen added information about the weighted average resampling mode and the related options.<br/>
+ If you have questions, remarks, problems or you just want to contact the developers, the main mailing list for the MJPEG-tools is:<br/>
 &nbsp;<wbr>&nbsp;<wbr><i>mjpeg-users [at] lists.sourceforge.net</i> </p>
 <dl>
 <dt>For more info, see our website at</dt>

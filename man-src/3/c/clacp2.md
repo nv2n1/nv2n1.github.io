@@ -11,7 +11,7 @@ description: "clacp2.f –"
 <p> clacp2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>clacp2</code> (UPLO, M, N, A, LDA, B, LDB)<br />
+<p> subroutine <code>clacp2</code> (UPLO, M, N, A, LDA, B, LDB)<br/>
  <i></i><code>CLACP2</code> copies all or part of a real two-dimensional array to a complex array.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine clacp2 (characterUPLO, integerM, integerN, real, dimension( lda, * )A, integerLDA, complex, dimension( ldb, * )B, integerLDB)</h3>

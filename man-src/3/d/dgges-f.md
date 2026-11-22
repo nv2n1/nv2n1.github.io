@@ -10,7 +10,7 @@ description: "dgges.f –"
 <p>dgges.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dgges</code> (JOBVSL, JOBVSR, SORT, SELCTG, N, A, LDA, B, LDB, SDIM, ALPHAR, ALPHAI, BETA, VSL, LDVSL, VSR, LDVSR, WORK, LWORK, BWORK, INFO)<br />
+<p> subroutine <code>dgges</code> (JOBVSL, JOBVSR, SORT, SELCTG, N, A, LDA, B, LDB, SDIM, ALPHAR, ALPHAI, BETA, VSL, LDVSL, VSR, LDVSR, WORK, LWORK, BWORK, INFO)<br/>
  <i></i><code> DGGES computes the eigenvalues, the Schur form, and, optionally, the matrix of Schur vectors for GE matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dgges (characterJOBVSL, characterJOBVSR, characterSORT, logical, externalSELCTG, integerN, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( ldb, * )B, integerLDB, integerSDIM, double precision, dimension( * )ALPHAR, double precision, dimension( * )ALPHAI, double precision, dimension( * )BETA, double precision, dimension( ldvsl, * )VSL, integerLDVSL, double precision, dimension( ldvsr, * )VSR, integerLDVSR, double precision, dimension( * )WORK, integerLWORK, logical, dimension( * )BWORK, integerINFO)</h3>

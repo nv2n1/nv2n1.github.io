@@ -18,7 +18,7 @@ description: "resolve_stack_dump – resolve numeric stack trace dump to symbols
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> <code>resolve_stack_dump</code> is deprecated and is removed in MySQL 8.0. Stack traces from official MySQL builds are always symbolized, so there is no need to use <code>resolve_stack_dump</code>. </p>
 </dl>
 <p> Invoke <code>resolve_stack_dump</code> like this: </p>

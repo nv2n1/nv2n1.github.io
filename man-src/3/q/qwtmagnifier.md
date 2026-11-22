@@ -15,33 +15,33 @@ description: "QwtMagnifier –"
 <p> Inherited by <code>QwtPlotMagnifier</code>.</p>
 <h3>Public Member Functions</h3>
 <p><code>QwtMagnifier</code> (QWidget *) </p>
-<p> virtual <code>~QwtMagnifier</code> ()<br />
- <i>Destructor. </i><br />
+<p> virtual <code>~QwtMagnifier</code> ()<br/>
+ <i>Destructor. </i><br/>
  QWidget * <code>parentWidget</code> () </p>
 <p> const QWidget * <code>parentWidget</code> () const </p>
-<p> void <code>setEnabled</code> (bool)<br />
- <i>En/disable the magnifier. </i><br />
+<p> void <code>setEnabled</code> (bool)<br/>
+ <i>En/disable the magnifier. </i><br/>
  bool <code>isEnabled</code> () const </p>
-<p> void <code>setMouseFactor</code> (double)<br />
- <i>Change the mouse factor. </i><br />
+<p> void <code>setMouseFactor</code> (double)<br/>
+ <i>Change the mouse factor. </i><br/>
  double <code>mouseFactor</code> () const </p>
 <p> void <code>setMouseButton</code> (Qt::MouseButton, Qt::KeyboardModifiers=Qt::NoModifier) </p>
 <p> void <code>getMouseButton</code> (Qt::MouseButton &amp;, Qt::KeyboardModifiers &amp;) const </p>
-<p> void <code>setWheelFactor</code> (double)<br />
- <i>Change the wheel factor. </i><br />
+<p> void <code>setWheelFactor</code> (double)<br/>
+ <i>Change the wheel factor. </i><br/>
  double <code>wheelFactor</code> () const </p>
 <p> void <code>setWheelModifiers</code> (Qt::KeyboardModifiers) </p>
 <p> Qt::KeyboardModifiers <code>wheelModifiers</code> () const </p>
-<p> void <code>setKeyFactor</code> (double)<br />
- <i>Change the key factor. </i><br />
+<p> void <code>setKeyFactor</code> (double)<br/>
+ <i>Change the key factor. </i><br/>
  double <code>keyFactor</code> () const </p>
 <p> void <code>setZoomInKey</code> (int key, Qt::KeyboardModifiers=Qt::NoModifier) </p>
-<p> void <code>getZoomInKey</code> (int &amp;key, Qt::KeyboardModifiers &amp;) const<br />
- <i>Retrieve the settings of the zoom in key. </i><br />
+<p> void <code>getZoomInKey</code> (int &amp;key, Qt::KeyboardModifiers &amp;) const<br/>
+ <i>Retrieve the settings of the zoom in key. </i><br/>
  void <code>setZoomOutKey</code> (int key, Qt::KeyboardModifiers=Qt::NoModifier) </p>
-<p> void <code>getZoomOutKey</code> (int &amp;key, Qt::KeyboardModifiers &amp;) const<br />
- <i>Retrieve the settings of the zoom out key. </i><br />
- virtual bool <code>eventFilter</code> (QObject *, QEvent *)<br />
+<p> void <code>getZoomOutKey</code> (int &amp;key, Qt::KeyboardModifiers &amp;) const<br/>
+ <i>Retrieve the settings of the zoom out key. </i><br/>
+ virtual bool <code>eventFilter</code> (QObject *, QEvent *)<br/>
  <i>Event filter. </i></p>
 <h3>Protected Member Functions</h3>
 <p>virtual void <code>rescale</code> (double factor)=0 </p>
@@ -65,7 +65,7 @@ description: "QwtMagnifier –"
 <p>Event filter. When <code>isEnabled()</code> is true, the mouse events of the observed widget are filtered. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>object</i> Object to be filtered<br />
+<dd><i>object</i> Object to be filtered<br/>
  <i>event</i> Event</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -81,7 +81,7 @@ description: "QwtMagnifier –"
 <p>Retrieve the settings of the zoom in key. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>key</i> Key code, see Qt::Key<br />
+<dd><i>key</i> Key code, see Qt::Key<br/>
  <i>modifiers</i> Keyboard modifiers</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -90,7 +90,7 @@ description: "QwtMagnifier –"
 <p>Retrieve the settings of the zoom out key. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>key</i> Key code, see Qt::Key<br />
+<dd><i>key</i> Key code, see Qt::Key<br/>
  <i>modifiers</i> Keyboard modifiers</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -150,7 +150,7 @@ description: "QwtMagnifier –"
 <p>Assign the mouse button, that is used for zooming in/out. The default value is Qt::RightButton. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>button</i> Button<br />
+<dd><i>button</i> Button<br/>
  <i>modifiers</i> Keyboard modifiers</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -185,7 +185,7 @@ description: "QwtMagnifier –"
 <p>Assign the key, that is used for zooming in. The default combination is Qt::Key_Plus + Qt::NoModifier. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>key</i><br />
+<dd><i>key</i><br/>
  <i>modifiers</i></dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -194,7 +194,7 @@ description: "QwtMagnifier –"
 <p>Assign the key, that is used for zooming out. The default combination is Qt::Key_Minus + Qt::NoModifier. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>key</i><br />
+<dd><i>key</i><br/>
  <i>modifiers</i></dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>

@@ -10,7 +10,7 @@ description: "cpotri.f –"
 <p>cpotri.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>cpotri</code> (UPLO, N, A, LDA, INFO)<br />
+<p>subroutine <code>cpotri</code> (UPLO, N, A, LDA, INFO)<br/>
  <i></i><code>CPOTRI</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cpotri (characterUPLO, integerN, complex, dimension( lda, * )A, integerLDA, integerINFO)</h3>

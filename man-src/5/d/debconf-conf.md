@@ -11,16 +11,16 @@ description: "debconf.conf – debconf configuration file"
 <h2>Description</h2>
 <p>Debconf is a configuration system for Debian packages. /etc/debconf.conf and ~/.debconfrc are configuration files debconf uses to determine which databases it should use. These databases are used for storing two types of information; dynamic config data the user enters into it, and static template data. Debconf offers a flexible, extensible database backend. New drivers can be created with a minimum of effort, and sets of drivers can be combined in various ways.</p>
 <h2>Synopsis</h2>
-<p>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>This is a sample config file that is<br />
-&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>sufficient to use debconf.<br />
-&nbsp;<wbr>&nbsp;<wbr>Config: configdb<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>This is a sample config file that is<br/>
+&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>sufficient to use debconf.<br/>
+&nbsp;<wbr>&nbsp;<wbr>Config: configdb<br/>
 &nbsp;<wbr>&nbsp;<wbr>Templates: templatedb </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>Name: configdb<br />
-&nbsp;<wbr>&nbsp;<wbr>Driver: File<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>Name: configdb<br/>
+&nbsp;<wbr>&nbsp;<wbr>Driver: File<br/>
 &nbsp;<wbr>&nbsp;<wbr>Filename:&nbsp;<wbr>/var/cache/debconf/config.dat </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>Name: templatedb<br />
-&nbsp;<wbr>&nbsp;<wbr>Driver: File<br />
-&nbsp;<wbr>&nbsp;<wbr>Mode: 644<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>Name: templatedb<br/>
+&nbsp;<wbr>&nbsp;<wbr>Driver: File<br/>
+&nbsp;<wbr>&nbsp;<wbr>Mode: 644<br/>
 &nbsp;<wbr>&nbsp;<wbr>Filename:&nbsp;<wbr>/var/cache/debconf/templates.dat</p>
 <h2>File Format</h2>
 <p>The format of this file is a series of stanzas, each separated by at least one wholly blank line. Comment lines beginning with a &quot;#&quot; character are ignored. </p>
@@ -52,19 +52,19 @@ description: "debconf.conf – debconf configuration file"
 <dt><code>Terse</code></dt>
 <dd>If set to &quot;true&quot;, makes some debconf frontends use a special terse display mode that outputs as little as possible. Defaults to false. Terse mode may be temporarily set via the DEBCONF_TERSE environment variable.</dd></dl>
 </dl>
-<p> For example, the first stanza of a file might look like this:<br />
-&nbsp;<wbr>&nbsp;<wbr>Config: configdb<br />
+<p> For example, the first stanza of a file might look like this:<br/>
+&nbsp;<wbr>&nbsp;<wbr>Config: configdb<br/>
 &nbsp;<wbr>&nbsp;<wbr>Templates: templatedb </p>
-<p> Each remaining stanza in the file sets up a database. A database stanza begins by naming the database:<br />
+<p> Each remaining stanza in the file sets up a database. A database stanza begins by naming the database:<br/>
 &nbsp;<wbr>&nbsp;<wbr>Name: configdb </p>
-<p> Then it indicates what database driver should be used for this database. See DRIVERS, below, for information about what drivers are available.<br />
+<p> Then it indicates what database driver should be used for this database. See DRIVERS, below, for information about what drivers are available.<br/>
 &nbsp;<wbr>&nbsp;<wbr>Driver: File </p>
-<p> You can indicate that the database is not essential to the proper functioning of debconf by saying it is not required. This will make debconf muddle on if the database fails for some reason.<br />
+<p> You can indicate that the database is not essential to the proper functioning of debconf by saying it is not required. This will make debconf muddle on if the database fails for some reason.<br/>
 &nbsp;<wbr>&nbsp;<wbr>Required: false </p>
-<p> You can mark any database as readonly and debconf will not write anything to it.<br />
+<p> You can mark any database as readonly and debconf will not write anything to it.<br/>
 &nbsp;<wbr>&nbsp;<wbr>Readonly: true </p>
 <p> You can also limit what types of data can go into the database with Accept- and Reject- lines; see ACCESS CONTROLS, below. </p>
-<p> The remainder of each database stanza is used to provide configuration specific to that driver. For example, the Text driver needs to know a directory to put the database in, so you might say:<br />
+<p> The remainder of each database stanza is used to provide configuration specific to that driver. For example, the Text driver needs to know a directory to put the database in, so you might say:<br/>
 &nbsp;<wbr>&nbsp;<wbr>Filename:&nbsp;<wbr>/var/cache/debconf/config.dat</p>
 <h2>Drivers</h2>
 <p>A number of drivers are available, and more can be written with little difficulty. Drivers come in two general types. First there are real drivers &#8212; drivers that actually access and store data in some kind of database, which might be on the local filesystem, or on a remote system. Then there are meta-drivers that combine other drivers together to form more interesting systems. Let&#8217;s start with the former.</p>
@@ -90,8 +90,8 @@ description: "debconf.conf – debconf configuration file"
 <dd>Whether a backup should be made of the old file before changing it. Defaults to true.</dd></dl>
 </dl>
 <p> As example stanza setting up a database using this driver: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>Name: mydb<br />
-&nbsp;<wbr>&nbsp;<wbr>Driver: File<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>Name: mydb<br/>
+&nbsp;<wbr>&nbsp;<wbr>Driver: File<br/>
 &nbsp;<wbr>&nbsp;<wbr>Filename:&nbsp;<wbr>/var/cache/debconf/mydb.dat</dl>
 <dt><code>DirTree</code></dt>
 <dd>
@@ -111,9 +111,9 @@ description: "debconf.conf – debconf configuration file"
 <dd>Whether a backup should be made of the old file before changing it. Defaults to true.</dd></dl>
 </dl>
 <p> As example stanza setting up a database using this driver: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>Name: mydb<br />
-&nbsp;<wbr>&nbsp;<wbr>Driver: DirTree<br />
-&nbsp;<wbr>&nbsp;<wbr>Directory:&nbsp;<wbr>/var/cache/debconf/mydb<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>Name: mydb<br/>
+&nbsp;<wbr>&nbsp;<wbr>Driver: DirTree<br/>
+&nbsp;<wbr>&nbsp;<wbr>Directory:&nbsp;<wbr>/var/cache/debconf/mydb<br/>
 &nbsp;<wbr>&nbsp;<wbr>Extension: .txt</dl>
 <dt><code>PackageDir</code></dt>
 <dd>
@@ -124,8 +124,8 @@ description: "debconf.conf – debconf configuration file"
 <dt><code>Mode</code></dt>
 <dd>The permissions to create files with. Defaults to 600, since the files could contain passwords in some circumstances.</dd></dl>
 <p> As example stanza setting up a database using this driver: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>Name: mydb<br />
-&nbsp;<wbr>&nbsp;<wbr>Driver: PackageDir<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>Name: mydb<br/>
+&nbsp;<wbr>&nbsp;<wbr>Driver: PackageDir<br/>
 &nbsp;<wbr>&nbsp;<wbr>Directory:&nbsp;<wbr>/var/cache/debconf/mydb</dl>
 <dt><code>LDAP</code></dt>
 <dd>
@@ -158,18 +158,18 @@ description: "debconf.conf – debconf configuration file"
 <dd>Note that when this option is enabled, the connection to the LDAP server is kept active during the whole Debconf run. This is a little different from the all-in-one behavior where two brief connections are made to LDAP; in the beginning to retrieve all the entries, and in the end to save eventual changes.</dd></dl>
 </dl>
 <p> An example stanza setting up a database using this driver, assuming the remote database is on example.com and can be accessed anonymously: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>Name: ldapdb<br />
-&nbsp;<wbr>&nbsp;<wbr>Driver: LDAP<br />
-&nbsp;<wbr>&nbsp;<wbr>Readonly: true<br />
-&nbsp;<wbr>&nbsp;<wbr>Server: example.com<br />
-&nbsp;<wbr>&nbsp;<wbr>BaseDN: cn=debconf,dc=example,dc=com<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>Name: ldapdb<br/>
+&nbsp;<wbr>&nbsp;<wbr>Driver: LDAP<br/>
+&nbsp;<wbr>&nbsp;<wbr>Readonly: true<br/>
+&nbsp;<wbr>&nbsp;<wbr>Server: example.com<br/>
+&nbsp;<wbr>&nbsp;<wbr>BaseDN: cn=debconf,dc=example,dc=com<br/>
 &nbsp;<wbr>&nbsp;<wbr>KeyByKey: 0 </p>
 <p> Another example, this time the LDAP database is on localhost, and can be written to: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>Name: ldapdb<br />
-&nbsp;<wbr>&nbsp;<wbr>Driver: LDAP<br />
-&nbsp;<wbr>&nbsp;<wbr>Server: localhost<br />
-&nbsp;<wbr>&nbsp;<wbr>BaseDN: cn=debconf,dc=domain,dc=com<br />
-&nbsp;<wbr>&nbsp;<wbr>BindPasswd: secret<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>Name: ldapdb<br/>
+&nbsp;<wbr>&nbsp;<wbr>Driver: LDAP<br/>
+&nbsp;<wbr>&nbsp;<wbr>Server: localhost<br/>
+&nbsp;<wbr>&nbsp;<wbr>BaseDN: cn=debconf,dc=domain,dc=com<br/>
+&nbsp;<wbr>&nbsp;<wbr>BindPasswd: secret<br/>
 &nbsp;<wbr>&nbsp;<wbr>KeyByKey: 1</dl>
 <dt><code>Pipe</code></dt>
 <dd>
@@ -204,8 +204,8 @@ description: "debconf.conf – debconf configuration file"
 <dd>This is where you specify a list of other databases, by name, to tell it what makes up the stack.</dd></dl>
 </dl>
 <p> For example: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>Name: megadb<br />
-&nbsp;<wbr>&nbsp;<wbr>Driver: stack<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>Name: megadb<br/>
+&nbsp;<wbr>&nbsp;<wbr>Driver: stack<br/>
 &nbsp;<wbr>&nbsp;<wbr>Stack: passworddb, configdb, companydb </p>
 <p> WARNING: The stack driver is not very well tested yet. Use at your own risk.</dl>
 </dl>
@@ -222,9 +222,9 @@ description: "debconf.conf – debconf configuration file"
 <dd>The name of the database to send copies of writes to.</dd></dl>
 </dl>
 <p> For example: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>Name: backup<br />
-&nbsp;<wbr>&nbsp;<wbr>Driver: Backup<br />
-&nbsp;<wbr>&nbsp;<wbr>Db: mydb<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>Name: backup<br/>
+&nbsp;<wbr>&nbsp;<wbr>Driver: Backup<br/>
+&nbsp;<wbr>&nbsp;<wbr>Db: mydb<br/>
 &nbsp;<wbr>&nbsp;<wbr>Backupdb: mybackupdb</dl>
 <p> <code>Debug</code></p>
 <dl>
@@ -256,26 +256,26 @@ description: "debconf.conf – debconf configuration file"
 <dt><code>822</code></dt>
 <dd>This is a file format loosely based upon the rfc-822 format for email message headers. Similar formats are used throughout Debian; in the dpkg status file, and so on.</dd></dl>
 <h2>Example</h2>
-<p>Here is a more complicated example of a debconf.conf file.<br />
-&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>This stanza is used for general debconf setup.<br />
-&nbsp;<wbr>&nbsp;<wbr>Config: stack<br />
-&nbsp;<wbr>&nbsp;<wbr>Templates: templates<br />
-&nbsp;<wbr>&nbsp;<wbr>Log: developer<br />
-&nbsp;<wbr>&nbsp;<wbr>Debug: developer<br />
-&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>This is my own local database.<br />
-&nbsp;<wbr>&nbsp;<wbr>Name: mydb<br />
-&nbsp;<wbr>&nbsp;<wbr>Driver: DirTree<br />
-&nbsp;<wbr>&nbsp;<wbr>Directory:&nbsp;<wbr>/var/cache/debconf/config<br />
-&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>This is another database that I use to hold<br />
-&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>only X server configuration.<br />
-&nbsp;<wbr>&nbsp;<wbr>Name: X<br />
-&nbsp;<wbr>&nbsp;<wbr>Driver: File<br />
-&nbsp;<wbr>&nbsp;<wbr>Filename:&nbsp;<wbr>/etc/X11/debconf.dat<br />
-&nbsp;<wbr>&nbsp;<wbr>Mode: 644<br />
-&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>It&#8217;s sorta hard to work out what questions<br />
-&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>belong to X;&nbsp;<wbr>it should be using a deeper<br />
-&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>tree structure so I could just match on&nbsp;<wbr>^X/<br />
-&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>Oh well.<br />
+<p>Here is a more complicated example of a debconf.conf file.<br/>
+&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>This stanza is used for general debconf setup.<br/>
+&nbsp;<wbr>&nbsp;<wbr>Config: stack<br/>
+&nbsp;<wbr>&nbsp;<wbr>Templates: templates<br/>
+&nbsp;<wbr>&nbsp;<wbr>Log: developer<br/>
+&nbsp;<wbr>&nbsp;<wbr>Debug: developer<br/>
+&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>This is my own local database.<br/>
+&nbsp;<wbr>&nbsp;<wbr>Name: mydb<br/>
+&nbsp;<wbr>&nbsp;<wbr>Driver: DirTree<br/>
+&nbsp;<wbr>&nbsp;<wbr>Directory:&nbsp;<wbr>/var/cache/debconf/config<br/>
+&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>This is another database that I use to hold<br/>
+&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>only X server configuration.<br/>
+&nbsp;<wbr>&nbsp;<wbr>Name: X<br/>
+&nbsp;<wbr>&nbsp;<wbr>Driver: File<br/>
+&nbsp;<wbr>&nbsp;<wbr>Filename:&nbsp;<wbr>/etc/X11/debconf.dat<br/>
+&nbsp;<wbr>&nbsp;<wbr>Mode: 644<br/>
+&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>It&#8217;s sorta hard to work out what questions<br/>
+&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>belong to X;&nbsp;<wbr>it should be using a deeper<br/>
+&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>tree structure so I could just match on&nbsp;<wbr>^X/<br/>
+&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>Oh well.<br/>
 &nbsp;<wbr>&nbsp;<wbr>Accept-Name: xserver|xfree86|xbase </p>
 <pre><code># This is our company's global, read-only
 # (for me!) debconf database.
@@ -292,31 +292,31 @@ Reject-Type: password
 # If this db is not accessible for whatever
 # reason, carry on anyway.
 Required: false</code></pre>
-<p>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>I use this database to hold<br />
-&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>passwords safe and secure.<br />
-&nbsp;<wbr>&nbsp;<wbr>Name: passwords<br />
-&nbsp;<wbr>&nbsp;<wbr>Driver: File<br />
-&nbsp;<wbr>&nbsp;<wbr>Filename:&nbsp;<wbr>/etc/debconf/passwords<br />
-&nbsp;<wbr>&nbsp;<wbr>Mode: 600<br />
-&nbsp;<wbr>&nbsp;<wbr>Accept-Type: password<br />
-&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>Let&#8217;s put them all together<br />
-&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>in a database stack.<br />
-&nbsp;<wbr>&nbsp;<wbr>Name: stack<br />
-&nbsp;<wbr>&nbsp;<wbr>Driver: Stack<br />
-&nbsp;<wbr>&nbsp;<wbr>Stack: passwords, X, mydb, company<br />
-&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>So, all passwords go to the password database.<br />
-&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>Most X configuration stuff goes to the X<br />
-&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>database, and anything else goes to my main<br />
-&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>database. Values are looked up in each of those<br />
-&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>in turn, and if none has a particular value, it<br />
-&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>is looked up in the company-wide LDAP database<br />
-&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>(unless it&#8217;s a password).<br />
-&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>A database is also used to hold templates. We&nbsp;<wbr><br />
-&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>don&#8217;t need to make this as fancy.<br />
-&nbsp;<wbr>&nbsp;<wbr>Name: templates<br />
-&nbsp;<wbr>&nbsp;<wbr>Driver: File<br />
-&nbsp;<wbr>&nbsp;<wbr>Mode: 644<br />
-&nbsp;<wbr>&nbsp;<wbr>Format: 822<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>I use this database to hold<br/>
+&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>passwords safe and secure.<br/>
+&nbsp;<wbr>&nbsp;<wbr>Name: passwords<br/>
+&nbsp;<wbr>&nbsp;<wbr>Driver: File<br/>
+&nbsp;<wbr>&nbsp;<wbr>Filename:&nbsp;<wbr>/etc/debconf/passwords<br/>
+&nbsp;<wbr>&nbsp;<wbr>Mode: 600<br/>
+&nbsp;<wbr>&nbsp;<wbr>Accept-Type: password<br/>
+&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>Let&#8217;s put them all together<br/>
+&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>in a database stack.<br/>
+&nbsp;<wbr>&nbsp;<wbr>Name: stack<br/>
+&nbsp;<wbr>&nbsp;<wbr>Driver: Stack<br/>
+&nbsp;<wbr>&nbsp;<wbr>Stack: passwords, X, mydb, company<br/>
+&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>So, all passwords go to the password database.<br/>
+&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>Most X configuration stuff goes to the X<br/>
+&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>database, and anything else goes to my main<br/>
+&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>database. Values are looked up in each of those<br/>
+&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>in turn, and if none has a particular value, it<br/>
+&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>is looked up in the company-wide LDAP database<br/>
+&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>(unless it&#8217;s a password).<br/>
+&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>A database is also used to hold templates. We&nbsp;<wbr><br/>
+&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>don&#8217;t need to make this as fancy.<br/>
+&nbsp;<wbr>&nbsp;<wbr>Name: templates<br/>
+&nbsp;<wbr>&nbsp;<wbr>Driver: File<br/>
+&nbsp;<wbr>&nbsp;<wbr>Mode: 644<br/>
+&nbsp;<wbr>&nbsp;<wbr>Format: 822<br/>
 &nbsp;<wbr>&nbsp;<wbr>Filename:&nbsp;<wbr>/var/cache/debconf/templates</p>
 <h2>Notes</h2>
 <p>If you use something like ${HOME} in this file, it will be replaced with the value of the named environment variable. </p>

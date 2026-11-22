@@ -10,7 +10,7 @@ description: "pdfopen, pdfclose – open or close a PDF file viewer"
 
 <p> pdfopen, pdfclose &#8211; open or close a PDF file viewer </p>
 <h2>SYNOPSIS</h2>
-<p> <code>pdfopen </code> [ <i>options</i> ]&nbsp; [ <code>&#8211;file </code> ]&nbsp; <i>file.pdf</i><br />
+<p> <code>pdfopen </code> [ <i>options</i> ]&nbsp; [ <code>&#8211;file </code> ]&nbsp; <i>file.pdf</i><br/>
  <code>pdfclose</code> [ <code>&#8211;file </code> ]&nbsp; <i>file.pdf</i></p>
 <h2>OPTIONS</h2>
 <dl>
@@ -32,8 +32,8 @@ description: "pdfopen, pdfclose – open or close a PDF file viewer"
 <h2>DESCRIPTION</h2>
 <p> <code>pdfopen</code> searches for an instance of the specified (or default) PDF viewer displaying the specified PDF file. If there is already an instance of the given viewer displaying the given file, the viewer is instructed to reload the file. If no such instance is found, <code>pdfopen</code> attempts to run the specified viewer on the specified document. </p>
 <p> The default viewer is &quot;<code>acroread</code>&quot;, which could start any one of a number of versions of Acrobat Reader, depending on what is installed on your system. However, the commands to reload the current document vary from one version of <code>acroread</code> to another; consequently, if you are using a version of <code>acroread</code> other than AR9, you should explicitly specify the viewer program. </p>
-<p> This version of <code>pdfopen</code> accepts the following viewer options:<br />
- <i>ar9</i>, <i>ar9-tab</i>, <i>ar8</i>, <i>ar7</i>, <i>ar5</i>, <i>xpdf</i>, and <i>evince</i>.<br />
+<p> This version of <code>pdfopen</code> accepts the following viewer options:<br/>
+ <i>ar9</i>, <i>ar9-tab</i>, <i>ar8</i>, <i>ar7</i>, <i>ar5</i>, <i>xpdf</i>, and <i>evince</i>.<br/>
  The difference between <i>ar9</i> and <i>ar9-tab</i> is significant when there is no instance of AR9 already displaying the requested document. In this situation, while <i>ar9</i> will request <code>acroread</code> to create a new instance of <code>acroread</code> (and thus open a new window) by using the <code>-openInNewInstance</code> argument, <i>ar9-tab</i> starts <code>acroread</code> without this argument; if there is already an instance of <code>acroread</code> running, a new tab will be opened in an existing window. </p>
 <p> <code>pdfclose</code> searches for one of the above PDF viewers displaying the given file and instructs the viewer to &quot;close&quot; the window. In most cases, the PDF viewer continues to run, possibly now displaying just a blank window. (This behaviour varies somewhat from one PDF viewer to another.)</p>
 <h2>PORTABILITY AND AVAILABILITY</h2>

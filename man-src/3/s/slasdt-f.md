@@ -10,7 +10,7 @@ description: "slasdt.f –"
 <p>slasdt.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>slasdt</code> (N, LVL, ND, INODE, NDIML, NDIMR, MSUB)<br />
+<p>subroutine <code>slasdt</code> (N, LVL, ND, INODE, NDIML, NDIMR, MSUB)<br/>
  <i></i><code>SLASDT</code> creates a tree of subproblems for bidiagonal divide and conquer. Used by sbdsdc.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slasdt (integerN, integerLVL, integerND, integer, dimension( * )INODE, integer, dimension( * )NDIML, integer, dimension( * )NDIMR, integerMSUB)</h3>

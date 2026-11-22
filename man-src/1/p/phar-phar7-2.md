@@ -23,7 +23,7 @@ description: "phar, phar.phar – PHAR (PHP archive) command line tool"
 <p> Optional arguments:</p>
 <dl COMPACT>
 <dd><code>-a </code><i>alias</i> Provide an <i>alias</i> name for the phar file.</dd>
-<dd><code>-c </code><i>algo</i> Compression algorithm (see <font SIZE="-1"><code>COMPRESSION</code> </font> )</dd>
+<dd><code>-c </code><i>algo</i> Compression algorithm (see <code>COMPRESSION</code>  )</dd>
 <dd><code>-i </code><i>regex</i> Specifies a regular expression for input files.</dd>
 <dd><code>-l </code><i>level</i> Number of preceding subdirectories to strip from file entries</dd>
 <dd><code>-x </code><i>regex</i> Regular expression for input files to exclude. </dd>
@@ -32,7 +32,7 @@ description: "phar, phar.phar – PHAR (PHP archive) command line tool"
 <p>Compress or uncompress all files or a selected entry. </p>
 <p> Required arguments:</p>
 <dl COMPACT>
-<dd><code>-c </code><i>algo</i> Compression algorithm (see <font SIZE="-1"><code>COMPRESSION</code> </font> )</dd>
+<dd><code>-c </code><i>algo</i> Compression algorithm (see <code>COMPRESSION</code>  )</dd>
 <dd><code>-f </code><i>file</i> Specifies the phar <i>file</i> to work on.</dd></dl>
 <p> Optional arguments:</p>
 <dl COMPACT>
@@ -128,8 +128,8 @@ description: "phar, phar.phar – PHAR (PHP archive) command line tool"
 <dl COMPACT>
 <dd><code>-a </code><i>alias</i> Provide an <i>alias</i> name for the phar file.</dd>
 <dd><code>-b </code><i>bang</i> Hash-bang line to start the archive (e.g. #!/usr/bin/php). The hash mark itself &#8216;#!&#8217; and the newline character are optional.</dd>
-<dd><code>-c </code><i>algo</i> Compression algorithm (see <font SIZE="-1"><code>COMPRESSION</code> </font> )</dd>
-<dd><code>-h </code><i>hash</i> Selects the <i>hash</i> algorithm (see <font SIZE="-1"><code>HASH</code> </font> )</dd>
+<dd><code>-c </code><i>algo</i> Compression algorithm (see <code>COMPRESSION</code>  )</dd>
+<dd><code>-h </code><i>hash</i> Selects the <i>hash</i> algorithm (see <code>HASH</code>  )</dd>
 <dd><code>-i </code><i>regex</i> Specifies a regular expression for input files.</dd>
 <dd><code>-l </code><i>level</i> Number of preceding subdirectories to strip from file entries</dd>
 <dd><code>-p </code><i>loader</i> Location of PHP_Archive class file (pear list-files PHP_Archive).You can use &#8216;0&#8217; or &#8216;1&#8217; to locate it automatically using the mentioned pear command. When using &#8216;0&#8217; the command does not error out when the class file cannot be located. This switch also adds some code around the stub so that class PHP_Archive gets registered as phar:// stream wrapper if necessary. And finally this switch will add the file phar.inc from this package and load it to ensure class Phar is present.</dd>
@@ -142,7 +142,7 @@ description: "phar, phar.phar – PHAR (PHP archive) command line tool"
 <p> Required arguments:</p>
 <dl COMPACT>
 <dd><code>-f </code><i>file</i> Specifies the phar <i>file</i> to work on.</dd>
-<dd><code>-h </code><i>hash</i> Selects the <i>hash</i> algorithm (see <font SIZE="-1"><code>HASH</code> </font> )</dd></dl>
+<dd><code>-h </code><i>hash</i> Selects the <i>hash</i> algorithm (see <code>HASH</code>  )</dd></dl>
 <p> Optional arguments:</p>
 <dl COMPACT>
 <dd><code>-y </code><i>key</i> Private <i>key</i> for OpenSSL signing. </dd>

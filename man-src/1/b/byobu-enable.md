@@ -16,8 +16,8 @@ description: "byobu-enable, byobu-disable – wrapper script for enabling/disabl
 <dd>
 </dd></dl>
 <h2>DESCRIPTION</h2>
-<p> <code>byobu-enable</code> will do two things:<br />
-&nbsp;<wbr>1)&nbsp;<wbr>run&nbsp;<wbr><code><a href="/docs/linux/man/1-byobu-launcher-install/">byobu-launcher-install</a></code>(1)&nbsp;<wbr>to configure&nbsp;<wbr><code><a href="/docs/linux/man/1-byobu/">byobu</a></code>(1)&nbsp;<wbr>to launch automatically on login<br />
+<p> <code>byobu-enable</code> will do two things:<br/>
+&nbsp;<wbr>1)&nbsp;<wbr>run&nbsp;<wbr><code><a href="/docs/linux/man/1-byobu-launcher-install/">byobu-launcher-install</a></code>(1)&nbsp;<wbr>to configure&nbsp;<wbr><code><a href="/docs/linux/man/1-byobu/">byobu</a></code>(1)&nbsp;<wbr>to launch automatically on login<br/>
 &nbsp;<wbr>2)&nbsp;<wbr>then launch&nbsp;<wbr><code><a href="/docs/linux/man/1-byobu/">byobu</a></code>(1) </p>
 <p> <code>byobu-disable</code> will simply run <code><a href="/docs/linux/man/1-byobu-launcher-uninstall/">byobu-launcher-uninstall</a></code>(1). </p>
 <h2>BUGS</h2>

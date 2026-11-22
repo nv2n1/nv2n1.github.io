@@ -9,129 +9,129 @@ description: "msgpuck.h – MsgPuck is a simple and efficient MsgPack encoder/de
 
 <p>msgpuck.h &#8211; MsgPuck is a simple and efficient MsgPack encoder/decoder library in a single self-contained file.</p>
 <h2>Synopsis</h2>
-<p>#include &lt;stdlib.h&gt;<br />
- #include &lt;stdint.h&gt;<br />
- #include &lt;stddef.h&gt;<br />
- #include &lt;stdbool.h&gt;<br />
- #include &lt;string.h&gt;<br />
- #include &lt;assert.h&gt;<br />
- #include &lt;stdarg.h&gt;<br />
+<p>#include &lt;stdlib.h&gt;<br/>
+ #include &lt;stdint.h&gt;<br/>
+ #include &lt;stddef.h&gt;<br/>
+ #include &lt;stdbool.h&gt;<br/>
+ #include &lt;string.h&gt;<br/>
+ #include &lt;assert.h&gt;<br/>
+ #include &lt;stdarg.h&gt;<br/>
  #include &lt;stdio.h&gt; </p>
 <h3>Enumerations</h3>
-<p>enum <code>mp_type</code> { <code>MP_NIL</code> = 0, <code>MP_UINT</code>, <code>MP_INT</code>, <code>MP_STR</code>, <code>MP_BIN</code>, <code>MP_ARRAY</code>, <code>MP_MAP</code>, <code>MP_BOOL</code>, <code>MP_FLOAT</code>, <code>MP_DOUBLE</code>, <code>MP_EXT</code> }<br />
+<p>enum <code>mp_type</code> { <code>MP_NIL</code> = 0, <code>MP_UINT</code>, <code>MP_INT</code>, <code>MP_STR</code>, <code>MP_BIN</code>, <code>MP_ARRAY</code>, <code>MP_MAP</code>, <code>MP_BOOL</code>, <code>MP_FLOAT</code>, <code>MP_DOUBLE</code>, <code>MP_EXT</code> }<br/>
  <i>MsgPack data types. </i></p>
 <h3>Functions</h3>
-<p>MP_PROTO enum <code>mp_type</code> <code>mp_typeof</code> (const char c)<br />
- <i>Determine MsgPack type by a first byte c</i> of encoded data.<br />
- MP_PROTO uint32_t <code>mp_sizeof_array</code> (uint32_t size)<br />
- <i>Calculate exact buffer size needed to store an array header of size</i> elements. Maximum return value is 5. For performance reasons you can preallocate buffer for maximum size without calling the function.<br />
- MP_PROTO char * <code>mp_encode_array</code> (char *data, uint32_t size)<br />
- <i>Encode an array header of size</i> elements.<br />
- MP_PROTO ptrdiff_t <code>mp_check_array</code> (const char *cur, const char *end)<br />
- <i>Check that cur</i> buffer has enough bytes to decode an array header.<br />
- MP_PROTO uint32_t <code>mp_decode_array</code> (const char **data)<br />
- <i>Decode an array header from MsgPack data</i>.<br />
- MP_PROTO uint32_t <code>mp_sizeof_map</code> (uint32_t size)<br />
- <i>Calculate exact buffer size needed to store a map header of size</i> elements. Maximum return value is 5. For performance reasons you can preallocate buffer for maximum size without calling the function.<br />
- MP_PROTO char * <code>mp_encode_map</code> (char *data, uint32_t size)<br />
- <i>Encode a map header of size</i> elements.<br />
- MP_PROTO ptrdiff_t <code>mp_check_map</code> (const char *cur, const char *end)<br />
- <i>Check that cur</i> buffer has enough bytes to decode a map header.<br />
- MP_PROTO uint32_t <code>mp_decode_map</code> (const char **data)<br />
- <i>Decode a map header from MsgPack data</i>.<br />
- MP_PROTO uint32_t <code>mp_sizeof_uint</code> (uint64_t num)<br />
- <i>Calculate exact buffer size needed to store an integer num</i>. Maximum return value is 9. For performance reasons you can preallocate buffer for maximum size without calling the function. Example usage:<br />
- MP_PROTO uint32_t <code>mp_sizeof_int</code> (int64_t num)<br />
- <i>Calculate exact buffer size needed to store an integer num</i>. Maximum return value is 9. For performance reasons you can preallocate buffer for maximum size without calling the function.<br />
- MP_PROTO char * <code>mp_encode_uint</code> (char *data, uint64_t num)<br />
- <i>Encode an unsigned integer num</i>. It is your responsibility to ensure that <i>data</i> has enough space.<br />
- MP_PROTO char * <code>mp_encode_int</code> (char *data, int64_t num)<br />
- <i>Encode a signed integer num</i>. It is your responsibility to ensure that <i>data</i> has enough space.<br />
- MP_PROTO ptrdiff_t <code>mp_check_uint</code> (const char *cur, const char *end)<br />
- <i>Check that cur</i> buffer has enough bytes to decode an uint.<br />
- MP_PROTO ptrdiff_t <code>mp_check_int</code> (const char *cur, const char *end)<br />
- <i>Check that cur</i> buffer has enough bytes to decode an int.<br />
- MP_PROTO uint64_t <code>mp_decode_uint</code> (const char **data)<br />
- <i>Decode an unsigned integer from MsgPack data</i>.<br />
- MP_PROTO int64_t <code>mp_decode_int</code> (const char **data)<br />
- <i>Decode a signed integer from MsgPack data</i>.<br />
- MP_PROTO int <code>mp_compare_uint</code> (const char *data_a, const char *data_b)<br />
- <i>Compare two packed unsigned integers. </i><br />
- MP_PROTO uint32_t <code>mp_sizeof_float</code> (float num)<br />
- <i>Calculate exact buffer size needed to store a float num</i>. The return value is always 5. The function was added to provide integrity of the library.<br />
- MP_PROTO uint32_t <code>mp_sizeof_double</code> (double num)<br />
- <i>Calculate exact buffer size needed to store a double num</i>. The return value is either 5 or 9. The function was added to provide integrity of the library. For performance reasons you can preallocate buffer for maximum size without calling the function.<br />
- MP_PROTO char * <code>mp_encode_float</code> (char *data, float num)<br />
- <i>Encode a float num</i>. It is your responsibility to ensure that <i>data</i> has enough space.<br />
- MP_PROTO char * <code>mp_encode_double</code> (char *data, double num)<br />
- <i>Encode a double num</i>. It is your responsibility to ensure that <i>data</i> has enough space.<br />
- MP_PROTO ptrdiff_t <code>mp_check_float</code> (const char *cur, const char *end)<br />
- <i>Check that cur</i> buffer has enough bytes to decode a float.<br />
- MP_PROTO ptrdiff_t <code>mp_check_double</code> (const char *cur, const char *end)<br />
- <i>Check that cur</i> buffer has enough bytes to decode a double.<br />
- MP_PROTO float <code>mp_decode_float</code> (const char **data)<br />
- <i>Decode a float from MsgPack data</i>.<br />
- MP_PROTO double <code>mp_decode_double</code> (const char **data)<br />
- <i>Decode a double from MsgPack data</i>.<br />
- MP_PROTO uint32_t <code>mp_sizeof_strl</code> (uint32_t len)<br />
- <i>Calculate exact buffer size needed to store a string header of length num</i>. Maximum return value is 5. For performance reasons you can preallocate buffer for maximum size without calling the function.<br />
- MP_PROTO uint32_t <code>mp_sizeof_str</code> (uint32_t len)<br />
- <i>Equivalent to mp_sizeof_strl(len</i>) + <i>len</i>.<br />
- MP_PROTO uint32_t <code>mp_sizeof_binl</code> (uint32_t len)<br />
- <i>Calculate exact buffer size needed to store a binstring header of length num</i>. Maximum return value is 5. For performance reasons you can preallocate buffer for maximum size without calling the function.<br />
- MP_PROTO uint32_t <code>mp_sizeof_bin</code> (uint32_t len)<br />
- <i>Equivalent to mp_sizeof_binl(len</i>) + <i>len</i>.<br />
- MP_PROTO char * <code>mp_encode_strl</code> (char *data, uint32_t len)<br />
- <i>Encode a string header of length len</i>.<br />
- MP_PROTO char * <code>mp_encode_str</code> (char *data, const char *str, uint32_t len)<br />
- <i>Encode a string of length len</i>. The function is equivalent to <code>mp_encode_strl()</code> + memcpy.<br />
- MP_PROTO char * <code>mp_encode_binl</code> (char *data, uint32_t len)<br />
- <i>Encode a binstring header of length len</i>. See <code>mp_encode_strl()</code> for more details.<br />
- MP_PROTO char * <code>mp_encode_bin</code> (char *data, const char *str, uint32_t len)<br />
- <i>Encode a binstring of length len</i>. The function is equivalent to <code>mp_encode_binl()</code> + memcpy.<br />
- MP_PROTO size_t <code>mp_format</code> (char *data, size_t data_size, const char *format,&#8230;)<br />
- <i>Encode a sequence of values according to format string. Example: mp_format(buf, sz, &#8216;[%d {%d%s%d%s}]&#8217;, 42, 0, &#8216;false&#8217;, 1, &#8216;true&#8217;); to get a msgpack array of two items: number 42 and map (0-&gt;&#8217;false, 2-&gt;&#8217;true)Does</i>not<i>write</i>items<i>that</i>don&#8217;t<i>fit</i>to<i>data_size</i>argument.<i></i><br />
- MP_PROTO size_t <code>mp_vformat</code> (char *data, size_t data_size, const char *format, va_list args)<br />
- <i>mp_format variation, taking variable argument list Example: va_list args; va_start(args, fmt); mp_vformat(data, data_size, fmt, args); va_end(args); </i><br />
- MP_PROTO int <code>mp_fprint</code> (FILE *file, const char *data)<br />
- <i>print MsgPack data file</i> using JSON-like format. MP_EXT is printed as &#8216;undefined&#8217;<br />
- MP_PROTO int <code>mp_snprint</code> (char *buf, int size, const char *data)<br />
- <i>format MsgPack data to buf</i> using JSON-like format.<br />
- MP_PROTO ptrdiff_t <code>mp_check_strl</code> (const char *cur, const char *end)<br />
- <i>Check that cur</i> buffer has enough bytes to decode a string header.<br />
- MP_PROTO ptrdiff_t <code>mp_check_binl</code> (const char *cur, const char *end)<br />
- <i>Check that cur</i> buffer has enough bytes to decode a binstring header.<br />
- MP_PROTO uint32_t <code>mp_decode_strl</code> (const char **data)<br />
- <i>Decode a length of a string from MsgPack data</i>.<br />
- MP_PROTO const char * <code>mp_decode_str</code> (const char **data, uint32_t *len)<br />
- <i>Decode a string from MsgPack data</i>.<br />
- MP_PROTO uint32_t <code>mp_decode_binl</code> (const char **data)<br />
- <i>Decode a length of a binstring from MsgPack data</i>.<br />
- MP_PROTO const char * <code>mp_decode_bin</code> (const char **data, uint32_t *len)<br />
- <i>Decode a binstring from MsgPack data</i>.<br />
- MP_PROTO uint32_t <code>mp_decode_strbinl</code> (const char **data)<br />
- <i>Decode a length of a string or binstring from MsgPack data</i>.<br />
- MP_PROTO const char * <code>mp_decode_strbin</code> (const char **data, uint32_t *len)<br />
- <i>Decode a string or binstring from MsgPack data</i>.<br />
- MP_PROTO uint32_t <code>mp_sizeof_nil</code> (void)<br />
- <i>Calculate exact buffer size needed to store the nil value. The return value is always 1. The function was added to provide integrity of the library. </i><br />
- MP_PROTO char * <code>mp_encode_nil</code> (char *data)<br />
- <i>Encode the nil value. It is your responsibility to ensure that data</i> has enough space.<br />
- MP_PROTO ptrdiff_t <code>mp_check_nil</code> (const char *cur, const char *end)<br />
- <i>Check that cur</i> buffer has enough bytes to decode nil.<br />
- MP_PROTO void <code>mp_decode_nil</code> (const char **data)<br />
- <i>Decode the nil value from MsgPack data</i>.<br />
- MP_PROTO uint32_t <code>mp_sizeof_bool</code> (bool val)<br />
- <i>Calculate exact buffer size needed to store a boolean value. The return value is always 1. The function was added to provide integrity of the library. </i><br />
- MP_PROTO char * <code>mp_encode_bool</code> (char *data, bool val)<br />
- <i>Encode a bool value val</i>. It is your responsibility to ensure that <i>data</i> has enough space.<br />
- MP_PROTO ptrdiff_t <code>mp_check_bool</code> (const char *cur, const char *end)<br />
- <i>Check that cur</i> buffer has enough bytes to decode a bool value.<br />
- MP_PROTO bool <code>mp_decode_bool</code> (const char **data)<br />
- <i>Decode a bool value from MsgPack data</i>.<br />
- MP_PROTO void <code>mp_next</code> (const char **data)<br />
- <i>Skip one element in a packed data</i>.<br />
- MP_PROTO int <code>mp_check</code> (const char **data, const char *end)<br />
+<p>MP_PROTO enum <code>mp_type</code> <code>mp_typeof</code> (const char c)<br/>
+ <i>Determine MsgPack type by a first byte c</i> of encoded data.<br/>
+ MP_PROTO uint32_t <code>mp_sizeof_array</code> (uint32_t size)<br/>
+ <i>Calculate exact buffer size needed to store an array header of size</i> elements. Maximum return value is 5. For performance reasons you can preallocate buffer for maximum size without calling the function.<br/>
+ MP_PROTO char * <code>mp_encode_array</code> (char *data, uint32_t size)<br/>
+ <i>Encode an array header of size</i> elements.<br/>
+ MP_PROTO ptrdiff_t <code>mp_check_array</code> (const char *cur, const char *end)<br/>
+ <i>Check that cur</i> buffer has enough bytes to decode an array header.<br/>
+ MP_PROTO uint32_t <code>mp_decode_array</code> (const char **data)<br/>
+ <i>Decode an array header from MsgPack data</i>.<br/>
+ MP_PROTO uint32_t <code>mp_sizeof_map</code> (uint32_t size)<br/>
+ <i>Calculate exact buffer size needed to store a map header of size</i> elements. Maximum return value is 5. For performance reasons you can preallocate buffer for maximum size without calling the function.<br/>
+ MP_PROTO char * <code>mp_encode_map</code> (char *data, uint32_t size)<br/>
+ <i>Encode a map header of size</i> elements.<br/>
+ MP_PROTO ptrdiff_t <code>mp_check_map</code> (const char *cur, const char *end)<br/>
+ <i>Check that cur</i> buffer has enough bytes to decode a map header.<br/>
+ MP_PROTO uint32_t <code>mp_decode_map</code> (const char **data)<br/>
+ <i>Decode a map header from MsgPack data</i>.<br/>
+ MP_PROTO uint32_t <code>mp_sizeof_uint</code> (uint64_t num)<br/>
+ <i>Calculate exact buffer size needed to store an integer num</i>. Maximum return value is 9. For performance reasons you can preallocate buffer for maximum size without calling the function. Example usage:<br/>
+ MP_PROTO uint32_t <code>mp_sizeof_int</code> (int64_t num)<br/>
+ <i>Calculate exact buffer size needed to store an integer num</i>. Maximum return value is 9. For performance reasons you can preallocate buffer for maximum size without calling the function.<br/>
+ MP_PROTO char * <code>mp_encode_uint</code> (char *data, uint64_t num)<br/>
+ <i>Encode an unsigned integer num</i>. It is your responsibility to ensure that <i>data</i> has enough space.<br/>
+ MP_PROTO char * <code>mp_encode_int</code> (char *data, int64_t num)<br/>
+ <i>Encode a signed integer num</i>. It is your responsibility to ensure that <i>data</i> has enough space.<br/>
+ MP_PROTO ptrdiff_t <code>mp_check_uint</code> (const char *cur, const char *end)<br/>
+ <i>Check that cur</i> buffer has enough bytes to decode an uint.<br/>
+ MP_PROTO ptrdiff_t <code>mp_check_int</code> (const char *cur, const char *end)<br/>
+ <i>Check that cur</i> buffer has enough bytes to decode an int.<br/>
+ MP_PROTO uint64_t <code>mp_decode_uint</code> (const char **data)<br/>
+ <i>Decode an unsigned integer from MsgPack data</i>.<br/>
+ MP_PROTO int64_t <code>mp_decode_int</code> (const char **data)<br/>
+ <i>Decode a signed integer from MsgPack data</i>.<br/>
+ MP_PROTO int <code>mp_compare_uint</code> (const char *data_a, const char *data_b)<br/>
+ <i>Compare two packed unsigned integers. </i><br/>
+ MP_PROTO uint32_t <code>mp_sizeof_float</code> (float num)<br/>
+ <i>Calculate exact buffer size needed to store a float num</i>. The return value is always 5. The function was added to provide integrity of the library.<br/>
+ MP_PROTO uint32_t <code>mp_sizeof_double</code> (double num)<br/>
+ <i>Calculate exact buffer size needed to store a double num</i>. The return value is either 5 or 9. The function was added to provide integrity of the library. For performance reasons you can preallocate buffer for maximum size without calling the function.<br/>
+ MP_PROTO char * <code>mp_encode_float</code> (char *data, float num)<br/>
+ <i>Encode a float num</i>. It is your responsibility to ensure that <i>data</i> has enough space.<br/>
+ MP_PROTO char * <code>mp_encode_double</code> (char *data, double num)<br/>
+ <i>Encode a double num</i>. It is your responsibility to ensure that <i>data</i> has enough space.<br/>
+ MP_PROTO ptrdiff_t <code>mp_check_float</code> (const char *cur, const char *end)<br/>
+ <i>Check that cur</i> buffer has enough bytes to decode a float.<br/>
+ MP_PROTO ptrdiff_t <code>mp_check_double</code> (const char *cur, const char *end)<br/>
+ <i>Check that cur</i> buffer has enough bytes to decode a double.<br/>
+ MP_PROTO float <code>mp_decode_float</code> (const char **data)<br/>
+ <i>Decode a float from MsgPack data</i>.<br/>
+ MP_PROTO double <code>mp_decode_double</code> (const char **data)<br/>
+ <i>Decode a double from MsgPack data</i>.<br/>
+ MP_PROTO uint32_t <code>mp_sizeof_strl</code> (uint32_t len)<br/>
+ <i>Calculate exact buffer size needed to store a string header of length num</i>. Maximum return value is 5. For performance reasons you can preallocate buffer for maximum size without calling the function.<br/>
+ MP_PROTO uint32_t <code>mp_sizeof_str</code> (uint32_t len)<br/>
+ <i>Equivalent to mp_sizeof_strl(len</i>) + <i>len</i>.<br/>
+ MP_PROTO uint32_t <code>mp_sizeof_binl</code> (uint32_t len)<br/>
+ <i>Calculate exact buffer size needed to store a binstring header of length num</i>. Maximum return value is 5. For performance reasons you can preallocate buffer for maximum size without calling the function.<br/>
+ MP_PROTO uint32_t <code>mp_sizeof_bin</code> (uint32_t len)<br/>
+ <i>Equivalent to mp_sizeof_binl(len</i>) + <i>len</i>.<br/>
+ MP_PROTO char * <code>mp_encode_strl</code> (char *data, uint32_t len)<br/>
+ <i>Encode a string header of length len</i>.<br/>
+ MP_PROTO char * <code>mp_encode_str</code> (char *data, const char *str, uint32_t len)<br/>
+ <i>Encode a string of length len</i>. The function is equivalent to <code>mp_encode_strl()</code> + memcpy.<br/>
+ MP_PROTO char * <code>mp_encode_binl</code> (char *data, uint32_t len)<br/>
+ <i>Encode a binstring header of length len</i>. See <code>mp_encode_strl()</code> for more details.<br/>
+ MP_PROTO char * <code>mp_encode_bin</code> (char *data, const char *str, uint32_t len)<br/>
+ <i>Encode a binstring of length len</i>. The function is equivalent to <code>mp_encode_binl()</code> + memcpy.<br/>
+ MP_PROTO size_t <code>mp_format</code> (char *data, size_t data_size, const char *format,&#8230;)<br/>
+ <i>Encode a sequence of values according to format string. Example: mp_format(buf, sz, &#8216;[%d {%d%s%d%s}]&#8217;, 42, 0, &#8216;false&#8217;, 1, &#8216;true&#8217;); to get a msgpack array of two items: number 42 and map (0-&gt;&#8217;false, 2-&gt;&#8217;true)Does</i>not<i>write</i>items<i>that</i>don&#8217;t<i>fit</i>to<i>data_size</i>argument.<i></i><br/>
+ MP_PROTO size_t <code>mp_vformat</code> (char *data, size_t data_size, const char *format, va_list args)<br/>
+ <i>mp_format variation, taking variable argument list Example: va_list args; va_start(args, fmt); mp_vformat(data, data_size, fmt, args); va_end(args); </i><br/>
+ MP_PROTO int <code>mp_fprint</code> (FILE *file, const char *data)<br/>
+ <i>print MsgPack data file</i> using JSON-like format. MP_EXT is printed as &#8216;undefined&#8217;<br/>
+ MP_PROTO int <code>mp_snprint</code> (char *buf, int size, const char *data)<br/>
+ <i>format MsgPack data to buf</i> using JSON-like format.<br/>
+ MP_PROTO ptrdiff_t <code>mp_check_strl</code> (const char *cur, const char *end)<br/>
+ <i>Check that cur</i> buffer has enough bytes to decode a string header.<br/>
+ MP_PROTO ptrdiff_t <code>mp_check_binl</code> (const char *cur, const char *end)<br/>
+ <i>Check that cur</i> buffer has enough bytes to decode a binstring header.<br/>
+ MP_PROTO uint32_t <code>mp_decode_strl</code> (const char **data)<br/>
+ <i>Decode a length of a string from MsgPack data</i>.<br/>
+ MP_PROTO const char * <code>mp_decode_str</code> (const char **data, uint32_t *len)<br/>
+ <i>Decode a string from MsgPack data</i>.<br/>
+ MP_PROTO uint32_t <code>mp_decode_binl</code> (const char **data)<br/>
+ <i>Decode a length of a binstring from MsgPack data</i>.<br/>
+ MP_PROTO const char * <code>mp_decode_bin</code> (const char **data, uint32_t *len)<br/>
+ <i>Decode a binstring from MsgPack data</i>.<br/>
+ MP_PROTO uint32_t <code>mp_decode_strbinl</code> (const char **data)<br/>
+ <i>Decode a length of a string or binstring from MsgPack data</i>.<br/>
+ MP_PROTO const char * <code>mp_decode_strbin</code> (const char **data, uint32_t *len)<br/>
+ <i>Decode a string or binstring from MsgPack data</i>.<br/>
+ MP_PROTO uint32_t <code>mp_sizeof_nil</code> (void)<br/>
+ <i>Calculate exact buffer size needed to store the nil value. The return value is always 1. The function was added to provide integrity of the library. </i><br/>
+ MP_PROTO char * <code>mp_encode_nil</code> (char *data)<br/>
+ <i>Encode the nil value. It is your responsibility to ensure that data</i> has enough space.<br/>
+ MP_PROTO ptrdiff_t <code>mp_check_nil</code> (const char *cur, const char *end)<br/>
+ <i>Check that cur</i> buffer has enough bytes to decode nil.<br/>
+ MP_PROTO void <code>mp_decode_nil</code> (const char **data)<br/>
+ <i>Decode the nil value from MsgPack data</i>.<br/>
+ MP_PROTO uint32_t <code>mp_sizeof_bool</code> (bool val)<br/>
+ <i>Calculate exact buffer size needed to store a boolean value. The return value is always 1. The function was added to provide integrity of the library. </i><br/>
+ MP_PROTO char * <code>mp_encode_bool</code> (char *data, bool val)<br/>
+ <i>Encode a bool value val</i>. It is your responsibility to ensure that <i>data</i> has enough space.<br/>
+ MP_PROTO ptrdiff_t <code>mp_check_bool</code> (const char *cur, const char *end)<br/>
+ <i>Check that cur</i> buffer has enough bytes to decode a bool value.<br/>
+ MP_PROTO bool <code>mp_decode_bool</code> (const char **data)<br/>
+ <i>Decode a bool value from MsgPack data</i>.<br/>
+ MP_PROTO void <code>mp_next</code> (const char **data)<br/>
+ <i>Skip one element in a packed data</i>.<br/>
+ MP_PROTO int <code>mp_check</code> (const char **data, const char *end)<br/>
  <i>Equivalent to </i><code>mp_next()</code> but also validates MsgPack in <i>data</i>.</p>
 <h2>Detailed Description</h2>
 <p>MsgPuck is a simple and efficient MsgPack encoder/decoder library in a single self-contained file. </p>
@@ -187,11 +187,11 @@ description: "msgpuck.h – MsgPuck is a simple and efficient MsgPack encoder/de
 <p>Equivalent to <code>mp_next()</code> but also validates MsgPack in <i>data</i>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>data</i> &#8211; the pointer to a buffer<br />
+<dd><i>data</i> &#8211; the pointer to a buffer<br/>
  <i>end</i> &#8211; the end of a buffer</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>0</i> when MsgPack in <i>data</i> is valid.<br />
+<dd><i>0</i> when MsgPack in <i>data</i> is valid.<br/>
  <i>!=</i> 0 when MsgPack in <i>data</i> is not valid.</dd></dl>
 <p> <code>Postcondition:</code></p>
 <dl COMPACT>
@@ -204,11 +204,11 @@ description: "msgpuck.h – MsgPuck is a simple and efficient MsgPack encoder/de
 <p>Check that <i>cur</i> buffer has enough bytes to decode an array header. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>cur</i> buffer<br />
+<dd><i>cur</i> buffer<br/>
  <i>end</i> end of the buffer</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>0</i> &#8211; buffer has enough bytes<br />
+<dd><i>0</i> &#8211; buffer has enough bytes<br/>
  <i>&gt;</i> 0 &#8211; the number of remaining bytes to read</dd></dl>
 <p> <code>Precondition:</code></p>
 <dl COMPACT>
@@ -218,11 +218,11 @@ description: "msgpuck.h – MsgPuck is a simple and efficient MsgPack encoder/de
 <p>Check that <i>cur</i> buffer has enough bytes to decode a binstring header. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>cur</i> buffer<br />
+<dd><i>cur</i> buffer<br/>
  <i>end</i> end of the buffer</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>0</i> &#8211; buffer has enough bytes<br />
+<dd><i>0</i> &#8211; buffer has enough bytes<br/>
  <i>&gt;</i> 0 &#8211; the number of remaining bytes to read</dd></dl>
 <p> <code>Precondition:</code></p>
 <dl COMPACT>
@@ -232,11 +232,11 @@ description: "msgpuck.h – MsgPuck is a simple and efficient MsgPack encoder/de
 <p>Check that <i>cur</i> buffer has enough bytes to decode a bool value. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>cur</i> buffer<br />
+<dd><i>cur</i> buffer<br/>
  <i>end</i> end of the buffer</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>0</i> &#8211; buffer has enough bytes<br />
+<dd><i>0</i> &#8211; buffer has enough bytes<br/>
  <i>&gt;</i> 0 &#8211; the number of remaining bytes to read</dd></dl>
 <p> <code>Precondition:</code></p>
 <dl COMPACT>
@@ -246,11 +246,11 @@ description: "msgpuck.h – MsgPuck is a simple and efficient MsgPack encoder/de
 <p>Check that <i>cur</i> buffer has enough bytes to decode a double. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>cur</i> buffer<br />
+<dd><i>cur</i> buffer<br/>
  <i>end</i> end of the buffer</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>0</i> &#8211; buffer has enough bytes<br />
+<dd><i>0</i> &#8211; buffer has enough bytes<br/>
  <i>&gt;</i> 0 &#8211; the number of remaining bytes to read</dd></dl>
 <p> <code>Precondition:</code></p>
 <dl COMPACT>
@@ -260,11 +260,11 @@ description: "msgpuck.h – MsgPuck is a simple and efficient MsgPack encoder/de
 <p>Check that <i>cur</i> buffer has enough bytes to decode a float. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>cur</i> buffer<br />
+<dd><i>cur</i> buffer<br/>
  <i>end</i> end of the buffer</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>0</i> &#8211; buffer has enough bytes<br />
+<dd><i>0</i> &#8211; buffer has enough bytes<br/>
  <i>&gt;</i> 0 &#8211; the number of remaining bytes to read</dd></dl>
 <p> <code>Precondition:</code></p>
 <dl COMPACT>
@@ -274,11 +274,11 @@ description: "msgpuck.h – MsgPuck is a simple and efficient MsgPack encoder/de
 <p>Check that <i>cur</i> buffer has enough bytes to decode an int. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>cur</i> buffer<br />
+<dd><i>cur</i> buffer<br/>
  <i>end</i> end of the buffer</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>0</i> &#8211; buffer has enough bytes<br />
+<dd><i>0</i> &#8211; buffer has enough bytes<br/>
  <i>&gt;</i> 0 &#8211; the number of remaining bytes to read</dd></dl>
 <p> <code>Precondition:</code></p>
 <dl COMPACT>
@@ -288,11 +288,11 @@ description: "msgpuck.h – MsgPuck is a simple and efficient MsgPack encoder/de
 <p>Check that <i>cur</i> buffer has enough bytes to decode a map header. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>cur</i> buffer<br />
+<dd><i>cur</i> buffer<br/>
  <i>end</i> end of the buffer</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>0</i> &#8211; buffer has enough bytes<br />
+<dd><i>0</i> &#8211; buffer has enough bytes<br/>
  <i>&gt;</i> 0 &#8211; the number of remaining bytes to read</dd></dl>
 <p> <code>Precondition:</code></p>
 <dl COMPACT>
@@ -302,11 +302,11 @@ description: "msgpuck.h – MsgPuck is a simple and efficient MsgPack encoder/de
 <p>Check that <i>cur</i> buffer has enough bytes to decode nil. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>cur</i> buffer<br />
+<dd><i>cur</i> buffer<br/>
  <i>end</i> end of the buffer</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>0</i> &#8211; buffer has enough bytes<br />
+<dd><i>0</i> &#8211; buffer has enough bytes<br/>
  <i>&gt;</i> 0 &#8211; the number of remaining bytes to read</dd></dl>
 <p> <code>Precondition:</code></p>
 <dl COMPACT>
@@ -316,11 +316,11 @@ description: "msgpuck.h – MsgPuck is a simple and efficient MsgPack encoder/de
 <p>Check that <i>cur</i> buffer has enough bytes to decode a string header. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>cur</i> buffer<br />
+<dd><i>cur</i> buffer<br/>
  <i>end</i> end of the buffer</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>0</i> &#8211; buffer has enough bytes<br />
+<dd><i>0</i> &#8211; buffer has enough bytes<br/>
  <i>&gt;</i> 0 &#8211; the number of remaining bytes to read</dd></dl>
 <p> <code>Precondition:</code></p>
 <dl COMPACT>
@@ -330,11 +330,11 @@ description: "msgpuck.h – MsgPuck is a simple and efficient MsgPack encoder/de
 <p>Check that <i>cur</i> buffer has enough bytes to decode an uint. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>cur</i> buffer<br />
+<dd><i>cur</i> buffer<br/>
  <i>end</i> end of the buffer</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>0</i> &#8211; buffer has enough bytes<br />
+<dd><i>0</i> &#8211; buffer has enough bytes<br/>
  <i>&gt;</i> 0 &#8211; the number of remaining bytes to read</dd></dl>
 <p> <code>Precondition:</code></p>
 <dl COMPACT>
@@ -344,12 +344,12 @@ description: "msgpuck.h – MsgPuck is a simple and efficient MsgPack encoder/de
 <p>Compare two packed unsigned integers. The function is faster than two <code>mp_decode_uint()</code> calls. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>data_a</i> unsigned int a<br />
+<dd><i>data_a</i> unsigned int a<br/>
  <i>data_b</i> unsigned int b</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>&lt;</i> 0 when <i>a</i> &lt; <i>b</i><br />
- <i>0</i> when <i>a</i> == <i>b</i><br />
+<dd><i>&lt;</i> 0 when <i>a</i> &lt; <i>b</i><br/>
+ <i>0</i> when <i>a</i> == <i>b</i><br/>
  <i>&gt;</i> 0 when <i>a</i> &gt; <i>b</i></dd></dl>
 <h3>MP_PROTO uint32_t mp_decode_array (const char **data)</h3>
 <p>Decode an array header from MsgPack <i>data</i>. All array members must be decoded after the header. </p>
@@ -369,7 +369,7 @@ description: "msgpuck.h – MsgPuck is a simple and efficient MsgPack encoder/de
 <p>Decode a binstring from MsgPack <i>data</i>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>data</i> &#8211; the pointer to a buffer<br />
+<dd><i>data</i> &#8211; the pointer to a buffer<br/>
  <i>len</i> &#8211; the pointer to save a binstring length</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -464,7 +464,7 @@ description: "msgpuck.h – MsgPuck is a simple and efficient MsgPack encoder/de
 <p>Decode a string from MsgPack <i>data</i>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>data</i> &#8211; the pointer to a buffer<br />
+<dd><i>data</i> &#8211; the pointer to a buffer<br/>
  <i>len</i> &#8211; the pointer to save a string length</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -479,7 +479,7 @@ description: "msgpuck.h – MsgPuck is a simple and efficient MsgPack encoder/de
 <p>Decode a string or binstring from MsgPack <i>data</i>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>data</i> &#8211; the pointer to a buffer<br />
+<dd><i>data</i> &#8211; the pointer to a buffer<br/>
  <i>len</i> &#8211; the pointer to save a binstring length</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -550,7 +550,7 @@ description: "msgpuck.h – MsgPuck is a simple and efficient MsgPack encoder/de
 <p>&nbsp;<wbr>It is your responsibility to ensure that&nbsp;<wbr><i>data</i>&nbsp;<wbr>has enough space.&nbsp;<wbr> </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>data</i> &#8211; a buffer<br />
+<dd><i>data</i> &#8211; a buffer<br/>
  <i>size</i> &#8211; a number of elements</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -562,8 +562,8 @@ description: "msgpuck.h – MsgPuck is a simple and efficient MsgPack encoder/de
 <p>Encode a binstring of length <i>len</i>. The function is equivalent to <code>mp_encode_binl()</code> + memcpy. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>data</i> &#8211; a buffer<br />
- <i>str</i> &#8211; a pointer to binstring data<br />
+<dd><i>data</i> &#8211; a buffer<br/>
+ <i>str</i> &#8211; a pointer to binstring data<br/>
  <i>len</i> &#8211; a binstring length</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -575,7 +575,7 @@ description: "msgpuck.h – MsgPuck is a simple and efficient MsgPack encoder/de
 <p>Encode a binstring header of length <i>len</i>. See <code>mp_encode_strl()</code> for more details. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>data</i> &#8211; a bufer<br />
+<dd><i>data</i> &#8211; a bufer<br/>
  <i>len</i> &#8211; a string length</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -587,7 +587,7 @@ description: "msgpuck.h – MsgPuck is a simple and efficient MsgPack encoder/de
 <p>Encode a bool value <i>val</i>. It is your responsibility to ensure that <i>data</i> has enough space. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>data</i> &#8211; a buffer<br />
+<dd><i>data</i> &#8211; a buffer<br/>
  <i>val</i> &#8211; a bool</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -600,7 +600,7 @@ description: "msgpuck.h – MsgPuck is a simple and efficient MsgPack encoder/de
 <p>Encode a double <i>num</i>. It is your responsibility to ensure that <i>data</i> has enough space. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>data</i> &#8211; a buffer<br />
+<dd><i>data</i> &#8211; a buffer<br/>
  <i>num</i> &#8211; a float</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -613,7 +613,7 @@ description: "msgpuck.h – MsgPuck is a simple and efficient MsgPack encoder/de
 <p>Encode a float <i>num</i>. It is your responsibility to ensure that <i>data</i> has enough space. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>data</i> &#8211; a buffer<br />
+<dd><i>data</i> &#8211; a buffer<br/>
  <i>num</i> &#8211; a float</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -626,7 +626,7 @@ description: "msgpuck.h – MsgPuck is a simple and efficient MsgPack encoder/de
 <p>Encode a signed integer <i>num</i>. It is your responsibility to ensure that <i>data</i> has enough space. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>data</i> &#8211; a buffer<br />
+<dd><i>data</i> &#8211; a buffer<br/>
  <i>num</i> &#8211; a number</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -665,7 +665,7 @@ description: "msgpuck.h – MsgPuck is a simple and efficient MsgPack encoder/de
 <p>&nbsp;<wbr>It is your responsibility to ensure that&nbsp;<wbr><i>data</i>&nbsp;<wbr>has enough space.&nbsp;<wbr> </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>data</i> &#8211; a buffer<br />
+<dd><i>data</i> &#8211; a buffer<br/>
  <i>size</i> &#8211; a number of key/value pairs</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -689,8 +689,8 @@ description: "msgpuck.h – MsgPuck is a simple and efficient MsgPack encoder/de
 <p>Encode a string of length <i>len</i>. The function is equivalent to <code>mp_encode_strl()</code> + memcpy. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>data</i> &#8211; a buffer<br />
- <i>str</i> &#8211; a pointer to string data<br />
+<dd><i>data</i> &#8211; a buffer<br/>
+ <i>str</i> &#8211; a pointer to string data<br/>
  <i>len</i> &#8211; a string length</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

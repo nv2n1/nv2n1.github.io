@@ -7,7 +7,7 @@ url: "/docs/linux/man/8-tpm_selftest/"
 description: "tpm_selftest – request TPM perform selftest and report"
 ---
 
-<p>TPM Management &#8211; tpm_selftest<br />
+<p>TPM Management &#8211; tpm_selftest<br/>
  </center></p>
 <h2>Name</h2>
 <p>tpm_selftest &#8211; request TPM perform selftest and report</p>

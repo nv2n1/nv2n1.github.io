@@ -17,8 +17,8 @@ description: "sigqueue – queue a signal and data to a process"
 <h2>DESCRIPTION</h2>
 <p> <code>sigqueue</code>() sends the signal specified in <i>sig</i> to the process whose PID is given in <i>pid</i>. The permissions required to send a signal are the same as for <code><a href="/docs/linux/man/2-kill/">kill</a></code>(2). As with <code><a href="/docs/linux/man/2-kill/">kill</a></code>(2), the null signal (0) can be used to check if a process with a given PID exists. </p>
 <p> The <i>value</i> argument is used to specify an accompanying item of data (either an integer or a pointer value) to be sent with the signal, and has the following type: </p>
-<p> union sigval {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;sival_int;<br />
+<p> union sigval {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;sival_int;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;void&nbsp;*sival_ptr; }; </p>
 <p> If the receiving process has installed a handler for this signal using the <code>SA_SIGINFO</code> flag to <code><a href="/docs/linux/man/2-sigaction/">sigaction</a></code>(2), then it can obtain this data via the <i>si_value</i> field of the <i>siginfo_t</i> structure passed as the second argument to the handler. Furthermore, the <i>si_code</i> field of that structure will be set to <code>SI_QUEUE</code>.</p>
 <h2>RETURN VALUE</h2>

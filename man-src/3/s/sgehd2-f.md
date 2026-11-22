@@ -10,7 +10,7 @@ description: "sgehd2.f –"
 <p>sgehd2.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>sgehd2</code> (N, ILO, IHI, A, LDA, TAU, WORK, INFO)<br />
+<p>subroutine <code>sgehd2</code> (N, ILO, IHI, A, LDA, TAU, WORK, INFO)<br/>
  <i></i><code>SGEHD2</code> reduces a general square matrix to upper Hessenberg form using an unblocked algorithm.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sgehd2 (integerN, integerILO, integerIHI, real, dimension( lda, * )A, integerLDA, real, dimension( * )TAU, real, dimension( * )WORK, integerINFO)</h3>

@@ -9,15 +9,15 @@ description: "Object Finder Functions – Functions that determine what evas obj
 
 <p>Object Finder Functions &#8211; Functions that determine what evas objects are at a given location or within a given region of an evas. </p>
 <h3>Functions</h3>
-<p>EAPI <code>Evas_Object</code> * <code>evas_object_top_at_xy_get</code> (const <code>Evas</code> *e, Evas_Coord x, Evas_Coord y, Evas_Bool include_pass_events_objects, Evas_Bool include_hidden_objects)<br />
- <i>To be documented. </i><br />
- EAPI <code>Evas_Object</code> * <code>evas_object_top_at_pointer_get</code> (const <code>Evas</code> *e)<br />
- <i>To be documented. </i><br />
- EAPI <code>Evas_Object</code> * <code>evas_object_top_in_rectangle_get</code> (const <code>Evas</code> *e, Evas_Coord x, Evas_Coord y, Evas_Coord w, Evas_Coord h, Evas_Bool include_pass_events_objects, Evas_Bool include_hidden_objects)<br />
- <i>To be documented. </i><br />
- EAPI <code>Evas_List</code> * <code>evas_objects_at_xy_get</code> (const <code>Evas</code> *e, Evas_Coord x, Evas_Coord y, Evas_Bool include_pass_events_objects, Evas_Bool include_hidden_objects)<br />
- <i>To be documented. </i><br />
- EAPI <code>Evas_List</code> * <code>evas_objects_in_rectangle_get</code> (const <code>Evas</code> *e, Evas_Coord x, Evas_Coord y, Evas_Coord w, Evas_Coord h, Evas_Bool include_pass_events_objects, Evas_Bool include_hidden_objects)<br />
+<p>EAPI <code>Evas_Object</code> * <code>evas_object_top_at_xy_get</code> (const <code>Evas</code> *e, Evas_Coord x, Evas_Coord y, Evas_Bool include_pass_events_objects, Evas_Bool include_hidden_objects)<br/>
+ <i>To be documented. </i><br/>
+ EAPI <code>Evas_Object</code> * <code>evas_object_top_at_pointer_get</code> (const <code>Evas</code> *e)<br/>
+ <i>To be documented. </i><br/>
+ EAPI <code>Evas_Object</code> * <code>evas_object_top_in_rectangle_get</code> (const <code>Evas</code> *e, Evas_Coord x, Evas_Coord y, Evas_Coord w, Evas_Coord h, Evas_Bool include_pass_events_objects, Evas_Bool include_hidden_objects)<br/>
+ <i>To be documented. </i><br/>
+ EAPI <code>Evas_List</code> * <code>evas_objects_at_xy_get</code> (const <code>Evas</code> *e, Evas_Coord x, Evas_Coord y, Evas_Bool include_pass_events_objects, Evas_Bool include_hidden_objects)<br/>
+ <i>To be documented. </i><br/>
+ EAPI <code>Evas_List</code> * <code>evas_objects_in_rectangle_get</code> (const <code>Evas</code> *e, Evas_Coord x, Evas_Coord y, Evas_Coord w, Evas_Coord h, Evas_Bool include_pass_events_objects, Evas_Bool include_hidden_objects)<br/>
  <i>To be documented. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that determine what evas objects are at a given location or within a given region of an evas.</p>

@@ -25,29 +25,29 @@ description: "Lintian::Reporting::ResourceManager — A simple resource manager 
 <p>A simple resource manager for Lintian&#8217;s reporting tool, <code>html_reports</code>.</p>
 <h2>Class Methods</h2>
 <dl COMPACT>
-<dt>new(<font SIZE="-1">TYPE, OPTS</font>)</dt>
+<dt>new(TYPE, OPTS)</dt>
 <dd>Instantiates a new resource manager. </dd>
-<p> <font SIZE="-1">OPTS</font> is a key-value list, which must contain the key &#8220;html_dir&#8221; set to the root of the <font SIZE="-1">HTML</font> path. It is beneath this path that all resources will be installed</dl>
+<p> OPTS is a key-value list, which must contain the key &#8220;html_dir&#8221; set to the root of the HTML path. It is beneath this path that all resources will be installed</dl>
 <h2>Instance Methods</h2>
 <dl COMPACT>
-<dt>install_resource(RESOURCE[, <font SIZE="-1">OPT</font>])</dt>
-<dd>Installs <font SIZE="-1">RESOURCE</font> into the html root. The resource may be renamed (based on content etc.). </dd>
-<p> Note that the basename of <font SIZE="-1">RESOURCE</font> must be unique between all resources installed. See &#8220;resource_URL(<font SIZE="-1">RESOURCE_NAME</font>)&#8221;. </p>
-<p> If <font SIZE="-1">OPT</font> is given, it must be a hashref with 0 or more of the following keys (and values).</p>
+<dt>install_resource(RESOURCE[, OPT])</dt>
+<dd>Installs RESOURCE into the html root. The resource may be renamed (based on content etc.). </dd>
+<p> Note that the basename of RESOURCE must be unique between all resources installed. See &#8220;resource_URL(RESOURCE_NAME)&#8221;. </p>
+<p> If OPT is given, it must be a hashref with 0 or more of the following keys (and values).</p>
 <dl COMPACT>
 <dd>
 </dd><dl COMPACT>
 <dt>install_method</dt>
 <dd>Can be &#8220;copy&#8221; or &#8220;move&#8221; (default). If set to &#8220;move&#8221;, the original file will be renamed into its new location. Otherwise, a copy is done and the original file is left in place.</dd>
 <dt>source_file</dt>
-<dd>By default, the path denoted by <font SIZE="-1">RESOURCE</font> is both the resource name and the source file. This option can be used to install a given file as <font SIZE="-1">RESOURCE</font> regardless of the basename of the source file. </dd>
-<p> If this is passed, <font SIZE="-1">RESOURCE</font> must be a basename (i.e. without any slashes).</dl>
+<dd>By default, the path denoted by RESOURCE is both the resource name and the source file. This option can be used to install a given file as RESOURCE regardless of the basename of the source file. </dd>
+<p> If this is passed, RESOURCE must be a basename (i.e. without any slashes).</dl>
 </dl>
 <dl COMPACT>
 <dd></dd></dl>
-<dt>resource_URL(<font SIZE="-1">RESOURCE_NAME</font>)</dt>
-<dd>Returns the path (relative to the <font SIZE="-1">HTML</font> root) to a resource installed via &#8220;install_resource(<font SIZE="-1">RESOURCE</font>)&#8221;, where <font SIZE="-1">RESOURCE_NAME</font> is the basename of the path given to install_resource.</dd>
-<dt>resource_integrity_value(<font SIZE="-1">RESOURCE_NAME</font>)</dt>
-<dd>Return a string that is valid in the &#8220;integrity&#8221; field of a <tt>&quot;&lt;link&gt;&quot;</tt> <font SIZE="-1">HTML</font> tag. (See <a rel="nofollow" href="https://www.w3.org/TR/SRI/)">https://www.w3.org/TR/SRI/)</a></dd></dl>
+<dt>resource_URL(RESOURCE_NAME)</dt>
+<dd>Returns the path (relative to the HTML root) to a resource installed via &#8220;install_resource(RESOURCE)&#8221;, where RESOURCE_NAME is the basename of the path given to install_resource.</dd>
+<dt>resource_integrity_value(RESOURCE_NAME)</dt>
+<dd>Return a string that is valid in the &#8220;integrity&#8221; field of a <tt>&quot;&lt;link&gt;&quot;</tt> HTML tag. (See <a rel="nofollow" href="https://www.w3.org/TR/SRI/)">https://www.w3.org/TR/SRI/)</a></dd></dl>
 <h2>Author</h2>
 <p>Originally written by Niels Thykier &lt;niels [at] thykier.net&gt; for Lintian.</p>

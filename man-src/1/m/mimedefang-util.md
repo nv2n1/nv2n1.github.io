@@ -25,7 +25,7 @@ description: "mimedefang-util — Utility script for message structure debugging
 <dt><code>&#8211;prettyprint</code></dt>
 <dd> Parses a mail message from standard input and reformats it in a &#8220;pretty&#8221; format on standard output. All text/* parts are printed directly, and non-text parts are described without printing their content.</dd>
 <dt><code>&#8211;structure</code></dt>
-<dd> Parses a mail message from standard input, and outputs a description of the <font SIZE="-1">MIME</font> tree to standard output.</dd>
+<dd> Parses a mail message from standard input, and outputs a description of the MIME tree to standard output.</dd>
 <dt><code>&#8211;dump</code></dt>
 <dd> Parses a mail message from standard input, and dumps the parsed message back out again to standard output.</dd>
 <dt><code>&#8211;data-dump</code></dt>
@@ -36,4 +36,4 @@ description: "mimedefang-util — Utility script for message structure debugging
 <dd> Full manpage</dd></dl>
 <h2>LICENSE AND COPYRIGHT</h2>
 <p> Copyright (C) 2010 Roaring Penguin Software Inc. </p>
-<p> This program may be distributed under the terms of the <font SIZE="-1">GNU</font> General Public License, Version 2, or (at your option) any later version. </p>
+<p> This program may be distributed under the terms of the GNU General Public License, Version 2, or (at your option) any later version. </p>

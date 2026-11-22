@@ -12,7 +12,7 @@ description: "align_image_stack – Align overlapping images for HDR or focus st
 <h2>SYNOPSIS</h2>
 <p> <code>align_image_stack</code> [options] <i>input files</i></p>
 <h2>DESCRIPTION</h2>
-<p> align_image_stack is used for the alignment of slightly misaligned images or for the registration of a stereo images pair. When several differently exposed images are taken in the process of creating a High Dynamic Range image, the images are not perfectly aligned, and the quality of the <font SIZE="-1">HDR</font> image created will suffer from this. align_image_stack uses the tools available to hugin to optimize the roll, pitch and yaw, as well as some parameters of the lens geometry, to align the images.</p>
+<p> align_image_stack is used for the alignment of slightly misaligned images or for the registration of a stereo images pair. When several differently exposed images are taken in the process of creating a High Dynamic Range image, the images are not perfectly aligned, and the quality of the HDR image created will suffer from this. align_image_stack uses the tools available to hugin to optimize the roll, pitch and yaw, as well as some parameters of the lens geometry, to align the images.</p>
 <h2>OPTIONS</h2>
 <p> Modes of operation:</p>
 <dl>
@@ -21,7 +21,7 @@ description: "align_image_stack – Align overlapping images for HDR or focus st
 <dt><code>-a</code> <i>prefix</i></dt>
 <dd> Output aligned images as prefix_xxxx.tif</dd>
 <dt><code>-o</code> <i>output</i></dt>
-<dd> Align images and merge them to <font SIZE="-1">HDR,</font> generate output.hdr</dd></dl>
+<dd> Align images and merge them to HDR, generate output.hdr</dd></dl>
 <p> Modifiers:</p>
 <dl>
 <dt><code>-v</code></dt>
@@ -32,8 +32,8 @@ description: "align_image_stack – Align overlapping images for HDR or focus st
 <dd> Remove all control points with an error higher than num pixels (default: 3)</dd>
 <dt><code>&#8211;corr=num</code></dt>
 <dd> Correlation threshold for identifying control points (default: 0.9)</dd>
-<dt><code>-f</code> <i></i><font SIZE="-1"><i>HFOV</i></font><i></i></dt>
-<dd> Approximate horizontal field of view of input images, use if <font SIZE="-1">EXIF</font> info not complete</dd>
+<dt><code>-f</code> <i></i><i>HFOV</i><i></i></dt>
+<dd> Approximate horizontal field of view of input images, use if EXIF info not complete</dd>
 <dt><code>-m</code></dt>
 <dd> Optimize field of view for all images, except for first. Useful for aligning focus stacks with slightly different magnification.</dd>
 <dt><code>-d</code></dt>
@@ -63,9 +63,9 @@ description: "align_image_stack – Align overlapping images for HDR or focus st
 <dt><code>-g</code> <i>gsize</i></dt>
 <dd> Break image into a rectangular grid (gsize x gsize) and attempt to find num control points in each section (default: 5 [5&#215;5 grid])</dd>
 <dt><code>&#8211;threads=NUM</code></dt>
-<dd> Use <font SIZE="-1">NUM</font> threads</dd>
+<dd> Use NUM threads</dd>
 <dt><code>&#8211;gpu</code></dt>
-<dd> Use <font SIZE="-1">GPU</font> for remapping</dd>
+<dd> Use GPU for remapping</dd>
 <dt><code>-h</code></dt>
 <dd> Display help summary.</dd></dl>
 <h2>AUTHORS</h2>

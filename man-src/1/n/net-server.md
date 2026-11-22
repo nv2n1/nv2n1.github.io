@@ -19,20 +19,20 @@ net - server[base type][net server arguments] net - server PreFork ipv '*' net -
 
 <h2>DESCRIPTION</h2>
 
- The net-server program gives a simple way to test out code and try port connection parameters. Though the running server can be robust enough for full tim use, it is anticipated that this binary will just be used for basic testing of net-server ports, acting as a simple echo server, or for running development scripts as <font SIZE="-1">CGI.</font>
+ The net-server program gives a simple way to test out code and try port connection parameters. Though the running server can be robust enough for full tim use, it is anticipated that this binary will just be used for basic testing of net-server ports, acting as a simple echo server, or for running development scripts as CGI.
 
 <h2>OPTIONS</h2>
 
 <dl>
 <dt>&quot;base type&quot;
-</dt><dd> The very first argument may be a Net::Server flavor. This is given as shorthand for writing out server_type ``ServerFlavor''. Additionally, this allows types such as <font SIZE="-1">HTTP</font> and <font SIZE="-1">PSGI,</font> which are not true Net::Server base types, to subclass other server types via an additional server_type argument. 
+</dt><dd> The very first argument may be a Net::Server flavor. This is given as shorthand for writing out server_type ``ServerFlavor''. Additionally, this allows types such as HTTP and PSGI, which are not true Net::Server base types, to subclass other server types via an additional server_type argument. 
  <pre>
     net-server PreFork
     net-server HTTP  # becomes a HTTP server in the Fork flavor
     net-server HTTP server_type PreFork  # preforking HTTP server
 </pre>
 </dd><dt>&quot;port&quot;
-</dt><dd> Port to bind upon. Default is 80 if running a <font SIZE="-1">HTTP</font> server as root, 8080 if running a <font SIZE="-1">HTTP</font> server as non-root, or 20203 otherwise. 
+</dt><dd> Port to bind upon. Default is 80 if running a HTTP server as root, 8080 if running a HTTP server as non-root, or 20203 otherwise. 
  Multiple value can be given for binding to multiple ports. All of the methods for specifying port attributes enumerated in Net::Server and Net::Server::Proto are available here. 
  <pre>
     net-server port 20201

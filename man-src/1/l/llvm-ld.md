@@ -12,12 +12,12 @@ description: "llvm-ld – LLVM linker"
 <h2>SYNOPSIS</h2>
 <p> <code>llvm-ld</code> &lt;options&gt; &lt;files&gt;</p>
 <h2>DESCRIPTION</h2>
-<p> The <code>llvm-ld</code> tool takes a set of <font SIZE="-1">LLVM</font> bitcode files and links them together into a single <font SIZE="-1">LLVM</font> bitcode file. The output bitcode file can be another bitcode file or an executable bitcode program. Using additional options, <code>llvm-ld</code> is able to produce native code executables. </p>
-<p> The <code>llvm-ld</code> tool is the main linker for <font SIZE="-1">LLVM</font>. It is used to link together the output of <font SIZE="-1">LLVM</font> front-end compilers and run &#8220;link time&#8221; optimizations (mostly the inter-procedural kind). </p>
+<p> The <code>llvm-ld</code> tool takes a set of LLVM bitcode files and links them together into a single LLVM bitcode file. The output bitcode file can be another bitcode file or an executable bitcode program. Using additional options, <code>llvm-ld</code> is able to produce native code executables. </p>
+<p> The <code>llvm-ld</code> tool is the main linker for LLVM. It is used to link together the output of LLVM front-end compilers and run &#8220;link time&#8221; optimizations (mostly the inter-procedural kind). </p>
 <p> The <code>llvm-ld</code> tools attempts to mimic the interface provided by the default system linker so that it can act as a <i>drop-in</i> replacement.</p>
 <h2>Search Order</h2>
-<p> When looking for objects specified on the command line, <code>llvm-ld</code> will search for the object first in the current directory and then in the directory specified by the <font SIZE="-1"><code>LLVM_LIB_SEARCH_PATH</code></font> environment variable. If it cannot find the object, it fails. </p>
-<p> When looking for a library specified with the <code>-l</code> option, <code>llvm-ld</code> first attempts to load a file with that name from the current directory. If that fails, it looks for lib<i>library</i>.bc, lib<i>library</i>.a, or lib<i>library</i>.<i>shared library extension</i>, in that order, in each directory added to the library search path with the <code>-L</code> option. These directories are searched in the order they are specified. If the library cannot be located, then <code>llvm-ld</code> looks in the directory specified by the <font SIZE="-1"><code>LLVM_LIB_SEARCH_PATH</code></font> environment variable. If it does not find a library there, it fails. </p>
+<p> When looking for objects specified on the command line, <code>llvm-ld</code> will search for the object first in the current directory and then in the directory specified by the <code>LLVM_LIB_SEARCH_PATH</code> environment variable. If it cannot find the object, it fails. </p>
+<p> When looking for a library specified with the <code>-l</code> option, <code>llvm-ld</code> first attempts to load a file with that name from the current directory. If that fails, it looks for lib<i>library</i>.bc, lib<i>library</i>.a, or lib<i>library</i>.<i>shared library extension</i>, in that order, in each directory added to the library search path with the <code>-L</code> option. These directories are searched in the order they are specified. If the library cannot be located, then <code>llvm-ld</code> looks in the directory specified by the <code>LLVM_LIB_SEARCH_PATH</code> environment variable. If it does not find a library there, it fails. </p>
 <p> The <i>shared library extension</i> may be <i>.so</i>, <i>.dyld</i>, <i>.dll</i>, or something different, depending upon the system. </p>
 <p> The <code>-L</code> option is global. It does not matter where it is specified in the list of command line arguments; the directory is simply added to the search path and is applied to all libraries, preceding or succeeding, in the command line.</p>
 <h2>Link order</h2>
@@ -56,8 +56,8 @@ description: "llvm-ld – LLVM linker"
 <p> When generating native executables, <code>llvm-ld</code> first checks for a bitcode version of the library and links it in, if necessary. If the library is missing, <code>llvm-ld</code> skips it. Then, <code>llvm-ld</code> links in the same libraries as native code. </p>
 <p> In this way, <code>llvm-ld</code> should be able to link in optimized bitcode subsets of common libraries and then link in any part of the library that hasn&#8217;t been converted to bitcode.</p>
 <dt><code>-native-cbe</code></dt>
-<dd> Generate a native machine code executable with the <font SIZE="-1">LLVM</font> C backend. </dd>
-<p> This option is identical to the <code>-native</code> option, but uses the C backend to generate code for the program instead of an <font SIZE="-1">LLVM</font> native code generator.</dl>
+<dd> Generate a native machine code executable with the LLVM C backend. </dd>
+<p> This option is identical to the <code>-native</code> option, but uses the C backend to generate code for the program instead of an LLVM native code generator.</dl>
 <h2>Optimization Options</h2>
 <dl>
 <dt><code>-disable-inlining</code></dt>
@@ -92,4 +92,4 @@ description: "llvm-ld – LLVM linker"
 <h2>SEE ALSO</h2>
 <p> llvm-link</p>
 <h2>AUTHORS</h2>
-<p> Maintained by the <font SIZE="-1">LLVM</font> Team (&lt;<a rel="nofollow" href="http://llvm.org">http://llvm.org</a>&gt;). </p>
+<p> Maintained by the LLVM Team (&lt;<a rel="nofollow" href="http://llvm.org">http://llvm.org</a>&gt;). </p>

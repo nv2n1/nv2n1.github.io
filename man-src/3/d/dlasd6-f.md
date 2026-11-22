@@ -10,7 +10,7 @@ description: "dlasd6.f –"
 <p>dlasd6.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dlasd6</code> (ICOMPQ, NL, NR, SQRE, D, VF, VL, ALPHA, BETA, IDXQ, PERM, GIVPTR, GIVCOL, LDGCOL, GIVNUM, LDGNUM, POLES, DIFL, DIFR, Z, K, C, S, WORK, IWORK, INFO)<br />
+<p>subroutine <code>dlasd6</code> (ICOMPQ, NL, NR, SQRE, D, VF, VL, ALPHA, BETA, IDXQ, PERM, GIVPTR, GIVCOL, LDGCOL, GIVNUM, LDGNUM, POLES, DIFL, DIFR, Z, K, C, S, WORK, IWORK, INFO)<br/>
  <i></i><code>DLASD6</code> computes the SVD of an updated upper bidiagonal matrix obtained by merging two smaller ones by appending a row. Used by sbdsdc.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlasd6 (integerICOMPQ, integerNL, integerNR, integerSQRE, double precision, dimension( * )D, double precision, dimension( * )VF, double precision, dimension( * )VL, double precisionALPHA, double precisionBETA, integer, dimension( * )IDXQ, integer, dimension( * )PERM, integerGIVPTR, integer, dimension( ldgcol, * )GIVCOL, integerLDGCOL, double precision, dimension( ldgnum, * )GIVNUM, integerLDGNUM, double precision, dimension( ldgnum, * )POLES, double precision, dimension( * )DIFL, double precision, dimension( * )DIFR, double precision, dimension( * )Z, integerK, double precisionC, double precisionS, double precision, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>

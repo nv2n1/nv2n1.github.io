@@ -557,7 +557,7 @@ description: "javac – Reads Java class and interface definitions and compiles 
 <p> An argument file can include <code>javac</code> options and source file names in any combination. The arguments within a file can be separated by spaces or new line characters. If a file name contains embedded spaces, then put the whole file name in double quotation marks. </p>
 <p> File Names within an argument file are relative to the current directory, not the location of the argument file. Wild cards (*) are not allowed in these lists (such as for specifying <code>*.java</code>). Use of the at sign (@) to recursively interpret files is not supported. The <code>-J</code> options are not supported because they are passed to the launcher, which does not support argument files. </p>
 <p> When executing the <code>javac</code> command, pass in the path and name of each argument file with the at sign (@) leading character. When the <code>javac</code> command encounters an argument beginning with the at sign (@), it expands the contents of that file into the argument list. </p>
-<p> <code>Example 1</code><br />
+<p> <code>Example 1</code><br/>
  Single Argument File</p>
 <dl>
 <dd>You could use a single argument file named <code>argfile</code> to hold all <code>javac</code> arguments: </dd>
@@ -566,7 +566,7 @@ description: "javac – Reads Java class and interface definitions and compiles 
 <pre><code>javac @argfile</code></pre>
 </dd></dl>
 <p> This argument file could contain the contents of both files shown in Example 2</dl>
-<p> <code>Example 2</code><br />
+<p> <code>Example 2</code><br/>
  Two Argument Files</p>
 <dl>
 <dd>You can create two argument files: one for the <code>javac</code> options and the other for the source file names. Note that the following lists have no line-continuation characters. </dd>
@@ -598,7 +598,7 @@ description: "javac – Reads Java class and interface definitions and compiles 
 <pre><code>javac @options @classes</code></pre>
 </dd></dl>
 </dl>
-<p> <code>Example 3</code><br />
+<p> <code>Example 3</code><br/>
  Argument Files with Paths</p>
 <dl>
 <dd>The argument files can have paths, but any file names inside the files are relative to the current working directory (not <code>path1</code> or <code>path2</code>): </dd>
@@ -649,7 +649,7 @@ description: "javac – Reads Java class and interface definitions and compiles 
 <p> The <code>return</code> value is equivalent to the <code>exit</code> value from <code>javac</code>. </p>
 <p> <code>Note:</code> All other classes and methods found in a package with names that start with <code>com.sun.tools.javac</code> (subpackages of <code>com.sun.tools.javac</code>) are strictly internal and subject to change at any time.</p>
 <h2>Examples</h2>
-<p><code>Example 1</code><br />
+<p><code>Example 1</code><br/>
  Compile a Simple Program</p>
 <dl>
 <dd>This example shows how to compile the <code>Hello.java</code> source file in the greetings directory. The class defined in <code>Hello.java</code> is called <code>greetings.Hello</code>. The greetings directory is the package directory both for the source file and the class file and is underneath the current directory. This makes it possible to use the default user class path. It also makes it unnecessary to specify a separate destination directory with the <code>-d</code> option. </dd>
@@ -679,7 +679,7 @@ description: "javac – Reads Java class and interface definitions and compiles 
 <code>Hello Everyone</code></pre>
 </dd></dl>
 </dl>
-<p> <code>Example 2</code><br />
+<p> <code>Example 2</code><br/>
  Compile Multiple Source Files</p>
 <dl>
 <dd>This example compiles the <code>Aloha.java</code>, <code>GutenTag.java</code>, <code>Hello.java</code>, and <code>Hi.java</code> source files in the <code>greetings</code> package. </dd>
@@ -691,7 +691,7 @@ description: "javac – Reads Java class and interface definitions and compiles 
 <code>Aloha.java GutenTag.java Hello.java Hi.java</code></pre>
 </dd></dl>
 </dl>
-<p> <code>Example 3</code><br />
+<p> <code>Example 3</code><br/>
  Specify a User Class Path</p>
 <dl>
 <dd>After changing one of the source files in the previous example, recompile it: </dd>
@@ -718,7 +718,7 @@ description: "javac – Reads Java class and interface definitions and compiles 
 <pre><code>java -classpath /examples:/lib/Banners.jar greetings.Hi</code></pre>
 </dd></dl>
 </dl>
-<p> <code>Example 4</code><br />
+<p> <code>Example 4</code><br/>
  Separate Source Files and Class Files</p>
 <dl>
 <dd>The following example uses <code>javac</code> to compile code that runs on JVM 1.7. </dd>
@@ -736,7 +736,7 @@ description: "javac – Reads Java class and interface definitions and compiles 
 <code>-source 1.7</code></pre>
 </dd></dl>
 <p> If you do not specify the correct version of bootstrap classes, then the compiler uses the old language rules (in this example, it uses version 1.7 of the Java programming language) combined with the new bootstrap classes, which can result in class files that do not work on the older platform (in this case, Java SE 7) because reference to nonexistent methods can get included.</dl>
-<p> <code>Example 5</code><br />
+<p> <code>Example 5</code><br/>
  Cross Compile</p>
 <dl>
 <dd>This example uses <code>javac</code> to compile code that runs on JVM 1.7. </dd>

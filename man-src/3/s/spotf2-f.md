@@ -10,7 +10,7 @@ description: "spotf2.f –"
 <p>spotf2.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>spotf2</code> (UPLO, N, A, LDA, INFO)<br />
+<p>subroutine <code>spotf2</code> (UPLO, N, A, LDA, INFO)<br/>
  <i></i><code>SPOTF2</code> computes the Cholesky factorization of a symmetric/Hermitian positive definite matrix (unblocked algorithm).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine spotf2 (characterUPLO, integerN, real, dimension( lda, * )A, integerLDA, integerINFO)</h3>

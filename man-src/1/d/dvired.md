@@ -20,9 +20,9 @@ description: "dvired – print dvi-files"
 <p> Any other option is passed directly to <i>dvips</i>. </p>
 <h2>EXAMPLES</h2>
 <p> It is assumed that the PRINTER-variable is set. </p>
-<p> <code>dvired -Plw foo</code> &#8211; send output to printer <i>lw</i>.<br />
- <code>dvired -o foo.ps foo</code> &#8211; send output to file <i>foo.ps</i>.<br />
- <code>dvired -pp4-7 foo</code> &#8211; send 4 pages (reduced onto 2 sheets) of <i>foo</i> to the printer.<br />
+<p> <code>dvired -Plw foo</code> &#8211; send output to printer <i>lw</i>.<br/>
+ <code>dvired -o foo.ps foo</code> &#8211; send output to file <i>foo.ps</i>.<br/>
+ <code>dvired -pp4-7 foo</code> &#8211; send 4 pages (reduced onto 2 sheets) of <i>foo</i> to the printer.<br/>
  <code>dvired foo -f | ghostview &#8211;</code> &#8211; preview output with ghostview. </p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-dvips/">dvips</a></i>(1)</p>

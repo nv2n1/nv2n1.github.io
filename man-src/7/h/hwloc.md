@@ -63,20 +63,20 @@ description: "hwloc – General information about hwloc (\"hardware locality\").
 <p> <i>Logical</i> indexes are relative to the object order in the output from the lstopo command. They always start with 0 and increment by 1 for each successive object. </p>
 <p> <i>Physical</i> indexes are how the operating system refers to objects. Note that while physical indexes are non-negative integer values, the hardware and/or operating system may choose arbitrary values &#8212; they may not start with 0, and successive objects may not have consecutive values. </p>
 <p> For example, if the first few lines of lstopo -p output are the following: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>Machine&nbsp;<wbr>(47GB)<br />
-&nbsp;<wbr>NUMANode P#0&nbsp;<wbr>(24GB)&nbsp;<wbr>+&nbsp;<wbr>Package P#0&nbsp;<wbr>+&nbsp;<wbr>L3&nbsp;<wbr>(12MB)<br />
-L2&nbsp;<wbr>(256KB)&nbsp;<wbr>+&nbsp;<wbr>L1&nbsp;<wbr>(32KB)&nbsp;<wbr>+&nbsp;<wbr>Core P#0&nbsp;<wbr>+&nbsp;<wbr>PU P#0<br />
-L2&nbsp;<wbr>(256KB)&nbsp;<wbr>+&nbsp;<wbr>L1&nbsp;<wbr>(32KB)&nbsp;<wbr>+&nbsp;<wbr>Core P#1&nbsp;<wbr>+&nbsp;<wbr>PU P#0<br />
-L2&nbsp;<wbr>(256KB)&nbsp;<wbr>+&nbsp;<wbr>L1&nbsp;<wbr>(32KB)&nbsp;<wbr>+&nbsp;<wbr>Core P#2&nbsp;<wbr>+&nbsp;<wbr>PU P#0<br />
-L2&nbsp;<wbr>(256KB)&nbsp;<wbr>+&nbsp;<wbr>L1&nbsp;<wbr>(32KB)&nbsp;<wbr>+&nbsp;<wbr>Core P#8&nbsp;<wbr>+&nbsp;<wbr>PU P#0<br />
-L2&nbsp;<wbr>(256KB)&nbsp;<wbr>+&nbsp;<wbr>L1&nbsp;<wbr>(32KB)&nbsp;<wbr>+&nbsp;<wbr>Core P#9&nbsp;<wbr>+&nbsp;<wbr>PU P#0<br />
-L2&nbsp;<wbr>(256KB)&nbsp;<wbr>+&nbsp;<wbr>L1&nbsp;<wbr>(32KB)&nbsp;<wbr>+&nbsp;<wbr>Core P#10&nbsp;<wbr>+&nbsp;<wbr>PU P#0<br />
-&nbsp;<wbr>NUMANode P#1&nbsp;<wbr>(24GB)&nbsp;<wbr>+&nbsp;<wbr>Package P#1&nbsp;<wbr>+&nbsp;<wbr>L3&nbsp;<wbr>(12MB)<br />
-L2&nbsp;<wbr>(256KB)&nbsp;<wbr>+&nbsp;<wbr>L1&nbsp;<wbr>(32KB)&nbsp;<wbr>+&nbsp;<wbr>Core P#0&nbsp;<wbr>+&nbsp;<wbr>PU P#0<br />
-L2&nbsp;<wbr>(256KB)&nbsp;<wbr>+&nbsp;<wbr>L1&nbsp;<wbr>(32KB)&nbsp;<wbr>+&nbsp;<wbr>Core P#1&nbsp;<wbr>+&nbsp;<wbr>PU P#0<br />
-L2&nbsp;<wbr>(256KB)&nbsp;<wbr>+&nbsp;<wbr>L1&nbsp;<wbr>(32KB)&nbsp;<wbr>+&nbsp;<wbr>Core P#2&nbsp;<wbr>+&nbsp;<wbr>PU P#0<br />
-L2&nbsp;<wbr>(256KB)&nbsp;<wbr>+&nbsp;<wbr>L1&nbsp;<wbr>(32KB)&nbsp;<wbr>+&nbsp;<wbr>Core P#8&nbsp;<wbr>+&nbsp;<wbr>PU P#0<br />
-L2&nbsp;<wbr>(256KB)&nbsp;<wbr>+&nbsp;<wbr>L1&nbsp;<wbr>(32KB)&nbsp;<wbr>+&nbsp;<wbr>Core P#9&nbsp;<wbr>+&nbsp;<wbr>PU P#0<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>Machine&nbsp;<wbr>(47GB)<br/>
+&nbsp;<wbr>NUMANode P#0&nbsp;<wbr>(24GB)&nbsp;<wbr>+&nbsp;<wbr>Package P#0&nbsp;<wbr>+&nbsp;<wbr>L3&nbsp;<wbr>(12MB)<br/>
+L2&nbsp;<wbr>(256KB)&nbsp;<wbr>+&nbsp;<wbr>L1&nbsp;<wbr>(32KB)&nbsp;<wbr>+&nbsp;<wbr>Core P#0&nbsp;<wbr>+&nbsp;<wbr>PU P#0<br/>
+L2&nbsp;<wbr>(256KB)&nbsp;<wbr>+&nbsp;<wbr>L1&nbsp;<wbr>(32KB)&nbsp;<wbr>+&nbsp;<wbr>Core P#1&nbsp;<wbr>+&nbsp;<wbr>PU P#0<br/>
+L2&nbsp;<wbr>(256KB)&nbsp;<wbr>+&nbsp;<wbr>L1&nbsp;<wbr>(32KB)&nbsp;<wbr>+&nbsp;<wbr>Core P#2&nbsp;<wbr>+&nbsp;<wbr>PU P#0<br/>
+L2&nbsp;<wbr>(256KB)&nbsp;<wbr>+&nbsp;<wbr>L1&nbsp;<wbr>(32KB)&nbsp;<wbr>+&nbsp;<wbr>Core P#8&nbsp;<wbr>+&nbsp;<wbr>PU P#0<br/>
+L2&nbsp;<wbr>(256KB)&nbsp;<wbr>+&nbsp;<wbr>L1&nbsp;<wbr>(32KB)&nbsp;<wbr>+&nbsp;<wbr>Core P#9&nbsp;<wbr>+&nbsp;<wbr>PU P#0<br/>
+L2&nbsp;<wbr>(256KB)&nbsp;<wbr>+&nbsp;<wbr>L1&nbsp;<wbr>(32KB)&nbsp;<wbr>+&nbsp;<wbr>Core P#10&nbsp;<wbr>+&nbsp;<wbr>PU P#0<br/>
+&nbsp;<wbr>NUMANode P#1&nbsp;<wbr>(24GB)&nbsp;<wbr>+&nbsp;<wbr>Package P#1&nbsp;<wbr>+&nbsp;<wbr>L3&nbsp;<wbr>(12MB)<br/>
+L2&nbsp;<wbr>(256KB)&nbsp;<wbr>+&nbsp;<wbr>L1&nbsp;<wbr>(32KB)&nbsp;<wbr>+&nbsp;<wbr>Core P#0&nbsp;<wbr>+&nbsp;<wbr>PU P#0<br/>
+L2&nbsp;<wbr>(256KB)&nbsp;<wbr>+&nbsp;<wbr>L1&nbsp;<wbr>(32KB)&nbsp;<wbr>+&nbsp;<wbr>Core P#1&nbsp;<wbr>+&nbsp;<wbr>PU P#0<br/>
+L2&nbsp;<wbr>(256KB)&nbsp;<wbr>+&nbsp;<wbr>L1&nbsp;<wbr>(32KB)&nbsp;<wbr>+&nbsp;<wbr>Core P#2&nbsp;<wbr>+&nbsp;<wbr>PU P#0<br/>
+L2&nbsp;<wbr>(256KB)&nbsp;<wbr>+&nbsp;<wbr>L1&nbsp;<wbr>(32KB)&nbsp;<wbr>+&nbsp;<wbr>Core P#8&nbsp;<wbr>+&nbsp;<wbr>PU P#0<br/>
+L2&nbsp;<wbr>(256KB)&nbsp;<wbr>+&nbsp;<wbr>L1&nbsp;<wbr>(32KB)&nbsp;<wbr>+&nbsp;<wbr>Core P#9&nbsp;<wbr>+&nbsp;<wbr>PU P#0<br/>
 L2&nbsp;<wbr>(256KB)&nbsp;<wbr>+&nbsp;<wbr>L1&nbsp;<wbr>(32KB)&nbsp;<wbr>+&nbsp;<wbr>Core P#10&nbsp;<wbr>+&nbsp;<wbr>PU P#0 </p>
 <p> In this example, the first core on the second package is logically number 6 (i.e., logically the 7th core, starting from 0). Its physical index is 0, but note that another core <i>also</i> has a physical index of 0. Hence, physical indexes may only be relevant within the scope of their parent (or set of ancestors). In this example, to uniquely identify logical core 6 with physical indexes, you must specify (at a minimum) both a package and a core: package 1, core 0. </p>
 <p> Index values, regardless of whether they are logical or physical, can be expressed in several different forms (where X, Y, and N are positive integers):</p>

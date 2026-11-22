@@ -56,7 +56,7 @@ description: "samunlock – unlock users in the SAM user database"
 <h2>KNOWN BUGS</h2>
 <p> If the username includes international (non-ASCII) characters the program will not (usually) find it. Use the RID number instead. </p>
 <h2>SEE ALSO</h2>
-<p> <code>chntpwd, reged, samusrgrp</code> <br />
+<p> <code>chntpwd, reged, samusrgrp</code> <br/>
  You will find more information available on how this program works, in the text files <i>/usr/share/doc/chntpw/README.txt</i> and <i>/usr/share/doc/chntpw/MANUAL.txt</i> </p>
 <p> More documentation is available at the non upstream&#8217;s author site: <code><a rel="nofollow" href="https://github.com/rescatux/chntpw">https://github.com/rescatux/chntpw</a></code> </p>
 <h2>AUTHOR</h2>

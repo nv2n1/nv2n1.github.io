@@ -10,9 +10,9 @@ description: "calc – arbitrary precision calculator"
 
 <p> calc &#8211; arbitrary precision calculator</p>
 <h2>SYNOPSIS</h2>
-<p> <i>calc</i> [<code>-c</code>] [<code>-C</code>] [<code>-d</code>]<br />
- [<code>-D calc_debug[:resource_debug[:user_debug]]</code>]<br />
- [<code>-e</code>] [<code>-h</code>] [<code>-i</code>] [<code>-m mode</code>] [<code>-O</code>]<br />
+<p> <i>calc</i> [<code>-c</code>] [<code>-C</code>] [<code>-d</code>]<br/>
+ [<code>-D calc_debug[:resource_debug[:user_debug]]</code>]<br/>
+ [<code>-e</code>] [<code>-h</code>] [<code>-i</code>] [<code>-m mode</code>] [<code>-O</code>]<br/>
  [<code>-p</code>] [<code>-q</code>] [<code>-s</code>] [<code>-u</code>] [<code>-v</code>] [<code>[&#8211;]&nbsp;<wbr>calc_cmd &#8230;</code>] </p>
 <p> <i>#!/usr/bin/calc</i>&nbsp;<wbr>[other_flags &#8230;] <code>-f</code></p>
 <h2>DESCRIPTION</h2>
@@ -241,22 +241,22 @@ chmod +x /tmp/mersenne
 <p> Fundamental builtin data types include integers, real numbers, rational numbers, complex numbers and strings. </p>
 <p> By use of an object, one may define an arbitrarily complex data types. One may define how such objects behave a wide range of operations such as addition, subtraction, multiplication, division, negation, squaring, modulus, rounding, exponentiation, equality, comparison, printing and so on. </p>
 <p> For more information use the following <code>calc</code> commands: </p>
-<p> help types<br />
- help obj<br />
+<p> help types<br/>
+ help obj<br/>
  show objfuncs </p>
 <p> VARIABLES </p>
 <p> Variables in <i>calc</i> are typeless. In other words, the fundamental type of a variable is determined by its content. Before a variable is assigned a value it has the value of zero. </p>
 <p> The scope of a variable may be global, local to a file, or local to a procedure. Values may be grouped together in a matrix, or into a a list that permits stack and queue style operations. </p>
 <p> For more information use the following <code>calc</code> commands: </p>
-<p> help variable<br />
- help mat<br />
- help list<br />
+<p> help variable<br/>
+ help mat<br/>
+ help list<br/>
  show globals </p>
 <p> INPUT/OUTPUT </p>
 <p> A leading &#8220;0x&#8221; implies a hexadecimal value, a leading &#8220;0b&#8221; implies a binary value, and a &#8220;0&#8221; followed by a digit implies an octal value. Complex numbers are indicated by a trailing &#8220;i&#8221; such as in &#8220;3+4i&#8221;. Strings may be delimited by either a pair of single or double quotes. By default, <i>calc</i> prints values as if they were floating point numbers. One may change the default to print values in a number of modes including fractions, integers and exponentials. </p>
 <p> A number of stdio-like file I/O operations are provided. One may open, read, write, seek and close files. Filenames are subject to &#8220;~&#8221; expansion to home directories in a way similar to that of the Korn or C-Shell. </p>
 <p> For example: </p>
-<p> ~/.calcrc<br />
+<p> ~/.calcrc<br/>
  ~chongo/lib/fft_multiply.cal </p>
 <p> For more information use the following <code>calc</code> command: </p>
 <p> help file </p>
@@ -264,10 +264,10 @@ chmod +x /tmp/mersenne
 <p> The <i>calc</i> language is a C-like language. The language includes commands such as variable declarations, expressions, tests, labels, loops, file operations, function calls. These commands are very similar to their counterparts in C. </p>
 <p> The language also include a number of commands particular to <i>calc</i> itself. These include commands such as function definition, help, reading in resource files, dump files to a file, error notification, configuration control and status. </p>
 <p> For more information use the following <code>calc</code> command: </p>
-<p> help command<br />
- help statement<br />
- help expression<br />
- help operator<br />
+<p> help command<br/>
+ help statement<br/>
+ help expression<br/>
+ help operator<br/>
  help config </p>
 <h2>FILES</h2>
 <dl>

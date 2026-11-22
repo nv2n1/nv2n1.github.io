@@ -22,7 +22,7 @@ description: "ssh-import-id – retrieve one or more public keys from a public k
 <h2>DESCRIPTION</h2>
 <p> This utility will securely contact a public keyserver and retrieve one or more user&#8217;s public keys, and append these to the current user&#8217;s <i>~/.ssh/authorized_keys</i> file, standard output or any other specified output file. </p>
 <p> User IDs can be prepended by a protocol: </p>
-<p>&nbsp;&#8211;&nbsp;<code>lp:</code>&nbsp;to use&nbsp;<i><a rel="nofollow" href="https://launchpad.net/~%s/+sshkeys">https://launchpad.net/~%s/+sshkeys</a></i><br />
+<p>&nbsp;&#8211;&nbsp;<code>lp:</code>&nbsp;to use&nbsp;<i><a rel="nofollow" href="https://launchpad.net/~%s/+sshkeys">https://launchpad.net/~%s/+sshkeys</a></i><br/>
 &nbsp;&#8211;&nbsp;<code>gh:</code>&nbsp;to use&nbsp;<i><a rel="nofollow" href="https://api.github.com/users/%s/keys">https://api.github.com/users/%s/keys</a></i> </p>
 <p> If the protocol is not explicitly specified, then <code>ssh-import-id</code> will read a URL variable string from <i>/etc/ssh/ssh_import_id</i> as installed by your package manager and configured by your system administrator. You can override this locally by exporting the string you want in a URL environment variable. If all of these are empty, then the protocol is assumed to be &quot;lp:&quot;, which was the original target implementation of this tool. </p>
 <p> Any keys added will be &quot;labled&quot; with a trailing comment, &quot;# ssh-import-id PROTO:USER_ID&quot;. Revoking keys will first look for lines in the authorized keys file ending with that label. </p>

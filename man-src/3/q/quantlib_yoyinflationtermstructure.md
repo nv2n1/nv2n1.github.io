@@ -18,11 +18,11 @@ description: "QuantLib::YoYInflationTermStructure – Base class for year-on-yea
 <p> <code>YoYInflationTermStructure</code> (const <code>Date</code> &amp;referenceDate, const <code>Calendar</code> &amp;calendar, const <code>DayCounter</code> &amp;dayCounter, const <code>Period</code> &amp;lag, <code>Frequency</code> frequency, <code>Rate</code> baseYoYRate, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;yieldTS) </p>
 <p> <code>YoYInflationTermStructure</code> (<code>Natural</code> settlementDays, const <code>Calendar</code> &amp;calendar, const <code>DayCounter</code> &amp;dayCounter, const <code>Period</code> &amp;lag, <code>Frequency</code> frequency, <code>Rate</code> baseYoYRate, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;yieldTS) </p>
 <p> <code>Inspectors</code> </p>
-<p> <code>Rate</code> <code>yoyRate</code> (const <code>Date</code> &amp;d, bool extrapolate=false) const<br />
- <i>year-on-year inflation rate </i><br />
+<p> <code>Rate</code> <code>yoyRate</code> (const <code>Date</code> &amp;d, bool extrapolate=false) const<br/>
+ <i>year-on-year inflation rate </i><br/>
  <code>Rate</code> <code>yoyRate</code> (Time time, bool extrapolate=false) const </p>
 <h3>Protected Member Functions</h3>
-<p>virtual <code>Rate</code> <code>yoyRateImpl</code> (Time time) const =0<br />
+<p>virtual <code>Rate</code> <code>yoyRateImpl</code> (Time time) const =0<br/>
  <i>to be defined in derived classes </i></p>
 <h2>Detailed Description</h2>
 <p>Base class for year-on-year inflation term structures.</p>

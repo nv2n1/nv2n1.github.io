@@ -26,8 +26,8 @@ description: "dh_installchangelogs – install changelogs into package build dir
 <dd>
 </dd><dt>debian/<i>package</i>.NEWS</dt>
 <dd> Automatically installed into usr/share/doc/<i>package</i>/ in the package build directory. </dd>
-<p> Use the package specific name if <i>package</i> needs a different <i></i><font SIZE="-1"><i>NEWS</i></font><i></i> or <i>changelog</i> file. </p>
-<p> The <i>changelog</i> file is installed with a name of changelog for native packages, and <i>changelog.Debian</i> for non-native packages. The <i></i><font SIZE="-1"><i>NEWS</i></font><i></i> file is always installed with a name of <i></i><font SIZE="-1"><i>NEWS</i></font><i>.Debian</i>.</dl>
+<p> Use the package specific name if <i>package</i> needs a different <i></i><i>NEWS</i><i></i> or <i>changelog</i> file. </p>
+<p> The <i>changelog</i> file is installed with a name of changelog for native packages, and <i>changelog.Debian</i> for non-native packages. The <i></i><i>NEWS</i><i></i> file is always installed with a name of <i></i><i>NEWS</i><i>.Debian</i>.</dl>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-k</code>, <code>&#8211;keep</code></dt>

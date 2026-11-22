@@ -10,11 +10,11 @@ description: "ql/methods/montecarlo/montecarlomodel.hpp – General-purpose Mont
 
 <p> ql/methods/montecarlo/montecarlomodel.hpp &#8211; General-purpose Monte Carlo model. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/methods/montecarlo/mctraits.hpp&gt;<br />
- #include &lt;ql/math/statistics/statistics.hpp&gt;<br />
+<p> #include &lt;ql/methods/montecarlo/mctraits.hpp&gt;<br/>
+ #include &lt;ql/math/statistics/statistics.hpp&gt;<br/>
  #include &lt;boost/shared_ptr.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>MonteCarloModel&lt; MC, RNG, S &gt;</code><br />
+<p> class <code>MonteCarloModel&lt; MC, RNG, S &gt;</code><br/>
  <i>General-purpose Monte Carlo model for path samples. </i></p>
 <h2>Detailed Description</h2>
 <p> General-purpose Monte Carlo model. </p>

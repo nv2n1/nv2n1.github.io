@@ -10,7 +10,7 @@ description: "packet.application.gss – GSS module"
 <p>packet.application.gss &#8211; GSS module</p>
 <h2>Description</h2>
 <p>Decode GSS layers. </p>
-<p> NOTE:<br />
+<p> NOTE:<br/>
 &nbsp;<wbr>&nbsp;<wbr>Only procedures RPCSEC_GSS_INIT and RPCSEC_GSS_DATA are supported</p>
 <h2>Classes</h2>
 <h3>class GSS(baseobj.BaseObj)</h3>

@@ -10,7 +10,7 @@ description: "manpage-alert – check for binaries without corresponding manpage
 
 <p> manpage-alert &#8211; check for binaries without corresponding manpages</p>
 <h2>SYNOPSIS</h2>
-<p> <code>manpage-alert</code> [<i>path list</i>]<br />
+<p> <code>manpage-alert</code> [<i>path list</i>]<br/>
  <code>manpage-alert &#8211;help</code>|<code>&#8211;version</code></p>
 <h2>DESCRIPTION</h2>
 <p> <code>manpage-alert</code> searches the given list of paths for binaries without corresponding manpages. </p>

@@ -14,17 +14,17 @@ description: "eximstats – generates statistics from Exim mainlog or syslog fil
 <h3>Output:</h3>
 <dl>
 <dt><code>-txt</code></dt>
-<dd>Output the results in plain text to <font SIZE="-1">STDOUT.</font></dd>
+<dd>Output the results in plain text to STDOUT.</dd>
 <dt><code>-txt</code>=<i>filename</i></dt>
-<dd>Output the results in plain text. Filename &#8216;-&#8216; for <font SIZE="-1">STDOUT</font> is accepted.</dd>
+<dd>Output the results in plain text. Filename &#8216;-&#8216; for STDOUT is accepted.</dd>
 <dt><code>-html</code></dt>
-<dd>Output the results in <font SIZE="-1">HTML</font> to <font SIZE="-1">STDOUT.</font></dd>
+<dd>Output the results in HTML to STDOUT.</dd>
 <dt><code>-html</code>=<i>filename</i></dt>
-<dd>Output the results in <font SIZE="-1">HTML.</font> Filename &#8216;-&#8216; for <font SIZE="-1">STDOUT</font> is accepted.</dd>
+<dd>Output the results in HTML. Filename &#8216;-&#8216; for STDOUT is accepted.</dd>
 <dt><code>-xls</code></dt>
-<dd>Output the results in Excel compatible Format to <font SIZE="-1">STDOUT.</font> Requires the Spreadsheet::WriteExcel <font SIZE="-1">CPAN</font> module.</dd>
+<dd>Output the results in Excel compatible Format to STDOUT. Requires the Spreadsheet::WriteExcel CPAN module.</dd>
 <dt><code>-xls</code>=<i>filename</i></dt>
-<dd>Output the results in Excel compatible format. Filename &#8216;-&#8216; for <font SIZE="-1">STDOUT</font> is accepted.</dd></dl>
+<dd>Output the results in Excel compatible format. Filename &#8216;-&#8216; for STDOUT is accepted.</dd></dl>
 <h3>Options:</h3>
 <dl>
 <dt><code>-h</code><i>number</i></dt>
@@ -51,7 +51,7 @@ description: "eximstats – generates statistics from Exim mainlog or syslog fil
 <dt><code>-include_original_destination</code></dt>
 <dd>Include the original destination email addresses rather than just using the final ones. Useful for finding out which of your mailing lists are receiving mail.</dd>
 <dt><code>-show_dt</code><i>list</i></dt>
-<dd>Show the delivery times (<font SIZE="-1"><code>DT</code></font>)for all the messages. </dd>
+<dd>Show the delivery times (<code>DT</code>)for all the messages. </dd>
 <p> Exim must have been configured to use the +deliver_time logging option for this option to work. </p>
 <p> <i>list</i> is an optional list of times. Eg -show_dt1,2,4,8 will show the number of messages with delivery times under 1 second, 2 seconds, 4 seconds, 8 seconds, and over 8 seconds.</p>
 <dt><code>-show_rt</code><i>list</i></dt>
@@ -95,12 +95,12 @@ description: "eximstats – generates statistics from Exim mainlog or syslog fil
 <dl>
 <dd></dd></dl>
 <dt><code>-charts</code></dt>
-<dd>Create graphical charts to be displayed in <font SIZE="-1">HTML</font> output. Only valid in combination with <i>-html</i>. </dd>
+<dd>Create graphical charts to be displayed in HTML output. Only valid in combination with <i>-html</i>. </dd>
 <p> This requires the following modules which can be obtained from <a rel="nofollow" href="http://www.cpan.org/modules/01modules.index.html">http://www.cpan.org/modules/01modules.index.html</a></p>
 <dl>
 <dd>
 </dd><dl>
-<dt><font SIZE="-1">GD</font></dt>
+<dt>GD</dt>
 <dd>
 </dd><dt>GDTextUtil</dt>
 <dd>
@@ -119,9 +119,9 @@ description: "eximstats – generates statistics from Exim mainlog or syslog fil
 <dt><code>-chartrel</code>I &lt;dir&gt;</dt>
 <dd>Specify the relative directory for the &#8220;img src=&#8221; tags from where to include the charts</dd>
 <dt><code>-emptyok</code></dt>
-<dd>Specify that it&#8217;s <font SIZE="-1">OK</font> to not find any valid log lines. Without this we will output an error message if we don&#8217;t find any.</dd>
+<dd>Specify that it&#8217;s OK to not find any valid log lines. Without this we will output an error message if we don&#8217;t find any.</dd>
 <dt><code>-d</code></dt>
-<dd>Debug flag. This outputs the <i>eval()</i>&#8216;d parser onto <font SIZE="-1">STDOUT</font> which makes it easier to trap errors in the eval section. Remember to add 1 to the line numbers to allow for the title!</dd></dl>
+<dd>Debug flag. This outputs the <i>eval()</i>&#8216;d parser onto STDOUT which makes it easier to trap errors in the eval section. Remember to add 1 to the line numbers to allow for the title!</dd></dl>
 <h2>Description</h2>
 <p>Eximstats parses exim mainlog and syslog files to output a statistical analysis of the messages processed. By default, a text analysis is generated, but you can request other output formats using flags. See the help (<code>-help</code>) to learn about how to create charts from the tables.</p>
 <h2>Author</h2>

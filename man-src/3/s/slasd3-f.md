@@ -10,7 +10,7 @@ description: "slasd3.f –"
 <p>slasd3.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>slasd3</code> (NL, NR, SQRE, K, D, Q, LDQ, DSIGMA, U, LDU, U2, LDU2, VT, LDVT, VT2, LDVT2, IDXC, CTOT, Z, INFO)<br />
+<p>subroutine <code>slasd3</code> (NL, NR, SQRE, K, D, Q, LDQ, DSIGMA, U, LDU, U2, LDU2, VT, LDVT, VT2, LDVT2, IDXC, CTOT, Z, INFO)<br/>
  <i></i><code>SLASD3</code> finds all square roots of the roots of the secular equation, as defined by the values in D and Z, and then updates the singular vectors by matrix multiplication. Used by sbdsdc.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slasd3 (integerNL, integerNR, integerSQRE, integerK, real, dimension( * )D, real, dimension( ldq, * )Q, integerLDQ, real, dimension( * )DSIGMA, real, dimension( ldu, * )U, integerLDU, real, dimension( ldu2, * )U2, integerLDU2, real, dimension( ldvt, * )VT, integerLDVT, real, dimension( ldvt2, * )VT2, integerLDVT2, integer, dimension( * )IDXC, integer, dimension( * )CTOT, real, dimension( * )Z, integerINFO)</h3>

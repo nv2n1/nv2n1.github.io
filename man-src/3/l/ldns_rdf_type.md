@@ -10,7 +10,7 @@ description: "ldns_rdf, ldns_rdf_type"
 
 <p> ldns_rdf, ldns_rdf_type </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <h2>DESCRIPTION</h2>
@@ -18,26 +18,26 @@ description: "ldns_rdf, ldns_rdf_type"
 <dt> <i>ldns_rdf</i></dt>
 <dd>
 </dd><dd>Resource record data field. </dd>
-<p> The data is a network ordered array of bytes, which size is specified by<br />
- the (16-bit) size field. To correctly parse it, use the type<br />
+<p> The data is a network ordered array of bytes, which size is specified by<br/>
+ the (16-bit) size field. To correctly parse it, use the type<br/>
  specified in the (16-bit) type field with a value from 
-ef ldns_rdf_type.<br />
- struct ldns_struct_rdf<br />
- {<br />
+ef ldns_rdf_type.<br/>
+ struct ldns_struct_rdf<br/>
+ {<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><code>The size of the data (in octets):</code></p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>size_t _size;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><code>The type of the data:</code></p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>ldns_rdf_type _type;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><code>Pointer to the data (raw octets):</code></p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>void *_data;</p>
-<p> };<br />
+<p> };<br/>
  typedef struct ldns_struct_rdf ldns_rdf;</dl>
 <dl>
 <dt> <i>ldns_rdf_type</i></dt>
 <dd>
-</dd><dd>The different types of RDATA fields.<br />
- enum ldns_enum_rdf_type<br />
- {<br />
+</dd><dd>The different types of RDATA fields.<br/>
+ enum ldns_enum_rdf_type<br/>
+ {<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><code>none:</code></dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>LDNS_RDF_TYPE_NONE,</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><code>domain name:</code></p>
@@ -100,7 +100,7 @@ ef ldns_rdf_type.<br />
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>LDNS_RDF_TYPE_NSEC3_SALT,</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><code>nsec3 base32 string (with length byte on wire:</code></p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>LDNS_RDF_TYPE_NSEC3_NEXT_OWNER</p>
-<p> };<br />
+<p> };<br/>
  typedef enum ldns_enum_rdf_type ldns_rdf_type;</dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>

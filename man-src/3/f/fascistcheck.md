@@ -11,7 +11,7 @@ description: "FascistCheck – a pro-active password checker library"
 <h2>Synopsis</h2>
 <p><code>#include &lt;crack.h&gt;</code> </p>
 <p> <code>static char const CRACKLIB_DICTPATH[] = &nbsp;<wbr>&#8230;;</code> </p>
-<p> <code>extern char const *</code><br />
+<p> <code>extern char const *</code><br/>
  <code>FascistCheck(char const passwd[], char const dictpath[]);</code></p>
 <h2>Description</h2>
 <p>cracklib is a library containing the <code>FascistCheck</code> C function which may be used in a &quot;passwd&quot; like program. The idea is simple: try to prevent users from choosing passwords that could be guessed by &quot;crack&quot; by filtering them out, at source. cracklib is an offshoot of the the version 5 of the &quot;crack&quot; software and contains a considerable number of ideas nicked from the new software. </p>
@@ -30,9 +30,9 @@ description: "FascistCheck – a pro-active password checker library"
 <dt><i>/usr/share/doc/cracklib2-dev/examples</i></dt>
 <dd>Example <code><a href="/docs/linux/man/1-cc/">cc</a></code>(1) source files that show how <code>FascistCheck</code> is used.</dd></dl>
 <h2>See Also</h2>
-<p><code>crack_teststr</code>(8), <code>crack_mkdict</code>(8), <code><a href="/docs/linux/man/8-update-cracklib/">update-cracklib</a></code>(8)<br />
- /usr/share/doc/cracklib2-dev/examples<br />
- /usr/share/doc/cracklib2/cracklib2.html<br />
+<p><code>crack_teststr</code>(8), <code>crack_mkdict</code>(8), <code><a href="/docs/linux/man/8-update-cracklib/">update-cracklib</a></code>(8)<br/>
+ /usr/share/doc/cracklib2-dev/examples<br/>
+ /usr/share/doc/cracklib2/cracklib2.html<br/>
  /usr/share/doc/cracklib2-dev/cracklib2-dev.html</p>
 <h2>Author</h2>
 <p><code>cracklib2</code> is written by Alec Muffett &lt;alecm [at] crypto.dircon.co.uk&gt;. Manual added by Jean Pierre LeJacq &lt;jplejacq [at] quoininc.com&gt;.</p>

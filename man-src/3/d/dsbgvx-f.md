@@ -10,7 +10,7 @@ description: "dsbgvx.f –"
 <p>dsbgvx.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dsbgvx</code> (JOBZ, RANGE, UPLO, N, KA, KB, AB, LDAB, BB, LDBB, Q, LDQ, VL, VU, IL, IU, ABSTOL, M, W, Z, LDZ, WORK, IWORK, IFAIL, INFO)<br />
+<p>subroutine <code>dsbgvx</code> (JOBZ, RANGE, UPLO, N, KA, KB, AB, LDAB, BB, LDBB, Q, LDQ, VL, VU, IL, IU, ABSTOL, M, W, Z, LDZ, WORK, IWORK, IFAIL, INFO)<br/>
  <i></i><code>DSBGST</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dsbgvx (characterJOBZ, characterRANGE, characterUPLO, integerN, integerKA, integerKB, double precision, dimension( ldab, * )AB, integerLDAB, double precision, dimension( ldbb, * )BB, integerLDBB, double precision, dimension( ldq, * )Q, integerLDQ, double precisionVL, double precisionVU, integerIL, integerIU, double precisionABSTOL, integerM, double precision, dimension( * )W, double precision, dimension( ldz, * )Z, integerLDZ, double precision, dimension( * )WORK, integer, dimension( * )IWORK, integer, dimension( * )IFAIL, integerINFO)</h3>

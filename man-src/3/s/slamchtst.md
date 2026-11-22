@@ -10,7 +10,7 @@ description: "slamchtst.f –"
 <p>slamchtst.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>program <code>__slamchtst.f__</code><br />
+<p>program <code>__slamchtst.f__</code><br/>
  <i></i><code>SLAMCHTST</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>program __slamchtst.f__ ()</h3>

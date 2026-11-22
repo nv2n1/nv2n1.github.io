@@ -13,16 +13,16 @@ description: "Monit – utility for monitoring services on a Unix system"
 <p> <code>monit</code> [options] {arguments}</p>
 <h2>DESCRIPTION</h2>
 <p> <code>Monit</code> is a utility for managing and monitoring processes, programs, files, directories and filesystems on a Unix system. Monit conducts automatic maintenance and repair and can execute meaningful causal actions in error situations. E.g. Monit can start a process if it does not run, restart a process if it does not respond and stop a process if it uses too much resources. You can use Monit to monitor files, directories and filesystems for changes, such as timestamps changes, checksum changes or size changes. </p>
-<p> Monit is controlled via an easy to configure control file based on a free-format, token-oriented syntax. Monit logs to syslog or to its own log file and notifies you about error conditions via customizable alert messages. Monit can perform various <font SIZE="-1">TCP/IP</font> network checks, protocol checks and can utilize <font SIZE="-1">SSL</font> for such checks. Monit provides a http(s) interface and you may use a browser to access the Monit program.</p>
+<p> Monit is controlled via an easy to configure control file based on a free-format, token-oriented syntax. Monit logs to syslog or to its own log file and notifies you about error conditions via customizable alert messages. Monit can perform various TCP/IP network checks, protocol checks and can utilize SSL for such checks. Monit provides a http(s) interface and you may use a browser to access the Monit program.</p>
 <h2>WHAT TO MONITOR?</h2>
 <p> You can use Monit to monitor daemon <code>processes</code> or similar programs running on localhost. Monit is particularly useful for monitoring daemon processes, such as those started at system boot time. For instance sendmail, sshd, apache and mysql. In contrast to many other monitoring systems, Monit can act if an error situation should occur, e.g.; if sendmail is not running, monit can start sendmail again automatically or if apache is using too many resources (e.g. if a DoS attack is in progress) Monit can stop or restart apache and send you an alert message. Monit can also monitor process characteristics, such as how much memory or cpu cycles a process is using. </p>
 <p> You can also use Monit to monitor <code>files</code>, <code>directories</code> and <code>filesystems</code> on localhost. Monit can monitor these items for changes, such as timestamps changes, checksum changes or size changes. This is also useful for security reasons &#8211; you can monitor the md5 or sha1 checksum of files that should not change and get an alert or perform an action if they should change. </p>
-<p> Monit can monitor <code>network connections</code> to various servers, either on localhost or on remote hosts. <font SIZE="-1">TCP, UDP</font> and Unix Domain Sockets are supported. Network test can be performed on a protocol level; Monit has built-in tests for the main Internet protocols, such as <font SIZE="-1">HTTP, SMTP</font> etc. Even if a protocol is not supported you can still test the server because you can configure Monit to send any data and test the response from the server. </p>
+<p> Monit can monitor <code>network connections</code> to various servers, either on localhost or on remote hosts. TCP, UDP and Unix Domain Sockets are supported. Network test can be performed on a protocol level; Monit has built-in tests for the main Internet protocols, such as HTTP, SMTP etc. Even if a protocol is not supported you can still test the server because you can configure Monit to send any data and test the response from the server. </p>
 <p> Monit can be used to test <code>programs</code> or scripts at certain times, much like cron, but in addition, you can test the exit value of a program and perform an action or send an alert if the exit value indicates an error. This means that you can use Monit to perform any type of check you can write a script for. </p>
-<p> Finally, Monit can be used to monitor general <code>system</code> resources on localhost such as overall <font SIZE="-1">CPU</font> usage, Memory and System Load.</p>
+<p> Finally, Monit can be used to monitor general <code>system</code> resources on localhost such as overall CPU usage, Memory and System Load.</p>
 <h2>GENERAL OPERATION</h2>
 <p> The behavior of Monit is controlled by command-line options <i>and</i> a run control file, monitrc, the syntax of which we describe in a later section. Command-line options override <i>.monitrc</i> declarations. </p>
-<p> The default location for <i>monitrc</i> is <i>~/.monitrc</i>. If this file does not exist, Monit will try <i>/etc/monitrc</i> and a few other places. See <font SIZE="-1">FILES</font> for details. You can also specify the control file directly by using the <i>-c</i> command-line switch to monit. For instance, </p>
+<p> The default location for <i>monitrc</i> is <i>~/.monitrc</i>. If this file does not exist, Monit will try <i>/etc/monitrc</i> and a few other places. See FILES for details. You can also specify the control file directly by using the <i>-c</i> command-line switch to monit. For instance, </p>
 <pre>
  $ monit -c /var/monit/monitrc
 </pre>
@@ -40,44 +40,44 @@ description: "Monit – utility for monitoring services on a Unix system"
 <p> Monit will detach from the terminal and run as a background process, i.e. as a daemon process. As a daemon, Monit runs in cycles; It monitor services, then goes to sleep for a configured period, then wakes up and start monitoring again in an endless loop.</p>
 <h3>Options</h3>
 <p> The following options are recognized by Monit. However, it is recommended that you set options (when applicable) directly in the <i>.monitrc</i> control file. </p>
-<p> <code>-c</code> <i>file</i><br />
+<p> <code>-c</code> <i>file</i><br/>
 Use this control file </p>
-<p> <code>-d</code> <i>n</i><br />
-Run Monit as a daemon once per&nbsp;<wbr><i>n</i>&nbsp;<wbr>seconds. Or use&nbsp;<wbr><i>&#8220;set<br />
+<p> <code>-d</code> <i>n</i><br/>
+Run Monit as a daemon once per&nbsp;<wbr><i>n</i>&nbsp;<wbr>seconds. Or use&nbsp;<wbr><i>&#8220;set<br/>
 daemon&#8221;</i>&nbsp;<wbr>in monitrc. </p>
-<p> <code>-g</code> <i>name</i><br />
-Set group name for start, stop, restart, monitor, unmonitor,<br />
+<p> <code>-g</code> <i>name</i><br/>
+Set group name for start, stop, restart, monitor, unmonitor,<br/>
 status and summary action. </p>
-<p> <code>-l</code> <i>logfile</i><br />
-Print log information to this file. Or use&nbsp;<wbr><i>&#8220;set logfile&#8221;</i><br />
+<p> <code>-l</code> <i>logfile</i><br/>
+Print log information to this file. Or use&nbsp;<wbr><i>&#8220;set logfile&#8221;</i><br/>
 &nbsp;<wbr>in monitrc. </p>
-<p> <code>-p</code> <i>pidfile</i><br />
-Use this lock file in daemon mode. Or use&nbsp;<wbr><i>&#8220;set pidfile&#8221;</i><br />
+<p> <code>-p</code> <i>pidfile</i><br/>
+Use this lock file in daemon mode. Or use&nbsp;<wbr><i>&#8220;set pidfile&#8221;</i><br/>
 &nbsp;<wbr>in monitrc. </p>
-<p> <code>-s</code> <i>statefile</i><br />
-Write state information to this file. Or use&nbsp;<wbr><i>&#8220;set<br />
+<p> <code>-s</code> <i>statefile</i><br/>
+Write state information to this file. Or use&nbsp;<wbr><i>&#8220;set<br/>
 statefile&#8221;</i>&nbsp;<wbr>in monitrc. </p>
-<p> <code>-I</code><br />
+<p> <code>-I</code><br/>
 Do not run in background&nbsp;<wbr>(needed for run from init) </p>
-<p> <code>-i</code><br />
-Print Monit&#8217;s unique&nbsp;<wbr><font SIZE="-1">ID</font> </p>
-<p> <code>-r</code><br />
-Reset Monit&#8217;s unique&nbsp;<wbr><font SIZE="-1">ID.</font>&nbsp;<wbr>Use with caution </p>
-<p> <code>-t</code><br />
+<p> <code>-i</code><br/>
+Print Monit&#8217;s unique&nbsp;<wbr>ID </p>
+<p> <code>-r</code><br/>
+Reset Monit&#8217;s unique&nbsp;<wbr>ID.&nbsp;<wbr>Use with caution </p>
+<p> <code>-t</code><br/>
 Run syntax check for the control file </p>
-<p> <code>-v</code><br />
+<p> <code>-v</code><br/>
 Verbose mode, work noisy&nbsp;<wbr>(diagnostic output) </p>
-<p> <code>-vv</code><br />
+<p> <code>-vv</code><br/>
 Very verbose mode, same as -v plus log stack-trace on error </p>
-<p> <code>-H</code> <i>[filename]</i><br />
-Print&nbsp;<wbr><font SIZE="-1">MD5</font>&nbsp;<wbr>and&nbsp;<wbr><font SIZE="-1">SHA1</font>&nbsp;<wbr>hashes of the file or of stdin if the<br />
+<p> <code>-H</code> <i>[filename]</i><br/>
+Print&nbsp;<wbr>MD5&nbsp;<wbr>and&nbsp;<wbr>SHA1&nbsp;<wbr>hashes of the file or of stdin if the<br/>
 filename is omitted;&nbsp;<wbr>Monit will exit afterwards </p>
-<p> <code>-V</code><br />
+<p> <code>-V</code><br/>
 Print version number and patch level </p>
-<p> <code>-h</code><br />
+<p> <code>-h</code><br/>
 Print a help text</p>
 <h3>Arguments</h3>
-<p> Once you have Monit running as a daemon process, you can call Monit with one of the following arguments. Monit will then connect to the Monit daemon (on <font SIZE="-1">TCP</font> port 127.0.0.1:2812 by default) and ask the Monit daemon to perform the requested action. In other words; calling monit without arguments starts the Monit daemon, and calling monit <i>with</i> arguments enables you to communicate with the Monit daemon process.</p>
+<p> Once you have Monit running as a daemon process, you can call Monit with one of the following arguments. Monit will then connect to the Monit daemon (on TCP port 127.0.0.1:2812 by default) and ask the Monit daemon to perform the requested action. In other words; calling monit without arguments starts the Monit daemon, and calling monit <i>with</i> arguments enables you to communicate with the Monit daemon process.</p>
 <dl>
 <dt>start all</dt>
 <dd> Start all services listed in the control file and enable monitoring for them. If the group option is set (<i>-g</i>), only start and enable monitoring of services in the named group (&#8220;all&#8221; is not required in this case).</dd>
@@ -115,7 +115,7 @@ Print a help text</p>
 <p> Monit is configured and controlled via a control file called <i>monitrc</i>. The default location for this file is ~/.monitrc. If this file does not exist, Monit will try /etc/monitrc, then <tt>@sysconfdir</tt>@/monitrc and finally ./monitrc. If you build Monit from source, the value of <tt>@sysconfdir</tt>@ can be given at configure time as ./configure &#8211;sysconfdir. For instance, using <i>./configure &#8211;sysconfdir /var/monit/etc</i> will make Monit search for <i>monitrc</i> in <i>/var/monit/etc</i> </p>
 <p> To protect the security of your control file and passwords the control file must have read-write permissions <i>no more than 0700</i> (u=xrw,g=,o=); Monit will complain and exit otherwise. </p>
 <p> When there is a conflict between the command-line arguments and the arguments in this file, the command-line arguments takes precedence. </p>
-<p> Monit uses its own Domain Specific Language (<font SIZE="-1">DSL</font>); The control file consists of a series of service entries and global option statements. </p>
+<p> Monit uses its own Domain Specific Language (DSL); The control file consists of a series of service entries and global option statements. </p>
 <p> Comments begin with a <tt>'#'</tt> and extend through the end of the line. Otherwise the file consists of a series of service entries or global option statements in a free-format, token-oriented syntax. </p>
 <p> You can use noise keywords like <tt>'if'</tt>, <tt>'and'</tt>, <tt>'with(in)'</tt>, <tt>'has'</tt>, <tt>'us(ing|e)'</tt>, <tt>'on(ly)'</tt>, <tt>'then'</tt>, <tt>'for'</tt>, <tt>'of'</tt> anywhere in an entry to make it resemble English. They&#8217;re ignored, but can make entries much easier to read at a glance. Keywords are case insensitive. </p>
 <p> There are three kinds of tokens: <i>grammar</i>, <i>numbers</i> (i.e. decimal digit sequences) and <i>strings</i>. Strings can be either quoted or unquoted. A quoted string is bounded by double quotes and may contain whitespace (and quoted digits are treated as a string). An unquoted string is any whitespace-delimited token, containing characters and/or numbers. </p>
@@ -129,25 +129,25 @@ Print a help text</p>
 <dd> Each service entry consists of the keywords <tt>&quot;check&quot;</tt>, followed by the service type. Each entry requires a <code>unique</code> descriptive name, which may be freely chosen. This name is used by Monit to refer to the service internally and in all interactions with the user.</dd></dl>
 <p> Currently, nine types of check statements are supported:</p>
 <dl>
-<dt>1. <font SIZE="-1">CHECK PROCESS</font> &lt;unique name&gt; &lt;<font SIZE="-1">PIDFILE</font> &lt;path&gt; | <font SIZE="-1">MATCHING</font> &lt;regex&gt;&gt;</dt>
-<dd> &lt;path&gt; is the absolute path to the program&#8217;s pid-file. A pid-file is a file, containing a Process&#8217;s unique <font SIZE="-1">ID.</font> If the pid-file does not exist or does not contain the <font SIZE="-1">PID</font> number of a running process, Monit will call the entry&#8217;s start method if defined. </dd>
-<p> &lt;regex&gt; is an alternative to using <font SIZE="-1">PID</font> files and uses process name pattern matching to find the process to monitor. The first match is used so this form of check is most useful if the process name is unique. Pid-file should be used where possible as it defines expected pid exactly (pattern matching won&#8217;t be useful for processes which start a child process using fork/clone as the child will match the same pattern temporarily). You can test if a process match a pattern from the command-line using <tt>&quot;monit procmatch &quot;regex-pattern&quot;&quot;</tt>. This will lists all processes matching or not, the regex-pattern.</p>
-<dt>2. <font SIZE="-1">CHECK FILE</font> &lt;unique name&gt; <font SIZE="-1">PATH</font> &lt;path&gt;</dt>
+<dt>1. CHECK PROCESS &lt;unique name&gt; &lt;PIDFILE &lt;path&gt; | MATCHING &lt;regex&gt;&gt;</dt>
+<dd> &lt;path&gt; is the absolute path to the program&#8217;s pid-file. A pid-file is a file, containing a Process&#8217;s unique ID. If the pid-file does not exist or does not contain the PID number of a running process, Monit will call the entry&#8217;s start method if defined. </dd>
+<p> &lt;regex&gt; is an alternative to using PID files and uses process name pattern matching to find the process to monitor. The first match is used so this form of check is most useful if the process name is unique. Pid-file should be used where possible as it defines expected pid exactly (pattern matching won&#8217;t be useful for processes which start a child process using fork/clone as the child will match the same pattern temporarily). You can test if a process match a pattern from the command-line using <tt>&quot;monit procmatch &quot;regex-pattern&quot;&quot;</tt>. This will lists all processes matching or not, the regex-pattern.</p>
+<dt>2. CHECK FILE &lt;unique name&gt; PATH &lt;path&gt;</dt>
 <dd> &lt;path&gt; is the absolute path to the file. If the file does not exist, Monit will call the entry&#8217;s start method if defined, if &lt;path&gt; does not point to a regular file type (for instance a directory), Monit will disable monitoring of this entry. If Monit runs in passive mode or the start methods is not defined, Monit will just send an alert on error.</dd>
-<dt>3. <font SIZE="-1">CHECK FIFO</font> &lt;unique name&gt; <font SIZE="-1">PATH</font> &lt;path&gt;</dt>
+<dt>3. CHECK FIFO &lt;unique name&gt; PATH &lt;path&gt;</dt>
 <dd> &lt;path&gt; is the absolute path to the fifo. If the fifo does not exist, Monit will call the entry&#8217;s start method if defined, if &lt;path&gt; does not point to a fifo type (for instance a directory), Monit will disable monitoring of this entry. If Monit runs in passive mode or the start methods is not defined, Monit will just send an alert on error.</dd>
-<dt>4. <font SIZE="-1">CHECK FILESYSTEM</font> &lt;unique name&gt; <font SIZE="-1">PATH</font> &lt;path&gt;</dt>
+<dt>4. CHECK FILESYSTEM &lt;unique name&gt; PATH &lt;path&gt;</dt>
 <dd> &lt;path&gt; is the path to the device/disk, mount point, file or a directory which is part of a filesystem. It is recommended to use a block special file directly (for example /dev/hda1 on Linux or /dev/dsk/c0t0d0s1 on Solaris, etc.) If you use a mount point (for example /data), note if the filesystem is unmounted the test will still be true because the mount point exist. </dd>
 <p> If the filesystem becomes unavailable, Monit will call the entry&#8217;s start method if defined. if &lt;path&gt; does not point to a filesystem, Monit will disable monitoring of this entry. If Monit runs in passive mode or the start methods is not defined, Monit will just send an alert on error.</p>
-<dt>5. <font SIZE="-1">CHECK DIRECTORY</font> &lt;unique name&gt; <font SIZE="-1">PATH</font> &lt;path&gt;</dt>
+<dt>5. CHECK DIRECTORY &lt;unique name&gt; PATH &lt;path&gt;</dt>
 <dd> &lt;path&gt; is the absolute path to the directory. If the directory does not exist, Monit will call the entry&#8217;s start method if defined. If &lt;path&gt; does not point to a directory, monit will disable monitoring of this entry. If Monit runs in passive mode or the start methods is not defined, Monit will just send an alert on error.</dd>
-<dt>6. <font SIZE="-1">CHECK HOST</font> &lt;unique name&gt; <font SIZE="-1">ADDRESS</font> &lt;host address&gt;</dt>
+<dt>6. CHECK HOST &lt;unique name&gt; ADDRESS &lt;host address&gt;</dt>
 <dd> The host address can be specified as a hostname string or as an IP-address string on a dotted decimal format. Such as, tildeslash.com or &#8220;64.87.72.95&#8221;.</dd>
-<dt>7. <font SIZE="-1">CHECK SYSTEM</font> &lt;unique name&gt;</dt>
-<dd> The <i>unique name</i> is usually the local host name, but any descriptive name can be used. If you use the variable <tt>$HOST</tt> as the name, it will expand to the hostname. This check allows one to monitor general system resources such as <font SIZE="-1">CPU</font> usage, total memory usage or load average. The <i>unique name</i> is used as the system hostname in mail alerts and as the initial name of the host entry in M/Monit.</dd>
-<dt>8. <font SIZE="-1">CHECK PROGRAM</font> &lt;unique name&gt; <font SIZE="-1">PATH</font> &lt;executable file&gt; [<font SIZE="-1">TIMEOUT</font> &lt;number&gt; <font SIZE="-1">SECONDS</font>]</dt>
+<dt>7. CHECK SYSTEM &lt;unique name&gt;</dt>
+<dd> The <i>unique name</i> is usually the local host name, but any descriptive name can be used. If you use the variable <tt>$HOST</tt> as the name, it will expand to the hostname. This check allows one to monitor general system resources such as CPU usage, total memory usage or load average. The <i>unique name</i> is used as the system hostname in mail alerts and as the initial name of the host entry in M/Monit.</dd>
+<dt>8. CHECK PROGRAM &lt;unique name&gt; PATH &lt;executable file&gt; [TIMEOUT &lt;number&gt; SECONDS]</dt>
 <dd> &lt;path&gt; is the absolute path to the executable program or script. The status test allows one to check the program&#8217;s exit status. If the program does not finish executing within &lt;number&gt; seconds, Monit will terminate it. The default program timeout is 300 seconds (5 minutes). The output of the program is recorded and made available in the User Interface and in alerts (up to 1kB).</dd>
-<dt>9. <font SIZE="-1">CHECK NETWORK</font> &lt;unique name&gt; &lt;<font SIZE="-1">ADDRESS</font> &lt;ipaddress&gt; | <font SIZE="-1">INTERFACE</font> &lt;name&gt;&gt;</dt>
+<dt>9. CHECK NETWORK &lt;unique name&gt; &lt;ADDRESS &lt;ipaddress&gt; | INTERFACE &lt;name&gt;&gt;</dt>
 <dd> &lt;ipaddress&gt; is the IPv4 or IPv6 address of the monitored network interface. It is also possible to use interface name, such as &#8220;eth0&#8221; on Linux.</dd></dl>
 <h2>LOGGING</h2>
 <p> Monit will log status and error messages to a log file. Use the <i>set logfile</i> statement in the monitrc control file. To setup Monit to log to its own logfile, use e.g. <i>set logfile /var/log/monit.log</i>. If <code>syslog</code> is given as a value for the <tt>&quot;-l&quot;</tt> command-line switch (or the keyword <i>set logfile syslog</i> is found in the control file) Monit will use the <code>syslog</code> system daemon to log messages with a priority assigned to each message based on the context. To turn off logging, simply do not set the logfile in the control file (and of course, do not use the -l switch) </p>
@@ -184,7 +184,7 @@ Print a help text</p>
 <pre>
   kill -1 1
 </pre>
-<p> If Monit is used to monitor services that are also started at boot time (e.g. services started via <font SIZE="-1">SYSV</font> init rc scripts or via inittab) then, in some cases, a race condition could occur. That is; if a service is slow to start, Monit can assume that the service is not running and possibly try to start it and raise an alert, while, in fact the service is already about to start or already in its startup sequence. Please see the <font SIZE="-1">FAQ</font> for a solution to this problem. The short version is to start Monit on a higher run-level after system processes.</p>
+<p> If Monit is used to monitor services that are also started at boot time (e.g. services started via SYSV init rc scripts or via inittab) then, in some cases, a race condition could occur. That is; if a service is slow to start, Monit can assume that the service is not running and possibly try to start it and raise an alert, while, in fact the service is already about to start or already in its startup sequence. Please see the FAQ for a solution to this problem. The short version is to start Monit on a higher run-level after system processes.</p>
 <h2>INCLUDE FILES</h2>
 <p> The Monit control file, <tt>&quot;monitrc&quot;</tt>, can include additional configuration files. This feature helps one to organize configuration into separate files instead of having everything in one file, if you like this kind of thing. Include statements can be placed at virtually any place in <tt>&quot;monitrc&quot;</tt> though the convention is at the bottom. The syntax is the following: </p>
 <pre>
@@ -199,10 +199,10 @@ Print a help text</p>
 </pre>
 <p> This will load any file matching the globstring. That is, all files in <i>/etc/monit.d</i> that ends with the prefix <i>.cfg</i>.</p>
 <h2>MONIT HTTPD</h2>
-<p> If specified in the control file, Monit will start with http support. You can then use Monit <font SIZE="-1">CLI</font> to start and stop services, disable or enable service monitoring as well as view the status of each service. </p>
-<p> If http support is enabled over <font SIZE="-1">TCP</font> rather than over a Unix Socket, you can also view Monit&#8217;s informative dashboard in your web browser. </p>
-<p> Note that if <font SIZE="-1">HTTP</font> support is disabled, the Monit <font SIZE="-1">CLI</font> interface will have reduced functionality, as most <font SIZE="-1">CLI</font> commands (such as &#8220;monit status&#8221;) need to communicate with the Monit background process via the the <font SIZE="-1">HTTP</font> interface. We strongly recommend having <font SIZE="-1">HTTP</font> support enabled. If security is a concern, bind the <font SIZE="-1">HTTP</font> interface to local host only or use Unix Socket so Monit is not accessible from the outside. </p>
-<p> Syntax for <font SIZE="-1">TCP</font> port: </p>
+<p> If specified in the control file, Monit will start with http support. You can then use Monit CLI to start and stop services, disable or enable service monitoring as well as view the status of each service. </p>
+<p> If http support is enabled over TCP rather than over a Unix Socket, you can also view Monit&#8217;s informative dashboard in your web browser. </p>
+<p> Note that if HTTP support is disabled, the Monit CLI interface will have reduced functionality, as most CLI commands (such as &#8220;monit status&#8221;) need to communicate with the Monit background process via the the HTTP interface. We strongly recommend having HTTP support enabled. If security is a concern, bind the HTTP interface to local host only or use Unix Socket so Monit is not accessible from the outside. </p>
+<p> Syntax for TCP port: </p>
 <pre><code>
 SET HTTPD PORT&lt;number&gt;[ADDRESS&lt;hostname | IP - address&gt;]
                       [SSL&lt;ENABLE | DISABLE&gt;]
@@ -228,9 +228,9 @@ SET HTTPD PORT&lt;number&gt;[ADDRESS&lt;hostname | IP - address&gt;]
      allow username:password
 </pre>
 <p> <code>Options</code>: </p>
-<p> <font SIZE="-1"><code>UNIXSOCKET</code></font> set the path to the Unix Socket Monit should bind to and listen on. </p>
-<p> <font SIZE="-1"><code>PORT</code></font> set the port Monit should bind to and listen on. Monit is usually setup on port 2812. </p>
-<p> <font SIZE="-1"><code>ADDRESS</code></font> make Monit listen on a specific interface only. For example if you <i>don&#8217;t</i> want to expose Monit&#8217;s web interface to the network, bind it to localhost only. Monit will accept connections on any address by default (if <font SIZE="-1">ADDRESS</font> option is missing). </p>
+<p> <code>UNIXSOCKET</code> set the path to the Unix Socket Monit should bind to and listen on. </p>
+<p> <code>PORT</code> set the port Monit should bind to and listen on. Monit is usually setup on port 2812. </p>
+<p> <code>ADDRESS</code> make Monit listen on a specific interface only. For example if you <i>don&#8217;t</i> want to expose Monit&#8217;s web interface to the network, bind it to localhost only. Monit will accept connections on any address by default (if ADDRESS option is missing). </p>
 <p> For example to limit the web interface to localhost only: </p>
 <pre>
  set httpd
@@ -238,7 +238,7 @@ SET HTTPD PORT&lt;number&gt;[ADDRESS&lt;hostname | IP - address&gt;]
      use address 127.0.0.1
      allow username:password
 </pre>
-<p> <font SIZE="-1"><code>SSL</code></font> enable <font SIZE="-1">TLS</font> for Monit&#8217;s web interface. The <i></i><font SIZE="-1"><i>PEMFILE</i></font><i></i> option holds both the server&#8217;s private key and certificate. This file should be stored in a safe place on the filesystem and should have strict permissions, no more than 0700. </p>
+<p> <code>SSL</code> enable TLS for Monit&#8217;s web interface. The <i></i><i>PEMFILE</i><i></i> option holds both the server&#8217;s private key and certificate. This file should be stored in a safe place on the filesystem and should have strict permissions, no more than 0700. </p>
 <p> For example: </p>
 <pre>
  set httpd
@@ -247,12 +247,12 @@ SET HTTPD PORT&lt;number&gt;[ADDRESS&lt;hostname | IP - address&gt;]
      pemfile /etc/certs/monit.pem
      allow myuser:mypassword
 </pre>
-<p> You can now use &lt;<a rel="nofollow" href="https://localhost:2812/">https://localhost:2812/</a>&gt; to access the Monit web server over a <font SIZE="-1">TLS</font> encrypted connection. </p>
-<p> OpenSSL <font SIZE="-1">FIPS</font> is supported. To enable <font SIZE="-1">FIPS</font> mode (provided your OpenSSL library supports it), add this statement to Monit control file: </p>
+<p> You can now use &lt;<a rel="nofollow" href="https://localhost:2812/">https://localhost:2812/</a>&gt; to access the Monit web server over a TLS encrypted connection. </p>
+<p> OpenSSL FIPS is supported. To enable FIPS mode (provided your OpenSSL library supports it), add this statement to Monit control file: </p>
 <pre>
  SET FIPS
 </pre>
-<p> <font SIZE="-1"><code>CLIENTPEMFILE</code></font> client certificate based authentication. A connecting client has to provide a certificate known to Monit in order to connect. This file also needs to have all necessary <font SIZE="-1">CA</font> certificates. By default self-signed client certificates are <code>not</code> allowed. If you want to use a self signed certificate from a client it has to be allowed explicitly with the <font SIZE="-1"><code>ALLOWSELFCERTIFICATION</code></font> statement. </p>
+<p> <code>CLIENTPEMFILE</code> client certificate based authentication. A connecting client has to provide a certificate known to Monit in order to connect. This file also needs to have all necessary CA certificates. By default self-signed client certificates are <code>not</code> allowed. If you want to use a self signed certificate from a client it has to be allowed explicitly with the <code>ALLOWSELFCERTIFICATION</code> statement. </p>
 <p> For example: </p>
 <pre>
  set httpd
@@ -261,7 +261,7 @@ SET HTTPD PORT&lt;number&gt;[ADDRESS&lt;hostname | IP - address&gt;]
      pemfile /etc/certs/monit.pem
      clientpemfile /etc/certs/monit-client.pem
 </pre>
-<p> <font SIZE="-1"><code>SIGNATURE</code></font> can be used to hide Monit version from the <font SIZE="-1">HTTP</font> response header and error pages. For example: </p>
+<p> <code>SIGNATURE</code> can be used to hide Monit version from the HTTP response header and error pages. For example: </p>
 <pre>
   set httpd
     port 2812
@@ -269,13 +269,13 @@ SET HTTPD PORT&lt;number&gt;[ADDRESS&lt;hostname | IP - address&gt;]
     allow myuser:mypassword
 </pre>
 <h3>Authentication</h3>
-<p> Access to the Monit web interface is controlled primarily via the <font SIZE="-1"><code>ALLOW</code></font> option which is used to specify authentication and authorize only specific clients to connect. </p>
+<p> Access to the Monit web interface is controlled primarily via the <code>ALLOW</code> option which is used to specify authentication and authorize only specific clients to connect. </p>
 <p> If the Monit command line interface is being used, at least one cleartext password is necessary (see bellow), otherwise the Monit command line interface will not be able to connect to the Monit web interface. </p>
 <p> Clients trying to connect to Monit, but submit a wrong username and/or password are logged with their IP-address. </p>
 <p> <i>Client certificates</i> </p>
-<p> This authentication method is a strong authentication mechanism and employ <font SIZE="-1">HTTPS</font> client certificates to verify the authenticity of a connecting client. Clients must posses a Public Key Certificate known by Monit. The client must connect to Monit over <font SIZE="-1">SSL</font> and Monit ask the client to send its certificate. Upon receiving the certificate Monit compares the certificate to certificates located in the <i></i><font SIZE="-1"><i>CLIENTPEMFILE</i></font><i></i> file. Access is granted if the client certificate is in this file. See <i></i><font SIZE="-1"><i>CLIENTPEMFILE</i></font><i></i> above for details. </p>
+<p> This authentication method is a strong authentication mechanism and employ HTTPS client certificates to verify the authenticity of a connecting client. Clients must posses a Public Key Certificate known by Monit. The client must connect to Monit over SSL and Monit ask the client to send its certificate. Upon receiving the certificate Monit compares the certificate to certificates located in the <i></i><i>CLIENTPEMFILE</i><i></i> file. Access is granted if the client certificate is in this file. See <i></i><i>CLIENTPEMFILE</i><i></i> above for details. </p>
 <p> <i>Host and network allow list</i> </p>
-<p> Monit maintains an access-control list of hosts and networks allowed to connect. You can add as many hosts as you want to, but only hosts with a valid domain name or its <font SIZE="-1">IP</font> address are allowed. </p>
+<p> Monit maintains an access-control list of hosts and networks allowed to connect. You can add as many hosts as you want to, but only hosts with a valid domain name or its IP address are allowed. </p>
 <p> Monit will query a name server to check any hosts trying to connect. If a host (client) is trying to connect, but cannot be found in the access list or cannot be resolved, Monit will shutdown the connection to the client promptly. </p>
 <p> Control file example: </p>
 <pre>
@@ -288,7 +288,7 @@ SET HTTPD PORT&lt;number&gt;[ADDRESS&lt;hostname | IP - address&gt;]
 </pre>
 <p> Clients, not mentioned in the allow list, trying to connect to Monit will be denied access and are logged with their IP-address. </p>
 <p> <i>Basic Authentication</i> </p>
-<p> Monit supports Basic Authentication as described in <font SIZE="-1">RFC 2617.</font> </p>
+<p> Monit supports Basic Authentication as described in RFC 2617. </p>
 <p> In short; a server challenge a client (e.g. a Browser) to send authentication information (username and password) and if accepted, the server will allow the client access to the requested document. </p>
 <p> The biggest weakness with Basic Authentication is that username and password is sent in clear-text over the network (i.e. base64 encoded). It is therefor recommended that you do not use this authentication method unless you run Monit with <i>ssl</i> support. With ssl, it is safe to use Basic Authentication since <i>all</i> http data, including Basic Authentication headers will be encrypted. </p>
 <p> Cleartext user and password </p>
@@ -297,14 +297,14 @@ SET HTTPD PORT&lt;number&gt;[ADDRESS&lt;hostname | IP - address&gt;]
 <pre>
  ALLOW &lt;username&gt;:&lt;password&gt;
 </pre>
-<p> <font SIZE="-1">PAM</font> </p>
-<p> <font SIZE="-1">PAM</font> is supported on platforms which provide <font SIZE="-1">PAM </font>(such as Linux, Mac <font SIZE="-1">OS X,</font> FreeBSD, NetBSD). </p>
+<p> PAM </p>
+<p> PAM is supported on platforms which provide PAM (such as Linux, Mac OS X, FreeBSD, NetBSD). </p>
 <p> Syntax: </p>
 <pre>
  ALLOW @&lt;group&gt;
 </pre>
-<p> where <tt>&quot;group&quot;</tt> is the group name allowed to access Monit&#8217;s web interface. Monit uses a <font SIZE="-1">PAM</font> service called <i>monit</i> for <font SIZE="-1">PAM</font> authentication, see the <font SIZE="-1">PAM</font> manual page for detailed instructions on how to set the <font SIZE="-1">PAM</font> service and <font SIZE="-1">PAM</font> authentication plugins. </p>
-<p> Sample <font SIZE="-1">PAM</font> service for Monit on Mac <font SIZE="-1">OS X </font>(store as &#8220;/etc/pam.d/monit&#8221; file): </p>
+<p> where <tt>&quot;group&quot;</tt> is the group name allowed to access Monit&#8217;s web interface. Monit uses a PAM service called <i>monit</i> for PAM authentication, see the PAM manual page for detailed instructions on how to set the PAM service and PAM authentication plugins. </p>
+<p> Sample PAM service for Monit on Mac OS X (store as &#8220;/etc/pam.d/monit&#8221; file): </p>
 <pre>
   # monit: auth account password session
   auth       sufficient     pam_securityserver.so
@@ -312,7 +312,7 @@ SET HTTPD PORT&lt;number&gt;[ADDRESS&lt;hostname | IP - address&gt;]
   auth       required       pam_deny.so
   account    required       pam_permit.so
 </pre>
-<p> And monitrc config which only allows group <tt>&quot;admin&quot;</tt> authenticated via <font SIZE="-1">PAM</font> to access the web interface: </p>
+<p> And monitrc config which only allows group <tt>&quot;admin&quot;</tt> authenticated via PAM to access the web interface: </p>
 <pre>
   set httpd
       port 2812
@@ -438,25 +438,25 @@ SET HTTPD PORT&lt;number&gt;[ADDRESS&lt;hostname | IP - address&gt;]
  SET MAIL-FORMAT {mail-format}
 </pre>
 <p> Example: </p>
-<p>set mail &#8211; format<br />
-{<br />
-from:<br />
-    monit[at] foo.bar<br />
-            reply &#8211;<br />
-        to : support[at] domain.com<br />
-                 subject : $SERVICE $EVENT at $DATE<br />
-                               message : Monit $ACTION $SERVICE at $DATE on $HOST : $DESCRIPTION.Yours sincerely,<br />
-        monit<br />
+<p>set mail &#8211; format<br/>
+{<br/>
+from:<br/>
+    monit[at] foo.bar<br/>
+            reply &#8211;<br/>
+        to : support[at] domain.com<br/>
+                 subject : $SERVICE $EVENT at $DATE<br/>
+                               message : Monit $ACTION $SERVICE at $DATE on $HOST : $DESCRIPTION.Yours sincerely,<br/>
+        monit<br/>
 }</p>
 <p> The <i>from:</i> option is the sender&#8217;s email address. That is, the email address Monit will pretend it is sending alerts from. It does not have to be a real email-address only a proper formatted address. </p>
 <p> The <i>reply-to:</i> option can be used to set the reply-to mail header. </p>
 <p> The <i>subject:</i> option sets the message subject and must be on only <i>one</i> line. </p>
 <p> The <i>message:</i> option sets the mail body. This option should always be the last in a mail-format statement. The mail body can be as long as needed, but must <i>not</i> contain the block-closing &#8216;}&#8217; character. </p>
 <p> You need not use all options, only the option which you want to override. For example to globally change the senders address only: </p>
-<p>set mail &#8211; format<br />
-{<br />
-from:<br />
-    bofh[at] foo.bar<br />
+<p>set mail &#8211; format<br/>
+{<br/>
+from:<br/>
+    bofh[at] foo.bar<br/>
 }</p>
 <p> The subject and body may contain <tt>$NAME</tt> variables, which are expanded by Monit. Here is a list of variables that can be used when composing an alert message.</p>
 <dl>
@@ -468,7 +468,7 @@ from:<br />
 <p> The service name</p>
 <dt>&bull;</dt>
 <dd> <i></i>$DATE<i></i> </dd>
-<p> The current time and date (<font SIZE="-1">RFC 822</font> date style).</p>
+<p> The current time and date (RFC 822 date style).</p>
 <dt>&bull;</dt>
 <dd> <i></i>$HOST<i></i> </dd>
 <p> The name of the host Monit is running on</p>
@@ -480,22 +480,22 @@ from:<br />
 <p> The description of the error condition</dl>
 <h3>Setting a mail server for alert delivery</h3>
 <p> The mail server Monit should use to send alert messages is defined with a <tt>&quot;set mailserver&quot;</tt> statement: </p>
-<p>SET MAILSERVER&lt;hostname | ip &#8211; address[PORT number][USERNAME string]<br />
-                                      [PASSWORD string][using SSLAUTO | SSLV2 | SSLV3 | TLSV1 | TLSV11 | TLSV12]<br />
-                                      [CERTMD5 checksum]&gt;,<br />
-    &#8230;<br />
-        [with TIMEOUT X SECONDS]<br />
+<p>SET MAILSERVER&lt;hostname | ip &#8211; address[PORT number][USERNAME string]<br/>
+                                      [PASSWORD string][using SSLAUTO | SSLV2 | SSLV3 | TLSV1 | TLSV11 | TLSV12]<br/>
+                                      [CERTMD5 checksum]&gt;,<br/>
+    &#8230;<br/>
+        [with TIMEOUT X SECONDS]<br/>
         [using HOSTNAME hostname]</p>
 <p> Multiple mail servers can be set by using a comma separated list. If Monit cannot connect to the first server, it will try the next in the list and so on. </p>
-<p> The port statement allows to override the default <font SIZE="-1">SMTP</font> port (465 for <font SIZE="-1">SSL,</font> or 25 for <font SIZE="-1">TLS</font> and non secure connection). </p>
-<p> Monit supports <font SIZE="-1">AUTH PLAIN</font> and <font SIZE="-1">AUTH LOGIN</font> for <font SIZE="-1">SMTP</font> authentication. You can set a username and a password using the <font SIZE="-1">USERNAME</font> and <font SIZE="-1">PASSWORD</font> options. </p>
-<p> You can enable <font SIZE="-1">SSL</font> or <font SIZE="-1">TLS</font> with optional certificate checksum. </p>
-<p> The default connection timeout is 5 seconds. You can rise this limit using the <font SIZE="-1">TIMEOUT</font> option. </p>
+<p> The port statement allows to override the default SMTP port (465 for SSL, or 25 for TLS and non secure connection). </p>
+<p> Monit supports AUTH PLAIN and AUTH LOGIN for SMTP authentication. You can set a username and a password using the USERNAME and PASSWORD options. </p>
+<p> You can enable SSL or TLS with optional certificate checksum. </p>
+<p> The default connection timeout is 5 seconds. You can rise this limit using the TIMEOUT option. </p>
 <p> Example (setting two mail servers for failover): </p>
 <pre>
  set mailserver smtp.gmail.com, smtp.other.host
 </pre>
-<p> By default, Monit uses the local host name in <font SIZE="-1">SMTP HELO/EHLO</font> and in the Message-ID header. You can override this using the <font SIZE="-1">HOSTNAME</font> option.</p>
+<p> By default, Monit uses the local host name in SMTP HELO/EHLO and in the Message-ID header. You can override this using the HOSTNAME option.</p>
 <h3>Event queue</h3>
 <p> If no mail server is available, Monit <i>can</i> queue events in the local file-system for retry until the mail server recovers. </p>
 <p> If Monit is used with M/Monit, the event queue provides a safe event store for M/Monit in the case of temporary problems. </p>
@@ -515,9 +515,9 @@ from:<br />
 <h2>SERVICE METHODS</h2>
 <p> Each service can have associated <i>start</i>, <i>stop</i> and <i>restart</i> methods which Monit can use to execute action on the service. </p>
 <p> Syntax: </p>
-<p> &lt;START | STOP | RESTART&gt; [PROGRAM] = &#8220;program&#8221;<br />
-        [[AS] UID &lt;number | string&gt;]<br />
-        [[AS] GID &lt;number | string&gt;]<br />
+<p> &lt;START | STOP | RESTART&gt; [PROGRAM] = &#8220;program&#8221;<br/>
+        [[AS] UID &lt;number | string&gt;]<br/>
+        [[AS] GID &lt;number | string&gt;]<br/>
         [[WITH] TIMEOUT &lt;number&gt; SECOND(S)]</p>
 <p> If the <tt>&quot;program&quot;</tt> is a shell script it must begin with <tt>&quot;#!&quot;</tt> and the remainder of the first line must specify an interpreter for the program. e.g. <tt>&quot;#!/bin/sh&quot;</tt> </p>
 <p> The <tt>&quot;program&quot;</tt> must also be executable (for example mode 0755). </p>
@@ -525,14 +525,14 @@ from:<br />
 <pre>
  stop = &quot;/bin/bash -c 'kill -s SIGTERM `cat /var/run/process.pid`'&quot;
 </pre>
-<p> By default the program is executed as the user under which Monit is running. If Monit is running as root, you may optionally specify the <i></i><font SIZE="-1"><i>UID</i></font><i></i> and <i></i><font SIZE="-1"><i>GID</i></font><i></i> the executed program should switch to. </p>
+<p> By default the program is executed as the user under which Monit is running. If Monit is running as root, you may optionally specify the <i></i><i>UID</i><i></i> and <i></i><i>GID</i><i></i> the executed program should switch to. </p>
 <p> Example: </p>
 <pre>
  check process mmonit with pidfile /usr/local/mmonit/mmonit/logs/mmonit.pid
    start program = &quot;/usr/local/mmonit/bin/mmonit&quot; as uid &quot;mmonit&quot; and gid &quot;mmonit&quot;
    stop program = &quot;/usr/local/mmonit/bin/mmonit stop&quot; as uid &quot;mmonit&quot; and gid &quot;mmonit&quot;
 </pre>
-<p> In the case of a process check, Monit will wait up to 30 seconds for the start/stop action to finish before giving up and report an error. You can override this timeout using the <i></i><font SIZE="-1"><i>TIMEOUT</i></font><i></i> option. </p>
+<p> In the case of a process check, Monit will wait up to 30 seconds for the start/stop action to finish before giving up and report an error. You can override this timeout using the <i></i><i>TIMEOUT</i><i></i> option. </p>
 <p> Example: </p>
 <pre>
  check process foobar with pidfile /var/run/foobar.pid
@@ -561,21 +561,21 @@ from:<br />
 </pre>
 </dd></dl>
 <p> A cron-style string, consist of 5 fields separated with white-space. All fields are required: </p>
-<p>Name : | Allowed values : | Special characters : &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -Minutes | 0 &#8211; 59 | *-,<br />
-    Hours | 0 &#8211; 23 | *-,<br />
-    Day of month | 1 &#8211; 31 | *-,<br />
-    Month | 1 &#8211; 12(1 = jan, 12 = dec) | *-,<br />
+<p>Name : | Allowed values : | Special characters : &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -Minutes | 0 &#8211; 59 | *-,<br/>
+    Hours | 0 &#8211; 23 | *-,<br/>
+    Day of month | 1 &#8211; 31 | *-,<br/>
+    Month | 1 &#8211; 12(1 = jan, 12 = dec) | *-,<br/>
     Day of week | 0 &#8211; 6(0 = sunday, 6 = saturday) | *-,</p>
 <p> The special characters: </p>
-<p> Character:   | Description:<br />
- &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;<br />
- * (asterisk) | The asterisk indicates that the expression will<br />
-              | match for all values of the field;<br />
- e.g., using | an asterisk in the 4th field(month) would | indicate every month.- (hyphen) | Hyphens are used to define ranges.For example,<br />
-     | 8 &#8211; 9 in the hour field indicate between 8AM and<br />
-         | 9AM. Note that range is from start time until and | including end time.That is,<br />
-     from 8AM and until<br />
-                      | 10AM unless minutes are set.Another example,<br />
+<p> Character:   | Description:<br/>
+ &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;<br/>
+ * (asterisk) | The asterisk indicates that the expression will<br/>
+              | match for all values of the field;<br/>
+ e.g., using | an asterisk in the 4th field(month) would | indicate every month.- (hyphen) | Hyphens are used to define ranges.For example,<br/>
+     | 8 &#8211; 9 in the hour field indicate between 8AM and<br/>
+         | 9AM. Note that range is from start time until and | including end time.That is,<br/>
+     from 8AM and until<br/>
+                      | 10AM unless minutes are set.Another example,<br/>
      | 1 &#8211; 5 in the weekday field, specify from monday to | friday(including friday)., (comma) | Comma are used to specify a sequence.For example | 17, 18 in the day field indicate the 17th and 18th | day of the month.A sequence can also include | ranges.For example, using 1 &#8211; 5, 0 in the weekday | field indicate monday to friday and sunday.</p>
 <p> Example 1: Check once per two cycles </p>
 <pre>
@@ -644,7 +644,7 @@ from:<br />
 <pre>
  IF &lt;number&gt; RESTART &lt;number&gt; CYCLE(S) THEN &lt;action&gt;
 </pre>
-<p> The <i>action</i> value is either one of common actions or <font SIZE="-1">TIMEOUT </font>(for backward compatibility, equals to <font SIZE="-1">UNMONITOR</font> action). </p>
+<p> The <i>action</i> value is either one of common actions or TIMEOUT (for backward compatibility, equals to UNMONITOR action). </p>
 <p> Here is an example where Monit will unmonitor the service if it was restarted 2 times within 3 cycles: </p>
 <pre>
  if 2 restarts within 3 cycles then unmonitor
@@ -701,40 +701,40 @@ from:<br />
 <dd> A depend loop is for example; a-&gt;b and b-&gt;a or a-&gt;b-&gt;c-&gt;a. </dd>
 <p> When Monit starts it will check for such loops and complain and exit if a loop was found. It will also exit with a complaint if a depend statement was used that does not point to a service in the control file.</dl>
 <h2>SERVICE TESTS</h2>
-<p> <i></i><font SIZE="-1"><i>GENERAL SYNTAX</i></font><i></i> </p>
+<p> <i></i><i>GENERAL SYNTAX</i><i></i> </p>
 <p> Monit provides several tests you can use in a &#8216;check&#8217; statement to test a service. </p>
 <p> You can test either for some expected value or range and take actions if the value changed. </p>
 <p> General syntax for testing a specific value or range: </p>
 <pre>
  IF &lt;TEST&gt; THEN ACTION [ELSE IF SUCCEEDED THEN ACTION]
 </pre>
-<p> The action is evaluated each time the &lt;<font SIZE="-1">TEST</font>&gt; condition is true. Success action is optional and executed only when the state changes from failure to success. If success action is not set, Monit will send a recovery alert by default. </p>
+<p> The action is evaluated each time the &lt;TEST&gt; condition is true. Success action is optional and executed only when the state changes from failure to success. If success action is not set, Monit will send a recovery alert by default. </p>
 <p> General syntax for a value change test: </p>
 <pre>
  IF CHANGED &lt;TEST&gt; THEN ACTION
 </pre>
 <p> The action is executed each time the value changes. Monit will remember the new value and will trigger event if the value change again. </p>
-<p> <i></i><font SIZE="-1"><i>ACTION</i></font><i></i> </p>
+<p> <i></i><i>ACTION</i><i></i> </p>
 <p> In each test you must select the action to be executed from this list:</p>
 <dl>
 <dt>&bull;</dt>
-<dd> <font SIZE="-1"><code>ALERT</code></font> sends the user an alert event on each state change.</dd>
+<dd> <code>ALERT</code> sends the user an alert event on each state change.</dd>
 <dt>&bull;</dt>
-<dd> <font SIZE="-1"><code>RESTART</code></font> restarts the service <code>and</code> send an alert. Restart is performed by calling the service&#8217;s registered restart method or by first calling the stop method followed by the start method if restart is not set.</dd>
+<dd> <code>RESTART</code> restarts the service <code>and</code> send an alert. Restart is performed by calling the service&#8217;s registered restart method or by first calling the stop method followed by the start method if restart is not set.</dd>
 <dt>&bull;</dt>
-<dd> <font SIZE="-1"><code>START</code></font> starts the service by calling the service&#8217;s registered start method <code>and</code> send an alert.</dd>
+<dd> <code>START</code> starts the service by calling the service&#8217;s registered start method <code>and</code> send an alert.</dd>
 <dt>&bull;</dt>
-<dd> <font SIZE="-1"><code>STOP</code></font> stops the service by calling the service&#8217;s registered stop method <code>and</code> send an alert. If Monit stops a service it will not be checked by Monit anymore nor restarted again later. To reactivate monitoring of the service again you must explicitly enable monitoring from the web interface or from the console.</dd>
+<dd> <code>STOP</code> stops the service by calling the service&#8217;s registered stop method <code>and</code> send an alert. If Monit stops a service it will not be checked by Monit anymore nor restarted again later. To reactivate monitoring of the service again you must explicitly enable monitoring from the web interface or from the console.</dd>
 <dt>&bull;</dt>
-<dd> <font SIZE="-1"><code>EXEC</code></font> can be used to execute an arbitrary program <code>and</code> send an alert. If you choose this action you must state the program to be executed and if the program require arguments you must enclose the program and its arguments in a quoted string. You may optionally specify the uid and gid the executed program should switch to upon start. For instance: </dd>
+<dd> <code>EXEC</code> can be used to execute an arbitrary program <code>and</code> send an alert. If you choose this action you must state the program to be executed and if the program require arguments you must enclose the program and its arguments in a quoted string. You may optionally specify the uid and gid the executed program should switch to upon start. For instance: </dd>
 <pre>
  exec &quot;/usr/local/tomcat/bin/startup.sh&quot;
       as uid nobody and gid nobody
 </pre>
 <p> Remember, if Monit is run by root, then all programs executed by Monit will be started with superuser privileges unless the uid and gid extension is used.</p>
 <dt>&bull;</dt>
-<dd> <font SIZE="-1"><code>UNMONITOR</code></font> will disable monitoring of the service <code>and</code> send an alert. The service will not be checked by Monit anymore nor restarted again later. To reactivate monitoring of the service you must explicitly enable monitoring from the web interface or from the console.</dd></dl>
-<p> <i></i><font SIZE="-1"><i>FAILURE TOLERANCE</i></font><i></i> </p>
+<dd> <code>UNMONITOR</code> will disable monitoring of the service <code>and</code> send an alert. The service will not be checked by Monit anymore nor restarted again later. To reactivate monitoring of the service you must explicitly enable monitoring from the web interface or from the console.</dd></dl>
+<p> <i></i><i>FAILURE TOLERANCE</i><i></i> </p>
 <p> By default the action is executed if it matches and the service set in an error state. However, you can require a test to fail more than once before the error event is triggered and the service state changed to failed. This is useful to avoid getting alerts on spurious errors, which can happen, especially with network tests. </p>
 <p> Syntax: </p>
 <pre>
@@ -761,72 +761,72 @@ from:<br />
  then alert
 </pre>
 <p> Example which sets multiple error levels and actions: </p>
-<p> check filesystem rootfs with path /dev/hda1<br />
-  if space usage &gt; 80% for 5 times within 15 cycles then alert<br />
+<p> check filesystem rootfs with path /dev/hda1<br/>
+  if space usage &gt; 80% for 5 times within 15 cycles then alert<br/>
   if space usage &gt; 90% for 5 cycles then exec &#8216;/try/to/free/the/space&#8217;</p>
 <p> Note: the maximum value for cycles is 64.</p>
-<h3><font SIZE="-1">EXISTENCE TESTING</font></h3>
+<h3>EXISTENCE TESTING</h3>
 <p> This test is always active for the process, file, directory and fifo checks and is if not defined, it defaults to a restart action. </p>
 <p> You can override the default action with the following statement: </p>
 <pre>
  IF [DOES] NOT EXIST THEN action
 </pre>
-<p> <i>action</i> is a choice of &#8220;<font SIZE="-1">ALERT&#8221;, &#8220;RESTART&#8221;, &#8220;START&#8221;, &#8220;STOP&#8221;, &#8220;EXEC&#8221;</font> or &#8220;<font SIZE="-1">UNMONITOR&#8221;.</font> </p>
+<p> <i>action</i> is a choice of &#8220;ALERT&#8221;, &#8220;RESTART&#8221;, &#8220;START&#8221;, &#8220;STOP&#8221;, &#8220;EXEC&#8221; or &#8220;UNMONITOR&#8221;. </p>
 <p> Example: </p>
 <pre>
  check file with path /cifs/mydata
        if does not exist then exec &quot;/usr/bin/mount_cifs.sh&quot;
 </pre>
-<h3><font SIZE="-1">RESOURCE TESTING</font></h3>
+<h3>RESOURCE TESTING</h3>
 <p> Monit can examine how much system resources a service is using. This test can only be used within a system or process service entry in the Monit control file. </p>
 <p> Depending on system or process characteristics, services can be stopped or restarted and alerts can be generated. Thus it is possible to utilize systems which are idle and to spare system under high load. </p>
 <p> The full syntax for a resource-statement used for resource testing is as follows (keywords are in capital and optional statements in [brackets]), </p>
 <pre>
  IF resource operator value THEN action
 </pre>
-<p> <i>resource</i> is a choice of &#8220;<font SIZE="-1">CPU&#8221;, &#8220;TOTAL CPU&#8221;, &#8220;CPU</font>([user|system|wait])&#8221;, &#8220;<font SIZE="-1">MEMORY&#8221;, &#8220;SWAP&#8221;, &#8220;CHILDREN&#8221;, &#8220;TOTAL MEMORY&#8221;, &#8220;LOADAVG</font>([1min|5min|15min])&#8221;. Some resource tests can be used inside a check system entry, some in a check process entry and some in both: </p>
+<p> <i>resource</i> is a choice of &#8220;CPU&#8221;, &#8220;TOTAL CPU&#8221;, &#8220;CPU([user|system|wait])&#8221;, &#8220;MEMORY&#8221;, &#8220;SWAP&#8221;, &#8220;CHILDREN&#8221;, &#8220;TOTAL MEMORY&#8221;, &#8220;LOADAVG([1min|5min|15min])&#8221;. Some resource tests can be used inside a check system entry, some in a check process entry and some in both: </p>
 <p> System only resource tests: </p>
-<p> <font SIZE="-1">CPU</font>([user|system|wait]) is the percent of time the system spend in user or kernel space and I/O. The user/system/wait modifier is optional, if not used, the total system cpu usage is tested. </p>
-<p> <font SIZE="-1">SWAP</font> is the swap usage of the system in either percent (of the systems total) or as an amount (Byte, kB, <font SIZE="-1">MB, GB</font>). </p>
+<p> CPU([user|system|wait]) is the percent of time the system spend in user or kernel space and I/O. The user/system/wait modifier is optional, if not used, the total system cpu usage is tested. </p>
+<p> SWAP is the swap usage of the system in either percent (of the systems total) or as an amount (Byte, kB, MB, GB). </p>
 <p> Process only resource tests: </p>
-<p> <font SIZE="-1">CPU</font> is the <font SIZE="-1">CPU</font> usage of the process itself (percent). </p>
-<p> <font SIZE="-1">TOTAL CPU</font> is the total <font SIZE="-1">CPU</font> usage of the process and its children in (percent). You will want to use <font SIZE="-1">TOTAL CPU</font> typically for services like Apache web server where one master process forks child processes as workers. </p>
-<p> <font SIZE="-1">CHILDREN</font> is the number of child processes of the process. </p>
-<p> <font SIZE="-1">TOTAL MEMORY</font> is the memory usage of the process and its child processes in either percent or as an amount (Byte, kB, <font SIZE="-1">MB, GB</font>). </p>
+<p> CPU is the CPU usage of the process itself (percent). </p>
+<p> TOTAL CPU is the total CPU usage of the process and its children in (percent). You will want to use TOTAL CPU typically for services like Apache web server where one master process forks child processes as workers. </p>
+<p> CHILDREN is the number of child processes of the process. </p>
+<p> TOTAL MEMORY is the memory usage of the process and its child processes in either percent or as an amount (Byte, kB, MB, GB). </p>
 <p> System and process resource tests: </p>
-<p> <font SIZE="-1">MEMORY</font> is the memory usage of the system or of a process (without children) in either percent (of the systems total) or as an amount (Byte, kB, <font SIZE="-1">MB, GB</font>). </p>
-<p> <font SIZE="-1">LOADAVG</font>([1min|5min|15min]) refers to the system&#8217;s load average. The load average is the number of processes in the system run queue, averaged over the specified time period. </p>
-<p> <i>operator</i> is a choice of &#8220;&lt;&#8221;, &#8220;&gt;&#8221;, &#8220;!=&#8221;, &#8220;==&#8221; in C notation, &#8220;gt&#8221;, &#8220;lt&#8221;, &#8220;eq&#8221;, &#8220;ne&#8221; in shell sh notation and &#8220;greater&#8221;, &#8220;less&#8221;, &#8220;equal&#8221;, &#8220;notequal&#8221; in human readable form (if not specified, default is <font SIZE="-1">EQUAL</font>). </p>
-<p> <i>value</i> is either an integer or a real number (except for <font SIZE="-1">CHILDREN</font>). For <font SIZE="-1">CPU, TOTAL CPU, MEMORY</font> and <font SIZE="-1">TOTAL MEMORY</font> you need to specify a <i>unit</i>. This could be &#8220;%&#8221; or if applicable &#8220;B&#8221; (Byte), &#8220;kB&#8221; (1024 Byte), &#8220;<font SIZE="-1">MB&#8221; </font>(1024 KiloByte) or &#8220;<font SIZE="-1">GB&#8221; </font>(1024 MegaByte). </p>
-<p> <i>action</i> is a choice of &#8220;<font SIZE="-1">ALERT&#8221;, &#8220;RESTART&#8221;, &#8220;START&#8221;, &#8220;STOP&#8221;, &#8220;EXEC&#8221;</font> or &#8220;<font SIZE="-1">UNMONITOR&#8221;.</font> </p>
+<p> MEMORY is the memory usage of the system or of a process (without children) in either percent (of the systems total) or as an amount (Byte, kB, MB, GB). </p>
+<p> LOADAVG([1min|5min|15min]) refers to the system&#8217;s load average. The load average is the number of processes in the system run queue, averaged over the specified time period. </p>
+<p> <i>operator</i> is a choice of &#8220;&lt;&#8221;, &#8220;&gt;&#8221;, &#8220;!=&#8221;, &#8220;==&#8221; in C notation, &#8220;gt&#8221;, &#8220;lt&#8221;, &#8220;eq&#8221;, &#8220;ne&#8221; in shell sh notation and &#8220;greater&#8221;, &#8220;less&#8221;, &#8220;equal&#8221;, &#8220;notequal&#8221; in human readable form (if not specified, default is EQUAL). </p>
+<p> <i>value</i> is either an integer or a real number (except for CHILDREN). For CPU, TOTAL CPU, MEMORY and TOTAL MEMORY you need to specify a <i>unit</i>. This could be &#8220;%&#8221; or if applicable &#8220;B&#8221; (Byte), &#8220;kB&#8221; (1024 Byte), &#8220;MB&#8221; (1024 KiloByte) or &#8220;GB&#8221; (1024 MegaByte). </p>
+<p> <i>action</i> is a choice of &#8220;ALERT&#8221;, &#8220;RESTART&#8221;, &#8220;START&#8221;, &#8220;STOP&#8221;, &#8220;EXEC&#8221; or &#8220;UNMONITOR&#8221;. </p>
 <p> To calculate the cycles, a counter is raised whenever the expression above is true and it is lowered whenever it is false (but not below 0). All counters are reset in case of a restart. </p>
-<p> The following is an example to check that the <font SIZE="-1">CPU</font> usage of a service is not going beyond 50% during five poll cycles. If it does, Monit will restart the service: </p>
+<p> The following is an example to check that the CPU usage of a service is not going beyond 50% during five poll cycles. If it does, Monit will restart the service: </p>
 <pre>
  if cpu is greater than 50% for 5 cycles then restart
 </pre>
-<h3><font SIZE="-1">FILE CHECKSUM TESTING</font></h3>
-<p> The checksum statement may only be used in a file service entry and can be used to check the file&#8217;s <font SIZE="-1">MD5</font> or <font SIZE="-1">SHA1</font> checksum. </p>
+<h3>FILE CHECKSUM TESTING</h3>
+<p> The checksum statement may only be used in a file service entry and can be used to check the file&#8217;s MD5 or SHA1 checksum. </p>
 <p> Check specific checksum: </p>
 <p>IF FAILED[MD5 | SHA1] CHECKSUM[EXPECT checksum] THEN action</p>
 <p> Check any file changes: </p>
 <pre>
  IF CHANGED [MD5|SHA1] CHECKSUM THEN action
 </pre>
-<p> The choice of <font SIZE="-1">MD5</font> or <font SIZE="-1">SHA1</font> is optional. <font SIZE="-1">MD5</font> features a 128 bits checksum (32 bytes hex encoded string) and <font SIZE="-1">SHA1</font> a 160 bits checksum (40 bytes hex encoded string). If this option is omitted, Monit will try to guess the method from the <font SIZE="-1">EXPECT</font> string or use <font SIZE="-1">MD5</font> as the default checksum. </p>
+<p> The choice of MD5 or SHA1 is optional. MD5 features a 128 bits checksum (32 bytes hex encoded string) and SHA1 a 160 bits checksum (40 bytes hex encoded string). If this option is omitted, Monit will try to guess the method from the EXPECT string or use MD5 as the default checksum. </p>
 <p> <tt>&quot;expect&quot;</tt> is optional and if used, specifies the md5 or sha1 string Monit should expect when testing a file&#8217;s checksum. Monit will then not compute an initial checksum for the file, but instead use the string you submit. For example: </p>
 <pre>
  if failed
     checksum expect 8f7f419955cefa0b33a2ba316cba3659
  then alert
 </pre>
-<p> You can, for example, use the <font SIZE="-1">GNU</font> utility <i><a href="/docs/linux/man/1-md5sum/">md5sum</a>(1)</i> or <i><a href="/docs/linux/man/1-sha1sum/">sha1sum</a>(1)</i> to create a checksum string for a file and use this string in the expect-statement. </p>
+<p> You can, for example, use the GNU utility <i><a href="/docs/linux/man/1-md5sum/">md5sum</a>(1)</i> or <i><a href="/docs/linux/man/1-sha1sum/">sha1sum</a>(1)</i> to create a checksum string for a file and use this string in the expect-statement. </p>
 <p> Reloading a server if its configuration file was changed: </p>
 <pre>
  check file apache_conf with path /etc/apache/httpd.conf
      if changed checksum then exec &quot;/usr/bin/apachectl graceful&quot;
 </pre>
-<p> <i>action</i> is a choice of &#8220;<font SIZE="-1">ALERT&#8221;, &#8220;RESTART&#8221;, &#8220;START&#8221;, &#8220;STOP&#8221;, &#8220;EXEC&#8221;</font> or &#8220;<font SIZE="-1">UNMONITOR&#8221;.</font></p>
-<h3><font SIZE="-1">TIMESTAMP TESTING</font></h3>
+<p> <i>action</i> is a choice of &#8220;ALERT&#8221;, &#8220;RESTART&#8221;, &#8220;START&#8221;, &#8220;STOP&#8221;, &#8220;EXEC&#8221; or &#8220;UNMONITOR&#8221;.</p>
+<h3>TIMESTAMP TESTING</h3>
 <p> The timestamp statement may only be used in a file, fifo or directory service entry. </p>
 <p> Specific timestamp syntax: </p>
 <p> IF TIMESTAMP [[operator] value [unit]] THEN action</p>
@@ -834,10 +834,10 @@ from:<br />
 <pre>
  IF CHANGED TIMESTAMP THEN action
 </pre>
-<p> <i>operator</i> is a choice of &#8220;&lt;&#8221;, &#8220;&gt;&#8221;, &#8220;!=&#8221;, &#8220;==&#8221; in C notation, &#8220;<font SIZE="-1">GT&#8221;, &#8220;LT&#8221;, &#8220;EQ&#8221;, &#8220;NE&#8221;</font> in shell sh notation and &#8220;<font SIZE="-1">GREATER&#8221;, &#8220;LESS&#8221;, &#8220;EQUAL&#8221;, &#8220;NOTEQUAL&#8221;</font> in human readable form (if not specified, default is <font SIZE="-1">EQUAL</font>). </p>
+<p> <i>operator</i> is a choice of &#8220;&lt;&#8221;, &#8220;&gt;&#8221;, &#8220;!=&#8221;, &#8220;==&#8221; in C notation, &#8220;GT&#8221;, &#8220;LT&#8221;, &#8220;EQ&#8221;, &#8220;NE&#8221; in shell sh notation and &#8220;GREATER&#8221;, &#8220;LESS&#8221;, &#8220;EQUAL&#8221;, &#8220;NOTEQUAL&#8221; in human readable form (if not specified, default is EQUAL). </p>
 <p> <i>value</i> is a time watermark. </p>
-<p> <i>unit</i> is either &#8220;<font SIZE="-1">SECOND</font>(S)&#8221;, &#8220;<font SIZE="-1">MINUTE</font>(S)&#8221;, &#8220;<font SIZE="-1">HOUR</font>(S)&#8221; or &#8220;<font SIZE="-1">DAY</font>(S)&#8221;. </p>
-<p> <i>action</i> is a choice of &#8220;<font SIZE="-1">ALERT&#8221;, &#8220;RESTART&#8221;, &#8220;START&#8221;, &#8220;STOP&#8221;, &#8220;EXEC&#8221;</font> or &#8220;<font SIZE="-1">UNMONITOR&#8221;.</font> </p>
+<p> <i>unit</i> is either &#8220;SECOND(S)&#8221;, &#8220;MINUTE(S)&#8221;, &#8220;HOUR(S)&#8221; or &#8220;DAY(S)&#8221;. </p>
+<p> <i>action</i> is a choice of &#8220;ALERT&#8221;, &#8220;RESTART&#8221;, &#8220;START&#8221;, &#8220;STOP&#8221;, &#8220;EXEC&#8221; or &#8220;UNMONITOR&#8221;. </p>
 <p> For example to reload apache if the configuration file timestamp changed: </p>
 <pre>
  check file apache_conf with path /etc/apache/httpd.conf
@@ -848,7 +848,7 @@ from:<br />
  check directory bar path /foo/bar
        if timestamp &lt; 1 hour then alert
 </pre>
-<h3><font SIZE="-1">FILE SIZE TESTING</font></h3>
+<h3>FILE SIZE TESTING</h3>
 <p> The size statement may only be used in a check file service entry. If specified in the control file, Monit will compute a size for a file. </p>
 <p> Testing specific size or range: </p>
 <p> IF SIZE [[operator] value [unit]] THEN action</p>
@@ -856,55 +856,55 @@ from:<br />
 <pre>
  IF CHANGED SIZE THEN action
 </pre>
-<p> <i>operator</i> is a choice of &#8220;&lt;&#8221;, &#8220;&gt;&#8221;, &#8220;!=&#8221;, &#8220;==&#8221; in C notation, &#8220;<font SIZE="-1">GT&#8221;, &#8220;LT&#8221;, &#8220;EQ&#8221;, &#8220;NE&#8221;</font> in shell sh notation and &#8220;<font SIZE="-1">GREATER&#8221;, &#8220;LESS&#8221;, &#8220;EQUAL&#8221;, &#8220;NOTEQUAL&#8221;</font> in human readable form (if not specified, default is <font SIZE="-1">EQUAL</font>). </p>
+<p> <i>operator</i> is a choice of &#8220;&lt;&#8221;, &#8220;&gt;&#8221;, &#8220;!=&#8221;, &#8220;==&#8221; in C notation, &#8220;GT&#8221;, &#8220;LT&#8221;, &#8220;EQ&#8221;, &#8220;NE&#8221; in shell sh notation and &#8220;GREATER&#8221;, &#8220;LESS&#8221;, &#8220;EQUAL&#8221;, &#8220;NOTEQUAL&#8221; in human readable form (if not specified, default is EQUAL). </p>
 <p> <i>value</i> is a size watermark. </p>
-<p> <i>unit</i> is a choice of &#8220;B&#8221;,&#8220;<font SIZE="-1">KB&#8221;,&#8220;MB&#8221;,&#8220;GB&#8221;</font> or long alternatives &#8220;byte&#8221;, &#8220;kilobyte&#8221;, &#8220;megabyte&#8221;, &#8220;gigabyte&#8221;. If it is not specified, &#8220;byte&#8221; unit is assumed by default. </p>
-<p> <i>action</i> is a choice of &#8220;<font SIZE="-1">ALERT&#8221;, &#8220;RESTART&#8221;, &#8220;START&#8221;, &#8220;STOP&#8221;, &#8220;EXEC&#8221;</font> or &#8220;<font SIZE="-1">UNMONITOR&#8221;.</font> </p>
+<p> <i>unit</i> is a choice of &#8220;B&#8221;,&#8220;KB&#8221;,&#8220;MB&#8221;,&#8220;GB&#8221; or long alternatives &#8220;byte&#8221;, &#8220;kilobyte&#8221;, &#8220;megabyte&#8221;, &#8220;gigabyte&#8221;. If it is not specified, &#8220;byte&#8221; unit is assumed by default. </p>
+<p> <i>action</i> is a choice of &#8220;ALERT&#8221;, &#8220;RESTART&#8221;, &#8220;START&#8221;, &#8220;STOP&#8221;, &#8220;EXEC&#8221; or &#8220;UNMONITOR&#8221;. </p>
 <p> For example to send an alert if the file is too large: </p>
 <pre>
  check file mydb with path /data/mydatabase.db
        if size &gt; 1 GB then alert
 </pre>
-<h3><font SIZE="-1">FILE CONTENT TESTING</font></h3>
+<h3>FILE CONTENT TESTING</h3>
 <p> The match statement can be used to incrementally test the content of a text file by using regular expressions. </p>
 <p> Syntax: </p>
 <p>IF[NOT] MATCH{regex | path} THEN action</p>
 <p> <i>regex</i> is a string containing the extended regular expression. See also <i><a href="/docs/linux/man/7-regex/">regex</a></i>(7). </p>
 <p> <i>path</i> is an absolute path to a file containing extended regular expression on every line. See also <i><a href="/docs/linux/man/7-regex/">regex</a></i>(7). </p>
-<p> <i>action</i> is a choice of &#8220;<font SIZE="-1">ALERT&#8221;, &#8220;RESTART&#8221;, &#8220;START&#8221;, &#8220;STOP&#8221;, &#8220;EXEC&#8221;</font> or &#8220;<font SIZE="-1">UNMONITOR&#8221;.</font> </p>
-<p> You can use the <i></i><font SIZE="-1"><i>NOT</i></font><i></i> statement to invert a match. </p>
+<p> <i>action</i> is a choice of &#8220;ALERT&#8221;, &#8220;RESTART&#8221;, &#8220;START&#8221;, &#8220;STOP&#8221;, &#8220;EXEC&#8221; or &#8220;UNMONITOR&#8221;. </p>
+<p> You can use the <i></i><i>NOT</i><i></i> statement to invert a match. </p>
 <p> On startup the read position is set to the end of the file and Monit continues to scan to the end of the file on each cycle. </p>
 <p> If the file size should decrease or inode changed, the read position is set to the start of the file. </p>
 <p> Only lines ending with a newline character are inspected. </p>
 <p> Only the first 511 characters of a line are inspected. </p>
-<p>IGNORE[NOT] MATCH<br />
-{<br />
-    regex | path<br />
+<p>IGNORE[NOT] MATCH<br/>
+{<br/>
+    regex | path<br/>
 }</p>
-<p> Lines matching an <i></i><font SIZE="-1"><i>IGNORE</i></font><i></i> are not inspected during later evaluations. <i></i><font SIZE="-1"><i>IGNORE MATCH</i></font><i></i> has always precedence over <i></i><font SIZE="-1"><i>IF MATCH</i></font><i></i>. </p>
-<p> All <i></i><font SIZE="-1"><i>IGNORE MATCH</i></font><i></i> statements are evaluated first, in the order of their appearance. Thereafter, all the <i></i><font SIZE="-1"><i>IF MATCH</i></font><i></i> statements are evaluated. </p>
+<p> Lines matching an <i></i><i>IGNORE</i><i></i> are not inspected during later evaluations. <i></i><i>IGNORE MATCH</i><i></i> has always precedence over <i></i><i>IF MATCH</i><i></i>. </p>
+<p> All <i></i><i>IGNORE MATCH</i><i></i> statements are evaluated first, in the order of their appearance. Thereafter, all the <i></i><i>IF MATCH</i><i></i> statements are evaluated. </p>
 <p> For example: </p>
 <pre>
   check file syslog with path /var/log/syslog
         ignore match &quot;^monit&quot;
         if match &quot;^mrcoffee&quot; then alert
 </pre>
-<h3><font SIZE="-1">FILESYSTEM FLAGS TESTING</font></h3>
+<h3>FILESYSTEM FLAGS TESTING</h3>
 <p> Monit can test the flags of a filesystem for changes. This test is implicit and Monit will send alert in case of failure by default. </p>
 <p> This test is useful for detecting changes of filesystem flags such as if the filesystem become read-only (on disk error) or mount flags were changed (such as nosuid). </p>
 <p> The syntax for the fsflags statement is: </p>
 <pre>
  IF CHANGED FSFLAGS THEN action
 </pre>
-<p> <i>action</i> is a choice of &#8220;<font SIZE="-1">ALERT&#8221;, &#8220;RESTART&#8221;, &#8220;START&#8221;, &#8220;STOP&#8221;, &#8220;EXEC&#8221;</font> or &#8220;<font SIZE="-1">UNMONITOR&#8221;.</font> </p>
+<p> <i>action</i> is a choice of &#8220;ALERT&#8221;, &#8220;RESTART&#8221;, &#8220;START&#8221;, &#8220;STOP&#8221;, &#8220;EXEC&#8221; or &#8220;UNMONITOR&#8221;. </p>
 <p> Example: </p>
 <pre>
  check filesystem rootfs with path /
        if changed fsflags then exec &quot;/my/script&quot;
 </pre>
-<h3><font SIZE="-1">SPACE TESTING</font></h3>
+<h3>SPACE TESTING</h3>
 <p> Monit can test a filesystem or a disk for space usage. This test may only be used in the context of a filesystem service type. </p>
-<p> Filesystems usually have some space reserved for the root user (ca. 1-5%), so non-superusers cannot write to a nearly full filesystem. If you set a limit for the filesystem which is used by non-root users you might want to consider these reserved blocks when setting the limit. You can use Monit itself to view the reserved blocks percentage by using the <font SIZE="-1">CLI</font> status command or the <font SIZE="-1">HTTP</font> interface for the given filesystem. </p>
+<p> Filesystems usually have some space reserved for the root user (ca. 1-5%), so non-superusers cannot write to a nearly full filesystem. If you set a limit for the filesystem which is used by non-root users you might want to consider these reserved blocks when setting the limit. You can use Monit itself to view the reserved blocks percentage by using the CLI status command or the HTTP interface for the given filesystem. </p>
 <p> Syntax: </p>
 <pre>
  IF SPACE operator value unit THEN action
@@ -913,15 +913,15 @@ from:<br />
 <pre>
  IF SPACE FREE operator value unit THEN action
 </pre>
-<p> <i>operator</i> is a choice of &#8220;&lt;&#8221;,&#8220;&gt;&#8221;,&#8220;!=&#8221;,&#8220;==&#8221; in c notation, &#8220;gt&#8221;, &#8220;lt&#8221;, &#8220;eq&#8221;, &#8220;ne&#8221; in shell sh notation and &#8220;greater&#8221;, &#8220;less&#8221;, &#8220;equal&#8221;, &#8220;notequal&#8221; in human readable form (if not specified, default is <font SIZE="-1">EQUAL</font>). </p>
-<p> <i>unit</i> is a choice of &#8220;B&#8221;,&#8220;<font SIZE="-1">KB&#8221;,&#8220;MB&#8221;,&#8220;GB&#8221;, </font>&#8220;%&#8221; or long alternatives &#8220;byte&#8221;, &#8220;kilobyte&#8221;, &#8220;megabyte&#8221;, &#8220;gigabyte&#8221;, &#8220;percent&#8221;. </p>
-<p> <i>action</i> is a choice of &#8220;<font SIZE="-1">ALERT&#8221;, &#8220;RESTART&#8221;, &#8220;START&#8221;, &#8220;STOP&#8221;, &#8220;EXEC&#8221;</font> or &#8220;<font SIZE="-1">UNMONITOR&#8221;.</font> </p>
+<p> <i>operator</i> is a choice of &#8220;&lt;&#8221;,&#8220;&gt;&#8221;,&#8220;!=&#8221;,&#8220;==&#8221; in c notation, &#8220;gt&#8221;, &#8220;lt&#8221;, &#8220;eq&#8221;, &#8220;ne&#8221; in shell sh notation and &#8220;greater&#8221;, &#8220;less&#8221;, &#8220;equal&#8221;, &#8220;notequal&#8221; in human readable form (if not specified, default is EQUAL). </p>
+<p> <i>unit</i> is a choice of &#8220;B&#8221;,&#8220;KB&#8221;,&#8220;MB&#8221;,&#8220;GB&#8221;, &#8220;%&#8221; or long alternatives &#8220;byte&#8221;, &#8220;kilobyte&#8221;, &#8220;megabyte&#8221;, &#8220;gigabyte&#8221;, &#8220;percent&#8221;. </p>
+<p> <i>action</i> is a choice of &#8220;ALERT&#8221;, &#8220;RESTART&#8221;, &#8220;START&#8221;, &#8220;STOP&#8221;, &#8220;EXEC&#8221; or &#8220;UNMONITOR&#8221;. </p>
 <p> Example: </p>
 <pre>
  check filesystem rootfs with path /
        if space usage &gt; 90% then alert
 </pre>
-<h3><font SIZE="-1">INODE TESTING</font></h3>
+<h3>INODE TESTING</h3>
 <p> Monit can test filesystem inode usage. This test may only be used in the context of a filesystem service type. </p>
 <p> Syntax: </p>
 <pre>
@@ -931,15 +931,15 @@ from:<br />
 <pre>
  IF INODE(S) FREE operator value [unit] THEN action
 </pre>
-<p> <i>operator</i> is a choice of &#8220;&lt;&#8221;,&#8220;&gt;&#8221;,&#8220;!=&#8221;,&#8220;==&#8221; in c notation, &#8220;gt&#8221;, &#8220;lt&#8221;, &#8220;eq&#8221;, &#8220;ne&#8221; in shell sh notation and &#8220;greater&#8221;, &#8220;less&#8221;, &#8220;equal&#8221;, &#8220;notequal&#8221; in human readable form (if not specified, default is <font SIZE="-1">EQUAL</font>). </p>
+<p> <i>operator</i> is a choice of &#8220;&lt;&#8221;,&#8220;&gt;&#8221;,&#8220;!=&#8221;,&#8220;==&#8221; in c notation, &#8220;gt&#8221;, &#8220;lt&#8221;, &#8220;eq&#8221;, &#8220;ne&#8221; in shell sh notation and &#8220;greater&#8221;, &#8220;less&#8221;, &#8220;equal&#8221;, &#8220;notequal&#8221; in human readable form (if not specified, default is EQUAL). </p>
 <p> <i>unit</i> is optional. If not specified, the value is an absolute count of inodes. You can use the &#8220;%&#8221; character or the longer alternative &#8220;percent&#8221; as a unit. </p>
-<p> <i>action</i> is a choice of &#8220;<font SIZE="-1">ALERT&#8221;, &#8220;RESTART&#8221;, &#8220;START&#8221;, &#8220;STOP&#8221;, &#8220;EXEC&#8221;</font> or &#8220;<font SIZE="-1">UNMONITOR&#8221;.</font> </p>
+<p> <i>action</i> is a choice of &#8220;ALERT&#8221;, &#8220;RESTART&#8221;, &#8220;START&#8221;, &#8220;STOP&#8221;, &#8220;EXEC&#8221; or &#8220;UNMONITOR&#8221;. </p>
 <p> Example: </p>
 <pre>
  check filesystem rootfs with path /
        if inode usage &gt; 90% then alert
 </pre>
-<h3><font SIZE="-1">PERMISSION TESTING</font></h3>
+<h3>PERMISSION TESTING</h3>
 <p> Monit can test the permissions of file objects. This test may only be used in the context of a file, fifo, directory or filesystem service types. </p>
 <p> Syntax for testing specific permissions: </p>
 <pre>
@@ -950,71 +950,71 @@ from:<br />
  IF CHANGED PERM(ISSION) THEN action
 </pre>
 <p> <i>octalnumber</i> defines permissions for a file, a directory or a filesystem as four octal digits (0-7). Valid range is 0000 &#8211; 7777 (you can omit the leading zeros, Monit will add the zeros to the left. For example, &#8220;640&#8221; is a valid value and matches &#8220;0640&#8221;). </p>
-<p> <i>action</i> is a choice of &#8220;<font SIZE="-1">ALERT&#8221;, &#8220;RESTART&#8221;, &#8220;START&#8221;, &#8220;STOP&#8221;, &#8220;EXEC&#8221;</font> or &#8220;<font SIZE="-1">UNMONITOR&#8221;.</font> </p>
+<p> <i>action</i> is a choice of &#8220;ALERT&#8221;, &#8220;RESTART&#8221;, &#8220;START&#8221;, &#8220;STOP&#8221;, &#8220;EXEC&#8221; or &#8220;UNMONITOR&#8221;. </p>
 <p> Example: </p>
 <pre>
  check file shadow with path /etc/shadow
        if failed permission 0640 then alert
 </pre>
-<h3><font SIZE="-1">UID TESTING</font></h3>
+<h3>UID TESTING</h3>
 <p> Monit can monitor the owner user id (uid) of a file, fifo, directory or owner and effective user of a process. </p>
 <p> Syntax: </p>
 <pre>
  IF FAILED [E]UID user THEN action
 </pre>
 <p> <i>user</i> defines a user id either in numeric or in string form. </p>
-<p> <i>action</i> is a choice of &#8220;<font SIZE="-1">ALERT&#8221;, &#8220;RESTART&#8221;, &#8220;START&#8221;, &#8220;STOP&#8221;, &#8220;EXEC&#8221;</font> or &#8220;<font SIZE="-1">UNMONITOR&#8221;.</font> </p>
+<p> <i>action</i> is a choice of &#8220;ALERT&#8221;, &#8220;RESTART&#8221;, &#8220;START&#8221;, &#8220;STOP&#8221;, &#8220;EXEC&#8221; or &#8220;UNMONITOR&#8221;. </p>
 <p> Example: </p>
 <pre>
  check file shadow with path /etc/shadow
        if failed uid root then alert
 </pre>
-<h3><font SIZE="-1">GID TESTING</font></h3>
+<h3>GID TESTING</h3>
 <p> Monit can monitor the owner group id (gid) of a file, fifo, directory or process. </p>
 <p> Syntax: </p>
 <pre>
  IF FAILED GID group THEN action
 </pre>
 <p> <i>group</i> defines a group id either in numeric or in string form. </p>
-<p> <i>action</i> is a choice of &#8220;<font SIZE="-1">ALERT&#8221;, &#8220;RESTART&#8221;, &#8220;START&#8221;, &#8220;STOP&#8221;, &#8220;EXEC&#8221;</font> or &#8220;<font SIZE="-1">UNMONITOR&#8221;.</font> </p>
+<p> <i>action</i> is a choice of &#8220;ALERT&#8221;, &#8220;RESTART&#8221;, &#8220;START&#8221;, &#8220;STOP&#8221;, &#8220;EXEC&#8221; or &#8220;UNMONITOR&#8221;. </p>
 <p> Example: </p>
 <pre>
  check file shadow with path /etc/shadow
        if failed gid shadow then alert
 </pre>
-<h3><font SIZE="-1">PID TESTING</font></h3>
-<p> Monit can test the process&#8217; <font SIZE="-1">PID.</font> This test is implicit and Monit will send an alert in case the <font SIZE="-1">PID</font> changed outside of Monit&#8217;s control. </p>
+<h3>PID TESTING</h3>
+<p> Monit can test the process&#8217; PID. This test is implicit and Monit will send an alert in case the PID changed outside of Monit&#8217;s control. </p>
 <p> Syntax: </p>
 <pre>
  IF CHANGED PID THEN action
 </pre>
-<p> <i>action</i> is a choice of &#8220;<font SIZE="-1">ALERT&#8221;, &#8220;RESTART&#8221;, &#8220;START&#8221;, &#8220;STOP&#8221;, &#8220;EXEC&#8221;</font> or &#8220;<font SIZE="-1">UNMONITOR&#8221;.</font> </p>
+<p> <i>action</i> is a choice of &#8220;ALERT&#8221;, &#8220;RESTART&#8221;, &#8220;START&#8221;, &#8220;STOP&#8221;, &#8220;EXEC&#8221; or &#8220;UNMONITOR&#8221;. </p>
 <p> This test is useful to detect possible process restarts which has occurred in the timeframe between two Monit testing cycles. </p>
 <p> For example if someone changes sshd configuration and did sshd restart outside of Monit&#8217;s control you will be notified that the process was replaced by a new instance: </p>
 <pre>
  check process sshd with pidfile /var/run/sshd.pid
        if changed pid then alert
 </pre>
-<h3><font SIZE="-1">PPID TESTING</font></h3>
-<p> Monit can test the process&#8217; parent <font SIZE="-1">PID </font>(<font SIZE="-1">PPID</font>) for changes. This test is implicit and Monit will send alert in the case that the <font SIZE="-1">PPID</font> changed outside of Monit control. </p>
+<h3>PPID TESTING</h3>
+<p> Monit can test the process&#8217; parent PID (PPID) for changes. This test is implicit and Monit will send alert in the case that the PPID changed outside of Monit control. </p>
 <p> The syntax for the ppid statement is: </p>
 <pre>
  IF CHANGED PPID THEN action
 </pre>
-<p> <i>action</i> is a choice of &#8220;<font SIZE="-1">ALERT&#8221;, &#8220;RESTART&#8221;, &#8220;START&#8221;, &#8220;STOP&#8221;, &#8220;EXEC&#8221;</font> or &#8220;<font SIZE="-1">UNMONITOR&#8221;.</font> </p>
+<p> <i>action</i> is a choice of &#8220;ALERT&#8221;, &#8220;RESTART&#8221;, &#8220;START&#8221;, &#8220;STOP&#8221;, &#8220;EXEC&#8221; or &#8220;UNMONITOR&#8221;. </p>
 <p> Example: </p>
 <pre>
  check process myproc with pidfile /var/run/myproc.pid
        if changed ppid then exec &quot;/my/script&quot;
 </pre>
-<h3><font SIZE="-1">PROCESS UPTIME TESTING</font></h3>
+<h3>PROCESS UPTIME TESTING</h3>
 <p> The uptime statement may only be used in a process service type context. </p>
 <p> Syntax: </p>
 <p> IF UPTIME [[operator] value [unit]] THEN action</p>
-<p> <i>operator</i> is a choice of &#8220;&lt;&#8221;, &#8220;&gt;&#8221;, &#8220;!=&#8221;, &#8220;==&#8221; in C notation, &#8220;<font SIZE="-1">GT&#8221;, &#8220;LT&#8221;, &#8220;EQ&#8221;, &#8220;NE&#8221;</font> in shell sh notation and &#8220;<font SIZE="-1">GREATER&#8221;, &#8220;LESS&#8221;, &#8220;EQUAL&#8221;, &#8220;NOTEQUAL&#8221;</font> in human readable form (if not specified, default is <font SIZE="-1">EQUAL</font>). </p>
+<p> <i>operator</i> is a choice of &#8220;&lt;&#8221;, &#8220;&gt;&#8221;, &#8220;!=&#8221;, &#8220;==&#8221; in C notation, &#8220;GT&#8221;, &#8220;LT&#8221;, &#8220;EQ&#8221;, &#8220;NE&#8221; in shell sh notation and &#8220;GREATER&#8221;, &#8220;LESS&#8221;, &#8220;EQUAL&#8221;, &#8220;NOTEQUAL&#8221; in human readable form (if not specified, default is EQUAL). </p>
 <p> <i>value</i> is a uptime watermark. </p>
-<p> <i>unit</i> is either &#8220;<font SIZE="-1">SECOND&#8221;, &#8220;MINUTE&#8221;, &#8220;HOUR&#8221;</font> or &#8220;<font SIZE="-1">DAY&#8221; </font>(it is also possible to use &#8220;<font SIZE="-1">SECONDS&#8221;, &#8220;MINUTES&#8221;, &#8220;HOURS&#8221;,</font> or &#8220;<font SIZE="-1">DAYS&#8221;</font>). </p>
-<p> <i>action</i> is a choice of &#8220;<font SIZE="-1">ALERT&#8221;, &#8220;RESTART&#8221;, &#8220;START&#8221;, &#8220;STOP&#8221;, &#8220;EXEC&#8221;</font> or &#8220;<font SIZE="-1">UNMONITOR&#8221;.</font> </p>
+<p> <i>unit</i> is either &#8220;SECOND&#8221;, &#8220;MINUTE&#8221;, &#8220;HOUR&#8221; or &#8220;DAY&#8221; (it is also possible to use &#8220;SECONDS&#8221;, &#8220;MINUTES&#8221;, &#8220;HOURS&#8221;, or &#8220;DAYS&#8221;). </p>
+<p> <i>action</i> is a choice of &#8220;ALERT&#8221;, &#8220;RESTART&#8221;, &#8220;START&#8221;, &#8220;STOP&#8221;, &#8220;EXEC&#8221; or &#8220;UNMONITOR&#8221;. </p>
 <p> Example of restarting the process every three days: </p>
 <pre>
  check process myapp with pidfile /var/run/myapp.pid
@@ -1022,7 +1022,7 @@ from:<br />
     stop program = &quot;/etc/init.d/myapp stop&quot;
     if uptime &gt; 3 days then restart
 </pre>
-<h3><font SIZE="-1">PROGRAM STATUS TESTING</font></h3>
+<h3>PROGRAM STATUS TESTING</h3>
 <p> You can check the exit status of a program or a script. This test may only be used within a check program service entry in the Monit control file. </p>
 <p> Syntax for testing specific exit value: </p>
 <pre>
@@ -1032,8 +1032,8 @@ from:<br />
 <pre>
  IF CHANGED STATUS THEN action
 </pre>
-<p> <i>operator</i> is a choice of &#8220;&lt;&#8221;,&#8220;&gt;&#8221;,&#8220;!=&#8221;,&#8220;==&#8221; in c notation, &#8220;gt&#8221;, &#8220;lt&#8221;, &#8220;eq&#8221;, &#8220;ne&#8221; in shell sh notation and &#8220;greater&#8221;, &#8220;less&#8221;, &#8220;equal&#8221;, &#8220;notequal&#8221; in human readable form (if not specified, default is <font SIZE="-1">EQUAL</font>). </p>
-<p> <i>action</i> is a choice of &#8220;<font SIZE="-1">ALERT&#8221;, &#8220;RESTART&#8221;, &#8220;START&#8221;, &#8220;STOP&#8221;, &#8220;EXEC&#8221;</font> or &#8220;<font SIZE="-1">UNMONITOR&#8221;.</font> </p>
+<p> <i>operator</i> is a choice of &#8220;&lt;&#8221;,&#8220;&gt;&#8221;,&#8220;!=&#8221;,&#8220;==&#8221; in c notation, &#8220;gt&#8221;, &#8220;lt&#8221;, &#8220;eq&#8221;, &#8220;ne&#8221; in shell sh notation and &#8220;greater&#8221;, &#8220;less&#8221;, &#8220;equal&#8221;, &#8220;notequal&#8221; in human readable form (if not specified, default is EQUAL). </p>
+<p> <i>action</i> is a choice of &#8220;ALERT&#8221;, &#8220;RESTART&#8221;, &#8220;START&#8221;, &#8220;STOP&#8221;, &#8220;EXEC&#8221; or &#8220;UNMONITOR&#8221;. </p>
 <p> Example: </p>
 <pre>
  check program myscript with path /usr/local/bin/myscript.sh
@@ -1060,7 +1060,7 @@ from:<br />
 </pre>
 <p> Monit will execute the program periodically and if the exit status of the program does not match the expected result, Monit can perform an action. In the example above, Monit will raise an alert if the exit value is different from 0. By convention, 0 means the program exited normally. </p>
 <p> Program checks are asynchronous. Meaning that Monit will not wait for the program to exit, but instead, Monit will start the program in the background and immediately continue checking the next service entry in <i>monitrc</i>. At the next cycle, Monit will check if the program has finished and if so, collect the program&#8217;s exit status. If the status indicate a failure, Monit will raise an alert message containing the program&#8217;s error (stderr) output, if any. If the program has not exited after the first cycle, Monit will wait another cycle and so on. If the program is still running after 5 minutes, Monit will kill it and generate a program timeout event. It is possible to override the default timeout (see the syntax below). </p>
-<p> The asynchronous nature of the program check allows for non-blocking behavior in the current Monit design, but it comes with a side-effect: when the program has finished executing and is waiting for Monit to collect the result, it becomes a so-called &#8220;zombie&#8221; process. A zombie process does not consume any system resources (only the <font SIZE="-1">PID</font> remains in use) and it is under Monit&#8217;s control and the zombie process is removed from the system as soon as Monit collects the exit status. This means that every &#8220;check program&#8221; will be associated with either a running process or a temporary zombie. This unwanted zombie side-effect will be removed in a later release of Monit. </p>
+<p> The asynchronous nature of the program check allows for non-blocking behavior in the current Monit design, but it comes with a side-effect: when the program has finished executing and is waiting for Monit to collect the result, it becomes a so-called &#8220;zombie&#8221; process. A zombie process does not consume any system resources (only the PID remains in use) and it is under Monit&#8217;s control and the zombie process is removed from the system as soon as Monit collects the exit status. This means that every &#8220;check program&#8221; will be associated with either a running process or a temporary zombie. This unwanted zombie side-effect will be removed in a later release of Monit. </p>
 <p> Multiple status tests can be used, for example: </p>
 <pre>
  check program hwtest with path /usr/local/bin/hwtest.sh
@@ -1068,13 +1068,13 @@ from:<br />
        if status = 1 then alert
        if status = 3 for 5 cycles then exec &quot;/usr/local/bin/emergency.sh&quot;
 </pre>
-<h3><font SIZE="-1">NETWORK LINK STATUS TEST</font></h3>
+<h3>NETWORK LINK STATUS TEST</h3>
 <p> You can check the network link state. This test may only be used within a check network service entry in the Monit control file. </p>
 <p> Syntax: </p>
 <pre>
  IF FAILED LINK THEN action
 </pre>
-<p> <i>action</i> is a choice of &#8220;<font SIZE="-1">ALERT&#8221;, &#8220;RESTART&#8221;, &#8220;START&#8221;, &#8220;STOP&#8221;, &#8220;EXEC&#8221;</font> or &#8220;<font SIZE="-1">UNMONITOR&#8221;.</font> </p>
+<p> <i>action</i> is a choice of &#8220;ALERT&#8221;, &#8220;RESTART&#8221;, &#8220;START&#8221;, &#8220;STOP&#8221;, &#8220;EXEC&#8221; or &#8220;UNMONITOR&#8221;. </p>
 <p> The test will fail if the link/interface is down or link errors were detected. </p>
 <p> Example: </p>
 <pre>
@@ -1088,35 +1088,35 @@ from:<br />
        stop program = '/sbin/ipdown eth0'
        if failed link then restart
 </pre>
-<h3><font SIZE="-1">NETWORK LINK CAPACITY TEST</font></h3>
+<h3>NETWORK LINK CAPACITY TEST</h3>
 <p> You can check the network link mode capacity for changes. This test may only be used within a check network service entry in the Monit control file. </p>
 <p> Syntax: </p>
 <pre>
  IF CHANGED LINK [CAPACITY] THEN action
 </pre>
-<p> <i>action</i> is a choice of &#8220;<font SIZE="-1">ALERT&#8221;, &#8220;RESTART&#8221;, &#8220;START&#8221;, &#8220;STOP&#8221;, &#8220;EXEC&#8221;</font> or &#8220;<font SIZE="-1">UNMONITOR&#8221;.</font> </p>
+<p> <i>action</i> is a choice of &#8220;ALERT&#8221;, &#8220;RESTART&#8221;, &#8220;START&#8221;, &#8220;STOP&#8221;, &#8220;EXEC&#8221; or &#8220;UNMONITOR&#8221;. </p>
 <p> The test will match if the link mode has changed (e.g. maximum speed dropped) or if the duplex mode has changed. </p>
-<p> <font SIZE="-1">NOTE:</font> not all interface types allow for capacity monitoring. Pseudo interfaces such as loopback device or VMWare interfaces does not have a speed attribute. </p>
+<p> NOTE: not all interface types allow for capacity monitoring. Pseudo interfaces such as loopback device or VMWare interfaces does not have a speed attribute. </p>
 <p> Example: </p>
 <pre>
  check network eth0 with interface eth0 
        if changed link capacity then alert
 </pre>
-<h3><font SIZE="-1">NETWORK SATURATION TEST</font></h3>
+<h3>NETWORK SATURATION TEST</h3>
 <p> You can check the network link saturation. Monit then computes the link utilization based on the current transfer rate vs. link capacity. This test may only be used within a check network service entry in the Monit control file. </p>
 <p> Syntax: </p>
 <pre>
  IF SATURATION operator value% THEN action
 </pre>
-<p> <i>operator</i> is a choice of &#8220;&lt;&#8221;,&#8220;&gt;&#8221;,&#8220;!=&#8221;,&#8220;==&#8221; in c notation, &#8220;gt&#8221;, &#8220;lt&#8221;, &#8220;eq&#8221;, &#8220;ne&#8221; in shell sh notation and &#8220;greater&#8221;, &#8220;less&#8221;, &#8220;equal&#8221;, &#8220;notequal&#8221; in human readable form (if not specified, default is <font SIZE="-1">EQUAL</font>). </p>
-<p> <i>action</i> is a choice of &#8220;<font SIZE="-1">ALERT&#8221;, &#8220;RESTART&#8221;, &#8220;START&#8221;, &#8220;STOP&#8221;, &#8220;EXEC&#8221;</font> or &#8220;<font SIZE="-1">UNMONITOR&#8221;.</font> </p>
-<p> <font SIZE="-1">NOTE:</font> this test depends on the availability of the speed attribute and not all interface types have this attribute. See the <font SIZE="-1">LINK SPEED</font> test description. </p>
+<p> <i>operator</i> is a choice of &#8220;&lt;&#8221;,&#8220;&gt;&#8221;,&#8220;!=&#8221;,&#8220;==&#8221; in c notation, &#8220;gt&#8221;, &#8220;lt&#8221;, &#8220;eq&#8221;, &#8220;ne&#8221; in shell sh notation and &#8220;greater&#8221;, &#8220;less&#8221;, &#8220;equal&#8221;, &#8220;notequal&#8221; in human readable form (if not specified, default is EQUAL). </p>
+<p> <i>action</i> is a choice of &#8220;ALERT&#8221;, &#8220;RESTART&#8221;, &#8220;START&#8221;, &#8220;STOP&#8221;, &#8220;EXEC&#8221; or &#8220;UNMONITOR&#8221;. </p>
+<p> NOTE: this test depends on the availability of the speed attribute and not all interface types have this attribute. See the LINK SPEED test description. </p>
 <p> Example: </p>
 <pre>
  check network eth0 with interface eth0 
        if saturation &gt; 90% then alert
 </pre>
-<h3><font SIZE="-1">NETWORK BANDWIDTH TEST</font></h3>
+<h3>NETWORK BANDWIDTH TEST</h3>
 <p> You can check a network link upload and download bandwidth usage, current transfer rate and total data transferred in the last 24 hours. This test may only be used within a check network service entry in the Monit control file. </p>
 <p> Warning: this test requires monit poll time to be at maximum 30 seconds. </p>
 <p> Current upload bandwidth rate test syntax: </p>
@@ -1135,10 +1135,10 @@ from:<br />
 <pre>
  IF TOTAL DOWNLOAD operator value unit IN LAST number time-unit THEN action
 </pre>
-<p> <i>operator</i> is a choice of &#8220;&lt;&#8221;,&#8220;&gt;&#8221;,&#8220;!=&#8221;,&#8220;==&#8221; in c notation, &#8220;gt&#8221;, &#8220;lt&#8221;, &#8220;eq&#8221;, &#8220;ne&#8221; in shell sh notation and &#8220;greater&#8221;, &#8220;less&#8221;, &#8220;equal&#8221;, &#8220;notequal&#8221; in human readable form (if not specified, default is <font SIZE="-1">EQUAL</font>). </p>
-<p> <i>unit</i> is a choice of &#8220;B&#8221;,&#8220;<font SIZE="-1">KB&#8221;,&#8220;MB&#8221;,&#8220;GB&#8221;</font> or long alternatives &#8220;byte&#8221;, &#8220;kilobyte&#8221;, &#8220;megabyte&#8221;, &#8220;gigabyte&#8221;. </p>
-<p> <i>time-unit</i> is a choice of &#8220;<font SIZE="-1">MINUTE</font>(S)&#8221;, &#8220;<font SIZE="-1">HOUR</font>(S)&#8221;, &#8220;<font SIZE="-1">DAY&#8221;. NOTE:</font> Monit maintains a rolling count of total uploaded and downloaded bytes for the last 24 hours only. The value of time-unit can therefor not specify a range wider than one day. </p>
-<p> <i>action</i> is a choice of &#8220;<font SIZE="-1">ALERT&#8221;, &#8220;RESTART&#8221;, &#8220;START&#8221;, &#8220;STOP&#8221;, &#8220;EXEC&#8221;</font> or &#8220;<font SIZE="-1">UNMONITOR&#8221;.</font> </p>
+<p> <i>operator</i> is a choice of &#8220;&lt;&#8221;,&#8220;&gt;&#8221;,&#8220;!=&#8221;,&#8220;==&#8221; in c notation, &#8220;gt&#8221;, &#8220;lt&#8221;, &#8220;eq&#8221;, &#8220;ne&#8221; in shell sh notation and &#8220;greater&#8221;, &#8220;less&#8221;, &#8220;equal&#8221;, &#8220;notequal&#8221; in human readable form (if not specified, default is EQUAL). </p>
+<p> <i>unit</i> is a choice of &#8220;B&#8221;,&#8220;KB&#8221;,&#8220;MB&#8221;,&#8220;GB&#8221; or long alternatives &#8220;byte&#8221;, &#8220;kilobyte&#8221;, &#8220;megabyte&#8221;, &#8220;gigabyte&#8221;. </p>
+<p> <i>time-unit</i> is a choice of &#8220;MINUTE(S)&#8221;, &#8220;HOUR(S)&#8221;, &#8220;DAY&#8221;. NOTE: Monit maintains a rolling count of total uploaded and downloaded bytes for the last 24 hours only. The value of time-unit can therefor not specify a range wider than one day. </p>
+<p> <i>action</i> is a choice of &#8220;ALERT&#8221;, &#8220;RESTART&#8221;, &#8220;START&#8221;, &#8220;STOP&#8221;, &#8220;EXEC&#8221; or &#8220;UNMONITOR&#8221;. </p>
 <p> Examples: </p>
 <pre>
  check network eth0 with interface eth0 
@@ -1146,7 +1146,7 @@ from:<br />
        if total download &gt; 1 GB in last 2 hours then alert
        if total download &gt; 10 GB in last day then alert
 </pre>
-<h3><font SIZE="-1">NETWORK PACKETS TEST</font></h3>
+<h3>NETWORK PACKETS TEST</h3>
 <p> You can check the network link upload and download packets count, current transfer rate and total data transferred in last 24 hours. This test may only be used within a check network service entry in the Monit control file. </p>
 <p> Warning: this test requires monit poll time to be at maximum 30 seconds. </p>
 <p> Current upload bandwidth rate test syntax: </p>
@@ -1165,23 +1165,23 @@ from:<br />
 <pre>
  IF TOTAL DOWNLOAD operator value PACKETS IN LAST number time-unit THEN action
 </pre>
-<p> <i>operator</i> is a choice of &#8220;&lt;&#8221;,&#8220;&gt;&#8221;,&#8220;!=&#8221;,&#8220;==&#8221; in c notation, &#8220;gt&#8221;, &#8220;lt&#8221;, &#8220;eq&#8221;, &#8220;ne&#8221; in shell sh notation and &#8220;greater&#8221;, &#8220;less&#8221;, &#8220;equal&#8221;, &#8220;notequal&#8221; in human readable form (if not specified, default is <font SIZE="-1">EQUAL</font>). </p>
-<p> <i>time-unit</i> is a choice of &#8220;<font SIZE="-1">MINUTE</font>(S)&#8221;, &#8220;<font SIZE="-1">HOUR</font>(S)&#8221;, &#8220;<font SIZE="-1">DAY&#8221;. NOTE:</font> Monit keeps total upload/download statistics only for the last 24 hours. The time-unit value cannot therefor span more than one day. </p>
-<p> <i>action</i> is a choice of &#8220;<font SIZE="-1">ALERT&#8221;, &#8220;RESTART&#8221;, &#8220;START&#8221;, &#8220;STOP&#8221;, &#8220;EXEC&#8221;</font> or &#8220;<font SIZE="-1">UNMONITOR&#8221;.</font> </p>
+<p> <i>operator</i> is a choice of &#8220;&lt;&#8221;,&#8220;&gt;&#8221;,&#8220;!=&#8221;,&#8220;==&#8221; in c notation, &#8220;gt&#8221;, &#8220;lt&#8221;, &#8220;eq&#8221;, &#8220;ne&#8221; in shell sh notation and &#8220;greater&#8221;, &#8220;less&#8221;, &#8220;equal&#8221;, &#8220;notequal&#8221; in human readable form (if not specified, default is EQUAL). </p>
+<p> <i>time-unit</i> is a choice of &#8220;MINUTE(S)&#8221;, &#8220;HOUR(S)&#8221;, &#8220;DAY&#8221;. NOTE: Monit keeps total upload/download statistics only for the last 24 hours. The time-unit value cannot therefor span more than one day. </p>
+<p> <i>action</i> is a choice of &#8220;ALERT&#8221;, &#8220;RESTART&#8221;, &#8220;START&#8221;, &#8220;STOP&#8221;, &#8220;EXEC&#8221; or &#8220;UNMONITOR&#8221;. </p>
 <p> Examples: </p>
 <pre>
  check network eth0 with interface eth0 
        if upload &gt; 1000 packets/s then alert
        if total upload &gt; 900000 packets in last hour then alert
 </pre>
-<h3><font SIZE="-1">NETWORK PING TEST</font></h3>
-<p> Monit can perform a network ping test by sending <font SIZE="-1">ICMP</font> echo request datagram packets to a host and wait for the reply. This test can only be used within a check host statement. Monit must also run as the root user in order to be able to perform the ping test (because the ping test must use raw sockets which usually only the super user is allowed to). </p>
+<h3>NETWORK PING TEST</h3>
+<p> Monit can perform a network ping test by sending ICMP echo request datagram packets to a host and wait for the reply. This test can only be used within a check host statement. Monit must also run as the root user in order to be able to perform the ping test (because the ping test must use raw sockets which usually only the super user is allowed to). </p>
 <p> Syntax: </p>
-<p>IF FAILED PING[4 | 6]<br />
+<p>IF FAILED PING[4 | 6]<br/>
               [COUNT number][WITH][TIMEOUT number SECONDS] THEN action</p>
-<p> If a <font SIZE="-1">DNS</font> host name was used in the <i>check host</i> statement and the host name resolve to several addresses (either IPv4 or IPv6), Monit will ping the first available address and continue with the next address until one connection succeed or until there are no more addresses left to try. You can force Monit to only ping IPv4 or IPv6 addresses by using the <font SIZE="-1">PING4</font> or the <font SIZE="-1">PING6</font> keyword instead of <font SIZE="-1">PING.</font> </p>
-<p> The <font SIZE="-1"><code>COUNT</code></font> parameter specifies how many consecutive ping requests will be sent to the host in one cycle. If no reply arrive within <font SIZE="-1"><code>TIMEOUT</code></font> seconds, Monit reports an error. If at least one reply was received, the ping test is considered a success. Monit will, by default, send <i>three</i> ping request packets in one cycle to prevent false alarm (i.e. up to 66% packet loss is tolerated). You can set the <font SIZE="-1"><code>COUNT</code></font> option to a value between 1 and 20 to send more or fewer packets. If you require 100% ping success, set the count to 1 (i.e. just one request will be sent, and if the packet was lost an error will be reported). </p>
-<p> Note that many ISPs have started to filter out ping or <font SIZE="-1">ICMP</font> packets now, in which case there will be no reply from the host. </p>
+<p> If a DNS host name was used in the <i>check host</i> statement and the host name resolve to several addresses (either IPv4 or IPv6), Monit will ping the first available address and continue with the next address until one connection succeed or until there are no more addresses left to try. You can force Monit to only ping IPv4 or IPv6 addresses by using the PING4 or the PING6 keyword instead of PING. </p>
+<p> The <code>COUNT</code> parameter specifies how many consecutive ping requests will be sent to the host in one cycle. If no reply arrive within <code>TIMEOUT</code> seconds, Monit reports an error. If at least one reply was received, the ping test is considered a success. Monit will, by default, send <i>three</i> ping request packets in one cycle to prevent false alarm (i.e. up to 66% packet loss is tolerated). You can set the <code>COUNT</code> option to a value between 1 and 20 to send more or fewer packets. If you require 100% ping success, set the count to 1 (i.e. just one request will be sent, and if the packet was lost an error will be reported). </p>
+<p> Note that many ISPs have started to filter out ping or ICMP packets now, in which case there will be no reply from the host. </p>
 <p> If a ping test is used in a check host entry, this test is run first and if the test should fail, we assume that the connection to the host is down and Monit will <i>not</i> continue with any subsequent port tests. </p>
 <p> Example: </p>
 <pre>
@@ -1201,20 +1201,20 @@ from:<br />
   check host mmonit.com with address mmonit.com
         if failed ping count 5 with timeout 10 seconds then alert
 </pre>
-<h3><font SIZE="-1">CONNECTION TESTING</font></h3>
+<h3>CONNECTION TESTING</h3>
 <p> Monit can perform connection testing via network ports or via Unix sockets. A connection test may only be used within a process or host service type context. </p>
-<p> If a service listens on one or more sockets, Monit can connect to the port (using <font SIZE="-1">TCP</font> or <font SIZE="-1">UDP</font>) and verify that the service will accept a connection and that it is possible to write and read from the socket. If a connection is not accepted or if there is a problem with socket I/O, Monit will execute a specified action. </p>
-<p> <font SIZE="-1">TCP/UDP</font> port test syntax: </p>
-<p>IF FAILED<br />
-    [host]&lt;port&gt;[ipversion]<br />
-                [type]<br />
-                [protocol | {send / expect} + ]<br />
-                [timeout]<br />
+<p> If a service listens on one or more sockets, Monit can connect to the port (using TCP or UDP) and verify that the service will accept a connection and that it is possible to write and read from the socket. If a connection is not accepted or if there is a problem with socket I/O, Monit will execute a specified action. </p>
+<p> TCP/UDP port test syntax: </p>
+<p>IF FAILED<br/>
+    [host]&lt;port&gt;[ipversion]<br/>
+                [type]<br/>
+                [protocol | {send / expect} + ]<br/>
+                [timeout]<br/>
                 [retry] THEN action</p>
 <p> Unix socket test syntax: </p>
-<p>IF FAILED&lt;unixsocket&gt;[type]<br />
-                     [protocol | {send / expect} + ]<br />
-                     [timeout]<br />
+<p>IF FAILED&lt;unixsocket&gt;[type]<br/>
+                     [protocol | {send / expect} + ]<br/>
+                     [timeout]<br/>
                      [retry] THEN action</p>
 <p> Examples: </p>
 <pre>
@@ -1223,59 +1223,59 @@ from:<br />
  if failed unixsocket /var/run/sophie then alert
 </pre>
 <p> Options: </p>
-<p> <i>host: </i><font SIZE="-1"><i>HOST</i></font><i> hostname</i>. Optionally specify the host to connect to. If the host is not given then localhost is assumed if this test is used inside a process entry. If this test is used inside a remote host entry then the entry&#8217;s remote host is assumed. </p>
-<p> <i>port: </i><font SIZE="-1"><i>PORT</i></font><i> number</i>. The port number to connect to </p>
-<p> <i>unixsocket: </i><font SIZE="-1"><i>UNIXSOCKET</i></font><i> path</i>. Specifies the path to a Unix socket (local machine only). </p>
-<p> <i>ipversion: </i><font SIZE="-1"><i>IPV4</i></font><i> | </i><font SIZE="-1"><i>IPV6 </i></font><i></i>. Optionally specify the <font SIZE="-1">IP</font> version Monit should use when trying to connect to the port. If not used, Monit will try to connect to the first available address (IPv4 or IPv6). If multiple addresses are available and connection to one address failed, Monit will try the next address and so on until a connection succeed or until there are no more addresses left to try. </p>
-<p> <i>type: </i><font SIZE="-1"><i>TYPE</i></font><i> {TCP|UDP|TCPSSL}</i>. Optionally specify the socket type Monit should use when trying to connect to the port. The different socket types are; <font SIZE="-1">TCP, UDP</font> or <font SIZE="-1">TCPSSL,</font> where <font SIZE="-1">TCP</font> is a regular stream based socket, <font SIZE="-1">UDP</font> is a datagram socket and <font SIZE="-1">TCPSSL</font> specifies that Monit should use a <font SIZE="-1">TCP</font> socket with <font SIZE="-1">SSL</font> when connecting to a port. The default socket type is <font SIZE="-1">TCP.</font> If <font SIZE="-1">TCPSSL</font> is used you may optionally specify the <font SIZE="-1">SSL/TLS</font> protocol to be used and the <font SIZE="-1">MD5</font> checksum of the server&#8217;s certificate. </p>
-<p> The <font SIZE="-1">TCPSSL</font> options are: </p>
+<p> <i>host: </i><i>HOST</i><i> hostname</i>. Optionally specify the host to connect to. If the host is not given then localhost is assumed if this test is used inside a process entry. If this test is used inside a remote host entry then the entry&#8217;s remote host is assumed. </p>
+<p> <i>port: </i><i>PORT</i><i> number</i>. The port number to connect to </p>
+<p> <i>unixsocket: </i><i>UNIXSOCKET</i><i> path</i>. Specifies the path to a Unix socket (local machine only). </p>
+<p> <i>ipversion: </i><i>IPV4</i><i> | </i><i>IPV6 </i><i></i>. Optionally specify the IP version Monit should use when trying to connect to the port. If not used, Monit will try to connect to the first available address (IPv4 or IPv6). If multiple addresses are available and connection to one address failed, Monit will try the next address and so on until a connection succeed or until there are no more addresses left to try. </p>
+<p> <i>type: </i><i>TYPE</i><i> {TCP|UDP|TCPSSL}</i>. Optionally specify the socket type Monit should use when trying to connect to the port. The different socket types are; TCP, UDP or TCPSSL, where TCP is a regular stream based socket, UDP is a datagram socket and TCPSSL specifies that Monit should use a TCP socket with SSL when connecting to a port. The default socket type is TCP. If TCPSSL is used you may optionally specify the SSL/TLS protocol to be used and the MD5 checksum of the server&#8217;s certificate. </p>
+<p> The TCPSSL options are: </p>
 <p>TCPSSL[SSLAUTO | SSLV2 | SSLV3 | TLSV1 | TLSV11 | TLSV12][CERTMD5 md5sum]</p>
-<p> The default mode is <i></i><font SIZE="-1"><i>SSLAUTO</i></font><i></i> and it will select the method automatically, but for security reasons only <font SIZE="-1">TLS</font> is used, not <font SIZE="-1">SSL.</font> If you need SSLv2 or SSLv3 you have to explicitly select that method using <i></i><font SIZE="-1"><i>SSLV2</i></font><i></i> or <i></i><font SIZE="-1"><i>SSLV3</i></font><i></i> option. </p>
-<p> <i>protocol: </i><font SIZE="-1"><i>PROTO</i></font><i>(</i><font SIZE="-1"><i>COL</i></font><i>) protocol</i>. Optionally specify the protocol Monit should speak when a connection is established. At the moment Monit knows how to speak:<br />
-&nbsp;<wbr><i>APACHE-STATUS</i><br />
-&nbsp;<wbr><i></i><font SIZE="-1"><i>DNS</i></font><i></i><br />
-&nbsp;<wbr><i></i><font SIZE="-1"><i>DWP</i></font><i></i><br />
-&nbsp;<wbr><i></i><font SIZE="-1"><i>FTP</i></font><i></i><br />
-&nbsp;<wbr><i></i><font SIZE="-1"><i>GPS</i></font><i></i><br />
-&nbsp;<wbr><i></i><font SIZE="-1"><i>HTTP</i></font><i></i><br />
-&nbsp;<wbr><i></i><font SIZE="-1"><i>HTTPS</i></font><i></i><br />
-&nbsp;<wbr><i></i><font SIZE="-1"><i>IMAP</i></font><i></i><br />
-&nbsp;<wbr><i></i><font SIZE="-1"><i>IMAPS</i></font><i></i><br />
-&nbsp;<wbr><i></i><font SIZE="-1"><i>CLAMAV</i></font><i></i><br />
-&nbsp;<wbr><i></i><font SIZE="-1"><i>LDAP2</i></font><i></i><br />
-&nbsp;<wbr><i></i><font SIZE="-1"><i>LDAP3</i></font><i></i><br />
-&nbsp;<wbr><i></i><font SIZE="-1"><i>LMTP</i></font><i></i><br />
-&nbsp;<wbr><i></i><font SIZE="-1"><i>MEMCACHE</i></font><i></i><br />
-&nbsp;<wbr><i></i><font SIZE="-1"><i>MONGODB</i></font><i></i><br />
-&nbsp;<wbr><i></i><font SIZE="-1"><i>MYSQL</i></font><i></i><br />
-&nbsp;<wbr><i></i><font SIZE="-1"><i>NNTP</i></font><i></i><br />
-&nbsp;<wbr><i></i><font SIZE="-1"><i>NTP3</i></font><i></i><br />
-&nbsp;<wbr><i></i><font SIZE="-1"><i>PGSQL</i></font><i></i><br />
-&nbsp;<wbr><i></i><font SIZE="-1"><i>POP</i></font><i></i><br />
-&nbsp;<wbr><i></i><font SIZE="-1"><i>POPS</i></font><i></i><br />
-&nbsp;<wbr><i>POSTFIX-POLICY</i><br />
-&nbsp;<wbr><i></i><font SIZE="-1"><i>RADIUS</i></font><i></i><br />
-&nbsp;<wbr><i></i><font SIZE="-1"><i>RDATE</i></font><i></i><br />
-&nbsp;<wbr><i></i><font SIZE="-1"><i>REDIS</i></font><i></i><br />
-&nbsp;<wbr><i></i><font SIZE="-1"><i>RSYNC</i></font><i></i><br />
-&nbsp;<wbr><i></i><font SIZE="-1"><i>SIEVE</i></font><i></i><br />
-&nbsp;<wbr><i></i><font SIZE="-1"><i>SIP</i></font><i></i><br />
-&nbsp;<wbr><i></i><font SIZE="-1"><i>SMTP</i></font><i></i><br />
-&nbsp;<wbr><i></i><font SIZE="-1"><i>SMTPS</i></font><i></i><br />
-&nbsp;<wbr><i></i><font SIZE="-1"><i>SSH</i></font><i></i><br />
-&nbsp;<wbr><i></i><font SIZE="-1"><i>TNS</i></font><i></i><br />
-&nbsp;<wbr><i></i><font SIZE="-1"><i>WEBSOCKET</i></font><i></i> </p>
+<p> The default mode is <i></i><i>SSLAUTO</i><i></i> and it will select the method automatically, but for security reasons only TLS is used, not SSL. If you need SSLv2 or SSLv3 you have to explicitly select that method using <i></i><i>SSLV2</i><i></i> or <i></i><i>SSLV3</i><i></i> option. </p>
+<p> <i>protocol: </i><i>PROTO</i><i>(</i><i>COL</i><i>) protocol</i>. Optionally specify the protocol Monit should speak when a connection is established. At the moment Monit knows how to speak:<br/>
+&nbsp;<wbr><i>APACHE-STATUS</i><br/>
+&nbsp;<wbr><i></i><i>DNS</i><i></i><br/>
+&nbsp;<wbr><i></i><i>DWP</i><i></i><br/>
+&nbsp;<wbr><i></i><i>FTP</i><i></i><br/>
+&nbsp;<wbr><i></i><i>GPS</i><i></i><br/>
+&nbsp;<wbr><i></i><i>HTTP</i><i></i><br/>
+&nbsp;<wbr><i></i><i>HTTPS</i><i></i><br/>
+&nbsp;<wbr><i></i><i>IMAP</i><i></i><br/>
+&nbsp;<wbr><i></i><i>IMAPS</i><i></i><br/>
+&nbsp;<wbr><i></i><i>CLAMAV</i><i></i><br/>
+&nbsp;<wbr><i></i><i>LDAP2</i><i></i><br/>
+&nbsp;<wbr><i></i><i>LDAP3</i><i></i><br/>
+&nbsp;<wbr><i></i><i>LMTP</i><i></i><br/>
+&nbsp;<wbr><i></i><i>MEMCACHE</i><i></i><br/>
+&nbsp;<wbr><i></i><i>MONGODB</i><i></i><br/>
+&nbsp;<wbr><i></i><i>MYSQL</i><i></i><br/>
+&nbsp;<wbr><i></i><i>NNTP</i><i></i><br/>
+&nbsp;<wbr><i></i><i>NTP3</i><i></i><br/>
+&nbsp;<wbr><i></i><i>PGSQL</i><i></i><br/>
+&nbsp;<wbr><i></i><i>POP</i><i></i><br/>
+&nbsp;<wbr><i></i><i>POPS</i><i></i><br/>
+&nbsp;<wbr><i>POSTFIX-POLICY</i><br/>
+&nbsp;<wbr><i></i><i>RADIUS</i><i></i><br/>
+&nbsp;<wbr><i></i><i>RDATE</i><i></i><br/>
+&nbsp;<wbr><i></i><i>REDIS</i><i></i><br/>
+&nbsp;<wbr><i></i><i>RSYNC</i><i></i><br/>
+&nbsp;<wbr><i></i><i>SIEVE</i><i></i><br/>
+&nbsp;<wbr><i></i><i>SIP</i><i></i><br/>
+&nbsp;<wbr><i></i><i>SMTP</i><i></i><br/>
+&nbsp;<wbr><i></i><i>SMTPS</i><i></i><br/>
+&nbsp;<wbr><i></i><i>SSH</i><i></i><br/>
+&nbsp;<wbr><i></i><i>TNS</i><i></i><br/>
+&nbsp;<wbr><i></i><i>WEBSOCKET</i><i></i> </p>
 <p> If the target server&#8217;s protocol is not found in this list, simply do not specify the protocol and Monit will use a default connection test. </p>
-<p> <i>timeout: [</i><font SIZE="-1"><i>WITH</i></font><i>] </i><font SIZE="-1"><i>TIMEOUT</i></font><i> number </i><font SIZE="-1"><i>SECONDS</i></font><i></i>. Optionally specifies the connect and read timeout for the connection. If Monit cannot connect to the server within this time it will assume that the connection failed and execute the specified action. The default connect timeout is 5 seconds. </p>
-<p> <i>retry: </i><font SIZE="-1"><i>RETRY</i></font><i> number</i>. Optionally specifies the number of consecutive retries within the same testing cycle in the case that the connection failed. The default is fail on first error. </p>
-<p> <i>action</i> is a choice of &#8220;<font SIZE="-1">ALERT&#8221;, &#8220;RESTART&#8221;, &#8220;START&#8221;, &#8220;STOP&#8221;, &#8220;EXEC&#8221;</font> or &#8220;<font SIZE="-1">UNMONITOR&#8221;.</font> </p>
+<p> <i>timeout: [</i><i>WITH</i><i>] </i><i>TIMEOUT</i><i> number </i><i>SECONDS</i><i></i>. Optionally specifies the connect and read timeout for the connection. If Monit cannot connect to the server within this time it will assume that the connection failed and execute the specified action. The default connect timeout is 5 seconds. </p>
+<p> <i>retry: </i><i>RETRY</i><i> number</i>. Optionally specifies the number of consecutive retries within the same testing cycle in the case that the connection failed. The default is fail on first error. </p>
+<p> <i>action</i> is a choice of &#8220;ALERT&#8221;, &#8220;RESTART&#8221;, &#8220;START&#8221;, &#8220;STOP&#8221;, &#8220;EXEC&#8221; or &#8220;UNMONITOR&#8221;. </p>
 <p> <i>Specific protocol test options</i> </p>
-<p> <font SIZE="-1">GENERIC </font>(<font SIZE="-1">SEND/EXPECT</font>) </p>
-<p> If Monit does not support the protocol spoken by the server, you can write your own protocol-test using <i>send</i> and <i>expect</i> strings. The <i></i><font SIZE="-1"><i>SEND</i></font><i></i> statement sends a string to the server port and the <i></i><font SIZE="-1"><i>EXPECT</i></font><i></i> statement compares a string read from the server with the string given in the expect statement. </p>
+<p> GENERIC (SEND/EXPECT) </p>
+<p> If Monit does not support the protocol spoken by the server, you can write your own protocol-test using <i>send</i> and <i>expect</i> strings. The <i></i><i>SEND</i><i></i> statement sends a string to the server port and the <i></i><i>EXPECT</i><i></i> statement compares a string read from the server with the string given in the expect statement. </p>
 <p> Syntax: </p>
 <p>[{ SEND | EXPECT } &#8220;string&#8221;] +</p>
-<p> Monit will send a string as it is, and you <code>must</code> remember to include <font SIZE="-1">CR</font> and <font SIZE="-1">LF</font> in the string sent to the server if the protocol expects such characters to terminate a string (most text based protocols used over Internet do). </p>
-<p> Monit will by default read up to 255 bytes from the server and use this string when comparing the <font SIZE="-1">EXPECT</font> string. You can override the default value by using this statement at the top of the Monit configuration file: </p>
+<p> Monit will send a string as it is, and you <code>must</code> remember to include CR and LF in the string sent to the server if the protocol expects such characters to terminate a string (most text based protocols used over Internet do). </p>
+<p> Monit will by default read up to 255 bytes from the server and use this string when comparing the EXPECT string. You can override the default value by using this statement at the top of the Monit configuration file: </p>
 <pre>
  SET EXPECTBUFFER &lt;number&gt; [&quot;b&quot;|&quot;kb&quot;]
 </pre>
@@ -1283,15 +1283,15 @@ from:<br />
 <pre>
  set expectbuffer 10 kb
 </pre>
-<p> You can use non-printable characters in a <font SIZE="-1">SEND</font> string if needed. Use the hex notation, \0xHEXHEX to send any char in the range \0x00-\0xFF, that is, 0-255 in decimal. For example, to test a Quake 3 server: </p>
+<p> You can use non-printable characters in a SEND string if needed. Use the hex notation, \0xHEXHEX to send any char in the range \0x00-\0xFF, that is, 0-255 in decimal. For example, to test a Quake 3 server: </p>
 <pre><code> send &quot;\0xFF\0xFF\0xFF\0xFFgetstatus&quot;
  expect &quot;sv_floodProtect|sv_maxPing&quot;
 </code></pre>
-<p> If your system supports <font SIZE="-1">POSIX</font> regular expressions, you can use regular expressions in the <font SIZE="-1">EXPECT</font> string, see <i><a href="/docs/linux/man/7-regex/">regex</a></i>(7) to learn more about the types of regular expressions you can use in an expect string. </p>
-<p> Since both regex and string compare operates on a zero terminated string, you cannot test for &#8216;\0&#8217; in an <font SIZE="-1">EXPECT</font> buffer since this character marks the end of the buffer. However, we escape &#8216;\0&#8217; in the expect buffer as ``\0&#8217;&#8216; which you can test for. That is, &#8216;\&#8216; followed by the ascii value for 0. For instance, here is how to test for an expect string that starts with zero followed by any number of characters. </p>
+<p> If your system supports POSIX regular expressions, you can use regular expressions in the EXPECT string, see <i><a href="/docs/linux/man/7-regex/">regex</a></i>(7) to learn more about the types of regular expressions you can use in an expect string. </p>
+<p> Since both regex and string compare operates on a zero terminated string, you cannot test for &#8216;\0&#8217; in an EXPECT buffer since this character marks the end of the buffer. However, we escape &#8216;\0&#8217; in the expect buffer as ``\0&#8217;&#8216; which you can test for. That is, &#8216;\&#8216; followed by the ascii value for 0. For instance, here is how to test for an expect string that starts with zero followed by any number of characters. </p>
 <pre><code> expect &quot;^[\\]0.*&quot;
 </code></pre>
-<p> Here is a simple <font SIZE="-1">SMTP</font> protocol example: </p>
+<p> Here is a simple SMTP protocol example: </p>
 <pre><code> if failed
     port 25 and
     expect &quot;^220.*&quot;
@@ -1300,8 +1300,8 @@ from:<br />
     send &quot;QUIT\r\n&quot;
  then alert
 </code></pre>
-<p> <font SIZE="-1">SEND/EXPECT</font> can be used with any socket type, such as <font SIZE="-1">TCP</font> sockets, <font SIZE="-1">UNIX</font> sockets and <font SIZE="-1">UDP</font> sockets. </p>
-<p> <font SIZE="-1">HTTP</font> </p>
+<p> SEND/EXPECT can be used with any socket type, such as TCP sockets, UNIX sockets and UDP sockets. </p>
+<p> HTTP </p>
 <p> Syntax: </p>
 <pre><code> PROTO(COL) HTTP
      [REQUEST &quot;string&quot;]
@@ -1310,7 +1310,7 @@ from:<br />
      [HTTP HEADERS list of headers]
      [CONTENT {= | != } STRING]
 </code></pre>
-<p> <i></i><font SIZE="-1"><i>REQUEST</i></font><i></i> option can set an <font SIZE="-1">URL</font> string specifying a document on the <font SIZE="-1">HTTP</font> server. If the request statement isn&#8217;t specified, the default ``/&#8216;&#8216; page will be requested. </p>
+<p> <i></i><i>REQUEST</i><i></i> option can set an URL string specifying a document on the HTTP server. If the request statement isn&#8217;t specified, the default ``/&#8216;&#8216; page will be requested. </p>
 <p> For example: </p>
 <pre><code> if failed
     port 80
@@ -1318,8 +1318,8 @@ from:<br />
     request &quot;/data/show?a=b&amp;c=d&quot;
  then restart
 </code></pre>
-<p> <i></i><font SIZE="-1"><i>STATUS</i></font><i></i> option can be used to explicitly test the <font SIZE="-1">HTTP</font> status code returned by the <font SIZE="-1">HTTP</font> server. If not used, the http protocol test will fail if the status code returned is greater than or equal to 400. You can override this behaviour by using the <i>status</i> qualifier. </p>
-<p> For example to test that a page does <code>not</code> exist (the <font SIZE="-1">HTTP</font> server should return 404 in this case): </p>
+<p> <i></i><i>STATUS</i><i></i> option can be used to explicitly test the HTTP status code returned by the HTTP server. If not used, the http protocol test will fail if the status code returned is greater than or equal to 400. You can override this behaviour by using the <i>status</i> qualifier. </p>
+<p> For example to test that a page does <code>not</code> exist (the HTTP server should return 404 in this case): </p>
 <pre><code>  if failed
      port 80
      protocol http
@@ -1327,7 +1327,7 @@ from:<br />
      status = 404
   then alert
 </code></pre>
-<p> <i></i><font SIZE="-1"><i>CHECKSUM</i></font><i></i> You can test the checksum of documents returned by a <font SIZE="-1">HTTP</font> server. Either <font SIZE="-1">MD5</font> or <font SIZE="-1">SHA1</font> hash can be used. Monit will <code>not</code> test the checksum for a document if the server does not set the <font SIZE="-1">HTTP </font><i>Content-Length</i> header. A <font SIZE="-1">HTTP</font> server should set this header when it server a static document (i.e. a file). There are no limitation on the document size, but keep in mind that Monit will use time to download the document over the network to compute the checksum. </p>
+<p> <i></i><i>CHECKSUM</i><i></i> You can test the checksum of documents returned by a HTTP server. Either MD5 or SHA1 hash can be used. Monit will <code>not</code> test the checksum for a document if the server does not set the HTTP <i>Content-Length</i> header. A HTTP server should set this header when it server a static document (i.e. a file). There are no limitation on the document size, but keep in mind that Monit will use time to download the document over the network to compute the checksum. </p>
 <p> Example: </p>
 <pre><code> if failed
     port 80
@@ -1336,7 +1336,7 @@ from:<br />
     checksum 8f7f419955cefa0b33a2ba316cba3659
  then alert
 </code></pre>
-<p> <i></i><font SIZE="-1"><i>HTTP HEADERS</i></font><i></i> can be used to send a list of any <font SIZE="-1">HTTP</font> headers with a http protocol test. For instance, the host header. If the host header is not set, Monit will use the hostname or IP-address of the host as specified in the check host statement. Specifying a host header is useful if you want to connect to and test a name-based virtual host. The syntax for setting <font SIZE="-1">HTTP</font> headers is </p>
+<p> <i></i><i>HTTP HEADERS</i><i></i> can be used to send a list of any HTTP headers with a http protocol test. For instance, the host header. If the host header is not set, Monit will use the hostname or IP-address of the host as specified in the check host statement. Specifying a host header is useful if you want to connect to and test a name-based virtual host. The syntax for setting HTTP headers is </p>
 <pre><code>  http headers [name:value, name:value,..]
 </code></pre>
 <p> where each name:value pair is separated with &#8216;,&#8216;. If you need to use &#8216;:&#8216; in the value string, for instance to set port number for a host header, you must enclose the value in quotes. For example, </p>
@@ -1352,7 +1352,7 @@ from:<br />
     then alert
 </code></pre>
 <p> Setting http headers is associated with the http protocol test and must come before <i>request</i> as in the example above. </p>
-<p> <i></i><font SIZE="-1"><i>CONTENT</i></font><i></i> option sets the pattern which is expected in the data returned by the server. If the pattern doesn&#8217;t match, event is triggered. </p>
+<p> <i></i><i>CONTENT</i><i></i> option sets the pattern which is expected in the data returned by the server. If the pattern doesn&#8217;t match, event is triggered. </p>
 <p> For example: </p>
 <pre><code>  if failed
      port 80
@@ -1380,7 +1380,7 @@ from:<br />
 <p> <i>operator</i> is one of ``&lt;&#8216;&#8216;, ``=&#8216;&#8216;, ``&gt;&#8216;&#8216;. </p>
 <p> <i>number</i> is percentile numeric limit. </p>
 <p> Each of these limits can be compared against a value relative to the total number of active Apache child processes. </p>
-<p> You can combine all of these tests into one expression or you can choose to test a certain limit only. If you combine the limits you must connect them together using the <font SIZE="-1">OR</font> keyword. </p>
+<p> You can combine all of these tests into one expression or you can choose to test a certain limit only. If you combine the limits you must connect them together using the OR keyword. </p>
 <p> Example: </p>
 <pre><code> if failed port 80 protocol apache-status
         loglimit &gt; 10% or
@@ -1388,13 +1388,13 @@ from:<br />
         waitlimit &lt; 20%
  then alert
 </code></pre>
-<p> <font SIZE="-1">SIP</font> </p>
-<p> The <font SIZE="-1">SIP</font> protocol is used by communication platform servers such as Asterisk and FreeSWITCH. </p>
+<p> SIP </p>
+<p> The SIP protocol is used by communication platform servers such as Asterisk and FreeSWITCH. </p>
 <p> Syntax: </p>
 <pre><code> PROTOCOL SIP [TARGET valid@uri] [MAXFORWARD n]
 </code></pre>
-<p> <i></i><font SIZE="-1"><i>TARGET</i></font><i></i> you may specify an alternative recipient for the message, by adding a valid sip uri after this keyword. </p>
-<p> <i></i><font SIZE="-1"><i>MAXFORWARD</i></font><i></i> Limit the number of proxies or gateways that can forward the request to the next server. It&#8217;s value is an integer in the range 0-255, set by default to 70. If max-forward = 0, the next server may respond 200 <font SIZE="-1">OK </font>(test succeeded) or send a 483 Too Many Hops (test failed) </p>
+<p> <i></i><i>TARGET</i><i></i> you may specify an alternative recipient for the message, by adding a valid sip uri after this keyword. </p>
+<p> <i></i><i>MAXFORWARD</i><i></i> Limit the number of proxies or gateways that can forward the request to the next server. It&#8217;s value is an integer in the range 0-255, set by default to 70. If max-forward = 0, the next server may respond 200 OK (test succeeded) or send a 483 Too Many Hops (test failed) </p>
 <p> For example: </p>
 <pre><code> check host openser_all with address 127.0.0.1
    if failed
@@ -1402,11 +1402,11 @@ from:<br />
       with target &quot;localhost:5060&quot; and maxforward 6
    then alert
 </code></pre>
-<p> <font SIZE="-1">RADIUS</font> </p>
+<p> RADIUS </p>
 <p> Syntax: </p>
 <pre><code> PROTOCOL RADIUS [SECRET string]
 </code></pre>
-<p> <i></i><font SIZE="-1"><i>SECRET</i></font><i></i> you may specify an alternative secret, default is ``testing123&#8217;&#8216;. </p>
+<p> <i></i><i>SECRET</i><i></i> you may specify an alternative secret, default is ``testing123&#8217;&#8216;. </p>
 <p> For example: </p>
 <pre><code> check process radiusd with pidfile /var/run/radiusd.pid
        start program = &quot;/etc/init.d/freeradius start&quot;
@@ -1416,12 +1416,12 @@ from:<br />
           secret pingpong
        then alert
 </code></pre>
-<p> <font SIZE="-1">MYSQL</font> </p>
+<p> MYSQL </p>
 <p> Syntax: </p>
 <pre><code> PROTOCOL MYSQL [USERNAME string PASSWORD string]
 </code></pre>
-<p> <i></i><font SIZE="-1"><i>USERNAME</i></font><i></i> MySQL username (maximum 16 characters). </p>
-<p> <i></i><font SIZE="-1"><i>PASSWORD</i></font><i></i> MySQL password. </p>
+<p> <i></i><i>USERNAME</i><i></i> MySQL username (maximum 16 characters). </p>
+<p> <i></i><i>PASSWORD</i><i></i> MySQL password. </p>
 <p> The credentials are <code>optional</code>. If no credentials are set, Monit will perform the test using anonymous login. That may cause authentication error to be logged in your MySQL log for higher MySQL log levels. </p>
 <p> If credentials are set, Monit will login and perform MySQL ping. Monit doesn&#8217;t require any database privileges, it needs just database user, we recommend to create standalone user for Monit testing, for example: </p>
 <pre><code> CREATE USER 'monit'@'host_from_which_monit_performs_testing' IDENTIFIED BY 'mysecretpassword';
@@ -1436,7 +1436,7 @@ from:<br />
         protocol mysql username foo password bar
      then alert
 </code></pre>
-<p> or with unix-socket and <font SIZE="-1">OS X</font> start/stop commands </p>
+<p> or with unix-socket and OS X start/stop commands </p>
 <pre><code> check process mysql with pidfile /var/run/mysqld/mysqld.pid
      start program = &quot;/usr/local/mysql/support-files/mysql.server start&quot;
      stop program = &quot;/usr/local/mysql/support-files/mysql.server stop&quot;
@@ -1445,7 +1445,7 @@ from:<br />
         protocol mysql username foo password bar
      then alert
 </code></pre>
-<p> <font SIZE="-1">WEBSOCKET</font> </p>
+<p> WEBSOCKET </p>
 <p> Syntax: </p>
 <pre><code> PROTOCOL WEBSOCKET
          [REQUEST string]
@@ -1453,10 +1453,10 @@ from:<br />
          [ORIGIN string]
          [VERSION number]
 </code></pre>
-<p> <i></i><font SIZE="-1"><i>HOST</i></font><i></i> you may specify an alternative Host header </p>
-<p> <i></i><font SIZE="-1"><i>REQUEST</i></font><i></i> you may specify an alternative request, default is ``/&#8216;&#8216; </p>
-<p> <i></i><font SIZE="-1"><i>ORIGIN</i></font><i></i> you may specify an alternative origin, default is ``<a rel="nofollow" href="http://www.mmonit.com''">http://www.mmonit.com&#8217;&#8216;</a> </p>
-<p> <i></i><font SIZE="-1"><i>VERSION</i></font><i></i> you may specify an alternative version, default is ``0&#8217;&#8216; </p>
+<p> <i></i><i>HOST</i><i></i> you may specify an alternative Host header </p>
+<p> <i></i><i>REQUEST</i><i></i> you may specify an alternative request, default is ``/&#8216;&#8216; </p>
+<p> <i></i><i>ORIGIN</i><i></i> you may specify an alternative origin, default is ``<a rel="nofollow" href="http://www.mmonit.com''">http://www.mmonit.com&#8217;&#8216;</a> </p>
+<p> <i></i><i>VERSION</i><i></i> you may specify an alternative version, default is ``0&#8217;&#8216; </p>
 <p> For example: </p>
 <pre><code> check host websocket.org with address &quot;echo.websocket.org&quot;
        if failed
@@ -1474,7 +1474,7 @@ from:<br />
 <pre><code> check process nginx with pidfile /var/run/nginx.pid
        start program = &quot;/etc/init.d/nginx start&quot;
 </code></pre>
-<p> Here&#8217;s a more advanced example for monitoring an apache web-server listening on the default port number for <font SIZE="-1">HTTP</font> and <font SIZE="-1">HTTPS.</font> In this example Monit will restart apache if it&#8217;s not accepting connections at the port numbers. The method Monit use for restart is to first execute the stop-program, then wait (up to 30s) for the process to stop and then execute the start-program and wait (30s) for it to start. The length of start or stop wait can be overridden using the &#8216;timeout&#8217; option. If Monit was unable to stop or start the service a failed alert message will be sent if you have requested alert messages to be sent. </p>
+<p> Here&#8217;s a more advanced example for monitoring an apache web-server listening on the default port number for HTTP and HTTPS. In this example Monit will restart apache if it&#8217;s not accepting connections at the port numbers. The method Monit use for restart is to first execute the stop-program, then wait (up to 30s) for the process to stop and then execute the start-program and wait (30s) for it to start. The length of start or stop wait can be overridden using the &#8216;timeout&#8217; option. If Monit was unable to stop or start the service a failed alert message will be sent if you have requested alert messages to be sent. </p>
 <pre><code> check process apache with pidfile /var/run/httpd.pid
        start program = &quot;/etc/init.d/httpd start&quot; with timeout 60 seconds
        stop program = &quot;/etc/init.d/httpd stop&quot;
@@ -1548,7 +1548,7 @@ from:<br />
           with checksum f9d26b8393736b5dfad837bb13780786
        then alert
 </code></pre>
-<p> Here are a couple of tests for some popular communication servers, using the <font SIZE="-1">SIP</font> protocol. First we test a FreeSWITCH server and then an Asterisk server </p>
+<p> Here are a couple of tests for some popular communication servers, using the SIP protocol. First we test a FreeSWITCH server and then an Asterisk server </p>
 <pre><code> check process freeswitch
     with pidfile /usr/local/freeswitch/log/freeswitch.pid
   start program = &quot;/usr/local/freeswitch/bin/freeswitch -nc -hp&quot;
@@ -1594,7 +1594,7 @@ from:<br />
        then restart
        group database
 </code></pre>
-<p> This resource checks example will send an alert if <font SIZE="-1">CPU</font> usage of the Apache&#8217;s http daemon and its child processes goes beyond 60% for two cycles. Apache is restarted if the <font SIZE="-1">CPU</font> usage is over 80% for five cycles or the memory usage is over 100Mb for five cycles or if the machines load average is more than 10 for 8 cycles: </p>
+<p> This resource checks example will send an alert if CPU usage of the Apache&#8217;s http daemon and its child processes goes beyond 60% for two cycles. Apache is restarted if the CPU usage is over 80% for five cycles or the memory usage is over 100Mb for five cycles or if the machines load average is more than 10 for 8 cycles: </p>
 <pre><code> check process apache with pidfile /var/run/httpd.pid
        start program = &quot;/etc/init.d/httpd start&quot;
        stop program = &quot;/etc/init.d/httpd stop&quot;
@@ -1664,78 +1664,78 @@ from:<br />
        depends on oracle
 </code></pre>
 <h2>FILES</h2>
-<p> <i>~/.monitrc</i> <br />
+<p> <i>~/.monitrc</i> <br/>
 Default run control file </p>
-<p> <i>/etc/monitrc</i> <br />
-If the control file is not found in the default <br />
-location and&nbsp;<wbr>/etc contains a&nbsp;<wbr><i>monitrc</i>&nbsp;<wbr>file, this <br />
+<p> <i>/etc/monitrc</i> <br/>
+If the control file is not found in the default <br/>
+location and&nbsp;<wbr>/etc contains a&nbsp;<wbr><i>monitrc</i>&nbsp;<wbr>file, this <br/>
 file will be used instead. </p>
-<p> <i>./monitrc</i> <br />
-If the control file is not found in either of the <br />
-previous two locations, and the current working <br />
-directory contains a&nbsp;<wbr><i>monitrc</i>&nbsp;<wbr>file, this file is <br />
+<p> <i>./monitrc</i> <br/>
+If the control file is not found in either of the <br/>
+previous two locations, and the current working <br/>
+directory contains a&nbsp;<wbr><i>monitrc</i>&nbsp;<wbr>file, this file is <br/>
 used instead. </p>
-<p> <i>~/.monit.pid</i> <br />
-Lock file to help prevent concurrent runs&nbsp;<wbr>(non-root <br />
+<p> <i>~/.monit.pid</i> <br/>
+Lock file to help prevent concurrent runs&nbsp;<wbr>(non-root <br/>
 mode). </p>
-<p> <i>/run/monit.pid</i> <br />
-Lock file to help prevent concurrent runs&nbsp;<wbr>(root mode, <br />
+<p> <i>/run/monit.pid</i> <br/>
+Lock file to help prevent concurrent runs&nbsp;<wbr>(root mode, <br/>
 Linux systems, if&nbsp;<wbr>/run directory is available). </p>
-<p> <i>/var/run/monit.pid</i> <br />
-Lock file to help prevent concurrent runs&nbsp;<wbr>(root mode, <br />
+<p> <i>/var/run/monit.pid</i> <br/>
+Lock file to help prevent concurrent runs&nbsp;<wbr>(root mode, <br/>
 Linux systems). </p>
-<p> <i>/etc/monit.pid</i> <br />
-Lock file to help prevent concurrent runs&nbsp;<wbr>(root mode, <br />
+<p> <i>/etc/monit.pid</i> <br/>
+Lock file to help prevent concurrent runs&nbsp;<wbr>(root mode, <br/>
 systems without&nbsp;<wbr>/var/run). </p>
-<p> <i>~/.monit.state</i> <br />
-Monit saves its state to this file and utilizes <br />
-information found in this file to recover from <br />
-a crash. This is a binary file and its content is <br />
-only of interest to monit. You may set the location <br />
-of this file in the Monit control file or by using <br />
+<p> <i>~/.monit.state</i> <br/>
+Monit saves its state to this file and utilizes <br/>
+information found in this file to recover from <br/>
+a crash. This is a binary file and its content is <br/>
+only of interest to monit. You may set the location <br/>
+of this file in the Monit control file or by using <br/>
 the -s switch when Monit is started. </p>
-<p> <i>~/.monit.id</i> <br />
+<p> <i>~/.monit.id</i> <br/>
 &nbsp;<wbr>Monit save its unique id to this file.  </p>
 <h2>ENVIRONMENT</h2>
 <p> No environment variables are used by Monit. However, when Monit execute a script or a program Monit will set several environment variables which can be utilized by the executable. The following and <i>only</i> the following environment variables are available: </p>
 <dl>
-<dt><font SIZE="-1">MONIT_EVENT</font></dt>
+<dt>MONIT_EVENT</dt>
 <dd> <p> The event that occurred on the service </p>
  </dd>
-<dt><font SIZE="-1">MONIT_DESCRIPTION</font></dt>
+<dt>MONIT_DESCRIPTION</dt>
 <dd> <p> A description of the error condition </p>
  </dd>
-<dt><font SIZE="-1">MONIT_SERVICE</font></dt>
+<dt>MONIT_SERVICE</dt>
 <dd> <p> The name of the service (from monitrc) on which the event occurred. </p>
  </dd>
-<dt><font SIZE="-1">MONIT_DATE</font></dt>
-<dd> <p> The time and date (<font SIZE="-1">RFC 822</font> style) the event occurred </p>
+<dt>MONIT_DATE</dt>
+<dd> <p> The time and date (RFC 822 style) the event occurred </p>
  </dd>
-<dt><font SIZE="-1">MONIT_HOST</font></dt>
+<dt>MONIT_HOST</dt>
 <dd> <p> The host the event occurred on </p>
  </dd></dl>
 <p> The following environment variables are only available for process service entries: </p>
 <dl>
-<dt><font SIZE="-1">MONIT_PROCESS_PID</font></dt>
+<dt>MONIT_PROCESS_PID</dt>
 <dd> <p> The process pid. This may be 0 if the process was (re)started, </p>
  </dd>
-<dt><font SIZE="-1">MONIT_PROCESS_MEMORY</font></dt>
+<dt>MONIT_PROCESS_MEMORY</dt>
 <dd> <p> Process memory. This may be 0 if the process was (re)started, </p>
  </dd>
-<dt><font SIZE="-1">MONIT_PROCESS_CHILDREN</font></dt>
+<dt>MONIT_PROCESS_CHILDREN</dt>
 <dd> <p> Process children. This may be 0 if the process was (re)started, </p>
  </dd>
-<dt><font SIZE="-1">MONIT_PROCESS_CPU_PERCENT</font></dt>
+<dt>MONIT_PROCESS_CPU_PERCENT</dt>
 <dd> <p> Process cpu%. This may be 0 if the process was (re)started, </p>
  </dd></dl>
 <h2>SIGNALS</h2>
-<p> If a Monit daemon is running, <font SIZE="-1">SIGUSR1</font> wakes it up from its sleep phase and forces a poll of all services. <font SIZE="-1">SIGTERM</font> and <font SIZE="-1">SIGINT</font> will gracefully terminate a Monit daemon. The <font SIZE="-1">SIGTERM</font> signal is sent to a Monit daemon if Monit is started with the <i>quit</i> action argument. </p>
-<p> Sending a <font SIZE="-1">SIGHUP</font> signal to a running Monit daemon will force the daemon to reinitialize itself, specifically it will reread configuration, close and reopen log files. </p>
+<p> If a Monit daemon is running, SIGUSR1 wakes it up from its sleep phase and forces a poll of all services. SIGTERM and SIGINT will gracefully terminate a Monit daemon. The SIGTERM signal is sent to a Monit daemon if Monit is started with the <i>quit</i> action argument. </p>
+<p> Sending a SIGHUP signal to a running Monit daemon will force the daemon to reinitialize itself, specifically it will reread configuration, close and reopen log files. </p>
 <p> Running Monit in foreground while a background Monit daemon is running will wake up the daemon.  </p>
 <h2>NOTES</h2>
-<p> This is a very silent program. Use the -v switch if you want to see what Monit is doing, and tail -f the logfile. Optionally for testing purposes; you can start Monit with the -Iv switch. Monit will then print debug information to the console, to stop monit in this mode, simply press CTRL^C (i.e. <font SIZE="-1">SIGINT</font>) in the same console. </p>
+<p> This is a very silent program. Use the -v switch if you want to see what Monit is doing, and tail -f the logfile. Optionally for testing purposes; you can start Monit with the -Iv switch. Monit will then print debug information to the console, to stop monit in this mode, simply press CTRL^C (i.e. SIGINT) in the same console. </p>
 <p> The syntax (and parser) of the control file was inspired by Eric S. Raymond et al. excellent fetchmail program. Some portions of this man page also receive inspiration from the same authors.  </p>
 <h2>COPYRIGHT</h2>
-<p> Copyright (C) 2001-2015 by Tildeslash Ltd. All Rights Reserved. This product is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT</font> any warranty; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS</font> for a particular purpose.  </p>
+<p> Copyright (C) 2001-2015 by Tildeslash Ltd. All Rights Reserved. This product is distributed in the hope that it will be useful, but WITHOUT any warranty; without even the implied warranty of MERCHANTABILITY or FITNESS for a particular purpose.  </p>
 <h2>SEE ALSO</h2>
-<p> <font SIZE="-1">GNU</font> text utilities; <i><a href="/docs/linux/man/1-md5sum/">md5sum</a></i>(1); <i><a href="/docs/linux/man/1-sha1sum/">sha1sum</a></i>(1); <i><a href="/docs/linux/man/1-openssl/">openssl</a></i>(1); <i><a href="/docs/linux/man/7-glob/">glob</a></i>(7); <i><a href="/docs/linux/man/7-regex/">regex</a></i>(7); <i><a rel="nofollow" href="http://www.mmonit.com/">http://www.mmonit.com/</a></i> </p>
+<p> GNU text utilities; <i><a href="/docs/linux/man/1-md5sum/">md5sum</a></i>(1); <i><a href="/docs/linux/man/1-sha1sum/">sha1sum</a></i>(1); <i><a href="/docs/linux/man/1-openssl/">openssl</a></i>(1); <i><a href="/docs/linux/man/7-glob/">glob</a></i>(7); <i><a href="/docs/linux/man/7-regex/">regex</a></i>(7); <i><a rel="nofollow" href="http://www.mmonit.com/">http://www.mmonit.com/</a></i> </p>

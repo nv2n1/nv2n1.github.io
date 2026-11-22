@@ -11,7 +11,7 @@ description: "dsterf.f –"
 <p> dsterf.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dsterf</code> (N, D, E, INFO)<br />
+<p> subroutine <code>dsterf</code> (N, D, E, INFO)<br/>
  <i></i><code>DSTERF</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dsterf (integerN, double precision, dimension( * )D, double precision, dimension( * )E, integerINFO)</h3>

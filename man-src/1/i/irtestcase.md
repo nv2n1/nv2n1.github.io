@@ -10,8 +10,8 @@ description: "irtestcase – create or check decoding testcases."
 
 <p> irtestcase &#8211; create or check decoding testcases.</p>
 <h2>SYNOPSIS</h2>
-<p> <code>irtestcase [-l lircrc-file -p prog] &lt;socket&gt;</code><br />
- <code>irtestcase [-l lircrc-file -p prog] -t testdata &lt;socket&gt;</code><br />
+<p> <code>irtestcase [-l lircrc-file -p prog] &lt;socket&gt;</code><br/>
+ <code>irtestcase [-l lircrc-file -p prog] -t testdata &lt;socket&gt;</code><br/>
  <code>irtestcase [-v|-h|</code> </p>
 <h2>DESCRIPTION</h2>
 <p> irtestcase is a tool which can record keypresses from a remote together with the decoded values. Given output from another session, it can also verify that the decoding still works as expected. </p>

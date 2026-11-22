@@ -32,7 +32,7 @@ git - upload - pack[--[no - ] strict][--timeout = &lt;n&gt;][--stateless - rpc][
 <p> &#8211;http-backend-info-refs</p>
 <dl>
 <dt>
-</dt><dd> Used by <code><a href="/docs/linux/man/1-git-http-backend/">git-http-backend</a></code>(1) to serve up <code>$GIT_URL/info/refs?service=git-upload-pack</code> requests. See &quot;Smart Clients&quot; in m[blue]<code>the HTTP transfer protocols</code>m[]<font SIZE="-2">[1]</font> documentation and &quot;HTTP Transport&quot; in m[blue]<code>the Git Wire Protocol, Version 2</code>m[]<font SIZE="-2">[2]</font> documentation. Also understood by <code><a href="/docs/linux/man/1-git-receive-pack/">git-receive-pack</a></code>(1).</dd></dl>
+</dt><dd> Used by <code><a href="/docs/linux/man/1-git-http-backend/">git-http-backend</a></code>(1) to serve up <code>$GIT_URL/info/refs?service=git-upload-pack</code> requests. See &quot;Smart Clients&quot; in m[blue]<code>the HTTP transfer protocols</code>m[][1] documentation and &quot;HTTP Transport&quot; in m[blue]<code>the Git Wire Protocol, Version 2</code>m[][2] documentation. Also understood by <code><a href="/docs/linux/man/1-git-receive-pack/">git-receive-pack</a></code>(1).</dd></dl>
 <p> &lt;directory&gt;</p>
 <dl>
 <dt>

@@ -10,7 +10,7 @@ description: "dspr2.f –"
 <p>dspr2.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dspr2</code> (UPLO, N, ALPHA, X, INCX, Y, INCY, AP)<br />
+<p>subroutine <code>dspr2</code> (UPLO, N, ALPHA, X, INCX, Y, INCY, AP)<br/>
  <i></i><code>DSPR2</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dspr2 (characterUPLO, integerN, double precisionALPHA, double precision, dimension(*)X, integerINCX, double precision, dimension(*)Y, integerINCY, double precision, dimension(*)AP)</h3>

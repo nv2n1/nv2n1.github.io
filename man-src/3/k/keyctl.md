@@ -23,37 +23,37 @@ and then telling the linker it should link in the library:
 </dd></dl>
 </pre>
 <h2>KEYCTL FUNCTIONS</h2>
-<p> <code>keyctl_assume_authority</code>(3)<br />
- <code><a href="/docs/linux/man/3-keyctl_clear/">keyctl_clear</a></code>(3)<br />
- <code><a href="/docs/linux/man/3-keyctl_describe/">keyctl_describe</a></code>(3)<br />
- <code>keyctl_describe_alloc</code>(3)<br />
- <code><a href="/docs/linux/man/3-keyctl_get_keyring_id/">keyctl_get_keyring_ID</a></code>(3)<br />
- <code><a href="/docs/linux/man/3-keyctl_instantiate/">keyctl_instantiate</a></code>(3)<br />
- <code>keyctl_instantiate_iov</code>(3)<br />
- <code><a href="/docs/linux/man/3-keyctl_invalidate/">keyctl_invalidate</a></code>(3)<br />
- <code><a href="/docs/linux/man/3-keyctl_join_session_keyring/">keyctl_join_session_keyring</a></code>(3)<br />
- <code><a href="/docs/linux/man/3-keyctl_link/">keyctl_link</a></code>(3)<br />
- <code>keyctl_negate</code>(3)<br />
- <code><a href="/docs/linux/man/3-keyctl_read/">keyctl_read</a></code>(3)<br />
- <code>keyctl_read_alloc</code>(3)<br />
- <code>keyctl_reject</code>(3)<br />
- <code><a href="/docs/linux/man/3-keyctl_revoke/">keyctl_revoke</a></code>(3)<br />
- <code><a href="/docs/linux/man/3-keyctl_search/">keyctl_search</a></code>(3)<br />
- <code>keyctl_security</code>(3)<br />
- <code>keyctl_security_alloc</code>(3)<br />
- <code><a href="/docs/linux/man/3-keyctl_session_to_parent/">keyctl_session_to_parent</a></code>(3)<br />
- <code><a href="/docs/linux/man/3-keyctl_set_reqkey_keyring/">keyctl_set_reqkey_keyring</a></code>(3)<br />
- <code><a href="/docs/linux/man/3-keyctl_set_timeout/">keyctl_set_timeout</a></code>(3)<br />
- <code><a href="/docs/linux/man/3-keyctl_setperm/">keyctl_setperm</a></code>(3)<br />
- <code>keyctl_unlink</code>(3)<br />
+<p> <code>keyctl_assume_authority</code>(3)<br/>
+ <code><a href="/docs/linux/man/3-keyctl_clear/">keyctl_clear</a></code>(3)<br/>
+ <code><a href="/docs/linux/man/3-keyctl_describe/">keyctl_describe</a></code>(3)<br/>
+ <code>keyctl_describe_alloc</code>(3)<br/>
+ <code><a href="/docs/linux/man/3-keyctl_get_keyring_id/">keyctl_get_keyring_ID</a></code>(3)<br/>
+ <code><a href="/docs/linux/man/3-keyctl_instantiate/">keyctl_instantiate</a></code>(3)<br/>
+ <code>keyctl_instantiate_iov</code>(3)<br/>
+ <code><a href="/docs/linux/man/3-keyctl_invalidate/">keyctl_invalidate</a></code>(3)<br/>
+ <code><a href="/docs/linux/man/3-keyctl_join_session_keyring/">keyctl_join_session_keyring</a></code>(3)<br/>
+ <code><a href="/docs/linux/man/3-keyctl_link/">keyctl_link</a></code>(3)<br/>
+ <code>keyctl_negate</code>(3)<br/>
+ <code><a href="/docs/linux/man/3-keyctl_read/">keyctl_read</a></code>(3)<br/>
+ <code>keyctl_read_alloc</code>(3)<br/>
+ <code>keyctl_reject</code>(3)<br/>
+ <code><a href="/docs/linux/man/3-keyctl_revoke/">keyctl_revoke</a></code>(3)<br/>
+ <code><a href="/docs/linux/man/3-keyctl_search/">keyctl_search</a></code>(3)<br/>
+ <code>keyctl_security</code>(3)<br/>
+ <code>keyctl_security_alloc</code>(3)<br/>
+ <code><a href="/docs/linux/man/3-keyctl_session_to_parent/">keyctl_session_to_parent</a></code>(3)<br/>
+ <code><a href="/docs/linux/man/3-keyctl_set_reqkey_keyring/">keyctl_set_reqkey_keyring</a></code>(3)<br/>
+ <code><a href="/docs/linux/man/3-keyctl_set_timeout/">keyctl_set_timeout</a></code>(3)<br/>
+ <code><a href="/docs/linux/man/3-keyctl_setperm/">keyctl_setperm</a></code>(3)<br/>
+ <code>keyctl_unlink</code>(3)<br/>
  <code><a href="/docs/linux/man/3-keyctl_update/">keyctl_update</a></code>(3)</p>
 <h2>UTILITY FUNCTIONS</h2>
-<p> <code><a href="/docs/linux/man/3-find_key_by_type_and_name/">find_key_by_type_and_name</a></code>(3)<br />
- <code><a href="/docs/linux/man/3-recursive_key_scan/">recursive_key_scan</a></code>(3)<br />
+<p> <code><a href="/docs/linux/man/3-find_key_by_type_and_name/">find_key_by_type_and_name</a></code>(3)<br/>
+ <code><a href="/docs/linux/man/3-recursive_key_scan/">recursive_key_scan</a></code>(3)<br/>
  <code>recursive_session_key_scan</code>(3)</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-keyctl/">keyctl</a></code>(1),<br />
- <code><a href="/docs/linux/man/2-add_key/">add_key</a></code>(2),<br />
- <code><a href="/docs/linux/man/2-keyctl/">keyctl</a></code>(2),<br />
- <code><a href="/docs/linux/man/2-request_key/">request_key</a></code>(2),<br />
+<p> <code><a href="/docs/linux/man/1-keyctl/">keyctl</a></code>(1),<br/>
+ <code><a href="/docs/linux/man/2-add_key/">add_key</a></code>(2),<br/>
+ <code><a href="/docs/linux/man/2-keyctl/">keyctl</a></code>(2),<br/>
+ <code><a href="/docs/linux/man/2-request_key/">request_key</a></code>(2),<br/>
  <code><a href="/docs/linux/man/8-request-key/">request-key</a></code>(8) </p>

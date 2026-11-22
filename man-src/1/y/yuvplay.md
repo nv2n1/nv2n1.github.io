@@ -28,8 +28,8 @@ description: "yuvplay – Display YUV4MPEG2 streams (using SDL)"
 <dd> Set the verbosity of user feedback. Default is &quot;1&quot;: errors, warnings, and info messages. </dd>
 </dl>
 <h2>AUTHOR</h2>
-<p> This man page was originally written by Ronald Bultje (and since edited by Matt Marjanovic).<br />
- If you have questions, remarks, problems or you just want to contact the developers, the main mailing list for the MJPEG-tools is:<br />
+<p> This man page was originally written by Ronald Bultje (and since edited by Matt Marjanovic).<br/>
+ If you have questions, remarks, problems or you just want to contact the developers, the main mailing list for the MJPEG-tools is:<br/>
 &nbsp;<wbr>&nbsp;<wbr><i>mjpeg-users [at] lists.sourceforge.net</i> </p>
 <dl>
 <dt>For more info, see our website at</dt>

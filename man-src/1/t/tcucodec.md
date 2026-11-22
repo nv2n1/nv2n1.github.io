@@ -86,31 +86,31 @@ description: "tcucodec – popular encoders and decoders"
 <p> Options feature the following. </p>
 <dl>
 <dt>
-</dt><dd> <code>-d</code> : perform decoding (unescaping), not encoding (escaping).<br />
- <code>-br</code> : break up URL or XML into elements.<br />
- <code>-rs </code><i>base</i> : specify the base URL and resolve the relative URL.<br />
- <code>-en </code><i>name</i> : specify the input encoding, which is UTF-8 by default.<br />
- <code>-q</code> : use quoted-printable encoding, which is Base64 by default.<br />
- <code>-on</code> : output the charset name when decoding.<br />
- <code>-bd</code> : perform MIME parsing and output the body.<br />
- <code>-hd</code> : perform MIME parsing and output the headers.<br />
- <code>-part </code><i>num</i> : perform MIME parsing and output the specified part.<br />
- <code>-bwt</code> : convert by BWT as preprocessing.<br />
- <code>-gz</code> : use GZIP format.<br />
- <code>-crc</code> : use CRC32 function.<br />
- <code>-js</code> : use JSON compatible format.<br />
- <code>-un</code> : perform UCS normalization.<br />
- <code>-kw </code><i>str</i> : generate KWIC string.<br />
- <code>-ch </code><i>num</i> : use consistent hashing function.<br />
- <code>-key </code><i>str</i> : specify the cipher key.<br />
- <code>-ds </code><i>str</i> : specify the time.<br />
- <code>-jl </code><i>num</i> : specify the jet lag.<br />
- <code>-wf</code> : format the output in W3CDTF.<br />
- <code>-rf</code> : format the output in RFC 1123 format.<br />
- <code>-var </code><i>name</i> <i>value</i> : specify a template variable.<br />
- <code>-v</code> : show the version number of Tokyo Cabinet.<br />
- <code>-i</code> : show options to include the headers of Tokyo Cabinet.<br />
- <code>-l</code> : show options to link the library of Tokyo Cabinet.<br />
+</dt><dd> <code>-d</code> : perform decoding (unescaping), not encoding (escaping).<br/>
+ <code>-br</code> : break up URL or XML into elements.<br/>
+ <code>-rs </code><i>base</i> : specify the base URL and resolve the relative URL.<br/>
+ <code>-en </code><i>name</i> : specify the input encoding, which is UTF-8 by default.<br/>
+ <code>-q</code> : use quoted-printable encoding, which is Base64 by default.<br/>
+ <code>-on</code> : output the charset name when decoding.<br/>
+ <code>-bd</code> : perform MIME parsing and output the body.<br/>
+ <code>-hd</code> : perform MIME parsing and output the headers.<br/>
+ <code>-part </code><i>num</i> : perform MIME parsing and output the specified part.<br/>
+ <code>-bwt</code> : convert by BWT as preprocessing.<br/>
+ <code>-gz</code> : use GZIP format.<br/>
+ <code>-crc</code> : use CRC32 function.<br/>
+ <code>-js</code> : use JSON compatible format.<br/>
+ <code>-un</code> : perform UCS normalization.<br/>
+ <code>-kw </code><i>str</i> : generate KWIC string.<br/>
+ <code>-ch </code><i>num</i> : use consistent hashing function.<br/>
+ <code>-key </code><i>str</i> : specify the cipher key.<br/>
+ <code>-ds </code><i>str</i> : specify the time.<br/>
+ <code>-jl </code><i>num</i> : specify the jet lag.<br/>
+ <code>-wf</code> : format the output in W3CDTF.<br/>
+ <code>-rf</code> : format the output in RFC 1123 format.<br/>
+ <code>-var </code><i>name</i> <i>value</i> : specify a template variable.<br/>
+ <code>-v</code> : show the version number of Tokyo Cabinet.<br/>
+ <code>-i</code> : show options to include the headers of Tokyo Cabinet.<br/>
+ <code>-l</code> : show options to link the library of Tokyo Cabinet.<br/>
  <code>-p</code> : show the directory path of the commands of Tokyo Cabinet.
 </dd></dl>
 <p> This command returns 0 on success, another on failure. </p>

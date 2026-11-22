@@ -11,7 +11,7 @@ description: "ssytri.f –"
 <p> ssytri.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>ssytri</code> (UPLO, N, A, LDA, IPIV, WORK, INFO)<br />
+<p> subroutine <code>ssytri</code> (UPLO, N, A, LDA, IPIV, WORK, INFO)<br/>
  <i></i><code>SSYTRI</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ssytri (characterUPLO, integerN, real, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, real, dimension( * )WORK, integerINFO)</h3>

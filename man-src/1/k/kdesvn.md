@@ -116,7 +116,7 @@ description: "kdesvn – A Subversion client for KDE (standalone application)"
 <dd> &lt;file.qss&gt; applies the Qt stylesheet to the application widgets</dd></dl>
 <h3></h3>
 <h2>EXAMPLE</h2>
-<p> kdesvn file:///path/to/local/working/copy<br />
+<p> kdesvn file:///path/to/local/working/copy<br/>
  kdesvn <a rel="nofollow" href="http://remote/svn/project/trunk">http://remote/svn/project/trunk</a> </p>
 <h2>SEE ALSO</h2>
 <p> Full user documentation is available through the KDE Help Center. You can also enter the URL <code>help:/kdesvn/</code> directly into konqueror or you can run <code>`khelpcenter help:/kdesvn/&#8217;</code> from the command-line. </p>

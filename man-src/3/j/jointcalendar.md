@@ -12,10 +12,10 @@ description: "ql/time/calendars/jointcalendar.hpp – Joint calendar."
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/time/calendar.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>JointCalendar</code><br />
+<p> class <code>JointCalendar</code><br/>
  <i>Joint calendar. </i></p>
 <h3>Enumerations</h3>
-<p> enum <code>JointCalendarRule</code> { <code>JoinHolidays</code>, <code>JoinBusinessDays</code> }<br />
+<p> enum <code>JointCalendarRule</code> { <code>JoinHolidays</code>, <code>JoinBusinessDays</code> }<br/>
  <i>rules for joining calendars </i></p>
 <h2>Detailed Description</h2>
 <p> Joint calendar. </p>

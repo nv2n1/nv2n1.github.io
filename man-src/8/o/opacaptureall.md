@@ -13,8 +13,8 @@ description: "opacaptureall"
 <p> <code>For Chassis:</code> When a chassis opacaptureall is performed, opacapture is run on each chassis and its output is saved to upload_dir/<i>chassisname</i>/<i>file</i> on the local system. The default file name is chassiscapture. </p>
 <p> For both host and chassis capture, the uploaded captures are combined into a .tgz file with the file name specified and the suffix .all.tgz added.</p>
 <h2>Syntax</h2>
-<p>opacaptureall [-C] [-p] [-f <i>hostfile</i>] [-F <i>chassisfile</i>]<br />
- [-h &#8216;<i>hosts</i>&#8216;]<br />
+<p>opacaptureall [-C] [-p] [-f <i>hostfile</i>] [-F <i>chassisfile</i>]<br/>
+ [-h &#8216;<i>hosts</i>&#8216;]<br/>
  [-H &#8216;<i>chassis</i>&#8216;] [-t <i>portsfile</i>] [-d <i>upload_dir</i>] [-S] [-D <i>detail_level</i>] [ <i>file</i>]</p>
 <h2>Options</h2>
 <dl>
@@ -73,23 +73,23 @@ description: "opacaptureall"
 </dl>
 <h2>Examples</h2>
 <h2>Host Capture Examples</h2>
-<p>opacaptureall<br />
- # Creates a hostcapture directory in upload_dir/hostname/ for each host in<br />
+<p>opacaptureall<br/>
+ # Creates a hostcapture directory in upload_dir/hostname/ for each host in<br/>
  /etc/sysconfig/opa/hosts file, then creates hostcapture.all.tgz. </p>
-<p> opacaptureall mycapture<br />
- # Creates a mycapture directory in upload_dir/hostname/ for each host in<br />
+<p> opacaptureall mycapture<br/>
+ # Creates a mycapture directory in upload_dir/hostname/ for each host in<br/>
  /etc/sysconfig/opa/hosts file, then creates mycapture.all.tgz. </p>
-<p> opacaptureall -h #8217#180;arwen elrond&acute; 030127capture<br />
- # Gets the list of hosts from arwen elrond file and creates 030127cap#8217#8208;<br />
+<p> opacaptureall -h #8217#180;arwen elrond&acute; 030127capture<br/>
+ # Gets the list of hosts from arwen elrond file and creates 030127cap#8217#8208;<br/>
  ture.tgz file.</p>
 <h2>Chassis Capture Examples</h2>
-<p>opacaptureall -C<br />
- # Creates a chassiscapture file in upload_dir/chassisname/ for each chassis<br />
+<p>opacaptureall -C<br/>
+ # Creates a chassiscapture file in upload_dir/chassisname/ for each chassis<br/>
  in /etc/sysconfig/opa/chassis file, then creates chassiscapture.all.tgz. </p>
-<p> opacaptureall -C mycapture<br />
- # Creates a mycapture.tgz file in upload_dir/chassisname/ for each chassis<br />
+<p> opacaptureall -C mycapture<br/>
+ # Creates a mycapture.tgz file in upload_dir/chassisname/ for each chassis<br/>
  in /etc/sysconfig/opa/chassis file, then creates mycapture.all.tgz. </p>
-<p> opacaptureall -C -H #8217#180;chassis1 chassis2&acute; 030127capture<br />
+<p> opacaptureall -C -H #8217#180;chassis1 chassis2&acute; 030127capture<br/>
  # Captures from chassis1 and chassis2, and creates 030127capture.tgz file.</p>
 <h2>Environment Variables</h2>
 <p>The following environment variables are also used by this command:</p>

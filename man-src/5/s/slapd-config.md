@@ -191,8 +191,8 @@ description: "slapd-config – configuration backend to slapd"
 <dd>Enable/disable client name unverified reverse lookup (default is <code>FALSE</code> if compiled with &#8211;enable-rlookups).</dd>
 <dt><code>olcRootDSE: &lt;file&gt;</code></dt>
 <dd>Specify the name of an <a href="/docs/linux/man/5-ldif/">LDIF</a>(5) file containing user defined attributes for the root DSE. These attributes are returned in addition to the attributes normally produced by slapd. </dd>
-<p> The root DSE is an entry with information about the server and its capabilities, in operational attributes. It has the empty DN, and can be read with e.g.:<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> ldapsearch -x -b &quot;&quot; -s base &quot;+&quot;<br />
+<p> The root DSE is an entry with information about the server and its capabilities, in operational attributes. It has the empty DN, and can be read with e.g.:<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> ldapsearch -x -b &quot;&quot; -s base &quot;+&quot;<br/>
  See RFC 4512 section 5.1 for details.</p>
 <dt><code>olcSaslAuxprops: &lt;plugin&gt; [&#8230;]</code></dt>
 <dd>Specify which auxprop plugins to use for authentication lookups. The default is empty, which just uses slapd&#8217;s internal support. Usually no other auxprop plugins are needed.</dd>
@@ -307,17 +307,17 @@ description: "slapd-config – configuration backend to slapd"
 <h2>Schema Options</h2>
 <p>Schema definitions are created as entries in the <code>cn=schema,cn=config</code> subtree. These entries must have the olcSchemaConfig objectClass. As noted above, the actual <code>cn=schema,cn=config</code> entry is predefined and any values specified for it are ignored. </p>
 <dl>
-<dt> <code>olcAttributetypes: (&nbsp;<wbr>&lt;oid&gt;<br />
+<dt> <code>olcAttributetypes: (&nbsp;<wbr>&lt;oid&gt;<br/>
 &nbsp;<wbr>[NAME&nbsp;<wbr>&lt;name&gt;]&nbsp;<wbr>[DESC&nbsp;<wbr>&lt;description&gt;]&nbsp;<wbr>[OBSOLETE]&nbsp;<wbr>[SUP&nbsp;<wbr>&lt;oid&gt;]&nbsp;<wbr>[EQUALITY&nbsp;<wbr>&lt;oid&gt;]&nbsp;<wbr>[ORDERING&nbsp;<wbr>&lt;oid&gt;]&nbsp;<wbr>[SUBSTR&nbsp;<wbr>&lt;oid&gt;]&nbsp;<wbr>[SYNTAX&nbsp;<wbr>&lt;oidlen&gt;]&nbsp;<wbr>[SINGLE-VALUE]&nbsp;<wbr>[COLLECTIVE]&nbsp;<wbr>[NO-USER-MODIFICATION]&nbsp;<wbr>[USAGE&nbsp;<wbr>&lt;attributeUsage&gt;]&nbsp;<wbr>)</code></dt>
 <dl>
 <dd>
 </dd><dd>Specify an attribute type using the LDAPv3 syntax defined in RFC 4512. The slapd parser extends the RFC 4512 definition by allowing string forms as well as numeric OIDs to be used for the attribute OID and attribute syntax OID. (See the <code>olcObjectIdentifier</code> description.)</dd></dl>
-<dt> <code>olcDitContentRules: (&nbsp;<wbr>&lt;oid&gt;<br />
+<dt> <code>olcDitContentRules: (&nbsp;<wbr>&lt;oid&gt;<br/>
 &nbsp;<wbr>[NAME&nbsp;<wbr>&lt;name&gt;]&nbsp;<wbr>[DESC&nbsp;<wbr>&lt;description&gt;]&nbsp;<wbr>[OBSOLETE]&nbsp;<wbr>[AUX&nbsp;<wbr>&lt;oids&gt;]&nbsp;<wbr>[MUST&nbsp;<wbr>&lt;oids&gt;]&nbsp;<wbr>[MAY&nbsp;<wbr>&lt;oids&gt;]&nbsp;<wbr>[NOT&nbsp;<wbr>&lt;oids&gt;]&nbsp;<wbr>)</code></dt>
 <dl>
 <dd>
 </dd><dd>Specify an DIT Content Rule using the LDAPv3 syntax defined in RFC 4512. The slapd parser extends the RFC 4512 definition by allowing string forms as well as numeric OIDs to be used for the attribute OID and attribute syntax OID. (See the <code>olcObjectIdentifier</code> description.)</dd></dl>
-<dt> <code>olcObjectClasses: (&nbsp;<wbr>&lt;oid&gt;<br />
+<dt> <code>olcObjectClasses: (&nbsp;<wbr>&lt;oid&gt;<br/>
 &nbsp;<wbr>[NAME&nbsp;<wbr>&lt;name&gt;]&nbsp;<wbr>[DESC&nbsp;<wbr>&lt;description&gt;]&nbsp;<wbr>[OBSOLETE]&nbsp;<wbr>[SUP&nbsp;<wbr>&lt;oids&gt;]&nbsp;<wbr>[{&nbsp;<wbr>ABSTRACT | STRUCTURAL | AUXILIARY&nbsp;<wbr>}]&nbsp;<wbr>[MUST&nbsp;<wbr>&lt;oids&gt;]&nbsp;<wbr>[MAY&nbsp;<wbr>&lt;oids&gt;]&nbsp;<wbr>)</code></dt>
 <dl>
 <dd>

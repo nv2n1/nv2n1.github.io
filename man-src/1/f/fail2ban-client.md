@@ -222,7 +222,7 @@ description: "fail2ban-client – configure and control the server"
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to <a rel="nofollow" href="https://github.com/fail2ban/fail2ban/issues">https://github.com/fail2ban/fail2ban/issues</a></p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2004-2008 Cyril Jaquier, 2008- Fail2Ban Contributors<br />
+<p> Copyright &#169; 2004-2008 Cyril Jaquier, 2008- Fail2Ban Contributors<br/>
  Copyright of modifications held by their respective authors. Licensed under the GNU General Public License v2 (GPL).</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-fail2ban-server/">fail2ban-server</a>(1) <a href="/docs/linux/man/5-jail-conf/">jail.conf</a>(5) </p>

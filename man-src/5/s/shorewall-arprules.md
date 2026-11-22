@@ -64,7 +64,7 @@ description: "arprules – Shorewall ARP rules file"
 <dd>Mask for MAC address; must be specified as 6 hexadecimal numbers separated by colons.</dd></dl>
 <p> When &#8216;!&#8217; is specified, the test is inverted. If not specified, matches only frames originating on the firewall itself.</p>
 <dl>
-<dd><font SIZE="+1"> <code>Caution</code> </font><br />
+<dd> <code>Caution</code> <br/>
  Either SOURCE or DEST must be specified.  <code>DEST</code> &#8211; <code>[</code><i>interface</i><code>[:[!]</code><i>ipaddress</i><code>[/ip</code><i>mask</i><code>][:[!]</code><i>macaddress</i><code>[/</code><i>macmask</i><code>]]]]</code></dd>
 <dl>
 <dd>Where <i>interface</i></dd>
@@ -84,7 +84,7 @@ description: "arprules – Shorewall ARP rules file"
 <dd>Mask for MAC address; must be specified as 6 hexadecimal numbers separated by colons.</dd></dl>
 <p> When &#8216;!&#8217; is specified, the test is inverted and the rule matches frames which do not match the specified address/mask. If not specified, matches only frames originating on the firewall itself. If both SOURCE and DEST are specified, then both interfaces must be bridge ports on the same bridge.</p>
 <dl>
-<dd><font SIZE="+1"> <code>Caution</code> </font><br />
+<dd> <code>Caution</code> <br/>
  Either SOURCE or DEST must be specified.  OPCODE &#8211; [[!]<i>opcode</i>]</dd>
 <dl>
 <dd>Optional. Describes the type of frame. Possible <i>opcode</i> values are: 1</dd>

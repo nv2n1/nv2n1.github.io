@@ -254,12 +254,12 @@ description: "bcftools – utilities for variant calling and manipulating VCFs a
 <p> <code>-a, &#8211;annotations</code> <i>file</i></p>
 <dl>
 <dt>
-</dt><dd> Bgzip-compressed and tabix-indexed file with annotations. The file can be VCF, BED, or a tab-delimited file with mandatory columns CHROM, POS (or, alternatively, FROM and TO), optional columns REF and ALT, and arbitrary number of annotation columns. BED files are expected to have the &quot;.bed&quot; or &quot;.bed.gz&quot; suffix (case-insensitive), otherwise a tab-delimited file is assumed. Note that in case of tab-delimited file, the coordinates POS, FROM and TO are one-based and inclusive. When REF and ALT are present, only matching VCF records will be annotated. If the END coordinate is present in the annotation file and given on command line as &quot;-c ~INFO/END&quot;, then VCF records will be matched also by the INFO/END coordinate. If ID is present in the annotation file and given as &quot;-c ~ID&quot;, then VCF records will be matched also by the ID column. ~<br />
- ~<br />
- When multiple ALT alleles are present in the annotation file (given as comma-separated list of alleles), at least one must match one of the alleles in the corresponding VCF record. Similarly, at least one alternate allele from a multi-allelic VCF record must be present in the annotation file. ~<br />
- ~<br />
- Missing values can be added by providing &quot;.&quot; in place of actual value and using the missing value modifier with <code>-c</code>, such as &quot;.TAG&quot;. ~<br />
- ~<br />
+</dt><dd> Bgzip-compressed and tabix-indexed file with annotations. The file can be VCF, BED, or a tab-delimited file with mandatory columns CHROM, POS (or, alternatively, FROM and TO), optional columns REF and ALT, and arbitrary number of annotation columns. BED files are expected to have the &quot;.bed&quot; or &quot;.bed.gz&quot; suffix (case-insensitive), otherwise a tab-delimited file is assumed. Note that in case of tab-delimited file, the coordinates POS, FROM and TO are one-based and inclusive. When REF and ALT are present, only matching VCF records will be annotated. If the END coordinate is present in the annotation file and given on command line as &quot;-c ~INFO/END&quot;, then VCF records will be matched also by the INFO/END coordinate. If ID is present in the annotation file and given as &quot;-c ~ID&quot;, then VCF records will be matched also by the ID column. ~<br/>
+ ~<br/>
+ When multiple ALT alleles are present in the annotation file (given as comma-separated list of alleles), at least one must match one of the alleles in the corresponding VCF record. Similarly, at least one alternate allele from a multi-allelic VCF record must be present in the annotation file. ~<br/>
+ ~<br/>
+ Missing values can be added by providing &quot;.&quot; in place of actual value and using the missing value modifier with <code>-c</code>, such as &quot;.TAG&quot;. ~<br/>
+ ~<br/>
  Note that flag types, such as &quot;INFO/FLAG&quot;, can be annotated by including a field with the value &quot;1&quot; to set the flag, &quot;0&quot; to remove it, or &quot;.&quot; to keep existing flags. See also <code>-c, &#8211;columns</code> and <code>-h, &#8211;header-lines</code>.</dd></dl>
 <dl>
 <dt>
@@ -273,16 +273,16 @@ description: "bcftools – utilities for variant calling and manipulating VCFs a
 <p> <code>-c, &#8211;columns</code> <i>list</i></p>
 <dl>
 <dt>
-</dt><dd> Comma-separated list of columns or tags to carry over from the annotation file (see also <code>-a, &#8211;annotations</code>). If the annotation file is not a VCF/BCF, <i>list</i> describes the columns of the annotation file and must include CHROM, POS (or, alternatively, FROM and TO), and optionally REF and ALT. Unused columns which should be ignored can be indicated by &quot;-&quot;. ~<br />
- ~<br />
- If the annotation file is a VCF/BCF, only the edited columns/tags must be present and their order does not matter. The columns ID, QUAL, FILTER, INFO and FORMAT can be edited, where INFO tags can be written both as &quot;INFO/TAG&quot; or simply &quot;TAG&quot;, and FORMAT tags can be written as &quot;FORMAT/TAG&quot; or &quot;FMT/TAG&quot;. The imported VCF annotations can be renamed as &quot;DST_TAG:=SRC_TAG&quot; or &quot;FMT/DST_TAG:=FMT/SRC_TAG&quot;. ~<br />
- ~<br />
- To carry over all INFO annotations, use &quot;INFO&quot;. To add all INFO annotations except &quot;TAG&quot;, use &quot;^INFO/TAG&quot;. By default, existing values are replaced. ~<br />
- ~<br />
- By default, existing tags are overwritten unless the source value is a missing value (i.e. &quot;.&quot;). If also missing values should be carried over (and overwrite existing tags), use &quot;.TAG&quot; instead of &quot;TAG&quot;. To add annotations without overwriting existing values (that is, to add tags that are absent or to add values to existing tags with missing values), use &quot;+TAG&quot; instead of &quot;TAG&quot;. These can be combined, for example &quot;.+TAG&quot; can be used to add TAG even if the source value is missing but only if TAG does not exist in the target file; existing tags will not be overwritten. To append to existing values (rather than replacing or leaving untouched), use &quot;=TAG&quot; (instead of &quot;TAG&quot; or &quot;+TAG&quot;). To replace only existing values without modifying missing annotations, use &quot;-TAG&quot;. To match the record also by ID or INFO/END, in addition to REF and ALT, use &quot;~ID&quot; or &quot;~INFO/END&quot;. If position needs to be replaced, mark the column with the new position as &quot;~POS&quot;. ~<br />
- ~<br />
- If the annotation file is not a VCF/BCF, all new annotations must be defined via <code>-h, &#8211;header-lines</code>. ~<br />
- ~<br />
+</dt><dd> Comma-separated list of columns or tags to carry over from the annotation file (see also <code>-a, &#8211;annotations</code>). If the annotation file is not a VCF/BCF, <i>list</i> describes the columns of the annotation file and must include CHROM, POS (or, alternatively, FROM and TO), and optionally REF and ALT. Unused columns which should be ignored can be indicated by &quot;-&quot;. ~<br/>
+ ~<br/>
+ If the annotation file is a VCF/BCF, only the edited columns/tags must be present and their order does not matter. The columns ID, QUAL, FILTER, INFO and FORMAT can be edited, where INFO tags can be written both as &quot;INFO/TAG&quot; or simply &quot;TAG&quot;, and FORMAT tags can be written as &quot;FORMAT/TAG&quot; or &quot;FMT/TAG&quot;. The imported VCF annotations can be renamed as &quot;DST_TAG:=SRC_TAG&quot; or &quot;FMT/DST_TAG:=FMT/SRC_TAG&quot;. ~<br/>
+ ~<br/>
+ To carry over all INFO annotations, use &quot;INFO&quot;. To add all INFO annotations except &quot;TAG&quot;, use &quot;^INFO/TAG&quot;. By default, existing values are replaced. ~<br/>
+ ~<br/>
+ By default, existing tags are overwritten unless the source value is a missing value (i.e. &quot;.&quot;). If also missing values should be carried over (and overwrite existing tags), use &quot;.TAG&quot; instead of &quot;TAG&quot;. To add annotations without overwriting existing values (that is, to add tags that are absent or to add values to existing tags with missing values), use &quot;+TAG&quot; instead of &quot;TAG&quot;. These can be combined, for example &quot;.+TAG&quot; can be used to add TAG even if the source value is missing but only if TAG does not exist in the target file; existing tags will not be overwritten. To append to existing values (rather than replacing or leaving untouched), use &quot;=TAG&quot; (instead of &quot;TAG&quot; or &quot;+TAG&quot;). To replace only existing values without modifying missing annotations, use &quot;-TAG&quot;. To match the record also by ID or INFO/END, in addition to REF and ALT, use &quot;~ID&quot; or &quot;~INFO/END&quot;. If position needs to be replaced, mark the column with the new position as &quot;~POS&quot;. ~<br/>
+ ~<br/>
+ If the annotation file is not a VCF/BCF, all new annotations must be defined via <code>-h, &#8211;header-lines</code>. ~<br/>
+ ~<br/>
  See also the <code>-l, &#8211;merge-logic</code> option.</dd></dl>
 <p> <code>-C, &#8211;columns-file</code> <i>file</i></p>
 <dl>
@@ -707,8 +707,8 @@ bcftools query - f '%CHROM	%POS	%REF	%ALT	%AN	%AC
 <p> <code>-d, &#8211;rm-dups</code> <i>snps</i>|<i>indels</i>|<i>both</i>|<i>all</i>|<i>exact</i></p>
 <dl>
 <dt>
-</dt><dd> Output duplicate records of specified type present in multiple files only once. Note that records duplicate within one file are not removed with this option, for that use <code>bcftools norm -d</code> instead.<br />
- In other words, the default behavior of the program is similar to unix &quot;cat&quot; in that when two files contain a record with the same position, that position will appear twice on output. With <code>-d</code>, every line that finds a matching record in another file will be printed only once.<br />
+</dt><dd> Output duplicate records of specified type present in multiple files only once. Note that records duplicate within one file are not removed with this option, for that use <code>bcftools norm -d</code> instead.<br/>
+ In other words, the default behavior of the program is similar to unix &quot;cat&quot; in that when two files contain a record with the same position, that position will appear twice on output. With <code>-d</code>, every line that finds a matching record in another file will be printed only once.<br/>
  Requires <code>-a, &#8211;allow-overlaps</code>.</dd></dl>
 <p> <code>-D, &#8211;remove-duplicates</code></p>
 <dl>
@@ -950,23 +950,23 @@ bcftools query - f '%CHROM	%POS	%REF	%ALT	%AN	%AC
 <p> <code>-G, &#8211;gensample2vcf</code> <i>prefix</i> or <i>gen-file</i>,<i>sample-file</i></p>
 <dl>
 <dt>
-</dt><dd> convert IMPUTE2 output to VCF. One of the ID columns (&quot;SNP ID&quot; or &quot;rsID&quot; in <i></i> &lt;<a rel="nofollow" href="https://www.cog-genomics.org/plink/2.0/formats#gen">https://www.cog-genomics.org/plink/2.0/formats#gen</a>&gt;) must be of the form &quot;CHROM:POS_REF_ALT&quot; to detect possible strand swaps. ~<br />
- When the <code>&#8211;vcf-ids</code> option is given, the other column (autodetected) is used to fill the ID column of the VCF. ~<br />
+</dt><dd> convert IMPUTE2 output to VCF. One of the ID columns (&quot;SNP ID&quot; or &quot;rsID&quot; in <i></i> &lt;<a rel="nofollow" href="https://www.cog-genomics.org/plink/2.0/formats#gen">https://www.cog-genomics.org/plink/2.0/formats#gen</a>&gt;) must be of the form &quot;CHROM:POS_REF_ALT&quot; to detect possible strand swaps. ~<br/>
+ When the <code>&#8211;vcf-ids</code> option is given, the other column (autodetected) is used to fill the ID column of the VCF. ~<br/>
  See also <code>-g</code> and <code>&#8211;3N6</code> options.</dd></dl>
 <p> <code>-g, &#8211;gensample</code> <i>prefix</i> or <i>gen-file</i>,<i>sample-file</i></p>
 <dl>
 <dt>
-</dt><dd> convert from VCF to gen/sample format used by IMPUTE2 and SHAPEIT. The columns of .gen file format are ID1,ID2,POS,A,B followed by three genotype probabilities P(AA), P(AB), P(BB) for each sample. In order to prevent strand swaps, the program uses IDs of the form &quot;CHROM:POS_REF_ALT&quot;. When the <code>&#8211;vcf-ids</code> option is given, the second column is set to match the ID column of the VCF. ~<br />
- See also <code>-G</code> and <code>&#8211;3N6</code> options. ~<br />
+</dt><dd> convert from VCF to gen/sample format used by IMPUTE2 and SHAPEIT. The columns of .gen file format are ID1,ID2,POS,A,B followed by three genotype probabilities P(AA), P(AB), P(BB) for each sample. In order to prevent strand swaps, the program uses IDs of the form &quot;CHROM:POS_REF_ALT&quot;. When the <code>&#8211;vcf-ids</code> option is given, the second column is set to match the ID column of the VCF. ~<br/>
+ See also <code>-G</code> and <code>&#8211;3N6</code> options. ~<br/>
  The file .gen and .sample file format are:</dd></dl>
 <dl>
 <dt>
 </dt><dd>
-.gen(with&#8211; 3N6 &#8211;vcf &#8211; ids)&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -chr1 1 : 111485207_G_A rsID1 111485207 G A 0 1 0 0 1 0 chr1 1 : 111494194_C_T rsID2 111494194 C T 0 1 0 0 0 1<br />
-    .gen(with&#8211; vcf &#8211; ids)&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -1 : 111485207_G_A rsID1 111485207 G A 0 1 0 0 1 0 1 : 111494194_C_T rsID2 111494194 C T 0 1 0 0 0 1<br />
-    .gen(the default)&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;1 : 111485207_G_A 1 : 111485207_G_A 111485207 G A 0 1 0 0 1 0 1 : 111494194_C_T 1 : 111494194_C_T 111494194 C T 0 1 0 0 0 1<br />
-    .sample<br />
-    &#8212; &#8212; &#8212; -ID_1 ID_2 missing<br />
+.gen(with&#8211; 3N6 &#8211;vcf &#8211; ids)&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -chr1 1 : 111485207_G_A rsID1 111485207 G A 0 1 0 0 1 0 chr1 1 : 111494194_C_T rsID2 111494194 C T 0 1 0 0 0 1<br/>
+    .gen(with&#8211; vcf &#8211; ids)&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -1 : 111485207_G_A rsID1 111485207 G A 0 1 0 0 1 0 1 : 111494194_C_T rsID2 111494194 C T 0 1 0 0 0 1<br/>
+    .gen(the default)&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;1 : 111485207_G_A 1 : 111485207_G_A 111485207 G A 0 1 0 0 1 0 1 : 111494194_C_T 1 : 111494194_C_T 111494194 C T 0 1 0 0 0 1<br/>
+    .sample<br/>
+    &#8212; &#8212; &#8212; -ID_1 ID_2 missing<br/>
     0 0 0 sample1 sample1 0 sample2 sample2 0
 </dd></dl>
 <p> <code>&#8211;3N6</code></p>
@@ -1010,8 +1010,8 @@ bcftools query - f '%CHROM	%POS	%REF	%ALT	%AN	%AC
 <dl>
 <dt>
 </dt><dd>
-.hap(with&#8211; vcf &#8211; ids)&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -1 : 111485207_G_A rsID1 111485207 G A 0 1 0 0 1 : 111495231_A_ &lt; DEL &gt; _111495784 rsID3 111495231 A&lt;DEL&gt; 0 0 1 0<br />
-                                                                                                                                .hap(the default)&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;1 1 : 111485207_G_A 111485207 G A 0 1 0 0 1 1 : 111495231_A_ &lt; DEL<br />
+.hap(with&#8211; vcf &#8211; ids)&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; -1 : 111485207_G_A rsID1 111485207 G A 0 1 0 0 1 : 111495231_A_ &lt; DEL &gt; _111495784 rsID3 111495231 A&lt;DEL&gt; 0 0 1 0<br/>
+                                                                                                                                .hap(the default)&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;1 1 : 111485207_G_A 111485207 G A 0 1 0 0 1 1 : 111495231_A_ &lt; DEL<br/>
     &gt; _111495784 111495231 A&lt;DEL&gt; 0 0 1 0
 </dd></dl>
 <p> <code>&#8211;hapsample</code> <i>prefix</i> or <i>hap-file</i>,<i>sample-file</i></p>
@@ -1050,9 +1050,9 @@ bcftools query - f '%CHROM	%POS	%REF	%ALT	%AN	%AC
 <dl>
 <dt>
 </dt><dd>
-.hap&#8211; &#8212; -0 1 0 0 1 0 0 1 0 0 0 1<br />
-    .legend&#8211; &#8212; &#8212; -id position a0 a1 1 : 111485207_G_A 111485207 G A 1 : 111494194_C_T 111494194 C T<br />
-    .sample&#8211; &#8212; &#8212; -sample population group sex<br />
+.hap&#8211; &#8212; -0 1 0 0 1 0 0 1 0 0 0 1<br/>
+    .legend&#8211; &#8212; &#8212; -id position a0 a1 1 : 111485207_G_A 111485207 G A 1 : 111494194_C_T 111494194 C T<br/>
+    .sample&#8211; &#8212; &#8212; -sample population group sex<br/>
         sample1 sample1 sample1 2 sample2 sample2 sample2 2
 </dd></dl>
 <p> <code>&#8211;haploid2diploid</code></p>
@@ -1139,31 +1139,31 @@ bcftools convert -c ID,CHROM,POS,AA -s SampleName -f 23andme-ref.fa --tsv2vcf 23
 <dl>
 <dt>
 </dt><dd>
-#The program looks for &#8220;CDS&#8221;, &#8220;exon&#8221;, &#8220;three_prime_UTR&#8221; and &#8220;five_prime_UTR&#8221; lines,<br />
-#looks up their parent transcript(determined from the &#8220;Parent=transcript:&#8221; attribute),<br />
-#the gene(determined from the transcript&#8217;s &#8220;Parent=gene:&#8221; attribute), and the biotype<br />
-#(the most interesting is &#8220;protein_coding&#8221;).<br />
-#<br />
-#Attributes required for<br />
-#gene lines:<br />
-#- ID = gene : &lt;gene_id&gt;<br />
-#- biotype = &lt;biotype&gt;<br />
-#- Name = &lt;gene_name&gt;[optional]<br />
-#<br />
-#transcript lines:<br />
-#- ID = transcript : &lt;transcript_id&gt;<br />
-#- Parent = gene : &lt;gene_id&gt;<br />
-#- biotype = &lt;biotype&gt;<br />
-#<br />
-#other lines(CDS, exon, five_prime_UTR, three_prime_UTR):<br />
-#- Parent = transcript : &lt;transcript_id&gt;<br />
-#<br />
-#Supported biotypes:<br />
-#- see the function gff_parse_biotype() in bcftools / csq.c<br />
-1 ignored_field gene 21 2148.-.ID = gene : GeneId;<br />
-biotype = protein_coding;<br />
-Name = GeneName 1 ignored_field transcript 21 2148.-.ID = transcript : TranscriptId;<br />
-Parent = gene : GeneId;<br />
+#The program looks for &#8220;CDS&#8221;, &#8220;exon&#8221;, &#8220;three_prime_UTR&#8221; and &#8220;five_prime_UTR&#8221; lines,<br/>
+#looks up their parent transcript(determined from the &#8220;Parent=transcript:&#8221; attribute),<br/>
+#the gene(determined from the transcript&#8217;s &#8220;Parent=gene:&#8221; attribute), and the biotype<br/>
+#(the most interesting is &#8220;protein_coding&#8221;).<br/>
+#<br/>
+#Attributes required for<br/>
+#gene lines:<br/>
+#- ID = gene : &lt;gene_id&gt;<br/>
+#- biotype = &lt;biotype&gt;<br/>
+#- Name = &lt;gene_name&gt;[optional]<br/>
+#<br/>
+#transcript lines:<br/>
+#- ID = transcript : &lt;transcript_id&gt;<br/>
+#- Parent = gene : &lt;gene_id&gt;<br/>
+#- biotype = &lt;biotype&gt;<br/>
+#<br/>
+#other lines(CDS, exon, five_prime_UTR, three_prime_UTR):<br/>
+#- Parent = transcript : &lt;transcript_id&gt;<br/>
+#<br/>
+#Supported biotypes:<br/>
+#- see the function gff_parse_biotype() in bcftools / csq.c<br/>
+1 ignored_field gene 21 2148.-.ID = gene : GeneId;<br/>
+biotype = protein_coding;<br/>
+Name = GeneName 1 ignored_field transcript 21 2148.-.ID = transcript : TranscriptId;<br/>
+Parent = gene : GeneId;<br/>
 biotype = protein_coding 1 ignored_field three_prime_UTR 21 2054.-.Parent = transcript : TranscriptId 1 ignored_field exon 21 2148.-.Parent = transcript : TranscriptId 1 ignored_field CDS 21 2148.- 1 Parent = transcript : TranscriptId 1 ignored_field five_prime_UTR 210 2148.-.Parent = transcript : TranscriptId
 </dd></dl>
 <p> <code>-i, &#8211;include</code> <i>EXPRESSION</i></p>
@@ -1259,15 +1259,15 @@ biotype = protein_coding 1 ignored_field three_prime_UTR 21 2054.-.Parent = tran
 <dl>
 <dt>
 </dt><dd>
-#Basic usage<br />
-bcftools csq &#8211; f hs37d5.fa &#8211; g Homo_sapiens.GRCh37 .82.gff3.gz in.vcf &#8211; Ob &#8211; o out.bcf<br />
-#Extract the translated haplotype consequences.The following TBCSQ variations<br />
-#are recognised:<br />
-#% TBCSQ..print consequences in all haplotypes in separate columns<br />
-#% TBCSQ{0 }..print the first haplotype only<br />
-#% TBCSQ{1 }..print the second haplotype only<br />
-#% TBCSQ{* }..print a list of unique consequences present in either haplotype<br />
-                                                                                 bcftools query &#8211;<br />
+#Basic usage<br/>
+bcftools csq &#8211; f hs37d5.fa &#8211; g Homo_sapiens.GRCh37 .82.gff3.gz in.vcf &#8211; Ob &#8211; o out.bcf<br/>
+#Extract the translated haplotype consequences.The following TBCSQ variations<br/>
+#are recognised:<br/>
+#% TBCSQ..print consequences in all haplotypes in separate columns<br/>
+#% TBCSQ{0 }..print the first haplotype only<br/>
+#% TBCSQ{1 }..print the second haplotype only<br/>
+#% TBCSQ{* }..print a list of unique consequences present in either haplotype<br/>
+                                                                                 bcftools query &#8211;<br/>
     f &#8216;[%CHROM	%POS	%SAMPLE	%TBCSQ
 ]&#8217; out.bcf
 </dd></dl>
@@ -1934,12 +1934,12 @@ And similarly here, the second is filtered:
 <dl>
 <dt>
 </dt><dd>
-FORMAT / AD..Allelic depth(Number = R, Type = Integer) FORMAT / ADF..Allelic depths on the forward strand(Number = R, Type = Integer) FORMAT / ADR..Allelic depths on the reverse strand(Number = R, Type = Integer) FORMAT / DP..Number of high &#8211; quality bases(Number = 1, Type = Integer) FORMAT / SP..Phred &#8211; scaled strand bias P &#8211; value(Number = 1, Type = Integer) FORMAT / SCR..Number of soft &#8211; clipped reads(Number = 1, Type = Integer) INFO / AD..Total allelic depth(Number = R, Type = Integer) INFO / ADF..Total allelic depths on the forward strand(Number = R, Type = Integer) INFO / ADR..Total allelic depths on the reverse strand(Number = R, Type = Integer) INFO / SCR..Number of soft &#8211; clipped reads(Number = 1, Type = Integer) FORMAT / DV..Deprecated in favor of FORMAT / AD;<br />
-Number of high &#8211; quality non &#8211; reference bases, (Number = 1, Type = Integer)<br />
-                                                        FORMAT<br />
-                                                    / DP4..Deprecated in favor of FORMAT / ADF and FORMAT / ADR;<br />
-Number of high &#8211; quality ref &#8211; forward, ref &#8211; reverse,<br />
-    alt &#8211; forward and alt &#8211; reverse bases(Number = 4, Type = Integer) FORMAT / DPR..Deprecated in favor of FORMAT / AD; Number of high-quality bases for each observed allele (Number=R,Type=Integer)<br />
+FORMAT / AD..Allelic depth(Number = R, Type = Integer) FORMAT / ADF..Allelic depths on the forward strand(Number = R, Type = Integer) FORMAT / ADR..Allelic depths on the reverse strand(Number = R, Type = Integer) FORMAT / DP..Number of high &#8211; quality bases(Number = 1, Type = Integer) FORMAT / SP..Phred &#8211; scaled strand bias P &#8211; value(Number = 1, Type = Integer) FORMAT / SCR..Number of soft &#8211; clipped reads(Number = 1, Type = Integer) INFO / AD..Total allelic depth(Number = R, Type = Integer) INFO / ADF..Total allelic depths on the forward strand(Number = R, Type = Integer) INFO / ADR..Total allelic depths on the reverse strand(Number = R, Type = Integer) INFO / SCR..Number of soft &#8211; clipped reads(Number = 1, Type = Integer) FORMAT / DV..Deprecated in favor of FORMAT / AD;<br/>
+Number of high &#8211; quality non &#8211; reference bases, (Number = 1, Type = Integer)<br/>
+                                                        FORMAT<br/>
+                                                    / DP4..Deprecated in favor of FORMAT / ADF and FORMAT / ADR;<br/>
+Number of high &#8211; quality ref &#8211; forward, ref &#8211; reverse,<br/>
+    alt &#8211; forward and alt &#8211; reverse bases(Number = 4, Type = Integer) FORMAT / DPR..Deprecated in favor of FORMAT / AD; Number of high-quality bases for each observed allele (Number=R,Type=Integer)<br/>
 INFO/DPR    .. Deprecated in favor of INFO/AD; Number of high-quality bases for each observed allele (Number=R,Type=Integer)
 </dd></dl>
 <p> <code>-g, &#8211;gvcf</code> <i>INT</i>[,&#8230;]</p>
@@ -2508,17 +2508,17 @@ bcftools +missing2ref in.vcf -- -p
 <dl>
 <dt>
 </dt><dd>
-// Short description used by &#8216;bcftools plugin -l&#8217;<br />
-const char *about(void);<br />
-// Longer description used by &#8216;bcftools +name -h&#8217;<br />
-const char *usage(void);<br />
-// Called once at startup, allows initialization of local variables.<br />
-// Return 1 to suppress normal VCF/BCF header output, -1 on critical<br />
-// errors, 0 otherwise.<br />
-int init(int argc, char **argv, bcf_hdr_t *in_hdr, bcf_hdr_t *out_hdr);<br />
-// Called for each VCF record, return NULL to suppress the output<br />
-bcf1_t *process(bcf1_t *rec);<br />
-// Called after all lines have been processed to clean up<br />
+// Short description used by &#8216;bcftools plugin -l&#8217;<br/>
+const char *about(void);<br/>
+// Longer description used by &#8216;bcftools +name -h&#8217;<br/>
+const char *usage(void);<br/>
+// Called once at startup, allows initialization of local variables.<br/>
+// Return 1 to suppress normal VCF/BCF header output, -1 on critical<br/>
+// errors, 0 otherwise.<br/>
+int init(int argc, char **argv, bcf_hdr_t *in_hdr, bcf_hdr_t *out_hdr);<br/>
+// Called for each VCF record, return NULL to suppress the output<br/>
+bcf1_t *process(bcf1_t *rec);<br/>
+// Called after all lines have been processed to clean up<br/>
 void destroy(void);
 </dd></dl>
 <h3>bcftools polysomy [<i>OPTIONS</i>] <i>file.vcf.gz</i></h3>
@@ -2659,27 +2659,27 @@ void destroy(void);
 <dl>
 <dt>
 </dt><dd>
-%CHROM          The CHROM column (similarly also other columns: POS, ID, REF, ALT, QUAL, FILTER)<br />
-%END            End position of the REF allele<br />
-%END0           End position of the REF allele in 0-based coordinates<br />
-%FIRST_ALT      Alias for %ALT{0}<br />
-%FORMAT         Prints all FORMAT fields or a subset of samples with -s or -S<br />
-%GT             Genotype (e.g. 0/1)<br />
-%INFO           Prints the whole INFO column<br />
-%INFO/TAG       Any tag in the INFO column<br />
-%IUPACGT        Genotype translated to IUPAC ambiguity codes (e.g. M instead of C/A)<br />
-%LINE           Prints the whole line<br />
-%MASK           Indicates presence of the site in other files (with multiple files)<br />
-%N_PASS(expr)   Number of samples that pass the filtering expression (see *&lt;&lt;expressions,EXPRESSIONS&gt;&gt;*)<br />
-%POS0           POS in 0-based coordinates<br />
-%PBINOM(TAG)    Calculate phred-scaled binomial probability, the allele index is determined from GT<br />
-%SAMPLE         Sample name<br />
-%TAG{INT}       Curly brackets to print a subfield (e.g. INFO/TAG{1}, the indexes are 0-based)<br />
-%TBCSQ          Translated FORMAT/BCSQ. See the csq command above for explanation and examples.<br />
-%TGT            Translated genotype (e.g. C/A)<br />
-%TYPE           Variant type (REF, SNP, MNP, INDEL, BND, OTHER)<br />
-[]              Format fields must be enclosed in brackets to loop over all samples<br />
-              new line<br />
+%CHROM          The CHROM column (similarly also other columns: POS, ID, REF, ALT, QUAL, FILTER)<br/>
+%END            End position of the REF allele<br/>
+%END0           End position of the REF allele in 0-based coordinates<br/>
+%FIRST_ALT      Alias for %ALT{0}<br/>
+%FORMAT         Prints all FORMAT fields or a subset of samples with -s or -S<br/>
+%GT             Genotype (e.g. 0/1)<br/>
+%INFO           Prints the whole INFO column<br/>
+%INFO/TAG       Any tag in the INFO column<br/>
+%IUPACGT        Genotype translated to IUPAC ambiguity codes (e.g. M instead of C/A)<br/>
+%LINE           Prints the whole line<br/>
+%MASK           Indicates presence of the site in other files (with multiple files)<br/>
+%N_PASS(expr)   Number of samples that pass the filtering expression (see *&lt;&lt;expressions,EXPRESSIONS&gt;&gt;*)<br/>
+%POS0           POS in 0-based coordinates<br/>
+%PBINOM(TAG)    Calculate phred-scaled binomial probability, the allele index is determined from GT<br/>
+%SAMPLE         Sample name<br/>
+%TAG{INT}       Curly brackets to print a subfield (e.g. INFO/TAG{1}, the indexes are 0-based)<br/>
+%TBCSQ          Translated FORMAT/BCSQ. See the csq command above for explanation and examples.<br/>
+%TGT            Translated genotype (e.g. C/A)<br/>
+%TYPE           Variant type (REF, SNP, MNP, INDEL, BND, OTHER)<br/>
+[]              Format fields must be enclosed in brackets to loop over all samples<br/>
+              new line<br/>
 	              tab character
 </dd></dl>
 <dl>
@@ -2711,7 +2711,7 @@ bcftools query -f '%CHROM	%POS	%REF	%ALT[	%SAMPLE=%GT]
 <dl>
 <dt>
 </dt><dd>
-#Print FORMAT / GT fields followed by FORMAT / GT fields<br />
+#Print FORMAT / GT fields followed by FORMAT / GT fields<br/>
 bcftools query &#8211; f &#8216;GQ:[ %GQ] 	 GT:[ %GT]
 &#8217; file.vcf
 </dd></dl>
@@ -2754,9 +2754,9 @@ bcftools query -i'GT=&quot;het&quot;' -f'[%CHROM:%POS %SAMPLE %GT %PBINOM(AD)
 <dl>
 <dt>
 </dt><dd>
-#Print the second value of AC field if bigger than 10. Note the(unfortunate) difference in<br />
-#index subscript notation : formatting expressions(-f) uses &#8220;{}&#8221; while filtering expressions<br />
-#(- i) use &#8220;[]&#8221;.This is for historic reasons and backward &#8211; compatibility.<br />
+#Print the second value of AC field if bigger than 10. Note the(unfortunate) difference in<br/>
+#index subscript notation : formatting expressions(-f) uses &#8220;{}&#8221; while filtering expressions<br/>
+#(- i) use &#8220;[]&#8221;.This is for historic reasons and backward &#8211; compatibility.<br/>
 bcftools query &#8211; f &#8216;%AC{1}
 &#8217; &#8211; i &#8216;AC[1]&gt;10&#8217; file.vcf.gz
 </dd></dl>
@@ -2793,17 +2793,17 @@ bcftools query &#8211; f &#8216;%AC{1}
 <dl>
 <dt>
 </dt><dd>
-Notation : D = Data, AZ = autozygosity, HW = Hardy &#8211; Weinberg(non &#8211; autozygosity),<br />
-           f = non &#8211; ref allele frequency<br />
-                         Emission probabilities : oAZ = P_i(D | AZ) = (1 &#8211; f) * P(D | RR) + f * P(D | AA)<br />
-                                                                                                    oHW = P_i(D | HW) = (1 &#8211; f) ^ 2 * P(D | RR) + f ^ 2 * P(D | AA) + 2 * f * (1 &#8211; f) * P(D | RA) Transition probabilities : tAZ = P(AZ | HW)..from HW to AZ,<br />
-           the &#8211; a parameter<br />
-                     tHW = P(HW | AZ)..from AZ to HW,<br />
-           the &#8211; H parameter<br />
-                     ci = P_i(C)..probability of cross &#8211; over at site i,<br />
-           from genetic map<br />
-               AZi = P_i(AZ)..probability of site i being AZ / non &#8211; AZ,<br />
-           scaled so that AZi + HWi = 1 HWi = P_i(HW)<br />
+Notation : D = Data, AZ = autozygosity, HW = Hardy &#8211; Weinberg(non &#8211; autozygosity),<br/>
+           f = non &#8211; ref allele frequency<br/>
+                         Emission probabilities : oAZ = P_i(D | AZ) = (1 &#8211; f) * P(D | RR) + f * P(D | AA)<br/>
+                                                                                                    oHW = P_i(D | HW) = (1 &#8211; f) ^ 2 * P(D | RR) + f ^ 2 * P(D | AA) + 2 * f * (1 &#8211; f) * P(D | RA) Transition probabilities : tAZ = P(AZ | HW)..from HW to AZ,<br/>
+           the &#8211; a parameter<br/>
+                     tHW = P(HW | AZ)..from AZ to HW,<br/>
+           the &#8211; H parameter<br/>
+                     ci = P_i(C)..probability of cross &#8211; over at site i,<br/>
+           from genetic map<br/>
+               AZi = P_i(AZ)..probability of site i being AZ / non &#8211; AZ,<br/>
+           scaled so that AZi + HWi = 1 HWi = P_i(HW)<br/>
                P_{i + 1}(AZ) = oAZ * max[(1 &#8211; tAZ * ci) * AZ{i &#8211; 1}, tAZ *ci *(1 &#8211; AZ{i &#8211; 1})] P_{i + 1}(HW) = oHW * max[(1 &#8211; tHW * ci) * (1 &#8211; AZ{i &#8211; 1}), tHW *ci *AZ{i &#8211; 1}]
 </dd></dl>
 <h3>General Options:</h3>
@@ -3316,14 +3316,14 @@ FILTER, QUAL, ID, CHROM, POS, REF, ALT[0]
 <dl>
 <dt>
 </dt><dd>
-FILTER=&#8221;PASS&#8221;<br />
-FILTER=&#8221;.&#8221;<br />
-FILTER=&#8221;A&#8221;          .. exact match, for example &#8220;A;B&#8221; does not pass<br />
-FILTER=&#8221;A;B&#8221;        .. exact match, &#8220;A;B&#8221; and &#8220;B;A&#8221; pass, everything else fails<br />
-FILTER!=&#8221;A&#8221;         .. exact match, for example &#8220;A;B&#8221; does pass<br />
-FILTER~&#8221;A&#8221;          .. subset match, for example both &#8220;A&#8221; and &#8220;A;B&#8221; pass<br />
-FILTER~&#8221;A;B&#8221;        .. subset match, pass only if both &#8220;A&#8221; and &#8220;B&#8221; are present<br />
-FILTER!~&#8221;A&#8221;         .. complement match, for example both &#8220;A&#8221; and &#8220;A;B&#8221; fail<br />
+FILTER=&#8221;PASS&#8221;<br/>
+FILTER=&#8221;.&#8221;<br/>
+FILTER=&#8221;A&#8221;          .. exact match, for example &#8220;A;B&#8221; does not pass<br/>
+FILTER=&#8221;A;B&#8221;        .. exact match, &#8220;A;B&#8221; and &#8220;B;A&#8221; pass, everything else fails<br/>
+FILTER!=&#8221;A&#8221;         .. exact match, for example &#8220;A;B&#8221; does pass<br/>
+FILTER~&#8221;A&#8221;          .. subset match, for example both &#8220;A&#8221; and &#8220;A;B&#8221; pass<br/>
+FILTER~&#8221;A;B&#8221;        .. subset match, pass only if both &#8220;A&#8221; and &#8220;B&#8221; are present<br/>
+FILTER!~&#8221;A&#8221;         .. complement match, for example both &#8220;A&#8221; and &#8220;A;B&#8221; fail<br/>
 FILTER!~&#8221;A;B&#8221;       .. complement match, fail if both &#8220;A&#8221; and &#8220;B&#8221; are present
 </dd></dl>
 </dl>
@@ -3422,8 +3422,8 @@ INFO / AF[0] &gt; 0.3..first AF value bigger than 0.3 FORMAT / AD [0:0] &gt; 30.
 <dl>
 <dt>
 </dt><dd>
-FORMAT/AD[GT] &gt; 10        .. require support of more than 10 reads for each allele<br />
-FORMAT/AD[0:GT] &gt; 10      .. same as above, but in the first sample<br />
+FORMAT/AD[GT] &gt; 10        .. require support of more than 10 reads for each allele<br/>
+FORMAT/AD[0:GT] &gt; 10      .. same as above, but in the first sample<br/>
 sSUM(FORMAT/AD[GT]) &gt; 20  .. require total sample depth bigger than 20
 </dd></dl>
 </dl>
@@ -3464,12 +3464,12 @@ sMAX, sMIN, sAVG, sMEAN, sMEDIAN, sSTDEV, sSUM
 <dl>
 <dt>
 </dt><dd>
-binom(FMT / AD)..GT can be used to determine the correct index<br />
-    binom(AD[0], AD[1])<br />
-        ..or<br />
-    the fields can be given explicitly<br />
-        phred(binom())<br />
-            ..the same as binom but phred<br />
+binom(FMT / AD)..GT can be used to determine the correct index<br/>
+    binom(AD[0], AD[1])<br/>
+        ..or<br/>
+    the fields can be given explicitly<br/>
+        phred(binom())<br/>
+            ..the same as binom but phred<br/>
         &#8211; scaled
 </dd></dl>
 </dl>

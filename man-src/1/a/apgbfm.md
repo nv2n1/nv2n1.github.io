@@ -10,19 +10,19 @@ description: "apgbfm – APG Bloom filter management program"
 
 <p> apgbfm &#8211; APG Bloom filter management program</p>
 <h2>SYNOPSIS</h2>
-<p> <code>apgbfm</code> <code>-f</code> <i>filter</i> <code>-n</code> <code>numofwords</code> [<code>-q</code>] [<code>-s</code>]<br />
- <code>apgbfm</code> <code>-f</code> <i>filter</i> <code>-d</code> <i>dictfile</i> [<code>-q</code>] [<code>-s</code>]<br />
- <code>apgbfm</code> <code>-f</code> <i>filter</i> <code>-a</code> <code>word</code> [<code>-q</code>]<br />
- <code>apgbfm</code> <code>-f</code> <i>filter</i> <code>-A</code> <i>dictfile</i> [<code>-q</code>]<br />
- <code>apgbfm</code> <code>-f</code> <i>filter</i> <code>-c</code> <code>word</code> [<code>-q</code>]<br />
- <code>apgbfm</code> <code>-f</code> <i>filter</i> <code>-C</code> <i>dictfile</i> [<code>-q</code>]<br />
- <code>apgbfm</code> <code>-i</code> <i>filter</i><br />
+<p> <code>apgbfm</code> <code>-f</code> <i>filter</i> <code>-n</code> <code>numofwords</code> [<code>-q</code>] [<code>-s</code>]<br/>
+ <code>apgbfm</code> <code>-f</code> <i>filter</i> <code>-d</code> <i>dictfile</i> [<code>-q</code>] [<code>-s</code>]<br/>
+ <code>apgbfm</code> <code>-f</code> <i>filter</i> <code>-a</code> <code>word</code> [<code>-q</code>]<br/>
+ <code>apgbfm</code> <code>-f</code> <i>filter</i> <code>-A</code> <i>dictfile</i> [<code>-q</code>]<br/>
+ <code>apgbfm</code> <code>-f</code> <i>filter</i> <code>-c</code> <code>word</code> [<code>-q</code>]<br/>
+ <code>apgbfm</code> <code>-f</code> <i>filter</i> <code>-C</code> <i>dictfile</i> [<code>-q</code>]<br/>
+ <code>apgbfm</code> <code>-i</code> <i>filter</i><br/>
  <code>apgbfm</code> [<code>-v</code>] [<code>-h</code>] </p>
 <h2>DESCRIPTION</h2>
 <p> <code>apgbfm</code> is used to manage Bloom filter that is used to restrict password generation in <code>APG</code> pasword generation software. Usage of the Bloom filter allows to speed up password check for large dictionaries and has some other benefits. </p>
 <p> The idea to use Bloom filter for that purpose is came from the description of the <code>OPUS</code> project <code>OPUS: Preventing Weak Password Choices</code> <i>Purdue Technical Report CSD-TR 92-028</i> writen by <i>Eugene H. Spafford</i>. </p>
-<p> You can obtain this article from:<br />
- <i><a rel="nofollow" href="http://www.cerias.purdue.edu/homes/spaf/tech-reps/9128.ps">http://www.cerias.purdue.edu/homes/spaf/tech-reps/9128.ps</a></i><br />
+<p> You can obtain this article from:<br/>
+ <i><a rel="nofollow" href="http://www.cerias.purdue.edu/homes/spaf/tech-reps/9128.ps">http://www.cerias.purdue.edu/homes/spaf/tech-reps/9128.ps</a></i><br/>
  It has very nice description of Bloom filter and it&#8217;s advantages for password checking systems. </p>
 <p> In simple words, <code>apgbfm</code> generates <i>n</i> hash values for every word and sets corresponding bits in filter file to 1. To check the word <code>apgbfm</code> generates the same hash functions for that word and if all <i>n</i> corresponding bits in filter file are set to 1 then it suppose that word exists in dicionary. <code>apgbfm</code> uses <code>SHA-1</code> as a hash function. </p>
 <p> <code>apgbfm</code> can be used as standalone utility, not only with <code>apg</code>, or <code>apgd</code>. </p>
@@ -67,5 +67,5 @@ description: "apgbfm – APG Bloom filter management program"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-apg/">apg</a></code>(1)</p>
 <h2>AUTHOR</h2>
-<p> Adel I. Mirzazhanov, &lt;a-del [at] iname.com&gt;<br />
+<p> Adel I. Mirzazhanov, &lt;a-del [at] iname.com&gt;<br/>
  Project home page: <a rel="nofollow" href="http://www.adel.nursat.kz/apg/">http://www.adel.nursat.kz/apg/</a> </p>

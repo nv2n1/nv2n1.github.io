@@ -27,5 +27,5 @@ description: "XtCallActionProc – invoke an action procedure directly"
 <h2>Description</h2>
 <p><code>XtCallActionProc</code> searches for the named action routine in the same manner and order as translation tables are bound. If found, the action routine is invoked with the specified widget, event pointer, and parameters. It is the responsibility of the caller to ensure that the contents of <i>event</i>, <i>params</i>, and <i>num_params</i> arguments are appropriate for the specified routine, and if necessary, that the specified widget is realized or sensitive. If the named action routine cannot be found, <code>XtCallActionProc</code> generates a warning message and returns.</p>
 <h2>See Also</h2>
-<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

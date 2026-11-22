@@ -12,8 +12,8 @@ description: "aircrack-ng – a 802.11 WEP / WPA-PSK key cracker"
 <h2>SYNOPSIS</h2>
 <p> <code>aircrack-ng</code> [options] &lt;.cap / .ivs file(s)&gt;</p>
 <h2>DESCRIPTION</h2>
-<p> <code>aircrack-ng</code> is an 802.11 WEP and WPA/WPA2-PSK key cracking program.<br />
- It can recover the WEP key once enough encrypted packets have been captured with airodump-ng. This part of the aircrack-ng suite determines the WEP key using two fundamental methods. The first method is via the PTW approach (Pyshkin, Tews, Weinmann). The main advantage of the PTW approach is that very few data packets are required to crack the WEP key. The second method is the FMS/KoreK method. The FMS/KoreK method incorporates various statistical attacks to discover the WEP key and uses these in combination with brute forcing.<br />
+<p> <code>aircrack-ng</code> is an 802.11 WEP and WPA/WPA2-PSK key cracking program.<br/>
+ It can recover the WEP key once enough encrypted packets have been captured with airodump-ng. This part of the aircrack-ng suite determines the WEP key using two fundamental methods. The first method is via the PTW approach (Pyshkin, Tews, Weinmann). The main advantage of the PTW approach is that very few data packets are required to crack the WEP key. The second method is the FMS/KoreK method. The FMS/KoreK method incorporates various statistical attacks to discover the WEP key and uses these in combination with brute forcing.<br/>
  Additionally, the program offers a dictionary method for determining the WEP key. For cracking WPA/WPA2 pre-shared keys, a wordlist (file or stdin) or an airolib-ng has to be used.</p>
 <h2>OPTIONS</h2>
 <dl>
@@ -102,24 +102,24 @@ description: "aircrack-ng – a 802.11 WEP / WPA-PSK key cracker"
 <h2>AUTHOR</h2>
 <p> This manual page was written by Adam Cecile &lt;gandalf [at] le-vert.net&gt; for the Debian system (but may be used by others). Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 or any later version published by the Free Software Foundation On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/8-airbase-ng/">airbase-ng</a>(8)</code><br />
- <code><a href="/docs/linux/man/8-aireplay-ng/">aireplay-ng</a>(8)</code><br />
- <code><a href="/docs/linux/man/8-airmon-ng/">airmon-ng</a>(8)</code><br />
- <code><a href="/docs/linux/man/8-airodump-ng/">airodump-ng</a>(8)</code><br />
- <code><a href="/docs/linux/man/8-airodump-ng-oui-update/">airodump-ng-oui-update</a>(8)</code><br />
- <code><a href="/docs/linux/man/8-airserv-ng/">airserv-ng</a>(8)</code><br />
- <code><a href="/docs/linux/man/8-airtun-ng/">airtun-ng</a>(8)</code><br />
- <code><a href="/docs/linux/man/8-besside-ng/">besside-ng</a>(8)</code><br />
- <code><a href="/docs/linux/man/8-easside-ng/">easside-ng</a>(8)</code><br />
- <code><a href="/docs/linux/man/8-tkiptun-ng/">tkiptun-ng</a>(8)</code><br />
- <code><a href="/docs/linux/man/8-wesside-ng/">wesside-ng</a>(8)</code><br />
- <code><a href="/docs/linux/man/1-airdecap-ng/">airdecap-ng</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-airdecloak-ng/">airdecloak-ng</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-airolib-ng/">airolib-ng</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-besside-ng-crawler/">besside-ng-crawler</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-buddy-ng/">buddy-ng</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-ivstools/">ivstools</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-kstats/">kstats</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-makeivs-ng/">makeivs-ng</a>(1)</code><br />
- <code><a href="/docs/linux/man/1-packetforge-ng/">packetforge-ng</a>(1)</code><br />
+<p> <code><a href="/docs/linux/man/8-airbase-ng/">airbase-ng</a>(8)</code><br/>
+ <code><a href="/docs/linux/man/8-aireplay-ng/">aireplay-ng</a>(8)</code><br/>
+ <code><a href="/docs/linux/man/8-airmon-ng/">airmon-ng</a>(8)</code><br/>
+ <code><a href="/docs/linux/man/8-airodump-ng/">airodump-ng</a>(8)</code><br/>
+ <code><a href="/docs/linux/man/8-airodump-ng-oui-update/">airodump-ng-oui-update</a>(8)</code><br/>
+ <code><a href="/docs/linux/man/8-airserv-ng/">airserv-ng</a>(8)</code><br/>
+ <code><a href="/docs/linux/man/8-airtun-ng/">airtun-ng</a>(8)</code><br/>
+ <code><a href="/docs/linux/man/8-besside-ng/">besside-ng</a>(8)</code><br/>
+ <code><a href="/docs/linux/man/8-easside-ng/">easside-ng</a>(8)</code><br/>
+ <code><a href="/docs/linux/man/8-tkiptun-ng/">tkiptun-ng</a>(8)</code><br/>
+ <code><a href="/docs/linux/man/8-wesside-ng/">wesside-ng</a>(8)</code><br/>
+ <code><a href="/docs/linux/man/1-airdecap-ng/">airdecap-ng</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-airdecloak-ng/">airdecloak-ng</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-airolib-ng/">airolib-ng</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-besside-ng-crawler/">besside-ng-crawler</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-buddy-ng/">buddy-ng</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-ivstools/">ivstools</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-kstats/">kstats</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-makeivs-ng/">makeivs-ng</a>(1)</code><br/>
+ <code><a href="/docs/linux/man/1-packetforge-ng/">packetforge-ng</a>(1)</code><br/>
  <code><a href="/docs/linux/man/1-wpaclean/">wpaclean</a>(1)</code> </p>

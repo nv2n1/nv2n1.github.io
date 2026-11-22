@@ -27,7 +27,7 @@ On a normal operation one Astribank device provides timing for all the other Ast
 </dd><dt>dahdi
 </dt><dd>Gets synchronization from the Dahdi sync master.
 </dd><dt>nn
-</dt><dd>Sets <font SIZE="-1">XBUS-</font><i>nn</i> as sync source.</dd></dl>
+</dt><dd>Sets XBUS-<i>nn</i> as sync source.</dd></dl>
  
 
  (Parameter name is case-insensitive)
@@ -44,9 +44,9 @@ On a normal operation one Astribank device provides timing for all the other Ast
  Affected Astribanks are:
  --------------------------------------------------
  XBUS-00
- ==================================================</pre>In this example we see that the recommended xpp sync master is <font SIZE="-1">XBUS-02</font> - it is the first on the list. It is also the actual syncer, as we can see from the '+' beside it. 
+ ==================================================</pre>In this example we see that the recommended xpp sync master is XBUS-02 - it is the first on the list. It is also the actual syncer, as we can see from the '+' beside it. 
 
- xpp_sync is normally called from the dahdi init.d script. The parameter it is called with defaults to <i>auto</i>, but it is possible to override that parameter (e.g: set it to <i>dahdi</i>) through the value of <font SIZE="-1">XPP_SYNC</font> in /etc/dahdi/init.conf .
+ xpp_sync is normally called from the dahdi init.d script. The parameter it is called with defaults to <i>auto</i>, but it is possible to override that parameter (e.g: set it to <i>dahdi</i>) through the value of XPP_SYNC in /etc/dahdi/init.conf .
 
 <h2>Files</h2>
 

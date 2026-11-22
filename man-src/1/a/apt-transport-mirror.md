@@ -70,7 +70,7 @@ file:/srv/local/debian/mirror/  priority:1 type:index
 </dd></dl>
 <p> In this setup with this mirrorlist the first mirror will be used to download all index files assuming the mirrorlist itself is accessed via a local transport like file. If it isn&#8217;t, if the mirror is otherwise inaccessible or if it does not contain the requested file another mirror will be used to acquire the file, chosen depending on the type of the file: An index file will be served by the last mirror in the list, while a package of architecture amd64 is served by the second and those of e.g. architecture i386 by one of the last three.</p>
 <h2>BUGS</h2>
-<p> m[blue]<code>APT bug page</code>m[]<font SIZE="-2">[1]</font>. If you wish to report a bug in APT, please see /usr/share/doc/debian/bug-reporting.txt or the <code>reportbug</code>(1) command.</p>
+<p> m[blue]<code>APT bug page</code>m[][1]. If you wish to report a bug in APT, please see /usr/share/doc/debian/bug-reporting.txt or the <code>reportbug</code>(1) command.</p>
 <h2>AUTHOR</h2>
 <p> <code>APT team</code></p>
 <dl>

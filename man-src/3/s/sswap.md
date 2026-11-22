@@ -11,7 +11,7 @@ description: "sswap.f –"
 <p> sswap.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>sswap</code> (N, SX, INCX, SY, INCY)<br />
+<p> subroutine <code>sswap</code> (N, SX, INCX, SY, INCY)<br/>
  <i></i><code>SSWAP</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sswap (integerN, real, dimension(*)SX, integerINCX, real, dimension(*)SY, integerINCY)</h3>

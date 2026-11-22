@@ -17,10 +17,10 @@ description: "ql/termstructures/yield/zerocurve.hpp – interpolated zero-rates 
 #include &lt;vector&gt;
 #include &lt;utility&gt;</code></pre>
 <h3>Classes</h3>
-<p>class <code>InterpolatedZeroCurve&lt; Interpolator &gt;</code><br />
+<p>class <code>InterpolatedZeroCurve&lt; Interpolator &gt;</code><br/>
  <i>Term structure based on interpolation of zero yields. </i></p>
 <h3>Typedefs</h3>
-<p>typedef InterpolatedZeroCurve&lt; Linear &gt; <code>ZeroCurve</code><br />
+<p>typedef InterpolatedZeroCurve&lt; Linear &gt; <code>ZeroCurve</code><br/>
  <i>Term structure based on linear interpolation of zero yields. </i></p>
 <h2>Detailed Description</h2>
 <p>interpolated zero-rates structure</p>

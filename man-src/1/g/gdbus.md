@@ -48,7 +48,7 @@ description: "gdbus – Tool for working with D-Bus objects"
 <h2>BASH COMPLETION</h2>
 <p> <code>gdbus</code> ships with a bash completion script to complete commands, destinations, bus names, object paths and interface/method names.</p>
 <h2>EXAMPLES</h2>
-<p>&nbsp;<wbr>&nbsp;This shows how to introspect an object &#8211; note that the value of each<br />
+<p>&nbsp;<wbr>&nbsp;This shows how to introspect an object &#8211; note that the value of each<br/>
 &nbsp;<wbr>&nbsp;property is displayed: </p>
 <dl>
 <dt>
@@ -110,71 +110,71 @@ $ gdbus introspect-- system-- dest org.freedesktop.NetworkManager-- object - pat
 <dl>
 <dt>
 </dt><dd>
-$ gdbus introspect&#8211; system&#8211; dest org.freedesktop.UPower&#8211; object &#8211; path / &#8211;recurse&#8211; only &#8211; properties node /<br />
-{<br />
-    node / org<br />
-    {<br />
-        node / org / freedesktop<br />
-        {<br />
-            node / org / freedesktop / UPower<br />
-            {<br />
-                interface org.freedesktop.UPower<br />
-                {<br />
-                properties:<br />
-                    readonly b IsDocked = true;<br />
-                    readonly b LidForceSleep = false;<br />
-                    readonly b LidIsPresent = false;<br />
-                    readonly b LidIsClosed = false;<br />
-                    readonly b OnLowBattery = false;<br />
-                    readonly b OnBattery = false;<br />
-                    readonly b CanHibernate = true;<br />
-                    readonly b CanSuspend = true;<br />
-                    readonly s DaemonVersion = &#8216;0.9.10&#8217;;<br />
-                };<br />
-                node / org / freedesktop / UPower / Policy{};<br />
-                node / org / freedesktop / UPower / Wakeups<br />
-                {<br />
-                    interface org.freedesktop.UPower.Wakeups<br />
-                    {<br />
-                    properties:<br />
-                        readonly b HasCapability = true;<br />
-                    };<br />
-                };<br />
-            };<br />
-        };<br />
-    };<br />
+$ gdbus introspect&#8211; system&#8211; dest org.freedesktop.UPower&#8211; object &#8211; path / &#8211;recurse&#8211; only &#8211; properties node /<br/>
+{<br/>
+    node / org<br/>
+    {<br/>
+        node / org / freedesktop<br/>
+        {<br/>
+            node / org / freedesktop / UPower<br/>
+            {<br/>
+                interface org.freedesktop.UPower<br/>
+                {<br/>
+                properties:<br/>
+                    readonly b IsDocked = true;<br/>
+                    readonly b LidForceSleep = false;<br/>
+                    readonly b LidIsPresent = false;<br/>
+                    readonly b LidIsClosed = false;<br/>
+                    readonly b OnLowBattery = false;<br/>
+                    readonly b OnBattery = false;<br/>
+                    readonly b CanHibernate = true;<br/>
+                    readonly b CanSuspend = true;<br/>
+                    readonly s DaemonVersion = &#8216;0.9.10&#8217;;<br/>
+                };<br/>
+                node / org / freedesktop / UPower / Policy{};<br/>
+                node / org / freedesktop / UPower / Wakeups<br/>
+                {<br/>
+                    interface org.freedesktop.UPower.Wakeups<br/>
+                    {<br/>
+                    properties:<br/>
+                        readonly b HasCapability = true;<br/>
+                    };<br/>
+                };<br/>
+            };<br/>
+        };<br/>
+    };<br/>
 };
 </dd></dl>
 <p> In a similar fashion, the <code>introspect</code> command can be used to learn details about the Notify method: </p>
 <dl>
 <dt>
 </dt><dd>
-[&#8230;] interface org.freedesktop.Notifications<br />
-{<br />
-methods:<br />
-    GetServerInformation(out s return_name,<br />
-                         out s return_vendor,<br />
-                         out s return_version,<br />
-                         out s return_spec_version);<br />
-    GetCapabilities(out as return_caps);<br />
-    CloseNotification(in u id);<br />
-    Notify(in s app_name,<br />
-           in u id,<br />
-           in s icon,<br />
-           in s summary,<br />
-           in s body,<br />
-           in as actions,<br />
-           in a{sv} hints,<br />
-           in i timeout,<br />
-           out u return_id);<br />
-};<br />
+[&#8230;] interface org.freedesktop.Notifications<br/>
+{<br/>
+methods:<br/>
+    GetServerInformation(out s return_name,<br/>
+                         out s return_vendor,<br/>
+                         out s return_version,<br/>
+                         out s return_spec_version);<br/>
+    GetCapabilities(out as return_caps);<br/>
+    CloseNotification(in u id);<br/>
+    Notify(in s app_name,<br/>
+           in u id,<br/>
+           in s icon,<br/>
+           in s summary,<br/>
+           in s body,<br/>
+           in as actions,<br/>
+           in a{sv} hints,<br/>
+           in i timeout,<br/>
+           out u return_id);<br/>
+};<br/>
 [&#8230;]
 </dd></dl>
 <p> With this information, it&#8217;s easy to use the <code>call</code> command to display a notification </p>
 <dl>
 <dt>
 </dt><dd>
-$ gdbus call&#8211; session&#8211; dest org.freedesktop.Notifications&#8211; object &#8211; path / org / freedesktop / Notifications&#8211; method org.freedesktop.Notifications.Notify my_app_name 42 gtk &#8211; dialog &#8211; info &#8220;The Summary&#8221;<br />
+$ gdbus call&#8211; session&#8211; dest org.freedesktop.Notifications&#8211; object &#8211; path / org / freedesktop / Notifications&#8211; method org.freedesktop.Notifications.Notify my_app_name 42 gtk &#8211; dialog &#8211; info &#8220;The Summary&#8221;<br/>
                                                                                                                                                                                                  &#8220;Here&#8217;s the body of the notification&#8221; [] {} 5000(uint32 12, )
 </dd></dl>
 <p> Call a method with file handle argument: </p>

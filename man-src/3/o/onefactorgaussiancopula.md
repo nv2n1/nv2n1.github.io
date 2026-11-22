@@ -13,17 +13,17 @@ description: "QuantLib::OneFactorGaussianCopula – One-factor Gaussian Copula."
 <p> Inherits <code>QuantLib::OneFactorCopula</code>. </p>
 <h3>Public Member Functions</h3>
 <p><code>OneFactorGaussianCopula</code> (const <code>Handle</code>&lt; <code>Quote</code> &gt; &amp;correlation, Real maximum=5, Size integrationSteps=50) </p>
-<p> Real <code>density</code> (Real m) const<br />
- <i>Density function of M. </i><br />
- Real <code>cumulativeZ</code> (Real z) const<br />
- <i>Cumulative distribution of Z. </i><br />
+<p> Real <code>density</code> (Real m) const<br/>
+ <i>Density function of M. </i><br/>
+ Real <code>cumulativeZ</code> (Real z) const<br/>
+ <i>Cumulative distribution of Z. </i><br/>
  Real <code>cumulativeY</code> (Real y) const </p>
 <p> Real <code>testCumulativeY</code> (Real y) const </p>
 <p> Real <code>inverseCumulativeY</code> (Real p) const </p>
 <h2>Detailed Description</h2>
 <p>One-factor Gaussian Copula. </p>
-<p> The copula model [ Y_i = a_i,M+qrt{1-a_i^2}:Z_i ] is specified here by setting the desnity function for all variables, $ M, Z,$ and also $ Y $ to the standard normal distribution $<br />
- hi(x) = \xp(-x^2/2) / qrt{2<br />
+<p> The copula model [ Y_i = a_i,M+qrt{1-a_i^2}:Z_i ] is specified here by setting the desnity function for all variables, $ M, Z,$ and also $ Y $ to the standard normal distribution $<br/>
+ hi(x) = \xp(-x^2/2) / qrt{2<br/>
  i}. $  </p>
 <h2>Member Function Documentation</h2>
 <h3>Real density (Real m) const [virtual]</h3>

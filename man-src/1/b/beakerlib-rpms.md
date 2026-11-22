@@ -11,7 +11,7 @@ BeakerLib - rpms - Package manipulation helpers
 
 <h2>DESCRIPTION</h2>
 
- Functions in this BeakerLib script are used for <font SIZE="-1">RPM</font> manipulation.
+ Functions in this BeakerLib script are used for RPM manipulation.
 
 <h2>FUNCTIONS</h2>
 
@@ -58,7 +58,7 @@ rlAssertRpm name[version][release][arch] &gt;
 </dt><dd> Assert all packages listed in the <tt>$PACKAGES</tt> <tt>$REQUIRES</tt> and <tt>$COLLECTIONS</tt> environment variables.</dd></dl>
  
 
- Returns 0 and asserts <font SIZE="-1">PASS</font> if the specified package is installed. 
+ Returns 0 and asserts PASS if the specified package is installed. 
 
  <i>rlAssertNotRpm</i> 
 
@@ -78,7 +78,7 @@ rlAssertNotRpm name[version][release][arch] &gt;
 </dt><dd> Package architucture like <tt>&quot;i386&quot;</tt></dd></dl>
  
 
- Returns 0 and asserts <font SIZE="-1">PASS</font> if the specified package is not installed. 
+ Returns 0 and asserts PASS if the specified package is not installed. 
 
  <i>Example</i> 
 
@@ -105,7 +105,7 @@ rlAssertBinaryOrigin binary package[package2[...]] PACKAGES = ... rlAssertBinary
 </dt><dd> List of packages like <tt>&quot;ksh mksh&quot;</tt>. The parameter is optional. If missing, contents of environment variable <tt>$PACKAGES</tt> are taken into account.</dd></dl>
  
 
- Returns 0 and asserts <font SIZE="-1">PASS</font> if the specified binary belongs to (one of) the given package(s). Returns 1 and asserts <font SIZE="-1">FAIL</font> if the specified binary does not belong to (any of) the given package(s). Returns 2 and asserts <font SIZE="-1">FAIL</font> if the specified binary is not found. Returns 3 and asserts <font SIZE="-1">FAIL</font> if no packages are given. Returns 100 and asserts <font SIZE="-1">FAIL</font> if invoked with no parameters. 
+ Returns 0 and asserts PASS if the specified binary belongs to (one of) the given package(s). Returns 1 and asserts FAIL if the specified binary does not belong to (any of) the given package(s). Returns 2 and asserts FAIL if the specified binary is not found. Returns 3 and asserts FAIL if no packages are given. Returns 100 and asserts FAIL if invoked with no parameters. 
 
  <i>Example</i> 
 
@@ -133,7 +133,7 @@ rlAssertBinaryOrigin binary package[package2[...]] PACKAGES = ... rlAssertBinary
     rlRun &quot;rlCheckRequirements REQ...&quot;
 </pre>
 <dl>
-<dt><font SIZE="-1">REQ</font>
+<dt>REQ
 </dt><dd> Requirement to be checked. It can be package name, provides string or binary name.</dd></dl>
  
 

@@ -10,7 +10,7 @@ description: "kawa – Scheme language implemented using on a Java VM"
 
 <p> kawa &#8211; Scheme language implemented using on a Java VM </p>
 <h2>SYNOPSIS</h2>
-<p> <code>kawa</code> <i>[options]</i><br />
+<p> <code>kawa</code> <i>[options]</i><br/>
  <code>java kawa.repl</code> <i>[options]</i></p>
 <h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>kawa</code> package, a Scheme dialect written completely in the Java language. Scheme forms are compiled into Java bytecodes for efficiency. </p>
@@ -30,7 +30,7 @@ description: "kawa – Scheme language implemented using on a Java VM"
 <dt><code>-w</code></dt>
 <dd> Enter an interactive read-evaluate-print in a new top-level window.</dd>
 <dt><code>-C </code><i>filename</i></dt>
-<dd> Compile <i>filename</i> to one or more Java class files. See the Kawa manual for details. If no options are specified, it is equivalent to <code>-s</code>.<br />
+<dd> Compile <i>filename</i> to one or more Java class files. See the Kawa manual for details. If no options are specified, it is equivalent to <code>-s</code>.<br/>
  GNU <code><a href="/docs/linux/man/3-readline/">readline</a>(3)</code> can normally be used to edit commands. </dd>
 </dl>
 <h2>FILES</h2>

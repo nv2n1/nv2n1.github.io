@@ -10,7 +10,7 @@ description: "lp – print files"
 
 <p> lp &#8211; print files</p>
 <h2>SYNOPSIS</h2>
-<p> <code>lp</code> [ -E ] [ -U <i>username</i> ] [ -c ] [ -d <i>destination[/instance]</i> ] [ -h <i>hostname[:port]</i> ] [ -m ] [ -n <i>num-copies</i> ] [ -o <i>option[=value]</i> ] [ -q <i>priority</i> ] [ -s ] [ -t <i>title</i> ] [ -H <i>handling</i> ] [ -P <i>page-list</i> ] [ &#8212; ] [ <i>file(s)</i> ]<br />
+<p> <code>lp</code> [ -E ] [ -U <i>username</i> ] [ -c ] [ -d <i>destination[/instance]</i> ] [ -h <i>hostname[:port]</i> ] [ -m ] [ -n <i>num-copies</i> ] [ -o <i>option[=value]</i> ] [ -q <i>priority</i> ] [ -s ] [ -t <i>title</i> ] [ -H <i>handling</i> ] [ -P <i>page-list</i> ] [ &#8212; ] [ <i>file(s)</i> ]<br/>
  <code>lp</code> [ -E ] [ -U <i>username</i> ] [ -c ] [ -h <i>hostname[:port]</i> ] [ -i <i>job-id</i> ] [ -n <i>num-copies</i> ] [ -o <i>option[=value]</i> ] [ -q <i>priority</i> ] [ -t <i>title</i> ] [ -H <i>handling</i> ] [ -P <i>page-list</i> ]</p>
 <h2>DESCRIPTION</h2>
 <p> <i>lp</i> submits files for printing or alters a pending job. Use a filename of &quot;-&quot; to force printing from the standard input.</p>
@@ -136,7 +136,7 @@ description: "lp – print files"
 <p> Unlike the System V printing system, CUPS allows printer names to contain any printable character except SPACE, TAB, &quot;/&quot;, or &quot;#&quot;. Also, printer and class names are <i>not</i> case-sensitive. </p>
 <p> The &quot;q&quot; option accepts a different range of values than the Solaris lp command, matching the IPP job priority values (1-100, 100 is highest priority) instead of the Solaris values (0-39, 0 is highest priority).</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-cancel/">cancel</a>(1)</i>, <i><a href="/docs/linux/man/8-lpadmin/">lpadmin</a>(8)</i>, <i><a href="/docs/linux/man/8-lpmove/">lpmove</a>(8)</i>, <i><a href="/docs/linux/man/1-lpoptions/">lpoptions</a>(1)</i>, <i><a href="/docs/linux/man/1-lpstat/">lpstat</a>(1)</i>,<br />
+<p> <i><a href="/docs/linux/man/1-cancel/">cancel</a>(1)</i>, <i><a href="/docs/linux/man/8-lpadmin/">lpadmin</a>(8)</i>, <i><a href="/docs/linux/man/8-lpmove/">lpmove</a>(8)</i>, <i><a href="/docs/linux/man/1-lpoptions/">lpoptions</a>(1)</i>, <i><a href="/docs/linux/man/1-lpstat/">lpstat</a>(1)</i>,<br/>
  <a rel="nofollow" href="http://localhost:631/help">http://localhost:631/help</a></p>
 <h2>COPYRIGHT</h2>
 <p> Copyright 2007-2013 by Apple Inc. </p>

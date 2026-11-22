@@ -9,20 +9,20 @@ description: "remctld – Server for remctl, a remote command execution utility"
 
 <p>remctld &#8211; Server for remctl, a remote command execution utility</p>
 <h2>Synopsis</h2>
-<p>remctld [<code>-dFhmSvZ</code>] [<code>-b</code> <i>bind-address</i> [<code>-b</code> <i>bind-address</i> &#8230;]]<br />
-&nbsp;<wbr>[<code>-f</code>&nbsp;<wbr><i>config</i>]&nbsp;<wbr>[<code>-k</code>&nbsp;<wbr><i>keytab</i>]&nbsp;<wbr>[<code>-P</code>&nbsp;<wbr><i>file</i>]&nbsp;<wbr>[<code>-p</code>&nbsp;<wbr><i>port</i>]<br />
+<p>remctld [<code>-dFhmSvZ</code>] [<code>-b</code> <i>bind-address</i> [<code>-b</code> <i>bind-address</i> &#8230;]]<br/>
+&nbsp;<wbr>[<code>-f</code>&nbsp;<wbr><i>config</i>]&nbsp;<wbr>[<code>-k</code>&nbsp;<wbr><i>keytab</i>]&nbsp;<wbr>[<code>-P</code>&nbsp;<wbr><i>file</i>]&nbsp;<wbr>[<code>-p</code>&nbsp;<wbr><i>port</i>]<br/>
 &nbsp;<wbr>[<code>-s</code>&nbsp;<wbr><i>service</i>]</p>
 <h2>Description</h2>
 <p><code>remctld</code> is the server for remctl. It accepts a connection from remctl, receives the command to execute and the arguments, verifies authorization of the user and executes the command, returning the result back to the client. All connections are authenticated using Kerberos GSS-API Kerberos, and all transmissions are also encrypted using the GSS-API privacy layer. </p>
 <p> <code>remctld</code> is normally started using <code>tcpserver</code> or from <code>inetd</code>, but it may be run in stand-alone mode as a daemon using <code>-m</code>. Either <code>-s</code> must be given to use an alternate identity (which will require the same flag be used for <code>remctl</code> client invocations), or it must be run as root to read the host keytab file. <code>remctld</code> logs its activity using syslog (the daemon facility). </p>
-<p> The location of the configuration file may be specified with the <code>-f</code> option. The default location is <i>/etc/remctl.conf</i>. For information on the format of the configuration file, see &#8220;<font SIZE="-1">CONFIGURATION FILE&#8221;</font> below. </p>
-<p> When the command is run, several environment variables will be set providing information about the remote connection. See <font SIZE="-1">ENVIRONMENT</font> below for more information. </p>
-<p> Command-line and configuration options and <font SIZE="-1">ACL</font> methods are annotated below with the version at which they were added. For version information for more general features, see <font SIZE="-1">COMPATIBILITY</font> below.</p>
+<p> The location of the configuration file may be specified with the <code>-f</code> option. The default location is <i>/etc/remctl.conf</i>. For information on the format of the configuration file, see &#8220;CONFIGURATION FILE&#8221; below. </p>
+<p> When the command is run, several environment variables will be set providing information about the remote connection. See ENVIRONMENT below for more information. </p>
+<p> Command-line and configuration options and ACL methods are annotated below with the version at which they were added. For version information for more general features, see COMPATIBILITY below.</p>
 <h2>Options</h2>
 <p>The start of each option description is annotated with the version of <code>remctld</code> in which that option was added with its current meaning.</p>
 <dl>
 <dt><code>-b</code> <i>bind-address</i></dt>
-<dd>[2.17] When running as a standalone server, bind to the specified local address rather than listening on all interfaces. This option may be given multiple times to bind to multiple addresses. <i>bind-address</i> must be an <font SIZE="-1">IP</font> address (either IPv4 or IPv6), not a hostname. Only makes sense in combination with <code>-m</code>. </dd>
+<dd>[2.17] When running as a standalone server, bind to the specified local address rather than listening on all interfaces. This option may be given multiple times to bind to multiple addresses. <i>bind-address</i> must be an IP address (either IPv4 or IPv6), not a hostname. Only makes sense in combination with <code>-m</code>. </dd>
 <p> This option is ignored if <code>remctld</code> is passed already open sockets via the systemd socket activation protocol. In that case, the bind addresses of the sockets should be controlled via the systemd configuration.</p>
 <dt><code>-d</code></dt>
 <dd>[1.10] Enable verbose debug logging to syslog (or to standard output if <code>-S</code> is also given).</dd>
@@ -31,14 +31,14 @@ description: "remctld – Server for remctl, a remote command execution utility"
 <dt><code>-f</code> <i>config</i></dt>
 <dd>[1.0] The configuration file for <code>remctld</code>, overriding the default path.</dd>
 <dt><code>-h</code></dt>
-<dd>[1.10] Show a brief usage message and then exit. This usage method will include a list of supported <font SIZE="-1">ACL</font> types and can be used to determine if optional <font SIZE="-1">ACL</font> methods were compiled into a given <code>remctld</code> build.</dd>
+<dd>[1.10] Show a brief usage message and then exit. This usage method will include a list of supported ACL types and can be used to determine if optional ACL methods were compiled into a given <code>remctld</code> build.</dd>
 <dt><code>-k</code> <i>keytab</i></dt>
-<dd>[2.8] Use <i>keytab</i> as the keytab for server credentials rather than the system default or the value of the <font SIZE="-1">KRB5_KTNAME</font> environment variable. Using <code>-k</code> just sets the <font SIZE="-1">KRB5_KTNAME</font> environment variable internally in the process.</dd>
+<dd>[2.8] Use <i>keytab</i> as the keytab for server credentials rather than the system default or the value of the KRB5_KTNAME environment variable. Using <code>-k</code> just sets the KRB5_KTNAME environment variable internally in the process.</dd>
 <dt><code>-m</code></dt>
 <dd>[2.8] Enable stand-alone mode. <code>remctld</code> will listen to its configured port and fork a new child for each incoming connection. By default, when this option is used, <code>remctld</code> also changes directory to <i>/</i>, backgrounds itself, and closes standard input, output, and error. To not background, pass <code>-F</code> as well. To not close standard output and error and continue using them for logging, pass <code>-S</code> as well. </dd>
 <p> To determine the port, <code>remctld</code> attempts to look up the <tt>&quot;remctl&quot;</tt> service in the local <i>/etc/services</i> file and uses the port defined there. If the <tt>&quot;remctl&quot;</tt> service could not be found, it uses 4373, the registered remctl port.</p>
 <dt><code>-P</code> <i>file</i></dt>
-<dd>[2.0] When running in stand-alone mode (<code>-m</code>), write the <font SIZE="-1">PID</font> of <code>remctld</code> to <i>file</i>. This option is ignored unless <code>-m</code> is also given.</dd>
+<dd>[2.0] When running in stand-alone mode (<code>-m</code>), write the PID of <code>remctld</code> to <i>file</i>. This option is ignored unless <code>-m</code> is also given.</dd>
 <dt><code>-p</code> <i>port</i></dt>
 <dd>[1.0] When running in stand-alone mode, listen on port <i>port</i> rather than the default. This option does nothing unless used with <code>-m</code>. </dd>
 <p> This option is ignored if <code>remctld</code> is passed already open sockets via the systemd socket activation protocol. In that case, the listening port should be controlled via the systemd configuration.</p>
@@ -49,7 +49,7 @@ description: "remctld – Server for remctl, a remote command execution utility"
 <dt><code>-v</code></dt>
 <dd>[1.10] Print the version of <code>remctld</code> and exit.</dd>
 <dt><code>-Z</code></dt>
-<dd>[3.7] When <code>remctld</code> is running in stand-alone mode, after it has set up its network socket and is ready to answer requests, raise <font SIZE="-1">SIGSTOP. </font> This signals to upstart, when using <tt>&quot;expect stop&quot;</tt>, that the daemon is ready to accept connections, and upstart will raise <font SIZE="-1">SIGCONT</font> to allow <code>remctld</code> to continue. This option is probably only useful when using upstart as the init system. Only makes sense in combination with <code>-m</code>.</dd></dl>
+<dd>[3.7] When <code>remctld</code> is running in stand-alone mode, after it has set up its network socket and is ready to answer requests, raise SIGSTOP.  This signals to upstart, when using <tt>&quot;expect stop&quot;</tt>, that the daemon is ready to accept connections, and upstart will raise SIGCONT to allow <code>remctld</code> to continue. This option is probably only useful when using upstart as the init system. Only makes sense in combination with <code>-m</code>.</dd></dl>
 <h2>Configuration File</h2>
 <p>The configuration file defines the allowed commands and specifies access control information. The configuration file format is lines of space- or tab-separated strings, where each line is: </p>
 <pre> command subcommand executable [option=value ...] acl [acl ...]</pre>
@@ -63,10 +63,10 @@ description: "remctld – Server for remctl, a remote command execution utility"
 <dt><i>command</i></dt>
 <dd>The command being issued or the special keyword <tt>&quot;ALL&quot;</tt>. Normally, related commands (such as all commands for managing a particular service) are grouped together as subcommands under one command. </dd>
 <p> If the keyword <tt>&quot;ALL&quot;</tt> is used instead of a specific subcommand, this line matches all commands with the given subcommand (so <tt>&quot;ALL ALL&quot;</tt> matches any command) and can be used to dispatch all commands to the same executable with the same ACLs. Since the first matching entry is used, list entries for specific commands first (if any) and then the <tt>&quot;ALL&quot;</tt> catch-all. </p>
-<p> Note that while the subcommand is passed to the executable as a command-line option, the command is not. The command is available to the executable in the environment variable <font SIZE="-1">REMCTL_COMMAND </font>(see <font SIZE="-1">ENVIRONMENT</font> below). </p>
+<p> Note that while the subcommand is passed to the executable as a command-line option, the command is not. The command is available to the executable in the environment variable REMCTL_COMMAND (see ENVIRONMENT below). </p>
 <p> The command <tt>&quot;help&quot;</tt> is handled specially if no such command is defined in the configuration file. See below under the <tt>&quot;help&quot;</tt> and <tt>&quot;summary&quot;</tt> options.</p>
 <dt><i>subcommand</i></dt>
-<dd>The subcommand within the command being requested, such as <tt>&quot;release&quot;</tt> for the release function of the <font SIZE="-1">AFS</font> volume backend, or one of the special keywords <tt>&quot;ALL&quot;</tt> or <tt>&quot;EMPTY&quot;</tt>. </dd>
+<dd>The subcommand within the command being requested, such as <tt>&quot;release&quot;</tt> for the release function of the AFS volume backend, or one of the special keywords <tt>&quot;ALL&quot;</tt> or <tt>&quot;EMPTY&quot;</tt>. </dd>
 <p> If the keyword <tt>&quot;ALL&quot;</tt> is used instead of a specific subcommand, this line matches all subcommands with the given command and can be used to dispatch all subcommands under that command to the same executable with the same ACLs. Since the first matching entry is used, list entries for specific services first (if any) and then the <tt>&quot;ALL&quot;</tt> catch-all. </p>
 <p> If the keyword <tt>&quot;EMPTY&quot;</tt> is used instead of a specific subcommand, this line matches only commands where no subcommand was given. </p>
 <p> The subcommand is always passed as the first argument to the executable program that is listed for that service unless no subcommand was given.</p>
@@ -87,82 +87,82 @@ description: "remctld – Server for remctl, a remote command execution utility"
 <dt>stdin=(<i>n</i> | &quot;last&quot;)</dt>
 <dd>[2.14] Specifies that the <i>n</i>th or last argument to the command be passed on standard input instead of on the command line. The value of this option must either be the number of argument to pass on standard input (with the <i>subcommand</i> considered argument 1) or the special value <tt>&quot;last&quot;</tt>, which indicates that the final argument (no matter how many there are) be passed on standard input. </dd>
 <p> The <i>command</i> cannot be passed on standard input, so <i>n</i> must be at least <tt>1</tt>. If this option is set to <tt>&quot;last&quot;</tt> and no arguments are given except the <i>command</i> and possibly the <i>subcommand</i>, nothing will be passed on standard input. </p>
-<p> This option is used primarily for passing large amounts of data that may not fit on the command line or data that contains <font SIZE="-1">NUL</font> characters. It can also be used for arguments like passwords that shouldn&#8217;t be exposed on the command line. Only at most one argument may be passed on standard input to the command. Be aware that even if the <i>subcommand</i> is the designated argument to pass on standard input (<tt>&quot;stdin=1&quot;</tt>), the <i>subcommand</i> may not contain <font SIZE="-1">NUL</font> characters.</p>
+<p> This option is used primarily for passing large amounts of data that may not fit on the command line or data that contains NUL characters. It can also be used for arguments like passwords that shouldn&#8217;t be exposed on the command line. Only at most one argument may be passed on standard input to the command. Be aware that even if the <i>subcommand</i> is the designated argument to pass on standard input (<tt>&quot;stdin=1&quot;</tt>), the <i>subcommand</i> may not contain NUL characters.</p>
 <dt>summary=<i>arg</i></dt>
 <dd>[3.2] Specifies the argument for this command that will print a usage summary to standard output. </dd>
 <p> If remctld receives the command <tt>&quot;help&quot;</tt> with no arguments, and no <tt>&quot;help&quot;</tt> command is defined in the configuration file, the server will look through the configuration for any command with a <tt>&quot;summary&quot;</tt> option set. If this option is set, the <i>subcommand</i> is <tt>&quot;ALL&quot;</tt>, and the user is authorized to run the command, the server will run the specified <i>executable</i> with the argument <i>arg</i>, sending the output back to the user. It will do this for every command in the configuration that meets the above criteria. </p>
 <p> This allows display of a summary of available commands to the user based on which commands that user is authorized to run. It&#8217;s a lightweight form of service discovery. Also see the <tt>&quot;help&quot;</tt> option. </p>
 <p> As mentioned above, this option is only meaningful on configuration lines with a <i>subcommand</i> of <tt>&quot;ALL&quot;</tt>.</p>
 <dt>user=(<i>username</i> | <i>uid</i>)</dt>
-<dd>[3.1] Run this command as the specified user, which can be given as either a username or as a <font SIZE="-1">UID. </font> Even if given as a <font SIZE="-1">UID,</font> the user must be found in the user database (searched via <i><a href="/docs/linux/man/3-getpwuid/">getpwuid</a></i>(3)). <code>remctld</code> will run the command as the specified user, including that user&#8217;s primary and supplemental groups.</dd></dl>
+<dd>[3.1] Run this command as the specified user, which can be given as either a username or as a UID.  Even if given as a UID, the user must be found in the user database (searched via <i><a href="/docs/linux/man/3-getpwuid/">getpwuid</a></i>(3)). <code>remctld</code> will run the command as the specified user, including that user&#8217;s primary and supplemental groups.</dd></dl>
 </dl>
 <dl>
 <dd></dd></dl>
 <dt><i>acl</i></dt>
 <dd>One or more entries of the form [<i>method</i>:]<i>data</i>, where <i>method</i> specifies an access control method to be used, and <i>data</i> contains parameters whose meaning depends on the method. If the method is omitted, the data is processed as described for the <tt>&quot;file&quot;</tt> method. </dd>
 <p> If <i>method</i> is omitted, <i>acl</i> must either begin with <tt>&quot;/&quot;</tt> or must not contain <tt>&quot;=&quot;</tt>. Otherwise, it will be parsed as an option instead. If there is any ambiguity, prepend the <i>method</i>. </p>
-<p> Each entry is checked in order, and access is granted as soon as an entry matches. If no entry matches, access is denied. The following methods may supported; however, be aware that the availability of several <font SIZE="-1">ACL</font> types depends on whether <code>remctld</code> was built with that support. Each <font SIZE="-1">ACL</font> type is annotated with the version in which it was added.</p>
+<p> Each entry is checked in order, and access is granted as soon as an entry matches. If no entry matches, access is denied. The following methods may supported; however, be aware that the availability of several ACL types depends on whether <code>remctld</code> was built with that support. Each ACL type is annotated with the version in which it was added.</p>
 <dl>
 <dd>
 </dd><dl>
 <dt>file</dt>
-<dd>[2.13] The data is the full path of an <font SIZE="-1">ACL</font> file or to a directory containing <font SIZE="-1">ACL</font> files. Directories are handled as described for the include directive in configuration files. An <font SIZE="-1">ACL</font> file contains one entry per line, in the [<i>method</i>:]<i>data</i> form described above. Entries are handled exactly as if they had appeared in the configuration file except that the default method is <tt>&quot;princ&quot;</tt> instead of <tt>&quot;file&quot;</tt>. Blank lines and lines beginning with <tt>&quot;#&quot;</tt> are ignored in the <font SIZE="-1">ACL</font> files. </dd>
+<dd>[2.13] The data is the full path of an ACL file or to a directory containing ACL files. Directories are handled as described for the include directive in configuration files. An ACL file contains one entry per line, in the [<i>method</i>:]<i>data</i> form described above. Entries are handled exactly as if they had appeared in the configuration file except that the default method is <tt>&quot;princ&quot;</tt> instead of <tt>&quot;file&quot;</tt>. Blank lines and lines beginning with <tt>&quot;#&quot;</tt> are ignored in the ACL files. </dd>
 <p> For backward compatibility, a line like: </p>
 <pre> include [&lt;method&gt;:]&lt;data&gt;</pre>
-<p>in an <font SIZE="-1">ACL</font> file behaves exactly as if the <tt>&quot;include&quot;</tt> directive had been omitted, except that the default method is <tt>&quot;file&quot;</tt>. Thus, writing: </p>
+<p>in an ACL file behaves exactly as if the <tt>&quot;include&quot;</tt> directive had been omitted, except that the default method is <tt>&quot;file&quot;</tt>. Thus, writing: </p>
 <pre> include &lt;path&gt;</pre>
-<p>in an <font SIZE="-1">ACL</font> file is the same as writing: </p>
+<p>in an ACL file is the same as writing: </p>
 <pre> file:&lt;path&gt;</pre>
 <p>and is handled identically to the include directive in configuration files.</p>
 <dt>princ</dt>
 <dd>[2.13] The data is the name of a Kerberos v5 principal which is to be granted access, such as <tt>&quot;username [at] EXAMPLE.ORG&quot;</tt>.</dd>
 <dt>deny</dt>
 <dd>[2.13] This method is used to selectively deny access. The data is parsed as a [<i>method</i>:]<i>data</i> and evaluated as described above, with the default scheme being <tt>&quot;princ&quot;</tt>. If it matches, access is denied immediately without examining any further entries. Otherwise, processing continues. </dd>
-<p> Remember that access is granted as soon as an entry matches. For <tt>&quot;deny&quot;</tt> rules to be effective, they therefore must come before any ACLs they are intended to override. Be careful when using <tt>&quot;deny&quot;</tt> when including a directory of <font SIZE="-1">ACL</font> files, since the files in that directory are read in an undefined order (not in alphabetical order by filename). It&#8217;s best to explicitly include the file containing <tt>&quot;deny&quot;</tt> <font SIZE="-1">ACL</font> rules first. </p>
+<p> Remember that access is granted as soon as an entry matches. For <tt>&quot;deny&quot;</tt> rules to be effective, they therefore must come before any ACLs they are intended to override. Be careful when using <tt>&quot;deny&quot;</tt> when including a directory of ACL files, since the files in that directory are read in an undefined order (not in alphabetical order by filename). It&#8217;s best to explicitly include the file containing <tt>&quot;deny&quot;</tt> ACL rules first. </p>
 <p> Note that <tt>&quot;deny&quot;</tt> only denies access; it never grants it. Thus, deny alone does not grant access to anyone, and using deny on itself as in <tt>&quot;deny:deny:foo&quot;</tt> neither denies nor grants access to anyone.</p>
 <dt>gput</dt>
-<dd>[2.13] This method is used to grant access based on the <font SIZE="-1">CMU GPUT </font>(Global Privileged User Table &#8212; see <i>gput</i>(5)). The data is either a <font SIZE="-1">GPUT</font> role name or a string of the form <i>group</i>[<i>xform</i>], where <i>group</i> is a <font SIZE="-1">GPUT</font> role name and <i>xform</i> is a <font SIZE="-1">GPUT</font> transform string. Access is granted if the user is a member of the specified <font SIZE="-1">GPUT</font> group, after applying either the optional <i>xform</i> or the default transform. </dd>
-<p> This method is supported only if <code>remctld</code> was compiled with <font SIZE="-1">GPUT</font> support by using the <tt>&quot;--with-gput&quot;</tt> configure option.</p>
+<dd>[2.13] This method is used to grant access based on the CMU GPUT (Global Privileged User Table &#8212; see <i>gput</i>(5)). The data is either a GPUT role name or a string of the form <i>group</i>[<i>xform</i>], where <i>group</i> is a GPUT role name and <i>xform</i> is a GPUT transform string. Access is granted if the user is a member of the specified GPUT group, after applying either the optional <i>xform</i> or the default transform. </dd>
+<p> This method is supported only if <code>remctld</code> was compiled with GPUT support by using the <tt>&quot;--with-gput&quot;</tt> configure option.</p>
 <dt>localgroup</dt>
-<dd>[3.9] This method is used to grant or deny access based on membership in local <font SIZE="-1">UNIX</font> groups. The data is taken to be a name of a local system group. The user principal is converted to a local user name with <i><a href="/docs/linux/man/3-krb5_aname_to_localname/">krb5_aname_to_localname</a></i>(3) and then compared to the members of the given group. </dd>
-<p> For example, to allow access to the members of group <tt>&quot;goodguys&quot;</tt>, use an <font SIZE="-1">ACL</font> of <tt>&quot;localgroup:goodguys&quot;</tt> syntax. To deny access to the members of group <tt>&quot;badguys&quot;</tt>, use <tt>&quot;deny:localgroup:badguys&quot;</tt>. </p>
+<dd>[3.9] This method is used to grant or deny access based on membership in local UNIX groups. The data is taken to be a name of a local system group. The user principal is converted to a local user name with <i><a href="/docs/linux/man/3-krb5_aname_to_localname/">krb5_aname_to_localname</a></i>(3) and then compared to the members of the given group. </dd>
+<p> For example, to allow access to the members of group <tt>&quot;goodguys&quot;</tt>, use an ACL of <tt>&quot;localgroup:goodguys&quot;</tt> syntax. To deny access to the members of group <tt>&quot;badguys&quot;</tt>, use <tt>&quot;deny:localgroup:badguys&quot;</tt>. </p>
 <p> <i>krb5_aname_to_localname()</i> follows local configuration rules to determine how to convert Kerberos principal to local users. If the realm of the principal is not in a local realm and is not otherwise covered by one of those rules, the principal will be unchanged, which will almost certainly mean that it will not be a member of any local group and access will be denied. </p>
 <p> This method is supported only if <code>remctld</code> was built with Kerberos support and the <i><a href="/docs/linux/man/3-getgrnam_r/">getgrnam_r</a></i>(3) library function was supported by the C library when it was built.</p>
 <dt>pcre</dt>
 <dd>[2.16] This method is used to grant or deny access based on Perl-compatible regular expressions. The data is taken to be a Perl-compatible regular expression and matched against the user identity. To deny access, use the <tt>&quot;deny:pcre:</tt>regex<tt>&quot;</tt> syntax. </dd>
-<p> This method is supported only if <code>remctld</code> was compiled with <font SIZE="-1">PCRE</font> support by using the <tt>&quot;--with-pcre&quot;</tt> configure option.</p>
+<p> This method is supported only if <code>remctld</code> was compiled with PCRE support by using the <tt>&quot;--with-pcre&quot;</tt> configure option.</p>
 <dt>regex</dt>
-<dd>[2.16] This method is used to grant or deny access based on <font SIZE="-1">POSIX</font> extended regular expressions. The data is taken to be a <font SIZE="-1">POSIX</font> extended regular expression (like those used by <code>egrep</code>) and matched against the user identity. To deny access, use the <tt>&quot;deny:regex:</tt>regex<tt>&quot;</tt> syntax. </dd>
+<dd>[2.16] This method is used to grant or deny access based on POSIX extended regular expressions. The data is taken to be a POSIX extended regular expression (like those used by <code>egrep</code>) and matched against the user identity. To deny access, use the <tt>&quot;deny:regex:</tt>regex<tt>&quot;</tt> syntax. </dd>
 <p> This method is supported only if a library for POSIX-compatible regular expressions was found when <code>remctld</code> was built.</dl>
 </dl>
 <dl>
-<dd>To see the list of <font SIZE="-1">ACL</font> types supported by a particular build of <code>remctld</code>, run <tt>&quot;remctld -h&quot;</tt>. </dd>
-<p> The keyword <font SIZE="-1">ANYUSER</font> may be used instead of the ACLs to allow access to all users. The user still needs to authenticate to <code>remctld</code>; this only affects authorization. This can be used for backend programs that want to check ACLs themselves and will retrieve the authenticated principal from the <font SIZE="-1">REMOTE_USER</font> environment variable. Note that <font SIZE="-1">ANYUSER</font> accepts <code>any</code> authenticated user, including cross-realm users from foreign Kerberos realms.</dl>
+<dd>To see the list of ACL types supported by a particular build of <code>remctld</code>, run <tt>&quot;remctld -h&quot;</tt>. </dd>
+<p> The keyword ANYUSER may be used instead of the ACLs to allow access to all users. The user still needs to authenticate to <code>remctld</code>; this only affects authorization. This can be used for backend programs that want to check ACLs themselves and will retrieve the authenticated principal from the REMOTE_USER environment variable. Note that ANYUSER accepts <code>any</code> authenticated user, including cross-realm users from foreign Kerberos realms.</dl>
 </dl>
 <h2>Environment</h2>
 <p><code>remctld</code> itself uses the following environment variables when run in stand-alone mode (<code>-m</code>):</p>
 <dl>
-<dt><font SIZE="-1">LISTEN_FDS</font></dt>
+<dt>LISTEN_FDS</dt>
 <dd>
-</dd><dt><font SIZE="-1">LISTEN_PID</font></dt>
+</dd><dt>LISTEN_PID</dt>
 <dd>If these environment variables are set, <code>remctld</code> will expect to be provided its listening sockets via the systemd socket activation protocol and will not attempt to bind its own sockets. For more details on the protocol, see <i><a href="/docs/linux/man/7-daemon/">daemon</a></i>(7) and <i><a href="/docs/linux/man/3-sd_listen_fds/">sd_listen_fds</a></i>(3).</dd>
-<dt><font SIZE="-1">NOTIFY_SOCKET</font></dt>
+<dt>NOTIFY_SOCKET</dt>
 <dd>If this environment variable is set, <code>remctld</code> will notify the socket named in this variable when it is ready to accept incoming packets using the systemd status notification protocol. For more details, see <i><a href="/docs/linux/man/7-daemon/">daemon</a></i>(7) and <i><a href="/docs/linux/man/3-sd_notify/">sd_notify</a></i>(3). </dd>
 <p> Note that using socket activation is recommended when running under systemd in stand-alone mode, and status notification is not necessary or useful when using socket activation.</dl>
 <p> When running in stand-alone mode, these environment variables will be cleared by <code>remctld</code> before running any commands. </p>
 <p> The following environment variables will be set for any commands run via <code>remctld</code> (annotated with the version at which they were added):</p>
 <dl>
-<dt><font SIZE="-1">REMOTE_USER</font></dt>
+<dt>REMOTE_USER</dt>
 <dd>
-</dd><dt><font SIZE="-1">REMUSER</font></dt>
-<dd>[1.0 for <font SIZE="-1">REMUSER, 2.1</font> for <font SIZE="-1">REMOTE_USER</font>] Set to the Kerberos principal of the authenticated client.</dd>
-<dt><font SIZE="-1">REMOTE_ADDR</font></dt>
-<dd>[2.1] The <font SIZE="-1">IP</font> address of the remote host. This may be IPv4 or IPv6.</dd>
-<dt><font SIZE="-1">REMOTE_HOST</font></dt>
+</dd><dt>REMUSER</dt>
+<dd>[1.0 for REMUSER, 2.1 for REMOTE_USER] Set to the Kerberos principal of the authenticated client.</dd>
+<dt>REMOTE_ADDR</dt>
+<dd>[2.1] The IP address of the remote host. This may be IPv4 or IPv6.</dd>
+<dt>REMOTE_HOST</dt>
 <dd>[2.1] The hostname of the remote host, if it was available. If reverse name resolution failed, this environment variable will not be set.</dd>
-<dt><font SIZE="-1">REMCTL_COMMAND</font></dt>
+<dt>REMCTL_COMMAND</dt>
 <dd>[2.16] The command string that caused this command to be run. This variable will contain only the command, not the subcommand or any additional arguments (which are passed as command arguments).</dd></dl>
-<p> If the <code>-k</code> flag is used, <code>remctld</code> will also set <font SIZE="-1">KRB5_KTNAME</font> to the provided keytab path. This is primarily for communication with the GSS-API library, but this setting will also be inherited by any commands run by <code>remctld</code>.</p>
+<p> If the <code>-k</code> flag is used, <code>remctld</code> will also set KRB5_KTNAME to the provided keytab path. This is primarily for communication with the GSS-API library, but this setting will also be inherited by any commands run by <code>remctld</code>.</p>
 <h2>Examples</h2>
 <p>Typically <code>remctld</code> is to be started as follows, where &#8220;hostname&#8221; is the machine where remctld will run, and 4373 is the port: </p>
 <pre> tcpserver hostname 4373 remctld</pre>
@@ -186,30 +186,30 @@ description: "remctld – Server for remctl, a remote command execution utility"
  accounts passwd /usr/local/bin/dopasswd logmask=3 /etc/acl/group1
  printing ALL /usr/local/bin/printthing /etc/acl/group2</pre>
 <p>The commands <tt>&quot;accounts create&quot;</tt>, <tt>&quot;accounts delete&quot;</tt>, and so forth will all be passed to /usr/local/bin/doaccount with the first argument being the specific subcommand, with the exception of <tt>&quot;accounts passwd&quot;</tt>. That command will be passed to /usr/local/bin/dopasswd instead, but it will still get <tt>&quot;passwd&quot;</tt> as its first argument. The third argument to <tt>&quot;accounts passwd&quot;</tt> (presumably the password) will not be logged to syslog. All commands starting with <tt>&quot;printing&quot;</tt> will be passed to /usr/local/bin/printthing. </p>
-<p> Example <font SIZE="-1">ACL</font> file: </p>
+<p> Example ACL file: </p>
 <pre> # This is a comment.
  deny:baduser [at] EXAMPLE.ORG
  file:/etc/remctl/acl/admins
  principal:service/admin [at] EXAMPLE.ORG
  service/other [at] EXAMPLE.ORG</pre>
-<p>This <font SIZE="-1">ACL</font> file will reject <tt>&quot;baduser [at] EXAMPLE.ORG&quot;</tt> even if that user would have been allowed by one of the other <font SIZE="-1">ACL</font> rules. It will then grant access according to the <font SIZE="-1">ACL</font> entries in <i>/etc/remctl/acl/admins</i> and the specific principals <tt>&quot;service/admin [at] EXAMPLE.ORG&quot;</tt> and <tt>&quot;service/other [at] EXAMPLE.ORG&quot;</tt>. The last line takes advantage of the default <font SIZE="-1">ACL</font> method of <tt>&quot;principal&quot;</tt> when processing an <font SIZE="-1">ACL</font> file.</p>
+<p>This ACL file will reject <tt>&quot;baduser [at] EXAMPLE.ORG&quot;</tt> even if that user would have been allowed by one of the other ACL rules. It will then grant access according to the ACL entries in <i>/etc/remctl/acl/admins</i> and the specific principals <tt>&quot;service/admin [at] EXAMPLE.ORG&quot;</tt> and <tt>&quot;service/other [at] EXAMPLE.ORG&quot;</tt>. The last line takes advantage of the default ACL method of <tt>&quot;principal&quot;</tt> when processing an ACL file.</p>
 <h2>Compatibility</h2>
-<p>The version at which various command-line and configuration options and <font SIZE="-1">ACL</font> methods were added to <code>remctld</code> are noted in their descriptions. Below is the version information for more general features, in reverse order of when the feature was added. </p>
-<p> Support for the systemd readiness protocol and socket activation, including honoring the environment variables <font SIZE="-1">LISTEN_FDS, LISTEN_PID,</font> and <font SIZE="-1">NOTIFY_SOCKET,</font> was added in version 3.7. </p>
+<p>The version at which various command-line and configuration options and ACL methods were added to <code>remctld</code> are noted in their descriptions. Below is the version information for more general features, in reverse order of when the feature was added. </p>
+<p> Support for the systemd readiness protocol and socket activation, including honoring the environment variables LISTEN_FDS, LISTEN_PID, and NOTIFY_SOCKET, was added in version 3.7. </p>
 <p> Special handling of the <tt>&quot;help&quot;</tt> and <tt>&quot;summary&quot;</tt> commands was added in version 3.2. </p>
 <p> Support for the <tt>&quot;ALL&quot;</tt> keyword in the command field of the configuration file was added in version 2.15. (It has always been supported in the subcommand field.) </p>
 <p> Support for the <tt>&quot;EMPTY&quot;</tt> keyword in the subcommand field of the configuration file was added in version 2.15. </p>
-<p> Support for <font SIZE="-1">ACL</font> schemes and the <i>method</i>:<i>data</i> syntax was added in remctl 2.13. Prior versions of <code>remctld</code> expected only files in the main <code>remctld</code> configuration file, and only principals or lines starting with <tt>&quot;include&quot;</tt> in those files, without any <i>method</i>: prefixes. </p>
+<p> Support for ACL schemes and the <i>method</i>:<i>data</i> syntax was added in remctl 2.13. Prior versions of <code>remctld</code> expected only files in the main <code>remctld</code> configuration file, and only principals or lines starting with <tt>&quot;include&quot;</tt> in those files, without any <i>method</i>: prefixes. </p>
 <p> The default listening port with the <code>-m</code> option was changed to the IANA-registered port of 4373 in version 2.11. </p>
-<p> Support for IPv6 addresses in the <font SIZE="-1">REMOTE_ADDR</font> environment variable was added in version 2.4. </p>
-<p> <code>remctld</code> used to set the environment variable <font SIZE="-1">SCPRINCIPAL</font> when running commands, for (partial) backward compatibility with <code>sysctld</code>, but stopped doing so in version 2.1. </p>
-<p> <tt>&quot;include&quot;</tt> directives in <font SIZE="-1">ACL</font> files were added in version 1.11. <tt>&quot;include&quot;</tt> directives in configuration files were added in version 1.8.</p>
+<p> Support for IPv6 addresses in the REMOTE_ADDR environment variable was added in version 2.4. </p>
+<p> <code>remctld</code> used to set the environment variable SCPRINCIPAL when running commands, for (partial) backward compatibility with <code>sysctld</code>, but stopped doing so in version 2.1. </p>
+<p> <tt>&quot;include&quot;</tt> directives in ACL files were added in version 1.11. <tt>&quot;include&quot;</tt> directives in configuration files were added in version 1.8.</p>
 <h2>Caveats</h2>
-<p>When using Heimdal with triple-DES keys and talking to old clients that only speak version one of the remctl protocol, <code>remctld</code> may have problems with <font SIZE="-1">MIC</font> verification. This doesn&#8217;t affect new clients and servers since the version two protocol doesn&#8217;t use MICs. If you are using Heimdal and run into <font SIZE="-1">MIC</font> verification problems, see the <font SIZE="-1">COMPATIBILITY</font> section of <i><a href="/docs/linux/man/3-gssapi/">gssapi</a></i>(3). </p>
+<p>When using Heimdal with triple-DES keys and talking to old clients that only speak version one of the remctl protocol, <code>remctld</code> may have problems with MIC verification. This doesn&#8217;t affect new clients and servers since the version two protocol doesn&#8217;t use MICs. If you are using Heimdal and run into MIC verification problems, see the COMPATIBILITY section of <i><a href="/docs/linux/man/3-gssapi/">gssapi</a></i>(3). </p>
 <p> <code>remctld</code> does not itself impose any limits on the number of child processes or other system resources. You may want to set resource limits in your inetd server or with <code>ulimit</code> when running it as a standalone daemon or under <code>tcpserver</code>. </p>
-<p> Command arguments may not contain <font SIZE="-1">NUL</font> characters and must be shorter than the operating system limit on the length of a command line since they&#8217;re passed to the command as command-line arguments. The exception is an argument passed via standard input using the <tt>&quot;stdin=&quot;</tt> option in the configuration file. At most one argument may be passed that way.</p>
+<p> Command arguments may not contain NUL characters and must be shorter than the operating system limit on the length of a command line since they&#8217;re passed to the command as command-line arguments. The exception is an argument passed via standard input using the <tt>&quot;stdin=&quot;</tt> option in the configuration file. At most one argument may be passed that way.</p>
 <h2>Notes</h2>
-<p>The remctl port number, 4373, was derived by tracing the diagonals of a <font SIZE="-1">QWERTY</font> keyboard up from the letters <tt>&quot;remc&quot;</tt> to the number row.</p>
+<p>The remctl port number, 4373, was derived by tracing the diagonals of a QWERTY keyboard up from the letters <tt>&quot;remc&quot;</tt> to the number row.</p>
 <h2>Author</h2>
 <p><code>remctld</code> was originally written by Anton Ushakov. Updates and current maintenance are done by Russ Allbery &lt;eagle [at] eyrie.org&gt;.</p>
 <h2>Copyright And License</h2>

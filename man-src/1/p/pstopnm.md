@@ -64,7 +64,7 @@ description: "pstopnm – convert a PostScript file into a portable anymap"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gs/">gs</a></code>(1), <code>pstofits</code>(1), <code><a href="/docs/linux/man/1-pnmtops/">pnmtops</a></code>(1), <code><a href="/docs/linux/man/1-psidtopgm/">psidtopgm</a></code>(1), <code><a href="/docs/linux/man/1-pbmtolps/">pbmtolps</a></code>(1), <code><a href="/docs/linux/man/1-pbmtoepsi/">pbmtoepsi</a></code>(1), <code><a href="/docs/linux/man/1-pnmsplit/">pnmsplit</a></code>(1) </p>
 <h2>COPYRIGHT</h2>
-<p> Copyright (c) 1992 Smithsonian Astrophysical Observatory<br />
+<p> Copyright (c) 1992 Smithsonian Astrophysical Observatory<br/>
  PostScript is a Trademark of Adobe Systems Incorporated.</p>
 <h2>AUTHOR</h2>
 <p> Alberto Accomazzi, WIPL, Center for Astrophysics. </p>

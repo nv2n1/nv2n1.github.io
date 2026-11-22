@@ -24,10 +24,10 @@ static bool_set indeterminate ()
 Friends</code></pre>
 <p> <code>bool_set</code> <code>operator!</code> (<code>bool_set</code> __b) </p>
 <p> <code>bool_set</code> <code>operator&amp;</code> (<code>bool_set</code> __s, <code>bool_set</code> __t) </p>
-<p> template&lt;typename CharT , typename Traits &gt; <code>std::basic_ostream</code>&lt; CharT,<br />
+<p> template&lt;typename CharT , typename Traits &gt; <code>std::basic_ostream</code>&lt; CharT,<br/>
  Traits &gt; &amp; <code>operator&lt;&lt;</code> (<code>std::basic_ostream</code>&lt; CharT, Traits &gt; &amp;__out, <code>bool_set</code> __b)&quot; </p>
 <p> <code>bool_set</code> <code>operator==</code> (<code>bool_set</code> __s, <code>bool_set</code> __t) </p>
-<p> template&lt;typename CharT , typename Traits &gt; <code>std::basic_istream</code>&lt; CharT,<br />
+<p> template&lt;typename CharT , typename Traits &gt; <code>std::basic_istream</code>&lt; CharT,<br/>
  Traits &gt; &amp; <code>operator&gt;&gt;</code> (<code>std::basic_istream</code>&lt; CharT, Traits &gt; &amp;__in, <code>bool_set</code> &amp;__b)&quot; </p>
 <p> <code>bool_set</code> <code>operator^</code> (<code>bool_set</code> __s, <code>bool_set</code> __t) </p>
 <p> <code>bool_set</code> <code>operator|</code> (<code>bool_set</code> __s, <code>bool_set</code> __t)</p>

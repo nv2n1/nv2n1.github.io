@@ -45,10 +45,10 @@ struct crypt_data {
 <dt><code>Er </code>EINVAL</dt>
 <dd> Fa setting is invalid, or requests a hashing method that is not supported.</dd>
 <dt><code>Er </code>ERANGE</dt>
-<dd> Fa phrase is too long (more than <code>CRYPT_MAX_PASSPHRASE_SIZE</code> characters; some hashing methods may have lower limits).<br />
+<dd> Fa phrase is too long (more than <code>CRYPT_MAX_PASSPHRASE_SIZE</code> characters; some hashing methods may have lower limits).<br/>
  <code>crypt_rn</code> only: Fa size is too small for the hashing method requested by Fa setting .</dd>
 <dt><code>Er </code>ENOMEM</dt>
-<dd> Failed to allocate internal scratch memory.<br />
+<dd> Failed to allocate internal scratch memory.<br/>
  <code>crypt_ra</code> only: failed to allocate memory for Fa data .</dd>
 <dt><code>Er </code>ENOSYS <code>or Er </code>EOPNOTSUPP</dt>
 <dd> Hashing passphrases is not supported at all on this installation, or the hashing method requested by Fa setting is not supported. These error codes are not used by this version of libcrypt, but may be encountered on other systems.</dd></dl>

@@ -22,14 +22,14 @@ description: "epylog-modules – epylog module cofiguration."
 <dt><code>exec</code></dt>
 <dd>This is where the &quot;body&quot; of the module is located. Most modules that come with the distribution will be placed in /usr/share/epylog/modules, but depending on your setup, you may place them elsewhere.</dd>
 <dt><code>files</code></dt>
-<dd>List the logfiles requested by this module in this field. Separate multiple entries by comma. Epylog will handle rotated files, but you need to specify the mask appropriately. E.g. the most common logrotate setup will place rotated files in the same directory and add .0, .1, .2, etc to the end of the file. Therefore, a file entry would look like so:<br />
- <code>/var/log/filename[.#]</code><br />
- If you have compression turned on, your entry will look like so:<br />
- <code>/var/log/filename[.#.gz]</code><br />
- Lastly, for advanced configurations, more complex entries may be required. E.g. if your logrotate saves rotated files in a subdirectory in /var/log, you can specify it like so:<br />
- <code>/var/log/[rotate/]filename[.#.gz]</code><br />
- This will work, too:<br />
- <code>/var/log/filename[/var/rotate/filename.#.gz]</code><br />
+<dd>List the logfiles requested by this module in this field. Separate multiple entries by comma. Epylog will handle rotated files, but you need to specify the mask appropriately. E.g. the most common logrotate setup will place rotated files in the same directory and add .0, .1, .2, etc to the end of the file. Therefore, a file entry would look like so:<br/>
+ <code>/var/log/filename[.#]</code><br/>
+ If you have compression turned on, your entry will look like so:<br/>
+ <code>/var/log/filename[.#.gz]</code><br/>
+ Lastly, for advanced configurations, more complex entries may be required. E.g. if your logrotate saves rotated files in a subdirectory in /var/log, you can specify it like so:<br/>
+ <code>/var/log/[rotate/]filename[.#.gz]</code><br/>
+ This will work, too:<br/>
+ <code>/var/log/filename[/var/rotate/filename.#.gz]</code><br/>
  In any case, &quot;#&quot; will be where the increments will go.</dd>
 <dt><code>enabled</code></dt>
 <dd>Can be either &quot;yes&quot; or &quot;no&quot;. If &quot;no&quot; is specified, Epylog will completely ignore this module.</dd>

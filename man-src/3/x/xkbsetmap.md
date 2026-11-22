@@ -10,7 +10,7 @@ description: "XkbSetMap – Send a complete new set of values for entire compone
 <p>XkbSetMap &#8211; Send a complete new set of values for entire components to the server. </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Bool XkbSetMap</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>unsigned int </code><i>which</i><code>,</code> <code>XkbDescPtr </code><i>xkb</i><code>);</code><br />
+<dt> <code>Bool XkbSetMap</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>unsigned int </code><i>which</i><code>,</code> <code>XkbDescPtr </code><i>xkb</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
@@ -65,12 +65,12 @@ description: "XkbSetMap – Send a complete new set of values for entire compone
 <td> XkbKeyTypesMask </td>
 <td>(1&lt;&lt;0)</td>
 <td>client</td>
-<td> types<br />
- size_types<br />
+<td> types<br/>
+ size_types<br/>
  num_types </td>
-<td> XkbGetKeyTypes<br />
- XkbResizeKeyType<br />
- XkbCopyKeyType<br />
+<td> XkbGetKeyTypes<br/>
+ XkbResizeKeyType<br/>
+ XkbCopyKeyType<br/>
  XkbCopyKeyTypes
 </td>
 </tr>
@@ -78,12 +78,12 @@ description: "XkbSetMap – Send a complete new set of values for entire compone
 <td> XkbKeySymsMask </td>
 <td>(1&lt;&lt;1)</td>
 <td>client</td>
-<td> syms<br />
- size_syms<br />
- num_syms<br />
+<td> syms<br/>
+ size_syms<br/>
+ num_syms<br/>
  key_sym_map </td>
-<td> XkbGetKeySyms<br />
- XkbResizeKeySyms<br />
+<td> XkbGetKeySyms<br/>
+ XkbResizeKeySyms<br/>
  XkbChangeTypesOfKey
 </td>
 </tr>
@@ -107,11 +107,11 @@ description: "XkbSetMap – Send a complete new set of values for entire compone
 <td> XkbKeyActionsMask </td>
 <td>(1&lt;&lt;4)</td>
 <td>server</td>
-<td> key_acts<br />
- acts<br />
- num_acts<br />
+<td> key_acts<br/>
+ acts<br/>
+ num_acts<br/>
  size_acts </td>
-<td> XkbGetKeyActions<br />
+<td> XkbGetKeyActions<br/>
  XkbResizeKeyActions
 </td>
 </tr>

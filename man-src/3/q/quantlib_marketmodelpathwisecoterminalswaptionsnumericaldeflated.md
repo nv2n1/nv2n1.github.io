@@ -19,11 +19,11 @@ description: "QuantLib::MarketModelPathwiseCoterminalSwaptionsNumericalDeflated 
 <p> virtual Size <code>numberOfProducts</code> () const </p>
 <p> virtual Size <code>maxNumberOfCashFlowsPerProductPerStep</code> () const </p>
 <p> virtual bool <code>alreadyDeflated</code> () const </p>
-<p> virtual void <code>reset</code> ()<br />
- <i>during simulation put product at start of path </i><br />
- virtual bool <code>nextTimeStep</code> (const <code>CurveState</code> &amp;currentState, std::vector&lt; Size &gt; &amp;numberCashFlowsThisStep, std::vector&lt; std::vector&lt; MarketModelPathwiseMultiProduct::CashFlow &gt; &gt; &amp;cashFlowsGenerated)<br />
- <i>return value indicates whether path is finished, TRUE means done </i><br />
- virtual std::auto_ptr&lt; <code>MarketModelPathwiseMultiProduct</code> &gt; <code>clone</code> () const<br />
+<p> virtual void <code>reset</code> ()<br/>
+ <i>during simulation put product at start of path </i><br/>
+ virtual bool <code>nextTimeStep</code> (const <code>CurveState</code> &amp;currentState, std::vector&lt; Size &gt; &amp;numberCashFlowsThisStep, std::vector&lt; std::vector&lt; MarketModelPathwiseMultiProduct::CashFlow &gt; &gt; &amp;cashFlowsGenerated)<br/>
+ <i>return value indicates whether path is finished, TRUE means done </i><br/>
+ virtual std::auto_ptr&lt; <code>MarketModelPathwiseMultiProduct</code> &gt; <code>clone</code> () const<br/>
  <i>returns a newly-allocated copy of itself </i></p>
 <h2>Detailed Description</h2>
 <p>Easiest way to test <code>MarketModelPathwiseCoterminalSwaptionsDeflated</code> is by doing a numerical differentiation version. </p>

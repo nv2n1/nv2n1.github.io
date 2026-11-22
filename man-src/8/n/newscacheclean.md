@@ -29,15 +29,15 @@ description: "test – Purge the NewsCache to SpoolSize (newscache.conf paramete
 <dd>Try, not really removing files. </dd>
 </dl>
 <h2>Files</h2>
-<p>/etc/newscache.conf<br />
- /usr/sbin/newscache<br />
- /usr/sbin/newscacheclean<br />
- /usr/sbin/newscacheclean<br />
+<p>/etc/newscache.conf<br/>
+ /usr/sbin/newscache<br/>
+ /usr/sbin/newscacheclean<br/>
+ /usr/sbin/newscacheclean<br/>
  /usr/sbin/updatenews</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-newscache/">newscache</a></code>(8), <code><a href="/docs/linux/man/8-updatenews/">updatenews</a></code>(8), <code>newscache.conf</code>(5), </p>
 <h2>Authors</h2>
-<p>1997-2000 Thomas Gschwind &lt;tom [at] infosys.tuwien.ac.at&gt;<br />
+<p>1997-2000 Thomas Gschwind &lt;tom [at] infosys.tuwien.ac.at&gt;<br/>
  2001-2004 Herbert Straub &lt;h.straub [at] aon.at&gt;</p>
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;newscache [at] linuxhacker.org&gt;.</p>

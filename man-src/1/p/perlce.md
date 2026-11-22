@@ -10,14 +10,14 @@ description: "perlce – Perl for WinCE"
 
 <p> perlce &#8211; Perl for WinCE </p>
 <h2>Building Perl for WinCE</h2>
-<h3><font SIZE="-1">WARNING</font></h3>
-<p> <code>Much of this document has become very out of date and needs updating, rewriting or deleting. The build process was overhauled during the 5.19 development track and the current instructions as of that time are given in &#8220;</code><font SIZE="-1"><code>CURRENT BUILD INSTRUCTIONS&#8221;</code></font><code>; the previous build instructions, which are largely superseded but may still contain some useful information, are left in &#8220;</code><font SIZE="-1"><code>OLD BUILD INSTRUCTIONS&#8221;</code></font><code> but really need removing after anything of use has been extracted from them.</code></p>
-<h3><font SIZE="-1">DESCRIPTION</font></h3>
+<h3>WARNING</h3>
+<p> <code>Much of this document has become very out of date and needs updating, rewriting or deleting. The build process was overhauled during the 5.19 development track and the current instructions as of that time are given in &#8220;</code><code>CURRENT BUILD INSTRUCTIONS&#8221;</code><code>; the previous build instructions, which are largely superseded but may still contain some useful information, are left in &#8220;</code><code>OLD BUILD INSTRUCTIONS&#8221;</code><code> but really need removing after anything of use has been extracted from them.</code></p>
+<h3>DESCRIPTION</h3>
 <p> This file gives the instructions for building Perl5.8 and above for WinCE. Please read and understand the terms under which this software is distributed.</p>
 <h3>General explanations on cross-compiling WinCE</h3>
 <dl>
 <dt>&bull;</dt>
-<dd> <i>miniperl</i> is built. This is a single executable (without <font SIZE="-1">DLL</font>), intended to run on Win32, and it will facilitate remaining build process; all binaries built after it are foreign and should not run locally. </dd>
+<dd> <i>miniperl</i> is built. This is a single executable (without DLL), intended to run on Win32, and it will facilitate remaining build process; all binaries built after it are foreign and should not run locally. </dd>
 <p> <i>miniperl</i> is built using <i>./win32/Makefile</i>; this is part of normal build process invoked as dependency from wince/Makefile.ce</p>
 <dt>&bull;</dt>
 <dd> After <i>miniperl</i> is built, <i>configpm</i> is invoked to create right <i>Config.pm</i> in right place and its corresponding Cross.pm. </dd>
@@ -28,9 +28,9 @@ description: "perlce – Perl for WinCE"
 <dt>&bull;</dt>
 <dd> During extensions build phase, a script <i>./win32/buildext.pl</i> is invoked, which in turn steps in <i>./ext</i> subdirectories and performs a build of each extension in turn. </dd>
 <p> All invokes of <i>Makefile.PL</i> are provided with <tt>&quot;-MCross&quot;</tt> so to enable cross- compile.</dl>
-<h3><font SIZE="-1">CURRENT BUILD INSTRUCTIONS</font></h3>
+<h3>CURRENT BUILD INSTRUCTIONS</h3>
 <p> (These instructions assume the host is 32-bit Windows. If you&#8217;re on 64-bit Windows then change &#8220;C:\Program Files&#8221; to &#8220;C:\Program Files (x86)&#8221; throughout.) </p>
-<p> 1. Install <font SIZE="-1">EVC4</font> from </p>
+<p> 1. Install EVC4 from </p>
 <pre>
  <a rel="nofollow" href="http://download.microsoft.com/download/c/3/f/c3f8b58b-9753-4c2e-8b96-2dfe3476a2f7/eVC4.exe">http://download.microsoft.com/download/c/3/f/c3f8b58b-9753-4c2e-8b96-2dfe3476a2f7/eVC4.exe</a>
 </pre>
@@ -38,17 +38,17 @@ description: "perlce – Perl for WinCE"
 <pre>
  <a rel="nofollow" href="http://download.cnet.com/Microsoft-eMbedded-Visual-C/3000-2212_4-10108490.html?tag=bc">http://download.cnet.com/Microsoft-eMbedded-Visual-C/3000-2212_4-10108490.html?tag=bc</a>
 </pre>
-<p> The installer is ancient and has a few bugs on the paths it uses. You will have to fix them later. Basically, some things go into &#8220;C:/Program Files/Windows <font SIZE="-1">CE</font> Tools&#8221;, others go into &#8220;C:/Windows <font SIZE="-1">CE</font> Tools&#8221; regardless of the path you gave to the installer (the default will be &#8220;C:/Windows <font SIZE="-1">CE</font> Tools&#8221;). Reboots will be required for the installer to proceed. Also .c and .h associations with Visual Studio might get overridden when installing <font SIZE="-1">EVC4.</font> You have been warned. </p>
-<p> 2. Download celib from GitHub (using &#8220;Download <font SIZE="-1">ZIP&#8221;</font>) at </p>
+<p> The installer is ancient and has a few bugs on the paths it uses. You will have to fix them later. Basically, some things go into &#8220;C:/Program Files/Windows CE Tools&#8221;, others go into &#8220;C:/Windows CE Tools&#8221; regardless of the path you gave to the installer (the default will be &#8220;C:/Windows CE Tools&#8221;). Reboots will be required for the installer to proceed. Also .c and .h associations with Visual Studio might get overridden when installing EVC4. You have been warned. </p>
+<p> 2. Download celib from GitHub (using &#8220;Download ZIP&#8221;) at </p>
 <pre>
     <a rel="nofollow" href="https://github.com/bulk88/celib">https://github.com/bulk88/celib</a>
 </pre>
-<p> Extract it to a spaceless path but not into the perl build source. I call this directory &#8220;celib-palm-3.0&#8221; but in the GitHub snapshot it will be called &#8220;celib-master&#8221;. Make a copy of the &#8220;wince-arm-pocket-wce300-release&#8221; folder and rename the copy to &#8220;wince-arm-pocket-wce400&#8221;. This is a hack so we can build a <font SIZE="-1">CE 4.0</font> binary by linking in <font SIZE="-1">CE 3.0 ARM</font> asm; the linker doesn&#8217;t care. Windows Mobile/WinCE are backwards compatible with machine code like Desktop Windows. </p>
+<p> Extract it to a spaceless path but not into the perl build source. I call this directory &#8220;celib-palm-3.0&#8221; but in the GitHub snapshot it will be called &#8220;celib-master&#8221;. Make a copy of the &#8220;wince-arm-pocket-wce300-release&#8221; folder and rename the copy to &#8220;wince-arm-pocket-wce400&#8221;. This is a hack so we can build a CE 4.0 binary by linking in CE 3.0 ARM asm; the linker doesn&#8217;t care. Windows Mobile/WinCE are backwards compatible with machine code like Desktop Windows. </p>
 <p> 3. Download console-1.3-src.tar.gz from </p>
 <pre>
  <a rel="nofollow" href="http://sourceforge.net/projects/perlce/files/PerlCE%20support%20files/console/">http://sourceforge.net/projects/perlce/files/PerlCE%20support%20files/console/</a>
 </pre>
-<p> Extract it to a spaceless path but not into the perl build source. Don&#8217;t extract it into the same directory as celib. Make a copy of the &#8220;wince-arm-pocket-wce300&#8221; folder and rename the copy to &#8220;wince-arm-pocket-wce400&#8221;. This is a hack so we can build a <font SIZE="-1">CE 4.0</font> binary by linking in <font SIZE="-1">CE 3.0 ARM</font> asm; the linker doesn&#8217;t care. Windows Mobile/WinCE are backwards compatible with machine code like Desktop Windows. </p>
+<p> Extract it to a spaceless path but not into the perl build source. Don&#8217;t extract it into the same directory as celib. Make a copy of the &#8220;wince-arm-pocket-wce300&#8221; folder and rename the copy to &#8220;wince-arm-pocket-wce400&#8221;. This is a hack so we can build a CE 4.0 binary by linking in CE 3.0 ARM asm; the linker doesn&#8217;t care. Windows Mobile/WinCE are backwards compatible with machine code like Desktop Windows. </p>
 <p> 4. Open a command prompt, run your regular batch file to set the environment for desktop Visual C building, goto the perl source directory, cd into win32/, fill out Makefile, and do a &#8220;nmake all&#8221; to build a Desktop Perl. </p>
 <p> 5. Open win32/Makefile.ce in a text editor and do something similar to the following patch. </p>
 <pre>
@@ -95,29 +95,29 @@ description: "perlce – Perl for WinCE"
     MACHINE=wince-arm-pocket-wce400
     !endif
 </code></pre>
-<p> so wince-arm-pocket-wce400 is the <font SIZE="-1">MACHINE</font> type. </p>
-<p> 6. Use a text editor to open ``C:\Program Files\Microsoft eMbedded C<font SIZE="-2">++</font> 4.0\EVC\WCE400\BIN\WCEARMV4.BAT&#8217;&#8216;. Look for </p>
+<p> so wince-arm-pocket-wce400 is the MACHINE type. </p>
+<p> 6. Use a text editor to open ``C:\Program Files\Microsoft eMbedded C++ 4.0\EVC\WCE400\BIN\WCEARMV4.BAT&#8217;&#8216;. Look for </p>
 <pre><code>    if &quot;%SDKROOT%&quot;==&quot;&quot; set SDKROOT=...
 </code></pre>
-<p> On a new install it is ``C:\Windows <font SIZE="-1">CE</font> Tools&#8217;&#8216;. Goto ``C:\Windows <font SIZE="-1">CE</font> Tools&#8217;&#8216; in a file manager and see if ``C:\Windows <font SIZE="-1">CE</font> Tools\wce400\STANDARDSDK\Include\Armv4&#8217;&#8216; exists on your disk. If not the <font SIZE="-1">SDKROOT</font> need to be changed to ``C:\Program Files\Windows <font SIZE="-1">CE</font> Tools&#8217;&#8216;. </p>
+<p> On a new install it is ``C:\Windows CE Tools&#8217;&#8216;. Goto ``C:\Windows CE Tools&#8217;&#8216; in a file manager and see if ``C:\Windows CE Tools\wce400\STANDARDSDK\Include\Armv4&#8217;&#8216; exists on your disk. If not the SDKROOT need to be changed to ``C:\Program Files\Windows CE Tools&#8217;&#8216;. </p>
 <p> Goto celib-palm-3.0\inc\cewin32.h, search for </p>
 <pre><code>    typedef struct _ABC {
 </code></pre>
 <p> and uncomment the struct. </p>
-<p> 7. Open another command prompt, ensure <font SIZE="-1">PLATFORM</font> is not set to anything already unless you know what you&#8217;re doing (so that the correct default value is set by the next command), and run ``C:\Program Files\Microsoft eMbedded C<font SIZE="-2">++</font> 4.0\EVC\WCE400\BIN\WCEARMV4.BAT&#8217;&#8216; </p>
-<p> 8. In the WinCE command prompt you made with <font SIZE="-1">WCEARMV4.BAT,</font> goto the perl source directory, cd into win32/ and run ``nmake -f Makefile.ce&#8217;&#8216;. </p>
-<p> 9. The <font SIZE="-1">ARM</font> perl interpreter (perl519.dll and perl.exe) will be in something like ``C:\perl519\src\win32\wince-arm-pocket-wce400&#8217;&#8216;, with the <font SIZE="-1">XS</font> DLLs in ``C:\perl519\src\xlib\wince-arm-hpc-wce400\auto&#8217;&#8216;. </p>
-<p> To prove success on the host machine, run ``dumpbin /headers wince-arm-pocket-wce400\perl.exe&#8217;&#8216; from the win32/ folder and look for ``machine (<font SIZE="-1">ARM</font>)&#8216;&#8216; in the <font SIZE="-1">FILE HEADER VALUES</font> and ``subsystem (Windows <font SIZE="-1">CE GUI</font>)&#8216;&#8216; in the <font SIZE="-1">OPTIONAL HEADER VALUES.</font>  </p>
-<font SIZE="-1"></font><h3>OLD BUILD INSTRUCTIONS</h3>
+<p> 7. Open another command prompt, ensure PLATFORM is not set to anything already unless you know what you&#8217;re doing (so that the correct default value is set by the next command), and run ``C:\Program Files\Microsoft eMbedded C++ 4.0\EVC\WCE400\BIN\WCEARMV4.BAT&#8217;&#8216; </p>
+<p> 8. In the WinCE command prompt you made with WCEARMV4.BAT, goto the perl source directory, cd into win32/ and run ``nmake -f Makefile.ce&#8217;&#8216;. </p>
+<p> 9. The ARM perl interpreter (perl519.dll and perl.exe) will be in something like ``C:\perl519\src\win32\wince-arm-pocket-wce400&#8217;&#8216;, with the XS DLLs in ``C:\perl519\src\xlib\wince-arm-hpc-wce400\auto&#8217;&#8216;. </p>
+<p> To prove success on the host machine, run ``dumpbin /headers wince-arm-pocket-wce400\perl.exe&#8217;&#8216; from the win32/ folder and look for ``machine (ARM)&#8216;&#8216; in the FILE HEADER VALUES and ``subsystem (Windows CE GUI)&#8216;&#8216; in the OPTIONAL HEADER VALUES.  </p>
+<h3>OLD BUILD INSTRUCTIONS</h3>
 <p> This section describes the steps to be performed to build PerlCE. You may find additional information about building perl for WinCE at &lt;<a rel="nofollow" href="http://perlce.sourceforge.net">http://perlce.sourceforge.net</a>&gt; and some pre-built binaries. </p>
-<p> <i>Tools &amp; </i><font SIZE="-1"><i>SDK</i></font><i></i> </p>
+<p> <i>Tools &amp; </i><i>SDK</i><i></i> </p>
 <p> For compiling, you need following: </p>
 <dl>
 <dt>&bull;</dt>
 <dd> <p> Microsoft Embedded Visual Tools </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Microsoft Visual C<font SIZE="-2">++</font> </p>
+<dd> <p> Microsoft Visual C++ </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Rainer Keuchel&#8217;s celib-sources </p>
@@ -138,14 +138,14 @@ description: "perlce – Perl for WinCE"
 <dd> <p> edit file <i>./win32/ce-helpers/compile.bat</i> </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> run <br />
+<dd> <p> run <br/>
 &nbsp;<wbr>&nbsp;compile.bat </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> run <br />
+<dd> <p> run <br/>
 &nbsp;<wbr>&nbsp;compile.bat dist </p>
  </dd></dl>
-<p> <i>Makefile.ce</i> has <code>&quot;CROSS_NAME&quot;</code> macro, and it is used further to refer to your cross-compilation scheme. You could assign a name to it, but this is not necessary, because by default it is assigned after your machine configuration name, such as ``wince-sh3-hpc-wce211&#8217;&#8216;, and this is enough to distinguish different builds at the same time. This option could be handy for several different builds on same platform to perform, say, threaded build. In a following example we assume that all required environment variables are set properly for C cross-compiler (a special *.bat file could fit perfectly to this purpose) and your <i>compile.bat</i> has proper ``<font SIZE="-1">MACHINE&#8217;&#8216;</font> parameter set, to, say, <code>&quot;wince-mips-pocket-wce300&quot;</code>. </p>
+<p> <i>Makefile.ce</i> has <code>&quot;CROSS_NAME&quot;</code> macro, and it is used further to refer to your cross-compilation scheme. You could assign a name to it, but this is not necessary, because by default it is assigned after your machine configuration name, such as ``wince-sh3-hpc-wce211&#8217;&#8216;, and this is enough to distinguish different builds at the same time. This option could be handy for several different builds on same platform to perform, say, threaded build. In a following example we assume that all required environment variables are set properly for C cross-compiler (a special *.bat file could fit perfectly to this purpose) and your <i>compile.bat</i> has proper ``MACHINE&#8217;&#8216; parameter set, to, say, <code>&quot;wince-mips-pocket-wce300&quot;</code>. </p>
 <pre><code>  compile.bat
   compile.bat dist
   compile.bat CROSS_NAME=mips-wce300-thr &quot;USE_ITHREADS=define&quot; ^
@@ -155,7 +155,7 @@ description: "perlce – Perl for WinCE"
 </code></pre>
 <p> If all goes okay and no errors during a build, you&#8217;ll get two independent distributions: <code>&quot;wince-mips-pocket-wce300&quot;</code> and <code>&quot;mips-wce300-thr&quot;</code>. </p>
 <p> Target <code>&quot;dist&quot;</code> prepares distribution file set. Target <code>&quot;zipdist&quot;</code> performs same as <code>&quot;dist&quot;</code> but additionally compresses distribution files into zip archive. </p>
-<p> <font SIZE="-1">NOTE:</font> during a build there could be created a number (or one) of <i>Config.pm</i> for cross-compilation (``foreign&#8217;&#8216; <i>Config.pm</i>) and those are hidden inside <i>../xlib/$(</i><font SIZE="-1"><i>CROSS_NAME</i></font><i>)</i> with other auxiliary files, but, and this is important to note, there should be <code>no</code> <i>Config.pm</i> for host miniperl. If you&#8217;ll get an error that perl could not find Config.pm somewhere in building process this means something went wrong. Most probably you forgot to specify a cross-compilation when invoking miniperl.exe to Makefile.PL When building an extension for cross-compilation your command line should look like </p>
+<p> NOTE: during a build there could be created a number (or one) of <i>Config.pm</i> for cross-compilation (``foreign&#8217;&#8216; <i>Config.pm</i>) and those are hidden inside <i>../xlib/$(</i><i>CROSS_NAME</i><i>)</i> with other auxiliary files, but, and this is important to note, there should be <code>no</code> <i>Config.pm</i> for host miniperl. If you&#8217;ll get an error that perl could not find Config.pm somewhere in building process this means something went wrong. Most probably you forgot to specify a cross-compilation when invoking miniperl.exe to Makefile.PL When building an extension for cross-compilation your command line should look like </p>
 <pre><code>  ..\miniperl.exe -I..\lib -MCross=mips-wce300-thr Makefile.PL
 </code></pre>
 <p> or just </p>
@@ -164,42 +164,42 @@ description: "perlce – Perl for WinCE"
 <p> to refer a cross-compilation that was created last time. </p>
 <p> All questions related to building for WinCE devices could be asked in <i>perlce-user [at] lists.sourceforge.net</i> mailing list.  </p>
 <h2>Using Perl on WinCE</h2>
-<font SIZE="-1"></font><h3>DESCRIPTION</h3>
+<h3>DESCRIPTION</h3>
 <p> PerlCE is currently linked with a simple console window, so it also works on non-hpc devices. </p>
 <p> The simple stdio implementation creates the files <i>stdin.txt</i>, <i>stdout.txt</i> and <i>stderr.txt</i>, so you might examine them if your console has only a limited number of cols. </p>
 <p> When exitcode is non-zero, a message box appears, otherwise the console closes, so you might have to catch an exit with status 0 in your program to see any output. </p>
 <p> stdout/stderr now go into the files <i>/perl-stdout.txt</i> and <i>/perl-stderr.txt.</i> </p>
 <p> PerlIDE is handy to deal with perlce.  </p>
-<font SIZE="-1"></font><h3>LIMITATIONS</h3>
+<h3>LIMITATIONS</h3>
 <p> No <code>fork()</code>, <code>pipe()</code>, <code>popen()</code> etc.  </p>
-<font SIZE="-1"></font><h3>ENVIRONMENT</h3>
+<h3>ENVIRONMENT</h3>
 <p> All environment vars must be stored in HKLM\Environment as strings. They are read at process startup. </p>
 <dl>
-<dt><font SIZE="-1">PERL5LIB</font></dt>
+<dt>PERL5LIB</dt>
 <dd> <p> Usual perl lib path (semi-list). </p>
  </dd>
-<dt><font SIZE="-1">PATH</font></dt>
+<dt>PATH</dt>
 <dd> <p> Semi-list for executables. </p>
  </dd>
-<dt><font SIZE="-1">TMP</font></dt>
+<dt>TMP</dt>
 <dd> <p> &#8211; Tempdir. </p>
  </dd>
-<dt><font SIZE="-1">UNIXROOTPATH</font></dt>
+<dt>UNIXROOTPATH</dt>
 <dd> <p> &#8211; Root for accessing some special files, i.e. <i>/dev/null</i>, <i>/etc/services</i>. </p>
  </dd>
-<dt><font SIZE="-1">ROWS/COLS</font></dt>
+<dt>ROWS/COLS</dt>
 <dd> <p> &#8211; Rows/cols for console. </p>
  </dd>
-<dt><font SIZE="-1">HOME</font></dt>
+<dt>HOME</dt>
 <dd> <p> &#8211; Home directory. </p>
  </dd>
-<dt><font SIZE="-1">CONSOLEFONTSIZE</font></dt>
+<dt>CONSOLEFONTSIZE</dt>
 <dd> <p> &#8211; Size for console font. </p>
  </dd></dl>
 <p> You can set these with cereg.exe, a (remote) registry editor or via the PerlIDE.  </p>
-<font SIZE="-1"></font><h3>REGISTRY</h3>
-<p> To start perl by clicking on a perl source file, you have to make the according entries in <font SIZE="-1">HKCR</font> (see <i>ce-helpers/wince-reg.bat</i>). cereg.exe (which must be executed on a desktop pc with ActiveSync) is reported not to work on some devices. You have to create the registry entries by hand using a registry editor.  </p>
-<font SIZE="-1"></font><h3>XS</h3>
+<h3>REGISTRY</h3>
+<p> To start perl by clicking on a perl source file, you have to make the according entries in HKCR (see <i>ce-helpers/wince-reg.bat</i>). cereg.exe (which must be executed on a desktop pc with ActiveSync) is reported not to work on some devices. You have to create the registry entries by hand using a registry editor.  </p>
+<h3>XS</h3>
 <p> The following Win32-Methods are built-in: </p>
 <pre><code>        newXS(&quot;Win32::GetCwd&quot;, w32_GetCwd, file);
         newXS(&quot;Win32::SetCwd&quot;, w32_SetCwd, file);
@@ -215,10 +215,10 @@ description: "perlce – Perl for WinCE"
         newXS(&quot;Win32::GetOemInfo&quot;, w32_GetOemInfo, file);
         newXS(&quot;Win32::ShellEx&quot;, w32_ShellEx, file);
 </code></pre>
-<font SIZE="-1"></font><h3>BUGS</h3>
+<h3>BUGS</h3>
 <p> Opening files for read-write is currently not supported if they use stdio (normal perl file handles). </p>
 <p> If you find bugs or if it does not work at all on your device, send mail to the address below. Please report the details of your device (processor, ceversion, devicetype (hpc/palm/pocket)) and the date of the downloaded files.  </p>
-<font SIZE="-1"></font><h3>INSTALLATION</h3>
+<h3>INSTALLATION</h3>
 <p> Currently installation instructions are at &lt;<a rel="nofollow" href="http://perlce.sourceforge.net/">http://perlce.sourceforge.net/</a>&gt;. </p>
 <p> After installation &amp; testing processes will stabilize, information will be more precise.  </p>
 <h2>ACKNOWLEDGEMENTS</h2>
@@ -226,10 +226,10 @@ description: "perlce – Perl for WinCE"
 <h2>History of WinCE port</h2>
 <dl>
 <dt>5.6.0</dt>
-<dd> <p> Initial port of perl to WinCE. It was performed in separate directory named <i>wince</i>. This port was based on contents of <i>./win32</i> directory. <i>miniperl</i> was not built, user must have <font SIZE="-1">HOST</font> perl and properly edit <i>makefile.ce</i> to reflect this. </p>
+<dd> <p> Initial port of perl to WinCE. It was performed in separate directory named <i>wince</i>. This port was based on contents of <i>./win32</i> directory. <i>miniperl</i> was not built, user must have HOST perl and properly edit <i>makefile.ce</i> to reflect this. </p>
  </dd>
 <dt>5.8.0</dt>
-<dd> <p> wince port was kept in the same <i>./wince</i> directory, and <i>wince/Makefile.ce</i> was used to invoke native compiler to create <font SIZE="-1">HOST</font> miniperl, which then facilitates cross-compiling process. Extension building support was added. </p>
+<dd> <p> wince port was kept in the same <i>./wince</i> directory, and <i>wince/Makefile.ce</i> was used to invoke native compiler to create HOST miniperl, which then facilitates cross-compiling process. Extension building support was added. </p>
  </dd>
 <dt>5.9.4</dt>
 <dd> <p> Two directories <i>./win32</i> and <i>./wince</i> were merged, so perlce build process comes in <i>./win32</i> directory. </p>

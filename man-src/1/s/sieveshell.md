@@ -13,7 +13,7 @@ description: "sieveshell – remotely manipulate sieve scripts"
 <p> sieveshell [<code>&#8211;user</code>=<i>user</i>] [<code>&#8211;authname</code>=<i>authname</i>] [<code>&#8211;realm</code>=<i>realm</i>] [<code>&#8211;exec</code>=<i>script</i>] <i>server</i>[<code>:</code><i>port</i>] </p>
 <p> sieveshell <code>&#8211;help</code></p>
 <h2>DESCRIPTION</h2>
-<p> <code>sieveshell</code> allows users to manipulate their scripts on a remote server. It works via <font SIZE="-1">MANAGESIEVE,</font> a work in progress. </p>
+<p> <code>sieveshell</code> allows users to manipulate their scripts on a remote server. It works via MANAGESIEVE, a work in progress. </p>
 <p> The following commands are recognized: </p>
 <dl>
 <dt>
@@ -34,6 +34,6 @@ description: "sieveshell – remotely manipulate sieve scripts"
 <dt><code>-e</code> <i>script</i>, <code>&#8211;exec</code>=<i>script</i></dt>
 <dd> Instead of working interactively, run commands from <i>script</i>, and exit when done.</dd></dl>
 <h2>REFERENCES</h2>
-<p> [<font SIZE="-1">MANAGESIEVE</font>] Martin, T.; &#8220;A Protocol for Remotely Managing Sieve Scripts&#8221;, draft-ietf-managesieve-03.txt, Mirapoint, Inc.; May 2001, work in progress.</p>
+<p> [MANAGESIEVE] Martin, T.; &#8220;A Protocol for Remotely Managing Sieve Scripts&#8221;, draft-ietf-managesieve-03.txt, Mirapoint, Inc.; May 2001, work in progress.</p>
 <h2>AUTHOR</h2>
 <p> Tim Martin &lt;tmartin [at] mirapoint.com&gt;, and the rest of the Cyrus team &lt;cyrus-bugs [at] andrew.cmu.edu&gt;. </p>

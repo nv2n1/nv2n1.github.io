@@ -115,7 +115,7 @@ Viewres viewres
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/7-x/">X</a>(7), <a href="/docs/linux/man/1-xrdb/">xrdb</a>(1), <a href="/docs/linux/man/1-listres/">listres</a>(1), <a href="/docs/linux/man/1-editres/">editres</a>(1), <a href="/docs/linux/man/1-appres/">appres</a>(1), appropriate widget documents</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright 1994 X Consortium<br />
+<p> Copyright 1994 X Consortium<br/>
  See <i><a href="/docs/linux/man/7-x/">X</a>(7)</i> for a full statement of rights and permissions.</p>
 <h2>AUTHOR</h2>
 <p> Jim Fulton, MIT X Consortium </p>

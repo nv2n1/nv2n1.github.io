@@ -19,9 +19,9 @@ unit type (mass, volume...)</code></pre>
 <h3>Public Types</h3>
 <p>enum <code>Type</code> { <code>Mass</code>, <code>Volume</code>, <code>Energy</code>, <code>Quantity</code> }</p>
 <h3>Public Member Functions</h3>
-<p><code>UnitOfMeasure</code> ()<br />
- <i>default constructor </i><br />
- <code>UnitOfMeasure</code> (const std::string &amp;name, const std::string &amp;code, Type unitType)<br />
+<p><code>UnitOfMeasure</code> ()<br/>
+ <i>default constructor </i><br/>
+ <code>UnitOfMeasure</code> (const std::string &amp;name, const std::string &amp;code, Type unitType)<br/>
  <code>Inspectors</code> </p>
 <pre><code>const std::string &amp; name () const
 name, e.g, 'Barrels'
@@ -30,15 +30,15 @@ code, e.g, 'BBL', 'MT'
 Type unitType () const
 unit type (mass, volume...)</code></pre>
 <p> <code>Other information</code> </p>
-<p> bool <code>empty</code> () const<br />
- <i>is this a usable instance? </i><br />
+<p> bool <code>empty</code> () const<br/>
+ <i>is this a usable instance? </i><br/>
  const <code>Rounding</code> &amp; <code>rounding</code> () const </p>
-<p> const <code>UnitOfMeasure</code> &amp; <code>triangulationUnitOfMeasure</code> () const<br />
+<p> const <code>UnitOfMeasure</code> &amp; <code>triangulationUnitOfMeasure</code> () const<br/>
  <i>unit used for triangulation when required </i></p>
 <h3>Protected Attributes</h3>
 <p>boost::shared_ptr&lt; Data &gt; <code>data_</code></p>
 <h3>Related Functions</h3>
-<p>(Note that these are not member functions.)<br />
+<p>(Note that these are not member functions.)<br/>
  bool <code>operator==</code> (const <code>UnitOfMeasure</code> &amp;, const <code>UnitOfMeasure</code> &amp;) </p>
 <p> bool <code>operator!=</code> (const <code>UnitOfMeasure</code> &amp;, const <code>UnitOfMeasure</code> &amp;) </p>
 <p> std::ostream &amp; <code>operator&lt;&lt;</code> (std::ostream &amp;, const <code>UnitOfMeasure</code> &amp;)</p>

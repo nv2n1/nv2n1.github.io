@@ -1773,9 +1773,9 @@ description: "ioctl_list – list of ioctl calls in Linux/i386 kernel"
 </td>
 </tr>
 </table>
-<p> // &lt;include/uapi/linux/wireless.h&gt;<br />
- // This API is deprecated.<br />
- // It is being replaced by nl80211 and cfg80211. See<br />
+<p> // &lt;include/uapi/linux/wireless.h&gt;<br/>
+ // This API is deprecated.<br/>
+ // It is being replaced by nl80211 and cfg80211. See<br/>
  // <i><a rel="nofollow" href="https://wireless.wiki.kernel.org/en/developers/documentation/nl80211">https://wireless.wiki.kernel.org/en/developers/documentation/nl80211</a></i> </p>
 <table>
 <tr VALIGN=top>
@@ -3357,11 +3357,11 @@ description: "ioctl_list – list of ioctl calls in Linux/i386 kernel"
 CDROMREADCOOKED char[CD_FRAMESIZE] CDROMREADMODE1 char[CD_FRAMESIZE or OPT_BLOCKSIZE] CDROMREADMODE2 char[CD_FRAMESIZE_RAW0] CDROMREADRAW char[CD_FRAMESIZE_RAW]
 </code></pre>
 <p> <code>EQL_ENSLAVE</code>, <code>EQL_EMANCIPATE</code>, <code>EQL_GETSLAVECFG</code>, <code>EQL_SETSLAVECFG</code>, <code>EQL_GETMASTERCFG</code>, and <code>EQL_SETMASTERCFG</code> take a <i>struct ifreq&nbsp;*</i>. The <i>ifr_data</i> field is a pointer to another structure as follows: </p>
-<p>EQL_ENSLAVE const struct slaving_request *<br />
-    EQL_EMANCIPATE const struct slaving_request *<br />
-        EQL_GETSLAVECFG struct slave_config * // I-O<br />
-            EQL_SETSLAVECFG const struct slave_config *<br />
-                EQL_GETMASTERCFG struct master_config *<br />
+<p>EQL_ENSLAVE const struct slaving_request *<br/>
+    EQL_EMANCIPATE const struct slaving_request *<br/>
+        EQL_GETSLAVECFG struct slave_config * // I-O<br/>
+            EQL_SETSLAVECFG const struct slave_config *<br/>
+                EQL_GETMASTERCFG struct master_config *<br/>
                     EQL_SETMASTERCFG const struct master_config *</p>
 <p> <code>FDRAWCMD</code> takes a <i>struct floppy raw_cmd&nbsp;*</i>. If <i>flags &amp; FD_RAW_WRITE</i> is nonzero, then <i>data</i> points to an input buffer of length <i>length</i>. If <i>flags &amp; FD_RAW_READ</i> is nonzero, then <i>data</i> points to an output buffer of length <i>length</i>. </p>
 <p> <code>GIO_FONTX</code> and <code>PIO_FONTX</code> take a <i>struct console_font_desc&nbsp;*</i> or a <i>const struct console_font_desc&nbsp;*</i>, respectively. <i>chardata</i> points to a buffer of <i>char [charcount]</i>. This is an output buffer for <code>GIO_FONTX</code> and an input buffer for <code>PIO_FONTX</code>. </p>
@@ -3370,14 +3370,14 @@ CDROMREADCOOKED char[CD_FRAMESIZE] CDROMREADMODE1 char[CD_FRAMESIZE or OPT_BLOCK
 <p> <code>KDMAPDISP</code> and <code>KDUNMAPDISP</code> enable or disable memory mappings or I/O port access. They are not implemented in the kernel. </p>
 <p> <code>SCSI_IOCTL_PROBE_HOST</code> takes an input pointer <i>const int&nbsp;*</i>, which is a length. It uses the same pointer as an output pointer to a <i>char []</i> buffer of this length. </p>
 <p> <code>SIOCADDRT</code> and <code>SIOCDELRT</code> take an input pointer whose type depends on the protocol: </p>
-<p>Most protocols const struct rtentry *<br />
-        AX .25 const struct ax25_route *<br />
-            NET /<br />
-    ROM const struct nr_route_struct *<br />
+<p>Most protocols const struct rtentry *<br/>
+        AX .25 const struct ax25_route *<br/>
+            NET /<br/>
+    ROM const struct nr_route_struct *<br/>
         INET6 const struct in6_rtmsg *</p>
 <p> <code>SIOCGIFCONF</code> takes a <i>struct ifconf&nbsp;*</i>. The <i>ifc_buf</i> field points to a buffer of length <i>ifc_len</i> bytes, into which the kernel writes a list of type <i>struct ifreq []</i>. </p>
 <p> <code>SIOCSIFHWADDR</code> takes an input pointer whose type depends on the protocol: </p>
-<p>Most protocols const struct ifreq *<br />
+<p>Most protocols const struct ifreq *<br/>
     AX .25 const char[AX25_ADDR_LEN]</p>
 <p> <code>TIOCLINUX</code> takes a <i>const char&nbsp;*</i>. It uses this to distinguish several independent subcases. In the table below, <i>N + foo</i> means <i>foo</i> after an N-byte pad. <i>struct selection</i> is implicitly defined in <i>drivers/char/selection.c</i> </p>
 <pre><code>

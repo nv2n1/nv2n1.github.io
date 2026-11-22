@@ -41,5 +41,5 @@ description: "sane-hs2p – SANE backend for Ricoh SCSI flatbed/ADF scanners"
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/1-sane-find-scanner/">sane-find-scanner</a></code>(1), <code><a href="/docs/linux/man/5-sane-scsi/">sane-scsi</a></code>(5), </p>
 <h2>Author</h2>
-<p>jeremy &lt;<i>jeremy [at] acjlaw.net</i>&gt;<br />
+<p>jeremy &lt;<i>jeremy [at] acjlaw.net</i>&gt;<br/>
  Maintained by Jeremy Johnson &lt;<i>jeremy [at] acjlaw.net</i>&gt;</p>

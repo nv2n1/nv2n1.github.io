@@ -10,17 +10,17 @@ description: "strings – print the strings of printable characters in files."
 
 <p> strings &#8211; print the strings of printable characters in files. </p>
 <h2>SYNOPSIS</h2>
-<p> strings [<code>-afovV</code>] [<code>&#8211;</code><i>min-len</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-n</code>&nbsp;<wbr><i>min-len</i>]&nbsp;<wbr>[<code>&#8211;bytes=</code><i>min-len</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-t</code>&nbsp;<wbr><i>radix</i>]&nbsp;<wbr>[<code>&#8211;radix=</code><i>radix</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-e</code>&nbsp;<wbr><i>encoding</i>]&nbsp;<wbr>[<code>&#8211;encoding=</code><i>encoding</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;</code>]&nbsp;<wbr>[<code>&#8211;all</code>]&nbsp;<wbr>[<code>&#8211;print-file-name</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-T</code>&nbsp;<wbr><i>bfdname</i>]&nbsp;<wbr>[<code>&#8211;target=</code><i>bfdname</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-w</code>]&nbsp;<wbr>[<code>&#8211;include-all-whitespace</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[<code>-s</code>]&nbsp;<wbr>[<code>&#8211;output-separator</code><i>sep_string</i>]<br />
+<p> strings [<code>-afovV</code>] [<code>&#8211;</code><i>min-len</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-n</code>&nbsp;<wbr><i>min-len</i>]&nbsp;<wbr>[<code>&#8211;bytes=</code><i>min-len</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-t</code>&nbsp;<wbr><i>radix</i>]&nbsp;<wbr>[<code>&#8211;radix=</code><i>radix</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-e</code>&nbsp;<wbr><i>encoding</i>]&nbsp;<wbr>[<code>&#8211;encoding=</code><i>encoding</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;</code>]&nbsp;<wbr>[<code>&#8211;all</code>]&nbsp;<wbr>[<code>&#8211;print-file-name</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-T</code>&nbsp;<wbr><i>bfdname</i>]&nbsp;<wbr>[<code>&#8211;target=</code><i>bfdname</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-w</code>]&nbsp;<wbr>[<code>&#8211;include-all-whitespace</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[<code>-s</code>]&nbsp;<wbr>[<code>&#8211;output-separator</code><i>sep_string</i>]<br/>
 &nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;help</code>]&nbsp;<wbr>[<code>&#8211;version</code>]&nbsp;<wbr><i>file</i>&#8230;</p>
 <h2>DESCRIPTION</h2>
-<p> For each <i>file</i> given, <font SIZE="-1">GNU </font><code>strings</code> prints the printable character sequences that are at least 4 characters long (or the number given with the options below) and are followed by an unprintable character. </p>
+<p> For each <i>file</i> given, GNU <code>strings</code> prints the printable character sequences that are at least 4 characters long (or the number given with the options below) and are followed by an unprintable character. </p>
 <p> Depending upon how the strings program was configured it will default to either displaying all the printable sequences that it can find in each file, or only those sequences that are in loadable, initialized data sections. If the file type in unrecognizable, or if strings is reading from stdin then it will always display all of the printable sequences that it can find. </p>
 <p> For backwards compatibility any file that occurs after a command line option of just <code>&#8211;</code> will also be scanned in full, regardless of the presence of any <code>-d</code> option. </p>
 <p> <code>strings</code> is mainly useful for determining the contents of non-text files.</p>
@@ -36,7 +36,7 @@ description: "strings – print the strings of printable characters in files."
 <dt><code>-d</code></dt>
 <dd>
 </dd><dt><code>&#8211;data</code></dt>
-<dd> Only print strings from initialized, loaded data sections in the file. This may reduce the amount of garbage in the output, but it also exposes the strings program to any security flaws that may be present in the <font SIZE="-1">BFD</font> library used to scan and load sections. Strings can be configured so that this option is the default behaviour. In such cases the <code>-a</code> option can be used to avoid using the <font SIZE="-1">BFD</font> library and instead just print all of the strings found in the file.</dd>
+<dd> Only print strings from initialized, loaded data sections in the file. This may reduce the amount of garbage in the output, but it also exposes the strings program to any security flaws that may be present in the BFD library used to scan and load sections. Strings can be configured so that this option is the default behaviour. In such cases the <code>-a</code> option can be used to avoid using the BFD library and instead just print all of the strings found in the file.</dd>
 <dt><code>-f</code></dt>
 <dd>
 </dd><dt><code>&#8211;print-file-name</code></dt>
@@ -58,7 +58,7 @@ description: "strings – print the strings of printable characters in files."
 <dt><code>-e</code> <i>encoding</i></dt>
 <dd>
 </dd><dt><code>&#8211;encoding=</code><i>encoding</i></dt>
-<dd> Select the character encoding of the strings that are to be found. Possible values for <i>encoding</i> are: <code>s</code> = single-7-bit-byte characters (<font SIZE="-1">ASCII, ISO 8859,</font> etc., default), <code>S</code> = single-8-bit-byte characters, <code>b</code> = 16-bit bigendian, <code>l</code> = 16-bit littleendian, <code>B</code> = 32-bit bigendian, <code>L</code> = 32-bit littleendian. Useful for finding wide character strings. (<code>l</code> and <code>b</code> apply to, for example, Unicode <font SIZE="-1">UTF-16/UCS-2</font> encodings).</dd>
+<dd> Select the character encoding of the strings that are to be found. Possible values for <i>encoding</i> are: <code>s</code> = single-7-bit-byte characters (ASCII, ISO 8859, etc., default), <code>S</code> = single-8-bit-byte characters, <code>b</code> = 16-bit bigendian, <code>l</code> = 16-bit littleendian, <code>B</code> = 32-bit bigendian, <code>L</code> = 32-bit littleendian. Useful for finding wide character strings. (<code>l</code> and <code>b</code> apply to, for example, Unicode UTF-16/UCS-2 encodings).</dd>
 <dt><code>-T</code> <i>bfdname</i></dt>
 <dd>
 </dd><dt><code>&#8211;target=</code><i>bfdname</i></dt>
@@ -84,4 +84,4 @@ description: "strings – print the strings of printable characters in files."
 <p> <i><a href="/docs/linux/man/1-ar/">ar</a></i>(1), <i><a href="/docs/linux/man/1-nm/">nm</a></i>(1), <i><a href="/docs/linux/man/1-objdump/">objdump</a></i>(1), <i><a href="/docs/linux/man/1-ranlib/">ranlib</a></i>(1), <i><a href="/docs/linux/man/1-readelf/">readelf</a></i>(1) and the Info entries for <i>binutils</i>.</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 1991-2015 Free Software Foundation, Inc. </p>
-<p> Permission is granted to copy, distribute and/or modify this document under the terms of the <font SIZE="-1">GNU</font> Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts. A copy of the license is included in the section entitled &#8220;<font SIZE="-1">GNU</font> Free Documentation License&#8221;. </p>
+<p> Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts. A copy of the license is included in the section entitled &#8220;GNU Free Documentation License&#8221;. </p>

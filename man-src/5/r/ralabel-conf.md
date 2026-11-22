@@ -50,30 +50,30 @@ description: "ralabel.conf – ralabel resource file."
 <pre><code>RALABEL_GEOIP_ASN</code>=yes
 <code>RALABEL_GEOIP_ASN_FILE</code>=&quot;/usr/local/share/GeoIP/GeoIPASNum.dat&quot;</pre>
 <h2>Ralabel_Geoip_City</h2>
-<p>Data for city relevant data is enabled through enabling and configuring the city database support. The types of data available are:<br />
-&nbsp;<wbr>&nbsp;<wbr>country_code, country_code3, country_name, region, city, postal_code,<br />
-&nbsp;<wbr>&nbsp;<wbr>latitude, longitude, metro_code, area_code and continent_code.<br />
+<p>Data for city relevant data is enabled through enabling and configuring the city database support. The types of data available are:<br/>
+&nbsp;<wbr>&nbsp;<wbr>country_code, country_code3, country_name, region, city, postal_code,<br/>
+&nbsp;<wbr>&nbsp;<wbr>latitude, longitude, metro_code, area_code and continent_code.<br/>
 &nbsp;<wbr>&nbsp;<wbr>time_offset is also available.&nbsp;<wbr>&nbsp;<wbr> </p>
-<p> The concept is that you should be able to add semantics for any IP address that is in the argus record. Support addresses are:<br />
+<p> The concept is that you should be able to add semantics for any IP address that is in the argus record. Support addresses are:<br/>
 &nbsp;<wbr>&nbsp;<wbr>saddr, daddr, inode </p>
-<p> The labels provided will be tagged as:<br />
+<p> The labels provided will be tagged as:<br/>
 &nbsp;<wbr>&nbsp;<wbr>scity, dcity, icity </p>
-<p> To configure what you want to have placed in the label, use the list of objects, in whatever order you like, as the RALABLE_GEOPIP_CITY string using these keywords:<br />
-&nbsp;<wbr>&nbsp;<wbr>cco&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; country_code<br />
-&nbsp;<wbr>&nbsp;<wbr>cco3&nbsp;<wbr>&nbsp;<wbr>&#8211; country_code3<br />
-&nbsp;<wbr>&nbsp;<wbr>cname &#8211; country_name<br />
-&nbsp;<wbr>&nbsp;<wbr>reg&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; region<br />
-&nbsp;<wbr>&nbsp;<wbr>city&nbsp;<wbr>&nbsp;<wbr>&#8211; city<br />
-&nbsp;<wbr>&nbsp;<wbr>pcode &#8211; postal_code<br />
-&nbsp;<wbr>&nbsp;<wbr>lat&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; latitude<br />
-&nbsp;<wbr>&nbsp;<wbr>long&nbsp;<wbr>&nbsp;<wbr>&#8211; longitude<br />
-&nbsp;<wbr>&nbsp;<wbr>metro &#8211; metro_code<br />
-&nbsp;<wbr>&nbsp;<wbr>area&nbsp;<wbr>&nbsp;<wbr>&#8211; area_code<br />
-&nbsp;<wbr>&nbsp;<wbr>cont&nbsp;<wbr>&nbsp;<wbr>&#8211; continent_code<br />
+<p> To configure what you want to have placed in the label, use the list of objects, in whatever order you like, as the RALABLE_GEOPIP_CITY string using these keywords:<br/>
+&nbsp;<wbr>&nbsp;<wbr>cco&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; country_code<br/>
+&nbsp;<wbr>&nbsp;<wbr>cco3&nbsp;<wbr>&nbsp;<wbr>&#8211; country_code3<br/>
+&nbsp;<wbr>&nbsp;<wbr>cname &#8211; country_name<br/>
+&nbsp;<wbr>&nbsp;<wbr>reg&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; region<br/>
+&nbsp;<wbr>&nbsp;<wbr>city&nbsp;<wbr>&nbsp;<wbr>&#8211; city<br/>
+&nbsp;<wbr>&nbsp;<wbr>pcode &#8211; postal_code<br/>
+&nbsp;<wbr>&nbsp;<wbr>lat&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; latitude<br/>
+&nbsp;<wbr>&nbsp;<wbr>long&nbsp;<wbr>&nbsp;<wbr>&#8211; longitude<br/>
+&nbsp;<wbr>&nbsp;<wbr>metro &#8211; metro_code<br/>
+&nbsp;<wbr>&nbsp;<wbr>area&nbsp;<wbr>&nbsp;<wbr>&#8211; area_code<br/>
+&nbsp;<wbr>&nbsp;<wbr>cont&nbsp;<wbr>&nbsp;<wbr>&#8211; continent_code<br/>
 &nbsp;<wbr>&nbsp;<wbr>off&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&#8211; GMT time offset </p>
-<p> Working examples could be:<br />
-&nbsp;<wbr>&nbsp;<wbr>RALABEL_GEOIP_CITY=&quot;saddr,daddr:lat/lon&quot;<br />
-&nbsp;<wbr>&nbsp;<wbr>RALABEL_GEOIP_CITY=&quot;*:city,region,cname,lat,lon&quot;<br />
+<p> Working examples could be:<br/>
+&nbsp;<wbr>&nbsp;<wbr>RALABEL_GEOIP_CITY=&quot;saddr,daddr:lat/lon&quot;<br/>
+&nbsp;<wbr>&nbsp;<wbr>RALABEL_GEOIP_CITY=&quot;*:city,region,cname,lat,lon&quot;<br/>
 &nbsp;<wbr> </p>
 <pre><code>RALABEL_GEOIP_CITY</code>=&quot;saddr,daddr,inode:lat,lon&quot;
 <code>RALABEL_GEOIP_CITY_FILE</code>=&quot;/usr/local/share/GeoIP/GeoIPCity.dat&quot;</pre>

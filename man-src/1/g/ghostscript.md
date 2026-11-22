@@ -107,9 +107,9 @@ description: "gs – Ghostscript (PostScript and PDF language interpreter and pr
 <dt><code>-S</code><i>name</i><code>=</code><i>string</i></dt>
 <dd>
 </dd><dt> <code>-s</code><i>name</i><code>=</code><i>string</i></dt>
-<dd>Define a name in &quot;systemdict&quot; with a given string as value. This is different from <code>-d</code>. For example, <code>-dname=35</code> is equivalent to the program fragment<br />
+<dd>Define a name in &quot;systemdict&quot; with a given string as value. This is different from <code>-d</code>. For example, <code>-dname=35</code> is equivalent to the program fragment<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>/name 35 def</dd>
-<p> whereas <code>-sname=35</code> is equivalent to<br />
+<p> whereas <code>-sname=35</code> is equivalent to<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>/name (35) def</p>
 <dt><code>-P</code></dt>
 <dd> Makes Ghostscript to look first in the current directory for library files. By default, Ghostscript no longer looks in the current directory, unless, of course, the first explicitly supplied directory is &quot;.&quot; in <code>-I</code>. See also the <code>INITIALIZATION FILES</code> section below, and bundled <code>Use.htm</code> for detailed discussion on search paths and how Ghostcript finds files.</dd>

@@ -28,7 +28,7 @@ description: "gitremote-helpers – Helper programs to interact with remote repo
 <h3>Capabilities</h3>
 <p> Each remote helper is expected to support only a subset of commands. The operations a helper supports are declared to Git in the response to the <code>capabilities</code> command (see COMMANDS, below). </p>
 <p> In the following, we list all defined capabilities and for each we list which commands a helper with that capability must provide. </p>
-<p> <font SIZE="+1"> <code>Capabilities for Pushing</code></p>
+<p>  <code>Capabilities for Pushing</code></p>
 <dl>
 <dt>
 </dt><dd>
@@ -53,7 +53,7 @@ description: "gitremote-helpers – Helper programs to interact with remote repo
 <dt>
 </dt><dd> When using the <i>refspec</i> capability, git normally updates the private ref on successful push. This update is disabled when the remote-helper declares the capability <i>no-private-update</i>.</dd></dl>
 </dl>
-<p> </font><font SIZE="+2"> <code>Capabilities for Fetching</code></p>
+<p>  <code>Capabilities for Fetching</code></p>
 <dl>
 <dt>
 </dt><dd>
@@ -77,7 +77,7 @@ description: "gitremote-helpers – Helper programs to interact with remote repo
 <dt>
 </dt><dd> Can guarantee that when a clone is requested, the received pack is self contained and is connected.</dd></dl>
 <p> If a helper advertises <i>connect</i>, Git will use it if possible and fall back to another capability if the helper requests so when connecting (see the <i>connect</i> command under COMMANDS). When choosing between <i>fetch</i> and <i>import</i>, Git prefers <i>fetch</i>. Other frontends may have some other order of preference.</dl>
-<p> </font><font SIZE="+3"> <code>Miscellaneous capabilities</code></p>
+<p>  <code>Miscellaneous capabilities</code></p>
 <dl>
 <dt>
 </dt><dd>
@@ -109,7 +109,7 @@ description: "gitremote-helpers – Helper programs to interact with remote repo
 <dt>
 </dt><dd> This modifies the <i>export</i> capability, instructing Git to pass <code>&#8211;signed-tags=verbatim</code> to <code><a href="/docs/linux/man/1-git-fast-export/">git-fast-export</a></code>(1). In the absence of this capability, Git will use <code>&#8211;signed-tags=warn-strip</code>.</dd></dl>
 </dl>
-<p> </font></p>
+<p> </p>
 <h2>COMMANDS</h2>
 <p> Commands are given by the caller on the helper&#8217;s standard input, one per line. </p>
 <p> <i>capabilities</i></p>

@@ -29,7 +29,7 @@ description: "FvwmConsole – an fvwm command input interface"
 <p> (see <i><a href="/docs/linux/man/1-fvwmconsolec-pl/">FvwmConsoleC.pl</a></i>(1)). </p>
 <p> Also X resources can be set in your ~/.Xdefaults file: </p>
 <dl>
-<dd>FvwmConsole*VT100*geometry: 40&#215;4<br />
+<dd>FvwmConsole*VT100*geometry: 40&#215;4<br/>
  FvwmConsole*font: 7&#215;14</dd></dl>
 <h2>Command Editing</h2>
 <p>There are a few options. If the GNU readline library is available, it can be used. </p>

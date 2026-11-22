@@ -8,7 +8,7 @@ url: "/docs/linux/man/1-tpm_version/"
 description: "tpm_version – report TPM version and manufacturer information"
 ---
 
-<p>TPM Management &#8211; tpm_version<br />
+<p>TPM Management &#8211; tpm_version<br/>
  </center></p>
 
 <p> tpm_version &#8211; report TPM version and manufacturer information </p>

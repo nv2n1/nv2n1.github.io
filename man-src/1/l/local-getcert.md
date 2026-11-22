@@ -10,13 +10,13 @@ description: "local-getcert"
 
 <p> local-getcert</p>
 <h2>SYNOPSIS</h2>
-<p>&nbsp;<wbr>local-getcert request&nbsp;<wbr>[options]<br />
-&nbsp;<wbr>local-getcert resubmit&nbsp;<wbr>[options]<br />
-&nbsp;<wbr>local-getcert start-tracking&nbsp;<wbr>[options]<br />
-&nbsp;<wbr>local-getcert status&nbsp;<wbr>[options]<br />
-&nbsp;<wbr>local-getcert stop-tracking&nbsp;<wbr>[options]<br />
-&nbsp;<wbr>local-getcert list&nbsp;<wbr>[options]<br />
-&nbsp;<wbr>local-getcert list-cas&nbsp;<wbr>[options]<br />
+<p>&nbsp;<wbr>local-getcert request&nbsp;<wbr>[options]<br/>
+&nbsp;<wbr>local-getcert resubmit&nbsp;<wbr>[options]<br/>
+&nbsp;<wbr>local-getcert start-tracking&nbsp;<wbr>[options]<br/>
+&nbsp;<wbr>local-getcert status&nbsp;<wbr>[options]<br/>
+&nbsp;<wbr>local-getcert stop-tracking&nbsp;<wbr>[options]<br/>
+&nbsp;<wbr>local-getcert list&nbsp;<wbr>[options]<br/>
+&nbsp;<wbr>local-getcert list-cas&nbsp;<wbr>[options]<br/>
 &nbsp;<wbr>local-getcert refresh-cas&nbsp;<wbr>[options] </p>
 <h2>DESCRIPTION</h2>
 <p> The <i>local-getcert</i> tool issues requests to a org.fedorahosted.certmonger service on behalf of the invoking user. It can ask the service to begin enrollment, optionally generating a key pair to use, it can ask the service to begin monitoring a certificate in a specified location for expiration, and optionally to refresh it when expiration nears, it can list the set of certificates that the service is already monitoring, or it can list the set of CAs that the service is capable of using. </p>

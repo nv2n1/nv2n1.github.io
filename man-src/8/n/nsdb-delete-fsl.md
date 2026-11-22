@@ -85,13 +85,13 @@ description: "nsdb-delete-fsl – delete a fileset location (FSL) record from an
 </dl>
 <p> Further suppose the NSDB <i>nsdb.example.net:389</i> has an NSDB Container Entry whose distinguished name is <i>o=fedfs</i>. The replica of this fileset that exists at <i>fileserver.example.net:/path</i> has just been removed, and it&#8217;s FSL UUID is <i>323c5068-7c11-11e0-8d38-000c297fd679</i>. To delete the corresponding FSL record, you might use:</p>
 <dl>
-<dd>$ nsdb-delete-fsl -D cn=Manager -e o=fedfs \<br />
+<dd>$ nsdb-delete-fsl -D cn=Manager -e o=fedfs \<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>-l nsdb.example.net \</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>8e246ddc-7b46-11e0-8252-000c297fd679</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>323c5068-7c11-11e0-8d38-000c297fd679</p>
-<p> Enter NSDB password:<br />
- Successfully deleted FSL record<br />
-&nbsp;<wbr>&nbsp;<wbr>fedfsFslUuid=323c5068-7c11-11e0-8d38-000c297fd679,<br />
+<p> Enter NSDB password:<br/>
+ Successfully deleted FSL record<br/>
+&nbsp;<wbr>&nbsp;<wbr>fedfsFslUuid=323c5068-7c11-11e0-8d38-000c297fd679,<br/>
 &nbsp;<wbr>&nbsp;<wbr>fedfsFsnUuid=8e246ddc-7b46-11e0-8252-000c297fd679,o=fedfs </p>
 </dl>
 <p> The FSL record for the specified replica is removed, leaving possibly other FSL records for this fileset, and leaving the parent FSN record intact.</p>

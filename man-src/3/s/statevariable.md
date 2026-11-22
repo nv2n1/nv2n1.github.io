@@ -21,12 +21,12 @@ const Handle&lt; LocalVolTermStructure &gt; &amp; localVolatility () const</code
 <p>const Handle&lt; YieldTermStructure &gt; &amp; riskFreeRate () const</p>
 <p>const Handle&lt; BlackVolTermStructure &gt; &amp; blackVolatility () const</p>
 <p>const Handle&lt; LocalVolTermStructure &gt; &amp; localVolatility () const <code>StochasticProcess1D interface</code> </p>
-<p> Real <code>x0</code> () const<br />
- <i>returns the initial value of the state variable </i><br />
+<p> Real <code>x0</code> () const<br/>
+ <i>returns the initial value of the state variable </i><br/>
  Real <code>drift</code> (Time t, Real x) const </p>
 <p> Real <code>diffusion</code> (Time t, Real x) const </p>
-<p> Real <code>apply</code> (Real x0, Real dx) const<br />
- <code>Observer interface</code><br />
+<p> Real <code>apply</code> (Real x0, Real dx) const<br/>
+ <code>Observer interface</code><br/>
  const Handle&lt; Quote &gt; &amp; stateVariable () const</p>
 <p>const Handle&lt; YieldTermStructure &gt; &amp; dividendYield () const</p>
 <p>const Handle&lt; YieldTermStructure &gt; &amp; riskFreeRate () const</p>

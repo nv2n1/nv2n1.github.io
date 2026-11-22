@@ -31,13 +31,13 @@ int epoll_pwait(int epfd, struct epoll_event *events,
 <dd> the timeout expires.</dd></dl>
 <p> Note that the <i>timeout</i> interval will be rounded up to the system clock granularity, and kernel scheduling delays mean that the blocking interval may overrun by a small amount. Specifying a <i>timeout</i> of -1 causes <code>epoll_wait</code>() to block indefinitely, while specifying a <i>timeout</i> equal to zero cause <code>epoll_wait</code>() to return immediately, even if no events are available. </p>
 <p> The <i>struct epoll_event</i> is defined as: </p>
-<p> typedef union epoll_data {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;void&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;*ptr;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;fd;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint32_t u32;<br />
+<p> typedef union epoll_data {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;void&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;*ptr;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;fd;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint32_t u32;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint64_t u64; } epoll_data_t; </p>
-<p> struct epoll_event {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint32_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;events;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Epoll events&nbsp;*/<br />
+<p> struct epoll_event {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint32_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;events;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Epoll events&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;epoll_data_t data;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;User data variable&nbsp;*/ }; </p>
 <p> The <i>data</i> field of each returned <i>epoll_event</i> structure contains the same data as was specified in the most recent call to <code><a href="/docs/linux/man/2-epoll_ctl/">epoll_ctl</a></code>(2) (<code>EPOLL_CTL_ADD</code>, <code>EPOLL_CTL_MOD</code>) for the corresponding open file descriptor. </p>
 <p> The <i>events</i> field is a bit mask that indicates the events that have occurred for the corresponding open file description. See <code><a href="/docs/linux/man/2-epoll_ctl/">epoll_ctl</a></code>(2) for a list of the bits that may appear in this mask.</p>

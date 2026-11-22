@@ -18,9 +18,9 @@ description: "xpdtest – xproofd test utility"
 <dt><code>&#8211;help, -h</code></dt>
 <dd> Gives a short list of options avaliable, and exit</dd>
 <dt><code>-t</code> &lt;test&gt;</dt>
-<dd> type of test to be run:<br />
-&nbsp;<wbr>0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>ping the daemon&nbsp;<wbr>(includes process existence check if pid specified;&nbsp;<wbr>see below)<br />
-&nbsp;<wbr>1&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>ping the daemon and check connection for default user<br />
+<dd> type of test to be run:<br/>
+&nbsp;<wbr>0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>ping the daemon&nbsp;<wbr>(includes process existence check if pid specified;&nbsp;<wbr>see below)<br/>
+&nbsp;<wbr>1&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>ping the daemon and check connection for default user<br/>
 &nbsp;<wbr>2&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>ping the daemon and check connection for the default user and all recent users </dd>
 <p> The default user is the one specified in the URL (e.g. &#8216;user&#8217; for user [at] localhost); if no explicit specification is found in the URL, the user under which <code>xpdtest</code> is run is used; it can be also passed via the environment variable <code>XPDTEST_TEST.</code></p>
 <dt><code>-u</code> &lt;url&gt;</dt>

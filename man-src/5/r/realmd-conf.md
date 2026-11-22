@@ -10,7 +10,7 @@ description: "realmd.conf – Tweak behavior of realmd"
 <p>realmd.conf &#8211; Tweak behavior of realmd</p>
 <h2>Configuration File</h2>
 <p><code>realmd</code> can be tweaked by network administrators to act in specific ways. This is done by placing settings in a /etc/realmd.conf. This file does not exist by default. The syntax of this file is the same as an INI file or Desktop Entry file. </p>
-<p> In general, settings in this file only apply at the point of joining a domain or realm. Once the realm has been setup the settings have no effect. You may choose to configure m[blue]<code>SSSD</code>m[]<font SIZE="-2">[1]</font> or m[blue]<code>Winbind</code>m[]<font SIZE="-2">[2]</font> directly. </p>
+<p> In general, settings in this file only apply at the point of joining a domain or realm. Once the realm has been setup the settings have no effect. You may choose to configure m[blue]<code>SSSD</code>m[][1] or m[blue]<code>Winbind</code>m[][2] directly. </p>
 <p> Only specify the settings you wish to override in the /etc/realmd.conf file. Settings not specified will be loaded from their packaged defaults. Only override the settings below. You may find other settings if you look through the <code>realmd</code> source code. However these are not guaranteed to remain stable. </p>
 <p> There are various sections in the config file. Some sections are global topic sections, and are listed below. Other sections are specific to a given realm. These realm specific sections should always contain the domain name in lower case as their section header. </p>
 <p> Examples of each setting is found below, including the header of the section it should be placed in. However in the resulting file only include each section once, and combine the various section setting together as lines underneath the section. For example </p>
@@ -31,7 +31,7 @@ default-shell = /bin/bash</pre>
 default-client = sssd
 # default-client = winbind</pre>
 </dd></dl>
-<p> The default setting for this is <code>sssd</code> which uses m[blue]<code>SSSD</code>m[]<font SIZE="-2">[1]</font> as the Active Directory client. You can also specify <code>winbind</code> to use m[blue]<code>Samba Winbind</code>m[]<font SIZE="-2">[2]</font>. </p>
+<p> The default setting for this is <code>sssd</code> which uses m[blue]<code>SSSD</code>m[][1] as the Active Directory client. You can also specify <code>winbind</code> to use m[blue]<code>Samba Winbind</code>m[][2]. </p>
 <p> Some callers of <code>realmd</code> such as the <code>realm</code> command line tool allow specifying which client software should be used. Others, such as GNOME Control Center, simplify choose the default. </p>
 <p> You can verify the preferred default client softawre by running the following command. The realm with the preferred client software will be listed first. </p>
 <dl>

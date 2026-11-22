@@ -12,16 +12,16 @@ description: "QuantLib::HullWhite – Single-factor Hull-White (extended Vasicek
 <p>#include &lt;ql/models/shortrate/onefactormodels/hullwhite.hpp&gt; </p>
 <p> Inherits <code>QuantLib::Vasicek</code>, and <code>QuantLib::TermStructureConsistentModel</code>. </p>
 <h3>Classes</h3>
-<p>class <code>Dynamics</code><br />
- <i>Short-rate dynamics in the Hull-White model. </i><br />
- class <code>FittingParameter</code><br />
+<p>class <code>Dynamics</code><br/>
+ <i>Short-rate dynamics in the Hull-White model. </i><br/>
+ class <code>FittingParameter</code><br/>
  <i>Analytical term-structure fitting parameter $ ndle</i>&lt; <code>YieldTermStructure</code> &gt; &amp;termStructure, Real a=0.1, Real sigma=0.01)&quot;</p>
 <h3>Public Member Functions</h3>
 <p><code>HullWhite</code> (const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;termStructure, Real a=0.1, Real sigma=0.01) </p>
-<p> boost::shared_ptr&lt; <code>Lattice</code> &gt; <code>tree</code> (const <code>TimeGrid</code> &amp;grid) const<br />
- <i>Return by default a trinomial recombining tree. </i><br />
- boost::shared_ptr&lt; <code>ShortRateDynamics</code> &gt; <code>dynamics</code> () const<br />
- <i>returns the short-rate dynamics </i><br />
+<p> boost::shared_ptr&lt; <code>Lattice</code> &gt; <code>tree</code> (const <code>TimeGrid</code> &amp;grid) const<br/>
+ <i>Return by default a trinomial recombining tree. </i><br/>
+ boost::shared_ptr&lt; <code>ShortRateDynamics</code> &gt; <code>dynamics</code> () const<br/>
+ <i>returns the short-rate dynamics </i><br/>
  Real <code>discountBondOption</code> (Option::Type type, Real strike, Time maturity, Time bondMaturity) const </p>
 <h3>Static Public Member Functions</h3>
 <p>static <code>Rate</code> <code>convexityBias</code> (Real futurePrice, Time t, Time T, Real sigma, Real a) </p>

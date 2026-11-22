@@ -27,7 +27,7 @@ description: "powermand – power control and monitoring daemon"
 <p> <code>PowerMan</code> and exit. </p>
 </dl>
 <h2>Files</h2>
-<p>/usr/sbin/powermand<br />
+<p>/usr/sbin/powermand<br/>
  /etc/powerman/powerman.conf</p>
 <h2>Origin</h2>
 <p>PowerMan was originally developed by Andrew Uselton on LLNL&#8217;s Linux clusters. This software is open source and distributed under the terms of the GNU GPL.</p>

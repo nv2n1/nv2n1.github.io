@@ -78,8 +78,8 @@ description: "tunefs.ocfs2 – Change OCFS2 file system parameters."
 <h2>Examples</h2>
 <p>[root [at] node1 ~]# tunefs.ocfs2 -Q &quot;UUID = %U
 NumSlots = %N
-&quot; /dev/sda1<br />
- UUID = CBB8D5E0C169497C8B52A0FD555C7A3E<br />
+&quot; /dev/sda1<br/>
+ UUID = CBB8D5E0C169497C8B52A0FD555C7A3E<br/>
  NumSlots = 4 </p>
 <h2>See Also</h2>
 <p><code>mkfs.ocfs2(8)</code> <code>fsck.ocfs2(8)</code> <code>debugfs.ocfs2(8)</code> <code>mounted.ocfs2(8)</code> <code><a href="/docs/linux/man/8-ocfs2console/">ocfs2console</a>(8)</code> <code><a href="/docs/linux/man/7-o2cb/">o2cb</a>(7)</code> </p>

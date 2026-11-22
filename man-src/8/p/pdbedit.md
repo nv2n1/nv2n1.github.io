@@ -147,7 +147,7 @@ samba:45:0F2B255F7B67A7A9AAD3B435B51404EE:
 retype new password</pre>
 </dd></dl>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font><br />
+<dd> <code>Note</code> <br/>
  pdbedit does not call the unix password synchronization script if m[blue]<code>unix password sync</code>m[] has been set. It only updates the data in the Samba user database. </dd>
 <p> If you wish to add a user and synchronise the password that immediately, use smbpasswd&#8217;s <code>-a</code> option. </p>
 </dl>

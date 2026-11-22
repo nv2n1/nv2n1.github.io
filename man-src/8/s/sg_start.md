@@ -107,7 +107,7 @@ description: "sg_start – send SCSI START STOP UNIT command: start, stop, load 
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;dgilbert at interlog dot com&gt;.</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2002-2012 Kurt Garloff, Douglas Gilbert<br />
+<p>Copyright &#169; 2002-2012 Kurt Garloff, Douglas Gilbert<br/>
  This software is distributed under the GPL version 2. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>See Also</h2>
 <p><code>sg_prevent(sg3_utils), sg_requests(sg3_utils), sg_turs(sg3_utils)</code> <code>sdparm(sdparm)</code> </p>

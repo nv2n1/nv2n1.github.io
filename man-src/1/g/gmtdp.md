@@ -40,7 +40,7 @@ description: "gmtdp – Line reduction using the Douglas-Peucker algorithm"
 <p> To reduce the line segment.d using a tolerance of 2 km, run </p>
 <p> <code>gmtdp</code> segment.d <code>-T</code>2 &gt; new_segment.d </p>
 <h2>REFERENCES</h2>
-<p> Douglas, D. H., and T. K. Peucker, Algorithms for the reduction of the number of points required to represent a digitized line of its caricature, <i>Can. Cartogr., 10</i>, 112-122, 1973.<br />
+<p> Douglas, D. H., and T. K. Peucker, Algorithms for the reduction of the number of points required to represent a digitized line of its caricature, <i>Can. Cartogr., 10</i>, 112-122, 1973.<br/>
  This implementation of the algorithm has been kindly provided by Dr. Gary J. Robinson, Environmental Systems Science Centre, University of Reading, Reading, UK (gazza [at] mail.nerc-essc.ac.uk); his subroutine forms the basis for this program.</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-gmt/">GMT</a></i>(1) </p>

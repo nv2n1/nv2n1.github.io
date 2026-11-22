@@ -31,6 +31,6 @@ description: "xfce4-session-settings – Session settings for Xfce"
 <dt><code>&#8211;display</code>=<i>DISPLAY</i></dt>
 <dd> X display to use</dd></dl>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2004-2008<br />
+<p> Copyright &#169; 2004-2008<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;The Xfce development team. All rights reserved. </p>
 <p> Please report bugs to &lt;<a rel="nofollow" href="http://bugs.xfce.org/">http://bugs.xfce.org/</a>&gt;. </p>

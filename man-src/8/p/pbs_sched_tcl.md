@@ -26,7 +26,7 @@ description: "pbs_sched_tcl – pbs Tcl scheduler"
 <dt>-L logfile</dt>
 <dd>Specifies an absolute path name of the file to use as the log file. If not specified, the scheduler will open a file named for the current date in the PBS_HOME/sched_logs directory (see the -d option).</dd>
 <dt>-p file</dt>
-<dd>This specifies the &quot;print&quot; file. Any output from the Tcl code which is written to standard out or standard error will be written to this file. If this option is not given, the file used will be <i>PBS_HOME/sched_priv/sched_out.</i> See the <i> </i><font SIZE="-1"><i> option.</dd>
+<dd>This specifies the &quot;print&quot; file. Any output from the Tcl code which is written to standard out or standard error will be written to this file. If this option is not given, the file used will be <i>PBS_HOME/sched_priv/sched_out.</i> See the <i> </i><i> option.</dd>
 <dt>-S port</dt>
 <dd>This specifies the port to use. If this option is not given, the default port for the PBS scheduler is used.</dd>
 <dt>-t file</dt>
@@ -36,7 +36,7 @@ description: "pbs_sched_tcl – pbs Tcl scheduler"
 <dt>-c file</dt>
 <dd>Specify a configuration file, see description below. If this is a relative file name it will be relative to PBS_HOME/sched_priv, see the -d option. If the -c option is not supplied, pbs_sched will not attempt to open a configuration file.</dd></dl>
 <p> The options that specify file names may be absolute or relative. If they are relative, their root directory will be PBS_HOME/sched_priv. </p>
-<p> </i></font></p>
+<p> </i></p>
 <h2>Usage</h2>
 <p>This version of the scheduler requires knowledge of the Tcl language. A set of functions to communicate with the PBS server and resource monitor have been added to those normally available with Tcl. All these calls will set the Tcl variable &quot;pbs_errno&quot; to a value to indicate if an error occured. In all cases, the value &quot;0&quot; means no error. If a call to a Resource Monitor function is made, any error value will come from the system supplied <code>errno</code> variable. If the function call communicates with the PBS Server, any error value will come from the error number returned by the server.</p>
 <dl>
@@ -149,8 +149,8 @@ description: "pbs_sched_tcl – pbs Tcl scheduler"
 <p> The Tcl interpreter is started at program initialization and after a reset (the receipt of a SIGHUP signal). It is not deleted between scheduling runs so variables which are set in one can be accessed later. </p>
 <p> The &quot;initialize&quot; and &quot;terminator&quot; files are run with no supplied connection to the server. This means that none of the above functions which talk to the server will work unless <code>pbsconnect</code> is called first. The &quot;body&quot; file is run with a connection to the server already established.</p>
 <h2>Configuration File</h2>
-<p>A configuration file may be specified with the -c option. This file may be used to specify the hosts (servers) which are allowed to connect to pbs_sched. The hosts are specified in the configuration file in a manor identical to that used in pbs_mom. There is one line per host with the syntax:<br />
- <code><br />
+<p>A configuration file may be specified with the -c option. This file may be used to specify the hosts (servers) which are allowed to connect to pbs_sched. The hosts are specified in the configuration file in a manor identical to that used in pbs_mom. There is one line per host with the syntax:<br/>
+ <code><br/>
  where clienthost and hostname are separated by white space. </p>
 <p> Two host names are always allowed to connection to pbs_sched, &quot;localhost&quot; and the name returned to pbs_sched by the system call gethostname(). These names need not be specified in the configuration file. </p>
 <p> The configuration file must be &quot;secure&quot;. It must be owned by a user id and group id less than 10 and not be world writable. </p>
@@ -172,5 +172,5 @@ description: "pbs_sched_tcl – pbs Tcl scheduler"
 <h2>Exit Status</h2>
 <p>Upon normal termination, an exit status of zero is returned.</p>
 <h2>See Also</h2>
-<p>pbs_scheduler_cc(8B), pbs_scheduler_rule(8B), pbs_server(8B), and pbs_mom(8B).<br />
+<p>pbs_scheduler_cc(8B), pbs_scheduler_rule(8B), pbs_server(8B), and pbs_mom(8B).<br/>
  PBS Internal Design Specification </p>

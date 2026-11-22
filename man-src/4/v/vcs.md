@@ -14,12 +14,12 @@ description: "vcs, vcsa – virtual console memory"
 <p> When a 512-character font is loaded, the 9th bit position can be fetched by applying the <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2) <code>VT_GETHIFONTMASK</code> operation (available in Linux kernels 2.6.18 and above) on <i>/dev/tty[1-63]</i>; the value is returned in the <i>unsigned short</i> pointed to by the third <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2) argument. </p>
 <p> These devices replace the screendump <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2) operations of <code><a href="/docs/linux/man/2-ioctl_console/">ioctl_console</a></code>(2), so the system administrator can control access using filesystem permissions. </p>
 <p> The devices for the first eight virtual consoles may be created by: </p>
-<p> for x in 0 1 2 3 4 5 6 7 8; do<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;mknod -m 644&nbsp;/dev/vcs$x c 7&nbsp;$x;<br />
+<p> for x in 0 1 2 3 4 5 6 7 8; do<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;mknod -m 644&nbsp;/dev/vcs$x c 7&nbsp;$x;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;mknod -m 644&nbsp;/dev/vcsa$x c 7&nbsp;$[$x+128]; done chown root:tty /dev/vcs* </p>
 <p> No <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2) requests are supported.</p>
 <h2>Files</h2>
-<p><i>/dev/vcs[0-63]</i><br />
+<p><i>/dev/vcs[0-63]</i><br/>
  <i>/dev/vcsa[0-63]</i></p>
 <h2>Versions</h2>
 <p>Introduced with version 1.1.92 of the Linux kernel.</p>

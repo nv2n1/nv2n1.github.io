@@ -16,8 +16,8 @@ description: "libssh2_channel_flush_ex – flush a channel"
 <p> int libssh2_channel_flush_stderr(LIBSSH2_CHANNEL *channel); </p>
 <h2>DESCRIPTION</h2>
 <p> <i>channel</i> &#8211; Active channel stream to flush. </p>
-<p> <i>streamid</i> &#8211; Specific substream number to flush. Groups of substreams may be flushed by passing on of the following Constants.<br />
- <code>LIBSSH2_CHANNEL_FLUSH_EXTENDED_DATA</code>: Flush all extended data substreams<br />
+<p> <i>streamid</i> &#8211; Specific substream number to flush. Groups of substreams may be flushed by passing on of the following Constants.<br/>
+ <code>LIBSSH2_CHANNEL_FLUSH_EXTENDED_DATA</code>: Flush all extended data substreams<br/>
  <code>LIBSSH2_CHANNEL_FLUSH_ALL</code>: Flush all substreams </p>
 <p> Flush the read buffer for a given channel instance. Individual substreams may be flushed by number or using one of the provided macros. </p>
 <h2>RETURN VALUE</h2>

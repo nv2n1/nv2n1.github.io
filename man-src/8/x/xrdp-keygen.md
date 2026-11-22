@@ -9,7 +9,7 @@ description: "xrdp-keygen – xrdp RSA key generation utility"
 
 <p>xrdp-keygen &#8211; xrdp RSA key generation utility </p>
 <h2>Synopsis</h2>
-<p><code>xrdp-keygen xrdp</code> &lt; <i>outfile</i> | <code>auto</code> &gt;<br />
+<p><code>xrdp-keygen xrdp</code> &lt; <i>outfile</i> | <code>auto</code> &gt;<br/>
  <code>xrdp-keygen test</code> </p>
 <h2>Description</h2>
 <p><code>xrdp-keygen</code> generates the file <i>/etc/xrdp/rsakeys.ini</i> which contains the RSA key pair used to perform authentication to remote clients. The public key is self-signed. </p>
@@ -17,7 +17,7 @@ description: "xrdp-keygen – xrdp RSA key generation utility"
 <p>This program takes one of the following options:</p>
 <dl>
 <dt><code>xrdp</code> <i>outfile</i></dt>
-<dd>Generate a new key pair. The key data is stored in the file named <i>outfile</i>.<br />
+<dd>Generate a new key pair. The key data is stored in the file named <i>outfile</i>.<br/>
  If <code>auto</code> is used as <i>outfile</i>, the default file <i>/etc/xrdp/rsakeys.ini</i> gets created if it does not yet exists.</dd>
 <dt><code>test</code></dt>
 <dd>Generate a test key pair and print information to standard output. </dd>

@@ -10,7 +10,7 @@ description: "cla_gbrcond_c.f –"
 <p>cla_gbrcond_c.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>REAL function <code>cla_gbrcond_c</code> (TRANS, N, KL, KU, AB, LDAB, AFB, LDAFB, IPIV, C, CAPPLY, INFO, WORK, RWORK)<br />
+<p>REAL function <code>cla_gbrcond_c</code> (TRANS, N, KL, KU, AB, LDAB, AFB, LDAFB, IPIV, C, CAPPLY, INFO, WORK, RWORK)<br/>
  <i></i><code>CLA_GBRCOND_C</code> computes the infinity norm condition number of op(A)*inv(diag(c)) for general banded matrices.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>REAL function cla_gbrcond_c (characterTRANS, integerN, integerKL, integerKU, complex, dimension( ldab, * )AB, integerLDAB, complex, dimension( ldafb, * )AFB, integerLDAFB, integer, dimension( * )IPIV, real, dimension( * )C, logicalCAPPLY, integerINFO, complex, dimension( * )WORK, real, dimension( * )RWORK)</h3>

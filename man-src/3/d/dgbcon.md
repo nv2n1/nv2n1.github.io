@@ -11,7 +11,7 @@ description: "dgbcon.f –"
 <p> dgbcon.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dgbcon</code> (NORM, N, KL, KU, AB, LDAB, IPIV, ANORM, RCOND, WORK, IWORK, INFO)<br />
+<p> subroutine <code>dgbcon</code> (NORM, N, KL, KU, AB, LDAB, IPIV, ANORM, RCOND, WORK, IWORK, INFO)<br/>
  <i></i><code>DGBCON</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dgbcon (characterNORM, integerN, integerKL, integerKU, double precision, dimension( ldab, * )AB, integerLDAB, integer, dimension( * )IPIV, double precisionANORM, double precisionRCOND, double precision, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>

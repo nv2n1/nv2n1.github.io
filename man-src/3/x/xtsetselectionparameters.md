@@ -31,6 +31,6 @@ description: "XtSetSelectionParameters – specify target parameters for a selec
 <p> The possible values of <i>format</i> may be 8, 16, or 32. If the <i>format</i> is 8, the elements of <i>value</i> are assumed to be sizeof(char); if 16, sizeof(short); if 32, sizeof(long). </p>
 <p> To generate a MULTIPLE target request with parameters for any of the multiple targets of the selection request, precede individual calls to <code>XtGetSelectionValue</code> and <code>XtGetSelectionValueIncremental</code> with corresponding individual calls to <code>XtSetSelectionParameters</code>, and enclose these all within <code>XtCreateSelectionRequest</code> and <code>XtSendSelectionRequest</code>. <code>XtGetSelectionValues</code> and <code>XtGetSelectionValuesIncremental</code> cannot be used to make selection requests with parameterized targets.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xtgetselectionparameters/">XtGetSelectionParameters</a>(3)<br />
- <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><a href="/docs/linux/man/3-xtgetselectionparameters/">XtGetSelectionParameters</a>(3)<br/>
+ <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

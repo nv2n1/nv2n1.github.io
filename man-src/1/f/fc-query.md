@@ -10,7 +10,7 @@ url: "/docs/linux/man/1-fc-query/"
 <p> fc-query &#8211; query font files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fc-query</code> [ <code>-Vh</code> ] </p>
-<p> <br />
+<p> <br/>
 &nbsp;[&nbsp;<code>&nbsp;[&nbsp;-b&nbsp;]&nbsp;<wbr>&nbsp;[&nbsp;--ignore-blanks&nbsp;]&nbsp;</code>&nbsp;]&nbsp;<wbr>&nbsp;[&nbsp;<code>&nbsp;[&nbsp;-i&nbsp;</code><i>index</i><code>&nbsp;]&nbsp;<wbr>&nbsp;[&nbsp;--index&nbsp;</code><i>index</i><code>&nbsp;]&nbsp;</code>&nbsp;]&nbsp;<wbr>&nbsp;[&nbsp;<code>&nbsp;[&nbsp;-f&nbsp;</code><i>format</i><code>&nbsp;]&nbsp;<wbr>&nbsp;[&nbsp;--format&nbsp;</code><i>format</i><code>&nbsp;]&nbsp;</code>&nbsp;]&nbsp;<wbr>&nbsp;[&nbsp;<code>--version</code>&nbsp;]&nbsp;<wbr>&nbsp;[&nbsp;<code>--help</code>&nbsp;]&nbsp;<wbr>&nbsp;<i>font-file</i><i>...</i>  </p>
 <h2>DESCRIPTION</h2>
 <p> <code>fc-query</code> queries <i>font-file</i>(s) using the normal fontconfig rules and prints out font pattern for each face found. If <code>--index</code> is given, only one face of each file is queried, otherwise all faces are queried.  </p>

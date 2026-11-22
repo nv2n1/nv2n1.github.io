@@ -23,31 +23,31 @@ htmlfile-out  HTML/XHTML output filename (default: stdout)
 </pre>
 <h2>OPTIONS</h2>
 <h3>general options</h3>
-<p>&#8211; h&#8211; help<br />
-        print this help text and exit&#8211; version<br />
-            print version information and exit&#8211; arguments<br />
-                print expanded command line arguments &#8211;<br />
-    q&#8211; quiet<br />
-        quiet mode,<br />
-    print no warnings and errors &#8211; v&#8211; verbose<br />
-                                       verbose mode,<br />
-    print processing details &#8211; d&#8211; debug<br />
-                                   debug mode,<br />
-    print debug information &#8211; ll&#8211; log &#8211; level[l] evel:string<br />
-                                                       constant(fatal, error, warn, info, debug, trace)<br />
-         use level l for the logger<br />
-  -lc  &#8211;log-config  [f]ilename: string<br />
+<p>&#8211; h&#8211; help<br/>
+        print this help text and exit&#8211; version<br/>
+            print version information and exit&#8211; arguments<br/>
+                print expanded command line arguments &#8211;<br/>
+    q&#8211; quiet<br/>
+        quiet mode,<br/>
+    print no warnings and errors &#8211; v&#8211; verbose<br/>
+                                       verbose mode,<br/>
+    print processing details &#8211; d&#8211; debug<br/>
+                                   debug mode,<br/>
+    print debug information &#8211; ll&#8211; log &#8211; level[l] evel:string<br/>
+                                                       constant(fatal, error, warn, info, debug, trace)<br/>
+         use level l for the logger<br/>
+  -lc  &#8211;log-config  [f]ilename: string<br/>
          use config file f for the logger</p>
 <h3>input options</h3>
-<p>input file format : +f&#8211; read &#8211; file<br />
-                                    read file format or<br />
-    data set(default) + fo&#8211; read &#8211; file &#8211; only read file format only<br />
-        &#8211; f&#8211; read &#8211; dataset read data set without file meta information input transfer syntax : -t = &#8211;read &#8211; xfer &#8211; auto use TS recognition(default) &#8211; td&#8211; read &#8211; xfer &#8211; detect ignore TS specified in the file meta header<br />
-                                                                                                      &#8211; te&#8211; read &#8211; xfer &#8211; little read with explicit VR little endian TS<br />
-                                                                                                      &#8211; tb&#8211; read &#8211; xfer &#8211; big read with explicit VR big endian TS<br />
+<p>input file format : +f&#8211; read &#8211; file<br/>
+                                    read file format or<br/>
+    data set(default) + fo&#8211; read &#8211; file &#8211; only read file format only<br/>
+        &#8211; f&#8211; read &#8211; dataset read data set without file meta information input transfer syntax : -t = &#8211;read &#8211; xfer &#8211; auto use TS recognition(default) &#8211; td&#8211; read &#8211; xfer &#8211; detect ignore TS specified in the file meta header<br/>
+                                                                                                      &#8211; te&#8211; read &#8211; xfer &#8211; little read with explicit VR little endian TS<br/>
+                                                                                                      &#8211; tb&#8211; read &#8211; xfer &#8211; big read with explicit VR big endian TS<br/>
                                                                                                       &#8211; ti&#8211; read &#8211; xfer &#8211; implicit read with implicit VR little endian TS</p>
 <h3>parsing options</h3>
-<p>additional information : -Ip&#8211; processing &#8211; details show currently processed content item error handling : -Er&#8211; unknown &#8211; relationship accept unknown / missing relationship type &#8211; Ec&#8211; ignore &#8211; constraints ignore relationship content constraints &#8211; Ee&#8211; ignore &#8211; item &#8211; errors do not abort on content item errors, just warn(e.g.missing value type specific attributes) &#8211; Ei&#8211; skip &#8211; invalid &#8211; items skip invalid content items(incl.sub &#8211; tree) character set : +Cr&#8211; charset &#8211; require require declaration of extended charset(default) + Ca&#8211; charset &#8211; assume[c] harset : string constant(latin &#8211; 1 to &#8211; 5, greek, cyrillic, arabic, hebrew)<br />
+<p>additional information : -Ip&#8211; processing &#8211; details show currently processed content item error handling : -Er&#8211; unknown &#8211; relationship accept unknown / missing relationship type &#8211; Ec&#8211; ignore &#8211; constraints ignore relationship content constraints &#8211; Ee&#8211; ignore &#8211; item &#8211; errors do not abort on content item errors, just warn(e.g.missing value type specific attributes) &#8211; Ei&#8211; skip &#8211; invalid &#8211; items skip invalid content items(incl.sub &#8211; tree) character set : +Cr&#8211; charset &#8211; require require declaration of extended charset(default) + Ca&#8211; charset &#8211; assume[c] harset : string constant(latin &#8211; 1 to &#8211; 5, greek, cyrillic, arabic, hebrew)<br/>
 assume c if undeclared extended charset found</p>
 <h3>output options</h3>
 <pre><code>

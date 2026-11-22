@@ -47,8 +47,8 @@ description: "netstat-nat – Show the natted connections on a linux iptable fir
 <h2>FILES</h2>
 <p> /proc/net/ip_conntrack or /proc/net/nf_conntrack</p>
 <h2>SEE ALSO</h2>
-<p> <a rel="nofollow" href="http://www.tweegy.nl/projects/netstat-nat/">http://www.tweegy.nl/projects/netstat-nat/</a><br />
+<p> <a rel="nofollow" href="http://www.tweegy.nl/projects/netstat-nat/">http://www.tweegy.nl/projects/netstat-nat/</a><br/>
  <a rel="nofollow" href="http://www.netfilter.org/">http://www.netfilter.org/</a></p>
 <h2>AUTHOR</h2>
-<p> netstat-nat has been written by D.Wijsman danny [at] tweegy.nl<br />
+<p> netstat-nat has been written by D.Wijsman danny [at] tweegy.nl<br/>
  The manual page has been written by marceln [at] xs4all.nl </p>

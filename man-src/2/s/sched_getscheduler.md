@@ -19,9 +19,9 @@ int sched_getscheduler(pid_t pid);
 <h2>DESCRIPTION</h2>
 <p> The <code>sched_setscheduler</code>() system call sets both the scheduling policy and parameters for the thread whose ID is specified in <i>pid</i>. If <i>pid</i> equals zero, the scheduling policy and parameters of the calling thread will be set. </p>
 <p> The scheduling parameters are specified in the <i>param</i> argument, which is a pointer to a structure of the following form: </p>
-<p> struct sched_param {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8230;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int sched_priority;<br />
+<p> struct sched_param {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8230;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int sched_priority;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8230; }; </p>
 <p> In the current implementation, the structure contains only one field, <i>sched_priority</i>. The interpretation of <i>param</i> depends on the selected policy. </p>
 <p> Currently, Linux supports the following &quot;normal&quot; (i.e., non-real-time) scheduling policies as values that may be specified in <i>policy</i>:</p>

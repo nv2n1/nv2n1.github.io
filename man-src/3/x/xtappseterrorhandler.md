@@ -31,6 +31,6 @@ description: "XtAppError, XtAppSetErrorHandler, XtAppSetWarningHandler, XtAppWar
 <p> The <code>XtAppSetWarningHandler</code> registers the specified procedure, which is called when a nonfatal error condition occurs. </p>
 <p> The <code>XtAppWarning</code> function calls the installed nonfatal error procedure and passes the specified message.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xtappgeterrordatabase/">XtAppGetErrorDatabase</a>(3), <a href="/docs/linux/man/3-xtapperrormsg/">XtAppErrorMsg</a>(3)<br />
- <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><a href="/docs/linux/man/3-xtappgeterrordatabase/">XtAppGetErrorDatabase</a>(3), <a href="/docs/linux/man/3-xtapperrormsg/">XtAppErrorMsg</a>(3)<br/>
+ <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

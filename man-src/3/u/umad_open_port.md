@@ -14,9 +14,9 @@ int umad_open_port(char *ca_name, int portnum);</code></pre>
 <h2>Description</h2>
 <p><code>umad_open_port()</code> opens the port <i>portnum</i> of the IB device <i>ca_name</i> for umad access. The port is selected by the library if not all parameters are provided (see <code>umad_get_port()</code> for details).</p>
 <h2>Return Value</h2>
-<p><code>umad_open_port()</code> returns 0 or an unique positive value of umad device descriptor on success, and a negative value on error as follows:<br />
-&nbsp;<wbr>-ENODEV IB device can&#8217;t be resolved<br />
-&nbsp;<wbr>-EINVAL port is not valid&nbsp;<wbr>(bad <i>portnum</i> or no umad device)<br />
+<p><code>umad_open_port()</code> returns 0 or an unique positive value of umad device descriptor on success, and a negative value on error as follows:<br/>
+&nbsp;<wbr>-ENODEV IB device can&#8217;t be resolved<br/>
+&nbsp;<wbr>-EINVAL port is not valid&nbsp;<wbr>(bad <i>portnum</i> or no umad device)<br/>
 &nbsp;<wbr>-EIO&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>umad device for this port can&#8217;t be opened</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-umad_close_port/">umad_close_port</a></code>(3), <code><a href="/docs/linux/man/3-umad_get_cas_names/">umad_get_cas_names</a></code>(3), <code><a href="/docs/linux/man/3-umad_get_port/">umad_get_port</a></code>(3)</p>

@@ -9,9 +9,9 @@ description: "Hash Traverse Functions – Functions that iterate through hash ta
 
 <p>Hash Traverse Functions &#8211; Functions that iterate through hash tables. </p>
 <h3>Functions</h3>
-<p>EAPI int <code>ecore_hash_for_each_node</code> (Ecore_Hash *hash, Ecore_For_Each for_each_func, void *user_data)<br />
- <i>Runs the </i>for_each_func function on each entry in the given hash.<br />
- EAPI Ecore_List * <code>ecore_hash_keys</code> (Ecore_Hash *hash)<br />
+<p>EAPI int <code>ecore_hash_for_each_node</code> (Ecore_Hash *hash, Ecore_For_Each for_each_func, void *user_data)<br/>
+ <i>Runs the </i>for_each_func function on each entry in the given hash.<br/>
+ EAPI Ecore_List * <code>ecore_hash_keys</code> (Ecore_Hash *hash)<br/>
  <i>Retrieves an ecore_list of all keys in the given hash. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that iterate through hash tables.</p>
@@ -20,8 +20,8 @@ description: "Hash Traverse Functions – Functions that iterate through hash ta
 <p>Runs the for_each_func function on each entry in the given hash. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>hash</i> The given hash.<br />
- <i>for_each_func</i> The function that each entry is passed to.<br />
+<dd><i>hash</i> The given hash.<br/>
+ <i>for_each_func</i> The function that each entry is passed to.<br/>
  <i>user_data</i> a pointer passed to calls of for_each_func</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

@@ -40,10 +40,10 @@ description: "iptraf – Interactive Colorful IP LAN Monitor"
 <dt><code>-h</code></dt>
 <dd>shows a command summary</dd></dl>
 <h2>Signals</h2>
-<p>&nbsp;<wbr>SIGUSR1 &#8211; rotates log files while program is running<br />
+<p>&nbsp;<wbr>SIGUSR1 &#8211; rotates log files while program is running<br/>
 &nbsp;<wbr>SIGUSR2 &#8211; terminates an IPTraf process running in the background.</p>
 <h2>Files</h2>
-<p>&nbsp;<wbr>/var/log/iptraf/*.log &#8211; log file<br />
+<p>&nbsp;<wbr>/var/log/iptraf/*.log &#8211; log file<br/>
 &nbsp;<wbr>/var/lib/iptraf/*&nbsp;<wbr>&#8211; important IPTraf data files</p>
 <h2>See Also</h2>
 <p>&nbsp;<wbr>Documentation/*&nbsp;<wbr>&#8211; complete documentation written by the author </p>

@@ -11,7 +11,7 @@ description: "sgerqf.f –"
 <p> sgerqf.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>sgerqf</code> (M, N, A, LDA, TAU, WORK, LWORK, INFO)<br />
+<p> subroutine <code>sgerqf</code> (M, N, A, LDA, TAU, WORK, LWORK, INFO)<br/>
  <i></i><code>SGERQF</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sgerqf (integerM, integerN, real, dimension( lda, * )A, integerLDA, real, dimension( * )TAU, real, dimension( * )WORK, integerLWORK, integerINFO)</h3>

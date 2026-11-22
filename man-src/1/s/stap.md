@@ -10,14 +10,14 @@ description: "stap – systemtap script translator/driver"
 
 <p> stap - systemtap script translator/driver </p>
 <h2>SYNOPSIS</h2>
-<p> <br />
- <code>stap</code> [ <i>OPTIONS</i> ] <i>FILENAME</i> [ <i>ARGUMENTS</i> ] <br />
- <code>stap</code> [ <i>OPTIONS</i> ] <code>-</code> [ <i>ARGUMENTS</i> ] <br />
- <code>stap</code> [ <i>OPTIONS</i> ] <code>-e</code><i> SCRIPT</i> [ <i>ARGUMENTS</i> ] <br />
- <code>stap</code> [ <i>OPTIONS</i> ] <code>-l</code><i> PROBE</i> [ <i>ARGUMENTS</i> ] <br />
- <code>stap</code> [ <i>OPTIONS</i> ] <code>-L</code><i> PROBE</i> [ <i>ARGUMENTS</i> ] <br />
- <code>stap</code> [ <i>OPTIONS</i> ] <code>--dump-probe-types</code> <br />
- <code>stap</code> [ <i>OPTIONS</i> ] <code>--dump-probe-aliases</code> <br />
+<p> <br/>
+ <code>stap</code> [ <i>OPTIONS</i> ] <i>FILENAME</i> [ <i>ARGUMENTS</i> ] <br/>
+ <code>stap</code> [ <i>OPTIONS</i> ] <code>-</code> [ <i>ARGUMENTS</i> ] <br/>
+ <code>stap</code> [ <i>OPTIONS</i> ] <code>-e</code><i> SCRIPT</i> [ <i>ARGUMENTS</i> ] <br/>
+ <code>stap</code> [ <i>OPTIONS</i> ] <code>-l</code><i> PROBE</i> [ <i>ARGUMENTS</i> ] <br/>
+ <code>stap</code> [ <i>OPTIONS</i> ] <code>-L</code><i> PROBE</i> [ <i>ARGUMENTS</i> ] <br/>
+ <code>stap</code> [ <i>OPTIONS</i> ] <code>--dump-probe-types</code> <br/>
+ <code>stap</code> [ <i>OPTIONS</i> ] <code>--dump-probe-aliases</code> <br/>
  <code>stap</code> [ <i>OPTIONS</i> ] <code>--dump-functions</code> </p>
 <h2>DESCRIPTION</h2>
 <p> The <i>stap</i> program is the front-end to the Systemtap tool. It accepts probing instructions written in a simple domain-specific language, translates those instructions into C code, compiles this C code, and loads the resulting module into a running Linux kernel or a DynInst user-space mutator, to perform the requested system trace/probe functions. You can supply the script in a named file (FILENAME), from standard input (use - instead of FILENAME), or from the command line (using -e SCRIPT). The program runs until it is interrupted by the user, or if the script voluntarily invokes the <i>exit()</i> function, or by sufficient number of soft errors. </p>
@@ -195,7 +195,7 @@ description: "stap – systemtap script translator/driver"
 <dd> <p> Add the given C preprocessor directive to the module Makefile. These can be used to override limit parameters described below. </p>
  </dd>
 <dt><code>-B</code><i> NAME=VALUE</i></dt>
-<dd> <p> In kernel-runtime mode, add the given make directive to the kernel module build&#8217;s make invocation. These can be used to add or override kconfig options. For example, use <br />
+<dd> <p> In kernel-runtime mode, add the given make directive to the kernel module build&#8217;s make invocation. These can be used to add or override kconfig options. For example, use <br/>
  </p>
  </dd>
 <dl>
@@ -205,7 +205,7 @@ description: "stap – systemtap script translator/driver"
  </dd></dl>
 <p> to add debugging information. </p>
 <dt><code>-B</code><i> FLAG</i></dt>
-<dd> <p> In dyninst-runtime mode, add the given parameter to the compiler CFLAGS used for building the dyninst shared library. For example, use <br />
+<dd> <p> In dyninst-runtime mode, add the given parameter to the compiler CFLAGS used for building the dyninst shared library. For example, use <br/>
  </p>
  </dd>
 <dl>
@@ -215,7 +215,7 @@ description: "stap – systemtap script translator/driver"
  </dd></dl>
 <p> to add debugging information. </p>
 <dt><code>-a</code><i> ARCH</i></dt>
-<dd> <p> Use a cross-compilation mode for the given target architecture. This requires access to the cross-compiler and the kernel build tree, and goes along with the <br />
+<dd> <p> Use a cross-compilation mode for the given target architecture. This requires access to the cross-compiler and the kernel build tree, and goes along with the <br/>
  </p>
  </dd>
 <dl>
@@ -289,7 +289,7 @@ description: "stap – systemtap script translator/driver"
 <dd> <p> Prologue-searching mode. Activate heuristics to work around incorrect debugging information for function parameter $context variables. WHEN can be either &quot;never&quot;, &quot;always&quot;, or &quot;auto&quot; (i.e. enabled by heuristic). If WHEN is missing, then &quot;always&quot; is assumed. If the option is missing, then &quot;auto&quot; is assumed. </p>
  </dd>
 <dt><code>--suppress-handler-errors</code></dt>
-<dd> <p> Wrap all probe handlers into something like this <br />
+<dd> <p> Wrap all probe handlers into something like this <br/>
  </p>
  </dd>
 <dl>
@@ -406,7 +406,7 @@ description: "stap – systemtap script translator/driver"
 <dd> <p> This mode uses ssh, optionally using a username not matching your own. If a custom ssh_config file is in use, add <code>SendEnv LANG</code> to retain internationalization functionality. </p>
  </dd>
 <dt><code>libvirt://DOMAIN</code>, <code>libvirt://DOMAIN/LIBVIRT_URI</code></dt>
-<dd> <p> This mode uses <i>stapvirt</i> to execute the script on a domain managed by libvirt. Optionally, LIBVIRT_URI may be specified to connect to a specific driver and/or a remote host. For example, to connect to the local privileged QEMU driver, use: <br />
+<dd> <p> This mode uses <i>stapvirt</i> to execute the script on a domain managed by libvirt. Optionally, LIBVIRT_URI may be specified to connect to a specific driver and/or a remote host. For example, to connect to the local privileged QEMU driver, use: <br/>
  </p>
  </dd>
 <dl>
@@ -519,15 +519,15 @@ description: "stap – systemtap script translator/driver"
 <h3>GENERAL SYNTAX</h3>
 <p> Whitespace is ignored. Three forms of comments are supported: </p>
 <dl>
-<dd> <p> <br />
- <code>#</code> ... shell style, to the end of line, except for $# and @# <br />
- <code>//</code> ... C++ style, to the end of line <br />
+<dd> <p> <br/>
+ <code>#</code> ... shell style, to the end of line, except for $# and @# <br/>
+ <code>//</code> ... C++ style, to the end of line <br/>
  <code>/*</code> ... C style ... <code>*/</code> </p>
  </dd></dl>
 <p> Literals are either strings enclosed in double-quotes (passing through the usual C escape codes with backslashes, and with adjacent string literals glued together, also as in C), or integers (in decimal, hexadecimal, or octal, using the same notation as in C). All strings are limited in length to some reasonable value (a few hundred bytes). Integers are 64-bit signed quantities, although the parser also accepts (and wraps around) values above positive 2**63. </p>
 <p> In addition, script arguments given at the end of the command line may be inserted. Use <code>$1 ... $&lt;NN&gt;</code> for insertion unquoted, <code>@1 ... @&lt;NN&gt;</code> for insertion as a string literal. The number of arguments may be accessed through <code>$#</code> (as an unquoted number) or through <code>@#</code> (as a quoted number). These may be used at any place a token may begin, including within the preprocessing stage. Reference to an argument number beyond what was actually given is an error. </p>
 <h3>PREPROCESSING</h3>
-<p> A simple conditional preprocessing stage is run as a part of parsing. The general form is similar to the cond <code> ? </code>exp1 <code> : </code>exp2 ternary operator: <br />
+<p> A simple conditional preprocessing stage is run as a part of parsing. The general form is similar to the cond <code> ? </code>exp1 <code> : </code>exp2 ternary operator: <br/>
  </p>
 <dl>
 <dd> <pre><code>
@@ -544,13 +544,13 @@ description: "stap – systemtap script translator/driver"
 <p> If the first part is the identifier <code>guru_mode</code>, the test refers to if the systemtap script is compiled with guru_mode. Here the second part is <code>==</code> or <code>!=</code>, and the third part is a number, either 1 or 0. </p>
 <p> If the first part is the identifier <code>runtime</code>, the test refers to the systemtap runtime mode. See <code>ALTERNATE RUNTIMES</code> below for more information on runtimes. The second part is one of the two string comparison operators <code>==</code> or <code>!=</code>, and the third part is a string literal for matching it. This comparison is a wildcard (mis)match. </p>
 <p> Otherwise, the CONDITION is expected to be a comparison between two string literals or two numeric literals. In this case, the arguments are the only variables usable. </p>
-<p> The TRUE-TOKENS and FALSE-TOKENS are zero or more general parser tokens (possibly including nested preprocessor conditionals), and are passed into the input stream if the condition is true or false. For example, the following code induces a parse error unless the target kernel version is newer than 2.6.5: <br />
+<p> The TRUE-TOKENS and FALSE-TOKENS are zero or more general parser tokens (possibly including nested preprocessor conditionals), and are passed into the input stream if the condition is true or false. For example, the following code induces a parse error unless the target kernel version is newer than 2.6.5: <br/>
  </p>
 <dl>
 <dd> <pre><code>%( kernel_v &lt;= &quot;2.6.5&quot; %? **ERROR** %) # invalid token sequence
 </code></pre>
  </dd></dl>
-<p> The following code might adapt to hypothetical kernel version drift: <br />
+<p> The following code might adapt to hypothetical kernel version drift: <br/>
  </p>
 <dl>
 <dd> <pre><code>probe kernel.function (
@@ -565,14 +565,14 @@ description: "stap – systemtap script translator/driver"
  </dd></dl>
 <h3>PREPROCESSOR MACROS</h3>
 <p> The preprocessor also supports a simple macro facility, run as a separate pass before conditional preprocessing. </p>
-<p> Macros are defined using the following construct: <br />
+<p> Macros are defined using the following construct: <br/>
  </p>
 <dl>
 <dd> <pre><code>@define NAME %( BODY %)
 @define NAME(PARAM_1, PARAM_2, ...) %( BODY %)
 </code></pre>
  </dd></dl>
-<p> Macros, and parameters inside a macro body, are both invoked by prefixing the macro name with an @ symbol: <br />
+<p> Macros, and parameters inside a macro body, are both invoked by prefixing the macro name with an @ symbol: <br/>
  </p>
 <dl>
 <dd> <pre><code>@define foo %( x %)
@@ -580,7 +580,7 @@ description: "stap – systemtap script translator/driver"
    @foo = @add(2,2)
 </code></pre>
  </dd></dl>
-<p> Macro expansion is currently performed in a separate pass before conditional compilation. Therefore, both TRUE- and FALSE-tokens in conditional expressions will be macroexpanded regardless of how the condition is evaluated. This can sometimes lead to errors: <br />
+<p> Macro expansion is currently performed in a separate pass before conditional compilation. Therefore, both TRUE- and FALSE-tokens in conditional expressions will be macroexpanded regardless of how the condition is evaluated. This can sometimes lead to errors: <br/>
  </p>
 <dl>
 <dd> <pre><code>// The following results in a conflict:
@@ -598,7 +598,7 @@ description: "stap – systemtap script translator/driver"
 <p> The first example is incorrect because both @defines are evaluated in a pass prior to the conditional being evaluated. </p>
 <p> Normally, a macro definition is local to the file it occurs in. Thus, defining a macro in a tapset does not make it available to the user of the tapset. Publically available library macros can be defined by including .stpm files on the tapset search path. These files may only contain @define constructs, which become visible across all tapsets and user scripts. Optionally, within the .stpm files, a public macro definition can be surrounded by a preprocessor conditional as described above. </p>
 <h3>CONSTANTS</h3>
-<p> Tapsets or guru-mode user scripts can access header file constant tokens, typically macros, using built-in @const() operator. The respective header file inclusion is possible either via the tapset library, or using a top-level guru mode embedded-C construct. This results in appropriate embedded C pragma comments setting. <br />
+<p> Tapsets or guru-mode user scripts can access header file constant tokens, typically macros, using built-in @const() operator. The respective header file inclusion is possible either via the tapset library, or using a top-level guru mode embedded-C construct. This results in appropriate embedded C pragma comments setting. <br/>
  </p>
 <dl>
 <dd> <pre><code>@const(&quot;STP_SKIP_BADVARS&quot;)
@@ -606,7 +606,7 @@ description: "stap – systemtap script translator/driver"
  </dd></dl>
 <h3>VARIABLES</h3>
 <p> Identifiers for variables and functions are an alphanumeric sequence, and may include <code>_</code> and <code>$</code> characters. They may not start with a plain digit, as in C. Each variable is by default local to the probe or function statement block within which it is mentioned, and therefore its scope and lifetime is limited to a particular probe or function invocation. </p>
-<p> Scalar variables are implicitly typed as either string or integer. Associative arrays also have a string or integer value, and a tuple of strings and/or integers serving as a key. Here are a few basic expressions. <br />
+<p> Scalar variables are implicitly typed as either string or integer. Associative arrays also have a string or integer value, and a tuple of strings and/or integers serving as a key. Here are a few basic expressions. <br/>
  </p>
 <dl>
 <dd> <pre><code>var1 = 5
@@ -617,7 +617,7 @@ if ([&quot;hello&quot;,5,4] in array2) println (&quot;yes&quot;) # membership te
 </code></pre>
  </dd></dl>
 <p> The translator performs <i>type inference</i> on all identifiers, including array indexes and function parameters. Inconsistent type-related use of identifiers signals an error. </p>
-<p> Variables may be declared global, so that they are shared amongst all probes and functions and live as long as the entire systemtap session. There is one namespace for all global variables, regardless of which script file they are found within. Concurrent access to global variables is automatically protected with locks, see the <code>SAFETY AND SECURITY</code> section for more details. A global declaration may be written at the outermost level anywhere, not within a block of code. Global variables which are written but never read will be displayed automatically at session shutdown. The translator will infer for each its value type, and if it is used as an array, its key types. Optionally, scalar globals may be initialized with a string or number literal. The following declaration marks variables as global. <br />
+<p> Variables may be declared global, so that they are shared amongst all probes and functions and live as long as the entire systemtap session. There is one namespace for all global variables, regardless of which script file they are found within. Concurrent access to global variables is automatically protected with locks, see the <code>SAFETY AND SECURITY</code> section for more details. A global declaration may be written at the outermost level anywhere, not within a block of code. Global variables which are written but never read will be displayed automatically at session shutdown. The translator will infer for each its value type, and if it is used as an array, its key types. Optionally, scalar globals may be initialized with a string or number literal. The following declaration marks variables as global. <br/>
  </p>
 <dl>
 <dd> <pre><code>
@@ -625,7 +625,7 @@ if ([&quot;hello&quot;,5,4] in array2) println (&quot;yes&quot;) # membership te
 </code></pre>
  </dd></dl>
 <p> Global variables can also be set as module options. One can do this by either using the -G option, or the module must first be compiled using stap -p4. Global variables can then be set on the command line when calling staprun on the module generated by stap -p4. See <i><a href="/docs/linux/man/8-staprun/">staprun</a></i>(8) for more information. </p>
-<p> The scope of a global variable may be limited to a tapset or user script file using private keyword. The global keyword is optional when defining a private global variable. Following declaration marks var1 and var2 private globals. <br />
+<p> The scope of a global variable may be limited to a tapset or user script file using private keyword. The global keyword is optional when defining a private global variable. Following declaration marks var1 and var2 private globals. <br/>
  </p>
 <dl>
 <dd> <pre><code>
@@ -633,14 +633,14 @@ if ([&quot;hello&quot;,5,4] in array2) println (&quot;yes&quot;) # membership te
  private  var2
 </code></pre>
  </dd></dl>
-<p> Arrays are limited in size by the MAXMAPENTRIES variable -- see the <code>SAFETY AND SECURITY</code> section for details. Optionally, global arrays may be declared with a maximum size in brackets, overriding MAXMAPENTRIES for that array only. Note that this doesn&#8217;t indicate the type of keys for the array, just the size. <br />
+<p> Arrays are limited in size by the MAXMAPENTRIES variable -- see the <code>SAFETY AND SECURITY</code> section for details. Optionally, global arrays may be declared with a maximum size in brackets, overriding MAXMAPENTRIES for that array only. Note that this doesn&#8217;t indicate the type of keys for the array, just the size. <br/>
  </p>
 <dl>
 <dd> <pre><code>
  global  tiny_array[10] ,  normal_array ,  big_array[50000]
 </code></pre>
  </dd></dl>
-<p> Arrays may be configured for wrapping using the &#8216;%&#8216; suffix. This causes older elements to be overwritten if more elements are inserted than the array can hold. This works for both associative and statistics typed arrays. <br />
+<p> Arrays may be configured for wrapping using the &#8216;%&#8216; suffix. This causes older elements to be overwritten if more elements are inserted than the array can hold. This works for both associative and statistics typed arrays. <br/>
  </p>
 <dl>
 <dd> <pre><code>
@@ -739,12 +739,12 @@ if ([&quot;hello&quot;,5,4] in array2) println (&quot;yes&quot;) # membership te
 <dd> <p> fn <code>(</code>[ arg1, arg2, ... ]<code>)</code> </p>
  </dd>
 <dt>array membership check</dt>
-<dd> <p> exp <code> in </code>array <br />
- <code>[</code>exp1 <code>, </code>exp2 <code>, </code>...<code>] in </code>array <br />
+<dd> <p> exp <code> in </code>array <br/>
+ <code>[</code>exp1 <code>, </code>exp2 <code>, </code>...<code>] in </code>array <br/>
  <code>[</code>*<code>, </code>*<code>, ... ]</code>in <code> array</code> </p>
  </dd></dl>
 <h3>REGULAR EXPRESSION MATCHING</h3>
-<p> The scripting language supports regular expression matching. The basic syntax is as follows: <br />
+<p> The scripting language supports regular expression matching. The basic syntax is as follows: <br/>
  </p>
 <dl>
 <dd> <pre><code>
@@ -755,7 +755,7 @@ if ([&quot;hello&quot;,5,4] in array2) println (&quot;yes&quot;) # membership te
 <p> (The first operand must be an expression evaluating to a string; the second operand must be a string literal containing a syntactically valid regular expression.) </p>
 <p> The regular expression syntax supports most of the features of POSIX Extended Regular Expressions, except for subexpression reuse (&quot;\1&quot;) functionality. The ability to capture and extract the contents of the matched string and subexpressions has not yet been implemented. </p>
 <h3>PROBES</h3>
-<p> The main construct in the scripting language identifies probes. Probes associate abstract events with a statement block (&quot;probe handler&quot;) that is to be executed when any of those events occur. The general syntax is as follows: <br />
+<p> The main construct in the scripting language identifies probes. Probes associate abstract events with a statement block (&quot;probe handler&quot;) that is to be executed when any of those events occur. The general syntax is as follows: <br/>
  </p>
 <dl>
 <dd> <pre><code>
@@ -765,7 +765,7 @@ if ([&quot;hello&quot;,5,4] in array2) println (&quot;yes&quot;) # membership te
  </dd></dl>
 <p> Events are specified in a special syntax called &quot;probe points&quot;. There are several varieties of probe points defined by the translator, and tapset scripts may define further ones using aliases. Probe points may be wildcarded, grouped, or listed in preference sequences, or declared optional. More details on probe point syntax and semantics are listed on the <i>stapprobes</i>(3stap) manual page. </p>
 <p> The probe handler is interpreted relative to the context of each event. For events associated with kernel code, this context may include <i>variables</i> defined in the <i>source code</i> at that spot. These &quot;context variables&quot; are presented to the script as variables whose names are prefixed with &quot;$&quot;. They may be accessed only if the kernel&#8217;s compiler preserved them despite optimization. This is the same constraint that a debugger user faces when working with optimized code. In addition, the objects must exist in paged-in memory at the moment of the systemtap probe handler&#8217;s execution, because systemtap must not cause (suppresses) any additional paging. Some probe types have very little context. See the <i>stapprobes</i>(3stap) man pages to see the kinds of context variables available at each kind of probe point. </p>
-<p> Probes may be decorated with an <i>arming condition</i>, consisting of a simple boolean expression on read-only global script variables. While disarmed (inactive, condition evaluates to false), some probe types reduce or eliminate their run-time overheads. When an arming condition evaluates to true, probes will be <i>soon</i> re-armed, and their probe handlers will start getting called as the events fire. (Some events may be lost during the arming interval. If this is unacceptable, do not use arming conditions for those probes.) Example of the syntax: <br />
+<p> Probes may be decorated with an <i>arming condition</i>, consisting of a simple boolean expression on read-only global script variables. While disarmed (inactive, condition evaluates to false), some probe types reduce or eliminate their run-time overheads. When an arming condition evaluates to true, probes will be <i>soon</i> re-armed, and their probe handlers will start getting called as the events fire. (Some events may be lost during the arming interval. If this is unacceptable, do not use arming conditions for those probes.) Example of the syntax: <br/>
  </p>
 <dl>
 <dd> <pre><code>probe timer.us(TIMER) if (enabled) {
@@ -773,7 +773,7 @@ if ([&quot;hello&quot;,5,4] in array2) println (&quot;yes&quot;) # membership te
 </code></pre>
  </dd></dl>
 <p> New probe points may be defined using &quot;aliases&quot;. Probe point aliases look similar to probe definitions, but instead of activating a probe at the given point, it just defines a new probe point name as an alias to an existing one. There are two types of alias, i.e. the prologue style and the epilogue style which are identified by &quot;=&quot; and &quot;+=&quot; respectively. </p>
-<p> For prologue style alias, the statement block that follows an alias definition is implicitly added as a prologue to any probe that refers to the alias. While for the epilogue style alias, the statement block that follows an alias definition is implicitly added as an epilogue to any probe that refers to the alias. For example: <br />
+<p> For prologue style alias, the statement block that follows an alias definition is implicitly added as a prologue to any probe that refers to the alias. While for the epilogue style alias, the statement block that follows an alias definition is implicitly added as an epilogue to any probe that refers to the alias. For example: <br/>
  </p>
 <dl>
 <dd> <pre><code>probe syscall.read = kernel.function(&quot;sys_read&quot;) {
@@ -782,7 +782,7 @@ if ([&quot;hello&quot;,5,4] in array2) println (&quot;yes&quot;) # membership te
 }
 </code></pre>
  </dd></dl>
-<p> defines a new probe point <i>syscall.read</i>, which expands to <i>kernel.function(sys_read)</i>, with the given statement as a prologue, which is useful to predefine some variables for the alias user and/or to skip probe processing entirely based on some conditions. And <br />
+<p> defines a new probe point <i>syscall.read</i>, which expands to <i>kernel.function(sys_read)</i>, with the given statement as a prologue, which is useful to predefine some variables for the alias user and/or to skip probe processing entirely based on some conditions. And <br/>
  </p>
 <dl>
 <dd> <pre><code>probe syscall.read += kernel.function(&quot;sys_read&quot;) {
@@ -791,7 +791,7 @@ if ([&quot;hello&quot;,5,4] in array2) println (&quot;yes&quot;) # membership te
 </code></pre>
  </dd></dl>
 <p> defines a new probe point with the given statement as an epilogue, which is useful to take actions based upon variables set or left over by the the alias user. Please note that in each case, the statements in the alias handler block are treated ordinarily, so that variables assigned there constitute mere initialization, not a macro substitution. </p>
-<p> An alias is used just like a built-in probe type. <br />
+<p> An alias is used just like a built-in probe type. <br/>
  </p>
 <dl>
 <dd> <pre><code>probe syscall.read {
@@ -801,7 +801,7 @@ if ([&quot;hello&quot;,5,4] in array2) println (&quot;yes&quot;) # membership te
 </code></pre>
  </dd></dl>
 <h3>FUNCTIONS</h3>
-<p> Systemtap scripts may define subroutines to factor out common work. Functions take any number of scalar (integer or string) arguments, and must return a single scalar (integer or string). An example function declaration looks like this: <br />
+<p> Systemtap scripts may define subroutines to factor out common work. Functions take any number of scalar (integer or string) arguments, and must return a single scalar (integer or string). An example function declaration looks like this: <br/>
  </p>
 <dl>
 <dd> <pre><code>function thisfn (arg1, arg2) {
@@ -809,7 +809,7 @@ if ([&quot;hello&quot;,5,4] in array2) println (&quot;yes&quot;) # membership te
 }
 </code></pre>
  </dd></dl>
-<p> Note the general absence of type declarations, which are instead inferred by the translator. However, if desired, a function definition may include explicit type declarations for its return value and/or its arguments. This is especially helpful for embedded-C functions. In the following example, the type inference engine need only infer type type of arg2 (a string). <br />
+<p> Note the general absence of type declarations, which are instead inferred by the translator. However, if desired, a function definition may include explicit type declarations for its return value and/or its arguments. This is especially helpful for embedded-C functions. In the following example, the type inference engine need only infer type type of arg2 (a string). <br/>
  </p>
 <dl>
 <dd> <pre><code>function thatfn:string (arg1:long, arg2) {
@@ -818,7 +818,7 @@ if ([&quot;hello&quot;,5,4] in array2) println (&quot;yes&quot;) # membership te
 </code></pre>
  </dd></dl>
 <p> Functions may call others or themselves recursively, up to a fixed nesting limit. This limit is defined by the MAXNESTING macro in the translated C code and is in the neighbourhood of 10. </p>
-<p> Functions may be marked private using the private keyword to limit their scope to the tapset or user script file they are defined in. An example definition of a private function follows: <br />
+<p> Functions may be marked private using the private keyword to limit their scope to the tapset or user script file they are defined in. An example definition of a private function follows: <br/>
  </p>
 <dl>
 <dd> <pre><code>private function three:long () { return 3 }
@@ -827,7 +827,7 @@ if ([&quot;hello&quot;,5,4] in array2) println (&quot;yes&quot;) # membership te
 <p> Functions terminating without reaching an explicit return statement will return an implicit 0 or &quot;&quot;, determined by type inference. </p>
 <p> Functions may be overloaded during both runtime and compile time. </p>
 <p> Runtime overloading allows the executed function to be selected while the module is running based on runtime conditions and is achieved using the &quot;next&quot; statement in script functions and STAP_NEXT macro for embedded-C functions. For example, </p>
-<p> <br />
+<p> <br/>
  </p>
 <dl>
 <dd> <pre><code>function f() { if (condition) next; print(&quot;first function&quot;) }
@@ -837,7 +837,7 @@ function f() { print(&quot;third function&quot;) }
  </dd></dl>
 <p> During a functioncall f(), the execution will transfer to the third function if condition evaluates to true and print &quot;third function&quot;. Note that the second function is unconditionally nexted. </p>
 <p> Parameter overloading allows the function to be executed to be selected at compile time based on the number of arguments provided to the functioncall. For example, </p>
-<p> <br />
+<p> <br/>
  </p>
 <dl>
 <dd> <pre><code>function g() { print(&quot;first function&quot;) }
@@ -848,7 +848,7 @@ g(1) -&gt; &quot;second function&quot;
  </dd></dl>
 <p> Note that runtime overloading does not occur in the above example, as exactly one function will be resolved for the functioncall. The use of a next statement inside a function while no more overloads remain will trigger a runtime exception Runtime overloading will only occur if the functions have the same arity, functions with the same name but different number of parameters are completely unrelated. </p>
 <p> Execution order is determined by a priority value which may be specified. If no explicit priority is specified, user script functions are given a higher priority than library functions. User script functions and library functions are assigned a default priority value of 0 and 1 respectively. Functions with the same priority are executed in declaration order. For example, </p>
-<p> <br />
+<p> <br/>
  </p>
 <dl>
 <dd> <pre><code>function f():3 { if (condition) next; print(&quot;first function&quot;) }
@@ -859,7 +859,7 @@ function f():2 { print(&quot;third function&quot;) }
 <p> Since the second function has highest priority, it is executed first. The first function is never executed as there no &quot;next&quot; statements in the third function to transfer execution. </p>
 <h3>PRINTING</h3>
 <p> There are a set of function names that are specially treated by the translator. They format values for printing to the standard systemtap output stream in a more convenient way (note that data generated in the kernel module need to get transferred to user-space in order to get printed). </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;<wbr>The <i>sprint*</i> variants return the formatted string instead of printing it. </p>
 <dl>
 <dt><code>print</code>, <code>sprint</code></dt>
@@ -919,7 +919,7 @@ function f():2 { print(&quot;third function&quot;) }
  </dd></dl>
 </dl>
 <p> The <i>#</i> flag selects the alternate forms. For octal, this prefixes a 0. For hex, this prefixes 0x or 0X, depending on case. For characters, this escapes non-printing values with either C-like escapes or raw octal. In the case of %#m/%#M, this safely accesses user space memory rather than kernel space memory. </p>
-<p> Examples: <br />
+<p> Examples: <br/>
  </p>
 <dl>
 <dd> <pre><code>a = &quot;alice&quot;, b = &quot;bob&quot;, p = 0x1234abcd, i = 123, j = -1, id[a] = 1234, id[b] = 4567
@@ -945,7 +945,7 @@ printf(&quot;%#c %#c %#c\n&quot;, 0, 9, 42)
  </dd></dl>
 <h3>STATISTICS</h3>
 <p> It is often desirable to collect statistics in a way that avoids the penalties of repeatedly exclusive locking the global variables those numbers are being put into. Systemtap provides a solution using a special operator to accumulate values, and several pseudo-functions to extract the statistical aggregates. </p>
-<p> The aggregation operator is <i>&lt;&lt;&lt;</i>, and resembles an assignment, or a C++ output-streaming operation. The left operand specifies a scalar or array-index lvalue, which must be declared global. The right operand is a numeric expression. The meaning is intuitive: add the given number to the pile of numbers to compute statistics of. (The specific list of statistics to gather is given separately, by the extraction functions.) <br />
+<p> The aggregation operator is <i>&lt;&lt;&lt;</i>, and resembles an assignment, or a C++ output-streaming operation. The left operand specifies a scalar or array-index lvalue, which must be declared global. The right operand is a numeric expression. The meaning is intuitive: add the given number to the pile of numbers to compute statistics of. (The specific list of statistics to gather is given separately, by the extraction functions.) <br/>
  </p>
 <dl>
 <dd> <pre><code>foo &lt;&lt;&lt; 1
@@ -955,7 +955,7 @@ stats[pid()] &lt;&lt;&lt; memsize
 <p> The extraction functions are also special. For each appearance of a distinct extraction function operating on a given identifier, the translator arranges to compute a set of statistics that satisfy it. The statistics system is thereby &quot;on-demand&quot;. Each execution of an extraction function causes the aggregation to be computed for that moment across all processors. </p>
 <p> Here is the set of extractor functions. The first argument of each is the same style of lvalue used on the left hand side of the accumulate operation. The <i>@count(v)</i>, <i>@sum(v)</i>, <i>@min(v)</i>, <i>@max(v)</i>, <i>@avg(v)</i>, @variance(v[, b]) extractor functions compute the number/total/minimum/maximum/average/variance of all accumulated values. The resulting values are all simple integers. Arrays containing aggregates may be sorted and iterated. See the <code>foreach</code> construct above. </p>
 <p> Variance uses Welford&#8217;s online algorithm. The calculations are based on integer arithmetic, and so may suffer from low precision and overflow. To improve this, @variance(v[, b]) accepts an optional parameter b, the bit-shift, ranging from 0 (default) to 62, for internal scaling. Only one value of bit-shift may be used with given global variable. A larger bitshift value increases precision, but increases the likelihood of overflow. </p>
-<p> <br />
+<p> <br/>
  </p>
 <dl>
 <dd> <pre><code>$ stap -e \
@@ -970,7 +970,7 @@ $
 </code></pre>
  </dd></dl>
 <p> Overflow (from internal multiplication of large numbers) may occur and may cause a negative variance result. Consider normalizing your input data. Adding or subtracting a fixed value from all variance inputs preserves the original variance. Dividing the variance inputs by a fixed value shrinks the original variance by that value squared. </p>
-<p> Histograms are also available, but are more complicated because they have a vector rather than scalar value. <i>@hist_linear(v,start,stop,interval)</i> represents a linear histogram from &quot;start&quot; to &quot;stop&quot; by increments of &quot;interval&quot;. The interval must be positive. Similarly, <i>@hist_log(v)</i> represents a base-2 logarithmic histogram. Printing a histogram with the <i>print</i> family of functions renders a histogram object as a tabular &quot;ASCII art&quot; bar chart. <br />
+<p> Histograms are also available, but are more complicated because they have a vector rather than scalar value. <i>@hist_linear(v,start,stop,interval)</i> represents a linear histogram from &quot;start&quot; to &quot;stop&quot; by increments of &quot;interval&quot;. The interval must be positive. Similarly, <i>@hist_log(v)</i> represents a base-2 logarithmic histogram. Printing a histogram with the <i>print</i> family of functions renders a histogram object as a tabular &quot;ASCII art&quot; bar chart. <br/>
  </p>
 <dl>
 <dd> <pre><code>probe timer.profile {
@@ -992,14 +992,14 @@ probe end {
 </code></pre>
  </dd></dl>
 <h3>TYPECASTING</h3>
-<p> Once a pointer (see the CONTEXT VARIABLES section of <i>stapprobes</i>(3stap)) has been saved into a script integer variable, the translator loses the type information necessary to access members from that pointer. Using the <i>@cast()</i> operator tells the translator how to interpret the number as a typed pointer. <br />
+<p> Once a pointer (see the CONTEXT VARIABLES section of <i>stapprobes</i>(3stap)) has been saved into a script integer variable, the translator loses the type information necessary to access members from that pointer. Using the <i>@cast()</i> operator tells the translator how to interpret the number as a typed pointer. <br/>
  </p>
 <dl>
 <dd> <pre><code>@cast(p, &quot;type_name&quot;[, &quot;module&quot;])-&gt;member
 </code></pre>
  </dd></dl>
 <p> This will interpret <i>p</i> as a pointer to a struct/union named <i>type_name</i> and dereference the <i>member</i> value. Further <i>-&gt;subfield</i> expressions may be appended to dereference more levels. NOTE: the same dereferencing operator <i>-&gt;</i> is used to refer to both direct containment or pointer indirection. Systemtap automatically determines which. The optional <i>module</i> tells the translator where to look for information about that type. Multiple modules may be specified as a list with <i>:</i> separators. If the module is not specified, it will default either to the probe module for dwarf probes, or to &quot;kernel&quot; for functions and all other probes types. </p>
-<p> The translator can create its own module with type information from a header surrounded by angle brackets, in case normal debuginfo is not available. For kernel headers, prefix it with &quot;kernel&quot; to use the appropriate build system. All other headers are built with default GCC parameters into a user module. Multiple headers may be specified in sequence to resolve a codependency. <br />
+<p> The translator can create its own module with type information from a header surrounded by angle brackets, in case normal debuginfo is not available. For kernel headers, prefix it with &quot;kernel&quot; to use the appropriate build system. All other headers are built with default GCC parameters into a user module. Multiple headers may be specified in sequence to resolve a codependency. <br/>
  </p>
 <dl>
 <dd> <pre><code>@cast(tv, &quot;timeval&quot;, &quot;&lt;sys/time.h&gt;&quot;)-&gt;tv_sec
@@ -1010,7 +1010,7 @@ probe end {
  </dd></dl>
 <p> Values acquired by <code>@cast</code> may be pretty-printed by the <code>$</code> and <code>$$</code> suffix operators, the same way as described in the CONTEXT VARIABLES section of the <i>stapprobes</i>(3stap) manual page. </p>
 <p> When in guru mode, the translator will also allow scripts to assign new values to members of typecasted pointers. </p>
-<p> Typecasting is also useful in the case of <i>void*</i> members whose type may be determinable at runtime. <br />
+<p> Typecasting is also useful in the case of <i>void*</i> members whose type may be determinable at runtime. <br/>
  </p>
 <dl>
 <dd> <pre><code>probe foo {
@@ -1026,7 +1026,7 @@ probe end {
 <h3>EMBEDDED C</h3>
 <p> When in guru mode, the translator accepts embedded C code in the top level of the script. Such code is enclosed between <i>%{</i> and <i>%}</i> markers, and is transcribed verbatim, without analysis, in some sequence, into the top level of the generated C code. At the outermost level, this may be useful to add <i>#include</i> instructions, and any auxiliary definitions for use by other embedded code. </p>
 <p> Another place where embedded code is permitted is as a function body. In this case, the script language body is replaced entirely by a piece of C code enclosed again between <i>%{</i> and <i>%}</i> markers. This C code may do anything reasonable and safe. There are a number of undocumented but complex safety constraints on atomicity, concurrency, resource consumption, and run time limits, so this is an advanced technique. </p>
-<p> The memory locations set aside for input and output values are made available to it using macros <i>STAP_ARG_*</i> and <i>STAP_RETVALUE</i>. Errors may be signalled with STAP_ERROR. Output may be written with STAP_PRINTF. The function may return early with STAP_RETURN. Here are some examples: <br />
+<p> The memory locations set aside for input and output values are made available to it using macros <i>STAP_ARG_*</i> and <i>STAP_RETVALUE</i>. Errors may be signalled with STAP_ERROR. Output may be written with STAP_PRINTF. The function may return early with STAP_RETURN. Here are some examples: <br/>
  </p>
 <dl>
 <dd> <pre><code>function integer_ops (val) %{
@@ -1050,7 +1050,7 @@ function no_ops () %{
 </code></pre>
  </dd></dl>
 <p> The function argument and return value types have to be inferred by the translator from the call sites in order for this to work. The user should examine C code generated for ordinary script-language functions in order to write compatible embedded-C ones. </p>
-<p> The last place where embedded code is permitted is as an expression rvalue. In this case, the C code enclosed between <i>%{</i> and <i>%}</i> markers is interpreted as an ordinary expression value. It is assumed to be a normal 64-bit signed number, unless the marker <i>/* string */</i> is included, in which case it&#8217;s treated as a string. <br />
+<p> The last place where embedded code is permitted is as an expression rvalue. In this case, the C code enclosed between <i>%{</i> and <i>%}</i> markers is interpreted as an ordinary expression value. It is assumed to be a normal 64-bit signed number, unless the marker <i>/* string */</i> is included, in which case it&#8217;s treated as a string. <br/>
  </p>
 <dl>
 <dd> <pre><code>function add_one (val) {
@@ -1087,7 +1087,7 @@ function add_string_two (val) {
 <dt><i>/* string */</i></dt>
 <dd> <p> in embedded-C expressions only, means that the expression has <i>const char *</i> type and should be treated as a string value, instead of the default long numeric. </p>
  </dd></dl>
-<p> Script level global variables may be accessed in embedded-C functions and blocks. To read or write the global variable <i>var</i> , the <i>/* pragma:read:var */</i> or <i>/* pragma:write:var */</i> marker must be first placed in the embedded-C function or block. This provides the macros <i>STAP_GLOBAL_GET_*</i> and <i>STAP_GLOBAL_SET_*</i> macros to allow reading and writing, respectively. For example: <br />
+<p> Script level global variables may be accessed in embedded-C functions and blocks. To read or write the global variable <i>var</i> , the <i>/* pragma:read:var */</i> or <i>/* pragma:write:var */</i> marker must be first placed in the embedded-C function or block. This provides the macros <i>STAP_GLOBAL_GET_*</i> and <i>STAP_GLOBAL_SET_*</i> macros to allow reading and writing, respectively. For example: <br/>
  </p>
 <dl>
 <dd> <pre><code>global var
@@ -1187,14 +1187,14 @@ function increment() %{
 <dd> <p> Maximum number of stack frames that will be be processed by the stap runtime unwinder as produced by the backtrace functions in the [u]context-unwind.stp tapsets, default 20. </p>
  </dd>
 <dt>MAXMAPENTRIES</dt>
-<dd> <p> Maximum number of rows in any single global array, default 2048. Individual arrays may be declared with a larger or smaller limit instead: <br />
+<dd> <p> Maximum number of rows in any single global array, default 2048. Individual arrays may be declared with a larger or smaller limit instead: <br/>
  </p>
  </dd>
 <dl>
 <dd> <pre><code>global big[10000],little[5]
 </code></pre>
  </dd></dl>
-<p> or denoted with <i>%</i> to make them wrap-around (replace old entries) automatically, as in <br />
+<p> or denoted with <i>%</i> to make them wrap-around (replace old entries) automatically, as in <br/>
  </p>
 <dl>
 <dd> <pre><code>global big%
@@ -1321,7 +1321,7 @@ function increment() %{
 <dd> <p> -g may not be specified. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> The following options may not be used by the compile-server client: <br />
+<dd> <p> The following options may not be used by the compile-server client: <br/>
  </p>
  </dd>
 <dl>
@@ -1329,7 +1329,7 @@ function increment() %{
 </code></pre>
  </dd></dl>
 <h3>ENVIRONMENT RESTRICTIONS</h3>
-<p> The following environment variables must not be set for all unprivileged users: <br />
+<p> The following environment variables must not be set for all unprivileged users: <br/>
  </p>
 <dl>
 <dd> <pre><code>SYSTEMTAP_RUNTIME
@@ -1339,7 +1339,7 @@ SYSTEMTAP_DEBUGINFO_PATH
  </dd></dl>
 <h3>TAPSET RESTRICTIONS</h3>
 <p> In general, tapset functions are only available for members of the group stapusr when they do not gather information that an ordinary program running with that user&#8217;s privileges would be denied access to. </p>
-<p> There are two categories of unprivileged tapset functions. The first category consists of utility functions that are unconditionally available to all users; these include such things as: <br />
+<p> There are two categories of unprivileged tapset functions. The first category consists of utility functions that are unconditionally available to all users; these include such things as: <br/>
  </p>
 <dl>
 <dd> <pre><code>cpu:long ()
@@ -1347,7 +1347,7 @@ exit ()
 str_replace:string (prnt_str:string, srch_str:string, rplc_str:string)
 </code></pre>
  </dd></dl>
-<p> The second category consists of so-called <i>myproc-unprivileged</i> functions that can only gather information within their own processes. Scripts that wish to use these functions must test the result of the tapset function <i>is_myproc</i> and only call these functions if the result is 1. The script will exit immediately if any of these functions are called by an unprivileged user within a probe within a process which is not owned by that user. Examples of <i>myproc-unprivileged</i> functions include: <br />
+<p> The second category consists of so-called <i>myproc-unprivileged</i> functions that can only gather information within their own processes. Scripts that wish to use these functions must test the result of the tapset function <i>is_myproc</i> and only call these functions if the result is 1. The script will exit immediately if any of these functions are called by an unprivileged user within a probe within a process which is not owned by that user. Examples of <i>myproc-unprivileged</i> functions include: <br/>
  </p>
 <dl>
 <dd> <pre><code>print_usyms (stk:string)
@@ -1359,7 +1359,7 @@ usymname:string (addr:long)
 <p> No other built-in tapset functions may be used by members of only the group stapusr. </p>
 <h2>ALTERNATE RUNTIMES</h2>
 <p> As described above, systemtap&#8217;s default runtime mode involves building and loading kernel modules, with various security tradeoffs presented. Systemtap now includes a new prototype backend, selected with <i>--runtime=dyninst</i>, which uses Dyninst to instrument a user&#8217;s own processes at runtime. This backend does not use kernel modules, and does not require root privileges, but is restricted with respect to the kinds of probes and other constructs that a script may use. </p>
-<p> The <i>dyninst</i> runtime operates in target-attach mode, so it does require a <i>-c COMMAND</i> or <i>-x PID</i> process. For example: <br />
+<p> The <i>dyninst</i> runtime operates in target-attach mode, so it does require a <i>-c COMMAND</i> or <i>-x PID</i> process. For example: <br/>
  </p>
 <dl>
 <dd> <pre><code>stap --runtime=dyninst -c 'stap -V' \
@@ -1367,7 +1367,7 @@ usymname:string (addr:long)
          { println(&quot;hi from dyninst!&quot;) }'
 </code></pre>
  </dd></dl>
-<p> It may be necessary to disable a conflicting selinux check with <br />
+<p> It may be necessary to disable a conflicting selinux check with <br/>
  </p>
 <dl>
 <dd> <pre><code># setsebool allow_execstack 1

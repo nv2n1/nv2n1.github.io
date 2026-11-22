@@ -23,8 +23,8 @@ description: "pamgradient – create a four-corner gradient PAM image"
 <dl>
 <dt><code>-maxval=</code><i>maxval</i></dt>
 <dd>
-<p>&nbsp;<wbr>&nbsp;<wbr> maxval of the generated image. (See <code>PAM</code>(1)<br />
-&nbsp;<wbr>and <code>PNM</code>(1)<br />
+<p>&nbsp;<wbr>&nbsp;<wbr> maxval of the generated image. (See <code>PAM</code>(1)<br/>
+&nbsp;<wbr>and <code>PNM</code>(1)<br/>
 &nbsp;<wbr>specifications). </p>
 </dd></dl>
 <h2>SEE ALSO</h2>

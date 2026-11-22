@@ -52,205 +52,205 @@ int main()
 <p> File descriptor callbacks are called in a level-triggered fashion. Therefore, the way of dealing with fd_stdin in the example callback function is safe. In case there arrives data between read and detecting EAGAIN, ivykis will re-call the callback function after it returns. Also, if there are more than 1024 bytes waiting in the input buffer, ivykis will re-call the callback function until all data from stdin have been drained.</p>
 <h2>EXAMPLE 2</h2>
 <p> The second example accepts connections on TCP port 6667, and waits on each of the connections for data. When data is received on any connection, a message is printed to standard out. </p>
-<p>#include &lt;iv.h&gt;<br />
-#include &lt;netinet/in.h&gt;<br />
-#include &lt;stdio.h&gt;<br />
-#include &lt;stdlib.h&gt;<br />
-struct connection {<br />
-    struct iv_fd fd;<br />
-    /* other per-connection data goes here */<br />
-};<br />
-struct listening_socket {<br />
-    struct iv_fd fd;<br />
-    /* other per-listening socket data goes here */<br />
-};<br />
-static void connection_handler(void *_conn)<br />
-{<br />
-    struct connection *conn = (struct connection *)_conn;<br />
-    char buf[1024];<br />
-    int len;<br />
-    len = read(conn-&gt;fd.fd, buf, sizeof(buf));<br />
-    if (len &lt;= 0) {<br />
-        if (len &lt; 0 &amp;&amp; errno == EAGAIN)<br />
-            return;<br />
-        iv_fd_unregister(&amp;conn-&gt;fd);<br />
-        close(conn-&gt;fd.fd);<br />
-        free(conn);<br />
-        return;<br />
-    }<br />
+<p>#include &lt;iv.h&gt;<br/>
+#include &lt;netinet/in.h&gt;<br/>
+#include &lt;stdio.h&gt;<br/>
+#include &lt;stdlib.h&gt;<br/>
+struct connection {<br/>
+    struct iv_fd fd;<br/>
+    /* other per-connection data goes here */<br/>
+};<br/>
+struct listening_socket {<br/>
+    struct iv_fd fd;<br/>
+    /* other per-listening socket data goes here */<br/>
+};<br/>
+static void connection_handler(void *_conn)<br/>
+{<br/>
+    struct connection *conn = (struct connection *)_conn;<br/>
+    char buf[1024];<br/>
+    int len;<br/>
+    len = read(conn-&gt;fd.fd, buf, sizeof(buf));<br/>
+    if (len &lt;= 0) {<br/>
+        if (len &lt; 0 &amp;&amp; errno == EAGAIN)<br/>
+            return;<br/>
+        iv_fd_unregister(&amp;conn-&gt;fd);<br/>
+        close(conn-&gt;fd.fd);<br/>
+        free(conn);<br/>
+        return;<br/>
+    }<br/>
     printf(&#8220;got %d bytes of data from %p
-&#8221;, len, conn);<br />
-}<br />
-static void listening_socket_handler(void *_sock)<br />
-{<br />
-    struct listening_socket *sock = (struct listening_socket *)_sock;<br />
-    struct sockaddr_in addr;<br />
-    socklen_t addrlen;<br />
-    struct connection *conn;<br />
-    int fd;<br />
-    addrlen = sizeof(addr);<br />
-    fd = accept(sock-&gt;fd.fd, (struct sockaddr *)&amp;addr, &amp;addrlen);<br />
-    if (fd &lt; 0) {<br />
-        if (errno == EAGAIN)<br />
-            return;<br />
-        perror(&#8220;accept&#8221;);<br />
-        exit(1);<br />
-    }<br />
-    conn = malloc(sizeof(*conn));<br />
-    if (conn == NULL) {<br />
-        fprintf(stderr, &#8220;listening_socket_handler: memory allocation error, dropping connection&#8221;);<br />
-        close(fd);<br />
-        return;<br />
-    }<br />
-    IV_FD_INIT(&amp;conn-&gt;fd);<br />
-    conn-&gt;fd.fd = fd;<br />
-    conn-&gt;fd.cookie = (void *)conn;<br />
-    conn-&gt;fd.handler_in = connection_handler;<br />
-    iv_fd_register(&amp;conn-&gt;fd);<br />
-}<br />
-int main()<br />
-{<br />
-    struct listening_socket s;<br />
-    struct sockaddr_in addr;<br />
-    int fd;<br />
-    fd = socket(AF_INET, SOCK_STREAM, 0);<br />
-    if (fd &lt; 0) {<br />
-        perror(&#8220;socket&#8221;);<br />
-        exit(1);<br />
-    }<br />
-    addr.sin_family = AF_INET;<br />
-    addr.sin_addr.s_addr = htonl(INADDR_ANY);<br />
-    addr.sin_port = htons(6667);<br />
-    if (bind(fd, (struct sockaddr *)&amp;addr, sizeof(addr)) &lt; 0) {<br />
-        perror(&#8220;bind&#8221;);<br />
-        exit(1);<br />
-    }<br />
-    if (listen(fd, 4) &lt; 0) {<br />
-        perror(&#8220;listen&#8221;);<br />
-        exit(1);<br />
-    }<br />
-    iv_init();<br />
-    IV_FD_INIT(&amp;s.fd);<br />
-    s.fd.fd = fd;<br />
-    s.fd.cookie = (void *)&amp;s;<br />
-    s.fd.handler_in = listening_socket_handler;<br />
-    iv_fd_register(&amp;s.fd);<br />
-    iv_main();<br />
-    iv_deinit();<br />
-    return 0;<br />
+&#8221;, len, conn);<br/>
+}<br/>
+static void listening_socket_handler(void *_sock)<br/>
+{<br/>
+    struct listening_socket *sock = (struct listening_socket *)_sock;<br/>
+    struct sockaddr_in addr;<br/>
+    socklen_t addrlen;<br/>
+    struct connection *conn;<br/>
+    int fd;<br/>
+    addrlen = sizeof(addr);<br/>
+    fd = accept(sock-&gt;fd.fd, (struct sockaddr *)&amp;addr, &amp;addrlen);<br/>
+    if (fd &lt; 0) {<br/>
+        if (errno == EAGAIN)<br/>
+            return;<br/>
+        perror(&#8220;accept&#8221;);<br/>
+        exit(1);<br/>
+    }<br/>
+    conn = malloc(sizeof(*conn));<br/>
+    if (conn == NULL) {<br/>
+        fprintf(stderr, &#8220;listening_socket_handler: memory allocation error, dropping connection&#8221;);<br/>
+        close(fd);<br/>
+        return;<br/>
+    }<br/>
+    IV_FD_INIT(&amp;conn-&gt;fd);<br/>
+    conn-&gt;fd.fd = fd;<br/>
+    conn-&gt;fd.cookie = (void *)conn;<br/>
+    conn-&gt;fd.handler_in = connection_handler;<br/>
+    iv_fd_register(&amp;conn-&gt;fd);<br/>
+}<br/>
+int main()<br/>
+{<br/>
+    struct listening_socket s;<br/>
+    struct sockaddr_in addr;<br/>
+    int fd;<br/>
+    fd = socket(AF_INET, SOCK_STREAM, 0);<br/>
+    if (fd &lt; 0) {<br/>
+        perror(&#8220;socket&#8221;);<br/>
+        exit(1);<br/>
+    }<br/>
+    addr.sin_family = AF_INET;<br/>
+    addr.sin_addr.s_addr = htonl(INADDR_ANY);<br/>
+    addr.sin_port = htons(6667);<br/>
+    if (bind(fd, (struct sockaddr *)&amp;addr, sizeof(addr)) &lt; 0) {<br/>
+        perror(&#8220;bind&#8221;);<br/>
+        exit(1);<br/>
+    }<br/>
+    if (listen(fd, 4) &lt; 0) {<br/>
+        perror(&#8220;listen&#8221;);<br/>
+        exit(1);<br/>
+    }<br/>
+    iv_init();<br/>
+    IV_FD_INIT(&amp;s.fd);<br/>
+    s.fd.fd = fd;<br/>
+    s.fd.cookie = (void *)&amp;s;<br/>
+    s.fd.handler_in = listening_socket_handler;<br/>
+    iv_fd_register(&amp;s.fd);<br/>
+    iv_main();<br/>
+    iv_deinit();<br/>
+    return 0;<br/>
 }</p>
 <p> As illustrated, it is possible to pass cookies into callback functions. This is useful for conveying information on which higher-level entity (such as &#8216;connection&#8217; or &#8216;listening socket&#8217;) generated the event for which the callback was called. </p>
 <p> Note how it is possible to unregister and even free a &#8216;struct iv_fd&#8217; in its own callback function. There is logic in ivykis to deal with this case.</p>
 <h2>EXAMPLE 3</h2>
 <p> This example extends the previous example by a per-connection timer that disconnects the client after too long a period of inactivity. Lines not present in example 2 or different than in example 2 are indicated by &#8216;//XXXX&#8217; in the right-hand margin. </p>
-<p>#include &lt;iv.h&gt;<br />
-#include &lt;netinet/in.h&gt;<br />
-#include &lt;stdio.h&gt;<br />
-#include &lt;stdlib.h&gt;<br />
-#define CONNECTION_TIMEOUT (10)<br />
-struct connection {<br />
-    struct iv_fd fd;<br />
-    struct iv_timer disconnect_timeout; // XXXX<br />
-    /* other per-connection data goes here */<br />
-};<br />
-struct listening_socket {<br />
-    struct iv_fd fd;<br />
-    /* other per-listening socket data goes here */<br />
-};<br />
-static void connection_handler(void *_conn)<br />
-{<br />
-    struct connection *conn = (struct connection *)_conn;<br />
-    char buf[1024];<br />
-    int len;<br />
-    len = read(conn-&gt;fd.fd, buf, sizeof(buf));<br />
-    if (len &lt;= 0) {<br />
-        if (len &lt; 0 &amp;&amp; errno == EAGAIN)<br />
-            return;<br />
-        iv_timer_unregister(&amp;conn-&gt;disconnect_timeout); // XXXX<br />
-        iv_fd_unregister(&amp;conn-&gt;fd);<br />
-        close(conn-&gt;fd.fd);<br />
-        free(conn);<br />
-        return;<br />
-    }<br />
+<p>#include &lt;iv.h&gt;<br/>
+#include &lt;netinet/in.h&gt;<br/>
+#include &lt;stdio.h&gt;<br/>
+#include &lt;stdlib.h&gt;<br/>
+#define CONNECTION_TIMEOUT (10)<br/>
+struct connection {<br/>
+    struct iv_fd fd;<br/>
+    struct iv_timer disconnect_timeout; // XXXX<br/>
+    /* other per-connection data goes here */<br/>
+};<br/>
+struct listening_socket {<br/>
+    struct iv_fd fd;<br/>
+    /* other per-listening socket data goes here */<br/>
+};<br/>
+static void connection_handler(void *_conn)<br/>
+{<br/>
+    struct connection *conn = (struct connection *)_conn;<br/>
+    char buf[1024];<br/>
+    int len;<br/>
+    len = read(conn-&gt;fd.fd, buf, sizeof(buf));<br/>
+    if (len &lt;= 0) {<br/>
+        if (len &lt; 0 &amp;&amp; errno == EAGAIN)<br/>
+            return;<br/>
+        iv_timer_unregister(&amp;conn-&gt;disconnect_timeout); // XXXX<br/>
+        iv_fd_unregister(&amp;conn-&gt;fd);<br/>
+        close(conn-&gt;fd.fd);<br/>
+        free(conn);<br/>
+        return;<br/>
+    }<br/>
     printf(&#8220;got %d bytes of data from %p
-&#8221;, len, conn);<br />
-    iv_timer_unregister(&amp;conn-&gt;disconnect_timeout);                // XXXX<br />
-    iv_validate_now();                                             // XXXX<br />
-    conn-&gt;disconnect_timeout.expires = iv_now;                     // XXXX<br />
-    conn-&gt;disconnect_timeout.expires.tv_sec += CONNECTION_TIMEOUT; // XXXX<br />
-    iv_timer_register(&amp;conn-&gt;disconnect_timeout);                  // XXXX<br />
-}<br />
-static void disconnect_timeout_expired(void *_conn)       // XXXX<br />
-{                                                         // XXXX<br />
-    struct connection *conn = (struct connection *)_conn; // XXXX<br />
-    iv_fd_unregister(&amp;conn-&gt;fd);                          // XXXX<br />
-    close(conn-&gt;fd.fd);                                   // XXXX<br />
-    free(conn);                                           // XXXX<br />
-} // XXXX<br />
-static void listening_socket_handler(void *_sock)<br />
-{<br />
-    struct listening_socket *sock = (struct listening_socket *)_sock;<br />
-    struct sockaddr_in addr;<br />
-    socklen_t addrlen;<br />
-    struct connection *conn;<br />
-    int fd;<br />
-    addrlen = sizeof(addr);<br />
-    fd = accept(sock-&gt;fd.fd, (struct sockaddr *)&amp;addr, &amp;addrlen);<br />
-    if (fd &lt; 0) {<br />
-        if (errno == EAGAIN)<br />
-            return;<br />
-        perror(&#8220;accept&#8221;);<br />
-        exit(1);<br />
-    }<br />
-    conn = malloc(sizeof(*conn));<br />
-    if (conn == NULL) {<br />
-        fprintf(stderr, &#8220;listening_socket_handler: memory allocation error, dropping connection&#8221;);<br />
-        close(fd);<br />
-        return;<br />
-    }<br />
-    IV_FD_INIT(&amp;conn-&gt;fd);<br />
-    conn-&gt;fd.fd = fd;<br />
-    conn-&gt;fd.cookie = (void *)conn;<br />
-    conn-&gt;fd.handler_in = connection_handler;<br />
-    iv_fd_register(&amp;conn-&gt;fd);<br />
-    IV_TIMER_INIT(&amp;conn-&gt;disconnect_timeout);                      // XXXX<br />
-    iv_validate_now();                                             // XXXX<br />
-    conn-&gt;disconnect_timeout.cookie = (void *)conn;                // XXXX<br />
-    conn-&gt;disconnect_timeout.handler = disconnect_timeout_expired; // XXXX<br />
-    conn-&gt;disconnect_timeout.expires = iv_now;                     // XXXX<br />
-    conn-&gt;disconnect_timeout.expires.tv_sec += CONNECTION_TIMEOUT; // XXXX<br />
-    iv_timer_register(&amp;conn-&gt;disconnect_timeout);                  // XXXX<br />
-}<br />
-int main()<br />
-{<br />
-    struct listening_socket s;<br />
-    struct sockaddr_in addr;<br />
-    int fd;<br />
-    fd = socket(AF_INET, SOCK_STREAM, 0);<br />
-    if (fd &lt; 0) {<br />
-        perror(&#8220;socket&#8221;);<br />
-        exit(1);<br />
-    }<br />
-    addr.sin_family = AF_INET;<br />
-    addr.sin_addr.s_addr = htonl(INADDR_ANY);<br />
-    addr.sin_port = htons(6667);<br />
-    if (bind(fd, (struct sockaddr *)&amp;addr, sizeof(addr)) &lt; 0) {<br />
-        perror(&#8220;bind&#8221;);<br />
-        exit(1);<br />
-    }<br />
-    if (listen(fd, 4) &lt; 0) {<br />
-        perror(&#8220;listen&#8221;);<br />
-        exit(1);<br />
-    }<br />
-    iv_init();<br />
-    IV_FD_INIT(&amp;s.fd);<br />
-    s.fd.fd = fd;<br />
-    s.fd.cookie = (void *)&amp;s;<br />
-    s.fd.handler_in = listening_socket_handler;<br />
-    iv_fd_register(&amp;s.fd);<br />
-    iv_main();<br />
-    iv_deinit();<br />
-    return 0;<br />
+&#8221;, len, conn);<br/>
+    iv_timer_unregister(&amp;conn-&gt;disconnect_timeout);                // XXXX<br/>
+    iv_validate_now();                                             // XXXX<br/>
+    conn-&gt;disconnect_timeout.expires = iv_now;                     // XXXX<br/>
+    conn-&gt;disconnect_timeout.expires.tv_sec += CONNECTION_TIMEOUT; // XXXX<br/>
+    iv_timer_register(&amp;conn-&gt;disconnect_timeout);                  // XXXX<br/>
+}<br/>
+static void disconnect_timeout_expired(void *_conn)       // XXXX<br/>
+{                                                         // XXXX<br/>
+    struct connection *conn = (struct connection *)_conn; // XXXX<br/>
+    iv_fd_unregister(&amp;conn-&gt;fd);                          // XXXX<br/>
+    close(conn-&gt;fd.fd);                                   // XXXX<br/>
+    free(conn);                                           // XXXX<br/>
+} // XXXX<br/>
+static void listening_socket_handler(void *_sock)<br/>
+{<br/>
+    struct listening_socket *sock = (struct listening_socket *)_sock;<br/>
+    struct sockaddr_in addr;<br/>
+    socklen_t addrlen;<br/>
+    struct connection *conn;<br/>
+    int fd;<br/>
+    addrlen = sizeof(addr);<br/>
+    fd = accept(sock-&gt;fd.fd, (struct sockaddr *)&amp;addr, &amp;addrlen);<br/>
+    if (fd &lt; 0) {<br/>
+        if (errno == EAGAIN)<br/>
+            return;<br/>
+        perror(&#8220;accept&#8221;);<br/>
+        exit(1);<br/>
+    }<br/>
+    conn = malloc(sizeof(*conn));<br/>
+    if (conn == NULL) {<br/>
+        fprintf(stderr, &#8220;listening_socket_handler: memory allocation error, dropping connection&#8221;);<br/>
+        close(fd);<br/>
+        return;<br/>
+    }<br/>
+    IV_FD_INIT(&amp;conn-&gt;fd);<br/>
+    conn-&gt;fd.fd = fd;<br/>
+    conn-&gt;fd.cookie = (void *)conn;<br/>
+    conn-&gt;fd.handler_in = connection_handler;<br/>
+    iv_fd_register(&amp;conn-&gt;fd);<br/>
+    IV_TIMER_INIT(&amp;conn-&gt;disconnect_timeout);                      // XXXX<br/>
+    iv_validate_now();                                             // XXXX<br/>
+    conn-&gt;disconnect_timeout.cookie = (void *)conn;                // XXXX<br/>
+    conn-&gt;disconnect_timeout.handler = disconnect_timeout_expired; // XXXX<br/>
+    conn-&gt;disconnect_timeout.expires = iv_now;                     // XXXX<br/>
+    conn-&gt;disconnect_timeout.expires.tv_sec += CONNECTION_TIMEOUT; // XXXX<br/>
+    iv_timer_register(&amp;conn-&gt;disconnect_timeout);                  // XXXX<br/>
+}<br/>
+int main()<br/>
+{<br/>
+    struct listening_socket s;<br/>
+    struct sockaddr_in addr;<br/>
+    int fd;<br/>
+    fd = socket(AF_INET, SOCK_STREAM, 0);<br/>
+    if (fd &lt; 0) {<br/>
+        perror(&#8220;socket&#8221;);<br/>
+        exit(1);<br/>
+    }<br/>
+    addr.sin_family = AF_INET;<br/>
+    addr.sin_addr.s_addr = htonl(INADDR_ANY);<br/>
+    addr.sin_port = htons(6667);<br/>
+    if (bind(fd, (struct sockaddr *)&amp;addr, sizeof(addr)) &lt; 0) {<br/>
+        perror(&#8220;bind&#8221;);<br/>
+        exit(1);<br/>
+    }<br/>
+    if (listen(fd, 4) &lt; 0) {<br/>
+        perror(&#8220;listen&#8221;);<br/>
+        exit(1);<br/>
+    }<br/>
+    iv_init();<br/>
+    IV_FD_INIT(&amp;s.fd);<br/>
+    s.fd.fd = fd;<br/>
+    s.fd.cookie = (void *)&amp;s;<br/>
+    s.fd.handler_in = listening_socket_handler;<br/>
+    iv_fd_register(&amp;s.fd);<br/>
+    iv_main();<br/>
+    iv_deinit();<br/>
+    return 0;<br/>
 }</p>
 <p> The global variable &#8216;iv_now&#8217; contains the current time-of-day. However, it is updated lazily, and its contents might be stale at any given time. Before using it, <code>iv_validate_now</code>(3) must be called.</p>
 <h2>EXAMPLE 4</h2>

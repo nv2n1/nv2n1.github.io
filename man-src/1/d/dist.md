@@ -63,7 +63,7 @@ nmh-cc string  Addresses specified with `-cc address'
 <p> If the <code>-annotate</code> switch is given, the message being distributed will be annotated with the lines:</p>
 <dl>
 <dt>
-</dt><dd> Resent: date<br />
+</dt><dd> Resent: date<br/>
  Resent: addrs</dd></dl>
 <p> where each address list contains as many lines as required. This annotation will be done only if the message is sent directly from <code>dist</code>. If the message is not sent immediately from <code>dist</code>, &#8220;<code>comp</code> <code>-use</code>&#8221; may be used to re-edit and send the constructed message, but the annotations won&#8217;t take place. Normally annotations are done inplace in order to preserve any links to the message. You may use the <code>-noinplace</code> switch to change this. </p>
 <p> See <i><a href="/docs/linux/man/1-comp/">comp</a></i>(1) for a description of the <code>-editor</code> and <code>-noedit</code> switches. Note that while in the editor, with <code>-atfile</code> and if the current directory is writable, the message being resent is available through a link named &#8220;@&#8221; (assuming the default <i>whatnowproc</i>). In addition, the actual pathname of the message is stored in the environment variable <code>$editalt</code>, and the pathname of the folder containing the message is stored in the environment variable <code>$mhfolder</code>. The creation of the &#8220;@&#8221; file is controlled via the <code>-atfile</code> and <code>-noatfile</code> options. </p>

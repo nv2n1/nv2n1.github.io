@@ -14,9 +14,9 @@ description: "ql/termstructures/credit/probabilitytraits.hpp – default-probabi
 #include &lt;ql/termstructures/credit/interpolatedhazardratecurve.hpp&gt;
 #include &lt;ql/termstructures/bootstraphelper.hpp&gt;</code></pre>
 <h3>Classes</h3>
-<p>struct <code>HazardRate</code><br />
- <i>Hazard-rate-curve traits. </i><br />
- struct <code>DefaultDensity</code><br />
+<p>struct <code>HazardRate</code><br/>
+ <i>Hazard-rate-curve traits. </i><br/>
+ struct <code>DefaultDensity</code><br/>
  <i>Default-density-curve traits. </i></p>
 <h2>Detailed Description</h2>
 <p>default-probability bootstrap traits</p>

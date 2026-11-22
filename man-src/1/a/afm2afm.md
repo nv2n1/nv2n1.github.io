@@ -43,9 +43,9 @@ description: "afm2afm – reencode an afm file"
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2005-2022 Marc Penninga.</p>
 <h2>LICENSE</h2>
-<p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation, either version 2 of the License, or (at your option) any later version. A copy of the <font SIZE="-1">GNU</font> General Public License is included with <code>afm2afm</code>; see the file <i>GPLv2.txt</i>.</p>
+<p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 2 of the License, or (at your option) any later version. A copy of the GNU General Public License is included with <code>afm2afm</code>; see the file <i>GPLv2.txt</i>.</p>
 <h2>DISCLAIMER</h2>
-<p> This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE.</font> See the <font SIZE="-1">GNU</font> General Public License for more details.</p>
+<p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
 <h2>VERSION</h2>
 <p> This document describes <code>afm2afm</code> version 20220124.</p>
 <h2>RECENT CHANGES</h2>

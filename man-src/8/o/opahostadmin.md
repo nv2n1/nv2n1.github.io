@@ -93,9 +93,9 @@ description: "opahostadmin"
 </dl>
 </dl>
 <h2>Example</h2>
-<p>opahostadmin -c reboot<br />
- opahostadmin upgrade<br />
- opahostadmin -h &#8216;elrond arwen&#8217; reboot<br />
+<p>opahostadmin -c reboot<br/>
+ opahostadmin upgrade<br/>
+ opahostadmin -h &#8216;elrond arwen&#8217; reboot<br/>
  HOSTS=&#8217;elrond arwen&#8217; opahostadmin reboot</p>
 <h2>Details</h2>
 <p>opahostadmin provides detailed logging of its results. During each run, the following files are produced:</p>
@@ -171,10 +171,10 @@ description: "opahostadmin"
 <dd>For more details about BIOS settings, consult the documentation from the server supplier and/or the server PCI chipset manufacturer.</dd>
 <dd>The deviation application supports a number of parameters which allow for more precise control over the mode, benchmark and pass/fail criteria. The parameters to use can be selected using the <code>FF_DEVIATION_ARGS</code> configuration parameter in opafastfabric.conf</dd>
 <dd>Available parameters for deviation application:</dd>
-<dd>[-bwtol bwtol] [-bwdelta MBs] [-bwthres MBs]<br />
- [-bwloop count] [-bwsize size] [-lattol latol]<br />
- [-latdelta usec] [-latthres usec] [-latloop count]<br />
- [-latsize size][-c] [-b] [-v] [-vv]<br />
+<dd>[-bwtol bwtol] [-bwdelta MBs] [-bwthres MBs]<br/>
+ [-bwloop count] [-bwsize size] [-lattol latol]<br/>
+ [-latdelta usec] [-latthres usec] [-latloop count]<br/>
+ [-latsize size][-c] [-b] [-v] [-vv]<br/>
  [-h reference_host] </dd>
 <dl>
 <dd>

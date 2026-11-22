@@ -30,7 +30,7 @@ description: "acyclic – make directed graph acyclic"
 <p> If the graph is strict and there is a cycle of length 2, the attributes of the reversed edge are lost. </p>
 <p> Some edge attributes are non-symmetric, referring to either the head or tail node. At present, there is no mechanism or convention for correctly switching or renaming these.</p>
 <h2>AUTHORS</h2>
-<p> Stephen C. North &lt;north [at] research.att.com&gt;<br />
+<p> Stephen C. North &lt;north [at] research.att.com&gt;<br/>
  Emden R. Gansner &lt;erg [at] research.att.com&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-gc/">gc</a>(1), <a href="/docs/linux/man/1-dot/">dot</a>(1), <a href="/docs/linux/man/1-gvpr/">gvpr</a>(1), <a href="/docs/linux/man/1-gvcolor/">gvcolor</a>(1), <a href="/docs/linux/man/1-ccomps/">ccomps</a>(1), <a href="/docs/linux/man/1-sccmap/">sccmap</a>(1), <a href="/docs/linux/man/1-tred/">tred</a>(1), libgraph(3) </p>

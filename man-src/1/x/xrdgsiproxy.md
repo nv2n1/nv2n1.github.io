@@ -19,8 +19,8 @@ xrdgsiproxy[-h][mode][-debug][-f[-out] file]
 <p> <i>mode</i></p>
 <dl>
 <dt>
-</dt><dd> <code>init</code> create proxy certificate and related proxy file<br />
- <code>info</code> display content of existing proxy file<br />
+</dt><dd> <code>init</code> create proxy certificate and related proxy file<br/>
+ <code>info</code> display content of existing proxy file<br/>
  <code>destroy</code> delete existing proxy file</dd></dl>
 <h2>OPTIONS</h2>
 <p> <code>-h</code> display help</p>
@@ -42,13 +42,13 @@ xrdgsiproxy[-h][mode][-debug][-f[-out] file]
 <dt><code>-path-length</code> <i>len</i></dt>
 <dd> Max number of descendent levels below this proxy [default 0]</dd></dl>
 <h2>NOTES</h2>
-<p> Complete HTML documentation can be found at <center> <a rel="nofollow" href="http://xrootd.org/doc/prod/sec_config.htm">http://xrootd.org/doc/prod/sec_config.htm</a><br />
- </center><br />
+<p> Complete HTML documentation can be found at <center> <a rel="nofollow" href="http://xrootd.org/doc/prod/sec_config.htm">http://xrootd.org/doc/prod/sec_config.htm</a><br/>
+ </center><br/>
  Documentation for all components associated with <code>xrdgsiproxy</code> can be found at <a rel="nofollow" href="http://xrootd.org/docs.html">http://xrootd.org/docs.html</a></p>
 <h2>DIAGNOSTICS</h2>
 <p> Errors yield an error message and a non-zero exit status.</p>
 <h2>LICENSE</h2>
 <p> License terms can be displayed by typing &quot;<code>xrootd -H</code>&quot;.</p>
 <h2>SUPPORT LEVEL</h2>
-<p> The <code>xrdgsiproxy</code> command is supported by the xrootd collaboration. Contact information can be found at <center> <a rel="nofollow" href="http://xrootd.org/contact.html">http://xrootd.org/contact.html</a><br />
+<p> The <code>xrdgsiproxy</code> command is supported by the xrootd collaboration. Contact information can be found at <center> <a rel="nofollow" href="http://xrootd.org/contact.html">http://xrootd.org/contact.html</a><br/>
  </center> </p>

@@ -25,7 +25,7 @@ const_iterator lower_bound (const Date &amp;d=Date()) const</code></pre>
 <p> <code>Date</code> <code>previousDate</code> (const <code>Date</code> &amp;refDate) const </p>
 <p> <code>Date</code> <code>nextDate</code> (const <code>Date</code> &amp;refDate) const </p>
 <p> const std::vector&lt; <code>Date</code> &gt; &amp; <code>dates</code> () const </p>
-<p> bool <code>isRegular</code> (Size i) const<br />
+<p> bool <code>isRegular</code> (Size i) const<br/>
  <code>Other inspectors</code> </p>
 <p> bool <code>empty</code> () const </p>
 <p> const <code>Calendar</code> &amp; <code>calendar</code> () const </p>

@@ -15,15 +15,15 @@ description: "PAPI_list_threads –"
 <p> This call assumes an initialized PAPI library. </p>
 <p> <code>C Interface</code></p>
 <dl COMPACT>
-<dd>#include &lt;<code>papi.h</code>&gt;<br />
+<dd>#include &lt;<code>papi.h</code>&gt;<br/>
  int <code>PAPI_list_threads(PAPI_thread_id_t *tids, int * number )</code>;</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>*tids</i> &#8212; A pointer to a preallocated array. This may be NULL to only return a count of threads. No more than *number codes will be stored in the array.<br />
+<dd><i>*tids</i> &#8212; A pointer to a preallocated array. This may be NULL to only return a count of threads. No more than *number codes will be stored in the array.<br/>
  <i>*number</i> &#8212; An input and output parameter. Input specifies the number of allocated elements in *tids (if non-NULL) and output specifies the number of threads.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>PAPI_OK</i> The call returned successfully.<br />
+<dd><i>PAPI_OK</i> The call returned successfully.<br/>
  <i>PAPI_EINVAL</i> *number has an improper value</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>

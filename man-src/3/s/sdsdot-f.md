@@ -10,7 +10,7 @@ description: "sdsdot.f –"
 <p>sdsdot.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>REAL function <code>sdsdot</code> (N, SB, SX, INCX, SY, INCY)<br />
+<p>REAL function <code>sdsdot</code> (N, SB, SX, INCX, SY, INCY)<br/>
  <i></i><code>SDSDOT</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>REAL function sdsdot (integerN, realSB, real, dimension(*)SX, integerINCX, real, dimension(*)SY, integerINCY)</h3>

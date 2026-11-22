@@ -10,7 +10,7 @@ description: "sggsvp.f –"
 <p>sggsvp.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>sggsvp</code> (JOBU, JOBV, JOBQ, M, P, N, A, LDA, B, LDB, TOLA, TOLB, K, L, U, LDU, V, LDV, Q, LDQ, IWORK, TAU, WORK, INFO)<br />
+<p>subroutine <code>sggsvp</code> (JOBU, JOBV, JOBQ, M, P, N, A, LDA, B, LDB, TOLA, TOLB, K, L, U, LDU, V, LDV, Q, LDQ, IWORK, TAU, WORK, INFO)<br/>
  <i></i><code>SGGSVP</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sggsvp (characterJOBU, characterJOBV, characterJOBQ, integerM, integerP, integerN, real, dimension( lda, * )A, integerLDA, real, dimension( ldb, * )B, integerLDB, realTOLA, realTOLB, integerK, integerL, real, dimension( ldu, * )U, integerLDU, real, dimension( ldv, * )V, integerLDV, real, dimension( ldq, * )Q, integerLDQ, integer, dimension( * )IWORK, real, dimension( * )TAU, real, dimension( * )WORK, integerINFO)</h3>

@@ -50,8 +50,8 @@ description: "Debugging Plugin –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>plugin</i> A pointer to an uninitialized plugin. The plugin will be configured as a debugging plugin, with the default of sending debugging messages to stderr.<br />
- <i>stream</i><br />
+</dt><dd> <i>plugin</i> A pointer to an uninitialized plugin. The plugin will be configured as a debugging plugin, with the default of sending debugging messages to stderr.<br/>
+ <i>stream</i><br/>
  <i>text</i></dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

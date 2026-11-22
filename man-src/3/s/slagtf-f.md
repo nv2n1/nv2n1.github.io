@@ -10,7 +10,7 @@ description: "slagtf.f –"
 <p>slagtf.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>slagtf</code> (N, A, LAMBDA, B, C, TOL, D, IN, INFO)<br />
+<p>subroutine <code>slagtf</code> (N, A, LAMBDA, B, C, TOL, D, IN, INFO)<br/>
  <i></i><code>SLAGTF</code> computes an LU factorization of a matrix T-λI, where T is a general tridiagonal matrix, and λ a scalar, using partial pivoting with row interchanges.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slagtf (integerN, real, dimension( * )A, realLAMBDA, real, dimension( * )B, real, dimension( * )C, realTOL, real, dimension( * )D, integer, dimension( * )IN, integerINFO)</h3>

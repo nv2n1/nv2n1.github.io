@@ -47,12 +47,12 @@ void function(alist)
 <code>va_word_splittable_3 (</code><i>type1</i><code>, </code><i>type2</i><code>, </code><i>type3</i><code>)</code>
 <code>va_word_splittable_4 (</code><i>type1</i><code>, </code><i>type2</i><code>, </code><i>type3</i><code>, </code><i>type4</i><code>)</code>
 </pre>
-<p> For a struct with three slots<br />
-struct {<br />
-    type1 id1;<br />
-    type2 id2;<br />
-    type3 id3;<br />
-}<br />
+<p> For a struct with three slots<br/>
+struct {<br/>
+    type1 id1;<br/>
+    type2 id2;<br/>
+    type3 id3;<br/>
+}<br/>
  you can specify <i>splittable</i> as <code>va_word_splittable_3 (</code><i>type1</i><code>, </code><i>type2</i><code>, </code><i>type3</i><code>)</code> . </p>
 <h2>NOTES</h2>
 <p> Functions which want to emulate Kernighan &amp; Ritchie style functions (i.e., in ANSI C, functions without a typed argument list) cannot use the <i>type</i> values <code>char</code>, <code>schar</code>, <code>uchar</code>, <code>short</code>, <code>ushort</code>, <code>float</code>. As prescribed by the default K&amp;R C expression promotions, they have to use <code>int</code> instead of <code>char</code>, <code>schar</code>, <code>uchar</code>, <code>short</code>, <code>ushort</code> and <code>double</code> instead of <code>float</code>. </p>
@@ -60,22 +60,22 @@ struct {<br />
 <p> The struct types used in <code>va_start_struct()</code> and <code>va_struct()</code> must only contain (signed or unsigned) int, long, long long or pointer fields. Struct types containing (signed or unsigned) char, short, float, double or other structs are not supported. </p>
 <h2>EXAMPLE</h2>
 <p> This example, a possible implementation of <code><a href="/docs/linux/man/3-execl/">execl</a></code>(3) on top of <code>execv</code>(2) using <code>varargs</code>(3), </p>
-<p>#include &lt;varargs.h&gt;<br />
-#define MAXARGS 100<br />
-/* execl is called by execl(file, arg1, arg2, &#8230;, (char *)0); */<br />
-int execl(va_alist)<br />
-    va_dcl<br />
-{<br />
-    va_list ap;<br />
-    char *file;<br />
-    char *args[MAXARGS];<br />
-    int argno = 0;<br />
-    va_start(ap);<br />
-    file = va_arg(ap, char *);<br />
-    while ((args[argno] = va_arg(ap, char *)) != (char *)0)<br />
-        argno++;<br />
-    va_end(ap);<br />
-    return execv(file, args);<br />
+<p>#include &lt;varargs.h&gt;<br/>
+#define MAXARGS 100<br/>
+/* execl is called by execl(file, arg1, arg2, &#8230;, (char *)0); */<br/>
+int execl(va_alist)<br/>
+    va_dcl<br/>
+{<br/>
+    va_list ap;<br/>
+    char *file;<br/>
+    char *args[MAXARGS];<br/>
+    int argno = 0;<br/>
+    va_start(ap);<br/>
+    file = va_arg(ap, char *);<br/>
+    while ((args[argno] = va_arg(ap, char *)) != (char *)0)<br/>
+        argno++;<br/>
+    va_end(ap);<br/>
+    return execv(file, args);<br/>
 }</p>
 <p> looks like this using <code><a href="/docs/linux/man/3-vacall/">vacall</a></code>(3): </p>
 <pre><code>

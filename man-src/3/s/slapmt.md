@@ -11,7 +11,7 @@ description: "slapmt.f –"
 <p> slapmt.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>slapmt</code> (FORWRD, M, N, X, LDX, K)<br />
+<p> subroutine <code>slapmt</code> (FORWRD, M, N, X, LDX, K)<br/>
  <i></i><code>SLAPMT</code> performs a forward or backward permutation of the columns of a matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slapmt (logicalFORWRD, integerM, integerN, real, dimension( ldx, * )X, integerLDX, integer, dimension( * )K)</h3>

@@ -15,10 +15,10 @@ description: "QwtSplineCurveFitter –"
 <h3>Public Types</h3>
 <p>enum <code>FitMode</code> { <code>Auto</code>, <code>Spline</code>, <code>ParametricSpline</code> } </p>
 <h3>Public Member Functions</h3>
-<p><code>QwtSplineCurveFitter</code> ()<br />
- <i>Constructor. </i><br />
- virtual <code>~QwtSplineCurveFitter</code> ()<br />
- <i>Destructor. </i><br />
+<p><code>QwtSplineCurveFitter</code> ()<br/>
+ <i>Constructor. </i><br/>
+ virtual <code>~QwtSplineCurveFitter</code> ()<br/>
+ <i>Destructor. </i><br/>
  void <code>setFitMode</code> (<code>FitMode</code>) </p>
 <p> <code>FitMode</code> <code>fitMode</code> () const </p>
 <p> void <code>setSpline</code> (const <code>QwtSpline</code> &amp;) </p>

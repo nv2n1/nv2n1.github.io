@@ -150,14 +150,14 @@ description: "aide.conf – The configuration file for Advanced Intrusion Detect
 <dd>
 </dd><dt>xattr: extended attributes</dt>
 <dd></dd></dl>
-<p> Please note that &#8216;I&#8217; and &#8216;c&#8217; are incompatible. When the name of a file<br />
+<p> Please note that &#8216;I&#8217; and &#8216;c&#8217; are incompatible. When the name of a file<br/>
  is changed, it&#8217;s ctime is updated as well. When you put &#8216;c&#8217; and &#8216;I&#8217; in the same rule the, a changed ctime is silently ignored. </p>
 <p> When &#8216;ANF&#8217; is used, new files are added to the new database, but are ignored in the report. </p>
 <p> When &#8216;ARF&#8217; is used, files missing on disk are omitted from the new database, but are ignored in the report.</p>
 <h2>Examples</h2>
 <dl>
 <dd><code>/<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>R</code></dd></dl>
-<p> This adds all files on your machine to the database. This is one line<br />
+<p> This adds all files on your machine to the database. This is one line<br/>
  is a fully qualified configuration file.</p>
 <dl>
 <dd><code>!/dev</code></dd></dl>

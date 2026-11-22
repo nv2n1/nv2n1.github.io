@@ -17,7 +17,7 @@ debconf - apt - progress[--] command[args...] debconf - apt - progress-- config 
 <p> <code>debconf-apt-progress</code> installs packages using debconf to display a progress bar. The given <i>command</i> should be any command-line apt frontend; specifically, it must send progress information to the file descriptor selected by the <tt>&quot;APT::Status-Fd&quot;</tt> configuration option, and must keep the file descriptors nominated by the <tt>&quot;APT::Keep-Fds&quot;</tt> configuration option open when invoking debconf (directly or indirectly), as those file descriptors will be used for the debconf passthrough protocol. </p>
 <p> The arguments to the command you supply should generally include <code>-y</code> (for <code>apt-get</code> or <code>aptitude</code>) or similar to avoid the apt frontend prompting for input. <code>debconf-apt-progress</code> cannot do this itself because the appropriate argument may differ between apt frontends. </p>
 <p> The <code>&#8211;start</code>, <code>&#8211;stop</code>, <code>&#8211;from</code>, and <code>&#8211;to</code> options may be used to create a progress bar with multiple segments for different stages of installation, provided that the caller is a debconf confmodule. The caller may also interact with the progress bar itself using the debconf protocol if it so desires. </p>
-<p> debconf locks its config database when it starts up, which makes it unfortunately inconvenient to have one instance of debconf displaying the progress bar and another passing through questions from packages being installed. If you&#8217;re using a multiple-segment progress bar, you&#8217;ll need to eval the output of the <code>&#8211;config</code> option before starting the debconf frontend to work around this. See &#8220;<font SIZE="-1">EXAMPLES&#8221;</font> in the <font SIZE="-1">EXAMPLES</font> section below.</p>
+<p> debconf locks its config database when it starts up, which makes it unfortunately inconvenient to have one instance of debconf displaying the progress bar and another passing through questions from packages being installed. If you&#8217;re using a multiple-segment progress bar, you&#8217;ll need to eval the output of the <code>&#8211;config</code> option before starting the debconf frontend to work around this. See &#8220;EXAMPLES&#8221; in the EXAMPLES section below.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>&#8211;config</code></dt>
@@ -43,11 +43,11 @@ debconf - apt - progress[--] command[args...] debconf - apt - progress-- config 
 <dt><code>&#8212;</code></dt>
 <dd> Terminate options. Since you will normally need to give at least the <code>-y</code> argument to the command being run, you will usually need to use <code>&#8212;</code> to prevent that being interpreted as an option to <code>debconf-apt-progress</code> itself.</dd></dl>
 <h2>EXAMPLES</h2>
-<p> Install the <font SIZE="-1">GNOME</font> desktop and an X window system development environment within a progress bar: </p>
+<p> Install the GNOME desktop and an X window system development environment within a progress bar: </p>
 <pre>
  debconf-apt-progress -- aptitude -y install gnome x-window-system-dev
 </pre>
-<p> Install the <font SIZE="-1">GNOME, KDE,</font> and <font SIZE="-1">XFCE</font> desktops within a single progress bar, allocating 45% of the progress bar for each of <font SIZE="-1">GNOME</font> and <font SIZE="-1">KDE</font> and the remaining 10% for <font SIZE="-1">XFCE:</font> </p>
+<p> Install the GNOME, KDE, and XFCE desktops within a single progress bar, allocating 45% of the progress bar for each of GNOME and KDE and the remaining 10% for XFCE: </p>
 <pre><code>
 #!/ bin / sh
  set -e

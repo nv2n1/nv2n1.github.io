@@ -11,25 +11,25 @@ description: "include/antlr3input.h –"
 <p> include/antlr3input.h &#8211; </p>
 <p> Defines the basic structures used to manipulate character streams from any input source.</p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;<a href="file:/usr/include/antlr3defs.h">antlr3defs.h</a>&gt;<br />
- #include &lt;<a href="file:/usr/include/antlr3string.h">antlr3string.h</a>&gt;<br />
- #include &lt;<a href="file:/usr/include/antlr3commontoken.h">antlr3commontoken.h</a>&gt;<br />
+<p> #include &lt;<a href="file:/usr/include/antlr3defs.h">antlr3defs.h</a>&gt;<br/>
+ #include &lt;<a href="file:/usr/include/antlr3string.h">antlr3string.h</a>&gt;<br/>
+ #include &lt;<a href="file:/usr/include/antlr3commontoken.h">antlr3commontoken.h</a>&gt;<br/>
  #include &lt;<a href="file:/usr/include/antlr3intstream.h">antlr3intstream.h</a>&gt; </p>
 <h3>Data Structures</h3>
-<p> struct <code>ANTLR3_INPUT_STREAM_struct</code><br />
- <i>Master context structure for an ANTLR3 C runtime based input stream. </i><br />
- struct <code>ANTLR3_LEX_STATE_struct</code><br />
+<p> struct <code>ANTLR3_INPUT_STREAM_struct</code><br/>
+ <i>Master context structure for an ANTLR3 C runtime based input stream. </i><br/>
+ struct <code>ANTLR3_LEX_STATE_struct</code><br/>
  <i>Structure for track lex input states as part of </i><code>mark()</code> and rewind() of lexer.</p>
 <h3>Typedefs</h3>
-<p> typedef struct <code>ANTLR3_INPUT_STREAM_struct</code> <code>ANTLR3_INPUT_STREAM</code><br />
- <i>Master context structure for an ANTLR3 C runtime based input stream. </i><br />
- typedef struct <code>ANTLR3_LEX_STATE_struct</code> <code>ANTLR3_LEX_STATE</code><br />
+<p> typedef struct <code>ANTLR3_INPUT_STREAM_struct</code> <code>ANTLR3_INPUT_STREAM</code><br/>
+ <i>Master context structure for an ANTLR3 C runtime based input stream. </i><br/>
+ typedef struct <code>ANTLR3_LEX_STATE_struct</code> <code>ANTLR3_LEX_STATE</code><br/>
  <i>Structure for track lex input states as part of </i><code>mark()</code> and rewind() of lexer.</p>
 <h3>Functions</h3>
-<p> void <code>antlr3AsciiSetupStream</code> (<code>pANTLR3_INPUT_STREAM</code> input, <code>ANTLR3_UINT32</code> type)<br />
- <i>Common function to setup function interface for an 8 bit ASCII input stream. </i><br />
+<p> void <code>antlr3AsciiSetupStream</code> (<code>pANTLR3_INPUT_STREAM</code> input, <code>ANTLR3_UINT32</code> type)<br/>
+ <i>Common function to setup function interface for an 8 bit ASCII input stream. </i><br/>
  void <code>antlr3GenericSetupStream</code> (<code>pANTLR3_INPUT_STREAM</code> input, <code>ANTLR3_UINT32</code> type) </p>
-<p> void <code>antlr3UCS2SetupStream</code> (<code>pANTLR3_INPUT_STREAM</code> input, <code>ANTLR3_UINT32</code> type)<br />
+<p> void <code>antlr3UCS2SetupStream</code> (<code>pANTLR3_INPUT_STREAM</code> input, <code>ANTLR3_UINT32</code> type)<br/>
  <i>Common function to setup function interface for a 16 bit &#8216;UCS2&#8217; input stream. </i></p>
 <h2>Detailed Description</h2>
 <p> Defines the basic structures used to manipulate character streams from any input source. </p>

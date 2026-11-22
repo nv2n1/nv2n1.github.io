@@ -21,6 +21,6 @@ description: "ncargrun – to run a user program and redirect the metafile outpu
 <h2>SEE ALSO</h2>
 <p> <code>ncarg_gks(1NCARG),</code> <code>ncarg_env(5NCARG),</code> <code>ncargintro(5NCARG)</code></p>
 <h2>COPYRIGHT</h2>
-<p> Copyright (C) 1987-2002<br />
- University Corporation for Atmospheric Research<br />
+<p> Copyright (C) 1987-2002<br/>
+ University Corporation for Atmospheric Research<br/>
  The use of this Software is governed by a License Agreement. </p>

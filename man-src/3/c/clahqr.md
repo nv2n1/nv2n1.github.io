@@ -11,7 +11,7 @@ description: "clahqr.f –"
 <p> clahqr.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>clahqr</code> (WANTT, WANTZ, N, ILO, IHI, H, LDH, W, ILOZ, IHIZ, Z, LDZ, INFO)<br />
+<p> subroutine <code>clahqr</code> (WANTT, WANTZ, N, ILO, IHI, H, LDH, W, ILOZ, IHIZ, Z, LDZ, INFO)<br/>
  <i></i><code>CLAHQR</code> computes the eigenvalues and Schur factorization of an upper Hessenberg matrix, using the double-shift/single-shift QR algorithm.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine clahqr (logicalWANTT, logicalWANTZ, integerN, integerILO, integerIHI, complex, dimension( ldh, * )H, integerLDH, complex, dimension( * )W, integerILOZ, integerIHIZ, complex, dimension( ldz, * )Z, integerLDZ, integerINFO)</h3>

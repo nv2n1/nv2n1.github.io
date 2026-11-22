@@ -11,11 +11,11 @@ description: "WFMath::Polygon< 2 > – The 2D specialization of the Polygon<> te
 <h2>Synopsis</h2>
 <p>#include &lt;<a href="file:/usr/include/polygon.h">polygon.h</a>&gt; </p>
 <h3>Public Member Functions</h3>
-<p><code>Polygon</code> (const AtlasInType &amp;a)<br />
- <i>Construct a polygon from an object passed by Atlas. </i><br />
- AtlasOutType <code>toAtlas</code> () const<br />
- <i>Create an Atlas object from the box. </i><br />
- void <code>fromAtlas</code> (const AtlasInType &amp;a)<br />
+<p><code>Polygon</code> (const AtlasInType &amp;a)<br/>
+ <i>Construct a polygon from an object passed by Atlas. </i><br/>
+ AtlasOutType <code>toAtlas</code> () const<br/>
+ <i>Create an Atlas object from the box. </i><br/>
+ void <code>fromAtlas</code> (const AtlasInType &amp;a)<br/>
  <i>Set the box&#8217;s value to that given by an Atlas object. </i></p>
 <h2>Detailed Description</h2>
 <h3>template&lt;&gt; class WFMath::Polygon&lt; 2 &gt;</h3>

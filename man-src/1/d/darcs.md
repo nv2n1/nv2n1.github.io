@@ -12,46 +12,46 @@ description: "darcs – an advanced revision control system"
 <h2>SYNOPSIS</h2>
 <p> <code>darcs</code> <i>command</i> &lt;<i>arguments</i>|[<i>options</i>]&gt;&#8230; </p>
 <p> Where the <i>commands</i> and their respective <i>arguments</i> are </p>
-<p> <code>darcs help</code> [&lt;<i>darcs</i>_<i>command</i>&gt; [<i>darcs</i>_<i>subcommand</i>]]<br />
- <code>darcs add</code> &lt;<i>file</i>|<i>directory</i>&gt; &#8230;<br />
- <code>darcs remove</code> &lt;<i>file</i>|<i>directory</i>&gt; &#8230;<br />
- <code>darcs move</code> &lt;<i>source</i>&gt; &#8230; &lt;<i>destination</i>&gt;<br />
- <code>darcs replace</code> &lt;<i>old</i>&gt; &lt;<i>new</i>&gt; &lt;<i>file</i>&gt; &#8230;<br />
- <code>darcs revert</code> [<i>file</i>|<i>directory</i>]&#8230;<br />
- <code>darcs unrevert</code><br />
- <code>darcs whatsnew</code> [<i>file</i>|<i>directory</i>]&#8230;<br />
- <code>darcs record</code> [<i>file</i>|<i>directory</i>]&#8230;<br />
- <code>darcs unrecord</code><br />
- <code>darcs amend-record</code> [<i>file</i>|<i>directory</i>]&#8230;<br />
- <code>darcs mark-conflicts</code><br />
- <code>darcs tag</code> [<i>tagname</i>]<br />
- <code>darcs setpref</code> &lt;<i>pref</i>&gt; &lt;<i>value</i>&gt;<br />
- <code>darcs diff</code> [<i>file</i>|<i>directory</i>]&#8230;<br />
- <code>darcs changes</code> [<i>file</i>|<i>directory</i>]&#8230;<br />
- <code>darcs annotate</code> [<i>file</i>|<i>directory</i>]&#8230;<br />
- <code>darcs dist</code><br />
- <code>darcs test</code><br />
- <code>darcs trackdown</code> [[<i>initialization</i>] command<i>]</i><br />
- <code>darcs show contents</code> [<i>file</i>]&#8230;<br />
- <code>darcs show files</code> [<i>file</i>|<i>directory</i>]&#8230;<br />
- <code>darcs show index</code><br />
- <code>darcs show pristine</code><br />
- <code>darcs show repo</code><br />
- <code>darcs show authors</code><br />
- <code>darcs show tags</code><br />
- <code>darcs pull</code> [<i>repository</i>]&#8230;<br />
- <code>darcs fetch</code> [<i>repository</i>]&#8230;<br />
- <code>darcs obliterate</code><br />
- <code>darcs rollback</code> [<i>file</i>|<i>directory</i>]&#8230;<br />
- <code>darcs push</code> [<i>repository</i>]<br />
- <code>darcs send</code> [<i>repository</i>]<br />
- <code>darcs apply</code> &lt;<i>patchfile</i>&gt;<br />
- <code>darcs get</code> &lt;<i>repository</i>&gt; [&lt;<i>directory</i>&gt;]<br />
- <code>darcs put</code> &lt;<i>new</i> <i>repository</i>&gt;<br />
- <code>darcs initialize</code><br />
- <code>darcs optimize</code><br />
- <code>darcs check</code><br />
- <code>darcs repair</code><br />
+<p> <code>darcs help</code> [&lt;<i>darcs</i>_<i>command</i>&gt; [<i>darcs</i>_<i>subcommand</i>]]<br/>
+ <code>darcs add</code> &lt;<i>file</i>|<i>directory</i>&gt; &#8230;<br/>
+ <code>darcs remove</code> &lt;<i>file</i>|<i>directory</i>&gt; &#8230;<br/>
+ <code>darcs move</code> &lt;<i>source</i>&gt; &#8230; &lt;<i>destination</i>&gt;<br/>
+ <code>darcs replace</code> &lt;<i>old</i>&gt; &lt;<i>new</i>&gt; &lt;<i>file</i>&gt; &#8230;<br/>
+ <code>darcs revert</code> [<i>file</i>|<i>directory</i>]&#8230;<br/>
+ <code>darcs unrevert</code><br/>
+ <code>darcs whatsnew</code> [<i>file</i>|<i>directory</i>]&#8230;<br/>
+ <code>darcs record</code> [<i>file</i>|<i>directory</i>]&#8230;<br/>
+ <code>darcs unrecord</code><br/>
+ <code>darcs amend-record</code> [<i>file</i>|<i>directory</i>]&#8230;<br/>
+ <code>darcs mark-conflicts</code><br/>
+ <code>darcs tag</code> [<i>tagname</i>]<br/>
+ <code>darcs setpref</code> &lt;<i>pref</i>&gt; &lt;<i>value</i>&gt;<br/>
+ <code>darcs diff</code> [<i>file</i>|<i>directory</i>]&#8230;<br/>
+ <code>darcs changes</code> [<i>file</i>|<i>directory</i>]&#8230;<br/>
+ <code>darcs annotate</code> [<i>file</i>|<i>directory</i>]&#8230;<br/>
+ <code>darcs dist</code><br/>
+ <code>darcs test</code><br/>
+ <code>darcs trackdown</code> [[<i>initialization</i>] command<i>]</i><br/>
+ <code>darcs show contents</code> [<i>file</i>]&#8230;<br/>
+ <code>darcs show files</code> [<i>file</i>|<i>directory</i>]&#8230;<br/>
+ <code>darcs show index</code><br/>
+ <code>darcs show pristine</code><br/>
+ <code>darcs show repo</code><br/>
+ <code>darcs show authors</code><br/>
+ <code>darcs show tags</code><br/>
+ <code>darcs pull</code> [<i>repository</i>]&#8230;<br/>
+ <code>darcs fetch</code> [<i>repository</i>]&#8230;<br/>
+ <code>darcs obliterate</code><br/>
+ <code>darcs rollback</code> [<i>file</i>|<i>directory</i>]&#8230;<br/>
+ <code>darcs push</code> [<i>repository</i>]<br/>
+ <code>darcs send</code> [<i>repository</i>]<br/>
+ <code>darcs apply</code> &lt;<i>patchfile</i>&gt;<br/>
+ <code>darcs get</code> &lt;<i>repository</i>&gt; [&lt;<i>directory</i>&gt;]<br/>
+ <code>darcs put</code> &lt;<i>new</i> <i>repository</i>&gt;<br/>
+ <code>darcs initialize</code><br/>
+ <code>darcs optimize</code><br/>
+ <code>darcs check</code><br/>
+ <code>darcs repair</code><br/>
  <code>darcs convert</code> &lt;<i>source</i>&gt; [&lt;<i>destination</i>&gt;] </p>
 <h2>DESCRIPTION</h2>
 <p> Darcs is a free, open source revision control system. It is:</p>
@@ -66,34 +66,34 @@ description: "darcs – an advanced revision control system"
 <p> Different options are accepted by different Darcs commands. Each command&#8217;s most important options are listed in the <code>COMMANDS</code> section. For a full list of all options accepted by a particular command, run `darcs <i>command</i> &#8211;help&#8217;.</p>
 <h3>Selecting Patches:</h3>
 <p> The &#8211;patches option yields patches with names matching an `extended&#8217; regular expression. See <a href="/docs/linux/man/7-regex/">regex</a>(7) for details. The &#8211;matches option yields patches that match a logical (Boolean) expression: one or more primitive expressions combined by grouping (parentheses) and the complement (not), conjunction (and) and disjunction (or) operators. The C notation for logic operators (!, &amp;&amp; and ||) can also be used. </p>
-<p>&nbsp;<wbr>&#8211;patches=regex is a synonym for &#8211;matches=&#8217;name regex&#8217;<br />
-&nbsp;<wbr>&#8211;from-patch and &#8211;to-patch are synonyms for &#8211;from-match=&#8217;name&#8230; and &#8211;to-match=&#8217;name&#8230;<br />
-&nbsp;<wbr>&#8211;from-patch and &#8211;to-match can be unproblematically combined:<br />
+<p>&nbsp;<wbr>&#8211;patches=regex is a synonym for &#8211;matches=&#8217;name regex&#8217;<br/>
+&nbsp;<wbr>&#8211;from-patch and &#8211;to-patch are synonyms for &#8211;from-match=&#8217;name&#8230; and &#8211;to-match=&#8217;name&#8230;<br/>
+&nbsp;<wbr>&#8211;from-patch and &#8211;to-match can be unproblematically combined:<br/>
 &nbsp;<wbr>darcs changes &#8211;from-patch=&#8217;html.*documentation&#8217;&nbsp;<wbr>&#8211;to-match=&#8217;date 20040212&#8242; </p>
-<p> The following primitive Boolean expressions are supported:<br />
-&nbsp;<wbr>&nbsp;<wbr>exact &#8211; check a literal string against the patch name.<br />
-&nbsp;<wbr>&nbsp;<wbr>name &#8211; check a regular expression against the patch name.<br />
-&nbsp;<wbr>&nbsp;<wbr>author &#8211; check a regular expression against the author name.<br />
-&nbsp;<wbr>&nbsp;<wbr>hunk &#8211; check a regular expression against the contents of a hunk patch.<br />
-&nbsp;<wbr>&nbsp;<wbr>comment &#8211; check a regular expression against the log message.<br />
-&nbsp;<wbr>&nbsp;<wbr>hash &#8211; match the darcs hash for a patch.<br />
-&nbsp;<wbr>&nbsp;<wbr>date &#8211; match the patch date.<br />
+<p> The following primitive Boolean expressions are supported:<br/>
+&nbsp;<wbr>&nbsp;<wbr>exact &#8211; check a literal string against the patch name.<br/>
+&nbsp;<wbr>&nbsp;<wbr>name &#8211; check a regular expression against the patch name.<br/>
+&nbsp;<wbr>&nbsp;<wbr>author &#8211; check a regular expression against the author name.<br/>
+&nbsp;<wbr>&nbsp;<wbr>hunk &#8211; check a regular expression against the contents of a hunk patch.<br/>
+&nbsp;<wbr>&nbsp;<wbr>comment &#8211; check a regular expression against the log message.<br/>
+&nbsp;<wbr>&nbsp;<wbr>hash &#8211; match the darcs hash for a patch.<br/>
+&nbsp;<wbr>&nbsp;<wbr>date &#8211; match the patch date.<br/>
 &nbsp;<wbr>&nbsp;<wbr>touch &#8211; match file paths for a patch. </p>
-<p> Here are some examples:<br />
-&nbsp;<wbr>&nbsp;<wbr>darcs annotate &#8211;summary &#8211;match&nbsp;<wbr>&#8216;exact&nbsp;<wbr>&quot;Resolve issue17: use dynamic memory allocation.&quot;&#8217;<br />
-&nbsp;<wbr>&nbsp;<wbr>darcs annotate &#8211;summary &#8211;match&nbsp;<wbr>&#8216;name issue17&#8217;<br />
-&nbsp;<wbr>&nbsp;<wbr>darcs annotate &#8211;summary &#8211;match&nbsp;<wbr>&#8216;name&nbsp;<wbr>&quot;^[Rr]esolve issue17\&gt;&quot;&#8217;<br />
-&nbsp;<wbr>&nbsp;<wbr>darcs annotate &#8211;summary &#8211;match&nbsp;<wbr>&#8216;author&nbsp;<wbr>&quot;David Roundy&quot;&#8217;<br />
-&nbsp;<wbr>&nbsp;<wbr>darcs annotate &#8211;summary &#8211;match&nbsp;<wbr>&#8216;author droundy&#8217;<br />
-&nbsp;<wbr>&nbsp;<wbr>darcs annotate &#8211;summary &#8211;match&nbsp;<wbr>&#8216;author droundy [at] darcs.net&#8217;<br />
-&nbsp;<wbr>&nbsp;<wbr>darcs annotate &#8211;summary &#8211;match&nbsp;<wbr>&#8216;hunk&nbsp;<wbr>&quot;foo&nbsp;<wbr>=&nbsp;<wbr>2&quot;&#8217;<br />
-&nbsp;<wbr>&nbsp;<wbr>darcs annotate &#8211;summary &#8211;match&nbsp;<wbr>&#8216;hunk&nbsp;<wbr>&quot;^instance .*&nbsp;<wbr>Foo where$&quot;&#8217;<br />
-&nbsp;<wbr>&nbsp;<wbr>darcs annotate &#8211;summary &#8211;match&nbsp;<wbr>&#8216;comment&nbsp;<wbr>&quot;prevent deadlocks&quot;&#8217;<br />
-&nbsp;<wbr>&nbsp;<wbr>darcs annotate &#8211;summary &#8211;match&nbsp;<wbr>&#8216;hash 20040403105958-53a90-c719567e92c3b0ab9eddd5290b705712b8b918ef&#8217;<br />
-&nbsp;<wbr>&nbsp;<wbr>darcs annotate &#8211;summary &#8211;match&nbsp;<wbr>&#8216;date&nbsp;<wbr>&quot;2006-04-02 22:41&quot;&#8217;<br />
-&nbsp;<wbr>&nbsp;<wbr>darcs annotate &#8211;summary &#8211;match&nbsp;<wbr>&#8216;date&nbsp;<wbr>&quot;tea time yesterday&quot;&#8217;<br />
-&nbsp;<wbr>&nbsp;<wbr>darcs annotate &#8211;summary &#8211;match&nbsp;<wbr>&#8216;touch src/foo.c&#8217;<br />
-&nbsp;<wbr>&nbsp;<wbr>darcs annotate &#8211;summary &#8211;match&nbsp;<wbr>&#8216;touch src/&#8217;<br />
+<p> Here are some examples:<br/>
+&nbsp;<wbr>&nbsp;<wbr>darcs annotate &#8211;summary &#8211;match&nbsp;<wbr>&#8216;exact&nbsp;<wbr>&quot;Resolve issue17: use dynamic memory allocation.&quot;&#8217;<br/>
+&nbsp;<wbr>&nbsp;<wbr>darcs annotate &#8211;summary &#8211;match&nbsp;<wbr>&#8216;name issue17&#8217;<br/>
+&nbsp;<wbr>&nbsp;<wbr>darcs annotate &#8211;summary &#8211;match&nbsp;<wbr>&#8216;name&nbsp;<wbr>&quot;^[Rr]esolve issue17\&gt;&quot;&#8217;<br/>
+&nbsp;<wbr>&nbsp;<wbr>darcs annotate &#8211;summary &#8211;match&nbsp;<wbr>&#8216;author&nbsp;<wbr>&quot;David Roundy&quot;&#8217;<br/>
+&nbsp;<wbr>&nbsp;<wbr>darcs annotate &#8211;summary &#8211;match&nbsp;<wbr>&#8216;author droundy&#8217;<br/>
+&nbsp;<wbr>&nbsp;<wbr>darcs annotate &#8211;summary &#8211;match&nbsp;<wbr>&#8216;author droundy [at] darcs.net&#8217;<br/>
+&nbsp;<wbr>&nbsp;<wbr>darcs annotate &#8211;summary &#8211;match&nbsp;<wbr>&#8216;hunk&nbsp;<wbr>&quot;foo&nbsp;<wbr>=&nbsp;<wbr>2&quot;&#8217;<br/>
+&nbsp;<wbr>&nbsp;<wbr>darcs annotate &#8211;summary &#8211;match&nbsp;<wbr>&#8216;hunk&nbsp;<wbr>&quot;^instance .*&nbsp;<wbr>Foo where$&quot;&#8217;<br/>
+&nbsp;<wbr>&nbsp;<wbr>darcs annotate &#8211;summary &#8211;match&nbsp;<wbr>&#8216;comment&nbsp;<wbr>&quot;prevent deadlocks&quot;&#8217;<br/>
+&nbsp;<wbr>&nbsp;<wbr>darcs annotate &#8211;summary &#8211;match&nbsp;<wbr>&#8216;hash 20040403105958-53a90-c719567e92c3b0ab9eddd5290b705712b8b918ef&#8217;<br/>
+&nbsp;<wbr>&nbsp;<wbr>darcs annotate &#8211;summary &#8211;match&nbsp;<wbr>&#8216;date&nbsp;<wbr>&quot;2006-04-02 22:41&quot;&#8217;<br/>
+&nbsp;<wbr>&nbsp;<wbr>darcs annotate &#8211;summary &#8211;match&nbsp;<wbr>&#8216;date&nbsp;<wbr>&quot;tea time yesterday&quot;&#8217;<br/>
+&nbsp;<wbr>&nbsp;<wbr>darcs annotate &#8211;summary &#8211;match&nbsp;<wbr>&#8216;touch src/foo.c&#8217;<br/>
+&nbsp;<wbr>&nbsp;<wbr>darcs annotate &#8211;summary &#8211;match&nbsp;<wbr>&#8216;touch src/&#8217;<br/>
 &nbsp;<wbr>&nbsp;<wbr>darcs annotate &#8211;summary &#8211;match&nbsp;<wbr>&#8216;touch&nbsp;<wbr>&quot;src/*.(c|h)&quot;&#8217; </p>
 <h2>COMMANDS</h2>
 <p> <code>darcs help</code> [&lt;<i>darcs</i>_<i>command</i>&gt; [<i>darcs</i>_<i>subcommand</i>]]</p>
@@ -155,15 +155,15 @@ description: "darcs – an advanced revision control system"
 <dt>
 </dt><dd> The `darcs whatsnew&#8217; command lists unrecorded changes to the working tree. If you specify a set of files and directories, only unrecorded changes to those files and directories are listed. </dd>
 <p> With the &#8211;summary option, the changes are condensed to one line per file, with mnemonics to indicate the nature and extent of the change. The &#8211;look-for-adds option causes candidates for `darcs add&#8217; to be included in the summary output. Summary mnemonics are as follows: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>`A f&#8217;&nbsp;<wbr>and&nbsp;<wbr>`A d/&#8217;&nbsp;<wbr>respectively mean an added file or directory.<br />
-&nbsp;<wbr>&nbsp;<wbr>`R f&#8217;&nbsp;<wbr>and&nbsp;<wbr>`R d/&#8217;&nbsp;<wbr>respectively mean a removed file or directory.<br />
-&nbsp;<wbr>&nbsp;<wbr>`M f -N&nbsp;<wbr>+M rP&#8217;&nbsp;<wbr>means a modified file, with N lines deleted, M<br />
-&nbsp;<wbr>&nbsp;<wbr>lines added, and P lexical replacements.<br />
-&nbsp;<wbr>&nbsp;<wbr>`f -&gt;&nbsp;<wbr>g&#8217;&nbsp;<wbr>means a moved file or directory.<br />
-&nbsp;<wbr>&nbsp;<wbr>`a f&#8217;&nbsp;<wbr>and&nbsp;<wbr>`a d/&#8217;&nbsp;<wbr>respectively mean a new, but unadded, file or<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>`A f&#8217;&nbsp;<wbr>and&nbsp;<wbr>`A d/&#8217;&nbsp;<wbr>respectively mean an added file or directory.<br/>
+&nbsp;<wbr>&nbsp;<wbr>`R f&#8217;&nbsp;<wbr>and&nbsp;<wbr>`R d/&#8217;&nbsp;<wbr>respectively mean a removed file or directory.<br/>
+&nbsp;<wbr>&nbsp;<wbr>`M f -N&nbsp;<wbr>+M rP&#8217;&nbsp;<wbr>means a modified file, with N lines deleted, M<br/>
+&nbsp;<wbr>&nbsp;<wbr>lines added, and P lexical replacements.<br/>
+&nbsp;<wbr>&nbsp;<wbr>`f -&gt;&nbsp;<wbr>g&#8217;&nbsp;<wbr>means a moved file or directory.<br/>
+&nbsp;<wbr>&nbsp;<wbr>`a f&#8217;&nbsp;<wbr>and&nbsp;<wbr>`a d/&#8217;&nbsp;<wbr>respectively mean a new, but unadded, file or<br/>
 &nbsp;<wbr>&nbsp;<wbr>directory, when using &#8211;look-for-adds. </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>An exclamation mark&nbsp;<wbr>(!)&nbsp;<wbr>as in&nbsp;<wbr>`R!&nbsp;<wbr>foo.c&#8217;, means the hunk is known to<br />
-&nbsp;<wbr>&nbsp;<wbr>conflict with a hunk in another patch.&nbsp;<wbr>&nbsp;<wbr>The phrase&nbsp;<wbr>`duplicated&#8217;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>An exclamation mark&nbsp;<wbr>(!)&nbsp;<wbr>as in&nbsp;<wbr>`R!&nbsp;<wbr>foo.c&#8217;, means the hunk is known to<br/>
+&nbsp;<wbr>&nbsp;<wbr>conflict with a hunk in another patch.&nbsp;<wbr>&nbsp;<wbr>The phrase&nbsp;<wbr>`duplicated&#8217;<br/>
 &nbsp;<wbr>&nbsp;<wbr>means the hunk is known to be identical to a hunk in another patch. </p>
 <p> By default, `darcs whatsnew&#8217; uses Darcs&#8217; internal format for changes. To see some context (unchanged lines) around each change, use the &#8211;unified option. To view changes in conventional `diff&#8217; format, use the `darcs diff&#8217; command; but note that `darcs whatsnew&#8217; is faster. </p>
 <p> This command exits unsuccessfully (returns a non-zero exit status) if there are no unrecorded changes. </p>
@@ -222,9 +222,9 @@ description: "darcs – an advanced revision control system"
 <dt>
 </dt><dd> When working on project with multiple repositories and contributors, it is sometimes desirable for a preference to be set consistently project-wide. This is achieved by treating a preference set with `darcs setpref&#8217; as an unrecorded change, which can then be recorded and then treated like any other patch. </dd>
 <p> Valid preferences are: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>test &#8212; a shell command that runs regression tests<br />
-&nbsp;<wbr>&nbsp;<wbr>predist &#8212; a shell command to run before&nbsp;<wbr>`darcs dist&#8217;<br />
-&nbsp;<wbr>&nbsp;<wbr>boringfile &#8212; the path to a version-controlled boring file<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>test &#8212; a shell command that runs regression tests<br/>
+&nbsp;<wbr>&nbsp;<wbr>predist &#8212; a shell command to run before&nbsp;<wbr>`darcs dist&#8217;<br/>
+&nbsp;<wbr>&nbsp;<wbr>boringfile &#8212; the path to a version-controlled boring file<br/>
 &nbsp;<wbr>&nbsp;<wbr>binariesfile &#8212; the path to a version-controlled binaries file </p>
 <p> For example, a project using GNU autotools, with a `make test&#8217; target to perform regression tests, might enable Darcs&#8217; integrated regression testing with the following command: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>darcs setpref test&nbsp;<wbr>&#8216;autoconf&nbsp;<wbr>&amp;&amp;&nbsp;<wbr>./configure&nbsp;<wbr>&amp;&amp;&nbsp;<wbr>make&nbsp;<wbr>&amp;&amp;&nbsp;<wbr>make test&#8217; </p>
@@ -316,9 +316,9 @@ description: "darcs – an advanced revision control system"
 <p> Any patch with an author string that matches the canonical address or any of the associated regexps is considered to be the work of that author. All matching is case-insensitive and partial (it can match a substring). Use ^,$ to match the whole string in regexps </p>
 <p> Currently this canonicalization step is done only in `darcs show authors&#8217;. Other commands, such as `darcs changes&#8217; use author strings verbatim. </p>
 <p> An example .authorspelling file is: </p>
-<p>&nbsp;<wbr>&#8212; This is a comment.<br />
-&nbsp;<wbr>Fred Nurk&nbsp;<wbr>&lt;fred [at] example.com&gt;<br />
-&nbsp;<wbr>John Snagge&nbsp;<wbr>&lt;snagge [at] bbc.co.uk&gt;, John, snagge@, js@(si|mit).edu<br />
+<p>&nbsp;<wbr>&#8212; This is a comment.<br/>
+&nbsp;<wbr>Fred Nurk&nbsp;<wbr>&lt;fred [at] example.com&gt;<br/>
+&nbsp;<wbr>John Snagge&nbsp;<wbr>&lt;snagge [at] bbc.co.uk&gt;, John, snagge@, js@(si|mit).edu<br/>
 &nbsp;<wbr>Chuck Jones\, Jr.&nbsp;<wbr>&lt;chuck [at] pobox.com&gt;, cj\+user [at] example.com </p>
 </dl>
 <p> <code>darcs show tags</code></p>
@@ -430,12 +430,12 @@ description: "darcs – an advanced revision control system"
 <p> WARNING: the repository produced by this command is not understood by Darcs 1.x, and patches cannot be exchanged between repositories in darcs-1 and darcs-2 formats. </p>
 <p> Furthermore, darcs 2 repositories created by different invocations of this command SHOULD NOT exchange patches, unless those repositories had no patches in common when they were converted. (That is, within a set of repos that exchange patches, no patch should be converted more than once.) </p>
 <p> Due to this limitation, migrating a multi-branch project is a little awkward. Sorry! Here is the recommended process: </p>
-<p>&nbsp;<wbr>1. for each branch&nbsp;<wbr>`foo&#8217;, tag that branch with&nbsp;<wbr>`foo-final&#8217;;<br />
-&nbsp;<wbr>2. merge all branches together&nbsp;<wbr>(&#8211;allow-conflicts may help);<br />
-&nbsp;<wbr>3. run&nbsp;<wbr>`darcs optimize &#8211;reorder&#8217;&nbsp;<wbr>on the result;<br />
-&nbsp;<wbr>4. run&nbsp;<wbr>`darcs convert&#8217;&nbsp;<wbr>to create a merged darcs-2 repository;<br />
-&nbsp;<wbr>5. re-create each branch by calling&nbsp;<wbr>`darcs get &#8211;tag foo-final&#8217;&nbsp;<wbr>on<br />
-&nbsp;<wbr>the darcs-2 repository;&nbsp;<wbr>and finally<br />
+<p>&nbsp;<wbr>1. for each branch&nbsp;<wbr>`foo&#8217;, tag that branch with&nbsp;<wbr>`foo-final&#8217;;<br/>
+&nbsp;<wbr>2. merge all branches together&nbsp;<wbr>(&#8211;allow-conflicts may help);<br/>
+&nbsp;<wbr>3. run&nbsp;<wbr>`darcs optimize &#8211;reorder&#8217;&nbsp;<wbr>on the result;<br/>
+&nbsp;<wbr>4. run&nbsp;<wbr>`darcs convert&#8217;&nbsp;<wbr>to create a merged darcs-2 repository;<br/>
+&nbsp;<wbr>5. re-create each branch by calling&nbsp;<wbr>`darcs get &#8211;tag foo-final&#8217;&nbsp;<wbr>on<br/>
+&nbsp;<wbr>the darcs-2 repository;&nbsp;<wbr>and finally<br/>
 &nbsp;<wbr>6. use&nbsp;<wbr>`darcs obliterate&#8217;&nbsp;<wbr>to delete the foo-final tags. </p>
 </dl>
 <h2>ENVIRONMENT</h2>

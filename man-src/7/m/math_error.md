@@ -18,7 +18,7 @@ description: "math_error – detecting errors from mathematical functions"
 <p> feclearexcept(FE_ALL_EXCEPT); </p>
 <p> before calling a mathematical function. </p>
 <p> Upon return from the mathematical function, if <i>errno</i> is nonzero, or the following call (see <code><a href="/docs/linux/man/3-fenv/">fenv</a></code>(3)) returns nonzero </p>
-<p> fetestexcept(FE_INVALID | FE_DIVBYZERO | FE_OVERFLOW |<br />
+<p> fetestexcept(FE_INVALID | FE_DIVBYZERO | FE_OVERFLOW |<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;FE_UNDERFLOW); </p>
 <p> then an error occurred in the mathematical function. </p>
 <p> The error conditions that can occur for mathematical functions are described below.</p>

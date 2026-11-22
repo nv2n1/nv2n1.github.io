@@ -13,45 +13,45 @@ description: "QwtInterval –"
 <p>#include &lt;qwt_interval.h&gt;</p>
 <h3>Public Types</h3>
 <p>enum <code>BorderFlag</code> { <code>IncludeBorders</code> = 0x00, <code>ExcludeMinimum</code> = 0x01, <code>ExcludeMaximum</code> = 0x02, <code>ExcludeBorders</code> = ExcludeMinimum | ExcludeMaximum } </p>
-<p> typedef QFlags&lt; <code>BorderFlag</code> &gt; <code>BorderFlags</code><br />
+<p> typedef QFlags&lt; <code>BorderFlag</code> &gt; <code>BorderFlags</code><br/>
  <i>Border flags. </i></p>
 <h3>Public Member Functions</h3>
-<p><code>QwtInterval</code> ()<br />
- <i>Default Constructor. </i><br />
+<p><code>QwtInterval</code> ()<br/>
+ <i>Default Constructor. </i><br/>
  <code>QwtInterval</code> (double <code>minValue</code>, double <code>maxValue</code>, <code>BorderFlags</code>=<code>IncludeBorders</code>) </p>
 <p> void <code>setInterval</code> (double <code>minValue</code>, double <code>maxValue</code>, <code>BorderFlags</code>=<code>IncludeBorders</code>) </p>
-<p> <code>QwtInterval</code> <code>normalized</code> () const<br />
- <i>Normalize the limits of the interval. </i><br />
+<p> <code>QwtInterval</code> <code>normalized</code> () const<br/>
+ <i>Normalize the limits of the interval. </i><br/>
  <code>QwtInterval</code> <code>inverted</code> () const </p>
 <p> <code>QwtInterval</code> <code>limited</code> (double <code>minValue</code>, double <code>maxValue</code>) const </p>
-<p> bool <code>operator==</code> (const <code>QwtInterval</code> &amp;) const<br />
- <i>Compare two intervals. </i><br />
- bool <code>operator!=</code> (const <code>QwtInterval</code> &amp;) const<br />
- <i>Compare two intervals. </i><br />
+<p> bool <code>operator==</code> (const <code>QwtInterval</code> &amp;) const<br/>
+ <i>Compare two intervals. </i><br/>
+ bool <code>operator!=</code> (const <code>QwtInterval</code> &amp;) const<br/>
+ <i>Compare two intervals. </i><br/>
  void <code>setBorderFlags</code> (<code>BorderFlags</code>) </p>
 <p> <code>BorderFlags</code> <code>borderFlags</code> () const </p>
 <p> double <code>minValue</code> () const </p>
 <p> double <code>maxValue</code> () const </p>
-<p> double <code>width</code> () const<br />
- <i>Return the width of an interval. </i><br />
+<p> double <code>width</code> () const<br/>
+ <i>Return the width of an interval. </i><br/>
  void <code>setMinValue</code> (double) </p>
 <p> void <code>setMaxValue</code> (double) </p>
 <p> bool <code>contains</code> (double value) const </p>
-<p> bool <code>intersects</code> (const <code>QwtInterval</code> &amp;) const<br />
- <i>Test if two intervals overlap. </i><br />
- <code>QwtInterval</code> <code>intersect</code> (const <code>QwtInterval</code> &amp;) const<br />
- <i>Intersect 2 intervals. </i><br />
- <code>QwtInterval</code> <code>unite</code> (const <code>QwtInterval</code> &amp;) const<br />
- <i>Unite 2 intervals. </i><br />
+<p> bool <code>intersects</code> (const <code>QwtInterval</code> &amp;) const<br/>
+ <i>Test if two intervals overlap. </i><br/>
+ <code>QwtInterval</code> <code>intersect</code> (const <code>QwtInterval</code> &amp;) const<br/>
+ <i>Intersect 2 intervals. </i><br/>
+ <code>QwtInterval</code> <code>unite</code> (const <code>QwtInterval</code> &amp;) const<br/>
+ <i>Unite 2 intervals. </i><br/>
  <code>QwtInterval</code> <code>operator|</code> (const <code>QwtInterval</code> &amp;) const </p>
-<p> <code>QwtInterval</code> <code>operator&amp;</code> (const <code>QwtInterval</code> &amp;) const<br />
- <i>Intersection of two intervals. </i><br />
- <code>QwtInterval</code> &amp; <code>operator|=</code> (const <code>QwtInterval</code> &amp;)<br />
- <i>Unite this interval with the given interval. </i><br />
- <code>QwtInterval</code> &amp; <code>operator&amp;=</code> (const <code>QwtInterval</code> &amp;)<br />
- <i>Intersect this interval with the given interval. </i><br />
- <code>QwtInterval</code> <code>extend</code> (double value) const<br />
- <i>Extend the interval. </i><br />
+<p> <code>QwtInterval</code> <code>operator&amp;</code> (const <code>QwtInterval</code> &amp;) const<br/>
+ <i>Intersection of two intervals. </i><br/>
+ <code>QwtInterval</code> &amp; <code>operator|=</code> (const <code>QwtInterval</code> &amp;)<br/>
+ <i>Unite this interval with the given interval. </i><br/>
+ <code>QwtInterval</code> &amp; <code>operator&amp;=</code> (const <code>QwtInterval</code> &amp;)<br/>
+ <i>Intersect this interval with the given interval. </i><br/>
+ <code>QwtInterval</code> <code>extend</code> (double value) const<br/>
+ <i>Extend the interval. </i><br/>
  <code>QwtInterval</code> <code>operator|</code> (double) const </p>
 <p> <code>QwtInterval</code> &amp; <code>operator|=</code> (double) </p>
 <p> bool <code>isValid</code> () const </p>
@@ -88,8 +88,8 @@ description: "QwtInterval –"
 <p> Build an interval with from min/max values </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>minValue</i> Minimum value<br />
- <i>maxValue</i> Maximum value<br />
+<dd><i>minValue</i> Minimum value<br/>
+ <i>maxValue</i> Maximum value<br/>
  <i>borderFlags</i> Include/Exclude borders</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3><code>QwtInterval::BorderFlags</code> QwtInterval::borderFlags () const [inline]</h3>
@@ -162,7 +162,7 @@ description: "QwtInterval –"
 <p>Limit the interval, keeping the border modes </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>lowerBound</i> Lower limit<br />
+<dd><i>lowerBound</i> Lower limit<br/>
  <i>upperBound</i> Upper limit</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -271,8 +271,8 @@ description: "QwtInterval –"
 <p>Assign the limits of the interval </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>minValue</i> Minimum value<br />
- <i>maxValue</i> Maximum value<br />
+<dd><i>minValue</i> Minimum value<br/>
+ <i>maxValue</i> Maximum value<br/>
  <i>borderFlags</i> Include/Exclude borders</dd></dl>
 <h3>void QwtInterval::setMaxValue (doublemaxValue) [inline]</h3>
 <p>Assign the upper limit of the interval </p>

@@ -26,7 +26,7 @@ description: "encfsctl – administrative tool for working with EncFS filesystem
 <dt><code>passwd</code></dt>
 <dd> Allows changing the password of the encrypted filesystem. The user will be prompted for the existing password and the new password.</dd>
 <dt><code>showcruft</code></dt>
-<dd> Recursively search through the entire volume and display all files which are not decodable (only checks filename encoding, not block <font SIZE="-1">MAC</font> headers). This might be useful for cleanup in case you&#8217;ve made use of features which create files which are not decodable under the primary key.</dd>
+<dd> Recursively search through the entire volume and display all files which are not decodable (only checks filename encoding, not block MAC headers). This might be useful for cleanup in case you&#8217;ve made use of features which create files which are not decodable under the primary key.</dd>
 <dt><code>decode</code></dt>
 <dd> Allows you to specify an encoded name on the command line, and displays decoded version. This is mostly useful for debugging, as debug messages always display encrypted filenames (to avoid leaking sensitive data through the debug channels). So this command provides a way to decode the filenames. </dd>
 <p> The <code>&#8211;extpass</code> option can be used to specify the program which returns the password &#8211; just like with encfs. </p>
@@ -50,7 +50,7 @@ description: "encfsctl – administrative tool for working with EncFS filesystem
  Filesname encoded using IV chaining mode.
 </pre>
 <h2>DISCLAIMER</h2>
-<p> This library is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE.</font> Please refer to the &#8220;<font SIZE="-1">COPYING&#8221;</font> file distributed with <code>encfs</code> for complete details.</p>
+<p> This library is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. Please refer to the &#8220;COPYING&#8221; file distributed with <code>encfs</code> for complete details.</p>
 <h2>AUTHORS</h2>
 <p> <code>EncFS</code> was written by <code>Valient Gough &lt;vgough [at] pobox.com&gt;</code>.</p>
 <h2>SEE ALSO</h2>

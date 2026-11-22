@@ -11,7 +11,7 @@ description: "xrdp-sessvc – xrdp session supervisor"
 <h2>Syntax</h2>
 <p><code>xrdp-sessvc</code> <i>x_pid wm_pid</i></p>
 <h2>Description</h2>
-<p><code>xrdp-sessvc</code> is the <code><a href="/docs/linux/man/8-xrdp/">xrdp</a></code>(8) session supervisor, which monitors the running X server and Windows Manager. As soon as one of them quits, the other process is terminated as well.<br />
+<p><code>xrdp-sessvc</code> is the <code><a href="/docs/linux/man/8-xrdp/">xrdp</a></code>(8) session supervisor, which monitors the running X server and Windows Manager. As soon as one of them quits, the other process is terminated as well.<br/>
  This program is only executed internally by <code><a href="/docs/linux/man/8-xrdp-sesman/">xrdp-sesman</a></code>(8). </p>
 <h2>Options</h2>
 <dl>

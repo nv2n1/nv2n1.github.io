@@ -34,7 +34,7 @@ description: "sane-teco1 – SANE backend for TECO / RELISYS scanners"
  Dextra DF-1200T+ VM3530+ untested
  Dextra DF-9624 VM6530+ untested</pre>
 </dd></dl>
-<p> Note that the untested scanner will not be directly supported. You should contact the author for that. The TECO VM number can usually be found at the back of the scanner. It is also part of the FCC ID. <i>sane-find-scanner -v</i> will also show the SCSI inquiry, and if it is a TECO scanner, the name will be there too. The options the backend supports can either be selected through command line options to programs like <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1) or through GUI elements in <code>xscanimage</code>(1) or <code><a href="/docs/linux/man/1-xsane/">xsane</a></code>(1).<br />
+<p> Note that the untested scanner will not be directly supported. You should contact the author for that. The TECO VM number can usually be found at the back of the scanner. It is also part of the FCC ID. <i>sane-find-scanner -v</i> will also show the SCSI inquiry, and if it is a TECO scanner, the name will be there too. The options the backend supports can either be selected through command line options to programs like <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1) or through GUI elements in <code>xscanimage</code>(1) or <code><a href="/docs/linux/man/1-xsane/">xsane</a></code>(1).<br/>
  If you have any success with a scanner not listed here, or if you notice any strange behavior, please report to the backend maintainer or to the SANE mailing list. Valid command line options and their syntax can be listed by using:</p>
 <dl>
 <dd>scanimage &#8211;help -d teco1</dd></dl>

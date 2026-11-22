@@ -10,7 +10,7 @@ description: "xawtv-remote, v4lctl — control video4linux devices"
 
 <p> xawtv-remote, v4lctl &#8212; control video4linux devices</p>
 <h2>SYNOPSIS</h2>
-<p> <code>xawtv-remote [ options ] command</code><br />
+<p> <code>xawtv-remote [ options ] command</code><br/>
  <code>v4lctl [ options ] command</code></p>
 <h2>DESCRIPTION</h2>
 <p> <code>xawtv-remote</code> and <code>v4lctl</code> can be used to control a video4linux driven TV card. <code>xawtv-remote</code> passes the command to a already running xawtv or motv instance using X11 properties. <code>v4lctl</code> sets the parameters directly.</p>
@@ -95,7 +95,7 @@ description: "xawtv-remote, v4lctl — control video4linux devices"
 <dt><code>msg text</code></dt>
 <dd> Display text on the on-screen display (window title / upper left corner in fullscreen mode).</dd>
 <dt><code>vtx line1 line2 [ &#8230; ]</code></dt>
-<dd> Display subtitles. It pops up a small window at the bottom of the screen. It is intended to be used as an interface for displaying subtitles (often on videotext page 150 in Europe, that&#8217;s why the name) by external programs.<br />
+<dd> Display subtitles. It pops up a small window at the bottom of the screen. It is intended to be used as an interface for displaying subtitles (often on videotext page 150 in Europe, that&#8217;s why the name) by external programs.<br/>
  Every command line argument is one line, zero lines removes the window. You can colorize the text with the control sequence &quot;ESC foreground background&quot;. foreground/background has the range 0-7 (ansi term colors). Example: &quot;�7 hello world &quot; is blue on white. &quot;&quot; must be a real escape character, the string doesn&#8217;t work. With the bash you&#8217;ll get it with ^V ESC. vtx does also understand the ANSI tty escape sequences for color.</dd>
 <dt><code>quit</code></dt>
 <dd> quit xawtv</dd>

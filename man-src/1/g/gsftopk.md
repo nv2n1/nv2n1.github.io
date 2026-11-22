@@ -47,21 +47,21 @@ description: "gsftopk – render a ghostscript font in TeX pk form"
 <dt><code>DVIPSRC</code></dt>
 <dd> Name of file to read instead of <code>$HOME/.dvipsrc</code>. This should be the full name of the file (in other words, no path searching algorithms are applied).</dd>
 <dt><code>GSFTOPKFONTS</code></dt>
-<dd> See <font SIZE="-1"><code>TFMFONTS. </code></font></dd>
+<dd> See <code>TFMFONTS. </code></dd>
 <dt><code>GSFTOPKHEADERS</code></dt>
-<dd> See <font SIZE="-1"><code>TEXPSHEADERS. </code></font></dd>
+<dd> See <code>TEXPSHEADERS. </code></dd>
 <dt><code>PSHEADERS</code></dt>
-<dd> See <font SIZE="-1"><code>TEXPSHEADERS. </code></font></dd>
+<dd> See <code>TEXPSHEADERS. </code></dd>
 <dt><code>TEXCONFIG</code></dt>
 <dd> Colon-separated list of paths to search for map files. An extra colon in the list will include the compiled-in default paths at that point. A double slash will enable recursive subdirectory searching at that point in the path.</dd>
 <dt><code>TFMFONTS</code></dt>
-<dd> Colon-separated list of paths to search for the .<i>tfm</i> file associated with the font. Double slashes and extra colons behave as with <font SIZE="-1"><code>TEXCONFIG. </code></font> This information may also be supplied by using the environment variables <font SIZE="-1"><code>TFMFONTS </code></font> or <font SIZE="-1"><code>GSFTOPKFONTS. </code></font> These environment variables are checked in the order <font SIZE="-1"><code>GSFTOPKFONTS, </code></font> <font SIZE="-1"><code>TFMFONTS, </code></font> <font SIZE="-1"><code>TFMFONTS; </code></font> the first one (if any) having a value is used.</dd>
+<dd> Colon-separated list of paths to search for the .<i>tfm</i> file associated with the font. Double slashes and extra colons behave as with <code>TEXCONFIG. </code> This information may also be supplied by using the environment variables <code>TFMFONTS </code> or <code>GSFTOPKFONTS. </code> These environment variables are checked in the order <code>GSFTOPKFONTS, </code> <code>TFMFONTS, </code> <code>TFMFONTS; </code> the first one (if any) having a value is used.</dd>
 <dt><code>TEXPSHEADERS</code></dt>
-<dd> Colon-separated list of paths to search for the Ghostscript driver file <code>render.ps</code> and for any PostScript header or font files (.<i>enc</i>, .<i>pfa</i>, .<i>pfb</i>, .<i>gsf</i>, or .<i>ttf</i> files). Double slashes and extra colons behave as with <font SIZE="-1"><code>TEXCONFIG. </code></font> This information may also be supplied by using the environment variables <font SIZE="-1"><code>PSHEADERS </code></font> or <font SIZE="-1"><code>GSFTOPKHEADERS. </code></font> These environment variables are checked in the order <font SIZE="-1"><code>GSFTOPKHEADERS, </code></font> <font SIZE="-1"><code>TEXPSHEADERS, </code></font> <font SIZE="-1"><code>PSHEADERS; </code></font> the first one (if any) having a value is used.</dd>
+<dd> Colon-separated list of paths to search for the Ghostscript driver file <code>render.ps</code> and for any PostScript header or font files (.<i>enc</i>, .<i>pfa</i>, .<i>pfb</i>, .<i>gsf</i>, or .<i>ttf</i> files). Double slashes and extra colons behave as with <code>TEXCONFIG. </code> This information may also be supplied by using the environment variables <code>PSHEADERS </code> or <code>GSFTOPKHEADERS. </code> These environment variables are checked in the order <code>GSFTOPKHEADERS, </code> <code>TEXPSHEADERS, </code> <code>PSHEADERS; </code> the first one (if any) having a value is used.</dd>
 <dt><code>TFMFONTS</code></dt>
-<dd> See <font SIZE="-1"><code>TFMFONTS. </code></font></dd></dl>
+<dd> See <code>TFMFONTS. </code></dd></dl>
 <h2>CONFIGURATION</h2>
-<p> In order to determine the set of map files to be used and the path for finding PostScript files, <code>gsftopk</code> reads, in order, the files <code>config.ps</code>, <code>.dvipsrc</code>, and <code>config.gsftopk</code>. The files <code>config.ps</code> and <code>config.gsftopk</code> are searched for using the environment variable <font SIZE="-1"><code>TEXCONFIG, </code></font> the <code>Kpathsea</code> configuration file, or the compiled-in default paths. The file <code>.dvipsrc</code> is searched for in the user&#8217;s home directory. </p>
+<p> In order to determine the set of map files to be used and the path for finding PostScript files, <code>gsftopk</code> reads, in order, the files <code>config.ps</code>, <code>.dvipsrc</code>, and <code>config.gsftopk</code>. The files <code>config.ps</code> and <code>config.gsftopk</code> are searched for using the environment variable <code>TEXCONFIG, </code> the <code>Kpathsea</code> configuration file, or the compiled-in default paths. The file <code>.dvipsrc</code> is searched for in the user&#8217;s home directory. </p>
 <p> These files are in the same format as for <code>dvips</code> (as well as being in the same locations). The entries used by <code>gsftopk</code> are as follows.</p>
 <dl>
 <dt>H <i>path</i></dt>

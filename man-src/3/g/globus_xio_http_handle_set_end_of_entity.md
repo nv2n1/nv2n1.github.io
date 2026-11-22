@@ -82,7 +82,7 @@ description: "Attributes and Cntls –"
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Set the value of an HTTP request header. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>header_name</i> Name of the HTTP header to set.<br />
+<dd><i>header_name</i> Name of the HTTP header to set.<br/>
  <i>header_value</i> Value of the HTTP header</dd></dl>
 <p> Certain headers will cause the HTTP driver to behave differently than normal. This must be called before </p>
 <dl COMPACT>
@@ -109,7 +109,7 @@ description: "Attributes and Cntls –"
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Set the value of a response HTTP header. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>header_name</i> Name of the HTTP header to set.<br />
+<dd><i>header_name</i> Name of the HTTP header to set.<br/>
  <i>header_value</i> Value of the HTTP header</dd></dl>
 <p> Certain headers will cause changes in how the HTTP protocol will be handled. These include:</p>
 <dl COMPACT>

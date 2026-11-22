@@ -21,9 +21,9 @@ virtual Size numberOfAssets () const =0
 void setupExpired () const</code></pre>
 <p> Inherits <code>QuantLib::Instrument</code>.</p>
 <h3>Classes</h3>
-<p>class <code>arguments</code><br />
- <i>Arguments for multi-asset option calculation </i><br />
- class <code>results</code><br />
+<p>class <code>arguments</code><br/>
+ <i>Arguments for multi-asset option calculation </i><br/>
+ class <code>results</code><br/>
  <i>Results from multi-asset option calculation </i></p>
 <h3>Public Member Functions</h3>
 <pre><code>PathMultiAssetOption (const boost::shared_ptr&lt; StochasticProcess &gt; &amp;, const boost::shared_ptr&lt; PricingEngine &gt; &amp;engine=boost::shared_ptr&lt; PricingEngine &gt;())

@@ -19,7 +19,7 @@ description: "systemd-veritysetup [at] .service, systemd-veritysetup – Disk ve
 <p>The following commands are understood by <code>systemd-veritysetup</code>: </p>
 <p> <code>attach</code> <i>volume</i> <i>datadevice</i> <i>hashdevice</i> <i>roothash</i> [<i>option</i>&#8230;]</p>
 <dl>
-<dd>Create a block device <i>volume</i> using <i>datadevice</i> and <i>hashdevice</i> as the backing devices. <i>roothash</i> forms the root of the tree of hashes stored on <i>hashdevice</i>. See m[blue]<code>Kernel dm-verity</code>m[]<font SIZE="-2">[1]</font> documentation for details.</dd></dl>
+<dd>Create a block device <i>volume</i> using <i>datadevice</i> and <i>hashdevice</i> as the backing devices. <i>roothash</i> forms the root of the tree of hashes stored on <i>hashdevice</i>. See m[blue]<code>Kernel dm-verity</code>m[][1] documentation for details.</dd></dl>
 <p> <code>detach</code> <i>volume</i></p>
 <dl>
 <dd>Detach (destroy) the block device <i>volume</i>.</dd></dl>

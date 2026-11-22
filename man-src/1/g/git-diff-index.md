@@ -343,7 +343,7 @@ git diff - index[-m][--cached][--merge - base][&lt;common diff options&gt;]&lt;t
 <dl>
 <dt>
 </dt><dd>
-+ return frotz(nitfol, two-&gt;ptr, 1, 0);<br />
++ return frotz(nitfol, two-&gt;ptr, 1, 0);<br/>
 &#8230; &#8211; hit = frotz(nitfol, mf2.ptr, 1, 0);
 </dd></dl>
 <p> While <code>git log -G&quot;frotz\(nitfol&quot;</code> will show this commit, <code>git log -S&quot;frotz\(nitfol&quot; &#8211;pickaxe-regex</code> will not (because the number of occurrences of that string did not change). </p>
@@ -708,26 +708,26 @@ rename to a
 <dl>
 <dt>
 </dt><dd>
-diff&#8211; combined describe.c<br />
-    index fabadb8,<br />
-    cc95eb0..4866510 &#8212; -a / describe.c++ + b / describe.c<br />
-                                                @ @ @-98,<br />
-    20 &#8211; 98, 12 + 98, 20 @ @ @ return (a_date &gt; b_date) ? -1 : (a_date == b_date) ? 0<br />
-                                                                                  : 1;<br />
-}<br />
-&#8211; static void describe(char *arg) &#8211; static void describe(struct commit *cmit, int last_one)++ static void describe(char *arg, int last_one)<br />
-{<br />
-    +unsigned char sha1[20];<br />
-    +struct commit *cmit;<br />
-    struct commit_list *list;<br />
-    static int initialized = 0;<br />
-    struct commit_name *n;<br />
-    +if (get_sha1(arg, sha1) &lt; 0) + usage(describe_usage);<br />
-    +cmit = lookup_commit_reference(sha1);<br />
-    +if (!cmit) + usage(describe_usage);<br />
-    +if (!initialized)<br />
-    {<br />
-        initialized = 1;<br />
+diff&#8211; combined describe.c<br/>
+    index fabadb8,<br/>
+    cc95eb0..4866510 &#8212; -a / describe.c++ + b / describe.c<br/>
+                                                @ @ @-98,<br/>
+    20 &#8211; 98, 12 + 98, 20 @ @ @ return (a_date &gt; b_date) ? -1 : (a_date == b_date) ? 0<br/>
+                                                                                  : 1;<br/>
+}<br/>
+&#8211; static void describe(char *arg) &#8211; static void describe(struct commit *cmit, int last_one)++ static void describe(char *arg, int last_one)<br/>
+{<br/>
+    +unsigned char sha1[20];<br/>
+    +struct commit *cmit;<br/>
+    struct commit_list *list;<br/>
+    static int initialized = 0;<br/>
+    struct commit_name *n;<br/>
+    +if (get_sha1(arg, sha1) &lt; 0) + usage(describe_usage);<br/>
+    +cmit = lookup_commit_reference(sha1);<br/>
+    +if (!cmit) + usage(describe_usage);<br/>
+    +if (!initialized)<br/>
+    {<br/>
+        initialized = 1;<br/>
         for_each_ref(get_name);
 </dd></dl>
 <dl>
@@ -932,13 +932,13 @@ torvalds [at] ppc970:~/v2.6/linux&gt; git diff-index --abbrev HEAD
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> As with other commands of this type, <i>git diff-index</i> does not actually look at the contents of the file at all. So maybe <code>kernel/sched.c</code> hasn&#8217;t actually changed, and it&#8217;s just that you touched it. In either case, it&#8217;s a note that you need to <i>git update-index</i> it to make the index be in sync. </p>
 </dl>
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font> </dd>
+  <code>Note</code>  </dd>
 <p> You can have a mixture of files show up as &quot;has been updated&quot; and &quot;is still dirty in the working directory&quot; together. You can always tell which file is in which state, since the &quot;has been updated&quot; ones show a valid sha1, and the &quot;not in sync with the index&quot; ones will always have the special all-zero sha1. </p>
 </dl>
 <h2>GIT</h2>

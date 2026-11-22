@@ -16,7 +16,7 @@ description: "ldb_context –"
 <h3>Data Fields</h3>
 <p> struct <code>ldb_module</code> * <code>modules</code> </p>
 <p> struct <code>ldb_debug_ops</code> <code>debug_ops</code> </p>
-<p> struct<br />
+<p> struct<br/>
  <code>ldb_context::ldb_extended_match_entry</code> * <code>extended_match_rules</code>&quot; </p>
 <p> struct <code>ldb_utf8_fns</code> <code>utf8_fns</code> </p>
 <p> struct <code>ldb_context::ldb_opaque</code> * <code>opaque</code> </p>

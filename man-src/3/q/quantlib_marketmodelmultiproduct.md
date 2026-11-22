@@ -17,11 +17,11 @@ description: "QuantLib::MarketModelMultiProduct – market-model product"
 <p> virtual std::vector&lt; <code>Time</code> &gt; <code>possibleCashFlowTimes</code> () const =0 </p>
 <p> virtual Size <code>numberOfProducts</code> () const =0 </p>
 <p> virtual Size <code>maxNumberOfCashFlowsPerProductPerStep</code> () const =0 </p>
-<p> virtual void <code>reset</code> ()=0<br />
- <i>during simulation put product at start of path </i><br />
- virtual bool <code>nextTimeStep</code> (const <code>CurveState</code> &amp;currentState, std::vector&lt; Size &gt; &amp;numberCashFlowsThisStep, std::vector&lt; std::vector&lt; CashFlow &gt; &gt; &amp;cashFlowsGenerated)=0<br />
- <i>return value indicates whether path is finished, TRUE means done </i><br />
- virtual std::auto_ptr&lt; <code>MarketModelMultiProduct</code> &gt; <code>clone</code> () const =0<br />
+<p> virtual void <code>reset</code> ()=0<br/>
+ <i>during simulation put product at start of path </i><br/>
+ virtual bool <code>nextTimeStep</code> (const <code>CurveState</code> &amp;currentState, std::vector&lt; Size &gt; &amp;numberCashFlowsThisStep, std::vector&lt; std::vector&lt; CashFlow &gt; &gt; &amp;cashFlowsGenerated)=0<br/>
+ <i>return value indicates whether path is finished, TRUE means done </i><br/>
+ virtual std::auto_ptr&lt; <code>MarketModelMultiProduct</code> &gt; <code>clone</code> () const =0<br/>
  <i>returns a newly-allocated copy of itself </i></p>
 <h2>Detailed Description</h2>
 <p>market-model product </p>

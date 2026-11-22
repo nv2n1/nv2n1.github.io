@@ -12,16 +12,16 @@ description: "ranger – visual file manager"
 
 <p> <code>ranger</code> [<code>&#8211;version</code>] [<code>&#8211;help</code>] [<code>&#8211;debug</code>] [<code>&#8211;clean</code>] [<code>&#8211;cachedir</code>=<i>directory</i>] [<code>&#8211;confdir</code>=<i>directory</i>] [<code>&#8211;datadir</code>=<i>directory</i>] [<code>&#8211;copy-config</code>=<i>which</i>] [<code>&#8211;choosefile</code>=<i>target</i>] [<code>&#8211;choosefiles</code>=<i>target</i>] [<code>&#8211;choosedir</code>=<i>target</i>] [<code>&#8211;selectfile</code>=<i>filepath</i>] [<code>&#8211;show-only-dirs</code>] [<code>&#8211;list-unused-keys</code>] [<code>&#8211;list-tagged-files</code>=<i>tag</i>] [<code>&#8211;profile</code>] [<code>&#8211;cmd</code>=<i>command</i>] [<i>path &#8230;</i>]</p>
 <h2>DESCRIPTION</h2>
-<p> ranger is a console file manager with <font SIZE="-1">VI</font> key bindings.</p>
+<p> ranger is a console file manager with VI key bindings.</p>
 <h2>RESOURCES</h2>
 <p> This <i>manual</i> contains instructions on how to use and configure ranger. </p>
 <p> Inside <i>ranger</i>, you can press <i>?</i> for a list of key bindings, commands or settings. </p>
-<p> The file <i></i><font SIZE="-1"><i>README</i></font><i>.md</i> contains install instructions. </p>
-<p> The file <i></i><font SIZE="-1"><i>HACKING</i></font><i>.md</i> contains guidelines for code modification. </p>
+<p> The file <i></i><i>README</i><i>.md</i> contains install instructions. </p>
+<p> The file <i></i><i>HACKING</i><i>.md</i> contains guidelines for code modification. </p>
 <p> The directory <i>doc/configs</i> contains configuration files. They are usually installed to <i>/etc/ranger/config</i> and can be obtained with ranger&#8217;s &#8211;copy-config option. </p>
 <p> The directory <i>examples</i> contains reference implementations for ranger plugins, sample configuration files and some programs for integrating ranger with other software. They are usually installed to <i>/usr/share/doc/ranger/examples</i>. </p>
 <p> The man page of <code><a href="/docs/linux/man/1-rifle/">rifle</a></code>(1) describes the functions of the file opener </p>
-<p> The section <i></i><font SIZE="-1"><i>LINKS</i></font><i></i> of this man page contains further resources.</p>
+<p> The section <i></i><i>LINKS</i><i></i> of this man page contains further resources.</p>
 <h2>POSITIONAL ARGUMENTS</h2>
 <dl>
 <dt><i>path &#8230;</i></dt>
@@ -40,7 +40,7 @@ description: "ranger – visual file manager"
 <dd> Change the data directory of ranger from <tt>$XDG_DATA_HOME</tt> or ~/.local/share/ranger to &#8220;dir&#8221;.</dd>
 <dt><code>&#8211;copy-config</code>=<i>file</i></dt>
 <dd> Create copies of the default configuration files in your local configuration directory. Existing ones will not be overwritten. Possible values: <i>all</i>, <i>commands</i>, <i>commands_full</i>, <i>rc</i>, <i>rifle</i>, <i>scope</i>. </dd>
-<p> Note: You may want to disable loading of the global configuration files by exporting <i>RANGER_LOAD_DEFAULT_RC=FALSE</i> in your environment. See also: <font SIZE="-1"><code>FILES</code></font>, <font SIZE="-1"><code>ENVIRONMENT</code></font> </p>
+<p> Note: You may want to disable loading of the global configuration files by exporting <i>RANGER_LOAD_DEFAULT_RC=FALSE</i> in your environment. See also: <code>FILES</code>, <code>ENVIRONMENT</code> </p>
 <p> &#8211;copy-config=<code>commands</code> will copy only a small sample configuration file with a thoroughly commented example. It is recommended to keep this file tidy to avoid getting defunct commands on ranger upgrades. The full default commands.py can be copied with &#8211;copy-config=<code>commands_full</code>, but that file will be ignored by ranger and serves only as a reference for making your own commands.</p>
 <dt><code>&#8211;choosefile</code>=<i>targetfile</i></dt>
 <dd> Allows you to pick a file with ranger. This changes the behavior so that when you open a file, ranger will exit and write the absolute path of that file into <i>targetfile</i>.</dd>
@@ -49,7 +49,7 @@ description: "ranger – visual file manager"
 <dt><code>&#8211;choosedir</code>=<i>targetfile</i></dt>
 <dd> Allows you to pick a directory with ranger. When you exit ranger, it will write the last visited directory into <i>targetfile</i>.</dd>
 <dt><code>&#8211;selectfile</code>=<i>targetfile</i></dt>
-<dd> Open ranger with <i>targetfile</i> selected. This is a legacy option, superseded by the behavior for the <font SIZE="-1">POSITIONAL ARGUMENTS.</font></dd>
+<dd> Open ranger with <i>targetfile</i> selected. This is a legacy option, superseded by the behavior for the POSITIONAL ARGUMENTS.</dd>
 <dt><code>&#8211;show-only-dirs</code></dt>
 <dd> Display only the directories. May be used in conjunction with <code>&#8211;choosedir</code>=<i>targetfile</i>.</dd>
 <dt><code>&#8211;list-unused-keys</code></dt>
@@ -57,7 +57,7 @@ description: "ranger – visual file manager"
 <dt><code>&#8211;list-tagged-files</code>=<i>tag</i></dt>
 <dd> List all files which are tagged with the given tag. Note: Tags are single characters. The default tag is &#8220;*&#8221;</dd>
 <dt><code>&#8211;profile</code></dt>
-<dd> Print statistics of <font SIZE="-1">CPU</font> usage on exit.</dd>
+<dd> Print statistics of CPU usage on exit.</dd>
 <dt><code>&#8211;cmd</code>=<i>command</i></dt>
 <dd> Execute the command after the configuration has been read. Use this option multiple times to run multiple commands.</dd>
 <dt><code>&#8211;version</code></dt>
@@ -66,9 +66,9 @@ description: "ranger – visual file manager"
 <dd> Print a list of options and exit.</dd></dl>
 <h2>CONCEPTS</h2>
 <p> This part explains how certain parts of ranger work and how they can be used efficiently.</p>
-<h3><font SIZE="-1">TAGS</font></h3>
+<h3>TAGS</h3>
 <p> Tags are single characters which are displayed left of a filename. You can use tags however you want. Press &#8220;t&#8221; to toggle tags and &#8220;ut&#8221; to remove any tags of the selection. The default tag is an Asterisk (&#8220;*&#8221;), but you can use any tag by typing <i>&quot;&lt;tagname&gt;</i>.</p>
-<h3><font SIZE="-1">PREVIEWS</font></h3>
+<h3>PREVIEWS</h3>
 <p> By default, only text files are previewed, but you can enable external preview scripts by setting the option <tt>&quot;use_preview_script&quot;</tt> and <tt>&quot;preview_files&quot;</tt> to true. </p>
 <p> This default script is <i></i>%rangerdir<i>/data/scope.sh</i>. It contains more documentation and calls to many external programs to generate previews. They are automatically used when available but completely optional.</p>
 <dl>
@@ -96,7 +96,7 @@ description: "ranger – visual file manager"
 <dt>&#8211;</dt>
 <dd> <tt>&quot;w3mimgdisplay&quot;</tt>, <tt>&quot;ueberzug&quot;</tt>, <tt>&quot;mpv&quot;</tt>, <tt>&quot;iTerm2&quot;</tt>, <tt>&quot;kitty&quot;</tt>, <tt>&quot;terminology&quot;</tt> or <tt>&quot;urxvt&quot;</tt> for image previews</dd>
 <dt>&#8211;</dt>
-<dd> <tt>&quot;convert&quot;</tt> (from <tt>&quot;imagemagick&quot;</tt>) to auto-rotate images and for <font SIZE="-1">SVG</font> previews</dd>
+<dd> <tt>&quot;convert&quot;</tt> (from <tt>&quot;imagemagick&quot;</tt>) to auto-rotate images and for SVG previews</dd>
 <dt>&#8211;</dt>
 <dd> <tt>&quot;ffmpegthumbnailer&quot;</tt> for video thumbnails</dd>
 <dt>&#8211;</dt>
@@ -120,7 +120,7 @@ description: "ranger – visual file manager"
 <dt>&#8211;</dt>
 <dd> <tt>&quot;odt2txt&quot;</tt> for OpenDocument text files (odt, ods, odp and sxw)</dd>
 <dt>&#8211;</dt>
-<dd> <tt>&quot;python&quot;</tt> or <tt>&quot;jq&quot;</tt> for <font SIZE="-1">JSON</font> files</dd>
+<dd> <tt>&quot;python&quot;</tt> or <tt>&quot;jq&quot;</tt> for JSON files</dd>
 <dt>&#8211;</dt>
 <dd> <tt>&quot;fontimage&quot;</tt> for font previews</dd></dl>
 </dl>
@@ -134,13 +134,13 @@ description: "ranger – visual file manager"
 <p> To enable this feature, set the option <tt>&quot;preview_images_method&quot;</tt> to iterm2. </p>
 <p> This feature relies on the dimensions of the terminal&#8217;s font. By default, a width of 8 and height of 11 are used. To use other values, set the options <tt>&quot;iterm2_font_width&quot;</tt> and <tt>&quot;iterm2_font_height&quot;</tt> to the desired values. </p>
 <p> <i>kitty</i> </p>
-<p> This only works in Kitty. It requires <font SIZE="-1">PIL</font> (or pillow) to work. Allows remote image previews, for example in an ssh session. </p>
+<p> This only works in Kitty. It requires PIL (or pillow) to work. Allows remote image previews, for example in an ssh session. </p>
 <p> To enable this feature, set the option <tt>&quot;preview_images_method&quot;</tt> to kitty. </p>
 <p> <i>terminology</i> </p>
 <p> This only works in terminology. It can render vector graphics, but works only locally. </p>
 <p> To enable this feature, set the option <tt>&quot;preview_images_method&quot;</tt> to terminology. </p>
 <p> <i>ueberzug</i> </p>
-<p> U.berzug is a command line utility which draws images on terminals using child windows. It requires <font SIZE="-1">PIL</font> (or pillow) and relies on X11. This makes it compatible (in a limited way, i.e., tmux splits are not supported) with many terminals and tmux but not the Linux console or Wayland. </p>
+<p> U.berzug is a command line utility which draws images on terminals using child windows. It requires PIL (or pillow) and relies on X11. This makes it compatible (in a limited way, i.e., tmux splits are not supported) with many terminals and tmux but not the Linux console or Wayland. </p>
 <p> To enable this feature, set the option <tt>&quot;preview_images_method&quot;</tt> to ueberzug. </p>
 <p> <i>urxvt</i> </p>
 <p> This only works in urxvt compiled with pixbuf support. Does not work over ssh. </p>
@@ -153,10 +153,10 @@ description: "ranger – visual file manager"
 <p> This does not work over ssh, requires certain terminals (tested on &#8220;xterm&#8221; and &#8220;urxvt&#8221;) and is incompatible with tmux, although it works with screen. </p>
 <p> To enable this feature, install the program &#8220;w3m&#8221; and set the option <tt>&quot;preview_images_method&quot;</tt> to w3m. </p>
 <p> When using a terminal with a nonzero border which is not automatically detected, the w3m preview will be misaligned. Use the <tt>&quot;w3m_offset&quot;</tt> option to manually adjust the image offset. This should be the same value as the terminal&#8217;s border value.</p>
-<h3><font SIZE="-1">SELECTION</font></h3>
-<p> The <i>selection</i> is defined as &#8220;All marked files <font SIZE="-1">IF THERE ARE ANY,</font> otherwise the current file.&#8221; Be aware of this when using the :delete command, which deletes all files in the selection. </p>
+<h3>SELECTION</h3>
+<p> The <i>selection</i> is defined as &#8220;All marked files IF THERE ARE ANY, otherwise the current file.&#8221; Be aware of this when using the :delete command, which deletes all files in the selection. </p>
 <p> You can mark files by pressing &lt;Space&gt;, v, etc. A yellow <code>Mrk</code> symbol at the bottom right indicates that there are marked files in this directory.</p>
-<h3><font SIZE="-1">MACROS</font></h3>
+<h3>MACROS</h3>
 <p> Macros can be used in commands to abbreviate things. </p>
 <pre>
  %f   the highlighted file
@@ -189,24 +189,24 @@ description: "ranger – visual file manager"
 <pre>
  map p'&lt;any&gt; paste dest=%any_path
 </pre>
-<p> The macro <tt>%rangerdir</tt> expands to the directory of ranger&#8217;s python library, you can use it for something like this command:<br />
+<p> The macro <tt>%rangerdir</tt> expands to the directory of ranger&#8217;s python library, you can use it for something like this command:<br/>
 &nbsp;alias show_commands shell less&nbsp;<tt>%rangerdir</tt>/config/commands.py </p>
 <p> <tt>%confdir</tt> expands to the directory given by <code>&#8211;confdir</code>. </p>
 <p> <tt>%datadir</tt> expands to the directory given by <code>&#8211;datadir</code>. </p>
 <p> The macro <tt>%space</tt> expands to a space character. You can use it to add spaces to the end of a command when needed, while preventing editors to strip spaces off the end of the line automatically. </p>
 <p> To write a literal %, you need to escape it by writing %%. </p>
-<p> Note that macros are expanded twice when using chain. For example, to insert a space character in a chained command, you would write %%space:<br />
+<p> Note that macros are expanded twice when using chain. For example, to insert a space character in a chained command, you would write %%space:<br/>
 &nbsp;chain command1;&nbsp;command2%%space</p>
-<h3><font SIZE="-1">BOOKMARKS</font></h3>
+<h3>BOOKMARKS</h3>
 <p> Type <code>m&lt;key&gt;</code> to bookmark the current directory. You can re-enter this directory by typing <code>`&lt;key&gt;</code>. &lt;key&gt; can be any letter or digit. Unlike vim, both lowercase and uppercase bookmarks are persistent. </p>
 <p> Each time you jump to a bookmark, the special bookmark at key ` will be set to the last directory. So typing &#8220;&#8220;&#8221; gets you back to where you were before. </p>
 <p> Bookmarks are selectable when tabbing in the :cd command. </p>
 <p> Note: The bookmarks &#8216; (Apostrophe) and ` (Backtick) are the same.</p>
-<h3><font SIZE="-1">RIFLE</font></h3>
+<h3>RIFLE</h3>
 <p> Rifle is the file opener of ranger. It can be used as a standalone program or a python module. It is located at <i></i>$repo<i>/ranger/ext/rifle.py</i>. In contrast to other, more simple file openers, rifle can automatically find installed programs so it can be used effectively out of the box on a variety of systems. </p>
 <p> It&#8217;s configured in <i>rifle.conf</i> through a list of conditions and commands. For each line the conditions are checked and if they are met, the respective command is taken into consideration. By default, simply the first matching rule is used. In ranger, you can list and choose rules by typing &#8220;r&#8221; or simply by typing &#8220;&lt;rulenumber&gt;&lt;enter&gt;&#8221;. If you use rifle standalone, you can list all rules with the &#8220;-l&#8221; option and pick a rule with &#8220;-p &lt;number&gt;&#8221;. </p>
 <p> The rules, along with further documentation, are contained in <i></i>$repo<i>/ranger/config/rifle.conf</i>.</p>
-<h3><font SIZE="-1">FLAGS</font></h3>
+<h3>FLAGS</h3>
 <p> Flags give you a way to modify the behavior of the spawned process. They are used in the commands <tt>&quot;:open_with&quot;</tt> (key &#8220;r&#8221;) and <tt>&quot;:shell&quot;</tt> (key &#8220;!&#8221;). </p>
 <pre>
  f   Fork the process, i.e. run in background. Please use this flag
@@ -225,7 +225,7 @@ description: "ranger – visual file manager"
 <p> By default, all the flags are off unless otherwise specified in <i>rc.conf</i> key bindings or <i>rifle.conf</i> rules. You can specify as many flags as you want. An uppercase flag negates the effect: &#8220;ffcccFsf&#8221; is equivalent to &#8220;cs&#8221;. </p>
 <p> The terminal program name for the &#8220;t&#8221; flag is taken from the environment variable <tt>$TERMCMD</tt>. If it doesn&#8217;t exist, it tries to extract it from <tt>$TERM</tt>, uses &#8220;x-terminal-emulator&#8221; as a fallback, and then &#8220;xterm&#8221; if that fails. </p>
 <p> Examples: <tt>&quot;:open_with c&quot;</tt> will open the file that you currently point at, even if you have selected other files. <tt>&quot;:shell -w df&quot;</tt> will run &#8220;df&#8221; and wait for you to press Enter before switching back to ranger.</p>
-<h3><font SIZE="-1">PLUGINS</font></h3>
+<h3>PLUGINS</h3>
 <p> ranger&#8217;s plugin system consists of python files which are located in <i>~/.config/ranger/plugins/</i> and are imported in alphabetical order when starting ranger. A plugin changes rangers behavior by overwriting or extending a function that ranger uses. This allows you to change pretty much every part of ranger, but there is no guarantee that things will continue to work in future versions as the source code evolves. </p>
 <p> Adding new commands via a plugin as simple as specifying them like you would do in the <i>commands.py</i>. </p>
 <p> There are some hooks that are specifically made for the use in plugins. They are functions that start with hook_ and can be found throughout the code. </p>
@@ -236,12 +236,12 @@ description: "ranger – visual file manager"
 <pre>
  pydoc ranger.api
 </pre>
-<p> Note that you should <font SIZE="-1">NOT</font> simply overwrite a function unless you know what you&#8217;re doing. Instead, save the existing function and call it from your new one. This way, multiple plugins can use the same hook. There are several sample plugins in the <i>/usr/share/doc/ranger/examples/</i> directory, including a hello-world plugin that describes this procedure.</p>
+<p> Note that you should NOT simply overwrite a function unless you know what you&#8217;re doing. Instead, save the existing function and call it from your new one. This way, multiple plugins can use the same hook. There are several sample plugins in the <i>/usr/share/doc/ranger/examples/</i> directory, including a hello-world plugin that describes this procedure.</p>
 <h2>KEY BINDINGS</h2>
 <p> Key bindings are defined in the file <i></i>%rangerdir<i>/config/rc.conf</i>. Check this file for a list of all key bindings. You can copy it to your local configuration directory with the &#8211;copy-config=rc option. </p>
 <p> Many key bindings take an additional numeric argument. Type <i>5j</i> to move down 5 lines, <i>2l</i> to open a file in mode 2, <i>10&lt;Space&gt;</i> to mark 10 files. </p>
 <p> This list contains the most useful bindings:</p>
-<h3><font SIZE="-1">MAIN BINDINGS</font></h3>
+<h3>MAIN BINDINGS</h3>
 <dl>
 <dt>h, j, k, l</dt>
 <dd> Move left, down, up or right</dd>
@@ -258,7 +258,7 @@ description: "ranger – visual file manager"
 <dt>^R</dt>
 <dd> Reload everything</dd>
 <dt>F</dt>
-<dd> Toggle <i>freeze_files</i> setting. When active (indicated by a cyan <i></i><font SIZE="-1"><i>FROZEN</i></font><i></i> message in the status bar), directories and files will not be loaded, improving performance when all the files you need are already loaded. This does not affect file previews, which can be toggled with <i>zI</i>. Also try disabling the preview of directories with <i>zP</i>.</dd>
+<dd> Toggle <i>freeze_files</i> setting. When active (indicated by a cyan <i></i><i>FROZEN</i><i></i> message in the status bar), directories and files will not be loaded, improving performance when all the files you need are already loaded. This does not affect file previews, which can be toggled with <i>zI</i>. Also try disabling the preview of directories with <i>zP</i>.</dd>
 <dt>^L</dt>
 <dd> Redraw the screen</dd>
 <dt>i</dt>
@@ -278,11 +278,11 @@ description: "ranger – visual file manager"
 <dt>&lt;octal&gt;=, +&lt;who&gt;&lt;what&gt;, -&lt;who&gt;&lt;what&gt;</dt>
 <dd> Change the permissions of the selection. For example, <tt>&quot;777=&quot;</tt> is equivalent to <tt>&quot;chmod 777 %s&quot;</tt>, <tt>&quot;+ar&quot;</tt> does <tt>&quot;chmod a+r %s&quot;</tt>, <tt>&quot;-ow&quot;</tt> does <tt>&quot;chmod o-w %s&quot;</tt> etc.</dd>
 <dt>yy</dt>
-<dd> Copy (yank) the selection, like pressing Ctrl+C in modern <font SIZE="-1">GUI</font> programs. (You can also type &#8220;ya&#8221; to add files to the copy buffer, &#8220;yr&#8221; to remove files again, or &#8220;yt&#8221; for toggling.)</dd>
+<dd> Copy (yank) the selection, like pressing Ctrl+C in modern GUI programs. (You can also type &#8220;ya&#8221; to add files to the copy buffer, &#8220;yr&#8221; to remove files again, or &#8220;yt&#8221; for toggling.)</dd>
 <dt>dd</dt>
-<dd> Cut the selection, like pressing Ctrl+X in modern <font SIZE="-1">GUI</font> programs. (There are also &#8220;da&#8221;, &#8220;dr&#8221; and &#8220;dt&#8221; shortcuts equivalent to &#8220;ya&#8221;, &#8220;yr&#8221; and &#8220;yt&#8221;.)</dd>
+<dd> Cut the selection, like pressing Ctrl+X in modern GUI programs. (There are also &#8220;da&#8221;, &#8220;dr&#8221; and &#8220;dt&#8221; shortcuts equivalent to &#8220;ya&#8221;, &#8220;yr&#8221; and &#8220;yt&#8221;.)</dd>
 <dt>pp</dt>
-<dd> Paste the files which were previously copied or cut, like pressing Ctrl+V in modern <font SIZE="-1">GUI</font> programs. </dd>
+<dd> Paste the files which were previously copied or cut, like pressing Ctrl+V in modern GUI programs. </dd>
 <p> Conflicts will be renamed by appending an &#8216;_&#8217; (and a counter if necessary), resulting in <tt>&quot;file.ext_&quot;</tt>, <tt>&quot;file.ext_0&quot;</tt>, etc. If you prefer <tt>&quot;file_.ext&quot;</tt> you can use the <tt>&quot;paste_ext&quot;</tt> command.</p>
 <dt>po</dt>
 <dd> Paste the copied/cut files, overwriting existing files.</dd>
@@ -315,7 +315,7 @@ description: "ranger – visual file manager"
 <dt>v</dt>
 <dd> Toggle the mark-status of all files</dd>
 <dt>V</dt>
-<dd> Starts the visual mode, which selects all files between the starting point and the cursor until you press <font SIZE="-1">ESC.</font> To unselect files in the same way, use &#8220;uV&#8221;.</dd>
+<dd> Starts the visual mode, which selects all files between the starting point and the cursor until you press ESC. To unselect files in the same way, use &#8220;uV&#8221;.</dd>
 <dt>/</dt>
 <dd> Search for files in the current directory.</dd>
 <dt>:</dt>
@@ -337,7 +337,7 @@ description: "ranger – visual file manager"
 <dt>gn, ^N</dt>
 <dd> Create a new tab.</dd>
 <dt>gt, gT</dt>
-<dd> Go to the next or previous tab. You can also use <font SIZE="-1">TAB</font> and <font SIZE="-1">SHIFT+TAB</font> instead.</dd>
+<dd> Go to the next or previous tab. You can also use TAB and SHIFT+TAB instead.</dd>
 <dt>gc, ^W</dt>
 <dd> Close the current tab. The last tab cannot be closed this way.</dd>
 <dt>M</dt>
@@ -374,7 +374,7 @@ description: "ranger – visual file manager"
 <dd> Pop the topmost filter from the filter stack.</dd>
 <dt>..</dt>
 <dd> Show the current filter stack state.</dd></dl>
-<h3>READLINE-LIKE <font SIZE="-1">BINDINGS IN THE CONSOLE</font></h3>
+<h3>READLINE-LIKE BINDINGS IN THE CONSOLE</h3>
 <dl>
 <dt>^B, ^F</dt>
 <dd> Move left and right (B for back, F for forward)</dd>
@@ -431,7 +431,7 @@ setting type | example values-- -- -- -- -- -- -- -+-- -- -- -- -- -- -- -- -- -
  smart
 </pre>
 <dt>cd_tab_fuzzy [bool]</dt>
-<dd> Use fuzzy tab completion with the &#8220;cd&#8221; command. For example, <code>:cd /u/lo/b&lt;</code><font SIZE="-1"><code>TAB</code></font><code>&gt;</code> expands to <code>:cd /usr/local/bin</code>.</dd>
+<dd> Use fuzzy tab completion with the &#8220;cd&#8221; command. For example, <code>:cd /u/lo/b&lt;</code><code>TAB</code><code>&gt;</code> expands to <code>:cd /usr/local/bin</code>.</dd>
 <dt>clear_filters_on_dir_change [bool]</dt>
 <dd> If set to &#8216;true&#8217;, persistent filters would be cleared upon leaving the directory</dd>
 <dt>collapse_preview [bool] &lt;zc&gt;</dt>
@@ -483,7 +483,7 @@ setting type | example values-- -- -- -- -- -- -- -+-- -- -- -- -- -- -- -- -- -
 <dt>size_in_bytes [bool]</dt>
 <dd> Print file sizes in bytes instead of the default human-readable format.</dd>
 <dt>idle_delay [integer]</dt>
-<dd> The delay that ranger idly waits for user input, in milliseconds, with a resolution of 100ms. Lower delay reduces lag between directory updates but increases <font SIZE="-1">CPU</font> load.</dd>
+<dd> The delay that ranger idly waits for user input, in milliseconds, with a resolution of 100ms. Lower delay reduces lag between directory updates but increases CPU load.</dd>
 <dt>iterm2_font_height [integer]</dt>
 <dd> Change the assumed font height in iTerm2, which may help with iTerm image previews</dd>
 <dt>iterm2_font_width [integer]</dt>
@@ -523,7 +523,7 @@ setting type | example values-- -- -- -- -- -- -- -+-- -- -- -- -- -- -- -- -- -
 <dt>preview_images [bool]</dt>
 <dd> Draw images inside the console with the external program w3mimgpreview?</dd>
 <dt>preview_images_method [string]</dt>
-<dd> Set the preview image method. Supported methods: w3m, iterm2, urxvt, urxvt-full, terminology. See <i></i><font SIZE="-1"><i>PREVIEWS</i></font><i></i> section.</dd>
+<dd> Set the preview image method. Supported methods: w3m, iterm2, urxvt, urxvt-full, terminology. See <i></i><i>PREVIEWS</i><i></i> section.</dd>
 <dt>preview_max_size [int]</dt>
 <dd> Avoid previewing files that exceed a certain size, in bytes. Use a value of 0 to disable this feature.</dd>
 <dt>preview_script [string, none]</dt>
@@ -549,7 +549,7 @@ setting type | example values-- -- -- -- -- -- -- -+-- -- -- -- -- -- -- -- -- -
 <dt>show_selection_in_titlebar [bool]</dt>
 <dd> Add the highlighted file to the path in the titlebar</dd>
 <dt>sort_case_insensitive [bool] &lt;zc&gt;</dt>
-<dd> Sort case-insensitively? If true, &#8220;a&#8221; will be listed before &#8220;B&#8221; even though its <font SIZE="-1">ASCII</font> value is higher.</dd>
+<dd> Sort case-insensitively? If true, &#8220;a&#8221; will be listed before &#8220;B&#8221; even though its ASCII value is higher.</dd>
 <dt>sort_directories_first [bool] &lt;zd&gt;</dt>
 <dd> Sort directories first?</dd>
 <dt>sort_reverse [bool] &lt;or&gt;</dt>
@@ -566,9 +566,9 @@ setting type | example values-- -- -- -- -- -- -- -+-- -- -- -- -- -- -- -- -- -
 <dt>unicode_ellipsis [bool]</dt>
 <dd> Use a unicode &#8220;&#8230;&#8221; character instead of &#8220;~&#8221; to mark cut-off filenames?</dd>
 <dt>bidi_support [bool]</dt>
-<dd> Try to properly display file names in <font SIZE="-1">RTL</font> languages (Hebrew, Arabic) by using a <font SIZE="-1">BIDI</font> algorithm to reverse the relevant parts of the text. Requires the python-bidi pip package.</dd>
+<dd> Try to properly display file names in RTL languages (Hebrew, Arabic) by using a BIDI algorithm to reverse the relevant parts of the text. Requires the python-bidi pip package.</dd>
 <dt>update_title [bool]</dt>
-<dd> Set a window title? Updates both the <i></i><font SIZE="-1"><i>WM_NAME</i></font><i></i> and <i></i><font SIZE="-1"><i>WM_ICON_NAME</i></font><i></i> properties.</dd>
+<dd> Set a window title? Updates both the <i></i><i>WM_NAME</i><i></i> and <i></i><i>WM_ICON_NAME</i><i></i> properties.</dd>
 <dt>update_tmux_title [bool]</dt>
 <dd> Set the tmux/screen <i>window-name</i> to &#8220;ranger&#8221;?</dd>
 <dt>use_preview_script [bool] &lt;zv&gt;</dt>
@@ -600,41 +600,41 @@ setting type | example values-- -- -- -- -- -- -- -+-- -- -- -- -- -- -- -- -- -
 <h2>COMMANDS</h2>
 <p> You can enter the commands in the console which is opened by pressing &#8220;:&#8221;. </p>
 <p> You can always get a list of the currently existing commands by typing &#8220;?c&#8221; in ranger. For your convenience, this is a list of the &#8220;public&#8221; commands including their parameters, excluding descriptions: </p>
-<p>alias[newcommand][oldcommand] bulkrename<br />
-    cd[path] chain command1[; command2[; command3&#8230;]] chmod octal_number<br />
-        cmap key command<br />
-            console[-pSTARTPOSITION] command<br />
-                copycmap key newkey[newkey2&#8230;] copymap key newkey[newkey2&#8230;] copypmap key newkey[newkey2&#8230;] copytmap key newkey[newkey2&#8230;] cunmap keys&#8230; default_linemode[path = regexp | tag = tags] linemodename delete echo[text] edit[filename] eval[-q] python_code<br />
-                    filter[string] filter_inode_type[dfl] find pattern<br />
-                        flat level<br />
-                            grep pattern<br />
-                                help<br />
-                                    jump_non[-FLAGS&#8230;] linemode linemodename<br />
-                                        load_copy_buffer<br />
-                                            map key command<br />
-                                                mark pattern<br />
-                                                    mark_tag[tags] meta key value<br />
-                                                        mkdir dirname<br />
-                                                            open_with[application][flags][mode] pmap key command<br />
-                                                                prompt_metadata[key1[key2[&#8230;]]] punmap keys&#8230; quit<br />
-                                                                    quit !quitall<br />
-                                                                        quitall !relink newpath<br />
-                                                                            rename_append[-FLAGS&#8230;] rename newname<br />
-                                                                                save_copy_buffer<br />
-                                                                                    scout[-FLAGS&#8230;] pattern<br />
-                                                                                        search pattern<br />
-                                                                                            search_inc pattern<br />
-                                                                                                set option value<br />
-                                                                                                    setintag tags option value<br />
-                                                                                                        setlocal[path = &lt;path&gt;] option value<br />
-                                                                                                            shell[-FLAGS&#8230;] command<br />
-                                                                                                                source filename<br />
-                                                                                                                    terminal<br />
-                                                                                                                        tmap key command<br />
-                                                                                                                            touch filename<br />
-                                                                                                                                trash<br />
-                                                                                                                                    travel pattern<br />
-                                                                                                                                        tunmap keys&#8230; unmap keys&#8230; unmark pattern<br />
+<p>alias[newcommand][oldcommand] bulkrename<br/>
+    cd[path] chain command1[; command2[; command3&#8230;]] chmod octal_number<br/>
+        cmap key command<br/>
+            console[-pSTARTPOSITION] command<br/>
+                copycmap key newkey[newkey2&#8230;] copymap key newkey[newkey2&#8230;] copypmap key newkey[newkey2&#8230;] copytmap key newkey[newkey2&#8230;] cunmap keys&#8230; default_linemode[path = regexp | tag = tags] linemodename delete echo[text] edit[filename] eval[-q] python_code<br/>
+                    filter[string] filter_inode_type[dfl] find pattern<br/>
+                        flat level<br/>
+                            grep pattern<br/>
+                                help<br/>
+                                    jump_non[-FLAGS&#8230;] linemode linemodename<br/>
+                                        load_copy_buffer<br/>
+                                            map key command<br/>
+                                                mark pattern<br/>
+                                                    mark_tag[tags] meta key value<br/>
+                                                        mkdir dirname<br/>
+                                                            open_with[application][flags][mode] pmap key command<br/>
+                                                                prompt_metadata[key1[key2[&#8230;]]] punmap keys&#8230; quit<br/>
+                                                                    quit !quitall<br/>
+                                                                        quitall !relink newpath<br/>
+                                                                            rename_append[-FLAGS&#8230;] rename newname<br/>
+                                                                                save_copy_buffer<br/>
+                                                                                    scout[-FLAGS&#8230;] pattern<br/>
+                                                                                        search pattern<br/>
+                                                                                            search_inc pattern<br/>
+                                                                                                set option value<br/>
+                                                                                                    setintag tags option value<br/>
+                                                                                                        setlocal[path = &lt;path&gt;] option value<br/>
+                                                                                                            shell[-FLAGS&#8230;] command<br/>
+                                                                                                                source filename<br/>
+                                                                                                                    terminal<br/>
+                                                                                                                        tmap key command<br/>
+                                                                                                                            touch filename<br/>
+                                                                                                                                trash<br/>
+                                                                                                                                    travel pattern<br/>
+                                                                                                                                        tunmap keys&#8230; unmap keys&#8230; unmark pattern<br/>
                                                                                                                                             unmark_tag[tags]</p>
 <p> There are additional commands which are directly translated to python functions, one for every method in the ranger.core.actions.Actions class. They are not documented here, since they are mostly for key bindings, not to be typed in by a user. Read the source if you are interested in them. </p>
 <p> These are the public commands including their descriptions:</p>
@@ -667,11 +667,11 @@ setting type | example values-- -- -- -- -- -- -- -+-- -- -- -- -- -- -- -- -- -
 <dt>default_linemode [<i>path=regexp</i> | <i>tag=tags</i>] <i>linemodename</i></dt>
 <dd> Sets the default linemode. See <i>linemode</i> command. </dd>
 <p> Examples: </p>
-<p> Set the global default linemode to &#8220;permissions&#8221;:<br />
+<p> Set the global default linemode to &#8220;permissions&#8221;:<br/>
 &nbsp;:default_linemode permissions </p>
-<p> Set the default linemode to &#8220;permissions&#8221; for all files tagged with &#8220;p&#8221; or &#8220;P&#8221;:<br />
+<p> Set the default linemode to &#8220;permissions&#8221; for all files tagged with &#8220;p&#8221; or &#8220;P&#8221;:<br/>
 &nbsp;:default_linemode tag=pP permissions </p>
-<p> Set the default linemode for all files in ~/books/ to &#8220;metatitle&#8221;:<br />
+<p> Set the default linemode for all files in ~/books/ to &#8220;metatitle&#8221;:<br/>
 &nbsp;:default_linemode path=/home/.*?/books/.*&nbsp;metatitle</p>
 <dt>delete</dt>
 <dd> Destroy all files in the selection with a roundhouse kick. ranger will ask for a confirmation if you attempt to delete multiple (marked) files or non-empty directories. This can be changed by modifying the setting &#8220;confirm_on_delete&#8221;.</dd>
@@ -680,10 +680,10 @@ setting type | example values-- -- -- -- -- -- -- -+-- -- -- -- -- -- -- -- -- -
 <dt>edit [<i>filename</i>]</dt>
 <dd> Edit the current file or the file in the argument.</dd>
 <dt>eval [<i>-q</i>] <i>python_code</i></dt>
-<dd> Evaluates the python code. `fm&#8217; is a reference to the <font SIZE="-1">FM</font> instance. To display text, use the function `p&#8217;. The result is displayed on the screen unless you use the &#8220;-q&#8221; option. </dd>
-<p> Examples:<br />
-&nbsp;:eval fm<br />
-&nbsp;:eval len(fm.tabs)<br />
+<dd> Evaluates the python code. `fm&#8217; is a reference to the FM instance. To display text, use the function `p&#8217;. The result is displayed on the screen unless you use the &#8220;-q&#8221; option. </dd>
+<p> Examples:<br/>
+&nbsp;:eval fm<br/>
+&nbsp;:eval len(fm.tabs)<br/>
 &nbsp;:eval p(&#8220;Hello World!&#8221;)</p>
 <dt>filter [<i>string</i>]</dt>
 <dd> Displays only the files which contain the <i>string</i> in their basename. Running this command without any parameter will reset the filter. </dd>
@@ -706,28 +706,28 @@ setting type | example values-- -- -- -- -- -- -- -+-- -- -- -- -- -- -- -- -- -
 <p> Available subcommands:</p>
 <dl>
 <dl>
-<dt>add <font SIZE="-1">FILTER_TYPE</font> [<font SIZE="-1">ARGS&#8230;</font>]</dt>
+<dt>add FILTER_TYPE [ARGS&#8230;]</dt>
 <dd> Add a new filter to the top of the filter stack. Each filter on the stack is applied in turn, resulting in an implicit logical <tt>&quot;AND&quot;</tt> relation. The following <tt>&quot;FILTER_TYPE&quot;</tt>s are available:</dd>
 <dl>
 <dl>
 <dt>duplicate</dt>
 <dd> Filter files so only files that have duplicates in the same directory are shown. Useful when cleaning up identical songs and memes that were saved using distinct file names.</dd>
-<dt>filename <font SIZE="-1">NAME</font></dt>
-<dd> Filter files that contain <font SIZE="-1">NAME</font> in the filename, regular expression syntax is allowed.</dd>
-<dt>hash <font SIZE="-1">PATH</font></dt>
-<dd> Filter files so only files with the same hash as <font SIZE="-1">PATH</font> are shown.</dd>
-<dt>mimetype <font SIZE="-1">TYPE</font></dt>
-<dd> Filter files of a certain <font SIZE="-1">MIME</font> type, regular expression syntax is allowed.</dd>
+<dt>filename NAME</dt>
+<dd> Filter files that contain NAME in the filename, regular expression syntax is allowed.</dd>
+<dt>hash PATH</dt>
+<dd> Filter files so only files with the same hash as PATH are shown.</dd>
+<dt>mimetype TYPE</dt>
+<dd> Filter files of a certain MIME type, regular expression syntax is allowed.</dd>
 <dt>typefilter [d|f|l]</dt>
 <dd> Filter files of a certain type, <tt>&quot;d&quot;</tt> for directories, <tt>&quot;f&quot;</tt> for files and <tt>&quot;l&quot;</tt> for symlinks.</dd>
 <dt>unique</dt>
 <dd> Filter files so only unique files and the oldest file of every set of duplicates is shown.</dd>
 <dt>and</dt>
-<dd> Explicitly combine the two topmost filters in the &#8220;<font SIZE="-1">AND&#8221;</font> relationship. Usually not needed because filters are implicitly in this relationship though might be useful in more complicated scenarios.</dd>
+<dd> Explicitly combine the two topmost filters in the &#8220;AND&#8221; relationship. Usually not needed because filters are implicitly in this relationship though might be useful in more complicated scenarios.</dd>
 <dt>not</dt>
 <dd> Negate the topmost filter.</dd>
 <dt>or</dt>
-<dd> Combine the two topmost filters from the filter stack in the &#8220;<font SIZE="-1">OR&#8221;</font> relationship, instead of the &#8220;<font SIZE="-1">AND&#8221;</font> used implicitly.</dd></dl>
+<dd> Combine the two topmost filters from the filter stack in the &#8220;OR&#8221; relationship, instead of the &#8220;AND&#8221; used implicitly.</dd></dl>
 </dl>
 <dl>
 </dl>
@@ -755,8 +755,8 @@ setting type | example values-- -- -- -- -- -- -- -+-- -- -- -- -- -- -- -- -- -
 <dd> Provides a quick way to view ranger documentations.</dd>
 <dt>jump_non [-<i>flags</i>&#8230;]</dt>
 <dd> Jumps to first non-directory if highlighted file is a directory and vice versa. </dd>
-<p> Flags:<br />
-&nbsp;-r&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Jump in reverse order<br />
+<p> Flags:<br/>
+&nbsp;-r&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Jump in reverse order<br/>
 &nbsp;-w&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Wrap around if reaching end of filelist</p>
 <dt>linemode <i>linemodename</i></dt>
 <dd> Sets the linemode of all files in the current directory. The linemode may be: </dd>
@@ -827,27 +827,27 @@ setting type | example values-- -- -- -- -- -- -- -+-- -- -- -- -- -- -- -- -- -
 <dd> Rename the current file. If a file with that name already exists, the renaming will fail. Also try the key binding A for appending something to a file name.</dd>
 <dt>rename_append [-<i>flags</i>&#8230;]</dt>
 <dd> Opens the console with &#8220;:rename &lt;current file&gt;&#8221; with the cursor positioned before the file extension. </dd>
-<p> Flags:<br />
-&nbsp;-a&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Position before all extensions<br />
+<p> Flags:<br/>
+&nbsp;-a&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Position before all extensions<br/>
 &nbsp;-r&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Remove everything before extensions</p>
 <dt>save_copy_buffer</dt>
 <dd> Save the copy buffer to <i>~/.config/ranger/copy_buffer</i>. This can be used to pass the list of copied files to another ranger instance.</dd>
 <dt>scout [-<i>flags</i>&#8230;] [&#8211;] <i>pattern</i></dt>
 <dd> Swiss army knife command for searching, traveling and filtering files. </dd>
-<p> Flags:<br />
-&nbsp;-a&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Automatically open a file on unambiguous match<br />
-&nbsp;-e&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Open the selected file when pressing enter<br />
-&nbsp;-f&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Filter files that match the current search pattern<br />
-&nbsp;-g&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Interpret pattern as a glob pattern<br />
-&nbsp;-i&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Ignore the letter case of the files<br />
-&nbsp;-k&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Keep the console open when changing a directory with the command<br />
-&nbsp;-l&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Letter skipping;&nbsp;e.g. allow&nbsp;&#8220;rdme&#8221;&nbsp;to match the file&nbsp;&#8220;readme&#8221;<br />
-&nbsp;-m&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Mark the matching files after pressing enter<br />
-&nbsp;-M&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Unmark the matching files after pressing enter<br />
-&nbsp;-p&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Permanent filter: hide non-matching files after pressing enter<br />
-&nbsp;-r&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Interpret pattern as a regular expression pattern<br />
-&nbsp;-s&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Smart case;&nbsp;like -i unless pattern contains upper case letters<br />
-&nbsp;-t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Apply filter and search pattern as you type<br />
+<p> Flags:<br/>
+&nbsp;-a&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Automatically open a file on unambiguous match<br/>
+&nbsp;-e&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Open the selected file when pressing enter<br/>
+&nbsp;-f&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Filter files that match the current search pattern<br/>
+&nbsp;-g&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Interpret pattern as a glob pattern<br/>
+&nbsp;-i&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Ignore the letter case of the files<br/>
+&nbsp;-k&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Keep the console open when changing a directory with the command<br/>
+&nbsp;-l&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Letter skipping;&nbsp;e.g. allow&nbsp;&#8220;rdme&#8221;&nbsp;to match the file&nbsp;&#8220;readme&#8221;<br/>
+&nbsp;-m&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Mark the matching files after pressing enter<br/>
+&nbsp;-M&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Unmark the matching files after pressing enter<br/>
+&nbsp;-p&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Permanent filter: hide non-matching files after pressing enter<br/>
+&nbsp;-r&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Interpret pattern as a regular expression pattern<br/>
+&nbsp;-s&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Smart case;&nbsp;like -i unless pattern contains upper case letters<br/>
+&nbsp;-t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Apply filter and search pattern as you type<br/>
 &nbsp;-v&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Inverts the match </p>
 <p> Multiple flags can be combined. For example, &#8220;:scout -gpt&#8221; would create a :filter-like command using globbing.</p>
 <dt>search <i>pattern</i></dt>
@@ -889,7 +889,7 @@ setting type | example values-- -- -- -- -- -- -- -+-- -- -- -- -- -- -- -- -- -
 <dt>trash</dt>
 <dd> Move all files in the selection to the trash using rifle. Rifle tries to use a trash manager like <i>trash-cli</i> if available but will fall back to moving files to either <i></i>$XDG_DATA_HOME<i>/ranger-trash</i> or <i>~/.ranger/ranger-trash</i>. This is a less permanent version of <i>delete</i>, relying on the user to clear out the trash whenever it&#8217;s convenient. While having the possibility of restoring trashed files until this happens. ranger will ask for a confirmation if you attempt to trash multiple (marked) files or non-empty directories. This can be changed by modifying the setting &#8220;confirm_on_delete&#8221;.</dd>
 <dt>travel <i>pattern</i></dt>
-<dd> Filters the current directory for files containing the letters in the string, possibly with other letters in between. The filter is applied as you type. When only one directory is left, it is entered and the console is automatically reopened, allowing for fast travel. To close the console, press <font SIZE="-1">ESC</font> or execute a file. </dd>
+<dd> Filters the current directory for files containing the letters in the string, possibly with other letters in between. The filter is applied as you type. When only one directory is left, it is entered and the console is automatically reopened, allowing for fast travel. To close the console, press ESC or execute a file. </dd>
 <p> This command is based on the <i>scout</i> command and supports all of its options.</p>
 <dt>unmap [<i>keys</i> &#8230;]</dt>
 <dd>
@@ -906,9 +906,9 @@ setting type | example values-- -- -- -- -- -- -- -+-- -- -- -- -- -- -- -- -- -
 <dd> Unmark all tags that are tagged with either of the given tags. When leaving out the tag argument, all tagged files are unmarked.</dd></dl>
 <h2>FILES</h2>
 <p> ranger reads several configuration files which are located in <i></i>$HOME<i>/.config/ranger</i> or <i></i>$XDG_CONFIG_HOME<i>/ranger</i> if <tt>$XDG_CONFIG_HOME</tt> is defined. You can use the &#8211;copy-config option to obtain the default configuration files. The files contain further documentation. </p>
-<p> <i>rc.conf</i>, <i>commands.py</i> and <i>colorschemes</i> do not need to be copied fully as they will only be adding to the default configuration files except if explicitly overridden. This may lead to some confusing situations, for example when a key is being bound despite the corresponding line being removed from the user&#8217;s copy of the configuration file. This behavior may be disabled with an environment variable (see also: <font SIZE="-1"><code>ENVIRONMENT</code></font>). Note: All other configuration files only read from one source; i.e. default <font SIZE="-1">OR</font> user, not both. <i>rc.conf</i> and <i>commands.py</i> are additionally read from <i>/etc/ranger</i> if they exist for system-wide configuration, user configuration overrides system configuration which overrides the default configuration. </p>
+<p> <i>rc.conf</i>, <i>commands.py</i> and <i>colorschemes</i> do not need to be copied fully as they will only be adding to the default configuration files except if explicitly overridden. This may lead to some confusing situations, for example when a key is being bound despite the corresponding line being removed from the user&#8217;s copy of the configuration file. This behavior may be disabled with an environment variable (see also: <code>ENVIRONMENT</code>). Note: All other configuration files only read from one source; i.e. default OR user, not both. <i>rc.conf</i> and <i>commands.py</i> are additionally read from <i>/etc/ranger</i> if they exist for system-wide configuration, user configuration overrides system configuration which overrides the default configuration. </p>
 <p> When starting ranger with the <code>&#8211;clean</code> option, it will not access or create any of these files.</p>
-<h3><font SIZE="-1">CONFIGURATION</font></h3>
+<h3>CONFIGURATION</h3>
 <dl>
 <dt>rc.conf</dt>
 <dd> Contains a list of commands which are executed on startup. Mostly key bindings and settings are defined here.</dd>
@@ -924,7 +924,7 @@ setting type | example values-- -- -- -- -- -- -- -+-- -- -- -- -- -- -- -- -- -
 <dd> Colorschemes can be placed here.</dd>
 <dt>plugins/</dt>
 <dd> Plugins can be placed here.</dd></dl>
-<h3><font SIZE="-1">STORAGE</font></h3>
+<h3>STORAGE</h3>
 <dl>
 <dt>bookmarks</dt>
 <dd> This file contains a list of bookmarks. The syntax is /^(.):(.*)$/. The first character is the bookmark key and the rest after the colon is the path to the file. In ranger, bookmarks can be set by typing m&lt;key&gt;, accessed by typing &#8216;&lt;key&gt; and deleted by typing um&lt;key&gt;.</dd>
@@ -937,37 +937,37 @@ setting type | example values-- -- -- -- -- -- -- -+-- -- -- -- -- -- -- -- -- -
 <h2>ENVIRONMENT</h2>
 <p> These environment variables have an effect on ranger:</p>
 <dl>
-<dt><font SIZE="-1">RANGER_LEVEL</font></dt>
+<dt>RANGER_LEVEL</dt>
 <dd> ranger sets this environment variable to &#8220;1&#8221; or increments it if it already exists. External programs can determine whether they were spawned from ranger by checking for this variable.</dd>
-<dt><font SIZE="-1">RANGER_LOAD_DEFAULT_RC</font></dt>
-<dd> If this variable is set to <font SIZE="-1">FALSE,</font> ranger will not load the default rc.conf. This can save time if you copied the whole rc.conf to <i>~/.config/ranger/</i> and don&#8217;t need the default one at all.</dd>
-<dt><font SIZE="-1">VISUAL</font></dt>
-<dd> Defines the editor to be used for the &#8220;E&#8221; key. Falls back to <font SIZE="-1">EDITOR</font> if undefined or empty.</dd>
-<dt><font SIZE="-1">EDITOR</font></dt>
-<dd> Defines the editor to be used for the &#8220;E&#8221; key if <font SIZE="-1">VISUAL</font> is undefined or empty. Defaults to &#8220;vim&#8221;.</dd>
-<dt><font SIZE="-1">SHELL</font></dt>
+<dt>RANGER_LOAD_DEFAULT_RC</dt>
+<dd> If this variable is set to FALSE, ranger will not load the default rc.conf. This can save time if you copied the whole rc.conf to <i>~/.config/ranger/</i> and don&#8217;t need the default one at all.</dd>
+<dt>VISUAL</dt>
+<dd> Defines the editor to be used for the &#8220;E&#8221; key. Falls back to EDITOR if undefined or empty.</dd>
+<dt>EDITOR</dt>
+<dd> Defines the editor to be used for the &#8220;E&#8221; key if VISUAL is undefined or empty. Defaults to &#8220;vim&#8221;.</dd>
+<dt>SHELL</dt>
 <dd> Defines the shell that ranger is going to use with the :shell command and the &#8220;S&#8221; key. Defaults to &#8220;/bin/sh&#8221;.</dd>
-<dt><font SIZE="-1">TERMCMD</font></dt>
+<dt>TERMCMD</dt>
 <dd> Defines the terminal emulator command that ranger is going to use with the :terminal command and the &#8220;t&#8221; run flag. Defaults to &#8220;xterm&#8221;.</dd>
-<dt><font SIZE="-1">BAT_STYLE</font></dt>
+<dt>BAT_STYLE</dt>
 <dd> Specifies the theme to be used for syntax highlighting when <i>bat</i> is installed, unless <i>highlight</i> is also installed. Find out possible values by running <tt>&quot;bat --list-themes&quot;</tt>.</dd>
-<dt><font SIZE="-1">PYGMENTIZE_STYLE</font></dt>
-<dd> Specifies the theme to be used for syntax highlighting when <i>pygmentize</i> is installed, unless <i>highlight</i> is also installed. Find out possible values by running:<br />
-&nbsp;python -c&nbsp;&#8216;import pygments.styles;&nbsp;[print(stl)&nbsp;for stl in<br />
+<dt>PYGMENTIZE_STYLE</dt>
+<dd> Specifies the theme to be used for syntax highlighting when <i>pygmentize</i> is installed, unless <i>highlight</i> is also installed. Find out possible values by running:<br/>
+&nbsp;python -c&nbsp;&#8216;import pygments.styles;&nbsp;[print(stl)&nbsp;for stl in<br/>
 &nbsp;pygments.styles.<code>get_all_styles()</code>]&#8217;</dd>
-<dt><font SIZE="-1">HIGHLIGHT_STYLE</font></dt>
+<dt>HIGHLIGHT_STYLE</dt>
 <dd> Specifies the theme to be used for syntax highlighting when <i>highlight</i> is installed. Find out possible values by running <tt>&quot;highlight --list-themes&quot;</tt>.</dd>
-<dt><font SIZE="-1">HIGHLIGHT_TABWIDTH</font></dt>
+<dt>HIGHLIGHT_TABWIDTH</dt>
 <dd> Specifies the number of spaces to use to replace tabs in <i>highlight</i>ed files.</dd>
-<dt><font SIZE="-1">HIGHLIGHT_OPTIONS</font></dt>
+<dt>HIGHLIGHT_OPTIONS</dt>
 <dd> <i>highlight</i> will pick up command line options specified in this variable. A <tt>&quot;--style=&quot;</tt> option specified here will override <tt>&quot;HIGHLIGHT_STYLE&quot;</tt>. Similarly, <tt>&quot;--replace-tabs=&quot;</tt> will override <tt>&quot;HIGHLIGHT_TABWIDTH&quot;</tt>.</dd>
-<dt><font SIZE="-1">OPENSCAD_COLORSCHEME</font></dt>
+<dt>OPENSCAD_COLORSCHEME</dt>
 <dd> Specifies the colorscheme used by <i>openscad</i> while previewing 3D models. Read <i>openscad</i> man page for colorschemes. Ranger will default to Tomorrow Night.</dd>
-<dt><font SIZE="-1">OPENSCAD_IMGSIZE</font></dt>
+<dt>OPENSCAD_IMGSIZE</dt>
 <dd> Specifies the internal resolution <i>openscad</i> will use for rendering 3D models. The image will be downscaled to fit the preview pane. This resolution will default to &#8220;1000,1000&#8221; if no value is set.</dd>
-<dt><font SIZE="-1">XDG_CONFIG_HOME</font></dt>
+<dt>XDG_CONFIG_HOME</dt>
 <dd> Specifies the directory for configuration files. Defaults to <i></i>$HOME<i>/.config</i>.</dd>
-<dt><font SIZE="-1">PYTHONOPTIMIZE</font></dt>
+<dt>PYTHONOPTIMIZE</dt>
 <dd> This variable determines the optimize level of python. </dd>
 <p> Using PYTHONOPTIMIZE=1 (like python -O) will make python discard assertion statements. You will gain efficiency at the cost of losing some debug info. </p>
 <p> Using PYTHONOPTIMIZE=2 (like python -OO) will additionally discard any docstrings. Using this will disable the &lt;F1&gt; key on commands.</p>
@@ -976,7 +976,7 @@ setting type | example values-- -- -- -- -- -- -- -+-- -- -- -- -- -- -- -- -- -
 <h2>EXAMPLES</h2>
 <p> There are various examples on how to extend ranger with plugins or combine ranger with other programs. These can be found in the <i>/usr/share/doc/ranger/examples/</i> directory, or the <i>doc/ranger/</i> that is provided along with the source code.</p>
 <h2>LICENSE</h2>
-<p> <font SIZE="-1">GNU</font> General Public License 3 or (at your option) any later version.</p>
+<p> GNU General Public License 3 or (at your option) any later version.</p>
 <h2>LINKS</h2>
 <dl>
 <dt>Download: &lt;<a rel="nofollow" href="https://ranger.github.io/ranger-stable.tar.gz">https://ranger.github.io/ranger-stable.tar.gz</a>&gt;</dt>
@@ -985,7 +985,7 @@ setting type | example values-- -- -- -- -- -- -- -+-- -- -- -- -- -- -- -- -- -
 <dd>
 </dd><dt>The mailing list: &lt;<a rel="nofollow" href="https://savannah.nongnu.org/mail/?group=ranger">https://savannah.nongnu.org/mail/?group=ranger</a>&gt;</dt>
 <dd>
-</dd><dt><font SIZE="-1">IRC</font> channel: #ranger on freenode.net</dt>
+</dd><dt>IRC channel: #ranger on freenode.net</dt>
 <dd></dd></dl>
 <p> ranger is maintained with the git version control system. To fetch a fresh copy, run: </p>
 <pre>

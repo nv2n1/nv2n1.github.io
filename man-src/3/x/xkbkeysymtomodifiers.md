@@ -10,7 +10,7 @@ description: "XkbKeysymToModifiers – Finds the set of modifiers bound to a par
 <p>XkbKeysymToModifiers &#8211; Finds the set of modifiers bound to a particular keysym on the core keyboard </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>unsigned int XkbKeysymToModifiers</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>KeySym </code><i>ks</i><code>);</code><br />
+<dt> <code>unsigned int XkbKeysymToModifiers</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>KeySym </code><i>ks</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

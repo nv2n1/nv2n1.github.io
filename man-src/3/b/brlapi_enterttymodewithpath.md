@@ -72,8 +72,8 @@ description: "Entering & leaving tty mode –"
 <p>Ask for some tty specified by its path in the tty tree, with some key mechanism </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ttys</i> points on the array of ttys representing the tty path to be got. Can be NULL if nttys is 0.<br />
- <i>count</i> gives the number of elements in ttys.<br />
+<dd><i>ttys</i> points on the array of ttys representing the tty path to be got. Can be NULL if nttys is 0.<br/>
+ <i>count</i> gives the number of elements in ttys.<br/>
  <i>driver</i> has the same meaning as in <code>brlapi_enterTtyMode()</code></dd></dl>
 <p> Providing nttys == 0 means to get the root. </p>
 <p> <code>See Also:</code></p>

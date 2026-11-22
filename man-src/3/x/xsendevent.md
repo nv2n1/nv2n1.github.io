@@ -52,8 +52,8 @@ description: "XSendEvent, XDisplayMotionBufferSize, XGetMotionEvents, XTimeCoord
 <p> The <code>XGetMotionEvents</code> function returns all events in the motion history buffer that fall between the specified start and stop times, inclusive, and that have coordinates that lie within the specified window (including its borders) at its present placement. If the server does not support motion history, if the start time is later than the stop time, or if the start time is in the future, no events are returned; <code>XGetMotionEvents</code> returns NULL. If the stop time is in the future, it is equivalent to specifying <code>CurrentTime</code>. <code>XGetMotionEvents</code> can generate a <code>BadWindow</code> error.</p>
 <h2>Structures</h2>
 <p>The <code>XTimeCoord</code> structure contains: </p>
-<p> typedef struct {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Time time;<br />
+<p> typedef struct {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Time time;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;short x, y; } XTimeCoord; </p>
 <p> The time member is set to the time, in milliseconds. The x and y members are set to the coordinates of the pointer and are reported relative to the origin of the specified window.</p>
 <h2>Diagnostics</h2>
@@ -63,5 +63,5 @@ description: "XSendEvent, XDisplayMotionBufferSize, XGetMotionEvents, XTimeCoord
 <dt><code>BadWindow</code></dt>
 <dd>A value for a Window argument does not name a defined Window.</dd></dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xanyevent/">XAnyEvent</a>(3), <a href="/docs/linux/man/3-xifevent/">XIfEvent</a>(3), <a href="/docs/linux/man/3-xnextevent/">XNextEvent</a>(3), <a href="/docs/linux/man/3-xputbackevent/">XPutBackEvent</a>(3)<br />
+<p><a href="/docs/linux/man/3-xanyevent/">XAnyEvent</a>(3), <a href="/docs/linux/man/3-xifevent/">XIfEvent</a>(3), <a href="/docs/linux/man/3-xnextevent/">XNextEvent</a>(3), <a href="/docs/linux/man/3-xputbackevent/">XPutBackEvent</a>(3)<br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

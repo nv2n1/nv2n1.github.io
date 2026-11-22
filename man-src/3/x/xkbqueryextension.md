@@ -10,7 +10,7 @@ description: "XkbQueryExtension – Determines the compatibility of a library at
 <p>XkbQueryExtension &#8211; Determines the compatibility of a library at runtime. </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Bool XkbQueryExtension</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>int *</code><i>opcode_rtrn</i><code>,</code> <code>int *</code><i>event_rtrn</i><code>,</code> <code>int *</code><i>error_rtrn</i><code>,</code> <code>int *</code><i>major_in_out</i><code>,</code> <code>int *</code><i>minor_in_out</i><code>);</code><br />
+<dt> <code>Bool XkbQueryExtension</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>int *</code><i>opcode_rtrn</i><code>,</code> <code>int *</code><i>event_rtrn</i><code>,</code> <code>int *</code><i>error_rtrn</i><code>,</code> <code>int *</code><i>major_in_out</i><code>,</code> <code>int *</code><i>minor_in_out</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
@@ -28,7 +28,7 @@ description: "XkbQueryExtension – Determines the compatibility of a library at
 <dt><i>minor_in_out</i></dt>
 <dd>compile time lib min version in, server minor version out</dd></dl>
 <h2>Description</h2>
-<p>Call <i>XkbQueryExtension </i> to check for the presence and compatibility of the extension in the server and to initialize the extension. Because of potential version mismatches, you cannot use the generic extension mechanism functions ( <i>XQueryExtension </i> and <i>XInitExtension</i> ) for checking for the presence of, and initializing the Xkb extension.<br />
+<p>Call <i>XkbQueryExtension </i> to check for the presence and compatibility of the extension in the server and to initialize the extension. Because of potential version mismatches, you cannot use the generic extension mechanism functions ( <i>XQueryExtension </i> and <i>XInitExtension</i> ) for checking for the presence of, and initializing the Xkb extension.<br/>
 &nbsp; You must call <i>XkbQueryExtension </i> or <i>XkbOpenDisplay </i> before using any other Xkb library interfaces, unless such usage is explicitly allowed in the interface description in this document. The exceptions are: <i>XkbIgnoreExtension, XkbLibraryVersion, </i> and a handful of audible-bell functions. You should not use any other Xkb functions if the extension is not present or is uninitialized. In general, calls to Xkb library functions made prior to initializing the Xkb extension cause BadAccess protocol errors. </p>
 <p> <i>XkbQueryExtension </i> both determines whether a compatible Xkb extension is present in the X server and initializes the extension when it is present. </p>
 <p> The <i>XkbQueryExtension </i> function determines whether a compatible version of the X Keyboard Extension is present in the server. If a compatible extension is present, <i>XkbQueryExtension </i> returns True; otherwise, it returns False. </p>

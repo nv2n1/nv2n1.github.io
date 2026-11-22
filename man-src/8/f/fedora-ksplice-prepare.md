@@ -26,5 +26,5 @@ description: "fedora-ksplice-prepare – Prepare kernel sources for KSplice"
 <h2>Reporting Bugs</h2>
 <p>Report bugs to to &lt;Jochen [at] herr-schmitt.de&gt;</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2008 Jochen Schmitt License GPLv3+ GNU GPL version 3 or later &lt;<a rel="nofollow" href="http://www.gnu.org/license/gpl.html">http://www.gnu.org/license/gpl.html</a>&gt;<br />
+<p>Copyright &#169; 2008 Jochen Schmitt License GPLv3+ GNU GPL version 3 or later &lt;<a rel="nofollow" href="http://www.gnu.org/license/gpl.html">http://www.gnu.org/license/gpl.html</a>&gt;<br/>
  Tnis is free software: you are free to chage and redistribute it. There is NO WARRENTY, to the extent permitted by law.</p>

@@ -10,14 +10,14 @@ description: "ql/pricingengines/vanilla/fdvanillaengine.hpp – Finite-differenc
 
 <p> ql/pricingengines/vanilla/fdvanillaengine.hpp &#8211; Finite-differences vanilla-option engine. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/pricingengine.hpp&gt;<br />
- #include &lt;ql/methods/finitedifferences/tridiagonaloperator.hpp&gt;<br />
- #include &lt;ql/methods/finitedifferences/boundarycondition.hpp&gt;<br />
- #include &lt;ql/processes/blackscholesprocess.hpp&gt;<br />
- #include &lt;ql/math/sampledcurve.hpp&gt;<br />
+<p> #include &lt;ql/pricingengine.hpp&gt;<br/>
+ #include &lt;ql/methods/finitedifferences/tridiagonaloperator.hpp&gt;<br/>
+ #include &lt;ql/methods/finitedifferences/boundarycondition.hpp&gt;<br/>
+ #include &lt;ql/processes/blackscholesprocess.hpp&gt;<br/>
+ #include &lt;ql/math/sampledcurve.hpp&gt;<br/>
  #include &lt;ql/payoff.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>FDVanillaEngine</code><br />
+<p> class <code>FDVanillaEngine</code><br/>
  <i>Finite-differences pricing engine for BSM one asset options. </i></p>
 <h2>Detailed Description</h2>
 <p> Finite-differences vanilla-option engine. </p>

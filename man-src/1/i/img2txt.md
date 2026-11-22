@@ -38,25 +38,25 @@ description: "img2txt – convert images to various text-based coloured files"
 <dt><code>-g, &#8211;gamma=&lt;gamma&gt;</code></dt>
 <dd> Change image gamma. Default to 1.0.</dd>
 <dt><code>-d, &#8211;dither=&lt;dither&gt;</code></dt>
-<dd> Change dithering algorithm. This can be one of the following (default to fstein) :<br />
-&nbsp;<wbr>&nbsp;<wbr>none&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: Nearest color<br />
-&nbsp;<wbr>&nbsp;<wbr>ordered2 : Ordered 2&#215;2<br />
-&nbsp;<wbr>&nbsp;<wbr>ordered4 : Ordered 4&#215;4<br />
-&nbsp;<wbr>&nbsp;<wbr>ordered8 : Ordered 8&#215;8<br />
-&nbsp;<wbr>&nbsp;<wbr>random&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: Random<br />
+<dd> Change dithering algorithm. This can be one of the following (default to fstein) :<br/>
+&nbsp;<wbr>&nbsp;<wbr>none&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: Nearest color<br/>
+&nbsp;<wbr>&nbsp;<wbr>ordered2 : Ordered 2&#215;2<br/>
+&nbsp;<wbr>&nbsp;<wbr>ordered4 : Ordered 4&#215;4<br/>
+&nbsp;<wbr>&nbsp;<wbr>ordered8 : Ordered 8&#215;8<br/>
+&nbsp;<wbr>&nbsp;<wbr>random&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: Random<br/>
 &nbsp;<wbr>&nbsp;<wbr>fstein&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: Floyd Steinberg</dd>
 <dt><code>-f, &#8211;format=&lt;format&gt;</code></dt>
-<dd> Change output format. This can be one of the following (default to ansi) :<br />
-&nbsp;<wbr>&nbsp;<wbr>ansi&nbsp;<wbr>&nbsp;<wbr>: coloured ANSI&nbsp;<wbr><br />
-&nbsp;<wbr>&nbsp;<wbr>caca&nbsp;<wbr>&nbsp;<wbr>: internal libcaca format<br />
-&nbsp;<wbr>&nbsp;<wbr>utf8&nbsp;<wbr>&nbsp;<wbr>: UTF8 with CR<br />
-&nbsp;<wbr>&nbsp;<wbr>utf8&nbsp;<wbr>&nbsp;<wbr>: UTF8 with CRLF&nbsp;<wbr>(MS Windows)<br />
-&nbsp;<wbr>&nbsp;<wbr>html&nbsp;<wbr>&nbsp;<wbr>: HTML with CSS and DIV support<br />
-&nbsp;<wbr>&nbsp;<wbr>html3 : Pure HTML3 with tables<br />
-&nbsp;<wbr>&nbsp;<wbr>irc&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: IRC with ctrl-k codes<br />
-&nbsp;<wbr>&nbsp;<wbr>bbfr&nbsp;<wbr>&nbsp;<wbr>: BBCode&nbsp;<wbr>(French)<br />
-&nbsp;<wbr>&nbsp;<wbr>ps&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: Postscript<br />
-&nbsp;<wbr>&nbsp;<wbr>svg&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: Scalable Vector Graphics<br />
+<dd> Change output format. This can be one of the following (default to ansi) :<br/>
+&nbsp;<wbr>&nbsp;<wbr>ansi&nbsp;<wbr>&nbsp;<wbr>: coloured ANSI&nbsp;<wbr><br/>
+&nbsp;<wbr>&nbsp;<wbr>caca&nbsp;<wbr>&nbsp;<wbr>: internal libcaca format<br/>
+&nbsp;<wbr>&nbsp;<wbr>utf8&nbsp;<wbr>&nbsp;<wbr>: UTF8 with CR<br/>
+&nbsp;<wbr>&nbsp;<wbr>utf8&nbsp;<wbr>&nbsp;<wbr>: UTF8 with CRLF&nbsp;<wbr>(MS Windows)<br/>
+&nbsp;<wbr>&nbsp;<wbr>html&nbsp;<wbr>&nbsp;<wbr>: HTML with CSS and DIV support<br/>
+&nbsp;<wbr>&nbsp;<wbr>html3 : Pure HTML3 with tables<br/>
+&nbsp;<wbr>&nbsp;<wbr>irc&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: IRC with ctrl-k codes<br/>
+&nbsp;<wbr>&nbsp;<wbr>bbfr&nbsp;<wbr>&nbsp;<wbr>: BBCode&nbsp;<wbr>(French)<br/>
+&nbsp;<wbr>&nbsp;<wbr>ps&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: Postscript<br/>
+&nbsp;<wbr>&nbsp;<wbr>svg&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: Scalable Vector Graphics<br/>
 &nbsp;<wbr>&nbsp;<wbr>tga&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: Targa Image</dd>
 <dt><code>-h, &#8211;help</code></dt>
 <dd> Display help message and exit.</dd>

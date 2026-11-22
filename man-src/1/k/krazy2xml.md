@@ -26,11 +26,11 @@ description: "krazy2xml – KDE source code checking for the English Breakfast N
 <dt><code>&#8211;dbgen</code>=[id]</dt>
 <dd> Use the specified value for the database generationId. </dd>
 <p> The value is intended to be computed by the database being used and then passed into this program, rather than this program computing the value itself. </p>
-<p> Do <font SIZE="-1"><code>NOT</code></font> use this option unless you know what you&#8217;re doing.</p>
+<p> Do <code>NOT</code> use this option unless you know what you&#8217;re doing.</p>
 <dt><code>&#8211;component</code>=[comp]</dt>
-<dd> Only run for the specified <font SIZE="-1">KDE</font> component. By default, the kde-4.x component is assumed.</dd>
+<dd> Only run for the specified KDE component. By default, the kde-4.x component is assumed.</dd>
 <dt><code>&#8211;module</code>=[mod1,&lt;mod2&gt;,&#8230;&lt;modN&gt;]</dt>
-<dd> Only run for the specified <font SIZE="-1">KDE</font> module within the component. By default all modules within the component are processed.</dd>
+<dd> Only run for the specified KDE module within the component. By default all modules within the component are processed.</dd>
 <dt><code>&#8211;title</code>=title</dt>
 <dd> A title string to print onto each report page. If this option is not provided, a title for each page is generated that contains the source component, module and subdir.</dd></dl>
 <h2>EXAMPLES</h2>
@@ -47,9 +47,9 @@ description: "krazy2xml – KDE source code checking for the English Breakfast N
 </pre>
 </dd></dl>
 <h2>ENVIRONMENT</h2>
-<p> <font SIZE="-1">KRAZY_PLUGIN_PATH</font> &#8211; this is a colon-separated list of paths which is searched when locating plugins. By default, plugins are searched for in the path <i></i>$TOP<i>/lib/krazy2/krazy-plugins:krazy-plugins</i>. </p>
-<p> <font SIZE="-1">KRAZY_EXTRA_PATH</font> &#8211; this is a colon-separated list of paths which is searched when locating &#8220;extra&#8221; plugins. By default, the &#8220;extras&#8221; are searched for in the path <i></i>$TOP<i>/lib/krazy2/krazy-extras:krazy-extras</i>. </p>
-<p> <font SIZE="-1">KRAZY_SET_PATH</font> &#8211; this is a colon-separated list of paths which is searched when locating checker sets. By default, the sets are searched for in the path <i></i>$TOP<i>/lib/krazy2/krazy-sets:krazy-sets</i>. </p>
+<p> KRAZY_PLUGIN_PATH &#8211; this is a colon-separated list of paths which is searched when locating plugins. By default, plugins are searched for in the path <i></i>$TOP<i>/lib/krazy2/krazy-plugins:krazy-plugins</i>. </p>
+<p> KRAZY_EXTRA_PATH &#8211; this is a colon-separated list of paths which is searched when locating &#8220;extra&#8221; plugins. By default, the &#8220;extras&#8221; are searched for in the path <i></i>$TOP<i>/lib/krazy2/krazy-extras:krazy-extras</i>. </p>
+<p> KRAZY_SET_PATH &#8211; this is a colon-separated list of paths which is searched when locating checker sets. By default, the sets are searched for in the path <i></i>$TOP<i>/lib/krazy2/krazy-sets:krazy-sets</i>. </p>
 <p> where <tt>$TOP</tt> is the top-level installation directory (eg. <i>/usr/local</i>, <i>/usr/local/Krazy2</i>)</p>
 <h2>EXIT STATUS</h2>
 <p> In normal operation, krazy2xml exits with status 0. </p>
@@ -57,13 +57,13 @@ description: "krazy2xml – KDE source code checking for the English Breakfast N
 <p> If krazy2 was envoked with the <code>&#8211;help</code> or <code>&#8211;version</code> options it will exit with status=0.</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 2005-2010 by Allen Winter &lt;winter [at] kde.org&gt; </p>
-<p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
-<p> This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT</font> <font SIZE="-1">ANY</font> <font SIZE="-1">WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS</font> <font SIZE="-1">FOR</font> A <font SIZE="-1">PARTICULAR</font> <font SIZE="-1">PURPOSE</font>. See the <font SIZE="-1">GNU</font> General Public License for more details. </p>
-<p> You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, <font SIZE="-1">MA</font> 02110-1301, <font SIZE="-1">USA</font>.</p>
+<p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
+<p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. </p>
+<p> You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.</p>
 <h2>FILES</h2>
-<p> <i>krazyrc</i>(5) files are processed in descending hierarchical order with each sublevel setting appending in a logical way to the previous level settings. The following files are read:<br />
-&nbsp;<wbr><i>component/.krazy</i><br />
-&nbsp;<wbr><i>component/module/.krazy</i><br />
+<p> <i>krazyrc</i>(5) files are processed in descending hierarchical order with each sublevel setting appending in a logical way to the previous level settings. The following files are read:<br/>
+&nbsp;<wbr><i>component/.krazy</i><br/>
+&nbsp;<wbr><i>component/module/.krazy</i><br/>
 &nbsp;<wbr><i>component/module/subdir/.krazy</i></p>
 <h2>SEE ALSO</h2>
 <p> <i>krazyrc</i>(5), <i><a href="/docs/linux/man/1-krazy2/">krazy2</a></i>(1), <i><a href="/docs/linux/man/1-krazy2all/">krazy2all</a></i>(1)</p>

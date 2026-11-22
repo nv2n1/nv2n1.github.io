@@ -12,7 +12,7 @@ description: "davix-ls – Listing tool based on libdavix"
 <h2>SYNOPSIS</h2>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> davix-ls [options]&#8230; url</p>
 <h2>DESCRIPTION</h2>
-<p> <code>davix-ls</code> is a tool to list resources in directories or collection with HTTP, Webdav or REST compatible services.<br />
+<p> <code>davix-ls</code> is a tool to list resources in directories or collection with HTTP, Webdav or REST compatible services.<br/>
  The command supports the WebDav (dav(s)://) and S3 (s3(s)://). </p>
 <p> davix-ls is powered by libdavix. See <a href="/docs/linux/man/3-libdavix/">libdavix</a>(3) for details. </p>
 <h2>OPTIONS</h2>
@@ -200,13 +200,13 @@ description: "davix-ls – Listing tool based on libdavix"
 <dt>
 </dt><dd> Azure authentication key</dd></dl>
 <h2>EXAMPLES</h2>
-<p> <code>WebDav directory file listing<br />
+<p> <code>WebDav directory file listing<br/>
 &nbsp;<wbr>&nbsp;<wbr>davix-ls&nbsp;<wbr><a href="dav://example.org/dir1/dir2/">dav://example.org/dir1/dir2/</a> </p>
-<p> AWS S3 bucket listing<br />
+<p> AWS S3 bucket listing<br/>
 &nbsp;<wbr>&nbsp;<wbr>davix-ls s3://bucket.example.org/collection/ </p>
-<p> Long listing with WebDav with VOMS authentication in a Grid environment<br />
+<p> Long listing with WebDav with VOMS authentication in a Grid environment<br/>
 &nbsp;<wbr>&nbsp;<wbr>davix-ls -P grid&nbsp;<wbr><a href="davs://grid-storage.example.org/dir1/dir2/">davs://grid-storage.example.org/dir1/dir2/</a> </p>
-<p> Long listing with WebDav + TLS directory file listing<br />
+<p> Long listing with WebDav + TLS directory file listing<br/>
 &nbsp;<wbr>&nbsp;<wbr>davix-ls -l&nbsp;<wbr><a href="davs://example.org/dir1/dir2/">davs://example.org/dir1/dir2/</a> </p>
 <p> </code></p>
 <h2>SEE ALSO</h2>

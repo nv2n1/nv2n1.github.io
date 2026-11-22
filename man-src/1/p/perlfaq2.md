@@ -15,19 +15,19 @@ perlfaq2 - Obtaining and Learning about Perl
 
 <h2>DESCRIPTION</h2>
 
- This section of the <font SIZE="-1">FAQ</font> answers questions about where to find source and documentation for Perl, support, and related matters.
+ This section of the FAQ answers questions about where to find source and documentation for Perl, support, and related matters.
 
 <h3>What machines support Perl? Where do I get it?</h3>
 
  The standard release of Perl (the one maintained by the Perl development team) is distributed only in source code form. You can find the latest releases at &lt;<a rel="nofollow" HREF="http://www.cpan.org/src/">http://www.cpan.org/src/</a>&gt;. 
 
- Perl builds and runs on a bewildering number of platforms. Virtually all known and current Unix derivatives are supported (perl's native platform), as are other systems like <font SIZE="-1">VMS, DOS, OS/2,</font> Windows, <font SIZE="-1">QNX,</font> BeOS, <font SIZE="-1">OS X,</font> MPE/iX and the Amiga. 
+ Perl builds and runs on a bewildering number of platforms. Virtually all known and current Unix derivatives are supported (perl's native platform), as are other systems like VMS, DOS, OS/2, Windows, QNX, BeOS, OS X, MPE/iX and the Amiga. 
 
  Binary distributions for some proprietary platforms can be found &lt;<a rel="nofollow" HREF="http://www.cpan.org/ports/">http://www.cpan.org/ports/</a>&gt; directory. Because these are not part of the standard distribution, they may and in fact do differ from the base perl port in a variety of ways. You'll have to check their respective release notes to see just what the differences are. These differences can be either positive (e.g. extensions for the features of the particular platform that are not supported in the source release of perl) or negative (e.g. might be based upon a less current source release of perl).
 
 <h3>How can I get a binary version of Perl?</h3>
 
- See <font SIZE="-1">CPAN</font> Ports &lt;<a rel="nofollow" HREF="http://www.cpan.org/ports/">http://www.cpan.org/ports/</a>&gt;
+ See CPAN Ports &lt;<a rel="nofollow" HREF="http://www.cpan.org/ports/">http://www.cpan.org/ports/</a>&gt;
 
 <h3>I don't have a C compiler. How can I build my own Perl interpreter?</h3>
 
@@ -55,17 +55,17 @@ perlfaq2 - Obtaining and Learning about Perl
 
 <h3>I grabbed the sources and tried to compile but gdbm/dynamic loading/malloc/linking/... failed. How do I make it work?</h3>
 
- Read the <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file, which is part of the source distribution. It describes in detail how to cope with most idiosyncrasies that the <tt>&quot;Configure&quot;</tt> script can't work around for any given system or architecture.
+ Read the <i></i><i>INSTALL</i><i></i> file, which is part of the source distribution. It describes in detail how to cope with most idiosyncrasies that the <tt>&quot;Configure&quot;</tt> script can't work around for any given system or architecture.
 
-<h3>What modules and extensions are available for Perl? What is <font SIZE="-1">CPAN</font>?</h3>
+<h3>What modules and extensions are available for Perl? What is CPAN?</h3>
 
- <font SIZE="-1">CPAN</font> stands for Comprehensive Perl Archive Network, a multi-gigabyte archive replicated on hundreds of machines all over the world. <font SIZE="-1">CPAN</font> contains tens of thousands of modules and extensions, source code and documentation, designed for <i>everything</i> from commercial database interfaces to keyboard/screen control and running large web sites. 
+ CPAN stands for Comprehensive Perl Archive Network, a multi-gigabyte archive replicated on hundreds of machines all over the world. CPAN contains tens of thousands of modules and extensions, source code and documentation, designed for <i>everything</i> from commercial database interfaces to keyboard/screen control and running large web sites. 
 
- You can search <font SIZE="-1">CPAN</font> on &lt;<a rel="nofollow" HREF="http://metacpan.org">http://metacpan.org</a>&gt;. 
+ You can search CPAN on &lt;<a rel="nofollow" HREF="http://metacpan.org">http://metacpan.org</a>&gt;. 
 
- The master web site for <font SIZE="-1">CPAN</font> is &lt;<a rel="nofollow" HREF="http://www.cpan.org/">http://www.cpan.org/</a>&gt;, &lt;<a rel="nofollow" HREF="http://www.cpan.org/SITES.html">http://www.cpan.org/SITES.html</a>&gt; lists all mirrors. 
+ The master web site for CPAN is &lt;<a rel="nofollow" HREF="http://www.cpan.org/">http://www.cpan.org/</a>&gt;, &lt;<a rel="nofollow" HREF="http://www.cpan.org/SITES.html">http://www.cpan.org/SITES.html</a>&gt; lists all mirrors. 
 
- See the <font SIZE="-1">CPAN FAQ</font> at &lt;<a rel="nofollow" HREF="http://www.cpan.org/misc/cpan-faq.html">http://www.cpan.org/misc/cpan-faq.html</a>&gt; for answers to the most frequently asked questions about <font SIZE="-1">CPAN.</font> 
+ See the CPAN FAQ at &lt;<a rel="nofollow" HREF="http://www.cpan.org/misc/cpan-faq.html">http://www.cpan.org/misc/cpan-faq.html</a>&gt; for answers to the most frequently asked questions about CPAN. 
 
  The Task::Kensho module has a list of recommended modules which you should review as a good starting point.
 
@@ -104,7 +104,7 @@ perlfaq2 - Obtaining and Learning about Perl
 
  Perl Mongers &lt;<a rel="nofollow" HREF="http://www.pm.org/">http://www.pm.org/</a>&gt; uses the pm.org domain for services related to local Perl user groups, including the hosting of mailing lists and web sites. See the Perl Mongers web site &lt;<a rel="nofollow" HREF="http://www.pm.org/">http://www.pm.org/</a>&gt; for more information about joining, starting, or requesting services for a Perl user group. 
 
- <font SIZE="-1">CPAN,</font> or the Comprehensive Perl Archive Network &lt;<a rel="nofollow" HREF="http://www.cpan.org/">http://www.cpan.org/</a>&gt;, is a replicated, worldwide repository of Perl software. See What is <font SIZE="-1">CPAN</font>?.
+ CPAN, or the Comprehensive Perl Archive Network &lt;<a rel="nofollow" HREF="http://www.cpan.org/">http://www.cpan.org/</a>&gt;, is a replicated, worldwide repository of Perl software. See What is CPAN?.
 
 <h3>Where can I post questions?</h3>
 
@@ -124,7 +124,7 @@ perlfaq2 - Obtaining and Learning about Perl
 
 <h3>Which Perl blogs should I read?</h3>
 
- Perl News &lt;<a rel="nofollow" HREF="http://perlnews.org/">http://perlnews.org/</a>&gt; covers some of the major events in the Perl world, Perl Weekly &lt;<a rel="nofollow" HREF="http://perlweekly.com/">http://perlweekly.com/</a>&gt; is a weekly e-mail (and <font SIZE="-1">RSS</font> feed) of hand-picked Perl articles. 
+ Perl News &lt;<a rel="nofollow" HREF="http://perlnews.org/">http://perlnews.org/</a>&gt; covers some of the major events in the Perl world, Perl Weekly &lt;<a rel="nofollow" HREF="http://perlweekly.com/">http://perlweekly.com/</a>&gt; is a weekly e-mail (and RSS feed) of hand-picked Perl articles. 
 
  &lt;<a rel="nofollow" HREF="http://blogs.perl.org/">http://blogs.perl.org/</a>&gt; hosts many Perl blogs, there are also several blog aggregators: Perlsphere &lt;<a rel="nofollow" HREF="http://perlsphere.net/">http://perlsphere.net/</a>&gt; and IronMan &lt;<a rel="nofollow" HREF="http://ironman.enlightenedperl.org/">http://ironman.enlightenedperl.org/</a>&gt; are two of them.
 
@@ -148,7 +148,7 @@ perlfaq2 - Obtaining and Learning about Perl
 
  To determine if a module came with your version of Perl, you can install and use the Module::CoreList module. It has the information about the modules (with their versions) included with each release of Perl. 
 
- Every <font SIZE="-1">CPAN</font> module has a bug tracker set up in <font SIZE="-1">RT,</font> &lt;<a rel="nofollow" HREF="http://rt.cpan.org">http://rt.cpan.org</a>&gt;. You can submit bugs to <font SIZE="-1">RT</font> either through its web interface or by email. To email a bug report, send it to bug-&lt;distribution-name&gt;@rt.cpan.org . For example, if you wanted to report a bug in Business::ISBN, you could send a message to bug-Business-ISBN [at] rt.cpan.org . 
+ Every CPAN module has a bug tracker set up in RT, &lt;<a rel="nofollow" HREF="http://rt.cpan.org">http://rt.cpan.org</a>&gt;. You can submit bugs to RT either through its web interface or by email. To email a bug report, send it to bug-&lt;distribution-name&gt;@rt.cpan.org . For example, if you wanted to report a bug in Business::ISBN, you could send a message to bug-Business-ISBN [at] rt.cpan.org . 
 
  Some modules might have special reporting requirements, such as a Github or Google Code tracking system, so you should check the module documentation too.
 
@@ -158,7 +158,7 @@ perlfaq2 - Obtaining and Learning about Perl
 
  This documentation is free; you can redistribute it and/or modify it under the same terms as Perl itself. 
 
- Irrespective of its distribution, all code examples here are in the public domain. You are permitted and encouraged to use this code and any derivatives thereof in your own programs for fun or for profit as you see fit. A simple comment in the code giving credit to the <font SIZE="-1">FAQ</font> would be courteous but is not required. 
+ Irrespective of its distribution, all code examples here are in the public domain. You are permitted and encouraged to use this code and any derivatives thereof in your own programs for fun or for profit as you see fit. A simple comment in the code giving credit to the FAQ would be courteous but is not required. 
 
 
 

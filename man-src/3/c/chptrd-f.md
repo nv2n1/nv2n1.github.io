@@ -10,7 +10,7 @@ description: "chptrd.f –"
 <p>chptrd.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>chptrd</code> (UPLO, N, AP, D, E, TAU, INFO)<br />
+<p>subroutine <code>chptrd</code> (UPLO, N, AP, D, E, TAU, INFO)<br/>
  <i></i><code>CHPTRD</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine chptrd (characterUPLO, integerN, complex, dimension( * )AP, real, dimension( * )D, real, dimension( * )E, complex, dimension( * )TAU, integerINFO)</h3>

@@ -16,7 +16,7 @@ description: "FvwmTabs – a generic tabbing module for the fvwm window manager.
 <h2>Invocation</h2>
 <p><code>FvwmTabs</code> can be invoked by inserting the line <tt>&quot;Module FvwmTabs&quot;</tt> in your .fvwmrc file. This can be placed on a line by itself, if <code>FvwmTabs</code> is to be spawned during fvwm&#8217;s initialization, or can be bound to a menu or mouse button or keystroke to invoke it later.</p>
 <h2>Installing Dependencies</h2>
-<p><code>FvwmTabs</code> requires 2 <font SIZE="-1">CPAN</font> modules (that are <font SIZE="-1">NOT</font> distributed with fvwm) to be installed on your system. They are <i>Tk</i> and <i>X11::Protocol</i>. </p>
+<p><code>FvwmTabs</code> requires 2 CPAN modules (that are NOT distributed with fvwm) to be installed on your system. They are <i>Tk</i> and <i>X11::Protocol</i>. </p>
 <p> They are available at: &lt;<a rel="nofollow" href="http://search.cpan.org/CPAN/authors/id/N/NI/NI-S/Tk-804.027.tar.gz">http://search.cpan.org/CPAN/authors/id/N/NI/NI-S/Tk-804.027.tar.gz</a>&gt; and &lt;<a href="http://search.cpan.org/~smccam/X11-Protocol-0.56/">http://search.cpan.org/~smccam/X11-Protocol-0.56/</a>&gt;. </p>
 <p> To install either package: </p>
 <p> tar zxvf <tt>$name</tt>.tar.gz ; cd <tt>$name</tt> ; perl Makefile.PL ; make install </p>
@@ -82,13 +82,13 @@ description: "FvwmTabs – a generic tabbing module for the fvwm window manager.
 <dt>*FvwmTabs: dragDropIcon <i>imageFile</i></dt>
 <dd>Specify the icon to display when performing a drag-&amp;-drop operation to reorder the tab-buttons. FvwmTabs will search the ImagePath for this image unless an absolute filename (ie. filename begins with &#8216;/&#8217;) is specified. The default value is <i>none</i>. If <i>none</i> (or an invalid file) is specified a * is used.</dd>
 <dt>*FvwmTabs: bBuggyFocus <i>bool</i></dt>
-<dd>FvwmTabs tries to work around a limitation in Perl/Tk (there is no way to access the timestamp associated with <font SIZE="-1">WM_TAKE_FOCUS</font> events). On some systems this doesn&#8217;t work and sometimes tab-managers have trouble acquiring the focus. If this happens to you, try setting this option to <i>true</i>. This can lead to focussing race-conditions (tab-managers temporarily &#8220;steal&#8221; focus in some situations) but this is less annoying than not being able to focus at all.</dd>
+<dd>FvwmTabs tries to work around a limitation in Perl/Tk (there is no way to access the timestamp associated with WM_TAKE_FOCUS events). On some systems this doesn&#8217;t work and sometimes tab-managers have trouble acquiring the focus. If this happens to you, try setting this option to <i>true</i>. This can lead to focussing race-conditions (tab-managers temporarily &#8220;steal&#8221; focus in some situations) but this is less annoying than not being able to focus at all.</dd>
 <dt>*FvwmTabs: enableSwallowDND <i>bool</i></dt>
 <dd>Swallow windows that (are moved to) overlap a tabber. Note: drag-&amp;-drop can be enabled for individual tabbers via the menu. The default value is <i>true</i>.</dd>
 <dt>*FvwmTabs: swallowDNDTolerance <i>tol</i></dt>
 <dd>Determines how much a window must overlap a tabber for it to be swallowed when drag-&amp;-drop is enabled. If the value has a %-sign appended to it, windows must overlap by the specified percentage of the current size of the tabber. If no %-sign is present, the value is treated in units of pixels. The default value is <i>10</i> (pixels).</dd>
 <dt>*FvwmTabs: useIconsOnTabs <i>bool</i></dt>
-<dd>Show the mini icon associated with each window on its tab button. Note: mini icons for apps that use <font SIZE="-1">EWMH</font> icons look a bit distorted. This is because of the poor image resizing algorithm used in Tk. This should be rectified in the near future. The default value is <i>true</i>.</dd>
+<dd>Show the mini icon associated with each window on its tab button. Note: mini icons for apps that use EWMH icons look a bit distorted. This is because of the poor image resizing algorithm used in Tk. This should be rectified in the near future. The default value is <i>true</i>.</dd>
 <dt>*FvwmTabs: killIcon <i>image</i></dt>
 <dd>Image to use on kill toolbar button. Default is <i>none</i>.</dd>
 <dt>*FvwmTabs: addIcon <i>image</i></dt>
@@ -126,7 +126,7 @@ description: "FvwmTabs – a generic tabbing module for the fvwm window manager.
 <dt>AddTab</dt>
 <dd>Pick a new window to add to a tab-manager. Selecting this option &amp; clicking on a window will add the selected window to the tab-manager.</dd>
 <dt>MultiAddTab</dt>
-<dd>Pick &amp; add new windows to a tab-manager until <font SIZE="-1">ESC</font> is pressed.</dd>
+<dd>Pick &amp; add new windows to a tab-manager until ESC is pressed.</dd>
 <dt>ShowTab <i>tabNo</i></dt>
 <dd>Show/select tab <i>tabNo</i> in the tab-manager. <i>tabNo</i> is zero-based. ie. 0 is the first tab, 1 is the second, etc.</dd>
 <dt>AddToTabber</dt>
@@ -140,9 +140,9 @@ description: "FvwmTabs – a generic tabbing module for the fvwm window manager.
 <dt>EnableDND</dt>
 <dd>Swallow windows that (are moved to) overlap a tabber.</dd></dl>
 <h2>Key Bindings</h2>
-<p>By default, <code>FvwmTabs</code> reads a default user configuration file <i>FvwmTabs-DefaultSetup</i> which defines several useful key-bindings for <code>FvwmTabs</code>. You can tell <code>FvwmTabs</code> <font SIZE="-1">NOT</font> to read this file with <tt>&quot;SetEnv FvwmTabs_NoDefaultSetup&quot;</tt> &#8211; this environment variable must be set <i>before</i> starting the module. </p>
+<p>By default, <code>FvwmTabs</code> reads a default user configuration file <i>FvwmTabs-DefaultSetup</i> which defines several useful key-bindings for <code>FvwmTabs</code>. You can tell <code>FvwmTabs</code> NOT to read this file with <tt>&quot;SetEnv FvwmTabs_NoDefaultSetup&quot;</tt> &#8211; this environment variable must be set <i>before</i> starting the module. </p>
 <p> All of the key bindings can be changed using the standard fvwm <i>Key</i> command &amp; making use of the aforementioned fvwm functions. ie. </p>
-<p> Key (FvwmTabs*) A A <font SIZE="-1">CM</font> Function AddTab </p>
+<p> Key (FvwmTabs*) A A CM Function AddTab </p>
 <p> Then, pressing Ctrl-Alt-a (when the focus is in a tab-manager) will allow you to click on a window to add to the tab-manager. </p>
 <p> The default key bindings (set in the <i>FvwmTabs-DefaultSetup</i> file) are:</p>
 <dl>
@@ -181,7 +181,7 @@ description: "FvwmTabs – a generic tabbing module for the fvwm window manager.
 <p> <i>Mouse-3</i> on a tab-button releases the window associated with the tab back to the window manager &amp; iconifies it. </p>
 <p> The tab-buttons can be reordered with a drag-&amp;-drop operation initiated with <i>Ctrl-Mouse-2</i>. A dragged tab is inserted before the tab-button onto which it is dropped. </p>
 <p> <code>Mouse bindings on Toolbar Icons</code> </p>
-<p> <i>Mouse-1</i> on the &#8220;menu&#8221; button will bring up a menu of options. See <font SIZE="-1">MENU</font> <font SIZE="-1">BINDINGS</font>. </p>
+<p> <i>Mouse-1</i> on the &#8220;menu&#8221; button will bring up a menu of options. See MENU BINDINGS. </p>
 <p> <i>Mouse-1</i> on the &#8220;release&#8221; button will release the selected window from the tabber. </p>
 <p> <i>Mouse-2</i> on the &#8220;release&#8221; button will release all windows from the tabber, and iconify them. </p>
 <p> <i>Mouse-3</i> on the &#8220;release&#8221; button will release all windows from the tabber. </p>
@@ -230,7 +230,7 @@ description: "FvwmTabs – a generic tabbing module for the fvwm window manager.
 <p>There is some useful information about FvwmTabs, including a short tutorial, on the authors website: </p>
 <p> &lt;<a rel="nofollow" href="http://members.optusnet.com.au/~scottsmedley/fvwmtabs/">http://members.optusnet.com.au/~scottsmedley/fvwmtabs/</a>&gt;.</p>
 <h2>Licensing</h2>
-<p><code>FvwmTabs</code> is <font SIZE="-1">GPL</font> software. </p>
+<p><code>FvwmTabs</code> is GPL software. </p>
 <p> See &lt;<a rel="nofollow" href="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</a>&gt;</p>
 <h2>Author</h2>
 <p>Scott Smedley &lt;ss [at] aao.gov.au&gt;</p>

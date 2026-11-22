@@ -11,7 +11,7 @@ description: "arm_get_correlator_length – get length of correlator"
 <p> arm_get_correlator_length &#8211; get length of correlator</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/arm4.h">arm4.h</a>&gt;</code> </p>
-<p> <code>arm_error_t<br />
+<p> <code>arm_error_t<br/>
  arm_get_correlator_length( </p>
 <p>&nbsp;<wbr>const arm_correlator_t&nbsp;<wbr>*</code><i>correlator</i><code>,&nbsp;<wbr> </p>
 <p>&nbsp;<wbr>arm_correlator_length_t&nbsp;<wbr>*</code><i>length</i><code>);</code></p>

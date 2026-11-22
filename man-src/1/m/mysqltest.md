@@ -8,7 +8,7 @@ url: "/docs/linux/man/1-mysqltest/"
 description: "mysqltest – program to run test cases mysqltest_embedded – program to run embedded test cases"
 ---
 
-<p> mysqltest &#8211; program to run test cases<br />
+<p> mysqltest &#8211; program to run test cases<br/>
  mysqltest_embedded &#8211; program to run embedded test cases </p>
 <h2>SYNOPSIS</h2>
 <dl>

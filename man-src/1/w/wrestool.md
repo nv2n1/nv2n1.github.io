@@ -84,17 +84,17 @@ description: "wrestool – extract resources from Microsoft Windows(R) binaries"
 <dd> Animated icons. I have only seen these in Windows(R) 3.x. Currently wrestool does not support animated cursor or icons, nor does icotool.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> List all resources in file `write.exe&#8217;: </p>
-<p>&nbsp;<wbr>&nbsp;$&nbsp;<code>wrestool -l write.exe</code><br />
-&nbsp;<wbr>&nbsp;&#8211;type=3 &#8211;name=1 &#8211;lang=1033&nbsp;[type=icon offset=0x3120 size=752]<br />
-&nbsp;<wbr>&nbsp;&#8211;type=3 &#8211;name=2 &#8211;lang=1033&nbsp;[type=icon offset=0x3410 size=304]<br />
-&nbsp;<wbr>&nbsp;&#8211;type=14 &#8211;name=1 &#8211;lang=1033&nbsp;[type=group_icon offset=0x3540 size=34]<br />
+<p>&nbsp;<wbr>&nbsp;$&nbsp;<code>wrestool -l write.exe</code><br/>
+&nbsp;<wbr>&nbsp;&#8211;type=3 &#8211;name=1 &#8211;lang=1033&nbsp;[type=icon offset=0x3120 size=752]<br/>
+&nbsp;<wbr>&nbsp;&#8211;type=3 &#8211;name=2 &#8211;lang=1033&nbsp;[type=icon offset=0x3410 size=304]<br/>
+&nbsp;<wbr>&nbsp;&#8211;type=14 &#8211;name=1 &#8211;lang=1033&nbsp;[type=group_icon offset=0x3540 size=34]<br/>
 &nbsp;<wbr>&nbsp;&#8211;type=16 &#8211;name=1 &#8211;lang=1033&nbsp;[type=version offset=0x3564 size=808] </p>
 <p> List all (group-) icon resource in file `write.exe&#8217;: </p>
-<p>&nbsp;<wbr>&nbsp;$&nbsp;<code>wrestool -l &#8211;type=group_icon write.exe</code><br />
+<p>&nbsp;<wbr>&nbsp;$&nbsp;<code>wrestool -l &#8211;type=group_icon write.exe</code><br/>
 &nbsp;<wbr>&nbsp;&#8211;type=14 &#8211;name=1 &#8211;lang=1033&nbsp;[type=group_icon offset=0x3540 size=34] </p>
 <p> Extract all icons to current directory, naming the destination files `write.exe_T_N.ico&#8217;: </p>
-<p>&nbsp;<wbr>&nbsp;$&nbsp;<code>wrestool -x &#8211;output=. -t14 write.exe</code><br />
-&nbsp;<wbr>&nbsp;$&nbsp;<code>ls&nbsp;*.ico</code><br />
+<p>&nbsp;<wbr>&nbsp;$&nbsp;<code>wrestool -x &#8211;output=. -t14 write.exe</code><br/>
+&nbsp;<wbr>&nbsp;$&nbsp;<code>ls&nbsp;*.ico</code><br/>
 &nbsp;<wbr>&nbsp;write.exe_14_1.ico</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-extresso/">extresso</a></code>(1), <code><a href="/docs/linux/man/1-genresscript/">genresscript</a></code>(1), <code><a href="/docs/linux/man/1-icotool/">icotool</a></code>(1).</p>

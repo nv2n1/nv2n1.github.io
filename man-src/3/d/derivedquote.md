@@ -14,9 +14,9 @@ description: "QuantLib::DerivedQuote – market quote whose value depends on ano
 <h3>Public Member Functions</h3>
 <p><code>DerivedQuote</code> (const <code>Handle</code>&lt; <code>Quote</code> &gt; &amp;element, const UnaryFunction &amp;f) </p>
 <p> <code>Quote interface</code> </p>
-<p> <code>Real</code> <code>value</code> () const<br />
- <i>returns the current value </i><br />
- bool <code>isValid</code> () const<br />
+<p> <code>Real</code> <code>value</code> () const<br/>
+ <i>returns the current value </i><br/>
+ bool <code>isValid</code> () const<br/>
  <i>returns true if the </i><code>Quote</code> holds a valid value </p>
 <p> <code>Observer interface</code> </p>
 <p> void <code>update</code> () </p>

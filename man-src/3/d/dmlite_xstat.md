@@ -20,7 +20,7 @@ description: "dmlite_xstat –"
 <p> char <code>csumtype</code> [<code>CSUMTYPE_MAX</code>] </p>
 <p> char <code>csumvalue</code> [<code>CSUMVALUE_MAX</code>] </p>
 <p> char <code>acl</code> [<code>ACL_ENTRIES_MAX</code> *<code>ACL_SIZE</code>] </p>
-<p> <code>dmlite_any_dict</code> * <code>extra</code><br />
+<p> <code>dmlite_any_dict</code> * <code>extra</code><br/>
  <i>If != NULL, additional metadata will be put here. </i></p>
 <h2>Detailed Description</h2>
 <p> File metadata</p>

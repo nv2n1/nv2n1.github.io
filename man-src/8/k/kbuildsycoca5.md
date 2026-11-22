@@ -54,7 +54,7 @@ description: "kbuildsycoca5 – Rebuilds the KService desktop file system config
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-kded5/">kded5</a></code>(8), <code><a href="/docs/linux/man/8-kdeinit5/">kdeinit5</a></code>(8)</p>
 <h2>Bugs</h2>
-<p>Please use m[blue]<code>KDE&#8217;s bugtracker</code>m[]<font SIZE="-2">[1]</font> to report bugs.</p>
+<p>Please use m[blue]<code>KDE&#8217;s bugtracker</code>m[][1] to report bugs.</p>
 <h2>Authors</h2>
 <p><code>Darian Lanx</code> &lt;content [at] openprojects.net&gt;</p>
 <dl>

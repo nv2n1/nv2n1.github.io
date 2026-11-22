@@ -177,7 +177,7 @@ description: "dmsetup — low level logical volume management"
  </dd>
 <dt><code>--version</code></dt>
 <dd>  </dd>
-<dd> <p> Display the library and kernel driver version. <br />
+<dd> <p> Display the library and kernel driver version. <br/>
  </p>
  </dd></dl>
 <h2>COMMANDS</h2>
@@ -209,13 +209,13 @@ description: "dmsetup — low level logical volume management"
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> <br />
-&nbsp;State: SUSPENDED|ACTIVE, READ-ONLY <br />
-&nbsp;Tables present: LIVE and/or INACTIVE <br />
-&nbsp;Open reference count <br />
-&nbsp;Last event sequence number&nbsp;(used by&nbsp;<code>wait</code>) <br />
-&nbsp;Major and minor device number <br />
-&nbsp;Number of targets in the live table <br />
+<dd> <p> <br/>
+&nbsp;State: SUSPENDED|ACTIVE, READ-ONLY <br/>
+&nbsp;Tables present: LIVE and/or INACTIVE <br/>
+&nbsp;Open reference count <br/>
+&nbsp;Last event sequence number&nbsp;(used by&nbsp;<code>wait</code>) <br/>
+&nbsp;Major and minor device number <br/>
+&nbsp;Number of targets in the live table <br/>
 &nbsp;UUID </p>
  </dd></dl>
 </dl>
@@ -336,17 +336,17 @@ description: "dmsetup — low level logical volume management"
 <dd> <p> The traditional linear mapping. </p>
  </dd>
 <dt><code>striped </code><i>num_stripes chunk_size </i>[<i>destination start_sector</i>]... </dt>
-<dd> <p> Creates a striped area. <br />
+<dd> <p> Creates a striped area. <br/>
  e.g. striped 2 32 /dev/hda1 0 /dev/hdb1 0 will map the first chunk (16k) as follows: </p>
  </dd>
 <dl>
 <dd>  </dd>
 <dl>
-<dd> <p> <br />
-&nbsp;LV chunk 1-&gt;&nbsp;hda1, chunk 1 <br />
-&nbsp;LV chunk 2-&gt;&nbsp;hdb1, chunk 1 <br />
-&nbsp;LV chunk 3-&gt;&nbsp;hda1, chunk 2 <br />
-&nbsp;LV chunk 4-&gt;&nbsp;hdb1, chunk 2 <br />
+<dd> <p> <br/>
+&nbsp;LV chunk 1-&gt;&nbsp;hda1, chunk 1 <br/>
+&nbsp;LV chunk 2-&gt;&nbsp;hdb1, chunk 1 <br/>
+&nbsp;LV chunk 3-&gt;&nbsp;hda1, chunk 2 <br/>
+&nbsp;LV chunk 4-&gt;&nbsp;hdb1, chunk 2 <br/>
 &nbsp;etc. </p>
  </dd></dl>
 </dl>
@@ -387,18 +387,18 @@ description: "dmsetup — low level logical volume management"
  </dd></dl>
 <p>To find out more about the various targets and their table formats and status lines, please read the files in the Documentation/device-mapper directory in the kernel source tree. (Your distribution might include a copy of this information in the documentation directory for the device-mapper package.)  </p>
 <h2>EXAMPLES</h2>
-<p> # A table to join two disks together <br />
- 0 1028160 linear /dev/hda 0 <br />
- 1028160 3903762 linear /dev/hdb 0 <br />
- # A table to stripe across the two disks, <br />
- # and add the spare space from <br />
- # hdb to the back of the volume <br />
- 0 2056320 striped 2 32 /dev/hda 0 /dev/hdb 0 <br />
+<p> # A table to join two disks together <br/>
+ 0 1028160 linear /dev/hda 0 <br/>
+ 1028160 3903762 linear /dev/hdb 0 <br/>
+ # A table to stripe across the two disks, <br/>
+ # and add the spare space from <br/>
+ # hdb to the back of the volume <br/>
+ 0 2056320 striped 2 32 /dev/hda 0 /dev/hdb 0 <br/>
  2056320 2875602 linear /dev/hdb 1028160  </p>
 <h2>CONCISE FORMAT</h2>
 <p> A concise representation of one of more devices. </p>
-<p> <br />
- - A comma separates the fields of each device. <br />
+<p> <br/>
+ - A comma separates the fields of each device. <br/>
  - A semi-colon separates devices. </p>
 <dl>
 <dt>The representation of a device takes the form:</dt>
@@ -417,18 +417,18 @@ description: "dmsetup — low level logical volume management"
  </dd>
 <dt><code>flags</code></dt>
 <dd> <p> Supported flags are: </p>
-<p> <code>ro</code> Sets the table being loaded for the device read-only <br />
+<p> <code>ro</code> Sets the table being loaded for the device read-only <br/>
  <code>rw</code> Sets the table being loaded for the device read-write (default) </p>
  </dd>
 <dt><code>table</code></dt>
 <dd> <p> One line of the table. See TABLE FORMAT above. </p>
  </dd></dl>
 <h2>EXAMPLES</h2>
-<p> # A simple linear read-only device <br />
- test-linear-small,,,ro,0 2097152 linear /dev/loop0 0, 2097152 2097152 linear /dev/loop1 0 <br />
+<p> # A simple linear read-only device <br/>
+ test-linear-small,,,ro,0 2097152 linear /dev/loop0 0, 2097152 2097152 linear /dev/loop1 0 <br/>
  </p>
-<p># Two linear devices <br />
- test-linear-small,,,,0 2097152 linear /dev/loop0 0;test-linear-large,,,, 0 2097152 linear /dev/loop1 0, 2097152 2097152 linear /dev/loop2 0 <br />
+<p># Two linear devices <br/>
+ test-linear-small,,,,0 2097152 linear /dev/loop0 0;test-linear-large,,,, 0 2097152 linear /dev/loop1 0, 2097152 2097152 linear /dev/loop2 0 <br/>
   </p>
 <h2>ENVIRONMENT VARIABLES</h2>
 <dl>
@@ -445,5 +445,5 @@ description: "dmsetup — low level logical volume management"
 <p> Original version: Joe Thornber &lt;thornber [at] redhat.com&gt;  </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-dmstats/">dmstats</a></code>(8), <code><a href="/docs/linux/man/7-udev/">udev</a></code>(7), <code><a href="/docs/linux/man/8-udevadm/">udevadm</a></code>(8) </p>
-<p>LVM2 resource page: <a rel="nofollow" href="https://www.sourceware.org/lvm2/">https://www.sourceware.org/lvm2/</a> <br />
+<p>LVM2 resource page: <a rel="nofollow" href="https://www.sourceware.org/lvm2/">https://www.sourceware.org/lvm2/</a> <br/>
  Device-mapper resource page: <a rel="nofollow" href="http://sources.redhat.com/dm/">http://sources.redhat.com/dm/</a> </p>

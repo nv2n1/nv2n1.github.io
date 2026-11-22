@@ -12,9 +12,9 @@ description: "QuantLib::ArmijoLineSearch – Armijo line search."
 <p>#include &lt;ql/math/optimization/armijo.hpp&gt; </p>
 <p> Inherits <code>QuantLib::LineSearch</code>. </p>
 <h3>Public Member Functions</h3>
-<p><code>ArmijoLineSearch</code> (Real eps=1e-8, Real alpha=0.05, Real beta=0.65)<br />
- <i>Default constructor. </i><br />
- Real <code>operator()</code> (<code>Problem</code> &amp;P, EndCriteria::Type &amp;ecType, const <code>EndCriteria</code> &amp;, const Real t_ini)<br />
+<p><code>ArmijoLineSearch</code> (Real eps=1e-8, Real alpha=0.05, Real beta=0.65)<br/>
+ <i>Default constructor. </i><br/>
+ Real <code>operator()</code> (<code>Problem</code> &amp;P, EndCriteria::Type &amp;ecType, const <code>EndCriteria</code> &amp;, const Real t_ini)<br/>
  <i>Perform line search. </i></p>
 <h2>Detailed Description</h2>
 <p>Armijo line search. </p>

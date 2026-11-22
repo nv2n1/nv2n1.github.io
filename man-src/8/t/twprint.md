@@ -9,7 +9,7 @@ description: "twprint – Tripwire database and report printer"
 
 <p>twprint &#8211; Tripwire database and report printer</p>
 <h2>Synopsis</h2>
-<p><code>twprint</code> { <code>-m r</code> | <code>&#8211;print-report</code> } [ <i>options&#8230;</i> ]<br />
+<p><code>twprint</code> { <code>-m r</code> | <code>&#8211;print-report</code> } [ <i>options&#8230;</i> ]<br/>
  <code>twprint</code> { <code>-m d</code> | <code>&#8211;print-dbfile</code> } [ <i>options&#8230;</i> ] </p>
 <p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [ <i>object1</i> [ <i>object2&#8230;</i> ]]</p>
 <h2>Description</h2>

@@ -115,9 +115,9 @@ description: "mount_namespaces – overview of Linux mount namespaces"
 <p> The mount explosion problem in the above scenario can be avoided by making each of the new mounts unbindable. The effect of doing this is that recursive mounts of the root directory will not replicate the unbindable mounts. We make such a mount for the first user: </p>
 <p> # <code>mount &#8211;rbind &#8211;make-unbindable / /home/cecilia</code> </p>
 <p> Before going further, we show that unbindable mounts are indeed unbindable: </p>
-<p> # <code>mkdir /mntZ</code> # <code>mount &#8211;bind /home/cecilia /mntZ</code> mount: wrong fs type, bad option, bad superblock on /home/cecilia,<br />
+<p> # <code>mkdir /mntZ</code> # <code>mount &#8211;bind /home/cecilia /mntZ</code> mount: wrong fs type, bad option, bad superblock on /home/cecilia,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;missing codepage or helper program, or other error </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;In some cases useful info is found in syslog &#8211; try<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;In some cases useful info is found in syslog &#8211; try<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;dmesg | tail or so. </p>
 <p> Now we create unbindable recursive bind mounts for the other two users: </p>
 <p> # <code>mount &#8211;rbind &#8211;make-unbindable / /home/henry</code> # <code>mount &#8211;rbind &#8211;make-unbindable / /home/otto</code> </p>

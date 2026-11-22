@@ -17,44 +17,44 @@ description: "lvmconfig – Display and manipulate configuration information"
 <h2>Usage</h2>
 <p><code>lvmconfig</code> </p>
 <dl>
-<dd>[ <code>-f</code>|<code>&#8211;file</code> <i>String</i> ]<br />
- [ <code>-l</code>|<code>&#8211;list</code> ]<br />
- [ <code>&#8211;atversion</code> <i>String</i> ]<br />
- [ <code>&#8211;typeconfig</code> <code>current</code>|<code>default</code>|<code>diff</code>|<code>full</code>|<code>list</code>|<code>missing</code>|<code>new</code>|<code>profilable</code>|<code>profilable-command</code>|<code>profilable-metadata</code> ]<br />
- [ <code>&#8211;ignoreadvanced</code> ]<br />
- [ <code>&#8211;ignoreunsupported</code> ]<br />
- [ <code>&#8211;ignorelocal</code> ]<br />
- [ <code>&#8211;mergedconfig</code> ]<br />
- [ <code>&#8211;metadataprofile</code> <i>String</i> ]<br />
- [ <code>&#8211;sinceversion</code> <i>String</i> ]<br />
- [ <code>&#8211;showdeprecated</code> ]<br />
- [ <code>&#8211;showunsupported</code> ]<br />
- [ <code>&#8211;validate</code> ]<br />
- [ <code>&#8211;withsummary</code> ]<br />
- [ <code>&#8211;withcomments</code> ]<br />
- [ <code>&#8211;withgeneralpreamble</code> ]<br />
- [ <code>&#8211;withlocalpreamble</code> ]<br />
- [ <code>&#8211;withspaces</code> ]<br />
- [ <code>&#8211;unconfigured</code> ]<br />
- [ <code>&#8211;withversions</code> ]<br />
+<dd>[ <code>-f</code>|<code>&#8211;file</code> <i>String</i> ]<br/>
+ [ <code>-l</code>|<code>&#8211;list</code> ]<br/>
+ [ <code>&#8211;atversion</code> <i>String</i> ]<br/>
+ [ <code>&#8211;typeconfig</code> <code>current</code>|<code>default</code>|<code>diff</code>|<code>full</code>|<code>list</code>|<code>missing</code>|<code>new</code>|<code>profilable</code>|<code>profilable-command</code>|<code>profilable-metadata</code> ]<br/>
+ [ <code>&#8211;ignoreadvanced</code> ]<br/>
+ [ <code>&#8211;ignoreunsupported</code> ]<br/>
+ [ <code>&#8211;ignorelocal</code> ]<br/>
+ [ <code>&#8211;mergedconfig</code> ]<br/>
+ [ <code>&#8211;metadataprofile</code> <i>String</i> ]<br/>
+ [ <code>&#8211;sinceversion</code> <i>String</i> ]<br/>
+ [ <code>&#8211;showdeprecated</code> ]<br/>
+ [ <code>&#8211;showunsupported</code> ]<br/>
+ [ <code>&#8211;validate</code> ]<br/>
+ [ <code>&#8211;withsummary</code> ]<br/>
+ [ <code>&#8211;withcomments</code> ]<br/>
+ [ <code>&#8211;withgeneralpreamble</code> ]<br/>
+ [ <code>&#8211;withlocalpreamble</code> ]<br/>
+ [ <code>&#8211;withspaces</code> ]<br/>
+ [ <code>&#8211;unconfigured</code> ]<br/>
+ [ <code>&#8211;withversions</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <dl>
 <dd>[ <i>String</i> &#8230; ]</dd></dl>
 <p> Common options for lvm:</p>
 <dl>
-<dd>[ <code>-d</code>|<code>&#8211;debug</code> ]<br />
- [ <code>-h</code>|<code>&#8211;help</code> ]<br />
- [ <code>-q</code>|<code>&#8211;quiet</code> ]<br />
- [ <code>-t</code>|<code>&#8211;test</code> ]<br />
- [ <code>-v</code>|<code>&#8211;verbose</code> ]<br />
- [ <code>-y</code>|<code>&#8211;yes</code> ]<br />
- [ <code>&#8211;commandprofile</code> <i>String</i> ]<br />
- [ <code>&#8211;config</code> <i>String</i> ]<br />
- [ <code>&#8211;driverloaded</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;lockopt</code> <i>String</i> ]<br />
- [ <code>&#8211;longhelp</code> ]<br />
- [ <code>&#8211;nolocking</code> ]<br />
- [ <code>&#8211;profile</code> <i>String</i> ]<br />
+<dd>[ <code>-d</code>|<code>&#8211;debug</code> ]<br/>
+ [ <code>-h</code>|<code>&#8211;help</code> ]<br/>
+ [ <code>-q</code>|<code>&#8211;quiet</code> ]<br/>
+ [ <code>-t</code>|<code>&#8211;test</code> ]<br/>
+ [ <code>-v</code>|<code>&#8211;verbose</code> ]<br/>
+ [ <code>-y</code>|<code>&#8211;yes</code> ]<br/>
+ [ <code>&#8211;commandprofile</code> <i>String</i> ]<br/>
+ [ <code>&#8211;config</code> <i>String</i> ]<br/>
+ [ <code>&#8211;driverloaded</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;lockopt</code> <i>String</i> ]<br/>
+ [ <code>&#8211;longhelp</code> ]<br/>
+ [ <code>&#8211;nolocking</code> ]<br/>
+ [ <code>&#8211;profile</code> <i>String</i> ]<br/>
  [ <code>&#8211;version</code> ]</dd></dl>
 <h2>Options</h2>
 <dl>

@@ -14,12 +14,12 @@ description: "QwtAbstractLegend –"
 <p> Inherits QFrame. </p>
 <p> Inherited by <code>QwtLegend</code>.</p>
 <h3>Public Slots</h3>
-<p>virtual void <code>updateLegend</code> (const QVariant &amp;itemInfo, const QList&lt; <code>QwtLegendData</code> &gt; &amp;data)=0<br />
+<p>virtual void <code>updateLegend</code> (const QVariant &amp;itemInfo, const QList&lt; <code>QwtLegendData</code> &gt; &amp;data)=0<br/>
  <i>Update the entries for a plot item. </i></p>
 <h3>Public Member Functions</h3>
 <p><code>QwtAbstractLegend</code> (QWidget *parent=NULL) </p>
-<p> virtual <code>~QwtAbstractLegend</code> ()<br />
- <i>Destructor. </i><br />
+<p> virtual <code>~QwtAbstractLegend</code> ()<br/>
+ <i>Destructor. </i><br/>
  virtual void <code>renderLegend</code> (QPainter *painter, const QRectF &amp;rect, bool fillBackground) const =0 </p>
 <p> virtual bool <code>isEmpty</code> () const =0 </p>
 <p> virtual int <code>scrollExtent</code> (Qt::Orientation) const </p>
@@ -48,8 +48,8 @@ description: "QwtAbstractLegend –"
 <p>Render the legend into a given rectangle. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>rect</i> Bounding rectangle<br />
+<dd><i>painter</i> Painter<br/>
+ <i>rect</i> Bounding rectangle<br/>
  <i>fillBackground</i> When true, fill rect with the widget background</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -68,7 +68,7 @@ description: "QwtAbstractLegend –"
 <p>Update the entries for a plot item. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>itemInfo</i> Info about an item<br />
+<dd><i>itemInfo</i> Info about an item<br/>
  <i>data</i> List of legend entry attributes for the item</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

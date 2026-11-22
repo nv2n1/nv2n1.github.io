@@ -48,8 +48,8 @@ david
 <p> <a href="/docs/linux/man/1-kdestroy/">kdestroy</a>(1), <a href="/docs/linux/man/1-kinit/">kinit</a>(1), <a href="/docs/linux/man/1-klist/">klist</a>(1), <a href="/docs/linux/man/1-kswitch/">kswitch</a>(1), <a href="/docs/linux/man/1-kpasswd/">kpasswd</a>(1), <a href="/docs/linux/man/1-ksu/">ksu</a>(1), <a href="/docs/linux/man/5-krb5-conf/">krb5.conf</a>(5), <a href="/docs/linux/man/5-kdc-conf/">kdc.conf</a>(5), <a href="/docs/linux/man/1-kadmin/">kadmin</a>(1), <a href="/docs/linux/man/8-kadmind/">kadmind</a>(8), <a href="/docs/linux/man/8-kdb5_util/">kdb5_util</a>(8), <a href="/docs/linux/man/8-krb5kdc/">krb5kdc</a>(8)</p>
 <h2>BUGS</h2>
 <h2>AUTHORS</h2>
-<p> Steve Miller, MIT Project Athena/Digital Equipment Corporation<br />
- Clifford Neuman, MIT Project Athena<br />
+<p> Steve Miller, MIT Project Athena/Digital Equipment Corporation<br/>
+ Clifford Neuman, MIT Project Athena<br/>
  Greg Hudson, MIT Kerberos Consortium</p>
 <h2>HISTORY</h2>
 <p> The MIT Kerberos 5 implementation was developed at MIT, with contributions from many outside parties. It is currently maintained by the MIT Kerberos Consortium.</p>

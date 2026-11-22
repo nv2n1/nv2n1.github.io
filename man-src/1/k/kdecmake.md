@@ -477,32 +477,32 @@ description: "kdecmake – Reference of available CMake custom modules."
   KDE4_KDEWEBKIT_LIBS        - the kdewebkit library and all depending libraries
 </pre>
 <p> This module defines a bunch of variables used as locations for install directories. They can be relative (to CMAKE_INSTALL_PREFIX) or absolute. Under Windows they are always relative. </p>
-<p>  BIN_INSTALL_DIR          &#8211; the directory where executables will be installed (default is prefix/bin)<br />
-  BUNDLE_INSTALL_DIR       &#8211; Mac only: the directory where application bundles will be installed (default is /Applications/KDE4 )<br />
-  SBIN_INSTALL_DIR         &#8211; the directory where system executables will be installed (default is prefix/sbin)<br />
-  LIB_INSTALL_DIR          &#8211; the directory where libraries will be installed (default is prefix/lib)<br />
-  CONFIG_INSTALL_DIR       &#8211; the config file install dir<br />
-  DATA_INSTALL_DIR         &#8211; the parent directory where applications can install their data<br />
-  HTML_INSTALL_DIR         &#8211; the HTML install dir for documentation<br />
-  ICON_INSTALL_DIR         &#8211; the icon install dir (default prefix/share/icons/)<br />
-  INFO_INSTALL_DIR         &#8211; the kde info install dir (default prefix/info)<br />
-  KCFG_INSTALL_DIR         &#8211; the install dir for kconfig files<br />
-  LOCALE_INSTALL_DIR       &#8211; the install dir for translations<br />
-  MAN_INSTALL_DIR          &#8211; the kde man page install dir (default prefix/man/)<br />
-  MIME_INSTALL_DIR         &#8211; the install dir for the mimetype desktop files<br />
-  PLUGIN_INSTALL_DIR       &#8211; the subdirectory relative to the install prefix where plugins will be installed (default is ${KDE4_LIB_INSTALL_DIR}/kde4)<br />
-  SERVICES_INSTALL_DIR     &#8211; the install dir for service (desktop, protocol, &#8230;) files<br />
-  SERVICETYPES_INSTALL_DIR &#8211; the install dir for servicestypes desktop files<br />
-  SOUND_INSTALL_DIR        &#8211; the install dir for sound files<br />
-  TEMPLATES_INSTALL_DIR    &#8211; the install dir for templates (Create new file&#8230;)<br />
-  WALLPAPER_INSTALL_DIR    &#8211; the install dir for wallpapers<br />
-  DEMO_INSTALL_DIR         &#8211; the install dir for demos<br />
-  KCONF_UPDATE_INSTALL_DIR &#8211; the kconf_update install dir<br />
-  XDG_APPS_INSTALL_DIR     &#8211; the XDG apps dir<br />
-  XDG_DIRECTORY_INSTALL_DIR- the XDG directory<br />
-  XDG_MIME_INSTALL_DIR     &#8211; the XDG mimetypes install dir<br />
-  DBUS_INTERFACES_INSTALL_DIR &#8211; the directory where dbus interfaces be installed (default is prefix/share/dbus-1/interfaces)<br />
-  DBUS_SERVICES_INSTALL_DIR        &#8211; the directory where dbus services be installed (default is prefix/share/dbus-1/services )<br />
+<p>  BIN_INSTALL_DIR          &#8211; the directory where executables will be installed (default is prefix/bin)<br/>
+  BUNDLE_INSTALL_DIR       &#8211; Mac only: the directory where application bundles will be installed (default is /Applications/KDE4 )<br/>
+  SBIN_INSTALL_DIR         &#8211; the directory where system executables will be installed (default is prefix/sbin)<br/>
+  LIB_INSTALL_DIR          &#8211; the directory where libraries will be installed (default is prefix/lib)<br/>
+  CONFIG_INSTALL_DIR       &#8211; the config file install dir<br/>
+  DATA_INSTALL_DIR         &#8211; the parent directory where applications can install their data<br/>
+  HTML_INSTALL_DIR         &#8211; the HTML install dir for documentation<br/>
+  ICON_INSTALL_DIR         &#8211; the icon install dir (default prefix/share/icons/)<br/>
+  INFO_INSTALL_DIR         &#8211; the kde info install dir (default prefix/info)<br/>
+  KCFG_INSTALL_DIR         &#8211; the install dir for kconfig files<br/>
+  LOCALE_INSTALL_DIR       &#8211; the install dir for translations<br/>
+  MAN_INSTALL_DIR          &#8211; the kde man page install dir (default prefix/man/)<br/>
+  MIME_INSTALL_DIR         &#8211; the install dir for the mimetype desktop files<br/>
+  PLUGIN_INSTALL_DIR       &#8211; the subdirectory relative to the install prefix where plugins will be installed (default is ${KDE4_LIB_INSTALL_DIR}/kde4)<br/>
+  SERVICES_INSTALL_DIR     &#8211; the install dir for service (desktop, protocol, &#8230;) files<br/>
+  SERVICETYPES_INSTALL_DIR &#8211; the install dir for servicestypes desktop files<br/>
+  SOUND_INSTALL_DIR        &#8211; the install dir for sound files<br/>
+  TEMPLATES_INSTALL_DIR    &#8211; the install dir for templates (Create new file&#8230;)<br/>
+  WALLPAPER_INSTALL_DIR    &#8211; the install dir for wallpapers<br/>
+  DEMO_INSTALL_DIR         &#8211; the install dir for demos<br/>
+  KCONF_UPDATE_INSTALL_DIR &#8211; the kconf_update install dir<br/>
+  XDG_APPS_INSTALL_DIR     &#8211; the XDG apps dir<br/>
+  XDG_DIRECTORY_INSTALL_DIR- the XDG directory<br/>
+  XDG_MIME_INSTALL_DIR     &#8211; the XDG mimetypes install dir<br/>
+  DBUS_INTERFACES_INSTALL_DIR &#8211; the directory where dbus interfaces be installed (default is prefix/share/dbus-1/interfaces)<br/>
+  DBUS_SERVICES_INSTALL_DIR        &#8211; the directory where dbus services be installed (default is prefix/share/dbus-1/services )<br/>
   DBUS_SYSTEM_SERVICES_INSTALL_DIR        &#8211; the directory where dbus system services be installed (default is prefix/share/dbus-1/system-services )</p>
 <p> The following variable is provided, but seem to be unused: </p>
 <pre>
@@ -526,18 +526,18 @@ description: "kdecmake – Reference of available CMake custom modules."
   KDE4_ADD_UI3_FILES (SRCS_VAR file1.ui ... fileN.ui)
     Use this to add Qt designer ui files from Qt version 3 to your application/library.
 </pre>
-<p>KDE4_ADD_KCFG_FILES(SRCS_VAR[GENERATE_MOC][USE_RELATIVE_PATH] file1.kcfgc&#8230; fileN.kcfgc)<br />
-Use this to add KDE config compiler files to your application / library.Use optional GENERATE_MOC to generate moc if you use signals in your kcfg files.Use optional USE_RELATIVE_PATH to generate the classes in the build following the given<br />
+<p>KDE4_ADD_KCFG_FILES(SRCS_VAR[GENERATE_MOC][USE_RELATIVE_PATH] file1.kcfgc&#8230; fileN.kcfgc)<br/>
+Use this to add KDE config compiler files to your application / library.Use optional GENERATE_MOC to generate moc if you use signals in your kcfg files.Use optional USE_RELATIVE_PATH to generate the classes in the build following the given<br/>
                                                                     relative path to the file.</p>
 <pre>
   KDE4_ADD_WIDGET_FILES (SRCS_VAR file1.widgets ... fileN.widgets)
     Use this to add widget description files for the makekdewidgets4 code generator
     for Qt Designer plugins.
 </pre>
-<p>KDE4_CREATE_FINAL_FILES(filename_CXX filename_C file1&#8230; fileN)<br />
-    This macro is intended mainly for internal uses.<br />
-    It is used for enable-final. It will generate two source files,<br />
-    one for the C files and one for the C++ files.<br />
+<p>KDE4_CREATE_FINAL_FILES(filename_CXX filename_C file1&#8230; fileN)<br/>
+    This macro is intended mainly for internal uses.<br/>
+    It is used for enable-final. It will generate two source files,<br/>
+    one for the C files and one for the C++ files.<br/>
     These files will have the names given in filename_CXX and filename_C.</p>
 <pre>
   KDE4_ADD_PLUGIN ( name [WITH_PREFIX] file1 ... fileN )
@@ -545,45 +545,45 @@ Use this to add KDE config compiler files to your application / library.Use opti
     It supports KDE4_ENABLE_FINAL.
     If WITH_PREFIX is given, the resulting plugin will have the prefix &quot;lib&quot;, otherwise it won't.
 </pre>
-<p>KDE4_ADD_KDEINIT_EXECUTABLE(name[NOGUI][RUN_UNINSTALLED] file1&#8230; fileN)<br />
-    Create a KDE application in the form of a module loadable via kdeinit.<br />
-    A library named kdeinit_&lt;name&gt; will be created and a small executable which links to it.<br />
-    It supports KDE4_ENABLE_FINAL<br />
-    If the executable doesn&#8217;t have a GUI, use the option NOGUI. By default on OS X<br />
-    application bundles are created, with the NOGUI option no bundles but simple executables<br />
-    are created. Under Windows this flag is also necessary to separate between applications<br />
-    with GUI and without. On other UNIX systems this flag has no effect.<br />
-    RUN_UNINSTALLED is deprecated and is ignored, for details see the documentation for<br />
+<p>KDE4_ADD_KDEINIT_EXECUTABLE(name[NOGUI][RUN_UNINSTALLED] file1&#8230; fileN)<br/>
+    Create a KDE application in the form of a module loadable via kdeinit.<br/>
+    A library named kdeinit_&lt;name&gt; will be created and a small executable which links to it.<br/>
+    It supports KDE4_ENABLE_FINAL<br/>
+    If the executable doesn&#8217;t have a GUI, use the option NOGUI. By default on OS X<br/>
+    application bundles are created, with the NOGUI option no bundles but simple executables<br/>
+    are created. Under Windows this flag is also necessary to separate between applications<br/>
+    with GUI and without. On other UNIX systems this flag has no effect.<br/>
+    RUN_UNINSTALLED is deprecated and is ignored, for details see the documentation for<br/>
     KDE4_ADD_EXECUTABLE().</p>
-<p>KDE4_ADD_EXECUTABLE(name[NOGUI][TEST][RUN_UNINSTALLED] file1&#8230; fileN)<br />
-    Equivalent to ADD_EXECUTABLE(), but additionally adds some more features:<br />
-    -support for KDE4_ENABLE_FINAL<br />
-    -support for automoc<br />
-    -automatic RPATH handling<br />
-    If the executable doesn&#8217;t have a GUI, use the option NOGUI. By default on OS X<br />
-    application bundles are created, with the NOGUI option no bundles but simple executables<br />
-    are created. Under Windows this flag is also necessary to separate between applications<br />
-    with GUI and without. On other UNIX systems this flag has no effect.<br />
-    The option TEST is for internal use only.<br />
-    The option RUN_UNINSTALLED is ignored. It was necessary with KDE 4.0 and 4.1<br />
-    if the executable had to be run from the build tree. Since KDE 4.2 all<br />
-    executables can be always run uninstalled (the RPATH of executables which are not<br />
-    yet installed points since then into the buildtree and is changed<br />
+<p>KDE4_ADD_EXECUTABLE(name[NOGUI][TEST][RUN_UNINSTALLED] file1&#8230; fileN)<br/>
+    Equivalent to ADD_EXECUTABLE(), but additionally adds some more features:<br/>
+    -support for KDE4_ENABLE_FINAL<br/>
+    -support for automoc<br/>
+    -automatic RPATH handling<br/>
+    If the executable doesn&#8217;t have a GUI, use the option NOGUI. By default on OS X<br/>
+    application bundles are created, with the NOGUI option no bundles but simple executables<br/>
+    are created. Under Windows this flag is also necessary to separate between applications<br/>
+    with GUI and without. On other UNIX systems this flag has no effect.<br/>
+    The option TEST is for internal use only.<br/>
+    The option RUN_UNINSTALLED is ignored. It was necessary with KDE 4.0 and 4.1<br/>
+    if the executable had to be run from the build tree. Since KDE 4.2 all<br/>
+    executables can be always run uninstalled (the RPATH of executables which are not<br/>
+    yet installed points since then into the buildtree and is changed<br/>
     to the proper location when installing, so RUN_UNINSTALLED is not necessary anymore).</p>
 <pre>
   KDE4_ADD_LIBRARY (name [STATIC | SHARED | MODULE ] file1 ... fileN)
     Equivalent to ADD_LIBRARY(), but additionally it supports KDE4_ENABLE_FINAL
     and under Windows it adds a -DMAKE_&lt;name&gt;_LIB definition to the compilation.
 </pre>
-<p>KDE4_ADD_UNIT_TEST(testname[TESTNAME targetname] file1&#8230; fileN)<br />
-    add a unit test, which is executed when running make test<br />
-    it will be built with RPATH poiting to the build dir<br />
-    The targets are always created, but only built for the &#8220;all&#8221;<br />
-    target if the option KDE4_BUILD_TESTS is enabled. Otherwise the rules for the target<br />
-    are created but not built by default. You can build them by manually building the target.<br />
-    The name of the target can be specified using TESTNAME &lt;targetname&gt;, if it is not given<br />
-    the macro will default to the &lt;testname&gt;<br />
-    KDESRCDIR is set to the source directory of the test, this can be used with<br />
+<p>KDE4_ADD_UNIT_TEST(testname[TESTNAME targetname] file1&#8230; fileN)<br/>
+    add a unit test, which is executed when running make test<br/>
+    it will be built with RPATH poiting to the build dir<br/>
+    The targets are always created, but only built for the &#8220;all&#8221;<br/>
+    target if the option KDE4_BUILD_TESTS is enabled. Otherwise the rules for the target<br/>
+    are created but not built by default. You can build them by manually building the target.<br/>
+    The name of the target can be specified using TESTNAME &lt;targetname&gt;, if it is not given<br/>
+    the macro will default to the &lt;testname&gt;<br/>
+    KDESRCDIR is set to the source directory of the test, this can be used with<br/>
     KGlobal::dirs()-&gt;addResourceDir( &#8220;data&#8221;, KDESRCDIR )</p>
 <pre>
   KDE4_UPDATE_ICONCACHE()
@@ -595,9 +595,9 @@ Use this to add KDE config compiler files to your application / library.Use opti
     Installs all png and svgz files in the current directory to the icon
     directoy given in path, in the subdirectory for the given icon theme.
 </pre>
-<p>KDE4_CREATE_HANDBOOK(docbookfile[INSTALL_DESTINATION installdest][SUBDIR subdir])<br />
-Create the handbook from the docbookfile(using meinproc4)<br />
-    The resulting handbook will be installed to&lt;installdest&gt; when using INSTALL_DESTINATION&lt;installdest&gt;,<br />
+<p>KDE4_CREATE_HANDBOOK(docbookfile[INSTALL_DESTINATION installdest][SUBDIR subdir])<br/>
+Create the handbook from the docbookfile(using meinproc4)<br/>
+    The resulting handbook will be installed to&lt;installdest&gt; when using INSTALL_DESTINATION&lt;installdest&gt;,<br/>
     or to&lt;installdest&gt; / &lt;subdir&gt; if SUBDIR&lt;subdir&gt; is specified.</p>
 <pre>
   KDE4_CREATE_MANPAGE( docbookfile section )
@@ -616,12 +616,12 @@ Create the handbook from the docbookfile(using meinproc4)<br />
    and on Mac (Authorization Services) will be added to the system action registry using the native MacOS API during
    the install phase
 </pre>
-<p>KDE4_INSTALL_AUTH_HELPER_FILES(HELPER_TARGET HELPER_ID HELPER_USER)<br />
-   This macro adds the needed files for an helper executable meant to be used by applications using KAuth.<br />
-   It accepts the helper target, the helper ID (the DBUS name) and the user under which the helper will run on.<br />
-   This macro takes care of generate the needed files, and install them in the right location. This boils down<br />
-   to a DBus policy to let the helper register on the system bus, and a service file for letting the helper<br />
-   being automatically activated by the system bus.<br />
+<p>KDE4_INSTALL_AUTH_HELPER_FILES(HELPER_TARGET HELPER_ID HELPER_USER)<br/>
+   This macro adds the needed files for an helper executable meant to be used by applications using KAuth.<br/>
+   It accepts the helper target, the helper ID (the DBUS name) and the user under which the helper will run on.<br/>
+   This macro takes care of generate the needed files, and install them in the right location. This boils down<br/>
+   to a DBus policy to let the helper register on the system bus, and a service file for letting the helper<br/>
+   being automatically activated by the system bus.<br/>
    *WARNING* You have to install the helper in ${LIBEXEC_INSTALL_DIR} to make sure everything will work.</p>
 <pre>
   A note on the possible values for CMAKE_BUILD_TYPE and how KDE handles
@@ -1075,9 +1075,9 @@ Create the handbook from the docbookfile(using meinproc4)<br />
 </dd><dt><code>FindPkgConfig</code></dt>
 <dd> a pkg-config module for CMake </dd>
 <p> Usage: </p>
-<p>   pkg_check_modules(&lt;PREFIX&gt; [REQUIRED] [QUIET] &lt;MODULE&gt; [&lt;MODULE&gt;]*)<br />
+<p>   pkg_check_modules(&lt;PREFIX&gt; [REQUIRED] [QUIET] &lt;MODULE&gt; [&lt;MODULE&gt;]*)<br/>
      checks for all the given modules</p>
-<p>   pkg_search_module(&lt;PREFIX&gt; [REQUIRED] &lt;MODULE&gt; [&lt;MODULE&gt;]*)<br />
+<p>   pkg_search_module(&lt;PREFIX&gt; [REQUIRED] &lt;MODULE&gt; [&lt;MODULE&gt;]*)<br/>
      checks for given modules and uses the first working one</p>
 <p> When the &#8216;REQUIRED&#8217; argument was set, macros will fail with an error when module(s) could not be found </p>
 <p> When the &#8216;QUIET&#8217; argument is set, no error message will be output if the package was not found. </p>
@@ -1097,7 +1097,7 @@ Create the handbook from the docbookfile(using meinproc4)<br />
    &lt;XPREFIX&gt;_CFLAGS         ... all required cflags
    &lt;XPREFIX&gt;_CFLAGS_OTHER   ... the other compiler flags
 </pre>
-<p>   &lt;XPREFIX&gt; = &lt;PREFIX&gt;        for common case<br />
+<p>   &lt;XPREFIX&gt; = &lt;PREFIX&gt;        for common case<br/>
    &lt;XPREFIX&gt; = &lt;PREFIX&gt;_STATIC for static linking</p>
 <p> There are some special variables whose prefix depends on the count of given modules. When there is only one module, &lt;PREFIX&gt; stays unchanged. When there are multiple modules, the prefix will be changed to &lt;PREFIX&gt;_&lt;MODNAME&gt;: </p>
 <pre>
@@ -1127,13 +1127,13 @@ Create the handbook from the docbookfile(using meinproc4)<br />
        FOO_glib-2.0_VERSION=2.10.3
        FOO_gtk+-2.0_VERSION=2.8.20
 </pre>
-<p>pkg_check_modules(XRENDER REQUIRED xrender)<br />
-    defines e.g. : XRENDER_LIBRARIES = Xrender;<br />
-X11<br />
-    XRENDER_STATIC_LIBRARIES = Xrender;<br />
-X11;<br />
-pthread;<br />
-Xau;<br />
+<p>pkg_check_modules(XRENDER REQUIRED xrender)<br/>
+    defines e.g. : XRENDER_LIBRARIES = Xrender;<br/>
+X11<br/>
+    XRENDER_STATIC_LIBRARIES = Xrender;<br/>
+X11;<br/>
+pthread;<br/>
+Xau;<br/>
 Xdmcp</p>
 <pre>
    pkg_search_module (BAR     libxml-2.0 libxml2 libxml&gt;=2)
@@ -1253,9 +1253,9 @@ Xdmcp</p>
 <dd> Find QT 4 </dd>
 <p> This module can be used to find Qt4. The most important issue is that the Qt4 qmake is available via the system path. This qmake is then used to detect basically everything else. This module defines a number of key variables and macros. The variable QT_USE_FILE is set which is the path to a CMake file that can be included to compile Qt 4 applications and libraries. It sets up the compilation environment for include directories, preprocessor defines and populates a QT_LIBRARIES variable. </p>
 <p> Typical usage could be something like: </p>
-<p>find_package(Qt4 4.4.3 COMPONENTS QtCore QtGui QtXml REQUIRED)<br />
-    include(${QT_USE_FILE})<br />
-        add_executable(myexe main.cpp)<br />
+<p>find_package(Qt4 4.4.3 COMPONENTS QtCore QtGui QtXml REQUIRED)<br/>
+    include(${QT_USE_FILE})<br/>
+        add_executable(myexe main.cpp)<br/>
             target_link_libraries(myexe ${QT_LIBRARIES})</p>
 <p> The minimum required version can be specified using the standard find_package()-syntax (see example above). For compatibility with older versions of FindQt4.cmake it is also possible to set the variable QT_MIN_VERSION to the minimum required version of Qt4 before the find_package(Qt4) command. If both are used, the version used in the find_package() command overrides the one from QT_MIN_VERSION. </p>
 <p> When using the components argument, QT_USE_QT* variables are automatically set for the QT_USE_FILE to pick up. If one wishes to manually set them, the available ones to set include: </p>
@@ -1326,17 +1326,17 @@ Xdmcp</p>
         Use this if for some reason QT4_WRAP_CPP() isn't appropriate, e.g.
         because you need a custom filename for the moc file or something similar.
 </pre>
-<p>  macro QT4_AUTOMOC(sourcefile1 sourcefile2 &#8230; )<br />
-        This macro is still experimental.<br />
-        It can be used to have moc automatically handled.<br />
-        So if you have the files foo.h and foo.cpp, and in foo.h a<br />
-        a class uses the Q_OBJECT macro, moc has to run on it. If you don&#8217;t<br />
-        want to use QT4_WRAP_CPP() (which is reliable and mature), you can insert<br />
-#include &#8220;foo.moc&#8221;<br />
-        in foo.cpp and then give foo.cpp as argument to QT4_AUTOMOC(). This will the<br />
-        scan all listed files at cmake-time for such included moc files and if it finds<br />
-        them cause a rule to be generated to run moc at build time on the<br />
-        accompanying header file foo.h.<br />
+<p>  macro QT4_AUTOMOC(sourcefile1 sourcefile2 &#8230; )<br/>
+        This macro is still experimental.<br/>
+        It can be used to have moc automatically handled.<br/>
+        So if you have the files foo.h and foo.cpp, and in foo.h a<br/>
+        a class uses the Q_OBJECT macro, moc has to run on it. If you don&#8217;t<br/>
+        want to use QT4_WRAP_CPP() (which is reliable and mature), you can insert<br/>
+#include &#8220;foo.moc&#8221;<br/>
+        in foo.cpp and then give foo.cpp as argument to QT4_AUTOMOC(). This will the<br/>
+        scan all listed files at cmake-time for such included moc files and if it finds<br/>
+        them cause a rule to be generated to run moc at build time on the<br/>
+        accompanying header file foo.h.<br/>
         If a source file has the SKIP_AUTOMOC property set it will be ignored by this macro.</p>
 <pre>
   macro QT4_ADD_DBUS_INTERFACE(outfiles interface basename)
@@ -1362,14 +1362,14 @@ Xdmcp</p>
         To specify a class name to use, set the source file property CLASSNAME
         to the name of the class.
 </pre>
-<p>macro QT4_ADD_DBUS_ADAPTOR(outfiles xmlfile parentheader parentclassname[basename][classname])<br />
-    create a dbus adaptor(header and implementation file) from the xml file<br />
-    describing the interface,<br />
-    and add it to the list of sources.The adaptor<br />
-        forwards the calls to a parent class,<br />
-    defined in parentheader and named<br />
-    parentclassname.The name of the generated files will be&lt;basename&gt; adaptor.{cpp, h} where basename defaults to the basename of the xml file.If&lt;classname&gt; is provided,<br />
-    then it will be used as the classname of the<br />
+<p>macro QT4_ADD_DBUS_ADAPTOR(outfiles xmlfile parentheader parentclassname[basename][classname])<br/>
+    create a dbus adaptor(header and implementation file) from the xml file<br/>
+    describing the interface,<br/>
+    and add it to the list of sources.The adaptor<br/>
+        forwards the calls to a parent class,<br/>
+    defined in parentheader and named<br/>
+    parentclassname.The name of the generated files will be&lt;basename&gt; adaptor.{cpp, h} where basename defaults to the basename of the xml file.If&lt;classname&gt; is provided,<br/>
+    then it will be used as the classname of the<br/>
     adaptor itself.</p>
 <pre>
   macro QT4_GENERATE_DBUS_INTERFACE( header [interfacename] OPTIONS ...)
@@ -1413,12 +1413,12 @@ Xdmcp</p>
   QT_VERSION_MINOR The minor version of Qt found.
   QT_VERSION_PATCH The patch version of Qt found.
 </pre>
-<p>QT_EDITION Set to the edition of Qt(i.e.DesktopLight)<br />
-        QT_EDITION_DESKTOPLIGHT True if QT_EDITION<br />
-    == DesktopLight<br />
-       QT_QTCORE_FOUND True if QtCore was found.QT_QTGUI_FOUND True if QtGui was found.QT_QT3SUPPORT_FOUND True if Qt3Support was found.QT_QTASSISTANT_FOUND True if QtAssistant was found.QT_QTASSISTANTCLIENT_FOUND True if QtAssistantClient was found.QT_QAXCONTAINER_FOUND True if QAxContainer was found(Windows only)<br />
-           .QT_QAXSERVER_FOUND True if QAxServer was found(Windows only)<br />
-           .QT_QTDBUS_FOUND True if QtDBus was found.QT_QTDESIGNER_FOUND True if QtDesigner was found.QT_QTDESIGNERCOMPONENTS True if QtDesignerComponents was found.QT_QTHELP_FOUND True if QtHelp was found.QT_QTMOTIF_FOUND True if QtMotif was found.QT_QTMULTIMEDIA_FOUND True if QtMultimedia was found(since Qt 4.6.0)<br />
+<p>QT_EDITION Set to the edition of Qt(i.e.DesktopLight)<br/>
+        QT_EDITION_DESKTOPLIGHT True if QT_EDITION<br/>
+    == DesktopLight<br/>
+       QT_QTCORE_FOUND True if QtCore was found.QT_QTGUI_FOUND True if QtGui was found.QT_QT3SUPPORT_FOUND True if Qt3Support was found.QT_QTASSISTANT_FOUND True if QtAssistant was found.QT_QTASSISTANTCLIENT_FOUND True if QtAssistantClient was found.QT_QAXCONTAINER_FOUND True if QAxContainer was found(Windows only)<br/>
+           .QT_QAXSERVER_FOUND True if QAxServer was found(Windows only)<br/>
+           .QT_QTDBUS_FOUND True if QtDBus was found.QT_QTDESIGNER_FOUND True if QtDesigner was found.QT_QTDESIGNERCOMPONENTS True if QtDesignerComponents was found.QT_QTHELP_FOUND True if QtHelp was found.QT_QTMOTIF_FOUND True if QtMotif was found.QT_QTMULTIMEDIA_FOUND True if QtMultimedia was found(since Qt 4.6.0)<br/>
            .QT_QTNETWORK_FOUND True if QtNetwork was found.QT_QTNSPLUGIN_FOUND True if QtNsPlugin was found.QT_QTOPENGL_FOUND True if QtOpenGL was found.QT_QTSQL_FOUND True if QtSql was found.QT_QTSVG_FOUND True if QtSvg was found.QT_QTSCRIPT_FOUND True if QtScript was found.QT_QTSCRIPTTOOLS_FOUND True if QtScriptTools was found.QT_QTTEST_FOUND True if QtTest was found.QT_QTUITOOLS_FOUND True if QtUiTools was found.QT_QTWEBKIT_FOUND True if QtWebKit was found.QT_QTXML_FOUND True if QtXml was found.QT_QTXMLPATTERNS_FOUND True if QtXmlPatterns was found.QT_PHONON_FOUND True if phonon was found.</p>
 <pre>
   QT_MAC_USE_COCOA    For Mac OS X, its whether Cocoa or Carbon is used.
@@ -1426,47 +1426,47 @@ Xdmcp</p>
                       when having platform specific code.
 </pre>
 <p>QT_DEFINITIONS Definitions to use when compiling code that uses Qt.You do not need to use this if you include QT_USE_FILE.The QT_USE_FILE will also define QT_DEBUG and QT_NO_DEBUG to fit your current build type.Those are not contained in QT_DEFINITIONS.</p>
-<p>                                                                                                                                                                        QT_INCLUDES List of paths to all include directories of Qt4 QT_INCLUDE_DIR and<br />
-    QT_QTCORE_INCLUDE_DIR are<br />
-        always in this variable even if NOTFOUND,<br />
-    all other INCLUDE_DIRS are<br />
+<p>                                                                                                                                                                        QT_INCLUDES List of paths to all include directories of Qt4 QT_INCLUDE_DIR and<br/>
+    QT_QTCORE_INCLUDE_DIR are<br/>
+        always in this variable even if NOTFOUND,<br/>
+    all other INCLUDE_DIRS are<br/>
         only added if they are found.You do not need to use this if you include QT_USE_FILE.</p>
 <pre>
   Include directories for the Qt modules are listed here.
   You do not need to use these variables if you include QT_USE_FILE.
 </pre>
-<p>  QT_INCLUDE_DIR              Path to &#8220;include&#8221; of Qt4<br />
-  QT_QT_INCLUDE_DIR           Path to &#8220;include/Qt&#8221;<br />
-  QT_QT3SUPPORT_INCLUDE_DIR   Path to &#8220;include/Qt3Support&#8221;<br />
-  QT_QTASSISTANT_INCLUDE_DIR  Path to &#8220;include/QtAssistant&#8221;<br />
-  QT_QTASSISTANTCLIENT_INCLUDE_DIR       Path to &#8220;include/QtAssistant&#8221;<br />
-  QT_QAXCONTAINER_INCLUDE_DIR Path to &#8220;include/ActiveQt&#8221; (Windows only)<br />
-  QT_QAXSERVER_INCLUDE_DIR    Path to &#8220;include/ActiveQt&#8221; (Windows only)<br />
-  QT_QTCORE_INCLUDE_DIR       Path to &#8220;include/QtCore&#8221;<br />
-  QT_QTDBUS_INCLUDE_DIR       Path to &#8220;include/QtDBus&#8221;<br />
-  QT_QTDESIGNER_INCLUDE_DIR   Path to &#8220;include/QtDesigner&#8221;<br />
-  QT_QTDESIGNERCOMPONENTS_INCLUDE_DIR   Path to &#8220;include/QtDesigner&#8221;<br />
-  QT_QTGUI_INCLUDE_DIR        Path to &#8220;include/QtGui&#8221;<br />
-  QT_QTHELP_INCLUDE_DIR       Path to &#8220;include/QtHelp&#8221;<br />
-  QT_QTMOTIF_INCLUDE_DIR      Path to &#8220;include/QtMotif&#8221;<br />
-  QT_QTMULTIMEDIA_INCLUDE_DIR Path to &#8220;include/QtMultimedia&#8221;<br />
-  QT_QTNETWORK_INCLUDE_DIR    Path to &#8220;include/QtNetwork&#8221;<br />
-  QT_QTNSPLUGIN_INCLUDE_DIR   Path to &#8220;include/QtNsPlugin&#8221;<br />
-  QT_QTOPENGL_INCLUDE_DIR     Path to &#8220;include/QtOpenGL&#8221;<br />
-  QT_QTSCRIPT_INCLUDE_DIR     Path to &#8220;include/QtScript&#8221;<br />
-  QT_QTSQL_INCLUDE_DIR        Path to &#8220;include/QtSql&#8221;<br />
-  QT_QTSVG_INCLUDE_DIR        Path to &#8220;include/QtSvg&#8221;<br />
-  QT_QTTEST_INCLUDE_DIR       Path to &#8220;include/QtTest&#8221;<br />
-  QT_QTWEBKIT_INCLUDE_DIR     Path to &#8220;include/QtWebKit&#8221;<br />
-  QT_QTXML_INCLUDE_DIR        Path to &#8220;include/QtXml&#8221;<br />
-  QT_QTXMLPATTERNS_INCLUDE_DIR  Path to &#8220;include/QtXmlPatterns&#8221;<br />
-  QT_PHONON_INCLUDE_DIR       Path to &#8220;include/phonon&#8221;<br />
+<p>  QT_INCLUDE_DIR              Path to &#8220;include&#8221; of Qt4<br/>
+  QT_QT_INCLUDE_DIR           Path to &#8220;include/Qt&#8221;<br/>
+  QT_QT3SUPPORT_INCLUDE_DIR   Path to &#8220;include/Qt3Support&#8221;<br/>
+  QT_QTASSISTANT_INCLUDE_DIR  Path to &#8220;include/QtAssistant&#8221;<br/>
+  QT_QTASSISTANTCLIENT_INCLUDE_DIR       Path to &#8220;include/QtAssistant&#8221;<br/>
+  QT_QAXCONTAINER_INCLUDE_DIR Path to &#8220;include/ActiveQt&#8221; (Windows only)<br/>
+  QT_QAXSERVER_INCLUDE_DIR    Path to &#8220;include/ActiveQt&#8221; (Windows only)<br/>
+  QT_QTCORE_INCLUDE_DIR       Path to &#8220;include/QtCore&#8221;<br/>
+  QT_QTDBUS_INCLUDE_DIR       Path to &#8220;include/QtDBus&#8221;<br/>
+  QT_QTDESIGNER_INCLUDE_DIR   Path to &#8220;include/QtDesigner&#8221;<br/>
+  QT_QTDESIGNERCOMPONENTS_INCLUDE_DIR   Path to &#8220;include/QtDesigner&#8221;<br/>
+  QT_QTGUI_INCLUDE_DIR        Path to &#8220;include/QtGui&#8221;<br/>
+  QT_QTHELP_INCLUDE_DIR       Path to &#8220;include/QtHelp&#8221;<br/>
+  QT_QTMOTIF_INCLUDE_DIR      Path to &#8220;include/QtMotif&#8221;<br/>
+  QT_QTMULTIMEDIA_INCLUDE_DIR Path to &#8220;include/QtMultimedia&#8221;<br/>
+  QT_QTNETWORK_INCLUDE_DIR    Path to &#8220;include/QtNetwork&#8221;<br/>
+  QT_QTNSPLUGIN_INCLUDE_DIR   Path to &#8220;include/QtNsPlugin&#8221;<br/>
+  QT_QTOPENGL_INCLUDE_DIR     Path to &#8220;include/QtOpenGL&#8221;<br/>
+  QT_QTSCRIPT_INCLUDE_DIR     Path to &#8220;include/QtScript&#8221;<br/>
+  QT_QTSQL_INCLUDE_DIR        Path to &#8220;include/QtSql&#8221;<br/>
+  QT_QTSVG_INCLUDE_DIR        Path to &#8220;include/QtSvg&#8221;<br/>
+  QT_QTTEST_INCLUDE_DIR       Path to &#8220;include/QtTest&#8221;<br/>
+  QT_QTWEBKIT_INCLUDE_DIR     Path to &#8220;include/QtWebKit&#8221;<br/>
+  QT_QTXML_INCLUDE_DIR        Path to &#8220;include/QtXml&#8221;<br/>
+  QT_QTXMLPATTERNS_INCLUDE_DIR  Path to &#8220;include/QtXmlPatterns&#8221;<br/>
+  QT_PHONON_INCLUDE_DIR       Path to &#8220;include/phonon&#8221;<br/>
   QT_QTSCRIPTTOOLS_INCLUDE_DIR       Path to &#8220;include/QtScriptTools&#8221;</p>
-<p>  QT_BINARY_DIR               Path to &#8220;bin&#8221; of Qt4<br />
-  QT_LIBRARY_DIR              Path to &#8220;lib&#8221; of Qt4<br />
-  QT_PLUGINS_DIR              Path to &#8220;plugins&#8221; for Qt4<br />
-  QT_TRANSLATIONS_DIR         Path to &#8220;translations&#8221; of Qt4<br />
-  QT_DOC_DIR                  Path to &#8220;doc&#8221; of Qt4<br />
+<p>  QT_BINARY_DIR               Path to &#8220;bin&#8221; of Qt4<br/>
+  QT_LIBRARY_DIR              Path to &#8220;lib&#8221; of Qt4<br/>
+  QT_PLUGINS_DIR              Path to &#8220;plugins&#8221; for Qt4<br/>
+  QT_TRANSLATIONS_DIR         Path to &#8220;translations&#8221; of Qt4<br/>
+  QT_DOC_DIR                  Path to &#8220;doc&#8221; of Qt4<br/>
   QT_MKSPECS_DIR              Path to &#8220;mkspecs&#8221; of Qt4</p>
 <p> For every library of Qt, a QT_QTFOO_LIBRARY variable is defined, with the full path to the library. </p>
 <p> So there are the following variables: The Qt3Support library: QT_QT3SUPPORT_LIBRARY </p>

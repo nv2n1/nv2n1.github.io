@@ -38,8 +38,8 @@ description: "greylistd-setup-exim4 – add/remove support for greylistd in Exim
 <dl>
 <dt><code>greylistd-setup-exim4 add -netmask=24</code></dt>
 <dd>Adds greylistd statements to any <code>acl_check_rcpt</code> and <code>acl_check_data</code> ACLs found in any of the following files: </dd>
-<p>&nbsp;<wbr>&nbsp;<wbr>&#8211;&nbsp;<wbr>/etc/exim4/exim4.conf.template<br />
-&nbsp;<wbr>&nbsp;<wbr>&#8211;&nbsp;<wbr>/etc/exim4/conf.d/acl/30_exim4-config_check_rcpt<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&#8211;&nbsp;<wbr>/etc/exim4/exim4.conf.template<br/>
+&nbsp;<wbr>&nbsp;<wbr>&#8211;&nbsp;<wbr>/etc/exim4/conf.d/acl/30_exim4-config_check_rcpt<br/>
 &nbsp;<wbr>&nbsp;<wbr>&#8211;&nbsp;<wbr>/etc/exim4/conf.d/acl/40_exim4-config_check_data </p>
 <p> In these statements, the data passed to greylistd includes the host address filtered through a 24-bit netmask, rather than the host&#8217;s unique IP address. This allows for pools of several Mail Sending Agents (MSAs) within a given network to be treated as a single host. </p>
 <p> If successful, Exim 4 is told to reload its configuration files. If a statement already exists, nothing happens &#8211; but the program exits unsuccessfully (non-zero return code).</p>

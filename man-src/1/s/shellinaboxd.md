@@ -137,11 +137,11 @@ description: "shellinaboxd – publish command line shell through AJAX interface
 <h2>CONFIGURATION</h2>
 <p> There are no configuration files or permanent settings for <code>shellinaboxd</code>. </p>
 <p> A small number of run-time configuration options are available from a context menu that becomes available when clicking the right mouse button. These options get persisted in a browser cookie. </p>
-<p> Many sites already have a web server running and would like to integrate <code>shellinaboxd</code> into their existing site. This is most commonly done by means of a reverse-proxy entry for the main web server. For <i>Apache</i> this would require adding an option such as:<br />
-&nbsp;<wbr>&lt;Location&nbsp;<wbr>/shell&gt;<br />
-&nbsp;<wbr>&nbsp;<wbr>ProxyPass&nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="http://localhost:4200/">http://localhost:4200/</a><br />
-&nbsp;<wbr>&nbsp;<wbr>Order&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>allow,deny<br />
-&nbsp;<wbr>&nbsp;<wbr>Allow&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>from all<br />
+<p> Many sites already have a web server running and would like to integrate <code>shellinaboxd</code> into their existing site. This is most commonly done by means of a reverse-proxy entry for the main web server. For <i>Apache</i> this would require adding an option such as:<br/>
+&nbsp;<wbr>&lt;Location&nbsp;<wbr>/shell&gt;<br/>
+&nbsp;<wbr>&nbsp;<wbr>ProxyPass&nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="http://localhost:4200/">http://localhost:4200/</a><br/>
+&nbsp;<wbr>&nbsp;<wbr>Order&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>allow,deny<br/>
+&nbsp;<wbr>&nbsp;<wbr>Allow&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>from all<br/>
 &nbsp;<wbr>&lt;/Location&gt; </p>
 <p> If you are using a different web server, refer to that server&#8217;s documentation on how to configure reverse proxy operations. </p>
 <p> When using a reverse proxy, the <code>&#8211;localhost-only</code> option would normally be enabled as well. In addition, the <code>&#8211;disable-ssl</code> might also be considered depending on the exact configuration details of the reverse proxy.</p>

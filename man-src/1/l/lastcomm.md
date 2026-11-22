@@ -12,25 +12,25 @@ description: "lastcomm – print out information about previously executed comma
 <h2>SYNOPSIS</h2>
 <dl>
 <dt><code>lastcomm</code></dt>
-<dd> [ <i>command-name &#8230;</i> ]<br />
- [ <i>user-name &#8230;</i> ]<br />
- [ <i>terminal-name &#8230;</i> ]<br />
+<dd> [ <i>command-name &#8230;</i> ]<br/>
+ [ <i>user-name &#8230;</i> ]<br/>
+ [ <i>terminal-name &#8230;</i> ]<br/>
  [ OPTION &#8230; ]</dd></dl>
 <h2>DESCRIPTION</h2>
-<p> <code>lastcomm</code> prints out information about previously executed commands. If no arguments are specified, <code>lastcomm </code> will print info about all of the commands in <i>acct</i> (the record file). If called with one or more of <i>command-name,</i> <i>user-name, </i> or <i>terminal-name,</i> only records containing those items will be displayed. For example, to find out which users used command `a.out&#8217; and which users were logged into `tty0&#8242;, type: <center> lastcomm a.out tty0<br />
+<p> <code>lastcomm</code> prints out information about previously executed commands. If no arguments are specified, <code>lastcomm </code> will print info about all of the commands in <i>acct</i> (the record file). If called with one or more of <i>command-name,</i> <i>user-name, </i> or <i>terminal-name,</i> only records containing those items will be displayed. For example, to find out which users used command `a.out&#8217; and which users were logged into `tty0&#8242;, type: <center> lastcomm a.out tty0<br/>
  </center> </p>
-<p> This will print any entry for which `a.out&#8217; or `tty0&#8242; matches in any of the record&#8217;s fields (command, name, or terminal). If you want to find only items that match *all* of the arguments on the command line, you must use the &#8216;-strict-match&#8217; option. For example, to list all of the executions of command <i>a.out</i> by user <i>root</i> on terminal <i>tty0,</i> type: <center> lastcomm &#8211;strict-match &#8211;command a.out &#8211;user root &#8211;tty tty0<br />
+<p> This will print any entry for which `a.out&#8217; or `tty0&#8242; matches in any of the record&#8217;s fields (command, name, or terminal). If you want to find only items that match *all* of the arguments on the command line, you must use the &#8216;-strict-match&#8217; option. For example, to list all of the executions of command <i>a.out</i> by user <i>root</i> on terminal <i>tty0,</i> type: <center> lastcomm &#8211;strict-match &#8211;command a.out &#8211;user root &#8211;tty tty0<br/>
  </center> </p>
 <p> The order of the arguments is not important. </p>
-<p> For each entry the following information is printed:<br />
-+&nbsp;<wbr>command name of the process<br />
-+&nbsp;<wbr>flags, as recorded by the system accounting routines:<br />
-&nbsp;<wbr>&nbsp;<wbr>S &#8212; command executed by super-user<br />
-&nbsp;<wbr>&nbsp;<wbr>F &#8212; command executed after a fork but without a following exec<br />
-&nbsp;<wbr>&nbsp;<wbr>C &#8212; command run in PDP-11 compatibility mode&nbsp;<wbr>(VAX only)<br />
-&nbsp;<wbr>&nbsp;<wbr>D &#8212; command terminated with the generation of a core file<br />
-&nbsp;<wbr>&nbsp;<wbr>X &#8212; command was terminated with the signal SIGTERM<br />
-+&nbsp;<wbr>the name of the user who ran the process<br />
+<p> For each entry the following information is printed:<br/>
++&nbsp;<wbr>command name of the process<br/>
++&nbsp;<wbr>flags, as recorded by the system accounting routines:<br/>
+&nbsp;<wbr>&nbsp;<wbr>S &#8212; command executed by super-user<br/>
+&nbsp;<wbr>&nbsp;<wbr>F &#8212; command executed after a fork but without a following exec<br/>
+&nbsp;<wbr>&nbsp;<wbr>C &#8212; command run in PDP-11 compatibility mode&nbsp;<wbr>(VAX only)<br/>
+&nbsp;<wbr>&nbsp;<wbr>D &#8212; command terminated with the generation of a core file<br/>
+&nbsp;<wbr>&nbsp;<wbr>X &#8212; command was terminated with the signal SIGTERM<br/>
++&nbsp;<wbr>the name of the user who ran the process<br/>
 +&nbsp;<wbr>time the process started</p>
 <h2>OPTIONS</h2>
 <dl>

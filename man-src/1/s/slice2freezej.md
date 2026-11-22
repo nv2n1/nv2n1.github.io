@@ -13,7 +13,7 @@ description: "slice2freezej – Generates Freeze map and index classes in Java."
 <p> slice2freezej [options] [files] </p>
 <h2>DESCRIPTION</h2>
 <p> slice2java generates Freeze map and index classes in Java. </p>
-<p> Full documentation for slice2freezej is available online at:<br />
+<p> Full documentation for slice2freezej is available online at:<br/>
  &quot;<a rel="nofollow" href="http://doc.zeroc.com/display/Ice/Using+a+Freeze+Map+in+Java">http://doc.zeroc.com/display/Ice/Using+a+Freeze+Map+in+Java</a>&quot;. </p>
 <h2>OPTIONS</h2>
 <dl>

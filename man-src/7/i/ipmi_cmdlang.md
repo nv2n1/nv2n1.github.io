@@ -132,10 +132,10 @@ description: "ipmi_cmdlang – A command language interface to the IPMI library"
 </dd></dl>
 <p> <code>open </code><i>&lt;domain&gt;</i> <i>&lt;options&gt;</i> <i>&lt;parms&gt;</i> [<i>&lt;parms&gt;</i>] &#8211; Open a connection to a new domain. <i>&lt;parms&gt;</i> are either:</p>
 <dl>
-<dd>lan [-U <i>&lt;username&gt;</i>] [-P <i>&lt;password&gt;</i>] [-A <i>&lt;authtype&gt;</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[-L&nbsp;<wbr><i>&lt;privilege&gt;</i>]&nbsp;<wbr>[-s]&nbsp;<wbr>[-p[2]&nbsp;<wbr><i>&lt;port number&gt;</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[-Ra&nbsp;<wbr><i>&lt;auth alg&gt;</i>]&nbsp;<wbr>[-Ri&nbsp;<wbr><i>&lt;integ alg&gt;</i>]&nbsp;<wbr>[-Rc&nbsp;<wbr><i>&lt;conf algo&gt;</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>[-Rl]&nbsp;<wbr>[-Rk&nbsp;<wbr><i>&lt;bmc key&gt;</i>]&nbsp;<wbr>[-H&nbsp;<wbr><i>&lt;hackname&gt;</i>]<br />
+<dd>lan [-U <i>&lt;username&gt;</i>] [-P <i>&lt;password&gt;</i>] [-A <i>&lt;authtype&gt;</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[-L&nbsp;<wbr><i>&lt;privilege&gt;</i>]&nbsp;<wbr>[-s]&nbsp;<wbr>[-p[2]&nbsp;<wbr><i>&lt;port number&gt;</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[-Ra&nbsp;<wbr><i>&lt;auth alg&gt;</i>]&nbsp;<wbr>[-Ri&nbsp;<wbr><i>&lt;integ alg&gt;</i>]&nbsp;<wbr>[-Rc&nbsp;<wbr><i>&lt;conf algo&gt;</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>[-Rl]&nbsp;<wbr>[-Rk&nbsp;<wbr><i>&lt;bmc key&gt;</i>]&nbsp;<wbr>[-H&nbsp;<wbr><i>&lt;hackname&gt;</i>]<br/>
 &nbsp;<wbr>&nbsp;<wbr>[-M&nbsp;<wbr><i>&lt;max oustanding msgs</i>&gt;]&nbsp;<wbr><i>&lt;IP&gt;</i>&nbsp;<wbr>[<i>&lt;IP&gt;</i>]</dd></dl>
 <p> for a RMCP/RMCP+ LAN connection or</p>
 <dl>

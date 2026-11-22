@@ -117,7 +117,7 @@ description: "dar_manager – compiles several archives contents in a database t
 <dt>8</dt>
 <dd> see dar manual page for signification</dd>
 <dt>11 and above</dt>
-<dd> <code>dar</code><br />
+<dd> <code>dar</code><br/>
 &nbsp;<wbr>called from dar_manager has exited with non zero status. Subtract 10 to this exit code to get dar&#8217;s exit code. </dd>
 </dl>
 <h2>SIGNALS</h2>

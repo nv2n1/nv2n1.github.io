@@ -10,7 +10,7 @@ description: "pmdaslurm – SLURM statistics performance metrics domain agent (P
 
 <p> <code>pmdaslurm</code> &#8211; SLURM statistics performance metrics domain agent (PMDA)</p>
 <h2>DESCRIPTION</h2>
-<p> <code>pmdaslurm</code> is a Performance Metrics Domain Agent (<font SIZE="-1">PMDA</font>) which exports metric values from the slurm perlapi interface to provide information on slurm jobs, nodes and users.</p>
+<p> <code>pmdaslurm</code> is a Performance Metrics Domain Agent (PMDA) which exports metric values from the slurm perlapi interface to provide information on slurm jobs, nodes and users.</p>
 <h2>INSTALLATION</h2>
 <p> Install the slurm PMDA by using the Install script as root: </p>
 <p>#&nbsp;<wbr>cd&nbsp;<wbr>$PCP_PMDAS_DIR/slurm </p>

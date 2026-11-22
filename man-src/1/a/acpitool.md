@@ -41,7 +41,7 @@ description: "acpitool – a Linux ACPI client, allowing you to query or set ACP
 <dt><code>-j</code></dt>
 <dd> Eject Thinkpad ultrabay device. Requires write acces to <i>/proc/acpi/ibm/bay</i></dd>
 <dt><code>-l x</code></dt>
-<dd> Set LCD brightness level to x, where x is in the range 0..7. Works only on Toshiba and IBM Thinkpad laptops. Requires write access to <i>/proc/acpi/tochiba/lcd</i> or <i>/proc/acpi/ibm/brightness</i><br />
+<dd> Set LCD brightness level to x, where x is in the range 0..7. Works only on Toshiba and IBM Thinkpad laptops. Requires write access to <i>/proc/acpi/tochiba/lcd</i> or <i>/proc/acpi/ibm/brightness</i><br/>
  Illegal values for x will result in the value being set to either 0 or 7.</dd>
 <dt><code>-m x</code></dt>
 <dd> Switch the mail led on (x=1) or off (x=0). Works only on Asus laptops. Requires write access to <i>/proc/acpi/asus/mled</i> </dd>
@@ -76,10 +76,10 @@ description: "acpitool – a Linux ACPI client, allowing you to query or set ACP
 <h2>BUGS</h2>
 <p> Let me know if you think you found one.</p>
 <h2>FILES</h2>
-<p> <i>/proc/acpi/&#8230;</i><br />
- <i>/proc/acpi/toshiba</i><br />
- <i>/proc/acpi/asus</i><br />
- <i>/proc/acpi/ibm</i><br />
+<p> <i>/proc/acpi/&#8230;</i><br/>
+ <i>/proc/acpi/toshiba</i><br/>
+ <i>/proc/acpi/asus</i><br/>
+ <i>/proc/acpi/ibm</i><br/>
  <i>/sys/power/state</i></p>
 <h2>HOMEPAGE</h2>
 <p> <a rel="nofollow" href="http://freeunix.dyndns.org:8000/site2/acpitool.shtml">http://freeunix.dyndns.org:8000/site2/acpitool.shtml</a></p>

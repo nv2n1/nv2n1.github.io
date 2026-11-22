@@ -50,8 +50,8 @@ description: "cfv – Verify file consistency with .sfv, .csv, .crc, .md5, md5su
 <dt>-N</dt>
 <dd> Don&#8217;t rename bad files (default)</dd>
 <dt>&#8211;renameformat string</dt>
-<dd> Format string to use with -n option. Simply, put any of the 4 strings %(fullname)s, %(name)s, %(ext)s, and %(count)i in the format string, along with whatever other text you wish.<br />
- The default is &#8216;%(name)s.bad-%(count)i%(ext)s&#8217;<br />
+<dd> Format string to use with -n option. Simply, put any of the 4 strings %(fullname)s, %(name)s, %(ext)s, and %(count)i in the format string, along with whatever other text you wish.<br/>
+ The default is &#8216;%(name)s.bad-%(count)i%(ext)s&#8217;<br/>
  In detail, this is a standard python format string with mapping that contains {&#8216;fullname&#8217;: original filename, &#8216;name&#8217;: fullname minus extension, &#8216;ext&#8217;: extension(including .), &#8216;count&#8217;: rename attempt}. If the format string does not contain count, then cfv will append &#8216;-%(count)i&#8217; to the filename if the first attempt fails.</dd>
 <dt>-s</dt>
 <dd> Search for misnamed files. No effect in create mode. Also, keep in mind that using -m together with -s will do nothing if the checksum type doesn&#8217;t include filesizes, and if it does, can give false positives if some files have the same size.</dd>
@@ -101,17 +101,17 @@ description: "cfv – Verify file consistency with .sfv, .csv, .crc, .md5, md5su
 <dd> Print help info.</dd>
 <dt>&#8211;version</dt>
 <dd> Print version of cfv and modules it uses.</dd></dl>
-<p> <code>sfv</code> is a Simple File Verify format file<br />
- <code>sfvmd5</code> is a Simple File Verify format file, using MD5 checksums rather than crc32.<br />
- <code>csv</code> is a Comma Seperated Value file, with the fields being name,size,crc32,<br />
- <code>csv2</code> is a Comma Seperated Value file, with the fields being name,size,<br />
- <code>csv4</code> is a Comma Seperated Value file, with the fields being name,size,crc32,path<br />
- <code>sha1</code> is a sha1sum format file<br />
- <code>md5</code> is a md5sum format file<br />
- <code>bsdmd5</code> is a BSD md5 format file<br />
- <code>par</code> is parchive v1 format file (test-only)<br />
- <code>par2</code> is parchive v2 format file (test-only)<br />
- <code>torrent</code> is a BitTorrent metainfo file<br />
+<p> <code>sfv</code> is a Simple File Verify format file<br/>
+ <code>sfvmd5</code> is a Simple File Verify format file, using MD5 checksums rather than crc32.<br/>
+ <code>csv</code> is a Comma Seperated Value file, with the fields being name,size,crc32,<br/>
+ <code>csv2</code> is a Comma Seperated Value file, with the fields being name,size,<br/>
+ <code>csv4</code> is a Comma Seperated Value file, with the fields being name,size,crc32,path<br/>
+ <code>sha1</code> is a sha1sum format file<br/>
+ <code>md5</code> is a md5sum format file<br/>
+ <code>bsdmd5</code> is a BSD md5 format file<br/>
+ <code>par</code> is parchive v1 format file (test-only)<br/>
+ <code>par2</code> is parchive v2 format file (test-only)<br/>
+ <code>torrent</code> is a BitTorrent metainfo file<br/>
  <code>crc</code> is a JPEG Sheriff format crc file</p>
 <h2>EXIT STATUS</h2>
 <p> The exit status of cfv can be examined to determine what kind of errors, if any, occured. </p>
@@ -134,68 +134,68 @@ description: "cfv – Verify file consistency with .sfv, .csv, .crc, .md5, md5su
 <p> Since different platforms represent the path seperator differently, using recursive mode 2 (-rr) is not recommended for anything other than personal usage. Although the addition of the fixpaths option can be used to work around this, it isn&#8217;t guaranteed that whatever program others user have will have a similar feature. </p>
 <p> The -s option is not currently implemented for .torrent files. (Unless you also use -m)</p>
 <h2>EXAMPLES</h2>
-<p> If no options are specified, the default will be -T -t auto, and it will search the current directory for any supported checksum files.<br />
+<p> If no options are specified, the default will be -T -t auto, and it will search the current directory for any supported checksum files.<br/>
  <code>cfv</code> </p>
-<p> Force the file to test:<br />
+<p> Force the file to test:<br/>
  <code>cfv -f funny.name</code> </p>
-<p> Test only the files you have, (avoid file not found errors):<br />
+<p> Test only the files you have, (avoid file not found errors):<br/>
  <code>cfv *</code> </p>
-<p> Create a csv file for all the files in the current dir:<br />
+<p> Create a csv file for all the files in the current dir:<br/>
  <code>cfv -C -tcsv</code> </p>
-<p> Create a csv file for only the zip files in the current dir, and specify the filename:<br />
+<p> Create a csv file for only the zip files in the current dir, and specify the filename:<br/>
  <code>cfv -C -fsomezips.csv *.zip</code> </p>
-<p> Check if all files in current and subdirs are verified, but don&#8217;t verify checksums of files that are. (For example, before writing a directory to a cdr and you want to make sure all the files are verified.):<br />
+<p> Check if all files in current and subdirs are verified, but don&#8217;t verify checksums of files that are. (For example, before writing a directory to a cdr and you want to make sure all the files are verified.):<br/>
  <code>cfv -r -m -u</code></p>
 <h2>CONFIGURATION</h2>
 <p> Upon startup, cfv will test for ~/.cfvrc and if it exists, read configuration information from it. The file consists of any number of lines, each having a single option name and the value seperated by a space. Empty lines and lines beginning with a # are ignored.</p>
 <h2>EXAMPLE CONFIGURATION</h2>
-<p> #this is an example .cfvrc that specifies all the default options<br />
- #don&#8217;t be verbose (set to 1 or v for -v, 0 or V for -V, -1 or VV for -VV, -2 or q for -q, -3 or Q for -Q)<br />
- verbose V<br />
- #use progress meter when output is to a terminal (yes for always, no for never, auto for when output isatty)<br />
- progress auto<br />
- #create sfv files by default<br />
- default sfv<br />
- #sort dir listings before creating a checksum file<br />
- dirsort 1<br />
- #sort command line specified files<br />
- cmdlinesort 1<br />
- #expand wildcards in command line (yes for always, no for never, auto for when os.name is os2, nt, or dos)<br />
- cmdlineglob auto<br />
- #don&#8217;t be recursive (set to 0 for -R, 1 for -r, 2 for -rr)<br />
- recursive 0<br />
- #follow symbolic links<br />
- dereference 1<br />
- #don&#8217;t show unverified files (set to 0 for -U, 1 for -u, 2 for -uu)<br />
- showunverified 0<br />
- #don&#8217;t ignore case<br />
- ignorecase 0<br />
- #don&#8217;t use workaround for buggy encoders that quote filenames unnecessarily<br />
- unquote 0<br />
- #don&#8217;t fix any paths (note that there is a single space after fixpaths, thus the value it gets set to is an empty string)<br />
- fixpaths<br />
- #A more useful example would be:<br />
- #fixpaths /\<br />
- #don&#8217;t strip leading directories (all to strip all path info, 0+ to strip the leading / and the first X components, none for nothing)<br />
- strippaths 0<br />
- #show full paths in recursive mode (set to 0 for never, 1 for always, 2 for only in recursive mode)<br />
- showpaths 2<br />
- #access checksum filenames that end with .gz as gzipped files (-1 for never, 0 for with .gz, and 1 to make -C make .gz files automatically)<br />
- gzip 0<br />
- #don&#8217;t rename bad files<br />
- rename 0<br />
- #format to use for renaming bad files with -n<br />
- renameformat %(name)s.bad-%(count)i%(ext)s<br />
- #don&#8217;t search for files<br />
- search 0<br />
- #filename_type can be used to override what type of file to create when -t isn&#8217;t specified.<br />
- #The format of the argument is &lt;typename&gt;=&lt;regex&gt;. Can be specified multiple times, the earlier instances having higher priority.<br />
- #for example, the following line would cause cfv -C -f foo.md5 to create a &#8216;sfvmd5&#8217; file rather than a &#8216;md5&#8217; file.<br />
+<p> #this is an example .cfvrc that specifies all the default options<br/>
+ #don&#8217;t be verbose (set to 1 or v for -v, 0 or V for -V, -1 or VV for -VV, -2 or q for -q, -3 or Q for -Q)<br/>
+ verbose V<br/>
+ #use progress meter when output is to a terminal (yes for always, no for never, auto for when output isatty)<br/>
+ progress auto<br/>
+ #create sfv files by default<br/>
+ default sfv<br/>
+ #sort dir listings before creating a checksum file<br/>
+ dirsort 1<br/>
+ #sort command line specified files<br/>
+ cmdlinesort 1<br/>
+ #expand wildcards in command line (yes for always, no for never, auto for when os.name is os2, nt, or dos)<br/>
+ cmdlineglob auto<br/>
+ #don&#8217;t be recursive (set to 0 for -R, 1 for -r, 2 for -rr)<br/>
+ recursive 0<br/>
+ #follow symbolic links<br/>
+ dereference 1<br/>
+ #don&#8217;t show unverified files (set to 0 for -U, 1 for -u, 2 for -uu)<br/>
+ showunverified 0<br/>
+ #don&#8217;t ignore case<br/>
+ ignorecase 0<br/>
+ #don&#8217;t use workaround for buggy encoders that quote filenames unnecessarily<br/>
+ unquote 0<br/>
+ #don&#8217;t fix any paths (note that there is a single space after fixpaths, thus the value it gets set to is an empty string)<br/>
+ fixpaths<br/>
+ #A more useful example would be:<br/>
+ #fixpaths /\<br/>
+ #don&#8217;t strip leading directories (all to strip all path info, 0+ to strip the leading / and the first X components, none for nothing)<br/>
+ strippaths 0<br/>
+ #show full paths in recursive mode (set to 0 for never, 1 for always, 2 for only in recursive mode)<br/>
+ showpaths 2<br/>
+ #access checksum filenames that end with .gz as gzipped files (-1 for never, 0 for with .gz, and 1 to make -C make .gz files automatically)<br/>
+ gzip 0<br/>
+ #don&#8217;t rename bad files<br/>
+ rename 0<br/>
+ #format to use for renaming bad files with -n<br/>
+ renameformat %(name)s.bad-%(count)i%(ext)s<br/>
+ #don&#8217;t search for files<br/>
+ search 0<br/>
+ #filename_type can be used to override what type of file to create when -t isn&#8217;t specified.<br/>
+ #The format of the argument is &lt;typename&gt;=&lt;regex&gt;. Can be specified multiple times, the earlier instances having higher priority.<br/>
+ #for example, the following line would cause cfv -C -f foo.md5 to create a &#8216;sfvmd5&#8217; file rather than a &#8216;md5&#8217; file.<br/>
  #filename_type sfvmd5=md5$ </p>
-<p> #torrent options:<br />
- # you can specify a default announce url:<br />
- #announceurl <a rel="nofollow" href="http://foo.bar/announce">http://foo.bar/announce</a><br />
- # piece size of 2^18 bytes (256KB):<br />
+<p> #torrent options:<br/>
+ # you can specify a default announce url:<br/>
+ #announceurl <a rel="nofollow" href="http://foo.bar/announce">http://foo.bar/announce</a><br/>
+ # piece size of 2^18 bytes (256KB):<br/>
  piece_size_pow2 18</p>
 <h2>FILES</h2>
 <dl>
@@ -213,11 +213,11 @@ description: "cfv – Verify file consistency with .sfv, .csv, .crc, .md5, md5su
 <dd> Set to a non-empty value to disable usage of mmap.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Matthew Mueller &lt;donut AT dakotacom DOT net&gt; </p>
-<p> The latest version can be found at any of:<br />
- <a rel="nofollow" href="http://cfv.sourceforge.net/">http://cfv.sourceforge.net/</a><br />
- <a rel="nofollow" href="http://www.dakotacom.net/~donut/programs/cfv.html">http://www.dakotacom.net/~donut/programs/cfv.html</a><br />
+<p> The latest version can be found at any of:<br/>
+ <a rel="nofollow" href="http://cfv.sourceforge.net/">http://cfv.sourceforge.net/</a><br/>
+ <a rel="nofollow" href="http://www.dakotacom.net/~donut/programs/cfv.html">http://www.dakotacom.net/~donut/programs/cfv.html</a><br/>
  <a href="ftp://sunsite.unc.edu/pub/Linux/utils/file/">ftp://sunsite.unc.edu/pub/Linux/utils/file/</a> </p>
-<p> Other programs I have written can be found at:<br />
+<p> Other programs I have written can be found at:<br/>
  <a rel="nofollow" href="http://www.dakotacom.net/~donut/programs/">http://www.dakotacom.net/~donut/programs/</a></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-md5sum/">md5sum</a></code>(1), <code><a href="/docs/linux/man/1-sha1sum/">sha1sum</a></code>(1), <code>md5</code>(1), <code><a href="/docs/linux/man/1-xargs/">xargs</a></code>(1) </p>

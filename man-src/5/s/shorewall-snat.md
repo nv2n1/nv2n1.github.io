@@ -12,20 +12,20 @@ description: "snat – Shorewall SNAT/Masquerade definition file"
 <dl>
 <dt> <code>/etc/shorewall/snat</code></dt></dl>
 <h2>Description</h2>
-<dd>This file is used to define dynamic NAT (Masquerading) and to define Source NAT (SNAT). It superseded m[blue]<code>shorewall-masq</code>m[]<font SIZE="-2">[1]</font>(5) in Shorewall 5.0.14.</dd>
+<dd>This file is used to define dynamic NAT (Masquerading) and to define Source NAT (SNAT). It superseded m[blue]<code>shorewall-masq</code>m[][1](5) in Shorewall 5.0.14.</dd>
 <dl>
-<dd><font SIZE="+1"> <code>Warning</code> </font><br />
+<dd> <code>Warning</code> <br/>
  The entries in this file are order-sensitive. The first entry that matches a particular connection will be the one that is used. </dd>
 <dl>
-<dd><font SIZE="+1"> <code>Warning</code> </font><br />
- If you have more than one ISP link, adding entries to this file will <code>not</code> force connections to go out through a particular link. You must use entries in m[blue]<code>shorewall-rtrules</code>m[]<font SIZE="-2">[2]</font>(5) or PREROUTING entries in m[blue]<code>shorewall-mangle</code>m[]<font SIZE="-2">[3]</font>(5) to do that.  The columns in the file are as follows. <code>ACTION</code></dd>
+<dd> <code>Warning</code> <br/>
+ If you have more than one ISP link, adding entries to this file will <code>not</code> force connections to go out through a particular link. You must use entries in m[blue]<code>shorewall-rtrules</code>m[][2](5) or PREROUTING entries in m[blue]<code>shorewall-mangle</code>m[][3](5) to do that.  The columns in the file are as follows. <code>ACTION</code></dd>
 <dl>
 <dd>Defines the type of rule to generate. Choices are: <code>MASQUERADE[+]</code>[([<i>lowport</i>&#8211;<i>highport</i>][<code>random</code>])]</dd>
 <dl>
 <dd>Causes matching outgoing packages to have their source IP address set to the primary IP address of the interface specified in the DEST column. if <i>lowport</i>&#8211;<i>highport</i> is given, that port range will be used to assign a source port. If option <code>random</code> is used then port mapping will be randomized. MASQUERADE should only be used when the DEST interface has a dynamic IP address. Otherwise, SNAT should be used and should specify the interface&#8217;s static address.</dd></dl>
 <p> <code>SNAT[+]</code>([<i>address-or-address-range</i>][:<i>lowport</i><code>&#8211;</code><i>highport</i>][<code>:random</code>][:<code>persistent</code>]|<code>detect</code>|</p>
 <dl>
-<dd>If you specify an address here, matching packets will have their source address set to that address. If ADD_SNAT_ALIASES is set to Yes or yes in m[blue]<code>shorewall.conf</code>m[]<font SIZE="-2">[4]</font>(5) then Shorewall will automatically add this address to the INTERFACE named in the first column. You may also specify a range of up to 256 IP addresses if you want the SNAT address to be assigned from that range in a round-robin fashion by connection. The range is specified by <i>first.ip.in.range</i>&#8211;<i>last.ip.in.range</i>. You may follow the port range with<code> :random</code> in which case assignment of ports from the list will be random. <code>random</code> may also be specified by itself in this column in which case random local port assignments are made for the outgoing connections. Example: 206.124.146.177-206.124.146.180 You may follow the port range (or <code>:random</code>) with <code>:persistent</code>. This is only useful when an address range is specified and causes a client to be given the same source/destination IP pair. This feature replaces the SAME modifier which was removed from Shorewall in version 4.4.0. You may also use the special value <code>detect</code> which causes Shorewall to determine the IP addresses configured on the interface named in the DEST column and substitute them in this column. Finally, you may also specify a comma-separated list of ranges and/or addresses in this column. DNS Names names are not allowed. Normally, Netfilter will attempt to retain the source port number. You may cause netfilter to remap the source port by following an address or range (if any) by &quot;:&quot; and a port range with the format <i>lowport</i>&#8211;<i>highport</i>. If this is done, you must specify &quot;tcp&quot;, &quot;udp&quot;, &quot;dccp&quot; or &quot;stcp&quot; in the PROTO column. Examples:</dd>
+<dd>If you specify an address here, matching packets will have their source address set to that address. If ADD_SNAT_ALIASES is set to Yes or yes in m[blue]<code>shorewall.conf</code>m[][4](5) then Shorewall will automatically add this address to the INTERFACE named in the first column. You may also specify a range of up to 256 IP addresses if you want the SNAT address to be assigned from that range in a round-robin fashion by connection. The range is specified by <i>first.ip.in.range</i>&#8211;<i>last.ip.in.range</i>. You may follow the port range with<code> :random</code> in which case assignment of ports from the list will be random. <code>random</code> may also be specified by itself in this column in which case random local port assignments are made for the outgoing connections. Example: 206.124.146.177-206.124.146.180 You may follow the port range (or <code>:random</code>) with <code>:persistent</code>. This is only useful when an address range is specified and causes a client to be given the same source/destination IP pair. This feature replaces the SAME modifier which was removed from Shorewall in version 4.4.0. You may also use the special value <code>detect</code> which causes Shorewall to determine the IP addresses configured on the interface named in the DEST column and substitute them in this column. Finally, you may also specify a comma-separated list of ranges and/or addresses in this column. DNS Names names are not allowed. Normally, Netfilter will attempt to retain the source port number. You may cause netfilter to remap the source port by following an address or range (if any) by &quot;:&quot; and a port range with the format <i>lowport</i>&#8211;<i>highport</i>. If this is done, you must specify &quot;tcp&quot;, &quot;udp&quot;, &quot;dccp&quot; or &quot;stcp&quot; in the PROTO column. Examples:</dd>
 <dl>
 <dd>
 <pre> 192.0.2.4:5000-6000
@@ -37,19 +37,19 @@ description: "snat – Shorewall SNAT/Masquerade definition file"
 <dd>Causes matching packets to be exempted from any following rules in the file.</dd></dl>
 <p> <i>action</i>[+][(<i>parameter</i>,&#8230;)]</p>
 <dl>
-<dd>where <i>action</i> is an action declared in m[blue]<code><a href="/docs/linux/man/5-shorewall-actions/">shorewall-actions</a>(5)</code>m[]<font SIZE="-2">[5]</font> with the <code>nat</code> option. See m[blue]<code><a rel="nofollow" href="http://www.shorewall.net">www.shorewall.net</a>/Actions.html</code>m[]<font SIZE="-2">[6]</font> for further information.</dd></dl>
-<p> Normally Masq/SNAT rules are evaluated after those for one-to-one NAT (defined in m[blue]<code>shorewall-nat</code>m[]<font SIZE="-2">[7]</font>(5)). If you want the rule to be applied before one-to-one NAT rules, follow the action name with &quot;+&quot;: This feature should only be required if you need to insert rules in this file that preempt entries in m[blue]<code>shorewall-nat</code>m[]<font SIZE="-2">[7]</font>(5).</dl>
+<dd>where <i>action</i> is an action declared in m[blue]<code><a href="/docs/linux/man/5-shorewall-actions/">shorewall-actions</a>(5)</code>m[][5] with the <code>nat</code> option. See m[blue]<code><a rel="nofollow" href="http://www.shorewall.net">www.shorewall.net</a>/Actions.html</code>m[][6] for further information.</dd></dl>
+<p> Normally Masq/SNAT rules are evaluated after those for one-to-one NAT (defined in m[blue]<code>shorewall-nat</code>m[][7](5)). If you want the rule to be applied before one-to-one NAT rules, follow the action name with &quot;+&quot;: This feature should only be required if you need to insert rules in this file that preempt entries in m[blue]<code>shorewall-nat</code>m[][7](5).</dl>
 <p> <code>SOURCE</code> (Optional) &#8211; [<i>interface</i>|<i>address</i>[<code>,</code><i>address</i>][<i>exclusion</i>]]</p>
 <dl>
 <dd>Set of hosts that you wish to masquerade. You can specify this as an <i>address</i> (net or host) or as an <i>interface</i> (use of an <i>interface</i> is deprecated). If you give the name of an interface, the interface must be up before you start the firewall and the Shorewall rules compiler will warn you of that fact. (Shorewall will use your main routing table to determine the appropriate addresses to masquerade). The preferred way to specify the SOURCE is to supply one or more host or network addresses separated by comma. You may use ipset names preceded by a plus sign (+) to specify a set of hosts.</dd></dl>
 <p> <code>DEST</code> &#8211; {[<code>+</code>]<i>interface</i>[<code>:</code>[<i>digit</i>]][<code>:</code>[<i>dest-address</i>[<code>,</code><i>dest-address</i>]&#8230;[<i>exclusion</i>]]}</p>
 <dl>
-<dd>Outgoing <i>interface</i>. This is usually your internet interface. If ADD_SNAT_ALIASES=Yes in m[blue]<code>shorewall.conf</code>m[]<font SIZE="-2">[4]</font>(5), you may add &quot;:&quot; and a <i>digit</i> to indicate that you want the alias added with that name (e.g., eth0:0). This will allow the alias to be displayed with ifconfig. <code>That is the only use for the alias name; it may not appear in any other place in your Shorewall configuration.</code> Each interface must match an entry in m[blue]<code>shorewall-interfaces</code>m[]<font SIZE="-2">[8]</font>(5). Shorewall allows loose matches to wildcard entries in m[blue]<code>shorewall-interfaces</code>m[]<font SIZE="-2">[8]</font>(5). For example, ppp0 in this file will match a m[blue]<code>shorewall-interfaces</code>m[]<font SIZE="-2">[8]</font>(5) entry that defines ppp+. Where m[blue]<code>more that one internet provider share a single interface</code>m[]<font SIZE="-2">[9]</font>, the provider is specified by including the provider name or number in parentheses:</dd>
+<dd>Outgoing <i>interface</i>. This is usually your internet interface. If ADD_SNAT_ALIASES=Yes in m[blue]<code>shorewall.conf</code>m[][4](5), you may add &quot;:&quot; and a <i>digit</i> to indicate that you want the alias added with that name (e.g., eth0:0). This will allow the alias to be displayed with ifconfig. <code>That is the only use for the alias name; it may not appear in any other place in your Shorewall configuration.</code> Each interface must match an entry in m[blue]<code>shorewall-interfaces</code>m[][8](5). Shorewall allows loose matches to wildcard entries in m[blue]<code>shorewall-interfaces</code>m[][8](5). For example, ppp0 in this file will match a m[blue]<code>shorewall-interfaces</code>m[][8](5) entry that defines ppp+. Where m[blue]<code>more that one internet provider share a single interface</code>m[][9], the provider is specified by including the provider name or number in parentheses:</dd>
 <dl>
 <dd>
 <pre> eth0(Avvanta)</pre>
 </dd></dl>
-<p> In that case, you will want to specify the interface&#8217;s address for that provider as the SNAT parameter. The interface may be qualified by adding the character &quot;:&quot; followed by a comma-separated list of destination host or subnet addresses to indicate that you only want to change the source IP address for packets being sent to those particular destinations. Exclusion is allowed (see m[blue]<code>shorewall-exclusion</code>m[]<font SIZE="-2">[10]</font>(5)) as are ipset names preceded by a plus sign &#8216;+&#8217;; If you wish to inhibit the action of ADD_SNAT_ALIASES for this entry then include the &quot;:&quot; but omit the digit:</p>
+<p> In that case, you will want to specify the interface&#8217;s address for that provider as the SNAT parameter. The interface may be qualified by adding the character &quot;:&quot; followed by a comma-separated list of destination host or subnet addresses to indicate that you only want to change the source IP address for packets being sent to those particular destinations. Exclusion is allowed (see m[blue]<code>shorewall-exclusion</code>m[][10](5)) as are ipset names preceded by a plus sign &#8216;+&#8217;; If you wish to inhibit the action of ADD_SNAT_ALIASES for this entry then include the &quot;:&quot; but omit the digit:</p>
 <dl>
 <dd>
 <pre> eth0(Avvanta):
@@ -125,16 +125,16 @@ description: "snat – Shorewall SNAT/Masquerade definition file"
 <dl>
 <dd>#program named upnpd</dd>
 <dl>
-<dd><font SIZE="+1"> <code>Important</code> </font><br />
+<dd> <code>Important</code> <br/>
  The ability to specify a program name was removed from Netfilter in kernel version 2.6.14.  <code>SWITCH &#8211; [!]</code><i>switch-name</i><code>[={0|1}]</code></dd>
 <dl>
 <dd>Added in Shorewall 4.5.1 and allows enabling and disabling the rule without requiring <code>shorewall restart</code>. The rule is enabled if the value stored in /proc/net/nf_condition/<i>switch-name</i> is 1. The rule is disabled if that file contains 0 (the default). If &#8216;!&#8217; is supplied, the test is inverted such that the rule is enabled if the file contains 0. Within the <i>switch-name</i>, &#8216;@0&#8217; and &#8216;@{0}&#8217; are replaced by the name of the chain to which the rule is a added. The <i>switch-name</i> (after &#8216;@&#8230;&#8217; expansion) must begin with a letter and be composed of letters, decimal digits, underscores or hyphens. Switch names must be 30 characters or less in length. Switches are normally <code>off</code>. To turn a switch <code>on</code>:</dd>
 <dl>
-<dd><code>echo 1 &gt;<br />
+<dd><code>echo 1 &gt;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>/proc/net/nf_condition/</code><i>switch-name</i></dd></dl>
 <p> To turn it <code>off</code> again:</p>
 <dl>
-<dd><code>echo 0 &gt;<br />
+<dd><code>echo 0 &gt;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>/proc/net/nf_condition/</code><i>switch-name</i></dd></dl>
 <p> Switch settings are retained over <code>shorewall restart</code>. Beginning with Shorewall 4.5.10, when the <i>switch-name</i> is followed by <code>=0</code> or <code>=1</code>, then the switch is initialized to off or on respectively by the <code>start</code> command. Other commands do not affect the switch setting.</dl>
 <p> <code>ORIGDEST</code> &#8211; [<code>&#8211;</code>|<i>address</i>[,<i>address</i>]&#8230;[<i>exclusion</i>]|<i>exclusion</i>]</p>
@@ -188,7 +188,7 @@ description: "snat – Shorewall SNAT/Masquerade definition file"
  SNAT(206.124.146.176) 172.20.1.0/29 eth0</pre>
 </dd></dl>
 <dl>
-<dd><font SIZE="+1"> <code>Warning</code> </font><br />
+<dd> <code>Warning</code> <br/>
  The order of the above two rules is significant!  Example 5:</dd>
 <dl>
 <dd>Connections leaving on eth0 and destined to any host defined in the ipset <i>myset</i> should have the source IP address changed to 206.124.146.177.</dd>
@@ -223,7 +223,7 @@ SNAT(1.1.1.9)           192.168.1.0/24  eth0  { mark=3:C }</code></pre>
 <h2>Files</h2>
 <p>/etc/shorewall/snat</p>
 <h2>See Also</h2>
-<p>m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/configuration_file_basics.htm#Pairs">http://www.shorewall.net/configuration_file_basics.htm#Pairs</a></code>m[]<font SIZE="-2">[11]</font> </p>
+<p>m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/configuration_file_basics.htm#Pairs">http://www.shorewall.net/configuration_file_basics.htm#Pairs</a></code>m[][11] </p>
 <p> <a href="/docs/linux/man/8-shorewall/">shorewall</a>(8), <a href="/docs/linux/man/5-shorewall-accounting/">shorewall-accounting</a>(5), <a href="/docs/linux/man/5-shorewall-actions/">shorewall-actions</a>(5), <a href="/docs/linux/man/5-shorewall-blacklist/">shorewall-blacklist</a>(5), <a href="/docs/linux/man/5-shorewall-exclusion/">shorewall-exclusion</a>(5), <a href="/docs/linux/man/5-shorewall-hosts/">shorewall-hosts</a>(5), shorewall_interfaces(5), <a href="/docs/linux/man/5-shorewall-ipsets/">shorewall-ipsets</a>(5), <a href="/docs/linux/man/5-shorewall-maclist/">shorewall-maclist</a>(5), <a href="/docs/linux/man/5-shorewall-nat/">shorewall-nat</a>(5), <a href="/docs/linux/man/5-shorewall-netmap/">shorewall-netmap</a>(5), <a href="/docs/linux/man/5-shorewall-params/">shorewall-params</a>(5), <a href="/docs/linux/man/5-shorewall-policy/">shorewall-policy</a>(5), <a href="/docs/linux/man/5-shorewall-providers/">shorewall-providers</a>(5), <a href="/docs/linux/man/5-shorewall-proxyarp/">shorewall-proxyarp</a>(5), <a href="/docs/linux/man/5-shorewall-rtrules/">shorewall-rtrules</a>(5), <a href="/docs/linux/man/5-shorewall-routestopped/">shorewall-routestopped</a>(5), <a href="/docs/linux/man/5-shorewall-rules/">shorewall-rules</a>(5), <a href="/docs/linux/man/5-shorewall-conf/">shorewall.conf</a>(5), <a href="/docs/linux/man/5-shorewall-secmarks/">shorewall-secmarks</a>(5), <a href="/docs/linux/man/5-shorewall-tcclasses/">shorewall-tcclasses</a>(5), <a href="/docs/linux/man/5-shorewall-tcdevices/">shorewall-tcdevices</a>(5), <a href="/docs/linux/man/5-shorewall-mangle/">shorewall-mangle</a>(5), <a href="/docs/linux/man/5-shorewall-tos/">shorewall-tos</a>(5), <a href="/docs/linux/man/5-shorewall-tunnels/">shorewall-tunnels</a>(5), <a href="/docs/linux/man/5-shorewall-zones/">shorewall-zones</a>(5)</p>
 <h2>Notes</h2>
 <dl>

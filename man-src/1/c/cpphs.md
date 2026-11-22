@@ -73,15 +73,15 @@ description: "cpphs – liberalised cpp-a-like preprocessor for Haskell"
 <dt><code>-O</code><i>file</i></dt>
 <dd> specify a file for output (default is stdout)</dd>
 <dt><code>&#8211;nomacro</code></dt>
-<dd> only process #ifdef&#8217;s and #include&#8217;s,<br />
+<dd> only process #ifdef&#8217;s and #include&#8217;s,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>do not expand macros</dd>
 <dt><code>&#8211;noline</code></dt>
 <dd> remove #line droppings from the output</dd>
 <dt><code>&#8211;strip</code></dt>
-<dd> convert C-style comments to whitespace, even outside<br />
+<dd> convert C-style comments to whitespace, even outside<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>cpp directives</dd>
 <dt><code>&#8211;hashes</code></dt>
-<dd> recognise the ANSI # stringise operator, and ## for<br />
+<dd> recognise the ANSI # stringise operator, and ## for<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>token catenation, within macros</dd>
 <dt><code>&#8211;text</code></dt>
 <dd> treat the input as plain text, not Haskell code</dd>

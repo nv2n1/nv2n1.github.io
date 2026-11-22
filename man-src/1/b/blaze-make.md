@@ -13,7 +13,7 @@ description: "blaze-make – generate static content from the BlazeBlogger repos
 <p> <code>blaze-make</code> [<code>-cpqrtIFPV</code>] [<code>-b</code> <i>directory</i>] [<code>-d</code> <i>directory</i>] </p>
 <p> <code>blaze-make</code> <code>-h</code> | <code>-v</code></p>
 <h2>DESCRIPTION</h2>
-<p> <code>blaze-make</code> reads the BlazeBlogger repository and generates a complete directory tree of static pages, optionally including all blog posts, single pages, browsable yearly and monthly archives, tags and even a <font SIZE="-1">RSS</font> feed. This way, you can benefit from most of the features other <font SIZE="-1">CMS</font> usually have, but without any additional hosting requirements.</p>
+<p> <code>blaze-make</code> reads the BlazeBlogger repository and generates a complete directory tree of static pages, optionally including all blog posts, single pages, browsable yearly and monthly archives, tags and even a RSS feed. This way, you can benefit from most of the features other CMS usually have, but without any additional hosting requirements.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-b</code>, <code>&#8211;blogdir</code> <i>directory</i></dt>
@@ -25,13 +25,13 @@ description: "blaze-make – generate static content from the BlazeBlogger repos
 <dt><code>-I</code>, <code>&#8211;no-index</code></dt>
 <dd> Disable creation of index page. This is especially useful for websites with pages only.</dd>
 <dt><code>-p</code>, <code>&#8211;no-posts</code></dt>
-<dd> Disable creation of posts as well as any related pages, i.e. tags and <font SIZE="-1">RSS</font> feed. This is especially useful for websites with pages only.</dd>
+<dd> Disable creation of posts as well as any related pages, i.e. tags and RSS feed. This is especially useful for websites with pages only.</dd>
 <dt><code>-P</code>, <code>&#8211;no-pages</code></dt>
 <dd> Disable creation of pages.</dd>
 <dt><code>-t</code>, <code>&#8211;no-tags</code></dt>
 <dd> Disable support for tags.</dd>
 <dt><code>-r</code>, <code>&#8211;no-rss</code></dt>
-<dd> Disable creation of <font SIZE="-1">RSS</font> feed.</dd>
+<dd> Disable creation of RSS feed.</dd>
 <dt><code>-F</code>, <code>&#8211;full-paths</code></dt>
 <dd> Enable full paths creation, i.e. always include page names in generated links.</dd>
 <dt><code>-q</code>, <code>&#8211;quiet</code></dt>
@@ -58,8 +58,8 @@ description: "blaze-make – generate static content from the BlazeBlogger repos
 <p> To report bug or even send patch, either add new issue to the project bugtracker at &lt;<a rel="nofollow" href="http://code.google.com/p/blazeblogger/issues/">http://code.google.com/p/blazeblogger/issues/</a>&gt;, or visit the discussion group at &lt;<a rel="nofollow" href="http://groups.google.com/group/blazeblogger/">http://groups.google.com/group/blazeblogger/</a>&gt;. You can also contact the author directly via e-mail.</p>
 <h2>AUTHOR</h2>
 <p> Written by Jaromir Hradilek &lt;jhradilek [at] gmail.com&gt;. </p>
-<p> Permission is granted to copy, distribute and/or modify this document under the terms of the <font SIZE="-1">GNU</font> Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. </p>
-<p> A copy of the license is included as a file called <font SIZE="-1">FDL</font> in the main directory of the BlazeBlogger source package.</p>
+<p> Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. </p>
+<p> A copy of the license is included as a file called FDL in the main directory of the BlazeBlogger source package.</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2009 Jaromir Hradilek </p>
-<p> This program is free software; see the source for copying conditions. It is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT</font> <font SIZE="-1">ANY</font> <font SIZE="-1">WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS</font> <font SIZE="-1">FOR</font> A <font SIZE="-1">PARTICULAR</font> <font SIZE="-1">PURPOSE</font>. </p>
+<p> This program is free software; see the source for copying conditions. It is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>

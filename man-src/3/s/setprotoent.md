@@ -48,29 +48,29 @@ void endprotoent(void);</code></pre>
 <tr VALIGN=top>
 <td> <code>getprotoent</code>() </td>
 <td>Thread safety</td>
-<td> MT-Unsafe race:protoent<br />
+<td> MT-Unsafe race:protoent<br/>
  race:protoentbuf locale
 </td>
 </tr>
 <tr VALIGN=top>
 <td> <code>getprotobyname</code>() </td>
 <td>Thread safety</td>
-<td> MT-Unsafe race:protobyname<br />
+<td> MT-Unsafe race:protobyname<br/>
  locale
 </td>
 </tr>
 <tr VALIGN=top>
 <td> <code>getprotobynumber</code>() </td>
 <td>Thread safety</td>
-<td> MT-Unsafe race:protobynumber<br />
+<td> MT-Unsafe race:protobynumber<br/>
  locale
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>setprotoent</code>(),<br />
+<td> <code>setprotoent</code>(),<br/>
  <code>endprotoent</code>() </td>
 <td>Thread safety</td>
-<td> MT-Unsafe race:protoent<br />
+<td> MT-Unsafe race:protoent<br/>
  locale
 </td>
 </tr>

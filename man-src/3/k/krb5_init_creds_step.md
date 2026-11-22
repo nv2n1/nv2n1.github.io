@@ -10,35 +10,35 @@ description: "Heimdal Kerberos 5 credential handing functions –"
 
 <p> Heimdal Kerberos 5 credential handing functions &#8211; </p>
 <h3>Functions</h3>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_fwd_tgt_creds</code> (krb5_context context, krb5_auth_context auth_context, const char *hostname, krb5_principal client, krb5_principal server, krb5_ccache ccache, int forwardable, krb5_data *out_data)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_get_forwarded_creds</code> (krb5_context context, krb5_auth_context auth_context, krb5_ccache ccache, krb5_flags flags, const char *hostname, krb5_creds *in_creds, krb5_data *out_data)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_get_init_creds_opt_alloc</code> (krb5_context context, krb5_get_init_creds_opt **opt)&quot; </p>
-<p> KRB5_LIB_FUNCTION void<br />
+<p> KRB5_LIB_FUNCTION void<br/>
  KRB5_LIB_CALL <code>krb5_get_init_creds_opt_free</code> (krb5_context context, krb5_get_init_creds_opt *opt)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_init_creds_init</code> (krb5_context context, krb5_principal client, krb5_prompter_fct prompter, void *prompter_data, krb5_deltat start_time, krb5_get_init_creds_opt *options, krb5_init_creds_context *rctx)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_init_creds_set_service</code> (krb5_context context, krb5_init_creds_context ctx, const char *service)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_init_creds_set_password</code> (krb5_context context, krb5_init_creds_context ctx, const char *password)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_init_creds_set_keytab</code> (krb5_context context, krb5_init_creds_context ctx, krb5_keytab keytab)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_init_creds_step</code> (krb5_context context, krb5_init_creds_context ctx, krb5_data *in, krb5_data *out, krb5_krbhst_info *hostinfo, unsigned int *flags)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_init_creds_get_error</code> (krb5_context context, krb5_init_creds_context ctx, KRB_ERROR *error)&quot; </p>
-<p> KRB5_LIB_FUNCTION void<br />
+<p> KRB5_LIB_FUNCTION void<br/>
  KRB5_LIB_CALL <code>krb5_init_creds_free</code> (krb5_context context, krb5_init_creds_context ctx)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_init_creds_get</code> (krb5_context context, krb5_init_creds_context ctx)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_get_init_creds_password</code> (krb5_context context, krb5_creds *creds, krb5_principal client, const char *password, krb5_prompter_fct prompter, void *data, krb5_deltat start_time, const char *in_tkt_service, krb5_get_init_creds_opt *options)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_get_init_creds_keyblock</code> (krb5_context context, krb5_creds *creds, krb5_principal client, krb5_keyblock *keyblock, krb5_deltat start_time, const char *in_tkt_service, krb5_get_init_creds_opt *options)&quot; </p>
-<p> KRB5_LIB_FUNCTION<br />
+<p> KRB5_LIB_FUNCTION<br/>
  krb5_error_code KRB5_LIB_CALL <code>krb5_get_init_creds_keytab</code> (krb5_context context, krb5_creds *creds, krb5_principal client, krb5_keytab keytab, krb5_deltat start_time, const char *in_tkt_service, krb5_get_init_creds_opt *options)&quot; </p>
 <h2>Detailed Description</h2>
 <h2>Function Documentation</h2>
@@ -47,13 +47,13 @@ description: "Heimdal Kerberos 5 credential handing functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A kerberos 5 context.<br />
- <i>auth_context</i> the auth context with the key to encrypt the out_data.<br />
- <i>hostname</i> the host to forward the tickets too.<br />
- <i>client</i> the client to delegate from.<br />
- <i>server</i> the server to delegate the credential too.<br />
- <i>ccache</i> credential cache to use.<br />
- <i>forwardable</i> make the forwarded ticket forwabledable.<br />
+</dt><dd> <i>context</i> A kerberos 5 context.<br/>
+ <i>auth_context</i> the auth context with the key to encrypt the out_data.<br/>
+ <i>hostname</i> the host to forward the tickets too.<br/>
+ <i>client</i> the client to delegate from.<br/>
+ <i>server</i> the server to delegate the credential too.<br/>
+ <i>ccache</i> credential cache to use.<br/>
+ <i>forwardable</i> make the forwarded ticket forwabledable.<br/>
  <i>out_data</i> the resulting credential.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -65,12 +65,12 @@ description: "Heimdal Kerberos 5 credential handing functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A kerberos 5 context.<br />
- <i>auth_context</i> the auth context with the key to encrypt the out_data.<br />
- <i>ccache</i> credential cache to use<br />
- <i>flags</i> the flags to control the resulting ticket flags<br />
- <i>hostname</i> the host to forward the tickets too.<br />
- <i>in_creds</i> the in client and server ticket names. The client and server components forwarded to the remote host.<br />
+</dt><dd> <i>context</i> A kerberos 5 context.<br/>
+ <i>auth_context</i> the auth context with the key to encrypt the out_data.<br/>
+ <i>ccache</i> credential cache to use<br/>
+ <i>flags</i> the flags to control the resulting ticket flags<br/>
+ <i>hostname</i> the host to forward the tickets too.<br/>
+ <i>in_creds</i> the in client and server ticket names. The client and server components forwarded to the remote host.<br/>
  <i>out_data</i> the resulting credential.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -92,14 +92,14 @@ description: "Heimdal Kerberos 5 credential handing functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A Kerberos 5 context.<br />
+</dt><dd> <i>context</i> A Kerberos 5 context.<br/>
  <i>ctx</i> The krb5_init_creds_context to free.</dd></dl>
 <h3>KRB5_LIB_FUNCTION krb5_error_code KRB5_LIB_CALL krb5_init_creds_get (krb5_contextcontext, krb5_init_creds_contextctx)</h3>
 <p> Get new credentials as setup by the krb5_init_creds_context. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A Kerberos 5 context.<br />
+</dt><dd> <i>context</i> A Kerberos 5 context.<br/>
  <i>ctx</i> The krb5_init_creds_context to process.</dd></dl>
 <h3>KRB5_LIB_FUNCTION krb5_error_code KRB5_LIB_CALL krb5_init_creds_get_error (krb5_contextcontext, krb5_init_creds_contextctx, KRB_ERROR *error)</h3>
 <p> Get the last error from the transaction. </p>
@@ -112,12 +112,12 @@ description: "Heimdal Kerberos 5 credential handing functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A Kerberos 5 context.<br />
- <i>client</i> The Kerberos principal to get the credential for, if NULL is given, the default principal is used as determined by krb5_get_default_principal().<br />
- <i>prompter</i><br />
- <i>prompter_data</i><br />
- <i>start_time</i> the time the ticket should start to be valid or 0 for now.<br />
- <i>options</i> a options structure, can be NULL for default options.<br />
+</dt><dd> <i>context</i> A Kerberos 5 context.<br/>
+ <i>client</i> The Kerberos principal to get the credential for, if NULL is given, the default principal is used as determined by krb5_get_default_principal().<br/>
+ <i>prompter</i><br/>
+ <i>prompter_data</i><br/>
+ <i>start_time</i> the time the ticket should start to be valid or 0 for now.<br/>
+ <i>options</i> a options structure, can be NULL for default options.<br/>
  <i>rctx</i> A new allocated free with <code>krb5_init_creds_free()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -128,8 +128,8 @@ description: "Heimdal Kerberos 5 credential handing functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a Kerberos 5 context.<br />
- <i>ctx</i> ctx krb5_init_creds_context context.<br />
+</dt><dd> <i>context</i> a Kerberos 5 context.<br/>
+ <i>ctx</i> ctx krb5_init_creds_context context.<br/>
  <i>keytab</i> the keytab to read the key from.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -140,8 +140,8 @@ description: "Heimdal Kerberos 5 credential handing functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a Kerberos 5 context.<br />
- <i>ctx</i> ctx krb5_init_creds_context context.<br />
+</dt><dd> <i>context</i> a Kerberos 5 context.<br/>
+ <i>ctx</i> ctx krb5_init_creds_context context.<br/>
  <i>password</i> the password to use.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -152,8 +152,8 @@ description: "Heimdal Kerberos 5 credential handing functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a Kerberos 5 context.<br />
- <i>ctx</i> a krb5_init_creds_context context.<br />
+</dt><dd> <i>context</i> a Kerberos 5 context.<br/>
+ <i>ctx</i> a krb5_init_creds_context context.<br/>
  <i>service</i> the service given as a string, for example &#8216;kadmind/admin&#8217;. If NULL, the default krbtgt in the clients realm is set.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -165,11 +165,11 @@ description: "Heimdal Kerberos 5 credential handing functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> a Kerberos 5 context.<br />
- <i>ctx</i> ctx krb5_init_creds_context context.<br />
- <i>in</i> input data from KDC, first round it should be reset by krb5_data_zer().<br />
- <i>out</i> reply to KDC.<br />
- <i>hostinfo</i> KDC address info, first round it can be NULL.<br />
+</dt><dd> <i>context</i> a Kerberos 5 context.<br/>
+ <i>ctx</i> ctx krb5_init_creds_context context.<br/>
+ <i>in</i> input data from KDC, first round it should be reset by krb5_data_zer().<br/>
+ <i>out</i> reply to KDC.<br/>
+ <i>hostinfo</i> KDC address info, first round it can be NULL.<br/>
  <i>flags</i> status of the round, if KRB5_INIT_CREDS_STEP_FLAG_CONTINUE is set, continue one more round.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

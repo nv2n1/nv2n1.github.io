@@ -10,7 +10,7 @@ description: "ssh-copy-id – use locally available keys to authorise logins on 
 
 <p> <code>ssh-copy-id</code> &#8211; use locally available keys to authorise logins on a remote machine </p>
 <h2>SYNOPSIS</h2>
-<p> <code>ssh-copy-id</code> [-<code>f</code> ] [-<code>n</code> ] [-<code>s</code> ] [-<code>i </code>[<i>identity_file</i> ] ] [-<code>p </code><i>port</i> ] [-<code>o </code><i>ssh_option</i> ] [<i>user </i><code>@ </code><i>hostname</i> ]<br />
+<p> <code>ssh-copy-id</code> [-<code>f</code> ] [-<code>n</code> ] [-<code>s</code> ] [-<code>i </code>[<i>identity_file</i> ] ] [-<code>p </code><i>port</i> ] [-<code>o </code><i>ssh_option</i> ] [<i>user </i><code>@ </code><i>hostname</i> ]<br/>
 <code>ssh-copy-id</code> &#8211;<code>h | &#8211; </code> </p>
 <h2>DESCRIPTION</h2>
 <p> <code>ssh-copy-id</code> is a script that uses <a href="/docs/linux/man/1-ssh/">ssh</a>(1) to log into a remote machine (presumably using a login password, so password authentication should be enabled, unless you&#8217;ve done some clever use of multiple identities). It assembles a list of one or more fingerprints (as described below) and tries to log in with each key, to see if any of them are already installed (of course, if you are not using ssh-agent1 this may result in you being repeatedly prompted for pass-phrases). It then assembles a list of those that failed to log in, and using ssh, enables logins with those keys on the remote server. By default it adds the keys by appending them to the remote user&#8217;s ~/.ssh/authorized_keys (creating the file, and directory, if necessary). It is also capable of detecting if the remote system is a NetScreen, and using its `set&#8217; ssh pka-dsa key &#8230; command instead. </p>

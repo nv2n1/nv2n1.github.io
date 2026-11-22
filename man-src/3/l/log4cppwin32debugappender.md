@@ -13,14 +13,14 @@ description: "log4cpp::Win32DebugAppender –"
 <p>#include &lt;Win32DebugAppender.hh&gt; </p>
 <p> Inherits <code>log4cpp::LayoutAppender</code>.</p>
 <h3>Public Member Functions</h3>
-<p><code>Win32DebugAppender</code> (const std::string &amp;name)<br />
- <i>Constructor. </i><br />
- virtual <code>~Win32DebugAppender</code> ()<br />
- <i>Destructor. </i><br />
- virtual void <code>close</code> ()<br />
+<p><code>Win32DebugAppender</code> (const std::string &amp;name)<br/>
+ <i>Constructor. </i><br/>
+ virtual <code>~Win32DebugAppender</code> ()<br/>
+ <i>Destructor. </i><br/>
+ virtual void <code>close</code> ()<br/>
  <i>Close method. </i></p>
 <h3>Protected Member Functions</h3>
-<p>virtual void <code>_append</code> (const <code>LoggingEvent</code> &amp;event)<br />
+<p>virtual void <code>_append</code> (const <code>LoggingEvent</code> &amp;event)<br/>
  <i>Method that does the actual work. </i></p>
 <h3>Additional Inherited Members</h3>
 <h2>Detailed Description</h2>

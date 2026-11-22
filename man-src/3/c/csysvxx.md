@@ -11,7 +11,7 @@ description: "csysvxx.f –"
 <p> csysvxx.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>csysvxx</code> (FACT, UPLO, N, NRHS, A, LDA, AF, LDAF, IPIV, EQUED, S, B, LDB, X, LDX, RCOND, RPVGRW, BERR, N_ERR_BNDS, ERR_BNDS_NORM, ERR_BNDS_COMP, NPARAMS, PARAMS, WORK, RWORK, INFO)<br />
+<p> subroutine <code>csysvxx</code> (FACT, UPLO, N, NRHS, A, LDA, AF, LDAF, IPIV, EQUED, S, B, LDB, X, LDX, RCOND, RPVGRW, BERR, N_ERR_BNDS, ERR_BNDS_NORM, ERR_BNDS_COMP, NPARAMS, PARAMS, WORK, RWORK, INFO)<br/>
  <i></i><code> CSYSVXX computes the solution to system of linear equations A * X = B for SY matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine csysvxx (characterFACT, characterUPLO, integerN, integerNRHS, complex, dimension( lda, * )A, integerLDA, complex, dimension( ldaf, * )AF, integerLDAF, integer, dimension( * )IPIV, characterEQUED, real, dimension( * )S, complex, dimension( ldb, * )B, integerLDB, complex, dimension( ldx, * )X, integerLDX, realRCOND, realRPVGRW, real, dimension( * )BERR, integerN_ERR_BNDS, real, dimension( nrhs, * )ERR_BNDS_NORM, real, dimension( nrhs, * )ERR_BNDS_COMP, integerNPARAMS, real, dimension( * )PARAMS, complex, dimension( * )WORK, real, dimension( * )RWORK, integerINFO)</h3>
@@ -48,27 +48,27 @@ see the definitions of the FACT and EQUED options.Solving with refinement and us
 <dl>
 <dt>
 </dt><dd>
-<p>The following steps are performed : 1. If FACT = &#8216;E&#8217;, real scaling factors are computed to equilibrate the system : diag(S) * A *diag(S) * inv(diag(S)) *X = diag(S) * B Whether or not the system will be equilibrated depends on the scaling of the matrix A, but if equilibration is used, A is overwritten by diag(S) * A *diag(S) and B by diag(S) *B.2. If FACT = &#8216;N&#8217; or &#8216;E&#8217;, the LU decomposition is used to factor the matrix A(after equilibration if FACT = &#8216;E&#8217;) as A = U * D * U * *T, if UPLO = &#8216;U&#8217;, or<br />
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     A = L * D * L * *T,<br />
-                                          if UPLO = &#8216;L&#8217;,<br />
-                                          where U(or L) is a product of permutation and unit upper(lower)<br />
-    triangular matrices, and D is symmetric and block diagonal with<br />
-    1-by-1 and 2-by-2 diagonal blocks.<br />
-    3. If some D(i,i)=0, so that D is exactly singular, then the<br />
-    routine returns with INFO = i. Otherwise, the factored form of A<br />
-    is used to estimate the condition number of the matrix A (see<br />
-    argument RCOND).  If the reciprocal of the condition number is<br />
-    less than machine precision, the routine still goes on to solve<br />
-    for X and compute error bounds as described below.<br />
-    4. The system of equations is solved for X using the factored form<br />
-    of A.<br />
-    5. By default (unless PARAMS(LA_LINRX_ITREF_I) is set to zero),<br />
-    the routine will use iterative refinement to try to get a small<br />
-    error and error bounds.  Refinement calculates the residual to at<br />
-    least twice the working precision.<br />
-    6. If equilibration was used, the matrix X is premultiplied by<br />
-    diag(R)<br />
-    so that it solves the original system before<br />
+<p>The following steps are performed : 1. If FACT = &#8216;E&#8217;, real scaling factors are computed to equilibrate the system : diag(S) * A *diag(S) * inv(diag(S)) *X = diag(S) * B Whether or not the system will be equilibrated depends on the scaling of the matrix A, but if equilibration is used, A is overwritten by diag(S) * A *diag(S) and B by diag(S) *B.2. If FACT = &#8216;N&#8217; or &#8216;E&#8217;, the LU decomposition is used to factor the matrix A(after equilibration if FACT = &#8216;E&#8217;) as A = U * D * U * *T, if UPLO = &#8216;U&#8217;, or<br/>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     A = L * D * L * *T,<br/>
+                                          if UPLO = &#8216;L&#8217;,<br/>
+                                          where U(or L) is a product of permutation and unit upper(lower)<br/>
+    triangular matrices, and D is symmetric and block diagonal with<br/>
+    1-by-1 and 2-by-2 diagonal blocks.<br/>
+    3. If some D(i,i)=0, so that D is exactly singular, then the<br/>
+    routine returns with INFO = i. Otherwise, the factored form of A<br/>
+    is used to estimate the condition number of the matrix A (see<br/>
+    argument RCOND).  If the reciprocal of the condition number is<br/>
+    less than machine precision, the routine still goes on to solve<br/>
+    for X and compute error bounds as described below.<br/>
+    4. The system of equations is solved for X using the factored form<br/>
+    of A.<br/>
+    5. By default (unless PARAMS(LA_LINRX_ITREF_I) is set to zero),<br/>
+    the routine will use iterative refinement to try to get a small<br/>
+    error and error bounds.  Refinement calculates the residual to at<br/>
+    least twice the working precision.<br/>
+    6. If equilibration was used, the matrix X is premultiplied by<br/>
+    diag(R)<br/>
+    so that it solves the original system before<br/>
         equilibration.</p>
 <p>&nbsp;<wbr> </p>
 <pre>
@@ -192,9 +192,9 @@ see the definitions of the FACT and EQUED options.Solving with refinement and us
      that may not be reliable.
 </pre>
 <p> <i>B</i> </p>
-<p>B is COMPLEX array, dimension(LDB, NRHS) On entry, the N &#8211; by &#8211; NRHS right hand side matrix B.On exit,<br />
-    if EQUED = &#8216;N&#8217;, B is not modified;<br />
-if EQUED<br />
+<p>B is COMPLEX array, dimension(LDB, NRHS) On entry, the N &#8211; by &#8211; NRHS right hand side matrix B.On exit,<br/>
+    if EQUED = &#8216;N&#8217;, B is not modified;<br/>
+if EQUED<br/>
     = &#8216;Y&#8217;, B is overwritten by diag(S) * B;</p>
 <p> <i>LDB</i> </p>
 <pre>
@@ -253,70 +253,70 @@ if EQUED<br />
      ERR_BNDS_COMP below.
 </pre>
 <p> <i>ERR_BNDS_NORM</i> </p>
-<p>ERR_BNDS_NORM is REAL array, dimension(NRHS, N_ERR_BNDS) For each right &#8211; hand side, this array contains information about various error bounds and condition numbers corresponding to the normwise relative error, which is defined as follows : Normwise relative error in the ith solution vector : max_j(abs(XTRUE(j, i) &#8211; X(j, i)))&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;max_j abs(X(j, i)) The array is indexed by the type of error information as described below.There currently are up to three pieces of information returned.The first index in ERR_BNDS_NORM(i,<br />
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                :) corresponds to the ith right<br />
-                                                                                                                                                                                                                        &#8211; hand side.The second index in ERR_BNDS_NORM(<br />
-                                                                                                                                                                                                                              :, err) contains the following<br />
-     three fields:<br />
-     err = 1 &#8220;Trust/don&#8217;t trust&#8221; boolean. Trust the answer if the<br />
-              reciprocal condition number is less than the threshold<br />
-              sqrt(n) * slamch(&#8216;Epsilon&#8217;).<br />
-     err = 2 &#8220;Guaranteed&#8221; error bound: The estimated forward error,<br />
-              almost certainly within a factor of 10 of the true error<br />
-              so long as the next entry is greater than the threshold<br />
-              sqrt(n) * slamch(&#8216;Epsilon&#8217;). This error bound should only<br />
-              be trusted if the previous boolean is true.<br />
-     err = 3  Reciprocal condition number: Estimated normwise<br />
-              reciprocal condition number.  Compared with the threshold<br />
-              sqrt(n) * slamch(&#8216;Epsilon&#8217;) to determine if the error<br />
-              estimate is &#8220;guaranteed&#8221;. These reciprocal condition<br />
-              numbers are 1 / (norm(Z^{-1},inf) * norm(Z,inf)) for some<br />
-              appropriately scaled matrix Z.<br />
-              Let Z = S*A, where S scales each row by a power of the<br />
-              radix so all absolute row sums of Z are approximately 1.<br />
-     See Lapack Working Note 165 for further details and extra<br />
+<p>ERR_BNDS_NORM is REAL array, dimension(NRHS, N_ERR_BNDS) For each right &#8211; hand side, this array contains information about various error bounds and condition numbers corresponding to the normwise relative error, which is defined as follows : Normwise relative error in the ith solution vector : max_j(abs(XTRUE(j, i) &#8211; X(j, i)))&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;max_j abs(X(j, i)) The array is indexed by the type of error information as described below.There currently are up to three pieces of information returned.The first index in ERR_BNDS_NORM(i,<br/>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                :) corresponds to the ith right<br/>
+                                                                                                                                                                                                                        &#8211; hand side.The second index in ERR_BNDS_NORM(<br/>
+                                                                                                                                                                                                                              :, err) contains the following<br/>
+     three fields:<br/>
+     err = 1 &#8220;Trust/don&#8217;t trust&#8221; boolean. Trust the answer if the<br/>
+              reciprocal condition number is less than the threshold<br/>
+              sqrt(n) * slamch(&#8216;Epsilon&#8217;).<br/>
+     err = 2 &#8220;Guaranteed&#8221; error bound: The estimated forward error,<br/>
+              almost certainly within a factor of 10 of the true error<br/>
+              so long as the next entry is greater than the threshold<br/>
+              sqrt(n) * slamch(&#8216;Epsilon&#8217;). This error bound should only<br/>
+              be trusted if the previous boolean is true.<br/>
+     err = 3  Reciprocal condition number: Estimated normwise<br/>
+              reciprocal condition number.  Compared with the threshold<br/>
+              sqrt(n) * slamch(&#8216;Epsilon&#8217;) to determine if the error<br/>
+              estimate is &#8220;guaranteed&#8221;. These reciprocal condition<br/>
+              numbers are 1 / (norm(Z^{-1},inf) * norm(Z,inf)) for some<br/>
+              appropriately scaled matrix Z.<br/>
+              Let Z = S*A, where S scales each row by a power of the<br/>
+              radix so all absolute row sums of Z are approximately 1.<br/>
+     See Lapack Working Note 165 for further details and extra<br/>
      cautions.</p>
 <p> <i>ERR_BNDS_COMP</i> </p>
-<p>          ERR_BNDS_COMP is REAL array, dimension (NRHS, N_ERR_BNDS)<br />
-     For each right-hand side, this array contains information about<br />
-     various error bounds and condition numbers corresponding to the<br />
-     componentwise relative error, which is defined as follows:<br />
-     Componentwise relative error in the ith solution vector:<br />
-                    abs(XTRUE(j,i) &#8211; X(j,i))<br />
-             max_j &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-<br />
-                         abs(X(j,i))<br />
-     The array is indexed by the right-hand side i (on which the<br />
-     componentwise relative error depends), and the type of error<br />
-     information as described below. There currently are up to three<br />
-     pieces of information returned for each right-hand side. If<br />
-     componentwise accuracy is not requested (PARAMS(3) = 0.0), then<br />
-     ERR_BNDS_COMP is not accessed.  If N_ERR_BNDS .LT. 3, then at most<br />
-     the first (:,N_ERR_BNDS)<br />
-          entries are returned.The first index in ERR_BNDS_COMP(i,<br />
-                                                                :) corresponds to the ith<br />
-              right<br />
-              &#8211; hand side.The second index in ERR_BNDS_COMP(<br />
-                    :, err) contains the following<br />
-     three fields:<br />
-     err = 1 &#8220;Trust/don&#8217;t trust&#8221; boolean. Trust the answer if the<br />
-              reciprocal condition number is less than the threshold<br />
-              sqrt(n) * slamch(&#8216;Epsilon&#8217;).<br />
-     err = 2 &#8220;Guaranteed&#8221; error bound: The estimated forward error,<br />
-              almost certainly within a factor of 10 of the true error<br />
-              so long as the next entry is greater than the threshold<br />
-              sqrt(n) * slamch(&#8216;Epsilon&#8217;). This error bound should only<br />
-              be trusted if the previous boolean is true.<br />
-     err = 3  Reciprocal condition number: Estimated componentwise<br />
-              reciprocal condition number.  Compared with the threshold<br />
-              sqrt(n) * slamch(&#8216;Epsilon&#8217;) to determine if the error<br />
-              estimate is &#8220;guaranteed&#8221;. These reciprocal condition<br />
-              numbers are 1 / (norm(Z^{-1},inf) * norm(Z,inf)) for some<br />
-              appropriately scaled matrix Z.<br />
-              Let Z = S*(A*diag(x)), where x is the solution for the<br />
-              current right-hand side and S scales each row of<br />
-              A*diag(x) by a power of the radix so all absolute row<br />
-              sums of Z are approximately 1.<br />
-     See Lapack Working Note 165 for further details and extra<br />
+<p>          ERR_BNDS_COMP is REAL array, dimension (NRHS, N_ERR_BNDS)<br/>
+     For each right-hand side, this array contains information about<br/>
+     various error bounds and condition numbers corresponding to the<br/>
+     componentwise relative error, which is defined as follows:<br/>
+     Componentwise relative error in the ith solution vector:<br/>
+                    abs(XTRUE(j,i) &#8211; X(j,i))<br/>
+             max_j &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-<br/>
+                         abs(X(j,i))<br/>
+     The array is indexed by the right-hand side i (on which the<br/>
+     componentwise relative error depends), and the type of error<br/>
+     information as described below. There currently are up to three<br/>
+     pieces of information returned for each right-hand side. If<br/>
+     componentwise accuracy is not requested (PARAMS(3) = 0.0), then<br/>
+     ERR_BNDS_COMP is not accessed.  If N_ERR_BNDS .LT. 3, then at most<br/>
+     the first (:,N_ERR_BNDS)<br/>
+          entries are returned.The first index in ERR_BNDS_COMP(i,<br/>
+                                                                :) corresponds to the ith<br/>
+              right<br/>
+              &#8211; hand side.The second index in ERR_BNDS_COMP(<br/>
+                    :, err) contains the following<br/>
+     three fields:<br/>
+     err = 1 &#8220;Trust/don&#8217;t trust&#8221; boolean. Trust the answer if the<br/>
+              reciprocal condition number is less than the threshold<br/>
+              sqrt(n) * slamch(&#8216;Epsilon&#8217;).<br/>
+     err = 2 &#8220;Guaranteed&#8221; error bound: The estimated forward error,<br/>
+              almost certainly within a factor of 10 of the true error<br/>
+              so long as the next entry is greater than the threshold<br/>
+              sqrt(n) * slamch(&#8216;Epsilon&#8217;). This error bound should only<br/>
+              be trusted if the previous boolean is true.<br/>
+     err = 3  Reciprocal condition number: Estimated componentwise<br/>
+              reciprocal condition number.  Compared with the threshold<br/>
+              sqrt(n) * slamch(&#8216;Epsilon&#8217;) to determine if the error<br/>
+              estimate is &#8220;guaranteed&#8221;. These reciprocal condition<br/>
+              numbers are 1 / (norm(Z^{-1},inf) * norm(Z,inf)) for some<br/>
+              appropriately scaled matrix Z.<br/>
+              Let Z = S*(A*diag(x)), where x is the solution for the<br/>
+              current right-hand side and S scales each row of<br/>
+              A*diag(x) by a power of the radix so all absolute row<br/>
+              sums of Z are approximately 1.<br/>
+     See Lapack Working Note 165 for further details and extra<br/>
      cautions.</p>
 <p> <i>NPARAMS</i> </p>
 <pre>

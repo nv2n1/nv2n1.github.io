@@ -11,29 +11,29 @@ description: "ipmitool – utility for controlling IPMI-enabled devices"
 <p> ipmitool &#8211; utility for controlling IPMI-enabled devices</p>
 <h2>SYNOPSIS</h2>
 <p> ipmitool [ &lt;options&gt; ] &lt;command&gt; [ &lt;sub-commands and sub-options&gt; ] </p>
-<p> &lt;options&gt; := [ &lt;general-options&gt; | &lt;conditional-opts&gt; ]<br />
+<p> &lt;options&gt; := [ &lt;general-options&gt; | &lt;conditional-opts&gt; ]<br/>
  Any recognized option is accepted. Conditional options may be ignored or it&#8217;s usage postponed until shell or exec processes relevant command. </p>
-<p> &lt;general-options&gt; := [ -h | -V | -v | -I &lt;interface&gt; | -H &lt;address&gt; |<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-d&nbsp;<wbr>&lt;N&gt;&nbsp;<wbr>| -p&nbsp;<wbr>&lt;port&gt;&nbsp;<wbr>| -c | -U&nbsp;<wbr>&lt;username&gt;&nbsp;<wbr>|<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-L&nbsp;<wbr>&lt;privlvl&gt;&nbsp;<wbr>| -l&nbsp;<wbr>&lt;lun&gt;&nbsp;<wbr>| -m&nbsp;<wbr>&lt;local_address&gt;&nbsp;<wbr>|<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-N&nbsp;<wbr>&lt;sec&gt;&nbsp;<wbr>| -R&nbsp;<wbr>&lt;count&gt;&nbsp;<wbr>|&nbsp;<wbr>&lt;password-option&gt;&nbsp;<wbr>|<br />
+<p> &lt;general-options&gt; := [ -h | -V | -v | -I &lt;interface&gt; | -H &lt;address&gt; |<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-d&nbsp;<wbr>&lt;N&gt;&nbsp;<wbr>| -p&nbsp;<wbr>&lt;port&gt;&nbsp;<wbr>| -c | -U&nbsp;<wbr>&lt;username&gt;&nbsp;<wbr>|<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-L&nbsp;<wbr>&lt;privlvl&gt;&nbsp;<wbr>| -l&nbsp;<wbr>&lt;lun&gt;&nbsp;<wbr>| -m&nbsp;<wbr>&lt;local_address&gt;&nbsp;<wbr>|<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-N&nbsp;<wbr>&lt;sec&gt;&nbsp;<wbr>| -R&nbsp;<wbr>&lt;count&gt;&nbsp;<wbr>|&nbsp;<wbr>&lt;password-option&gt;&nbsp;<wbr>|<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&lt;oem-option&gt;&nbsp;<wbr>|&nbsp;<wbr>&lt;bridge-options&gt;&nbsp;<wbr>] </p>
-<p> &lt;conditional-opts&gt; := [ &lt;lan-options&gt; | &lt;lanplus-options&gt; |<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&lt;command-options&gt;&nbsp;<wbr>]<br />
- Bridging:<br />
- &lt;bridge-options&gt; := -t &lt;target_address&gt; [ -b &lt;channel&gt; |<br />
+<p> &lt;conditional-opts&gt; := [ &lt;lan-options&gt; | &lt;lanplus-options&gt; |<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&lt;command-options&gt;&nbsp;<wbr>]<br/>
+ Bridging:<br/>
+ &lt;bridge-options&gt; := -t &lt;target_address&gt; [ -b &lt;channel&gt; |<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr>-T&nbsp;<wbr>&lt;address&gt;&nbsp;<wbr>| -B&nbsp;<wbr>&lt;channel&gt;&nbsp;<wbr>]&nbsp;<wbr>] </p>
-<p> Options used with -I lan:<br />
+<p> Options used with -I lan:<br/>
  &lt;lan-options&gt; := [ -A &lt;authtype&gt; ] </p>
-<p> Options used with -I lanplus:<br />
+<p> Options used with -I lanplus:<br/>
  &lt;lanplus-options&gt; := [ -C &lt;ciphersuite&gt; | &lt;key-option&gt; ] </p>
-<p> Option groups setting same value:<br />
- &lt;key-option&gt; := [ -k &lt;key&gt; | -K | -y &lt;hex_key&gt; | -Y ]<br />
- &lt;password-option&gt; := [ -f &lt;password_file&gt; | -a | -P &lt;password&gt; | -E ]<br />
+<p> Option groups setting same value:<br/>
+ &lt;key-option&gt; := [ -k &lt;key&gt; | -K | -y &lt;hex_key&gt; | -Y ]<br/>
+ &lt;password-option&gt; := [ -f &lt;password_file&gt; | -a | -P &lt;password&gt; | -E ]<br/>
  &lt;oem-option&gt; := [ -o &lt;oemtype&gt; | -g | -s ] </p>
-<p> Options used with specific command &lt;command-options&gt;:<br />
- &lt;options-sdr&gt; := [ -S &lt;sdr_cache_file&gt; ]<br />
- &lt;options-sel&gt; := [ -O &lt;sel_oem&gt; ]<br />
+<p> Options used with specific command &lt;command-options&gt;:<br/>
+ &lt;options-sdr&gt; := [ -S &lt;sdr_cache_file&gt; ]<br/>
+ &lt;options-sel&gt; := [ -O &lt;sel_oem&gt; ]<br/>
  &lt;options-sol&gt; := [ -e &lt;sol_escape_char&gt; ] </p>
 <h2>DESCRIPTION</h2>
 <p> This program lets you manage Intelligent Platform Management Interface (IPMI) functions of either the local system, via a kernel device driver, or a remote system, using IPMI v1.5 and IPMI v2.0. These functions include printing FRU information, LAN configuration, sensor readings, and remote chassis power control. </p>
@@ -128,43 +128,43 @@ description: "ipmitool – utility for controlling IPMI-enabled devices"
 <dl>
 <dt><i>help</i></dt>
 <dd> This can be used to get command-line help on ipmitool commands. It may also be placed at the end of commands to get option usage help. </dd>
-<p> ipmitool help<br />
- Commands:<br />
-&nbsp;<wbr>&nbsp;<wbr>bmc&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Deprecated. Use mc<br />
-&nbsp;<wbr>&nbsp;<wbr>channel&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Configure Management Controller channels<br />
-&nbsp;<wbr>&nbsp;<wbr>chassis&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Get chassis status and set power state<br />
-&nbsp;<wbr>&nbsp;<wbr>dcmi&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Data Center Management Interface<br />
-&nbsp;<wbr>&nbsp;<wbr>delloem&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Manage Dell OEM Extensions.<br />
-&nbsp;<wbr>&nbsp;<wbr>echo&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Used to echo lines to stdout in scripts<br />
-&nbsp;<wbr>&nbsp;<wbr>ekanalyzer&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>run FRU-Ekeying analyzer using FRU files<br />
-&nbsp;<wbr>&nbsp;<wbr>event&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Send events to MC<br />
-&nbsp;<wbr>&nbsp;<wbr>exec&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Run list of commands from file<br />
-&nbsp;<wbr>&nbsp;<wbr>firewall&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Configure Firmware Firewall<br />
-&nbsp;<wbr>&nbsp;<wbr>fru&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Print built-in FRU and scan for FRU locators<br />
-&nbsp;<wbr>&nbsp;<wbr>fwum&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Update IPMC using Kontron OEM Firmware Update Manager<br />
-&nbsp;<wbr>&nbsp;<wbr>gendev&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Read/Write Device associated with Generic Device locators sdr<br />
-&nbsp;<wbr>&nbsp;<wbr>hpm&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Update HPM components using PICMG HPM.1 file<br />
-&nbsp;<wbr>&nbsp;<wbr>i2c&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Send an I2C Master Write-Read command and print response<br />
-&nbsp;<wbr>&nbsp;<wbr>ime&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Upgrade/Query Intel ME firmware<br />
-&nbsp;<wbr>&nbsp;<wbr>isol&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Configure and connect Intel IPMIv1.5 Serial-over-LAN<br />
-&nbsp;<wbr>&nbsp;<wbr>kontronoem&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Manage Kontron OEM Extensions<br />
-&nbsp;<wbr>&nbsp;<wbr>lan&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Configure LAN Channels<br />
-&nbsp;<wbr>&nbsp;<wbr>mc&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Management Controller status and global enables<br />
-&nbsp;<wbr>&nbsp;<wbr>nm&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Node Manager<br />
-&nbsp;<wbr>&nbsp;<wbr>pef&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Configure Platform Event Filtering&nbsp;<wbr>(PEF)<br />
-&nbsp;<wbr>&nbsp;<wbr>picmg&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Run a PICMG/ATA extended command<br />
-&nbsp;<wbr>&nbsp;<wbr>power&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Shortcut to chassis power commands<br />
-&nbsp;<wbr>&nbsp;<wbr>raw&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Send a RAW IPMI request and print response<br />
-&nbsp;<wbr>&nbsp;<wbr>sdr&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Print Sensor Data Repository entries and readings<br />
-&nbsp;<wbr>&nbsp;<wbr>sel&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Print System Event Log&nbsp;<wbr>(SEL)<br />
-&nbsp;<wbr>&nbsp;<wbr>sensor&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Print detailed sensor information<br />
-&nbsp;<wbr>&nbsp;<wbr>session&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Print session information<br />
-&nbsp;<wbr>&nbsp;<wbr>set&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Set runtime variable for shell and exec<br />
-&nbsp;<wbr>&nbsp;<wbr>shell&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Launch interactive IPMI shell<br />
-&nbsp;<wbr>&nbsp;<wbr>sol&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Configure and connect IPMIv2.0 Serial-over-LAN<br />
-&nbsp;<wbr>&nbsp;<wbr>spd&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Print SPD info from remote I2C device<br />
-&nbsp;<wbr>&nbsp;<wbr>sunoem&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Manage Sun OEM Extensions<br />
-&nbsp;<wbr>&nbsp;<wbr>tsol&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Configure and connect Tyan IPMIv1.5 Serial-over-LAN<br />
+<p> ipmitool help<br/>
+ Commands:<br/>
+&nbsp;<wbr>&nbsp;<wbr>bmc&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Deprecated. Use mc<br/>
+&nbsp;<wbr>&nbsp;<wbr>channel&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Configure Management Controller channels<br/>
+&nbsp;<wbr>&nbsp;<wbr>chassis&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Get chassis status and set power state<br/>
+&nbsp;<wbr>&nbsp;<wbr>dcmi&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Data Center Management Interface<br/>
+&nbsp;<wbr>&nbsp;<wbr>delloem&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Manage Dell OEM Extensions.<br/>
+&nbsp;<wbr>&nbsp;<wbr>echo&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Used to echo lines to stdout in scripts<br/>
+&nbsp;<wbr>&nbsp;<wbr>ekanalyzer&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>run FRU-Ekeying analyzer using FRU files<br/>
+&nbsp;<wbr>&nbsp;<wbr>event&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Send events to MC<br/>
+&nbsp;<wbr>&nbsp;<wbr>exec&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Run list of commands from file<br/>
+&nbsp;<wbr>&nbsp;<wbr>firewall&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Configure Firmware Firewall<br/>
+&nbsp;<wbr>&nbsp;<wbr>fru&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Print built-in FRU and scan for FRU locators<br/>
+&nbsp;<wbr>&nbsp;<wbr>fwum&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Update IPMC using Kontron OEM Firmware Update Manager<br/>
+&nbsp;<wbr>&nbsp;<wbr>gendev&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Read/Write Device associated with Generic Device locators sdr<br/>
+&nbsp;<wbr>&nbsp;<wbr>hpm&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Update HPM components using PICMG HPM.1 file<br/>
+&nbsp;<wbr>&nbsp;<wbr>i2c&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Send an I2C Master Write-Read command and print response<br/>
+&nbsp;<wbr>&nbsp;<wbr>ime&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Upgrade/Query Intel ME firmware<br/>
+&nbsp;<wbr>&nbsp;<wbr>isol&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Configure and connect Intel IPMIv1.5 Serial-over-LAN<br/>
+&nbsp;<wbr>&nbsp;<wbr>kontronoem&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Manage Kontron OEM Extensions<br/>
+&nbsp;<wbr>&nbsp;<wbr>lan&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Configure LAN Channels<br/>
+&nbsp;<wbr>&nbsp;<wbr>mc&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Management Controller status and global enables<br/>
+&nbsp;<wbr>&nbsp;<wbr>nm&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Node Manager<br/>
+&nbsp;<wbr>&nbsp;<wbr>pef&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Configure Platform Event Filtering&nbsp;<wbr>(PEF)<br/>
+&nbsp;<wbr>&nbsp;<wbr>picmg&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Run a PICMG/ATA extended command<br/>
+&nbsp;<wbr>&nbsp;<wbr>power&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Shortcut to chassis power commands<br/>
+&nbsp;<wbr>&nbsp;<wbr>raw&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Send a RAW IPMI request and print response<br/>
+&nbsp;<wbr>&nbsp;<wbr>sdr&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Print Sensor Data Repository entries and readings<br/>
+&nbsp;<wbr>&nbsp;<wbr>sel&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Print System Event Log&nbsp;<wbr>(SEL)<br/>
+&nbsp;<wbr>&nbsp;<wbr>sensor&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Print detailed sensor information<br/>
+&nbsp;<wbr>&nbsp;<wbr>session&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Print session information<br/>
+&nbsp;<wbr>&nbsp;<wbr>set&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Set runtime variable for shell and exec<br/>
+&nbsp;<wbr>&nbsp;<wbr>shell&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Launch interactive IPMI shell<br/>
+&nbsp;<wbr>&nbsp;<wbr>sol&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Configure and connect IPMIv2.0 Serial-over-LAN<br/>
+&nbsp;<wbr>&nbsp;<wbr>spd&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Print SPD info from remote I2C device<br/>
+&nbsp;<wbr>&nbsp;<wbr>sunoem&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Manage Sun OEM Extensions<br/>
+&nbsp;<wbr>&nbsp;<wbr>tsol&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Configure and connect Tyan IPMIv1.5 Serial-over-LAN<br/>
 &nbsp;<wbr>&nbsp;<wbr>user&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Configure Management Controller users </p>
 <dt><i>channel</i></dt>
 <dd>
@@ -177,11 +177,11 @@ description: "ipmitool – utility for controlling IPMI-enabled devices"
 <dl>
 <dt>Possible privilege levels are:</dt>
 <dd>
- <i>1</i> Callback level<br />
- <i>2</i> User level<br />
- <i>3</i> Operator level<br />
- <i>4</i> Administrator level<br />
- <i>5</i> OEM Proprietary level<br />
+ <i>1</i> Callback level<br/>
+ <i>2</i> User level<br/>
+ <i>3</i> Operator level<br/>
+ <i>4</i> Administrator level<br/>
+ <i>5</i> OEM Proprietary level<br/>
  <i>15</i> No access</dd></dl>
 </dl>
 <dt><i>info</i> [<code>channel number</code>]</dt>
@@ -190,7 +190,7 @@ description: "ipmitool – utility for controlling IPMI-enabled devices"
 </dd><dl>
 <dt>
 </dt><dd>
-<p> &gt; ipmitool channel info<br />
+<p> &gt; ipmitool channel info<br/>
  Channel 0xf info: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>Channel Medium Type&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: System Interface </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>Channel Protocol Type : KCS </p>
@@ -266,9 +266,9 @@ description: "ipmitool – utility for controlling IPMI-enabled devices"
 </dl>
 <dt><i>identify</i> [&lt;seconds&gt;|force]</dt>
 <dd>
-<p> Identify interval.<br />
- Default is 15 seconds.<br />
- 0 &#8211; Off<br />
+<p> Identify interval.<br/>
+ Default is 15 seconds.<br/>
+ 0 &#8211; Off<br/>
  force &#8211; To turn on indefinitely</p>
 </dd><dl>
 </dl>
@@ -517,8 +517,8 @@ description: "ipmitool – utility for controlling IPMI-enabled devices"
 </dd><dl>
 <dt>
 </dt><dd>
-<p> Sets the drive backplane LEDs for a device.<br />
- {b:d.f} = PCI Address of device (eg. 06:00.0)<br />
+<p> Sets the drive backplane LEDs for a device.<br/>
+ {b:d.f} = PCI Address of device (eg. 06:00.0)<br/>
  {state} = one or more of the following:</p>
 </dd><dl>
 <dt>
@@ -541,9 +541,9 @@ description: "ipmitool – utility for controlling IPMI-enabled devices"
 </dd><dl>
 <dt>
 </dt><dd>
- <i>{none}</i>|<i>{modelname}</i>|<i>{ipv4address}</i>|<i>{macaddress}</i>|<br />
- <i>{systemname}</i>|<i>{servicetag}</i>|<i>{ipv6address}</i>|<br />
- <i>{ambienttemp}</i>|<i>{systemwatt}</i>|<i>{assettag}</i>|<br />
+ <i>{none}</i>|<i>{modelname}</i>|<i>{ipv4address}</i>|<i>{macaddress}</i>|<br/>
+ <i>{systemname}</i>|<i>{servicetag}</i>|<i>{ipv6address}</i>|<br/>
+ <i>{ambienttemp}</i>|<i>{systemwatt}</i>|<i>{assettag}</i>|<br/>
  <i>{userdefined}&lt;text&gt;</i> </dd>
 <p> Allows you to set the LCD display mode to any of the preceding parameters. </p>
 </dl>
@@ -552,7 +552,7 @@ description: "ipmitool – utility for controlling IPMI-enabled devices"
 </dd><dl>
 <dt>
 </dt><dd>
- <i>{watt}</i>|<i>{btuphr}</i>|<br />
+ <i>{watt}</i>|<i>{btuphr}</i>|<br/>
  <i>{celsius}</i>|<i>{fahrenheit}</i> </dd>
 <p> Allows you to set the unit for the system ambient temperature mode. </p>
 </dl>
@@ -644,25 +644,25 @@ description: "ipmitool – utility for controlling IPMI-enabled devices"
 <dd>
 </dd><dl>
 <dt>
-</dt><dd> <i>&lt;watt&gt;</i>|<i>&lt;btuphr&gt;</i><br />
+</dt><dd> <i>&lt;watt&gt;</i>|<i>&lt;btuphr&gt;</i><br/>
  Displays the power consumption in watt or btuphr.</dd></dl>
 <dt><i>powermonitor powerconsumptionhistory</i></dt>
 <dd>
 </dd><dl>
 <dt>
-</dt><dd> <i>&lt;watt&gt;</i>|<i>&lt;btuphr&gt;</i><br />
+</dt><dd> <i>&lt;watt&gt;</i>|<i>&lt;btuphr&gt;</i><br/>
  Displays the power consumption history in watt or btuphr.</dd></dl>
 <dt><i>powermonitor getpowerbudget</i></dt>
 <dd>
 </dd><dl>
 <dt>
-</dt><dd> <i>&lt;watt&gt;</i>|<i>&lt;btuphr&gt;</i><br />
+</dt><dd> <i>&lt;watt&gt;</i>|<i>&lt;btuphr&gt;</i><br/>
  Displays the power cap in watt or btuphr.</dd></dl>
 <dt><i>powermonitor setpowerbudget</i></dt>
 <dd>
 </dd><dl>
 <dt>
-</dt><dd> <i>&lt;val&gt;</i><i>&lt;watt</i>|<i>btuphr</i>|<i>percent&gt;</i><br />
+</dt><dd> <i>&lt;val&gt;</i><i>&lt;watt</i>|<i>btuphr</i>|<i>percent&gt;</i><br/>
  Allows you to set the power cap in watt, BTU/hr or percentage.</dd></dl>
 <dt><i>powermonitor enablepowercap</i></dt>
 <dd>
@@ -704,8 +704,8 @@ description: "ipmitool – utility for controlling IPMI-enabled devices"
 <dt>
 </dt><dd> <i>filename1</i> : binary file that stores FRU data of a Carrier or an AMC module</dd>
 <dt>
-</dt><dd> <i>filename2</i> : binary file that stores FRU data of an AMC module.<br />
-These binary files can be generated from command:<br />
+</dt><dd> <i>filename2</i> : binary file that stores FRU data of an AMC module.<br/>
+These binary files can be generated from command:<br/>
 <i>ipmitool fru read&nbsp;<wbr>&lt;id&gt;&nbsp;<wbr>&lt;filename&gt;</i></dd>
 <dt>
 </dt><dd> <i>filename3</i> : configuration file used for configuring On-Carrier Device ID or OEM GUID. This file is optional.</dd>
@@ -747,29 +747,29 @@ These binary files can be generated from command:<br />
 <dl>
 <dt><i>carrier</i> (default) &lt;<code>oc=filename1</code>&gt; &lt;<code>oc=filename2</code>&gt; <code>&#8230;</code></dt>
 <dd>
-<p> Display point to point physical connectivity between carriers and AMC modules.<br />
-&nbsp;<wbr>Example:<br />
-&gt;&nbsp;<wbr>ipmitool ekanalyzer print carrier oc=fru oc=carrierfru<br />
-From Carrier file: fru<br />
-Number of AMC bays supported by Carrier: 2&nbsp;<wbr><br />
-AMC slot B1 topology:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Port 0&nbsp;<wbr>=====&gt;&nbsp;<wbr>On Carrier Device ID 0, Port 16<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Port 1&nbsp;<wbr>=====&gt;&nbsp;<wbr>On Carrier Device ID 0, Port 12<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Port 2&nbsp;<wbr>=====&gt;&nbsp;<wbr>AMC slot B2, Port 2<br />
-AMC slot B2 topology:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Port 0&nbsp;<wbr>=====&gt;&nbsp;<wbr>On Carrier Device ID 0, Port 3<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Port 2&nbsp;<wbr>=====&gt;&nbsp;<wbr>AMC slot B1, Port 2<br />
-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*<br />
-From Carrier file: carrierfru<br />
-On Carrier Device ID 0 topology:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Port 0&nbsp;<wbr>=====&gt;&nbsp;<wbr>AMC slot B1, Port 4<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Port 1&nbsp;<wbr>=====&gt;&nbsp;<wbr>AMC slot B1, Port 5<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Port 2&nbsp;<wbr>=====&gt;&nbsp;<wbr>AMC slot B2, Port 6<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Port 3&nbsp;<wbr>=====&gt;&nbsp;<wbr>AMC slot B2, Port 7<br />
-AMC slot B1 topology:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Port 0&nbsp;<wbr>=====&gt;&nbsp;<wbr>AMC slot B2, Port 0<br />
-AMC slot B1 topology:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Port 1&nbsp;<wbr>=====&gt;&nbsp;<wbr>AMC slot B2, Port 1<br />
+<p> Display point to point physical connectivity between carriers and AMC modules.<br/>
+&nbsp;<wbr>Example:<br/>
+&gt;&nbsp;<wbr>ipmitool ekanalyzer print carrier oc=fru oc=carrierfru<br/>
+From Carrier file: fru<br/>
+Number of AMC bays supported by Carrier: 2&nbsp;<wbr><br/>
+AMC slot B1 topology:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Port 0&nbsp;<wbr>=====&gt;&nbsp;<wbr>On Carrier Device ID 0, Port 16<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Port 1&nbsp;<wbr>=====&gt;&nbsp;<wbr>On Carrier Device ID 0, Port 12<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Port 2&nbsp;<wbr>=====&gt;&nbsp;<wbr>AMC slot B2, Port 2<br/>
+AMC slot B2 topology:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Port 0&nbsp;<wbr>=====&gt;&nbsp;<wbr>On Carrier Device ID 0, Port 3<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Port 2&nbsp;<wbr>=====&gt;&nbsp;<wbr>AMC slot B1, Port 2<br/>
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*<br/>
+From Carrier file: carrierfru<br/>
+On Carrier Device ID 0 topology:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Port 0&nbsp;<wbr>=====&gt;&nbsp;<wbr>AMC slot B1, Port 4<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Port 1&nbsp;<wbr>=====&gt;&nbsp;<wbr>AMC slot B1, Port 5<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Port 2&nbsp;<wbr>=====&gt;&nbsp;<wbr>AMC slot B2, Port 6<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Port 3&nbsp;<wbr>=====&gt;&nbsp;<wbr>AMC slot B2, Port 7<br/>
+AMC slot B1 topology:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Port 0&nbsp;<wbr>=====&gt;&nbsp;<wbr>AMC slot B2, Port 0<br/>
+AMC slot B1 topology:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Port 1&nbsp;<wbr>=====&gt;&nbsp;<wbr>AMC slot B2, Port 1<br/>
 Number of AMC bays supported by Carrier: 2 </p>
 </dd><dt><i>power</i> &lt;<code>xx=filename1</code>&gt; &lt;<code>xx=filename2</code>&gt; <code>&#8230;</code></dt>
 <dd>
@@ -792,62 +792,62 @@ Number of AMC bays supported by Carrier: 2 </p>
 <dl>
 <dt><i>match</i> (default) &lt;<code>xx=filename</code>&gt; &lt;<code>xx=filename</code>&gt; <code>&#8230;</code></dt>
 <dd>
- Display only matched results of Ekeying match between an On-Carrier device and an AMC module or between 2 AMC modules. Example:<br />
-&nbsp;<wbr>&gt;&nbsp;<wbr>ipmitool ekanalyzer summary match oc=fru b1=amcB1 a2=amcA2<br />
-&nbsp;<wbr>On-Carrier Device vs AMC slot B1<br />
-&nbsp;<wbr>&nbsp;<wbr>AMC slot B1 port 0&nbsp;<wbr>==&gt;&nbsp;<wbr>On-Carrier Device 0 port 16<br />
-Matching Result<br />
-&#8211; From On-Carrier Device ID 0<br />
-&nbsp;<wbr>-Channel ID 11 || Lane 0: enable<br />
-&nbsp;<wbr>-Link Type: AMC.2 Ethernet<br />
-&nbsp;<wbr>-Link Type extension: 1000BASE-BX&nbsp;<wbr>(SerDES Gigabit)&nbsp;<wbr>Ethernet link<br />
-&nbsp;<wbr>-Link Group ID: 0 || Link Asym. Match: exact match<br />
-&#8211; To AMC slot B1<br />
-&nbsp;<wbr>-Channel ID 0 || Lane 0: enable<br />
-&nbsp;<wbr>-Link Type: AMC.2 Ethernet<br />
-&nbsp;<wbr>-Link Type extension: 1000BASE-BX&nbsp;<wbr>(SerDES Gigabit)&nbsp;<wbr>Ethernet link<br />
-&nbsp;<wbr>-Link Group ID: 0 || Link Asym. Match: exact match<br />
-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*<br />
-&nbsp;<wbr>&nbsp;<wbr>AMC slot B1 port 1&nbsp;<wbr>==&gt;&nbsp;<wbr>On-Carrier Device 0 port 12<br />
-Matching Result<br />
-&#8211; From On-Carrier Device ID 0<br />
-&nbsp;<wbr>-Channel ID 6 || Lane 0: enable<br />
-&nbsp;<wbr>-Link Type: AMC.2 Ethernet<br />
-&nbsp;<wbr>-Link Type extension: 1000BASE-BX&nbsp;<wbr>(SerDES Gigabit)&nbsp;<wbr>Ethernet link<br />
-&nbsp;<wbr>-Link Group ID: 0 || Link Asym. Match: exact match<br />
-&#8211; To AMC slot B1<br />
-&nbsp;<wbr>-Channel ID 1 || Lane 0: enable<br />
-&nbsp;<wbr>-Link Type: AMC.2 Ethernet<br />
-&nbsp;<wbr>-Link Type extension: 1000BASE-BX&nbsp;<wbr>(SerDES Gigabit)&nbsp;<wbr>Ethernet link<br />
-&nbsp;<wbr>-Link Group ID: 0 || Link Asym. Match: exact match<br />
-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*<br />
-&nbsp;<wbr>On-Carrier Device vs AMC slot A2<br />
-&nbsp;<wbr>&nbsp;<wbr>AMC slot A2 port 0&nbsp;<wbr>==&gt;&nbsp;<wbr>On-Carrier Device 0 port 3<br />
-Matching Result<br />
-&#8211; From On-Carrier Device ID 0<br />
-&nbsp;<wbr>-Channel ID 9 || Lane 0: enable<br />
-&nbsp;<wbr>-Link Type: AMC.2 Ethernet<br />
-&nbsp;<wbr>-Link Type extension: 1000BASE-BX&nbsp;<wbr>(SerDES Gigabit)&nbsp;<wbr>Ethernet link<br />
-&nbsp;<wbr>-Link Group ID: 0 || Link Asym. Match: exact match<br />
-&#8211; To AMC slot A2<br />
-&nbsp;<wbr>-Channel ID 0 || Lane 0: enable<br />
-&nbsp;<wbr>-Link Type: AMC.2 Ethernet<br />
-&nbsp;<wbr>-Link Type extension: 1000BASE-BX&nbsp;<wbr>(SerDES Gigabit)&nbsp;<wbr>Ethernet link<br />
-&nbsp;<wbr>-Link Group ID: 0 || Link Asym. Match: exact match<br />
-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*<br />
-&nbsp;<wbr>AMC slot B1 vs AMC slot A2<br />
-&nbsp;<wbr>&nbsp;<wbr>AMC slot A2 port 2&nbsp;<wbr>==&gt;&nbsp;<wbr>AMC slot B1 port 2<br />
-Matching Result<br />
-&#8211; From AMC slot B1<br />
-&nbsp;<wbr>-Channel ID 2 || Lane 0: enable<br />
-&nbsp;<wbr>-Link Type: AMC.3 Storage<br />
-&nbsp;<wbr>-Link Type extension: Serial Attached SCSI&nbsp;<wbr>(SAS/SATA)<br />
-&nbsp;<wbr>-Link Group ID: 0 || Link Asym. Match: FC or SAS interface&nbsp;<wbr>{exact match}<br />
-&#8211; To AMC slot A2<br />
-&nbsp;<wbr>-Channel ID 2 || Lane 0: enable<br />
-&nbsp;<wbr>-Link Type: AMC.3 Storage<br />
-&nbsp;<wbr>-Link Type extension: Serial Attached SCSI&nbsp;<wbr>(SAS/SATA)<br />
-&nbsp;<wbr>-Link Group ID: 0 || Link Asym. Match: FC or SAS interface&nbsp;<wbr>{exact match}<br />
+ Display only matched results of Ekeying match between an On-Carrier device and an AMC module or between 2 AMC modules. Example:<br/>
+&nbsp;<wbr>&gt;&nbsp;<wbr>ipmitool ekanalyzer summary match oc=fru b1=amcB1 a2=amcA2<br/>
+&nbsp;<wbr>On-Carrier Device vs AMC slot B1<br/>
+&nbsp;<wbr>&nbsp;<wbr>AMC slot B1 port 0&nbsp;<wbr>==&gt;&nbsp;<wbr>On-Carrier Device 0 port 16<br/>
+Matching Result<br/>
+&#8211; From On-Carrier Device ID 0<br/>
+&nbsp;<wbr>-Channel ID 11 || Lane 0: enable<br/>
+&nbsp;<wbr>-Link Type: AMC.2 Ethernet<br/>
+&nbsp;<wbr>-Link Type extension: 1000BASE-BX&nbsp;<wbr>(SerDES Gigabit)&nbsp;<wbr>Ethernet link<br/>
+&nbsp;<wbr>-Link Group ID: 0 || Link Asym. Match: exact match<br/>
+&#8211; To AMC slot B1<br/>
+&nbsp;<wbr>-Channel ID 0 || Lane 0: enable<br/>
+&nbsp;<wbr>-Link Type: AMC.2 Ethernet<br/>
+&nbsp;<wbr>-Link Type extension: 1000BASE-BX&nbsp;<wbr>(SerDES Gigabit)&nbsp;<wbr>Ethernet link<br/>
+&nbsp;<wbr>-Link Group ID: 0 || Link Asym. Match: exact match<br/>
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*<br/>
+&nbsp;<wbr>&nbsp;<wbr>AMC slot B1 port 1&nbsp;<wbr>==&gt;&nbsp;<wbr>On-Carrier Device 0 port 12<br/>
+Matching Result<br/>
+&#8211; From On-Carrier Device ID 0<br/>
+&nbsp;<wbr>-Channel ID 6 || Lane 0: enable<br/>
+&nbsp;<wbr>-Link Type: AMC.2 Ethernet<br/>
+&nbsp;<wbr>-Link Type extension: 1000BASE-BX&nbsp;<wbr>(SerDES Gigabit)&nbsp;<wbr>Ethernet link<br/>
+&nbsp;<wbr>-Link Group ID: 0 || Link Asym. Match: exact match<br/>
+&#8211; To AMC slot B1<br/>
+&nbsp;<wbr>-Channel ID 1 || Lane 0: enable<br/>
+&nbsp;<wbr>-Link Type: AMC.2 Ethernet<br/>
+&nbsp;<wbr>-Link Type extension: 1000BASE-BX&nbsp;<wbr>(SerDES Gigabit)&nbsp;<wbr>Ethernet link<br/>
+&nbsp;<wbr>-Link Group ID: 0 || Link Asym. Match: exact match<br/>
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*<br/>
+&nbsp;<wbr>On-Carrier Device vs AMC slot A2<br/>
+&nbsp;<wbr>&nbsp;<wbr>AMC slot A2 port 0&nbsp;<wbr>==&gt;&nbsp;<wbr>On-Carrier Device 0 port 3<br/>
+Matching Result<br/>
+&#8211; From On-Carrier Device ID 0<br/>
+&nbsp;<wbr>-Channel ID 9 || Lane 0: enable<br/>
+&nbsp;<wbr>-Link Type: AMC.2 Ethernet<br/>
+&nbsp;<wbr>-Link Type extension: 1000BASE-BX&nbsp;<wbr>(SerDES Gigabit)&nbsp;<wbr>Ethernet link<br/>
+&nbsp;<wbr>-Link Group ID: 0 || Link Asym. Match: exact match<br/>
+&#8211; To AMC slot A2<br/>
+&nbsp;<wbr>-Channel ID 0 || Lane 0: enable<br/>
+&nbsp;<wbr>-Link Type: AMC.2 Ethernet<br/>
+&nbsp;<wbr>-Link Type extension: 1000BASE-BX&nbsp;<wbr>(SerDES Gigabit)&nbsp;<wbr>Ethernet link<br/>
+&nbsp;<wbr>-Link Group ID: 0 || Link Asym. Match: exact match<br/>
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*<br/>
+&nbsp;<wbr>AMC slot B1 vs AMC slot A2<br/>
+&nbsp;<wbr>&nbsp;<wbr>AMC slot A2 port 2&nbsp;<wbr>==&gt;&nbsp;<wbr>AMC slot B1 port 2<br/>
+Matching Result<br/>
+&#8211; From AMC slot B1<br/>
+&nbsp;<wbr>-Channel ID 2 || Lane 0: enable<br/>
+&nbsp;<wbr>-Link Type: AMC.3 Storage<br/>
+&nbsp;<wbr>-Link Type extension: Serial Attached SCSI&nbsp;<wbr>(SAS/SATA)<br/>
+&nbsp;<wbr>-Link Group ID: 0 || Link Asym. Match: FC or SAS interface&nbsp;<wbr>{exact match}<br/>
+&#8211; To AMC slot A2<br/>
+&nbsp;<wbr>-Channel ID 2 || Lane 0: enable<br/>
+&nbsp;<wbr>-Link Type: AMC.3 Storage<br/>
+&nbsp;<wbr>-Link Type extension: Serial Attached SCSI&nbsp;<wbr>(SAS/SATA)<br/>
+&nbsp;<wbr>-Link Group ID: 0 || Link Asym. Match: FC or SAS interface&nbsp;<wbr>{exact match}<br/>
 &nbsp;<wbr>*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*</dd>
 <dt><i>unmatch</i> &lt;<code>xx=filename</code>&gt; &lt;<code>xx=filename</code>&gt; <code>&#8230;</code></dt>
 <dd>
@@ -865,7 +865,7 @@ Matching Result<br />
 <dt>&lt;<code>predefined event number</code> <i>N</i>&gt;</dt>
 <dd>
 <p> Send a pre-defined test event to the System Event Log. The following events are included as a means to test the functionality of the System Event Log component of the BMC (an entry will be added each time the event <i>N</i> command is executed). </p>
-<p> Currently supported values for <i>N</i> are:<br />
+<p> Currently supported values for <i>N</i> are:<br/>
  <i>1</i><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>Temperature: Upper Critical: Going High</p>
 <p> <i>2</i><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>Voltage Threshold: Lower Critical: Going Low</p>
 <p> <i>3</i><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>Memory: Correctable ECC </p>
@@ -887,11 +887,11 @@ Matching Result<br />
 </dd><dl>
 <dt>
 </dt><dd>
-<p> &gt; ipmitool -I open event &quot;PS 2T Fan Fault&quot; list<br />
- Finding sensor PS 2T Fan Fault&#8230; ok<br />
+<p> &gt; ipmitool -I open event &quot;PS 2T Fan Fault&quot; list<br/>
+ Finding sensor PS 2T Fan Fault&#8230; ok<br/>
  Sensor States: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>State Deasserted </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>State Asserted<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>State Asserted<br/>
  Sensor State Shortcuts: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>present&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>absent </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>assert&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>deassert </p>
@@ -907,13 +907,13 @@ Matching Result<br />
 </dd><dl>
 <dt>
 </dt><dd>
-<p> &gt; ipmitool event &quot;PS 2T Fan Fault&quot; &quot;State Asserted&quot;<br />
+<p> &gt; ipmitool event &quot;PS 2T Fan Fault&quot; &quot;State Asserted&quot;<br/>
  Finding sensor PS 2T Fan Fault&#8230; ok </p>
 <p>0 | Pre-Init Time-stamp&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>| Fan PS 2T Fan Fault | State Asserted</dd></dl>
 <dl>
 <dt>
 </dt><dd>
-<p> &gt; ipmitool event &quot;PS 2T Fan Fault&quot; &quot;State Deasserted&quot;<br />
+<p> &gt; ipmitool event &quot;PS 2T Fan Fault&quot; &quot;State Deasserted&quot;<br/>
  Finding sensor PS 2T Fan Fault&#8230; ok </p>
 <p>0 | Pre-Init Time-stamp&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>| Fan PS 2T Fan Fault | State Desserted</dd></dl>
 <dl>
@@ -926,7 +926,7 @@ Matching Result<br />
 <dt>
 </dt><dd> Execute ipmitool commands from <i>filename</i>. Each line is a complete command. The syntax of the commands are defined by the COMMANDS section in this manpage. Each line may have an optional comment at the end of the line, delimited with a `#&#8217; symbol. </dd>
 <p> e.g., a command file with two lines: </p>
-<p> sdr list # get a list of sdr records<br />
+<p> sdr list # get a list of sdr records<br/>
  sel list # get a list of sel records</dl>
 <dt><i>firewall</i></dt>
 <dd>
@@ -1087,8 +1087,8 @@ Matching Result<br />
  Upgrade all components even if the firmware versions are the same (use this only after using &quot;check&quot; command). </dd>
 <dt><i>component</i> &lt;<code>x</code>&gt;</dt>
 <dd>
- Upgrade only given component from the given file.<br />
- component 0 &#8211; BOOT<br />
+ Upgrade only given component from the given file.<br/>
+ component 0 &#8211; BOOT<br/>
  component 1 &#8211; RTK </dd>
 <dt><i>activate</i></dt>
 <dd>
@@ -1103,11 +1103,11 @@ Matching Result<br />
 <p> Get the target upgrade capabilities. </p>
 </dd><dt><i>compprop</i> &lt;<code>id</code>&gt; &lt;<code>select</code>&gt;</dt>
 <dd>
- Get the specified component properties. Valid component <code>id</code>: 0-7. <code>Select</code> can be one of following:<br />
- 0 &#8211; General properties<br />
- 1 &#8211; Current firmware version<br />
- 2 &#8211; Description string<br />
- 3 &#8211; Rollback firmware version<br />
+ Get the specified component properties. Valid component <code>id</code>: 0-7. <code>Select</code> can be one of following:<br/>
+ 0 &#8211; General properties<br/>
+ 1 &#8211; Current firmware version<br/>
+ 2 &#8211; Description string<br/>
+ 3 &#8211; Rollback firmware version<br/>
  4 &#8211; Deferred firmware version </dd>
 <dt><i>abort</i></dt>
 <dd>
@@ -1141,7 +1141,7 @@ Matching Result<br />
 <p> Displays information about the Manageability Engine (ME)</p>
 </dd><dt><i>update</i> &lt;<code>file</code>&gt;</dt>
 <dd>
-<p> Upgrade the ME firmware with the specified image file<br />
+<p> Upgrade the ME firmware with the specified image file<br/>
  <code>WARNING</code> You MUST use a supported image provided by your board vendor </p>
 </dd><dt><i>rollback</i></dt>
 <dd>
@@ -1217,12 +1217,12 @@ Matching Result<br />
 <dt>
 </dt><dd>
 <p> These commands will allow you to configure IPMI LAN channels with network information so they can be used with the ipmitool <i>lan</i> and <i>lanplus</i> interfaces. <i>NOTE</i>: To determine on which channel the LAN interface is located, issue the `channel info <i>number</i>&#8216; command until you come across a valid 802.3 LAN channel. For example: </p>
-<p> &gt; ipmitool -I open channel info 1<br />
+<p> &gt; ipmitool -I open channel info 1<br/>
  Channel 0x1 info: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>Channel Medium Type&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: 802.3 LAN<br />
-&nbsp;<wbr>&nbsp;<wbr>Channel Protocol Type : IPMB-1.0<br />
-&nbsp;<wbr>&nbsp;<wbr>Session Support&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: session-based<br />
-&nbsp;<wbr>&nbsp;<wbr>Active Session Count&nbsp;<wbr>&nbsp;<wbr>: 8<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>Channel Medium Type&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: 802.3 LAN<br/>
+&nbsp;<wbr>&nbsp;<wbr>Channel Protocol Type : IPMB-1.0<br/>
+&nbsp;<wbr>&nbsp;<wbr>Session Support&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: session-based<br/>
+&nbsp;<wbr>&nbsp;<wbr>Active Session Count&nbsp;<wbr>&nbsp;<wbr>: 8<br/>
 &nbsp;<wbr>&nbsp;<wbr>Protocol Vendor ID&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>: 7154 </p>
 </dd><dl>
 <dt><i>print</i> [&lt;<code>channel</code>&gt;]</dt>
@@ -1271,7 +1271,7 @@ Matching Result<br />
 <p> Enable or disable PEF alerting for this channel.</p>
 </dd><dt><i>ipsrc</i> &lt;<code>source</code>&gt;</dt>
 <dd>
-<p> Set the IP address source:<br />
+<p> Set the IP address source:<br/>
  <i>none</i><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>unspecified</p>
 <p> <i>static</i><tt>&nbsp;<wbr></tt>manually configured static IP address</p>
 <p> <i>dhcp</i><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>address obtained by BMC running DHCP</p>
@@ -1287,16 +1287,16 @@ Matching Result<br />
 <p> Set BMC generated gratuitous ARP interval.</p>
 </dd><dt><i>vlan id</i> &lt;<code>off</code>|<code>id</code>&gt;</dt>
 <dd>
-<p> Disable VLAN operation or enable VLAN and set the ID.<br />
+<p> Disable VLAN operation or enable VLAN and set the ID.<br/>
  ID: value of the virtual lan identifier between 1 and 4094 inclusive.</p>
 </dd><dt><i>vlan priority</i> &lt;<code>priority</code>&gt;</dt>
 <dd>
-<p> Set the priority associated with VLAN frames.<br />
+<p> Set the priority associated with VLAN frames.<br/>
  ID: priority of the virtual lan frames between 0 and 7 inclusive.</p>
 </dd><dt><i>auth</i> &lt;<code>level</code>,<code>&#8230;</code>&gt; &lt;<code>type</code>,<code>&#8230;</code>&gt;</dt>
 <dd>
-<p> Set the valid authtypes for a given auth level.<br />
- Levels: callback, user, operator, admin<br />
+<p> Set the valid authtypes for a given auth level.<br/>
+ Levels: callback, user, operator, admin<br/>
  Types: none, md2, md5, password, oem</p>
 </dd><dt><i>cipher_privs</i> &lt;<code>privlist</code>&gt;</dt>
 <dd>
@@ -1420,7 +1420,7 @@ Matching Result<br />
 </dd></dl>
 </dl>
 <dt><i>getsysinfo</i> &lt;<code>argument</code>&gt;</dt>
-<dd> Retrieves system info from bmc for given argument.<br />
+<dd> Retrieves system info from bmc for given argument.<br/>
  See <i>setsysinfo</i> for argument definitions</dd>
 <dt><i>setsysinfo</i> &lt;<code>argument</code>&gt; &lt;<code>string</code>&gt;</dt>
 <dd> Stores system info string to bmc for given argument</dd>
@@ -1846,9 +1846,9 @@ Matching Result<br />
 </dd><dt><i>raw</i> &lt;<code>netfn</code>&gt; &lt;<code>cmd</code>&gt; [&lt;<code>data</code>&gt;]</dt>
 <dd>
 <p> This will allow you to execute raw IPMI commands. For example to query the POH counter with a raw command: </p>
-<p> &gt; ipmitool -v raw 0x0 0xf<br />
- RAW REQ (netfn=0x0 cmd=0xf data_len=0)<br />
- RAW RSP (5 bytes)<br />
+<p> &gt; ipmitool -v raw 0x0 0xf<br/>
+ RAW REQ (netfn=0x0 cmd=0xf data_len=0)<br/>
+ RAW RSP (5 bytes)<br/>
  3c 72 0c 00 00 </p>
 <p> <code>Note</code> that the OpenIPMI driver provided by the Linux kernel will reject the Get Message, Send Message and Read Event Message Buffer commands because it handles the message sequencing internally.</p>
 </dd><dt><i>sdr</i></dt>
@@ -1864,10 +1864,10 @@ Matching Result<br />
 </dd><dt><i>type</i> [&lt;<code>sensor type</code>&gt;]</dt>
 <dd>
 <p> This command will display all records from the SDR Repository of a specific type. Run with type <i>list</i> (or simply with no type) to see the list of available types. For example to query for all Temperature sensors: </p>
-<p> &gt; ipmitool sdr type Temperature<br />
- Baseboard Temp | 30h | ok | 7.1 | 28 degrees C<br />
- FntPnl Amb Temp | 32h | ok | 12.1 | 24 degrees C<br />
- Processor1 Temp | 98h | ok | 3.1 | 57 degrees C<br />
+<p> &gt; ipmitool sdr type Temperature<br/>
+ Baseboard Temp | 30h | ok | 7.1 | 28 degrees C<br/>
+ FntPnl Amb Temp | 32h | ok | 12.1 | 24 degrees C<br/>
+ Processor1 Temp | 98h | ok | 3.1 | 57 degrees C<br/>
  Processor2 Temp | 99h | ok | 3.2 | 53 degrees C </p>
 </dd><dt><i>list</i> | <i>elist</i> [&lt;<code>all</code>|<code>full</code>|<code>compact</code>|<code>event</code>|<code>mcloc</code>|<code>fru</code>|<code>generic</code>&gt;]</dt>
 <dd>
@@ -2165,16 +2165,16 @@ Matching Result<br />
 <p> Set status of a particular LED described by a Generic Device Locator record in the SDR. A sensorid of <i>all</i> will set the status of all available LEDS to the specified <i>ledmode</i> and <i>ledtype</i>.</p>
 </dd><dt>LED Mode is required for set operations:</dt>
 <dd>
- <i>OFF</i> Off<br />
- <i>ON</i> Steady On<br />
- <i>STANDBY</i> 100ms on 2900ms off blink rate<br />
- <i>SLOW</i> 1HZ blink rate<br />
+ <i>OFF</i> Off<br/>
+ <i>ON</i> Steady On<br/>
+ <i>STANDBY</i> 100ms on 2900ms off blink rate<br/>
+ <i>SLOW</i> 1HZ blink rate<br/>
  <i>FAST</i> 4HZ blink rate</dd>
 <dt>LED Type is optional:</dt>
 <dd>
- <i>OK2RM</i> Ok to Remove<br />
- <i>SERVICE</i> Service Required<br />
- <i>ACT</i> Activity<br />
+ <i>OK2RM</i> Ok to Remove<br/>
+ <i>SERVICE</i> Service Required<br/>
+ <i>ACT</i> Activity<br/>
  <i>LOCATE</i> Locate </dd>
 </dl>
 </dl>
@@ -2214,16 +2214,16 @@ Matching Result<br />
 <dl>
 <dt>
 </dt><dd>
- <i>SSH_PUBKEYS</i><br />
- <i>DIAG_PASSED</i><br />
- <i>DIAG_FAILED</i><br />
- <i>DIAG_END_TIME</i><br />
- <i>DIAG_INVENTORY</i><br />
- <i>DIAG_TEST_LOG</i><br />
- <i>DIAG_START_TIME</i><br />
- <i>DIAG_UEFI_LOG</i><br />
- <i>DIAG_TEST_LOG</i><br />
- <i>DIAG_LAST_LOG</i><br />
+ <i>SSH_PUBKEYS</i><br/>
+ <i>DIAG_PASSED</i><br/>
+ <i>DIAG_FAILED</i><br/>
+ <i>DIAG_END_TIME</i><br/>
+ <i>DIAG_INVENTORY</i><br/>
+ <i>DIAG_TEST_LOG</i><br/>
+ <i>DIAG_START_TIME</i><br/>
+ <i>DIAG_UEFI_LOG</i><br/>
+ <i>DIAG_TEST_LOG</i><br/>
+ <i>DIAG_LAST_LOG</i><br/>
  <i>DIAG_LAST_CMD</i></dd></dl>
 </dl>
 <dt><i>getbehavior</i> &lt;<code>feature identifier</code>&gt;</dt>
@@ -2235,7 +2235,7 @@ Matching Result<br />
 <dl>
 <dt>
 </dt><dd>
- <i>SUPPORTS_SIGNED_PACKAGES</i><br />
+ <i>SUPPORTS_SIGNED_PACKAGES</i><br/>
  <i>REQUIRES_SIGNED_PACKAGES</i></dd></dl>
 </dl>
 </dl>
@@ -2358,31 +2358,31 @@ Matching Result<br />
 <dl>
 <dt><i>Example 1</i>: Listing remote sensors</dt>
 <dd>
-<p> &gt; ipmitool -I lan -H 1.2.3.4 -f passfile sdr list<br />
- Baseboard 1.25V | 1.24 Volts | ok<br />
- Baseboard 2.5V | 2.49 Volts | ok<br />
+<p> &gt; ipmitool -I lan -H 1.2.3.4 -f passfile sdr list<br/>
+ Baseboard 1.25V | 1.24 Volts | ok<br/>
+ Baseboard 2.5V | 2.49 Volts | ok<br/>
  Baseboard 3.3V | 3.32 Volts | ok</p>
 </dd><dt><i>Example 2</i>: Displaying status of a remote sensor</dt>
 <dd>
-<p> &gt; ipmitool -I lan -H 1.2.3.4 -f passfile sensor get &quot;Baseboard 1.25V&quot;<br />
- Locating sensor record&#8230;<br />
- Sensor ID : Baseboard 1.25V (0x10)<br />
- Sensor Type (Analog) : Voltage<br />
- Sensor Reading : 1.245 (+/- 0.039) Volts<br />
- Status : ok<br />
- Lower Non-Recoverable : na<br />
- Lower Critical : 1.078<br />
- Lower Non-Critical : 1.107<br />
- Upper Non-Critical : 1.382<br />
- Upper Critical : 1.431<br />
+<p> &gt; ipmitool -I lan -H 1.2.3.4 -f passfile sensor get &quot;Baseboard 1.25V&quot;<br/>
+ Locating sensor record&#8230;<br/>
+ Sensor ID : Baseboard 1.25V (0x10)<br/>
+ Sensor Type (Analog) : Voltage<br/>
+ Sensor Reading : 1.245 (+/- 0.039) Volts<br/>
+ Status : ok<br/>
+ Lower Non-Recoverable : na<br/>
+ Lower Critical : 1.078<br/>
+ Lower Non-Critical : 1.107<br/>
+ Upper Non-Critical : 1.382<br/>
+ Upper Critical : 1.431<br/>
  Upper Non-Recoverable : na</p>
 </dd><dt><i>Example 3</i>: Displaying the power status of a remote chassis</dt>
 <dd>
-<p> &gt; ipmitool -I lan -H 1.2.3.4 -f passfile chassis power status<br />
+<p> &gt; ipmitool -I lan -H 1.2.3.4 -f passfile chassis power status<br/>
  Chassis Power is on</p>
 </dd><dt><i>Example 4</i>: Controlling the power on a remote chassis</dt>
 <dd>
-<p> &gt; ipmitool -I lan -H 1.2.3.4 -f passfile chassis power on<br />
+<p> &gt; ipmitool -I lan -H 1.2.3.4 -f passfile chassis power on<br/>
  Chassis Power Control: Up/On <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>
 </dd></dl>
 <h2>AUTHOR</h2>

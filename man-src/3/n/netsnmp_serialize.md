@@ -9,13 +9,13 @@ description: "serialize – Calls sub handlers one request at a time."
 
 <p>serialize &#8211; Calls sub handlers one request at a time.</p>
 <h3>Functions</h3>
-<p><code>netsnmp_mib_handler</code> * <code>netsnmp_get_serialize_handler</code> (void)<br />
- <i>returns a serialize handler that can be injected into a given handler chain. </i><br />
- int <code>netsnmp_register_serialize</code> (<code>netsnmp_handler_registration</code> *reginfo)<br />
- <i>functionally the same as calling </i><code>netsnmp_register_handler()</code> but also injects a serialize handler at the same time for you.<br />
- int <code>netsnmp_serialize_helper_handler</code> (<code>netsnmp_mib_handler</code> *handler, <code>netsnmp_handler_registration</code> *reginfo, <code>netsnmp_agent_request_info</code> *reqinfo, <code>netsnmp_request_info</code> *requests)<br />
- <i>Implements the serial handler. </i><br />
- void <code>netsnmp_init_serialize</code> (void)<br />
+<p><code>netsnmp_mib_handler</code> * <code>netsnmp_get_serialize_handler</code> (void)<br/>
+ <i>returns a serialize handler that can be injected into a given handler chain. </i><br/>
+ int <code>netsnmp_register_serialize</code> (<code>netsnmp_handler_registration</code> *reginfo)<br/>
+ <i>functionally the same as calling </i><code>netsnmp_register_handler()</code> but also injects a serialize handler at the same time for you.<br/>
+ int <code>netsnmp_serialize_helper_handler</code> (<code>netsnmp_mib_handler</code> *handler, <code>netsnmp_handler_registration</code> *reginfo, <code>netsnmp_agent_request_info</code> *reqinfo, <code>netsnmp_request_info</code> *requests)<br/>
+ <i>Implements the serial handler. </i><br/>
+ void <code>netsnmp_init_serialize</code> (void)<br/>
  <i>initializes the serialize helper which then registers a serialize handler as a run-time injectable handler for configuration file use. </i></p>
 <h2>Detailed Description</h2>
 <p>Calls sub handlers one request at a time. </p>

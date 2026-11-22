@@ -11,7 +11,7 @@ description: "slabrd.f –"
 <p> slabrd.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>slabrd</code> (M, N, NB, A, LDA, D, E, TAUQ, TAUP, X, LDX, Y, LDY)<br />
+<p> subroutine <code>slabrd</code> (M, N, NB, A, LDA, D, E, TAUQ, TAUP, X, LDX, Y, LDY)<br/>
  <i></i><code>SLABRD</code> reduces the first nb rows and columns of a general matrix to a bidiagonal form.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slabrd (integerM, integerN, integerNB, real, dimension( lda, * )A, integerLDA, real, dimension( * )D, real, dimension( * )E, real, dimension( * )TAUQ, real, dimension( * )TAUP, real, dimension( ldx, * )X, integerLDX, real, dimension( ldy, * )Y, integerLDY)</h3>

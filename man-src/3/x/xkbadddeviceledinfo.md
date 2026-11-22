@@ -10,7 +10,7 @@ description: "XkbAddDeviceLedInfo – Initialize an XkbDeviceLedInfoRec structur
 <p>XkbAddDeviceLedInfo &#8211; Initialize an XkbDeviceLedInfoRec structure </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>XkbDeviceLedInfoPtr XkbAddDeviceLedInfo</code> <code>(XkbDeviceInfoPtr </code><i>device_info</i><code>,</code> <code>unsigned int </code><i>led_class</i><code>,</code> <code>unsigned int </code><i>led_id</i><code>);</code><br />
+<dt> <code>XkbDeviceLedInfoPtr XkbAddDeviceLedInfo</code> <code>(XkbDeviceInfoPtr </code><i>device_info</i><code>,</code> <code>unsigned int </code><i>led_class</i><code>,</code> <code>unsigned int </code><i>led_id</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

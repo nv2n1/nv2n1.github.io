@@ -11,7 +11,7 @@ description: "isamax.f –"
 <p> isamax.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> INTEGER function <code>isamax</code> (N, SX, INCX)<br />
+<p> INTEGER function <code>isamax</code> (N, SX, INCX)<br/>
  <i></i><code>ISAMAX</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>INTEGER function isamax (integerN, real, dimension(*)SX, integerINCX)</h3>

@@ -9,7 +9,7 @@ description: "sample – packet sampling tc action"
 
 <p>sample &#8211; packet sampling tc action</p>
 <h2>Synopsis</h2>
-<p> <code>tc</code> &#8230; <code>action sample rate</code> <i>RATE</i> <code>group</code> <i>GROUP</i> [ <code>trunc</code> <i>SIZE</i> ] [ <code>index</code> <i>INDEX</i> ]<br />
+<p> <code>tc</code> &#8230; <code>action sample rate</code> <i>RATE</i> <code>group</code> <i>GROUP</i> [ <code>trunc</code> <i>SIZE</i> ] [ <code>index</code> <i>INDEX</i> ]<br/>
  <code>tc</code> &#8230; <code>action sample index </code> <i>INDEX</i> </p>
 <h2>Description</h2>
 <p>The <code>sample</code> action allows sampling packets matching classifier. The packets are chosen randomly according to the <code>rate</code> parameter, and are sampled using the <code>psample</code> generic netlink channel. The user can also specify packet truncation to save user-kernel traffic. Each sample includes some informative metadata about the original packet, which is sent using netlink attributes, alongside the original packet data. The user can either specify the sample action parameters as presented in the first form above, or use an existing sample action using its index, as presented in the second form. </p>
@@ -42,11 +42,11 @@ description: "sample – packet sampling tc action"
 <h2>Examples</h2>
 <p>Sample one of every 100 packets flowing into interface eth0 to psample group 12:</p>
 <dl>
-<dd>tc qdisc add dev eth0 handle ffff: ingress tc filter add dev eth0 parent ffff: matchall \<br />
+<dd>tc qdisc add dev eth0 handle ffff: ingress tc filter add dev eth0 parent ffff: matchall \<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;action sample rate 100 group 12 index 19</dd></dl>
 <p> Use the same action instance to sample eth1 too:</p>
 <dl>
-<dd>tc qdisc add dev eth1 handle ffff: ingress tc filter add dev eth1 parent ffff: matchall \<br />
+<dd>tc qdisc add dev eth1 handle ffff: ingress tc filter add dev eth1 parent ffff: matchall \<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;action sample index 19</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-tc/">tc</a></code>(8), <code><a href="/docs/linux/man/8-tc-matchall/">tc-matchall</a></code>(8) <code>psample</code>(1) </p>

@@ -13,7 +13,7 @@ description: "btrfs-quota – control the global quota status of a btrfs filesys
 <h2>Description</h2>
 <p>The commands under <code>btrfs quota</code> are used to affect the global status of quotas of a btrfs filesystem. The quota groups (qgroups) are managed by the subcommand <code>btrfs qgroup</code>(8). </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
+<dd> <code>Note</code>  </dd>
 <p> Qgroups are different than the traditional user quotas and designed to track shared and exclusive data per-subvolume. Please refer to the section <i>HIERARCHICAL QUOTA GROUP CONCEPTS</i> for a detailed description. </p>
 </dl>
 <h3>Performance Implications</h3>
@@ -68,13 +68,13 @@ extents 1 2 3 4</pre>
 <p> So how can this problem be solved? In the instant the snapshot gets created, we already have to know the correct exclusive count. We need to have a second qgroup that contains all the subvolumes as the first qgroup, except the subvolume we want to snapshot. The moment we create the snapshot, the exclusive count from the second qgroup needs to be copied to the first qgroup, as it represents the correct value. The second qgroup is called a tracking qgroup. It is only there in case a snapshot is needed.</p>
 <h3>Use Cases</h3>
 <p>Below are some usecases that do not mean to be extensive. You can find your own way how to integrate qgroups. </p>
-<p> <font SIZE="+1"> <code>SINGLE-USER MACHINE</code></p>
+<p>  <code>SINGLE-USER MACHINE</code></p>
 <dl>
 <dd><code>Replacement for partitions</code> </dd>
 <p> The simplest use case is to use qgroups as simple replacement for partitions. Btrfs takes the disk as a whole, and /, /usr, /var, etc. are created as subvolumes. As each subvolume gets it own qgroup automatically, they can simply be restricted. No hierarchy is needed for that. </p>
 <p> <code>Track usage of snapshots</code> </p>
 <p> When a snapshot is taken, a qgroup for it will automatically be created with the correct values. <i>Referenced</i> will show how much is in it, possibly shared with other subvolumes. <i>Exclusive</i> will be the amount of space that gets freed when the subvolume is deleted.</dl>
-<p> </font><font SIZE="+2"> <code>MULTI-USER MACHINE</code></p>
+<p>  <code>MULTI-USER MACHINE</code></p>
 <dl>
 <dd><code>Restricting homes</code> </dd>
 <p> When you have several users on a machine, with home directories probably under /home, you might want to restrict /home as a whole, while restricting every user to an individual limit as well. This is easily accomplished by creating a qgroup for /home , eg. 1/1, and assigning all user subvolumes to it. Restricting this qgroup will limit /home, while every user subvolume can get its own (lower) limit. </p>
@@ -84,7 +84,7 @@ extents 1 2 3 4</pre>
 <p> On the other hand, when the snapshots get created automatically, the user has no chance to control them, so the space used by them should not be accounted to him. This is already the case when creating snapshots in the example from the previous section. </p>
 <p> <code>Snapshots for backup purposes</code> </p>
 <p> This scenario is a mixture of the previous two. The user can create snapshots, but some snapshots for backup purposes are being created by the system. The user&#8217;s snapshots should be accounted to the user, not the system. The solution is similar to the one from section <i>Accounting snapshots to the user</i>, but do not assign system snapshots to user&#8217;s qgroup.</dl>
-<p> </font></p>
+<p> </p>
 <h2>Subcommand</h2>
 <p><code>disable</code> <i>&lt;path&gt;</i></p>
 <dl>

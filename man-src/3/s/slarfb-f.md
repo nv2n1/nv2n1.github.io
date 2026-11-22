@@ -10,7 +10,7 @@ description: "slarfb.f –"
 <p>slarfb.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>slarfb</code> (SIDE, TRANS, DIRECT, STOREV, M, N, K, V, LDV, T, LDT, C, LDC, WORK, LDWORK)<br />
+<p>subroutine <code>slarfb</code> (SIDE, TRANS, DIRECT, STOREV, M, N, K, V, LDV, T, LDT, C, LDC, WORK, LDWORK)<br/>
  <i></i><code>SLARFB</code> applies a block reflector or its transpose to a general rectangular matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slarfb (characterSIDE, characterTRANS, characterDIRECT, characterSTOREV, integerM, integerN, integerK, real, dimension( ldv, * )V, integerLDV, real, dimension( ldt, * )T, integerLDT, real, dimension( ldc, * )C, integerLDC, real, dimension( ldwork, * )WORK, integerLDWORK)</h3>

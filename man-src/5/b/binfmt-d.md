@@ -15,7 +15,7 @@ description: "binfmt.d – Configure additional binary formats for executables a
 <h2>Description</h2>
 <p>At boot, <code><a href="/docs/linux/man/8-systemd-binfmt-service/">systemd-binfmt.service</a></code>(8) reads configuration files from the above directories to register in the kernel additional binary formats for executables.</p>
 <h2>Configuration Format</h2>
-<p>Each file contains a list of binfmt_misc kernel binary format rules. Consult the kernel&#8217;s m[blue]<code>binfmt-misc.rst</code>m[]<font SIZE="-2">[1]</font> documentation file for more information on registration of additional binary formats and how to write rules. </p>
+<p>Each file contains a list of binfmt_misc kernel binary format rules. Consult the kernel&#8217;s m[blue]<code>binfmt-misc.rst</code>m[][1] documentation file for more information on registration of additional binary formats and how to write rules. </p>
 <p> Empty lines and lines beginning with ; and # are ignored. Note that this means you may not use ; and # as delimiter in binary format rules.</p>
 <h2>Configuration Directories And Precedence</h2>
 <p>Configuration files are read from directories in /etc/, /run/, /usr/local/lib/, and /lib/, in order of precedence, as listed in the SYNOPSIS section above. Files must have the &quot;.conf&quot; extension. Files in /etc/ override files with the same name in /run/, /usr/local/lib/, and /lib/. Files in /run/ override files with the same name under /usr/. </p>

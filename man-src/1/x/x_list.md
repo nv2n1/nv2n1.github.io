@@ -17,7 +17,7 @@ description: "x_list – Extract Cross-Over Information from the Data Base."
 <dt><i>leg1 leg2</i></dt>
 <dd> If two legs are specified, the cross-overs they have in common are returned. If one leg is specified, all the external cross-overs involving this leg are returned, OR only its internal cross-overs if -I is selected. If no legs are given, all the external (or internal with -I) cross-overs are returned. This program is useful if one wants to look at, say, gravity COEs versus time from port for a particular leg, etc.</dd>
 <dt><i>dataflags</i></dt>
-<dd> This is a string of any combination of the following:<br />
+<dd> This is a string of any combination of the following:<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><code>l</code> means list both legnames.</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><code>t</code> means list time.</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><code>x</code> means list longitude.</p>

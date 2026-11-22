@@ -30,5 +30,5 @@ description: "XFlush, XSync, XEventsQueued, XPending – handle output buffer or
 <p> <code>XEventsQueued</code> always returns immediately without I/O if there are events already in the queue. <code>XEventsQueued</code> with mode <code>QueuedAfterFlush</code> is identical in behavior to <code>XPending</code>. <code>XEventsQueued</code> with mode <code>QueuedAlready</code> is identical to the <code>XQLength</code> function. </p>
 <p> The <code>XPending</code> function returns the number of events that have been received from the X server but have not been removed from the event queue. <code>XPending</code> is identical to <code>XEventsQueued</code> with the mode <code>QueuedAfterFlush</code> specified.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-allplanes/">AllPlanes</a>(3), <a href="/docs/linux/man/3-xifevent/">XIfEvent</a>(3), <a href="/docs/linux/man/3-xnextevent/">XNextEvent</a>(3), <a href="/docs/linux/man/3-xputbackevent/">XPutBackEvent</a>(3)<br />
+<p><a href="/docs/linux/man/3-allplanes/">AllPlanes</a>(3), <a href="/docs/linux/man/3-xifevent/">XIfEvent</a>(3), <a href="/docs/linux/man/3-xnextevent/">XNextEvent</a>(3), <a href="/docs/linux/man/3-xputbackevent/">XPutBackEvent</a>(3)<br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

@@ -10,7 +10,7 @@ description: "XkbKeyGroupWidth – Computes the width of the type associated wit
 <p>XkbKeyGroupWidth &#8211; Computes the width of the type associated with the group <i>grp </i> for the key corresponding to <i>keycode</i> </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>int XkbKeyGroupWidth</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>KeyCode </code><i>keycode</i><code>,</code> <code>int </code><i>grp</i><code>);</code><br />
+<dt> <code>int XkbKeyGroupWidth</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>KeyCode </code><i>keycode</i><code>,</code> <code>int </code><i>grp</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

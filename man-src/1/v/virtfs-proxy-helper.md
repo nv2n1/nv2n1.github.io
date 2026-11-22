@@ -14,11 +14,11 @@ description: "virtfs-proxy-helper – QEMU 9p virtfs proxy filesystem helper"
 <h2>DESCRIPTION</h2>
 <dl>
 <dt>
-</dt><dd> Pass-through security model in <font SIZE="-1">QEMU</font> 9p server needs root privilege to do few file operations (like chown, chmod to any mode/uid:gid). There are two issues in pass-through security model </dd>
-<p> 1) <font SIZE="-1">TOCTTOU</font> vulnerability: Following symbolic links in the server could provide access to files beyond 9p export path. </p>
-<p> 2) Running <font SIZE="-1">QEMU</font> with root privilege could be a security issue. </p>
-<p> To overcome above issues, following approach is used: A new filesystem type &#8216;proxy&#8217; is introduced. Proxy <font SIZE="-1">FS</font> uses chroot + socket combination for securing the vulnerability known with following symbolic links. Intention of adding a new filesystem type is to allow qemu to run in non-root mode, but doing privileged operations using socket <font SIZE="-1">IO.</font> </p>
-<p> Proxy helper(a stand alone binary part of qemu) is invoked with root privileges. Proxy helper chroots into 9p export path and creates a socket pair or a named socket based on the command line parameter. <font SIZE="-1">QEMU</font> and proxy helper communicate using this socket. <font SIZE="-1">QEMU</font> proxy fs driver sends filesystem request to proxy helper and receives the response from it. </p>
+</dt><dd> Pass-through security model in QEMU 9p server needs root privilege to do few file operations (like chown, chmod to any mode/uid:gid). There are two issues in pass-through security model </dd>
+<p> 1) TOCTTOU vulnerability: Following symbolic links in the server could provide access to files beyond 9p export path. </p>
+<p> 2) Running QEMU with root privilege could be a security issue. </p>
+<p> To overcome above issues, following approach is used: A new filesystem type &#8216;proxy&#8217; is introduced. Proxy FS uses chroot + socket combination for securing the vulnerability known with following symbolic links. Intention of adding a new filesystem type is to allow qemu to run in non-root mode, but doing privileged operations using socket IO. </p>
+<p> Proxy helper(a stand alone binary part of qemu) is invoked with root privileges. Proxy helper chroots into 9p export path and creates a socket pair or a named socket based on the command line parameter. QEMU and proxy helper communicate using this socket. QEMU proxy fs driver sends filesystem request to proxy helper and receives the response from it. </p>
 <p> The proxy helper is designed so that it can drop root privileges except for the capabilities needed for doing filesystem operations.</dl>
 <h2>OPTIONS</h2>
 <p> The following options are supported:</p>

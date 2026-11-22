@@ -10,7 +10,7 @@ description: "zlassq.f –"
 <p>zlassq.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlassq</code> (N, X, INCX, SCALE, SUMSQ)<br />
+<p>subroutine <code>zlassq</code> (N, X, INCX, SCALE, SUMSQ)<br/>
  <i></i><code>ZLASSQ</code> updates a sum of squares represented in scaled form.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlassq (integerN, complex*16, dimension( * )X, integerINCX, double precisionSCALE, double precisionSUMSQ)</h3>

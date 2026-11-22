@@ -18,10 +18,10 @@ NEOERR *cs_register_esc_strfunc(CSPARSE *parse, char *funcname,
                                 CSSTRFUNC str_func);
 </pre>
 <h2>ARGUMENTS</h2>
-<p> parse &#8211; a pointer to a CSPARSE structure initialized with cs_init()<br />
- funcname &#8211; the name for the CS function call<br />
- Note that registering a duplicate funcname will<br />
- raise a NERR_DUPLICATE error<br />
+<p> parse &#8211; a pointer to a CSPARSE structure initialized with cs_init()<br/>
+ funcname &#8211; the name for the CS function call<br/>
+ Note that registering a duplicate funcname will<br/>
+ raise a NERR_DUPLICATE error<br/>
  str_func &#8211; a CSSTRFUNC not-callback </p>
 <h2>DESCRIPTION</h2>
 <p> cs_register_esc_strfunc functions exactly as cs_register_strfunc except that it changes the evaluation escaping context to disable default escaping. </p>

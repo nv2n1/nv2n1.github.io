@@ -10,8 +10,8 @@ description: "isofilter – removes isomorphic structures from mace4(1) models"
 
 <p> isofilter &#8211; removes isomorphic structures from <code><a href="/docs/linux/man/1-mace4/">mace4</a></code>(1) models</p>
 <h2>SYNOPSIS</h2>
-<p> <code>isofilter</code> [<i>options</i>] &lt; <i>input-file</i> &gt; <i>output-file</i><br />
- <code>isofilter0</code> [<i>options</i>] &lt; <i>input-file</i> &gt; <i>output-file</i><br />
+<p> <code>isofilter</code> [<i>options</i>] &lt; <i>input-file</i> &gt; <i>output-file</i><br/>
+ <code>isofilter0</code> [<i>options</i>] &lt; <i>input-file</i> &gt; <i>output-file</i><br/>
  <code>isofilter2</code> [<i>options</i>] &lt; <i>input-file</i> &gt; <i>output-file</i></p>
 <h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>isofilter</code>, <code>isofilter0</code> and <code>isofilter2</code> commands. </p>
@@ -35,7 +35,7 @@ description: "isofilter – removes isomorphic structures from mace4(1) models"
 <dt><code>wrap</code></dt>
 <dd> Enclose the resulting structures in <code>list(interpretations). &#8230; end_of_list.</code></dd></dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-mace4/">mace4</a></code>(1).<br />
+<p> <code><a href="/docs/linux/man/1-mace4/">mace4</a></code>(1).<br/>
  Full documentation for <code>isofilter</code> is found in the <code>prover9</code> manual, available on Debian systems in the <i>prover9-doc</i> package at <i>/usr/share/doc/prover9-doc/manual/index.html</i>.</p>
 <h2>AUTHOR</h2>
 <p> <code>isofilter</code> was written by William McCune &lt;mccune [at] cs.unm.edu&gt; </p>

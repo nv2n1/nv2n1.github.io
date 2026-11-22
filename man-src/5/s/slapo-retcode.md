@@ -28,85 +28,85 @@ description: "slapo-retcode – return code overlay to slapd"
 <p> The schema includes a number of object classes and associated attribute types as described below. </p>
 <p> The error code:</p>
 <dl>
-<dd>( 1.3.6.1.4.1.4203.666.11.4.1.1<br />
-&nbsp;<wbr>NAME&nbsp;<wbr>(&nbsp;<wbr>&#8216;errCode&#8217;&nbsp;<wbr>)<br />
-&nbsp;<wbr>DESC&nbsp;<wbr>&#8216;LDAP error code&#8217;<br />
-&nbsp;<wbr>EQUALITY integerMatch<br />
-&nbsp;<wbr>ORDERING integerOrderingMatch<br />
-&nbsp;<wbr>SYNTAX 1.3.6.1.4.1.1466.115.121.1.27<br />
+<dd>( 1.3.6.1.4.1.4203.666.11.4.1.1<br/>
+&nbsp;<wbr>NAME&nbsp;<wbr>(&nbsp;<wbr>&#8216;errCode&#8217;&nbsp;<wbr>)<br/>
+&nbsp;<wbr>DESC&nbsp;<wbr>&#8216;LDAP error code&#8217;<br/>
+&nbsp;<wbr>EQUALITY integerMatch<br/>
+&nbsp;<wbr>ORDERING integerOrderingMatch<br/>
+&nbsp;<wbr>SYNTAX 1.3.6.1.4.1.1466.115.121.1.27<br/>
 &nbsp;<wbr>SINGLE-VALUE&nbsp;<wbr>)</dd></dl>
 <p> The operations that trigger the response code:</p>
 <dl>
-<dd>( 1.3.6.1.4.1.4203.666.11.4.1.2<br />
-&nbsp;<wbr>NAME&nbsp;<wbr>(&nbsp;<wbr>&#8216;errOp&#8217;&nbsp;<wbr>)<br />
-&nbsp;<wbr>DESC&nbsp;<wbr>&#8216;Operations the errObject applies to&#8217;<br />
-&nbsp;<wbr>EQUALITY caseIgnoreMatch<br />
-&nbsp;<wbr>SUBSTR caseIgnoreSubstringsMatch<br />
+<dd>( 1.3.6.1.4.1.4203.666.11.4.1.2<br/>
+&nbsp;<wbr>NAME&nbsp;<wbr>(&nbsp;<wbr>&#8216;errOp&#8217;&nbsp;<wbr>)<br/>
+&nbsp;<wbr>DESC&nbsp;<wbr>&#8216;Operations the errObject applies to&#8217;<br/>
+&nbsp;<wbr>EQUALITY caseIgnoreMatch<br/>
+&nbsp;<wbr>SUBSTR caseIgnoreSubstringsMatch<br/>
 &nbsp;<wbr>SYNTAX 1.3.6.1.4.1.1466.115.121.1.15&nbsp;<wbr>)</dd></dl>
 <p> The text message:</p>
 <dl>
-<dd>( 1.3.6.1.4.1.4203.666.11.4.1.3<br />
-&nbsp;<wbr>NAME&nbsp;<wbr>(&nbsp;<wbr>&#8216;errText&#8217;&nbsp;<wbr>)<br />
-&nbsp;<wbr>DESC&nbsp;<wbr>&#8216;LDAP error textual description&#8217;<br />
-&nbsp;<wbr>EQUALITY caseIgnoreMatch<br />
-&nbsp;<wbr>SUBSTR caseIgnoreSubstringsMatch<br />
-&nbsp;<wbr>SYNTAX 1.3.6.1.4.1.1466.115.121.1.15<br />
+<dd>( 1.3.6.1.4.1.4203.666.11.4.1.3<br/>
+&nbsp;<wbr>NAME&nbsp;<wbr>(&nbsp;<wbr>&#8216;errText&#8217;&nbsp;<wbr>)<br/>
+&nbsp;<wbr>DESC&nbsp;<wbr>&#8216;LDAP error textual description&#8217;<br/>
+&nbsp;<wbr>EQUALITY caseIgnoreMatch<br/>
+&nbsp;<wbr>SUBSTR caseIgnoreSubstringsMatch<br/>
+&nbsp;<wbr>SYNTAX 1.3.6.1.4.1.1466.115.121.1.15<br/>
 &nbsp;<wbr>SINGLE-VALUE&nbsp;<wbr>)</dd></dl>
 <p> The sleep time before the response is actually returned to the client:</p>
 <dl>
-<dd>( 1.3.6.1.4.1.4203.666.11.4.1.4<br />
-&nbsp;<wbr>NAME&nbsp;<wbr>(&nbsp;<wbr>&#8216;errSleepTime&#8217;&nbsp;<wbr>)<br />
-&nbsp;<wbr>DESC&nbsp;<wbr>&#8216;Time to wait before returning the error&#8217;<br />
-&nbsp;<wbr>EQUALITY integerMatch<br />
-&nbsp;<wbr>SYNTAX 1.3.6.1.4.1.1466.115.121.1.27<br />
+<dd>( 1.3.6.1.4.1.4203.666.11.4.1.4<br/>
+&nbsp;<wbr>NAME&nbsp;<wbr>(&nbsp;<wbr>&#8216;errSleepTime&#8217;&nbsp;<wbr>)<br/>
+&nbsp;<wbr>DESC&nbsp;<wbr>&#8216;Time to wait before returning the error&#8217;<br/>
+&nbsp;<wbr>EQUALITY integerMatch<br/>
+&nbsp;<wbr>SYNTAX 1.3.6.1.4.1.1466.115.121.1.27<br/>
 &nbsp;<wbr>SINGLE-VALUE&nbsp;<wbr>)</dd></dl>
 <p> The matched DN returned to the client:</p>
 <dl>
-<dd>( 1.3.6.1.4.1.4203.666.11.4.1.5<br />
-&nbsp;<wbr>NAME&nbsp;<wbr>(&nbsp;<wbr>&#8216;errMatchedDN&#8217;&nbsp;<wbr>)<br />
-&nbsp;<wbr>DESC&nbsp;<wbr>&#8216;Value to be returned as matched DN&#8217;<br />
-&nbsp;<wbr>EQUALITY distinguishedNameMatch<br />
-&nbsp;<wbr>SYNTAX 1.3.6.1.4.1.1466.115.121.1.12<br />
+<dd>( 1.3.6.1.4.1.4203.666.11.4.1.5<br/>
+&nbsp;<wbr>NAME&nbsp;<wbr>(&nbsp;<wbr>&#8216;errMatchedDN&#8217;&nbsp;<wbr>)<br/>
+&nbsp;<wbr>DESC&nbsp;<wbr>&#8216;Value to be returned as matched DN&#8217;<br/>
+&nbsp;<wbr>EQUALITY distinguishedNameMatch<br/>
+&nbsp;<wbr>SYNTAX 1.3.6.1.4.1.1466.115.121.1.12<br/>
 &nbsp;<wbr>SINGLE-VALUE&nbsp;<wbr>)</dd></dl>
 <p> The OID to be returned as extended response OID in RFC 4511 unsolicited responses (&quot;0&quot; generates a regular response with msgid set to 0):</p>
 <dl>
-<dd>( 1.3.6.1.4.1.4203.666.11.4.1.6<br />
-&nbsp;<wbr>NAME&nbsp;<wbr>(&nbsp;<wbr>&#8216;errUnsolicitedOID&#8217;&nbsp;<wbr>)<br />
-&nbsp;<wbr>DESC&nbsp;<wbr>&#8216;OID to be returned within unsolicited response&#8217;<br />
-&nbsp;<wbr>EQUALITY objectIdentifierMatch<br />
-&nbsp;<wbr>SYNTAX 1.3.6.1.4.1.1466.115.121.1.38<br />
+<dd>( 1.3.6.1.4.1.4203.666.11.4.1.6<br/>
+&nbsp;<wbr>NAME&nbsp;<wbr>(&nbsp;<wbr>&#8216;errUnsolicitedOID&#8217;&nbsp;<wbr>)<br/>
+&nbsp;<wbr>DESC&nbsp;<wbr>&#8216;OID to be returned within unsolicited response&#8217;<br/>
+&nbsp;<wbr>EQUALITY objectIdentifierMatch<br/>
+&nbsp;<wbr>SYNTAX 1.3.6.1.4.1.1466.115.121.1.38<br/>
 &nbsp;<wbr>SINGLE-VALUE&nbsp;<wbr>)</dd></dl>
 <p> The octet string to be returned as extended response data in RFC 4511 unsolicited response:</p>
 <dl>
-<dd>( 1.3.6.1.4.1.4203.666.11.4.1.7<br />
-&nbsp;<wbr>NAME&nbsp;<wbr>(&nbsp;<wbr>&#8216;errUnsolicitedData&#8217;&nbsp;<wbr>)<br />
-&nbsp;<wbr>DESC&nbsp;<wbr>&#8216;Data to be returned within unsolicited response&#8217;<br />
-&nbsp;<wbr>SYNTAX 1.3.6.1.4.1.1466.115.121.1.40<br />
+<dd>( 1.3.6.1.4.1.4203.666.11.4.1.7<br/>
+&nbsp;<wbr>NAME&nbsp;<wbr>(&nbsp;<wbr>&#8216;errUnsolicitedData&#8217;&nbsp;<wbr>)<br/>
+&nbsp;<wbr>DESC&nbsp;<wbr>&#8216;Data to be returned within unsolicited response&#8217;<br/>
+&nbsp;<wbr>SYNTAX 1.3.6.1.4.1.1466.115.121.1.40<br/>
 &nbsp;<wbr>SINGLE-VALUE&nbsp;<wbr>)</dd></dl>
 <p> If TRUE, <code><a href="/docs/linux/man/8-slapd/">slapd</a></code>(8) disconnects abruptly without notice; if FALSE, it disconnects after sending response as appropriate:</p>
 <dl>
-<dd>( 1.3.6.1.4.1.4203.666.11.4.1.8<br />
-&nbsp;<wbr>NAME&nbsp;<wbr>(&nbsp;<wbr>&#8216;errDisconnect&#8217;&nbsp;<wbr>)<br />
-&nbsp;<wbr>DESC&nbsp;<wbr>&#8216;Disconnect without notice&#8217;<br />
-&nbsp;<wbr>SYNTAX 1.3.6.1.4.1.1466.115.121.1.7<br />
+<dd>( 1.3.6.1.4.1.4203.666.11.4.1.8<br/>
+&nbsp;<wbr>NAME&nbsp;<wbr>(&nbsp;<wbr>&#8216;errDisconnect&#8217;&nbsp;<wbr>)<br/>
+&nbsp;<wbr>DESC&nbsp;<wbr>&#8216;Disconnect without notice&#8217;<br/>
+&nbsp;<wbr>SYNTAX 1.3.6.1.4.1.1466.115.121.1.7<br/>
 &nbsp;<wbr>SINGLE-VALUE&nbsp;<wbr>)</dd></dl>
 <p> The abstract class that triggers the overlay:</p>
 <dl>
-<dd>( 1.3.6.1.4.1.4203.666.11.4.3.0<br />
-&nbsp;<wbr>NAME&nbsp;<wbr>(&nbsp;<wbr>&#8216;errAbsObject&#8217;&nbsp;<wbr>)<br />
-&nbsp;<wbr>SUP top ABSTRACT<br />
-&nbsp;<wbr>MUST&nbsp;<wbr>(&nbsp;<wbr>errCode&nbsp;<wbr>)<br />
-&nbsp;<wbr>MAY&nbsp;<wbr>(&nbsp;<wbr>cn&nbsp;<wbr>$&nbsp;<wbr>description&nbsp;<wbr>$&nbsp;<wbr>errOp&nbsp;<wbr>$&nbsp;<wbr>errText&nbsp;<wbr>$&nbsp;<wbr>errSleepTime<br />
+<dd>( 1.3.6.1.4.1.4203.666.11.4.3.0<br/>
+&nbsp;<wbr>NAME&nbsp;<wbr>(&nbsp;<wbr>&#8216;errAbsObject&#8217;&nbsp;<wbr>)<br/>
+&nbsp;<wbr>SUP top ABSTRACT<br/>
+&nbsp;<wbr>MUST&nbsp;<wbr>(&nbsp;<wbr>errCode&nbsp;<wbr>)<br/>
+&nbsp;<wbr>MAY&nbsp;<wbr>(&nbsp;<wbr>cn&nbsp;<wbr>$&nbsp;<wbr>description&nbsp;<wbr>$&nbsp;<wbr>errOp&nbsp;<wbr>$&nbsp;<wbr>errText&nbsp;<wbr>$&nbsp;<wbr>errSleepTime<br/>
 &nbsp;<wbr>&nbsp;<wbr>$&nbsp;<wbr>errMatchedDN&nbsp;<wbr>)&nbsp;<wbr>)</dd></dl>
 <p> The standalone structural objectclass for specifically created data:</p>
 <dl>
-<dd>( 1.3.6.1.4.1.4203.666.11.4.3.1<br />
-&nbsp;<wbr>NAME&nbsp;<wbr>(&nbsp;<wbr>&#8216;errObject&#8217;&nbsp;<wbr>)<br />
+<dd>( 1.3.6.1.4.1.4203.666.11.4.3.1<br/>
+&nbsp;<wbr>NAME&nbsp;<wbr>(&nbsp;<wbr>&#8216;errObject&#8217;&nbsp;<wbr>)<br/>
 &nbsp;<wbr>SUP errAbsObject STRUCTURAL&nbsp;<wbr>)</dd></dl>
 <p> The auxiliary objectclass to alter the behavior of existing objects:</p>
 <dl>
-<dd>( 1.3.6.1.4.1.4203.666.11.4.3.2<br />
-&nbsp;<wbr>NAME&nbsp;<wbr>(&nbsp;<wbr>&#8216;errAuxObject&#8217;&nbsp;<wbr>)<br />
+<dd>( 1.3.6.1.4.1.4203.666.11.4.3.2<br/>
+&nbsp;<wbr>NAME&nbsp;<wbr>(&nbsp;<wbr>&#8216;errAuxObject&#8217;&nbsp;<wbr>)<br/>
 &nbsp;<wbr>SUP errAbsObject AUXILIARY&nbsp;<wbr>)</dd></dl>
 <h2>Example</h2>
 <pre><code>overlay         retcode

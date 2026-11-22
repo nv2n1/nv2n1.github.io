@@ -140,9 +140,9 @@ unfence wd</pre>
 systemctl clvmd stop
 systemctl dlm stop
 systemctl corosync stop</pre>
-<p><code>More setup information:</code><br />
- <code><a href="/docs/linux/man/8-dlm_controld/">dlm_controld</a></code>(8),<br />
- <code><a href="/docs/linux/man/8-dlm_tool/">dlm_tool</a></code>(8),<br />
- <code><a href="/docs/linux/man/5-dlm-conf/">dlm.conf</a></code>(5),<br />
- <code><a href="/docs/linux/man/8-corosync/">corosync</a></code>(8),<br />
+<p><code>More setup information:</code><br/>
+ <code><a href="/docs/linux/man/8-dlm_controld/">dlm_controld</a></code>(8),<br/>
+ <code><a href="/docs/linux/man/8-dlm_tool/">dlm_tool</a></code>(8),<br/>
+ <code><a href="/docs/linux/man/5-dlm-conf/">dlm.conf</a></code>(5),<br/>
+ <code><a href="/docs/linux/man/8-corosync/">corosync</a></code>(8),<br/>
  <code><a href="/docs/linux/man/5-corosync-conf/">corosync.conf</a></code>(5)</p>

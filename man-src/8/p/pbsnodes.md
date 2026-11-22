@@ -9,11 +9,11 @@ description: "pbsnodes – pbs node manipulation"
 
 <p>pbsnodes &#8211; pbs node manipulation</p>
 <h2>Synopsis</h2>
-<p>pbsnodes [-{a|x}] [-q] [-s server] [node|:property]<br />
- pbsnodes -l [-q] [-s server] [state] [nodename|:property &#8230;]<br />
+<p>pbsnodes [-{a|x}] [-q] [-s server] [node|:property]<br/>
+ pbsnodes -l [-q] [-s server] [state] [nodename|:property &#8230;]<br/>
  pbsnodes [-{c|d|o|r}] [-q] [-s server] [-n] [-N &quot;note&quot;] [node|:property] </p>
 <h2>Description</h2>
-<p>The <code>pbsnodes</code> command is used to mark nodes down, free or offline. It can also be used to list nodes and their state. Node information is obtained by sending a request to the PBS job server. Sets of nodes can be operated on at once by specifying a node property prefixed by a colon.<br />
+<p>The <code>pbsnodes</code> command is used to mark nodes down, free or offline. It can also be used to list nodes and their state. Node information is obtained by sending a request to the PBS job server. Sets of nodes can be operated on at once by specifying a node property prefixed by a colon.<br/>
  Nodes do not exist in a single state, but actually have a set of states. For example, a node can be simultaneously &quot;busy&quot; and &quot;offline&quot;. The &quot;free&quot; state is the absence of all other states and so is never combined with other states. </p>
 <p> In order to execute pbsnodes with other than the <code>-a</code> or <code>-l</code> options, the user must have PBS Manager or Operator privilege.</p>
 <h2>Options</h2>

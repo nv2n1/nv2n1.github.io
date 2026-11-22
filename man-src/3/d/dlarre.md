@@ -11,7 +11,7 @@ description: "dlarre.f –"
 <p> dlarre.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dlarre</code> (RANGE, N, VL, VU, IL, IU, D, E, E2, RTOL1, RTOL2, SPLTOL, NSPLIT, ISPLIT, M, W, WERR, WGAP, IBLOCK, INDEXW, GERS, PIVMIN, WORK, IWORK, INFO)<br />
+<p> subroutine <code>dlarre</code> (RANGE, N, VL, VU, IL, IU, D, E, E2, RTOL1, RTOL2, SPLTOL, NSPLIT, ISPLIT, M, W, WERR, WGAP, IBLOCK, INDEXW, GERS, PIVMIN, WORK, IWORK, INFO)<br/>
  <i></i><code>DLARRE</code> given the tridiagonal matrix T, sets small off-diagonal elements to zero and for each unreduced block Ti, finds base representations and eigenvalues.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlarre (characterRANGE, integerN, double precisionVL, double precisionVU, integerIL, integerIU, double precision, dimension( * )D, double precision, dimension( * )E, double precision, dimension( * )E2, double precisionRTOL1, double precisionRTOL2, double precisionSPLTOL, integerNSPLIT, integer, dimension( * )ISPLIT, integerM, double precision, dimension( * )W, double precision, dimension( * )WERR, double precision, dimension( * )WGAP, integer, dimension( * )IBLOCK, integer, dimension( * )INDEXW, double precision, dimension( * )GERS, double precisionPIVMIN, double precision, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>

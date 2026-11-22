@@ -18,20 +18,20 @@ description: "xrama – shows animated Ramachandran plots"
 <p> Some of the more common X command line options can be used: </p>
 <p> -bg, -fg change colors, -font fontname, changes the font.</p>
 <h2>FILES</h2>
-<p> <code>-f</code><i> traj.xtc</i> <code>Input</code><br />
+<p> <code>-f</code><i> traj.xtc</i> <code>Input</code><br/>
 &nbsp;<wbr>Trajectory: xtc trr trj gro g96 pdb cpt&nbsp;<wbr> </p>
-<p> <code>-s</code><i> topol.tpr</i> <code>Input</code><br />
+<p> <code>-s</code><i> topol.tpr</i> <code>Input</code><br/>
 &nbsp;<wbr>Run input file: tpr tpb tpa&nbsp;<wbr> </p>
 <h2>OTHER OPTIONS</h2>
-<p> <code>-[no]h</code><i>no </i><br />
+<p> <code>-[no]h</code><i>no </i><br/>
 &nbsp;<wbr>Print help info and quit </p>
-<p> <code>-nice</code><i> int</i><code> 0</code><br />
+<p> <code>-nice</code><i> int</i><code> 0</code><br/>
 &nbsp;<wbr>Set the nicelevel </p>
-<p> <code>-b</code><i> time</i><code> 0 </code><br />
+<p> <code>-b</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>First frame&nbsp;<wbr>(ps)&nbsp;<wbr>to read from trajectory </p>
-<p> <code>-e</code><i> time</i><code> 0 </code><br />
+<p> <code>-e</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>Last frame&nbsp;<wbr>(ps)&nbsp;<wbr>to read from trajectory </p>
-<p> <code>-dt</code><i> time</i><code> 0 </code><br />
+<p> <code>-dt</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>Only use frame when t MOD dt&nbsp;<wbr>=&nbsp;<wbr>first time&nbsp;<wbr>(ps) </p>
 <h2>SEE ALSO</h2>
 <p> <code>gromacs(7)</code> </p>

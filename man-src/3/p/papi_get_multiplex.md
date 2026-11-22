@@ -24,10 +24,10 @@ description: "PAPI_get_multiplex –"
 <dd><i>EventSet</i> an integer handle for a PAPI event set as created by <code>PAPI_create_eventset</code></dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>PAPI_OK</i><br />
- <i>PAPI_EINVAL</i> One or more of the arguments is invalid, or the EventSet is already multiplexed.<br />
- <i>PAPI_ENOEVST</i> The EventSet specified does not exist.<br />
- <i>PAPI_EISRUN</i> The EventSet is currently counting events.<br />
+<dd><i>PAPI_OK</i><br/>
+ <i>PAPI_EINVAL</i> One or more of the arguments is invalid, or the EventSet is already multiplexed.<br/>
+ <i>PAPI_ENOEVST</i> The EventSet specified does not exist.<br/>
+ <i>PAPI_EISRUN</i> The EventSet is currently counting events.<br/>
  <i>PAPI_ENOMEM</i> Insufficient memory to complete the operation.</dd></dl>
 <p> <code>PAPI_get_multiplex</code> tests the state of the PAPI_MULTIPLEXING flag in the specified event set, returning <i>TRUE</i> if a PAPI event set is multiplexed, or FALSE if not. </p>
 <p> <code>Example:</code></p>

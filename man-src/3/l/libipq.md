@@ -10,7 +10,7 @@ description: "libipq — iptables userspace packet queuing library."
 
 <p> libipq &#8212; iptables userspace packet queuing library. </p>
 <h2>SYNOPSIS</h2>
-<p> <code>#include &lt;<a href="file:/usr/include/linux/netfilter.h">linux/netfilter.h</a>&gt;</code><br />
+<p> <code>#include &lt;<a href="file:/usr/include/linux/netfilter.h">linux/netfilter.h</a>&gt;</code><br/>
  <code>#include &lt;<a href="file:/usr/include/libipq.h">libipq.h</a>&gt;</code></p>
 <h2>DESCRIPTION</h2>
 <p> libipq is a development library for iptables userspace packet queuing.</p>
@@ -26,21 +26,21 @@ description: "libipq — iptables userspace packet queuing library."
 <p> An application may receive and process these packets via libipq. </p>
 <h3>Libipq Overview</h3>
 <p> Libipq provides an API for communicating with ip_queue. The following is an overview of API usage, refer to individual man pages for more details on each function. </p>
-<p> <code>Initialisation</code><br />
+<p> <code>Initialisation</code><br/>
  To initialise the library, call <code>ipq_create_handle</code>(3). This will attempt to bind to the Netlink socket used by ip_queue and return an opaque context handle for subsequent library calls. </p>
-<p> <code>Setting the Queue Mode</code><br />
+<p> <code>Setting the Queue Mode</code><br/>
  <code>ipq_set_mode</code>(3) allows the application to specify whether packet metadata, or packet payloads as well as metadata are copied to userspace. It is also used to initially notify ip_queue that an application is ready to receive queue messages. </p>
-<p> <code>Receiving Packets from the Queue</code><br />
+<p> <code>Receiving Packets from the Queue</code><br/>
  <code>ipq_read</code>(3) waits for queue messages to arrive from ip_queue and copies them into a supplied buffer. Queue messages may be <i>packet messages</i> or <i>error messages.</i> </p>
 <p> The type of packet may be determined with <code>ipq_message_type</code>(3). </p>
 <p> If it&#8217;s a packet message, the metadata and optional payload may be retrieved with <code>ipq_get_packet</code>(3). </p>
 <p> To retrieve the value of an error message, use <code>ipq_get_msgerr</code>(3). </p>
-<p> <code>Issuing Verdicts on Packets</code><br />
+<p> <code>Issuing Verdicts on Packets</code><br/>
  To issue a verdict on a packet, and optionally return a modified version of the packet to the kernel, call <code>ipq_set_verdict</code>(3). </p>
-<p> <code>Error Handling</code><br />
+<p> <code>Error Handling</code><br/>
  An error string corresponding to the current value of the internal error variable <code>ipq_errno</code> may be obtained with <code>ipq_errstr</code>(3). </p>
 <p> For simple applications, calling <code>ipq_perror</code>(3) will print the same message as <code>ipq_errstr</code>(3), as well as the string corresponding to the global <code>errno</code> value (if set) to stderr. </p>
-<p> <code>Cleaning Up</code><br />
+<p> <code>Cleaning Up</code><br/>
  To free up the Netlink socket and destroy resources associated with the context handle, call <code>ipq_destroy_handle</code>(3).</p>
 <h2>SUMMARY</h2>
 <dl>

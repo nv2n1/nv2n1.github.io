@@ -57,11 +57,11 @@ description: "ldns-signzone – sign a zonefile with DNSSEC data"
 <h2>ENGINE OPTIONS</h2>
 <p> You can modify the possible engines, if supported, by setting an OpenSSL configuration file. This is done through the environment variable OPENSSL_CONF. If you use -E with a non-existent engine name, ldns-signzone will print a list of engines supported by your configuration. </p>
 <p> The key options (-k and -K) work as follows; you specify a key id, and a DNSSEC algorithm number (for instance, 5 for RSASHA1). The key id can be any of the following: </p>
-<p>&nbsp;<wbr>&lt;id&gt;<br />
-&nbsp;<wbr>&lt;slot&gt;:&lt;id&gt;<br />
-&nbsp;<wbr>id_&lt;id&gt;<br />
-&nbsp;<wbr>slot_&lt;slot&gt;-id_&lt;id&gt;<br />
-&nbsp;<wbr>label_&lt;label&gt;<br />
+<p>&nbsp;<wbr>&lt;id&gt;<br/>
+&nbsp;<wbr>&lt;slot&gt;:&lt;id&gt;<br/>
+&nbsp;<wbr>id_&lt;id&gt;<br/>
+&nbsp;<wbr>slot_&lt;slot&gt;-id_&lt;id&gt;<br/>
+&nbsp;<wbr>label_&lt;label&gt;<br/>
 &nbsp;<wbr>slot_&lt;slot&gt;-label_&lt;label&gt; </p>
 <p> Where &#8216;&lt;id&gt;&#8217; is the PKCS #11 key identifier in hexadecimal notation, &#8216;&lt;label&gt;&#8217; is the PKCS #11 human-readable label, and &#8216;&lt;slot&gt;&#8217; is the slot number where the token is present. </p>
 <p> If not already present, a DNSKEY RR is generated from the key data, and added to the zone. </p>

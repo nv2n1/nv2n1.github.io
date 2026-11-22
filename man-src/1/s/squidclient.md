@@ -89,10 +89,10 @@ Use kinit username[at] DOMAIN first to get initial TGS.- N
 <p> This program and manual was written by <i>Amos Jeffries &lt;amosjeffries [at] squid-cache.org&gt;</i> </p>
 <p> Based on original code derived from Harvest and further developed by numerous individuals from the internet community.</p>
 <h2>COPYRIGHT</h2>
-<p>&nbsp;<wbr>*&nbsp;<wbr>Copyright&nbsp;<wbr>(C)&nbsp;<wbr>1996-2016 The Squid Software Foundation and contributors<br />
-&nbsp;<wbr>*<br />
-&nbsp;<wbr>*&nbsp;<wbr>Squid software is distributed under GPLv2+&nbsp;<wbr>license and includes<br />
-&nbsp;<wbr>*&nbsp;<wbr>contributions from numerous individuals and organizations.<br />
+<p>&nbsp;<wbr>*&nbsp;<wbr>Copyright&nbsp;<wbr>(C)&nbsp;<wbr>1996-2016 The Squid Software Foundation and contributors<br/>
+&nbsp;<wbr>*<br/>
+&nbsp;<wbr>*&nbsp;<wbr>Squid software is distributed under GPLv2+&nbsp;<wbr>license and includes<br/>
+&nbsp;<wbr>*&nbsp;<wbr>contributions from numerous individuals and organizations.<br/>
 &nbsp;<wbr>*&nbsp;<wbr>Please see the COPYING and CONTRIBUTORS files for details.</p>
 <h2>QUESTIONS</h2>
 <p> Questions on the usage of this program can be sent to the <i>Squid Users mailing list</i> &lt;squid-users [at] squid-cache.org&gt;</p>

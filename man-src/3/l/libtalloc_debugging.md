@@ -36,10 +36,10 @@ talloc_free(ctx);
 results in : talloc : access after free error - first free may be at../ src / main.c : 55 Bad talloc magic value - access after free
 </code></pre>
 <p> Another example is an invalid context: </p>
-<p>talloc_set_log_stderr();<br />
-TALLOC_CTX *ctx = talloc_new(NULL);<br />
-char *str = strdup(&#8220;not a talloc context&#8221;);<br />
-talloc_steal(ctx, str);<br />
+<p>talloc_set_log_stderr();<br/>
+TALLOC_CTX *ctx = talloc_new(NULL);<br/>
+char *str = strdup(&#8220;not a talloc context&#8221;);<br/>
+talloc_steal(ctx, str);<br/>
 results in : Bad talloc magic value &#8211; unknown value</p>
 <h2>Memory usage reports</h2>
 <p> Talloc can print reports of memory usage of a specified talloc context to a file (to stdout or stderr). The report can be simple or full. The simple report provides information only about the context itself and its direct descendants. The full report goes recursively through the entire context tree. See: </p>

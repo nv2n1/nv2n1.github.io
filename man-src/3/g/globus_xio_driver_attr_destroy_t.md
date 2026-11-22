@@ -12,8 +12,8 @@ description: "Globus XIO Driver –"
 <h3>Modules</h3>
 <p> <code>Driver Programming: String options</code> </p>
 <h3>Typedefs</h3>
-<p> typedef void(* <code>globus_xio_driver_callback_t</code> )(globus_xio_operation_t op, globus_result_t result, void *user_arg)<br />
- <i>Open and Close Callback Signature. </i><br />
+<p> typedef void(* <code>globus_xio_driver_callback_t</code> )(globus_xio_operation_t op, globus_result_t result, void *user_arg)<br/>
+ <i>Open and Close Callback Signature. </i><br/>
  typedef void(* <code>globus_xio_driver_data_callback_t</code> )(globus_xio_operation_t op, globus_result_t result, globus_size_t nbytes, void *user_arg) </p>
 <p> typedef globus_result_t(* <code>globus_xio_driver_attr_init_t</code> )(void **out_driver_attr) </p>
 <p> typedef globus_result_t(* <code>globus_xio_driver_attr_copy_t</code> )(void **dst, void *src) </p>
@@ -24,26 +24,26 @@ description: "Globus XIO Driver –"
 <p> typedef globus_result_t(* <code>globus_xio_driver_server_accept_t</code> )(void *driver_server, globus_xio_operation_t op) </p>
 <p> typedef globus_result_t(* <code>globus_xio_driver_server_cntl_t</code> )(void *driver_server, int cmd, va_list ap) </p>
 <p> typedef globus_result_t(* <code>globus_xio_driver_link_destroy_t</code> )(void *driver_link) </p>
-<p> typedef globus_result_t(* <code>globus_xio_driver_transform_open_t</code> )(const globus_xio_contact_t *contact_info, void *driver_link, void *driver_attr, globus_xio_operation_t op)<br />
- <i>Open a handle. </i><br />
- typedef globus_result_t(* <code>globus_xio_driver_transport_open_t</code> )(const globus_xio_contact_t *contact_info, void *driver_link, void *driver_attr, globus_xio_operation_t op)<br />
- <i>Open a handle. </i><br />
+<p> typedef globus_result_t(* <code>globus_xio_driver_transform_open_t</code> )(const globus_xio_contact_t *contact_info, void *driver_link, void *driver_attr, globus_xio_operation_t op)<br/>
+ <i>Open a handle. </i><br/>
+ typedef globus_result_t(* <code>globus_xio_driver_transport_open_t</code> )(const globus_xio_contact_t *contact_info, void *driver_link, void *driver_attr, globus_xio_operation_t op)<br/>
+ <i>Open a handle. </i><br/>
  typedef globus_result_t(* <code>globus_xio_driver_handle_cntl_t</code> )(void *handle, int cmd, va_list ap) </p>
-<p> typedef globus_result_t(* <code>globus_xio_driver_close_t</code> )(void *driver_handle, void *driver_attr, globus_xio_operation_t op)<br />
- <i>Close a handle. </i><br />
+<p> typedef globus_result_t(* <code>globus_xio_driver_close_t</code> )(void *driver_handle, void *driver_attr, globus_xio_operation_t op)<br/>
+ <i>Close a handle. </i><br/>
  typedef globus_result_t(* <code>globus_xio_driver_read_t</code> )(void *driver_specific_handle, const globus_xio_iovec_t *iovec, int iovec_count, globus_xio_operation_t op) </p>
 <p> typedef globus_result_t(* <code>globus_xio_driver_write_t</code> )(void *driver_specific_handle, const globus_xio_iovec_t *iovec, int iovec_count, globus_xio_operation_t op) </p>
 <h3>Functions</h3>
-<p> globus_result_t <code>globus_xio_driver_set_server_pre_init</code> (globus_xio_driver_t driver, <code>globus_xio_driver_server_init_t</code> server_pre_init_func)<br />
- <i>Server Pre-Init. </i><br />
+<p> globus_result_t <code>globus_xio_driver_set_server_pre_init</code> (globus_xio_driver_t driver, <code>globus_xio_driver_server_init_t</code> server_pre_init_func)<br/>
+ <i>Server Pre-Init. </i><br/>
  globus_result_t <code>globus_xio_driver_handle_cntl</code> (globus_xio_driver_handle_t handle, globus_xio_driver_t driver, int cmd,&#8230;) </p>
 <p> void <code>globus_xio_driver_finished_accept</code> (globus_xio_operation_t op, void *driver_link, globus_result_t result) </p>
 <p> globus_result_t <code>globus_xio_driver_pass_open</code> (globus_xio_operation_t op, const globus_xio_contact_t *contact_info, <code>globus_xio_driver_callback_t</code> cb, void *user_arg) </p>
 <p> void <code>globus_xio_driver_finished_open</code> (void *driver_handle, globus_xio_operation_t op, globus_result_t result) </p>
 <p> globus_result_t <code>globus_xio_driver_operation_create</code> (globus_xio_operation_t *operation, globus_xio_driver_handle_t handle) </p>
 <p> globus_bool_t <code>globus_xio_driver_operation_is_blocking</code> (globus_xio_operation_t operation) </p>
-<p> globus_result_t <code>globus_xio_driver_pass_close</code> (globus_xio_operation_t op, <code>globus_xio_driver_callback_t</code> cb, void *callback_arg)<br />
- <i>Pass the close operation down the driver stack. </i><br />
+<p> globus_result_t <code>globus_xio_driver_pass_close</code> (globus_xio_operation_t op, <code>globus_xio_driver_callback_t</code> cb, void *callback_arg)<br/>
+ <i>Pass the close operation down the driver stack. </i><br/>
  void <code>globus_xio_driver_finished_close</code> (globus_xio_operation_t op, globus_result_t result) </p>
 <p> globus_result_t <code>globus_xio_driver_pass_read</code> (globus_xio_operation_t op, globus_xio_iovec_t *iovec, int iovec_count, globus_size_t wait_for, <code>globus_xio_driver_data_callback_t</code> cb, void *user_arg) </p>
 <p> void <code>globus_xio_driver_finished_read</code> (globus_xio_operation_t op, globus_result_t result, globus_size_t nread) </p>
@@ -119,8 +119,8 @@ description: "Globus XIO Driver –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>driver_attr</i> The driver specific attr, created by globus_xio_driver_attr_init_t.<br />
- <i>cmd</i> An integer representing what functionality the user is requesting.<br />
+</dt><dd> <i>driver_attr</i> The driver specific attr, created by globus_xio_driver_attr_init_t.<br/>
+ <i>cmd</i> An integer representing what functionality the user is requesting.<br/>
  <i>ap</i> variable arguments. These are determined by the driver and the value of cmd.</dd></dl>
 <h3>typedef globus_result_t(* globus_xio_driver_attr_copy_t)(void **dst, void *src)</h3>
 <p> Copy a driver attr. </p>
@@ -136,8 +136,8 @@ description: "Globus XIO Driver –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>op</i> The operation structure associated with the open or the close requested operation. The driver should call the appropriate finished operation to clean up this structure.<br />
- <i>result</i> The result of the requested data operation<br />
+</dt><dd> <i>op</i> The operation structure associated with the open or the close requested operation. The driver should call the appropriate finished operation to clean up this structure.<br/>
+ <i>result</i> The result of the requested data operation<br/>
  <i>user_arg</i> The user pointer that is threaded through to the callback.</dd></dl>
 <h3>typedef globus_result_t(* globus_xio_driver_close_t)(void *driver_handle, void *driver_attr, globus_xio_operation_t op)</h3>
 <p> Close a handle. This closes a handle. Driver implementations should pass the close to the other drivers in the stack by calling globus_xio_pass_close(). </p>
@@ -145,8 +145,8 @@ description: "Globus XIO Driver –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>driver_specific_handle</i> The driver handle to be closed.<br />
- <i>driver_attr</i> A driver specific attr which may be used to alter how a close is performed (e.g. caching drivers)<br />
+</dt><dd> <i>driver_specific_handle</i> The driver handle to be closed.<br/>
+ <i>driver_attr</i> A driver specific attr which may be used to alter how a close is performed (e.g. caching drivers)<br/>
  <i>op</i> The open operation. When the driver is finished opening the handle, it passes this to <code>globus_xio_driver_finished_close()</code> to return status up the driver stack to the application.</dd></dl>
 <h3>typedef void(* globus_xio_driver_data_callback_t)(globus_xio_operation_t op, globus_result_t result, globus_size_t nbytes, void *user_arg)</h3>
 <p> Data Callback interface </p>
@@ -154,9 +154,9 @@ description: "Globus XIO Driver –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>op</i> The operation structure associated with the read or write operation request. The driver should call the appropriate finished operation when it receives this operation.<br />
- <i>result</i> The result of the requested data operation<br />
- <i>nbytes</i> the number of bytes read or written<br />
+</dt><dd> <i>op</i> The operation structure associated with the read or write operation request. The driver should call the appropriate finished operation when it receives this operation.<br/>
+ <i>result</i> The result of the requested data operation<br/>
+ <i>nbytes</i> the number of bytes read or written<br/>
  <i>user_arg</i> The user pointer that is threaded through to the callback.</dd></dl>
 <h3>typedef globus_result_t(* globus_xio_driver_handle_cntl_t)(void *handle, int cmd, va_list ap)</h3>
 <p> this call <i>must</i> return an GLOBUS_XIO_ERROR_COMMAND error for unsupported command numbers. (use GlobusXIOErrorInvalidCommand(cmd)) </p>
@@ -174,9 +174,9 @@ description: "Globus XIO Driver –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>driver_handle</i> The driver handle from which data should be read.<br />
- <i>iovec</i> An io vector pointing to the buffers to be read into.<br />
- <i>iovec_count</i> The number if entries in the io vector.<br />
+</dt><dd> <i>driver_handle</i> The driver handle from which data should be read.<br/>
+ <i>iovec</i> An io vector pointing to the buffers to be read into.<br/>
+ <i>iovec_count</i> The number if entries in the io vector.<br/>
  <i>op</i> The requested operation. When the driver is finished fulfilling the requested read operation it must use this structure to signal globus_xio that the operation is completed. This is done by calling globus_xio_driver_finished_operation().</dd></dl>
 <h3>typedef globus_result_t(* globus_xio_driver_server_accept_t)(void *driver_server, globus_xio_operation_t op)</h3>
 <p> Accept a server connection </p>
@@ -184,7 +184,7 @@ description: "Globus XIO Driver –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>driver_server</i> The server object from which the link connection will be accepted.<br />
+</dt><dd> <i>driver_server</i> The server object from which the link connection will be accepted.<br/>
  <i>op</i> The requested operation. When the driver is finished accepting the server connection it uses this structure to signal globus_xio that it has completed the operation.</dd></dl>
 <h3>typedef globus_result_t(* globus_xio_driver_server_cntl_t)(void *driver_server, int cmd, va_list ap)</h3>
 <p> Query a server for information. </p>
@@ -192,8 +192,8 @@ description: "Globus XIO Driver –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>driver_server</i> the server handle.<br />
- <i>cmd</i> An integer telling the driver what operation to preform on this server handle.<br />
+</dt><dd> <i>driver_server</i> the server handle.<br/>
+ <i>cmd</i> An integer telling the driver what operation to preform on this server handle.<br/>
  <i>ap</i> variable args.</dd></dl>
 <h3>typedef globus_result_t(* globus_xio_driver_server_destroy_t)(void *driver_server)</h3>
 <p> destroy a server. </p>
@@ -201,7 +201,7 @@ description: "Globus XIO Driver –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>server</i> The server that the driver should clean up.<br />
+</dt><dd> <i>server</i> The server that the driver should clean up.<br/>
  <i>driver_server</i> The reference to the internal server that is being declared invalid with this function call.</dd></dl>
 <h3>typedef globus_result_t(* globus_xio_driver_server_init_t)(void *driver_attr, const globus_xio_contact_t *contact_info, globus_xio_operation_t op)</h3>
 <p> Initialize a server object </p>
@@ -209,8 +209,8 @@ description: "Globus XIO Driver –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>driver_attr</i> A driver-specific attribute. This may be NULL.<br />
- <i>contact_info</i> Contact information from the stack below this driver. This is NULL for the transport driver.<br />
+</dt><dd> <i>driver_attr</i> A driver-specific attribute. This may be NULL.<br/>
+ <i>contact_info</i> Contact information from the stack below this driver. This is NULL for the transport driver.<br/>
  <i>op</i> An op which must be passed to globus_xio_driver_pass_server_init() to pass the server contact information up the XIO driver stack.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -221,18 +221,18 @@ description: "Globus XIO Driver –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>contact_info</i> Contains information about the requested resource. Its members may all be null (especially when link is not null). XIO will destroy this contact info upon return from the interface function<br />
- <i>driver_link</i> Comes from server accept. Used to link an accepted connection to an xio handle. XIO will destroy this object upon the return of this interface call.<br />
- <i>driver_attr</i> A attribute describing how to open. This points to a piece of memory created by the globus_xio_driver_attr_init_t interface function.<br />
+</dt><dd> <i>contact_info</i> Contains information about the requested resource. Its members may all be null (especially when link is not null). XIO will destroy this contact info upon return from the interface function<br/>
+ <i>driver_link</i> Comes from server accept. Used to link an accepted connection to an xio handle. XIO will destroy this object upon the return of this interface call.<br/>
+ <i>driver_attr</i> A attribute describing how to open. This points to a piece of memory created by the globus_xio_driver_attr_init_t interface function.<br/>
  <i>op</i> The open operation. When the driver is finished opening the handle, it passes this to <code>globus_xio_driver_finished_open()</code> to return status up the driver stack to the application.</dd></dl>
 <h3>typedef globus_result_t(* globus_xio_driver_transport_open_t)(const globus_xio_contact_t *contact_info, void *driver_link, void *driver_attr, globus_xio_operation_t op)</h3>
 <p> Open a handle. This is called when a user opens a handle. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>contact_info</i> Contains information about the requested resource. Its members may all be null (especially when link is not null). XIO will destroy this contact info upon return from the interface function<br />
- <i>driver_link</i> Comes from server accept. Used to link an accepted connection to an xio handle. XIO will destroy this object upon the return of this interface call.<br />
- <i>driver_attr</i> A attribute describing how to open. This points to a piece of memory created by the globus_xio_driver_attr_init_t interface function.<br />
+</dt><dd> <i>contact_info</i> Contains information about the requested resource. Its members may all be null (especially when link is not null). XIO will destroy this contact info upon return from the interface function<br/>
+ <i>driver_link</i> Comes from server accept. Used to link an accepted connection to an xio handle. XIO will destroy this object upon the return of this interface call.<br/>
+ <i>driver_attr</i> A attribute describing how to open. This points to a piece of memory created by the globus_xio_driver_attr_init_t interface function.<br/>
  <i>op</i> The open operation. When the driver is finished opening the handle, it passes this to <code>globus_xio_driver_finished_open()</code> to return status up the driver stack to the application.</dd></dl>
 <h3>typedef globus_result_t(* globus_xio_driver_write_t)(void *driver_specific_handle, const globus_xio_iovec_t *iovec, int iovec_count, globus_xio_operation_t op)</h3>
 <p> Write data from an open handle. </p>
@@ -240,9 +240,9 @@ description: "Globus XIO Driver –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>driver_handle</i> The driver handle to which data should be written.<br />
- <i>iovec</i> An io vector pointing to the buffers to be written.<br />
- <i>iovec_count</i> The number if entries in the io vector.<br />
+</dt><dd> <i>driver_handle</i> The driver handle to which data should be written.<br/>
+ <i>iovec</i> An io vector pointing to the buffers to be written.<br/>
+ <i>iovec_count</i> The number if entries in the io vector.<br/>
  <i>op</i> The requested operation. When the driver is finished fulfilling the requested read operation it must use this structure to signal globus_xio that the operation is completed. This is done by calling globus_xio_driver_finished_operation().</dd></dl>
 <h2>Function Documentation</h2>
 <h3>globus_bool_t globus_xio_driver_eof_received (globus_xio_operation_top)</h3>
@@ -264,8 +264,8 @@ description: "Globus XIO Driver –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>op</i> The requested accept operation that has completed.<br />
- <i>driver_link</i> This is the initialized driver link that is that will be passed to the open interface when this handle is opened.<br />
+</dt><dd> <i>op</i> The requested accept operation that has completed.<br/>
+ <i>driver_link</i> This is the initialized driver link that is that will be passed to the open interface when this handle is opened.<br/>
  <i>result</i> Return status of the completed operation</dd></dl>
 <h3>void globus_xio_driver_finished_close (globus_xio_operation_top, globus_result_tresult)</h3>
 <p> Driver API finished_close </p>
@@ -273,7 +273,7 @@ description: "Globus XIO Driver –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>op</i> The close operation that has completed.<br />
+</dt><dd> <i>op</i> The close operation that has completed.<br/>
  <i>result</i> Return status of the completed operation</dd></dl>
 <h3>void globus_xio_driver_finished_open (void *driver_handle, globus_xio_operation_top, globus_result_tresult)</h3>
 <p> Driver API finished open </p>
@@ -281,8 +281,8 @@ description: "Globus XIO Driver –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>driver_handle</i> The driver specific handle pointer that will be passed to future interface function calls.<br />
- <i>op</i> The requested open operation that has completed.<br />
+</dt><dd> <i>driver_handle</i> The driver specific handle pointer that will be passed to future interface function calls.<br/>
+ <i>op</i> The requested open operation that has completed.<br/>
  <i>result</i> Return status of the completed operation</dd></dl>
 <h3>void globus_xio_driver_finished_read (globus_xio_operation_top, globus_result_tresult, globus_size_tnread)</h3>
 <p> Finished Read </p>
@@ -290,8 +290,8 @@ description: "Globus XIO Driver –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>op</i> The operation structure representing the requested read operation.<br />
- <i>result</i> Return status of the completed operation<br />
+</dt><dd> <i>op</i> The operation structure representing the requested read operation.<br/>
+ <i>result</i> Return status of the completed operation<br/>
  <i>nread</i> The number of bytes read</dd></dl>
 <h3>void globus_xio_driver_finished_write (globus_xio_operation_top, globus_result_tresult, globus_size_tnwritten)</h3>
 <p> Finished Write </p>
@@ -299,8 +299,8 @@ description: "Globus XIO Driver –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>op</i> The operation structure representing the requested write operation.<br />
- <i>result</i> Return status of the completed operation<br />
+</dt><dd> <i>op</i> The operation structure representing the requested write operation.<br/>
+ <i>result</i> Return status of the completed operation<br/>
  <i>nwritten</i> The number of bytes written</dd></dl>
 <h3>globus_result_t globus_xio_driver_handle_cntl (globus_xio_driver_handle_thandle, globus_xio_driver_tdriver, intcmd, &#8230;)</h3>
 <p> Touch driver specific information in a handle object. </p>
@@ -311,7 +311,7 @@ description: "Globus XIO Driver –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>top_op</i> The operation that has seen the top part of the driver stack.<br />
+</dt><dd> <i>top_op</i> The operation that has seen the top part of the driver stack.<br/>
  <i>bottom_op</i> The operation that has seen the bottom part of the driver stack.</dd></dl>
 <p> (result is always success in this case. if there is an error, use the other finish() call)</p>
 <h3>globus_result_t globus_xio_driver_operation_create (globus_xio_operation_t *operation, globus_xio_driver_handle_thandle)</h3>
@@ -320,7 +320,7 @@ description: "Globus XIO Driver –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>operation</i> The operation to be created. When this function returns this structure will be populated and available for use for the driver.<br />
+</dt><dd> <i>operation</i> The operation to be created. When this function returns this structure will be populated and available for use for the driver.<br/>
  <i>handle</i> The initialized handle representing the user handle from which the operation will be created.</dd></dl>
 <h3>globus_bool_t globus_xio_driver_operation_is_blocking (globus_xio_operation_toperation)</h3>
 <p> Is Operation blocking. </p>
@@ -330,8 +330,8 @@ description: "Globus XIO Driver –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>op</i> The close operation.<br />
- <i>cb</i> A pointer to the function to be called once all drivers lower in the stack have closed.<br />
+</dt><dd> <i>op</i> The close operation.<br/>
+ <i>cb</i> A pointer to the function to be called once all drivers lower in the stack have closed.<br/>
  <i>callback_arg</i> A pointer that will be passed to the callback.</dd></dl>
 <h3>globus_result_t globus_xio_driver_pass_open (globus_xio_operation_top, const globus_xio_contact_t *contact_info, <code>globus_xio_driver_callback_t</code>cb, void *user_arg)</h3>
 <p> Driver API Open </p>
@@ -340,9 +340,9 @@ description: "Globus XIO Driver –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>op</i> The operation from which the handle will be established. This parameter is used to determine what drivers are in the stack and other such information.<br />
- <i>contact_info</i> The contact info describing the resource the driver below should open. This will normally be the same contact info that was passed in on the open interface.<br />
- <i>cb</i> The function to be called when the open operation is complete.<br />
+</dt><dd> <i>op</i> The operation from which the handle will be established. This parameter is used to determine what drivers are in the stack and other such information.<br/>
+ <i>contact_info</i> The contact info describing the resource the driver below should open. This will normally be the same contact info that was passed in on the open interface.<br/>
+ <i>cb</i> The function to be called when the open operation is complete.<br/>
  <i>user_arg</i> a user pointer that will be threaded through to the callback.</dd></dl>
 <h3>globus_result_t globus_xio_driver_pass_read (globus_xio_operation_top, globus_xio_iovec_t *iovec, intiovec_count, globus_size_twait_for, <code>globus_xio_driver_data_callback_t</code>cb, void *user_arg)</h3>
 <p> Driver read </p>
@@ -350,11 +350,11 @@ description: "Globus XIO Driver –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>op</i> The operation structure representing this requested io operation.<br />
- <i>iovec</i> A pointer to the array of iovecs.<br />
- <i>iovec_count</i> The number of iovecs in the array.<br />
- <i>wait_for</i> The minimum number of bytes to read before returning. if a driver has no specifc requirement, he should use the user&#8217;s request available via GlobusXIOOperationMinimumRead(op)<br />
- <i>cb</i> The function to be called when the operation request is completed.<br />
+</dt><dd> <i>op</i> The operation structure representing this requested io operation.<br/>
+ <i>iovec</i> A pointer to the array of iovecs.<br/>
+ <i>iovec_count</i> The number of iovecs in the array.<br/>
+ <i>wait_for</i> The minimum number of bytes to read before returning. if a driver has no specifc requirement, he should use the user&#8217;s request available via GlobusXIOOperationMinimumRead(op)<br/>
+ <i>cb</i> The function to be called when the operation request is completed.<br/>
  <i>user_arg</i> A user pointer that will be threaded through to the callback.</dd></dl>
 <h3>globus_result_t globus_xio_driver_pass_write (globus_xio_operation_top, globus_xio_iovec_t *iovec, intiovec_count, globus_size_twait_for, <code>globus_xio_driver_data_callback_t</code>cb, void *user_arg)</h3>
 <p> Driver write </p>
@@ -362,11 +362,11 @@ description: "Globus XIO Driver –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>op</i> The operation structure representing this requested io operation.<br />
- <i>iovec</i> A pointer to the array of iovecs.<br />
- <i>iovec_count</i> The number of iovecs in the array.<br />
- <i>wait_for</i> The minimum number of bytes to write before returning. If a driver has no specific requirement, he should use the user&#8217;s request available via GlobusXIOOperationMinimumWrite(op)<br />
- <i>cb</i> The function to be called when the operation request is completed.<br />
+</dt><dd> <i>op</i> The operation structure representing this requested io operation.<br/>
+ <i>iovec</i> A pointer to the array of iovecs.<br/>
+ <i>iovec_count</i> The number of iovecs in the array.<br/>
+ <i>wait_for</i> The minimum number of bytes to write before returning. If a driver has no specific requirement, he should use the user&#8217;s request available via GlobusXIOOperationMinimumWrite(op)<br/>
+ <i>cb</i> The function to be called when the operation request is completed.<br/>
  <i>user_arg</i> A user pointer that will be threaded through to the callback.</dd></dl>
 <h3>void globus_xio_driver_set_eof_received (globus_xio_operation_top)</h3>
 <p> EOF state manipulation </p>
@@ -383,12 +383,12 @@ description: "Globus XIO Driver –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>driver</i> Driver to associate the function with<br />
+</dt><dd> <i>driver</i> Driver to associate the function with<br/>
  <i>server_pre_init_func</i> Function to call prior to creating a server</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>GLOBUS_SUCCESS</i> Success<br />
+</dt><dd> <i>GLOBUS_SUCCESS</i> Success<br/>
  <i>GLOBUS_XIO_ERROR_PARAMETER</i> Invalid parameter</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_xio from the source code. </p>

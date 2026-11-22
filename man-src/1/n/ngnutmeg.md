@@ -12,7 +12,7 @@ description: "ngnutmeg – ngspice post-processor"
 <h2>SYNOPSIS</h2>
 <p> <code>ngnutmeg</code> [<i>options</i>] [<i>datafile</i> &#8230;]</p>
 <h2>DESCRIPTION</h2>
-<p> This man page is just a small overview. The primary documentation of ngspice is in the ngspice] User&#8217;s Manual, which is available as a pdf file.<br />
+<p> This man page is just a small overview. The primary documentation of ngspice is in the ngspice] User&#8217;s Manual, which is available as a pdf file.<br/>
  <code>ngnutmeg</code> is a post processor for ngspice] &#8211; it takes the raw output file created by <code>ngspice -r</code> and plots the data on a graphics terminal or a workstation display. Note that the raw output file is different from the data that ngspice] writes to the standard output.</p>
 <h2>OPTIONS</h2>
 <dl>
@@ -35,11 +35,11 @@ description: "ngnutmeg – ngspice post-processor"
 <h2>FILES</h2>
 <p> See <a href="/docs/linux/man/1-ngspice/">ngspice</a>(1)</p>
 <h2>SEE ALSO</h2>
-<p> sconvert(1), <a href="/docs/linux/man/1-ngspice/">ngspice</a>(1), mfb(3), writedata(3), and<br />
+<p> sconvert(1), <a href="/docs/linux/man/1-ngspice/">ngspice</a>(1), mfb(3), writedata(3), and<br/>
  ngspice] User&#8217;s Manual at <code><a rel="nofollow" href="http://ngspice.sourceforge.net/docs.html">http://ngspice.sourceforge.net/docs.html</a></code></p>
 <h2>BUGS</h2>
-<p> Please report bugs to the ngspice project via<br />
+<p> Please report bugs to the ngspice project via<br/>
  <code><a rel="nofollow" href="http://ngspice.sourceforge.net/bugrep.html">http://ngspice.sourceforge.net/bugrep.html</a></code></p>
 <h2>AUTHOR</h2>
-<p> Wayne Christopher (faustus [at] cad.berkeley.edu)<br />
+<p> Wayne Christopher (faustus [at] cad.berkeley.edu)<br/>
  <code>ngspice</code>: various authors (see <code><a rel="nofollow" href="http://sourceforge.net/projects/ngspice/">http://sourceforge.net/projects/ngspice/</a></code>) </p>

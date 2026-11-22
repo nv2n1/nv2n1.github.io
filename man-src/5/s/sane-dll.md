@@ -18,25 +18,25 @@ description: "sane-dll – SANE dynamic backend loader"
 <h2>Configuration</h2>
 <p>The contents of the <i>dll.conf</i> file is a list of backend names that may be loaded dynamically upon demand. Empty lines are ignored, also everything after a hash mark (#). A sample configuration file is shown below: </p>
 <dl>
-<dd>net<br />
- # this is a comment<br />
- pnm<br />
+<dd>net<br/>
+ # this is a comment<br/>
+ pnm<br/>
  mustek</dd></dl>
 <p> It is also possible to add a file in <i>/etc/sane.d/dll.d</i> that contains the list of backends to be added. Backends mentioned in a file included in this directory will be added before any backends listed in <i>dll.conf.</i> Files in <i>/etc/sane.d/dll.d</i> can be freely named. They shall follow the format conventions as apply for <i>dll.conf.</i> </p>
 <p> Note that backends that were pre-loaded when building this library do not have to be listed in this configuration file. That is, if a backend was preloaded, then that backend will always be present, regardless of whether it&#8217;s listed in the configuration file or not. </p>
 <p> The list of preloaded backends is determined by macro <code>PRELOADABLE_BACKENDS</code> in file backend/Makefile.in of the SANE source code distribution. After changing the value of this macro, it is necessary to reconfigure, rebuild, and reinstall SANE for the change to take effect. </p>
 <p> Aliases are defined in the config file <i>dll.aliases</i>. It can contain entries of the form </p>
 <dl>
-<dd>alias SomeName SaneDeviceName<br />
- alias &quot;Some Name&quot; SaneDeviceName<br />
+<dd>alias SomeName SaneDeviceName<br/>
+ alias &quot;Some Name&quot; SaneDeviceName<br/>
  hide SaneDeviceName</dd></dl>
 <p> For example: </p>
 <dl>
-<dd>alias Epson net:somehost:epson:/dev/sgX<br />
- alias &quot;Siemens ST400&quot; st400:/dev/sgY<br />
- hide net:somehost:pnm:0<br />
- hide net:somehost:pnm:1<br />
- alias &quot;Read from file&quot; pnm:0<br />
+<dd>alias Epson net:somehost:epson:/dev/sgX<br/>
+ alias &quot;Siemens ST400&quot; st400:/dev/sgY<br/>
+ hide net:somehost:pnm:0<br/>
+ hide net:somehost:pnm:1<br/>
+ alias &quot;Read from file&quot; pnm:0<br/>
  hide pnm:1</dd></dl>
 <p> Aliased device names are automatically hidden. </p>
 <p> The idea is that users don&#8217;t have to deal with complicated device names (especially for networked devices), and to hide other exported devices which might confuse them. Note that a hidden device can still be accessed if the device name is known, it just doesn&#8217;t appear on the list.</p>

@@ -11,7 +11,7 @@ description: "dla_geamv.f –"
 <p> dla_geamv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dla_geamv</code> (TRANS, M, N, ALPHA, A, LDA, X, INCX, BETA, Y, INCY)<br />
+<p> subroutine <code>dla_geamv</code> (TRANS, M, N, ALPHA, A, LDA, X, INCX, BETA, Y, INCY)<br/>
  <i></i><code>DLA_GEAMV</code> computes a matrix-vector product using a general matrix to calculate error bounds.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dla_geamv (integerTRANS, integerM, integerN, double precisionALPHA, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( * )X, integerINCX, double precisionBETA, double precision, dimension( * )Y, integerINCY)</h3>

@@ -10,11 +10,11 @@ description: "ql/experimental/finitedifferences/fdhestonbarrierengine.hpp – Fi
 
 <p> ql/experimental/finitedifferences/fdhestonbarrierengine.hpp &#8211; Finite-Differences Heston barrier option engine. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/experimental/finitedifferences/dividendbarrieroption.hpp&gt;<br />
- #include &lt;ql/models/equity/hestonmodel.hpp&gt;<br />
+<p> #include &lt;ql/experimental/finitedifferences/dividendbarrieroption.hpp&gt;<br/>
+ #include &lt;ql/models/equity/hestonmodel.hpp&gt;<br/>
  #include &lt;ql/pricingengines/genericmodelengine.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>FdHestonBarrierEngine</code><br />
+<p> class <code>FdHestonBarrierEngine</code><br/>
  <i>Finite-Differences Heston </i><code>Barrier</code> <code>Option</code> engine.</p>
 <h2>Detailed Description</h2>
 <p> Finite-Differences Heston barrier option engine. </p>

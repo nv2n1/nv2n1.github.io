@@ -20,12 +20,12 @@ XFRM-OBJECT { COMMAND |
 XFRM-OBJECT :=
 state | policy | monitor
 </code></pre>
-<p> <code>ip xfrm state</code> { <code>add</code> | <code>update</code> } <i>ID</i> [ <i>ALGO-LIST</i> ] [ <code>mode</code> <i>MODE</i> ] [ <code>mark</code> <i>MARK</i> [ <code>mask</code> <i>MASK</i> ] ] [ <code>reqid</code> <i>REQID</i> ] [ <code>seq</code> <i>SEQ</i> ] [ <code>replay-window</code> <i>SIZE</i> ] [ <code>replay-seq</code> <i>SEQ</i> ] [ <code>replay-oseq</code> <i>SEQ</i> ] [ <code>replay-seq-hi</code> <i>SEQ</i> ] [ <code>replay-oseq-hi</code> <i>SEQ</i> ] [ <code>flag</code> <i>FLAG-LIST</i> ] [ <code>sel</code> <i>SELECTOR</i> ] [ <i>LIMIT-LIST</i> ] [ <code>encap</code> <i>ENCAP</i> ] [ <code>coa</code> <i>ADDR</i>[/<i>PLEN</i>] ] [ <code>ctx</code> <i>CTX</i> ] [ <code>extra-flag</code> <i>EXTRA-FLAG-LIST</i> ] [ <code>output-mark</code> <i>OUTPUT-MARK</i> [ <code>mask</code> <i>MASK</i> ] ] [ <code>if_id</code> <i>IF-ID</i> ] [ <code>tfcpad</code> <i>LENGTH</i> ]<br />
- <code>ip xfrm state allocspi</code> <i>ID</i> [ <code>mode</code> <i>MODE</i> ] [ <code>mark</code> <i>MARK</i> [ <code>mask</code> <i>MASK</i> ] ] [ <code>reqid</code> <i>REQID</i> ] [ <code>seq</code> <i>SEQ</i> ] [ <code>min</code> <i>SPI</i> <code>max</code> <i>SPI</i> ]<br />
- <code>ip xfrm state</code> { <code>delete</code> | <code>get</code> } <i>ID</i> [ <code>mark</code> <i>MARK</i> [ <code>mask</code> <i>MASK</i> ] ]<br />
- <code>ip</code> [ <code>-4</code> | <code>-6</code> ] <code>xfrm state deleteall</code> [ <i>ID</i> ] [ <code>mode</code> <i>MODE</i> ] [ <code>reqid</code> <i>REQID</i> ] [ <code>flag</code> <i>FLAG-LIST</i> ]<br />
- <code>ip</code> [ <code>-4</code> | <code>-6</code> ] <code>xfrm state list</code> [ <i>ID</i> ] [ <code>nokeys</code> ] [ <code>mode</code> <i>MODE</i> ] [ <code>reqid</code> <i>REQID</i> ] [ <code>flag</code> <i>FLAG-LIST</i> ]<br />
- <code>ip xfrm state flush</code> [ <code>proto</code> <i>XFRM-PROTO</i> ]<br />
+<p> <code>ip xfrm state</code> { <code>add</code> | <code>update</code> } <i>ID</i> [ <i>ALGO-LIST</i> ] [ <code>mode</code> <i>MODE</i> ] [ <code>mark</code> <i>MARK</i> [ <code>mask</code> <i>MASK</i> ] ] [ <code>reqid</code> <i>REQID</i> ] [ <code>seq</code> <i>SEQ</i> ] [ <code>replay-window</code> <i>SIZE</i> ] [ <code>replay-seq</code> <i>SEQ</i> ] [ <code>replay-oseq</code> <i>SEQ</i> ] [ <code>replay-seq-hi</code> <i>SEQ</i> ] [ <code>replay-oseq-hi</code> <i>SEQ</i> ] [ <code>flag</code> <i>FLAG-LIST</i> ] [ <code>sel</code> <i>SELECTOR</i> ] [ <i>LIMIT-LIST</i> ] [ <code>encap</code> <i>ENCAP</i> ] [ <code>coa</code> <i>ADDR</i>[/<i>PLEN</i>] ] [ <code>ctx</code> <i>CTX</i> ] [ <code>extra-flag</code> <i>EXTRA-FLAG-LIST</i> ] [ <code>output-mark</code> <i>OUTPUT-MARK</i> [ <code>mask</code> <i>MASK</i> ] ] [ <code>if_id</code> <i>IF-ID</i> ] [ <code>tfcpad</code> <i>LENGTH</i> ]<br/>
+ <code>ip xfrm state allocspi</code> <i>ID</i> [ <code>mode</code> <i>MODE</i> ] [ <code>mark</code> <i>MARK</i> [ <code>mask</code> <i>MASK</i> ] ] [ <code>reqid</code> <i>REQID</i> ] [ <code>seq</code> <i>SEQ</i> ] [ <code>min</code> <i>SPI</i> <code>max</code> <i>SPI</i> ]<br/>
+ <code>ip xfrm state</code> { <code>delete</code> | <code>get</code> } <i>ID</i> [ <code>mark</code> <i>MARK</i> [ <code>mask</code> <i>MASK</i> ] ]<br/>
+ <code>ip</code> [ <code>-4</code> | <code>-6</code> ] <code>xfrm state deleteall</code> [ <i>ID</i> ] [ <code>mode</code> <i>MODE</i> ] [ <code>reqid</code> <i>REQID</i> ] [ <code>flag</code> <i>FLAG-LIST</i> ]<br/>
+ <code>ip</code> [ <code>-4</code> | <code>-6</code> ] <code>xfrm state list</code> [ <i>ID</i> ] [ <code>nokeys</code> ] [ <code>mode</code> <i>MODE</i> ] [ <code>reqid</code> <i>REQID</i> ] [ <code>flag</code> <i>FLAG-LIST</i> ]<br/>
+ <code>ip xfrm state flush</code> [ <code>proto</code> <i>XFRM-PROTO</i> ]<br/>
  <code>ip xfrm state count</code> ID :=</p>
 <p>[ src</p>
 <p>ADDR ]</p>
@@ -34,10 +34,10 @@ state | policy | monitor
 <p>[ proto</p>
 <p>XFRM-PROTO ]</p>
 <p>[ spi</p>
-<p>SPI ]<br />
+<p>SPI ]<br/>
 XFRM-PROTO :=</p>
-<p>esp | ah | comp | route2 | hao<br />
-ALGO-LIST := [ ALGO-LIST ] ALGO<br />
+<p>esp | ah | comp | route2 | hao<br/>
+ALGO-LIST := [ ALGO-LIST ] ALGO<br/>
 ALGO :=</p>
 <p>{ enc | auth }</p>
 <p>ALGO-NAME ALGO-KEYMAT |</p>
@@ -46,13 +46,13 @@ ALGO :=</p>
 <p>aead</p>
 <p>ALGO-NAME ALGO-KEYMAT ALGO-ICV-LEN |</p>
 <p>comp</p>
-<p>ALGO-NAME<br />
+<p>ALGO-NAME<br/>
 MODE :=</p>
-<p>transport | tunnel | beet | ro | in_trigger<br />
-FLAG-LIST := [ FLAG-LIST ] FLAG<br />
+<p>transport | tunnel | beet | ro | in_trigger<br/>
+FLAG-LIST := [ FLAG-LIST ] FLAG<br/>
 FLAG :=</p>
 <p>noecn | decap-dscp | nopmtudisc | wildrecv | icmp |</p>
-<p>af-unspec | align4 | esn<br />
+<p>af-unspec | align4 | esn<br/>
 SELECTOR :=</p>
 <p>[ src</p>
 <p>ADDR[/PLEN] ]</p>
@@ -60,7 +60,7 @@ SELECTOR :=</p>
 <p>ADDR[/PLEN] ]</p>
 <p>[ dev</p>
 <p>DEV ]</p>
-<p>[ UPSPEC ]<br />
+<p>[ UPSPEC ]<br/>
 UPSPEC :=</p>
 <p>proto {</p>
 <p>    PROTO |</p>
@@ -73,28 +73,28 @@ UPSPEC :=</p>
 <p>    [ code</p>
 <p>    NUMBER ] |</p>
 <p>    gre [ key</p>
-<p>    { DOTTED-QUAD | NUMBER } ] }<br />
+<p>    { DOTTED-QUAD | NUMBER } ] }<br/>
 LIMIT-LIST := [ LIMIT-LIST ]</p>
 <p>limit</p>
-<p>LIMIT<br />
+<p>LIMIT<br/>
 LIMIT :=</p>
 <p>{ time-soft | time-hard | time-use-soft | time-use-hard }</p>
 <p>SECONDS |</p>
 <p>{ byte-soft | byte-hard }</p>
 <p>SIZE |</p>
 <p>{ packet-soft | packet-hard }</p>
-<p>COUNT<br />
+<p>COUNT<br/>
 ENCAP :=</p>
 <p>{ espinudp | espinudp-nonike | espintcp }</p>
-<p>SPORT DPORT OADDR<br />
-EXTRA-FLAG-LIST := [ EXTRA-FLAG-LIST ] EXTRA-FLAG<br />
+<p>SPORT DPORT OADDR<br/>
+EXTRA-FLAG-LIST := [ EXTRA-FLAG-LIST ] EXTRA-FLAG<br/>
 EXTRA-FLAG :=</p>
-<p>dont-encap-dscp | oseq-may-wrap<br />
- <code>ip xfrm policy</code> { <code>add</code> | <code>update</code> } <i>SELECTOR</i> <code>dir</code> <i>DIR</i> [ <code>ctx</code> <i>CTX</i> ] [ <code>mark</code> <i>MARK</i> [ <code>mask</code> <i>MASK</i> ] ] [ <code>index</code> <i>INDEX</i> ] [ <code>ptype</code> <i>PTYPE</i> ] [ <code>action</code> <i>ACTION</i> ] [ <code>priority</code> <i>PRIORITY</i> ] [ <code>flag</code> <i>FLAG-LIST</i> ] [ <code>if_id</code> <i>IF-ID</i> ] [ <i>LIMIT-LIST</i> ] [ <i>TMPL-LIST</i> ]<br />
- <code>ip xfrm policy</code> { <code>delete</code> | <code>get</code> } { <i>SELECTOR</i> | <code>index</code> <i>INDEX</i> } <code>dir</code> <i>DIR</i> [ <code>ctx</code> <i>CTX</i> ] [ <code>mark</code> <i>MARK</i> [ <code>mask</code> <i>MASK</i> ] ] [ <code>ptype</code> <i>PTYPE</i> ] [ <code>if_id</code> <i>IF-ID</i> ]<br />
- <code>ip</code> [ <code>-4</code> | <code>-6</code> ] <code>xfrm policy</code> { <code>deleteall</code> | <code>list</code> } [ <code>nosock</code> ] [ <i>SELECTOR</i> ] [ <code>dir</code> <i>DIR</i> ] [ <code>index</code> <i>INDEX</i> ] [ <code>ptype</code> <i>PTYPE</i> ] [ <code>action</code> <i>ACTION</i> ] [ <code>priority</code> <i>PRIORITY</i> ] [ <code>flag</code> <i>FLAG-LIST</i>]<br />
- <code>ip xfrm policy flush</code> [ <code>ptype</code> <i>PTYPE</i> ]<br />
- <code>ip xfrm policy count</code><br />
+<p>dont-encap-dscp | oseq-may-wrap<br/>
+ <code>ip xfrm policy</code> { <code>add</code> | <code>update</code> } <i>SELECTOR</i> <code>dir</code> <i>DIR</i> [ <code>ctx</code> <i>CTX</i> ] [ <code>mark</code> <i>MARK</i> [ <code>mask</code> <i>MASK</i> ] ] [ <code>index</code> <i>INDEX</i> ] [ <code>ptype</code> <i>PTYPE</i> ] [ <code>action</code> <i>ACTION</i> ] [ <code>priority</code> <i>PRIORITY</i> ] [ <code>flag</code> <i>FLAG-LIST</i> ] [ <code>if_id</code> <i>IF-ID</i> ] [ <i>LIMIT-LIST</i> ] [ <i>TMPL-LIST</i> ]<br/>
+ <code>ip xfrm policy</code> { <code>delete</code> | <code>get</code> } { <i>SELECTOR</i> | <code>index</code> <i>INDEX</i> } <code>dir</code> <i>DIR</i> [ <code>ctx</code> <i>CTX</i> ] [ <code>mark</code> <i>MARK</i> [ <code>mask</code> <i>MASK</i> ] ] [ <code>ptype</code> <i>PTYPE</i> ] [ <code>if_id</code> <i>IF-ID</i> ]<br/>
+ <code>ip</code> [ <code>-4</code> | <code>-6</code> ] <code>xfrm policy</code> { <code>deleteall</code> | <code>list</code> } [ <code>nosock</code> ] [ <i>SELECTOR</i> ] [ <code>dir</code> <i>DIR</i> ] [ <code>index</code> <i>INDEX</i> ] [ <code>ptype</code> <i>PTYPE</i> ] [ <code>action</code> <i>ACTION</i> ] [ <code>priority</code> <i>PRIORITY</i> ] [ <code>flag</code> <i>FLAG-LIST</i>]<br/>
+ <code>ip xfrm policy flush</code> [ <code>ptype</code> <i>PTYPE</i> ]<br/>
+ <code>ip xfrm policy count</code><br/>
  <code>ip xfrm policy set</code> [ <code>hthresh4</code> <i>LBITS</i> <i>RBITS</i> ] [ <code>hthresh6</code> <i>LBITS</i> <i>RBITS</i> ] SELECTOR :=</p>
 <p>[ src</p>
 <p>ADDR[/PLEN] ]</p>
@@ -102,7 +102,7 @@ EXTRA-FLAG :=</p>
 <p>ADDR[/PLEN] ]</p>
 <p>[ dev</p>
 <p>DEV ]</p>
-<p>[ UPSPEC ]<br />
+<p>[ UPSPEC ]<br/>
 UPSPEC :=</p>
 <p>proto {</p>
 <p>    PROTO |</p>
@@ -115,36 +115,36 @@ UPSPEC :=</p>
 <p>    [ code</p>
 <p>    NUMBER ] |</p>
 <p>    gre [ key</p>
-<p>    { DOTTED-QUAD | NUMBER } ] }<br />
+<p>    { DOTTED-QUAD | NUMBER } ] }<br/>
 DIR :=</p>
-<p>in | out | fwd<br />
+<p>in | out | fwd<br/>
 PTYPE :=</p>
-<p>main | sub<br />
+<p>main | sub<br/>
 ACTION :=</p>
-<p>allow | block<br />
-FLAG-LIST := [ FLAG-LIST ] FLAG<br />
+<p>allow | block<br/>
+FLAG-LIST := [ FLAG-LIST ] FLAG<br/>
 FLAG :=</p>
-<p>localok | icmp<br />
+<p>localok | icmp<br/>
 LIMIT-LIST := [ LIMIT-LIST ]</p>
 <p>limit</p>
-<p>LIMIT<br />
+<p>LIMIT<br/>
 LIMIT :=</p>
 <p>{ time-soft | time-hard | time-use-soft | time-use-hard }</p>
 <p>SECONDS |</p>
 <p>{ byte-soft | byte-hard }</p>
 <p>SIZE |</p>
 <p>{ packet-soft | packet-hard }</p>
-<p>COUNT<br />
+<p>COUNT<br/>
 TMPL-LIST := [ TMPL-LIST ]</p>
 <p>tmpl</p>
-<p>TMPL<br />
+<p>TMPL<br/>
 TMPL := ID</p>
 <p>[ mode</p>
 <p>MODE ]</p>
 <p>[ reqid</p>
 <p>REQID ]</p>
 <p>[ level</p>
-<p>LEVEL ]<br />
+<p>LEVEL ]<br/>
 ID :=</p>
 <p>[ src</p>
 <p>ADDR ]</p>
@@ -153,14 +153,14 @@ ID :=</p>
 <p>[ proto</p>
 <p>XFRM-PROTO ]</p>
 <p>[ spi</p>
-<p>SPI ]<br />
+<p>SPI ]<br/>
 XFRM-PROTO :=</p>
-<p>esp | ah | comp | route2 | hao<br />
+<p>esp | ah | comp | route2 | hao<br/>
 MODE :=</p>
-<p>transport | tunnel | beet | ro | in_trigger<br />
+<p>transport | tunnel | beet | ro | in_trigger<br/>
 LEVEL :=</p>
-<p>required | use<br />
- <code>ip xfrm monitor</code> [ <code>all-nsid</code> ] [ <code>nokeys</code> ] [ <code>all</code><br />
+<p>required | use<br/>
+ <code>ip xfrm monitor</code> [ <code>all-nsid</code> ] [ <code>nokeys</code> ] [ <code>all</code><br/>
 &nbsp;| <i>LISTofXFRM-OBJECTS</i> ] </p>
 <pre><code>LISTofXFRM-OBJECTS := [ LISTofXFRM-OBJECTS ] XFRM-OBJECT
 XFRM-OBJECT :=
@@ -354,7 +354,7 @@ acquire | expire | SA | policy | aevent | report
 </table>
 <p> The xfrm objects to monitor can be optionally specified. If the <code>all-nsid</code> option is set, the program listens to all network namespaces that have a nsid assigned into the network namespace were the program is running. A prefix is displayed to show the network namespace where the message originates. Example: [nsid 1]Flushed state proto 0 </p>
 <h2>Author</h2>
-<p>Manpage revised by David Ward &lt;david.ward [at] ll.mit.edu&gt;<br />
- Manpage revised by Christophe Gouault &lt;christophe.gouault [at] 6wind.com&gt;<br />
+<p>Manpage revised by David Ward &lt;david.ward [at] ll.mit.edu&gt;<br/>
+ Manpage revised by Christophe Gouault &lt;christophe.gouault [at] 6wind.com&gt;<br/>
  Manpage revised by Nicolas Dichtel &lt;nicolas.dichtel [at] 6wind.com&gt;</p>
 </dl></dl></dl>

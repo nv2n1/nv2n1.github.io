@@ -68,5 +68,5 @@ description: "hwinfo – probe for hardware"
 <h2>Bugs</h2>
 <p>Not all hardware can be detected.</p>
 <h2>See Also</h2>
-<p>More documentation in /usr/share/doc/packages/hwinfo.<br />
+<p>More documentation in /usr/share/doc/packages/hwinfo.<br/>
  Source repository: <a href="git://git.opensuse.org/projects/hwinfo.git.">git://git.opensuse.org/projects/hwinfo.git.</a> </p>

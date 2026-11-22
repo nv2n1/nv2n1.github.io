@@ -11,12 +11,12 @@ description: "barcode – a library to create and print bar codes"
 <p> barcode &#8211; a library to create and print bar codes </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;barcode.h&gt;</code> </p>
-<p> <code>struct Barcode_Item *Barcode_Create(char *</code><i>text</i><code>);</code><br />
- <code>int Barcode_Delete(struct Barcode_Item *</code><i>bc</i><code>);</code><br />
- <code>int Barcode_Encode(struct Barcode_Item *</code><i>bc</i><code>, int </code><i>flags</i><code>);</code><br />
- <code>int Barcode_Print(struct Barcode_Item *</code><i>bc</i><code>, FILE *</code><i>f</i><code>, int </code><i>flags</i><code>);</code><br />
- <code>int Barcode_Position(struct Barcode_Item *</code><i>bc</i><code>, int </code><i>wid</i><code>, int </code><i>hei</i><code>, int </code><i>xoff</i><code>, int </code><i>yoff</i><code> , double </code><i>scalef</i><code>);</code><br />
- <code>int Barcode_Encode_and_Print(char *</code><i>text</i><code>, FILE *</code><i>f</i><code>, int </code><i>wid</i><code>, int </code><i>hei</i><code>, int </code><i>xoff</i><code>, int </code><i>yoff</i><code>, int </code><i>flags</i><code>);</code><br />
+<p> <code>struct Barcode_Item *Barcode_Create(char *</code><i>text</i><code>);</code><br/>
+ <code>int Barcode_Delete(struct Barcode_Item *</code><i>bc</i><code>);</code><br/>
+ <code>int Barcode_Encode(struct Barcode_Item *</code><i>bc</i><code>, int </code><i>flags</i><code>);</code><br/>
+ <code>int Barcode_Print(struct Barcode_Item *</code><i>bc</i><code>, FILE *</code><i>f</i><code>, int </code><i>flags</i><code>);</code><br/>
+ <code>int Barcode_Position(struct Barcode_Item *</code><i>bc</i><code>, int </code><i>wid</i><code>, int </code><i>hei</i><code>, int </code><i>xoff</i><code>, int </code><i>yoff</i><code> , double </code><i>scalef</i><code>);</code><br/>
+ <code>int Barcode_Encode_and_Print(char *</code><i>text</i><code>, FILE *</code><i>f</i><code>, int </code><i>wid</i><code>, int </code><i>hei</i><code>, int </code><i>xoff</i><code>, int </code><i>yoff</i><code>, int </code><i>flags</i><code>);</code><br/>
  <code>int Barcode_Version(char *</code><i>versionname</i><code>);</code></p>
 <h2>DESCRIPTION</h2>
 <p> The barcode family of library functions is meant to ease creation of bar-code printouts. The information below is extracted from the texinfo file, which is the preferred source of information. </p>

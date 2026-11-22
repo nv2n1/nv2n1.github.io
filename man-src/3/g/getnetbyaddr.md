@@ -25,10 +25,10 @@ void endnetent(void);
 <p> The <code>setnetent</code>() function opens a connection to the database, and sets the next entry to the first entry. If <i>stayopen</i> is nonzero, then the connection to the database will not be closed between calls to one of the <code>getnet*</code>() functions. </p>
 <p> The <code>endnetent</code>() function closes the connection to the database. </p>
 <p> The <i>netent</i> structure is defined in <i>&lt;netdb.h&gt;</i> as follows: </p>
-<p> struct netent {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;*n_name;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;official network name&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;**n_aliases;&nbsp;<wbr>&nbsp;/*&nbsp;alias list&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;n_addrtype;&nbsp;/*&nbsp;net address type&nbsp;*/<br />
+<p> struct netent {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;*n_name;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;official network name&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;**n_aliases;&nbsp;<wbr>&nbsp;/*&nbsp;alias list&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;n_addrtype;&nbsp;/*&nbsp;net address type&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint32_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;n_net;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;network number&nbsp;*/ } </p>
 <p> The members of the <i>netent</i> structure are:</p>
 <dl>
@@ -58,29 +58,29 @@ void endnetent(void);
 <tr VALIGN=top>
 <td> <code>getnetent</code>() </td>
 <td>Thread safety</td>
-<td> MT-Unsafe race:netent<br />
+<td> MT-Unsafe race:netent<br/>
  race:netentbuf env locale
 </td>
 </tr>
 <tr VALIGN=top>
 <td> <code>getnetbyname</code>() </td>
 <td>Thread safety</td>
-<td> MT-Unsafe race:netbyname<br />
+<td> MT-Unsafe race:netbyname<br/>
  env locale
 </td>
 </tr>
 <tr VALIGN=top>
 <td> <code>getnetbyaddr</code>() </td>
 <td>Thread safety</td>
-<td> MT-Unsafe race:netbyaddr<br />
+<td> MT-Unsafe race:netbyaddr<br/>
  locale
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>setnetent</code>(),<br />
+<td> <code>setnetent</code>(),<br/>
  <code>endnetent</code>() </td>
 <td>Thread safety</td>
-<td> MT-Unsafe race:netent env<br />
+<td> MT-Unsafe race:netent env<br/>
  locale
 </td>
 </tr>
@@ -91,7 +91,7 @@ void endnetent(void);
 <h2>NOTES</h2>
 <p> In glibc versions before 2.2, the <i>net</i> argument of <code>getnetbyaddr</code>() was of type <i>long</i>.</p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/3-getnetent_r/">getnetent_r</a></code>(3), <code><a href="/docs/linux/man/3-getprotoent/">getprotoent</a></code>(3), <code><a href="/docs/linux/man/3-getservent/">getservent</a></code>(3)<br />
+<p> <code><a href="/docs/linux/man/3-getnetent_r/">getnetent_r</a></code>(3), <code><a href="/docs/linux/man/3-getprotoent/">getprotoent</a></code>(3), <code><a href="/docs/linux/man/3-getservent/">getservent</a></code>(3)<br/>
  RFC 1101</p>
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>

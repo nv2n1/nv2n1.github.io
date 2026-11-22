@@ -20,9 +20,9 @@ description: "runc-spec – create a new specification file"
 <dd>Generate a configuration for a rootless container. Note this option is entirely different from the global <code>&#8211;rootless</code> option. </dd>
 </dl>
 <h2>Examples</h2>
-<p>To run a simple &quot;hello-world&quot; container, one needs to set the <code>args</code> parameter in the spec to call hello. This can be done using <code><a href="/docs/linux/man/1-sed/">sed</a></code>(1), <code><a href="/docs/linux/man/1-jq/">jq</a></code>(1), or a text editor. The following commands will:<br />
-&nbsp;&#8211; create a bundle for hello-world;<br />
-&nbsp;&#8211; change the command to run in a container to&nbsp;<code>/hello</code>&nbsp;using&nbsp;<code><a href="/docs/linux/man/1-jq/">jq</a></code>(1);<br />
+<p>To run a simple &quot;hello-world&quot; container, one needs to set the <code>args</code> parameter in the spec to call hello. This can be done using <code><a href="/docs/linux/man/1-sed/">sed</a></code>(1), <code><a href="/docs/linux/man/1-jq/">jq</a></code>(1), or a text editor. The following commands will:<br/>
+&nbsp;&#8211; create a bundle for hello-world;<br/>
+&nbsp;&#8211; change the command to run in a container to&nbsp;<code>/hello</code>&nbsp;using&nbsp;<code><a href="/docs/linux/man/1-jq/">jq</a></code>(1);<br/>
 &nbsp;&#8211; run the&nbsp;<code>hello</code>&nbsp;command in a new hello-world container named&nbsp;<code>container1</code>.  </p>
 <pre>mkdir hello
 cd hello

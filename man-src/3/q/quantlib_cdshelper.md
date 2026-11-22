@@ -15,7 +15,7 @@ description: "QuantLib::CdsHelper – Default-probability bootstrap helper based
 <p><code>CdsHelper</code> (const <code>Handle</code>&lt; <code>Quote</code> &gt; &amp;spread, const <code>Period</code> &amp;tenor, <code>Integer</code> settlementDays, const <code>Calendar</code> &amp;calendar, <code>Frequency</code> frequency, <code>BusinessDayConvention</code> paymentConvention, <code>DateGeneration::Rule</code> rule, const <code>DayCounter</code> &amp;dayCounter, <code>Real</code> recoveryRate, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;discountCurve, bool settlesAccrual=true, bool paysAtDefaultTime=true) </p>
 <p> <code>CdsHelper</code> (<code>Rate</code> spread, const <code>Period</code> &amp;tenor, <code>Integer</code> settlementDays, const <code>Calendar</code> &amp;calendar, <code>Frequency</code> frequency, <code>BusinessDayConvention</code> paymentConvention, <code>DateGeneration::Rule</code> rule, const <code>DayCounter</code> &amp;dayCounter, <code>Real</code> recoveryRate, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;discountCurve, bool settlesAccrual=true, bool paysAtDefaultTime=true) </p>
 <p> <code>Real</code> <code>impliedQuote</code> () const </p>
-<p> void <code>setTermStructure</code> (<code>DefaultProbabilityTermStructure</code> *)<br />
+<p> void <code>setTermStructure</code> (<code>DefaultProbabilityTermStructure</code> *)<br/>
  <i>sets the term structure to be used for pricing </i></p>
 <h2>Detailed Description</h2>
 <p>Default-probability bootstrap helper based on quoted CDS spreads. </p>

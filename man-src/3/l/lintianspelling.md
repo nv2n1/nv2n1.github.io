@@ -15,8 +15,8 @@ description: "Lintian::Spelling — Lintian spell checks shared between multiple
 <p> The functions provided by this module issue tags directly, usually either taking the tag name to issue as an argument or dynamically constructing the tag name based on function parameters. The caller is responsible for ensuring that all tags are declared in the relevant *.desc file with proper descriptions and other metadata. The possible tags issued by each function are described in the documentation for that function.</p>
 <h2>Functions</h2>
 <dl COMPACT>
-<dt>check_spelling(<font SIZE="-1">TEXT</font>,[ <font SIZE="-1">EXCEPTIONS,</font>] <font SIZE="-1">CODEREF</font>)</dt>
-<dd>Performs a spelling check of <font SIZE="-1">TEXT.</font> Call <font SIZE="-1">CODEREF</font> once for each unique misspelling with the following arguments:</dd>
+<dt>check_spelling(TEXT,[ EXCEPTIONS,] CODEREF)</dt>
+<dd>Performs a spelling check of TEXT. Call CODEREF once for each unique misspelling with the following arguments:</dd>
 <dl COMPACT>
 <dd>
 </dd><dl COMPACT>
@@ -26,10 +26,10 @@ description: "Lintian::Spelling — Lintian spell checks shared between multiple
 <dd></dd></dl>
 </dl>
 <dl COMPACT>
-<dd>If <font SIZE="-1">EXCEPTIONS</font> is given, it will be used as a hash ref of exceptions. Any lowercase word appearing as a key of this hash ref will never be considered a spelling mistake (exception being if it is a part of a multiword misspelling). </dd>
-<p> Returns the number of spelling mistakes found in <font SIZE="-1">TEXT.</font></dl>
-<dt>check_spelling_picky(<font SIZE="-1">TEXT, CODEREF</font>)</dt>
-<dd>Performs a spelling check of <font SIZE="-1">TEXT.</font> Call <font SIZE="-1">CODEREF</font> once for each unique misspelling with the following arguments:</dd>
+<dd>If EXCEPTIONS is given, it will be used as a hash ref of exceptions. Any lowercase word appearing as a key of this hash ref will never be considered a spelling mistake (exception being if it is a part of a multiword misspelling). </dd>
+<p> Returns the number of spelling mistakes found in TEXT.</dl>
+<dt>check_spelling_picky(TEXT, CODEREF)</dt>
+<dd>Performs a spelling check of TEXT. Call CODEREF once for each unique misspelling with the following arguments:</dd>
 <dl COMPACT>
 <dd>
 </dd><dl COMPACT>
@@ -40,7 +40,7 @@ description: "Lintian::Spelling — Lintian spell checks shared between multiple
 </dl>
 <dl COMPACT>
 <dd>This method performs some pickier corrections &#8211; such as checking for common capitalization mistakes &#8211; which would are not included in check_spelling as they are not appropriate for some files, such as changelogs. </dd>
-<p> Returns the number of spelling mistakes found in <font SIZE="-1">TEXT.</font></dl>
+<p> Returns the number of spelling mistakes found in TEXT.</dl>
 </dl>
 <h2>Variables</h2>
 <dl COMPACT>

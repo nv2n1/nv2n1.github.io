@@ -24,4 +24,4 @@ Options : --first address IP range first address-- last address IP range last ad
 
 <h2>DESCRIPTION</h2>
 
- <i>fusioninventory-netdiscovery</i> allows to run a network discovery task without a <font SIZE="-1">GLPI</font> server.
+ <i>fusioninventory-netdiscovery</i> allows to run a network discovery task without a GLPI server.

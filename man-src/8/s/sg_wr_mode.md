@@ -58,7 +58,7 @@ $ sg_wr_mode --page=1a --contents=- --save /dev/sda &lt; t</code></pre>
 <pre><code>$ sg_modes --page=1a /dev/hdc
 &gt;&gt; Power condition (mmc), page_control: current
 00     1a 0a 00 03 00 00 00 28  00 00 01 2c</code></pre>
-<p>&nbsp;<wbr>$&nbsp;<wbr>sg_wr_mode -p 1a -c 0,0,0,0,0,0,0,37 -m 0,0,0,0,0,0,0,ff&nbsp;<wbr>/dev/hdc<br />
+<p>&nbsp;<wbr>$&nbsp;<wbr>sg_wr_mode -p 1a -c 0,0,0,0,0,0,0,37 -m 0,0,0,0,0,0,0,ff&nbsp;<wbr>/dev/hdc<br/>
 &nbsp;<wbr>$&nbsp;<wbr>sg_modes -p 1a&nbsp;<wbr>/dev/hdc </p>
 <p>&nbsp;<wbr>&gt;&gt;&nbsp;<wbr>Power condition&nbsp;<wbr>(mmc), page_control: current </p>
 <p>&nbsp;<wbr>00&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1a 0a 00 03 00 00 00 37&nbsp;<wbr>&nbsp;<wbr>00 00 01 2c</p>
@@ -69,7 +69,7 @@ $ sg_wr_mode --page=1a --contents=- --save /dev/sda &lt; t</code></pre>
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;dgilbert at interlog dot com&gt;.</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2004-2012 Douglas Gilbert<br />
+<p>Copyright &#169; 2004-2012 Douglas Gilbert<br/>
  This software is distributed under a FreeBSD license. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>See Also</h2>
 <p><code>sdparm(sdparm), sg_modes(sg3_utils), sginfo(sg3_utils)</code> </p>

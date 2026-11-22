@@ -22,8 +22,8 @@ description: "Lintian::Inspect::Changelog — Parse a literal version string int
 <dd>Takes one string as argument and finds &#8220;Closes: #123456, #654321&#8221; statements as supported by the Debian Archive software in it. Returns all closed bug numbers in an array reference.</dd></dl>
 <h2>Instance Methods</h2>
 <dl COMPACT>
-<dt>parse (<font SIZE="-1">STRING</font>)</dt>
-<dd>Parses <font SIZE="-1">STRING</font> as the content of a debian/changelog file.</dd>
+<dt>parse (STRING)</dt>
+<dd>Parses STRING as the content of a debian/changelog file.</dd>
 <dt>errors</dt>
 <dd>
 </dd><dt>entries</dt>

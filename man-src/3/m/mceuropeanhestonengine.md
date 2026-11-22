@@ -10,12 +10,12 @@ description: "ql/pricingengines/vanilla/mceuropeanhestonengine.hpp – Monte Car
 
 <p> ql/pricingengines/vanilla/mceuropeanhestonengine.hpp &#8211; Monte Carlo Heston-model engine for European options. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/pricingengines/vanilla/mcvanillaengine.hpp&gt;<br />
+<p> #include &lt;ql/pricingengines/vanilla/mcvanillaengine.hpp&gt;<br/>
  #include &lt;ql/processes/hestonprocess.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>MCEuropeanHestonEngine&lt; RNG, S &gt;</code><br />
- <i>Monte Carlo Heston-model engine for European options. </i><br />
- class <code>MakeMCEuropeanHestonEngine&lt; RNG, S &gt;</code><br />
+<p> class <code>MCEuropeanHestonEngine&lt; RNG, S &gt;</code><br/>
+ <i>Monte Carlo Heston-model engine for European options. </i><br/>
+ class <code>MakeMCEuropeanHestonEngine&lt; RNG, S &gt;</code><br/>
  <i>Monte Carlo Heston European engine factory. </i></p>
 <h2>Detailed Description</h2>
 <p> Monte Carlo Heston-model engine for European options. </p>

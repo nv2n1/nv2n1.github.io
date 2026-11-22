@@ -26,7 +26,7 @@ description: "man – macros to format man pages"
 <p>Sections are started with <code>.SH</code> followed by the heading name. </p>
 <p> The only mandatory heading is NAME, which should be the first section and be followed on the next line by a one-line description of the program: </p>
 <dl>
-<dd>.SH NAME<br />
+<dd>.SH NAME<br/>
  item \- description</dd></dl>
 <p> It is extremely important that this format is followed, and that there is a backslash before the single dash which follows the item name. This syntax is used by the <code><a href="/docs/linux/man/8-mandb/">mandb</a></code>(8) program to create a database of short descriptions for the <code><a href="/docs/linux/man/1-whatis/">whatis</a></code>(1) and <code><a href="/docs/linux/man/1-apropos/">apropos</a></code>(1) commands. (See <code><a href="/docs/linux/man/1-lexgrog/">lexgrog</a></code>(1) for further details on the syntax of the NAME section.) </p>
 <p> For a list of other sections that might appear in a manual page, see <code><a href="/docs/linux/man/7-man-pages/">man-pages</a></code>(7).</p>
@@ -114,7 +114,7 @@ x</code>, <code>
 <p> Do not use the optional parameter for <code>bp</code> (break page). Use only positive values for <code>sp</code> (vertical space). Don&#8217;t define a macro (<code>de</code>) with the same name as a macro in this or the mdoc macro package with a different meaning; it&#8217;s likely that such redefinitions will be ignored. Every positive indent (<code>in</code>) should be paired with a matching negative indent (although you should be using the <code>RS</code> and <code>RE</code> macros instead). The condition test (<code>if,ie</code>) should only have &#8216;t&#8217; or &#8216;n&#8217; as the condition. Only translations (<code>tr</code>) that can be ignored should be used. Font changes (<code>ft</code> and the <code></code> escape sequence) should only have the values 1, 2, 3, 4, R, I, B, P, or CW (the ft command may also have no parameters). </p>
 <p> If you use capabilities beyond these, check the results carefully on several tools. Once you&#8217;ve confirmed that the additional capability is safe, let the maintainer of this document know about the safe command or sequence that should be added to this list.</p>
 <h2>Files</h2>
-<p><i>/usr/share/groff/</i>[*/]<i>tmac/an.tmac</i><br />
+<p><i>/usr/share/groff/</i>[*/]<i>tmac/an.tmac</i><br/>
  <i>/usr/man/whatis</i></p>
 <h2>Notes</h2>
 <p>By all means include full URLs (or URIs) in the text itself; some tools such as <code><a href="/docs/linux/man/1-man2html/">man2html</a></code>(1) can automatically turn them into hypertext links. You can also use the <code>UR</code> and <code>UE</code> macros to identify links to related information. If you include URLs, use the full URL (e.g., to ensure that tools can automatically find the URLs. </p>

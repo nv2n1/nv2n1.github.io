@@ -24,8 +24,8 @@ description: "QwtClipper –"
 <p> <code>clipCircle()</code> divides a circle into intervals of angles representing arcs of the circle. When the circle is completely inside the clip rectangle an interval [0.0, 2 * M_PI] is returned. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>clipRect</i> Clip rectangle<br />
- <i>center</i> Center of the circle<br />
+<dd><i>clipRect</i> Clip rectangle<br/>
+ <i>center</i> Center of the circle<br/>
  <i>radius</i> Radius of the circle</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -34,8 +34,8 @@ description: "QwtClipper –"
 <p>Sutherland-Hodgman polygon clipping </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>clipRect</i> Clip rectangle<br />
- <i>polygon</i> Polygon<br />
+<dd><i>clipRect</i> Clip rectangle<br/>
+ <i>polygon</i> Polygon<br/>
  <i>closePolygon</i> True, when the polygon is closed</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -44,8 +44,8 @@ description: "QwtClipper –"
 <p>Sutherland-Hodgman polygon clipping </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>clipRect</i> Clip rectangle<br />
- <i>polygon</i> Polygon<br />
+<dd><i>clipRect</i> Clip rectangle<br/>
+ <i>polygon</i> Polygon<br/>
  <i>closePolygon</i> True, when the polygon is closed</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -54,8 +54,8 @@ description: "QwtClipper –"
 <p>Sutherland-Hodgman polygon clipping </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>clipRect</i> Clip rectangle<br />
- <i>polygon</i> Polygon<br />
+<dd><i>clipRect</i> Clip rectangle<br/>
+ <i>polygon</i> Polygon<br/>
  <i>closePolygon</i> True, when the polygon is closed</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

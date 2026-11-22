@@ -11,9 +11,9 @@ description: "Miscellaneous –"
 <p> Miscellaneous &#8211; </p>
 <p> Miscellaneous functions and types.</p>
 <h3>Data Structures</h3>
-<p> struct <code>globus_rls_attribute_t</code><br />
- <i>Object (LFN or PFN) attribute type. </i><br />
- struct <code>globus_rls_stats_t</code><br />
+<p> struct <code>globus_rls_attribute_t</code><br/>
+ <i>Object (LFN or PFN) attribute type. </i><br/>
+ struct <code>globus_rls_stats_t</code><br/>
  <i>Various configuration options and statistics about an RLS server returned in the following structures by </i><code>globus_rls_client_stats()</code>.</p>
 <h3>Defines</h3>
 <p> #define <code>RLS_LRCSERVER</code> 0x1 </p>
@@ -127,7 +127,7 @@ description: "Miscellaneous –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>h</i> Handle connected to RLS server.<br />
+</dt><dd> <i>h</i> Handle connected to RLS server.<br/>
  <i>cmd</i> Command to be sent to RLS server.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
@@ -138,20 +138,20 @@ description: "Miscellaneous –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>h</i> Handle connected to RLS server.<br />
+</dt><dd> <i>h</i> Handle connected to RLS server.<br/>
  <i>option</i> Configuration option to get. If NULL all options are retrieved.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>conf_list</i> List of configuration options.<br />
+</dt><dd> <i>conf_list</i> List of configuration options.<br/>
  <i>GLOBUS_SUCCESS</i> List of retrieved config options returned in <i>conf_list</i>, each datum is of type <code>globus_rls_string2_t</code>. <i>conf_list</i> should be freed with <code>globus_rls_client_free_list()</code>. There may be multiple &#8216;acl&#8217; entries in the list, since the access control list can include more than one entry. Each acl configuration value is consists of a regular expression (matched against grid-mapfile users or DNs), a colon, and space separated list of permissions the matching users are granted.</dd></dl>
 <h3>globus_result_t globus_rls_client_set_configuration (<code>globus_rls_handle_t</code> * h, char * option, char * value)</h3>
 <p> Set server configuration option. Client needs admin privilege. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>h</i> Handle connected to RLS server.<br />
- <i>option</i> Configuration option to set.<br />
+</dt><dd> <i>h</i> Handle connected to RLS server.<br/>
+ <i>option</i> Configuration option to set.<br/>
  <i>value</i> New value for option.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
@@ -162,7 +162,7 @@ description: "Miscellaneous –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>h</i> Handle connected to RLS server.<br />
+</dt><dd> <i>h</i> Handle connected to RLS server.<br/>
  <i>rlsstats</i> Stats returned here.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
@@ -172,8 +172,8 @@ description: "Miscellaneous –"
 <p> Map attribute value to string. <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>attr</i> Attribute to convert. If <i>attr-&gt;type</i> is <code>globus_rls_attr_type_date</code> then the resulting string will be in the format MySQL uses by default, which is YYYYMMDDHHMMSS.<br />
- <i>buf</i> Buffer to write string value to. Note if <i>attr-&gt;type</i> is <code>globus_rls_attr_type_str</code> then <i>attr-&gt;val.s</i> is returned, and <i>buf</i> is unused.<br />
+</dt><dd> <i>attr</i> Attribute to convert. If <i>attr-&gt;type</i> is <code>globus_rls_attr_type_date</code> then the resulting string will be in the format MySQL uses by default, which is YYYYMMDDHHMMSS.<br/>
+ <i>buf</i> Buffer to write string value to. Note if <i>attr-&gt;type</i> is <code>globus_rls_attr_type_str</code> then <i>attr-&gt;val.s</i> is returned, and <i>buf</i> is unused.<br/>
  <i>buflen</i> Size of <i>buf</i> in bytes.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
@@ -183,8 +183,8 @@ description: "Miscellaneous –"
 <p> Set <code>globus_rls_attribute_t</code> type and val fields from a type and string value. <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>type</i> Attribute value type.<br />
- <i>sval</i> String value to convert to binary. If type is <code>globus_rls_attr_type_date</code> <i>sval</i> should be in the form YYYY-MM-DD HH:MM:SS.<br />
+</dt><dd> <i>type</i> Attribute value type.<br/>
+ <i>sval</i> String value to convert to binary. If type is <code>globus_rls_attr_type_date</code> <i>sval</i> should be in the form YYYY-MM-DD HH:MM:SS.<br/>
  <i>attr</i> Attribute whose type and val fields are to be set.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
@@ -194,10 +194,10 @@ description: "Miscellaneous –"
 <p> Get error code and message from globus_result_t returned by this API. <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>r</i> Result returned by RLS API function. <i>r</i> is freed by this call and should not be referenced again. If <i>preserve</i> is set then a new globus_result_t is constructed with the same values and returned as the function value.<br />
- <i>rc</i> Address to store error code at. If NULL error code is not returned.<br />
- <i>buf</i> Address to store error message at. If NULL error message is not returned.<br />
- <i>preserve</i> If GLOBUS_TRUE then a new globus_result_t is contructed with the same values as the old and returned as the function value.<br />
+</dt><dd> <i>r</i> Result returned by RLS API function. <i>r</i> is freed by this call and should not be referenced again. If <i>preserve</i> is set then a new globus_result_t is constructed with the same values and returned as the function value.<br/>
+ <i>rc</i> Address to store error code at. If NULL error code is not returned.<br/>
+ <i>buf</i> Address to store error message at. If NULL error message is not returned.<br/>
+ <i>preserve</i> If GLOBUS_TRUE then a new globus_result_t is contructed with the same values as the old and returned as the function value.<br/>
  <i>buflen</i> Size of <i>buf</i>.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
@@ -209,9 +209,9 @@ description: "Miscellaneous –"
 <p> Map RLS status code to error string. <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>rc</i> Status code.<br />
- <i>specificmsg</i> If not NULL prepended (with a colon) to error string.<br />
- <i>buf</i> Buffer to write error message to.<br />
+</dt><dd> <i>rc</i> Status code.<br/>
+ <i>specificmsg</i> If not NULL prepended (with a colon) to error string.<br/>
+ <i>buf</i> Buffer to write error message to.<br/>
  <i>buflen</i> Length of <i>buf</i>. Message will be truncated to fit if too long.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>

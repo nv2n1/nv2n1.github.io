@@ -13,7 +13,7 @@ description: "PAPIF_get_exe_info –"
 <h2>Detailed Description</h2>
 <p><code>Fortran Interface:</code></p>
 <dl COMPACT>
-<dd>#include &#8216;fpapi.h&#8217;<br />
+<dd>#include &#8216;fpapi.h&#8217;<br/>
  <code>PAPIF_get_exe_info</code>( C_STRING fullname, C_STRING name, </dd>
 <p>&nbsp;<wbr>C_LONG_LONG text_start, C_LONG_LONG text_end,&nbsp;<wbr> </p>
 <p>&nbsp;<wbr>C_LONG_LONG data_start, C_LONG_LONG data_end,&nbsp;<wbr> </p>

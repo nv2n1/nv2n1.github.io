@@ -49,10 +49,10 @@ struct astruct {
 <dl>
 <dt>
 </dt><dd>
-#include &#8220;test.h&#8221;<br />
-&#8230; struct astruct s;<br />
-&#8230; SDT_PROBES_TEST_0(value);<br />
-&#8230; if (SDT_PROBES_TEST_1_ENABLED())<br />
+#include &#8220;test.h&#8221;<br/>
+&#8230; struct astruct s;<br/>
+&#8230; SDT_PROBES_TEST_0(value);<br/>
+&#8230; if (SDT_PROBES_TEST_1_ENABLED())<br/>
     SDT_PROBES_TEST_1(expensive_function(s));
 </dd></dl>
 <h2>SEMAPHORES</h2>

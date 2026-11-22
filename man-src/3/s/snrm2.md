@@ -11,7 +11,7 @@ description: "snrm2.f –"
 <p> snrm2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> REAL function <code>snrm2</code> (N, X, INCX)<br />
+<p> REAL function <code>snrm2</code> (N, X, INCX)<br/>
  <i></i><code>SNRM2</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>REAL function snrm2 (integerN, real, dimension(*)X, integerINCX)</h3>

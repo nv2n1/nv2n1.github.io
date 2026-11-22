@@ -55,7 +55,7 @@ description: "sg_turs – send one or more SCSI TEST UNIT READY commands"
 <h2>Authors</h2>
 <p>Written by D. Gilbert</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2000-2012 Douglas Gilbert<br />
+<p>Copyright &#169; 2000-2012 Douglas Gilbert<br/>
  This software is distributed under the GPL version 2. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>See Also</h2>
 <p><code>sg_inq, sg_request (sg3_utils)</code> </p>

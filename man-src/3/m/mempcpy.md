@@ -45,10 +45,10 @@ wchar_t *wmempcpy(wchar_t *dest, const wchar_t *src, size_t n);
 <h2>CONFORMING TO</h2>
 <p> This function is a GNU extension.</p>
 <h2>EXAMPLES</h2>
-<p> void * combine(void *o1, size_t s1, void *o2, size_t s2) {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;void&nbsp;*result&nbsp;=&nbsp;malloc(s1&nbsp;+&nbsp;s2);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(result&nbsp;!=&nbsp;NULL)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;mempcpy(mempcpy(result, o1, s1), o2, s2);<br />
+<p> void * combine(void *o1, size_t s1, void *o2, size_t s2) {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;void&nbsp;*result&nbsp;=&nbsp;malloc(s1&nbsp;+&nbsp;s2);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(result&nbsp;!=&nbsp;NULL)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;mempcpy(mempcpy(result, o1, s1), o2, s2);<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;return result; }</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-memccpy/">memccpy</a></code>(3), <code><a href="/docs/linux/man/3-memcpy/">memcpy</a></code>(3), <code><a href="/docs/linux/man/3-memmove/">memmove</a></code>(3), <code><a href="/docs/linux/man/3-wmemcpy/">wmemcpy</a></code>(3)</p>

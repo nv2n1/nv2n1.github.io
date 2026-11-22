@@ -13,15 +13,15 @@ description: "QuantLib::StochasticProcessArray – Array of correlated 1-D stoch
 <p> Inherits <code>QuantLib::StochasticProcess</code>. </p>
 <h3>Public Member Functions</h3>
 <p><code>StochasticProcessArray</code> (const std::vector&lt; boost::shared_ptr&lt; <code>StochasticProcess1D</code> &gt; &gt; &amp;, const <code>Matrix</code> &amp;correlation) </p>
-<p> Size <code>size</code> () const<br />
- <i>returns the number of dimensions of the stochastic process </i><br />
- <code>Disposable</code>&lt; <code>Array</code> &gt; <code>initialValues</code> () const<br />
- <i>returns the initial values of the state variables </i><br />
- <code>Disposable</code>&lt; <code>Array</code> &gt; <code>drift</code> (Time t, const <code>Array</code> &amp;x) const<br />
- <i>returns the drift part of the equation, i.e., $ mu(t, mathrm{x}_t) $ </i><br />
+<p> Size <code>size</code> () const<br/>
+ <i>returns the number of dimensions of the stochastic process </i><br/>
+ <code>Disposable</code>&lt; <code>Array</code> &gt; <code>initialValues</code> () const<br/>
+ <i>returns the initial values of the state variables </i><br/>
+ <code>Disposable</code>&lt; <code>Array</code> &gt; <code>drift</code> (Time t, const <code>Array</code> &amp;x) const<br/>
+ <i>returns the drift part of the equation, i.e., $ mu(t, mathrm{x}_t) $ </i><br/>
  <code>Disposable</code>&lt; <code>Array</code> &gt; <code>expectation</code> (Time t0, const <code>Array</code> &amp;x0, Time dt) const </p>
-<p> <code>Disposable</code>&lt; <code>Matrix</code> &gt; <code>diffusion</code> (Time t, const <code>Array</code> &amp;x) const<br />
- <i>returns the diffusion part of the equation, i.e. $ igma(t, mathrm{x}_t) $ </i><br />
+<p> <code>Disposable</code>&lt; <code>Matrix</code> &gt; <code>diffusion</code> (Time t, const <code>Array</code> &amp;x) const<br/>
+ <i>returns the diffusion part of the equation, i.e. $ igma(t, mathrm{x}_t) $ </i><br/>
  <code>Disposable</code>&lt; <code>Matrix</code> &gt; <code>covariance</code> (Time t0, const <code>Array</code> &amp;x0, Time dt) const </p>
 <p> <code>Disposable</code>&lt; <code>Matrix</code> &gt; <code>stdDeviation</code> (Time t0, const <code>Array</code> &amp;x0, Time dt) const </p>
 <p> <code>Disposable</code>&lt; <code>Array</code> &gt; <code>apply</code> (const <code>Array</code> &amp;x0, const <code>Array</code> &amp;dx) const </p>

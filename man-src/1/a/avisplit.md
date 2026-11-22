@@ -14,7 +14,7 @@ description: "avisplit – split AVI-files into chunks of a maximum size"
 <h2>COPYRIGHT</h2>
 <p> <code>avisplit</code> is Copyright (C) by Thomas Oestreich.</p>
 <h2>DESCRIPTION</h2>
-<p> <code>avisplit</code> splits a single AVI-file into chunks of size <i>size</i>.<br />
+<p> <code>avisplit</code> splits a single AVI-file into chunks of size <i>size</i>.<br/>
  Each of the created chunks will be an independent file, i.e. it can be played without needing any other of the chunk.</p>
 <h2>OPTIONS</h2>
 <dl>
@@ -60,7 +60,7 @@ description: "avisplit – split AVI-files into chunks of a maximum size"
 <p>&nbsp;<wbr>|&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><i>250</i>&nbsp;<wbr>chunks, 1920000 bytes </p>
 <p> The data in this file is <i>exactly</i> the same (its bit-identical) as it was in in.avi; the AVI file was just written in a different way, we do now have 250 audio chunks which makes splitting much easier and more accurate for avisplit.</p>
 <h2>AUTHORS</h2>
-<p> <code>avisplit</code> was written by Thomas Oestreich<br />
+<p> <code>avisplit</code> was written by Thomas Oestreich<br/>
  &lt;ostreich [at] theorie.physik.uni-goettingen.de&gt; with contributions from many others. See AUTHORS for details.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-aviindex/">aviindex</a></code>(1), <code><a href="/docs/linux/man/1-avifix/">avifix</a></code>(1), <code><a href="/docs/linux/man/1-avimerge/">avimerge</a></code>(1), <code><a href="/docs/linux/man/1-tccat/">tccat</a></code>(1), <code><a href="/docs/linux/man/1-tcdecode/">tcdecode</a></code>(1), <code><a href="/docs/linux/man/1-tcdemux/">tcdemux</a></code>(1), <code><a href="/docs/linux/man/1-tcextract/">tcextract</a></code>(1), <code><a href="/docs/linux/man/1-tcprobe/">tcprobe</a></code>(1), <code><a href="/docs/linux/man/1-tcscan/">tcscan</a></code>(1), <code><a href="/docs/linux/man/1-transcode/">transcode</a></code>(1) </p>

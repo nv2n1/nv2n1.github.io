@@ -25,7 +25,7 @@ description: "oLschema2ldif – Converts LDAP schema’s to LDB-compatible LDIF"
 <h2>See Also</h2>
 <p>ldb(7), ldbmodify, ldbdel, <a href="/docs/linux/man/5-ldif/">ldif</a>(5)</p>
 <h2>Author</h2>
-<p>ldb was written by m[blue]<code>Andrew Tridgell</code>m[]<font SIZE="-2">[1]</font>. oLschema2ldif was written by m[blue]<code>Simo Sorce</code>m[]<font SIZE="-2">[2]</font>. </p>
+<p>ldb was written by m[blue]<code>Andrew Tridgell</code>m[][1]. oLschema2ldif was written by m[blue]<code>Simo Sorce</code>m[][2]. </p>
 <p> If you wish to report a problem or make a suggestion then please see the m[blue]<code><a rel="nofollow" href="http://ldb.samba.org/">http://ldb.samba.org/</a></code>m[] web site for current contact and maintainer information.</p>
 <h2>Notes</h2>
 <dl COMPACT>

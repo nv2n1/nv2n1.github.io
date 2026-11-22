@@ -10,7 +10,7 @@ description: "std::lognormal_distribution< _RealType >::param_type –"
 <p>std::lognormal_distribution&lt; _RealType &gt;::param_type &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Public Types</h3>
-<p>typedef <code>lognormal_distribution</code><br />
+<p>typedef <code>lognormal_distribution</code><br/>
  &lt; _RealType &gt; <code>distribution_type</code>&quot;</p>
 <h3>Public Member Functions</h3>
 <pre><code>param_type (_RealType __m=_RealType(0), _RealType __s=_RealType(1))

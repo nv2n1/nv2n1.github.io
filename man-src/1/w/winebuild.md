@@ -84,17 +84,17 @@ description: "winebuild – Wine dll builder"
 <dt><code>-o, &#8211;output=</code><i>file</i></dt>
 <dd> Set the name of the output file (default is standard output). If the output file name ends in .o, the text output is sent to a temporary file that is then assembled to produce the specified .o file.</dd>
 <dt><code>-r, &#8211;res=</code><i>rsrc.res</i></dt>
-<dd> Load resources from the specified binary resource file. The <i>rsrc.res</i> file can be produced from a source resource file with <code><a href="/docs/linux/man/1-wrc/">wrc</a></code>(1) (or with a Windows resource compiler).<br />
+<dd> Load resources from the specified binary resource file. The <i>rsrc.res</i> file can be produced from a source resource file with <code><a href="/docs/linux/man/1-wrc/">wrc</a></code>(1) (or with a Windows resource compiler).<br/>
  This option is only necessary for Win16 resource files, the Win32 ones can simply listed as <i>input files</i> and will automatically be handled correctly (though the <code>-r</code> option will also work for Win32 files).</dd>
 <dt><code>&#8211;save-temps</code></dt>
 <dd> Do not delete the various temporary files that <code>winebuild</code> generates.</dd>
 <dt><code>&#8211;subsystem=</code><i>subsystem</i>[<code>:</code><i>major</i>[<code>.</code><i>minor</i>]]</dt>
-<dd> Set the subsystem of the executable, which can be one of the following:<br />
- <code>console</code> for a command line executable,<br />
- <code>windows</code> for a graphical executable,<br />
- <code>native</code> for a native-mode dll,<br />
- <code>wince</code> for a ce dll.<br />
- The entry point of a command line executable is a normal C <code>main</code> function. A <code>wmain</code> function can be used instead if you need the argument array to use Unicode strings. A graphical executable has a <code>WinMain</code> entry point.<br />
+<dd> Set the subsystem of the executable, which can be one of the following:<br/>
+ <code>console</code> for a command line executable,<br/>
+ <code>windows</code> for a graphical executable,<br/>
+ <code>native</code> for a native-mode dll,<br/>
+ <code>wince</code> for a ce dll.<br/>
+ The entry point of a command line executable is a normal C <code>main</code> function. A <code>wmain</code> function can be used instead if you need the argument array to use Unicode strings. A graphical executable has a <code>WinMain</code> entry point.<br/>
  Optionally a major and minor subsystem version can also be specified; the default subsystem version is 4.0.</dd>
 <dt><code>-u, &#8211;undefined=</code><i>symbol</i></dt>
 <dd> Add <i>symbol</i> to the list of undefined symbols when invoking the linker. This makes it possible to force a specific module of a static library to be included when resolving imports.</dd>
@@ -107,11 +107,11 @@ description: "winebuild – Wine dll builder"
 <h2>SPEC FILE SYNTAX</h2>
 <h3>General syntax</h3>
 <p> A spec file should contain a list of ordinal declarations. The general syntax is the following: </p>
-<p> <i>ordinal functype</i> [<i>flags</i>]&nbsp;<wbr><i>exportname</i>&nbsp;<wbr><code>(</code>&nbsp;<wbr>[<i>args&#8230;</i>]<i>&nbsp;<wbr></i><code>)</code>&nbsp;<wbr>[<i>handler</i>]<br />
- <i>ordinal&nbsp;<wbr></i><code>variable</code> [<i>flags</i>]&nbsp;<wbr><i>exportname</i>&nbsp;<wbr><code>(</code>&nbsp;<wbr>[<i>data&#8230;</i>]<i>&nbsp;<wbr></i><code>)</code><br />
- <i>ordinal&nbsp;<wbr></i><code>extern</code> [<i>flags</i>]&nbsp;<wbr><i>exportname</i>&nbsp;<wbr>[<i>symbolname</i>]<br />
- <i>ordinal&nbsp;<wbr></i><code>stub</code> [<i>flags</i>]&nbsp;<wbr><i>exportname</i>&nbsp;<wbr>[&nbsp;<wbr><code>(</code><i>args&#8230;</i><code>)</code>&nbsp;<wbr>]<br />
- <i>ordinal&nbsp;<wbr></i><code>equate</code> [<i>flags</i>]&nbsp;<wbr><i>exportname data</i><br />
+<p> <i>ordinal functype</i> [<i>flags</i>]&nbsp;<wbr><i>exportname</i>&nbsp;<wbr><code>(</code>&nbsp;<wbr>[<i>args&#8230;</i>]<i>&nbsp;<wbr></i><code>)</code>&nbsp;<wbr>[<i>handler</i>]<br/>
+ <i>ordinal&nbsp;<wbr></i><code>variable</code> [<i>flags</i>]&nbsp;<wbr><i>exportname</i>&nbsp;<wbr><code>(</code>&nbsp;<wbr>[<i>data&#8230;</i>]<i>&nbsp;<wbr></i><code>)</code><br/>
+ <i>ordinal&nbsp;<wbr></i><code>extern</code> [<i>flags</i>]&nbsp;<wbr><i>exportname</i>&nbsp;<wbr>[<i>symbolname</i>]<br/>
+ <i>ordinal&nbsp;<wbr></i><code>stub</code> [<i>flags</i>]&nbsp;<wbr><i>exportname</i>&nbsp;<wbr>[&nbsp;<wbr><code>(</code><i>args&#8230;</i><code>)</code>&nbsp;<wbr>]<br/>
+ <i>ordinal&nbsp;<wbr></i><code>equate</code> [<i>flags</i>]&nbsp;<wbr><i>exportname data</i><br/>
  <code>#&nbsp;<wbr></code><i>comments</i> </p>
 <p> Declarations must fit on a single line, except if the end of line is escaped using a backslash character. The <code>#</code> character anywhere in a line causes the rest of the line to be ignored as a comment. </p>
 <p> <i>ordinal</i> specifies the ordinal number corresponding to the entry point, or &#8216;@&#8217; for automatic ordinal allocation (Win32 only). </p>
@@ -136,7 +136,7 @@ description: "winebuild – Wine dll builder"
 <dd> The entry point is only available on the specified CPU architecture(s). The names <code>win32</code> and <code>win64</code> match all 32-bit or 64-bit CPU architectures respectively. In 16-bit dlls, specifying <code>-arch=win32</code> causes the entry point to be exported from the 32-bit wrapper module.</dd></dl>
 </dl>
 <h3>Function ordinals</h3>
-<p> Syntax:<br />
+<p> Syntax:<br/>
  <i>ordinal functype</i> [<i>flags</i>]&nbsp;<wbr><i>exportname</i>&nbsp;<wbr><code>(</code>&nbsp;<wbr>[<i>args&#8230;</i>]<i>&nbsp;<wbr></i><code>)</code>&nbsp;<wbr>[<i>handler</i>] </p>
 <p> This declaration defines a function entry point. The prototype defined by <i>exportname</i>&nbsp;<wbr><code>(</code>&nbsp;<wbr>[<i>args&#8230;</i>]<i>&nbsp;<wbr></i><code>)</code> specifies the name available for dynamic linking and the format of the arguments. &#8216;@&#8217; can be used instead of <i>exportname</i> for ordinal-only exports. </p>
 <p> <i>functype</i> should be one of:</p>
@@ -191,11 +191,11 @@ description: "winebuild – Wine dll builder"
 <p> This second example defines an entry point for the 16-bit CreateWindow() call (the ordinal 100 is just an example); it also shows how long lines can be split using a backslash:</p>
 <dl>
 <dt>
-</dt><dd> 100 pascal CreateWindow(ptr ptr long s_word s_word s_word \<br />
+</dt><dd> 100 pascal CreateWindow(ptr ptr long s_word s_word s_word \<br/>
 &nbsp;<wbr>s_word word word word ptr)&nbsp;<wbr>WIN_CreateWindow</dd></dl>
 <p> To declare a function using a variable number of arguments, specify the function as <code>varargs</code> and declare it in the C file with a &#8216;&#8230;&#8217; parameter for a Win32 function, or with an extra VA_LIST16 argument for a Win16 function. See the wsprintf* functions in user.exe.spec and user32.spec for an example.</p>
 <h3>Variable ordinals</h3>
-<p> Syntax:<br />
+<p> Syntax:<br/>
  <i>ordinal&nbsp;<wbr></i><code>variable</code> [<i>flags</i>]&nbsp;<wbr><i>exportname</i>&nbsp;<wbr><code>(</code>&nbsp;<wbr>[<i>data&#8230;</i>]<i>&nbsp;<wbr></i><code>)</code> </p>
 <p> This declaration defines data storage as 32-bit words at the ordinal specified. <i>exportname</i> will be the name available for dynamic linking. <i>data</i> can be a decimal number or a hex number preceded by &quot;0x&quot;. The following example defines the variable VariableA at ordinal 2 and containing 4 ints:</p>
 <dl>
@@ -203,15 +203,15 @@ description: "winebuild – Wine dll builder"
 </dt><dd> 2 variable VariableA(-1 0xff 0 0)</dd></dl>
 <p> This declaration only works in Win16 spec files. In Win32 you should use <code>extern</code> instead (see below).</p>
 <h3>Extern ordinals</h3>
-<p> Syntax:<br />
+<p> Syntax:<br/>
  <i>ordinal&nbsp;<wbr></i><code>extern</code> [<i>flags</i>]&nbsp;<wbr><i>exportname</i>&nbsp;<wbr>[<i>symbolname</i>] </p>
 <p> This declaration defines an entry that simply maps to a C symbol (variable or function). It only works in Win32 spec files. <i>exportname</i> will point to the symbol <i>symbolname</i> that must be defined in the C code. Alternatively, it can be of the form <i>dllname</i><code>.</code><i>symbolname</i> to define a forwarded symbol (one whose implementation is in another dll). If <i>symbolname</i> is not specified, it is assumed to be identical to <i>exportname.</i></p>
 <h3>Stub ordinals</h3>
-<p> Syntax:<br />
+<p> Syntax:<br/>
  <i>ordinal&nbsp;<wbr></i><code>stub</code> [<i>flags</i>]&nbsp;<wbr><i>exportname</i>&nbsp;<wbr>[&nbsp;<wbr><code>(</code><i>args&#8230;</i><code>)</code>&nbsp;<wbr>] </p>
 <p> This declaration defines a stub function. It makes the name and ordinal available for dynamic linking, but will terminate execution with an error message if the function is ever called.</p>
 <h3>Equate ordinals</h3>
-<p> Syntax:<br />
+<p> Syntax:<br/>
  <i>ordinal&nbsp;<wbr></i><code>equate</code> [<i>flags</i>]&nbsp;<wbr><i>exportname data</i> </p>
 <p> This declaration defines an ordinal as an absolute value. <i>exportname</i> will be the name available for dynamic linking. <i>data</i> can be a decimal number or a hex number preceded by &quot;0x&quot;.</p>
 <h2>AUTHORS</h2>
@@ -222,5 +222,5 @@ description: "winebuild – Wine dll builder"
 <h2>AVAILABILITY</h2>
 <p> <code>winebuild</code> is part of the Wine distribution, which is available through WineHQ, the <code>Wine development headquarters</code></p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-wine/">wine</a></code>(1), <code><a href="/docs/linux/man/1-winegcc/">winegcc</a></code>(1), <code><a href="/docs/linux/man/1-wrc/">wrc</a></code>(1),<br />
+<p> <code><a href="/docs/linux/man/1-wine/">wine</a></code>(1), <code><a href="/docs/linux/man/1-winegcc/">winegcc</a></code>(1), <code><a href="/docs/linux/man/1-wrc/">wrc</a></code>(1),<br/>
  <code>Wine documentation and support</code> </p>

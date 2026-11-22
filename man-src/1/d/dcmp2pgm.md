@@ -22,20 +22,20 @@ bitmap-out   output DICOM image or PGM bitmap
 </pre>
 <h2>OPTIONS</h2>
 <h3>general options</h3>
-<p>&#8211; h&#8211; help<br />
-        print this help text and exit&#8211; version<br />
-            print version information and exit&#8211; arguments<br />
-                print expanded command line arguments &#8211;<br />
-    q&#8211; quiet<br />
-        quiet mode,<br />
-    print no warnings and errors &#8211; v&#8211; verbose<br />
-                                       verbose mode,<br />
-    print processing details &#8211; d&#8211; debug<br />
-                                   debug mode,<br />
-    print debug information &#8211; ll&#8211; log &#8211; level[l] evel:string<br />
-                                                       constant(fatal, error, warn, info, debug, trace)<br />
-         use level l for the logger<br />
-  -lc  &#8211;log-config  [f]ilename: string<br />
+<p>&#8211; h&#8211; help<br/>
+        print this help text and exit&#8211; version<br/>
+            print version information and exit&#8211; arguments<br/>
+                print expanded command line arguments &#8211;<br/>
+    q&#8211; quiet<br/>
+        quiet mode,<br/>
+    print no warnings and errors &#8211; v&#8211; verbose<br/>
+                                       verbose mode,<br/>
+    print processing details &#8211; d&#8211; debug<br/>
+                                   debug mode,<br/>
+    print debug information &#8211; ll&#8211; log &#8211; level[l] evel:string<br/>
+                                                       constant(fatal, error, warn, info, debug, trace)<br/>
+         use level l for the logger<br/>
+  -lc  &#8211;log-config  [f]ilename: string<br/>
          use config file f for the logger</p>
 <h3>processing options</h3>
 <pre><code>

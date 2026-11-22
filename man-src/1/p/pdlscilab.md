@@ -9,24 +9,24 @@ description: "PDL::Scilab – A guide for Scilab users."
 
 <p>PDL::Scilab &#8211; A guide for Scilab users. </p>
 <h2>Introduction</h2>
-<p>If you are a Scilab user, this page is for you. It explains the key differences between Scilab and <font SIZE="-1">PDL</font> to help you get going as quickly as possible. </p>
-<p> <code>This document is not a tutorial</code>. For that, go to PDL::QuickStart. This document <code>complements</code> the Quick Start guide, as it highlights the key differences between Scilab and <font SIZE="-1">PDL.</font></p>
+<p>If you are a Scilab user, this page is for you. It explains the key differences between Scilab and PDL to help you get going as quickly as possible. </p>
+<p> <code>This document is not a tutorial</code>. For that, go to PDL::QuickStart. This document <code>complements</code> the Quick Start guide, as it highlights the key differences between Scilab and PDL.</p>
 <h2>Perl</h2>
-<p>The key difference between Scilab and <font SIZE="-1">PDL</font> is <code>Perl</code>. </p>
-<p> Perl is a general purpose programming language with thousands of modules freely available on the web. <font SIZE="-1">PDL</font> is an extension of Perl. This gives <font SIZE="-1">PDL</font> programs access to more features than most numerical tools can dream of. At the same time, most syntax differences between Scilab and <font SIZE="-1">PDL</font> are a result of its Perl foundation. </p>
-<p> <code>You do not have to learn much Perl to be effective with </code><font SIZE="-1"><code>PDL</code></font>. But if you wish to learn Perl, there is excellent documentation available on-line (&lt;<a rel="nofollow" href="http://perldoc.perl.org">http://perldoc.perl.org</a>&gt;) or through the command <tt>&quot;perldoc perl&quot;</tt>. There is also a beginner&#8217;s portal (&lt;<a rel="nofollow" href="http://perl-begin.org">http://perl-begin.org</a>&gt;). </p>
-<p> Perl&#8217;s module repository is called <font SIZE="-1">CPAN </font>(&lt;<a rel="nofollow" href="http://www.cpan.org">http://www.cpan.org</a>&gt;) and it has a vast array of modules. Run <tt>&quot;perldoc cpan&quot;</tt> for more information.</p>
+<p>The key difference between Scilab and PDL is <code>Perl</code>. </p>
+<p> Perl is a general purpose programming language with thousands of modules freely available on the web. PDL is an extension of Perl. This gives PDL programs access to more features than most numerical tools can dream of. At the same time, most syntax differences between Scilab and PDL are a result of its Perl foundation. </p>
+<p> <code>You do not have to learn much Perl to be effective with </code><code>PDL</code>. But if you wish to learn Perl, there is excellent documentation available on-line (&lt;<a rel="nofollow" href="http://perldoc.perl.org">http://perldoc.perl.org</a>&gt;) or through the command <tt>&quot;perldoc perl&quot;</tt>. There is also a beginner&#8217;s portal (&lt;<a rel="nofollow" href="http://perl-begin.org">http://perl-begin.org</a>&gt;). </p>
+<p> Perl&#8217;s module repository is called CPAN (&lt;<a rel="nofollow" href="http://www.cpan.org">http://www.cpan.org</a>&gt;) and it has a vast array of modules. Run <tt>&quot;perldoc cpan&quot;</tt> for more information.</p>
 <h2>Terminology: Piddle</h2>
-<p>Scilab typically refers to vectors, matrices, and arrays. Perl already has arrays, and the terms &#8220;vector&#8221; and &#8220;matrix&#8221; typically refer to one- and two-dimensional collections of data. Having no good term to describe their object, <font SIZE="-1">PDL</font> developers coined the term &quot;<i>piddle</i>&quot; to give a name to their data type. </p>
+<p>Scilab typically refers to vectors, matrices, and arrays. Perl already has arrays, and the terms &#8220;vector&#8221; and &#8220;matrix&#8221; typically refer to one- and two-dimensional collections of data. Having no good term to describe their object, PDL developers coined the term &quot;<i>piddle</i>&quot; to give a name to their data type. </p>
 <p> A <i>piddle</i> consists of a series of numbers organized as an N-dimensional data set. Piddles provide efficient storage and fast computation of large N-dimensional matrices. They are highly optimized for numerical work. </p>
 <p> For more information, see &quot;<code>Piddles vs Perl Arrays</code>&quot; later in this document.</p>
 <h2>Command Window And Ide</h2>
-<p><font SIZE="-1">PDL</font> does not come with a dedicated <font SIZE="-1">IDE.</font> It does however come with an interactive shell and you can use a Perl <font SIZE="-1">IDE</font> to develop <font SIZE="-1">PDL</font> programs.</p>
-<h3><font SIZE="-1">PDL</font> interactive shell</h3>
+<p>PDL does not come with a dedicated IDE. It does however come with an interactive shell and you can use a Perl IDE to develop PDL programs.</p>
+<h3>PDL interactive shell</h3>
 <p>To start the interactive shell, open a terminal and run <tt>&quot;perldl&quot;</tt> or <tt>&quot;pdl2&quot;</tt>. As in Scilab, the interactive shell is the best way to learn the language. To exit the shell, type <tt>&quot;exit&quot;</tt>, just like Scilab.</p>
-<h3>Writing <font SIZE="-1">PDL</font> programs</h3>
-<p>One popular <font SIZE="-1">IDE</font> for Perl is called Padre (&lt;<a rel="nofollow" href="http://padre.perlide.org">http://padre.perlide.org</a>&gt;). It is cross platform and easy to use. </p>
-<p> Whenever you write a stand-alone <font SIZE="-1">PDL</font> program (i.e. outside the <tt>&quot;perldl&quot;</tt> or <tt>&quot;pdl2&quot;</tt> shells) you must start the program with <tt>&quot;use PDL;&quot;</tt>. This command imports the <font SIZE="-1">PDL</font> module into Perl. Here is a sample <font SIZE="-1">PDL</font> program: </p>
+<h3>Writing PDL programs</h3>
+<p>One popular IDE for Perl is called Padre (&lt;<a rel="nofollow" href="http://padre.perlide.org">http://padre.perlide.org</a>&gt;). It is cross platform and easy to use. </p>
+<p> Whenever you write a stand-alone PDL program (i.e. outside the <tt>&quot;perldl&quot;</tt> or <tt>&quot;pdl2&quot;</tt> shells) you must start the program with <tt>&quot;use PDL;&quot;</tt>. This command imports the PDL module into Perl. Here is a sample PDL program: </p>
 <pre> use PDL; # Import main PDL module.
  use PDL::NiceSlice; # Import additional PDL module.
  $b = pdl [2,3,4]; # Statements end in semicolon.
@@ -35,19 +35,19 @@ description: "PDL::Scilab – A guide for Scilab users."
 <p>Save this file as <tt>&quot;myprogram.pl&quot;</tt> and run it with: </p>
 <pre> perl myprogram.pl</pre>
 <h3>New: Flexible syntax</h3>
-<p>In very recent versions of <font SIZE="-1">PDL </font>(version 2.4.7 or later) there is a flexible matrix syntax that can look extremely similar to Scilab: </p>
+<p>In very recent versions of PDL (version 2.4.7 or later) there is a flexible matrix syntax that can look extremely similar to Scilab: </p>
 <p> 1) Use a &#8216;;&#8217; to delimit rows: </p>
 <pre> $b = pdl q[ 2,3,4 ];
  $A = pdl q[ 1,2,3 ; 4,5,6 ];</pre>
 <p>2) Use spaces to separate elements: </p>
 <pre> $b = pdl q[ 2 3 4 ];
  $A = pdl q[ 1 2 3 ; 4 5 6 ];</pre>
-<p>Basically, as long as you put a <tt>&quot;q&quot;</tt> in front of the opening bracket, <font SIZE="-1">PDL</font> should &#8220;do what you mean&#8221;. So you can write in a syntax that is more comfortable for you.</p>
+<p>Basically, as long as you put a <tt>&quot;q&quot;</tt> in front of the opening bracket, PDL should &#8220;do what you mean&#8221;. So you can write in a syntax that is more comfortable for you.</p>
 <h2>A Module For Scilab Users</h2>
 <p>Here is a module that Scilab users will want to use:</p>
 <dl>
 <dt>PDL::NiceSlice</dt>
-<dd>Gives <font SIZE="-1">PDL</font> a syntax for slices (sub-matrices) that is shorter and more familiar to Scilab users. </dd>
+<dd>Gives PDL a syntax for slices (sub-matrices) that is shorter and more familiar to Scilab users. </dd>
 <pre> // Scilab
  b(1:5) --&gt; Selects the first 5 elements from b.
  # PDL without NiceSlice
@@ -56,13 +56,13 @@ description: "PDL::Scilab – A guide for Scilab users."
  $b(0:4) --&gt; Selects the first 5 elements from $b.</pre>
 </dl>
 <h2>Basic Features</h2>
-<p>This section explains how <font SIZE="-1">PDL</font>&#8216;s syntax differs from Scilab. Most Scilab users will want to start here.</p>
+<p>This section explains how PDL&#8216;s syntax differs from Scilab. Most Scilab users will want to start here.</p>
 <h3>General gotchas</h3>
 <dl>
 <dt>Indices</dt>
-<dd>In <font SIZE="-1">PDL,</font> indices start at &#8216;0&#8217; (like C and Java), not 1 (like Scilab). For example, if <tt>$b</tt> is an array with 5 elements, the elements would be numbered from 0 to 4.</dd>
+<dd>In PDL, indices start at &#8216;0&#8217; (like C and Java), not 1 (like Scilab). For example, if <tt>$b</tt> is an array with 5 elements, the elements would be numbered from 0 to 4.</dd>
 <dt>Displaying an object</dt>
-<dd>Scilab normally displays object contents automatically. In <font SIZE="-1">PDL</font> you display objects explicitly with the <tt>&quot;print&quot;</tt> command or the shortcut <tt>&quot;p&quot;</tt>: </dd>
+<dd>Scilab normally displays object contents automatically. In PDL you display objects explicitly with the <tt>&quot;print&quot;</tt> command or the shortcut <tt>&quot;p&quot;</tt>: </dd>
 <p> Scilab: </p>
 <pre> --&gt; a = 12
  a = 12.
@@ -77,7 +77,7 @@ description: "PDL::Scilab – A guide for Scilab users."
 </dl>
 <h3>Creating Piddles</h3>
 <dl>
-<dt>Variables in <font SIZE="-1">PDL</font></dt>
+<dt>Variables in PDL</dt>
 <dd>Variables always start with the &#8216;$&#8217; sign. </dd>
 <pre> Scilab: value = 42
  PerlDL: $value = 42</pre>
@@ -95,7 +95,7 @@ description: "PDL::Scilab – A guide for Scilab users."
  Matrix of zeros zeros(5,5) zeros 5,5
  Random matrix rand(5,5) random 5,5
  Linear vector 1:5 sequence 5</pre>
-<p>Notice that in <font SIZE="-1">PDL</font> the parenthesis in a function call are often optional. It is important to keep an eye out for possible ambiguities. For example: </p>
+<p>Notice that in PDL the parenthesis in a function call are often optional. It is important to keep an eye out for possible ambiguities. For example: </p>
 <pre> pdl&gt; p zeros 2, 2 + 2</pre>
 <p>Should this be interpreted as <tt>&quot;zeros(2,2) + 2&quot;</tt> or as <tt>&quot;zeros 2, (2+2)&quot;</tt>? Both are valid statements: </p>
 <pre> pdl&gt; p zeros(2,2) + 2
@@ -118,7 +118,7 @@ description: "PDL::Scilab – A guide for Scilab users."
  PerlDL: pdl&gt; p zeroes(5)-&gt;xlinvals(2,10)
  [2 4 6 8 10]</pre>
 <p><code>Explanation</code>: Start with a 1-dimensional piddle of 5 elements and give it equally spaced values from 2 to 10. </p>
-<p> Scilab has a single function call for this. On the other hand, <font SIZE="-1">PDL</font>&#8216;s method is more flexible: </p>
+<p> Scilab has a single function call for this. On the other hand, PDL&#8216;s method is more flexible: </p>
 <pre> pdl&gt; p zeros(5,5)-&gt;xlinvals(2,10)
  [
  [ 2 4 6 8 10]
@@ -154,9 +154,9 @@ description: "PDL::Scilab – A guide for Scilab users."
  ]
  ]</pre>
 </dd><dt>Slicing and indices</dt>
-<dd>Extracting a subset from a collection of data is known as <i>slicing</i>. The <font SIZE="-1">PDL</font> shell and Scilab have a similar syntax for slicing, but there are two important differences: </dd>
-<p> 1) <font SIZE="-1">PDL</font> indices start at 0, as in C and Java. Scilab starts indices at 1. </p>
-<p> 2) In Scilab you think &#8220;rows and columns&#8221;. In <font SIZE="-1">PDL,</font> think &#8220;x and y&#8221;. </p>
+<dd>Extracting a subset from a collection of data is known as <i>slicing</i>. The PDL shell and Scilab have a similar syntax for slicing, but there are two important differences: </dd>
+<p> 1) PDL indices start at 0, as in C and Java. Scilab starts indices at 1. </p>
+<p> 2) In Scilab you think &#8220;rows and columns&#8221;. In PDL, think &#8220;x and y&#8221;. </p>
 <pre> Scilab PerlDL
  ------ ------
  --&gt; A pdl&gt; p $A
@@ -182,7 +182,7 @@ description: "PDL::Scilab – A guide for Scilab users."
 <dd>
 </dd><dl>
 <dt><code>Warning</code></dt>
-<dd>When you write a stand-alone <font SIZE="-1">PDL</font> program you have to include the PDL::NiceSlice module. See the previous section &quot;<font SIZE="-1"><code>MODULES FOR SCILAB USERS</code></font>&quot; for more information. </dd>
+<dd>When you write a stand-alone PDL program you have to include the PDL::NiceSlice module. See the previous section &quot;<code>MODULES FOR SCILAB USERS</code>&quot; for more information. </dd>
 <pre> use PDL; # Import main PDL module.
  use PDL::NiceSlice; # Nice syntax for slicing.
  $A = random 4,4;
@@ -208,7 +208,7 @@ description: "PDL::Scilab – A guide for Scilab users."
  PerlDL: $A-&gt;transpose</pre>
 </dd></dl>
 <h3>Functions that aggregate data</h3>
-<p>Some functions (like <tt>&quot;sum&quot;</tt>, <tt>&quot;max&quot;</tt> and <tt>&quot;min&quot;</tt>) aggregate data for an N-dimensional data set. Scilab and <font SIZE="-1">PDL</font> both give you the option to apply these functions to the entire data set or to just one dimension.</p>
+<p>Some functions (like <tt>&quot;sum&quot;</tt>, <tt>&quot;max&quot;</tt> and <tt>&quot;min&quot;</tt>) aggregate data for an N-dimensional data set. Scilab and PDL both give you the option to apply these functions to the entire data set or to just one dimension.</p>
 <dl>
 <dt>Scilab</dt>
 <dd>In Scilab, these functions work along the entire data set by default, and an optional parameter &#8220;r&#8221; or &#8220;c&#8221; makes them act over rows or columns. </dd>
@@ -222,8 +222,8 @@ description: "PDL::Scilab – A guide for Scilab users."
  --&gt; max(A, &quot;c&quot;)
  ans = 5.
  4.</pre>
-<dt><font SIZE="-1">PDL</font></dt>
-<dd><font SIZE="-1">PDL</font> offers two functions for each feature. </dd>
+<dt>PDL</dt>
+<dd>PDL offers two functions for each feature. </dd>
 <pre> sum vs sumover
  avg vs average
  max vs maximum
@@ -242,7 +242,7 @@ description: "PDL::Scilab – A guide for Scilab users."
  5</pre>
 </dl>
 <h3>Higher dimensional data sets</h3>
-<p>A related issue is how Scilab and <font SIZE="-1">PDL</font> understand data sets of higher dimension. Scilab was designed for 1D vectors and 2D matrices with higher dimensional objects added on top. In contrast, <font SIZE="-1">PDL</font> was designed for N-dimensional piddles from the start. This leads to a few surprises in Scilab that don&#8217;t occur in <font SIZE="-1">PDL:</font></p>
+<p>A related issue is how Scilab and PDL understand data sets of higher dimension. Scilab was designed for 1D vectors and 2D matrices with higher dimensional objects added on top. In contrast, PDL was designed for N-dimensional piddles from the start. This leads to a few surprises in Scilab that don&#8217;t occur in PDL:</p>
 <dl>
 <dt>Scilab sees a vector as a 2D matrix.</dt>
 <dd>
@@ -251,7 +251,7 @@ description: "PDL::Scilab – A guide for Scilab users."
  --&gt; vector = [1,2,3,4]; pdl&gt; $vector = pdl [1,2,3,4]
  --&gt; size(vector) pdl&gt; p $vector-&gt;dims
  ans = 1 4 4</pre>
-<p>Scilab sees <tt>&quot;[1,2,3,4]&quot;</tt> as a 2D matrix (1&#215;4 matrix). <font SIZE="-1">PDL</font> sees it as a 1D vector: A single dimension of size 4.</p>
+<p>Scilab sees <tt>&quot;[1,2,3,4]&quot;</tt> as a 2D matrix (1&#215;4 matrix). PDL sees it as a 1D vector: A single dimension of size 4.</p>
 </dd><dt>But Scilab ignores the last dimension of a 4x1x1 matrix.</dt>
 <dd>
 <pre> Scilab PerlDL
@@ -272,7 +272,7 @@ description: "PDL::Scilab – A guide for Scilab users."
  pdl&gt; p $A-&gt;dims
  3 2 2</pre>
 </dd><dt>Feature support.</dt>
-<dd>In Scilab, several features are not available for N-D arrays. In <font SIZE="-1">PDL,</font> just about any feature supported by 1D and 2D piddles, is equally supported by N-dimensional piddles. There is usually no distinction: </dd>
+<dd>In Scilab, several features are not available for N-D arrays. In PDL, just about any feature supported by 1D and 2D piddles, is equally supported by N-dimensional piddles. There is usually no distinction: </dd>
 <pre> Scilab PerlDL
  ------ ------
  --&gt; A = ones(3,3,3); pdl&gt; $A = ones(3,3,3);
@@ -288,7 +288,7 @@ description: "PDL::Scilab – A guide for Scilab users."
  end }</pre>
 <dl>
 <dt><code>Note</code></dt>
-<dd>Never use for-loops for numerical work. Perl&#8217;s for-loops are faster than Scilab&#8217;s, but they both pale against a &#8220;vectorized&#8221; operation. <font SIZE="-1">PDL</font> has many tools that facilitate writing vectorized programs. These are beyond the scope of this guide. To learn more, see: PDL::Indexing, PDL::Threading, and <font SIZE="-1">PDL::PP</font>. </dd>
+<dd>Never use for-loops for numerical work. Perl&#8217;s for-loops are faster than Scilab&#8217;s, but they both pale against a &#8220;vectorized&#8221; operation. PDL has many tools that facilitate writing vectorized programs. These are beyond the scope of this guide. To learn more, see: PDL::Indexing, PDL::Threading, and PDL::PP. </dd>
 <p> Likewise, never use <tt>1..10</tt> for numerical work, even outside a for-loop. <tt>1..10</tt> is a Perl array. Perl arrays are designed for flexibility, not speed. Use <i>piddles</i> instead. To learn more, see the next section.</dl>
 <h3>Piddles vs Perl Arrays</h3>
 <p>It is important to note the difference between a <i>Piddle</i> and a Perl array. Perl has a general-purpose array object that can hold any type of element: </p>
@@ -302,7 +302,7 @@ description: "PDL::Scilab – A guide for Scilab users."
 <p>For example: </p>
 <pre> $points = pdl 1..10_000_000 # 4.7 seconds
  $points = sequence 10_000_000 # milliseconds</pre>
-<p><font SIZE="-1"><code>TIP</code></font>: You can use underscores in numbers (<tt>&quot;10_000_000&quot;</tt> reads better than <tt>10000000</tt>).</p>
+<p><code>TIP</code>: You can use underscores in numbers (<tt>&quot;10_000_000&quot;</tt> reads better than <tt>10000000</tt>).</p>
 <h3>Conditionals</h3>
 <p>Perl has many conditionals, but we will only show the one that is most familiar to Scilab users: </p>
 <pre> Scilab PerlDL
@@ -323,8 +323,8 @@ description: "PDL::Scilab – A guide for Scilab users."
 <pre> Scilab: elseif
  PerlDL: elsif</pre>
 <p>If your conditional gives a syntax error, check that you wrote your <tt>&quot;elsif&quot;</tt>&#8216;s correctly.</dl>
-<h3><font SIZE="-1">TIMTOWDI </font>(There Is More Than One Way To Do It)</h3>
-<p>One of the most interesting differences between <font SIZE="-1">PDL</font> and other tools is the expressiveness of the Perl language. <font SIZE="-1">TIMTOWDI,</font> or &#8220;There Is More Than One Way To Do It&#8221;, is Perl&#8217;s motto. </p>
+<h3>TIMTOWDI (There Is More Than One Way To Do It)</h3>
+<p>One of the most interesting differences between PDL and other tools is the expressiveness of the Perl language. TIMTOWDI, or &#8220;There Is More Than One Way To Do It&#8221;, is Perl&#8217;s motto. </p>
 <p> Perl was written by a linguist, and one of its defining properties is that statements can be formulated in different ways to give the language a more natural feel. For example, you are unlikely to say to a friend: </p>
 <pre> &quot;While I am not finished, I will keep working.&quot;</pre>
 <p>Human language is more flexible than that. Instead, you are more likely to say: </p>
@@ -348,14 +348,14 @@ description: "PDL::Scilab – A guide for Scilab users."
  kiss_wife() unless wife_angry();</pre>
 <p>In this way, Perl often allows you to write more natural, easy to understand code than is possible in more restrictive programming languages.</p>
 <h3>Functions</h3>
-<p><font SIZE="-1">PDL</font>&#8216;s syntax for declaring functions differs significantly from Scilab&#8217;s. </p>
+<p>PDL&#8216;s syntax for declaring functions differs significantly from Scilab&#8217;s. </p>
 <pre> Scilab PerlDL
  ------ ------
  function retval = foo(x,y) sub foo {
  retval = x.**2 + x.*y my ($x, $y) = @_;
  endfunction return $x**2 + $x*$y;
  }</pre>
-<p>Don&#8217;t be intimidated by all the new syntax. Here is a quick run through a function declaration in <font SIZE="-1">PDL:</font> </p>
+<p>Don&#8217;t be intimidated by all the new syntax. Here is a quick run through a function declaration in PDL: </p>
 <p> 1) &quot;<code>sub</code>&#8220; stands for &#8221;subroutine&quot;. </p>
 <p> 2) &quot;<code>my</code>&quot; declares variables to be local to the function. </p>
 <p> 3) &quot;@_&quot; is a special Perl array that holds all the function parameters. This might seem like a strange way to do functions, but it allows you to make functions that take a variable number of parameters. For example, the following function takes any number of parameters and adds them together: </p>
@@ -403,37 +403,37 @@ description: "PDL::Scilab – A guide for Scilab users."
 <p>Notice that Perl hashes start with the &#8220;%&#8221; prefix instead of the &#8220;@&#8221; for arrays and &#8220;$&#8221; used by piddles. </p>
 <p> <i>To learn about Perl hashes, please go to &lt;<a rel="nofollow" href="http://perldoc.perl.org/perldata.html">http://perldoc.perl.org/perldata.html</a>&gt; or run the command </i>&quot;perldoc perldata&quot;<i>.</i></dl>
 <h3>Performance</h3>
-<p><font SIZE="-1">PDL</font> has powerful performance features, some of which are not normally available in numerical computation tools. The following pages will guide you through these features:</p>
+<p>PDL has powerful performance features, some of which are not normally available in numerical computation tools. The following pages will guide you through these features:</p>
 <dl>
 <dt>PDL::Indexing</dt>
 <dd><code>Level</code>: Beginner </dd>
 <p> This beginner tutorial covers the standard &#8220;vectorization&#8221; feature that you already know from Scilab. Use this page to learn how to avoid for-loops to make your program more efficient.</p>
 <dt>PDL::Threading</dt>
 <dd><code>Level</code>: Intermediate </dd>
-<p> <font SIZE="-1">PDL</font>&#8216;s &#8220;vectorization&#8221; feature goes beyond what most numerical software can do. In this tutorial you&#8217;ll learn how to &#8220;thread&#8221; over higher dimensions, allowing you to vectorize your program further than is possible in Scilab.</p>
+<p> PDL&#8216;s &#8220;vectorization&#8221; feature goes beyond what most numerical software can do. In this tutorial you&#8217;ll learn how to &#8220;thread&#8221; over higher dimensions, allowing you to vectorize your program further than is possible in Scilab.</p>
 <dt>Benchmarks</dt>
 <dd><code>Level</code>: Intermediate </dd>
 <p> Perl comes with an easy to use benchmarks module to help you find how long it takes to execute different parts of your code. It is a great tool to help you focus your optimization efforts. You can read about it online (&lt;<a rel="nofollow" href="http://perldoc.perl.org/Benchmark.html">http://perldoc.perl.org/Benchmark.html</a>&gt;) or through the command <tt>&quot;perldoc Benchmark&quot;</tt>.</p>
-<dt><font SIZE="-1">PDL::PP</font></dt>
+<dt>PDL::PP</dt>
 <dd><code>Level</code>: Advanced </dd>
-<p> <font SIZE="-1">PDL</font>&#8216;s Pre-Processor is one of <font SIZE="-1">PDL</font>&#8216;s most powerful features. You write a function definition in special markup and the pre-processor generates real C code which can be compiled. With <font SIZE="-1">PDL:PP</font> you get the full speed of native C code without having to deal with the full complexity of the C language.</dl>
+<p> PDL&#8216;s Pre-Processor is one of PDL&#8216;s most powerful features. You write a function definition in special markup and the pre-processor generates real C code which can be compiled. With PDL:PP you get the full speed of native C code without having to deal with the full complexity of the C language.</dl>
 <h3>Plotting</h3>
-<p><font SIZE="-1">PDL</font> has full-featured plotting abilities. Unlike Scilab, <font SIZE="-1">PDL</font> relies more on third-party libraries (pgplot and PLplot) for its 2D plotting features. Its 3D plotting and graphics uses OpenGL for performance and portability. <font SIZE="-1">PDL</font> has three main plotting modules:</p>
+<p>PDL has full-featured plotting abilities. Unlike Scilab, PDL relies more on third-party libraries (pgplot and PLplot) for its 2D plotting features. Its 3D plotting and graphics uses OpenGL for performance and portability. PDL has three main plotting modules:</p>
 <dl>
 <dt>PDL::Graphics::PGPLOT</dt>
 <dd><code>Best for</code>: Plotting 2D functions and data sets. </dd>
-<p> This is an interface to the venerable <font SIZE="-1">PGPLOT</font> library. <font SIZE="-1">PGPLOT</font> has been widely used in the academic and scientific communities for many years. In part because of its age, <font SIZE="-1">PGPLOT</font> has some limitations compared to newer packages such as PLplot (e.g. no <font SIZE="-1">RGB</font> graphics). But it has many features that still make it popular in the scientific community.</p>
+<p> This is an interface to the venerable PGPLOT library. PGPLOT has been widely used in the academic and scientific communities for many years. In part because of its age, PGPLOT has some limitations compared to newer packages such as PLplot (e.g. no RGB graphics). But it has many features that still make it popular in the scientific community.</p>
 <dt>PDL::Graphics::PLplot</dt>
 <dd><code>Best for</code>: Plotting 2D functions as well as 2D and 3D data sets. </dd>
 <p> This is an interface to the PLplot plotting library. PLplot is a modern, open source library for making scientific plots. It supports plots of both 2D and 3D data sets. PLplot is best supported for unix/linux/macosx platforms. It has an active developers community and support for win32 platforms is improving.</p>
 <dt>PDL::Graphics::TriD</dt>
 <dd><code>Best for</code>: Plotting 3D functions. </dd>
-<p> The native <font SIZE="-1">PDL 3D</font> graphics library using OpenGL as a backend for 3D plots and data visualization. With OpenGL, it is easy to manipulate the resulting 3D objects with the mouse in real time.</dl>
+<p> The native PDL 3D graphics library using OpenGL as a backend for 3D plots and data visualization. With OpenGL, it is easy to manipulate the resulting 3D objects with the mouse in real time.</dl>
 <h3>Writing GUIs</h3>
-<p>Through Perl, <font SIZE="-1">PDL</font> has access to all the major toolkits for creating a cross platform graphical user interface. One popular option is wxPerl (&lt;<a rel="nofollow" href="http://wxperl.sourceforge.net">http://wxperl.sourceforge.net</a>&gt;). These are the Perl bindings for wxWidgets, a powerful <font SIZE="-1">GUI</font> toolkit for writing cross-platform applications. </p>
-<p> wxWidgets is designed to make your application look and feel like a native application in every platform. For example, the Perl <font SIZE="-1">IDE </font><code>Padre</code> is written with wxPerl.</p>
+<p>Through Perl, PDL has access to all the major toolkits for creating a cross platform graphical user interface. One popular option is wxPerl (&lt;<a rel="nofollow" href="http://wxperl.sourceforge.net">http://wxperl.sourceforge.net</a>&gt;). These are the Perl bindings for wxWidgets, a powerful GUI toolkit for writing cross-platform applications. </p>
+<p> wxWidgets is designed to make your application look and feel like a native application in every platform. For example, the Perl IDE <code>Padre</code> is written with wxPerl.</p>
 <h3>Xcos / Scicos</h3>
-<p>Xcos (formerly Scicos) is a graphical dynamical system modeler and simulator. It is part of the standard Scilab distribution. <font SIZE="-1">PDL</font> and Perl do not have a direct equivalent to Scilab&#8217;s Xcos. If this feature is important to you, you should probably keep a copy of Scilab around for that.</p>
+<p>Xcos (formerly Scicos) is a graphical dynamical system modeler and simulator. It is part of the standard Scilab distribution. PDL and Perl do not have a direct equivalent to Scilab&#8217;s Xcos. If this feature is important to you, you should probably keep a copy of Scilab around for that.</p>
 <h2>Copyright</h2>
 <p>Copyright 2010 Daniel Carrera (dcarrera [at] gmail.com). You can distribute and/or modify this document under the same terms as the current Perl license. </p>
 <p> See: <a rel="nofollow" href="http://dev.perl.org/licenses/">http://dev.perl.org/licenses/</a></p>

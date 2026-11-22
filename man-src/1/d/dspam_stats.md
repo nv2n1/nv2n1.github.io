@@ -18,7 +18,7 @@ description: "dspam_stats – display spam statistics"
 <dt><code>&nbsp;<wbr>&#8211;profile=</code><i>PROFILE</i></dt>
 <dd> Specify a storage profile from dspam.conf. The storage profile selected will be used for all database connectivity. See dspam.conf for more information. </dd>
 <dt><code>-H</code></dt>
-<dd> Uses multi-line, human-readable output displaying the fully-qualified names for each class of totals, instead of their abbreviated terms.<br />
+<dd> Uses multi-line, human-readable output displaying the fully-qualified names for each class of totals, instead of their abbreviated terms.<br/>
 &nbsp;<wbr></dd>
 <dt><code>-h</code></dt>
 <dd> Displays help syntax </dd>
@@ -41,7 +41,7 @@ description: "dspam_stats – display spam statistics"
 <dd> Operation resulted in an error. </dd>
 </dl>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2002-2012 DSPAM Project<br />
+<p> Copyright &#169; 2002-2012 DSPAM Project<br/>
  All rights reserved. </p>
 <p> For more information, see <a rel="nofollow" href="http://dspam.sourceforge.net.">http://dspam.sourceforge.net.</a> </p>
 <h2>SEE ALSO</h2>

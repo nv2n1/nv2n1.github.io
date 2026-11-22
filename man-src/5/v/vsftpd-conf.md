@@ -11,11 +11,11 @@ description: "vsftpd.conf – config file for vsftpd"
 <h2>Description</h2>
 <p>vsftpd.conf may be used to control various aspects of vsftpd&#8217;s behaviour. By default, vsftpd looks for this file at the location <code>/etc/vsftpd/vsftpd.conf</code>. However, you may override this by specifying a command line argument to vsftpd. The command line argument is the pathname of the configuration file for vsftpd. This behaviour is useful because you may wish to use an advanced inetd such as <code>xinetd</code> to launch vsftpd with different configuration files on a per virtual host basis. </p>
 <p> Systemd changes the vsftpd daemon start-up. The vsftpd package contains vsftpd-generator script generating symbolic links to /var/run/systemd/generator/vsftpd.target.wants directory. The generator is called during e. g. &#8216;systemctl &#8211;system daemon-reload&#8217;. All these symbolic links link /usr/lib/systemd/system/vsftpd [at] .service file. The vsftpd daemon(s) is/are controlled by one of following ways: </p>
-<p> 1. Single daemon using default /etc/vsftpd/vsftpd.conf configuration file<br />
+<p> 1. Single daemon using default /etc/vsftpd/vsftpd.conf configuration file<br/>
  # systemctl {start,stop,&#8230;} vsftpd[.service] </p>
-<p> 2. Single daemon using /etc/vsftpd/&lt;config-filename&gt;.conf<br />
+<p> 2. Single daemon using /etc/vsftpd/&lt;config-filename&gt;.conf<br/>
  # systemctl {start,stop,&#8230;} vsftpd@&lt;config-filename-without-extension&gt;[.service] </p>
-<p> 3. All instances together<br />
+<p> 3. All instances together<br/>
  # systemctl {restart,stop} vsftpd.target </p>
 <p> See <a href="/docs/linux/man/5-systemd-unit/">systemd.unit</a>(5), <a href="/docs/linux/man/5-systemd-target/">systemd.target</a>(5) for further details.</p>
 <h2>Format</h2>

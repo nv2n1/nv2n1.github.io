@@ -42,12 +42,12 @@ description: "setupcon – sets up the font and the keyboard on the console"
 <dd> Display usage information. </dd>
 </dl>
 <h2>FILES</h2>
-<p> <i>~/.console-setup</i><br />
- <i>~/.keyboard</i><br />
- <i>/etc/default/console-setup</i><br />
- <i>/etc/default/keyboard</i><br />
- <i>/etc/default/console-setup.VARIANT</i><br />
- <i>/etc/default/keyboard.VARIANT</i><br />
+<p> <i>~/.console-setup</i><br/>
+ <i>~/.keyboard</i><br/>
+ <i>/etc/default/console-setup</i><br/>
+ <i>/etc/default/keyboard</i><br/>
+ <i>/etc/default/console-setup.VARIANT</i><br/>
+ <i>/etc/default/keyboard.VARIANT</i><br/>
  <i>/etc/console-setup/</i> </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-keyboard/">keyboard</a></code>(5), <code><a href="/docs/linux/man/5-console-setup/">console-setup</a></code>(5) </p>

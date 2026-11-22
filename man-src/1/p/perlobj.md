@@ -15,7 +15,7 @@ perlobj - Perl object reference
 
  In order to understand Perl objects, you first need to understand references in Perl. See perlreftut for details. 
 
- This document describes all of Perl's object-oriented (<font SIZE="-1">OO</font>) features from the ground up. If you're just looking to write some object-oriented code of your own, you are probably better served by using one of the object systems from <font SIZE="-1">CPAN</font> described in perlootut. 
+ This document describes all of Perl's object-oriented (OO) features from the ground up. If you're just looking to write some object-oriented code of your own, you are probably better served by using one of the object systems from CPAN described in perlootut. 
 
  If you're looking to write your own object system, or you need to maintain code which implements objects from scratch then this document will help you understand exactly how Perl does object orientation. 
 
@@ -59,7 +59,7 @@ sub load
 }
  
 
- The modern convention for <font SIZE="-1">OO</font> modules is to always use <tt>&quot;new&quot;</tt> as the name for the constructor, but there is no requirement to do so. Any subroutine that blesses a data structure into a class is a valid constructor in Perl. 
+ The modern convention for OO modules is to always use <tt>&quot;new&quot;</tt> as the name for the constructor, but there is no requirement to do so. Any subroutine that blesses a data structure into a class is a valid constructor in Perl. 
 
  In the previous examples, the <tt>&quot;{}&quot;</tt> code creates a reference to an empty anonymous hash. The <tt>&quot;bless&quot;</tt> function then takes that reference and associates the hash with the class in <tt>$class</tt>. In the simplest case, the <tt>$class</tt> variable will end up containing the string ``File''. 
 
@@ -90,7 +90,7 @@ sub new
 
  Since the object is also a hash, you can treat it as one, using it to store data associated with the object. Typically, code inside the class can treat the hash as an accessible data structure, while code outside the class should always treat the object as opaque. This is called <b>encapsulation</b>. Encapsulation means that the user of an object does not have to know how it is implemented. The user simply calls documented methods on the object. 
 
- Note, however, that (unlike most other <font SIZE="-1">OO</font> languages) Perl does not ensure or enforce encapsulation in any way. If you want objects to actually <i>be</i> opaque you need to arrange for that yourself. This can be done in a variety of ways, including using ``Inside-Out objects'' or modules from <font SIZE="-1">CPAN.</font> 
+ Note, however, that (unlike most other OO languages) Perl does not ensure or enforce encapsulation in any way. If you want objects to actually <i>be</i> opaque you need to arrange for that yourself. This can be done in a variety of ways, including using ``Inside-Out objects'' or modules from CPAN. 
 
  <i>Objects Are Blessed; Variables Are Not</i> 
 
@@ -120,7 +120,7 @@ print blessed($bar) // 'not blessed';    # prints "not blessed"
 
  However the parent classes are set, the package's <tt>@ISA</tt> variable will contain a list of those parents. This is simply a list of scalars, each of which is a string that corresponds to a package name. 
 
- All classes inherit from the <font SIZE="-1">UNIVERSAL</font> class implicitly. The <font SIZE="-1">UNIVERSAL</font> class is implemented by the Perl core, and provides several default methods, such as <tt>&quot;isa()&quot;</tt>, <tt>&quot;can()&quot;</tt>, and <tt>&quot;VERSION()&quot;</tt>. The <tt>&quot;UNIVERSAL&quot;</tt> class will <i>never</i> appear in a package's <tt>@ISA</tt> variable. 
+ All classes inherit from the UNIVERSAL class implicitly. The UNIVERSAL class is implemented by the Perl core, and provides several default methods, such as <tt>&quot;isa()&quot;</tt>, <tt>&quot;can()&quot;</tt>, and <tt>&quot;VERSION()&quot;</tt>. The <tt>&quot;UNIVERSAL&quot;</tt> class will <i>never</i> appear in a package's <tt>@ISA</tt> variable. 
 
  Perl <i>only</i> provides method inheritance as a built-in feature. Attribute inheritance is left up the class to implement. See the ``Writing Accessors'' section for details.
 
@@ -205,7 +205,7 @@ SUPER::save($thing);
 #classes
  
 
- <i>How </i><font SIZE="-1"><i>SUPER</i></font><i> is Resolved</i> 
+ <i>How </i><i>SUPER</i><i> is Resolved</i> 
 
  The <tt>&quot;SUPER&quot;</tt> pseudo-class is resolved from the package where the call is made. It is <i>not</i> resolved based on the object's class. This is important, because it lets methods at different levels within a deep inheritance hierarchy each correctly call their respective parent methods. 
 
@@ -359,7 +359,7 @@ sub new
 
  While it's possible to refer directly to these hash keys outside of the class, it's considered a best practice to wrap all access to the attribute with accessor methods. 
 
- This has several advantages. Accessors make it easier to change the implementation of an object later while still preserving the original <font SIZE="-1">API.</font> 
+ This has several advantages. Accessors make it easier to change the implementation of an object later while still preserving the original API. 
 
  An accessor lets you add additional code around attribute access. For example, you could apply a default to an attribute that wasn't set in the constructor, or you could validate that a new value for the attribute is acceptable. 
 
@@ -396,7 +396,7 @@ sub path
 
  Our constructor and accessors are not very smart. They don't check that a <tt>$path</tt> is defined, nor do they check that a <tt>$path</tt> is a valid filesystem path. 
 
- Doing these checks by hand can quickly become tedious. Writing a bunch of accessors by hand is also incredibly tedious. There are a lot of modules on <font SIZE="-1">CPAN</font> that can help you write safer and more concise code, including the modules we recommend in perlootut.
+ Doing these checks by hand can quickly become tedious. Writing a bunch of accessors by hand is also incredibly tedious. There are a lot of modules on CPAN that can help you write safer and more concise code, including the modules we recommend in perlootut.
 
 <h3>Method Call Variations</h3>
 
@@ -538,7 +538,7 @@ $class-&gt;new ();
 
  To parse this code, Perl uses a heuristic based on what package names it has seen, what subroutines exist in the current package, what barewords it has previously seen, and other input. Needless to say, heuristics can produce very surprising results! 
 
- Older documentation (and some <font SIZE="-1">CPAN</font> modules) encouraged this syntax, particularly for constructors, so you may still find it in the wild. However, we encourage you to avoid using it in new code. 
+ Older documentation (and some CPAN modules) encouraged this syntax, particularly for constructors, so you may still find it in the wild. However, we encourage you to avoid using it in new code. 
 
  You can force Perl to interpret the bareword as a class name by appending ``::'' to it, like we saw earlier: 
 
@@ -576,21 +576,21 @@ if (defined blessed($thing)) {
 
  If you simply want to check that a variable contains an object reference, we recommend that you use <tt>&quot;defined blessed($object)&quot;</tt>, since <tt>&quot;ref&quot;</tt> returns true values for all references, not just objects.
 
-<h3>The <font SIZE="-1">UNIVERSAL</font> Class</h3>
+<h3>The UNIVERSAL Class</h3>
 
- All classes automatically inherit from the <font SIZE="-1">UNIVERSAL</font> class, which is built-in to the Perl core. This class provides a number of methods, all of which can be called on either a class or an object. You can also choose to override some of these methods in your class. If you do so, we recommend that you follow the built-in semantics described below.
+ All classes automatically inherit from the UNIVERSAL class, which is built-in to the Perl core. This class provides a number of methods, all of which can be called on either a class or an object. You can also choose to override some of these methods in your class. If you do so, we recommend that you follow the built-in semantics described below.
 <dl>
 <dt>isa($class)
 </dt><dd> The <tt>&quot;isa&quot;</tt> method returns <i>true</i> if the object is a member of the class in <tt>$class</tt>, or a member of a subclass of <tt>$class</tt>. 
  If you override this method, it should never throw an exception.
-</dd><dt><font SIZE="-1">DOES</font>($role)
+</dd><dt>DOES($role)
 </dt><dd> The <tt>&quot;DOES&quot;</tt> method returns <i>true</i> if its object claims to perform the role <tt>$role</tt>. By default, this is equivalent to <tt>&quot;isa&quot;</tt>. This method is provided for use by object system extensions that implement roles, like <tt>&quot;Moose&quot;</tt> and <tt>&quot;Role::Tiny&quot;</tt>. 
  You can also override <tt>&quot;DOES&quot;</tt> directly in your own classes. If you override this method, it should never throw an exception.
 </dd><dt>can($method)
 </dt><dd> The <tt>&quot;can&quot;</tt> method checks to see if the class or object it was called on has a method named <tt>$method</tt>. This checks for the method in the class and all of its parents. If the method exists, then a reference to the subroutine is returned. If it does not then <tt>&quot;undef&quot;</tt> is returned. 
  If your class responds to method calls via <tt>&quot;AUTOLOAD&quot;</tt>, you may want to overload <tt>&quot;can&quot;</tt> to return a subroutine reference for methods which your <tt>&quot;AUTOLOAD&quot;</tt> method handles. 
  If you override this method, it should never throw an exception.
-</dd><dt><font SIZE="-1">VERSION</font>($need)
+</dd><dt>VERSION($need)
 </dt><dd> The <tt>&quot;VERSION&quot;</tt> method returns the version number of the class (package). 
  If the <tt>$need</tt> argument is given then it will check that the current version (as defined by the <tt>$VERSION</tt> variable in the package) is greater than or equal to <tt>$need</tt>; it will die if this is not the case. This method is called automatically by the <tt>&quot;VERSION&quot;</tt> form of <tt>&quot;use&quot;</tt>. 
 use Package 1.2 qw(some imported subs);
@@ -599,7 +599,7 @@ Package-&gt;VERSION(1.2);
  We recommend that you use this method to access another package's version, rather than looking directly at <tt>$Package::VERSION</tt>. The package you are looking at could have overridden the <tt>&quot;VERSION&quot;</tt> method. 
  We also recommend using this method to check whether a module has a sufficient version. The internal implementation uses the version module to make sure that different types of version numbers are compared correctly.</dd></dl>
 
-<h3><font SIZE="-1">AUTOLOAD</font></h3>
+<h3>AUTOLOAD</h3>
 
  If you call a method that doesn't exist in a class, Perl will throw an error. However, if that class or any of its parent classes defines an <tt>&quot;AUTOLOAD&quot;</tt> method, that <tt>&quot;AUTOLOAD&quot;</tt> method is called instead. 
 
@@ -629,7 +629,7 @@ sub DESTROY
 
  Without the <tt>&quot;our $AUTOLOAD&quot;</tt> declaration, this code will not compile under the strict pragma. 
 
- As the comment says, this is not a good way to implement accessors. It's slow and too clever by far. However, you may see this as a way to provide accessors in older Perl code. See perlootut for recommendations on <font SIZE="-1">OO</font> coding in Perl. 
+ As the comment says, this is not a good way to implement accessors. It's slow and too clever by far. However, you may see this as a way to provide accessors in older Perl code. See perlootut for recommendations on OO coding in Perl. 
 
  If your class does have an <tt>&quot;AUTOLOAD&quot;</tt> method, we strongly recommend that you override <tt>&quot;can&quot;</tt> in your class as well. Your overridden <tt>&quot;can&quot;</tt> method should return a subroutine reference for any method that your <tt>&quot;AUTOLOAD&quot;</tt> responds to.
 
@@ -685,11 +685,11 @@ sub DESTROY
 }
  
 
- Note that this variable was added in Perl 5.14.0. If you want to detect the global destruction phase on older versions of Perl, you can use the <tt>&quot;Devel::GlobalDestruction&quot;</tt> module on <font SIZE="-1">CPAN.</font> 
+ Note that this variable was added in Perl 5.14.0. If you want to detect the global destruction phase on older versions of Perl, you can use the <tt>&quot;Devel::GlobalDestruction&quot;</tt> module on CPAN. 
 
  If your <tt>&quot;DESTROY&quot;</tt> method issues a warning during global destruction, the Perl interpreter will append the string `` during global destruction'' to the warning. 
 
- During global destruction, Perl will always garbage collect objects before unblessed references. See ``<font SIZE="-1">PERL_DESTRUCT_LEVEL''</font> in perlhacktips for more information about global destruction.
+ During global destruction, Perl will always garbage collect objects before unblessed references. See ``PERL_DESTRUCT_LEVEL'' in perlhacktips for more information about global destruction.
 
 <h3>Non-Hash Objects</h3>
 
@@ -720,7 +720,7 @@ print $time-&gt;epoch();
 
  In the past, the Perl community experimented with a technique called ``inside-out objects''. An inside-out object stores its data outside of the object's reference, indexed on a unique property of the object, such as its memory address, rather than in the object itself. This has the advantage of enforcing the encapsulation of object attributes, since their data is not stored in the object itself. 
 
- This technique was popular for a while (and was recommended in Damian Conway's <i>Perl Best Practices</i>), but never achieved universal adoption. The Object::InsideOut module on <font SIZE="-1">CPAN</font> provides a comprehensive implementation of this technique, and you may see it or other inside-out modules in the wild. 
+ This technique was popular for a while (and was recommended in Damian Conway's <i>Perl Best Practices</i>), but never achieved universal adoption. The Object::InsideOut module on CPAN provides a comprehensive implementation of this technique, and you may see it or other inside-out modules in the wild. 
 
  Here is a simple example of the technique, using the Hash::Util::FieldHash core module. This module was added to the core to support inside-out object implementations. 
 

@@ -38,26 +38,26 @@ description: "tctmttest – test cases of the table database API"
 <p> Options feature the following. </p>
 <dl>
 <dt>
-</dt><dd> <code>-tl</code> : enable the option `TDBTLARGE&#8217;.<br />
- <code>-td</code> : enable the option `TDBTDEFLATE&#8217;.<br />
- <code>-tb</code> : enable the option `TDBTBZIP&#8217;.<br />
- <code>-tt</code> : enable the option `TDBTTCBS&#8217;.<br />
- <code>-tx</code> : enable the option `TDBTEXCODEC&#8217;.<br />
- <code>-rc </code><i>num</i> : specify the number of cached records.<br />
- <code>-lc </code><i>num</i> : specify the number of cached leaf pages.<br />
- <code>-nc </code><i>num</i> : specify the number of cached non-leaf pages.<br />
- <code>-xm </code><i>num</i> : specify the size of the extra mapped memory.<br />
- <code>-df </code><i>num</i> : specify the unit step number of auto defragmentation.<br />
- <code>-ip</code> : create the number index for the primary key.<br />
- <code>-is</code> : create the string index for the column &quot;str&quot;.<br />
- <code>-in</code> : create the number index for the column &quot;num&quot;.<br />
- <code>-it</code> : create the string index for the column &quot;type&quot;.<br />
- <code>-if</code> : create the token inverted index for the column &quot;flag&quot;.<br />
- <code>-ix</code> : create the q-gram inverted index for the column &quot;text&quot;.<br />
- <code>-nl</code> : enable the option `TDBNOLCK&#8217;.<br />
- <code>-nb</code> : enable the option `TDBLCKNB&#8217;.<br />
- <code>-rnd</code> : select keys at random.<br />
- <code>-nc</code> : omit the comparison test.<br />
+</dt><dd> <code>-tl</code> : enable the option `TDBTLARGE&#8217;.<br/>
+ <code>-td</code> : enable the option `TDBTDEFLATE&#8217;.<br/>
+ <code>-tb</code> : enable the option `TDBTBZIP&#8217;.<br/>
+ <code>-tt</code> : enable the option `TDBTTCBS&#8217;.<br/>
+ <code>-tx</code> : enable the option `TDBTEXCODEC&#8217;.<br/>
+ <code>-rc </code><i>num</i> : specify the number of cached records.<br/>
+ <code>-lc </code><i>num</i> : specify the number of cached leaf pages.<br/>
+ <code>-nc </code><i>num</i> : specify the number of cached non-leaf pages.<br/>
+ <code>-xm </code><i>num</i> : specify the size of the extra mapped memory.<br/>
+ <code>-df </code><i>num</i> : specify the unit step number of auto defragmentation.<br/>
+ <code>-ip</code> : create the number index for the primary key.<br/>
+ <code>-is</code> : create the string index for the column &quot;str&quot;.<br/>
+ <code>-in</code> : create the number index for the column &quot;num&quot;.<br/>
+ <code>-it</code> : create the string index for the column &quot;type&quot;.<br/>
+ <code>-if</code> : create the token inverted index for the column &quot;flag&quot;.<br/>
+ <code>-ix</code> : create the q-gram inverted index for the column &quot;text&quot;.<br/>
+ <code>-nl</code> : enable the option `TDBNOLCK&#8217;.<br/>
+ <code>-nb</code> : enable the option `TDBLCKNB&#8217;.<br/>
+ <code>-rnd</code> : select keys at random.<br/>
+ <code>-nc</code> : omit the comparison test.<br/>
  <code>-rr </code><i>num</i> : specify the ratio of reading operation by percentage.
 </dd></dl>
 <p> This command returns 0 on success, another on failure. </p>

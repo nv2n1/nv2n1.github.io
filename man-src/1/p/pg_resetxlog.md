@@ -34,7 +34,7 @@ description: "pg_resetxlog – reset the write-ahead log and other control infor
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  <code>pg_resetxlog</code> itself looks at the files in pg_xlog and chooses a default <code>-l</code> setting beyond the last existing file name. Therefore, manual adjustment of <code>-l</code> should only be needed if you are aware of WAL segment files that are not currently present in pg_xlog, such as entries in an offline archive; or if the contents of pg_xlog have been lost entirely. </dd>
 </dl>
 </dl>

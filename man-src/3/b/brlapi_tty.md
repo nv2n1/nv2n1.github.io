@@ -79,8 +79,8 @@ description: "Entering & leaving tty mode –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>ttys</i> points on the array of ttys representing the tty path to be got. Can be NULL if nttys is 0.<br />
- <i>count</i> gives the number of elements in ttys.<br />
+</dt><dd> <i>ttys</i> points on the array of ttys representing the tty path to be got. Can be NULL if nttys is 0.<br/>
+ <i>count</i> gives the number of elements in ttys.<br/>
  <i>driver</i> has the same meaning as in <code>brlapi_enterTtyMode()</code></dd></dl>
 <p> Providing nttys == 0 means to get the root. </p>
 <p> <code>See Also:</code></p>

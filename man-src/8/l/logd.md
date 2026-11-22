@@ -32,7 +32,7 @@ description: "logd – job output logging daemon"
 <h2>Reporting Bugs</h2>
 <p>Report bugs at <a rel="nofollow" href="https://launchpad.net/products/upstart/+bugs">https://launchpad.net/products/upstart/+bugs</a></p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2006 Canonical Ltd.<br />
+<p>Copyright &#169; 2006 Canonical Ltd.<br/>
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-init/">init</a></code>(8) </p>

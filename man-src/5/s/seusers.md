@@ -23,7 +23,7 @@ description: "seusers – The SELinux GNU/Linux user to SELinux user mapping con
 <dl>
 <dd><i>group_id</i>|<i>user_id</dd>
 <dl>
-<dd></i>The GNU/Linux user id, or if preceded by the percentage (<code>%</code>) symbol, then a GNU/Linux group id.<br />
+<dd></i>The GNU/Linux user id, or if preceded by the percentage (<code>%</code>) symbol, then a GNU/Linux group id.<br/>
  An optional entry set to <code>__default__</code> can be provided as a fall back if required.</dd></dl>
 <p> <i>seuser_id</i></p>
 <dl>
@@ -33,11 +33,11 @@ description: "seusers – The SELinux GNU/Linux user to SELinux user mapping con
 <dd>The optional level or range for an MLS/MCS policy.</dd></dl>
 </dl>
 <h2>Example</h2>
-<p># ./seusers<br />
- system_u:system_u:s0-s15:c0.c255<br />
- root:root:s0-s15:c0.c255<br />
- fred:user_u:s0<br />
- __default__:user_u:s0<br />
+<p># ./seusers<br/>
+ system_u:system_u:s0-s15:c0.c255<br/>
+ root:root:s0-s15:c0.c255<br/>
+ fred:user_u:s0<br/>
+ __default__:user_u:s0<br/>
  %user_group:user_u:s0</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-selinux/">selinux</a></code>(8), <code><a href="/docs/linux/man/8-pam/">PAM</a></code>(8), <code><a href="/docs/linux/man/3-selinux_usersconf_path/">selinux_usersconf_path</a></code>(3), <code><a href="/docs/linux/man/3-getseuserbyname/">getseuserbyname</a></code>(3), <code><a href="/docs/linux/man/5-selinux_config/">selinux_config</a></code>(5) </p>

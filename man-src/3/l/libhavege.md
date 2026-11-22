@@ -39,8 +39,8 @@ havege_destroy(handle);
 <p> Read random bytes from an active anchor. The RNG must have been previously readied by a call to havege_run(). The read must take place within the allocated buffer, hptr-&gt;io_buf. The range specified is the number of H_UINT to read. If the multi-core option is used, this buffer is memory mapped between collectors. Possible error values: H_NOERR, H_NOTESRUN, H_NOPOST, H_NODONE, H_NORQST, H_NOCOMP, H_EXIT </p>
 <p> <code>int havege_run(H_PTR </code><i>hptr</i><code>);</code> </p>
 <p> Warm up the RNG and run the start-up tests. The operation succeeded if the error member of the handle is H_NOERR. A failed handle should be disposed of by a call to havege_destroy(). Possible error values: H_NOERR, H_NOCOLLECT, H_NOWALK, H_NOTESTMEM, H_NOTASK, H_NOTESTTOT, H_NOWAIT, H_NOTIMER, and any havege_rng() error. </p>
-<p> <code>void havege_status(H_PTR </code><i>hptr</i><code>, H_STATUS </code><i>hsts</i><code>);</code><br />
-&nbsp;<wbr> Fills in the h_status structure with read-only information collected from the package build, run-time tuning, and test components.<br />
+<p> <code>void havege_status(H_PTR </code><i>hptr</i><code>, H_STATUS </code><i>hsts</i><code>);</code><br/>
+&nbsp;<wbr> Fills in the h_status structure with read-only information collected from the package build, run-time tuning, and test components.<br/>
 &nbsp;<wbr> </p>
 <p> <code>int havege_status_dump(H_PTR </code><i>hptr</i><code>, H_SD_TOPIC </code><i>topic</i><code>, char </code><i>*buf</i><code>, size_t </code><i>len</i><code>);</code> </p>
 <p> Calls havege_status() and formats standard presentations of havege status in the supplied buffer. The standard formats are: </p>
@@ -54,7 +54,7 @@ havege_destroy(handle);
 <p> [tot tests(%s): A:%d/%d B: %d/%d;][continuous tests(%s): A:%d/%d B: %d/%d;][last entropy estimate %g] </p>
 <p> H_SD_TOPIC_SUM </p>
 <p> fills: %d, generated: %.4g %c bytes</dl>
-<p> <code>const char *havege_version(const char *</code><i>version</i><code>);</code><br />
+<p> <code>const char *havege_version(const char *</code><i>version</i><code>);</code><br/>
 &nbsp;<wbr> Return/check library prep version. The prep version is the package version used to build the library. A null argument returns the prep version unconditionally. Using the definition of the prep string in havege.h as input returns the prep version if the header file is compatible with the library, or NULL if it is not. Intended to be called before attempting any initialization. </p>
 <h2>NOTES</h2>
 <p> The sizes of the processor level 1 instruction and data caches are used to tune the HAVEGE algorithm for maximum sensitivity. If these sizes not specified, haveged will attempt to determine the sizes dynamically from the Linux sysfs and/or cpuid instruction with a fallback to a compiled default if no better information is not available. </p>

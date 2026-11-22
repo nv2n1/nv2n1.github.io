@@ -164,28 +164,28 @@ ldm &gt; scan / dev / loop[0 - 9] *
 <dl>
 <dt>
 </dt><dd>
-ldm &gt; show diskgroup 06495a84 &#8211; fbfd &#8211; 11e1 &#8211; 8cf9 &#8211; 52540061f5db<br />
-{<br />
-    &#8220;name&#8221; : &#8220;WIN-ERRDJSBDAVF-Dg0&#8221;,<br />
-             &#8220;guid&#8221; : &#8220;06495a84-fbfd-11e1-8cf9-52540061f5db&#8221;,<br />
-                      &#8220;volumes&#8221; : [<br />
-                          &#8220;Volume4&#8221;,<br />
-                          &#8220;Volume1&#8221;,<br />
-                          &#8220;Volume2&#8221;,<br />
-                          &#8220;Volume3&#8221;,<br />
-                          &#8220;Volume5&#8221;<br />
-                      ],<br />
-                                  &#8220;disks&#8221; : [<br />
-                                      &#8220;Disk1&#8221;,<br />
-                                      &#8220;Disk2&#8221;,<br />
-                                      &#8220;Disk3&#8221;,<br />
-                                      &#8220;Disk4&#8221;,<br />
-                                      &#8220;Disk5&#8221;,<br />
-                                      &#8220;Disk6&#8221;,<br />
-                                      &#8220;Disk7&#8221;,<br />
-                                      &#8220;Disk8&#8221;,<br />
-                                      &#8220;Disk9&#8221;<br />
-                                  ]<br />
+ldm &gt; show diskgroup 06495a84 &#8211; fbfd &#8211; 11e1 &#8211; 8cf9 &#8211; 52540061f5db<br/>
+{<br/>
+    &#8220;name&#8221; : &#8220;WIN-ERRDJSBDAVF-Dg0&#8221;,<br/>
+             &#8220;guid&#8221; : &#8220;06495a84-fbfd-11e1-8cf9-52540061f5db&#8221;,<br/>
+                      &#8220;volumes&#8221; : [<br/>
+                          &#8220;Volume4&#8221;,<br/>
+                          &#8220;Volume1&#8221;,<br/>
+                          &#8220;Volume2&#8221;,<br/>
+                          &#8220;Volume3&#8221;,<br/>
+                          &#8220;Volume5&#8221;<br/>
+                      ],<br/>
+                                  &#8220;disks&#8221; : [<br/>
+                                      &#8220;Disk1&#8221;,<br/>
+                                      &#8220;Disk2&#8221;,<br/>
+                                      &#8220;Disk3&#8221;,<br/>
+                                      &#8220;Disk4&#8221;,<br/>
+                                      &#8220;Disk5&#8221;,<br/>
+                                      &#8220;Disk6&#8221;,<br/>
+                                      &#8220;Disk7&#8221;,<br/>
+                                      &#8220;Disk8&#8221;,<br/>
+                                      &#8220;Disk9&#8221;<br/>
+                                  ]<br/>
 }
 </dd></dl>
 <p> Show detailed information about one of the volumes in the disk group: </p>

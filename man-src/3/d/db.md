@@ -26,17 +26,17 @@ DB *dbopen(const char *file, int flags, int mode, DBTYPE type,
 <p> The <i>type</i> argument is of type <i>DBTYPE</i> (as defined in the <i>&lt;db.h&gt;</i> include file) and may be set to <code>DB_BTREE</code>, <code>DB_HASH</code>, or <code>DB_RECNO</code>. </p>
 <p> The <i>openinfo</i> argument is a pointer to an access-method-specific structure described in the access method&#8217;s manual page. If <i>openinfo</i> is NULL, each access method will use defaults appropriate for the system and the access method. </p>
 <p> <code>dbopen</code>() returns a pointer to a <i>DB</i> structure on success and NULL on error. The <i>DB</i> structure is defined in the <i>&lt;db.h&gt;</i> include file, and contains at least the following fields: </p>
-<p> typedef struct {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;DBTYPE type;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;(*close)(const DB&nbsp;*db);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;(*del)(const DB&nbsp;*db, const DBT&nbsp;*key, unsigned int flags);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;(*fd)(const DB&nbsp;*db);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;(*get)(const DB&nbsp;*db, DBT&nbsp;*key, DBT&nbsp;*data,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned int flags);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;(*put)(const DB&nbsp;*db, DBT&nbsp;*key, const DBT&nbsp;*data,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned int flags);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;(*sync)(const DB&nbsp;*db, unsigned int flags);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;(*seq)(const DB&nbsp;*db, DBT&nbsp;*key, DBT&nbsp;*data,<br />
+<p> typedef struct {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;DBTYPE type;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;(*close)(const DB&nbsp;*db);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;(*del)(const DB&nbsp;*db, const DBT&nbsp;*key, unsigned int flags);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;(*fd)(const DB&nbsp;*db);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;(*get)(const DB&nbsp;*db, DBT&nbsp;*key, DBT&nbsp;*data,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned int flags);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;(*put)(const DB&nbsp;*db, DBT&nbsp;*key, const DBT&nbsp;*data,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned int flags);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;(*sync)(const DB&nbsp;*db, unsigned int flags);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;(*seq)(const DB&nbsp;*db, DBT&nbsp;*key, DBT&nbsp;*data,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned int flags); } DB; </p>
 <p> These elements describe a database type and a set of functions performing various actions. These functions take a pointer to a structure as returned by <code>dbopen</code>(), and sometimes one or more pointers to key/data structures and a flag value.</p>
 <dl>
@@ -120,8 +120,8 @@ DB *dbopen(const char *file, int flags, int mode, DBTYPE type,
 </dt><dd> <i>sync</i> routines return -1 on error (setting <i>errno</i>) and 0 on success.</dd></dl>
 <h3>Key/data pairs</h3>
 <p> Access to all file types is based on key/data pairs. Both keys and data are represented by the following data structure: </p>
-<p> typedef struct {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;void&nbsp;<wbr>&nbsp;*data;<br />
+<p> typedef struct {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;void&nbsp;<wbr>&nbsp;*data;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;size_t size; } DBT; </p>
 <p> The elements of the <i>DBT</i> structure are defined as follows:</p>
 <dl>

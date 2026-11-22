@@ -13,47 +13,47 @@ description: "ANTLR3_EXCEPTION_struct –"
 <h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3exception.h">antlr3exception.h</a>&gt;</p>
 <h3>Data Fields</h3>
-<p> <code>ANTLR3_UCHAR</code> <code>c</code><br />
- <i>The current character when an error occurred &#8211; for lexers. </i><br />
- <code>ANTLR3_INT32</code> <code>charPositionInLine</code><br />
- <i>Character position in the line where the error occurred. </i><br />
- void * <code>custom</code><br />
- <i>Pointer for you, the programmer to add anything you like to an exception. </i><br />
- <code>ANTLR3_UINT32</code> <code>decisionNum</code><br />
- <i>decision number for NVE </i><br />
- <code>ANTLR3_UINT32</code> <code>expecting</code><br />
- <i>Indicates the token we were expecting to see next when the error occurred. </i><br />
- <code>pANTLR3_BITSET_LIST</code> <code>expectingSet</code><br />
- <i>Indicates a set of tokens that we were expecting to see one of when the error occurred. </i><br />
- void(* <code>freeCustom</code> )(void *<code>custom</code>)<br />
- <i>Pointer to a routine that is called to free the custom exception structure when the exception is destroyed. </i><br />
+<p> <code>ANTLR3_UCHAR</code> <code>c</code><br/>
+ <i>The current character when an error occurred &#8211; for lexers. </i><br/>
+ <code>ANTLR3_INT32</code> <code>charPositionInLine</code><br/>
+ <i>Character position in the line where the error occurred. </i><br/>
+ void * <code>custom</code><br/>
+ <i>Pointer for you, the programmer to add anything you like to an exception. </i><br/>
+ <code>ANTLR3_UINT32</code> <code>decisionNum</code><br/>
+ <i>decision number for NVE </i><br/>
+ <code>ANTLR3_UINT32</code> <code>expecting</code><br/>
+ <i>Indicates the token we were expecting to see next when the error occurred. </i><br/>
+ <code>pANTLR3_BITSET_LIST</code> <code>expectingSet</code><br/>
+ <i>Indicates a set of tokens that we were expecting to see one of when the error occurred. </i><br/>
+ void(* <code>freeCustom</code> )(void *<code>custom</code>)<br/>
+ <i>Pointer to a routine that is called to free the custom exception structure when the exception is destroyed. </i><br/>
  void(* <code>freeEx</code> )(struct <code>ANTLR3_EXCEPTION_struct</code> *ex) </p>
-<p> <code>ANTLR3_BOOLEAN</code> <code>freeMessage</code><br />
- <i>If set to ANTLR3_TRUE, this indicates that the message element of this structure should be freed by calling </i><code>ANTLR3_FREE()</code> when the exception is destroyed.<br />
- <code>ANTLR3_MARKER</code> <code>index</code><br />
- <i>Indicates the index of the &#8216;token&#8217; we were looking at when the exception occurred. </i><br />
- <code>pANTLR3_INT_STREAM</code> <code>input</code><br />
- <i>Pointer to the input stream that this exception occurred in. </i><br />
- <code>ANTLR3_UINT32</code> <code>line</code><br />
- <i>Track the line at which the error occurred in case this is generated from a lexer. </i><br />
- void * <code>message</code><br />
- <i>The printable message that goes with this exception, in your preferred encoding format. </i><br />
- void * <code>name</code><br />
- <i>The string name of the exception. </i><br />
- struct <code>ANTLR3_EXCEPTION_struct</code> * <code>nextException</code><br />
- <i>Pointer to the next exception in the chain (if any). </i><br />
- void * <code>node</code><br />
- <i>If this is a tree parser exception then the node is set to point to the node that caused the issue. </i><br />
+<p> <code>ANTLR3_BOOLEAN</code> <code>freeMessage</code><br/>
+ <i>If set to ANTLR3_TRUE, this indicates that the message element of this structure should be freed by calling </i><code>ANTLR3_FREE()</code> when the exception is destroyed.<br/>
+ <code>ANTLR3_MARKER</code> <code>index</code><br/>
+ <i>Indicates the index of the &#8216;token&#8217; we were looking at when the exception occurred. </i><br/>
+ <code>pANTLR3_INT_STREAM</code> <code>input</code><br/>
+ <i>Pointer to the input stream that this exception occurred in. </i><br/>
+ <code>ANTLR3_UINT32</code> <code>line</code><br/>
+ <i>Track the line at which the error occurred in case this is generated from a lexer. </i><br/>
+ void * <code>message</code><br/>
+ <i>The printable message that goes with this exception, in your preferred encoding format. </i><br/>
+ void * <code>name</code><br/>
+ <i>The string name of the exception. </i><br/>
+ struct <code>ANTLR3_EXCEPTION_struct</code> * <code>nextException</code><br/>
+ <i>Pointer to the next exception in the chain (if any). </i><br/>
+ void * <code>node</code><br/>
+ <i>If this is a tree parser exception then the node is set to point to the node that caused the issue. </i><br/>
  void(* <code>print</code> )(struct <code>ANTLR3_EXCEPTION_struct</code> *ex) </p>
-<p> void * <code>ruleName</code><br />
- <i>Rule name for failed predicate exception. </i><br />
- <code>ANTLR3_UINT32</code> <code>state</code><br />
- <i>State for NVE. </i><br />
- <code>pANTLR3_STRING</code> <code>streamName</code><br />
- <i>Name of the file/input source for reporting. </i><br />
- void * <code>token</code><br />
- <i>Indicates what the current token/tree was when the error occurred. </i><br />
- <code>ANTLR3_UINT32</code> <code>type</code><br />
+<p> void * <code>ruleName</code><br/>
+ <i>Rule name for failed predicate exception. </i><br/>
+ <code>ANTLR3_UINT32</code> <code>state</code><br/>
+ <i>State for NVE. </i><br/>
+ <code>pANTLR3_STRING</code> <code>streamName</code><br/>
+ <i>Name of the file/input source for reporting. </i><br/>
+ void * <code>token</code><br/>
+ <i>Indicates what the current token/tree was when the error occurred. </i><br/>
+ <code>ANTLR3_UINT32</code> <code>type</code><br/>
  <i>Set to one of the exception type defines:. </i></p>
 <h2>Detailed Description</h2>
 <p> Base structure for an ANTLR3 exception tracker.</p>

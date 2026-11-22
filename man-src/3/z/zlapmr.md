@@ -10,7 +10,7 @@ description: "zlapmr.f –"
 <p>zlapmr.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlapmr</code> (FORWRD, M, N, X, LDX, K)<br />
+<p>subroutine <code>zlapmr</code> (FORWRD, M, N, X, LDX, K)<br/>
  <i></i><code>ZLAPMR</code> rearranges rows of a matrix as specified by a permutation vector.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlapmr (logicalFORWRD, integerM, integerN, complex*16, dimension( ldx, * )X, integerLDX, integer, dimension( * )K)</h3>

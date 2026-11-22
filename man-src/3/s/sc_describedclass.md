@@ -16,13 +16,13 @@ description: "sc::DescribedClass –"
 <h3>Public Member Functions</h3>
 <p><code>DescribedClass</code> (const <code>DescribedClass</code> &amp;) </p>
 <p> <code>DescribedClass</code> &amp; <code>operator=</code> (const <code>DescribedClass</code> &amp;) </p>
-<p> <code>ClassDesc</code> * <code>class_desc</code> () const throw ()<br />
- <i>This returns the unique pointer to the </i><code>ClassDesc</code> corresponding to the given type_info object.<br />
- const char * <code>class_name</code> () const<br />
- <i>Return the name of the object&#8217;s exact type. </i><br />
- int <code>class_version</code> () const<br />
- <i>Return the version of the class. </i><br />
- virtual void <code>print</code> (std::ostream &amp;=ExEnv::out0()) const<br />
+<p> <code>ClassDesc</code> * <code>class_desc</code> () const throw ()<br/>
+ <i>This returns the unique pointer to the </i><code>ClassDesc</code> corresponding to the given type_info object.<br/>
+ const char * <code>class_name</code> () const<br/>
+ <i>Return the name of the object&#8217;s exact type. </i><br/>
+ int <code>class_version</code> () const<br/>
+ <i>Return the version of the class. </i><br/>
+ virtual void <code>print</code> (std::ostream &amp;=ExEnv::out0()) const<br/>
  <i>Print the object. </i></p>
 <h2>Detailed Description</h2>
 <p>Classes which need runtime information about themselves and their relationship to other classes can virtually inherit from <code>DescribedClass</code>. </p>

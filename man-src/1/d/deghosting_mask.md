@@ -18,9 +18,9 @@ description: "deghosting_mask – Creates mask for removing ghosting in images"
 <dt><code>-o|&#8211;output</code> &lt;path&gt;</dt>
 <dd> Prefix for output masks</dd>
 <dt><code>-s|&#8211;sigma</code> &lt;float&gt;</dt>
-<dd> Standard deviation of Gaussian weighting function (<font SIZE="-1">SIGMA </font>&gt; 0); default: 30</dd>
+<dd> Standard deviation of Gaussian weighting function (SIGMA &gt; 0); default: 30</dd>
 <dt><code>-i|&#8211;iterations</code> &lt;int&gt;</dt>
-<dd> Number of iterations, default is (<font SIZE="-1">ITER </font>&gt; 0) default: 4</dd>
+<dd> Number of iterations, default is (ITER &gt; 0) default: 4</dd>
 <dt><code>-t|&#8211;threshold</code> &lt;float&gt;</dt>
 <dd> Threshold; default: 150</dd>
 <dt><code>-c|&#8211;contrast</code> &lt;float&gt;</dt>
@@ -31,9 +31,9 @@ description: "deghosting_mask – Creates mask for removing ghosting in images"
 <dl>
 <dt><code>f</code> Use gray images for computation. It&#8217;s about two times faster but it usually returns worse results. You also have to change threshold to smaller value (around 100)</dt>
 <dd>
-</dd><dt><code>g</code> Use gamma 2.2 correction instead of logarithm if input images are <font SIZE="-1">HDR</font></dt>
+</dd><dt><code>g</code> Use gamma 2.2 correction instead of logarithm if input images are HDR</dt>
 <dd>
-</dd><dt><code>m</code> Do not scale image, <font SIZE="-1">NOTE:</font> slows down process</dt>
+</dd><dt><code>m</code> Do not scale image, NOTE: slows down process</dt>
 <dd>
 </dd><dt><code>t</code> Use simple threshold, may result in holes in images</dt>
 <dd>
@@ -54,9 +54,9 @@ description: "deghosting_mask – Creates mask for removing ghosting in images"
 <dl>
 </dl>
 <dt><code>-b</code> &lt;int&gt;</dt>
-<dd> Image cache <font SIZE="-1">BLOCKSIZE</font> in kilobytes; default: 2048KB</dd>
+<dd> Image cache BLOCKSIZE in kilobytes; default: 2048KB</dd>
 <dt><code>-m</code> &lt;int&gt;</dt>
-<dd> Set image <font SIZE="-1">CACHESIZE</font> in megabytes; default: 1024MB</dd>
+<dd> Set image CACHESIZE in megabytes; default: 1024MB</dd>
 <dt><code>-h|&#8211;help</code></dt>
 <dd> Display this help</dd>
 <dt><code>-v|&#8211;verbose</code> &lt;0|1&gt;</dt>

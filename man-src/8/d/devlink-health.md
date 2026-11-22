@@ -16,34 +16,34 @@ health
     help }
 OPTIONS := {
     -V[ersion] }</code></pre>
-<p> <code>devlink health show</code> [ { <i>DEV</i> | <i>DEV/PORT_INDEX</i> } <code>reporter</code> REPORTER<i> ] </i><br />
- <code>devlink health recover</code> { <i>DEV</i> | <i>DEV/PORT_INDEX</i> } <code>reporter</code> <i>REPORTER</i><br />
- <code>devlink health diagnose</code> { <i>DEV</i> | <i>DEV/PORT_INDEX</i> } <code>reporter</code> <i>REPORTER</i><br />
- <code>devlink health dump show</code> { <i>DEV</i> | <i>DEV/PORT_INDEX</i> } <code>reporter</code> <i>REPORTER</i><br />
- <code>devlink health test</code> { <i>DEV</i> | <i>DEV/PORT_INDEX</i> } <code>reporter</code> <i>REPORTER</i><br />
- <code>devlink health dump clear</code> { <i>DEV</i> | <i>DEV/PORT_INDEX</i> } <code>reporter</code> <i>REPORTER</i><br />
- <code>devlink health set</code> { <i>DEV</i> | <i>DEV/PORT_INDEX</i> } <code>reporter</code> <i>REPORTER</i> [ <code>grace_period </code><i>MSEC</i> ] [ <code>auto_recover</code> { <code>true</code> | <code>false</code> } ] [ <code>auto_dump</code> { <code>true</code> | <code>false</code> } ]<br />
+<p> <code>devlink health show</code> [ { <i>DEV</i> | <i>DEV/PORT_INDEX</i> } <code>reporter</code> REPORTER<i> ] </i><br/>
+ <code>devlink health recover</code> { <i>DEV</i> | <i>DEV/PORT_INDEX</i> } <code>reporter</code> <i>REPORTER</i><br/>
+ <code>devlink health diagnose</code> { <i>DEV</i> | <i>DEV/PORT_INDEX</i> } <code>reporter</code> <i>REPORTER</i><br/>
+ <code>devlink health dump show</code> { <i>DEV</i> | <i>DEV/PORT_INDEX</i> } <code>reporter</code> <i>REPORTER</i><br/>
+ <code>devlink health test</code> { <i>DEV</i> | <i>DEV/PORT_INDEX</i> } <code>reporter</code> <i>REPORTER</i><br/>
+ <code>devlink health dump clear</code> { <i>DEV</i> | <i>DEV/PORT_INDEX</i> } <code>reporter</code> <i>REPORTER</i><br/>
+ <code>devlink health set</code> { <i>DEV</i> | <i>DEV/PORT_INDEX</i> } <code>reporter</code> <i>REPORTER</i> [ <code>grace_period </code><i>MSEC</i> ] [ <code>auto_recover</code> { <code>true</code> | <code>false</code> } ] [ <code>auto_dump</code> { <code>true</code> | <code>false</code> } ]<br/>
  <code>devlink health help</code> </p>
 <h2>Description</h2>
 <h3>devlink health show &#8211; Show status and configuration on all supported reporters.</h3>
-<p>Displays info about reporters registered on devlink devices and ports. <i>DEV</i> &#8211; specifies the devlink device.<br />
+<p>Displays info about reporters registered on devlink devices and ports. <i>DEV</i> &#8211; specifies the devlink device.<br/>
  <i>DEV/PORT_INDEX</i> &#8211; specifies the devlink port. <i>REPORTER</i> &#8211; specifies the reporter&#8217;s name registered on specified devlink device or port.</p>
 <h3>devlink health recover &#8211; Initiate a recovery operation on a reporter.</h3>
-<p>This action performs a recovery and increases the recoveries counter on success. <i>DEV</i> &#8211; specifies the devlink device.<br />
+<p>This action performs a recovery and increases the recoveries counter on success. <i>DEV</i> &#8211; specifies the devlink device.<br/>
  <i>DEV/PORT_INDEX</i> &#8211; specifies the devlink port. <i>REPORTER</i> &#8211; specifies the reporter&#8217;s name registered on specified devlink device or port.</p>
 <h3>devlink health diagnose &#8211; Retrieve diagnostics data on a reporter.</h3>
-<p><i>DEV</i> &#8211; specifies the devlink device.<br />
+<p><i>DEV</i> &#8211; specifies the devlink device.<br/>
  <i>DEV/PORT_INDEX</i> &#8211; specifies the devlink port. <i>REPORTER</i> &#8211; specifies the reporter&#8217;s name registered on specified devlink device or port.</p>
 <h3>devlink health test &#8211; Trigger a test event on a reporter.</h3>
 <p><i>DEV</i> &#8211; specifies the devlink device. <i>REPORTER</i> &#8211; specifies the reporter&#8217;s name registered on the devlink device.</p>
 <h3>devlink health dump show &#8211; Display the last saved dump.</h3>
-<p>devlink health saves a single dump per reporter. If an dump is not already stored by the Devlink, this command will generate a new dump. The dump can be generated either automatically when a reporter reports on an error or manually at the user&#8217;s request. <i>DEV</i> &#8211; specifies the devlink device.<br />
+<p>devlink health saves a single dump per reporter. If an dump is not already stored by the Devlink, this command will generate a new dump. The dump can be generated either automatically when a reporter reports on an error or manually at the user&#8217;s request. <i>DEV</i> &#8211; specifies the devlink device.<br/>
  <i>DEV/PORT_INDEX</i> &#8211; specifies the devlink port. <i>REPORTER</i> &#8211; specifies the reporter&#8217;s name registered on specified devlink device or port.</p>
 <h3>devlink health dump clear &#8211; Delete the saved dump.</h3>
-<p>Deleting the saved dump enables a generation of a new dump on the next &quot;devlink health dump show&quot; command. <i>DEV</i> &#8211; specifies the devlink device.<br />
+<p>Deleting the saved dump enables a generation of a new dump on the next &quot;devlink health dump show&quot; command. <i>DEV</i> &#8211; specifies the devlink device.<br/>
  <i>DEV/PORT_INDEX</i> &#8211; specifies the devlink port. <i>REPORTER</i> &#8211; specifies the reporter&#8217;s name registered on specified devlink device or port.</p>
 <h3>devlink health set &#8211; Configure health reporter.</h3>
-<p>Please note that some params are not supported on a reporter which doesn&#8217;t support a recovery or dump method. <i>DEV</i> &#8211; specifies the devlink device.<br />
+<p>Please note that some params are not supported on a reporter which doesn&#8217;t support a recovery or dump method. <i>DEV</i> &#8211; specifies the devlink device.<br/>
  <i>DEV/PORT_INDEX</i> &#8211; specifies the devlink port. <i>REPORTER</i> &#8211; specifies the reporter&#8217;s name registered on specified devlink device or port.</p>
 <dl>
 <dt><code>grace_period</code><i> MSEC </i></dt>

@@ -10,7 +10,7 @@ description: "zgges.f –"
 <p>zgges.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zgges</code> (JOBVSL, JOBVSR, SORT, SELCTG, N, A, LDA, B, LDB, SDIM, ALPHA, BETA, VSL, LDVSL, VSR, LDVSR, WORK, LWORK, RWORK, BWORK, INFO)<br />
+<p>subroutine <code>zgges</code> (JOBVSL, JOBVSR, SORT, SELCTG, N, A, LDA, B, LDB, SDIM, ALPHA, BETA, VSL, LDVSL, VSR, LDVSR, WORK, LWORK, RWORK, BWORK, INFO)<br/>
  <i></i><code> ZGGES computes the eigenvalues, the Schur form, and, optionally, the matrix of Schur vectors for GE matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zgges (characterJOBVSL, characterJOBVSR, characterSORT, logical, externalSELCTG, integerN, complex*16, dimension( lda, * )A, integerLDA, complex*16, dimension( ldb, * )B, integerLDB, integerSDIM, complex*16, dimension( * )ALPHA, complex*16, dimension( * )BETA, complex*16, dimension( ldvsl, * )VSL, integerLDVSL, complex*16, dimension( ldvsr, * )VSR, integerLDVSR, complex*16, dimension( * )WORK, integerLWORK, double precision, dimension( * )RWORK, logical, dimension( * )BWORK, integerINFO)</h3>

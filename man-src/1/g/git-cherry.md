@@ -61,8 +61,8 @@ $ git cherry -v
 <dl>
 <dt>
 </dt><dd>
-$ git log&#8211; graph&#8211; oneline&#8211; decorate&#8211; boundary origin / master&#8230; topic * 7654321(origin / master) upstream tip commit[&#8230; snip some other commits&#8230;] * cccc111 cherry &#8211; pick of C *aaaa111 cherry &#8211; pick of A[&#8230; snip a lot more that has happened&#8230;] | *cccc000(topic)<br />
-commit C | *bbbb000 commit B | *aaaa000 commit A | /<br />
+$ git log&#8211; graph&#8211; oneline&#8211; decorate&#8211; boundary origin / master&#8230; topic * 7654321(origin / master) upstream tip commit[&#8230; snip some other commits&#8230;] * cccc111 cherry &#8211; pick of C *aaaa111 cherry &#8211; pick of A[&#8230; snip a lot more that has happened&#8230;] | *cccc000(topic)<br/>
+commit C | *bbbb000 commit B | *aaaa000 commit A | /<br/>
                                                        o 1234567 branch point
 </dd></dl>
 <p> In such cases, git-cherry shows a concise summary of what has yet to be applied: </p>

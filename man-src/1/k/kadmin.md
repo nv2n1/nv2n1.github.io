@@ -210,10 +210,10 @@ kadmin:
 <dt><code>-keepold</code></dt>
 <dd> Keeps the existing keys in the database. This flag is usually not necessary except perhaps for <code>krbtgt</code> principals. </dd>
 <p> Example: </p>
-<p>kadmin: cpw systest<br />
-Enter password for principal systest [at] BLEEP.COM:<br />
-Re-enter password for principal systest [at] BLEEP.COM:<br />
-Password for systest [at] BLEEP.COM changed.<br />
+<p>kadmin: cpw systest<br/>
+Enter password for principal systest [at] BLEEP.COM:<br/>
+Re-enter password for principal systest [at] BLEEP.COM:<br/>
+Password for systest [at] BLEEP.COM changed.<br/>
 kadmin:
 </dl>
 <h3>purgekeys</h3>
@@ -233,15 +233,15 @@ kadmin:
 <p> This command requires the <code>list</code> privilege. </p>
 <p> Alias: <code>listprincs</code>, <code>get_principals</code>, <code>get_princs</code> </p>
 <p> Example: </p>
-<p>kadmin : listprincs test *<br />
-             test3[at] SECURE &#8211;<br />
-         TEST.OV.COM<br />
-             test2[at] SECURE &#8211;<br />
-         TEST.OV.COM<br />
-             test1[at] SECURE &#8211;<br />
-         TEST.OV.COM<br />
-             testuser[at] SECURE &#8211;<br />
-         TEST.OV.COM<br />
+<p>kadmin : listprincs test *<br/>
+             test3[at] SECURE &#8211;<br/>
+         TEST.OV.COM<br/>
+             test2[at] SECURE &#8211;<br/>
+         TEST.OV.COM<br/>
+             test1[at] SECURE &#8211;<br/>
+         TEST.OV.COM<br/>
+             testuser[at] SECURE &#8211;<br/>
+         TEST.OV.COM<br/>
              kadmin:</p>
 <h3>get_strings</h3>
 <p> <code>get_strings</code> <i>principal</i> </p>
@@ -261,15 +261,15 @@ kadmin:
 <p> This command requires the <code>modify</code> privilege. </p>
 <p> Alias: <code>setstr</code> </p>
 <p> Example: </p>
-<p>set_string host / foo.mit.edu session_enctypes aes128 &#8211; cts<br />
-                                                            set_string user[at] FOO.COM otp &#8220;[{&#8221;<br />
-                                                                                            &#8220;type&#8221;<br />
-                                                                                            &#8220;:&#8221;<br />
-                                                                                            &#8220;hotp&#8221;<br />
-                                                                                            &#8220;,&#8221;<br />
-                                                                                            &#8220;username&#8221;<br />
-                                                                                            &#8220;:&#8221;<br />
-                                                                                            &#8220;al&#8221;<br />
+<p>set_string host / foo.mit.edu session_enctypes aes128 &#8211; cts<br/>
+                                                            set_string user[at] FOO.COM otp &#8220;[{&#8221;<br/>
+                                                                                            &#8220;type&#8221;<br/>
+                                                                                            &#8220;:&#8221;<br/>
+                                                                                            &#8220;hotp&#8221;<br/>
+                                                                                            &#8220;,&#8221;<br/>
+                                                                                            &#8220;username&#8221;<br/>
+                                                                                            &#8220;:&#8221;<br/>
+                                                                                            &#8220;al&#8221;<br/>
                                                                                             &#8220;}]&#8221;
 </dl>
 <h3>del_string</h3>

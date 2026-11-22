@@ -10,16 +10,16 @@ description: "ql/pricingengines/basket/mcamericanbasketengine.hpp – Least-squa
 
 <p> ql/pricingengines/basket/mcamericanbasketengine.hpp &#8211; Least-square Monte Carlo engines. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/qldefines.hpp&gt;<br />
- #include &lt;ql/instruments/basketoption.hpp&gt;<br />
- #include &lt;ql/processes/blackscholesprocess.hpp&gt;<br />
- #include &lt;ql/processes/stochasticprocessarray.hpp&gt;<br />
- #include &lt;ql/methods/montecarlo/lsmbasissystem.hpp&gt;<br />
- #include &lt;ql/pricingengines/mclongstaffschwartzengine.hpp&gt;<br />
- #include &lt;ql/exercise.hpp&gt;<br />
+<p> #include &lt;ql/qldefines.hpp&gt;<br/>
+ #include &lt;ql/instruments/basketoption.hpp&gt;<br/>
+ #include &lt;ql/processes/blackscholesprocess.hpp&gt;<br/>
+ #include &lt;ql/processes/stochasticprocessarray.hpp&gt;<br/>
+ #include &lt;ql/methods/montecarlo/lsmbasissystem.hpp&gt;<br/>
+ #include &lt;ql/pricingengines/mclongstaffschwartzengine.hpp&gt;<br/>
+ #include &lt;ql/exercise.hpp&gt;<br/>
  #include &lt;boost/function.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>MCAmericanBasketEngine&lt; RNG &gt;</code><br />
+<p> class <code>MCAmericanBasketEngine&lt; RNG &gt;</code><br/>
  <i>least-square Monte Carlo engine </i></p>
 <h2>Detailed Description</h2>
 <p> Least-square Monte Carlo engines. </p>

@@ -27,6 +27,6 @@ description: "ginq_norm_tran (Inquire normalization transformation) – retrieve
 <p>Online: <code>gset_win(3NCARG),</code> <code>gset_vp(3NCARG),</code> <code>gsel_norm_tran(3NCARG),</code> <code>ginq_cur_norm_tran_num(3NCARG),</code> <code>ginq_max_norm_tran_num(3NCARG),</code> <code>getset(3NCARG),</code> <code>gset_clip_ind(3NCARG),</code> <code>ginq_clip(3NCARG),</code> <code>gks(3NCARG),</code> <code>ncarg_gks_cbind(3NCARG)</code> </p>
 <p> Hardcopy: User&#8217;s Guide for NCAR GKS-0A Graphics; NCAR Graphics Fundamentals, UNIX Version</p>
 <h2>Copyright</h2>
-<p>Copyright (C) 1987-2009<br />
- University Corporation for Atmospheric Research<br />
+<p>Copyright (C) 1987-2009<br/>
+ University Corporation for Atmospheric Research<br/>
  The use of this Software is governed by a License Agreement.</p>

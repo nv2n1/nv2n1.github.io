@@ -38,24 +38,24 @@ Macros
 #define ACL_OTHER   6
 #define ACL_DEFAULT   0x20
 Typedefs</code></pre>
-<p> typedef struct <code>dmlite_url</code> <code>dmlite_url</code><br />
- <i>Handles URL. </i><br />
- typedef struct <code>dmlite_aclentry</code> <code>dmlite_aclentry</code><br />
+<p> typedef struct <code>dmlite_url</code> <code>dmlite_url</code><br/>
+ <i>Handles URL. </i><br/>
+ typedef struct <code>dmlite_aclentry</code> <code>dmlite_aclentry</code><br/>
  <i>Handles ACL entries. </i></p>
 <h3>Functions</h3>
-<p><code>dmlite_url</code> * <code>dmlite_url_new</code> (void)<br />
- <i>Creates a new </i><code>dmlite_url</code>.<br />
- <code>dmlite_url</code> * <code>dmlite_parse_url</code> (const char *source)<br />
- <i>Parses a URL. </i><br />
- void <code>dmlite_url_free</code> (<code>dmlite_url</code> *url)<br />
- <i>Frees the given url. </i><br />
- char * <code>dmlite_url_serialize</code> (<code>dmlite_url</code> *url, char *buffer, size_t bsize)<br />
- <i>Serializes a URL. </i><br />
- void <code>dmlite_serialize_acls</code> (unsigned nEntries, <code>dmlite_aclentry</code> *acl, char *buffer, size_t bsize)<br />
- <i>Serializes into a string a set of ACL entries. </i><br />
- void <code>dmlite_deserialize_acl</code> (const char *buffer, unsigned *nEntries, <code>dmlite_aclentry</code> **acl)<br />
- <i>Deserializes a string into an array of ACL entries. </i><br />
- void <code>dmlite_acl_free</code> (unsigned nEntries, <code>dmlite_aclentry</code> *acl)<br />
+<p><code>dmlite_url</code> * <code>dmlite_url_new</code> (void)<br/>
+ <i>Creates a new </i><code>dmlite_url</code>.<br/>
+ <code>dmlite_url</code> * <code>dmlite_parse_url</code> (const char *source)<br/>
+ <i>Parses a URL. </i><br/>
+ void <code>dmlite_url_free</code> (<code>dmlite_url</code> *url)<br/>
+ <i>Frees the given url. </i><br/>
+ char * <code>dmlite_url_serialize</code> (<code>dmlite_url</code> *url, char *buffer, size_t bsize)<br/>
+ <i>Serializes a URL. </i><br/>
+ void <code>dmlite_serialize_acls</code> (unsigned nEntries, <code>dmlite_aclentry</code> *acl, char *buffer, size_t bsize)<br/>
+ <i>Serializes into a string a set of ACL entries. </i><br/>
+ void <code>dmlite_deserialize_acl</code> (const char *buffer, unsigned *nEntries, <code>dmlite_aclentry</code> **acl)<br/>
+ <i>Deserializes a string into an array of ACL entries. </i><br/>
+ void <code>dmlite_acl_free</code> (unsigned nEntries, <code>dmlite_aclentry</code> *acl)<br/>
  <i>Frees an array of ACL entries as returned by dm_deserialize_acls. </i></p>
 <h2>Detailed Description</h2>
 <p>C wrapper for DMLite utils. </p>
@@ -89,14 +89,14 @@ Typedefs</code></pre>
 <p>Frees an array of ACL entries as returned by dm_deserialize_acls. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>nEntries</i> The number of entries in the array.<br />
+<dd><i>nEntries</i> The number of entries in the array.<br/>
  <i>acl</i> The ACL.</dd></dl>
 <h3>void dmlite_deserialize_acl (const char *buffer, unsigned *nEntries, <code>dmlite_aclentry</code> **acl)</h3>
 <p>Deserializes a string into an array of ACL entries. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>buffer</i> The string.<br />
- <i>nEntries</i> The resulting number of ACL entries.<br />
+<dd><i>buffer</i> The string.<br/>
+ <i>nEntries</i> The resulting number of ACL entries.<br/>
  <i>acl</i> The resulting ACL.</dd></dl>
 <h3><code>dmlite_url</code>* dmlite_parse_url (const char *source)</h3>
 <p>Parses a URL. </p>
@@ -113,9 +113,9 @@ Typedefs</code></pre>
 <p>Serializes into a string a set of ACL entries. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>nEntries</i> The number of ACL entries in the array.<br />
- <i>acl</i> The ACL.<br />
- <i>buffer</i> Where to put the resulting string.<br />
+<dd><i>nEntries</i> The number of ACL entries in the array.<br/>
+ <i>acl</i> The ACL.<br/>
+ <i>buffer</i> Where to put the resulting string.<br/>
  <i>bsize</i> The buffer size.</dd></dl>
 <h3>void dmlite_url_free (<code>dmlite_url</code> *url)</h3>
 <p>Frees the given url. </p>
@@ -128,8 +128,8 @@ Typedefs</code></pre>
 <p>Serializes a URL. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>url</i> The url to serialize.<br />
- <i>buffer</i> Where to put the serialized version.<br />
+<dd><i>url</i> The url to serialize.<br/>
+ <i>buffer</i> Where to put the serialized version.<br/>
  <i>bsize</i> The buffer size.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

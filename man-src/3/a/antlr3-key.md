@@ -13,12 +13,12 @@ description: "ANTLR3_HASH_KEY_struct –"
 <p> #include &lt;<a href="file:/usr/include/antlr3collections.h">antlr3collections.h</a>&gt;</p>
 <h3>Data Fields</h3>
 <p> union { </p>
-<p> <code>ANTLR3_INTKEY</code> <code>iKey</code><br />
- <i>used if type is ANTLR3_HASH_TYPE_INT </i><br />
- <code>pANTLR3_UINT8</code> <code>sKey</code><br />
- <i>Used if type is ANTLR3_HASH_TYPE_STR. </i><br />
+<p> <code>ANTLR3_INTKEY</code> <code>iKey</code><br/>
+ <i>used if type is ANTLR3_HASH_TYPE_INT </i><br/>
+ <code>pANTLR3_UINT8</code> <code>sKey</code><br/>
+ <i>Used if type is ANTLR3_HASH_TYPE_STR. </i><br/>
  } <code>key</code> </p>
-<p> <code>ANTLR3_UINT8</code> <code>type</code><br />
+<p> <code>ANTLR3_UINT8</code> <code>type</code><br/>
  <i>One of #</i><code>ANTLR3_HASH_TYPE_INT</code> or #<code>ANTLR3_HASH_TYPE_STR</code>.</p>
 <h2>Field Documentation</h2>
 <h3><code>ANTLR3_INTKEY</code> <code>ANTLR3_HASH_KEY_struct::iKey</code></h3>

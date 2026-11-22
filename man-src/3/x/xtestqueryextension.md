@@ -90,7 +90,7 @@ description: "XTestQueryExtension, XTestCompareCursorWithWindow, XTestCompareCur
 <h2>Return Values</h2>
 <p>All routines that have return type Status will return nonzero for success and zero for failure. Even if the XTEST extension is supported, the server may withdraw such facilities arbitrarily; in which case they will subsequently return zero.</p>
 <h2>Author</h2>
-<p><code>Kieron Drake</code><br />
+<p><code>Kieron Drake</code><br/>
  UniSoft Ltd.</p>
 <dl COMPACT>
 <dd>Author.</dd></dl>

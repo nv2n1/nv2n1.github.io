@@ -13,11 +13,11 @@ description: "std::__detail::_Local_iterator< _Key, _Value, _ExtractKey, _H1, _H
 <h3>Public Types</h3>
 <p>typedef std::ptrdiff_t <code>difference_type</code> </p>
 <p> typedef <code>std::forward_iterator_tag</code> <code>iterator_category</code> </p>
-<p> typedef <code>std::conditional</code><br />
- &lt; __constant_iterators, const<br />
+<p> typedef <code>std::conditional</code><br/>
+ &lt; __constant_iterators, const<br/>
  _Value *, _Value * &gt;::type <code>pointer</code>&quot; </p>
-<p> typedef <code>std::conditional</code><br />
- &lt; __constant_iterators, const<br />
+<p> typedef <code>std::conditional</code><br/>
+ &lt; __constant_iterators, const<br/>
  _Value &amp;, _Value &amp; &gt;::type <code>reference</code>&quot; </p>
 <p> typedef _Value <code>value_type</code></p>
 <h3>Public Member Functions</h3>

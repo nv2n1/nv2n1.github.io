@@ -9,8 +9,8 @@ description: "tipc-media – list or modify media properties"
 
 <p>tipc-media &#8211; list or modify media properties</p>
 <h2>Synopsis</h2>
-<p> <code>tipc media set</code> { <code>priority </code> <i>PRIORITY</i> | <code>tolerance</code> <i>TOLERANCE</i> | <code>window</code> <i>WINDOW </i>} <code>media </code><i>MEDIA</i><br />
- <code>tipc media get</code> { <code>priority</code> | <code>tolerance</code> | <code>window</code> } <code>media</code> <i>MEDIA</i><br />
+<p> <code>tipc media set</code> { <code>priority </code> <i>PRIORITY</i> | <code>tolerance</code> <i>TOLERANCE</i> | <code>window</code> <i>WINDOW </i>} <code>media </code><i>MEDIA</i><br/>
+ <code>tipc media get</code> { <code>priority</code> | <code>tolerance</code> | <code>window</code> } <code>media</code> <i>MEDIA</i><br/>
  <code>tipc media list</code> </p>
 <h2>Options</h2>
 <p>Options (flags) that can be passed anywhere in the command chain.</p>

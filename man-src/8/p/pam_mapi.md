@@ -13,7 +13,7 @@ description: "pam_mapi – Module for authentication via MAPI against a Kopano o
 <h2>Description</h2>
 <p>The pam_mapi module is used to verify a username/password pair via MAPI in SOAP against a Kopano server of Kopano Core and a Zarafa server of the Zarafa Collaboration Platform, respectively.</p>
 <h2>Options</h2>
-<p><code>socket=</code><i><a rel="nofollow" href="http://localhost:236/kopano">http://localhost:236/kopano</a></i><br />
+<p><code>socket=</code><i><a rel="nofollow" href="http://localhost:236/kopano">http://localhost:236/kopano</a></i><br/>
  <code>socket=</code><i><a rel="nofollow" href="http://localhost:236/zarafa">http://localhost:236/zarafa</a></i></p>
 <dl>
 <dd>Use the socket <i><a rel="nofollow" href="http://localhost:236/kopano">http://localhost:236/kopano</a></i> for the Kopano login or <i><a href="http://localhost:236/zarafa">http://localhost:236/zarafa</a></i> for the Zarafa login. This also can be HTTPS if the Kopano or Zarafa server is not running on the same machine. The default socket <i><a href="http://localhost:236/kopano">http://localhost:236/kopano</a></i> or <i><a href="http://localhost:236/zarafa">http://localhost:236/zarafa</a></i> is used, if none has been set. </dd>

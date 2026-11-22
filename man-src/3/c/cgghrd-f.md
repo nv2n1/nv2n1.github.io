@@ -10,7 +10,7 @@ description: "cgghrd.f –"
 <p>cgghrd.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>cgghrd</code> (COMPQ, COMPZ, N, ILO, IHI, A, LDA, B, LDB, Q, LDQ, Z, LDZ, INFO)<br />
+<p>subroutine <code>cgghrd</code> (COMPQ, COMPZ, N, ILO, IHI, A, LDA, B, LDB, Q, LDQ, Z, LDZ, INFO)<br/>
  <i></i><code>CGGHRD</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cgghrd (characterCOMPQ, characterCOMPZ, integerN, integerILO, integerIHI, complex, dimension( lda, * )A, integerLDA, complex, dimension( ldb, * )B, integerLDB, complex, dimension( ldq, * )Q, integerLDQ, complex, dimension( ldz, * )Z, integerLDZ, integerINFO)</h3>

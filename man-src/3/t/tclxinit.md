@@ -66,10 +66,10 @@ TclX_SetAppInfo (int defaultValues,
 <p>Store the application information returned by infox. </p>
 <p> Parameters</p>
 <dl COMPACT>
-<dd><code>o </code><i>defaultValues</i> &#8211; If true, then the values are assigned only if they are not already defined (defaulted). If false, the values are always set.<br />
- <code>o </code><i>appName</i> &#8211; Application symbolic name.<br />
- <code>o </code><i>appLongName</i> &#8211; Long, natural language application name.<br />
- <code>o </code><i>appVersion</i> &#8211; Version number of the application.<br />
+<dd><code>o </code><i>defaultValues</i> &#8211; If true, then the values are assigned only if they are not already defined (defaulted). If false, the values are always set.<br/>
+ <code>o </code><i>appName</i> &#8211; Application symbolic name.<br/>
+ <code>o </code><i>appLongName</i> &#8211; Long, natural language application name.<br/>
+ <code>o </code><i>appVersion</i> &#8211; Version number of the application.<br/>
  <code>o </code><i>appPatchlevel</i> &#8211; Patch level of the application. If less than zero, don&#8217;t change.</dd></dl>
 <p> String pointers are saved without copying, don&#8217;t release the memory. If the arguments are NULL, don&#8217;t change the values.</p>
 <h2>Dynamic Loading Of Tclx</h2>
@@ -79,7 +79,7 @@ TclX_SetAppInfo (int defaultValues,
 <p> should be placed in the directory containing the TclX shared library. A prototype <code>pkgIndex,tcl</code> file is build by TclX and is installed in the run time directory under the name <code>pkgIndex,proto</code>. This file can&#8217;t be used as-is, but should be renamed and copied or combined with an existing <code>pkgIndex,tcl</code> in the directory containing the shared library. </p>
 <p> There is no need to dynamically load <code>libtkx.so</code>, since it only contains support for <code>wishx</code>. </p>
 <h2>Integrating Tclx With Other Extensions And Applications</h2>
-<p>The main aspects to integrating TclX with into an application is to decide if the application is based on the standard Tcl/Tk shells or the TclX shells. If the standard shells are desired, then all that is necessary is to call <code>Tclx_Init</code> after <code>Tcl_Init</code> and<br />
+<p>The main aspects to integrating TclX with into an application is to decide if the application is based on the standard Tcl/Tk shells or the TclX shells. If the standard shells are desired, then all that is necessary is to call <code>Tclx_Init</code> after <code>Tcl_Init</code> and<br/>
 &nbsp;<wbr><code>Tkx_Init</code>&nbsp;<wbr>after&nbsp;<wbr><code>Tk_Init</code>.&nbsp;<wbr>&nbsp;<wbr>This functionality may also be&nbsp;<wbr> dynamically loaded. </p>
 <p> To get the TclX shell in a Tcl only application, with the <code>tcl</code> command functionality, call <code>TclX_Main</code> from the <code>main</code> function instead of <code>Tcl_Main</code>. This shell has arguments conforming to other Unix shells and SIGINT signal handling when interactive,. </p>
 <p> To get the Tclx shell in a Tk application, with the <code>wishx</code> command functionality, call <code>TkX_Main</code> from the <code>main</code> function instead of <code>Tk_Main</code>. This shell has SIGINT signal handling when interactive,</p>

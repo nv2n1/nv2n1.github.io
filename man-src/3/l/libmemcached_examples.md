@@ -24,28 +24,28 @@ memcached_st *memc= memcached(config_string, strlen(config_string);
 <p> In the above code you create a <code>memcached_st</code> object with three server by making use of <code>memcached_create()</code>.</p>
 <h2>CREATING A POOL OF SERVERS</h2>
 <p> Creating a pool of Servers: </p>
-<p>const char *config_string = &#8220;&#8211;SERVER=host10.example.com &#8211;SERVER=host11.example.com &#8211;SERVER=host10.example.com&#8221;;<br />
-memcached_pool_st *pool = memcached_pool(config_string, strlen(config_string));<br />
-memcached_return_t rc;<br />
-memcached_st *memc = memcached_pool_pop(pool, false, &amp;rc);<br />
-&#8230;.do work<br />
-    /*<br />
-      Release the memc_ptr that was pulled from the pool<br />
-    */<br />
-    memcached_pool_push(pool, memc);<br />
-/*<br />
-  Destroy the pool.<br />
-*/<br />
+<p>const char *config_string = &#8220;&#8211;SERVER=host10.example.com &#8211;SERVER=host11.example.com &#8211;SERVER=host10.example.com&#8221;;<br/>
+memcached_pool_st *pool = memcached_pool(config_string, strlen(config_string));<br/>
+memcached_return_t rc;<br/>
+memcached_st *memc = memcached_pool_pop(pool, false, &amp;rc);<br/>
+&#8230;.do work<br/>
+    /*<br/>
+      Release the memc_ptr that was pulled from the pool<br/>
+    */<br/>
+    memcached_pool_push(pool, memc);<br/>
+/*<br/>
+  Destroy the pool.<br/>
+*/<br/>
 memcached_pool_destroy(pool);</p>
 <p> In the above code you create a <code>memcached_pool_st</code> object with three server by making use of <code>memcached_pool()</code>. </p>
 <p> When <code>memcached_pool_destroy()</code> all memory will be released that is associated with the pool.</p>
 <h2>ADDING A VALUE TO THE SERVER</h2>
 <p> Adding a value to the Server: </p>
-<p>char *key = &#8220;foo&#8221;;<br />
-char *value = &#8220;value&#8221;;<br />
-memcached_return_t rc = memcached_set(memc, key, strlen(key), value, value_length, (time_t)0, (uint32_t)0);<br />
-if (rc != MEMCACHED_SUCCESS) {<br />
-    &#8230; // handle failure<br />
+<p>char *key = &#8220;foo&#8221;;<br/>
+char *value = &#8220;value&#8221;;<br/>
+memcached_return_t rc = memcached_set(memc, key, strlen(key), value, value_length, (time_t)0, (uint32_t)0);<br/>
+if (rc != MEMCACHED_SUCCESS) {<br/>
+    &#8230; // handle failure<br/>
 }</p>
 <p> It is best practice to always look at the return value of any operation.</p>
 <h2>FETCHING MULTIPLE VALUES</h2>

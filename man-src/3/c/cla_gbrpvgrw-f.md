@@ -10,7 +10,7 @@ description: "cla_gbrpvgrw.f –"
 <p>cla_gbrpvgrw.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>REAL function <code>cla_gbrpvgrw</code> (N, KL, KU, NCOLS, AB, LDAB, AFB, LDAFB)<br />
+<p>REAL function <code>cla_gbrpvgrw</code> (N, KL, KU, NCOLS, AB, LDAB, AFB, LDAFB)<br/>
  <i></i><code>CLA_GBRPVGRW</code> computes the reciprocal pivot growth factor norm(A)/norm(U) for a general banded matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>REAL function cla_gbrpvgrw (integerN, integerKL, integerKU, integerNCOLS, complex, dimension( ldab, * )AB, integerLDAB, complex, dimension( ldafb, * )AFB, integerLDAFB)</h3>

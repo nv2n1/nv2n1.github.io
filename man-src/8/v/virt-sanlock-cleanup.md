@@ -21,6 +21,6 @@ description: "virt-sanlock-cleanup – remove stale sanlock resource lease files
 <h2>Copyright</h2>
 <p>Copyright (C) 2011, 2013 Red Hat, Inc.</p>
 <h2>License</h2>
-<p>virt-sanlock-cleanup is distributed under the terms of the <font SIZE="-1">GNU GPL</font> v2+. This is free software; see the source for copying conditions. There is <font SIZE="-1">NO</font> warranty; not even for <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE</font></p>
+<p>virt-sanlock-cleanup is distributed under the terms of the GNU GPL v2+. This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE</p>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/1-virsh/">virsh</a></i>(1), online instructions &lt;<a rel="nofollow" href="http://libvirt.org/locking.html">http://libvirt.org/locking.html</a>&gt; </p>

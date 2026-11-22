@@ -9,16 +9,16 @@ description: "racoonctl – racoon administrative control tool"
 
 <p><code>racoonctl</code> &#8211; racoon administrative control tool</p>
 <h2>Synopsis</h2>
-<p>[opts] reload-config<br />
- [opts] show-schedule<br />
- [opts] show-sa [isakmp|esp|ah|ipsec]<br />
- [opts] get-sa-cert [inet|inet6] <i>src dst</i><br />
- [opts] flush-sa [isakmp|esp|ah|ipsec]<br />
- [opts] delete-sa <i>saopts</i><br />
- [opts] establish-sa [-<code>w</code> ] [-<code>n </code><i>remoteconf</i> ] [-<code>u </code><i>identity</i> ] <i>saopts</i><br />
- [opts] vpn-connect [-<code>u </code><i>identity</i> ] <i>vpn_gateway</i><br />
- [opts] vpn-disconnect <i>vpn_gateway</i><br />
- [opts] show-event<br />
+<p>[opts] reload-config<br/>
+ [opts] show-schedule<br/>
+ [opts] show-sa [isakmp|esp|ah|ipsec]<br/>
+ [opts] get-sa-cert [inet|inet6] <i>src dst</i><br/>
+ [opts] flush-sa [isakmp|esp|ah|ipsec]<br/>
+ [opts] delete-sa <i>saopts</i><br/>
+ [opts] establish-sa [-<code>w</code> ] [-<code>n </code><i>remoteconf</i> ] [-<code>u </code><i>identity</i> ] <i>saopts</i><br/>
+ [opts] vpn-connect [-<code>u </code><i>identity</i> ] <i>vpn_gateway</i><br/>
+ [opts] vpn-disconnect <i>vpn_gateway</i><br/>
+ [opts] show-event<br/>
  [opts] logout-user <i>login</i></p>
 <h2>Description</h2>
 <p>is used to control <a href="/docs/linux/man/8-racoon/">racoon</a>(8) operation, if ipsec-tools was configured with adminport support. Communication between and <a href="/docs/linux/man/8-racoon/">racoon</a>(8) is done through a UNIX socket. By changing the default mode and ownership of the socket, you can allow non-root users to alter <a href="/docs/linux/man/8-racoon/">racoon</a>(8) behavior, so do that with caution. The following general options are available:</p>

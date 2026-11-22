@@ -15,25 +15,25 @@ description: "QuantLib::SwaptionVolatilityCube – swaption-volatility cube"
 <h3>Public Member Functions</h3>
 <p><code>SwaptionVolatilityCube</code> (const <code>Handle</code>&lt; <code>SwaptionVolatilityStructure</code> &gt; &amp;atmVolStructure, const std::vector&lt; <code>Period</code> &gt; &amp;optionTenors, const std::vector&lt; <code>Period</code> &gt; &amp;swapTenors, const std::vector&lt; <code>Spread</code> &gt; &amp;strikeSpreads, const std::vector&lt; std::vector&lt; <code>Handle</code>&lt; <code>Quote</code> &gt; &gt; &gt; &amp;volSpreads, const boost::shared_ptr&lt; <code>SwapIndex</code> &gt; &amp;swapIndexBase, const boost::shared_ptr&lt; <code>SwapIndex</code> &gt; &amp;shortSwapIndexBase, bool vegaWeightedSmileFit) </p>
 <p> <code>TermStructure interface</code> </p>
-<p> <code>DayCounter</code> <code>dayCounter</code> () const<br />
- <i>the day counter used for date/time conversion </i><br />
- <code>Date</code> <code>maxDate</code> () const<br />
- <i>the latest date for which the curve can return values </i><br />
- Time <code>maxTime</code> () const<br />
- <i>the latest time for which the curve can return values </i><br />
- const <code>Date</code> &amp; <code>referenceDate</code> () const<br />
- <i>the date at which discount = 1.0 and/or variance = 0.0 </i><br />
- <code>Calendar</code> <code>calendar</code> () const<br />
- <i>the calendar used for reference and/or option date calculation </i><br />
- <code>Natural</code> <code>settlementDays</code> () const<br />
+<p> <code>DayCounter</code> <code>dayCounter</code> () const<br/>
+ <i>the day counter used for date/time conversion </i><br/>
+ <code>Date</code> <code>maxDate</code> () const<br/>
+ <i>the latest date for which the curve can return values </i><br/>
+ Time <code>maxTime</code> () const<br/>
+ <i>the latest time for which the curve can return values </i><br/>
+ const <code>Date</code> &amp; <code>referenceDate</code> () const<br/>
+ <i>the date at which discount = 1.0 and/or variance = 0.0 </i><br/>
+ <code>Calendar</code> <code>calendar</code> () const<br/>
+ <i>the calendar used for reference and/or option date calculation </i><br/>
+ <code>Natural</code> <code>settlementDays</code> () const<br/>
  <i>the settlementDays used for reference date calculation </i> </p>
 <p> <code>VolatilityTermStructure interface</code> </p>
-<p> Rate <code>minStrike</code> () const<br />
- <i>the minimum strike for which the term structure can return vols </i><br />
- Rate <code>maxStrike</code> () const<br />
+<p> Rate <code>minStrike</code> () const<br/>
+ <i>the minimum strike for which the term structure can return vols </i><br/>
+ Rate <code>maxStrike</code> () const<br/>
  <i>the maximum strike for which the term structure can return vols </i> </p>
 <p> <code>SwaptionVolatilityStructure interface</code> </p>
-<p> const <code>Period</code> &amp; <code>maxSwapTenor</code> () const<br />
+<p> const <code>Period</code> &amp; <code>maxSwapTenor</code> () const<br/>
  <i>the largest length for which the term structure can return vols </i> </p>
 <p> <code>Other inspectors</code> </p>
 <p> Rate <code>atmStrike</code> (const <code>Date</code> &amp;optionDate, const <code>Period</code> &amp;swapTenor) const </p>

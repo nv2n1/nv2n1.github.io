@@ -21,9 +21,9 @@ perl5242delta - what is new for perl v5.24.2
 
  The handling of (the removal of) <tt>'.'</tt> in <tt>@INC</tt> in base has been improved. This resolves some problematic behaviour in the approach taken in Perl 5.24.1, which is probably best described in the following two threads on the Perl 5 Porters mailing list: &lt;<a rel="nofollow" HREF="http://www.nntp.perl.org/group/perl.perl5.porters/2016/08/msg238991.html">http://www.nntp.perl.org/group/perl.perl5.porters/2016/08/msg238991.html</a>&gt;, &lt;<a rel="nofollow" HREF="http://www.nntp.perl.org/group/perl.perl5.porters/2016/10/msg240297.html">http://www.nntp.perl.org/group/perl.perl5.porters/2016/10/msg240297.html</a>&gt;.
 
-<h3>Escaped colons and relative paths in <font SIZE="-1">PATH</font></h3>
+<h3>Escaped colons and relative paths in PATH</h3>
 
- On Unix systems, Perl treats any relative paths in the <font SIZE="-1">PATH</font> environment variable as tainted when starting a new process. Previously, it was allowing a backslash to escape a colon (unlike the <font SIZE="-1">OS</font>), consequently allowing relative paths to be considered safe if the <font SIZE="-1">PATH</font> was set to something like <tt>&quot;/\:.&quot;</tt>. The check has been fixed to treat <tt>&quot;.&quot;</tt> as tainted in that example.
+ On Unix systems, Perl treats any relative paths in the PATH environment variable as tainted when starting a new process. Previously, it was allowing a backslash to escape a colon (unlike the OS), consequently allowing relative paths to be considered safe if the PATH was set to something like <tt>&quot;/\:.&quot;</tt>. The check has been fixed to treat <tt>&quot;.&quot;</tt> as tainted in that example.
 
 <h2>Modules and Pragmata</h2>
 
@@ -39,7 +39,7 @@ perl5242delta - what is new for perl v5.24.2
 
 <dl>
 <dt>&bull;
-</dt><dd> Fixed a crash with <tt>&quot;s///l&quot;</tt> where it thought it was dealing with <font SIZE="-1">UTF-8</font> when it wasn't. [perl #129038] &lt;<a rel="nofollow" HREF="https://rt.perl.org/Ticket/Display.html?id=129038">https://rt.perl.org/Ticket/Display.html?id=129038</a>&gt;</dd></dl>
+</dt><dd> Fixed a crash with <tt>&quot;s///l&quot;</tt> where it thought it was dealing with UTF-8 when it wasn't. [perl #129038] &lt;<a rel="nofollow" HREF="https://rt.perl.org/Ticket/Display.html?id=129038">https://rt.perl.org/Ticket/Display.html?id=129038</a>&gt;</dd></dl>
 
 <h2>Acknowledgements</h2>
 
@@ -53,9 +53,9 @@ perl5242delta - what is new for perl v5.24.2
 
  The list above is almost certainly incomplete as it is automatically generated from version control history. In particular, it does not include the names of the (very much appreciated) contributors who reported issues to the Perl bug tracker. 
 
- Many of the changes included in this version originated in the <font SIZE="-1">CPAN</font> modules included in Perl's core. We're grateful to the entire <font SIZE="-1">CPAN</font> community for helping Perl to flourish. 
+ Many of the changes included in this version originated in the CPAN modules included in Perl's core. We're grateful to the entire CPAN community for helping Perl to flourish. 
 
- For a more complete list of all of Perl's historical contributors, please see the <i></i><font SIZE="-1"><i>AUTHORS</i></font><i></i> file in the Perl source distribution.
+ For a more complete list of all of Perl's historical contributors, please see the <i></i><i>AUTHORS</i><i></i> file in the Perl source distribution.
 
 <h2>Reporting Bugs</h2>
 
@@ -63,15 +63,15 @@ perl5242delta - what is new for perl v5.24.2
 
  If you believe you have an unreported bug, please run the perlbug program included with your release. Be sure to trim your bug down to a tiny but sufficient test case. Your bug report, along with the output of <tt>&quot;perl -V&quot;</tt>, will be sent off to perlbug [at] perl.org to be analysed by the Perl porting team. 
 
- If the bug you are reporting has security implications which make it inappropriate to send to a publicly archived mailing list, then see ``<font SIZE="-1">SECURITY VULNERABILITY CONTACT INFORMATION''</font> in perlsec for details of how to report the issue.
+ If the bug you are reporting has security implications which make it inappropriate to send to a publicly archived mailing list, then see ``SECURITY VULNERABILITY CONTACT INFORMATION'' in perlsec for details of how to report the issue.
 
 <h2>SEE ALSO</h2>
 
  The <i>Changes</i> file for an explanation of how to view exhaustive details on what changed. 
 
- The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. 
+ The <i></i><i>INSTALL</i><i></i> file for how to build Perl. 
 
- The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. 
+ The <i></i><i>README</i><i></i> file for general stuff. 
 
  The <i>Artistic</i> and <i>Copying</i> files for copyright information. 
 

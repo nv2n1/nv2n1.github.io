@@ -11,13 +11,13 @@ description: "gethostname, sethostname – get/set hostname"
 <p> gethostname, sethostname &#8211; get/set hostname </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>
-<p> <code>int gethostname(char *</code><i>name</i><code>, size_t </code><i>len</i><code>);</code><br />
+<p> <code>int gethostname(char *</code><i>name</i><code>, size_t </code><i>len</i><code>);</code><br/>
  <code>int sethostname(const char *</code><i>name</i><code>, size_t </code><i>len</i><code>);</code> </p>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
 <p> <code>gethostname</code>():</p>
 <dl>
 <dt>
-</dt><dd> Since glibc 2.12: _BSD_SOURCE || _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
+</dt><dd> Since glibc 2.12: _BSD_SOURCE || _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br/>
  || /* Since glibc 2.12: */ _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dd></dl>
 <p> <code>sethostname</code>(): </p>
 <pre><code>

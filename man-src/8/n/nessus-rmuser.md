@@ -17,7 +17,7 @@ description: "nessus-rmuser – removes a user from the nessusd userbase"
 <h2>More Information About The Nessus Project</h2>
 <p>The canonical places where you will find more information about the Nessus project are: </p>
 <dl>
-<dd><a rel="nofollow" href="http://www.nessus.org/">http://www.nessus.org/</a> (Official site)<br />
+<dd><a rel="nofollow" href="http://www.nessus.org/">http://www.nessus.org/</a> (Official site)<br/>
  <a rel="nofollow" href="http://cvs.nessus.org/">http://cvs.nessus.org/</a> (Developers site)</dd></dl>
 <h2>Author</h2>
 <p><code>nessus-rmuser </code> was quickly written by Renaud Deraison &lt;deraison [at] cvs.nessus.org&gt;</p>

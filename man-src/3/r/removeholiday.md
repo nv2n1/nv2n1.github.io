@@ -13,39 +13,39 @@ description: "QuantLib::Calendar – calendar class"
 #include &lt;ql/time/calendar.hpp&gt;</code></pre>
 <p> Inherited by <code>Argentina</code>, <code>Australia</code>, <code>BespokeCalendar</code>, <code>Brazil</code>, <code>Canada</code>, <code>China</code>, <code>CzechRepublic</code>, <code>Denmark</code>, <code>Finland</code>, <code>Germany</code>, <code>HongKong</code>, <code>Hungary</code>, <code>Iceland</code>, <code>India</code>, <code>Indonesia</code>, <code>Italy</code>, <code>Japan</code>, <code>JointCalendar</code>, <code>Mexico</code>, <code>NewZealand</code>, <code>Norway</code>, <code>NullCalendar</code>, <code>Poland</code>, <code>SaudiArabia</code>, <code>Singapore</code>, <code>Slovakia</code>, <code>SouthAfrica</code>, <code>SouthKorea</code>, <code>Sweden</code>, <code>Switzerland</code>, <code>Taiwan</code>, <code>TARGET</code>, <code>Turkey</code>, <code>Ukraine</code>, <code>UnitedKingdom</code>, and <code>UnitedStates</code>.</p>
 <h3>Classes</h3>
-<p>class <code>Impl</code><br />
- <i>abstract base class for calendar implementations </i><br />
- class <code>OrthodoxImpl</code><br />
- <i>partial calendar implementation </i><br />
- class <code>WesternImpl</code><br />
+<p>class <code>Impl</code><br/>
+ <i>abstract base class for calendar implementations </i><br/>
+ class <code>OrthodoxImpl</code><br/>
+ <i>partial calendar implementation </i><br/>
+ class <code>WesternImpl</code><br/>
  <i>partial calendar implementation </i></p>
 <h3>Public Member Functions</h3>
 <p><code>Calendar</code> ()</p>
 <h3>Protected Attributes</h3>
 <p>boost::shared_ptr&lt; <code>Impl</code> &gt; <code>impl_</code></p>
 <h3>Related Functions</h3>
-<p>(Note that these are not member functions.)<br />
+<p>(Note that these are not member functions.)<br/>
  bool <code>operator==</code> (const <code>Calendar</code> &amp;, const <code>Calendar</code> &amp;) </p>
 <p> bool <code>operator!=</code> (const <code>Calendar</code> &amp;, const <code>Calendar</code> &amp;) </p>
 <p> std::ostream &amp; <code>operator&lt;&lt;</code> (std::ostream &amp;, const <code>Calendar</code> &amp;)</p>
 <h3>Calendar interface</h3>
-<p>bool <code>empty</code> () const<br />
- <i>Returns whether or not the calendar is initialized. </i><br />
- std::string <code>name</code> () const<br />
- <i>Returns the name of the calendar. </i><br />
+<p>bool <code>empty</code> () const<br/>
+ <i>Returns whether or not the calendar is initialized. </i><br/>
+ std::string <code>name</code> () const<br/>
+ <i>Returns the name of the calendar. </i><br/>
  bool <code>isBusinessDay</code> (const <code>Date</code> &amp;d) const </p>
 <p> bool <code>isHoliday</code> (const <code>Date</code> &amp;d) const </p>
 <p> bool <code>isWeekend</code> (<code>Weekday</code> w) const </p>
 <p> bool <code>isEndOfMonth</code> (const <code>Date</code> &amp;d) const </p>
-<p> <code>Date</code> <code>endOfMonth</code> (const <code>Date</code> &amp;d) const<br />
- <i>last business day of the month to which the given date belongs </i><br />
+<p> <code>Date</code> <code>endOfMonth</code> (const <code>Date</code> &amp;d) const<br/>
+ <i>last business day of the month to which the given date belongs </i><br/>
  void <code>addHoliday</code> (const <code>Date</code> &amp;) </p>
 <p> void <code>removeHoliday</code> (const <code>Date</code> &amp;) </p>
 <p> <code>Date</code> <code>adjust</code> (const <code>Date</code> &amp;, <code>BusinessDayConvention</code> convention=Following) const </p>
 <p> <code>Date</code> <code>advance</code> (const <code>Date</code> &amp;, <code>Integer</code> n, <code>TimeUnit</code> unit, <code>BusinessDayConvention</code> convention=Following, bool endOfMonth=false) const </p>
 <p> <code>Date</code> <code>advance</code> (const <code>Date</code> &amp;date, const <code>Period</code> &amp;period, <code>BusinessDayConvention</code> convention=Following, bool endOfMonth=false) const </p>
 <p> <code>BigInteger</code> <code>businessDaysBetween</code> (const <code>Date</code> &amp;from, const <code>Date</code> &amp;to, bool includeFirst=true, bool includeLast=false) const </p>
-<p> static std::vector&lt; <code>Date</code> &gt; <code>holidayList</code> (const <code>Calendar</code> &amp;calendar, const <code>Date</code> &amp;from, const <code>Date</code> &amp;to, bool includeWeekEnds=false)<br />
+<p> static std::vector&lt; <code>Date</code> &gt; <code>holidayList</code> (const <code>Calendar</code> &amp;calendar, const <code>Date</code> &amp;from, const <code>Date</code> &amp;to, bool includeWeekEnds=false)<br/>
  <i>Returns the holidays between two dates. </i></p>
 <h2>Detailed Description</h2>
 <p>calendar class </p>

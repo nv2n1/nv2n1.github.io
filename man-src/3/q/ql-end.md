@@ -40,7 +40,7 @@ std::ostream &amp; operator&lt;&lt; (std::ostream &amp;, const Array &amp;)</cod
 <p> typedef boost::reverse_iterator&lt; iterator &gt; <code>reverse_iterator</code> </p>
 <p> typedef boost::reverse_iterator&lt; const_iterator &gt; <code>const_reverse_iterator</code></p>
 <h3>Public Member Functions</h3>
-<p><code>Constructors, destructor, and assignment</code><br />
+<p><code>Constructors, destructor, and assignment</code><br/>
  void swap (Array &amp;)</p>
 <p>Related Functions</p>
 <p>(Note that these are not member functions.)</p>
@@ -64,7 +64,7 @@ std::ostream &amp; operator&lt;&lt; (std::ostream &amp;, const Array &amp;)</cod
 <p>const Disposable&lt; Array &gt; Log (const Array &amp;)</p>
 <p>const Disposable&lt; Array &gt; Exp (const Array &amp;)</p>
 <p>void swap (Array &amp;, Array &amp;)</p>
-<p>std::ostream &amp; operator&lt;&lt; (std::ostream &amp;, const Array &amp;) <code>Vector algebra</code><br />
+<p>std::ostream &amp; operator&lt;&lt; (std::ostream &amp;, const Array &amp;) <code>Vector algebra</code><br/>
  v += x and similar operation involving a scalar value are shortcuts for $ rall i : v_i = v_i + x $ v *= w and similar operation involving two vectors are shortcuts for $ rall i : v_i = v_i imes w_i $ <code>Precondition:</code></p>
 <dl>
 <dd>all arrays involved in an algebraic expression must have the same size.</dd></dl>
@@ -92,20 +92,20 @@ std::ostream &amp; operator&lt;&lt; (std::ostream &amp;, const Array &amp;)</cod
 <p>const Disposable&lt; Array &gt; Exp (const Array &amp;)</p>
 <p>void swap (Array &amp;, Array &amp;)</p>
 <p>std::ostream &amp; operator&lt;&lt; (std::ostream &amp;, const Array &amp;) <code>Element access</code> </p>
-<p> Real <code>operator[]</code> (Size) const<br />
- <i>read-only </i><br />
+<p> Real <code>operator[]</code> (Size) const<br/>
+ <i>read-only </i><br/>
  Real <code>at</code> (Size) const </p>
 <p> Real <code>front</code> () const </p>
 <p> Real <code>back</code> () const </p>
-<p> Real &amp; <code>operator[]</code> (Size)<br />
- <i>read-write </i><br />
+<p> Real &amp; <code>operator[]</code> (Size)<br/>
+ <i>read-write </i><br/>
  Real &amp; <code>at</code> (Size) </p>
 <p> Real &amp; <code>front</code> () </p>
-<p> Real &amp; <code>back</code> ()<br />
+<p> Real &amp; <code>back</code> ()<br/>
  <code>Inspectors</code> </p>
-<p> Size <code>size</code> () const<br />
- <i>dimension of the array </i><br />
- bool <code>empty</code> () const<br />
+<p> Size <code>size</code> () const<br/>
+ <i>dimension of the array </i><br/>
+ bool <code>empty</code> () const<br/>
  <i>whether the array is empty </i> <code>Iterator access</code> </p>
 <p> const_iterator <code>begin</code> () const </p>
 <p> iterator <code>begin</code> () </p>
@@ -114,7 +114,7 @@ std::ostream &amp; operator&lt;&lt; (std::ostream &amp;, const Array &amp;)</cod
 <p> const_reverse_iterator <code>rbegin</code> () const </p>
 <p> reverse_iterator <code>rbegin</code> () </p>
 <p> const_reverse_iterator <code>rend</code> () const </p>
-<p> reverse_iterator <code>rend</code> ()<br />
+<p> reverse_iterator <code>rend</code> ()<br/>
  <code>Utilities</code> </p>
 <pre><code>void swap (Array &amp;)
 Related Functions

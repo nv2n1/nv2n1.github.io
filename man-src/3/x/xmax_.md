@@ -17,9 +17,9 @@ description: "QuantLib::Solver1D – Base class for 1-D solvers."
 <p> template&lt;class F &gt; Real <code>solve</code> (const F &amp;f, Real accuracy, Real guess, Real step) const </p>
 <p> template&lt;class F &gt; Real <code>solve</code> (const F &amp;f, Real accuracy, Real guess, Real xMin, Real xMax) const </p>
 <p> void <code>setMaxEvaluations</code> (Size evaluations) </p>
-<p> void <code>setLowerBound</code> (Real lowerBound)<br />
- <i>sets the lower bound for the function domain </i><br />
- void <code>setUpperBound</code> (Real upperBound)<br />
+<p> void <code>setLowerBound</code> (Real lowerBound)<br/>
+ <i>sets the lower bound for the function domain </i><br/>
+ void <code>setUpperBound</code> (Real upperBound)<br/>
  <i>sets the upper bound for the function domain </i></p>
 <h3>Protected Attributes</h3>
 <p>Real <code>root_</code> </p>

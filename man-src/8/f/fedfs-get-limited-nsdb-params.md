@@ -36,8 +36,8 @@ description: "fedfs-get-limited-nsdb-params – send a FEDFS_GET_LIMITED_NSDB_PA
 <h2>Examples</h2>
 <p>Suppose you are the FedFS administrator of the <i>example.net</i> FedFS domain and that your domain&#8217;s NSDB hostname is <i>nsdb.example.net</i>. If the file server <i>fs.example.net</i> already knows about your domain&#8217;s NSDB, you can query it with:</p>
 <dl>
-<dd>$ fedfs-get-limited-nsdb-params -h fs.example.net -l nsdb.example.net<br />
- Call completed successfully<br />
+<dd>$ fedfs-get-limited-nsdb-params -h fs.example.net -l nsdb.example.net<br/>
+ Call completed successfully<br/>
  ConnectionSec: FEDFS_SEC_NONE </dd>
 </dl>
 <p> The remote server knows about <i>nsdb.example.net</i> and does not use TLS when querying it to resolve junctions.</p>

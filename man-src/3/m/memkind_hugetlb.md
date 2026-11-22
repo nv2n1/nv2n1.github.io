@@ -8,7 +8,7 @@ url: "/docs/linux/man/3-memkind_hugetlb/"
 description: "memkind_hugetlb.h – hugetlb memory memkind operations. Note: This is EXEPRIMENTAL API. The functionality and the header file itself can be changed (including non-backward compatible changes), or re..."
 ---
 
-<p> memkind_hugetlb.h &#8211; hugetlb memory memkind operations.<br />
+<p> memkind_hugetlb.h &#8211; hugetlb memory memkind operations.<br/>
  Note: This is EXEPRIMENTAL API. The functionality and the header file itself can be changed (including non-backward compatible changes), or remove.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>
@@ -19,7 +19,7 @@ int memkind_hugetlb_get_mmap_flags(struct memkind *kind, int *flags);
 void memkind_hugetlb_init_once(void);
 </code></pre>
 <h2>DESCRIPTION</h2>
-<p> The hugetlb memory memkind operations enable memory kinds which use the Linux hugetlbfs file system. For more information about the hugetlbfs see link below.<br />
+<p> The hugetlb memory memkind operations enable memory kinds which use the Linux hugetlbfs file system. For more information about the hugetlbfs see link below.<br/>
  <i><a rel="nofollow" href="https://www.kernel.org/doc/Documentation/vm/hugetlbpage.txt">https://www.kernel.org/doc/Documentation/vm/hugetlbpage.txt</a></i> </p>
 <p> <code>memkind_hugetlb_check_available_2mb</code>() Check if there are 2MB pages reserved in the default hugetlbfs. If the kind implements ops.get_mbind_nodemask(), then only the NUMA nodes set by the nodemask are checked, otherwise every NUMA node is checked. </p>
 <p> <code>memkind_hugetlb_check_available_1gb</code>() Similar to memkind_hugetlb_check_available_2mb() except that the check is for 1GB pages instead of 2MB pages. </p>

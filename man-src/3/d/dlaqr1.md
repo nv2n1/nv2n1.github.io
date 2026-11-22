@@ -11,7 +11,7 @@ description: "dlaqr1.f –"
 <p> dlaqr1.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dlaqr1</code> (N, H, LDH, SR1, SI1, SR2, SI2, V)<br />
+<p> subroutine <code>dlaqr1</code> (N, H, LDH, SR1, SI1, SR2, SI2, V)<br/>
  <i></i><code>DLAQR1</code> sets a scalar multiple of the first column of the product of 2-by-2 or 3-by-3 matrix H and specified shifts.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlaqr1 (integerN, double precision, dimension( ldh, * )H, integerLDH, double precisionSR1, double precisionSI1, double precisionSR2, double precisionSI2, double precision, dimension( * )V)</h3>

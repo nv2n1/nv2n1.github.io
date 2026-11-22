@@ -19,37 +19,37 @@ description: "XCURSOR – Cursor management library"
 <h3>Cursor Files</h3>
 <p> Xcursor defines a new format for cursors on disk. Each file holds one or more cursor images. Each cursor image is tagged with a nominal size so that the best size can be selected automatically. Multiple cursors of the same nominal size can be loaded together; applications are expected to use them as an animated sequence. </p>
 <p> Cursor files are stored as a header containing a table of contents followed by a sequence of chunks. The table of contents indicates the type, subtype and position in the file of each chunk. The file header looks like: </p>
-<p> <i>magic</i>: CARD32 &#8216;Xcur&#8217; (0x58, 0x63, 0x75, 0x72)<br />
- <i>header</i>: CARD32 bytes in this header<br />
- <i>version</i>: CARD32 file version number<br />
- <i>ntoc</i>: CARD32 number of toc entries<br />
+<p> <i>magic</i>: CARD32 &#8216;Xcur&#8217; (0x58, 0x63, 0x75, 0x72)<br/>
+ <i>header</i>: CARD32 bytes in this header<br/>
+ <i>version</i>: CARD32 file version number<br/>
+ <i>ntoc</i>: CARD32 number of toc entries<br/>
  <i>toc</i>: LISTofTOC table of contents </p>
 <p> Each table of contents entry looks like: </p>
-<p> <i>type</i>: CARD32 entry type<br />
- <i>subtype</i>: CARD32 type-specific label &#8211; size for images<br />
+<p> <i>type</i>: CARD32 entry type<br/>
+ <i>subtype</i>: CARD32 type-specific label &#8211; size for images<br/>
  <i>position</i>: CARD32 absolute byte position of table in file </p>
 <p> Each chunk in the file has set of common header fields followed by additional type-specific fields: </p>
-<p> <i>header</i>: CARD32 bytes in chunk header (including type-specific fields)<br />
- <i>type</i>: CARD32 must match type in TOC for this chunk<br />
- <i>subtype</i>: CARD32 must match subtype in TOC for this chunk<br />
+<p> <i>header</i>: CARD32 bytes in chunk header (including type-specific fields)<br/>
+ <i>type</i>: CARD32 must match type in TOC for this chunk<br/>
+ <i>subtype</i>: CARD32 must match subtype in TOC for this chunk<br/>
  <i>version</i>: CARD32 version number for this chunk type </p>
 <p> There are currently two chunk types defined for cursor files; comments and images. Comments look like: </p>
-<p> <i>header</i>: 20 Comment headers are 20 bytes<br />
- <i>type</i>: 0xfffe0001 Comment type is 0xfffe0001<br />
- <i>subtype</i>: { 1 (COPYRIGHT), 2 (LICENSE), 3 (OTHER) }<br />
- <i>version</i>: 1<br />
- <i>length</i>: CARD32 byte length of UTF-8 string<br />
+<p> <i>header</i>: 20 Comment headers are 20 bytes<br/>
+ <i>type</i>: 0xfffe0001 Comment type is 0xfffe0001<br/>
+ <i>subtype</i>: { 1 (COPYRIGHT), 2 (LICENSE), 3 (OTHER) }<br/>
+ <i>version</i>: 1<br/>
+ <i>length</i>: CARD32 byte length of UTF-8 string<br/>
  <i>string</i>: LISTofCARD8 UTF-8 string </p>
 <p> Images look like: </p>
-<p> <i>header</i>: 36 Image headers are 36 bytes<br />
- <i>type</i>: 0xfffd0002 Image type is 0xfffd0002<br />
- <i>subtype</i>: CARD32 Image subtype is the nominal size<br />
- <i>version</i>: 1<br />
- <i>width</i>: CARD32 Must be less than or equal to 0x7fff<br />
- <i>height</i>: CARD32 Must be less than or equal to 0x7fff<br />
- <i>xhot</i>: CARD32 Must be less than or equal to width<br />
- <i>yhot</i>: CARD32 Must be less than or equal to height<br />
- <i>delay</i>: CARD32 Delay between animation frames in milliseconds<br />
+<p> <i>header</i>: 36 Image headers are 36 bytes<br/>
+ <i>type</i>: 0xfffd0002 Image type is 0xfffd0002<br/>
+ <i>subtype</i>: CARD32 Image subtype is the nominal size<br/>
+ <i>version</i>: 1<br/>
+ <i>width</i>: CARD32 Must be less than or equal to 0x7fff<br/>
+ <i>height</i>: CARD32 Must be less than or equal to 0x7fff<br/>
+ <i>xhot</i>: CARD32 Must be less than or equal to width<br/>
+ <i>yhot</i>: CARD32 Must be less than or equal to height<br/>
+ <i>delay</i>: CARD32 Delay between animation frames in milliseconds<br/>
  <i>pixels</i>: LISTofCARD32 Packed ARGB format pixels </p>
 <h3>Themes</h3>
 <p> Xcursor (mostly) follows the freedesktop.org spec for theming icons. The default search path it uses is ~/.icons, /usr/share/icons, /usr/share/pixmaps. Within each of these directories, it searches for a directory using the theme name. Within the theme directory, it looks for cursor files in the &#8216;cursors&#8217; subdirectory. It uses the first cursor file found along the path. </p>

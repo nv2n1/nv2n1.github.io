@@ -31,7 +31,7 @@ description: "uri, url, urn – uniform resource identifier (URI), including a U
 <dd>This format allows you to optionally insert a username, a user plus password, and/or a port number. The <i>host</i> is the name of the host computer, either its name as determined by DNS or an IP address (numbers separated by periods). Thus the URI &lt;<a rel="nofollow" href="http://fred:fredpassword@example.com:8080/">http://fred:fredpassword@example.com:8080/</a>&gt; logs into a web server on host example.com as fred (using fredpassword) using port 8080. Avoid including a password in a URI if possible because of the many security risks of having a password written down. If the URL supplies a username but no password, and the remote server requests a password, the program interpreting the URL should request one from the user. </dd>
 <p> Here are some of the most common schemes in use on UNIX-like systems that are understood by many tools. Note that many tools using URIs also have internal schemes or specialized schemes; see those tools&#8217; documentation for information on those schemes. </p>
 <p> <code>http &#8211; Web (HTTP) server</code> </p>
-<p> http://<i>ip_server</i>/<i>path</i><br />
+<p> http://<i>ip_server</i>/<i>path</i><br/>
  http://<i>ip_server</i>/<i>path</i>?<i>query</i> </p>
 <p> This is a URL accessing a web (HTTP) server. The default port is 80. If the path refers to a directory, the web server will choose what to return; usually if there is a file named &quot;index.html&quot; or &quot;index.htm&quot; its content is returned, otherwise, a list of the files in the current directory (with appropriate links) is generated and returned. An example is &lt;<a rel="nofollow" href="http://lwn.net">http://lwn.net</a>&gt;. </p>
 <p> A query can be given in the archaic &quot;isindex&quot; format, consisting of a word or phrase and not including an equal sign (=). A query can also be in the longer &quot;GET&quot; format, which has one or more query entries of the form <i>key</i>=<i>value</i> separated by the ampersand character (&amp;). Note that <i>key</i> can be repeated more than once, though it&#8217;s up to the web server and its application programs to determine if there&#8217;s any meaning to that. There is an unfortunate interaction with HTML/XML/SGML and the GET query format; when such URIs with more than one key are embedded in SGML/XML documents (including HTML), the ampersand (&amp;) has to be rewritten as &amp;amp;. Note that not all queries use this format; larger forms may be too long to store as a URI, so they use a different interaction mechanism (called POST) which does not include the data in the URI. See the Common Gateway Interface specification at for more information. </p>
@@ -39,8 +39,8 @@ description: "uri, url, urn – uniform resource identifier (URI), including a U
 <p> ftp://<i>ip_server</i>/<i>path</i> </p>
 <p> This is a URL accessing a file through the file transfer protocol (FTP). The default port (for control) is 21. If no username is included, the username &quot;anonymous&quot; is supplied, and in that case many clients provide as the password the requestor&#8217;s Internet email address. An example is &lt;<a href="ftp://ftp.is.co.za/rfc/rfc1808.txt">ftp://ftp.is.co.za/rfc/rfc1808.txt</a>&gt;. </p>
 <p> <code>gopher &#8211; Gopher server</code> </p>
-<p> gopher://<i>ip_server</i>/<i>gophertype selector</i><br />
- gopher://<i>ip_server</i>/<i>gophertype selector</i>%09<i>search</i><br />
+<p> gopher://<i>ip_server</i>/<i>gophertype selector</i><br/>
+ gopher://<i>ip_server</i>/<i>gophertype selector</i>%09<i>search</i><br/>
  gopher://<i>ip_server</i>/<i>gophertype selector</i>%09<i>search</i>%09<i>gopher+_string</i> </p>
 <p> The default gopher port is 70. <i>gophertype</i> is a single-character field to denote the Gopher type of the resource to which the URL refers. The entire path may also be empty, in which case the delimiting &quot;/&quot; is also optional and the gophertype defaults to &quot;1&quot;. </p>
 <p> <i>selector</i> is the Gopher selector string. In the Gopher protocol, Gopher selector strings are a sequence of octets which may contain any octets except 09 hexadecimal (US-ASCII HT or tab), 0A hexadecimal (US-ASCII character LF), and 0D (US-ASCII character CR). </p>
@@ -48,7 +48,7 @@ description: "uri, url, urn – uniform resource identifier (URI), including a U
 <p> mailto:<i>email-address</i> </p>
 <p> This is an email address, usually of the form <i>name</i>@<i>hostname</i>. See <code><a href="/docs/linux/man/7-mailaddr/">mailaddr</a></code>(7) for more information on the correct format of an email address. Note that any % character must be rewritten as %25. An example is &lt;mailto:dwheeler [at] dwheeler.com&gt;. </p>
 <p> <code>news &#8211; Newsgroup or News message</code> </p>
-<p> news:<i>newsgroup-name</i><br />
+<p> news:<i>newsgroup-name</i><br/>
  news:<i>message-id</i> </p>
 <p> A <i>newsgroup-name</i> is a period-delimited hierarchical name, such as &quot;comp.infosystems.<a rel="nofollow" href="http://www.misc">www.misc</a>&quot;. If &lt;newsgroup-name&gt; is &quot;*&quot; (as in &lt;news:*&gt;), it is used to refer to &quot;all available news groups&quot;. An example is &lt;news:comp.lang.ada&gt;. </p>
 <p> A <i>message-id</i> corresponds to the Message-ID of IETF RFC 1036, without the enclosing &quot;&lt;&quot; and &quot;&gt;&quot;; it takes the form <i>unique</i>@<i>full_domain_name</i>. A message identifier may be distinguished from a news group name by the presence of the &quot;@&quot; character. </p>
@@ -56,18 +56,18 @@ description: "uri, url, urn – uniform resource identifier (URI), including a U
 <p> telnet://<i>ip_server</i>/ </p>
 <p> The Telnet URL scheme is used to designate interactive text services that may be accessed by the Telnet protocol. The final &quot;/&quot; character may be omitted. The default port is 23. An example is &lt;<a href="telnet://melvyl.ucop.edu/">telnet://melvyl.ucop.edu/</a>&gt;. </p>
 <p> <code>file &#8211; Normal file</code> </p>
-<p> file://<i>ip_server</i>/<i>path_segments</i><br />
+<p> file://<i>ip_server</i>/<i>path_segments</i><br/>
  file:<i>path_segments</i> </p>
 <p> This represents a file or directory accessible locally. As a special case, <i>ip_server</i> can be the string &quot;localhost&quot; or the empty string; this is interpreted as &quot;the machine from which the URL is being interpreted&quot;. If the path is to a directory, the viewer should display the directory&#8217;s contents with links to each containee; not all viewers currently do this. KDE supports generated files through the URL &lt;file:/cgi-bin&gt;. If the given file isn&#8217;t found, browser writers may want to try to expand the filename via filename globbing (see <code><a href="/docs/linux/man/7-glob/">glob</a></code>(7) and <code><a href="/docs/linux/man/3-glob/">glob</a></code>(3)). </p>
 <p> The second format (e.g., &lt;file:/etc/passwd&gt;) is a correct format for referring to a local file. However, older standards did not permit this format, and some programs don&#8217;t recognize this as a URI. A more portable syntax is to use an empty string as the server name, for example, &lt;file:///etc/passwd&gt;; this form does the same thing and is easily recognized by pattern matchers and older programs as a URI. Note that if you really mean to say &quot;start from the current location,&quot; don&#8217;t specify the scheme at all; use a relative address like &lt;../test.txt&gt;, which has the side-effect of being scheme-independent. An example of this scheme is &lt;file:///etc/passwd&gt;. </p>
 <p> <code>man &#8211; Man page documentation</code> </p>
-<p> man:<i>command-name</i><br />
+<p> man:<i>command-name</i><br/>
  man:<i>command-name</i>(<i>section</i>) </p>
 <p> This refers to local online manual (man) reference pages. The command name can optionally be followed by a parenthesis and section number; see <code><a href="/docs/linux/man/7-man/">man</a></code>(7) for more information on the meaning of the section numbers. This URI scheme is unique to UNIX-like systems (such as Linux) and is not currently registered by the IETF. An example is &lt;man:ls(1)&gt;. </p>
 <p> <code>info &#8211; Info page documentation</code> </p>
-<p> info:<i>virtual-filename</i><br />
- info:<i>virtual-filename</i>#<i>nodename</i><br />
- info:(<i>virtual-filename</i>)<br />
+<p> info:<i>virtual-filename</i><br/>
+ info:<i>virtual-filename</i>#<i>nodename</i><br/>
+ info:(<i>virtual-filename</i>)<br/>
  info:(<i>virtual-filename</i>)<i>nodename</i> </p>
 <p> This scheme refers to online info reference pages (generated from texinfo files), a documentation format used by programs such as the GNU tools. This URI scheme is unique to UNIX-like systems (such as Linux) and is not currently registered by the IETF. As of this writing, GNOME and KDE differ in their URI syntax and do not accept the other&#8217;s syntax. The first two formats are the GNOME format; in nodenames all spaces are written as underscores. The second two formats are the KDE format; spaces in nodenames must be written as spaces, even though this is forbidden by the URI standards. It&#8217;s hoped that in the future most tools will understand all of these formats and will always accept underscores for spaces in nodenames. In both GNOME and KDE, if the form without the nodename is used the nodename is assumed to be &quot;Top&quot;. Examples of the GNOME format are &lt;info:gcc&gt; and &lt;info:gcc#G++_and_GCC&gt;. Examples of the KDE format are &lt;info:(gcc)&gt; and &lt;info:(gcc)G++ and GCC&gt;. </p>
 <p> <code>whatis &#8211; Documentation search</code> </p>
@@ -77,12 +77,12 @@ description: "uri, url, urn – uniform resource identifier (URI), including a U
 <p> ghelp:<i>name-of-application</i> </p>
 <p> This loads GNOME help for the given application. Note that not much documentation currently exists in this format. </p>
 <p> <code>ldap &#8211; Lightweight Directory Access Protocol</code> </p>
-<p> ldap://<i>hostport</i><br />
- ldap://<i>hostport</i>/<br />
- ldap://<i>hostport</i>/<i>dn</i><br />
- ldap://<i>hostport</i>/<i>dn</i>?<i>attributes</i><br />
- ldap://<i>hostport</i>/<i>dn</i>?<i>attributes</i>?<i>scope</i><br />
- ldap://<i>hostport</i>/<i>dn</i>?<i>attributes</i>?<i>scope</i>?<i>filter</i><br />
+<p> ldap://<i>hostport</i><br/>
+ ldap://<i>hostport</i>/<br/>
+ ldap://<i>hostport</i>/<i>dn</i><br/>
+ ldap://<i>hostport</i>/<i>dn</i>?<i>attributes</i><br/>
+ ldap://<i>hostport</i>/<i>dn</i>?<i>attributes</i>?<i>scope</i><br/>
+ ldap://<i>hostport</i>/<i>dn</i>?<i>attributes</i>?<i>scope</i>?<i>filter</i><br/>
  ldap://<i>hostport</i>/<i>dn</i>?<i>attributes</i>?<i>scope</i>?<i>filter</i>?<i>extensions</i> </p>
 <p> This scheme supports queries to the Lightweight Directory Access Protocol (LDAP), a protocol for querying a set of servers for hierarchically organized information (such as people and computing resources). See RFC 2255 for more information on the LDAP URL scheme. The components of this URL are:</p>
 <dl>
@@ -105,8 +105,8 @@ description: "uri, url, urn – uniform resource identifier (URI), including a U
 <p>To ask a host.com at port 6666 for information about the person with common name (cn) &quot;Babs Jensen&quot; at University of Michigan, request: </p>
 <pre><a href="ldap://host.com:6666/o=University%20of%20Michigan,c=US??sub?(cn=Babs%20Jensen)">ldap://host.com:6666/o=University%20of%20Michigan,c=US??sub?(cn=Babs%20Jensen)</a></pre>
 <p><code>wais &#8211; Wide Area Information Servers</code> </p>
-<p> wais://<i>hostport</i>/<i>database</i><br />
- wais://<i>hostport</i>/<i>database</i>?<i>search</i><br />
+<p> wais://<i>hostport</i>/<i>database</i><br/>
+ wais://<i>hostport</i>/<i>database</i>?<i>search</i><br/>
  wais://<i>hostport</i>/<i>database</i>/<i>wtype</i>/<i>wpath</i> </p>
 <p> This scheme designates a WAIS database, search, or document (see IETF RFC 1625 for more information on WAIS). Hostport is the hostname, optionally followed by a colon and port number (the default port number is 210). </p>
 <p> The first form designates a WAIS database for searching. The second form designates a particular search of the WAIS database <i>database</i>. The third form designates a particular document within a WAIS database to be retrieved. <i>wtype</i> is the WAIS designation of the type of the object and <i>wpath</i> is the WAIS document-id. </p>

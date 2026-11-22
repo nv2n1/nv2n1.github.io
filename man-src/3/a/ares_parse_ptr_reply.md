@@ -31,5 +31,5 @@ const void *addr, int addrlen, int family,
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-ares_gethostbyaddr/">ares_gethostbyaddr</a></code>(3), <code><a href="/docs/linux/man/3-ares_free_hostent/">ares_free_hostent</a></code>(3)</p>
 <h2>AUTHOR</h2>
-<p> Greg Hudson, MIT Information Systems<br />
+<p> Greg Hudson, MIT Information Systems<br/>
  Copyright 1998 by the Massachusetts Institute of Technology. </p>

@@ -29,5 +29,5 @@ description: "pnmconvol – general MxN convolution on a portable anymap"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pnmsmooth/">pnmsmooth</a></code>(1), <code><a href="/docs/linux/man/5-pnm/">pnm</a></code>(5) </p>
 <h2>AUTHORS</h2>
-<p> Copyright (C) 1989, 1991 by Jef Poskanzer.<br />
+<p> Copyright (C) 1989, 1991 by Jef Poskanzer.<br/>
  Modified 26 November 1994 by Mike Burns, burns [at] chem.psu.edu </p>

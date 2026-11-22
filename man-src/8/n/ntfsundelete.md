@@ -32,7 +32,7 @@ description: "ntfsundelete – recover a deleted file from an NTFS volume."
 <h3>Compressed and Encrypted Files</h3>
 <p><code>ntfsundelete</code> cannot recover compressed or encrypted files. When scanning for them, it will display as being 0% recoverable.</p>
 <h3>The Recovered File&#8217;s Size and Date</h3>
-<p>To recover a file <code>ntfsundelete</code> has to read the file&#8217;s metadata. Unfortunately, this isn&#8217;t always intact. When a file is deleted, the metadata can be left in an inconsistent state. e.g. the file size may be zero; the dates of the file may be set to the time it was deleted, or random.<br />
+<p>To recover a file <code>ntfsundelete</code> has to read the file&#8217;s metadata. Unfortunately, this isn&#8217;t always intact. When a file is deleted, the metadata can be left in an inconsistent state. e.g. the file size may be zero; the dates of the file may be set to the time it was deleted, or random.<br/>
  To be safe <code>ntfsundelete</code> will pick the largest file size it finds and write that to disk. It will also try and set the file&#8217;s date to the last modified date. This date may be the correct last modified date, or something unexpected.</p>
 <h2>Options</h2>
 <p>Below is a summary of all the options that <code>ntfsundelete</code> accepts. Nearly all options have two equivalent names. The short name is preceded by <code>&#8211;</code> and the long name is preceded by <code>&#8212;</code>. Any single letter options, that don&#8217;t take an argument, can be combined into a single command, e.g. <code>-fv</code> is equivalent to <code>-f -v</code>. Long named options can be abbreviated to any unique prefix of their name.</p>
@@ -136,12 +136,12 @@ description: "ntfsundelete – recover a deleted file from an NTFS volume."
 <dl>
 <dd><code>ntfsundelete /dev/hda1 -c 3689-3690 -o debug</code> </dd>
 <h2>Bugs</h2>
-<p>There are some small limitations to <code>ntfsundelete</code>, but currently no known bugs. If you find a bug please send an email describing the problem to the development team:<br />
+<p>There are some small limitations to <code>ntfsundelete</code>, but currently no known bugs. If you find a bug please send an email describing the problem to the development team:<br/>
  ntfs-3g-devel [at] lists.sf.net</p>
 <h2>Authors</h2>
 <p><code>ntfsundelete</code> was written by Richard Russon and Holger Ohmacht, with contributions from Anton Altaparmakov. It was ported to ntfs-3g by Erik Larsson and Jean-Pierre Andre.</p>
 <h2>Availability</h2>
-<p><code>ntfsundelete</code> is part of the <code>ntfs-3g</code> package and is available from:<br />
+<p><code>ntfsundelete</code> is part of the <code>ntfs-3g</code> package and is available from:<br/>
  <a rel="nofollow" href="https://github.com/tuxera/ntfs-3g/wiki/">https://github.com/tuxera/ntfs-3g/wiki/</a></p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-ntfsinfo/">ntfsinfo</a></code>(8), <code><a href="/docs/linux/man/8-ntfsprogs/">ntfsprogs</a></code>(8) </p>

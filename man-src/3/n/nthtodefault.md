@@ -13,8 +13,8 @@ description: "QuantLib::NthToDefault – N-th to default swap."
 <p> Inherits <code>QuantLib::Instrument</code>. </p>
 <h3>Public Member Functions</h3>
 <p><code>NthToDefault</code> (Size n, const std::vector&lt; Issuer &gt; &amp;basket, const <code>Handle</code>&lt; <code>OneFactorCopula</code> &gt; &amp;copula, Protection::Side side, <code>Real</code> nominal, const <code>Schedule</code> &amp;premiumSchedule, <code>Rate</code> premiumRate, const <code>DayCounter</code> &amp;dayCounter, bool settlePremiumAccrual, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;yieldTS, const <code>Period</code> &amp;integrationStepSize, boost::shared_ptr&lt; <code>Claim</code> &gt; claim=boost::shared_ptr&lt; <code>Claim</code> &gt;()) </p>
-<p> bool <code>isExpired</code> () const<br />
- <i>returns whether the instrument is still tradable. </i><br />
+<p> bool <code>isExpired</code> () const<br/>
+ <i>returns whether the instrument is still tradable. </i><br/>
  <code>Rate</code> <code>fairPremium</code> () const </p>
 <p> <code>Rate</code> <code>premium</code> () const </p>
 <p> <code>Real</code> <code>nominal</code> () const </p>

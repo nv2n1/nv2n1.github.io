@@ -17,7 +17,7 @@ perform rounding
 Inspectors</code></pre>
 <p> Inherited by <code>CeilingTruncation</code>, <code>ClosestRounding</code>, <code>DownRounding</code>, <code>FloorTruncation</code>, and <code>UpRounding</code>.</p>
 <h3>Public Types</h3>
-<p>enum <code>Type</code> { <code>None</code>, <code>Up</code>, <code>Down</code>, <code>Closest</code>, <code>Floor</code>, <code>Ceiling</code> }<br />
+<p>enum <code>Type</code> { <code>None</code>, <code>Up</code>, <code>Down</code>, <code>Closest</code>, <code>Floor</code>, <code>Ceiling</code> }<br/>
  <i>rounding methods </i></p>
 <h3>Public Member Functions</h3>
 <pre><code>Rounding ()

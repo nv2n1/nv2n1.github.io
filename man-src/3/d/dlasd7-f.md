@@ -10,7 +10,7 @@ description: "dlasd7.f –"
 <p>dlasd7.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dlasd7</code> (ICOMPQ, NL, NR, SQRE, K, D, Z, ZW, VF, VFW, VL, VLW, ALPHA, BETA, DSIGMA, IDX, IDXP, IDXQ, PERM, GIVPTR, GIVCOL, LDGCOL, GIVNUM, LDGNUM, C, S, INFO)<br />
+<p>subroutine <code>dlasd7</code> (ICOMPQ, NL, NR, SQRE, K, D, Z, ZW, VF, VFW, VL, VLW, ALPHA, BETA, DSIGMA, IDX, IDXP, IDXQ, PERM, GIVPTR, GIVCOL, LDGCOL, GIVNUM, LDGNUM, C, S, INFO)<br/>
  <i></i><code>DLASD7</code> merges the two sets of singular values together into a single sorted set. Then it tries to deflate the size of the problem. Used by sbdsdc.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlasd7 (integerICOMPQ, integerNL, integerNR, integerSQRE, integerK, double precision, dimension( * )D, double precision, dimension( * )Z, double precision, dimension( * )ZW, double precision, dimension( * )VF, double precision, dimension( * )VFW, double precision, dimension( * )VL, double precision, dimension( * )VLW, double precisionALPHA, double precisionBETA, double precision, dimension( * )DSIGMA, integer, dimension( * )IDX, integer, dimension( * )IDXP, integer, dimension( * )IDXQ, integer, dimension( * )PERM, integerGIVPTR, integer, dimension( ldgcol, * )GIVCOL, integerLDGCOL, double precision, dimension( ldgnum, * )GIVNUM, integerLDGNUM, double precisionC, double precisionS, integerINFO)</h3>

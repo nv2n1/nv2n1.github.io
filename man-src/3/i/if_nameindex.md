@@ -40,7 +40,7 @@ void if_freenameindex(struct if_nameindex *ptr);
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>if_nameindex</code>(),<br />
+<td> <code>if_nameindex</code>(),<br/>
  <code>if_freenameindex</code>() </td>
 <td>Thread safety</td>
 <td>MT-Safe
@@ -55,14 +55,14 @@ void if_freenameindex(struct if_nameindex *ptr);
 <p> $ <code>./a.out</code><i> 1: lo 2: wlan0 3: em1 </i></p>
 <h3>Program source</h3>
 <p> #include &lt;net/if.h&gt; #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; #include &lt;unistd.h&gt; </p>
-<p> int main(int argc, char *argv[]) {<br />
+<p> int main(int argc, char *argv[]) {<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct if_nameindex&nbsp;*if_ni,&nbsp;*i; </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if_ni&nbsp;=&nbsp;if_nameindex();<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(if_ni&nbsp;==&nbsp;NULL)&nbsp;{<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;perror(&quot;if_nameindex&quot;);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_FAILURE);<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if_ni&nbsp;=&nbsp;if_nameindex();<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(if_ni&nbsp;==&nbsp;NULL)&nbsp;{<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;perror(&quot;if_nameindex&quot;);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_FAILURE);<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;} </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;for&nbsp;(i&nbsp;=&nbsp;if_ni;&nbsp;!&nbsp;(i-&gt;if_index&nbsp;==&nbsp;0&nbsp;&amp;&amp;&nbsp;i-&gt;if_name&nbsp;==&nbsp;NULL);&nbsp;i++)<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;for&nbsp;(i&nbsp;=&nbsp;if_ni;&nbsp;!&nbsp;(i-&gt;if_index&nbsp;==&nbsp;0&nbsp;&amp;&amp;&nbsp;i-&gt;if_name&nbsp;==&nbsp;NULL);&nbsp;i++)<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;%u:&nbsp;%s
 &quot;, i-&gt;if_index, i-&gt;if_name); </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if_freenameindex(if_ni); </p>

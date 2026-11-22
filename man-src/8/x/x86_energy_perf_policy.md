@@ -9,10 +9,10 @@ description: "x86_energy_perf_policy – read or write MSR_IA32_ENERGY_PERF_BIAS
 
 <p>x86_energy_perf_policy &#8211; read or write MSR_IA32_ENERGY_PERF_BIAS</p>
 <h2>Synopsis</h2>
-<p><code> x86_energy_perf_policy</code> [<code>-c cpu</code>] [<code>-v</code>] -r<br />
- <code>x86_energy_perf_policy</code> [<code>-c cpu</code>] [<code>-v</code>] &#8216;performance&#8217;<br />
- <code>x86_energy_perf_policy</code> [<code>-c cpu</code>] [<code>-v</code>] &#8216;normal&#8217;<br />
- <code>x86_energy_perf_policy</code> [<code>-c cpu</code>] [<code>-v</code>] &#8216;powersave&#8217;<br />
+<p><code> x86_energy_perf_policy</code> [<code>-c cpu</code>] [<code>-v</code>] -r<br/>
+ <code>x86_energy_perf_policy</code> [<code>-c cpu</code>] [<code>-v</code>] &#8216;performance&#8217;<br/>
+ <code>x86_energy_perf_policy</code> [<code>-c cpu</code>] [<code>-v</code>] &#8216;normal&#8217;<br/>
+ <code>x86_energy_perf_policy</code> [<code>-c cpu</code>] [<code>-v</code>] &#8216;powersave&#8217;<br/>
  <code>x86_energy_perf_policy</code> [<code>-c cpu</code>] [<code>-v</code>] n</p>
 <h2>Description</h2>
 <p><code>x86_energy_perf_policy</code> allows software to convey its policy for the relative importance of performance versus energy savings to the processor. The processor uses this information in model-specific ways when it must select trade-offs between performance and energy efficiency. This policy hint does not supersede Processor Performance states (P-states) or CPU Idle power states (C-states), but allows software to have influence where it would otherwise be unable to express a preference. For example, this setting may tell the hardware how aggressively or conservatively to control frequency in the &quot;turbo range&quot; above the explicitly OS-controlled P-state frequency range. It may also tell the hardware how aggressively is should enter the OS requested C-states. Support for this feature is indicated by CPUID.06H.ECX.bit3 per the Intel Architectures Software Developer&#8217;s Manual.</p>

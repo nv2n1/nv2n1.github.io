@@ -7,7 +7,7 @@ url: "/docs/linux/man/3-mongoc_database_drop/"
 description: "mongoc_database_drop() – bool mongoc_database_drop (mongoc_database_t *database, bson_error_t *error);"
 ---
 
-<p>mongoc_database_drop() &#8211; bool mongoc_database_drop (mongoc_database_t *database,<br />
+<p>mongoc_database_drop() &#8211; bool mongoc_database_drop (mongoc_database_t *database,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>bson_error_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>*error);</p>
 <h2>Synopsis</h2>
 <pre>bool

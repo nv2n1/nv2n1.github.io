@@ -17,7 +17,7 @@ description: "kmag – Screen magnifier"
 <dd>KMagnifier is a screen magnifier. You can use KMagnifier to magnify a part of the screen just as you would use a lens to magnify a newspaper fine-print or a photograph. This application is useful for a variety of people: from researchers to artists to web-designers to people with low vision.</dd>
 <h2>SEE ALSO</h2>
 <p> More detailed user documentation is available from m[blue]<code>help:/kmag</code>m[] (either enter this URL into Konqueror, or run <code>khelpcenter</code><i>help:/kmag</i>). </p>
-<p> There is also further information available at the m[blue]<code>KDE accessibility project home page.</code>m[]<font SIZE="-2">[1]</font></p>
+<p> There is also further information available at the m[blue]<code>KDE accessibility project home page.</code>m[][1]</p>
 <h2>AUTHORS</h2>
 <p> KMagnifier was written by Olaf Schmidt&lt;ojschmidt [at] kde.org&gt; and Sarang Lakare&lt;sarang [at] users.sf.net&gt; and Michael Forster&lt;forster [at] fmi.uni-passau.de&gt;</p>
 <h2>AUTHOR</h2>

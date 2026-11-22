@@ -17,7 +17,7 @@ description: "perl584delta – what is new for perl v5.8.4"
 <p> The internal dump output has been improved, so that non-printable characters such as newline and backspace are output in <tt>&quot;</tt>\x&quot;</code> notation, rather than octal. This might just confuse non-robust tools which parse the output of modules such as Devel::Peek.  </p>
 <h2>Core Enhancements</h2>
 <h3>Malloc wrapping</h3>
-<p> Perl can now be built to detect attempts to assign pathologically large chunks of memory. Previously such assignments would suffer from integer wrap-around during size calculations causing a misallocation, which would crash perl, and could theoretically be used for ``stack smashing&#8217;&#8216; attacks. The wrapping defaults to enabled on platforms where we know it works (most <font SIZE="-1">AIX</font> configurations, BSDi, Darwin, <font SIZE="-1">DEC OSF/1,</font> FreeBSD, <font SIZE="-1">HP/UX, GNU</font> Linux, OpenBSD, Solaris, <font SIZE="-1">VMS</font> and most Win32 compilers) and defaults to disabled on other platforms.  </p>
+<p> Perl can now be built to detect attempts to assign pathologically large chunks of memory. Previously such assignments would suffer from integer wrap-around during size calculations causing a misallocation, which would crash perl, and could theoretically be used for ``stack smashing&#8217;&#8216; attacks. The wrapping defaults to enabled on platforms where we know it works (most AIX configurations, BSDi, Darwin, DEC OSF/1, FreeBSD, HP/UX, GNU Linux, OpenBSD, Solaris, VMS and most Win32 compilers) and defaults to disabled on other platforms.  </p>
 <h3>Unicode Character Database 4.0.1</h3>
 <p> The copy of the Unicode Character Database included in Perl 5.8 has been updated to 4.0.1 from 4.0.0.  </p>
 <h3>suidperl less insecure</h3>
@@ -26,7 +26,7 @@ description: "perl584delta – what is new for perl v5.8.4"
 <h3>format</h3>
 <p> In addition to bug fixes, <code>&quot;format&quot;</code>&#8216;s features have been enhanced. See perlform  </p>
 <h2>Modules and Pragmata</h2>
-<p> The (mis)use of <code>&quot;/tmp&quot;</code> in core modules and documentation has been tidied up. Some modules available both within the perl core and independently from <font SIZE="-1">CPAN</font> (``dual-life modules&#8217;&#8216;) have not yet had these changes applied; the changes will be integrated into future stable perl releases as the modules are updated on <font SIZE="-1">CPAN.</font>  </p>
+<p> The (mis)use of <code>&quot;/tmp&quot;</code> in core modules and documentation has been tidied up. Some modules available both within the perl core and independently from CPAN (``dual-life modules&#8217;&#8216;) have not yet had these changes applied; the changes will be integrated into future stable perl releases as the modules are updated on CPAN.  </p>
 <h3>Updated modules</h3>
 <dl>
 <dt>Attribute::Handlers</dt>
@@ -35,7 +35,7 @@ description: "perl584delta – what is new for perl v5.8.4"
 <dd>  </dd>
 <dt>Benchmark</dt>
 <dd>  </dd>
-<dt><font SIZE="-1">CGI</font></dt>
+<dt>CGI</dt>
 <dd>  </dd>
 <dt>Carp</dt>
 <dd>  </dd>
@@ -45,7 +45,7 @@ description: "perl584delta – what is new for perl v5.8.4"
 <dd>  </dd>
 <dt>File::Find</dt>
 <dd>  </dd>
-<dt><font SIZE="-1">IO</font></dt>
+<dt>IO</dt>
 <dd>  </dd>
 <dt>IPC::Open3</dt>
 <dd>  </dd>
@@ -61,7 +61,7 @@ description: "perl584delta – what is new for perl v5.8.4"
 <dd>  </dd>
 <dt>ODBM_File</dt>
 <dd>  </dd>
-<dt><font SIZE="-1">POSIX</font></dt>
+<dt>POSIX</dt>
 <dd>  </dd>
 <dt>Shell</dt>
 <dd>  </dd>
@@ -71,7 +71,7 @@ description: "perl584delta – what is new for perl v5.8.4"
 <dt>Storable</dt>
 <dd>  </dd>
 <dt>Switch</dt>
-<dd> <p> Synced with its <font SIZE="-1">CPAN</font> version 2.10 </p>
+<dd> <p> Synced with its CPAN version 2.10 </p>
  </dd>
 <dt>Sys::Syslog</dt>
 <dd> <p> <code>&quot;syslog()&quot;</code> can now use numeric constants for facility names and priorities, in addition to strings. </p>
@@ -115,9 +115,9 @@ description: "perl584delta – what is new for perl v5.8.4"
 <h2>Utility Changes</h2>
 <p> The Perl debugger (<i>lib/perl5db.pl</i>) can now save all debugger commands for sourcing later, and can display the parent inheritance tree of a given class.  </p>
 <h2>Installation and Configuration Improvements</h2>
-<p> The build process on both <font SIZE="-1">VMS</font> and Windows has had several minor improvements made. On Windows Borland&#8217;s C compiler can now compile perl with PerlIO and/or <font SIZE="-1">USE_LARGE_FILES</font> enabled. </p>
+<p> The build process on both VMS and Windows has had several minor improvements made. On Windows Borland&#8217;s C compiler can now compile perl with PerlIO and/or USE_LARGE_FILES enabled. </p>
 <p> <code>&quot;perl.exe&quot;</code> on Windows now has a ``Camel&#8217;&#8216; logo icon. The use of a camel with the topic of Perl is a trademark of O&#8217;Reilly and Associates Inc., and is used with their permission (ie distribution of the source, compiling a Windows executable from it, and using that executable locally). Use of the supplied camel for anything other than a perl executable&#8217;s icon is specifically not covered, and anyone wishing to redistribute perl binaries <i>with</i> the icon should check directly with O&#8217;Reilly beforehand. </p>
-<p> Perl should build cleanly on Stratus <font SIZE="-1">VOS</font> once more.  </p>
+<p> Perl should build cleanly on Stratus VOS once more.  </p>
 <h2>Selected Bug Fixes</h2>
 <p> More utf8 bugs fixed, notably in how <code>&quot;chomp&quot;</code>, <code>&quot;chop&quot;</code>, <code>&quot;send&quot;</code>, and <code>&quot;syswrite&quot;</code> and interact with utf8 data. Concatenation now works correctly when <code>&quot;use bytes;&quot;</code> is in scope. </p>
 <p> Pragmata are now correctly propagated into (?{...}) constructions in regexps. Code such as </p>
@@ -139,6 +139,6 @@ description: "perl584delta – what is new for perl v5.8.4"
 <p> If you believe you have an unreported bug, please run the <code>perlbug</code> program included with your release. Be sure to trim your bug down to a tiny but sufficient test case. Your bug report, along with the output of <code>&quot;perl -V&quot;</code>, will be sent off to perlbug [at] perl.org to be analysed by the Perl porting team. You can browse and search the Perl 5 bugs at <a rel="nofollow" href="http://bugs.perl.org/">http://bugs.perl.org/</a>  </p>
 <h2>SEE ALSO</h2>
 <p> The <i>Changes</i> file for exhaustive details on what changed. </p>
-<p> The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. </p>
-<p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
+<p> The <i></i><i>INSTALL</i><i></i> file for how to build Perl. </p>
+<p> The <i></i><i>README</i><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information. </p>

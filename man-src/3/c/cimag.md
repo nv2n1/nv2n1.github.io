@@ -11,8 +11,8 @@ description: "cimag, cimagf, cimagl – get imaginary part of a complex number"
 <p> cimag, cimagf, cimagl &#8211; get imaginary part of a complex number </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>
-<p> <code>double cimag(double complex </code><i>z</i><code>);</code><br />
- <code>float cimagf(float complex </code><i>z</i><code>);</code><br />
+<p> <code>double cimag(double complex </code><i>z</i><code>);</code><br/>
+ <code>float cimagf(float complex </code><i>z</i><code>);</code><br/>
  <code>long double cimagl(long double complex </code><i>z</i><code>);</code> </p>
 <p> Link with <i>-lm</i>.</p>
 <h2>DESCRIPTION</h2>

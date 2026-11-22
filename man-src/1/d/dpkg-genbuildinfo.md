@@ -63,11 +63,11 @@ description: "dpkg-genbuildinfo – generate Debian .buildinfo files"
 <dd> Show the version and exit.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><font SIZE="-1"><code>DEB_BUILD_OPTIONS</code></font></dt>
+<dt><code>DEB_BUILD_OPTIONS</code></dt>
 <dd> This variable can be used to enable or disable various features that affect the information included in the .buildinfo file, via the <code>buildinfo</code> option (since dpkg 1.18.19). This option contains a comma-separated list of features, prefixed with the &#8216;<code>+</code>&#8216; or &#8216;<code>&#8211;</code>&#8216; modifiers, to denote whether to enable or disable them. The special feature &#8220;<code>all</code>&#8221; can be used to enable or disable all other features. The feature &#8220;<code>path</code>&#8221; controls whether to unconditionally include the <code>Build-Path</code> field.</dd>
-<dt><font SIZE="-1"><code>DPKG_COLORS</code></font></dt>
+<dt><code>DPKG_COLORS</code></dt>
 <dd> Sets the color mode (since dpkg 1.18.5). The currently accepted values are: <code>auto</code> (default), <code>always</code> and <code>never</code>.</dd>
-<dt><font SIZE="-1"><code>DPKG_NLS</code></font></dt>
+<dt><code>DPKG_NLS</code></dt>
 <dd> If set, it will be used to decide whether to activate Native Language Support, also known as internationalization (or i18n) support (since dpkg 1.19.0). The accepted values are: <code>0</code> and <code>1</code> (default).</dd></dl>
 <h2>FILES</h2>
 <dl>

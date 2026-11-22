@@ -10,7 +10,7 @@ description: "gxmessage – a GTK-based xmessage clone"
 
 <p> gxmessage &#8211; a GTK-based xmessage clone </p>
 <h2>SYNOPSIS</h2>
-<p> <code>gxmessage</code> [<i>OPTIONS</i>] <code>message</code> &#8230;<br />
+<p> <code>gxmessage</code> [<i>OPTIONS</i>] <code>message</code> &#8230;<br/>
  <code>gxmessage</code> [<i>OPTIONS</i>] -file <i>FILENAME</i></p>
 <h2>DESCRIPTION</h2>
 <p> <code>gxmessage</code> opens a window to display a message obtained from the command line, from a file, or from <i>stdin</i>. The window includes a row of buttons, each of which causes the program to exit with a different return code. </p>

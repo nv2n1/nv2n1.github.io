@@ -9,12 +9,12 @@ description: "ql/cashflows/cashflowvectors.hpp – Cash flow vector builders."
 
 <p>ql/cashflows/cashflowvectors.hpp &#8211; Cash flow vector builders. </p>
 <h2>Synopsis</h2>
-<p>#include &lt;ql/cashflows/fixedratecoupon.hpp&gt;<br />
- #include &lt;ql/cashflows/replication.hpp&gt;<br />
- #include &lt;ql/time/schedule.hpp&gt;<br />
- #include &lt;ql/utilities/null.hpp&gt;<br />
- #include &lt;ql/utilities/vectors.hpp&gt;<br />
- #include &lt;ql/position.hpp&gt;<br />
+<p>#include &lt;ql/cashflows/fixedratecoupon.hpp&gt;<br/>
+ #include &lt;ql/cashflows/replication.hpp&gt;<br/>
+ #include &lt;ql/time/schedule.hpp&gt;<br/>
+ #include &lt;ql/utilities/null.hpp&gt;<br/>
+ #include &lt;ql/utilities/vectors.hpp&gt;<br/>
+ #include &lt;ql/position.hpp&gt;<br/>
  #include &lt;ql/indexes/swapindex.hpp&gt; </p>
 <h3>Functions</h3>
 <p>Rate <code>effectiveFixedRate</code> (const std::vector&lt; Spread &gt; &amp;spreads, const std::vector&lt; Rate &gt; &amp;caps, const std::vector&lt; Rate &gt; &amp;floors, Size i) </p>

@@ -44,13 +44,13 @@ description: "dbus-binding-tool – C language GLib bindings generation utility.
 <p> When building server-side bindings, the &#8211;<code>-mode=glib-server</code> argument is used. Also the &#8211;<code>-prefix</code> argument must be used when building server-side bindings so that functions in the generated output are prefexed with the specified value. The server-side bindings support the following annotations: </p>
 <p> &quot;org.freedesktop.DBus.GLib.CSymbol&quot; </p>
 <p> This annotation is used to specify the C symbol names for the various types (interface, method, etc.), if it differs from the name D-Bus generates. </p>
-<p>&lt;interface name=&#8221;com.example.MyObject&#8221;&gt;<br />
-  &lt;annotation name=&#8221;org.freedesktop.DBus.GLib.CSymbol&#8221; value=&#8221;my_object&#8221;/&gt;<br />
-  [&#8230;]<br />
-  &lt;method name &#8220;ManyArgs&#8221;&gt;<br />
-    &lt;annotation name=&#8221;org.freedesktop.DBus.GLib.CSymbol&#8221; value=&#8221;my_object_many_args&#8221;/&gt;<br />
-    [&#8230;]<br />
-  &lt;/method&gt;<br />
+<p>&lt;interface name=&#8221;com.example.MyObject&#8221;&gt;<br/>
+  &lt;annotation name=&#8221;org.freedesktop.DBus.GLib.CSymbol&#8221; value=&#8221;my_object&#8221;/&gt;<br/>
+  [&#8230;]<br/>
+  &lt;method name &#8220;ManyArgs&#8221;&gt;<br/>
+    &lt;annotation name=&#8221;org.freedesktop.DBus.GLib.CSymbol&#8221; value=&#8221;my_object_many_args&#8221;/&gt;<br/>
+    [&#8230;]<br/>
+  &lt;/method&gt;<br/>
 &lt;/interface&gt;</p>
 <p> &quot;org.freedesktop.DBus.GLib.Async&quot; </p>
 <p> This annotation marks the method implementation as an asynchronous function, which does not return a response straight away but will send the response at some later point to complete the call. This is used to implement non-blocking services where method calls can take time. </p>

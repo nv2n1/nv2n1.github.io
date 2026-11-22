@@ -18,7 +18,7 @@ void auparse_add_callback(auparse_state_t *au, auparse_callback_ptr callback,
 <h2>DESCRIPTION</h2>
 <p> auparse_add_callback adds a callback function to the parse state which is invoked to notify the application of parsing events. This is part of the event feed API. </p>
 <p> The signature of the callback is: </p>
-<p>void auparse_callback(auparse_state_t *au, auparse_cb_event_t cb_event_type,<br />
+<p>void auparse_callback(auparse_state_t *au, auparse_cb_event_t cb_event_type,<br/>
                       void *user_data);</p>
 <p> When the callback is invoked it is passed: </p>
 <dl>

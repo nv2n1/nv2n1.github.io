@@ -49,9 +49,9 @@ description: "fd2ps – Translates fdesign output to PostScript"
 <h2>SEE ALSO</h2>
 <p> fdesign(1L), <a href="/docs/linux/man/5-xforms/">xforms</a>(5)</p>
 <h2>AUTHOR</h2>
-<p> Copyright (c) 1997-98 by T.C. Zhao (tc_zhao [at] yahoo.com)<br />
- Since 2002: GNU Lesser General Public License<br />
+<p> Copyright (c) 1997-98 by T.C. Zhao (tc_zhao [at] yahoo.com)<br/>
+ Since 2002: GNU Lesser General Public License<br/>
  Maintainers: Jean-Marc Lasgouttes, Angus Leeming and Jens Thoms Toerring &lt;jt [at] toerring.de&gt;</p>
 <h2>HOME PAGE</h2>
-<p> <a rel="nofollow" href="http://xforms-toolkit.org">http://xforms-toolkit.org</a><br />
+<p> <a rel="nofollow" href="http://xforms-toolkit.org">http://xforms-toolkit.org</a><br/>
  <a rel="nofollow" href="http://world.std.com/~xforms">http://world.std.com/~xforms</a> </p>

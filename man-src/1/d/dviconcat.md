@@ -17,7 +17,7 @@ description: "dviconcat – concatenate DVI files"
 <h2>AUTHOR</h2>
 <p> Chris Torek, University of Maryland</p>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-dviselect/">dviselect</a>(1), <a href="/docs/linux/man/1-latex/">latex</a>(1), <a href="/docs/linux/man/1-tex/">tex</a>(1)<br />
+<p> <a href="/docs/linux/man/1-dviselect/">dviselect</a>(1), <a href="/docs/linux/man/1-latex/">latex</a>(1), <a href="/docs/linux/man/1-tex/">tex</a>(1)<br/>
  <i>MC-TeX User&#8217;s Guide</i></p>
 <h2>BUGS</h2>
 <p> The program should be called <i>dvicat</i>, but that name was taken (for the driver for the C/A/T typesetter). </p>

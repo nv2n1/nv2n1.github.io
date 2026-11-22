@@ -10,55 +10,55 @@ description: "Lattice methods –"
 
 <p> Lattice methods &#8211; </p>
 <h3>Classes</h3>
-<p> class <code>ExtendedBinomialTree&lt; T &gt;</code><br />
- <i>Binomial tree base class. </i><br />
- class <code>ExtendedEqualProbabilitiesBinomialTree&lt; T &gt;</code><br />
- <i>Base class for equal probabilities binomial tree. </i><br />
- class <code>ExtendedEqualJumpsBinomialTree&lt; T &gt;</code><br />
- <i>Base class for equal jumps binomial tree. </i><br />
- class <code>ExtendedJarrowRudd</code><br />
- <i>Jarrow-Rudd (multiplicative) equal probabilities binomial tree. </i><br />
- class <code>ExtendedCoxRossRubinstein</code><br />
- <i>Cox-Ross-Rubinstein (multiplicative) equal jumps binomial tree. </i><br />
- class <code>ExtendedAdditiveEQPBinomialTree</code><br />
- <i>Additive equal probabilities binomial tree. </i><br />
- class <code>ExtendedTrigeorgis</code><br />
- <i>Trigeorgis (additive equal jumps) binomial tree </i><br />
- class <code>ExtendedTian</code><br />
- <i>Tian tree: third moment matching, multiplicative approach </i><br />
- class <code>ExtendedLeisenReimer</code><br />
- <i>Leisen &amp; Reimer tree: multiplicative approach. </i><br />
- class <code>BinomialTree&lt; T &gt;</code><br />
- <i>Binomial tree base class. </i><br />
- class <code>EqualProbabilitiesBinomialTree&lt; T &gt;</code><br />
- <i>Base class for equal probabilities binomial tree. </i><br />
- class <code>EqualJumpsBinomialTree&lt; T &gt;</code><br />
- <i>Base class for equal jumps binomial tree. </i><br />
- class <code>JarrowRudd</code><br />
- <i>Jarrow-Rudd (multiplicative) equal probabilities binomial tree. </i><br />
- class <code>CoxRossRubinstein</code><br />
- <i>Cox-Ross-Rubinstein (multiplicative) equal jumps binomial tree. </i><br />
- class <code>AdditiveEQPBinomialTree</code><br />
- <i>Additive equal probabilities binomial tree. </i><br />
- class <code>Trigeorgis</code><br />
- <i>Trigeorgis (additive equal jumps) binomial tree </i><br />
- class <code>Tian</code><br />
- <i>Tian tree: third moment matching, multiplicative approach </i><br />
- class <code>LeisenReimer</code><br />
- <i>Leisen &amp; Reimer tree: multiplicative approach. </i><br />
- class <code>BlackScholesLattice&lt; T &gt;</code><br />
- <i>Simple binomial lattice approximating the Black-Scholes model. </i><br />
- class <code>TreeLattice&lt; Impl &gt;</code><br />
- <i>Tree-based lattice-method base class. </i><br />
- class <code>TreeLattice1D&lt; Impl &gt;</code><br />
- <i>One-dimensional tree-based lattice. </i><br />
- class <code>TreeLattice2D&lt; Impl, T &gt;</code><br />
- <i>Two-dimensional tree-based lattice. </i><br />
- class <code>TsiveriotisFernandesLattice&lt; T &gt;</code><br />
- <i>Binomial lattice approximating the Tsiveriotis-Fernandes model. </i><br />
- class <code>Tree&lt; T &gt;</code><br />
- <i>Tree approximating a single-factor diffusion </i><br />
- class <code>TrinomialTree</code><br />
+<p> class <code>ExtendedBinomialTree&lt; T &gt;</code><br/>
+ <i>Binomial tree base class. </i><br/>
+ class <code>ExtendedEqualProbabilitiesBinomialTree&lt; T &gt;</code><br/>
+ <i>Base class for equal probabilities binomial tree. </i><br/>
+ class <code>ExtendedEqualJumpsBinomialTree&lt; T &gt;</code><br/>
+ <i>Base class for equal jumps binomial tree. </i><br/>
+ class <code>ExtendedJarrowRudd</code><br/>
+ <i>Jarrow-Rudd (multiplicative) equal probabilities binomial tree. </i><br/>
+ class <code>ExtendedCoxRossRubinstein</code><br/>
+ <i>Cox-Ross-Rubinstein (multiplicative) equal jumps binomial tree. </i><br/>
+ class <code>ExtendedAdditiveEQPBinomialTree</code><br/>
+ <i>Additive equal probabilities binomial tree. </i><br/>
+ class <code>ExtendedTrigeorgis</code><br/>
+ <i>Trigeorgis (additive equal jumps) binomial tree </i><br/>
+ class <code>ExtendedTian</code><br/>
+ <i>Tian tree: third moment matching, multiplicative approach </i><br/>
+ class <code>ExtendedLeisenReimer</code><br/>
+ <i>Leisen &amp; Reimer tree: multiplicative approach. </i><br/>
+ class <code>BinomialTree&lt; T &gt;</code><br/>
+ <i>Binomial tree base class. </i><br/>
+ class <code>EqualProbabilitiesBinomialTree&lt; T &gt;</code><br/>
+ <i>Base class for equal probabilities binomial tree. </i><br/>
+ class <code>EqualJumpsBinomialTree&lt; T &gt;</code><br/>
+ <i>Base class for equal jumps binomial tree. </i><br/>
+ class <code>JarrowRudd</code><br/>
+ <i>Jarrow-Rudd (multiplicative) equal probabilities binomial tree. </i><br/>
+ class <code>CoxRossRubinstein</code><br/>
+ <i>Cox-Ross-Rubinstein (multiplicative) equal jumps binomial tree. </i><br/>
+ class <code>AdditiveEQPBinomialTree</code><br/>
+ <i>Additive equal probabilities binomial tree. </i><br/>
+ class <code>Trigeorgis</code><br/>
+ <i>Trigeorgis (additive equal jumps) binomial tree </i><br/>
+ class <code>Tian</code><br/>
+ <i>Tian tree: third moment matching, multiplicative approach </i><br/>
+ class <code>LeisenReimer</code><br/>
+ <i>Leisen &amp; Reimer tree: multiplicative approach. </i><br/>
+ class <code>BlackScholesLattice&lt; T &gt;</code><br/>
+ <i>Simple binomial lattice approximating the Black-Scholes model. </i><br/>
+ class <code>TreeLattice&lt; Impl &gt;</code><br/>
+ <i>Tree-based lattice-method base class. </i><br/>
+ class <code>TreeLattice1D&lt; Impl &gt;</code><br/>
+ <i>One-dimensional tree-based lattice. </i><br/>
+ class <code>TreeLattice2D&lt; Impl, T &gt;</code><br/>
+ <i>Two-dimensional tree-based lattice. </i><br/>
+ class <code>TsiveriotisFernandesLattice&lt; T &gt;</code><br/>
+ <i>Binomial lattice approximating the Tsiveriotis-Fernandes model. </i><br/>
+ class <code>Tree&lt; T &gt;</code><br/>
+ <i>Tree approximating a single-factor diffusion </i><br/>
+ class <code>TrinomialTree</code><br/>
  <i>Recombining trinomial tree class. </i></p>
 <h2>Detailed Description</h2>
 <p> The framework (corresponding to the ql/Lattices directory) contains basic building blocks for pricing instruments using lattice methods (trees). A lattice, i.e. an instance of the abstract class <code>QuantLib::Lattice</code>, relies on one or several trees (each one approximating a diffusion process) to price an instance of the DiscretizedAsset class. Trees are instances of classes derived from <code>QuantLib::Tree</code>, classes which define the branching between nodes and transition probabilities.</p>

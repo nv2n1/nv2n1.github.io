@@ -143,9 +143,9 @@ linear : [number[:socket, core]] striding : number : n[:socket, core] explicit :
 <p> If this option or a corresponding value in <i>qmon</i> is specified then this value will be passed to defined JSV instances as parameter with the name <code>cwd</code>. The value of this parameter will be the absolute path to the current working directory. JSV scripts can remove the path from jobs during the verification process by setting the value of this parameter to an empty string. As a result the job behaves as if <code>-cwd</code> was not specified during job submission. (See <code>-jsv</code> option below or find more information concerning JSV in </p>
 <dt><code>-C</code> <i>prefix_string</i></dt>
 <dd> Available for <i>qsub</i> and <i>qrsh</i> with script submission (<code>-b n</code>). </dd>
-<p> <i>Prefix_string</i> defines the prefix that declares a directive in the job&#8217;s command. The prefix is not a job attribute, but affects the behavior of <i>qsub</i> and <i>qrsh</i>. If <i>prefix</i> is a null string, the command will not be scanned for embedded directives.<br />
- The directive prefix consists of two ASCII characters which, when appearing in the first two bytes of a script line, indicate that what follows is an xxQS_NAMExx command. The default is &quot;#$&quot;.<br />
- The user should be aware that changing the first delimiting character can produce unforeseen side effects. If the script file contains anything other than a &quot;#&quot; character in the first byte position of the line, the shell processor for the job will reject the line and may exit the job prematurely.<br />
+<p> <i>Prefix_string</i> defines the prefix that declares a directive in the job&#8217;s command. The prefix is not a job attribute, but affects the behavior of <i>qsub</i> and <i>qrsh</i>. If <i>prefix</i> is a null string, the command will not be scanned for embedded directives.<br/>
+ The directive prefix consists of two ASCII characters which, when appearing in the first two bytes of a script line, indicate that what follows is an xxQS_NAMExx command. The default is &quot;#$&quot;.<br/>
+ The user should be aware that changing the first delimiting character can produce unforeseen side effects. If the script file contains anything other than a &quot;#&quot; character in the first byte position of the line, the shell processor for the job will reject the line and may exit the job prematurely.<br/>
  If the -C option is present in the script file, it is ignored.</p>
 <dt><code>-dc</code> <i>variable</i>,&#8230;</dt>
 <dd> Available for <i>qsub</i>, <i>qsh</i>, <i>qrsh</i>, <i>qlogin</i> and <i>qalter</i> only. </dd>
@@ -179,7 +179,7 @@ $TASK_ID    array job task index number
 <p> If this option or a corresponding value in <i>qmon</i> is specified then this value will be passed to defined JSV instances as parameter with the name <code>e</code>. (See <code>-jsv</code> option below or find more information concerning JSV in</p>
 <dt><code>-hard</code></dt>
 <dd> Available for <i>qsub</i>, <i>qsh</i>, <i>qrsh</i>, <i>qlogin</i> and <i>qalter</i> only. </dd>
-<p> Signifies that all <code>-q</code> and <code>-l</code> resource requirements following in the command line will be hard requirements and must be satisfied in full before a job can be scheduled.<br />
+<p> Signifies that all <code>-q</code> and <code>-l</code> resource requirements following in the command line will be hard requirements and must be satisfied in full before a job can be scheduled.<br/>
  As xxQS_NAMExx scans the command line and script file for xxQS_NAMExx options and parameters it builds a list of resources required by a job. All such resource requests are normally considered as absolutely essential for the job to commence. However, if the <code>-soft</code> option (see below) is encountered during the scan then all following resources are designated as &quot;soft requirements&quot; for execution, or &quot;nice-to-have, but not essential&quot;. If the <code>-hard</code> flag is encountered at a later stage of the scan, all resource requests following it once again become essential. The <code>-hard</code> and <code>-soft</code> options in effect act as toggles during the scan. </p>
 <p> If this option or a corresponding value in <i>qmon</i> is specified then the corresponding <code>-q</code> and <code>-l</code> resource requirements will be passed to defined JSV instances as parameter with the names <code>q_hard</code> and <code>l_hard</code>. Find for information in the sections describing <code>-q</code> and <code>-l</code>. (See <code>-jsv</code> option below or find more information concerning JSV in</p>
 <dt><code>-h</code> | <code>-h</code> {<code>u</code>|<code>s</code>|<code>o</code>|<code>n</code>|<code>U</code>|<code>O</code>|<code>S</code>}&#8230;</dt>
@@ -208,7 +208,7 @@ $TASK_ID    array job task index number
 <dt><code>-hold_jid</code> <i>wc_job_list</i></dt>
 <dd> Available for <i>qsub</i>, <i>qrsh</i>, and <i>qalter</i> only. See For the definition of <i>wc_job_list</i>. </dd>
 <p> Defines or redefines the job dependency list of the submitted job. A reference by job name or pattern is only accepted if the referenced job is owned by the same user as the referring job. The submitted job is not eligible for execution unless all jobs referenced in the comma-separated job id and/or job name list have completed. If any of the referenced jobs exits with exit code 100, the submitted job will remain ineligible for execution. </p>
-<p> With the help of job names or regular patterns, one can specify a job dependency on multiple jobs satisfying the regular pattern, or on all jobs with the requested name. The name dependencies are resolved at submit time and can only be changed via qalter. New jobs or name changes of other jobs will not be taken into account. To remove a job dependency list with <i>qalter</i>, use a null <i>wc_job_list</i>, i.e. use<br />
+<p> With the help of job names or regular patterns, one can specify a job dependency on multiple jobs satisfying the regular pattern, or on all jobs with the requested name. The name dependencies are resolved at submit time and can only be changed via qalter. New jobs or name changes of other jobs will not be taken into account. To remove a job dependency list with <i>qalter</i>, use a null <i>wc_job_list</i>, i.e. use<br/>
  <code> qalter -hold_jid &#8221; &#8230;</code> </p>
 <p> <i>Qalter</i> allows changing this option even while the job executes. The modified parameter will only be in effect after a restart or migration of the job, however. </p>
 <p> If this option or a corresponding value in <i>qmon</i> is specified then this value will be passed to defined JSV instances as parameter with the name <code>hold_jid</code>. (See <code>-jsv</code> option below or find more information concerning JSV in</p>
@@ -237,7 +237,7 @@ $TASK_ID    array job task index number
 <p> This parameter is not available in the JSV context. (See <code>-jsv</code> option below or find more information concerning JSV in</p>
 <dt><code>-j</code> <code>y</code>[<code>es</code>]|<code>n</code>[<code>o</code>]</dt>
 <dd> Available for <i>qsub</i>, <i>qsh</i>, <i>qrsh</i>, <i>qlogin</i> and <i>qalter</i> only. </dd>
-<p> Specifies whether or not the standard error stream of the job is merged into the standard output stream.<br />
+<p> Specifies whether or not the standard error stream of the job is merged into the standard output stream.<br/>
  If both the <code>-j y</code> and the <code>-e</code> options are present, xxQS_NAMExx sets, but ignores, the error-path attribute. </p>
 <p> <i>Qalter</i> allows changing this option even while the job executes. The modified parameter will only be in effect after a restart or migration of the job, however. </p>
 <p> The value specified with this option or the corresponding value specified in <i>qmon</i> will only be passed to defined JSV instances if the value is <code>yes</code>. The name of the parameter will be <code>j</code>. The value will be <code>y</code> also when the long form <code>yes</code> was specified during submission. (See <code>-jsv</code> option below or find more information concerning JSV in</p>
@@ -310,9 +310,9 @@ $TASK_ID    array job task index number
 <p> Do not start the command line given to <i>qrsh</i> in the user&#8217;s login shell, i.e. execute it without the wrapping shell. </p>
 <p> This option can be used to speed up execution as some overhead, like the shell startup and sourcing the shell resource files, is avoided. </p>
 <p> This option can only be used if no shell-specific command line parsing is required. If the command line contains shell syntax like environment variable substitution or (back) quoting, a shell must be started. In this case, either do not use the <code>-noshell</code> option or include the shell call in the command line. </p>
-<p> Example:<br />
- qrsh echo &#8216;$HOSTNAME&#8217;<br />
- Alternative call with the <code>-noshell</code> option<br />
+<p> Example:<br/>
+ qrsh echo &#8216;$HOSTNAME&#8217;<br/>
+ Alternative call with the <code>-noshell</code> option<br/>
  qrsh -noshell /bin/tcsh -f -c &#8216;echo $HOSTNAME&#8217;</p>
 <dt><code>-nostdin</code></dt>
 <dd> Available only for <i>qrsh</i>. </dd>
@@ -377,14 +377,14 @@ $TASK_ID    array job task index number
 <p> The value specified with this option or the corresponding value specified in <i>qmon</i> will only be passed to defined JSV instances if the value is <i>yes</i>. The name of the parameter will be <code>shell</code>. The value will be <code>y</code> also when the long form <code>yes</code> was specified during submission. (See <code>-jsv</code> option above or find more information concerning JSV in</p>
 <dt><code>-soft</code></dt>
 <dd> Available for <i>qsub</i>, <i>qsh</i>, <i>qrsh</i>, <i>qlogin</i> and <i>qalter</i> only. </dd>
-<p> Signifies that all resource requirements following in the command line will be soft requirements and are to be filled on an &quot;as available&quot; basis.<br />
+<p> Signifies that all resource requirements following in the command line will be soft requirements and are to be filled on an &quot;as available&quot; basis.<br/>
  As xxQS_NAMExx scans the command line and script file for xxQS_NAMExx options and parameters, it builds a list of resources required by the job. All such resource requests are normally considered as absolutely essential for the job to commence. However, if the <code>-soft</code> option is encountered during the scan then all following resources are designated as &quot;soft requirements&quot; for execution, or &quot;nice-to-have, but not essential&quot;. If the <code>-hard</code> flag (see above) is encountered at a later stage of the scan, all resource requests following it once again become essential. The <code>-hard</code> and <code>-soft</code> options in effect act as toggles during the scan. However, requests for consumable resources cannot be soft. </p>
 <p> If this option or a corresponding value in <i>qmon</i> is specified then the corresponding <code>-q</code> and <code>-l</code> resource requirements will be passed to defined JSV instances as parameter with the names <code>q_soft</code> and <code>l_soft</code>. Find for information in the sections describing <code>-q</code> and <code>-l</code>. (See <code>-jsv</code> option above or find more information concerning JSV in</p>
 <dt><code>-sync y</code>[<code>es</code>]|<code>n</code>[<code>o</code>]</dt>
 <dd> Available for <i>qsub</i>. </dd>
-<p> <code>-sync y</code> causes <i>qsub</i> to wait for the job to complete before exiting. If the job completes successfully, <i>qsub</i>&#8216;s exit code will be that of the completed job. If the job fails to complete successfully, <i>qsub</i> will print an error message to the standard error stream indicating why the job failed, and will have an exit code of 1. If <i>qsub</i> is interrupted, e.g. with CTRL-C, before the job completes, the job will be canceled.<br />
- With the <code>-sync n</code> option, <i>qsub</i> will exit with an exit code of 0 as soon as the job is submitted successfully. <code>-sync n</code> is default for <i>qsub</i>.<br />
- If <code>-sync y</code> is used in conjunction with <code>-now y</code>, <i>qsub</i> will behave as though only <code>-now y</code> were given until the job has been successfully scheduled, after which time <i>qsub</i> will behave as though only <code>-sync y</code> were given.<br />
+<p> <code>-sync y</code> causes <i>qsub</i> to wait for the job to complete before exiting. If the job completes successfully, <i>qsub</i>&#8216;s exit code will be that of the completed job. If the job fails to complete successfully, <i>qsub</i> will print an error message to the standard error stream indicating why the job failed, and will have an exit code of 1. If <i>qsub</i> is interrupted, e.g. with CTRL-C, before the job completes, the job will be canceled.<br/>
+ With the <code>-sync n</code> option, <i>qsub</i> will exit with an exit code of 0 as soon as the job is submitted successfully. <code>-sync n</code> is default for <i>qsub</i>.<br/>
+ If <code>-sync y</code> is used in conjunction with <code>-now y</code>, <i>qsub</i> will behave as though only <code>-now y</code> were given until the job has been successfully scheduled, after which time <i>qsub</i> will behave as though only <code>-sync y</code> were given.<br/>
  If <code>-sync y</code> is used in conjunction with <code>-t</code>, <i>qsub</i> will wait for all the job&#8217;s tasks to complete before exiting. If all the job&#8217;s tasks complete successfully, <i>qsub</i>&#8216;s exit code will be that of the first completed job task with a non-zero exit code, or 0 if all job tasks exited with an exit code of 0. If any of the job&#8217;s tasks fail to complete successfully, <i>qsub</i> will print an error message to the standard error stream indicating why the job task(s) failed, and will have an exit code of 1. If <i>qsub</i> is interrupted, e.g. with CTRL-C, before the job completes, all of the job&#8217;s tasks will be canceled. </p>
 <p> Information that this switch was specified during submission is not available in the JSV context. (See <code>-jsv</code> option above or find more information concerning JSV in</p>
 <dt><code>-S</code> [[<i>hostname</i>]<code>:</code>]<i>pathname</i><code>,</code>&#8230;</dt>
@@ -398,8 +398,8 @@ $TASK_ID    array job task index number
 <dd> Available for <i>qsub</i> only. </dd>
 <p> Submits a so called <i>Array Job</i>, i.e. an array of identical tasks being differentiated only by an index number and being treated by xxQS_NAMExx almost like a series of jobs. The argument of <code>-t</code> specifies the number of array job tasks and the index number which will be associated with the tasks in terms of the range&#8217;s start (<i>n</i>), default 1, its end (<i>m</i>), and stride (s), default 1. The index numbers will be exported to the job tasks via the environment variable <code>xxQS_NAME_Sxx_TASK_ID</code>. The arguments <i>n</i>,&nbsp;<i>m</i>, and <i>s</i> will be available through the environment variables <code>xxQS_NAME_Sxx_TASK_FIRST</code>, <code>xxQS_NAME_Sxx_TASK_LAST</code> and <code>xxQS_NAME_Sxx_TASK_STEPSIZE</code>. </p>
 <p> The following restrictions apply to the values <i>n</i> and <i>m</i>: </p>
-<p>1 &lt;= n &lt;= MIN(2 ^ 31 &#8211; 1, max_aj_tasks) 1 &lt;= m &lt;= MIN(2 ^ 31 &#8211; 1, max_aj_tasks)<br />
-                                                      n<br />
+<p>1 &lt;= n &lt;= MIN(2 ^ 31 &#8211; 1, max_aj_tasks) 1 &lt;= m &lt;= MIN(2 ^ 31 &#8211; 1, max_aj_tasks)<br/>
+                                                      n<br/>
     &lt;= m</p>
 <p> <i>max_aj_tasks</i> is defined in the cluster configuration (see </p>
 <p> The task id range specified in the option argument may be a single number, a simple range of the form <i>n</i><code>&#8211;</code><i>m</i> or a range with a step size. Hence, the task id range specified by 2-10:2 would result in the task id indexes 2, 4, 6, 8, and 10, for a total of 5 identical tasks, each with the environment variable xxQS_NAME_Sxx_TASK_ID containing one of the 5 index numbers. </p>
@@ -418,7 +418,7 @@ $TASK_ID    array job task index number
 <p> If this option, or a corresponding value in <i>qmon</i> is specified, then this value will be passed to defined JSV instances as a parameter with the name <code>tc</code>. (See the <code>-jsv</code> option above or find more information concerning JSV in</p>
 <dt><code>-terse</code></dt>
 <dd> Available for <i>qsub</i> only. </dd>
-<p> Causes <i>qsub</i> to display only the job-id of the job being submitted rather than the regular &quot;Your job &#8230;&quot; string. In case of an error the error is reported on stderr as usual.<br />
+<p> Causes <i>qsub</i> to display only the job-id of the job being submitted rather than the regular &quot;Your job &#8230;&quot; string. In case of an error the error is reported on stderr as usual.<br/>
  This can be helpful for scripts which need to parse <i>qsub</i> output to get the job-id. </p>
 <p> Information that this switch was specified during submission is not available in the JSV context. (See <code>-jsv</code> option above or find more information concerning JSV in</p>
 <dt><code>-u</code> <i>username</i><code>,</code>&#8230;</dt>
@@ -550,7 +550,7 @@ $TASK_ID    array job task index number
 <dt><code>NSLOTS</code></dt>
 <dd> The number of queue slots in use by a parallel job.</dd>
 <dt><code>PATH</code></dt>
-<dd> A default shell search path of:<br />
+<dd> A default shell search path of:<br/>
  /usr/local/bin:/usr/ucb:/bin:/usr/bin</dd>
 <dt><code>xxQS_NAME_Sxx_BINARY_PATH</code></dt>
 <dd> The path where the xxQS_NAMExx binaries are installed. The value is the concatenation of the cluster configuration value <code>binary_path </code> and the architecture name <code>$xxQS_NAME_Sxx_ARCH</code> environment variable.</dd>
@@ -624,26 +624,26 @@ fi
 <dl>
 <dt>
 </dt><dd>
-#!/ bin / sh<br />
-#Which account to be charged cpu time<br />
-#$ &#8211; A santa_claus<br />
-#date &#8211; time to run, format[[CC] yy] MMDDhhmm[.SS]<br />
-#$ &#8211; a 12241200<br />
-#to run I want 6 or more parallel processes<br />
-#under the PE pvm.the processes require<br />
-# 128M of memory<br />
-#$ &#8211; pe pvm 6 &#8211; -l mem = 128<br />
-#If I run on dec_x put stderr in / tmp / foo, if I<br />
-#run on sun_y, put stderr in / usr / me / foo<br />
-#$ &#8211; e dec_x : / tmp / foo, sun_y : / usr / me / foo<br />
-#Send mail to these users<br />
-#$ &#8211; M santa[at] nothpole, claus[at] northpole<br />
-#Mail at beginning / end / on suspension<br />
-#$ &#8211; m bes<br />
-#Export these environmental variables<br />
-#$ &#8211; v PVM_ROOT, FOOBAR = BAR<br />
-#The job is located in the current<br />
-#working directory.<br />
+#!/ bin / sh<br/>
+#Which account to be charged cpu time<br/>
+#$ &#8211; A santa_claus<br/>
+#date &#8211; time to run, format[[CC] yy] MMDDhhmm[.SS]<br/>
+#$ &#8211; a 12241200<br/>
+#to run I want 6 or more parallel processes<br/>
+#under the PE pvm.the processes require<br/>
+# 128M of memory<br/>
+#$ &#8211; pe pvm 6 &#8211; -l mem = 128<br/>
+#If I run on dec_x put stderr in / tmp / foo, if I<br/>
+#run on sun_y, put stderr in / usr / me / foo<br/>
+#$ &#8211; e dec_x : / tmp / foo, sun_y : / usr / me / foo<br/>
+#Send mail to these users<br/>
+#$ &#8211; M santa[at] nothpole, claus[at] northpole<br/>
+#Mail at beginning / end / on suspension<br/>
+#$ &#8211; m bes<br/>
+#Export these environmental variables<br/>
+#$ &#8211; v PVM_ROOT, FOOBAR = BAR<br/>
+#The job is located in the current<br/>
+#working directory.<br/>
 #$ &#8211; cwd
 </dd></dl>
 <h2>FILES</h2>

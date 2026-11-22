@@ -17,7 +17,7 @@ int initstate_r(unsigned int seed, char *statebuf,
 int setstate_r(char *statebuf, struct random_data *buf);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>random_r</code>(), <code>srandom_r</code>(), <code>initstate_r</code>(), <code>setstate_r</code>():</p>
 <dl>
-<dd>/* Glibc since 2.19: */ _DEFAULT_SOURCE<br />
+<dd>/* Glibc since 2.19: */ _DEFAULT_SOURCE<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_SVID_SOURCE ||&nbsp;_BSD_SOURCE</dd></dl>
 <h2>Description</h2>
 <p>These functions are the reentrant equivalents of the functions described in <code><a href="/docs/linux/man/3-random/">random</a></code>(3). They are suitable for use in multithreaded programs where each thread needs to obtain an independent, reproducible sequence of random numbers. </p>
@@ -45,7 +45,7 @@ int setstate_r(char *statebuf, struct random_data *buf);</code></pre>
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>random_r</code>(), <code>srandom_r</code>(),<br />
+<td> <code>random_r</code>(), <code>srandom_r</code>(),<br/>
  <code>initstate_r</code>(), <code>setstate_r</code>() </td>
 <td>Thread safety</td>
 <td>MT-Safe race:buf

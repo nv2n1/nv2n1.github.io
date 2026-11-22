@@ -10,7 +10,7 @@ description: "dtgevc.f –"
 <p>dtgevc.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dtgevc</code> (SIDE, HOWMNY, SELECT, N, S, LDS, P, LDP, VL, LDVL, VR, LDVR, MM, M, WORK, INFO)<br />
+<p>subroutine <code>dtgevc</code> (SIDE, HOWMNY, SELECT, N, S, LDS, P, LDP, VL, LDVL, VR, LDVR, MM, M, WORK, INFO)<br/>
  <i></i><code>DTGEVC</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dtgevc (characterSIDE, characterHOWMNY, logical, dimension( * )SELECT, integerN, double precision, dimension( lds, * )S, integerLDS, double precision, dimension( ldp, * )P, integerLDP, double precision, dimension( ldvl, * )VL, integerLDVL, double precision, dimension( ldvr, * )VR, integerLDVR, integerMM, integerM, double precision, dimension( * )WORK, integerINFO)</h3>

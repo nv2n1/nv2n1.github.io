@@ -98,10 +98,10 @@ description: "smidump – dump SMI or SPPI modules in various formats"
 <p> The <code>libsmi</code>(3) project is documented at <code><a rel="nofollow" href="http://www.ibr.cs.tu-bs.de/projects/libsmi/">http://www.ibr.cs.tu-bs.de/projects/libsmi/</a></code>. </p>
 <p> <code><a href="/docs/linux/man/1-smilint/">smilint</a></code>(1)</p>
 <h2>AUTHORS</h2>
-<p> (C) 1999-2004 F. Strauss, TU Braunschweig, Germany &lt;strauss [at] ibr.cs.tu-bs.de&gt;<br />
- (C) 1999-2002 J. Schoenwaelder, TU Braunschweig, Germany &lt;schoenw [at] ibr.cs.tu-bs.de&gt;<br />
- (C) 2002-2003 J. Schoenwaelder, University of Osnabrueck, Germany<br />
- (C) 2003-2004 J. Schoenwaelder, International University Bremen, Germany<br />
- (C) 2001-2002 T. Klie, TU Braunschweig, Germany &lt;tklie [at] ibr.cs.tu-bs.de&gt;<br />
- (C) 2002 M. Bunkus, TU Braunschweig, Germany &lt;bunkus [at] ibr.cs.tu-bs.de&gt;<br />
+<p> (C) 1999-2004 F. Strauss, TU Braunschweig, Germany &lt;strauss [at] ibr.cs.tu-bs.de&gt;<br/>
+ (C) 1999-2002 J. Schoenwaelder, TU Braunschweig, Germany &lt;schoenw [at] ibr.cs.tu-bs.de&gt;<br/>
+ (C) 2002-2003 J. Schoenwaelder, University of Osnabrueck, Germany<br/>
+ (C) 2003-2004 J. Schoenwaelder, International University Bremen, Germany<br/>
+ (C) 2001-2002 T. Klie, TU Braunschweig, Germany &lt;tklie [at] ibr.cs.tu-bs.de&gt;<br/>
+ (C) 2002 M. Bunkus, TU Braunschweig, Germany &lt;bunkus [at] ibr.cs.tu-bs.de&gt;<br/>
  and contributions by many other people. </p>

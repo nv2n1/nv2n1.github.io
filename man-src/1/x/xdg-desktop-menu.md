@@ -159,7 +159,7 @@ description: "xdg-desktop-menu – command line tool for (un)installing desktop 
 <dt>
 </dt><dd> No permission to read one of the files passed on the command line.</dd></dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-xdg-desktop-icon/">xdg-desktop-icon</a></code>(1), <code><a href="/docs/linux/man/1-xdg-icon-resource/">xdg-icon-resource</a></code>(1), <code><a href="/docs/linux/man/1-xdg-mime/">xdg-mime</a></code>(1), m[blue]<code>Desktop entry specification</code>m[]<font SIZE="-2">[1]</font>, m[blue]<code>Desktop menu specification</code>m[]<font SIZE="-2">[2]</font></p>
+<p> <code><a href="/docs/linux/man/1-xdg-desktop-icon/">xdg-desktop-icon</a></code>(1), <code><a href="/docs/linux/man/1-xdg-icon-resource/">xdg-icon-resource</a></code>(1), <code><a href="/docs/linux/man/1-xdg-mime/">xdg-mime</a></code>(1), m[blue]<code>Desktop entry specification</code>m[][1], m[blue]<code>Desktop menu specification</code>m[][2]</p>
 <h2>EXAMPLES</h2>
 <p> The company ShinyThings Inc. has developed an application named &quot;WebMirror&quot; and would like to add it to the application menu. The company will use &quot;shinythings&quot; as its vendor id. In order to add the application to the menu there needs to be a .desktop file with a suitable <i>Categories</i> entry: </p>
 <dl>
@@ -189,22 +189,22 @@ xdg-desktop-menu install ./shinythings-webmirror.desktop
 <dl>
 <dt>
 </dt><dd>
-shinythings &#8211; webmirror.desktop : [Desktop Entry] Encoding = UTF &#8211; 8 Type = Application<br />
-                                                                 Exec = webmirror<br />
-                                                                     Icon = shinythings &#8211; webmirror<br />
-                                                                                              Name = WebMirror<br />
-                                                                                Name[nl] = WebSpiegel<br />
-                                                                                               shinythings &#8211;<br />
-                                                                                           webmirror &#8211; admin.desktop : [Desktop Entry] Encoding = UTF &#8211; 8 Type = Application<br />
-                                                                                                                                                      Exec = webmirror &#8211; admintool<br />
-                                                                                                                                                                             Icon = shinythings &#8211; webmirror &#8211; admintool Name = WebMirror Admin Tool<br />
+shinythings &#8211; webmirror.desktop : [Desktop Entry] Encoding = UTF &#8211; 8 Type = Application<br/>
+                                                                 Exec = webmirror<br/>
+                                                                     Icon = shinythings &#8211; webmirror<br/>
+                                                                                              Name = WebMirror<br/>
+                                                                                Name[nl] = WebSpiegel<br/>
+                                                                                               shinythings &#8211;<br/>
+                                                                                           webmirror &#8211; admin.desktop : [Desktop Entry] Encoding = UTF &#8211; 8 Type = Application<br/>
+                                                                                                                                                      Exec = webmirror &#8211; admintool<br/>
+                                                                                                                                                                             Icon = shinythings &#8211; webmirror &#8211; admintool Name = WebMirror Admin Tool<br/>
                                                                                                                                                                                         Name[nl] = WebSpiegel Administratie Tool
 </dd></dl>
 <p> In addition a .directory file needs to be created to provide a title and icon for the sub-menu itself: </p>
 <dl>
 <dt>
 </dt><dd>
-shinythings &#8211; webmirror.directory : [Desktop Entry] Encoding = UTF &#8211; 8 Icon = shinythings &#8211; webmirror &#8211; menu Name = WebMirror<br />
+shinythings &#8211; webmirror.directory : [Desktop Entry] Encoding = UTF &#8211; 8 Icon = shinythings &#8211; webmirror &#8211; menu Name = WebMirror<br/>
                                                                                   Name[nl] = WebSpiegel
 </dd></dl>
 <p> These file can now be installed with: </p>

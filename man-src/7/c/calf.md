@@ -12,15 +12,15 @@ description: "calf – a audio plugin library"
 <p>calfjackhost plugin <code>!</code> <i>[</i>&nbsp;<wbr>plugin <code>!</code> <i>]</i> [<i>&#8230;</i>]</p>
 <h2>Description</h2>
 <p>&nbsp;<wbr>The Calf project aims at providing a set of high quality open source audio plugins for musicians, possibly in many different plugin formats, so that they can be used in as many hosts as possible and in standalone mode. Currently available plugins: </p>
-<p>&nbsp;<wbr>*&nbsp;<wbr>Flanger with linear interpolation. In case&nbsp;<wbr>&quot;zipper noise&quot;&nbsp;<wbr>of basic flanger effects was driving you mad, use this one!<br />
-&nbsp;<wbr>*&nbsp;<wbr>Simple reverb with basic controls and relatively neutral sound. No dreaded metal barrel sound, at expense of higher CPU use and less time density.<br />
-&nbsp;<wbr>*&nbsp;<wbr>Multimode filter&nbsp;<wbr>(selectable 12dB/24dB/36dB rolloff, lowpass or highpass)&nbsp;<wbr>with inertia/smoothing for cutoff for more&nbsp;<wbr>&quot;analog&quot;&nbsp;<wbr>sound when tweaking.<br />
-&nbsp;<wbr>*&nbsp;<wbr>Vintage delay &#8211; in other words, a very simple simulation of tape echo, with a filter in a feedback loop.<br />
-&nbsp;<wbr>*&nbsp;<wbr>Simple monophonic synthesizer with 2 oscillators, multimode filter and an envelope.<br />
+<p>&nbsp;<wbr>*&nbsp;<wbr>Flanger with linear interpolation. In case&nbsp;<wbr>&quot;zipper noise&quot;&nbsp;<wbr>of basic flanger effects was driving you mad, use this one!<br/>
+&nbsp;<wbr>*&nbsp;<wbr>Simple reverb with basic controls and relatively neutral sound. No dreaded metal barrel sound, at expense of higher CPU use and less time density.<br/>
+&nbsp;<wbr>*&nbsp;<wbr>Multimode filter&nbsp;<wbr>(selectable 12dB/24dB/36dB rolloff, lowpass or highpass)&nbsp;<wbr>with inertia/smoothing for cutoff for more&nbsp;<wbr>&quot;analog&quot;&nbsp;<wbr>sound when tweaking.<br/>
+&nbsp;<wbr>*&nbsp;<wbr>Vintage delay &#8211; in other words, a very simple simulation of tape echo, with a filter in a feedback loop.<br/>
+&nbsp;<wbr>*&nbsp;<wbr>Simple monophonic synthesizer with 2 oscillators, multimode filter and an envelope.<br/>
 &nbsp;<wbr>*&nbsp;<wbr>Optional: electric organ synthesizer and rotary speaker emulation, best used together&nbsp;<wbr>(use&nbsp;<wbr>&quot;configure &#8211;enable-experimental&quot;&nbsp;<wbr>to enable them) The plugins are available in following formats: </p>
-<p>&nbsp;<wbr>*&nbsp;<wbr>LADSPA&nbsp;<wbr>(all effect plugins)<br />
-&nbsp;<wbr>*&nbsp;<wbr>DSSI&nbsp;<wbr>(both synthesizers and effects), including DSSI GUI<br />
-&nbsp;<wbr>*&nbsp;<wbr>Standalone JACK client application with GTK+-based GUI&nbsp;<wbr>(new: it is possible to run several plugins simultaneously in one JACK client, and connect them in chains using standard JACK facilities)<br />
+<p>&nbsp;<wbr>*&nbsp;<wbr>LADSPA&nbsp;<wbr>(all effect plugins)<br/>
+&nbsp;<wbr>*&nbsp;<wbr>DSSI&nbsp;<wbr>(both synthesizers and effects), including DSSI GUI<br/>
+&nbsp;<wbr>*&nbsp;<wbr>Standalone JACK client application with GTK+-based GUI&nbsp;<wbr>(new: it is possible to run several plugins simultaneously in one JACK client, and connect them in chains using standard JACK facilities)<br/>
 &nbsp;<wbr>*&nbsp;<wbr>LV2&nbsp;<wbr>(experimental, SVN only, some features may not work, host support for several features may vary)</p>
 <h2>Options</h2>
 <dl>

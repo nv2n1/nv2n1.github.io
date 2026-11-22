@@ -28,12 +28,12 @@ ohhandler[-D nn][-N host[:port]][-C&lt;cfgfile&gt;][-X] command&lt;specific argu
 <p> ohhandler getnext will allows to walk through all hanlers currently defined in the openhpi daemon for the specified domain. </p>
 <p> ohhandler find will find the handler that is managing the specified resource. </p>
 <p> ohhandler retry allows to try again to load and initialize the specified handler. </p>
-<p> ohhandler create allows to dynamically create a new handler with configuration parameters like they are specified in the openhpi.conf file.<br />
-&nbsp;<wbr>&#8211; The type of plugin is specified with the keyword plugin<br />
-&nbsp;<wbr>&#8211; Configuration parameters should follow as name value pairs<br />
-&nbsp;<wbr>&#8211; Complex strings like entity paths must be enclosed with&nbsp;<wbr>&quot;&#8220;<br />
-&nbsp;<wbr>Example:<br />
-&nbsp;<wbr>ohhandler create plugin libsimulator entity_root&nbsp;<wbr>&#8221;{<font SIZE="-1">SYSTEM_CHASSIS,1</font>}&quot;&nbsp;<wbr>name sim </p>
+<p> ohhandler create allows to dynamically create a new handler with configuration parameters like they are specified in the openhpi.conf file.<br/>
+&nbsp;<wbr>&#8211; The type of plugin is specified with the keyword plugin<br/>
+&nbsp;<wbr>&#8211; Configuration parameters should follow as name value pairs<br/>
+&nbsp;<wbr>&#8211; Complex strings like entity paths must be enclosed with&nbsp;<wbr>&quot;&#8220;<br/>
+&nbsp;<wbr>Example:<br/>
+&nbsp;<wbr>ohhandler create plugin libsimulator entity_root&nbsp;<wbr>&#8221;{SYSTEM_CHASSIS,1}&quot;&nbsp;<wbr>name sim </p>
 <p> If no domain or host is selected, ohhandler uses the default domain as specified in the openhpiclient.conf file.</p>
 <h2>OPTIONS</h2>
 <h3>Help Options:</h3>
@@ -47,7 +47,7 @@ ohhandler[-D nn][-N host[:port]][-C&lt;cfgfile&gt;][-X] command&lt;specific argu
 <dt><code>-X</code>, <code>&#8211;debug</code></dt>
 <dd> Display debug messages</dd>
 <dt><code>-N</code> <i>&quot;host[:port]&quot;</i>, <code>&#8211;host</code>=<i>&quot;host[:port]&quot;</i></dt>
-<dd> Open session to the domain served by the daemon at the specified <font SIZE="-1">URL </font>(host:port). This option overrides the <font SIZE="-1">OPENHPI_DAEMON_HOST</font> and <font SIZE="-1">OPENHPI_DAEMON_PORT</font> environment variables. If host contains &#8216;:&#8217; (for example IPv6 address) then enclose it in square brackets. For example: <i>&#8220;[::1]&#8221;</i> or <i>&#8220;[::1]:4743&#8221;</i>.</dd>
+<dd> Open session to the domain served by the daemon at the specified URL (host:port). This option overrides the OPENHPI_DAEMON_HOST and OPENHPI_DAEMON_PORT environment variables. If host contains &#8216;:&#8217; (for example IPv6 address) then enclose it in square brackets. For example: <i>&#8220;[::1]&#8221;</i> or <i>&#8220;[::1]:4743&#8221;</i>.</dd>
 <dt><code>-C</code> <i>&quot;file&quot;</i>, <code>&#8211;cfgfile</code>=<i>&quot;file&quot;</i></dt>
 <dd> Use passed file as client configuration file. This option overrides the OPENHPICLIENT_CONf environment variable.</dd></dl>
 <h2>SEE ALSO</h2>

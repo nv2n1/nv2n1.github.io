@@ -97,7 +97,7 @@ description: "nessusd – The server part of the Nessus Security Scanner"
 <p> To remove a given user, use the command <a href="/docs/linux/man/8-nessus-rmuser/">nessus-rmuser</a>(8). </p>
 </dl>
 <h2>The Rule Set Format</h2>
-<p>A rule has always the same format which is:<br />
+<p>A rule has always the same format which is:<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>keyword IP/mask</p>
 <p> <i>Keyword </i> is one of <i>reject </i> , <i>accept</i> or <i>default</i> </p>
 <p> In addition to this, the IP address may be preceded by an exclamation mark (!) which means: &#8220;not&#8221; There are three sources of rules: </p>
@@ -113,14 +113,14 @@ description: "nessusd – The server part of the Nessus Security Scanner"
 <h2>The Rules Database</h2>
 <p>The rules database contains the system-wide rules, which applies for every user. Its syntax has been defined in the previous section. Example: </p>
 <dl>
-<dd>accept 127.0.0.0/8<br />
- reject 192.168.1.1/32<br />
- reject !192.168.0.0/16<br />
+<dd>accept 127.0.0.0/8<br/>
+ reject 192.168.1.1/32<br/>
+ reject !192.168.0.0/16<br/>
  default reject</dd></dl>
-<p> This allows the user to test localhost, and all the hosts on 192.168.0.0/16, except 192.168.1.1/32.<br />
+<p> This allows the user to test localhost, and all the hosts on 192.168.0.0/16, except 192.168.1.1/32.<br/>
  The rules accept the special keyword <i>client_ip</i> which is replaced, at connection time, by the IP of the user who logs in. If you want everyone to test his own box only, then you can do: </p>
 <dl>
-<dd>accept client_ip/32<br />
+<dd>accept client_ip/32<br/>
  default reject</dd></dl>
 <h2>Network Usage</h2>
 <p>Bear in mind that Nessus can be quite network intensive. Even if the Nessus developers have taken every effor to avoid packet loss (including transparently resending UDP packets, waiting for data to be received in TCP connections, etc.) so bandwidth use should always be closely monitored, with current server hardware, bandwidth is usually the bottleneck in a Nessus scan. It might not became too aparent in the final reports, scanners will still run, holes might be detected, but you will risk to run into <i>false negatives</i> (i.e. Nessus will not report a security hole that is present in a remote host) </p>
@@ -141,8 +141,8 @@ description: "nessusd – The server part of the Nessus Security Scanner"
 <h2>More Information About The Nessus Project</h2>
 <p>The canonical places where you will find more information about the Nessus project are: </p>
 <dl>
-<dd><a rel="nofollow" href="http://www.nessus.org/">http://www.nessus.org/</a> (Official site)<br />
- <a rel="nofollow" href="http://cvs.nessus.org/">http://cvs.nessus.org/</a> (Developers site)<br />
+<dd><a rel="nofollow" href="http://www.nessus.org/">http://www.nessus.org/</a> (Official site)<br/>
+ <a rel="nofollow" href="http://cvs.nessus.org/">http://cvs.nessus.org/</a> (Developers site)<br/>
  <a rel="nofollow" href="http://list.nessus.org/">http://list.nessus.org/</a> (Mailing lists)</dd></dl>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></p>
 <h2>Authors</h2>

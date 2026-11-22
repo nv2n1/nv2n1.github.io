@@ -20,40 +20,40 @@ description: "trjcat – concatenates trajectory files"
 <p> 2 1 0 2 3 5 4 </p>
 <p> Where the first number is the time, and subsequent numbers point to trajectory indices. The frames corresponding to the numbers present at the first line are collected into the output trajectory. If the number of frames in the trajectory does not match that in the xvg file then the program tries to be smart. Beware.</p>
 <h2>FILES</h2>
-<p> <code>-f</code><i> traj.xtc</i> <code>Input, Mult.</code><br />
+<p> <code>-f</code><i> traj.xtc</i> <code>Input, Mult.</code><br/>
 &nbsp;<wbr>Trajectory: xtc trr trj gro g96 pdb cpt&nbsp;<wbr> </p>
-<p> <code>-o</code><i> trajout.xtc</i> <code>Output, Mult.</code><br />
+<p> <code>-o</code><i> trajout.xtc</i> <code>Output, Mult.</code><br/>
 &nbsp;<wbr>Trajectory: xtc trr trj gro g96 pdb&nbsp;<wbr> </p>
-<p> <code>-n</code><i> index.ndx</i> <code>Input, Opt.</code><br />
+<p> <code>-n</code><i> index.ndx</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Index file&nbsp;<wbr> </p>
-<p> <code>-demux</code><i> remd.xvg</i> <code>Input, Opt.</code><br />
+<p> <code>-demux</code><i> remd.xvg</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
 <h2>OTHER OPTIONS</h2>
-<p> <code>-[no]h</code><i>no </i><br />
+<p> <code>-[no]h</code><i>no </i><br/>
 &nbsp;<wbr>Print help info and quit </p>
-<p> <code>-nice</code><i> int</i><code> 19</code><br />
+<p> <code>-nice</code><i> int</i><code> 19</code><br/>
 &nbsp;<wbr>Set the nicelevel </p>
-<p> <code>-tu</code><i> enum</i><code> ps</code><br />
+<p> <code>-tu</code><i> enum</i><code> ps</code><br/>
 &nbsp;<wbr>Time unit:&nbsp;<wbr><code>&nbsp;<wbr>ps</code>,&nbsp;<wbr><code>&nbsp;<wbr>fs</code>,&nbsp;<wbr><code>&nbsp;<wbr>ns</code>,&nbsp;<wbr><code>&nbsp;<wbr>us</code>,&nbsp;<wbr><code>&nbsp;<wbr>ms</code>&nbsp;<wbr>or&nbsp;<wbr><code>&nbsp;<wbr>s</code> </p>
-<p> <code>-[no]xvgr</code><i>yes </i><br />
+<p> <code>-[no]xvgr</code><i>yes </i><br/>
 &nbsp;<wbr>Add specific codes&nbsp;<wbr>(legends etc.)&nbsp;<wbr>in the output xvg files for the xmgrace program </p>
-<p> <code>-b</code><i> time</i><code> -1 </code><br />
+<p> <code>-b</code><i> time</i><code> -1 </code><br/>
 &nbsp;<wbr>First time to use&nbsp;<wbr>(ps) </p>
-<p> <code>-e</code><i> time</i><code> -1 </code><br />
+<p> <code>-e</code><i> time</i><code> -1 </code><br/>
 &nbsp;<wbr>Last time to use&nbsp;<wbr>(ps) </p>
-<p> <code>-dt</code><i> time</i><code> 0 </code><br />
+<p> <code>-dt</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>Only write frame when t MOD dt&nbsp;<wbr>=&nbsp;<wbr>first time&nbsp;<wbr>(ps) </p>
-<p> <code>-prec</code><i> int</i><code> 3</code><br />
+<p> <code>-prec</code><i> int</i><code> 3</code><br/>
 &nbsp;<wbr>Precision for .xtc and .gro writing in number of decimal places </p>
-<p> <code>-[no]vel</code><i>yes </i><br />
+<p> <code>-[no]vel</code><i>yes </i><br/>
 &nbsp;<wbr>Read and write velocities if possible </p>
-<p> <code>-[no]settime</code><i>no </i><br />
+<p> <code>-[no]settime</code><i>no </i><br/>
 &nbsp;<wbr>Change starting time interactively </p>
-<p> <code>-[no]sort</code><i>yes </i><br />
+<p> <code>-[no]sort</code><i>yes </i><br/>
 &nbsp;<wbr>Sort trajectory files&nbsp;<wbr>(not frames) </p>
-<p> <code>-[no]keeplast</code><i>no </i><br />
+<p> <code>-[no]keeplast</code><i>no </i><br/>
 &nbsp;<wbr>keep overlapping frames at end of trajectory </p>
-<p> <code>-[no]cat</code><i>no </i><br />
+<p> <code>-[no]cat</code><i>no </i><br/>
 &nbsp;<wbr>do not discard double time frames </p>
 <h2>SEE ALSO</h2>
 <p> <code>gromacs(7)</code> </p>

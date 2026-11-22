@@ -15,34 +15,34 @@ description: "PCRE – Perl-compatible regular expressions"
 <p>JIT support is available for all of the 8-bit, 16-bit and 32-bit PCRE libraries. To keep this documentation simple, only the 8-bit interface is described in what follows. If you are using the 16-bit library, substitute the 16-bit functions and 16-bit structures (for example, <i>pcre16_jit_stack</i> instead of <i>pcre_jit_stack</i>). If you are using the 32-bit library, substitute the 32-bit functions and 32-bit structures (for example, <i>pcre32_jit_stack</i> instead of <i>pcre_jit_stack</i>).</p>
 <h2>Availability Of Jit Support</h2>
 <p>JIT support is an optional feature of PCRE. The &quot;configure&quot; option &#8211;enable-jit (or equivalent CMake option) must be set when PCRE is built if you want to use JIT. The support is limited to the following hardware platforms: </p>
-<p>&nbsp;<wbr>&nbsp;ARM v5, v7, and Thumb2<br />
-&nbsp;<wbr>&nbsp;Intel x86 32-bit and 64-bit<br />
-&nbsp;<wbr>&nbsp;MIPS 32-bit<br />
-&nbsp;<wbr>&nbsp;Power PC 32-bit and 64-bit<br />
+<p>&nbsp;<wbr>&nbsp;ARM v5, v7, and Thumb2<br/>
+&nbsp;<wbr>&nbsp;Intel x86 32-bit and 64-bit<br/>
+&nbsp;<wbr>&nbsp;MIPS 32-bit<br/>
+&nbsp;<wbr>&nbsp;Power PC 32-bit and 64-bit<br/>
 &nbsp;<wbr>&nbsp;SPARC 32-bit&nbsp;(experimental) </p>
 <p> If &#8211;enable-jit is set on an unsupported platform, compilation fails. </p>
 <p> A program that is linked with PCRE 8.20 or later can tell if JIT support is available by calling <code>pcre_config()</code> with the PCRE_CONFIG_JIT option. The result is 1 when JIT is available, and 0 otherwise. However, a simple program does not need to check this in order to use JIT. The normal API is implemented in a way that falls back to the interpretive code if JIT is not available. For programs that need the best possible performance, there is also a &quot;fast path&quot; API that is JIT-specific. </p>
 <p> If your program may sometimes be linked with versions of PCRE that are older than 8.20, but you want to use JIT when it is available, you can test the values of PCRE_MAJOR and PCRE_MINOR, or the existence of a JIT macro such as PCRE_CONFIG_JIT, for compile-time control of your code.</p>
 <h2>Simple Use Of Jit</h2>
 <p>You have to do two things to make use of the JIT support in the simplest way: </p>
-<p>&nbsp;<wbr>&nbsp;(1)&nbsp;Call&nbsp;<code>pcre_study()</code>&nbsp;with the PCRE_STUDY_JIT_COMPILE option for<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;each compiled pattern, and pass the resulting&nbsp;<code>pcre_extra</code>&nbsp;block to<br />
+<p>&nbsp;<wbr>&nbsp;(1)&nbsp;Call&nbsp;<code>pcre_study()</code>&nbsp;with the PCRE_STUDY_JIT_COMPILE option for<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;each compiled pattern, and pass the resulting&nbsp;<code>pcre_extra</code>&nbsp;block to<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>pcre_exec()</code>. </p>
-<p>&nbsp;<wbr>&nbsp;(2)&nbsp;Use&nbsp;<code>pcre_free_study()</code>&nbsp;to free the&nbsp;<code>pcre_extra</code>&nbsp;block when it is<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;no longer needed, instead of just freeing it yourself. This ensures that<br />
+<p>&nbsp;<wbr>&nbsp;(2)&nbsp;Use&nbsp;<code>pcre_free_study()</code>&nbsp;to free the&nbsp;<code>pcre_extra</code>&nbsp;block when it is<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;no longer needed, instead of just freeing it yourself. This ensures that<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;any JIT data is also freed. </p>
 <p> For a program that may be linked with pre-8.20 versions of PCRE, you can insert </p>
-<p>&nbsp;<wbr>&nbsp;#ifndef PCRE_STUDY_JIT_COMPILE<br />
-&nbsp;<wbr>&nbsp;#define PCRE_STUDY_JIT_COMPILE 0<br />
+<p>&nbsp;<wbr>&nbsp;#ifndef PCRE_STUDY_JIT_COMPILE<br/>
+&nbsp;<wbr>&nbsp;#define PCRE_STUDY_JIT_COMPILE 0<br/>
 &nbsp;<wbr>&nbsp;#endif </p>
 <p> so that no option is passed to <code>pcre_study()</code>, and then use something like this to free the study data: </p>
-<p>&nbsp;<wbr>&nbsp;#ifdef PCRE_CONFIG_JIT<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;pcre_free_study(study_ptr);<br />
-&nbsp;<wbr>&nbsp;#else<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;pcre_free(study_ptr);<br />
+<p>&nbsp;<wbr>&nbsp;#ifdef PCRE_CONFIG_JIT<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;pcre_free_study(study_ptr);<br/>
+&nbsp;<wbr>&nbsp;#else<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;pcre_free(study_ptr);<br/>
 &nbsp;<wbr>&nbsp;#endif </p>
 <p> PCRE_STUDY_JIT_COMPILE requests the JIT compiler to generate code for complete matches. If you want to run partial matches using the PCRE_PARTIAL_HARD or PCRE_PARTIAL_SOFT options of <code>pcre_exec()</code>, you should set one or both of the following options in addition to, or instead of, PCRE_STUDY_JIT_COMPILE when you call <code>pcre_study()</code>: </p>
-<p>&nbsp;<wbr>&nbsp;PCRE_STUDY_JIT_PARTIAL_HARD_COMPILE<br />
+<p>&nbsp;<wbr>&nbsp;PCRE_STUDY_JIT_PARTIAL_HARD_COMPILE<br/>
 &nbsp;<wbr>&nbsp;PCRE_STUDY_JIT_PARTIAL_SOFT_COMPILE </p>
 <p> The JIT compiler generates different optimized code for each of the three modes (normal, soft partial, hard partial). When <code>pcre_exec()</code> is called, the appropriate code is run if it is available. Otherwise, the pattern is matched using interpretive code. </p>
 <p> In some circumstances you may need to call additional functions. These are described in the section entitled &quot;Controlling the JIT stack&quot; below. </p>
@@ -63,29 +63,29 @@ description: "PCRE – Perl-compatible regular expressions"
 <p> The <code>pcre_jit_stack_alloc()</code> function creates a JIT stack. Its arguments are a starting size and a maximum size, and it returns a pointer to an opaque structure of type <code>pcre_jit_stack</code>, or NULL if there is an error. The <code>pcre_jit_stack_free()</code> function can be used to free a stack that is no longer needed. (For the technically minded: the address space is allocated by mmap or VirtualAlloc.) </p>
 <p> JIT uses far less memory for recursion than the interpretive code, and a maximum stack size of 512K to 1M should be more than enough for any pattern. </p>
 <p> The <code>pcre_assign_jit_stack()</code> function specifies which stack JIT code should use. Its arguments are as follows: </p>
-<p>&nbsp;<wbr>&nbsp;pcre_extra&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;*extra<br />
-&nbsp;<wbr>&nbsp;pcre_jit_callback&nbsp;<wbr>&nbsp;callback<br />
+<p>&nbsp;<wbr>&nbsp;pcre_extra&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;*extra<br/>
+&nbsp;<wbr>&nbsp;pcre_jit_callback&nbsp;<wbr>&nbsp;callback<br/>
 &nbsp;<wbr>&nbsp;void&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;*data </p>
 <p> The <i>extra</i> argument must be the result of studying a pattern with PCRE_STUDY_JIT_COMPILE etc. There are three cases for the values of the other two options: </p>
-<p>&nbsp;<wbr>&nbsp;(1)&nbsp;If&nbsp;<i>callback</i>&nbsp;is NULL and&nbsp;<i>data</i>&nbsp;is NULL, an internal 32K block<br />
+<p>&nbsp;<wbr>&nbsp;(1)&nbsp;If&nbsp;<i>callback</i>&nbsp;is NULL and&nbsp;<i>data</i>&nbsp;is NULL, an internal 32K block<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;on the machine stack is used. </p>
-<p>&nbsp;<wbr>&nbsp;(2)&nbsp;If&nbsp;<i>callback</i>&nbsp;is NULL and&nbsp;<i>data</i>&nbsp;is not NULL,&nbsp;<i>data</i>&nbsp;must be<br />
+<p>&nbsp;<wbr>&nbsp;(2)&nbsp;If&nbsp;<i>callback</i>&nbsp;is NULL and&nbsp;<i>data</i>&nbsp;is not NULL,&nbsp;<i>data</i>&nbsp;must be<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;a valid JIT stack, the result of calling&nbsp;<code>pcre_jit_stack_alloc()</code>. </p>
-<p>&nbsp;<wbr>&nbsp;(3)&nbsp;If&nbsp;<i>callback</i>&nbsp;is not NULL, it must point to a function that is<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;called with&nbsp;<i>data</i>&nbsp;as an argument at the start of matching, in<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;order to set up a JIT stack. If the return from the callback<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;function is NULL, the internal 32K stack is used;&nbsp;otherwise the<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;return value must be a valid JIT stack, the result of calling<br />
+<p>&nbsp;<wbr>&nbsp;(3)&nbsp;If&nbsp;<i>callback</i>&nbsp;is not NULL, it must point to a function that is<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;called with&nbsp;<i>data</i>&nbsp;as an argument at the start of matching, in<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;order to set up a JIT stack. If the return from the callback<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;function is NULL, the internal 32K stack is used;&nbsp;otherwise the<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;return value must be a valid JIT stack, the result of calling<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>pcre_jit_stack_alloc()</code>. </p>
 <p> A callback function is obeyed whenever JIT code is about to be run; it is not obeyed when <code>pcre_exec()</code> is called with options that are incompatible for JIT execution. A callback function can therefore be used to determine whether a match operation was executed by JIT or by the interpreter. </p>
 <p> You may safely use the same JIT stack for more than one pattern (either by assigning directly or by callback), as long as the patterns are all matched sequentially in the same thread. In a multithread application, if you do not specify a JIT stack, or if you assign or pass back NULL from a callback, that is thread-safe, because each thread has its own machine stack. However, if you assign or pass back a non-NULL JIT stack, this must be a different stack for each thread so that the application is thread-safe. </p>
 <p> Strictly speaking, even more is allowed. You can assign the same non-NULL stack to any number of patterns as long as they are not used for matching by multiple threads at the same time. For example, you can assign the same stack to all compiled patterns, and use a global mutex in the callback to wait until the stack is available for use. However, this is an inefficient solution, and not recommended. </p>
 <p> This is a suggestion for how a multithreaded program that needs to set up non-default JIT stacks might operate: </p>
-<p>&nbsp;<wbr>&nbsp;During thread initalization<br />
+<p>&nbsp;<wbr>&nbsp;During thread initalization<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;thread_local_var&nbsp;=&nbsp;pcre_jit_stack_alloc(&#8230;) </p>
-<p>&nbsp;<wbr>&nbsp;During thread exit<br />
+<p>&nbsp;<wbr>&nbsp;During thread exit<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;pcre_jit_stack_free(thread_local_var) </p>
-<p>&nbsp;<wbr>&nbsp;Use a one-line callback function<br />
+<p>&nbsp;<wbr>&nbsp;Use a one-line callback function<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;return thread_local_var </p>
 <p> All the functions described in this section do nothing if JIT is not available, and <code>pcre_assign_jit_stack()</code> does nothing unless the <code>extra</code> argument is non-NULL and points to a <code>pcre_extra</code> block that is the result of a successful study with PCRE_STUDY_JIT_COMPILE etc.</p>
 <h2>Jit Stack Faq</h2>
@@ -105,21 +105,21 @@ description: "PCRE – Perl-compatible regular expressions"
 <p> No, thanks to Windows. If POSIX threads were used everywhere, we could throw out this complicated API.</p>
 <h2>Example Code</h2>
 <p>This is a single-threaded example that specifies a JIT stack without using a callback. </p>
-<p>&nbsp;<wbr>&nbsp;int rc;<br />
-&nbsp;<wbr>&nbsp;int ovector[30];<br />
-&nbsp;<wbr>&nbsp;pcre&nbsp;*re;<br />
-&nbsp;<wbr>&nbsp;pcre_extra&nbsp;*extra;<br />
+<p>&nbsp;<wbr>&nbsp;int rc;<br/>
+&nbsp;<wbr>&nbsp;int ovector[30];<br/>
+&nbsp;<wbr>&nbsp;pcre&nbsp;*re;<br/>
+&nbsp;<wbr>&nbsp;pcre_extra&nbsp;*extra;<br/>
 &nbsp;<wbr>&nbsp;pcre_jit_stack&nbsp;*jit_stack; </p>
-<p>&nbsp;<wbr>&nbsp;re&nbsp;=&nbsp;pcre_compile(pattern, 0,&nbsp;&amp;error,&nbsp;&amp;erroffset, NULL);<br />
-&nbsp;<wbr>&nbsp;/*&nbsp;Check for errors&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;extra&nbsp;=&nbsp;pcre_study(re, PCRE_STUDY_JIT_COMPILE,&nbsp;&amp;error);<br />
-&nbsp;<wbr>&nbsp;jit_stack&nbsp;=&nbsp;pcre_jit_stack_alloc(32*1024, 512*1024);<br />
-&nbsp;<wbr>&nbsp;/*&nbsp;Check for error&nbsp;(NULL)&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;pcre_assign_jit_stack(extra, NULL, jit_stack);<br />
-&nbsp;<wbr>&nbsp;rc&nbsp;=&nbsp;pcre_exec(re, extra, subject, length, 0, 0, ovector, 30);<br />
-&nbsp;<wbr>&nbsp;/*&nbsp;Check results&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;pcre_free(re);<br />
-&nbsp;<wbr>&nbsp;pcre_free_study(extra);<br />
+<p>&nbsp;<wbr>&nbsp;re&nbsp;=&nbsp;pcre_compile(pattern, 0,&nbsp;&amp;error,&nbsp;&amp;erroffset, NULL);<br/>
+&nbsp;<wbr>&nbsp;/*&nbsp;Check for errors&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;extra&nbsp;=&nbsp;pcre_study(re, PCRE_STUDY_JIT_COMPILE,&nbsp;&amp;error);<br/>
+&nbsp;<wbr>&nbsp;jit_stack&nbsp;=&nbsp;pcre_jit_stack_alloc(32*1024, 512*1024);<br/>
+&nbsp;<wbr>&nbsp;/*&nbsp;Check for error&nbsp;(NULL)&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;pcre_assign_jit_stack(extra, NULL, jit_stack);<br/>
+&nbsp;<wbr>&nbsp;rc&nbsp;=&nbsp;pcre_exec(re, extra, subject, length, 0, 0, ovector, 30);<br/>
+&nbsp;<wbr>&nbsp;/*&nbsp;Check results&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;pcre_free(re);<br/>
+&nbsp;<wbr>&nbsp;pcre_free_study(extra);<br/>
 &nbsp;<wbr>&nbsp;pcre_jit_stack_free(jit_stack);</p>
 <h2>Jit Fast Path Api</h2>
 <p>Because the API described above falls back to interpreted execution when JIT is not available, it is convenient for programs that are written for general use in many environments. However, calling JIT via <code>pcre_exec()</code> does have a performance impact. Programs that are written for use where JIT is known to be available, and which need the best possible performance, can instead use a &quot;fast path&quot; API to call JIT execution directly instead of calling <code>pcre_exec()</code> (obviously only for patterns that have been successfully studied by JIT). </p>

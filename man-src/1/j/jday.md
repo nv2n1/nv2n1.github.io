@@ -46,22 +46,22 @@ description: "jday, j2d – astronomical julian date conversion utilities"
 <dt><code>&#8211;h[elp]</code></dt>
 <dd> Display a command help message</dd></dl>
 <h2>EXAMPLES</h2>
-<p> <code>$ jday 1970 1 1 12 0 0</code><br />
- 2440588.000000<br />
- $ jday 0 1 1 12 0 0<br />
- 1721058.000000<br />
- $ jday -4712 1 1 12 0 0<br />
- 0.000000<br />
- $ jday -d -4712-01-01 12:00:00<br />
- 0.000000<br />
- $ j2d 0.0<br />
- -4712-01-01 12:00:00<br />
- $ j2d 1721058.0<br />
- 0-01-01 12:00:00<br />
- $ j2d 2440588.0<br />
+<p> <code>$ jday 1970 1 1 12 0 0</code><br/>
+ 2440588.000000<br/>
+ $ jday 0 1 1 12 0 0<br/>
+ 1721058.000000<br/>
+ $ jday -4712 1 1 12 0 0<br/>
+ 0.000000<br/>
+ $ jday -d -4712-01-01 12:00:00<br/>
+ 0.000000<br/>
+ $ j2d 0.0<br/>
+ -4712-01-01 12:00:00<br/>
+ $ j2d 1721058.0<br/>
+ 0-01-01 12:00:00<br/>
+ $ j2d 2440588.0<br/>
  1970-01-01 12:00:00</p>
 <h2>SEE ALSO</h2>
-<p> Time Standard: <a rel="nofollow" href="http://tycho.usno.navy.mil">http://tycho.usno.navy.mil</a><br />
+<p> Time Standard: <a rel="nofollow" href="http://tycho.usno.navy.mil">http://tycho.usno.navy.mil</a><br/>
  Systems of time: <a rel="nofollow" href="http://tycho.usno.navy.mil/systime.html">http://tycho.usno.navy.mil/systime.html</a></p>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 1986-2005, Hiram Clawson</p>

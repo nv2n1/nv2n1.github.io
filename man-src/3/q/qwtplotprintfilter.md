@@ -50,7 +50,7 @@ description: "QwtPlotPrintFilter – A base class for plot print filters."
 <p>Modifies a color for printing. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>c</i> Color to be modified<br />
+<dd><i>c</i> Color to be modified<br/>
  <i>item</i> Type of item where the color belongs</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -60,7 +60,7 @@ description: "QwtPlotPrintFilter – A base class for plot print filters."
 <p>Modifies a font for printing. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>f</i> Font to be modified<br />
+<dd><i>f</i> Font to be modified<br/>
  <i>item</i> Type of item where the font belongs</dd></dl>
 <p> All fonts are returned unmodified</p>
 <h3>int QwtPlotPrintFilter::options () const</h3>

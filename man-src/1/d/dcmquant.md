@@ -40,32 +40,32 @@ dcmfile-out  DICOM output filename to be written
          use config file f for the logger
 </code></pre>
 <h3>input options</h3>
-<p>input file format : +f&#8211; read &#8211; file<br />
-                                    read file format or<br />
-    data set(default) + fo&#8211; read &#8211; file &#8211; only read file format only<br />
-        &#8211; f&#8211; read &#8211; dataset read data set without file meta information input transfer syntax : -t = &#8211;read &#8211; xfer &#8211; auto use TS recognition(default) &#8211; td&#8211; read &#8211; xfer &#8211; detect ignore TS specified in the file meta header<br />
-                                                                                                      &#8211; te&#8211; read &#8211; xfer &#8211; little read with explicit VR little endian TS<br />
-                                                                                                      &#8211; tb&#8211; read &#8211; xfer &#8211; big read with explicit VR big endian TS<br />
+<p>input file format : +f&#8211; read &#8211; file<br/>
+                                    read file format or<br/>
+    data set(default) + fo&#8211; read &#8211; file &#8211; only read file format only<br/>
+        &#8211; f&#8211; read &#8211; dataset read data set without file meta information input transfer syntax : -t = &#8211;read &#8211; xfer &#8211; auto use TS recognition(default) &#8211; td&#8211; read &#8211; xfer &#8211; detect ignore TS specified in the file meta header<br/>
+                                                                                                      &#8211; te&#8211; read &#8211; xfer &#8211; little read with explicit VR little endian TS<br/>
+                                                                                                      &#8211; tb&#8211; read &#8211; xfer &#8211; big read with explicit VR big endian TS<br/>
                                                                                                       &#8211; ti&#8211; read &#8211; xfer &#8211; implicit read with implicit VR little endian TS</p>
 <h3>processing options</h3>
-<p>frame selection : +F&#8211; frame[n] umber : integer<br />
-                                            select specified frame +<br />
-                                        Fa&#8211; all &#8211; frames select all frames(default) compatibility : +Mp&#8211; accept &#8211; palettes accept incorrect palette attribute tags(0028, 111x) and<br />
-    (0028, 121x)<br />
-            median cut dimension selection : +Dr&#8211; mc<br />
-                                             &#8211;<br />
-                                             dimension &#8211; rgb max dimension from RGB range(default) + Dl&#8211; mc &#8211; dimension &#8211; lum max dimension from luminance median cut representative color selection : +Cb&#8211; mc &#8211; color &#8211; avgbox average colors in box(default) + Cp&#8211; mc &#8211; color &#8211; avgpixel average pixels in box<br />
-                                                                                                                                                                                                        +<br />
-                                                                                                                                                                                                        Cc&#8211; mc &#8211; color &#8211; center select center of box color palette creation : +pw&#8211; write &#8211; ow write Palette LUT as OW instead of US<br />
-                                                                                                                                                                                                                                                                               +<br />
-                                                                                                                                                                                                                                                                               pe&#8211; lut &#8211; entries &#8211; word write Palette LUT with 16 &#8211; bit entries<br />
-                                                                                                                                                                                                                                                                               +<br />
-                                                                                                                                                                                                                                                                               pf&#8211; floyd &#8211; steinberg use Floyd &#8211; Steinberg error diffusion<br />
-                                                                                                                                                                                                                                                                               +<br />
-                                                                                                                                                                                                                                                                               pc&#8211; colors number of colors : 2..65536(default 256)<br />
-                                                                                                                                                                                                                                                                                   number of colors to quantize to<br />
-                                                                                                                                                                                                                                                                               SOP Class UID : +cd&#8211; class<br />
-                                                                                                                                                                                                                                                                                               &#8211;<br />
+<p>frame selection : +F&#8211; frame[n] umber : integer<br/>
+                                            select specified frame +<br/>
+                                        Fa&#8211; all &#8211; frames select all frames(default) compatibility : +Mp&#8211; accept &#8211; palettes accept incorrect palette attribute tags(0028, 111x) and<br/>
+    (0028, 121x)<br/>
+            median cut dimension selection : +Dr&#8211; mc<br/>
+                                             &#8211;<br/>
+                                             dimension &#8211; rgb max dimension from RGB range(default) + Dl&#8211; mc &#8211; dimension &#8211; lum max dimension from luminance median cut representative color selection : +Cb&#8211; mc &#8211; color &#8211; avgbox average colors in box(default) + Cp&#8211; mc &#8211; color &#8211; avgpixel average pixels in box<br/>
+                                                                                                                                                                                                        +<br/>
+                                                                                                                                                                                                        Cc&#8211; mc &#8211; color &#8211; center select center of box color palette creation : +pw&#8211; write &#8211; ow write Palette LUT as OW instead of US<br/>
+                                                                                                                                                                                                                                                                               +<br/>
+                                                                                                                                                                                                                                                                               pe&#8211; lut &#8211; entries &#8211; word write Palette LUT with 16 &#8211; bit entries<br/>
+                                                                                                                                                                                                                                                                               +<br/>
+                                                                                                                                                                                                                                                                               pf&#8211; floyd &#8211; steinberg use Floyd &#8211; Steinberg error diffusion<br/>
+                                                                                                                                                                                                                                                                               +<br/>
+                                                                                                                                                                                                                                                                               pc&#8211; colors number of colors : 2..65536(default 256)<br/>
+                                                                                                                                                                                                                                                                                   number of colors to quantize to<br/>
+                                                                                                                                                                                                                                                                               SOP Class UID : +cd&#8211; class<br/>
+                                                                                                                                                                                                                                                                                               &#8211;<br/>
                                                                                                                                                                                                                                                                                                default keep SOP Class UID(default) + cs&#8211; class &#8211; sc convert to Secondary Capture Image(implies&#8211; uid &#8211; always) SOP Instance UID : +ua&#8211; uid &#8211; always always assign new UID(default) + un&#8211; uid &#8211; never never assign new UID</p>
 <h3>output options</h3>
 <pre><code>

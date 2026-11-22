@@ -19,7 +19,7 @@ virt - rescue[--options] - d domname virt - rescue[--options] - a disk.img[-a di
 <p> Using <tt>&quot;virt-rescue&quot;</tt> in write mode on live virtual machines, or concurrently with other disk editing tools, can be dangerous, potentially causing disk corruption. The virtual machine must be shut down before you use this command, and disk images must not be edited concurrently. </p>
 <p> Use the <i>&#8211;ro</i> (read-only) option to use <tt>&quot;virt-rescue&quot;</tt> safely if the disk image or virtual machine might be live. You may see strange or inconsistent results if running concurrently with other changes, but with this option you won&#8217;t risk disk corruption.</p>
 <h2>DESCRIPTION</h2>
-<p> virt-rescue is like a Rescue <font SIZE="-1">CD,</font> but for virtual machines, and without the need for a <font SIZE="-1">CD. </font> virt-rescue gives you a rescue shell and some simple recovery tools which you can use to examine or rescue a virtual machine or disk image. </p>
+<p> virt-rescue is like a Rescue CD, but for virtual machines, and without the need for a CD.  virt-rescue gives you a rescue shell and some simple recovery tools which you can use to examine or rescue a virtual machine or disk image. </p>
 <p> You can run virt-rescue on any virtual machine known to libvirt, or directly on disk image(s): </p>
 <pre>
  virt-rescue -d GuestName
@@ -30,16 +30,16 @@ virt - rescue[--options] - d domname virt - rescue[--options] - a disk.img[-a di
 <p> When you run virt-rescue on a virtual machine or disk image, you are placed in an interactive bash shell where you can use many ordinary Linux commands. What you see in <i>/</i> (<i>/bin</i>, <i>/lib</i> etc) is the rescue appliance. You must mount the virtual machine&#8217;s filesystems by hand. There is an empty directory called <i>/sysroot</i> where you can mount filesystems. </p>
 <p> You can get virt-rescue to suggest mount commands for you by using the <i>&#8211;suggest</i> option (in another terminal): </p>
 <p>$ virt &#8211; rescue&#8211; suggest &#8211; d Fedora15 Inspecting the virtual machine or disk image&#8230;</p>
-<p>    This disk contains one or<br />
-    more operating systems.You can use these<br />
-            mount commands in virt &#8211;<br />
-        rescue(at the &gt; &lt;rescue&gt; prompt) to mount the<br />
+<p>    This disk contains one or<br/>
+    more operating systems.You can use these<br/>
+            mount commands in virt &#8211;<br/>
+        rescue(at the &gt; &lt;rescue&gt; prompt) to mount the<br/>
             filesystems.</p>
-<p>#/ dev / vg_f15x32 / lv_root is the root of a linux operating system<br />
-#type : linux, distro : fedora, version : 15.0<br />
+<p>#/ dev / vg_f15x32 / lv_root is the root of a linux operating system<br/>
+#type : linux, distro : fedora, version : 15.0<br/>
 #Fedora release 15(Lovelock)</p>
-<p>            mount<br />
-            / dev / vg_f15x32 / lv_root / sysroot /<br />
+<p>            mount<br/>
+            / dev / vg_f15x32 / lv_root / sysroot /<br/>
             mount / dev / vda1 / sysroot / boot mount&#8211; bind / dev / sysroot / dev mount&#8211; bind / dev / pts / sysroot / dev / pts mount&#8211; bind / proc / sysroot / proc mount&#8211; bind / sys / sysroot / sys</p>
 <p> Another way is to list the logical volumes (with <i><a href="/docs/linux/man/8-lvs/">lvs</a></i>(8)) and partitions (with <i><a href="/docs/linux/man/8-parted/">parted</a></i>(8)) and mount them by hand: </p>
 <pre>
@@ -56,8 +56,8 @@ virt - rescue[--options] - d domname virt - rescue[--options] - a disk.img[-a di
 <pre>
  &gt;&lt;rescue&gt; chroot /sysroot
 </pre>
-<h3><font SIZE="-1">NOTES</font></h3>
-<p> Virt-rescue can be used on <i>any</i> disk image file or device, not just a virtual machine. For example you can use it on a blank file if you want to partition that file (although we would recommend using <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1) instead as it is more suitable for this purpose). You can even use virt-rescue on things like <font SIZE="-1">SD</font> cards. </p>
+<h3>NOTES</h3>
+<p> Virt-rescue can be used on <i>any</i> disk image file or device, not just a virtual machine. For example you can use it on a blank file if you want to partition that file (although we would recommend using <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1) instead as it is more suitable for this purpose). You can even use virt-rescue on things like SD cards. </p>
 <p> You can get virt-rescue to give you scratch disk(s) to play with. This is useful for testing out Linux utilities (see <i>&#8211;scratch</i>). </p>
 <p> Virt-rescue does not require root. You only need to run it as root if you need root to open the disk image. </p>
 <p> This tool is just designed for quick interactive hacking on a virtual machine. For more structured access to a virtual machine disk image, you should use <i>guestfs</i>(3). To get a structured shell that you can use to make scripted changes to guests, use <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1).</p>
@@ -70,16 +70,16 @@ virt - rescue[--options] - d domname virt - rescue[--options] - a disk.img[-a di
 </dd><dt><code>&#8211;add</code> file</dt>
 <dd> Add <i>file</i> which should be a disk image from a virtual machine. If the virtual machine has multiple block devices, you must supply all of them with separate <i>-a</i> options. </dd>
 <p> The format of the disk image is auto-detected. To override this and force a particular format use the <i>&#8211;format=..</i> option.</p>
-<dt><code>-a </code><font SIZE="-1"><code>URI</code></font></dt>
+<dt><code>-a </code><code>URI</code></dt>
 <dd>
-</dd><dt><code>&#8211;add </code><font SIZE="-1"><code>URI</code></font></dt>
-<dd> Add a remote disk. See &#8220;<font SIZE="-1">ADDING REMOTE STORAGE&#8221;</font> in <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1).</dd>
+</dd><dt><code>&#8211;add </code><code>URI</code></dt>
+<dd> Add a remote disk. See &#8220;ADDING REMOTE STORAGE&#8221; in <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1).</dd>
 <dt><code>&#8211;append kernelopts</code></dt>
 <dd> Pass additional options to the rescue kernel.</dd>
-<dt><code>-c</code> <font SIZE="-1">URI</font></dt>
+<dt><code>-c</code> URI</dt>
 <dd>
-</dd><dt><code>&#8211;connect</code> <font SIZE="-1">URI</font></dt>
-<dd> If using libvirt, connect to the given <i></i><font SIZE="-1"><i>URI</i></font><i></i>. If omitted, then we connect to the default libvirt hypervisor. </dd>
+</dd><dt><code>&#8211;connect</code> URI</dt>
+<dd> If using libvirt, connect to the given <i></i><i>URI</i><i></i>. If omitted, then we connect to the default libvirt hypervisor. </dd>
 <p> If you specify guest block devices directly (<i>-a</i>), then libvirt is not used at all.</p>
 <dt><code>-d</code> guest</dt>
 <dd>
@@ -98,19 +98,19 @@ virt - rescue[--options] - d domname virt - rescue[--options] - a disk.img[-a di
  virt-rescue --format=raw -a disk.img --format -a another.img
 </pre>
 <p> forces raw format (no auto-detection) for <i>disk.img</i> and reverts to auto-detection for <i>another.img</i>. </p>
-<p> If you have untrusted raw-format guest disk images, you should use this option to specify the disk format. This avoids a possible security problem with malicious guests (<font SIZE="-1">CVE-2010-3851</font>).</p>
-<dt><code>-m </code><font SIZE="-1"><code>MB</code></font></dt>
+<p> If you have untrusted raw-format guest disk images, you should use this option to specify the disk format. This avoids a possible security problem with malicious guests (CVE-2010-3851).</p>
+<dt><code>-m </code><code>MB</code></dt>
 <dd>
-</dd><dt><code>&#8211;memsize </code><font SIZE="-1"><code>MB</code></font></dt>
+</dd><dt><code>&#8211;memsize </code><code>MB</code></dt>
 <dd> Change the amount of memory allocated to the rescue system. The default is set by libguestfs and is small but adequate for running system tools. The occasional program might need more memory. The parameter is specified in megabytes.</dd>
 <dt><code>&#8211;network</code></dt>
-<dd> Enable <font SIZE="-1">QEMU</font> user networking in the guest. See &#8220;<font SIZE="-1">NETWORK&#8221;</font>.</dd>
+<dd> Enable QEMU user networking in the guest. See &#8220;NETWORK&#8221;.</dd>
 <dt><code>-r</code></dt>
 <dd>
 </dd><dt><code>&#8211;ro</code></dt>
 <dd> Open the image read-only. </dd>
 <p> The option must always be used if the disk image or virtual machine might be running, and is generally recommended in cases where you don&#8217;t need write access to the disk. </p>
-<p> See also &#8220;<font SIZE="-1">OPENING DISKS FOR READ AND WRITE&#8221;</font> in <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1).</p>
+<p> See also &#8220;OPENING DISKS FOR READ AND WRITE&#8221; in <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1).</p>
 <dt><code>&#8211;scratch</code></dt>
 <dd>
 </dd><dt><code>&#8211;scratch=N</code></dt>
@@ -135,9 +135,9 @@ virt - rescue[--options] - d domname virt - rescue[--options] - a disk.img[-a di
 <dd>
 </dd><dt><code>&#8211;rw</code></dt>
 <dd> This changes the <i>-a</i> and <i>-d</i> options so that disks are added and mounts are done read-write. </dd>
-<p> See &#8220;<font SIZE="-1">OPENING DISKS FOR READ AND WRITE&#8221;</font> in <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1).</p>
+<p> See &#8220;OPENING DISKS FOR READ AND WRITE&#8221; in <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1).</p>
 <dt><code>-x</code></dt>
-<dd> Enable tracing of libguestfs <font SIZE="-1">API</font> calls.</dd></dl>
+<dd> Enable tracing of libguestfs API calls.</dd></dl>
 <h2>OLD-STYLE COMMAND LINE ARGUMENTS</h2>
 <p> Previous versions of virt-rescue allowed you to write either: </p>
 <pre>
@@ -150,14 +150,14 @@ virt - rescue[--options] - d domname virt - rescue[--options] - a disk.img[-a di
 <p> whereas in this version you should use <i>-a</i> or <i>-d</i> respectively to avoid the confusing case where a disk image might have the same name as a guest. </p>
 <p> For compatibility the old style is still supported.</p>
 <h2>NETWORK</h2>
-<p> Adding the <i>&#8211;network</i> option enables <font SIZE="-1">QEMU</font> user networking in the rescue appliance. There are some differences between user networking and ordinary networking:</p>
+<p> Adding the <i>&#8211;network</i> option enables QEMU user networking in the rescue appliance. There are some differences between user networking and ordinary networking:</p>
 <dl>
 <dt>ping does not work</dt>
-<dd> Because the <font SIZE="-1">ICMP ECHO_REQUEST</font> protocol generally requires root in order to send the ping packets, and because virt-rescue must be able to run as non-root, <font SIZE="-1">QEMU</font> user networking is not able to emulate the <i><a href="/docs/linux/man/8-ping/">ping</a></i>(8) command. The ping command will appear to resolve addresses but will not be able to send or receive any packets. This does not mean that the network is not working.</dd>
+<dd> Because the ICMP ECHO_REQUEST protocol generally requires root in order to send the ping packets, and because virt-rescue must be able to run as non-root, QEMU user networking is not able to emulate the <i><a href="/docs/linux/man/8-ping/">ping</a></i>(8) command. The ping command will appear to resolve addresses but will not be able to send or receive any packets. This does not mean that the network is not working.</dd>
 <dt>cannot receive connections</dt>
-<dd> <font SIZE="-1">QEMU</font> user networking cannot receive incoming connections.</dd>
-<dt>making <font SIZE="-1">TCP</font> connections</dt>
-<dd> The virt-rescue appliance needs to be small and so does not include many network tools. In particular there is no <i><a href="/docs/linux/man/1-telnet/">telnet</a></i>(1) command. You can make <font SIZE="-1">TCP</font> connections from the shell using the magical <i>/dev/tcp/&lt;hostname&gt;/&lt;port&gt;</i> syntax: </dd>
+<dd> QEMU user networking cannot receive incoming connections.</dd>
+<dt>making TCP connections</dt>
+<dd> The virt-rescue appliance needs to be small and so does not include many network tools. In particular there is no <i><a href="/docs/linux/man/1-telnet/">telnet</a></i>(1) command. You can make TCP connections from the shell using the magical <i>/dev/tcp/&lt;hostname&gt;/&lt;port&gt;</i> syntax: </dd>
 <pre>
  exec 3&lt;&gt;/dev/tcp/redhat.com/80
  echo &quot;GET /&quot; &gt;&amp;3
@@ -175,7 +175,7 @@ virt - rescue[--options] - d domname virt - rescue[--options] - a disk.img[-a di
 <pre>
  virt-rescue --rw [-a ...] -a /tmp/corefiles
 </pre>
-<p> <font SIZE="-1"><code>NB.</code></font> If you use the <i>&#8211;ro</i> option, then virt-rescue will silently not write any core files to <i>/tmp/corefiles</i>.</p>
+<p> <code>NB.</code> If you use the <i>&#8211;ro</i> option, then virt-rescue will silently not write any core files to <i>/tmp/corefiles</i>.</p>
 <dt>3.</dt>
 <dd> Inside virt-rescue, mount the core files disk. Note replace <i>/dev/sdb1</i> with the last disk index. For example if the core files disk is the last of four disks, you would use <i>/dev/sdd1</i>. </dd>
 <pre>
@@ -190,7 +190,7 @@ virt - rescue[--options] - d domname virt - rescue[--options] - a disk.img[-a di
  &gt;&lt;rescue&gt; ulimit -Sc unlimited
 </pre>
 <dt>5.</dt>
-<dd> Run the tool that caused the core dump. The core dump will be written to <i>/tmp/mnt/core.</i><font SIZE="-1"><i>PID</i></font><i></i>. </dd>
+<dd> Run the tool that caused the core dump. The core dump will be written to <i>/tmp/mnt/core.</i><i>PID</i><i></i>. </dd>
 <pre><code>
 &gt; &lt;rescue&gt; ls - l / tmp / mnt total 1628 - rw-- -- -- -1 root root 1941504 Dec 7 13 : 13 core .130 drwx-- -- --2 root root 16384 Dec 7 13 : 00 lost + found
 </code></pre>
@@ -209,7 +209,7 @@ virt - rescue[--options] - d domname virt - rescue[--options] - a disk.img[-a di
 </pre>
 </dl>
 <h2>ENVIRONMENT VARIABLES</h2>
-<p> Several environment variables affect virt-rescue. See &#8220;<font SIZE="-1">ENVIRONMENT VARIABLES&#8221;</font> in <i>guestfs</i>(3) for the complete list.</p>
+<p> Several environment variables affect virt-rescue. See &#8220;ENVIRONMENT VARIABLES&#8221; in <i>guestfs</i>(3) for the complete list.</p>
 <h2>FILES</h2>
 <dl>
 <dt>$XDG_CONFIG_HOME/libguestfs/libguestfs-tools.conf</dt>
@@ -228,9 +228,9 @@ virt - rescue[--options] - d domname virt - rescue[--options] - a disk.img[-a di
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2009-2016 Red Hat Inc.</p>
 <h2>LICENSE</h2>
-<p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
-<p> This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE. </font> See the <font SIZE="-1">GNU</font> General Public License for more details. </p>
-<p> You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, <font SIZE="-1">MA 02110-1301 USA.</font></p>
+<p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
+<p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. </p>
+<p> You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.</p>
 <h2>BUGS</h2>
 <p> To get a list of bugs against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/buglist.cgi?component=libguestfs">https://bugzilla.redhat.com/buglist.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>
 <p> To report a new bug against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs">https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>

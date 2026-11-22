@@ -10,9 +10,9 @@ description: "abduco – terminal session manager"
 
 <p> abduco &#8211; terminal session manager </p>
 <h2>SYNOPSIS</h2>
-<p> <code>abduco</code> [<code>-e</code> <i>detachkey</i>] [<code>-r</code>] [<code>-f</code>] -c name command [<i>args</i>&nbsp;<wbr>&#8230;<i></i>]<br />
- <code>abduco</code> [<code>-e</code> <i>detachkey</i>] [<code>-r</code>] [<code>-f</code>] -n name command [<i>args</i>&nbsp;<wbr>&#8230;<i></i>]<br />
- <code>abduco</code> [<code>-e</code> <i>detachkey</i>] [<code>-r</code>] [<code>-f</code>] [<code>-l</code>] -A name command [<i>args</i>&nbsp;<wbr>&#8230;<i></i>]<br />
+<p> <code>abduco</code> [<code>-e</code> <i>detachkey</i>] [<code>-r</code>] [<code>-f</code>] -c name command [<i>args</i>&nbsp;<wbr>&#8230;<i></i>]<br/>
+ <code>abduco</code> [<code>-e</code> <i>detachkey</i>] [<code>-r</code>] [<code>-f</code>] -n name command [<i>args</i>&nbsp;<wbr>&#8230;<i></i>]<br/>
+ <code>abduco</code> [<code>-e</code> <i>detachkey</i>] [<code>-r</code>] [<code>-f</code>] [<code>-l</code>] -A name command [<i>args</i>&nbsp;<wbr>&#8230;<i></i>]<br/>
  <code>abduco</code> [<code>-e</code> <i>detachkey</i>] [<code>-r</code>] [<code>-l</code>] -a name </p>
 <h2>DESCRIPTION</h2>
 <p> <code>abduco</code> provides a way to disconnect a given application from its controlling terminal, thus it provides roughly the same session attach/detach support as <code><a href="/docs/linux/man/1-screen/">screen</a>(1)</code>,<code> <a href="/docs/linux/man/1-tmux/">tmux</a>(1)</code> or<code> dtach(1).</code> </p>

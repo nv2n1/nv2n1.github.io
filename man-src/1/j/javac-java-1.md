@@ -206,22 +206,22 @@ javac[options][sourcefiles][classes][@argfiles]
 <dt>classfile</dt>
 <dd> Warn about issues related to classfile contents.</dd>
 <dt>deprecation</dt>
-<dd> Warn about use of deprecated items. For example:<br />
-java.util.Date myDate = new java.util.Date();<br />
-int currentDay = myDate.getDay();<br />
+<dd> Warn about use of deprecated items. For example:<br/>
+java.util.Date myDate = new java.util.Date();<br/>
+int currentDay = myDate.getDay();<br/>
  The method <i>java.util.Date.getDay</i> has been deprecated since JDK 1.1.</dd>
 <dt>dep-ann</dt>
-<dd> Warn about items that are documented with an <i>@deprecated</i> Javadoc comment, but do not have a <i>@Deprecated</i> annotation. For example:<br />
-/**<br />
- * @deprecated As of Java SE 7, replaced by {@link #newMethod()}<br />
- */<br />
-public<br />
-static void deprecatedMethood()<br />
-{<br />
-}<br />
-public<br />
-static void newMethod()<br />
-{<br />
+<dd> Warn about items that are documented with an <i>@deprecated</i> Javadoc comment, but do not have a <i>@Deprecated</i> annotation. For example:<br/>
+/**<br/>
+ * @deprecated As of Java SE 7, replaced by {@link #newMethod()}<br/>
+ */<br/>
+public<br/>
+static void deprecatedMethood()<br/>
+{<br/>
+}<br/>
+public<br/>
+static void newMethod()<br/>
+{<br/>
 }</dd>
 <dt>divzero</dt>
 <dd> Warn about division by constant integer 0. For example: </dd>
@@ -229,58 +229,58 @@ static void newMethod()<br />
 <code>    int divideByZero = 42 / 0;</code>
 </pre>
 <dt>empty</dt>
-<dd> Warn about empty statements after <i>if</i> statements. For example:<br />
-class E<br />
-{<br />
-    void m()<br />
-    {<br />
-        if (true)<br />
-            ;<br />
-    }<br />
+<dd> Warn about empty statements after <i>if</i> statements. For example:<br/>
+class E<br/>
+{<br/>
+    void m()<br/>
+    {<br/>
+        if (true)<br/>
+            ;<br/>
+    }<br/>
 }</dd>
 <dt>fallthrough</dt>
-<dd> Check <i>switch</i> blocks for fall-through cases and provide a warning message for any that are found. Fall-through cases are cases in a <i>switch</i> block, other than the last case in the block, whose code does not include a <i>break</i> statement, allowing code execution to &quot;fall through&quot; from that case to the next case. For example, the code following the <i>case 1</i> label in this <i>switch</i> block does not end with a <i>break</i> statement:<br />
-switch (x) {<br />
-case 1:<br />
-    System.out.println(&#8220;1&#8221;);<br />
-    //  No break statement here.<br />
-case 2:<br />
-    System.out.println(&#8220;2&#8221;);<br />
-}<br />
+<dd> Check <i>switch</i> blocks for fall-through cases and provide a warning message for any that are found. Fall-through cases are cases in a <i>switch</i> block, other than the last case in the block, whose code does not include a <i>break</i> statement, allowing code execution to &quot;fall through&quot; from that case to the next case. For example, the code following the <i>case 1</i> label in this <i>switch</i> block does not end with a <i>break</i> statement:<br/>
+switch (x) {<br/>
+case 1:<br/>
+    System.out.println(&#8220;1&#8221;);<br/>
+    //  No break statement here.<br/>
+case 2:<br/>
+    System.out.println(&#8220;2&#8221;);<br/>
+}<br/>
  If the <i>-Xlint:fallthrough</i> flag were used when compiling this code, the compiler would emit a warning about &quot;possible fall-through into case,&quot; along with the line number of the case in question.</dd>
 <dt>finally</dt>
-<dd> Warn about <i>finally</i> clauses that cannot complete normally. For example:<br />
-public<br />
-static int m()<br />
-{<br />
-    try {<br />
-        throw new NullPointerException();<br />
-    } catch (NullPointerException e) {<br />
-        System.err.println(&#8220;Caught NullPointerException.&#8221;);<br />
-        return 1;<br />
-    } finally {<br />
-        return 0;<br />
-    }<br />
-}<br />
+<dd> Warn about <i>finally</i> clauses that cannot complete normally. For example:<br/>
+public<br/>
+static int m()<br/>
+{<br/>
+    try {<br/>
+        throw new NullPointerException();<br/>
+    } catch (NullPointerException e) {<br/>
+        System.err.println(&#8220;Caught NullPointerException.&#8221;);<br/>
+        return 1;<br/>
+    } finally {<br/>
+        return 0;<br/>
+    }<br/>
+}<br/>
  The compiler generates a warning for <i>finally</i> block in this example. When this method is called, it returns a value of <i>0</i>, not <i>1</i>. A <i>finally</i> block always executes when the <i>try</i> block exits. In this example, if control is transferred to the <i>catch</i>, then the method exits. However, the <i>finally</i> block must be executed, so it is executed, even though control has already been transferred outside the method.</dd>
 <dt>options</dt>
 <dd> Warn about issues relating to the use of command line options. See Cross-Compilation Example for an example of this kind of warning.</dd>
 <dt>overrides</dt>
-<dd> Warn about issues regarding method overrides. For example, consider the following two classes:<br />
-public<br />
-class ClassWithVarargsMethod<br />
-{<br />
-    void varargsMethod(String&#8230; s)<br />
-    {<br />
-    }<br />
+<dd> Warn about issues regarding method overrides. For example, consider the following two classes:<br/>
+public<br/>
+class ClassWithVarargsMethod<br/>
+{<br/>
+    void varargsMethod(String&#8230; s)<br/>
+    {<br/>
+    }<br/>
 }</dd>
-<p>public<br />
-class ClassWithOverridingMethod extends ClassWithVarargsMethod<br />
-{<br />
-    @Override void varargsMethod(String[] s)<br />
-    {<br />
-    }<br />
-}<br />
+<p>public<br/>
+class ClassWithOverridingMethod extends ClassWithVarargsMethod<br/>
+{<br/>
+    @Override void varargsMethod(String[] s)<br/>
+    {<br/>
+    }<br/>
+}<br/>
  The compiler generates a warning similar to the following: </p>
 <p> <i>warning: [override] varargsMethod(String[]) in ClassWithOverridingMethod overrides varargsMethod(String&#8230;) in ClassWithVarargsMethod; overriding method is missing &#8216;&#8230;&#8217;</i> </p>
 <p> When the compiler encounters a varargs method, it translates the varargs formal parameter into an array. In the method <i>ClassWithVarargsMethod.varargsMethod</i>, the compiler translates the varargs formal parameter <i>String&#8230; s</i> to the formal parameter <i>String[] s</i>, an array, which matches the formal parameter of the method <i>ClassWithOverridingMethod.varargsMethod</i>. Consequently, this example compiles.</p>
@@ -291,29 +291,29 @@ class ClassWithOverridingMethod extends ClassWithVarargsMethod<br />
 </pre>
 <dt>processing</dt>
 <dd> Warn about issues regarding annotation processing. The compiler generates this warning if you have a class that has an annotation, and you use an annotation processor that cannot handle that type of exception. For example, the following is a simple annotation processor: </dd>
-<p> <code>Source file </code><tt>AnnoProc.java</tt>:<br />
-import java.util.*;<br />
-import javax.annotation.processing.*;<br />
-import javax.lang.model.*;<br />
-import javax.lang.model.element.*;<br />
-@SupportedAnnotationTypes(&#8220;NotAnno&#8221;) public class AnnoProc extends AbstractProcessor<br />
-{<br />
-  public boolean process(Set&lt;? extends TypeElement&gt; elems, RoundEnvironment renv)<br />
-    {<br />
-        return true;<br />
-    }<br />
-  public<br />
-    SourceVersion getSupportedSourceVersion()<br />
-    {<br />
-        return SourceVersion.latest();<br />
-    }<br />
-}<br />
- <code>Source file </code><tt>AnnosWithoutProcessors.java</tt><code>:</code><br />
-@interface Anno {<br />
-}<br />
-@Anno class AnnosWithoutProcessors<br />
-{<br />
-}<br />
+<p> <code>Source file </code><tt>AnnoProc.java</tt>:<br/>
+import java.util.*;<br/>
+import javax.annotation.processing.*;<br/>
+import javax.lang.model.*;<br/>
+import javax.lang.model.element.*;<br/>
+@SupportedAnnotationTypes(&#8220;NotAnno&#8221;) public class AnnoProc extends AbstractProcessor<br/>
+{<br/>
+  public boolean process(Set&lt;? extends TypeElement&gt; elems, RoundEnvironment renv)<br/>
+    {<br/>
+        return true;<br/>
+    }<br/>
+  public<br/>
+    SourceVersion getSupportedSourceVersion()<br/>
+    {<br/>
+        return SourceVersion.latest();<br/>
+    }<br/>
+}<br/>
+ <code>Source file </code><tt>AnnosWithoutProcessors.java</tt><code>:</code><br/>
+@interface Anno {<br/>
+}<br/>
+@Anno class AnnosWithoutProcessors<br/>
+{<br/>
+}<br/>
  The following commands compile the annotation processor <i>AnnoProc</i>, then run this annotation processor against the source file <i>AnnosWithoutProcessors.java</i>: </p>
 <pre>
 <code>% </code><code>javac AnnoProc.java</code>
@@ -333,40 +333,40 @@ import javax.lang.model.element.*;<br />
 </pre>
 <p> <i>List</i> is a raw type. However, <i>List&lt;?&gt;</i> is a unbounded wildcard parameterized type. Because <i>List</i> is a parameterized interface, you should always specify its type argument. In this example, the <i>List</i> formal argument is specified with a unbounded wildcard (<i>?</i>) as its formal type parameter, which means that the <i>countElements</i> method can accept any instantiation of the <i>List</i> interface.</p>
 <dt>serial</dt>
-<dd> Warn about missing <i>serialVersionUID</i> definitions on serializable classes. For example:<br />
-public<br />
-class PersistentTime implements Serializable<br />
-{<br />
-  private<br />
-    Date time;<br />
-  public<br />
-    PersistentTime()<br />
-    {<br />
-        time = Calendar.getInstance().getTime();<br />
-    }<br />
-  public<br />
-    Date getTime()<br />
-    {<br />
-        return time;<br />
-    }<br />
-}<br />
+<dd> Warn about missing <i>serialVersionUID</i> definitions on serializable classes. For example:<br/>
+public<br/>
+class PersistentTime implements Serializable<br/>
+{<br/>
+  private<br/>
+    Date time;<br/>
+  public<br/>
+    PersistentTime()<br/>
+    {<br/>
+        time = Calendar.getInstance().getTime();<br/>
+    }<br/>
+  public<br/>
+    Date getTime()<br/>
+    {<br/>
+        return time;<br/>
+    }<br/>
+}<br/>
  The compiler generates the following warning: </dd>
 <p> <i>warning: [serial] serializable class PersistentTime has no definition of serialVersionUID</i> </p>
 <p> If a serializable class does not explicitly declare a field named <i>serialVersionUID</i>, then the serialization runtime will calculate a default <i>serialVersionUID</i> value for that class based on various aspects of the class, as described in the Java Object Serialization Specification. However, it is strongly recommended that all serializable classes explicitly declare <i>serialVersionUID</i> values because the default process of computing <i>serialVersionUID</i> vales is highly sensitive to class details that may vary depending on compiler implementations, and can thus result in unexpected <i>InvalidClassExceptions</i> during deserialization. Therefore, to guarantee a consistent <i>serialVersionUID</i> value across different Java compiler implementations, a serializable class must declare an explicit <i>serialVersionUID</i> value.</p>
 <dt>static</dt>
-<dd> Warn about issues relating to use of statics. For example:<br />
-class XLintStatic<br />
-{<br />
-    static void m1()<br />
-    {<br />
-    }<br />
-    void m2()<br />
-    {<br />
-        this.m1();<br />
-    }<br />
-}<br />
- The compiler generates the following warning:<br />
-warning : [static] static method should be qualified by type name, XLintStatic, instead of by an expression<br />
+<dd> Warn about issues relating to use of statics. For example:<br/>
+class XLintStatic<br/>
+{<br/>
+    static void m1()<br/>
+    {<br/>
+    }<br/>
+    void m2()<br/>
+    {<br/>
+        this.m1();<br/>
+    }<br/>
+}<br/>
+ The compiler generates the following warning:<br/>
+warning : [static] static method should be qualified by type name, XLintStatic, instead of by an expression<br/>
  To resolve this issue, you can call the static method <i>m1</i> as follows: </dd>
 <pre>
 <code>XLintStatic.m1();</code>
@@ -389,18 +389,18 @@ warning : [static] static method should be qualified by type name, XLintStatic, 
 <p> The variable <i>ls</i> has the parameterized type <i>List&lt;String&gt;</i>. When the <i>List</i> referenced by <i>l</i> is assigned to <i>ls</i>, the compiler generates an unchecked warning; the compiler is unable to determine at compile time, and moreover knows that the JVM will not be able to determine at runtime, if <i>l</i> refers to a <i>List&lt;String&gt;</i> type; it does not. Consequently, heap pollution occurs. </p>
 <p> In detail, a heap pollution situation occurs when the <i>List</i> object <i>l</i>, whose static type is <i>List&lt;Number&gt;</i>, is assigned to another <i>List</i> object, <i>ls</i>, that has a different static type, <i>List&lt;String&gt;</i>. However, the compiler still allows this assignment. It must allow this assignment to preserve backwards compatibility with versions of Java SE that do not support generics. Because of type erasure, <i>List&lt;Number&gt;</i> and <i>List&lt;String&gt;</i> both become <i>List</i>. Consequently, the compiler allows the assignment of the object <i>l</i>, which has a raw type of <i>List</i>, to the object <i>ls</i>.</p>
 <dt>varargs</dt>
-<dd> Warn about unsafe usages of variable arguments (varargs) methods, in particular, those that contain non-reifiable arguments. For example:<br />
-public<br />
-class ArrayBuilder<br />
-{<br />
-  public<br />
-    static&lt;T&gt; void addToList(List&lt;T&gt; listArg, T&#8230; elements)<br />
-    {<br />
-        for (T x : elements) {<br />
-            listArg.add(x);<br />
-        }<br />
-    }<br />
-}<br />
+<dd> Warn about unsafe usages of variable arguments (varargs) methods, in particular, those that contain non-reifiable arguments. For example:<br/>
+public<br/>
+class ArrayBuilder<br/>
+{<br/>
+  public<br/>
+    static&lt;T&gt; void addToList(List&lt;T&gt; listArg, T&#8230; elements)<br/>
+    {<br/>
+        for (T x : elements) {<br/>
+            listArg.add(x);<br/>
+        }<br/>
+    }<br/>
+}<br/>
  The compiler generates the following warning for the definition of the method <i>ArrayBuilder.addToList</i>: </dd>
 <pre>
 <code>warning: [varargs] Possible heap pollution from parameterized vararg type T</code>
@@ -464,16 +464,16 @@ class ArrayBuilder<br />
 <p> <code>javac</code> supports the new Java Compiler API defined by the classes and interfaces in the <i>javax.tools</i> package. </p>
 <h3>Example</h3>
 <p> To perform a compilation using arguments as you would give on the command line, you can use the following: </p>
-<p>JavaCompiler javac = ToolProvider.getSystemJavaCompiler();<br />
+<p>JavaCompiler javac = ToolProvider.getSystemJavaCompiler();<br/>
 int rc = javac.run(null, null, null, args);</p>
 <p> This will write any diagnostics to the standard output stream, and return the exit code that <code>javac</code> would give when invoked from the command line. </p>
 <p> You can use other methods on the <i>javax.tools.JavaCompiler</i> interface to handle diagnostics, control where files are read from and written to, and so on. </p>
 <h3>Old Interface</h3>
 <p> <code>Note:</code> This API is retained for backwards compatibility only; all new code should use the Java Compiler API, described above. </p>
 <p> The <i>com.sun.tools.javac.Main</i> class provides two static methods to invoke the compiler from a program: </p>
-<p>public<br />
-static int compile(String[] args);<br />
-public<br />
+<p>public<br/>
+static int compile(String[] args);<br/>
+public<br/>
 static int compile(String[] args, PrintWriter out);</p>
 <p> The <i>args</i> parameter represents any of the command line arguments that would normally be passed to the javac program and are outlined in the above Synopsis section. </p>
 <p> The <i>out</i> parameter indicates where the compiler&#8217;s diagnostic output is directed. </p>

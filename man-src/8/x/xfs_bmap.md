@@ -9,7 +9,7 @@ description: "xfs_bmap – print block mapping for an XFS file"
 
 <p>xfs_bmap &#8211; print block mapping for an XFS file</p>
 <h2>Synopsis</h2>
-<p><code>xfs_bmap</code> [ <code>-adlpv</code> ] [ <code>-n</code> <i>num_extents</i> ] <i>file</i><br />
+<p><code>xfs_bmap</code> [ <code>-adlpv</code> ] [ <code>-n</code> <i>num_extents</i> ] <i>file</i><br/>
  <code>xfs_bmap -V</code></p>
 <h2>Description</h2>
 <p><code>xfs_bmap</code> prints the map of disk blocks used by files in an XFS filesystem. The map lists each <i>extent</i> used by the file, as well as regions in the file that do not have any corresponding blocks (holes). Each line of the listings takes the following form:</p>

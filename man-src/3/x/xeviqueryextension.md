@@ -11,11 +11,11 @@ description: "XeviQueryExtension, XeviQueryVersion, XeviGetVisualInfo – X Exte
 <h2>Synopsis</h2>
 <p>#include &lt;X11/extensions/XEVI.h&gt; </p>
 <p> Bool XeviQueryExtension (Display *dpy); </p>
-<p> Bool XeviQueryVersion (Display *dpy,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;*major_version_return,<br />
+<p> Bool XeviQueryVersion (Display *dpy,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;*major_version_return,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;*minor_version_return); </p>
-<p> int XeviGetVisualInfo (Display *dpy, VisualID *visual,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int n_visual, ExtendedVisualInfo&nbsp;**&nbsp;evi_return,<br />
+<p> int XeviGetVisualInfo (Display *dpy, VisualID *visual,<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int n_visual, ExtendedVisualInfo&nbsp;**&nbsp;evi_return,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;*&nbsp;n_info_return);</p>
 <h2>Description</h2>
 <p>The X11 Extended Visual Information extension (EVI) allows a client to determine information about core X visuals beyond what the core protocol provides. </p>

@@ -12,8 +12,8 @@ description: "mbexamine – examine a cyrus-format mailbox"
 
 <p>mbexamine &#8211; examine a cyrus-format mailbox</p>
 <h2>Synopsis</h2>
-<p><code>mbexamine</code> [ <code>-C</code> <i>config-file</i> ] [ <code>-u uid</code> ] <i>mailbox</i>&#8230;<br />
- <code>mbexamine</code> [ <code>-C</code> <i>config-file</i> ] [ <code>-s seqnum</code> ] <i>mailbox</i>&#8230;<br />
+<p><code>mbexamine</code> [ <code>-C</code> <i>config-file</i> ] [ <code>-u uid</code> ] <i>mailbox</i>&#8230;<br/>
+ <code>mbexamine</code> [ <code>-C</code> <i>config-file</i> ] [ <code>-s seqnum</code> ] <i>mailbox</i>&#8230;<br/>
  <code>mbexamine</code> [ <code>-C</code> <i>config-file</i> ] <code>-q</code> <i>mailbox</i>&#8230;</p>
 <h2>Description</h2>
 <p><i>Mbexamine</i> will examine the header, index, and cache files of a cyrus format mailbox and dump the information contained therein. It can also limit its output to a specific uid or sequence number, through use of the -s and -u switches. <i>Mbexamine</i> reads its configuration options out of the <i><a href="/docs/linux/man/5-imapd-conf/">imapd.conf</a></i>(5) file unless specified otherwise by <code>-C</code>. It uses the mboxlist database to locate the mailbox on disk.</p>

@@ -49,14 +49,14 @@ description: "setcifsacl – Userspace helper to alter an ACL in a security desc
 <p> flags: OBJECT_INHERIT_FLAG (OI or 0x1), CONTAINER_INHERIT_FLAG (CI or 0x2), NO_PROPAGATE_INHERIT_FLAG (NI or 0x4), INHERIT_ONLY_FLAG (IO or 0x8), INHERITED_ACE_FLAG (IA or 0x10) or a combination/OR of these values. </p>
 <p> mask: Either one of FULL, CHANGE, READ, a combination of R W X D P O, or a hex value</p>
 <h2>EXAMPLES</h2>
-<p> Add an ACE<br />
+<p> Add an ACE<br/>
  setcifsacl -a &quot;ACL:CIFSTESTDOM\user2:DENIED/0x1/D&quot; &lt;file_name&gt; setcifsacl -a &quot;ACL:CIFSTESTDOM\user1:ALLOWED/OI|CI|NI/D&quot; &lt;file_name&gt; </p>
-<p> Delete an ACE <br />
+<p> Delete an ACE <br/>
  setcifsacl -D &quot;ACL:S-1-1-0:0x1/OI/0x1201ff&quot; &lt;file_name&gt; </p>
-<p> Modify an ACE <br />
+<p> Modify an ACE <br/>
  setcifsacl -M &quot;ACL:CIFSTESTDOM\user1:ALLOWED/0x1f/CHANGE&quot; &lt;file_name&gt; </p>
-<p> Set an ACL <br />
- setcifsacl -S &quot;ACL:CIFSTESTDOM\Administrator:0x0/0x0/FULL, <br />
+<p> Set an ACL <br/>
+ setcifsacl -S &quot;ACL:CIFSTESTDOM\Administrator:0x0/0x0/FULL, <br/>
  ACL:CIFSTESTDOM\user2:0x0/0x0/FULL&quot; &lt;file_name&gt; </p>
 <h2>NOTES</h2>
 <p> Kernel support for getcifsacl/setcifsacl utilities was initially introduced in the 2.6.37 kernel.  </p>

@@ -13,10 +13,10 @@ description: "QuantLib::ExchangeRateManager – exchange-rate repository"
 <p> #include &lt;ql/currencies/exchangeratemanager.hpp&gt; </p>
 <p> Inherits <code>Singleton&lt; ExchangeRateManager &gt;</code>. </p>
 <h3>Public Member Functions</h3>
-<p> void <code>add</code> (const <code>ExchangeRate</code> &amp;, const <code>Date</code> &amp;startDate=Date::minDate(), const <code>Date</code> &amp;endDate=Date::maxDate())<br />
- <i>Add an exchange rate. </i><br />
+<p> void <code>add</code> (const <code>ExchangeRate</code> &amp;, const <code>Date</code> &amp;startDate=Date::minDate(), const <code>Date</code> &amp;endDate=Date::maxDate())<br/>
+ <i>Add an exchange rate. </i><br/>
  <code>ExchangeRate</code> <code>lookup</code> (const <code>Currency</code> &amp;source, const <code>Currency</code> &amp;target, <code>Date</code> date=<code>Date</code>(), <code>ExchangeRate::Type</code> type=ExchangeRate::Derived) const </p>
-<p> void <code>clear</code> ()<br />
+<p> void <code>clear</code> ()<br/>
  <i>remove the added exchange rates </i></p>
 <h3>Friends</h3>
 <p> class <code>Singleton&lt; ExchangeRateManager &gt;</code> </p>

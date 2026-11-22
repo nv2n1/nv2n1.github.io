@@ -10,7 +10,7 @@ description: "dbdsqr.f –"
 <p>dbdsqr.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dbdsqr</code> (UPLO, N, NCVT, NRU, NCC, D, E, VT, LDVT, U, LDU, C, LDC, WORK, INFO)<br />
+<p>subroutine <code>dbdsqr</code> (UPLO, N, NCVT, NRU, NCC, D, E, VT, LDVT, U, LDU, C, LDC, WORK, INFO)<br/>
  <i></i><code>DBDSQR</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dbdsqr (characterUPLO, integerN, integerNCVT, integerNRU, integerNCC, double precision, dimension( * )D, double precision, dimension( * )E, double precision, dimension( ldvt, * )VT, integerLDVT, double precision, dimension( ldu, * )U, integerLDU, double precision, dimension( ldc, * )C, integerLDC, double precision, dimension( * )WORK, integerINFO)</h3>

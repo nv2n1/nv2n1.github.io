@@ -88,10 +88,10 @@ description: "sar – Collect, report, or save system activity information."
 <dt>dkB/s</dt>
 <dd>Number of kilobytes discarded for the device per second.</dd>
 <dt>areq-sz</dt>
-<dd>The average size (in kilobytes) of the I/O requests that were issued to the device.<br />
+<dd>The average size (in kilobytes) of the I/O requests that were issued to the device.<br/>
  Note: In previous versions, this field was known as avgrq-sz and was expressed in sectors.</dd>
 <dt>aqu-sz</dt>
-<dd>The average queue length of the requests that were issued to the device.<br />
+<dd>The average queue length of the requests that were issued to the device.<br/>
  Note: In previous versions, this field was known as avgqu-sz.</dd>
 <dt>await</dt>
 <dd>The average time (in milliseconds) for I/O requests issued to the device to be served. This includes the time spent by the requests in queue and the time spent servicing them.</dd>
@@ -893,7 +893,7 @@ description: "sar – Collect, report, or save system activity information."
 <p>The <code>sar</code> command takes into account the following environment variables:</p>
 <dl COMPACT>
 <dt><code>S_COLORS</code></dt>
-<dd>By default statistics are displayed in color when the output is connected to a terminal. Use this variable to change the settings. Possible values for this variable are <i>never</i>, <i>always </i>or <i>auto</i> (the latter is equivalent to the default settings).<br />
+<dd>By default statistics are displayed in color when the output is connected to a terminal. Use this variable to change the settings. Possible values for this variable are <i>never</i>, <i>always </i>or <i>auto</i> (the latter is equivalent to the default settings).<br/>
  Please note that the color (being red, yellow, or some other color) used to display a value is not indicative of any kind of issue simply because of the color. It only indicates different ranges of values.</dd>
 <dt><code>S_COLORS_SGR</code></dt>
 <dd>Specify the colors and other attributes used to display statistics on the terminal. Its value is a colon-separated list of capabilities that defaults to <code>C=33;22:H=31;1:I=32;22:M=35;1:N=34;1:R=31;22:Z=34;22</code>. Supported capabilities are:</dd>
@@ -936,7 +936,7 @@ description: "sar – Collect, report, or save system activity information."
 <p> All the statistics are not necessarily available, depending on the kernel version used. <code>sar</code> assumes that you are using at least a 2.6 kernel. </p>
 <p> Although <code>sar</code> speaks of kilobytes (kB), megabytes (MB)&#8230;, it actually uses kibibytes (kiB), mebibytes (MiB)&#8230; A kibibyte is equal to 1024 bytes, and a mebibyte is equal to 1024 kibibytes. </p>
 <h2>Files</h2>
-<p><i>/var/log/sysstat/saDD</i><br />
+<p><i>/var/log/sysstat/saDD</i><br/>
  <i>/var/log/sysstat/saYYYYMMDD</i></p>
 <dl COMPACT>
 <dd>The standard system activity daily data files and their default location. <i>YYYY </i>stands for the current year, <i>MM </i>for the current month and <i>DD</i> for the current day.</dd></dl>
@@ -945,5 +945,5 @@ description: "sar – Collect, report, or save system activity information."
 <p>Sebastien Godard (sysstat &lt;at&gt; orange.fr) </p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-sadc/">sadc</a></code>(8), <code><a href="/docs/linux/man/8-sa1/">sa1</a></code>(8), <code><a href="/docs/linux/man/8-sa2/">sa2</a></code>(8), <code><a href="/docs/linux/man/1-sadf/">sadf</a></code>(1), <code><a href="/docs/linux/man/5-sysstat/">sysstat</a></code>(5), <code><a href="/docs/linux/man/1-pidstat/">pidstat</a></code>(1), <code><a href="/docs/linux/man/1-mpstat/">mpstat</a></code>(1), <code><a href="/docs/linux/man/1-iostat/">iostat</a></code>(1), <code><a href="/docs/linux/man/8-vmstat/">vmstat</a></code>(8) </p>
-<p> <i><a rel="nofollow" href="https://github.com/sysstat/sysstat">https://github.com/sysstat/sysstat</a></i><br />
+<p> <i><a rel="nofollow" href="https://github.com/sysstat/sysstat">https://github.com/sysstat/sysstat</a></i><br/>
  <i><a rel="nofollow" href="http://pagesperso-orange.fr/sebastien.godard/">http://pagesperso-orange.fr/sebastien.godard/</a></i></p>

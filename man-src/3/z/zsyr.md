@@ -10,7 +10,7 @@ description: "zsyr.f –"
 <p>zsyr.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zsyr</code> (UPLO, N, ALPHA, X, INCX, A, LDA)<br />
+<p>subroutine <code>zsyr</code> (UPLO, N, ALPHA, X, INCX, A, LDA)<br/>
  <i></i><code>ZSYR</code> performs the symmetric rank-1 update of a complex symmetric matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zsyr (characterUPLO, integerN, complex*16ALPHA, complex*16, dimension( * )X, integerINCX, complex*16, dimension( lda, * )A, integerLDA)</h3>

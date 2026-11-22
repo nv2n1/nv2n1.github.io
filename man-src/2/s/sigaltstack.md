@@ -16,8 +16,8 @@ description: "sigaltstack – set and/or get signal stack context"
 <p> <code>sigaltstack</code>():</p>
 <dl>
 <dt>
-</dt><dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.12:&nbsp;*/&nbsp;_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L<br />
+</dt><dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.12:&nbsp;*/&nbsp;_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>sigaltstack</code>() allows a thread to define a new alternate signal stack and/or retrieve the state of an existing alternate signal stack. An alternate signal stack is used during the execution of a signal handler if the establishment of that handler (see <code><a href="/docs/linux/man/2-sigaction/">sigaction</a></code>(2)) requested it. </p>
@@ -31,9 +31,9 @@ description: "sigaltstack – set and/or get signal stack context"
 <dd> When establishing a signal handler using <code><a href="/docs/linux/man/2-sigaction/">sigaction</a></code>(2), inform the system that the signal handler should be executed on the alternate signal stack by specifying the <code>SA_ONSTACK</code> flag.</dd></dl>
 <p> The <i>ss</i> argument is used to specify a new alternate signal stack, while the <i>old_ss</i> argument is used to retrieve information about the currently established signal stack. If we are interested in performing just one of these tasks, then the other argument can be specified as NULL. </p>
 <p> The <i>stack_t</i> type used to type the arguments of this function is defined as follows: </p>
-<p> typedef struct {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;void&nbsp;<wbr>&nbsp;*ss_sp;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Base address of stack&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;ss_flags;&nbsp;<wbr>&nbsp;/*&nbsp;Flags&nbsp;*/<br />
+<p> typedef struct {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;void&nbsp;<wbr>&nbsp;*ss_sp;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Base address of stack&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;ss_flags;&nbsp;<wbr>&nbsp;/*&nbsp;Flags&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;size_t ss_size;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Number of bytes in stack&nbsp;*/ } stack_t; </p>
 <p> To establish a new alternate signal stack, the fields of this structure are set as follows:</p>
 <dl>
@@ -107,14 +107,14 @@ description: "sigaltstack – set and/or get signal stack context"
 <h2>EXAMPLES</h2>
 <p> The following code segment demonstrates the use of <code>sigaltstack</code>() (and <code><a href="/docs/linux/man/2-sigaction/">sigaction</a></code>(2)) to install an alternate signal stack that is employed by a handler for the <code>SIGSEGV</code> signal: </p>
 <p> stack_t ss; </p>
-<p> ss.ss_sp = malloc(SIGSTKSZ); if (ss.ss_sp == NULL) {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;perror(&quot;malloc&quot;);<br />
+<p> ss.ss_sp = malloc(SIGSTKSZ); if (ss.ss_sp == NULL) {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;perror(&quot;malloc&quot;);<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_FAILURE); } </p>
-<p> ss.ss_size = SIGSTKSZ; ss.ss_flags = 0; if (sigaltstack(&amp;ss, NULL) == -1) {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;perror(&quot;sigaltstack&quot;);<br />
+<p> ss.ss_size = SIGSTKSZ; ss.ss_flags = 0; if (sigaltstack(&amp;ss, NULL) == -1) {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;perror(&quot;sigaltstack&quot;);<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_FAILURE); } </p>
-<p> sa.sa_flags = SA_ONSTACK; sa.sa_handler = handler(); /* Address of a signal handler */ sigemptyset(&amp;sa.sa_mask); if (sigaction(SIGSEGV, &amp;sa, NULL) == -1) {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;perror(&quot;sigaction&quot;);<br />
+<p> sa.sa_flags = SA_ONSTACK; sa.sa_handler = handler(); /* Address of a signal handler */ sigemptyset(&amp;sa.sa_mask); if (sigaction(SIGSEGV, &amp;sa, NULL) == -1) {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;perror(&quot;sigaction&quot;);<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_FAILURE); }</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2), <code><a href="/docs/linux/man/2-setrlimit/">setrlimit</a></code>(2), <code><a href="/docs/linux/man/2-sigaction/">sigaction</a></code>(2), <code><a href="/docs/linux/man/3-siglongjmp/">siglongjmp</a></code>(3), <code><a href="/docs/linux/man/3-sigsetjmp/">sigsetjmp</a></code>(3), <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7)</p>

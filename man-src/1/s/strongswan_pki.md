@@ -47,7 +47,7 @@ description: "pki – Simple public key infrastructure (PKI) management tool"
 <p> The first step is to generate a private key using the <code>&#8211;gen</code> command. By default this generates a 2048-bit RSA key. </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>pki &#8211;gen&nbsp;<wbr>&gt;&nbsp;<wbr>ca_key.der </p>
 <p> This key is used to create the self-signed CA certificate, using the <code>&#8211;self</code> command. The distinguished name should be adjusted to your needs. </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>pki &#8211;self &#8211;ca &#8211;in ca_key.der&nbsp;<wbr>\<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>pki &#8211;self &#8211;ca &#8211;in ca_key.der&nbsp;<wbr>\<br/>
 &#8211;dn&nbsp;<wbr>&quot;C=CH, O=strongSwan, CN=strongSwan CA&quot;&nbsp;<wbr>&gt;&nbsp;<wbr>ca_cert.der </p>
 <h3>Generating End-Entity Certificates</h3>
 <p> With the root CA certificate and key at hand end-entity certificates for clients and servers can be issued. Similarly intermediate CA certificates can be issued, which in turn can issue other certificates. To generate a certificate for a server, we start by generating a private key. </p>
@@ -55,13 +55,13 @@ description: "pki – Simple public key infrastructure (PKI) management tool"
 <p> The public key will be included in the certificate so lets extract that from the private key. </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>pki &#8211;pub &#8211;in server_key.der&nbsp;<wbr>&gt;&nbsp;<wbr>server_pub.der </p>
 <p> The following command will use the CA certificate and private key to issue the certificate for this server. Adjust the distinguished name, subjectAltName(s) and flags as needed (check <code>pki&nbsp;<wbr>&#8211;issue</code>(8) for more options). </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>pki &#8211;issue &#8211;in server_pub.der &#8211;cacert ca_cert.der&nbsp;<wbr>\<br />
-&#8211;cakey ca_key.der &#8211;dn&nbsp;<wbr>&quot;C=CH, O=strongSwan, CN=VPN Server&quot;&nbsp;<wbr>\<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>pki &#8211;issue &#8211;in server_pub.der &#8211;cacert ca_cert.der&nbsp;<wbr>\<br/>
+&#8211;cakey ca_key.der &#8211;dn&nbsp;<wbr>&quot;C=CH, O=strongSwan, CN=VPN Server&quot;&nbsp;<wbr>\<br/>
 &#8211;san vpn.strongswan.org &#8211;flag serverAuth&nbsp;<wbr>&gt;&nbsp;<wbr>server_cert.der </p>
 <p> Instead of storing the public key in a separate file, the output of <code>&#8211;pub</code> may also be piped directly into the above command.</p>
 <h3>Generating Certificate Revocation Lists (CRL)</h3>
 <p> If end-entity certificates have to be revoked, CRLs may be generated using the <code>&#8211;signcrl</code> command. </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>pki &#8211;signcrl &#8211;cacert ca_cert.der &#8211;cakey ca_key.der&nbsp;<wbr>\<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>pki &#8211;signcrl &#8211;cacert ca_cert.der &#8211;cakey ca_key.der&nbsp;<wbr>\<br/>
 &#8211;reason superseded &#8211;cert server_cert.der&nbsp;<wbr>&gt;&nbsp;<wbr>crl.der </p>
 <p> The certificate given with &#8211;cacert must be either a CA certificate or a certificate with the <i>crlSign</i> extended key usage (&#8211;flag crlSign). URIs to CRLs may be included in issued certificates with the &#8211;crl option.</p>
 <h2>SEE ALSO</h2>

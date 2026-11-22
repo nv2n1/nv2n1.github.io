@@ -46,9 +46,9 @@ port  tcp/ip port number to listen on
           fork child process for each association (default)
 </pre>
 <h3>input options</h3>
-<p>general : -dfp&#8211; data &#8211; files &#8211; path[p] ath : string(default<br />
-                                                     : / home / www / wlist) path to worklist data files handling of worklist files : -efr&#8211; enable<br />
-                                                                                                                                      &#8211;<br />
+<p>general : -dfp&#8211; data &#8211; files &#8211; path[p] ath : string(default<br/>
+                                                     : / home / www / wlist) path to worklist data files handling of worklist files : -efr&#8211; enable<br/>
+                                                                                                                                      &#8211;<br/>
                                                                                                                                       file &#8211; reject enable rejection of incomplete worklist files(default) &#8211; dfr&#8211; disable &#8211; file &#8211; reject disable rejection of incomplete worklist files</p>
 <h3>processing options</h3>
 <p>returned character set : -cs0&#8211; return -no &#8211; char &#8211; set return no specific character set(default) &#8211; cs1&#8211; return -iso &#8211; ir &#8211; 100 return specific character set ISO IR 100 &#8211; csk&#8211; keep &#8211; char &#8211; set return character set provided in file other processing options : -nse&#8211; no &#8211; sq &#8211; expansion disable expansion of empty sequences in C &#8211; FIND request messages</p>

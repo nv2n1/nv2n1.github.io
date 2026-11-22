@@ -10,7 +10,7 @@ description: "cla_syamv.f –"
 <p>cla_syamv.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>cla_syamv</code> (UPLO, N, ALPHA, A, LDA, X, INCX, BETA, Y, INCY)<br />
+<p>subroutine <code>cla_syamv</code> (UPLO, N, ALPHA, A, LDA, X, INCX, BETA, Y, INCY)<br/>
  <i></i><code>CLA_SYAMV</code> computes a matrix-vector product using a symmetric indefinite matrix to calculate error bounds.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cla_syamv (integerUPLO, integerN, realALPHA, complex, dimension( lda, * )A, integerLDA, complex, dimension( * )X, integerINCX, realBETA, real, dimension( * )Y, integerINCY)</h3>

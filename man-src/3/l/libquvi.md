@@ -11,9 +11,9 @@ libquvi - Overview of query media library
 
 <h2>DESCRIPTION</h2>
 
- libquvi is a cross-platform library for parsing flash media stream URLs with C <font SIZE="-1">API</font>. The term ``quvi'' is a shorthand for ``query video''.
+ libquvi is a cross-platform library for parsing flash media stream URLs with C API. The term ``quvi'' is a shorthand for ``query video''.
 
-<h3><font SIZE="-1">API</font> documentation</h3>
+<h3>API documentation</h3>
 
  &lt;<a rel="nofollow" HREF="http://quvi.sourceforge.net/doc/">http://quvi.sourceforge.net/doc/</a>&gt;
 
@@ -28,15 +28,15 @@ libquvi - Overview of query media library
 
 <h2>ENVIRONMENT</h2>
 
-<h3><font SIZE="-1">LIBQUVI_SCRIPTSDIR</font></h3>
+<h3>LIBQUVI_SCRIPTSDIR</h3>
 
- Path to the libquvi-scripts directory. This overrides the libquvi default search paths for the scripts. See also the tutorial in the ``<font SIZE="-1">API</font> documentation''.
+ Path to the libquvi-scripts directory. This overrides the libquvi default search paths for the scripts. See also the tutorial in the ``API documentation''.
 
-<h3><font SIZE="-1">LIBQUVI_SHOW_SCANDIR</font></h3>
+<h3>LIBQUVI_SHOW_SCANDIR</h3>
 
  If set, libquvi prints the lua script search paths to the stderr.
 
-<h3><font SIZE="-1">LIBQUVI_SHOW_SCRIPT</font></h3>
+<h3>LIBQUVI_SHOW_SCRIPT</h3>
 
  If set, the lua scripts found by libquvi are printed to the stderr.
 

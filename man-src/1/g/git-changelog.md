@@ -10,7 +10,7 @@ description: "git-changelog – Generate a changelog report"
 
 <p> <code>git-changelog</code> &#8211; Generate a changelog report</p>
 <h2>SYNOPSIS</h2>
-<p> <code>git-changelog</code> [options] [&lt;file&gt;]<br />
+<p> <code>git-changelog</code> [options] [&lt;file&gt;]<br/>
  <code>git-changelog</code> {-h | &#8211;help | ?}</p>
 <h2>DESCRIPTION</h2>
 <p> Generates a changelog from <a href="/docs/linux/man/1-git/">git</a>(1) tags (annotated or lightweight) and commit messages. Existing changelog files with filenames that begin with <i>Change</i> or <i>History</i> will be identified automatically with a case insensitive match pattern and existing content will be appended to the new output generated&#8211;this behavior can be disabled by specifying the prune option (-p|&#8211;prune-old). The generated file will be opened in <code>$EDITOR</code> when set. </p>

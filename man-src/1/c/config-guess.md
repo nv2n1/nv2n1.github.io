@@ -24,10 +24,10 @@ description: "config.guess – guess the build system triplet"
 <dd>print version number, then exit</dd></dl>
 <h2>Environment Variables</h2>
 <p>config.guess might need to compile and run C code, hence it needs a compiler for the `build&#8217; machine: use the environment variable `CC_FOR_BUILD&#8217; to specify the compiler for the build machine. If `CC_FOR_BUILD&#8217; is not specified, `CC&#8217; will be used. Be sure to specify `CC_FOR_BUILD&#8217; if `CC&#8217; is a cross-compiler to the `host&#8217; machine. </p>
-<p>&nbsp;<wbr>&nbsp;CC_FOR_BUILD&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;a native C compiler, defaults to&nbsp;`cc&#8217;<br />
+<p>&nbsp;<wbr>&nbsp;CC_FOR_BUILD&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;a native C compiler, defaults to&nbsp;`cc&#8217;<br/>
 &nbsp;<wbr>&nbsp;CC&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;a native C compiler, CC_FOR_BUILD is preferred</p>
 <h2>Reporting Bugs</h2>
 <p>Report bugs and patches to &lt;config-patches [at] gnu.org&gt;. </p>
-<p> Originally written by Per Bothner.<br />
+<p> Originally written by Per Bothner.<br/>
  Copyright 1992-2022 Free Software Foundation, Inc. </p>
 <p> This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>

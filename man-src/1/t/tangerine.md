@@ -20,15 +20,15 @@ description: "tangerine – Perl dependency metadata tool"
 <dd> Examine all recursively discovered files. By default, only perl files are considered.</dd>
 <dt><code>&#8211;compact|-c</code></dt>
 <dd> Do not list dependencies provides by the examined set.</dd>
-<dt><code>&#8211;diff|-d </code><font SIZE="-1"><code>FOO BAR</code></font></dt>
-<dd> Examine <i></i><font SIZE="-1"><i>FOO</i></font><i></i> and <i></i><font SIZE="-1"><i>BAR</i></font><i></i> and report metadata differences, ignoring line numbers. These can be directories or distribution tarballs.</dd>
+<dt><code>&#8211;diff|-d </code><code>FOO BAR</code></dt>
+<dd> Examine <i></i><i>FOO</i><i></i> and <i></i><i>BAR</i><i></i> and report metadata differences, ignoring line numbers. These can be directories or distribution tarballs.</dd>
 <dt><code>&#8211;files|-f</code></dt>
 <dd> Report findings per file instead of per module. This option has no effect with <code>&#8211;compact</code>.</dd>
-<dt><code>&#8211;jobs|-j </code><font SIZE="-1"><code>NUM</code></font></dt>
+<dt><code>&#8211;jobs|-j </code><code>NUM</code></dt>
 <dd> Defines the number of workers used for parallel processing. By default, the optimal number of workers is determined automatically.</dd>
 <dt><code>&#8211;help|-h</code></dt>
 <dd> Display this help.</dd>
-<dt><code>&#8211;mode|-m </code><font SIZE="-1"><code>MODE</code></font></dt>
+<dt><code>&#8211;mode|-m </code><code>MODE</code></dt>
 <dd> Only look for this specific metadata. Valid options are <i>compile</i> (modules required at compile time), <i>runtime</i> (modules required at runtime), <i>package</i> (modules provided) and <i>all</i>. For backwards compatibility, <i>p|prov</i>, <i>r|req</i> and <i>u|use</i> are also understood. This option is automatically set to <i>all</i> if <code>&#8211;compact</code> is also used. Defaults to <i>all</i>.</dd>
 <dt><code>&#8211;verbose|-v</code></dt>
 <dd> Be a little more verbose where it makes sense.</dd></dl>
@@ -40,4 +40,4 @@ description: "tangerine – Perl dependency metadata tool"
 </pre>
 <h2>AUTHOR AND LICENSE</h2>
 <p> Copyright (c) 2014-2015 Petr Xabata &lt;contyk [at] redhat.com&gt; </p>
-<p> See the <font SIZE="-1">LICENSE</font> files for licensing details. </p>
+<p> See the LICENSE files for licensing details. </p>

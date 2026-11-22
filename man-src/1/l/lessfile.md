@@ -23,46 +23,46 @@ description: "lessfile, lesspipe – \"input preprocessor\" for less."
 <p>&nbsp;<wbr>&nbsp;eval&nbsp;&quot;$(lesspipe)&quot;</p>
 <h2>FILE TYPE RECOGNITION</h2>
 <p> File types are recognized by their extensions. This is a list of currently supported extensions (grouped by the programs that handle them): </p>
-<p>&nbsp;<wbr>&nbsp;*.a<br />
-&nbsp;<wbr>&nbsp;*.arj<br />
-&nbsp;<wbr>&nbsp;*.tar.bz2<br />
-&nbsp;<wbr>&nbsp;*.bz<br />
-&nbsp;<wbr>&nbsp;*.bz2<br />
-&nbsp;<wbr>&nbsp;*.deb,&nbsp;*.udeb,&nbsp;*.ddeb<br />
-&nbsp;<wbr>&nbsp;*.doc<br />
-&nbsp;<wbr>&nbsp;*.egg<br />
-&nbsp;<wbr>&nbsp;*.gif,&nbsp;*.jpeg,&nbsp;*.jpg,&nbsp;*.pcd,&nbsp;*.png,&nbsp;*.tga,&nbsp;*.tiff,&nbsp;*.tif<br />
-&nbsp;<wbr>&nbsp;*.iso,&nbsp;*.raw,&nbsp;*.bin<br />
-&nbsp;<wbr>&nbsp;*.lha,&nbsp;*.lzh<br />
-&nbsp;<wbr>&nbsp;*.tar.lz,&nbsp;*.tlz<br />
-&nbsp;<wbr>&nbsp;*.lz<br />
-&nbsp;<wbr>&nbsp;*.7z<br />
-&nbsp;<wbr>&nbsp;*.pdf<br />
-&nbsp;<wbr>&nbsp;*.rar,&nbsp;*.r[0-9][0-9]<br />
-&nbsp;<wbr>&nbsp;*.rpm<br />
-&nbsp;<wbr>&nbsp;*.tar.gz,&nbsp;*.tgz,&nbsp;*.tar.z,&nbsp;*.tar.dz<br />
-&nbsp;<wbr>&nbsp;*.gz,&nbsp;*.z,&nbsp;*.dz<br />
-&nbsp;<wbr>&nbsp;*.tar<br />
-&nbsp;<wbr>&nbsp;*.tar.xz,&nbsp;*.xz<br />
-&nbsp;<wbr>&nbsp;*.whl<br />
-&nbsp;<wbr>&nbsp;*.jar,&nbsp;*.war,&nbsp;*.xpi,&nbsp;*.zip<br />
-&nbsp;<wbr>&nbsp;*.zoo<br />
-&nbsp;<wbr>&nbsp;*.tar.zst,&nbsp;*.tzst<br />
+<p>&nbsp;<wbr>&nbsp;*.a<br/>
+&nbsp;<wbr>&nbsp;*.arj<br/>
+&nbsp;<wbr>&nbsp;*.tar.bz2<br/>
+&nbsp;<wbr>&nbsp;*.bz<br/>
+&nbsp;<wbr>&nbsp;*.bz2<br/>
+&nbsp;<wbr>&nbsp;*.deb,&nbsp;*.udeb,&nbsp;*.ddeb<br/>
+&nbsp;<wbr>&nbsp;*.doc<br/>
+&nbsp;<wbr>&nbsp;*.egg<br/>
+&nbsp;<wbr>&nbsp;*.gif,&nbsp;*.jpeg,&nbsp;*.jpg,&nbsp;*.pcd,&nbsp;*.png,&nbsp;*.tga,&nbsp;*.tiff,&nbsp;*.tif<br/>
+&nbsp;<wbr>&nbsp;*.iso,&nbsp;*.raw,&nbsp;*.bin<br/>
+&nbsp;<wbr>&nbsp;*.lha,&nbsp;*.lzh<br/>
+&nbsp;<wbr>&nbsp;*.tar.lz,&nbsp;*.tlz<br/>
+&nbsp;<wbr>&nbsp;*.lz<br/>
+&nbsp;<wbr>&nbsp;*.7z<br/>
+&nbsp;<wbr>&nbsp;*.pdf<br/>
+&nbsp;<wbr>&nbsp;*.rar,&nbsp;*.r[0-9][0-9]<br/>
+&nbsp;<wbr>&nbsp;*.rpm<br/>
+&nbsp;<wbr>&nbsp;*.tar.gz,&nbsp;*.tgz,&nbsp;*.tar.z,&nbsp;*.tar.dz<br/>
+&nbsp;<wbr>&nbsp;*.gz,&nbsp;*.z,&nbsp;*.dz<br/>
+&nbsp;<wbr>&nbsp;*.tar<br/>
+&nbsp;<wbr>&nbsp;*.tar.xz,&nbsp;*.xz<br/>
+&nbsp;<wbr>&nbsp;*.whl<br/>
+&nbsp;<wbr>&nbsp;*.jar,&nbsp;*.war,&nbsp;*.xpi,&nbsp;*.zip<br/>
+&nbsp;<wbr>&nbsp;*.zoo<br/>
+&nbsp;<wbr>&nbsp;*.tar.zst,&nbsp;*.tzst<br/>
 &nbsp;<wbr>&nbsp;*.zst</p>
 <h2>USER DEFINED FILTERS</h2>
 <p> It is possible to extend and overwrite the default <i>lesspipe</i> and <i>lessfile</i> input processor if you have specialized requirements. Create an executable program with the name <i>.lessfilter</i> and put it into your home directory. This can be a shell script or a binary program. </p>
 <p> It is important that this program returns the correct exit code: return 0 if your filter handles the input, return 1 if the standard <i>lesspipe/lessfile</i> filter should handle the input. </p>
 <p> Here is an example script: </p>
 <p>&nbsp;<wbr>&nbsp;#!/bin/sh </p>
-<p>&nbsp;<wbr>&nbsp;case&nbsp;&quot;$1&quot;&nbsp;in<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;*.extension)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;extension-handler&nbsp;&quot;$1&quot;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;;;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;*)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;#&nbsp;We don&#8217;t handle this format.<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit 1<br />
+<p>&nbsp;<wbr>&nbsp;case&nbsp;&quot;$1&quot;&nbsp;in<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;*.extension)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;extension-handler&nbsp;&quot;$1&quot;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;;;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;*)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;#&nbsp;We don&#8217;t handle this format.<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit 1<br/>
 &nbsp;<wbr>&nbsp;esac </p>
-<p>&nbsp;<wbr>&nbsp;#&nbsp;No further processing by lesspipe necessary<br />
+<p>&nbsp;<wbr>&nbsp;#&nbsp;No further processing by lesspipe necessary<br/>
 &nbsp;<wbr>&nbsp;exit 0 </p>
 <h2>FILES</h2>
 <dl>
@@ -70,8 +70,8 @@ description: "lessfile, lesspipe – \"input preprocessor\" for less."
 <dd> Executable file that can do user defined processing. See section USER DEFINED FILTERS for more information.</dd></dl>
 <h2>BUGS</h2>
 <p> Sometimes, less does not display the contents file you want to view but output that is produced by your login scripts (~/.bashrc or ~/.bash_profile). This happens because less uses your current shell to run the lesspipe filter. Bash first looks for the variable $BASH_ENV in the environment expands its value and uses the expanded value as the name of a file to read and execute. If this file produces any output less will display this. A way to solve this problem is to put the following lines on the top of your login script that produces output: </p>
-<p>&nbsp;<wbr>&nbsp;if&nbsp;[&nbsp;-z&nbsp;&quot;$PS1&quot;&nbsp;];&nbsp;then<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit<br />
+<p>&nbsp;<wbr>&nbsp;if&nbsp;[&nbsp;-z&nbsp;&quot;$PS1&quot;&nbsp;];&nbsp;then<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit<br/>
 &nbsp;<wbr>&nbsp;fi </p>
 <p> This tests whether the prompt variable $PS1 is set and if it isn&#8217;t (which is the case for non-interactive shells) it will exit the script.</p>
 <h2>SEE ALSO</h2>

@@ -9,20 +9,20 @@ description: "svgalib.mach32 – Information on the Mach32 chipset driver"
 
 <p>svgalib.mach32 &#8211; Information on the Mach32 chipset driver</p>
 <h2>Table Of Contents</h2>
-<p><code> 0. </code>Introduction<br />
- <code> 1. </code>Specifying pixel clocks<br />
- <code> 2. </code>Copyrights<br />
- <code> 3. </code>The mach32info utility<br />
- <code> 4. </code>Third party cards<br />
- <code> 5. </code>Logical line width<br />
- <code> 6. </code>Noisy video signals<br />
- <code> 7. </code>The configuration EEPROM<br />
- <code> 8. </code>EEPROM woes<br />
- <code> 9. </code>The Mach32Eeprom command<br />
- <code>10. </code>Setup of the memory aperture (linear framebuffer)<br />
- <code>11. </code>Accelerator support and other weird features<br />
- <code>12. </code>Ramdacs<br />
- <code>13. </code>Meaning of the detection message from svgalib<br />
+<p><code> 0. </code>Introduction<br/>
+ <code> 1. </code>Specifying pixel clocks<br/>
+ <code> 2. </code>Copyrights<br/>
+ <code> 3. </code>The mach32info utility<br/>
+ <code> 4. </code>Third party cards<br/>
+ <code> 5. </code>Logical line width<br/>
+ <code> 6. </code>Noisy video signals<br/>
+ <code> 7. </code>The configuration EEPROM<br/>
+ <code> 8. </code>EEPROM woes<br/>
+ <code> 9. </code>The Mach32Eeprom command<br/>
+ <code>10. </code>Setup of the memory aperture (linear framebuffer)<br/>
+ <code>11. </code>Accelerator support and other weird features<br/>
+ <code>12. </code>Ramdacs<br/>
+ <code>13. </code>Meaning of the detection message from svgalib<br/>
  <code>14. </code>Conclusions</p>
 <h2>0. Introduction</h2>
 <p>The driver should allow you to use any of the graph-modes your Mach32 card supports. Note that there is no support for &lt;8bpp modes and that I won&#8217;t ever implement that because I don&#8217;t see any reason for doing so. All standard VGA-modes are supported, of course (by using the standard VGA driver routines). </p>
@@ -35,17 +35,17 @@ description: "svgalib.mach32 – Information on the Mach32 chipset driver"
 <p> The clock probing relies on the 7th clock being 44.9MHz as this is what Xfree does. If this is not true (and it is not always), probing is hosed. See <code>libvga.config</code>(5) for a list of the <code>clocks</code> used by common svgalib cards.</p>
 <h2>2. Copyrights</h2>
 <p>Some tiny routines are copied from Xfree86. The clock detection code is almost just copied. So I repeat the copyright statements for these parts here: </p>
-<p> Copyright 1992 by Orest Zborowski &lt;obz [at] Kodak.com&gt;<br />
+<p> Copyright 1992 by Orest Zborowski &lt;obz [at] Kodak.com&gt;<br/>
  Copyright 1993 by David Wexelblat &lt;dwex [at] goblin.org&gt; </p>
 <p> Permission to use, copy, modify, distribute, and sell this software and its documentation for any purpose is hereby granted without fee, provided that the above copyright notice appear in all copies and that both that copyright notice and this permission notice appear in supporting documentation, and that the names of Orest Zborowski and David Wexelblat not be used in advertising or publicity pertaining to distribution of the software without specific, written prior permission. Orest Zborowski and David Wexelblat make no representations about the suitability of this software for any purpose. It is provided &quot;as is&quot; without express or implied warranty. </p>
 <p> <code>Orest Zborowski and David Wexelblat disclaim all warranties with regard </code> <code>to this software, including all implied warranties of merchantability and </code> <code>fitness, in no event shall Orest Zborowski or David Wexelblat be liable </code> <code>for any special, indirect or consequential damages or any damages </code> <code>whatsoever resulting from loss of use, data or profits, whether in an </code> <code>action of contract, negligence or other tortious action, arising out of </code> <code>or in connection with the use or performance of this software.</code> </p>
-<p> Copyright 1990,91 by Thomas Roell, Dinkelscherben, Germany.<br />
+<p> Copyright 1990,91 by Thomas Roell, Dinkelscherben, Germany.<br/>
  Copyright 1993 by Kevin E. Martin, Chapel Hill, North Carolina. </p>
 <p> Permission to use, copy, modify, distribute, and sell this software and its documentation for any purpose is hereby granted without fee, provided that the above copyright notice appear in all copies and that both that copyright notice and this permission notice appear in supporting documentation, and that the name of Thomas Roell not be used in advertising or publicity pertaining to distribution of the software without specific, written prior permission. Thomas Roell makes no representations about the suitability of this software for any purpose. It is provided &quot;as is&quot; without express or implied warranty. </p>
 <p> <code>Thomas Roell, Kevin E. Martin, and Rickard E. Faith disclaim all</code> <code>warranties with regard to this software, including all implied</code> <code>warranties of merchantability and fitness, in no event shall the authors</code> <code>be liable for any special, indirect or consequential damages or any</code> <code>damages whatsoever resulting from loss of use, data or profits, whether</code> <code>in an action of contract, negligence or other tortious action, arising</code> <code>out of or in connection with the use or performance of this software.</code> </p>
 <p> Author: Thomas Roell, roell [at] informatik.tu-muenchen.de </p>
-<p> Rewritten for the 8514/A by Kevin E. Martin (martin [at] cs.unc.edu)<br />
- Modified for the Mach-8 by Rickard E. Faith (faith [at] cs.unc.edu)<br />
+<p> Rewritten for the 8514/A by Kevin E. Martin (martin [at] cs.unc.edu)<br/>
+ Modified for the Mach-8 by Rickard E. Faith (faith [at] cs.unc.edu)<br/>
  Rewritten for the Mach32 by Kevin E. Martin (martin [at] cs.unc.edu) </p>
 <p> And here is my own copyright: </p>
 <p> This driver is free software; you can redistribute it and/or modify it without any restrictions. This library is distributed in the hope that it will be useful, but without any warranty. </p>
@@ -131,8 +131,8 @@ description: "svgalib.mach32 – Information on the Mach32 chipset driver"
 <dd>where <i>number is in range</i> <code>0</code> &#8211; <code>15</code>. The default is now 6. </dd>
 <p> Since vfifo is of some impact to the speed of the card, tell me the lowest setting that satisfies your card. </p>
 <p> For 16/24/32 modes, there are non-zero values preset from internal tables and the EEPROM, however you can enforce minimal vfifo values with:</dl>
-<p> <code>vfifo16 </code><i>number</i><br />
- <code>vfifo24 </code><i>number</i><br />
+<p> <code>vfifo16 </code><i>number</i><br/>
+ <code>vfifo24 </code><i>number</i><br/>
  <code>vfifo32 </code><i>number</i> </p>
 <dl>
 <dt><code>blank </code><i>number</i></dt>
@@ -261,10 +261,10 @@ description: "svgalib.mach32 – Information on the Mach32 chipset driver"
 <p>A final word: I have an ATI ULTRA PRO/2MB/EISA with a Type 2 DAC. My monitor is an EIZO F550i-M. Everything I tried works on it like a charm. However, I couldn&#8217;t try it with other machines myself and esp. other DAC&#8217;s. Fortunately the Type 2 DAC is the worst to code. So I will probably have gotten the other DAC&#8217;s right. But please be warned! </p>
 <p> I did my very best to code the driver to support the other DAC&#8217;s by just reading the docs. <code>But i can&#8217;t give any definitive guarantee for</code> <code>it to work or even not damaging your hardware. So please be careful!</code> </p>
 <p> Note that you will have to set the environment variable <code>SVGALIB_MACH32</code> to <code>ILLTRYIT</code> if your DAC is not type 0, 2, 3 or 4. This will of course change if no one with a DAC equal to 1 or 5 has serious problems. If you have a different DAC, making patches to support your card will be much more helpful instead of just complaining. If you have a different DAC that works well tell me as well such that I can remove the need for SVGALIB_MACH32 in the next release. Still, even now, after years, I got no reports of a Mach32 card with a type 1 or 5 ramdac. Go figure. </p>
-<p> Thank you for your audience and wishes you will enjoy this driver,<br />
+<p> Thank you for your audience and wishes you will enjoy this driver,<br/>
  Michael.</p>
 <h2>Files</h2>
-<p><i>/etc/vga/libvga.config</i><br />
+<p><i>/etc/vga/libvga.config</i><br/>
  <i>/etc/vga/mach32.eeprom</i></p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/7-svgalib/">svgalib</a></code>(7), <code>libvga.config</code>(5), <code>mach32info</code>(6). </p>

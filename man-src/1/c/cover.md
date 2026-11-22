@@ -66,7 +66,7 @@ cover - help - info - version - summary - report report_format - outputdir dir -
  Tool accepts -report option:
 <dl>
 <dt>html|html_minimal (default)
-</dt><dd> <font SIZE="-1">HTML</font> reporting. Percentage thresholds are color-coded and configurable via -report_c0 &lt;integer&gt;, -report_c1 &lt;integer&gt; and -report_c2 &lt;integer&gt;.: 
+</dt><dd> HTML reporting. Percentage thresholds are color-coded and configurable via -report_c0 &lt;integer&gt;, -report_c1 &lt;integer&gt; and -report_c2 &lt;integer&gt;.: 
  <pre>
     0%      75%      90%      100%
     |   ..   |   ..   |   ..   |
@@ -74,7 +74,7 @@ cover - help - info - version - summary - report report_format - outputdir dir -
        red     yellow   orange green
 </pre>
 </dd><dt>html_basic
-</dt><dd> <font SIZE="-1">HTML</font> reporting with syntax highlighting if <font SIZE="-1">PPI::HTML</font> or Perl::Tidy module is detected. Like html|html_minimal reporting, percentage thresholds are color-coded and configurable.
+</dt><dd> HTML reporting with syntax highlighting if PPI::HTML or Perl::Tidy module is detected. Like html|html_minimal reporting, percentage thresholds are color-coded and configurable.
 </dd><dt>text
 </dt><dd> Plain text reporting.
 </dd><dt>compilation
@@ -92,7 +92,7 @@ cover - help - info - version - summary - report report_format - outputdir dir -
 
  The -test option will delete the databases and run your tests to generate new coverage data before reporting on it. Devel::Cover knows how to work with standard Perl Makefiles as well as Module::Build based distributions. For detailed instructions see the documentation for ExtUtils::MakeMaker at &lt;<a rel="nofollow" HREF="https://metacpan.org/module/ExtUtils::MakeMaker">https://metacpan.org/module/ExtUtils::MakeMaker</a>&gt; or for Module::Build at &lt;<a rel="nofollow" HREF="https://metacpan.org/module/Module::Build">https://metacpan.org/module/Module::Build</a>&gt; both of which come as standard in recent Perl distributions. 
 
- The -gcov option will try to run gcov on any <font SIZE="-1">XS</font> code. This requires that you are using gcc of course. If you are using the -test option will be turned on by default.
+ The -gcov option will try to run gcov on any XS code. This requires that you are using gcc of course. If you are using the -test option will be turned on by default.
 
 <h2>EXIT STATUS</h2>
 
@@ -114,7 +114,7 @@ cover - help - info - version - summary - report report_format - outputdir dir -
 
  Did I mention that this is alpha code? 
 
- See the <font SIZE="-1">BUGS</font> file.
+ See the BUGS file.
 
 <h2>LICENCE</h2>
 

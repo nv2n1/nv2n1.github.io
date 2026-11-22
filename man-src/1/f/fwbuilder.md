@@ -10,7 +10,7 @@ description: "fwbuilder – Multiplatform firewall configuration tool"
 
 <p> fwbuilder &#8211; Multiplatform firewall configuration tool</p>
 <h2>SYNOPSIS</h2>
-<p> <code>/usr/bin/fwbuilder</code> [-f<code>file.fwb]</code> [-d] [-h] [-o<code>file]</code> [-P<code>object_name]</code> [-r] [-v]<br />
+<p> <code>/usr/bin/fwbuilder</code> [-f<code>file.fwb]</code> [-d] [-h] [-o<code>file]</code> [-P<code>object_name]</code> [-r] [-v]<br/>
 &nbsp;<wbr> </p>
 <h2>DESCRIPTION</h2>
 <p> <code>fwbuilder</code> is the Graphic User Interface (GUI) component of Firewall Builder. </p>

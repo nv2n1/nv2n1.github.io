@@ -38,11 +38,11 @@ description: "tcfmttest – test cases of the fixed-length database API"
 <p> Options feature the following. </p>
 <dl>
 <dt>
-</dt><dd> <code>-nl</code> : enable the option `FDBNOLCK&#8217;.<br />
- <code>-nb</code> : enable the option `FDBLCKNB&#8217;.<br />
- <code>-rnd</code> : select keys at random.<br />
- <code>-wb</code> : use the function `tcfdbget4&#8242; instead of `tcfdbget2&#8242;.<br />
- <code>-nc</code> : omit the comparison test.<br />
+</dt><dd> <code>-nl</code> : enable the option `FDBNOLCK&#8217;.<br/>
+ <code>-nb</code> : enable the option `FDBLCKNB&#8217;.<br/>
+ <code>-rnd</code> : select keys at random.<br/>
+ <code>-wb</code> : use the function `tcfdbget4&#8242; instead of `tcfdbget2&#8242;.<br/>
+ <code>-nc</code> : omit the comparison test.<br/>
  <code>-rr</code> <i>num</i> : specifiy the ratio of reading operation by percentage.
 </dd></dl>
 <p> This command returns 0 on success, another on failure. </p>

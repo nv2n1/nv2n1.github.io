@@ -10,13 +10,13 @@ description: "pmRegisterDerived, pmRegisterDerivedMetric – register a derived 
 <p><code>pmRegisterDerived</code>, <code>pmRegisterDerivedMetric</code> &#8211; register a derived metric name and definition</p>
 <h2>C Synopsis</h2>
 <p><code> #include &lt;pcp/pmapi.h&gt; </p>
-<p> char *pmRegisterDerived(char *</code><i>name</i>, char *<i>expr</i>);<br />
+<p> char *pmRegisterDerived(char *</code><i>name</i>, char *<i>expr</i>);<br/>
  int pmRegisterDerivedMetric(char *<i>name</i>, char *<i>expr</i>, char **<i>errmsg</i>); </p>
 <p> cc &#8230; -lpcp</p>
 <h2>Description</h2>
 <p>Derived metrics provide a way of extending the Performance Metrics Name Space (PMNS) with new metrics defined at the PCP client-side using arithmetic expressions over the existing performance metrics. </p>
-<p> Typical uses would be to aggregate a number of similar metrics to provide a higher-level summary metric or to support the &#8220;delta V over delta V&#8221; class of metrics that are not possible in the base data semantics of PCP. An example of the latter class would be the average I/O size, defined as<br />
- <center><br />
+<p> Typical uses would be to aggregate a number of similar metrics to provide a higher-level summary metric or to support the &#8220;delta V over delta V&#8221; class of metrics that are not possible in the base data semantics of PCP. An example of the latter class would be the average I/O size, defined as<br/>
+ <center><br/>
  </center> delta(disk.dev.total_bytes) / delta(disk.dev.total) where both of the disk.dev metrics are counters, and what is required is to to sample both metrics, compute the difference between the current and previous values and then calculate the ratio of these differences. </p>
 <p> The arguments to <code>pmRegisterDerived</code> are the <i>name</i> of the new derived metric and <i>expr</i> is an arithmetic expression defining how the values of <i>name</i> should be computed. </p>
 <p> <code>pmRegisterDerivedMetric</code> is the exact functional equivalent to <code>pmRegisterDerived</code> except that it provides a simplified model of error handling, where a formatted message is returned via the <i>errmsg</i> parameter. </p>
@@ -145,8 +145,8 @@ description: "pmRegisterDerived, pmRegisterDerivedMetric – register a derived 
 <dt>*</dt>
 <dd>For division, the dimensions of the result are the difference of the dimensions of the operands.</dd></dl>
 <p> Scale conversion involves division if the dimension is positive else multiplication if the dimension is negative. If scale conversion is applied to either of the operands, the result is promoted to type PM_TYPE_DOUBLE. </p>
-<p> Putting all of this together in an example, consider the derived metric defined as follows:<br />
- x = network.interface.speed &#8211; delta(network.interface.in.bytes) / delta(sample.milliseconds)<br />
+<p> Putting all of this together in an example, consider the derived metric defined as follows:<br/>
+ x = network.interface.speed &#8211; delta(network.interface.in.bytes) / delta(sample.milliseconds)<br/>
  The type, dimension and scale settings would propagate up the expression tree as follows. <center></p>
 <table BORDER>
 <tr>
@@ -334,7 +334,7 @@ description: "pmRegisterDerived, pmRegisterDerivedMetric – register a derived 
 <p>On success, <code>pmRegisterDerived</code> returns NULL. </p>
 <p> If a syntactic error is found at the time of registration, the value returned by <code>pmRegisterDerived</code> is a pointer into <i>expr</i> indicating <code>where</code> the error was found. To identify <code>what</code> the error was, the application should call <code><a href="/docs/linux/man/3-pmderivederrstr/">pmDerivedErrStr</a></code>(3) to retrieve the corresponding parser error message. </p>
 <p> <code>pmRegisterDerivedMetric</code> returns 0 and <i>errmsg</i> is undefined if the parsing is successful. </p>
-<p> If the given <i>expr</i> does not conform to the required syntax <code>pmRegisterDerivedMetric</code> returns -1 and a dynamically allocated error message string in <i>errmsg</i>. The error message is terminated with a newline and includes both the input <i>name</i> and <i>expr</i>, along with an indicator of the position at which the error was detected. e.g.<br />
+<p> If the given <i>expr</i> does not conform to the required syntax <code>pmRegisterDerivedMetric</code> returns -1 and a dynamically allocated error message string in <i>errmsg</i>. The error message is terminated with a newline and includes both the input <i>name</i> and <i>expr</i>, along with an indicator of the position at which the error was detected. e.g.<br/>
  Error: pmRegisterDerivedMetric(&quot;my.disk.rates&quot;, &#8230;) syntax error </p>
 <p> The position indicator line may be followed by an additional diagnostic line describing the nature of the error, when available. </p>
 <p> In the case of an error, the caller is responsible for calling <code><a href="/docs/linux/man/3-free/">free</a></code>(3) to release the space allocated for <i>errmsg</i>.</p>

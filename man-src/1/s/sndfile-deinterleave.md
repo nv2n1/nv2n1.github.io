@@ -8,10 +8,10 @@ url: "/docs/linux/man/1-sndfile-deinterleave/"
 description: "sndfile-interleave – convert multiple single channel files into a multi-channel file sndfile-deinterleave – split a multi-channel into multiple single channel files"
 ---
 
-<p> sndfile-interleave &#8211; convert multiple single channel files into a multi-channel file<br />
+<p> sndfile-interleave &#8211; convert multiple single channel files into a multi-channel file<br/>
  sndfile-deinterleave &#8211; split a multi-channel into multiple single channel files</p>
 <h2>SYNOPSIS</h2>
-<p> <code>sndfile-interleave</code> &lt;input 1&gt; &lt;input 2&gt; &#8230; -o &lt;output file&gt;<br />
+<p> <code>sndfile-interleave</code> &lt;input 1&gt; &lt;input 2&gt; &#8230; -o &lt;output file&gt;<br/>
  <code>sndfile-deinterleave</code> filename </p>
 <h2>DESCRIPTION</h2>
 <p> sndfile-interleave and sndfile-deinterleave use libsndfile (<a rel="nofollow" href="http://www.mega-nerd.com/libsndfile/)">http://www.mega-nerd.com/libsndfile/)</a> to convert back and forth between multiple single channel files and a single multi-channel sound file. </p>

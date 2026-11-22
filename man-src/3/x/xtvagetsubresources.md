@@ -36,6 +36,6 @@ description: "XtGetSubresources, XtVaGetSubresources – obtain subresources"
 <h2>Description</h2>
 <p>The <code>XtGetSubresources</code> function constructs a name/class list from the application name/class, the name/classes of all its ancestors, and the widget itself. Then, it appends to this list the name/class pair passed in. The resources are fetched from the argument list, the resource database, or the default values in the resource list. Then, they are copied into the subpart record. If args is NULL, num_args must be zero. However, if num_args is zero, the argument list is not referenced.</p>
 <h2>See Also</h2>
-<p>XtGetApplicationResources, XtVaGetApplicationResources<br />
- <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p>XtGetApplicationResources, XtVaGetApplicationResources<br/>
+ <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

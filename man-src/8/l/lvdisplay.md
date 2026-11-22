@@ -18,47 +18,47 @@ description: "lvdisplay – Display information about a logical volume"
 <h2>Usage</h2>
 <p><code>lvdisplay</code> </p>
 <dl>
-<dd>[ <code>-a</code>|<code>&#8211;all</code> ]<br />
- [ <code>-c</code>|<code>&#8211;colon</code> ]<br />
- [ <code>-C</code>|<code>&#8211;columns</code> ]<br />
- [ <code>-H</code>|<code>&#8211;history</code> ]<br />
- [ <code>-m</code>|<code>&#8211;maps</code> ]<br />
- [ <code>-o</code>|<code>&#8211;options</code> <i>String</i> ]<br />
- [ <code>-O</code>|<code>&#8211;sort</code> <i>String</i> ]<br />
- [ <code>-S</code>|<code>&#8211;select</code> <i>String</i> ]<br />
- [ <code>&#8211;aligned</code> ]<br />
- [ <code>&#8211;binary</code> ]<br />
- [ <code>&#8211;configreport</code> <code>log</code>|<code>vg</code>|<code>lv</code>|<code>pv</code>|<code>pvseg</code>|<code>seg</code> ]<br />
- [ <code>&#8211;foreign</code> ]<br />
- [ <code>&#8211;ignorelockingfailure</code> ]<br />
- [ <code>&#8211;logonly</code> ]<br />
- [ <code>&#8211;noheadings</code> ]<br />
- [ <code>&#8211;nosuffix</code> ]<br />
- [ <code>&#8211;readonly</code> ]<br />
- [ <code>&#8211;reportformat</code> <code>basic</code>|<code>json</code> ]<br />
- [ <code>&#8211;segments</code> ]<br />
- [ <code>&#8211;separator</code> <i>String</i> ]<br />
- [ <code>&#8211;shared</code> ]<br />
- [ <code>&#8211;unbuffered</code> ]<br />
- [ <code>&#8211;units</code> <code>r</code>|<code>R</code>|<code>h</code>|<code>H</code>|<code>b</code>|<code>B</code>|<code>s</code>|<code>S</code>|<code>k</code>|<code>K</code>|<code>m</code>|<code>M</code>|<code>g</code>|<code>G</code>|<code>t</code>|<code>T</code>|<code>p</code>|<code>P</code>|<code>e</code>|<code>E</code> ]<br />
+<dd>[ <code>-a</code>|<code>&#8211;all</code> ]<br/>
+ [ <code>-c</code>|<code>&#8211;colon</code> ]<br/>
+ [ <code>-C</code>|<code>&#8211;columns</code> ]<br/>
+ [ <code>-H</code>|<code>&#8211;history</code> ]<br/>
+ [ <code>-m</code>|<code>&#8211;maps</code> ]<br/>
+ [ <code>-o</code>|<code>&#8211;options</code> <i>String</i> ]<br/>
+ [ <code>-O</code>|<code>&#8211;sort</code> <i>String</i> ]<br/>
+ [ <code>-S</code>|<code>&#8211;select</code> <i>String</i> ]<br/>
+ [ <code>&#8211;aligned</code> ]<br/>
+ [ <code>&#8211;binary</code> ]<br/>
+ [ <code>&#8211;configreport</code> <code>log</code>|<code>vg</code>|<code>lv</code>|<code>pv</code>|<code>pvseg</code>|<code>seg</code> ]<br/>
+ [ <code>&#8211;foreign</code> ]<br/>
+ [ <code>&#8211;ignorelockingfailure</code> ]<br/>
+ [ <code>&#8211;logonly</code> ]<br/>
+ [ <code>&#8211;noheadings</code> ]<br/>
+ [ <code>&#8211;nosuffix</code> ]<br/>
+ [ <code>&#8211;readonly</code> ]<br/>
+ [ <code>&#8211;reportformat</code> <code>basic</code>|<code>json</code> ]<br/>
+ [ <code>&#8211;segments</code> ]<br/>
+ [ <code>&#8211;separator</code> <i>String</i> ]<br/>
+ [ <code>&#8211;shared</code> ]<br/>
+ [ <code>&#8211;unbuffered</code> ]<br/>
+ [ <code>&#8211;units</code> <code>r</code>|<code>R</code>|<code>h</code>|<code>H</code>|<code>b</code>|<code>B</code>|<code>s</code>|<code>S</code>|<code>k</code>|<code>K</code>|<code>m</code>|<code>M</code>|<code>g</code>|<code>G</code>|<code>t</code>|<code>T</code>|<code>p</code>|<code>P</code>|<code>e</code>|<code>E</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <dl>
 <dd>[ <i>VG</i>|<i>LV</i>|<i>Tag</i> &#8230; ]</dd></dl>
 <p> Common options for lvm:</p>
 <dl>
-<dd>[ <code>-d</code>|<code>&#8211;debug</code> ]<br />
- [ <code>-h</code>|<code>&#8211;help</code> ]<br />
- [ <code>-q</code>|<code>&#8211;quiet</code> ]<br />
- [ <code>-t</code>|<code>&#8211;test</code> ]<br />
- [ <code>-v</code>|<code>&#8211;verbose</code> ]<br />
- [ <code>-y</code>|<code>&#8211;yes</code> ]<br />
- [ <code>&#8211;commandprofile</code> <i>String</i> ]<br />
- [ <code>&#8211;config</code> <i>String</i> ]<br />
- [ <code>&#8211;driverloaded</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;lockopt</code> <i>String</i> ]<br />
- [ <code>&#8211;longhelp</code> ]<br />
- [ <code>&#8211;nolocking</code> ]<br />
- [ <code>&#8211;profile</code> <i>String</i> ]<br />
+<dd>[ <code>-d</code>|<code>&#8211;debug</code> ]<br/>
+ [ <code>-h</code>|<code>&#8211;help</code> ]<br/>
+ [ <code>-q</code>|<code>&#8211;quiet</code> ]<br/>
+ [ <code>-t</code>|<code>&#8211;test</code> ]<br/>
+ [ <code>-v</code>|<code>&#8211;verbose</code> ]<br/>
+ [ <code>-y</code>|<code>&#8211;yes</code> ]<br/>
+ [ <code>&#8211;commandprofile</code> <i>String</i> ]<br/>
+ [ <code>&#8211;config</code> <i>String</i> ]<br/>
+ [ <code>&#8211;driverloaded</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;lockopt</code> <i>String</i> ]<br/>
+ [ <code>&#8211;longhelp</code> ]<br/>
+ [ <code>&#8211;nolocking</code> ]<br/>
+ [ <code>&#8211;profile</code> <i>String</i> ]<br/>
  [ <code>&#8211;version</code> ]</dd></dl>
 <h2>Options</h2>
 <dl>

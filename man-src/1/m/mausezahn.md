@@ -12,17 +12,17 @@ description: "mausezahn – a fast versatile packet generator"
 <h2>SYNOPSIS</h2>
 <p> <code>mausezahn</code> [<i>options</i>]<i>&lt;arg_string&gt; | &lt;hex_string&gt;</i> </p>
 <h2>DESCRIPTION</h2>
-<p> <code>Mausezahn</code> is a free fast traffic generator written in C which allows you to send nearly every possible and impossible packet.<br />
+<p> <code>Mausezahn</code> is a free fast traffic generator written in C which allows you to send nearly every possible and impossible packet.<br/>
  Mausezahn can also be used for example as didactical tool in network labs or for security audits including penetration and DoS testing. As traffic generator Mausezahn is for example used test IP multicast or VoIP networks. Speeds close to the Ethernet limit are reachable (depending on the HW platform). </p>
 <h2>USAGE</h2>
-<p> Mausezahn supports two modes, <code>raw-layer-2</code> mode, where every single byte to be sent can be specified, and <code>higher-layer</code> mode, where packet builder interfaces are used (using the <i>-t</i> option).<br />
+<p> Mausezahn supports two modes, <code>raw-layer-2</code> mode, where every single byte to be sent can be specified, and <code>higher-layer</code> mode, where packet builder interfaces are used (using the <i>-t</i> option).<br/>
  To use the <code>raw-layer-2</code> mode, simply specify the desired frame as hexadecimal sequence (the <i>hex_string</i>), such as </p>
 <p> mausezahn eth0 &quot;00:ab:cd:ef:00 00:00:00:00:00:01 08:00 ca:fe:ba:be&quot; </p>
-<p> The spaces within the byte string are optional and separate the Ethernet fields (destination and source address, type field, and a short payload). The only additional options supported are <i>-a</i>, <i>-b</i>, <i>-c</i>, and <i>-p</i>. The frame length MUST be greater or equal 15 bytes.<br />
+<p> The spaces within the byte string are optional and separate the Ethernet fields (destination and source address, type field, and a short payload). The only additional options supported are <i>-a</i>, <i>-b</i>, <i>-c</i>, and <i>-p</i>. The frame length MUST be greater or equal 15 bytes.<br/>
  The <code>higher-layer</code> mode is enabled using the <i>-t &lt;packet_type&gt;</i> option. This option activates a packet builder and besides the <i>packet_type</i> an optional <i>arg_string</i> can be specified. The <i>arg_string</i> contains packet-specific parameters, such as TCP flags, port numbers, etc. </p>
 <p> Note that Mausezahn requires root privileges. Please see the Mausezahn User&#8217;s Guide for more details or use Mausezahn&#8217;s command line help.</p>
 <h2>OPTIONS</h2>
-<p> Mausezahn has a built-in context specific help. Simply append the keyword <code>help</code> to the configuration options.<br />
+<p> Mausezahn has a built-in context specific help. Simply append the keyword <code>help</code> to the configuration options.<br/>
  The most important options are:</p>
 <dl>
 <dt><code>-v</code></dt>
@@ -57,7 +57,7 @@ description: "mausezahn – a fast versatile packet generator"
 <h2>COMBINATION OF RANGES</h2>
 <p> When multiple ranges are specified, e. g. destination port ranges AND destination address ranges, then <code>all</code> possible combinations of ports and addresses are used for packet generation. This can lead to a very huge number of frames. </p>
 <h2>DISCLAIMER AND WARNING</h2>
-<p> Mausezahn has been designed as fast traffic generator so you quickly can overwhelm a LAN segment with myriads of packets. And because Mausezahn should also support security audits it is easily possible to create malicious packets, SYN floods, specify port and address ranges, DNS and ARP poisoning, etc.<br />
+<p> Mausezahn has been designed as fast traffic generator so you quickly can overwhelm a LAN segment with myriads of packets. And because Mausezahn should also support security audits it is easily possible to create malicious packets, SYN floods, specify port and address ranges, DNS and ARP poisoning, etc.<br/>
  Therefore, don&#8217;t use this tool when you are not aware of possible consequences or have only little knowledge about networks and data communication. If you abuse Mausezahn for unallowed attacks and get caught, or damage something of your own, then this is completely your fault. </p>
 <h2>EXAMPLES</h2>
 <p> Send BPDU frames for VLAN 5 as used with Cisco&#8217;s PVST+ type of STP. Per default Mausezahn assumes that you want to become the root bridge: </p>
@@ -71,6 +71,6 @@ description: "mausezahn – a fast versatile packet generator"
 <p> Send UDP packets to the destination host target.anynetwork.foo using all possible destionation ports and send every packet with all possible source addresses of the range 172.30.0.0/16; pad with 1000 bytes and repeat this 10 times: </p>
 <p> # mausezahn eth0 -c 10 -A 172.30.0.0/16 -B target.anynetwork.foo -t udp dp=1-65535 -p 1000 </p>
 <h2>AUTHOR</h2>
-<p> Herbert Haas<br />
+<p> Herbert Haas<br/>
  Visit <a rel="nofollow" href="http://www.perihel.at">www.perihel.at</a>/sec/mz/ for Mausezahn news and additional information. </p>
 <p> This manual page has been written by Vivek Shah &lt;boni.vivek at gmail.com&gt; for the Fedora project. </p>

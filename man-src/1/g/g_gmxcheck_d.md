@@ -21,40 +21,40 @@ description: "gmxcheck – checks and compares files"
 <p> For free energy simulations the A and B state topology from one run input file can be compared with options <code> -s1</code> and <code> -ab</code>. </p>
 <p> In case the <code> -m</code> flag is given a LaTeX file will be written consisting a rough outline for a methods section for a paper.</p>
 <h2>FILES</h2>
-<p> <code>-f</code><i> traj.xtc</i> <code>Input, Opt.</code><br />
+<p> <code>-f</code><i> traj.xtc</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Trajectory: xtc trr trj gro g96 pdb cpt&nbsp;<wbr> </p>
-<p> <code>-f2</code><i> traj.xtc</i> <code>Input, Opt.</code><br />
+<p> <code>-f2</code><i> traj.xtc</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Trajectory: xtc trr trj gro g96 pdb cpt&nbsp;<wbr> </p>
-<p> <code>-s1</code><i> top1.tpr</i> <code>Input, Opt.</code><br />
+<p> <code>-s1</code><i> top1.tpr</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Run input file: tpr tpb tpa&nbsp;<wbr> </p>
-<p> <code>-s2</code><i> top2.tpr</i> <code>Input, Opt.</code><br />
+<p> <code>-s2</code><i> top2.tpr</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Run input file: tpr tpb tpa&nbsp;<wbr> </p>
-<p> <code>-c</code><i> topol.tpr</i> <code>Input, Opt.</code><br />
+<p> <code>-c</code><i> topol.tpr</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Structure+mass(db): tpr tpb tpa gro g96 pdb&nbsp;<wbr> </p>
-<p> <code>-e</code><i> ener.edr</i> <code>Input, Opt.</code><br />
+<p> <code>-e</code><i> ener.edr</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Energy file: edr ene&nbsp;<wbr> </p>
-<p> <code>-e2</code><i> ener2.edr</i> <code>Input, Opt.</code><br />
+<p> <code>-e2</code><i> ener2.edr</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Energy file: edr ene&nbsp;<wbr> </p>
-<p> <code>-n</code><i> index.ndx</i> <code>Input, Opt.</code><br />
+<p> <code>-n</code><i> index.ndx</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Index file&nbsp;<wbr> </p>
-<p> <code>-m</code><i> doc.tex</i> <code>Output, Opt.</code><br />
+<p> <code>-m</code><i> doc.tex</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>LaTeX file&nbsp;<wbr> </p>
 <h2>OTHER OPTIONS</h2>
-<p> <code>-[no]h</code><i>no </i><br />
+<p> <code>-[no]h</code><i>no </i><br/>
 &nbsp;<wbr>Print help info and quit </p>
-<p> <code>-nice</code><i> int</i><code> 0</code><br />
+<p> <code>-nice</code><i> int</i><code> 0</code><br/>
 &nbsp;<wbr>Set the nicelevel </p>
-<p> <code>-vdwfac</code><i> real</i><code> 0.8 </code><br />
+<p> <code>-vdwfac</code><i> real</i><code> 0.8 </code><br/>
 &nbsp;<wbr>Fraction of sum of VdW radii used as warning cutoff </p>
-<p> <code>-bonlo</code><i> real</i><code> 0.4 </code><br />
+<p> <code>-bonlo</code><i> real</i><code> 0.4 </code><br/>
 &nbsp;<wbr>Min. fract. of sum of VdW radii for bonded atoms </p>
-<p> <code>-bonhi</code><i> real</i><code> 0.7 </code><br />
+<p> <code>-bonhi</code><i> real</i><code> 0.7 </code><br/>
 &nbsp;<wbr>Max. fract. of sum of VdW radii for bonded atoms </p>
-<p> <code>-tol</code><i> real</i><code> 0.001 </code><br />
+<p> <code>-tol</code><i> real</i><code> 0.001 </code><br/>
 &nbsp;<wbr>Relative tolerance for comparing real values defined as 2*(a-b)/(|a|+|b|) </p>
-<p> <code>-[no]ab</code><i>no </i><br />
+<p> <code>-[no]ab</code><i>no </i><br/>
 &nbsp;<wbr>Compare the A and B topology from one file </p>
-<p> <code>-lastener</code><i> string</i><br />
+<p> <code>-lastener</code><i> string</i><br/>
 &nbsp;<wbr>Last energy term to compare&nbsp;<wbr>(if not given all are tested). It makes sense to go up until the Pressure. </p>
 <h2>SEE ALSO</h2>
 <p> <code>gromacs(7)</code> </p>

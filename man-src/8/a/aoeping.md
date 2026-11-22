@@ -34,12 +34,12 @@ description: "aoeping – simple communication with AoE device"
 <dd>This option takes an argument. The argument is a decimal integer that specifies the number of seconds that <i><a href="/docs/linux/man/8-aoeping/">aoeping</a></i>(8) will wait for a response before timing out and exiting with a non-zero status.</dd>
 <dt><code>-S</code></dt>
 <dd>This option takes an argument. The argument is the name of a SMART command to send to the disk. The SMART commands in the list below are supported. If the command requires data transfer, one sector (512 bytes) of data is always the amount transfered. If the command takes a parameter (for the Low LBA register), then the name of the SMART command is immediately followed by a colon and then a number, the value of the parameter, e.g., &quot;-S read_log:1&quot;.</dd>
-<dd>&nbsp;<wbr>&nbsp;<wbr>read_data<br />
-&nbsp;<wbr>&nbsp;<wbr>offline_immediate<br />
-&nbsp;<wbr>&nbsp;<wbr>read_log<br />
-&nbsp;<wbr>&nbsp;<wbr>write_log<br />
-&nbsp;<wbr>&nbsp;<wbr>enable<br />
-&nbsp;<wbr>&nbsp;<wbr>disable<br />
+<dd>&nbsp;<wbr>&nbsp;<wbr>read_data<br/>
+&nbsp;<wbr>&nbsp;<wbr>offline_immediate<br/>
+&nbsp;<wbr>&nbsp;<wbr>read_log<br/>
+&nbsp;<wbr>&nbsp;<wbr>write_log<br/>
+&nbsp;<wbr>&nbsp;<wbr>enable<br/>
+&nbsp;<wbr>&nbsp;<wbr>disable<br/>
 &nbsp;<wbr>&nbsp;<wbr>return_status </dd>
 <p> For <code>write_log</code>, <i><a href="/docs/linux/man/8-aoeping/">aoeping</a></i>(8) reads from standard input the one sector of data to be written to the specified log. </p>
 <p> The <i><a href="/docs/linux/man/8-aoeping/">aoeping</a></i>(8) command just sends and receives SMART commands, without interpreting them. See the ATA specification for more information on using SMART.</dl>

@@ -14,19 +14,19 @@ description: "sc::BcastStateInBin –"
 #include &lt;mstate.h&gt;</code></pre>
 <p> Inherits <code>sc::MsgStateBufRecv</code>.</p>
 <h3>Public Member Functions</h3>
-<p><code>BcastStateInBin</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br />
- <i>Create the </i><code>BcastStateRecv</code> using the default <code>MessageGrp</code>.<br />
- <code>BcastStateInBin</code> (const <code>Ref</code>&lt; <code>MessageGrp</code> &gt; &amp;, const char *filename)<br />
- <i>Create the </i><code>BcastStateRecv</code>.<br />
+<p><code>BcastStateInBin</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br/>
+ <i>Create the </i><code>BcastStateRecv</code> using the default <code>MessageGrp</code>.<br/>
+ <code>BcastStateInBin</code> (const <code>Ref</code>&lt; <code>MessageGrp</code> &gt; &amp;, const char *filename)<br/>
+ <i>Create the </i><code>BcastStateRecv</code>.<br/>
  virtual int <code>open</code> (const char *name) </p>
 <p> virtual void <code>close</code> () </p>
-<p> void <code>seek</code> (int loc)<br />
- <i>Set the current position in the file. </i><br />
- int <code>seekable</code> ()<br />
- <i>Return non-zero if seek does anything sensible. </i><br />
- int <code>tell</code> ()<br />
- <i>Return the current position in the file. </i><br />
- int <code>use_directory</code> ()<br />
+<p> void <code>seek</code> (int loc)<br/>
+ <i>Set the current position in the file. </i><br/>
+ int <code>seekable</code> ()<br/>
+ <i>Return non-zero if seek does anything sensible. </i><br/>
+ int <code>tell</code> ()<br/>
+ <i>Return the current position in the file. </i><br/>
+ int <code>use_directory</code> ()<br/>
  <i>Returns true of this object uses a directory. </i></p>
 <h3>Protected Member Functions</h3>
 <pre><code>void next_buffer ()

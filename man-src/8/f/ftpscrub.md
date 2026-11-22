@@ -21,7 +21,7 @@ description: "ftpscrub – scrub the proftpd scoreboard file of stale entries"
 <dt><code>-v,&#8211;verbose</code></dt>
 <dd>Reports additional information while scrubbing the scoreboard.</dd></dl>
 <h2>Files</h2>
-<p><code>/usr/sbin/ftpscrub</code><br />
+<p><code>/usr/sbin/ftpscrub</code><br/>
  <code>/run/proftpd/proftpd.scoreboard</code></p>
 <h2>Authors</h2>
 <p>ProFTPD is written and maintained by a number of people, full credits can be found on <code><a rel="nofollow" href="http://www.proftpd.org/credits.html">http://www.proftpd.org/credits.html</a></code></p>

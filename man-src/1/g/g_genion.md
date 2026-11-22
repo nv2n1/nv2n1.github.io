@@ -17,50 +17,50 @@ description: "genion – generates mono atomic ions on energetically favorable p
 <p> With the option <code> -pot</code> the potential can be written as B-factors in a pdb file (for visualisation using e.g. rasmol). The unit of the potential is 1000 kJ/(mol e), the scaling be changed with the <code> -scale</code> option. </p>
 <p> For larger ions, e.g. sulfate we recommended to use genbox.</p>
 <h2>FILES</h2>
-<p> <code>-s</code><i> topol.tpr</i> <code>Input</code><br />
+<p> <code>-s</code><i> topol.tpr</i> <code>Input</code><br/>
 &nbsp;<wbr>Run input file: tpr tpb tpa&nbsp;<wbr> </p>
-<p> <code>-table</code><i> table.xvg</i> <code>Input, Opt.</code><br />
+<p> <code>-table</code><i> table.xvg</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-n</code><i> index.ndx</i> <code>Input, Opt.</code><br />
+<p> <code>-n</code><i> index.ndx</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Index file&nbsp;<wbr> </p>
-<p> <code>-o</code><i> out.gro</i> <code>Output</code><br />
+<p> <code>-o</code><i> out.gro</i> <code>Output</code><br/>
 &nbsp;<wbr>Structure file: gro g96 pdb&nbsp;<wbr> </p>
-<p> <code>-g</code><i> genion.log</i> <code>Output</code><br />
+<p> <code>-g</code><i> genion.log</i> <code>Output</code><br/>
 &nbsp;<wbr>Log file&nbsp;<wbr> </p>
-<p> <code>-pot</code><i> pot.pdb</i> <code>Output, Opt.</code><br />
+<p> <code>-pot</code><i> pot.pdb</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>Protein data bank file&nbsp;<wbr> </p>
-<p> <code>-p</code><i> topol.top</i> <code>In/Out, Opt.</code><br />
+<p> <code>-p</code><i> topol.top</i> <code>In/Out, Opt.</code><br/>
 &nbsp;<wbr>Topology file&nbsp;<wbr> </p>
 <h2>OTHER OPTIONS</h2>
-<p> <code>-[no]h</code><i>no </i><br />
+<p> <code>-[no]h</code><i>no </i><br/>
 &nbsp;<wbr>Print help info and quit </p>
-<p> <code>-nice</code><i> int</i><code> 19</code><br />
+<p> <code>-nice</code><i> int</i><code> 19</code><br/>
 &nbsp;<wbr>Set the nicelevel </p>
-<p> <code>-[no]xvgr</code><i>yes </i><br />
+<p> <code>-[no]xvgr</code><i>yes </i><br/>
 &nbsp;<wbr>Add specific codes&nbsp;<wbr>(legends etc.)&nbsp;<wbr>in the output xvg files for the xmgrace program </p>
-<p> <code>-np</code><i> int</i><code> 0</code><br />
+<p> <code>-np</code><i> int</i><code> 0</code><br/>
 &nbsp;<wbr>Number of positive ions </p>
-<p> <code>-pname</code><i> string</i><code> Na</code><br />
+<p> <code>-pname</code><i> string</i><code> Na</code><br/>
 &nbsp;<wbr>Name of the positive ion </p>
-<p> <code>-pq</code><i> int</i><code> 1</code><br />
+<p> <code>-pq</code><i> int</i><code> 1</code><br/>
 &nbsp;<wbr>Charge of the positive ion </p>
-<p> <code>-nn</code><i> int</i><code> 0</code><br />
+<p> <code>-nn</code><i> int</i><code> 0</code><br/>
 &nbsp;<wbr>Number of negative ions </p>
-<p> <code>-nname</code><i> string</i><code> Cl</code><br />
+<p> <code>-nname</code><i> string</i><code> Cl</code><br/>
 &nbsp;<wbr>Name of the negative ion </p>
-<p> <code>-nq</code><i> int</i><code> -1</code><br />
+<p> <code>-nq</code><i> int</i><code> -1</code><br/>
 &nbsp;<wbr>Charge of the negative ion </p>
-<p> <code>-rmin</code><i> real</i><code> 0.6 </code><br />
+<p> <code>-rmin</code><i> real</i><code> 0.6 </code><br/>
 &nbsp;<wbr>Minimum distance between ions </p>
-<p> <code>-[no]random</code><i>yes </i><br />
+<p> <code>-[no]random</code><i>yes </i><br/>
 &nbsp;<wbr>Use random placement of ions instead of based on potential. The rmin option should still work </p>
-<p> <code>-seed</code><i> int</i><code> 1993</code><br />
+<p> <code>-seed</code><i> int</i><code> 1993</code><br/>
 &nbsp;<wbr>Seed for random number generator </p>
-<p> <code>-scale</code><i> real</i><code> 0.001 </code><br />
+<p> <code>-scale</code><i> real</i><code> 0.001 </code><br/>
 &nbsp;<wbr>Scaling factor for the potential for -pot </p>
-<p> <code>-conc</code><i> real</i><code> 0 </code><br />
+<p> <code>-conc</code><i> real</i><code> 0 </code><br/>
 &nbsp;<wbr>Specify salt concentration&nbsp;<wbr>(mol/liter). This will add sufficient ions to reach up to the specified concentration as computed from the volume of the cell in the input tpr file. Overrides the -np and&nbsp;<wbr>&nbsp;<wbr>nn options. </p>
-<p> <code>-[no]neutral</code><i>no </i><br />
+<p> <code>-[no]neutral</code><i>no </i><br/>
 &nbsp;<wbr>This option will add enough ions to neutralize the system. In combination with the concentration option a neutral system at a given salt concentration will be generated. </p>
 <h2>KNOWN PROBLEMS</h2>
 <p> &#8211; Calculation of the potential is not reliable, therefore the <code> -random</code> option is now turned on by default. </p>

@@ -55,23 +55,23 @@ description: "repl-monitor – Directory Server replication monitor"
 </dl>
 <h2>EXAMPLE</h2>
 <p> Example of a configuration file: </p>
-<p> [connection]<br />
- localhost.localdomain:3891:cn=directory manager:password:*<br />
+<p> [connection]<br/>
+ localhost.localdomain:3891:cn=directory manager:password:*<br/>
  localhost2.localdomain:3892:cn=directory manager:password:* </p>
-<p> [alias]<br />
- MY_SYSTEM1 = localhost.localdomain:3891<br />
+<p> [alias]<br/>
+ MY_SYSTEM1 = localhost.localdomain:3891<br/>
  MY_SYSTEM2 = localhost2.localdomain:3892 </p>
-<p> [color]<br />
- 0 = #CCFFCC<br />
- 5 = #FFFFCC<br />
+<p> [color]<br/>
+ 0 = #CCFFCC<br/>
+ 5 = #FFFFCC<br/>
  60 = #FFCCCC </p>
 <h2>AUTHOR</h2>
 <p> repl-monitor was written by the 389 Project.</p>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to <a rel="nofollow" href="https://fedorahosted.org/389/newticket.">https://fedorahosted.org/389/newticket.</a></p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2001 Sun Microsystems, Inc. Used by permission.<br />
- Copyright &#169; 2016 Red Hat, Inc.<br />
- This manual page was written by Michele Baldessari &lt;michele [at] pupazzo.org&gt;, for the Debian project (but may be used by others).<br />
- Manual page updated by Mark Reynolds &lt;mreynolds [at] redhat.com&gt; 6/28/2016<br />
+<p> Copyright &#169; 2001 Sun Microsystems, Inc. Used by permission.<br/>
+ Copyright &#169; 2016 Red Hat, Inc.<br/>
+ This manual page was written by Michele Baldessari &lt;michele [at] pupazzo.org&gt;, for the Debian project (but may be used by others).<br/>
+ Manual page updated by Mark Reynolds &lt;mreynolds [at] redhat.com&gt; 6/28/2016<br/>
  This is free software. You may redistribute copies of it under the terms of the Directory Server license found in the LICENSE file of this software distribution. This license is essentially the GNU General Public License version 3 with an exception for plug-in distribution. </p>

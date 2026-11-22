@@ -44,7 +44,7 @@ description: "smp_rep_phy_err_log – invoke REPORT PHY ERROR LOG SMP function"
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;dgilbert at interlog dot com&gt;.</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2006-2011 Douglas Gilbert<br />
+<p>Copyright &#169; 2006-2011 Douglas Gilbert<br/>
  This software is distributed under a FreeBSD license. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>See Also</h2>
 <p><code>smp_utils, smp_phy_control(smp_utils), sg_logs(sg3_utils),</code> <code>sg_sat_phy_event(sg3_utils)</code> </p>

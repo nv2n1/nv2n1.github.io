@@ -129,9 +129,9 @@ description: "refer – preprocess bibliographic references for groff"
 <p> The format of a citation is</p>
 <dl>
 <dt>
-</dt><dd> <code>.[</code><i>opening-text</i><br />
- <i>flags keywords</i><br />
- <i>fields</i><br />
+</dt><dd> <code>.[</code><i>opening-text</i><br/>
+ <i>flags keywords</i><br/>
+ <i>fields</i><br/>
  <code>.]</code><i>closing-text</i></dd></dl>
 <p> The <i>opening-text</i>, <i>closing-text</i>, and <i>flags</i> components are optional. Only one of the <i>keywords</i> and <i>fields</i> components need be specified. </p>
 <p> The <i>keywords</i> component says to search the bibliographic databases for a reference that contains all the words in <i>keywords</i>. It is an error if more than one reference if found. </p>
@@ -163,8 +163,8 @@ description: "refer – preprocess bibliographic references for groff"
 <dl>
 <dl>
 <dt>
-</dt><dd> <code>.[</code><br />
- <code>$LIST$</code><br />
+</dt><dd> <code>.[</code><br/>
+ <code>$LIST$</code><br/>
  <code>.]</code></dd></dl>
 <p> is encountered, after all input files have been processed, and whenever <code>.R1</code> line is recognized.</dl>
 <dt><code>annotate*&nbsp;</code><i>field string</i></dt>

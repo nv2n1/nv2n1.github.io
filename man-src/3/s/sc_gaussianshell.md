@@ -17,75 +17,75 @@ description: "sc::GaussianShell –"
 <p>enum <code>PrimitiveType</code> { <code>Normalized</code>, <code>Unnormalized</code> } </p>
 <p> enum <code>GaussianType</code> { <code>Cartesian</code>, <code>Pure</code> }</p>
 <h3>Public Member Functions</h3>
-<p><code>GaussianShell</code> (int ncn, int nprm, double *e, int *am, int *pure, double **c, PrimitiveType pt=GaussianShell::Normalized, bool do_normalize_shell=true)<br />
- <i>A </i><code>GaussianShell</code> constructor.<br />
- <code>GaussianShell</code> (int ncn, int nprm, double *e, int *am, GaussianType pure, double **c, PrimitiveType pt=GaussianShell::Normalized)<br />
- <i>A </i><code>GaussianShell</code> constructor.<br />
- <code>GaussianShell</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br />
- <i>Construct a </i><code>GaussianShell</code> from <code>KeyVal</code> input.<br />
- <code>GaussianShell</code> (<code>StateIn</code> &amp;)<br />
- <i>Restore a </i><code>GaussianShell</code> from a <code>StateIn</code> object.<br />
- <code>GaussianShell</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;, int pure)<br />
- <i>Construct a </i><code>GaussianShell</code> from <code>KeyVal</code> input.<br />
- void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br />
- <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br />
- int <code>nprimitive</code> () const<br />
- <i>The number of primitive Gaussian shells. </i><br />
- int <code>ncontraction</code> () const<br />
- <i>The number of contractions formed from the primitives. </i><br />
- int <code>nfunction</code> () const<br />
- <i>The number of basis functions. </i><br />
- int <code>max_angular_momentum</code> () const<br />
- <i>The maximum angular momentum in the shell. </i><br />
- int <code>min_angular_momentum</code> () const<br />
- <i>The minimum angular momentum in the shell. </i><br />
- int <code>max_cartesian</code> () const<br />
- <i>The maximum number of Cartesian functions in any contraction. </i><br />
- int <code>am</code> (int con) const<br />
- <i>The angular momentum of the given contraction. </i><br />
- int <code>max_am</code> () const<br />
- <i>The maximum angular momentum of any contraction. </i><br />
- int <code>min_am</code> () const<br />
- <i>The minimum angular momentum of any contraction. </i><br />
- char <code>amchar</code> (int con) const<br />
- <i>The character symbol for the angular momentum of the given contraction. </i><br />
- int <code>nfunction</code> (int con) const<br />
- <i>The number of basis functions coming from the given contraction. </i><br />
- int <code>ncartesian</code> () const<br />
- <i>The total number of functions if this shell was Cartesian. </i><br />
- int <code>ncartesian_with_aminc</code> (int aminc) const<br />
- <i>The total number of Cartesian functions if this shift is applied to all of the angular momentums. </i><br />
- int <code>ncartesian</code> (int con) const<br />
- <i>The number of Cartesian functions for the given contraction. </i><br />
- int <code>is_cartesian</code> (int con) const<br />
- <i>Returns nonzero if contraction con is Cartesian. </i><br />
- int <code>is_pure</code> (int con) const<br />
- <i>Returns nonzero if contraction con is solid harmonics. </i><br />
- int <code>has_pure</code> () const<br />
- <i>Returns nonzero if any contraction is solid harmonics. </i><br />
- double <code>coefficient_unnorm</code> (int con, int prim) const<br />
- <i>Returns the contraction coef for unnormalized primitives. </i><br />
- double <code>coefficient_norm</code> (int con, int prim) const<br />
- <i>Returns the contraction coef for normalized primitives. </i><br />
- double <code>exponent</code> (int iprim) const<br />
- <i>Returns the exponent of the given primitive. </i><br />
- int <code>values</code> (<code>CartesianIter</code> **, <code>SphericalTransformIter</code> **, const <code>SCVector3</code> &amp;r, double *basis_values)<br />
- <i></i><code>Compute</code> the values for this shell at position r.<br />
- int <code>grad_values</code> (<code>CartesianIter</code> **, <code>SphericalTransformIter</code> **, const <code>SCVector3</code> &amp;R, double *g_values, double *basis_values=0) const<br />
- <i>Like values(. </i><br />
- int <code>hessian_values</code> (<code>CartesianIter</code> **, <code>SphericalTransformIter</code> **, const <code>SCVector3</code> &amp;R, double *h_values, double *g_values=0, double *basis_values=0) const<br />
- <i>Like values(. </i><br />
- double <code>relative_overlap</code> (const <code>Ref</code>&lt; <code>Integral</code> &gt; &amp;, int con, int func1, int func2) const<br />
- <i>Returns the intra-generalized-contraction overlap matrix element &lt;con func1|con func2&gt; within an arbitrary constant for the shell. </i><br />
- double <code>relative_overlap</code> (int con, int a1, int b1, int c1, int a2, int b2, int c2) const<br />
- <i>Returns the intra-generalized-contraction overlap matrix element &lt;con func1|con func2&gt; within an arbitrary constant for the shell. </i><br />
- int <code>equiv</code> (const <code>GaussianShell</code> *s)<br />
- <i>Returns true if this and the argument are equivalent. </i><br />
- double <code>extent</code> (double threshold) const<br />
- <i>Returns a radius. </i><br />
- double <code>monobound</code> (double r) const<br />
- <i>Returns a bound for the basis function. </i><br />
- void <code>print</code> (std::ostream &amp;=ExEnv::out0()) const<br />
+<p><code>GaussianShell</code> (int ncn, int nprm, double *e, int *am, int *pure, double **c, PrimitiveType pt=GaussianShell::Normalized, bool do_normalize_shell=true)<br/>
+ <i>A </i><code>GaussianShell</code> constructor.<br/>
+ <code>GaussianShell</code> (int ncn, int nprm, double *e, int *am, GaussianType pure, double **c, PrimitiveType pt=GaussianShell::Normalized)<br/>
+ <i>A </i><code>GaussianShell</code> constructor.<br/>
+ <code>GaussianShell</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br/>
+ <i>Construct a </i><code>GaussianShell</code> from <code>KeyVal</code> input.<br/>
+ <code>GaussianShell</code> (<code>StateIn</code> &amp;)<br/>
+ <i>Restore a </i><code>GaussianShell</code> from a <code>StateIn</code> object.<br/>
+ <code>GaussianShell</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;, int pure)<br/>
+ <i>Construct a </i><code>GaussianShell</code> from <code>KeyVal</code> input.<br/>
+ void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br/>
+ <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br/>
+ int <code>nprimitive</code> () const<br/>
+ <i>The number of primitive Gaussian shells. </i><br/>
+ int <code>ncontraction</code> () const<br/>
+ <i>The number of contractions formed from the primitives. </i><br/>
+ int <code>nfunction</code> () const<br/>
+ <i>The number of basis functions. </i><br/>
+ int <code>max_angular_momentum</code> () const<br/>
+ <i>The maximum angular momentum in the shell. </i><br/>
+ int <code>min_angular_momentum</code> () const<br/>
+ <i>The minimum angular momentum in the shell. </i><br/>
+ int <code>max_cartesian</code> () const<br/>
+ <i>The maximum number of Cartesian functions in any contraction. </i><br/>
+ int <code>am</code> (int con) const<br/>
+ <i>The angular momentum of the given contraction. </i><br/>
+ int <code>max_am</code> () const<br/>
+ <i>The maximum angular momentum of any contraction. </i><br/>
+ int <code>min_am</code> () const<br/>
+ <i>The minimum angular momentum of any contraction. </i><br/>
+ char <code>amchar</code> (int con) const<br/>
+ <i>The character symbol for the angular momentum of the given contraction. </i><br/>
+ int <code>nfunction</code> (int con) const<br/>
+ <i>The number of basis functions coming from the given contraction. </i><br/>
+ int <code>ncartesian</code> () const<br/>
+ <i>The total number of functions if this shell was Cartesian. </i><br/>
+ int <code>ncartesian_with_aminc</code> (int aminc) const<br/>
+ <i>The total number of Cartesian functions if this shift is applied to all of the angular momentums. </i><br/>
+ int <code>ncartesian</code> (int con) const<br/>
+ <i>The number of Cartesian functions for the given contraction. </i><br/>
+ int <code>is_cartesian</code> (int con) const<br/>
+ <i>Returns nonzero if contraction con is Cartesian. </i><br/>
+ int <code>is_pure</code> (int con) const<br/>
+ <i>Returns nonzero if contraction con is solid harmonics. </i><br/>
+ int <code>has_pure</code> () const<br/>
+ <i>Returns nonzero if any contraction is solid harmonics. </i><br/>
+ double <code>coefficient_unnorm</code> (int con, int prim) const<br/>
+ <i>Returns the contraction coef for unnormalized primitives. </i><br/>
+ double <code>coefficient_norm</code> (int con, int prim) const<br/>
+ <i>Returns the contraction coef for normalized primitives. </i><br/>
+ double <code>exponent</code> (int iprim) const<br/>
+ <i>Returns the exponent of the given primitive. </i><br/>
+ int <code>values</code> (<code>CartesianIter</code> **, <code>SphericalTransformIter</code> **, const <code>SCVector3</code> &amp;r, double *basis_values)<br/>
+ <i></i><code>Compute</code> the values for this shell at position r.<br/>
+ int <code>grad_values</code> (<code>CartesianIter</code> **, <code>SphericalTransformIter</code> **, const <code>SCVector3</code> &amp;R, double *g_values, double *basis_values=0) const<br/>
+ <i>Like values(. </i><br/>
+ int <code>hessian_values</code> (<code>CartesianIter</code> **, <code>SphericalTransformIter</code> **, const <code>SCVector3</code> &amp;R, double *h_values, double *g_values=0, double *basis_values=0) const<br/>
+ <i>Like values(. </i><br/>
+ double <code>relative_overlap</code> (const <code>Ref</code>&lt; <code>Integral</code> &gt; &amp;, int con, int func1, int func2) const<br/>
+ <i>Returns the intra-generalized-contraction overlap matrix element &lt;con func1|con func2&gt; within an arbitrary constant for the shell. </i><br/>
+ double <code>relative_overlap</code> (int con, int a1, int b1, int c1, int a2, int b2, int c2) const<br/>
+ <i>Returns the intra-generalized-contraction overlap matrix element &lt;con func1|con func2&gt; within an arbitrary constant for the shell. </i><br/>
+ int <code>equiv</code> (const <code>GaussianShell</code> *s)<br/>
+ <i>Returns true if this and the argument are equivalent. </i><br/>
+ double <code>extent</code> (double threshold) const<br/>
+ <i>Returns a radius. </i><br/>
+ double <code>monobound</code> (double r) const<br/>
+ <i>Returns a bound for the basis function. </i><br/>
+ void <code>print</code> (std::ostream &amp;=ExEnv::out0()) const<br/>
  <i>Print the object. </i></p>
 <h2>Detailed Description</h2>
 <p>A Gaussian orbital shell.</p>

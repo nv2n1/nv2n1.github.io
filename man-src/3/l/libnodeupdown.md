@@ -42,7 +42,7 @@ description: "libnodeupdown – a library of functions to determine if a node is
 <p> If none of the above are found, the nodeupdown library will search for a backend module in /usr/lib64/nodeupdown until one is found. </p>
 <h2>CLUSTERLIST MODULES</h2>
 <p> The nodeupdown library loads a clusterlist module to obtain a list of all cluster nodes. There are several possible clusterlist formats that can be parsed. By default, the following clusterlist modules are searched for by nodeupdown in the following order: </p>
-<p> genders &#8211; Uses a genders database and the genders library to determine all nodes in the cluster. See <a rel="nofollow" href="http://genders.sourceforge.net.">http://genders.sourceforge.net.</a><br />
+<p> genders &#8211; Uses a genders database and the genders library to determine all nodes in the cluster. See <a rel="nofollow" href="http://genders.sourceforge.net.">http://genders.sourceforge.net.</a><br/>
  hostsfile &#8211; Uses a file that lists the hostname of every node in the cluster on a separate line. The default hostsfile is /etc/hostsfile. </p>
 <p> If none of the above are found, the nodeupdown library will search for a clusterlist module in /usr/lib64/nodeupdown. If none are found, a default behavior will be implemented by the nodeupdown library. </p>
 <h2>CONFIG MODULES</h2>

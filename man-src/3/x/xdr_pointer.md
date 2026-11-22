@@ -141,23 +141,23 @@ description: "xdr – library routines for external data representation"
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>xdr_array</code>(), <code>xdr_bool</code>(),<br />
- <code>xdr_bytes</code>(), <code>xdr_char</code>(),<br />
- <code>xdr_destroy</code>(), <code>xdr_double</code>(),<br />
- <code>xdr_enum</code>(), <code>xdr_float</code>(),<br />
- <code>xdr_free</code>(), <code>xdr_getpos</code>(),<br />
- <code>xdr_inline</code>(), <code>xdr_int</code>(),<br />
- <code>xdr_long</code>(), <code>xdrmem_create</code>(),<br />
- <code>xdr_opaque</code>(), <code>xdr_pointer</code>(),<br />
- <code>xdrrec_create</code>(), <code>xdrrec_eof</code>(),<br />
- <code>xdrrec_endofrecord</code>(),<br />
- <code>xdrrec_skiprecord</code>(),<br />
- <code>xdr_reference</code>(), <code>xdr_setpos</code>(),<br />
- <code>xdr_short</code>(), <code>xdrstdio_create</code>(),<br />
- <code>xdr_string</code>(), <code>xdr_u_char</code>(),<br />
- <code>xdr_u_int</code>(), <code>xdr_u_long</code>(),<br />
- <code>xdr_u_short</code>(), <code>xdr_union</code>(),<br />
- <code>xdr_vector</code>(), <code>xdr_void</code>(),<br />
+<td> <code>xdr_array</code>(), <code>xdr_bool</code>(),<br/>
+ <code>xdr_bytes</code>(), <code>xdr_char</code>(),<br/>
+ <code>xdr_destroy</code>(), <code>xdr_double</code>(),<br/>
+ <code>xdr_enum</code>(), <code>xdr_float</code>(),<br/>
+ <code>xdr_free</code>(), <code>xdr_getpos</code>(),<br/>
+ <code>xdr_inline</code>(), <code>xdr_int</code>(),<br/>
+ <code>xdr_long</code>(), <code>xdrmem_create</code>(),<br/>
+ <code>xdr_opaque</code>(), <code>xdr_pointer</code>(),<br/>
+ <code>xdrrec_create</code>(), <code>xdrrec_eof</code>(),<br/>
+ <code>xdrrec_endofrecord</code>(),<br/>
+ <code>xdrrec_skiprecord</code>(),<br/>
+ <code>xdr_reference</code>(), <code>xdr_setpos</code>(),<br/>
+ <code>xdr_short</code>(), <code>xdrstdio_create</code>(),<br/>
+ <code>xdr_string</code>(), <code>xdr_u_char</code>(),<br/>
+ <code>xdr_u_int</code>(), <code>xdr_u_long</code>(),<br/>
+ <code>xdr_u_short</code>(), <code>xdr_union</code>(),<br/>
+ <code>xdr_vector</code>(), <code>xdr_void</code>(),<br/>
  <code>xdr_wrapstring</code>() </td>
 <td>Thread safety</td>
 <td>MT-Safe
@@ -168,8 +168,8 @@ description: "xdr – library routines for external data representation"
 <p><code><a href="/docs/linux/man/3-rpc/">rpc</a></code>(3) </p>
 <p> The following manuals:</p>
 <dl>
-<dd>eXternal Data Representation Standard: Protocol Specification<br />
- eXternal Data Representation: Sun Technical Notes<br />
+<dd>eXternal Data Representation Standard: Protocol Specification<br/>
+ eXternal Data Representation: Sun Technical Notes<br/>
  <i>XDR: External Data Representation Standard</i>, RFC 1014, Sun Microsystems, Inc., USC-ISI.</dd></dl>
 <h2>Colophon</h2>
 <p>This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>

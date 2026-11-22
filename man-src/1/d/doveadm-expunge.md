@@ -10,8 +10,8 @@ description: "doveadm-expunge – Expunge messages matching given search query"
 
 <p> doveadm-expunge &#8211; Expunge messages matching given search query</p>
 <h2>SYNOPSIS</h2>
-<p> <code>doveadm</code> [<code>-Dv</code>] <code>expunge</code> [<code>-S</code> <i>socket_path</i>] [<code>-d</code>] <i>search_query</i><br />
- <code>doveadm</code> [<code>-Dv</code>] <code>expunge</code> [<code>-S</code> <i>socket_path</i>] [<code>-d</code>] <code>-A</code><i> search_query</i><br />
+<p> <code>doveadm</code> [<code>-Dv</code>] <code>expunge</code> [<code>-S</code> <i>socket_path</i>] [<code>-d</code>] <i>search_query</i><br/>
+ <code>doveadm</code> [<code>-Dv</code>] <code>expunge</code> [<code>-S</code> <i>socket_path</i>] [<code>-d</code>] <code>-A</code><i> search_query</i><br/>
  <code>doveadm</code> [<code>-Dv</code>] <code>expunge</code> [<code>-S</code> <i>socket_path</i>] [<code>-d</code>] <code>-u</code><i> user search_query</i></p>
 <h2>DESCRIPTION</h2>
 <p> This command can be used to expunge mails matching the given search query. It is typically used to expunge old mails from users&#8217; Trash and/or Spam mailboxes. To test which messages a given search query would match, you can use <i>doveadm fetch</i> or <i>doveadm search</i> commands. </p>
@@ -36,7 +36,7 @@ description: "doveadm-expunge – Expunge messages matching given search query"
 <dd> The option&#8217;s argument is either an absolute path to a local UNIX domain socket, or a hostname and port (<i>hostname</i>:<i>port</i>), in order to connect a remote host via a TCP socket. </dd>
 <p> This allows an administrator to execute <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) mail commands through the given socket.</p>
 <dt><code>-u&nbsp;<wbr></code><i>user/mask</i></dt>
-<dd> Run the <i>command</i> only for the given <i>user</i>. It&#8217;s also possible to use &#8216;<code>*</code>&#8216; and &#8216;<code>?</code>&#8216; wildcards (e.g. -u *@example.org).<br />
+<dd> Run the <i>command</i> only for the given <i>user</i>. It&#8217;s also possible to use &#8216;<code>*</code>&#8216; and &#8216;<code>?</code>&#8216; wildcards (e.g. -u *@example.org).<br/>
  When neither the <code>-A</code> option nor <code>-u&nbsp;<wbr></code><i>user</i> was specified, the <i>command</i> will be executed with the environment of the currently logged in user.</dd></dl>
 <h2>ARGUMENTS</h2>
 <dl>

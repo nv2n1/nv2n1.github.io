@@ -10,7 +10,7 @@ description: "zpstrf.f –"
 <p>zpstrf.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zpstrf</code> (UPLO, N, A, LDA, PIV, RANK, TOL, WORK, INFO)<br />
+<p>subroutine <code>zpstrf</code> (UPLO, N, A, LDA, PIV, RANK, TOL, WORK, INFO)<br/>
  <i></i><code>ZPSTRF</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zpstrf (characterUPLO, integerN, complex*16, dimension( lda, * )A, integerLDA, integer, dimension( n )PIV, integerRANK, double precisionTOL, double precision, dimension( 2*n )WORK, integerINFO)</h3>

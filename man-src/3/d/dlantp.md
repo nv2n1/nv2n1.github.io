@@ -11,7 +11,7 @@ description: "dlantp.f –"
 <p> dlantp.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> DOUBLE PRECISION function <code>dlantp</code> (NORM, UPLO, DIAG, N, AP, WORK)<br />
+<p> DOUBLE PRECISION function <code>dlantp</code> (NORM, UPLO, DIAG, N, AP, WORK)<br/>
  <i></i><code>DLANTP</code> returns the value of the 1-norm, or the Frobenius norm, or the infinity norm, or the element of largest absolute value of a triangular matrix supplied in packed form.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>DOUBLE PRECISION function dlantp (characterNORM, characterUPLO, characterDIAG, integerN, double precision, dimension( * )AP, double precision, dimension( * )WORK)</h3>

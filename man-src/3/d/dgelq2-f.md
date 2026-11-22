@@ -10,7 +10,7 @@ description: "dgelq2.f –"
 <p>dgelq2.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dgelq2</code> (M, N, A, LDA, TAU, WORK, INFO)<br />
+<p>subroutine <code>dgelq2</code> (M, N, A, LDA, TAU, WORK, INFO)<br/>
  <i></i><code>DGELQ2</code> computes the LQ factorization of a general rectangular matrix using an unblocked algorithm.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dgelq2 (integerM, integerN, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( * )TAU, double precision, dimension( * )WORK, integerINFO)</h3>

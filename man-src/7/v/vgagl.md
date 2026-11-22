@@ -9,9 +9,9 @@ description: "vgagl – a fast framebuffer-level graphics library based on svgal
 
 <p>vgagl &#8211; a fast framebuffer-level graphics library based on svgalib</p>
 <h2>Table Of Contents</h2>
-<p><code>0.</code> Introduction<br />
- <code>1.</code> How to use vgagl<br />
- <code>2.</code> Description of vgagl functions<br />
+<p><code>0.</code> Introduction<br/>
+ <code>1.</code> How to use vgagl<br/>
+ <code>2.</code> Description of vgagl functions<br/>
  <code>3.</code> Macros defined in vgagl.h</p>
 <h2>0. Introduction</h2>
 <p>This is a fast framebuffer-level graphics library for linear 1, 2, 3 and 4 byte-per-pixel modes (256-color, hicolor, truecolor). It uses a limited number of functions from svgalib (libvga) for low-level hardware communication (the library is included in the svgalib shared image). </p>
@@ -26,11 +26,11 @@ description: "vgagl – a fast framebuffer-level graphics library based on svgal
 <p>Programs that use <code>vgagl</code> must <code>#include &lt;vgagl.h&gt;</code>. Linking must be done with <code>-lvgagl -lvga</code>. </p>
 <p> Functions in the <code>vgagl</code> library have the prefix <code>gl_*</code>. To initialize <code>vgagl</code>, the graphics context must be set. Example: </p>
 <dl>
-<dd><code>vga_setmode(G320x200x256);</code><br />
+<dd><code>vga_setmode(G320x200x256);</code><br/>
  <code>gl_setcontextvga(G320x200x256);</code></dd></dl>
 <p> In this example, the context is set to the physical screen. The context can be saved (only the screen type, not the contents) into a variable, e.g. </p>
 <dl>
-<dd><code>GraphicsContext physicalscreen;</code><br />
+<dd><code>GraphicsContext physicalscreen;</code><br/>
  <code>gl_getcontext(&amp;physicalscreen).</code></dd></dl>
 <p> To define a virtual screen in system memory, use <code>gl_setcontextvgavirtual</code>(3): </p>
 <dl>
@@ -196,7 +196,7 @@ description: "vgagl – a fast framebuffer-level graphics library based on svgal
 <dd>Bottom-right corner of clipping window. </dd>
 </dl>
 <h2>Bugs</h2>
-<p>For three bytes per pixel (true color) modes, it is possible that pixels cross a SVGA segment boundary. This should be correctly handled<tt>&nbsp;<wbr></tt>by most functions, but you never know. It can be avoided by using a logical<br />
+<p>For three bytes per pixel (true color) modes, it is possible that pixels cross a SVGA segment boundary. This should be correctly handled<tt>&nbsp;<wbr></tt>by most functions, but you never know. It can be avoided by using a logical<br/>
  scanline length that is a divisor of 65536 (a power of 2), like 1024 (as opposed to 960) for 320&#215;200 and 2048 (1920) for 640&#215;480. For 800&#215;600, this is impractical (4096 as opposed to 2400 doesn&#8217;t fit in 2MB). Alternatively, avoid those functions by using a virtual screen. </p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/7-svgalib/">svgalib</a></code>(7), <code>libvga.config</code>(5), <code>testgl</code>(6), <code><a href="/docs/linux/man/7-threedkit/">threedkit</a></code>(7), <code>currentcontext</code>(3), <code>gl_allocatecontext</code>(3), <code>gl_circle</code>(3), <code>gl_clearscreen</code>(3), <code>gl_colorfont</code>(3), <code>gl_compileboxmask</code>(3), <code>gl_compiledboxmasksize</code>(3), <code>gl_copybox</code>(3), <code>gl_copyboxfromcontext</code>(3), <code>gl_copyboxtocontext</code>(3), <code>gl_copyscreen</code>(3), <code>gl_disableclipping</code>(3), <code>gl_enableclipping</code>(3), <code>gl_enablepageflipping</code>(3), <code>gl_expandfont</code>(3), <code>gl_fillbox</code>(3), <code>gl_font8x8</code>(3), <code>gl_freecontext</code>(3), <code>gl_getbox</code>(3), <code>gl_getcontext</code>(3), <code>gl_getpalette</code>(3), <code>gl_getpalettecolor</code>(3), <code>gl_getpalettecolors</code>(3), <code>gl_getpixel</code>(3), <code>gl_getpixelrgb</code>(3), <code>gl_hline</code>(3), <code>gl_line</code>(3), <code>gl_putbox</code>(3), <code>gl_putboxmask</code>(3), <code>gl_putboxmaskcompiled</code>(3), <code>gl_putboxpart</code>(3), <code>gl_rgbcolor</code>(3), <code>gl_scalebox</code>(3), <code>gl_setclippingwindow</code>(3), <code>gl_setcontext</code>(3), <code>gl_setcontextheight</code>(3), <code>gl_setcontextvga</code>(3), <code>gl_setcontextvgavirtual</code>(3), <code>gl_setcontextvirtual</code>(3), <code>gl_setcontextwidth</code>(3), <code>gl_setdisplaystart</code>(3), <code>gl_setfont</code>(3), <code>gl_setfontcolors</code>(3), <code>gl_setpalette</code>(3), <code>gl_setpalettecolor</code>(3), <code>gl_setpalettecolors</code>(3), <code>gl_setpixel</code>(3), <code>gl_setpixelrgb</code>(3), <code>gl_setrgbpalette</code>(3), <code>gl_setscreenoffset</code>(3), <code>gl_setwritemode</code>(3), <code>gl_striangle</code>(3), <code>gl_swtriangle</code>(3), <code>gl_triangle</code>(3), <code>gl_trigetcolorlookup</code>(3), <code>gl_trisetcolorlookup</code>(3), <code>gl_trisetdrawpoint</code>(3), <code>gl_write</code>(3), <code>gl_writen</code>(3), <code>gl_wtriangle</code>(3). </p>

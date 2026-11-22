@@ -17,44 +17,44 @@ description: "gmttrack – A shiptrack plotting program"
 <dt><i>leg-ids</i></dt>
 <dd> Can be one or more gmtleg-names, like c2104 v3206 etc.</dd>
 <dt><code>-J</code></dt>
-<dd> Selects the map projection. Scale is UNIT/degree, 1:xxxxx, or width in UNIT (upper case modifier). UNIT is cm, inch, or m, depending on the <code>MEASURE_UNIT</code> setting in .gmtdefaults4, but this can be overridden on the command line by appending <code>c</code>, <code>i</code>, or <code>m</code> to the scale/width value. When central meridian is optional, default is center of longitude range on <code>-R</code> option. Default standard parallel is the equator. For map height, max dimension, or min dimension, append <code>h</code>, <code>+</code>, or <code>&#8211;</code> to the width, respectively.<br />
+<dd> Selects the map projection. Scale is UNIT/degree, 1:xxxxx, or width in UNIT (upper case modifier). UNIT is cm, inch, or m, depending on the <code>MEASURE_UNIT</code> setting in .gmtdefaults4, but this can be overridden on the command line by appending <code>c</code>, <code>i</code>, or <code>m</code> to the scale/width value. When central meridian is optional, default is center of longitude range on <code>-R</code> option. Default standard parallel is the equator. For map height, max dimension, or min dimension, append <code>h</code>, <code>+</code>, or <code>&#8211;</code> to the width, respectively.<br/>
  More details can be found in the <code>psbasemap</code> man pages. </dd>
 <p> <code>CYLINDRICAL PROJECTIONS:</code> </p>
-<p> <code>-Jc</code><i>lon0/lat0/scale</i> (Cassini)<br />
- <code>-Jcyl_stere</code>/[<i>lon0/</i>[<i>lat0/</i>]]<i>scale</i> (Cylindrical Stereographic)<br />
- <code>-Jj</code>[<i>lon0/</i>]<i>scale</i> (Miller)<br />
- <code>-Jm</code>[<i>lon0</i>/[<i>lat0/</i>]]<i>scale</i> (Mercator)<br />
- <code>-Jm</code><i>lon0/lat0/scale</i> (Mercator &#8211; Give meridian and standard parallel)<br />
- <code>-Jo</code>[<code>a</code>]<i>lon0/lat0/azimuth/scale</i> (Oblique Mercator &#8211; point and azimuth)<br />
- <code>-Jo</code>[<code>b</code>]<i>lon0/lat0/lon1/lat1/scale</i> (Oblique Mercator &#8211; two points)<br />
- <code>-Joc</code><i>lon0/lat0/lonp/latp/scale</i> (Oblique Mercator &#8211; point and pole)<br />
- <code>-Jq</code>[<i>lon0/</i>[<i>lat0/</i>]]<i>scale</i> (Cylindrical Equidistant)<br />
- <code>-Jt</code><i>lon0/</i>[<i>lat0/</i>]<i>scale</i> (TM &#8211; Transverse Mercator)<br />
- <code>-Ju</code><i>zone/scale</i> (UTM &#8211; Universal Transverse Mercator)<br />
+<p> <code>-Jc</code><i>lon0/lat0/scale</i> (Cassini)<br/>
+ <code>-Jcyl_stere</code>/[<i>lon0/</i>[<i>lat0/</i>]]<i>scale</i> (Cylindrical Stereographic)<br/>
+ <code>-Jj</code>[<i>lon0/</i>]<i>scale</i> (Miller)<br/>
+ <code>-Jm</code>[<i>lon0</i>/[<i>lat0/</i>]]<i>scale</i> (Mercator)<br/>
+ <code>-Jm</code><i>lon0/lat0/scale</i> (Mercator &#8211; Give meridian and standard parallel)<br/>
+ <code>-Jo</code>[<code>a</code>]<i>lon0/lat0/azimuth/scale</i> (Oblique Mercator &#8211; point and azimuth)<br/>
+ <code>-Jo</code>[<code>b</code>]<i>lon0/lat0/lon1/lat1/scale</i> (Oblique Mercator &#8211; two points)<br/>
+ <code>-Joc</code><i>lon0/lat0/lonp/latp/scale</i> (Oblique Mercator &#8211; point and pole)<br/>
+ <code>-Jq</code>[<i>lon0/</i>[<i>lat0/</i>]]<i>scale</i> (Cylindrical Equidistant)<br/>
+ <code>-Jt</code><i>lon0/</i>[<i>lat0/</i>]<i>scale</i> (TM &#8211; Transverse Mercator)<br/>
+ <code>-Ju</code><i>zone/scale</i> (UTM &#8211; Universal Transverse Mercator)<br/>
  <code>-Jy</code>[<i>lon0/</i>[<i>lat0/</i>]]<i>scale</i> (Cylindrical Equal-Area) </p>
 <p> <code>CONIC PROJECTIONS:</code> </p>
-<p> <code>-Jb</code><i>lon0/lat0/lat1/lat2/scale</i> (Albers)<br />
- <code>-Jd</code><i>lon0/lat0/lat1/lat2/scale</i> (Conic Equidistant)<br />
- <code>-Jl</code><i>lon0/lat0/lat1/lat2/scale</i> (Lambert Conic Conformal)<br />
+<p> <code>-Jb</code><i>lon0/lat0/lat1/lat2/scale</i> (Albers)<br/>
+ <code>-Jd</code><i>lon0/lat0/lat1/lat2/scale</i> (Conic Equidistant)<br/>
+ <code>-Jl</code><i>lon0/lat0/lat1/lat2/scale</i> (Lambert Conic Conformal)<br/>
  <code>-Jpoly</code>/[<i>lon0/</i>[<i>lat0/</i>]]<i>scale</i> ((American) Polyconic) </p>
 <p> <code>AZIMUTHAL PROJECTIONS:</code> </p>
-<p> <code>-Ja</code><i>lon0/lat0</i>[<i>/horizon</i>]<i>/scale</i> (Lambert Azimuthal Equal-Area)<br />
- <code>-Je</code><i>lon0/lat0</i>[<i>/horizon</i>]<i>/scale</i> (Azimuthal Equidistant)<br />
- <code>-Jf</code><i>lon0/lat0</i>[<i>/horizon</i>]<i>/scale</i> (Gnomonic)<br />
- <code>-Jg</code><i>lon0/lat0</i>[<i>/horizon</i>]<i>/scale</i> (Orthographic)<br />
- <code>-Jg</code><i>lon0/lat0/altitude/azimuth/tilt/twist/Width/Height/scale</i> (General Perspective).<br />
+<p> <code>-Ja</code><i>lon0/lat0</i>[<i>/horizon</i>]<i>/scale</i> (Lambert Azimuthal Equal-Area)<br/>
+ <code>-Je</code><i>lon0/lat0</i>[<i>/horizon</i>]<i>/scale</i> (Azimuthal Equidistant)<br/>
+ <code>-Jf</code><i>lon0/lat0</i>[<i>/horizon</i>]<i>/scale</i> (Gnomonic)<br/>
+ <code>-Jg</code><i>lon0/lat0</i>[<i>/horizon</i>]<i>/scale</i> (Orthographic)<br/>
+ <code>-Jg</code><i>lon0/lat0/altitude/azimuth/tilt/twist/Width/Height/scale</i> (General Perspective).<br/>
  <code>-Js</code><i>lon0/lat0</i>[<i>/horizon</i>]<i>/scale</i> (General Stereographic) </p>
 <p> <code>MISCELLANEOUS PROJECTIONS:</code> </p>
-<p> <code>-Jh</code>[<i>lon0/</i>]<i>scale</i> (Hammer)<br />
- <code>-Ji</code>[<i>lon0/</i>]<i>scale</i> (Sinusoidal)<br />
- <code>-Jkf</code>[<i>lon0/</i>]<i>scale</i> (Eckert IV)<br />
- <code>-Jk</code>[<code>s</code>][<i>lon0/</i>]<i>scale</i> (Eckert IV)<br />
- <code>-Jn</code>[<i>lon0/</i>]<i>scale</i> (Robinson)<br />
- <code>-Jr</code>[<i>lon0/</i>]<i>scale</i> (Winkel Tripel)<br />
- <code>-Jv</code>[<i>lon0/</i>]<i>scale</i> (Van der Grinten)<br />
+<p> <code>-Jh</code>[<i>lon0/</i>]<i>scale</i> (Hammer)<br/>
+ <code>-Ji</code>[<i>lon0/</i>]<i>scale</i> (Sinusoidal)<br/>
+ <code>-Jkf</code>[<i>lon0/</i>]<i>scale</i> (Eckert IV)<br/>
+ <code>-Jk</code>[<code>s</code>][<i>lon0/</i>]<i>scale</i> (Eckert IV)<br/>
+ <code>-Jn</code>[<i>lon0/</i>]<i>scale</i> (Robinson)<br/>
+ <code>-Jr</code>[<i>lon0/</i>]<i>scale</i> (Winkel Tripel)<br/>
+ <code>-Jv</code>[<i>lon0/</i>]<i>scale</i> (Van der Grinten)<br/>
  <code>-Jw</code>[<i>lon0/</i>]<i>scale</i> (Mollweide) </p>
 <p> <code>NON-GEOGRAPHICAL PROJECTIONS:</code> </p>
-<p> <code>-Jp</code>[<code>a</code>]<i>scale</i>[<i>/origin</i>][<code>r</code>|<code>z</code>] (Polar coordinates (theta,r))<br />
+<p> <code>-Jp</code>[<code>a</code>]<i>scale</i>[<i>/origin</i>][<code>r</code>|<code>z</code>] (Polar coordinates (theta,r))<br/>
  <code>-Jx</code><i>x-scale</i>[<code>d</code>|<code>l</code>|<code>p</code><i>pow</i>|<code>t</code>|<code>T</code>][<i>/y-scale</i>[<code>d</code>|<code>l</code>|<code>p</code><i>pow</i>|<code>t</code>|<code>T</code>]] (Linear, log, and power scaling) </p>
 <dt><code>-R</code></dt>
 <dd> <i>west, east, south,</i> and <i>north</i> specify the Region of interest, and you may specify them in decimal degrees or in [+-]dd:mm[:ss.xxx][W|E|S|N] format. Append <code>r</code> if lower left and upper right map coordinates are given instead of w/e/s/n. The two shorthands <code>-Rg</code> and <code>-Rd</code> stand for global domain (0/360 and -180/+180 in longitude respectively, with -90/+90 in latitude). Alternatively, specify the name of an existing grid file and the <code>-R</code> settings (and grid spacing, if applicable) are copied from the grid.</dd></dl>
@@ -97,8 +97,8 @@ description: "gmttrack – A shiptrack plotting program"
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-gmt/">GMT</a></i>(1), <i><a href="/docs/linux/man/1-psbasemap/">psbasemap</a></i>(1)</p>
 <h2>REFERENCES</h2>
-<p> Wessel, P., and W. H. F. Smith, 2009, The Generic Mapping Tools (GMT) version 4.5.0 Technical Reference &amp; Cookbook, SOEST/NOAA.<br />
- Wessel, P., and W. H. F. Smith, 1998, New, Improved Version of Generic Mapping Tools Released, EOS Trans., AGU, 79 (47), p. 579.<br />
- Wessel, P., and W. H. F. Smith, 1995, New Version of the Generic Mapping Tools Released, EOS Trans., AGU, 76 (33), p. 329.<br />
- Wessel, P., and W. H. F. Smith, 1995, New Version of the Generic Mapping Tools Released, <a rel="nofollow" href="http://www.agu.org/eos_elec/95154e.html,">http://www.agu.org/eos_elec/95154e.html,</a> Copyright 1995 by the American Geophysical Union.<br />
+<p> Wessel, P., and W. H. F. Smith, 2009, The Generic Mapping Tools (GMT) version 4.5.0 Technical Reference &amp; Cookbook, SOEST/NOAA.<br/>
+ Wessel, P., and W. H. F. Smith, 1998, New, Improved Version of Generic Mapping Tools Released, EOS Trans., AGU, 79 (47), p. 579.<br/>
+ Wessel, P., and W. H. F. Smith, 1995, New Version of the Generic Mapping Tools Released, EOS Trans., AGU, 76 (33), p. 329.<br/>
+ Wessel, P., and W. H. F. Smith, 1995, New Version of the Generic Mapping Tools Released, <a rel="nofollow" href="http://www.agu.org/eos_elec/95154e.html,">http://www.agu.org/eos_elec/95154e.html,</a> Copyright 1995 by the American Geophysical Union.<br/>
  Wessel, P., and W. H. F. Smith, 1991, Free Software Helps Map and Display Data, EOS Trans., AGU, 72 (41), p. 441. </p>

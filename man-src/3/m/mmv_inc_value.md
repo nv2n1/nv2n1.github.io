@@ -9,7 +9,7 @@ description: "mmv_inc_value – update a value in a Memory Mapped Value file"
 
 <p><code>mmv_inc_value</code> &#8211; update a value in a Memory Mapped Value file</p>
 <h2>C Synopsis</h2>
-<p><code> #include &lt;pcp/pmapi.h&gt;<br />
+<p><code> #include &lt;pcp/pmapi.h&gt;<br/>
  #include &lt;pcp/mmv_stats.h&gt; </p>
 <p> void mmv_inc_value(void *</code><i>addr</i>, pmAtomValue *<i>val</i>, double <i>inc</i>); </p>
 <p> cc &#8230; -lpcp_mmv -lpcp</p>

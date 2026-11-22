@@ -7,7 +7,7 @@ url: "/docs/linux/man/8-ipmaddr/"
 description: "ipmaddr – adds, deletes, and displays multicast addresses"
 ---
 
-<p><code>ipmaddr</code> &#8211; adds, deletes, and displays multicast addresses<br />
+<p><code>ipmaddr</code> &#8211; adds, deletes, and displays multicast addresses<br/>
 &nbsp;<wbr></p>
 <h2>Synopsis</h2>
 <p><code>/usr/sbin/ipmaddr</code> [&lt;<code>operation</code>&gt;] [&lt;<code>args</code>&gt;] </p>

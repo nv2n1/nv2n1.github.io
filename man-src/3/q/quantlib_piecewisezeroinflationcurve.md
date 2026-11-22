@@ -18,9 +18,9 @@ description: "QuantLib::PiecewiseZeroInflationCurve – Piecewise zero-inflation
 <p><code>Constructors</code> </p>
 <p> <code>PiecewiseZeroInflationCurve</code> (const <code>Date</code> &amp;referenceDate, const <code>Calendar</code> &amp;calendar, const <code>DayCounter</code> &amp;dayCounter, const <code>Period</code> &amp;lag, <code>Frequency</code> frequency, <code>Rate</code> baseZeroRate, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;nominalTS, const std::vector&lt; boost::shared_ptr&lt; typename Traits::helper &gt; &gt; &amp;instruments, <code>Real</code> accuracy=1.0e-12, const Interpolator &amp;i=Interpolator()) </p>
 <p> <code>Inflation interface</code> </p>
-<p> <code>Date</code> <code>baseDate</code> () const<br />
- <i>minimum (base) date </i><br />
- <code>Date</code> <code>maxDate</code> () const<br />
+<p> <code>Date</code> <code>baseDate</code> () const<br/>
+ <i>minimum (base) date </i><br/>
+ <code>Date</code> <code>maxDate</code> () const<br/>
  <i>the latest date for which the curve can return values </i> </p>
 <p> <code>Inspectors</code> </p>
 <p> const std::vector&lt; <code>Time</code> &gt; &amp; <code>times</code> () const </p>

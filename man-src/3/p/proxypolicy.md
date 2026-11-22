@@ -72,7 +72,7 @@ PROXYPOLICY * d2i_PROXYPOLICY (PROXYPOLICY **a, unsigned char **pp, long length)
 <h3>int PROXYPOLICY_print (BIO * bp, <code>PROXYPOLICY</code> * policy)</h3>
 <p>Prints the PROXYPOLICY struct using the BIO stream. <code>Parameters:</code></p>
 <dl>
-<dd><i>bp</i> the BIO stream to print to<br />
+<dd><i>bp</i> the BIO stream to print to<br/>
  <i>policy</i> the PROXYPOLICY to print</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -80,7 +80,7 @@ PROXYPOLICY * d2i_PROXYPOLICY (PROXYPOLICY **a, unsigned char **pp, long length)
 <h3>int PROXYPOLICY_print_fp (FILE * fp, <code>PROXYPOLICY</code> * policy)</h3>
 <p>Prints the PROXYPOLICY to the file stream FILE*. <code>Parameters:</code></p>
 <dl>
-<dd><i>fp</i> the FILE* stream to print to<br />
+<dd><i>fp</i> the FILE* stream to print to<br/>
  <i>policy</i> the PROXYPOLICY to print</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -88,7 +88,7 @@ PROXYPOLICY * d2i_PROXYPOLICY (PROXYPOLICY **a, unsigned char **pp, long length)
 <h3>int PROXYPOLICY_set_policy_language (<code>PROXYPOLICY</code> * policy, ASN1_OBJECT * policy_language)</h3>
 <p>Sets the policy language of the PROXYPOLICY. <code>Parameters:</code></p>
 <dl>
-<dd><i>policy</i> the PROXYPOLICY to set the policy language of<br />
+<dd><i>policy</i> the PROXYPOLICY to set the policy language of<br/>
  <i>policy_language</i> the policy language to set it to</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -103,8 +103,8 @@ PROXYPOLICY * d2i_PROXYPOLICY (PROXYPOLICY **a, unsigned char **pp, long length)
 <h3>int PROXYPOLICY_set_policy (<code>PROXYPOLICY</code> * proxypolicy, unsigned char * policy, int length)</h3>
 <p>Sets the policy of the PROXYPOLICY. <code>Parameters:</code></p>
 <dl>
-<dd><i>proxypolicy</i> the proxy policy to set the policy of<br />
- <i>policy</i> the policy to set it to<br />
+<dd><i>proxypolicy</i> the proxy policy to set the policy of<br/>
+ <i>policy</i> the policy to set it to<br/>
  <i>length</i> the length of the policy</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -112,7 +112,7 @@ PROXYPOLICY * d2i_PROXYPOLICY (PROXYPOLICY **a, unsigned char **pp, long length)
 <h3>unsigned char* PROXYPOLICY_get_policy (<code>PROXYPOLICY</code> * policy, int * length)</h3>
 <p>Gets the policy of a PROXYPOLICY. <code>Parameters:</code></p>
 <dl>
-<dd><i>policy</i> the PROXYPOLICY to get the policy of<br />
+<dd><i>policy</i> the PROXYPOLICY to get the policy of<br/>
  <i>length</i> the length of the returned policy &#8211; this value gets set by this function</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -120,7 +120,7 @@ PROXYPOLICY * d2i_PROXYPOLICY (PROXYPOLICY **a, unsigned char **pp, long length)
 <h3>int i2d_PROXYPOLICY (<code>PROXYPOLICY</code> * a, unsigned char ** pp)</h3>
 <p>Converts a PROXYPOLICY from its internal structure to a DER encoded form. <code>Parameters:</code></p>
 <dl>
-<dd><i>a</i> the PROXYPOLICY to convert<br />
+<dd><i>a</i> the PROXYPOLICY to convert<br/>
  <i>pp</i> the buffer to put the DER encoding in</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -128,8 +128,8 @@ PROXYPOLICY * d2i_PROXYPOLICY (PROXYPOLICY **a, unsigned char **pp, long length)
 <h3><code>PROXYPOLICY</code>* d2i_PROXYPOLICY (<code>PROXYPOLICY</code> ** a, unsigned char ** pp, long length)</h3>
 <p>Converts the PROXYPOLICY from its DER encoded form to an internal PROXYPOLICY structure. <code>Parameters:</code></p>
 <dl>
-<dd><i>a</i> the PROXYPOLICY struct to set<br />
- <i>pp</i> the DER encoding to get the PROXYPOLICY from<br />
+<dd><i>a</i> the PROXYPOLICY struct to set<br/>
+ <i>pp</i> the DER encoding to get the PROXYPOLICY from<br/>
  <i>length</i> the length of the DER encoding</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

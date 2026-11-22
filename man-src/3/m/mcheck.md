@@ -50,10 +50,10 @@ enum mcheck_status mprobe(void *ptr);
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>mcheck</code>(), <code>mcheck_pedantic</code>(),<br />
+<td> <code>mcheck</code>(), <code>mcheck_pedantic</code>(),<br/>
  <code>mcheck_check_all</code>(), <code>mprobe</code>() </td>
 <td>Thread safety</td>
-<td> MT-Unsafe race:mcheck<br />
+<td> MT-Unsafe race:mcheck<br/>
  const:malloc_hooks
 </td>
 </tr>
@@ -68,20 +68,20 @@ enum mcheck_status mprobe(void *ptr);
 <p> About to free a second time block freed twice Aborted (core dumped)</p>
 <h3>Program source</h3>
 <p> #include &lt;stdlib.h&gt; #include &lt;stdio.h&gt; #include &lt;mcheck.h&gt; </p>
-<p> int main(int argc, char *argv[]) {<br />
+<p> int main(int argc, char *argv[]) {<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;*p; </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(mcheck(NULL)&nbsp;!=&nbsp;0)&nbsp;{<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(mcheck(NULL)&nbsp;!=&nbsp;0)&nbsp;{<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;fprintf(stderr,&nbsp;&quot;mcheck()&nbsp;failed
 &quot;); </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_FAILURE);<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_FAILURE);<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;} </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;p&nbsp;=&nbsp;malloc(1000); </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;fprintf(stderr,&nbsp;&quot;About to free
-&quot;);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;free(p);<br />
+&quot;);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;free(p);<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;fprintf(stderr,&nbsp;&quot;
 About to free a second time
-&quot;);<br />
+&quot;);<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;free(p); </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_SUCCESS); }</p>
 <h2>SEE ALSO</h2>

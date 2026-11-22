@@ -11,8 +11,8 @@ description: "cexp2, cexp2f, cexp2l – base-2 exponent of a complex number"
 <p> cexp2, cexp2f, cexp2l &#8211; base-2 exponent of a complex number </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>
-<p> <code>double complex cexp2(double complex </code><i>z</i><code>);</code><br />
- <code>float complex cexp2f(float complex </code><i>z</i><code>);</code><br />
+<p> <code>double complex cexp2(double complex </code><i>z</i><code>);</code><br/>
+ <code>float complex cexp2f(float complex </code><i>z</i><code>);</code><br/>
  <code>long double complex cexp2l(long double complex </code><i>z</i><code>);</code> </p>
 <p> Link with <i>-lm</i>.</p>
 <h2>DESCRIPTION</h2>

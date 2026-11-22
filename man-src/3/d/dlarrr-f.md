@@ -10,7 +10,7 @@ description: "dlarrr.f –"
 <p>dlarrr.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dlarrr</code> (N, D, E, INFO)<br />
+<p>subroutine <code>dlarrr</code> (N, D, E, INFO)<br/>
  <i></i><code>DLARRR</code> performs tests to decide whether the symmetric tridiagonal matrix T warrants expensive computations which guarantee high relative accuracy in the eigenvalues.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlarrr (integerN, double precision, dimension( * )D, double precision, dimension( * )E, integerINFO)</h3>

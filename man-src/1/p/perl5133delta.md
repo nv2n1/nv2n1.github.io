@@ -16,13 +16,13 @@ description: "perl5133delta – what is new for perl v5.13.3"
 <h3>\o{&#8230;} for octals</h3>
 <p> There is a new escape sequence, <tt>&quot;\o&quot;</tt>, in double-quote-like contexts. It must be followed by braces enclosing an octal number of at least one digit. It interpolates as the character with an ordinal value equal to the octal number. This construct allows large octal ordinals beyond the current max of 0777 to be represented. It also allows you to specify a character in octal which can safely be concatenated with other regex snippets and which won&#8217;t be confused with being a backreference to a regex capture group. See &#8220;Capture groups&#8221; in perlre.</p>
 <h3>\N{<i>name</i>} and charnames enhancements</h3>
-<p> <tt>&quot;\N{}&quot;</tt> and <tt>&quot;charnames::vianame&quot;</tt> now know about the abbreviated character names listed by Unicode, such as <font SIZE="-1">NBSP</font>, <font SIZE="-1">SHY</font>, <font SIZE="-1">LRO</font>, <font SIZE="-1">ZWJ</font>, etc., as well as all the customary abbreviations for the C0 and C1 control characters (such as <font SIZE="-1">ACK</font>, <font SIZE="-1">BEL</font>, <font SIZE="-1">CAN</font>, etc.), as well as a few new variants in common usage of some C1 full names. </p>
+<p> <tt>&quot;\N{}&quot;</tt> and <tt>&quot;charnames::vianame&quot;</tt> now know about the abbreviated character names listed by Unicode, such as NBSP, SHY, LRO, ZWJ, etc., as well as all the customary abbreviations for the C0 and C1 control characters (such as ACK, BEL, CAN, etc.), as well as a few new variants in common usage of some C1 full names. </p>
 <p> In the past, it was ineffective to override one of Perl&#8217;s abbreviations with your own custom alias. Now it works. </p>
 <p> You can also create a custom alias directly to the ordinal of a character, known by <tt>&quot;\N{...}&quot;</tt>, <tt>&quot;charnames::vianame()&quot;</tt>, and <tt>&quot;charnames::viacode()&quot;</tt>. Previously, an alias had to be to an official Unicode character name. This made it impossible to create an alias for a code point that had no name, such as the ones reserved for private use. So this change allows you to make more effective use of private use characters. Only if there is no official name will <tt>&quot;charnames::viacode()&quot;</tt> return your custom one. </p>
 <p> See charnames for details on all these changes.</p>
 <h3>Uppercase X/B allowed in hexadecimal/binary literals</h3>
 <p> Literals may now use either upper case <tt>&quot;0X...&quot;</tt> or <tt>&quot;0B...&quot;</tt> prefixes, in addition to the already supported <tt>&quot;0x...&quot;</tt> and <tt>&quot;0b...&quot;</tt> syntax. (RT#76296) (a674e8d, 333f87f) </p>
-<p> C, Ruby, Python and <font SIZE="-1">PHP</font> already supported this syntax, and it makes Perl more internally consistent. A round-trip with <tt>&quot;eval sprintf &quot;%#X&quot;, 0x10&quot;</tt> now returns <tt>16</tt> in addition to <tt>&quot;eval sprintf &quot;%#x&quot;, 0x10&quot;</tt>, which worked before.</p>
+<p> C, Ruby, Python and PHP already supported this syntax, and it makes Perl more internally consistent. A round-trip with <tt>&quot;eval sprintf &quot;%#X&quot;, 0x10&quot;</tt> now returns <tt>16</tt> in addition to <tt>&quot;eval sprintf &quot;%#x&quot;, 0x10&quot;</tt>, which worked before.</p>
 <h2>Incompatible Changes</h2>
 <h3>\400 &#8211; \777</h3>
 <p> Use of <tt>&quot;\400&quot;</tt> &#8211; <tt>&quot;\777&quot;</tt> in regexes in certain circumstances has given different, anomalous behavior than their use in all other double-quote-like contexts. Since 5.10.1, a deprecated warning message has been raised when this happens. Now, all double-quote-like contexts have the same behavior, namely to be equivalent to <tt>&quot;</tt>\x{100}&quot;</code> &#8211; <code>&quot;\x{1FF}&quot;</code>, with no deprecation warning. Use of these values in the command line option <code>&quot;-0&quot;</code> retains the current meaning to slurp input files whole; previously, this was documented only for <code>&quot;-0777&quot;</code>. It is recommended, however, because of various ambiguities, to use the new <code>&quot;\o{...}&quot;</code> construct to represent characters in octal. (fa1639c..f6993e9).  </p>
@@ -30,9 +30,9 @@ description: "perl5133delta – what is new for perl v5.13.3"
 <h3>Omitting a space between a regular expression and subsequent word</h3>
 <p> Omitting a space between a regex pattern or pattern modifiers and the following word is deprecated. Deprecation for regular expression <i>matches</i> was added in Perl 5.13.2. In this release, the deprecation is extended to regular expression <i>substitutions</i>. For example, <code>&quot;s/foo/bar/sand $bar&quot;</code> will still be parsed as <code>&quot;s/foo/bar/s and $bar&quot;</code> but will issue a warning. (aa78b66)  </p>
 <h3>Deprecation warning added for deprecated-in-core .pl libs</h3>
-<p> This is a mandatory warning, not obeying -X or lexical warning bits. The warning is modelled on that supplied by deprecate.pm for deprecated-in-core .pm libraries. It points to the specific <font SIZE="-1">CPAN</font> distribution that contains the .pl libraries. The <font SIZE="-1">CPAN</font> version, of course, does not generate the warning. (0111154)  </p>
+<p> This is a mandatory warning, not obeying -X or lexical warning bits. The warning is modelled on that supplied by deprecate.pm for deprecated-in-core .pm libraries. It points to the specific CPAN distribution that contains the .pl libraries. The CPAN version, of course, does not generate the warning. (0111154)  </p>
 <h2>Performance Enhancements</h2>
-<p> There are several small optimizations to reduce <font SIZE="-1">CPU</font> cache misses in various very commonly used modules like <code>&quot;warnings&quot;</code> and <code>&quot;Carp&quot;</code> as well in accessing file-handles for reading.  </p>
+<p> There are several small optimizations to reduce CPU cache misses in various very commonly used modules like <code>&quot;warnings&quot;</code> and <code>&quot;Carp&quot;</code> as well in accessing file-handles for reading.  </p>
 <h2>Modules and Pragmata</h2>
 <h3>Updated Modules and Pragmata</h3>
 <dl>
@@ -58,7 +58,7 @@ description: "perl5133delta – what is new for perl v5.13.3"
  </dd>
 <dt>&quot;Archive::Extract&quot;</dt>
 <dd> <p> Upgraded from version 0.38 to 0.42. </p>
-<p> Updates since 0.38 include: a safe print method that guards Archive::Extract from changes to $\; a fix to the tests when run in core perl; support for <font SIZE="-1">TZ</font> files; and a modification for the lzma logic to favour IO::Uncompress::Unlzma (d7f8799) </p>
+<p> Updates since 0.38 include: a safe print method that guards Archive::Extract from changes to $\; a fix to the tests when run in core perl; support for TZ files; and a modification for the lzma logic to favour IO::Uncompress::Unlzma (d7f8799) </p>
  </dd>
 <dt>&quot;Archive::Tar&quot;</dt>
 <dd> <p> Upgraded from version 1.54 to 1.64. </p>
@@ -88,7 +88,7 @@ description: "perl5133delta – what is new for perl v5.13.3"
  </dd>
 <dt>&quot;Exporter&quot;</dt>
 <dd> <p> Upgraded from version 5.64_02 to 5.64_03. </p>
-<p> Exporter no longer overrides <code>$SIG{__WARN__}</code> (<font SIZE="-1">RT</font> #74472) (9b86bb5) </p>
+<p> Exporter no longer overrides <code>$SIG{__WARN__}</code> (RT #74472) (9b86bb5) </p>
  </dd>
 <dt>&quot;ExtUtils::CBuilder&quot;</dt>
 <dd> <p> Upgraded from version 0.27 to 0.2703. </p>
@@ -161,7 +161,7 @@ description: "perl5133delta – what is new for perl v5.13.3"
 <p> <i>perlfunc</i> </p>
 <dl>
 <dt>&bull;</dt>
-<dd> <p> Added cautionary note about ``no <font SIZE="-1">VERSION</font>&#8216;&#8216; (e0de7c2) </p>
+<dd> <p> Added cautionary note about ``no VERSION&#8216;&#8216; (e0de7c2) </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Added additional notes regarding srand when forking (d460397) </p>
@@ -211,7 +211,7 @@ description: "perl5133delta – what is new for perl v5.13.3"
 <h2>Testing</h2>
 <dl>
 <dt>&bull;</dt>
-<dd> <p> <i>t/harness</i> clears <font SIZE="-1">PERL5LIB</font>, <font SIZE="-1">PERLLIB</font>, <font SIZE="-1">PERL5OPT</font> as t/TEST does (a2d3de1) </p>
+<dd> <p> <i>t/harness</i> clears PERL5LIB, PERLLIB, PERL5OPT as t/TEST does (a2d3de1) </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Many common testing routines were refactored into t/lib/common.pl </p>
@@ -233,10 +233,10 @@ description: "perl5133delta – what is new for perl v5.13.3"
 <h2>Internal Changes</h2>
 <dl>
 <dt>&bull;</dt>
-<dd> <p> Under some circumstances, the <code>&quot;CvGV()&quot;</code> field of a <font SIZE="-1">CV</font> is now reference counted. To ensure consistent behaviour, direct assignment to it, for example <code>&quot;CvGV(cv) = gv&quot;</code> is now a compile-time error. A new macro, <code>&quot;CvGV_set(cv,gv)&quot;</code> has been introduced to perform this operation safely. Note that modification of this field is not part of of the public <font SIZE="-1">API</font>, regardless of this new macro. This change caused some issues in modules that used the private <code>&quot;GvGV()&quot;</code> field. </p>
+<dd> <p> Under some circumstances, the <code>&quot;CvGV()&quot;</code> field of a CV is now reference counted. To ensure consistent behaviour, direct assignment to it, for example <code>&quot;CvGV(cv) = gv&quot;</code> is now a compile-time error. A new macro, <code>&quot;CvGV_set(cv,gv)&quot;</code> has been introduced to perform this operation safely. Note that modification of this field is not part of of the public API, regardless of this new macro. This change caused some issues in modules that used the private <code>&quot;GvGV()&quot;</code> field. </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> It is now possible for <font SIZE="-1">XS</font> code to hook into Perl&#8217;s lexical scope mechanism at compile time, using the new <code>&quot;Perl_blockhook_register&quot;</code> function. See ``Compile-time scope hooks&#8217;&#8216; in perlguts. </p>
+<dd> <p> It is now possible for XS code to hook into Perl&#8217;s lexical scope mechanism at compile time, using the new <code>&quot;Perl_blockhook_register&quot;</code> function. See ``Compile-time scope hooks&#8217;&#8216; in perlguts. </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Added <code>&quot;Perl_croak_no_modify()&quot;</code> to implement <code>&quot;Perl_croak(&quot;%s&quot;, PL_no_modify)&quot;</code> (6ad8f25) </p>
@@ -256,7 +256,7 @@ description: "perl5133delta – what is new for perl v5.13.3"
 <dd> <p> Fixed <i>readline()</i> when interrupted by signals so it no longer returns the ``same thing&#8217;&#8216; as before or random memory </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Fixed a regression of <i>kill()</i> when a match variable is used for the process <font SIZE="-1">ID</font> to kill (RT#75812) (8af710e) </p>
+<dd> <p> Fixed a regression of <i>kill()</i> when a match variable is used for the process ID to kill (RT#75812) (8af710e) </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Fixed several subtle bugs in <i>sort()</i> when <code>@_</code> is accessed within a subroutine used for sorting (RT#72334) (8f443ca) </p>
@@ -265,7 +265,7 @@ description: "perl5133delta – what is new for perl v5.13.3"
 <dd> <p> Catch <i>yyparse()</i> exceptions in <code>&quot;(?{...})&quot;</code> (RT#2353) (634d691) </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Avoid <font SIZE="-1">UTF-8</font> cache panics with offsets beyond a string (<font SIZE="-1">RT</font> #75898) (3e2d381) </p>
+<dd> <p> Avoid UTF-8 cache panics with offsets beyond a string (RT #75898) (3e2d381) </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Fixed POSIX::strftime memory leak (RT#73520) (c4bc4aa) </p>
@@ -277,13 +277,13 @@ description: "perl5133delta – what is new for perl v5.13.3"
 <dd> <p> Avoids multiple FETCH/stringify on filetest ops (40c852d) </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Fixed issue with string <code>&quot;eval&quot;</code> not detecting taint of overloaded/tied arguments (<font SIZE="-1">RT</font> #75716) (895b760) </p>
+<dd> <p> Fixed issue with string <code>&quot;eval&quot;</code> not detecting taint of overloaded/tied arguments (RT #75716) (895b760) </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Fix potential crashes of string <code>&quot;eval&quot;</code> when evaluating a object with overloaded stringification by creating a stringified copy when necessary (3e5c018) </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Fixed bug where overloaded stringification could remove tainting (<font SIZE="-1">RT</font> #75716) (a02ec77) </p>
+<dd> <p> Fixed bug where overloaded stringification could remove tainting (RT #75716) (a02ec77) </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> Plugs more memory leaks in vms.c. (9e2bec0) </p>
@@ -300,7 +300,7 @@ description: "perl5133delta – what is new for perl v5.13.3"
 <dd> <p> <i>readline()</i> returns an empty string instead of undef when it is interrupted by a signal </p>
  </dd>
 <dt>&bull;</dt>
-<dd> <p> Test-Harness was updated from 3.17 to 3.21 for this release. A rewrite in how it handles non-Perl tests (in 3.17_01) broke argument passing to non-Perl tests with prove (<font SIZE="-1">RT</font> #59186), and required that non-Perl tests be run as <code>&quot;prove ./test.sh&quot;</code> instead of <code>&quot;prove test.sh&quot;</code> These issues are being solved upstream, but didn&#8217;t make it into this release. They&#8217;re expected to be fixed in time for perl v5.13.4. (<font SIZE="-1">RT</font> #59457) </p>
+<dd> <p> Test-Harness was updated from 3.17 to 3.21 for this release. A rewrite in how it handles non-Perl tests (in 3.17_01) broke argument passing to non-Perl tests with prove (RT #59186), and required that non-Perl tests be run as <code>&quot;prove ./test.sh&quot;</code> instead of <code>&quot;prove test.sh&quot;</code> These issues are being solved upstream, but didn&#8217;t make it into this release. They&#8217;re expected to be fixed in time for perl v5.13.4. (RT #59457) </p>
  </dd>
 <dt>&bull;</dt>
 <dd> <p> <code>&quot;version&quot;</code> now prevents object methods from being called as class methods (d808b68) </p>
@@ -317,9 +317,9 @@ description: "perl5133delta – what is new for perl v5.13.3"
 <h2>Reporting Bugs</h2>
 <p> If you find what you think is a bug, you might check the articles recently posted to the comp.lang.perl.misc newsgroup and the perl bug database at <a rel="nofollow" href="http://rt.perl.org/perlbug/">http://rt.perl.org/perlbug/</a> . There may also be information at <a rel="nofollow" href="http://www.perl.org/">http://www.perl.org/</a> , the Perl Home Page. </p>
 <p> If you believe you have an unreported bug, please run the <code>perlbug</code> program included with your release. Be sure to trim your bug down to a tiny but sufficient test case. Your bug report, along with the output of <code>&quot;perl -V&quot;</code>, will be sent off to perlbug [at] perl.org to be analysed by the Perl porting team. </p>
-<p> If the bug you are reporting has security implications, which make it inappropriate to send to a publicly archived mailing list, then please send it to perl5-security-report [at] perl.org. This points to a closed subscription unarchived mailing list, which includes all the core committers, who be able to help assess the impact of issues, figure out a resolution, and help co-ordinate the release of patches to mitigate or fix the problem across all platforms on which Perl is supported. Please only use this address for security issues in the Perl core, not for modules independently distributed on <font SIZE="-1">CPAN</font>.  </p>
+<p> If the bug you are reporting has security implications, which make it inappropriate to send to a publicly archived mailing list, then please send it to perl5-security-report [at] perl.org. This points to a closed subscription unarchived mailing list, which includes all the core committers, who be able to help assess the impact of issues, figure out a resolution, and help co-ordinate the release of patches to mitigate or fix the problem across all platforms on which Perl is supported. Please only use this address for security issues in the Perl core, not for modules independently distributed on CPAN.  </p>
 <h2>SEE ALSO</h2>
 <p> The <i>Changes</i> file for an explanation of how to view exhaustive details on what changed. </p>
-<p> The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. </p>
-<p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
+<p> The <i></i><i>INSTALL</i><i></i> file for how to build Perl. </p>
+<p> The <i></i><i>README</i><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information. </p>

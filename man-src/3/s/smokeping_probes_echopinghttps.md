@@ -9,7 +9,7 @@ url: "/docs/linux/man/3-smokeping_probes_echopinghttps/"
 Smokeping::probes::EchoPingHttps - an 
 
 <a HREF="/docs/linux/man/1-echoping/">echoping</a>(1) probe for SmokePing
-<h2>Overview</h2>Measures <font SIZE="-1">HTTPS </font>(<font SIZE="-1">HTTP</font> over <font SIZE="-1">SSL</font>) roundtrip times (web servers and caches) for SmokePing.
+<h2>Overview</h2>Measures HTTPS (HTTP over SSL) roundtrip times (web servers and caches) for SmokePing.
 <h2>Synopsis</h2><pre> *** Probes ***
  +EchoPingHttps
  binary = /usr/bin/echoping
@@ -59,16 +59,16 @@ Smokeping::probes::EchoPingHttps - an
  Example value: 5 
  Default value: 5
 </dd><dt>offset
-</dt><dd>If you run many probes concurrently you may want to prevent them from hitting your network all at the same time. Using the probe-specific offset parameter you can change the point in time when each probe will be run. Offset is specified in % of total interval, or alternatively as 'random', and the offset from the 'General' section is used if nothing is specified here. Note that this does <font SIZE="-1">NOT</font> influence the rrds itself, it is just a matter of when data acqusition is initiated. (This variable is only applicable if the variable 'concurrentprobes' is set in the 'General' section.) 
+</dt><dd>If you run many probes concurrently you may want to prevent them from hitting your network all at the same time. Using the probe-specific offset parameter you can change the point in time when each probe will be run. Offset is specified in % of total interval, or alternatively as 'random', and the offset from the 'General' section is used if nothing is specified here. Note that this does NOT influence the rrds itself, it is just a matter of when data acqusition is initiated. (This variable is only applicable if the variable 'concurrentprobes' is set in the 'General' section.) 
  Example value: 50%
 </dd><dt>step
-</dt><dd>Duration of the base interval that this probe should use, if different from the one specified in the 'Database' section. Note that the step in the <font SIZE="-1">RRD</font> files is fixed when they are originally generated, and if you change the step parameter afterwards, you'll have to delete the old <font SIZE="-1">RRD</font> files or somehow convert them. (This variable is only applicable if the variable 'concurrentprobes' is set in the 'General' section.) 
+</dt><dd>Duration of the base interval that this probe should use, if different from the one specified in the 'Database' section. Note that the step in the RRD files is fixed when they are originally generated, and if you change the step parameter afterwards, you'll have to delete the old RRD files or somehow convert them. (This variable is only applicable if the variable 'concurrentprobes' is set in the 'General' section.) 
  Example value: 300</dd></dl>
  
 
  Supported target-specific variables:
 <dl COMPACT><dt>accept_redirects
-</dt><dd>The <i><a HREF="/docs/linux/man/1-echoping/">echoping</a></i>(1) ``-R'' option: Accept <font SIZE="-1">HTTP </font> status codes 3xx (redirections) as normal responses instead of treating them as errors. Note that this option is only available starting with Echoping 6. 
+</dt><dd>The <i><a HREF="/docs/linux/man/1-echoping/">echoping</a></i>(1) ``-R'' option: Accept HTTP  status codes 3xx (redirections) as normal responses instead of treating them as errors. Note that this option is only available starting with Echoping 6. 
  Enabled if the value is anything other than 'no' or '0'. 
  Example value: yes
 </dd><dt>extraopts
@@ -78,13 +78,13 @@ Smokeping::probes::EchoPingHttps - an
 </dt><dd>The <i><a HREF="/docs/linux/man/1-echoping/">echoping</a></i>(1) ``-A'' option: force the proxy to ignore the cache. Enabled if the value is anything other than 'no' or '0'. 
  Example value: yes
 </dd><dt>ipversion
-</dt><dd>The <font SIZE="-1">IP</font> protocol used. Possible values are ``4'' and ``6''. Passed to <i><a HREF="/docs/linux/man/1-echoping/">echoping</a></i>(1) as the ``-4'' or ``-6'' options. 
+</dt><dd>The IP protocol used. Possible values are ``4'' and ``6''. Passed to <i><a HREF="/docs/linux/man/1-echoping/">echoping</a></i>(1) as the ``-4'' or ``-6'' options. 
  Example value: 4
 </dd><dt>pings
-</dt><dd>How many pings should be sent to each target, if different from the global value specified in the Database section. Note that the number of pings in the <font SIZE="-1">RRD</font> files is fixed when they are originally generated, and if you change this parameter afterwards, you'll have to delete the old <font SIZE="-1">RRD</font> files or somehow convert them. 
+</dt><dd>How many pings should be sent to each target, if different from the global value specified in the Database section. Note that the number of pings in the RRD files is fixed when they are originally generated, and if you change this parameter afterwards, you'll have to delete the old RRD files or somehow convert them. 
  Example value: 5
 </dd><dt>port
-</dt><dd>The <font SIZE="-1">TCP</font> port to use. 
+</dt><dd>The TCP port to use. 
  Example value: 80
 </dd><dt>priority
 </dt><dd>The ``-p'' <i><a HREF="/docs/linux/man/1-echoping/">echoping</a></i>(1) option. 
@@ -103,10 +103,10 @@ Smokeping::probes::EchoPingHttps - an
 </dt><dd>The ``-P'' <i><a HREF="/docs/linux/man/1-echoping/">echoping</a></i>(1) option. 
  Example value: 0xa0
 </dd><dt>url
-</dt><dd>The <font SIZE="-1">URL</font> to be requested from the web server or cache. Can be either relative (/...) for web servers or absolute (<a rel="nofollow" HREF="http://...)">http://...)</a> for caches. 
+</dt><dd>The URL to be requested from the web server or cache. Can be either relative (/...) for web servers or absolute (<a rel="nofollow" HREF="http://...)">http://...)</a> for caches. 
  Default value: /
 </dd><dt>waittime
 </dt><dd>The ``-w'' <i><a HREF="/docs/linux/man/1-echoping/">echoping</a></i>(1) option. 
  Example value: 1</dd></dl><h2>Authors</h2>Niko Tyni &lt;ntyni [at] iki.fi&gt;
-<h2>Notes</h2>You should consider setting a lower value for the <tt>&quot;pings&quot;</tt> variable than the default 20, as repetitive <font SIZE="-1">URL</font> fetching may be quite heavy on the server.
+<h2>Notes</h2>You should consider setting a lower value for the <tt>&quot;pings&quot;</tt> variable than the default 20, as repetitive URL fetching may be quite heavy on the server.
 <h2>See Also</h2>Smokeping::probes::EchoPingHttp

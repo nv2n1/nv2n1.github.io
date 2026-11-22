@@ -9,9 +9,9 @@ description: "Library Maintenance Functions – Functions that start up and shut
 
 <p>Library Maintenance Functions &#8211; Functions that start up and shutdown the Embryo library. </p>
 <h3>Functions</h3>
-<p>EAPI int <code>embryo_init</code> (void)<br />
- <i>Initialises the Embryo library. </i><br />
- EAPI int <code>embryo_shutdown</code> (void)<br />
+<p>EAPI int <code>embryo_init</code> (void)<br/>
+ <i>Initialises the Embryo library. </i><br/>
+ EAPI int <code>embryo_shutdown</code> (void)<br/>
  <i>Shuts down the Embryo library. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that start up and shutdown the Embryo library.</p>

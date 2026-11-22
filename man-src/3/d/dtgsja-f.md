@@ -10,7 +10,7 @@ description: "dtgsja.f –"
 <p>dtgsja.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dtgsja</code> (JOBU, JOBV, JOBQ, M, P, N, K, L, A, LDA, B, LDB, TOLA, TOLB, ALPHA, BETA, U, LDU, V, LDV, Q, LDQ, WORK, NCYCLE, INFO)<br />
+<p>subroutine <code>dtgsja</code> (JOBU, JOBV, JOBQ, M, P, N, K, L, A, LDA, B, LDB, TOLA, TOLB, ALPHA, BETA, U, LDU, V, LDV, Q, LDQ, WORK, NCYCLE, INFO)<br/>
  <i></i><code>DTGSJA</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dtgsja (characterJOBU, characterJOBV, characterJOBQ, integerM, integerP, integerN, integerK, integerL, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( ldb, * )B, integerLDB, double precisionTOLA, double precisionTOLB, double precision, dimension( * )ALPHA, double precision, dimension( * )BETA, double precision, dimension( ldu, * )U, integerLDU, double precision, dimension( ldv, * )V, integerLDV, double precision, dimension( ldq, * )Q, integerLDQ, double precision, dimension( * )WORK, integerNCYCLE, integerINFO)</h3>

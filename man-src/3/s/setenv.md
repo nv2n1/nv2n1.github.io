@@ -14,7 +14,7 @@ int setenv(const char *name, const char *value, int overwrite);
 int unsetenv(const char *name);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>setenv</code>(), <code>unsetenv</code>():</p>
 <dl>
-<dd>_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br />
+<dd>_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE</dd></dl>
 <h2>Description</h2>
 <p>The <code>setenv</code>() function adds the variable <i>name</i> to the environment with the value <i>value</i>, if <i>name</i> does not already exist. If <i>name</i> does exist in the environment, then its value is changed to <i>value</i> if <i>overwrite</i> is nonzero; if <i>overwrite</i> is zero, then the value of <i>name</i> is not changed (and <code>setenv</code>() returns a success status). This function makes copies of the strings pointed to by <i>name</i> and <i>value</i> (by contrast with <code><a href="/docs/linux/man/3-putenv/">putenv</a></code>(3)). </p>

@@ -25,39 +25,39 @@ description: "ppmtoy4m – Convert PPM images to YUV4MPEG2 stream"
 <dt><code>-n</code><i> num</i></dt>
 <dd> Output a total of &#8216;num&#8217; output frames. Use &#8216;0&#8217; to specify all frames. (default: 0)</dd>
 <dt><code>-F</code><i> n:d</i></dt>
-<dd> Set framerate encoded in output stream, as an exact integer ratio. (default: 30000:1001) Common rates are:<br />
-&nbsp;<wbr>24000:1001 &#8211; NTSC 3:2 pulldown converted film<br />
-&nbsp;<wbr>24:1 &#8211; native film<br />
-&nbsp;<wbr>25:1 &#8211; PAL/SECAM<br />
-&nbsp;<wbr>30000:1001 &#8211; NTSC video<br />
-&nbsp;<wbr>50:1 &#8211; PAL field rate<br />
+<dd> Set framerate encoded in output stream, as an exact integer ratio. (default: 30000:1001) Common rates are:<br/>
+&nbsp;<wbr>24000:1001 &#8211; NTSC 3:2 pulldown converted film<br/>
+&nbsp;<wbr>24:1 &#8211; native film<br/>
+&nbsp;<wbr>25:1 &#8211; PAL/SECAM<br/>
+&nbsp;<wbr>30000:1001 &#8211; NTSC video<br/>
+&nbsp;<wbr>50:1 &#8211; PAL field rate<br/>
 &nbsp;<wbr>60000:1001 &#8211; NTSC field rate</dd>
 <dt><code>-A</code><i> n:d</i></dt>
-<dd> Set pixel aspect ratio encoded in output stream, as an exact integer ratio. (default: 1:1) Common ratios are:<br />
-&nbsp;<wbr>&nbsp;<wbr>1:1&nbsp;<wbr>&nbsp;<wbr>&#8211; square pixels&nbsp;<wbr>(computer graphics)<br />
-&nbsp;<wbr>10:11 &#8211; CCIR-601 NTSC<br />
+<dd> Set pixel aspect ratio encoded in output stream, as an exact integer ratio. (default: 1:1) Common ratios are:<br/>
+&nbsp;<wbr>&nbsp;<wbr>1:1&nbsp;<wbr>&nbsp;<wbr>&#8211; square pixels&nbsp;<wbr>(computer graphics)<br/>
+&nbsp;<wbr>10:11 &#8211; CCIR-601 NTSC<br/>
 &nbsp;<wbr>59:54 &#8211; CCIR-601 PAL</dd>
 <dt><code>-B</code></dt>
 <dd> Interpret data as being BGR rather than RGB.</dd>
 <dt><code>-I</code><i> x</i></dt>
-<dd> Set interlacing mode, used to interpret the PPM image(s), and also encoded in output stream. (default: &#8216;p&#8217;)<br />
-&nbsp;<wbr>p &#8211; progressive, non-interlaced<br />
-&nbsp;<wbr>t &#8211; top/upper-field-first interlaced<br />
+<dd> Set interlacing mode, used to interpret the PPM image(s), and also encoded in output stream. (default: &#8216;p&#8217;)<br/>
+&nbsp;<wbr>p &#8211; progressive, non-interlaced<br/>
+&nbsp;<wbr>t &#8211; top/upper-field-first interlaced<br/>
 &nbsp;<wbr>b &#8211; bottom/lower-field-first interlaced</dd>
 <dt><code>-L</code></dt>
 <dd> For interlaced streams, treat each PPM image as two interleaved fields. (Otherwise, two PPM images will be read for each frame; one per field.)</dd>
 <dt><code>-r</code></dt>
 <dd> Repeat last input frame until output is complete. If &#8216;-n 0&#8217; is also specified, last input frame will be repeated forever.</dd>
 <dt><code>-S</code><i> mode</i></dt>
-<dd> Set chroma subsampling mode. (default: 444)<br />
-&nbsp;<wbr>444 &#8211; 4:4:4&nbsp;<wbr>(no subsampling)<br />
-420jpeg &#8211; 4:2:0 JPEG/MPEG-1, interstitial cositing&nbsp;<wbr><br />
+<dd> Set chroma subsampling mode. (default: 444)<br/>
+&nbsp;<wbr>444 &#8211; 4:4:4&nbsp;<wbr>(no subsampling)<br/>
+420jpeg &#8211; 4:2:0 JPEG/MPEG-1, interstitial cositing&nbsp;<wbr><br/>
 &nbsp;<wbr>&nbsp;<wbr>420mpeg2 &#8211; 4:2:0 MPEG-2, horizontal cositing </dd>
 <p> The subsampled modes use a lousy subsampling filter; better results will be achieved by passing the default 4:4:4 output to a scaler which supports subsampling, such as <code><a href="/docs/linux/man/1-y4mscaler/">y4mscaler</a></code>(1).</p>
 <dt><code>-v</code><i> [0,1,2]</i></dt>
-<dd> Set verbosity level.<br />
-&nbsp;<wbr>0&nbsp;<wbr>=&nbsp;<wbr>warnings and errors only.<br />
-&nbsp;<wbr>1&nbsp;<wbr>=&nbsp;<wbr>add informative messages, too.<br />
+<dd> Set verbosity level.<br/>
+&nbsp;<wbr>0&nbsp;<wbr>=&nbsp;<wbr>warnings and errors only.<br/>
+&nbsp;<wbr>1&nbsp;<wbr>=&nbsp;<wbr>add informative messages, too.<br/>
 &nbsp;<wbr>2&nbsp;<wbr>=&nbsp;<wbr>add chatty debugging message, too. </dd>
 </dl>
 <h2>EXAMPLES</h2>
@@ -70,8 +70,8 @@ description: "ppmtoy4m – Convert PPM images to YUV4MPEG2 stream"
 <dt>
 </dt><dd> ls *.tga | xargs -n1 tgatoppm | ppmtoy4m | yuvplay</dd></dl>
 <h2>AUTHOR</h2>
-<p> This man page was written by Matt Marjanovic.<br />
- If you have questions, remarks, problems or you just want to contact the developers, the main mailing list for the MJPEG-tools is:<br />
+<p> This man page was written by Matt Marjanovic.<br/>
+ If you have questions, remarks, problems or you just want to contact the developers, the main mailing list for the MJPEG-tools is:<br/>
 &nbsp;<wbr>&nbsp;<wbr><i>mjpeg-users [at] lists.sourceforge.net</i> </p>
 <dl>
 <dt>For more info, see our website at</dt>

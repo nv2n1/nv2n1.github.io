@@ -11,7 +11,7 @@ description: "slarnv.f –"
 <p> slarnv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>slarnv</code> (IDIST, ISEED, N, X)<br />
+<p> subroutine <code>slarnv</code> (IDIST, ISEED, N, X)<br/>
  <i></i><code>SLARNV</code> returns a vector of random numbers from a uniform or normal distribution.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slarnv (integerIDIST, integer, dimension( 4 )ISEED, integerN, real, dimension( * )X)</h3>

@@ -11,7 +11,7 @@ description: "dorm2l.f –"
 <p> dorm2l.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dorm2l</code> (SIDE, TRANS, M, N, K, A, LDA, TAU, C, LDC, WORK, INFO)<br />
+<p> subroutine <code>dorm2l</code> (SIDE, TRANS, M, N, K, A, LDA, TAU, C, LDC, WORK, INFO)<br/>
  <i></i><code>DORM2L</code> multiplies a general matrix by the orthogonal matrix from a QL factorization determined by sgeqlf (unblocked algorithm).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dorm2l (characterSIDE, characterTRANS, integerM, integerN, integerK, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( * )TAU, double precision, dimension( ldc, * )C, integerLDC, double precision, dimension( * )WORK, integerINFO)</h3>
@@ -61,11 +61,11 @@ DORM2L overwrites the general real m by n matrix C with
           The number of columns of the matrix C. N &gt;= 0.
 </pre>
 <p> <i>K</i> </p>
-<p>K is INTEGER<br />
-    The number of elementary reflectors whose product defines<br />
-        the matrix Q.If SIDE = &#8216;L&#8217;,<br />
-                        M &gt;= K &gt;= 0;<br />
-if SIDE<br />
+<p>K is INTEGER<br/>
+    The number of elementary reflectors whose product defines<br/>
+        the matrix Q.If SIDE = &#8216;L&#8217;,<br/>
+                        M &gt;= K &gt;= 0;<br/>
+if SIDE<br/>
 = &#8216;R&#8217;, N &gt;= K &gt;= 0.</p>
 <p> <i>A</i> </p>
 <pre>

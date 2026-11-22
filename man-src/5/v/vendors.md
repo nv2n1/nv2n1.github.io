@@ -9,7 +9,7 @@ description: "vendors.list – Security key configuration for APT"
 
 <p>vendors.list &#8211; Security key configuration for APT </p>
 <h2>Description</h2>
-<p>The package vendor list contains a list of all vendors from whom you wish to<br />
+<p>The package vendor list contains a list of all vendors from whom you wish to<br/>
 &nbsp;<wbr>authenticate&nbsp;<wbr>&nbsp;<wbr>downloaded&nbsp;<wbr>&nbsp;<wbr>packages.&nbsp;<wbr>&nbsp;<wbr>For each vendor listed, it must contain the corresponding PGP key fingerprint, so that APT can perform signature verification of the release file and subsequent checking of the checksums of each downloaded package. To have authentication enabled, you must add the vendor identification string (see below) enclosed in square braces to the <i><a href="/docs/linux/man/5-sources-list/">sources.list</a></i>(5) line for all sites that mirror the repository provided by that vendor. The format of this file is similar to the one used by <i><a href="/docs/linux/man/5-apt-conf/">apt.conf</a></i>(5). It consists of an arbitrary number of blocks of vendors, where each block starts with a string telling the <code>key_type</code> and the <code>vendor_id</code>. Some vendors may have multiple blocks that define different security policies for their distributions. Debian for instance uses a different signing methodology for stable and unstable releases. <code>key_type</code> is the type of the check required. Currently, there is only one type available which is <i>simple-key</i>. <code>vendor_id</code> is the vendor identification string. It is an arbitrary string you must supply to uniquely identify a vendor that&#8217;s listed in this file. Example:</p>
 <dl>
 <dd>

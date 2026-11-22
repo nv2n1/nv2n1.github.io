@@ -72,69 +72,69 @@ description: "nfstest_pkt – Packet trace decoder"
 <dt>&#8211;debug-level=DEBUG_LEVEL</dt>
 <dd> Set debug level messages</dd></dl>
 <h2>EXAMPLES</h2>
-<p> # Display all NFS packets (one line per packet)<br />
- # Display only the NFS packets by default.<br />
- # Default for &#8211;verbose option is 1 &#8212; one line per packet<br />
+<p> # Display all NFS packets (one line per packet)<br/>
+ # Display only the NFS packets by default.<br/>
+ # Default for &#8211;verbose option is 1 &#8212; one line per packet<br/>
  $ nfstest_pkt /tmp/trace.cap </p>
-<p> # Display all NFS packets (one line per layer)<br />
+<p> # Display all NFS packets (one line per layer)<br/>
  $ nfstest_pkt -v 2 /tmp/trace.cap </p>
-<p> # Display all NFS packets (real verbose, all items in each layer are displayed)<br />
+<p> # Display all NFS packets (real verbose, all items in each layer are displayed)<br/>
  $ nfstest_pkt -v 4 /tmp/trace.cap </p>
-<p> # Display all NFS packets (display both verbose level 1 and 2)<br />
+<p> # Display all NFS packets (display both verbose level 1 and 2)<br/>
  $ nfstest_pkt -v 3 /tmp/trace.cap </p>
-<p> # Display all TCP packets (this will display all RPC and NFS packets as well)<br />
+<p> # Display all TCP packets (this will display all RPC and NFS packets as well)<br/>
  $ nfstest_pkt -l tcp /tmp/trace.cap </p>
-<p> # Display all packets<br />
+<p> # Display all packets<br/>
  $ nfstest_pkt -l all /tmp/trace.cap </p>
-<p> # Display all NFS, NLM, MOUNT and PORTMAP packets<br />
+<p> # Display all NFS, NLM, MOUNT and PORTMAP packets<br/>
  $ nfstest_pkt -l nfs,nlm,mount,portmap /tmp/trace.cap </p>
-<p> # Display packets 100 through 199<br />
+<p> # Display packets 100 through 199<br/>
  $ nfstest_pkt -s 100 -e 200 -l all /tmp/trace.cap </p>
-<p> # Display all NFS packets with non-zero status<br />
+<p> # Display all NFS packets with non-zero status<br/>
  $ nfstest_pkt -m &quot;nfs.status != 0&quot; /tmp/trace.cap </p>
-<p> # Display all NFSv4 WRITE packets<br />
+<p> # Display all NFSv4 WRITE packets<br/>
  $ nfstest_pkt -m &quot;rpc.version == 4 and nfs.op == 38&quot; /tmp/trace.cap </p>
-<p> # Display all NFSv4 WRITE calls<br />
+<p> # Display all NFSv4 WRITE calls<br/>
  $ nfstest_pkt -m &quot;rpc.version == 4 and nfs.argop == 38&quot; /tmp/trace.cap </p>
-<p> # Display all NFS packets having a file name as f00000001 (OPEN, LOOKUP, etc.)<br />
- # including their replies<br />
+<p> # Display all NFS packets having a file name as f00000001 (OPEN, LOOKUP, etc.)<br/>
+ # including their replies<br/>
  $ nfstest_pkt -r -m &quot;nfs.name == &#8216;f00000001&#8217;&quot; /tmp/trace.cap </p>
-<p> # Display all NFS packets with non-zero status including their respective calls<br />
- $ nfstest_pkt -c -m &quot;nfs.status != 0&quot; /tmp/trace.cap<br />
+<p> # Display all NFS packets with non-zero status including their respective calls<br/>
+ $ nfstest_pkt -c -m &quot;nfs.status != 0&quot; /tmp/trace.cap<br/>
  $ nfstest_pkt -d &quot;pkt_call,pkt&quot; -m &quot;nfs.status != 0&quot; /tmp/trace.cap </p>
-<p> # Display all TCP packets (just the TCP layer)<br />
+<p> # Display all TCP packets (just the TCP layer)<br/>
  $ nfstest_pkt -d &quot;pkt.tcp&quot; -l tcp /tmp/trace.cap </p>
-<p> # Display all NFS file handles<br />
+<p> # Display all NFS file handles<br/>
  $ nfstest_pkt -d &quot;pkt.NFSop.fh&quot; -m &quot;len(nfs.fh) &gt; 0&quot; /tmp/trace.cap </p>
-<p> # Display all RPC packets including the record infomation (packet number, timestamp, etc.)<br />
- # For verbose level 1 (default) the &quot;,&quot; separator will be converted to a<br />
- # space if all items are only pkt(.*)? or pkt_call(.*)?<br />
+<p> # Display all RPC packets including the record infomation (packet number, timestamp, etc.)<br/>
+ # For verbose level 1 (default) the &quot;,&quot; separator will be converted to a<br/>
+ # space if all items are only pkt(.*)? or pkt_call(.*)?<br/>
  $ nfstest_pkt -d &quot;pkt.record,pkt.rpc&quot; -l rpc /tmp/trace.cap </p>
-<p> # Display all RPC packets including the record infomation (packet number, timestamp, etc.)<br />
- # For verbose level 2 the &quot;,&quot; separator will be converted to a new line if<br />
- # all items are only pkt(.*)? or pkt_call(.*)?<br />
+<p> # Display all RPC packets including the record infomation (packet number, timestamp, etc.)<br/>
+ # For verbose level 2 the &quot;,&quot; separator will be converted to a new line if<br/>
+ # all items are only pkt(.*)? or pkt_call(.*)?<br/>
  $ nfstest_pkt -v 2 -d &quot;pkt.record,pkt.rpc&quot; -l rpc /tmp/trace.cap </p>
-<p> # Display all RPC packets including the record infomation (packet number, timestamp, etc.)<br />
- # using the given display format<br />
+<p> # Display all RPC packets including the record infomation (packet number, timestamp, etc.)<br/>
+ # using the given display format<br/>
  $ nfstest_pkt -d &quot;&gt;&gt;&gt; record: pkt.record &gt;&gt;&gt; rpc: pkt.rpc&quot; -l rpc /tmp/trace.cap </p>
-<p> # Display all packets truncating all strings to 100 bytes<br />
- # This is useful when some packets are very large and there<br />
- # is no need to display all the data<br />
+<p> # Display all packets truncating all strings to 100 bytes<br/>
+ # This is useful when some packets are very large and there<br/>
+ # is no need to display all the data<br/>
  $ nfstest_pkt &#8211;strsize 100 -v 2 -l all /tmp/trace.cap </p>
-<p> # Display all NFSv4 packets displaying the main operation of the compound<br />
- # e.g., display &quot;WRITE&quot; instead of &quot;SEQUENCE;PUTFH;WRITE&quot;<br />
+<p> # Display all NFSv4 packets displaying the main operation of the compound<br/>
+ # e.g., display &quot;WRITE&quot; instead of &quot;SEQUENCE;PUTFH;WRITE&quot;<br/>
  $ nfstest_pkt &#8211;nfs-mainop 1 -l nfs /tmp/trace.cap </p>
-<p> # Have all CRC16 strings displayed as plain strings<br />
- # e.g., display unformatted state ids<br />
+<p> # Have all CRC16 strings displayed as plain strings<br/>
+ # e.g., display unformatted state ids<br/>
  $ nfstest_pkt &#8211;crc16 0 /tmp/trace.cap </p>
-<p> # Have all CRC32 strings displayed as plain strings<br />
- # e.g., display unformatted file handles<br />
+<p> # Have all CRC32 strings displayed as plain strings<br/>
+ # e.g., display unformatted file handles<br/>
  $ nfstest_pkt &#8211;crc32 0 /tmp/trace.cap </p>
-<p> # Display packets using India time zone<br />
- $ nfstest_pkt &#8211;tz &quot;UTC-5:30&quot; /tmp/trace.cap<br />
+<p> # Display packets using India time zone<br/>
+ $ nfstest_pkt &#8211;tz &quot;UTC-5:30&quot; /tmp/trace.cap<br/>
  $ nfstest_pkt &#8211;tz &quot;Asia/Kolkata&quot; /tmp/trace.cap </p>
-<p> # Display all packets for all trace files given<br />
- # The packets are displayed in order using their timestamps<br />
+<p> # Display all packets for all trace files given<br/>
+ # The packets are displayed in order using their timestamps<br/>
  $ nfstest_pkt trace1.cap trace2.cap trace3.cap</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-formatstr/">formatstr</a>(3),</code> <code><a href="/docs/linux/man/1-nfstest_alloc/">nfstest_alloc</a>(1),</code> <code><a href="/docs/linux/man/1-nfstest_cache/">nfstest_cache</a>(1),</code> <code><a href="/docs/linux/man/1-nfstest_delegation/">nfstest_delegation</a>(1),</code> <code><a href="/docs/linux/man/1-nfstest_dio/">nfstest_dio</a>(1),</code> <code><a href="/docs/linux/man/1-nfstest_file/">nfstest_file</a>(1),</code> <code><a href="/docs/linux/man/1-nfstest_interop/">nfstest_interop</a>(1),</code> <code><a href="/docs/linux/man/1-nfstest_io/">nfstest_io</a>(1),</code> <code><a href="/docs/linux/man/1-nfstest_lock/">nfstest_lock</a>(1),</code> <code><a href="/docs/linux/man/1-nfstest_pnfs/">nfstest_pnfs</a>(1),</code> <code><a href="/docs/linux/man/1-nfstest_posix/">nfstest_posix</a>(1),</code> <code><a href="/docs/linux/man/1-nfstest_sparse/">nfstest_sparse</a>(1),</code> <code><a href="/docs/linux/man/1-nfstest_xid/">nfstest_xid</a>(1),</code> <code><a href="/docs/linux/man/3-packet-pktt/">packet.pktt</a>(3),</code> <code><a href="/docs/linux/man/3-packet-utils/">packet.utils</a>(3)</code> </p>

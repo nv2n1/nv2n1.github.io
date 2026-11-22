@@ -10,7 +10,7 @@ description: "csymv.f –"
 <p>csymv.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>csymv</code> (UPLO, N, ALPHA, A, LDA, X, INCX, BETA, Y, INCY)<br />
+<p>subroutine <code>csymv</code> (UPLO, N, ALPHA, A, LDA, X, INCX, BETA, Y, INCY)<br/>
  <i></i><code>CSYMV</code> computes a matrix-vector product for a complex symmetric matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine csymv (characterUPLO, integerN, complexALPHA, complex, dimension( lda, * )A, integerLDA, complex, dimension( * )X, integerINCX, complexBETA, complex, dimension( * )Y, integerINCY)</h3>

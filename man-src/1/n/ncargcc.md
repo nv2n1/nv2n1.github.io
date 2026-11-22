@@ -43,6 +43,6 @@ description: "ncargcc – Command for compiling C code that uses the NCAR Graphi
 <p> Online: ictrans(1NCARG), <code>gcaps(1NCARG),</code> <code>ncargf77(1NCARG),</code> <code>nhlcc(1NCARG),</code> <code>nhlf77(1NCARG),</code> <code>ncargintro(5NCARG)</code> </p>
 <p> Hardcopy: NCAR Graphics Fundamentals, UNIX Version</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright (C) 1987-2002<br />
- University Corporation for Atmospheric Research<br />
+<p> Copyright (C) 1987-2002<br/>
+ University Corporation for Atmospheric Research<br/>
  The use of this Software is governed by a License Agreement. </p>

@@ -13,33 +13,33 @@ description: "QwtPlotCanvas –"
 <p>#include &lt;qwt_plot_canvas.h&gt; </p>
 <p> Inherits QFrame.</p>
 <h3>Public Types</h3>
-<p>enum <code>PaintAttribute</code> { <code>BackingStore</code> = 1, <code>Opaque</code> = 2, <code>HackStyledBackground</code> = 4, <code>ImmediatePaint</code> = 8 }<br />
- <i>Paint attributes. </i><br />
- enum <code>FocusIndicator</code> { <code>NoFocusIndicator</code>, <code>CanvasFocusIndicator</code>, <code>ItemFocusIndicator</code> }<br />
- <i>Focus indicator The default setting is NoFocusIndicator. </i><br />
- typedef QFlags&lt; <code>PaintAttribute</code> &gt; <code>PaintAttributes</code><br />
+<p>enum <code>PaintAttribute</code> { <code>BackingStore</code> = 1, <code>Opaque</code> = 2, <code>HackStyledBackground</code> = 4, <code>ImmediatePaint</code> = 8 }<br/>
+ <i>Paint attributes. </i><br/>
+ enum <code>FocusIndicator</code> { <code>NoFocusIndicator</code>, <code>CanvasFocusIndicator</code>, <code>ItemFocusIndicator</code> }<br/>
+ <i>Focus indicator The default setting is NoFocusIndicator. </i><br/>
+ typedef QFlags&lt; <code>PaintAttribute</code> &gt; <code>PaintAttributes</code><br/>
  <i>Paint attributes. </i></p>
 <h3>Public Slots</h3>
 <p>void <code>replot</code> () </p>
 <h3>Public Member Functions</h3>
-<p><code>QwtPlotCanvas</code> (<code>QwtPlot</code> *=NULL)<br />
- <i>Constructor. </i><br />
- virtual <code>~QwtPlotCanvas</code> ()<br />
- <i>Destructor. </i><br />
- <code>QwtPlot</code> * <code>plot</code> ()<br />
- <i>Return parent plot widget. </i><br />
- const <code>QwtPlot</code> * <code>plot</code> () const<br />
- <i>Return parent plot widget. </i><br />
+<p><code>QwtPlotCanvas</code> (<code>QwtPlot</code> *=NULL)<br/>
+ <i>Constructor. </i><br/>
+ virtual <code>~QwtPlotCanvas</code> ()<br/>
+ <i>Destructor. </i><br/>
+ <code>QwtPlot</code> * <code>plot</code> ()<br/>
+ <i>Return parent plot widget. </i><br/>
+ const <code>QwtPlot</code> * <code>plot</code> () const<br/>
+ <i>Return parent plot widget. </i><br/>
  void <code>setFocusIndicator</code> (<code>FocusIndicator</code>) </p>
 <p> <code>FocusIndicator</code> <code>focusIndicator</code> () const </p>
 <p> void <code>setBorderRadius</code> (double) </p>
 <p> double <code>borderRadius</code> () const </p>
-<p> void <code>setPaintAttribute</code> (<code>PaintAttribute</code>, bool on=true)<br />
- <i>Changing the paint attributes. </i><br />
+<p> void <code>setPaintAttribute</code> (<code>PaintAttribute</code>, bool on=true)<br/>
+ <i>Changing the paint attributes. </i><br/>
  bool <code>testPaintAttribute</code> (<code>PaintAttribute</code>) const </p>
 <p> const QPixmap * <code>backingStore</code> () const </p>
-<p> void <code>invalidateBackingStore</code> ()<br />
- <i>Invalidate the internal backing store. </i><br />
+<p> void <code>invalidateBackingStore</code> ()<br/>
+ <i>Invalidate the internal backing store. </i><br/>
  virtual bool <code>event</code> (QEvent *) </p>
 <p> Q_INVOKABLE QPainterPath <code>borderPath</code> (const QRect &amp;) const </p>
 <h3>Protected Member Functions</h3>
@@ -47,7 +47,7 @@ description: "QwtPlotCanvas –"
 <p> virtual void <code>resizeEvent</code> (QResizeEvent *) </p>
 <p> virtual void <code>drawFocusIndicator</code> (QPainter *) </p>
 <p> virtual void <code>drawBorder</code> (QPainter *) </p>
-<p> void <code>updateStyleSheetInfo</code> ()<br />
+<p> void <code>updateStyleSheetInfo</code> ()<br/>
  <i>Update the cached information about the current style sheet. </i></p>
 <h2>Detailed Description</h2>
 <p>Canvas of a <code>QwtPlot</code>. </p>
@@ -188,7 +188,7 @@ description: "QwtPlotCanvas –"
 <p>Changing the paint attributes. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>attribute</i> Paint attribute<br />
+<dd><i>attribute</i> Paint attribute<br/>
  <i>on</i> On/Off</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>

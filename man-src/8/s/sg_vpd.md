@@ -49,8 +49,8 @@ description: "sg_vpd – fetch Vital Product Data (VPD) pages via a SCSI INQUIRY
 <h2>Exit Status</h2>
 <p>The exit status of sg_vpd is 0 when it is successful. Otherwise see the <a href="/docs/linux/man/8-sg3_utils/">sg3_utils</a>(8) man page.</p>
 <h2>Examples</h2>
-<p>The examples in this page use Linux device names. For suitable device names in other supported Operating Systems see the <a href="/docs/linux/man/8-sg3_utils/">sg3_utils</a>(8) man page. To see the VPD pages that a device supports, use with no options. The command line invocation is shown first followed by a typical response:<br />
-#&nbsp;<wbr>sg_vpd&nbsp;<wbr>/dev/sdb<br />
+<p>The examples in this page use Linux device names. For suitable device names in other supported Operating Systems see the <a href="/docs/linux/man/8-sg3_utils/">sg3_utils</a>(8) man page. To see the VPD pages that a device supports, use with no options. The command line invocation is shown first followed by a typical response:<br/>
+#&nbsp;<wbr>sg_vpd&nbsp;<wbr>/dev/sdb<br/>
  Supported VPD pages VPD page: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>Supported VPD pages&nbsp;<wbr>[sv] </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>Unit serial number&nbsp;<wbr>[sn] </p>
@@ -79,7 +79,7 @@ GRD_CHK=1
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;dgilbert at interlog dot com&gt;.</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2006-2012 Douglas Gilbert<br />
+<p>Copyright &#169; 2006-2012 Douglas Gilbert<br/>
  This software is distributed under a FreeBSD license. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>See Also</h2>
 <p><code>sg_inq(sg3_utils), sg3_utils(sg3_utils), sdparm(sdparm), hdparm(hdparm)</code> </p>

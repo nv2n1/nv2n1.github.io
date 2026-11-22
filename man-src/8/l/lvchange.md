@@ -71,8 +71,8 @@ description: "lvchange – Change the attributes of logical volume(s)"
 <h2>Description</h2>
 <p>lvchange changes LV attributes in the VG, changes LV activation in the kernel, and includes other utilities for LV maintenance.</p>
 <h2>Usage</h2>
-<p>Change a general LV attribute.<br />
- For options listed in parentheses, any one is<br />
+<p>Change a general LV attribute.<br/>
+ For options listed in parentheses, any one is<br/>
  required, after which the others are optional. </p>
 <p> <code>lvchange</code></p>
 <dl>
@@ -102,16 +102,16 @@ description: "lvchange – Change the attributes of logical volume(s)"
 <dl>
 <dd>&nbsp;<i>VG</i>|<i>LV</i>|<i>Tag</i>|<i>Select</i>&nbsp;&#8230;</dd></dl>
 <dl>
-<dd>[ <code>-a</code>|<code>&#8211;activate</code> <code>y</code>|<code>n</code>|<code>ay</code> ]<br />
- [ <code>&#8211;poll</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;monitor</code> <code>y</code>|<code>n</code> ]<br />
+<dd>[ <code>-a</code>|<code>&#8211;activate</code> <code>y</code>|<code>n</code>|<code>ay</code> ]<br/>
+ [ <code>&#8211;poll</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;monitor</code> <code>y</code>|<code>n</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <p> &#8211; </p>
-<p> Resyncronize a mirror or raid LV.<br />
+<p> Resyncronize a mirror or raid LV.<br/>
  Use to reset &#8216;R&#8217; attribute on a not initially synchronized LV. </p>
 <p> <code>lvchange</code> <code>&#8211;resync</code> <i>VG</i>|<i>LV</i><i>_mirror_raid</i>|<i>Tag</i>|<i>Select</i> &#8230; </p>
 <dl>
-<dd>[ <code>-a</code>|<code>&#8211;activate</code> <code>y</code>|<code>n</code>|<code>ay</code> ]<br />
+<dd>[ <code>-a</code>|<code>&#8211;activate</code> <code>y</code>|<code>n</code>|<code>ay</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <p> &#8211; </p>
 <p> Resynchronize or check a raid LV. </p>
@@ -127,23 +127,23 @@ description: "lvchange – Change the attributes of logical volume(s)"
 <p> Activate or deactivate an LV. </p>
 <p> <code>lvchange</code> <code>-a</code>|<code>&#8211;activate</code> <code>y</code>|<code>n</code>|<code>ay</code> <i>VG</i>|<i>LV</i>|<i>Tag</i>|<i>Select</i> &#8230; </p>
 <dl>
-<dd>[ <code>-P</code>|<code>&#8211;partial</code> ]<br />
- [ <code>-K</code>|<code>&#8211;ignoreactivationskip</code> ]<br />
- [ <code>&#8211;activationmode</code> <code>partial</code>|<code>degraded</code>|<code>complete</code> ]<br />
- [ <code>&#8211;poll</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;monitor</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;ignorelockingfailure</code> ]<br />
- [ <code>&#8211;sysinit</code> ]<br />
- [ <code>&#8211;readonly</code> ]<br />
+<dd>[ <code>-P</code>|<code>&#8211;partial</code> ]<br/>
+ [ <code>-K</code>|<code>&#8211;ignoreactivationskip</code> ]<br/>
+ [ <code>&#8211;activationmode</code> <code>partial</code>|<code>degraded</code>|<code>complete</code> ]<br/>
+ [ <code>&#8211;poll</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;monitor</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;ignorelockingfailure</code> ]<br/>
+ [ <code>&#8211;sysinit</code> ]<br/>
+ [ <code>&#8211;readonly</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <p> &#8211; </p>
 <p> Reactivate an LV using the latest metadata. </p>
 <p> <code>lvchange</code> <code>&#8211;refresh</code> <i>VG</i>|<i>LV</i>|<i>Tag</i>|<i>Select</i> &#8230; </p>
 <dl>
-<dd>[ <code>-P</code>|<code>&#8211;partial</code> ]<br />
- [ <code>&#8211;activationmode</code> <code>partial</code>|<code>degraded</code>|<code>complete</code> ]<br />
- [ <code>&#8211;poll</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;monitor</code> <code>y</code>|<code>n</code> ]<br />
+<dd>[ <code>-P</code>|<code>&#8211;partial</code> ]<br/>
+ [ <code>&#8211;activationmode</code> <code>partial</code>|<code>degraded</code>|<code>complete</code> ]<br/>
+ [ <code>&#8211;poll</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;monitor</code> <code>y</code>|<code>n</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <p> &#8211; </p>
 <p> Start or stop monitoring an LV from dmeventd. </p>
@@ -154,41 +154,41 @@ description: "lvchange – Change the attributes of logical volume(s)"
 <p> Start or stop processing an LV conversion. </p>
 <p> <code>lvchange</code> <code>&#8211;poll</code> <code>y</code>|<code>n</code> <i>VG</i>|<i>LV</i>|<i>Tag</i>|<i>Select</i> &#8230; </p>
 <dl>
-<dd>[ <code>&#8211;monitor</code> <code>y</code>|<code>n</code> ]<br />
+<dd>[ <code>&#8211;monitor</code> <code>y</code>|<code>n</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <p> &#8211; </p>
 <p> Make the minor device number persistent for an LV. </p>
 <p> <code>lvchange</code> <code>-M</code>|<code>&#8211;persistent</code> <code>y</code> <code>&#8211;minor</code> <i>Number</i> <i>LV</i> </p>
 <dl>
-<dd>[ <code>-j</code>|<code>&#8211;major</code> <i>Number</i> ]<br />
- [ <code>-a</code>|<code>&#8211;activate</code> <code>y</code>|<code>n</code>|<code>ay</code> ]<br />
- [ <code>&#8211;poll</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;monitor</code> <code>y</code>|<code>n</code> ]<br />
+<dd>[ <code>-j</code>|<code>&#8211;major</code> <i>Number</i> ]<br/>
+ [ <code>-a</code>|<code>&#8211;activate</code> <code>y</code>|<code>n</code>|<code>ay</code> ]<br/>
+ [ <code>&#8211;poll</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;monitor</code> <code>y</code>|<code>n</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <p> &#8211; </p>
 <p> Common options for command:</p>
 <dl>
-<dd>[ <code>-A</code>|<code>&#8211;autobackup</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>-f</code>|<code>&#8211;force</code> ]<br />
- [ <code>-S</code>|<code>&#8211;select</code> <i>String</i> ]<br />
- [ <code>&#8211;ignoremonitoring</code> ]<br />
- [ <code>&#8211;noudevsync</code> ]<br />
+<dd>[ <code>-A</code>|<code>&#8211;autobackup</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>-f</code>|<code>&#8211;force</code> ]<br/>
+ [ <code>-S</code>|<code>&#8211;select</code> <i>String</i> ]<br/>
+ [ <code>&#8211;ignoremonitoring</code> ]<br/>
+ [ <code>&#8211;noudevsync</code> ]<br/>
  [ <code>&#8211;reportformat</code> <code>basic</code>|<code>json</code> ]</dd></dl>
 <p> Common options for lvm:</p>
 <dl>
-<dd>[ <code>-d</code>|<code>&#8211;debug</code> ]<br />
- [ <code>-h</code>|<code>&#8211;help</code> ]<br />
- [ <code>-q</code>|<code>&#8211;quiet</code> ]<br />
- [ <code>-t</code>|<code>&#8211;test</code> ]<br />
- [ <code>-v</code>|<code>&#8211;verbose</code> ]<br />
- [ <code>-y</code>|<code>&#8211;yes</code> ]<br />
- [ <code>&#8211;commandprofile</code> <i>String</i> ]<br />
- [ <code>&#8211;config</code> <i>String</i> ]<br />
- [ <code>&#8211;driverloaded</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;lockopt</code> <i>String</i> ]<br />
- [ <code>&#8211;longhelp</code> ]<br />
- [ <code>&#8211;nolocking</code> ]<br />
- [ <code>&#8211;profile</code> <i>String</i> ]<br />
+<dd>[ <code>-d</code>|<code>&#8211;debug</code> ]<br/>
+ [ <code>-h</code>|<code>&#8211;help</code> ]<br/>
+ [ <code>-q</code>|<code>&#8211;quiet</code> ]<br/>
+ [ <code>-t</code>|<code>&#8211;test</code> ]<br/>
+ [ <code>-v</code>|<code>&#8211;verbose</code> ]<br/>
+ [ <code>-y</code>|<code>&#8211;yes</code> ]<br/>
+ [ <code>&#8211;commandprofile</code> <i>String</i> ]<br/>
+ [ <code>&#8211;config</code> <i>String</i> ]<br/>
+ [ <code>&#8211;driverloaded</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;lockopt</code> <i>String</i> ]<br/>
+ [ <code>&#8211;longhelp</code> ]<br/>
+ [ <code>&#8211;nolocking</code> ]<br/>
+ [ <code>&#8211;profile</code> <i>String</i> ]<br/>
  [ <code>&#8211;version</code> ]</dd></dl>
 <h2>Options</h2>
 <dl>

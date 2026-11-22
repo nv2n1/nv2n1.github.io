@@ -14,7 +14,7 @@ description: "darktable-cmstest – test if the color management subsystem of yo
     darktable-cmstest
 </pre>
 <h2>DESCRIPTION</h2>
-<p> <code>darktable</code> is a digital photography workflow application for <code>Linux</code>, <code>Mac </code><font SIZE="-1"><code>OS X</code></font> and several other <code>Unices</code>. It&#8217;s described further in <i><a href="/docs/linux/man/1-darktable/">darktable</a></i>(1). </p>
+<p> <code>darktable</code> is a digital photography workflow application for <code>Linux</code>, <code>Mac </code><code>OS X</code> and several other <code>Unices</code>. It&#8217;s described further in <i><a href="/docs/linux/man/1-darktable/">darktable</a></i>(1). </p>
 <p> <code>darktable-cmstest</code> investigates if the color management subsystem of your computer is correctly configured and it displays some useful information about the installed monitor profile(s).</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-darktable/">darktable</a></i>(1)</p>
@@ -29,4 +29,4 @@ description: "darktable-cmstest – test if the color management subsystem of yo
 <p> This man page was written by Ulrich Pegelow &lt;ulrich.pegelow [at] tongareva.de&gt; as part of the usermanual. It was turned into a man page by Tobias Ellinghaus &lt;me [at] houz.org&gt;.</p>
 <h2>COPYRIGHT AND LICENSE</h2>
 <p> <code>Copyright (C)</code> 2009-2015 by Authors. </p>
-<p> <code>darktable</code> is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GPL</font> v3 or (at your option) any later version. </p>
+<p> <code>darktable</code> is free software; you can redistribute it and/or modify it under the terms of the GPL v3 or (at your option) any later version. </p>

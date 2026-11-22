@@ -329,8 +329,8 @@ description: "collectl – Collects data that describes the current system statu
 <dl>
 <dt>
 </dt><dd> This switch controls the way brief stats are reported, the default is to report the totals once, at the end of a day&#8217;s worth of raw files, if more than one. </dd>
-<p> a &#8211; include averages along with totals<br />
- i &#8211; include the interval data itself, which is the equivalent of -oA<br />
+<p> a &#8211; include averages along with totals<br/>
+ i &#8211; include the interval data itself, which is the equivalent of -oA<br/>
  s &#8211; print summary stats at the end of each file processed even if more than one per day</dl>
 <p> <code>-s, &#8211;subsys subsystem</code></p>
 <dl>
@@ -340,32 +340,32 @@ description: "collectl – Collects data that describes the current system statu
 <p> You can also use + or &#8211; to add or subtract subsystems to/from the default values. For example, &quot;-s-cdn+N&quot;&lt; will remove cpu, disk and network monitoring from the defaults while adding network detail. </p>
 <p> Refer to data definitions on the sourceforge website OR in /usr/share/collectl/doc/collectl-xxx to see complete descriptions of the data returned. </p>
 <p> SUMMARY SUBSYSTEMS </p>
-<p> b &#8211; buddy info (memory fragmentation)<br />
- c &#8211; CPU<br />
- d &#8211; Disk<br />
- f &#8211; NFS V3 Data<br />
- i &#8211; Inode and File System<br />
- j &#8211; Interrupts<br />
- l &#8211; Lustre<br />
- m &#8211; Memory<br />
- n &#8211; Networks<br />
- s &#8211; Sockets<br />
- t &#8211; TCP<br />
- x &#8211; Interconnect<br />
+<p> b &#8211; buddy info (memory fragmentation)<br/>
+ c &#8211; CPU<br/>
+ d &#8211; Disk<br/>
+ f &#8211; NFS V3 Data<br/>
+ i &#8211; Inode and File System<br/>
+ j &#8211; Interrupts<br/>
+ l &#8211; Lustre<br/>
+ m &#8211; Memory<br/>
+ n &#8211; Networks<br/>
+ s &#8211; Sockets<br/>
+ t &#8211; TCP<br/>
+ x &#8211; Interconnect<br/>
  y &#8211; Slabs (system object caches) </p>
 <p> DETAIL SUBSYSTEMS </p>
 <p> This is the set of <code>detail</code> data from which in most cases the corresponding summary data is derived. There are currently 2 types that do not have corresponding summary data and those are &quot;Environmental&quot; and &quot;Process&quot;. So, if one has 3 disks and chooses <code>-sd,</code> one will only see a single total taken across all 3 disks. If one chooses <code>-sD,</code> individual disk totals will be reported but no totals. Choosing <code>-sdD</code> will get you both. </p>
-<p> C &#8211; CPU<br />
- D &#8211; Disk<br />
- E &#8211; Environmental data (fan, power, temp), via ipmitool<br />
- F &#8211; NFS Data<br />
- J &#8211; Interrupts<br />
- L &#8211; Lustre OST detail OR client Filesystem detail<br />
- M &#8211; Memory node data, which is also known as numa data<br />
- N &#8211; Networks<br />
- T &#8211; 65 TCP counters only available in plot format<br />
- X &#8211; Interconnect<br />
- Y &#8211; Slabs (system object caches)<br />
+<p> C &#8211; CPU<br/>
+ D &#8211; Disk<br/>
+ E &#8211; Environmental data (fan, power, temp), via ipmitool<br/>
+ F &#8211; NFS Data<br/>
+ J &#8211; Interrupts<br/>
+ L &#8211; Lustre OST detail OR client Filesystem detail<br/>
+ M &#8211; Memory node data, which is also known as numa data<br/>
+ N &#8211; Networks<br/>
+ T &#8211; 65 TCP counters only available in plot format<br/>
+ X &#8211; Interconnect<br/>
+ Y &#8211; Slabs (system object caches)<br/>
  Z &#8211; Processes</dl>
 <p> <code>&#8211;showheader</code></p>
 <dl>
@@ -417,9 +417,9 @@ description: "collectl – Collects data that describes the current system statu
 <p> <code>&#8211;utime mask</code></p>
 <dl>
 <dt>
-</dt><dd> Write periodic micro-timestamps into raw file at different points in time for fine grained measurements of operation times.<br />
- 1 &#8211; write timestamps when entering major sections<br />
- 2 &#8211; write timestamps for all /proc accesses except for process data<br />
+</dt><dd> Write periodic micro-timestamps into raw file at different points in time for fine grained measurements of operation times.<br/>
+ 1 &#8211; write timestamps when entering major sections<br/>
+ 2 &#8211; write timestamps for all /proc accesses except for process data<br/>
  4 &#8211; write timestamps for /proc data for all processes including threads</dd></dl>
 <p> <code>-v</code></p>
 <dl>
@@ -457,9 +457,9 @@ description: "collectl – Collects data that describes the current system statu
 <dl>
 <dt>
 </dt><dd>
- f &#8211; report some columns as fractions for more precision on detail output<br />
- i &#8211; display the i/o sizes in brief mode just like with &#8211;iosize<br />
- o &#8211; exclude unused disks from new file headers and plot data<br />
+ f &#8211; report some columns as fractions for more precision on detail output<br/>
+ i &#8211; display the i/o sizes in brief mode just like with &#8211;iosize<br/>
+ o &#8211; exclude unused disks from new file headers and plot data<br/>
  z &#8211; only applies to disk details, do not report any lines with values of all zeros.</dd></dl>
 <p> <code>&#8211;dskremap aaa:bbb,ccc:ddd&#8230;</code></p>
 <dl>
@@ -469,13 +469,13 @@ description: "collectl – Collects data that describes the current system statu
 <dl>
 <dt>
 </dt><dd> The default is to display ALL data but the following will cause a subset to be displayed </dd>
-<p> f &#8211; display fan data<br />
- p &#8211; display current (power) data<br />
- t &#8211; display temperature data<br />
- C &#8211; convert temperature to Celcius if in Farenheit<br />
- F &#8211; convert temperature to Farenheit if in Celcius<br />
- M &#8211; display each type of data on separate line<br />
- T &#8211; display data truncated to whole integers (some implemenations displayed them with fractional components)<br />
+<p> f &#8211; display fan data<br/>
+ p &#8211; display current (power) data<br/>
+ t &#8211; display temperature data<br/>
+ C &#8211; convert temperature to Celcius if in Farenheit<br/>
+ F &#8211; convert temperature to Farenheit if in Celcius<br/>
+ M &#8211; display each type of data on separate line<br/>
+ T &#8211; display data truncated to whole integers (some implemenations displayed them with fractional components)<br/>
  9 &#8211; any number, will tell ipmitool to read on this device number</dl>
 <p> <code>&#8211;envfilt regx</code> If specified, this regx is evaluated against each line of data returned by ipmitool and only those that match are retained. All other data is lost.</p>
 <dl>
@@ -493,10 +493,10 @@ description: "collectl – Collects data that describes the current system statu
 <dl>
 <dt>
 </dt><dd>
- B &#8211; For clients and servers, show buffer stats<br />
- D &#8211; For MDSs and OSTs AND running earlier versions of HPSFS, collect disk block iostats<br />
- M &#8211; For clients, collect metadata<br />
- O &#8211; For OSTs, show detail level stats<br />
+ B &#8211; For clients and servers, show buffer stats<br/>
+ D &#8211; For MDSs and OSTs AND running earlier versions of HPSFS, collect disk block iostats<br/>
+ M &#8211; For clients, collect metadata<br/>
+ O &#8211; For OSTs, show detail level stats<br/>
  R &#8211; For client, collect readahead stats</dd></dl>
 <p> <code>&#8211;memopts Memory Options</code></p>
 <dl>
@@ -510,10 +510,10 @@ description: "collectl – Collects data that describes the current system statu
 <p> <code>&#8211;netopts</code></p>
 <dl>
 <dt>
-</dt><dd> e &#8211; include network error counts in brief and explicit error types elsewhere<br />
- E &#8211; only include lines with network errors in them<br />
- i &#8211; include i/o sizes in brief mode<br />
- o &#8211; exclude unused networks from new file headers and plot data<br />
+</dt><dd> e &#8211; include network error counts in brief and explicit error types elsewhere<br/>
+ E &#8211; only include lines with network errors in them<br/>
+ i &#8211; include i/o sizes in brief mode<br/>
+ o &#8211; exclude unused networks from new file headers and plot data<br/>
  w &#8211; set width of network device name</dd></dl>
 <p> <code>&#8211;nfsfilt NFS Filters</code></p>
 <dl>
@@ -525,33 +525,33 @@ description: "collectl – Collects data that describes the current system statu
 <dt>
 </dt><dd> These filters restrict which processes are selected for collection/display. Using this filter will significanly reduce the load on process data collection since collectl creates a blacklist of those existing processes that do not pass the filter and so are permanently excluded from any future processing. </dd>
 <p> The format of a filter is a one charter type followed by a match string. Multiple filters may be specified if separated by commas. </p>
-<p> c &#8211; substring of the command being executed as explicitly read from /proc/pid/stat. Note that this can actually be a perl expression, so if you want a command that ends in a particular string all you need to is append a to the end of the string. Otherwise it would match any commands containing that string.<br />
- C &#8211; any command that starts with the specified string<br />
- f &#8211; full path of the command, including arguments, as read from /proc/pid/cmdline. Like the c modifier this too can be a perl expression.<br />
- p &#8211; pid<br />
- P &#8211; parent pid<br />
- u &#8211; any process ownerd by this user&#8217;s UID or in the range specifide by uxxx-yyy<br />
+<p> c &#8211; substring of the command being executed as explicitly read from /proc/pid/stat. Note that this can actually be a perl expression, so if you want a command that ends in a particular string all you need to is append a to the end of the string. Otherwise it would match any commands containing that string.<br/>
+ C &#8211; any command that starts with the specified string<br/>
+ f &#8211; full path of the command, including arguments, as read from /proc/pid/cmdline. Like the c modifier this too can be a perl expression.<br/>
+ p &#8211; pid<br/>
+ P &#8211; parent pid<br/>
+ u &#8211; any process ownerd by this user&#8217;s UID or in the range specifide by uxxx-yyy<br/>
  U &#8211; any process owned by this username </p>
 <p> <code>caution:</code> the process names collectl tries to match with c and C is the second field in /proc/pid/stat which may not necessarily be what you think! eg the name for X emacs is actually emacs-x</dl>
 <p> <code>&#8211;procopts options</code></p>
 <dl>
 <dt>
 </dt><dd> These options control the way data is displayed and can also improve data collection performance </dd>
-<p> c &#8211; include CPU time of children who have exited (same as ps -S)<br />
- f &#8211; use cumulative totals for page faults in process data instead of rates<br />
- i &#8211; show process I/O counters in display instead of default format<br />
- I &#8211; disable collection of I/O counters, see note below<br />
- k &#8211; remove known shells from process names, making it possible to see actual command<br />
- m &#8211; show breakdown of memory utilization instead of default format<br />
- p &#8211; never look for new pids or threads during data collection<br />
- r &#8211; show root command name only (no directory) for narrower display. Note that this is applied AFTER &#8216;k&#8217; so if arg1 becomes the new command it will be truncated now, which is very handy when running in a virtual python environment<br />
- R &#8211; show ALL process priorities (&#8216;RT&#8217; currently displayed if realtime)<br />
- s &#8211; show process start time in hh:mm:ss format<br />
- S &#8211; show process start time in mmmdd-hh:mm:ss format<br />
- t &#8211; include ALL process threads (increases collection overhead)<br />
- u &#8211; report username as 12 chars instead of 8, noting uxx will cause column width to be xx but cannot be less than 8<br />
- w &#8211; widen display by including whole argument string, with optional max width<br />
- x &#8211; include extended process attributes (currently only for context switches)<br />
+<p> c &#8211; include CPU time of children who have exited (same as ps -S)<br/>
+ f &#8211; use cumulative totals for page faults in process data instead of rates<br/>
+ i &#8211; show process I/O counters in display instead of default format<br/>
+ I &#8211; disable collection of I/O counters, see note below<br/>
+ k &#8211; remove known shells from process names, making it possible to see actual command<br/>
+ m &#8211; show breakdown of memory utilization instead of default format<br/>
+ p &#8211; never look for new pids or threads during data collection<br/>
+ r &#8211; show root command name only (no directory) for narrower display. Note that this is applied AFTER &#8216;k&#8217; so if arg1 becomes the new command it will be truncated now, which is very handy when running in a virtual python environment<br/>
+ R &#8211; show ALL process priorities (&#8216;RT&#8217; currently displayed if realtime)<br/>
+ s &#8211; show process start time in hh:mm:ss format<br/>
+ S &#8211; show process start time in mmmdd-hh:mm:ss format<br/>
+ t &#8211; include ALL process threads (increases collection overhead)<br/>
+ u &#8211; report username as 12 chars instead of 8, noting uxx will cause column width to be xx but cannot be less than 8<br/>
+ w &#8211; widen display by including whole argument string, with optional max width<br/>
+ x &#8211; include extended process attributes (currently only for context switches)<br/>
  z &#8211; exclude any processes with 0 in sort field (in &#8211;top mode) </p>
 <p> Process data is the most expensive type of data collected, costing as much as 3 times the CPU load as all other types of data combined. Collecting thread data makes this even more expensive. One can significantly reduce this load by over 25 percent by disabling the collection of I/O stats. However, keep in mind that even if you don&#8217;t try to optimize process data collection, the overall system load by collectl can still be on the order of about 0.2% when running as a daemon with default collection rates. See the online documentation on measuring performance for more information. </p>
 <p> A security hole was identified that allowed non-priviledged users to read /proc/pid/io and guess password lengths and noe many distros retrict access to the owner or root. As a result, non-priviledged users will see all 0 I/O counts for processes that are not theirs when specifying &#8211;procopt i.</dl>
@@ -562,17 +562,17 @@ description: "collectl – Collects data that describes the current system statu
 <p> <code>&#8211;slabopts Slab Options</code></p>
 <dl>
 <dt>
-</dt><dd> <code>s &#8211; exclude any slabs with an allocation of 0</code><br />
+</dt><dd> <code>s &#8211; exclude any slabs with an allocation of 0</code><br/>
  <code>S &#8211; only show those slabs whose allocations changed since last display</code></dd></dl>
 <p> <code>&#8211;tcpfilt</code></p>
 <dl>
 <dt>
-</dt><dd> These filters actually control both what is collected as well as displayed. If one selects non-collected filters, 0s will be reported. There is one special case and that is if one includes T (tcp extended stats) in the filter string, there are no brief ones and therefore &#8211;verbose will be forced.<br />
- <code>i &#8211; ip stats</code><br />
- <code>t &#8211; tcp stats</code><br />
- <code>u &#8211; udp stats</code><br />
- <code>c &#8211; icmp stats</code><br />
- <code>I &#8211; ip extended stats</code><br />
+</dt><dd> These filters actually control both what is collected as well as displayed. If one selects non-collected filters, 0s will be reported. There is one special case and that is if one includes T (tcp extended stats) in the filter string, there are no brief ones and therefore &#8211;verbose will be forced.<br/>
+ <code>i &#8211; ip stats</code><br/>
+ <code>t &#8211; tcp stats</code><br/>
+ <code>u &#8211; udp stats</code><br/>
+ <code>c &#8211; icmp stats</code><br/>
+ <code>I &#8211; ip extended stats</code><br/>
  <code>T &#8211; tcp excented stats</code></dd></dl>
 <p> <code>&#8211;xopts</code></p>
 <dl>
@@ -592,6 +592,6 @@ description: "collectl – Collects data that describes the current system statu
 <h2>ACKNOWLEDGEMENTS</h2>
 <p> I would like to thank Rob Urban for his creation of the Tru64 Unix collect tool, which collectl is based on. </p>
 <h2>AUTHOR</h2>
-<p> This program was written by Mark Seger (mjseger [at] gmail.com).<br />
- Copyright 2003-2015 Hewlett-Packard Development Company, LP<br />
+<p> This program was written by Mark Seger (mjseger [at] gmail.com).<br/>
+ Copyright 2003-2015 Hewlett-Packard Development Company, LP<br/>
  collectl may be copied only under the terms of either the Artistic License or the GNU General Public License, which may be found in the source kit </p>

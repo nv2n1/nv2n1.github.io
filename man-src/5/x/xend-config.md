@@ -19,11 +19,11 @@ description: "xend-config.sxp – Xen daemon configuration file"
 <dt><i>logfile</i></dt>
 <dd>The location of the file to record runtime log messages. Defaults to <i>/var/log/xen/xend.log</i>.</dd>
 <dt><i>loglevel</i></dt>
-<dd>Filters out messages below the specified level. Possible values are <font SIZE="-1">DEBUG</font>, <font SIZE="-1">INFO</font>, <font SIZE="-1">WARNING</font>, <font SIZE="-1">ERROR</font>, <font SIZE="-1">CRITICAL</font>. Defaults to <i></i><font SIZE="-1"><i>DEBUG</i></font><i></i>.</dd>
+<dd>Filters out messages below the specified level. Possible values are DEBUG, INFO, WARNING, ERROR, CRITICAL. Defaults to <i></i><i>DEBUG</i><i></i>.</dd>
 <dt><i>xend-http-server</i></dt>
 <dd>A boolean value that tells xend whether or not to start the http stream socket management server. Defaults to <i>no</i>.</dd>
 <dt><i>xend-unix-server</i></dt>
-<dd>A boolean value that tells xend whether or not to start the unix domain socket management server. This is required for the <font SIZE="-1">CLI</font> tools to operate. Defaults to <i>yes</i>.</dd>
+<dd>A boolean value that tells xend whether or not to start the unix domain socket management server. This is required for the CLI tools to operate. Defaults to <i>yes</i>.</dd>
 <dt><i>xend-relocation-server</i></dt>
 <dd>A boolean value that tells xend whether or not to start the relocation server. This is required for cross-machine migrations. Defaults to <i>no</i>.</dd>
 <dt><i>xend-unix-path</i></dt>
@@ -49,7 +49,7 @@ description: "xend-config.sxp – Xen daemon configuration file"
 <dt><i>enable-dump</i></dt>
 <dd>A boolean value that tells xend whether or not core dumps of guest domains should be saved when a crash occurs. Defaults to <i>no</i>.</dd>
 <dt><i>external-migration-tool</i></dt>
-<dd>The name of an application or script that can handle external device migration, such as for example virtual <font SIZE="-1">TPM</font> migration. An example script is <i>/etc/xen/scripts/external-device-migrate</i>.</dd>
+<dd>The name of an application or script that can handle external device migration, such as for example virtual TPM migration. An example script is <i>/etc/xen/scripts/external-device-migrate</i>.</dd>
 <dt><i>device-create-timeout</i></dt>
 <dd>Integer value that tells xend how long it should wait for a new device to be created. Defaults to <i>100</i>.</dd>
 <dt><i>device-destroy-timeout</i></dt>

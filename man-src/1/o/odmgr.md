@@ -10,17 +10,17 @@ description: "odmgr – administration utility for QDBM Odeum"
 
 <p> odmgr &#8211; administration utility for QDBM Odeum </p>
 <h2>SYNOPSIS</h2>
-<p> <code>odmgr create</code> <i>name</i><br />
- <code>odmgr put</code> [-uri <i>str</i>] [-title <i>str</i>] [-author <i>str</i>] [-date <i>str</i>] [-wmax <i>num</i>] [-keep] <i>name</i> [<i>file</i>]<br />
- <code>odmgr out</code> [-id] <i>name</i> <i>expr</i><br />
- <code>odmgr get</code> [-id] [-t|-h] <i>name</i> <i>expr</i><br />
- <code>odmgr search</code> [-max <i>num</i>] [-or] [-idf] [-t|-h|-n] <i>name</i> <i>words&#8230;</i><br />
- <code>odmgr list</code> [-t|-h] <i>name</i><br />
- <code>odmgr optimize</code> <i>name</i><br />
- <code>odmgr inform</code> <i>name</i><br />
- <code>odmgr merge</code> <i>name elems&#8230;</i><br />
- <code>odmgr remove</code> <i>name</i><br />
- <code>odmgr break</code> [-h|-k|-s] [<i>file</i>]<br />
+<p> <code>odmgr create</code> <i>name</i><br/>
+ <code>odmgr put</code> [-uri <i>str</i>] [-title <i>str</i>] [-author <i>str</i>] [-date <i>str</i>] [-wmax <i>num</i>] [-keep] <i>name</i> [<i>file</i>]<br/>
+ <code>odmgr out</code> [-id] <i>name</i> <i>expr</i><br/>
+ <code>odmgr get</code> [-id] [-t|-h] <i>name</i> <i>expr</i><br/>
+ <code>odmgr search</code> [-max <i>num</i>] [-or] [-idf] [-t|-h|-n] <i>name</i> <i>words&#8230;</i><br/>
+ <code>odmgr list</code> [-t|-h] <i>name</i><br/>
+ <code>odmgr optimize</code> <i>name</i><br/>
+ <code>odmgr inform</code> <i>name</i><br/>
+ <code>odmgr merge</code> <i>name elems&#8230;</i><br/>
+ <code>odmgr remove</code> <i>name</i><br/>
+ <code>odmgr break</code> [-h|-k|-s] [<i>file</i>]<br/>
  <code>odmgr version</code></p>
 <h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>odmgr</code> commands. </p>

@@ -124,7 +124,7 @@ deb [ arch=amd64,armel ] <a rel="nofollow" href="http://ftp.debian.org/debian">h
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-apt-cache/">apt-cache</a></code>(8)<code><a href="/docs/linux/man/5-apt-conf/">apt.conf</a></code>(5)</p>
 <h2>Bugs</h2>
-<p>m[blue]<code>APT bug page</code>m[]<font SIZE="-2">[1]</font>. If you wish to report a bug in APT, please see /usr/share/doc/debian/bug-reporting.txt or the <code>reportbug</code>(1) command.</p>
+<p>m[blue]<code>APT bug page</code>m[][1]. If you wish to report a bug in APT, please see /usr/share/doc/debian/bug-reporting.txt or the <code>reportbug</code>(1) command.</p>
 <h2>Authors</h2>
 <p><code>Jason Gunthorpe</code></p>
 <dl>

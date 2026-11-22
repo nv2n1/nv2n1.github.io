@@ -121,14 +121,14 @@ description: "pdf2djvu – creates DjVu files from PDF files"
 <p> By default: </p>
 <dl>
 <dt>
-</dt><dd> &bull; The following entries of the document information dictionary are extracted: Title, Author, Subject, Creator, Producer, CreationDate, ModDate. Timestamps are formatted according to m[blue]<code>RFC 3999</code>m[]<font SIZE="-2">[1]</font>, with date and time components separated by a single space.</dd></dl>
+</dt><dd> &bull; The following entries of the document information dictionary are extracted: Title, Author, Subject, Creator, Producer, CreationDate, ModDate. Timestamps are formatted according to m[blue]<code>RFC 3999</code>m[][1], with date and time components separated by a single space.</dd></dl>
 <dl>
 <dt>
 </dt><dd> &bull; The XMP metadata is extracted (or created) and updated accordingly.</dd></dl>
 <dl>
 <dt>
 </dt><dd>
- <font SIZE="+1"> <code>Note</code> </font><br />
+  <code>Note</code> <br/>
  If multiple input documents are specified, only metadata of the first one is taken into account. </dd>
 </dl>
 </dl>
@@ -172,7 +172,7 @@ description: "pdf2djvu – creates DjVu files from PDF files"
 <p> <code>&#8211;no-nfkc</code></p>
 <dl>
 <dt>
-</dt><dd> Don&#8217;t m[blue]<code>NFKC</code>m[]<font SIZE="-2">[2]</font>-normalize the text.</dd></dl>
+</dt><dd> Don&#8217;t m[blue]<code>NFKC</code>m[][2]-normalize the text.</dd></dl>
 <p> <code>&#8211;filter-text=</code><i>command-line</i></p>
 <dl>
 <dt>
@@ -214,14 +214,14 @@ description: "pdf2djvu – creates DjVu files from PDF files"
 <p> <i>OMP_</i><i>*</i></p>
 <dl>
 <dt>
-</dt><dd> Details of runtime behaviour with respect to parallelism can be controlled by several environment variables. Please refer to the m[blue]<code>OpenMP API specification</code>m[]<font SIZE="-2">[3]</font> for details.</dd></dl>
+</dt><dd> Details of runtime behaviour with respect to parallelism can be controlled by several environment variables. Please refer to the m[blue]<code>OpenMP API specification</code>m[][3] for details.</dd></dl>
 <p> <i>TMPDIR</i></p>
 <dl>
 <dt>
 </dt><dd> <code>pdf2djvu</code> makes heavy use of temporary files. It will store them in a directory specified by this variable. The default is /tmp.</dd></dl>
 <h2>TEMPLATE LANGUAGE</h2>
 <h3>Template syntax</h3>
-<p> The template language is roughly modelled on the m[blue]<code>Python string formatting syntax</code>m[]<font SIZE="-2">[4]</font>. </p>
+<p> The template language is roughly modelled on the m[blue]<code>Python string formatting syntax</code>m[][4]. </p>
 <p> A template is a piece of text which contains fields, surrounded by curly braces {}. Fields are replaced with appropriately formatted values when the template is evaluated. Moreover, &#123;&#123; is replaced with a single { and }} is replaced with a single }.</p>
 <h3>Field syntax</h3>
 <p> Each field consists of a variable name, optionally followed by a shift, optionally followed by a format specification. </p>
@@ -272,7 +272,7 @@ description: "pdf2djvu – creates DjVu files from PDF files"
 </dl>
 </dl>
 <h2>BUG REPORTS</h2>
-<p> If you find a bug in pdf2djvu, please report it at m[blue]<code>the issue tracker</code>m[]<font SIZE="-2">[5]</font>.</p>
+<p> If you find a bug in pdf2djvu, please report it at m[blue]<code>the issue tracker</code>m[][5].</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-djvu/">djvu</a></code>(1), <code><a href="/docs/linux/man/1-djvudigital/">djvudigital</a></code>(1), <code><a href="/docs/linux/man/1-csepdjvu/">csepdjvu</a></code>(1)</p>
 <h2>AUTHOR</h2>

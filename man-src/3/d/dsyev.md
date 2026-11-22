@@ -11,7 +11,7 @@ description: "dsyev.f –"
 <p> dsyev.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dsyev</code> (JOBZ, UPLO, N, A, LDA, W, WORK, LWORK, INFO)<br />
+<p> subroutine <code>dsyev</code> (JOBZ, UPLO, N, A, LDA, W, WORK, LWORK, INFO)<br/>
  <i></i><code> DSYEV computes the eigenvalues and, optionally, the left and/or right eigenvectors for SY matrices</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dsyev (characterJOBZ, characterUPLO, integerN, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( * )W, double precision, dimension( * )WORK, integerLWORK, integerINFO)</h3>

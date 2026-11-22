@@ -71,5 +71,5 @@ description: "XMLTV::Configure::Writer – Configuration file writer for XMLTV g
 <p>Hey! <code>The above document had some coding errors, which are explained below:</code></p>
 <dl COMPACT>
 <dt>Around line 44:</dt>
-<dd>Non-ASCII character seen before =encoding in &#8221;Anva.ndarnamn&#8217;,&#8217;. Assuming <font SIZE="-1">ISO8859-1</font> </dd>
+<dd>Non-ASCII character seen before =encoding in &#8221;Anva.ndarnamn&#8217;,&#8217;. Assuming ISO8859-1 </dd>
 </dl>

@@ -15,9 +15,9 @@ int rand_r(unsigned int *seedp);
 void srand(unsigned int seed);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>rand_r</code>():</p>
 <dl>
-<dd>Since glibc 2.24:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;199506L<br />
- Glibc 2.23 and earlier<br />
+<dd>Since glibc 2.24:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;199506L<br/>
+ Glibc 2.23 and earlier<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_POSIX_C_SOURCE</dd></dl>
 <h2>Description</h2>
 <p>The <code>rand</code>() function returns a pseudo-random integer in the range 0 to <code>RAND_MAX</code> inclusive (i.e., the mathematical range [0,&nbsp;<code>RAND_MAX</code>]). </p>
@@ -49,26 +49,26 @@ void srand(unsigned int seed);</code></pre>
 <h2>Notes</h2>
 <p>The versions of <code>rand</code>() and <code>srand</code>() in the Linux C Library use the same random number generator as <code><a href="/docs/linux/man/3-random/">random</a></code>(3) and <code><a href="/docs/linux/man/3-srandom/">srandom</a></code>(3), so the lower-order bits should be as random as the higher-order bits. However, on older <code>rand</code>() implementations, and on current implementations on different systems, the lower-order bits are much less random than the higher-order bits. Do not use this function in applications intended to be portable when good randomness is needed. (Use <code><a href="/docs/linux/man/3-random/">random</a></code>(3) instead.)</p>
 <h2>Examples</h2>
-<p>POSIX.1-2001 gives the following example of an implementation of <code>rand</code>() and <code>srand</code>(), possibly useful when one needs the same sequence on two different machines. #include &lt;stdio.h&gt;<br />
-#include &lt;stdlib.h&gt;<br />
-int main(int argc, char *argv[])<br />
-{<br />
-    int r, nloops;<br />
-    unsigned int seed;<br />
-    if (argc != 3) {<br />
+<p>POSIX.1-2001 gives the following example of an implementation of <code>rand</code>() and <code>srand</code>(), possibly useful when one needs the same sequence on two different machines. #include &lt;stdio.h&gt;<br/>
+#include &lt;stdlib.h&gt;<br/>
+int main(int argc, char *argv[])<br/>
+{<br/>
+    int r, nloops;<br/>
+    unsigned int seed;<br/>
+    if (argc != 3) {<br/>
         fprintf(stderr, &quot;Usage: %s &lt;seed&gt; &lt;nloops&gt;
-&quot;, argv[0]);<br />
-        exit(EXIT_FAILURE);<br />
-    }<br />
-    seed = atoi(argv[1]);<br />
-    nloops = atoi(argv[2]);<br />
-    srand(seed);<br />
-    for (int j = 0; j &lt; nloops; j++) {<br />
-        r = rand();<br />
+&quot;, argv[0]);<br/>
+        exit(EXIT_FAILURE);<br/>
+    }<br/>
+    seed = atoi(argv[1]);<br/>
+    nloops = atoi(argv[2]);<br/>
+    srand(seed);<br/>
+    for (int j = 0; j &lt; nloops; j++) {<br/>
+        r = rand();<br/>
         printf(&quot;%d
-&quot;, r);<br />
-    }<br />
-    exit(EXIT_SUCCESS);<br />
+&quot;, r);<br/>
+    }<br/>
+    exit(EXIT_SUCCESS);<br/>
 } The following program can be used to display the pseudo-random sequence produced by <code>rand</code>() when given a particular seed. </p>
 <pre><code>#include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;

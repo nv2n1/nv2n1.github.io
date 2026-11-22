@@ -20,8 +20,8 @@ description: "pamrubber – a rubber-sheeting utility that stretches an image ba
 <p> When you specify less than four control points, the program adds control points in the following way. With three control points, <code>pamrubber</code> chooses the fourth one such that the four points form a parallelogram. With two points, <code>pamrubber</code> considers them the opposite corners of a rectangle. When you specify only one control point, <code>pamrubber</code> uses a rectangle from the top left corner of the image to the single control point. </p>
 <p> In &#8216;tri&#8217; mode, <code>pamrubber</code> conceptually cuts up the source and target image into triangles. It Transforms within each corresponding pair of triangles in a stretching fashion. It&#8217;s like pulling on the three corners of the triangle. In this mode, each pixel in the source image gets mapped to a position in the target image. No pixels are lost. </p>
 <p> When, in &#8216;tri&#8217; mode, you specify only a single control point in the source and target image, <code>pamrubber</code> creates four triangles from this point to the four corners of the image. With two points, the program creates six triangles from the two endpoints of the line connecting the two points, again to the four corners of the image. Three control points is in a way the core of this utility in &#8216;tri&#8217; mode. Between the three edges of the central triangle and the four edges of the image, <code>pamrubber</code> constructs another seven triangles. Four control points define two central connected triangles. In total this results in cutting the source and target image up into ten triangles. </p>
-<p> In this case clearly a picture says more than a thousand words. There is a graphical illustration of these various modes at<br />
-&nbsp;<wbr><a rel="nofollow" href="http://www.schaik.com">www.schaik.com</a>/netpbm/rubber . An example of how to use this type of rubber sheeting in cartography is in the article<br />
+<p> In this case clearly a picture says more than a thousand words. There is a graphical illustration of these various modes at<br/>
+&nbsp;<wbr><a rel="nofollow" href="http://www.schaik.com">www.schaik.com</a>/netpbm/rubber . An example of how to use this type of rubber sheeting in cartography is in the article<br/>
 &nbsp;<wbr>Visualizing the Landscape of Old-Time Tokyo . </p>
 <h2>PARAMETERS</h2>
 <p> The parameters are control points (<i>cp</i>) in pairs of <i>x</i> and <i>y</i>. The source and target image must have the same number of control points. The minimum number of values specified here is 4 for a single control point in the source and target image. The maximum is 16 for four control points in each image. </p>
@@ -44,7 +44,7 @@ description: "pamrubber – a rubber-sheeting utility that stretches an image ba
 <p> Before Netpbm 10.61 (December 2012), this was called <code>-randseed</code>, and that still works. </p>
 </dd></dl>
 <h2>SEE ALSO</h2>
-<p> <code>pam</code>(1)<br />
+<p> <code>pam</code>(1)<br/>
 &nbsp;<wbr>and <code><a href="/docs/linux/man/1-pamperspective/">pamperspective</a></code>(1) </p>
 <h2>HISTORY</h2>
 <p> <code>pamrubber</code> was new in Netpbm 10.54 (March 2011). </p>

@@ -11,7 +11,7 @@ description: "slaruv.f –"
 <p> slaruv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>slaruv</code> (ISEED, N, X)<br />
+<p> subroutine <code>slaruv</code> (ISEED, N, X)<br/>
  <i></i><code>SLARUV</code> returns a vector of n random real numbers from a uniform distribution.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slaruv (integer, dimension( 4 )ISEED, integerN, real, dimension( n )X)</h3>

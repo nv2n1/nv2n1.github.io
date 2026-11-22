@@ -19,9 +19,9 @@ description: "xhost – server access control program for X"
 <dt><code>-help</code></dt>
 <dd> Prints a usage message.</dd>
 <dt><code>[+]</code><i>name</i></dt>
-<dd> The given <i>name</i> (the plus sign is optional) is added to the list allowed to connect to the X server. The name can be a host name or a complete name (See <font SIZE="-1"><code>NAMES</code> </font> for more details).</dd>
+<dd> The given <i>name</i> (the plus sign is optional) is added to the list allowed to connect to the X server. The name can be a host name or a complete name (See <code>NAMES</code>  for more details).</dd>
 <dt><code>&#8211;</code><i>name</i></dt>
-<dd> The given <i>name</i> is removed from the list of allowed to connect to the server. The name can be a host name or a complete name (See <font SIZE="-1"><code>NAMES</code> </font> for more details). Existing connections are not broken, but new connection attempts will be denied. Note that the current machine is allowed to be removed; however, further connections (including attempts to add it back) will not be permitted. Resetting the server (thereby breaking all connections) is the only way to allow local connections again.</dd>
+<dd> The given <i>name</i> is removed from the list of allowed to connect to the server. The name can be a host name or a complete name (See <code>NAMES</code>  for more details). Existing connections are not broken, but new connection attempts will be denied. Note that the current machine is allowed to be removed; however, further connections (including attempts to add it back) will not be permitted. Resetting the server (thereby breaking all connections) is the only way to allow local connections again.</dd>
 <dt><code>+</code></dt>
 <dd> Access is granted to everyone, even if they aren&#8217;t on the list (i.e., access control is turned off).</dd>
 <dt><code>&#8211;</code></dt>
@@ -57,5 +57,5 @@ si        Server Interpreted
 <p> You can&#8217;t specify a display on the command line because <code>-display</code> is a valid command line argument (indicating that you want to remove the machine named <i>&#8220;display&#8221;</i> from the access list). </p>
 <p> The X server stores network addresses, not host names, unless you use the server-interpreted hostname type address. If somehow you change a host&#8217;s network address while the server is still running, and you are using a network-address based form of authentication, <i>xhost</i> must be used to add the new address and/or remove the old address.</p>
 <h2>AUTHORS</h2>
-<p> Bob Scheifler, MIT Laboratory for Computer Science,<br />
+<p> Bob Scheifler, MIT Laboratory for Computer Science,<br/>
  Jim Gettys, MIT Project Athena (DEC). </p>

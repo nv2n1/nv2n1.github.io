@@ -35,7 +35,7 @@ description: "icmp – Linux IPv4 ICMP kernel module."
 <dd>Limit the maximum rates for sending ICMP packets whose type matches <i>icmp_ratemask</i> (see below) to specific targets. 0 to disable any limiting, otherwise the minimum space between responses in milliseconds.</dd>
 <dt><i>icmp_ratemask</i> (integer; default: see below; since Linux 2.4.10)</dt>
 <dd>Mask made of ICMP types for which rates are being limited.</dd>
-<dd>Significant bits: IHGFEDCBA9876543210<br />
+<dd>Significant bits: IHGFEDCBA9876543210<br/>
  Default mask: 0000001100000011000 (0x1818)</dd>
 <dd>Bit definitions (see the Linux kernel source file <i>include/linux/icmp.h</i>):</dd>
 <dl>

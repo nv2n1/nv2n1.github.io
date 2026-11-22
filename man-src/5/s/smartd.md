@@ -437,9 +437,9 @@ sleep 30
 <p> As previously described, if the scripts write to STDOUT or STDERR, this is interpreted as indicating that there was an internal error within the script, and a snippet of STDOUT/STDERR is logged to SYSLOG. The remainder is flushed. </p>
 </dl>
 <h2>Authors</h2>
-<p><code>Bruce Allen</code><br />
- University of Wisconsin &#8211; Milwaukee Physics Department<br />
- <code>Christian Franke</code> (Windows interface, C++ redesign, most enhancements since 2009)<br />
+<p><code>Bruce Allen</code><br/>
+ University of Wisconsin &#8211; Milwaukee Physics Department<br/>
+ <code>Christian Franke</code> (Windows interface, C++ redesign, most enhancements since 2009)<br/>
  <code>smartmontools-support [at] lists.sourceforge.net</code></p>
 <h2>Contributors</h2>
 <p>The following have made large contributions to smartmontools: </p>

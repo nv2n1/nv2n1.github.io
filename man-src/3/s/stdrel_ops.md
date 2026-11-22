@@ -21,7 +21,7 @@ description: "std::rel_ops –"
 <p>Defines != for arbitrary types, in terms of ==. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__x</i> A thing.<br />
+<dd><i>__x</i> A thing.<br/>
  <i>__y</i> Another thing.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -32,7 +32,7 @@ description: "std::rel_ops –"
 <p>Defines &lt;= for arbitrary types, in terms of &lt;. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__x</i> A thing.<br />
+<dd><i>__x</i> A thing.<br/>
  <i>__y</i> Another thing.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -43,7 +43,7 @@ description: "std::rel_ops –"
 <p>Defines &gt; for arbitrary types, in terms of &lt;. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__x</i> A thing.<br />
+<dd><i>__x</i> A thing.<br/>
  <i>__y</i> Another thing.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -54,7 +54,7 @@ description: "std::rel_ops –"
 <p>Defines &gt;= for arbitrary types, in terms of &lt;. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__x</i> A thing.<br />
+<dd><i>__x</i> A thing.<br/>
  <i>__y</i> Another thing.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

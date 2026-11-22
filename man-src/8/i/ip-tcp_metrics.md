@@ -15,7 +15,7 @@ tcp_metrics
 { COMMAND |
     help }
 </code></pre>
-<p> <code>ip tcp_metrics</code> { <code>show</code> | <code>flush</code> } <i>SELECTOR</i><br />
+<p> <code>ip tcp_metrics</code> { <code>show</code> | <code>flush</code> } <i>SELECTOR</i><br/>
  <code>ip tcp_metrics delete </code>[<code> address </code>] <i>ADDRESS</i> </p>
 <pre><code>SELECTOR :=
 [ [ address ]

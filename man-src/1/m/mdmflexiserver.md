@@ -10,11 +10,11 @@ description: "mdmflexiserver – start a MDM session using the MDM flexible serv
 
 <p> mdmflexiserver &#8211; start a MDM session using the MDM flexible server mechanism </p>
 <h2>SYNOPSIS</h2>
-<p> <code>mdmflexiserver</code> <font SIZE="-1">GNOME</font> options mdmflexiserver options</p>
+<p> <code>mdmflexiserver</code> GNOME options mdmflexiserver options</p>
 <h2>DESCRIPTION</h2>
-<p> The <i>flexi server</i> mechanism allows to run <font SIZE="-1">MDM</font> sessions on demand.</p>
+<p> The <i>flexi server</i> mechanism allows to run MDM sessions on demand.</p>
 <h2>OPTIONS</h2>
-<p> In addition to the common Gtk and <font SIZE="-1">GNOME</font> options, <code>mdmflexiserver</code> accepts the following options:</p>
+<p> In addition to the common Gtk and GNOME options, <code>mdmflexiserver</code> accepts the following options:</p>
 <dl>
 <dt><code>-c</code> <i>command</i>, <code>&#8211;command</code>=<i>command</i></dt>
 <dd> Send the specified protocol command to mdm</dd>
@@ -27,4 +27,4 @@ description: "mdmflexiserver – start a MDM session using the MDM flexible serv
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/8-mdm/">mdm</a></i>(8)</p>
 <h2>AUTHORS</h2>
-<p> <code>mdmflexiserver</code> is part of the <font SIZE="-1"><code>MDM</code></font> software package. This manpage was written by Yann Dirson &lt;dirson [at] debian.org&gt; for the Debian system, but may be used by others. </p>
+<p> <code>mdmflexiserver</code> is part of the <code>MDM</code> software package. This manpage was written by Yann Dirson &lt;dirson [at] debian.org&gt; for the Debian system, but may be used by others. </p>

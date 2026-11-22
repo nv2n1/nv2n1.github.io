@@ -18,7 +18,7 @@ description: "Lintian::Processable::Objdump – access to collected binary objec
 <h2>Instance Methods</h2>
 <dl COMPACT>
 <dt>objdump_info</dt>
-<dd> Returns a hashref mapping a <font SIZE="-1">FILE</font> to the data collected by objdump-info or <tt>&quot;undef&quot;</tt> if no data is available for that <font SIZE="-1">FILE.</font> Data is generally only collected for <font SIZE="-1">ELF</font> files. </dd>
+<dd> Returns a hashref mapping a FILE to the data collected by objdump-info or <tt>&quot;undef&quot;</tt> if no data is available for that FILE. Data is generally only collected for ELF files. </dd>
 <p> Needs-Info requirements for using <i>objdump_info</i>: objdump-info</dl>
 <h2>Author</h2>
 <p> Originally written by Felix Lechner &lt;felix.lechner [at] lease-up.com&gt; for Lintian.</p>

@@ -91,8 +91,8 @@ description: "watch – execute a program periodically, showing output fullscree
 <p> To see the effects of quoting, try these out</p>
 <dl>
 <dt>
-</dt><dd> watch echo $$<br />
- watch echo &#8216;$$&#8217;<br />
+</dt><dd> watch echo $$<br/>
+ watch echo &#8216;$$&#8217;<br/>
  watch echo &quot;&#8217;&quot;&#8217;$$&#8217;&quot;&#8217;&quot;</dd></dl>
 <p> To see the effect of precision time keeping, try adding <code>-p</code> to</p>
 <dl>

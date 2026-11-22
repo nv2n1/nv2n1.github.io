@@ -11,9 +11,9 @@ rrdthreads - Provisions for linking the RRD library to use in multi-threaded pro
 
 <h2>SYNOPSIS</h2>
 
- Using librrd in multi-threaded programs requires some extra precautions, as the <font SIZE="-1">RRD</font> library in its original form was not thread-safe at all. This document describes requirements and pitfalls on the way to use the multi-threaded version of librrd in your own programs. It also gives hints for future <font SIZE="-1">RRD</font> development to keep the library thread-safe. 
+ Using librrd in multi-threaded programs requires some extra precautions, as the RRD library in its original form was not thread-safe at all. This document describes requirements and pitfalls on the way to use the multi-threaded version of librrd in your own programs. It also gives hints for future RRD development to keep the library thread-safe. 
 
- Currently only some <font SIZE="-1">RRD</font> operations are implemented in a thread-safe way. They all end in the usual &quot;<tt>&quot;_r&quot;</tt>&quot; suffix.
+ Currently only some RRD operations are implemented in a thread-safe way. They all end in the usual &quot;<tt>&quot;_r&quot;</tt>&quot; suffix.
 
 <h2>DESCRIPTION</h2>
 
@@ -28,13 +28,13 @@ rrdthreads - Provisions for linking the RRD library to use in multi-threaded pro
 </dd><dt>&bull;
 </dt><dd> Never use non *<tt>&quot;_r&quot;</tt> functions unless it is explicitly documented that the function is tread-safe.
 </dd><dt>&bull;
-</dt><dd> Every thread <font SIZE="-1">SHOULD</font> call <tt>&quot;rrd_get_context()&quot;</tt> before its first call to any <tt>&quot;librrd_th&quot;</tt> function in order to set up thread specific data. This is not strictly required, but it is the only way to test if memory allocation can be done by this function. Otherwise the program may die with a <font SIZE="-1">SIGSEGV</font> in a low-memory situation.
+</dt><dd> Every thread SHOULD call <tt>&quot;rrd_get_context()&quot;</tt> before its first call to any <tt>&quot;librrd_th&quot;</tt> function in order to set up thread specific data. This is not strictly required, but it is the only way to test if memory allocation can be done by this function. Otherwise the program may die with a SIGSEGV in a low-memory situation.
 </dd><dt>&bull;
 </dt><dd> Always call <tt>&quot;rrd_error_clear()&quot;</tt> before any call to the library. Otherwise the call might fail due to some earlier error.</dd></dl>
 
-<h3><font SIZE="-1">NOTES</font> <font SIZE="-1">FOR</font> <font SIZE="-1">RRD</font> <font SIZE="-1">CONTRIBUTORS</font></h3>
+<h3>NOTES FOR RRD CONTRIBUTORS</h3>
 
- Some precautions must be followed when developing <font SIZE="-1">RRD</font> from now on:
+ Some precautions must be followed when developing RRD from now on:
 <dl>
 <dt>&bull;
 </dt><dd> Only use thread-safe functions in library code. Many often used libc functions aren't thread-safe. Take care in the following situations or when using the following library functions:
@@ -58,7 +58,7 @@ rrdthreads - Provisions for linking the RRD library to use in multi-threaded pro
 </dl>
 
 <dt>&bull;
-</dt><dd> A header file named <i>rrd_is_thread_safe.h</i> is provided that works with the <font SIZE="-1">GNU</font> C-preprocessor to ``poison'' some of the most common non-thread-safe functions using the <tt>&quot;#pragma GCC poison&quot;</tt> directive. Just include this header in source files you want to keep thread-safe.
+</dt><dd> A header file named <i>rrd_is_thread_safe.h</i> is provided that works with the GNU C-preprocessor to ``poison'' some of the most common non-thread-safe functions using the <tt>&quot;#pragma GCC poison&quot;</tt> directive. Just include this header in source files you want to keep thread-safe.
 </dd><dt>&bull;
 </dt><dd> Do not introduce global variables! 
 
@@ -72,7 +72,7 @@ rrdthreads - Provisions for linking the RRD library to use in multi-threaded pro
 
  It uses lots of global variables. You may use it in functions not designed to be thread-safe, like in functions wrapping the <tt>&quot;_r&quot;</tt> version of some operation (e.g., <tt>&quot;rrd_create&quot;</tt>, but not in <tt>&quot;rrd_create_r&quot;</tt>)</dd></dl>
 
-<h3><font SIZE="-1">CURRENTLY</font> <font SIZE="-1">IMPLEMENTED</font> <font SIZE="-1">THREAD</font> <font SIZE="-1">SAFE</font> <font SIZE="-1">FUNCTIONS</font></h3>
+<h3>CURRENTLY IMPLEMENTED THREAD SAFE FUNCTIONS</h3>
 
  Currently there exist thread-safe variants of <tt>&quot;rrd_update&quot;</tt>, <tt>&quot;rrd_create&quot;</tt>, <tt>&quot;rrd_dump&quot;</tt>, <tt>&quot;rrd_info&quot;</tt>, <tt>&quot;rrd_last&quot;</tt>, and <tt>&quot;rrd_fetch&quot;</tt>.
 

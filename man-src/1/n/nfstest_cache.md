@@ -211,9 +211,9 @@ The cached information is assumed to be valid for attrtimeo
 which starts and ends at actimeo.
 </pre>
 <h2>EXAMPLES</h2>
-<p> Required options are &#8211;server and &#8211;client<br />
+<p> Required options are &#8211;server and &#8211;client<br/>
  $ nfstest_cache &#8211;server 192.168.0.11 &#8211;client 192.168.0.20 </p>
-<p> Testing with different values of &#8211;acmin and &#8211;acmax (this takes a long time)<br />
+<p> Testing with different values of &#8211;acmin and &#8211;acmax (this takes a long time)<br/>
  $ nfstest_cache &#8211;server 192.168.0.11 &#8211;client 192.168.0.20 &#8211;acmin 10,20 &#8211;acmax 20,30,60,80</p>
 <h2>NOTES</h2>
 <p> The user id in the local host and the host specified by &#8211;client must have access to run commands as root using the &#8216;sudo&#8217; command without the need for a password. </p>

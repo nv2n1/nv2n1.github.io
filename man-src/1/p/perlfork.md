@@ -21,30 +21,30 @@ description: "perlfork – Perl’s fork() emulation"
 <p> This document provides a general overview of the capabilities and limitations of the <code>fork()</code> emulation. Note that the issues discussed here are not applicable to platforms where a real <code>fork()</code> is available and Perl has been configured to use it.</p>
 <h2>DESCRIPTION</h2>
 <p> The <code>fork()</code> emulation is implemented at the level of the Perl interpreter. What this means in general is that running <code>fork()</code> will actually clone the running interpreter and all its state, and run the cloned interpreter in a separate thread, beginning execution in the new thread just after the point where the <code>fork()</code> was called in the parent. We will refer to the thread that implements this child &#8220;process&#8221; as the pseudo-process. </p>
-<p> To the Perl program that called <code>fork()</code>, all this is designed to be transparent. The parent returns from the <code>fork()</code> with a pseudo-process <font SIZE="-1">ID</font> that can be subsequently used in any process-manipulation functions; the child returns from the <code>fork()</code> with a value of <tt>0</tt> to signify that it is the child pseudo-process.</p>
+<p> To the Perl program that called <code>fork()</code>, all this is designed to be transparent. The parent returns from the <code>fork()</code> with a pseudo-process ID that can be subsequently used in any process-manipulation functions; the child returns from the <code>fork()</code> with a value of <tt>0</tt> to signify that it is the child pseudo-process.</p>
 <h3>Behavior of other Perl features in forked pseudo-processes</h3>
 <p> Most Perl features behave in a natural way within pseudo-processes.</p>
 <dl>
 <dt>$$ or $PROCESS_ID</dt>
-<dd> This special variable is correctly set to the pseudo-process <font SIZE="-1">ID.</font> It can be used to identify pseudo-processes within a particular session. Note that this value is subject to recycling if any pseudo-processes are launched after others have been <code>wait()</code>-ed on.</dd>
+<dd> This special variable is correctly set to the pseudo-process ID. It can be used to identify pseudo-processes within a particular session. Note that this value is subject to recycling if any pseudo-processes are launched after others have been <code>wait()</code>-ed on.</dd>
 <dt>%ENV</dt>
 <dd> Each pseudo-process maintains its own virtual environment. Modifications to <tt>%ENV</tt> affect the virtual environment, and are only visible within that pseudo-process, and in any processes (or pseudo-processes) launched from it.</dd>
 <dt><code>chdir()</code> and all other builtins that accept filenames</dt>
 <dd> Each pseudo-process maintains its own virtual idea of the current directory. Modifications to the current directory using <code>chdir()</code> are only visible within that pseudo-process, and in any processes (or pseudo-processes) launched from it. All file and directory accesses from the pseudo-process will correctly map the virtual working directory to the real working directory appropriately.</dd>
 <dt><code>wait()</code> and <code>waitpid()</code></dt>
-<dd> <code>wait()</code> and <code>waitpid()</code> can be passed a pseudo-process <font SIZE="-1">ID</font> returned by <code>fork()</code>. These calls will properly wait for the termination of the pseudo-process and return its status.</dd>
+<dd> <code>wait()</code> and <code>waitpid()</code> can be passed a pseudo-process ID returned by <code>fork()</code>. These calls will properly wait for the termination of the pseudo-process and return its status.</dd>
 <dt><code>kill()</code></dt>
-<dd> <tt>&quot;kill('KILL', ...)&quot;</tt> can be used to terminate a pseudo-process by passing it the <font SIZE="-1">ID</font> returned by <code>fork()</code>. The outcome of kill on a pseudo-process is unpredictable and it should not be used except under dire circumstances, because the operating system may not guarantee integrity of the process resources when a running thread is terminated. The process which implements the pseudo-processes can be blocked and the Perl interpreter hangs. Note that using <tt>&quot;kill('KILL', ...)&quot;</tt> on a pseudo-<code>process()</code> may typically cause memory leaks, because the thread that implements the pseudo-process does not get a chance to clean up its resources. </dd>
+<dd> <tt>&quot;kill('KILL', ...)&quot;</tt> can be used to terminate a pseudo-process by passing it the ID returned by <code>fork()</code>. The outcome of kill on a pseudo-process is unpredictable and it should not be used except under dire circumstances, because the operating system may not guarantee integrity of the process resources when a running thread is terminated. The process which implements the pseudo-processes can be blocked and the Perl interpreter hangs. Note that using <tt>&quot;kill('KILL', ...)&quot;</tt> on a pseudo-<code>process()</code> may typically cause memory leaks, because the thread that implements the pseudo-process does not get a chance to clean up its resources. </dd>
 <p> <tt>&quot;kill('TERM', ...)&quot;</tt> can also be used on pseudo-processes, but the signal will not be delivered while the pseudo-process is blocked by a system call, e.g. waiting for a socket to connect, or trying to read from a socket with no data available. Starting in Perl 5.14 the parent process will not wait for children to exit once they have been signalled with <tt>&quot;kill('TERM', ...)&quot;</tt> to avoid deadlock during process exit. You will have to explicitly call <code>waitpid()</code> to make sure the child has time to clean-up itself, but you are then also responsible that the child is not blocking on I/O either.</p>
 <dt><code>exec()</code></dt>
-<dd> Calling <code>exec()</code> within a pseudo-process actually spawns the requested executable in a separate process and waits for it to complete before exiting with the same exit status as that process. This means that the process <font SIZE="-1">ID</font> reported within the running executable will be different from what the earlier Perl <code>fork()</code> might have returned. Similarly, any process manipulation functions applied to the <font SIZE="-1">ID</font> returned by <code>fork()</code> will affect the waiting pseudo-process that called <code>exec()</code>, not the real process it is waiting for after the <code>exec()</code>. </dd>
-<p> When <code>exec()</code> is called inside a pseudo-process then <font SIZE="-1">DESTROY</font> methods and <font SIZE="-1">END</font> blocks will still be called after the external process returns.</p>
+<dd> Calling <code>exec()</code> within a pseudo-process actually spawns the requested executable in a separate process and waits for it to complete before exiting with the same exit status as that process. This means that the process ID reported within the running executable will be different from what the earlier Perl <code>fork()</code> might have returned. Similarly, any process manipulation functions applied to the ID returned by <code>fork()</code> will affect the waiting pseudo-process that called <code>exec()</code>, not the real process it is waiting for after the <code>exec()</code>. </dd>
+<p> When <code>exec()</code> is called inside a pseudo-process then DESTROY methods and END blocks will still be called after the external process returns.</p>
 <dt><code>exit()</code></dt>
 <dd> <code>exit()</code> always exits just the executing pseudo-process, after automatically <code>wait()</code>-ing for any outstanding child pseudo-processes. Note that this means that the process as a whole will not exit unless all running pseudo-processes have exited. See below for some limitations with open filehandles.</dd>
 <dt>Open handles to files, directories and network sockets</dt>
 <dd> All open handles are <code>dup()</code>-ed in pseudo-processes, so that closing any handles in one process does not affect the others. See below for some limitations.</dd></dl>
 <h3>Resource limits</h3>
-<p> In the eyes of the operating system, pseudo-processes created via the <code>fork()</code> emulation are simply threads in the same process. This means that any process-level limits imposed by the operating system apply to all pseudo-processes taken together. This includes any limits imposed by the operating system on the number of open file, directory and socket handles, limits on disk space usage, limits on memory size, limits on <font SIZE="-1">CPU</font> utilization etc.</p>
+<p> In the eyes of the operating system, pseudo-processes created via the <code>fork()</code> emulation are simply threads in the same process. This means that any process-level limits imposed by the operating system apply to all pseudo-processes taken together. This includes any limits imposed by the operating system on the number of open file, directory and socket handles, limits on disk space usage, limits on memory size, limits on CPU utilization etc.</p>
 <h3>Killing the parent process</h3>
 <p> If the parent process is killed (either using Perl&#8217;s <code>kill()</code> builtin, or using some external means) all the pseudo-processes are killed as well, and the whole process exits.</p>
 <h3>Lifetime of the parent process and pseudo-processes</h3>
@@ -52,8 +52,8 @@ description: "perlfork – Perl’s fork() emulation"
 <p> Starting with Perl 5.14 a parent will not <code>wait()</code> automatically for any child that has been signalled with <tt>&quot;kill('TERM', ...)&quot;</tt> to avoid a deadlock in case the child is blocking on I/O and never receives the signal.</p>
 <h2>CAVEATS AND LIMITATIONS</h2>
 <dl>
-<dt><font SIZE="-1">BEGIN</font> blocks</dt>
-<dd> The <code>fork()</code> emulation will not work entirely correctly when called from within a <font SIZE="-1">BEGIN</font> block. The forked copy will run the contents of the <font SIZE="-1">BEGIN</font> block, but will not continue parsing the source stream after the <font SIZE="-1">BEGIN</font> block. For example, consider the following code: </dd>
+<dt>BEGIN blocks</dt>
+<dd> The <code>fork()</code> emulation will not work entirely correctly when called from within a BEGIN block. The forked copy will run the contents of the BEGIN block, but will not continue parsing the source stream after the BEGIN block. For example, consider the following code: </dd>
 <pre><code>
 BEGIN
 {
@@ -83,32 +83,32 @@ print "outer
 <p> Note that <code>rewinddir()</code> has a similar limitation on Windows and will not force <code>readdir()</code> to read the directory again either. Only a newly opened directory handle will reflect changes to the directory.</p>
 <dt>Forking pipe <code>open()</code> not yet implemented</dt>
 <dd> The <tt>&quot;open(FOO, &quot;|-&quot;)&quot;</tt> and <tt>&quot;open(BAR, &quot;-|&quot;)&quot;</tt> constructs are not yet implemented. This limitation can be easily worked around in new code by creating a pipe explicitly. The following example shows how to write to a forked child: </dd>
-<p>#simulate open(FOO, &#8220;|-&#8220;)<br />
-sub pipe_to_fork($)<br />
-{<br />
-    my $parent = shift;<br />
-    pipe my $child, $parent or die;<br />
-    my $pid = fork();<br />
-    die &#8220;fork() failed: $!&#8221; unless defined $pid;<br />
-    if ($pid) {<br />
-        close $child;<br />
-    } else {<br />
-        close $parent;<br />
-        open(STDIN, &#8220;&lt;&amp;=&#8221;.fileno($child)) or die;<br />
-    }<br />
-    $pid;<br />
-}<br />
-if (pipe_to_fork(&#8216;FOO&#8217;)) {<br />
-#parent<br />
+<p>#simulate open(FOO, &#8220;|-&#8220;)<br/>
+sub pipe_to_fork($)<br/>
+{<br/>
+    my $parent = shift;<br/>
+    pipe my $child, $parent or die;<br/>
+    my $pid = fork();<br/>
+    die &#8220;fork() failed: $!&#8221; unless defined $pid;<br/>
+    if ($pid) {<br/>
+        close $child;<br/>
+    } else {<br/>
+        close $parent;<br/>
+        open(STDIN, &#8220;&lt;&amp;=&#8221;.fileno($child)) or die;<br/>
+    }<br/>
+    $pid;<br/>
+}<br/>
+if (pipe_to_fork(&#8216;FOO&#8217;)) {<br/>
+#parent<br/>
     print FOO &#8220;pipe_to_fork
-&#8221;;<br />
-    close FOO;<br />
-} else {<br />
-#child<br />
-    while (&lt;STDIN&gt;) {<br />
-        print;<br />
-    }<br />
-    exit(0);<br />
+&#8221;;<br/>
+    close FOO;<br/>
+} else {<br/>
+#child<br/>
+    while (&lt;STDIN&gt;) {<br/>
+        print;<br/>
+    }<br/>
+    exit(0);<br/>
 }</p>
 <p> And this one reads from the child: </p>
 <pre><code>
@@ -152,7 +152,7 @@ if (pipe_from_fork('BAR')) {
 <h2>BUGS</h2>
 <dl>
 <dt>&bull;</dt>
-<dd> Having pseudo-process IDs be negative integers breaks down for the integer <tt>&quot;-1&quot;</tt> because the <code>wait()</code> and <code>waitpid()</code> functions treat this number as being special. The tacit assumption in the current implementation is that the system never allocates a thread <font SIZE="-1">ID</font> of <tt>1</tt> for user threads. A better representation for pseudo-process IDs will be implemented in future.</dd>
+<dd> Having pseudo-process IDs be negative integers breaks down for the integer <tt>&quot;-1&quot;</tt> because the <code>wait()</code> and <code>waitpid()</code> functions treat this number as being special. The tacit assumption in the current implementation is that the system never allocates a thread ID of <tt>1</tt> for user threads. A better representation for pseudo-process IDs will be implemented in future.</dd>
 <dt>&bull;</dt>
 <dd> In certain cases, the OS-level handles created by the <code>pipe()</code>, <code>socket()</code>, and <code>accept()</code> operators are apparently not duplicated accurately in pseudo-processes. This only happens in some situations, but where it does happen, it may result in deadlocks between the read and write ends of pipe handles, or inability to send or receive data across socket handles.</dd>
 <dt>&bull;</dt>

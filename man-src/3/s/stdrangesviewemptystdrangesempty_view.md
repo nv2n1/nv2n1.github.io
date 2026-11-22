@@ -15,7 +15,7 @@ class empty_view : public view_interface&lt;empty_view&lt;T&gt;&gt;
 namespace view {
     template&lt;class T&gt; inline constexpr empty_view&lt;T&gt; empty{}; (2) (since C++20)
 }</code></pre>
-<p>1) A range adaptor that produces a View of no elements of a particular type.<br />
+<p>1) A range adaptor that produces a View of no elements of a particular type.<br/>
 2) Variable template for empty_view. </p>
 <h2>Member functions</h2>
 <p>&nbsp;std::ranges::empty_view::begin </p>
@@ -35,7 +35,7 @@ namespace view {
 <p>empty_view is always empty.</p>
 <h2>Non-member functions</h2>
 <p>&nbsp;begin, end(std::ranges::empty_view) </p>
-<p>friend constexpr T* begin(empty_view) noexcept { return nullptr; } <code>(1)</code><br />
+<p>friend constexpr T* begin(empty_view) noexcept { return nullptr; } <code>(1)</code><br/>
 friend constexpr T* end(empty_view) noexcept { return nullptr; } <code>(2)</code> </p>
 <p>These functions are not visible to ordinary unqualified or qualified_lookup, and can only be found by argument-dependent_lookup when std::ranges::empty_view&lt;T&gt; is an associated class of the arguments.</p>
 <h2>Example</h2>

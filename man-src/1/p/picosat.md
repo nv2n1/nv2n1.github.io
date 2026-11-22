@@ -76,20 +76,20 @@ description: "picosat – Satisfiability (SAT) solver with proof and core suppor
 <p> Shows that there is a solution with variable 1 true, variables 2, 3, and 4 false, and variable 5 true. </p>
 <h2>EXAMPLE</h2>
 <p> An example of CNF is: </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>(x1 | -x5 | x4)&nbsp;<wbr>&amp;<br />
-&nbsp;<wbr>&nbsp;<wbr>(-x1 | x5 | x3 | x4)&nbsp;<wbr>&amp;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>(x1 | -x5 | x4)&nbsp;<wbr>&amp;<br/>
+&nbsp;<wbr>&nbsp;<wbr>(-x1 | x5 | x3 | x4)&nbsp;<wbr>&amp;<br/>
 &nbsp;<wbr>&nbsp;<wbr>(-x3 | x4). </p>
 <p> The DIMACS CNF format for the above set of expressions could be: </p>
-<p>&nbsp;<wbr>c Here is a comment.<br />
-&nbsp;<wbr>p cnf 5 3<br />
-&nbsp;<wbr>1 -5 4 0<br />
-&nbsp;<wbr>-1 5 3 4 0<br />
+<p>&nbsp;<wbr>c Here is a comment.<br/>
+&nbsp;<wbr>p cnf 5 3<br/>
+&nbsp;<wbr>1 -5 4 0<br/>
+&nbsp;<wbr>-1 5 3 4 0<br/>
 &nbsp;<wbr>-3 -4 0 </p>
 <p> The &quot;p cnf&quot; line above means that this is SAT problem in CNF format with 5 variables and 3 clauses. The first line after it is the first clause, meaning x1 | -x5 | x4. </p>
 <p> CNFs with conflicting requirements are not satisfiable. For example, the following DIMACS CNF formatted data is not satisfiable, because it requires that variable 1 always be true and also always be false: </p>
-<p>&nbsp;<wbr>c This is not satisfiable.<br />
-&nbsp;<wbr>p cnf 2 2<br />
-&nbsp;<wbr>-1 0<br />
+<p>&nbsp;<wbr>c This is not satisfiable.<br/>
+&nbsp;<wbr>p cnf 2 2<br/>
+&nbsp;<wbr>-1 0<br/>
 &nbsp;<wbr>1 0 </p>
 <h2>AUTHORS</h2>
 <p> picosat was written by Armin Biere &lt;biere [at] jku.at&gt; </p>

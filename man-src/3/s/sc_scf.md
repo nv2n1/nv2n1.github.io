@@ -36,7 +36,7 @@ description: "sc::SCF –"
 <p>Marks all results as being out of date.</p>
 <p>void print (std::ostream &amp;o=ExEnv::out0()) const</p>
 <p>Print information about the object.</p>
-<p>Protected Types<br />
+<p>Protected Types<br/>
  enum <code>Access</code> { <code>Read</code>, <code>Write</code>, <code>Accum</code> }</p>
 <h3>Protected Member Functions</h3>
 <pre><code>virtual void init_threads ()

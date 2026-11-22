@@ -10,7 +10,7 @@ description: "zgetri.f –"
 <p>zgetri.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zgetri</code> (N, A, LDA, IPIV, WORK, LWORK, INFO)<br />
+<p>subroutine <code>zgetri</code> (N, A, LDA, IPIV, WORK, LWORK, INFO)<br/>
  <i></i><code>ZGETRI</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zgetri (integerN, complex*16, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, complex*16, dimension( * )WORK, integerLWORK, integerINFO)</h3>

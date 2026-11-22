@@ -57,12 +57,12 @@ mail - lock[--use - pid][--retry retry - count] mail - unlock mail - touchlock[-
 </dl>
 <h2>EXAMPLES</h2>
 <p> <code>Locking a file during a lengthy process:</code> </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>lockfile-create&nbsp;<wbr>/some/file<br />
-&nbsp;<wbr>&nbsp;<wbr>lockfile-touch&nbsp;<wbr>/some/file&nbsp;<wbr>&amp;<br />
-&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>Save the PID of the lockfile-touch process<br />
-&nbsp;<wbr>&nbsp;<wbr>BADGER=&quot;$!&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><br />
-&nbsp;<wbr>&nbsp;<wbr>do-something-important-with&nbsp;<wbr>/some/file<br />
-&nbsp;<wbr>&nbsp;<wbr>kill&nbsp;<wbr>&quot;${BADGER}&quot;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>lockfile-create&nbsp;<wbr>/some/file<br/>
+&nbsp;<wbr>&nbsp;<wbr>lockfile-touch&nbsp;<wbr>/some/file&nbsp;<wbr>&amp;<br/>
+&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>Save the PID of the lockfile-touch process<br/>
+&nbsp;<wbr>&nbsp;<wbr>BADGER=&quot;$!&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><br/>
+&nbsp;<wbr>&nbsp;<wbr>do-something-important-with&nbsp;<wbr>/some/file<br/>
+&nbsp;<wbr>&nbsp;<wbr>kill&nbsp;<wbr>&quot;${BADGER}&quot;<br/>
 &nbsp;<wbr>&nbsp;<wbr>lockfile-remove&nbsp;<wbr>/some/file </p>
 <h2>EXIT STATUS</h2>
 <p> <code>0</code></p>

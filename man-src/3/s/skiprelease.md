@@ -13,7 +13,7 @@ description: "skipRelease – release lock on value."
 void skipRelease(skipList list, void *lock);
 </code></pre>
 <h2>Arguments</h2>
-<p>list &#8211; list containing value to release.<br />
+<p>list &#8211; list containing value to release.<br/>
  lock &#8211; lock to release.</p>
 <h2>Description</h2>
 <p>Releases the lock on the value associated with &lt;lock&gt;. Once the lock is released, the freeValue callback can be called and the item freed (see skipNewList()). MT-Level: Safe if &lt;list&gt; thread-safe. </p>

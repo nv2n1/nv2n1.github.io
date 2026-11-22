@@ -14,7 +14,7 @@ description: "dcb-app – show / manipulate application priority table of the DC
 app
 { COMMAND | help }
 </code></pre>
-<p> <code>dcb app { show | flush } dev</code> DEV [ <code>default-prio</code> ] [ <code>ethtype-prio</code> ] [ <code>stream-port-prio</code> ] [ <code>dgram-port-prio</code> ] [ <code>port-prio</code> ] [ <code>dscp-prio</code> ]<br />
+<p> <code>dcb app { show | flush } dev</code> DEV [ <code>default-prio</code> ] [ <code>ethtype-prio</code> ] [ <code>stream-port-prio</code> ] [ <code>dgram-port-prio</code> ] [ <code>port-prio</code> ] [ <code>dscp-prio</code> ]<br/>
  <code>dcb ets { add | del | replace } dev</code> DEV [ <code>default-prio</code> <i>PRIO-LIST</i> ] [ <code>ethtype-prio</code> <i>ET-MAP</i> ] [ <code>stream-port-prio</code> <i>PORT-MAP</i> ] [ <code>dgram-port-prio</code> <i>PORT-MAP</i> ] [ <code>port-prio</code> <i>PORT-MAP</i> ] [ <code>dscp-prio</code> <i>DSCP-MAP</i> ] </p>
 <pre><code>PRIO-LIST := [ PRIO-LIST ] PRIO
 ET-MAP := [ ET-MAP ] ET-MAPPING
@@ -57,18 +57,18 @@ PRIO := { 0 .. 7 }
 <p>Prioritize traffic with DSCP 0 to priority 0, 24 to 3 and 48 to 6: </p>
 <p> # dcb app add dev eth0 dscp-prio 0:0 24:3 48:6 </p>
 <p> Add another rule to configure DSCP 24 to priority 2 and show the result: </p>
-<p> # dcb app add dev eth0 dscp-prio 24:2<br />
- # dcb app show dev eth0 dscp-prio<br />
- dscp-prio 0:0 CS3:2 CS3:3 CS6:6<br />
- # dcb -N app show dev eth0 dscp-prio<br />
+<p> # dcb app add dev eth0 dscp-prio 24:2<br/>
+ # dcb app show dev eth0 dscp-prio<br/>
+ dscp-prio 0:0 CS3:2 CS3:3 CS6:6<br/>
+ # dcb -N app show dev eth0 dscp-prio<br/>
  dscp-prio 0:0 24:2 24:3 48:6 </p>
 <p> Reconfigure the table so that the only rule for DSCP 24 is for assignment of priority 4: </p>
-<p> # dcb app replace dev eth0 dscp-prio 24:4<br />
- # dcb app show dev eth0 dscp-prio<br />
+<p> # dcb app replace dev eth0 dscp-prio 24:4<br/>
+ # dcb app show dev eth0 dscp-prio<br/>
  dscp-prio 0:0 24:4 48:6 </p>
 <p> Flush all DSCP rules: </p>
-<p> # dcb app flush dev eth0 dscp-prio<br />
- # dcb app show dev eth0 dscp-prio<br />
+<p> # dcb app flush dev eth0 dscp-prio<br/>
+ # dcb app show dev eth0 dscp-prio<br/>
  (nothing)</p>
 <h2>Exit Status</h2>
 <p>Exit status is 0 if command was successful or a positive integer upon failure.</p>

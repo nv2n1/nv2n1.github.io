@@ -10,7 +10,7 @@ description: "XkbSetPtrActionX – Sets the high_XXX and low_XXX fields of act f
 <p>XkbSetPtrActionX &#8211; Sets the high_XXX and low_XXX fields of act from the signed integer value x </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>void XkbSetPtrActionX</code> <code>(XkbPtrAction </code><i>act</i><code>,</code> <code>int </code><i>x</i><code>);</code><br />
+<dt> <code>void XkbSetPtrActionX</code> <code>(XkbPtrAction </code><i>act</i><code>,</code> <code>int </code><i>x</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

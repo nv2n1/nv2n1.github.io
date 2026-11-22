@@ -10,8 +10,8 @@ description: "hugs, runhugs, ffihugs – Hugs 98, functional programming system"
 
 <p> hugs, runhugs, ffihugs &#8211; Hugs 98, functional programming system </p>
 <h2>SYNOPSIS</h2>
-<p> <code>hugs</code> [ <i>options</i> ] [ <i>modules</i> ]<br />
- <code>runhugs</code> [ <i>options</i> ] <i>module</i> [ <i>args</i> ]<br />
+<p> <code>hugs</code> [ <i>options</i> ] [ <i>modules</i> ]<br/>
+ <code>runhugs</code> [ <i>options</i> ] <i>module</i> [ <i>args</i> ]<br/>
  <code>ffihugs</code> [ <i>options</i> ] <i>module</i> [ <i>compiler_argument</i> ] &#8230;</p>
 <h2>DESCRIPTION</h2>
 <p> Hugs is an interpreter for Haskell, a standard non-strict functional programming language. Hugs implements almost all of the Haskell 98 standard, except for mutually recursive modules. The name <code>Hugs</code> is a mnemonic for the <code>Haskell User&#8217;s Gofer System</code>. </p>

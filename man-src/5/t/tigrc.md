@@ -481,9 +481,9 @@ bind main &lt;ShiftTab&gt; parent</pre>
 </tr>
 </table>
 <p> Unless otherwise specified, commands are run in the foreground with their console output shown (as if <i>!</i> was specified). When multiple command options are specified their behavior are combined, e.g. &quot;?&lt;git commit&quot; will prompt the user whether to execute the command and will exit Tig after completion. </p>
-<p> <font SIZE="+1"> <code>Browsing state variables</code></p>
+<p>  <code>Browsing state variables</code></p>
 <dl>
-<dd>User-defined commands can optionally refer to Tig&#8217;s internal state using the following variable names, which are substituted before commands are run: </font></dd>
+<dd>User-defined commands can optionally refer to Tig&#8217;s internal state using the following variable names, which are substituted before commands are run: </dd>
 <table>
 <tr VALIGN=top>
 <td>
@@ -689,10 +689,10 @@ bind main &lt;ShiftTab&gt; parent</pre>
 </td>
 </tr>
 </table>
-<p> <font SIZE="+1"> </p>
+<p>  </p>
 <p> Examples: </p>
 <dl>
-<dd></font></dd>
+<dd></dd>
 <pre># Save the current commit as a patch file when the user selects a commit
 # in the main view and presses 'S'.
 bind main S !git format-patch -1 %(commit)
@@ -702,12 +702,12 @@ bind main B ?git checkout -b &quot;%(prompt Enter new branch name: )&quot;
 bind main U +sh -c 'git --no-pager shortlog -s --author=&quot;$(git show -s --format=%aE %(commit))&quot; &lt;/dev/tty'</pre>
 </dl>
 </dl>
-<p> <font SIZE="+1"> <code>Advanced shell-like commands</code></p>
+<p>  <code>Advanced shell-like commands</code></p>
 <dl>
 <dd>If your command requires use of dynamic features, such as subshells, expansion of environment variables and process control, this can be achieved by using a shell command: </dd>
 <p> <code>Example 1. Configure a binding to copy the current commit ID to the clipboard.</code> </p>
 <dl>
-<dd></font></dd>
+<dd></dd>
 <pre>bind generic I @sh -c &quot;echo -n %(commit) | xclip -selection c&quot;</pre>
 </dl>
 <p> Or by using a combination of Git aliases and Tig external commands. The following example entries can be put in either the .gitconfig or .git/config file: </p>
@@ -745,9 +745,9 @@ bind generic V :toggle split-view-height -10% # Decrease split height</pre>
 <p> Similar to external commands, pager view commands can contain variable names that will be substituted before the command is run.</p>
 <h3>Action names</h3>
 <p>Valid action names are described below. Note, all action names are case-insensitive, and you may use <i>&#8211;</i>, <i>_</i>, and <i>.</i> interchangeably, e.g. &quot;view-main&quot;, &quot;View.Main&quot;, and &quot;VIEW_MAIN&quot; are the same. </p>
-<p> <font SIZE="+1"> <code>View switching</code></p>
+<p>  <code>View switching</code></p>
 <dl>
-<dd></font></dd>
+<dd></dd>
 <table>
 <tr VALIGN=top>
 <td>
@@ -848,11 +848,11 @@ bind generic V :toggle split-view-height -10% # Decrease split height</pre>
 </td>
 </tr>
 </table>
-<p> <font SIZE="+1"> </p>
+<p>  </p>
 </dl>
-<p> </font><font SIZE="+2"> <code>View manipulation</code></p>
+<p>  <code>View manipulation</code></p>
 <dl>
-<dd></font></dd>
+<dd></dd>
 <table>
 <tr VALIGN=top>
 <td>
@@ -932,11 +932,11 @@ bind generic V :toggle split-view-height -10% # Decrease split height</pre>
 </td>
 </tr>
 </table>
-<p> <font SIZE="+2"> </p>
+<p>  </p>
 </dl>
-<p> </font><font SIZE="+3"> <code>View-specific actions</code></p>
+<p>  <code>View-specific actions</code></p>
 <dl>
-<dd></font></dd>
+<dd></dd>
 <table>
 <tr VALIGN=top>
 <td>
@@ -974,11 +974,11 @@ bind generic V :toggle split-view-height -10% # Decrease split height</pre>
 </td>
 </tr>
 </table>
-<p> <font SIZE="+3"> </p>
+<p>  </p>
 </dl>
-<p> </font><font SIZE="+4"> <code>Cursor navigation</code></p>
+<p>  <code>Cursor navigation</code></p>
 <dl>
-<dd></font></dd>
+<dd></dd>
 <table>
 <tr VALIGN=top>
 <td>
@@ -1051,11 +1051,11 @@ bind generic V :toggle split-view-height -10% # Decrease split height</pre>
 </td>
 </tr>
 </table>
-<p> <font SIZE="+4"> </p>
+<p>  </p>
 </dl>
-<p> </font><font SIZE="+5"> <code>Scrolling</code></p>
+<p>  <code>Scrolling</code></p>
 <dl>
-<dd></font></dd>
+<dd></dd>
 <table>
 <tr VALIGN=top>
 <td>
@@ -1107,11 +1107,11 @@ bind generic V :toggle split-view-height -10% # Decrease split height</pre>
 </td>
 </tr>
 </table>
-<p> <font SIZE="+5"> </p>
+<p>  </p>
 </dl>
-<p> </font><font SIZE="+6"> <code>Searching</code></p>
+<p>  <code>Searching</code></p>
 <dl>
-<dd></font></dd>
+<dd></dd>
 <table>
 <tr VALIGN=top>
 <td>
@@ -1142,11 +1142,11 @@ bind generic V :toggle split-view-height -10% # Decrease split height</pre>
 </td>
 </tr>
 </table>
-<p> <font SIZE="+6"> </p>
+<p>  </p>
 </dl>
-<p> </font><font SIZE="+7"> <code>Misc</code></p>
+<p>  <code>Misc</code></p>
 <dl>
-<dd></font></dd>
+<dd></dd>
 <table>
 <tr VALIGN=top>
 <td>
@@ -1198,9 +1198,9 @@ bind generic V :toggle split-view-height -10% # Decrease split height</pre>
 </td>
 </tr>
 </table>
-<p> <font SIZE="+7"> </p>
+<p>  </p>
 </dl>
-<p> </font></p>
+<p> </p>
 <h2>Color Command</h2>
 <p>Color commands control highlighting and the user interface styles. If your terminal supports color, these commands can be used to assign foreground and background combinations to certain areas. Optionally, an attribute can be given as the last parameter. The syntax is: </p>
 <dl>
@@ -1534,7 +1534,7 @@ color tree.date black cyan bold</pre>
 source ~/.tig/keybindings.tigrc</pre>
 </dd></dl>
 <h2>Copyright</h2>
-<p>Copyright (c) 2006-2014 Jonas Fonseca &lt;m[blue]<code>jonas.fonseca [at] gmail.com</code>m[]<font SIZE="-2">[1]</font>&gt; </p>
+<p>Copyright (c) 2006-2014 Jonas Fonseca &lt;m[blue]<code>jonas.fonseca [at] gmail.com</code>m[][1]&gt; </p>
 <p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-tig/">tig</a></code>(1), <code><a href="/docs/linux/man/7-tigmanual/">tigmanual</a></code>(7), git(7), <a href="/docs/linux/man/1-git-config/">git-config</a>(1)</p>

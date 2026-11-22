@@ -9,11 +9,11 @@ description: "X Window Visibility Functions – Functions to change the visibili
 
 <p>X Window Visibility Functions &#8211; Functions to change the visibility of X windows. </p>
 <h3>Functions</h3>
-<p>EAPI void <code>ecore_x_window_show</code> (Ecore_X_Window window)<br />
- <i>Shows a window. </i><br />
- EAPI void <code>ecore_x_window_hide</code> (Ecore_X_Window window)<br />
- <i>Hides a window. </i><br />
- EAPI int <code>ecore_x_window_visible_get</code> (Ecore_X_Window win)<br />
+<p>EAPI void <code>ecore_x_window_show</code> (Ecore_X_Window window)<br/>
+ <i>Shows a window. </i><br/>
+ EAPI void <code>ecore_x_window_hide</code> (Ecore_X_Window window)<br/>
+ <i>Hides a window. </i><br/>
+ EAPI int <code>ecore_x_window_visible_get</code> (Ecore_X_Window win)<br/>
  <i>Finds out whether the given window is currently visible. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions to change the visibility of X windows.</p>

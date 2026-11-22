@@ -43,7 +43,7 @@ description: "cpanspec – Generate a spec file for a CPAN module"
 <dt><code>-h</code>, <code>&#8211;help</code></dt>
 <dd> Print a brief help message and exit.</dd>
 <dt><code>-o</code>, <code>&#8211;old</code></dt>
-<dd> Be more compatible with old <font SIZE="-1">RHL/FC</font> releases. With this option enabled, the generated spec file</dd>
+<dd> Be more compatible with old RHL/FC releases. With this option enabled, the generated spec file</dd>
 <dl>
 <dl>
 <dt>&bull;</dt>
@@ -53,12 +53,12 @@ description: "cpanspec – Generate a spec file for a CPAN module"
 <dt>&bull;</dt>
 <dd> Uses <tt>&quot;%check || :&quot;</tt> instead of just <tt>%check</tt>.</dd>
 <dt>&bull;</dt>
-<dd> Includes a hack to remove <font SIZE="-1">LD_RUN_PATH</font> from Makefile.</dd></dl>
+<dd> Includes a hack to remove LD_RUN_PATH from Makefile.</dd></dl>
 </dl>
 <dl>
 </dl>
 <dt><code>-l</code>, <code>&#8211;license</code></dt>
-<dd> Generate <font SIZE="-1">COPYING</font> and Artistic license texts if the source doesn&#8217;t seem to include them.</dd>
+<dd> Generate COPYING and Artistic license texts if the source doesn&#8217;t seem to include them.</dd>
 <dt><code>-n</code>, <code>&#8211;noprefix</code></dt>
 <dd> Don&#8217;t add <i>perl-</i> prefix to the name of the package. This is useful for perl-based applications (such as this one), so that the name of the rpm is simply <code>cpanspec</code> instead of <code>perl-cpanspec</code>.</dd>
 <dt><code>-f</code>, <code>&#8211;force</code></dt>
@@ -76,7 +76,7 @@ description: "cpanspec – Generate a spec file for a CPAN module"
 <dt><code>-b</code>, <code>&#8211;build</code></dt>
 <dd> Build source and binary rpms from the generated spec file. <code>Please be aware that this is likely to fail!</code> Even if it succeeds, the generated rpm will almost certainly need some work to make rpmlint happy.</dd>
 <dt><code>-c</code>, <code>&#8211;cpan</code></dt>
-<dd> The <font SIZE="-1">URL</font> to a <font SIZE="-1">CPAN</font> mirror. If not specified with this option or the <font SIZE="-1"><code>CPAN</code></font> environment variable, defaults to &lt;<a rel="nofollow" href="http://www.cpan.org/">http://www.cpan.org/</a>&gt;.</dd>
+<dd> The URL to a CPAN mirror. If not specified with this option or the <code>CPAN</code> environment variable, defaults to &lt;<a rel="nofollow" href="http://www.cpan.org/">http://www.cpan.org/</a>&gt;.</dd>
 <dt><code>-v</code>, <code>&#8211;verbose</code></dt>
 <dd> Be more verbose.</dd>
 <dt><code>-m</code>, <code>&#8211;prefer-macros</code></dt>

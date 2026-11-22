@@ -10,21 +10,21 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <p>qemu-qmp-ref &#8211; QEMU QMP Reference Manual</p>
 <h2>Description</h2>
 <h3>Introduction</h3>
-<p>This document describes all commands currently supported by <font SIZE="-1">QMP.</font> Most of the time their usage is exactly the same as in the user Monitor, this means that any other document which also describe commands (the manpage, <font SIZE="-1">QEMU</font>&#8216;s manual, etc) can and should be consulted. <font SIZE="-1">QMP</font> has two types of commands: regular and query commands. Regular commands usually change the Virtual Machine&#8217;s state someway, while query commands just return information. The sections below are divided accordingly. It&#8217;s important to observe that all communication examples are formatted in a reader-friendly way, so that they&#8217;re easier to understand. However, in real protocol usage, they&#8217;re emitted as a single line. Also, the following notation is used to denote data flow: Example: </p>
+<p>This document describes all commands currently supported by QMP. Most of the time their usage is exactly the same as in the user Monitor, this means that any other document which also describe commands (the manpage, QEMU&#8216;s manual, etc) can and should be consulted. QMP has two types of commands: regular and query commands. Regular commands usually change the Virtual Machine&#8217;s state someway, while query commands just return information. The sections below are divided accordingly. It&#8217;s important to observe that all communication examples are formatted in a reader-friendly way, so that they&#8217;re easier to understand. However, in real protocol usage, they&#8217;re emitted as a single line. Also, the following notation is used to denote data flow: Example: </p>
 <pre> -&gt; data issued by the Client
  &lt;- Server data response</pre>
-<p>Please, refer to the <font SIZE="-1">QMP</font> specification (docs/interop/qmp-spec.txt) for detailed information on the Server command and response formats.</p>
+<p>Please, refer to the QMP specification (docs/interop/qmp-spec.txt) for detailed information on the Server command and response formats.</p>
 <h3>Stability Considerations</h3>
-<p>The current <font SIZE="-1">QMP</font> command set (described in this file) may be useful for a number of use cases, however it&#8217;s limited and several commands have bad defined semantics, specially with regard to command completion. These problems are going to be solved incrementally in the next <font SIZE="-1">QEMU</font> releases and we&#8217;re going to establish a deprecation policy for badly defined commands. If you&#8217;re planning to adopt <font SIZE="-1">QMP,</font> please observe the following:</p>
+<p>The current QMP command set (described in this file) may be useful for a number of use cases, however it&#8217;s limited and several commands have bad defined semantics, specially with regard to command completion. These problems are going to be solved incrementally in the next QEMU releases and we&#8217;re going to establish a deprecation policy for badly defined commands. If you&#8217;re planning to adopt QMP, please observe the following:</p>
 <dl>
 <dt>1.</dt>
-<dd>The deprecation policy will take effect and be documented soon, please check the documentation of each used command as soon as a new release of <font SIZE="-1">QEMU</font> is available</dd>
+<dd>The deprecation policy will take effect and be documented soon, please check the documentation of each used command as soon as a new release of QEMU is available</dd>
 <dt>2.</dt>
-<dd><font SIZE="-1">DO NOT</font> rely on anything which is not explicit documented</dd>
+<dd>DO NOT rely on anything which is not explicit documented</dd>
 <dt>3.</dt>
-<dd>Errors, in special, are not documented. Applications should <font SIZE="-1">NOT</font> check for specific errors classes or data (it&#8217;s strongly recommended to only check for the &#8220;error&#8221; key)</dd></dl>
-<h3><font SIZE="-1">QMP</font> errors</h3>
-<p><code>QapiErrorClass</code> (Enum) <font SIZE="-1">QEMU</font> error classes <code>Values:</code></p>
+<dd>Errors, in special, are not documented. Applications should NOT check for specific errors classes or data (it&#8217;s strongly recommended to only check for the &#8220;error&#8221; key)</dd></dl>
+<h3>QMP errors</h3>
+<p><code>QapiErrorClass</code> (Enum) QEMU error classes <code>Values:</code></p>
 <dl>
 <dt>&quot;GenericError&quot;</dt>
 <dd>this is used for errors that don&#8217;t require a specific error class. This should be the default case for most errors</dd>
@@ -35,7 +35,7 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <dt>&quot;DeviceNotFound&quot;</dt>
 <dd>the requested device has not been found</dd>
 <dt>&quot;KVMMissingCap&quot;</dt>
-<dd>the requested operation can&#8217;t be fulfilled because a required <font SIZE="-1">KVM</font> capability is missing</dd></dl>
+<dd>the requested operation can&#8217;t be fulfilled because a required KVM capability is missing</dd></dl>
 <p> <code>Since:</code> 1.2</p>
 <h3>Common data types</h3>
 <p><code>IoOperationType</code> (Enum) An enumeration of the I/O operation types <code>Values:</code></p>
@@ -47,7 +47,7 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <p> <code>Since:</code> 2.1 <code>OnOffAuto</code> (Enum) An enumeration of three options: on, off, and auto <code>Values:</code></p>
 <dl>
 <dt>&quot;auto&quot;</dt>
-<dd><font SIZE="-1">QEMU</font> selects the value between on and off</dd>
+<dd>QEMU selects the value between on and off</dd>
 <dt>&quot;on&quot;</dt>
 <dd>Enabled</dd>
 <dt>&quot;off&quot;</dt>
@@ -70,24 +70,24 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <dd>the string value</dd>
 <dt>&quot;n: null&quot;</dt>
 <dd>no string value</dd></dl>
-<p> <code>Since:</code> 2.10 <code>OffAutoPCIBAR</code> (Enum) An enumeration of options for specifying a <font SIZE="-1">PCI BAR</font> <code>Values:</code></p>
+<p> <code>Since:</code> 2.10 <code>OffAutoPCIBAR</code> (Enum) An enumeration of options for specifying a PCI BAR <code>Values:</code></p>
 <dl>
 <dt>&quot;off&quot;</dt>
 <dd>The specified feature is disabled</dd>
 <dt>&quot;auto&quot;</dt>
-<dd>The <font SIZE="-1">PCI BAR</font> for the feature is automatically selected</dd>
+<dd>The PCI BAR for the feature is automatically selected</dd>
 <dt>&quot;bar0&quot;</dt>
-<dd><font SIZE="-1">PCI BAR0</font> is used for the feature</dd>
+<dd>PCI BAR0 is used for the feature</dd>
 <dt>&quot;bar1&quot;</dt>
-<dd><font SIZE="-1">PCI BAR1</font> is used for the feature</dd>
+<dd>PCI BAR1 is used for the feature</dd>
 <dt>&quot;bar2&quot;</dt>
-<dd><font SIZE="-1">PCI BAR2</font> is used for the feature</dd>
+<dd>PCI BAR2 is used for the feature</dd>
 <dt>&quot;bar3&quot;</dt>
-<dd><font SIZE="-1">PCI BAR3</font> is used for the feature</dd>
+<dd>PCI BAR3 is used for the feature</dd>
 <dt>&quot;bar4&quot;</dt>
-<dd><font SIZE="-1">PCI BAR4</font> is used for the feature</dd>
+<dd>PCI BAR4 is used for the feature</dd>
 <dt>&quot;bar5&quot;</dt>
-<dd><font SIZE="-1">PCI BAR5</font> is used for the feature</dd></dl>
+<dd>PCI BAR5 is used for the feature</dd></dl>
 <p> <code>Since:</code> 2.12 <code>PCIELinkSpeed</code> (Enum) An enumeration of PCIe link speeds in units of GT/s <code>Values:</code></p>
 <dl>
 <dt>&quot;2_5&quot;</dt>
@@ -119,9 +119,9 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <p><code>NetworkAddressFamily</code> (Enum) The network address family <code>Values:</code></p>
 <dl>
 <dt>&quot;ipv4&quot;</dt>
-<dd><font SIZE="-1">IPV4</font> family</dd>
+<dd>IPV4 family</dd>
 <dt>&quot;ipv6&quot;</dt>
-<dd><font SIZE="-1">IPV6</font> family</dd>
+<dd>IPV6 family</dd>
 <dt>&quot;unix&quot;</dt>
 <dd>unix socket</dd>
 <dt>&quot;vsock&quot;</dt>
@@ -177,7 +177,7 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <dt>&quot;unix&quot;</dt>
 <dd>Unix domain socket</dd>
 <dt>&quot;vsock&quot;</dt>
-<dd><font SIZE="-1">VMCI</font> address</dd>
+<dd>VMCI address</dd>
 <dt>&quot;fd&quot;</dt>
 <dd>decimal is for file descriptor number, otherwise a file descriptor name. Named file descriptors are permitted in monitor commands, in combination with the &#8216;getfd&#8217; command. Decimal file descriptors are permitted at startup or other contexts where no monitor context is active.</dd></dl>
 <p> <code>Since:</code> 2.9 <code>SocketAddress</code> (Object) Captures the address of a socket, which could also be a named file descriptor <code>Members:</code></p>
@@ -193,43 +193,43 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 </dd><dt>The members of &quot;String&quot; when &quot;type&quot; is &quot;fd&quot;</dt>
 <dd></dd></dl>
 <p> <code>Since:</code> 2.9</p>
-<h3><font SIZE="-1">VM</font> run state</h3>
-<p><code>RunState</code> (Enum) An enumeration of <font SIZE="-1">VM</font> run states. <code>Values:</code></p>
+<h3>VM run state</h3>
+<p><code>RunState</code> (Enum) An enumeration of VM run states. <code>Values:</code></p>
 <dl>
 <dt>&quot;debug&quot;</dt>
-<dd><font SIZE="-1">QEMU</font> is running on a debugger</dd>
+<dd>QEMU is running on a debugger</dd>
 <dt>&quot;finish-migrate&quot;</dt>
 <dd>guest is paused to finish the migration process</dd>
 <dt>&quot;inmigrate&quot;</dt>
-<dd>guest is paused waiting for an incoming migration. Note that this state does not tell whether the machine will start at the end of the migration. This depends on the command-line -S option and any invocation of &#8216;stop&#8217; or &#8216;cont&#8217; that has happened since <font SIZE="-1">QEMU</font> was started.</dd>
+<dd>guest is paused waiting for an incoming migration. Note that this state does not tell whether the machine will start at the end of the migration. This depends on the command-line -S option and any invocation of &#8216;stop&#8217; or &#8216;cont&#8217; that has happened since QEMU was started.</dd>
 <dt>&quot;internal-error&quot;</dt>
 <dd>An internal error that prevents further guest execution has occurred</dd>
 <dt>&quot;io-error&quot;</dt>
-<dd>the last <font SIZE="-1">IOP</font> has failed and the device is configured to pause on I/O errors</dd>
+<dd>the last IOP has failed and the device is configured to pause on I/O errors</dd>
 <dt>&quot;paused&quot;</dt>
 <dd>guest has been paused via the &#8216;stop&#8217; command</dd>
 <dt>&quot;postmigrate&quot;</dt>
 <dd>guest is paused following a successful &#8216;migrate&#8217;</dd>
 <dt>&quot;prelaunch&quot;</dt>
-<dd><font SIZE="-1">QEMU</font> was started with -S and guest has not started</dd>
+<dd>QEMU was started with -S and guest has not started</dd>
 <dt>&quot;restore-vm&quot;</dt>
-<dd>guest is paused to restore <font SIZE="-1">VM</font> state</dd>
+<dd>guest is paused to restore VM state</dd>
 <dt>&quot;running&quot;</dt>
 <dd>guest is actively running</dd>
 <dt>&quot;save-vm&quot;</dt>
-<dd>guest is paused to save the <font SIZE="-1">VM</font> state</dd>
+<dd>guest is paused to save the VM state</dd>
 <dt>&quot;shutdown&quot;</dt>
 <dd>guest is shut down (and -no-shutdown is in use)</dd>
 <dt>&quot;suspended&quot;</dt>
-<dd>guest is suspended (<font SIZE="-1">ACPI S3</font>)</dd>
+<dd>guest is suspended (ACPI S3)</dd>
 <dt>&quot;watchdog&quot;</dt>
 <dd>the watchdog action is configured to pause and has been triggered</dd>
 <dt>&quot;guest-panicked&quot;</dt>
-<dd>guest has been panicked as a result of guest <font SIZE="-1">OS</font> panic</dd>
+<dd>guest has been panicked as a result of guest OS panic</dd>
 <dt>&quot;colo&quot;</dt>
-<dd>guest is paused to save/restore <font SIZE="-1">VM</font> state under colo checkpoint, <font SIZE="-1">VM</font> can not get into this state unless colo capability is enabled for migration. (since 2.8)</dd>
+<dd>guest is paused to save/restore VM state under colo checkpoint, VM can not get into this state unless colo capability is enabled for migration. (since 2.8)</dd>
 <dt>&quot;preconfig&quot;</dt>
-<dd><font SIZE="-1">QEMU</font> is paused before board specific init callback is executed. The state is reachable only if the &#8211;preconfig <font SIZE="-1">CLI</font> option is used. (Since 3.0)</dd></dl>
+<dd>QEMU is paused before board specific init callback is executed. The state is reachable only if the &#8211;preconfig CLI option is used. (Since 3.0)</dd></dl>
 <p> <code>ShutdownCause</code> (Enum) An enumeration of reasons for a Shutdown. <code>Values:</code></p>
 <dl>
 <dt>&quot;none&quot;</dt>
@@ -237,22 +237,22 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <dt>&quot;host-error&quot;</dt>
 <dd>An error prevents further use of guest</dd>
 <dt>&quot;host-qmp-quit&quot;</dt>
-<dd>Reaction to the <font SIZE="-1">QMP</font> command &#8216;quit&#8217;</dd>
+<dd>Reaction to the QMP command &#8216;quit&#8217;</dd>
 <dt>&quot;host-qmp-system-reset&quot;</dt>
-<dd>Reaction to the <font SIZE="-1">QMP</font> command &#8216;system_reset&#8217;</dd>
+<dd>Reaction to the QMP command &#8216;system_reset&#8217;</dd>
 <dt>&quot;host-signal&quot;</dt>
-<dd>Reaction to a signal, such as <font SIZE="-1">SIGINT</font></dd>
+<dd>Reaction to a signal, such as SIGINT</dd>
 <dt>&quot;host-ui&quot;</dt>
-<dd>Reaction to a <font SIZE="-1">UI</font> event, like window close</dd>
+<dd>Reaction to a UI event, like window close</dd>
 <dt>&quot;guest-shutdown&quot;</dt>
-<dd>Guest shutdown/suspend request, via <font SIZE="-1">ACPI</font> or other hardware-specific means</dd>
+<dd>Guest shutdown/suspend request, via ACPI or other hardware-specific means</dd>
 <dt>&quot;guest-reset&quot;</dt>
 <dd>Guest reset request, and command line turns that into a shutdown</dd>
 <dt>&quot;guest-panic&quot;</dt>
 <dd>Guest panicked, and command line turns that into a shutdown</dd>
 <dt>&quot;subsystem-reset&quot;</dt>
-<dd>Partial guest reset that does not trigger <font SIZE="-1">QMP</font> events and ignores &#8211;no-reboot. This is useful for sanitizing hypercalls on s390 that are used during kexec/kdump/boot</dd></dl>
-<p> <code>StatusInfo</code> (Object) Information about <font SIZE="-1">VCPU</font> run state <code>Members:</code></p>
+<dd>Partial guest reset that does not trigger QMP events and ignores &#8211;no-reboot. This is useful for sanitizing hypercalls on s390 that are used during kexec/kdump/boot</dd></dl>
+<p> <code>StatusInfo</code> (Object) Information about VCPU run state <code>Members:</code></p>
 <dl>
 <dt>&quot;running: boolean&quot;</dt>
 <dd>true if all VCPUs are runnable, false if not runnable</dd>
@@ -260,7 +260,7 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <dd>true if VCPUs are in single-step mode</dd>
 <dt>&quot;status: RunState&quot;</dt>
 <dd>the virtual machine <tt>&quot;RunState&quot;</tt></dd></dl>
-<p> <code>Since:</code> 0.14.0 <code>Notes:</code> <tt>&quot;singlestep&quot;</tt> is enabled through the <font SIZE="-1">GDB</font> stub <code>query-status</code> (Command) Query the run status of all VCPUs <code>Returns:</code> <tt>&quot;StatusInfo&quot;</tt> reflecting all VCPUs <code>Since:</code> 0.14.0 <code>Example:</code> </p>
+<p> <code>Since:</code> 0.14.0 <code>Notes:</code> <tt>&quot;singlestep&quot;</tt> is enabled through the GDB stub <code>query-status</code> (Command) Query the run status of all VCPUs <code>Returns:</code> <tt>&quot;StatusInfo&quot;</tt> reflecting all VCPUs <code>Since:</code> 0.14.0 <code>Example:</code> </p>
 <pre><code>-&gt;{&quot;execute&quot; : &quot;query-status&quot;} &lt; -
 {
     &quot;return&quot;:
@@ -270,47 +270,47 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
                                    &quot;status&quot; : &quot;running&quot;
     }
 }</code></pre>
-<p> <font SIZE="-1"><code>SHUTDOWN</code></font> (Event) Emitted when the virtual machine has shut down, indicating that qemu is about to exit. <code>Arguments:</code></p>
+<p> <code>SHUTDOWN</code> (Event) Emitted when the virtual machine has shut down, indicating that qemu is about to exit. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;guest: boolean&quot;</dt>
-<dd>If true, the shutdown was triggered by a guest request (such as a guest-initiated <font SIZE="-1">ACPI</font> shutdown request or other hardware-specific action) rather than a host request (such as sending qemu a <font SIZE="-1">SIGINT</font>). (since 2.10)</dd>
+<dd>If true, the shutdown was triggered by a guest request (such as a guest-initiated ACPI shutdown request or other hardware-specific action) rather than a host request (such as sending qemu a SIGINT). (since 2.10)</dd>
 <dt>&quot;reason: ShutdownCause&quot;</dt>
-<dd>The <tt>&quot;ShutdownCause&quot;</tt> which resulted in the <font SIZE="-1">SHUTDOWN.</font> (since 4.0)</dd></dl>
-<p> <code>Note:</code> If the command-line option &#8220;-no-shutdown&#8221; has been specified, qemu will not exit, and a <font SIZE="-1">STOP</font> event will eventually follow the <font SIZE="-1">SHUTDOWN</font> event <code>Since:</code> 0.12.0 <code>Example:</code> </p>
+<dd>The <tt>&quot;ShutdownCause&quot;</tt> which resulted in the SHUTDOWN. (since 4.0)</dd></dl>
+<p> <code>Note:</code> If the command-line option &#8220;-no-shutdown&#8221; has been specified, qemu will not exit, and a STOP event will eventually follow the SHUTDOWN event <code>Since:</code> 0.12.0 <code>Example:</code> </p>
 <pre> &lt;- { &quot;event&quot;: &quot;SHUTDOWN&quot;, &quot;data&quot;: { &quot;guest&quot;: true },
  &quot;timestamp&quot;: { &quot;seconds&quot;: 1267040730, &quot;microseconds&quot;: 682951 } }</pre>
-<p><font SIZE="-1"><code>POWERDOWN</code></font> (Event) Emitted when the virtual machine is powered down through the power control system, such as via <font SIZE="-1">ACPI.</font> <code>Since:</code> 0.12.0 <code>Example:</code> </p>
+<p><code>POWERDOWN</code> (Event) Emitted when the virtual machine is powered down through the power control system, such as via ACPI. <code>Since:</code> 0.12.0 <code>Example:</code> </p>
 <pre> &lt;- { &quot;event&quot;: &quot;POWERDOWN&quot;,
  &quot;timestamp&quot;: { &quot;seconds&quot;: 1267040730, &quot;microseconds&quot;: 682951 } }</pre>
-<p><font SIZE="-1"><code>RESET</code></font> (Event) Emitted when the virtual machine is reset <code>Arguments:</code></p>
+<p><code>RESET</code> (Event) Emitted when the virtual machine is reset <code>Arguments:</code></p>
 <dl>
 <dt>&quot;guest: boolean&quot;</dt>
-<dd>If true, the reset was triggered by a guest request (such as a guest-initiated <font SIZE="-1">ACPI</font> reboot request or other hardware-specific action) rather than a host request (such as the <font SIZE="-1">QMP</font> command system_reset). (since 2.10)</dd>
+<dd>If true, the reset was triggered by a guest request (such as a guest-initiated ACPI reboot request or other hardware-specific action) rather than a host request (such as the QMP command system_reset). (since 2.10)</dd>
 <dt>&quot;reason: ShutdownCause&quot;</dt>
-<dd>The <tt>&quot;ShutdownCause&quot;</tt> of the <font SIZE="-1">RESET.</font> (since 4.0)</dd></dl>
+<dd>The <tt>&quot;ShutdownCause&quot;</tt> of the RESET. (since 4.0)</dd></dl>
 <p> <code>Since:</code> 0.12.0 <code>Example:</code> </p>
 <pre> &lt;- { &quot;event&quot;: &quot;RESET&quot;, &quot;data&quot;: { &quot;guest&quot;: false },
  &quot;timestamp&quot;: { &quot;seconds&quot;: 1267041653, &quot;microseconds&quot;: 9518 } }</pre>
-<p><font SIZE="-1"><code>STOP</code></font> (Event) Emitted when the virtual machine is stopped <code>Since:</code> 0.12.0 <code>Example:</code> </p>
+<p><code>STOP</code> (Event) Emitted when the virtual machine is stopped <code>Since:</code> 0.12.0 <code>Example:</code> </p>
 <pre> &lt;- { &quot;event&quot;: &quot;STOP&quot;,
  &quot;timestamp&quot;: { &quot;seconds&quot;: 1267041730, &quot;microseconds&quot;: 281295 } }</pre>
-<p><font SIZE="-1"><code>RESUME</code></font> (Event) Emitted when the virtual machine resumes execution <code>Since:</code> 0.12.0 <code>Example:</code> </p>
+<p><code>RESUME</code> (Event) Emitted when the virtual machine resumes execution <code>Since:</code> 0.12.0 <code>Example:</code> </p>
 <pre> &lt;- { &quot;event&quot;: &quot;RESUME&quot;,
  &quot;timestamp&quot;: { &quot;seconds&quot;: 1271770767, &quot;microseconds&quot;: 582542 } }</pre>
-<p><font SIZE="-1"><code>SUSPEND</code></font> (Event) Emitted when guest enters a hardware suspension state, for example, S3 state, which is sometimes called standby state <code>Since:</code> 1.1 <code>Example:</code> </p>
+<p><code>SUSPEND</code> (Event) Emitted when guest enters a hardware suspension state, for example, S3 state, which is sometimes called standby state <code>Since:</code> 1.1 <code>Example:</code> </p>
 <pre> &lt;- { &quot;event&quot;: &quot;SUSPEND&quot;,
  &quot;timestamp&quot;: { &quot;seconds&quot;: 1344456160, &quot;microseconds&quot;: 309119 } }</pre>
-<p><font SIZE="-1"><code>SUSPEND_DISK</code></font> (Event) Emitted when guest enters a hardware suspension state with data saved on disk, for example, S4 state, which is sometimes called hibernate state <code>Note:</code> <font SIZE="-1">QEMU</font> shuts down (similar to event <tt>&quot;SHUTDOWN&quot;</tt>) when entering this state <code>Since:</code> 1.2 <code>Example:</code> </p>
+<p><code>SUSPEND_DISK</code> (Event) Emitted when guest enters a hardware suspension state with data saved on disk, for example, S4 state, which is sometimes called hibernate state <code>Note:</code> QEMU shuts down (similar to event <tt>&quot;SHUTDOWN&quot;</tt>) when entering this state <code>Since:</code> 1.2 <code>Example:</code> </p>
 <pre> &lt;- { &quot;event&quot;: &quot;SUSPEND_DISK&quot;,
  &quot;timestamp&quot;: { &quot;seconds&quot;: 1344456160, &quot;microseconds&quot;: 309119 } }</pre>
-<p><font SIZE="-1"><code>WAKEUP</code></font> (Event) Emitted when the guest has woken up from suspend state and is running <code>Since:</code> 1.1 <code>Example:</code> </p>
+<p><code>WAKEUP</code> (Event) Emitted when the guest has woken up from suspend state and is running <code>Since:</code> 1.1 <code>Example:</code> </p>
 <pre> &lt;- { &quot;event&quot;: &quot;WAKEUP&quot;,
  &quot;timestamp&quot;: { &quot;seconds&quot;: 1344522075, &quot;microseconds&quot;: 745528 } }</pre>
-<p><font SIZE="-1"><code>WATCHDOG</code></font> (Event) Emitted when the watchdog device&#8217;s timer is expired <code>Arguments:</code></p>
+<p><code>WATCHDOG</code> (Event) Emitted when the watchdog device&#8217;s timer is expired <code>Arguments:</code></p>
 <dl>
 <dt>&quot;action: WatchdogAction&quot;</dt>
 <dd>action that has been taken</dd></dl>
-<p> <code>Note:</code> If action is &#8220;reset&#8221;, &#8220;shutdown&#8221;, or &#8220;pause&#8221; the <font SIZE="-1">WATCHDOG</font> event is followed respectively by the <font SIZE="-1">RESET, SHUTDOWN,</font> or <font SIZE="-1">STOP</font> events <code>Note:</code> This event is rate-limited. <code>Since:</code> 0.13.0 <code>Example:</code> </p>
+<p> <code>Note:</code> If action is &#8220;reset&#8221;, &#8220;shutdown&#8221;, or &#8220;pause&#8221; the WATCHDOG event is followed respectively by the RESET, SHUTDOWN, or STOP events <code>Note:</code> This event is rate-limited. <code>Since:</code> 0.13.0 <code>Example:</code> </p>
 <pre> &lt;- { &quot;event&quot;: &quot;WATCHDOG&quot;,
  &quot;data&quot;: { &quot;action&quot;: &quot;reset&quot; },
  &quot;timestamp&quot;: { &quot;seconds&quot;: 1267061043, &quot;microseconds&quot;: 959568 } }</pre>
@@ -329,12 +329,12 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <dt>&quot;none&quot;</dt>
 <dd>nothing is done</dd>
 <dt>&quot;inject-nmi&quot;</dt>
-<dd>a non-maskable interrupt is injected into the first <font SIZE="-1">VCPU</font> (all <font SIZE="-1">VCPUS</font> on x86) (since 2.4)</dd></dl>
+<dd>a non-maskable interrupt is injected into the first VCPU (all VCPUS on x86) (since 2.4)</dd></dl>
 <p> <code>Since:</code> 2.1 <code>watchdog-set-action</code> (Command) Set watchdog action <code>Arguments:</code></p>
 <dl>
 <dt>&quot;action: WatchdogAction&quot;</dt>
 <dd>Not documented</dd></dl>
-<p> <code>Since:</code> 2.11 <font SIZE="-1"><code>GUEST_PANICKED</code></font> (Event) Emitted when guest <font SIZE="-1">OS</font> panic is detected <code>Arguments:</code></p>
+<p> <code>Since:</code> 2.11 <code>GUEST_PANICKED</code> (Event) Emitted when guest OS panic is detected <code>Arguments:</code></p>
 <dl>
 <dt>&quot;action: GuestPanicAction&quot;</dt>
 <dd>action that has been taken, currently always &#8220;pause&#8221;</dd>
@@ -343,7 +343,7 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <p> <code>Since:</code> 1.5 <code>Example:</code> </p>
 <pre> &lt;- { &quot;event&quot;: &quot;GUEST_PANICKED&quot;,
  &quot;data&quot;: { &quot;action&quot;: &quot;pause&quot; } }</pre>
-<p><code>GuestPanicAction</code> (Enum) An enumeration of the actions taken when guest <font SIZE="-1">OS</font> panic is detected <code>Values:</code></p>
+<p><code>GuestPanicAction</code> (Enum) An enumeration of the actions taken when guest OS panic is detected <code>Values:</code></p>
 <dl>
 <dt>&quot;pause&quot;</dt>
 <dd>system pauses</dd>
@@ -363,7 +363,7 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <dd>
 </dd><dt>The members of &quot;GuestPanicInformationS390&quot; when &quot;type&quot; is &quot;s390&quot;</dt>
 <dd></dd></dl>
-<p> <code>Since:</code> 2.9 <code>GuestPanicInformationHyperV</code> (Object) Hyper-V specific guest panic information (<font SIZE="-1">HV</font> crash MSRs) <code>Members:</code></p>
+<p> <code>Since:</code> 2.9 <code>GuestPanicInformationHyperV</code> (Object) Hyper-V specific guest panic information (HV crash MSRs) <code>Members:</code></p>
 <dl>
 <dt>&quot;arg1: int&quot;</dt>
 <dd>Not documented</dd>
@@ -375,24 +375,24 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <dd>Not documented</dd>
 <dt>&quot;arg5: int&quot;</dt>
 <dd>Not documented</dd></dl>
-<p> <code>Since:</code> 2.9 <code>S390CrashReason</code> (Enum) Reason why the <font SIZE="-1">CPU</font> is in a crashed state. <code>Values:</code></p>
+<p> <code>Since:</code> 2.9 <code>S390CrashReason</code> (Enum) Reason why the CPU is in a crashed state. <code>Values:</code></p>
 <dl>
 <dt>&quot;unknown&quot;</dt>
 <dd>no crash reason was set</dd>
 <dt>&quot;disabled-wait&quot;</dt>
-<dd>the <font SIZE="-1">CPU</font> has entered a disabled wait state</dd>
+<dd>the CPU has entered a disabled wait state</dd>
 <dt>&quot;extint-loop&quot;</dt>
-<dd>clock comparator or cpu timer interrupt with new <font SIZE="-1">PSW</font> enabled for external interrupts</dd>
+<dd>clock comparator or cpu timer interrupt with new PSW enabled for external interrupts</dd>
 <dt>&quot;pgmint-loop&quot;</dt>
-<dd>program interrupt with <font SIZE="-1">BAD</font> new <font SIZE="-1">PSW</font></dd>
+<dd>program interrupt with BAD new PSW</dd>
 <dt>&quot;opint-loop&quot;</dt>
-<dd>operation exception interrupt with invalid code at the program interrupt new <font SIZE="-1">PSW</font></dd></dl>
-<p> <code>Since:</code> 2.12 <code>GuestPanicInformationS390</code> (Object) S390 specific guest panic information (<font SIZE="-1">PSW</font>) <code>Members:</code></p>
+<dd>operation exception interrupt with invalid code at the program interrupt new PSW</dd></dl>
+<p> <code>Since:</code> 2.12 <code>GuestPanicInformationS390</code> (Object) S390 specific guest panic information (PSW) <code>Members:</code></p>
 <dl>
 <dt>&quot;core: int&quot;</dt>
-<dd>core id of the <font SIZE="-1">CPU</font> that crashed</dd>
+<dd>core id of the CPU that crashed</dd>
 <dt>&quot;psw-mask: int&quot;</dt>
-<dd>control fields of guest <font SIZE="-1">PSW</font></dd>
+<dd>control fields of guest PSW</dd>
 <dt>&quot;psw-addr: int&quot;</dt>
 <dd>guest instruction address</dd>
 <dt>&quot;reason: S390CrashReason&quot;</dt>
@@ -408,37 +408,37 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <p> <code>Since:</code> 2.5 <code>QCryptoSecretFormat</code> (Enum) The data format that the secret is provided in <code>Values:</code></p>
 <dl>
 <dt>&quot;raw&quot;</dt>
-<dd>raw bytes. When encoded in <font SIZE="-1">JSON</font> only valid <font SIZE="-1">UTF-8</font> sequences can be used</dd>
+<dd>raw bytes. When encoded in JSON only valid UTF-8 sequences can be used</dd>
 <dt>&quot;base64&quot;</dt>
 <dd>arbitrary base64 encoded binary data</dd></dl>
 <p> <code>Since:</code> 2.6 <code>QCryptoHashAlgorithm</code> (Enum) The supported algorithms for computing content digests <code>Values:</code></p>
 <dl>
 <dt>&quot;md5&quot;</dt>
-<dd><font SIZE="-1">MD5.</font> Should not be used in any new code, legacy compat only</dd>
+<dd>MD5. Should not be used in any new code, legacy compat only</dd>
 <dt>&quot;sha1&quot;</dt>
-<dd><font SIZE="-1">SHA-1.</font> Should not be used in any new code, legacy compat only</dd>
+<dd>SHA-1. Should not be used in any new code, legacy compat only</dd>
 <dt>&quot;sha224&quot;</dt>
-<dd><font SIZE="-1">SHA-224.</font> (since 2.7)</dd>
+<dd>SHA-224. (since 2.7)</dd>
 <dt>&quot;sha256&quot;</dt>
-<dd><font SIZE="-1">SHA-256.</font> Current recommended strong hash.</dd>
+<dd>SHA-256. Current recommended strong hash.</dd>
 <dt>&quot;sha384&quot;</dt>
-<dd><font SIZE="-1">SHA-384.</font> (since 2.7)</dd>
+<dd>SHA-384. (since 2.7)</dd>
 <dt>&quot;sha512&quot;</dt>
-<dd><font SIZE="-1">SHA-512.</font> (since 2.7)</dd>
+<dd>SHA-512. (since 2.7)</dd>
 <dt>&quot;ripemd160&quot;</dt>
-<dd><font SIZE="-1">RIPEMD-160.</font> (since 2.7)</dd></dl>
+<dd>RIPEMD-160. (since 2.7)</dd></dl>
 <p> <code>Since:</code> 2.6 <code>QCryptoCipherAlgorithm</code> (Enum) The supported algorithms for content encryption ciphers <code>Values:</code></p>
 <dl>
 <dt>&quot;aes-128&quot;</dt>
-<dd><font SIZE="-1">AES</font> with 128 bit / 16 byte keys</dd>
+<dd>AES with 128 bit / 16 byte keys</dd>
 <dt>&quot;aes-192&quot;</dt>
-<dd><font SIZE="-1">AES</font> with 192 bit / 24 byte keys</dd>
+<dd>AES with 192 bit / 24 byte keys</dd>
 <dt>&quot;aes-256&quot;</dt>
-<dd><font SIZE="-1">AES</font> with 256 bit / 32 byte keys</dd>
+<dd>AES with 256 bit / 32 byte keys</dd>
 <dt>&quot;des-rfb&quot;</dt>
-<dd><font SIZE="-1">RFB</font> specific variant of single <font SIZE="-1">DES.</font> Do not use except in <font SIZE="-1">VNC.</font></dd>
+<dd>RFB specific variant of single DES. Do not use except in VNC.</dd>
 <dt>&quot;3des&quot;</dt>
-<dd>3DES(<font SIZE="-1">EDE</font>) with 192 bit / 24 byte keys (since 2.9)</dd>
+<dd>3DES(EDE) with 192 bit / 24 byte keys (since 2.9)</dd>
 <dt>&quot;cast5-128&quot;</dt>
 <dd>Cast5 with 128 bit / 16 byte keys</dd>
 <dt>&quot;serpent-128&quot;</dt>
@@ -460,7 +460,7 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <dt>&quot;cbc&quot;</dt>
 <dd>Cipher Block Chaining</dd>
 <dt>&quot;xts&quot;</dt>
-<dd><font SIZE="-1">XEX</font> with tweaked code book and ciphertext stealing</dd>
+<dd>XEX with tweaked code book and ciphertext stealing</dd>
 <dt>&quot;ctr&quot;</dt>
 <dd>Counter (Since 2.8)</dd></dl>
 <p> <code>Since:</code> 2.6 <code>QCryptoIVGenAlgorithm</code> (Enum) The supported algorithms for generating initialization vectors for full disk encryption. The &#8216;plain&#8217; generator should not be used for disks with sector numbers larger than 2^32, except where compatibility with pre-existing Linux dm-crypt volumes is required. <code>Values:</code></p>
@@ -476,7 +476,7 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <dt>&quot;qcow&quot;</dt>
 <dd>QCow/QCow2 built-in AES-CBC encryption. Use only for liberating data from old images.</dd>
 <dt>&quot;luks&quot;</dt>
-<dd><font SIZE="-1">LUKS</font> encryption format. Recommended for new images</dd></dl>
+<dd>LUKS encryption format. Recommended for new images</dd></dl>
 <p> <code>Since:</code> 2.6 <code>QCryptoBlockOptionsBase</code> (Object) The common options that apply to all full disk encryption formats <code>Members:</code></p>
 <dl>
 <dt>&quot;format: QCryptoBlockFormat&quot;</dt>
@@ -484,12 +484,12 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <p> <code>Since:</code> 2.6 <code>QCryptoBlockOptionsQCow</code> (Object) The options that apply to QCow/QCow2 AES-CBC encryption format <code>Members:</code></p>
 <dl>
 <dt>&quot;key-secret: string&quot; (optional)</dt>
-<dd>the <font SIZE="-1">ID</font> of a QCryptoSecret object providing the decryption key. Mandatory except when probing image for metadata only.</dd></dl>
-<p> <code>Since:</code> 2.6 <code>QCryptoBlockOptionsLUKS</code> (Object) The options that apply to <font SIZE="-1">LUKS</font> encryption format <code>Members:</code></p>
+<dd>the ID of a QCryptoSecret object providing the decryption key. Mandatory except when probing image for metadata only.</dd></dl>
+<p> <code>Since:</code> 2.6 <code>QCryptoBlockOptionsLUKS</code> (Object) The options that apply to LUKS encryption format <code>Members:</code></p>
 <dl>
 <dt>&quot;key-secret: string&quot; (optional)</dt>
-<dd>the <font SIZE="-1">ID</font> of a QCryptoSecret object providing the decryption key. Mandatory except when probing image for metadata only.</dd></dl>
-<p> <code>Since:</code> 2.6 <code>QCryptoBlockCreateOptionsLUKS</code> (Object) The options that apply to <font SIZE="-1">LUKS</font> encryption format initialization <code>Members:</code></p>
+<dd>the ID of a QCryptoSecret object providing the decryption key. Mandatory except when probing image for metadata only.</dd></dl>
+<p> <code>Since:</code> 2.6 <code>QCryptoBlockCreateOptionsLUKS</code> (Object) The options that apply to LUKS encryption format initialization <code>Members:</code></p>
 <dl>
 <dt>&quot;cipher-alg: QCryptoCipherAlgorithm&quot; (optional)</dt>
 <dd>the cipher algorithm for data encryption Currently defaults to &#8216;aes-256&#8217;.</dd>
@@ -502,7 +502,7 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <dt>&quot;hash-alg: QCryptoHashAlgorithm&quot; (optional)</dt>
 <dd>the master key hash algorithm Currently defaults to &#8216;sha256&#8217;</dd>
 <dt>&quot;iter-time: int&quot; (optional)</dt>
-<dd>number of milliseconds to spend in <font SIZE="-1">PBKDF</font> passphrase processing. Currently defaults to 2000. (since 2.8)</dd>
+<dd>number of milliseconds to spend in PBKDF passphrase processing. Currently defaults to 2000. (since 2.8)</dd>
 <dt>The members of &quot;QCryptoBlockOptionsLUKS&quot;</dt>
 <dd></dd></dl>
 <p> <code>Since:</code> 2.6 <code>QCryptoBlockOpenOptions</code> (Object) The options that are available for all encryption formats when opening an existing volume <code>Members:</code></p>
@@ -525,17 +525,17 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <dl>
 <dt>&quot;format: QCryptoBlockFormat&quot;</dt>
 <dd>the encryption format</dd></dl>
-<p> <code>Since:</code> 2.7 <code>QCryptoBlockInfoLUKSSlot</code> (Object) Information about the <font SIZE="-1">LUKS</font> block encryption key slot options <code>Members:</code></p>
+<p> <code>Since:</code> 2.7 <code>QCryptoBlockInfoLUKSSlot</code> (Object) Information about the LUKS block encryption key slot options <code>Members:</code></p>
 <dl>
 <dt>&quot;active: boolean&quot;</dt>
 <dd>whether the key slot is currently in use</dd>
 <dt>&quot;key-offset: int&quot;</dt>
 <dd>offset to the key material in bytes</dd>
 <dt>&quot;iters: int&quot; (optional)</dt>
-<dd>number of <font SIZE="-1">PBKDF2</font> iterations for key material</dd>
+<dd>number of PBKDF2 iterations for key material</dd>
 <dt>&quot;stripes: int&quot; (optional)</dt>
 <dd>number of stripes for splitting key material</dd></dl>
-<p> <code>Since:</code> 2.7 <code>QCryptoBlockInfoLUKS</code> (Object) Information about the <font SIZE="-1">LUKS</font> block encryption options <code>Members:</code></p>
+<p> <code>Since:</code> 2.7 <code>QCryptoBlockInfoLUKS</code> (Object) Information about the LUKS block encryption options <code>Members:</code></p>
 <dl>
 <dt>&quot;cipher-alg: QCryptoCipherAlgorithm&quot;</dt>
 <dd>the cipher algorithm for data encryption</dd>
@@ -550,7 +550,7 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <dt>&quot;payload-offset: int&quot;</dt>
 <dd>offset to the payload data in bytes</dd>
 <dt>&quot;master-key-iters: int&quot;</dt>
-<dd>number of <font SIZE="-1">PBKDF2</font> iterations for key material</dd>
+<dd>number of PBKDF2 iterations for key material</dd>
 <dt>&quot;uuid: string&quot;</dt>
 <dd>unique identifier for the volume</dd>
 <dt>&quot;slots: array of QCryptoBlockInfoLUKSSlot&quot;</dt>
@@ -563,7 +563,7 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <dd></dd></dl>
 <p> <code>Since:</code> 2.7</p>
 <h3>Block devices</h3>
-<p><i>Block core (</i><font SIZE="-1"><i>VM</i></font><i> unrelated)</i> <i>Background jobs</i> <code>JobType</code> (Enum) Type of a background job. <code>Values:</code></p>
+<p><i>Block core (</i><i>VM</i><i> unrelated)</i> <i>Background jobs</i> <code>JobType</code> (Enum) Type of a background job. <code>Values:</code></p>
 <dl>
 <dt>&quot;commit&quot;</dt>
 <dd>block commit job type, see &#8220;block-commit&#8221;</dd>
@@ -584,7 +584,7 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <dt>&quot;running&quot;</dt>
 <dd>The job is currently running.</dd>
 <dt>&quot;paused&quot;</dt>
-<dd>The job is running, but paused. The pause may be requested by either the <font SIZE="-1">QMP</font> user or by internal processes.</dd>
+<dd>The job is running, but paused. The pause may be requested by either the QMP user or by internal processes.</dd>
 <dt>&quot;ready&quot;</dt>
 <dd>The job is running, but is ready for the user to signal completion. This is used for long-running jobs like mirror that are designed to run indefinitely.</dd>
 <dt>&quot;standby&quot;</dt>
@@ -615,13 +615,13 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <dd>see <tt>&quot;job-dismiss&quot;</tt></dd>
 <dt>&quot;finalize&quot;</dt>
 <dd>see <tt>&quot;job-finalize&quot;</tt></dd></dl>
-<p> <code>Since:</code> 2.12 <font SIZE="-1"><code>JOB_STATUS_CHANGE</code></font> (Event) Emitted when a job transitions to a different status. <code>Arguments:</code></p>
+<p> <code>Since:</code> 2.12 <code>JOB_STATUS_CHANGE</code> (Event) Emitted when a job transitions to a different status. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;id: string&quot;</dt>
 <dd>The job identifier</dd>
 <dt>&quot;status: JobStatus&quot;</dt>
 <dd>The new job status</dd></dl>
-<p> <code>Since:</code> 3.0 <code>job-pause</code> (Command) Pause an active job. This command returns immediately after marking the active job for pausing. Pausing an already paused job is an error. The job will pause as soon as possible, which means transitioning into the <font SIZE="-1">PAUSED</font> state if it was <font SIZE="-1">RUNNING,</font> or into <font SIZE="-1">STANDBY</font> if it was <font SIZE="-1">READY.</font> The corresponding <font SIZE="-1">JOB_STATUS_CHANGE</font> event will be emitted. Cancelling a paused job automatically resumes it. <code>Arguments:</code></p>
+<p> <code>Since:</code> 3.0 <code>job-pause</code> (Command) Pause an active job. This command returns immediately after marking the active job for pausing. Pausing an already paused job is an error. The job will pause as soon as possible, which means transitioning into the PAUSED state if it was RUNNING, or into STANDBY if it was READY. The corresponding JOB_STATUS_CHANGE event will be emitted. Cancelling a paused job automatically resumes it. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;id: string&quot;</dt>
 <dd>The job identifier.</dd></dl>
@@ -629,19 +629,19 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <dl>
 <dt>&quot;id: string&quot;</dt>
 <dd>Not documented</dd></dl>
-<p> <code>Since:</code> 3.0 <code>job-cancel</code> (Command) Instruct an active background job to cancel at the next opportunity. This command returns immediately after marking the active job for cancellation. The job will cancel as soon as possible and then emit a <font SIZE="-1">JOB_STATUS_CHANGE</font> event. Usually, the status will change to <font SIZE="-1">ABORTING,</font> but it is possible that a job successfully completes (e.g. because it was almost done and there was no opportunity to cancel earlier than completing the job) and transitions to <font SIZE="-1">PENDING</font> instead. <code>Arguments:</code></p>
+<p> <code>Since:</code> 3.0 <code>job-cancel</code> (Command) Instruct an active background job to cancel at the next opportunity. This command returns immediately after marking the active job for cancellation. The job will cancel as soon as possible and then emit a JOB_STATUS_CHANGE event. Usually, the status will change to ABORTING, but it is possible that a job successfully completes (e.g. because it was almost done and there was no opportunity to cancel earlier than completing the job) and transitions to PENDING instead. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;id: string&quot;</dt>
 <dd>The job identifier.</dd></dl>
-<p> <code>Since:</code> 3.0 <code>job-complete</code> (Command) Manually trigger completion of an active job in the <font SIZE="-1">READY</font> state. <code>Arguments:</code></p>
+<p> <code>Since:</code> 3.0 <code>job-complete</code> (Command) Manually trigger completion of an active job in the READY state. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;id: string&quot;</dt>
 <dd>The job identifier.</dd></dl>
-<p> <code>Since:</code> 3.0 <code>job-dismiss</code> (Command) Deletes a job that is in the <font SIZE="-1">CONCLUDED</font> state. This command only needs to be run explicitly for jobs that don&#8217;t have automatic dismiss enabled. This command will refuse to operate on any job that has not yet reached its terminal state, <font SIZE="-1">JOB_STATUS_CONCLUDED.</font> For jobs that make use of <font SIZE="-1">JOB_READY</font> event, job-cancel or job-complete will still need to be used as appropriate. <code>Arguments:</code></p>
+<p> <code>Since:</code> 3.0 <code>job-dismiss</code> (Command) Deletes a job that is in the CONCLUDED state. This command only needs to be run explicitly for jobs that don&#8217;t have automatic dismiss enabled. This command will refuse to operate on any job that has not yet reached its terminal state, JOB_STATUS_CONCLUDED. For jobs that make use of JOB_READY event, job-cancel or job-complete will still need to be used as appropriate. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;id: string&quot;</dt>
 <dd>The job identifier.</dd></dl>
-<p> <code>Since:</code> 3.0 <code>job-finalize</code> (Command) Instructs all jobs in a transaction (or a single job if it is not part of any transaction) to finalize any graph changes and do any necessary cleanup. This command requires that all involved jobs are in the <font SIZE="-1">PENDING</font> state. For jobs in a transaction, instructing one job to finalize will force <font SIZE="-1">ALL</font> jobs in the transaction to finalize, so it is only necessary to instruct a single member job to finalize. <code>Arguments:</code></p>
+<p> <code>Since:</code> 3.0 <code>job-finalize</code> (Command) Instructs all jobs in a transaction (or a single job if it is not part of any transaction) to finalize any graph changes and do any necessary cleanup. This command requires that all involved jobs are in the PENDING state. For jobs in a transaction, instructing one job to finalize will force ALL jobs in the transaction to finalize, so it is only necessary to instruct a single member job to finalize. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;id: string&quot;</dt>
 <dd>The identifier of any job in the transaction, or of a job that is not part of any transaction.</dd></dl>
@@ -658,7 +658,7 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <dt>&quot;total-progress: int&quot;</dt>
 <dd>Estimated <tt>&quot;current-progress&quot;</tt> value at the completion of the job. This value can arbitrarily change while the job is running, in both directions.</dd>
 <dt>&quot;error: string&quot; (optional)</dt>
-<dd>If this field is present, the job failed; if it is still missing in the <font SIZE="-1">CONCLUDED</font> state, this indicates successful completion. The value is a human-readable error message to describe the reason for the job failure. It should not be parsed by applications.</dd></dl>
+<dd>If this field is present, the job failed; if it is still missing in the CONCLUDED state, this indicates successful completion. The value is a human-readable error message to describe the reason for the job failure. It should not be parsed by applications.</dd></dl>
 <p> <code>Since:</code> 3.0 <code>query-jobs</code> (Command) Return information about jobs. <code>Returns:</code> a list with a <tt>&quot;JobInfo&quot;</tt> for each active job <code>Since:</code> 3.0 <code>SnapshotInfo</code> (Object) <code>Members:</code></p>
 <dl>
 <dt>&quot;id: string&quot;</dt>
@@ -666,13 +666,13 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <dt>&quot;name: string&quot;</dt>
 <dd>user chosen name</dd>
 <dt>&quot;vm-state-size: int&quot;</dt>
-<dd>size of the <font SIZE="-1">VM</font> state</dd>
+<dd>size of the VM state</dd>
 <dt>&quot;date-sec: int&quot;</dt>
-<dd><font SIZE="-1">UTC</font> date of the snapshot in seconds</dd>
+<dd>UTC date of the snapshot in seconds</dd>
 <dt>&quot;date-nsec: int&quot;</dt>
 <dd>fractional part in nano seconds to be used with date-sec</dd>
 <dt>&quot;vm-clock-sec: int&quot;</dt>
-<dd><font SIZE="-1">VM</font> clock relative to boot in seconds</dd>
+<dd>VM clock relative to boot in seconds</dd>
 <dt>&quot;vm-clock-nsec: int&quot;</dt>
 <dd>fractional part in nano seconds to be used with vm-clock-sec</dd></dl>
 <p> <code>Since:</code> 1.3 <code>ImageInfoSpecificQCow2EncryptionBase</code> (Object) <code>Members:</code></p>
@@ -706,11 +706,11 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <p> <code>Since:</code> 1.7 <code>ImageInfoSpecificVmdk</code> (Object) <code>Members:</code></p>
 <dl>
 <dt>&quot;create-type: string&quot;</dt>
-<dd>The create type of <font SIZE="-1">VMDK</font> image</dd>
+<dd>The create type of VMDK image</dd>
 <dt>&quot;cid: int&quot;</dt>
 <dd>Content id of image</dd>
 <dt>&quot;parent-cid: int&quot;</dt>
-<dd>Parent <font SIZE="-1">VMDK</font> image&#8217;s cid</dd>
+<dd>Parent VMDK image&#8217;s cid</dd>
 <dt>&quot;extents: array of ImageInfo&quot;</dt>
 <dd>List of extent files</dd></dl>
 <p> <code>Since:</code> 1.7 <code>ImageInfoSpecific</code> (Object) A discriminated record of image format specific information structures. <code>Members:</code></p>
@@ -723,7 +723,7 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <dd>
 </dd><dt>&quot;data: QCryptoBlockInfoLUKS&quot; when &quot;type&quot; is &quot;luks&quot;</dt>
 <dd></dd></dl>
-<p> <code>Since:</code> 1.7 <code>ImageInfo</code> (Object) Information about a <font SIZE="-1">QEMU</font> image file <code>Members:</code></p>
+<p> <code>Since:</code> 1.7 <code>ImageInfo</code> (Object) Information about a QEMU image file <code>Members:</code></p>
 <dl>
 <dt>&quot;filename: string&quot;</dt>
 <dd>name of the image file</dd>
@@ -748,12 +748,12 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <dt>&quot;backing-filename-format: string&quot; (optional)</dt>
 <dd>the format of the backing file</dd>
 <dt>&quot;snapshots: array of SnapshotInfo&quot; (optional)</dt>
-<dd>list of <font SIZE="-1">VM</font> snapshots</dd>
+<dd>list of VM snapshots</dd>
 <dt>&quot;backing-image: ImageInfo&quot; (optional)</dt>
 <dd>info of the backing image (since 1.6)</dd>
 <dt>&quot;format-specific: ImageInfoSpecific&quot; (optional)</dt>
 <dd>structure supplying additional format-specific information (since 1.7)</dd></dl>
-<p> <code>Since:</code> 1.3 <code>ImageCheck</code> (Object) Information about a <font SIZE="-1">QEMU</font> image file check <code>Members:</code></p>
+<p> <code>Since:</code> 1.3 <code>ImageCheck</code> (Object) Information about a QEMU image file check <code>Members:</code></p>
 <dl>
 <dt>&quot;filename: string&quot;</dt>
 <dd>name of the image file checked</dd>
@@ -904,7 +904,7 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <dt>&quot;locked&quot;</dt>
 <dd>The bitmap is currently in-use by some operation and is immutable. If the bitmap was <tt>&quot;active&quot;</tt> prior to the operation, it is still recording new writes. If the bitmap was <tt>&quot;disabled&quot;</tt>, it is not recording new writes. (Since 2.12)</dd>
 <dt>&quot;inconsistent&quot;</dt>
-<dd>This is a persistent dirty bitmap that was marked in-use on disk, and is unusable by <font SIZE="-1">QEMU.</font> It can only be deleted. Please rely on the inconsistent field in <tt>&quot;BlockDirtyInfo&quot;</tt> instead, as the status field is deprecated. (Since 4.0)</dd></dl>
+<dd>This is a persistent dirty bitmap that was marked in-use on disk, and is unusable by QEMU. It can only be deleted. Please rely on the inconsistent field in <tt>&quot;BlockDirtyInfo&quot;</tt> instead, as the status field is deprecated. (Since 4.0)</dd></dl>
 <p> <code>Since:</code> 2.4 <code>BlockDirtyInfo</code> (Object) Block dirty bitmap information. <code>Members:</code></p>
 <dl>
 <dt>&quot;name: string&quot; (optional)</dt>
@@ -918,7 +918,7 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <dt>&quot;recording: boolean&quot;</dt>
 <dd>true if the bitmap is recording new writes from the guest. Replaces `active` and `disabled` statuses. (since 4.0)</dd>
 <dt>&quot;busy: boolean&quot;</dt>
-<dd>true if the bitmap is in-use by some operation (<font SIZE="-1">NBD</font> or jobs) and cannot be modified via <font SIZE="-1">QMP</font> or used by another operation. Replaces `locked` and `frozen` statuses. (since 4.0)</dd>
+<dd>true if the bitmap is in-use by some operation (NBD or jobs) and cannot be modified via QMP or used by another operation. Replaces `locked` and `frozen` statuses. (since 4.0)</dd>
 <dt>&quot;persistent: boolean&quot;</dt>
 <dd>true if the bitmap was stored on disk, is scheduled to be stored on disk, or both. (since 4.0)</dd>
 <dt>&quot;inconsistent: boolean&quot; (optional)</dt>
@@ -946,7 +946,7 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <p> <code>Since:</code> 4.0 <code>block-latency-histogram-set</code> (Command) Manage read, write and flush latency histograms for the device. If only <tt>&quot;id&quot;</tt> parameter is specified, remove all present latency histograms for the device. Otherwise, add/reset some of (or all) latency histograms. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;id: string&quot;</dt>
-<dd>The name or <font SIZE="-1">QOM</font> path of the guest device.</dd>
+<dd>The name or QOM path of the guest device.</dd>
 <dt>&quot;boundaries: array of int&quot; (optional)</dt>
 <dd>list of interval boundary values (see description in BlockLatencyHistogramInfo definition). If specified, all latency histograms are removed, and empty ones created for all io types with intervals corresponding to <tt>&quot;boundaries&quot;</tt> (except for io types, for which specific boundaries are set through the following parameters).</dd>
 <dt>&quot;boundaries-read: array of int&quot; (optional)</dt>
@@ -955,47 +955,47 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <dd>list of interval boundary values for write latency histogram.</dd>
 <dt>&quot;boundaries-flush: array of int&quot; (optional)</dt>
 <dd>list of interval boundary values for flush latency histogram.</dd></dl>
-<p> <code>Returns:</code> error if device is not found or any boundary arrays are invalid. <code>Since:</code> 4.0 <code>Example:</code> set new histograms for all io types with intervals<br />
+<p> <code>Returns:</code> error if device is not found or any boundary arrays are invalid. <code>Since:</code> 4.0 <code>Example:</code> set new histograms for all io types with intervals<br/>
         [0, 10), [10, 50), [50, 100), [100, +inf):</p>
-<p>        -&gt; { &quot;execute&quot;: &quot;block-latency-histogram-set&quot;,<br />
-             &quot;arguments&quot;: { &quot;id&quot;: &quot;drive0&quot;,<br />
-                            &quot;boundaries&quot;: [10, 50, 100] } }<br />
-        &lt;- {<br />
-    &quot;return&quot;:<br />
-    {<br />
-    } } <code>Example:</code> set new histogram only for write, other histograms will remain<br />
+<p>        -&gt; { &quot;execute&quot;: &quot;block-latency-histogram-set&quot;,<br/>
+             &quot;arguments&quot;: { &quot;id&quot;: &quot;drive0&quot;,<br/>
+                            &quot;boundaries&quot;: [10, 50, 100] } }<br/>
+        &lt;- {<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    } } <code>Example:</code> set new histogram only for write, other histograms will remain<br/>
         not changed (or not created):</p>
-<p>        -&gt; { &quot;execute&quot;: &quot;block-latency-histogram-set&quot;,<br />
-             &quot;arguments&quot;: { &quot;id&quot;: &quot;drive0&quot;,<br />
-                            &quot;boundaries-write&quot;: [10, 50, 100] } }<br />
-        &lt;-<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
-} <code>Example:</code> set new histograms with the following intervals:<br />
-          read, flush: [0, 10), [10, 50), [50, 100), [100, +inf)<br />
+<p>        -&gt; { &quot;execute&quot;: &quot;block-latency-histogram-set&quot;,<br/>
+             &quot;arguments&quot;: { &quot;id&quot;: &quot;drive0&quot;,<br/>
+                            &quot;boundaries-write&quot;: [10, 50, 100] } }<br/>
+        &lt;-<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
+} <code>Example:</code> set new histograms with the following intervals:<br/>
+          read, flush: [0, 10), [10, 50), [50, 100), [100, +inf)<br/>
           write: [0, 1000), [1000, 5000), [5000, +inf)</p>
-<p>        -&gt; { &quot;execute&quot;: &quot;block-latency-histogram-set&quot;,<br />
-             &quot;arguments&quot;: { &quot;id&quot;: &quot;drive0&quot;,<br />
-                            &quot;boundaries&quot;: [10, 50, 100],<br />
-                            &quot;boundaries-write&quot;: [1000, 5000] } }<br />
-        &lt;- {<br />
-    &quot;return&quot;:<br />
-    {<br />
+<p>        -&gt; { &quot;execute&quot;: &quot;block-latency-histogram-set&quot;,<br/>
+             &quot;arguments&quot;: { &quot;id&quot;: &quot;drive0&quot;,<br/>
+                            &quot;boundaries&quot;: [10, 50, 100],<br/>
+                            &quot;boundaries-write&quot;: [1000, 5000] } }<br/>
+        &lt;- {<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
     } } <code>Example:</code> remove all latency histograms :</p>
-<p>        -&gt;{&quot;execute&quot; : &quot;block-latency-histogram-set&quot;,<br />
-           &quot;arguments&quot; : {&quot;id&quot; : &quot;drive0&quot;}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
+<p>        -&gt;{&quot;execute&quot; : &quot;block-latency-histogram-set&quot;,<br/>
+           &quot;arguments&quot; : {&quot;id&quot; : &quot;drive0&quot;}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
 } <code>BlockInfo</code> (Object) Block device information. This structure describes a virtual device and the backing device associated with it. <code>Members:</code></p>
 <dl>
 <dt>&quot;device: string&quot;</dt>
 <dd>The device name associated with the virtual device.</dd>
 <dt>&quot;qdev: string&quot; (optional)</dt>
-<dd>The qdev <font SIZE="-1">ID,</font> or if no <font SIZE="-1">ID</font> is assigned, the <font SIZE="-1">QOM</font> path of the block device. (since 2.10)</dd>
+<dd>The qdev ID, or if no ID is assigned, the QOM path of the block device. (since 2.10)</dd>
 <dt>&quot;type: string&quot;</dt>
 <dd>This field is returned only for compatibility reasons, it should not be used (always returns &#8216;unknown&#8217;)</dd>
 <dt>&quot;removable: boolean&quot;</dt>
@@ -1007,95 +1007,95 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <dt>&quot;dirty-bitmaps: array of BlockDirtyInfo&quot; (optional)</dt>
 <dd>dirty bitmaps information (only present if the driver has one or more dirty bitmaps) (Since 2.0) Deprecated in 4.2; see BlockDeviceInfo instead.</dd>
 <dt>&quot;io-status: BlockDeviceIoStatus&quot; (optional)</dt>
-<dd><tt>&quot;BlockDeviceIoStatus&quot;</tt>. Only present if the device supports it and the <font SIZE="-1">VM</font> is configured to stop on errors (supported device models: virtio-blk, <font SIZE="-1">IDE, SCSI</font> except scsi-generic)</dd>
+<dd><tt>&quot;BlockDeviceIoStatus&quot;</tt>. Only present if the device supports it and the VM is configured to stop on errors (supported device models: virtio-blk, IDE, SCSI except scsi-generic)</dd>
 <dt>&quot;inserted: BlockDeviceInfo&quot; (optional)</dt>
 <dd><tt>&quot;BlockDeviceInfo&quot;</tt> describing the device if media is present</dd></dl>
-<p> <code>Since:</code> 0.14.0 <code>BlockMeasureInfo</code> (Object) Image file size calculation information. This structure describes the size requirements for creating a new image file. The size requirements depend on the new image file format. File size always equals virtual disk size for the &#8216;raw&#8217; format, even for sparse <font SIZE="-1">POSIX</font> files. Compact formats such as &#8216;qcow2&#8217; represent unallocated and zero regions efficiently so file size may be smaller than virtual disk size. The values are upper bounds that are guaranteed to fit the new image file. Subsequent modification, such as internal snapshot or bitmap creation, may require additional space and is not covered here. <code>Members:</code></p>
+<p> <code>Since:</code> 0.14.0 <code>BlockMeasureInfo</code> (Object) Image file size calculation information. This structure describes the size requirements for creating a new image file. The size requirements depend on the new image file format. File size always equals virtual disk size for the &#8216;raw&#8217; format, even for sparse POSIX files. Compact formats such as &#8216;qcow2&#8217; represent unallocated and zero regions efficiently so file size may be smaller than virtual disk size. The values are upper bounds that are guaranteed to fit the new image file. Subsequent modification, such as internal snapshot or bitmap creation, may require additional space and is not covered here. <code>Members:</code></p>
 <dl>
 <dt>&quot;required: int&quot;</dt>
 <dd>Size required for a new image file, in bytes.</dd>
 <dt>&quot;fully-allocated: int&quot;</dt>
 <dd>Image file size, in bytes, once data has been written to all sectors.</dd></dl>
-<p> <code>Since:</code> 2.10 <code>query-block</code> (Command) Get a list of BlockInfo for all virtual block devices. <code>Returns:</code> a list of <tt>&quot;BlockInfo&quot;</tt> describing each virtual block device. Filter nodes that were created implicitly are skipped over. <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-block&quot;} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot; : [<br />
-        {<br />
-            &quot;io-status&quot; : &quot;ok&quot;,<br />
-            &quot;device&quot; : &quot;ide0-hd0&quot;,<br />
-            &quot;locked&quot; : false,<br />
-            &quot;removable&quot; : false,<br />
-            &quot;inserted&quot; : {<br />
-                &quot;ro&quot; : false,<br />
-                &quot;drv&quot; : &quot;qcow2&quot;,<br />
-                &quot;encrypted&quot; : false,<br />
-                &quot;file&quot; : &quot;disks/test.qcow2&quot;,<br />
-                &quot;backing_file_depth&quot; : 1,<br />
-                &quot;bps&quot; : 1000000,<br />
-                &quot;bps_rd&quot; : 0,<br />
-                &quot;bps_wr&quot; : 0,<br />
-                &quot;iops&quot; : 1000000,<br />
-                &quot;iops_rd&quot; : 0,<br />
-                &quot;iops_wr&quot; : 0,<br />
-                &quot;bps_max&quot; : 8000000,<br />
-                &quot;bps_rd_max&quot; : 0,<br />
-                &quot;bps_wr_max&quot; : 0,<br />
-                &quot;iops_max&quot; : 0,<br />
-                &quot;iops_rd_max&quot; : 0,<br />
-                &quot;iops_wr_max&quot; : 0,<br />
-                &quot;iops_size&quot; : 0,<br />
-                &quot;detect_zeroes&quot; : &quot;on&quot;,<br />
-                &quot;write_threshold&quot; : 0,<br />
-                &quot;image&quot; : {<br />
-                    &quot;filename&quot; : &quot;disks/test.qcow2&quot;,<br />
-                    &quot;format&quot; : &quot;qcow2&quot;,<br />
-                    &quot;virtual-size&quot; : 2048000,<br />
-                    &quot;backing_file&quot; : &quot;base.qcow2&quot;,<br />
-                    &quot;full-backing-filename&quot; : &quot;disks/base.qcow2&quot;,<br />
-                    &quot;backing-filename-format&quot; : &quot;qcow2&quot;,<br />
-                    &quot;snapshots&quot; : [<br />
-                        {<br />
-                            &quot;id&quot; : &quot;1&quot;,<br />
-                            &quot;name&quot; : &quot;snapshot1&quot;,<br />
-                            &quot;vm-state-size&quot; : 0,<br />
-                            &quot;date-sec&quot; : 10000200,<br />
-                            &quot;date-nsec&quot; : 12,<br />
-                            &quot;vm-clock-sec&quot; : 206,<br />
-                            &quot;vm-clock-nsec&quot; : 30<br />
-                        }<br />
-                    ],<br />
-                    &quot;backing-image&quot; : {<br />
-                        &quot;filename&quot; : &quot;disks/base.qcow2&quot;,<br />
-                        &quot;format&quot; : &quot;qcow2&quot;,<br />
-                        &quot;virtual-size&quot; : 2048000<br />
-                    }<br />
-                }<br />
-            },<br />
-            &quot;qdev&quot; : &quot;ide_disk&quot;,<br />
-            &quot;type&quot; : &quot;unknown&quot;<br />
-        },<br />
-        {<br />
-            &quot;io-status&quot; : &quot;ok&quot;,<br />
-            &quot;device&quot; : &quot;ide1-cd0&quot;,<br />
-            &quot;locked&quot; : false,<br />
-            &quot;removable&quot; : true,<br />
-            &quot;qdev&quot; : &quot;/machine/unattached/device[23]&quot;,<br />
-            &quot;tray_open&quot; : false,<br />
-            &quot;type&quot; : &quot;unknown&quot;<br />
-        },<br />
-        {<br />
-            &quot;device&quot; : &quot;floppy0&quot;,<br />
-            &quot;locked&quot; : false,<br />
-            &quot;removable&quot; : true,<br />
-            &quot;qdev&quot; : &quot;/machine/unattached/device[20]&quot;,<br />
-            &quot;type&quot; : &quot;unknown&quot;<br />
-        },<br />
-        {<br />
-            &quot;device&quot; : &quot;sd0&quot;,<br />
-            &quot;locked&quot; : false,<br />
-            &quot;removable&quot; : true,<br />
-            &quot;type&quot; : &quot;unknown&quot;<br />
-        }<br />
-    ]<br />
+<p> <code>Since:</code> 2.10 <code>query-block</code> (Command) Get a list of BlockInfo for all virtual block devices. <code>Returns:</code> a list of <tt>&quot;BlockInfo&quot;</tt> describing each virtual block device. Filter nodes that were created implicitly are skipped over. <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-block&quot;} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot; : [<br/>
+        {<br/>
+            &quot;io-status&quot; : &quot;ok&quot;,<br/>
+            &quot;device&quot; : &quot;ide0-hd0&quot;,<br/>
+            &quot;locked&quot; : false,<br/>
+            &quot;removable&quot; : false,<br/>
+            &quot;inserted&quot; : {<br/>
+                &quot;ro&quot; : false,<br/>
+                &quot;drv&quot; : &quot;qcow2&quot;,<br/>
+                &quot;encrypted&quot; : false,<br/>
+                &quot;file&quot; : &quot;disks/test.qcow2&quot;,<br/>
+                &quot;backing_file_depth&quot; : 1,<br/>
+                &quot;bps&quot; : 1000000,<br/>
+                &quot;bps_rd&quot; : 0,<br/>
+                &quot;bps_wr&quot; : 0,<br/>
+                &quot;iops&quot; : 1000000,<br/>
+                &quot;iops_rd&quot; : 0,<br/>
+                &quot;iops_wr&quot; : 0,<br/>
+                &quot;bps_max&quot; : 8000000,<br/>
+                &quot;bps_rd_max&quot; : 0,<br/>
+                &quot;bps_wr_max&quot; : 0,<br/>
+                &quot;iops_max&quot; : 0,<br/>
+                &quot;iops_rd_max&quot; : 0,<br/>
+                &quot;iops_wr_max&quot; : 0,<br/>
+                &quot;iops_size&quot; : 0,<br/>
+                &quot;detect_zeroes&quot; : &quot;on&quot;,<br/>
+                &quot;write_threshold&quot; : 0,<br/>
+                &quot;image&quot; : {<br/>
+                    &quot;filename&quot; : &quot;disks/test.qcow2&quot;,<br/>
+                    &quot;format&quot; : &quot;qcow2&quot;,<br/>
+                    &quot;virtual-size&quot; : 2048000,<br/>
+                    &quot;backing_file&quot; : &quot;base.qcow2&quot;,<br/>
+                    &quot;full-backing-filename&quot; : &quot;disks/base.qcow2&quot;,<br/>
+                    &quot;backing-filename-format&quot; : &quot;qcow2&quot;,<br/>
+                    &quot;snapshots&quot; : [<br/>
+                        {<br/>
+                            &quot;id&quot; : &quot;1&quot;,<br/>
+                            &quot;name&quot; : &quot;snapshot1&quot;,<br/>
+                            &quot;vm-state-size&quot; : 0,<br/>
+                            &quot;date-sec&quot; : 10000200,<br/>
+                            &quot;date-nsec&quot; : 12,<br/>
+                            &quot;vm-clock-sec&quot; : 206,<br/>
+                            &quot;vm-clock-nsec&quot; : 30<br/>
+                        }<br/>
+                    ],<br/>
+                    &quot;backing-image&quot; : {<br/>
+                        &quot;filename&quot; : &quot;disks/base.qcow2&quot;,<br/>
+                        &quot;format&quot; : &quot;qcow2&quot;,<br/>
+                        &quot;virtual-size&quot; : 2048000<br/>
+                    }<br/>
+                }<br/>
+            },<br/>
+            &quot;qdev&quot; : &quot;ide_disk&quot;,<br/>
+            &quot;type&quot; : &quot;unknown&quot;<br/>
+        },<br/>
+        {<br/>
+            &quot;io-status&quot; : &quot;ok&quot;,<br/>
+            &quot;device&quot; : &quot;ide1-cd0&quot;,<br/>
+            &quot;locked&quot; : false,<br/>
+            &quot;removable&quot; : true,<br/>
+            &quot;qdev&quot; : &quot;/machine/unattached/device[23]&quot;,<br/>
+            &quot;tray_open&quot; : false,<br/>
+            &quot;type&quot; : &quot;unknown&quot;<br/>
+        },<br/>
+        {<br/>
+            &quot;device&quot; : &quot;floppy0&quot;,<br/>
+            &quot;locked&quot; : false,<br/>
+            &quot;removable&quot; : true,<br/>
+            &quot;qdev&quot; : &quot;/machine/unattached/device[20]&quot;,<br/>
+            &quot;type&quot; : &quot;unknown&quot;<br/>
+        },<br/>
+        {<br/>
+            &quot;device&quot; : &quot;sd0&quot;,<br/>
+            &quot;locked&quot; : false,<br/>
+            &quot;removable&quot; : true,<br/>
+            &quot;type&quot; : &quot;unknown&quot;<br/>
+        }<br/>
+    ]<br/>
 } <code>BlockDeviceTimedStats</code> (Object) Statistics of a block device during a given interval of time. <code>Members:</code></p>
 <dl>
 <dt>&quot;interval_length: int&quot;</dt>
@@ -1207,7 +1207,7 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <dt>&quot;node-name: string&quot; (optional)</dt>
 <dd>The node name of the device. (Since 2.3)</dd>
 <dt>&quot;qdev: string&quot; (optional)</dt>
-<dd>The qdev <font SIZE="-1">ID,</font> or if no <font SIZE="-1">ID</font> is assigned, the <font SIZE="-1">QOM</font> path of the block device. (since 3.0)</dd>
+<dd>The qdev ID, or if no ID is assigned, the QOM path of the block device. (since 3.0)</dd>
 <dt>&quot;stats: BlockDeviceStats&quot;</dt>
 <dd>A <tt>&quot;BlockDeviceStats&quot;</tt> for the device.</dd>
 <dt>&quot;driver-specific: BlockStatsSpecific&quot; (optional)</dt>
@@ -1220,96 +1220,96 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <dl>
 <dt>&quot;query-nodes: boolean&quot; (optional)</dt>
 <dd>If true, the command will query all the block nodes that have a node name, in a list which will include &#8220;parent&#8221; information, but not &#8220;backing&#8221;. If false or omitted, the behavior is as before &#8211; query all the device backends, recursively including their &#8220;parent&#8221; and &#8220;backing&#8221;. Filter nodes that were created implicitly are skipped over in this mode. (Since 2.3)</dd></dl>
-<p> <code>Returns:</code> A list of <tt>&quot;BlockStats&quot;</tt> for each virtual block devices. <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-blockstats&quot;} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot; : [<br />
-        {<br />
-            &quot;device&quot; : &quot;ide0-hd0&quot;,<br />
-            &quot;parent&quot; : {<br />
-                &quot;stats&quot; : {<br />
-                    &quot;wr_highest_offset&quot; : 3686448128,<br />
-                    &quot;wr_bytes&quot; : 9786368,<br />
-                    &quot;wr_operations&quot; : 751,<br />
-                    &quot;rd_bytes&quot; : 122567168,<br />
-                    &quot;rd_operations&quot; : 36772 &quot;wr_total_times_ns&quot; : 313253456 &quot;rd_total_times_ns&quot; : 3465673657 &quot;flush_total_times_ns&quot; : 49653 &quot;flush_operations&quot; : 61,<br />
-                    &quot;rd_merged&quot; : 0,<br />
-                    &quot;wr_merged&quot; : 0,<br />
-                    &quot;idle_time_ns&quot; : 2953431879,<br />
-                    &quot;account_invalid&quot; : true,<br />
-                    &quot;account_failed&quot; : false<br />
-                }<br />
-            },<br />
-            &quot;stats&quot; : {<br />
-                &quot;wr_highest_offset&quot; : 2821110784,<br />
-                &quot;wr_bytes&quot; : 9786368,<br />
-                &quot;wr_operations&quot; : 692,<br />
-                &quot;rd_bytes&quot; : 122739200,<br />
-                &quot;rd_operations&quot; : 36604 &quot;flush_operations&quot; : 51,<br />
-                &quot;wr_total_times_ns&quot; : 313253456 &quot;rd_total_times_ns&quot; : 3465673657 &quot;flush_total_times_ns&quot; : 49653,<br />
-                &quot;rd_merged&quot; : 0,<br />
-                &quot;wr_merged&quot; : 0,<br />
-                &quot;idle_time_ns&quot; : 2953431879,<br />
-                &quot;account_invalid&quot; : true,<br />
-                &quot;account_failed&quot; : false<br />
-            },<br />
-            &quot;qdev&quot; : &quot;/machine/unattached/device[23]&quot;<br />
-        },<br />
-        {<br />
-            &quot;device&quot; : &quot;ide1-cd0&quot;,<br />
-            &quot;stats&quot; : {<br />
-                &quot;wr_highest_offset&quot; : 0,<br />
-                &quot;wr_bytes&quot; : 0,<br />
-                &quot;wr_operations&quot; : 0,<br />
-                &quot;rd_bytes&quot; : 0,<br />
-                &quot;rd_operations&quot; : 0 &quot;flush_operations&quot; : 0,<br />
-                &quot;wr_total_times_ns&quot; : 0 &quot;rd_total_times_ns&quot; : 0 &quot;flush_total_times_ns&quot; : 0,<br />
-                &quot;rd_merged&quot; : 0,<br />
-                &quot;wr_merged&quot; : 0,<br />
-                &quot;account_invalid&quot; : false,<br />
-                &quot;account_failed&quot; : false<br />
-            },<br />
-            &quot;qdev&quot; : &quot;/machine/unattached/device[24]&quot;<br />
-        },<br />
-        {<br />
-            &quot;device&quot; : &quot;floppy0&quot;,<br />
-            &quot;stats&quot; : {<br />
-                &quot;wr_highest_offset&quot; : 0,<br />
-                &quot;wr_bytes&quot; : 0,<br />
-                &quot;wr_operations&quot; : 0,<br />
-                &quot;rd_bytes&quot; : 0,<br />
-                &quot;rd_operations&quot; : 0 &quot;flush_operations&quot; : 0,<br />
-                &quot;wr_total_times_ns&quot; : 0 &quot;rd_total_times_ns&quot; : 0 &quot;flush_total_times_ns&quot; : 0,<br />
-                &quot;rd_merged&quot; : 0,<br />
-                &quot;wr_merged&quot; : 0,<br />
-                &quot;account_invalid&quot; : false,<br />
-                &quot;account_failed&quot; : false<br />
-            },<br />
-            &quot;qdev&quot; : &quot;/machine/unattached/device[16]&quot;<br />
-        },<br />
-        {<br />
-            &quot;device&quot; : &quot;sd0&quot;,<br />
-            &quot;stats&quot; : {<br />
-                &quot;wr_highest_offset&quot; : 0,<br />
-                &quot;wr_bytes&quot; : 0,<br />
-                &quot;wr_operations&quot; : 0,<br />
-                &quot;rd_bytes&quot; : 0,<br />
-                &quot;rd_operations&quot; : 0 &quot;flush_operations&quot; : 0,<br />
-                &quot;wr_total_times_ns&quot; : 0 &quot;rd_total_times_ns&quot; : 0 &quot;flush_total_times_ns&quot; : 0,<br />
-                &quot;rd_merged&quot; : 0,<br />
-                &quot;wr_merged&quot; : 0,<br />
-                &quot;account_invalid&quot; : false,<br />
-                &quot;account_failed&quot; : false<br />
-            }<br />
-        }<br />
-    ]<br />
+<p> <code>Returns:</code> A list of <tt>&quot;BlockStats&quot;</tt> for each virtual block devices. <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-blockstats&quot;} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot; : [<br/>
+        {<br/>
+            &quot;device&quot; : &quot;ide0-hd0&quot;,<br/>
+            &quot;parent&quot; : {<br/>
+                &quot;stats&quot; : {<br/>
+                    &quot;wr_highest_offset&quot; : 3686448128,<br/>
+                    &quot;wr_bytes&quot; : 9786368,<br/>
+                    &quot;wr_operations&quot; : 751,<br/>
+                    &quot;rd_bytes&quot; : 122567168,<br/>
+                    &quot;rd_operations&quot; : 36772 &quot;wr_total_times_ns&quot; : 313253456 &quot;rd_total_times_ns&quot; : 3465673657 &quot;flush_total_times_ns&quot; : 49653 &quot;flush_operations&quot; : 61,<br/>
+                    &quot;rd_merged&quot; : 0,<br/>
+                    &quot;wr_merged&quot; : 0,<br/>
+                    &quot;idle_time_ns&quot; : 2953431879,<br/>
+                    &quot;account_invalid&quot; : true,<br/>
+                    &quot;account_failed&quot; : false<br/>
+                }<br/>
+            },<br/>
+            &quot;stats&quot; : {<br/>
+                &quot;wr_highest_offset&quot; : 2821110784,<br/>
+                &quot;wr_bytes&quot; : 9786368,<br/>
+                &quot;wr_operations&quot; : 692,<br/>
+                &quot;rd_bytes&quot; : 122739200,<br/>
+                &quot;rd_operations&quot; : 36604 &quot;flush_operations&quot; : 51,<br/>
+                &quot;wr_total_times_ns&quot; : 313253456 &quot;rd_total_times_ns&quot; : 3465673657 &quot;flush_total_times_ns&quot; : 49653,<br/>
+                &quot;rd_merged&quot; : 0,<br/>
+                &quot;wr_merged&quot; : 0,<br/>
+                &quot;idle_time_ns&quot; : 2953431879,<br/>
+                &quot;account_invalid&quot; : true,<br/>
+                &quot;account_failed&quot; : false<br/>
+            },<br/>
+            &quot;qdev&quot; : &quot;/machine/unattached/device[23]&quot;<br/>
+        },<br/>
+        {<br/>
+            &quot;device&quot; : &quot;ide1-cd0&quot;,<br/>
+            &quot;stats&quot; : {<br/>
+                &quot;wr_highest_offset&quot; : 0,<br/>
+                &quot;wr_bytes&quot; : 0,<br/>
+                &quot;wr_operations&quot; : 0,<br/>
+                &quot;rd_bytes&quot; : 0,<br/>
+                &quot;rd_operations&quot; : 0 &quot;flush_operations&quot; : 0,<br/>
+                &quot;wr_total_times_ns&quot; : 0 &quot;rd_total_times_ns&quot; : 0 &quot;flush_total_times_ns&quot; : 0,<br/>
+                &quot;rd_merged&quot; : 0,<br/>
+                &quot;wr_merged&quot; : 0,<br/>
+                &quot;account_invalid&quot; : false,<br/>
+                &quot;account_failed&quot; : false<br/>
+            },<br/>
+            &quot;qdev&quot; : &quot;/machine/unattached/device[24]&quot;<br/>
+        },<br/>
+        {<br/>
+            &quot;device&quot; : &quot;floppy0&quot;,<br/>
+            &quot;stats&quot; : {<br/>
+                &quot;wr_highest_offset&quot; : 0,<br/>
+                &quot;wr_bytes&quot; : 0,<br/>
+                &quot;wr_operations&quot; : 0,<br/>
+                &quot;rd_bytes&quot; : 0,<br/>
+                &quot;rd_operations&quot; : 0 &quot;flush_operations&quot; : 0,<br/>
+                &quot;wr_total_times_ns&quot; : 0 &quot;rd_total_times_ns&quot; : 0 &quot;flush_total_times_ns&quot; : 0,<br/>
+                &quot;rd_merged&quot; : 0,<br/>
+                &quot;wr_merged&quot; : 0,<br/>
+                &quot;account_invalid&quot; : false,<br/>
+                &quot;account_failed&quot; : false<br/>
+            },<br/>
+            &quot;qdev&quot; : &quot;/machine/unattached/device[16]&quot;<br/>
+        },<br/>
+        {<br/>
+            &quot;device&quot; : &quot;sd0&quot;,<br/>
+            &quot;stats&quot; : {<br/>
+                &quot;wr_highest_offset&quot; : 0,<br/>
+                &quot;wr_bytes&quot; : 0,<br/>
+                &quot;wr_operations&quot; : 0,<br/>
+                &quot;rd_bytes&quot; : 0,<br/>
+                &quot;rd_operations&quot; : 0 &quot;flush_operations&quot; : 0,<br/>
+                &quot;wr_total_times_ns&quot; : 0 &quot;rd_total_times_ns&quot; : 0 &quot;flush_total_times_ns&quot; : 0,<br/>
+                &quot;rd_merged&quot; : 0,<br/>
+                &quot;wr_merged&quot; : 0,<br/>
+                &quot;account_invalid&quot; : false,<br/>
+                &quot;account_failed&quot; : false<br/>
+            }<br/>
+        }<br/>
+    ]<br/>
 } <code>BlockdevOnError</code> (Enum) An enumeration of possible behaviors for errors on I/O operations. The exact meaning depends on whether the I/O was initiated by a guest or by a block job <code>Values:</code></p>
 <dl>
 <dt>&quot;report&quot;</dt>
 <dd>for guest operations, report the error to the guest; for jobs, cancel the job</dd>
 <dt>&quot;ignore&quot;</dt>
-<dd>ignore the error, only report a <font SIZE="-1">QMP</font> event (<font SIZE="-1">BLOCK_IO_ERROR</font> or <font SIZE="-1">BLOCK_JOB_ERROR</font>)</dd>
+<dd>ignore the error, only report a QMP event (BLOCK_IO_ERROR or BLOCK_JOB_ERROR)</dd>
 <dt>&quot;enospc&quot;</dt>
-<dd>same as <tt>&quot;stop&quot;</tt> on <font SIZE="-1">ENOSPC,</font> same as <tt>&quot;report&quot;</tt> otherwise.</dd>
+<dd>same as <tt>&quot;stop&quot;</tt> on ENOSPC, same as <tt>&quot;report&quot;</tt> otherwise.</dd>
 <dt>&quot;stop&quot;</dt>
 <dd>for guest operations, stop the virtual machine; for jobs, pause the job</dd>
 <dt>&quot;auto&quot;</dt>
@@ -1329,7 +1329,7 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <p> <code>Since:</code> 1.3 <code>BitmapSyncMode</code> (Enum) An enumeration of possible behaviors for the synchronization of a bitmap when used for data copy operations. <code>Values:</code></p>
 <dl>
 <dt>&quot;on-success&quot;</dt>
-<dd>The bitmap is only synced when the operation is successful. This is the behavior always used for &#8216;<font SIZE="-1">INCREMENTAL</font>&#8216; backups.</dd>
+<dd>The bitmap is only synced when the operation is successful. This is the behavior always used for &#8216;INCREMENTAL&#8216; backups.</dd>
 <dt>&quot;never&quot;</dt>
 <dd>The bitmap is never synchronized with the operation, and is treated solely as a read-only manifest of blocks to copy.</dd>
 <dt>&quot;always&quot;</dt>
@@ -1345,7 +1345,7 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <dt>&quot;type: string&quot;</dt>
 <dd>the job type (&#8216;stream&#8217; for image streaming)</dd>
 <dt>&quot;device: string&quot;</dt>
-<dd>The job identifier. Originally the device name but other values are allowed since <font SIZE="-1">QEMU 2.7</font></dd>
+<dd>The job identifier. Originally the device name but other values are allowed since QEMU 2.7</dd>
 <dt>&quot;len: int&quot;</dt>
 <dd>Estimated <tt>&quot;offset&quot;</tt> value at the completion of the job. This value can arbitrarily change while the job is running, in both directions.</dd>
 <dt>&quot;offset: int&quot;</dt>
@@ -1363,9 +1363,9 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <dt>&quot;status: JobStatus&quot;</dt>
 <dd>Current job state/status (since 2.12)</dd>
 <dt>&quot;auto-finalize: boolean&quot;</dt>
-<dd>Job will finalize itself when <font SIZE="-1">PENDING,</font> moving to the <font SIZE="-1">CONCLUDED</font> state. (since 2.12)</dd>
+<dd>Job will finalize itself when PENDING, moving to the CONCLUDED state. (since 2.12)</dd>
 <dt>&quot;auto-dismiss: boolean&quot;</dt>
-<dd>Job will dismiss itself when <font SIZE="-1">CONCLUDED,</font> moving to the <font SIZE="-1">NULL</font> state and disappearing from the query list. (since 2.12)</dd>
+<dd>Job will dismiss itself when CONCLUDED, moving to the NULL state and disappearing from the query list. (since 2.12)</dd>
 <dt>&quot;error: string&quot; (optional)</dt>
 <dd>Error information if the job did not complete successfully. Not set if the job completed successfully. (since 2.12.1)</dd></dl>
 <p> <code>Since:</code> 1.1 <code>query-block-jobs</code> (Command) Return information about long-running block device operations. <code>Returns:</code> a list of <tt>&quot;BlockJobInfo&quot;</tt> for each active block job <code>Since:</code> 1.1 <code>block_passwd</code> (Command) This command sets the password of a block device that has not been open with a password and requires one. This command is now obsolete and will always return an error since 2.10 <code>Arguments:</code></p>
@@ -1384,18 +1384,18 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <dd>graph node name to get the image resized (Since 2.0)</dd>
 <dt>&quot;size: int&quot;</dt>
 <dd>new image size in bytes</dd></dl>
-<p> <code>Returns:</code> nothing on success If <tt>&quot;device&quot;</tt> is not a valid block device, DeviceNotFound <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;block_resize&quot;,<br />
-   &quot;arguments&quot; : {&quot;device&quot; : &quot;scratch&quot;, &quot;size&quot; : 1073741824}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
-} <code>NewImageMode</code> (Enum) An enumeration that tells <font SIZE="-1">QEMU</font> how to set the backing file path in a new image file. <code>Values:</code></p>
+<p> <code>Returns:</code> nothing on success If <tt>&quot;device&quot;</tt> is not a valid block device, DeviceNotFound <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;block_resize&quot;,<br/>
+   &quot;arguments&quot; : {&quot;device&quot; : &quot;scratch&quot;, &quot;size&quot; : 1073741824}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
+} <code>NewImageMode</code> (Enum) An enumeration that tells QEMU how to set the backing file path in a new image file. <code>Values:</code></p>
 <dl>
 <dt>&quot;existing&quot;</dt>
-<dd><font SIZE="-1">QEMU</font> should look for an existing image file.</dd>
+<dd>QEMU should look for an existing image file.</dd>
 <dt>&quot;absolute-paths&quot;</dt>
-<dd><font SIZE="-1">QEMU</font> should create a new image with absolute paths for the backing file. If there is no backing file available, the new image will not be backed either.</dd></dl>
+<dd>QEMU should create a new image with absolute paths for the backing file. If there is no backing file available, the new image will not be backed either.</dd></dl>
 <p> <code>Since:</code> 1.1 <code>BlockdevSnapshotSync</code> (Object) Either <tt>&quot;device&quot;</tt> or <tt>&quot;node-name&quot;</tt> must be set but not both. <code>Members:</code></p>
 <dl>
 <dt>&quot;device: string&quot; (optional)</dt>
@@ -1409,7 +1409,7 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <dt>&quot;format: string&quot; (optional)</dt>
 <dd>the format of the overlay image, default is &#8216;qcow2&#8217;.</dd>
 <dt>&quot;mode: NewImageMode&quot; (optional)</dt>
-<dd>whether and how <font SIZE="-1">QEMU</font> should create a new image, default is &#8216;absolute-paths&#8217;.</dd></dl>
+<dd>whether and how QEMU should create a new image, default is &#8216;absolute-paths&#8217;.</dd></dl>
 <p> <code>BlockdevSnapshot</code> (Object) <code>Members:</code></p>
 <dl>
 <dt>&quot;node: string&quot;</dt>
@@ -1429,7 +1429,7 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <dt>&quot;bitmap: string&quot; (optional)</dt>
 <dd>The name of a dirty bitmap to use. Must be present if sync is &#8220;bitmap&#8221; or &#8220;incremental&#8221;. Can be present if sync is &#8220;full&#8221; or &#8220;top&#8221;. Must not be present otherwise. (Since 2.4 (drive-backup), 3.1 (blockdev-backup))</dd>
 <dt>&quot;bitmap-mode: BitmapSyncMode&quot; (optional)</dt>
-<dd>Specifies the type of data the bitmap should contain after the operation concludes. Must be present if a bitmap was provided, Must <font SIZE="-1">NOT</font> be present otherwise. (Since 4.2)</dd>
+<dd>Specifies the type of data the bitmap should contain after the operation concludes. Must be present if a bitmap was provided, Must NOT be present otherwise. (Since 4.2)</dd>
 <dt>&quot;compress: boolean&quot; (optional)</dt>
 <dd>true to compress data, if the target format supports it. (default: false) (since 2.8)</dd>
 <dt>&quot;on-source-error: BlockdevOnError&quot; (optional)</dt>
@@ -1437,9 +1437,9 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <dt>&quot;on-target-error: BlockdevOnError&quot; (optional)</dt>
 <dd>the action to take on an error on the target, default &#8216;report&#8217; (no limitations, since this applies to a different block device than <tt>&quot;device&quot;</tt>).</dd>
 <dt>&quot;auto-finalize: boolean&quot; (optional)</dt>
-<dd>When false, this job will wait in a <font SIZE="-1">PENDING</font> state after it has finished its work, waiting for <tt>&quot;block-job-finalize&quot;</tt> before making any block graph changes. When true, this job will automatically perform its abort or commit actions. Defaults to true. (Since 2.12)</dd>
+<dd>When false, this job will wait in a PENDING state after it has finished its work, waiting for <tt>&quot;block-job-finalize&quot;</tt> before making any block graph changes. When true, this job will automatically perform its abort or commit actions. Defaults to true. (Since 2.12)</dd>
 <dt>&quot;auto-dismiss: boolean&quot; (optional)</dt>
-<dd>When false, this job will wait in a <font SIZE="-1">CONCLUDED</font> state after it has completely ceased all work, and awaits <tt>&quot;block-job-dismiss&quot;</tt>. When true, this job will automatically disappear from the query list without user intervention. Defaults to true. (Since 2.12)</dd>
+<dd>When false, this job will wait in a CONCLUDED state after it has completely ceased all work, and awaits <tt>&quot;block-job-dismiss&quot;</tt>. When true, this job will automatically disappear from the query list without user intervention. Defaults to true. (Since 2.12)</dd>
 <dt>&quot;filter-node-name: string&quot; (optional)</dt>
 <dd>the node name that should be assigned to the filter driver that the backup job inserts into the graph above node specified by <tt>&quot;drive&quot;</tt>. If this option is not given, a node name is autogenerated. (Since: 4.2)</dd></dl>
 <p> <code>Note:</code> <tt>&quot;on-source-error&quot;</tt> and <tt>&quot;on-target-error&quot;</tt> only affect background I/O. If an error occurs during a guest write request, the device&#8217;s rerror/werror actions will be used. <code>Since:</code> 4.2 <code>DriveBackup</code> (Object) <code>Members:</code></p>
@@ -1449,7 +1449,7 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <dt>&quot;format: string&quot; (optional)</dt>
 <dd>the format of the new destination, default is to probe if <tt>&quot;mode&quot;</tt> is &#8216;existing&#8217;, else the format of the source</dd>
 <dt>&quot;mode: NewImageMode&quot; (optional)</dt>
-<dd>whether and how <font SIZE="-1">QEMU</font> should create a new image, default is &#8216;absolute-paths&#8217;.</dd>
+<dd>whether and how QEMU should create a new image, default is &#8216;absolute-paths&#8217;.</dd>
 <dt>The members of &quot;BackupCommon&quot;</dt>
 <dd></dd></dl>
 <p> <code>Since:</code> 1.6 <code>BlockdevBackup</code> (Object) <code>Members:</code></p>
@@ -1458,35 +1458,35 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <dd>the device name or node-name of the backup target node.</dd>
 <dt>The members of &quot;BackupCommon&quot;</dt>
 <dd></dd></dl>
-<p> <code>Since:</code> 2.3 <code>blockdev-snapshot-sync</code> (Command) Takes a synchronous snapshot of a block device. For the arguments, see the documentation of BlockdevSnapshotSync. <code>Returns:</code> nothing on success If <tt>&quot;device&quot;</tt> is not a valid block device, DeviceNotFound <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;blockdev-snapshot-sync&quot;,<br />
-   &quot;arguments&quot; : {&quot;device&quot; : &quot;ide-hd0&quot;,<br />
-                  &quot;snapshot-file&quot; :<br />
-                      &quot;/some/place/my-image&quot;,<br />
-                  &quot;format&quot; : &quot;qcow2&quot;}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
-} <code>blockdev-snapshot</code> (Command) Takes a snapshot of a block device. Take a snapshot, by installing &#8216;node&#8217; as the backing image of &#8216;overlay&#8217;. Additionally, if &#8216;node&#8217; is associated with a block device, the block device changes to using &#8216;overlay&#8217; as its new active image. For the arguments, see the documentation of BlockdevSnapshot. <code>Since:</code> 2.5 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;blockdev-add&quot;,<br />
-   &quot;arguments&quot; : {&quot;driver&quot; : &quot;qcow2&quot;,<br />
-                  &quot;node-name&quot; : &quot;node1534&quot;,<br />
-                  &quot;file&quot; : {&quot;driver&quot; : &quot;file&quot;,<br />
-                            &quot;filename&quot; : &quot;hd1.qcow2&quot;},<br />
+<p> <code>Since:</code> 2.3 <code>blockdev-snapshot-sync</code> (Command) Takes a synchronous snapshot of a block device. For the arguments, see the documentation of BlockdevSnapshotSync. <code>Returns:</code> nothing on success If <tt>&quot;device&quot;</tt> is not a valid block device, DeviceNotFound <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;blockdev-snapshot-sync&quot;,<br/>
+   &quot;arguments&quot; : {&quot;device&quot; : &quot;ide-hd0&quot;,<br/>
+                  &quot;snapshot-file&quot; :<br/>
+                      &quot;/some/place/my-image&quot;,<br/>
+                  &quot;format&quot; : &quot;qcow2&quot;}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
+} <code>blockdev-snapshot</code> (Command) Takes a snapshot of a block device. Take a snapshot, by installing &#8216;node&#8217; as the backing image of &#8216;overlay&#8217;. Additionally, if &#8216;node&#8217; is associated with a block device, the block device changes to using &#8216;overlay&#8217; as its new active image. For the arguments, see the documentation of BlockdevSnapshot. <code>Since:</code> 2.5 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;blockdev-add&quot;,<br/>
+   &quot;arguments&quot; : {&quot;driver&quot; : &quot;qcow2&quot;,<br/>
+                  &quot;node-name&quot; : &quot;node1534&quot;,<br/>
+                  &quot;file&quot; : {&quot;driver&quot; : &quot;file&quot;,<br/>
+                            &quot;filename&quot; : &quot;hd1.qcow2&quot;},<br/>
                   &quot;backing&quot; : null}}</p>
-<p>    &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
+<p>    &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
     }</p>
-<p>        -&gt; {&quot;execute&quot; : &quot;blockdev-snapshot&quot;,<br />
-            &quot;arguments&quot; : {&quot;node&quot; : &quot;ide-hd0&quot;,<br />
-                           &quot;overlay&quot; : &quot;node1534&quot;}} &lt; &#8211;<br />
-    {<br />
-        &quot;return&quot;:<br />
-        {<br />
-        }<br />
-    } <code>change-backing-file</code> (Command) Change the backing file in the image file metadata. This does not cause <font SIZE="-1">QEMU</font> to reopen the image file to reparse the backing filename (it may, however, perform a reopen to change permissions from r/o -&gt; r/w -&gt; r/o, if needed). The new backing file string is written into the image file metadata, and the <font SIZE="-1">QEMU</font> internal strings are updated. <code>Arguments:</code></p>
+<p>        -&gt; {&quot;execute&quot; : &quot;blockdev-snapshot&quot;,<br/>
+            &quot;arguments&quot; : {&quot;node&quot; : &quot;ide-hd0&quot;,<br/>
+                           &quot;overlay&quot; : &quot;node1534&quot;}} &lt; &#8211;<br/>
+    {<br/>
+        &quot;return&quot;:<br/>
+        {<br/>
+        }<br/>
+    } <code>change-backing-file</code> (Command) Change the backing file in the image file metadata. This does not cause QEMU to reopen the image file to reparse the backing filename (it may, however, perform a reopen to change permissions from r/o -&gt; r/w -&gt; r/o, if needed). The new backing file string is written into the image file metadata, and the QEMU internal strings are updated. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;image-node-name: string&quot;</dt>
 <dd>The name of the block driver state node of the image to modify. The &#8220;device&#8221; argument is used to verify &#8220;image-node-name&#8221; is in the chain described by &#8220;device&#8221;.</dd>
@@ -1509,84 +1509,84 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <dt>&quot;top: string&quot; (optional)</dt>
 <dd>Same as <tt>&quot;top-node&quot;</tt>, except that it is a file name rather than a node name. This must be the exact filename string that was used to open the node; other strings, even if addressing the same file, are not accepted (deprecated, use <tt>&quot;base-node&quot;</tt> instead)</dd>
 <dt>&quot;backing-file: string&quot; (optional)</dt>
-<dd>The backing file string to write into the overlay image of &#8216;top&#8217;. If &#8216;top&#8217; is the active layer, specifying a backing file string is an error. This filename is not validated. If a pathname string is such that it cannot be resolved by <font SIZE="-1">QEMU,</font> that means that subsequent <font SIZE="-1">QMP</font> or <font SIZE="-1">HMP</font> commands must use node-names for the image in question, as filename lookup methods will fail. If not specified, <font SIZE="-1">QEMU</font> will automatically determine the backing file string to use, or error out if there is no obvious choice. Care should be taken when specifying the string, to specify a valid filename or protocol. (Since 2.1) If top == base, that is an error. If top == active, the job will not be completed by itself, user needs to complete the job with the block-job-complete command after getting the ready event. (Since 2.0) If the base image is smaller than top, then the base image will be resized to be the same size as top. If top is smaller than the base image, the base will not be truncated. If you want the base image size to match the size of the smaller top, you can safely truncate it yourself once the commit operation successfully completes.</dd>
+<dd>The backing file string to write into the overlay image of &#8216;top&#8217;. If &#8216;top&#8217; is the active layer, specifying a backing file string is an error. This filename is not validated. If a pathname string is such that it cannot be resolved by QEMU, that means that subsequent QMP or HMP commands must use node-names for the image in question, as filename lookup methods will fail. If not specified, QEMU will automatically determine the backing file string to use, or error out if there is no obvious choice. Care should be taken when specifying the string, to specify a valid filename or protocol. (Since 2.1) If top == base, that is an error. If top == active, the job will not be completed by itself, user needs to complete the job with the block-job-complete command after getting the ready event. (Since 2.0) If the base image is smaller than top, then the base image will be resized to be the same size as top. If top is smaller than the base image, the base will not be truncated. If you want the base image size to match the size of the smaller top, you can safely truncate it yourself once the commit operation successfully completes.</dd>
 <dt>&quot;speed: int&quot; (optional)</dt>
 <dd>the maximum speed, in bytes per second</dd>
 <dt>&quot;filter-node-name: string&quot; (optional)</dt>
 <dd>the node name that should be assigned to the filter driver that the commit job inserts into the graph above <tt>&quot;top&quot;</tt>. If this option is not given, a node name is autogenerated. (Since: 2.9)</dd>
 <dt>&quot;auto-finalize: boolean&quot; (optional)</dt>
-<dd>When false, this job will wait in a <font SIZE="-1">PENDING</font> state after it has finished its work, waiting for <tt>&quot;block-job-finalize&quot;</tt> before making any block graph changes. When true, this job will automatically perform its abort or commit actions. Defaults to true. (Since 3.1)</dd>
+<dd>When false, this job will wait in a PENDING state after it has finished its work, waiting for <tt>&quot;block-job-finalize&quot;</tt> before making any block graph changes. When true, this job will automatically perform its abort or commit actions. Defaults to true. (Since 3.1)</dd>
 <dt>&quot;auto-dismiss: boolean&quot; (optional)</dt>
-<dd>When false, this job will wait in a <font SIZE="-1">CONCLUDED</font> state after it has completely ceased all work, and awaits <tt>&quot;block-job-dismiss&quot;</tt>. When true, this job will automatically disappear from the query list without user intervention. Defaults to true. (Since 3.1)</dd></dl>
-<p> <code>Returns:</code> Nothing on success If <tt>&quot;device&quot;</tt> does not exist, DeviceNotFound Any other error returns a GenericError. <code>Since:</code> 1.3 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;block-commit&quot;,<br />
-   &quot;arguments&quot; : {&quot;device&quot; : &quot;virtio0&quot;,<br />
-                  &quot;top&quot; : &quot;/tmp/snap1.qcow2&quot;}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
-} <code>drive-backup</code> (Command) Start a point-in-time copy of a block device to a new destination. The status of ongoing drive-backup operations can be checked with query-block-jobs where the BlockJobInfo.type field has the value &#8216;backup&#8217;. The operation can be stopped before it has completed using the block-job-cancel command. <code>Arguments:</code> the members of <tt>&quot;DriveBackup&quot;</tt> <code>Returns:</code> nothing on success If <tt>&quot;device&quot;</tt> is not a valid block device, GenericError <code>Since:</code> 1.6 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;drive-backup&quot;,<br />
-   &quot;arguments&quot; : {&quot;device&quot; : &quot;drive0&quot;,<br />
-                  &quot;sync&quot; : &quot;full&quot;,<br />
-                  &quot;target&quot; : &quot;backup.img&quot;}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
-} <code>blockdev-backup</code> (Command) Start a point-in-time copy of a block device to a new destination. The status of ongoing blockdev-backup operations can be checked with query-block-jobs where the BlockJobInfo.type field has the value &#8216;backup&#8217;. The operation can be stopped before it has completed using the block-job-cancel command. <code>Arguments:</code> the members of <tt>&quot;BlockdevBackup&quot;</tt> <code>Returns:</code> nothing on success If <tt>&quot;device&quot;</tt> is not a valid block device, DeviceNotFound <code>Since:</code> 2.3 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;blockdev-backup&quot;,<br />
-   &quot;arguments&quot; : {&quot;device&quot; : &quot;src-id&quot;,<br />
-                  &quot;sync&quot; : &quot;full&quot;,<br />
-                  &quot;target&quot; : &quot;tgt-id&quot;}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
-} <code>query-named-block-nodes</code> (Command) Get the named block driver list <code>Returns:</code> the list of BlockDeviceInfo <code>Since:</code> 2.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-named-block-nodes&quot;} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot; : [ {&quot;ro&quot; : false,<br />
-                  &quot;drv&quot; : &quot;qcow2&quot;,<br />
-                  &quot;encrypted&quot; : false,<br />
-                  &quot;file&quot; : &quot;disks/test.qcow2&quot;,<br />
-                  &quot;node-name&quot; : &quot;my-node&quot;,<br />
-                  &quot;backing_file_depth&quot; : 1,<br />
-                  &quot;bps&quot; : 1000000,<br />
-                  &quot;bps_rd&quot; : 0,<br />
-                  &quot;bps_wr&quot; : 0,<br />
-                  &quot;iops&quot; : 1000000,<br />
-                  &quot;iops_rd&quot; : 0,<br />
-                  &quot;iops_wr&quot; : 0,<br />
-                  &quot;bps_max&quot; : 8000000,<br />
-                  &quot;bps_rd_max&quot; : 0,<br />
-                  &quot;bps_wr_max&quot; : 0,<br />
-                  &quot;iops_max&quot; : 0,<br />
-                  &quot;iops_rd_max&quot; : 0,<br />
-                  &quot;iops_wr_max&quot; : 0,<br />
-                  &quot;iops_size&quot; : 0,<br />
-                  &quot;write_threshold&quot; : 0,<br />
-                  &quot;image&quot; : {<br />
-                      &quot;filename&quot; : &quot;disks/test.qcow2&quot;,<br />
-                      &quot;format&quot; : &quot;qcow2&quot;,<br />
-                      &quot;virtual-size&quot; : 2048000,<br />
-                      &quot;backing_file&quot; : &quot;base.qcow2&quot;,<br />
-                      &quot;full-backing-filename&quot; : &quot;disks/base.qcow2&quot;,<br />
-                      &quot;backing-filename-format&quot; : &quot;qcow2&quot;,<br />
-                      &quot;snapshots&quot; : [<br />
-                          {<br />
-                              &quot;id&quot; : &quot;1&quot;,<br />
-                              &quot;name&quot; : &quot;snapshot1&quot;,<br />
-                              &quot;vm-state-size&quot; : 0,<br />
-                              &quot;date-sec&quot; : 10000200,<br />
-                              &quot;date-nsec&quot; : 12,<br />
-                              &quot;vm-clock-sec&quot; : 206,<br />
-                              &quot;vm-clock-nsec&quot; : 30<br />
-                          }<br />
-                      ],<br />
-                      &quot;backing-image&quot; : {<br />
-                          &quot;filename&quot; : &quot;disks/base.qcow2&quot;,<br />
-                          &quot;format&quot; : &quot;qcow2&quot;,<br />
-                          &quot;virtual-size&quot; : 2048000<br />
-                      }<br />
-                  }} ]<br />
+<dd>When false, this job will wait in a CONCLUDED state after it has completely ceased all work, and awaits <tt>&quot;block-job-dismiss&quot;</tt>. When true, this job will automatically disappear from the query list without user intervention. Defaults to true. (Since 3.1)</dd></dl>
+<p> <code>Returns:</code> Nothing on success If <tt>&quot;device&quot;</tt> does not exist, DeviceNotFound Any other error returns a GenericError. <code>Since:</code> 1.3 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;block-commit&quot;,<br/>
+   &quot;arguments&quot; : {&quot;device&quot; : &quot;virtio0&quot;,<br/>
+                  &quot;top&quot; : &quot;/tmp/snap1.qcow2&quot;}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
+} <code>drive-backup</code> (Command) Start a point-in-time copy of a block device to a new destination. The status of ongoing drive-backup operations can be checked with query-block-jobs where the BlockJobInfo.type field has the value &#8216;backup&#8217;. The operation can be stopped before it has completed using the block-job-cancel command. <code>Arguments:</code> the members of <tt>&quot;DriveBackup&quot;</tt> <code>Returns:</code> nothing on success If <tt>&quot;device&quot;</tt> is not a valid block device, GenericError <code>Since:</code> 1.6 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;drive-backup&quot;,<br/>
+   &quot;arguments&quot; : {&quot;device&quot; : &quot;drive0&quot;,<br/>
+                  &quot;sync&quot; : &quot;full&quot;,<br/>
+                  &quot;target&quot; : &quot;backup.img&quot;}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
+} <code>blockdev-backup</code> (Command) Start a point-in-time copy of a block device to a new destination. The status of ongoing blockdev-backup operations can be checked with query-block-jobs where the BlockJobInfo.type field has the value &#8216;backup&#8217;. The operation can be stopped before it has completed using the block-job-cancel command. <code>Arguments:</code> the members of <tt>&quot;BlockdevBackup&quot;</tt> <code>Returns:</code> nothing on success If <tt>&quot;device&quot;</tt> is not a valid block device, DeviceNotFound <code>Since:</code> 2.3 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;blockdev-backup&quot;,<br/>
+   &quot;arguments&quot; : {&quot;device&quot; : &quot;src-id&quot;,<br/>
+                  &quot;sync&quot; : &quot;full&quot;,<br/>
+                  &quot;target&quot; : &quot;tgt-id&quot;}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
+} <code>query-named-block-nodes</code> (Command) Get the named block driver list <code>Returns:</code> the list of BlockDeviceInfo <code>Since:</code> 2.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-named-block-nodes&quot;} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot; : [ {&quot;ro&quot; : false,<br/>
+                  &quot;drv&quot; : &quot;qcow2&quot;,<br/>
+                  &quot;encrypted&quot; : false,<br/>
+                  &quot;file&quot; : &quot;disks/test.qcow2&quot;,<br/>
+                  &quot;node-name&quot; : &quot;my-node&quot;,<br/>
+                  &quot;backing_file_depth&quot; : 1,<br/>
+                  &quot;bps&quot; : 1000000,<br/>
+                  &quot;bps_rd&quot; : 0,<br/>
+                  &quot;bps_wr&quot; : 0,<br/>
+                  &quot;iops&quot; : 1000000,<br/>
+                  &quot;iops_rd&quot; : 0,<br/>
+                  &quot;iops_wr&quot; : 0,<br/>
+                  &quot;bps_max&quot; : 8000000,<br/>
+                  &quot;bps_rd_max&quot; : 0,<br/>
+                  &quot;bps_wr_max&quot; : 0,<br/>
+                  &quot;iops_max&quot; : 0,<br/>
+                  &quot;iops_rd_max&quot; : 0,<br/>
+                  &quot;iops_wr_max&quot; : 0,<br/>
+                  &quot;iops_size&quot; : 0,<br/>
+                  &quot;write_threshold&quot; : 0,<br/>
+                  &quot;image&quot; : {<br/>
+                      &quot;filename&quot; : &quot;disks/test.qcow2&quot;,<br/>
+                      &quot;format&quot; : &quot;qcow2&quot;,<br/>
+                      &quot;virtual-size&quot; : 2048000,<br/>
+                      &quot;backing_file&quot; : &quot;base.qcow2&quot;,<br/>
+                      &quot;full-backing-filename&quot; : &quot;disks/base.qcow2&quot;,<br/>
+                      &quot;backing-filename-format&quot; : &quot;qcow2&quot;,<br/>
+                      &quot;snapshots&quot; : [<br/>
+                          {<br/>
+                              &quot;id&quot; : &quot;1&quot;,<br/>
+                              &quot;name&quot; : &quot;snapshot1&quot;,<br/>
+                              &quot;vm-state-size&quot; : 0,<br/>
+                              &quot;date-sec&quot; : 10000200,<br/>
+                              &quot;date-nsec&quot; : 12,<br/>
+                              &quot;vm-clock-sec&quot; : 206,<br/>
+                              &quot;vm-clock-nsec&quot; : 30<br/>
+                          }<br/>
+                      ],<br/>
+                      &quot;backing-image&quot; : {<br/>
+                          &quot;filename&quot; : &quot;disks/base.qcow2&quot;,<br/>
+                          &quot;format&quot; : &quot;qcow2&quot;,<br/>
+                          &quot;virtual-size&quot; : 2048000<br/>
+                      }<br/>
+                  }} ]<br/>
 } <code>XDbgBlockGraphNodeType</code> (Enum) <code>Values:</code></p>
 <dl>
 <dt>&quot;block-backend&quot;</dt>
@@ -1610,7 +1610,7 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <dt>&quot;write&quot;</dt>
 <dd>This permission is required to change the visible disk contents.</dd>
 <dt>&quot;write-unchanged&quot;</dt>
-<dd>This permission (which is weaker than <font SIZE="-1">BLK_PERM_WRITE</font>) is both enough and required for writes to the block node when the caller promises that the visible disk content doesn&#8217;t change. As the <font SIZE="-1">BLK_PERM_WRITE</font> permission is strictly stronger, either is sufficient to perform an unchanging write.</dd>
+<dd>This permission (which is weaker than BLK_PERM_WRITE) is both enough and required for writes to the block node when the caller promises that the visible disk content doesn&#8217;t change. As the BLK_PERM_WRITE permission is strictly stronger, either is sufficient to perform an unchanging write.</dd>
 <dt>&quot;resize&quot;</dt>
 <dd>This permission is required to change the size of a block node.</dd>
 <dt>&quot;graph-mod&quot;</dt>
@@ -1633,15 +1633,15 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <dd>Not documented</dd>
 <dt>&quot;edges: array of XDbgBlockGraphEdge&quot;</dt>
 <dd>Not documented</dd></dl>
-<p> <code>Since:</code> 4.0 <code>x-debug-query-block-graph</code> (Command) Get the block graph. <code>Since:</code> 4.0 <code>drive-mirror</code> (Command) Start mirroring a block device&#8217;s writes to a new destination. target specifies the target of the new image. If the file exists, or if it is a device, it will be used as the new destination for writes. If it does not exist, a new file will be created. format specifies the format of the mirror image, default is to probe if mode=&#8217;existing&#8217;, else the format of the source. <code>Arguments:</code> the members of <tt>&quot;DriveMirror&quot;</tt> <code>Returns:</code> nothing on success If <tt>&quot;device&quot;</tt> is not a valid block device, GenericError <code>Since:</code> 1.3 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;drive-mirror&quot;,<br />
-   &quot;arguments&quot; : {&quot;device&quot; : &quot;ide-hd0&quot;,<br />
-                  &quot;target&quot; : &quot;/some/place/my-image&quot;,<br />
-                  &quot;sync&quot; : &quot;full&quot;,<br />
-                  &quot;format&quot; : &quot;qcow2&quot;}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
+<p> <code>Since:</code> 4.0 <code>x-debug-query-block-graph</code> (Command) Get the block graph. <code>Since:</code> 4.0 <code>drive-mirror</code> (Command) Start mirroring a block device&#8217;s writes to a new destination. target specifies the target of the new image. If the file exists, or if it is a device, it will be used as the new destination for writes. If it does not exist, a new file will be created. format specifies the format of the mirror image, default is to probe if mode=&#8217;existing&#8217;, else the format of the source. <code>Arguments:</code> the members of <tt>&quot;DriveMirror&quot;</tt> <code>Returns:</code> nothing on success If <tt>&quot;device&quot;</tt> is not a valid block device, GenericError <code>Since:</code> 1.3 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;drive-mirror&quot;,<br/>
+   &quot;arguments&quot; : {&quot;device&quot; : &quot;ide-hd0&quot;,<br/>
+                  &quot;target&quot; : &quot;/some/place/my-image&quot;,<br/>
+                  &quot;sync&quot; : &quot;full&quot;,<br/>
+                  &quot;format&quot; : &quot;qcow2&quot;}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
 } <code>DriveMirror</code> (Object) A set of parameters describing drive mirror setup. <code>Members:</code></p>
 <dl>
 <dt>&quot;job-id: string&quot; (optional)</dt>
@@ -1657,7 +1657,7 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <dt>&quot;replaces: string&quot; (optional)</dt>
 <dd>with sync=full graph node name to be replaced by the new image when a whole image copy is done. This can be used to repair broken Quorum files. (Since 2.1)</dd>
 <dt>&quot;mode: NewImageMode&quot; (optional)</dt>
-<dd>whether and how <font SIZE="-1">QEMU</font> should create a new image, default is &#8216;absolute-paths&#8217;.</dd>
+<dd>whether and how QEMU should create a new image, default is &#8216;absolute-paths&#8217;.</dd>
 <dt>&quot;speed: int&quot; (optional)</dt>
 <dd>the maximum speed, in bytes per second</dd>
 <dt>&quot;sync: MirrorSyncMode&quot;</dt>
@@ -1675,9 +1675,9 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <dt>&quot;copy-mode: MirrorCopyMode&quot; (optional)</dt>
 <dd>when to copy data to the destination; defaults to &#8216;background&#8217; (Since: 3.0)</dd>
 <dt>&quot;auto-finalize: boolean&quot; (optional)</dt>
-<dd>When false, this job will wait in a <font SIZE="-1">PENDING</font> state after it has finished its work, waiting for <tt>&quot;block-job-finalize&quot;</tt> before making any block graph changes. When true, this job will automatically perform its abort or commit actions. Defaults to true. (Since 3.1)</dd>
+<dd>When false, this job will wait in a PENDING state after it has finished its work, waiting for <tt>&quot;block-job-finalize&quot;</tt> before making any block graph changes. When true, this job will automatically perform its abort or commit actions. Defaults to true. (Since 3.1)</dd>
 <dt>&quot;auto-dismiss: boolean&quot; (optional)</dt>
-<dd>When false, this job will wait in a <font SIZE="-1">CONCLUDED</font> state after it has completely ceased all work, and awaits <tt>&quot;block-job-dismiss&quot;</tt>. When true, this job will automatically disappear from the query list without user intervention. Defaults to true. (Since 3.1)</dd></dl>
+<dd>When false, this job will wait in a CONCLUDED state after it has completely ceased all work, and awaits <tt>&quot;block-job-dismiss&quot;</tt>. When true, this job will automatically disappear from the query list without user intervention. Defaults to true. (Since 3.1)</dd></dl>
 <p> <code>Since:</code> 1.3 <code>BlockDirtyBitmap</code> (Object) <code>Members:</code></p>
 <dl>
 <dt>&quot;node: string&quot;</dt>
@@ -1710,47 +1710,47 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <dd>name of the destination dirty bitmap</dd>
 <dt>&quot;bitmaps: array of BlockDirtyBitmapMergeSource&quot;</dt>
 <dd>name(s) of the source dirty bitmap(s) at <tt>&quot;node&quot;</tt> and/or fully specifed BlockDirtyBitmap elements. The latter are supported since 4.1.</dd></dl>
-<p> <code>Since:</code> 4.0 <code>block-dirty-bitmap-add</code> (Command) Create a dirty bitmap with a name on the node, and start tracking the writes. <code>Returns:</code> nothing on success If <tt>&quot;node&quot;</tt> is not a valid block device or node, DeviceNotFound If <tt>&quot;name&quot;</tt> is already taken, GenericError with an explanation <code>Since:</code> 2.4 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;block-dirty-bitmap-add&quot;,<br />
-   &quot;arguments&quot; : {&quot;node&quot; : &quot;drive0&quot;, &quot;name&quot; : &quot;bitmap0&quot;}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
-} <code>block-dirty-bitmap-remove</code> (Command) Stop write tracking and remove the dirty bitmap that was created with block-dirty-bitmap-add. If the bitmap is persistent, remove it from its storage too. <code>Returns:</code> nothing on success If <tt>&quot;node&quot;</tt> is not a valid block device or node, DeviceNotFound If <tt>&quot;name&quot;</tt> is not found, GenericError with an explanation if <tt>&quot;name&quot;</tt> is frozen by an operation, GenericError <code>Since:</code> 2.4 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;block-dirty-bitmap-remove&quot;,<br />
-   &quot;arguments&quot; : {&quot;node&quot; : &quot;drive0&quot;, &quot;name&quot; : &quot;bitmap0&quot;}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
-} <code>block-dirty-bitmap-clear</code> (Command) Clear (reset) a dirty bitmap on the device, so that an incremental backup from this point in time forward will only backup clusters modified after this clear operation. <code>Returns:</code> nothing on success If <tt>&quot;node&quot;</tt> is not a valid block device, DeviceNotFound If <tt>&quot;name&quot;</tt> is not found, GenericError with an explanation <code>Since:</code> 2.4 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;block-dirty-bitmap-clear&quot;,<br />
-   &quot;arguments&quot; : {&quot;node&quot; : &quot;drive0&quot;, &quot;name&quot; : &quot;bitmap0&quot;}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
-} <code>block-dirty-bitmap-enable</code> (Command) Enables a dirty bitmap so that it will begin tracking disk changes. <code>Returns:</code> nothing on success If <tt>&quot;node&quot;</tt> is not a valid block device, DeviceNotFound If <tt>&quot;name&quot;</tt> is not found, GenericError with an explanation <code>Since:</code> 4.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;block-dirty-bitmap-enable&quot;,<br />
-   &quot;arguments&quot; : {&quot;node&quot; : &quot;drive0&quot;, &quot;name&quot; : &quot;bitmap0&quot;}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
-} <code>block-dirty-bitmap-disable</code> (Command) Disables a dirty bitmap so that it will stop tracking disk changes. <code>Returns:</code> nothing on success If <tt>&quot;node&quot;</tt> is not a valid block device, DeviceNotFound If <tt>&quot;name&quot;</tt> is not found, GenericError with an explanation <code>Since:</code> 4.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;block-dirty-bitmap-disable&quot;,<br />
-   &quot;arguments&quot; : {&quot;node&quot; : &quot;drive0&quot;, &quot;name&quot; : &quot;bitmap0&quot;}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
-} <code>block-dirty-bitmap-merge</code> (Command) Merge dirty bitmaps listed in <tt>&quot;bitmaps&quot;</tt> to the <tt>&quot;target&quot;</tt> dirty bitmap. Dirty bitmaps in <tt>&quot;bitmaps&quot;</tt> will be unchanged, except if it also appears as the <tt>&quot;target&quot;</tt> bitmap. Any bits already set in <tt>&quot;target&quot;</tt> will still be set after the merge, i.e., this operation does not clear the target. On error, <tt>&quot;target&quot;</tt> is unchanged. The resulting bitmap will count as dirty any clusters that were dirty in any of the source bitmaps. This can be used to achieve backup checkpoints, or in simpler usages, to copy bitmaps. <code>Returns:</code> nothing on success If <tt>&quot;node&quot;</tt> is not a valid block device, DeviceNotFound If any bitmap in <tt>&quot;bitmaps&quot;</tt> or <tt>&quot;target&quot;</tt> is not found, GenericError If any of the bitmaps have different sizes or granularities, GenericError <code>Since:</code> 4.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;block-dirty-bitmap-merge&quot;,<br />
-   &quot;arguments&quot; : {&quot;node&quot; : &quot;drive0&quot;, &quot;target&quot; : &quot;bitmap0&quot;, &quot;bitmaps&quot; : [&quot;bitmap1&quot;]}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
-} <code>BlockDirtyBitmapSha256</code> (Object) <font SIZE="-1">SHA256</font> hash of dirty bitmap data <code>Members:</code></p>
+<p> <code>Since:</code> 4.0 <code>block-dirty-bitmap-add</code> (Command) Create a dirty bitmap with a name on the node, and start tracking the writes. <code>Returns:</code> nothing on success If <tt>&quot;node&quot;</tt> is not a valid block device or node, DeviceNotFound If <tt>&quot;name&quot;</tt> is already taken, GenericError with an explanation <code>Since:</code> 2.4 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;block-dirty-bitmap-add&quot;,<br/>
+   &quot;arguments&quot; : {&quot;node&quot; : &quot;drive0&quot;, &quot;name&quot; : &quot;bitmap0&quot;}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
+} <code>block-dirty-bitmap-remove</code> (Command) Stop write tracking and remove the dirty bitmap that was created with block-dirty-bitmap-add. If the bitmap is persistent, remove it from its storage too. <code>Returns:</code> nothing on success If <tt>&quot;node&quot;</tt> is not a valid block device or node, DeviceNotFound If <tt>&quot;name&quot;</tt> is not found, GenericError with an explanation if <tt>&quot;name&quot;</tt> is frozen by an operation, GenericError <code>Since:</code> 2.4 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;block-dirty-bitmap-remove&quot;,<br/>
+   &quot;arguments&quot; : {&quot;node&quot; : &quot;drive0&quot;, &quot;name&quot; : &quot;bitmap0&quot;}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
+} <code>block-dirty-bitmap-clear</code> (Command) Clear (reset) a dirty bitmap on the device, so that an incremental backup from this point in time forward will only backup clusters modified after this clear operation. <code>Returns:</code> nothing on success If <tt>&quot;node&quot;</tt> is not a valid block device, DeviceNotFound If <tt>&quot;name&quot;</tt> is not found, GenericError with an explanation <code>Since:</code> 2.4 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;block-dirty-bitmap-clear&quot;,<br/>
+   &quot;arguments&quot; : {&quot;node&quot; : &quot;drive0&quot;, &quot;name&quot; : &quot;bitmap0&quot;}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
+} <code>block-dirty-bitmap-enable</code> (Command) Enables a dirty bitmap so that it will begin tracking disk changes. <code>Returns:</code> nothing on success If <tt>&quot;node&quot;</tt> is not a valid block device, DeviceNotFound If <tt>&quot;name&quot;</tt> is not found, GenericError with an explanation <code>Since:</code> 4.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;block-dirty-bitmap-enable&quot;,<br/>
+   &quot;arguments&quot; : {&quot;node&quot; : &quot;drive0&quot;, &quot;name&quot; : &quot;bitmap0&quot;}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
+} <code>block-dirty-bitmap-disable</code> (Command) Disables a dirty bitmap so that it will stop tracking disk changes. <code>Returns:</code> nothing on success If <tt>&quot;node&quot;</tt> is not a valid block device, DeviceNotFound If <tt>&quot;name&quot;</tt> is not found, GenericError with an explanation <code>Since:</code> 4.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;block-dirty-bitmap-disable&quot;,<br/>
+   &quot;arguments&quot; : {&quot;node&quot; : &quot;drive0&quot;, &quot;name&quot; : &quot;bitmap0&quot;}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
+} <code>block-dirty-bitmap-merge</code> (Command) Merge dirty bitmaps listed in <tt>&quot;bitmaps&quot;</tt> to the <tt>&quot;target&quot;</tt> dirty bitmap. Dirty bitmaps in <tt>&quot;bitmaps&quot;</tt> will be unchanged, except if it also appears as the <tt>&quot;target&quot;</tt> bitmap. Any bits already set in <tt>&quot;target&quot;</tt> will still be set after the merge, i.e., this operation does not clear the target. On error, <tt>&quot;target&quot;</tt> is unchanged. The resulting bitmap will count as dirty any clusters that were dirty in any of the source bitmaps. This can be used to achieve backup checkpoints, or in simpler usages, to copy bitmaps. <code>Returns:</code> nothing on success If <tt>&quot;node&quot;</tt> is not a valid block device, DeviceNotFound If any bitmap in <tt>&quot;bitmaps&quot;</tt> or <tt>&quot;target&quot;</tt> is not found, GenericError If any of the bitmaps have different sizes or granularities, GenericError <code>Since:</code> 4.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;block-dirty-bitmap-merge&quot;,<br/>
+   &quot;arguments&quot; : {&quot;node&quot; : &quot;drive0&quot;, &quot;target&quot; : &quot;bitmap0&quot;, &quot;bitmaps&quot; : [&quot;bitmap1&quot;]}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
+} <code>BlockDirtyBitmapSha256</code> (Object) SHA256 hash of dirty bitmap data <code>Members:</code></p>
 <dl>
 <dt>&quot;sha256: string&quot;</dt>
-<dd><font SIZE="-1">ASCII</font> representation of <font SIZE="-1">SHA256</font> bitmap hash</dd></dl>
-<p> <code>Since:</code> 2.10 <code>x-debug-block-dirty-bitmap-sha256</code> (Command) Get bitmap <font SIZE="-1">SHA256.</font> <code>Returns:</code> BlockDirtyBitmapSha256 on success If <tt>&quot;node&quot;</tt> is not a valid block device, DeviceNotFound If <tt>&quot;name&quot;</tt> is not found or if hashing has failed, GenericError with an explanation <code>Since:</code> 2.10 <code>blockdev-mirror</code> (Command) Start mirroring a block device&#8217;s writes to a new destination. <code>Arguments:</code></p>
+<dd>ASCII representation of SHA256 bitmap hash</dd></dl>
+<p> <code>Since:</code> 2.10 <code>x-debug-block-dirty-bitmap-sha256</code> (Command) Get bitmap SHA256. <code>Returns:</code> BlockDirtyBitmapSha256 on success If <tt>&quot;node&quot;</tt> is not a valid block device, DeviceNotFound If <tt>&quot;name&quot;</tt> is not found or if hashing has failed, GenericError with an explanation <code>Since:</code> 2.10 <code>blockdev-mirror</code> (Command) Start mirroring a block device&#8217;s writes to a new destination. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;job-id: string&quot; (optional)</dt>
 <dd>identifier for the newly-created block job. If omitted, the device name will be used. (Since 2.7)</dd>
@@ -1777,64 +1777,64 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <dt>&quot;copy-mode: MirrorCopyMode&quot; (optional)</dt>
 <dd>when to copy data to the destination; defaults to &#8216;background&#8217; (Since: 3.0)</dd>
 <dt>&quot;auto-finalize: boolean&quot; (optional)</dt>
-<dd>When false, this job will wait in a <font SIZE="-1">PENDING</font> state after it has finished its work, waiting for <tt>&quot;block-job-finalize&quot;</tt> before making any block graph changes. When true, this job will automatically perform its abort or commit actions. Defaults to true. (Since 3.1)</dd>
+<dd>When false, this job will wait in a PENDING state after it has finished its work, waiting for <tt>&quot;block-job-finalize&quot;</tt> before making any block graph changes. When true, this job will automatically perform its abort or commit actions. Defaults to true. (Since 3.1)</dd>
 <dt>&quot;auto-dismiss: boolean&quot; (optional)</dt>
-<dd>When false, this job will wait in a <font SIZE="-1">CONCLUDED</font> state after it has completely ceased all work, and awaits <tt>&quot;block-job-dismiss&quot;</tt>. When true, this job will automatically disappear from the query list without user intervention. Defaults to true. (Since 3.1)</dd></dl>
-<p> <code>Returns:</code> nothing on success. <code>Since:</code> 2.6 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;blockdev-mirror&quot;,<br />
-   &quot;arguments&quot; : {&quot;device&quot; : &quot;ide-hd0&quot;,<br />
-                  &quot;target&quot; : &quot;target0&quot;,<br />
-                  &quot;sync&quot; : &quot;full&quot;}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
-} <code>block_set_io_throttle</code> (Command) Change I/O throttle limits for a block drive. Since <font SIZE="-1">QEMU 2.4,</font> each device with I/O limits is member of a throttle group. If two or more devices are members of the same group, the limits will apply to the combined I/O of the whole group in a round-robin fashion. Therefore, setting new I/O limits to a device will affect the whole group. The name of the group can be specified using the &#8216;group&#8217; parameter. If the parameter is unset, it is assumed to be the current group of that device. If it&#8217;s not in any group yet, the name of the device will be used as the name for its group. The &#8216;group&#8217; parameter can also be used to move a device to a different group. In this case the limits specified in the parameters will be applied to the new group only. I/O limits can be disabled by setting all of them to 0. In this case the device will be removed from its group and the rest of its members will not be affected. The &#8216;group&#8217; parameter is ignored. <code>Arguments:</code> the members of <tt>&quot;BlockIOThrottle&quot;</tt> <code>Returns:</code> Nothing on success If <tt>&quot;device&quot;</tt> is not a valid block device, DeviceNotFound <code>Since:</code> 1.1 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;block_set_io_throttle&quot;,<br />
-   &quot;arguments&quot; : {&quot;id&quot; : &quot;virtio-blk-pci0/virtio-backend&quot;,<br />
-                  &quot;bps&quot; : 0,<br />
-                  &quot;bps_rd&quot; : 0,<br />
-                  &quot;bps_wr&quot; : 0,<br />
-                  &quot;iops&quot; : 512,<br />
-                  &quot;iops_rd&quot; : 0,<br />
-                  &quot;iops_wr&quot; : 0,<br />
-                  &quot;bps_max&quot; : 0,<br />
-                  &quot;bps_rd_max&quot; : 0,<br />
-                  &quot;bps_wr_max&quot; : 0,<br />
-                  &quot;iops_max&quot; : 0,<br />
-                  &quot;iops_rd_max&quot; : 0,<br />
-                  &quot;iops_wr_max&quot; : 0,<br />
-                  &quot;bps_max_length&quot; : 0,<br />
-                  &quot;iops_size&quot; : 0}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
+<dd>When false, this job will wait in a CONCLUDED state after it has completely ceased all work, and awaits <tt>&quot;block-job-dismiss&quot;</tt>. When true, this job will automatically disappear from the query list without user intervention. Defaults to true. (Since 3.1)</dd></dl>
+<p> <code>Returns:</code> nothing on success. <code>Since:</code> 2.6 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;blockdev-mirror&quot;,<br/>
+   &quot;arguments&quot; : {&quot;device&quot; : &quot;ide-hd0&quot;,<br/>
+                  &quot;target&quot; : &quot;target0&quot;,<br/>
+                  &quot;sync&quot; : &quot;full&quot;}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
+} <code>block_set_io_throttle</code> (Command) Change I/O throttle limits for a block drive. Since QEMU 2.4, each device with I/O limits is member of a throttle group. If two or more devices are members of the same group, the limits will apply to the combined I/O of the whole group in a round-robin fashion. Therefore, setting new I/O limits to a device will affect the whole group. The name of the group can be specified using the &#8216;group&#8217; parameter. If the parameter is unset, it is assumed to be the current group of that device. If it&#8217;s not in any group yet, the name of the device will be used as the name for its group. The &#8216;group&#8217; parameter can also be used to move a device to a different group. In this case the limits specified in the parameters will be applied to the new group only. I/O limits can be disabled by setting all of them to 0. In this case the device will be removed from its group and the rest of its members will not be affected. The &#8216;group&#8217; parameter is ignored. <code>Arguments:</code> the members of <tt>&quot;BlockIOThrottle&quot;</tt> <code>Returns:</code> Nothing on success If <tt>&quot;device&quot;</tt> is not a valid block device, DeviceNotFound <code>Since:</code> 1.1 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;block_set_io_throttle&quot;,<br/>
+   &quot;arguments&quot; : {&quot;id&quot; : &quot;virtio-blk-pci0/virtio-backend&quot;,<br/>
+                  &quot;bps&quot; : 0,<br/>
+                  &quot;bps_rd&quot; : 0,<br/>
+                  &quot;bps_wr&quot; : 0,<br/>
+                  &quot;iops&quot; : 512,<br/>
+                  &quot;iops_rd&quot; : 0,<br/>
+                  &quot;iops_wr&quot; : 0,<br/>
+                  &quot;bps_max&quot; : 0,<br/>
+                  &quot;bps_rd_max&quot; : 0,<br/>
+                  &quot;bps_wr_max&quot; : 0,<br/>
+                  &quot;iops_max&quot; : 0,<br/>
+                  &quot;iops_rd_max&quot; : 0,<br/>
+                  &quot;iops_wr_max&quot; : 0,<br/>
+                  &quot;bps_max_length&quot; : 0,<br/>
+                  &quot;iops_size&quot; : 0}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
     }</p>
-<p>        -&gt; {&quot;execute&quot; : &quot;block_set_io_throttle&quot;,<br />
-            &quot;arguments&quot; : {&quot;id&quot; : &quot;ide0-1-0&quot;,<br />
-                           &quot;bps&quot; : 1000000,<br />
-                           &quot;bps_rd&quot; : 0,<br />
-                           &quot;bps_wr&quot; : 0,<br />
-                           &quot;iops&quot; : 0,<br />
-                           &quot;iops_rd&quot; : 0,<br />
-                           &quot;iops_wr&quot; : 0,<br />
-                           &quot;bps_max&quot; : 8000000,<br />
-                           &quot;bps_rd_max&quot; : 0,<br />
-                           &quot;bps_wr_max&quot; : 0,<br />
-                           &quot;iops_max&quot; : 0,<br />
-                           &quot;iops_rd_max&quot; : 0,<br />
-                           &quot;iops_wr_max&quot; : 0,<br />
-                           &quot;bps_max_length&quot; : 60,<br />
-                           &quot;iops_size&quot; : 0}} &lt; &#8211;<br />
-    {<br />
-        &quot;return&quot;:<br />
-        {<br />
-        }<br />
+<p>        -&gt; {&quot;execute&quot; : &quot;block_set_io_throttle&quot;,<br/>
+            &quot;arguments&quot; : {&quot;id&quot; : &quot;ide0-1-0&quot;,<br/>
+                           &quot;bps&quot; : 1000000,<br/>
+                           &quot;bps_rd&quot; : 0,<br/>
+                           &quot;bps_wr&quot; : 0,<br/>
+                           &quot;iops&quot; : 0,<br/>
+                           &quot;iops_rd&quot; : 0,<br/>
+                           &quot;iops_wr&quot; : 0,<br/>
+                           &quot;bps_max&quot; : 8000000,<br/>
+                           &quot;bps_rd_max&quot; : 0,<br/>
+                           &quot;bps_wr_max&quot; : 0,<br/>
+                           &quot;iops_max&quot; : 0,<br/>
+                           &quot;iops_rd_max&quot; : 0,<br/>
+                           &quot;iops_wr_max&quot; : 0,<br/>
+                           &quot;bps_max_length&quot; : 60,<br/>
+                           &quot;iops_size&quot; : 0}} &lt; &#8211;<br/>
+    {<br/>
+        &quot;return&quot;:<br/>
+        {<br/>
+        }<br/>
     } <code>BlockIOThrottle</code> (Object) A set of parameters describing block throttling. <code>Members:</code></p>
 <dl>
 <dt>&quot;device: string&quot; (optional)</dt>
 <dd>Block device name (deprecated, use <tt>&quot;id&quot;</tt> instead)</dd>
 <dt>&quot;id: string&quot; (optional)</dt>
-<dd>The name or <font SIZE="-1">QOM</font> path of the guest device (since: 2.8)</dd>
+<dd>The name or QOM path of the guest device (since: 2.8)</dd>
 <dt>&quot;bps: int&quot;</dt>
 <dd>total throughput limit in bytes per second</dd>
 <dt>&quot;bps_rd: int&quot;</dt>
@@ -1915,7 +1915,7 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <dd>length of the bps-write-max burst period, in seconds It must only be set if <tt>&quot;bps-write-max&quot;</tt> is set as well.</dd>
 <dt>&quot;iops-size: int&quot; (optional)</dt>
 <dd>when limiting by iops max size of an I/O in bytes</dd></dl>
-<p> <code>Since:</code> 2.11 <code>block-stream</code> (Command) Copy data from a backing file into a block device. The block streaming operation is performed in the background until the entire backing file has been copied. This command returns immediately once streaming has started. The status of ongoing block streaming operations can be checked with query-block-jobs. The operation can be stopped before it has completed using the block-job-cancel command. The node that receives the data is called the top image, can be located in any part of the chain (but always above the base image; see below) and can be specified using its device or node name. Earlier qemu versions only allowed &#8216;device&#8217; to name the top level node; presence of the &#8216;base-node&#8217; parameter during introspection can be used as a witness of the enhanced semantics of &#8216;device&#8217;. If a base file is specified then sectors are not copied from that base file and its backing chain. When streaming completes the image file will have the base file as its backing file. This can be used to stream a subset of the backing file chain instead of flattening the entire image. On successful completion the image file is updated to drop the backing file and the <font SIZE="-1">BLOCK_JOB_COMPLETED</font> event is emitted. <code>Arguments:</code></p>
+<p> <code>Since:</code> 2.11 <code>block-stream</code> (Command) Copy data from a backing file into a block device. The block streaming operation is performed in the background until the entire backing file has been copied. This command returns immediately once streaming has started. The status of ongoing block streaming operations can be checked with query-block-jobs. The operation can be stopped before it has completed using the block-job-cancel command. The node that receives the data is called the top image, can be located in any part of the chain (but always above the base image; see below) and can be specified using its device or node name. Earlier qemu versions only allowed &#8216;device&#8217; to name the top level node; presence of the &#8216;base-node&#8217; parameter during introspection can be used as a witness of the enhanced semantics of &#8216;device&#8217;. If a base file is specified then sectors are not copied from that base file and its backing chain. When streaming completes the image file will have the base file as its backing file. This can be used to stream a subset of the backing file chain instead of flattening the entire image. On successful completion the image file is updated to drop the backing file and the BLOCK_JOB_COMPLETED event is emitted. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;job-id: string&quot; (optional)</dt>
 <dd>identifier for the newly-created block job. If omitted, the device name will be used. (Since 2.7)</dd>
@@ -1926,51 +1926,51 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <dt>&quot;base-node: string&quot; (optional)</dt>
 <dd>the node name of the backing file. It cannot be set if <tt>&quot;base&quot;</tt> is also set. (Since 2.8)</dd>
 <dt>&quot;backing-file: string&quot; (optional)</dt>
-<dd>The backing file string to write into the top image. This filename is not validated. If a pathname string is such that it cannot be resolved by <font SIZE="-1">QEMU,</font> that means that subsequent <font SIZE="-1">QMP</font> or <font SIZE="-1">HMP</font> commands must use node-names for the image in question, as filename lookup methods will fail. If not specified, <font SIZE="-1">QEMU</font> will automatically determine the backing file string to use, or error out if there is no obvious choice. Care should be taken when specifying the string, to specify a valid filename or protocol. (Since 2.1)</dd>
+<dd>The backing file string to write into the top image. This filename is not validated. If a pathname string is such that it cannot be resolved by QEMU, that means that subsequent QMP or HMP commands must use node-names for the image in question, as filename lookup methods will fail. If not specified, QEMU will automatically determine the backing file string to use, or error out if there is no obvious choice. Care should be taken when specifying the string, to specify a valid filename or protocol. (Since 2.1)</dd>
 <dt>&quot;speed: int&quot; (optional)</dt>
 <dd>the maximum speed, in bytes per second</dd>
 <dt>&quot;on-error: BlockdevOnError&quot; (optional)</dt>
 <dd>the action to take on an error (default report). &#8216;stop&#8217; and &#8216;enospc&#8217; can only be used if the block device supports io-status (see BlockInfo). Since 1.3.</dd>
 <dt>&quot;auto-finalize: boolean&quot; (optional)</dt>
-<dd>When false, this job will wait in a <font SIZE="-1">PENDING</font> state after it has finished its work, waiting for <tt>&quot;block-job-finalize&quot;</tt> before making any block graph changes. When true, this job will automatically perform its abort or commit actions. Defaults to true. (Since 3.1)</dd>
+<dd>When false, this job will wait in a PENDING state after it has finished its work, waiting for <tt>&quot;block-job-finalize&quot;</tt> before making any block graph changes. When true, this job will automatically perform its abort or commit actions. Defaults to true. (Since 3.1)</dd>
 <dt>&quot;auto-dismiss: boolean&quot; (optional)</dt>
-<dd>When false, this job will wait in a <font SIZE="-1">CONCLUDED</font> state after it has completely ceased all work, and awaits <tt>&quot;block-job-dismiss&quot;</tt>. When true, this job will automatically disappear from the query list without user intervention. Defaults to true. (Since 3.1)</dd></dl>
-<p> <code>Returns:</code> Nothing on success. If <tt>&quot;device&quot;</tt> does not exist, DeviceNotFound. <code>Since:</code> 1.1 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;block-stream&quot;,<br />
-   &quot;arguments&quot; : {&quot;device&quot; : &quot;virtio0&quot;,<br />
-                  &quot;base&quot; : &quot;/tmp/master.qcow2&quot;}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
+<dd>When false, this job will wait in a CONCLUDED state after it has completely ceased all work, and awaits <tt>&quot;block-job-dismiss&quot;</tt>. When true, this job will automatically disappear from the query list without user intervention. Defaults to true. (Since 3.1)</dd></dl>
+<p> <code>Returns:</code> Nothing on success. If <tt>&quot;device&quot;</tt> does not exist, DeviceNotFound. <code>Since:</code> 1.1 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;block-stream&quot;,<br/>
+   &quot;arguments&quot; : {&quot;device&quot; : &quot;virtio0&quot;,<br/>
+                  &quot;base&quot; : &quot;/tmp/master.qcow2&quot;}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
 } <code>block-job-set-speed</code> (Command) Set maximum speed for a background block operation. This command can only be issued when there is an active block job. Throttling can be disabled by setting the speed to 0. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;device: string&quot;</dt>
-<dd>The job identifier. This used to be a device name (hence the name of the parameter), but since <font SIZE="-1">QEMU 2.7</font> it can have other values.</dd>
+<dd>The job identifier. This used to be a device name (hence the name of the parameter), but since QEMU 2.7 it can have other values.</dd>
 <dt>&quot;speed: int&quot;</dt>
 <dd>the maximum speed, in bytes per second, or 0 for unlimited. Defaults to 0.</dd></dl>
-<p> <code>Returns:</code> Nothing on success If no background operation is active on this device, DeviceNotActive <code>Since:</code> 1.1 <code>block-job-cancel</code> (Command) Stop an active background block operation. This command returns immediately after marking the active background block operation for cancellation. It is an error to call this command if no operation is in progress. The operation will cancel as soon as possible and then emit the <font SIZE="-1">BLOCK_JOB_CANCELLED</font> event. Before that happens the job is still visible when enumerated using query-block-jobs. Note that if you issue &#8216;block-job-cancel&#8217; after &#8216;drive-mirror&#8217; has indicated (via the event <font SIZE="-1">BLOCK_JOB_READY</font>) that the source and destination are synchronized, then the event triggered by this command changes to <font SIZE="-1">BLOCK_JOB_COMPLETED,</font> to indicate that the mirroring has ended and the destination now has a point-in-time copy tied to the time of the cancellation. For streaming, the image file retains its backing file unless the streaming operation happens to complete just as it is being cancelled. A new streaming operation can be started at a later time to finish copying all data from the backing file. <code>Arguments:</code></p>
+<p> <code>Returns:</code> Nothing on success If no background operation is active on this device, DeviceNotActive <code>Since:</code> 1.1 <code>block-job-cancel</code> (Command) Stop an active background block operation. This command returns immediately after marking the active background block operation for cancellation. It is an error to call this command if no operation is in progress. The operation will cancel as soon as possible and then emit the BLOCK_JOB_CANCELLED event. Before that happens the job is still visible when enumerated using query-block-jobs. Note that if you issue &#8216;block-job-cancel&#8217; after &#8216;drive-mirror&#8217; has indicated (via the event BLOCK_JOB_READY) that the source and destination are synchronized, then the event triggered by this command changes to BLOCK_JOB_COMPLETED, to indicate that the mirroring has ended and the destination now has a point-in-time copy tied to the time of the cancellation. For streaming, the image file retains its backing file unless the streaming operation happens to complete just as it is being cancelled. A new streaming operation can be started at a later time to finish copying all data from the backing file. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;device: string&quot;</dt>
-<dd>The job identifier. This used to be a device name (hence the name of the parameter), but since <font SIZE="-1">QEMU 2.7</font> it can have other values.</dd>
+<dd>The job identifier. This used to be a device name (hence the name of the parameter), but since QEMU 2.7 it can have other values.</dd>
 <dt>&quot;force: boolean&quot; (optional)</dt>
-<dd>If true, and the job has already emitted the event <font SIZE="-1">BLOCK_JOB_READY,</font> abandon the job immediately (even if it is paused) instead of waiting for the destination to complete its final synchronization (since 1.3)</dd></dl>
+<dd>If true, and the job has already emitted the event BLOCK_JOB_READY, abandon the job immediately (even if it is paused) instead of waiting for the destination to complete its final synchronization (since 1.3)</dd></dl>
 <p> <code>Returns:</code> Nothing on success If no background operation is active on this device, DeviceNotActive <code>Since:</code> 1.1 <code>block-job-pause</code> (Command) Pause an active background block operation. This command returns immediately after marking the active background block operation for pausing. It is an error to call this command if no operation is in progress or if the job is already paused. The operation will pause as soon as possible. No event is emitted when the operation is actually paused. Cancelling a paused job automatically resumes it. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;device: string&quot;</dt>
-<dd>The job identifier. This used to be a device name (hence the name of the parameter), but since <font SIZE="-1">QEMU 2.7</font> it can have other values.</dd></dl>
+<dd>The job identifier. This used to be a device name (hence the name of the parameter), but since QEMU 2.7 it can have other values.</dd></dl>
 <p> <code>Returns:</code> Nothing on success If no background operation is active on this device, DeviceNotActive <code>Since:</code> 1.3 <code>block-job-resume</code> (Command) Resume an active background block operation. This command returns immediately after resuming a paused background block operation. It is an error to call this command if no operation is in progress or if the job is not paused. This command also clears the error status of the job. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;device: string&quot;</dt>
-<dd>The job identifier. This used to be a device name (hence the name of the parameter), but since <font SIZE="-1">QEMU 2.7</font> it can have other values.</dd></dl>
-<p> <code>Returns:</code> Nothing on success If no background operation is active on this device, DeviceNotActive <code>Since:</code> 1.3 <code>block-job-complete</code> (Command) Manually trigger completion of an active background block operation. This is supported for drive mirroring, where it also switches the device to write to the target path only. The ability to complete is signaled with a <font SIZE="-1">BLOCK_JOB_READY</font> event. This command completes an active background block operation synchronously. The ordering of this command&#8217;s return with the <font SIZE="-1">BLOCK_JOB_COMPLETED</font> event is not defined. Note that if an I/O error occurs during the processing of this command: 1) the command itself will fail; 2) the error will be processed according to the rerror/werror arguments that were specified when starting the operation. A cancelled or paused job cannot be completed. <code>Arguments:</code></p>
+<dd>The job identifier. This used to be a device name (hence the name of the parameter), but since QEMU 2.7 it can have other values.</dd></dl>
+<p> <code>Returns:</code> Nothing on success If no background operation is active on this device, DeviceNotActive <code>Since:</code> 1.3 <code>block-job-complete</code> (Command) Manually trigger completion of an active background block operation. This is supported for drive mirroring, where it also switches the device to write to the target path only. The ability to complete is signaled with a BLOCK_JOB_READY event. This command completes an active background block operation synchronously. The ordering of this command&#8217;s return with the BLOCK_JOB_COMPLETED event is not defined. Note that if an I/O error occurs during the processing of this command: 1) the command itself will fail; 2) the error will be processed according to the rerror/werror arguments that were specified when starting the operation. A cancelled or paused job cannot be completed. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;device: string&quot;</dt>
-<dd>The job identifier. This used to be a device name (hence the name of the parameter), but since <font SIZE="-1">QEMU 2.7</font> it can have other values.</dd></dl>
-<p> <code>Returns:</code> Nothing on success If no background operation is active on this device, DeviceNotActive <code>Since:</code> 1.3 <code>block-job-dismiss</code> (Command) For jobs that have already concluded, remove them from the block-job-query list. This command only needs to be run for jobs which were started with <font SIZE="-1">QEMU 2.12+</font> job lifetime management semantics. This command will refuse to operate on any job that has not yet reached its terminal state, <font SIZE="-1">JOB_STATUS_CONCLUDED.</font> For jobs that make use of the <font SIZE="-1">BLOCK_JOB_READY</font> event, block-job-cancel or block-job-complete will still need to be used as appropriate. <code>Arguments:</code></p>
+<dd>The job identifier. This used to be a device name (hence the name of the parameter), but since QEMU 2.7 it can have other values.</dd></dl>
+<p> <code>Returns:</code> Nothing on success If no background operation is active on this device, DeviceNotActive <code>Since:</code> 1.3 <code>block-job-dismiss</code> (Command) For jobs that have already concluded, remove them from the block-job-query list. This command only needs to be run for jobs which were started with QEMU 2.12+ job lifetime management semantics. This command will refuse to operate on any job that has not yet reached its terminal state, JOB_STATUS_CONCLUDED. For jobs that make use of the BLOCK_JOB_READY event, block-job-cancel or block-job-complete will still need to be used as appropriate. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;id: string&quot;</dt>
 <dd>The job identifier.</dd></dl>
-<p> <code>Returns:</code> Nothing on success <code>Since:</code> 2.12 <code>block-job-finalize</code> (Command) Once a job that has manual=true reaches the pending state, it can be instructed to finalize any graph changes and do any necessary cleanup via this command. For jobs in a transaction, instructing one job to finalize will force <font SIZE="-1">ALL</font> jobs in the transaction to finalize, so it is only necessary to instruct a single member job to finalize. <code>Arguments:</code></p>
+<p> <code>Returns:</code> Nothing on success <code>Since:</code> 2.12 <code>block-job-finalize</code> (Command) Once a job that has manual=true reaches the pending state, it can be instructed to finalize any graph changes and do any necessary cleanup via this command. For jobs in a transaction, instructing one job to finalize will force ALL jobs in the transaction to finalize, so it is only necessary to instruct a single member job to finalize. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;id: string&quot;</dt>
 <dd>The job identifier.</dd></dl>
@@ -1980,7 +1980,7 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <dd>Ignore the request</dd>
 <dt>&quot;unmap&quot;</dt>
 <dd>Forward as an unmap request</dd></dl>
-<p> <code>Since:</code> 2.9 <code>BlockdevDetectZeroesOptions</code> (Enum) Describes the operation mode for the automatic conversion of plain zero writes by the <font SIZE="-1">OS</font> to driver specific optimized zero write commands. <code>Values:</code></p>
+<p> <code>Since:</code> 2.9 <code>BlockdevDetectZeroesOptions</code> (Enum) Describes the operation mode for the automatic conversion of plain zero writes by the OS to driver specific optimized zero write commands. <code>Values:</code></p>
 <dl>
 <dt>&quot;off&quot;</dt>
 <dd>Disabled (default)</dd>
@@ -1988,12 +1988,12 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <dd>Enabled</dd>
 <dt>&quot;unmap&quot;</dt>
 <dd>Enabled and even try to unmap blocks if possible. This requires also that <tt>&quot;BlockdevDiscardOptions&quot;</tt> is set to unmap for this device.</dd></dl>
-<p> <code>Since:</code> 2.1 <code>BlockdevAioOptions</code> (Enum) Selects the <font SIZE="-1">AIO</font> backend to handle I/O requests <code>Values:</code></p>
+<p> <code>Since:</code> 2.1 <code>BlockdevAioOptions</code> (Enum) Selects the AIO backend to handle I/O requests <code>Values:</code></p>
 <dl>
 <dt>&quot;threads&quot;</dt>
 <dd>Use qemu&#8217;s thread pool</dd>
 <dt>&quot;native&quot;</dt>
-<dd>Use native <font SIZE="-1">AIO</font> backend (only Linux and Windows)</dd></dl>
+<dd>Use native AIO backend (only Linux and Windows)</dd></dl>
 <p> <code>Since:</code> 2.9 <code>BlockdevCacheOptions</code> (Object) Includes cache-related options for block devices <code>Members:</code></p>
 <dl>
 <dt>&quot;direct: boolean&quot; (optional)</dt>
@@ -2087,11 +2087,11 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <dt>&quot;filename: string&quot;</dt>
 <dd>path to the image file</dd>
 <dt>&quot;pr-manager: string&quot; (optional)</dt>
-<dd>the id for the object that will handle persistent reservations for this device (default: none, forward the commands via <font SIZE="-1">SG_IO</font>; since 2.11)</dd>
+<dd>the id for the object that will handle persistent reservations for this device (default: none, forward the commands via SG_IO; since 2.11)</dd>
 <dt>&quot;aio: BlockdevAioOptions&quot; (optional)</dt>
-<dd><font SIZE="-1">AIO</font> backend (default: threads) (since: 2.8)</dd>
+<dd>AIO backend (default: threads) (since: 2.8)</dd>
 <dt>&quot;locking: OnOffAuto&quot; (optional)</dt>
-<dd>whether to enable file locking. If set to &#8216;auto&#8217;, only enable when Open File Descriptor (<font SIZE="-1">OFD</font>) locking <font SIZE="-1">API</font> is available (default: auto, since 2.10)</dd>
+<dd>whether to enable file locking. If set to &#8216;auto&#8217;, only enable when Open File Descriptor (OFD) locking API is available (default: auto, since 2.10)</dd>
 <dt>&quot;drop-cache: boolean&quot; (optional)</dt>
 <dd>invalidate page cache during live migration. This prevents stale data on the migration destination with cache.direct=off. Currently only supported on Linux hosts. (default: on, since: 4.0) <code>If:</code> <tt>&quot;defined(CONFIG_LINUX)&quot;</tt></dd>
 <dt>&quot;x-check-cache-dropped: boolean&quot; (optional)</dt>
@@ -2099,7 +2099,7 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <p> <code>Features:</code></p>
 <dl>
 <dt>&quot;dynamic-auto-read-only&quot;</dt>
-<dd>If present, enabled auto-read-only means that the driver will open the image read-only at first, dynamically reopen the image file read-write when the first writer is attached to the node and reopen read-only when the last writer is detached. This allows giving <font SIZE="-1">QEMU</font> write permissions only on demand when an operation actually needs write access.</dd></dl>
+<dd>If present, enabled auto-read-only means that the driver will open the image read-only at first, dynamically reopen the image file read-write when the first writer is attached to the node and reopen read-only when the last writer is detached. This allows giving QEMU write permissions only on demand when an operation actually needs write access.</dd></dl>
 <p> <code>Since:</code> 2.9 <code>BlockdevOptionsNull</code> (Object) Driver specific block device options for the null backend. <code>Members:</code></p>
 <dl>
 <dt>&quot;size: int&quot; (optional)</dt>
@@ -2117,23 +2117,23 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <p> <code>Since:</code> 2.12 <code>BlockdevOptionsVVFAT</code> (Object) Driver specific block device options for the vvfat protocol. <code>Members:</code></p>
 <dl>
 <dt>&quot;dir: string&quot;</dt>
-<dd>directory to be exported as <font SIZE="-1">FAT</font> image</dd>
+<dd>directory to be exported as FAT image</dd>
 <dt>&quot;fat-type: int&quot; (optional)</dt>
-<dd><font SIZE="-1">FAT</font> type: 12, 16 or 32</dd>
+<dd>FAT type: 12, 16 or 32</dd>
 <dt>&quot;floppy: boolean&quot; (optional)</dt>
 <dd>whether to export a floppy image (true) or partitioned hard disk (false; default)</dd>
 <dt>&quot;label: string&quot; (optional)</dt>
-<dd>set the volume label, limited to 11 bytes. <font SIZE="-1">FAT16</font> and <font SIZE="-1">FAT32</font> traditionally have some restrictions on labels, which are ignored by most operating systems. Defaults to &#8220;<font SIZE="-1">QEMU VVFAT&#8221;.</font> (since 2.4)</dd>
+<dd>set the volume label, limited to 11 bytes. FAT16 and FAT32 traditionally have some restrictions on labels, which are ignored by most operating systems. Defaults to &#8220;QEMU VVFAT&#8221;. (since 2.4)</dd>
 <dt>&quot;rw: boolean&quot; (optional)</dt>
 <dd>whether to allow write operations (default: false)</dd></dl>
 <p> <code>Since:</code> 2.9 <code>BlockdevOptionsGenericFormat</code> (Object) Driver specific block device options for image format that have no option besides their data source. <code>Members:</code></p>
 <dl>
 <dt>&quot;file: BlockdevRef&quot;</dt>
 <dd>reference to or definition of the data source block device</dd></dl>
-<p> <code>Since:</code> 2.9 <code>BlockdevOptionsLUKS</code> (Object) Driver specific block device options for <font SIZE="-1">LUKS.</font> <code>Members:</code></p>
+<p> <code>Since:</code> 2.9 <code>BlockdevOptionsLUKS</code> (Object) Driver specific block device options for LUKS. <code>Members:</code></p>
 <dl>
 <dt>&quot;key-secret: string&quot; (optional)</dt>
-<dd>the <font SIZE="-1">ID</font> of a QCryptoSecret object providing the decryption key (since 2.6). Mandatory except when doing a metadata-only probe of the image.</dd>
+<dd>the ID of a QCryptoSecret object providing the decryption key (since 2.6). Mandatory except when doing a metadata-only probe of the image.</dd>
 <dt>The members of &quot;BlockdevOptionsGenericFormat&quot;</dt>
 <dd></dd></dl>
 <p> <code>Since:</code> 2.9 <code>BlockdevOptionsGenericCOWFormat</code> (Object) Driver specific block device options for image format that have no option besides their data source and an optional backing file. <code>Members:</code></p>
@@ -2395,7 +2395,7 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <dt>&quot;iotype: BlkdebugIOType&quot; (optional)</dt>
 <dd>the type of I/O operations on which this error should be injected; defaults to &#8220;all read, write, write-zeroes, discard, and flush operations&#8221; (since: 4.1)</dd>
 <dt>&quot;errno: int&quot; (optional)</dt>
-<dd>error identifier (errno) to be returned; defaults to <font SIZE="-1">EIO</font></dd>
+<dd>error identifier (errno) to be returned; defaults to EIO</dd>
 <dt>&quot;sector: int&quot; (optional)</dt>
 <dd>specifies the sector index which has to be affected in order to actually trigger the event; defaults to &#8220;any sector&#8221;</dd>
 <dt>&quot;once: boolean&quot; (optional)</dt>
@@ -2475,7 +2475,7 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <p> <code>Since:</code> 2.9 <code>BlockdevOptionsGluster</code> (Object) Driver specific block device options for Gluster <code>Members:</code></p>
 <dl>
 <dt>&quot;volume: string&quot;</dt>
-<dd>name of gluster volume where <font SIZE="-1">VM</font> image resides</dd>
+<dd>name of gluster volume where VM image resides</dd>
 <dt>&quot;path: string&quot;</dt>
 <dd>absolute path to image file in gluster volume</dd>
 <dt>&quot;server: array of SocketAddress&quot;</dt>
@@ -2509,11 +2509,11 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <dt>&quot;target: string&quot;</dt>
 <dd>The target iqn name</dd>
 <dt>&quot;lun: int&quot; (optional)</dt>
-<dd><font SIZE="-1">LUN</font> to connect to. Defaults to 0.</dd>
+<dd>LUN to connect to. Defaults to 0.</dd>
 <dt>&quot;user: string&quot; (optional)</dt>
-<dd>User name to log in with. If omitted, no <font SIZE="-1">CHAP</font> authentication is performed.</dd>
+<dd>User name to log in with. If omitted, no CHAP authentication is performed.</dd>
 <dt>&quot;password-secret: string&quot; (optional)</dt>
-<dd>The <font SIZE="-1">ID</font> of a QCryptoSecret object providing the password for the login. This option is required if <tt>&quot;user&quot;</tt> is specified.</dd>
+<dd>The ID of a QCryptoSecret object providing the password for the login. This option is required if <tt>&quot;user&quot;</tt> is specified.</dd>
 <dt>&quot;initiator-name: string&quot; (optional)</dt>
 <dd>The iqn name we want to identify to the target as. If this option is not specified, an initiator name is generated automatically.</dd>
 <dt>&quot;header-digest: IscsiHeaderDigest&quot; (optional)</dt>
@@ -2533,7 +2533,7 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <dt>&quot;image: string&quot;</dt>
 <dd>Image name in the Ceph pool.</dd>
 <dt>&quot;conf: string&quot; (optional)</dt>
-<dd>path to Ceph configuration file. Values in the configuration file will be overridden by options specified via <font SIZE="-1">QAPI.</font></dd>
+<dd>path to Ceph configuration file. Values in the configuration file will be overridden by options specified via QAPI.</dd>
 <dt>&quot;snapshot: string&quot; (optional)</dt>
 <dd>Ceph snapshot name.</dd>
 <dt>&quot;user: string&quot; (optional)</dt>
@@ -2541,7 +2541,7 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <dt>&quot;auth-client-required: array of RbdAuthMode&quot; (optional)</dt>
 <dd>Acceptable authentication modes. This maps to Ceph configuration option &#8220;auth_client_required&#8221;. (Since 3.0)</dd>
 <dt>&quot;key-secret: string&quot; (optional)</dt>
-<dd><font SIZE="-1">ID</font> of a QCryptoSecret object providing a key for cephx authentication. This maps to Ceph configuration option &#8220;key&#8221;. (Since 3.0)</dd>
+<dd>ID of a QCryptoSecret object providing a key for cephx authentication. This maps to Ceph configuration option &#8220;key&#8221;. (Since 3.0)</dd>
 <dt>&quot;server: array of InetSocketAddressBase&quot; (optional)</dt>
 <dd>Monitor host address and port. This maps to the &#8220;mon_host&#8221; Ceph option.</dd></dl>
 <p> <code>Since:</code> 2.9 <code>BlockdevOptionsSheepdog</code> (Object) Driver specific block device options for sheepdog <code>Members:</code></p>
@@ -2551,43 +2551,43 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <dt>&quot;server: SocketAddress&quot;</dt>
 <dd>The Sheepdog server to connect to</dd>
 <dt>&quot;snap-id: int&quot; (optional)</dt>
-<dd>Snapshot <font SIZE="-1">ID</font></dd>
+<dd>Snapshot ID</dd>
 <dt>&quot;tag: string&quot; (optional)</dt>
 <dd>Snapshot tag name</dd></dl>
 <p> Only one of <tt>&quot;snap-id&quot;</tt> and <tt>&quot;tag&quot;</tt> may be present. <code>Since:</code> 2.9 <code>ReplicationMode</code> (Enum) An enumeration of replication modes. <code>Values:</code></p>
 <dl>
 <dt>&quot;primary&quot;</dt>
-<dd>Primary mode, the vm&#8217;s state will be sent to secondary <font SIZE="-1">QEMU.</font></dd>
+<dd>Primary mode, the vm&#8217;s state will be sent to secondary QEMU.</dd>
 <dt>&quot;secondary&quot;</dt>
-<dd>Secondary mode, receive the vm&#8217;s state from primary <font SIZE="-1">QEMU.</font></dd></dl>
+<dd>Secondary mode, receive the vm&#8217;s state from primary QEMU.</dd></dl>
 <p> <code>Since:</code> 2.9 <code>If:</code> <tt>&quot;defined(CONFIG_REPLICATION)&quot;</tt> <code>BlockdevOptionsReplication</code> (Object) Driver specific block device options for replication <code>Members:</code></p>
 <dl>
 <dt>&quot;mode: ReplicationMode&quot;</dt>
 <dd>the replication mode</dd>
 <dt>&quot;top-id: string&quot; (optional)</dt>
-<dd>In secondary mode, node name or device <font SIZE="-1">ID</font> of the root node who owns the replication node chain. Must not be given in primary mode.</dd>
+<dd>In secondary mode, node name or device ID of the root node who owns the replication node chain. Must not be given in primary mode.</dd>
 <dt>The members of &quot;BlockdevOptionsGenericFormat&quot;</dt>
 <dd></dd></dl>
-<p> <code>Since:</code> 2.9 <code>If:</code> <tt>&quot;defined(CONFIG_REPLICATION)&quot;</tt> <code>NFSTransport</code> (Enum) An enumeration of <font SIZE="-1">NFS</font> transport types <code>Values:</code></p>
+<p> <code>Since:</code> 2.9 <code>If:</code> <tt>&quot;defined(CONFIG_REPLICATION)&quot;</tt> <code>NFSTransport</code> (Enum) An enumeration of NFS transport types <code>Values:</code></p>
 <dl>
 <dt>&quot;inet&quot;</dt>
-<dd><font SIZE="-1">TCP</font> transport</dd></dl>
+<dd>TCP transport</dd></dl>
 <p> <code>Since:</code> 2.9 <code>NFSServer</code> (Object) Captures the address of the socket <code>Members:</code></p>
 <dl>
 <dt>&quot;type: NFSTransport&quot;</dt>
-<dd>transport type used for <font SIZE="-1">NFS</font> (only <font SIZE="-1">TCP</font> supported)</dd>
+<dd>transport type used for NFS (only TCP supported)</dd>
 <dt>&quot;host: string&quot;</dt>
-<dd>host address for <font SIZE="-1">NFS</font> server</dd></dl>
-<p> <code>Since:</code> 2.9 <code>BlockdevOptionsNfs</code> (Object) Driver specific block device option for <font SIZE="-1">NFS</font> <code>Members:</code></p>
+<dd>host address for NFS server</dd></dl>
+<p> <code>Since:</code> 2.9 <code>BlockdevOptionsNfs</code> (Object) Driver specific block device option for NFS <code>Members:</code></p>
 <dl>
 <dt>&quot;server: NFSServer&quot;</dt>
 <dd>host address</dd>
 <dt>&quot;path: string&quot;</dt>
 <dd>path of the image on the host</dd>
 <dt>&quot;user: int&quot; (optional)</dt>
-<dd><font SIZE="-1">UID</font> value to use when talking to the server (defaults to 65534 on Windows and <code>getuid()</code> on unix)</dd>
+<dd>UID value to use when talking to the server (defaults to 65534 on Windows and <code>getuid()</code> on unix)</dd>
 <dt>&quot;group: int&quot; (optional)</dt>
-<dd><font SIZE="-1">GID</font> value to use when talking to the server (defaults to 65534 on Windows and <code>getgid()</code> in unix)</dd>
+<dd>GID value to use when talking to the server (defaults to 65534 on Windows and <code>getgid()</code> in unix)</dd>
 <dt>&quot;tcp-syn-count: int&quot; (optional)</dt>
 <dd>number of SYNs during the session establishment (defaults to libnfs default)</dd>
 <dt>&quot;readahead-size: int&quot; (optional)</dt>
@@ -2595,11 +2595,11 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <dt>&quot;page-cache-size: int&quot; (optional)</dt>
 <dd>set the pagecache size in bytes (defaults to libnfs default)</dd>
 <dt>&quot;debug: int&quot; (optional)</dt>
-<dd>set the <font SIZE="-1">NFS</font> debug level (max 2) (defaults to libnfs default)</dd></dl>
+<dd>set the NFS debug level (max 2) (defaults to libnfs default)</dd></dl>
 <p> <code>Since:</code> 2.9 <code>BlockdevOptionsCurlBase</code> (Object) Driver specific block device options shared by all protocols supported by the curl backend. <code>Members:</code></p>
 <dl>
 <dt>&quot;url: string&quot;</dt>
-<dd><font SIZE="-1">URL</font> of the image file</dd>
+<dd>URL of the image file</dd>
 <dt>&quot;readahead: int&quot; (optional)</dt>
 <dd>Size of the read-ahead cache; must be a multiple of 512 (defaults to 256 kB)</dd>
 <dt>&quot;timeout: int&quot; (optional)</dt>
@@ -2607,54 +2607,54 @@ description: "qemu-qmp-ref – QEMU QMP Reference Manual"
 <dt>&quot;username: string&quot; (optional)</dt>
 <dd>Username for authentication (defaults to none)</dd>
 <dt>&quot;password-secret: string&quot; (optional)</dt>
-<dd><font SIZE="-1">ID</font> of a QCryptoSecret object providing a password for authentication (defaults to no password)</dd>
+<dd>ID of a QCryptoSecret object providing a password for authentication (defaults to no password)</dd>
 <dt>&quot;proxy-username: string&quot; (optional)</dt>
 <dd>Username for proxy authentication (defaults to none)</dd>
 <dt>&quot;proxy-password-secret: string&quot; (optional)</dt>
-<dd><font SIZE="-1">ID</font> of a QCryptoSecret object providing a password for proxy authentication (defaults to no password)</dd></dl>
-<p> <code>Since:</code> 2.9 <code>BlockdevOptionsCurlHttp</code> (Object) Driver specific block device options for <font SIZE="-1">HTTP</font> connections over the curl backend. URLs must start with &#8220;<a rel="nofollow" href="http://''.">http://&#8221;.</a> Members :</p>
+<dd>ID of a QCryptoSecret object providing a password for proxy authentication (defaults to no password)</dd></dl>
+<p> <code>Since:</code> 2.9 <code>BlockdevOptionsCurlHttp</code> (Object) Driver specific block device options for HTTP connections over the curl backend. URLs must start with &#8220;<a rel="nofollow" href="http://''.">http://&#8221;.</a> Members :</p>
 <p>    &quot;cookie: string&quot;(optional)</p>
-<p>        List of cookies to set;<br />
-format is<br />
-&#8220;name1 = content1;<br />
-name2 = content2;&#8221; as explained by<br />
-CURLOPT_COOKIE(3). Defaults to no cookies.<br />
+<p>        List of cookies to set;<br/>
+format is<br/>
+&#8220;name1 = content1;<br/>
+name2 = content2;&#8221; as explained by<br/>
+CURLOPT_COOKIE(3). Defaults to no cookies.<br/>
 &quot;cookie-secret: string&quot; (optional)</p>
-<p>ID of a QCryptoSecret object providing the cookie data in a<br />
-secure way. See &quot;cookie&quot; for the format. (since 2.10)<br />
-The members of &quot;BlockdevOptionsCurlBase&quot; <code>Since:</code> 2.9 <code>BlockdevOptionsCurlHttps</code> (Object) Driver specific block device options for <font SIZE="-1">HTTPS</font> connections over the curl backend. URLs must start with &#8220;<a rel="nofollow" href="https://''.">https://&#8221;.</a> Members :</p>
+<p>ID of a QCryptoSecret object providing the cookie data in a<br/>
+secure way. See &quot;cookie&quot; for the format. (since 2.10)<br/>
+The members of &quot;BlockdevOptionsCurlBase&quot; <code>Since:</code> 2.9 <code>BlockdevOptionsCurlHttps</code> (Object) Driver specific block device options for HTTPS connections over the curl backend. URLs must start with &#8220;<a rel="nofollow" href="https://''.">https://&#8221;.</a> Members :</p>
 <p>    &quot;cookie: string&quot;(optional)</p>
-<p>        List of cookies to set;<br />
-format is<br />
-&#8220;name1 = content1;<br />
-name2 = content2;&#8221; as explained by<br />
-CURLOPT_COOKIE(3). Defaults to no cookies.<br />
+<p>        List of cookies to set;<br/>
+format is<br/>
+&#8220;name1 = content1;<br/>
+name2 = content2;&#8221; as explained by<br/>
+CURLOPT_COOKIE(3). Defaults to no cookies.<br/>
 &quot;sslverify: boolean&quot; (optional)</p>
-<p>Whether to verify the SSL certificate&#8217;s validity (defaults to<br />
-true)<br />
+<p>Whether to verify the SSL certificate&#8217;s validity (defaults to<br/>
+true)<br/>
 &quot;cookie-secret: string&quot; (optional)</p>
-<p>ID of a QCryptoSecret object providing the cookie data in a<br />
-secure way. See &quot;cookie&quot; for the format. (since 2.10)<br />
-The members of &quot;BlockdevOptionsCurlBase&quot; <code>Since:</code> 2.9 <code>BlockdevOptionsCurlFtp</code> (Object) Driver specific block device options for <font SIZE="-1">FTP</font> connections over the curl backend. URLs must start with &#8220;<a href="ftp://''.">ftp://&#8221;.</a> <code>Members:</code></p>
+<p>ID of a QCryptoSecret object providing the cookie data in a<br/>
+secure way. See &quot;cookie&quot; for the format. (since 2.10)<br/>
+The members of &quot;BlockdevOptionsCurlBase&quot; <code>Since:</code> 2.9 <code>BlockdevOptionsCurlFtp</code> (Object) Driver specific block device options for FTP connections over the curl backend. URLs must start with &#8220;<a href="ftp://''.">ftp://&#8221;.</a> <code>Members:</code></p>
 <dl>
 <dt>The members of &quot;BlockdevOptionsCurlBase&quot;</dt>
 <dd></dd></dl>
-<p> <code>Since:</code> 2.9 <code>BlockdevOptionsCurlFtps</code> (Object) Driver specific block device options for <font SIZE="-1">FTPS</font> connections over the curl backend. URLs must start with &#8220;<a href="ftps://''.">ftps://&#8221;.</a> <code>Members:</code></p>
+<p> <code>Since:</code> 2.9 <code>BlockdevOptionsCurlFtps</code> (Object) Driver specific block device options for FTPS connections over the curl backend. URLs must start with &#8220;<a href="ftps://''.">ftps://&#8221;.</a> <code>Members:</code></p>
 <dl>
 <dt>&quot;sslverify: boolean&quot; (optional)</dt>
-<dd>Whether to verify the <font SIZE="-1">SSL</font> certificate&#8217;s validity (defaults to true)</dd>
+<dd>Whether to verify the SSL certificate&#8217;s validity (defaults to true)</dd>
 <dt>The members of &quot;BlockdevOptionsCurlBase&quot;</dt>
 <dd></dd></dl>
-<p> <code>Since:</code> 2.9 <code>BlockdevOptionsNbd</code> (Object) Driver specific block device options for <font SIZE="-1">NBD.</font> <code>Members:</code></p>
+<p> <code>Since:</code> 2.9 <code>BlockdevOptionsNbd</code> (Object) Driver specific block device options for NBD. <code>Members:</code></p>
 <dl>
 <dt>&quot;server: SocketAddress&quot;</dt>
-<dd><font SIZE="-1">NBD</font> server address</dd>
+<dd>NBD server address</dd>
 <dt>&quot;export: string&quot; (optional)</dt>
 <dd>export name</dd>
 <dt>&quot;tls-creds: string&quot; (optional)</dt>
-<dd><font SIZE="-1">TLS</font> credentials <font SIZE="-1">ID</font></dd>
+<dd>TLS credentials ID</dd>
 <dt>&quot;x-dirty-bitmap: string&quot; (optional)</dt>
-<dd>A &#8220;qemu:dirty-bitmap:NAME&#8221; string to query in place of traditional &#8220;base:allocation&#8221; block status (see <font SIZE="-1">NBD_OPT_LIST_META_CONTEXT</font> in the <font SIZE="-1">NBD</font> protocol) (since 3.0)</dd>
+<dd>A &#8220;qemu:dirty-bitmap:NAME&#8221; string to query in place of traditional &#8220;base:allocation&#8221; block status (see NBD_OPT_LIST_META_CONTEXT in the NBD protocol) (since 3.0)</dd>
 <dt>&quot;reconnect-delay: int&quot; (optional)</dt>
 <dd>On an unexpected disconnect, the nbd client tries to connect again until succeeding or encountering a serious error. During the first <tt>&quot;reconnect-delay&quot;</tt> seconds, all requests are paused and will be rerun on a successful reconnect. After that time, any delayed requests and all future requests before a successful reconnect will immediately fail. Default 0 (Since 4.2)</dd></dl>
 <p> <code>Since:</code> 2.9 <code>BlockdevOptionsRaw</code> (Object) Driver specific block device options for the raw driver. <code>Members:</code></p>
@@ -2668,11 +2668,11 @@ The members of &quot;BlockdevOptionsCurlBase&quot; <code>Since:</code> 2.9 <code
 <p> <code>Since:</code> 2.9 <code>BlockdevOptionsVxHS</code> (Object) Driver specific block device options for VxHS <code>Members:</code></p>
 <dl>
 <dt>&quot;vdisk-id: string&quot;</dt>
-<dd><font SIZE="-1">UUID</font> of VxHS volume</dd>
+<dd>UUID of VxHS volume</dd>
 <dt>&quot;server: InetSocketAddressBase&quot;</dt>
-<dd>vxhs server <font SIZE="-1">IP,</font> port</dd>
+<dd>vxhs server IP, port</dd>
 <dt>&quot;tls-creds: string&quot; (optional)</dt>
-<dd><font SIZE="-1">TLS</font> credentials <font SIZE="-1">ID</font></dd></dl>
+<dd>TLS credentials ID</dd></dl>
 <p> <code>Since:</code> 2.10 <code>BlockdevOptionsThrottle</code> (Object) Driver specific block device options for the throttle driver <code>Members:</code></p>
 <dl>
 <dt>&quot;throttle-group: string&quot;</dt>
@@ -2681,36 +2681,36 @@ The members of &quot;BlockdevOptionsCurlBase&quot; <code>Since:</code> 2.9 <code
 <dd>reference to or definition of the data source block device</dd></dl>
 <p> <code>Since:</code> 2.11 <code>BlockdevOptions</code> (Object) Options for creating a block device. Many options are available for all block devices, independent of the block driver: Members:</p>
 <p>&quot;driver: BlockdevDriver&quot;</p>
-<p>block driver name<br />
+<p>block driver name<br/>
 &quot;node-name: string&quot; (optional)</p>
-<p>the node name of the new node (Since 2.0).<br />
-This option is required on the top level of blockdev-add.<br />
-Valid node names start with an alphabetic character and may<br />
-contain only alphanumeric characters, &#8216;-&#8216;, &#8216;.&#8217; and &#8216;_&#8217;. Their<br />
-maximum length is 31 characters.<br />
+<p>the node name of the new node (Since 2.0).<br/>
+This option is required on the top level of blockdev-add.<br/>
+Valid node names start with an alphabetic character and may<br/>
+contain only alphanumeric characters, &#8216;-&#8216;, &#8216;.&#8217; and &#8216;_&#8217;. Their<br/>
+maximum length is 31 characters.<br/>
 &quot;discard: BlockdevDiscardOptions&quot; (optional)</p>
-<p>discard-related options (default: ignore)<br />
+<p>discard-related options (default: ignore)<br/>
 &quot;cache: BlockdevCacheOptions&quot; (optional)</p>
-<p>cache-related options<br />
+<p>cache-related options<br/>
 &quot;read-only: boolean&quot; (optional)</p>
-<p>whether the block device should be read-only (default: false).<br />
-Note that some block drivers support only read-only access,<br />
-either generally or in certain configurations. In this case,<br />
-the default value does not work and the option must be<br />
-specified explicitly.<br />
+<p>whether the block device should be read-only (default: false).<br/>
+Note that some block drivers support only read-only access,<br/>
+either generally or in certain configurations. In this case,<br/>
+the default value does not work and the option must be<br/>
+specified explicitly.<br/>
 &quot;auto-read-only: boolean&quot; (optional)</p>
-<p>if true and &quot;read-only&quot; is false, QEMU may automatically<br />
-decide not to open the image read-write as requested, but<br />
-fall back to read-only instead (and switch between the modes<br />
-later), e.g. depending on whether the image file is writable<br />
-or whether a writing user is attached to the node<br />
-(default: false, since 3.1)<br />
+<p>if true and &quot;read-only&quot; is false, QEMU may automatically<br/>
+decide not to open the image read-write as requested, but<br/>
+fall back to read-only instead (and switch between the modes<br/>
+later), e.g. depending on whether the image file is writable<br/>
+or whether a writing user is attached to the node<br/>
+(default: false, since 3.1)<br/>
 &quot;detect-zeroes: BlockdevDetectZeroesOptions&quot; (optional)</p>
-<p>detect and optimize zero writes (Since 2.1)<br />
-(default: off)<br />
+<p>detect and optimize zero writes (Since 2.1)<br/>
+(default: off)<br/>
 &quot;force-share: boolean&quot; (optional)</p>
-<p>force share all permission on added nodes.<br />
-Requires read-only=true. (Since 2.10)<br />
+<p>force share all permission on added nodes.<br/>
+Requires read-only=true. (Since 2.10)<br/>
 The members of &quot;BlockdevOptionsBlkdebug&quot; when &quot;driver&quot; is &quot;blkdebug&quot;</p>
 <p>The members of &quot;BlockdevOptionsBlklogwrites&quot; when &quot;driver&quot; is &quot;blklogwrites&quot;</p>
 <p>The members of &quot;BlockdevOptionsBlkverify&quot; when &quot;driver&quot; is &quot;blkverify&quot;</p>
@@ -2755,81 +2755,81 @@ The members of &quot;BlockdevOptionsBlkdebug&quot; when &quot;driver&quot; is &q
 <dt>&quot;definition: BlockdevOptions&quot;</dt>
 <dd>defines a new block device inline</dd>
 <dt>&quot;reference: string&quot;</dt>
-<dd>references the <font SIZE="-1">ID</font> of an existing block device</dd></dl>
+<dd>references the ID of an existing block device</dd></dl>
 <p> <code>Since:</code> 2.9 <code>BlockdevRefOrNull</code> (Alternate) Reference to a block device. <code>Members:</code></p>
 <dl>
 <dt>&quot;definition: BlockdevOptions&quot;</dt>
 <dd>defines a new block device inline</dd>
 <dt>&quot;reference: string&quot;</dt>
-<dd>references the <font SIZE="-1">ID</font> of an existing block device. An empty string means that no block device should be referenced. Deprecated; use null instead.</dd>
+<dd>references the ID of an existing block device. An empty string means that no block device should be referenced. Deprecated; use null instead.</dd>
 <dt>&quot;null: null&quot;</dt>
 <dd>No block device should be referenced (since 2.10)</dd></dl>
-<p> <code>Since:</code> 2.9 <code>blockdev-add</code> (Command) Creates a new block device. If the <tt>&quot;id&quot;</tt> option is given at the top level, a BlockBackend will be created; otherwise, <tt>&quot;node-name&quot;</tt> is mandatory at the top level and no BlockBackend will be created. <code>Arguments:</code> the members of <tt>&quot;BlockdevOptions&quot;</tt> <code>Since:</code> 2.9 <code>Example:</code> 1.<br />
-        -&gt;{&quot;execute&quot; : &quot;blockdev-add&quot;,<br />
-           &quot;arguments&quot; : {<br />
-               &quot;driver&quot; : &quot;qcow2&quot;,<br />
-               &quot;node-name&quot; : &quot;test1&quot;,<br />
-               &quot;file&quot; : {<br />
-                   &quot;driver&quot; : &quot;file&quot;,<br />
-                   &quot;filename&quot; : &quot;test.qcow2&quot;<br />
-               }<br />
-           }} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
+<p> <code>Since:</code> 2.9 <code>blockdev-add</code> (Command) Creates a new block device. If the <tt>&quot;id&quot;</tt> option is given at the top level, a BlockBackend will be created; otherwise, <tt>&quot;node-name&quot;</tt> is mandatory at the top level and no BlockBackend will be created. <code>Arguments:</code> the members of <tt>&quot;BlockdevOptions&quot;</tt> <code>Since:</code> 2.9 <code>Example:</code> 1.<br/>
+        -&gt;{&quot;execute&quot; : &quot;blockdev-add&quot;,<br/>
+           &quot;arguments&quot; : {<br/>
+               &quot;driver&quot; : &quot;qcow2&quot;,<br/>
+               &quot;node-name&quot; : &quot;test1&quot;,<br/>
+               &quot;file&quot; : {<br/>
+                   &quot;driver&quot; : &quot;file&quot;,<br/>
+                   &quot;filename&quot; : &quot;test.qcow2&quot;<br/>
+               }<br/>
+           }} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
 }</p>
-<p>2.<br />
-        -&gt;{&quot;execute&quot; : &quot;blockdev-add&quot;,<br />
-           &quot;arguments&quot; : {<br />
-               &quot;driver&quot; : &quot;qcow2&quot;,<br />
-               &quot;node-name&quot; : &quot;node0&quot;,<br />
-               &quot;discard&quot; : &quot;unmap&quot;,<br />
-               &quot;cache&quot; : {<br />
-                   &quot;direct&quot; : true<br />
-               },<br />
-               &quot;file&quot; : {<br />
-                   &quot;driver&quot; : &quot;file&quot;,<br />
-                   &quot;filename&quot; : &quot;/tmp/test.qcow2&quot;<br />
-               },<br />
-               &quot;backing&quot; : {<br />
-                   &quot;driver&quot; : &quot;raw&quot;,<br />
-                   &quot;file&quot; : {<br />
-                       &quot;driver&quot; : &quot;file&quot;,<br />
-                       &quot;filename&quot; : &quot;/dev/fdset/4&quot;<br />
-                   }<br />
-               }<br />
+<p>2.<br/>
+        -&gt;{&quot;execute&quot; : &quot;blockdev-add&quot;,<br/>
+           &quot;arguments&quot; : {<br/>
+               &quot;driver&quot; : &quot;qcow2&quot;,<br/>
+               &quot;node-name&quot; : &quot;node0&quot;,<br/>
+               &quot;discard&quot; : &quot;unmap&quot;,<br/>
+               &quot;cache&quot; : {<br/>
+                   &quot;direct&quot; : true<br/>
+               },<br/>
+               &quot;file&quot; : {<br/>
+                   &quot;driver&quot; : &quot;file&quot;,<br/>
+                   &quot;filename&quot; : &quot;/tmp/test.qcow2&quot;<br/>
+               },<br/>
+               &quot;backing&quot; : {<br/>
+                   &quot;driver&quot; : &quot;raw&quot;,<br/>
+                   &quot;file&quot; : {<br/>
+                       &quot;driver&quot; : &quot;file&quot;,<br/>
+                       &quot;filename&quot; : &quot;/dev/fdset/4&quot;<br/>
+                   }<br/>
+               }<br/>
            }}</p>
-<p>    &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
-} <code>x-blockdev-reopen</code> (Command) Reopens a block device using the given set of options. Any option not specified will be reset to its default value regardless of its previous status. If an option cannot be changed or a particular driver does not support reopening then the command will return an error. The top-level <tt>&quot;node-name&quot;</tt> option (from BlockdevOptions) must be specified and is used to select the block device to be reopened. Other <tt>&quot;node-name&quot;</tt> options must be either omitted or set to the current name of the appropriate node. This command won&#8217;t change any node name and any attempt to do it will result in an error. In the case of options that refer to child nodes, the behavior of this command depends on the value: 1) A set of options (BlockdevOptions): the child is reopened with the specified set of options. 2) A reference to the current child: the child is reopened using its existing set of options. 3) A reference to a different node: the current child is replaced with the specified one. 4) <font SIZE="-1">NULL:</font> the current child (if any) is detached. Options (1) and (2) are supported in all cases, but at the moment only <tt>&quot;backing&quot;</tt> allows replacing or detaching an existing child. Unlike with blockdev-add, the <tt>&quot;backing&quot;</tt> option must always be present unless the node being reopened does not have a backing file and its image does not have a default backing file name as part of its metadata. <code>Arguments:</code> the members of <tt>&quot;BlockdevOptions&quot;</tt> <code>Since:</code> 4.0 <code>blockdev-del</code> (Command) Deletes a block device that has been added using blockdev-add. The command will fail if the node is attached to a device or is otherwise being used. <code>Arguments:</code></p>
+<p>    &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
+} <code>x-blockdev-reopen</code> (Command) Reopens a block device using the given set of options. Any option not specified will be reset to its default value regardless of its previous status. If an option cannot be changed or a particular driver does not support reopening then the command will return an error. The top-level <tt>&quot;node-name&quot;</tt> option (from BlockdevOptions) must be specified and is used to select the block device to be reopened. Other <tt>&quot;node-name&quot;</tt> options must be either omitted or set to the current name of the appropriate node. This command won&#8217;t change any node name and any attempt to do it will result in an error. In the case of options that refer to child nodes, the behavior of this command depends on the value: 1) A set of options (BlockdevOptions): the child is reopened with the specified set of options. 2) A reference to the current child: the child is reopened using its existing set of options. 3) A reference to a different node: the current child is replaced with the specified one. 4) NULL: the current child (if any) is detached. Options (1) and (2) are supported in all cases, but at the moment only <tt>&quot;backing&quot;</tt> allows replacing or detaching an existing child. Unlike with blockdev-add, the <tt>&quot;backing&quot;</tt> option must always be present unless the node being reopened does not have a backing file and its image does not have a default backing file name as part of its metadata. <code>Arguments:</code> the members of <tt>&quot;BlockdevOptions&quot;</tt> <code>Since:</code> 4.0 <code>blockdev-del</code> (Command) Deletes a block device that has been added using blockdev-add. The command will fail if the node is attached to a device or is otherwise being used. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;node-name: string&quot;</dt>
 <dd>Name of the graph node to delete.</dd></dl>
-<p> <code>Since:</code> 2.9 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;blockdev-add&quot;,<br />
-   &quot;arguments&quot; : {<br />
-       &quot;driver&quot; : &quot;qcow2&quot;,<br />
-       &quot;node-name&quot; : &quot;node0&quot;,<br />
-       &quot;file&quot; : {<br />
-           &quot;driver&quot; : &quot;file&quot;,<br />
-           &quot;filename&quot; : &quot;test.qcow2&quot;<br />
-       }<br />
-   }} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
+<p> <code>Since:</code> 2.9 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;blockdev-add&quot;,<br/>
+   &quot;arguments&quot; : {<br/>
+       &quot;driver&quot; : &quot;qcow2&quot;,<br/>
+       &quot;node-name&quot; : &quot;node0&quot;,<br/>
+       &quot;file&quot; : {<br/>
+           &quot;driver&quot; : &quot;file&quot;,<br/>
+           &quot;filename&quot; : &quot;test.qcow2&quot;<br/>
+       }<br/>
+   }} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
     }</p>
-<p>        -&gt; {&quot;execute&quot; : &quot;blockdev-del&quot;,<br />
-            &quot;arguments&quot; : {&quot;node-name&quot; : &quot;node0&quot;}} &lt; &#8211;<br />
-    {<br />
-        &quot;return&quot;:<br />
-        {<br />
-        }<br />
-    } <code>BlockdevCreateOptionsFile</code> (Object) Driver specific image creation options for file. <tt>&quot;filename&quot;</tt> Filename for the new image file <tt>&quot;size&quot;</tt> Size of the virtual disk in bytes <tt>&quot;preallocation&quot;</tt> Preallocation mode for the new image (default: off; allowed values: off, falloc (if defined <font SIZE="-1">CONFIG_POSIX_FALLOCATE</font>), full (if defined <font SIZE="-1">CONFIG_POSIX</font>)) <tt>&quot;nocow&quot;</tt> Turn off copy-on-write (valid only on btrfs; default: off) <code>Members:</code></p>
+<p>        -&gt; {&quot;execute&quot; : &quot;blockdev-del&quot;,<br/>
+            &quot;arguments&quot; : {&quot;node-name&quot; : &quot;node0&quot;}} &lt; &#8211;<br/>
+    {<br/>
+        &quot;return&quot;:<br/>
+        {<br/>
+        }<br/>
+    } <code>BlockdevCreateOptionsFile</code> (Object) Driver specific image creation options for file. <tt>&quot;filename&quot;</tt> Filename for the new image file <tt>&quot;size&quot;</tt> Size of the virtual disk in bytes <tt>&quot;preallocation&quot;</tt> Preallocation mode for the new image (default: off; allowed values: off, falloc (if defined CONFIG_POSIX_FALLOCATE), full (if defined CONFIG_POSIX)) <tt>&quot;nocow&quot;</tt> Turn off copy-on-write (valid only on btrfs; default: off) <code>Members:</code></p>
 <dl>
 <dt>&quot;filename: string&quot;</dt>
 <dd>Not documented</dd>
@@ -2839,7 +2839,7 @@ The members of &quot;BlockdevOptionsBlkdebug&quot; when &quot;driver&quot; is &q
 <dd>Not documented</dd>
 <dt>&quot;nocow: boolean&quot; (optional)</dt>
 <dd>Not documented</dd></dl>
-<p> <code>Since:</code> 2.12 <code>BlockdevCreateOptionsGluster</code> (Object) Driver specific image creation options for gluster. <tt>&quot;location&quot;</tt> Where to store the new image file <tt>&quot;size&quot;</tt> Size of the virtual disk in bytes <tt>&quot;preallocation&quot;</tt> Preallocation mode for the new image (default: off; allowed values: off, falloc (if defined <font SIZE="-1">CONFIG_GLUSTERFS_FALLOCATE</font>), full (if defined <font SIZE="-1">CONFIG_GLUSTERFS_ZEROFILL</font>)) <code>Members:</code></p>
+<p> <code>Since:</code> 2.12 <code>BlockdevCreateOptionsGluster</code> (Object) Driver specific image creation options for gluster. <tt>&quot;location&quot;</tt> Where to store the new image file <tt>&quot;size&quot;</tt> Size of the virtual disk in bytes <tt>&quot;preallocation&quot;</tt> Preallocation mode for the new image (default: off; allowed values: off, falloc (if defined CONFIG_GLUSTERFS_FALLOCATE), full (if defined CONFIG_GLUSTERFS_ZEROFILL)) <code>Members:</code></p>
 <dl>
 <dt>&quot;location: BlockdevOptionsGluster&quot;</dt>
 <dd>Not documented</dd>
@@ -2847,7 +2847,7 @@ The members of &quot;BlockdevOptionsBlkdebug&quot; when &quot;driver&quot; is &q
 <dd>Not documented</dd>
 <dt>&quot;preallocation: PreallocMode&quot; (optional)</dt>
 <dd>Not documented</dd></dl>
-<p> <code>Since:</code> 2.12 <code>BlockdevCreateOptionsLUKS</code> (Object) Driver specific image creation options for <font SIZE="-1">LUKS.</font> <tt>&quot;file&quot;</tt> Node to create the image format on <tt>&quot;size&quot;</tt> Size of the virtual disk in bytes <tt>&quot;preallocation&quot;</tt> Preallocation mode for the new image (since: 4.2) (default: off; allowed values: off, metadata, falloc, full) <code>Members:</code></p>
+<p> <code>Since:</code> 2.12 <code>BlockdevCreateOptionsLUKS</code> (Object) Driver specific image creation options for LUKS. <tt>&quot;file&quot;</tt> Node to create the image format on <tt>&quot;size&quot;</tt> Size of the virtual disk in bytes <tt>&quot;preallocation&quot;</tt> Preallocation mode for the new image (since: 4.2) (default: off; allowed values: off, metadata, falloc, full) <code>Members:</code></p>
 <dl>
 <dt>&quot;file: BlockdevRef&quot;</dt>
 <dd>Not documented</dd>
@@ -2857,13 +2857,13 @@ The members of &quot;BlockdevOptionsBlkdebug&quot; when &quot;driver&quot; is &q
 <dd>Not documented</dd>
 <dt>The members of &quot;QCryptoBlockCreateOptionsLUKS&quot;</dt>
 <dd></dd></dl>
-<p> <code>Since:</code> 2.12 <code>BlockdevCreateOptionsNfs</code> (Object) Driver specific image creation options for <font SIZE="-1">NFS.</font> <tt>&quot;location&quot;</tt> Where to store the new image file <tt>&quot;size&quot;</tt> Size of the virtual disk in bytes <code>Members:</code></p>
+<p> <code>Since:</code> 2.12 <code>BlockdevCreateOptionsNfs</code> (Object) Driver specific image creation options for NFS. <tt>&quot;location&quot;</tt> Where to store the new image file <tt>&quot;size&quot;</tt> Size of the virtual disk in bytes <code>Members:</code></p>
 <dl>
 <dt>&quot;location: BlockdevOptionsNfs&quot;</dt>
 <dd>Not documented</dd>
 <dt>&quot;size: int&quot;</dt>
 <dd>Not documented</dd></dl>
-<p> <code>Since:</code> 2.12 <code>BlockdevCreateOptionsParallels</code> (Object) Driver specific image creation options for parallels. <tt>&quot;file&quot;</tt> Node to create the image format on <tt>&quot;size&quot;</tt> Size of the virtual disk in bytes <tt>&quot;cluster-size&quot;</tt> Cluster size in bytes (default: 1 <font SIZE="-1">MB</font>) <code>Members:</code></p>
+<p> <code>Since:</code> 2.12 <code>BlockdevCreateOptionsParallels</code> (Object) Driver specific image creation options for parallels. <tt>&quot;file&quot;</tt> Node to create the image format on <tt>&quot;size&quot;</tt> Size of the virtual disk in bytes <tt>&quot;cluster-size&quot;</tt> Cluster size in bytes (default: 1 MB) <code>Members:</code></p>
 <dl>
 <dt>&quot;file: BlockdevRef&quot;</dt>
 <dd>Not documented</dd>
@@ -2884,9 +2884,9 @@ The members of &quot;BlockdevOptionsBlkdebug&quot; when &quot;driver&quot; is &q
 <p> <code>Since:</code> 2.12 <code>BlockdevQcow2Version</code> (Enum) <code>Values:</code></p>
 <dl>
 <dt>&quot;v2&quot;</dt>
-<dd>The original <font SIZE="-1">QCOW2</font> format as introduced in qemu 0.10 (version 2)</dd>
+<dd>The original QCOW2 format as introduced in qemu 0.10 (version 2)</dd>
 <dt>&quot;v3&quot;</dt>
-<dd>The extended <font SIZE="-1">QCOW2</font> format as introduced in qemu 1.1 (version 3)</dd></dl>
+<dd>The extended QCOW2 format as introduced in qemu 1.1 (version 3)</dd></dl>
 <p> <code>Since:</code> 2.12 <code>BlockdevCreateOptionsQcow2</code> (Object) Driver specific image creation options for qcow2. <tt>&quot;file&quot;</tt> Node to create the image format on <tt>&quot;data-file&quot;</tt> Node to use as an external data file in which all guest data is stored so that only metadata remains in the qcow2 file (since: 4.0) <tt>&quot;data-file-raw&quot;</tt> True if the external data file must stay valid as a standalone (read-only) raw image without looking at qcow2 metadata (default: false; since: 4.0) <tt>&quot;size&quot;</tt> Size of the virtual disk in bytes <tt>&quot;version&quot;</tt> Compatibility level (default: v3) <tt>&quot;backing-file&quot;</tt> File name of the backing file if a backing file should be used <tt>&quot;backing-fmt&quot;</tt> Name of the block driver to use for the backing file <tt>&quot;encrypt&quot;</tt> Encryption options if the image should be encrypted <tt>&quot;cluster-size&quot;</tt> qcow2 cluster size in bytes (default: 65536) <tt>&quot;preallocation&quot;</tt> Preallocation mode for the new image (default: off; allowed values: off, falloc, full, metadata) <tt>&quot;lazy-refcounts&quot;</tt> True if refcounts may be updated lazily (default: off) <tt>&quot;refcount-bits&quot;</tt> Width of reference counts in bits (default: 16) <code>Members:</code></p>
 <dl>
 <dt>&quot;file: BlockdevRef&quot;</dt>
@@ -2927,7 +2927,7 @@ The members of &quot;BlockdevOptionsBlkdebug&quot; when &quot;driver&quot; is &q
 <dd>Not documented</dd>
 <dt>&quot;table-size: int&quot; (optional)</dt>
 <dd>Not documented</dd></dl>
-<p> <code>Since:</code> 2.12 <code>BlockdevCreateOptionsRbd</code> (Object) Driver specific image creation options for rbd/Ceph. <tt>&quot;location&quot;</tt> Where to store the new image file. This location cannot point to a snapshot. <tt>&quot;size&quot;</tt> Size of the virtual disk in bytes <tt>&quot;cluster-size&quot;</tt> <font SIZE="-1">RBD</font> object size <code>Members:</code></p>
+<p> <code>Since:</code> 2.12 <code>BlockdevCreateOptionsRbd</code> (Object) Driver specific image creation options for rbd/Ceph. <tt>&quot;location&quot;</tt> Where to store the new image file. This location cannot point to a snapshot. <tt>&quot;size&quot;</tt> Size of the virtual disk in bytes <tt>&quot;cluster-size&quot;</tt> RBD object size <code>Members:</code></p>
 <dl>
 <dt>&quot;location: BlockdevOptionsRbd&quot;</dt>
 <dd>Not documented</dd>
@@ -2935,19 +2935,19 @@ The members of &quot;BlockdevOptionsBlkdebug&quot; when &quot;driver&quot; is &q
 <dd>Not documented</dd>
 <dt>&quot;cluster-size: int&quot; (optional)</dt>
 <dd>Not documented</dd></dl>
-<p> <code>Since:</code> 2.12 <code>BlockdevVmdkSubformat</code> (Enum) Subformat options for <font SIZE="-1">VMDK</font> images <code>Values:</code></p>
+<p> <code>Since:</code> 2.12 <code>BlockdevVmdkSubformat</code> (Enum) Subformat options for VMDK images <code>Values:</code></p>
 <dl>
 <dt>&quot;monolithicSparse&quot;</dt>
 <dd>Single file image with sparse cluster allocation</dd>
 <dt>&quot;monolithicFlat&quot;</dt>
 <dd>Single flat data image and a descriptor file</dd>
 <dt>&quot;twoGbMaxExtentSparse&quot;</dt>
-<dd>Data is split into 2GB (per virtual <font SIZE="-1">LBA</font>) sparse extent files, in addition to a descriptor file</dd>
+<dd>Data is split into 2GB (per virtual LBA) sparse extent files, in addition to a descriptor file</dd>
 <dt>&quot;twoGbMaxExtentFlat&quot;</dt>
-<dd>Data is split into 2GB (per virtual <font SIZE="-1">LBA</font>) flat extent files, in addition to a descriptor file</dd>
+<dd>Data is split into 2GB (per virtual LBA) flat extent files, in addition to a descriptor file</dd>
 <dt>&quot;streamOptimized&quot;</dt>
 <dd>Single file image sparse cluster allocation, optimized for streaming over network.</dd></dl>
-<p> <code>Since:</code> 4.0 <code>BlockdevVmdkAdapterType</code> (Enum) Adapter type info for <font SIZE="-1">VMDK</font> images <code>Values:</code></p>
+<p> <code>Since:</code> 4.0 <code>BlockdevVmdkAdapterType</code> (Enum) Adapter type info for VMDK images <code>Values:</code></p>
 <dl>
 <dt>&quot;ide&quot;</dt>
 <dd>Not documented</dd>
@@ -2957,7 +2957,7 @@ The members of &quot;BlockdevOptionsBlkdebug&quot; when &quot;driver&quot; is &q
 <dd>Not documented</dd>
 <dt>&quot;legacyESX&quot;</dt>
 <dd>Not documented</dd></dl>
-<p> <code>Since:</code> 4.0 <code>BlockdevCreateOptionsVmdk</code> (Object) Driver specific image creation options for <font SIZE="-1">VMDK.</font> <tt>&quot;file&quot;</tt> Where to store the new image file. This refers to the image file for monolithcSparse and streamOptimized format, or the descriptor file for other formats. <tt>&quot;size&quot;</tt> Size of the virtual disk in bytes <tt>&quot;extents&quot;</tt> Where to store the data extents. Required for monolithcFlat, twoGbMaxExtentSparse and twoGbMaxExtentFlat formats. For monolithicFlat, only one entry is required; for twoGbMaxExtent* formats, the number of entries required is calculated as extent_number = virtual_size / 2GB. Providing more extents than will be used is an error. <tt>&quot;subformat&quot;</tt> The subformat of the <font SIZE="-1">VMDK</font> image. Default: &#8220;monolithicSparse&#8221;. <tt>&quot;backing-file&quot;</tt> The path of backing file. Default: no backing file is used. <tt>&quot;adapter-type&quot;</tt> The adapter type used to fill in the descriptor. Default: ide. <tt>&quot;hwversion&quot;</tt> Hardware version. The meaningful options are &#8220;4&#8221; or &#8220;6&#8221;. Default: &#8220;4&#8221;. <tt>&quot;zeroed-grain&quot;</tt> Whether to enable zeroed-grain feature for sparse subformats. Default: false. <code>Members:</code></p>
+<p> <code>Since:</code> 4.0 <code>BlockdevCreateOptionsVmdk</code> (Object) Driver specific image creation options for VMDK. <tt>&quot;file&quot;</tt> Where to store the new image file. This refers to the image file for monolithcSparse and streamOptimized format, or the descriptor file for other formats. <tt>&quot;size&quot;</tt> Size of the virtual disk in bytes <tt>&quot;extents&quot;</tt> Where to store the data extents. Required for monolithcFlat, twoGbMaxExtentSparse and twoGbMaxExtentFlat formats. For monolithicFlat, only one entry is required; for twoGbMaxExtent* formats, the number of entries required is calculated as extent_number = virtual_size / 2GB. Providing more extents than will be used is an error. <tt>&quot;subformat&quot;</tt> The subformat of the VMDK image. Default: &#8220;monolithicSparse&#8221;. <tt>&quot;backing-file&quot;</tt> The path of backing file. Default: no backing file is used. <tt>&quot;adapter-type&quot;</tt> The adapter type used to fill in the descriptor. Default: ide. <tt>&quot;hwversion&quot;</tt> Hardware version. The meaningful options are &#8220;4&#8221; or &#8220;6&#8221;. Default: &#8220;4&#8221;. <tt>&quot;zeroed-grain&quot;</tt> Whether to enable zeroed-grain feature for sparse subformats. Default: false. <code>Members:</code></p>
 <dl>
 <dt>&quot;file: BlockdevRef&quot;</dt>
 <dd>Not documented</dd>
@@ -3013,13 +3013,13 @@ The members of &quot;BlockdevOptionsBlkdebug&quot; when &quot;driver&quot; is &q
 <dd>Not documented</dd>
 <dt>&quot;object-size: int&quot; (optional)</dt>
 <dd>Not documented</dd></dl>
-<p> <code>Since:</code> 2.12 <code>BlockdevCreateOptionsSsh</code> (Object) Driver specific image creation options for <font SIZE="-1">SSH.</font> <tt>&quot;location&quot;</tt> Where to store the new image file <tt>&quot;size&quot;</tt> Size of the virtual disk in bytes <code>Members:</code></p>
+<p> <code>Since:</code> 2.12 <code>BlockdevCreateOptionsSsh</code> (Object) Driver specific image creation options for SSH. <tt>&quot;location&quot;</tt> Where to store the new image file <tt>&quot;size&quot;</tt> Size of the virtual disk in bytes <code>Members:</code></p>
 <dl>
 <dt>&quot;location: BlockdevOptionsSsh&quot;</dt>
 <dd>Not documented</dd>
 <dt>&quot;size: int&quot;</dt>
 <dd>Not documented</dd></dl>
-<p> <code>Since:</code> 2.12 <code>BlockdevCreateOptionsVdi</code> (Object) Driver specific image creation options for <font SIZE="-1">VDI.</font> <tt>&quot;file&quot;</tt> Node to create the image format on <tt>&quot;size&quot;</tt> Size of the virtual disk in bytes <tt>&quot;preallocation&quot;</tt> Preallocation mode for the new image (default: off; allowed values: off, metadata) <code>Members:</code></p>
+<p> <code>Since:</code> 2.12 <code>BlockdevCreateOptionsVdi</code> (Object) Driver specific image creation options for VDI. <tt>&quot;file&quot;</tt> Node to create the image format on <tt>&quot;size&quot;</tt> Size of the virtual disk in bytes <tt>&quot;preallocation&quot;</tt> Preallocation mode for the new image (default: off; allowed values: off, metadata) <code>Members:</code></p>
 <dl>
 <dt>&quot;file: BlockdevRef&quot;</dt>
 <dd>Not documented</dd>
@@ -3033,7 +3033,7 @@ The members of &quot;BlockdevOptionsBlkdebug&quot; when &quot;driver&quot; is &q
 <dd>Growing image file</dd>
 <dt>&quot;fixed&quot;</dt>
 <dd>Preallocated fixed-size image file</dd></dl>
-<p> <code>Since:</code> 2.12 <code>BlockdevCreateOptionsVhdx</code> (Object) Driver specific image creation options for vhdx. <tt>&quot;file&quot;</tt> Node to create the image format on <tt>&quot;size&quot;</tt> Size of the virtual disk in bytes <tt>&quot;log-size&quot;</tt> Log size in bytes, must be a multiple of 1 <font SIZE="-1">MB</font> (default: 1 <font SIZE="-1">MB</font>) <tt>&quot;block-size&quot;</tt> Block size in bytes, must be a multiple of 1 <font SIZE="-1">MB</font> and not larger than 256 <font SIZE="-1">MB</font> (default: automatically choose a block size depending on the image size) <tt>&quot;subformat&quot;</tt> vhdx subformat (default: dynamic) <tt>&quot;block-state-zero&quot;</tt> Force use of payload blocks of type &#8216;<font SIZE="-1">ZERO</font>&#8216;. Non-standard, but default. Do not set to &#8216;off&#8217; when using &#8216;qemu-img convert&#8217; with subformat=dynamic. <code>Members:</code></p>
+<p> <code>Since:</code> 2.12 <code>BlockdevCreateOptionsVhdx</code> (Object) Driver specific image creation options for vhdx. <tt>&quot;file&quot;</tt> Node to create the image format on <tt>&quot;size&quot;</tt> Size of the virtual disk in bytes <tt>&quot;log-size&quot;</tt> Log size in bytes, must be a multiple of 1 MB (default: 1 MB) <tt>&quot;block-size&quot;</tt> Block size in bytes, must be a multiple of 1 MB and not larger than 256 MB (default: automatically choose a block size depending on the image size) <tt>&quot;subformat&quot;</tt> vhdx subformat (default: dynamic) <tt>&quot;block-state-zero&quot;</tt> Force use of payload blocks of type &#8216;ZERO&#8216;. Non-standard, but default. Do not set to &#8216;off&#8217; when using &#8216;qemu-img convert&#8217; with subformat=dynamic. <code>Members:</code></p>
 <dl>
 <dt>&quot;file: BlockdevRef&quot;</dt>
 <dd>Not documented</dd>
@@ -3053,7 +3053,7 @@ The members of &quot;BlockdevOptionsBlkdebug&quot; when &quot;driver&quot; is &q
 <dd>Growing image file</dd>
 <dt>&quot;fixed&quot;</dt>
 <dd>Preallocated fixed-size image file</dd></dl>
-<p> <code>Since:</code> 2.12 <code>BlockdevCreateOptionsVpc</code> (Object) Driver specific image creation options for vpc (<font SIZE="-1">VHD</font>). <tt>&quot;file&quot;</tt> Node to create the image format on <tt>&quot;size&quot;</tt> Size of the virtual disk in bytes <tt>&quot;subformat&quot;</tt> vhdx subformat (default: dynamic) <tt>&quot;force-size&quot;</tt> Force use of the exact byte size instead of rounding to the next size that can be represented in <font SIZE="-1">CHS</font> geometry (default: false) <code>Members:</code></p>
+<p> <code>Since:</code> 2.12 <code>BlockdevCreateOptionsVpc</code> (Object) Driver specific image creation options for vpc (VHD). <tt>&quot;file&quot;</tt> Node to create the image format on <tt>&quot;size&quot;</tt> Size of the virtual disk in bytes <tt>&quot;subformat&quot;</tt> vhdx subformat (default: dynamic) <tt>&quot;force-size&quot;</tt> Force use of the exact byte size instead of rounding to the next size that can be represented in CHS geometry (default: false) <code>Members:</code></p>
 <dl>
 <dt>&quot;file: BlockdevRef&quot;</dt>
 <dd>Not documented</dd>
@@ -3103,7 +3103,7 @@ The members of &quot;BlockdevOptionsBlkdebug&quot; when &quot;driver&quot; is &q
 <dd>Identifier for the newly created job.</dd>
 <dt>&quot;options: BlockdevCreateOptions&quot;</dt>
 <dd>Options for the image creation.</dd></dl>
-<p> <code>Since:</code> 3.0 <code>blockdev-open-tray</code> (Command) Opens a block device&#8217;s tray. If there is a block driver state tree inserted as a medium, it will become inaccessible to the guest (but it will remain associated to the block device, so closing the tray will make it accessible again). If the tray was already open before, this will be a no-op. Once the tray opens, a <font SIZE="-1">DEVICE_TRAY_MOVED</font> event is emitted. There are cases in which no such event will be generated, these include:</p>
+<p> <code>Since:</code> 3.0 <code>blockdev-open-tray</code> (Command) Opens a block device&#8217;s tray. If there is a block driver state tree inserted as a medium, it will become inaccessible to the guest (but it will remain associated to the block device, so closing the tray will make it accessible again). If the tray was already open before, this will be a no-op. Once the tray opens, a DEVICE_TRAY_MOVED event is emitted. There are cases in which no such event will be generated, these include:</p>
 <dl>
 <dt>&#8211;</dt>
 <dd>if the guest has locked the tray, <tt>&quot;force&quot;</tt> is false and the guest does not respond to the eject request</dd>
@@ -3116,102 +3116,102 @@ The members of &quot;BlockdevOptionsBlkdebug&quot; when &quot;driver&quot; is &q
 <dt>&quot;device: string&quot; (optional)</dt>
 <dd>Block device name (deprecated, use <tt>&quot;id&quot;</tt> instead)</dd>
 <dt>&quot;id: string&quot; (optional)</dt>
-<dd>The name or <font SIZE="-1">QOM</font> path of the guest device (since: 2.8)</dd>
+<dd>The name or QOM path of the guest device (since: 2.8)</dd>
 <dt>&quot;force: boolean&quot; (optional)</dt>
 <dd>if false (the default), an eject request will be sent to the guest if it has locked the tray (and the tray will not be opened immediately); if true, the tray will be opened regardless of whether it is locked</dd></dl>
-<p> <code>Since:</code> 2.5 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;blockdev-open-tray&quot;,<br />
+<p> <code>Since:</code> 2.5 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;blockdev-open-tray&quot;,<br/>
    &quot;arguments&quot; : {&quot;id&quot; : &quot;ide0-1-0&quot;}}</p>
-<p>    &lt; -{&quot;timestamp&quot; : {&quot;seconds&quot; : 1418751016,<br />
-                       &quot;microseconds&quot; : 716996},<br />
-        &quot;event&quot; : &quot;DEVICE_TRAY_MOVED&quot;,<br />
-        &quot;data&quot; : {&quot;device&quot; : &quot;ide1-cd0&quot;,<br />
-                  &quot;id&quot; : &quot;ide0-1-0&quot;,<br />
+<p>    &lt; -{&quot;timestamp&quot; : {&quot;seconds&quot; : 1418751016,<br/>
+                       &quot;microseconds&quot; : 716996},<br/>
+        &quot;event&quot; : &quot;DEVICE_TRAY_MOVED&quot;,<br/>
+        &quot;data&quot; : {&quot;device&quot; : &quot;ide1-cd0&quot;,<br/>
+                  &quot;id&quot; : &quot;ide0-1-0&quot;,<br/>
                   &quot;tray-open&quot; : true}}</p>
-<p>    &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
+<p>    &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
 } <code>blockdev-close-tray</code> (Command) Closes a block device&#8217;s tray. If there is a block driver state tree associated with the block device (which is currently ejected), that tree will be loaded as the medium. If the tray was already closed before, this will be a no-op. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;device: string&quot; (optional)</dt>
 <dd>Block device name (deprecated, use <tt>&quot;id&quot;</tt> instead)</dd>
 <dt>&quot;id: string&quot; (optional)</dt>
-<dd>The name or <font SIZE="-1">QOM</font> path of the guest device (since: 2.8)</dd></dl>
-<p> <code>Since:</code> 2.5 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;blockdev-close-tray&quot;,<br />
+<dd>The name or QOM path of the guest device (since: 2.8)</dd></dl>
+<p> <code>Since:</code> 2.5 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;blockdev-close-tray&quot;,<br/>
    &quot;arguments&quot; : {&quot;id&quot; : &quot;ide0-1-0&quot;}}</p>
-<p>    &lt; -{&quot;timestamp&quot; : {&quot;seconds&quot; : 1418751345,<br />
-                       &quot;microseconds&quot; : 272147},<br />
-        &quot;event&quot; : &quot;DEVICE_TRAY_MOVED&quot;,<br />
-        &quot;data&quot; : {&quot;device&quot; : &quot;ide1-cd0&quot;,<br />
-                  &quot;id&quot; : &quot;ide0-1-0&quot;,<br />
+<p>    &lt; -{&quot;timestamp&quot; : {&quot;seconds&quot; : 1418751345,<br/>
+                       &quot;microseconds&quot; : 272147},<br/>
+        &quot;event&quot; : &quot;DEVICE_TRAY_MOVED&quot;,<br/>
+        &quot;data&quot; : {&quot;device&quot; : &quot;ide1-cd0&quot;,<br/>
+                  &quot;id&quot; : &quot;ide0-1-0&quot;,<br/>
                   &quot;tray-open&quot; : false}}</p>
-<p>    &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
+<p>    &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
 } <code>blockdev-remove-medium</code> (Command) Removes a medium (a block driver state tree) from a block device. That block device&#8217;s tray must currently be open (unless there is no attached guest device). If the tray is open and there is no medium inserted, this will be a no-op. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;id: string&quot;</dt>
-<dd>The name or <font SIZE="-1">QOM</font> path of the guest device</dd></dl>
-<p> <code>Since:</code> 2.12 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;blockdev-remove-medium&quot;,<br />
+<dd>The name or QOM path of the guest device</dd></dl>
+<p> <code>Since:</code> 2.12 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;blockdev-remove-medium&quot;,<br/>
    &quot;arguments&quot; : {&quot;id&quot; : &quot;ide0-1-0&quot;}}</p>
-<p>    &lt; &#8211;<br />
-{<br />
-    &quot;error&quot;:<br />
-    {<br />
-        &quot;class&quot; : &quot;GenericError&quot;,<br />
-                  &quot;desc&quot; : &quot;Tray of device &#8216;ide0-1-0&#8217; is not open&quot;<br />
-    }<br />
+<p>    &lt; &#8211;<br/>
+{<br/>
+    &quot;error&quot;:<br/>
+    {<br/>
+        &quot;class&quot; : &quot;GenericError&quot;,<br/>
+                  &quot;desc&quot; : &quot;Tray of device &#8216;ide0-1-0&#8217; is not open&quot;<br/>
+    }<br/>
     }</p>
-<p>        -&gt; {&quot;execute&quot; : &quot;blockdev-open-tray&quot;,<br />
+<p>        -&gt; {&quot;execute&quot; : &quot;blockdev-open-tray&quot;,<br/>
             &quot;arguments&quot; : {&quot;id&quot; : &quot;ide0-1-0&quot;}}</p>
-<p>        &lt; -{&quot;timestamp&quot; : {&quot;seconds&quot; : 1418751627,<br />
-                           &quot;microseconds&quot; : 549958},<br />
-            &quot;event&quot; : &quot;DEVICE_TRAY_MOVED&quot;,<br />
-            &quot;data&quot; : {&quot;device&quot; : &quot;ide1-cd0&quot;,<br />
-                      &quot;id&quot; : &quot;ide0-1-0&quot;,<br />
+<p>        &lt; -{&quot;timestamp&quot; : {&quot;seconds&quot; : 1418751627,<br/>
+                           &quot;microseconds&quot; : 549958},<br/>
+            &quot;event&quot; : &quot;DEVICE_TRAY_MOVED&quot;,<br/>
+            &quot;data&quot; : {&quot;device&quot; : &quot;ide1-cd0&quot;,<br/>
+                      &quot;id&quot; : &quot;ide0-1-0&quot;,<br/>
                       &quot;tray-open&quot; : true}}</p>
-<p>        &lt; &#8211;<br />
-    {<br />
-        &quot;return&quot;:<br />
-        {<br />
-        }<br />
+<p>        &lt; &#8211;<br/>
+    {<br/>
+        &quot;return&quot;:<br/>
+        {<br/>
+        }<br/>
         }</p>
-<p>            -&gt; {&quot;execute&quot; : &quot;blockdev-remove-medium&quot;,<br />
+<p>            -&gt; {&quot;execute&quot; : &quot;blockdev-remove-medium&quot;,<br/>
                 &quot;arguments&quot; : {&quot;id&quot; : &quot;ide0-1-0&quot;}}</p>
-<p>            &lt; &#8211;<br />
-        {<br />
-            &quot;return&quot;:<br />
-            {<br />
-            }<br />
+<p>            &lt; &#8211;<br/>
+        {<br/>
+            &quot;return&quot;:<br/>
+            {<br/>
+            }<br/>
         } <code>blockdev-insert-medium</code> (Command) Inserts a medium (a block driver state tree) into a block device. That block device&#8217;s tray must currently be open (unless there is no attached guest device) and there must be no medium inserted already. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;id: string&quot;</dt>
-<dd>The name or <font SIZE="-1">QOM</font> path of the guest device</dd>
+<dd>The name or QOM path of the guest device</dd>
 <dt>&quot;node-name: string&quot;</dt>
 <dd>name of a node in the block driver state graph</dd></dl>
-<p> <code>Since:</code> 2.12 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;blockdev-add&quot;,<br />
-   &quot;arguments&quot; : {<br />
-       &quot;node-name&quot; : &quot;node0&quot;,<br />
-       &quot;driver&quot; : &quot;raw&quot;,<br />
-       &quot;file&quot; : {&quot;driver&quot; : &quot;file&quot;,<br />
-                 &quot;filename&quot; : &quot;fedora.iso&quot;}<br />
-   }} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
+<p> <code>Since:</code> 2.12 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;blockdev-add&quot;,<br/>
+   &quot;arguments&quot; : {<br/>
+       &quot;node-name&quot; : &quot;node0&quot;,<br/>
+       &quot;driver&quot; : &quot;raw&quot;,<br/>
+       &quot;file&quot; : {&quot;driver&quot; : &quot;file&quot;,<br/>
+                 &quot;filename&quot; : &quot;fedora.iso&quot;}<br/>
+   }} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
     }</p>
-<p>        -&gt; {&quot;execute&quot; : &quot;blockdev-insert-medium&quot;,<br />
-            &quot;arguments&quot; : {&quot;id&quot; : &quot;ide0-1-0&quot;,<br />
+<p>        -&gt; {&quot;execute&quot; : &quot;blockdev-insert-medium&quot;,<br/>
+            &quot;arguments&quot; : {&quot;id&quot; : &quot;ide0-1-0&quot;,<br/>
                            &quot;node-name&quot; : &quot;node0&quot;}}</p>
-<p>        &lt; &#8211;<br />
-    {<br />
-        &quot;return&quot;:<br />
-        {<br />
-        }<br />
+<p>        &lt; &#8211;<br/>
+    {<br/>
+        &quot;return&quot;:<br/>
+        {<br/>
+        }<br/>
     } <code>BlockdevChangeReadOnlyMode</code> (Enum) Specifies the new read-only mode of a block device subject to the <tt>&quot;blockdev-change-medium&quot;</tt> command. <code>Values:</code></p>
 <dl>
 <dt>&quot;retain&quot;</dt>
@@ -3225,7 +3225,7 @@ The members of &quot;BlockdevOptionsBlkdebug&quot; when &quot;driver&quot; is &q
 <dt>&quot;device: string&quot; (optional)</dt>
 <dd>Block device name (deprecated, use <tt>&quot;id&quot;</tt> instead)</dd>
 <dt>&quot;id: string&quot; (optional)</dt>
-<dd>The name or <font SIZE="-1">QOM</font> path of the guest device (since: 2.8)</dd>
+<dd>The name or QOM path of the guest device (since: 2.8)</dd>
 <dt>&quot;filename: string&quot;</dt>
 <dd>filename of the new image to be loaded</dd>
 <dt>&quot;format: string&quot; (optional)</dt>
@@ -3233,48 +3233,48 @@ The members of &quot;BlockdevOptionsBlkdebug&quot; when &quot;driver&quot; is &q
 <dt>&quot;read-only-mode: BlockdevChangeReadOnlyMode&quot; (optional)</dt>
 <dd>change the read-only mode of the device; defaults to &#8216;retain&#8217;</dd></dl>
 <p> <code>Since:</code> 2.5 <code>Examples:</code> 1. Change a removable medium</p>
-<p>        -&gt;{&quot;execute&quot; : &quot;blockdev-change-medium&quot;,<br />
-           &quot;arguments&quot; : {&quot;id&quot; : &quot;ide0-1-0&quot;,<br />
-                          &quot;filename&quot; : &quot;/srv/images/Fedora-12-x86_64-DVD.iso&quot;,<br />
-                          &quot;format&quot; : &quot;raw&quot;}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
+<p>        -&gt;{&quot;execute&quot; : &quot;blockdev-change-medium&quot;,<br/>
+           &quot;arguments&quot; : {&quot;id&quot; : &quot;ide0-1-0&quot;,<br/>
+                          &quot;filename&quot; : &quot;/srv/images/Fedora-12-x86_64-DVD.iso&quot;,<br/>
+                          &quot;format&quot; : &quot;raw&quot;}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
 }</p>
 <p>2. Load a read &#8211; only medium into a writable drive</p>
-<p>                     -&gt;{&quot;execute&quot; : &quot;blockdev-change-medium&quot;,<br />
-                        &quot;arguments&quot; : {&quot;id&quot; : &quot;floppyA&quot;,<br />
-                                       &quot;filename&quot; : &quot;/srv/images/ro.img&quot;,<br />
-                                       &quot;format&quot; : &quot;raw&quot;,<br />
+<p>                     -&gt;{&quot;execute&quot; : &quot;blockdev-change-medium&quot;,<br/>
+                        &quot;arguments&quot; : {&quot;id&quot; : &quot;floppyA&quot;,<br/>
+                                       &quot;filename&quot; : &quot;/srv/images/ro.img&quot;,<br/>
+                                       &quot;format&quot; : &quot;raw&quot;,<br/>
                                        &quot;read-only-mode&quot; : &quot;retain&quot;}}</p>
-<p>    &lt; &#8211;<br />
-{<br />
-    &quot;error&quot;:<br />
-    {<br />
-        &quot;class&quot; : &quot;GenericError&quot;,<br />
-                  &quot;desc&quot; : &quot;Could not open &#8216;/srv/images/ro.img&#8217;: Permission denied&quot;<br />
-    }<br />
+<p>    &lt; &#8211;<br/>
+{<br/>
+    &quot;error&quot;:<br/>
+    {<br/>
+        &quot;class&quot; : &quot;GenericError&quot;,<br/>
+                  &quot;desc&quot; : &quot;Could not open &#8216;/srv/images/ro.img&#8217;: Permission denied&quot;<br/>
+    }<br/>
     }</p>
-<p>        -&gt; {&quot;execute&quot; : &quot;blockdev-change-medium&quot;,<br />
-            &quot;arguments&quot; : {&quot;id&quot; : &quot;floppyA&quot;,<br />
-                           &quot;filename&quot; : &quot;/srv/images/ro.img&quot;,<br />
-                           &quot;format&quot; : &quot;raw&quot;,<br />
+<p>        -&gt; {&quot;execute&quot; : &quot;blockdev-change-medium&quot;,<br/>
+            &quot;arguments&quot; : {&quot;id&quot; : &quot;floppyA&quot;,<br/>
+                           &quot;filename&quot; : &quot;/srv/images/ro.img&quot;,<br/>
+                           &quot;format&quot; : &quot;raw&quot;,<br/>
                            &quot;read-only-mode&quot; : &quot;read-only&quot;}}</p>
-<p>        &lt; &#8211;<br />
-    {<br />
-        &quot;return&quot;:<br />
-        {<br />
-        }<br />
-    } <code>BlockErrorAction</code> (Enum) An enumeration of action that has been taken when a <font SIZE="-1">DISK I/O</font> occurs <code>Values:</code></p>
+<p>        &lt; &#8211;<br/>
+    {<br/>
+        &quot;return&quot;:<br/>
+        {<br/>
+        }<br/>
+    } <code>BlockErrorAction</code> (Enum) An enumeration of action that has been taken when a DISK I/O occurs <code>Values:</code></p>
 <dl>
 <dt>&quot;ignore&quot;</dt>
 <dd>error has been ignored</dd>
 <dt>&quot;report&quot;</dt>
 <dd>error has been reported to the device</dd>
 <dt>&quot;stop&quot;</dt>
-<dd>error caused <font SIZE="-1">VM</font> to be stopped</dd></dl>
-<p> <code>Since:</code> 2.1 <font SIZE="-1"><code>BLOCK_IMAGE_CORRUPTED</code></font> (Event) Emitted when a disk image is being marked corrupt. The image can be identified by its device or node name. The &#8216;device&#8217; field is always present for compatibility reasons, but it can be empty (&quot;&quot;) if the image does not have a device name associated. <code>Arguments:</code></p>
+<dd>error caused VM to be stopped</dd></dl>
+<p> <code>Since:</code> 2.1 <code>BLOCK_IMAGE_CORRUPTED</code> (Event) Emitted when a disk image is being marked corrupt. The image can be identified by its device or node name. The &#8216;device&#8217; field is always present for compatibility reasons, but it can be empty (&quot;&quot;) if the image does not have a device name associated. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;device: string&quot;</dt>
 <dd>device name. This is always present for compatibility reasons, but it can be empty (&quot;&quot;) if the image does not have a device name associated.</dd>
@@ -3287,14 +3287,14 @@ The members of &quot;BlockdevOptionsBlkdebug&quot; when &quot;driver&quot; is &q
 <dt>&quot;size: int&quot; (optional)</dt>
 <dd>if the corruption resulted from an image access, this is the access size</dd>
 <dt>&quot;fatal: boolean&quot;</dt>
-<dd>if set, the image is marked corrupt and therefore unusable after this event and must be repaired (Since 2.2; before, every <font SIZE="-1">BLOCK_IMAGE_CORRUPTED</font> event was fatal)</dd></dl>
-<p> <code>Note:</code> If action is &#8220;stop&#8221;, a <font SIZE="-1">STOP</font> event will eventually follow the <font SIZE="-1">BLOCK_IO_ERROR</font> event. <code>Example:</code> </p>
+<dd>if set, the image is marked corrupt and therefore unusable after this event and must be repaired (Since 2.2; before, every BLOCK_IMAGE_CORRUPTED event was fatal)</dd></dl>
+<p> <code>Note:</code> If action is &#8220;stop&#8221;, a STOP event will eventually follow the BLOCK_IO_ERROR event. <code>Example:</code> </p>
 <pre> &lt;- { &quot;event&quot;: &quot;BLOCK_IMAGE_CORRUPTED&quot;,
  &quot;data&quot;: { &quot;device&quot;: &quot;ide0-hd0&quot;, &quot;node-name&quot;: &quot;node0&quot;,
  &quot;msg&quot;: &quot;Prevented active L1 table overwrite&quot;, &quot;offset&quot;: 196608,
  &quot;size&quot;: 65536 },
  &quot;timestamp&quot;: { &quot;seconds&quot;: 1378126126, &quot;microseconds&quot;: 966463 } }</pre>
-<p><code>Since:</code> 1.7 <font SIZE="-1"><code>BLOCK_IO_ERROR</code></font> (Event) Emitted when a disk I/O error occurs <code>Arguments:</code></p>
+<p><code>Since:</code> 1.7 <code>BLOCK_IO_ERROR</code> (Event) Emitted when a disk I/O error occurs <code>Arguments:</code></p>
 <dl>
 <dt>&quot;device: string&quot;</dt>
 <dd>device name. This is always present for compatibility reasons, but it can be empty (&quot;&quot;) if the image does not have a device name associated.</dd>
@@ -3308,19 +3308,19 @@ The members of &quot;BlockdevOptionsBlkdebug&quot; when &quot;driver&quot; is &q
 <dd>true if I/O error was caused due to a no-space condition. This key is only present if query-block&#8217;s io-status is present, please see query-block documentation for more information (since: 2.2)</dd>
 <dt>&quot;reason: string&quot;</dt>
 <dd>human readable string describing the error cause. (This field is a debugging aid for humans, it should not be parsed by applications) (since: 2.2)</dd></dl>
-<p> <code>Note:</code> If action is &#8220;stop&#8221;, a <font SIZE="-1">STOP</font> event will eventually follow the <font SIZE="-1">BLOCK_IO_ERROR</font> event <code>Since:</code> 0.13.0 <code>Example:</code> </p>
+<p> <code>Note:</code> If action is &#8220;stop&#8221;, a STOP event will eventually follow the BLOCK_IO_ERROR event <code>Since:</code> 0.13.0 <code>Example:</code> </p>
 <pre> &lt;- { &quot;event&quot;: &quot;BLOCK_IO_ERROR&quot;,
  &quot;data&quot;: { &quot;device&quot;: &quot;ide0-hd1&quot;,
  &quot;node-name&quot;: &quot;#block212&quot;,
  &quot;operation&quot;: &quot;write&quot;,
  &quot;action&quot;: &quot;stop&quot; },
  &quot;timestamp&quot;: { &quot;seconds&quot;: 1265044230, &quot;microseconds&quot;: 450486 } }</pre>
-<p><font SIZE="-1"><code>BLOCK_JOB_COMPLETED</code></font> (Event) Emitted when a block job has completed <code>Arguments:</code></p>
+<p><code>BLOCK_JOB_COMPLETED</code> (Event) Emitted when a block job has completed <code>Arguments:</code></p>
 <dl>
 <dt>&quot;type: JobType&quot;</dt>
 <dd>job type</dd>
 <dt>&quot;device: string&quot;</dt>
-<dd>The job identifier. Originally the device name but other values are allowed since <font SIZE="-1">QEMU 2.7</font></dd>
+<dd>The job identifier. Originally the device name but other values are allowed since QEMU 2.7</dd>
 <dt>&quot;len: int&quot;</dt>
 <dd>maximum progress value</dd>
 <dt>&quot;offset: int&quot;</dt>
@@ -3335,12 +3335,12 @@ The members of &quot;BlockdevOptionsBlkdebug&quot; when &quot;driver&quot; is &q
  &quot;len&quot;: 10737418240, &quot;offset&quot;: 10737418240,
  &quot;speed&quot;: 0 },
  &quot;timestamp&quot;: { &quot;seconds&quot;: 1267061043, &quot;microseconds&quot;: 959568 } }</pre>
-<p><font SIZE="-1"><code>BLOCK_JOB_CANCELLED</code></font> (Event) Emitted when a block job has been cancelled <code>Arguments:</code></p>
+<p><code>BLOCK_JOB_CANCELLED</code> (Event) Emitted when a block job has been cancelled <code>Arguments:</code></p>
 <dl>
 <dt>&quot;type: JobType&quot;</dt>
 <dd>job type</dd>
 <dt>&quot;device: string&quot;</dt>
-<dd>The job identifier. Originally the device name but other values are allowed since <font SIZE="-1">QEMU 2.7</font></dd>
+<dd>The job identifier. Originally the device name but other values are allowed since QEMU 2.7</dd>
 <dt>&quot;len: int&quot;</dt>
 <dd>maximum progress value</dd>
 <dt>&quot;offset: int&quot;</dt>
@@ -3353,10 +3353,10 @@ The members of &quot;BlockdevOptionsBlkdebug&quot; when &quot;driver&quot; is &q
  &quot;len&quot;: 10737418240, &quot;offset&quot;: 134217728,
  &quot;speed&quot;: 0 },
  &quot;timestamp&quot;: { &quot;seconds&quot;: 1267061043, &quot;microseconds&quot;: 959568 } }</pre>
-<p><font SIZE="-1"><code>BLOCK_JOB_ERROR</code></font> (Event) Emitted when a block job encounters an error <code>Arguments:</code></p>
+<p><code>BLOCK_JOB_ERROR</code> (Event) Emitted when a block job encounters an error <code>Arguments:</code></p>
 <dl>
 <dt>&quot;device: string&quot;</dt>
-<dd>The job identifier. Originally the device name but other values are allowed since <font SIZE="-1">QEMU 2.7</font></dd>
+<dd>The job identifier. Originally the device name but other values are allowed since QEMU 2.7</dd>
 <dt>&quot;operation: IoOperationType&quot;</dt>
 <dd>I/O operation</dd>
 <dt>&quot;action: BlockErrorAction&quot;</dt>
@@ -3367,12 +3367,12 @@ The members of &quot;BlockdevOptionsBlkdebug&quot; when &quot;driver&quot; is &q
  &quot;operation&quot;: &quot;write&quot;,
  &quot;action&quot;: &quot;stop&quot; },
  &quot;timestamp&quot;: { &quot;seconds&quot;: 1265044230, &quot;microseconds&quot;: 450486 } }</pre>
-<p><font SIZE="-1"><code>BLOCK_JOB_READY</code></font> (Event) Emitted when a block job is ready to complete <code>Arguments:</code></p>
+<p><code>BLOCK_JOB_READY</code> (Event) Emitted when a block job is ready to complete <code>Arguments:</code></p>
 <dl>
 <dt>&quot;type: JobType&quot;</dt>
 <dd>job type</dd>
 <dt>&quot;device: string&quot;</dt>
-<dd>The job identifier. Originally the device name but other values are allowed since <font SIZE="-1">QEMU 2.7</font></dd>
+<dd>The job identifier. Originally the device name but other values are allowed since QEMU 2.7</dd>
 <dt>&quot;len: int&quot;</dt>
 <dd>maximum progress value</dd>
 <dt>&quot;offset: int&quot;</dt>
@@ -3384,7 +3384,7 @@ The members of &quot;BlockdevOptionsBlkdebug&quot; when &quot;driver&quot; is &q
  &quot;data&quot;: { &quot;device&quot;: &quot;drive0&quot;, &quot;type&quot;: &quot;mirror&quot;, &quot;speed&quot;: 0,
  &quot;len&quot;: 2097152, &quot;offset&quot;: 2097152 }
  &quot;timestamp&quot;: { &quot;seconds&quot;: 1265044230, &quot;microseconds&quot;: 450486 } }</pre>
-<p><font SIZE="-1"><code>BLOCK_JOB_PENDING</code></font> (Event) Emitted when a block job is awaiting explicit authorization to finalize graph changes via <tt>&quot;block-job-finalize&quot;</tt>. If this job is part of a transaction, it will not emit this event until the transaction has converged first. <code>Arguments:</code></p>
+<p><code>BLOCK_JOB_PENDING</code> (Event) Emitted when a block job is awaiting explicit authorization to finalize graph changes via <tt>&quot;block-job-finalize&quot;</tt>. If this job is part of a transaction, it will not emit this event until the transaction has converged first. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;type: JobType&quot;</dt>
 <dd>job type</dd>
@@ -3394,7 +3394,7 @@ The members of &quot;BlockdevOptionsBlkdebug&quot; when &quot;driver&quot; is &q
 <pre> &lt;- { &quot;event&quot;: &quot;BLOCK_JOB_WAITING&quot;,
  &quot;data&quot;: { &quot;device&quot;: &quot;drive0&quot;, &quot;type&quot;: &quot;mirror&quot; },
  &quot;timestamp&quot;: { &quot;seconds&quot;: 1265044230, &quot;microseconds&quot;: 450486 } }</pre>
-<p><code>PreallocMode</code> (Enum) Preallocation mode of <font SIZE="-1">QEMU</font> image file <code>Values:</code></p>
+<p><code>PreallocMode</code> (Enum) Preallocation mode of QEMU image file <code>Values:</code></p>
 <dl>
 <dt>&quot;off&quot;</dt>
 <dd>no preallocation</dd>
@@ -3404,7 +3404,7 @@ The members of &quot;BlockdevOptionsBlkdebug&quot; when &quot;driver&quot; is &q
 <dd>like <tt>&quot;full&quot;</tt> preallocation but allocate disk space by <code>posix_fallocate()</code> rather than writing data.</dd>
 <dt>&quot;full&quot;</dt>
 <dd>preallocate all data by writing it to the device to ensure disk space is really available. This data may or may not be zero, depending on the image format and storage. <tt>&quot;full&quot;</tt> preallocation also sets up metadata correctly.</dd></dl>
-<p> <code>Since:</code> 2.2 <font SIZE="-1"><code>BLOCK_WRITE_THRESHOLD</code></font> (Event) Emitted when writes on block device reaches or exceeds the configured write threshold. For thin-provisioned devices, this means the device should be extended to avoid pausing for disk exhaustion. The event is one shot. Once triggered, it needs to be re-registered with another block-set-write-threshold command. <code>Arguments:</code></p>
+<p> <code>Since:</code> 2.2 <code>BLOCK_WRITE_THRESHOLD</code> (Event) Emitted when writes on block device reaches or exceeds the configured write threshold. For thin-provisioned devices, this means the device should be extended to avoid pausing for disk exhaustion. The event is one shot. Once triggered, it needs to be re-registered with another block-set-write-threshold command. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;node-name: string&quot;</dt>
 <dd>graph node name on which the threshold was exceeded.</dd>
@@ -3412,19 +3412,19 @@ The members of &quot;BlockdevOptionsBlkdebug&quot; when &quot;driver&quot; is &q
 <dd>amount of data which exceeded the threshold, in bytes.</dd>
 <dt>&quot;write-threshold: int&quot;</dt>
 <dd>last configured threshold, in bytes.</dd></dl>
-<p> <code>Since:</code> 2.3 <code>block-set-write-threshold</code> (Command) Change the write threshold for a block drive. An event will be delivered if a write to this block drive crosses the configured threshold. The threshold is an offset, thus must be non-negative. Default is no write threshold. Setting the threshold to zero disables it. This is useful to transparently resize thin-provisioned drives without the guest <font SIZE="-1">OS</font> noticing. <code>Arguments:</code></p>
+<p> <code>Since:</code> 2.3 <code>block-set-write-threshold</code> (Command) Change the write threshold for a block drive. An event will be delivered if a write to this block drive crosses the configured threshold. The threshold is an offset, thus must be non-negative. Default is no write threshold. Setting the threshold to zero disables it. This is useful to transparently resize thin-provisioned drives without the guest OS noticing. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;node-name: string&quot;</dt>
 <dd>graph node name on which the threshold must be set.</dd>
 <dt>&quot;write-threshold: int&quot;</dt>
 <dd>configured threshold for the block device, bytes. Use 0 to disable the threshold.</dd></dl>
-<p> <code>Since:</code> 2.3 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;block-set-write-threshold&quot;,<br />
-   &quot;arguments&quot; : {&quot;node-name&quot; : &quot;mydev&quot;,<br />
-                  &quot;write-threshold&quot; : 17179869184}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
+<p> <code>Since:</code> 2.3 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;block-set-write-threshold&quot;,<br/>
+   &quot;arguments&quot; : {&quot;node-name&quot; : &quot;mydev&quot;,<br/>
+                  &quot;write-threshold&quot; : 17179869184}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
 } <code>x-blockdev-change</code> (Command) Dynamically reconfigure the block driver state graph. It can be used to add, remove, insert or replace a graph node. Currently only the Quorum driver implements this feature to add or remove its child. This is useful to fix a broken quorum child. If <tt>&quot;node&quot;</tt> is specified, it will be inserted under <tt>&quot;parent&quot;</tt>. <tt>&quot;child&quot;</tt> may not be specified in this case. If both <tt>&quot;parent&quot;</tt> and <tt>&quot;child&quot;</tt> are specified but <tt>&quot;node&quot;</tt> is not, <tt>&quot;child&quot;</tt> will be detached from <tt>&quot;parent&quot;</tt>. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;parent: string&quot;</dt>
@@ -3433,35 +3433,35 @@ The members of &quot;BlockdevOptionsBlkdebug&quot; when &quot;driver&quot; is &q
 <dd>the name of a child under the given parent node.</dd>
 <dt>&quot;node: string&quot; (optional)</dt>
 <dd>the name of the node that will be added.</dd></dl>
-<p> <code>Note:</code> this command is experimental, and its <font SIZE="-1">API</font> is not stable. It does not support all kinds of operations, all kinds of children, nor all block drivers. <font SIZE="-1">FIXME</font> Removing children from a quorum node means introducing gaps in the child indices. This cannot be represented in the &#8216;children&#8217; list of BlockdevOptionsQuorum, as returned by .<code>bdrv_refresh_filename()</code>. Warning: The data in a new quorum child <font SIZE="-1">MUST</font> be consistent with that of the rest of the array. <code>Since:</code> 2.7 <code>Example:</code> 1. Add a new node to a quorum<br />
-        -&gt;{&quot;execute&quot; : &quot;blockdev-add&quot;,<br />
-           &quot;arguments&quot; : {<br />
-               &quot;driver&quot; : &quot;raw&quot;,<br />
-               &quot;node-name&quot; : &quot;new_node&quot;,<br />
-               &quot;file&quot; : {&quot;driver&quot; : &quot;file&quot;,<br />
-                         &quot;filename&quot; : &quot;test.raw&quot;}<br />
-           }} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
-    }<br />
-        -&gt; {&quot;execute&quot; : &quot;x-blockdev-change&quot;,<br />
-            &quot;arguments&quot; : {&quot;parent&quot; : &quot;disk1&quot;,<br />
-                           &quot;node&quot; : &quot;new_node&quot;}} &lt; &#8211;<br />
-    {<br />
-        &quot;return&quot;:<br />
-        {<br />
-        }<br />
+<p> <code>Note:</code> this command is experimental, and its API is not stable. It does not support all kinds of operations, all kinds of children, nor all block drivers. FIXME Removing children from a quorum node means introducing gaps in the child indices. This cannot be represented in the &#8216;children&#8217; list of BlockdevOptionsQuorum, as returned by .<code>bdrv_refresh_filename()</code>. Warning: The data in a new quorum child MUST be consistent with that of the rest of the array. <code>Since:</code> 2.7 <code>Example:</code> 1. Add a new node to a quorum<br/>
+        -&gt;{&quot;execute&quot; : &quot;blockdev-add&quot;,<br/>
+           &quot;arguments&quot; : {<br/>
+               &quot;driver&quot; : &quot;raw&quot;,<br/>
+               &quot;node-name&quot; : &quot;new_node&quot;,<br/>
+               &quot;file&quot; : {&quot;driver&quot; : &quot;file&quot;,<br/>
+                         &quot;filename&quot; : &quot;test.raw&quot;}<br/>
+           }} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
+    }<br/>
+        -&gt; {&quot;execute&quot; : &quot;x-blockdev-change&quot;,<br/>
+            &quot;arguments&quot; : {&quot;parent&quot; : &quot;disk1&quot;,<br/>
+                           &quot;node&quot; : &quot;new_node&quot;}} &lt; &#8211;<br/>
+    {<br/>
+        &quot;return&quot;:<br/>
+        {<br/>
+        }<br/>
     }</p>
-<p>2. Delete a quorum&#8217;s node<br />
-        -&gt;{&quot;execute&quot; : &quot;x-blockdev-change&quot;,<br />
-           &quot;arguments&quot; : {&quot;parent&quot; : &quot;disk1&quot;,<br />
-                          &quot;child&quot; : &quot;children.1&quot;}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
+<p>2. Delete a quorum&#8217;s node<br/>
+        -&gt;{&quot;execute&quot; : &quot;x-blockdev-change&quot;,<br/>
+           &quot;arguments&quot; : {&quot;parent&quot; : &quot;disk1&quot;,<br/>
+                          &quot;child&quot; : &quot;children.1&quot;}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
 } <code>x-blockdev-set-iothread</code> (Command) Move <tt>&quot;node&quot;</tt> and its children into the <tt>&quot;iothread&quot;</tt>. If <tt>&quot;iothread&quot;</tt> is null then move <tt>&quot;node&quot;</tt> and its children into the main loop. The node must not be attached to a BlockBackend. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;node-name: string&quot;</dt>
@@ -3470,27 +3470,27 @@ The members of &quot;BlockdevOptionsBlkdebug&quot; when &quot;driver&quot; is &q
 <dd>the name of the IOThread object or null for the main loop</dd>
 <dt>&quot;force: boolean&quot; (optional)</dt>
 <dd>true if the node and its children should be moved when a BlockBackend is already attached</dd></dl>
-<p> <code>Note:</code> this command is experimental and intended for test cases that need control over IOThreads only. <code>Since:</code> 2.12 <code>Example:</code> 1. Move a node into an IOThread<br />
-        -&gt;{&quot;execute&quot; : &quot;x-blockdev-set-iothread&quot;,<br />
-           &quot;arguments&quot; : {&quot;node-name&quot; : &quot;disk1&quot;,<br />
-                          &quot;iothread&quot; : &quot;iothread0&quot;}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
+<p> <code>Note:</code> this command is experimental and intended for test cases that need control over IOThreads only. <code>Since:</code> 2.12 <code>Example:</code> 1. Move a node into an IOThread<br/>
+        -&gt;{&quot;execute&quot; : &quot;x-blockdev-set-iothread&quot;,<br/>
+           &quot;arguments&quot; : {&quot;node-name&quot; : &quot;disk1&quot;,<br/>
+                          &quot;iothread&quot; : &quot;iothread0&quot;}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
 }</p>
-<p>2. Move a node into the main loop<br />
-        -&gt;{&quot;execute&quot; : &quot;x-blockdev-set-iothread&quot;,<br />
-           &quot;arguments&quot; : {&quot;node-name&quot; : &quot;disk1&quot;,<br />
-                          &quot;iothread&quot; : null}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
-} <i>Additional block stuff (</i><font SIZE="-1"><i>VM</i></font><i> related)</i> <code>BiosAtaTranslation</code> (Enum) Policy that <font SIZE="-1">BIOS</font> should use to interpret cylinder/head/sector addresses. Note that Bochs <font SIZE="-1">BIOS</font> and SeaBIOS will not actually translate logical <font SIZE="-1">CHS</font> to physical; instead, they will use logical block addressing. <code>Values:</code></p>
+<p>2. Move a node into the main loop<br/>
+        -&gt;{&quot;execute&quot; : &quot;x-blockdev-set-iothread&quot;,<br/>
+           &quot;arguments&quot; : {&quot;node-name&quot; : &quot;disk1&quot;,<br/>
+                          &quot;iothread&quot; : null}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
+} <i>Additional block stuff (</i><i>VM</i><i> related)</i> <code>BiosAtaTranslation</code> (Enum) Policy that BIOS should use to interpret cylinder/head/sector addresses. Note that Bochs BIOS and SeaBIOS will not actually translate logical CHS to physical; instead, they will use logical block addressing. <code>Values:</code></p>
 <dl>
 <dt>&quot;auto&quot;</dt>
-<dd>If cylinder/heads/sizes are passed, choose between none and <font SIZE="-1">LBA</font> depending on the size of the disk. If they are not passed, choose none if <font SIZE="-1">QEMU</font> can guess that the disk had 16 or fewer heads, large if <font SIZE="-1">QEMU</font> can guess that the disk had 131072 or fewer tracks across all heads (i.e. cylinders*heads&lt;131072), otherwise <font SIZE="-1">LBA.</font></dd>
+<dd>If cylinder/heads/sizes are passed, choose between none and LBA depending on the size of the disk. If they are not passed, choose none if QEMU can guess that the disk had 16 or fewer heads, large if QEMU can guess that the disk had 131072 or fewer tracks across all heads (i.e. cylinders*heads&lt;131072), otherwise LBA.</dd>
 <dt>&quot;none&quot;</dt>
 <dd>The physical disk geometry is equal to the logical geometry.</dd>
 <dt>&quot;lba&quot;</dt>
@@ -3523,73 +3523,73 @@ The members of &quot;BlockdevOptionsBlkdebug&quot; when &quot;driver&quot; is &q
 <dd>the identifier of the persistent reservation manager</dd>
 <dt>&quot;connected: boolean&quot;</dt>
 <dd>true if the persistent reservation manager is connected to the underlying storage or helper</dd></dl>
-<p> <code>Since:</code> 3.0 <code>query-pr-managers</code> (Command) Returns a list of information about each persistent reservation manager. <code>Returns:</code> a list of <tt>&quot;PRManagerInfo&quot;</tt> for each persistent reservation manager <code>Since:</code> 3.0 <code>blockdev-snapshot-internal-sync</code> (Command) Synchronously take an internal snapshot of a block device, when the format of the image used supports it. If the name is an empty string, or a snapshot with name already exists, the operation will fail. For the arguments, see the documentation of BlockdevSnapshotInternal. <code>Returns:</code> nothing on success If <tt>&quot;device&quot;</tt> is not a valid block device, GenericError If any snapshot matching <tt>&quot;name&quot;</tt> exists, or <tt>&quot;name&quot;</tt> is empty, GenericError If the format of the image used does not support it, BlockFormatFeatureNotSupported <code>Since:</code> 1.7 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;blockdev-snapshot-internal-sync&quot;,<br />
-   &quot;arguments&quot; : {&quot;device&quot; : &quot;ide-hd0&quot;,<br />
-                  &quot;name&quot; : &quot;snapshot0&quot;}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
+<p> <code>Since:</code> 3.0 <code>query-pr-managers</code> (Command) Returns a list of information about each persistent reservation manager. <code>Returns:</code> a list of <tt>&quot;PRManagerInfo&quot;</tt> for each persistent reservation manager <code>Since:</code> 3.0 <code>blockdev-snapshot-internal-sync</code> (Command) Synchronously take an internal snapshot of a block device, when the format of the image used supports it. If the name is an empty string, or a snapshot with name already exists, the operation will fail. For the arguments, see the documentation of BlockdevSnapshotInternal. <code>Returns:</code> nothing on success If <tt>&quot;device&quot;</tt> is not a valid block device, GenericError If any snapshot matching <tt>&quot;name&quot;</tt> exists, or <tt>&quot;name&quot;</tt> is empty, GenericError If the format of the image used does not support it, BlockFormatFeatureNotSupported <code>Since:</code> 1.7 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;blockdev-snapshot-internal-sync&quot;,<br/>
+   &quot;arguments&quot; : {&quot;device&quot; : &quot;ide-hd0&quot;,<br/>
+                  &quot;name&quot; : &quot;snapshot0&quot;}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
 } <code>blockdev-snapshot-delete-internal-sync</code> (Command) Synchronously delete an internal snapshot of a block device, when the format of the image used support it. The snapshot is identified by name or id or both. One of the name or id is required. Return SnapshotInfo for the successfully deleted snapshot. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;device: string&quot;</dt>
 <dd>the device name or node-name of a root node to delete the snapshot from</dd>
 <dt>&quot;id: string&quot; (optional)</dt>
-<dd>optional the snapshot&#8217;s <font SIZE="-1">ID</font> to be deleted</dd>
+<dd>optional the snapshot&#8217;s ID to be deleted</dd>
 <dt>&quot;name: string&quot; (optional)</dt>
 <dd>optional the snapshot&#8217;s name to be deleted</dd></dl>
-<p> <code>Returns:</code> SnapshotInfo on success If <tt>&quot;device&quot;</tt> is not a valid block device, GenericError If snapshot not found, GenericError If the format of the image used does not support it, BlockFormatFeatureNotSupported If <tt>&quot;id&quot;</tt> and <tt>&quot;name&quot;</tt> are both not specified, GenericError <code>Since:</code> 1.7 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;blockdev-snapshot-delete-internal-sync&quot;,<br />
-   &quot;arguments&quot; : {&quot;device&quot; : &quot;ide-hd0&quot;,<br />
-                  &quot;name&quot; : &quot;snapshot0&quot;}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-        &quot;id&quot; : &quot;1&quot;,<br />
-               &quot;name&quot; : &quot;snapshot0&quot;,<br />
-                        &quot;vm-state-size&quot; : 0,<br />
-                        &quot;date-sec&quot; : 1000012,<br />
-                        &quot;date-nsec&quot; : 10,<br />
-                        &quot;vm-clock-sec&quot; : 100,<br />
-                        &quot;vm-clock-nsec&quot; : 20<br />
-    }<br />
+<p> <code>Returns:</code> SnapshotInfo on success If <tt>&quot;device&quot;</tt> is not a valid block device, GenericError If snapshot not found, GenericError If the format of the image used does not support it, BlockFormatFeatureNotSupported If <tt>&quot;id&quot;</tt> and <tt>&quot;name&quot;</tt> are both not specified, GenericError <code>Since:</code> 1.7 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;blockdev-snapshot-delete-internal-sync&quot;,<br/>
+   &quot;arguments&quot; : {&quot;device&quot; : &quot;ide-hd0&quot;,<br/>
+                  &quot;name&quot; : &quot;snapshot0&quot;}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+        &quot;id&quot; : &quot;1&quot;,<br/>
+               &quot;name&quot; : &quot;snapshot0&quot;,<br/>
+                        &quot;vm-state-size&quot; : 0,<br/>
+                        &quot;date-sec&quot; : 1000012,<br/>
+                        &quot;date-nsec&quot; : 10,<br/>
+                        &quot;vm-clock-sec&quot; : 100,<br/>
+                        &quot;vm-clock-nsec&quot; : 20<br/>
+    }<br/>
 } <code>eject</code> (Command) Ejects a device from a removable drive. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;device: string&quot; (optional)</dt>
 <dd>Block device name (deprecated, use <tt>&quot;id&quot;</tt> instead)</dd>
 <dt>&quot;id: string&quot; (optional)</dt>
-<dd>The name or <font SIZE="-1">QOM</font> path of the guest device (since: 2.8)</dd>
+<dd>The name or QOM path of the guest device (since: 2.8)</dd>
 <dt>&quot;force: boolean&quot; (optional)</dt>
 <dd>If true, eject regardless of whether the drive is locked. If not specified, the default value is false.</dd></dl>
-<p> <code>Returns:</code> Nothing on success If <tt>&quot;device&quot;</tt> is not a valid block device, DeviceNotFound <code>Notes:</code> Ejecting a device with no media results in success <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;eject&quot;, &quot;arguments&quot; : {&quot;id&quot; : &quot;ide1-0-1&quot;}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
-} <code>nbd-server-start</code> (Command) Start an <font SIZE="-1">NBD</font> server listening on the given host and port. Block devices can then be exported using <tt>&quot;nbd-server-add&quot;</tt>. The <font SIZE="-1">NBD</font> server will present them as named exports; for example, another <font SIZE="-1">QEMU</font> instance could refer to them as &#8220;nbd:HOST:PORT:exportname=NAME&#8221;. <code>Arguments:</code></p>
+<p> <code>Returns:</code> Nothing on success If <tt>&quot;device&quot;</tt> is not a valid block device, DeviceNotFound <code>Notes:</code> Ejecting a device with no media results in success <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;eject&quot;, &quot;arguments&quot; : {&quot;id&quot; : &quot;ide1-0-1&quot;}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
+} <code>nbd-server-start</code> (Command) Start an NBD server listening on the given host and port. Block devices can then be exported using <tt>&quot;nbd-server-add&quot;</tt>. The NBD server will present them as named exports; for example, another QEMU instance could refer to them as &#8220;nbd:HOST:PORT:exportname=NAME&#8221;. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;addr: SocketAddressLegacy&quot;</dt>
 <dd>Address on which to listen.</dd>
 <dt>&quot;tls-creds: string&quot; (optional)</dt>
-<dd><font SIZE="-1">ID</font> of the <font SIZE="-1">TLS</font> credentials object (since 2.6).</dd>
+<dd>ID of the TLS credentials object (since 2.6).</dd>
 <dt>&quot;tls-authz: string&quot; (optional)</dt>
-<dd><font SIZE="-1">ID</font> of the QAuthZ authorization object used to validate the client&#8217;s x509 distinguished name. This object is is only resolved at time of use, so can be deleted and recreated on the fly while the <font SIZE="-1">NBD</font> server is active. If missing, it will default to denying access (since 4.0).</dd></dl>
-<p> <code>Returns:</code> error if the server is already running. <code>Since:</code> 1.3.0 <code>nbd-server-add</code> (Command) Export a block node to <font SIZE="-1">QEMU</font>&#8216;s embedded <font SIZE="-1">NBD</font> server. <code>Arguments:</code></p>
+<dd>ID of the QAuthZ authorization object used to validate the client&#8217;s x509 distinguished name. This object is is only resolved at time of use, so can be deleted and recreated on the fly while the NBD server is active. If missing, it will default to denying access (since 4.0).</dd></dl>
+<p> <code>Returns:</code> error if the server is already running. <code>Since:</code> 1.3.0 <code>nbd-server-add</code> (Command) Export a block node to QEMU&#8216;s embedded NBD server. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;device: string&quot;</dt>
 <dd>The device name or node name of the node to be exported</dd>
 <dt>&quot;name: string&quot; (optional)</dt>
 <dd>Export name. If unspecified, the <tt>&quot;device&quot;</tt> parameter is used as the export name. (Since 2.12)</dd>
 <dt>&quot;writable: boolean&quot; (optional)</dt>
-<dd>Whether clients should be able to write to the device via the <font SIZE="-1">NBD</font> connection (default false).</dd>
+<dd>Whether clients should be able to write to the device via the NBD connection (default false).</dd>
 <dt>&quot;bitmap: string&quot; (optional)</dt>
-<dd>Also export the dirty bitmap reachable from <tt>&quot;device&quot;</tt>, so the <font SIZE="-1">NBD</font> client can use <font SIZE="-1">NBD_OPT_SET_META_CONTEXT</font> with &#8220;qemu:dirty-bitmap:NAME&#8221; to inspect the bitmap. (since 4.0)</dd></dl>
-<p> <code>Returns:</code> error if the server is not running, or export with the same name already exists. <code>Since:</code> 1.3.0 <code>NbdServerRemoveMode</code> (Enum) Mode for removing an <font SIZE="-1">NBD</font> export. <code>Values:</code></p>
+<dd>Also export the dirty bitmap reachable from <tt>&quot;device&quot;</tt>, so the NBD client can use NBD_OPT_SET_META_CONTEXT with &#8220;qemu:dirty-bitmap:NAME&#8221; to inspect the bitmap. (since 4.0)</dd></dl>
+<p> <code>Returns:</code> error if the server is not running, or export with the same name already exists. <code>Since:</code> 1.3.0 <code>NbdServerRemoveMode</code> (Enum) Mode for removing an NBD export. <code>Values:</code></p>
 <dl>
 <dt>&quot;safe&quot;</dt>
 <dd>Remove export if there are no existing connections, fail otherwise.</dd>
 <dt>&quot;hard&quot;</dt>
 <dd>Drop all connections immediately and remove export.</dd></dl>
-<p> Potential additional modes to be added in the future: hide: Just hide export from new clients, leave existing connections as is. Remove export after all clients are disconnected. soft: Hide export from new clients, answer with <font SIZE="-1">ESHUTDOWN</font> for all further requests from existing clients. <code>Since:</code> 2.12 <code>nbd-server-remove</code> (Command) Remove <font SIZE="-1">NBD</font> export by name. <code>Arguments:</code></p>
+<p> Potential additional modes to be added in the future: hide: Just hide export from new clients, leave existing connections as is. Remove export after all clients are disconnected. soft: Hide export from new clients, answer with ESHUTDOWN for all further requests from existing clients. <code>Since:</code> 2.12 <code>nbd-server-remove</code> (Command) Remove NBD export by name. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;name: string&quot;</dt>
 <dd>Export name.</dd>
@@ -3603,12 +3603,12 @@ The members of &quot;BlockdevOptionsBlkdebug&quot; when &quot;driver&quot; is &q
 <dd>export is not found</dd>
 <dt>&#8211;</dt>
 <dd>mode is &#8216;safe&#8217; and there are existing connections</dd></dl>
-<p> <code>Since:</code> 2.12 <code>nbd-server-stop</code> (Command) Stop <font SIZE="-1">QEMU</font>&#8216;s embedded <font SIZE="-1">NBD</font> server, and unregister all devices previously added via <tt>&quot;nbd-server-add&quot;</tt>. <code>Since:</code> 1.3.0 <font SIZE="-1"><code>DEVICE_TRAY_MOVED</code></font> (Event) Emitted whenever the tray of a removable device is moved by the guest or by <font SIZE="-1">HMP/QMP</font> commands <code>Arguments:</code></p>
+<p> <code>Since:</code> 2.12 <code>nbd-server-stop</code> (Command) Stop QEMU&#8216;s embedded NBD server, and unregister all devices previously added via <tt>&quot;nbd-server-add&quot;</tt>. <code>Since:</code> 1.3.0 <code>DEVICE_TRAY_MOVED</code> (Event) Emitted whenever the tray of a removable device is moved by the guest or by HMP/QMP commands <code>Arguments:</code></p>
 <dl>
 <dt>&quot;device: string&quot;</dt>
 <dd>Block device name. This is always present for compatibility reasons, but it can be empty (&quot;&quot;) if the image does not have a device name associated.</dd>
 <dt>&quot;id: string&quot;</dt>
-<dd>The name or <font SIZE="-1">QOM</font> path of the guest device (since 2.8)</dd>
+<dd>The name or QOM path of the guest device (since 2.8)</dd>
 <dt>&quot;tray-open: boolean&quot;</dt>
 <dd>true if the tray has been opened or false if it has been closed</dd></dl>
 <p> <code>Since:</code> 1.1 <code>Example:</code> </p>
@@ -3618,12 +3618,12 @@ The members of &quot;BlockdevOptionsBlkdebug&quot; when &quot;driver&quot; is &q
  &quot;tray-open&quot;: true
  },
  &quot;timestamp&quot;: { &quot;seconds&quot;: 1265044230, &quot;microseconds&quot;: 450486 } }</pre>
-<p><font SIZE="-1"><code>PR_MANAGER_STATUS_CHANGED</code></font> (Event) Emitted whenever the connected status of a persistent reservation manager changes. <code>Arguments:</code></p>
+<p><code>PR_MANAGER_STATUS_CHANGED</code> (Event) Emitted whenever the connected status of a persistent reservation manager changes. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;id: string&quot;</dt>
-<dd>The id of the <font SIZE="-1">PR</font> manager object</dd>
+<dd>The id of the PR manager object</dd>
 <dt>&quot;connected: boolean&quot;</dt>
-<dd>true if the <font SIZE="-1">PR</font> manager is connected to a backend</dd></dl>
+<dd>true if the PR manager is connected to a backend</dd></dl>
 <p> <code>Since:</code> 3.0 <code>Example:</code> </p>
 <pre> &lt;- { &quot;event&quot;: &quot;PR_MANAGER_STATUS_CHANGED&quot;,
  &quot;data&quot;: { &quot;id&quot;: &quot;pr-helper0&quot;,
@@ -3638,7 +3638,7 @@ The members of &quot;BlockdevOptionsBlkdebug&quot; when &quot;driver&quot; is &q
 <dd>write operation</dd>
 <dt>&quot;flush&quot;</dt>
 <dd>flush operation</dd></dl>
-<p> <code>Since:</code> 2.6 <font SIZE="-1"><code>QUORUM_FAILURE</code></font> (Event) Emitted by the Quorum block driver if it fails to establish a quorum <code>Arguments:</code></p>
+<p> <code>Since:</code> 2.6 <code>QUORUM_FAILURE</code> (Event) Emitted by the Quorum block driver if it fails to establish a quorum <code>Arguments:</code></p>
 <dl>
 <dt>&quot;reference: string&quot;</dt>
 <dd>device name if defined else node name</dd>
@@ -3650,7 +3650,7 @@ The members of &quot;BlockdevOptionsBlkdebug&quot; when &quot;driver&quot; is &q
 <pre> &lt;- { &quot;event&quot;: &quot;QUORUM_FAILURE&quot;,
  &quot;data&quot;: { &quot;reference&quot;: &quot;usr1&quot;, &quot;sector-num&quot;: 345435, &quot;sectors-count&quot;: 5 },
  &quot;timestamp&quot;: { &quot;seconds&quot;: 1344522075, &quot;microseconds&quot;: 745528 } }</pre>
-<p><font SIZE="-1"><code>QUORUM_REPORT_BAD</code></font> (Event) Emitted to report a corruption of a Quorum file <code>Arguments:</code></p>
+<p><code>QUORUM_REPORT_BAD</code> (Event) Emitted to report a corruption of a Quorum file <code>Arguments:</code></p>
 <dl>
 <dt>&quot;type: QuorumOpType&quot;</dt>
 <dd>quorum operation type (Since 2.6)</dd>
@@ -3682,51 +3682,51 @@ The members of &quot;BlockdevOptionsBlkdebug&quot; when &quot;driver&quot; is &q
 <dd>the filename of the character device</dd>
 <dt>&quot;frontend-open: boolean&quot;</dt>
 <dd>shows whether the frontend device attached to this backend (eg. with the chardev=&#8230; option) is in open or closed state (since 2.1)</dd></dl>
-<p> <code>Notes:</code> <tt>&quot;filename&quot;</tt> is encoded using the <font SIZE="-1">QEMU</font> command line character device encoding. See the <font SIZE="-1">QEMU</font> man page for details. <code>Since:</code> 0.14.0 <code>query-chardev</code> (Command) Returns information about current character devices. <code>Returns:</code> a list of <tt>&quot;ChardevInfo&quot;</tt> <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-chardev&quot;} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot; : [<br />
-        {<br />
-            &quot;label&quot; : &quot;charchannel0&quot;,<br />
-            &quot;filename&quot; : &quot;unix:/var/lib/libvirt/qemu/seabios.rhel6.agent,server&quot;,<br />
-            &quot;frontend-open&quot; : false<br />
-        },<br />
-        {<br />
-            &quot;label&quot; : &quot;charmonitor&quot;,<br />
-            &quot;filename&quot; : &quot;unix:/var/lib/libvirt/qemu/seabios.rhel6.monitor,server&quot;,<br />
-            &quot;frontend-open&quot; : true<br />
-        },<br />
-        {<br />
-            &quot;label&quot; : &quot;charserial0&quot;,<br />
-            &quot;filename&quot; : &quot;pty:/dev/pts/2&quot;,<br />
-            &quot;frontend-open&quot; : true<br />
-        }<br />
-    ]<br />
+<p> <code>Notes:</code> <tt>&quot;filename&quot;</tt> is encoded using the QEMU command line character device encoding. See the QEMU man page for details. <code>Since:</code> 0.14.0 <code>query-chardev</code> (Command) Returns information about current character devices. <code>Returns:</code> a list of <tt>&quot;ChardevInfo&quot;</tt> <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-chardev&quot;} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot; : [<br/>
+        {<br/>
+            &quot;label&quot; : &quot;charchannel0&quot;,<br/>
+            &quot;filename&quot; : &quot;unix:/var/lib/libvirt/qemu/seabios.rhel6.agent,server&quot;,<br/>
+            &quot;frontend-open&quot; : false<br/>
+        },<br/>
+        {<br/>
+            &quot;label&quot; : &quot;charmonitor&quot;,<br/>
+            &quot;filename&quot; : &quot;unix:/var/lib/libvirt/qemu/seabios.rhel6.monitor,server&quot;,<br/>
+            &quot;frontend-open&quot; : true<br/>
+        },<br/>
+        {<br/>
+            &quot;label&quot; : &quot;charserial0&quot;,<br/>
+            &quot;filename&quot; : &quot;pty:/dev/pts/2&quot;,<br/>
+            &quot;frontend-open&quot; : true<br/>
+        }<br/>
+    ]<br/>
 } <code>ChardevBackendInfo</code> (Object) Information about a character device backend <code>Members:</code></p>
 <dl>
 <dt>&quot;name: string&quot;</dt>
 <dd>The backend name</dd></dl>
-<p> <code>Since:</code> 2.0 <code>query-chardev-backends</code> (Command) Returns information about character device backends. <code>Returns:</code> a list of <tt>&quot;ChardevBackendInfo&quot;</tt> <code>Since:</code> 2.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-chardev-backends&quot;} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot; : [<br />
-        {<br />
-            &quot;name&quot; : &quot;udp&quot;<br />
-        },<br />
-        {<br />
-            &quot;name&quot; : &quot;tcp&quot;<br />
-        },<br />
-        {<br />
-            &quot;name&quot; : &quot;unix&quot;<br />
-        },<br />
-        {<br />
-            &quot;name&quot; : &quot;spiceport&quot;<br />
-        }<br />
-    ]<br />
+<p> <code>Since:</code> 2.0 <code>query-chardev-backends</code> (Command) Returns information about character device backends. <code>Returns:</code> a list of <tt>&quot;ChardevBackendInfo&quot;</tt> <code>Since:</code> 2.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-chardev-backends&quot;} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot; : [<br/>
+        {<br/>
+            &quot;name&quot; : &quot;udp&quot;<br/>
+        },<br/>
+        {<br/>
+            &quot;name&quot; : &quot;tcp&quot;<br/>
+        },<br/>
+        {<br/>
+            &quot;name&quot; : &quot;unix&quot;<br/>
+        },<br/>
+        {<br/>
+            &quot;name&quot; : &quot;spiceport&quot;<br/>
+        }<br/>
+    ]<br/>
 } <code>DataFormat</code> (Enum) An enumeration of data format. <code>Values:</code></p>
 <dl>
 <dt>&quot;utf8&quot;</dt>
-<dd>Data is a <font SIZE="-1">UTF-8</font> string (<font SIZE="-1">RFC 3629</font>)</dd>
+<dd>Data is a UTF-8 string (RFC 3629)</dd>
 <dt>&quot;base64&quot;</dt>
-<dd>Data is Base64 encoded binary (<font SIZE="-1">RFC 3548</font>)</dd></dl>
+<dd>Data is Base64 encoded binary (RFC 3548)</dd></dl>
 <p> <code>Since:</code> 1.4 <code>ringbuf-write</code> (Command) Write to a ring buffer character device. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;device: string&quot;</dt>
@@ -3741,21 +3741,21 @@ The members of &quot;BlockdevOptionsBlkdebug&quot; when &quot;driver&quot; is &q
 <dt>&#8211;</dt>
 <dd>base64: data must be base64 encoded text. Its binary decoding gets written.</dd>
 <dt>&#8211;</dt>
-<dd>utf8: data&#8217;s <font SIZE="-1">UTF-8</font> encoding is written</dd>
+<dd>utf8: data&#8217;s UTF-8 encoding is written</dd>
 <dt>&#8211;</dt>
 <dd>data itself is always Unicode regardless of format, like any other string.</dd></dl>
 </dl>
 <dl>
 <dd></dd></dl>
 </dl>
-<p> <code>Returns:</code> Nothing on success <code>Since:</code> 1.4 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;ringbuf-write&quot;,<br />
-   &quot;arguments&quot; : {&quot;device&quot; : &quot;foo&quot;,<br />
-                  &quot;data&quot; : &quot;abcdefgh&quot;,<br />
-                  &quot;format&quot; : &quot;utf8&quot;}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
+<p> <code>Returns:</code> Nothing on success <code>Since:</code> 1.4 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;ringbuf-write&quot;,<br/>
+   &quot;arguments&quot; : {&quot;device&quot; : &quot;foo&quot;,<br/>
+                  &quot;data&quot; : &quot;abcdefgh&quot;,<br/>
+                  &quot;format&quot; : &quot;utf8&quot;}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
 } <code>ringbuf-read</code> (Command) Read from a ring buffer character device. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;device: string&quot;</dt>
@@ -3770,19 +3770,19 @@ The members of &quot;BlockdevOptionsBlkdebug&quot; when &quot;driver&quot; is &q
 <dt>&#8211;</dt>
 <dd>base64: the data read is returned in base64 encoding.</dd>
 <dt>&#8211;</dt>
-<dd>utf8: the data read is interpreted as <font SIZE="-1">UTF-8.</font> Bug: can screw up when the buffer contains invalid <font SIZE="-1">UTF-8</font> sequences, <font SIZE="-1">NUL</font> characters, after the ring buffer lost data, and when reading stops because the size limit is reached.</dd>
+<dd>utf8: the data read is interpreted as UTF-8. Bug: can screw up when the buffer contains invalid UTF-8 sequences, NUL characters, after the ring buffer lost data, and when reading stops because the size limit is reached.</dd>
 <dt>&#8211;</dt>
 <dd>The return value is always Unicode regardless of format, like any other string.</dd></dl>
 </dl>
 <dl>
 <dd></dd></dl>
 </dl>
-<p> <code>Returns:</code> data read from the device <code>Since:</code> 1.4 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;ringbuf-read&quot;,<br />
-   &quot;arguments&quot; : {&quot;device&quot; : &quot;foo&quot;,<br />
-                  &quot;size&quot; : 1000,<br />
-                  &quot;format&quot; : &quot;utf8&quot;}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot; : &quot;abcdefgh&quot;<br />
+<p> <code>Returns:</code> data read from the device <code>Since:</code> 1.4 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;ringbuf-read&quot;,<br/>
+   &quot;arguments&quot; : {&quot;device&quot; : &quot;foo&quot;,<br/>
+                  &quot;size&quot; : 1000,<br/>
+                  &quot;format&quot; : &quot;utf8&quot;}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot; : &quot;abcdefgh&quot;<br/>
 } <code>ChardevCommon</code> (Object) Configuration shared across all chardev backends <code>Members:</code></p>
 <dl>
 <dt>&quot;logfile: string&quot; (optional)</dt>
@@ -3802,42 +3802,42 @@ The members of &quot;BlockdevOptionsBlkdebug&quot; when &quot;driver&quot; is &q
 <p> <code>Since:</code> 1.4 <code>ChardevHostdev</code> (Object) Configuration info for device and pipe chardevs. <code>Members:</code></p>
 <dl>
 <dt>&quot;device: string&quot;</dt>
-<dd>The name of the special file for the device, i.e. /dev/ttyS0 on Unix or <font SIZE="-1">COM1:</font> on Windows</dd>
+<dd>The name of the special file for the device, i.e. /dev/ttyS0 on Unix or COM1: on Windows</dd>
 <dt>The members of &quot;ChardevCommon&quot;</dt>
 <dd></dd></dl>
 <p> <code>Since:</code> 1.4 <code>ChardevSocket</code> (Object) Configuration info for (stream) socket chardevs. Members:</p>
 <p>&quot;addr: SocketAddressLegacy&quot;</p>
-<p>socket address to listen on (server=true)<br />
-or connect to (server=false)<br />
+<p>socket address to listen on (server=true)<br/>
+or connect to (server=false)<br/>
 &quot;tls-creds: string&quot; (optional)</p>
-<p>the ID of the TLS credentials object (since 2.6)<br />
+<p>the ID of the TLS credentials object (since 2.6)<br/>
 &quot;tls-authz: string&quot; (optional)</p>
-<p>the ID of the QAuthZ authorization object against which<br />
-the client&#8217;s x509 distinguished name will be validated. This<br />
-object is only resolved at time of use, so can be deleted<br />
-and recreated on the fly while the chardev server is active.<br />
-If missing, it will default to denying access (since 4.0)<br />
+<p>the ID of the QAuthZ authorization object against which<br/>
+the client&#8217;s x509 distinguished name will be validated. This<br/>
+object is only resolved at time of use, so can be deleted<br/>
+and recreated on the fly while the chardev server is active.<br/>
+If missing, it will default to denying access (since 4.0)<br/>
 &quot;server: boolean&quot; (optional)</p>
-<p>create server socket (default: true)<br />
+<p>create server socket (default: true)<br/>
 &quot;wait: boolean&quot; (optional)</p>
-<p>wait for incoming connection on server<br />
-sockets (default: false).<br />
+<p>wait for incoming connection on server<br/>
+sockets (default: false).<br/>
 &quot;nodelay: boolean&quot; (optional)</p>
-<p>set TCP_NODELAY socket option (default: false)<br />
+<p>set TCP_NODELAY socket option (default: false)<br/>
 &quot;telnet: boolean&quot; (optional)</p>
-<p>enable telnet protocol on server<br />
-sockets (default: false)<br />
+<p>enable telnet protocol on server<br/>
+sockets (default: false)<br/>
 &quot;tn3270: boolean&quot; (optional)</p>
-<p>enable tn3270 protocol on server<br />
-sockets (default: false) (Since: 2.10)<br />
+<p>enable tn3270 protocol on server<br/>
+sockets (default: false) (Since: 2.10)<br/>
 &quot;websocket: boolean&quot; (optional)</p>
-<p>enable websocket protocol on server<br />
-sockets (default: false) (Since: 3.1)<br />
+<p>enable websocket protocol on server<br/>
+sockets (default: false) (Since: 3.1)<br/>
 &quot;reconnect: int&quot; (optional)</p>
-<p>For a client socket, if a socket is disconnected,<br />
-then attempt a reconnect after the given number of seconds.<br />
-Setting this to zero disables this function. (default: 0)<br />
-(Since: 2.2)<br />
+<p>For a client socket, if a socket is disconnected,<br/>
+then attempt a reconnect after the given number of seconds.<br/>
+Setting this to zero disables this function. (default: 0)<br/>
+(Since: 2.2)<br/>
 The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUdp</code> (Object) Configuration info for datagram socket chardevs. <code>Members:</code></p>
 <dl>
 <dt>&quot;remote: SocketAddressLegacy&quot;</dt>
@@ -3855,7 +3855,7 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <p> <code>Since:</code> 1.5 <code>ChardevStdio</code> (Object) Configuration info for stdio chardevs. <code>Members:</code></p>
 <dl>
 <dt>&quot;signal: boolean&quot; (optional)</dt>
-<dd>Allow signals (such as <font SIZE="-1">SIGINT</font> triggered by ^C) be delivered to qemu. Default: true in -nographic mode, false otherwise.</dd>
+<dd>Allow signals (such as SIGINT triggered by ^C) be delivered to qemu. Default: true in -nographic mode, false otherwise.</dd>
 <dt>The members of &quot;ChardevCommon&quot;</dt>
 <dd></dd></dl>
 <p> <code>Since:</code> 1.5 <code>ChardevSpiceChannel</code> (Object) Configuration info for spice vm channel chardevs. <code>Members:</code></p>
@@ -3939,89 +3939,89 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <p> <code>Since:</code> 1.4 <code>chardev-add</code> (Command) Add a character device backend <code>Arguments:</code></p>
 <dl>
 <dt>&quot;id: string&quot;</dt>
-<dd>the chardev&#8217;s <font SIZE="-1">ID,</font> must be unique</dd>
+<dd>the chardev&#8217;s ID, must be unique</dd>
 <dt>&quot;backend: ChardevBackend&quot;</dt>
 <dd>backend type and parameters</dd></dl>
-<p> <code>Returns:</code> ChardevReturn. <code>Since:</code> 1.4 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;chardev-add&quot;,<br />
-   &quot;arguments&quot; : {&quot;id&quot; : &quot;foo&quot;,<br />
-                  &quot;backend&quot; : {&quot;type&quot; : &quot;null&quot;, &quot;data&quot; : {}}}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
+<p> <code>Returns:</code> ChardevReturn. <code>Since:</code> 1.4 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;chardev-add&quot;,<br/>
+   &quot;arguments&quot; : {&quot;id&quot; : &quot;foo&quot;,<br/>
+                  &quot;backend&quot; : {&quot;type&quot; : &quot;null&quot;, &quot;data&quot; : {}}}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
     }</p>
-<p>        -&gt; {&quot;execute&quot; : &quot;chardev-add&quot;,<br />
-            &quot;arguments&quot; : {&quot;id&quot; : &quot;bar&quot;,<br />
-                           &quot;backend&quot; : {&quot;type&quot; : &quot;file&quot;,<br />
-                                        &quot;data&quot; : {&quot;out&quot; : &quot;/tmp/bar.log&quot;}}}} &lt; &#8211;<br />
-    {<br />
-        &quot;return&quot;:<br />
-        {<br />
-        }<br />
+<p>        -&gt; {&quot;execute&quot; : &quot;chardev-add&quot;,<br/>
+            &quot;arguments&quot; : {&quot;id&quot; : &quot;bar&quot;,<br/>
+                           &quot;backend&quot; : {&quot;type&quot; : &quot;file&quot;,<br/>
+                                        &quot;data&quot; : {&quot;out&quot; : &quot;/tmp/bar.log&quot;}}}} &lt; &#8211;<br/>
+    {<br/>
+        &quot;return&quot;:<br/>
+        {<br/>
+        }<br/>
         }</p>
-<p>            -&gt; {&quot;execute&quot; : &quot;chardev-add&quot;,<br />
-                &quot;arguments&quot; : {&quot;id&quot; : &quot;baz&quot;,<br />
-                               &quot;backend&quot; : {&quot;type&quot; : &quot;pty&quot;, &quot;data&quot; : {}}}} &lt; &#8211;<br />
-        {<br />
-            &quot;return&quot;:<br />
-            {<br />
-                &quot;pty&quot; : &quot;/dev/pty/42&quot;<br />
-            }<br />
+<p>            -&gt; {&quot;execute&quot; : &quot;chardev-add&quot;,<br/>
+                &quot;arguments&quot; : {&quot;id&quot; : &quot;baz&quot;,<br/>
+                               &quot;backend&quot; : {&quot;type&quot; : &quot;pty&quot;, &quot;data&quot; : {}}}} &lt; &#8211;<br/>
+        {<br/>
+            &quot;return&quot;:<br/>
+            {<br/>
+                &quot;pty&quot; : &quot;/dev/pty/42&quot;<br/>
+            }<br/>
         } <code>chardev-change</code> (Command) Change a character device backend <code>Arguments:</code></p>
 <dl>
 <dt>&quot;id: string&quot;</dt>
-<dd>the chardev&#8217;s <font SIZE="-1">ID,</font> must exist</dd>
+<dd>the chardev&#8217;s ID, must exist</dd>
 <dt>&quot;backend: ChardevBackend&quot;</dt>
 <dd>new backend type and parameters</dd></dl>
-<p> <code>Returns:</code> ChardevReturn. <code>Since:</code> 2.10 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;chardev-change&quot;,<br />
-   &quot;arguments&quot; : {&quot;id&quot; : &quot;baz&quot;,<br />
-                  &quot;backend&quot; : {&quot;type&quot; : &quot;pty&quot;, &quot;data&quot; : {}}}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-        &quot;pty&quot; : &quot;/dev/pty/42&quot;<br />
-    }<br />
+<p> <code>Returns:</code> ChardevReturn. <code>Since:</code> 2.10 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;chardev-change&quot;,<br/>
+   &quot;arguments&quot; : {&quot;id&quot; : &quot;baz&quot;,<br/>
+                  &quot;backend&quot; : {&quot;type&quot; : &quot;pty&quot;, &quot;data&quot; : {}}}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+        &quot;pty&quot; : &quot;/dev/pty/42&quot;<br/>
+    }<br/>
     }</p>
-<p>        -&gt; {&quot;execute&quot; : &quot;chardev-change&quot;,<br />
-            &quot;arguments&quot; : {<br />
-                &quot;id&quot; : &quot;charchannel2&quot;,<br />
-                &quot;backend&quot; : {<br />
-                    &quot;type&quot; : &quot;socket&quot;,<br />
-                    &quot;data&quot; : {<br />
-                        &quot;addr&quot; : {<br />
-                            &quot;type&quot; : &quot;unix&quot;,<br />
-                            &quot;data&quot; : {<br />
-                                &quot;path&quot; : &quot;/tmp/charchannel2.socket&quot;<br />
-                            }<br />
-                        },<br />
-                        &quot;server&quot; : true,<br />
-                        &quot;wait&quot; : false<br />
-                    }<br />
-                }<br />
-            }} &lt; &#8211;<br />
-    {<br />
-        &quot;return&quot;:<br />
-        {<br />
-        }<br />
+<p>        -&gt; {&quot;execute&quot; : &quot;chardev-change&quot;,<br/>
+            &quot;arguments&quot; : {<br/>
+                &quot;id&quot; : &quot;charchannel2&quot;,<br/>
+                &quot;backend&quot; : {<br/>
+                    &quot;type&quot; : &quot;socket&quot;,<br/>
+                    &quot;data&quot; : {<br/>
+                        &quot;addr&quot; : {<br/>
+                            &quot;type&quot; : &quot;unix&quot;,<br/>
+                            &quot;data&quot; : {<br/>
+                                &quot;path&quot; : &quot;/tmp/charchannel2.socket&quot;<br/>
+                            }<br/>
+                        },<br/>
+                        &quot;server&quot; : true,<br/>
+                        &quot;wait&quot; : false<br/>
+                    }<br/>
+                }<br/>
+            }} &lt; &#8211;<br/>
+    {<br/>
+        &quot;return&quot;:<br/>
+        {<br/>
+        }<br/>
     } <code>chardev-remove</code> (Command) Remove a character device backend <code>Arguments:</code></p>
 <dl>
 <dt>&quot;id: string&quot;</dt>
-<dd>the chardev&#8217;s <font SIZE="-1">ID,</font> must exist and not be in use</dd></dl>
-<p> <code>Returns:</code> Nothing on success <code>Since:</code> 1.4 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;chardev-remove&quot;, &quot;arguments&quot; : {&quot;id&quot; : &quot;foo&quot;}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
+<dd>the chardev&#8217;s ID, must exist and not be in use</dd></dl>
+<p> <code>Returns:</code> Nothing on success <code>Since:</code> 1.4 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;chardev-remove&quot;, &quot;arguments&quot; : {&quot;id&quot; : &quot;foo&quot;}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
 } <code>chardev-send-break</code> (Command) Send a break to a character device <code>Arguments:</code></p>
 <dl>
 <dt>&quot;id: string&quot;</dt>
-<dd>the chardev&#8217;s <font SIZE="-1">ID,</font> must exist</dd></dl>
-<p> <code>Returns:</code> Nothing on success <code>Since:</code> 2.10 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;chardev-send-break&quot;, &quot;arguments&quot; : {&quot;id&quot; : &quot;foo&quot;}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
-} <font SIZE="-1"><code>VSERPORT_CHANGE</code></font> (Event) Emitted when the guest opens or closes a virtio-serial port. <code>Arguments:</code></p>
+<dd>the chardev&#8217;s ID, must exist</dd></dl>
+<p> <code>Returns:</code> Nothing on success <code>Since:</code> 2.10 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;chardev-send-break&quot;, &quot;arguments&quot; : {&quot;id&quot; : &quot;foo&quot;}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
+} <code>VSERPORT_CHANGE</code> (Event) Emitted when the guest opens or closes a virtio-serial port. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;id: string&quot;</dt>
 <dd>device identifier of the virtio-serial port</dd>
@@ -4043,18 +4043,18 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dt>&quot;kdump-snappy&quot;</dt>
 <dd>kdump-compressed format with snappy-compressed</dd>
 <dt>&quot;win-dmp&quot;</dt>
-<dd>Windows full crashdump format, can be used instead of <font SIZE="-1">ELF</font> converting (since 2.13)</dd></dl>
+<dd>Windows full crashdump format, can be used instead of ELF converting (since 2.13)</dd></dl>
 <p> <code>Since:</code> 2.0 <code>dump-guest-memory</code> (Command) Dump guest&#8217;s memory to vmcore. It is a synchronous operation that can take very long depending on the amount of guest memory. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;paging: boolean&quot;</dt>
-<dd>if true, do paging to get guest&#8217;s memory mapping. This allows using gdb to process the core file. <font SIZE="-1">IMPORTANT:</font> this option can make <font SIZE="-1">QEMU</font> allocate several gigabytes of <font SIZE="-1">RAM.</font> This can happen for a large guest, or a malicious guest pretending to be large. Also, paging=true has the following limitations:</dd>
+<dd>if true, do paging to get guest&#8217;s memory mapping. This allows using gdb to process the core file. IMPORTANT: this option can make QEMU allocate several gigabytes of RAM. This can happen for a large guest, or a malicious guest pretending to be large. Also, paging=true has the following limitations:</dd>
 <dl>
 <dd>
 </dd><dl>
 <dt>1.</dt>
 <dd>The guest may be in a catastrophic state or can have corrupted memory, which cannot be trusted</dd>
 <dt>2.</dt>
-<dd>The guest can be in real-mode even if paging is enabled. For example, the guest uses <font SIZE="-1">ACPI</font> to sleep, and <font SIZE="-1">ACPI</font> sleep state goes in real-mode</dd>
+<dd>The guest can be in real-mode even if paging is enabled. For example, the guest uses ACPI to sleep, and ACPI sleep state goes in real-mode</dd>
 <dt>3.</dt>
 <dd>Currently only supported on i386 and x86_64.</dd></dl>
 </dl>
@@ -4073,19 +4073,19 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dl>
 <dd></dd></dl>
 <dt>&quot;detach: boolean&quot; (optional)</dt>
-<dd>if true, <font SIZE="-1">QMP</font> will return immediately rather than waiting for the dump to finish. The user can track progress using &#8220;query-dump&#8221;. (since 2.6).</dd>
+<dd>if true, QMP will return immediately rather than waiting for the dump to finish. The user can track progress using &#8220;query-dump&#8221;. (since 2.6).</dd>
 <dt>&quot;begin: int&quot; (optional)</dt>
 <dd>if specified, the starting physical address.</dd>
 <dt>&quot;length: int&quot; (optional)</dt>
 <dd>if specified, the memory size, in bytes. If you don&#8217;t want to dump all guest&#8217;s memory, please specify the start <tt>&quot;begin&quot;</tt> and <tt>&quot;length&quot;</tt></dd>
 <dt>&quot;format: DumpGuestMemoryFormat&quot; (optional)</dt>
 <dd>if specified, the format of guest memory dump. But non-elf format is conflict with paging and filter, ie. <tt>&quot;paging&quot;</tt>, <tt>&quot;begin&quot;</tt> and <tt>&quot;length&quot;</tt> is not allowed to be specified with non-elf <tt>&quot;format&quot;</tt> at the same time (since 2.0)</dd></dl>
-<p> <code>Note:</code> All boolean arguments default to false <code>Returns:</code> nothing on success <code>Since:</code> 1.2 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;dump-guest-memory&quot;,<br />
-   &quot;arguments&quot; : {&quot;protocol&quot; : &quot;fd:dump&quot;}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
+<p> <code>Note:</code> All boolean arguments default to false <code>Returns:</code> nothing on success <code>Since:</code> 1.2 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;dump-guest-memory&quot;,<br/>
+   &quot;arguments&quot; : {&quot;protocol&quot; : &quot;fd:dump&quot;}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
 } <code>DumpStatus</code> (Enum) Describe the status of a long-running background guest memory dump. <code>Values:</code></p>
 <dl>
 <dt>&quot;none&quot;</dt>
@@ -4104,20 +4104,20 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dd>bytes written in latest dump (uncompressed)</dd>
 <dt>&quot;total: int&quot;</dt>
 <dd>total bytes to be written in latest dump (uncompressed)</dd></dl>
-<p> <code>Since:</code> 2.6 <code>query-dump</code> (Command) Query latest dump status. <code>Returns:</code> A <tt>&quot;DumpStatus&quot;</tt> object showing the dump status. <code>Since:</code> 2.6 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-dump&quot;} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-        &quot;status&quot; : &quot;active&quot;, &quot;completed&quot; : 1024000, &quot;total&quot; : 2048000<br />
-    }<br />
-} <font SIZE="-1"><code>DUMP_COMPLETED</code></font> (Event) Emitted when background dump has completed <code>Arguments:</code></p>
+<p> <code>Since:</code> 2.6 <code>query-dump</code> (Command) Query latest dump status. <code>Returns:</code> A <tt>&quot;DumpStatus&quot;</tt> object showing the dump status. <code>Since:</code> 2.6 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-dump&quot;} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+        &quot;status&quot; : &quot;active&quot;, &quot;completed&quot; : 1024000, &quot;total&quot; : 2048000<br/>
+    }<br/>
+} <code>DUMP_COMPLETED</code> (Event) Emitted when background dump has completed <code>Arguments:</code></p>
 <dl>
 <dt>&quot;result: DumpQueryResult&quot;</dt>
 <dd>final dump status</dd>
 <dt>&quot;error: string&quot; (optional)</dt>
 <dd>human-readable error string that provides hint on why dump failed. Only presents on failure. The user should not try to interpret the error string.</dd></dl>
-<p> <code>Since:</code> 2.6 <code>Example:</code> { &quot;event&quot;: &quot;DUMP_COMPLETED&quot;,<br />
-    &quot;data&quot;: {&quot;result&quot;: {&quot;total&quot;: 1090650112, &quot;status&quot;: &quot;completed&quot;,<br />
+<p> <code>Since:</code> 2.6 <code>Example:</code> { &quot;event&quot;: &quot;DUMP_COMPLETED&quot;,<br/>
+    &quot;data&quot;: {&quot;result&quot;: {&quot;total&quot;: 1090650112, &quot;status&quot;: &quot;completed&quot;,<br/>
             &quot;completed&quot;: 1090650112} } } <code>DumpGuestMemoryCapability</code> (Object) A list of the available formats for dump-guest-memory <code>Members:</code></p>
 <dl>
 <dt>&quot;formats: array of DumpGuestMemoryFormat&quot;</dt>
@@ -4133,49 +4133,49 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dd>the device name of the virtual network adapter</dd>
 <dt>&quot;up: boolean&quot;</dt>
 <dd>true to set the link status to be up</dd></dl>
-<p> <code>Returns:</code> Nothing on success If <tt>&quot;name&quot;</tt> is not a valid network device, DeviceNotFound <code>Since:</code> 0.14.0 <code>Notes:</code> Not all network adapters support setting link status. This command will succeed even if the network adapter does not support link status notification. <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;set_link&quot;,<br />
-   &quot;arguments&quot; : {&quot;name&quot; : &quot;e1000.0&quot;, &quot;up&quot; : false}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
+<p> <code>Returns:</code> Nothing on success If <tt>&quot;name&quot;</tt> is not a valid network device, DeviceNotFound <code>Since:</code> 0.14.0 <code>Notes:</code> Not all network adapters support setting link status. This command will succeed even if the network adapter does not support link status notification. <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;set_link&quot;,<br/>
+   &quot;arguments&quot; : {&quot;name&quot; : &quot;e1000.0&quot;, &quot;up&quot; : false}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
 } <code>netdev_add</code> (Command) Add a network backend. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;type: string&quot;</dt>
 <dd>the type of network backend. Possible values are listed in NetClientDriver (excluding &#8216;none&#8217; and &#8216;nic&#8217;)</dd>
 <dt>&quot;id: string&quot;</dt>
 <dd>the name of the new network backend</dd></dl>
-<p> Additional arguments depend on the type. <font SIZE="-1"><code>TODO:</code></font> This command effectively bypasses <font SIZE="-1">QAPI</font> completely due to its &#8220;additional arguments&#8221; business. It shouldn&#8217;t have been added to the schema in this form. It should be qapified properly, or replaced by a properly qapified command. <code>Since:</code> 0.14.0 <code>Returns:</code> Nothing on success If <tt>&quot;type&quot;</tt> is not a valid network backend, DeviceNotFound <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;netdev_add&quot;,<br />
-   &quot;arguments&quot; : {&quot;type&quot; : &quot;user&quot;, &quot;id&quot; : &quot;netdev1&quot;, &quot;dnssearch&quot; : &quot;example.org&quot;}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
+<p> Additional arguments depend on the type. <code>TODO:</code> This command effectively bypasses QAPI completely due to its &#8220;additional arguments&#8221; business. It shouldn&#8217;t have been added to the schema in this form. It should be qapified properly, or replaced by a properly qapified command. <code>Since:</code> 0.14.0 <code>Returns:</code> Nothing on success If <tt>&quot;type&quot;</tt> is not a valid network backend, DeviceNotFound <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;netdev_add&quot;,<br/>
+   &quot;arguments&quot; : {&quot;type&quot; : &quot;user&quot;, &quot;id&quot; : &quot;netdev1&quot;, &quot;dnssearch&quot; : &quot;example.org&quot;}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
 } <code>netdev_del</code> (Command) Remove a network backend. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;id: string&quot;</dt>
 <dd>the name of the network backend to remove</dd></dl>
-<p> <code>Returns:</code> Nothing on success If <tt>&quot;id&quot;</tt> is not a valid network backend, DeviceNotFound <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;netdev_del&quot;, &quot;arguments&quot; : {&quot;id&quot; : &quot;netdev1&quot;}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
+<p> <code>Returns:</code> Nothing on success If <tt>&quot;id&quot;</tt> is not a valid network backend, DeviceNotFound <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;netdev_del&quot;, &quot;arguments&quot; : {&quot;id&quot; : &quot;netdev1&quot;}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
 } <code>NetLegacyNicOptions</code> (Object) Create a new Network Interface Card. <code>Members:</code></p>
 <dl>
 <dt>&quot;netdev: string&quot; (optional)</dt>
 <dd>id of -netdev to connect to</dd>
 <dt>&quot;macaddr: string&quot; (optional)</dt>
-<dd><font SIZE="-1">MAC</font> address</dd>
+<dd>MAC address</dd>
 <dt>&quot;model: string&quot; (optional)</dt>
 <dd>device model (e1000, rtl8139, virtio etc.)</dd>
 <dt>&quot;addr: string&quot; (optional)</dt>
-<dd><font SIZE="-1">PCI</font> device address</dd>
+<dd>PCI device address</dd>
 <dt>&quot;vectors: int&quot; (optional)</dt>
 <dd>number of MSI-x vectors, 0 to disable MSI-X</dd></dl>
 <p> <code>Since:</code> 1.2 <code>NetdevUserOptions</code> (Object) Use the user mode network stack which requires no administrator privilege to run. <code>Members:</code></p>
 <dl>
 <dt>&quot;hostname: string&quot; (optional)</dt>
-<dd>client hostname reported by the builtin <font SIZE="-1">DHCP</font> server</dd>
+<dd>client hostname reported by the builtin DHCP server</dd>
 <dt>&quot;restrict: boolean&quot; (optional)</dt>
 <dd>isolate the guest from the host</dd>
 <dt>&quot;ipv4: boolean&quot; (optional)</dt>
@@ -4185,19 +4185,19 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dt>&quot;ip: string&quot; (optional)</dt>
 <dd>legacy parameter, use net= instead</dd>
 <dt>&quot;net: string&quot; (optional)</dt>
-<dd><font SIZE="-1">IP</font> network address that the guest will see, in the form addr[/netmask] The netmask is optional, and can be either in the form a.b.c.d or as a number of valid top-most bits. Default is 10.0.2.0/24.</dd>
+<dd>IP network address that the guest will see, in the form addr[/netmask] The netmask is optional, and can be either in the form a.b.c.d or as a number of valid top-most bits. Default is 10.0.2.0/24.</dd>
 <dt>&quot;host: string&quot; (optional)</dt>
 <dd>guest-visible address of the host</dd>
 <dt>&quot;tftp: string&quot; (optional)</dt>
-<dd>root directory of the built-in <font SIZE="-1">TFTP</font> server</dd>
+<dd>root directory of the built-in TFTP server</dd>
 <dt>&quot;bootfile: string&quot; (optional)</dt>
-<dd><font SIZE="-1">BOOTP</font> filename, for use with tftp=</dd>
+<dd>BOOTP filename, for use with tftp=</dd>
 <dt>&quot;dhcpstart: string&quot; (optional)</dt>
-<dd>the first of the 16 IPs the built-in <font SIZE="-1">DHCP</font> server can assign</dd>
+<dd>the first of the 16 IPs the built-in DHCP server can assign</dd>
 <dt>&quot;dns: string&quot; (optional)</dt>
 <dd>guest-visible address of the virtual nameserver</dd>
 <dt>&quot;dnssearch: array of String&quot; (optional)</dt>
-<dd>list of <font SIZE="-1">DNS</font> suffixes to search, passed as <font SIZE="-1">DHCP</font> option to the guest</dd>
+<dd>list of DNS suffixes to search, passed as DHCP option to the guest</dd>
 <dt>&quot;domainname: string&quot; (optional)</dt>
 <dd>guest-visible domain name of the virtual nameserver (since 3.0)</dd>
 <dt>&quot;ipv6-prefix: string&quot; (optional)</dt>
@@ -4209,16 +4209,16 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dt>&quot;ipv6-dns: string&quot; (optional)</dt>
 <dd>guest-visible IPv6 address of the virtual nameserver (since 2.6)</dd>
 <dt>&quot;smb: string&quot; (optional)</dt>
-<dd>root directory of the built-in <font SIZE="-1">SMB</font> server</dd>
+<dd>root directory of the built-in SMB server</dd>
 <dt>&quot;smbserver: string&quot; (optional)</dt>
-<dd><font SIZE="-1">IP</font> address of the built-in <font SIZE="-1">SMB</font> server</dd>
+<dd>IP address of the built-in SMB server</dd>
 <dt>&quot;hostfwd: array of String&quot; (optional)</dt>
-<dd>redirect incoming <font SIZE="-1">TCP</font> or <font SIZE="-1">UDP</font> host connections to guest endpoints</dd>
+<dd>redirect incoming TCP or UDP host connections to guest endpoints</dd>
 <dt>&quot;guestfwd: array of String&quot; (optional)</dt>
-<dd>forward guest <font SIZE="-1">TCP</font> connections</dd>
+<dd>forward guest TCP connections</dd>
 <dt>&quot;tftp-server-name: string&quot; (optional)</dt>
-<dd><font SIZE="-1">RFC2132 &#8220;TFTP</font> server name&#8221; string (Since 3.1)</dd></dl>
-<p> <code>Since:</code> 1.2 <code>NetdevTapOptions</code> (Object) Used to configure a host <font SIZE="-1">TAP</font> network interface backend. <code>Members:</code></p>
+<dd>RFC2132 &#8220;TFTP server name&#8221; string (Since 3.1)</dd></dl>
+<p> <code>Since:</code> 1.2 <code>NetdevTapOptions</code> (Object) Used to configure a host TAP network interface backend. <code>Members:</code></p>
 <dl>
 <dt>&quot;ifname: string&quot; (optional)</dt>
 <dd>interface name</dd>
@@ -4237,7 +4237,7 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dt>&quot;sndbuf: int&quot; (optional)</dt>
 <dd>send buffer limit. Understands [TGMKkb] suffixes.</dd>
 <dt>&quot;vnet_hdr: boolean&quot; (optional)</dt>
-<dd>enable the <font SIZE="-1">IFF_VNET_HDR</font> flag on the tap interface</dd>
+<dd>enable the IFF_VNET_HDR flag on the tap interface</dd>
 <dt>&quot;vhost: boolean&quot; (optional)</dt>
 <dd>enable vhost-net network accelerator</dd>
 <dt>&quot;vhostfd: string&quot; (optional)</dt>
@@ -4250,7 +4250,7 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dd>number of queues to be created for multiqueue capable tap</dd>
 <dt>&quot;poll-us: int&quot; (optional)</dt>
 <dd>maximum number of microseconds that could be spent on busy polling for tap (since 2.7)</dd></dl>
-<p> <code>Since:</code> 1.2 <code>NetdevSocketOptions</code> (Object) Socket netdevs are used to establish a network connection to another <font SIZE="-1">QEMU</font> virtual machine via a <font SIZE="-1">TCP</font> socket. <code>Members:</code></p>
+<p> <code>Since:</code> 1.2 <code>NetdevSocketOptions</code> (Object) Socket netdevs are used to establish a network connection to another QEMU virtual machine via a TCP socket. <code>Members:</code></p>
 <dl>
 <dt>&quot;fd: string&quot; (optional)</dt>
 <dd>file descriptor of an already opened socket</dd>
@@ -4259,11 +4259,11 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dt>&quot;connect: string&quot; (optional)</dt>
 <dd>port number, and optional hostname, to connect to</dd>
 <dt>&quot;mcast: string&quot; (optional)</dt>
-<dd><font SIZE="-1">UDP</font> multicast address and port number</dd>
+<dd>UDP multicast address and port number</dd>
 <dt>&quot;localaddr: string&quot; (optional)</dt>
 <dd>source address and port for multicast and udp packets</dd>
 <dt>&quot;udp: string&quot; (optional)</dt>
-<dd><font SIZE="-1">UDP</font> unicast address and port number</dd></dl>
+<dd>UDP unicast address and port number</dd></dl>
 <p> <code>Since:</code> 1.2 <code>NetdevL2TPv3Options</code> (Object) Configure an Ethernet over L2TPv3 tunnel. <code>Members:</code></p>
 <dl>
 <dt>&quot;src: string&quot;</dt>
@@ -4304,7 +4304,7 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dd>group owner of socket</dd>
 <dt>&quot;mode: int&quot; (optional)</dt>
 <dd>permissions for socket</dd></dl>
-<p> <code>Since:</code> 1.2 <code>NetdevBridgeOptions</code> (Object) Connect a host <font SIZE="-1">TAP</font> network interface to a host bridge device. <code>Members:</code></p>
+<p> <code>Since:</code> 1.2 <code>NetdevBridgeOptions</code> (Object) Connect a host TAP network interface to a host bridge device. <code>Members:</code></p>
 <dl>
 <dt>&quot;br: string&quot; (optional)</dt>
 <dd>bridge name</dd>
@@ -4316,10 +4316,10 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dd>hub identifier number</dd>
 <dt>&quot;netdev: string&quot; (optional)</dt>
 <dd>used to connect hub to a netdev instead of a device (since 2.12)</dd></dl>
-<p> <code>Since:</code> 1.2 <code>NetdevNetmapOptions</code> (Object) Connect a client to a netmap-enabled <font SIZE="-1">NIC</font> or to a <font SIZE="-1">VALE</font> switch port <code>Members:</code></p>
+<p> <code>Since:</code> 1.2 <code>NetdevNetmapOptions</code> (Object) Connect a client to a netmap-enabled NIC or to a VALE switch port <code>Members:</code></p>
 <dl>
 <dt>&quot;ifname: string&quot;</dt>
-<dd>Either the name of an existing network interface supported by netmap, or the name of a <font SIZE="-1">VALE</font> port (created on the fly). A <font SIZE="-1">VALE</font> port name is in the form &#8216;valeXXX:YYY&#8217;, where <font SIZE="-1">XXX</font> and <font SIZE="-1">YYY</font> are non-negative integers. <font SIZE="-1">XXX</font> identifies a switch and <font SIZE="-1">YYY</font> identifies a port of the switch. <font SIZE="-1">VALE</font> ports having the same <font SIZE="-1">XXX</font> are therefore connected to the same switch.</dd>
+<dd>Either the name of an existing network interface supported by netmap, or the name of a VALE port (created on the fly). A VALE port name is in the form &#8216;valeXXX:YYY&#8217;, where XXX and YYY are non-negative integers. XXX identifies a switch and YYY identifies a port of the switch. VALE ports having the same XXX are therefore connected to the same switch.</dd>
 <dt>&quot;devname: string&quot; (optional)</dt>
 <dd>path of the netmap device (default: &#8216;/dev/netmap&#8217;).</dd></dl>
 <p> <code>Since:</code> 2.0 <code>NetdevVhostUserOptions</code> (Object) Vhost-user network backend <code>Members:</code></p>
@@ -4448,7 +4448,7 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dd>don&#8217;t receive any assigned packet</dd>
 <dt>&quot;all&quot;</dt>
 <dd>receive all assigned packets</dd></dl>
-<p> <code>Since:</code> 1.6 <code>RxFilterInfo</code> (Object) Rx-filter information for a <font SIZE="-1">NIC.</font> <code>Members:</code></p>
+<p> <code>Since:</code> 1.6 <code>RxFilterInfo</code> (Object) Rx-filter information for a NIC. <code>Members:</code></p>
 <dl>
 <dt>&quot;name: string&quot;</dt>
 <dd>net client name</dd>
@@ -4474,37 +4474,37 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dd>a list of unicast macaddr string</dd>
 <dt>&quot;multicast-table: array of string&quot;</dt>
 <dd>a list of multicast macaddr string</dd></dl>
-<p> <code>Since:</code> 1.6 <code>query-rx-filter</code> (Command) Return rx-filter information for all NICs (or for the given <font SIZE="-1">NIC</font>). <code>Arguments:</code></p>
+<p> <code>Since:</code> 1.6 <code>query-rx-filter</code> (Command) Return rx-filter information for all NICs (or for the given NIC). <code>Arguments:</code></p>
 <dl>
 <dt>&quot;name: string&quot; (optional)</dt>
 <dd>net client name</dd></dl>
-<p> <code>Returns:</code> list of <tt>&quot;RxFilterInfo&quot;</tt> for all NICs (or for the given <font SIZE="-1">NIC</font>). Returns an error if the given <tt>&quot;name&quot;</tt> doesn&#8217;t exist, or given <font SIZE="-1">NIC</font> doesn&#8217;t support rx-filter querying, or given net client isn&#8217;t a <font SIZE="-1">NIC.</font> <code>Since:</code> 1.6 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-rx-filter&quot;, &quot;arguments&quot; : {&quot;name&quot; : &quot;vnet0&quot;}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot; : [<br />
-        {<br />
-            &quot;promiscuous&quot; : true,<br />
-            &quot;name&quot; : &quot;vnet0&quot;,<br />
-            &quot;main-mac&quot; : &quot;52:54:00:12:34:56&quot;,<br />
-            &quot;unicast&quot; : &quot;normal&quot;,<br />
-            &quot;vlan&quot; : &quot;normal&quot;,<br />
-            &quot;vlan-table&quot; : [<br />
-                4,<br />
-                0<br />
-            ],<br />
-            &quot;unicast-table&quot; : [<br />
-            ],<br />
-            &quot;multicast&quot; : &quot;normal&quot;,<br />
-            &quot;multicast-overflow&quot; : false,<br />
-            &quot;unicast-overflow&quot; : false,<br />
-            &quot;multicast-table&quot; : [<br />
-                &quot;01:00:5e:00:00:01&quot;,<br />
-                &quot;33:33:00:00:00:01&quot;,<br />
-                &quot;33:33:ff:12:34:56&quot;<br />
-            ],<br />
-            &quot;broadcast-allowed&quot; : false<br />
-        }<br />
-    ]<br />
-} <font SIZE="-1"><code>NIC_RX_FILTER_CHANGED</code></font> (Event) Emitted once until the &#8216;query-rx-filter&#8217; command is executed, the first event will always be emitted <code>Arguments:</code></p>
+<p> <code>Returns:</code> list of <tt>&quot;RxFilterInfo&quot;</tt> for all NICs (or for the given NIC). Returns an error if the given <tt>&quot;name&quot;</tt> doesn&#8217;t exist, or given NIC doesn&#8217;t support rx-filter querying, or given net client isn&#8217;t a NIC. <code>Since:</code> 1.6 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-rx-filter&quot;, &quot;arguments&quot; : {&quot;name&quot; : &quot;vnet0&quot;}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot; : [<br/>
+        {<br/>
+            &quot;promiscuous&quot; : true,<br/>
+            &quot;name&quot; : &quot;vnet0&quot;,<br/>
+            &quot;main-mac&quot; : &quot;52:54:00:12:34:56&quot;,<br/>
+            &quot;unicast&quot; : &quot;normal&quot;,<br/>
+            &quot;vlan&quot; : &quot;normal&quot;,<br/>
+            &quot;vlan-table&quot; : [<br/>
+                4,<br/>
+                0<br/>
+            ],<br/>
+            &quot;unicast-table&quot; : [<br/>
+            ],<br/>
+            &quot;multicast&quot; : &quot;normal&quot;,<br/>
+            &quot;multicast-overflow&quot; : false,<br/>
+            &quot;unicast-overflow&quot; : false,<br/>
+            &quot;multicast-table&quot; : [<br/>
+                &quot;01:00:5e:00:00:01&quot;,<br/>
+                &quot;33:33:00:00:00:01&quot;,<br/>
+                &quot;33:33:ff:12:34:56&quot;<br/>
+            ],<br/>
+            &quot;broadcast-allowed&quot; : false<br/>
+        }<br/>
+    ]<br/>
+} <code>NIC_RX_FILTER_CHANGED</code> (Event) Emitted once until the &#8216;query-rx-filter&#8217; command is executed, the first event will always be emitted <code>Arguments:</code></p>
 <dl>
 <dt>&quot;name: string&quot; (optional)</dt>
 <dd>net client name</dd>
@@ -4519,9 +4519,9 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <p><code>AnnounceParameters</code> (Object) Parameters for self-announce timers <code>Members:</code></p>
 <dl>
 <dt>&quot;initial: int&quot;</dt>
-<dd>Initial delay (in ms) before sending the first <font SIZE="-1">GARP/RARP</font> announcement</dd>
+<dd>Initial delay (in ms) before sending the first GARP/RARP announcement</dd>
 <dt>&quot;max: int&quot;</dt>
-<dd>Maximum delay (in ms) between <font SIZE="-1">GARP/RARP</font> announcement packets</dd>
+<dd>Maximum delay (in ms) between GARP/RARP announcement packets</dd>
 <dt>&quot;rounds: int&quot;</dt>
 <dd>Number of self-announcement attempts</dd>
 <dt>&quot;step: int&quot;</dt>
@@ -4530,28 +4530,28 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dd>An optional list of interface names, which restricts the announcement to the listed interfaces. (Since 4.1)</dd>
 <dt>&quot;id: string&quot; (optional)</dt>
 <dd>A name to be used to identify an instance of announce-timers and to allow it to modified later. Not for use as part of the migration parameters. (Since 4.1)</dd></dl>
-<p> <code>Since:</code> 4.0 <code>announce-self</code> (Command) Trigger generation of broadcast <font SIZE="-1">RARP</font> frames to update network switches. This can be useful when network bonds fail-over the active slave. <code>Arguments:</code> the members of <tt>&quot;AnnounceParameters&quot;</tt> <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;announce-self&quot;,<br />
-   &quot;arguments&quot; : {<br />
-       &quot;initial&quot; : 50,<br />
-       &quot;max&quot; : 550,<br />
-       &quot;rounds&quot; : 10,<br />
-       &quot;step&quot; : 50,<br />
-       &quot;interfaces&quot; : [ &quot;vn2&quot;, &quot;vn3&quot; ],<br />
-       &quot;id&quot; : &quot;bob&quot;<br />
-   }} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
-} <code>Since:</code> 4.0 <font SIZE="-1"><code>FAILOVER_NEGOTIATED</code></font> (Event) Emitted when <font SIZE="-1">VIRTIO_NET_F_STANDBY</font> was enabled during feature negotiation. Failover primary devices which were hidden (not hotplugged when requested) before will now be hotplugged by the virtio-net standby device. device-id: <font SIZE="-1">QEMU</font> device id of the unplugged device <code>Arguments:</code></p>
+<p> <code>Since:</code> 4.0 <code>announce-self</code> (Command) Trigger generation of broadcast RARP frames to update network switches. This can be useful when network bonds fail-over the active slave. <code>Arguments:</code> the members of <tt>&quot;AnnounceParameters&quot;</tt> <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;announce-self&quot;,<br/>
+   &quot;arguments&quot; : {<br/>
+       &quot;initial&quot; : 50,<br/>
+       &quot;max&quot; : 550,<br/>
+       &quot;rounds&quot; : 10,<br/>
+       &quot;step&quot; : 50,<br/>
+       &quot;interfaces&quot; : [ &quot;vn2&quot;, &quot;vn3&quot; ],<br/>
+       &quot;id&quot; : &quot;bob&quot;<br/>
+   }} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
+} <code>Since:</code> 4.0 <code>FAILOVER_NEGOTIATED</code> (Event) Emitted when VIRTIO_NET_F_STANDBY was enabled during feature negotiation. Failover primary devices which were hidden (not hotplugged when requested) before will now be hotplugged by the virtio-net standby device. device-id: QEMU device id of the unplugged device <code>Arguments:</code></p>
 <dl>
 <dt>&quot;device-id: string&quot;</dt>
 <dd>Not documented</dd></dl>
 <p> <code>Since:</code> 4.2 <code>Example:</code> </p>
 <pre> &lt;- { &quot;event&quot;: &quot;FAILOVER_NEGOTIATED&quot;,
  &quot;data&quot;: &quot;net1&quot; }</pre>
-<h3><font SIZE="-1">RDMA</font> device</h3>
-<p><font SIZE="-1"><code>RDMA_GID_STATUS_CHANGED</code></font> (Event) Emitted when guest driver adds/deletes <font SIZE="-1">GID</font> to/from device <code>Arguments:</code></p>
+<h3>RDMA device</h3>
+<p><code>RDMA_GID_STATUS_CHANGED</code> (Event) Emitted when guest driver adds/deletes GID to/from device <code>Arguments:</code></p>
 <dl>
 <dt>&quot;netdev: string&quot;</dt>
 <dd>RoCE Network Device name</dd>
@@ -4561,7 +4561,7 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dd>Subnet Prefix</dd>
 <dt>&quot;interface-id: int&quot;</dt>
 <dd>Not documented</dd></dl>
-<p> <tt>&quot;interface-id&quot;</tt> : Interface <font SIZE="-1">ID</font> <code>Since:</code> 4.0 <code>Example:</code> </p>
+<p> <tt>&quot;interface-id&quot;</tt> : Interface ID <code>Since:</code> 4.0 <code>Example:</code> </p>
 <pre> &lt;- {&quot;timestamp&quot;: {&quot;seconds&quot;: 1541579657, &quot;microseconds&quot;: 986760},
  &quot;event&quot;: &quot;RDMA_GID_STATUS_CHANGED&quot;,
  &quot;data&quot;:
@@ -4575,19 +4575,19 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dt>&quot;name: string&quot;</dt>
 <dd>switch name</dd>
 <dt>&quot;id: int&quot;</dt>
-<dd>switch <font SIZE="-1">ID</font></dd>
+<dd>switch ID</dd>
 <dt>&quot;ports: int&quot;</dt>
 <dd>number of front-panel ports</dd></dl>
 <p> <code>Since:</code> 2.4 <code>query-rocker</code> (Command) Return rocker switch information. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;name: string&quot;</dt>
 <dd>Not documented</dd></dl>
-<p> <code>Returns:</code> <tt>&quot;Rocker&quot;</tt> information <code>Since:</code> 2.4 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-rocker&quot;, &quot;arguments&quot; : {&quot;name&quot; : &quot;sw1&quot;}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-        &quot;name&quot; : &quot;sw1&quot;, &quot;ports&quot; : 2, &quot;id&quot; : 1327446905938<br />
-    }<br />
+<p> <code>Returns:</code> <tt>&quot;Rocker&quot;</tt> information <code>Since:</code> 2.4 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-rocker&quot;, &quot;arguments&quot; : {&quot;name&quot; : &quot;sw1&quot;}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+        &quot;name&quot; : &quot;sw1&quot;, &quot;ports&quot; : 2, &quot;id&quot; : 1327446905938<br/>
+    }<br/>
 } <code>RockerPortDuplex</code> (Enum) An eumeration of port duplex states. <code>Values:</code></p>
 <dl>
 <dt>&quot;half&quot;</dt>
@@ -4607,7 +4607,7 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dt>&quot;enabled: boolean&quot;</dt>
 <dd>port is enabled for I/O</dd>
 <dt>&quot;link-up: boolean&quot;</dt>
-<dd>physical link is <font SIZE="-1">UP</font> on port</dd>
+<dd>physical link is UP on port</dd>
 <dt>&quot;speed: int&quot;</dt>
 <dd>port link speed in Mbps</dd>
 <dt>&quot;duplex: RockerPortDuplex&quot;</dt>
@@ -4618,68 +4618,68 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dl>
 <dt>&quot;name: string&quot;</dt>
 <dd>Not documented</dd></dl>
-<p> <code>Returns:</code> a list of <tt>&quot;RockerPort&quot;</tt> information <code>Since:</code> 2.4 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-rocker-ports&quot;, &quot;arguments&quot; : {&quot;name&quot; : &quot;sw1&quot;}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot; : [ {&quot;duplex&quot; : &quot;full&quot;, &quot;enabled&quot; : true, &quot;name&quot; : &quot;sw1.1&quot;, &quot;autoneg&quot; : &quot;off&quot;, &quot;link-up&quot; : true, &quot;speed&quot; : 10000},<br />
-                 {&quot;duplex&quot; : &quot;full&quot;, &quot;enabled&quot; : true, &quot;name&quot; : &quot;sw1.2&quot;, &quot;autoneg&quot; : &quot;off&quot;, &quot;link-up&quot; : true, &quot;speed&quot; : 10000} ]<br />
+<p> <code>Returns:</code> a list of <tt>&quot;RockerPort&quot;</tt> information <code>Since:</code> 2.4 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-rocker-ports&quot;, &quot;arguments&quot; : {&quot;name&quot; : &quot;sw1&quot;}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot; : [ {&quot;duplex&quot; : &quot;full&quot;, &quot;enabled&quot; : true, &quot;name&quot; : &quot;sw1.1&quot;, &quot;autoneg&quot; : &quot;off&quot;, &quot;link-up&quot; : true, &quot;speed&quot; : 10000},<br/>
+                 {&quot;duplex&quot; : &quot;full&quot;, &quot;enabled&quot; : true, &quot;name&quot; : &quot;sw1.2&quot;, &quot;autoneg&quot; : &quot;off&quot;, &quot;link-up&quot; : true, &quot;speed&quot; : 10000} ]<br/>
 } <code>RockerOfDpaFlowKey</code> (Object) Rocker switch OF-DPA flow key <code>Members:</code></p>
 <dl>
 <dt>&quot;priority: int&quot;</dt>
 <dd>key priority, 0 being lowest priority</dd>
 <dt>&quot;tbl-id: int&quot;</dt>
-<dd>flow table <font SIZE="-1">ID</font></dd>
+<dd>flow table ID</dd>
 <dt>&quot;in-pport: int&quot; (optional)</dt>
 <dd>physical input port</dd>
 <dt>&quot;tunnel-id: int&quot; (optional)</dt>
-<dd>tunnel <font SIZE="-1">ID</font></dd>
+<dd>tunnel ID</dd>
 <dt>&quot;vlan-id: int&quot; (optional)</dt>
-<dd><font SIZE="-1">VLAN ID</font></dd>
+<dd>VLAN ID</dd>
 <dt>&quot;eth-type: int&quot; (optional)</dt>
 <dd>Ethernet header type</dd>
 <dt>&quot;eth-src: string&quot; (optional)</dt>
-<dd>Ethernet header source <font SIZE="-1">MAC</font> address</dd>
+<dd>Ethernet header source MAC address</dd>
 <dt>&quot;eth-dst: string&quot; (optional)</dt>
-<dd>Ethernet header destination <font SIZE="-1">MAC</font> address</dd>
+<dd>Ethernet header destination MAC address</dd>
 <dt>&quot;ip-proto: int&quot; (optional)</dt>
-<dd><font SIZE="-1">IP</font> Header protocol field</dd>
+<dd>IP Header protocol field</dd>
 <dt>&quot;ip-tos: int&quot; (optional)</dt>
-<dd><font SIZE="-1">IP</font> header <font SIZE="-1">TOS</font> field</dd>
+<dd>IP header TOS field</dd>
 <dt>&quot;ip-dst: string&quot; (optional)</dt>
-<dd><font SIZE="-1">IP</font> header destination address</dd></dl>
+<dd>IP header destination address</dd></dl>
 <p> <code>Note:</code> optional members may or may not appear in the flow key depending if they&#8217;re relevant to the flow key. <code>Since:</code> 2.4 <code>RockerOfDpaFlowMask</code> (Object) Rocker switch OF-DPA flow mask <code>Members:</code></p>
 <dl>
 <dt>&quot;in-pport: int&quot; (optional)</dt>
 <dd>physical input port</dd>
 <dt>&quot;tunnel-id: int&quot; (optional)</dt>
-<dd>tunnel <font SIZE="-1">ID</font></dd>
+<dd>tunnel ID</dd>
 <dt>&quot;vlan-id: int&quot; (optional)</dt>
-<dd><font SIZE="-1">VLAN ID</font></dd>
+<dd>VLAN ID</dd>
 <dt>&quot;eth-src: string&quot; (optional)</dt>
-<dd>Ethernet header source <font SIZE="-1">MAC</font> address</dd>
+<dd>Ethernet header source MAC address</dd>
 <dt>&quot;eth-dst: string&quot; (optional)</dt>
-<dd>Ethernet header destination <font SIZE="-1">MAC</font> address</dd>
+<dd>Ethernet header destination MAC address</dd>
 <dt>&quot;ip-proto: int&quot; (optional)</dt>
-<dd><font SIZE="-1">IP</font> Header protocol field</dd>
+<dd>IP Header protocol field</dd>
 <dt>&quot;ip-tos: int&quot; (optional)</dt>
-<dd><font SIZE="-1">IP</font> header <font SIZE="-1">TOS</font> field</dd></dl>
+<dd>IP header TOS field</dd></dl>
 <p> <code>Note:</code> optional members may or may not appear in the flow mask depending if they&#8217;re relevant to the flow mask. <code>Since:</code> 2.4 <code>RockerOfDpaFlowAction</code> (Object) Rocker switch OF-DPA flow action <code>Members:</code></p>
 <dl>
 <dt>&quot;goto-tbl: int&quot; (optional)</dt>
-<dd>next table <font SIZE="-1">ID</font></dd>
+<dd>next table ID</dd>
 <dt>&quot;group-id: int&quot; (optional)</dt>
-<dd>group <font SIZE="-1">ID</font></dd>
+<dd>group ID</dd>
 <dt>&quot;tunnel-lport: int&quot; (optional)</dt>
-<dd>tunnel logical port <font SIZE="-1">ID</font></dd>
+<dd>tunnel logical port ID</dd>
 <dt>&quot;vlan-id: int&quot; (optional)</dt>
-<dd><font SIZE="-1">VLAN ID</font></dd>
+<dd>VLAN ID</dd>
 <dt>&quot;new-vlan-id: int&quot; (optional)</dt>
-<dd>new <font SIZE="-1">VLAN ID</font></dd>
+<dd>new VLAN ID</dd>
 <dt>&quot;out-pport: int&quot; (optional)</dt>
 <dd>physical output port</dd></dl>
 <p> <code>Note:</code> optional members may or may not appear in the flow action depending if they&#8217;re relevant to the flow action. <code>Since:</code> 2.4 <code>RockerOfDpaFlow</code> (Object) Rocker switch OF-DPA flow <code>Members:</code></p>
 <dl>
 <dt>&quot;cookie: int&quot;</dt>
-<dd>flow unique cookie <font SIZE="-1">ID</font></dd>
+<dd>flow unique cookie ID</dd>
 <dt>&quot;hits: int&quot;</dt>
 <dd>count of matches (hits) on flow</dd>
 <dt>&quot;key: RockerOfDpaFlowKey&quot;</dt>
@@ -4693,26 +4693,26 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dt>&quot;name: string&quot;</dt>
 <dd>switch name</dd>
 <dt>&quot;tbl-id: int&quot; (optional)</dt>
-<dd>flow table <font SIZE="-1">ID.</font> If tbl-id is not specified, returns flow information for all tables.</dd></dl>
-<p> <code>Returns:</code> rocker OF-DPA flow information <code>Since:</code> 2.4 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-rocker-of-dpa-flows&quot;,<br />
-   &quot;arguments&quot; : {&quot;name&quot; : &quot;sw1&quot;}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot; : [<br />
-        {&quot;key&quot; : {&quot;in-pport&quot; : 0, &quot;priority&quot; : 1, &quot;tbl-id&quot; : 0},<br />
-         &quot;hits&quot; : 138,<br />
-         &quot;cookie&quot; : 0,<br />
-         &quot;action&quot; : {&quot;goto-tbl&quot; : 10},<br />
-         &quot;mask&quot; : {&quot;in-pport&quot; : 4294901760}},<br />
-        {&#8230; more&#8230;},<br />
-    ]<br />
+<dd>flow table ID. If tbl-id is not specified, returns flow information for all tables.</dd></dl>
+<p> <code>Returns:</code> rocker OF-DPA flow information <code>Since:</code> 2.4 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-rocker-of-dpa-flows&quot;,<br/>
+   &quot;arguments&quot; : {&quot;name&quot; : &quot;sw1&quot;}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot; : [<br/>
+        {&quot;key&quot; : {&quot;in-pport&quot; : 0, &quot;priority&quot; : 1, &quot;tbl-id&quot; : 0},<br/>
+         &quot;hits&quot; : 138,<br/>
+         &quot;cookie&quot; : 0,<br/>
+         &quot;action&quot; : {&quot;goto-tbl&quot; : 10},<br/>
+         &quot;mask&quot; : {&quot;in-pport&quot; : 4294901760}},<br/>
+        {&#8230; more&#8230;},<br/>
+    ]<br/>
 } <code>RockerOfDpaGroup</code> (Object) Rocker switch OF-DPA group <code>Members:</code></p>
 <dl>
 <dt>&quot;id: int&quot;</dt>
-<dd>group unique <font SIZE="-1">ID</font></dd>
+<dd>group unique ID</dd>
 <dt>&quot;type: int&quot;</dt>
 <dd>group type</dd>
 <dt>&quot;vlan-id: int&quot; (optional)</dt>
-<dd><font SIZE="-1">VLAN ID</font></dd>
+<dd>VLAN ID</dd>
 <dt>&quot;pport: int&quot; (optional)</dt>
 <dd>physical port number</dd>
 <dt>&quot;index: int&quot; (optional)</dt>
@@ -4720,19 +4720,19 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dt>&quot;out-pport: int&quot; (optional)</dt>
 <dd>output physical port number</dd>
 <dt>&quot;group-id: int&quot; (optional)</dt>
-<dd>next group <font SIZE="-1">ID</font></dd>
+<dd>next group ID</dd>
 <dt>&quot;set-vlan-id: int&quot; (optional)</dt>
-<dd><font SIZE="-1">VLAN ID</font> to set</dd>
+<dd>VLAN ID to set</dd>
 <dt>&quot;pop-vlan: int&quot; (optional)</dt>
-<dd>pop <font SIZE="-1">VLAN</font> headr from packet</dd>
+<dd>pop VLAN headr from packet</dd>
 <dt>&quot;group-ids: array of int&quot; (optional)</dt>
 <dd>list of next group IDs</dd>
 <dt>&quot;set-eth-src: string&quot; (optional)</dt>
-<dd>set source <font SIZE="-1">MAC</font> address in Ethernet header</dd>
+<dd>set source MAC address in Ethernet header</dd>
 <dt>&quot;set-eth-dst: string&quot; (optional)</dt>
-<dd>set destination <font SIZE="-1">MAC</font> address in Ethernet header</dd>
+<dd>set destination MAC address in Ethernet header</dd>
 <dt>&quot;ttl-check: int&quot; (optional)</dt>
-<dd>perform <font SIZE="-1">TTL</font> check</dd></dl>
+<dd>perform TTL check</dd></dl>
 <p> <code>Note:</code> optional members may or may not appear in the group depending if they&#8217;re relevant to the group type. <code>Since:</code> 2.4 <code>query-rocker-of-dpa-groups</code> (Command) Return rocker OF-DPA group information. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;name: string&quot;</dt>
@@ -4755,52 +4755,52 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
  &quot;pport&quot;: 0, &quot;vlan-id&quot;: 3840,
  &quot;pop-vlan&quot;: 1, &quot;id&quot;: 251658240}
  ]}</pre>
-<h3><font SIZE="-1">TPM</font> (trusted platform module) devices</h3>
-<p><code>TpmModel</code> (Enum) An enumeration of <font SIZE="-1">TPM</font> models <code>Values:</code></p>
+<h3>TPM (trusted platform module) devices</h3>
+<p><code>TpmModel</code> (Enum) An enumeration of TPM models <code>Values:</code></p>
 <dl>
 <dt>&quot;tpm-tis&quot;</dt>
-<dd><font SIZE="-1">TPM TIS</font> model</dd>
+<dd>TPM TIS model</dd>
 <dt>&quot;tpm-crb&quot;</dt>
-<dd><font SIZE="-1">TPM CRB</font> model (since 2.12)</dd></dl>
-<p> <code>Since:</code> 1.5 <code>query-tpm-models</code> (Command) Return a list of supported <font SIZE="-1">TPM</font> models <code>Returns:</code> a list of TpmModel <code>Since:</code> 1.5 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-tpm-models&quot;} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot; : [ &quot;tpm-tis&quot;, &quot;tpm-crb&quot; ]<br />
-} <code>TpmType</code> (Enum) An enumeration of <font SIZE="-1">TPM</font> types <code>Values:</code></p>
+<dd>TPM CRB model (since 2.12)</dd></dl>
+<p> <code>Since:</code> 1.5 <code>query-tpm-models</code> (Command) Return a list of supported TPM models <code>Returns:</code> a list of TpmModel <code>Since:</code> 1.5 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-tpm-models&quot;} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot; : [ &quot;tpm-tis&quot;, &quot;tpm-crb&quot; ]<br/>
+} <code>TpmType</code> (Enum) An enumeration of TPM types <code>Values:</code></p>
 <dl>
 <dt>&quot;passthrough&quot;</dt>
-<dd><font SIZE="-1">TPM</font> passthrough type</dd>
+<dd>TPM passthrough type</dd>
 <dt>&quot;emulator&quot;</dt>
-<dd>Software Emulator <font SIZE="-1">TPM</font> type Since: 2.11</dd></dl>
-<p> <code>Since:</code> 1.5 <code>query-tpm-types</code> (Command) Return a list of supported <font SIZE="-1">TPM</font> types <code>Returns:</code> a list of TpmType <code>Since:</code> 1.5 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-tpm-types&quot;} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot; : [ &quot;passthrough&quot;, &quot;emulator&quot; ]<br />
-} <code>TPMPassthroughOptions</code> (Object) Information about the <font SIZE="-1">TPM</font> passthrough type <code>Members:</code></p>
+<dd>Software Emulator TPM type Since: 2.11</dd></dl>
+<p> <code>Since:</code> 1.5 <code>query-tpm-types</code> (Command) Return a list of supported TPM types <code>Returns:</code> a list of TpmType <code>Since:</code> 1.5 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-tpm-types&quot;} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot; : [ &quot;passthrough&quot;, &quot;emulator&quot; ]<br/>
+} <code>TPMPassthroughOptions</code> (Object) Information about the TPM passthrough type <code>Members:</code></p>
 <dl>
 <dt>&quot;path: string&quot; (optional)</dt>
-<dd>string describing the path used for accessing the <font SIZE="-1">TPM</font> device</dd>
+<dd>string describing the path used for accessing the TPM device</dd>
 <dt>&quot;cancel-path: string&quot; (optional)</dt>
-<dd>string showing the <font SIZE="-1">TPM</font>&#8216;s sysfs cancel file for cancellation of <font SIZE="-1">TPM</font> commands while they are executing</dd></dl>
-<p> <code>Since:</code> 1.5 <code>TPMEmulatorOptions</code> (Object) Information about the <font SIZE="-1">TPM</font> emulator type <code>Members:</code></p>
+<dd>string showing the TPM&#8216;s sysfs cancel file for cancellation of TPM commands while they are executing</dd></dl>
+<p> <code>Since:</code> 1.5 <code>TPMEmulatorOptions</code> (Object) Information about the TPM emulator type <code>Members:</code></p>
 <dl>
 <dt>&quot;chardev: string&quot;</dt>
 <dd>Name of a unix socket chardev</dd></dl>
-<p> <code>Since:</code> 2.11 <code>TpmTypeOptions</code> (Object) A union referencing different <font SIZE="-1">TPM</font> backend types&#8217; configuration options <code>Members:</code></p>
+<p> <code>Since:</code> 2.11 <code>TpmTypeOptions</code> (Object) A union referencing different TPM backend types&#8217; configuration options <code>Members:</code></p>
 <dl>
 <dt>&quot;type&quot;</dt>
-<dd>&#8216;passthrough&#8217; The configuration options for the <font SIZE="-1">TPM</font> passthrough type &#8217;emulator&#8217; The configuration options for <font SIZE="-1">TPM</font> emulator backend type</dd>
+<dd>&#8216;passthrough&#8217; The configuration options for the TPM passthrough type &#8217;emulator&#8217; The configuration options for TPM emulator backend type</dd>
 <dt>&quot;data: TPMPassthroughOptions&quot; when &quot;type&quot; is &quot;passthrough&quot;</dt>
 <dd>
 </dd><dt>&quot;data: TPMEmulatorOptions&quot; when &quot;type&quot; is &quot;emulator&quot;</dt>
 <dd></dd></dl>
-<p> <code>Since:</code> 1.5 <code>TPMInfo</code> (Object) Information about the <font SIZE="-1">TPM</font> <code>Members:</code></p>
+<p> <code>Since:</code> 1.5 <code>TPMInfo</code> (Object) Information about the TPM <code>Members:</code></p>
 <dl>
 <dt>&quot;id: string&quot;</dt>
-<dd>The Id of the <font SIZE="-1">TPM</font></dd>
+<dd>The Id of the TPM</dd>
 <dt>&quot;model: TpmModel&quot;</dt>
-<dd>The <font SIZE="-1">TPM</font> frontend model</dd>
+<dd>The TPM frontend model</dd>
 <dt>&quot;options: TpmTypeOptions&quot;</dt>
-<dd>The <font SIZE="-1">TPM</font> (backend) type configuration options</dd></dl>
-<p> <code>Since:</code> 1.5 <code>query-tpm</code> (Command) Return information about the <font SIZE="-1">TPM</font> device <code>Returns:</code> <tt>&quot;TPMInfo&quot;</tt> on success <code>Since:</code> 1.5 <code>Example:</code> </p>
+<dd>The TPM (backend) type configuration options</dd></dl>
+<p> <code>Since:</code> 1.5 <code>query-tpm</code> (Command) Return information about the TPM device <code>Returns:</code> <tt>&quot;TPMInfo&quot;</tt> on success <code>Since:</code> 1.5 <code>Example:</code> </p>
 <pre> -&gt; { &quot;execute&quot;: &quot;query-tpm&quot; }
  &lt;- { &quot;return&quot;:
  [
@@ -4820,65 +4820,65 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <p><code>set_password</code> (Command) Sets the password of a remote display session. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;protocol: string&quot;</dt>
-<dd>`vnc&#8217; to modify the <font SIZE="-1">VNC</font> server password `spice&#8217; to modify the Spice server password</dd>
+<dd>`vnc&#8217; to modify the VNC server password `spice&#8217; to modify the Spice server password</dd>
 <dt>&quot;password: string&quot;</dt>
 <dd>the new password</dd>
 <dt>&quot;connected: string&quot; (optional)</dt>
 <dd>how to handle existing clients when changing the password. If nothing is specified, defaults to `keep&#8217; `fail&#8217; to fail the command if clients are connected `disconnect&#8217; to disconnect existing clients `keep&#8217; to maintain existing clients</dd></dl>
-<p> <code>Returns:</code> Nothing on success If Spice is not enabled, DeviceNotFound <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;set_password&quot;, &quot;arguments&quot; : {&quot;protocol&quot; : &quot;vnc&quot;,<br />
-                                              &quot;password&quot; : &quot;secret&quot;}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
+<p> <code>Returns:</code> Nothing on success If Spice is not enabled, DeviceNotFound <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;set_password&quot;, &quot;arguments&quot; : {&quot;protocol&quot; : &quot;vnc&quot;,<br/>
+                                              &quot;password&quot; : &quot;secret&quot;}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
 } <code>expire_password</code> (Command) Expire the password of a remote display server. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;protocol: string&quot;</dt>
 <dd>the name of the remote display protocol `vnc&#8217; or `spice&#8217;</dd>
 <dt>&quot;time: string&quot;</dt>
-<dd>when to expire the password. `now&#8217; to expire the password immediately `never&#8217; to cancel password expiration `+INT&#8217; where <font SIZE="-1">INT</font> is the number of seconds from now (integer) `<font SIZE="-1">INT</font>&#8216; where <font SIZE="-1">INT</font> is the absolute time in seconds</dd></dl>
-<p> <code>Returns:</code> Nothing on success If <tt>&quot;protocol&quot;</tt> is `spice&#8217; and Spice is not active, DeviceNotFound <code>Since:</code> 0.14.0 <code>Notes:</code> Time is relative to the server and currently there is no way to coordinate server time with client time. It is not recommended to use the absolute time version of the <tt>&quot;time&quot;</tt> parameter unless you&#8217;re sure you are on the same machine as the <font SIZE="-1">QEMU</font> instance. <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;expire_password&quot;, &quot;arguments&quot; : {&quot;protocol&quot; : &quot;vnc&quot;,<br />
-                                                 &quot;time&quot; : &quot;+60&quot;}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
-} <code>screendump</code> (Command) Write a <font SIZE="-1">PPM</font> of the <font SIZE="-1">VGA</font> screen to a file. <code>Arguments:</code></p>
+<dd>when to expire the password. `now&#8217; to expire the password immediately `never&#8217; to cancel password expiration `+INT&#8217; where INT is the number of seconds from now (integer) `INT&#8216; where INT is the absolute time in seconds</dd></dl>
+<p> <code>Returns:</code> Nothing on success If <tt>&quot;protocol&quot;</tt> is `spice&#8217; and Spice is not active, DeviceNotFound <code>Since:</code> 0.14.0 <code>Notes:</code> Time is relative to the server and currently there is no way to coordinate server time with client time. It is not recommended to use the absolute time version of the <tt>&quot;time&quot;</tt> parameter unless you&#8217;re sure you are on the same machine as the QEMU instance. <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;expire_password&quot;, &quot;arguments&quot; : {&quot;protocol&quot; : &quot;vnc&quot;,<br/>
+                                                 &quot;time&quot; : &quot;+60&quot;}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
+} <code>screendump</code> (Command) Write a PPM of the VGA screen to a file. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;filename: string&quot;</dt>
-<dd>the path of a new <font SIZE="-1">PPM</font> file to store the image</dd>
+<dd>the path of a new PPM file to store the image</dd>
 <dt>&quot;device: string&quot; (optional)</dt>
-<dd><font SIZE="-1">ID</font> of the display device that should be dumped. If this parameter is missing, the primary display will be used. (Since 2.12)</dd>
+<dd>ID of the display device that should be dumped. If this parameter is missing, the primary display will be used. (Since 2.12)</dd>
 <dt>&quot;head: int&quot; (optional)</dt>
-<dd>head to use in case the device supports multiple heads. If this parameter is missing, head #0 will be used. Also note that the head can only be specified in conjunction with the device <font SIZE="-1">ID.</font> (Since 2.12)</dd></dl>
-<p> <code>Returns:</code> Nothing on success <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;screendump&quot;,<br />
-   &quot;arguments&quot; : {&quot;filename&quot; : &quot;/tmp/image&quot;}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
-} <i>Spice</i> <code>SpiceBasicInfo</code> (Object) The basic information for <font SIZE="-1">SPICE</font> network connection <code>Members:</code></p>
+<dd>head to use in case the device supports multiple heads. If this parameter is missing, head #0 will be used. Also note that the head can only be specified in conjunction with the device ID. (Since 2.12)</dd></dl>
+<p> <code>Returns:</code> Nothing on success <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;screendump&quot;,<br/>
+   &quot;arguments&quot; : {&quot;filename&quot; : &quot;/tmp/image&quot;}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
+} <i>Spice</i> <code>SpiceBasicInfo</code> (Object) The basic information for SPICE network connection <code>Members:</code></p>
 <dl>
 <dt>&quot;host: string&quot;</dt>
-<dd><font SIZE="-1">IP</font> address</dd>
+<dd>IP address</dd>
 <dt>&quot;port: string&quot;</dt>
 <dd>port number</dd>
 <dt>&quot;family: NetworkAddressFamily&quot;</dt>
 <dd>address family</dd></dl>
-<p> <code>Since:</code> 2.1 <code>If:</code> <tt>&quot;defined(CONFIG_SPICE)&quot;</tt> <code>SpiceServerInfo</code> (Object) Information about a <font SIZE="-1">SPICE</font> server <code>Members:</code></p>
+<p> <code>Since:</code> 2.1 <code>If:</code> <tt>&quot;defined(CONFIG_SPICE)&quot;</tt> <code>SpiceServerInfo</code> (Object) Information about a SPICE server <code>Members:</code></p>
 <dl>
 <dt>&quot;auth: string&quot; (optional)</dt>
 <dd>authentication method</dd>
 <dt>The members of &quot;SpiceBasicInfo&quot;</dt>
 <dd></dd></dl>
-<p> <code>Since:</code> 2.1 <code>If:</code> <tt>&quot;defined(CONFIG_SPICE)&quot;</tt> <code>SpiceChannel</code> (Object) Information about a <font SIZE="-1">SPICE</font> client channel. <code>Members:</code></p>
+<p> <code>Since:</code> 2.1 <code>If:</code> <tt>&quot;defined(CONFIG_SPICE)&quot;</tt> <code>SpiceChannel</code> (Object) Information about a SPICE client channel. <code>Members:</code></p>
 <dl>
 <dt>&quot;connection-id: int&quot;</dt>
-<dd><font SIZE="-1">SPICE</font> connection id number. All channels with the same id belong to the same <font SIZE="-1">SPICE</font> session.</dd>
+<dd>SPICE connection id number. All channels with the same id belong to the same SPICE session.</dd>
 <dt>&quot;channel-type: int&quot;</dt>
-<dd><font SIZE="-1">SPICE</font> channel type number. &#8220;1&#8221; is the main control channel, filter for this one if you want to track spice sessions only</dd>
+<dd>SPICE channel type number. &#8220;1&#8221; is the main control channel, filter for this one if you want to track spice sessions only</dd>
 <dt>&quot;channel-id: int&quot;</dt>
-<dd><font SIZE="-1">SPICE</font> channel <font SIZE="-1">ID</font> number. Usually &#8220;0&#8221;, might be different when multiple channels of the same type exist, such as multiple display channels in a multihead setup</dd>
+<dd>SPICE channel ID number. Usually &#8220;0&#8221;, might be different when multiple channels of the same type exist, such as multiple display channels in a multihead setup</dd>
 <dt>&quot;tls: boolean&quot;</dt>
 <dd>true if the channel is encrypted, false otherwise.</dd>
 <dt>The members of &quot;SpiceBasicInfo&quot;</dt>
@@ -4891,58 +4891,58 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dd>Mouse cursor position is determined by the server.</dd>
 <dt>&quot;unknown&quot;</dt>
 <dd>No information is available about mouse mode used by the spice server.</dd></dl>
-<p> <code>Note:</code> spice/enums.h has a SpiceMouseMode already, hence the name. <code>Since:</code> 1.1 <code>If:</code> <tt>&quot;defined(CONFIG_SPICE)&quot;</tt> <code>SpiceInfo</code> (Object) Information about the <font SIZE="-1">SPICE</font> session. <code>Members:</code></p>
+<p> <code>Note:</code> spice/enums.h has a SpiceMouseMode already, hence the name. <code>Since:</code> 1.1 <code>If:</code> <tt>&quot;defined(CONFIG_SPICE)&quot;</tt> <code>SpiceInfo</code> (Object) Information about the SPICE session. <code>Members:</code></p>
 <dl>
 <dt>&quot;enabled: boolean&quot;</dt>
-<dd>true if the <font SIZE="-1">SPICE</font> server is enabled, false otherwise</dd>
+<dd>true if the SPICE server is enabled, false otherwise</dd>
 <dt>&quot;migrated: boolean&quot;</dt>
 <dd>true if the last guest migration completed and spice migration had completed as well. false otherwise. (since 1.4)</dd>
 <dt>&quot;host: string&quot; (optional)</dt>
-<dd>The hostname the <font SIZE="-1">SPICE</font> server is bound to. This depends on the name resolution on the host and may be an <font SIZE="-1">IP</font> address.</dd>
+<dd>The hostname the SPICE server is bound to. This depends on the name resolution on the host and may be an IP address.</dd>
 <dt>&quot;port: int&quot; (optional)</dt>
-<dd>The <font SIZE="-1">SPICE</font> server&#8217;s port number.</dd>
+<dd>The SPICE server&#8217;s port number.</dd>
 <dt>&quot;compiled-version: string&quot; (optional)</dt>
-<dd><font SIZE="-1">SPICE</font> server version.</dd>
+<dd>SPICE server version.</dd>
 <dt>&quot;tls-port: int&quot; (optional)</dt>
-<dd>The <font SIZE="-1">SPICE</font> server&#8217;s <font SIZE="-1">TLS</font> port number.</dd>
+<dd>The SPICE server&#8217;s TLS port number.</dd>
 <dt>&quot;auth: string&quot; (optional)</dt>
-<dd>the current authentication type used by the server &#8216;none&#8217; if no authentication is being used &#8216;spice&#8217; uses <font SIZE="-1">SASL</font> or direct <font SIZE="-1">TLS</font> authentication, depending on command line options</dd>
+<dd>the current authentication type used by the server &#8216;none&#8217; if no authentication is being used &#8216;spice&#8217; uses SASL or direct TLS authentication, depending on command line options</dd>
 <dt>&quot;mouse-mode: SpiceQueryMouseMode&quot;</dt>
 <dd>The mode in which the mouse cursor is displayed currently. Can be determined by the client or the server, or unknown if spice server doesn&#8217;t provide this information. (since: 1.1)</dd>
 <dt>&quot;channels: array of SpiceChannel&quot; (optional)</dt>
 <dd>a list of <tt>&quot;SpiceChannel&quot;</tt> for each active spice channel</dd></dl>
-<p> <code>Since:</code> 0.14.0 <code>If:</code> <tt>&quot;defined(CONFIG_SPICE)&quot;</tt> <code>query-spice</code> (Command) Returns information about the current <font SIZE="-1">SPICE</font> server <code>Returns:</code> <tt>&quot;SpiceInfo&quot;</tt> <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-spice&quot;} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-        &quot;enabled&quot; : true,<br />
-                    &quot;auth&quot; : &quot;spice&quot;,<br />
-                             &quot;port&quot; : 5920,<br />
-                             &quot;tls-port&quot; : 5921,<br />
-                             &quot;host&quot; : &quot;0.0.0.0&quot;,<br />
-                                      &quot;channels&quot; : [<br />
-                                          {<br />
-                                              &quot;port&quot; : &quot;54924&quot;,<br />
-                                              &quot;family&quot; : &quot;ipv4&quot;,<br />
-                                              &quot;channel-type&quot; : 1,<br />
-                                              &quot;connection-id&quot; : 1804289383,<br />
-                                              &quot;host&quot; : &quot;127.0.0.1&quot;,<br />
-                                              &quot;channel-id&quot; : 0,<br />
-                                              &quot;tls&quot; : true<br />
-                                          },<br />
-                                          {<br />
-                                              &quot;port&quot; : &quot;36710&quot;,<br />
-                                              &quot;family&quot; : &quot;ipv4&quot;,<br />
-                                              &quot;channel-type&quot; : 4,<br />
-                                              &quot;connection-id&quot; : 1804289383,<br />
-                                              &quot;host&quot; : &quot;127.0.0.1&quot;,<br />
-                                              &quot;channel-id&quot; : 0,<br />
-                                              &quot;tls&quot; : false<br />
-                                          },<br />
-                                          [&#8230; more channels follow&#8230;]<br />
-                                      ]<br />
-    }<br />
-} <code>If:</code> <tt>&quot;defined(CONFIG_SPICE)&quot;</tt> <font SIZE="-1"><code>SPICE_CONNECTED</code></font> (Event) Emitted when a <font SIZE="-1">SPICE</font> client establishes a connection <code>Arguments:</code></p>
+<p> <code>Since:</code> 0.14.0 <code>If:</code> <tt>&quot;defined(CONFIG_SPICE)&quot;</tt> <code>query-spice</code> (Command) Returns information about the current SPICE server <code>Returns:</code> <tt>&quot;SpiceInfo&quot;</tt> <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-spice&quot;} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+        &quot;enabled&quot; : true,<br/>
+                    &quot;auth&quot; : &quot;spice&quot;,<br/>
+                             &quot;port&quot; : 5920,<br/>
+                             &quot;tls-port&quot; : 5921,<br/>
+                             &quot;host&quot; : &quot;0.0.0.0&quot;,<br/>
+                                      &quot;channels&quot; : [<br/>
+                                          {<br/>
+                                              &quot;port&quot; : &quot;54924&quot;,<br/>
+                                              &quot;family&quot; : &quot;ipv4&quot;,<br/>
+                                              &quot;channel-type&quot; : 1,<br/>
+                                              &quot;connection-id&quot; : 1804289383,<br/>
+                                              &quot;host&quot; : &quot;127.0.0.1&quot;,<br/>
+                                              &quot;channel-id&quot; : 0,<br/>
+                                              &quot;tls&quot; : true<br/>
+                                          },<br/>
+                                          {<br/>
+                                              &quot;port&quot; : &quot;36710&quot;,<br/>
+                                              &quot;family&quot; : &quot;ipv4&quot;,<br/>
+                                              &quot;channel-type&quot; : 4,<br/>
+                                              &quot;connection-id&quot; : 1804289383,<br/>
+                                              &quot;host&quot; : &quot;127.0.0.1&quot;,<br/>
+                                              &quot;channel-id&quot; : 0,<br/>
+                                              &quot;tls&quot; : false<br/>
+                                          },<br/>
+                                          [&#8230; more channels follow&#8230;]<br/>
+                                      ]<br/>
+    }<br/>
+} <code>If:</code> <tt>&quot;defined(CONFIG_SPICE)&quot;</tt> <code>SPICE_CONNECTED</code> (Event) Emitted when a SPICE client establishes a connection <code>Arguments:</code></p>
 <dl>
 <dt>&quot;server: SpiceBasicInfo&quot;</dt>
 <dd>server information</dd>
@@ -4955,7 +4955,7 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
  &quot;server&quot;: { &quot;port&quot;: &quot;5920&quot;, &quot;family&quot;: &quot;ipv4&quot;, &quot;host&quot;: &quot;127.0.0.1&quot;},
  &quot;client&quot;: {&quot;port&quot;: &quot;52873&quot;, &quot;family&quot;: &quot;ipv4&quot;, &quot;host&quot;: &quot;127.0.0.1&quot;}
  }}</pre>
-<p><code>If:</code> <tt>&quot;defined(CONFIG_SPICE)&quot;</tt> <font SIZE="-1"><code>SPICE_INITIALIZED</code></font> (Event) Emitted after initial handshake and authentication takes place (if any) and the <font SIZE="-1">SPICE</font> channel is up and running <code>Arguments:</code></p>
+<p><code>If:</code> <tt>&quot;defined(CONFIG_SPICE)&quot;</tt> <code>SPICE_INITIALIZED</code> (Event) Emitted after initial handshake and authentication takes place (if any) and the SPICE channel is up and running <code>Arguments:</code></p>
 <dl>
 <dt>&quot;server: SpiceServerInfo&quot;</dt>
 <dd>server information</dd>
@@ -4970,7 +4970,7 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
  &quot;connection-id&quot;: 1804289383, &quot;host&quot;: &quot;127.0.0.1&quot;,
  &quot;channel-id&quot;: 0, &quot;tls&quot;: true}
  }}</pre>
-<p><code>If:</code> <tt>&quot;defined(CONFIG_SPICE)&quot;</tt> <font SIZE="-1"><code>SPICE_DISCONNECTED</code></font> (Event) Emitted when the <font SIZE="-1">SPICE</font> connection is closed <code>Arguments:</code></p>
+<p><code>If:</code> <tt>&quot;defined(CONFIG_SPICE)&quot;</tt> <code>SPICE_DISCONNECTED</code> (Event) Emitted when the SPICE connection is closed <code>Arguments:</code></p>
 <dl>
 <dt>&quot;server: SpiceBasicInfo&quot;</dt>
 <dd>server information</dd>
@@ -4983,13 +4983,13 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
  &quot;server&quot;: { &quot;port&quot;: &quot;5920&quot;, &quot;family&quot;: &quot;ipv4&quot;, &quot;host&quot;: &quot;127.0.0.1&quot;},
  &quot;client&quot;: {&quot;port&quot;: &quot;52873&quot;, &quot;family&quot;: &quot;ipv4&quot;, &quot;host&quot;: &quot;127.0.0.1&quot;}
  }}</pre>
-<p><code>If:</code> <tt>&quot;defined(CONFIG_SPICE)&quot;</tt> <font SIZE="-1"><code>SPICE_MIGRATE_COMPLETED</code></font> (Event) Emitted when <font SIZE="-1">SPICE</font> migration has completed <code>Since:</code> 1.3 <code>Example:</code> </p>
+<p><code>If:</code> <tt>&quot;defined(CONFIG_SPICE)&quot;</tt> <code>SPICE_MIGRATE_COMPLETED</code> (Event) Emitted when SPICE migration has completed <code>Since:</code> 1.3 <code>Example:</code> </p>
 <pre> &lt;- { &quot;timestamp&quot;: {&quot;seconds&quot;: 1290688046, &quot;microseconds&quot;: 417172},
  &quot;event&quot;: &quot;SPICE_MIGRATE_COMPLETED&quot; }</pre>
-<p><code>If:</code> <tt>&quot;defined(CONFIG_SPICE)&quot;</tt> <i></i><font SIZE="-1"><i>VNC</i></font><i></i> <code>VncBasicInfo</code> (Object) The basic information for vnc network connection <code>Members:</code></p>
+<p><code>If:</code> <tt>&quot;defined(CONFIG_SPICE)&quot;</tt> <i></i><i>VNC</i><i></i> <code>VncBasicInfo</code> (Object) The basic information for vnc network connection <code>Members:</code></p>
 <dl>
 <dt>&quot;host: string&quot;</dt>
-<dd><font SIZE="-1">IP</font> address</dd>
+<dd>IP address</dd>
 <dt>&quot;service: string&quot;</dt>
 <dd>The service name of the vnc port. This may depend on the host system&#8217;s service database so symbolic names should not be relied on.</dd>
 <dt>&quot;family: NetworkAddressFamily&quot;</dt>
@@ -4999,29 +4999,29 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <p> <code>Since:</code> 2.1 <code>If:</code> <tt>&quot;defined(CONFIG_VNC)&quot;</tt> <code>VncServerInfo</code> (Object) The network connection information for server <code>Members:</code></p>
 <dl>
 <dt>&quot;auth: string&quot; (optional)</dt>
-<dd>authentication method used for the plain (non-websocket) <font SIZE="-1">VNC</font> server</dd>
+<dd>authentication method used for the plain (non-websocket) VNC server</dd>
 <dt>The members of &quot;VncBasicInfo&quot;</dt>
 <dd></dd></dl>
-<p> <code>Since:</code> 2.1 <code>If:</code> <tt>&quot;defined(CONFIG_VNC)&quot;</tt> <code>VncClientInfo</code> (Object) Information about a connected <font SIZE="-1">VNC</font> client. <code>Members:</code></p>
+<p> <code>Since:</code> 2.1 <code>If:</code> <tt>&quot;defined(CONFIG_VNC)&quot;</tt> <code>VncClientInfo</code> (Object) Information about a connected VNC client. <code>Members:</code></p>
 <dl>
 <dt>&quot;x509_dname: string&quot; (optional)</dt>
 <dd>If x509 authentication is in use, the Distinguished Name of the client.</dd>
 <dt>&quot;sasl_username: string&quot; (optional)</dt>
-<dd>If <font SIZE="-1">SASL</font> authentication is in use, the <font SIZE="-1">SASL</font> username used for authentication.</dd>
+<dd>If SASL authentication is in use, the SASL username used for authentication.</dd>
 <dt>The members of &quot;VncBasicInfo&quot;</dt>
 <dd></dd></dl>
-<p> <code>Since:</code> 0.14.0 <code>If:</code> <tt>&quot;defined(CONFIG_VNC)&quot;</tt> <code>VncInfo</code> (Object) Information about the <font SIZE="-1">VNC</font> session. <code>Members:</code></p>
+<p> <code>Since:</code> 0.14.0 <code>If:</code> <tt>&quot;defined(CONFIG_VNC)&quot;</tt> <code>VncInfo</code> (Object) Information about the VNC session. <code>Members:</code></p>
 <dl>
 <dt>&quot;enabled: boolean&quot;</dt>
-<dd>true if the <font SIZE="-1">VNC</font> server is enabled, false otherwise</dd>
+<dd>true if the VNC server is enabled, false otherwise</dd>
 <dt>&quot;host: string&quot; (optional)</dt>
-<dd>The hostname the <font SIZE="-1">VNC</font> server is bound to. This depends on the name resolution on the host and may be an <font SIZE="-1">IP</font> address.</dd>
+<dd>The hostname the VNC server is bound to. This depends on the name resolution on the host and may be an IP address.</dd>
 <dt>&quot;family: NetworkAddressFamily&quot; (optional)</dt>
 <dd>&#8216;ipv6&#8217; if the host is listening for IPv6 connections &#8216;ipv4&#8217; if the host is listening for IPv4 connections &#8216;unix&#8217; if the host is listening on a unix domain socket &#8216;unknown&#8217; otherwise</dd>
 <dt>&quot;service: string&quot; (optional)</dt>
 <dd>The service name of the server&#8217;s port. This may depends on the host system&#8217;s service database so symbolic names should not be relied on.</dd>
 <dt>&quot;auth: string&quot; (optional)</dt>
-<dd>the current authentication type used by the server &#8216;none&#8217; if no authentication is being used &#8216;vnc&#8217; if <font SIZE="-1">VNC</font> authentication is being used &#8216;vencrypt+plain&#8217; if VEncrypt is used with plain text authentication &#8216;vencrypt+tls+none&#8217; if VEncrypt is used with <font SIZE="-1">TLS</font> and no authentication &#8216;vencrypt+tls+vnc&#8217; if VEncrypt is used with <font SIZE="-1">TLS</font> and <font SIZE="-1">VNC</font> authentication &#8216;vencrypt+tls+plain&#8217; if VEncrypt is used with <font SIZE="-1">TLS</font> and plain text auth &#8216;vencrypt+x509+none&#8217; if VEncrypt is used with x509 and no auth &#8216;vencrypt+x509+vnc&#8217; if VEncrypt is used with x509 and <font SIZE="-1">VNC</font> auth &#8216;vencrypt+x509+plain&#8217; if VEncrypt is used with x509 and plain text auth &#8216;vencrypt+tls+sasl&#8217; if VEncrypt is used with <font SIZE="-1">TLS</font> and <font SIZE="-1">SASL</font> auth &#8216;vencrypt+x509+sasl&#8217; if VEncrypt is used with x509 and <font SIZE="-1">SASL</font> auth</dd>
+<dd>the current authentication type used by the server &#8216;none&#8217; if no authentication is being used &#8216;vnc&#8217; if VNC authentication is being used &#8216;vencrypt+plain&#8217; if VEncrypt is used with plain text authentication &#8216;vencrypt+tls+none&#8217; if VEncrypt is used with TLS and no authentication &#8216;vencrypt+tls+vnc&#8217; if VEncrypt is used with TLS and VNC authentication &#8216;vencrypt+tls+plain&#8217; if VEncrypt is used with TLS and plain text auth &#8216;vencrypt+x509+none&#8217; if VEncrypt is used with x509 and no auth &#8216;vencrypt+x509+vnc&#8217; if VEncrypt is used with x509 and VNC auth &#8216;vencrypt+x509+plain&#8217; if VEncrypt is used with x509 and plain text auth &#8216;vencrypt+tls+sasl&#8217; if VEncrypt is used with TLS and SASL auth &#8216;vencrypt+x509+sasl&#8217; if VEncrypt is used with x509 and SASL auth</dd>
 <dt>&quot;clients: array of VncClientInfo&quot; (optional)</dt>
 <dd>a list of <tt>&quot;VncClientInfo&quot;</tt> of all currently connected clients</dd></dl>
 <p> <code>Since:</code> 0.14.0 <code>If:</code> <tt>&quot;defined(CONFIG_VNC)&quot;</tt> <code>VncPrimaryAuth</code> (Enum) vnc primary authentication method. <code>Values:</code></p>
@@ -5086,34 +5086,34 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dd>The vencrypt authentication type used by the servers, only specified in case auth == vencrypt.</dd>
 <dt>&quot;display: string&quot; (optional)</dt>
 <dd>The display device the vnc server is linked to.</dd></dl>
-<p> <code>Since:</code> 2.3 <code>If:</code> <tt>&quot;defined(CONFIG_VNC)&quot;</tt> <code>query-vnc</code> (Command) Returns information about the current <font SIZE="-1">VNC</font> server <code>Returns:</code> <tt>&quot;VncInfo&quot;</tt> <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-vnc&quot;} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-        &quot;enabled&quot; : true,<br />
-                    &quot;host&quot; : &quot;0.0.0.0&quot;,<br />
-                             &quot;service&quot; : &quot;50402&quot;,<br />
-                                         &quot;auth&quot; : &quot;vnc&quot;,<br />
-                                                  &quot;family&quot; : &quot;ipv4&quot;,<br />
-                                                             &quot;clients&quot; : [<br />
-                                                                 {<br />
-                                                                     &quot;host&quot; : &quot;127.0.0.1&quot;,<br />
-                                                                     &quot;service&quot; : &quot;50401&quot;,<br />
-                                                                     &quot;family&quot; : &quot;ipv4&quot;<br />
-                                                                 }<br />
-                                                             ]<br />
-    }<br />
-} <code>If:</code> <tt>&quot;defined(CONFIG_VNC)&quot;</tt> <code>query-vnc-servers</code> (Command) Returns a list of vnc servers. The list can be empty. <code>Returns:</code> a list of <tt>&quot;VncInfo2&quot;</tt> <code>Since:</code> 2.3 <code>If:</code> <tt>&quot;defined(CONFIG_VNC)&quot;</tt> <code>change-vnc-password</code> (Command) Change the <font SIZE="-1">VNC</font> server password. <code>Arguments:</code></p>
+<p> <code>Since:</code> 2.3 <code>If:</code> <tt>&quot;defined(CONFIG_VNC)&quot;</tt> <code>query-vnc</code> (Command) Returns information about the current VNC server <code>Returns:</code> <tt>&quot;VncInfo&quot;</tt> <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-vnc&quot;} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+        &quot;enabled&quot; : true,<br/>
+                    &quot;host&quot; : &quot;0.0.0.0&quot;,<br/>
+                             &quot;service&quot; : &quot;50402&quot;,<br/>
+                                         &quot;auth&quot; : &quot;vnc&quot;,<br/>
+                                                  &quot;family&quot; : &quot;ipv4&quot;,<br/>
+                                                             &quot;clients&quot; : [<br/>
+                                                                 {<br/>
+                                                                     &quot;host&quot; : &quot;127.0.0.1&quot;,<br/>
+                                                                     &quot;service&quot; : &quot;50401&quot;,<br/>
+                                                                     &quot;family&quot; : &quot;ipv4&quot;<br/>
+                                                                 }<br/>
+                                                             ]<br/>
+    }<br/>
+} <code>If:</code> <tt>&quot;defined(CONFIG_VNC)&quot;</tt> <code>query-vnc-servers</code> (Command) Returns a list of vnc servers. The list can be empty. <code>Returns:</code> a list of <tt>&quot;VncInfo2&quot;</tt> <code>Since:</code> 2.3 <code>If:</code> <tt>&quot;defined(CONFIG_VNC)&quot;</tt> <code>change-vnc-password</code> (Command) Change the VNC server password. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;password: string&quot;</dt>
-<dd>the new password to use with <font SIZE="-1">VNC</font> authentication</dd></dl>
-<p> <code>Since:</code> 1.1 <code>Notes:</code> An empty password in this command will set the password to the empty string. Existing clients are unaffected by executing this command. <code>If:</code> <tt>&quot;defined(CONFIG_VNC)&quot;</tt> <font SIZE="-1"><code>VNC_CONNECTED</code></font> (Event) Emitted when a <font SIZE="-1">VNC</font> client establishes a connection <code>Arguments:</code></p>
+<dd>the new password to use with VNC authentication</dd></dl>
+<p> <code>Since:</code> 1.1 <code>Notes:</code> An empty password in this command will set the password to the empty string. Existing clients are unaffected by executing this command. <code>If:</code> <tt>&quot;defined(CONFIG_VNC)&quot;</tt> <code>VNC_CONNECTED</code> (Event) Emitted when a VNC client establishes a connection <code>Arguments:</code></p>
 <dl>
 <dt>&quot;server: VncServerInfo&quot;</dt>
 <dd>server information</dd>
 <dt>&quot;client: VncBasicInfo&quot;</dt>
 <dd>client information</dd></dl>
-<p> <code>Note:</code> This event is emitted before any authentication takes place, thus the authentication <font SIZE="-1">ID</font> is not provided <code>Since:</code> 0.13.0 <code>Example:</code> </p>
+<p> <code>Note:</code> This event is emitted before any authentication takes place, thus the authentication ID is not provided <code>Since:</code> 0.13.0 <code>Example:</code> </p>
 <pre> &lt;- { &quot;event&quot;: &quot;VNC_CONNECTED&quot;,
  &quot;data&quot;: {
  &quot;server&quot;: { &quot;auth&quot;: &quot;sasl&quot;, &quot;family&quot;: &quot;ipv4&quot;,
@@ -5121,7 +5121,7 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
  &quot;client&quot;: { &quot;family&quot;: &quot;ipv4&quot;, &quot;service&quot;: &quot;58425&quot;,
  &quot;host&quot;: &quot;127.0.0.1&quot; } },
  &quot;timestamp&quot;: { &quot;seconds&quot;: 1262976601, &quot;microseconds&quot;: 975795 } }</pre>
-<p><code>If:</code> <tt>&quot;defined(CONFIG_VNC)&quot;</tt> <font SIZE="-1"><code>VNC_INITIALIZED</code></font> (Event) Emitted after authentication takes place (if any) and the <font SIZE="-1">VNC</font> session is made active <code>Arguments:</code></p>
+<p><code>If:</code> <tt>&quot;defined(CONFIG_VNC)&quot;</tt> <code>VNC_INITIALIZED</code> (Event) Emitted after authentication takes place (if any) and the VNC session is made active <code>Arguments:</code></p>
 <dl>
 <dt>&quot;server: VncServerInfo&quot;</dt>
 <dd>server information</dd>
@@ -5135,7 +5135,7 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
  &quot;client&quot;: { &quot;family&quot;: &quot;ipv4&quot;, &quot;service&quot;: &quot;46089&quot;,
  &quot;host&quot;: &quot;127.0.0.1&quot;, &quot;sasl_username&quot;: &quot;luiz&quot; } },
  &quot;timestamp&quot;: { &quot;seconds&quot;: 1263475302, &quot;microseconds&quot;: 150772 } }</pre>
-<p><code>If:</code> <tt>&quot;defined(CONFIG_VNC)&quot;</tt> <font SIZE="-1"><code>VNC_DISCONNECTED</code></font> (Event) Emitted when the connection is closed <code>Arguments:</code></p>
+<p><code>If:</code> <tt>&quot;defined(CONFIG_VNC)&quot;</tt> <code>VNC_DISCONNECTED</code> (Event) Emitted when the connection is closed <code>Arguments:</code></p>
 <dl>
 <dt>&quot;server: VncServerInfo&quot;</dt>
 <dd>server information</dd>
@@ -5161,22 +5161,22 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dd>true if this device is currently receiving mouse events</dd>
 <dt>&quot;absolute: boolean&quot;</dt>
 <dd>true if this device supports absolute coordinates as input</dd></dl>
-<p> <code>Since:</code> 0.14.0 <code>query-mice</code> (Command) Returns information about each active mouse device <code>Returns:</code> a list of <tt>&quot;MouseInfo&quot;</tt> for each device <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-mice&quot;} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot; : [<br />
-        {<br />
-            &quot;name&quot; : &quot;QEMU Microsoft Mouse&quot;,<br />
-            &quot;index&quot; : 0,<br />
-            &quot;current&quot; : false,<br />
-            &quot;absolute&quot; : false<br />
-        },<br />
-        {<br />
-            &quot;name&quot; : &quot;QEMU PS/2 Mouse&quot;,<br />
-            &quot;index&quot; : 1,<br />
-            &quot;current&quot; : true,<br />
-            &quot;absolute&quot; : true<br />
-        }<br />
-    ]<br />
+<p> <code>Since:</code> 0.14.0 <code>query-mice</code> (Command) Returns information about each active mouse device <code>Returns:</code> a list of <tt>&quot;MouseInfo&quot;</tt> for each device <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-mice&quot;} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot; : [<br/>
+        {<br/>
+            &quot;name&quot; : &quot;QEMU Microsoft Mouse&quot;,<br/>
+            &quot;index&quot; : 0,<br/>
+            &quot;current&quot; : false,<br/>
+            &quot;absolute&quot; : false<br/>
+        },<br/>
+        {<br/>
+            &quot;name&quot; : &quot;QEMU PS/2 Mouse&quot;,<br/>
+            &quot;index&quot; : 1,<br/>
+            &quot;current&quot; : true,<br/>
+            &quot;absolute&quot; : true<br/>
+        }<br/>
+    ]<br/>
 } <code>QKeyCode</code> (Enum) An enumeration of key name. This is used by the <tt>&quot;send-key&quot;</tt> command. <code>Values:</code></p>
 <dl>
 <dt>&quot;unmapped&quot;</dt>
@@ -5489,14 +5489,14 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dd>An array of <tt>&quot;KeyValue&quot;</tt> elements. All <tt>&quot;KeyValues&quot;</tt> in this array are simultaneously sent to the guest. A <tt>&quot;KeyValue&quot;</tt>.number value is sent directly to the guest, while <tt>&quot;KeyValue&quot;</tt>.qcode must be a valid <tt>&quot;QKeyCode&quot;</tt> value</dd>
 <dt>&quot;hold-time: int&quot; (optional)</dt>
 <dd>time to delay key up events, milliseconds. Defaults to 100</dd></dl>
-<p> <code>Returns:</code> Nothing on success If key is unknown or redundant, InvalidParameter <code>Since:</code> 1.3.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;send-key&quot;,<br />
-   &quot;arguments&quot; : {&quot;keys&quot; : [ {&quot;type&quot; : &quot;qcode&quot;, &quot;data&quot; : &quot;ctrl&quot;},<br />
-                             {&quot;type&quot; : &quot;qcode&quot;, &quot;data&quot; : &quot;alt&quot;},<br />
-                             {&quot;type&quot; : &quot;qcode&quot;, &quot;data&quot; : &quot;delete&quot;} ]}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
+<p> <code>Returns:</code> Nothing on success If key is unknown or redundant, InvalidParameter <code>Since:</code> 1.3.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;send-key&quot;,<br/>
+   &quot;arguments&quot; : {&quot;keys&quot; : [ {&quot;type&quot; : &quot;qcode&quot;, &quot;data&quot; : &quot;ctrl&quot;},<br/>
+                             {&quot;type&quot; : &quot;qcode&quot;, &quot;data&quot; : &quot;alt&quot;},<br/>
+                             {&quot;type&quot; : &quot;qcode&quot;, &quot;data&quot; : &quot;delete&quot;} ]}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
 } <code>InputButton</code> (Enum) Button of a pointer input device (mouse, tablet). <code>Values:</code></p>
 <dl>
 <dt>&quot;side&quot;</dt>
@@ -5572,50 +5572,50 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dt>&quot;events: array of InputEvent&quot;</dt>
 <dd>List of InputEvent union.</dd></dl>
 <p> <code>Returns:</code> Nothing on success. The <tt>&quot;device&quot;</tt> and <tt>&quot;head&quot;</tt> parameters can be used to send the input event to specific input devices in case (a) multiple input devices of the same kind are added to the virtual machine and (b) you have configured input routing (see docs/multiseat.txt) for those input devices. The parameters work exactly like the device and head properties of input devices. If <tt>&quot;device&quot;</tt> is missing, only devices that have no input routing config are admissible. If <tt>&quot;device&quot;</tt> is specified, both input devices with and without input routing config are admissible, but devices with input routing config take precedence. <code>Since:</code> 2.6 <code>Note:</code> The consoles are visible in the qom tree, under /backend/console[$index]. They have a device link and head property, so it is possible to map which console belongs to which device and display. <code>Example:</code> 1. Press left mouse button.</p>
-<p>        -&gt;{&quot;execute&quot; : &quot;input-send-event&quot;,<br />
-           &quot;arguments&quot; : {&quot;device&quot; : &quot;video0&quot;,<br />
-                          &quot;events&quot; : [ {&quot;type&quot; : &quot;btn&quot;,<br />
-                                        &quot;data&quot; : {&quot;down&quot; : true, &quot;button&quot; : &quot;left&quot;}} ]}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
+<p>        -&gt;{&quot;execute&quot; : &quot;input-send-event&quot;,<br/>
+           &quot;arguments&quot; : {&quot;device&quot; : &quot;video0&quot;,<br/>
+                          &quot;events&quot; : [ {&quot;type&quot; : &quot;btn&quot;,<br/>
+                                        &quot;data&quot; : {&quot;down&quot; : true, &quot;button&quot; : &quot;left&quot;}} ]}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
     }</p>
-<p>        -&gt; {&quot;execute&quot; : &quot;input-send-event&quot;,<br />
-            &quot;arguments&quot; : {&quot;device&quot; : &quot;video0&quot;,<br />
-                           &quot;events&quot; : [ {&quot;type&quot; : &quot;btn&quot;,<br />
-                                         &quot;data&quot; : {&quot;down&quot; : false, &quot;button&quot; : &quot;left&quot;}} ]}} &lt; &#8211;<br />
-    {<br />
-        &quot;return&quot;:<br />
-        {<br />
-        }<br />
+<p>        -&gt; {&quot;execute&quot; : &quot;input-send-event&quot;,<br/>
+            &quot;arguments&quot; : {&quot;device&quot; : &quot;video0&quot;,<br/>
+                           &quot;events&quot; : [ {&quot;type&quot; : &quot;btn&quot;,<br/>
+                                         &quot;data&quot; : {&quot;down&quot; : false, &quot;button&quot; : &quot;left&quot;}} ]}} &lt; &#8211;<br/>
+    {<br/>
+        &quot;return&quot;:<br/>
+        {<br/>
+        }<br/>
     }</p>
 <p>2. Press ctrl &#8211; alt &#8211; del.</p>
-<p>                          -&gt;{&quot;execute&quot; : &quot;input-send-event&quot;,<br />
-                             &quot;arguments&quot; : {&quot;events&quot; : [<br />
-                                 {&quot;type&quot; : &quot;key&quot;, &quot;data&quot; : {&quot;down&quot; : true,<br />
-                                                            &quot;key&quot; : {&quot;type&quot; : &quot;qcode&quot;, &quot;data&quot; : &quot;ctrl&quot;}}},<br />
-                                 {&quot;type&quot; : &quot;key&quot;, &quot;data&quot; : {&quot;down&quot; : true,<br />
-                                                            &quot;key&quot; : {&quot;type&quot; : &quot;qcode&quot;, &quot;data&quot; : &quot;alt&quot;}}},<br />
-                                 {&quot;type&quot; : &quot;key&quot;, &quot;data&quot; : {&quot;down&quot; : true,<br />
-                                                            &quot;key&quot; : {&quot;type&quot; : &quot;qcode&quot;, &quot;data&quot; : &quot;delete&quot;}}}<br />
-                             ]}} &lt;<br />
-    &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
+<p>                          -&gt;{&quot;execute&quot; : &quot;input-send-event&quot;,<br/>
+                             &quot;arguments&quot; : {&quot;events&quot; : [<br/>
+                                 {&quot;type&quot; : &quot;key&quot;, &quot;data&quot; : {&quot;down&quot; : true,<br/>
+                                                            &quot;key&quot; : {&quot;type&quot; : &quot;qcode&quot;, &quot;data&quot; : &quot;ctrl&quot;}}},<br/>
+                                 {&quot;type&quot; : &quot;key&quot;, &quot;data&quot; : {&quot;down&quot; : true,<br/>
+                                                            &quot;key&quot; : {&quot;type&quot; : &quot;qcode&quot;, &quot;data&quot; : &quot;alt&quot;}}},<br/>
+                                 {&quot;type&quot; : &quot;key&quot;, &quot;data&quot; : {&quot;down&quot; : true,<br/>
+                                                            &quot;key&quot; : {&quot;type&quot; : &quot;qcode&quot;, &quot;data&quot; : &quot;delete&quot;}}}<br/>
+                             ]}} &lt;<br/>
+    &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
 }</p>
 <p>3. Move mouse pointer to absolute coordinates(20000, 400).</p>
-<p>        -&gt;{&quot;execute&quot; : &quot;input-send-event&quot;,<br />
-           &quot;arguments&quot; : {&quot;events&quot; : [<br />
-               {&quot;type&quot; : &quot;abs&quot;, &quot;data&quot; : {&quot;axis&quot; : &quot;x&quot;, &quot;value&quot; : 20000}},<br />
-               {&quot;type&quot; : &quot;abs&quot;, &quot;data&quot; : {&quot;axis&quot; : &quot;y&quot;, &quot;value&quot; : 400}}<br />
-           ]}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
+<p>        -&gt;{&quot;execute&quot; : &quot;input-send-event&quot;,<br/>
+           &quot;arguments&quot; : {&quot;events&quot; : [<br/>
+               {&quot;type&quot; : &quot;abs&quot;, &quot;data&quot; : {&quot;axis&quot; : &quot;x&quot;, &quot;value&quot; : 20000}},<br/>
+               {&quot;type&quot; : &quot;abs&quot;, &quot;data&quot; : {&quot;axis&quot; : &quot;y&quot;, &quot;value&quot; : 400}}<br/>
+           ]}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
 } <code>GrabToggleKeys</code> (Enum) Keys to toggle input-linux between host and guest. <code>Values:</code></p>
 <dl>
 <dt>&quot;ctrl-ctrl&quot;</dt>
@@ -5630,16 +5630,16 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dd>Not documented</dd>
 <dt>&quot;ctrl-scrolllock&quot;</dt>
 <dd>Not documented</dd></dl>
-<p> <code>Since:</code> 4.0 <code>DisplayGTK</code> (Object) <font SIZE="-1">GTK</font> display options. <code>Members:</code></p>
+<p> <code>Since:</code> 4.0 <code>DisplayGTK</code> (Object) GTK display options. <code>Members:</code></p>
 <dl>
 <dt>&quot;grab-on-hover: boolean&quot; (optional)</dt>
 <dd>Grab keyboard input on mouse hover.</dd>
 <dt>&quot;zoom-to-fit: boolean&quot; (optional)</dt>
 <dd>Zoom guest display to fit into the host window. When turned off the host window will be resized instead. In case the display device can notify the guest on window resizes (virtio-gpu) this will default to &#8220;on&#8221;, assuming the guest will resize the display to match the window size then. Otherwise it defaults to &#8220;off&#8221;. Since 3.1</dd></dl>
-<p> <code>Since:</code> 2.12 <code>DisplayEGLHeadless</code> (Object) <font SIZE="-1">EGL</font> headless display options. <code>Members:</code></p>
+<p> <code>Since:</code> 2.12 <code>DisplayEGLHeadless</code> (Object) EGL headless display options. <code>Members:</code></p>
 <dl>
 <dt>&quot;rendernode: string&quot; (optional)</dt>
-<dd>Which <font SIZE="-1">DRM</font> render node should be used. Default is the first available node on the host.</dd></dl>
+<dd>Which DRM render node should be used. Default is the first available node on the host.</dd></dl>
 <p> <code>Since:</code> 3.1 <code>DisplayGLMode</code> (Enum) Display OpenGL mode. <code>Values:</code></p>
 <dl>
 <dt>&quot;off&quot;</dt>
@@ -5649,29 +5649,29 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dt>&quot;core&quot;</dt>
 <dd>Use OpenGL with Core (desktop) Context.</dd>
 <dt>&quot;es&quot;</dt>
-<dd>Use OpenGL with <font SIZE="-1">ES</font> (embedded systems) Context.</dd></dl>
+<dd>Use OpenGL with ES (embedded systems) Context.</dd></dl>
 <p> <code>Since:</code> 3.0 <code>DisplayCurses</code> (Object) Curses display options. <code>Members:</code></p>
 <dl>
 <dt>&quot;charset: string&quot; (optional)</dt>
-<dd>Font charset used by guest (default: <font SIZE="-1">CP437</font>).</dd></dl>
+<dd>Font charset used by guest (default: CP437).</dd></dl>
 <p> <code>Since:</code> 4.0 <code>DisplayType</code> (Enum) Display (user interface) type. <code>Values:</code></p>
 <dl>
 <dt>&quot;default&quot;</dt>
 <dd>The default user interface, selecting from the first available of gtk, sdl, cocoa, and vnc.</dd>
 <dt>&quot;none&quot;</dt>
-<dd>No user interface or video output display. The guest will still see an emulated graphics card, but its output will not be displayed to the <font SIZE="-1">QEMU</font> user.</dd>
+<dd>No user interface or video output display. The guest will still see an emulated graphics card, but its output will not be displayed to the QEMU user.</dd>
 <dt>&quot;gtk&quot;</dt>
-<dd>The <font SIZE="-1">GTK</font> user interface.</dd>
+<dd>The GTK user interface.</dd>
 <dt>&quot;sdl&quot;</dt>
-<dd>The <font SIZE="-1">SDL</font> user interface.</dd>
+<dd>The SDL user interface.</dd>
 <dt>&quot;egl-headless&quot;</dt>
-<dd>No user interface, offload <font SIZE="-1">GL</font> operations to a local <font SIZE="-1">DRI</font> device. Graphical display need to be paired with <font SIZE="-1">VNC</font> or Spice. (Since 3.1)</dd>
+<dd>No user interface, offload GL operations to a local DRI device. Graphical display need to be paired with VNC or Spice. (Since 3.1)</dd>
 <dt>&quot;curses&quot;</dt>
-<dd>Display video output via curses. For graphics device models which support a text mode, <font SIZE="-1">QEMU</font> can display this output using a curses/ncurses interface. Nothing is displayed when the graphics device is in graphical mode or if the graphics device does not support a text mode. Generally only the <font SIZE="-1">VGA</font> device models support text mode.</dd>
+<dd>Display video output via curses. For graphics device models which support a text mode, QEMU can display this output using a curses/ncurses interface. Nothing is displayed when the graphics device is in graphical mode or if the graphics device does not support a text mode. Generally only the VGA device models support text mode.</dd>
 <dt>&quot;cocoa&quot;</dt>
 <dd>The Cocoa user interface.</dd>
 <dt>&quot;spice-app&quot;</dt>
-<dd>Set up a Spice server and run the default associated application to connect to it. The server will redirect the serial console and <font SIZE="-1">QEMU</font> monitors. (Since 4.0)</dd></dl>
+<dd>Set up a Spice server and run the default associated application to connect to it. The server will redirect the serial console and QEMU monitors. (Since 4.0)</dd></dl>
 <p> <code>Since:</code> 2.12 <code>DisplayOptions</code> (Object) Display (user interface) options. <code>Members:</code></p>
 <dl>
 <dt>&quot;type: DisplayType&quot;</dt>
@@ -5708,7 +5708,7 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dd>the result to return if <tt>&quot;match&quot;</tt> evaluates to true</dd>
 <dt>&quot;format: QAuthZListFormat&quot; (optional)</dt>
 <dd>the format of the <tt>&quot;match&quot;</tt> rule (default &#8216;exact&#8217;)</dd></dl>
-<p> <code>Since:</code> 4.0 <code>QAuthZListRuleListHack</code> (Object) Not exposed via <font SIZE="-1">QMP</font>; hack to generate QAuthZListRuleList for use internally by the code. <code>Members:</code></p>
+<p> <code>Since:</code> 4.0 <code>QAuthZListRuleListHack</code> (Object) Not exposed via QMP; hack to generate QAuthZListRuleList for use internally by the code. <code>Members:</code></p>
 <dl>
 <dt>&quot;unused: array of QAuthZListRule&quot;</dt>
 <dd>Not documented</dd></dl>
@@ -5717,9 +5717,9 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <p><code>MigrationStats</code> (Object) Detailed migration status. <code>Members:</code></p>
 <dl>
 <dt>&quot;transferred: int&quot;</dt>
-<dd>amount of bytes already transferred to the target <font SIZE="-1">VM</font></dd>
+<dd>amount of bytes already transferred to the target VM</dd>
 <dt>&quot;remaining: int&quot;</dt>
-<dd>amount of bytes remaining to be transferred to the target <font SIZE="-1">VM</font></dd>
+<dd>amount of bytes remaining to be transferred to the target VM</dd>
 <dt>&quot;total: int&quot;</dt>
 <dd>total amount of bytes involved in the migration process</dd>
 <dt>&quot;duplicate: int&quot;</dt>
@@ -5744,14 +5744,14 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dd>The number of bytes sent through multifd (since 3.0)</dd>
 <dt>&quot;pages-per-second: int&quot;</dt>
 <dd>the number of memory pages transferred per second (Since 4.0)</dd></dl>
-<p> <code>Since:</code> 0.14.0 <code>XBZRLECacheStats</code> (Object) Detailed <font SIZE="-1">XBZRLE</font> migration cache statistics <code>Members:</code></p>
+<p> <code>Since:</code> 0.14.0 <code>XBZRLECacheStats</code> (Object) Detailed XBZRLE migration cache statistics <code>Members:</code></p>
 <dl>
 <dt>&quot;cache-size: int&quot;</dt>
-<dd><font SIZE="-1">XBZRLE</font> cache size</dd>
+<dd>XBZRLE cache size</dd>
 <dt>&quot;bytes: int&quot;</dt>
-<dd>amount of bytes already transferred to the target <font SIZE="-1">VM</font></dd>
+<dd>amount of bytes already transferred to the target VM</dd>
 <dt>&quot;pages: int&quot;</dt>
-<dd>amount of pages transferred to the target <font SIZE="-1">VM</font></dd>
+<dd>amount of pages transferred to the target VM</dd>
 <dt>&quot;cache-miss: int&quot;</dt>
 <dd>number of cache miss</dd>
 <dt>&quot;cache-miss-rate: number&quot;</dt>
@@ -5761,7 +5761,7 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <p> <code>Since:</code> 1.2 <code>CompressionStats</code> (Object) Detailed migration compression statistics <code>Members:</code></p>
 <dl>
 <dt>&quot;pages: int&quot;</dt>
-<dd>amount of pages compressed and transferred to the target <font SIZE="-1">VM</font></dd>
+<dd>amount of pages compressed and transferred to the target VM</dd>
 <dt>&quot;busy: int&quot;</dt>
 <dd>count of times that no free thread was available to compress data</dd>
 <dt>&quot;busy-rate: number&quot;</dt>
@@ -5793,13 +5793,13 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dt>&quot;failed&quot;</dt>
 <dd>some error occurred during migration process.</dd>
 <dt>&quot;colo&quot;</dt>
-<dd><font SIZE="-1">VM</font> is in the process of fault tolerance, <font SIZE="-1">VM</font> can not get into this state unless colo capability is enabled for migration. (since 2.8)</dd>
+<dd>VM is in the process of fault tolerance, VM can not get into this state unless colo capability is enabled for migration. (since 2.8)</dd>
 <dt>&quot;pre-switchover&quot;</dt>
 <dd>Paused before device serialisation. (since 2.11)</dd>
 <dt>&quot;device&quot;</dt>
 <dd>During device serialisation when pause-before-switchover is enabled (since 2.11)</dd>
 <dt>&quot;wait-unplug&quot;</dt>
-<dd>wait for device unplug request by guest <font SIZE="-1">OS</font> to be completed. (since 4.2)</dd></dl>
+<dd>wait for device unplug request by guest OS to be completed. (since 4.2)</dd></dl>
 <p> <code>Since:</code> 2.3 <code>MigrationInfo</code> (Object) Information about current migration process. <code>Members:</code></p>
 <dl>
 <dt>&quot;status: MigrationStatus&quot; (optional)</dt>
@@ -5809,7 +5809,7 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dt>&quot;disk: MigrationStats&quot; (optional)</dt>
 <dd><tt>&quot;MigrationStats&quot;</tt> containing detailed disk migration status, only returned if status is &#8216;active&#8217; and it is a block migration</dd>
 <dt>&quot;xbzrle-cache: XBZRLECacheStats&quot; (optional)</dt>
-<dd><tt>&quot;XBZRLECacheStats&quot;</tt> containing detailed <font SIZE="-1">XBZRLE</font> migration statistics, only returned if <font SIZE="-1">XBZRLE</font> feature is on and status is &#8216;active&#8217; or &#8216;completed&#8217; (since 1.2)</dd>
+<dd><tt>&quot;XBZRLECacheStats&quot;</tt> containing detailed XBZRLE migration statistics, only returned if XBZRLE feature is on and status is &#8216;active&#8217; or &#8216;completed&#8217; (since 1.2)</dd>
 <dt>&quot;total-time: int&quot; (optional)</dt>
 <dd>total amount of milliseconds since migration started. If migration has ended, it returns the total migration time. (since 1.2)</dd>
 <dt>&quot;downtime: int&quot; (optional)</dt>
@@ -5817,7 +5817,7 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dt>&quot;expected-downtime: int&quot; (optional)</dt>
 <dd>only present while migration is active expected downtime in milliseconds for the guest in last walk of the dirty bitmap. (since 1.3)</dd>
 <dt>&quot;setup-time: int&quot; (optional)</dt>
-<dd>amount of setup time in milliseconds <i>before</i> the iterations begin but <i>after</i> the <font SIZE="-1">QMP</font> command is issued. This is designed to provide an accounting of any activities (such as <font SIZE="-1">RDMA</font> pinning) which may be expensive, but do not actually occur during the iterative migration rounds themselves. (since 1.6)</dd>
+<dd>amount of setup time in milliseconds <i>before</i> the iterations begin but <i>after</i> the QMP command is issued. This is designed to provide an accounting of any activities (such as RDMA pinning) which may be expensive, but do not actually occur during the iterative migration rounds themselves. (since 1.6)</dd>
 <dt>&quot;cpu-throttle-percentage: int&quot; (optional)</dt>
 <dd>percentage of time guest cpus are being throttled during auto-converge. This is only present when auto-converge has started throttling guest cpus. (Since 2.7)</dd>
 <dt>&quot;error-desc: string&quot; (optional)</dt>
@@ -5830,155 +5830,155 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dd>migration compression statistics, only returned if compression feature is on and status is &#8216;active&#8217; or &#8216;completed&#8217; (Since 3.1)</dd>
 <dt>&quot;socket-address: array of SocketAddress&quot; (optional)</dt>
 <dd>Only used for tcp, to know what the real port is (Since 4.0)</dd></dl>
-<p> <code>Since:</code> 0.14.0 <code>query-migrate</code> (Command) Returns information about current migration process. If migration is active there will be another json-object with <font SIZE="-1">RAM</font> migration status and if block migration is active another one with block migration status. <code>Returns:</code> <tt>&quot;MigrationInfo&quot;</tt> <code>Since:</code> 0.14.0 <code>Example:</code> 1. Before the first migration</p>
-<p>        -&gt;{&quot;execute&quot; : &quot;query-migrate&quot;} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
+<p> <code>Since:</code> 0.14.0 <code>query-migrate</code> (Command) Returns information about current migration process. If migration is active there will be another json-object with RAM migration status and if block migration is active another one with block migration status. <code>Returns:</code> <tt>&quot;MigrationInfo&quot;</tt> <code>Since:</code> 0.14.0 <code>Example:</code> 1. Before the first migration</p>
+<p>        -&gt;{&quot;execute&quot; : &quot;query-migrate&quot;} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
 }</p>
 <p>2. Migration is done and has succeeded</p>
-<p>        -&gt;{&quot;execute&quot; : &quot;query-migrate&quot;} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-        &quot;status&quot; : &quot;completed&quot;,<br />
-                   &quot;total-time&quot; : 12345,<br />
-                   &quot;setup-time&quot; : 12345,<br />
-                   &quot;downtime&quot; : 12345,<br />
-                   &quot;ram&quot;:<br />
-        {<br />
-            &quot;transferred&quot; : 123,<br />
-                &quot;remaining&quot; : 123,<br />
-                &quot;total&quot; : 246,<br />
-                &quot;duplicate&quot; : 123,<br />
-                &quot;normal&quot; : 123,<br />
-                &quot;normal-bytes&quot; : 123456,<br />
-                &quot;dirty-sync-count&quot; : 15<br />
-        }<br />
-    }<br />
+<p>        -&gt;{&quot;execute&quot; : &quot;query-migrate&quot;} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+        &quot;status&quot; : &quot;completed&quot;,<br/>
+                   &quot;total-time&quot; : 12345,<br/>
+                   &quot;setup-time&quot; : 12345,<br/>
+                   &quot;downtime&quot; : 12345,<br/>
+                   &quot;ram&quot;:<br/>
+        {<br/>
+            &quot;transferred&quot; : 123,<br/>
+                &quot;remaining&quot; : 123,<br/>
+                &quot;total&quot; : 246,<br/>
+                &quot;duplicate&quot; : 123,<br/>
+                &quot;normal&quot; : 123,<br/>
+                &quot;normal-bytes&quot; : 123456,<br/>
+                &quot;dirty-sync-count&quot; : 15<br/>
+        }<br/>
+    }<br/>
 }</p>
 <p>3. Migration is done and has failed</p>
-<p>        -&gt;{&quot;execute&quot; : &quot;query-migrate&quot;} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-        &quot;status&quot; : &quot;failed&quot;<br />
-    }<br />
+<p>        -&gt;{&quot;execute&quot; : &quot;query-migrate&quot;} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+        &quot;status&quot; : &quot;failed&quot;<br/>
+    }<br/>
 }</p>
 <p>4. Migration is being performed and is not a block migration :</p>
-<p>        -&gt;{&quot;execute&quot; : &quot;query-migrate&quot;} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-        &quot;status&quot; : &quot;active&quot;,<br />
-                   &quot;total-time&quot; : 12345,<br />
-                   &quot;setup-time&quot; : 12345,<br />
-                   &quot;expected-downtime&quot; : 12345,<br />
-                   &quot;ram&quot;:<br />
-        {<br />
-            &quot;transferred&quot; : 123,<br />
-                &quot;remaining&quot; : 123,<br />
-                &quot;total&quot; : 246,<br />
-                &quot;duplicate&quot; : 123,<br />
-                &quot;normal&quot; : 123,<br />
-                &quot;normal-bytes&quot; : 123456,<br />
-                &quot;dirty-sync-count&quot; : 15<br />
-        }<br />
-    }<br />
+<p>        -&gt;{&quot;execute&quot; : &quot;query-migrate&quot;} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+        &quot;status&quot; : &quot;active&quot;,<br/>
+                   &quot;total-time&quot; : 12345,<br/>
+                   &quot;setup-time&quot; : 12345,<br/>
+                   &quot;expected-downtime&quot; : 12345,<br/>
+                   &quot;ram&quot;:<br/>
+        {<br/>
+            &quot;transferred&quot; : 123,<br/>
+                &quot;remaining&quot; : 123,<br/>
+                &quot;total&quot; : 246,<br/>
+                &quot;duplicate&quot; : 123,<br/>
+                &quot;normal&quot; : 123,<br/>
+                &quot;normal-bytes&quot; : 123456,<br/>
+                &quot;dirty-sync-count&quot; : 15<br/>
+        }<br/>
+    }<br/>
 }</p>
 <p>5. Migration is being performed and is a block migration :</p>
-<p>        -&gt;{&quot;execute&quot; : &quot;query-migrate&quot;} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-        &quot;status&quot; : &quot;active&quot;,<br />
-                   &quot;total-time&quot; : 12345,<br />
-                   &quot;setup-time&quot; : 12345,<br />
-                   &quot;expected-downtime&quot; : 12345,<br />
-                   &quot;ram&quot; : {<br />
-                       &quot;total&quot; : 1057024,<br />
-                       &quot;remaining&quot; : 1053304,<br />
-                       &quot;transferred&quot; : 3720,<br />
-                       &quot;duplicate&quot; : 123,<br />
-                       &quot;normal&quot; : 123,<br />
-                       &quot;normal-bytes&quot; : 123456,<br />
-                       &quot;dirty-sync-count&quot; : 15<br />
-                   },<br />
-                           &quot;disk&quot;:<br />
-        {<br />
-            &quot;total&quot; : 20971520,<br />
-                &quot;remaining&quot; : 20880384,<br />
-                &quot;transferred&quot; : 91136<br />
-        }<br />
-    }<br />
+<p>        -&gt;{&quot;execute&quot; : &quot;query-migrate&quot;} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+        &quot;status&quot; : &quot;active&quot;,<br/>
+                   &quot;total-time&quot; : 12345,<br/>
+                   &quot;setup-time&quot; : 12345,<br/>
+                   &quot;expected-downtime&quot; : 12345,<br/>
+                   &quot;ram&quot; : {<br/>
+                       &quot;total&quot; : 1057024,<br/>
+                       &quot;remaining&quot; : 1053304,<br/>
+                       &quot;transferred&quot; : 3720,<br/>
+                       &quot;duplicate&quot; : 123,<br/>
+                       &quot;normal&quot; : 123,<br/>
+                       &quot;normal-bytes&quot; : 123456,<br/>
+                       &quot;dirty-sync-count&quot; : 15<br/>
+                   },<br/>
+                           &quot;disk&quot;:<br/>
+        {<br/>
+            &quot;total&quot; : 20971520,<br/>
+                &quot;remaining&quot; : 20880384,<br/>
+                &quot;transferred&quot; : 91136<br/>
+        }<br/>
+    }<br/>
 }</p>
 <p>6. Migration is being performed and XBZRLE is active :</p>
-<p>        -&gt;{&quot;execute&quot; : &quot;query-migrate&quot;} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-        &quot;status&quot; : &quot;active&quot;,<br />
-                   &quot;total-time&quot; : 12345,<br />
-                   &quot;setup-time&quot; : 12345,<br />
-                   &quot;expected-downtime&quot; : 12345,<br />
-                   &quot;ram&quot; : {<br />
-                       &quot;total&quot; : 1057024,<br />
-                       &quot;remaining&quot; : 1053304,<br />
-                       &quot;transferred&quot; : 3720,<br />
-                       &quot;duplicate&quot; : 10,<br />
-                       &quot;normal&quot; : 3333,<br />
-                       &quot;normal-bytes&quot; : 3412992,<br />
-                       &quot;dirty-sync-count&quot; : 15<br />
-                   },<br />
-                           &quot;xbzrle-cache&quot;:<br />
-        {<br />
-            &quot;cache-size&quot; : 67108864,<br />
-                &quot;bytes&quot; : 20971520,<br />
-                &quot;pages&quot; : 2444343,<br />
-                &quot;cache-miss&quot; : 2244,<br />
-                &quot;cache-miss-rate&quot; : 0.123,<br />
-                &quot;overflow&quot; : 34434<br />
-        }<br />
-    }<br />
+<p>        -&gt;{&quot;execute&quot; : &quot;query-migrate&quot;} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+        &quot;status&quot; : &quot;active&quot;,<br/>
+                   &quot;total-time&quot; : 12345,<br/>
+                   &quot;setup-time&quot; : 12345,<br/>
+                   &quot;expected-downtime&quot; : 12345,<br/>
+                   &quot;ram&quot; : {<br/>
+                       &quot;total&quot; : 1057024,<br/>
+                       &quot;remaining&quot; : 1053304,<br/>
+                       &quot;transferred&quot; : 3720,<br/>
+                       &quot;duplicate&quot; : 10,<br/>
+                       &quot;normal&quot; : 3333,<br/>
+                       &quot;normal-bytes&quot; : 3412992,<br/>
+                       &quot;dirty-sync-count&quot; : 15<br/>
+                   },<br/>
+                           &quot;xbzrle-cache&quot;:<br/>
+        {<br/>
+            &quot;cache-size&quot; : 67108864,<br/>
+                &quot;bytes&quot; : 20971520,<br/>
+                &quot;pages&quot; : 2444343,<br/>
+                &quot;cache-miss&quot; : 2244,<br/>
+                &quot;cache-miss-rate&quot; : 0.123,<br/>
+                &quot;overflow&quot; : 34434<br/>
+        }<br/>
+    }<br/>
 } <code>MigrationCapability</code> (Enum) Migration capabilities enumeration <code>Values:</code></p>
 <dl>
 <dt>&quot;xbzrle&quot;</dt>
 <dd>Migration supports xbzrle (Xor Based Zero Run Length Encoding). This feature allows us to minimize migration traffic for certain work loads, by sending compressed difference of the pages</dd>
 <dt>&quot;rdma-pin-all&quot;</dt>
-<dd>Controls whether or not the entire <font SIZE="-1">VM</font> memory footprint is <code>mlock()</code>&#8216;d on demand or all at once. Refer to docs/rdma.txt for usage. Disabled by default. (since 2.0)</dd>
+<dd>Controls whether or not the entire VM memory footprint is <code>mlock()</code>&#8216;d on demand or all at once. Refer to docs/rdma.txt for usage. Disabled by default. (since 2.0)</dd>
 <dt>&quot;zero-blocks&quot;</dt>
-<dd>During storage migration encode blocks of zeroes efficiently. This essentially saves 1MB of zeroes per block on the wire. Enabling requires source and target <font SIZE="-1">VM</font> to support this feature. To enable it is sufficient to enable the capability on the source <font SIZE="-1">VM.</font> The feature is disabled by default. (since 1.6)</dd>
+<dd>During storage migration encode blocks of zeroes efficiently. This essentially saves 1MB of zeroes per block on the wire. Enabling requires source and target VM to support this feature. To enable it is sufficient to enable the capability on the source VM. The feature is disabled by default. (since 1.6)</dd>
 <dt>&quot;compress&quot;</dt>
 <dd>Use multiple compression threads to accelerate live migration. This feature can help to reduce the migration traffic, by sending compressed pages. Please note that if compress and xbzrle are both on, compress only takes effect in the ram bulk stage, after that, it will be disabled and only xbzrle takes effect, this can help to minimize migration traffic. The feature is disabled by default. (since 2.4 )</dd>
 <dt>&quot;events&quot;</dt>
 <dd>generate events for each migration state change (since 2.4 )</dd>
 <dt>&quot;auto-converge&quot;</dt>
-<dd>If enabled, <font SIZE="-1">QEMU</font> will automatically throttle down the guest to speed up convergence of <font SIZE="-1">RAM</font> migration. (since 1.6)</dd>
+<dd>If enabled, QEMU will automatically throttle down the guest to speed up convergence of RAM migration. (since 1.6)</dd>
 <dt>&quot;postcopy-ram&quot;</dt>
-<dd>Start executing on the migration target before all of <font SIZE="-1">RAM</font> has been migrated, pulling the remaining pages along as needed. The capacity must have the same setting on both source and target or migration will not even start. <font SIZE="-1">NOTE:</font> If the migration fails during postcopy the <font SIZE="-1">VM</font> will fail. (since 2.6)</dd>
+<dd>Start executing on the migration target before all of RAM has been migrated, pulling the remaining pages along as needed. The capacity must have the same setting on both source and target or migration will not even start. NOTE: If the migration fails during postcopy the VM will fail. (since 2.6)</dd>
 <dt>&quot;x-colo&quot;</dt>
-<dd>If enabled, migration will never end, and the state of the <font SIZE="-1">VM</font> on the primary side will be migrated continuously to the <font SIZE="-1">VM</font> on secondary side, this process is called COarse-Grain LOck Stepping (<font SIZE="-1">COLO</font>) for Non-stop Service. (since 2.8)</dd>
+<dd>If enabled, migration will never end, and the state of the VM on the primary side will be migrated continuously to the VM on secondary side, this process is called COarse-Grain LOck Stepping (COLO) for Non-stop Service. (since 2.8)</dd>
 <dt>&quot;release-ram&quot;</dt>
 <dd>if enabled, qemu will free the migrated ram pages on the source during postcopy-ram migration. (since 2.9)</dd>
 <dt>&quot;block&quot;</dt>
-<dd>If enabled, <font SIZE="-1">QEMU</font> will also migrate the contents of all block devices. Default is disabled. A possible alternative uses mirror jobs to a builtin <font SIZE="-1">NBD</font> server on the destination, which offers more flexibility. (Since 2.10)</dd>
+<dd>If enabled, QEMU will also migrate the contents of all block devices. Default is disabled. A possible alternative uses mirror jobs to a builtin NBD server on the destination, which offers more flexibility. (Since 2.10)</dd>
 <dt>&quot;return-path&quot;</dt>
 <dd>If enabled, migration will use the return path even for precopy. (since 2.10)</dd>
 <dt>&quot;pause-before-switchover&quot;</dt>
-<dd>Pause outgoing migration before serialising device state and before disabling block <font SIZE="-1">IO</font> (since 2.11)</dd>
+<dd>Pause outgoing migration before serialising device state and before disabling block IO (since 2.11)</dd>
 <dt>&quot;multifd&quot;</dt>
 <dd>Use more than one fd for migration (since 4.0)</dd>
 <dt>&quot;dirty-bitmaps&quot;</dt>
-<dd>If enabled, <font SIZE="-1">QEMU</font> will migrate named dirty bitmaps. (since 2.12)</dd>
+<dd>If enabled, QEMU will migrate named dirty bitmaps. (since 2.12)</dd>
 <dt>&quot;postcopy-blocktime&quot;</dt>
 <dd>Calculate downtime for postcopy live migration (since 3.0)</dd>
 <dt>&quot;late-block-activate&quot;</dt>
 <dd>If enabled, the destination will not activate block devices (and thus take locks) immediately at the end of migration. (since 3.0)</dd>
 <dt>&quot;x-ignore-shared&quot;</dt>
-<dd>If enabled, <font SIZE="-1">QEMU</font> will not migrate shared memory (since 4.0)</dd>
+<dd>If enabled, QEMU will not migrate shared memory (since 4.0)</dd>
 <dt>&quot;validate-uuid&quot;</dt>
-<dd>Send the <font SIZE="-1">UUID</font> of the source to allow the destination to ensure it is the same. (since 4.2)</dd></dl>
+<dd>Send the UUID of the source to allow the destination to ensure it is the same. (since 4.2)</dd></dl>
 <p> <code>Since:</code> 1.2 <code>MigrationCapabilityStatus</code> (Object) Migration capability information <code>Members:</code></p>
 <dl>
 <dt>&quot;capability: MigrationCapability&quot;</dt>
@@ -5992,18 +5992,18 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <p> <code>Since:</code> 1.2 <code>Example:</code> </p>
 <pre> -&gt; { &quot;execute&quot;: &quot;migrate-set-capabilities&quot; , &quot;arguments&quot;:
  { &quot;capabilities&quot;: [ { &quot;capability&quot;: &quot;xbzrle&quot;, &quot;state&quot;: true } ] } }</pre>
-<p><code>query-migrate-capabilities</code> (Command) Returns information about the current migration capabilities status <code>Returns:</code> <tt>&quot;MigrationCapabilitiesStatus&quot;</tt> <code>Since:</code> 1.2 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-migrate-capabilities&quot;} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot; : [<br />
-        {&quot;state&quot; : false, &quot;capability&quot; : &quot;xbzrle&quot;},<br />
-        {&quot;state&quot; : false, &quot;capability&quot; : &quot;rdma-pin-all&quot;},<br />
-        {&quot;state&quot; : false, &quot;capability&quot; : &quot;auto-converge&quot;},<br />
-        {&quot;state&quot; : false, &quot;capability&quot; : &quot;zero-blocks&quot;},<br />
-        {&quot;state&quot; : false, &quot;capability&quot; : &quot;compress&quot;},<br />
-        {&quot;state&quot; : true, &quot;capability&quot; : &quot;events&quot;},<br />
-        {&quot;state&quot; : false, &quot;capability&quot; : &quot;postcopy-ram&quot;},<br />
-        {&quot;state&quot; : false, &quot;capability&quot; : &quot;x-colo&quot;}<br />
-    ]<br />
+<p><code>query-migrate-capabilities</code> (Command) Returns information about the current migration capabilities status <code>Returns:</code> <tt>&quot;MigrationCapabilitiesStatus&quot;</tt> <code>Since:</code> 1.2 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-migrate-capabilities&quot;} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot; : [<br/>
+        {&quot;state&quot; : false, &quot;capability&quot; : &quot;xbzrle&quot;},<br/>
+        {&quot;state&quot; : false, &quot;capability&quot; : &quot;rdma-pin-all&quot;},<br/>
+        {&quot;state&quot; : false, &quot;capability&quot; : &quot;auto-converge&quot;},<br/>
+        {&quot;state&quot; : false, &quot;capability&quot; : &quot;zero-blocks&quot;},<br/>
+        {&quot;state&quot; : false, &quot;capability&quot; : &quot;compress&quot;},<br/>
+        {&quot;state&quot; : true, &quot;capability&quot; : &quot;events&quot;},<br/>
+        {&quot;state&quot; : false, &quot;capability&quot; : &quot;postcopy-ram&quot;},<br/>
+        {&quot;state&quot; : false, &quot;capability&quot; : &quot;x-colo&quot;}<br/>
+    ]<br/>
 } <code>MigrationParameter</code> (Enum) Migration parameters enumeration <code>Values:</code></p>
 <dl>
 <dt>&quot;announce-initial&quot;</dt>
@@ -6015,7 +6015,7 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dt>&quot;announce-step&quot;</dt>
 <dd>Increase in delay (in milliseconds) between subsequent packets in the announcement (Since 4.0)</dd>
 <dt>&quot;compress-level&quot;</dt>
-<dd>Set the compression level to be used in live migration, the compression level is an integer between 0 and 9, where 0 means no compression, 1 means the best compression speed, and 9 means best compression ratio which will consume more <font SIZE="-1">CPU.</font></dd>
+<dd>Set the compression level to be used in live migration, the compression level is an integer between 0 and 9, where 0 means no compression, 1 means the best compression speed, and 9 means best compression ratio which will consume more CPU.</dd>
 <dt>&quot;compress-threads&quot;</dt>
 <dd>Set compression thread count to be used in live migration, the compression thread count is an integer between 1 and 255.</dd>
 <dt>&quot;compress-wait-thread&quot;</dt>
@@ -6027,23 +6027,23 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dt>&quot;cpu-throttle-increment&quot;</dt>
 <dd>throttle percentage increase each time auto-converge detects that migration is not making progress. The default value is 10. (Since 2.7)</dd>
 <dt>&quot;tls-creds&quot;</dt>
-<dd><font SIZE="-1">ID</font> of the &#8216;tls-creds&#8217; object that provides credentials for establishing a <font SIZE="-1">TLS</font> connection over the migration data channel. On the outgoing side of the migration, the credentials must be for a &#8216;client&#8217; endpoint, while for the incoming side the credentials must be for a &#8216;server&#8217; endpoint. Setting this will enable <font SIZE="-1">TLS</font> for all migrations. The default is unset, resulting in unsecured migration at the <font SIZE="-1">QEMU</font> level. (Since 2.7)</dd>
+<dd>ID of the &#8216;tls-creds&#8217; object that provides credentials for establishing a TLS connection over the migration data channel. On the outgoing side of the migration, the credentials must be for a &#8216;client&#8217; endpoint, while for the incoming side the credentials must be for a &#8216;server&#8217; endpoint. Setting this will enable TLS for all migrations. The default is unset, resulting in unsecured migration at the QEMU level. (Since 2.7)</dd>
 <dt>&quot;tls-hostname&quot;</dt>
-<dd>hostname of the target host for the migration. This is required when using x509 based <font SIZE="-1">TLS</font> credentials and the migration <font SIZE="-1">URI</font> does not already include a hostname. For example if using fd: or exec: based migration, the hostname must be provided so that the server&#8217;s x509 certificate identity can be validated. (Since 2.7)</dd>
+<dd>hostname of the target host for the migration. This is required when using x509 based TLS credentials and the migration URI does not already include a hostname. For example if using fd: or exec: based migration, the hostname must be provided so that the server&#8217;s x509 certificate identity can be validated. (Since 2.7)</dd>
 <dt>&quot;tls-authz&quot;</dt>
-<dd><font SIZE="-1">ID</font> of the &#8216;authz&#8217; object subclass that provides access control checking of the <font SIZE="-1">TLS</font> x509 certificate distinguished name. This object is only resolved at time of use, so can be deleted and recreated on the fly while the migration server is active. If missing, it will default to denying access (Since 4.0)</dd>
+<dd>ID of the &#8216;authz&#8217; object subclass that provides access control checking of the TLS x509 certificate distinguished name. This object is only resolved at time of use, so can be deleted and recreated on the fly while the migration server is active. If missing, it will default to denying access (Since 4.0)</dd>
 <dt>&quot;max-bandwidth&quot;</dt>
 <dd>to set maximum speed for migration. maximum speed in bytes per second. (Since 2.8)</dd>
 <dt>&quot;downtime-limit&quot;</dt>
 <dd>set maximum tolerated downtime for migration. maximum downtime in milliseconds (Since 2.8)</dd>
 <dt>&quot;x-checkpoint-delay&quot;</dt>
-<dd>The delay time (in ms) between two <font SIZE="-1">COLO</font> checkpoints in periodic mode. (Since 2.8)</dd>
+<dd>The delay time (in ms) between two COLO checkpoints in periodic mode. (Since 2.8)</dd>
 <dt>&quot;block-incremental&quot;</dt>
 <dd>Affects how much storage is migrated when the block migration capability is enabled. When false, the entire storage backing chain is migrated into a flattened image at the destination; when true, only the active qcow2 layer is migrated and the destination must already have access to the same backing chain as was used on the source. (since 2.10)</dd>
 <dt>&quot;multifd-channels&quot;</dt>
 <dd>Number of channels used to migrate data in parallel. This is the same number that the number of sockets used for migration. The default value is 2 (since 4.0)</dd>
 <dt>&quot;xbzrle-cache-size&quot;</dt>
-<dd>cache size to be used by <font SIZE="-1">XBZRLE</font> migration. It needs to be a multiple of the target page size and a power of 2 (Since 2.11)</dd>
+<dd>cache size to be used by XBZRLE migration. It needs to be a multiple of the target page size and a power of 2 (Since 2.11)</dd>
 <dt>&quot;max-postcopy-bandwidth&quot;</dt>
 <dd>Background transfer bandwidth during postcopy. Defaults to 0 (unlimited). In bytes per second. (Since 3.0)</dd>
 <dt>&quot;max-cpu-throttle&quot;</dt>
@@ -6071,21 +6071,21 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dt>&quot;cpu-throttle-increment: int&quot; (optional)</dt>
 <dd>throttle percentage increase each time auto-converge detects that migration is not making progress. The default value is 10. (Since 2.7)</dd>
 <dt>&quot;tls-creds: StrOrNull&quot; (optional)</dt>
-<dd><font SIZE="-1">ID</font> of the &#8216;tls-creds&#8217; object that provides credentials for establishing a <font SIZE="-1">TLS</font> connection over the migration data channel. On the outgoing side of the migration, the credentials must be for a &#8216;client&#8217; endpoint, while for the incoming side the credentials must be for a &#8216;server&#8217; endpoint. Setting this to a non-empty string enables <font SIZE="-1">TLS</font> for all migrations. An empty string means that <font SIZE="-1">QEMU</font> will use plain text mode for migration, rather than <font SIZE="-1">TLS</font> (Since 2.9) Previously (since 2.7), this was reported by omitting tls-creds instead.</dd>
+<dd>ID of the &#8216;tls-creds&#8217; object that provides credentials for establishing a TLS connection over the migration data channel. On the outgoing side of the migration, the credentials must be for a &#8216;client&#8217; endpoint, while for the incoming side the credentials must be for a &#8216;server&#8217; endpoint. Setting this to a non-empty string enables TLS for all migrations. An empty string means that QEMU will use plain text mode for migration, rather than TLS (Since 2.9) Previously (since 2.7), this was reported by omitting tls-creds instead.</dd>
 <dt>&quot;tls-hostname: StrOrNull&quot; (optional)</dt>
-<dd>hostname of the target host for the migration. This is required when using x509 based <font SIZE="-1">TLS</font> credentials and the migration <font SIZE="-1">URI</font> does not already include a hostname. For example if using fd: or exec: based migration, the hostname must be provided so that the server&#8217;s x509 certificate identity can be validated. (Since 2.7) An empty string means that <font SIZE="-1">QEMU</font> will use the hostname associated with the migration <font SIZE="-1">URI,</font> if any. (Since 2.9) Previously (since 2.7), this was reported by omitting tls-hostname instead.</dd>
+<dd>hostname of the target host for the migration. This is required when using x509 based TLS credentials and the migration URI does not already include a hostname. For example if using fd: or exec: based migration, the hostname must be provided so that the server&#8217;s x509 certificate identity can be validated. (Since 2.7) An empty string means that QEMU will use the hostname associated with the migration URI, if any. (Since 2.9) Previously (since 2.7), this was reported by omitting tls-hostname instead.</dd>
 <dt>&quot;max-bandwidth: int&quot; (optional)</dt>
 <dd>to set maximum speed for migration. maximum speed in bytes per second. (Since 2.8)</dd>
 <dt>&quot;downtime-limit: int&quot; (optional)</dt>
 <dd>set maximum tolerated downtime for migration. maximum downtime in milliseconds (Since 2.8)</dd>
 <dt>&quot;x-checkpoint-delay: int&quot; (optional)</dt>
-<dd>the delay time between two <font SIZE="-1">COLO</font> checkpoints. (Since 2.8)</dd>
+<dd>the delay time between two COLO checkpoints. (Since 2.8)</dd>
 <dt>&quot;block-incremental: boolean&quot; (optional)</dt>
 <dd>Affects how much storage is migrated when the block migration capability is enabled. When false, the entire storage backing chain is migrated into a flattened image at the destination; when true, only the active qcow2 layer is migrated and the destination must already have access to the same backing chain as was used on the source. (since 2.10)</dd>
 <dt>&quot;multifd-channels: int&quot; (optional)</dt>
 <dd>Number of channels used to migrate data in parallel. This is the same number that the number of sockets used for migration. The default value is 2 (since 4.0)</dd>
 <dt>&quot;xbzrle-cache-size: int&quot; (optional)</dt>
-<dd>cache size to be used by <font SIZE="-1">XBZRLE</font> migration. It needs to be a multiple of the target page size and a power of 2 (Since 2.11)</dd>
+<dd>cache size to be used by XBZRLE migration. It needs to be a multiple of the target page size and a power of 2 (Since 2.11)</dd>
 <dt>&quot;max-postcopy-bandwidth: int&quot; (optional)</dt>
 <dd>Background transfer bandwidth during postcopy. Defaults to 0 (unlimited). In bytes per second. (Since 3.0)</dd>
 <dt>&quot;max-cpu-throttle: int&quot; (optional)</dt>
@@ -6118,40 +6118,40 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dt>&quot;cpu-throttle-increment: int&quot; (optional)</dt>
 <dd>throttle percentage increase each time auto-converge detects that migration is not making progress. (Since 2.7)</dd>
 <dt>&quot;tls-creds: string&quot; (optional)</dt>
-<dd><font SIZE="-1">ID</font> of the &#8216;tls-creds&#8217; object that provides credentials for establishing a <font SIZE="-1">TLS</font> connection over the migration data channel. On the outgoing side of the migration, the credentials must be for a &#8216;client&#8217; endpoint, while for the incoming side the credentials must be for a &#8216;server&#8217; endpoint. An empty string means that <font SIZE="-1">QEMU</font> will use plain text mode for migration, rather than <font SIZE="-1">TLS</font> (Since 2.7) Note: 2.8 reports this by omitting tls-creds instead.</dd>
+<dd>ID of the &#8216;tls-creds&#8217; object that provides credentials for establishing a TLS connection over the migration data channel. On the outgoing side of the migration, the credentials must be for a &#8216;client&#8217; endpoint, while for the incoming side the credentials must be for a &#8216;server&#8217; endpoint. An empty string means that QEMU will use plain text mode for migration, rather than TLS (Since 2.7) Note: 2.8 reports this by omitting tls-creds instead.</dd>
 <dt>&quot;tls-hostname: string&quot; (optional)</dt>
-<dd>hostname of the target host for the migration. This is required when using x509 based <font SIZE="-1">TLS</font> credentials and the migration <font SIZE="-1">URI</font> does not already include a hostname. For example if using fd: or exec: based migration, the hostname must be provided so that the server&#8217;s x509 certificate identity can be validated. (Since 2.7) An empty string means that <font SIZE="-1">QEMU</font> will use the hostname associated with the migration <font SIZE="-1">URI,</font> if any. (Since 2.9) Note: 2.8 reports this by omitting tls-hostname instead.</dd>
+<dd>hostname of the target host for the migration. This is required when using x509 based TLS credentials and the migration URI does not already include a hostname. For example if using fd: or exec: based migration, the hostname must be provided so that the server&#8217;s x509 certificate identity can be validated. (Since 2.7) An empty string means that QEMU will use the hostname associated with the migration URI, if any. (Since 2.9) Note: 2.8 reports this by omitting tls-hostname instead.</dd>
 <dt>&quot;tls-authz: string&quot; (optional)</dt>
-<dd><font SIZE="-1">ID</font> of the &#8216;authz&#8217; object subclass that provides access control checking of the <font SIZE="-1">TLS</font> x509 certificate distinguished name. (Since 4.0)</dd>
+<dd>ID of the &#8216;authz&#8217; object subclass that provides access control checking of the TLS x509 certificate distinguished name. (Since 4.0)</dd>
 <dt>&quot;max-bandwidth: int&quot; (optional)</dt>
 <dd>to set maximum speed for migration. maximum speed in bytes per second. (Since 2.8)</dd>
 <dt>&quot;downtime-limit: int&quot; (optional)</dt>
 <dd>set maximum tolerated downtime for migration. maximum downtime in milliseconds (Since 2.8)</dd>
 <dt>&quot;x-checkpoint-delay: int&quot; (optional)</dt>
-<dd>the delay time between two <font SIZE="-1">COLO</font> checkpoints. (Since 2.8)</dd>
+<dd>the delay time between two COLO checkpoints. (Since 2.8)</dd>
 <dt>&quot;block-incremental: boolean&quot; (optional)</dt>
 <dd>Affects how much storage is migrated when the block migration capability is enabled. When false, the entire storage backing chain is migrated into a flattened image at the destination; when true, only the active qcow2 layer is migrated and the destination must already have access to the same backing chain as was used on the source. (since 2.10)</dd>
 <dt>&quot;multifd-channels: int&quot; (optional)</dt>
 <dd>Number of channels used to migrate data in parallel. This is the same number that the number of sockets used for migration. The default value is 2 (since 4.0)</dd>
 <dt>&quot;xbzrle-cache-size: int&quot; (optional)</dt>
-<dd>cache size to be used by <font SIZE="-1">XBZRLE</font> migration. It needs to be a multiple of the target page size and a power of 2 (Since 2.11)</dd>
+<dd>cache size to be used by XBZRLE migration. It needs to be a multiple of the target page size and a power of 2 (Since 2.11)</dd>
 <dt>&quot;max-postcopy-bandwidth: int&quot; (optional)</dt>
 <dd>Background transfer bandwidth during postcopy. Defaults to 0 (unlimited). In bytes per second. (Since 3.0)</dd>
 <dt>&quot;max-cpu-throttle: int&quot; (optional)</dt>
 <dd>maximum cpu throttle percentage. Defaults to 99. (Since 3.1)</dd></dl>
-<p> <code>Since:</code> 2.4 <code>query-migrate-parameters</code> (Command) Returns information about the current migration parameters <code>Returns:</code> <tt>&quot;MigrationParameters&quot;</tt> <code>Since:</code> 2.4 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-migrate-parameters&quot;} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-        &quot;decompress-threads&quot; : 2,<br />
-            &quot;cpu-throttle-increment&quot; : 10,<br />
-            &quot;compress-threads&quot; : 8,<br />
-            &quot;compress-level&quot; : 1,<br />
-            &quot;cpu-throttle-initial&quot; : 20,<br />
-            &quot;max-bandwidth&quot; : 33554432,<br />
-            &quot;downtime-limit&quot; : 300<br />
-    }<br />
-} <code>client_migrate_info</code> (Command) Set migration information for remote display. This makes the server ask the client to automatically reconnect using the new parameters once migration finished successfully. Only implemented for <font SIZE="-1">SPICE.</font> <code>Arguments:</code></p>
+<p> <code>Since:</code> 2.4 <code>query-migrate-parameters</code> (Command) Returns information about the current migration parameters <code>Returns:</code> <tt>&quot;MigrationParameters&quot;</tt> <code>Since:</code> 2.4 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-migrate-parameters&quot;} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+        &quot;decompress-threads&quot; : 2,<br/>
+            &quot;cpu-throttle-increment&quot; : 10,<br/>
+            &quot;compress-threads&quot; : 8,<br/>
+            &quot;compress-level&quot; : 1,<br/>
+            &quot;cpu-throttle-initial&quot; : 20,<br/>
+            &quot;max-bandwidth&quot; : 33554432,<br/>
+            &quot;downtime-limit&quot; : 300<br/>
+    }<br/>
+} <code>client_migrate_info</code> (Command) Set migration information for remote display. This makes the server ask the client to automatically reconnect using the new parameters once migration finished successfully. Only implemented for SPICE. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;protocol: string&quot;</dt>
 <dd>must be &#8220;spice&#8221;</dd>
@@ -6163,20 +6163,20 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dd>spice tcp port for tls-secured channels</dd>
 <dt>&quot;cert-subject: string&quot; (optional)</dt>
 <dd>server certificate subject</dd></dl>
-<p> <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;client_migrate_info&quot;,<br />
-   &quot;arguments&quot; : {&quot;protocol&quot; : &quot;spice&quot;,<br />
-                  &quot;hostname&quot; : &quot;virt42.lab.kraxel.org&quot;,<br />
-                  &quot;port&quot; : 1234}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
-} <code>migrate-start-postcopy</code> (Command) Followup to a migration command to switch the migration to postcopy mode. The postcopy-ram capability must be set on both source and destination before the original migration command. <code>Since:</code> 2.5 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;migrate-start-postcopy&quot;} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
-} <font SIZE="-1"><code>MIGRATION</code></font> (Event) Emitted when a migration event happens <code>Arguments:</code></p>
+<p> <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;client_migrate_info&quot;,<br/>
+   &quot;arguments&quot; : {&quot;protocol&quot; : &quot;spice&quot;,<br/>
+                  &quot;hostname&quot; : &quot;virt42.lab.kraxel.org&quot;,<br/>
+                  &quot;port&quot; : 1234}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
+} <code>migrate-start-postcopy</code> (Command) Followup to a migration command to switch the migration to postcopy mode. The postcopy-ram capability must be set on both source and destination before the original migration command. <code>Since:</code> 2.5 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;migrate-start-postcopy&quot;} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
+} <code>MIGRATION</code> (Event) Emitted when a migration event happens <code>Arguments:</code></p>
 <dl>
 <dt>&quot;status: MigrationStatus&quot;</dt>
 <dd><tt>&quot;MigrationStatus&quot;</tt> describing the current migration status.</dd></dl>
@@ -6184,36 +6184,36 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <pre> &lt;- {&quot;timestamp&quot;: {&quot;seconds&quot;: 1432121972, &quot;microseconds&quot;: 744001},
  &quot;event&quot;: &quot;MIGRATION&quot;,
  &quot;data&quot;: {&quot;status&quot;: &quot;completed&quot;} }</pre>
-<p><font SIZE="-1"><code>MIGRATION_PASS</code></font> (Event) Emitted from the source side of a migration at the start of each pass (when it syncs the dirty bitmap) <code>Arguments:</code></p>
+<p><code>MIGRATION_PASS</code> (Event) Emitted from the source side of a migration at the start of each pass (when it syncs the dirty bitmap) <code>Arguments:</code></p>
 <dl>
 <dt>&quot;pass: int&quot;</dt>
 <dd>An incrementing count (starting at 1 on the first pass)</dd></dl>
-<p> <code>Since:</code> 2.6 <code>Example:</code> { &quot;timestamp&quot;: {&quot;seconds&quot;: 1449669631, &quot;microseconds&quot;: 239225},<br />
+<p> <code>Since:</code> 2.6 <code>Example:</code> { &quot;timestamp&quot;: {&quot;seconds&quot;: 1449669631, &quot;microseconds&quot;: 239225},<br/>
     &quot;event&quot;: &quot;MIGRATION_PASS&quot;, &quot;data&quot;: {&quot;pass&quot;: 2} } <code>COLOMessage</code> (Enum) The message transmission between Primary side and Secondary side. <code>Values:</code></p>
 <dl>
 <dt>&quot;checkpoint-ready&quot;</dt>
-<dd>Secondary <font SIZE="-1">VM</font> (<font SIZE="-1">SVM</font>) is ready for checkpointing</dd>
+<dd>Secondary VM (SVM) is ready for checkpointing</dd>
 <dt>&quot;checkpoint-request&quot;</dt>
-<dd>Primary <font SIZE="-1">VM</font> (<font SIZE="-1">PVM</font>) tells <font SIZE="-1">SVM</font> to prepare for checkpointing</dd>
+<dd>Primary VM (PVM) tells SVM to prepare for checkpointing</dd>
 <dt>&quot;checkpoint-reply&quot;</dt>
-<dd><font SIZE="-1">SVM</font> gets <font SIZE="-1">PVM</font>&#8216;s checkpoint request</dd>
+<dd>SVM gets PVM&#8216;s checkpoint request</dd>
 <dt>&quot;vmstate-send&quot;</dt>
-<dd><font SIZE="-1">VM</font>&#8216;s state will be sent by <font SIZE="-1">PVM.</font></dd>
+<dd>VM&#8216;s state will be sent by PVM.</dd>
 <dt>&quot;vmstate-size&quot;</dt>
 <dd>The total size of VMstate.</dd>
 <dt>&quot;vmstate-received&quot;</dt>
-<dd><font SIZE="-1">VM</font>&#8216;s state has been received by <font SIZE="-1">SVM.</font></dd>
+<dd>VM&#8216;s state has been received by SVM.</dd>
 <dt>&quot;vmstate-loaded&quot;</dt>
-<dd><font SIZE="-1">VM</font>&#8216;s state has been loaded by <font SIZE="-1">SVM.</font></dd></dl>
-<p> <code>Since:</code> 2.8 <code>COLOMode</code> (Enum) The <font SIZE="-1">COLO</font> current mode. <code>Values:</code></p>
+<dd>VM&#8216;s state has been loaded by SVM.</dd></dl>
+<p> <code>Since:</code> 2.8 <code>COLOMode</code> (Enum) The COLO current mode. <code>Values:</code></p>
 <dl>
 <dt>&quot;none&quot;</dt>
-<dd><font SIZE="-1">COLO</font> is disabled.</dd>
+<dd>COLO is disabled.</dd>
 <dt>&quot;primary&quot;</dt>
-<dd><font SIZE="-1">COLO</font> node in primary side.</dd>
+<dd>COLO node in primary side.</dd>
 <dt>&quot;secondary&quot;</dt>
-<dd><font SIZE="-1">COLO</font> node in slave side.</dd></dl>
-<p> <code>Since:</code> 2.8 <code>FailoverStatus</code> (Enum) An enumeration of <font SIZE="-1">COLO</font> failover status <code>Values:</code></p>
+<dd>COLO node in slave side.</dd></dl>
+<p> <code>Since:</code> 2.8 <code>FailoverStatus</code> (Enum) An enumeration of COLO failover status <code>Values:</code></p>
 <dl>
 <dt>&quot;none&quot;</dt>
 <dd>no failover has ever happened</dd>
@@ -6225,85 +6225,85 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dd>finish the process of failover</dd>
 <dt>&quot;relaunch&quot;</dt>
 <dd>restart the failover process, from &#8216;none&#8217; -&gt; &#8216;completed&#8217; (Since 2.9)</dd></dl>
-<p> <code>Since:</code> 2.8 <font SIZE="-1"><code>COLO_EXIT</code></font> (Event) Emitted when <font SIZE="-1">VM</font> finishes <font SIZE="-1">COLO</font> mode due to some errors happening or at the request of users. <code>Arguments:</code></p>
+<p> <code>Since:</code> 2.8 <code>COLO_EXIT</code> (Event) Emitted when VM finishes COLO mode due to some errors happening or at the request of users. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;mode: COLOMode&quot;</dt>
-<dd>report <font SIZE="-1">COLO</font> mode when <font SIZE="-1">COLO</font> exited.</dd>
+<dd>report COLO mode when COLO exited.</dd>
 <dt>&quot;reason: COLOExitReason&quot;</dt>
-<dd>describes the reason for the <font SIZE="-1">COLO</font> exit.</dd></dl>
+<dd>describes the reason for the COLO exit.</dd></dl>
 <p> <code>Since:</code> 3.1 <code>Example:</code> </p>
 <pre> &lt;- { &quot;timestamp&quot;: {&quot;seconds&quot;: 2032141960, &quot;microseconds&quot;: 417172},
  &quot;event&quot;: &quot;COLO_EXIT&quot;, &quot;data&quot;: {&quot;mode&quot;: &quot;primary&quot;, &quot;reason&quot;: &quot;request&quot; } }</pre>
-<p><code>COLOExitReason</code> (Enum) The reason for a <font SIZE="-1">COLO</font> exit. <code>Values:</code></p>
+<p><code>COLOExitReason</code> (Enum) The reason for a COLO exit. <code>Values:</code></p>
 <dl>
 <dt>&quot;none&quot;</dt>
-<dd>failover has never happened. This state does not occur in the <font SIZE="-1">COLO_EXIT</font> event, and is only visible in the result of query-colo-status.</dd>
+<dd>failover has never happened. This state does not occur in the COLO_EXIT event, and is only visible in the result of query-colo-status.</dd>
 <dt>&quot;request&quot;</dt>
-<dd><font SIZE="-1">COLO</font> exit is due to an external request.</dd>
+<dd>COLO exit is due to an external request.</dd>
 <dt>&quot;error&quot;</dt>
-<dd><font SIZE="-1">COLO</font> exit is due to an internal error.</dd>
+<dd>COLO exit is due to an internal error.</dd>
 <dt>&quot;processing&quot;</dt>
-<dd><font SIZE="-1">COLO</font> is currently handling a failover (since 4.0).</dd></dl>
-<p> <code>Since:</code> 3.1 <code>x-colo-lost-heartbeat</code> (Command) Tell qemu that heartbeat is lost, request it to do takeover procedures. If this command is sent to the <font SIZE="-1">PVM,</font> the Primary side will exit <font SIZE="-1">COLO</font> mode. If sent to the Secondary, the Secondary side will run failover work, then takes over server operation to become the service <font SIZE="-1">VM.</font> <code>Since:</code> 2.8 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;x-colo-lost-heartbeat&quot;} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
-} <code>migrate_cancel</code> (Command) Cancel the current executing migration process. <code>Returns:</code> nothing on success <code>Notes:</code> This command succeeds even if there is no migration process running. <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;migrate_cancel&quot;} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
+<dd>COLO is currently handling a failover (since 4.0).</dd></dl>
+<p> <code>Since:</code> 3.1 <code>x-colo-lost-heartbeat</code> (Command) Tell qemu that heartbeat is lost, request it to do takeover procedures. If this command is sent to the PVM, the Primary side will exit COLO mode. If sent to the Secondary, the Secondary side will run failover work, then takes over server operation to become the service VM. <code>Since:</code> 2.8 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;x-colo-lost-heartbeat&quot;} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
+} <code>migrate_cancel</code> (Command) Cancel the current executing migration process. <code>Returns:</code> nothing on success <code>Notes:</code> This command succeeds even if there is no migration process running. <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;migrate_cancel&quot;} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
 } <code>migrate-continue</code> (Command) Continue migration when it&#8217;s in a paused state. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;state: MigrationStatus&quot;</dt>
 <dd>The state the migration is currently expected to be in</dd></dl>
-<p> <code>Returns:</code> nothing on success <code>Since:</code> 2.11 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;migrate-continue&quot;, &quot;arguments&quot; : {&quot;state&quot; : &quot;pre-switchover&quot;}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
+<p> <code>Returns:</code> nothing on success <code>Since:</code> 2.11 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;migrate-continue&quot;, &quot;arguments&quot; : {&quot;state&quot; : &quot;pre-switchover&quot;}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
 } <code>migrate_set_downtime</code> (Command) Set maximum tolerated downtime for migration. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;value: number&quot;</dt>
 <dd>maximum downtime in seconds</dd></dl>
-<p> <code>Returns:</code> nothing on success <code>Notes:</code> This command is deprecated in favor of &#8216;migrate-set-parameters&#8217; <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;migrate_set_downtime&quot;, &quot;arguments&quot; : {&quot;value&quot; : 0.1}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
+<p> <code>Returns:</code> nothing on success <code>Notes:</code> This command is deprecated in favor of &#8216;migrate-set-parameters&#8217; <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;migrate_set_downtime&quot;, &quot;arguments&quot; : {&quot;value&quot; : 0.1}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
 } <code>migrate_set_speed</code> (Command) Set maximum speed for migration. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;value: int&quot;</dt>
 <dd>maximum speed in bytes per second.</dd></dl>
-<p> <code>Returns:</code> nothing on success <code>Notes:</code> This command is deprecated in favor of &#8216;migrate-set-parameters&#8217; <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;migrate_set_speed&quot;, &quot;arguments&quot; : {&quot;value&quot; : 1024}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
-} <code>migrate-set-cache-size</code> (Command) Set cache size to be used by <font SIZE="-1">XBZRLE</font> migration <code>Arguments:</code></p>
+<p> <code>Returns:</code> nothing on success <code>Notes:</code> This command is deprecated in favor of &#8216;migrate-set-parameters&#8217; <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;migrate_set_speed&quot;, &quot;arguments&quot; : {&quot;value&quot; : 1024}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
+} <code>migrate-set-cache-size</code> (Command) Set cache size to be used by XBZRLE migration <code>Arguments:</code></p>
 <dl>
 <dt>&quot;value: int&quot;</dt>
 <dd>cache size in bytes</dd></dl>
-<p> The size will be rounded down to the nearest power of 2. The cache size can be modified before and during ongoing migration <code>Returns:</code> nothing on success <code>Notes:</code> This command is deprecated in favor of &#8216;migrate-set-parameters&#8217; <code>Since:</code> 1.2 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;migrate-set-cache-size&quot;,<br />
-   &quot;arguments&quot; : {&quot;value&quot; : 536870912}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
-} <code>query-migrate-cache-size</code> (Command) Query migration <font SIZE="-1">XBZRLE</font> cache size <code>Returns:</code> <font SIZE="-1">XBZRLE</font> cache size in bytes <code>Notes:</code> This command is deprecated in favor of &#8216;query-migrate-parameters&#8217; <code>Since:</code> 1.2 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-migrate-cache-size&quot;} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot; : 67108864<br />
+<p> The size will be rounded down to the nearest power of 2. The cache size can be modified before and during ongoing migration <code>Returns:</code> nothing on success <code>Notes:</code> This command is deprecated in favor of &#8216;migrate-set-parameters&#8217; <code>Since:</code> 1.2 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;migrate-set-cache-size&quot;,<br/>
+   &quot;arguments&quot; : {&quot;value&quot; : 536870912}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
+} <code>query-migrate-cache-size</code> (Command) Query migration XBZRLE cache size <code>Returns:</code> XBZRLE cache size in bytes <code>Notes:</code> This command is deprecated in favor of &#8216;query-migrate-parameters&#8217; <code>Since:</code> 1.2 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-migrate-cache-size&quot;} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot; : 67108864<br/>
 } <code>migrate</code> (Command) Migrates the current running guest to another Virtual Machine. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;uri: string&quot;</dt>
-<dd>the Uniform Resource Identifier of the destination <font SIZE="-1">VM</font></dd>
+<dd>the Uniform Resource Identifier of the destination VM</dd>
 <dt>&quot;blk: boolean&quot; (optional)</dt>
 <dd>do block migration (full disk copy)</dd>
 <dt>&quot;inc: boolean&quot; (optional)</dt>
 <dd>incremental disk copy migration</dd>
 <dt>&quot;detach: boolean&quot; (optional)</dt>
-<dd>this argument exists only for compatibility reasons and is ignored by <font SIZE="-1">QEMU</font></dd>
+<dd>this argument exists only for compatibility reasons and is ignored by QEMU</dd>
 <dt>&quot;resume: boolean&quot; (optional)</dt>
 <dd>resume one paused migration, default &#8220;off&#8221;. (since 3.0)</dd></dl>
 <p> <code>Returns:</code> nothing on success <code>Since:</code> 0.14.0 <code>Notes:</code></p>
@@ -6313,12 +6313,12 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dt>2.</dt>
 <dd>All boolean arguments default to false</dd>
 <dt>3.</dt>
-<dd>The user Monitor&#8217;s &#8220;detach&#8221; argument is invalid in <font SIZE="-1">QMP</font> and should not be used</dd></dl>
-<p> <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;migrate&quot;, &quot;arguments&quot; : {&quot;uri&quot; : &quot;tcp:0:4446&quot;}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
+<dd>The user Monitor&#8217;s &#8220;detach&#8221; argument is invalid in QMP and should not be used</dd></dl>
+<p> <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;migrate&quot;, &quot;arguments&quot; : {&quot;uri&quot; : &quot;tcp:0:4446&quot;}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
 } <code>migrate-incoming</code> (Command) Start an incoming migration, the qemu must have been started with -incoming defer <code>Arguments:</code></p>
 <dl>
 <dt>&quot;uri: string&quot;</dt>
@@ -6328,27 +6328,27 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dt>1.</dt>
 <dd>It&#8217;s a bad idea to use a string for the uri, but it needs to stay compatible with -incoming and the format of the uri is already exposed above libvirt.</dd>
 <dt>2.</dt>
-<dd><font SIZE="-1">QEMU</font> must be started with -incoming defer to allow migrate-incoming to be used.</dd>
+<dd>QEMU must be started with -incoming defer to allow migrate-incoming to be used.</dd>
 <dt>3.</dt>
 <dd>The uri format is the same as for -incoming</dd></dl>
-<p> <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;migrate-incoming&quot;,<br />
-   &quot;arguments&quot; : {&quot;uri&quot; : &quot;tcp::4446&quot;}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
-} <code>xen-save-devices-state</code> (Command) Save the state of all devices to file. The <font SIZE="-1">RAM</font> and the block devices of the <font SIZE="-1">VM</font> are not saved by this command. <code>Arguments:</code></p>
+<p> <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;migrate-incoming&quot;,<br/>
+   &quot;arguments&quot; : {&quot;uri&quot; : &quot;tcp::4446&quot;}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
+} <code>xen-save-devices-state</code> (Command) Save the state of all devices to file. The RAM and the block devices of the VM are not saved by this command. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;filename: string&quot;</dt>
 <dd>the file to save the state of the devices to as binary data. See xen-save-devices-state.txt for a description of the binary format.</dd>
 <dt>&quot;live: boolean&quot; (optional)</dt>
-<dd>Optional argument to ask <font SIZE="-1">QEMU</font> to treat this command as part of a live migration. Default to true. (since 2.11)</dd></dl>
-<p> <code>Returns:</code> Nothing on success <code>Since:</code> 1.1 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;xen-save-devices-state&quot;,<br />
-   &quot;arguments&quot; : {&quot;filename&quot; : &quot;/tmp/save&quot;}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
+<dd>Optional argument to ask QEMU to treat this command as part of a live migration. Default to true. (since 2.11)</dd></dl>
+<p> <code>Returns:</code> Nothing on success <code>Since:</code> 1.1 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;xen-save-devices-state&quot;,<br/>
+   &quot;arguments&quot; : {&quot;filename&quot; : &quot;/tmp/save&quot;}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
 } <code>xen-set-replication</code> (Command) Enable or disable replication. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;enable: boolean&quot;</dt>
@@ -6357,62 +6357,62 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dd>true for primary or false for secondary.</dd>
 <dt>&quot;failover: boolean&quot; (optional)</dt>
 <dd>true to do failover, false to stop. but cannot be specified if &#8216;enable&#8217; is true. default value is false.</dd></dl>
-<p> <code>Returns:</code> nothing. <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;xen-set-replication&quot;,<br />
-   &quot;arguments&quot; : {&quot;enable&quot; : true, &quot;primary&quot; : false}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
+<p> <code>Returns:</code> nothing. <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;xen-set-replication&quot;,<br/>
+   &quot;arguments&quot; : {&quot;enable&quot; : true, &quot;primary&quot; : false}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
 } <code>Since:</code> 2.9 <code>If:</code> <tt>&quot;defined(CONFIG_REPLICATION)&quot;</tt> <code>ReplicationStatus</code> (Object) The result format for &#8216;query-xen-replication-status&#8217;. <code>Members:</code></p>
 <dl>
 <dt>&quot;error: boolean&quot;</dt>
 <dd>true if an error happened, false if replication is normal.</dd>
 <dt>&quot;desc: string&quot; (optional)</dt>
 <dd>the human readable error description string, when <tt>&quot;error&quot;</tt> is &#8216;true&#8217;.</dd></dl>
-<p> <code>Since:</code> 2.9 <code>If:</code> <tt>&quot;defined(CONFIG_REPLICATION)&quot;</tt> <code>query-xen-replication-status</code> (Command) Query replication status while the vm is running. <code>Returns:</code> A <tt>&quot;ReplicationResult&quot;</tt> object showing the status. <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-xen-replication-status&quot;} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-        &quot;error&quot; : false<br />
-    }<br />
-} <code>Since:</code> 2.9 <code>If:</code> <tt>&quot;defined(CONFIG_REPLICATION)&quot;</tt> <code>xen-colo-do-checkpoint</code> (Command) Xen uses this command to notify replication to trigger a checkpoint. <code>Returns:</code> nothing. <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;xen-colo-do-checkpoint&quot;} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
+<p> <code>Since:</code> 2.9 <code>If:</code> <tt>&quot;defined(CONFIG_REPLICATION)&quot;</tt> <code>query-xen-replication-status</code> (Command) Query replication status while the vm is running. <code>Returns:</code> A <tt>&quot;ReplicationResult&quot;</tt> object showing the status. <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-xen-replication-status&quot;} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+        &quot;error&quot; : false<br/>
+    }<br/>
+} <code>Since:</code> 2.9 <code>If:</code> <tt>&quot;defined(CONFIG_REPLICATION)&quot;</tt> <code>xen-colo-do-checkpoint</code> (Command) Xen uses this command to notify replication to trigger a checkpoint. <code>Returns:</code> nothing. <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;xen-colo-do-checkpoint&quot;} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
 } <code>Since:</code> 2.9 <code>If:</code> <tt>&quot;defined(CONFIG_REPLICATION)&quot;</tt> <code>COLOStatus</code> (Object) The result format for &#8216;query-colo-status&#8217;. <code>Members:</code></p>
 <dl>
 <dt>&quot;mode: COLOMode&quot;</dt>
-<dd><font SIZE="-1">COLO</font> running mode. If <font SIZE="-1">COLO</font> is running, this field will return &#8216;primary&#8217; or &#8216;secondary&#8217;.</dd>
+<dd>COLO running mode. If COLO is running, this field will return &#8216;primary&#8217; or &#8216;secondary&#8217;.</dd>
 <dt>&quot;last-mode: COLOMode&quot;</dt>
-<dd><font SIZE="-1">COLO</font> last running mode. If <font SIZE="-1">COLO</font> is running, this field will return same like mode field, after failover we can use this field to get last colo mode. (since 4.0)</dd>
+<dd>COLO last running mode. If COLO is running, this field will return same like mode field, after failover we can use this field to get last colo mode. (since 4.0)</dd>
 <dt>&quot;reason: COLOExitReason&quot;</dt>
-<dd>describes the reason for the <font SIZE="-1">COLO</font> exit.</dd></dl>
-<p> <code>Since:</code> 3.1 <code>query-colo-status</code> (Command) Query <font SIZE="-1">COLO</font> status while the vm is running. <code>Returns:</code> A <tt>&quot;COLOStatus&quot;</tt> object showing the status. <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-colo-status&quot;} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-        &quot;mode&quot; : &quot;primary&quot;, &quot;reason&quot; : &quot;request&quot;<br />
-    }<br />
-} <code>Since:</code> 3.1 <code>migrate-recover</code> (Command) Provide a recovery migration stream <font SIZE="-1">URI.</font> <code>Arguments:</code></p>
+<dd>describes the reason for the COLO exit.</dd></dl>
+<p> <code>Since:</code> 3.1 <code>query-colo-status</code> (Command) Query COLO status while the vm is running. <code>Returns:</code> A <tt>&quot;COLOStatus&quot;</tt> object showing the status. <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-colo-status&quot;} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+        &quot;mode&quot; : &quot;primary&quot;, &quot;reason&quot; : &quot;request&quot;<br/>
+    }<br/>
+} <code>Since:</code> 3.1 <code>migrate-recover</code> (Command) Provide a recovery migration stream URI. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;uri: string&quot;</dt>
-<dd>the <font SIZE="-1">URI</font> to be used for the recovery of migration stream.</dd></dl>
-<p> <code>Returns:</code> nothing. <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;migrate-recover&quot;,<br />
-   &quot;arguments&quot; : {&quot;uri&quot; : &quot;tcp:192.168.1.200:12345&quot;}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
-} <code>Since:</code> 3.0 <code>migrate-pause</code> (Command) Pause a migration. Currently it only supports postcopy. <code>Returns:</code> nothing. <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;migrate-pause&quot;} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
-} <code>Since:</code> 3.0 <font SIZE="-1"><code>UNPLUG_PRIMARY</code></font> (Event) Emitted from source side of a migration when migration state is <font SIZE="-1">WAIT_UNPLUG.</font> Device was unplugged by guest operating system. Device resources in <font SIZE="-1">QEMU</font> are kept on standby to be able to re-plug it in case of migration failure. <code>Arguments:</code></p>
+<dd>the URI to be used for the recovery of migration stream.</dd></dl>
+<p> <code>Returns:</code> nothing. <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;migrate-recover&quot;,<br/>
+   &quot;arguments&quot; : {&quot;uri&quot; : &quot;tcp:192.168.1.200:12345&quot;}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
+} <code>Since:</code> 3.0 <code>migrate-pause</code> (Command) Pause a migration. Currently it only supports postcopy. <code>Returns:</code> nothing. <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;migrate-pause&quot;} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
+} <code>Since:</code> 3.0 <code>UNPLUG_PRIMARY</code> (Event) Emitted from source side of a migration when migration state is WAIT_UNPLUG. Device was unplugged by guest operating system. Device resources in QEMU are kept on standby to be able to re-plug it in case of migration failure. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;device-id: string&quot;</dt>
-<dd><font SIZE="-1">QEMU</font> device id of the unplugged device</dd></dl>
+<dd>QEMU device id of the unplugged device</dd></dl>
 <p> <code>Since:</code> 4.2 <code>Example:</code> </p>
 <pre> {&quot;event&quot;: &quot;UNPLUG_PRIMARY&quot;, &quot;data&quot;: {&quot;device-id&quot;: &quot;hostdev0&quot;} }</pre>
 <h3>Transactions</h3>
@@ -6480,7 +6480,7 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dl>
 <dt>&quot;completion-mode: ActionCompletionMode&quot; (optional)</dt>
 <dd>Controls how jobs launched asynchronously by Actions will complete or fail as a group. See <tt>&quot;ActionCompletionMode&quot;</tt> for details.</dd></dl>
-<p> <code>Since:</code> 2.5 <code>transaction</code> (Command) Executes a number of transactionable <font SIZE="-1">QMP</font> commands atomically. If any operation fails, then the entire set of actions will be abandoned and the appropriate error returned. For external snapshots, the dictionary contains the device, the file to use for the new snapshot, and the format. The default format, if not specified, is qcow2. Each new snapshot defaults to being created by <font SIZE="-1">QEMU</font> (wiping any contents if the file already exists), but it is also possible to reuse an externally-created file. In the latter case, you should ensure that the new image file has the same contents as the current one; <font SIZE="-1">QEMU</font> cannot perform any meaningful check. Typically this is achieved by using the current image file as the backing file for the new image. On failure, the original disks pre-snapshot attempt will be used. For internal snapshots, the dictionary contains the device and the snapshot&#8217;s name. If an internal snapshot matching name already exists, the request will be rejected. Only some image formats support it, for example, qcow2, rbd, and sheepdog. On failure, qemu will try delete the newly created internal snapshot in the transaction. When an I/O error occurs during deletion, the user needs to fix it later with qemu-img or other command. <code>Arguments:</code></p>
+<p> <code>Since:</code> 2.5 <code>transaction</code> (Command) Executes a number of transactionable QMP commands atomically. If any operation fails, then the entire set of actions will be abandoned and the appropriate error returned. For external snapshots, the dictionary contains the device, the file to use for the new snapshot, and the format. The default format, if not specified, is qcow2. Each new snapshot defaults to being created by QEMU (wiping any contents if the file already exists), but it is also possible to reuse an externally-created file. In the latter case, you should ensure that the new image file has the same contents as the current one; QEMU cannot perform any meaningful check. Typically this is achieved by using the current image file as the backing file for the new image. On failure, the original disks pre-snapshot attempt will be used. For internal snapshots, the dictionary contains the device and the snapshot&#8217;s name. If an internal snapshot matching name already exists, the request will be rejected. Only some image formats support it, for example, qcow2, rbd, and sheepdog. On failure, qemu will try delete the newly created internal snapshot in the transaction. When an I/O error occurs during deletion, the user needs to fix it later with qemu-img or other command. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;actions: array of TransactionAction&quot;</dt>
 <dd>List of <tt>&quot;TransactionAction&quot;</tt>; information needed for the respective operations.</dd>
@@ -6534,10 +6534,10 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dd>its name matches the <tt>&quot;name&quot;</tt> pattern, and</dd>
 <dt>&#8211;</dt>
 <dd>if <tt>&quot;vcpu&quot;</tt> is given, the event has the &#8220;vcpu&#8221; property.</dd></dl>
-<p> Therefore, if <tt>&quot;vcpu&quot;</tt> is given, the operation will only match per-vCPU events, returning their state on the specified vCPU. Special case: if <tt>&quot;name&quot;</tt> is an exact match, <tt>&quot;vcpu&quot;</tt> is given and the event does not have the &#8220;vcpu&#8221; property, an error is returned. <code>Since:</code> 2.2 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;trace-event-get-state&quot;,<br />
-   &quot;arguments&quot; : {&quot;name&quot; : &quot;qemu_memalign&quot;}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot; : [ {&quot;name&quot; : &quot;qemu_memalign&quot;, &quot;state&quot; : &quot;disabled&quot;} ]<br />
+<p> Therefore, if <tt>&quot;vcpu&quot;</tt> is given, the operation will only match per-vCPU events, returning their state on the specified vCPU. Special case: if <tt>&quot;name&quot;</tt> is an exact match, <tt>&quot;vcpu&quot;</tt> is given and the event does not have the &#8220;vcpu&#8221; property, an error is returned. <code>Since:</code> 2.2 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;trace-event-get-state&quot;,<br/>
+   &quot;arguments&quot; : {&quot;name&quot; : &quot;qemu_memalign&quot;}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot; : [ {&quot;name&quot; : &quot;qemu_memalign&quot;, &quot;state&quot; : &quot;disabled&quot;} ]<br/>
 } <code>trace-event-set-state</code> (Command) Set the dynamic tracing state of events. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;name: string&quot;</dt>
@@ -6558,8 +6558,8 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <pre> -&gt; { &quot;execute&quot;: &quot;trace-event-set-state&quot;,
  &quot;arguments&quot;: { &quot;name&quot;: &quot;qemu_memalign&quot;, &quot;enable&quot;: &quot;true&quot; } }
  &lt;- { &quot;return&quot;: {} }</pre>
-<h3><font SIZE="-1">QMP</font> introspection</h3>
-<p><code>query-qmp-schema</code> (Command) Command query-qmp-schema exposes the <font SIZE="-1">QMP</font> wire <font SIZE="-1">ABI</font> as an array of SchemaInfo. This lets <font SIZE="-1">QMP</font> clients figure out what commands and events are available in this <font SIZE="-1">QEMU,</font> and their parameters and results. However, the SchemaInfo can&#8217;t reflect all the rules and restrictions that apply to <font SIZE="-1">QMP.</font> It&#8217;s interface introspection (figuring out what&#8217;s there), not interface specification. The specification is in the <font SIZE="-1">QAPI</font> schema. Furthermore, while we strive to keep the <font SIZE="-1">QMP</font> wire format backwards-compatible across qemu versions, the introspection output is not guaranteed to have the same stability. For example, one version of qemu may list an object member as an optional non-variant, while another lists the same member only through the object&#8217;s variants; or the type of a member may change from a generic string into a specific enum or from one specific type into an alternate that includes the original type alongside something else. <code>Returns:</code> array of <tt>&quot;SchemaInfo&quot;</tt>, where each element describes an entity in the <font SIZE="-1">ABI:</font> command, event, type, &#8230; The order of the various SchemaInfo is unspecified; however, all names are guaranteed to be unique (no name will be duplicated with different meta-types). <code>Note:</code> the <font SIZE="-1">QAPI</font> schema is also used to help define <code>internal</code> interfaces, by defining <font SIZE="-1">QAPI</font> types. These are not part of the <font SIZE="-1">QMP</font> wire <font SIZE="-1">ABI,</font> and therefore not returned by this command. <code>Since:</code> 2.5 <code>SchemaMetaType</code> (Enum) This is a <tt>&quot;SchemaInfo&quot;</tt>&#8216;s meta type, i.e. the kind of entity it describes. <code>Values:</code></p>
+<h3>QMP introspection</h3>
+<p><code>query-qmp-schema</code> (Command) Command query-qmp-schema exposes the QMP wire ABI as an array of SchemaInfo. This lets QMP clients figure out what commands and events are available in this QEMU, and their parameters and results. However, the SchemaInfo can&#8217;t reflect all the rules and restrictions that apply to QMP. It&#8217;s interface introspection (figuring out what&#8217;s there), not interface specification. The specification is in the QAPI schema. Furthermore, while we strive to keep the QMP wire format backwards-compatible across qemu versions, the introspection output is not guaranteed to have the same stability. For example, one version of qemu may list an object member as an optional non-variant, while another lists the same member only through the object&#8217;s variants; or the type of a member may change from a generic string into a specific enum or from one specific type into an alternate that includes the original type alongside something else. <code>Returns:</code> array of <tt>&quot;SchemaInfo&quot;</tt>, where each element describes an entity in the ABI: command, event, type, &#8230; The order of the various SchemaInfo is unspecified; however, all names are guaranteed to be unique (no name will be duplicated with different meta-types). <code>Note:</code> the QAPI schema is also used to help define <code>internal</code> interfaces, by defining QAPI types. These are not part of the QMP wire ABI, and therefore not returned by this command. <code>Since:</code> 2.5 <code>SchemaMetaType</code> (Enum) This is a <tt>&quot;SchemaInfo&quot;</tt>&#8216;s meta type, i.e. the kind of entity it describes. <code>Values:</code></p>
 <dl>
 <dt>&quot;builtin&quot;</dt>
 <dd>a predefined type such as &#8216;int&#8217; or &#8216;bool&#8217;.</dd>
@@ -6572,13 +6572,13 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dt>&quot;alternate&quot;</dt>
 <dd>an alternate type</dd>
 <dt>&quot;command&quot;</dt>
-<dd>a <font SIZE="-1">QMP</font> command</dd>
+<dd>a QMP command</dd>
 <dt>&quot;event&quot;</dt>
-<dd>a <font SIZE="-1">QMP</font> event</dd></dl>
+<dd>a QMP event</dd></dl>
 <p> <code>Since:</code> 2.5 <code>SchemaInfo</code> (Object) <code>Members:</code></p>
 <dl>
 <dt>&quot;name: string&quot;</dt>
-<dd>the entity&#8217;s name, inherited from <tt>&quot;base&quot;</tt>. The SchemaInfo is always referenced by this name. Commands and events have the name defined in the <font SIZE="-1">QAPI</font> schema. Unlike command and event names, type names are not part of the wire <font SIZE="-1">ABI.</font> Consequently, type names are meaningless strings here, although they are still guaranteed unique regardless of <tt>&quot;meta-type&quot;</tt>.</dd>
+<dd>the entity&#8217;s name, inherited from <tt>&quot;base&quot;</tt>. The SchemaInfo is always referenced by this name. Commands and events have the name defined in the QAPI schema. Unlike command and event names, type names are not part of the wire ABI. Consequently, type names are meaningless strings here, although they are still guaranteed unique regardless of <tt>&quot;meta-type&quot;</tt>.</dd>
 <dt>&quot;meta-type: SchemaMetaType&quot;</dt>
 <dd>the entity&#8217;s meta type, inherited from <tt>&quot;base&quot;</tt>.</dd>
 <dt>The members of &quot;SchemaInfoBuiltin&quot; when &quot;meta-type&quot; is &quot;builtin&quot;</dt>
@@ -6598,8 +6598,8 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <p> Additional members depend on the value of <tt>&quot;meta-type&quot;</tt>. <code>Since:</code> 2.5 <code>SchemaInfoBuiltin</code> (Object) Additional SchemaInfo members for meta-type &#8216;builtin&#8217;. <code>Members:</code></p>
 <dl>
 <dt>&quot;json-type: JSONType&quot;</dt>
-<dd>the <font SIZE="-1">JSON</font> type used for this type on the wire.</dd></dl>
-<p> <code>Since:</code> 2.5 <code>JSONType</code> (Enum) The four primitive and two structured types according to <font SIZE="-1">RFC 8259</font> section 1, plus &#8216;int&#8217; (split off &#8216;number&#8217;), plus the obvious top type &#8216;value&#8217;. <code>Values:</code></p>
+<dd>the JSON type used for this type on the wire.</dd></dl>
+<p> <code>Since:</code> 2.5 <code>JSONType</code> (Enum) The four primitive and two structured types according to RFC 8259 section 1, plus &#8216;int&#8217; (split off &#8216;number&#8217;), plus the obvious top type &#8216;value&#8217;. <code>Values:</code></p>
 <dl>
 <dt>&quot;string&quot;</dt>
 <dd>Not documented</dd>
@@ -6621,11 +6621,11 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dl>
 <dt>&quot;values: array of string&quot;</dt>
 <dd>the enumeration type&#8217;s values, in no particular order.</dd></dl>
-<p> Values of this type are <font SIZE="-1">JSON</font> string on the wire. <code>Since:</code> 2.5 <code>SchemaInfoArray</code> (Object) Additional SchemaInfo members for meta-type &#8216;array&#8217;. <code>Members:</code></p>
+<p> Values of this type are JSON string on the wire. <code>Since:</code> 2.5 <code>SchemaInfoArray</code> (Object) Additional SchemaInfo members for meta-type &#8216;array&#8217;. <code>Members:</code></p>
 <dl>
 <dt>&quot;element-type: string&quot;</dt>
 <dd>the array type&#8217;s element type.</dd></dl>
-<p> Values of this type are <font SIZE="-1">JSON</font> array on the wire. <code>Since:</code> 2.5 <code>SchemaInfoObject</code> (Object) Additional SchemaInfo members for meta-type &#8216;object&#8217;. <code>Members:</code></p>
+<p> Values of this type are JSON array on the wire. <code>Since:</code> 2.5 <code>SchemaInfoObject</code> (Object) Additional SchemaInfo members for meta-type &#8216;object&#8217;. <code>Members:</code></p>
 <dl>
 <dt>&quot;members: array of SchemaInfoObjectMember&quot;</dt>
 <dd>the object type&#8217;s (non-variant) members, in no particular order.</dd>
@@ -6635,10 +6635,10 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dd>variant members, i.e. additional members that depend on the type tag&#8217;s value. Present exactly when <tt>&quot;tag&quot;</tt> is present. The variants are in no particular order, and may even differ from the order of the values of the enum type of the <tt>&quot;tag&quot;</tt>.</dd>
 <dt>&quot;features: array of string&quot; (optional)</dt>
 <dd>names of features associated with the type, in no particular order. (since: 4.1)</dd></dl>
-<p> Values of this type are <font SIZE="-1">JSON</font> object on the wire. <code>Since:</code> 2.5 <code>SchemaInfoObjectMember</code> (Object) An object member. <code>Members:</code></p>
+<p> Values of this type are JSON object on the wire. <code>Since:</code> 2.5 <code>SchemaInfoObjectMember</code> (Object) An object member. <code>Members:</code></p>
 <dl>
 <dt>&quot;name: string&quot;</dt>
-<dd>the member&#8217;s name, as defined in the <font SIZE="-1">QAPI</font> schema.</dd>
+<dd>the member&#8217;s name, as defined in the QAPI schema.</dd>
 <dt>&quot;type: string&quot;</dt>
 <dd>the name of the member&#8217;s type.</dd>
 <dt>&quot;default: value&quot; (optional)</dt>
@@ -6667,31 +6667,31 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dd>whether the command allows out-of-band execution, defaults to false (Since: 2.12)</dd>
 <dt>&quot;features: array of string&quot; (optional)</dt>
 <dd>names of features associated with the command, in no particular order. (since 4.2)</dd></dl>
-<p> <font SIZE="-1"><code>TODO:</code></font> <tt>&quot;success-response&quot;</tt> (currently irrelevant, because it&#8217;s <font SIZE="-1">QGA,</font> not <font SIZE="-1">QMP</font>) <code>Since:</code> 2.5 <code>SchemaInfoEvent</code> (Object) Additional SchemaInfo members for meta-type &#8216;event&#8217;. <code>Members:</code></p>
+<p> <code>TODO:</code> <tt>&quot;success-response&quot;</tt> (currently irrelevant, because it&#8217;s QGA, not QMP) <code>Since:</code> 2.5 <code>SchemaInfoEvent</code> (Object) Additional SchemaInfo members for meta-type &#8216;event&#8217;. <code>Members:</code></p>
 <dl>
 <dt>&quot;arg-type: string&quot;</dt>
 <dd>the name of the object type that provides the event&#8217;s parameters.</dd></dl>
 <p> <code>Since:</code> 2.5</p>
-<h3><font SIZE="-1">QEMU</font> Object Model (<font SIZE="-1">QOM</font>)</h3>
+<h3>QEMU Object Model (QOM)</h3>
 <p><code>ObjectPropertyInfo</code> (Object) <code>Members:</code></p>
 <dl>
 <dt>&quot;name: string&quot;</dt>
 <dd>the name of the property</dd>
 <dt>&quot;type: string&quot;</dt>
-<dd>the type of the property. This will typically come in one of four forms: 1) A primitive type such as &#8216;u8&#8217;, &#8216;u16&#8217;, &#8216;bool&#8217;, &#8216;str&#8217;, or &#8216;double&#8217;. These types are mapped to the appropriate <font SIZE="-1">JSON</font> type. 2) A child type in the form &#8216;child&lt;subtype&gt;&#8217; where subtype is a qdev device type name. Child properties create the composition tree. 3) A link type in the form &#8216;link&lt;subtype&gt;&#8217; where subtype is a qdev device type name. Link properties form the device model graph.</dd>
+<dd>the type of the property. This will typically come in one of four forms: 1) A primitive type such as &#8216;u8&#8217;, &#8216;u16&#8217;, &#8216;bool&#8217;, &#8216;str&#8217;, or &#8216;double&#8217;. These types are mapped to the appropriate JSON type. 2) A child type in the form &#8216;child&lt;subtype&gt;&#8217; where subtype is a qdev device type name. Child properties create the composition tree. 3) A link type in the form &#8216;link&lt;subtype&gt;&#8217; where subtype is a qdev device type name. Link properties form the device model graph.</dd>
 <dt>&quot;description: string&quot; (optional)</dt>
 <dd>if specified, the description of the property.</dd></dl>
 <p> <code>Since:</code> 1.2 <code>qom-list</code> (Command) This command will list any properties of a object given a path in the object model. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;path: string&quot;</dt>
 <dd>the path within the object model. See <tt>&quot;qom-get&quot;</tt> for a description of this parameter.</dd></dl>
-<p> <code>Returns:</code> a list of <tt>&quot;ObjectPropertyInfo&quot;</tt> that describe the properties of the object. <code>Since:</code> 1.2 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;qom-list&quot;,<br />
-   &quot;arguments&quot; : {&quot;path&quot; : &quot;/chardevs&quot;}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot; : [ {&quot;name&quot; : &quot;type&quot;, &quot;type&quot; : &quot;string&quot;},<br />
-                 {&quot;name&quot; : &quot;parallel0&quot;, &quot;type&quot; : &quot;child&lt;chardev-vc&gt;&quot;},<br />
-                 {&quot;name&quot; : &quot;serial0&quot;, &quot;type&quot; : &quot;child&lt;chardev-vc&gt;&quot;},<br />
-                 {&quot;name&quot; : &quot;mon0&quot;, &quot;type&quot; : &quot;child&lt;chardev-stdio&gt;&quot;} ]<br />
+<p> <code>Returns:</code> a list of <tt>&quot;ObjectPropertyInfo&quot;</tt> that describe the properties of the object. <code>Since:</code> 1.2 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;qom-list&quot;,<br/>
+   &quot;arguments&quot; : {&quot;path&quot; : &quot;/chardevs&quot;}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot; : [ {&quot;name&quot; : &quot;type&quot;, &quot;type&quot; : &quot;string&quot;},<br/>
+                 {&quot;name&quot; : &quot;parallel0&quot;, &quot;type&quot; : &quot;child&lt;chardev-vc&gt;&quot;},<br/>
+                 {&quot;name&quot; : &quot;serial0&quot;, &quot;type&quot; : &quot;child&lt;chardev-vc&gt;&quot;},<br/>
+                 {&quot;name&quot; : &quot;mon0&quot;, &quot;type&quot; : &quot;child&lt;chardev-stdio&gt;&quot;} ]<br/>
 } <code>qom-get</code> (Command) This command will get a property from a object model path and return the value. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;path: string&quot;</dt>
@@ -6699,18 +6699,18 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dt>&quot;property: string&quot;</dt>
 <dd>The property name to read</dd></dl>
 <p> <code>Returns:</code> The property value. The type depends on the property type. child&lt;&gt; and link&lt;&gt; properties are returned as #str pathnames. All integer property types (u8, u16, etc) are returned as #int. <code>Since:</code> 1.2 <code>Example:</code> 1. Use absolute path</p>
-<p>        -&gt;{&quot;execute&quot; : &quot;qom-get&quot;,<br />
-           &quot;arguments&quot; : {&quot;path&quot; : &quot;/machine/unattached/device[0]&quot;,<br />
-                          &quot;property&quot; : &quot;hotplugged&quot;}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot; : false<br />
+<p>        -&gt;{&quot;execute&quot; : &quot;qom-get&quot;,<br/>
+           &quot;arguments&quot; : {&quot;path&quot; : &quot;/machine/unattached/device[0]&quot;,<br/>
+                          &quot;property&quot; : &quot;hotplugged&quot;}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot; : false<br/>
 }</p>
 <p>2. Use partial path</p>
-<p>        -&gt;{&quot;execute&quot; : &quot;qom-get&quot;,<br />
-           &quot;arguments&quot; : {&quot;path&quot; : &quot;unattached/sysbus&quot;,<br />
-                          &quot;property&quot; : &quot;type&quot;}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot; : &quot;System&quot;<br />
+<p>        -&gt;{&quot;execute&quot; : &quot;qom-get&quot;,<br/>
+           &quot;arguments&quot; : {&quot;path&quot; : &quot;unattached/sysbus&quot;,<br/>
+                          &quot;property&quot; : &quot;type&quot;}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot; : &quot;System&quot;<br/>
 } <code>qom-set</code> (Command) This command will set a property from a object model path. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;path: string&quot;</dt>
@@ -6719,14 +6719,14 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dd>the property name to set</dd>
 <dt>&quot;value: value&quot;</dt>
 <dd>a value who&#8217;s type is appropriate for the property type. See <tt>&quot;qom-get&quot;</tt> for a description of type mapping.</dd></dl>
-<p> <code>Since:</code> 1.2 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;qom-set&quot;,<br />
-   &quot;arguments&quot; : {&quot;path&quot; : &quot;/machine&quot;,<br />
-                  &quot;property&quot; : &quot;graphics&quot;,<br />
-                  &quot;value&quot; : false}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
+<p> <code>Since:</code> 1.2 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;qom-set&quot;,<br/>
+   &quot;arguments&quot; : {&quot;path&quot; : &quot;/machine&quot;,<br/>
+                  &quot;property&quot; : &quot;graphics&quot;,<br/>
+                  &quot;value&quot; : false}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
 } <code>ObjectTypeInfo</code> (Object) This structure describes a search result from <tt>&quot;qom-list-types&quot;</tt> <code>Members:</code></p>
 <dl>
 <dt>&quot;name: string&quot;</dt>
@@ -6741,11 +6741,11 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dd>if specified, only return types that implement this type name</dd>
 <dt>&quot;abstract: boolean&quot; (optional)</dt>
 <dd>if true, include abstract types in the results</dd></dl>
-<p> <code>Returns:</code> a list of <tt>&quot;ObjectTypeInfo&quot;</tt> or an empty list if no results are found <code>Since:</code> 1.1 <code>qom-list-properties</code> (Command) List properties associated with a <font SIZE="-1">QOM</font> object. <code>Arguments:</code></p>
+<p> <code>Returns:</code> a list of <tt>&quot;ObjectTypeInfo&quot;</tt> or an empty list if no results are found <code>Since:</code> 1.1 <code>qom-list-properties</code> (Command) List properties associated with a QOM object. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;typename: string&quot;</dt>
 <dd>the type name of an object</dd></dl>
-<p> <code>Note:</code> objects can create properties at runtime, for example to describe links between different devices and/or objects. These properties are not included in the output of this command. <code>Returns:</code> a list of ObjectPropertyInfo describing object properties <code>Since:</code> 2.12 <code>object-add</code> (Command) Create a <font SIZE="-1">QOM</font> object. <code>Arguments:</code></p>
+<p> <code>Note:</code> objects can create properties at runtime, for example to describe links between different devices and/or objects. These properties are not included in the output of this command. <code>Returns:</code> a list of ObjectPropertyInfo describing object properties <code>Since:</code> 2.12 <code>object-add</code> (Command) Create a QOM object. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;qom-type: string&quot;</dt>
 <dd>the class name for the object to be created</dd>
@@ -6753,17 +6753,17 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dd>the name of the new object</dd>
 <dt>&quot;props: value&quot; (optional)</dt>
 <dd>a dictionary of properties to be passed to the backend</dd></dl>
-<p> <code>Returns:</code> Nothing on success Error if <tt>&quot;qom-type&quot;</tt> is not a valid class name <code>Since:</code> 2.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;object-add&quot;,<br />
-   &quot;arguments&quot; : {&quot;qom-type&quot; : &quot;rng-random&quot;, &quot;id&quot; : &quot;rng1&quot;, &quot;props&quot; : {&quot;filename&quot; : &quot;/dev/hwrng&quot;}}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
-} <code>object-del</code> (Command) Remove a <font SIZE="-1">QOM</font> object. <code>Arguments:</code></p>
+<p> <code>Returns:</code> Nothing on success Error if <tt>&quot;qom-type&quot;</tt> is not a valid class name <code>Since:</code> 2.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;object-add&quot;,<br/>
+   &quot;arguments&quot; : {&quot;qom-type&quot; : &quot;rng-random&quot;, &quot;id&quot; : &quot;rng1&quot;, &quot;props&quot; : {&quot;filename&quot; : &quot;/dev/hwrng&quot;}}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
+} <code>object-del</code> (Command) Remove a QOM object. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;id: string&quot;</dt>
-<dd>the name of the <font SIZE="-1">QOM</font> object to remove</dd></dl>
-<p> <code>Returns:</code> Nothing on success Error if <tt>&quot;id&quot;</tt> is not a valid id for a <font SIZE="-1">QOM</font> object <code>Since:</code> 2.0 <code>Example:</code> </p>
+<dd>the name of the QOM object to remove</dd></dl>
+<p> <code>Returns:</code> Nothing on success Error if <tt>&quot;id&quot;</tt> is not a valid id for a QOM object <code>Since:</code> 2.0 <code>Example:</code> </p>
 <pre> -&gt; { &quot;execute&quot;: &quot;object-del&quot;, &quot;arguments&quot;: { &quot;id&quot;: &quot;rng1&quot; } }
  &lt;- { &quot;return&quot;: {} }</pre>
 <h3>Device infrastructure (qdev)</h3>
@@ -6778,37 +6778,37 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dt>&quot;bus: string&quot; (optional)</dt>
 <dd>the device&#8217;s parent bus (device tree path)</dd>
 <dt>&quot;id: string&quot; (optional)</dt>
-<dd>the device&#8217;s <font SIZE="-1">ID,</font> must be unique</dd></dl>
+<dd>the device&#8217;s ID, must be unique</dd></dl>
 <p> Additional arguments depend on the type. Add a device. <code>Notes:</code></p>
 <dl>
 <dt>1.</dt>
 <dd>For detailed information about this command, please refer to the &#8216;docs/qdev-device-use.txt&#8217; file.</dd>
 <dt>2.</dt>
-<dd>It&#8217;s possible to list device properties by running <font SIZE="-1">QEMU</font> with the &#8220;-device <font SIZE="-1">DEVICE</font>,help&#8221; command-line argument, where <font SIZE="-1">DEVICE</font> is the device&#8217;s name</dd></dl>
-<p> <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;device_add&quot;,<br />
-   &quot;arguments&quot; : {&quot;driver&quot; : &quot;e1000&quot;, &quot;id&quot; : &quot;net1&quot;, &quot;bus&quot; : &quot;pci.0&quot;, &quot;mac&quot; : &quot;52:54:00:12:34:56&quot;}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
-} <font SIZE="-1"><code>TODO:</code></font> This command effectively bypasses <font SIZE="-1">QAPI</font> completely due to its &#8220;additional arguments&#8221; business. It shouldn&#8217;t have been added to the schema in this form. It should be qapified properly, or replaced by a properly qapified command. <code>Since:</code> 0.13 <code>device_del</code> (Command) Remove a device from a guest <code>Arguments:</code></p>
+<dd>It&#8217;s possible to list device properties by running QEMU with the &#8220;-device DEVICE,help&#8221; command-line argument, where DEVICE is the device&#8217;s name</dd></dl>
+<p> <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;device_add&quot;,<br/>
+   &quot;arguments&quot; : {&quot;driver&quot; : &quot;e1000&quot;, &quot;id&quot; : &quot;net1&quot;, &quot;bus&quot; : &quot;pci.0&quot;, &quot;mac&quot; : &quot;52:54:00:12:34:56&quot;}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
+} <code>TODO:</code> This command effectively bypasses QAPI completely due to its &#8220;additional arguments&#8221; business. It shouldn&#8217;t have been added to the schema in this form. It should be qapified properly, or replaced by a properly qapified command. <code>Since:</code> 0.13 <code>device_del</code> (Command) Remove a device from a guest <code>Arguments:</code></p>
 <dl>
 <dt>&quot;id: string&quot;</dt>
-<dd>the device&#8217;s <font SIZE="-1">ID</font> or <font SIZE="-1">QOM</font> path</dd></dl>
-<p> <code>Returns:</code> Nothing on success If <tt>&quot;id&quot;</tt> is not a valid device, DeviceNotFound <code>Notes:</code> When this command completes, the device may not be removed from the guest. Hot removal is an operation that requires guest cooperation. This command merely requests that the guest begin the hot removal process. Completion of the device removal process is signaled with a <font SIZE="-1">DEVICE_DELETED</font> event. Guest reset will automatically complete removal for all devices. <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;device_del&quot;,<br />
-   &quot;arguments&quot; : {&quot;id&quot; : &quot;net1&quot;}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
+<dd>the device&#8217;s ID or QOM path</dd></dl>
+<p> <code>Returns:</code> Nothing on success If <tt>&quot;id&quot;</tt> is not a valid device, DeviceNotFound <code>Notes:</code> When this command completes, the device may not be removed from the guest. Hot removal is an operation that requires guest cooperation. This command merely requests that the guest begin the hot removal process. Completion of the device removal process is signaled with a DEVICE_DELETED event. Guest reset will automatically complete removal for all devices. <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;device_del&quot;,<br/>
+   &quot;arguments&quot; : {&quot;id&quot; : &quot;net1&quot;}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
     }</p>
-<p>        -&gt; {&quot;execute&quot; : &quot;device_del&quot;,<br />
-            &quot;arguments&quot; : {&quot;id&quot; : &quot;/machine/peripheral-anon/device[0]&quot;}} &lt; &#8211;<br />
-    {<br />
-        &quot;return&quot;:<br />
-        {<br />
-        }<br />
-    } <font SIZE="-1"><code>DEVICE_DELETED</code></font> (Event) Emitted whenever the device removal completion is acknowledged by the guest. At this point, it&#8217;s safe to reuse the specified device <font SIZE="-1">ID.</font> Device removal can be initiated by the guest or by <font SIZE="-1">HMP/QMP</font> commands. <code>Arguments:</code></p>
+<p>        -&gt; {&quot;execute&quot; : &quot;device_del&quot;,<br/>
+            &quot;arguments&quot; : {&quot;id&quot; : &quot;/machine/peripheral-anon/device[0]&quot;}} &lt; &#8211;<br/>
+    {<br/>
+        &quot;return&quot;:<br/>
+        {<br/>
+        }<br/>
+    } <code>DEVICE_DELETED</code> (Event) Emitted whenever the device removal completion is acknowledged by the guest. At this point, it&#8217;s safe to reuse the specified device ID. Device removal can be initiated by the guest or by HMP/QMP commands. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;device: string&quot; (optional)</dt>
 <dd>device name</dd>
@@ -6820,7 +6820,7 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
  &quot;path&quot;: &quot;/machine/peripheral/virtio-net-pci-0&quot; },
  &quot;timestamp&quot;: { &quot;seconds&quot;: 1265044230, &quot;microseconds&quot;: 450486 } }</pre>
 <h3>Machines</h3>
-<p><code>SysEmuTarget</code> (Enum) The comprehensive enumeration of <font SIZE="-1">QEMU</font> system emulation (&#8220;softmmu&#8221;) targets. Run &#8220;./configure &#8211;help&#8221; in the project root directory, and look for the *-softmmu targets near the &#8220;&#8211;target-list&#8221; option. The individual target constants are not documented here, for the time being. <code>Values:</code></p>
+<p><code>SysEmuTarget</code> (Enum) The comprehensive enumeration of QEMU system emulation (&#8220;softmmu&#8221;) targets. Run &#8220;./configure &#8211;help&#8221; in the project root directory, and look for the *-softmmu targets near the &#8220;&#8211;target-list&#8221; option. The individual target constants are not documented here, for the time being. <code>Values:</code></p>
 <dl>
 <dt>&quot;aarch64&quot;</dt>
 <dd>Not documented</dd>
@@ -6884,7 +6884,7 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dd>Not documented</dd>
 <dt>&quot;xtensaeb&quot;</dt>
 <dd>Not documented</dd></dl>
-<p> <code>Notes:</code> The resulting <font SIZE="-1">QMP</font> strings can be appended to the &#8220;qemu-system-&#8221; prefix to produce the corresponding <font SIZE="-1">QEMU</font> executable name. This is true even for &#8220;qemu-system-x86_64&#8221;. ppcemb: dropped in 3.1 <code>Since:</code> 3.0 <code>CpuInfoArch</code> (Enum) An enumeration of cpu types that enable additional information during <tt>&quot;query-cpus&quot;</tt> and <tt>&quot;query-cpus-fast&quot;</tt>. <code>Values:</code></p>
+<p> <code>Notes:</code> The resulting QMP strings can be appended to the &#8220;qemu-system-&#8221; prefix to produce the corresponding QEMU executable name. This is true even for &#8220;qemu-system-x86_64&#8221;. ppcemb: dropped in 3.1 <code>Since:</code> 3.0 <code>CpuInfoArch</code> (Enum) An enumeration of cpu types that enable additional information during <tt>&quot;query-cpus&quot;</tt> and <tt>&quot;query-cpus-fast&quot;</tt>. <code>Values:</code></p>
 <dl>
 <dt>&quot;s390&quot;</dt>
 <dd>since 2.12</dd>
@@ -6902,20 +6902,20 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dd>Not documented</dd>
 <dt>&quot;other&quot;</dt>
 <dd>Not documented</dd></dl>
-<p> <code>Since:</code> 2.6 <code>CpuInfo</code> (Object) Information about a virtual <font SIZE="-1">CPU</font> <code>Members:</code></p>
+<p> <code>Since:</code> 2.6 <code>CpuInfo</code> (Object) Information about a virtual CPU <code>Members:</code></p>
 <dl>
 <dt>&quot;CPU: int&quot;</dt>
-<dd>the index of the virtual <font SIZE="-1">CPU</font></dd>
+<dd>the index of the virtual CPU</dd>
 <dt>&quot;current: boolean&quot;</dt>
 <dd>this only exists for backwards compatibility and should be ignored</dd>
 <dt>&quot;halted: boolean&quot;</dt>
-<dd>true if the virtual <font SIZE="-1">CPU</font> is in the halt state. Halt usually refers to a processor specific low power mode.</dd>
+<dd>true if the virtual CPU is in the halt state. Halt usually refers to a processor specific low power mode.</dd>
 <dt>&quot;qom_path: string&quot;</dt>
-<dd>path to the <font SIZE="-1">CPU</font> object in the <font SIZE="-1">QOM</font> tree (since 2.4)</dd>
+<dd>path to the CPU object in the QOM tree (since 2.4)</dd>
 <dt>&quot;thread_id: int&quot;</dt>
-<dd><font SIZE="-1">ID</font> of the underlying host thread</dd>
+<dd>ID of the underlying host thread</dd>
 <dt>&quot;props: CpuInstanceProperties&quot; (optional)</dt>
-<dd>properties describing to which node/socket/core/thread virtual <font SIZE="-1">CPU</font> belongs to, provided if supported by board (since 2.10)</dd>
+<dd>properties describing to which node/socket/core/thread virtual CPU belongs to, provided if supported by board (since 2.10)</dd>
 <dt>&quot;arch: CpuInfoArch&quot;</dt>
 <dd>architecture of the cpu, which determines which additional fields will be listed (since 2.6)</dd>
 <dt>The members of &quot;CpuInfoX86&quot; when &quot;arch&quot; is &quot;x86&quot;</dt>
@@ -6932,33 +6932,33 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dd>
 </dd><dt>The members of &quot;CpuInfoRISCV&quot; when &quot;arch&quot; is &quot;riscv&quot;</dt>
 <dd></dd></dl>
-<p> <code>Since:</code> 0.14.0 <code>Notes:</code> <tt>&quot;halted&quot;</tt> is a transient state that changes frequently. By the time the data is sent to the client, the guest may no longer be halted. <code>CpuInfoX86</code> (Object) Additional information about a virtual i386 or x86_64 <font SIZE="-1">CPU</font> <code>Members:</code></p>
+<p> <code>Since:</code> 0.14.0 <code>Notes:</code> <tt>&quot;halted&quot;</tt> is a transient state that changes frequently. By the time the data is sent to the client, the guest may no longer be halted. <code>CpuInfoX86</code> (Object) Additional information about a virtual i386 or x86_64 CPU <code>Members:</code></p>
 <dl>
 <dt>&quot;pc: int&quot;</dt>
 <dd>the 64-bit instruction pointer</dd></dl>
-<p> <code>Since:</code> 2.6 <code>CpuInfoSPARC</code> (Object) Additional information about a virtual <font SIZE="-1">SPARC CPU</font> <code>Members:</code></p>
+<p> <code>Since:</code> 2.6 <code>CpuInfoSPARC</code> (Object) Additional information about a virtual SPARC CPU <code>Members:</code></p>
 <dl>
 <dt>&quot;pc: int&quot;</dt>
-<dd>the <font SIZE="-1">PC</font> component of the instruction pointer</dd>
+<dd>the PC component of the instruction pointer</dd>
 <dt>&quot;npc: int&quot;</dt>
-<dd>the <font SIZE="-1">NPC</font> component of the instruction pointer</dd></dl>
-<p> <code>Since:</code> 2.6 <code>CpuInfoPPC</code> (Object) Additional information about a virtual <font SIZE="-1">PPC CPU</font> <code>Members:</code></p>
+<dd>the NPC component of the instruction pointer</dd></dl>
+<p> <code>Since:</code> 2.6 <code>CpuInfoPPC</code> (Object) Additional information about a virtual PPC CPU <code>Members:</code></p>
 <dl>
 <dt>&quot;nip: int&quot;</dt>
 <dd>the instruction pointer</dd></dl>
-<p> <code>Since:</code> 2.6 <code>CpuInfoMIPS</code> (Object) Additional information about a virtual <font SIZE="-1">MIPS CPU</font> <code>Members:</code></p>
+<p> <code>Since:</code> 2.6 <code>CpuInfoMIPS</code> (Object) Additional information about a virtual MIPS CPU <code>Members:</code></p>
 <dl>
 <dt>&quot;PC: int&quot;</dt>
 <dd>the instruction pointer</dd></dl>
-<p> <code>Since:</code> 2.6 <code>CpuInfoTricore</code> (Object) Additional information about a virtual Tricore <font SIZE="-1">CPU</font> <code>Members:</code></p>
+<p> <code>Since:</code> 2.6 <code>CpuInfoTricore</code> (Object) Additional information about a virtual Tricore CPU <code>Members:</code></p>
 <dl>
 <dt>&quot;PC: int&quot;</dt>
 <dd>the instruction pointer</dd></dl>
-<p> <code>Since:</code> 2.6 <code>CpuInfoRISCV</code> (Object) Additional information about a virtual <font SIZE="-1">RISCV CPU</font> <code>Members:</code></p>
+<p> <code>Since:</code> 2.6 <code>CpuInfoRISCV</code> (Object) Additional information about a virtual RISCV CPU <code>Members:</code></p>
 <dl>
 <dt>&quot;pc: int&quot;</dt>
 <dd>the instruction pointer</dd></dl>
-<p> Since 2.12 <code>CpuS390State</code> (Enum) An enumeration of cpu states that can be assumed by a virtual S390 <font SIZE="-1">CPU</font> <code>Values:</code></p>
+<p> Since 2.12 <code>CpuS390State</code> (Enum) An enumeration of cpu states that can be assumed by a virtual S390 CPU <code>Values:</code></p>
 <dl>
 <dt>&quot;uninitialized&quot;</dt>
 <dd>Not documented</dd>
@@ -6970,85 +6970,85 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dd>Not documented</dd>
 <dt>&quot;load&quot;</dt>
 <dd>Not documented</dd></dl>
-<p> <code>Since:</code> 2.12 <code>CpuInfoS390</code> (Object) Additional information about a virtual S390 <font SIZE="-1">CPU</font> <code>Members:</code></p>
+<p> <code>Since:</code> 2.12 <code>CpuInfoS390</code> (Object) Additional information about a virtual S390 CPU <code>Members:</code></p>
 <dl>
 <dt>&quot;cpu-state: CpuS390State&quot;</dt>
-<dd>the virtual <font SIZE="-1">CPU</font>&#8216;s state</dd></dl>
-<p> <code>Since:</code> 2.12 <code>query-cpus</code> (Command) Returns a list of information about each virtual <font SIZE="-1">CPU.</font> This command causes vCPU threads to exit to userspace, which causes a small interruption to guest <font SIZE="-1">CPU</font> execution. This will have a negative impact on realtime guests and other latency sensitive guest workloads. It is recommended to use <tt>&quot;query-cpus-fast&quot;</tt> instead of this command to avoid the vCPU interruption. <code>Returns:</code> a list of <tt>&quot;CpuInfo&quot;</tt> for each virtual <font SIZE="-1">CPU</font> <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-cpus&quot;} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot; : [<br />
-        {<br />
-            &quot;CPU&quot; : 0,<br />
-            &quot;current&quot; : true,<br />
-            &quot;halted&quot; : false,<br />
-            &quot;qom_path&quot; : &quot;/machine/unattached/device[0]&quot;,<br />
-            &quot;arch&quot; : &quot;x86&quot;,<br />
-            &quot;pc&quot; : 3227107138,<br />
-            &quot;thread_id&quot; : 3134<br />
-        },<br />
-        {<br />
-            &quot;CPU&quot; : 1,<br />
-            &quot;current&quot; : false,<br />
-            &quot;halted&quot; : true,<br />
-            &quot;qom_path&quot; : &quot;/machine/unattached/device[2]&quot;,<br />
-            &quot;arch&quot; : &quot;x86&quot;,<br />
-            &quot;pc&quot; : 7108165,<br />
-            &quot;thread_id&quot; : 3135<br />
-        }<br />
-    ]<br />
-} <code>Notes:</code> This interface is deprecated (since 2.12.0), and it is strongly recommended that you avoid using it. Use <tt>&quot;query-cpus-fast&quot;</tt> to obtain information about virtual CPUs. <code>CpuInfoFast</code> (Object) Information about a virtual <font SIZE="-1">CPU</font> <code>Members:</code></p>
+<dd>the virtual CPU&#8216;s state</dd></dl>
+<p> <code>Since:</code> 2.12 <code>query-cpus</code> (Command) Returns a list of information about each virtual CPU. This command causes vCPU threads to exit to userspace, which causes a small interruption to guest CPU execution. This will have a negative impact on realtime guests and other latency sensitive guest workloads. It is recommended to use <tt>&quot;query-cpus-fast&quot;</tt> instead of this command to avoid the vCPU interruption. <code>Returns:</code> a list of <tt>&quot;CpuInfo&quot;</tt> for each virtual CPU <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-cpus&quot;} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot; : [<br/>
+        {<br/>
+            &quot;CPU&quot; : 0,<br/>
+            &quot;current&quot; : true,<br/>
+            &quot;halted&quot; : false,<br/>
+            &quot;qom_path&quot; : &quot;/machine/unattached/device[0]&quot;,<br/>
+            &quot;arch&quot; : &quot;x86&quot;,<br/>
+            &quot;pc&quot; : 3227107138,<br/>
+            &quot;thread_id&quot; : 3134<br/>
+        },<br/>
+        {<br/>
+            &quot;CPU&quot; : 1,<br/>
+            &quot;current&quot; : false,<br/>
+            &quot;halted&quot; : true,<br/>
+            &quot;qom_path&quot; : &quot;/machine/unattached/device[2]&quot;,<br/>
+            &quot;arch&quot; : &quot;x86&quot;,<br/>
+            &quot;pc&quot; : 7108165,<br/>
+            &quot;thread_id&quot; : 3135<br/>
+        }<br/>
+    ]<br/>
+} <code>Notes:</code> This interface is deprecated (since 2.12.0), and it is strongly recommended that you avoid using it. Use <tt>&quot;query-cpus-fast&quot;</tt> to obtain information about virtual CPUs. <code>CpuInfoFast</code> (Object) Information about a virtual CPU <code>Members:</code></p>
 <dl>
 <dt>&quot;cpu-index: int&quot;</dt>
-<dd>index of the virtual <font SIZE="-1">CPU</font></dd>
+<dd>index of the virtual CPU</dd>
 <dt>&quot;qom-path: string&quot;</dt>
-<dd>path to the <font SIZE="-1">CPU</font> object in the <font SIZE="-1">QOM</font> tree</dd>
+<dd>path to the CPU object in the QOM tree</dd>
 <dt>&quot;thread-id: int&quot;</dt>
-<dd><font SIZE="-1">ID</font> of the underlying host thread</dd>
+<dd>ID of the underlying host thread</dd>
 <dt>&quot;props: CpuInstanceProperties&quot; (optional)</dt>
-<dd>properties describing to which node/socket/core/thread virtual <font SIZE="-1">CPU</font> belongs to, provided if supported by board</dd>
+<dd>properties describing to which node/socket/core/thread virtual CPU belongs to, provided if supported by board</dd>
 <dt>&quot;arch: CpuInfoArch&quot;</dt>
 <dd>base architecture of the cpu; deprecated since 3.0.0 in favor of <tt>&quot;target&quot;</tt></dd>
 <dt>&quot;target: SysEmuTarget&quot;</dt>
-<dd>the <font SIZE="-1">QEMU</font> system emulation target, which determines which additional fields will be listed (since 3.0)</dd>
+<dd>the QEMU system emulation target, which determines which additional fields will be listed (since 3.0)</dd>
 <dt>The members of &quot;CpuInfoS390&quot; when &quot;target&quot; is &quot;s390x&quot;</dt>
 <dd></dd></dl>
-<p> <code>Since:</code> 2.12 <code>query-cpus-fast</code> (Command) Returns information about all virtual CPUs. This command does not incur a performance penalty and should be used in production instead of query-cpus. <code>Returns:</code> list of <tt>&quot;CpuInfoFast&quot;</tt> <code>Since:</code> 2.12 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-cpus-fast&quot;} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot; : [<br />
-        {<br />
-            &quot;thread-id&quot; : 25627,<br />
-            &quot;props&quot; : {<br />
-                &quot;core-id&quot; : 0,<br />
-                &quot;thread-id&quot; : 0,<br />
-                &quot;socket-id&quot; : 0<br />
-            },<br />
-            &quot;qom-path&quot; : &quot;/machine/unattached/device[0]&quot;,<br />
-            &quot;arch&quot; : &quot;x86&quot;,<br />
-            &quot;target&quot; : &quot;x86_64&quot;,<br />
-            &quot;cpu-index&quot; : 0<br />
-        },<br />
-        {<br />
-            &quot;thread-id&quot; : 25628,<br />
-            &quot;props&quot; : {<br />
-                &quot;core-id&quot; : 0,<br />
-                &quot;thread-id&quot; : 0,<br />
-                &quot;socket-id&quot; : 1<br />
-            },<br />
-            &quot;qom-path&quot; : &quot;/machine/unattached/device[2]&quot;,<br />
-            &quot;arch&quot; : &quot;x86&quot;,<br />
-            &quot;target&quot; : &quot;x86_64&quot;,<br />
-            &quot;cpu-index&quot; : 1<br />
-        }<br />
-    ]<br />
-} <code>cpu-add</code> (Command) Adds <font SIZE="-1">CPU</font> with specified <font SIZE="-1">ID.</font> <code>Arguments:</code></p>
+<p> <code>Since:</code> 2.12 <code>query-cpus-fast</code> (Command) Returns information about all virtual CPUs. This command does not incur a performance penalty and should be used in production instead of query-cpus. <code>Returns:</code> list of <tt>&quot;CpuInfoFast&quot;</tt> <code>Since:</code> 2.12 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-cpus-fast&quot;} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot; : [<br/>
+        {<br/>
+            &quot;thread-id&quot; : 25627,<br/>
+            &quot;props&quot; : {<br/>
+                &quot;core-id&quot; : 0,<br/>
+                &quot;thread-id&quot; : 0,<br/>
+                &quot;socket-id&quot; : 0<br/>
+            },<br/>
+            &quot;qom-path&quot; : &quot;/machine/unattached/device[0]&quot;,<br/>
+            &quot;arch&quot; : &quot;x86&quot;,<br/>
+            &quot;target&quot; : &quot;x86_64&quot;,<br/>
+            &quot;cpu-index&quot; : 0<br/>
+        },<br/>
+        {<br/>
+            &quot;thread-id&quot; : 25628,<br/>
+            &quot;props&quot; : {<br/>
+                &quot;core-id&quot; : 0,<br/>
+                &quot;thread-id&quot; : 0,<br/>
+                &quot;socket-id&quot; : 1<br/>
+            },<br/>
+            &quot;qom-path&quot; : &quot;/machine/unattached/device[2]&quot;,<br/>
+            &quot;arch&quot; : &quot;x86&quot;,<br/>
+            &quot;target&quot; : &quot;x86_64&quot;,<br/>
+            &quot;cpu-index&quot; : 1<br/>
+        }<br/>
+    ]<br/>
+} <code>cpu-add</code> (Command) Adds CPU with specified ID. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;id: int&quot;</dt>
-<dd><font SIZE="-1">ID</font> of <font SIZE="-1">CPU</font> to be created, valid values [0..max_cpus)</dd></dl>
-<p> <code>Returns:</code> Nothing on success <code>Since:</code> 1.5 <code>Note:</code> This command is deprecated. The `device_add` command should be used instead. See the `query-hotpluggable-cpus` command for details. <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;cpu-add&quot;, &quot;arguments&quot; : {&quot;id&quot; : 2}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
+<dd>ID of CPU to be created, valid values [0..max_cpus)</dd></dl>
+<p> <code>Returns:</code> Nothing on success <code>Since:</code> 1.5 <code>Note:</code> This command is deprecated. The `device_add` command should be used instead. See the `query-hotpluggable-cpus` command for details. <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;cpu-add&quot;, &quot;arguments&quot; : {&quot;id&quot; : 2}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
 } <code>MachineInfo</code> (Object) Information describing a machine. <code>Members:</code></p>
 <dl>
 <dt>&quot;name: string&quot;</dt>
@@ -7064,26 +7064,26 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dt>&quot;numa-mem-supported: boolean&quot;</dt>
 <dd>true if &#8216;-numa node,mem&#8217; option is supported by the machine type and false otherwise (since 4.1)</dd>
 <dt>&quot;deprecated: boolean&quot;</dt>
-<dd>if true, the machine type is deprecated and may be removed in future versions of <font SIZE="-1">QEMU</font> according to the <font SIZE="-1">QEMU</font> deprecation policy (since 4.1.0)</dd>
+<dd>if true, the machine type is deprecated and may be removed in future versions of QEMU according to the QEMU deprecation policy (since 4.1.0)</dd>
 <dt>&quot;default-cpu-type: string&quot; (optional)</dt>
-<dd>default <font SIZE="-1">CPU</font> model typename if none is requested via the -cpu argument. (since 4.2)</dd></dl>
+<dd>default CPU model typename if none is requested via the -cpu argument. (since 4.2)</dd></dl>
 <p> <code>Since:</code> 1.2.0 <code>query-machines</code> (Command) Return a list of supported machines <code>Returns:</code> a list of MachineInfo <code>Since:</code> 1.2.0 <code>CurrentMachineParams</code> (Object) Information describing the running machine parameters. <code>Members:</code></p>
 <dl>
 <dt>&quot;wakeup-suspend-support: boolean&quot;</dt>
 <dd>true if the machine supports wake up from suspend</dd></dl>
-<p> <code>Since:</code> 4.0 <code>query-current-machine</code> (Command) Return information on the current virtual machine. <code>Returns:</code> CurrentMachineParams <code>Since:</code> 4.0 <code>TargetInfo</code> (Object) Information describing the <font SIZE="-1">QEMU</font> target. <code>Members:</code></p>
+<p> <code>Since:</code> 4.0 <code>query-current-machine</code> (Command) Return information on the current virtual machine. <code>Returns:</code> CurrentMachineParams <code>Since:</code> 4.0 <code>TargetInfo</code> (Object) Information describing the QEMU target. <code>Members:</code></p>
 <dl>
 <dt>&quot;arch: SysEmuTarget&quot;</dt>
 <dd>the target architecture</dd></dl>
-<p> <code>Since:</code> 1.2.0 <code>query-target</code> (Command) Return information about the target for this <font SIZE="-1">QEMU</font> <code>Returns:</code> TargetInfo <code>Since:</code> 1.2.0 <code>NumaOptionsType</code> (Enum) <code>Values:</code></p>
+<p> <code>Since:</code> 1.2.0 <code>query-target</code> (Command) Return information about the target for this QEMU <code>Returns:</code> TargetInfo <code>Since:</code> 1.2.0 <code>NumaOptionsType</code> (Enum) <code>Values:</code></p>
 <dl>
 <dt>&quot;node&quot;</dt>
-<dd><font SIZE="-1">NUMA</font> nodes configuration</dd>
+<dd>NUMA nodes configuration</dd>
 <dt>&quot;dist&quot;</dt>
-<dd><font SIZE="-1">NUMA</font> distance configuration (since 2.10)</dd>
+<dd>NUMA distance configuration (since 2.10)</dd>
 <dt>&quot;cpu&quot;</dt>
-<dd>property based <font SIZE="-1">CPU</font>(s) to node mapping (Since: 2.10)</dd></dl>
-<p> <code>Since:</code> 2.1 <code>NumaOptions</code> (Object) A discriminated record of <font SIZE="-1">NUMA</font> options. (for OptsVisitor) <code>Members:</code></p>
+<dd>property based CPU(s) to node mapping (Since: 2.10)</dd></dl>
+<p> <code>Since:</code> 2.1 <code>NumaOptions</code> (Object) A discriminated record of NUMA options. (for OptsVisitor) <code>Members:</code></p>
 <dl>
 <dt>&quot;type: NumaOptionsType&quot;</dt>
 <dd>Not documented</dd>
@@ -7093,24 +7093,24 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dd>
 </dd><dt>The members of &quot;NumaCpuOptions&quot; when &quot;type&quot; is &quot;cpu&quot;</dt>
 <dd></dd></dl>
-<p> <code>Since:</code> 2.1 <code>NumaNodeOptions</code> (Object) Create a guest <font SIZE="-1">NUMA</font> node. (for OptsVisitor) <code>Members:</code></p>
+<p> <code>Since:</code> 2.1 <code>NumaNodeOptions</code> (Object) Create a guest NUMA node. (for OptsVisitor) <code>Members:</code></p>
 <dl>
 <dt>&quot;nodeid: int&quot; (optional)</dt>
-<dd><font SIZE="-1">NUMA</font> node <font SIZE="-1">ID</font> (increase by 1 from 0 if omitted)</dd>
+<dd>NUMA node ID (increase by 1 from 0 if omitted)</dd>
 <dt>&quot;cpus: array of int&quot; (optional)</dt>
-<dd>VCPUs belonging to this node (assign <font SIZE="-1">VCPUS</font> round-robin if omitted)</dd>
+<dd>VCPUs belonging to this node (assign VCPUS round-robin if omitted)</dd>
 <dt>&quot;mem: int&quot; (optional)</dt>
 <dd>memory size of this node; mutually exclusive with <tt>&quot;memdev&quot;</tt>. Equally divide total memory among nodes if both <tt>&quot;mem&quot;</tt> and <tt>&quot;memdev&quot;</tt> are omitted.</dd>
 <dt>&quot;memdev: string&quot; (optional)</dt>
 <dd>memory backend object. If specified for one node, it must be specified for all nodes.</dd></dl>
-<p> <code>Since:</code> 2.1 <code>NumaDistOptions</code> (Object) Set the distance between 2 <font SIZE="-1">NUMA</font> nodes. <code>Members:</code></p>
+<p> <code>Since:</code> 2.1 <code>NumaDistOptions</code> (Object) Set the distance between 2 NUMA nodes. <code>Members:</code></p>
 <dl>
 <dt>&quot;src: int&quot;</dt>
-<dd>source <font SIZE="-1">NUMA</font> node.</dd>
+<dd>source NUMA node.</dd>
 <dt>&quot;dst: int&quot;</dt>
-<dd>destination <font SIZE="-1">NUMA</font> node.</dd>
+<dd>destination NUMA node.</dd>
 <dt>&quot;val: int&quot;</dt>
-<dd><font SIZE="-1">NUMA</font> distance from source node to destination node. When a node is unreachable from another node, set the distance between them to 255.</dd></dl>
+<dd>NUMA distance from source node to destination node. When a node is unreachable from another node, set the distance between them to 255.</dd></dl>
 <p> <code>Since:</code> 2.10 <code>X86CPURegister32</code> (Enum) A X86 32-bit register <code>Values:</code></p>
 <dl>
 <dt>&quot;EAX&quot;</dt>
@@ -7129,17 +7129,17 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dd>Not documented</dd>
 <dt>&quot;EDI&quot;</dt>
 <dd>Not documented</dd></dl>
-<p> <code>Since:</code> 1.5 <code>X86CPUFeatureWordInfo</code> (Object) Information about a X86 <font SIZE="-1">CPU</font> feature word <code>Members:</code></p>
+<p> <code>Since:</code> 1.5 <code>X86CPUFeatureWordInfo</code> (Object) Information about a X86 CPU feature word <code>Members:</code></p>
 <dl>
 <dt>&quot;cpuid-input-eax: int&quot;</dt>
-<dd>Input <font SIZE="-1">EAX</font> value for <font SIZE="-1">CPUID</font> instruction for that feature word</dd>
+<dd>Input EAX value for CPUID instruction for that feature word</dd>
 <dt>&quot;cpuid-input-ecx: int&quot; (optional)</dt>
-<dd>Input <font SIZE="-1">ECX</font> value for <font SIZE="-1">CPUID</font> instruction for that feature word</dd>
+<dd>Input ECX value for CPUID instruction for that feature word</dd>
 <dt>&quot;cpuid-register: X86CPURegister32&quot;</dt>
 <dd>Output register containing the feature bits</dd>
 <dt>&quot;features: int&quot;</dt>
 <dd>value of output register, containing the feature bits</dd></dl>
-<p> <code>Since:</code> 1.5 <code>DummyForceArrays</code> (Object) Not used by <font SIZE="-1">QMP</font>; hack to let us use X86CPUFeatureWordInfoList internally <code>Members:</code></p>
+<p> <code>Since:</code> 1.5 <code>DummyForceArrays</code> (Object) Not used by QMP; hack to let us use X86CPUFeatureWordInfoList internally <code>Members:</code></p>
 <dl>
 <dt>&quot;unused: array of X86CPUFeatureWordInfo&quot;</dt>
 <dd>Not documented</dd></dl>
@@ -7160,7 +7160,7 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <p> <code>Since:</code> 2.1 <code>Memdev</code> (Object) Information about memory backend <code>Members:</code></p>
 <dl>
 <dt>&quot;id: string&quot; (optional)</dt>
-<dd>backend&#8217;s <font SIZE="-1">ID</font> if backend has &#8216;id&#8217; property (since 2.9)</dd>
+<dd>backend&#8217;s ID if backend has &#8216;id&#8217; property (since 2.9)</dd>
 <dt>&quot;size: int&quot;</dt>
 <dd>memory backend size</dd>
 <dt>&quot;merge: boolean&quot;</dt>
@@ -7173,50 +7173,50 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dd>host nodes for its memory policy</dd>
 <dt>&quot;policy: HostMemPolicy&quot;</dt>
 <dd>memory policy of memory backend</dd></dl>
-<p> <code>Since:</code> 2.1 <code>query-memdev</code> (Command) Returns information for all memory backends. <code>Returns:</code> a list of <tt>&quot;Memdev&quot;</tt>. <code>Since:</code> 2.1 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-memdev&quot;} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot; : [<br />
-        {<br />
-            &quot;id&quot; : &quot;mem1&quot;,<br />
-            &quot;size&quot; : 536870912,<br />
-            &quot;merge&quot; : false,<br />
-            &quot;dump&quot; : true,<br />
-            &quot;prealloc&quot; : false,<br />
-            &quot;host-nodes&quot; : [ 0, 1 ],<br />
-            &quot;policy&quot; : &quot;bind&quot;<br />
-        },<br />
-        {<br />
-            &quot;size&quot; : 536870912,<br />
-            &quot;merge&quot; : false,<br />
-            &quot;dump&quot; : true,<br />
-            &quot;prealloc&quot; : true,<br />
-            &quot;host-nodes&quot; : [ 2, 3 ],<br />
-            &quot;policy&quot; : &quot;preferred&quot;<br />
-        }<br />
-    ]<br />
-} <code>CpuInstanceProperties</code> (Object) List of properties to be used for hotplugging a <font SIZE="-1">CPU</font> instance, it should be passed by management with device_add command when a <font SIZE="-1">CPU</font> is being hotplugged. <code>Members:</code></p>
+<p> <code>Since:</code> 2.1 <code>query-memdev</code> (Command) Returns information for all memory backends. <code>Returns:</code> a list of <tt>&quot;Memdev&quot;</tt>. <code>Since:</code> 2.1 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-memdev&quot;} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot; : [<br/>
+        {<br/>
+            &quot;id&quot; : &quot;mem1&quot;,<br/>
+            &quot;size&quot; : 536870912,<br/>
+            &quot;merge&quot; : false,<br/>
+            &quot;dump&quot; : true,<br/>
+            &quot;prealloc&quot; : false,<br/>
+            &quot;host-nodes&quot; : [ 0, 1 ],<br/>
+            &quot;policy&quot; : &quot;bind&quot;<br/>
+        },<br/>
+        {<br/>
+            &quot;size&quot; : 536870912,<br/>
+            &quot;merge&quot; : false,<br/>
+            &quot;dump&quot; : true,<br/>
+            &quot;prealloc&quot; : true,<br/>
+            &quot;host-nodes&quot; : [ 2, 3 ],<br/>
+            &quot;policy&quot; : &quot;preferred&quot;<br/>
+        }<br/>
+    ]<br/>
+} <code>CpuInstanceProperties</code> (Object) List of properties to be used for hotplugging a CPU instance, it should be passed by management with device_add command when a CPU is being hotplugged. <code>Members:</code></p>
 <dl>
 <dt>&quot;node-id: int&quot; (optional)</dt>
-<dd><font SIZE="-1">NUMA</font> node <font SIZE="-1">ID</font> the <font SIZE="-1">CPU</font> belongs to</dd>
+<dd>NUMA node ID the CPU belongs to</dd>
 <dt>&quot;socket-id: int&quot; (optional)</dt>
-<dd>socket number within node/board the <font SIZE="-1">CPU</font> belongs to</dd>
+<dd>socket number within node/board the CPU belongs to</dd>
 <dt>&quot;die-id: int&quot; (optional)</dt>
-<dd>die number within node/board the <font SIZE="-1">CPU</font> belongs to (Since 4.1)</dd>
+<dd>die number within node/board the CPU belongs to (Since 4.1)</dd>
 <dt>&quot;core-id: int&quot; (optional)</dt>
-<dd>core number within die the <font SIZE="-1">CPU</font> belongs to# <tt>&quot;thread-id&quot;</tt>: thread number within core the <font SIZE="-1">CPU</font> belongs to</dd>
+<dd>core number within die the CPU belongs to# <tt>&quot;thread-id&quot;</tt>: thread number within core the CPU belongs to</dd>
 <dt>&quot;thread-id: int&quot; (optional)</dt>
 <dd>Not documented</dd></dl>
 <p> <code>Note:</code> currently there are 5 properties that could be present but management should be prepared to pass through other properties with device_add command to allow for future interface extension. This also requires the filed names to be kept in sync with the properties passed to -device/device_add. <code>Since:</code> 2.7 <code>HotpluggableCPU</code> (Object) <code>Members:</code></p>
 <dl>
 <dt>&quot;type: string&quot;</dt>
-<dd><font SIZE="-1">CPU</font> object type for usage with device_add command</dd>
+<dd>CPU object type for usage with device_add command</dd>
 <dt>&quot;props: CpuInstanceProperties&quot;</dt>
-<dd>list of properties to be used for hotplugging <font SIZE="-1">CPU</font></dd>
+<dd>list of properties to be used for hotplugging CPU</dd>
 <dt>&quot;vcpus-count: int&quot;</dt>
-<dd>number of logical <font SIZE="-1">VCPU</font> threads <tt>&quot;HotpluggableCPU&quot;</tt> provides</dd>
+<dd>number of logical VCPU threads <tt>&quot;HotpluggableCPU&quot;</tt> provides</dd>
 <dt>&quot;qom-path: string&quot; (optional)</dt>
-<dd>link to existing <font SIZE="-1">CPU</font> object if <font SIZE="-1">CPU</font> is present or omitted if <font SIZE="-1">CPU</font> is not present.</dd></dl>
-<p> <code>Since:</code> 2.7 <code>query-hotpluggable-cpus</code> (Command) <font SIZE="-1"><code>TODO:</code></font> Better documentation; currently there is none. <code>Returns:</code> a list of HotpluggableCPU objects. <code>Since:</code> 2.7 <code>Example:</code> </p>
+<dd>link to existing CPU object if CPU is present or omitted if CPU is not present.</dd></dl>
+<p> <code>Since:</code> 2.7 <code>query-hotpluggable-cpus</code> (Command) <code>TODO:</code> Better documentation; currently there is none. <code>Returns:</code> a list of HotpluggableCPU objects. <code>Since:</code> 2.7 <code>Example:</code> </p>
 <pre> For pseries machine type started with -smp 2,cores=2,maxcpus=4 -cpu POWER8:
  -&gt; { &quot;execute&quot;: &quot;query-hotpluggable-cpus&quot; }
  &lt;- {&quot;return&quot;: [
@@ -7252,19 +7252,19 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
  &quot;props&quot;: { &quot;core-id&quot;: 0 }
  }
  ]}</pre>
-<p><code>set-numa-node</code> (Command) Runtime equivalent of &#8216;-numa&#8217; <font SIZE="-1">CLI</font> option, available at preconfigure stage to configure numa mapping before initializing machine. Since 3.0 <code>Arguments:</code> the members of <tt>&quot;NumaOptions&quot;</tt> <code>CpuModelInfo</code> (Object) Virtual <font SIZE="-1">CPU</font> model. A <font SIZE="-1">CPU</font> model consists of the name of a <font SIZE="-1">CPU</font> definition, to which delta changes are applied (e.g. features added/removed). Most magic values that an architecture might require should be hidden behind the name. However, if required, architectures can expose relevant properties. <code>Members:</code></p>
+<p><code>set-numa-node</code> (Command) Runtime equivalent of &#8216;-numa&#8217; CLI option, available at preconfigure stage to configure numa mapping before initializing machine. Since 3.0 <code>Arguments:</code> the members of <tt>&quot;NumaOptions&quot;</tt> <code>CpuModelInfo</code> (Object) Virtual CPU model. A CPU model consists of the name of a CPU definition, to which delta changes are applied (e.g. features added/removed). Most magic values that an architecture might require should be hidden behind the name. However, if required, architectures can expose relevant properties. <code>Members:</code></p>
 <dl>
 <dt>&quot;name: string&quot;</dt>
-<dd>the name of the <font SIZE="-1">CPU</font> definition the model is based on</dd>
+<dd>the name of the CPU definition the model is based on</dd>
 <dt>&quot;props: value&quot; (optional)</dt>
-<dd>a dictionary of <font SIZE="-1">QOM</font> properties to be applied</dd></dl>
-<p> <code>Since:</code> 2.8.0 <code>CpuModelExpansionType</code> (Enum) An enumeration of <font SIZE="-1">CPU</font> model expansion types. <code>Values:</code></p>
+<dd>a dictionary of QOM properties to be applied</dd></dl>
+<p> <code>Since:</code> 2.8.0 <code>CpuModelExpansionType</code> (Enum) An enumeration of CPU model expansion types. <code>Values:</code></p>
 <dl>
 <dt>&quot;static&quot;</dt>
-<dd>Expand to a static <font SIZE="-1">CPU</font> model, a combination of a static base model name and property delta changes. As the static base model will never change, the expanded <font SIZE="-1">CPU</font> model will be the same, independent of <font SIZE="-1">QEMU</font> version, machine type, machine options, and accelerator options. Therefore, the resulting model can be used by tooling without having to specify a compatibility machine &#8211; e.g. when displaying the &#8220;host&#8221; model. The <tt>&quot;static&quot;</tt> <font SIZE="-1">CPU</font> models are migration-safe.</dd>
+<dd>Expand to a static CPU model, a combination of a static base model name and property delta changes. As the static base model will never change, the expanded CPU model will be the same, independent of QEMU version, machine type, machine options, and accelerator options. Therefore, the resulting model can be used by tooling without having to specify a compatibility machine &#8211; e.g. when displaying the &#8220;host&#8221; model. The <tt>&quot;static&quot;</tt> CPU models are migration-safe.</dd>
 <dt>&quot;full&quot;</dt>
 <dd>Expand all properties. The produced model is not guaranteed to be migration-safe, but allows tooling to get an insight and work with model details.</dd></dl>
-<p> <code>Note:</code> When a non-migration-safe <font SIZE="-1">CPU</font> model is expanded in static mode, some features enabled by the <font SIZE="-1">CPU</font> model may be omitted, because they can&#8217;t be implemented by a static <font SIZE="-1">CPU</font> model definition (e.g. cache info passthrough and <font SIZE="-1">PMU</font> passthrough in x86). If you need an accurate representation of the features enabled by a non-migration-safe <font SIZE="-1">CPU</font> model, use <tt>&quot;full&quot;</tt>. If you need a static representation that will keep <font SIZE="-1">ABI</font> compatibility even when changing <font SIZE="-1">QEMU</font> version or machine-type, use <tt>&quot;static&quot;</tt> (but keep in mind that some features may be omitted). <code>Since:</code> 2.8.0 <code>CpuModelCompareResult</code> (Enum) An enumeration of <font SIZE="-1">CPU</font> model comparison results. The result is usually calculated using e.g. <font SIZE="-1">CPU</font> features or <font SIZE="-1">CPU</font> generations. <code>Values:</code></p>
+<p> <code>Note:</code> When a non-migration-safe CPU model is expanded in static mode, some features enabled by the CPU model may be omitted, because they can&#8217;t be implemented by a static CPU model definition (e.g. cache info passthrough and PMU passthrough in x86). If you need an accurate representation of the features enabled by a non-migration-safe CPU model, use <tt>&quot;full&quot;</tt>. If you need a static representation that will keep ABI compatibility even when changing QEMU version or machine-type, use <tt>&quot;static&quot;</tt> (but keep in mind that some features may be omitted). <code>Since:</code> 2.8.0 <code>CpuModelCompareResult</code> (Enum) An enumeration of CPU model comparison results. The result is usually calculated using e.g. CPU features or CPU generations. <code>Values:</code></p>
 <dl>
 <dt>&quot;incompatible&quot;</dt>
 <dd>If model A is incompatible to model B, model A is not guaranteed to run where model B runs and the other way around.</dd>
@@ -7274,98 +7274,98 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dd>If model A is a superset of model B, model B is guaranteed to run where model A runs. There are no guarantees about the other way.</dd>
 <dt>&quot;subset&quot;</dt>
 <dd>If model A is a subset of model B, model A is guaranteed to run where model B runs. There are no guarantees about the other way.</dd></dl>
-<p> <code>Since:</code> 2.8.0 <code>CpuModelBaselineInfo</code> (Object) The result of a <font SIZE="-1">CPU</font> model baseline. <code>Members:</code></p>
+<p> <code>Since:</code> 2.8.0 <code>CpuModelBaselineInfo</code> (Object) The result of a CPU model baseline. <code>Members:</code></p>
 <dl>
 <dt>&quot;model: CpuModelInfo&quot;</dt>
 <dd>the baselined CpuModelInfo.</dd></dl>
-<p> <code>Since:</code> 2.8.0 <code>If:</code> <tt>&quot;defined(TARGET_S390X)&quot;</tt> <code>CpuModelCompareInfo</code> (Object) The result of a <font SIZE="-1">CPU</font> model comparison. <code>Members:</code></p>
+<p> <code>Since:</code> 2.8.0 <code>If:</code> <tt>&quot;defined(TARGET_S390X)&quot;</tt> <code>CpuModelCompareInfo</code> (Object) The result of a CPU model comparison. <code>Members:</code></p>
 <dl>
 <dt>&quot;result: CpuModelCompareResult&quot;</dt>
 <dd>The result of the compare operation.</dd>
 <dt>&quot;responsible-properties: array of string&quot;</dt>
 <dd>List of properties that led to the comparison result not being identical.</dd></dl>
-<p> <tt>&quot;responsible-properties&quot;</tt> is a list of <font SIZE="-1">QOM</font> property names that led to both CPUs not being detected as identical. For identical models, this list is empty. If a <font SIZE="-1">QOM</font> property is read-only, that means there&#8217;s no known way to make the <font SIZE="-1">CPU</font> models identical. If the special property name &#8220;type&#8221; is included, the models are by definition not identical and cannot be made identical. <code>Since:</code> 2.8.0 <code>If:</code> <tt>&quot;defined(TARGET_S390X)&quot;</tt> <code>query-cpu-model-comparison</code> (Command) Compares two <font SIZE="-1">CPU</font> models, returning how they compare in a specific configuration. The results indicates how both models compare regarding runnability. This result can be used by tooling to make decisions if a certain <font SIZE="-1">CPU</font> model will run in a certain configuration or if a compatible <font SIZE="-1">CPU</font> model has to be created by baselining. Usually, a <font SIZE="-1">CPU</font> model is compared against the maximum possible <font SIZE="-1">CPU</font> model of a certain configuration (e.g. the &#8220;host&#8221; model for <font SIZE="-1">KVM</font>). If that <font SIZE="-1">CPU</font> model is identical or a subset, it will run in that configuration. The result returned by this command may be affected by:</p>
+<p> <tt>&quot;responsible-properties&quot;</tt> is a list of QOM property names that led to both CPUs not being detected as identical. For identical models, this list is empty. If a QOM property is read-only, that means there&#8217;s no known way to make the CPU models identical. If the special property name &#8220;type&#8221; is included, the models are by definition not identical and cannot be made identical. <code>Since:</code> 2.8.0 <code>If:</code> <tt>&quot;defined(TARGET_S390X)&quot;</tt> <code>query-cpu-model-comparison</code> (Command) Compares two CPU models, returning how they compare in a specific configuration. The results indicates how both models compare regarding runnability. This result can be used by tooling to make decisions if a certain CPU model will run in a certain configuration or if a compatible CPU model has to be created by baselining. Usually, a CPU model is compared against the maximum possible CPU model of a certain configuration (e.g. the &#8220;host&#8221; model for KVM). If that CPU model is identical or a subset, it will run in that configuration. The result returned by this command may be affected by:</p>
 <dl>
 <dt>&bull;</dt>
-<dd><font SIZE="-1">QEMU</font> version: <font SIZE="-1">CPU</font> models may look different depending on the <font SIZE="-1">QEMU</font> version. (Except for <font SIZE="-1">CPU</font> models reported as &#8220;static&#8221; in query-cpu-definitions.)</dd>
+<dd>QEMU version: CPU models may look different depending on the QEMU version. (Except for CPU models reported as &#8220;static&#8221; in query-cpu-definitions.)</dd>
 <dt>&bull;</dt>
-<dd>machine-type: <font SIZE="-1">CPU</font> model may look different depending on the machine-type. (Except for <font SIZE="-1">CPU</font> models reported as &#8220;static&#8221; in query-cpu-definitions.)</dd>
+<dd>machine-type: CPU model may look different depending on the machine-type. (Except for CPU models reported as &#8220;static&#8221; in query-cpu-definitions.)</dd>
 <dt>&bull;</dt>
-<dd>machine options (including accelerator): in some architectures, <font SIZE="-1">CPU</font> models may look different depending on machine and accelerator options. (Except for <font SIZE="-1">CPU</font> models reported as &#8220;static&#8221; in query-cpu-definitions.)</dd>
+<dd>machine options (including accelerator): in some architectures, CPU models may look different depending on machine and accelerator options. (Except for CPU models reported as &#8220;static&#8221; in query-cpu-definitions.)</dd>
 <dt>&bull;</dt>
-<dd>&#8220;-cpu&#8221; arguments and global properties: arguments to the -cpu option and global properties may affect expansion of <font SIZE="-1">CPU</font> models. Using query-cpu-model-expansion while using these is not advised.</dd></dl>
-<p> Some architectures may not support comparing <font SIZE="-1">CPU</font> models. s390x supports comparing <font SIZE="-1">CPU</font> models. <code>Arguments:</code></p>
-<dl>
-<dt>&quot;modela: CpuModelInfo&quot;</dt>
-<dd>Not documented</dd>
-<dt>&quot;modelb: CpuModelInfo&quot;</dt>
-<dd>Not documented</dd></dl>
-<p> <code>Returns:</code> a CpuModelBaselineInfo. Returns an error if comparing <font SIZE="-1">CPU</font> models is not supported, if a model cannot be used, if a model contains an unknown cpu definition name, unknown properties or properties with wrong types. <code>Note:</code> this command isn&#8217;t specific to s390x, but is only implemented on this architecture currently. <code>Since:</code> 2.8.0 <code>If:</code> <tt>&quot;defined(TARGET_S390X)&quot;</tt> <code>query-cpu-model-baseline</code> (Command) Baseline two <font SIZE="-1">CPU</font> models, creating a compatible third model. The created model will always be a static, migration-safe <font SIZE="-1">CPU</font> model (see &#8220;static&#8221; <font SIZE="-1">CPU</font> model expansion for details). This interface can be used by tooling to create a compatible <font SIZE="-1">CPU</font> model out two <font SIZE="-1">CPU</font> models. The created <font SIZE="-1">CPU</font> model will be identical to or a subset of both <font SIZE="-1">CPU</font> models when comparing them. Therefore, the created <font SIZE="-1">CPU</font> model is guaranteed to run where the given <font SIZE="-1">CPU</font> models run. The result returned by this command may be affected by:</p>
-<dl>
-<dt>&bull;</dt>
-<dd><font SIZE="-1">QEMU</font> version: <font SIZE="-1">CPU</font> models may look different depending on the <font SIZE="-1">QEMU</font> version. (Except for <font SIZE="-1">CPU</font> models reported as &#8220;static&#8221; in query-cpu-definitions.)</dd>
-<dt>&bull;</dt>
-<dd>machine-type: <font SIZE="-1">CPU</font> model may look different depending on the machine-type. (Except for <font SIZE="-1">CPU</font> models reported as &#8220;static&#8221; in query-cpu-definitions.)</dd>
-<dt>&bull;</dt>
-<dd>machine options (including accelerator): in some architectures, <font SIZE="-1">CPU</font> models may look different depending on machine and accelerator options. (Except for <font SIZE="-1">CPU</font> models reported as &#8220;static&#8221; in query-cpu-definitions.)</dd>
-<dt>&bull;</dt>
-<dd>&#8220;-cpu&#8221; arguments and global properties: arguments to the -cpu option and global properties may affect expansion of <font SIZE="-1">CPU</font> models. Using query-cpu-model-expansion while using these is not advised.</dd></dl>
-<p> Some architectures may not support baselining <font SIZE="-1">CPU</font> models. s390x supports baselining <font SIZE="-1">CPU</font> models. <code>Arguments:</code></p>
+<dd>&#8220;-cpu&#8221; arguments and global properties: arguments to the -cpu option and global properties may affect expansion of CPU models. Using query-cpu-model-expansion while using these is not advised.</dd></dl>
+<p> Some architectures may not support comparing CPU models. s390x supports comparing CPU models. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;modela: CpuModelInfo&quot;</dt>
 <dd>Not documented</dd>
 <dt>&quot;modelb: CpuModelInfo&quot;</dt>
 <dd>Not documented</dd></dl>
-<p> <code>Returns:</code> a CpuModelBaselineInfo. Returns an error if baselining <font SIZE="-1">CPU</font> models is not supported, if a model cannot be used, if a model contains an unknown cpu definition name, unknown properties or properties with wrong types. <code>Note:</code> this command isn&#8217;t specific to s390x, but is only implemented on this architecture currently. <code>Since:</code> 2.8.0 <code>If:</code> <tt>&quot;defined(TARGET_S390X)&quot;</tt> <code>CpuModelExpansionInfo</code> (Object) The result of a cpu model expansion. <code>Members:</code></p>
+<p> <code>Returns:</code> a CpuModelBaselineInfo. Returns an error if comparing CPU models is not supported, if a model cannot be used, if a model contains an unknown cpu definition name, unknown properties or properties with wrong types. <code>Note:</code> this command isn&#8217;t specific to s390x, but is only implemented on this architecture currently. <code>Since:</code> 2.8.0 <code>If:</code> <tt>&quot;defined(TARGET_S390X)&quot;</tt> <code>query-cpu-model-baseline</code> (Command) Baseline two CPU models, creating a compatible third model. The created model will always be a static, migration-safe CPU model (see &#8220;static&#8221; CPU model expansion for details). This interface can be used by tooling to create a compatible CPU model out two CPU models. The created CPU model will be identical to or a subset of both CPU models when comparing them. Therefore, the created CPU model is guaranteed to run where the given CPU models run. The result returned by this command may be affected by:</p>
+<dl>
+<dt>&bull;</dt>
+<dd>QEMU version: CPU models may look different depending on the QEMU version. (Except for CPU models reported as &#8220;static&#8221; in query-cpu-definitions.)</dd>
+<dt>&bull;</dt>
+<dd>machine-type: CPU model may look different depending on the machine-type. (Except for CPU models reported as &#8220;static&#8221; in query-cpu-definitions.)</dd>
+<dt>&bull;</dt>
+<dd>machine options (including accelerator): in some architectures, CPU models may look different depending on machine and accelerator options. (Except for CPU models reported as &#8220;static&#8221; in query-cpu-definitions.)</dd>
+<dt>&bull;</dt>
+<dd>&#8220;-cpu&#8221; arguments and global properties: arguments to the -cpu option and global properties may affect expansion of CPU models. Using query-cpu-model-expansion while using these is not advised.</dd></dl>
+<p> Some architectures may not support baselining CPU models. s390x supports baselining CPU models. <code>Arguments:</code></p>
+<dl>
+<dt>&quot;modela: CpuModelInfo&quot;</dt>
+<dd>Not documented</dd>
+<dt>&quot;modelb: CpuModelInfo&quot;</dt>
+<dd>Not documented</dd></dl>
+<p> <code>Returns:</code> a CpuModelBaselineInfo. Returns an error if baselining CPU models is not supported, if a model cannot be used, if a model contains an unknown cpu definition name, unknown properties or properties with wrong types. <code>Note:</code> this command isn&#8217;t specific to s390x, but is only implemented on this architecture currently. <code>Since:</code> 2.8.0 <code>If:</code> <tt>&quot;defined(TARGET_S390X)&quot;</tt> <code>CpuModelExpansionInfo</code> (Object) The result of a cpu model expansion. <code>Members:</code></p>
 <dl>
 <dt>&quot;model: CpuModelInfo&quot;</dt>
 <dd>the expanded CpuModelInfo.</dd></dl>
-<p> <code>Since:</code> 2.8.0 <code>If:</code> <tt>&quot;defined(TARGET_S390X) || defined(TARGET_I386) || defined(TARGET_ARM)&quot;</tt> <code>query-cpu-model-expansion</code> (Command) Expands a given <font SIZE="-1">CPU</font> model (or a combination of <font SIZE="-1">CPU</font> model + additional options) to different granularities, allowing tooling to get an understanding what a specific <font SIZE="-1">CPU</font> model looks like in <font SIZE="-1">QEMU</font> under a certain configuration. This interface can be used to query the &#8220;host&#8221; <font SIZE="-1">CPU</font> model. The data returned by this command may be affected by:</p>
+<p> <code>Since:</code> 2.8.0 <code>If:</code> <tt>&quot;defined(TARGET_S390X) || defined(TARGET_I386) || defined(TARGET_ARM)&quot;</tt> <code>query-cpu-model-expansion</code> (Command) Expands a given CPU model (or a combination of CPU model + additional options) to different granularities, allowing tooling to get an understanding what a specific CPU model looks like in QEMU under a certain configuration. This interface can be used to query the &#8220;host&#8221; CPU model. The data returned by this command may be affected by:</p>
 <dl>
 <dt>&bull;</dt>
-<dd><font SIZE="-1">QEMU</font> version: <font SIZE="-1">CPU</font> models may look different depending on the <font SIZE="-1">QEMU</font> version. (Except for <font SIZE="-1">CPU</font> models reported as &#8220;static&#8221; in query-cpu-definitions.)</dd>
+<dd>QEMU version: CPU models may look different depending on the QEMU version. (Except for CPU models reported as &#8220;static&#8221; in query-cpu-definitions.)</dd>
 <dt>&bull;</dt>
-<dd>machine-type: <font SIZE="-1">CPU</font> model may look different depending on the machine-type. (Except for <font SIZE="-1">CPU</font> models reported as &#8220;static&#8221; in query-cpu-definitions.)</dd>
+<dd>machine-type: CPU model may look different depending on the machine-type. (Except for CPU models reported as &#8220;static&#8221; in query-cpu-definitions.)</dd>
 <dt>&bull;</dt>
-<dd>machine options (including accelerator): in some architectures, <font SIZE="-1">CPU</font> models may look different depending on machine and accelerator options. (Except for <font SIZE="-1">CPU</font> models reported as &#8220;static&#8221; in query-cpu-definitions.)</dd>
+<dd>machine options (including accelerator): in some architectures, CPU models may look different depending on machine and accelerator options. (Except for CPU models reported as &#8220;static&#8221; in query-cpu-definitions.)</dd>
 <dt>&bull;</dt>
-<dd>&#8220;-cpu&#8221; arguments and global properties: arguments to the -cpu option and global properties may affect expansion of <font SIZE="-1">CPU</font> models. Using query-cpu-model-expansion while using these is not advised.</dd></dl>
+<dd>&#8220;-cpu&#8221; arguments and global properties: arguments to the -cpu option and global properties may affect expansion of CPU models. Using query-cpu-model-expansion while using these is not advised.</dd></dl>
 <p> Some architectures may not support all expansion types. s390x supports &#8220;full&#8221; and &#8220;static&#8221;. Arm only supports &#8220;full&#8221;. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;type: CpuModelExpansionType&quot;</dt>
 <dd>Not documented</dd>
 <dt>&quot;model: CpuModelInfo&quot;</dt>
 <dd>Not documented</dd></dl>
-<p> <code>Returns:</code> a CpuModelExpansionInfo. Returns an error if expanding <font SIZE="-1">CPU</font> models is not supported, if the model cannot be expanded, if the model contains an unknown <font SIZE="-1">CPU</font> definition name, unknown properties or properties with a wrong type. Also returns an error if an expansion type is not supported. <code>Since:</code> 2.8.0 <code>If:</code> <tt>&quot;defined(TARGET_S390X) || defined(TARGET_I386) || defined(TARGET_ARM)&quot;</tt> <code>CpuDefinitionInfo</code> (Object) Virtual <font SIZE="-1">CPU</font> definition. <code>Members:</code></p>
+<p> <code>Returns:</code> a CpuModelExpansionInfo. Returns an error if expanding CPU models is not supported, if the model cannot be expanded, if the model contains an unknown CPU definition name, unknown properties or properties with a wrong type. Also returns an error if an expansion type is not supported. <code>Since:</code> 2.8.0 <code>If:</code> <tt>&quot;defined(TARGET_S390X) || defined(TARGET_I386) || defined(TARGET_ARM)&quot;</tt> <code>CpuDefinitionInfo</code> (Object) Virtual CPU definition. <code>Members:</code></p>
 <dl>
 <dt>&quot;name: string&quot;</dt>
-<dd>the name of the <font SIZE="-1">CPU</font> definition</dd>
+<dd>the name of the CPU definition</dd>
 <dt>&quot;migration-safe: boolean&quot; (optional)</dt>
-<dd>whether a <font SIZE="-1">CPU</font> definition can be safely used for migration in combination with a <font SIZE="-1">QEMU</font> compatibility machine when migrating between different <font SIZE="-1">QEMU</font> versions and between hosts with different sets of (hardware or software) capabilities. If not provided, information is not available and callers should not assume the <font SIZE="-1">CPU</font> definition to be migration-safe. (since 2.8)</dd>
+<dd>whether a CPU definition can be safely used for migration in combination with a QEMU compatibility machine when migrating between different QEMU versions and between hosts with different sets of (hardware or software) capabilities. If not provided, information is not available and callers should not assume the CPU definition to be migration-safe. (since 2.8)</dd>
 <dt>&quot;static: boolean&quot;</dt>
-<dd>whether a <font SIZE="-1">CPU</font> definition is static and will not change depending on <font SIZE="-1">QEMU</font> version, machine type, machine options and accelerator options. A static model is always migration-safe. (since 2.8)</dd>
+<dd>whether a CPU definition is static and will not change depending on QEMU version, machine type, machine options and accelerator options. A static model is always migration-safe. (since 2.8)</dd>
 <dt>&quot;unavailable-features: array of string&quot; (optional)</dt>
-<dd>List of properties that prevent the <font SIZE="-1">CPU</font> model from running in the current host. (since 2.8)</dd>
+<dd>List of properties that prevent the CPU model from running in the current host. (since 2.8)</dd>
 <dt>&quot;typename: string&quot;</dt>
 <dd>Type name that can be used as argument to <tt>&quot;device-list-properties&quot;</tt>, to introspect properties configurable using -cpu or -global. (since 2.9)</dd>
 <dt>&quot;alias-of: string&quot; (optional)</dt>
-<dd>Name of <font SIZE="-1">CPU</font> model this model is an alias for. The target of the <font SIZE="-1">CPU</font> model alias may change depending on the machine type. Management software is supposed to translate <font SIZE="-1">CPU</font> model aliases in the <font SIZE="-1">VM</font> configuration, because aliases may stop being migration-safe in the future (since 4.1)</dd></dl>
-<p> <tt>&quot;unavailable-features&quot;</tt> is a list of <font SIZE="-1">QOM</font> property names that represent <font SIZE="-1">CPU</font> model attributes that prevent the <font SIZE="-1">CPU</font> from running. If the <font SIZE="-1">QOM</font> property is read-only, that means there&#8217;s no known way to make the <font SIZE="-1">CPU</font> model run in the current host. Implementations that choose not to provide specific information return the property name &#8220;type&#8221;. If the property is read-write, it means that it <font SIZE="-1">MAY</font> be possible to run the <font SIZE="-1">CPU</font> model in the current host if that property is changed. Management software can use it as hints to suggest or choose an alternative for the user, or just to generate meaningful error messages explaining why the <font SIZE="-1">CPU</font> model can&#8217;t be used. If <tt>&quot;unavailable-features&quot;</tt> is an empty list, the <font SIZE="-1">CPU</font> model is runnable using the current host and machine-type. If <tt>&quot;unavailable-features&quot;</tt> is not present, runnability information for the <font SIZE="-1">CPU</font> is not available. <code>Since:</code> 1.2.0 <code>If:</code> <tt>&quot;defined(TARGET_PPC) || defined(TARGET_ARM) || defined(TARGET_I386) || defined(TARGET_S390X) || defined(TARGET_MIPS)&quot;</tt> <code>query-cpu-definitions</code> (Command) Return a list of supported virtual <font SIZE="-1">CPU</font> definitions <code>Returns:</code> a list of CpuDefInfo <code>Since:</code> 1.2.0 <code>If:</code> <tt>&quot;defined(TARGET_PPC) || defined(TARGET_ARM) || defined(TARGET_I386) || defined(TARGET_S390X) || defined(TARGET_MIPS)&quot;</tt></p>
+<dd>Name of CPU model this model is an alias for. The target of the CPU model alias may change depending on the machine type. Management software is supposed to translate CPU model aliases in the VM configuration, because aliases may stop being migration-safe in the future (since 4.1)</dd></dl>
+<p> <tt>&quot;unavailable-features&quot;</tt> is a list of QOM property names that represent CPU model attributes that prevent the CPU from running. If the QOM property is read-only, that means there&#8217;s no known way to make the CPU model run in the current host. Implementations that choose not to provide specific information return the property name &#8220;type&#8221;. If the property is read-write, it means that it MAY be possible to run the CPU model in the current host if that property is changed. Management software can use it as hints to suggest or choose an alternative for the user, or just to generate meaningful error messages explaining why the CPU model can&#8217;t be used. If <tt>&quot;unavailable-features&quot;</tt> is an empty list, the CPU model is runnable using the current host and machine-type. If <tt>&quot;unavailable-features&quot;</tt> is not present, runnability information for the CPU is not available. <code>Since:</code> 1.2.0 <code>If:</code> <tt>&quot;defined(TARGET_PPC) || defined(TARGET_ARM) || defined(TARGET_I386) || defined(TARGET_S390X) || defined(TARGET_MIPS)&quot;</tt> <code>query-cpu-definitions</code> (Command) Return a list of supported virtual CPU definitions <code>Returns:</code> a list of CpuDefInfo <code>Since:</code> 1.2.0 <code>If:</code> <tt>&quot;defined(TARGET_PPC) || defined(TARGET_ARM) || defined(TARGET_I386) || defined(TARGET_S390X) || defined(TARGET_MIPS)&quot;</tt></p>
 <h3>Miscellanea</h3>
-<p><code>qmp_capabilities</code> (Command) Enable <font SIZE="-1">QMP</font> capabilities. Arguments: <code>Arguments:</code></p>
+<p><code>qmp_capabilities</code> (Command) Enable QMP capabilities. Arguments: <code>Arguments:</code></p>
 <dl>
 <dt>&quot;enable: array of QMPCapability&quot; (optional)</dt>
-<dd>An optional list of QMPCapability values to enable. The client must not enable any capability that is not mentioned in the <font SIZE="-1">QMP</font> greeting message. If the field is not provided, it means no <font SIZE="-1">QMP</font> capabilities will be enabled. (since 2.12)</dd></dl>
-<p> <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;qmp_capabilities&quot;,<br />
-   &quot;arguments&quot; : {&quot;enable&quot; : [&quot;oob&quot;]}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
-} <code>Notes:</code> This command is valid exactly when first connecting: it must be issued before any other command will be accepted, and will fail once the monitor is accepting other commands. (see qemu docs/interop/qmp-spec.txt) The <font SIZE="-1">QMP</font> client needs to explicitly enable <font SIZE="-1">QMP</font> capabilities, otherwise all the <font SIZE="-1">QMP</font> capabilities will be turned off by default. <code>Since:</code> 0.13 <code>QMPCapability</code> (Enum) Enumeration of capabilities to be advertised during initial client connection, used for agreeing on particular <font SIZE="-1">QMP</font> extension behaviors. <code>Values:</code></p>
+<dd>An optional list of QMPCapability values to enable. The client must not enable any capability that is not mentioned in the QMP greeting message. If the field is not provided, it means no QMP capabilities will be enabled. (since 2.12)</dd></dl>
+<p> <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;qmp_capabilities&quot;,<br/>
+   &quot;arguments&quot; : {&quot;enable&quot; : [&quot;oob&quot;]}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
+} <code>Notes:</code> This command is valid exactly when first connecting: it must be issued before any other command will be accepted, and will fail once the monitor is accepting other commands. (see qemu docs/interop/qmp-spec.txt) The QMP client needs to explicitly enable QMP capabilities, otherwise all the QMP capabilities will be turned off by default. <code>Since:</code> 0.13 <code>QMPCapability</code> (Enum) Enumeration of capabilities to be advertised during initial client connection, used for agreeing on particular QMP extension behaviors. <code>Values:</code></p>
 <dl>
 <dt>&quot;oob&quot;</dt>
-<dd><font SIZE="-1">QMP</font> ability to support out-of-band requests. (Please refer to qmp-spec.txt for more information on <font SIZE="-1">OOB</font>)</dd></dl>
+<dd>QMP ability to support out-of-band requests. (Please refer to qmp-spec.txt for more information on OOB)</dd></dl>
 <p> <code>Since:</code> 2.12 <code>VersionTriple</code> (Object) A three-part version number. <code>Members:</code></p>
 <dl>
 <dt>&quot;major: int&quot;</dt>
@@ -7374,46 +7374,46 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dd>The minor version number.</dd>
 <dt>&quot;micro: int&quot;</dt>
 <dd>The micro version number.</dd></dl>
-<p> <code>Since:</code> 2.4 <code>VersionInfo</code> (Object) A description of <font SIZE="-1">QEMU</font>&#8216;s version. <code>Members:</code></p>
+<p> <code>Since:</code> 2.4 <code>VersionInfo</code> (Object) A description of QEMU&#8216;s version. <code>Members:</code></p>
 <dl>
 <dt>&quot;qemu: VersionTriple&quot;</dt>
-<dd>The version of <font SIZE="-1">QEMU.</font> By current convention, a micro version of 50 signifies a development branch. A micro version greater than or equal to 90 signifies a release candidate for the next minor version. A micro version of less than 50 signifies a stable release.</dd>
+<dd>The version of QEMU. By current convention, a micro version of 50 signifies a development branch. A micro version greater than or equal to 90 signifies a release candidate for the next minor version. A micro version of less than 50 signifies a stable release.</dd>
 <dt>&quot;package: string&quot;</dt>
-<dd><font SIZE="-1">QEMU</font> will always set this field to an empty string. Downstream versions of <font SIZE="-1">QEMU</font> should set this to a non-empty string. The exact format depends on the downstream however it highly recommended that a unique name is used.</dd></dl>
-<p> <code>Since:</code> 0.14.0 <code>query-version</code> (Command) Returns the current version of <font SIZE="-1">QEMU.</font> <code>Returns:</code> A <tt>&quot;VersionInfo&quot;</tt> object describing the current version of <font SIZE="-1">QEMU.</font> <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-version&quot;} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-        &quot;qemu&quot; : {<br />
-            &quot;major&quot; : 0,<br />
-            &quot;minor&quot; : 11,<br />
-            &quot;micro&quot; : 5<br />
-        },<br />
-                 &quot;package&quot; : &quot;&quot;<br />
-    }<br />
-} <code>CommandInfo</code> (Object) Information about a <font SIZE="-1">QMP</font> command <code>Members:</code></p>
+<dd>QEMU will always set this field to an empty string. Downstream versions of QEMU should set this to a non-empty string. The exact format depends on the downstream however it highly recommended that a unique name is used.</dd></dl>
+<p> <code>Since:</code> 0.14.0 <code>query-version</code> (Command) Returns the current version of QEMU. <code>Returns:</code> A <tt>&quot;VersionInfo&quot;</tt> object describing the current version of QEMU. <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-version&quot;} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+        &quot;qemu&quot; : {<br/>
+            &quot;major&quot; : 0,<br/>
+            &quot;minor&quot; : 11,<br/>
+            &quot;micro&quot; : 5<br/>
+        },<br/>
+                 &quot;package&quot; : &quot;&quot;<br/>
+    }<br/>
+} <code>CommandInfo</code> (Object) Information about a QMP command <code>Members:</code></p>
 <dl>
 <dt>&quot;name: string&quot;</dt>
 <dd>The command name</dd></dl>
-<p> <code>Since:</code> 0.14.0 <code>query-commands</code> (Command) Return a list of supported <font SIZE="-1">QMP</font> commands by this server <code>Returns:</code> A list of <tt>&quot;CommandInfo&quot;</tt> for all supported commands <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-commands&quot;} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot; : [<br />
-        {<br />
-            &quot;name&quot; : &quot;query-balloon&quot;<br />
-        },<br />
-        {<br />
-            &quot;name&quot; : &quot;system_powerdown&quot;<br />
-        }<br />
-    ]<br />
+<p> <code>Since:</code> 0.14.0 <code>query-commands</code> (Command) Return a list of supported QMP commands by this server <code>Returns:</code> A list of <tt>&quot;CommandInfo&quot;</tt> for all supported commands <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-commands&quot;} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot; : [<br/>
+        {<br/>
+            &quot;name&quot; : &quot;query-balloon&quot;<br/>
+        },<br/>
+        {<br/>
+            &quot;name&quot; : &quot;system_powerdown&quot;<br/>
+        }<br/>
+    ]<br/>
 } <code>Note:</code> This example has been shortened as the real response is too long. <code>LostTickPolicy</code> (Enum) Policy for handling lost ticks in timer devices. <code>Values:</code></p>
 <dl>
 <dt>&quot;discard&quot;</dt>
-<dd>throw away the missed tick(s) and continue with future injection normally. Guest time may be delayed, unless the <font SIZE="-1">OS</font> has explicit handling of lost ticks</dd>
+<dd>throw away the missed tick(s) and continue with future injection normally. Guest time may be delayed, unless the OS has explicit handling of lost ticks</dd>
 <dt>&quot;delay&quot;</dt>
 <dd>continue to deliver ticks at the normal rate. Guest time will be delayed due to the late tick</dd>
 <dt>&quot;slew&quot;</dt>
 <dd>deliver ticks at a higher rate to catch up with the missed tick. The guest time should not be delayed once catchup is complete.</dd></dl>
-<p> <code>Since:</code> 2.0 <code>add_client</code> (Command) Allow client connections for <font SIZE="-1">VNC,</font> Spice and socket based character devices to be passed in to <font SIZE="-1">QEMU</font> via <font SIZE="-1">SCM_RIGHTS.</font> <code>Arguments:</code></p>
+<p> <code>Since:</code> 2.0 <code>add_client</code> (Command) Allow client connections for VNC, Spice and socket based character devices to be passed in to QEMU via SCM_RIGHTS. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;protocol: string&quot;</dt>
 <dd>protocol name. Valid names are &#8220;vnc&#8221;, &#8220;spice&#8221; or the name of a character device (eg. from -chardev id=XXXX)</dd>
@@ -7422,94 +7422,94 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dt>&quot;skipauth: boolean&quot; (optional)</dt>
 <dd>whether to skip authentication. Only applies to &#8220;vnc&#8221; and &#8220;spice&#8221; protocols</dd>
 <dt>&quot;tls: boolean&quot; (optional)</dt>
-<dd>whether to perform <font SIZE="-1">TLS.</font> Only applies to the &#8220;spice&#8221; protocol</dd></dl>
-<p> <code>Returns:</code> nothing on success. <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;add_client&quot;, &quot;arguments&quot; : {&quot;protocol&quot; : &quot;vnc&quot;,<br />
-                                            &quot;fdname&quot; : &quot;myclient&quot;}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
+<dd>whether to perform TLS. Only applies to the &#8220;spice&#8221; protocol</dd></dl>
+<p> <code>Returns:</code> nothing on success. <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;add_client&quot;, &quot;arguments&quot; : {&quot;protocol&quot; : &quot;vnc&quot;,<br/>
+                                            &quot;fdname&quot; : &quot;myclient&quot;}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
 } <code>NameInfo</code> (Object) Guest name information. <code>Members:</code></p>
 <dl>
 <dt>&quot;name: string&quot; (optional)</dt>
 <dd>The name of the guest</dd></dl>
-<p> <code>Since:</code> 0.14.0 <code>query-name</code> (Command) Return the name information of a guest. <code>Returns:</code> <tt>&quot;NameInfo&quot;</tt> of the guest <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-name&quot;} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-        &quot;name&quot; : &quot;qemu-name&quot;<br />
-    }<br />
-} <code>KvmInfo</code> (Object) Information about support for <font SIZE="-1">KVM</font> acceleration <code>Members:</code></p>
+<p> <code>Since:</code> 0.14.0 <code>query-name</code> (Command) Return the name information of a guest. <code>Returns:</code> <tt>&quot;NameInfo&quot;</tt> of the guest <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-name&quot;} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+        &quot;name&quot; : &quot;qemu-name&quot;<br/>
+    }<br/>
+} <code>KvmInfo</code> (Object) Information about support for KVM acceleration <code>Members:</code></p>
 <dl>
 <dt>&quot;enabled: boolean&quot;</dt>
-<dd>true if <font SIZE="-1">KVM</font> acceleration is active</dd>
+<dd>true if KVM acceleration is active</dd>
 <dt>&quot;present: boolean&quot;</dt>
-<dd>true if <font SIZE="-1">KVM</font> acceleration is built into this executable</dd></dl>
-<p> <code>Since:</code> 0.14.0 <code>query-kvm</code> (Command) Returns information about <font SIZE="-1">KVM</font> acceleration <code>Returns:</code> <tt>&quot;KvmInfo&quot;</tt> <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-kvm&quot;} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-        &quot;enabled&quot; : true, &quot;present&quot; : true<br />
-    }<br />
-} <code>UuidInfo</code> (Object) Guest <font SIZE="-1">UUID</font> information (Universally Unique Identifier). <code>Members:</code></p>
+<dd>true if KVM acceleration is built into this executable</dd></dl>
+<p> <code>Since:</code> 0.14.0 <code>query-kvm</code> (Command) Returns information about KVM acceleration <code>Returns:</code> <tt>&quot;KvmInfo&quot;</tt> <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-kvm&quot;} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+        &quot;enabled&quot; : true, &quot;present&quot; : true<br/>
+    }<br/>
+} <code>UuidInfo</code> (Object) Guest UUID information (Universally Unique Identifier). <code>Members:</code></p>
 <dl>
 <dt>&quot;UUID: string&quot;</dt>
-<dd>the <font SIZE="-1">UUID</font> of the guest</dd></dl>
-<p> <code>Since:</code> 0.14.0 <code>Notes:</code> If no <font SIZE="-1">UUID</font> was specified for the guest, a null <font SIZE="-1">UUID</font> is returned. <code>query-uuid</code> (Command) Query the guest <font SIZE="-1">UUID</font> information. <code>Returns:</code> The <tt>&quot;UuidInfo&quot;</tt> for the guest <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-uuid&quot;} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-        &quot;UUID&quot; : &quot;550e8400-e29b-41d4-a716-446655440000&quot;<br />
-    }<br />
-} <code>EventInfo</code> (Object) Information about a <font SIZE="-1">QMP</font> event <code>Members:</code></p>
+<dd>the UUID of the guest</dd></dl>
+<p> <code>Since:</code> 0.14.0 <code>Notes:</code> If no UUID was specified for the guest, a null UUID is returned. <code>query-uuid</code> (Command) Query the guest UUID information. <code>Returns:</code> The <tt>&quot;UuidInfo&quot;</tt> for the guest <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-uuid&quot;} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+        &quot;UUID&quot; : &quot;550e8400-e29b-41d4-a716-446655440000&quot;<br/>
+    }<br/>
+} <code>EventInfo</code> (Object) Information about a QMP event <code>Members:</code></p>
 <dl>
 <dt>&quot;name: string&quot;</dt>
 <dd>The event name</dd></dl>
-<p> <code>Since:</code> 1.2.0 <code>query-events</code> (Command) Return information on <font SIZE="-1">QMP</font> events. <code>Returns:</code> A list of <tt>&quot;EventInfo&quot;</tt>. <code>Since:</code> 1.2.0 <code>Note:</code> This command is deprecated, because its output doesn&#8217;t reflect compile-time configuration. Use query-qmp-schema instead. <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-events&quot;} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot; : [<br />
-        {<br />
-            &quot;name&quot; : &quot;SHUTDOWN&quot;<br />
-        },<br />
-        {<br />
-            &quot;name&quot; : &quot;RESET&quot;<br />
-        }<br />
-    ]<br />
+<p> <code>Since:</code> 1.2.0 <code>query-events</code> (Command) Return information on QMP events. <code>Returns:</code> A list of <tt>&quot;EventInfo&quot;</tt>. <code>Since:</code> 1.2.0 <code>Note:</code> This command is deprecated, because its output doesn&#8217;t reflect compile-time configuration. Use query-qmp-schema instead. <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-events&quot;} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot; : [<br/>
+        {<br/>
+            &quot;name&quot; : &quot;SHUTDOWN&quot;<br/>
+        },<br/>
+        {<br/>
+            &quot;name&quot; : &quot;RESET&quot;<br/>
+        }<br/>
+    ]<br/>
 } <code>Note:</code> This example has been shortened as the real response is too long. <code>IOThreadInfo</code> (Object) Information about an iothread <code>Members:</code></p>
 <dl>
 <dt>&quot;id: string&quot;</dt>
 <dd>the identifier of the iothread</dd>
 <dt>&quot;thread-id: int&quot;</dt>
-<dd><font SIZE="-1">ID</font> of the underlying host thread</dd>
+<dd>ID of the underlying host thread</dd>
 <dt>&quot;poll-max-ns: int&quot;</dt>
 <dd>maximum polling time in ns, 0 means polling is disabled (since 2.9)</dd>
 <dt>&quot;poll-grow: int&quot;</dt>
 <dd>how many ns will be added to polling time, 0 means that it&#8217;s not configured (since 2.9)</dd>
 <dt>&quot;poll-shrink: int&quot;</dt>
 <dd>how many ns will be removed from polling time, 0 means that it&#8217;s not configured (since 2.9)</dd></dl>
-<p> <code>Since:</code> 2.0 <code>query-iothreads</code> (Command) Returns a list of information about each iothread. <code>Note:</code> this list excludes the <font SIZE="-1">QEMU</font> main loop thread, which is not declared using the -object iothread command-line option. It is always the main thread of the process. <code>Returns:</code> a list of <tt>&quot;IOThreadInfo&quot;</tt> for each iothread <code>Since:</code> 2.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-iothreads&quot;} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot; : [<br />
-        {<br />
-            &quot;id&quot; : &quot;iothread0&quot;,<br />
-            &quot;thread-id&quot; : 3134<br />
-        },<br />
-        {<br />
-            &quot;id&quot; : &quot;iothread1&quot;,<br />
-            &quot;thread-id&quot; : 3135<br />
-        }<br />
-    ]<br />
+<p> <code>Since:</code> 2.0 <code>query-iothreads</code> (Command) Returns a list of information about each iothread. <code>Note:</code> this list excludes the QEMU main loop thread, which is not declared using the -object iothread command-line option. It is always the main thread of the process. <code>Returns:</code> a list of <tt>&quot;IOThreadInfo&quot;</tt> for each iothread <code>Since:</code> 2.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-iothreads&quot;} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot; : [<br/>
+        {<br/>
+            &quot;id&quot; : &quot;iothread0&quot;,<br/>
+            &quot;thread-id&quot; : 3134<br/>
+        },<br/>
+        {<br/>
+            &quot;id&quot; : &quot;iothread1&quot;,<br/>
+            &quot;thread-id&quot; : 3135<br/>
+        }<br/>
+    ]<br/>
 } <code>BalloonInfo</code> (Object) Information about the guest balloon device. <code>Members:</code></p>
 <dl>
 <dt>&quot;actual: int&quot;</dt>
 <dd>the number of bytes the balloon currently contains</dd></dl>
-<p> <code>Since:</code> 0.14.0 <code>query-balloon</code> (Command) Return information about the balloon device. <code>Returns:</code> <tt>&quot;BalloonInfo&quot;</tt> on success If the balloon driver is enabled but not functional because the <font SIZE="-1">KVM</font> kernel module cannot support it, KvmMissingCap If no balloon device is present, DeviceNotActive <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-balloon&quot;} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-        &quot;actual&quot; : 1073741824,<br />
-    }<br />
-} <font SIZE="-1"><code>BALLOON_CHANGE</code></font> (Event) Emitted when the guest changes the actual <font SIZE="-1">BALLOON</font> level. This value is equivalent to the <tt>&quot;actual&quot;</tt> field return by the &#8216;query-balloon&#8217; command <code>Arguments:</code></p>
+<p> <code>Since:</code> 0.14.0 <code>query-balloon</code> (Command) Return information about the balloon device. <code>Returns:</code> <tt>&quot;BalloonInfo&quot;</tt> on success If the balloon driver is enabled but not functional because the KVM kernel module cannot support it, KvmMissingCap If no balloon device is present, DeviceNotActive <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-balloon&quot;} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+        &quot;actual&quot; : 1073741824,<br/>
+    }<br/>
+} <code>BALLOON_CHANGE</code> (Event) Emitted when the guest changes the actual BALLOON level. This value is equivalent to the <tt>&quot;actual&quot;</tt> field return by the &#8216;query-balloon&#8217; command <code>Arguments:</code></p>
 <dl>
 <dt>&quot;actual: int&quot;</dt>
 <dd>actual level of the guest memory balloon in bytes</dd></dl>
@@ -7517,27 +7517,27 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <pre> &lt;- { &quot;event&quot;: &quot;BALLOON_CHANGE&quot;,
  &quot;data&quot;: { &quot;actual&quot;: 944766976 },
  &quot;timestamp&quot;: { &quot;seconds&quot;: 1267020223, &quot;microseconds&quot;: 435656 } }</pre>
-<p><code>PciMemoryRange</code> (Object) A <font SIZE="-1">PCI</font> device memory region <code>Members:</code></p>
+<p><code>PciMemoryRange</code> (Object) A PCI device memory region <code>Members:</code></p>
 <dl>
 <dt>&quot;base: int&quot;</dt>
 <dd>the starting address (guest physical)</dd>
 <dt>&quot;limit: int&quot;</dt>
 <dd>the ending address (guest physical)</dd></dl>
-<p> <code>Since:</code> 0.14.0 <code>PciMemoryRegion</code> (Object) Information about a <font SIZE="-1">PCI</font> device I/O region. <code>Members:</code></p>
+<p> <code>Since:</code> 0.14.0 <code>PciMemoryRegion</code> (Object) Information about a PCI device I/O region. <code>Members:</code></p>
 <dl>
 <dt>&quot;bar: int&quot;</dt>
 <dd>the index of the Base Address Register for this region</dd>
 <dt>&quot;type: string&quot;</dt>
-<dd>&#8216;io&#8217; if the region is a <font SIZE="-1">PIO</font> region &#8216;memory&#8217; if the region is a <font SIZE="-1">MMIO</font> region</dd>
+<dd>&#8216;io&#8217; if the region is a PIO region &#8216;memory&#8217; if the region is a MMIO region</dd>
 <dt>&quot;size: int&quot;</dt>
 <dd>memory size</dd>
 <dt>&quot;prefetch: boolean&quot; (optional)</dt>
 <dd>if <tt>&quot;type&quot;</tt> is &#8216;memory&#8217;, true if the memory is prefetchable</dd>
 <dt>&quot;mem_type_64: boolean&quot; (optional)</dt>
-<dd>if <tt>&quot;type&quot;</tt> is &#8216;memory&#8217;, true if the <font SIZE="-1">BAR</font> is 64-bit</dd>
+<dd>if <tt>&quot;type&quot;</tt> is &#8216;memory&#8217;, true if the BAR is 64-bit</dd>
 <dt>&quot;address: int&quot;</dt>
 <dd>Not documented</dd></dl>
-<p> <code>Since:</code> 0.14.0 <code>PciBusInfo</code> (Object) Information about a bus of a <font SIZE="-1">PCI</font> Bridge device <code>Members:</code></p>
+<p> <code>Since:</code> 0.14.0 <code>PciBusInfo</code> (Object) Information about a bus of a PCI Bridge device <code>Members:</code></p>
 <dl>
 <dt>&quot;number: int&quot;</dt>
 <dd>primary bus interface number. This should be the number of the bus the device resides on.</dd>
@@ -7546,34 +7546,34 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dt>&quot;subordinate: int&quot;</dt>
 <dd>This is the highest number bus that resides below the bridge.</dd>
 <dt>&quot;io_range: PciMemoryRange&quot;</dt>
-<dd>The <font SIZE="-1">PIO</font> range for all devices on this bridge</dd>
+<dd>The PIO range for all devices on this bridge</dd>
 <dt>&quot;memory_range: PciMemoryRange&quot;</dt>
-<dd>The <font SIZE="-1">MMIO</font> range for all devices on this bridge</dd>
+<dd>The MMIO range for all devices on this bridge</dd>
 <dt>&quot;prefetchable_range: PciMemoryRange&quot;</dt>
-<dd>The range of prefetchable <font SIZE="-1">MMIO</font> for all devices on this bridge</dd></dl>
-<p> <code>Since:</code> 2.4 <code>PciBridgeInfo</code> (Object) Information about a <font SIZE="-1">PCI</font> Bridge device <code>Members:</code></p>
+<dd>The range of prefetchable MMIO for all devices on this bridge</dd></dl>
+<p> <code>Since:</code> 2.4 <code>PciBridgeInfo</code> (Object) Information about a PCI Bridge device <code>Members:</code></p>
 <dl>
 <dt>&quot;bus: PciBusInfo&quot;</dt>
 <dd>information about the bus the device resides on</dd>
 <dt>&quot;devices: array of PciDeviceInfo&quot; (optional)</dt>
 <dd>a list of <tt>&quot;PciDeviceInfo&quot;</tt> for each device on this bridge</dd></dl>
-<p> <code>Since:</code> 0.14.0 <code>PciDeviceClass</code> (Object) Information about the Class of a <font SIZE="-1">PCI</font> device <code>Members:</code></p>
+<p> <code>Since:</code> 0.14.0 <code>PciDeviceClass</code> (Object) Information about the Class of a PCI device <code>Members:</code></p>
 <dl>
 <dt>&quot;desc: string&quot; (optional)</dt>
 <dd>a string description of the device&#8217;s class</dd>
 <dt>&quot;class: int&quot;</dt>
 <dd>the class code of the device</dd></dl>
-<p> <code>Since:</code> 2.4 <code>PciDeviceId</code> (Object) Information about the Id of a <font SIZE="-1">PCI</font> device <code>Members:</code></p>
+<p> <code>Since:</code> 2.4 <code>PciDeviceId</code> (Object) Information about the Id of a PCI device <code>Members:</code></p>
 <dl>
 <dt>&quot;device: int&quot;</dt>
-<dd>the <font SIZE="-1">PCI</font> device id</dd>
+<dd>the PCI device id</dd>
 <dt>&quot;vendor: int&quot;</dt>
-<dd>the <font SIZE="-1">PCI</font> vendor id</dd>
+<dd>the PCI vendor id</dd>
 <dt>&quot;subsystem: int&quot; (optional)</dt>
-<dd>the <font SIZE="-1">PCI</font> subsystem id (since 3.1)</dd>
+<dd>the PCI subsystem id (since 3.1)</dd>
 <dt>&quot;subsystem-vendor: int&quot; (optional)</dt>
-<dd>the <font SIZE="-1">PCI</font> subsystem vendor id (since 3.1)</dd></dl>
-<p> <code>Since:</code> 2.4 <code>PciDeviceInfo</code> (Object) Information about a <font SIZE="-1">PCI</font> device <code>Members:</code></p>
+<dd>the PCI subsystem vendor id (since 3.1)</dd></dl>
+<p> <code>Since:</code> 2.4 <code>PciDeviceInfo</code> (Object) Information about a PCI device <code>Members:</code></p>
 <dl>
 <dt>&quot;bus: int&quot;</dt>
 <dd>the bus number of the device</dd>
@@ -7584,167 +7584,167 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dt>&quot;class_info: PciDeviceClass&quot;</dt>
 <dd>the class of the device</dd>
 <dt>&quot;id: PciDeviceId&quot;</dt>
-<dd>the <font SIZE="-1">PCI</font> device id</dd>
+<dd>the PCI device id</dd>
 <dt>&quot;irq: int&quot; (optional)</dt>
-<dd>if an <font SIZE="-1">IRQ</font> is assigned to the device, the <font SIZE="-1">IRQ</font> number</dd>
+<dd>if an IRQ is assigned to the device, the IRQ number</dd>
 <dt>&quot;qdev_id: string&quot;</dt>
-<dd>the device name of the <font SIZE="-1">PCI</font> device</dd>
+<dd>the device name of the PCI device</dd>
 <dt>&quot;pci_bridge: PciBridgeInfo&quot; (optional)</dt>
-<dd>if the device is a <font SIZE="-1">PCI</font> bridge, the bridge information</dd>
+<dd>if the device is a PCI bridge, the bridge information</dd>
 <dt>&quot;regions: array of PciMemoryRegion&quot;</dt>
-<dd>a list of the <font SIZE="-1">PCI I/O</font> regions associated with the device</dd></dl>
-<p> <code>Notes:</code> the contents of <tt>&quot;class_info&quot;</tt>.desc are not stable and should only be treated as informational. <code>Since:</code> 0.14.0 <code>PciInfo</code> (Object) Information about a <font SIZE="-1">PCI</font> bus <code>Members:</code></p>
+<dd>a list of the PCI I/O regions associated with the device</dd></dl>
+<p> <code>Notes:</code> the contents of <tt>&quot;class_info&quot;</tt>.desc are not stable and should only be treated as informational. <code>Since:</code> 0.14.0 <code>PciInfo</code> (Object) Information about a PCI bus <code>Members:</code></p>
 <dl>
 <dt>&quot;bus: int&quot;</dt>
 <dd>the bus index</dd>
 <dt>&quot;devices: array of PciDeviceInfo&quot;</dt>
 <dd>a list of devices on this bus</dd></dl>
-<p> <code>Since:</code> 0.14.0 <code>query-pci</code> (Command) Return information about the <font SIZE="-1">PCI</font> bus topology of the guest. <code>Returns:</code> a list of <tt>&quot;PciInfo&quot;</tt> for each <font SIZE="-1">PCI</font> bus. Each bus is represented by a json-object, which has a key with a json-array of all <font SIZE="-1">PCI</font> devices attached to it. Each device is represented by a json-object. <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-pci&quot;} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot; : [<br />
-        {<br />
-            &quot;bus&quot; : 0,<br />
-            &quot;devices&quot; : [<br />
-                {<br />
-                    &quot;bus&quot; : 0,<br />
-                    &quot;qdev_id&quot; : &quot;&quot;,<br />
-                    &quot;slot&quot; : 0,<br />
-                    &quot;class_info&quot; : {<br />
-                        &quot;class&quot; : 1536,<br />
-                        &quot;desc&quot; : &quot;Host bridge&quot;<br />
-                    },<br />
-                    &quot;id&quot; : {<br />
-                        &quot;device&quot; : 32902,<br />
-                        &quot;vendor&quot; : 4663<br />
-                    },<br />
-                    &quot;function&quot; : 0,<br />
-                    &quot;regions&quot; : [<br />
-                    ]<br />
-                },<br />
-                {<br />
-                    &quot;bus&quot; : 0,<br />
-                    &quot;qdev_id&quot; : &quot;&quot;,<br />
-                    &quot;slot&quot; : 1,<br />
-                    &quot;class_info&quot; : {<br />
-                        &quot;class&quot; : 1537,<br />
-                        &quot;desc&quot; : &quot;ISA bridge&quot;<br />
-                    },<br />
-                    &quot;id&quot; : {<br />
-                        &quot;device&quot; : 32902,<br />
-                        &quot;vendor&quot; : 28672<br />
-                    },<br />
-                    &quot;function&quot; : 0,<br />
-                    &quot;regions&quot; : [<br />
-                    ]<br />
-                },<br />
-                {<br />
-                    &quot;bus&quot; : 0,<br />
-                    &quot;qdev_id&quot; : &quot;&quot;,<br />
-                    &quot;slot&quot; : 1,<br />
-                    &quot;class_info&quot; : {<br />
-                        &quot;class&quot; : 257,<br />
-                        &quot;desc&quot; : &quot;IDE controller&quot;<br />
-                    },<br />
-                    &quot;id&quot; : {<br />
-                        &quot;device&quot; : 32902,<br />
-                        &quot;vendor&quot; : 28688<br />
-                    },<br />
-                    &quot;function&quot; : 1,<br />
-                    &quot;regions&quot; : [<br />
-                        {<br />
-                            &quot;bar&quot; : 4,<br />
-                            &quot;size&quot; : 16,<br />
-                            &quot;address&quot; : 49152,<br />
-                            &quot;type&quot; : &quot;io&quot;<br />
-                        }<br />
-                    ]<br />
-                },<br />
-                {<br />
-                    &quot;bus&quot; : 0,<br />
-                    &quot;qdev_id&quot; : &quot;&quot;,<br />
-                    &quot;slot&quot; : 2,<br />
-                    &quot;class_info&quot; : {<br />
-                        &quot;class&quot; : 768,<br />
-                        &quot;desc&quot; : &quot;VGA controller&quot;<br />
-                    },<br />
-                    &quot;id&quot; : {<br />
-                        &quot;device&quot; : 4115,<br />
-                        &quot;vendor&quot; : 184<br />
-                    },<br />
-                    &quot;function&quot; : 0,<br />
-                    &quot;regions&quot; : [<br />
-                        {<br />
-                            &quot;prefetch&quot; : true,<br />
-                            &quot;mem_type_64&quot; : false,<br />
-                            &quot;bar&quot; : 0,<br />
-                            &quot;size&quot; : 33554432,<br />
-                            &quot;address&quot; : 4026531840,<br />
-                            &quot;type&quot; : &quot;memory&quot;<br />
-                        },<br />
-                        {<br />
-                            &quot;prefetch&quot; : false,<br />
-                            &quot;mem_type_64&quot; : false,<br />
-                            &quot;bar&quot; : 1,<br />
-                            &quot;size&quot; : 4096,<br />
-                            &quot;address&quot; : 4060086272,<br />
-                            &quot;type&quot; : &quot;memory&quot;<br />
-                        },<br />
-                        {<br />
-                            &quot;prefetch&quot; : false,<br />
-                            &quot;mem_type_64&quot; : false,<br />
-                            &quot;bar&quot; : 6,<br />
-                            &quot;size&quot; : 65536,<br />
-                            &quot;address&quot; : -1,<br />
-                            &quot;type&quot; : &quot;memory&quot;<br />
-                        }<br />
-                    ]<br />
-                },<br />
-                {<br />
-                    &quot;bus&quot; : 0,<br />
-                    &quot;qdev_id&quot; : &quot;&quot;,<br />
-                    &quot;irq&quot; : 11,<br />
-                    &quot;slot&quot; : 4,<br />
-                    &quot;class_info&quot; : {<br />
-                        &quot;class&quot; : 1280,<br />
-                        &quot;desc&quot; : &quot;RAM controller&quot;<br />
-                    },<br />
-                    &quot;id&quot; : {<br />
-                        &quot;device&quot; : 6900,<br />
-                        &quot;vendor&quot; : 4098<br />
-                    },<br />
-                    &quot;function&quot; : 0,<br />
-                    &quot;regions&quot; : [<br />
-                        {<br />
-                            &quot;bar&quot; : 0,<br />
-                            &quot;size&quot; : 32,<br />
-                            &quot;address&quot; : 49280,<br />
-                            &quot;type&quot; : &quot;io&quot;<br />
-                        }<br />
-                    ]<br />
-                }<br />
-            ]<br />
-        }<br />
-    ]<br />
-} <code>Note:</code> This example has been shortened as the real response is too long. <code>quit</code> (Command) This command will cause the <font SIZE="-1">QEMU</font> process to exit gracefully. While every attempt is made to send the <font SIZE="-1">QMP</font> response before terminating, this is not guaranteed. When using this interface, a premature <font SIZE="-1">EOF</font> would not be unexpected. <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;quit&quot;} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
-} <code>stop</code> (Command) Stop all guest <font SIZE="-1">VCPU</font> execution. <code>Since:</code> 0.14.0 <code>Notes:</code> This function will succeed even if the guest is already in the stopped state. In &#8220;inmigrate&#8221; state, it will ensure that the guest remains paused once migration finishes, as if the -S option was passed on the command line. <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;stop&quot;} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
-} <code>system_reset</code> (Command) Performs a hard reset of a guest. <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;system_reset&quot;} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
-} <code>system_powerdown</code> (Command) Requests that a guest perform a powerdown operation. <code>Since:</code> 0.14.0 <code>Notes:</code> A guest may or may not respond to this command. This command returning does not indicate that a guest has accepted the request or that it has shut down. Many guests will respond to this command by prompting the user in some way. <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;system_powerdown&quot;} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
+<p> <code>Since:</code> 0.14.0 <code>query-pci</code> (Command) Return information about the PCI bus topology of the guest. <code>Returns:</code> a list of <tt>&quot;PciInfo&quot;</tt> for each PCI bus. Each bus is represented by a json-object, which has a key with a json-array of all PCI devices attached to it. Each device is represented by a json-object. <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-pci&quot;} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot; : [<br/>
+        {<br/>
+            &quot;bus&quot; : 0,<br/>
+            &quot;devices&quot; : [<br/>
+                {<br/>
+                    &quot;bus&quot; : 0,<br/>
+                    &quot;qdev_id&quot; : &quot;&quot;,<br/>
+                    &quot;slot&quot; : 0,<br/>
+                    &quot;class_info&quot; : {<br/>
+                        &quot;class&quot; : 1536,<br/>
+                        &quot;desc&quot; : &quot;Host bridge&quot;<br/>
+                    },<br/>
+                    &quot;id&quot; : {<br/>
+                        &quot;device&quot; : 32902,<br/>
+                        &quot;vendor&quot; : 4663<br/>
+                    },<br/>
+                    &quot;function&quot; : 0,<br/>
+                    &quot;regions&quot; : [<br/>
+                    ]<br/>
+                },<br/>
+                {<br/>
+                    &quot;bus&quot; : 0,<br/>
+                    &quot;qdev_id&quot; : &quot;&quot;,<br/>
+                    &quot;slot&quot; : 1,<br/>
+                    &quot;class_info&quot; : {<br/>
+                        &quot;class&quot; : 1537,<br/>
+                        &quot;desc&quot; : &quot;ISA bridge&quot;<br/>
+                    },<br/>
+                    &quot;id&quot; : {<br/>
+                        &quot;device&quot; : 32902,<br/>
+                        &quot;vendor&quot; : 28672<br/>
+                    },<br/>
+                    &quot;function&quot; : 0,<br/>
+                    &quot;regions&quot; : [<br/>
+                    ]<br/>
+                },<br/>
+                {<br/>
+                    &quot;bus&quot; : 0,<br/>
+                    &quot;qdev_id&quot; : &quot;&quot;,<br/>
+                    &quot;slot&quot; : 1,<br/>
+                    &quot;class_info&quot; : {<br/>
+                        &quot;class&quot; : 257,<br/>
+                        &quot;desc&quot; : &quot;IDE controller&quot;<br/>
+                    },<br/>
+                    &quot;id&quot; : {<br/>
+                        &quot;device&quot; : 32902,<br/>
+                        &quot;vendor&quot; : 28688<br/>
+                    },<br/>
+                    &quot;function&quot; : 1,<br/>
+                    &quot;regions&quot; : [<br/>
+                        {<br/>
+                            &quot;bar&quot; : 4,<br/>
+                            &quot;size&quot; : 16,<br/>
+                            &quot;address&quot; : 49152,<br/>
+                            &quot;type&quot; : &quot;io&quot;<br/>
+                        }<br/>
+                    ]<br/>
+                },<br/>
+                {<br/>
+                    &quot;bus&quot; : 0,<br/>
+                    &quot;qdev_id&quot; : &quot;&quot;,<br/>
+                    &quot;slot&quot; : 2,<br/>
+                    &quot;class_info&quot; : {<br/>
+                        &quot;class&quot; : 768,<br/>
+                        &quot;desc&quot; : &quot;VGA controller&quot;<br/>
+                    },<br/>
+                    &quot;id&quot; : {<br/>
+                        &quot;device&quot; : 4115,<br/>
+                        &quot;vendor&quot; : 184<br/>
+                    },<br/>
+                    &quot;function&quot; : 0,<br/>
+                    &quot;regions&quot; : [<br/>
+                        {<br/>
+                            &quot;prefetch&quot; : true,<br/>
+                            &quot;mem_type_64&quot; : false,<br/>
+                            &quot;bar&quot; : 0,<br/>
+                            &quot;size&quot; : 33554432,<br/>
+                            &quot;address&quot; : 4026531840,<br/>
+                            &quot;type&quot; : &quot;memory&quot;<br/>
+                        },<br/>
+                        {<br/>
+                            &quot;prefetch&quot; : false,<br/>
+                            &quot;mem_type_64&quot; : false,<br/>
+                            &quot;bar&quot; : 1,<br/>
+                            &quot;size&quot; : 4096,<br/>
+                            &quot;address&quot; : 4060086272,<br/>
+                            &quot;type&quot; : &quot;memory&quot;<br/>
+                        },<br/>
+                        {<br/>
+                            &quot;prefetch&quot; : false,<br/>
+                            &quot;mem_type_64&quot; : false,<br/>
+                            &quot;bar&quot; : 6,<br/>
+                            &quot;size&quot; : 65536,<br/>
+                            &quot;address&quot; : -1,<br/>
+                            &quot;type&quot; : &quot;memory&quot;<br/>
+                        }<br/>
+                    ]<br/>
+                },<br/>
+                {<br/>
+                    &quot;bus&quot; : 0,<br/>
+                    &quot;qdev_id&quot; : &quot;&quot;,<br/>
+                    &quot;irq&quot; : 11,<br/>
+                    &quot;slot&quot; : 4,<br/>
+                    &quot;class_info&quot; : {<br/>
+                        &quot;class&quot; : 1280,<br/>
+                        &quot;desc&quot; : &quot;RAM controller&quot;<br/>
+                    },<br/>
+                    &quot;id&quot; : {<br/>
+                        &quot;device&quot; : 6900,<br/>
+                        &quot;vendor&quot; : 4098<br/>
+                    },<br/>
+                    &quot;function&quot; : 0,<br/>
+                    &quot;regions&quot; : [<br/>
+                        {<br/>
+                            &quot;bar&quot; : 0,<br/>
+                            &quot;size&quot; : 32,<br/>
+                            &quot;address&quot; : 49280,<br/>
+                            &quot;type&quot; : &quot;io&quot;<br/>
+                        }<br/>
+                    ]<br/>
+                }<br/>
+            ]<br/>
+        }<br/>
+    ]<br/>
+} <code>Note:</code> This example has been shortened as the real response is too long. <code>quit</code> (Command) This command will cause the QEMU process to exit gracefully. While every attempt is made to send the QMP response before terminating, this is not guaranteed. When using this interface, a premature EOF would not be unexpected. <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;quit&quot;} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
+} <code>stop</code> (Command) Stop all guest VCPU execution. <code>Since:</code> 0.14.0 <code>Notes:</code> This function will succeed even if the guest is already in the stopped state. In &#8220;inmigrate&#8221; state, it will ensure that the guest remains paused once migration finishes, as if the -S option was passed on the command line. <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;stop&quot;} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
+} <code>system_reset</code> (Command) Performs a hard reset of a guest. <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;system_reset&quot;} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
+} <code>system_powerdown</code> (Command) Requests that a guest perform a powerdown operation. <code>Since:</code> 0.14.0 <code>Notes:</code> A guest may or may not respond to this command. This command returning does not indicate that a guest has accepted the request or that it has shut down. Many guests will respond to this command by prompting the user in some way. <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;system_powerdown&quot;} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
 } <code>memsave</code> (Command) Save a portion of guest memory to a file. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;val: int&quot;</dt>
@@ -7754,15 +7754,15 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dt>&quot;filename: string&quot;</dt>
 <dd>the file to save the memory to as binary data</dd>
 <dt>&quot;cpu-index: int&quot; (optional)</dt>
-<dd>the index of the virtual <font SIZE="-1">CPU</font> to use for translating the virtual address (defaults to <font SIZE="-1">CPU 0</font>)</dd></dl>
-<p> <code>Returns:</code> Nothing on success <code>Since:</code> 0.14.0 <code>Notes:</code> Errors were not reliably returned until 1.1 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;memsave&quot;,<br />
-   &quot;arguments&quot; : {&quot;val&quot; : 10,<br />
-                  &quot;size&quot; : 100,<br />
-                  &quot;filename&quot; : &quot;/tmp/virtual-mem-dump&quot;}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
+<dd>the index of the virtual CPU to use for translating the virtual address (defaults to CPU 0)</dd></dl>
+<p> <code>Returns:</code> Nothing on success <code>Since:</code> 0.14.0 <code>Notes:</code> Errors were not reliably returned until 1.1 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;memsave&quot;,<br/>
+   &quot;arguments&quot; : {&quot;val&quot; : 10,<br/>
+                  &quot;size&quot; : 100,<br/>
+                  &quot;filename&quot; : &quot;/tmp/virtual-mem-dump&quot;}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
 } <code>pmemsave</code> (Command) Save a portion of guest physical memory to a file. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;val: int&quot;</dt>
@@ -7771,157 +7771,157 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dd>the size of memory region to save</dd>
 <dt>&quot;filename: string&quot;</dt>
 <dd>the file to save the memory to as binary data</dd></dl>
-<p> <code>Returns:</code> Nothing on success <code>Since:</code> 0.14.0 <code>Notes:</code> Errors were not reliably returned until 1.1 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;pmemsave&quot;,<br />
-   &quot;arguments&quot; : {&quot;val&quot; : 10,<br />
-                  &quot;size&quot; : 100,<br />
-                  &quot;filename&quot; : &quot;/tmp/physical-mem-dump&quot;}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
-} <code>cont</code> (Command) Resume guest <font SIZE="-1">VCPU</font> execution. <code>Since:</code> 0.14.0 <code>Returns:</code> If successful, nothing <code>Notes:</code> This command will succeed if the guest is currently running. It will also succeed if the guest is in the &#8220;inmigrate&#8221; state; in this case, the effect of the command is to make sure the guest starts once migration finishes, removing the effect of the -S command line option if it was passed. <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;cont&quot;} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
-} <code>x-exit-preconfig</code> (Command) Exit from &#8220;preconfig&#8221; state This command makes <font SIZE="-1">QEMU</font> exit the preconfig state and proceed with <font SIZE="-1">VM</font> initialization using configuration data provided on the command line and via the <font SIZE="-1">QMP</font> monitor during the preconfig state. The command is only available during the preconfig state (i.e. when the &#8211;preconfig command line option was in use). Since 3.0 <code>Returns:</code> nothing <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;x-exit-preconfig&quot;} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
-} <code>system_wakeup</code> (Command) Wake up guest from suspend. If the guest has wake-up from suspend support enabled (wakeup-suspend-support flag from query-current-machine), wake-up guest from suspend if the guest is in <font SIZE="-1">SUSPENDED</font> state. Return an error otherwise. <code>Since:</code> 1.1 <code>Returns:</code> nothing. <code>Note:</code> prior to 4.0, this command does nothing in case the guest isn&#8217;t suspended. <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;system_wakeup&quot;} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
-} <code>inject-nmi</code> (Command) Injects a Non-Maskable Interrupt into the default <font SIZE="-1">CPU</font> (x86/s390) or all CPUs (ppc64). The command fails when the guest doesn&#8217;t support injecting. <code>Returns:</code> If successful, nothing <code>Since:</code> 0.14.0 <code>Note:</code> prior to 2.1, this command was only supported for x86 and s390 VMs <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;inject-nmi&quot;} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
+<p> <code>Returns:</code> Nothing on success <code>Since:</code> 0.14.0 <code>Notes:</code> Errors were not reliably returned until 1.1 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;pmemsave&quot;,<br/>
+   &quot;arguments&quot; : {&quot;val&quot; : 10,<br/>
+                  &quot;size&quot; : 100,<br/>
+                  &quot;filename&quot; : &quot;/tmp/physical-mem-dump&quot;}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
+} <code>cont</code> (Command) Resume guest VCPU execution. <code>Since:</code> 0.14.0 <code>Returns:</code> If successful, nothing <code>Notes:</code> This command will succeed if the guest is currently running. It will also succeed if the guest is in the &#8220;inmigrate&#8221; state; in this case, the effect of the command is to make sure the guest starts once migration finishes, removing the effect of the -S command line option if it was passed. <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;cont&quot;} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
+} <code>x-exit-preconfig</code> (Command) Exit from &#8220;preconfig&#8221; state This command makes QEMU exit the preconfig state and proceed with VM initialization using configuration data provided on the command line and via the QMP monitor during the preconfig state. The command is only available during the preconfig state (i.e. when the &#8211;preconfig command line option was in use). Since 3.0 <code>Returns:</code> nothing <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;x-exit-preconfig&quot;} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
+} <code>system_wakeup</code> (Command) Wake up guest from suspend. If the guest has wake-up from suspend support enabled (wakeup-suspend-support flag from query-current-machine), wake-up guest from suspend if the guest is in SUSPENDED state. Return an error otherwise. <code>Since:</code> 1.1 <code>Returns:</code> nothing. <code>Note:</code> prior to 4.0, this command does nothing in case the guest isn&#8217;t suspended. <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;system_wakeup&quot;} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
+} <code>inject-nmi</code> (Command) Injects a Non-Maskable Interrupt into the default CPU (x86/s390) or all CPUs (ppc64). The command fails when the guest doesn&#8217;t support injecting. <code>Returns:</code> If successful, nothing <code>Since:</code> 0.14.0 <code>Note:</code> prior to 2.1, this command was only supported for x86 and s390 VMs <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;inject-nmi&quot;} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
 } <code>balloon</code> (Command) Request the balloon driver to change its balloon size. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;value: int&quot;</dt>
 <dd>the target size of the balloon in bytes</dd></dl>
-<p> <code>Returns:</code> Nothing on success If the balloon driver is enabled but not functional because the <font SIZE="-1">KVM</font> kernel module cannot support it, KvmMissingCap If no balloon device is present, DeviceNotActive <code>Notes:</code> This command just issues a request to the guest. When it returns, the balloon size may not have changed. A guest can change the balloon size independent of this command. <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;balloon&quot;, &quot;arguments&quot; : {&quot;value&quot; : 536870912}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
+<p> <code>Returns:</code> Nothing on success If the balloon driver is enabled but not functional because the KVM kernel module cannot support it, KvmMissingCap If no balloon device is present, DeviceNotActive <code>Notes:</code> This command just issues a request to the guest. When it returns, the balloon size may not have changed. A guest can change the balloon size independent of this command. <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;balloon&quot;, &quot;arguments&quot; : {&quot;value&quot; : 536870912}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
 } <code>human-monitor-command</code> (Command) Execute a command on the human monitor and return the output. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;command-line: string&quot;</dt>
 <dd>the command to execute in the human monitor</dd>
 <dt>&quot;cpu-index: int&quot; (optional)</dt>
-<dd>The <font SIZE="-1">CPU</font> to use for commands that require an implicit <font SIZE="-1">CPU</font></dd></dl>
+<dd>The CPU to use for commands that require an implicit CPU</dd></dl>
 <p> <code>Features:</code></p>
 <dl>
 <dt>&quot;savevm-monitor-nodes&quot;</dt>
-<dd>If present, <font SIZE="-1">HMP</font> command savevm only snapshots monitor-owned nodes if they have no parents. This allows the use of &#8216;savevm&#8217; with -blockdev. (since 4.2)</dd></dl>
-<p> <code>Returns:</code> the output of the command as a string <code>Since:</code> 0.14.0 <code>Notes:</code> This command only exists as a stop-gap. Its use is highly discouraged. The semantics of this command are not guaranteed: this means that command names, arguments and responses can change or be removed at <font SIZE="-1">ANY</font> time. Applications that rely on long term stability guarantees should <font SIZE="-1">NOT</font> use this command. Known limitations:</p>
+<dd>If present, HMP command savevm only snapshots monitor-owned nodes if they have no parents. This allows the use of &#8216;savevm&#8217; with -blockdev. (since 4.2)</dd></dl>
+<p> <code>Returns:</code> the output of the command as a string <code>Since:</code> 0.14.0 <code>Notes:</code> This command only exists as a stop-gap. Its use is highly discouraged. The semantics of this command are not guaranteed: this means that command names, arguments and responses can change or be removed at ANY time. Applications that rely on long term stability guarantees should NOT use this command. Known limitations:</p>
 <dl>
 <dt>&bull;</dt>
 <dd>This command is stateless, this means that commands that depend on state information (such as getfd) might not work</dd>
 <dt>&bull;</dt>
 <dd>Commands that prompt the user for data don&#8217;t currently work</dd></dl>
-<p> <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;human-monitor-command&quot;,<br />
-   &quot;arguments&quot; : {&quot;command-line&quot; : &quot;info kvm&quot;}} &lt; &#8211;<br />
-{<br />
+<p> <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;human-monitor-command&quot;,<br/>
+   &quot;arguments&quot; : {&quot;command-line&quot; : &quot;info kvm&quot;}} &lt; &#8211;<br/>
+{<br/>
     &quot;return&quot; : &quot;kvm support: enabled
-&quot;<br />
+&quot;<br/>
 } <code>change</code> (Command) This command is multiple commands multiplexed together. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;device: string&quot;</dt>
 <dd>This is normally the name of a block device but it may also be &#8216;vnc&#8217;. when it&#8217;s &#8216;vnc&#8217;, then sub command depends on <tt>&quot;target&quot;</tt></dd>
 <dt>&quot;target: string&quot;</dt>
-<dd>If <tt>&quot;device&quot;</tt> is a block device, then this is the new filename. If <tt>&quot;device&quot;</tt> is &#8216;vnc&#8217;, then if the value &#8216;password&#8217; selects the vnc change password command. Otherwise, this specifies a new server <font SIZE="-1">URI</font> address to listen to for <font SIZE="-1">VNC</font> connections.</dd>
+<dd>If <tt>&quot;device&quot;</tt> is a block device, then this is the new filename. If <tt>&quot;device&quot;</tt> is &#8216;vnc&#8217;, then if the value &#8216;password&#8217; selects the vnc change password command. Otherwise, this specifies a new server URI address to listen to for VNC connections.</dd>
 <dt>&quot;arg: string&quot; (optional)</dt>
-<dd>If <tt>&quot;device&quot;</tt> is a block device, then this is an optional format to open the device with. If <tt>&quot;device&quot;</tt> is &#8216;vnc&#8217; and <tt>&quot;target&quot;</tt> is &#8216;password&#8217;, this is the new <font SIZE="-1">VNC</font> password to set. See change-vnc-password for additional notes.</dd></dl>
-<p> <code>Returns:</code> Nothing on success. If <tt>&quot;device&quot;</tt> is not a valid block device, DeviceNotFound <code>Notes:</code> This interface is deprecated, and it is strongly recommended that you avoid using it. For changing block devices, use blockdev-change-medium; for changing <font SIZE="-1">VNC</font> parameters, use change-vnc-password. <code>Since:</code> 0.14.0 <code>Example:</code> 1. Change a removable medium</p>
-<p>        -&gt;{&quot;execute&quot; : &quot;change&quot;,<br />
-           &quot;arguments&quot; : {&quot;device&quot; : &quot;ide1-cd0&quot;,<br />
-                          &quot;target&quot; : &quot;/srv/images/Fedora-12-x86_64-DVD.iso&quot;}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
+<dd>If <tt>&quot;device&quot;</tt> is a block device, then this is an optional format to open the device with. If <tt>&quot;device&quot;</tt> is &#8216;vnc&#8217; and <tt>&quot;target&quot;</tt> is &#8216;password&#8217;, this is the new VNC password to set. See change-vnc-password for additional notes.</dd></dl>
+<p> <code>Returns:</code> Nothing on success. If <tt>&quot;device&quot;</tt> is not a valid block device, DeviceNotFound <code>Notes:</code> This interface is deprecated, and it is strongly recommended that you avoid using it. For changing block devices, use blockdev-change-medium; for changing VNC parameters, use change-vnc-password. <code>Since:</code> 0.14.0 <code>Example:</code> 1. Change a removable medium</p>
+<p>        -&gt;{&quot;execute&quot; : &quot;change&quot;,<br/>
+           &quot;arguments&quot; : {&quot;device&quot; : &quot;ide1-cd0&quot;,<br/>
+                          &quot;target&quot; : &quot;/srv/images/Fedora-12-x86_64-DVD.iso&quot;}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
 }</p>
 <p>2. Change VNC password</p>
-<p>        -&gt;{&quot;execute&quot; : &quot;change&quot;,<br />
-           &quot;arguments&quot; : {&quot;device&quot; : &quot;vnc&quot;, &quot;target&quot; : &quot;password&quot;, &quot;arg&quot; : &quot;foobar1&quot;}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
+<p>        -&gt;{&quot;execute&quot; : &quot;change&quot;,<br/>
+           &quot;arguments&quot; : {&quot;device&quot; : &quot;vnc&quot;, &quot;target&quot; : &quot;password&quot;, &quot;arg&quot; : &quot;foobar1&quot;}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
 } <code>xen-set-global-dirty-log</code> (Command) Enable or disable the global dirty log mode. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;enable: boolean&quot;</dt>
 <dd>true to enable, false to disable.</dd></dl>
-<p> <code>Returns:</code> nothing <code>Since:</code> 1.3 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;xen-set-global-dirty-log&quot;,<br />
-   &quot;arguments&quot; : {&quot;enable&quot; : true}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
-} <code>getfd</code> (Command) Receive a file descriptor via <font SIZE="-1">SCM</font> rights and assign it a name <code>Arguments:</code></p>
+<p> <code>Returns:</code> nothing <code>Since:</code> 1.3 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;xen-set-global-dirty-log&quot;,<br/>
+   &quot;arguments&quot; : {&quot;enable&quot; : true}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
+} <code>getfd</code> (Command) Receive a file descriptor via SCM rights and assign it a name <code>Arguments:</code></p>
 <dl>
 <dt>&quot;fdname: string&quot;</dt>
 <dd>file descriptor name</dd></dl>
-<p> <code>Returns:</code> Nothing on success <code>Since:</code> 0.14.0 <code>Notes:</code> If <tt>&quot;fdname&quot;</tt> already exists, the file descriptor assigned to it will be closed and replaced by the received file descriptor. The &#8216;closefd&#8217; command can be used to explicitly close the file descriptor when it is no longer needed. <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;getfd&quot;, &quot;arguments&quot; : {&quot;fdname&quot; : &quot;fd1&quot;}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
-} <code>closefd</code> (Command) Close a file descriptor previously passed via <font SIZE="-1">SCM</font> rights <code>Arguments:</code></p>
+<p> <code>Returns:</code> Nothing on success <code>Since:</code> 0.14.0 <code>Notes:</code> If <tt>&quot;fdname&quot;</tt> already exists, the file descriptor assigned to it will be closed and replaced by the received file descriptor. The &#8216;closefd&#8217; command can be used to explicitly close the file descriptor when it is no longer needed. <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;getfd&quot;, &quot;arguments&quot; : {&quot;fdname&quot; : &quot;fd1&quot;}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
+} <code>closefd</code> (Command) Close a file descriptor previously passed via SCM rights <code>Arguments:</code></p>
 <dl>
 <dt>&quot;fdname: string&quot;</dt>
 <dd>file descriptor name</dd></dl>
-<p> <code>Returns:</code> Nothing on success <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;closefd&quot;, &quot;arguments&quot; : {&quot;fdname&quot; : &quot;fd1&quot;}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
+<p> <code>Returns:</code> Nothing on success <code>Since:</code> 0.14.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;closefd&quot;, &quot;arguments&quot; : {&quot;fdname&quot; : &quot;fd1&quot;}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
 } <code>MemoryInfo</code> (Object) Actual memory information in bytes. <code>Members:</code></p>
 <dl>
 <dt>&quot;base-memory: int&quot;</dt>
 <dd>size of &#8220;base&#8221; memory specified with command line option -m.</dd>
 <dt>&quot;plugged-memory: int&quot; (optional)</dt>
-<dd>size of memory that can be hot-unplugged. This field is omitted if target doesn&#8217;t support memory hotplug (i.e. <font SIZE="-1">CONFIG_MEM_DEVICE</font> not defined at build time).</dd></dl>
-<p> <code>Since:</code> 2.11.0 <code>query-memory-size-summary</code> (Command) Return the amount of initially allocated and present hotpluggable (if enabled) memory in bytes. <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-memory-size-summary&quot;} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-        &quot;base-memory&quot; : 4294967296, &quot;plugged-memory&quot; : 0<br />
-    }<br />
+<dd>size of memory that can be hot-unplugged. This field is omitted if target doesn&#8217;t support memory hotplug (i.e. CONFIG_MEM_DEVICE not defined at build time).</dd></dl>
+<p> <code>Since:</code> 2.11.0 <code>query-memory-size-summary</code> (Command) Return the amount of initially allocated and present hotpluggable (if enabled) memory in bytes. <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-memory-size-summary&quot;} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+        &quot;base-memory&quot; : 4294967296, &quot;plugged-memory&quot; : 0<br/>
+    }<br/>
 } <code>Since:</code> 2.11.0 <code>AddfdInfo</code> (Object) Information about a file descriptor that was added to an fd set. <code>Members:</code></p>
 <dl>
 <dt>&quot;fdset-id: int&quot;</dt>
-<dd>The <font SIZE="-1">ID</font> of the fd set that <tt>&quot;fd&quot;</tt> was added to.</dd>
+<dd>The ID of the fd set that <tt>&quot;fd&quot;</tt> was added to.</dd>
 <dt>&quot;fd: int&quot;</dt>
-<dd>The file descriptor that was received via <font SIZE="-1">SCM</font> rights and added to the fd set.</dd></dl>
-<p> <code>Since:</code> 1.2.0 <code>add-fd</code> (Command) Add a file descriptor, that was passed via <font SIZE="-1">SCM</font> rights, to an fd set. <code>Arguments:</code></p>
+<dd>The file descriptor that was received via SCM rights and added to the fd set.</dd></dl>
+<p> <code>Since:</code> 1.2.0 <code>add-fd</code> (Command) Add a file descriptor, that was passed via SCM rights, to an fd set. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;fdset-id: int&quot; (optional)</dt>
-<dd>The <font SIZE="-1">ID</font> of the fd set to add the file descriptor to.</dd>
+<dd>The ID of the fd set to add the file descriptor to.</dd>
 <dt>&quot;opaque: string&quot; (optional)</dt>
 <dd>A free-form string that can be used to describe the fd.</dd></dl>
-<p> <code>Returns:</code> <tt>&quot;AddfdInfo&quot;</tt> on success If file descriptor was not received, FdNotSupplied If <tt>&quot;fdset-id&quot;</tt> is a negative value, InvalidParameterValue <code>Notes:</code> The list of fd sets is shared by all monitor connections. If <tt>&quot;fdset-id&quot;</tt> is not specified, a new fd set will be created. <code>Since:</code> 1.2.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;add-fd&quot;, &quot;arguments&quot; : {&quot;fdset-id&quot; : 1}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-        &quot;fdset-id&quot; : 1, &quot;fd&quot; : 3<br />
-    }<br />
+<p> <code>Returns:</code> <tt>&quot;AddfdInfo&quot;</tt> on success If file descriptor was not received, FdNotSupplied If <tt>&quot;fdset-id&quot;</tt> is a negative value, InvalidParameterValue <code>Notes:</code> The list of fd sets is shared by all monitor connections. If <tt>&quot;fdset-id&quot;</tt> is not specified, a new fd set will be created. <code>Since:</code> 1.2.0 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;add-fd&quot;, &quot;arguments&quot; : {&quot;fdset-id&quot; : 1}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+        &quot;fdset-id&quot; : 1, &quot;fd&quot; : 3<br/>
+    }<br/>
 } <code>remove-fd</code> (Command) Remove a file descriptor from an fd set. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;fdset-id: int&quot;</dt>
-<dd>The <font SIZE="-1">ID</font> of the fd set that the file descriptor belongs to.</dd>
+<dd>The ID of the fd set that the file descriptor belongs to.</dd>
 <dt>&quot;fd: int&quot; (optional)</dt>
 <dd>The file descriptor that is to be removed.</dd></dl>
-<p> <code>Returns:</code> Nothing on success If <tt>&quot;fdset-id&quot;</tt> or <tt>&quot;fd&quot;</tt> is not found, FdNotFound <code>Since:</code> 1.2.0 <code>Notes:</code> The list of fd sets is shared by all monitor connections. If <tt>&quot;fd&quot;</tt> is not specified, all file descriptors in <tt>&quot;fdset-id&quot;</tt> will be removed. <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;remove-fd&quot;, &quot;arguments&quot; : {&quot;fdset-id&quot; : 1, &quot;fd&quot; : 3}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
+<p> <code>Returns:</code> Nothing on success If <tt>&quot;fdset-id&quot;</tt> or <tt>&quot;fd&quot;</tt> is not found, FdNotFound <code>Since:</code> 1.2.0 <code>Notes:</code> The list of fd sets is shared by all monitor connections. If <tt>&quot;fd&quot;</tt> is not specified, all file descriptors in <tt>&quot;fdset-id&quot;</tt> will be removed. <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;remove-fd&quot;, &quot;arguments&quot; : {&quot;fdset-id&quot; : 1, &quot;fd&quot; : 3}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
 } <code>FdsetFdInfo</code> (Object) Information about a file descriptor that belongs to an fd set. <code>Members:</code></p>
 <dl>
 <dt>&quot;fd: int&quot;</dt>
@@ -7931,47 +7931,47 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <p> <code>Since:</code> 1.2.0 <code>FdsetInfo</code> (Object) Information about an fd set. <code>Members:</code></p>
 <dl>
 <dt>&quot;fdset-id: int&quot;</dt>
-<dd>The <font SIZE="-1">ID</font> of the fd set.</dd>
+<dd>The ID of the fd set.</dd>
 <dt>&quot;fds: array of FdsetFdInfo&quot;</dt>
 <dd>A list of file descriptors that belong to this fd set.</dd></dl>
-<p> <code>Since:</code> 1.2.0 <code>query-fdsets</code> (Command) Return information describing all fd sets. <code>Returns:</code> A list of <tt>&quot;FdsetInfo&quot;</tt> <code>Since:</code> 1.2.0 <code>Note:</code> The list of fd sets is shared by all monitor connections. <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-fdsets&quot;} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot; : [<br />
-        {<br />
-            &quot;fds&quot; : [<br />
-                {<br />
-                    &quot;fd&quot; : 30,<br />
-                    &quot;opaque&quot; : &quot;rdonly:/path/to/file&quot;<br />
-                },<br />
-                {<br />
-                    &quot;fd&quot; : 24,<br />
-                    &quot;opaque&quot; : &quot;rdwr:/path/to/file&quot;<br />
-                }<br />
-            ],<br />
-            &quot;fdset-id&quot; : 1<br />
-        },<br />
-        {<br />
-            &quot;fds&quot; : [<br />
-                {<br />
-                    &quot;fd&quot; : 28<br />
-                },<br />
-                {<br />
-                    &quot;fd&quot; : 29<br />
-                }<br />
-            ],<br />
-            &quot;fdset-id&quot; : 0<br />
-        }<br />
-    ]<br />
-} <code>AcpiTableOptions</code> (Object) Specify an <font SIZE="-1">ACPI</font> table on the command line to load. At most one of <tt>&quot;file&quot;</tt> and <tt>&quot;data&quot;</tt> can be specified. The list of files specified by any one of them is loaded and concatenated in order. If both are omitted, <tt>&quot;data&quot;</tt> is implied. Other fields / optargs can be used to override fields of the generic <font SIZE="-1">ACPI</font> table header; refer to the <font SIZE="-1">ACPI</font> specification 5.0, section 5.2.6 System Description Table Header. If a header field is not overridden, then the corresponding value from the concatenated blob is used (in case of <tt>&quot;file&quot;</tt>), or it is filled in with a hard-coded value (in case of <tt>&quot;data&quot;</tt>). String fields are copied into the matching <font SIZE="-1">ACPI</font> member from lowest address upwards, and silently truncated / NUL-padded to length. <code>Members:</code></p>
+<p> <code>Since:</code> 1.2.0 <code>query-fdsets</code> (Command) Return information describing all fd sets. <code>Returns:</code> A list of <tt>&quot;FdsetInfo&quot;</tt> <code>Since:</code> 1.2.0 <code>Note:</code> The list of fd sets is shared by all monitor connections. <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-fdsets&quot;} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot; : [<br/>
+        {<br/>
+            &quot;fds&quot; : [<br/>
+                {<br/>
+                    &quot;fd&quot; : 30,<br/>
+                    &quot;opaque&quot; : &quot;rdonly:/path/to/file&quot;<br/>
+                },<br/>
+                {<br/>
+                    &quot;fd&quot; : 24,<br/>
+                    &quot;opaque&quot; : &quot;rdwr:/path/to/file&quot;<br/>
+                }<br/>
+            ],<br/>
+            &quot;fdset-id&quot; : 1<br/>
+        },<br/>
+        {<br/>
+            &quot;fds&quot; : [<br/>
+                {<br/>
+                    &quot;fd&quot; : 28<br/>
+                },<br/>
+                {<br/>
+                    &quot;fd&quot; : 29<br/>
+                }<br/>
+            ],<br/>
+            &quot;fdset-id&quot; : 0<br/>
+        }<br/>
+    ]<br/>
+} <code>AcpiTableOptions</code> (Object) Specify an ACPI table on the command line to load. At most one of <tt>&quot;file&quot;</tt> and <tt>&quot;data&quot;</tt> can be specified. The list of files specified by any one of them is loaded and concatenated in order. If both are omitted, <tt>&quot;data&quot;</tt> is implied. Other fields / optargs can be used to override fields of the generic ACPI table header; refer to the ACPI specification 5.0, section 5.2.6 System Description Table Header. If a header field is not overridden, then the corresponding value from the concatenated blob is used (in case of <tt>&quot;file&quot;</tt>), or it is filled in with a hard-coded value (in case of <tt>&quot;data&quot;</tt>). String fields are copied into the matching ACPI member from lowest address upwards, and silently truncated / NUL-padded to length. <code>Members:</code></p>
 <dl>
 <dt>&quot;sig: string&quot; (optional)</dt>
 <dd>table signature / identifier (4 bytes)</dd>
 <dt>&quot;rev: int&quot; (optional)</dt>
 <dd>table revision number (dependent on signature, 1 byte)</dd>
 <dt>&quot;oem_id: string&quot; (optional)</dt>
-<dd><font SIZE="-1">OEM</font> identifier (6 bytes)</dd>
+<dd>OEM identifier (6 bytes)</dd>
 <dt>&quot;oem_table_id: string&quot; (optional)</dt>
-<dd><font SIZE="-1">OEM</font> table identifier (8 bytes)</dd>
+<dd>OEM table identifier (8 bytes)</dd>
 <dt>&quot;oem_rev: int&quot; (optional)</dt>
 <dd>OEM-supplied revision number (4 bytes)</dd>
 <dt>&quot;asl_compiler_id: string&quot; (optional)</dt>
@@ -7979,9 +7979,9 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dt>&quot;asl_compiler_rev: int&quot; (optional)</dt>
 <dd>revision number of the utility that created the table (4 bytes)</dd>
 <dt>&quot;file: string&quot; (optional)</dt>
-<dd>colon (:) separated list of pathnames to load and concatenate as table data. The resultant binary blob is expected to have an <font SIZE="-1">ACPI</font> table header. At least one file is required. This field excludes <tt>&quot;data&quot;</tt>.</dd>
+<dd>colon (:) separated list of pathnames to load and concatenate as table data. The resultant binary blob is expected to have an ACPI table header. At least one file is required. This field excludes <tt>&quot;data&quot;</tt>.</dd>
 <dt>&quot;data: string&quot; (optional)</dt>
-<dd>colon (:) separated list of pathnames to load and concatenate as table data. The resultant binary blob must not have an <font SIZE="-1">ACPI</font> table header. At least one file is required. This field excludes <tt>&quot;file&quot;</tt>.</dd></dl>
+<dd>colon (:) separated list of pathnames to load and concatenate as table data. The resultant binary blob must not have an ACPI table header. At least one file is required. This field excludes <tt>&quot;file&quot;</tt>.</dd></dl>
 <p> <code>Since:</code> 1.5 <code>CommandLineParameterType</code> (Enum) Possible types for an option parameter. <code>Values:</code></p>
 <dl>
 <dt>&quot;string&quot;</dt>
@@ -8012,28 +8012,28 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dl>
 <dt>&quot;option: string&quot; (optional)</dt>
 <dd>option name</dd></dl>
-<p> <code>Returns:</code> list of <tt>&quot;CommandLineOptionInfo&quot;</tt> for all options (or for the given <tt>&quot;option&quot;</tt>). Returns an error if the given <tt>&quot;option&quot;</tt> doesn&#8217;t exist. <code>Since:</code> 1.5 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-command-line-options&quot;,<br />
-   &quot;arguments&quot; : {&quot;option&quot; : &quot;option-rom&quot;}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot; : [<br />
-        {<br />
-            &quot;parameters&quot; : [<br />
-                {<br />
-                    &quot;name&quot; : &quot;romfile&quot;,<br />
-                    &quot;type&quot; : &quot;string&quot;<br />
-                },<br />
-                {<br />
-                    &quot;name&quot; : &quot;bootindex&quot;,<br />
-                    &quot;type&quot; : &quot;number&quot;<br />
-                }<br />
-            ],<br />
-            &quot;option&quot; : &quot;option-rom&quot;<br />
-        }<br />
-    ]<br />
+<p> <code>Returns:</code> list of <tt>&quot;CommandLineOptionInfo&quot;</tt> for all options (or for the given <tt>&quot;option&quot;</tt>). Returns an error if the given <tt>&quot;option&quot;</tt> doesn&#8217;t exist. <code>Since:</code> 1.5 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-command-line-options&quot;,<br/>
+   &quot;arguments&quot; : {&quot;option&quot; : &quot;option-rom&quot;}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot; : [<br/>
+        {<br/>
+            &quot;parameters&quot; : [<br/>
+                {<br/>
+                    &quot;name&quot; : &quot;romfile&quot;,<br/>
+                    &quot;type&quot; : &quot;string&quot;<br/>
+                },<br/>
+                {<br/>
+                    &quot;name&quot; : &quot;bootindex&quot;,<br/>
+                    &quot;type&quot; : &quot;number&quot;<br/>
+                }<br/>
+            ],<br/>
+            &quot;option&quot; : &quot;option-rom&quot;<br/>
+        }<br/>
+    ]<br/>
 } <code>PCDIMMDeviceInfo</code> (Object) PCDIMMDevice state information <code>Members:</code></p>
 <dl>
 <dt>&quot;id: string&quot; (optional)</dt>
-<dd>device&#8217;s <font SIZE="-1">ID</font></dd>
+<dd>device&#8217;s ID</dd>
 <dt>&quot;addr: int&quot;</dt>
 <dd>physical address, where device is mapped</dd>
 <dt>&quot;size: int&quot;</dt>
@@ -8041,7 +8041,7 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dt>&quot;slot: int&quot;</dt>
 <dd>slot number at which device is plugged in</dd>
 <dt>&quot;node: int&quot;</dt>
-<dd><font SIZE="-1">NUMA</font> node number where device is plugged in</dd>
+<dd>NUMA node number where device is plugged in</dd>
 <dt>&quot;memdev: string&quot;</dt>
 <dd>memory backend linked with device</dd>
 <dt>&quot;hotplugged: boolean&quot;</dt>
@@ -8051,7 +8051,7 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <p> <code>Since:</code> 2.1 <code>VirtioPMEMDeviceInfo</code> (Object) VirtioPMEM state information <code>Members:</code></p>
 <dl>
 <dt>&quot;id: string&quot; (optional)</dt>
-<dd>device&#8217;s <font SIZE="-1">ID</font></dd>
+<dd>device&#8217;s ID</dd>
 <dt>&quot;memaddr: int&quot;</dt>
 <dd>physical address in memory, where device is mapped</dd>
 <dt>&quot;size: int&quot;</dt>
@@ -8068,19 +8068,19 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dd>
 </dd><dt>&quot;data: VirtioPMEMDeviceInfo&quot; when &quot;type&quot; is &quot;virtio-pmem&quot;</dt>
 <dd></dd></dl>
-<p> <code>Since:</code> 2.1 <code>query-memory-devices</code> (Command) Lists available memory devices and their state <code>Since:</code> 2.1 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-memory-devices&quot;} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot; : [ {&quot;data&quot; :<br />
-                      {&quot;addr&quot; : 5368709120,<br />
-                       &quot;hotpluggable&quot; : true,<br />
-                       &quot;hotplugged&quot; : true,<br />
-                       &quot;id&quot; : &quot;d1&quot;,<br />
-                       &quot;memdev&quot; : &quot;/objects/memX&quot;,<br />
-                       &quot;node&quot; : 0,<br />
-                       &quot;size&quot; : 1073741824,<br />
-                       &quot;slot&quot; : 0},<br />
-                  &quot;type&quot; : &quot;dimm&quot;} ]<br />
-} <font SIZE="-1"><code>MEM_UNPLUG_ERROR</code></font> (Event) Emitted when memory hot unplug error occurs. <code>Arguments:</code></p>
+<p> <code>Since:</code> 2.1 <code>query-memory-devices</code> (Command) Lists available memory devices and their state <code>Since:</code> 2.1 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-memory-devices&quot;} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot; : [ {&quot;data&quot; :<br/>
+                      {&quot;addr&quot; : 5368709120,<br/>
+                       &quot;hotpluggable&quot; : true,<br/>
+                       &quot;hotplugged&quot; : true,<br/>
+                       &quot;id&quot; : &quot;d1&quot;,<br/>
+                       &quot;memdev&quot; : &quot;/objects/memX&quot;,<br/>
+                       &quot;node&quot; : 0,<br/>
+                       &quot;size&quot; : 1073741824,<br/>
+                       &quot;slot&quot; : 0},<br/>
+                  &quot;type&quot; : &quot;dimm&quot;} ]<br/>
+} <code>MEM_UNPLUG_ERROR</code> (Event) Emitted when memory hot unplug error occurs. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;device: string&quot;</dt>
 <dd>device name</dd>
@@ -8097,29 +8097,29 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dt>&quot;DIMM&quot;</dt>
 <dd>memory slot</dd>
 <dt>&quot;CPU&quot;</dt>
-<dd>logical <font SIZE="-1">CPU</font> slot (since 2.7)</dd></dl>
-<p> <code>ACPIOSTInfo</code> (Object) <font SIZE="-1">OSPM</font> Status Indication for a device For description of possible values of <tt>&quot;source&quot;</tt> and <tt>&quot;status&quot;</tt> fields see &#8220;_OST (<font SIZE="-1">OSPM</font> Status Indication)&#8221; chapter of <font SIZE="-1">ACPI5.0</font> spec. <code>Members:</code></p>
+<dd>logical CPU slot (since 2.7)</dd></dl>
+<p> <code>ACPIOSTInfo</code> (Object) OSPM Status Indication for a device For description of possible values of <tt>&quot;source&quot;</tt> and <tt>&quot;status&quot;</tt> fields see &#8220;_OST (OSPM Status Indication)&#8221; chapter of ACPI5.0 spec. <code>Members:</code></p>
 <dl>
 <dt>&quot;device: string&quot; (optional)</dt>
-<dd>device <font SIZE="-1">ID</font> associated with slot</dd>
+<dd>device ID associated with slot</dd>
 <dt>&quot;slot: string&quot;</dt>
-<dd>slot <font SIZE="-1">ID,</font> unique per slot of a given <tt>&quot;slot-type&quot;</tt></dd>
+<dd>slot ID, unique per slot of a given <tt>&quot;slot-type&quot;</tt></dd>
 <dt>&quot;slot-type: ACPISlotType&quot;</dt>
 <dd>type of the slot</dd>
 <dt>&quot;source: int&quot;</dt>
 <dd>an integer containing the source event</dd>
 <dt>&quot;status: int&quot;</dt>
 <dd>an integer containing the status code</dd></dl>
-<p> <code>Since:</code> 2.1 <code>query-acpi-ospm-status</code> (Command) Return a list of ACPIOSTInfo for devices that support status reporting via <font SIZE="-1">ACPI _OST</font> method. <code>Since:</code> 2.1 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-acpi-ospm-status&quot;} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot; : [ {&quot;device&quot; : &quot;d1&quot;, &quot;slot&quot; : &quot;0&quot;, &quot;slot-type&quot; : &quot;DIMM&quot;, &quot;source&quot; : 1, &quot;status&quot; : 0},<br />
-                 {&quot;slot&quot; : &quot;1&quot;, &quot;slot-type&quot; : &quot;DIMM&quot;, &quot;source&quot; : 0, &quot;status&quot; : 0},<br />
-                 {&quot;slot&quot; : &quot;2&quot;, &quot;slot-type&quot; : &quot;DIMM&quot;, &quot;source&quot; : 0, &quot;status&quot; : 0},<br />
-                 {&quot;slot&quot; : &quot;3&quot;, &quot;slot-type&quot; : &quot;DIMM&quot;, &quot;source&quot; : 0, &quot;status&quot; : 0} ]<br />
-} <font SIZE="-1"><code>ACPI_DEVICE_OST</code></font> (Event) Emitted when guest executes <font SIZE="-1">ACPI _OST</font> method. <code>Arguments:</code></p>
+<p> <code>Since:</code> 2.1 <code>query-acpi-ospm-status</code> (Command) Return a list of ACPIOSTInfo for devices that support status reporting via ACPI _OST method. <code>Since:</code> 2.1 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-acpi-ospm-status&quot;} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot; : [ {&quot;device&quot; : &quot;d1&quot;, &quot;slot&quot; : &quot;0&quot;, &quot;slot-type&quot; : &quot;DIMM&quot;, &quot;source&quot; : 1, &quot;status&quot; : 0},<br/>
+                 {&quot;slot&quot; : &quot;1&quot;, &quot;slot-type&quot; : &quot;DIMM&quot;, &quot;source&quot; : 0, &quot;status&quot; : 0},<br/>
+                 {&quot;slot&quot; : &quot;2&quot;, &quot;slot-type&quot; : &quot;DIMM&quot;, &quot;source&quot; : 0, &quot;status&quot; : 0},<br/>
+                 {&quot;slot&quot; : &quot;3&quot;, &quot;slot-type&quot; : &quot;DIMM&quot;, &quot;source&quot; : 0, &quot;status&quot; : 0} ]<br/>
+} <code>ACPI_DEVICE_OST</code> (Event) Emitted when guest executes ACPI _OST method. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;info: ACPIOSTInfo&quot;</dt>
-<dd><font SIZE="-1">OSPM</font> Status Indication</dd></dl>
+<dd>OSPM Status Indication</dd></dl>
 <p> <code>Since:</code> 2.1 <code>Example:</code> </p>
 <pre> &lt;- { &quot;event&quot;: &quot;ACPI_DEVICE_OST&quot;,
  &quot;data&quot;: { &quot;device&quot;: &quot;d1&quot;, &quot;slot&quot;: &quot;0&quot;,
@@ -8132,34 +8132,34 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dd>record mode. All non-deterministic data is written into the replay log.</dd>
 <dt>&quot;play&quot;</dt>
 <dd>replay mode. Non-deterministic data required for system execution is read from the log.</dd></dl>
-<p> <code>Since:</code> 2.5 <code>xen-load-devices-state</code> (Command) Load the state of all devices from file. The <font SIZE="-1">RAM</font> and the block devices of the <font SIZE="-1">VM</font> are not loaded by this command. <code>Arguments:</code></p>
+<p> <code>Since:</code> 2.5 <code>xen-load-devices-state</code> (Command) Load the state of all devices from file. The RAM and the block devices of the VM are not loaded by this command. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;filename: string&quot;</dt>
 <dd>the file to load the state of the devices from as binary data. See xen-save-devices-state.txt for a description of the binary format.</dd></dl>
-<p> <code>Since:</code> 2.7 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;xen-load-devices-state&quot;,<br />
-   &quot;arguments&quot; : {&quot;filename&quot; : &quot;/tmp/resume&quot;}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
-} <code>GuidInfo</code> (Object) <font SIZE="-1">GUID</font> information. <code>Members:</code></p>
+<p> <code>Since:</code> 2.7 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;xen-load-devices-state&quot;,<br/>
+   &quot;arguments&quot; : {&quot;filename&quot; : &quot;/tmp/resume&quot;}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
+} <code>GuidInfo</code> (Object) GUID information. <code>Members:</code></p>
 <dl>
 <dt>&quot;guid: string&quot;</dt>
 <dd>the globally unique identifier</dd></dl>
-<p> <code>Since:</code> 2.9 <code>query-vm-generation-id</code> (Command) Show Virtual Machine Generation <font SIZE="-1">ID</font> <code>Since:</code> 2.9 <font SIZE="-1"><code>RTC_CHANGE</code></font> (Event) Emitted when the guest changes the <font SIZE="-1">RTC</font> time. <code>Arguments:</code></p>
+<p> <code>Since:</code> 2.9 <code>query-vm-generation-id</code> (Command) Show Virtual Machine Generation ID <code>Since:</code> 2.9 <code>RTC_CHANGE</code> (Event) Emitted when the guest changes the RTC time. <code>Arguments:</code></p>
 <dl>
 <dt>&quot;offset: int&quot;</dt>
-<dd>offset between base <font SIZE="-1">RTC</font> clock (as specified by -rtc base), and new <font SIZE="-1">RTC</font> clock value</dd></dl>
+<dd>offset between base RTC clock (as specified by -rtc base), and new RTC clock value</dd></dl>
 <p> <code>Note:</code> This event is rate-limited. <code>Since:</code> 0.13.0 <code>Example:</code> </p>
 <pre> &lt;- { &quot;event&quot;: &quot;RTC_CHANGE&quot;,
  &quot;data&quot;: { &quot;offset&quot;: 78 },
  &quot;timestamp&quot;: { &quot;seconds&quot;: 1267020223, &quot;microseconds&quot;: 435656 } }</pre>
-<p><code>If:</code> <tt>&quot;defined(TARGET_ALPHA) || defined(TARGET_ARM) || defined(TARGET_HPPA) || defined(TARGET_I386) || defined(TARGET_MIPS) || defined(TARGET_MIPS64) || defined(TARGET_MOXIE) || defined(TARGET_PPC) || defined(TARGET_PPC64) || defined(TARGET_S390X) || defined(TARGET_SH4) || defined(TARGET_SPARC)&quot;</tt> <code>rtc-reset-reinjection</code> (Command) This command will reset the <font SIZE="-1">RTC</font> interrupt reinjection backlog. Can be used if another mechanism to synchronize guest time is in effect, for example <font SIZE="-1">QEMU</font> guest agent&#8217;s guest-set-time command. <code>Since:</code> 2.1 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;rtc-reset-reinjection&quot;} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
-} <code>If:</code> <tt>&quot;defined(TARGET_I386)&quot;</tt> <code>SevState</code> (Enum) An enumeration of <font SIZE="-1">SEV</font> state information used during <tt>&quot;query-sev&quot;</tt>. <code>Values:</code></p>
+<p><code>If:</code> <tt>&quot;defined(TARGET_ALPHA) || defined(TARGET_ARM) || defined(TARGET_HPPA) || defined(TARGET_I386) || defined(TARGET_MIPS) || defined(TARGET_MIPS64) || defined(TARGET_MOXIE) || defined(TARGET_PPC) || defined(TARGET_PPC64) || defined(TARGET_S390X) || defined(TARGET_SH4) || defined(TARGET_SPARC)&quot;</tt> <code>rtc-reset-reinjection</code> (Command) This command will reset the RTC interrupt reinjection backlog. Can be used if another mechanism to synchronize guest time is in effect, for example QEMU guest agent&#8217;s guest-set-time command. <code>Since:</code> 2.1 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;rtc-reset-reinjection&quot;} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
+} <code>If:</code> <tt>&quot;defined(TARGET_I386)&quot;</tt> <code>SevState</code> (Enum) An enumeration of SEV state information used during <tt>&quot;query-sev&quot;</tt>. <code>Values:</code></p>
 <dl>
 <dt>&quot;uninit&quot;</dt>
 <dd>The guest is uninitialized.</dd>
@@ -8173,72 +8173,72 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dd>The guest is currently being migrated out to another machine.</dd>
 <dt>&quot;receive-update&quot;</dt>
 <dd>The guest is currently being migrated from another machine.</dd></dl>
-<p> <code>Since:</code> 2.12 <code>If:</code> <tt>&quot;defined(TARGET_I386)&quot;</tt> <code>SevInfo</code> (Object) Information about Secure Encrypted Virtualization (<font SIZE="-1">SEV</font>) support <code>Members:</code></p>
+<p> <code>Since:</code> 2.12 <code>If:</code> <tt>&quot;defined(TARGET_I386)&quot;</tt> <code>SevInfo</code> (Object) Information about Secure Encrypted Virtualization (SEV) support <code>Members:</code></p>
 <dl>
 <dt>&quot;enabled: boolean&quot;</dt>
-<dd>true if <font SIZE="-1">SEV</font> is active</dd>
+<dd>true if SEV is active</dd>
 <dt>&quot;api-major: int&quot;</dt>
-<dd><font SIZE="-1">SEV API</font> major version</dd>
+<dd>SEV API major version</dd>
 <dt>&quot;api-minor: int&quot;</dt>
-<dd><font SIZE="-1">SEV API</font> minor version</dd>
+<dd>SEV API minor version</dd>
 <dt>&quot;build-id: int&quot;</dt>
-<dd><font SIZE="-1">SEV FW</font> build id</dd>
+<dd>SEV FW build id</dd>
 <dt>&quot;policy: int&quot;</dt>
-<dd><font SIZE="-1">SEV</font> policy value</dd>
+<dd>SEV policy value</dd>
 <dt>&quot;state: SevState&quot;</dt>
-<dd><font SIZE="-1">SEV</font> guest state</dd>
+<dd>SEV guest state</dd>
 <dt>&quot;handle: int&quot;</dt>
-<dd><font SIZE="-1">SEV</font> firmware handle</dd></dl>
-<p> <code>Since:</code> 2.12 <code>If:</code> <tt>&quot;defined(TARGET_I386)&quot;</tt> <code>query-sev</code> (Command) Returns information about <font SIZE="-1">SEV</font> <code>Returns:</code> <tt>&quot;SevInfo&quot;</tt> <code>Since:</code> 2.12 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-sev&quot;} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-        &quot;enabled&quot; : true, &quot;api-major&quot; : 0, &quot;api-minor&quot; : 0, &quot;build-id&quot; : 0, &quot;policy&quot; : 0, &quot;state&quot; : &quot;running&quot;, &quot;handle&quot; : 1<br />
-    }<br />
-} <code>If:</code> <tt>&quot;defined(TARGET_I386)&quot;</tt> <code>SevLaunchMeasureInfo</code> (Object) <font SIZE="-1">SEV</font> Guest Launch measurement information <code>Members:</code></p>
+<dd>SEV firmware handle</dd></dl>
+<p> <code>Since:</code> 2.12 <code>If:</code> <tt>&quot;defined(TARGET_I386)&quot;</tt> <code>query-sev</code> (Command) Returns information about SEV <code>Returns:</code> <tt>&quot;SevInfo&quot;</tt> <code>Since:</code> 2.12 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-sev&quot;} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+        &quot;enabled&quot; : true, &quot;api-major&quot; : 0, &quot;api-minor&quot; : 0, &quot;build-id&quot; : 0, &quot;policy&quot; : 0, &quot;state&quot; : &quot;running&quot;, &quot;handle&quot; : 1<br/>
+    }<br/>
+} <code>If:</code> <tt>&quot;defined(TARGET_I386)&quot;</tt> <code>SevLaunchMeasureInfo</code> (Object) SEV Guest Launch measurement information <code>Members:</code></p>
 <dl>
 <dt>&quot;data: string&quot;</dt>
 <dd>the measurement value encoded in base64</dd></dl>
-<p> <code>Since:</code> 2.12 <code>If:</code> <tt>&quot;defined(TARGET_I386)&quot;</tt> <code>query-sev-launch-measure</code> (Command) Query the <font SIZE="-1">SEV</font> guest launch information. <code>Returns:</code> The <tt>&quot;SevLaunchMeasureInfo&quot;</tt> for the guest <code>Since:</code> 2.12 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-sev-launch-measure&quot;} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-        &quot;data&quot; : &quot;4l8LXeNlSPUDlXPJG5966/8%YZ&quot;<br />
-    }<br />
+<p> <code>Since:</code> 2.12 <code>If:</code> <tt>&quot;defined(TARGET_I386)&quot;</tt> <code>query-sev-launch-measure</code> (Command) Query the SEV guest launch information. <code>Returns:</code> The <tt>&quot;SevLaunchMeasureInfo&quot;</tt> for the guest <code>Since:</code> 2.12 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-sev-launch-measure&quot;} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+        &quot;data&quot; : &quot;4l8LXeNlSPUDlXPJG5966/8%YZ&quot;<br/>
+    }<br/>
 } <code>If:</code> <tt>&quot;defined(TARGET_I386)&quot;</tt> <code>SevCapability</code> (Object) The struct describes capability for a Secure Encrypted Virtualization feature. <code>Members:</code></p>
 <dl>
 <dt>&quot;pdh: string&quot;</dt>
 <dd>Platform Diffie-Hellman key (base64 encoded)</dd>
 <dt>&quot;cert-chain: string&quot;</dt>
-<dd><font SIZE="-1">PDH</font> certificate chain (base64 encoded)</dd>
+<dd>PDH certificate chain (base64 encoded)</dd>
 <dt>&quot;cbitpos: int&quot;</dt>
 <dd>C-bit location in page table entry</dd>
 <dt>&quot;reduced-phys-bits: int&quot;</dt>
-<dd>Number of physical Address bit reduction when <font SIZE="-1">SEV</font> is enabled</dd></dl>
-<p> <code>Since:</code> 2.12 <code>If:</code> <tt>&quot;defined(TARGET_I386)&quot;</tt> <code>query-sev-capabilities</code> (Command) This command is used to get the <font SIZE="-1">SEV</font> capabilities, and is supported on <font SIZE="-1">AMD X86</font> platforms only. <code>Returns:</code> SevCapability objects. <code>Since:</code> 2.12 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-sev-capabilities&quot;} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-        &quot;pdh&quot; : &quot;8CCDD8DDD&quot;, &quot;cert-chain&quot; : &quot;888CCCDDDEE&quot;, &quot;cbitpos&quot; : 47, &quot;reduced-phys-bits&quot; : 5<br />
-    }<br />
+<dd>Number of physical Address bit reduction when SEV is enabled</dd></dl>
+<p> <code>Since:</code> 2.12 <code>If:</code> <tt>&quot;defined(TARGET_I386)&quot;</tt> <code>query-sev-capabilities</code> (Command) This command is used to get the SEV capabilities, and is supported on AMD X86 platforms only. <code>Returns:</code> SevCapability objects. <code>Since:</code> 2.12 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;query-sev-capabilities&quot;} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+        &quot;pdh&quot; : &quot;8CCDD8DDD&quot;, &quot;cert-chain&quot; : &quot;888CCCDDDEE&quot;, &quot;cbitpos&quot; : 47, &quot;reduced-phys-bits&quot; : 5<br/>
+    }<br/>
 } <code>If:</code> <tt>&quot;defined(TARGET_I386)&quot;</tt> <code>dump-skeys</code> (Command) Dump guest&#8217;s storage keys <code>Arguments:</code></p>
 <dl>
 <dt>&quot;filename: string&quot;</dt>
 <dd>the path to the file to dump to</dd></dl>
-<p> This command is only supported on s390 architecture. <code>Since:</code> 2.5 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;dump-skeys&quot;,<br />
-   &quot;arguments&quot; : {&quot;filename&quot; : &quot;/tmp/skeys&quot;}} &lt; &#8211;<br />
-{<br />
-    &quot;return&quot;:<br />
-    {<br />
-    }<br />
-} <code>If:</code> <tt>&quot;defined(TARGET_S390X)&quot;</tt> <code>GICCapability</code> (Object) The struct describes capability for a specific <font SIZE="-1">GIC</font> (Generic Interrupt Controller) version. These bits are not only decided by <font SIZE="-1">QEMU/KVM</font> software version, but also decided by the hardware that the program is running upon. <code>Members:</code></p>
+<p> This command is only supported on s390 architecture. <code>Since:</code> 2.5 <code>Example:</code> -&gt;{&quot;execute&quot; : &quot;dump-skeys&quot;,<br/>
+   &quot;arguments&quot; : {&quot;filename&quot; : &quot;/tmp/skeys&quot;}} &lt; &#8211;<br/>
+{<br/>
+    &quot;return&quot;:<br/>
+    {<br/>
+    }<br/>
+} <code>If:</code> <tt>&quot;defined(TARGET_S390X)&quot;</tt> <code>GICCapability</code> (Object) The struct describes capability for a specific GIC (Generic Interrupt Controller) version. These bits are not only decided by QEMU/KVM software version, but also decided by the hardware that the program is running upon. <code>Members:</code></p>
 <dl>
 <dt>&quot;version: int&quot;</dt>
-<dd>version of <font SIZE="-1">GIC</font> to be described. Currently, only 2 and 3 are supported.</dd>
+<dd>version of GIC to be described. Currently, only 2 and 3 are supported.</dd>
 <dt>&quot;emulated: boolean&quot;</dt>
-<dd>whether current QEMU/hardware supports emulated <font SIZE="-1">GIC</font> device in user space.</dd>
+<dd>whether current QEMU/hardware supports emulated GIC device in user space.</dd>
 <dt>&quot;kernel: boolean&quot;</dt>
-<dd>whether current QEMU/hardware supports hardware accelerated <font SIZE="-1">GIC</font> device in kernel.</dd></dl>
+<dd>whether current QEMU/hardware supports hardware accelerated GIC device in kernel.</dd></dl>
 <p> <code>Since:</code> 2.6 <code>If:</code> <tt>&quot;defined(TARGET_ARM)&quot;</tt> <code>query-gic-capabilities</code> (Command) This command is ARM-only. It will return a list of GICCapability objects that describe its capability bits. <code>Returns:</code> a list of GICCapability objects. <code>Since:</code> 2.6 <code>Example:</code> </p>
 <pre><code>-&gt;{&quot;execute&quot; : &quot;query-gic-capabilities&quot;} &lt; -
 {
@@ -8248,7 +8248,7 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <p> <code>If:</code> <tt>&quot;defined(TARGET_ARM)&quot;</tt> <code>AudiodevPerDirectionOptions</code> (Object) General audio backend options that are used for both playback and recording. <code>Members:</code></p>
 <dl>
 <dt>&quot;mixing-engine: boolean&quot; (optional)</dt>
-<dd>use <font SIZE="-1">QEMU</font>&#8216;s mixing engine to mix all streams inside <font SIZE="-1">QEMU</font> and convert audio formats when not supported by the backend. When set to off, fixed-settings must be also off (default on, since 4.2)</dd>
+<dd>use QEMU&#8216;s mixing engine to mix all streams inside QEMU and convert audio formats when not supported by the backend. When set to off, fixed-settings must be also off (default on, since 4.2)</dd>
 <dt>&quot;fixed-settings: boolean&quot; (optional)</dt>
 <dd>use fixed settings for host input/output. When off, frequency, channels and format must not be specified (default true)</dd>
 <dt>&quot;frequency: int&quot; (optional)</dt>
@@ -8267,17 +8267,17 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dd>options of the capture stream</dd>
 <dt>&quot;out: AudiodevPerDirectionOptions&quot; (optional)</dt>
 <dd>options of the playback stream</dd></dl>
-<p> <code>Since:</code> 4.0 <code>AudiodevAlsaPerDirectionOptions</code> (Object) Options of the <font SIZE="-1">ALSA</font> backend that are used for both playback and recording. <code>Members:</code></p>
+<p> <code>Since:</code> 4.0 <code>AudiodevAlsaPerDirectionOptions</code> (Object) Options of the ALSA backend that are used for both playback and recording. <code>Members:</code></p>
 <dl>
 <dt>&quot;dev: string&quot; (optional)</dt>
-<dd>the name of the <font SIZE="-1">ALSA</font> device to use (default &#8216;default&#8217;)</dd>
+<dd>the name of the ALSA device to use (default &#8216;default&#8217;)</dd>
 <dt>&quot;period-length: int&quot; (optional)</dt>
 <dd>the period length in microseconds</dd>
 <dt>&quot;try-poll: boolean&quot; (optional)</dt>
 <dd>attempt to use poll mode, falling back to non-polling access on failure (default true)</dd>
 <dt>The members of &quot;AudiodevPerDirectionOptions&quot;</dt>
 <dd></dd></dl>
-<p> <code>Since:</code> 4.0 <code>AudiodevAlsaOptions</code> (Object) Options of the <font SIZE="-1">ALSA</font> audio backend. <code>Members:</code></p>
+<p> <code>Since:</code> 4.0 <code>AudiodevAlsaOptions</code> (Object) Options of the ALSA audio backend. <code>Members:</code></p>
 <dl>
 <dt>&quot;in: AudiodevAlsaPerDirectionOptions&quot; (optional)</dt>
 <dd>options of the capture stream</dd>
@@ -8305,17 +8305,17 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dd>options of the playback stream</dd>
 <dt>&quot;latency: int&quot; (optional)</dt>
 <dd>add extra latency to playback in microseconds (default 10000)</dd></dl>
-<p> <code>Since:</code> 4.0 <code>AudiodevOssPerDirectionOptions</code> (Object) Options of the <font SIZE="-1">OSS</font> backend that are used for both playback and recording. <code>Members:</code></p>
+<p> <code>Since:</code> 4.0 <code>AudiodevOssPerDirectionOptions</code> (Object) Options of the OSS backend that are used for both playback and recording. <code>Members:</code></p>
 <dl>
 <dt>&quot;dev: string&quot; (optional)</dt>
-<dd>file name of the <font SIZE="-1">OSS</font> device (default &#8216;/dev/dsp&#8217;)</dd>
+<dd>file name of the OSS device (default &#8216;/dev/dsp&#8217;)</dd>
 <dt>&quot;buffer-count: int&quot; (optional)</dt>
 <dd>number of buffers</dd>
 <dt>&quot;try-poll: boolean&quot; (optional)</dt>
 <dd>attempt to use poll mode, falling back to non-polling access on failure (default true)</dd>
 <dt>The members of &quot;AudiodevPerDirectionOptions&quot;</dt>
 <dd></dd></dl>
-<p> <code>Since:</code> 4.0 <code>AudiodevOssOptions</code> (Object) Options of the <font SIZE="-1">OSS</font> audio backend. <code>Members:</code></p>
+<p> <code>Since:</code> 4.0 <code>AudiodevOssOptions</code> (Object) Options of the OSS audio backend. <code>Members:</code></p>
 <dl>
 <dt>&quot;in: AudiodevOssPerDirectionOptions&quot; (optional)</dt>
 <dd>options of the capture stream</dd>
@@ -8326,7 +8326,7 @@ The members of &quot;ChardevCommon&quot; <code>Since:</code> 1.4 <code>ChardevUd
 <dt>&quot;exclusive: boolean&quot; (optional)</dt>
 <dd>open device in exclusive mode (vmix won&#8217;t work) (default false)</dd>
 <dt>&quot;dsp-policy: int&quot; (optional)</dt>
-<dd>set the timing policy of the device (between 0 and 10, where smaller number means smaller latency but higher <font SIZE="-1">CPU</font> usage) or -1 to use fragment mode (option ignored on some platforms) (default 5)</dd></dl>
+<dd>set the timing policy of the device (between 0 and 10, where smaller number means smaller latency but higher CPU usage) or -1 to use fragment mode (option ignored on some platforms) (default 5)</dd></dl>
 <p> <code>Since:</code> 4.0 <code>AudiodevPaPerDirectionOptions</code> (Object) Options of the Pulseaudio backend that are used for both playback and recording. <code>Members:</code></p>
 <dl>
 <dt>&quot;name: string&quot; (optional)</dt>

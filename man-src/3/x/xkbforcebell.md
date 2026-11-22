@@ -10,7 +10,7 @@ description: "XkbForceBell – Overrides user preference settings for audible be
 <p>XkbForceBell &#8211; Overrides user preference settings for audible bells to ring the bell on the default keyboard </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Bool XkbForceBell</code> <code>(Display *</code><i>display</i><code>,</code> <code>int </code><i>percent</i><code>);</code><br />
+<dt> <code>Bool XkbForceBell</code> <code>(Display *</code><i>display</i><code>,</code> <code>int </code><i>percent</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

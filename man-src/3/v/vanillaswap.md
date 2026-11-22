@@ -14,11 +14,11 @@ description: "ql/instruments/vanillaswap.hpp – Simple fixed-rate vs Libor swap
 #include &lt;ql/time/daycounter.hpp&gt;
 #include &lt;ql/time/schedule.hpp&gt;</code></pre>
 <h3>Classes</h3>
-<p>class <code>VanillaSwap</code><br />
- <i>Plain-vanilla swap. </i><br />
- class <code>arguments</code><br />
- <i>Arguments for simple swap calculation </i><br />
- class <code>results</code><br />
+<p>class <code>VanillaSwap</code><br/>
+ <i>Plain-vanilla swap. </i><br/>
+ class <code>arguments</code><br/>
+ <i>Arguments for simple swap calculation </i><br/>
+ class <code>results</code><br/>
  <i>Results from simple swap calculation </i></p>
 <h3>Functions</h3>
 <p>std::ostream &amp; <code>operator&lt;&lt;</code> (std::ostream &amp;out, VanillaSwap::Type t)</p>

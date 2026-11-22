@@ -94,8 +94,8 @@ description: "ncftpput – Internet file transfer program for scripts"
 <dl>
 <dt>
 </dt><dd>
-<p> host sphygmomanometer.nc<a href="ftp://ftp.com">ftp.com</a><br />
- user gleason<br />
+<p> host sphygmomanometer.nc<a href="ftp://ftp.com">ftp.com</a><br/>
+ user gleason<br/>
  pass mypassword </p>
 </dd></dl>
 <p> Don&#8217;t forget to change the permissions on this file so no one else can read them. </p>

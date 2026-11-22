@@ -27,24 +27,24 @@ typedef struct JOYSTICK_INFO {
 } JOYSTICK_INFO;
 </code></pre>
 <p> The button status is stored in the structure: </p>
-<p>typedef struct JOYSTICK_BUTTON_INFO {<br />
-    int b;<br />
-    &#8211; boolean on / off flag char *name;<br />
-    &#8211; description of this button<br />
-} JOYSTICK_BUTTON_INFO;<br />
+<p>typedef struct JOYSTICK_BUTTON_INFO {<br/>
+    int b;<br/>
+    &#8211; boolean on / off flag char *name;<br/>
+    &#8211; description of this button<br/>
+} JOYSTICK_BUTTON_INFO;<br/>
  You may wish to display the button names as part of an input configuration screen to let the user choose what game function will be performed by each button, but in simpler situations you can safely assume that the first two elements in the button array will always be the main trigger controls. </p>
 <p> Each joystick will provide one or more stick inputs, of varying types. These can be digital controls which snap to specific positions (eg. a gamepad controller, the coolie hat on a Flightstick Pro or Wingman Extreme, or a normal joystick which hasn&#8217;t yet been calibrated), or they can be full analogue inputs with a smooth range of motion. Sticks may also have different numbers of axes, for example a normal directional control has two, but the Flightstick Pro throttle is only a single axis, and it is possible that the system could be extended in the future to support full 3d controllers. A stick input is described by the structure: </p>
-<p>typedef struct JOYSTICK_STICK_INFO {<br />
-    int flags;                       &#8211; status flags for this<br />
-                                         input<br />
-      int num_axis;<br />
-    &#8211; how many axes do we<br />
-        have<br />
-        ? (note the misspelling)<br />
-              JOYSTICK_AXIS_INFO axis[n];<br />
-    &#8211; axis state information char *name;<br />
-    &#8211; description of this input<br />
-} JOYSTICK_STICK_INFO;<br />
+<p>typedef struct JOYSTICK_STICK_INFO {<br/>
+    int flags;                       &#8211; status flags for this<br/>
+                                         input<br/>
+      int num_axis;<br/>
+    &#8211; how many axes do we<br/>
+        have<br/>
+        ? (note the misspelling)<br/>
+              JOYSTICK_AXIS_INFO axis[n];<br/>
+    &#8211; axis state information char *name;<br/>
+    &#8211; description of this input<br/>
+} JOYSTICK_STICK_INFO;<br/>
  A single joystick may provide several different stick inputs, but you can safely assume that the first element in the stick array will always be the main directional controller. </p>
 <p> Information about each of the stick axis is stored in the substructure: </p>
 <pre><code>

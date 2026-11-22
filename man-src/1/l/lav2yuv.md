@@ -42,8 +42,8 @@ description: "lav2yuv – Convert a MJPEG file to raw yuv"
 <dt><code>-x</code></dt>
 <dd> Exchange fields. Useful if the field order was reversed during editing.</dd></dl>
 <h2>AUTHOR</h2>
-<p> This man page was originally written by Bernhard Praschinger.<br />
- If you have questions, remarks, problems or you just want to contact the developers, the main mailing list for the MJPEG-tools is:<br />
+<p> This man page was originally written by Bernhard Praschinger.<br/>
+ If you have questions, remarks, problems or you just want to contact the developers, the main mailing list for the MJPEG-tools is:<br/>
 &nbsp;<wbr>&nbsp;<wbr><i>mjpeg-users [at] lists.sourceforge.net</i> </p>
 <dl>
 <dt>For more info, see our website at</dt>

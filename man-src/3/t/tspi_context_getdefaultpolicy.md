@@ -7,7 +7,7 @@ url: "/docs/linux/man/3-tspi_context_getdefaultpolicy/"
 description: "Tspi_Context_GetDefaultPolicy – Get a handle to the default policy object of a given context."
 ---
 
-<p>TCG Software Stack Developers Reference<br />
+<p>TCG Software Stack Developers Reference<br/>
  </center></p>
 <h2>Name</h2>
 <p>Tspi_Context_GetDefaultPolicy &#8211; Get a handle to the default policy object of a given context. </p>
@@ -32,9 +32,9 @@ description: "Tspi_Context_GetDefaultPolicy – Get a handle to the default poli
 <h2>Return Codes</h2>
 <p><code>Tspi_Context_GetDefaultPolicy</code> returns TSS_SUCCESS on success, otherwise one of the following values is returned:</p>
 <dl COMPACT>
-<dt><font SIZE="-1">TSS_E_INVALID_HANDLE</font></dt>
+<dt>TSS_E_INVALID_HANDLE</dt>
 <dd><i>hContext</i> is not a valid handle. </dd>
-<dt><font SIZE="-1">TSS_E_INTERNAL_ERROR</font></dt>
+<dt>TSS_E_INTERNAL_ERROR</dt>
 <dd>An internal SW error has been detected. </dd>
 </dl>
 <h2>Conforming To</h2>

@@ -7,7 +7,7 @@ url: "/docs/linux/man/8-tpm_setactive/"
 description: "tpm_setactive – change TPM active states"
 ---
 
-<p>TPM Management &#8211; tpm_setactive<br />
+<p>TPM Management &#8211; tpm_setactive<br/>
  </center></p>
 <h2>Name</h2>
 <p>tpm_setactive &#8211; change TPM active states</p>

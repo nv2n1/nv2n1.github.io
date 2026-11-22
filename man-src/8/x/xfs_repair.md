@@ -9,7 +9,7 @@ description: "xfs_repair – repair an XFS filesystem"
 
 <p>xfs_repair &#8211; repair an XFS filesystem</p>
 <h2>Synopsis</h2>
-<p><code>xfs_repair</code> [ <code>-dfLnPv</code> ] [ <code>-m</code> <i>maxmem</i> ] [ <code>-c</code><i> subopt</i><code>=</code><i>value</i> ] [ <code>-o</code> <i>subopt</i>[<code>=</code><i>value</i>] ] [ <code>-t</code> <i>interval</i> ] [ <code>-l</code> <i>logdev</i> ] [ <code>-r</code> <i>rtdev</i> ] <i>device</i><br />
+<p><code>xfs_repair</code> [ <code>-dfLnPv</code> ] [ <code>-m</code> <i>maxmem</i> ] [ <code>-c</code><i> subopt</i><code>=</code><i>value</i> ] [ <code>-o</code> <i>subopt</i>[<code>=</code><i>value</i>] ] [ <code>-t</code> <i>interval</i> ] [ <code>-l</code> <i>logdev</i> ] [ <code>-r</code> <i>rtdev</i> ] <i>device</i><br/>
  <code>xfs_repair -V</code></p>
 <h2>Description</h2>
 <p><code>xfs_repair</code> repairs corrupt or damaged XFS filesystems (see <code><a href="/docs/linux/man/5-xfs/">xfs</a></code>(5)). The filesystem is specified using the <i>device</i> argument which should be the device name of the disk partition or volume containing the filesystem. If given the name of a block device, <code>xfs_repair</code> will attempt to find the raw device associated with the specified block device and will use the raw device instead. </p>

@@ -63,17 +63,17 @@ description: "pmlogconf – create/edit a pmlogger configuration file"
 <dl>
 <dt>
 </dt><dd>
- <center> <code>probe</code> <i>metric</i> [<i>condition</i> [<i>state_rule</i>] ]<br />
- </center><br />
- where <i>metric</i> is the name of a PCP metric (must be a leaf node in the PMNS and no instance specification is allowed) and the optional <i>condition</i> is the keyword <code>exists</code> (true if <i>metric</i> exists, i.e. is defined in the PMNS) or the keyword <code>values</code> (true if <i>metric</i> exists in the PMNS and has one or more current values) or an expression of the form<br />
- <center> <i>op</i> <i>val</i><br />
+ <center> <code>probe</code> <i>metric</i> [<i>condition</i> [<i>state_rule</i>] ]<br/>
+ </center><br/>
+ where <i>metric</i> is the name of a PCP metric (must be a leaf node in the PMNS and no instance specification is allowed) and the optional <i>condition</i> is the keyword <code>exists</code> (true if <i>metric</i> exists, i.e. is defined in the PMNS) or the keyword <code>values</code> (true if <i>metric</i> exists in the PMNS and has one or more current values) or an expression of the form<br/>
+ <center> <i>op</i> <i>val</i><br/>
  </center> where <i>op</i> is one of the <code><a href="/docs/linux/man/1-awk/">awk</a></code>(1) operators (<code>==</code>, <code>!=</code>, <code>&gt;</code>, <code>&gt;=</code>, <code>&lt;</code>, <code>&lt;=</code>, <code>~</code> (regular expression match) or <code>!~</code> (negated regular expression match)) and <i>val</i> is a value (arbitrary sequence of characters, excluding a space) and the <i>condition</i> is true if there is some instance of <i>metric</i> that makes the expression true. </dd>
 <p> If the <i>condition</i> is missing, the default is <code>exists</code>. </p>
-<p> When an explicit <i>condition</i> is provided, there may also be an optional <i>state_rule</i> of the form<br />
- <center> <code>?</code> <i>true_state</i> <code>:</code> <i>false_state</i><br />
+<p> When an explicit <i>condition</i> is provided, there may also be an optional <i>state_rule</i> of the form<br/>
+ <center> <code>?</code> <i>true_state</i> <code>:</code> <i>false_state</i><br/>
  </center> where <i>true_state</i> (applies if <i>condition</i> is true) and <i>false_state</i> (applies if <i>condition</i> is false) are both taken from the keywords <code>include</code> (include and enable the group and the associated metrics in <i>configfile</i>), <code>available</code> (include and disable the group in <i>configfile</i> &#8211; a user action of <code>y</code> as described above is needed to enable the group and add the associated metrics into <i>configfile</i>) or <code>exclude</code> (the group is not considered for inclusion in <i>configfile</i>). </p>
-<p> The default <i>state_rule</i> is<br />
- <center> <code><br />
+<p> The default <i>state_rule</i> is<br/>
+ <center> <code><br/>
  </center> ? available : exclude </code></dl>
 <dt>&bull;</dt>
 <dd> <code>force</code> control lines begin with the keyword <code>force</code> followed by one of the states defined above, so one of the actions <code>include</code>, <code>exclude</code> or <code>available</code> is applied unconditionally to the group.</dd></dl>

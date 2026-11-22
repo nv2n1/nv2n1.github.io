@@ -41,7 +41,7 @@ Method = sss</pre>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-sssd/">sssd</a></code>(8), <code><a href="/docs/linux/man/5-idmapd-conf/">idmapd.conf</a></code>(5)</p>
 <h2>Authors</h2>
-<p><code>Noam Meltzer</code><br />
+<p><code>Noam Meltzer</code><br/>
  Primary Data Inc.</p>
 <dl>
 <dd>Developer (2013-2014)</dd></dl>

@@ -11,7 +11,7 @@ description: "dlarrj.f –"
 <p> dlarrj.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dlarrj</code> (N, D, E2, IFIRST, ILAST, RTOL, OFFSET, W, WERR, WORK, IWORK, PIVMIN, SPDIAM, INFO)<br />
+<p> subroutine <code>dlarrj</code> (N, D, E2, IFIRST, ILAST, RTOL, OFFSET, W, WERR, WORK, IWORK, PIVMIN, SPDIAM, INFO)<br/>
  <i></i><code>DLARRJ</code> performs refinement of the initial estimates of the eigenvalues of the matrix T.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlarrj (integerN, double precision, dimension( * )D, double precision, dimension( * )E2, integerIFIRST, integerILAST, double precisionRTOL, integerOFFSET, double precision, dimension( * )W, double precision, dimension( * )WERR, double precision, dimension( * )WORK, integer, dimension( * )IWORK, double precisionPIVMIN, double precisionSPDIAM, integerINFO)</h3>

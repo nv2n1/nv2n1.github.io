@@ -15,7 +15,7 @@ description: "std::__profile::deque< _Tp, _Allocator > –"
 <p> typedef _Base::const_iterator <code>const_iterator</code> </p>
 <p> typedef _Base::const_pointer <code>const_pointer</code> </p>
 <p> typedef _Base::const_reference <code>const_reference</code> </p>
-<p> typedef<br />
+<p> typedef<br/>
  _Base::const_reverse_iterator <code>const_reverse_iterator</code>&quot; </p>
 <p> typedef _Base::difference_type <code>difference_type</code> </p>
 <p> typedef _Base::iterator <code>iterator</code> </p>

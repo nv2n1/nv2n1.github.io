@@ -15,7 +15,7 @@ description: "glite-lb-interlogd – interlogger daemon"
 <h2>Options</h2>
 <dl>
 <dt><code>-b</code>, &#8211;book</dt>
-<dd>Send events only to bookkeeping server. This option has effect only if the logging server address is specified through the -l option. There is no implementation of logging server currently.<br />
+<dd>Send events only to bookkeeping server. This option has effect only if the logging server address is specified through the -l option. There is no implementation of logging server currently.<br/>
 &nbsp;<wbr></dd>
 <dt><code>-c</code><i> FILE</i>, &#8211;cert <i>FILE</i></dt>
 <dd>Get certificate from <i>FILE</i>. This option overrides the $X509_USER_CERT environment variable. </dd>

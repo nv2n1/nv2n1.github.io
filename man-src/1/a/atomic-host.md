@@ -14,7 +14,7 @@ description: "atomic-host – Manage Atomic Host Commands"
 <p> This command is a high-level wrapper for the underlying rpm-ostree tool which can perform upgrades, rollbacks, and system state inspection. It is used for implementations of the Project Atomic Host pattern. </p>
 <p> #NOTE The host subcommand is only available on Atomic Host Systems. </p>
 <h2>OPTIONS</h2>
-<p> <code>-h</code> <code>-help</code><br />
+<p> <code>-h</code> <code>-help</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Print usage statement </p>
 <p> <code>-r</code> <code>&#8211;reboot</code> Initiate a reboot after rollback is prepared. </p>
 <h2>COMMANDS</h2>

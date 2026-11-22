@@ -64,7 +64,7 @@ description: "rahisto – print histogram of metrics from argus(8) data."
 <h2>INVOCATION</h2>
 <p> A sample invocation of <code><a href="/docs/linux/man/1-rahisto/">rahisto</a>(1)</code>. This call reads <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data from <code>inputfile</code> and generates a frequency distribution histogram for the transaction duration for HTTP traffic. </p>
 <pre>
-<font SIZE="-2">% rahisto -H dur 10 -r ~/argus/data/argus*out.gz - port http
+% rahisto -H dur 10 -r ~/argus/data/argus*out.gz - port http
  N = 194     mean = 15.928685  stddev = 23.728876  max = 81.354462  min = 0.008055
            median =  0.079948     95% = 59.208977
  Class     Interval         Freq    Rel.Freq     Cum.Freq    
@@ -78,11 +78,11 @@ description: "rahisto – print histogram of metrics from argus(8) data."
      8   5.740000e+01         35    18.0412%     99.4845%    
      9   6.560000e+01          0     0.0000%     99.4845%    
     10   7.380000e+01          1     0.5155%    100.0000%  
-</font>
+
 </pre>
 <p> A sample invocation where the call reads <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data from <code>inputfile</code> and generates a frequency distribution histogram for the round-trip time of arp volleys in <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data. </p>
 <pre>
-<font SIZE="-2">% rahisto -H dur 10:0-75u  -R /Vol*/Data/Archive/split/*68/2012/0[23] - arp and dur gt 0
+% rahisto -H dur 10:0-75u  -R /Vol*/Data/Archive/split/*68/2012/0[23] - arp and dur gt 0
  N = 360     mean = 0.000028  stddev = 0.000007  max = 0.000066  min = 0.000014
            median = 0.000031     95% = 0.000028
              mode = 0.000026
@@ -97,7 +97,7 @@ description: "rahisto – print histogram of metrics from argus(8) data."
      8   5.250000e-05          2     0.5556%     99.7222%    
      9   6.000000e-05          1     0.2778%    100.0000%    
     10   6.750000e-05          0     0.0000%    100.0000% 
-</font></pre>
+</pre>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 2000-2016 QoSient. All rights reserved. </p>
 <h2>SEE ALSO</h2>

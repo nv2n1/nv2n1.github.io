@@ -10,7 +10,7 @@ description: "cstein.f –"
 <p>cstein.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>cstein</code> (N, D, E, M, W, IBLOCK, ISPLIT, Z, LDZ, WORK, IWORK, IFAIL, INFO)<br />
+<p>subroutine <code>cstein</code> (N, D, E, M, W, IBLOCK, ISPLIT, Z, LDZ, WORK, IWORK, IFAIL, INFO)<br/>
  <i></i><code>CSTEIN</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cstein (integerN, real, dimension( * )D, real, dimension( * )E, integerM, real, dimension( * )W, integer, dimension( * )IBLOCK, integer, dimension( * )ISPLIT, complex, dimension( ldz, * )Z, integerLDZ, real, dimension( * )WORK, integer, dimension( * )IWORK, integer, dimension( * )IFAIL, integerINFO)</h3>

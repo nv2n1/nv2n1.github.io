@@ -50,5 +50,5 @@ Lintian::CheckScript - Check script meta data
 </dt><dd>Run the check on <tt>$proc</tt>, which is in the group <tt>$group</tt>. <tt>$proc</tt> should be a lab entry and must have the proper collections run on it prior to calling this method (See Lintian::Unpacker). 
  The method may error out if loading the check failed or if the check itself calls die/croak/fail/etc. 
  Returns normally on success; the return value has no semantic meaning and is currently <tt>&quot;undef&quot;</tt>. 
- <font SIZE="-1">NB:</font> load_check can be used to determine if the check itself is loadable.</dd></dl><h2>Author</h2>Originally written by Niels Thykier &lt;niels [at] thykier.net&gt; for Lintian.
+ NB: load_check can be used to determine if the check itself is loadable.</dd></dl><h2>Author</h2>Originally written by Niels Thykier &lt;niels [at] thykier.net&gt; for Lintian.
 <h2>See Also</h2><i><a HREF="/docs/linux/man/1-lintian/">lintian</a></i>(1), <i>Lintian::Profile</i>(3), <i>Lintian::Tag::Info</i>(3)

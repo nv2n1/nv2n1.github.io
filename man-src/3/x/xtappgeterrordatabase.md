@@ -35,6 +35,6 @@ description: "XtAppGetErrorDatabase, XtAppGetErrorDatabaseText – obtain error 
 <p>The <code>XtAppGetErrorDatabase</code> function returns the address of the error database. The Intrinsics do a lazy binding of the error database and do not merge in the database file until the first call to <code>XtAppGetErrorDatbaseText</code>. </p>
 <p> The <code>XtAppGetErrorDatabaseText</code> returns the appropriate message from the error database or returns the specified default message if one is not found in the error database.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xtapperror/">XtAppError</a>(3), <a href="/docs/linux/man/3-xtapperrormsg/">XtAppErrorMsg</a>(3)<br />
- <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><a href="/docs/linux/man/3-xtapperror/">XtAppError</a>(3), <a href="/docs/linux/man/3-xtapperrormsg/">XtAppErrorMsg</a>(3)<br/>
+ <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

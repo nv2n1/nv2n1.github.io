@@ -45,7 +45,7 @@ description: "upsdrvctl – UPS driver controller"
 <dl>
 <dd>Command the UPS driver(s) to run their shutdown sequence. Drivers are stopped according to their sdorder value &#8211; see <code><a href="/docs/linux/man/5-ups-conf/">ups.conf</a></code>(5).</dd></dl>
 <dl>
-<dd><font SIZE="+1"> <code>Warning</code> </font> </dd>
+<dd> <code>Warning</code>  </dd>
 <p> this will probably power off your computers, so don&#8217;t play around with this option. Only use it when your systems are prepared to lose power. </p>
 </dl>
 <h2>Environment Variables</h2>

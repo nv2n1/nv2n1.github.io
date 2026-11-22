@@ -15,34 +15,34 @@ description: "g_lie – free energy estimate from linear combinations"
 <h2>DESCRIPTION</h2>
 <p> g_lie computes a free energy estimate based on an energy analysis from. One needs an energy file with the following components: Coul (A-B) LJ-SR (A-B) etc.</p>
 <h2>FILES</h2>
-<p> <code>-f</code><i> ener.edr</i> <code>Input</code><br />
+<p> <code>-f</code><i> ener.edr</i> <code>Input</code><br/>
 &nbsp;<wbr>Energy file: edr ene&nbsp;<wbr> </p>
-<p> <code>-o</code><i> lie.xvg</i> <code>Output</code><br />
+<p> <code>-o</code><i> lie.xvg</i> <code>Output</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
 <h2>OTHER OPTIONS</h2>
-<p> <code>-[no]h</code><i>no </i><br />
+<p> <code>-[no]h</code><i>no </i><br/>
 &nbsp;<wbr>Print help info and quit </p>
-<p> <code>-nice</code><i> int</i><code> 19</code><br />
+<p> <code>-nice</code><i> int</i><code> 19</code><br/>
 &nbsp;<wbr>Set the nicelevel </p>
-<p> <code>-b</code><i> time</i><code> 0 </code><br />
+<p> <code>-b</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>First frame&nbsp;<wbr>(ps)&nbsp;<wbr>to read from trajectory </p>
-<p> <code>-e</code><i> time</i><code> 0 </code><br />
+<p> <code>-e</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>Last frame&nbsp;<wbr>(ps)&nbsp;<wbr>to read from trajectory </p>
-<p> <code>-dt</code><i> time</i><code> 0 </code><br />
+<p> <code>-dt</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>Only use frame when t MOD dt&nbsp;<wbr>=&nbsp;<wbr>first time&nbsp;<wbr>(ps) </p>
-<p> <code>-[no]w</code><i>no </i><br />
+<p> <code>-[no]w</code><i>no </i><br/>
 &nbsp;<wbr>View output xvg, xpm, eps and pdb files </p>
-<p> <code>-[no]xvgr</code><i>yes </i><br />
+<p> <code>-[no]xvgr</code><i>yes </i><br/>
 &nbsp;<wbr>Add specific codes&nbsp;<wbr>(legends etc.)&nbsp;<wbr>in the output xvg files for the xmgrace program </p>
-<p> <code>-Elj</code><i> real</i><code> 0 </code><br />
+<p> <code>-Elj</code><i> real</i><code> 0 </code><br/>
 &nbsp;<wbr>Lennard-Jones interaction between ligand and solvent </p>
-<p> <code>-Eqq</code><i> real</i><code> 0 </code><br />
+<p> <code>-Eqq</code><i> real</i><code> 0 </code><br/>
 &nbsp;<wbr>Coulomb interaction between ligand and solvent </p>
-<p> <code>-Clj</code><i> real</i><code> 0.181 </code><br />
+<p> <code>-Clj</code><i> real</i><code> 0.181 </code><br/>
 &nbsp;<wbr>Factor in the LIE equation for Lennard-Jones component of energy </p>
-<p> <code>-Cqq</code><i> real</i><code> 0.5 </code><br />
+<p> <code>-Cqq</code><i> real</i><code> 0.5 </code><br/>
 &nbsp;<wbr>Factor in the LIE equation for Coulomb component of energy </p>
-<p> <code>-ligand</code><i> string</i><code> none</code><br />
+<p> <code>-ligand</code><i> string</i><code> none</code><br/>
 &nbsp;<wbr>Name of the ligand in the energy file </p>
 <h2>SEE ALSO</h2>
 <p> <code>gromacs(7)</code> </p>

@@ -10,7 +10,7 @@ description: "dladiv.f –"
 <p>dladiv.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dladiv</code> (A, B, C, D, P, Q)<br />
+<p>subroutine <code>dladiv</code> (A, B, C, D, P, Q)<br/>
  <i></i><code>DLADIV</code> performs complex division in real arithmetic, avoiding unnecessary overflow.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dladiv (double precisionA, double precisionB, double precisionC, double precisionD, double precisionP, double precisionQ)</h3>

@@ -134,5 +134,5 @@ description: "XLoadFont, XQueryFont, XLoadQueryFont, XFreeFont, XGetFontProperty
 <dt><code>BadName</code></dt>
 <dd>A font or color of the specified name does not exist.</dd></dl>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xcreategc/">XCreateGC</a>(3), <a href="/docs/linux/man/3-xlistfonts/">XListFonts</a>(3), <a href="/docs/linux/man/3-xsetfontpath/">XSetFontPath</a>(3)<br />
+<p><a href="/docs/linux/man/3-xcreategc/">XCreateGC</a>(3), <a href="/docs/linux/man/3-xlistfonts/">XListFonts</a>(3), <a href="/docs/linux/man/3-xsetfontpath/">XSetFontPath</a>(3)<br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

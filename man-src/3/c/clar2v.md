@@ -11,7 +11,7 @@ description: "clar2v.f –"
 <p> clar2v.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>clar2v</code> (N, X, Y, Z, INCX, C, S, INCC)<br />
+<p> subroutine <code>clar2v</code> (N, X, Y, Z, INCX, C, S, INCC)<br/>
  <i></i><code>CLAR2V</code> applies a vector of plane rotations with real cosines and complex sines from both sides to a sequence of 2-by-2 symmetric/Hermitian matrices.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine clar2v (integerN, complex, dimension( * )X, complex, dimension( * )Y, complex, dimension( * )Z, integerINCX, real, dimension( * )C, complex, dimension( * )S, integerINCC)</h3>

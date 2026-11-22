@@ -10,8 +10,8 @@ description: "dash – command interpreter (shell)"
 
 <p> <code>dash</code> - command interpreter (shell) </p>
 <h2>SYNOPSIS</h2>
-<p> <code>dash</code> [-<code>aCefnuvxIimqVEbp</code> ] [<code>+aCefnuvxIimqVEbp</code> ] [-<code>o </code><i>option_name</i> ] [<code>+o </code><i>option_name</i> ] [<i>command_file </i>[<i>argument ... </i>] ] <br />
-<code>dash</code> -<code>c</code> [-<code>aCefnuvxIimqVEbp</code> ] [<code>+aCefnuvxIimqVEbp</code> ] [-<code>o </code><i>option_name</i> ] [<code>+o </code><i>option_name</i> ] <i>command_string</i> [<i>command_name </i>[<i>argument ... </i>] ] <br />
+<p> <code>dash</code> [-<code>aCefnuvxIimqVEbp</code> ] [<code>+aCefnuvxIimqVEbp</code> ] [-<code>o </code><i>option_name</i> ] [<code>+o </code><i>option_name</i> ] [<i>command_file </i>[<i>argument ... </i>] ] <br/>
+<code>dash</code> -<code>c</code> [-<code>aCefnuvxIimqVEbp</code> ] [<code>+aCefnuvxIimqVEbp</code> ] [-<code>o </code><i>option_name</i> ] [<code>+o </code><i>option_name</i> ] <i>command_string</i> [<i>command_name </i>[<i>argument ... </i>] ] <br/>
 <code>dash</code> -<code>s</code> [-<code>aCefnuvxIimqVEbp</code> ] [<code>+aCefnuvxIimqVEbp</code> ] [-<code>o </code><i>option_name</i> ] [<code>+o </code><i>option_name</i> ] [<i>argument ...</i> ]  </p>
 <h2>DESCRIPTION</h2>
 <p> <code>dash</code> is the standard command interpreter for the system. The current version of <code>dash</code> is in the process of being changed to conform with the <code>POSIX</code> 1003.2 and 1003.2a specifications for the shell. This version has many features which make it appear similar in some respects to the Korn shell, but it is not a Korn shell clone (see ksh(1)). Only features designated by <code>POSIX</code> plus a few Berkeley extensions, are being incorporated into this shell. This man page is not intended to be a tutorial or a complete specification of the shell.  </p>
@@ -685,7 +685,7 @@ cmd -a -carg -- file file
 <dd> <p> The <i>argument</i> is printed in style <code>f</code> or in style <code>e</code> (<code>E</code> ) whichever gives full precision in minimum space. </p>
  </dd>
 <dt><code>b</code></dt>
-<dd> <p> Characters from the string <i>argument</i> are printed with backslash-escape sequences expanded. <br />
+<dd> <p> Characters from the string <i>argument</i> are printed with backslash-escape sequences expanded. <br/>
  The following additional backslash-escape sequences are supported: </p>
  </dd>
 <dl>

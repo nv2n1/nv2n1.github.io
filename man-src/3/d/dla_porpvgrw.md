@@ -11,7 +11,7 @@ description: "dla_porpvgrw.f –"
 <p> dla_porpvgrw.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> DOUBLE PRECISION function <code>dla_porpvgrw</code> (UPLO, NCOLS, A, LDA, AF, LDAF, WORK)<br />
+<p> DOUBLE PRECISION function <code>dla_porpvgrw</code> (UPLO, NCOLS, A, LDA, AF, LDAF, WORK)<br/>
  <i></i><code>DLA_PORPVGRW</code> computes the reciprocal pivot growth factor norm(A)/norm(U) for a symmetric or Hermitian positive-definite matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>DOUBLE PRECISION function dla_porpvgrw (character*1UPLO, integerNCOLS, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( ldaf, * )AF, integerLDAF, double precision, dimension( * )WORK)</h3>

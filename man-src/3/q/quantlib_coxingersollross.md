@@ -13,14 +13,14 @@ description: "QuantLib::CoxIngersollRoss – Cox-Ingersoll-Ross model class."
 <p> Inherits <code>QuantLib::OneFactorAffineModel</code>. </p>
 <p> Inherited by <code>ExtendedCoxIngersollRoss</code>. </p>
 <h3>Classes</h3>
-<p>class <code>Dynamics</code><br />
+<p>class <code>Dynamics</code><br/>
  <i>Dynamics of the short-rate under the Cox-Ingersoll-Ross model </i></p>
 <h3>Public Member Functions</h3>
 <p><code>CoxIngersollRoss</code> (<code>Rate</code> r0=0.05, Real theta=0.1, Real k=0.1, Real sigma=0.1) </p>
 <p> virtual Real <code>discountBondOption</code> (Option::Type type, Real strike, Time maturity, Time bondMaturity) const </p>
-<p> virtual boost::shared_ptr&lt; <code>ShortRateDynamics</code> &gt; <code>dynamics</code> () const<br />
- <i>returns the short-rate dynamics </i><br />
- boost::shared_ptr&lt; <code>Lattice</code> &gt; <code>tree</code> (const <code>TimeGrid</code> &amp;grid) const<br />
+<p> virtual boost::shared_ptr&lt; <code>ShortRateDynamics</code> &gt; <code>dynamics</code> () const<br/>
+ <i>returns the short-rate dynamics </i><br/>
+ boost::shared_ptr&lt; <code>Lattice</code> &gt; <code>tree</code> (const <code>TimeGrid</code> &amp;grid) const<br/>
  <i>Return by default a trinomial recombining tree. </i></p>
 <h3>Protected Member Functions</h3>
 <p>Real <code>A</code> (Time t, Time T) const </p>

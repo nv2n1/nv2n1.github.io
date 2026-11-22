@@ -11,22 +11,22 @@ description: "gamma, gammaf, gammal – (logarithm of the) gamma function"
 <p> gamma, gammaf, gammal &#8211; (logarithm of the) gamma function </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;math.h&gt;</code> </p>
-<p> <code>double gamma(double </code><i>x</i><code>);</code><br />
- <code>float gammaf(float </code><i>x</i><code>);</code><br />
+<p> <code>double gamma(double </code><i>x</i><code>);</code><br/>
+ <code>float gammaf(float </code><i>x</i><code>);</code><br/>
  <code>long double gammal(long double </code><i>x</i><code>);</code> </p>
 <p> Link with <i>-lm</i>. </p>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
 <p> <code>gamma</code>():</p>
 <dl>
 <dt>
-</dt><dd> _XOPEN_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
+</dt><dd> _XOPEN_SOURCE<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
 <p> <code>gammaf</code>(), <code>gammal</code>():</p>
 <dl>
 <dt>
-</dt><dd> _XOPEN_SOURCE &gt;= 600 || (_XOPEN_SOURCE &amp;&amp; _ISOC99_SOURCE)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
+</dt><dd> _XOPEN_SOURCE &gt;= 600 || (_XOPEN_SOURCE &amp;&amp; _ISOC99_SOURCE)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> These functions are deprecated: instead, use either the <code><a href="/docs/linux/man/3-tgamma/">tgamma</a></code>(3) or the <code><a href="/docs/linux/man/3-lgamma/">lgamma</a></code>(3) functions, as appropriate. </p>

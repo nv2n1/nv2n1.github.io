@@ -39,10 +39,10 @@ description: "login, logout – write utmp and wtmp entries"
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>login</code>(),<br />
+<td> <code>login</code>(),<br/>
  <code>logout</code>() </td>
 <td>Thread safety</td>
-<td> MT-Unsafe race:utent<br />
+<td> MT-Unsafe race:utent<br/>
  sig:ALRM timer
 </td>
 </tr>

@@ -10,7 +10,7 @@ description: "zla_porpvgrw.f –"
 <p>zla_porpvgrw.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>DOUBLE PRECISION function <code>zla_porpvgrw</code> (UPLO, NCOLS, A, LDA, AF, LDAF, WORK)<br />
+<p>DOUBLE PRECISION function <code>zla_porpvgrw</code> (UPLO, NCOLS, A, LDA, AF, LDAF, WORK)<br/>
  <i></i><code>ZLA_PORPVGRW</code> computes the reciprocal pivot growth factor norm(A)/norm(U) for a symmetric or Hermitian positive-definite matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>DOUBLE PRECISION function zla_porpvgrw (character*1UPLO, integerNCOLS, complex*16, dimension( lda, * )A, integerLDA, complex*16, dimension( ldaf, * )AF, integerLDAF, double precision, dimension( * )WORK)</h3>

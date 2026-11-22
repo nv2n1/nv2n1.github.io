@@ -16,7 +16,7 @@ description: "blazeintro – an introduction to BlazeBlogger"
 <p>This document tries to provide a brief introduction on how to create, configure, add new content to, and generate a static content from the BlazeBlogger repository. </p>
 <p> Although each command described below is actually an autonomous utility, on most Unix systems, BlazeBlogger should be shipped with a command wrapper, making it possible to use <tt>&quot;blaze-command&quot;</tt> and more usual <tt>&quot;blaze command&quot;</tt> interchangeably. In this text, however, we will strictly use the first form, as it is the most portable variant.</p>
 <h2>Creating a New Blog</h2>
-<p>To create a new blog, you have to create a repository first. Similarly to Git, BlazeBlogger repository is just a (usually hidden) directory named <tt>&quot;.blaze&quot;</tt>, where all the blog data and configuration are stored and from which the static content, i.e. the <font SIZE="-1">HTML</font> pages, is generated. In most cases, it is placed in the same directory as the generated content. </p>
+<p>To create a new blog, you have to create a repository first. Similarly to Git, BlazeBlogger repository is just a (usually hidden) directory named <tt>&quot;.blaze&quot;</tt>, where all the blog data and configuration are stored and from which the static content, i.e. the HTML pages, is generated. In most cases, it is placed in the same directory as the generated content. </p>
 <p> Assuming you are already in the directory where the blog repository is to be placed, you can create a new one typing: </p>
 <pre> $ blaze-init</pre>
 <p>If nothing goes wrong, you should get a response similar to this: </p>
@@ -25,13 +25,13 @@ description: "blazeintro – an introduction to BlazeBlogger"
 <pre> $ blaze-init --force</pre>
 <h2>Configuring the Blog</h2>
 <p>Although the defaults try to be reasonable enough and ready for an immediate use, there are few options you might at least want to know about. </p>
-<p> The first thing probably to be changed is an external text editor you will be using for writing your posts. Unless this option is set, BlazeBlogger tries to use system wide settings by looking for <font SIZE="-1">EDITOR</font> environment variable, and if neither of these options is supplied, <tt>&quot;vi&quot;</tt> is used as a considerably reasonable option. To change it to, lets say, <tt>&quot;pico&quot;</tt>, type: </p>
+<p> The first thing probably to be changed is an external text editor you will be using for writing your posts. Unless this option is set, BlazeBlogger tries to use system wide settings by looking for EDITOR environment variable, and if neither of these options is supplied, <tt>&quot;vi&quot;</tt> is used as a considerably reasonable option. To change it to, lets say, <tt>&quot;pico&quot;</tt>, type: </p>
 <pre> $ blaze-config core.editor pico</pre>
 <p>Another things you might want to change are the heading and subheading of your blog, and the default user name; for example: </p>
 <pre> $ blaze-config blog.title My Blog
  $ blaze-config blog.subtitle yet another blog
  $ blaze-config user.name Your Name</pre>
-<p>Furthermore, if you intend to generate <font SIZE="-1">RSS</font> feed, you have to specify the base <font SIZE="-1">URL:</font> </p>
+<p>Furthermore, if you intend to generate RSS feed, you have to specify the base URL: </p>
 <pre> $ blaze-config blog.url <a rel="nofollow" href="http://blog.example.com/">http://blog.example.com/</a></pre>
 <p>Finally, if you prefer coloured output in your terminal window, you can enable it individually for each utility that supports it: </p>
 <pre> $ blaze-config color.list true
@@ -54,7 +54,7 @@ description: "blazeintro – an introduction to BlazeBlogger"
 <dt>tags</dt>
 <dd>Comma separated list of categories the post belongs to. The exact number of attached tags is not limited as long as they are all listed on the same line. Since tags are completely optional, you can safely leave this option empty, or fill it any time later.</dd>
 <dt>url</dt>
-<dd>The use of term `<font SIZE="-1">URL</font>&#8216; in this context is quite vague and simply means the part of the <font SIZE="-1">URL</font> representing the particular post. As it is derived from the post title, you usually do not have to bother with it at all. There are however two cases when it might prove useful: (1) when your title contains special characters (typically foreign diacritical marks) that BlazeBlogger strips away and you still want your <font SIZE="-1">URL</font> look pretty, or (2) in case you want your <font SIZE="-1">URL</font> different from the title, for example because of the title length. Remember that the <font SIZE="-1">URL</font> should consist of alphanumeric characters, hyphens and underscores only.</dd></dl>
+<dd>The use of term `URL&#8216; in this context is quite vague and simply means the part of the URL representing the particular post. As it is derived from the post title, you usually do not have to bother with it at all. There are however two cases when it might prove useful: (1) when your title contains special characters (typically foreign diacritical marks) that BlazeBlogger strips away and you still want your URL look pretty, or (2) in case you want your URL different from the title, for example because of the title length. Remember that the URL should consist of alphanumeric characters, hyphens and underscores only.</dd></dl>
 <p> Keeping that in mind, your first post might look somehow like the one below: </p>
 <pre> # This and following lines beginning with `#' are the post header.
  # Please take your time and replace these options with desired val-
@@ -79,14 +79,14 @@ description: "blazeintro – an introduction to BlazeBlogger"
  to its charms?&lt;/p&gt;
  &lt;!-- break --&gt;
  &lt;p&gt;&lt;em&gt;The Hobbit&lt;/em&gt; is a story about Bilbo Baggins, a hobbit ...</pre>
-<p>Note that you can use <tt>&quot;&lt;!-- break --&gt;&quot;</tt> to mark the end of the part to be displayed on index page. You can also use a special placeholder, <tt>&quot;%root%&quot;</tt>, as a relative path to the base <font SIZE="-1">URL</font> (directory where the blog is placed) in your links and images. For example, to link the <font SIZE="-1">RSS</font> feed from your blog post, write: </p>
+<p>Note that you can use <tt>&quot;&lt;!-- break --&gt;&quot;</tt> to mark the end of the part to be displayed on index page. You can also use a special placeholder, <tt>&quot;%root%&quot;</tt>, as a relative path to the base URL (directory where the blog is placed) in your links and images. For example, to link the RSS feed from your blog post, write: </p>
 <pre> &lt;a href=&quot;%root%index.rss&quot;&gt;RSS Feed&lt;/a&gt;</pre>
-<p>When you are done, save your changes and close the editor. You should get a confirmation message with the <font SIZE="-1">ID</font> of the new post. </p>
+<p>When you are done, save your changes and close the editor. You should get a confirmation message with the ID of the new post. </p>
 <p> If you prefer to write your posts in advance (e.g. work with concepts), you can also add any number of existing files without opening the text editor like this: </p>
 <pre> $ blaze-add file1 file2 file3</pre>
-<p>To edit the existing post, e.g. with <font SIZE="-1">ID</font> number 3, type: </p>
+<p>To edit the existing post, e.g. with ID number 3, type: </p>
 <pre> $ blaze-edit 3</pre>
-<p>To completely remove the post with <font SIZE="-1">ID</font> 3 from the repository, use the following command: </p>
+<p>To completely remove the post with ID 3 from the repository, use the following command: </p>
 <pre> $ blaze-remove 3</pre>
 <p>Do not forget that the utility has no conscience and remorselessly deletes anything you tell it to, with no way to take it back (unless you have backup, of course). To prevent the accidental loss of potentially valuable data, you might want to consider running it in an interactive mode using the <tt>&quot;--interactive&quot;</tt> (or shorter <tt>&quot;-i&quot;</tt>) option and thus having to confirm every deletion.</p>
 <h2>Managing the Pages</h2>
@@ -94,19 +94,19 @@ description: "blazeintro – an introduction to BlazeBlogger"
 <p> Similarly to blog posts, you can manage pages using the same commands with additional <tt>&quot;--page&quot;</tt> (or <tt>&quot;-p&quot;</tt> for short) option. Adding new page would therefore look like this: </p>
 <pre> $ blaze-add --page</pre>
 <p>Unlike posts, pages do not respect tags, nor do they display their author and the date of publishing. The latter is however still taken in account in the sorting process, making it possible to alter the order of pages in the menu according to your taste. </p>
-<p> To edit existing page with <font SIZE="-1">ID</font> 3, use: </p>
+<p> To edit existing page with ID 3, use: </p>
 <pre> $ blaze-edit --page 3</pre>
-<p>Finally, to remove pages with <font SIZE="-1">ID</font> 2, type: </p>
+<p>Finally, to remove pages with ID 2, type: </p>
 <pre> $ blaze-remove --page 2</pre>
 <h2>Browsing the Blog Repository</h2>
-<p>To display all blog posts in the repository, e.g. to look up an <font SIZE="-1">ID</font> of the particular post, use following command: </p>
+<p>To display all blog posts in the repository, e.g. to look up an ID of the particular post, use following command: </p>
 <pre> $ blaze-list</pre>
 <p>You can also narrow the results by providing the additional specifications like date, tag or author. For example, to find all posts from 19 December 2008 written by David, type: </p>
 <pre> $ blaze-list --author David --year 2008 --month 12 --day 19</pre>
 <p>To browse pages instead of blog posts, simply add the <tt>&quot;--pages&quot;</tt> option: </p>
 <pre> $ blaze-list --pages</pre>
 <h2>Generating the Static Content</h2>
-<p>To generate the static content from your repository in the current working directory, with all posts, pages, monthly and yearly archives, tags and <font SIZE="-1">RSS</font> feed included, type: </p>
+<p>To generate the static content from your repository in the current working directory, with all posts, pages, monthly and yearly archives, tags and RSS feed included, type: </p>
 <pre> $ blaze-make</pre>
 <p>or if you wish to see a list of files as they are created: </p>
 <pre> $ blaze-make --verbose</pre>
@@ -151,5 +151,5 @@ description: "blazeintro – an introduction to BlazeBlogger"
 <p><code><a href="/docs/linux/man/1-blaze-init/">blaze-init</a></code>(1), <code><a href="/docs/linux/man/1-blaze-config/">blaze-config</a></code>(1), <code><a href="/docs/linux/man/1-blaze-add/">blaze-add</a></code>(1), <code><a href="/docs/linux/man/1-blaze-edit/">blaze-edit</a></code>(1), <code><a href="/docs/linux/man/1-blaze-remove/">blaze-remove</a></code>(1), <code><a href="/docs/linux/man/1-blaze-list/">blaze-list</a></code>(1), <code><a href="/docs/linux/man/1-blaze-make/">blaze-make</a></code>(1), <code><a href="/docs/linux/man/1-blaze-log/">blaze-log</a></code>(1).</p>
 <h2>Author</h2>
 <p>Written by Jaromir Hradilek &lt;jhradilek [at] gmail.com&gt; </p>
-<p> Permission is granted to copy, distribute and/or modify this document under the terms of the <font SIZE="-1">GNU</font> Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. </p>
-<p> A copy of the license is included as a file called <font SIZE="-1">FDL</font> in the main directory of the BlazeBlogger source package.</p>
+<p> Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. </p>
+<p> A copy of the license is included as a file called FDL in the main directory of the BlazeBlogger source package.</p>

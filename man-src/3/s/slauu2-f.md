@@ -10,7 +10,7 @@ description: "slauu2.f –"
 <p>slauu2.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>slauu2</code> (UPLO, N, A, LDA, INFO)<br />
+<p>subroutine <code>slauu2</code> (UPLO, N, A, LDA, INFO)<br/>
  <i></i><code>SLAUU2</code> computes the product UUH or LHL, where U and L are upper or lower triangular matrices (unblocked algorithm).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slauu2 (characterUPLO, integerN, real, dimension( lda, * )A, integerLDA, integerINFO)</h3>

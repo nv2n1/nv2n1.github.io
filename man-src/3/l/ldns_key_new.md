@@ -10,7 +10,7 @@ description: "ldns_key_new"
 
 <p> ldns_key_new </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ldns_key* ldns_key_new(); </p>

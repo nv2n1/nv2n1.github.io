@@ -25,7 +25,7 @@ ewline) characters. The backslash and the newline are replaced with a space (&qu
 <h3><code>default_project</code></h3>
 <p>The default project of the user.</p>
 <h3><code>delete_time</code></h3>
-<p><code>Note:</code> Deprecated, may be removed in future release.<br />
+<p><code>Note:</code> Deprecated, may be removed in future release.<br/>
  The wall-clock time when this user will be deleted, expressed as the number of seconds elapsed since January 1, 1970. If set to zero, the affected user is a permanent user. If set to one, the user currently has active jobs. For additional information about automatically created users, see the <code>enforce_user</code> and <code>auto_user_delete_time</code> parameters in</p>
 <h2>See Also</h2>
 <h2>Copyright</h2>

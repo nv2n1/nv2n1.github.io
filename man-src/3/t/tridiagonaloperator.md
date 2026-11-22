@@ -18,9 +18,9 @@ Disposable&lt; TridiagonalOperator &gt; operator* (Real a, const TridiagonalOper
 Disposable&lt; TridiagonalOperator &gt; operator* (const TridiagonalOperator &amp;D, Real a)
 Disposable&lt; TridiagonalOperator &gt; operator/ (const TridiagonalOperator &amp;D, Real a)</code></pre>
 <h3>Classes</h3>
-<p>class <code>TridiagonalOperator</code><br />
- <i>Base implementation for tridiagonal operator. </i><br />
- class <code>TimeSetter</code><br />
+<p>class <code>TridiagonalOperator</code><br/>
+ <i>Base implementation for tridiagonal operator. </i><br/>
+ class <code>TimeSetter</code><br/>
  <i>encapsulation of time-setting logic </i></p>
 <h3>Functions</h3>
 <pre><code>void swap (TridiagonalOperator &amp;, TridiagonalOperator &amp;)

@@ -23,6 +23,6 @@ description: "CurveCP — Message-handling programs"
 <h2>SEE ALSO</h2>
 <p> curvecpserver (1), curvecpclient (1), curvecpprintkey (1), inetd (8), tcpserver (1).</p>
 <h2>AUTHOR</h2>
-<p> This manual page was written by Sergiusz Pawlowicz debian [at] pawlowicz.name for the <code>Debian</code> system (and may be used by others). The source of this page is a webpage <a rel="nofollow" href="http://curvecp.org/">http://curvecp.org/</a> . Permission is granted to copy, distribute and/or modify this document under public domain.<br />
+<p> This manual page was written by Sergiusz Pawlowicz debian [at] pawlowicz.name for the <code>Debian</code> system (and may be used by others). The source of this page is a webpage <a rel="nofollow" href="http://curvecp.org/">http://curvecp.org/</a> . Permission is granted to copy, distribute and/or modify this document under public domain.<br/>
 &nbsp;<wbr> </p>
 <p> This manual page was rewritten for the <code>Debian</code> distribution because the original program does not have a manual page. </p>

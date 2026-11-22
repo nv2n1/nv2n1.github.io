@@ -18,13 +18,13 @@ description: "ETS – Enhanced Transmission Selection scheduler"
 <p> Only qdiscs that own their queue should be added below the bandwidth-sharing bands. Attaching to them non-work-conserving qdiscs like TBF does not make sense &#8212; other qdiscs in the active list will be skipped until the dequeue operation succeeds. This limitation does not exist with the strict bands.</p>
 <h2>Classification</h2>
 <p>The ETS qdisc allows three ways to decide which band to enqueue a packet to: </p>
-<p> &#8211; Packet priority can be directly set to a class handle, in which case that<br />
-&nbsp;<wbr>&nbsp;is the queue where the packet will be put. For example, band number 2 of<br />
-&nbsp;<wbr>&nbsp;a qdisc with handle of 11: will have classid 11:3. To mark a packet for<br />
+<p> &#8211; Packet priority can be directly set to a class handle, in which case that<br/>
+&nbsp;<wbr>&nbsp;is the queue where the packet will be put. For example, band number 2 of<br/>
+&nbsp;<wbr>&nbsp;a qdisc with handle of 11: will have classid 11:3. To mark a packet for<br/>
 &nbsp;<wbr>&nbsp;queuing to this band, the packet priority should be set to 0x110003. </p>
-<p> &#8211; A tc filter attached to the qdisc can put the packet to a band by using<br />
+<p> &#8211; A tc filter attached to the qdisc can put the packet to a band by using<br/>
 &nbsp;<wbr>&nbsp;the&nbsp;<code>flowid</code>&nbsp;keyword. </p>
-<p> &#8211; As a last resort, the ETS qdisc consults its priomap (see below), which<br />
+<p> &#8211; As a last resort, the ETS qdisc consults its priomap (see below), which<br/>
 &nbsp;<wbr>&nbsp;maps packets to bands based on packet priority.</p>
 <h2>Parameters</h2>
 <dl>
@@ -40,27 +40,27 @@ description: "ETS – Enhanced Transmission Selection scheduler"
 </dl>
 <h2>EXAMPLE &amp; USAGE</h2>
 <p>Add a qdisc with 8 bandwidth-sharing bands, using the interface MTU as their quanta. Since all quanta are the same, this will lead to equal distribution of bandwidth between the bands, each will get about 12.5% of the link. The low 8 priorities go to individual bands in a reverse 1:1 fashion (such that the highest priority goes to the first band). </p>
-<p> # tc qdisc add dev eth0 root handle 1: ets bands 8 priomap 7 6 5 4 3 2 1 0<br />
- # tc qdisc show dev eth0<br />
+<p> # tc qdisc add dev eth0 root handle 1: ets bands 8 priomap 7 6 5 4 3 2 1 0<br/>
+ # tc qdisc show dev eth0<br/>
  qdisc ets 1: root refcnt 2 bands 8 quanta 1514 1514 1514 1514 1514 1514 1514 1514 priomap 7 6 5 4 3 2 1 0 7 7 7 7 7 7 7 7 </p>
 <p> Tweak the first band of the above qdisc to give it a quantum of 2650, which will give it about 20% of the link (and about 11.5% to the remaining bands): </p>
-<p> # tc class change dev eth0 classid 1:1 ets quantum 2650<br />
- # tc qdisc show dev eth0<br />
+<p> # tc class change dev eth0 classid 1:1 ets quantum 2650<br/>
+ # tc qdisc show dev eth0<br/>
  qdisc ets 1: root refcnt 2 bands 8 quanta 2650 1514 1514 1514 1514 1514 1514 1514 priomap 7 6 5 4 3 2 1 0 7 7 7 7 7 7 7 7 </p>
 <p> Create a purely strict Qdisc with reverse 1:1 mapping between priorities and bands: </p>
-<p> # tc qdisc add dev eth0 root handle 1: ets strict 8 priomap 7 6 5 4 3 2 1 0<br />
- # tc qdisc sh dev eth0<br />
+<p> # tc qdisc add dev eth0 root handle 1: ets strict 8 priomap 7 6 5 4 3 2 1 0<br/>
+ # tc qdisc sh dev eth0<br/>
  qdisc ets 1: root refcnt 2 bands 8 strict 8 priomap 7 6 5 4 3 2 1 0 7 7 7 7 7 7 7 7 </p>
 <p> Add a Qdisc with 6 bands, 3 strict and 3 ETS with 35%-30%-25% weights: </p>
-<p> # tc qdisc add dev eth0 root handle 1: ets strict 3 quanta 3500 3000 2500 priomap 0 1 1 1 2 3 4 5<br />
- # tc qdisc sh dev eth0<br />
+<p> # tc qdisc add dev eth0 root handle 1: ets strict 3 quanta 3500 3000 2500 priomap 0 1 1 1 2 3 4 5<br/>
+ # tc qdisc sh dev eth0<br/>
  qdisc ets 1: root refcnt 2 bands 6 strict 3 quanta 3500 3000 2500 priomap 0 1 1 1 2 3 4 5 5 5 5 5 5 5 5 5 </p>
 <p> Create a Qdisc such that traffic with priorities 2, 3 and 4 are strictly prioritized over other traffic, and the rest goes into bandwidth-sharing classes with equal weights: </p>
-<p> # tc qdisc add dev eth0 root handle 1: ets bands 8 strict 3 priomap 3 4 0 1 2 5 6 7<br />
- # tc qdisc sh dev eth0<br />
+<p> # tc qdisc add dev eth0 root handle 1: ets bands 8 strict 3 priomap 3 4 0 1 2 5 6 7<br/>
+ # tc qdisc sh dev eth0<br/>
  qdisc ets 1: root refcnt 2 bands 8 strict 3 quanta 1514 1514 1514 1514 1514 priomap 3 4 0 1 2 5 6 7 7 7 7 7 7 7 7 7</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-tc/">tc</a></code>(8), <code><a href="/docs/linux/man/8-tc-prio/">tc-prio</a></code>(8), <code><a href="/docs/linux/man/8-tc-drr/">tc-drr</a></code>(8) </p>
 <h2>Author</h2>
-<p>Parts of both this manual page and the code itself are taken from PRIO and DRR qdiscs.<br />
+<p>Parts of both this manual page and the code itself are taken from PRIO and DRR qdiscs.<br/>
  ETS qdisc itself was written by Petr Machata.</p>

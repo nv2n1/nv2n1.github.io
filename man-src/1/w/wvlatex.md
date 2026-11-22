@@ -17,6 +17,6 @@ description: "wvLatex – convert msword documents to LaTeX"
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-wvabw/">wvAbw</a>(1),</code> <code><a href="/docs/linux/man/1-wvware/">wvWare</a>(1),</code> <code><a href="/docs/linux/man/1-wvhtml/">wvHtml</a>(1),</code> <code><a href="/docs/linux/man/1-wvcleanlatex/">wvCleanLatex</a>(1),</code> <code><a href="/docs/linux/man/1-wvps/">wvPS</a>(1),</code> <code><a href="/docs/linux/man/1-wvdvi/">wvDVI</a>(1),</code> <code><a href="/docs/linux/man/1-wvpdf/">wvPDF</a>(1),</code> <code><a href="/docs/linux/man/1-wvtext/">wvText</a>(1),</code> <code><a href="/docs/linux/man/1-wvwml/">wvWml</a>(1),</code> <code><a href="/docs/linux/man/1-wvmime/">wvMime</a>(1),</code> <code><a href="/docs/linux/man/1-wvrtf/">wvRTF</a>(1),</code> <code><a href="/docs/linux/man/1-catdoc/">catdoc</a>(1),</code> <code>word2x(1)</code></p>
 <h2>Author</h2>
-<p>&nbsp;<wbr>Dom Lachowicz&nbsp;<wbr>(current author and maintainer)&nbsp;<wbr><br />
-&nbsp;<wbr>WEB:&nbsp;<wbr><a rel="nofollow" href="http://wvware.sourceforge.net">http://wvware.sourceforge.net</a><br />
+<p>&nbsp;<wbr>Dom Lachowicz&nbsp;<wbr>(current author and maintainer)&nbsp;<wbr><br/>
+&nbsp;<wbr>WEB:&nbsp;<wbr><a rel="nofollow" href="http://wvware.sourceforge.net">http://wvware.sourceforge.net</a><br/>
 &nbsp;<wbr>MAIL: cinamod [at] hotmail.com</p>

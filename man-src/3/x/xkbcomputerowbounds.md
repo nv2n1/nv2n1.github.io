@@ -10,7 +10,7 @@ description: "XkbComputeRowBounds – Update the bounding box of a row"
 <p>XkbComputeRowBounds &#8211; Update the bounding box of a row </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Bool XkbComputeRowBounds</code> <code>(XkbGeometryPtr </code><i>geom</i><code>,</code> <code>XkbSectionPtr </code><i>section</i><code>,</code> <code>XkbRowPtr </code><i>row</i><code>);</code><br />
+<dt> <code>Bool XkbComputeRowBounds</code> <code>(XkbGeometryPtr </code><i>geom</i><code>,</code> <code>XkbSectionPtr </code><i>section</i><code>,</code> <code>XkbRowPtr </code><i>row</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

@@ -34,11 +34,11 @@ description: "kcprototest – command line interface to test the prototype datab
 <p> Options feature the following. </p>
 <dl>
 <dt>
-</dt><dd> <code>-tree</code> : test the prototype tree database instead of the prototype hash database.<br />
- <code>-th </code><i>num</i> : specifies the number of worker threads.<br />
- <code>-rnd</code> : performs random test.<br />
- <code>-etc</code> : performs miscellaneous operations.<br />
- <code>-tran</code> : performs transaction.<br />
+</dt><dd> <code>-tree</code> : test the prototype tree database instead of the prototype hash database.<br/>
+ <code>-th </code><i>num</i> : specifies the number of worker threads.<br/>
+ <code>-rnd</code> : performs random test.<br/>
+ <code>-etc</code> : performs miscellaneous operations.<br/>
+ <code>-tran</code> : performs transaction.<br/>
  <code>-it </code><i>num</i> : specifies the number of repetition.
 </dd></dl>
 <p> This command returns 0 on success, another on failure. </p>

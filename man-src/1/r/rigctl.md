@@ -245,9 +245,9 @@ description: "rigctl – control radio transceivers and receivers"
 <p> The <code>-v</code>, <code>&#8211;verbose</code> option allows different levels of diagnostics to be output to <code>stderr</code> and correspond to -v for BUG, -vv for ERR, -vvv for WARN, -vvvv for VERBOSE, or -vvvvv for TRACE. </p>
 <p> A given verbose level is useful for providing needed debugging information to the email address below. For example, TRACE output shows all of the values sent to and received from the radio which is very useful for radio backend library development and may be requested by the developers.</p>
 <h2>EXIT STATUS</h2>
-<p> <code>rigctl</code> exits with:<br />
- 0 if all operations completed normally;<br />
- 1 if there was an invalid command line option or argument;<br />
+<p> <code>rigctl</code> exits with:<br/>
+ 0 if all operations completed normally;<br/>
+ 1 if there was an invalid command line option or argument;<br/>
  2 if an error was returned by <code>Hamlib</code>.</p>
 <h2>BUGS</h2>
 <p> set_chan has no entry method as of yet, hence left unimplemented. </p>
@@ -259,8 +259,8 @@ description: "rigctl – control radio transceivers and receivers"
 <p> Written by Stephane Fillod, Nate Bargmann, and the Hamlib Group </p>
 <p> &lt;<a rel="nofollow" href="http://www.hamlib.org">http://www.hamlib.org</a>&gt;.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2000-2010 Stephane Fillod<br />
- Copyright &#169; 2010-2012 Nate Bargmann<br />
+<p> Copyright &#169; 2000-2010 Stephane Fillod<br/>
+ Copyright &#169; 2010-2012 Nate Bargmann<br/>
  Copyright &#169; 2000-2010 the Hamlib Group. </p>
 <p> This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>SEE ALSO</h2>

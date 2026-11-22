@@ -27,16 +27,16 @@ description: "hx509 printing functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>b</i> bit string to print.<br />
- <i>func</i> hx509_vprint_func to print with.<br />
+</dt><dd> <i>b</i> bit string to print.<br/>
+ <i>func</i> hx509_vprint_func to print with.<br/>
  <i>ctx</i> context variable to hx509_vprint_func function.</dd></dl>
 <h3>int hx509_cert_keyusage_print (hx509_contextcontext, hx509_certc, char **s)</h3>
 <p> Print certificate usage for a certificate to a string. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A hx509 context.<br />
- <i>c</i> a certificate print the keyusage for.<br />
+</dt><dd> <i>context</i> A hx509 context.<br/>
+ <i>c</i> a certificate print the keyusage for.<br/>
  <i>s</i> the return string with the keysage printed in to, free with <code>hx509_xfree()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -47,15 +47,15 @@ description: "hx509 printing functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>oid</i> oid to print<br />
- <i>func</i> hx509_vprint_func to print with.<br />
+</dt><dd> <i>oid</i> oid to print<br/>
+ <i>func</i> hx509_vprint_func to print with.<br/>
  <i>ctx</i> context variable to hx509_vprint_func function.</dd></dl>
 <h3>int hx509_oid_sprint (const heim_oid *oid, char **str)</h3>
 <p> Print a oid to a string. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>oid</i> oid to print<br />
+</dt><dd> <i>oid</i> oid to print<br/>
  <i>str</i> allocated string, free with <code>hx509_xfree()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -73,16 +73,16 @@ description: "hx509 printing functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>ctx</i> the context to the print function. If the ctx is NULL, stdout is used.<br />
- <i>fmt</i> the printing format.<br />
+</dt><dd> <i>ctx</i> the context to the print function. If the ctx is NULL, stdout is used.<br/>
+ <i>fmt</i> the printing format.<br/>
  <i>va</i> the argumet list.</dd></dl>
 <h3>int hx509_validate_cert (hx509_contextcontext, hx509_validate_ctxctx, hx509_certcert)</h3>
 <p> Validate/Print the status of the certificate. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A hx509 context.<br />
- <i>ctx</i> A hx509 validation context.<br />
+</dt><dd> <i>context</i> A hx509 context.<br/>
+ <i>ctx</i> A hx509 validation context.<br/>
  <i>cert</i> the cerificate to validate/print.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -93,7 +93,7 @@ description: "hx509 printing functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>ctx</i> A hx509 validation context.<br />
+</dt><dd> <i>ctx</i> A hx509 validation context.<br/>
  <i>flags</i> flags to add to the validation context.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -110,7 +110,7 @@ description: "hx509 printing functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>context</i> A hx509 context.<br />
+</dt><dd> <i>context</i> A hx509 context.<br/>
  <i>ctx</i> a new allocated hx509 validation context, free with <code>hx509_validate_ctx_free()</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -121,8 +121,8 @@ description: "hx509 printing functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>ctx</i> a hx509 valication context.<br />
- <i>func</i> the printing function to usea.<br />
+</dt><dd> <i>ctx</i> a hx509 valication context.<br/>
+ <i>func</i> the printing function to usea.<br/>
  <i>c</i> the context variable to the printing function.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

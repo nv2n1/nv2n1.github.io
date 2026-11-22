@@ -37,7 +37,7 @@ description: "proofgeneral – manual page for proofgeneral ()"
 <p> Report bugs to &lt;da+pg-bugs [at] inf.ed.ac.uk&gt;. </p>
 <p> David Aspinall.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 1998-2005 LFCS, University of Edinburgh, UK.<br />
+<p> Copyright &#169; 1998-2005 LFCS, University of Edinburgh, UK.<br/>
  This is free software; see the source for copying conditions.</p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>proofgeneral</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>proofgeneral</code> programs are properly installed at your site, the command</p>

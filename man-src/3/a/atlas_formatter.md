@@ -13,36 +13,36 @@ description: "Atlas::Formatter – Atlas stream formatter."
 <p> Inherits <code>Atlas::Bridge</code>. </p>
 <h3>Public Member Functions</h3>
 <p><code>Formatter</code> (std::iostream &amp;s, <code>Atlas::Bridge</code> &amp;b) </p>
-<p> virtual void <code>streamBegin</code> ()<br />
- <i>Begin an </i><code>Atlas</code> stream.<br />
- virtual void <code>streamMessage</code> ()<br />
- <i>Start a message in an </i><code>Atlas</code> stream.<br />
- virtual void <code>streamEnd</code> ()<br />
- <i>Ends the </i><code>Atlas</code> stream.<br />
- virtual void <code>mapMapItem</code> (const std::string &amp;name)<br />
- <i>Starts a map object to the currently streamed map. </i><br />
- virtual void <code>mapListItem</code> (const std::string &amp;name)<br />
- <i>Starts a list object to the currently streamed map. </i><br />
- virtual void <code>mapIntItem</code> (const std::string &amp;name, long)<br />
- <i>Adds an integer to the currently streames map. </i><br />
- virtual void <code>mapFloatItem</code> (const std::string &amp;name, double)<br />
- <i>Adds a float to the currently streamed map. </i><br />
- virtual void <code>mapStringItem</code> (const std::string &amp;name, const std::string &amp;)<br />
- <i>Adds a string to the currently streamed map. </i><br />
- virtual void <code>mapEnd</code> ()<br />
- <i>Ends the currently streamed map. </i><br />
- virtual void <code>listMapItem</code> ()<br />
- <i>Starts a map object in the currently streamed list. </i><br />
- virtual void <code>listListItem</code> ()<br />
- <i>Starts a list object in the currently streamed list. </i><br />
- virtual void <code>listIntItem</code> (long)<br />
- <i>Adds an integer to the currently streames list. </i><br />
- virtual void <code>listFloatItem</code> (double)<br />
- <i>Adds a float to the currently streamed list. </i><br />
- virtual void <code>listStringItem</code> (const std::string &amp;)<br />
- <i>Adds a string to the currently streamed list. </i><br />
- virtual void <code>listEnd</code> ()<br />
- <i>Ends the currently streamed list. </i><br />
+<p> virtual void <code>streamBegin</code> ()<br/>
+ <i>Begin an </i><code>Atlas</code> stream.<br/>
+ virtual void <code>streamMessage</code> ()<br/>
+ <i>Start a message in an </i><code>Atlas</code> stream.<br/>
+ virtual void <code>streamEnd</code> ()<br/>
+ <i>Ends the </i><code>Atlas</code> stream.<br/>
+ virtual void <code>mapMapItem</code> (const std::string &amp;name)<br/>
+ <i>Starts a map object to the currently streamed map. </i><br/>
+ virtual void <code>mapListItem</code> (const std::string &amp;name)<br/>
+ <i>Starts a list object to the currently streamed map. </i><br/>
+ virtual void <code>mapIntItem</code> (const std::string &amp;name, long)<br/>
+ <i>Adds an integer to the currently streames map. </i><br/>
+ virtual void <code>mapFloatItem</code> (const std::string &amp;name, double)<br/>
+ <i>Adds a float to the currently streamed map. </i><br/>
+ virtual void <code>mapStringItem</code> (const std::string &amp;name, const std::string &amp;)<br/>
+ <i>Adds a string to the currently streamed map. </i><br/>
+ virtual void <code>mapEnd</code> ()<br/>
+ <i>Ends the currently streamed map. </i><br/>
+ virtual void <code>listMapItem</code> ()<br/>
+ <i>Starts a map object in the currently streamed list. </i><br/>
+ virtual void <code>listListItem</code> ()<br/>
+ <i>Starts a list object in the currently streamed list. </i><br/>
+ virtual void <code>listIntItem</code> (long)<br/>
+ <i>Adds an integer to the currently streames list. </i><br/>
+ virtual void <code>listFloatItem</code> (double)<br/>
+ <i>Adds a float to the currently streamed list. </i><br/>
+ virtual void <code>listStringItem</code> (const std::string &amp;)<br/>
+ <i>Adds a string to the currently streamed list. </i><br/>
+ virtual void <code>listEnd</code> ()<br/>
+ <i>Ends the currently streamed list. </i><br/>
  void <code>setSpacing</code> (int s) </p>
 <h3>Protected Attributes</h3>
 <p>std::iostream &amp; <code>m_stream</code> </p>

@@ -105,8 +105,8 @@ description: "lbzip2 – parallel bzip2 utility"
 <h2>AUTHORS</h2>
 <p> <code>lbzip2</code> was originally written by Laszlo Ersek &lt;lacos [at] caesar.elte.hu&gt;, <a rel="nofollow" href="http://lacos.hu/.">http://lacos.hu/.</a> Versions 2.0 and later were written by Mikolaj Izdebski. </p>
 <h2>COPYRIGHT</h2>
-<p> Copyright (C) 2011, 2012, 2013 Mikolaj Izdebski<br />
- Copyright (C) 2008, 2009, 2010 Laszlo Ersek<br />
+<p> Copyright (C) 2011, 2012, 2013 Mikolaj Izdebski<br/>
+ Copyright (C) 2008, 2009, 2010 Laszlo Ersek<br/>
  Copyright (C) 1996 Julian Seward </p>
 <p> This manual page is part of lbzip2, version 2.5. lbzip2 is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. </p>
 <p> lbzip2 is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. </p>

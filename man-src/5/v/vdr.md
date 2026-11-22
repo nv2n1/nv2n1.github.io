@@ -263,7 +263,7 @@ description: "vdr_files – the Video Disk Recorder Files"
 <dd>The Radio ID of this channel (typically 0, may be used to distinguish channels where NID, TID and SID are all equal).</dd></dl>
 <p> A particular channel can be uniquely identified by its <code>channel ID</code>, which is a string that looks like this: </p>
 <p> <code>S19.2E-1-1089-12003-0</code> </p>
-<p> The components of this string are the <code>Source</code> (S19.2E), <code>NID</code> (1), <code>TID</code> (1089), <code>SID</code> (12003) and <code>RID</code> (0) as defined above. The last part can be omitted if it is <code>0</code>, so the above example could also be written as S19.2E-1-1089-12003).<br />
+<p> The components of this string are the <code>Source</code> (S19.2E), <code>NID</code> (1), <code>TID</code> (1089), <code>SID</code> (12003) and <code>RID</code> (0) as defined above. The last part can be omitted if it is <code>0</code>, so the above example could also be written as S19.2E-1-1089-12003).<br/>
  The <code>channel ID</code> is used in the <i>timers.conf</i> and <i>epg.data</i> files to properly identify the channels. </p>
 <p> If a channel has both <code>NID</code> and <code>TID</code> set to 0, the <code>channel ID</code> will use the <code>Frequency</code> instead of the <code>TID</code>. For satellite channels an additional offset of 100000, 200000, 300000 or 400000 is added to that number, depending on the <code>Polarization</code> (<code>H</code>, <code>V</code>, <code>L</code> or <code>R</code>, respectively). This is necessary because on some satellites the same frequency is used for two different transponders, with opposite polarization.</p>
 <h3>Timers</h3>
@@ -417,13 +417,13 @@ description: "vdr_files – the Video Disk Recorder Files"
 <p> channel frequency [pin] </p>
 <p> where channel is the SCR device&#8217;s channel index (0-7), frequency is the user band frequency of the given channel, and pin is an optional pin number (0-255). The actual values are device specific and can be found in the SCR device&#8217;s manual. </p>
 <p> Examples: </p>
-<p> 0 1284<br />
- 1 1400<br />
- 2 1516<br />
- 3 1632<br />
- 4 1748<br />
- 5 1864<br />
- 6 1980<br />
+<p> 0 1284<br/>
+ 1 1400<br/>
+ 2 1516<br/>
+ 3 1632<br/>
+ 4 1748<br/>
+ 5 1864<br/>
+ 6 1980<br/>
  7 2096 </p>
 <p> By default it is assumed that the SCR configurations apply to all devices, and each device will pick one. If you have several SCR sat cables connected to one VDR machine, or if you want to explicitly assign the SCR channels to your devices, lines of the form </p>
 <p> <code>1 2 4:</code> </p>
@@ -437,7 +437,7 @@ description: "vdr_files – the Video Disk Recorder Files"
 <p> <code>macrokey [@plugin] key1 key2 key3&#8230;</code> </p>
 <p> where <code>macrokey</code> is the key that shall initiate execution of this macro and can be one of <i>Up</i>, <i>Down</i>, <i>Ok</i>, <i>Back</i>, <i>Left</i>, <i>Right</i>, <i>Red</i>, <i>Green</i>, <i>Yellow</i>, <i>Blue</i>, <i>0</i>&#8230;<i>9</i> or <i>User1</i>&#8230;<i>User9</i>. The rest of the line consists of a set of keys, which will be executed just as if they had been pressed in the given sequence. The optional <code>@plugin</code> can be used to automatically select the given plugin. <code>plugin</code> is the name of the plugin, exactly as given in the -P option when starting VDR. There can be only one <code>@plugin</code> per key macro. For instance </p>
 <p> <code>User1 @abc Down Down Ok</code> </p>
-<p> would call the main menu function of the &quot;abc&quot; plugin and execute two &quot;Down&quot; key presses, followed by &quot;Ok&quot;.<br />
+<p> would call the main menu function of the &quot;abc&quot; plugin and execute two &quot;Down&quot; key presses, followed by &quot;Ok&quot;.<br/>
  Note that the color keys will only execute their macro function in &quot;normal viewing&quot; mode (i.e. when no other menu or player is active). The <i>User1</i>&#8230;<i>User9</i> keys will always execute their macro function. There may be up to 15 keys in such a key sequence.</p>
 <h3>Folders</h3>
 <p>The file <i>folders.conf</i> contains the definitions of folders that can be used in the &quot;Edit timer&quot; menu. Each line contains one folder definition. Leading whitespace and everything after and including a &#8216;#&#8217; is ignored. A line ending with &#8216;{&#8216; defines a sub folder (i.e. a folder that contains other folders), and a line consisting of only &#8216;}&#8217; ends the definition of a sub folder. </p>
@@ -445,7 +445,7 @@ description: "vdr_files – the Video Disk Recorder Files"
 <p> Daily { </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>News </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>Soaps </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>}<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>}<br/>
  Archive { </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>Movies </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>Sports </p>
@@ -453,8 +453,8 @@ description: "vdr_files – the Video Disk Recorder Files"
 <p>&nbsp;<wbr>Star Trek </p>
 <p>&nbsp;<wbr>U.F.O. </p>
 <p>&nbsp;<wbr>} </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>}<br />
- Comedy<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>}<br/>
+ Comedy<br/>
  Science </p>
 <p> Note that these folder definitions are only used to set the file name under which a timer will store its recording. Changing these definitions in any way has no effect on existing timers or recordings.</p>
 <h3>Commands</h3>
@@ -464,24 +464,24 @@ description: "vdr_files – the Video Disk Recorder Files"
 <p> Everything following (and including) a &#8216;#&#8217; character is considered to be comment. </p>
 <p> You can have nested layers of command menus by surrounding a sequence of commands with &#8216;{&#8216;&#8230;&#8217;}&#8217; and giving it a title, as in </p>
 <p> My Commands { </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>First list&nbsp;<wbr>{<br />
-&nbsp;<wbr>Do something: some command<br />
-&nbsp;<wbr>Do something else: another command<br />
-&nbsp;<wbr>}<br />
-&nbsp;<wbr>&nbsp;<wbr>Second list&nbsp;<wbr>{<br />
-&nbsp;<wbr>Even more: yet another command<br />
-&nbsp;<wbr>So much more: and yet another one<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>First list&nbsp;<wbr>{<br/>
+&nbsp;<wbr>Do something: some command<br/>
+&nbsp;<wbr>Do something else: another command<br/>
+&nbsp;<wbr>}<br/>
+&nbsp;<wbr>&nbsp;<wbr>Second list&nbsp;<wbr>{<br/>
+&nbsp;<wbr>Even more: yet another command<br/>
+&nbsp;<wbr>So much more: and yet another one<br/>
 &nbsp;<wbr>} </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>} </p>
 <p> Command lists can be nested to any depth. </p>
 <p> By default the menu entries in the &quot;Commands&quot; menu will be numbered &#8216;1&#8217;&#8230;&#8217;9&#8242; to make them selectable by pressing the corresponding number key. If you want to use your own numbering scheme (maybe to skip certain numbers), just precede the <code>title</code>s with the numbers of your choice. <code>vdr</code> will suppress its automatic numbering if the first entry in <i>commands.conf</i> starts with a digit in the range &#8216;1&#8217;&#8230;&#8217;9&#8242;, followed by a blank. </p>
 <p> In order to avoid error messages to the console, every command should have <i>stderr</i> redirected to <i>stdout</i>. Everything the command prints to <i>stdout</i> will be displayed in a result window, with <code>title</code> as its title. </p>
 <p> Examples: </p>
-<p> Check for new mail?: /usr/local/bin/checkmail 2&gt;&amp;1<br />
- CPU status: /usr/local/bin/cpustatus 2&gt;&amp;1<br />
- Disk space: df -h | grep &#8216;/video&#8217; | awk &#8216;{ print 100 &#8211; $5 &quot;% free&quot;; }&#8217;<br />
+<p> Check for new mail?: /usr/local/bin/checkmail 2&gt;&amp;1<br/>
+ CPU status: /usr/local/bin/cpustatus 2&gt;&amp;1<br/>
+ Disk space: df -h | grep &#8216;/video&#8217; | awk &#8216;{ print 100 &#8211; $5 &quot;% free&quot;; }&#8217;<br/>
  Calendar: date;echo;cal </p>
-<p> Note that the commands &#8216;checkmail&#8217; and &#8216;cpustatus&#8217; are only <code>examples</code>! Don&#8217;t send emails to the author asking where to find these ;-)<br />
+<p> Note that the commands &#8216;checkmail&#8217; and &#8216;cpustatus&#8217; are only <code>examples</code>! Don&#8217;t send emails to the author asking where to find these ;-)<br/>
  The &#8216;?&#8217; at the end of the &quot;Check for new mail?&quot; entry will prompt the user whether this command shall really be executed.</p>
 <h3>Recording Commands</h3>
 <p>The file <i>reccmds.conf</i> can be used to define commands that can be applied to the currently highlighted recording in the &quot;Recordings&quot; menu. The syntax is exactly the same as described for the file <i>commands.conf</i>. When executing a command, the directory name of the recording will be appended to the command string, separated by a blank and enclosed in single quotes.</p>
@@ -491,22 +491,22 @@ description: "vdr_files – the Video Disk Recorder Files"
 <p> where <code>IP-Address</code> is the address of a host or a network in the usual dot separated notation (as in 192.168.100.1). If the optional <code>Netmask</code> is given only the given number of bits of <code>IP-Address</code> are taken into account. This allows you to grant SVDRP access to all hosts of an entire network. <code>Netmask</code> can be any integer from 1 to 32. The special value of 0 is only accepted if the <code>IP-Address</code> is 0.0.0.0, because this will give access to any host (<code>USE THIS WITH CARE!</code>). </p>
 <p> Everything following (and including) a &#8216;#&#8217; character is considered to be comment. </p>
 <p> Examples: </p>
-<p> 127.0.0.1 # always accept localhost<br />
- 192.168.100.0/24 # any host on the local net<br />
- 204.152.189.113 # a specific host<br />
+<p> 127.0.0.1 # always accept localhost<br/>
+ 192.168.100.0/24 # any host on the local net<br/>
+ 204.152.189.113 # a specific host<br/>
  0.0.0.0/0 # any host on any net (<code>USE WITH CARE!</code>)</p>
 <h3>Setup</h3>
 <p>The file <i>setup.conf</i> contains the basic configuration options for <code>vdr</code>. Each line contains one option in the format &quot;Name = Value&quot;. See the MANUAL file for a description of the available options.</p>
 <h3>Themes</h3>
 <p>The files <i>/var/lib/vdr/data/themes/&lt;skin&gt;-&lt;theme&gt;.theme</i> contain the color theme definitions for the various skins. In the actual file names <i>&lt;skin&gt;</i> will be replaced by the name if the skin this theme belongs to, and <i>&lt;theme&gt;</i> will be the name of this theme. Each line in a theme file contains one option in the format &quot;Name = Value&quot;. Anything after (and including) a &#8216;#&#8217; character is comment. </p>
-<p> The definitions in a theme file are either <code>colors</code> or a <code>description</code>.<br />
+<p> The definitions in a theme file are either <code>colors</code> or a <code>description</code>.<br/>
  <code>Colors</code> are in the form </p>
 <p> <code>clrTitle = FF123456</code> </p>
 <p> where the name (clrTitle) is one of the names defined in the source code of the <code>skin</code> that uses this theme, through the <code>THEME_CLR()</code> macro. The value (FF123456) is an eight digit hex number that consist of four bytes, representing alpha (transparency), red, green and blue component of the color. An alpha value of 00 means the color will be completely transparent, while FF means it will be opaque. An RGB value of 000000 results in black, while FFFFFF is white. </p>
 <p> A <code>description</code> can be given as </p>
 <p> <code>Description = Shades of blue</code> </p>
 <p> and will be used in the Setup/OSD menu to select a theme for a given skin. The description should give the user an idea what this theme will be like (for instance, in the given example it would use various shades of blue), and shouldn&#8217;t be too long to make sure it fits on the Setup screen. The default description always should be given in English. If you want, you can provide language specific descriptions as </p>
-<p> <code>Description.eng = Shades of blue</code><br />
+<p> <code>Description.eng = Shades of blue</code><br/>
  <code>Description.ger = Blaut&ouml;ne</code> </p>
 <p> where the language code is added to the keyword &quot;Description&quot;, separated by a dot. You can enter as many language specific descriptions as you like, but only those that have a corresponding locale messages file will be actually used. If a theme file doesn&#8217;t contain a Description, the name of the theme (as given in the theme&#8217;s file name) will be used.</p>
 <h3>Audio/Video Data</h3>

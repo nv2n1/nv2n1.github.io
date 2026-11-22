@@ -22,5 +22,5 @@ description: "pnmsmooth – smooth out an image"
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-pnmconvol/">pnmconvol</a>(1), <a href="/docs/linux/man/5-pnm/">pnm</a>(5)</p>
 <h2>AUTHORS</h2>
-<p> Copyright (C) 1989, 1991 by Jef Poskanzer.<br />
+<p> Copyright (C) 1989, 1991 by Jef Poskanzer.<br/>
  Converted from script to C program December 1994 by Mike Burns (burns [at] chem.psu.edu). </p>

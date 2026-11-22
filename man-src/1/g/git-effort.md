@@ -13,8 +13,8 @@ description: "git-effort – Show effort statistics on file(s)"
 <p> <code>git-effort</code> [&#8211;above &lt;value&gt;] [&lt;path&gt;&#8230;] [&#8211; [&lt;log options&gt;&#8230;]]</p>
 <h2>DESCRIPTION</h2>
 <p> Shows effort statistics about files in the repository. </p>
-<p> Display includes:<br />
- &#8211; Commits: number of commits per file &#8211; highlighting files with most activity.<br />
+<p> Display includes:<br/>
+ &#8211; Commits: number of commits per file &#8211; highlighting files with most activity.<br/>
  &#8211; Active days: total number of days which contributed modifications to this file.</p>
 <h2>OPTIONS</h2>
 <p> &#8211;above &lt;value&gt; </p>

@@ -15,7 +15,7 @@ description: "iv_tls_user_register, iv_tls_user_ptr – thread-local storage han
  void (*init_thread)(void *st);
  void (*deinit_thread)(void *st);
 };</pre>
-<p><code>void iv_tls_user_register(struct iv_tls_user *</code><i>tu</i><code>);</code><br />
+<p><code>void iv_tls_user_register(struct iv_tls_user *</code><i>tu</i><code>);</code><br/>
  <code>void *iv_tls_user_ptr(struct iv_tls_user *</code><i>tu</i><code>);</code> </p>
 <h2>Description</h2>
 <p>The <code>iv_tls</code> interface provides thread-local storage handling to <code>ivykis</code> modules. </p>

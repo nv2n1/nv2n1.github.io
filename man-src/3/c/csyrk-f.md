@@ -10,7 +10,7 @@ description: "csyrk.f –"
 <p>csyrk.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>csyrk</code> (UPLO, TRANS, N, K, ALPHA, A, LDA, BETA, C, LDC)<br />
+<p>subroutine <code>csyrk</code> (UPLO, TRANS, N, K, ALPHA, A, LDA, BETA, C, LDC)<br/>
  <i></i><code>CSYRK</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine csyrk (characterUPLO, characterTRANS, integerN, integerK, complexALPHA, complex, dimension(lda,*)A, integerLDA, complexBETA, complex, dimension(ldc,*)C, integerLDC)</h3>

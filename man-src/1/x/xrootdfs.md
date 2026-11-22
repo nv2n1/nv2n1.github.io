@@ -28,24 +28,24 @@ description: "xrootdfs – xrootd FUSE file system daemon"
 <p> use with autofs</p>
 <dl>
 <dt>
-</dt><dd> 1. add a line to /etc/auto.master<br />
+</dt><dd> 1. add a line to /etc/auto.master<br/>
  /- /etc/auto.fuse </dd>
-<p> 2. create /etc/auto.fuse with the following one line<br />
+<p> 2. create /etc/auto.fuse with the following one line<br/>
  /mnt -fstype=fuse,uid=2,rdr=<a href="root://rdr\:port//data">root://rdr\:port//data</a> :xrootdfs.sh </p>
-<p> 3. create script /usr/bin/xrootdfs.sh (make sure +x bit is set)<br />
- #!/bin/sh<br />
+<p> 3. create script /usr/bin/xrootdfs.sh (make sure +x bit is set)<br/>
+ #!/bin/sh<br/>
  exec /usr/bin/xrootdfs $@ &gt;/dev/null 2&gt;&amp;1 </p>
 </dl>
 <h2>NOTES</h2>
 <p> Documentation for all components associated with <code>xrootdfs</code> can be found at <a rel="nofollow" href="http://xrootd.org/docs.html">http://xrootd.org/docs.html</a> </p>
 <p> xrootdfs allows users and administators to query and change the internal parameters on the fly via the filesystem extened attributes </p>
-<p> getfattr -n attribute_name /mount_point<br />
+<p> getfattr -n attribute_name /mount_point<br/>
  setfattr -n attribute_name [ -v value ] /mount_point </p>
 <p> attribute_name:</p>
 <dl>
 <dt>
-</dt><dd> <code>xroot.url:</code> query the actual ROOT url of the file (this is an old one)<br />
- <code>xrootdfs.fs.nworkers:</code> query or change the number of threads working in parallel on operations such as stat(), unlink()/rmdir(), readdir(), statvfs(), etc.<br />
+</dt><dd> <code>xroot.url:</code> query the actual ROOT url of the file (this is an old one)<br/>
+ <code>xrootdfs.fs.nworkers:</code> query or change the number of threads working in parallel on operations such as stat(), unlink()/rmdir(), readdir(), statvfs(), etc.<br/>
  <code>xrootdfs.fs.dataserverlist: </code> query or refresh the list of all data servers known to this xrootdfs instance (or &quot;kill -USR1 pid&quot; to refresh) </dd>
 </dl>
 <h2>SECURITY</h2>
@@ -71,5 +71,5 @@ description: "xrootdfs – xrootd FUSE file system daemon"
 <h2>LICENSE</h2>
 <p> License terms can be displayed by typing &quot;<code>xrootd -H</code>&quot;.</p>
 <h2>SUPPORT LEVEL</h2>
-<p> The <code>xrootdfs</code> daemon is supported by the xrootd collaboration. Contact information can be found at <center> <a rel="nofollow" href="http://xrootd.org/contact.html">http://xrootd.org/contact.html</a><br />
+<p> The <code>xrootdfs</code> daemon is supported by the xrootd collaboration. Contact information can be found at <center> <a rel="nofollow" href="http://xrootd.org/contact.html">http://xrootd.org/contact.html</a><br/>
  </center> </p>

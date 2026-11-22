@@ -66,6 +66,6 @@ description: "/var/log/isdn.log – isdn log file"
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-isdnlog/">isdnlog</a></code>(8) </p>
 <h2>Author</h2>
-<p>This manual page was written by Andreas Jellinghaus &lt;aj [at] dungeon.inka.de&gt;, for Debian GNU/Linux and isdn4linux.<br />
+<p>This manual page was written by Andreas Jellinghaus &lt;aj [at] dungeon.inka.de&gt;, for Debian GNU/Linux and isdn4linux.<br/>
  Now maintained by Paul Slootman &lt;paul [at] debian.org&gt;.</p>
 </dl>

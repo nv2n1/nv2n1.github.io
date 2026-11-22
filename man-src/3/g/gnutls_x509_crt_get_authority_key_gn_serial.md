@@ -32,17 +32,17 @@ description: "gnutls_x509_crt_get_authority_key_gn_serial – API function"
 <dd> will be non-zero if the extension is marked as critical (may be null)</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will return the X.509 authority key identifier when stored as a general name (authorityCertIssuer) and serial number. </p>
-<p> Because more than one general names might be stored<br />
+<p> Because more than one general names might be stored<br/>
 &nbsp;<wbr><i>seq</i>&nbsp;<wbr>can be used as a counter to request them all until&nbsp;<wbr> <code>GNUTLS_E_REQUESTED_DATA_NOT_AVAILABLE</code> is returned.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, <code>GNUTLS_E_REQUESTED_DATA_NOT_AVAILABLE</code> if the extension is not present, otherwise a negative error value.</p>
 <h2>SINCE</h2>
 <p> 3.0</p>
 <h2>REPORTING BUGS</h2>
-<p> Report bugs to &lt;bugs [at] gnutls.org&gt;.<br />
+<p> Report bugs to &lt;bugs [at] gnutls.org&gt;.<br/>
  Home page: <a rel="nofollow" href="http://www.gnutls.org">http://www.gnutls.org</a> </p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2001-2014 Free Software Foundation, Inc..<br />
+<p> Copyright &#169; 2001-2014 Free Software Foundation, Inc..<br/>
  Copying and distribution of this file, with or without modification, are permitted in any medium without royalty provided the copyright notice and this notice are preserved.</p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>

@@ -13,37 +13,37 @@ description: "getdns_dict_get, getdns_dict_get_bindata, getdns_dict_get_data_typ
 <p> DNS Resolver library (libgetdns, -lgetdns) </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;getdns.h&gt; </p>
-<p> getdns_return_t<br />
+<p> getdns_return_t<br/>
  <code>getdns_dict_get_bindata</code> (getdns_dict *this_dict,</p>
 <dl>
 <dt>
-</dt><dd> char *name,<br />
+</dt><dd> char *name,<br/>
  getdns_bindata **answer)</dd></dl>
-<p> getdns_return_t<br />
+<p> getdns_return_t<br/>
  <code>getdns_dict_get_data_type</code> (getdns_dict *this_dict,</p>
 <dl>
 <dt>
-</dt><dd> char *name,<br />
+</dt><dd> char *name,<br/>
  getdns_data_type *answer)</dd></dl>
-<p> getdns_return_t<br />
+<p> getdns_return_t<br/>
  <code>getdns_dict_get_dict</code> (getdns_dict *this_dict,</p>
 <dl>
 <dt>
-</dt><dd> char *name,<br />
+</dt><dd> char *name,<br/>
  getdns_dict **answer)</dd></dl>
-<p> getdns_return_t<br />
+<p> getdns_return_t<br/>
  <code>getdns_dict_get_int</code> (getdns_dict *this_dict,</p>
 <dl>
 <dt>
-</dt><dd> char *name,<br />
+</dt><dd> char *name,<br/>
  uint32_t *answer)</dd></dl>
-<p> getdns_return_t<br />
+<p> getdns_return_t<br/>
  <code>getdns_dict_get_list</code> (getdns_dict *this_dict,</p>
 <dl>
 <dt>
-</dt><dd> char *name,<br />
+</dt><dd> char *name,<br/>
  getdns_list **answer)</dd></dl>
-<p> getdns_return_t<br />
+<p> getdns_return_t<br/>
  <code>getdns_dict_get_names</code> (getdns_dict *this_dict,</p>
 <dl>
 <dt>
@@ -53,9 +53,9 @@ description: "getdns_dict_get, getdns_dict_get_bindata, getdns_dict_get_data_typ
 <dl>
 <dt>
 </dt><dd>
- getdns_bindata<br />
- getdns_dict<br />
- getdns_list<br />
+ getdns_bindata<br/>
+ getdns_dict<br/>
+ getdns_list<br/>
  uint32_t</dd></dl>
 <p> <i>this_dict</i> the dictionary from which to retrieve the list of names </p>
 <p> <i>name</i> the name whose associated value is to be returned in answer </p>

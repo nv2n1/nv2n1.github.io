@@ -65,8 +65,8 @@ description: "cdrdao – reads and writes CDs in disc-at-once mode"
 <dt><code>&#8211;source-device</code><i> [prot:]bus,id,lun</i></dt>
 <dd> Like above but used for the <code>copy</code> command to specify the source device.</dd>
 <dt><code>&#8211;driver</code><i> driver-id:option-flags</i></dt>
-<dd> Force usage of specified driver instead of the automatically determined driver. Available driver IDs:<br />
- cdd2600, plextor, plextor-scan, generic-mmc, generic-mmc-raw, ricoh-mp6200, yamaha-cdr10x, teac-cdr55, sony-cdu920, sony-cdu948, taiyo-yuden, toshiba.<br />
+<dd> Force usage of specified driver instead of the automatically determined driver. Available driver IDs:<br/>
+ cdd2600, plextor, plextor-scan, generic-mmc, generic-mmc-raw, ricoh-mp6200, yamaha-cdr10x, teac-cdr55, sony-cdu920, sony-cdu948, taiyo-yuden, toshiba.<br/>
  Specifying an illegal driver ID will give a list of available drivers. Option flags may be used to modify the behavior of some drivers. See <code>README</code> for details.</dd>
 <dt><code>&#8211;source-driver</code><i> driver-id:option-flags</i></dt>
 <dd> Like above but used for the device specified with option <code>&#8211;source-device.</code></dd>
@@ -180,10 +180,10 @@ description: "cdrdao – reads and writes CDs in disc-at-once mode"
 <dt>FOUR_CHANNEL_AUDIO</dt>
 <dd> Indicates that track contains four channel audio data (only for audio tracks).</dd>
 <dt>ISRC CCOOOYYSSSSS</dt>
-<dd> Sets ISRC code of track (only for audio tracks).<br />
- C: country code (upper case letters or digits)<br />
- O: owner code (upper case letters or digits)<br />
- Y: year (digits)<br />
+<dd> Sets ISRC code of track (only for audio tracks).<br/>
+ C: country code (upper case letters or digits)<br/>
+ O: owner code (upper case letters or digits)<br/>
+ Y: year (digits)<br/>
  S: serial number (digits)</dd></dl>
 <p> An optional CD-TEXT block that defines the CD-TEXT data for this track may follow. See the CD-TEXT section below for the syntax of the CD-TEXT block contents.</p>
 <dl>
@@ -199,7 +199,7 @@ description: "cdrdao – reads and writes CDs in disc-at-once mode"
 <dt>[&nbsp;FILE | AUDIOFILE&nbsp;]&nbsp;&lt;filename&gt;&nbsp;&lt;start&gt;&nbsp;[&nbsp;&lt;length&gt;&nbsp;]</dt>
 <dd> Adds the audio data of specified file to the current audio track. It is possible to select a portion of an audio file with &lt;start&gt; and &lt;length&gt; which allows non destructive cutting. The first sample of an audio file is addressed with &lt;start&gt; = 0. If &lt;length&gt; is omitted or set to 0 all audio data from &lt;start&gt; until the end of file is used. </dd>
 <p> Audio files may have raw or WAVE format with 16 bits per sample, 44.1 kHz sampling rate, stereo. Raw files must have the layout &#8216;MSBLeft LSBLeft MSBRight LSBRight &#8230;&#8217; (big endian byte order). WAVE files are expected to have little endian byte order. The option &#8211;swap reverses the expected byte order for all raw and WAVE files. Only filenames with a &quot;.wav&quot; ending are treated as WAVE files, all other names are assumed to be raw audio files. Use tools like <a href="/docs/linux/man/1-sox/">sox</a>(1) to convert other file formats to supported formats. </p>
-<p> Specifying a &quot;-&quot; as filename causes data to be read from STDIN. Currently only raw files are supported from STDIN.<br />
+<p> Specifying a &quot;-&quot; as filename causes data to be read from STDIN. Currently only raw files are supported from STDIN.<br/>
 &nbsp; If you are unsure about the byte order of your audio files try the command &#8216;show-data&#8217;. If the byte order is correct you will see a sequence of increasing or decreasing numbers for both channels. Otherwise numbers are jumping between very high and low values &#8211; high volume static.</p>
 <dt>DATAFILE&nbsp;&lt;filename&gt;&nbsp;[&nbsp;&lt;length&gt;&nbsp;]</dt>
 <dd> Adds data from given file to the current data track. If &lt;length&gt; is omitted the actual file length will be used.</dd>
@@ -211,10 +211,10 @@ description: "cdrdao – reads and writes CDs in disc-at-once mode"
 <dt>PREGAP MM:SS:FF</dt>
 <dd> This is an alternate way to specify a pre-gap with zero audio data. It may appear before the first SILENCE, ZERO or FILE statement. Either PREGAP or START can be used within a track specification. It is equivalent to the sequence </dd>
 <p>&nbsp;<wbr>&nbsp;SILENCE MM:SS:FF </p>
-<p>&nbsp;<wbr>&nbsp;START<br />
+<p>&nbsp;<wbr>&nbsp;START<br/>
  for audio tracks or </p>
 <p>&nbsp;<wbr>&nbsp;ZERO MM:SS:FF </p>
-<p>&nbsp;<wbr>&nbsp;START<br />
+<p>&nbsp;<wbr>&nbsp;START<br/>
  for data tracks.</dl>
 <p> Nothing prevents mixing &#8216;DATAFILE&#8217;/&#8217;ZERO&#8217; and &#8216;AUDIOFILE&#8217;/&#8217;SILENCE&#8217; statements within the same track. The results, however, are undefined. </p>
 <p> The end of a track specification may contain zero or more index increment statements:</p>
@@ -226,7 +226,7 @@ description: "cdrdao – reads and writes CDs in disc-at-once mode"
 <p> A CD-TEXT block may be placed in the global section to define data valid for the whole CD and in each track specification of a <i>toc-file.</i> The global section must define a language map that is used to map a <i>language-number</i> to country codes. Up to 8 different languages can be defined:</p>
 <dl>
 <dt>LANGUAGE_MAP { 0 : c1 1 : c2 &#8230; 7 : c7 }</dt>
-<dd> The country code may be an integer value in the range 0..255 or one of the following countries (the corresponding integer value is placed in braces behind the token): EN(9, English)<br />
+<dd> The country code may be an integer value in the range 0..255 or one of the following countries (the corresponding integer value is placed in braces behind the token): EN(9, English)<br/>
  It is just necessary to define a mapping for the used languages.</dd></dl>
 <p> If no mapping exists for a <i>language-number</i> the data for this language will be ignored. </p>
 <p> For each language a language block must exist that defines the actual data for a certain language.</p>
@@ -237,7 +237,7 @@ description: "cdrdao – reads and writes CDs in disc-at-once mode"
 <pre>
 { 0, 10, 255, ... }
 </pre>
-<p> where each integer number must be in the range 0..255.<br />
+<p> where each integer number must be in the range 0..255.<br/>
  The <i>cd-text-item</i> may be one of the following:</p>
 <dl>
 <dt>TITLE</dt>

@@ -10,19 +10,19 @@ description: "atomic – Atomic Management Tool"
 
 <p> atomic &#8211; Atomic Management Tool </p>
 <h2>SYNOPSIS</h2>
-<p> <code>atomic</code> [OPTIONS] COMMAND [arg&#8230;]<br />
+<p> <code>atomic</code> [OPTIONS] COMMAND [arg&#8230;]<br/>
 &nbsp;<wbr>&nbsp;<wbr>{containers,diff,images,install,mount,pull,push,run,scan,sign,stop,storage,migrate,top,trust,uninstall,unmount,umount,update,verify,version} </p>
 <p> [<code>-h</code>|<code>&#8211;help</code>] </p>
 <h2>DESCRIPTION</h2>
 <p> Atomic Management Tool </p>
 <h2>OPTIONS</h2>
-<p> <code>-h</code> <code>&#8211;help</code><br />
+<p> <code>-h</code> <code>&#8211;help</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Print usage statement </p>
-<p> <code>-v</code> <code>&#8211;version</code><br />
+<p> <code>-v</code> <code>&#8211;version</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Show atomic version </p>
-<p> <code>&#8211;debug</code><br />
+<p> <code>&#8211;debug</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Show debug messages </p>
-<p> <code>-y</code> <code>&#8211;assumeyes</code><br />
+<p> <code>-y</code> <code>&#8211;assumeyes</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>automatically answer yes for all questions </p>
 <h2>ENVIRONMENT VARIABLES</h2>
 <p> <code>ATOMIC_CONF</code> The location of the atomic configuration file (normally /etc/atomic.conf) can be overridden with the <i>ATOMIC_CONF</i> environment variable </p>
@@ -56,7 +56,7 @@ description: "atomic – Atomic Management Tool"
 <p> <code>key.pem</code> — client key </p>
 <p> <code>ca.pem</code> — CA certificate </p>
 <p> For more info, please visit upstream docs: </p>
-<p> <code> &lt;<a rel="nofollow" href="https://docs.docker.com/engine/security/https/">https://docs.docker.com/engine/security/https/</a>&gt;</code><br />
+<p> <code> &lt;<a rel="nofollow" href="https://docs.docker.com/engine/security/https/">https://docs.docker.com/engine/security/https/</a>&gt;</code><br/>
  <code> &lt;<a rel="nofollow" href="https://docs.docker.com/machine/reference/env/">https://docs.docker.com/machine/reference/env/</a>&gt;</code> </p>
 <h2>HISTORY</h2>
 <p> January 2015, Originally compiled by Daniel Walsh (dwalsh at redhat dot com) November, 2015 Addition of scan and diff by Brent Baude (bbaude at dot com) </p>

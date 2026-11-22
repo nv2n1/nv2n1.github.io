@@ -32,7 +32,7 @@ Userid response is:
  Identifier... paul
 Connection closed by foreign host.</pre>
 <h2>Author</h2>
-<p>Peter Eriksson &lt;pen [at] lysator.liu.se&gt;<br />
+<p>Peter Eriksson &lt;pen [at] lysator.liu.se&gt;<br/>
  Manpage written for Debian by Paul Slootman &lt;paul [at] debian.org&gt;.</p>
 <h2>See Also</h2>
 <p><i>ident</i>(3), <i>identd</i>(8), <i><a href="/docs/linux/man/8-xinetd/">xinetd</a></i>(8) </p>

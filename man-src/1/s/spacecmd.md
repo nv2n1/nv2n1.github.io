@@ -82,11 +82,11 @@ Systems Selected: 285
 spacecmd&gt; ssm_add search:hostname:external.example.com
 Systems Selected: 16
 </pre>
-<p> <code>Add and remove packages from the commandline</code><br />
+<p> <code>Add and remove packages from the commandline</code><br/>
 [user @sat] $ spacecmd &#8211; y system_installpackage www *mod_python Scheduled 6 system(s)[user @sat] $ spacecmd &#8211; y system_removepackage wiki02 mod_perl Scheduled 1 system(s)</p>
-<p> <code>Schedule reboots from the commandline</code><br />
+<p> <code>Schedule reboots from the commandline</code><br/>
 [user @sat] $ spacecmd &#8211; y&#8211; system_reboot ldap * -s + 6h Start Time : 20160106T07 : 01 : 00 Systems&#8211; &#8212; &#8212; -ldap01 ldap02 ldap03[user @sat] $ spacecmd &#8211; y system_reboot www01 Start Time : 20160106T02 : 01 : 00 Systems&#8211; &#8212; &#8212; -www01</p>
-<p> <code>Apply errata from the command line</code><br />
+<p> <code>Apply errata from the command line</code><br/>
 [user @sat] $ spacecmd &#8211; y errata_apply RHSA &#8211; 2010 : 0423 Scheduled 42 system(s)[user @sat] $ spacecmd &#8211; y system_applyerrata group : web_servers RHSA &#8211; 2010 : 0040 Scheduled 16 system(s)</p>
 <p> <code>Quickly generate reports</code> </p>
 <pre><code>

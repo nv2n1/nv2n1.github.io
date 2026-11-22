@@ -15,4 +15,4 @@ description: "Baobab – A graphical tool to analyse disk usage"
 <p> <code>baobab</code> is able to scan either specific folders or the whole filesystem (local and remote), in order to give the user a graphical tree representation including each directory size or percentage in the branch. It also auto-detects in real-time any change made to your home directory as far as any mounted/unmounted device. A graphical treemap window is also provided for any selected folder. </p>
 <p> A detailed documentation on the program could be read at: <a rel="nofollow" href="http://www.mate.org/projects/baobab">http://www.mate.org/projects/baobab</a></p>
 <h2>AUTHOR</h2>
-<p> Fabio <font SIZE="-1">MARZOCCA</font> &lt;thesaltydog [at] gmail.com&gt; </p>
+<p> Fabio MARZOCCA &lt;thesaltydog [at] gmail.com&gt; </p>

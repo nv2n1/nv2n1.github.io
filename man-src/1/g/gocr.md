@@ -84,7 +84,7 @@ description: "gocr – command line text recognition tool"
 <h2>
 <h2>AUTHOR</h2>
 </h2>
-<p> Joerg Schulenburg (see <a rel="nofollow" href="http://jocr.sourceforge.net/">http://jocr.sourceforge.net/</a> for EMAIL)<br />
+<p> Joerg Schulenburg (see <a rel="nofollow" href="http://jocr.sourceforge.net/">http://jocr.sourceforge.net/</a> for EMAIL)<br/>
  First version of man page by Tim Waugh &lt;twaugh [at] redhat.com&gt;</p>
 <h2>VERSION INFORMATION</h2>
 <p> This man page documents <code>gocr</code>, version 0.41.</p>

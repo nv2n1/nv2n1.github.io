@@ -10,7 +10,7 @@ description: "chbtrd.f –"
 <p>chbtrd.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>chbtrd</code> (VECT, UPLO, N, KD, AB, LDAB, D, E, Q, LDQ, WORK, INFO)<br />
+<p>subroutine <code>chbtrd</code> (VECT, UPLO, N, KD, AB, LDAB, D, E, Q, LDQ, WORK, INFO)<br/>
  <i></i><code>CHBTRD</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine chbtrd (characterVECT, characterUPLO, integerN, integerKD, complex, dimension( ldab, * )AB, integerLDAB, real, dimension( * )D, real, dimension( * )E, complex, dimension( ldq, * )Q, integerLDQ, complex, dimension( * )WORK, integerINFO)</h3>

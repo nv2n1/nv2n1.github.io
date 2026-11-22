@@ -106,7 +106,7 @@ Specifies a new default Integral factory.
 static Integral * get_default_integral ()
 Returns the default Integral factory.
 Protected Member Functions</code></pre>
-<p> <code>Integral</code> (const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;b1, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;b2, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;b3, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;b4)<br />
+<p> <code>Integral</code> (const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;b1, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;b2, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;b3, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;b4)<br/>
  <i>Initialize the </i><code>Integral</code> object given a <code>GaussianBasisSet</code> for each center.</p>
 <h3>Protected Attributes</h3>
 <p><code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; <code>bs1_</code> </p>

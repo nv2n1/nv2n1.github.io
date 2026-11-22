@@ -207,7 +207,7 @@ Recall read delegation by changing the permissions to the file with file lock
 Recall write delegation by changing the permissions to the file with file lock
 </pre>
 <h2>EXAMPLES</h2>
-<p> The only required option is &#8211;server but only the basic delegation tests will be run. Use the &#8211;client option to run the recall tests as well<br />
+<p> The only required option is &#8211;server but only the basic delegation tests will be run. Use the &#8211;client option to run the recall tests as well<br/>
  $ nfstest_delegation &#8211;server 192.168.0.11 &#8211;client 192.168.0.20</p>
 <h2>NOTES</h2>
 <p> The user id in the local host and the host specified by &#8211;client must have access to run commands as root using the &#8216;sudo&#8217; command without the need for a password. </p>

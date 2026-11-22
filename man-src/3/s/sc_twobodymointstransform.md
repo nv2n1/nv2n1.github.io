@@ -109,7 +109,7 @@ Protected Attributes</code></pre>
 <p> int <code>batchsize_</code> </p>
 <p> int <code>npass_</code></p>
 <h3>Static Protected Attributes</h3>
-<p>static const double <code>zero_integral</code> = 1.0e-12<br />
+<p>static const double <code>zero_integral</code> = 1.0e-12<br/>
  <i>By default, integrals smaller than zero_integral are considered zero. </i></p>
 <h2>Detailed Description</h2>
 <p><code>TwoBodyMOIntsTransform</code> computes two-body integrals in MO basis using parallel integrals-direct AO-&gt;MO transformation.</p>

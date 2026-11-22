@@ -136,7 +136,7 @@ description: "uconv – convert data from one encoding to another"
  </dd></dl>
 <p> Convert a UTF-8 <i>file</i> to a given <i>encoding</i> and ensure that the resulting text is good for any version of HTML: </p>
 <dl>
-<dd> <p> $ uconv -f utf-8 -t <i>encoding</i> \ <br />
+<dd> <p> $ uconv -f utf-8 -t <i>encoding</i> \ <br/>
  <code> --callback escape-xml-dec </code><i>file</i> </p>
  </dd></dl>
 <p> Display the names of the Unicode code points in a UTF-file: </p>
@@ -145,21 +145,21 @@ description: "uconv – convert data from one encoding to another"
  </dd></dl>
 <p> Print the name of a Unicode code point whose value is known (<code>U+30AB</code> in this example): </p>
 <dl>
-<dd> <p> $ echo &#8216;\u30ab&#8217; | uconv -x &#8216;hex-any; any-name&#8217;; echo <br />
- {KATAKANA LETTER KA}{LINE FEED} <br />
+<dd> <p> $ echo &#8216;\u30ab&#8217; | uconv -x &#8216;hex-any; any-name&#8217;; echo <br/>
+ {KATAKANA LETTER KA}{LINE FEED} <br/>
  $ </p>
  </dd></dl>
 <p> (The names are delimited by curly braces. Also, the name of the line terminator is also displayed.) </p>
 <p> Normalize UTF-8 data using Unicode NFKC, remove all control characters, and map Katakana to Hiragana: </p>
 <dl>
-<dd> <p> $ uconv -f utf-8 -t utf-8 \ <br />
+<dd> <p> $ uconv -f utf-8 -t utf-8 \ <br/>
  <code> -x &#8216;::nfkc; [:Cc:] &gt;; ::katakana-hiragana;&#8216;</code> </p>
  </dd></dl>
 <h2>CAVEATS AND BUGS</h2>
 <p> <code>uconv</code> does report errors as occurring at the first invalid byte encountered. This may be confusing to users of GNU <code><a href="/docs/linux/man/1-iconv/">iconv</a></code>(1), which reports errors as occurring at the first byte of an invalid sequence. For multi-byte character sets or encodings, this means that <code>uconv</code> error positions may be at a later offset in the input stream than would be the case with GNU <code><a href="/docs/linux/man/1-iconv/">iconv</a></code>(1). </p>
 <p> The reporting of error positions when a transliterator is used may be inaccurate or unavailable, in which case <code>uconv</code> will report the offset in the output stream at which the error occurred.  </p>
 <h2>AUTHORS</h2>
-<p> Jonas Utterstroem <br />
+<p> Jonas Utterstroem <br/>
  Yves Arrouye  </p>
 <h2>VERSION</h2>
 <p> 70.1  </p>

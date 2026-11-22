@@ -17,10 +17,10 @@ description: "QwtPlotRescaler –"
 <p> enum <code>ExpandingDirection</code> { <code>ExpandUp</code>, <code>ExpandDown</code>, <code>ExpandBoth</code> } </p>
 <h3>Public Member Functions</h3>
 <p><code>QwtPlotRescaler</code> (QWidget *<code>canvas</code>, int <code>referenceAxis</code>=<code>QwtPlot::xBottom</code>, <code>RescalePolicy</code>=<code>Expanding</code>) </p>
-<p> virtual <code>~QwtPlotRescaler</code> ()<br />
- <i>Destructor. </i><br />
- void <code>setEnabled</code> (bool)<br />
- <i>En/disable the rescaler. </i><br />
+<p> virtual <code>~QwtPlotRescaler</code> ()<br/>
+ <i>Destructor. </i><br/>
+ void <code>setEnabled</code> (bool)<br/>
+ <i>En/disable the rescaler. </i><br/>
  bool <code>isEnabled</code> () const </p>
 <p> void <code>setRescalePolicy</code> (<code>RescalePolicy</code>) </p>
 <p> <code>RescalePolicy</code> <code>rescalePolicy</code> () const </p>
@@ -38,9 +38,9 @@ description: "QwtPlotRescaler –"
 <p> const QWidget * <code>canvas</code> () const </p>
 <p> <code>QwtPlot</code> * <code>plot</code> () </p>
 <p> const <code>QwtPlot</code> * <code>plot</code> () const </p>
-<p> virtual bool <code>eventFilter</code> (QObject *, QEvent *)<br />
- <i>Event filter for the plot canvas. </i><br />
- void <code>rescale</code> () const<br />
+<p> virtual bool <code>eventFilter</code> (QObject *, QEvent *)<br/>
+ <i>Event filter for the plot canvas. </i><br/>
+ void <code>rescale</code> () const<br/>
  <i>Adjust the plot axes scales. </i></p>
 <h3>Protected Member Functions</h3>
 <p>virtual void <code>canvasResizeEvent</code> (QResizeEvent *) </p>
@@ -85,8 +85,8 @@ description: "QwtPlotRescaler –"
 <p>Constructor </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>canvas</i> Canvas<br />
- <i>referenceAxis</i> Reference axis, see RescalePolicy<br />
+<dd><i>canvas</i> Canvas<br/>
+ <i>referenceAxis</i> Reference axis, see RescalePolicy<br/>
  <i>policy</i> Rescale policy</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -132,8 +132,8 @@ description: "QwtPlotRescaler –"
 <p>Expand the interval </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>interval</i> Interval to be expanded<br />
- <i>width</i> Distance to be added to the interval<br />
+<dd><i>interval</i> Interval to be expanded<br/>
+ <i>width</i> Distance to be added to the interval<br/>
  <i>direction</i> Direction of the expand operation</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -142,8 +142,8 @@ description: "QwtPlotRescaler –"
 <p>Calculate the new scale interval of a plot axis </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>axis</i> Axis index ( see QwtPlot::AxisId )<br />
- <i>oldSize</i> Previous size of the canvas<br />
+<dd><i>axis</i> Axis index ( see QwtPlot::AxisId )<br/>
+ <i>oldSize</i> Previous size of the canvas<br/>
  <i>newSize</i> New size of the canvas</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -198,7 +198,7 @@ description: "QwtPlotRescaler –"
 <p>Adjust the plot axes scales </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>oldSize</i> Previous size of the canvas<br />
+<dd><i>oldSize</i> Previous size of the canvas<br/>
  <i>newSize</i> New size of the canvas</dd></dl>
 <h3><code>QwtPlotRescaler::RescalePolicy</code> QwtPlotRescaler::rescalePolicy () const</h3>
 <p><code>Returns:</code></p>
@@ -219,7 +219,7 @@ description: "QwtPlotRescaler –"
 <p>Set the aspect ratio between the scale of the reference axis and another scale. The default ratio is 1.0 </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>axis</i> Axis index ( see QwtPlot::AxisId )<br />
+<dd><i>axis</i> Axis index ( see QwtPlot::AxisId )<br/>
  <i>ratio</i> Aspect ratio</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -244,7 +244,7 @@ description: "QwtPlotRescaler –"
 <p>Set the direction in which an axis should be expanded </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>axis</i> Axis index ( see QwtPlot::AxisId )<br />
+<dd><i>axis</i> Axis index ( see QwtPlot::AxisId )<br/>
  <i>direction</i> Direction</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -254,7 +254,7 @@ description: "QwtPlotRescaler –"
 <p> In Fitting mode, the hint is used as minimal interval that always needs to be displayed. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>axis</i> Axis, see <code>QwtPlot::Axis</code><br />
+<dd><i>axis</i> Axis, see <code>QwtPlot::Axis</code><br/>
  <i>interval</i> Axis</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -279,8 +279,8 @@ description: "QwtPlotRescaler –"
 <p>Synchronize an axis scale according to the scale of the reference axis </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>axis</i> Axis index ( see QwtPlot::AxisId )<br />
- <i>reference</i> Interval of the reference axis<br />
+<dd><i>axis</i> Axis index ( see QwtPlot::AxisId )<br/>
+ <i>reference</i> Interval of the reference axis<br/>
  <i>size</i> Size of the canvas</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

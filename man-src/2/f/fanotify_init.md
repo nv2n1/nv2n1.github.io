@@ -10,7 +10,7 @@ description: "fanotify_init – create and initialize fanotify group"
 
 <p> fanotify_init &#8211; create and initialize fanotify group </p>
 <h2>SYNOPSIS</h2>
-<p> <code>#include &lt;fcntl.h&gt;</code><br />
+<p> <code>#include &lt;fcntl.h&gt;</code><br/>
  <code>#include &lt;sys/fanotify.h&gt;</code> </p>
 <p> <code>int fanotify_init(unsigned int </code><i>flags</i><code>, unsigned int </code><i>event_f_flags</i><code>);</code></p>
 <h2>DESCRIPTION</h2>

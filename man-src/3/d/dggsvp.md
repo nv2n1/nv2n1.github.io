@@ -11,7 +11,7 @@ description: "dggsvp.f –"
 <p> dggsvp.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dggsvp</code> (JOBU, JOBV, JOBQ, M, P, N, A, LDA, B, LDB, TOLA, TOLB, K, L, U, LDU, V, LDV, Q, LDQ, IWORK, TAU, WORK, INFO)<br />
+<p> subroutine <code>dggsvp</code> (JOBU, JOBV, JOBQ, M, P, N, A, LDA, B, LDB, TOLA, TOLB, K, L, U, LDU, V, LDV, Q, LDQ, IWORK, TAU, WORK, INFO)<br/>
  <i></i><code>DGGSVP</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dggsvp (characterJOBU, characterJOBV, characterJOBQ, integerM, integerP, integerN, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( ldb, * )B, integerLDB, double precisionTOLA, double precisionTOLB, integerK, integerL, double precision, dimension( ldu, * )U, integerLDU, double precision, dimension( ldv, * )V, integerLDV, double precision, dimension( ldq, * )Q, integerLDQ, integer, dimension( * )IWORK, double precision, dimension( * )TAU, double precision, dimension( * )WORK, integerINFO)</h3>
@@ -130,8 +130,8 @@ M - K(0 0 A23) N - K - L K L V **T *B *Q = L(0 0 B13)
           If JOBU = 'N', U is not referenced.
 </pre>
 <p> <i>LDU</i> </p>
-<p>LDU is INTEGER<br />
-        The leading dimension of the array U.LDU &gt;= max(1, M) if JOBU = &#8216;U&#8217;;<br />
+<p>LDU is INTEGER<br/>
+        The leading dimension of the array U.LDU &gt;= max(1, M) if JOBU = &#8216;U&#8217;;<br/>
 LDU &gt;= 1 otherwise.</p>
 <p> <i>V</i> </p>
 <pre>
@@ -140,8 +140,8 @@ LDU &gt;= 1 otherwise.</p>
           If JOBV = 'N', V is not referenced.
 </pre>
 <p> <i>LDV</i> </p>
-<p>LDV is INTEGER<br />
-        The leading dimension of the array V.LDV &gt;= max(1, P) if JOBV = &#8216;V&#8217;;<br />
+<p>LDV is INTEGER<br/>
+        The leading dimension of the array V.LDV &gt;= max(1, P) if JOBV = &#8216;V&#8217;;<br/>
 LDV &gt;= 1 otherwise.</p>
 <p> <i>Q</i> </p>
 <pre>

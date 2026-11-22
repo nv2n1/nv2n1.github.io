@@ -14,14 +14,14 @@ description: "PCRE – Perl-compatible regular expressions"
 <p> Compiling regular expressions with one version of PCRE for use with a different version is not guaranteed to work and may cause crashes, and saving and restoring a compiled pattern loses any JIT optimization data.</p>
 <h2>Saving A Compiled Pattern</h2>
 <p>The value returned by <code>pcre[16|32]_compile()</code> points to a single block of memory that holds the compiled pattern and associated data. You can find the length of this block in bytes by calling <code>pcre[16|32]_fullinfo()</code> with an argument of PCRE_INFO_SIZE. You can then save the data in any appropriate manner. Here is sample code for the 8-bit library that compiles a pattern and writes it to a file. It assumes that the variable <i>fd</i> refers to a file that is open for output: </p>
-<p>&nbsp;<wbr>&nbsp;int erroroffset, rc, size;<br />
-&nbsp;<wbr>&nbsp;char&nbsp;*error;<br />
+<p>&nbsp;<wbr>&nbsp;int erroroffset, rc, size;<br/>
+&nbsp;<wbr>&nbsp;char&nbsp;*error;<br/>
 &nbsp;<wbr>&nbsp;pcre&nbsp;*re; </p>
-<p>&nbsp;<wbr>&nbsp;re&nbsp;=&nbsp;pcre_compile(&quot;my pattern&quot;, 0,&nbsp;&amp;error,&nbsp;&amp;erroroffset, NULL);<br />
-&nbsp;<wbr>&nbsp;if&nbsp;(re&nbsp;==&nbsp;NULL)&nbsp;{&nbsp;&#8230; handle errors &#8230;&nbsp;}<br />
-&nbsp;<wbr>&nbsp;rc&nbsp;=&nbsp;pcre_fullinfo(re, NULL, PCRE_INFO_SIZE,&nbsp;&amp;size);<br />
-&nbsp;<wbr>&nbsp;if&nbsp;(rc&nbsp;&lt;&nbsp;0)&nbsp;{&nbsp;&#8230; handle errors &#8230;&nbsp;}<br />
-&nbsp;<wbr>&nbsp;rc&nbsp;=&nbsp;fwrite(re, 1, size, fd);<br />
+<p>&nbsp;<wbr>&nbsp;re&nbsp;=&nbsp;pcre_compile(&quot;my pattern&quot;, 0,&nbsp;&amp;error,&nbsp;&amp;erroroffset, NULL);<br/>
+&nbsp;<wbr>&nbsp;if&nbsp;(re&nbsp;==&nbsp;NULL)&nbsp;{&nbsp;&#8230; handle errors &#8230;&nbsp;}<br/>
+&nbsp;<wbr>&nbsp;rc&nbsp;=&nbsp;pcre_fullinfo(re, NULL, PCRE_INFO_SIZE,&nbsp;&amp;size);<br/>
+&nbsp;<wbr>&nbsp;if&nbsp;(rc&nbsp;&lt;&nbsp;0)&nbsp;{&nbsp;&#8230; handle errors &#8230;&nbsp;}<br/>
+&nbsp;<wbr>&nbsp;rc&nbsp;=&nbsp;fwrite(re, 1, size, fd);<br/>
 &nbsp;<wbr>&nbsp;if&nbsp;(rc&nbsp;!=&nbsp;size)&nbsp;{&nbsp;&#8230; handle errors &#8230;&nbsp;} </p>
 <p> In this example, the bytes that comprise the compiled pattern are copied exactly. Note that this is binary data that may contain any of the 256 possible byte values. On systems that make a distinction between binary and non-binary data, be sure that the file is opened for binary output. </p>
 <p> If you want to write more than one pattern to a file, you will have to devise a way of separating them. For binary data, preceding each pattern with its length is probably the most straightforward approach. Another possibility is to write out the data in hexadecimal instead of binary, one pattern to a line. </p>

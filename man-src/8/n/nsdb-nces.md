@@ -71,7 +71,7 @@ description: "nsdb-nces – list NSDB container entries on an LDAP server"
 <h2>Examples</h2>
 <p>Suppose you are the FedFS administrator of the <i>example.net</i> FedFS domain and that you want to know if the LDAP server <i>ldap.example.net</i> is an NSDB. Use:</p>
 <dl>
-<dd>$ nsdb-nces -l ldap.example.net<br />
+<dd>$ nsdb-nces -l ldap.example.net<br/>
  Host: ldap.example.net:389 </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>namingContext&nbsp;<wbr>&#8216;dc=example,dc=net&#8217;&nbsp;<wbr>does not host an NCE. </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>namingContext&nbsp;<wbr>&#8216;o=fedfs&#8217;&nbsp;<wbr>hosts an NCE at&nbsp;<wbr>&#8216;o=fedfs&#8217;. </p>

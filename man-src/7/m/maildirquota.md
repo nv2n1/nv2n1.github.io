@@ -25,7 +25,7 @@ description: "maildirquota – voluntary Maildir quotas"
 <h3>Folders</h3>
 <p>This quota implementation is compatible with a popular extension to maildir which defines individual mail folders within a single maildir. However, in order to create a compatible folder, you MUST use the <code>maildirmake</code> command that comes with <code>maildrop</code>, and you MUST use the <code>-f</code> option to <code>maildirmake</code>, giving the name of the folder. Do not use <code>maildirmake</code> and specify the directory name of the maildir folder. Quota enforcement will not work if you do that.</p>
 <h2>See Also</h2>
-<p>m[blue]<code><a href="/docs/linux/man/1-maildrop/">maildrop</a></code>(1)m[]<font SIZE="-2">[1]</font>, m[blue]<code><a href="/docs/linux/man/1-maildirmake/">maildirmake</a></code>(1)m[]<font SIZE="-2">[2]</font>, m[blue]<code>maildropfilter</code>(5)m[]<font SIZE="-2">[3]</font>, m[blue]<code><a href="/docs/linux/man/8-deliverquota/">deliverquota</a></code>(8)m[]<font SIZE="-2">[4]</font>.</p>
+<p>m[blue]<code><a href="/docs/linux/man/1-maildrop/">maildrop</a></code>(1)m[][1], m[blue]<code><a href="/docs/linux/man/1-maildirmake/">maildirmake</a></code>(1)m[][2], m[blue]<code>maildropfilter</code>(5)m[][3], m[blue]<code><a href="/docs/linux/man/8-deliverquota/">deliverquota</a></code>(8)m[][4].</p>
 <h2>Author</h2>
 <p><code>Sam Varshavchik</code></p>
 <dl>

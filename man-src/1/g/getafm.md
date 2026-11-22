@@ -13,7 +13,7 @@ description: "getafm – create an AFM file for a PostScript font."
 <p> <code>getafm </code> <i>FontName</i> &gt; <i>output.ps</i></p>
 <h2>DESCRIPTION</h2>
 <p> <i>Getafm</i> generates a PostScript file which prints an AFM file for a font to the printer&#8217;s output channel. The output of <i>getafm</i> should be sent to a printer, or to GhostScript. For example, </p>
-<p> <center> getafm Times-Roman | gsnd &#8211; &gt;Times-Roman.afm<br />
+<p> <center> getafm Times-Roman | gsnd &#8211; &gt;Times-Roman.afm<br/>
  </center> </p>
 <h2>AUTHOR</h2>
 <p> Robert Joop (rj [at] rainbow.in-berlin.de), Angus Duggan</p>

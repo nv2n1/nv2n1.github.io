@@ -10,11 +10,11 @@ description: "ql/methods/finitedifferences/finitedifferencemodel.hpp – generic
 
 <p> ql/methods/finitedifferences/finitedifferencemodel.hpp &#8211; generic finite difference model </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/methods/finitedifferences/stepcondition.hpp&gt;<br />
- #include &lt;ql/methods/finitedifferences/boundarycondition.hpp&gt;<br />
+<p> #include &lt;ql/methods/finitedifferences/stepcondition.hpp&gt;<br/>
+ #include &lt;ql/methods/finitedifferences/boundarycondition.hpp&gt;<br/>
  #include &lt;ql/methods/finitedifferences/operatortraits.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>FiniteDifferenceModel&lt; Evolver &gt;</code><br />
+<p> class <code>FiniteDifferenceModel&lt; Evolver &gt;</code><br/>
  <i>Generic finite difference model. </i></p>
 <h2>Detailed Description</h2>
 <p> generic finite difference model </p>

@@ -29,11 +29,11 @@ inb, outb, inw, outw, inl, outl - access I/O ports
 
 <h2>DESCRIPTION</h2>
 
- These commands enable command line and script access directly to I/O ports on <font SIZE="-1">PC</font> hardware. 
+ These commands enable command line and script access directly to I/O ports on PC hardware. 
 
  The <tt>&quot;inb&quot;</tt>, <tt>&quot;inw&quot;</tt> and <tt>&quot;inl&quot;</tt> commands perform an input (read) operation on the given I/O port, and print the result. 
 
- The <tt>&quot;outb&quot;</tt>, <tt>&quot;outw&quot;</tt> and <tt>&quot;outl&quot;</tt> commands perform an output (write) operation to the given I/O port, sending the given data. Note that the order of the parameters is <font SIZE="-1">ADDRESS</font> <font SIZE="-1">DATA</font>. 
+ The <tt>&quot;outb&quot;</tt>, <tt>&quot;outw&quot;</tt> and <tt>&quot;outl&quot;</tt> commands perform an output (write) operation to the given I/O port, sending the given data. Note that the order of the parameters is ADDRESS DATA. 
 
  The size of the operation is selected according to the suffix, with <tt>&quot;b&quot;</tt> meaning byte, <tt>&quot;w&quot;</tt> meaning word (16 bits) and <tt>&quot;l&quot;</tt> meaning long (32 bits). 
 
@@ -45,7 +45,7 @@ inb, outb, inw, outw, inl, outl - access I/O ports
 
  The value read from the port by an ``in'' operation is normally printed in decimal. 
 
- Use the <tt>&quot;--hex&quot;</tt> option to print the result as hexadecimal (<tt>&quot;0x&quot;</tt> prefix is <font SIZE="-1">NOT</font> printed). 
+ Use the <tt>&quot;--hex&quot;</tt> option to print the result as hexadecimal (<tt>&quot;0x&quot;</tt> prefix is NOT printed). 
 
  Use the <tt>&quot;--code&quot;</tt> option to turn the result into an exit status. Note that Unix/shell can only reliably return exit status in the range 0-0x7f, so this is not particularly useful in practice.
 
@@ -75,8 +75,8 @@ inb, outb, inw, outw, inl, outl - access I/O ports
 
  (C) Copyright 2009 Red Hat Inc., &lt;<a rel="nofollow" HREF="http://et.redhat.com/~rjones/ioport">http://et.redhat.com/~rjones/ioport</a>&gt;. 
 
- This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. 
+ This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. 
 
- This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT</font> <font SIZE="-1">ANY</font> <font SIZE="-1">WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS</font> <font SIZE="-1">FOR</font> A <font SIZE="-1">PARTICULAR</font> <font SIZE="-1">PURPOSE</font>. See the <font SIZE="-1">GNU</font> General Public License for more details. 
+ This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. 
 
- You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, <font SIZE="-1">MA</font> 02139, <font SIZE="-1">USA</font>.
+ You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.

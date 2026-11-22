@@ -94,9 +94,9 @@ $ git reset                                <code>(3)</code>
 $ git pull <a href="git://info.example.com/">git://info.example.com/</a> nitfol  <code>(4)</code>
 </pre>
 </dd></dl>
-<p> <code>1. </code>You are happily working on something, and find the changes in these files are in good order. You do not want to see them when you run <code>git diff</code>, because you plan to work on other files and changes with these files are distracting.<br />
- <code>2. </code>Somebody asks you to pull, and the changes sound worthy of merging.<br />
- <code>3. </code>However, you already dirtied the index (i.e. your index does not match the <code>HEAD</code> commit). But you know the pull you are going to make does not affect <code>frotz.c</code> or <code>filfre.c</code>, so you revert the index changes for these two files. Your changes in working tree remain there.<br />
+<p> <code>1. </code>You are happily working on something, and find the changes in these files are in good order. You do not want to see them when you run <code>git diff</code>, because you plan to work on other files and changes with these files are distracting.<br/>
+ <code>2. </code>Somebody asks you to pull, and the changes sound worthy of merging.<br/>
+ <code>3. </code>However, you already dirtied the index (i.e. your index does not match the <code>HEAD</code> commit). But you know the pull you are going to make does not affect <code>frotz.c</code> or <code>filfre.c</code>, so you revert the index changes for these two files. Your changes in working tree remain there.<br/>
  <code>4. </code>Then you can pull and merge, leaving <code>frotz.c</code> and <code>filfre.c</code> changes still in the working tree.
 </dl>
 <p> Undo a commit and redo</p>
@@ -111,8 +111,8 @@ $ edit                        <code>(2)</code>
 $ git commit -a -c ORIG_HEAD  <code>(3)</code>
 </pre>
 </dd></dl>
-<p> <code>1. </code>This is most often done when you remembered what you just committed is incomplete, or you misspelled your commit message, or both. Leaves working tree as it was before &quot;reset&quot;.<br />
- <code>2. </code>Make corrections to working tree files.<br />
+<p> <code>1. </code>This is most often done when you remembered what you just committed is incomplete, or you misspelled your commit message, or both. Leaves working tree as it was before &quot;reset&quot;.<br/>
+ <code>2. </code>Make corrections to working tree files.<br/>
  <code>3. </code>&quot;reset&quot; copies the old head to <code>.git/ORIG_HEAD</code>; redo the commit by starting with its log message. If you do not need to edit the message further, you can give <code>-C</code> option instead. </p>
 <p> See also the <code>&#8211;amend</code> option to <code><a href="/docs/linux/man/1-git-commit/">git-commit</a></code>(1).
 </dl>
@@ -127,8 +127,8 @@ $ git reset --hard HEAD~3       <code>(2)</code>
 $ git switch topic/wip          <code>(3)</code>
 </pre>
 </dd></dl>
-<p> <code>1. </code>You have made some commits, but realize they were premature to be in the <code>master</code> branch. You want to continue polishing them in a topic branch, so create <code>topic/wip</code> branch off of the current <code>HEAD</code>.<br />
- <code>2. </code>Rewind the master branch to get rid of those three commits.<br />
+<p> <code>1. </code>You have made some commits, but realize they were premature to be in the <code>master</code> branch. You want to continue polishing them in a topic branch, so create <code>topic/wip</code> branch off of the current <code>HEAD</code>.<br/>
+ <code>2. </code>Rewind the master branch to get rid of those three commits.<br/>
  <code>3. </code>Switch to <code>topic/wip</code> branch and keep working.
 </dl>
 <p> Undo commits permanently</p>
@@ -160,9 +160,9 @@ Fast-forward
 $ git reset --hard ORIG_HEAD       <code>(4)</code>
 </pre>
 </dd></dl>
-<p> <code>1. </code>Try to update from the upstream resulted in a lot of conflicts; you were not ready to spend a lot of time merging right now, so you decide to do that later.<br />
- <code>2. </code>&quot;pull&quot; has not made merge commit, so <code>git reset &#8211;hard</code> which is a synonym for <code>git reset &#8211;hard HEAD</code> clears the mess from the index file and the working tree.<br />
- <code>3. </code>Merge a topic branch into the current branch, which resulted in a fast-forward.<br />
+<p> <code>1. </code>Try to update from the upstream resulted in a lot of conflicts; you were not ready to spend a lot of time merging right now, so you decide to do that later.<br/>
+ <code>2. </code>&quot;pull&quot; has not made merge commit, so <code>git reset &#8211;hard</code> which is a synonym for <code>git reset &#8211;hard HEAD</code> clears the mess from the index file and the working tree.<br/>
+ <code>3. </code>Merge a topic branch into the current branch, which resulted in a fast-forward.<br/>
  <code>4. </code>But you decided that the topic branch is not ready for public consumption yet. &quot;pull&quot; or &quot;merge&quot; always leaves the original tip of the current branch in <code>ORIG_HEAD</code>, so resetting hard to it brings your index file and the working tree back to that state, and resets the tip of the branch to that commit.
 </dl>
 <p> Undo a merge or pull inside a dirty working tree</p>
@@ -170,13 +170,13 @@ $ git reset --hard ORIG_HEAD       <code>(4)</code>
 <dl>
 <dt>
 </dt><dd>
-$ git pull(1)<br />
-            Auto<br />
-        &#8211; merging nitfol<br />
-          Merge made by recursive.nitfol<br />
+$ git pull(1)<br/>
+            Auto<br/>
+        &#8211; merging nitfol<br/>
+          Merge made by recursive.nitfol<br/>
     | 20 ++ ++ +&#8211; &#8211;&#8230; $ git reset&#8211; merge ORIG_HEAD(2)
 </dd></dl>
-<p> <code>1. </code>Even if you may have local modifications in your working tree, you can safely say <code>git pull</code> when you know that the change in the other branch does not overlap with them.<br />
+<p> <code>1. </code>Even if you may have local modifications in your working tree, you can safely say <code>git pull</code> when you know that the change in the other branch does not overlap with them.<br/>
  <code>2. </code>After inspecting the result of the merge, you may find that the change in the other branch is unsatisfactory. Running <code>git reset &#8211;hard ORIG_HEAD</code> will let you go back to where you were, but it will discard your local changes, which you do not want. <code>git reset &#8211;merge</code> keeps your local changes.
 </dl>
 <p> Interrupted workflow</p>
@@ -186,21 +186,21 @@ $ git pull(1)<br />
 <dl>
 <dt>
 </dt><dd>
-$ git switch feature;<br />
-#you were working in &#8220;feature&#8221; branch and<br />
-    $ work work work;<br />
-#got interrupted<br />
-        $ git commit &#8211;<br />
-    a &#8211; m &#8220;snapshot WIP&#8221;(1)$ git switch master $ fix fix fix $ git commit;<br />
-#commit with real log<br />
-        $ git switch feature<br />
-            $ git reset&#8211; soft HEAD ^<br />
-    ;<br />
-#go back to WIP state(2)<br />
+$ git switch feature;<br/>
+#you were working in &#8220;feature&#8221; branch and<br/>
+    $ work work work;<br/>
+#got interrupted<br/>
+        $ git commit &#8211;<br/>
+    a &#8211; m &#8220;snapshot WIP&#8221;(1)$ git switch master $ fix fix fix $ git commit;<br/>
+#commit with real log<br/>
+        $ git switch feature<br/>
+            $ git reset&#8211; soft HEAD ^<br/>
+    ;<br/>
+#go back to WIP state(2)<br/>
     $ git reset(3)
 </dd></dl>
-<p> <code>1. </code>This commit will get blown away so a throw-away log message is OK.<br />
- <code>2. </code>This removes the <i>WIP</i> commit from the commit history, and sets your working tree to the state just before you made that snapshot.<br />
+<p> <code>1. </code>This commit will get blown away so a throw-away log message is OK.<br/>
+ <code>2. </code>This removes the <i>WIP</i> commit from the commit history, and sets your working tree to the state just before you made that snapshot.<br/>
  <code>3. </code>At this point the index file still has all the WIP changes you committed as <i>snapshot WIP</i>. This updates the index to show your WIP files as uncommitted. </p>
 <p> See also <code><a href="/docs/linux/man/1-git-stash/">git-stash</a></code>(1).
 </dl>
@@ -217,8 +217,8 @@ $ git commit -m &quot;Commit files in index&quot;     <code>(2)</code>
 $ git add frotz.c                           <code>(3)</code>
 </pre>
 </dd></dl>
-<p> <code>1. </code>This removes the file from the index while keeping it in the working directory.<br />
- <code>2. </code>This commits all other changes in the index.<br />
+<p> <code>1. </code>This removes the file from the index while keeping it in the working directory.<br/>
+ <code>2. </code>This commits all other changes in the index.<br/>
  <code>3. </code>Adds the file to the index again.
 </dl>
 <p> Keep changes in working tree while discarding some previous commits</p>
@@ -238,8 +238,8 @@ $ git switch -c branch2                     <code>(2)</code>
 $ git reset --keep start                    <code>(3)</code>
 </pre>
 </dd></dl>
-<p> <code>1. </code>This commits your first edits in <code>branch1</code>.<br />
- <code>2. </code>In the ideal world, you could have realized that the earlier commit did not belong to the new topic when you created and switched to <code>branch2</code> (i.e. <code>git switch -c branch2 start</code>), but nobody is perfect.<br />
+<p> <code>1. </code>This commits your first edits in <code>branch1</code>.<br/>
+ <code>2. </code>In the ideal world, you could have realized that the earlier commit did not belong to the new topic when you created and switched to <code>branch2</code> (i.e. <code>git switch -c branch2 start</code>), but nobody is perfect.<br/>
  <code>3. </code>But you can use <code>reset &#8211;keep</code> to remove the unwanted commit after you switched to <code>branch2</code>.
 </dl>
 <p> Split a commit apart into a sequence of commits</p>
@@ -249,17 +249,17 @@ $ git reset --keep start                    <code>(3)</code>
 <dl>
 <dt>
 </dt><dd>
-$ git reset &#8211; N HEAD ^ (1)<br />
-                               $ git add<br />
+$ git reset &#8211; N HEAD ^ (1)<br/>
+                               $ git add<br/>
                            &#8211; p(2) $ git diff&#8211; cached(3) $ git commit &#8211; c HEAD @{1}(4)&#8230;(5) $ git add&#8230;(6) $ git diff&#8211; cached(7) $ git commit&#8230;(8)
 </dd></dl>
-<p> <code>1. </code>First, reset the history back one commit so that we remove the original commit, but leave the working tree with all the changes. The -N ensures that any new files added with <code>HEAD</code> are still marked so that <code>git add -p</code> will find them.<br />
- <code>2. </code>Next, we interactively select diff hunks to add using the <code>git add -p</code> facility. This will ask you about each diff hunk in sequence and you can use simple commands such as &quot;yes, include this&quot;, &quot;No don&#8217;t include this&quot; or even the very powerful &quot;edit&quot; facility.<br />
- <code>3. </code>Once satisfied with the hunks you want to include, you should verify what has been prepared for the first commit by using <code>git diff &#8211;cached</code>. This shows all the changes that have been moved into the index and are about to be committed.<br />
- <code>4. </code>Next, commit the changes stored in the index. The <code>-c</code> option specifies to pre-populate the commit message from the original message that you started with in the first commit. This is helpful to avoid retyping it. The <code>HEAD@{1}</code> is a special notation for the commit that <code>HEAD</code> used to be at prior to the original reset commit (1 change ago). See <code><a href="/docs/linux/man/1-git-reflog/">git-reflog</a></code>(1) for more details. You may also use any other valid commit reference.<br />
- <code>5. </code>You can repeat steps 2-4 multiple times to break the original code into any number of commits.<br />
- <code>6. </code>Now you&#8217;ve split out many of the changes into their own commits, and might no longer use the patch mode of <code>git add</code>, in order to select all remaining uncommitted changes.<br />
- <code>7. </code>Once again, check to verify that you&#8217;ve included what you want to. You may also wish to verify that git diff doesn&#8217;t show any remaining changes to be committed later.<br />
+<p> <code>1. </code>First, reset the history back one commit so that we remove the original commit, but leave the working tree with all the changes. The -N ensures that any new files added with <code>HEAD</code> are still marked so that <code>git add -p</code> will find them.<br/>
+ <code>2. </code>Next, we interactively select diff hunks to add using the <code>git add -p</code> facility. This will ask you about each diff hunk in sequence and you can use simple commands such as &quot;yes, include this&quot;, &quot;No don&#8217;t include this&quot; or even the very powerful &quot;edit&quot; facility.<br/>
+ <code>3. </code>Once satisfied with the hunks you want to include, you should verify what has been prepared for the first commit by using <code>git diff &#8211;cached</code>. This shows all the changes that have been moved into the index and are about to be committed.<br/>
+ <code>4. </code>Next, commit the changes stored in the index. The <code>-c</code> option specifies to pre-populate the commit message from the original message that you started with in the first commit. This is helpful to avoid retyping it. The <code>HEAD@{1}</code> is a special notation for the commit that <code>HEAD</code> used to be at prior to the original reset commit (1 change ago). See <code><a href="/docs/linux/man/1-git-reflog/">git-reflog</a></code>(1) for more details. You may also use any other valid commit reference.<br/>
+ <code>5. </code>You can repeat steps 2-4 multiple times to break the original code into any number of commits.<br/>
+ <code>6. </code>Now you&#8217;ve split out many of the changes into their own commits, and might no longer use the patch mode of <code>git add</code>, in order to select all remaining uncommitted changes.<br/>
+ <code>7. </code>Once again, check to verify that you&#8217;ve included what you want to. You may also wish to verify that git diff doesn&#8217;t show any remaining changes to be committed later.<br/>
  <code>8. </code>And finally create the final commit.
 </dl>
 <h2>DISCUSSION</h2>
@@ -309,9 +309,9 @@ working index HEAD target working index HEAD&#8211; &#8212; &#8212; &#8212; &#82
 <dl>
 <dt>
 </dt><dd>
-working index HEAD target working index HEAD&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;X U A B&#8211; soft(disallowed)&#8211; mixed X B B<br />
-    &#8212; hard B B B<br />
-    &#8212; merge B B B<br />
+working index HEAD target working index HEAD&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;X U A B&#8211; soft(disallowed)&#8211; mixed X B B<br/>
+    &#8212; hard B B B<br/>
+    &#8212; merge B B B<br/>
     &#8212; keep(disallowed)
 </dd></dl>
 <dl>

@@ -13,14 +13,14 @@ description: "Atlas::Message::Encoder – Encoder that transmits Atlas::Message:
 <p> Inherits <code>Atlas::EncoderBase</code>. </p>
 <h3>Public Member Functions</h3>
 <p><code>Encoder</code> (<code>Atlas::Bridge</code> &amp;) </p>
-<p> void <code>streamMessageElement</code> (const MapType &amp;obj)<br />
- <i>Send a message (must be a map!) in stream state. </i><br />
- void <code>mapElementItem</code> (const std::string &amp;, const <code>Element</code> &amp;)<br />
- <i>Send an object as a map item. </i><br />
+<p> void <code>streamMessageElement</code> (const MapType &amp;obj)<br/>
+ <i>Send a message (must be a map!) in stream state. </i><br/>
+ void <code>mapElementItem</code> (const std::string &amp;, const <code>Element</code> &amp;)<br/>
+ <i>Send an object as a map item. </i><br/>
  void <code>mapElementMapItem</code> (const std::string &amp;, const MapType &amp;) </p>
 <p> void <code>mapElementListItem</code> (const std::string &amp;, const ListType &amp;) </p>
-<p> void <code>listElementItem</code> (const <code>Element</code> &amp;)<br />
- <i>Send an object as a list item. </i><br />
+<p> void <code>listElementItem</code> (const <code>Element</code> &amp;)<br/>
+ <i>Send an object as a list item. </i><br/>
  void <code>listElementMapItem</code> (const MapType &amp;) </p>
 <p> void <code>listElementListItem</code> (const ListType &amp;) </p>
 <h2>Detailed Description</h2>

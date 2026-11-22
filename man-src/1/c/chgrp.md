@@ -10,7 +10,7 @@ description: "chgrp – change group ownership"
 
 <p> chgrp &#8211; change group ownership </p>
 <h2>SYNOPSIS</h2>
-<p> <code>chgrp</code> [<i>,OPTION/</i>]&#8230; <i>,GROUP FILE/</i>&#8230;<br />
+<p> <code>chgrp</code> [<i>,OPTION/</i>]&#8230; <i>,GROUP FILE/</i>&#8230;<br/>
  <code>chgrp</code> [<i>,OPTION/</i>]&#8230; <i>,&#8211;reference=RFILE FILE/</i>&#8230;</p>
 <h2>DESCRIPTION</h2>
 <p> Change the group of each FILE to GROUP. With <code>&#8211;reference</code>, change the group of each FILE to that of RFILE.</p>
@@ -54,12 +54,12 @@ description: "chgrp – change group ownership"
 <h2>AUTHOR</h2>
 <p> Written by David MacKenzie and Jim Meyering.</p>
 <h2>REPORTING BUGS</h2>
-<p> GNU coreutils online help: &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/">https://www.gnu.org/software/coreutils/</a>&gt;<br />
+<p> GNU coreutils online help: &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/">https://www.gnu.org/software/coreutils/</a>&gt;<br/>
  Report any translation bugs to &lt;<a rel="nofollow" href="https://translationproject.org/team/">https://translationproject.org/team/</a>&gt;</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2020 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="https://gnu.org/licenses/gpl.html">https://gnu.org/licenses/gpl.html</a>&gt;.<br />
+<p> Copyright &#169; 2020 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="https://gnu.org/licenses/gpl.html">https://gnu.org/licenses/gpl.html</a>&gt;.<br/>
  This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-chown/">chown</a>(1), <a href="/docs/linux/man/2-chown/">chown</a>(2) </p>
-<p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/chgrp">https://www.gnu.org/software/coreutils/chgrp</a>&gt;<br />
+<p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/chgrp">https://www.gnu.org/software/coreutils/chgrp</a>&gt;<br/>
  or available locally via: info &#8216;(coreutils) chgrp invocation&#8217; </p>

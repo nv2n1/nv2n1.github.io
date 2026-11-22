@@ -10,7 +10,7 @@ description: "XkbGetDetectableAutorepeat – Determines whether or not the serve
 <p>XkbGetDetectableAutorepeat &#8211; Determines whether or not the server supports DetectableAutorepeat</p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>Bool XkbGetDetectableAutorepeat</code> <code>(Display *</code><i>display</i><code>,</code> <code>Bool *</code><i>supported_rtrn</i><code>);</code><br />
+<dt> <code>Bool XkbGetDetectableAutorepeat</code> <code>(Display *</code><i>display</i><code>,</code> <code>Bool *</code><i>supported_rtrn</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

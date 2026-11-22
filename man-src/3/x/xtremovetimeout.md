@@ -29,6 +29,6 @@ description: "XtAppAddTimeOut, XtRemoveTimeOut – register and remove timeouts"
 <p>The <code>XtAppAddTimeOut</code> function creates a timeout and returns an identifier for it. The timeout value is set to interval. The callback procedure is called when the time interval elapses, and then the timeout is removed. </p>
 <p> The <code>XtRemoveTimeOut</code> function removes the timeout. Note that timeouts are automatically removed once they trigger.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xtappaddinput/">XtAppAddInput</a>(3),<a href="/docs/linux/man/3-xtappaddsignal/">XtAppAddSignal</a>(3)<br />
- <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><a href="/docs/linux/man/3-xtappaddinput/">XtAppAddInput</a>(3),<a href="/docs/linux/man/3-xtappaddsignal/">XtAppAddSignal</a>(3)<br/>
+ <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

@@ -13,7 +13,7 @@ description: "gsec — deprecated Firebird user management utility"
 <p> <code>gsec</code> [<i>option</i>&#8230;] <i>command</i> [<i>parameter</i>&#8230;]</p>
 <h2>DESCRIPTION</h2>
 <p> <code>gsec</code> used to be the utility to manage Firebird users. </p>
-<p> Since Firebird 3.0, user management is provided via <font SIZE="-1">SQL.</font> Please see <i>sql.extensions/README.user_management</i> in the documentation directory of your installation.</p>
+<p> Since Firebird 3.0, user management is provided via SQL. Please see <i>sql.extensions/README.user_management</i> in the documentation directory of your installation.</p>
 <h2>SEE ALSO</h2>
 <p> Additional documentation about Firebird can be found on the Firebird Project website, &lt;<a rel="nofollow" href="http://www.firebirdsql.org">http://www.firebirdsql.org</a>&gt;.</p>
 <h2>AUTHOR</h2>

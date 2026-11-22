@@ -10,7 +10,7 @@ description: "zscal.f –"
 <p>zscal.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zscal</code> (N, ZA, ZX, INCX)<br />
+<p>subroutine <code>zscal</code> (N, ZA, ZX, INCX)<br/>
  <i></i><code>ZSCAL</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zscal (integerN, complex*16ZA, complex*16, dimension(*)ZX, integerINCX)</h3>

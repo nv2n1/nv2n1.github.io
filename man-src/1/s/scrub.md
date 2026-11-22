@@ -10,8 +10,8 @@ description: "scrub – write patterns on disk/file"
 
 <p> scrub - write patterns on disk/file </p>
 <h2>SYNOPSIS</h2>
-<p> <code>scrub</code> <i>[OPTIONS] special-file [special-file ...]</i> <br />
- <code>scrub</code> <i>[OPTIONS] file [file ...]</i> <br />
+<p> <code>scrub</code> <i>[OPTIONS] special-file [special-file ...]</i> <br/>
+ <code>scrub</code> <i>[OPTIONS] file [file ...]</i> <br/>
  <code>scrub</code> <i>-X [OPTIONS] directory</i>  </p>
 <h2>DESCRIPTION</h2>
 <p> <code>Scrub</code> iteratively writes patterns on files or disk devices to make retrieving the data more difficult. <code>Scrub </code> operates in one of three modes: </p>
@@ -146,7 +146,7 @@ scrub: 0xffaa |................................................|
 <p> &quot;Secure Deletion of Data from Magnetic and Solid-State Memory&quot;, by Peter Gutmann, Sixth USENIX Security Symposium, San Jose, CA, July 22-25, 1996. </p>
 <p> &quot;Gutmann Method&quot;, Wikipedia, <a rel="nofollow" href="http://en.wikipedia.org/wiki/Gutmann_method.">http://en.wikipedia.org/wiki/Gutmann_method.</a> </p>
 <p> Darik&#8217;s boot and Nuke FAQ: <a rel="nofollow" href="http://dban.sourceforge.net/faq/index.html">http://dban.sourceforge.net/faq/index.html</a> </p>
-<p> &quot;Tutorial on Disk Drive Data Sanitization&quot;, by Gordon Hugues and Tom Coughlin, <br />
+<p> &quot;Tutorial on Disk Drive Data Sanitization&quot;, by Gordon Hugues and Tom Coughlin, <br/>
  <a rel="nofollow" href="http://cmrr.ucsd.edu/people/Hughes/DataSanitizationTutorial.pdf.">http://cmrr.ucsd.edu/people/Hughes/DataSanitizationTutorial.pdf.</a> </p>
 <p> &quot;Guidelines for Media Sanitization&quot;, NIST special publication 800-88, Kissel et al, September, 2006. </p>
 <p> <a href="/docs/linux/man/1-shred/">shred</a>(1), <a href="/docs/linux/man/8-hdparm/">hdparm</a>(8) </p>

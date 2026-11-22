@@ -36,7 +36,7 @@ description: "perlgit – Detailed information about git and the Perl repository
     origin/blead
   ...
 </pre>
-<p> The branches that begin with &#8220;origin&#8221; correspond to the &#8220;git remote&#8221; that you cloned from (which is named &#8220;origin&#8221;). Each branch on the remote will be exactly tracked by these branches. You should <font SIZE="-1">NEVER</font> do work on these remote tracking branches. You only ever do work in a local branch. Local branches can be configured to automerge (on pull) from a designated remote tracking branch. This is the case with the default branch <tt>&quot;blead&quot;</tt> which will be configured to merge from the remote tracking branch <tt>&quot;origin/blead&quot;</tt>. </p>
+<p> The branches that begin with &#8220;origin&#8221; correspond to the &#8220;git remote&#8221; that you cloned from (which is named &#8220;origin&#8221;). Each branch on the remote will be exactly tracked by these branches. You should NEVER do work on these remote tracking branches. You only ever do work in a local branch. Local branches can be configured to automerge (on pull) from a designated remote tracking branch. This is the case with the default branch <tt>&quot;blead&quot;</tt> which will be configured to merge from the remote tracking branch <tt>&quot;origin/blead&quot;</tt>. </p>
 <p> You can see recent commits: </p>
 <pre>
   % git log
@@ -89,7 +89,7 @@ description: "perlgit – Detailed information about git and the Perl repository
    (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
        deliberate.untracked
 </pre>
-<p> This shows that there were changes to this document staged for commit, and that there were further changes in the working directory not yet staged. It also shows that there was an untracked file in the working directory, and as you can see shows how to change all of this. It also shows that there is one commit on the working branch <tt>&quot;blead&quot;</tt> which has not been pushed to the <tt>&quot;origin&quot;</tt> remote yet. <font SIZE="-1"><code>NOTE</code></font>: This output is also what you see as a template if you do not provide a message to <tt>&quot;git commit&quot;</tt>.</p>
+<p> This shows that there were changes to this document staged for commit, and that there were further changes in the working directory not yet staged. It also shows that there was an untracked file in the working directory, and as you can see shows how to change all of this. It also shows that there is one commit on the working branch <tt>&quot;blead&quot;</tt> which has not been pushed to the <tt>&quot;origin&quot;</tt> remote yet. <code>NOTE</code>: This output is also what you see as a template if you do not provide a message to <tt>&quot;git commit&quot;</tt>.</p>
 <h3>Patch workflow</h3>
 <p> First, please read perlhack for details on hacking the Perl core. That document covers many details on how to create a good patch. </p>
 <p> If you already have a Perl repository, you should ensure that you&#8217;re on the <i>blead</i> branch, and your repository is up to date: </p>
@@ -109,7 +109,7 @@ description: "perlgit – Detailed information about git and the Perl repository
 </pre>
 <p> Creating a topic branch makes it easier for the maintainers to rebase or merge back into the master blead for a more linear history. If you don&#8217;t work on a topic branch the maintainer has to manually cherry pick your changes onto blead before they can be applied. </p>
 <p> That&#8217;ll get you scolded on perl5-porters, so don&#8217;t do that. Be Awesome. </p>
-<p> Then make your changes. For example, if Leon Brocard changes his name to Orange Brocard, we should change his name in the <font SIZE="-1">AUTHORS</font> file: </p>
+<p> Then make your changes. For example, if Leon Brocard changes his name to Orange Brocard, we should change his name in the AUTHORS file: </p>
 <pre><code>
 % perl - pi - e 's{Leon Brocard}{Orange Brocard}' AUTHORS
 </code></pre>
@@ -122,8 +122,8 @@ description: "perlgit – Detailed information about git and the Perl repository
      modified:   AUTHORS
 </pre>
 <p> And you can see the changes: </p>
-<p>% git diff diff&#8211; git a / AUTHORS b / AUTHORS index 293dd70..722c93e 100644 &#8212; -a / AUTHORS++ + b / AUTHORS<br />
-                                                                                                    @ @-541,<br />
+<p>% git diff diff&#8211; git a / AUTHORS b / AUTHORS index 293dd70..722c93e 100644 &#8212; -a / AUTHORS++ + b / AUTHORS<br/>
+                                                                                                    @ @-541,<br/>
     7 + 541, 7 @ @Lars Hecking&lt;lhecking[at] nmrc.ucc.ie&gt; Laszlo Molnar&lt;laszlo.molnar[at] eth.ericsson.se&gt; Leif Huhn&lt;leif[at] hale.dkstat.com&gt; Len Johnson&lt;lenjay[at] ibm.net&gt; &#8211; Leon Brocard&lt;acme[at] astray.com&gt; + Orange Brocard&lt;acme[at] astray.com&gt; Les Peters&lt;lpeters[at] aol.net&gt; Lesley Binks&lt;lesley.binks[at] gmail.com&gt; Lincoln D.Stein&lt;lstein[at] cshl.org&gt;</p>
 <p> Now commit your change locally: </p>
 <pre>
@@ -166,7 +166,7 @@ description: "perlgit – Detailed information about git and the Perl repository
 <pre>
   % git format-patch --stdout -M blead.. &gt; topic-branch-changes.patch
 </pre>
-<p> You should now send an email to perlbug [at] perl.org &lt;mailto:perlbug [at] perl.org&gt; with a description of your changes, and include this patch file as an attachment. In addition to being tracked by <font SIZE="-1">RT,</font> mail to perlbug will automatically be forwarded to perl5-porters (with manual moderation, so please be patient). You should only send patches to perl5-porters [at] perl.org &lt;mailto:perl5-porters [at] perl.org&gt; directly if the patch is not ready to be applied, but intended for discussion. </p>
+<p> You should now send an email to perlbug [at] perl.org &lt;mailto:perlbug [at] perl.org&gt; with a description of your changes, and include this patch file as an attachment. In addition to being tracked by RT, mail to perlbug will automatically be forwarded to perl5-porters (with manual moderation, so please be patient). You should only send patches to perl5-porters [at] perl.org &lt;mailto:perl5-porters [at] perl.org&gt; directly if the patch is not ready to be applied, but intended for discussion. </p>
 <p> Please do not use <code><a href="/docs/linux/man/1-git-send-email/">git-send-email</a></code>(1) to send your patch. See Sending patch emails for more information. </p>
 <p> If you want to delete your temporary branch, you may do so with: </p>
 <pre>
@@ -204,17 +204,17 @@ description: "perlgit – Detailed information about git and the Perl repository
 <p> When in doubt, before you do anything else, check your status and read it carefully, many questions are answered directly by the git status output.</p>
 <h3>Sending patch emails</h3>
 <p> After you&#8217;ve generated your patch you should send it to perlbug [at] perl.org &lt;mailto:perlbug [at] perl.org&gt; (as discussed in the previous section) with a normal mail client as an attachment, along with a description of the patch. </p>
-<p> You <code>must not</code> use <code><a href="/docs/linux/man/1-git-send-email/">git-send-email</a></code>(1) to send patches generated with <code><a href="/docs/linux/man/1-git-format-patch/">git-format-patch</a></code>(1). The <font SIZE="-1">RT</font> ticketing system living behind perlbug [at] perl.org &lt;mailto:perlbug [at] perl.org&gt; does not respect the inline contents of E-Mails, sending an inline patch to <font SIZE="-1">RT</font> guarantees that your patch will be destroyed. </p>
-<p> Someone may download your patch from <font SIZE="-1">RT,</font> which will result in the subject (the first line of the commit message) being omitted. See <font SIZE="-1">RT</font> #74192 &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=74192">https://rt.perl.org/Ticket/Display.html?id=74192</a>&gt; and commit a4583001 &lt;<a rel="nofollow" href="http://perl5.git.perl.org/perl.git/commitdiff/a4583001">http://perl5.git.perl.org/perl.git/commitdiff/a4583001</a>&gt; for an example. Alternatively someone may apply your patch from <font SIZE="-1">RT</font> after it arrived in their mailbox, by which time <font SIZE="-1">RT</font> will have modified the inline content of the message. See <font SIZE="-1">RT</font> #74532 &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=74532">https://rt.perl.org/Ticket/Display.html?id=74532</a>&gt; and commit f9bcfeac &lt;<a rel="nofollow" href="http://perl5.git.perl.org/perl.git/commitdiff/f9bcfeac">http://perl5.git.perl.org/perl.git/commitdiff/f9bcfeac</a>&gt; for a bad example of this failure mode.</p>
+<p> You <code>must not</code> use <code><a href="/docs/linux/man/1-git-send-email/">git-send-email</a></code>(1) to send patches generated with <code><a href="/docs/linux/man/1-git-format-patch/">git-format-patch</a></code>(1). The RT ticketing system living behind perlbug [at] perl.org &lt;mailto:perlbug [at] perl.org&gt; does not respect the inline contents of E-Mails, sending an inline patch to RT guarantees that your patch will be destroyed. </p>
+<p> Someone may download your patch from RT, which will result in the subject (the first line of the commit message) being omitted. See RT #74192 &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=74192">https://rt.perl.org/Ticket/Display.html?id=74192</a>&gt; and commit a4583001 &lt;<a rel="nofollow" href="http://perl5.git.perl.org/perl.git/commitdiff/a4583001">http://perl5.git.perl.org/perl.git/commitdiff/a4583001</a>&gt; for an example. Alternatively someone may apply your patch from RT after it arrived in their mailbox, by which time RT will have modified the inline content of the message. See RT #74532 &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=74532">https://rt.perl.org/Ticket/Display.html?id=74532</a>&gt; and commit f9bcfeac &lt;<a rel="nofollow" href="http://perl5.git.perl.org/perl.git/commitdiff/f9bcfeac">http://perl5.git.perl.org/perl.git/commitdiff/f9bcfeac</a>&gt; for a bad example of this failure mode.</p>
 <h3>A note on derived files</h3>
-<p> Be aware that many files in the distribution are derivative&#8212;avoid patching them, because git won&#8217;t see the changes to them, and the build process will overwrite them. Patch the originals instead. Most utilities (like perldoc) are in this category, i.e. patch <i>utils/perldoc.PL</i> rather than <i>utils/perldoc</i>. Similarly, don&#8217;t create patches for files under <i></i>$src_root<i>/ext</i> from their copies found in <i></i>$install_root<i>/lib</i>. If you are unsure about the proper location of a file that may have gotten copied while building the source distribution, consult the <i></i><font SIZE="-1"><i>MANIFEST</i></font><i></i>.</p>
+<p> Be aware that many files in the distribution are derivative&#8212;avoid patching them, because git won&#8217;t see the changes to them, and the build process will overwrite them. Patch the originals instead. Most utilities (like perldoc) are in this category, i.e. patch <i>utils/perldoc.PL</i> rather than <i>utils/perldoc</i>. Similarly, don&#8217;t create patches for files under <i></i>$src_root<i>/ext</i> from their copies found in <i></i>$install_root<i>/lib</i>. If you are unsure about the proper location of a file that may have gotten copied while building the source distribution, consult the <i></i><i>MANIFEST</i><i></i>.</p>
 <h3>Cleaning a working directory</h3>
 <p> The command <tt>&quot;git clean&quot;</tt> can with varying arguments be used as a replacement for <tt>&quot;make clean&quot;</tt>. </p>
 <p> To reset your working directory to a pristine condition you can do: </p>
 <pre>
   % git clean -dxf
 </pre>
-<p> However, be aware this will delete <font SIZE="-1">ALL</font> untracked content. You can use </p>
+<p> However, be aware this will delete ALL untracked content. You can use </p>
 <pre>
   % git clean -Xf
 </pre>
@@ -258,15 +258,15 @@ description: "perlgit – Detailed information about git and the Perl repository
   % git bisect run ~/run
 </pre>
 <p> When the first bad commit is isolated, <tt>&quot;git bisect&quot;</tt> will tell you so: </p>
-<p>ca4cfd28534303b82a216cfe83a1c80cbc3b9dc5 is first bad commit<br />
-        commit ca4cfd28534303b82a216cfe83a1c80cbc3b9dc5<br />
-            Author : Dave Mitchell&lt;davem[at] fdisolutions.com&gt;<br />
-                         Date : Sat Feb 9 14 : 56 : 23 2008 +<br />
-                                0000<br />
-                                    [perl #49472] Attributes +<br />
+<p>ca4cfd28534303b82a216cfe83a1c80cbc3b9dc5 is first bad commit<br/>
+        commit ca4cfd28534303b82a216cfe83a1c80cbc3b9dc5<br/>
+            Author : Dave Mitchell&lt;davem[at] fdisolutions.com&gt;<br/>
+                         Date : Sat Feb 9 14 : 56 : 23 2008 +<br/>
+                                0000<br/>
+                                    [perl #49472] Attributes +<br/>
                                 Unknown Error&#8230; bisect run success</p>
 <p> You can peek into the bisecting process with <tt>&quot;git bisect log&quot;</tt> and <tt>&quot;git bisect visualize&quot;</tt>. <tt>&quot;git bisect reset&quot;</tt> will get you out of bisect mode. </p>
-<p> Please note that the first <tt>&quot;good&quot;</tt> state must be an ancestor of the first <tt>&quot;bad&quot;</tt> state. If you want to search for the commit that <i>solved</i> some bug, you have to negate your test case (i.e. exit with <tt>1</tt> if <font SIZE="-1">OK</font> and <tt>0</tt> if not) and still mark the lower bound as <tt>&quot;good&quot;</tt> and the upper as <tt>&quot;bad&quot;</tt>. The &#8220;first bad commit&#8221; has then to be understood as the &#8220;first commit where the bug is solved&#8221;. </p>
+<p> Please note that the first <tt>&quot;good&quot;</tt> state must be an ancestor of the first <tt>&quot;bad&quot;</tt> state. If you want to search for the commit that <i>solved</i> some bug, you have to negate your test case (i.e. exit with <tt>1</tt> if OK and <tt>0</tt> if not) and still mark the lower bound as <tt>&quot;good&quot;</tt> and the upper as <tt>&quot;bad&quot;</tt>. The &#8220;first bad commit&#8221; has then to be understood as the &#8220;first commit where the bug is solved&#8221;. </p>
 <p> <tt>&quot;git help bisect&quot;</tt> has much more information on how you can tweak your binary searches. </p>
 <p> Following bisection you may wish to configure, build and test perl at commits identified by the bisection process. Sometimes, particularly with older perls, <tt>&quot;make&quot;</tt> may fail during this process. In this case you may be able to patch the source code at the older commit point. To do so, please follow the suggestions provided in &#8220;Building perl at older commits&#8221; in perlhack.</p>
 <h3>Topic branches and rewriting history</h3>
@@ -286,7 +286,7 @@ description: "perlgit – Detailed information about git and the Perl repository
 <p> If you want to make changes to someone else&#8217;s topic branch, you should check with its creator before making any change to it. </p>
 <p> You might sometimes find that the original author has edited the branch&#8217;s history. There are lots of good reasons for this. Sometimes, an author might simply be rebasing the branch onto a newer source point. Sometimes, an author might have found an error in an early commit which they wanted to fix before merging the branch to blead. </p>
 <p> Currently the master repository is configured to forbid non-fast-forward merges. This means that the branches within can not be rebased and pushed as a single step. </p>
-<p> The only way you will ever be allowed to rebase or modify the history of a pushed branch is to delete it and push it as a new branch under the same name. Please think carefully about doing this. It may be better to sequentially rename your branches so that it is easier for others working with you to cherry-pick their local changes onto the new version. (<font SIZE="-1">XXX:</font> needs explanation). </p>
+<p> The only way you will ever be allowed to rebase or modify the history of a pushed branch is to delete it and push it as a new branch under the same name. Please think carefully about doing this. It may be better to sequentially rename your branches so that it is easier for others working with you to cherry-pick their local changes onto the new version. (XXX: needs explanation). </p>
 <p> If you want to rebase a personal topic branch, you will have to delete your existing topic branch and push as a new version of it. You can do this via the following formula (see the explanation about <tt>&quot;refspec&quot;</tt>&#8216;s in the git push documentation for details) after you have rebased your branch: </p>
 <pre>
   # first rebase
@@ -297,7 +297,7 @@ description: "perlgit – Detailed information about git and the Perl repository
   % git push origin :$user/$topic
   % git push origin $user/$topic
 </pre>
-<p> <font SIZE="-1"><code>NOTE:</code></font> it is forbidden at the repository level to delete any of the &#8220;primary&#8221; branches. That is any branch matching <tt>&quot;m!^(blead|maint|perl)!&quot;</tt>. Any attempt to do so will result in git producing an error like this: </p>
+<p> <code>NOTE:</code> it is forbidden at the repository level to delete any of the &#8220;primary&#8221; branches. That is any branch matching <tt>&quot;m!^(blead|maint|perl)!&quot;</tt>. Any attempt to do so will result in git producing an error like this: </p>
 <pre>
   % git push origin :blead
   *** It is forbidden to delete blead/maint branches in this repository
@@ -316,7 +316,7 @@ description: "perlgit – Detailed information about git and the Perl repository
 </pre>
 <p> It is particularly important to have this graft line if any bisecting is done in the area of the &#8220;merge&#8221; in question.</p>
 <h2>WRITE ACCESS TO THE GIT REPOSITORY</h2>
-<p> Once you have write access, you will need to modify the <font SIZE="-1">URL</font> for the origin remote to enable pushing. Edit <i>.git/config</i> with the <code><a href="/docs/linux/man/1-git-config/">git-config</a></code>(1) command: </p>
+<p> Once you have write access, you will need to modify the URL for the origin remote to enable pushing. Edit <i>.git/config</i> with the <code><a href="/docs/linux/man/1-git-config/">git-config</a></code>(1) command: </p>
 <pre>
   % git config remote.origin.url <a href="ssh://perl5.git.perl.org/perl.git">ssh://perl5.git.perl.org/perl.git</a>
 </pre>
@@ -347,7 +347,7 @@ description: "perlgit – Detailed information about git and the Perl repository
  % git am 0001-Rename-Leon-Brocard-to-Orange-Brocard.patch
  Applying Rename Leon Brocard to Orange Brocard
 </pre>
-<p> Note that some <font SIZE="-1">UNIX</font> mail systems can mess with text attachments containing &#8216;From &#8216;. This will fix them up: </p>
+<p> Note that some UNIX mail systems can mess with text attachments containing &#8216;From &#8216;. This will fix them up: </p>
 <pre>
  % perl -pi -e's/^&gt;From /From /' \
                         0001-Rename-Leon-Brocard-to-Orange-Brocard.patch
@@ -359,15 +359,15 @@ description: "perlgit – Detailed information about git and the Perl repository
                             --author=&quot;That Guy &lt;that.guy [at] internets.com&gt;&quot;
 </pre>
 <p> Now we can inspect the change: </p>
-<p>% git show HEAD<br />
-            commit b1b3dab48344cff6de4087efca3dbd63548ab5e2<br />
-                Author : Leon Brocard&lt;acme[at] astray.com&gt;<br />
-                             Date : Fri Dec 19 17 : 02 : 59 2008 +<br />
-    0000 Rename Leon Brocard to Orange Brocard<br />
-            diff&#8211; git a /<br />
-        AUTHORS b / AUTHORS index 293dd70..722c93e 100644 &#8212; -a / AUTHORS++ +<br />
-    b / AUTHORS<br />
-        @ @-541,<br />
+<p>% git show HEAD<br/>
+            commit b1b3dab48344cff6de4087efca3dbd63548ab5e2<br/>
+                Author : Leon Brocard&lt;acme[at] astray.com&gt;<br/>
+                             Date : Fri Dec 19 17 : 02 : 59 2008 +<br/>
+    0000 Rename Leon Brocard to Orange Brocard<br/>
+            diff&#8211; git a /<br/>
+        AUTHORS b / AUTHORS index 293dd70..722c93e 100644 &#8212; -a / AUTHORS++ +<br/>
+    b / AUTHORS<br/>
+        @ @-541,<br/>
     7 + 541, 7 @ @Lars Hecking&lt;lhecking[at] nmrc.ucc.ie&gt; Laszlo Molnar&lt;laszlo.molnar[at] eth.ericsson.se&gt; Leif Huhn&lt;leif[at] hale.dkstat.com&gt; Len Johnson&lt;lenjay[at] ibm.net&gt; &#8211; Leon Brocard&lt;acme[at] astray.com&gt; + Orange Brocard&lt;acme[at] astray.com&gt; Les Peters&lt;lpeters[at] aol.net&gt; Lesley Binks&lt;lesley.binks[at] gmail.com&gt; Lincoln D.Stein&lt;lstein[at] cshl.org&gt;</p>
 <p> If you are a committer to Perl and you think the patch is good, you can then merge it into blead then push it out to the main repository: </p>
 <pre>
@@ -436,7 +436,7 @@ description: "perlgit – Detailed information about git and the Perl repository
   % git checkout --track -b maint-5.005 origin/maint-5.005
 </pre>
 <p> This creates a local branch named <tt>&quot;maint-5.005&quot;</tt>, which tracks the remote branch <tt>&quot;origin/maint-5.005&quot;</tt>. Then you can pull, commit, merge and push as before. </p>
-<p> You can also cherry-pick commits from blead and another branch, by using the <tt>&quot;git cherry-pick&quot;</tt> command. It is recommended to use the <code>-x</code> option to <tt>&quot;git cherry-pick&quot;</tt> in order to record the <font SIZE="-1">SHA1</font> of the original commit in the new commit message. </p>
+<p> You can also cherry-pick commits from blead and another branch, by using the <tt>&quot;git cherry-pick&quot;</tt> command. It is recommended to use the <code>-x</code> option to <tt>&quot;git cherry-pick&quot;</tt> in order to record the SHA1 of the original commit in the new commit message. </p>
 <p> Before pushing any change to a maint version, make sure you&#8217;ve satisfied the steps in &#8220;Committing to blead&#8221; above.</p>
 <h3>Merging from a branch via GitHub</h3>
 <p> While we don&#8217;t encourage the submission of patches via GitHub, that will still happen. Here is a guide to merging patches from a GitHub repository. </p>
@@ -518,6 +518,6 @@ description: "perlgit – Detailed information about git and the Perl repository
   % git branch -d win32stat
 </pre>
 <h3>A note on camel and dromedary</h3>
-<p> The committers have <font SIZE="-1">SSH</font> access to the two servers that serve <tt>&quot;perl5.git.perl.org&quot;</tt>. One is <tt>&quot;perl5.git.perl.org&quot;</tt> itself (<i>camel</i>), which is the &#8216;master&#8217; repository. The second one is <tt>&quot;users.perl5.git.perl.org&quot;</tt> (<i>dromedary</i>), which can be used for general testing and development. Dromedary syncs the git tree from camel every few minutes, you should not push there. Both machines also have a full <font SIZE="-1">CPAN</font> mirror in <i>/srv/CPAN</i>, please use this. To share files with the general public, dromedary serves your <i>~/public_html/</i> as <tt>&quot;&lt;<a rel="nofollow" href="http://users.perl5.git.perl.org/~yourlogin/">http://users.perl5.git.perl.org/~yourlogin/</a>&gt;&quot;</tt> </p>
-<p> These hosts have fairly strict firewalls to the outside. Outgoing, only rsync, ssh and git are allowed. For http and ftp, you can use &lt;<a rel="nofollow" href="http://webproxy:3128">http://webproxy:3128</a>&gt; as proxy. Incoming, the firewall tries to detect attacks and blocks <font SIZE="-1">IP</font> addresses with suspicious activity. This sometimes (but very rarely) has false positives and you might get blocked. The quickest way to get unblocked is to notify the admins. </p>
+<p> The committers have SSH access to the two servers that serve <tt>&quot;perl5.git.perl.org&quot;</tt>. One is <tt>&quot;perl5.git.perl.org&quot;</tt> itself (<i>camel</i>), which is the &#8216;master&#8217; repository. The second one is <tt>&quot;users.perl5.git.perl.org&quot;</tt> (<i>dromedary</i>), which can be used for general testing and development. Dromedary syncs the git tree from camel every few minutes, you should not push there. Both machines also have a full CPAN mirror in <i>/srv/CPAN</i>, please use this. To share files with the general public, dromedary serves your <i>~/public_html/</i> as <tt>&quot;&lt;<a rel="nofollow" href="http://users.perl5.git.perl.org/~yourlogin/">http://users.perl5.git.perl.org/~yourlogin/</a>&gt;&quot;</tt> </p>
+<p> These hosts have fairly strict firewalls to the outside. Outgoing, only rsync, ssh and git are allowed. For http and ftp, you can use &lt;<a rel="nofollow" href="http://webproxy:3128">http://webproxy:3128</a>&gt; as proxy. Incoming, the firewall tries to detect attacks and blocks IP addresses with suspicious activity. This sometimes (but very rarely) has false positives and you might get blocked. The quickest way to get unblocked is to notify the admins. </p>
 <p> These two boxes are owned, hosted, and operated by booking.com. You can reach the sysadmins in #p5p on irc.perl.org or via mail to perl5-porters [at] perl.org &lt;mailto:perl5-porters [at] perl.org&gt;. </p>

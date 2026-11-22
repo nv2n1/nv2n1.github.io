@@ -14,14 +14,14 @@ description: "metalink_file_t – The structure that holds information of a sing
 <h2>DESCRIPTION</h2>
 <p> <code>metalink_file_t</code> is a structure that holds information of a single file. It contains array of URLs(<code><a href="/docs/linux/man/3-metalink_resource_t/">metalink_resource_t</a></code>(3)), checksums and metadata for a file. </p>
 <h2>STRUCTURE MEMBERS</h2>
-<p> char *name;<br />
- long long int size;<br />
- char *version;<br />
- char *language;<br />
- char *os;<br />
- metalink_resource_t **resources;<br />
- int maxconnections;<br />
- metalink_checksum_t **checksums;<br />
+<p> char *name;<br/>
+ long long int size;<br/>
+ char *version;<br/>
+ char *language;<br/>
+ char *os;<br/>
+ metalink_resource_t **resources;<br/>
+ int maxconnections;<br/>
+ metalink_checksum_t **checksums;<br/>
  metalink_chunk_checksum_t *chunk_checksum; </p>
 <h3>name</h3>
 <p> Null terminated file name of the resource which corresponds to name element in Metalink XML file. </p>

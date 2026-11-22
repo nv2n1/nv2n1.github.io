@@ -28,9 +28,9 @@ description: "byobu – wrapper script for seeding a user’s byobu configuratio
 <p> <code>cpu_count</code> &#8211; the number of cpu&#8217;s or cores on the system; displayed in the lower bar toward the right in the default text color on the default background, followed by a trailing &#8216;x&#8217; </p>
 <p> <code>cpu_freq</code> &#8211; the current frequency of the cpu in GHz; displayed in the lower bar toward the right in white text on a light blue background </p>
 <p> <code>cpu_temp</code> &#8211; the cpu temperature in Celsius (default) or Fahrenheit, configure TEMP=F or TEMP=C in <i>$BYOBU_CONFIG_DIR/statusrc</i>; displayed in the lower bar toward the right in yellow text on a black background; you may override the detected cpu temperature device by setting MONITORED_TEMP=/proc/acpi/whatever in <i>$BYOBU_CONFIG_DIR/statusrc</i> </p>
-<p> <code>custom</code> &#8211; user defined custom scripts; must be executable programs of any kind in <i>$BYOBU_CONFIG_DIR/bin</i>; must be named N_NAME, where N is the frequency in seconds to refresh the status indicator, and NAME is the name of the script; N should not be less than 5 seconds; the script should echo a small amount of text to standard out, standard error is discarded; the indicator will be displayed in the lower panel, in default colors, unless you manually specify the colors in your script&#8217;s output; BEWARE, cpu-intensive custom scripts may impact your overall system performance and could upset your system administrator! In fact, you can easily copy and modify <code>any</code> status script usually found in <i>/usr/lib/byobu/*</i> to your local <i>$HOME/.byobu/</i> directory.<br />
-&nbsp;<wbr>&nbsp;<wbr>Example:&nbsp;<wbr><i>$BYOBU_CONFIG_DIR/bin/1000_uname</i><br />
-&nbsp;<wbr>#!/bin/sh<br />
+<p> <code>custom</code> &#8211; user defined custom scripts; must be executable programs of any kind in <i>$BYOBU_CONFIG_DIR/bin</i>; must be named N_NAME, where N is the frequency in seconds to refresh the status indicator, and NAME is the name of the script; N should not be less than 5 seconds; the script should echo a small amount of text to standard out, standard error is discarded; the indicator will be displayed in the lower panel, in default colors, unless you manually specify the colors in your script&#8217;s output; BEWARE, cpu-intensive custom scripts may impact your overall system performance and could upset your system administrator! In fact, you can easily copy and modify <code>any</code> status script usually found in <i>/usr/lib/byobu/*</i> to your local <i>$HOME/.byobu/</i> directory.<br/>
+&nbsp;<wbr>&nbsp;<wbr>Example:&nbsp;<wbr><i>$BYOBU_CONFIG_DIR/bin/1000_uname</i><br/>
+&nbsp;<wbr>#!/bin/sh<br/>
 &nbsp;<wbr>printf&nbsp;<wbr>&quot;{=&nbsp;<wbr>bw}%s{-}&quot;&nbsp;<wbr>&quot;$(uname -r)&quot; </p>
 <p> <code>date</code> &#8211; the system date in YYYY-MM-DD format, or you can set this to any valid <code><a href="/docs/linux/man/3-strftime/">strftime</a></code>(3) you like in <i>$BYOBU_CONFIG_DIR/datetime</i>; displayed in the lower on the far right in the default text color on the default background </p>
 <p> <code>disk</code> &#8211; total disk space available and total used on / directory; displayed in the lower bar on the far right in white text on a light purple background; override the default directory by specifying an alternate mount point with MONITORED_DISK=/wherever in <i>$BYOBU_CONFIG_DIR/statusrc</i> </p>
@@ -73,17 +73,17 @@ description: "byobu – wrapper script for seeding a user’s byobu configuratio
 <p> Each open window in the screen session is displayed in the upper bar toward the far left. These are numbered, and include indicators as to activity in the window (see &quot;activity&quot; in <code><a href="/docs/linux/man/1-screen/">screen</a></code>(1) for symbol definitions). The current active window is highlighted by inverting the background/text from the rest of the window bar. </p>
 <p> Users can create a list of windows to launch at startup in <i>$BYOBU_CONFIG_DIR/windows</i>. This file is the same syntax as <i>~/.screenrc</i>, each line specifying a window using the &quot;screen&quot; command, as described in <code><a href="/docs/linux/man/1-screen/">screen</a></code>(1). </p>
 <p> User can also launch Byobu with unique window sets. Users can store these as <i>$BYOBU_CONFIG_DIR/windows.[NAME]</i>, and launch Byobu with the environment variable <code>BYOBU_WINDOWS</code>. </p>
-<p> For example:<br />
-&nbsp;<wbr>&nbsp;<wbr>$&nbsp;<wbr>cat&nbsp;<wbr>$BYOBU_CONFIG_DIR/windows.ssh_sessions<br />
-&nbsp;<wbr>&nbsp;<wbr>screen -t localhost bash<br />
-&nbsp;<wbr>&nbsp;<wbr>screen -t aussie ssh root [at] aussie<br />
-&nbsp;<wbr>&nbsp;<wbr>screen -t beagle ssh root [at] beagle<br />
-&nbsp;<wbr>&nbsp;<wbr>screen -t collie ssh root [at] collie<br />
+<p> For example:<br/>
+&nbsp;<wbr>&nbsp;<wbr>$&nbsp;<wbr>cat&nbsp;<wbr>$BYOBU_CONFIG_DIR/windows.ssh_sessions<br/>
+&nbsp;<wbr>&nbsp;<wbr>screen -t localhost bash<br/>
+&nbsp;<wbr>&nbsp;<wbr>screen -t aussie ssh root [at] aussie<br/>
+&nbsp;<wbr>&nbsp;<wbr>screen -t beagle ssh root [at] beagle<br/>
+&nbsp;<wbr>&nbsp;<wbr>screen -t collie ssh root [at] collie<br/>
 &nbsp;<wbr>&nbsp;<wbr>$&nbsp;<wbr>BYOBU_WINDOWS=ssh_sessions byobu </p>
 <h2>UNITS OF MEASURE</h2>
-<p> byobu uses binary for capacity measurements of KB, MB, GB, and TB. This means multiples of 1024 rather than multiples of 1000, in accordance with JEDEC Standard 100B.01 for disk and memory capacity measurements. See:<br />
+<p> byobu uses binary for capacity measurements of KB, MB, GB, and TB. This means multiples of 1024 rather than multiples of 1000, in accordance with JEDEC Standard 100B.01 for disk and memory capacity measurements. See:<br/>
 &nbsp;<wbr>*&nbsp;<wbr><a rel="nofollow" href="http://en.wikipedia.org/wiki/JEDEC_memory_standards">http://en.wikipedia.org/wiki/JEDEC_memory_standards</a> </p>
-<p> byobu uses decimal for measurements of network data transfer, meaning multiple of 1000, rather than 1024. See:<br />
+<p> byobu uses decimal for measurements of network data transfer, meaning multiple of 1000, rather than 1024. See:<br/>
 &nbsp;<wbr>*&nbsp;<wbr><a rel="nofollow" href="http://en.wikipedia.org/wiki/Data_rate_units">http://en.wikipedia.org/wiki/Data_rate_units</a> </p>
 <h2>KEYBINDINGS</h2>
 <p> byobu keybindings can be user defined in /usr/share/byobu/keybindings/ (or within .screenrc if byobu-export was used). The common key bindings are: </p>
@@ -114,12 +114,12 @@ description: "byobu – wrapper script for seeding a user’s byobu configuratio
 <h2>SCROLLBACK, COPY, PASTE MODES</h2>
 <p> Each window in Byobu has up to 10,000 lines of scrollback history, which you can enter and navigate using the <code>alt-pgup</code> and <code>alt-pgdn</code> keys. Exit this scrollback mode by hitting <code>enter</code>. You can also easily copy and paste text from scrollback mode. To do so, enter scrollback using <code>alt-pgup</code> or <code>alt-pgdn</code>, press the <code>spacebar</code> to start highlighting text, use <code>up/down/left/right/pgup/pgdn</code> to select the text, and press <code>enter</code> to copy the text. You can then paste the text using <code>alt-insert</code> or <code>ctrl-a-]</code>. </p>
 <h2>BUGS</h2>
-<p> For Byobu colors to work properly, older versions of GNU Screen require a 1-line patch to adjust MAX_WINMSG_REND in screen.c. The change is in GNU Screen&#8217;s upstream source control system as of 2010-01-26, but GNU Screen has not released a new upstream version in several years. You can disable colors entirely by setting MONOCHROME=1 in <i>$BYOBU_CONFIG_DIR/statusrc</i>. For more information, see:<br />
+<p> For Byobu colors to work properly, older versions of GNU Screen require a 1-line patch to adjust MAX_WINMSG_REND in screen.c. The change is in GNU Screen&#8217;s upstream source control system as of 2010-01-26, but GNU Screen has not released a new upstream version in several years. You can disable colors entirely by setting MONOCHROME=1 in <i>$BYOBU_CONFIG_DIR/statusrc</i>. For more information, see:<br/>
 &nbsp;<wbr>*&nbsp;<wbr><a rel="nofollow" href="http://savannah.gnu.org/bugs/?22146">http://savannah.gnu.org/bugs/?22146</a> </p>
 <p> PuTTY users have reported that the F2, F3, and F4 shortcut keys are not working properly. PuTTY sends the same escape sequences as the linux console for F1-F4 by default. You can fix this problem in the PuTTY config, Terminal -&gt; Keyboard -&gt; Function keys: Xterm R6. See: <i><a rel="nofollow" href="http://www.mail-archive.com/screen-users@gnu.org/msg01525.html">http://www.mail-archive.com/screen-users@gnu.org/msg01525.html</a></i> </p>
 <p> PuTTY users should configure enable UTF-8 characters in order to fix status refresh issues. You can fix this problem in the PuTTY configuration, Window -&gt; Translation: select UTF-8. </p>
 <p> Apple Mac OSX terminal users have reported &#8216;flashing text&#8217;. You can fix this in the advanced settings of the terminal application, with &#8216;Declare Terminal As: xterm-color&#8217;. </p>
-<p> Apple Mac keyboard users may need to specify a vt100 terminal by adding this to your OSX profile, in order to get Byobu&#8217;s function keys and colors to work:<br />
+<p> Apple Mac keyboard users may need to specify a vt100 terminal by adding this to your OSX profile, in order to get Byobu&#8217;s function keys and colors to work:<br/>
 &nbsp;<wbr>&nbsp;<wbr>alias ssh=&#8217;TERM=vt100 ssh&#8217; </p>
 <p> Users of a non-UTF-8 locale (such as cs_CZ charset ISO-8859-2), may need to add &quot;defutf8 off&quot; to <i>~/.screenrc</i>, if some characters are rendering as &quot;?&quot;. </p>
 <p> Users who customize their PS1 prompt need to put this setting in <i>~/.bashrc</i>, rather than <i>~/.profile</i>, in order for it to work correctly with Byobu. </p>

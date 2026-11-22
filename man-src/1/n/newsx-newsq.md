@@ -38,8 +38,8 @@ description: "newsq – list news server outgoing queue"
 <p> newsq returns error codes as follows:</p>
 <dl>
 <dt>
-</dt><dd> 0 &#8211; Successful completion<br />
- 1 &#8211; Outgoing queue is empty<br />
+</dt><dd> 0 &#8211; Successful completion<br/>
+ 1 &#8211; Outgoing queue is empty<br/>
  2 &#8211; Incorrect arguments supplied.</dd></dl>
 <h2>BUGS</h2>
 <p> Report any bugs to <a rel="nofollow" href="http://www.kvaleberg.com/bug/">http://www.kvaleberg.com/bug/</a> </p>

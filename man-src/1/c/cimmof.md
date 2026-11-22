@@ -12,8 +12,8 @@ description: "cimmof – compile MOF files into the CIM Repository"
 <h2>SYNOPSIS</h2>
 <p> <code>cimmof</code> <code>-h</code> | <code>&#8211;help</code> </p>
 <p> <code>cimmof</code> <code>&#8211;version</code> </p>
-<p> <code>cimmof</code> [ <code>-w</code> ] [ <code>-E</code> ] [ <code>-uc</code> ] [ <code>-aE | -aV | -aEV</code> ] [ <code>-I</code> path ]<br />
-&nbsp;<wbr>[&nbsp;<wbr><code>-n</code>&nbsp;<wbr>namespace&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><code>&#8211;namespace</code>&nbsp;<wbr>namespace&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><code>&#8211;xml</code>&nbsp;<wbr>]&nbsp;<wbr><br />
+<p> <code>cimmof</code> [ <code>-w</code> ] [ <code>-E</code> ] [ <code>-uc</code> ] [ <code>-aE | -aV | -aEV</code> ] [ <code>-I</code> path ]<br/>
+&nbsp;<wbr>[&nbsp;<wbr><code>-n</code>&nbsp;<wbr>namespace&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><code>&#8211;namespace</code>&nbsp;<wbr>namespace&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><code>&#8211;xml</code>&nbsp;<wbr>]&nbsp;<wbr><br/>
 &nbsp;<wbr>[&nbsp;<wbr><code>&#8211;trace</code>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>mof_file &#8230;&nbsp;<wbr>]</p>
 <h3>Remarks</h3>
 <p> Only a superuser or user with write access to the default or specified namespace can run the <code>cimmof</code> command to compile MOFs in the CIM Repository. </p>

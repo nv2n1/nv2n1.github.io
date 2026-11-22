@@ -19,9 +19,9 @@ description: "blkrawverify – verifies an output file produced by blkparse"
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;linux-btrace [at] vger.kernel.org&gt; </p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2006 Jens Axboe, Alan D. Brunelle and Nathan Scott.<br />
- This is free software. You may redistribute copies of it under the terms of the GNU General Public License &lt;<a rel="nofollow" href="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</a>&gt;. There is NO WARRANTY, to the extent permitted by law.<br />
- This manual page was created for Debian by Bas Zoetekouw. It was derived from the documentation provided by the authors and it may be used, distributed and modified under the terms of the GNU General Public License, version 2.<br />
+<p> Copyright &#169; 2006 Jens Axboe, Alan D. Brunelle and Nathan Scott.<br/>
+ This is free software. You may redistribute copies of it under the terms of the GNU General Public License &lt;<a rel="nofollow" href="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</a>&gt;. There is NO WARRANTY, to the extent permitted by law.<br/>
+ This manual page was created for Debian by Bas Zoetekouw. It was derived from the documentation provided by the authors and it may be used, distributed and modified under the terms of the GNU General Public License, version 2.<br/>
  On Debian systems, the text of the GNU General Public License can be found in /usr/share/common-licenses/GPL-2. </p>
 <h2>SEE ALSO</h2>
 <p> btrace (8), blktrace (8), blkparse (1), verify_blkparse (1), btt (1) </p>

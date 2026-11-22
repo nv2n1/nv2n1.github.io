@@ -31,12 +31,12 @@ description: "yum.conf – Configuration file for yum(8)."
 <p> <code>localpkg_gpgcheck</code> Either `1&#8242; or `0&#8242;. This tells yum whether or not it should perform a GPG signature check on local packages (packages in a file, not in a repositoy). The default is `0&#8242;. </p>
 <dd><code>repo_gpgcheck</code> Either `1&#8242; or `0&#8242;. This tells yum whether or not it should perform a GPG signature check on the repodata. When this is set in the [main] section it sets the default for all repositories. The default is `0&#8242;. </dd>
 <dd><code>skip_broken</code> Either `1&#8242; or `0&#8242;. Resolve depsolve problems by removing packages that are causing problems from the transaction. </dd>
-<dd><code>assumeyes</code> Either `1&#8242; or `0&#8242;. Determines whether or not yum prompts for confirmation of critical actions. Default is `0&#8242; (do prompt).<br />
+<dd><code>assumeyes</code> Either `1&#8242; or `0&#8242;. Determines whether or not yum prompts for confirmation of critical actions. Default is `0&#8242; (do prompt).<br/>
  Command-line option: <code>-y</code> <code>&#8211;assumeyes</code> </dd>
-<dd><code>assumeno</code> Either `1&#8242; or `0&#8242;. If yum would prompt for confirmation of critical actions, assume the user chose no. This is basically the same as doing &quot;echo | yum &#8230;&quot; but is a bit more usable. This option overrides <code>assumeyes</code>, but is still subject to <code>alwaysprompt</code>. Default is `0&#8242; (do prompt).<br />
+<dd><code>assumeno</code> Either `1&#8242; or `0&#8242;. If yum would prompt for confirmation of critical actions, assume the user chose no. This is basically the same as doing &quot;echo | yum &#8230;&quot; but is a bit more usable. This option overrides <code>assumeyes</code>, but is still subject to <code>alwaysprompt</code>. Default is `0&#8242; (do prompt).<br/>
  Command-line option: <code>&#8211;assumeno</code> </dd>
 <dd><code>alwaysprompt</code> Either `1&#8242; or `0&#8242;. Without this option, yum will not prompt for confirmation when the list of packages to be installed exactly matches those given on the command line. Unless <code>assumeyes</code> is enabled, it will still prompt when additional packages need to be installed to fulfill dependencies. Note that older versions of yum would also always prompt for package removal, and that is no longer true. Default is `1&#8242;. </dd>
-<dd><code>tolerant</code> Either `1&#8242; or `0&#8242;. If enabled, then yum will be tolerant of errors on the command line with regard to packages. For example: if you request to install foo, bar and baz and baz is installed; yum won&#8217;t error out complaining that baz is already installed. Default to `0&#8242; (not tolerant). Note: This option currently does nothing.<br />
+<dd><code>tolerant</code> Either `1&#8242; or `0&#8242;. If enabled, then yum will be tolerant of errors on the command line with regard to packages. For example: if you request to install foo, bar and baz and baz is installed; yum won&#8217;t error out complaining that baz is already installed. Default to `0&#8242; (not tolerant). Note: This option currently does nothing.<br/>
  Command-line option: <code>-t</code> </dd>
 <dd><code>exclude</code> List of packages to exclude from updates or installs. This should be a space separated list. Shell globs using wildcards (eg. * and ?) are allowed. </dd>
 <dd><code>exactarch</code> Either `1&#8242; or `0&#8242;. Set to `1&#8242; to make yum update only update the architectures of packages that you have installed. ie: with this enabled yum will not install an i686 package to update an i386 package. Default is `1&#8242;. </dd>
@@ -45,7 +45,7 @@ description: "yum.conf – Configuration file for yum(8)."
 <dd><code>installonly_limit </code> Number of packages listed in installonlypkgs to keep installed at the same time. Setting to 0 disables this feature. Default is &#8216;0&#8217;. Note that this functionality used to be in the &quot;installonlyn&quot; plugin, where this option was altered via. tokeep. Note that as of version 3.2.24, yum will now look in the yumdb for a installonly attribute on installed packages. If that attribute is &quot;keep&quot;, then they will never be removed. </dd>
 <dd><code>kernelpkgnames </code> List of package names that are kernels. This is really only here for the updating of kernel packages and should be removed out in the yum 2.1 series. </dd>
 <dd><code>showdupesfromrepos</code> Either `0&#8242; or `1&#8242;. Set to `1&#8242; if you wish to show any duplicate packages from any repository, from package listings like the info or list commands. Set to `0&#8242; if you want only to see the newest packages from any repository. Default is `0&#8242;. </dd>
-<dd><code>obsoletes </code> This option only has affect during an <code>update</code>. It enables yum&#8217;s obsoletes processing logic. Useful when doing distribution level upgrades. See also the yum <code>upgrade</code> command documentation for more details (<a href="/docs/linux/man/8-yum/">yum</a>(8)). Default is `true&#8217;.<br />
+<dd><code>obsoletes </code> This option only has affect during an <code>update</code>. It enables yum&#8217;s obsoletes processing logic. Useful when doing distribution level upgrades. See also the yum <code>upgrade</code> command documentation for more details (<a href="/docs/linux/man/8-yum/">yum</a>(8)). Default is `true&#8217;.<br/>
  Command-line option: <code>&#8211;obsoletes</code> </dd>
 <dd><code>overwrite_groups </code> Either `0&#8242; or `1&#8242;. Used to determine yum&#8217;s behaviour if two or more repositories offer the package groups with the same name. If <code>overwrite_groups</code> is `1&#8242; then the group packages of the last matching repository will be used. If <code>overwrite_groups</code> is `0&#8242; then the groups from all matching repositories will be merged together as one large group. </dd>
 <dd><code>groupremove_leaf_only </code> Either `0&#8242; or `1&#8242;. Used to determine yum&#8217;s behaviour when the groupremove command is run. If <code>groupremove_leaf_only</code> is `0&#8242; (default) then all packages in the group will be removed. If <code>groupremove_leaf_only</code> is `1&#8242; then only those packages in the group that aren&#8217;t required by another package will be removed. </dd>
@@ -56,7 +56,7 @@ description: "yum.conf – Configuration file for yum(8)."
 <p> Compat. works much like simple, except that when you run &quot;group upgrade&quot; it actually runs &quot;group install&quot; (this means that you get any new packages added to the group, but you also get packages added that were there before and you didn&#8217;t want). </p>
 <p> Objects makes groups act like a real object, seperate from the packages they contain. Yum keeps track of the groups you have installed, so &quot;group upgrade&quot; will install new packages for the group but not install old ones. It also knows about group members that are installed but weren&#8217;t installed as part of the group, and won&#8217;t remove those on &quot;group remove&quot;. Running &quot;yum upgrade&quot; will also run &quot;yum group upgrade&quot; (thus. adding new packages for all groups). </p>
 <p> Default is: compat </p>
-<dd><code>installroot </code> Specifies an alternative installroot, relative to which all packages will be installed.<br />
+<dd><code>installroot </code> Specifies an alternative installroot, relative to which all packages will be installed.<br/>
  Command-line option: <code>&#8211;installroot</code> </dd>
 <dd><code>distroverpkg</code> The package used by yum to determine the &quot;version&quot; of the distribution. This can be any installed package. Default is `redhat-release&#8217;. You can see what provides this manually by using: &quot;yum whatprovides redhat-release&quot;. </dd>
 <dd><code>diskspacecheck</code> Either `0&#8242; or `1&#8242;. Set this to `0&#8242; to disable the checking for sufficient diskspace before a RPM transaction is run. Default is `1&#8242; (perform the check). </dd>
@@ -144,14 +144,14 @@ description: "yum.conf – Configuration file for yum(8)."
 <h2>[repository] OPTIONS</h2>
 <p>The repository section(s) take the following form:</p>
 <dl>
-<dd><code>Example</code>: [repositoryid]<br />
- name=Some name for this repository<br />
+<dd><code>Example</code>: [repositoryid]<br/>
+ name=Some name for this repository<br/>
  baseurl=<a href="url://path/to/repository/">url://path/to/repository/</a> </dd>
 <dd><code>repositoryid</code> Must be a unique name for each repository, one word. </dd>
 <dd><code>name</code> A human readable string describing the repository. </dd>
-<dd><code>baseurl</code> Must be a URL to the directory where the yum repository&#8217;s `repodata&#8217; directory lives. Can be an <a rel="nofollow" href="http://,">http://,</a> ftp:// or file:// URL. You can specify multiple URLs in one baseurl statement. The best way to do this is like this:<br />
- [repositoryid]<br />
- name=Some name for this repository<br />
+<dd><code>baseurl</code> Must be a URL to the directory where the yum repository&#8217;s `repodata&#8217; directory lives. Can be an <a rel="nofollow" href="http://,">http://,</a> ftp:// or file:// URL. You can specify multiple URLs in one baseurl statement. The best way to do this is like this:<br/>
+ [repositoryid]<br/>
+ name=Some name for this repository<br/>
  baseurl=<a href="url://server1/path/to/repository/">url://server1/path/to/repository/</a> </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr><a href="url://server2/path/to/repository/">url://server2/path/to/repository/</a> </p>
 <p>&nbsp;<wbr>&nbsp;<wbr><a href="url://server3/path/to/repository/">url://server3/path/to/repository/</a> </p>

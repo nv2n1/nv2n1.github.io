@@ -51,9 +51,9 @@ description: "grass63 – The GRASS startup program"
 <p>&nbsp;<wbr>Initial mapset directory which is a subdirectory of LOCATION_NAME</p>
 </dd><dt><code>Note</code></dt>
 <dd>
-<p>&nbsp;<wbr>You must specify one of the following<br />
- MAPSET<br />
- LOCATION_NAME/MAPSET<br />
+<p>&nbsp;<wbr>You must specify one of the following<br/>
+ MAPSET<br/>
+ LOCATION_NAME/MAPSET<br/>
  GISDBASE/LOCATION_NAME/MAPSET
 </dd></dl>
 <h2>ENVIRONMENT VARIABLES</h2>
@@ -64,9 +64,9 @@ description: "grass63 – The GRASS startup program"
 <dl>
 <dt><code>Interface precedence</code></dt>
 <dd>
- Command line argument<br />
- Environment variable GRASS_GUI<br />
- Value set in $HOME/.grassrc6<br />
+ Command line argument<br/>
+ Environment variable GRASS_GUI<br/>
+ Value set in $HOME/.grassrc6<br/>
  Default value &#8211; currently gis.m</dd></dl>
 <h3>Tcl/Tk Environment Variables</h3>
 <p> If you choose to use the Tcl/Tk graphical user interface, then the following environment variables can be used to override your system default tclsh and wish commands. See the section immediately following the variable descriptions for an example.</p>
@@ -79,11 +79,11 @@ description: "grass63 – The GRASS startup program"
 <p>&nbsp;<wbr>Command to use to override wish</dd></dl>
 <h3>Example Use of GRASS Tcl/Tk Environment Variables</h3>
 <p> Suppose your system has Tcl/Tk 8.0 installed and you install your personal version of Tcl/Tk 8.3 binaries installed under $HOME/bin. You can use the above variables to have GRASS use the Tcl/Tk 8.3 binaries instead. </p>
-<p> GRASS_TCLSH = $HOME/bin/tclsh8.3<br />
+<p> GRASS_TCLSH = $HOME/bin/tclsh8.3<br/>
  GRASS_WISH = $HOME/bin/wish8.3</p>
 <h3>Addon path to extra local GRASS modules</h3>
 <p> This environment variables allows to extend the GRASS paths to locally developed/installed modules which are not distributes through the standard release of GRASS. </p>
-<p> GRASS_ADDON_PATH=/usr/mytools<br />
+<p> GRASS_ADDON_PATH=/usr/mytools<br/>
  GRASS_ADDON_PATH=/usr/mytools:/usr/local/othertools </p>
 <p> In this example above path(s) would be added to the standard GRASS path environment.</p>
 <h3>Location Environment Variables</h3>
@@ -105,52 +105,52 @@ description: "grass63 – The GRASS startup program"
 <dl>
 <dt><code>Example 1</code></dt>
 <dd>
-<p>&nbsp;<wbr>The environment variables are defined as follows:<br />
- LOCATION = /usr/local/share/grassdata/spearfish60/PERMANENT<br />
- GISDBASE = /usr/local/share/grassdata<br />
- LOCATION_NAME = spearfish60<br />
- MAPSET = PERMANENT<br />
- Start GRASS with the following command:<br />
- grass63 &#8211;<br />
+<p>&nbsp;<wbr>The environment variables are defined as follows:<br/>
+ LOCATION = /usr/local/share/grassdata/spearfish60/PERMANENT<br/>
+ GISDBASE = /usr/local/share/grassdata<br/>
+ LOCATION_NAME = spearfish60<br/>
+ MAPSET = PERMANENT<br/>
+ Start GRASS with the following command:<br/>
+ grass63 &#8211;<br/>
  GRASS will start with the mapset defined by LOCATION since the LOCATION variable overrides the other variables. </p>
 </dd><dt><code>Example 2</code></dt>
 <dd>
-<p>&nbsp;<wbr>The environment variables are defined as follows:<br />
- GISDBASE = /usr/local/share/grassdata<br />
- LOCATION_NAME = spearfish60<br />
- MAPSET = PERMANENT<br />
- Start GRASS with the following command:<br />
- grass63 &#8211;<br />
+<p>&nbsp;<wbr>The environment variables are defined as follows:<br/>
+ GISDBASE = /usr/local/share/grassdata<br/>
+ LOCATION_NAME = spearfish60<br/>
+ MAPSET = PERMANENT<br/>
+ Start GRASS with the following command:<br/>
+ grass63 &#8211;<br/>
  GRASS will start with the mapset defined by GISDBASE/LOCATION_NAME/MAPSET. </p>
 </dd><dt><code>Example 3</code></dt>
 <dd>
-<p>&nbsp;<wbr>The environment variables are defined as follows:<br />
- LOCATION = /usr/local/share/grassdata/spearfish60/PERMANENT<br />
- GISDBASE = /usr/local/share/grassdata<br />
- LOCATION_NAME = spearfish60<br />
- MAPSET = PERMANENT<br />
- Start GRASS with the following command:<br />
- grass63 /usr/home/grass/data/thailand/forests<br />
+<p>&nbsp;<wbr>The environment variables are defined as follows:<br/>
+ LOCATION = /usr/local/share/grassdata/spearfish60/PERMANENT<br/>
+ GISDBASE = /usr/local/share/grassdata<br/>
+ LOCATION_NAME = spearfish60<br/>
+ MAPSET = PERMANENT<br/>
+ Start GRASS with the following command:<br/>
+ grass63 /usr/home/grass/data/thailand/forests<br/>
  GRASS will start with the mapset /home/grass/data/thailand/forests which overrides the environment variables. </p>
 </dd><dt><code>Example 4</code></dt>
 <dd>
-<p>&nbsp;<wbr>The environment variables are defined as follows:<br />
- LOCATION = /usr/local/share/grassdata/spearfish60/PERMANENT<br />
- GISDBASE = /usr/local/share/grassdata<br />
- LOCATION_NAME = spearfish60<br />
- MAPSET = PERMANENT<br />
- Start GRASS with the following command:<br />
- grass63 swamps<br />
+<p>&nbsp;<wbr>The environment variables are defined as follows:<br/>
+ LOCATION = /usr/local/share/grassdata/spearfish60/PERMANENT<br/>
+ GISDBASE = /usr/local/share/grassdata<br/>
+ LOCATION_NAME = spearfish60<br/>
+ MAPSET = PERMANENT<br/>
+ Start GRASS with the following command:<br/>
+ grass63 swamps<br/>
  GRASS will start with the mapset defined by GISDBASE/LOCATION_NAME/swamps since the command line argument for the mapset overrides the environment variable MAPSET. </p>
 </dd><dt><code>Example 5</code></dt>
 <dd>
-<p>&nbsp;<wbr>The environment variables are defined as follows:<br />
- LOCATION = /usr/local/share/grassdata/spearfish60/PERMANENT<br />
- GISDBASE = /usr/local/share/grassdata<br />
- LOCATION_NAME = spearfish60<br />
- MAPSET = PERMANENT<br />
- Start GRASS with the following command:<br />
- grass63 thailand/forests<br />
+<p>&nbsp;<wbr>The environment variables are defined as follows:<br/>
+ LOCATION = /usr/local/share/grassdata/spearfish60/PERMANENT<br/>
+ GISDBASE = /usr/local/share/grassdata<br/>
+ LOCATION_NAME = spearfish60<br/>
+ MAPSET = PERMANENT<br/>
+ Start GRASS with the following command:<br/>
+ grass63 thailand/forests<br/>
  GRASS will start with the mapset defined by GISDBASE/thailand/forests since the command line arguments for the location and mapset overrides the environment variables LOCATION_NAME and MAPSET.
 </dd></dl>
 <h3>Note</h3>
@@ -178,14 +178,14 @@ description: "grass63 – The GRASS startup program"
 <p> For example, suppose Tcl/Tk 8.3 programs are installed in /usr/local/bin. Then the system administrator should go to the /usr/local/bin directory and run the commands <i>ln -s wish8.3 wish</i> and <i>ln -s tclsh8.3 tclsh</i> to properly install Tcl/Tk for use with GRASS. </p>
 <p> Furthermore, if you have more than one version of Tcl/Tk installed, make sure that the version you want to use with GRASS is the first version found in your $PATH variable. GRASS searches your $PATH variable until it finds the first version of <i>wish</i>.</p>
 <h2>FILES</h2>
-<p> <i>$UNIX_BIN/grass63</i> &#8211; GRASS startup program<br />
- <i>$GISBASE/etc/Init.sh</i> &#8211; GRASS initialization script called by <i>grass63</i><br />
+<p> <i>$UNIX_BIN/grass63</i> &#8211; GRASS startup program<br/>
+ <i>$GISBASE/etc/Init.sh</i> &#8211; GRASS initialization script called by <i>grass63</i><br/>
  <i>$GISBASE/etc/gis_set.tcl</i> &#8211; Tcl/Tk script to set the location and mapset to use. Called by <i>Init.sh</i> </p>
 <h2>SEE ALSO</h2>
 <p> List of implemented GRASS environment variables. </p>
 <p> GRASS Web site</p>
 <h2>AUTHORS (of this page)</h2>
-<p> Justin Hickey<br />
+<p> Justin Hickey<br/>
  Markus Neteler </p>
 <p> <i>Last changed: $Date: 2006-11-02 07:48:36 +0100 (Thu, 02 Nov 2006) $</i> </p>
 <p> Help Index </p>

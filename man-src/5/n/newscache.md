@@ -102,7 +102,7 @@ description: "newscache.conf"
 <pre> username:password:list:read:postto:allow</pre>
 <p>The additional access specification are added to the normal List Read and PostTo Parameters (see above and the example section). The password field is a encrypted password (md5crypt of crypt) or plaintext (configured with &#8211;enable-plainpass). htpasswd from the apache project can create such a password. In the allow field can be additional permission specified (Example: authenticated user can be use the post command).</p>
 <dt>unix:list:read:postto:allow</dt>
-<dd>Use unix authentication (getpwnam or getspnam). The additional access specification are added to the normal List Read and PostTo Parameters and allow(see above and the example section). If only unix is specified, then all clients must step throuh the authentication. If further fields specified, then unauthenticated clients have the access specified with the parameter allow, List, ReadTo, PostTo and authenticated clients uses the arguments and modify the original parameters.<br />
+<dd>Use unix authentication (getpwnam or getspnam). The additional access specification are added to the normal List Read and PostTo Parameters and allow(see above and the example section). If only unix is specified, then all clients must step throuh the authentication. If further fields specified, then unauthenticated clients have the access specified with the parameter allow, List, ReadTo, PostTo and authenticated clients uses the arguments and modify the original parameters.<br/>
  It is also possible to specifiy empty fields, example: unix:::*:debug. Which means, that the PostTo parameter is extended with *. What actual settings are used by NewsCache can be determined with the xdebug dump authorization command. </dd>
 <dt>pam:list:read:postto:allow</dt>
 <dd>Use pam authentication. For additional description of the fields see: <i>unix:list:read:postto:allow</i> The PAM Servicename can be specified with the configuration parameter <i>PAMServicename</i> </dd>
@@ -137,7 +137,7 @@ hugo:at.test:at.test:at.test:post
 <dd>
 </dd><dd><i>news.host</i> is the name of the news server and <i>Service</i> indicates the port, where the news server is listening for connections.</dd>
 <dt>Read <i>NewsgroupList</i></dt>
-<dd>The comma separated list specifiy the wildmat newsgroup specifications. Each element of the list will be fetched with the list active element. Example: Read at.*,de.* will send to the upstream newsserver the following two commands: list active at.* and list active de.*. For details see section 2.1.2 LIST ACTIVE [WILDMAT] of RFC2980. These parameter can help you saving bandwidth. <i>AccessSpec Configuration Options</i><br />
+<dd>The comma separated list specifiy the wildmat newsgroup specifications. Each element of the list will be fetched with the list active element. Example: Read at.*,de.* will send to the upstream newsserver the following two commands: list active at.* and list active de.*. For details see section 2.1.2 LIST ACTIVE [WILDMAT] of RFC2980. These parameter can help you saving bandwidth. <i>AccessSpec Configuration Options</i><br/>
 &nbsp;<wbr>. No default value.</dd>
 <dt>PostTo <i>NGSpecification</i></dt>
 <dd>NewsCache post an article to the best matching upstream newsserver. If the article cannot be submitted immediately, it is kept for later transmission. See the example: Multiple Upstream NewsServer.</dd>
@@ -359,14 +359,14 @@ quit
 Connection closed by foreign host.</pre>
 </dl>
 <h2>Files</h2>
-<p>/etc/newscache.conf<br />
- /usr/sbin/newscache<br />
- /usr/sbin/newscacheclean<br />
+<p>/etc/newscache.conf<br/>
+ /usr/sbin/newscache<br/>
+ /usr/sbin/newscacheclean<br/>
  /usr/sbin/updatenews</p>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/8-newscache/">newscache</a>(8), <a href="/docs/linux/man/8-newscacheclean/">newscacheclean</a>(8), <a href="/docs/linux/man/8-updatenews/">updatenews</a>(8)</p>
 <h2>Authors</h2>
-<p>1997-2000 Thomas Gschwind &lt;tom [at] infosys.tuwien.ac.at&gt;<br />
+<p>1997-2000 Thomas Gschwind &lt;tom [at] infosys.tuwien.ac.at&gt;<br/>
  2001-2004 Herbert Straub &lt;h.straub [at] aon.at&gt;</p>
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;newscache [at] linuxhacker.org&gt;.</p>

@@ -85,7 +85,7 @@ description: "ADMesh – a program for processing triangulated solid meshes"
 <p> And again the same results could be achieved using the short options: </p>
 <p> <code>admesh -fudev sphere.stl</code> </p>
 <p> or </p>
-<p> <code>admesh -fdv sphere.stl</code><br />
+<p> <code>admesh -fdv sphere.stl</code><br/>
  The following command lines do the same thing: </p>
 <p> <code>admesh sphere.stl</code> </p>
 <p> <code>admesh -fundev sphere.stl</code> </p>

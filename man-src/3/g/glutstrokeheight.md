@@ -13,19 +13,19 @@ description: "glutStrokeHeight – Returns the height of a given font."
 <h2>Synopsis</h2>
 <p>In openglut.h Ft GLfloat Fn glutStrokeHeight void *fontID</p>
 <h2>Parameters</h2>
-<p>Bf Em<br />
-&nbsp;<wbr>fontID Ef<br />
+<p>Bf Em<br/>
+&nbsp;<wbr>fontID Ef<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>A GLUT stroked font identifier.</p>
 <h2>Description</h2>
-<p>This function reports the height of a font, given by Bf Sy<br />
-&nbsp;<wbr>fontID, Ef<br />
+<p>This function reports the height of a font, given by Bf Sy<br/>
+&nbsp;<wbr>fontID, Ef<br/>
 &nbsp;<wbr> as a global characteristic of that font. </p>
-<p> Returns 0 if Bf Sy<br />
-&nbsp;<wbr>fontID Ef<br />
+<p> Returns 0 if Bf Sy<br/>
+&nbsp;<wbr>fontID Ef<br/>
 &nbsp;<wbr>is invalid. </p>
 <h2>Caveats</h2>
-<p>Does Bf Li<br />
-&nbsp;<wbr>not Ef<br />
+<p>Does Bf Li<br/>
+&nbsp;<wbr>not Ef<br/>
 &nbsp;<wbr>&nbsp;<wbr>report the height used by individual characters.&nbsp;<wbr>&nbsp;<wbr>This may limit its usefulness;&nbsp;<wbr>perhaps we should change it?&nbsp;<wbr>&nbsp;<wbr>(And/or add a new function.) </p>
 <h2>Todo</h2>
 <p>We have discussed adding a &quot;font descender&quot; query. We should go ahead and do it. </p>

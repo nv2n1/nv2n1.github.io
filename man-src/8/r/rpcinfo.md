@@ -9,14 +9,14 @@ description: "rpcinfo – report RPC information"
 
 <p><code>rpcinfo</code> &#8211; report RPC information</p>
 <h2>Synopsis</h2>
-<p><code>rpcinfo</code> [-<code>m | -s</code> ] [<i>host</i> ]<br />
-<code>rpcinfo</code> &#8211;<code>p </code>[<i>host</i> ]<br />
-<code>rpcinfo</code> &#8211;<code>T </code><i>transport</i> <i>host prognum</i> [<i>versnum</i> ]<br />
-<code>rpcinfo</code> &#8211;<code>l</code> [-<code>T </code><i>transport</i> ] <i>host prognum versnum</i><br />
-<code>rpcinfo</code> [-<code>n </code><i>portnum</i> ] &#8211;<code>u</code> <i>host prognum</i> [<i>versnum</i> ]<br />
-<code>rpcinfo</code> [-<code>n </code><i>portnum</i> ] [-<code>t</code> ] <i>host prognum</i> [<i>versnum</i> ]<br />
-<code>rpcinfo</code> &#8211;<code>a </code><i>serv_address</i> &#8211;<code>T </code><i>transport</i> <i>prognum</i> [<i>versnum</i> ]<br />
-<code>rpcinfo</code> &#8211;<code>b</code> [-<code>T </code><i>transport</i> ] <i>prognum versnum</i><br />
+<p><code>rpcinfo</code> [-<code>m | -s</code> ] [<i>host</i> ]<br/>
+<code>rpcinfo</code> &#8211;<code>p </code>[<i>host</i> ]<br/>
+<code>rpcinfo</code> &#8211;<code>T </code><i>transport</i> <i>host prognum</i> [<i>versnum</i> ]<br/>
+<code>rpcinfo</code> &#8211;<code>l</code> [-<code>T </code><i>transport</i> ] <i>host prognum versnum</i><br/>
+<code>rpcinfo</code> [-<code>n </code><i>portnum</i> ] &#8211;<code>u</code> <i>host prognum</i> [<i>versnum</i> ]<br/>
+<code>rpcinfo</code> [-<code>n </code><i>portnum</i> ] [-<code>t</code> ] <i>host prognum</i> [<i>versnum</i> ]<br/>
+<code>rpcinfo</code> &#8211;<code>a </code><i>serv_address</i> &#8211;<code>T </code><i>transport</i> <i>prognum</i> [<i>versnum</i> ]<br/>
+<code>rpcinfo</code> &#8211;<code>b</code> [-<code>T </code><i>transport</i> ] <i>prognum versnum</i><br/>
 <code>rpcinfo</code> &#8211;<code>d</code> [-<code>T </code><i>transport</i> ] <i>prognum versnum</i></p>
 <h2>Description</h2>
 <p><code>rpcinfo</code> makes an RPC call to an RPC server and reports what it finds. </p>

@@ -18,8 +18,8 @@ description: "sane-v4l – SANE interface for Video for Linux API"
 <h2>Configuration</h2>
 <p>The contents of the <i>v4l.conf</i> file is a list of device names that correspond to v4l devices. Empty lines and lines starting with a hash mark (#) are ignored. A sample configuration file is shown below: </p>
 <dl>
-<dd>/dev/bttv0<br />
- # this is a comment<br />
+<dd>/dev/bttv0<br/>
+ # this is a comment<br/>
  /dev/video3</dd></dl>
 <h2>Files</h2>
 <dl>
@@ -38,7 +38,7 @@ description: "sane-v4l – SANE interface for Video for Linux API"
 <h2>Author</h2>
 <p>Juergen G. Schimmer, Henning Meier-Geinitz</p>
 <h2>Bugs:</h2>
-<p>If more than one video card is present, a crash may occur. Frequency and geometry selection is missing.<br />
+<p>If more than one video card is present, a crash may occur. Frequency and geometry selection is missing.<br/>
  Send bug reports to the SANE mailing list: sane-devel [at] lists.alioth.debian.org. You must be subscribed to the list to send mail. See <a rel="nofollow" href="http://www.sane-project.org/mailing-lists.html">http://www.sane-project.org/mailing-lists.html</a> for details.</p>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/7-sane/">sane</a>(7), <a href="/docs/linux/man/1-xcam/">xcam</a>(1). </p>

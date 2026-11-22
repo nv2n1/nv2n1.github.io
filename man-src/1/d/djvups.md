@@ -45,7 +45,7 @@ description: "djvups – Convert DjVu documents to PostScript."
 <dt><code>-gray</code></dt>
 <dd> This option is equivalent to option <code>-color=no</code> and is provided for convenience.</dd>
 <dt><code>-colormatch=</code><i>yesno</i></dt>
-<dd> The default value, <code>yes</code>, generates a PostScript file using device independent colors in compliance with the <font SIZE="-1">sRGB</font> specification. Modern printers then produce colors that match the original as well as possible. Specifying value <code>no</code> generates a PostScript file using device dependent colors. This is sometimes useful with older printers. You can then use option <code>-gamma</code> to tune the output colors.</dd>
+<dd> The default value, <code>yes</code>, generates a PostScript file using device independent colors in compliance with the sRGB specification. Modern printers then produce colors that match the original as well as possible. Specifying value <code>no</code> generates a PostScript file using device dependent colors. This is sometimes useful with older printers. You can then use option <code>-gamma</code> to tune the output colors.</dd>
 <dt><code>-gamma=</code><i>gammaspec</i></dt>
 <dd> Specify a gamma correction factor for the device dependent PostScript colors. Argument <i>gammaspec</i> must be in range <code>0.3</code> to <code>5.0</code>. Gamma correction normally pertains to cathodic screens only. It gets meaningful for printers because several models interpret device dependent RGB colors by emulating the color response of a cathodic tube.</dd>
 <dt><code>-booklet=</code><i>opt</i></dt>

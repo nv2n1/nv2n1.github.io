@@ -10,7 +10,7 @@ description: "cla_porcond_c.f –"
 <p>cla_porcond_c.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>REAL function <code>cla_porcond_c</code> (UPLO, N, A, LDA, AF, LDAF, C, CAPPLY, INFO, WORK, RWORK)<br />
+<p>REAL function <code>cla_porcond_c</code> (UPLO, N, A, LDA, AF, LDAF, C, CAPPLY, INFO, WORK, RWORK)<br/>
  <i></i><code>CLA_PORCOND_C</code> computes the infinity norm condition number of op(A)*inv(diag(c)) for Hermitian positive-definite matrices.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>REAL function cla_porcond_c (characterUPLO, integerN, complex, dimension( lda, * )A, integerLDA, complex, dimension( ldaf, * )AF, integerLDAF, real, dimension( * )C, logicalCAPPLY, integerINFO, complex, dimension( * )WORK, real, dimension( * )RWORK)</h3>

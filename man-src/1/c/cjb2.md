@@ -12,12 +12,12 @@ description: "cjb2 – Simple DjVuBitonal encoder."
 <h2>SYNOPSIS</h2>
 <p> <code>cjb2 [</code><i>options</i><code>] </code><i>inputfile</i><i>outputdjvufile</i> </p>
 <h2>DESCRIPTION</h2>
-<p> This is a simple encoder for bitonal files. Argument <i>inputfile</i> is the name of a <font SIZE="-1">PBM</font> or bitonal <font SIZE="-1">TIFF</font> file containing a single document image. This program produces a DjVuBitonal file named <i>outputdjvufile</i>. </p>
+<p> This is a simple encoder for bitonal files. Argument <i>inputfile</i> is the name of a PBM or bitonal TIFF file containing a single document image. This program produces a DjVuBitonal file named <i>outputdjvufile</i>. </p>
 <p> The default compression process is lossless: decoding the DjVuBitonal file at full resolution will produce an image exactly identical to the input file. Lossy compression is enabled by options <code>-losslevel</code>, <code>-lossy</code>, or <code>-clean</code>. </p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-dpi </code><i>n</i></dt>
-<dd> Specify the resolution information encoded into the output file expressed in dots per inch. The resolution information encoded in DjVu files determine how the decoder scales the image on a particular display. Meaningful resolutions range from 25 to 1200. The default resolution for <font SIZE="-1">TIFF</font> files is the resolution is the resolution specified by the input file. The default resolution for <font SIZE="-1">PBM</font> files is 300 dpi.</dd>
+<dd> Specify the resolution information encoded into the output file expressed in dots per inch. The resolution information encoded in DjVu files determine how the decoder scales the image on a particular display. Meaningful resolutions range from 25 to 1200. The default resolution for TIFF files is the resolution is the resolution specified by the input file. The default resolution for PBM files is 300 dpi.</dd>
 <dt><code>-lossless</code></dt>
 <dd> Ensure that the encoded image is pixel-per-pixel equal to the initial image. This option is is equivalent to <code>-losslevel 0</code> and is the default.</dd>
 <dt><code>-clean</code></dt>

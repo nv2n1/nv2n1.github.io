@@ -15,8 +15,8 @@ description: "clearenv – clear the environment"
 int clearenv(void);
 </code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
-<p> <code>clearenv</code>():<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Glibc since 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
+<p> <code>clearenv</code>():<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Glibc since 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_SVID_SOURCE ||&nbsp;_BSD_SOURCE</p>
 <h2>DESCRIPTION</h2>
 <p> The <code>clearenv</code>() function clears the environment of all name-value pairs and sets the value of the external variable <i>environ</i> to NULL. After this call, new variables can be added to the environment using <code><a href="/docs/linux/man/3-putenv/">putenv</a></code>(3) and <code><a href="/docs/linux/man/3-setenv/">setenv</a></code>(3).</p>

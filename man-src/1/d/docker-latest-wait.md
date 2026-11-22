@@ -14,7 +14,7 @@ description: "docker-wait – Block until a container stops, then print its exit
 <h2>DESCRIPTION</h2>
 <p> Block until a container stops, then print its exit code. </p>
 <h2>OPTIONS</h2>
-<p> <code>&#8211;help</code><br />
+<p> <code>&#8211;help</code><br/>
 &nbsp;<wbr>&nbsp;<wbr>Print usage statement </p>
 <h2>EXAMPLES</h2>
 <dl>

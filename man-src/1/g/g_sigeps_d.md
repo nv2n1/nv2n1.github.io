@@ -15,38 +15,38 @@ description: "sigeps – convert c6/12 or c6/cn combinations to and from sigma/e
 <h2>DESCRIPTION</h2>
 <p> Sigeps is a simple utility that converts c6/c12 or c6/cn combinations to sigma and epsilon, or vice versa. It can also plot the potential in file. In addition it makes an approximation of a Buckingham potential to a Lennard Jones potential.</p>
 <h2>FILES</h2>
-<p> <code>-o</code><i> potje.xvg</i> <code>Output</code><br />
+<p> <code>-o</code><i> potje.xvg</i> <code>Output</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
 <h2>OTHER OPTIONS</h2>
-<p> <code>-[no]h</code><i>no </i><br />
+<p> <code>-[no]h</code><i>no </i><br/>
 &nbsp;<wbr>Print help info and quit </p>
-<p> <code>-nice</code><i> int</i><code> 0</code><br />
+<p> <code>-nice</code><i> int</i><code> 0</code><br/>
 &nbsp;<wbr>Set the nicelevel </p>
-<p> <code>-[no]w</code><i>no </i><br />
+<p> <code>-[no]w</code><i>no </i><br/>
 &nbsp;<wbr>View output xvg, xpm, eps and pdb files </p>
-<p> <code>-[no]xvgr</code><i>yes </i><br />
+<p> <code>-[no]xvgr</code><i>yes </i><br/>
 &nbsp;<wbr>Add specific codes&nbsp;<wbr>(legends etc.)&nbsp;<wbr>in the output xvg files for the xmgrace program </p>
-<p> <code>-c6</code><i> real</i><code> 0.001 </code><br />
+<p> <code>-c6</code><i> real</i><code> 0.001 </code><br/>
 &nbsp;<wbr>c6 </p>
-<p> <code>-cn</code><i> real</i><code> 1e-06 </code><br />
+<p> <code>-cn</code><i> real</i><code> 1e-06 </code><br/>
 &nbsp;<wbr>constant for repulsion </p>
-<p> <code>-pow</code><i> int</i><code> 12</code><br />
+<p> <code>-pow</code><i> int</i><code> 12</code><br/>
 &nbsp;<wbr>power of the repulsion term </p>
-<p> <code>-sig</code><i> real</i><code> 0.3 </code><br />
+<p> <code>-sig</code><i> real</i><code> 0.3 </code><br/>
 &nbsp;<wbr>sig </p>
-<p> <code>-eps</code><i> real</i><code> 1 </code><br />
+<p> <code>-eps</code><i> real</i><code> 1 </code><br/>
 &nbsp;<wbr>eps </p>
-<p> <code>-A</code><i> real</i><code> 100000</code><br />
+<p> <code>-A</code><i> real</i><code> 100000</code><br/>
 &nbsp;<wbr>Buckingham A </p>
-<p> <code>-B</code><i> real</i><code> 32 </code><br />
+<p> <code>-B</code><i> real</i><code> 32 </code><br/>
 &nbsp;<wbr>Buckingham B </p>
-<p> <code>-C</code><i> real</i><code> 0.001 </code><br />
+<p> <code>-C</code><i> real</i><code> 0.001 </code><br/>
 &nbsp;<wbr>Buckingham C </p>
-<p> <code>-qi</code><i> real</i><code> 0 </code><br />
+<p> <code>-qi</code><i> real</i><code> 0 </code><br/>
 &nbsp;<wbr>qi </p>
-<p> <code>-qj</code><i> real</i><code> 0 </code><br />
+<p> <code>-qj</code><i> real</i><code> 0 </code><br/>
 &nbsp;<wbr>qj </p>
-<p> <code>-sigfac</code><i> real</i><code> 0.7 </code><br />
+<p> <code>-sigfac</code><i> real</i><code> 0.7 </code><br/>
 &nbsp;<wbr>Factor in front of sigma for starting the plot </p>
 <h2>SEE ALSO</h2>
 <p> <code>gromacs(7)</code> </p>

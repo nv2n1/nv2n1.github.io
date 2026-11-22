@@ -67,7 +67,7 @@ description: "rexec — remote execution client for an exec server"
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/3-rexec/">rexec</a>(3), rexecd(8), <a href="/docs/linux/man/1-rsh/">rsh</a>(1)</p>
 <h2>AUTHOR</h2>
-<p> Michael Sadd<br />
- mas22 [at] cornell.edu<br />
+<p> Michael Sadd<br/>
+ mas22 [at] cornell.edu<br/>
  <a rel="nofollow" href="http://www.tc.cornell.edu/~sadd/">http://www.tc.cornell.edu/~sadd/</a> </p>
 <p> Thanks to Orange Gopher (2/10/97) and Johannes Plass (plass [at] dipmza.physik.uni-mainz.de, Oct. 17 1996) for useful suggestions. </p>

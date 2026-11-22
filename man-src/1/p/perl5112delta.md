@@ -18,14 +18,14 @@ description: "perl5112delta – what is new for perl v5.11.2"
 <p> Extension modules can now cleanly hook into the Perl parser to define new kinds of keyword-headed expression and compound statement. The syntax following the keyword is defined entirely by the extension. This allow a completely non-Perl sublanguage to be parsed inline, with the right ops cleanly generated. This feature is currently considered experimental. </p>
 <p> See &#8220;PL_keyword_plugin&#8221; in perlapi for the mechanism. The Perl core source distribution also includes a new module XS::APItest::KeywordRPN, which implements reverse Polish notation arithmetic via pluggable keywords. This module is mainly used for test purposes, and is not normally installed, but also serves as an example of how to use the new mechanism.</p>
 <h3>APIs for more internals</h3>
-<p> The lowest layers of the lexer and parts of the pad system now have C APIs available to <font SIZE="-1">XS</font> extensions. These are necessary to support proper use of pluggable keywords, but have other uses too. The new APIs are experimental, and only cover a small proportion of what would be necessary to take full advantage of the core&#8217;s facilities in these areas. It is intended that the Perl 5.13 development cycle will see the addition of a full range of clean, supported interfaces.</p>
+<p> The lowest layers of the lexer and parts of the pad system now have C APIs available to XS extensions. These are necessary to support proper use of pluggable keywords, but have other uses too. The new APIs are experimental, and only cover a small proportion of what would be necessary to take full advantage of the core&#8217;s facilities in these areas. It is intended that the Perl 5.13 development cycle will see the addition of a full range of clean, supported interfaces.</p>
 <h3>Overridable function lookup</h3>
 <p> Where an extension module hooks the creation of rv2cv ops to modify the subroutine lookup process, this now works correctly for bareword subroutine calls. This means that prototypes on subroutines referenced this way will be processed correctly. (Previously bareword subroutine names were initially looked up, for parsing purposes, by an unhookable mechanism, so extensions could only properly influence subroutine names that appeared with an <tt>&quot;&amp;&quot;</tt> sigil.)</p>
 <h2>Modules and Pragmata</h2>
 <h3>New Modules and Pragmata</h3>
 <dl>
 <dt>&quot;legacy&quot;</dt>
-<dd> Preserves legacy behaviors or enable new non-default behaviors. Currently the only behaviour concerns semantics for the 128 characters on <font SIZE="-1">ASCII</font> systems that have the 8th bit set.</dd></dl>
+<dd> Preserves legacy behaviors or enable new non-default behaviors. Currently the only behaviour concerns semantics for the 128 characters on ASCII systems that have the 8th bit set.</dd></dl>
 <h3>Pragmata Changes</h3>
 <dl>
 <dt>&quot;diagnostics&quot;</dt>
@@ -49,7 +49,7 @@ description: "perl5112delta – what is new for perl v5.11.2"
 <dt>&quot;ExtUtils::CBuilder&quot;</dt>
 <dd> Updated to 0.27.</dd>
 <dt>&quot;Env&quot;</dt>
-<dd> Add <font SIZE="-1">EXISTS</font> and <font SIZE="-1">DELETE</font> methods to Env.pm.</dd>
+<dd> Add EXISTS and DELETE methods to Env.pm.</dd>
 <dt>&quot;File::Fetch&quot;</dt>
 <dd> Updated to 0.22.</dd>
 <dt>&quot;I8N::Langinfo&quot;</dt>
@@ -108,15 +108,15 @@ description: "perl5112delta – what is new for perl v5.11.2"
 <h2>Changed Internals</h2>
 <dl>
 <dt>&bull;</dt>
-<dd> <tt>&quot;Perl_pmflag&quot;</tt> has been removed from the public <font SIZE="-1">API</font>. Calling it now generates a deprecation warning, and it will be removed in a future release. Although listed as part of the <font SIZE="-1">API</font>, it was never documented, and only ever used in <i>toke.c</i>, and prior to 5.10, <i>regcomp.c</i>. In core, it has been replaced by a static function.</dd></dl>
+<dd> <tt>&quot;Perl_pmflag&quot;</tt> has been removed from the public API. Calling it now generates a deprecation warning, and it will be removed in a future release. Although listed as part of the API, it was never documented, and only ever used in <i>toke.c</i>, and prior to 5.10, <i>regcomp.c</i>. In core, it has been replaced by a static function.</dd></dl>
 <h2>New Tests</h2>
 <dl>
 <dt><i>t/op/while_readdir.t</i></dt>
 <dd> Test that a bare readdir in while loop sets <tt>$_</tt>.</dd></dl>
 <h2>Known Problems</h2>
 <dl>
-<dt>Known test failures on <font SIZE="-1">VMS</font></dt>
-<dd> Perl 5.11.2 fails a small set of core and <font SIZE="-1">CPAN</font> tests as of this release. With luck, that&#8217;ll be sorted out for 5.11.3.</dd></dl>
+<dt>Known test failures on VMS</dt>
+<dd> Perl 5.11.2 fails a small set of core and CPAN tests as of this release. With luck, that&#8217;ll be sorted out for 5.11.3.</dd></dl>
 <h2>Deprecations</h2>
 <p> The following items are now deprecated.</p>
 <h3>Use of := to mean an empty attribute list is now deprecated.</h3>
@@ -135,13 +135,13 @@ description: "perl5112delta – what is new for perl v5.11.2"
 <h2>Acknowledgements</h2>
 <p> Perl 5.11.2 represents approximately 3 weeks development since Perl 5.11.1 and contains 29,992 lines of changes across 458 files from 38 authors and committers: </p>
 <p> Abhijit Menon-Sen, Abigail, Ben Morrow, Bo Borgerson, Brad Gilbert, Bram, Chris Williams, Craig A. Berry, Daniel Frederick Crisman, Dave Rolsky, David E. Wheeler, David Golden, Eric Brine, Father Chrysostomos, Frank Wiegand, Gerard Goossen, Gisle Aas, Graham Barr, Harmen, H.Merijn Brand, Jan Dubois, Jerry D. Hedden, Jesse Vincent, Karl Williamson, Kevin Ryde, Leon Brocard, Nicholas Clark, Paul Marquess, Philippe Bruhat, Rafael Garcia-Suarez, Sisyphus, Steffen Mueller, Steve Hay, Steve Peters, Vincent Pit, Yuval Kogman, Yves Orton, and Zefram. </p>
-<p> Many of the changes included in this version originated in the <font SIZE="-1">CPAN</font> modules included in Perl&#8217;s core. We&#8217;re grateful to the entire <font SIZE="-1">CPAN</font> community for helping Perl to flourish.</p>
+<p> Many of the changes included in this version originated in the CPAN modules included in Perl&#8217;s core. We&#8217;re grateful to the entire CPAN community for helping Perl to flourish.</p>
 <h2>Reporting Bugs</h2>
 <p> If you find what you think is a bug, you might check the articles recently posted to the comp.lang.perl.misc newsgroup and the perl bug database at <a rel="nofollow" href="http://rt.perl.org/perlbug/">http://rt.perl.org/perlbug/</a> . There may also be information at <a rel="nofollow" href="http://www.perl.org/">http://www.perl.org/</a> , the Perl Home Page. </p>
 <p> If you believe you have an unreported bug, please run the <code>perlbug</code> program included with your release. Be sure to trim your bug down to a tiny but sufficient test case. Your bug report, along with the output of <tt>&quot;perl -V&quot;</tt>, will be sent off to perlbug [at] perl.org to be analysed by the Perl porting team. </p>
-<p> If the bug you are reporting has security implications, which make it inappropriate to send to a publicly archived mailing list, then please send it to perl5-security-report [at] perl.org. This points to a closed subscription unarchived mailing list, which includes all the core committers, who be able to help assess the impact of issues, figure out a resolution, and help co-ordinate the release of patches to mitigate or fix the problem across all platforms on which Perl is supported. Please only use this address for security issues in the Perl core, not for modules independently distributed on <font SIZE="-1">CPAN</font>.</p>
+<p> If the bug you are reporting has security implications, which make it inappropriate to send to a publicly archived mailing list, then please send it to perl5-security-report [at] perl.org. This points to a closed subscription unarchived mailing list, which includes all the core committers, who be able to help assess the impact of issues, figure out a resolution, and help co-ordinate the release of patches to mitigate or fix the problem across all platforms on which Perl is supported. Please only use this address for security issues in the Perl core, not for modules independently distributed on CPAN.</p>
 <h2>SEE ALSO</h2>
 <p> The <i>Changes</i> file for an explanation of how to view exhaustive details on what changed. </p>
-<p> The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. </p>
-<p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
+<p> The <i></i><i>INSTALL</i><i></i> file for how to build Perl. </p>
+<p> The <i></i><i>README</i><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information. </p>

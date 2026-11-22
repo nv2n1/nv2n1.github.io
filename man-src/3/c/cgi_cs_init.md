@@ -17,7 +17,7 @@ description: "cgi_cs_init – initialize CS parser with the CGI defaults"
 NEOERR *cgi_cs_init(CGI *cgi, CSPARSE **cs);
 </pre>
 <h2>ARGUMENTS</h2>
-<p> cgi &#8211; a pointer a CGI struct allocated with cgi_init<br />
+<p> cgi &#8211; a pointer a CGI struct allocated with cgi_init<br/>
  cs &#8211; a pointer to a CS struct pointer </p>
 <h2>DESCRIPTION</h2>
 <p> cgi_cs_init initializes a CS parser with the CGI HDF context, and registers the standard CGI filters </p>

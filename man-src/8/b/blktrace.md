@@ -26,102 +26,102 @@ description: "blktrace – generate traces of the i/o traffic on block devices"
 <dt>&#8211;</dt>
 <dd>The default behaviour for blktrace is to run forever until explicitly killed by the user (via a control-C, or sending SIGINT signal to the process via invocation the kill (1) utility). Also you can specify a run-time duration for blktrace via the <code>-w</code> option &#8212; then blktrace will run for the specified number of seconds, and then halt. </dd>
 <h2>Options</h2>
-<p>-A <i>hex-mask</i><br />
+<p>-A <i>hex-mask</i><br/>
  &#8211;set-mask=<i>hex-mask</i></p>
 <dl>
 <dd>Set filter mask to <i>hex-mask</i> (see below for masks)</dd></dl>
-<p> -a <i>mask</i><br />
+<p> -a <i>mask</i><br/>
  &#8211;act-mask=<i>mask</i></p>
 <dl>
 <dd>Add <i>mask</i> to current filter (see below for masks)</dd></dl>
-<p> -b <i>size</i><br />
+<p> -b <i>size</i><br/>
  &#8211;buffer-size=<i>size</i></p>
 <dl>
 <dd>Specifies buffer size for event extraction (scaled by 1024). The default buffer size is 512KiB.</dd></dl>
-<p> -d <i>dev</i><br />
+<p> -d <i>dev</i><br/>
  &#8211;dev=<i>dev</i></p>
 <dl>
 <dd>Adds <i>dev</i> as a device to trace</dd></dl>
-<p> -I <i>file</i><br />
+<p> -I <i>file</i><br/>
  &#8211;input-devs=<i>file</i></p>
 <dl>
 <dd>Adds the devices found in <i>file</i> as devices to trace</dd></dl>
-<p> -n <i>num-sub</i><br />
+<p> -n <i>num-sub</i><br/>
  &#8211;num-sub-buffers=<i>num-sub</i></p>
 <dl>
 <dd>Specifies number of buffers to use. blktrace defaults to 4 sub buffers.</dd></dl>
-<p> -l<br />
+<p> -l<br/>
  &#8211;listen</p>
 <dl>
 <dd>Run in network listen mode (blktrace server)</dd></dl>
-<p> -h <i>hostname</i><br />
+<p> -h <i>hostname</i><br/>
  &#8211;host=<i>hostname</i></p>
 <dl>
 <dd>Run in network client mode, connecting to the given host</dd></dl>
-<p> -p <i>number</i><br />
+<p> -p <i>number</i><br/>
  &#8211;port=<i>number</i></p>
 <dl>
 <dd>Network port to use (default 8462)</dd></dl>
-<p> -s<br />
+<p> -s<br/>
  &#8211;no-sendfile</p>
 <dl>
 <dd>Make the network client NOT use sendfile() to transfer data</dd></dl>
-<p> -o <i>basename</i><br />
+<p> -o <i>basename</i><br/>
  &#8211;output=<i>basename</i></p>
 <dl>
 <dd>Specifies base name for input files. Default is device.blktrace.cpu. Specifying -o &#8211; runs in live mode with blkparse (writing data to standard out).</dd></dl>
-<p> -D <i>dir</i><br />
+<p> -D <i>dir</i><br/>
  &#8211;output-dir=<i>dir</i></p>
 <dl>
 <dd>Prepend <i>file</i> to output file name(s) </dd>
 <p> This only works when supplying a single device, or when piping the output via &quot;-o -&quot; with multiple devices.</dl>
-<p> -r <i>rel-path</i><br />
+<p> -r <i>rel-path</i><br/>
  &#8211;relay=<i>rel-path</i></p>
 <dl>
 <dd>Specifies debugfs mount point</dd></dl>
-<p> -v<br />
+<p> -v<br/>
  &#8211;version</p>
 <dl>
 <dd>Outputs version</dd></dl>
-<p> -V<br />
+<p> -V<br/>
  &#8211;version</p>
 <dl>
 <dd>Outputs version</dd></dl>
-<p> -w <i>seconds</i><br />
+<p> -w <i>seconds</i><br/>
  &#8211;stopwatch=<i>seconds</i></p>
 <dl>
 <dd>Sets run time to the number of seconds specified</dd></dl>
 <h2>Filter Masks</h2>
 <p>The following masks may be passed with the <i>-a</i> command line option, multiple filters may be combined via multiple <i>-a</i> command line options. </p>
 <dl>
-<dd><i>barrier</i>: barrier attribute<br />
- <i>complete</i>: completed by driver<br />
- <i>fs</i>: requests<br />
- <i>issue</i>: issued to driver<br />
- <i>pc</i>: packet command events<br />
- <i>queue</i>: queue operations<br />
- <i>read</i>: read traces<br />
- <i>requeue</i>: requeue operations<br />
- <i>sync</i>: synchronous attribute<br />
- <i>write</i>: write traces<br />
- <i>notify</i>: trace messages<br />
+<dd><i>barrier</i>: barrier attribute<br/>
+ <i>complete</i>: completed by driver<br/>
+ <i>fs</i>: requests<br/>
+ <i>issue</i>: issued to driver<br/>
+ <i>pc</i>: packet command events<br/>
+ <i>queue</i>: queue operations<br/>
+ <i>read</i>: read traces<br/>
+ <i>requeue</i>: requeue operations<br/>
+ <i>sync</i>: synchronous attribute<br/>
+ <i>write</i>: write traces<br/>
+ <i>notify</i>: trace messages<br/>
  <i>drv_data</i>: additional driver specific trace</dd></dl>
 <h2>Request Types</h2>
 <p>blktrace distinguishes between two types of block layer requests, file system and SCSI commands. The former are dubbed <code>fs</code> requests, the latter <code>pc</code> requests. File system requests are normal read/write operations, i.e. any type of read or write from a specific disk location at a given size. These requests typically originate from a user process, but they may also be initiated by the vm flushing dirty data to disk or the file system syncing a super or journal block to disk. <code>pc</code> requests are SCSI commands. blktrace sends the command data block as a payload so that blkparse can decode it.</p>
 <h2>Examples</h2>
-<p>To trace the i/o on the device <i>/dev/hda</i> and parse the output to human readable form, use the following command:<br />
-&nbsp;<wbr>%&nbsp;<wbr>blktrace -d&nbsp;<wbr>/dev/sda -o &#8211; | blkparse -i &#8211; This same behaviour can be achieve with the convenience script <i>btrace</i>. The command<br />
-&nbsp;<wbr>%&nbsp;<wbr>btrace&nbsp;<wbr>/dev/sda has exactly the same effect as the previous command. See <i>btrace</i> (8) for more information. To trace the i/o on a device and save the output for later processing with <i>blkparse</i>, use <i>blktrace</i> like this:<br />
-&nbsp;<wbr>%&nbsp;<wbr>blktrace&nbsp;<wbr>/dev/sda&nbsp;<wbr>/dev/sdb This will trace i/o on the devices <i>/dev/sda</i> and <i>/dev/sdb</i> and save the recorded information in the files <i>sda</i> and <i>sdb</i> in the current directory, for the two different devices, respectively. This trace information can later be parsed by the <i>blkparse</i> utility:<br />
+<p>To trace the i/o on the device <i>/dev/hda</i> and parse the output to human readable form, use the following command:<br/>
+&nbsp;<wbr>%&nbsp;<wbr>blktrace -d&nbsp;<wbr>/dev/sda -o &#8211; | blkparse -i &#8211; This same behaviour can be achieve with the convenience script <i>btrace</i>. The command<br/>
+&nbsp;<wbr>%&nbsp;<wbr>btrace&nbsp;<wbr>/dev/sda has exactly the same effect as the previous command. See <i>btrace</i> (8) for more information. To trace the i/o on a device and save the output for later processing with <i>blkparse</i>, use <i>blktrace</i> like this:<br/>
+&nbsp;<wbr>%&nbsp;<wbr>blktrace&nbsp;<wbr>/dev/sda&nbsp;<wbr>/dev/sdb This will trace i/o on the devices <i>/dev/sda</i> and <i>/dev/sdb</i> and save the recorded information in the files <i>sda</i> and <i>sdb</i> in the current directory, for the two different devices, respectively. This trace information can later be parsed by the <i>blkparse</i> utility:<br/>
 &nbsp;<wbr>%&nbsp;<wbr>blkparse sda sdb which will output the previously recorded tracing information in human readable form to stdout. See <i>blkparse</i> (1) for more information. </p>
 <h2>Authors</h2>
 <p>blktrace was written by Jens Axboe, Alan D. Brunelle and Nathan Scott. This man page was created from the blktrace documentation by Bas Zoetekouw.</p>
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;linux-btrace [at] vger.kernel.org&gt;</p>
 <h2>Copyright</h2>
-<p>Copyright &#169; 2006 Jens Axboe, Alan D. Brunelle and Nathan Scott.<br />
- This is free software. You may redistribute copies of it under the terms of the GNU General Public License &lt;<a rel="nofollow" href="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</a>&gt;. There is NO WARRANTY, to the extent permitted by law.<br />
- This manual page was created for Debian by Bas Zoetekouw. It was derived from the documentation provided by the authors and it may be used, distributed and modified under the terms of the GNU General Public License, version 2.<br />
+<p>Copyright &#169; 2006 Jens Axboe, Alan D. Brunelle and Nathan Scott.<br/>
+ This is free software. You may redistribute copies of it under the terms of the GNU General Public License &lt;<a rel="nofollow" href="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</a>&gt;. There is NO WARRANTY, to the extent permitted by law.<br/>
+ This manual page was created for Debian by Bas Zoetekouw. It was derived from the documentation provided by the authors and it may be used, distributed and modified under the terms of the GNU General Public License, version 2.<br/>
  On Debian systems, the text of the GNU General Public License can be found in /usr/share/common-licenses/GPL-2.</p>
 <h2>See Also</h2>
 <p>btrace (8), blkparse (1), verify_blkparse (1), blkrawverify (1), btt (1) </p>

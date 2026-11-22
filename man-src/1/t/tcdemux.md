@@ -16,8 +16,8 @@ description: "tcdemux – demultiplex a program stream"
 <h2>COPYRIGHT</h2>
 <p> <code>tcdemux</code> is Copyright (C) by Thomas Oestreich.</p>
 <h2>DESCRIPTION</h2>
-<p> <code>tcdemux</code> is part of and usually called by <code>transcode</code>.<br />
- However, it can also be used independently.<br />
+<p> <code>tcdemux</code> is part of and usually called by <code>transcode</code>.<br/>
+ However, it can also be used independently.<br/>
  <code>tcdemux</code> reads source (from stdin if not explicitely defined) and prints on the standard output.</p>
 <h2>OPTIONS</h2>
 <dl>
@@ -45,7 +45,7 @@ description: "tcdemux – demultiplex a program stream"
 <dd> Select synchronization strategy <i>mode.</i> This is how transcode selects the beginning of a video and audio stream to assure both streams are sychronized for further processing: </dd>
 <p> 0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>no synchronization. Packets are printed directly to <i>stdout</i>.</p>
 <p> 1<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>synchronization based on PTS information found in the packet header. Audio packets are delayed until a suitable starting point is found. Default for PAL videos.</p>
-<p> 2<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>NTSC adapted synchronization mode. Detailed information for each GOP contained in the video stream are piped to a <i>stdout</i> to be processed by<br />
+<p> 2<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>NTSC adapted synchronization mode. Detailed information for each GOP contained in the video stream are piped to a <i>stdout</i> to be processed by<br/>
  the certain import modules. This enables adjusting the frame rate or inverse telecine, if necessary. </p>
 <p> 3 more advanced synchronization mode 1 with msec granular adjustment. Details delegated to transcode. </p>
 <p> 4 more advanced synchronization mode 2 with msec granular adjustment for NTSC materail. Details delegated to transcode. </p>
@@ -75,7 +75,7 @@ description: "tcdemux – demultiplex a program stream"
 <p> <code>tcprobe -i movie.vob -x mpeg2</code> </p>
 <p> extracts only MPEG video packets. Further processing, i.e., extracting the elementary video stream is done by <code>tcextract.</code> </p>
 <h2>AUTHORS</h2>
-<p> <code>tcdemux</code> was written by Thomas Oestreich<br />
+<p> <code>tcdemux</code> was written by Thomas Oestreich<br/>
  &lt;ostreich [at] theorie.physik.uni-goettingen.de&gt; with contributions from many others. See AUTHORS for details.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-avifix/">avifix</a></code>(1), <code><a href="/docs/linux/man/1-avimerge/">avimerge</a></code>(1), <code><a href="/docs/linux/man/1-avisplit/">avisplit</a></code>(1), <code><a href="/docs/linux/man/1-tcdecode/">tcdecode</a></code>(1), <code><a href="/docs/linux/man/1-tcdemux/">tcdemux</a></code>(1), <code><a href="/docs/linux/man/1-tcextract/">tcextract</a></code>(1), <code><a href="/docs/linux/man/1-tccat/">tccat</a></code>(1), <code><a href="/docs/linux/man/1-tcscan/">tcscan</a></code>(1), <code><a href="/docs/linux/man/1-transcode/">transcode</a></code>(1) </p>

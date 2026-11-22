@@ -66,7 +66,7 @@ can be any directory name found in /dev/disk. E.g. &quot;by-uuid&quot;, &quot;by
 <dl>
 <dd>Specify temporary directory to use.</dd></dl>
 <dl>
-<dd><font SIZE="+1"> <code>Warning</code> </font><br />
+<dd> <code>Warning</code> <br/>
  If chrooted to another root other than the real root device, use &#8211;fstab and provide a valid <i>/etc/fstab</i>.  <code>use_fstab=</code>&quot;<i>{yes|no}</i>&quot;</dd>
 <dl>
 <dd>Use <i>/etc/fstab</i> instead of <i>/proc/self/mountinfo</i>.</dd></dl>

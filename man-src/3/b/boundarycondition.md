@@ -10,14 +10,14 @@ description: "ql/methods/finitedifferences/boundarycondition.hpp – boundary co
 
 <p> ql/methods/finitedifferences/boundarycondition.hpp &#8211; boundary conditions for differential operators </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/utilities/null.hpp&gt;<br />
+<p> #include &lt;ql/utilities/null.hpp&gt;<br/>
  #include &lt;ql/methods/finitedifferences/tridiagonaloperator.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>BoundaryCondition&lt; Operator &gt;</code><br />
- <i>Abstract boundary condition class for finite difference problems. </i><br />
- class <code>NeumannBC</code><br />
- <i>Neumann boundary condition (i.e., constant derivative). </i><br />
- class <code>DirichletBC</code><br />
+<p> class <code>BoundaryCondition&lt; Operator &gt;</code><br/>
+ <i>Abstract boundary condition class for finite difference problems. </i><br/>
+ class <code>NeumannBC</code><br/>
+ <i>Neumann boundary condition (i.e., constant derivative). </i><br/>
+ class <code>DirichletBC</code><br/>
  <i>Neumann boundary condition (i.e., constant value). </i></p>
 <h2>Detailed Description</h2>
 <p> boundary conditions for differential operators </p>

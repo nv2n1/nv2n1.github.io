@@ -21,7 +21,7 @@ description: "grotty – groff driver for typewriter-like devices"
 <dl>
 <dt>
 </dt><dd>
-<p> <code>PAGER=/usr/bin/less -R</code><br />
+<p> <code>PAGER=/usr/bin/less -R</code><br/>
  <code>export PAGER</code></dd></dl>
 <p> or use the <code>-P</code> option of <code>man</code> to set the pager executable and its options, or modify the configuration file of <code>man</code> in a similar fashion. Note that with some <code><a href="/docs/linux/man/1-man/">man</a></code>(1) versions, you have to use the <i>MANPAGER</i> environment variable instead. </p>
 <p> <code>grotty</code>&#8216;s old output format can be displayed on a terminal by piping through <code><a href="/docs/linux/man/1-ul/">ul</a></code>(1). Pagers such as <code><a href="/docs/linux/man/1-more/">more</a></code>(1) or <code><a href="/docs/linux/man/1-less/">less</a></code>(1) are also able to display these sequences. Use either <code>-B</code> or <code>-U</code> when piping into <code><a href="/docs/linux/man/1-less/">less</a></code>(1); use <code>-b</code> when piping into <code><a href="/docs/linux/man/1-more/">more</a></code>(1). There is no need to filter the output through <code><a href="/docs/linux/man/1-col/">col</a></code>(1) since <code>grotty</code> never outputs reverse line feeds. </p>

@@ -125,17 +125,17 @@ description: "KMyMoney – the personal finances manager for KDE"
 <dd> The KDE per-user setting directory. Default if not specified is <i>$HOME/.kde</i></dd></dl>
 <h2>AUTHOR</h2>
 <p> <code>KMyMoney</code> was written by </p>
-<p> Michael Edwardes &lt;mte [at] users.sourceforge.net&gt;,<br />
- Felix Rodriguez &lt;frodriguez [at] users.sourceforge.net&gt;,<br />
- John C &lt;tacoturtle [at] users.sourceforge.net&gt;,<br />
- Thomas Baumgart &lt;ipwizard [at] users.sourceforge.net&gt;,<br />
- Kevin Tambascio &lt;ktambascio [at] users.sourceforge.net&gt; and<br />
+<p> Michael Edwardes &lt;mte [at] users.sourceforge.net&gt;,<br/>
+ Felix Rodriguez &lt;frodriguez [at] users.sourceforge.net&gt;,<br/>
+ John C &lt;tacoturtle [at] users.sourceforge.net&gt;,<br/>
+ Thomas Baumgart &lt;ipwizard [at] users.sourceforge.net&gt;,<br/>
+ Kevin Tambascio &lt;ktambascio [at] users.sourceforge.net&gt; and<br/>
  Arni Ingimundarson &lt;arniing [at] users.sourceforge.net&gt;. </p>
 <p> Please use</p>
 <dl>
 <dt>
 </dt><dd> <code><a rel="nofollow" href="http://sourceforge.net/tracker/?group_id=4708">http://sourceforge.net/tracker/?group_id=4708</a></code></dd></dl>
-<p> to report bugs and post support or feature requests.<br />
+<p> to report bugs and post support or feature requests.<br/>
  <code>Do not mail the authors directly.</code> </p>
 <p> This manual page was prepared by Karolina Lindqvist &lt;pgd-karolinali [at] algonet.se&gt; for the Debian GNU/Linux system (but may be used by others) and has been enhanced by Thomas Baumgart &lt;ipwizard [at] users.sourceforge.net&gt; to reflect the latest changes in development.</p>
 <h2>SEE ALSO</h2>

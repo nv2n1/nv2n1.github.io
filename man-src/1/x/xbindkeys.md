@@ -57,7 +57,7 @@ description: "xbindkeys – a grabbing keys program for X"
     &quot;command to start &amp;&quot;
        associated key
 </pre>
-<p> To specify an associated key, you can use &#8216;xbindkeys &#8211;key&#8217; or<br />
+<p> To specify an associated key, you can use &#8216;xbindkeys &#8211;key&#8217; or<br/>
 &nbsp;<wbr>&#8216;xbindkeys &#8211;multikey&#8217;&nbsp;<wbr>and put one of the two lines in the&nbsp;<wbr> configuration file. </p>
 <p> A list of keys is in /usr/include/X11/keysym.h and in /usr/include/X11/keysymdef.h. The XK_ is not needed. </p>
 <p> List of modifiers: </p>

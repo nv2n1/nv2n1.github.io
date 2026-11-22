@@ -18,7 +18,7 @@ description: "QuantLib::Region – Region class, used for inflation applicabilit
 <h3>Protected Attributes</h3>
 <p>boost::shared_ptr&lt; Data &gt; <code>data_</code> </p>
 <h3>Related Functions</h3>
-<p>(Note that these are not member functions.)<br />
+<p>(Note that these are not member functions.)<br/>
  bool <code>operator==</code> (const <code>Region</code> &amp;, const <code>Region</code> &amp;) </p>
 <p> bool <code>operator!=</code> (const <code>Region</code> &amp;, const <code>Region</code> &amp;) </p>
 <h2>Detailed Description</h2>

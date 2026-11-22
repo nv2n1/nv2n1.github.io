@@ -29,7 +29,7 @@ description: "libipmiconsole – IPMI SOL library"
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;freeipmi-users [at] gnu.org&gt; or &lt;freeipmi-devel [at] gnu.org&gt;.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright (C) 2007-2012 Lawrence Livermore National Security, LLC.<br />
+<p> Copyright (C) 2007-2012 Lawrence Livermore National Security, LLC.<br/>
  Copyright (C) 2006-2007 The Regents of the University of California. </p>
 <p> This library is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.</p>
 <h2>SEE ALSO</h2>

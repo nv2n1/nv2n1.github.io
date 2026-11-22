@@ -40,5 +40,5 @@ int qlen, ares_callback callback, void *arg)
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-ares_process/">ares_process</a></code>(3)</p>
 <h2>AUTHOR</h2>
-<p> Greg Hudson, MIT Information Systems<br />
+<p> Greg Hudson, MIT Information Systems<br/>
  Copyright 1998 by the Massachusetts Institute of Technology. </p>

@@ -44,8 +44,8 @@ description: "xeyes – a follow the mouse X demo"
 <dt><code>-distance</code></dt>
 <dd> uses an alternative mapping, as if the eyes were set back from the screen, thus following the mouse more precisely.</dd></dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/7-x/">X</a>(7), X Toolkit documentation<br />
+<p> <a href="/docs/linux/man/7-x/">X</a>(7), X Toolkit documentation<br/>
  See <i><a href="/docs/linux/man/7-x/">X</a>(7)</i> for a full statement of rights and permissions.</p>
 <h2>AUTHOR</h2>
-<p> Keith Packard, MIT X Consortium<br />
+<p> Keith Packard, MIT X Consortium<br/>
  Copied from the NeWS version written (apparently) by Jeremy Huxtable as seen at SIGGRAPH &#8217;88 </p>

@@ -10,7 +10,7 @@ description: "ql/math/comparison.hpp – floating-point comparisons"
 
 <p> ql/math/comparison.hpp &#8211; floating-point comparisons </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/types.hpp&gt;<br />
+<p> #include &lt;ql/types.hpp&gt;<br/>
  #include &lt;boost/shared_ptr.hpp&gt; </p>
 <h3>Functions</h3>
 <p> bool <code>close</code> (Real x, Real y) </p>

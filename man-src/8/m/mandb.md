@@ -9,7 +9,7 @@ description: "mandb – create or update the manual page index caches"
 
 <p>mandb &#8211; create or update the manual page index caches</p>
 <h2>Synopsis</h2>
-<p><code>mandb</code> [<code>-dqsucpt?V</code>] [<code>-C</code> <i>file</i>] [<i>manpath</i>]<br />
+<p><code>mandb</code> [<code>-dqsucpt?V</code>] [<code>-C</code> <i>file</i>] [<i>manpath</i>]<br/>
  <code>mandb</code> [<code>-dqsut</code>] [<code>-C</code> <i>file</i>] <code>-f</code> <i>filename</i>&nbsp;&#8230;</p>
 <h2>Description</h2>
 <p><code>mandb</code> is used to initialise or manually update <code>index</code> database caches. The caches contain information relevant to the current state of the manual page system and the information stored within them is used by the man-db utilities to enhance their speed and functionality. </p>
@@ -118,5 +118,5 @@ description: "mandb – create or update the manual page index caches"
 Fabrizio Polacco (fpolacco [at] debian.org).
 Colin Watson (cjwatson [at] debian.org).</pre>
 <h2>Bugs</h2>
-<p><a rel="nofollow" href="https://gitlab.com/cjwatson/man-db/-/issues">https://gitlab.com/cjwatson/man-db/-/issues</a><br />
+<p><a rel="nofollow" href="https://gitlab.com/cjwatson/man-db/-/issues">https://gitlab.com/cjwatson/man-db/-/issues</a><br/>
  <a rel="nofollow" href="https://savannah.nongnu.org/bugs/?group=man-db">https://savannah.nongnu.org/bugs/?group=man-db</a> </p>

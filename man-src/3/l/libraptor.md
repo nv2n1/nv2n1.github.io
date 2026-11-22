@@ -127,25 +127,25 @@ description: "libraptor – Raptor RDF parser and serializer library"
 <dd> <p> Set the parser to strict (<i>is_strict</i> not zero) or lax (default) mode. The detail of the strictness can be controlled by raptor_set_feature. </p>
  </dd>
 <dt><code>int raptor_set_feature(raptor_parser *</code><i>parser</i><code>, raptor_feature </code><i>feature</i><code>, int </code><i>value</i><code>)</code></dt>
-<dd> <p> Set a parser feature <i>feature</i> to a particular <i>value</i>. Returns non 0 on failure or if the feature is unknown. The current defined parser features are: <br />
-&nbsp;<wbr>&nbsp;<wbr><i>Feature&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Values</i> <br />
-&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_ALLOW_BAGID</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Boolean&nbsp;<wbr>(non 0 true) <br />
-&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_ALLOW_NON_NS_ATTRIBUTES</code>&nbsp;<wbr>&nbsp;<wbr>Boolean&nbsp;<wbr>(non 0 true) <br />
-&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_ALLOW_OTHER_PARSETYPES</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Boolean&nbsp;<wbr>(non 0 true) <br />
-&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_ALLOW_RDF_TYPE_RDF_LIST</code>&nbsp;<wbr>&nbsp;<wbr>Boolean&nbsp;<wbr>(non 0 true) <br />
-&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_ASSUME_IS_RDF</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Boolean&nbsp;<wbr>(non 0 true) <br />
-&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_CHECK_RDF_ID</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Boolean&nbsp;<wbr>(non 0 true) <br />
-&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_HTML_LINK</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Boolean&nbsp;<wbr>(non 0 true) <br />
-&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_HTML_TAG_SOUP</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Boolean&nbsp;<wbr>(non 0 true) <br />
-&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_MICROFORMATS</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Boolean&nbsp;<wbr>(non 0 true) <br />
-&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_NON_NFC_FATAL</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Boolean&nbsp;<wbr>(non 0 true) <br />
-&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_NORMALIZE_LANGUAGE</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Boolean&nbsp;<wbr>(non 0 true) <br />
-&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_NO_NET</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Boolean&nbsp;<wbr>(non 0 true) <br />
-&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_RELATIVE_URIS</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Boolean&nbsp;<wbr>(non 0 true) <br />
-&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_SCANNING</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Boolean&nbsp;<wbr>(non 0 true) <br />
-&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_WARN_OTHER_PARSETYPES</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Boolean&nbsp;<wbr>(non 0 true) <br />
-&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_WWW_TIMEOUT</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Integer <br />
-&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_WWW_HTTP_CACHE_CONTROL</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>String <br />
+<dd> <p> Set a parser feature <i>feature</i> to a particular <i>value</i>. Returns non 0 on failure or if the feature is unknown. The current defined parser features are: <br/>
+&nbsp;<wbr>&nbsp;<wbr><i>Feature&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Values</i> <br/>
+&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_ALLOW_BAGID</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Boolean&nbsp;<wbr>(non 0 true) <br/>
+&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_ALLOW_NON_NS_ATTRIBUTES</code>&nbsp;<wbr>&nbsp;<wbr>Boolean&nbsp;<wbr>(non 0 true) <br/>
+&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_ALLOW_OTHER_PARSETYPES</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Boolean&nbsp;<wbr>(non 0 true) <br/>
+&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_ALLOW_RDF_TYPE_RDF_LIST</code>&nbsp;<wbr>&nbsp;<wbr>Boolean&nbsp;<wbr>(non 0 true) <br/>
+&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_ASSUME_IS_RDF</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Boolean&nbsp;<wbr>(non 0 true) <br/>
+&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_CHECK_RDF_ID</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Boolean&nbsp;<wbr>(non 0 true) <br/>
+&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_HTML_LINK</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Boolean&nbsp;<wbr>(non 0 true) <br/>
+&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_HTML_TAG_SOUP</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Boolean&nbsp;<wbr>(non 0 true) <br/>
+&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_MICROFORMATS</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Boolean&nbsp;<wbr>(non 0 true) <br/>
+&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_NON_NFC_FATAL</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Boolean&nbsp;<wbr>(non 0 true) <br/>
+&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_NORMALIZE_LANGUAGE</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Boolean&nbsp;<wbr>(non 0 true) <br/>
+&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_NO_NET</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Boolean&nbsp;<wbr>(non 0 true) <br/>
+&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_RELATIVE_URIS</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Boolean&nbsp;<wbr>(non 0 true) <br/>
+&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_SCANNING</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Boolean&nbsp;<wbr>(non 0 true) <br/>
+&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_WARN_OTHER_PARSETYPES</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Boolean&nbsp;<wbr>(non 0 true) <br/>
+&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_WWW_TIMEOUT</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Integer <br/>
+&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_WWW_HTTP_CACHE_CONTROL</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>String <br/>
 &nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_WWW_HTTP_USER_AGENT</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>String If the <i>allow_bagid</i> feature is true (default true) then the RDF/XML parser will support the rdf:bagID attribute that was removed from the RDF/XML language when it was revised. This support may be removed in future. If the <i>allow_non_ns_attributes</i> feature is true (default true), then the RDF/XML parser will allow non-XML namespaced attributes to be accepted as well as rdf: namespaced ones. For example, &#8216;about&#8217; and &#8216;ID&#8217; will be interpreted as if they were rdf:about and rdf:ID respectively. If the <i>allow_other_parsetypes</i> feature is true (default true) then the RDF/XML parser will allow unknown parsetypes to be present and will pass them on to the user. Unimplemented at present. If the <i>allow_rdf_type_rdf_list</i> feature is true (default false) then the RDF/XML parser will generate the idList rdf:type rdf:List triple in the handling of rdf:parseType=&quot;Collection&quot;. This triple was removed during the revising of RDF/XML after collections were initially added. If the <i>assume_is_rdf</i> feature is true (default false), then the RDF/XML parser will assume the content is RDF/XML, not require that rdf:RDF root element, and immediately interpret the content as RDF/XML. If the <i>check_rdf_id</i> feature is true (default true) then rdf:ID values will be checked for duplicates and cause an error if found. if the <i>html_link</i> feature is true (default true), look for head &amp;lt;link&amp;gt; to type rdf/xml for GRDDL parser If the <i>html_tag_soup</i> feature is true (default true), use a lax HTML parser if an XML parser fails when read HTML for GRDDL parser. If the <i>microformats</i> feature is true (default true), look for microformats for GRDDL parser. If the <i>non_nfc_fatal</i> feature is true (default false) then illegal Unicode Normal Form C in literals will give a fatal error, otherwise it gives a warning. If the <i>normalize_language</i> feature is true (default true) then XML language values such as from xml:lang will be normalized to lowercase. If the <i>no_net</i> feature is true (default false) then network requests are denied. If the <i>scanning</i> feature is true (default false), then the RDF/XML parser will look for embedded rdf:RDF elements inside the XML content, and not require that the XML start with an rdf:RDF root element. If the <i>www_timeout</i> feature is set to an integer larger than 0, it sets the timeout in seconds for internal WWW URI requests for the GRDDL parser. If the <i>www_http_cache_control</i> feature is set to a string value (default none), it is sent as the value of the HTTP Cache-Control: header in requests. If the <i>www_http_user_agent</i> feature is set to a string value, it is sent as the value of the HTTP User-Agent: header in requests. </p>
  </dd>
 <dt><code>raptor_parser_set_feature_string(raptor_parser *</code><i>parser</i>, raptor_feature <i>feature</i>, const unsigned char *<i>value</i>)</dt>
@@ -232,8 +232,8 @@ description: "libraptor – Raptor RDF parser and serializer library"
 <dl>
 <dt><code>int raptor_format_locator(char *</code><i>buffer</i><code>, size_t </code><i>length</i><code>, raptor_locator* </code><i>locator</i><code>)</code></dt>
 <dd> <p> This method takes a <i>raptor_locator</i> object as passed to an error, warning or other handler callback and formats it into the <i>buffer</i> of size <i>length</i> bytes. If <i>buffer</i> is NULL or <i>length</i> is insufficient for the size of the formatted locator, returns the number of additional bytes required in the buffer to write the locator. </p>
-<p> In particular, if this form is used: <br />
-&nbsp;<wbr>&nbsp;<wbr>length=raptor_format_locator(NULL, 0, locator) it will return in <i>length</i> the size of a buffer that can be allocated for <i>locator</i> and a second call will perform the formatting: <br />
+<p> In particular, if this form is used: <br/>
+&nbsp;<wbr>&nbsp;<wbr>length=raptor_format_locator(NULL, 0, locator) it will return in <i>length</i> the size of a buffer that can be allocated for <i>locator</i> and a second call will perform the formatting: <br/>
 &nbsp;<wbr>&nbsp;<wbr>raptor_format_locator(buffer, length, locator) </p>
  </dd>
 <dt><code>void raptor_print_locator(FILE *</code><i>stream</i><code>, raptor_locator* </code><i>locator</i><code>)</code></dt>
@@ -417,20 +417,20 @@ description: "libraptor – Raptor RDF parser and serializer library"
 <dd> <p> Return the current raptor_locator object for the serializer. This is a public structure defined in raptor.h that can be used directly, or formatted via raptor_print_locator. </p>
  </dd>
 <dt><code>int raptor_serializer_set_feature(raptor_serializer *</code><i>serializer</i><code>, raptor_feature </code><i>feature</i><code>, int </code><i>value</i><code>)</code></dt>
-<dd> <p> Set a serializer feature <i>feature</i> to a particular <i>value</i>. Returns non 0 on failure or if the feature is unknown. The current defined serializer features are: <br />
-&nbsp;<wbr>&nbsp;<wbr><i>Feature&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Values</i> <br />
-&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_RELATIVE_URIS</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Boolean&nbsp;<wbr>(non 0 true) <br />
-&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_WRITE_BASE_URI</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Boolean&nbsp;<wbr>(non 0 true) <br />
-&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_START_URI</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>URI String <br />
-&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_BNODE_BORDER</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>String <br />
-&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_BNODE_FILL</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>String <br />
-&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_JSON_CALLBACK</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>String <br />
-&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_JSON_EXTRA_DATA</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>String <br />
-&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_LITERAL_BORDER</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>String <br />
-&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_LITERAL_FILL</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>String <br />
-&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_RESOURCE_BORDER</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>String <br />
-&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_RESOURCE_FILL</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>String <br />
-&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_RSS_TRIPLES</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>String <br />
+<dd> <p> Set a serializer feature <i>feature</i> to a particular <i>value</i>. Returns non 0 on failure or if the feature is unknown. The current defined serializer features are: <br/>
+&nbsp;<wbr>&nbsp;<wbr><i>Feature&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Values</i> <br/>
+&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_RELATIVE_URIS</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Boolean&nbsp;<wbr>(non 0 true) <br/>
+&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_WRITE_BASE_URI</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Boolean&nbsp;<wbr>(non 0 true) <br/>
+&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_START_URI</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>URI String <br/>
+&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_BNODE_BORDER</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>String <br/>
+&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_BNODE_FILL</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>String <br/>
+&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_JSON_CALLBACK</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>String <br/>
+&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_JSON_EXTRA_DATA</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>String <br/>
+&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_LITERAL_BORDER</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>String <br/>
+&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_LITERAL_FILL</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>String <br/>
+&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_RESOURCE_BORDER</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>String <br/>
+&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_RESOURCE_FILL</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>String <br/>
+&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_RSS_TRIPLES</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>String <br/>
 &nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_ATOM_ENTRY_URI</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>String </p>
 <p> If the <i>relative_uris</i> feature is true (default false) then when serialising, preference is given to generating relative URIs where possible. If the <i>write_base_uri</i> feature is true (default true) then the atom, rdfxml, rdfxml-abbrev and turtle serializers will write an @base or xml:base directive in the output. If the <i>start_uri</i> feature is set to a URI it is used by the serializer to start serializing from. If the <i>bnode_border</i> feature is set, the DOT serializer uses it as the bnode border colour. If the <i>bnode_fill</i> feature is set, the DOT serializer uses it as the bnode fill colour. If the <i>json_callback</i> feature is set, the JSON serializers use it as the name of the callback to wrap the outer JSON object. If the <i>json_extra_data</i> feature is set, the JSON serializers use it as extra data inside the outer JSON object. If the <i>literal_border</i> feature is set, the DOT serializer uses it as the literal border colour. If the <i>literal_fill</i> feature is set, the DOT serializer uses it as the literal fill colour. If the <i>resource_border</i> feature is set, the DOT serializer uses it as the resource border colour. If the <i>resource_fill</i> feature is set, the DOT serializer uses it as the resource fill colour. If the <i>rss_triples</i> feature is set to the string &quot;rdf-xml&quot; for the rss-1.0 serializer or &quot;atom-triples&quot; for the atom serializer, it writes extra rdf triples into the serialized output. If the <i>atom_entry_uri</i> feature is set to a URI string, it is used to trigger generation of an atom entry document for the atom serializer. </p>
  </dd>
@@ -508,7 +508,7 @@ description: "libraptor – Raptor RDF parser and serializer library"
 <dd> <p> This is a standalone function that resolves the relative URI <i>reference_uri</i> against the base URI <i>base_uri</i> according to the URI resolution rules in RFC2396. The resulting URI is stored in <i>buffer</i> which is of <i>length</i> bytes. If this is too small, no work will be done. </p>
  </dd>
 <dt><code>char *raptor_uri_filename_to_uri_string(const unsigned char* </code><i>filename</i><code>)</code></dt>
-<dd> <p> This is a standalone function that turns a local filename (Windows or Unix style as appropriate for platform) into a URI string (file). <br />
+<dd> <p> This is a standalone function that turns a local filename (Windows or Unix style as appropriate for platform) into a URI string (file). <br/>
 &nbsp;<wbr>The returned string must be freed by the caller. Some systems require memory allocated in a library to be deallocated inside that library in which case <code>raptor_free_memory</code> may be used. </p>
  </dd>
 <dt><code>char *raptor_uri_uri_string_to_filename(const unsigned char* </code><i>uri_string</i><code>)</code></dt>
@@ -1057,11 +1057,11 @@ description: "libraptor – Raptor RDF parser and serializer library"
 <dd> <p> Return the name, URI, string label (all optional) for an XML write <i>feature</i>, returning non-zero if no such feature exists. Raptor features have URIs that are constructed from the URI <i><a rel="nofollow" href="http://feature.librdf.org/raptor-">http://feature.librdf.org/raptor-</a></i> and the <i>name</i> so for example feature <i>scanForRDF</i> has URI <i><a rel="nofollow" href="http://feature.librdf.org/raptor-scanForRDF">http://feature.librdf.org/raptor-scanForRDF</a></i> </p>
  </dd>
 <dt><code>int raptor_xml_writer_set_feature(raptor_xml_writer* </code><i>xml_writer</i>, raptor_feature <i>feature</i>, int <i>value</i>)</dt>
-<dd> <p> Set an XML writer feature <i>feature</i> to a particular <i>value</i>. Returns non 0 on failure or if the feature is unknown. The current defined writer features are: <br />
-&nbsp;<wbr>&nbsp;<wbr><i>Feature&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Values</i> <br />
-&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_WRITER_AUTO_INDENT</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Boolean&nbsp;<wbr>(non 0 true) <br />
-&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_WRITER_AUTO_EMPTY</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Boolean&nbsp;<wbr>(non 0 true) <br />
-&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_WRITER_INDENT_WIDTH</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Integer <br />
+<dd> <p> Set an XML writer feature <i>feature</i> to a particular <i>value</i>. Returns non 0 on failure or if the feature is unknown. The current defined writer features are: <br/>
+&nbsp;<wbr>&nbsp;<wbr><i>Feature&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Values</i> <br/>
+&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_WRITER_AUTO_INDENT</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Boolean&nbsp;<wbr>(non 0 true) <br/>
+&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_WRITER_AUTO_EMPTY</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Boolean&nbsp;<wbr>(non 0 true) <br/>
+&nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_WRITER_INDENT_WIDTH</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Integer <br/>
 &nbsp;<wbr>&nbsp;<wbr><code>RAPTOR_FEATURE_WRITER_XML_DECLARATION</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Boolean&nbsp;<wbr>(non 0 true) If the <i>writer_auto_indent</i> feature is set (default true), the XML writer will automatically indent the output. If the <i>writer_auto_empty</i> feature is set (default true), the XML writer will automatically generate empty elements if a start/end element sequence has no content. If the <i>writer_indent_width</i> feature is set (default 2) if the XML writer is outputing indented XML, it will use that many spaces. If the <i>writer_xml_declaration</i> feature is set (default true) the XML declaration is written at the start of serialized XML. </p>
  </dd>
 <dt><code>int raptor_xml_writer_set_feature_string(raptor_xml_writer *xml_writer, raptor_feature feature, const unsigned char *value)</code></dt>
@@ -1166,38 +1166,38 @@ description: "libraptor – Raptor RDF parser and serializer library"
 <h3>1.4.1</h3>
 <p> The <code>raptor_xml_escape_string</code> now returns &lt;0 on failure rather than 0, so that if an empty string is escaped, 0 bytes required is returned.  </p>
 <h3>1.4.0</h3>
-<p> Added new <code>raptor_serializer</code> class supporting RDF/XML (name <code>rdfxml</code>) and N-Triples (name <code>ntriples</code>). <br />
- Added new <code>raptor_iostream</code> class <br />
- Added <code>raptor_stringbuffer_copy_to_string</code> to allow efficient copy-out of a constructed string. <br />
+<p> Added new <code>raptor_serializer</code> class supporting RDF/XML (name <code>rdfxml</code>) and N-Triples (name <code>ntriples</code>). <br/>
+ Added new <code>raptor_iostream</code> class <br/>
+ Added <code>raptor_stringbuffer_copy_to_string</code> to allow efficient copy-out of a constructed string. <br/>
  Added <code>raptor_www_fetch_to_string</code> to allow retrieving of web content as a single string.  </p>
 <h3>1.3.3</h3>
-<p> Added <code>raptor_calloc_memory</code> to provide a calloc inside raptor. <br />
+<p> Added <code>raptor_calloc_memory</code> to provide a calloc inside raptor. <br/>
  Added feature check_rdf_id (see raptor_set_feature documentation).  </p>
 <h3>1.3.2</h3>
 <p> Added <code>raptor_alloc_memory</code> to allocate memory inside raptor. </p>
 <p> Added accessor functions for the public raptor_locator structure: </p>
-<p> <code>raptor_locator_line</code> <br />
- <code>raptor_locator_column</code> <br />
- <code>raptor_locator_byte</code> <br />
- <code>raptor_locator_file</code> <br />
+<p> <code>raptor_locator_line</code> <br/>
+ <code>raptor_locator_column</code> <br/>
+ <code>raptor_locator_byte</code> <br/>
+ <code>raptor_locator_file</code> <br/>
  <code>raptor_locator_uri</code>  </p>
 <h3>1.3.1</h3>
 <p> Correct raptor_print_statement declaration argument statement to have one less &#8216;const&#8217;, to match the code.  </p>
 <h3>1.3.0</h3>
 <p> Added the following parser methods, utility methods and helper functions: </p>
-<p> <code>raptor_new_parser_for_content (Parser class constructor)</code> <br />
- <code>raptor_get_mime_type</code> <br />
- <code>raptor_get_feature</code> <br />
- <code>raptor_syntax_name_check</code> <br />
- <code>raptor_guess_parser_name</code> <br />
- <code>raptor_features_enumerate</code> <br />
- <code>raptor_feature_from_uri</code> <br />
+<p> <code>raptor_new_parser_for_content (Parser class constructor)</code> <br/>
+ <code>raptor_get_mime_type</code> <br/>
+ <code>raptor_get_feature</code> <br/>
+ <code>raptor_syntax_name_check</code> <br/>
+ <code>raptor_guess_parser_name</code> <br/>
+ <code>raptor_features_enumerate</code> <br/>
+ <code>raptor_feature_from_uri</code> <br/>
  <code>raptor_www_set_http_accept (WWW class)</code> </p>
 <p> Changed <code>raptor_set_feature</code> to now return an int success or failure. </p>
-<p> Added the following functions: <br />
- <code>raptor_free_memory</code> <br />
- <code>raptor_unicode_char_to_utf8</code> <br />
- <code>raptor_utf8_to_unicode_char</code> <br />
+<p> Added the following functions: <br/>
+ <code>raptor_free_memory</code> <br/>
+ <code>raptor_unicode_char_to_utf8</code> <br/>
+ <code>raptor_utf8_to_unicode_char</code> <br/>
  <code>raptor_vsnprintf</code> </p>
 <p> Added the raptor_sequence class, its constructor, destructor, methods and helper functions. </p>
 <p> Added the raptor_stringbuffer class and constructor, destructor and methods. </p>
@@ -1208,35 +1208,35 @@ description: "libraptor – Raptor RDF parser and serializer library"
 <h3>1.1.0</h3>
 <p> Added N-Triples Plus parser (name ntriples-plus) </p>
 <p> Made URI class constructors, methods and factory methods as well as some other utility functions using or returning URIs or literals take unsigned char* rather than char*. The affected calls are: </p>
-<p> URI factory methods changed to all take/return unsigned char* for URI strings: <br />
- <code>raptor_new_uri_func</code> <br />
- <code>raptor_new_uri_from_local_name_func</code> <br />
- <code>raptor_new_uri_relative_to_base_func</code> <br />
- <code>raptor_uri_as_string_func</code> <br />
+<p> URI factory methods changed to all take/return unsigned char* for URI strings: <br/>
+ <code>raptor_new_uri_func</code> <br/>
+ <code>raptor_new_uri_from_local_name_func</code> <br/>
+ <code>raptor_new_uri_relative_to_base_func</code> <br/>
+ <code>raptor_uri_as_string_func</code> <br/>
  <code>raptor_uri_as_counted_string_func</code> </p>
-<p> Constructors and methods changed to take/return unsigned char* for URI strings: <br />
- <code>raptor_statement_part_as_counted_string</code> <br />
- <code>raptor_statement_part_as_string</code> <br />
- <code>raptor_new_uri</code> <br />
- <code>raptor_new_uri_from_uri_local_name</code> <br />
- <code>raptor_new_uri_relative_to_base</code> <br />
- <code>raptor_uri_as_string</code> <br />
- <code>raptor_uri_as_counted_string</code> <br />
+<p> Constructors and methods changed to take/return unsigned char* for URI strings: <br/>
+ <code>raptor_statement_part_as_counted_string</code> <br/>
+ <code>raptor_statement_part_as_string</code> <br/>
+ <code>raptor_new_uri</code> <br/>
+ <code>raptor_new_uri_from_uri_local_name</code> <br/>
+ <code>raptor_new_uri_relative_to_base</code> <br/>
+ <code>raptor_uri_as_string</code> <br/>
+ <code>raptor_uri_as_counted_string</code> <br/>
  <code>raptor_print_ntriples_string</code> </p>
-<p> Changed to use unsigned char* for URI strings, char* for filenames: <br />
- <code>raptor_uri_resolve_uri_reference</code> <br />
- <code>raptor_uri_filename_to_uri_string</code> <br />
- <code>raptor_uri_uri_string_to_filename</code> <br />
- <code>raptor_uri_uri_string_to_filename_fragment</code> <br />
+<p> Changed to use unsigned char* for URI strings, char* for filenames: <br/>
+ <code>raptor_uri_resolve_uri_reference</code> <br/>
+ <code>raptor_uri_filename_to_uri_string</code> <br/>
+ <code>raptor_uri_uri_string_to_filename</code> <br/>
+ <code>raptor_uri_uri_string_to_filename_fragment</code> <br/>
  <code>raptor_uri_is_file_uri</code> </p>
-<p> Changed to return unsigned char* for UTF8 string: <br />
+<p> Changed to return unsigned char* for UTF8 string: <br/>
  <code>raptor_ntriples_string_as_utf8_string</code> </p>
 <p> Added <code>raptor_parsers_enumerate</code> to discover supported parsers. </p>
 <p> Added <code>raptor_uri_uri_string_to_filename_fragment</code> with fragment arg to return the URI fragment. </p>
 <p> Made the raptor_namespace, raptor_namespace_stack and raptor_qname class and APIs public. </p>
 <p> Added feature non_nfc_fatal (see raptor_set_feature documentation).  </p>
 <h3>1.0.0</h3>
-<p> Removed the following deprecated methods and functions (see 0.9.6 changes for the new names): <br />
+<p> Removed the following deprecated methods and functions (see 0.9.6 changes for the new names): <br/>
  <code>raptor_free</code>, <code>raptor_new</code>, <code>raptor_ntriples_free</code>, <code>raptor_ntriples_new</code>, <code>raptor_ntriples_parse_file</code>, <code>raptor_ntriples_set_error_handler</code>, <code>raptor_ntriples_set_fatal_error_handler</code>, <code>raptor_ntriples_set_statement_handler</code> and <code>raptor_parser_abort</code>. </p>
 <p> Added <code>raptor_parse_file_stream</code> for reading FILE* streams without necessarily having a file.  </p>
 <h3>0.9.12</h3>
@@ -1258,24 +1258,24 @@ description: "libraptor – Raptor RDF parser and serializer library"
 <p> Added <code>raptor_new_uri_for_xmlbase</code>.  </p>
 <h3>0.9.6</h3>
 <p> In this version, the raptor/ntriples parser calling APIs were modified. The following table lists the changes: </p>
-<p> <i>OLD API <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>NEW API (0.9.6+)</i><br />
- <br />
- <code>raptor_new()</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code><code>raptor_new_parser(&quot;rdfxml&quot;)</code><br />
- <br />
- <code>ntriples_new()</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code><code>raptor_new_parser(&quot;ntriples&quot;)</code><br />
- <br />
- <code>raptor_free</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code><code>raptor_free_parser</code><br />
- <br />
- <code>ntriples_free</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code><code>raptor_ntriples_parser</code><br />
- <br />
- <code>raptor_ntriples_parse_file</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code><code>raptor_parse_file</code><br />
- <br />
- <code>raptor_ntriples_set_error_handler</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code><code>raptor_set_error_handler</code><br />
- <br />
- <code>raptor_ntriples_set_fatal_error_handler</code><code>&nbsp;<wbr></code><code>raptor_set_fatal_error_handler</code><br />
- <br />
- <code>raptor_ntriples_set_statement_handler</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code><code>raptor_set_statement_handler</code><br />
- <br />
+<p> <i>OLD API <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>NEW API (0.9.6+)</i><br/>
+ <br/>
+ <code>raptor_new()</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code><code>raptor_new_parser(&quot;rdfxml&quot;)</code><br/>
+ <br/>
+ <code>ntriples_new()</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code><code>raptor_new_parser(&quot;ntriples&quot;)</code><br/>
+ <br/>
+ <code>raptor_free</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code><code>raptor_free_parser</code><br/>
+ <br/>
+ <code>ntriples_free</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code><code>raptor_ntriples_parser</code><br/>
+ <br/>
+ <code>raptor_ntriples_parse_file</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code><code>raptor_parse_file</code><br/>
+ <br/>
+ <code>raptor_ntriples_set_error_handler</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code><code>raptor_set_error_handler</code><br/>
+ <br/>
+ <code>raptor_ntriples_set_fatal_error_handler</code><code>&nbsp;<wbr></code><code>raptor_set_fatal_error_handler</code><br/>
+ <br/>
+ <code>raptor_ntriples_set_statement_handler</code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code><code>raptor_set_statement_handler</code><br/>
+ <br/>
   </p>
 <h2>CONFORMING TO</h2>
 <p> <i>RDF/XML Syntax (Revised)</i>, Dave Beckett (ed.) W3C Recommendation, <a rel="nofollow" href="http://www.w3.org/TR/rdf-syntax-grammar/">http://www.w3.org/TR/rdf-syntax-grammar/</a> </p>

@@ -63,6 +63,6 @@ description: "subnetcalc – IPv4/IPv6 Subnet Calculator"
 </dd><dt><code>subnetcalc räksmörgås.josefsson.org 24</code></dt>
 <dd></dd></dl>
 <h2>AUTHORS</h2>
-<p> Thomas Dreibholz<br />
- <a rel="nofollow" href="http://www.iem.uni-due.de/~dreibh/subnetcalc">http://www.iem.uni-due.de/~dreibh/subnetcalc</a><br />
+<p> Thomas Dreibholz<br/>
+ <a rel="nofollow" href="http://www.iem.uni-due.de/~dreibh/subnetcalc">http://www.iem.uni-due.de/~dreibh/subnetcalc</a><br/>
  mailto://dreibh [at] iem.uni-due.de </p>

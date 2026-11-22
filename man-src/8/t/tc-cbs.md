@@ -30,10 +30,10 @@ description: "CBS – Credit Based Shaper (CBS) Qdisc"
 <dd>When <code>offload</code> is 1, <code>cbs(8)</code> will try to configure the network interface so the CBS algorithm runs in the controller. The default is 0. </dd>
 </dl>
 <h2>Examples</h2>
-<p>CBS is used to enforce a Quality of Service by limiting the data rate of a traffic class, to separate packets into traffic classes the user may choose <code>mqprio(8),</code> and configure it like this: # tc qdisc add dev eth0 handle 100: parent root mqprio num_tc 3 \ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>map 2 2 1 0 2 2 2 2 2 2 2 2 2 2 2 2 \<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>queues 1@0 1@1 2@2 \<br />
- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>hw 0<br />
- To replace the current queuing disciple by CBS in the current queueing discipline connected to traffic class number 0, issue: # tc qdisc replace dev eth0 parent 100:4 cbs \ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>locredit -1470 hicredit 30 sendslope -980000 idleslope 20000<br />
+<p>CBS is used to enforce a Quality of Service by limiting the data rate of a traffic class, to separate packets into traffic classes the user may choose <code>mqprio(8),</code> and configure it like this: # tc qdisc add dev eth0 handle 100: parent root mqprio num_tc 3 \ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>map 2 2 1 0 2 2 2 2 2 2 2 2 2 2 2 2 \<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>queues 1@0 1@1 2@2 \<br/>
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>hw 0<br/>
+ To replace the current queuing disciple by CBS in the current queueing discipline connected to traffic class number 0, issue: # tc qdisc replace dev eth0 parent 100:4 cbs \ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>locredit -1470 hicredit 30 sendslope -980000 idleslope 20000<br/>
  These values are obtained from the following parameters, idleslope is 20mbit/s, the transmission rate is 1Gbit/s and the maximum interfering frame size is 1500 bytes. </p>
 <h2>Authors</h2>
 <p>Vinicius Costa Gomes &lt;vinicius.gomes [at] intel.com&gt;</p>

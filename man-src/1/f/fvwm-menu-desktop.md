@@ -98,25 +98,25 @@ AddToMenu MenuRoot &quot;Root Menu&quot; Title
 <dl>
 <dt>
 </dt><dd>
-<p>AddToMenu Utilities &#8220;Preferences Menu&#8221; Popup FvwmPref<br />
-    PipeRead &#8216;fvwm-menu-desktop &#8211;desktop kde &#8211;menu-type preferences \<br />
+<p>AddToMenu Utilities &#8220;Preferences Menu&#8221; Popup FvwmPref<br/>
+    PipeRead &#8216;fvwm-menu-desktop &#8211;desktop kde &#8211;menu-type preferences \<br/>
                             &#8211;title FvwmPref [other options]&#8217;</p>
 </dd></dl>
 <p> If you think that <code>fvwm-menu-desktop</code> slows down your menu startup too much do not use <code>PipeRead</code>. Instead run <code>fvwm-menu-desktop</code> and redirect the menu to a file and read that file in your .fvwm2rc file. </p>
 <dl>
 <dt>
 </dt><dd>
-<p>AddToMenu MenuRoot &#8220;XDG Menus&#8221; Popup FvwmMenu&#8230; AddToMenu FvwmMenu + DynamicPopupAction Function FuncRecreateXdgMenus&#8230; DestroyFunc FuncRecreateXdgMenus AddToFunc FuncRecreateXdgMenus + I Test(f $[FVWM_USERDIR] /.menu) Read $[FVWM_USERDIR] /.menu<br />
-    + I TestRC(!Match) PipeRead &#8216;fvwm-menu-desktop &gt; $[FVWM_USERDIR]/.menu \<br />
+<p>AddToMenu MenuRoot &#8220;XDG Menus&#8221; Popup FvwmMenu&#8230; AddToMenu FvwmMenu + DynamicPopupAction Function FuncRecreateXdgMenus&#8230; DestroyFunc FuncRecreateXdgMenus AddToFunc FuncRecreateXdgMenus + I Test(f $[FVWM_USERDIR] /.menu) Read $[FVWM_USERDIR] /.menu<br/>
+    + I TestRC(!Match) PipeRead &#8216;fvwm-menu-desktop &gt; $[FVWM_USERDIR]/.menu \<br/>
                               &amp;&amp;  echo &#8220;Read $[FVWM_USERDIR]/.menu&#8221;&#8216;</p>
 </dd></dl>
 <p> or if you want to show the menus directly in a normal &quot;Root&quot; menu use this: </p>
 <dl>
 <dt>
 </dt><dd>
-<p>AddToMenu MenuRoot &#8220;Root Menu&#8221; Title + FuncXdgMenusInRoot&#8230; DestroyFunc FuncXdgMenusInRoot AddToFunc FuncXdgMenusInRoot + I Test(f $[FVWM_USERDIR] /.menu) Read $[FVWM_USERDIR] /.menu<br />
-    + I TestRC(!Match) PipeRead &#8216;fvwm-menu-desktop &#8211;insert-in-menu MenuRoot \<br />
-                              &gt; $[FVWM_USERDIR]/.menu \<br />
+<p>AddToMenu MenuRoot &#8220;Root Menu&#8221; Title + FuncXdgMenusInRoot&#8230; DestroyFunc FuncXdgMenusInRoot AddToFunc FuncXdgMenusInRoot + I Test(f $[FVWM_USERDIR] /.menu) Read $[FVWM_USERDIR] /.menu<br/>
+    + I TestRC(!Match) PipeRead &#8216;fvwm-menu-desktop &#8211;insert-in-menu MenuRoot \<br/>
+                              &gt; $[FVWM_USERDIR]/.menu \<br/>
                               &amp;&amp; echo &#8220;Read $[FVWM_USERDIR]/.menu&#8221;&#8216;</p>
 </dd></dl>
 <p> The problem here is, that you have to restart fvwm because items insserted into such a menu cannot be removed. For that BOTH menus must be regenerated: </p>

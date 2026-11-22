@@ -10,7 +10,7 @@ description: "XkbAddGeomRow – Add a row to a section"
 <p>XkbAddGeomRow &#8211; Add a row to a section </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>XkbRowPtr XkbAddGeomRow</code> <code>(XkbSectionPtr </code><i>section</i><code>,</code> <code>int </code><i>sz_keys</i><code>);</code><br />
+<dt> <code>XkbRowPtr XkbAddGeomRow</code> <code>(XkbSectionPtr </code><i>section</i><code>,</code> <code>int </code><i>sz_keys</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

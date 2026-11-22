@@ -17,31 +17,31 @@ perl5263delta - what is new for perl v5.26.3
 
 <h2>Security</h2>
 
-<h3>[<font SIZE="-1">CVE-2018-12015</font>] Directory traversal in module Archive::Tar</h3>
+<h3>[CVE-2018-12015] Directory traversal in module Archive::Tar</h3>
 
  By default, Archive::Tar doesn't allow extracting files outside the current working directory. However, this secure extraction mode could be bypassed by putting a symlink and a regular file with the same name into the tar file. 
 
  [perl #133250] &lt;<a rel="nofollow" HREF="https://rt.perl.org/Ticket/Display.html?id=133250">https://rt.perl.org/Ticket/Display.html?id=133250</a>&gt; [cpan #125523] &lt;<a rel="nofollow" HREF="https://rt.cpan.org/Ticket/Display.html?id=125523">https://rt.cpan.org/Ticket/Display.html?id=125523</a>&gt;
 
-<h3>[<font SIZE="-1">CVE-2018-18311</font>] Integer overflow leading to buffer overflow and segmentation fault</h3>
+<h3>[CVE-2018-18311] Integer overflow leading to buffer overflow and segmentation fault</h3>
 
  Integer arithmetic in <tt>&quot;Perl_my_setenv()&quot;</tt> could wrap when the combined length of the environment variable name and value exceeded around 0x7fffffff. This could lead to writing beyond the end of an allocated buffer with attacker supplied data. 
 
  [perl #133204] &lt;<a rel="nofollow" HREF="https://rt.perl.org/Ticket/Display.html?id=133204">https://rt.perl.org/Ticket/Display.html?id=133204</a>&gt;
 
-<h3>[<font SIZE="-1">CVE-2018-18312</font>] Heap-buffer-overflow write in S_regatom (regcomp.c)</h3>
+<h3>[CVE-2018-18312] Heap-buffer-overflow write in S_regatom (regcomp.c)</h3>
 
  A crafted regular expression could cause heap-buffer-overflow write during compilation, potentially allowing arbitrary code execution. 
 
  [perl #133423] &lt;<a rel="nofollow" HREF="https://rt.perl.org/Ticket/Display.html?id=133423">https://rt.perl.org/Ticket/Display.html?id=133423</a>&gt;
 
-<h3>[<font SIZE="-1">CVE-2018-18313</font>] Heap-buffer-overflow read in S_grok_bslash_N (regcomp.c)</h3>
+<h3>[CVE-2018-18313] Heap-buffer-overflow read in S_grok_bslash_N (regcomp.c)</h3>
 
  A crafted regular expression could cause heap-buffer-overflow read during compilation, potentially leading to sensitive information being leaked. 
 
  [perl #133192] &lt;<a rel="nofollow" HREF="https://rt.perl.org/Ticket/Display.html?id=133192">https://rt.perl.org/Ticket/Display.html?id=133192</a>&gt;
 
-<h3>[<font SIZE="-1">CVE-2018-18314</font>] Heap-buffer-overflow write in S_regatom (regcomp.c)</h3>
+<h3>[CVE-2018-18314] Heap-buffer-overflow write in S_regatom (regcomp.c)</h3>
 
  A crafted regular expression could cause heap-buffer-overflow write during compilation, potentially allowing arbitrary code execution. 
 
@@ -70,10 +70,10 @@ perl5263delta - what is new for perl v5.26.3
  <i>New Errors</i>
 <dl>
 <dt>&bull;
-</dt><dd> Unexpected ']' with no following ')' in (?[... in regex; marked by &lt;-- <font SIZE="-1">HERE</font> in m/%s/ 
+</dt><dd> Unexpected ']' with no following ')' in (?[... in regex; marked by &lt;-- HERE in m/%s/ 
  (F) While parsing an extended character class a ']' character was encountered at a point in the definition where the only legal use of ']' is to close the character class definition as part of a '])', you may have forgotten the close paren, or otherwise confused the parser.
 </dd><dt>&bull;
-</dt><dd> Expecting close paren for nested extended charclass in regex; marked by &lt;-- <font SIZE="-1">HERE</font> in m/%s/ 
+</dt><dd> Expecting close paren for nested extended charclass in regex; marked by &lt;-- HERE in m/%s/ 
  (F) While parsing a nested extended character class like: 
  <pre><code>
     (?[ ... (?flags:(?[ ... ])) ... ])
@@ -81,7 +81,7 @@ perl5263delta - what is new for perl v5.26.3
 </code></pre> 
  we expected to see a close paren ')' (marked by ^) but did not.
 </dd><dt>&bull;
-</dt><dd> Expecting close paren for wrapper for nested extended charclass in regex; marked by &lt;-- <font SIZE="-1">HERE</font> in m/%s/ 
+</dt><dd> Expecting close paren for wrapper for nested extended charclass in regex; marked by &lt;-- HERE in m/%s/ 
  (F) While parsing a nested extended character class like: 
  <pre><code>
     (?[ ... (?flags:(?[ ... ])) ... ])
@@ -93,7 +93,7 @@ perl5263delta - what is new for perl v5.26.3
 
 <dl>
 <dt>&bull;
-</dt><dd> Syntax error in (?[...]) in regex; marked by &lt;-- <font SIZE="-1">HERE</font> in m/%s/ 
+</dt><dd> Syntax error in (?[...]) in regex; marked by &lt;-- HERE in m/%s/ 
  This fatal error message has been slightly expanded (from ``Syntax error in (?[...]) in regex m/%s/'') for greater clarity.</dd></dl>
 
 <h2>Acknowledgements</h2>
@@ -104,13 +104,13 @@ perl5263delta - what is new for perl v5.26.3
 
  Perl continues to flourish into its third decade thanks to a vibrant community of users and developers. The following people are known to have contributed the improvements that became Perl 5.26.3: 
 
- Aaron Crane, Abigail, Chris 'BinGOs' Williams, Dagfinn Ilmari Mannsåker, David Mitchell, H.Merijn Brand, James E Keenan, John <font SIZE="-1">SJ</font> Anderson, Karen Etheridge, Karl Williamson, Sawyer X, Steve Hay, Todd Rinaldo, Tony Cook, Yves Orton. 
+ Aaron Crane, Abigail, Chris 'BinGOs' Williams, Dagfinn Ilmari Mannsåker, David Mitchell, H.Merijn Brand, James E Keenan, John SJ Anderson, Karen Etheridge, Karl Williamson, Sawyer X, Steve Hay, Todd Rinaldo, Tony Cook, Yves Orton. 
 
  The list above is almost certainly incomplete as it is automatically generated from version control history. In particular, it does not include the names of the (very much appreciated) contributors who reported issues to the Perl bug tracker. 
 
- Many of the changes included in this version originated in the <font SIZE="-1">CPAN</font> modules included in Perl's core. We're grateful to the entire <font SIZE="-1">CPAN</font> community for helping Perl to flourish. 
+ Many of the changes included in this version originated in the CPAN modules included in Perl's core. We're grateful to the entire CPAN community for helping Perl to flourish. 
 
- For a more complete list of all of Perl's historical contributors, please see the <i></i><font SIZE="-1"><i>AUTHORS</i></font><i></i> file in the Perl source distribution.
+ For a more complete list of all of Perl's historical contributors, please see the <i></i><i>AUTHORS</i><i></i> file in the Perl source distribution.
 
 <h2>Reporting Bugs</h2>
 
@@ -118,7 +118,7 @@ perl5263delta - what is new for perl v5.26.3
 
  If you believe you have an unreported bug, please run the perlbug program included with your release. Be sure to trim your bug down to a tiny but sufficient test case. Your bug report, along with the output of <tt>&quot;perl -V&quot;</tt>, will be sent off to perlbug [at] perl.org to be analysed by the Perl porting team. 
 
- If the bug you are reporting has security implications which make it inappropriate to send to a publicly archived mailing list, then see ``<font SIZE="-1">SECURITY VULNERABILITY CONTACT INFORMATION''</font> in perlsec for details of how to report the issue.
+ If the bug you are reporting has security implications which make it inappropriate to send to a publicly archived mailing list, then see ``SECURITY VULNERABILITY CONTACT INFORMATION'' in perlsec for details of how to report the issue.
 
 <h2>Give Thanks</h2>
 
@@ -134,9 +134,9 @@ perl5263delta - what is new for perl v5.26.3
 
  The <i>Changes</i> file for an explanation of how to view exhaustive details on what changed. 
 
- The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. 
+ The <i></i><i>INSTALL</i><i></i> file for how to build Perl. 
 
- The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. 
+ The <i></i><i>README</i><i></i> file for general stuff. 
 
  The <i>Artistic</i> and <i>Copying</i> files for copyright information. 
 

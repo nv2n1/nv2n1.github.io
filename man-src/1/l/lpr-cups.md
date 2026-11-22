@@ -64,7 +64,7 @@ description: "lpr – print files"
 <h2>COMPATIBILITY</h2>
 <p> The &quot;c&quot;, &quot;d&quot;, &quot;f&quot;, &quot;g&quot;, &quot;i&quot;, &quot;n&quot;, &quot;t&quot;, &quot;v&quot;, and &quot;w&quot; options are not supported by CUPS and produce a warning message if used.</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-cancel/">cancel</a>(1)</i>, <i><a href="/docs/linux/man/1-lp/">lp</a>(1)</i>, <i><a href="/docs/linux/man/8-lpadmin/">lpadmin</a>(8)</i>, <i><a href="/docs/linux/man/1-lpoptions/">lpoptions</a>(1)</i>, <i><a href="/docs/linux/man/1-lpq/">lpq</a>(1)</i>, <i><a href="/docs/linux/man/1-lprm/">lprm</a>(1)</i>, <i><a href="/docs/linux/man/1-lpstat/">lpstat</a>(1)</i>,<br />
+<p> <i><a href="/docs/linux/man/1-cancel/">cancel</a>(1)</i>, <i><a href="/docs/linux/man/1-lp/">lp</a>(1)</i>, <i><a href="/docs/linux/man/8-lpadmin/">lpadmin</a>(8)</i>, <i><a href="/docs/linux/man/1-lpoptions/">lpoptions</a>(1)</i>, <i><a href="/docs/linux/man/1-lpq/">lpq</a>(1)</i>, <i><a href="/docs/linux/man/1-lprm/">lprm</a>(1)</i>, <i><a href="/docs/linux/man/1-lpstat/">lpstat</a>(1)</i>,<br/>
  <a rel="nofollow" href="http://localhost:631/help">http://localhost:631/help</a></p>
 <h2>COPYRIGHT</h2>
 <p> Copyright 2007-2013 by Apple Inc. </p>

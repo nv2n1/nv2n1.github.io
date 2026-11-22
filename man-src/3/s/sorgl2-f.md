@@ -10,7 +10,7 @@ description: "sorgl2.f –"
 <p>sorgl2.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>sorgl2</code> (M, N, K, A, LDA, TAU, WORK, INFO)<br />
+<p>subroutine <code>sorgl2</code> (M, N, K, A, LDA, TAU, WORK, INFO)<br/>
  <i></i><code>SORGL2</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sorgl2 (integerM, integerN, integerK, real, dimension( lda, * )A, integerLDA, real, dimension( * )TAU, real, dimension( * )WORK, integerINFO)</h3>

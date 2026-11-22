@@ -11,7 +11,7 @@ description: "slasq3.f –"
 <p> slasq3.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>slasq3</code> (I0, N0, Z, PP, DMIN, SIGMA, DESIG, QMAX, NFAIL, ITER, NDIV, IEEE, TTYPE, DMIN1, DMIN2, DN, DN1, DN2, G, TAU)<br />
+<p> subroutine <code>slasq3</code> (I0, N0, Z, PP, DMIN, SIGMA, DESIG, QMAX, NFAIL, ITER, NDIV, IEEE, TTYPE, DMIN1, DMIN2, DN, DN1, DN2, G, TAU)<br/>
  <i></i><code>SLASQ3</code> checks for deflation, computes a shift and calls dqds. Used by sbdsqr.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slasq3 (integerI0, integerN0, real, dimension( * )Z, integerPP, realDMIN, realSIGMA, realDESIG, realQMAX, integerNFAIL, integerITER, integerNDIV, logicalIEEE, integerTTYPE, realDMIN1, realDMIN2, realDN, realDN1, realDN2, realG, realTAU)</h3>

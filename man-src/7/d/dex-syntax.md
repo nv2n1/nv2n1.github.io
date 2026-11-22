@@ -93,34 +93,34 @@ description: "Syntax of syntax highlighting files used by dex."
 <p> Sub-syntax is a syntax of which some destination state&#8217;s name is END. END is a special state name which is replaced by state given at another syntax. </p>
 <p> Example: </p>
 <dl>
-<dd># sub-syntax<br />
+<dd># sub-syntax<br/>
  syntax .c-comment</dd></dl>
 <dl>
 <dd>state comment</dd>
 <dl>
-<dd>char &quot;*&quot; star<br />
+<dd>char &quot;*&quot; star<br/>
  eat comment</dd></dl>
 </dl>
 <dl>
 <dd>state star comment</dd>
 <dl>
-<dd># END is a special state name<br />
- char / END comment<br />
+<dd># END is a special state name<br/>
+ char / END comment<br/>
  noeat comment</dd></dl>
 </dl>
 <dl>
-<dd># main syntax<br />
+<dd># main syntax<br/>
  syntax c</dd></dl>
 <dl>
 <dd>state c code</dd>
 <dl>
 <dd>char &quot; 	
-&quot; c<br />
- char -b a-zA-Z_ ident<br />
- char &quot;\&quot;&quot; string<br />
- char &quot;&#8217;&quot; char<br />
- # call sub-syntax<br />
- str &quot;/*&quot; .c-comment:c<br />
+&quot; c<br/>
+ char -b a-zA-Z_ ident<br/>
+ char &quot;\&quot;&quot; string<br/>
+ char &quot;&#8217;&quot; char<br/>
+ # call sub-syntax<br/>
+ str &quot;/*&quot; .c-comment:c<br/>
  eat c</dd></dl>
 </dl>
 <dl>

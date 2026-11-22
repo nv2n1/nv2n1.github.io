@@ -41,12 +41,12 @@ description: "cockpit-ws – Cockpit web service"
 <dl>
 <dd>Don&#8217;t use TLS.</dd></dl>
 <h2>Environment</h2>
-<p>The <code>cockpit-ws</code> process will use the XDG_CONFIG_DIRS environment variable from the m[blue]<code>XDG basedir spec</code>m[]<font SIZE="-2">[1]</font> to find its <code><a href="/docs/linux/man/5-cockpit-conf/">cockpit.conf</a></code>(5) configuration file. </p>
-<p> In addition the XDG_DATA_DIRS environment variable from the m[blue]<code>XDG basedir spec</code>m[]<font SIZE="-2">[1]</font> can be used to override the location to serve static files from. These are the files that are served to a non-logged in user.</p>
+<p>The <code>cockpit-ws</code> process will use the XDG_CONFIG_DIRS environment variable from the m[blue]<code>XDG basedir spec</code>m[][1] to find its <code><a href="/docs/linux/man/5-cockpit-conf/">cockpit.conf</a></code>(5) configuration file. </p>
+<p> In addition the XDG_DATA_DIRS environment variable from the m[blue]<code>XDG basedir spec</code>m[][1] can be used to override the location to serve static files from. These are the files that are served to a non-logged in user.</p>
 <h2>Bugs</h2>
-<p>Please send bug reports to either the distribution bug tracker or the m[blue]<code>upstream bug tracker</code>m[]<font SIZE="-2">[2]</font>.</p>
+<p>Please send bug reports to either the distribution bug tracker or the m[blue]<code>upstream bug tracker</code>m[][2].</p>
 <h2>Author</h2>
-<p>Cockpit has been written by many m[blue]<code>contributors</code>m[]<font SIZE="-2">[3]</font>.</p>
+<p>Cockpit has been written by many m[blue]<code>contributors</code>m[][3].</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-cockpit-conf/">cockpit.conf</a></code>(5) , <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1)</p>
 <h2>Notes</h2>

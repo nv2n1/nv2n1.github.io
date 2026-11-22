@@ -11,7 +11,7 @@ description: "sgelq2.f –"
 <p> sgelq2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>sgelq2</code> (M, N, A, LDA, TAU, WORK, INFO)<br />
+<p> subroutine <code>sgelq2</code> (M, N, A, LDA, TAU, WORK, INFO)<br/>
  <i></i><code>SGELQ2</code> computes the LQ factorization of a general rectangular matrix using an unblocked algorithm.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sgelq2 (integerM, integerN, real, dimension( lda, * )A, integerLDA, real, dimension( * )TAU, real, dimension( * )WORK, integerINFO)</h3>

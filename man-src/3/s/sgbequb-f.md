@@ -10,7 +10,7 @@ description: "sgbequb.f –"
 <p>sgbequb.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>sgbequb</code> (M, N, KL, KU, AB, LDAB, R, C, ROWCND, COLCND, AMAX, INFO)<br />
+<p>subroutine <code>sgbequb</code> (M, N, KL, KU, AB, LDAB, R, C, ROWCND, COLCND, AMAX, INFO)<br/>
  <i></i><code>SGBEQUB</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sgbequb (integerM, integerN, integerKL, integerKU, real, dimension( ldab, * )AB, integerLDAB, real, dimension( * )R, real, dimension( * )C, realROWCND, realCOLCND, realAMAX, integerINFO)</h3>

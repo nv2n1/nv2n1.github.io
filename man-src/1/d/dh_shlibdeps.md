@@ -13,7 +13,7 @@ description: "dh_shlibdeps – calculate shared library dependencies"
 <p> <code>dh_shlibdeps</code> [<i>debhelper options</i>] [<code>-L</code><i>package</i>] [<code>-l</code><i>directory</i>] [<code>-X</code><i>item</i>] [<code>&#8212;</code> <i>params</i>]</p>
 <h2>DESCRIPTION</h2>
 <p> <code>dh_shlibdeps</code> is a debhelper program that is responsible for calculating shared library dependencies for packages. </p>
-<p> This program is merely a wrapper around <i><a href="/docs/linux/man/1-dpkg-shlibdeps/">dpkg-shlibdeps</a></i>(1) that calls it once for each package listed in the <i>control</i> file, passing it a list of <font SIZE="-1">ELF</font> executables and shared libraries it has found.</p>
+<p> This program is merely a wrapper around <i><a href="/docs/linux/man/1-dpkg-shlibdeps/">dpkg-shlibdeps</a></i>(1) that calls it once for each package listed in the <i>control</i> file, passing it a list of ELF executables and shared libraries it has found.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-X</code><i>item</i>, <code>&#8211;exclude=</code><i>item</i></dt>

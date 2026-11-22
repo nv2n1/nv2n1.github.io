@@ -8,7 +8,7 @@ url: "/docs/linux/man/1-oggz-scan/"
 description: "oggz-scan — Scan an Ogg file and output characteristic landmarks"
 ---
 
-<p> oggz-scan &#8212; Scan an Ogg file and output characteristic landmarks<br />
+<p> oggz-scan &#8212; Scan an Ogg file and output characteristic landmarks<br/>
 &nbsp;<wbr></p>
 <h2>SYNOPSIS</h2>
 <p> <code>oggz-scan</code> [-k | &#8211;keyframe ] [-o <code>filename</code> | &#8211;output <code>filename</code> ] [-f <code>format</code> | &#8211;format <code>format</code> ] filename </p>
@@ -16,7 +16,7 @@ description: "oggz-scan — Scan an Ogg file and output characteristic landmarks
 <h2>Description</h2>
 <p> <code>oggz-scan</code> scans the content of an Ogg file and outputs timestamps of characteristic features.</p>
 <h2>Options</h2>
-<p> <code>oggz-scan</code> accepts the following options:<br />
+<p> <code>oggz-scan</code> accepts the following options:<br/>
 &nbsp;<wbr></p>
 <h3>Output options</h3>
 <dl>
@@ -37,7 +37,7 @@ description: "oggz-scan — Scan an Ogg file and output characteristic landmarks
 <h2>AUTHOR</h2>
 <p> Silvia Pfeiffer October 7, 2005;</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2005 CSIRO Australia<br />
+<p> Copyright &#169; 2005 CSIRO Australia<br/>
 &nbsp;<wbr></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-oggz-dump/">oggz-dump</a></code><code>(1)</code>, <code><a href="/docs/linux/man/1-oggz-info/">oggz-info</a></code><code>(1)</code>, <code><a href="/docs/linux/man/1-oggz-rip/">oggz-rip</a></code><code>(1)</code>, <code><a href="/docs/linux/man/1-oggz-validate/">oggz-validate</a></code><code>(1)</code> </p>

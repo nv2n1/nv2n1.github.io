@@ -32,11 +32,11 @@ perlmod - Perl modules (packages and symbol tables)
 
  Typically, a <tt>&quot;package&quot;</tt> statement is the first declaration in a file included in a program by one of the <tt>&quot;do&quot;</tt>, <tt>&quot;require&quot;</tt>, or <tt>&quot;use&quot;</tt> operators. You can switch into a package in more than one place: <tt>&quot;package&quot;</tt> has no effect beyond specifying which symbol table the compiler will use for dynamic symbols for the rest of that block or until the next <tt>&quot;package&quot;</tt> statement. You can refer to variables and filehandles in other packages by prefixing the identifier with the package name and a double colon: <tt>$Package::Variable</tt>. If the package name is null, the <tt>&quot;main&quot;</tt> package is assumed. That is, <tt>$::sail</tt> is equivalent to <tt>$main::sail</tt>. 
 
- The old package delimiter was a single quote, but double colon is now the preferred delimiter, in part because it's more readable to humans, and in part because it's more readable to <b>emacs</b> macros. It also makes C<font SIZE="-2">++</font> programmers feel like they know what's going on---as opposed to using the single quote as separator, which was there to make Ada programmers feel like they knew what was going on. Because the old-fashioned syntax is still supported for backwards compatibility, if you try to use a string like <tt>&quot;This is $owner's house&quot;</tt>, you'll be accessing <tt>$owner::s</tt>; that is, the <tt>$s</tt> variable in package <tt>&quot;owner&quot;</tt>, which is probably not what you meant. Use braces to disambiguate, as in <tt>&quot;This is ${owner}'s house&quot;</tt>. 
+ The old package delimiter was a single quote, but double colon is now the preferred delimiter, in part because it's more readable to humans, and in part because it's more readable to <b>emacs</b> macros. It also makes C++ programmers feel like they know what's going on---as opposed to using the single quote as separator, which was there to make Ada programmers feel like they knew what was going on. Because the old-fashioned syntax is still supported for backwards compatibility, if you try to use a string like <tt>&quot;This is $owner's house&quot;</tt>, you'll be accessing <tt>$owner::s</tt>; that is, the <tt>$s</tt> variable in package <tt>&quot;owner&quot;</tt>, which is probably not what you meant. Use braces to disambiguate, as in <tt>&quot;This is ${owner}'s house&quot;</tt>. 
 
  Packages may themselves contain package separators, as in <tt>$OUTER::INNER::var</tt>. This implies nothing about the order of name lookups, however. There are no relative packages: all symbols are either local to the current package, or must be fully qualified from the outer package name down. For instance, there is nowhere within package <tt>&quot;OUTER&quot;</tt> that <tt>$INNER::var</tt> refers to <tt>$OUTER::INNER::var</tt>. <tt>&quot;INNER&quot;</tt> refers to a totally separate global package. The custom of treating package names as a hierarchy is very strong, but the language in no way enforces it. 
 
- Only identifiers starting with letters (or underscore) are stored in a package's symbol table. All other symbols are kept in package <tt>&quot;main&quot;</tt>, including all punctuation variables, like <tt>$_</tt>. In addition, when unqualified, the identifiers <font SIZE="-1">STDIN, STDOUT, STDERR, ARGV, ARGVOUT, ENV, INC,</font> and <font SIZE="-1">SIG</font> are forced to be in package <tt>&quot;main&quot;</tt>, even when used for other purposes than their built-in ones. If you have a package called <tt>&quot;m&quot;</tt>, <tt>&quot;s&quot;</tt>, or <tt>&quot;y&quot;</tt>, then you can't use the qualified form of an identifier because it would be instead interpreted as a pattern match, a substitution, or a transliteration. 
+ Only identifiers starting with letters (or underscore) are stored in a package's symbol table. All other symbols are kept in package <tt>&quot;main&quot;</tt>, including all punctuation variables, like <tt>$_</tt>. In addition, when unqualified, the identifiers STDIN, STDOUT, STDERR, ARGV, ARGVOUT, ENV, INC, and SIG are forced to be in package <tt>&quot;main&quot;</tt>, even when used for other purposes than their built-in ones. If you have a package called <tt>&quot;m&quot;</tt>, <tt>&quot;s&quot;</tt>, or <tt>&quot;y&quot;</tt>, then you can't use the qualified form of an identifier because it would be instead interpreted as a pattern match, a substitution, or a transliteration. 
 
  Variables beginning with underscore used to be forced into package main, but we decided it was more useful for package writers to be able to use leading underscore to indicate private variables and method names. However, variables and functions named with a single <tt>&quot;_&quot;</tt>, such as <tt>$_</tt> and <tt>&quot;sub _&quot;</tt>, are still forced into the package <tt>&quot;main&quot;</tt>. See also ``The Syntax of Variable Names'' in perlvar. 
 
@@ -56,7 +56,7 @@ perlmod - Perl modules (packages and symbol tables)
     local *main::foo    = *main::bar;
 </pre> 
 
- You can use this to print out all the variables in a package, for instance. The standard but antiquated <i>dumpvar.pl</i> library and the <font SIZE="-1">CPAN</font> module Devel::Symdump make use of this. 
+ You can use this to print out all the variables in a package, for instance. The standard but antiquated <i>dumpvar.pl</i> library and the CPAN module Devel::Symdump make use of this. 
 
  The results of creating new symbol table entries directly or modifying any entries that are not already typeglobs are undefined and subject to change between releases of perl. 
 
@@ -81,7 +81,7 @@ perlmod - Perl modules (packages and symbol tables)
     *foo = \$bar;
 </pre> 
 
- <tt>&quot;*foo = *bar&quot;</tt> makes the typeglobs themselves synonymous while <tt>&quot;*foo = \$bar&quot;</tt> makes the <font SIZE="-1">SCALAR</font> portions of two distinct typeglobs refer to the same scalar value. This means that the following code: 
+ <tt>&quot;*foo = *bar&quot;</tt> makes the typeglobs themselves synonymous while <tt>&quot;*foo = \$bar&quot;</tt> makes the SCALAR portions of two distinct typeglobs refer to the same scalar value. This means that the following code: 
 
  <pre><code>
 $bar = 1;
@@ -212,9 +212,9 @@ Some_package::foo();
     in Some_package: $name is 'fred'
 </pre> 
 
- This also has implications for the use of the <font SIZE="-1">SUPER::</font> qualifier (see perlobj).
+ This also has implications for the use of the SUPER:: qualifier (see perlobj).
 
-<h3><font SIZE="-1">BEGIN, UNITCHECK, CHECK, INIT</font> and <font SIZE="-1">END</font></h3>
+<h3>BEGIN, UNITCHECK, CHECK, INIT and END</h3>
 
  Five specially named code blocks are executed at the beginning and at the end of a running Perl program. These are the <tt>&quot;BEGIN&quot;</tt>, <tt>&quot;UNITCHECK&quot;</tt>, <tt>&quot;CHECK&quot;</tt>, <tt>&quot;INIT&quot;</tt>, and <tt>&quot;END&quot;</tt> blocks. 
 
@@ -222,9 +222,9 @@ Some_package::foo();
 
  A <tt>&quot;BEGIN&quot;</tt> code block is executed as soon as possible, that is, the moment it is completely defined, even before the rest of the containing file (or string) is parsed. You may have multiple <tt>&quot;BEGIN&quot;</tt> blocks within a file (or eval'ed string); they will execute in order of definition. Because a <tt>&quot;BEGIN&quot;</tt> code block executes immediately, it can pull in definitions of subroutines and such from other files in time to be visible to the rest of the compile and run time. Once a <tt>&quot;BEGIN&quot;</tt> has run, it is immediately undefined and any code it used is returned to Perl's memory pool. 
 
- An <tt>&quot;END&quot;</tt> code block is executed as late as possible, that is, after perl has finished running the program and just before the interpreter is being exited, even if it is exiting as a result of a <b>die()</b> function. (But not if it's morphing into another program via <tt>&quot;exec&quot;</tt>, or being blown out of the water by a signal---you have to trap that yourself (if you can).) You may have multiple <tt>&quot;END&quot;</tt> blocks within a file---they will execute in reverse order of definition; that is: last in, first out (<font SIZE="-1">LIFO</font>). <tt>&quot;END&quot;</tt> blocks are not executed when you run perl with the <tt>&quot;-c&quot;</tt> switch, or if compilation fails. 
+ An <tt>&quot;END&quot;</tt> code block is executed as late as possible, that is, after perl has finished running the program and just before the interpreter is being exited, even if it is exiting as a result of a <b>die()</b> function. (But not if it's morphing into another program via <tt>&quot;exec&quot;</tt>, or being blown out of the water by a signal---you have to trap that yourself (if you can).) You may have multiple <tt>&quot;END&quot;</tt> blocks within a file---they will execute in reverse order of definition; that is: last in, first out (LIFO). <tt>&quot;END&quot;</tt> blocks are not executed when you run perl with the <tt>&quot;-c&quot;</tt> switch, or if compilation fails. 
 
- Note that <tt>&quot;END&quot;</tt> code blocks are <b>not</b> executed at the end of a string <tt>&quot;eval()&quot;</tt>: if any <tt>&quot;END&quot;</tt> code blocks are created in a string <tt>&quot;eval()&quot;</tt>, they will be executed just as any other <tt>&quot;END&quot;</tt> code block of that package in <font SIZE="-1">LIFO</font> order just before the interpreter is being exited. 
+ Note that <tt>&quot;END&quot;</tt> code blocks are <b>not</b> executed at the end of a string <tt>&quot;eval()&quot;</tt>: if any <tt>&quot;END&quot;</tt> code blocks are created in a string <tt>&quot;eval()&quot;</tt>, they will be executed just as any other <tt>&quot;END&quot;</tt> code block of that package in LIFO order just before the interpreter is being exited. 
 
  Inside an <tt>&quot;END&quot;</tt> code block, <tt>$?</tt> contains the value that the program is going to pass to <tt>&quot;exit()&quot;</tt>. You can modify <tt>$?</tt> to change the exit value of the program. Beware of changing <tt>$?</tt> by accident (e.g. by running something via <tt>&quot;system&quot;</tt>). 
 
@@ -236,11 +236,11 @@ Some_package::foo();
 
  <tt>&quot;BEGIN&quot;</tt> and <tt>&quot;UNITCHECK&quot;</tt> blocks are not directly related to the phase of the interpreter. They can be created and executed during any phase. 
 
- <tt>&quot;CHECK&quot;</tt> code blocks are run just after the <b>initial</b> Perl compile phase ends and before the run time begins, in <font SIZE="-1">LIFO</font> order. <tt>&quot;CHECK&quot;</tt> code blocks are used in the Perl compiler suite to save the compiled state of the program. 
+ <tt>&quot;CHECK&quot;</tt> code blocks are run just after the <b>initial</b> Perl compile phase ends and before the run time begins, in LIFO order. <tt>&quot;CHECK&quot;</tt> code blocks are used in the Perl compiler suite to save the compiled state of the program. 
 
  Inside of a <tt>&quot;CHECK&quot;</tt> block, the value of <tt>&quot;${^GLOBAL_PHASE}&quot;</tt> will be <tt>&quot;CHECK&quot;</tt>. 
 
- <tt>&quot;INIT&quot;</tt> blocks are run just before the Perl runtime begins execution, in ``first in, first out'' (<font SIZE="-1">FIFO</font>) order. 
+ <tt>&quot;INIT&quot;</tt> blocks are run just before the Perl runtime begins execution, in ``first in, first out'' (FIFO) order. 
 
  Inside of an <tt>&quot;INIT&quot;</tt> block, the value of <tt>&quot;${^GLOBAL_PHASE}&quot;</tt> will be <tt>&quot;INIT&quot;</tt>. 
 
@@ -391,15 +391,15 @@ require Cwd;
 
  Perl packages may be nested inside other package names, so we can have package names containing <tt>&quot;::&quot;</tt>. But if we used that package name directly as a filename it would make for unwieldy or impossible filenames on some systems. Therefore, if a module's name is, say, <tt>&quot;Text::Soundex&quot;</tt>, then its definition is actually found in the library file <i>Text/Soundex.pm</i>. 
 
- Perl modules always have a <i>.pm</i> file, but there may also be dynamically linked executables (often ending in <i>.so</i>) or autoloaded subroutine definitions (often ending in <i>.al</i>) associated with the module. If so, these will be entirely transparent to the user of the module. It is the responsibility of the <i>.pm</i> file to load (or arrange to autoload) any additional functionality. For example, although the <font SIZE="-1">POSIX</font> module happens to do both dynamic loading and autoloading, the user can say just <tt>&quot;use POSIX&quot;</tt> to get it all.
+ Perl modules always have a <i>.pm</i> file, but there may also be dynamically linked executables (often ending in <i>.so</i>) or autoloaded subroutine definitions (often ending in <i>.al</i>) associated with the module. If so, these will be entirely transparent to the user of the module. It is the responsibility of the <i>.pm</i> file to load (or arrange to autoload) any additional functionality. For example, although the POSIX module happens to do both dynamic loading and autoloading, the user can say just <tt>&quot;use POSIX&quot;</tt> to get it all.
 
 <h3>Making your module threadsafe</h3>
 
  Perl supports a type of threads called interpreter threads (ithreads). These threads can be used explicitly and implicitly. 
 
- Ithreads work by cloning the data tree so that no data is shared between different threads. These threads can be used by using the <tt>&quot;threads&quot;</tt> module or by doing <b>fork()</b> on win32 (fake <b>fork()</b> support). When a thread is cloned all Perl data is cloned, however non-Perl data cannot be cloned automatically. Perl after 5.8.0 has support for the <tt>&quot;CLONE&quot;</tt> special subroutine. In <tt>&quot;CLONE&quot;</tt> you can do whatever you need to do, like for example handle the cloning of non-Perl data, if necessary. <tt>&quot;CLONE&quot;</tt> will be called once as a class method for every package that has it defined (or inherits it). It will be called in the context of the new thread, so all modifications are made in the new area. Currently <font SIZE="-1">CLONE</font> is called with no parameters other than the invocant package name, but code should not assume that this will remain unchanged, as it is likely that in future extra parameters will be passed in to give more information about the state of cloning. 
+ Ithreads work by cloning the data tree so that no data is shared between different threads. These threads can be used by using the <tt>&quot;threads&quot;</tt> module or by doing <b>fork()</b> on win32 (fake <b>fork()</b> support). When a thread is cloned all Perl data is cloned, however non-Perl data cannot be cloned automatically. Perl after 5.8.0 has support for the <tt>&quot;CLONE&quot;</tt> special subroutine. In <tt>&quot;CLONE&quot;</tt> you can do whatever you need to do, like for example handle the cloning of non-Perl data, if necessary. <tt>&quot;CLONE&quot;</tt> will be called once as a class method for every package that has it defined (or inherits it). It will be called in the context of the new thread, so all modifications are made in the new area. Currently CLONE is called with no parameters other than the invocant package name, but code should not assume that this will remain unchanged, as it is likely that in future extra parameters will be passed in to give more information about the state of cloning. 
 
- If you want to <font SIZE="-1">CLONE</font> all objects you will need to keep track of them per package. This is simply done using a hash and <b>Scalar::Util::weaken()</b>. 
+ If you want to CLONE all objects you will need to keep track of them per package. This is simply done using a hash and <b>Scalar::Util::weaken()</b>. 
 
  Perl after 5.8.7 has support for the <tt>&quot;CLONE_SKIP&quot;</tt> special subroutine. Like <tt>&quot;CLONE&quot;</tt>, <tt>&quot;CLONE_SKIP&quot;</tt> is called once per package; however, it is called just before cloning starts, and in the context of the parent thread. If it returns a true value, then no objects of that class will be cloned; or rather, they will be copied as unblessed, undef values. For example: if in the parent there are two references to a single blessed hash, then in the child there will be two references to a single undefined scalar value instead. This provides a simple mechanism for making a module threadsafe; just add <tt>&quot;sub CLONE_SKIP { 1 }&quot;</tt> at the top of the class, and <tt>&quot;DESTROY()&quot;</tt> will now only be called once per object. Of course, if the child thread needs to make use of the objects, then a more sophisticated approach is needed. 
 
@@ -407,7 +407,7 @@ require Cwd;
 
 <h2>SEE ALSO</h2>
 
- See perlmodlib for general style issues related to building Perl modules and classes, as well as descriptions of the standard library and <font SIZE="-1">CPAN,</font> Exporter for how Perl's standard import/export mechanism works, perlootut and perlobj for in-depth information on creating classes, perlobj for a hard-core reference document on objects, perlsub for an explanation of functions and scoping, and perlxstut and perlguts for more information on writing extension modules. 
+ See perlmodlib for general style issues related to building Perl modules and classes, as well as descriptions of the standard library and CPAN, Exporter for how Perl's standard import/export mechanism works, perlootut and perlobj for in-depth information on creating classes, perlobj for a hard-core reference document on objects, perlsub for an explanation of functions and scoping, and perlxstut and perlguts for more information on writing extension modules. 
 
 
 

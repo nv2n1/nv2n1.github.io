@@ -146,7 +146,7 @@ description: "mke2fs – create an ext2/ext3/ext4 filesystem"
 <h2>Author</h2>
 <p>This version of <code>mke2fs</code> has been written by Theodore Ts&#8217;o &lt;tytso [at] mit.edu&gt;.</p>
 <h2>Bugs</h2>
-<p><code>mke2fs</code> accepts the <code>-f</code> option but currently ignores it because the second extended file system does not support fragments yet.<br />
+<p><code>mke2fs</code> accepts the <code>-f</code> option but currently ignores it because the second extended file system does not support fragments yet.<br/>
  There may be other ones. Please, report them to the author.</p>
 <h2>Availability</h2>
 <p><code>mke2fs</code> is part of the e2fsprogs package and is available from <a rel="nofollow" href="http://e2fsprogs.sourceforge.net.">http://e2fsprogs.sourceforge.net.</a></p>

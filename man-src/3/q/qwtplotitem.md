@@ -13,30 +13,30 @@ description: "QwtPlotItem –"
 <p>#include &lt;qwt_plot_item.h&gt; </p>
 <p> Inherited by <code>QwtPlotGrid</code>, <code>QwtPlotLegendItem</code>, <code>QwtPlotMarker</code>, <code>QwtPlotRasterItem</code>, <code>QwtPlotScaleItem</code>, <code>QwtPlotSeriesItem</code>, <code>QwtPlotShapeItem</code>, <code>QwtPlotSvgItem</code>, <code>QwtPlotTextLabel</code>, and <code>QwtPlotZoneItem</code>.</p>
 <h3>Public Types</h3>
-<p>enum <code>RttiValues</code> { <code>Rtti_PlotItem</code> = 0, <code>Rtti_PlotGrid</code>, <code>Rtti_PlotScale</code>, <code>Rtti_PlotLegend</code>, <code>Rtti_PlotMarker</code>, <code>Rtti_PlotCurve</code>, <code>Rtti_PlotSpectroCurve</code>, <code>Rtti_PlotIntervalCurve</code>, <code>Rtti_PlotHistogram</code>, <code>Rtti_PlotSpectrogram</code>, <code>Rtti_PlotSVG</code>, <code>Rtti_PlotTradingCurve</code>, <code>Rtti_PlotBarChart</code>, <code>Rtti_PlotMultiBarChart</code>, <code>Rtti_PlotShape</code>, <code>Rtti_PlotTextLabel</code>, <code>Rtti_PlotZone</code>, <code>Rtti_PlotUserItem</code> = 1000 }<br />
- <i>Runtime type information. </i><br />
- enum <code>ItemAttribute</code> { <code>Legend</code> = 0x01, <code>AutoScale</code> = 0x02, <code>Margins</code> = 0x04 }<br />
- <i>Plot Item Attributes. </i><br />
- enum <code>ItemInterest</code> { <code>ScaleInterest</code> = 0x01, <code>LegendInterest</code> = 0x02 }<br />
- <i>Plot Item Interests. </i><br />
- enum <code>RenderHint</code> { <code>RenderAntialiased</code> = 0x1 }<br />
- <i>Render hints. </i><br />
- typedef QFlags&lt; <code>ItemAttribute</code> &gt; <code>ItemAttributes</code><br />
- <i>Plot Item Attributes. </i><br />
- typedef QFlags&lt; <code>ItemInterest</code> &gt; <code>ItemInterests</code><br />
- <i>Plot Item Interests. </i><br />
- typedef QFlags&lt; <code>RenderHint</code> &gt; <code>RenderHints</code><br />
+<p>enum <code>RttiValues</code> { <code>Rtti_PlotItem</code> = 0, <code>Rtti_PlotGrid</code>, <code>Rtti_PlotScale</code>, <code>Rtti_PlotLegend</code>, <code>Rtti_PlotMarker</code>, <code>Rtti_PlotCurve</code>, <code>Rtti_PlotSpectroCurve</code>, <code>Rtti_PlotIntervalCurve</code>, <code>Rtti_PlotHistogram</code>, <code>Rtti_PlotSpectrogram</code>, <code>Rtti_PlotSVG</code>, <code>Rtti_PlotTradingCurve</code>, <code>Rtti_PlotBarChart</code>, <code>Rtti_PlotMultiBarChart</code>, <code>Rtti_PlotShape</code>, <code>Rtti_PlotTextLabel</code>, <code>Rtti_PlotZone</code>, <code>Rtti_PlotUserItem</code> = 1000 }<br/>
+ <i>Runtime type information. </i><br/>
+ enum <code>ItemAttribute</code> { <code>Legend</code> = 0x01, <code>AutoScale</code> = 0x02, <code>Margins</code> = 0x04 }<br/>
+ <i>Plot Item Attributes. </i><br/>
+ enum <code>ItemInterest</code> { <code>ScaleInterest</code> = 0x01, <code>LegendInterest</code> = 0x02 }<br/>
+ <i>Plot Item Interests. </i><br/>
+ enum <code>RenderHint</code> { <code>RenderAntialiased</code> = 0x1 }<br/>
+ <i>Render hints. </i><br/>
+ typedef QFlags&lt; <code>ItemAttribute</code> &gt; <code>ItemAttributes</code><br/>
+ <i>Plot Item Attributes. </i><br/>
+ typedef QFlags&lt; <code>ItemInterest</code> &gt; <code>ItemInterests</code><br/>
+ <i>Plot Item Interests. </i><br/>
+ typedef QFlags&lt; <code>RenderHint</code> &gt; <code>RenderHints</code><br/>
  <i>Render hints. </i></p>
 <h3>Public Member Functions</h3>
 <p><code>QwtPlotItem</code> (const <code>QwtText</code> &amp;<code>title</code>=<code>QwtText</code>()) </p>
-<p> virtual <code>~QwtPlotItem</code> ()<br />
- <i>Destroy the </i><code>QwtPlotItem</code>.<br />
- void <code>attach</code> (<code>QwtPlot</code> *<code>plot</code>)<br />
- <i>Attach the item to a plot. </i><br />
- void <code>detach</code> ()<br />
- <i>This method detaches a </i><code>QwtPlotItem</code> from any <code>QwtPlot</code> it has been associated with.<br />
- <code>QwtPlot</code> * <code>plot</code> () const<br />
- <i>Return attached plot. </i><br />
+<p> virtual <code>~QwtPlotItem</code> ()<br/>
+ <i>Destroy the </i><code>QwtPlotItem</code>.<br/>
+ void <code>attach</code> (<code>QwtPlot</code> *<code>plot</code>)<br/>
+ <i>Attach the item to a plot. </i><br/>
+ void <code>detach</code> ()<br/>
+ <i>This method detaches a </i><code>QwtPlotItem</code> from any <code>QwtPlot</code> it has been associated with.<br/>
+ <code>QwtPlot</code> * <code>plot</code> () const<br/>
+ <i>Return attached plot. </i><br/>
  void <code>setTitle</code> (const QString &amp;<code>title</code>) </p>
 <p> void <code>setTitle</code> (const <code>QwtText</code> &amp;<code>title</code>) </p>
 <p> const <code>QwtText</code> &amp; <code>title</code> () const </p>
@@ -52,41 +52,41 @@ description: "QwtPlotItem –"
 <p> void <code>setLegendIconSize</code> (const QSize &amp;) </p>
 <p> QSize <code>legendIconSize</code> () const </p>
 <p> double <code>z</code> () const </p>
-<p> void <code>setZ</code> (double <code>z</code>)<br />
- <i>Set the z value. </i><br />
- void <code>show</code> ()<br />
- <i>Show the item. </i><br />
- void <code>hide</code> ()<br />
- <i>Hide the item. </i><br />
+<p> void <code>setZ</code> (double <code>z</code>)<br/>
+ <i>Set the z value. </i><br/>
+ void <code>show</code> ()<br/>
+ <i>Show the item. </i><br/>
+ void <code>hide</code> ()<br/>
+ <i>Hide the item. </i><br/>
  virtual void <code>setVisible</code> (bool) </p>
 <p> bool <code>isVisible</code> () const </p>
 <p> void <code>setAxes</code> (int <code>xAxis</code>, int <code>yAxis</code>) </p>
 <p> void <code>setXAxis</code> (int axis) </p>
-<p> int <code>xAxis</code> () const<br />
- <i>Return xAxis. </i><br />
+<p> int <code>xAxis</code> () const<br/>
+ <i>Return xAxis. </i><br/>
  void <code>setYAxis</code> (int axis) </p>
-<p> int <code>yAxis</code> () const<br />
- <i>Return yAxis. </i><br />
+<p> int <code>yAxis</code> () const<br/>
+ <i>Return yAxis. </i><br/>
  virtual void <code>itemChanged</code> () </p>
 <p> virtual void <code>legendChanged</code> () </p>
-<p> virtual void <code>draw</code> (QPainter *painter, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;canvasRect) const =0<br />
- <i>Draw the item. </i><br />
+<p> virtual void <code>draw</code> (QPainter *painter, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;canvasRect) const =0<br/>
+ <i>Draw the item. </i><br/>
  virtual QRectF <code>boundingRect</code> () const </p>
-<p> virtual void <code>getCanvasMarginHint</code> (const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;canvasSize, double &amp;left, double &amp;top, double &amp;right, double &amp;bottom) const<br />
- <i>Calculate a hint for the canvas margin. </i><br />
- virtual void <code>updateScaleDiv</code> (const <code>QwtScaleDiv</code> &amp;, const <code>QwtScaleDiv</code> &amp;)<br />
- <i>Update the item to changes of the axes scale division. </i><br />
- virtual void <code>updateLegend</code> (const <code>QwtPlotItem</code> *, const QList&lt; <code>QwtLegendData</code> &gt; &amp;)<br />
- <i>Update the item to changes of the legend info. </i><br />
- QRectF <code>scaleRect</code> (const <code>QwtScaleMap</code> &amp;, const <code>QwtScaleMap</code> &amp;) const<br />
- <i>Calculate the bounding scale rectangle of 2 maps. </i><br />
- QRectF <code>paintRect</code> (const <code>QwtScaleMap</code> &amp;, const <code>QwtScaleMap</code> &amp;) const<br />
- <i>Calculate the bounding paint rectangle of 2 maps. </i><br />
- virtual QList&lt; <code>QwtLegendData</code> &gt; <code>legendData</code> () const<br />
- <i>Return all information, that is needed to represent the item on the legend. </i><br />
+<p> virtual void <code>getCanvasMarginHint</code> (const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;canvasSize, double &amp;left, double &amp;top, double &amp;right, double &amp;bottom) const<br/>
+ <i>Calculate a hint for the canvas margin. </i><br/>
+ virtual void <code>updateScaleDiv</code> (const <code>QwtScaleDiv</code> &amp;, const <code>QwtScaleDiv</code> &amp;)<br/>
+ <i>Update the item to changes of the axes scale division. </i><br/>
+ virtual void <code>updateLegend</code> (const <code>QwtPlotItem</code> *, const QList&lt; <code>QwtLegendData</code> &gt; &amp;)<br/>
+ <i>Update the item to changes of the legend info. </i><br/>
+ QRectF <code>scaleRect</code> (const <code>QwtScaleMap</code> &amp;, const <code>QwtScaleMap</code> &amp;) const<br/>
+ <i>Calculate the bounding scale rectangle of 2 maps. </i><br/>
+ QRectF <code>paintRect</code> (const <code>QwtScaleMap</code> &amp;, const <code>QwtScaleMap</code> &amp;) const<br/>
+ <i>Calculate the bounding paint rectangle of 2 maps. </i><br/>
+ virtual QList&lt; <code>QwtLegendData</code> &gt; <code>legendData</code> () const<br/>
+ <i>Return all information, that is needed to represent the item on the legend. </i><br/>
  virtual <code>QwtGraphic</code> <code>legendIcon</code> (int index, const QSizeF &amp;) const </p>
 <h3>Protected Member Functions</h3>
-<p><code>QwtGraphic</code> <code>defaultIcon</code> (const QBrush &amp;, const QSizeF &amp;) const<br />
+<p><code>QwtGraphic</code> <code>defaultIcon</code> (const QBrush &amp;, const QSizeF &amp;) const<br/>
  <i>Return a default icon from a brush. </i></p>
 <h2>Detailed Description</h2>
 <p>Base class for items on the plot canvas. </p>
@@ -231,7 +231,7 @@ description: "QwtPlotItem –"
 <p>Return a default icon from a brush. The default icon is a filled rectangle used in several derived classes as <code>legendIcon()</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>brush</i> Fill brush<br />
+<dd><i>brush</i> Fill brush<br/>
  <i>size</i> Icon size</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -245,9 +245,9 @@ description: "QwtPlotItem –"
 <p>Draw the item. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>xMap</i> Maps x-values into pixel coordinates.<br />
- <i>yMap</i> Maps y-values into pixel coordinates.<br />
+<dd><i>painter</i> Painter<br/>
+ <i>xMap</i> Maps x-values into pixel coordinates.<br/>
+ <i>yMap</i> Maps y-values into pixel coordinates.<br/>
  <i>canvasRect</i> Contents rect of the canvas in painter coordinates</dd></dl>
 <p> Implemented in <code>QwtPlotMarker</code>, <code>QwtPlotLegendItem</code>, <code>QwtPlotRasterItem</code>, <code>QwtPlotShapeItem</code>, <code>QwtPlotSpectrogram</code>, <code>QwtPlotScaleItem</code>, <code>QwtPlotGrid</code>, <code>QwtPlotTextLabel</code>, <code>QwtPlotZoneItem</code>, <code>QwtPlotSvgItem</code>, and <code>QwtPlotSeriesItem</code>.</p>
 <h3>void QwtPlotItem::getCanvasMarginHint (const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;canvasRect, double &amp;left, double &amp;top, double &amp;right, double &amp;bottom) const [virtual]</h3>
@@ -255,12 +255,12 @@ description: "QwtPlotItem –"
 <p> The margins are in target device coordinates ( pixels on screen ) </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>xMap</i> Maps x-values into pixel coordinates.<br />
- <i>yMap</i> Maps y-values into pixel coordinates.<br />
- <i>canvasRect</i> Contents rectangle of the canvas in painter coordinates<br />
- <i>left</i> Returns the left margin<br />
- <i>top</i> Returns the top margin<br />
- <i>right</i> Returns the right margin<br />
+<dd><i>xMap</i> Maps x-values into pixel coordinates.<br/>
+ <i>yMap</i> Maps y-values into pixel coordinates.<br/>
+ <i>canvasRect</i> Contents rectangle of the canvas in painter coordinates<br/>
+ <i>left</i> Returns the left margin<br/>
+ <i>top</i> Returns the top margin<br/>
+ <i>right</i> Returns the right margin<br/>
  <i>bottom</i> Returns the bottom margin</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -304,7 +304,7 @@ description: "QwtPlotItem –"
 <p> The default implementation returns an invalid icon </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>index</i> Index of the legend entry ( usually there is only one )<br />
+<dd><i>index</i> Index of the legend entry ( usually there is only one )<br/>
  <i>size</i> Icon size</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -321,7 +321,7 @@ description: "QwtPlotItem –"
 <p>Calculate the bounding paint rectangle of 2 maps. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>xMap</i> Maps x-values into pixel coordinates.<br />
+<dd><i>xMap</i> Maps x-values into pixel coordinates.<br/>
  <i>yMap</i> Maps y-values into pixel coordinates.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -344,7 +344,7 @@ description: "QwtPlotItem –"
 <p>Calculate the bounding scale rectangle of 2 maps. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>xMap</i> Maps x-values into pixel coordinates.<br />
+<dd><i>xMap</i> Maps x-values into pixel coordinates.<br/>
  <i>yMap</i> Maps y-values into pixel coordinates.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -354,7 +354,7 @@ description: "QwtPlotItem –"
 <p> The item will painted according to the coordinates of its Axes. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>xAxis</i> X Axis ( <code>QwtPlot::xBottom</code> or <code>QwtPlot::xTop</code> )<br />
+<dd><i>xAxis</i> X Axis ( <code>QwtPlot::xBottom</code> or <code>QwtPlot::xTop</code> )<br/>
  <i>yAxis</i> Y Axis ( <code>QwtPlot::yLeft</code> or <code>QwtPlot::yRight</code> )</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -363,7 +363,7 @@ description: "QwtPlotItem –"
 <p>Toggle an item attribute </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>attribute</i> Attribute type<br />
+<dd><i>attribute</i> Attribute type<br/>
  <i>on</i> true/false</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -372,7 +372,7 @@ description: "QwtPlotItem –"
 <p>Toggle an item interest </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>interest</i> Interest type<br />
+<dd><i>interest</i> Interest type<br/>
  <i>on</i> true/false</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -390,7 +390,7 @@ description: "QwtPlotItem –"
 <p>Toggle an render hint </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>hint</i> Render hint<br />
+<dd><i>hint</i> Render hint<br/>
  <i>on</i> true/false</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -497,7 +497,7 @@ description: "QwtPlotItem –"
 <p> <code>updateLegend()</code> is only called when the LegendInterest interest is enabled. The default implementation does nothing. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>item</i> Plot item to be displayed on a legend<br />
+<dd><i>item</i> Plot item to be displayed on a legend<br/>
  <i>data</i> Attributes how to display item on the legend</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -511,7 +511,7 @@ description: "QwtPlotItem –"
 <p> <code>updateScaleDiv()</code> is only called when the ScaleInterest interest is enabled. The default implementation does nothing. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>xScaleDiv</i> Scale division of the x-axis<br />
+<dd><i>xScaleDiv</i> Scale division of the x-axis<br/>
  <i>yScaleDiv</i> Scale division of the y-axis</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>

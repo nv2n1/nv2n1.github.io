@@ -18,11 +18,11 @@ description: "snmptest – communicates with a network entity using SNMP request
 <p> Once snmptest is invoked, the command line intepreter will prompt with: </p>
 <p> <code>Variable:</code> </p>
 <p> At this point you can enter one or more variable names, one per line. A blank line ends the parameter input and will send the request (variables entered) in a single packet, to the remote entity. Each variable name is given in the format specified in <i><a href="/docs/linux/man/5-variables/">variables</a>(5)</i>. For example: </p>
-<p> snmptest -c public -v 1 zeus<br />
- <code>Variable:</code> system.sysDescr.0<br />
+<p> snmptest -c public -v 1 zeus<br/>
+ <code>Variable:</code> system.sysDescr.0<br/>
  <code>Variable:</code> </p>
 <p> will return some information about the request and reply packets, as well as the information: </p>
-<p> requestid 0x5992478A errstat 0x0 errindex 0x0<br />
+<p> requestid 0x5992478A errstat 0x0 errindex 0x0<br/>
  system.sysDescr.0 = STRING: &quot;Unix 4.3BSD&quot; </p>
 <p> The errstatus value shows the error status code for the call. The possible values for errstat are in the header file snmp.h. The errindex value identifies the variable that has the given error. Index values are assigned to all the variables entered at the &quot;Variable&quot;: prompt. The first value is assigned an index of 1. </p>
 <p> Upon startup, the program defaults to sending a GET request packet. The type of request can be changed by typing one of the following commands at the &quot;Variable:&quot; prompt: </p>

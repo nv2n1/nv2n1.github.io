@@ -25,7 +25,7 @@ description: "lksh – Legacy Korn shell built on mksh"
 <li> The shift arithmetic operators take all bits of the second operand into account; if they exceed permitted precision, the result is unspecified.
 <li> The <code>GNU</code> <code>bash</code> extension &amp;&gt; to redirect stdout and stderr in one go is not parsed.
 <li> The <code>mksh</code> command line option &#8211;<code>T</code> is not available.
-<li> Unless <code>set -o posix</code> is active, always uses traditional mode for constructs like:<br />
+<li> Unless <code>set -o posix</code> is active, always uses traditional mode for constructs like:<br/>
 <blockquote>
 <pre>
 $ set -- $(getopt ab:c &quot;$@&quot;)

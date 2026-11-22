@@ -91,11 +91,11 @@ description: "piranha_web_selinux – Security Enhanced Linux Policy for the pir
 <p> You can see the context of a file using the <code>-Z</code> option to <code>lsP Policy governs the access confined processes have to these files. SELinux piranha_web policy is very flexible allowing users to setup their piranha_web processes in as secure a method as possible. </p>
 <p> EQUIVALENCE DIRECTORIES</code> </p>
 <p> piranha_web policy stores data with multiple different file context types under the /var/lib/luci directory. If you would like to store the data in a different directory you can use the semanage command to create an equivalence mapping. If you wanted to store this data under the /srv dirctory you would execute the following command: </p>
-<p> <code>semanage fcontext -a -e /var/lib/luci /srv/luci</code><br />
+<p> <code>semanage fcontext -a -e /var/lib/luci /srv/luci</code><br/>
  <code>restorecon -R -v /srv/luci</code> </p>
 <p> <code>STANDARD FILE CONTEXT</code> </p>
 <p> SELinux defines the file context types for the piranha_web, if you wanted to store files with these types in a diffent paths, you need to execute the semanage command to sepecify alternate labeling and then use restorecon to put the labels on disk. </p>
-<p> <code>semanage fcontext -a -t piranha_web_var_run_t &#8216;/srv/mypiranha_web_content(/.*)?&#8217;</code><br />
+<p> <code>semanage fcontext -a -t piranha_web_var_run_t &#8216;/srv/mypiranha_web_content(/.*)?&#8217;</code><br/>
  <code>restorecon -R -v /srv/mypiranha_web_content</code> </p>
 <p> Note: SELinux often uses regular expressions to specify labels that match multiple files. </p>
 <p> <i>The following file types are defined for piranha_web:</i> </p>

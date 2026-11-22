@@ -167,8 +167,8 @@ createUser myuser SHA -m 0x0001020304050607080900010203040506070809 AES -m 0x000
 <dl>
 <dd>
 </dd><dl>
-<dd>view iso1 included .iso 0xf0<br />
- view iso2 included .iso<br />
+<dd>view iso1 included .iso 0xf0<br/>
+ view iso2 included .iso<br/>
  view iso3 included .iso.org.dod.mgmt 0xf0</dd></dl>
 </dl>
 <dd>would all define the same view, covering the whole of the &#8216;iso(1)&#8217; subtree (with the third example ignoring the subidentifiers not covered by the mask).</dd>

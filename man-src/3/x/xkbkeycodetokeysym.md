@@ -10,7 +10,7 @@ description: "XkbKeycodeToKeysym – Finds the keysym bound to a particular key 
 <p>XkbKeycodeToKeysym &#8211; Finds the keysym bound to a particular key at a specified group and shift level </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>KeySym XkbKeycodeToKeysym</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>KeyCode </code><i>kc</i><code>,</code> <code>unsigned int </code><i>group</i><code>,</code> <code>unsigned int </code><i>level</i><code>);</code><br />
+<dt> <code>KeySym XkbKeycodeToKeysym</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>KeyCode </code><i>kc</i><code>,</code> <code>unsigned int </code><i>group</i><code>,</code> <code>unsigned int </code><i>level</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

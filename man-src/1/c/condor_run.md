@@ -51,7 +51,7 @@ description: "condor_run Submit a shell command-line as an HTCondor job"
 </dl>
 <h2>Examples</h2>
 <p> <i>condor_run</i> may be used to compile an executable on a different platform. As an example, first set the environment variables for the required platform: </p>
-<p> % setenv CONDOR_ARCH &quot;SUN4u&quot;<br />
+<p> % setenv CONDOR_ARCH &quot;SUN4u&quot;<br/>
  % setenv CONDOR_OPSYS &quot;SOLARIS28&quot; </p>
 <p> Then, use <i>condor_run</i> to submit the compilation as in the following three examples. </p>
 <p> % condor_run &quot;f77 -O -o myprog myprog.f&quot; </p>

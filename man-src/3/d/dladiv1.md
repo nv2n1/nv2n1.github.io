@@ -11,8 +11,8 @@ description: "dladiv.f –"
 <p> dladiv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dladiv</code> (A, B, C, D, P, Q)<br />
- <i></i><code>DLADIV</code> performs complex division in real arithmetic, avoiding unnecessary overflow.<br />
+<p> subroutine <code>dladiv</code> (A, B, C, D, P, Q)<br/>
+ <i></i><code>DLADIV</code> performs complex division in real arithmetic, avoiding unnecessary overflow.<br/>
  subroutine <code>dladiv1</code> (A, B, C, D, P, Q) </p>
 <p> DOUBLE PRECISION function <code>dladiv2</code> (A, B, C, D, R, T) </p>
 <h2>Function/Subroutine Documentation</h2>

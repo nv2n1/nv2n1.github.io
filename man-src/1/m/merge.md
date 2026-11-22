@@ -39,22 +39,22 @@ description: "merge – three-way file merge"
 <dt><code>-q</code></dt>
 <dd> Quiet; do not warn about conflicts.</dd>
 <dt><code>-V</code></dt>
-<dd> Print <font SIZE="-1">RCS</font>&#8216;s version number.</dd></dl>
+<dd> Print RCS&#8216;s version number.</dd></dl>
 <h2>DIAGNOSTICS</h2>
 <p> Exit status is 0 for no conflicts, 1 for some conflicts, 2 for trouble.</p>
 <h2>IDENTIFICATION</h2>
-<p> Author: Walter F. Tichy.<br />
- Manual Page Revision: 5.9.0; Release Date: 2014-06-10.<br />
- Copyright &#169; 2010-2013 Thien-Thi Nguyen.<br />
- Copyright &#169; 1990, 1991, 1992, 1993, 1994, 1995 Paul Eggert.<br />
+<p> Author: Walter F. Tichy.<br/>
+ Manual Page Revision: 5.9.0; Release Date: 2014-06-10.<br/>
+ Copyright &#169; 2010-2013 Thien-Thi Nguyen.<br/>
+ Copyright &#169; 1990, 1991, 1992, 1993, 1994, 1995 Paul Eggert.<br/>
  Copyright &#169; 1982, 1988, 1989 Walter F. Tichy. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-diff3/">diff3</a></code>(1), <code><a href="/docs/linux/man/1-diff/">diff</a></code>(1), <code><a href="/docs/linux/man/1-rcsmerge/">rcsmerge</a></code>(1), <code><a href="/docs/linux/man/1-co/">co</a></code>(1). </p>
-<p> The full documentation for <font SIZE="-1">RCS</font> is maintained as a Texinfo manual. If the <code><a href="/docs/linux/man/1-info/">info</a></code>(1) and <font SIZE="-1">RCS</font> programs are properly installed at your site, the command</p>
+<p> The full documentation for RCS is maintained as a Texinfo manual. If the <code><a href="/docs/linux/man/1-info/">info</a></code>(1) and RCS programs are properly installed at your site, the command</p>
 <dl>
 <dt>
 </dt><dd> <code>info rcs</code></dd></dl>
-<p> should give you access to the complete manual. Additionally, the <font SIZE="-1">RCS</font> homepage:</p>
+<p> should give you access to the complete manual. Additionally, the RCS homepage:</p>
 <dl>
 <dt>
 </dt><dd> <code><a rel="nofollow" href="http://www.gnu.org/software/rcs/">http://www.gnu.org/software/rcs/</a></code></dd></dl>

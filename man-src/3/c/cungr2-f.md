@@ -10,7 +10,7 @@ description: "cungr2.f –"
 <p>cungr2.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>cungr2</code> (M, N, K, A, LDA, TAU, WORK, INFO)<br />
+<p>subroutine <code>cungr2</code> (M, N, K, A, LDA, TAU, WORK, INFO)<br/>
  <i></i><code>CUNGR2</code> generates all or part of the unitary matrix Q from an RQ factorization determined by cgerqf (unblocked algorithm).</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cungr2 (integerM, integerN, integerK, complex, dimension( lda, * )A, integerLDA, complex, dimension( * )TAU, complex, dimension( * )WORK, integerINFO)</h3>

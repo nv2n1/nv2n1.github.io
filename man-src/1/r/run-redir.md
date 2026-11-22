@@ -22,7 +22,7 @@ description: "run-redir – run program but redirect some resulting files"
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;dwheeler, at, dwheeler dot com&gt;</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2009 Institute for Defense Analyses. Released under the &quot;MIT&quot; license.<br />
+<p> Copyright &#169; 2009 Institute for Defense Analyses. Released under the &quot;MIT&quot; license.<br/>
  This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-make-redir/">make-redir</a>(1) </p>

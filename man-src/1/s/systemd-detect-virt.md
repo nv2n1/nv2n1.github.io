@@ -84,7 +84,7 @@ description: "systemd-detect-virt – Detect execution in a virtualized environm
 </tr>
 <tr VALIGN=top>
 <td> <i>acrn</i> </td>
-<td> m[blue]<code>ACRN hypervisor</code>m[]<font SIZE="-2">[1]</font> </td>
+<td> m[blue]<code>ACRN hypervisor</code>m[][1] </td>
 <td> &nbsp;
 </td>
 </tr>
@@ -112,7 +112,7 @@ description: "systemd-detect-virt – Detect execution in a virtualized environm
 </tr>
 <tr VALIGN=top>
 <td> <i>podman</i> </td>
-<td> m[blue]<code>Podman</code>m[]<font SIZE="-2">[2]</font> container manager </td>
+<td> m[blue]<code>Podman</code>m[][2] container manager </td>
 </tr>
 <tr VALIGN=top>
 <td> <i>rkt</i> </td>
@@ -120,15 +120,15 @@ description: "systemd-detect-virt – Detect execution in a virtualized environm
 </tr>
 <tr VALIGN=top>
 <td> <i>wsl</i> </td>
-<td> m[blue]<code>Windows Subsystem for Linux</code>m[]<font SIZE="-2">[3]</font> </td>
+<td> m[blue]<code>Windows Subsystem for Linux</code>m[][3] </td>
 </tr>
 <tr VALIGN=top>
 <td> <i>proot</i> </td>
-<td> m[blue]<code>proot</code>m[]<font SIZE="-2">[4]</font> userspace chroot/bind mount emulation </td>
+<td> m[blue]<code>proot</code>m[][4] userspace chroot/bind mount emulation </td>
 </tr>
 <tr VALIGN=top>
 <td> <i>pouch</i> </td>
-<td> m[blue]<code>Pouch</code>m[]<font SIZE="-2">[5]</font> Container Engine </td>
+<td> m[blue]<code>Pouch</code>m[][5] Container Engine </td>
 </tr>
 </table>
 <p> If multiple virtualization solutions are used, only the &quot;innermost&quot; is detected and identified. That means if both machine and container virtualization are used in conjunction, only the latter will be identified (unless <code>&#8211;vm</code> is passed). </p>

@@ -9,7 +9,7 @@ description: "xfs_rtcp – XFS realtime copy command"
 
 <p>xfs_rtcp &#8211; XFS realtime copy command</p>
 <h2>Synopsis</h2>
-<p><code>xfs_rtcp</code> [ <code>-e</code> <i>extsize</i> ] [ <code>-p</code> ] <i>source</i> &#8230; <i>target</i><br />
+<p><code>xfs_rtcp</code> [ <code>-e</code> <i>extsize</i> ] [ <code>-p</code> ] <i>source</i> &#8230; <i>target</i><br/>
  <code>xfs_rtcp -V</code></p>
 <h2>Description</h2>
 <p><code>xfs_rtcp</code> copies a file to the realtime partition on an XFS filesystem. If there is more than one <i>source</i> and <i>target</i>, the final argument (the <i>target</i>) must be a directory which already exists.</p>

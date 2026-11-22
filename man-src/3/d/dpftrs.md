@@ -11,7 +11,7 @@ description: "dpftrs.f –"
 <p> dpftrs.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>dpftrs</code> (TRANSR, UPLO, N, NRHS, A, B, LDB, INFO)<br />
+<p> subroutine <code>dpftrs</code> (TRANSR, UPLO, N, NRHS, A, B, LDB, INFO)<br/>
  <i></i><code>DPFTRS</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dpftrs (characterTRANSR, characterUPLO, integerN, integerNRHS, double precision, dimension( 0: * )A, double precision, dimension( ldb, * )B, integerLDB, integerINFO)</h3>

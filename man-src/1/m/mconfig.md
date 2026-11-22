@@ -38,7 +38,7 @@ description: "mconfig, – Utility for modifying .NET configuration files"
 <dt><code>$prefix/etc/mono/mconfig/config.xml</code></dt>
 <dd> The default configuration file, distributed with mconfig. <i>$prefix</i> is the mconfig installation prefix specified on the compilation time.</dd>
 <dt><code>$config_dir/mconfig/config.xml</code></dt>
-<dd> $config_dir is the directory specified in the <i>XDG_CONFIG_HOME</i> environment variable or,<br />
+<dd> $config_dir is the directory specified in the <i>XDG_CONFIG_HOME</i> environment variable or,<br/>
 &nbsp;<wbr>if it is empty, in the&nbsp;<wbr><i>.config</i>&nbsp;<wbr>directory located in the user&#8217;s home directory. This file is not distributed with Mono.</dd>
 <dt><code>./mconfig.xml</code></dt>
 <dd> Local configuration file which can contain per-application settings.</dd></dl>

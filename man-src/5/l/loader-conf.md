@@ -57,7 +57,7 @@ description: "loader.conf – Configuration file for systemd-boot"
 <p> random-seed-mode</p>
 <dl>
 <dd>Takes one of &quot;off&quot;, &quot;with-system-token&quot; and &quot;always&quot;. If &quot;off&quot; no random seed data is read off the ESP, nor passed to the OS. If &quot;with-system-token&quot; (the default) <code>systemd-boot</code> will read a random seed from the ESP (from the file /loader/random-seed) only if the <i>LoaderSystemToken</i> EFI variable is set, and then derive the random seed to pass to the OS from the combination. If &quot;always&quot; the boot loader will do so even if <i>LoaderSystemToken</i> is not set. This mode is useful in environments where protection against OS image reuse is not a concern, and the random seed shall be used even with no further setup in place. Use <code>bootctl random-seed</code> to initialize both the random seed file in the ESP and the system token EFI variable. </dd>
-<p> See m[blue]<code>Random Seeds</code>m[]<font SIZE="-2">[1]</font> for further information.</dl>
+<p> See m[blue]<code>Random Seeds</code>m[][1] for further information.</dl>
 <h2>Example</h2>
 <dl>
 <dd>

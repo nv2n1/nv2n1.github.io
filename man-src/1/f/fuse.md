@@ -76,7 +76,7 @@ description: "fuse – Sinclair ZX Spectrum emulator"
 <dl>
 <dt>
 </dt><dd> Emulate the DivIDE interface. The same as the Peripherals Options dialog&#8217;s <i>DivIDE interface</i> option.</dd></dl>
-<p> <i>&#8211;divide-masterfile file</i><br />
+<p> <i>&#8211;divide-masterfile file</i><br/>
  <i>&#8211;divide-slavefile file</i></p>
 <dl>
 <dt>
@@ -101,7 +101,7 @@ description: "fuse – Sinclair ZX Spectrum emulator"
 <dl>
 <dt>
 </dt><dd> Specify whether Fuse should run at the fastest possible speed when the virtual tape is playing. (Enabled by default, but you can use `<i>&#8211;no-fastload</i>&#8216; to disable). The same as the General Options dialog&#8217;s <i>Fastloading</i> option.</dd></dl>
-<p> <i>-f frequency</i><br />
+<p> <i>-f frequency</i><br/>
  <i>&#8211;sound-freq frequency</i></p>
 <dl>
 <dt>
@@ -110,7 +110,7 @@ description: "fuse – Sinclair ZX Spectrum emulator"
 <dl>
 <dt>
 </dt><dd> Specify whether Fuse should run in full screen mode. This option is effective only under the SDL UI.</dd></dl>
-<p> <i>-g filter</i><br />
+<p> <i>-g filter</i><br/>
  <i>&#8211;graphics-filter mode</i></p>
 <dl>
 <dt>
@@ -119,7 +119,7 @@ description: "fuse – Sinclair ZX Spectrum emulator"
 <dl>
 <dt>
 </dt><dd> Set the filename used for graphical output from the emulated ZX printer. See the <code>PRINTER EMULATION</code> section for more details.</dd></dl>
-<p> <i>-h</i><br />
+<p> <i>-h</i><br/>
  <i>&#8211;help</i></p>
 <dl>
 <dt>
@@ -140,7 +140,7 @@ description: "fuse – Sinclair ZX Spectrum emulator"
 <dl>
 <dt>
 </dt><dd> Emulate an issue 2 keyboard. Same as the General Options dialog&#8217;s <i>Issue 2 keyboard</i> option.</dd></dl>
-<p> <i>-j device</i><br />
+<p> <i>-j device</i><br/>
  <i>&#8211;joystick-1 device</i></p>
 <dl>
 <dt>
@@ -169,23 +169,23 @@ description: "fuse – Sinclair ZX Spectrum emulator"
 <dl>
 <dt>
 </dt><dd> Specify whether the sound made while tapes are loading should be emulated. (Enabled by default, but you can use `<i>&#8211;no-loading-sound</i>&#8216; to disable). Same as the Sound Options dialog&#8217;s <i>Loading sound</i> option.</dd></dl>
-<p> <i>-m type</i><br />
+<p> <i>-m type</i><br/>
  <i>&#8211;machine type</i></p>
 <dl>
 <dt>
 </dt><dd> Specify machine type to emulate initially. The default is <i>48</i>, a 48K Spectrum. The available options are <i>16</i>, <i>48</i>, <i>128</i>, <i>plus2</i>, <i>plus2a</i>, <i>plus3</i>, <i>2048</i>, <i>2068</i>, <i>ts2068</i>, <i>pentagon</i>, <i>pentagon512</i>, <i>pentagon1024</i>, and <i>scorpion</i>.</dd></dl>
-<p> <i>&#8211;microdrive-file file</i><br />
- <i>&#8211;microdrive-2-file file</i><br />
- <i>&#8211;microdrive-3-file file</i><br />
- <i>&#8211;microdrive-4-file file</i><br />
- <i>&#8211;microdrive-5-file file</i><br />
- <i>&#8211;microdrive-6-file file</i><br />
- <i>&#8211;microdrive-7-file file</i><br />
+<p> <i>&#8211;microdrive-file file</i><br/>
+ <i>&#8211;microdrive-2-file file</i><br/>
+ <i>&#8211;microdrive-3-file file</i><br/>
+ <i>&#8211;microdrive-4-file file</i><br/>
+ <i>&#8211;microdrive-5-file file</i><br/>
+ <i>&#8211;microdrive-6-file file</i><br/>
+ <i>&#8211;microdrive-7-file file</i><br/>
  <i>&#8211;microdrive-8-file file</i></p>
 <dl>
 <dt>
 </dt><dd> Specify Interface I Microdrive cartridge files to open.</dd></dl>
-<p> <i>-p file</i><br />
+<p> <i>-p file</i><br/>
  <i>&#8211;playback file</i></p>
 <dl>
 <dt>
@@ -214,46 +214,46 @@ description: "fuse – Sinclair ZX Spectrum emulator"
 <dl>
 <dt>
 </dt><dd> Specify the frame rate, the ratio of spectrum frame updates to real frame updates. Same as the General Options dialog&#8217;s <i>Frame rate</i> option.</dd></dl>
-<p> <i>-r file</i><br />
+<p> <i>-r file</i><br/>
  <i>&#8211;record file</i></p>
 <dl>
 <dt>
 </dt><dd> Specify an RZX file to begin recording to.</dd></dl>
-<p> <i>&#8211;rom-16 file</i><br />
- <i>&#8211;rom-48 file</i><br />
- <i>&#8211;rom-128-0 file</i><br />
- <i>&#8211;rom-128-1 file</i><br />
- <i>&#8211;rom-plus2-0 file</i><br />
- <i>&#8211;rom-plus2-1 file</i><br />
- <i>&#8211;rom-plus2a-0 file</i><br />
- <i>&#8211;rom-plus2a-1 file</i><br />
- <i>&#8211;rom-plus2a-2 file</i><br />
- <i>&#8211;rom-plus2a-3 file</i><br />
- <i>&#8211;rom-plus3-0 file</i><br />
- <i>&#8211;rom-plus3-1 file</i><br />
- <i>&#8211;rom-plus3-2 file</i><br />
- <i>&#8211;rom-plus3-3 file</i><br />
- <i>&#8211;rom-plus3e-0 file</i><br />
- <i>&#8211;rom-plus3e-1 file</i><br />
- <i>&#8211;rom-plus3e-2 file</i><br />
- <i>&#8211;rom-plus3e-3 file</i><br />
- <i>&#8211;rom-tc2048 file</i><br />
- <i>&#8211;rom-tc2068-0 file</i><br />
- <i>&#8211;rom-tc2068-1 file</i><br />
- <i>&#8211;rom-ts2068-0 file</i><br />
- <i>&#8211;rom-ts2068-1 file</i><br />
- <i>&#8211;rom-pentagon-0 file</i><br />
- <i>&#8211;rom-pentagon-1 file</i><br />
- <i>&#8211;rom-pentagon-2 file</i><br />
- <i>&#8211;rom-pentagon-3 file</i><br />
- <i>&#8211;rom-scorpion-0 file</i><br />
- <i>&#8211;rom-scorpion-1 file</i><br />
- <i>&#8211;rom-scorpion-2 file</i><br />
- <i>&#8211;rom-scorpion-3 file</i><br />
- <i>&#8211;rom-spec-se-0 file</i><br />
- <i>&#8211;rom-spec-se-1 file</i><br />
- <i>&#8211;rom-interface-1 file</i><br />
- <i>&#8211;rom-plusd file</i><br />
+<p> <i>&#8211;rom-16 file</i><br/>
+ <i>&#8211;rom-48 file</i><br/>
+ <i>&#8211;rom-128-0 file</i><br/>
+ <i>&#8211;rom-128-1 file</i><br/>
+ <i>&#8211;rom-plus2-0 file</i><br/>
+ <i>&#8211;rom-plus2-1 file</i><br/>
+ <i>&#8211;rom-plus2a-0 file</i><br/>
+ <i>&#8211;rom-plus2a-1 file</i><br/>
+ <i>&#8211;rom-plus2a-2 file</i><br/>
+ <i>&#8211;rom-plus2a-3 file</i><br/>
+ <i>&#8211;rom-plus3-0 file</i><br/>
+ <i>&#8211;rom-plus3-1 file</i><br/>
+ <i>&#8211;rom-plus3-2 file</i><br/>
+ <i>&#8211;rom-plus3-3 file</i><br/>
+ <i>&#8211;rom-plus3e-0 file</i><br/>
+ <i>&#8211;rom-plus3e-1 file</i><br/>
+ <i>&#8211;rom-plus3e-2 file</i><br/>
+ <i>&#8211;rom-plus3e-3 file</i><br/>
+ <i>&#8211;rom-tc2048 file</i><br/>
+ <i>&#8211;rom-tc2068-0 file</i><br/>
+ <i>&#8211;rom-tc2068-1 file</i><br/>
+ <i>&#8211;rom-ts2068-0 file</i><br/>
+ <i>&#8211;rom-ts2068-1 file</i><br/>
+ <i>&#8211;rom-pentagon-0 file</i><br/>
+ <i>&#8211;rom-pentagon-1 file</i><br/>
+ <i>&#8211;rom-pentagon-2 file</i><br/>
+ <i>&#8211;rom-pentagon-3 file</i><br/>
+ <i>&#8211;rom-scorpion-0 file</i><br/>
+ <i>&#8211;rom-scorpion-1 file</i><br/>
+ <i>&#8211;rom-scorpion-2 file</i><br/>
+ <i>&#8211;rom-scorpion-3 file</i><br/>
+ <i>&#8211;rom-spec-se-0 file</i><br/>
+ <i>&#8211;rom-spec-se-1 file</i><br/>
+ <i>&#8211;rom-interface-1 file</i><br/>
+ <i>&#8211;rom-plusd file</i><br/>
  <i>&#8211;rom-beta128 file</i></p>
 <dl>
 <dt>
@@ -262,7 +262,7 @@ description: "fuse – Sinclair ZX Spectrum emulator"
 <dl>
 <dt>
 </dt><dd> This option makes Fuse&#8217;s Interface I emulation assume that the RS-232 line other end is live when you connect the communication channels. See also the `<i>&#8211;rs232-rx</i>&#8216; and `<i>&#8211;rs232-tx</i>&#8216; options.</dd></dl>
-<p> <i>&#8211;rs232-rx</i><br />
+<p> <i>&#8211;rs232-rx</i><br/>
  <i>&#8211;rs232-tx</i></p>
 <dl>
 <dt>
@@ -291,7 +291,7 @@ description: "fuse – Sinclair ZX Spectrum emulator"
 <dl>
 <dt>
 </dt><dd> Support the SLT trap instruction. (Enabled by default, but you can use `<i>&#8211;no-slt</i>&#8216; to disable). Same as the General Options dialog&#8217;s <i>Use .slt traps</i> option.</dd></dl>
-<p> <i>-s file</i><br />
+<p> <i>-s file</i><br/>
  <i>&#8211;snapshot file</i></p>
 <dl>
 <dt>
@@ -308,7 +308,7 @@ description: "fuse – Sinclair ZX Spectrum emulator"
 <dl>
 <dt>
 </dt><dd> Use higher fidelity sound generation to improve the reproduction of some multi-channel beeper tunes by reducing aliasing noise (e.g. Fairlight 2). Same as the Sound Options dialog&#8217;s <i>Hi-fi beeper</i> option.</dd></dl>
-<p> <i>-d device</i><br />
+<p> <i>-d device</i><br/>
  <i>&#8211;sound-device device</i></p>
 <dl>
 <dt>
@@ -321,7 +321,7 @@ description: "fuse – Sinclair ZX Spectrum emulator"
 <dl>
 <dl>
 <dt>[bu]</dt>
-<dd> dev=<i>device</i><br />
+<dd> dev=<i>device</i><br/>
  `<i>device</i>&#8216; gives the AIX sound device.</dd></dl>
 </dl>
 <dt>[bu]</dt>
@@ -329,13 +329,13 @@ description: "fuse – Sinclair ZX Spectrum emulator"
 <dl>
 <dl>
 <dt>[bu]</dt>
-<dd> card=<i>num</i><br />
+<dd> card=<i>num</i><br/>
  `<i>num</i>&#8216; gives the ALSA card number.</dd>
 <dt>[bu]</dt>
-<dd> dev=<i>num</i><br />
+<dd> dev=<i>num</i><br/>
  `<i>num</i>&#8216; gives the ALSA device number.</dd>
 <dt>[bu]</dt>
-<dd> buf_size=<i>num</i><br />
+<dd> buf_size=<i>num</i><br/>
  `<i>num</i>&#8216; gives the ALSA buffer size in bytes.</dd></dl>
 </dl>
 <dt>[bu]</dt>
@@ -343,16 +343,16 @@ description: "fuse – Sinclair ZX Spectrum emulator"
 <dl>
 <dl>
 <dt>[bu]</dt>
-<dd> dev=<i>string</i><br />
+<dd> dev=<i>string</i><br/>
  `<i>string</i>&#8216; specfies the ALSA device e.g. hw:1.2</dd>
 <dt>[bu]</dt>
-<dd> buffer_time=<i>num</i><br />
+<dd> buffer_time=<i>num</i><br/>
  `<i>num</i>&#8216; gives the ALSA buffer time in microseconds.</dd>
 <dt>[bu]</dt>
-<dd> period_time=<i>num</i><br />
+<dd> period_time=<i>num</i><br/>
  `<i>num</i>&#8216; gives the ALSA period time in microseconds.</dd>
 <dt>[bu]</dt>
-<dd> use_mmap=<i>yes|y|true|t|1</i><br />
+<dd> use_mmap=<i>yes|y|true|t|1</i><br/>
  specifies that libao use memory mapped transfer.</dd></dl>
 </dl>
 <dt>[bu]</dt>
@@ -362,7 +362,7 @@ description: "fuse – Sinclair ZX Spectrum emulator"
 <dl>
 <dl>
 <dt>[bu]</dt>
-<dd> host=<i>string</i><br />
+<dd> host=<i>string</i><br/>
  `<i>string</i>&#8216; gives the ESD host specification.</dd></dl>
 </dl>
 <dt>[bu]</dt>
@@ -374,10 +374,10 @@ description: "fuse – Sinclair ZX Spectrum emulator"
 <dl>
 <dl>
 <dt>[bu]</dt>
-<dd> host=<i>string</i><br />
+<dd> host=<i>string</i><br/>
  `<i>string</i>&#8216; gives the NAS host specification.</dd>
 <dt>[bu]</dt>
-<dd> buf_size=<i>num</i><br />
+<dd> buf_size=<i>num</i><br/>
  `<i>num</i>&#8216; gives the buffer size on the server.</dd></dl>
 </dl>
 <dt>[bu]</dt>
@@ -385,7 +385,7 @@ description: "fuse – Sinclair ZX Spectrum emulator"
 <dl>
 <dl>
 <dt>[bu]</dt>
-<dd> dsp=<i>string</i><br />
+<dd> dsp=<i>string</i><br/>
  `<i>string</i>&#8216; gives the OSS device to be used e.g. /dev/sound/dsp1</dd></dl>
 </dl>
 <dt>[bu]</dt>
@@ -393,7 +393,7 @@ description: "fuse – Sinclair ZX Spectrum emulator"
 <dl>
 <dl>
 <dt>[bu]</dt>
-<dd> dev=<i>string</i><br />
+<dd> dev=<i>string</i><br/>
  `<i>string</i>&#8216; gives the audio device to be used.</dd></dl>
 </dl>
 <dt>[bu]</dt>
@@ -403,7 +403,7 @@ description: "fuse – Sinclair ZX Spectrum emulator"
 <dl>
 <dl>
 <dt>[bu]</dt>
-<dd> byteorder=<i>string</i><br />
+<dd> byteorder=<i>string</i><br/>
  `<i>string</i>&#8216; can be any of <i>native</i> (host native byteorder), <i>big</i> (big endian) or <i>little</i> (little endian).</dd></dl>
 </dl>
 <dt>[bu]</dt>
@@ -418,9 +418,9 @@ description: "fuse – Sinclair ZX Spectrum emulator"
 <p> causes Fuse to use ALSA 0.9+ output with the second (#1) sound card. </p>
 <p> <i>fuse -d raw:byteorder=little,file=enigma.raw</i> </p>
 <p> causes Fuse to save little endian words to `<i>enigma.raw</i>&#8216;. </p>
-<p> See the `DEVICE&#8217; section of <i><a href="/docs/linux/man/1-ogg123/">ogg123</a>(1)</i> for up to date information of devices and options (except for the `file&#8217; option which is provided by Fuse itself).<br />
- If you are using <i>libasound</i> or <i>ALSA</i> for sound output, the <i>device</i> parameter allows you to specify the device used for sound output and some parameters to be used for that device. In general, the <i>device</i> parameter has the form<br />
- <i>devstr</i> or<br />
+<p> See the `DEVICE&#8217; section of <i><a href="/docs/linux/man/1-ogg123/">ogg123</a>(1)</i> for up to date information of devices and options (except for the `file&#8217; option which is provided by Fuse itself).<br/>
+ If you are using <i>libasound</i> or <i>ALSA</i> for sound output, the <i>device</i> parameter allows you to specify the device used for sound output and some parameters to be used for that device. In general, the <i>device</i> parameter has the form<br/>
+ <i>devstr</i> or<br/>
  <i>param[=value][,param[=value][,&#8230;][,devstr]</i>.</p>
 <dl>
 <dt>[bu]</dt>
@@ -430,7 +430,7 @@ description: "fuse – Sinclair ZX Spectrum emulator"
 <dl>
 <dl>
 <dt>[bu]</dt>
-<dd> <i>buffer=nnnn</i>: set the ALSA buffer in frames, smaller value cause smaller sound delay but may more buffer underrun (pops and clicks), larger value cause longer delay but fewer underrun. By default Fuse determine the buffer size based on the actual sound frequency.<br />
+<dd> <i>buffer=nnnn</i>: set the ALSA buffer in frames, smaller value cause smaller sound delay but may more buffer underrun (pops and clicks), larger value cause longer delay but fewer underrun. By default Fuse determine the buffer size based on the actual sound frequency.<br/>
  If you use some special plugin for your pcm device (e.g.: dmix) or your card not support some needed parameter (e.g. cannot play other only 48 kHz stereo sound like some AC97 sound card) may cause Fuse unable to set the needed buffer size, appropriate sound frequency, channels and so on, therefore you cannot get optimal result or not hear the sound at all. In this case try the <i>plughw:#</i>, (where # mean your card number counted from 0) for ALSA device. </dd>
 <dt>[bu]</dt>
 <dd> <i>verbose</i> : if given, fuse report ALSA buffer underruns to <i>stderr</i>
@@ -455,18 +455,18 @@ description: "fuse – Sinclair ZX Spectrum emulator"
 <dl>
 <dt>
 </dt><dd> For the GTK+ UI, use stricter limits for the aspect ratio limits set by the `<i>&#8211;aspect-hint</i>&#8216; option. This can cause some window managers (for example, <i><a href="/docs/linux/man/1-metacity/">metacity</a></i>(1)) to not allow the window to be resized and moved, but is necessary to prevent others (for example, <i><a href="/docs/linux/man/1-fvwm/">fvwm</a></i>(1)) from being able resize the window away from square.</dd></dl>
-<p> <i>-v mode</i><br />
+<p> <i>-v mode</i><br/>
  <i>&#8211;svgamode mode</i></p>
 <dl>
 <dt>
 </dt><dd> Specify which mode to use for the SVGAlib and FB UIs. Available values for <i>mode</i> are `320&#8242; (which corresponds to a 320x240x256 mode), the default and `640&#8242; (a 640x480x256 mode).</dd></dl>
-<p> <i>-D mode</i><br />
+<p> <i>-D mode</i><br/>
  <i>&#8211;doublescan-mode mode</i></p>
 <dl>
 <dt>
-</dt><dd> Specify whether to use doublescan modes in the SVGAlib and FB UIs. Available values for <i>mode</i> are 0, 1 and 2. 0 means `never doublescan&#8217; (use 640&#215;480 at either 72 Hz or 60 Hz), whereas 1 and 2 both mean `try to use doublescan&#8217; and will fall back on the 640&#215;480 modes. These latter two are treated identically for SVGA, but for FB, they differ: 1 selects 72 Hz modes (the same size and shape as your typical 640&#215;480), and 2 selects 60 Hz modes (overscan).<br />
+</dt><dd> Specify whether to use doublescan modes in the SVGAlib and FB UIs. Available values for <i>mode</i> are 0, 1 and 2. 0 means `never doublescan&#8217; (use 640&#215;480 at either 72 Hz or 60 Hz), whereas 1 and 2 both mean `try to use doublescan&#8217; and will fall back on the 640&#215;480 modes. These latter two are treated identically for SVGA, but for FB, they differ: 1 selects 72 Hz modes (the same size and shape as your typical 640&#215;480), and 2 selects 60 Hz modes (overscan).<br/>
  If your monitor displays a blank screen when using 1 or 2, press F10 then try a different option or say `&#8211;svgamode 640&#8242;.</dd></dl>
-<p> <i>-t file</i><br />
+<p> <i>-t file</i><br/>
  <i>&#8211;tape file</i></p>
 <dl>
 <dt>
@@ -483,7 +483,7 @@ description: "fuse – Sinclair ZX Spectrum emulator"
 <dl>
 <dt>
 </dt><dd> Insert the specified file into the emulated Beta disk interface&#8217;s drive A: and select Pentagon mode on startup.</dd></dl>
-<p> <i>-V</i><br />
+<p> <i>-V</i><br/>
  <i>&#8211;version</i></p>
 <dl>
 <dt>
@@ -533,12 +533,12 @@ description: "fuse – Sinclair ZX Spectrum emulator"
 <p> In the GTK+ version, the menu bar is always visible at the top of the Fuse window. You can click on a menu name to pop it up. Alternatively, you can press <i>F1</i> to display a pop-up version of the menu bar, which you can then navigate with the cursor keys or mouse. </p>
 <p> In the widget UI pressing <i>F1</i> is the only way to get the main menu; and unlike the GTK+ version, the emulator pauses while the menus are being navigated. The menus show which key to press for each menu option in brackets. Pressing <i>Esc</i> exits a menu, and pressing <i>Enter</i> exits the menu system entirely (as well as `confirming&#8217; any current dialog). </p>
 <p> Here&#8217;s what the menu options do, along with the function key mappings for those items which have them: </p>
-<p> <i>F3</i><br />
+<p> <i>F3</i><br/>
  <i>File, Open&#8230;</i></p>
 <dl>
 <dt>
 </dt><dd> Open a Spectrum file. Snapshots will be loaded into memory; tape images will be inserted into the emulated tape deck, and if the <i>Auto-load media</i> option is set will being loading. Opening a disk image or a Timex dock image will cause the appropriate machine type (+3, Pentagon or TC2068) to be selected with the image inserted, and disks will automatically load if the <i>Auto-load media</i> option is set. See the <code>FILE SELECTION</code> section below for details on how to choose the file. Note that this behaviour is different from previous versions of Fuse, when this option would open only snapshots.</dd></dl>
-<p> <i>F2</i><br />
+<p> <i>F2</i><br/>
  <i>File, Save Snapshot&#8230;</i></p>
 <dl>
 <dt>
@@ -551,12 +551,12 @@ description: "fuse – Sinclair ZX Spectrum emulator"
 <dl>
 <dt>
 </dt><dd> Start recording input to an RZX file, initialised from a snapshot. You will first be asked for the snapshot to use and then the file to save the recording to.</dd></dl>
-<p> <i>Insert</i><br />
+<p> <i>Insert</i><br/>
  <i>File, Recording, Insert snapshot</i></p>
 <dl>
 <dt>
 </dt><dd> Inserts a snapshot of the current state into the RZX file. This can be used at a later point to roll back to the inserted state by using one of the commands below.</dd></dl>
-<p> <i>Delete</i><br />
+<p> <i>Delete</i><br/>
  <i>File, Recording, Rollback</i></p>
 <dl>
 <dt>
@@ -613,12 +613,12 @@ description: "fuse – Sinclair ZX Spectrum emulator"
 <dl>
 <dt>
 </dt><dd> Save an arbitrary chunk of the Spectrum&#8217;s memory to a file. Select the file you wish to save to, followed by the location and length of data you wish to save.</dd></dl>
-<p> <i>F10</i><br />
+<p> <i>F10</i><br/>
  <i>File, Exit</i></p>
 <dl>
 <dt>
 </dt><dd> Exit the emulator. A confirmation dialog will appear checking you actually want to do this.</dd></dl>
-<p> <i>F4</i><br />
+<p> <i>F4</i><br/>
  <i>Options, General&#8230;</i></p>
 <dl>
 <dt>
@@ -839,12 +839,12 @@ description: "fuse – Sinclair ZX Spectrum emulator"
 <dl>
 <dt>
 </dt><dd> A Kempston joystick, read from input port 31. Note that the <i>Options, Peripherals, Kempston interface</i> option must also be set for the input to be recognised.</dd></dl>
-<p> <i>Sinclair 1</i><br />
+<p> <i>Sinclair 1</i><br/>
  <i>Sinclair 2</i></p>
 <dl>
 <dt>
 </dt><dd> The `left&#8217; and `right&#8217; Sinclair joysticks, equivalent to pressing <i>1</i> (left), <i>2</i> (right), <i>3</i> (down), <i>4</i> (up), and <i>5</i> (fire), or <i>6</i> (left), <i>7</i> (right), <i>8</i> (down), <i>9</i> (up), and <i>0</i> (fire) respectively.</dd></dl>
-<p> <i>Timex 1</i><br />
+<p> <i>Timex 1</i><br/>
  <i>Timex 2</i></p>
 <dl>
 <dt>
@@ -863,12 +863,12 @@ description: "fuse – Sinclair ZX Spectrum emulator"
 <dl>
 <dt>
 </dt><dd> If <i>libxml2</i> was available when Fuse was compiled, this will cause Fuse&#8217;s current options to be written to <i>.fuserc</i> in your home directory, from which they will be picked up again when Fuse is restarted. The best way to update this file is by using this option, but it&#8217;s a simple XML file and shouldn&#8217;t be too hard to edit by hand if you really want to.</dd></dl>
-<p> <i>Pause</i><br />
+<p> <i>Pause</i><br/>
  <i>Machine, Pause</i></p>
 <dl>
 <dt>
 </dt><dd> Pause or unpause emulation. This option is available only under the GTK+ UI; to pause the other user interfaces, simply press F1 to bring up the main menu.</dd></dl>
-<p> <i>F5</i><br />
+<p> <i>F5</i><br/>
  <i>Machine, Reset</i></p>
 <dl>
 <dt>
@@ -877,12 +877,12 @@ description: "fuse – Sinclair ZX Spectrum emulator"
 <dl>
 <dt>
 </dt><dd> Reset the emulated Spectrum. A hard reset is equivalent to turning the Spectrum&#8217;s power off, and then turning it back on. Again, you get a chance to cancel this if you&#8217;re using the GTK+ UI.</dd></dl>
-<p> <i>F9</i><br />
+<p> <i>F9</i><br/>
  <i>Machine, Select&#8230;</i></p>
 <dl>
 <dt>
 </dt><dd> Choose a type of Spectrum to emulate. An brief overview of the Sinclair, Amstrad and Timex can be found at <i><a rel="nofollow" href="http://www.nvg.ntnu.no/sinclair/computers/zxspectrum/zxspectrum.htm">http://www.nvg.ntnu.no/sinclair/computers/zxspectrum/zxspectrum.htm</a></i> while more technical information can be found at <i><a rel="nofollow" href="http://www.worldofspectrum.org/faq/reference/reference.htm">http://www.worldofspectrum.org/faq/reference/reference.htm</a></i>, and <i><a rel="nofollow" href="http://www.worldofspectrum.org/faq/reference/tmxreference.htm">http://www.worldofspectrum.org/faq/reference/tmxreference.htm</a></i>. </dd>
-<p> <i>Spectrum 16K</i><br />
+<p> <i>Spectrum 16K</i><br/>
  <i>Spectrum 48K</i></p>
 <dl>
 <dt>
@@ -895,7 +895,7 @@ description: "fuse – Sinclair ZX Spectrum emulator"
 <dl>
 <dt>
 </dt><dd> The first machine released by Amstrad, in 1986. From an emulation point of view, the +2 is virtually identical to the 128K.</dd></dl>
-<p> <i>Spectrum +2A</i><br />
+<p> <i>Spectrum +2A</i><br/>
  <i>Spectrum +3</i></p>
 <dl>
 <dt>
@@ -904,7 +904,7 @@ description: "fuse – Sinclair ZX Spectrum emulator"
 <dl>
 <dt>
 </dt><dd> A +3 with modified ROMs allowing access to IDE hard disks via the simple 8-bit interface, as activated from the <i>Options, Peripherals</i> dialog. See <i><a rel="nofollow" href="http://www.zxplus3e.plus.com/">http://www.zxplus3e.plus.com/</a></i> for more details.</dd></dl>
-<p> <i>Timex TC2048</i><br />
+<p> <i>Timex TC2048</i><br/>
  <i>Timex TC2068</i></p>
 <dl>
 <dt>
@@ -917,7 +917,7 @@ description: "fuse – Sinclair ZX Spectrum emulator"
 <dl>
 <dt>
 </dt><dd> Russian clone of the Spectrum. There were many different machines called Pentagon from 1989 to 2006, this machine corresponds to a 1991 era Pentagon-128K with the optional AY sound chip and the integrated Beta 128 disk interface, and is the version of the machine most often emulated. More technical details can be found at <i><a rel="nofollow" href="http://www.worldofspectrum.org/rusfaq/index.html">http://www.worldofspectrum.org/rusfaq/index.html</a></i>,</dd></dl>
-<p> <i>Pentagon 512K</i><br />
+<p> <i>Pentagon 512K</i><br/>
  <i>Pentagon 1024K</i></p>
 <dl>
 <dt>
@@ -947,13 +947,13 @@ description: "fuse – Sinclair ZX Spectrum emulator"
 <dl>
 <dt>
 </dt><dd> Sends a non-maskable interrupt to the emulated Spectrum. Due to a typo in the standard 48K ROM, this will cause a reset, but modified ROMs are available which make use of this feature. When the +D is emulated, this is used to access the +D&#8217;s screenshot and snapshot features (see the <code>+D EMULATION</code> section below).</dd></dl>
-<p> <i>F7</i><br />
+<p> <i>F7</i><br/>
  <i>Media, Tape, Open&#8230;</i></p>
 <dl>
 <dt>
 </dt><dd> Choose a TAP or TZX virtual-tape file to load from. See the <code>FILE SELECTION</code> section below for details on how to choose the file. If <i>Auto-load media</i> is set in the General Options dialog (as it is by default), you may use the <i>File, Open&#8230;</i> menu option instead, and the tape will begin loading automatically. Otherwise, you have to start the load in the emulated machine (with LOAD &quot;&quot; or the 128&#8217;s Tape Loader option, though you may need to reset first). </dd>
 <p> To <i>guarantee</i> that TZX files will load properly, you should select the file, make sure tape-loading traps are disabled in the General Options dialog, then press <i>F8</i> (or do <i>Media, Tape, Play</i>). That said, most TZXs will work with tape-loading traps enabled (often quickly loading partway, then loading the rest real-time), so you might want to try it that way first.</dl>
-<p> <i>F8</i><br />
+<p> <i>F8</i><br/>
  <i>Media, Tape, Play</i></p>
 <dl>
 <dt>
@@ -970,7 +970,7 @@ description: "fuse – Sinclair ZX Spectrum emulator"
 <dl>
 <dt>
 </dt><dd> Clear the current virtual tape. This is particularly useful when you want a `clean slate&#8217; to add newly-saved files to, before doing <i>Media, Tape, Write&#8230;</i> (or <i>F6</i>).</dd></dl>
-<p> <i>F6</i><br />
+<p> <i>F6</i><br/>
  <i>Media, Tape, Write&#8230;</i></p>
 <dl>
 <dt>
@@ -1011,19 +1011,19 @@ description: "fuse – Sinclair ZX Spectrum emulator"
 <dl>
 <dt>
 </dt><dd> Disable the write protect tab for the image in Microdrive 1.</dd></dl>
-<p> <i>Media, Interface I, Microdrive 2, &#8230;</i><br />
- <i>Media, Interface I, Microdrive 3, &#8230;</i><br />
- <i>Media, Interface I, Microdrive 4, &#8230;</i><br />
- <i>Media, Interface I, Microdrive 5, &#8230;</i><br />
- <i>Media, Interface I, Microdrive 6, &#8230;</i><br />
- <i>Media, Interface I, Microdrive 7, &#8230;</i><br />
+<p> <i>Media, Interface I, Microdrive 2, &#8230;</i><br/>
+ <i>Media, Interface I, Microdrive 3, &#8230;</i><br/>
+ <i>Media, Interface I, Microdrive 4, &#8230;</i><br/>
+ <i>Media, Interface I, Microdrive 5, &#8230;</i><br/>
+ <i>Media, Interface I, Microdrive 6, &#8230;</i><br/>
+ <i>Media, Interface I, Microdrive 7, &#8230;</i><br/>
  <i>Media, Interface I, Microdrive 8, &#8230;</i></p>
 <dl>
 <dt>
 </dt><dd> Equivalent options for the other emulated Microdrives.</dd></dl>
-<p> <i>Media, Interface I, RS232, Plug RxD</i><br />
- <i>Media, Interface I, RS232, Unplug RxD</i><br />
- <i>Media, Interface I, RS232, Plug TxD</i><br />
+<p> <i>Media, Interface I, RS232, Plug RxD</i><br/>
+ <i>Media, Interface I, RS232, Unplug RxD</i><br/>
+ <i>Media, Interface I, RS232, Plug TxD</i><br/>
  <i>Media, Interface I, RS232, Unplug TxD</i></p>
 <dl>
 <dt>
@@ -1061,8 +1061,8 @@ description: "fuse – Sinclair ZX Spectrum emulator"
 <dl>
 <dt>
 </dt><dd> Insert a new (unformatted) disk into the emulated Beta drive A:.</dd></dl>
-<p> <i>Media, Disk, Beta, Drive A:, Insert&#8230;</i><br />
- <i>Media, Disk, Beta, Drive A:, Eject</i><br />
+<p> <i>Media, Disk, Beta, Drive A:, Insert&#8230;</i><br/>
+ <i>Media, Disk, Beta, Drive A:, Eject</i><br/>
  <i>Media, Disk, Beta, Drive A:, Eject and write&#8230;</i></p>
 <dl>
 <dt>
@@ -1075,18 +1075,18 @@ description: "fuse – Sinclair ZX Spectrum emulator"
 <dl>
 <dt>
 </dt><dd> Disable the write protect tab for the image in Beta drive A:.</dd></dl>
-<p> <i>Media, Disk, Beta, Drive B:, &#8230;</i><br />
- <i>Media, Disk, Beta, Drive C:, &#8230;</i><br />
+<p> <i>Media, Disk, Beta, Drive B:, &#8230;</i><br/>
+ <i>Media, Disk, Beta, Drive C:, &#8230;</i><br/>
  <i>Media, Disk, Beta, Drive D:, &#8230;</i></p>
 <dl>
 <dt>
 </dt><dd> As above, but for the remaining emulated Beta disk interface drives.</dd></dl>
-<p> <i>Media, Disk, +D, Drive 1, Insert New</i><br />
- <i>Media, Disk, +D, Drive 1, Insert&#8230;</i><br />
- <i>Media, Disk, +D, Drive 1, Eject</i><br />
- <i>Media, Disk, +D, Drive 1, Eject and write&#8230;</i><br />
- <i>Media, Disk, +D, Drive 1, Write protect, Enable</i><br />
- <i>Media, Disk, +D, Drive 1, Write protect, Disable</i><br />
+<p> <i>Media, Disk, +D, Drive 1, Insert New</i><br/>
+ <i>Media, Disk, +D, Drive 1, Insert&#8230;</i><br/>
+ <i>Media, Disk, +D, Drive 1, Eject</i><br/>
+ <i>Media, Disk, +D, Drive 1, Eject and write&#8230;</i><br/>
+ <i>Media, Disk, +D, Drive 1, Write protect, Enable</i><br/>
+ <i>Media, Disk, +D, Drive 1, Write protect, Disable</i><br/>
  <i>Media, Disk, +D, Drive 2, &#8230;</i></p>
 <dl>
 <dt>
@@ -1119,32 +1119,32 @@ description: "fuse – Sinclair ZX Spectrum emulator"
 <dl>
 <dt>
 </dt><dd> Eject the virtual hard disk from the simple 8-bit interface&#8217;s master channel. Note that any writes to the virtual hard disk will be lost unless the <i>Media, IDE, Simple 8-bit, Master, Commit</i> option is used before the disk is ejected.</dd></dl>
-<p> <i>Media, IDE, Simple 8-bit, Slave, Insert&#8230;</i><br />
- <i>Media, IDE, Simple 8-bit, Slave, Commit</i><br />
+<p> <i>Media, IDE, Simple 8-bit, Slave, Insert&#8230;</i><br/>
+ <i>Media, IDE, Simple 8-bit, Slave, Commit</i><br/>
  <i>Media, IDE, Simple 8-bit, Slave, Eject</i></p>
 <dl>
 <dt>
 </dt><dd> The same as the <i>Media, IDE, Simple 8-bit, Master</i> entries above, but for the simple 8-bit interface&#8217;s slave channel.</dd></dl>
-<p> <i>Media, IDE, ZXATASP, Master, Insert&#8230;</i><br />
- <i>Media, IDE, ZXATASP, Master, Commit</i><br />
- <i>Media, IDE, ZXATASP, Master, Eject</i><br />
- <i>Media, IDE, ZXATASP, Slave, Insert&#8230;</i><br />
- <i>Media, IDE, ZXATASP, Slave, Commit</i><br />
+<p> <i>Media, IDE, ZXATASP, Master, Insert&#8230;</i><br/>
+ <i>Media, IDE, ZXATASP, Master, Commit</i><br/>
+ <i>Media, IDE, ZXATASP, Master, Eject</i><br/>
+ <i>Media, IDE, ZXATASP, Slave, Insert&#8230;</i><br/>
+ <i>Media, IDE, ZXATASP, Slave, Commit</i><br/>
  <i>Media, IDE, ZXATASP, Slave, Eject</i></p>
 <dl>
 <dt>
 </dt><dd> The same as the <i>Media, IDE, Simple 8-bit, Master</i> entries above, but for the two channels of the ZXATASP interface.</dd></dl>
-<p> <i>Media, IDE, ZXCF CompactFlash, Insert&#8230;</i><br />
- <i>Media, IDE, ZXCF CompactFlash, Commit</i><br />
+<p> <i>Media, IDE, ZXCF CompactFlash, Insert&#8230;</i><br/>
+ <i>Media, IDE, ZXCF CompactFlash, Commit</i><br/>
  <i>Media, IDE, ZXCF CompactFlash, Eject</i></p>
 <dl>
 <dt>
 </dt><dd> The same as the <i>Media, IDE, Simple 8-bit, Master</i> entries above, but for the ZXCF interface&#8217;s CompactFlash slot.</dd></dl>
-<p> <i>Media, IDE, DivIDE, Master, Insert&#8230;</i><br />
- <i>Media, IDE, DivIDE, Master, Commit</i><br />
- <i>Media, IDE, DivIDE, Eject</i><br />
- <i>Media, IDE, DivIDE, Slave, Insert&#8230;</i><br />
- <i>Media, IDE, DivIDE, Slave, Commit</i><br />
+<p> <i>Media, IDE, DivIDE, Master, Insert&#8230;</i><br/>
+ <i>Media, IDE, DivIDE, Master, Commit</i><br/>
+ <i>Media, IDE, DivIDE, Eject</i><br/>
+ <i>Media, IDE, DivIDE, Slave, Insert&#8230;</i><br/>
+ <i>Media, IDE, DivIDE, Slave, Commit</i><br/>
  <i>Media, IDE, DivIDE, Eject</i></p>
 <dl>
 <dt>
@@ -1179,7 +1179,7 @@ description: "fuse – Sinclair ZX Spectrum emulator"
 <p> Fuse has the ability to apply essentially arbitrary filters between building its image of the Spectrum&#8217;s screen, and displaying it on the emulating machine&#8217;s monitor. These filters can be used to do various forms of smoothing, emulation of TV scanlines and various other possibilities. Support for graphics filters varies between the different user interfaces, but there are two general classes: the GTK+, Xlib and SDL user interfaces (and the saving of .png screenshots) support `interpolating&#8217; filters which use a palette larger than the Spectrum&#8217;s 16 colours, while the SVGAlib user interface supports only `non-interpolating&#8217; filters. The framebuffer user interface currently does not support filters at all. </p>
 <p> A further complication arises due to the fact that the Timex machines have their high-resolution video mode with twice the horizontal resolution. To deal with this, Fuse treats these machines as having a `normal&#8217; display size which is twice the size of a normal Spectrum&#8217;s screen, leading to a different set of filters being available for these machines. Note that any of the double or triple-sizing filters are available for Timex machines only when using the SDL user interface. </p>
 <p> The available filters, along with their short name used to select them from the command line, are: </p>
-<p> <i>Timex half (smoothed) </i>(<i>half</i>)<br />
+<p> <i>Timex half (smoothed) </i>(<i>half</i>)<br/>
  <i>Timex half (skipping) </i>(<i>halfskip</i>)</p>
 <dl>
 <dt>
@@ -1196,8 +1196,8 @@ description: "fuse – Sinclair ZX Spectrum emulator"
 <dl>
 <dt>
 </dt><dd> Scale the displayed screen up to triple size. Available only with the GTK+, Xlib and SDL user interfaces or when saving screenshots of non-Timex machines.</dd></dl>
-<p> <i>2xSaI </i>(<i>2xsai</i>)<br />
- <i>Super 2xSaI </i>(<i>super2xsai</i>)<br />
+<p> <i>2xSaI </i>(<i>2xsai</i>)<br/>
+ <i>Super 2xSaI </i>(<i>super2xsai</i>)<br/>
  <i>SuperEagle </i>(<i>supereagle</i>)</p>
 <dl>
 <dt>
@@ -1210,14 +1210,14 @@ description: "fuse – Sinclair ZX Spectrum emulator"
 <dl>
 <dt>
 </dt><dd> Very similar to <i>AdvMAME2x</i>, except that it triples the size of the displayed screen. Available only with the GTK+, Xlib and SDL user interfaces or when saving screenshots of non-Timex machines.</dd></dl>
-<p> <i>TV 2x </i>(<i>tv2x</i>)<br />
- <i>TV 3x </i>(<i>tv3x</i>)<br />
+<p> <i>TV 2x </i>(<i>tv2x</i>)<br/>
+ <i>TV 3x </i>(<i>tv3x</i>)<br/>
  <i>Timex TV </i>(<i>timextv</i>)</p>
 <dl>
 <dt>
 </dt><dd> Three filters which attempt to emulate the effect of television scanlines. The first is a double-sizing filter for non-Timex machines, the second is a similar triple-sizing filter, while the last is a single-sizing filter for Timex machines (note that this means TV 2X and Timex TV produce the same size output).</dd></dl>
-<p> <i>PAL TV</i>(<i>paltv</i>)<br />
- <i>PAL TV 2x </i>(<i>paltv2x</i>)<br />
+<p> <i>PAL TV</i>(<i>paltv</i>)<br/>
+ <i>PAL TV 2x </i>(<i>paltv2x</i>)<br/>
  <i>PAL TV 3x </i>(<i>paltv3x</i>)</p>
 <dl>
 <dt>
@@ -1310,12 +1310,12 @@ description: "fuse – Sinclair ZX Spectrum emulator"
 <dl>
 <dt>
 </dt><dd> Set a breakpoint to occur when the event specified by <i>area</i>:<i>detail</i> occurs and <i>condition</i> evaluates to true. The events which can be caught are: </dd>
-<p> divide:page<br />
+<p> divide:page<br/>
  divide:unpage</p>
 <dl>
 <dt>
 </dt><dd> The DivIDE interface is paged into or out of memory respectively</dd></dl>
-<p> if1:page<br />
+<p> if1:page<br/>
  if1:unpage</p>
 <dl>
 <dt>
@@ -1324,17 +1324,17 @@ description: "fuse – Sinclair ZX Spectrum emulator"
 <dl>
 <dt>
 </dt><dd> An RZX recording finishes playing</dd></dl>
-<p> tape:play<br />
+<p> tape:play<br/>
  tape:stop</p>
 <dl>
 <dt>
 </dt><dd> The emulated tape starts or stops playing</dd></dl>
-<p> zxcf:page<br />
+<p> zxcf:page<br/>
  zxcf:unpage</p>
 <dl>
 <dt>
 </dt><dd> The ZXCF interface is paged into or out of memory</dd></dl>
-<p> zxatasp:page<br />
+<p> zxatasp:page<br/>
  zxatasp:unpage</p>
 <dl>
 <dt>
@@ -1344,10 +1344,10 @@ description: "fuse – Sinclair ZX Spectrum emulator"
 <dl>
 <dt>
 </dt><dd> Remove all breakpoints at <i>address</i> or the current value of PC if <i>address</i> is omitted. Port read/write breakpoints are unaffected.</dd></dl>
-<p> com{mmands} <i>id &lt;newline&gt;</i><br />
- <i>&lt;debugger command&gt; &lt;newline&gt;</i><br />
- <i>&lt;debugger command&gt; &lt;newline&gt;</i><br />
- <i>&#8230;</i><br />
+<p> com{mmands} <i>id &lt;newline&gt;</i><br/>
+ <i>&lt;debugger command&gt; &lt;newline&gt;</i><br/>
+ <i>&lt;debugger command&gt; &lt;newline&gt;</i><br/>
+ <i>&#8230;</i><br/>
  end</p>
 <dl>
 <dt>
@@ -1453,7 +1453,7 @@ description: "fuse – Sinclair ZX Spectrum emulator"
 <p> <i>.UDI</i></p>
 <dl>
 <dt>
-</dt><dd> Ultra Disk Image; for specification please see <i><a rel="nofollow" href="http://zxmak.narod.ru/docs.htm">http://zxmak.narod.ru/docs.htm</a></i><br />
+</dt><dd> Ultra Disk Image; for specification please see <i><a rel="nofollow" href="http://zxmak.narod.ru/docs.htm">http://zxmak.narod.ru/docs.htm</a></i><br/>
  This is the only image format which can store all the relevant information of the recorded data on a magnetic disk, so it can be used for any <i>non standard</i> disk format. Fuse can store and read not just MFM but FM formatted disk data in/from this container.</dd></dl>
 <p> <i>.FDI</i></p>
 <dl>
@@ -1483,7 +1483,7 @@ description: "fuse – Sinclair ZX Spectrum emulator"
 <dl>
 <dt>
 </dt><dd> CPC disk image format; Fuse supports the plain old and the new extended CPC format too. Further information please see the <code>THE .DSK FORMAT</code> section and the CPCEMU manual section 7.7.1 <i><a rel="nofollow" href="http://www.cpc-emu.org/linux/cpcemu_e.txt">http://www.cpc-emu.org/linux/cpcemu_e.txt</a></i></dd></dl>
-<p> Fuse supports most of them for writing: <i>.UDI .FDI .MGT .IMG .SAD .TRD .SCL .DSK</i> (only the old CPC format).<br />
+<p> Fuse supports most of them for writing: <i>.UDI .FDI .MGT .IMG .SAD .TRD .SCL .DSK</i> (only the old CPC format).<br/>
  You can save disk images with any output format, just select the appropriate extension. (e.g. <i>` elite3.udi &#8216;</i> to save as an UDI file) There is a <i>.LOG</i> ` image &#8216; format for debugging purpose. This is a plain text file contains three dump of the loaded disk image at different details. Not all image format can store all disk image. You cannot save a disk image with an inappropriate format that loses some information (e.g. variable track length or sector length).</p>
 <h2>COMPRESSED FILES</h2>
 <p> Assuming the appropriate libraries were available when <i><a href="/docs/linux/man/3-libspectrum/">libspectrum</a></i>(3) was compiled, snapshots, tape images, dock cartridges and input recording files can be read from files compressed with <i><a href="/docs/linux/man/3-bzip2/">bzip2</a></i>(3) or <i><a href="/docs/linux/man/3-gzip/">gzip</a></i>(3) just as if they were uncompressed. There is currently no support for reading compressed +3, +D or Beta disk images.</p>
@@ -1498,7 +1498,7 @@ description: "fuse – Sinclair ZX Spectrum emulator"
 <p> <i>~/.fuserc</i></p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/3-bzip2/">bzip2</a></i>(3), <i><a href="/docs/linux/man/1-fuse-utils/">fuse-utils</a></i>(1), <i><a href="/docs/linux/man/3-gzip/">gzip</a></i>(3), <i><a href="/docs/linux/man/3-libspectrum/">libspectrum</a></i>(3), <i><a href="/docs/linux/man/1-ogg123/">ogg123</a></i>(1), <i>xspect</i>(1), <i>xzx</i>(1) </p>
-<p> The comp.sys.sinclair Spectrum FAQ, at<br />
+<p> The comp.sys.sinclair Spectrum FAQ, at<br/>
  <i><a rel="nofollow" href="http://www.worldofspectrum.org/faq/index.html">http://www.worldofspectrum.org/faq/index.html</a></i>.</p>
 <h2>AUTHOR</h2>
 <p> Philip Kendall (philip-fuse [at] shadowmagic.org.uk). </p>

@@ -41,8 +41,8 @@ description: "PCRE – Perl-compatible regular expressions (revised API)"
 <p> If a character&#8217;s Script Extension property is the single value &quot;Inherited&quot;, it is always accepted as part of a script run. This is also true for the property &quot;Common&quot;, subject to the checking of decimal digits described below. All the remaining characters in a script run must have at least one script in common in their Script Extension lists. In set-theoretic terminology, the intersection of all the sets of scripts must not be empty. </p>
 <p> A simple example is an Internet name such as &quot;google.com&quot;. The letters are all in the Latin script, and the dot is Common, so this string is a script run. However, the Cyrillic letter &quot;o&quot; looks exactly the same as the Latin &quot;o&quot;; a string that looks the same, but with Cyrillic &quot;o&quot;s is not a script run. </p>
 <p> More interesting examples involve characters with more than one script in their Script Extension. Consider the following characters: </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;U+060C&nbsp;<wbr>&nbsp;Arabic comma <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;U+060C&nbsp;<wbr>&nbsp;Arabic comma <br/>
 &nbsp;<wbr>&nbsp;U+06D4&nbsp;<wbr>&nbsp;Arabic full stop </p>
 <p> The first has the Script Extension list Arabic, Hanifi Rohingya, Syriac, and Thaana; the second has just Arabic and Hanifi Rohingya. Both of them could appear in script runs of either Arabic or Hanifi Rohingya. The first could also appear in Syriac or Thaana script runs, but the second could not.  </p>
 <h3>The Chinese Han script</h3>
@@ -61,53 +61,53 @@ description: "PCRE – Perl-compatible regular expressions (revised API)"
 <p> Setting PCRE2_NO_UTF_CHECK at compile time does not disable the error that is given if an escape sequence for an invalid Unicode code point is encountered in the pattern. If you want to allow escape sequences such as \x{d800} (a surrogate code point) you can set the PCRE2_EXTRA_ALLOW_SURROGATE_ESCAPES extra option. However, this is possible only in UTF-8 and UTF-32 modes, because these values are not representable in UTF-16.  </p>
 <h3>Errors in UTF-8 strings</h3>
 <p> The following negative error codes are given for invalid UTF-8 strings: </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;PCRE2_ERROR_UTF8_ERR1 <br />
-&nbsp;<wbr>&nbsp;PCRE2_ERROR_UTF8_ERR2 <br />
-&nbsp;<wbr>&nbsp;PCRE2_ERROR_UTF8_ERR3 <br />
-&nbsp;<wbr>&nbsp;PCRE2_ERROR_UTF8_ERR4 <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;PCRE2_ERROR_UTF8_ERR1 <br/>
+&nbsp;<wbr>&nbsp;PCRE2_ERROR_UTF8_ERR2 <br/>
+&nbsp;<wbr>&nbsp;PCRE2_ERROR_UTF8_ERR3 <br/>
+&nbsp;<wbr>&nbsp;PCRE2_ERROR_UTF8_ERR4 <br/>
 &nbsp;<wbr>&nbsp;PCRE2_ERROR_UTF8_ERR5 </p>
 <p> The string ends with a truncated UTF-8 character; the code specifies how many bytes are missing (1 to 5). Although RFC 3629 restricts UTF-8 characters to be no longer than 4 bytes, the encoding scheme (originally defined by RFC 2279) allows for up to 6 bytes, and this is checked first; hence the possibility of 4 or 5 missing bytes. </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;PCRE2_ERROR_UTF8_ERR6 <br />
-&nbsp;<wbr>&nbsp;PCRE2_ERROR_UTF8_ERR7 <br />
-&nbsp;<wbr>&nbsp;PCRE2_ERROR_UTF8_ERR8 <br />
-&nbsp;<wbr>&nbsp;PCRE2_ERROR_UTF8_ERR9 <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;PCRE2_ERROR_UTF8_ERR6 <br/>
+&nbsp;<wbr>&nbsp;PCRE2_ERROR_UTF8_ERR7 <br/>
+&nbsp;<wbr>&nbsp;PCRE2_ERROR_UTF8_ERR8 <br/>
+&nbsp;<wbr>&nbsp;PCRE2_ERROR_UTF8_ERR9 <br/>
 &nbsp;<wbr>&nbsp;PCRE2_ERROR_UTF8_ERR10 </p>
 <p> The two most significant bits of the 2nd, 3rd, 4th, 5th, or 6th byte of the character do not have the binary value 0b10 (that is, either the most significant bit is 0, or the next bit is 1). </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;PCRE2_ERROR_UTF8_ERR11 <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;PCRE2_ERROR_UTF8_ERR11 <br/>
 &nbsp;<wbr>&nbsp;PCRE2_ERROR_UTF8_ERR12 </p>
 <p> A character that is valid by the RFC 2279 rules is either 5 or 6 bytes long; these code points are excluded by RFC 3629. </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;PCRE2_ERROR_UTF8_ERR13 </p>
 <p> A 4-byte character has a value greater than 0x10ffff; these code points are excluded by RFC 3629. </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;PCRE2_ERROR_UTF8_ERR14 </p>
 <p> A 3-byte character has a value in the range 0xd800 to 0xdfff; this range of code points are reserved by RFC 3629 for use with UTF-16, and so are excluded from UTF-8. </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;PCRE2_ERROR_UTF8_ERR15 <br />
-&nbsp;<wbr>&nbsp;PCRE2_ERROR_UTF8_ERR16 <br />
-&nbsp;<wbr>&nbsp;PCRE2_ERROR_UTF8_ERR17 <br />
-&nbsp;<wbr>&nbsp;PCRE2_ERROR_UTF8_ERR18 <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;PCRE2_ERROR_UTF8_ERR15 <br/>
+&nbsp;<wbr>&nbsp;PCRE2_ERROR_UTF8_ERR16 <br/>
+&nbsp;<wbr>&nbsp;PCRE2_ERROR_UTF8_ERR17 <br/>
+&nbsp;<wbr>&nbsp;PCRE2_ERROR_UTF8_ERR18 <br/>
 &nbsp;<wbr>&nbsp;PCRE2_ERROR_UTF8_ERR19 </p>
 <p> A 2-, 3-, 4-, 5-, or 6-byte character is &quot;overlong&quot;, that is, it codes for a value that can be represented by fewer bytes, which is invalid. For example, the two bytes 0xc0, 0xae give the value 0x2e, whose correct coding uses just one byte. </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;PCRE2_ERROR_UTF8_ERR20 </p>
 <p> The two most significant bits of the first byte of a character have the binary value 0b10 (that is, the most significant bit is 1 and the second is 0). Such a byte can only validly occur as the second or subsequent byte of a multi-byte character. </p>
-<p> <br />
+<p> <br/>
 &nbsp;<wbr>&nbsp;PCRE2_ERROR_UTF8_ERR21 </p>
 <p> The first byte of a character has the value 0xfe or 0xff. These values can never occur in a valid UTF-8 string.  </p>
 <h3>Errors in UTF-16 strings</h3>
 <p> The following negative error codes are given for invalid UTF-16 strings: </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;PCRE2_ERROR_UTF16_ERR1&nbsp;<wbr>&nbsp;Missing low surrogate at end of string <br />
-&nbsp;<wbr>&nbsp;PCRE2_ERROR_UTF16_ERR2&nbsp;<wbr>&nbsp;Invalid low surrogate follows high surrogate <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;PCRE2_ERROR_UTF16_ERR1&nbsp;<wbr>&nbsp;Missing low surrogate at end of string <br/>
+&nbsp;<wbr>&nbsp;PCRE2_ERROR_UTF16_ERR2&nbsp;<wbr>&nbsp;Invalid low surrogate follows high surrogate <br/>
 &nbsp;<wbr>&nbsp;PCRE2_ERROR_UTF16_ERR3&nbsp;<wbr>&nbsp;Isolated low surrogate </p>
 <h3>Errors in UTF-32 strings</h3>
 <p> The following negative error codes are given for invalid UTF-32 strings: </p>
-<p> <br />
-&nbsp;<wbr>&nbsp;PCRE2_ERROR_UTF32_ERR1&nbsp;<wbr>&nbsp;Surrogate character&nbsp;(0xd800 to 0xdfff) <br />
+<p> <br/>
+&nbsp;<wbr>&nbsp;PCRE2_ERROR_UTF32_ERR1&nbsp;<wbr>&nbsp;Surrogate character&nbsp;(0xd800 to 0xdfff) <br/>
 &nbsp;<wbr>&nbsp;PCRE2_ERROR_UTF32_ERR2&nbsp;<wbr>&nbsp;Code point is greater than 0x10ffff </p>
 <h2>MATCHING IN INVALID UTF STRINGS</h2>
 <p> You can run pattern matches on subject strings that may contain invalid UTF sequences if you call <code>pcre2_compile()</code> with the PCRE2_MATCH_INVALID_UTF option. This is supported by <code>pcre2_match()</code>, including JIT matching, but not by <code>pcre2_dfa_match()</code>. When PCRE2_MATCH_INVALID_UTF is set, it forces PCRE2_UTF to be set as well. Note, however, that the pattern itself must be a valid UTF string. </p>

@@ -10,7 +10,7 @@ description: "dlasy2.f –"
 <p>dlasy2.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dlasy2</code> (LTRANL, LTRANR, ISGN, N1, N2, TL, LDTL, TR, LDTR, B, LDB, SCALE, X, LDX, XNORM, INFO)<br />
+<p>subroutine <code>dlasy2</code> (LTRANL, LTRANR, ISGN, N1, N2, TL, LDTL, TR, LDTR, B, LDB, SCALE, X, LDX, XNORM, INFO)<br/>
  <i></i><code>DLASY2</code> solves the Sylvester matrix equation where the matrices are of order 1 or 2.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlasy2 (logicalLTRANL, logicalLTRANR, integerISGN, integerN1, integerN2, double precision, dimension( ldtl, * )TL, integerLDTL, double precision, dimension( ldtr, * )TR, integerLDTR, double precision, dimension( ldb, * )B, integerLDB, double precisionSCALE, double precision, dimension( ldx, * )X, integerLDX, double precisionXNORM, integerINFO)</h3>

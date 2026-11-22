@@ -22,10 +22,10 @@ description: "GSSAPI Result Status Strings –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>fp</i> a file pointer<br />
- <i>comment</i> String to print out before other error messages.<br />
- <i>major_status</i> The major status to display<br />
- <i>minor_status</i> The minor status to display<br />
+</dt><dd> <i>fp</i> a file pointer<br/>
+ <i>comment</i> String to print out before other error messages.<br/>
+ <i>major_status</i> The major status to display<br/>
+ <i>minor_status</i> The minor status to display<br/>
  <i>token_status</i> token status to display</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -36,10 +36,10 @@ description: "GSSAPI Result Status Strings –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>str</i> pointer to char * for returned string. Must be freed<br />
- <i>comment</i> String to print out before other error messages.<br />
- <i>major_status</i> The major status to display<br />
- <i>minor_status</i> The minor status to display<br />
+</dt><dd> <i>str</i> pointer to char * for returned string. Must be freed<br/>
+ <i>comment</i> String to print out before other error messages.<br/>
+ <i>major_status</i> The major status to display<br/>
+ <i>minor_status</i> The minor status to display<br/>
  <i>token_status</i> token status to display</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

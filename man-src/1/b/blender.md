@@ -30,7 +30,7 @@ description: "blender – a 3D modelling and rendering package"
  Set the active scene &lt;name&gt; for rendering </dd>
 <dt><code>-f or &#8211;render-frame &lt;frame&gt;</code></dt>
 <dd>
- Render frame &lt;frame&gt; and save it.<br />
+ Render frame &lt;frame&gt; and save it.<br/>
  +&lt;frame&gt; start frame relative, -&lt;frame&gt; end frame relative. </dd>
 <dt><code>-s or &#8211;frame-start &lt;frame&gt;</code></dt>
 <dd>
@@ -43,19 +43,19 @@ description: "blender – a 3D modelling and rendering package"
  Set number of frames to step forward after each rendered frame </dd>
 <dt><code>-o or &#8211;render-output &lt;path&gt;</code></dt>
 <dd>
- Set the render path and file name.<br />
+ Set the render path and file name.<br/>
  Use // at the start of the path to </dd>
-<p>&nbsp;<wbr>render relative to the blend file.<br />
+<p>&nbsp;<wbr>render relative to the blend file.<br/>
  The # characters are replaced by the frame number, and used to define zero padding. </p>
 <p>&nbsp;<wbr>ani_##_test.png becomes ani_01_test.png </p>
 <p>&nbsp;<wbr>test-######.png becomes test-000001.png </p>
-<p>&nbsp;<wbr>When the filename does not contain&nbsp;<wbr>#, The suffix&nbsp;<wbr>####&nbsp;<wbr>is added to the filename<br />
+<p>&nbsp;<wbr>When the filename does not contain&nbsp;<wbr>#, The suffix&nbsp;<wbr>####&nbsp;<wbr>is added to the filename<br/>
  The frame number will be added at the end of the filename. </p>
 <p>&nbsp;<wbr>eg: blender -b foobar.blend -o&nbsp;<wbr>//render_&nbsp;<wbr>-F PNG -x 1 -a </p>
 <p>&nbsp;<wbr>//render_&nbsp;<wbr>becomes&nbsp;<wbr>//render_####, writing frames as&nbsp;<wbr>//render_0001.png// </p>
 <dt><code>-E or &#8211;engine &lt;engine&gt;</code></dt>
 <dd>
- Specify the render engine<br />
+ Specify the render engine<br/>
  use -E help to list available engines </dd>
 </dl>
 <h3>Format Options:</h3>
@@ -64,7 +64,7 @@ description: "blender – a 3D modelling and rendering package"
 <dd>
  Set the render format, Valid options are&#8230; </dd>
 <p>&nbsp;<wbr>TGA IRIS JPEG MOVIE IRIZ RAWTGA </p>
-<p>&nbsp;<wbr>AVIRAW AVIJPEG PNG BMP FRAMESERVER<br />
+<p>&nbsp;<wbr>AVIRAW AVIJPEG PNG BMP FRAMESERVER<br/>
  (formats that can be compiled into blender, not available on all systems) </p>
 <p>&nbsp;<wbr>HDR TIFF EXR MULTILAYER MPEG AVICODEC QUICKTIME CINEON DPX DDS </p>
 <dt><code>-x or &#8211;use-extension &lt;bool&gt;</code></dt>
@@ -72,7 +72,7 @@ description: "blender – a 3D modelling and rendering package"
  Set option to add the file extension to the end of the file </dd>
 <dt><code>-t or &#8211;threads &lt;threads&gt;</code></dt>
 <dd>
- Use amount of &lt;threads&gt; for rendering in background<br />
+ Use amount of &lt;threads&gt; for rendering in background<br/>
  [1-64], 0 for systems processor count. </dd>
 </dl>
 <h3>Animation Playback Options:</h3>
@@ -106,9 +106,9 @@ description: "blender – a 3D modelling and rendering package"
 <dl>
 <dt><code>-g Game Engine specific options</code></dt>
 <dd>
- -g fixedtime Run on 50 hertz without dropping frames<br />
- -g vertexarrays Use Vertex Arrays for rendering (usually faster)<br />
- -g nomipmap No Texture Mipmapping<br />
+ -g fixedtime Run on 50 hertz without dropping frames<br/>
+ -g vertexarrays Use Vertex Arrays for rendering (usually faster)<br/>
+ -g nomipmap No Texture Mipmapping<br/>
  -g linearmipmap Linear Texture Mipmapping instead of Nearest (default) </dd>
 </dl>
 <h3>Misc Options:</h3>
@@ -117,8 +117,8 @@ description: "blender – a 3D modelling and rendering package"
 <dd>
  Turn debugging on </dd>
 <dt>
-</dt><dd> * Prints every operator call and their arguments<br />
- * Disables mouse grab (to interact with a debugger in some cases)<br />
+</dt><dd> * Prints every operator call and their arguments<br/>
+ * Disables mouse grab (to interact with a debugger in some cases)<br/>
  * Keeps python sys.stdin rather than setting it to None </dd>
 <dt><code>&#8211;debug-fpe</code></dt>
 <dd>
@@ -149,7 +149,7 @@ description: "blender – a 3D modelling and rendering package"
  Force sound system to None </dd>
 <dt><code>-setaudio</code></dt>
 <dd>
- Force sound system to a specific device<br />
+ Force sound system to a specific device<br/>
  NULL SDL OPENAL JACK </dd>
 <dt><code>-h or &#8211;help</code></dt>
 <dd>
@@ -219,26 +219,26 @@ description: "blender – a 3D modelling and rendering package"
  Do not use native pixel size, for high resolution displays (MacBook &#8216;Retina&#8217;) </dd>
 </dl>
 <h3>Argument Parsing:</h3>
-<p>&nbsp;<wbr>arguments must be separated by white space. eg<br />
-&nbsp;<wbr>&nbsp;<wbr>&quot;blender -ba test.blend&quot;<br />
-&nbsp;<wbr>&#8230;will ignore the&nbsp;<wbr>&#8216;a&#8217;<br />
-&nbsp;<wbr>&nbsp;<wbr>&quot;blender -b test.blend -f8&quot;<br />
+<p>&nbsp;<wbr>arguments must be separated by white space. eg<br/>
+&nbsp;<wbr>&nbsp;<wbr>&quot;blender -ba test.blend&quot;<br/>
+&nbsp;<wbr>&#8230;will ignore the&nbsp;<wbr>&#8216;a&#8217;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&quot;blender -b test.blend -f8&quot;<br/>
 &nbsp;<wbr>&#8230;will ignore 8 because there is no space between the -f and the frame value </p>
 <h3>Argument Order:</h3>
-<p> Arguments are executed in the order they are given. eg<br />
-&nbsp;<wbr>&nbsp;<wbr>&quot;blender &#8211;background test.blend &#8211;render-frame 1 &#8211;render-output&nbsp;<wbr>/tmp&quot;<br />
-&nbsp;<wbr>&#8230;will not render to&nbsp;<wbr>/tmp because&nbsp;<wbr>&#8216;&#8211;render-frame 1&#8217;&nbsp;<wbr>renders before the output path is set<br />
-&nbsp;<wbr>&nbsp;<wbr>&quot;blender &#8211;background &#8211;render-output&nbsp;<wbr>/tmp test.blend &#8211;render-frame 1&quot;<br />
-&nbsp;<wbr>&#8230;will not render to&nbsp;<wbr>/tmp because loading the blend file overwrites the render output that was set<br />
+<p> Arguments are executed in the order they are given. eg<br/>
+&nbsp;<wbr>&nbsp;<wbr>&quot;blender &#8211;background test.blend &#8211;render-frame 1 &#8211;render-output&nbsp;<wbr>/tmp&quot;<br/>
+&nbsp;<wbr>&#8230;will not render to&nbsp;<wbr>/tmp because&nbsp;<wbr>&#8216;&#8211;render-frame 1&#8217;&nbsp;<wbr>renders before the output path is set<br/>
+&nbsp;<wbr>&nbsp;<wbr>&quot;blender &#8211;background &#8211;render-output&nbsp;<wbr>/tmp test.blend &#8211;render-frame 1&quot;<br/>
+&nbsp;<wbr>&#8230;will not render to&nbsp;<wbr>/tmp because loading the blend file overwrites the render output that was set<br/>
 &nbsp;<wbr>&nbsp;<wbr>&quot;blender &#8211;background test.blend &#8211;render-output&nbsp;<wbr>/tmp &#8211;render-frame 1&quot;&nbsp;<wbr>works as expected. </p>
 <h2>ENVIRONMENT VARIABLES</h2>
-<p>&nbsp;<wbr>&nbsp;<wbr><i>BLENDER_USER_CONFIG</i>&nbsp;<wbr>Directory for user configuration files.<br />
-&nbsp;<wbr>&nbsp;<wbr><i>BLENDER_USER_SCRIPTS</i>&nbsp;<wbr>Directory for user scripts.<br />
-&nbsp;<wbr>&nbsp;<wbr><i>BLENDER_SYSTEM_SCRIPTS</i>&nbsp;<wbr>Directory for system wide scripts.<br />
-&nbsp;<wbr>&nbsp;<wbr><i>Directory</i>&nbsp;<wbr>for user data files&nbsp;<wbr>(icons, translations, ..).<br />
-&nbsp;<wbr>&nbsp;<wbr><i>BLENDER_SYSTEM_DATAFILES</i>&nbsp;<wbr>Directory for system wide data files.<br />
-&nbsp;<wbr>&nbsp;<wbr><i>BLENDER_SYSTEM_PYTHON</i>&nbsp;<wbr>Directory for system python libraries.<br />
-&nbsp;<wbr>&nbsp;<wbr><i>TMP</i>&nbsp;<wbr>or&nbsp;<wbr><i>TMPDIR</i>&nbsp;<wbr>Store temporary files here.<br />
+<p>&nbsp;<wbr>&nbsp;<wbr><i>BLENDER_USER_CONFIG</i>&nbsp;<wbr>Directory for user configuration files.<br/>
+&nbsp;<wbr>&nbsp;<wbr><i>BLENDER_USER_SCRIPTS</i>&nbsp;<wbr>Directory for user scripts.<br/>
+&nbsp;<wbr>&nbsp;<wbr><i>BLENDER_SYSTEM_SCRIPTS</i>&nbsp;<wbr>Directory for system wide scripts.<br/>
+&nbsp;<wbr>&nbsp;<wbr><i>Directory</i>&nbsp;<wbr>for user data files&nbsp;<wbr>(icons, translations, ..).<br/>
+&nbsp;<wbr>&nbsp;<wbr><i>BLENDER_SYSTEM_DATAFILES</i>&nbsp;<wbr>Directory for system wide data files.<br/>
+&nbsp;<wbr>&nbsp;<wbr><i>BLENDER_SYSTEM_PYTHON</i>&nbsp;<wbr>Directory for system python libraries.<br/>
+&nbsp;<wbr>&nbsp;<wbr><i>TMP</i>&nbsp;<wbr>or&nbsp;<wbr><i>TMPDIR</i>&nbsp;<wbr>Store temporary files here.<br/>
 &nbsp;<wbr>&nbsp;<wbr><i>PYTHONHOME</i>&nbsp;<wbr>Path to the python directory, eg.&nbsp;<wbr>/usr/lib/python. </p>
 <h2>SEE ALSO</h2>
 <p> <code>yafaray(1)</code> </p>

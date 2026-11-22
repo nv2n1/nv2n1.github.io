@@ -14,7 +14,7 @@ description: "rrdbuild – Instructions for building RRDtool"
 <p> RRDtool relies on services of third part libraries. Some of these libraries may already be installed on your system. You have to compile copies of the other ones before you can build RRDtool. </p>
 <p> This document will tell you about all the necessary steps to get going. </p>
 <p> These instructions assume you are using a <code>bash</code> shell. If you use csh/tcsh, then you can either type <i>bash</i> to switch to bash for the compilation or if you know what you are doing just replace the export bits with setenv. </p>
-<p> We further assume that your copies of <code>tar</code> and <code>make</code> are actually <font SIZE="-1"><code>GNU</code></font><code> tar</code> and <font SIZE="-1"><code>GNU</code></font><code> make</code> respectively. It could be that they are installed as <code>gtar</code> and <code>gmake</code> on your system.</p>
+<p> We further assume that your copies of <code>tar</code> and <code>make</code> are actually <code>GNU</code><code> tar</code> and <code>GNU</code><code> make</code> respectively. It could be that they are installed as <code>gtar</code> and <code>gmake</code> on your system.</p>
 <h2>OPTIMISTIC BUILD</h2>
 <p> Before you start to build RRDtool, you have to decide two things:</p>
 <dl>
@@ -27,8 +27,8 @@ description: "rrdbuild – Instructions for building RRDtool"
  BUILD_DIR=/tmp/rrdbuild
  INSTALL_DIR=/opt/rrdtool-1.4.8
 </pre>
-<p> If your <i>/tmp</i> is mounted with the option noexec (<font SIZE="-1">RHEL</font> seems todo that) you have to choose a different directory! </p>
-<p> Now make sure the <font SIZE="-1">BUILD_DIR</font> exists and go there: </p>
+<p> If your <i>/tmp</i> is mounted with the option noexec (RHEL seems todo that) you have to choose a different directory! </p>
+<p> Now make sure the BUILD_DIR exists and go there: </p>
 <pre>
  mkdir -p $BUILD_DIR
  cd $BUILD_DIR
@@ -42,7 +42,7 @@ description: "rrdbuild – Instructions for building RRDtool"
 </pre>
 <p> Ok, this was very optimistic. This try will probably have ended with <code>configure</code> complaining about several missing libraries.</p>
 <h2>INSTALLING DEPENDENCIES</h2>
-<p> If your <font SIZE="-1">OS</font> lets you install additional packages from a software repository, you may get away with installing the missing packages. When the packages are installed, run configure again and try to compile again. Below you find some hints on getting your <font SIZE="-1">OS</font> ready for compiling RRDtool. </p>
+<p> If your OS lets you install additional packages from a software repository, you may get away with installing the missing packages. When the packages are installed, run configure again and try to compile again. Below you find some hints on getting your OS ready for compiling RRDtool. </p>
 <p> Additions to this list are welcome. In general RRDtool should work with the latest versions of the libraries. The versions listed here are just what was current when I tested this.</p>
 <h3>OpenSolaris 2008.05</h3>
 <p> Just add a compiler and the gnome development package: </p>
@@ -64,7 +64,7 @@ description: "rrdbuild – Instructions for building RRDtool"
  apt-get install libpango1.0-dev libxml2-dev
 </pre>
 <h3>Gentoo</h3>
-<p> In Gentoo installing RRDtool is really simple you just need to <code>emerge rrdtool</code>. All dependencies will be handled automatically by the portage system. The only thing you should care about are <font SIZE="-1">USE</font> flags, which allow you fine tune features RRDtool will be built with. Currently the following <font SIZE="-1">USE</font> flags are available: </p>
+<p> In Gentoo installing RRDtool is really simple you just need to <code>emerge rrdtool</code>. All dependencies will be handled automatically by the portage system. The only thing you should care about are USE flags, which allow you fine tune features RRDtool will be built with. Currently the following USE flags are available: </p>
 <pre>
  doc    - install .html and .txt documentation
           into /usr/share/doc/rrdtool-1.x.xx/
@@ -74,21 +74,21 @@ description: "rrdbuild – Instructions for building RRDtool"
  tcl    - build and install tcl language bindings
  rrdcgi - build and install rrdcgi
 </pre>
-<p> After you&#8217;ve decided which <font SIZE="-1">USE</font> flags you need, set them either in <i>make.conf</i> or <i>/etc/portage/package.use</i> and finally run: </p>
+<p> After you&#8217;ve decided which USE flags you need, set them either in <i>make.conf</i> or <i>/etc/portage/package.use</i> and finally run: </p>
 <pre>
  # emerge -va rrdtool
 </pre>
-<p> Take a look at Gentoo handbook for further details on how to manage <font SIZE="-1">USE</font> flags: <a rel="nofollow" href="http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=2">http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=2</a></p>
+<p> Take a look at Gentoo handbook for further details on how to manage USE flags: <a rel="nofollow" href="http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=2">http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=2</a></p>
 <h2>BUILDING DEPENDENCIES</h2>
 <p> But again this may have been too optimistic still, and you actually have to compile your own copies of some of the required libraries. Things like libpng and zlib are pretty standard so you will probably have them on your system anyway. Freetype, Fontinst, Cairo, Pango may be installed, but it is possible that they are pretty old and thus don&#8217;t live up to our expectations, so you may want to compile their latest versions.</p>
-<h3>General build tips for <font SIZE="-1">AIX</font></h3>
-<p> If you are working with <font SIZE="-1">AIX</font>, you may find the <code>&#8211;disable-shared</code> option will cause things to break for you. In that case you may have to install the shared libraries into the RRDtool <font SIZE="-1">PREFIX</font> and work with <code>&#8211;disable-static</code> instead. </p>
-<p> Another hint to get RRDtool working on <font SIZE="-1">AIX</font> is to use the <font SIZE="-1">IBM</font> <font SIZE="-1">XL</font> C Compiler: </p>
+<h3>General build tips for AIX</h3>
+<p> If you are working with AIX, you may find the <code>&#8211;disable-shared</code> option will cause things to break for you. In that case you may have to install the shared libraries into the RRDtool PREFIX and work with <code>&#8211;disable-static</code> instead. </p>
+<p> Another hint to get RRDtool working on AIX is to use the IBM XL C Compiler: </p>
 <pre>
  export CC=/usr/vac/bin/cc
  export PERLCC=$CC
 </pre>
-<p> (Better instructions for <font SIZE="-1">AIX</font> welcome!)</p>
+<p> (Better instructions for AIX welcome!)</p>
 <h3>Build Instructions</h3>
 <p> Some libraries want to know where other libraries are. For this to work, set the following environment variable </p>
 <pre>
@@ -96,7 +96,7 @@ description: "rrdbuild – Instructions for building RRDtool"
  export PATH=$INSTALL_DIR/bin:$PATH
 </pre>
 <p> The above relies on the presence of the <i>pkgconfig</i> program. Below you find instructions on how to compile pkgconfig. </p>
-<p> Since we are compiling libraries dynamically, they must know where to find each other. This is done by setting an appropriate <font SIZE="-1">LDFLAGS</font>. Unfortunately, the syntax again differs from system to system:</p>
+<p> Since we are compiling libraries dynamically, they must know where to find each other. This is done by setting an appropriate LDFLAGS. Unfortunately, the syntax again differs from system to system:</p>
 <dl>
 <dt>Solaris</dt>
 <dd>
@@ -113,18 +113,18 @@ description: "rrdbuild – Instructions for building RRDtool"
 <pre>
  export LDFLAGS=&quot;-Wl,--rpath -Wl,${INSTALL_DIR}/lib&quot;
 </pre>
-</dd><dt><font SIZE="-1">HPUX</font></dt>
+</dd><dt>HPUX</dt>
 <dd>
 <pre>
  export LDFLAGS=&quot;+b${INSTALL_DIR}/lib&quot;
 </pre>
-</dd><dt><font SIZE="-1">AIX</font></dt>
+</dd><dt>AIX</dt>
 <dd>
 <pre>
  export LDFLAGS=&quot;-Wl,-blibpath:${INSTALL_DIR}/lib&quot;
 </pre>
 </dd></dl>
-<p> If you have <font SIZE="-1">GNU</font> make installed and it is not called &#8216;make&#8217;, then do </p>
+<p> If you have GNU make installed and it is not called &#8216;make&#8217;, then do </p>
 <pre>
  export MAKE=gmake
  export GNUMAKE=gmake
@@ -159,7 +159,7 @@ description: "rrdbuild – Instructions for building RRDtool"
  $MAKE install
 </pre>
 <p> <i>Building libpng</i> </p>
-<p> Libpng itself requires zlib to build, so we need to help a bit. If you already have a copy of zlib on your system (which is very likely) you can drop the settings of <font SIZE="-1">LDFLAGS</font> and <font SIZE="-1">CPPFLAGS</font>. Note that the backslash (\) at the end of line 4 means that line 4 and line 5 are on one line. </p>
+<p> Libpng itself requires zlib to build, so we need to help a bit. If you already have a copy of zlib on your system (which is very likely) you can drop the settings of LDFLAGS and CPPFLAGS. Note that the backslash (\) at the end of line 4 means that line 4 and line 5 are on one line. </p>
 <pre>
  cd $BUILD_DIR
  wget <a rel="nofollow" href="http://oss.oetiker.ch/rrdtool/pub/libs/libpng-1.2.18.tar.gz">http://oss.oetiker.ch/rrdtool/pub/libs/libpng-1.2.18.tar.gz</a>
@@ -260,7 +260,7 @@ cd $BUILD_DIR
  $MAKE
  $MAKE install
 </pre>
-<p> <font SIZE="-1">SOLARIS</font> <font SIZE="-1">HINT:</font> if you want to build the Perl module for the native Perl (the one shipping with Solaris) you will need the Sun Forte compiler installed on your box or you have to hand-tune bindings/perl-shared/Makefile while building! </p>
+<p> SOLARIS HINT: if you want to build the Perl module for the native Perl (the one shipping with Solaris) you will need the Sun Forte compiler installed on your box or you have to hand-tune bindings/perl-shared/Makefile while building! </p>
 <p> Now go to <i></i>$INSTALL_DIR<i></i><code>/share/rrdtool/examples/</code> and run them to see if your build has been successful.</p>
 <h2>AUTHOR</h2>
 <p> Tobias Oetiker &lt;tobi [at] oetiker.ch&gt; </p>

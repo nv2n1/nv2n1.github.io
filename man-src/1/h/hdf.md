@@ -55,9 +55,9 @@ description: "hdf – Hierarchical Data Format library"
 <p> All HDF routines require the header &quot;hdf.h&quot; to be included in the C source file, unless if the SD routines are used, then the header &quot;mfhdf.h&quot; should be included instead. </p>
 <p> Fortran programs should use &quot;dffunc.inc&quot; for all interfaces, &quot;mffunc.inc&quot; for the SD interfaces, and &quot;hdf.inc&quot; for non-SD interfaces. </p>
 <p> To compile a program that makes HDF calls on most Unix platforms. </p>
-<p>(FORTRAN):<br />
+<p>(FORTRAN):<br/>
 {HDFLIBDIR}/bin/h4fc myprog.f&nbsp;<wbr> </p>
-<p>(C):<br />
+<p>(C):<br/>
 {HDFLIBDIR}/bin/h4cc myprog.c&nbsp;<wbr> </p>
 <h2>DOCUMENTATION</h2>
 <p> The HDF web site is located at <a rel="nofollow" href="http://www.hdfgroup.org/.">http://www.hdfgroup.org/.</a> </p>

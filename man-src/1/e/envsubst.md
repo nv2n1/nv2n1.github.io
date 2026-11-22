@@ -30,7 +30,7 @@ description: "envsubst – substitutes environment variables in shell format str
 <h2>REPORTING BUGS</h2>
 <p> Report bugs in the bug tracker at &lt;<a rel="nofollow" href="https://savannah.gnu.org/projects/gettext">https://savannah.gnu.org/projects/gettext</a>&gt; or by email to &lt;bug-gettext [at] gnu.org&gt;.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2003-2020 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="https://gnu.org/licenses/gpl.html">https://gnu.org/licenses/gpl.html</a>&gt;<br />
+<p> Copyright &#169; 2003-2020 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="https://gnu.org/licenses/gpl.html">https://gnu.org/licenses/gpl.html</a>&gt;<br/>
  This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.</p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>envsubst</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>envsubst</code> programs are properly installed at your site, the command</p>

@@ -10,7 +10,7 @@ description: "XkbKeyGroupInfo – Returns the number of groups of symbols bound 
 <p>XkbKeyGroupInfo &#8211; Returns the number of groups of symbols bound to the key corresponding to keycode </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>unsigned char XkbKeyGroupInfo</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>KeyCode </code><i>keycode</i><code>);</code><br />
+<dt> <code>unsigned char XkbKeyGroupInfo</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>KeyCode </code><i>keycode</i><code>);</code><br/>
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>

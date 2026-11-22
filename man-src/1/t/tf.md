@@ -10,7 +10,7 @@ description: "tf – TinyFugue, a MUD client"
 
 <p> tf &#8211; TinyFugue, a MUD client</p>
 <h2>SYNOPSIS</h2>
-<p> <code>tf [-f</code><i>file</i><code>] [-lnq] [</code><i>world</i><code>]</code><br />
+<p> <code>tf [-f</code><i>file</i><code>] [-lnq] [</code><i>world</i><code>]</code><br/>
  <code>tf [-f</code><i>file</i><code>] </code><i>host</i><i>port</i></p>
 <h2>DESCRIPTION</h2>
 <p> <i>TinyFugue</i> (also known as &quot;Fugue&quot; or &quot;TF&quot;) is a line-based client designed for connecting to MUD servers (note: LP, DIKU, and other servers which use prompts require &quot;/lp on&quot;; see /help prompts). </p>
@@ -70,11 +70,11 @@ description: "tf – TinyFugue, a MUD client"
 <p> It has been stated that <i>TF</i> is the most-used client in MUDdom at the current time. I haven&#8217;t taken a poll, but I wouldn&#8217;t be surprised. </p>
 <h2>REVIEWS</h2>
 <p> <i>TF</i> has significantly changed the tinyclient world. It has a number of merits and a number of flaws, and has frequently been criticized (mostly out of boredom; nobody takes this business too seriously) as having too many features and being too damn big. </p>
-<p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>&quot;Tinywar doesn&#8217;t exist; TinyFugue merely shouldn&#8217;t.&quot;<br />
+<p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>&quot;Tinywar doesn&#8217;t exist; TinyFugue merely shouldn&#8217;t.&quot;<br/>
  &#8212; Coined by Woodlock, I believe. </p>
-<p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>&quot;TinyFugue is a work of art.&quot;<br />
+<p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>&quot;TinyFugue is a work of art.&quot;<br/>
  &#8212; Binder, obviously after having too much to drink. </p>
-<p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>&quot;TinyFugue is the biggest hack since the platform it was built on.&quot;<br />
+<p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>&quot;TinyFugue is the biggest hack since the platform it was built on.&quot;<br/>
  &#8212; Explorer_Bob, in one of his lucid moments. </p>
 <p> The New York Times, the Christian Science Monitor and the Washington Post all refused to comment. </p>
 <h2>COPYRIGHT</h2>

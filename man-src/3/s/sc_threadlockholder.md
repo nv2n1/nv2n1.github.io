@@ -13,13 +13,13 @@ description: "sc::ThreadLockHolder –"
 <pre><code>
 #include &lt;thread.h&gt;
 Public Member Functions</code></pre>
-<p> <code>ThreadLockHolder</code> (const <code>Ref</code>&lt; <code>ThreadLock</code> &gt; &amp;l)<br />
- <i>Acquires the lock. </i><br />
- void <code>unlock</code> ()<br />
- <i>Release the lock before the DTOR is called, if it is still held. </i><br />
- void <code>lock</code> ()<br />
- <i>Acquire the lock once more. </i><br />
- <code>~ThreadLockHolder</code> ()<br />
+<p> <code>ThreadLockHolder</code> (const <code>Ref</code>&lt; <code>ThreadLock</code> &gt; &amp;l)<br/>
+ <i>Acquires the lock. </i><br/>
+ void <code>unlock</code> ()<br/>
+ <i>Release the lock before the DTOR is called, if it is still held. </i><br/>
+ void <code>lock</code> ()<br/>
+ <i>Acquire the lock once more. </i><br/>
+ <code>~ThreadLockHolder</code> ()<br/>
  <i>Releases the lock if it is still held. </i></p>
 <h2>Detailed Description</h2>
 <p>Acquire a lock on creation and release it on destruction. </p>

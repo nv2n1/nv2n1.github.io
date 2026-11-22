@@ -14,12 +14,12 @@ maclist - shorewall6 MAC Verification file
 
 <h2>Description</h2>
 
-<dd>This file is used to define the MAC addresses and optionally their associated IPv6 addresses to be allowed to use the specified interface. The feature is enabled by using the <b>maclist</b> option in the m[blue]<b>shorewall6-interfaces</b>m[]<font SIZE="-2">[1]</font>(5) or m[blue]<b>shorewall6-hosts</b>m[]<font SIZE="-2">[2]</font>(5) configuration file. 
+<dd>This file is used to define the MAC addresses and optionally their associated IPv6 addresses to be allowed to use the specified interface. The feature is enabled by using the <b>maclist</b> option in the m[blue]<b>shorewall6-interfaces</b>m[][1](5) or m[blue]<b>shorewall6-hosts</b>m[][2](5) configuration file. 
 
  The columns in the file are as follows. 
 
  <b>DISPOSITION</b> - {<b>ACCEPT</b>|<b>DROP</b>|<b>REJECT</b>}[<b>:</b><i>log-level</i>]
-</dd><dl><dd><b>ACCEPT</b> or <b>DROP</b> (if MACLIST_TABLE=filter in m[blue]<b>shorewall6.conf</b>m[]<font SIZE="-2">[3]</font>(5), then REJECT is also allowed). If specified, the <i>log-level</i> causes packets matching the rule to be logged at that level.</dd></dl>
+</dd><dl><dd><b>ACCEPT</b> or <b>DROP</b> (if MACLIST_TABLE=filter in m[blue]<b>shorewall6.conf</b>m[][3](5), then REJECT is also allowed). If specified, the <i>log-level</i> causes packets matching the rule to be logged at that level.</dd></dl>
  
 
  <b>INTERFACE</b> - <i>interface</i>
@@ -39,9 +39,9 @@ maclist - shorewall6 MAC Verification file
 
 <h2>See Also</h2>
 
-m[blue]<b><a rel="nofollow" HREF="http://www.shorewall.net/MAC_Validation.html">http://www.shorewall.net/MAC_Validation.html</a></b>m[]<font SIZE="-2">[4]</font> 
+m[blue]<b><a rel="nofollow" HREF="http://www.shorewall.net/MAC_Validation.html">http://www.shorewall.net/MAC_Validation.html</a></b>m[][4] 
 
- m[blue]<b><a rel="nofollow" HREF="http://www.shorewall.net/configuration_file_basics.htm#Pairs">http://www.shorewall.net/configuration_file_basics.htm#Pairs</a></b>m[]<font SIZE="-2">[5]</font> 
+ m[blue]<b><a rel="nofollow" HREF="http://www.shorewall.net/configuration_file_basics.htm#Pairs">http://www.shorewall.net/configuration_file_basics.htm#Pairs</a></b>m[][5] 
 
  <a HREF="/docs/linux/man/8-shorewall6/">shorewall6</a>(8), <a HREF="/docs/linux/man/5-shorewall6-accounting/">shorewall6-accounting</a>(5), <a HREF="/docs/linux/man/5-shorewall6-actions/">shorewall6-actions</a>(5), shorewall6-blacklist(5), <a HREF="/docs/linux/man/5-shorewall6-hosts/">shorewall6-hosts</a>(5), <a HREF="/docs/linux/man/5-shorewall6-interfaces/">shorewall6-interfaces</a>(5), <a HREF="/docs/linux/man/5-shorewall6-netmap/">shorewall6-netmap</a>(5),<a HREF="/docs/linux/man/5-shorewall6-params/">shorewall6-params</a>(5), <a HREF="/docs/linux/man/5-shorewall6-policy/">shorewall6-policy</a>(5), <a HREF="/docs/linux/man/5-shorewall6-providers/">shorewall6-providers</a>(5), <a HREF="/docs/linux/man/5-shorewall6-rtrules/">shorewall6-rtrules</a>(5), shorewall6-routestopped(5), <a HREF="/docs/linux/man/5-shorewall6-rules/">shorewall6-rules</a>(5), <a HREF="/docs/linux/man/5-shorewall6-conf/">shorewall6.conf</a>(5), <a HREF="/docs/linux/man/5-shorewall6-secmarks/">shorewall6-secmarks</a>(5), <a HREF="/docs/linux/man/5-shorewall6-tcclasses/">shorewall6-tcclasses</a>(5), <a HREF="/docs/linux/man/5-shorewall6-tcdevices/">shorewall6-tcdevices</a>(5), <a HREF="/docs/linux/man/5-shorewall6-mangle/">shorewall6-mangle</a>(5), shorewall6-tos(5), <a HREF="/docs/linux/man/5-shorewall6-tunnels/">shorewall6-tunnels</a>(5), <a HREF="/docs/linux/man/5-shorewall6-zones/">shorewall6-zones</a>(5)
 

@@ -12,8 +12,8 @@ description: "tblgen – Target Description To C++ Code Generator"
 <h2>SYNOPSIS</h2>
 <p> <code>tblgen</code> [<i>options</i>] [<i>filename</i>]</p>
 <h2>DESCRIPTION</h2>
-<p> <code>tblgen</code> translates from target description (.td) files into C<font SIZE="-2">++</font> code that can be included in the definition of an <font SIZE="-1">LLVM</font> target library. Most users of <font SIZE="-1">LLVM</font> will not need to use this program. It is only for assisting with writing an <font SIZE="-1">LLVM</font> target backend. </p>
-<p> The input and output of <code>tblgen</code> is beyond the scope of this short introduction. Please see the <i>CodeGeneration</i> page in the <font SIZE="-1">LLVM</font> documentation. </p>
+<p> <code>tblgen</code> translates from target description (.td) files into C++ code that can be included in the definition of an LLVM target library. Most users of LLVM will not need to use this program. It is only for assisting with writing an LLVM target backend. </p>
+<p> The input and output of <code>tblgen</code> is beyond the scope of this short introduction. Please see the <i>CodeGeneration</i> page in the LLVM documentation. </p>
 <p> The <i>filename</i> argument specifies the name of a Target Description (.td) file to read as input.</p>
 <h2>OPTIONS</h2>
 <dl>
@@ -46,7 +46,7 @@ description: "tblgen – Target Description To C++ Code Generator"
 <dt><code>-gen-asm-writer</code></dt>
 <dd> Generate the assembly writer.</dd>
 <dt><code>-gen-dag-isel</code></dt>
-<dd> Generate a <font SIZE="-1">DAG</font> (Directed Acycle Graph) instruction selector.</dd>
+<dd> Generate a DAG (Directed Acycle Graph) instruction selector.</dd>
 <dt><code>-gen-subtarget</code></dt>
 <dd> Generate subtarget enumerations.</dd>
 <dt><code>-gen-intrinsic</code></dt>
@@ -56,4 +56,4 @@ description: "tblgen – Target Description To C++ Code Generator"
 <h2>EXIT STATUS</h2>
 <p> If <code>tblgen</code> succeeds, it will exit with 0. Otherwise, if an error occurs, it will exit with a non-zero value.</p>
 <h2>AUTHORS</h2>
-<p> Maintained by The <font SIZE="-1">LLVM</font> Team (&lt;<a rel="nofollow" href="http://llvm.org">http://llvm.org</a>&gt;). </p>
+<p> Maintained by The LLVM Team (&lt;<a rel="nofollow" href="http://llvm.org">http://llvm.org</a>&gt;). </p>

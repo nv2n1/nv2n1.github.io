@@ -19,6 +19,6 @@ description: "ncargfile – NCAR Graphics Files"
 <p> Online: <code>ncargex(1NCARG),</code> <code>ncargintro(5NCARG)</code> </p>
 <p> Hardcopy: NCAR Graphics Fundamentals, UNIX Version; NCAR Graphics Contouring and Mapping Tutorial</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright (C) 1987-2002<br />
- University Corporation for Atmospheric Research<br />
+<p> Copyright (C) 1987-2002<br/>
+ University Corporation for Atmospheric Research<br/>
  The use of this Software is governed by a License Agreement. </p>

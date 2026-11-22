@@ -9,13 +9,13 @@ description: "Doubly Linked List Creation/Destruction Functions – Functions us
 
 <p>Doubly Linked List Creation/Destruction Functions &#8211; Functions used to create, initialize and destroy Ecore_DLists. </p>
 <h3>Functions</h3>
-<p>EAPI Ecore_DList * <code>ecore_dlist_new</code> ()<br />
- <i>Creates and initialises a new doubly linked list. </i><br />
- EAPI int <code>ecore_dlist_init</code> (Ecore_DList *list)<br />
- <i>Initialises a list to some sane starting values. </i><br />
- EAPI void <code>ecore_dlist_destroy</code> (Ecore_DList *list)<br />
- <i>Frees a doubly linked list and all of its nodes. </i><br />
- EAPI int <code>ecore_dlist_free_cb_set</code> (Ecore_DList *list, Ecore_Free_Cb free_func)<br />
+<p>EAPI Ecore_DList * <code>ecore_dlist_new</code> ()<br/>
+ <i>Creates and initialises a new doubly linked list. </i><br/>
+ EAPI int <code>ecore_dlist_init</code> (Ecore_DList *list)<br/>
+ <i>Initialises a list to some sane starting values. </i><br/>
+ EAPI void <code>ecore_dlist_destroy</code> (Ecore_DList *list)<br/>
+ <i>Frees a doubly linked list and all of its nodes. </i><br/>
+ EAPI int <code>ecore_dlist_free_cb_set</code> (Ecore_DList *list, Ecore_Free_Cb free_func)<br/>
  <i>Sets the function used for freeing data stored in a doubly linked list. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions used to create, initialize and destroy Ecore_DLists.</p>
@@ -29,7 +29,7 @@ description: "Doubly Linked List Creation/Destruction Functions – Functions us
 <p>Sets the function used for freeing data stored in a doubly linked list. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>list</i> The doubly linked list that will use this function when nodes are destroyed.<br />
+<dd><i>list</i> The doubly linked list that will use this function when nodes are destroyed.<br/>
  <i>free_func</i> The function that will free the key data</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

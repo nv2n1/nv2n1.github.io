@@ -15,8 +15,8 @@ description: "batctl – B.A.T.M.A.N. advanced control and management tool"
 <h2>Options</h2>
 <dl>
 <dt><i></i><code>options:</code></dt>
-<dd>-m specify mesh interface or VLAN created on top of a mesh interface (default &#8216;bat0&#8217;)<br />
- -h print general batctl help<br />
+<dd>-m specify mesh interface or VLAN created on top of a mesh interface (default &#8216;bat0&#8217;)<br/>
+ -h print general batctl help<br/>
  -v print batctl version and batman-adv version (if the module is loaded) </dd>
 <dt><i></i><code>commands:</code></dt>
 <dd>
@@ -51,10 +51,10 @@ description: "batctl – B.A.T.M.A.N. advanced control and management tool"
 <dl>
 <dd>examples: 5000 -&gt; 5.0/1.0 MBit</dd></dl>
 <dl>
-<dd>&nbsp;<wbr>5000kbit<br />
-&nbsp;<wbr>5mbit<br />
-&nbsp;<wbr>5mbit/1024<br />
-&nbsp;<wbr>5mbit/1024kbit<br />
+<dd>&nbsp;<wbr>5000kbit<br/>
+&nbsp;<wbr>5mbit<br/>
+&nbsp;<wbr>5mbit/1024<br/>
+&nbsp;<wbr>5mbit/1024kbit<br/>
 &nbsp;<wbr>5mbit/1mbit</dd></dl>
 <dl>
 <dd>If the node is a gateway client the parameter will decide which criteria to consider when the batman-adv module has to choose between different internet connections announced by the aforementioned servers.</dd></dl>
@@ -79,10 +79,10 @@ description: "batctl – B.A.T.M.A.N. advanced control and management tool"
 <dt><code>routing_algo</code>|<code>ra</code> [<code>algorithm</code>]</dt>
 <dd>If no parameter is given the current routing algorithm configuration as well as supported routing algorithms are displayed. Otherwise the parameter is used to select the routing algorithm for the following batX interface to be created. </dd>
 <dt><code>isolation_mark</code>|<code>mark</code></dt>
-<dd>If no parameter is given the current isolation mark value is displayed. Otherwise the parameter is used to set or unset the isolation mark used by the Extended Isolation feature.<br />
+<dd>If no parameter is given the current isolation mark value is displayed. Otherwise the parameter is used to set or unset the isolation mark used by the Extended Isolation feature.<br/>
  The input is supposed to be of the form $value/$mask, where $value can be any 32bit long integer (expressed in decimal or hex base) and $mask is a generic bitmask (expressed in hex base) that selects the bits to take into consideration from $value. It is also possible to enter the input using only $value and in this case the full bitmask is used by default. </dd>
-<p> Example 1: 0x00000001/0xffffffff<br />
- Example 2: 0x00040000/0xffff0000<br />
+<p> Example 1: 0x00000001/0xffffffff<br/>
+ Example 2: 0x00040000/0xffff0000<br/>
  Example 3: 16 or 0x0F </p>
 </dl>
 <p> <i></i><code>debug tables:</code></p>
@@ -123,7 +123,7 @@ description: "batctl – B.A.T.M.A.N. advanced control and management tool"
 <dt><code>translate</code>|<code>t</code> <code>MAC_address</code>|<code>bat-host_name</code>|<code>host_name</code>|<code>IP_address</code></dt>
 <dd>Translates a destination (hostname, IP, MAC, bat_host-name) to the originator mac address responsible for it. </dd>
 <dt><code>statistics</code>|<code>s</code></dt>
-<dd>Retrieve traffic counters from batman-adv kernel module. The output may vary depending on which features have been compiled into the kernel module.<br />
+<dd>Retrieve traffic counters from batman-adv kernel module. The output may vary depending on which features have been compiled into the kernel module.<br/>
  Each module subsystem has its own counters which are indicated by their prefixes:</dd>
 <dl>
 <dd>mgmt &#8211; mesh protocol counters</dd></dl>

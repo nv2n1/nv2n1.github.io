@@ -73,7 +73,7 @@ description: "monkeysphere-authentication – Monkeysphere authentication admin 
 <dl>
 <dt>/etc/monkeysphere/monkeysphere-authentication.conf</dt>
 <dd>System monkeysphere-authentication config file.</dd>
-<dt>/etc/monkeysphere/monkeysphere-authentication-x509-anchors.crt or<br />
+<dt>/etc/monkeysphere/monkeysphere-authentication-x509-anchors.crt or<br/>
  /etc/monkeysphere/monkeysphere-x509-anchors.crt</dt>
 <dd>If monkeysphere-authentication is configured to query an hkps keyserver, it will use the PEM-encoded X.509 Certificate Authority certificates in this file to validate any X.509 certificates used by the keyserver. If the monkeysphere-authentication-x509 file is present, the monkeysphere-x509 file will be ignored.</dd>
 <dt>/var/lib/monkeysphere/authorized_keys/USER</dt>

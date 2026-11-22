@@ -11,7 +11,7 @@ description: "sgtcon.f –"
 <p> sgtcon.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>sgtcon</code> (NORM, N, DL, D, DU, DU2, IPIV, ANORM, RCOND, WORK, IWORK, INFO)<br />
+<p> subroutine <code>sgtcon</code> (NORM, N, DL, D, DU, DU2, IPIV, ANORM, RCOND, WORK, IWORK, INFO)<br/>
  <i></i><code>SGTCON</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sgtcon (characterNORM, integerN, real, dimension( * )DL, real, dimension( * )D, real, dimension( * )DU, real, dimension( * )DU2, integer, dimension( * )IPIV, realANORM, realRCOND, real, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>

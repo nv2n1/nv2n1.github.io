@@ -11,74 +11,74 @@ description: "GASS Copy –"
 <p> GASS Copy &#8211; </p>
 <p> Protocol-Independent File Transfer.</p>
 <h3>Data Structures</h3>
-<p> struct <code>globus_gass_copy_attr_s</code><br />
- <i>Attributes. </i><br />
- struct <code>globus_gass_copy_handleattr_s</code><br />
- <i>Handle Attributes. </i><br />
- struct <code>globus_gass_copy_glob_stat_t</code><br />
+<p> struct <code>globus_gass_copy_attr_s</code><br/>
+ <i>Attributes. </i><br/>
+ struct <code>globus_gass_copy_handleattr_s</code><br/>
+ <i>Handle Attributes. </i><br/>
+ struct <code>globus_gass_copy_glob_stat_t</code><br/>
  <i>Glob expanded entry information. </i></p>
 <h3>Macros</h3>
-<p> #define <code>GLOBUS_GASS_COPY_MODULE</code> (&amp;globus_i_gass_copy_module)<br />
+<p> #define <code>GLOBUS_GASS_COPY_MODULE</code> (&amp;globus_i_gass_copy_module)<br/>
  <i>Module Descriptor. </i></p>
 <h3>Typedefs</h3>
-<p> typedef void(* <code>globus_gass_copy_performance_cb_t</code> )(void *user_arg, <code>globus_gass_copy_handle_t</code> *handle, globus_off_t total_bytes, float instantaneous_throughput, float avg_throughput)<br />
- <i>Performance Callback. </i><br />
- typedef void(* <code>globus_gass_copy_callback_t</code> )(void *callback_arg, <code>globus_gass_copy_handle_t</code> *handle, globus_object_t *error)<br />
- <i>Copy Callback. </i><br />
- typedef struct<br />
- <code>globus_gass_copy_attr_s</code> <code>globus_gass_copy_attr_t</code>&quot;<br />
- <i>Attributes. </i><br />
- typedef struct<br />
- <code>globus_gass_copy_handleattr_s</code> <code>globus_gass_copy_handleattr_t</code>&quot;<br />
- <i>Handle Attributes. </i><br />
- typedef void(* <code>globus_gass_copy_glob_entry_cb_t</code> )(const char *url, const <code>globus_gass_copy_glob_stat_t</code> *info_stat, void *user_arg)<br />
+<p> typedef void(* <code>globus_gass_copy_performance_cb_t</code> )(void *user_arg, <code>globus_gass_copy_handle_t</code> *handle, globus_off_t total_bytes, float instantaneous_throughput, float avg_throughput)<br/>
+ <i>Performance Callback. </i><br/>
+ typedef void(* <code>globus_gass_copy_callback_t</code> )(void *callback_arg, <code>globus_gass_copy_handle_t</code> *handle, globus_object_t *error)<br/>
+ <i>Copy Callback. </i><br/>
+ typedef struct<br/>
+ <code>globus_gass_copy_attr_s</code> <code>globus_gass_copy_attr_t</code>&quot;<br/>
+ <i>Attributes. </i><br/>
+ typedef struct<br/>
+ <code>globus_gass_copy_handleattr_s</code> <code>globus_gass_copy_handleattr_t</code>&quot;<br/>
+ <i>Handle Attributes. </i><br/>
+ typedef void(* <code>globus_gass_copy_glob_entry_cb_t</code> )(const char *url, const <code>globus_gass_copy_glob_stat_t</code> *info_stat, void *user_arg)<br/>
  <i>Gass copy glob entry callback. </i></p>
 <h3>Enumerations</h3>
-<p> enum <code>globus_gass_copy_status_t</code><br />
- <i>Status States. </i><br />
- enum <code>globus_gass_copy_url_mode_t</code><br />
- <i>URL Modes. </i><br />
+<p> enum <code>globus_gass_copy_status_t</code><br/>
+ <i>Status States. </i><br/>
+ enum <code>globus_gass_copy_url_mode_t</code><br/>
+ <i>URL Modes. </i><br/>
  enum <code>globus_gass_copy_glob_entry_t</code> </p>
 <h3>Functions</h3>
-<p> globus_result_t <code>globus_gass_copy_handle_init</code> (<code>globus_gass_copy_handle_t</code> *handle, <code>globus_gass_copy_handleattr_t</code> *attr)<br />
- <i>Initialize a GASS Copy handle. </i><br />
- globus_result_t <code>globus_gass_copy_handle_destroy</code> (<code>globus_gass_copy_handle_t</code> *handle)<br />
- <i>Destroy a GASS Copy handle. </i><br />
- globus_result_t <code>globus_gass_copy_set_buffer_length</code> (<code>globus_gass_copy_handle_t</code> *handle, int length)<br />
- <i>Set the size of the buffer to be used for doing transfers. </i><br />
- globus_result_t <code>globus_gass_copy_get_buffer_length</code> (<code>globus_gass_copy_handle_t</code> *handle, int *length)<br />
- <i>Get the size of the transfer buffer. </i><br />
- globus_result_t <code>globus_gass_copy_set_no_third_party_transfers</code> (<code>globus_gass_copy_handle_t</code> *handle, globus_bool_t no_third_party_transfers)<br />
- <i>Enable/Disable third-party transfers. </i><br />
- globus_result_t <code>globus_gass_copy_get_no_third_party_transfers</code> (<code>globus_gass_copy_handle_t</code> *handle, globus_bool_t *no_third_party_transfers)<br />
- <i>Query third-party transfer status. </i><br />
- globus_result_t <code>globus_gass_copy_set_allocate</code> (<code>globus_gass_copy_handle_t</code> *handle, globus_bool_t send_allo)<br />
- <i>Set allo on or off. </i><br />
- globus_result_t <code>globus_gass_copy_set_stat_on_expand</code> (<code>globus_gass_copy_handle_t</code> *handle, globus_bool_t always_stat)<br />
- <i>Make globus_gass_copy_expand_url() always send stat info. </i><br />
- globus_result_t <code>globus_gass_copy_set_partial_offsets</code> (<code>globus_gass_copy_handle_t</code> *handle, globus_off_t offset, globus_off_t end_offset)<br />
- <i>Set partial file offsets. </i><br />
- globus_result_t <code>globus_gass_copy_get_partial_offsets</code> (<code>globus_gass_copy_handle_t</code> *handle, globus_off_t *offset, globus_off_t *end_offset)<br />
- <i>Get partial transfer offsets. </i><br />
- globus_result_t <code>globus_gass_copy_attr_init</code> (<code>globus_gass_copy_attr_t</code> *attr)<br />
- <i>Initialize an attribute structure. </i><br />
- globus_result_t <code>globus_gass_copy_attr_set_ftp</code> (<code>globus_gass_copy_attr_t</code> *attr, globus_ftp_client_operationattr_t *ftp_attr)<br />
- <i>Set the attributes for ftp/gsiftp transfers. </i><br />
- globus_result_t <code>globus_gass_copy_attr_set_io</code> (<code>globus_gass_copy_attr_t</code> *attr, globus_io_attr_t *io_attr)<br />
- <i>Set file transfers attributes. </i><br />
- globus_result_t <code>globus_gass_copy_attr_set_gass</code> (<code>globus_gass_copy_attr_t</code> *attr, globus_gass_transfer_requestattr_t *gass_attr)<br />
- <i>Set the http/https attributes. </i><br />
- globus_result_t <code>globus_gass_copy_get_url_mode</code> (char *url, <code>globus_gass_copy_url_mode_t</code> *mode)<br />
- <i>Get URL scheme. </i><br />
- globus_result_t <code>globus_gass_copy_register_performance_cb</code> (<code>globus_gass_copy_handle_t</code> *handle, <code>globus_gass_copy_performance_cb_t</code> callback, void *user_arg)<br />
- <i>Register a performance information callback. </i><br />
- globus_result_t <code>globus_gass_copy_get_status</code> (<code>globus_gass_copy_handle_t</code> *handle, <code>globus_gass_copy_status_t</code> *status)<br />
- <i>Get the status code of a transfer. </i><br />
- const char * <code>globus_gass_copy_get_status_string</code> (<code>globus_gass_copy_handle_t</code> *handle)<br />
- <i>Get the status string of a transfer. </i><br />
- globus_result_t <code>globus_gass_copy_glob_expand_url</code> (<code>globus_gass_copy_handle_t</code> *handle, const char *url, <code>globus_gass_copy_attr_t</code> *attr, <code>globus_gass_copy_glob_entry_cb_t</code> entry_cb, void *user_arg)<br />
- <i>Expand globbed url. </i><br />
- globus_result_t <code>globus_gass_copy_mkdir</code> (<code>globus_gass_copy_handle_t</code> *handle, char *url, <code>globus_gass_copy_attr_t</code> *attr)<br />
+<p> globus_result_t <code>globus_gass_copy_handle_init</code> (<code>globus_gass_copy_handle_t</code> *handle, <code>globus_gass_copy_handleattr_t</code> *attr)<br/>
+ <i>Initialize a GASS Copy handle. </i><br/>
+ globus_result_t <code>globus_gass_copy_handle_destroy</code> (<code>globus_gass_copy_handle_t</code> *handle)<br/>
+ <i>Destroy a GASS Copy handle. </i><br/>
+ globus_result_t <code>globus_gass_copy_set_buffer_length</code> (<code>globus_gass_copy_handle_t</code> *handle, int length)<br/>
+ <i>Set the size of the buffer to be used for doing transfers. </i><br/>
+ globus_result_t <code>globus_gass_copy_get_buffer_length</code> (<code>globus_gass_copy_handle_t</code> *handle, int *length)<br/>
+ <i>Get the size of the transfer buffer. </i><br/>
+ globus_result_t <code>globus_gass_copy_set_no_third_party_transfers</code> (<code>globus_gass_copy_handle_t</code> *handle, globus_bool_t no_third_party_transfers)<br/>
+ <i>Enable/Disable third-party transfers. </i><br/>
+ globus_result_t <code>globus_gass_copy_get_no_third_party_transfers</code> (<code>globus_gass_copy_handle_t</code> *handle, globus_bool_t *no_third_party_transfers)<br/>
+ <i>Query third-party transfer status. </i><br/>
+ globus_result_t <code>globus_gass_copy_set_allocate</code> (<code>globus_gass_copy_handle_t</code> *handle, globus_bool_t send_allo)<br/>
+ <i>Set allo on or off. </i><br/>
+ globus_result_t <code>globus_gass_copy_set_stat_on_expand</code> (<code>globus_gass_copy_handle_t</code> *handle, globus_bool_t always_stat)<br/>
+ <i>Make globus_gass_copy_expand_url() always send stat info. </i><br/>
+ globus_result_t <code>globus_gass_copy_set_partial_offsets</code> (<code>globus_gass_copy_handle_t</code> *handle, globus_off_t offset, globus_off_t end_offset)<br/>
+ <i>Set partial file offsets. </i><br/>
+ globus_result_t <code>globus_gass_copy_get_partial_offsets</code> (<code>globus_gass_copy_handle_t</code> *handle, globus_off_t *offset, globus_off_t *end_offset)<br/>
+ <i>Get partial transfer offsets. </i><br/>
+ globus_result_t <code>globus_gass_copy_attr_init</code> (<code>globus_gass_copy_attr_t</code> *attr)<br/>
+ <i>Initialize an attribute structure. </i><br/>
+ globus_result_t <code>globus_gass_copy_attr_set_ftp</code> (<code>globus_gass_copy_attr_t</code> *attr, globus_ftp_client_operationattr_t *ftp_attr)<br/>
+ <i>Set the attributes for ftp/gsiftp transfers. </i><br/>
+ globus_result_t <code>globus_gass_copy_attr_set_io</code> (<code>globus_gass_copy_attr_t</code> *attr, globus_io_attr_t *io_attr)<br/>
+ <i>Set file transfers attributes. </i><br/>
+ globus_result_t <code>globus_gass_copy_attr_set_gass</code> (<code>globus_gass_copy_attr_t</code> *attr, globus_gass_transfer_requestattr_t *gass_attr)<br/>
+ <i>Set the http/https attributes. </i><br/>
+ globus_result_t <code>globus_gass_copy_get_url_mode</code> (char *url, <code>globus_gass_copy_url_mode_t</code> *mode)<br/>
+ <i>Get URL scheme. </i><br/>
+ globus_result_t <code>globus_gass_copy_register_performance_cb</code> (<code>globus_gass_copy_handle_t</code> *handle, <code>globus_gass_copy_performance_cb_t</code> callback, void *user_arg)<br/>
+ <i>Register a performance information callback. </i><br/>
+ globus_result_t <code>globus_gass_copy_get_status</code> (<code>globus_gass_copy_handle_t</code> *handle, <code>globus_gass_copy_status_t</code> *status)<br/>
+ <i>Get the status code of a transfer. </i><br/>
+ const char * <code>globus_gass_copy_get_status_string</code> (<code>globus_gass_copy_handle_t</code> *handle)<br/>
+ <i>Get the status string of a transfer. </i><br/>
+ globus_result_t <code>globus_gass_copy_glob_expand_url</code> (<code>globus_gass_copy_handle_t</code> *handle, const char *url, <code>globus_gass_copy_attr_t</code> *attr, <code>globus_gass_copy_glob_entry_cb_t</code> entry_cb, void *user_arg)<br/>
+ <i>Expand globbed url. </i><br/>
+ globus_result_t <code>globus_gass_copy_mkdir</code> (<code>globus_gass_copy_handle_t</code> *handle, char *url, <code>globus_gass_copy_attr_t</code> *attr)<br/>
  <i>Make directory. </i></p>
 <h2>Detailed Description</h2>
 <p> Protocol-Independent File Transfer. </p>
@@ -112,8 +112,8 @@ globus_module_deactivate(GLOBUS_GASS_COPY_MODULE)
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>url</i> The full url to the expanded entry. A directory entry will end in a forward slash &#8216;/&#8217;.<br />
- <i>stat</i> A pointer to a <code>globus_gass_copy_glob_stat_t</code> containing information about the entry.<br />
+</dt><dd> <i>url</i> The full url to the expanded entry. A directory entry will end in a forward slash &#8216;/&#8217;.<br/>
+ <i>stat</i> A pointer to a <code>globus_gass_copy_glob_stat_t</code> containing information about the entry.<br/>
  <i>user_arg</i> The user_arg passed to globus_gass_copy_glob_expand()</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
@@ -126,10 +126,10 @@ globus_module_deactivate(GLOBUS_GASS_COPY_MODULE)
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> the gass copy handle this transfer is occurring on<br />
- <i>user_arg</i> a user pointer registered with &#8216;globus_gass_copy_register_performance_cb&#8217;<br />
- <i>total_bytes</i> the total number of bytes transfer so far<br />
- <i>instantaneous_throughput</i> instantaneous rate of transfer (since last callback or start) (bytes / sec)<br />
+</dt><dd> <i>handle</i> the gass copy handle this transfer is occurring on<br/>
+ <i>user_arg</i> a user pointer registered with &#8216;globus_gass_copy_register_performance_cb&#8217;<br/>
+ <i>total_bytes</i> the total number of bytes transfer so far<br/>
+ <i>instantaneous_throughput</i> instantaneous rate of transfer (since last callback or start) (bytes / sec)<br/>
  <i>avg_throughput</i> the avg thoughput calculated since the start of the transfer (bytes / sec)</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -160,7 +160,7 @@ globus_module_deactivate(GLOBUS_GASS_COPY_MODULE)
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>attr</i> A globus_gass_copy attribute structure<br />
+</dt><dd> <i>attr</i> A globus_gass_copy attribute structure<br/>
  <i>ftp_attr</i> The ftp/gsiftp attributes to be used</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -175,7 +175,7 @@ globus_module_deactivate(GLOBUS_GASS_COPY_MODULE)
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>attr</i> A globus_gass_copy attribute structure<br />
+</dt><dd> <i>attr</i> A globus_gass_copy attribute structure<br/>
  <i>gass_attr</i> The http/https attributes to be used</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -190,7 +190,7 @@ globus_module_deactivate(GLOBUS_GASS_COPY_MODULE)
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>attr</i> A globus_gass_copy attribute structure<br />
+</dt><dd> <i>attr</i> A globus_gass_copy attribute structure<br/>
  <i>io_attr</i> The file attributes to be used</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -205,7 +205,7 @@ globus_module_deactivate(GLOBUS_GASS_COPY_MODULE)
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> Get the buffer length for transfers associated with this handle.<br />
+</dt><dd> <i>handle</i> Get the buffer length for transfers associated with this handle.<br/>
  <i>length</i> The length, in bytes, of the buffer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -216,7 +216,7 @@ globus_module_deactivate(GLOBUS_GASS_COPY_MODULE)
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> See if third-party transfers are turned on or off for transfers associated with this handle. They are on by default.<br />
+</dt><dd> <i>handle</i> See if third-party transfers are turned on or off for transfers associated with this handle. They are on by default.<br/>
  <i>no_third_party_transfers</i> GLOBUS_FALSE if third-party transfers should be used. GLOBUS_TRUE if third-party transfers should not be used.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -227,8 +227,8 @@ globus_module_deactivate(GLOBUS_GASS_COPY_MODULE)
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> Get the offsets for partial transfers associated with this handle.<br />
- <i>offset</i> The starting offset for the partial transfer.<br />
+</dt><dd> <i>handle</i> Get the offsets for partial transfers associated with this handle.<br/>
+ <i>offset</i> The starting offset for the partial transfer.<br/>
  <i>end_offset</i> The ending offset for the partial transfer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -239,7 +239,7 @@ globus_module_deactivate(GLOBUS_GASS_COPY_MODULE)
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> A globus_gass_copy_handle<br />
+</dt><dd> <i>handle</i> A globus_gass_copy_handle<br/>
  <i>status</i> Will be one of the following: GLOBUS_GASS_COPY_STATUS_NONE (No transfers have been initiated using this handle.) GLOBUS_GASS_COPY_STATUS_PENDING (A transfer is currently being set up.) GLOBUS_GASS_COPY_STATUS_TRANSFER_IN_PROGRESS (There is currently a transfer in progress.) GLOBUS_GASS_COPY_STATUS_CANCEL (The last transfer initiated using this handle has been cancelled by the user before completing, and is in the process of being cleaned up.) GLOBUS_GASS_COPY_STATUS_FAILURE (The last transfer initiated using this handle failed, and is in the process of being cleaned up.) GLOBUS_GASS_COPY_STATUS_DONE_SUCCESS (The last transfer initiated using this handle has completed successfully.) GLOBUS_GASS_COPY_STATUS_DONE_FAILURE (The last transfer initiated using this handle failed and has finished cleaning up.) GLOBUS_GASS_COPY_STATUS_DONE_CANCELLED (The last transfer initiated using this handle was cancelled and has finished cleaning up.)</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -260,7 +260,7 @@ globus_module_deactivate(GLOBUS_GASS_COPY_MODULE)
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>url</i> The URL for schema checking<br />
+</dt><dd> <i>url</i> The URL for schema checking<br/>
  <i>mode</i> the filled in schema type of the URL param</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -275,10 +275,10 @@ globus_module_deactivate(GLOBUS_GASS_COPY_MODULE)
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> A gass copy handle to use for the operation.<br />
- <i>url</i> The URL to expand. The URL may be an ftp, gsiftp or file URL. Wildcard characters supported are &#8216;?&#8217; &#8216;*&#8217; &#8216;[ ]&#8217; in the filename portion of the url.<br />
- <i>attr</i> Gass copy attributes for this operation.<br />
- <i>entry_cb</i> Function to call with information about each entry<br />
+</dt><dd> <i>handle</i> A gass copy handle to use for the operation.<br/>
+ <i>url</i> The URL to expand. The URL may be an ftp, gsiftp or file URL. Wildcard characters supported are &#8216;?&#8217; &#8216;*&#8217; &#8216;[ ]&#8217; in the filename portion of the url.<br/>
+ <i>attr</i> Gass copy attributes for this operation.<br/>
+ <i>entry_cb</i> Function to call with information about each entry<br/>
  <i>user_arg</i> An argument to pass to entry_cb()</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -313,7 +313,7 @@ globus_module_deactivate(GLOBUS_GASS_COPY_MODULE)
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> The handle to be initialized<br />
+</dt><dd> <i>handle</i> The handle to be initialized<br/>
  <i>attr</i> The handle attributes used to use with this handle</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -328,8 +328,8 @@ globus_module_deactivate(GLOBUS_GASS_COPY_MODULE)
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> A gass copy handle to use for the mkdir operation.<br />
- <i>url</i> The URL for the directory to create. The URL may be an ftp, gsiftp or file URL.<br />
+</dt><dd> <i>handle</i> A gass copy handle to use for the mkdir operation.<br/>
+ <i>url</i> The URL for the directory to create. The URL may be an ftp, gsiftp or file URL.<br/>
  <i>attr</i> Gass copy attributes for this operation.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -352,8 +352,8 @@ globus_module_deactivate(GLOBUS_GASS_COPY_MODULE)
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> an initialized gass copy handle for which you would like to see performance info<br />
- <i>callback</i> the performance callback<br />
+</dt><dd> <i>handle</i> an initialized gass copy handle for which you would like to see performance info<br/>
+ <i>callback</i> the performance callback<br/>
  <i>user_arg</i> a user pointer that will be passed to all callbacks for a given handle</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -372,7 +372,7 @@ globus_module_deactivate(GLOBUS_GASS_COPY_MODULE)
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> Set the buffer length for transfers associated with this handle.<br />
+</dt><dd> <i>handle</i> Set the buffer length for transfers associated with this handle.<br/>
  <i>length</i> The length, in bytes, to make the buffer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -383,7 +383,7 @@ globus_module_deactivate(GLOBUS_GASS_COPY_MODULE)
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> Turn third-party transfers on or off for transfers associated with this handle. They are on by default.<br />
+</dt><dd> <i>handle</i> Turn third-party transfers on or off for transfers associated with this handle. They are on by default.<br/>
  <i>no_third_party_transfers</i> GLOBUS_FALSE if third-party transfers should be used. GLOBUS_TRUE if third-party transfers should not be used.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
@@ -394,8 +394,8 @@ globus_module_deactivate(GLOBUS_GASS_COPY_MODULE)
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-</dt><dd> <i>handle</i> Set the offsets for partial transfers associated with this handle.<br />
- <i>offset</i> The starting offset for the partial transfer.<br />
+</dt><dd> <i>handle</i> Set the offsets for partial transfers associated with this handle.<br/>
+ <i>offset</i> The starting offset for the partial transfer.<br/>
  <i>end_offset</i> The ending offset for the partial transfer.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

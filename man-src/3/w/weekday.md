@@ -17,11 +17,11 @@ Functions</code></pre>
 <p> std::ostream &amp; <code>operator&lt;&lt;</code> (std::ostream &amp;, const long_weekday_holder &amp;) </p>
 <p> std::ostream &amp; <code>operator&lt;&lt;</code> (std::ostream &amp;, const short_weekday_holder &amp;) </p>
 <p> std::ostream &amp; <code>operator&lt;&lt;</code> (std::ostream &amp;, const shortest_weekday_holder &amp;) </p>
-<p> detail::long_weekday_holder <code>long_weekday</code> (Weekday)<br />
- <i>output weekdays in long format </i><br />
- detail::short_weekday_holder <code>short_weekday</code> (Weekday)<br />
- <i>output weekdays in short format (three letters) </i><br />
- detail::shortest_weekday_holder <code>shortest_weekday</code> (Weekday)<br />
+<p> detail::long_weekday_holder <code>long_weekday</code> (Weekday)<br/>
+ <i>output weekdays in long format </i><br/>
+ detail::short_weekday_holder <code>short_weekday</code> (Weekday)<br/>
+ <i>output weekdays in short format (three letters) </i><br/>
+ detail::shortest_weekday_holder <code>shortest_weekday</code> (Weekday)<br/>
  <i>output weekdays in shortest format (two letters) </i></p>
 <h2>Detailed Description</h2>
 <p>Weekday enumeration.</p>

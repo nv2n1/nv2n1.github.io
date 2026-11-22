@@ -15,7 +15,7 @@ description: "texexpand – expand \\input and \\include statements in a TeX fil
 <p> In this version, texexpand cares for following environments that may span include files / section boundaries: a) \begin{comment} b) <code>%begin</code>{comment} c) \begin{any} introduced with \excludecomment d) <code>%begin</code>{any} e) \begin{verbatim} f) \begin{latexonly} g) <code>%begin</code>{latexonly} </p>
 <p> e) - g) prevent texexpand from expanding input files, but the environment content goes fully into the output file. </p>
 <p> Together with each merging of \input etc. there are so-called %%%texexpand markers accompanying the boundary. </p>
-<p> When latex2html reads in the output file, it uses these markers to write each part to a separate file, and process them further. <br />
+<p> When latex2html reads in the output file, it uses these markers to write each part to a separate file, and process them further. <br/>
  </p>
 <p> <code>Detailed technical notes:</code> </p>
 <p> 1. <code>%begin</code>{latexonly} and <code>%end</code>{latexonly} have to be on a separate line. Anything between these tags (including the tags) is discarded. </p>
@@ -24,24 +24,24 @@ description: "texexpand – expand \\input and \\include statements in a TeX fil
 <p> 4. \begin{verbatim/verbatim*} and \end{verbatim/verbatim*} have to be on a separate line. Anything between these tags (including the tags) is not expanded. </p>
 <p> 5. The scope of any such tags may extend over several files. The opening tag for latexonly may occur on a different include level than the closing tag. The opening tag for verbatim/&quot;to exclude&#8217;&#8216; must occur within the same file than the closing tag. </p>
 <p> 6. Warnings are printed when the document has been parsed and open tags remain. </p>
-<p> 7. When in a ``to exclude&quot;/verbatim environment, texexpand won&#8217;t recognize <font SIZE="-1">ANY</font> command except the corresponding closing tag. There cannot be any nested constructions. This behaviour is identical to that of LaTeX. </p>
+<p> 7. When in a ``to exclude&quot;/verbatim environment, texexpand won&#8217;t recognize ANY command except the corresponding closing tag. There cannot be any nested constructions. This behaviour is identical to that of LaTeX. </p>
 <p> 8. \begin{latexonly},\end{latexonly} may be nested, whereas <code>%begin</code>{latexonly},%end{latexonly} may not be nested. </p>
 <p> 9. A ``%&#8216;&#8216; tag cannot close a ``\&#8216;&#8216; tag, and vice versa. </p>
 <p> 10. Every \<i>document</i>(class|style), \usepackage, \input and \include command has to be on a separate line. </p>
 <p> 11. Everything behind a `%&#8216; that isn&#8217;t preceded by a `\&#8216; is regarded as a comment, i.e. it is printed but not interpreted. </p>
-<p> 12. If any command listed in 10. is preceded by an occurrence of `\verb&#8217; or `\latex&#8217; then it is <font SIZE="-1">NOT</font> interpreted. This crashes on lines like this: blah blah \verb+foo foo+ \input{bar} % bar won&#8217;t be loaded! </p>
-<p> 13. Packages provided via \usepackage are handled the same way as `options&#8217; in \<i>document</i>(class|style), i.e. they are included when -auto_exclude is off, the package isn&#8217;t in <code>@dont_include</code> *<font SIZE="-1">OR</font>* the package is in <code>@do_include</code> (new). They are added to the style file together with their options if the file itself hasn&#8217;t been merged. \documentclass[options]{class} searches for every option.clo, \documentstyle[options]{style} searches for every option.sty. \usepackage[options]{packages} searches for every package.sty. </p>
+<p> 12. If any command listed in 10. is preceded by an occurrence of `\verb&#8217; or `\latex&#8217; then it is NOT interpreted. This crashes on lines like this: blah blah \verb+foo foo+ \input{bar} % bar won&#8217;t be loaded! </p>
+<p> 13. Packages provided via \usepackage are handled the same way as `options&#8217; in \<i>document</i>(class|style), i.e. they are included when -auto_exclude is off, the package isn&#8217;t in <code>@dont_include</code> *OR* the package is in <code>@do_include</code> (new). They are added to the style file together with their options if the file itself hasn&#8217;t been merged. \documentclass[options]{class} searches for every option.clo, \documentstyle[options]{style} searches for every option.sty. \usepackage[options]{packages} searches for every package.sty. </p>
 <p> 14. Each texinputs directory is searched for input files/styles. If it ends in `//&#8216;, the whole subdirectory tree is searched. </p>
-<p> 15. \input / \include merge the given file (if found under the given name or with .tex extension) if its basename is in <code>@do_include</code> or if it isn&#8217;t in <code>@dont_include</code> or if the given filename doesn&#8217;t end in .sty/.clo/.cls when -auto_exclude is set. <br />
+<p> 15. \input / \include merge the given file (if found under the given name or with .tex extension) if its basename is in <code>@do_include</code> or if it isn&#8217;t in <code>@dont_include</code> or if the given filename doesn&#8217;t end in .sty/.clo/.cls when -auto_exclude is set. <br/>
  </p>
 <p> <code>Notes</code> </p>
 <p> Recognizes \documentclass, \documentstyle, \usepackage, \RequirePackage, \begin{verbatim}...\end{verbatim}, <code>%begin</code>{latexonly}...%end{latexonly}, \begin{latexonly}...\end{latexonly}, \input, \include, \verb, \latex \endinput, \end{document} \includecomment, \excludecomment \begin{&quot;to exclude&quot;}, \end{&quot;to exclude&quot;} <code>%begin</code>{&quot;to exclude&quot;}, <code>%end</code>{&quot;to exclude&quot;}  </p>
 <h2>The gory Details</h2>
 <p> Include and parse a file. This routine is recursive, see also &amp;process_input_include_file, &amp;process_document_header, and &amp;process_package_cmd. </p>
-<p> Two global flags control the states of texexpand. <br />
-&nbsp;o&nbsp;<code>$active</code>&nbsp;is true if we should interprete the lines to expand files, check for packages, etc. <br />
+<p> Two global flags control the states of texexpand. <br/>
+&nbsp;o&nbsp;<code>$active</code>&nbsp;is true if we should interprete the lines to expand files, check for packages, etc. <br/>
 &nbsp;o&nbsp;<code>$mute</code>&nbsp;is true if we should prevent the lines from going into the out file. </p>
-<p> We have three general states of texexpand: <br />
+<p> We have three general states of texexpand: <br/>
 &nbsp;1)&nbsp;interprete the lines and pass them to the out file This is the normal case. Corresponding: <code>$active</code> true, <code>$mute</code> false </p>
 <pre><code> 2) interprete minimal and suppress them
 This is when parsing inside a comment environment, which

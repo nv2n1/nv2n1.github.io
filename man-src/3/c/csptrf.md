@@ -11,7 +11,7 @@ description: "csptrf.f –"
 <p> csptrf.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>csptrf</code> (UPLO, N, AP, IPIV, INFO)<br />
+<p> subroutine <code>csptrf</code> (UPLO, N, AP, IPIV, INFO)<br/>
  <i></i><code>CSPTRF</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine csptrf (characterUPLO, integerN, complex, dimension( * )AP, integer, dimension( * )IPIV, integerINFO)</h3>

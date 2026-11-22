@@ -13,8 +13,8 @@ description: "sc::SCDestructiveElementProduct –"
 <h3>Public Member Functions</h3>
 <p><code>SCDestructiveElementProduct</code> (<code>StateIn</code> &amp;) </p>
 <p> int <code>has_side_effects</code> () </p>
-<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br />
- <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br />
+<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br/>
+ <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br/>
  void <code>process</code> (<code>SCMatrixBlockIter</code> &amp;, <code>SCMatrixBlockIter</code> &amp;)</p>
 <h2>Member Function Documentation</h2>
 <h3>void sc::SCDestructiveElementProduct::save_data_state (<code>StateOut</code> &amp;) [virtual]</h3>

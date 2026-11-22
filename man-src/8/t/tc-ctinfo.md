@@ -53,51 +53,51 @@ description: "ctinfo – tc connmark processing action"
 <h2>Examples</h2>
 <p>Example showing conditional restoration of DSCP on ingress via an IFB</p>
 <dl>
-<dd>#Set up the IFB interface<br />
+<dd>#Set up the IFB interface<br/>
  tc qdisc add dev ifb4eth0 handle ffff: ingress </dd>
-<p> #Put CAKE qdisc on it<br />
+<p> #Put CAKE qdisc on it<br/>
  tc qdisc add dev ifb4eth0 root cake bandwidth 40mbit </p>
-<p> #Set interface UP<br />
+<p> #Set interface UP<br/>
  ip link set dev ifb4eth0 up </p>
-<p> #Add 2 actions, ctinfo to restore dscp &amp; mirred to redirect the packets to IFB<br />
- tc filter add dev eth0 parent ffff: protocol all prio 10 u32 \<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;match u32 0 0 flowid 1:1 action&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;\<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;ctinfo dscp 0xfc000000 0x01000000&nbsp;<wbr>&nbsp;\<br />
+<p> #Add 2 actions, ctinfo to restore dscp &amp; mirred to redirect the packets to IFB<br/>
+ tc filter add dev eth0 parent ffff: protocol all prio 10 u32 \<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;match u32 0 0 flowid 1:1 action&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;\<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;ctinfo dscp 0xfc000000 0x01000000&nbsp;<wbr>&nbsp;\<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;mirred egress redirect dev ifb4eth0 </p>
 <p> tc -s qdisc show dev eth0 ingress </p>
-<p>&nbsp;filter parent ffff: protocol all pref 10 u32 chain 0<br />
-&nbsp;filter parent ffff: protocol all pref 10 u32 chain 0 fh 800: ht divisor 1<br />
-&nbsp;filter parent ffff: protocol all pref 10 u32 chain 0 fh 800::800 order 2048 key ht 800 bkt 0 flowid 1:1 not_in_hw<br />
-&nbsp;<wbr>&nbsp;match 00000000/00000000 at 0<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;action order 1: ctinfo zone 0 pipe<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;index 2 ref 1 bind 1 dscp 0xfc000000 0x01000000 installed 72 sec used 0 sec DSCP set 1333 error 0 CPMARK set 0<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Action statistics:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Sent 658484 bytes 1833 pkt&nbsp;(dropped 0, overlimits 0 requeues 0)<br />
+<p>&nbsp;filter parent ffff: protocol all pref 10 u32 chain 0<br/>
+&nbsp;filter parent ffff: protocol all pref 10 u32 chain 0 fh 800: ht divisor 1<br/>
+&nbsp;filter parent ffff: protocol all pref 10 u32 chain 0 fh 800::800 order 2048 key ht 800 bkt 0 flowid 1:1 not_in_hw<br/>
+&nbsp;<wbr>&nbsp;match 00000000/00000000 at 0<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;action order 1: ctinfo zone 0 pipe<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;index 2 ref 1 bind 1 dscp 0xfc000000 0x01000000 installed 72 sec used 0 sec DSCP set 1333 error 0 CPMARK set 0<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Action statistics:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Sent 658484 bytes 1833 pkt&nbsp;(dropped 0, overlimits 0 requeues 0)<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;backlog 0b 0p requeues 0 </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;action order 2: mirred&nbsp;(Egress Redirect to device ifb4eth0)&nbsp;stolen<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;index 1 ref 1 bind 1 installed 72 sec used 0 sec<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Action statistics:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Sent 658484 bytes 1833 pkt&nbsp;(dropped 0, overlimits 0 requeues 0)<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;action order 2: mirred&nbsp;(Egress Redirect to device ifb4eth0)&nbsp;stolen<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;index 1 ref 1 bind 1 installed 72 sec used 0 sec<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Action statistics:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Sent 658484 bytes 1833 pkt&nbsp;(dropped 0, overlimits 0 requeues 0)<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;backlog 0b 0p requeues 0</dl>
 <p> Example showing conditional restoration of DSCP on egress </p>
 <p> This may appear nonsensical since iptables marking of egress packets is easy to achieve, however the iptables flow classification rules may be extensive and so some sort of set once and forget may be useful especially on cpu constrained devices.</p>
 <dl>
-<dd># Send unmarked connections to a marking chain which needs to store a DSCP and set statemask bit in the connmark<br />
- iptables -t mangle -A POSTROUTING -o eth0 -m connmark \<br />
+<dd># Send unmarked connections to a marking chain which needs to store a DSCP and set statemask bit in the connmark<br/>
+ iptables -t mangle -A POSTROUTING -o eth0 -m connmark \<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211;mark 0x00000000/0x01000000 -g CLASS_MARKING_CHAIN </dd>
-<p> # Apply marked DSCP to the packets<br />
- tc filter add dev eth0 protocol all prio 10 u32 \<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;match u32 0 0 flowid 1:1 action&nbsp;\<br />
+<p> # Apply marked DSCP to the packets<br/>
+ tc filter add dev eth0 protocol all prio 10 u32 \<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;match u32 0 0 flowid 1:1 action&nbsp;\<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;ctinfo dscp 0xfc000000 0x01000000 </p>
-<p> tc -s filter show dev eth0<br />
-&nbsp;filter parent 800e: protocol all pref 10 u32 chain 0<br />
-&nbsp;filter parent 800e: protocol all pref 10 u32 chain 0 fh 800: ht divisor 1<br />
-&nbsp;filter parent 800e: protocol all pref 10 u32 chain 0 fh 800::800 order 2048 key ht 800 bkt 0 flowid 1:1 not_in_hw<br />
-&nbsp;<wbr>&nbsp;match 00000000/00000000 at 0<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;action order 1: ctinfo zone 0 pipe<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;index 1 ref 1 bind 1 dscp 0xfc000000 0x01000000 installed 7414 sec used 0 sec DSCP set 53404 error 0 CPMARK set 0<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Action statistics:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Sent 32890260 bytes 120441 pkt&nbsp;(dropped 0, overlimits 0 requeues 0)<br />
+<p> tc -s filter show dev eth0<br/>
+&nbsp;filter parent 800e: protocol all pref 10 u32 chain 0<br/>
+&nbsp;filter parent 800e: protocol all pref 10 u32 chain 0 fh 800: ht divisor 1<br/>
+&nbsp;filter parent 800e: protocol all pref 10 u32 chain 0 fh 800::800 order 2048 key ht 800 bkt 0 flowid 1:1 not_in_hw<br/>
+&nbsp;<wbr>&nbsp;match 00000000/00000000 at 0<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;action order 1: ctinfo zone 0 pipe<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;index 1 ref 1 bind 1 dscp 0xfc000000 0x01000000 installed 7414 sec used 0 sec DSCP set 53404 error 0 CPMARK set 0<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Action statistics:<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Sent 32890260 bytes 120441 pkt&nbsp;(dropped 0, overlimits 0 requeues 0)<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;backlog 0b 0p requeues 0
 </dl>
 <h2>See Also</h2>

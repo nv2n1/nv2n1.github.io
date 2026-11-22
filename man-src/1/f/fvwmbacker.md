@@ -63,8 +63,8 @@ description: "FvwmBacker – the fvwm background changer module"
 *FvwmBacker: Command (Desk 1, Page * 0) -solid navy
 *FvwmBacker: Command (Desk 1, Page * 1) Colorset 5</pre>
 <h2>Author</h2>
-<p>Mike Finger (mfinger [at] mermaid.micro.umn.edu)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(Mike_Finger [at] atk.com)<br />
+<p>Mike Finger (mfinger [at] mermaid.micro.umn.edu)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(Mike_Finger [at] atk.com)<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(doodman on IRC, check the&nbsp;<wbr>#linux channel)</p>
 <h2>Modified by</h2>
 <p>Andrew Davison (davison [at] cs.monash.edu.au) </p>

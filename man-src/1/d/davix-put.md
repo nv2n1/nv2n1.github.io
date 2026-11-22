@@ -12,9 +12,9 @@ description: "davix-put – Upload tool based on libdavix"
 <h2>SYNOPSIS</h2>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> davix-put [options]&#8230; local_file url</p>
 <h2>DESCRIPTION</h2>
-<p> <code>davix-put</code> is a tool to upload resources to http, Webdav or REST compatible services.<br />
+<p> <code>davix-put</code> is a tool to upload resources to http, Webdav or REST compatible services.<br/>
  The command supports the protocol Http (http(s)://), WebDav (dav(s)://) and S3 (s3(s)://). </p>
-<p> Local resources can either be a single file or a collection.<br />
+<p> Local resources can either be a single file or a collection.<br/>
  In the case of collection, all sub-collections will also be uploaded. </p>
 <p> davix-put is powered by libdavix. See <a href="/docs/linux/man/3-libdavix/">libdavix</a>(3) for details. </p>
 <h2>OPTIONS</h2>
@@ -183,13 +183,13 @@ description: "davix-put – Upload tool based on libdavix"
 <dt>
 </dt><dd> Azure authentication key</dd></dl>
 <h2>EXAMPLES</h2>
-<p> <code>Upload local file to a http server<br />
+<p> <code>Upload local file to a http server<br/>
 &nbsp;<wbr>&nbsp;<wbr>davix-put&nbsp;<wbr>/tmp/file1&nbsp;<wbr><a rel="nofollow" href="http://example.org/dir1/dir2/file1">http://example.org/dir1/dir2/file1</a> </p>
-<p> Upload a local file to a Grid compatible storage<br />
+<p> Upload a local file to a Grid compatible storage<br/>
 &nbsp;<wbr>&nbsp;<wbr>davix-put -P grid&nbsp;<wbr>/tmp/file1&nbsp;<wbr><a href="davs://grid-storage.example.org/dir1/file1">davs://grid-storage.example.org/dir1/file1</a> </p>
-<p> Upload a resource to a OAuth 2.0 compatible service<br />
+<p> Upload a resource to a OAuth 2.0 compatible service<br/>
 &nbsp;<wbr>&nbsp;<wbr>davix-put&nbsp;<wbr>/tmp/file&nbsp;<wbr><a rel="nofollow" href="https://example.org/dir1/tmpfile">https://example.org/dir1/tmpfile</a>&nbsp;<wbr>-H&nbsp;<wbr>&quot;Authorization: Bearer mytoken&quot; </p>
-<p> Upload local directory to a http server<br />
+<p> Upload local directory to a http server<br/>
 &nbsp;<wbr>&nbsp;<wbr>davix-put mydir&nbsp;<wbr><a rel="nofollow" href="http://example.org/dir1">http://example.org/dir1</a> </p>
 <p> </code></p>
 <h2>SEE ALSO</h2>

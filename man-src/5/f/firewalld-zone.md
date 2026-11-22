@@ -113,7 +113,7 @@ description: "firewalld.zone – firewalld zone configuration files"
 <p>Is an optional empty-element tag. It can be used only once in a zone configuration and is not usable for IPv6. If it&#8217;s present masquerading is enabled for the zone. If you want to enable masquerading, you should enable it in the zone bound to the external interface.</p>
 <h3>forward-port</h3>
 <p>Is an optional empty-element tag and can be used several times to have more than one port or packet forward entry. This is for IPv4 only. Use rich language rules for IPv6. There are mandatory and also optional attributes for forward ports: </p>
-<p> <font SIZE="+1"> <code>Mandatory attributes:</code></p>
+<p>  <code>Mandatory attributes:</code></p>
 <dl>
 <dd>The local port and protocol to be forwarded. </dd>
 <p> port=&quot;<i>portid</i>[-<i>portid</i>]&quot;</p>
@@ -123,7 +123,7 @@ description: "firewalld.zone – firewalld zone configuration files"
 <dl>
 <dd>The protocol can either be <i>tcp</i>, <i>udp</i>, <i>sctp</i> or <i>dccp</i>.</dd></dl>
 </dl>
-<p> </font><font SIZE="+2"> <code>Optional attributes:</code></p>
+<p>  <code>Optional attributes:</code></p>
 <dl>
 <dd>The destination of the forward. For local forwarding add <code>to-port</code> only. For remote forwarding add <code>to-addr</code> and use <code>to-port</code> optionally if the destination port on the destination machine should be different. </dd>
 <p> to-port=&quot;<i>portid</i>[-<i>portid</i>]&quot;</p>
@@ -133,7 +133,7 @@ description: "firewalld.zone – firewalld zone configuration files"
 <dl>
 <dd>The destination IPv4 IP address.</dd></dl>
 </dl>
-<p> </font></p>
+<p> </p>
 <h3>source-port</h3>
 <p>Is an optional empty-element tag and can be used several times to have more than one source port entry. All attributes of a source port entry are mandatory: </p>
 <p> port=&quot;<i>portid</i>[-<i>portid</i>]&quot;</p>

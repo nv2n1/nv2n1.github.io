@@ -14,7 +14,7 @@ description: "bibutils – bibliography conversion utilities"
 <dt> <i>format</i><code>2xml</code> [<i>OPTIONS</i>] [<i>file.format</i>]</dt>
 <dt> <code>xml2</code><i>format</i> [<i>OPTIONS</i>] [<i>file.xml</i>]</dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>The bibutils program set inter-converts between various bibliography formats using m[blue]<code>Library of Congress</code>m[]<font SIZE="-2">[1]</font>&#8216;s m[blue]<code>Metadata Object Description Schema (MODS)</code>m[]<font SIZE="-2">[2]</font>version 3.1. For example, one can convert RIS-format files to Bibtex by doing two transformations: RIS-&gt;MODS-&gt;Bibtex.</dd>
+<dd>The bibutils program set inter-converts between various bibliography formats using m[blue]<code>Library of Congress</code>m[][1]&#8216;s m[blue]<code>Metadata Object Description Schema (MODS)</code>m[][2]version 3.1. For example, one can convert RIS-format files to Bibtex by doing two transformations: RIS-&gt;MODS-&gt;Bibtex.</dd>
 <h2>CONVERTING TO MODS</h2>
 <h3>Overview</h3>
 <table>
@@ -35,7 +35,7 @@ description: "bibutils – bibliography conversion utilities"
 </tr>
 <tr VALIGN=top>
 <td> copac2xml </td>
-<td> convert m[blue]<code>COPAC</code>m[]<font SIZE="-2">[3]</font>format references to MODS
+<td> convert m[blue]<code>COPAC</code>m[][3]format references to MODS
 </td>
 </tr>
 <tr VALIGN=top>
@@ -115,7 +115,7 @@ description: "bibutils – bibliography conversion utilities"
 <tr VALIGN=top>
 <td> -i </td>
 <td> &#8211;input-encoding </td>
-<td> interpret the input file as using the requested character set (use w/o argument for current list derived from character sets at m[blue]<code><a rel="nofollow" href="http://www.kostis.net">www.kostis.net</a></code>m[]<font SIZE="-2">[4]</font>) unicode is now a character set option
+<td> interpret the input file as using the requested character set (use w/o argument for current list derived from character sets at m[blue]<code><a rel="nofollow" href="http://www.kostis.net">www.kostis.net</a></code>m[][4]) unicode is now a character set option
 </td>
 </tr>
 <tr VALIGN=top>
@@ -208,7 +208,7 @@ biblatex2xml biblatex_file.bib &gt; outputfile.xml
 <h3>copac2xml</h3>
 <p> <code>copac2xml</code>converts a COPAC formatted reference file to a MODS XML-intermediate bibliography file.</p>
 <h3>end2xml</h3>
-<p> <code>end2xml</code> converts a text endnote-formatted reference file to an XML-intermediate bibliography file. This program will not work on the binary library; the file needs to be exported first. Endnote tagged formats (&quot;Refer&quot; format export) look like Example 1, &#8220;Example refer format file&#8221;. There are very nice instructions for making sure that you are properly exporting this at m[blue]<code><a rel="nofollow" href="http://www.sonnysoftware.com/endnoteimport.html">http://www.sonnysoftware.com/endnoteimport.html</a></code>m[]<font SIZE="-2">[5]</font> </p>
+<p> <code>end2xml</code> converts a text endnote-formatted reference file to an XML-intermediate bibliography file. This program will not work on the binary library; the file needs to be exported first. Endnote tagged formats (&quot;Refer&quot; format export) look like Example 1, &#8220;Example refer format file&#8221;. There are very nice instructions for making sure that you are properly exporting this at m[blue]<code><a rel="nofollow" href="http://www.sonnysoftware.com/endnoteimport.html">http://www.sonnysoftware.com/endnoteimport.html</a></code>m[][5] </p>
 <p> Usage for <code>end2xml</code> is the same as <code>bib2xml</code>. </p>
 <dl>
 <dt>
@@ -305,7 +305,7 @@ ris2xml ris_file.ris &gt;  output_file.xml
 <tr VALIGN=top>
 <td> -o </td>
 <td> &#8211;output-encoding </td>
-<td> interpret the input file as using the requested character set (use w/o argument for current list derived from character sets at m[blue]<code><a rel="nofollow" href="http://www.kostis.net">www.kostis.net</a></code>m[]<font SIZE="-2">[4]</font>) unicode is now a character set option
+<td> interpret the input file as using the requested character set (use w/o argument for current list derived from character sets at m[blue]<code><a rel="nofollow" href="http://www.kostis.net">www.kostis.net</a></code>m[][4]) unicode is now a character set option
 </td>
 </tr>
 <tr VALIGN=top>
@@ -332,10 +332,10 @@ xml2bib xml_file.xml &gt; output_file.bib
 </dd></dl>
 <p> Since the BibTeX reference format is fairly flexible and seems to have the greatest number of personal preferences, it has also accumulated a number of specific options that are not available for other formats. </p>
 <p> Starting with 3.24, xml2bib output uses lowercase tags and mixed case reference types for better interaction with other software. The older behavior with all uppercase tags/reference types can still be generated using the command-line switch -U/&#8211;uppercase. </p>
-<p> <font SIZE="+1"> <code>xml2bib-specific Options:</code></p>
+<p>  <code>xml2bib-specific Options:</code></p>
 <dl>
 <dt>
-</dt><dd> </font></dd>
+</dt><dd> </dd>
 <table>
 <tr VALIGN=top>
 <td></td>
@@ -380,11 +380,11 @@ xml2bib xml_file.xml &gt; output_file.bib
 </td>
 </tr>
 </table>
-<p> <font SIZE="+1"> </p>
+<p>  </p>
 </dl>
-<p> </font></p>
+<p> </p>
 <h3>xml2ads</h3>
-<p> <code>xml2ads</code> converts the MODS XML bibliography to the Smithsonian Astrophysical Observatory (SAO)/National Aeronautics and Space Administration (NASA) Astrophyics Data System or m[blue]<code>ADS reference format</code>m[]<font SIZE="-2">[6]</font> (which is very similar to the tagged Endnote style). <code>xml2ads</code> usage is as for other tools </p>
+<p> <code>xml2ads</code> converts the MODS XML bibliography to the Smithsonian Astrophysical Observatory (SAO)/National Aeronautics and Space Administration (NASA) Astrophyics Data System or m[blue]<code>ADS reference format</code>m[][6] (which is very similar to the tagged Endnote style). <code>xml2ads</code> usage is as for other tools </p>
 <dl>
 <dt>
 </dt><dd>
@@ -562,9 +562,9 @@ enhancers&quot;,
 </dd></dl>
 <h2>LICENSE</h2>
 <p> All versions of bibutils are relased under the GNU Public License (GPL). In a nutshell, feel free to download, run, and modify these programs as required. If you re-release these, you need to release the modified version of the source. (And I&#8217;d appreciate patches as well&#8230;if you care enough to make the change, then I&#8217;d like to see what you&#8217;re adding or fixing.) </p>
-<p> m[blue]<code>Chris Putnam, Ludwig Institute for Cancer Research</code>m[]<font SIZE="-2">[7]</font></p>
+<p> m[blue]<code>Chris Putnam, Ludwig Institute for Cancer Research</code>m[][7]</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2010 David Bremner (Manual)<br />
+<p> Copyright &#169; 2010 David Bremner (Manual)<br/>
  Copyright &#169; 2008 Christopher Putnam (Software and Manual) </p>
 <p> This manual page is distributed under the terms of version 2 of the GNU General Public License. </p>
 <h2>NOTES</h2>

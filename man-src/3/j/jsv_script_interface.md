@@ -116,8 +116,8 @@ description: "jsv_is_param, jsv_get_param, jsv_del_param, jsv_sub_is_param, jsv_
 <h3>jsv_is_param(<i>param_name</i>)</h3>
 <p> This function returns whether or not a specific job parameter is available for the job which is currently being verified. Either the string <code>true</code> or <code>false</code> will be returned. The availability/absence of a job parameter does not mean that the corresponding command line switch was used/not used. </p>
 <p> The values allowed for <i>param_name</i> are listed below. Find additional information in describing the availability and value format. Job parameters written in capital letters are pseudo parameters. A detailed description for them can be found in Note that </p>
-<p> The following parameters directly reflect arguments of the same name supplied to the submission command (<i>qsub</i> etc.) or corresponding values specified with <i>qmon</i>:<br />
- <code>A</code>, <code>a</code>, <code>ar</code>, <code>b</code>, <code>ckpt</code>, <code>dl</code>, <code>e</code>, <code>h</code>, <code>hold_jid</code>, <code>hold_jid_ad</code>, <code>i</code>, <code>j</code>, <code>js</code>, <code>M</code>, <code>m</code>, <code>masterq</code>, <code>N</code>, <code>notify</code>, <code>o</code>, <code>P</code>, <code>p</code>, <code>R</code>, <code>r</code>, <code>S</code>, <code>shell</code>, <code>tc</code>, <code>w</code><br />
+<p> The following parameters directly reflect arguments of the same name supplied to the submission command (<i>qsub</i> etc.) or corresponding values specified with <i>qmon</i>:<br/>
+ <code>A</code>, <code>a</code>, <code>ar</code>, <code>b</code>, <code>ckpt</code>, <code>dl</code>, <code>e</code>, <code>h</code>, <code>hold_jid</code>, <code>hold_jid_ad</code>, <code>i</code>, <code>j</code>, <code>js</code>, <code>M</code>, <code>m</code>, <code>masterq</code>, <code>N</code>, <code>notify</code>, <code>o</code>, <code>P</code>, <code>p</code>, <code>R</code>, <code>r</code>, <code>S</code>, <code>shell</code>, <code>tc</code>, <code>w</code><br/>
  Other parameters are related to the submission command arguments as follows:</p>
 <dl>
 <dt><code>ac</code></dt>
@@ -252,7 +252,7 @@ description: "jsv_is_param, jsv_get_param, jsv_del_param, jsv_sub_is_param, jsv_
 </table>
 </table>
 <h3>jsv_sub_get_param(<i>param_name</i>, <i>variable_name</i>)</h3>
-<p> Some job parameters are lists that can contain multiple variables<br />
+<p> Some job parameters are lists that can contain multiple variables<br/>
  with an optional value. </p>
 <p> This function returns the value of a variable <i>variable_name</i> in the parameter list <i>param_name</i>. For sub list elements that have no value an empty string will be returned. </p>
 <p> Find a list of allowed parameter names (<i>param_name</i>) and variable names (<i>variable_name</i>) in the section for the function <code>jsv_sub_is_param</code>().</p>
@@ -426,7 +426,7 @@ Example files:
 <i>$SGE_ROOT/util/resources/jsv/jjsv.sh</i>
 <i>$SGE_ROOT/util/resources/jsv/SimpleJsv.java</i>
 </pre>
-<p> Debugging log file:<br />
+<p> Debugging log file:<br/>
  <i>/tmp/jsv_$$.log</i></p>
 <h2>BUGS</h2>
 <p> Complex names seen by the script are not canonicalized, i.e. if the name and shortcut vary, it is necessary to consider both.</p>

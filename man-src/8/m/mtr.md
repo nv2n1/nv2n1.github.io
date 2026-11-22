@@ -76,7 +76,7 @@ MTR.0.86+git:16e39fc0;1435562787;OK;nic.is;7;<a rel="nofollow" href="http://www.
 <dt><code>-b</code>, <code>&#8211;show-ips</code></dt>
 <dd>Use this option to tell <code>mtr</code> to display both the host names and numeric IP numbers. In split mode this adds an extra field to the output. In report mode, there is usually too little space to add the IPs, and they will be truncated. Use the wide report (-w) mode to see the IPs in report mode.</dd>
 <dt><code>-o </code><i>FIELDS</i>, <code>&#8211;order </code><i>FIELDS</i></dt>
-<dd>Use this option to specify which fields to display and in which order. You may use one or more space characters to separate fields.<br />
+<dd>Use this option to specify which fields to display and in which order. You may use one or more space characters to separate fields.<br/>
  Available fields: <center></dd>
 <table BORDER>
 <tr VALIGN=top>
@@ -244,25 +244,25 @@ MTR.0.86+git:16e39fc0;1435562787;OK;nic.is;7;<a rel="nofollow" href="http://www.
 <dt><code>DISPLAY</code></dt>
 <dd>Specifies an X11 server for the GTK+ frontend.</dd></dl>
 <h2>Interactive Control</h2>
-<p><code>mtr</code> can be controlled while it is running with the following keys:<br />
-&nbsp;<wbr>&nbsp;?|h&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;help<br />
-&nbsp;<wbr>&nbsp;p&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;pause&nbsp;(SPACE to resume)<br />
-&nbsp;<wbr>&nbsp;d&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;switching display mode<br />
-&nbsp;<wbr>&nbsp;e&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;toggle MPLS information on/off<br />
-&nbsp;<wbr>&nbsp;n&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;toggle DNS on/off<br />
-&nbsp;<wbr>&nbsp;r&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;reset all counters<br />
-&nbsp;<wbr>&nbsp;o str&nbsp;<wbr>&nbsp;<wbr>&nbsp;set the columns to display, default str=&#8217;LRS N BAWV&#8217;<br />
-&nbsp;<wbr>&nbsp;j&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;toggle latency(LS NABWV)/jitter(DR AGJMXI)&nbsp;stats<br />
-&nbsp;<wbr>&nbsp;c&nbsp;&lt;n&gt;&nbsp;<wbr>&nbsp;<wbr>&nbsp;report cycle n, default n=infinite<br />
-&nbsp;<wbr>&nbsp;i&nbsp;&lt;n&gt;&nbsp;<wbr>&nbsp;<wbr>&nbsp;set the ping interval to n seconds, default n=1<br />
-&nbsp;<wbr>&nbsp;f&nbsp;&lt;n&gt;&nbsp;<wbr>&nbsp;<wbr>&nbsp;set the initial time-to-live(ttl), default n=1<br />
-&nbsp;<wbr>&nbsp;m&nbsp;&lt;n&gt;&nbsp;<wbr>&nbsp;<wbr>&nbsp;set the max time-to-live, default n=&nbsp;#&nbsp;of hops<br />
-&nbsp;<wbr>&nbsp;s&nbsp;&lt;n&gt;&nbsp;<wbr>&nbsp;<wbr>&nbsp;set the packet size to n or random(n&lt;0)<br />
-&nbsp;<wbr>&nbsp;b&nbsp;&lt;c&gt;&nbsp;<wbr>&nbsp;<wbr>&nbsp;set ping bit pattern to c(0..255)&nbsp;or random(c&lt;0)<br />
-&nbsp;<wbr>&nbsp;Q&nbsp;&lt;t&gt;&nbsp;<wbr>&nbsp;<wbr>&nbsp;set ping packet&#8217;s TOS to t<br />
-&nbsp;<wbr>&nbsp;u&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;switch between ICMP ECHO and UDP datagrams<br />
-&nbsp;<wbr>&nbsp;y&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;switching IP info<br />
-&nbsp;<wbr>&nbsp;z&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;toggle ASN info on/off<br />
+<p><code>mtr</code> can be controlled while it is running with the following keys:<br/>
+&nbsp;<wbr>&nbsp;?|h&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;help<br/>
+&nbsp;<wbr>&nbsp;p&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;pause&nbsp;(SPACE to resume)<br/>
+&nbsp;<wbr>&nbsp;d&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;switching display mode<br/>
+&nbsp;<wbr>&nbsp;e&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;toggle MPLS information on/off<br/>
+&nbsp;<wbr>&nbsp;n&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;toggle DNS on/off<br/>
+&nbsp;<wbr>&nbsp;r&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;reset all counters<br/>
+&nbsp;<wbr>&nbsp;o str&nbsp;<wbr>&nbsp;<wbr>&nbsp;set the columns to display, default str=&#8217;LRS N BAWV&#8217;<br/>
+&nbsp;<wbr>&nbsp;j&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;toggle latency(LS NABWV)/jitter(DR AGJMXI)&nbsp;stats<br/>
+&nbsp;<wbr>&nbsp;c&nbsp;&lt;n&gt;&nbsp;<wbr>&nbsp;<wbr>&nbsp;report cycle n, default n=infinite<br/>
+&nbsp;<wbr>&nbsp;i&nbsp;&lt;n&gt;&nbsp;<wbr>&nbsp;<wbr>&nbsp;set the ping interval to n seconds, default n=1<br/>
+&nbsp;<wbr>&nbsp;f&nbsp;&lt;n&gt;&nbsp;<wbr>&nbsp;<wbr>&nbsp;set the initial time-to-live(ttl), default n=1<br/>
+&nbsp;<wbr>&nbsp;m&nbsp;&lt;n&gt;&nbsp;<wbr>&nbsp;<wbr>&nbsp;set the max time-to-live, default n=&nbsp;#&nbsp;of hops<br/>
+&nbsp;<wbr>&nbsp;s&nbsp;&lt;n&gt;&nbsp;<wbr>&nbsp;<wbr>&nbsp;set the packet size to n or random(n&lt;0)<br/>
+&nbsp;<wbr>&nbsp;b&nbsp;&lt;c&gt;&nbsp;<wbr>&nbsp;<wbr>&nbsp;set ping bit pattern to c(0..255)&nbsp;or random(c&lt;0)<br/>
+&nbsp;<wbr>&nbsp;Q&nbsp;&lt;t&gt;&nbsp;<wbr>&nbsp;<wbr>&nbsp;set ping packet&#8217;s TOS to t<br/>
+&nbsp;<wbr>&nbsp;u&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;switch between ICMP ECHO and UDP datagrams<br/>
+&nbsp;<wbr>&nbsp;y&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;switching IP info<br/>
+&nbsp;<wbr>&nbsp;z&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;toggle ASN info on/off<br/>
 &nbsp;<wbr>&nbsp;q&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit</p>
 <h2>Bugs</h2>
 <p>Some modern routers give a lower priority to ICMP ECHO packets than to other network traffic. Consequently, the reliability of these routers reported by <code>mtr</code> will be significantly lower than the actual reliability of these routers.</p>

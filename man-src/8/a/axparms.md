@@ -48,8 +48,8 @@ description: "axparms – Configure AX.25 interfaces."
 <h2>&#8211;version Argument</h2>
 <p>This option displays the version of the AX.25 utilities that <code>axparms</code> belongs to.</p>
 <h2>Files</h2>
-<p>/proc/net/ax25_bpqether<br />
- /proc/net/ax25_calls<br />
+<p>/proc/net/ax25_bpqether<br/>
+ /proc/net/ax25_calls<br/>
  /etc/ax25/axports</p>
 <h2>See Also</h2>
 <p><code>call</code>(1), <code><a href="/docs/linux/man/2-getsockopt/">getsockopt</a></code>(2), <code><a href="/docs/linux/man/2-setsockopt/">setsockopt</a></code>(2), <code><a href="/docs/linux/man/4-ax25/">ax25</a></code>(4), <code><a href="/docs/linux/man/8-axctl/">axctl</a></code>(8), <code><a href="/docs/linux/man/5-axports/">axports</a></code>(5).</p>

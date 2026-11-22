@@ -44,8 +44,8 @@ description: "bchunk – CD image format conversion from bin/cue to iso/cdr"
 <h2>SEE ALSO</h2>
 <p> <code>cdrecord</code>(1), <code>mkisofs</code>(8), <code><a href="/docs/linux/man/1-sox/">sox</a></code>(1), <code><a href="/docs/linux/man/1-cdrdao/">cdrdao</a></code>(1)</p>
 <h2>AUTHORS</h2>
-<p> Heikki Hannikainen &lt;hessu [at] hes.iki.fi&gt;<br />
- Bob Marietta &lt;marietrg [at] SLU.EDU&gt;<br />
- Colas Nahaboo &lt;Colas [at] Nahaboo.com&gt;<br />
- Godmar Back &lt;gback [at] cs.utah.edu&gt;<br />
+<p> Heikki Hannikainen &lt;hessu [at] hes.iki.fi&gt;<br/>
+ Bob Marietta &lt;marietrg [at] SLU.EDU&gt;<br/>
+ Colas Nahaboo &lt;Colas [at] Nahaboo.com&gt;<br/>
+ Godmar Back &lt;gback [at] cs.utah.edu&gt;<br/>
  Matthew Green &lt;mrg [at] eterna.com.au&gt; </p>

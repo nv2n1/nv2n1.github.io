@@ -10,10 +10,10 @@ description: "ql/pricingengines/vanilla/analyticdividendeuropeanengine.hpp – A
 
 <p> ql/pricingengines/vanilla/analyticdividendeuropeanengine.hpp &#8211; Analytic discrete-dividend European engine. </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/instruments/dividendvanillaoption.hpp&gt;<br />
+<p> #include &lt;ql/instruments/dividendvanillaoption.hpp&gt;<br/>
  #include &lt;ql/processes/blackscholesprocess.hpp&gt; </p>
 <h3>Classes</h3>
-<p> class <code>AnalyticDividendEuropeanEngine</code><br />
+<p> class <code>AnalyticDividendEuropeanEngine</code><br/>
  <i>Analytic pricing engine for European options with discrete dividends. </i></p>
 <h2>Detailed Description</h2>
 <p> Analytic discrete-dividend European engine. </p>

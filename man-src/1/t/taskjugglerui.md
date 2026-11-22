@@ -10,8 +10,8 @@ description: "_______TaskjugglerUI ____ – a KDE graphical front-end for taskju
 <p>_______TaskjugglerUI ____ &#8211; a KDE graphical front-end for taskjuggler </p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>TaskjugglerUI<br />
+<dt> <code><br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>TaskjugglerUI<br/>
 </code>&nbsp;<wbr>[<code>&nbsp;<wbr></code><i>&nbsp;<wbr>Qt-options&nbsp;<wbr></i><code>&nbsp;<wbr></code>]&nbsp;<wbr>[<code>&nbsp;<wbr></code><i>&nbsp;<wbr></i><i>&nbsp;<wbr>KDE-options&nbsp;<wbr></i><i>&nbsp;<wbr></i><code>&nbsp;<wbr></code>]&nbsp;<wbr>[<code>&nbsp;<wbr></code><i>&nbsp;<wbr></i><i>&nbsp;<wbr>URL&nbsp;<wbr></i><i>&nbsp;<wbr></i><code>&nbsp;<wbr></code>]</dt></dl>
 <h2>Description</h2>
 <p><code> TaskjugglerUI </code></p>

@@ -598,11 +598,11 @@ system-setup-keyboard
 </tr>
 </table>
 <h2>FILES</h2>
-<p> /etc/X11/xorg.conf.d/00-system-setup-keyboard.conf<br />
- /etc/init/system-setup-keyboard.conf<br />
+<p> /etc/X11/xorg.conf.d/00-system-setup-keyboard.conf<br/>
+ /etc/init/system-setup-keyboard.conf<br/>
  /lib/systemd/system/system-setup-keyboard.service</p>
 <h2>AUTHORS</h2>
-<p> Adel Gadllah &lt;adel.gadllah [at] gmail.com&gt;<br />
+<p> Adel Gadllah &lt;adel.gadllah [at] gmail.com&gt;<br/>
  Peter Hutterer &lt;peter.hutterer [at] redhat.com&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/5-xorg-conf/">xorg.conf</a>(5) </p>

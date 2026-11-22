@@ -11,7 +11,7 @@ description: "lsamen.f –"
 <p> lsamen.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> LOGICAL function <code>lsamen</code> (N, CA, CB)<br />
+<p> LOGICAL function <code>lsamen</code> (N, CA, CB)<br/>
  <i></i><code>LSAMEN</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>LOGICAL function lsamen (integerN, character*( * )CA, character*( * )CB)</h3>

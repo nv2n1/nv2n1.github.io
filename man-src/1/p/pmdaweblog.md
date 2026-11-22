@@ -78,11 +78,11 @@ regex SYSLOG_FTP ftpd[.*]: ([gp][-A-Za-z]+)$0( )$1
 </code></pre>
 <p> There is 1 special types of access logs with the <i>RegexName</i> <i>SQUID.</i> This formats extract 4 parameters but since the <code>Squid</code> log file uses text-based status codes, it is handled as a special case. </p>
 <p> In the examples below, <i>NS_PROXY</i> parses the Netscape/W3C <i>Common Extended Log Format</i> and <i>SQUID</i> parses the default Squid Object Cache format log file. </p>
-<p>#pattern for Netscape Proxy Server Extended Logs<br />
-regex NS_PROXY ] &#8220;([A-Za-z][-A-Za-z]+)$0 .*&#8221; ([-0-9]+)$2 \<br />
-([-0-9]+)$1 ([-0-9]+)$3<br />
-#pattern for Squid Cache logs<br />
-regex SQUID [0-9]+.[0-9]+[ ]+[0-9]+ [a-zA-Z0-9.]+ \<br />
+<p>#pattern for Netscape Proxy Server Extended Logs<br/>
+regex NS_PROXY ] &#8220;([A-Za-z][-A-Za-z]+)$0 .*&#8221; ([-0-9]+)$2 \<br/>
+([-0-9]+)$1 ([-0-9]+)$3<br/>
+#pattern for Squid Cache logs<br/>
+regex SQUID [0-9]+.[0-9]+[ ]+[0-9]+ [a-zA-Z0-9.]+ \<br/>
 ([_A-Z]+)$3/([0-9]+)$2 ([0-9]+)$1 ([A-Z]+)$0</p>
 <p> The <i>regexp</i> for the error logs does not require any arguments, only a match. Some legal expressions are: </p>
 <pre>

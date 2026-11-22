@@ -10,7 +10,7 @@ description: "fntsample – PDF and PostScript font samples generator"
 
 <p> fntsample &#8211; PDF and PostScript font samples generator</p>
 <h2>SYNOPSIS</h2>
-<p> <code>fntsample</code> <code>[ </code><i>OPTIONS</i><code> ]</code> <code>-f </code><i>FONT-FILE</i><code> -o </code><i>OUTPUT-FILE</i><br />
+<p> <code>fntsample</code> <code>[ </code><i>OPTIONS</i><code> ]</code> <code>-f </code><i>FONT-FILE</i><code> -o </code><i>OUTPUT-FILE</i><br/>
  <code>fntsample -h</code></p>
 <h2>DESCRIPTION</h2>
 <p> <code>fntsample</code> program can be used to generate font samples that show Unicode coverage of the font and are similar in appearance to Unicode charts. Samples can be saved into PDF (default) or PostScript file.</p>
@@ -77,7 +77,7 @@ pdfoutline temp.pdf outlines.txt samples.pdf
 </pre>
 </dd></dl>
 <h2>AUTHOR</h2>
-<p> Copyright &#169; 2007 Eugeniy Meshcheryakov &lt;eugen [at] debian.org&gt;<br />
+<p> Copyright &#169; 2007 Eugeniy Meshcheryakov &lt;eugen [at] debian.org&gt;<br/>
  Homepage: &lt;<a rel="nofollow" href="http://fntsample.sourceforge.net/">http://fntsample.sourceforge.net/</a>&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pdfoutline/">pdfoutline</a></code>(1) </p>

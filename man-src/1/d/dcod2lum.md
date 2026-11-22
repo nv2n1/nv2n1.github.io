@@ -27,9 +27,9 @@ out-file  softcopy characteristic curve file to be written
 <h2>NOTES</h2>
 <p> The format of both input and ouput file is described the documentation of the <code>dcmdspfn</code> command line tool. In addition, the <i>data</i> folder contains sample characteristics file monitors, cameras, printers and scanners.</p>
 <h2>FILES</h2>
-<p> <i>&lt;datadir&gt;/camera.lut</i> &#8211; sample characteristics file of a camera<br />
- <i>&lt;datadir&gt;/monitor.lut</i> &#8211; sample characteristics file of a monitor<br />
- <i>&lt;datadir&gt;/printer.lut</i> &#8211; sample characteristics file of a printer<br />
+<p> <i>&lt;datadir&gt;/camera.lut</i> &#8211; sample characteristics file of a camera<br/>
+ <i>&lt;datadir&gt;/monitor.lut</i> &#8211; sample characteristics file of a monitor<br/>
+ <i>&lt;datadir&gt;/printer.lut</i> &#8211; sample characteristics file of a printer<br/>
  <i>&lt;datadir&gt;/scanner.lut</i> &#8211; sample characteristics file of a scanner</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-dcmdspfn/">dcmdspfn</a></code>(1)</p>

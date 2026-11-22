@@ -56,7 +56,7 @@ description: "opreport – produce symbol or binary image summaries"
 <dt><code>&#8211;sort / -s [vma,sample,symbol,debug,image]</code></dt>
 <dd> Sort the list of symbols by, respectively, symbol address, number of samples, symbol name, debug filename and line number, binary image filename. </dd>
 <dt><code>&#8211;symbols / -l</code></dt>
-<dd> List per-symbol information instead of a binary image summary.<br />
+<dd> List per-symbol information instead of a binary image summary.<br/>
  Usually, the total of all per-symbols samples for a given binary image equals the summary count for the binary image (shown by running <code>opreport</code> with no options). However, it&#8217;s possible for some sample addresses to fall outside the range of any symbols for a given binary image. In such cases, the total number of per-symbols samples for the binary image may be less than the summary count for the image. Running <code>opreport</code> with the <i>&#8211;verbose=debug</i> option will display an informational message when this difference is detected. This difference is typically very small and can be ignored. </dd>
 <dt><code>&#8211;threshold / -t [percentage]</code></dt>
 <dd> Only output data for symbols that have more than the given percentage of total samples. </dd>

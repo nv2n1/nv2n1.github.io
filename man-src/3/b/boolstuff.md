@@ -23,7 +23,7 @@ description: "boolstuff – Disjunctive Normal Form boolean expression C++ libra
 <p> This program is free software; you may redistribute it under the terms of the GNU General Public License. This program has absolutely no warranty.</p>
 <h2>AUTHOR</h2>
 <p> Pierre Sarrazin </p>
-<p> See the BoolStuff Home Page:<br />
+<p> See the BoolStuff Home Page:<br/>
  <a rel="nofollow" href="http://sarrazip.com/dev/boolstuff.html">http://sarrazip.com/dev/boolstuff.html</a> </p>
 <p> Comments are welcome.</p>
 <h2>BUGS</h2>

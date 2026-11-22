@@ -139,7 +139,7 @@ variable 2 = value 2</pre>
 <dd><code>/etc/ipp-usb/quirks/*.conf</code>: device-specific quirks defined by sysadmin (see above)</dd>
 <dd></dd></dl>
 <h2>Copyright</h2>
-<p>Copyright (c) by Alexander Pevzner (pzz [at] apevzner.com)<br />
+<p>Copyright (c) by Alexander Pevzner (pzz [at] apevzner.com)<br/>
  All rights reserved. </p>
 <p> This program is licensed under 2-Clause BSD license. See LICENSE file for details.</p>
 <h2>See Also</h2>

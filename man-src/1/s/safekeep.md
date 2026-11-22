@@ -220,7 +220,7 @@ description: "safekeep – Client/server backup script"
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-rdiff-backup/">rdiff-backup</a>(1), <a href="/docs/linux/man/5-safekeep-conf/">safekeep.conf</a>(5), <a href="/docs/linux/man/5-safekeep-backup/">safekeep.backup</a>(5)</p>
 <h2>AUTHOR</h2>
-<p> Written by Dimi Paun &lt;m[blue]<code>dimi [at] lattica.com</code>m[]<font SIZE="-2">[1]</font>&gt; and Stelian Pop &lt;m[blue]<code>stelian [at] lattica.com</code>m[]<font SIZE="-2">[2]</font>&gt;.</p>
+<p> Written by Dimi Paun &lt;m[blue]<code>dimi [at] lattica.com</code>m[][1]&gt; and Stelian Pop &lt;m[blue]<code>stelian [at] lattica.com</code>m[][2]&gt;.</p>
 <h2>NOTES</h2>
 <dl>
 <dt> 1.</dt>

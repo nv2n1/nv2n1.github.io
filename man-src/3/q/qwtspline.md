@@ -12,32 +12,32 @@ description: "QwtSpline –"
 <h2>Synopsis</h2>
 <p>#include &lt;qwt_spline.h&gt;</p>
 <h3>Public Types</h3>
-<p>enum <code>SplineType</code> { <code>Natural</code>, <code>Periodic</code> }<br />
+<p>enum <code>SplineType</code> { <code>Natural</code>, <code>Periodic</code> }<br/>
  <i>Spline type. </i></p>
 <h3>Public Member Functions</h3>
-<p><code>QwtSpline</code> ()<br />
- <i>Constructor. </i><br />
+<p><code>QwtSpline</code> ()<br/>
+ <i>Constructor. </i><br/>
  <code>QwtSpline</code> (const <code>QwtSpline</code> &amp;) </p>
-<p> <code>~QwtSpline</code> ()<br />
- <i>Destructor. </i><br />
+<p> <code>~QwtSpline</code> ()<br/>
+ <i>Destructor. </i><br/>
  <code>QwtSpline</code> &amp; <code>operator=</code> (const <code>QwtSpline</code> &amp;) </p>
 <p> void <code>setSplineType</code> (<code>SplineType</code>) </p>
 <p> <code>SplineType</code> <code>splineType</code> () const </p>
-<p> bool <code>setPoints</code> (const QPolygonF &amp;<code>points</code>)<br />
- <i>Calculate the spline coefficients. </i><br />
+<p> bool <code>setPoints</code> (const QPolygonF &amp;<code>points</code>)<br/>
+ <i>Calculate the spline coefficients. </i><br/>
  QPolygonF <code>points</code> () const </p>
-<p> void <code>reset</code> ()<br />
- <i>Free allocated memory and set size to 0. </i><br />
- bool <code>isValid</code> () const<br />
- <i>True if valid. </i><br />
+<p> void <code>reset</code> ()<br/>
+ <i>Free allocated memory and set size to 0. </i><br/>
+ bool <code>isValid</code> () const<br/>
+ <i>True if valid. </i><br/>
  double <code>value</code> (double x) const </p>
 <p> const QVector&lt; double &gt; &amp; <code>coefficientsA</code> () const </p>
 <p> const QVector&lt; double &gt; &amp; <code>coefficientsB</code> () const </p>
 <p> const QVector&lt; double &gt; &amp; <code>coefficientsC</code> () const </p>
 <h3>Protected Member Functions</h3>
-<p>bool <code>buildNaturalSpline</code> (const QPolygonF &amp;)<br />
- <i>Determines the coefficients for a natural spline. </i><br />
- bool <code>buildPeriodicSpline</code> (const QPolygonF &amp;)<br />
+<p>bool <code>buildNaturalSpline</code> (const QPolygonF &amp;)<br/>
+ <i>Determines the coefficients for a natural spline. </i><br/>
+ bool <code>buildPeriodicSpline</code> (const QPolygonF &amp;)<br/>
  <i>Determines the coefficients for a periodic spline. </i></p>
 <h2>Detailed Description</h2>
 <p>A class for spline interpolation. </p>

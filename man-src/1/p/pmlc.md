@@ -121,7 +121,7 @@ description: "pmlc – configure active Performance Co-Pilot pmlogger(s) interac
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1), <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1), <code><a href="/docs/linux/man/1-pmdumplog/">pmdumplog</a></code>(1), <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1), <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5), <code><a href="/docs/linux/man/5-pcp-env/">pcp.env</a></code>(5) and <code><a href="/docs/linux/man/7-environ/">environ</a></code>(7).</p>
 <h2>DIAGNOSTICS</h2>
-<p> Most error or warning messages are self-explanatory. A message of the form<br />
+<p> Most error or warning messages are self-explanatory. A message of the form<br/>
  Warning: unable to change logging state for&#8230; followed by a list of metrics (and possibly instances) indicates that <code>pmlogger</code> refused the request for the metrics (and instances) that appear. Any metrics (and instances) that were specified but do not appear in the message have had their logging state updated successfully (no news is good news). Usually this warning results from requesting advisory logging when a mandatory control is already in place, or requesting logging for specific instances when all instances are already being logged.</p>
 <h2>CAVEAT</h2>
 <p> If all instances of a metric are being logged and a request is made to log specific instances of the metric with the same state and frequency, the request may appear to succeed, even though <code>pmlogger</code> has refused the request. This is not normally a problem, as the required information will still be placed into the log by <code>pmlogger</code>. </p>

@@ -76,7 +76,7 @@ description: "conntrackd – netfilter connection tracking user-space daemon"
 <h2>Incompatibilities</h2>
 <p>During the 0.9.9 development, some important changes in the replication message format were introduced. Therefore, conntrackd &gt;= 0.9.9 will not work appropriately with conntrackd &lt;= 0.9.8. This should not be a problem if you use the same conntrackd version in all the firewall replica nodes.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-conntrack/">conntrack</a></code>(8),<code><a href="/docs/linux/man/8-iptables/">iptables</a></code>(8)<br />
+<p><code><a href="/docs/linux/man/8-conntrack/">conntrack</a></code>(8),<code><a href="/docs/linux/man/8-iptables/">iptables</a></code>(8)<br/>
  See <code><a rel="nofollow" href="http://conntrack-tools.netfilter.org">http://conntrack-tools.netfilter.org</a></code></p>
 <h2>Bugs</h2>
 <p>Please, report them to netfilter-devel [at] vger.kernel.org or file a bug in Netfilter&#8217;s bugzilla (<a rel="nofollow" href="https://bugzilla.netfilter.org">https://bugzilla.netfilter.org</a>).</p>

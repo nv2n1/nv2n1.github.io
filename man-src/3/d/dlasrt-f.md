@@ -10,7 +10,7 @@ description: "dlasrt.f –"
 <p>dlasrt.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dlasrt</code> (ID, N, D, INFO)<br />
+<p>subroutine <code>dlasrt</code> (ID, N, D, INFO)<br/>
  <i></i><code>DLASRT</code> sorts numbers in increasing or decreasing order.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dlasrt (characterID, integerN, double precision, dimension( * )D, integerINFO)</h3>

@@ -10,32 +10,32 @@ description: "mrtg-unix-guide – The MRTG 2.17.4 Linux/Unix Installation Guide"
 
 <p> mrtg-unix-guide &#8211; The MRTG 2.17.4 Linux/Unix Installation Guide </p>
 <h2>DESCRIPTION</h2>
-<p> <font SIZE="-1">MRTG</font> comes to you in Source Code. This means that you have to compile parts of it before you can use it on a Unix machine. These instructions help you to do so.</p>
+<p> MRTG comes to you in Source Code. This means that you have to compile parts of it before you can use it on a Unix machine. These instructions help you to do so.</p>
 <h2>PREPARATION</h2>
 <p> In order to compile and use mrtg you need a C compiler and a copy of perl installed on your machine. In most cases this will already be available. In case it is not, here are some starting points. Below I&#8217;ll give you a detailed run through the whole compilation process.</p>
 <dl>
-<dt><font SIZE="-1">GCC</font></dt>
-<dd> The <font SIZE="-1">GNU</font> C compiler comes preinstalled on most of the free Unicies out there. For commercial derivatives you may have to download and compile it first. If you have no compiler at all there is a chicken and egg problem, but there are also precompiled versions of gcc available for most operating systems. </dd>
+<dt>GCC</dt>
+<dd> The GNU C compiler comes preinstalled on most of the free Unicies out there. For commercial derivatives you may have to download and compile it first. If you have no compiler at all there is a chicken and egg problem, but there are also precompiled versions of gcc available for most operating systems. </dd>
 <pre>
  <a rel="nofollow" href="http://gcc.gnu.org/">http://gcc.gnu.org/</a>
 </pre>
 <dt>Perl</dt>
-<dd> Large parts of the <font SIZE="-1">MRTG</font> system are written in the Perl scripting language. Make sure there is a recent copy of perl on your machine (try perl -v). At least version 5.005 is required for mrtg to work well. If you use <font SIZE="-1">SNMPV3</font> and other new features you should use at least 5.8. </dd>
+<dd> Large parts of the MRTG system are written in the Perl scripting language. Make sure there is a recent copy of perl on your machine (try perl -v). At least version 5.005 is required for mrtg to work well. If you use SNMPV3 and other new features you should use at least 5.8. </dd>
 <p> You can get the latest perl from </p>
 <pre>
  <a rel="nofollow" href="http://www.perl.com/">http://www.perl.com/</a>
 </pre>
 </dl>
-<p> <font SIZE="-1">MRTG</font> generates traffic graphs in the <font SIZE="-1">PNG</font> format. To be able to do this it needs several 3rd party libraries. When compiling these libraries I urge you to make sure you compile them as <code>static</code> libraries. There is just much less trouble ahead if you are doing it like this. See the Instructions in the next section for inspiration. Note that many free unices have all the required libraries already in place so there is no need to install another copy. To check it is best to skip all the library instructions below and go straight into the mrtg compile. </p>
-<p> If the first attempt fails and you do not get a working version of mrtg, try compiling new copies of all libraries as explained below. Do this <font SIZE="-1"><code>BEFORE</code></font> you send email to me about problems compiling mrtg.</p>
+<p> MRTG generates traffic graphs in the PNG format. To be able to do this it needs several 3rd party libraries. When compiling these libraries I urge you to make sure you compile them as <code>static</code> libraries. There is just much less trouble ahead if you are doing it like this. See the Instructions in the next section for inspiration. Note that many free unices have all the required libraries already in place so there is no need to install another copy. To check it is best to skip all the library instructions below and go straight into the mrtg compile. </p>
+<p> If the first attempt fails and you do not get a working version of mrtg, try compiling new copies of all libraries as explained below. Do this <code>BEFORE</code> you send email to me about problems compiling mrtg.</p>
 <dl>
 <dt>gd</dt>
-<dd> This is a basic graph drawing library created by Thomas Boutell. Note that all releases after Version 1.3 only create <font SIZE="-1">PNG</font> images. This is because a) Thomas got into trouble because the <font SIZE="-1">GIF</font> format which it used to produce uses a compression technology patented by Unisys. b) <font SIZE="-1">PNG</font> is more efficient and patent free. <font SIZE="-1">MRTG</font> can work with old and new version of the <font SIZE="-1">GD</font> library. You can get a recent copy of <font SIZE="-1">GD</font> from: </dd>
+<dd> This is a basic graph drawing library created by Thomas Boutell. Note that all releases after Version 1.3 only create PNG images. This is because a) Thomas got into trouble because the GIF format which it used to produce uses a compression technology patented by Unisys. b) PNG is more efficient and patent free. MRTG can work with old and new version of the GD library. You can get a recent copy of GD from: </dd>
 <pre>
  <a rel="nofollow" href="http://www.boutell.com/gd/">http://www.boutell.com/gd/</a>
 </pre>
 <dt>libpng</dt>
-<dd> Is required by gd in order to produce <font SIZE="-1">PNG</font> graphics files. Get it from: </dd>
+<dd> Is required by gd in order to produce PNG graphics files. Get it from: </dd>
 <pre>
  <a rel="nofollow" href="http://www.libpng.org/pub/png/libpng.html">http://www.libpng.org/pub/png/libpng.html</a>
 </pre>
@@ -123,7 +123,7 @@ description: "mrtg-unix-guide – The MRTG 2.17.4 Linux/Unix Installation Guide"
 ./ configure-- prefix = / usr / local / mrtg - 2 --with - gd = / usr / local / src / gd-- with - z = / usr / local / src / zlib-- with - png = / usr / local / src / libpng
 </code></pre>
 <p> If you have RRDtool available you might want to tell mrtg about it so that you can opt to use rrdtool with mrtg. Check mrtg-rrd. </p>
-<p> Configure will make sure your environment is fit for building mrtg. If it finds a problem, it will tell you so and it will also tell you what to do about it. If everything is <font SIZE="-1">OK</font>, you will end up with a custom Makefile for your system. Now type: </p>
+<p> Configure will make sure your environment is fit for building mrtg. If it finds a problem, it will tell you so and it will also tell you what to do about it. If everything is OK, you will end up with a custom Makefile for your system. Now type: </p>
 <pre>
  make
 </pre>
@@ -131,7 +131,7 @@ description: "mrtg-unix-guide – The MRTG 2.17.4 Linux/Unix Installation Guide"
 <pre>
  make install   (requires gnu install)
 </pre>
-<p> All the software required by <font SIZE="-1">MRTG</font> is now installed under the <i>/usr/local/mrtg-2</i> subdirectory. </p>
+<p> All the software required by MRTG is now installed under the <i>/usr/local/mrtg-2</i> subdirectory. </p>
 <p> You can now safely delete the libraries we compiled above. Then again, you might want to keep them around so that you have them available when compiling the next version of mrtg.</p>
 <h2>CONFIGURATION</h2>
 <p> The next step is to configure mrtg for monitoring a network device. This is done by creating an <i>mrtg.cfg</i> file which defines what you want to monitor. Luckily, you don&#8217;t have to dive straight in and start writing your own configuration file all by yourself. Together with mrtg you also got a copy of <code>cfgmaker</code>. This is a script you can point at a router of your choice; it will create a mrtg configuration file for you. You can find the script in the <i>bin</i> subdirectory. </p>

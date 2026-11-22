@@ -16,13 +16,13 @@ description: "tcscan – scan multimedia streams from medium and print informati
 <h2>COPYRIGHT</h2>
 <p> <code>tcscan</code> is Copyright (C) by Thomas Oestreich.</p>
 <h2>DESCRIPTION</h2>
-<p> <code>tcscan</code> is part of and usually called by <code>transcode</code>.<br />
- However, it can also be used independently.<br />
+<p> <code>tcscan</code> is part of and usually called by <code>transcode</code>.<br/>
+ However, it can also be used independently.<br/>
  <code>tcscan</code> reads source (from stdin if not explicitely defined) and prints on the standard output.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-i </code><i>name</i></dt>
-<dd> Specify input source. If ommited, <i>stdin</i> is assumed.<br />
+<dd> Specify input source. If ommited, <i>stdin</i> is assumed.<br/>
  You can specify a file, directory, device, mountpoint or host address as input source. <code>tcscan</code> usually handles the different types correctly.</dd>
 <dt><code>-d</code> <i>level</i></dt>
 <dd> With this option you can specify a bitmask to enable different levels of verbosity (if supported). You can combine several levels by adding the corresponding values: </dd>
@@ -45,7 +45,7 @@ description: "tcscan – scan multimedia streams from medium and print informati
 <p> The command <code>cat audio.pcm | tcscan -x pcm -e 48000,16,2</code> simply determines the playtime lenghth of the raw audio stream. </p>
 <p> The command <code>tcscan -x mp3 -i input.mp3</code> will print the number of chunks in the MP3 file and the average bitrate. </p>
 <h2>AUTHORS</h2>
-<p> <code>tcscan</code> was written by Thomas Oestreich<br />
+<p> <code>tcscan</code> was written by Thomas Oestreich<br/>
  &lt;ostreich [at] theorie.physik.uni-goettingen.de&gt; with contributions from many others. See AUTHORS for details.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-avifix/">avifix</a></code>(1), <code><a href="/docs/linux/man/1-avisync/">avisync</a></code>(1), <code><a href="/docs/linux/man/1-avimerge/">avimerge</a></code>(1), <code><a href="/docs/linux/man/1-avisplit/">avisplit</a></code>(1), <code><a href="/docs/linux/man/1-tcprobe/">tcprobe</a></code>(1), <code><a href="/docs/linux/man/1-tcscan/">tcscan</a></code>(1), <code><a href="/docs/linux/man/1-tccat/">tccat</a></code>(1), <code><a href="/docs/linux/man/1-tcdemux/">tcdemux</a></code>(1), <code><a href="/docs/linux/man/1-tcextract/">tcextract</a></code>(1), <code><a href="/docs/linux/man/1-tcdecode/">tcdecode</a></code>(1), <code><a href="/docs/linux/man/1-transcode/">transcode</a></code>(1) </p>

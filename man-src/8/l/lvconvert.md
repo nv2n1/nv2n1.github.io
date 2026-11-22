@@ -102,10 +102,10 @@ description: "lvconvert – Change logical volume layout"
 <p> Convert LV to striped. </p>
 <p> <code>lvconvert</code> <code>&#8211;type</code> <code>striped</code> <i>LV</i> </p>
 <dl>
-<dd>[ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>-R</code>|<code>&#8211;regionsize</code> <i>Size</i>[m|UNIT] ]<br />
- [ <code>-i</code>|<code>&#8211;interval</code> <i>Number</i> ]<br />
- [ <code>&#8211;stripes</code> <i>Number</i> ]<br />
+<dd>[ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>-R</code>|<code>&#8211;regionsize</code> <i>Size</i>[m|UNIT] ]<br/>
+ [ <code>-i</code>|<code>&#8211;interval</code> <i>Number</i> ]<br/>
+ [ <code>&#8211;stripes</code> <i>Number</i> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <dl>
 <dd>[ <i>PV</i> &#8230; ]</dd></dl>
@@ -113,25 +113,25 @@ description: "lvconvert – Change logical volume layout"
 <p> Convert LV to type mirror (also see type raid1), </p>
 <p> <code>lvconvert</code> <code>&#8211;type</code> <code>mirror</code> <i>LV</i> </p>
 <dl>
-<dd>[ <code>-m</code>|<code>&#8211;mirrors</code> [<code>+</code>|<code>&#8211;</code>]<i>Number</i> ]<br />
- [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>-R</code>|<code>&#8211;regionsize</code> <i>Size</i>[m|UNIT] ]<br />
- [ <code>-i</code>|<code>&#8211;interval</code> <i>Number</i> ]<br />
- [ <code>&#8211;stripes</code> <i>Number</i> ]<br />
- [ <code>&#8211;mirrorlog</code> <code>core</code>|<code>disk</code> ]<br />
+<dd>[ <code>-m</code>|<code>&#8211;mirrors</code> [<code>+</code>|<code>&#8211;</code>]<i>Number</i> ]<br/>
+ [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>-R</code>|<code>&#8211;regionsize</code> <i>Size</i>[m|UNIT] ]<br/>
+ [ <code>-i</code>|<code>&#8211;interval</code> <i>Number</i> ]<br/>
+ [ <code>&#8211;stripes</code> <i>Number</i> ]<br/>
+ [ <code>&#8211;mirrorlog</code> <code>core</code>|<code>disk</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <dl>
 <dd>[ <i>PV</i> &#8230; ]</dd></dl>
 <p> &#8211; </p>
-<p> Convert LV to raid or change raid layout<br />
+<p> Convert LV to raid or change raid layout<br/>
  (a specific raid level must be used, e.g. raid1). </p>
 <p> <code>lvconvert</code> <code>&#8211;type</code> <code>raid</code> <i>LV</i> </p>
 <dl>
-<dd>[ <code>-m</code>|<code>&#8211;mirrors</code> [<code>+</code>|<code>&#8211;</code>]<i>Number</i> ]<br />
- [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>-R</code>|<code>&#8211;regionsize</code> <i>Size</i>[m|UNIT] ]<br />
- [ <code>-i</code>|<code>&#8211;interval</code> <i>Number</i> ]<br />
- [ <code>&#8211;stripes</code> <i>Number</i> ]<br />
+<dd>[ <code>-m</code>|<code>&#8211;mirrors</code> [<code>+</code>|<code>&#8211;</code>]<i>Number</i> ]<br/>
+ [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>-R</code>|<code>&#8211;regionsize</code> <i>Size</i>[m|UNIT] ]<br/>
+ [ <code>-i</code>|<code>&#8211;interval</code> <i>Number</i> ]<br/>
+ [ <code>&#8211;stripes</code> <i>Number</i> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <dl>
 <dd>[ <i>PV</i> &#8230; ]</dd></dl>
@@ -139,9 +139,9 @@ description: "lvconvert – Change logical volume layout"
 <p> Convert LV to raid1 or mirror, or change number of mirror images. </p>
 <p> <code>lvconvert</code> <code>-m</code>|<code>&#8211;mirrors</code> [<code>+</code>|<code>&#8211;</code>]<i>Number</i> <i>LV</i> </p>
 <dl>
-<dd>[ <code>-R</code>|<code>&#8211;regionsize</code> <i>Size</i>[m|UNIT] ]<br />
- [ <code>-i</code>|<code>&#8211;interval</code> <i>Number</i> ]<br />
- [ <code>&#8211;mirrorlog</code> <code>core</code>|<code>disk</code> ]<br />
+<dd>[ <code>-R</code>|<code>&#8211;regionsize</code> <i>Size</i>[m|UNIT] ]<br/>
+ [ <code>-i</code>|<code>&#8211;interval</code> <i>Number</i> ]<br/>
+ [ <code>&#8211;mirrorlog</code> <code>core</code>|<code>disk</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <dl>
 <dd>[ <i>PV</i> &#8230; ]</dd></dl>
@@ -149,9 +149,9 @@ description: "lvconvert – Change logical volume layout"
 <p> Convert raid LV to change number of stripe images. </p>
 <p> <code>lvconvert</code> <code>&#8211;stripes</code> <i>Number</i> <i>LV</i><i>_raid</i> </p>
 <dl>
-<dd>[ <code>-i</code>|<code>&#8211;interval</code> <i>Number</i> ]<br />
- [ <code>-R</code>|<code>&#8211;regionsize</code> <i>Size</i>[m|UNIT] ]<br />
- [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br />
+<dd>[ <code>-i</code>|<code>&#8211;interval</code> <i>Number</i> ]<br/>
+ [ <code>-R</code>|<code>&#8211;regionsize</code> <i>Size</i>[m|UNIT] ]<br/>
+ [ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <dl>
 <dd>[ <i>PV</i> &#8230; ]</dd></dl>
@@ -159,8 +159,8 @@ description: "lvconvert – Change logical volume layout"
 <p> Convert raid LV to change the stripe size. </p>
 <p> <code>lvconvert</code> <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] <i>LV</i><i>_raid</i> </p>
 <dl>
-<dd>[ <code>-i</code>|<code>&#8211;interval</code> <i>Number</i> ]<br />
- [ <code>-R</code>|<code>&#8211;regionsize</code> <i>Size</i>[m|UNIT] ]<br />
+<dd>[ <code>-i</code>|<code>&#8211;interval</code> <i>Number</i> ]<br/>
+ [ <code>-R</code>|<code>&#8211;regionsize</code> <i>Size</i>[m|UNIT] ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <p> &#8211; </p>
 <p> Split images from a raid1 or mirror LV and use them to create a new LV. </p>
@@ -185,66 +185,66 @@ description: "lvconvert – Change logical volume layout"
 <p> Convert LV to a thin LV, using the original LV as an external origin. </p>
 <p> <code>lvconvert</code> <code>&#8211;type</code> <code>thin</code> <code>&#8211;thinpool</code> <i>LV</i> <i>LV</i><i>_linear_striped_thin_cache_raid</i> </p>
 <dl>
-<dd>[ <code>-T</code>|<code>&#8211;thin</code> ]<br />
- [ <code>-r</code>|<code>&#8211;readahead</code> <code>auto</code>|<code>none</code>|<i>Number</i> ]<br />
- [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>-Z</code>|<code>&#8211;zero</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;originname</code> <i>LV</i><i>_new</i> ]<br />
- [ <code>&#8211;poolmetadata</code> <i>LV</i> ]<br />
- [ <code>&#8211;poolmetadatasize</code> <i>Size</i>[m|UNIT] ]<br />
- [ <code>&#8211;poolmetadataspare</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;metadataprofile</code> <i>String</i> ]<br />
+<dd>[ <code>-T</code>|<code>&#8211;thin</code> ]<br/>
+ [ <code>-r</code>|<code>&#8211;readahead</code> <code>auto</code>|<code>none</code>|<i>Number</i> ]<br/>
+ [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>-Z</code>|<code>&#8211;zero</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;originname</code> <i>LV</i><i>_new</i> ]<br/>
+ [ <code>&#8211;poolmetadata</code> <i>LV</i> ]<br/>
+ [ <code>&#8211;poolmetadatasize</code> <i>Size</i>[m|UNIT] ]<br/>
+ [ <code>&#8211;poolmetadataspare</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;metadataprofile</code> <i>String</i> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <p> &#8211; </p>
 <p> Attach a cache pool to an LV, converts the LV to type cache. </p>
 <p> <code>lvconvert</code> <code>&#8211;type</code> <code>cache</code> <code>&#8211;cachepool</code> <i>LV</i> <i>LV</i><i>_linear_striped_thinpool_vdo_vdopool_vdopooldata_raid</i> </p>
 <dl>
-<dd>[ <code>-H</code>|<code>&#8211;cache</code> ]<br />
- [ <code>-Z</code>|<code>&#8211;zero</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>-r</code>|<code>&#8211;readahead</code> <code>auto</code>|<code>none</code>|<i>Number</i> ]<br />
- [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>&#8211;cachemetadataformat</code> <code>auto</code>|<code>1</code>|<code>2</code> ]<br />
- [ <code>&#8211;cachemode</code> <code>writethrough</code>|<code>writeback</code>|<code>passthrough</code> ]<br />
- [ <code>&#8211;cachepolicy</code> <i>String</i> ]<br />
- [ <code>&#8211;cachesettings</code> <i>String</i> ]<br />
- [ <code>&#8211;poolmetadata</code> <i>LV</i> ]<br />
- [ <code>&#8211;poolmetadatasize</code> <i>Size</i>[m|UNIT] ]<br />
- [ <code>&#8211;poolmetadataspare</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;metadataprofile</code> <i>String</i> ]<br />
+<dd>[ <code>-H</code>|<code>&#8211;cache</code> ]<br/>
+ [ <code>-Z</code>|<code>&#8211;zero</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>-r</code>|<code>&#8211;readahead</code> <code>auto</code>|<code>none</code>|<i>Number</i> ]<br/>
+ [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>&#8211;cachemetadataformat</code> <code>auto</code>|<code>1</code>|<code>2</code> ]<br/>
+ [ <code>&#8211;cachemode</code> <code>writethrough</code>|<code>writeback</code>|<code>passthrough</code> ]<br/>
+ [ <code>&#8211;cachepolicy</code> <i>String</i> ]<br/>
+ [ <code>&#8211;cachesettings</code> <i>String</i> ]<br/>
+ [ <code>&#8211;poolmetadata</code> <i>LV</i> ]<br/>
+ [ <code>&#8211;poolmetadatasize</code> <i>Size</i>[m|UNIT] ]<br/>
+ [ <code>&#8211;poolmetadataspare</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;metadataprofile</code> <i>String</i> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <p> &#8211; </p>
 <p> Attach a writecache to an LV, converts the LV to type writecache. </p>
 <p> <code>lvconvert</code> <code>&#8211;type</code> <code>writecache</code> <code>&#8211;cachevol</code> <i>LV</i> <i>LV</i><i>_linear_striped_raid</i> </p>
 <dl>
-<dd>[ <code>&#8211;cachesettings</code> <i>String</i> ]<br />
+<dd>[ <code>&#8211;cachesettings</code> <i>String</i> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <p> &#8211; </p>
 <p> Attach a cache to an LV, converts the LV to type cache. </p>
 <p> <code>lvconvert</code> <code>&#8211;type</code> <code>cache</code> <code>&#8211;cachevol</code> <i>LV</i> <i>LV</i><i>_linear_striped_thinpool_raid</i> </p>
 <dl>
-<dd>[ <code>-H</code>|<code>&#8211;cache</code> ]<br />
- [ <code>-Z</code>|<code>&#8211;zero</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>&#8211;cachemetadataformat</code> <code>auto</code>|<code>1</code>|<code>2</code> ]<br />
- [ <code>&#8211;cachemode</code> <code>writethrough</code>|<code>writeback</code>|<code>passthrough</code> ]<br />
- [ <code>&#8211;cachepolicy</code> <i>String</i> ]<br />
- [ <code>&#8211;cachesettings</code> <i>String</i> ]<br />
- [ <code>&#8211;poolmetadatasize</code> <i>Size</i>[m|UNIT] ]<br />
+<dd>[ <code>-H</code>|<code>&#8211;cache</code> ]<br/>
+ [ <code>-Z</code>|<code>&#8211;zero</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>&#8211;cachemetadataformat</code> <code>auto</code>|<code>1</code>|<code>2</code> ]<br/>
+ [ <code>&#8211;cachemode</code> <code>writethrough</code>|<code>writeback</code>|<code>passthrough</code> ]<br/>
+ [ <code>&#8211;cachepolicy</code> <i>String</i> ]<br/>
+ [ <code>&#8211;cachesettings</code> <i>String</i> ]<br/>
+ [ <code>&#8211;poolmetadatasize</code> <i>Size</i>[m|UNIT] ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <p> &#8211; </p>
 <p> Convert LV to type thin-pool. </p>
 <p> <code>lvconvert</code> <code>&#8211;type</code> <code>thin-pool</code> <i>LV</i><i>_linear_striped_cache_raid</i> </p>
 <dl>
-<dd>[ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>-r</code>|<code>&#8211;readahead</code> <code>auto</code>|<code>none</code>|<i>Number</i> ]<br />
- [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>-Z</code>|<code>&#8211;zero</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;stripes</code> <i>Number</i> ]<br />
- [ <code>&#8211;discards</code> <code>passdown</code>|<code>nopassdown</code>|<code>ignore</code> ]<br />
- [ <code>&#8211;poolmetadata</code> <i>LV</i> ]<br />
- [ <code>&#8211;poolmetadatasize</code> <i>Size</i>[m|UNIT] ]<br />
- [ <code>&#8211;poolmetadataspare</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;metadataprofile</code> <i>String</i> ]<br />
+<dd>[ <code>-I</code>|<code>&#8211;stripesize</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>-r</code>|<code>&#8211;readahead</code> <code>auto</code>|<code>none</code>|<i>Number</i> ]<br/>
+ [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>-Z</code>|<code>&#8211;zero</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;stripes</code> <i>Number</i> ]<br/>
+ [ <code>&#8211;discards</code> <code>passdown</code>|<code>nopassdown</code>|<code>ignore</code> ]<br/>
+ [ <code>&#8211;poolmetadata</code> <i>LV</i> ]<br/>
+ [ <code>&#8211;poolmetadatasize</code> <i>Size</i>[m|UNIT] ]<br/>
+ [ <code>&#8211;poolmetadataspare</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;metadataprofile</code> <i>String</i> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <dl>
 <dd>[ <i>PV</i> &#8230; ]</dd></dl>
@@ -252,17 +252,17 @@ description: "lvconvert – Change logical volume layout"
 <p> Convert LV to type cache-pool. </p>
 <p> <code>lvconvert</code> <code>&#8211;type</code> <code>cache-pool</code> <i>LV</i><i>_linear_striped_raid</i> </p>
 <dl>
-<dd>[ <code>-Z</code>|<code>&#8211;zero</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>-r</code>|<code>&#8211;readahead</code> <code>auto</code>|<code>none</code>|<i>Number</i> ]<br />
- [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>&#8211;cachemetadataformat</code> <code>auto</code>|<code>1</code>|<code>2</code> ]<br />
- [ <code>&#8211;cachemode</code> <code>writethrough</code>|<code>writeback</code>|<code>passthrough</code> ]<br />
- [ <code>&#8211;cachepolicy</code> <i>String</i> ]<br />
- [ <code>&#8211;cachesettings</code> <i>String</i> ]<br />
- [ <code>&#8211;poolmetadata</code> <i>LV</i> ]<br />
- [ <code>&#8211;poolmetadatasize</code> <i>Size</i>[m|UNIT] ]<br />
- [ <code>&#8211;poolmetadataspare</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;metadataprofile</code> <i>String</i> ]<br />
+<dd>[ <code>-Z</code>|<code>&#8211;zero</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>-r</code>|<code>&#8211;readahead</code> <code>auto</code>|<code>none</code>|<i>Number</i> ]<br/>
+ [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>&#8211;cachemetadataformat</code> <code>auto</code>|<code>1</code>|<code>2</code> ]<br/>
+ [ <code>&#8211;cachemode</code> <code>writethrough</code>|<code>writeback</code>|<code>passthrough</code> ]<br/>
+ [ <code>&#8211;cachepolicy</code> <i>String</i> ]<br/>
+ [ <code>&#8211;cachesettings</code> <i>String</i> ]<br/>
+ [ <code>&#8211;poolmetadata</code> <i>LV</i> ]<br/>
+ [ <code>&#8211;poolmetadatasize</code> <i>Size</i>[m|UNIT] ]<br/>
+ [ <code>&#8211;poolmetadataspare</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;metadataprofile</code> <i>String</i> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <dl>
 <dd>[ <i>PV</i> &#8230; ]</dd></dl>
@@ -270,10 +270,10 @@ description: "lvconvert – Change logical volume layout"
 <p> Convert LV to type vdopool. </p>
 <p> <code>lvconvert</code> <code>&#8211;type</code> <code>vdo-pool</code> <i>LV</i><i>_linear_striped_cache_raid</i> </p>
 <dl>
-<dd>[ <code>-n</code>|<code>&#8211;name</code> <i>LV</i><i>_new</i> ]<br />
- [ <code>-V</code>|<code>&#8211;virtualsize</code> <i>Size</i>[m|UNIT] ]<br />
- [ <code>&#8211;compression</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;deduplication</code> <code>y</code>|<code>n</code> ]<br />
+<dd>[ <code>-n</code>|<code>&#8211;name</code> <i>LV</i><i>_new</i> ]<br/>
+ [ <code>-V</code>|<code>&#8211;virtualsize</code> <i>Size</i>[m|UNIT] ]<br/>
+ [ <code>&#8211;compression</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;deduplication</code> <code>y</code>|<code>n</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <p> &#8211; </p>
 <p> Detach a cache from an LV. </p>
@@ -289,26 +289,26 @@ description: "lvconvert – Change logical volume layout"
 <p> Merge COW snapshot LV into its origin. </p>
 <p> <code>lvconvert</code> <code>&#8211;mergesnapshot</code> <i>LV</i><i>_snapshot</i> &#8230; </p>
 <dl>
-<dd>[ <code>-i</code>|<code>&#8211;interval</code> <i>Number</i> ]<br />
+<dd>[ <code>-i</code>|<code>&#8211;interval</code> <i>Number</i> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <p> &#8211; </p>
-<p> Combine a former COW snapshot (second arg) with a former<br />
+<p> Combine a former COW snapshot (second arg) with a former<br/>
  origin LV (first arg) to reverse a splitsnapshot command. </p>
 <p> <code>lvconvert</code> <code>&#8211;type</code> <code>snapshot</code> <i>LV</i> <i>LV</i><i>_linear_striped</i> </p>
 <dl>
-<dd>[ <code>-s</code>|<code>&#8211;snapshot</code> ]<br />
- [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>-Z</code>|<code>&#8211;zero</code> <code>y</code>|<code>n</code> ]<br />
+<dd>[ <code>-s</code>|<code>&#8211;snapshot</code> ]<br/>
+ [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>-Z</code>|<code>&#8211;zero</code> <code>y</code>|<code>n</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <p> &#8211; </p>
-<p> Replace failed PVs in a raid or mirror LV.<br />
- Repair a thin pool.<br />
+<p> Replace failed PVs in a raid or mirror LV.<br/>
+ Repair a thin pool.<br/>
  Repair a cache pool. </p>
 <p> <code>lvconvert</code> <code>&#8211;repair</code> <i>LV</i><i>_thinpool_cache_cachepool_mirror_raid</i> </p>
 <dl>
-<dd>[ <code>-i</code>|<code>&#8211;interval</code> <i>Number</i> ]<br />
- [ <code>&#8211;usepolicies</code> ]<br />
- [ <code>&#8211;poolmetadataspare</code> <code>y</code>|<code>n</code> ]<br />
+<dd>[ <code>-i</code>|<code>&#8211;interval</code> <i>Number</i> ]<br/>
+ [ <code>&#8211;usepolicies</code> ]<br/>
+ [ <code>&#8211;poolmetadataspare</code> <code>y</code>|<code>n</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <dl>
 <dd>[ <i>PV</i> &#8230; ]</dd></dl>
@@ -327,25 +327,25 @@ description: "lvconvert – Change logical volume layout"
 <p> &#8211; </p>
 <p> Common options for command:</p>
 <dl>
-<dd>[ <code>-b</code>|<code>&#8211;background</code> ]<br />
- [ <code>-f</code>|<code>&#8211;force</code> ]<br />
- [ <code>&#8211;alloc</code> <code>contiguous</code>|<code>cling</code>|<code>cling_by_tags</code>|<code>normal</code>|<code>anywhere</code>|<code>inherit</code> ]<br />
+<dd>[ <code>-b</code>|<code>&#8211;background</code> ]<br/>
+ [ <code>-f</code>|<code>&#8211;force</code> ]<br/>
+ [ <code>&#8211;alloc</code> <code>contiguous</code>|<code>cling</code>|<code>cling_by_tags</code>|<code>normal</code>|<code>anywhere</code>|<code>inherit</code> ]<br/>
  [ <code>&#8211;noudevsync</code> ]</dd></dl>
 <p> Common options for lvm:</p>
 <dl>
-<dd>[ <code>-d</code>|<code>&#8211;debug</code> ]<br />
- [ <code>-h</code>|<code>&#8211;help</code> ]<br />
- [ <code>-q</code>|<code>&#8211;quiet</code> ]<br />
- [ <code>-t</code>|<code>&#8211;test</code> ]<br />
- [ <code>-v</code>|<code>&#8211;verbose</code> ]<br />
- [ <code>-y</code>|<code>&#8211;yes</code> ]<br />
- [ <code>&#8211;commandprofile</code> <i>String</i> ]<br />
- [ <code>&#8211;config</code> <i>String</i> ]<br />
- [ <code>&#8211;driverloaded</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;lockopt</code> <i>String</i> ]<br />
- [ <code>&#8211;longhelp</code> ]<br />
- [ <code>&#8211;nolocking</code> ]<br />
- [ <code>&#8211;profile</code> <i>String</i> ]<br />
+<dd>[ <code>-d</code>|<code>&#8211;debug</code> ]<br/>
+ [ <code>-h</code>|<code>&#8211;help</code> ]<br/>
+ [ <code>-q</code>|<code>&#8211;quiet</code> ]<br/>
+ [ <code>-t</code>|<code>&#8211;test</code> ]<br/>
+ [ <code>-v</code>|<code>&#8211;verbose</code> ]<br/>
+ [ <code>-y</code>|<code>&#8211;yes</code> ]<br/>
+ [ <code>&#8211;commandprofile</code> <i>String</i> ]<br/>
+ [ <code>&#8211;config</code> <i>String</i> ]<br/>
+ [ <code>&#8211;driverloaded</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;lockopt</code> <i>String</i> ]<br/>
+ [ <code>&#8211;longhelp</code> ]<br/>
+ [ <code>&#8211;nolocking</code> ]<br/>
+ [ <code>&#8211;profile</code> <i>String</i> ]<br/>
  [ <code>&#8211;version</code> ]</dd></dl>
 <h2>Options</h2>
 <dl>
@@ -574,58 +574,58 @@ description: "lvconvert – Change logical volume layout"
 <dl>
 <dd>[ <i>PV</i> &#8230; ]</dd></dl>
 <p> &#8211; </p>
-<p> Convert LV to a thin LV, using the original LV as an external origin<br />
+<p> Convert LV to a thin LV, using the original LV as an external origin<br/>
  (infers &#8211;type thin). </p>
 <p> <code>lvconvert</code> <code>-T</code>|<code>&#8211;thin</code> <code>&#8211;thinpool</code> <i>LV</i> <i>LV</i><i>_linear_striped_thin_cache_raid</i> </p>
 <dl>
-<dd>[ <code>-r</code>|<code>&#8211;readahead</code> <code>auto</code>|<code>none</code>|<i>Number</i> ]<br />
- [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>-Z</code>|<code>&#8211;zero</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;type</code> <code>thin</code> ]<br />
- [ <code>&#8211;originname</code> <i>LV</i><i>_new</i> ]<br />
- [ <code>&#8211;poolmetadata</code> <i>LV</i> ]<br />
- [ <code>&#8211;poolmetadatasize</code> <i>Size</i>[m|UNIT] ]<br />
- [ <code>&#8211;poolmetadataspare</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;metadataprofile</code> <i>String</i> ]<br />
+<dd>[ <code>-r</code>|<code>&#8211;readahead</code> <code>auto</code>|<code>none</code>|<i>Number</i> ]<br/>
+ [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>-Z</code>|<code>&#8211;zero</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;type</code> <code>thin</code> ]<br/>
+ [ <code>&#8211;originname</code> <i>LV</i><i>_new</i> ]<br/>
+ [ <code>&#8211;poolmetadata</code> <i>LV</i> ]<br/>
+ [ <code>&#8211;poolmetadatasize</code> <i>Size</i>[m|UNIT] ]<br/>
+ [ <code>&#8211;poolmetadataspare</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;metadataprofile</code> <i>String</i> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <p> &#8211; </p>
 <p> Attach a cache pool to an LV (infers &#8211;type cache). </p>
 <p> <code>lvconvert</code> <code>-H</code>|<code>&#8211;cache</code> <code>&#8211;cachepool</code> <i>LV</i> <i>LV</i><i>_linear_striped_thinpool_vdo_vdopool_vdopooldata_raid</i> </p>
 <dl>
-<dd>[ <code>-Z</code>|<code>&#8211;zero</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>-r</code>|<code>&#8211;readahead</code> <code>auto</code>|<code>none</code>|<i>Number</i> ]<br />
- [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>&#8211;type</code> <code>cache</code> ]<br />
- [ <code>&#8211;cachemetadataformat</code> <code>auto</code>|<code>1</code>|<code>2</code> ]<br />
- [ <code>&#8211;cachemode</code> <code>writethrough</code>|<code>writeback</code>|<code>passthrough</code> ]<br />
- [ <code>&#8211;cachepolicy</code> <i>String</i> ]<br />
- [ <code>&#8211;cachesettings</code> <i>String</i> ]<br />
- [ <code>&#8211;poolmetadata</code> <i>LV</i> ]<br />
- [ <code>&#8211;poolmetadatasize</code> <i>Size</i>[m|UNIT] ]<br />
- [ <code>&#8211;poolmetadataspare</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;metadataprofile</code> <i>String</i> ]<br />
+<dd>[ <code>-Z</code>|<code>&#8211;zero</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>-r</code>|<code>&#8211;readahead</code> <code>auto</code>|<code>none</code>|<i>Number</i> ]<br/>
+ [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>&#8211;type</code> <code>cache</code> ]<br/>
+ [ <code>&#8211;cachemetadataformat</code> <code>auto</code>|<code>1</code>|<code>2</code> ]<br/>
+ [ <code>&#8211;cachemode</code> <code>writethrough</code>|<code>writeback</code>|<code>passthrough</code> ]<br/>
+ [ <code>&#8211;cachepolicy</code> <i>String</i> ]<br/>
+ [ <code>&#8211;cachesettings</code> <i>String</i> ]<br/>
+ [ <code>&#8211;poolmetadata</code> <i>LV</i> ]<br/>
+ [ <code>&#8211;poolmetadatasize</code> <i>Size</i>[m|UNIT] ]<br/>
+ [ <code>&#8211;poolmetadataspare</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;metadataprofile</code> <i>String</i> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <p> &#8211; </p>
 <p> Attach a cache to an LV, converts the LV to type cache. </p>
 <p> <code>lvconvert</code> <code>-H</code>|<code>&#8211;cache</code> <code>&#8211;cachevol</code> <i>LV</i> <i>LV</i><i>_linear_striped_thinpool_raid</i> </p>
 <dl>
-<dd>[ <code>-Z</code>|<code>&#8211;zero</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>&#8211;cachemetadataformat</code> <code>auto</code>|<code>1</code>|<code>2</code> ]<br />
- [ <code>&#8211;cachemode</code> <code>writethrough</code>|<code>writeback</code>|<code>passthrough</code> ]<br />
- [ <code>&#8211;cachepolicy</code> <i>String</i> ]<br />
- [ <code>&#8211;cachesettings</code> <i>String</i> ]<br />
- [ <code>&#8211;poolmetadatasize</code> <i>Size</i>[m|UNIT] ]<br />
+<dd>[ <code>-Z</code>|<code>&#8211;zero</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>&#8211;cachemetadataformat</code> <code>auto</code>|<code>1</code>|<code>2</code> ]<br/>
+ [ <code>&#8211;cachemode</code> <code>writethrough</code>|<code>writeback</code>|<code>passthrough</code> ]<br/>
+ [ <code>&#8211;cachepolicy</code> <i>String</i> ]<br/>
+ [ <code>&#8211;cachesettings</code> <i>String</i> ]<br/>
+ [ <code>&#8211;poolmetadatasize</code> <i>Size</i>[m|UNIT] ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <p> &#8211; </p>
 <p> Convert LV to type vdopool. </p>
 <p> <code>lvconvert</code> <code>&#8211;vdopool</code> <i>LV</i><i>_linear_striped_cache_raid</i> </p>
 <dl>
-<dd>[ <code>-n</code>|<code>&#8211;name</code> <i>LV</i><i>_new</i> ]<br />
- [ <code>-V</code>|<code>&#8211;virtualsize</code> <i>Size</i>[m|UNIT] ]<br />
- [ <code>&#8211;type</code> <code>vdo-pool</code> ]<br />
- [ <code>&#8211;compression</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;deduplication</code> <code>y</code>|<code>n</code> ]<br />
+<dd>[ <code>-n</code>|<code>&#8211;name</code> <i>LV</i><i>_new</i> ]<br/>
+ [ <code>-V</code>|<code>&#8211;virtualsize</code> <i>Size</i>[m|UNIT] ]<br/>
+ [ <code>&#8211;type</code> <code>vdo-pool</code> ]<br/>
+ [ <code>&#8211;compression</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;deduplication</code> <code>y</code>|<code>n</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <p> &#8211; </p>
 <p> Detach and delete a cache from an LV. </p>
@@ -636,15 +636,15 @@ description: "lvconvert – Change logical volume layout"
 <p> Swap metadata LV in a thin pool or cache pool (for repair only). </p>
 <p> <code>lvconvert</code> <code>&#8211;swapmetadata</code> <code>&#8211;poolmetadata</code> <i>LV</i> <i>LV</i><i>_thinpool_cachepool</i> </p>
 <dl>
-<dd>[ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br />
+<dd>[ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <p> &#8211; </p>
-<p> Merge LV that was split from a mirror (variant, use &#8211;mergemirrors).<br />
- Merge thin LV into its origin LV (variant, use &#8211;mergethin).<br />
+<p> Merge LV that was split from a mirror (variant, use &#8211;mergemirrors).<br/>
+ Merge thin LV into its origin LV (variant, use &#8211;mergethin).<br/>
  Merge COW snapshot LV into its origin (variant, use &#8211;mergesnapshot). </p>
 <p> <code>lvconvert</code> <code>&#8211;merge</code> <i>VG</i>|<i>LV</i><i>_linear_striped_snapshot_thin_raid</i>|<i>Tag</i> &#8230; </p>
 <dl>
-<dd>[ <code>-i</code>|<code>&#8211;interval</code> <i>Number</i> ]<br />
+<dd>[ <code>-i</code>|<code>&#8211;interval</code> <i>Number</i> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <p> &#8211; </p>
 <p> Separate a COW snapshot from its origin LV. </p>
@@ -652,72 +652,72 @@ description: "lvconvert – Change logical volume layout"
 <dl>
 <dd>[ COMMON_OPTIONS ]</dd></dl>
 <p> &#8211; </p>
-<p> Combine a former COW snapshot (second arg) with a former<br />
+<p> Combine a former COW snapshot (second arg) with a former<br/>
  origin LV (first arg) to reverse a splitsnapshot command. </p>
 <p> <code>lvconvert</code> <code>-s</code>|<code>&#8211;snapshot</code> <i>LV</i> <i>LV</i><i>_linear_striped</i> </p>
 <dl>
-<dd>[ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br />
- [ <code>-Z</code>|<code>&#8211;zero</code> <code>y</code>|<code>n</code> ]<br />
- [ <code>&#8211;type</code> <code>snapshot</code> ]<br />
+<dd>[ <code>-c</code>|<code>&#8211;chunksize</code> <i>Size</i>[k|UNIT] ]<br/>
+ [ <code>-Z</code>|<code>&#8211;zero</code> <code>y</code>|<code>n</code> ]<br/>
+ [ <code>&#8211;type</code> <code>snapshot</code> ]<br/>
  [ COMMON_OPTIONS ]</dd></dl>
 <p> &#8211; </p>
-<p> Poll LV to continue conversion (also see &#8211;startpoll)<br />
+<p> Poll LV to continue conversion (also see &#8211;startpoll)<br/>
  or waits till conversion/mirror syncing is finished </p>
 <p> <code>lvconvert</code> <i>LV</i><i>_mirror_raid</i> </p>
 <dl>
 <dd>[ COMMON_OPTIONS ]</dd></dl>
 <p> &#8211;</p>
 <h2>Notes</h2>
-<p>This previous command syntax would perform two different operations:<br />
- <code>lvconvert &#8211;thinpool</code> <i>LV1</i> <code>&#8211;poolmetadata</code> <i>LV2</i><br />
+<p>This previous command syntax would perform two different operations:<br/>
+ <code>lvconvert &#8211;thinpool</code> <i>LV1</i> <code>&#8211;poolmetadata</code> <i>LV2</i><br/>
  If LV1 was not a thin pool, the command would convert LV1 to a thin pool, optionally using a specified LV for metadata. But, if LV1 was already a thin pool, the command would swap the current metadata LV with LV2 (for repair purposes.) </p>
-<p> In the same way, this previous command syntax would perform two different operations:<br />
- <code>lvconvert &#8211;cachepool</code> <i>LV1</i> <code>&#8211;poolmetadata</code> <i>LV2</i><br />
+<p> In the same way, this previous command syntax would perform two different operations:<br/>
+ <code>lvconvert &#8211;cachepool</code> <i>LV1</i> <code>&#8211;poolmetadata</code> <i>LV2</i><br/>
  If LV1 was not a cache pool, the command would convert LV1 to a cache pool, optionally using a specified LV for metadata. But, if LV1 was already a cache pool, the command would swap the current metadata LV with LV2 (for repair purposes.)</p>
 <h2>Examples</h2>
-<p>Convert a linear LV to a two-way mirror LV.<br />
+<p>Convert a linear LV to a two-way mirror LV.<br/>
  <code>lvconvert &#8211;type mirror &#8211;mirrors 1 vg/lvol1</code> </p>
-<p> Convert a linear LV to a two-way RAID1 LV.<br />
+<p> Convert a linear LV to a two-way RAID1 LV.<br/>
  <code>lvconvert &#8211;type raid1 &#8211;mirrors 1 vg/lvol1</code> </p>
-<p> Convert a mirror LV to use an in-memory log.<br />
+<p> Convert a mirror LV to use an in-memory log.<br/>
  <code>lvconvert &#8211;mirrorlog core vg/lvol1</code> </p>
-<p> Convert a mirror LV to use a disk log.<br />
+<p> Convert a mirror LV to use a disk log.<br/>
  <code>lvconvert &#8211;mirrorlog disk vg/lvol1</code> </p>
-<p> Convert a mirror or raid1 LV to a linear LV.<br />
+<p> Convert a mirror or raid1 LV to a linear LV.<br/>
  <code>lvconvert &#8211;type linear vg/lvol1</code> </p>
-<p> Convert a mirror LV to a raid1 LV with the same number of images.<br />
+<p> Convert a mirror LV to a raid1 LV with the same number of images.<br/>
  <code>lvconvert &#8211;type raid1 vg/lvol1</code> </p>
-<p> Convert a linear LV to a two-way mirror LV, allocating new extents from specific PV ranges.<br />
+<p> Convert a linear LV to a two-way mirror LV, allocating new extents from specific PV ranges.<br/>
  <code>lvconvert &#8211;mirrors 1 vg/lvol1 /dev/sda:0-15 /dev/sdb:0-15</code> </p>
-<p> Convert a mirror LV to a linear LV, freeing physical extents from a specific PV.<br />
+<p> Convert a mirror LV to a linear LV, freeing physical extents from a specific PV.<br/>
  <code>lvconvert &#8211;type linear vg/lvol1 /dev/sda</code> </p>
-<p> Split one image from a mirror or raid1 LV, making it a new LV.<br />
+<p> Split one image from a mirror or raid1 LV, making it a new LV.<br/>
  <code>lvconvert &#8211;splitmirrors 1 &#8211;name lv_split vg/lvol1</code> </p>
-<p> Split one image from a raid1 LV, and track changes made to the raid1 LV while the split image remains detached.<br />
+<p> Split one image from a raid1 LV, and track changes made to the raid1 LV while the split image remains detached.<br/>
  <code>lvconvert &#8211;splitmirrors 1 &#8211;trackchanges vg/lvol1</code> </p>
-<p> Merge an image (that was previously created with &#8211;splitmirrors and &#8211;trackchanges) back into the original raid1 LV.<br />
+<p> Merge an image (that was previously created with &#8211;splitmirrors and &#8211;trackchanges) back into the original raid1 LV.<br/>
  <code>lvconvert &#8211;mergemirrors vg/lvol1_rimage_1</code> </p>
-<p> Replace PV /dev/sdb1 with PV /dev/sdf1 in a raid1/4/5/6/10 LV.<br />
+<p> Replace PV /dev/sdb1 with PV /dev/sdf1 in a raid1/4/5/6/10 LV.<br/>
  <code>lvconvert &#8211;replace /dev/sdb1 vg/lvol1 /dev/sdf1</code> </p>
-<p> Replace 3 PVs /dev/sd[b-d]1 with PVs /dev/sd[f-h]1 in a raid1 LV.<br />
+<p> Replace 3 PVs /dev/sd[b-d]1 with PVs /dev/sd[f-h]1 in a raid1 LV.<br/>
  <code>lvconvert &#8211;replace /dev/sdb1 &#8211;replace /dev/sdc1 &#8211;replace /dev/sdd1</code></p>
 <dl>
 <dd><code>vg/lvol1 /dev/sd[fgh]1</code></dd></dl>
-<p> Replace the maximum of 2 PVs /dev/sd[bc]1 with PVs /dev/sd[gh]1 in a raid6 LV.<br />
+<p> Replace the maximum of 2 PVs /dev/sd[bc]1 with PVs /dev/sd[gh]1 in a raid6 LV.<br/>
  <code>lvconvert &#8211;replace /dev/sdb1 &#8211;replace /dev/sdc1 vg/lvol1 /dev/sd[gh]1</code> </p>
-<p> Convert an LV into a thin LV in the specified thin pool. The existing LV is used as an external read-only origin for the new thin LV.<br />
+<p> Convert an LV into a thin LV in the specified thin pool. The existing LV is used as an external read-only origin for the new thin LV.<br/>
  <code>lvconvert &#8211;type thin &#8211;thinpool vg/tpool1 vg/lvol1</code> </p>
-<p> Convert an LV into a thin LV in the specified thin pool. The existing LV is used as an external read-only origin for the new thin LV, and is renamed &quot;external&quot;.<br />
+<p> Convert an LV into a thin LV in the specified thin pool. The existing LV is used as an external read-only origin for the new thin LV, and is renamed &quot;external&quot;.<br/>
  <code>lvconvert &#8211;type thin &#8211;thinpool vg/tpool1</code></p>
 <dl>
 <dd><code>&#8211;originname external vg/lvol1</code></dd></dl>
-<p> Convert an LV to a cache pool LV using another specified LV for cache pool metadata.<br />
+<p> Convert an LV to a cache pool LV using another specified LV for cache pool metadata.<br/>
  <code>lvconvert &#8211;type cache-pool &#8211;poolmetadata vg/poolmeta1 vg/lvol1</code> </p>
-<p> Convert an LV to a cache LV using the specified cache pool and chunk size.<br />
+<p> Convert an LV to a cache LV using the specified cache pool and chunk size.<br/>
  <code>lvconvert &#8211;type cache &#8211;cachepool vg/cpool1 -c 128 vg/lvol1</code> </p>
-<p> Detach and keep the cache pool from a cache LV.<br />
+<p> Detach and keep the cache pool from a cache LV.<br/>
  <code>lvconvert &#8211;splitcache vg/lvol1</code> </p>
-<p> Detach and remove the cache pool from a cache LV.<br />
+<p> Detach and remove the cache pool from a cache LV.<br/>
  <code>lvconvert &#8211;uncache vg/lvol1</code></p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-lvm/">lvm</a></code>(8) <code><a href="/docs/linux/man/5-lvm-conf/">lvm.conf</a></code>(5) <code><a href="/docs/linux/man/8-lvmconfig/">lvmconfig</a></code>(8) <code><a href="/docs/linux/man/8-pvchange/">pvchange</a></code>(8) <code><a href="/docs/linux/man/8-pvck/">pvck</a></code>(8) <code><a href="/docs/linux/man/8-pvcreate/">pvcreate</a></code>(8) <code><a href="/docs/linux/man/8-pvdisplay/">pvdisplay</a></code>(8) <code><a href="/docs/linux/man/8-pvmove/">pvmove</a></code>(8) <code><a href="/docs/linux/man/8-pvremove/">pvremove</a></code>(8) <code><a href="/docs/linux/man/8-pvresize/">pvresize</a></code>(8) <code><a href="/docs/linux/man/8-pvs/">pvs</a></code>(8) <code><a href="/docs/linux/man/8-pvscan/">pvscan</a></code>(8) <code><a href="/docs/linux/man/8-vgcfgbackup/">vgcfgbackup</a></code>(8) <code><a href="/docs/linux/man/8-vgcfgrestore/">vgcfgrestore</a></code>(8) <code><a href="/docs/linux/man/8-vgchange/">vgchange</a></code>(8) <code><a href="/docs/linux/man/8-vgck/">vgck</a></code>(8) <code><a href="/docs/linux/man/8-vgcreate/">vgcreate</a></code>(8) <code><a href="/docs/linux/man/8-vgconvert/">vgconvert</a></code>(8) <code><a href="/docs/linux/man/8-vgdisplay/">vgdisplay</a></code>(8) <code><a href="/docs/linux/man/8-vgexport/">vgexport</a></code>(8) <code><a href="/docs/linux/man/8-vgextend/">vgextend</a></code>(8) <code><a href="/docs/linux/man/8-vgimport/">vgimport</a></code>(8) <code><a href="/docs/linux/man/8-vgimportclone/">vgimportclone</a></code>(8) <code><a href="/docs/linux/man/8-vgmerge/">vgmerge</a></code>(8) <code><a href="/docs/linux/man/8-vgmknodes/">vgmknodes</a></code>(8) <code><a href="/docs/linux/man/8-vgreduce/">vgreduce</a></code>(8) <code><a href="/docs/linux/man/8-vgremove/">vgremove</a></code>(8) <code><a href="/docs/linux/man/8-vgrename/">vgrename</a></code>(8) <code><a href="/docs/linux/man/8-vgs/">vgs</a></code>(8) <code><a href="/docs/linux/man/8-vgscan/">vgscan</a></code>(8) <code><a href="/docs/linux/man/8-vgsplit/">vgsplit</a></code>(8) <code><a href="/docs/linux/man/8-lvcreate/">lvcreate</a></code>(8) <code><a href="/docs/linux/man/8-lvchange/">lvchange</a></code>(8) <code><a href="/docs/linux/man/8-lvconvert/">lvconvert</a></code>(8) <code><a href="/docs/linux/man/8-lvdisplay/">lvdisplay</a></code>(8) <code><a href="/docs/linux/man/8-lvextend/">lvextend</a></code>(8) <code><a href="/docs/linux/man/8-lvreduce/">lvreduce</a></code>(8) <code><a href="/docs/linux/man/8-lvremove/">lvremove</a></code>(8) <code><a href="/docs/linux/man/8-lvrename/">lvrename</a></code>(8) <code><a href="/docs/linux/man/8-lvresize/">lvresize</a></code>(8) <code><a href="/docs/linux/man/8-lvs/">lvs</a></code>(8) <code><a href="/docs/linux/man/8-lvscan/">lvscan</a></code>(8) <code><a href="/docs/linux/man/8-lvm-fullreport/">lvm-fullreport</a></code>(8) <code><a href="/docs/linux/man/8-lvm-lvpoll/">lvm-lvpoll</a></code>(8) <code><a href="/docs/linux/man/8-lvm2-activation-generator/">lvm2-activation-generator</a></code>(8) <code><a href="/docs/linux/man/8-blkdeactivate/">blkdeactivate</a></code>(8) <code><a href="/docs/linux/man/8-lvmdump/">lvmdump</a></code>(8) <code><a href="/docs/linux/man/8-dmeventd/">dmeventd</a></code>(8) <code><a href="/docs/linux/man/8-lvmpolld/">lvmpolld</a></code>(8) <code><a href="/docs/linux/man/8-lvmlockd/">lvmlockd</a></code>(8) <code><a href="/docs/linux/man/8-lvmlockctl/">lvmlockctl</a></code>(8) <code><a href="/docs/linux/man/8-cmirrord/">cmirrord</a></code>(8) <code>lvmdbusd</code>(8) <code><a href="/docs/linux/man/7-lvmsystemid/">lvmsystemid</a></code>(7) <code><a href="/docs/linux/man/7-lvmreport/">lvmreport</a></code>(7) <code><a href="/docs/linux/man/7-lvmraid/">lvmraid</a></code>(7) <code><a href="/docs/linux/man/7-lvmthin/">lvmthin</a></code>(7) <code><a href="/docs/linux/man/7-lvmcache/">lvmcache</a></code>(7) </p>

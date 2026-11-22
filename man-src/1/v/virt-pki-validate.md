@@ -10,9 +10,9 @@ description: "virt-pki-validate – validate libvirt PKI files are configured co
 
 <p> virt-pki-validate &#8211; validate libvirt PKI files are configured correctly </p>
 <h2>SYNOPSIS</h2>
-<p> <code>virt-pki-validate</code> [<i></i><font SIZE="-1"><i>OPTION</i></font><i></i>]</p>
+<p> <code>virt-pki-validate</code> [<i></i><i>OPTION</i><i></i>]</p>
 <h2>DESCRIPTION</h2>
-<p> This tool validates that the necessary <font SIZE="-1">PKI</font> files are configured for a secure libvirt server or client using the <font SIZE="-1">TLS</font> encryption protocol. It will report any missing certificate or key files on the host. It should be run as root to ensure it can read all the necessary files</p>
+<p> This tool validates that the necessary PKI files are configured for a secure libvirt server or client using the TLS encryption protocol. It will report any missing certificate or key files on the host. It should be run as root to ensure it can read all the necessary files</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-h, &#8211;help</code></dt>
@@ -28,6 +28,6 @@ description: "virt-pki-validate – validate libvirt PKI files are configured co
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2006-2012 by Red Hat, Inc.</p>
 <h2>LICENSE</h2>
-<p> virt-pki-validate is distributed under the terms of the <font SIZE="-1">GNU GPL</font> v2+. This is free software; see the source for copying conditions. There is <font SIZE="-1">NO</font> warranty; not even for <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE</font></p>
+<p> virt-pki-validate is distributed under the terms of the GNU GPL v2+. This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE</p>
 <h2>SEE ALSO</h2>
-<p> <i><a href="/docs/linux/man/1-virsh/">virsh</a></i>(1), online <font SIZE="-1">PKI</font> setup instructions &lt;<a rel="nofollow" href="http://libvirt.org/remote.html">http://libvirt.org/remote.html</a>&gt; </p>
+<p> <i><a href="/docs/linux/man/1-virsh/">virsh</a></i>(1), online PKI setup instructions &lt;<a rel="nofollow" href="http://libvirt.org/remote.html">http://libvirt.org/remote.html</a>&gt; </p>

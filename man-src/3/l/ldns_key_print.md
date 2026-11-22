@@ -10,7 +10,7 @@ description: "ldns_key_print"
 
 <p> ldns_key_print </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> void ldns_key_print(FILE *output, const ldns_key *k); </p>

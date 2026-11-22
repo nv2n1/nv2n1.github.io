@@ -10,7 +10,7 @@ description: "ldns_rr_set_owner, ldns_rr_set_ttl, ldns_rr_set_type, ldns_rr_set_
 
 <p> ldns_rr_set_owner, ldns_rr_set_ttl, ldns_rr_set_type, ldns_rr_set_rd_count, ldns_rr_set_class, ldns_rr_set_rdf </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> void ldns_rr_set_owner(ldns_rr *rr, ldns_rdf *owner); </p>

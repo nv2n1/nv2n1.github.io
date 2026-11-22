@@ -10,9 +10,9 @@ description: "dbrow – select rows from an Fsdb file based on arbitrary conditi
 
 <p> dbrow &#8211; select rows from an Fsdb file based on arbitrary conditions </p>
 <h2>SYNOPSIS</h2>
-<p> dbrow [-vw] <font SIZE="-1">CONDITION</font> [<font SIZE="-1">CONDITION&#8230;</font>]</p>
+<p> dbrow [-vw] CONDITION [CONDITION&#8230;]</p>
 <h2>DESCRIPTION</h2>
-<p> Select rows for which all <font SIZE="-1">CONDITIONS</font> are true. Conditions are specified as Perl code, in which column names are be embedded, preceded by underscores.</p>
+<p> Select rows for which all CONDITIONS are true. Conditions are specified as Perl code, in which column names are be embedded, preceded by underscores.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-v</code></dt>
@@ -56,9 +56,9 @@ description: "dbrow – select rows from an Fsdb file based on arbitrary conditi
 </pre>
 <h2>BUGS</h2>
 <p> Doesn&#8217;t detect references to unknown columns in conditions. </p>
-<p> <font SIZE="-1">END<br />
-</font>&nbsp;<wbr>#&#8217;&nbsp;<wbr>for font-lock mode.<br />
+<p> END<br/>
+&nbsp;<wbr>#&#8217;&nbsp;<wbr>for font-lock mode.<br/>
 &nbsp;<wbr>exit 1;</p>
 <h2>AUTHOR and COPYRIGHT</h2>
 <p> Copyright (C) 1991-2007 by John Heidemann &lt;johnh [at] isi.edu&gt; </p>
-<p> This program is distributed under terms of the <font SIZE="-1">GNU</font> general public license, version 2. See the file <font SIZE="-1">COPYING</font> with the distribution for details. </p>
+<p> This program is distributed under terms of the GNU general public license, version 2. See the file COPYING with the distribution for details. </p>

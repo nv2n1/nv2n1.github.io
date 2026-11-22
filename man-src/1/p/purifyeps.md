@@ -16,17 +16,17 @@ description: "purifyeps – make an Encapsulated PostScript file work with both 
 <p> purifyeps <code>&#8211;make-man</code>[=<i>filename</i>] [<code>&#8211;section</code>=<i>section</i>] </p>
 <p> purifyeps <code>&#8211;make-ps-man</code>[=<i>filename</i>] [<code>&#8211;section</code>=<i>section</i>]</p>
 <h2>DESCRIPTION</h2>
-<p> While <code>pdflatex</code> has a number of nice features, its primary shortcoming relative to standard <code>latex</code>+<code>dvips</code> is that it is unable to read ordinary Encapsulated PostScript (<font SIZE="-1">EPS</font>) files, the most common graphics format in the LaTeX world. <code>pdflatex</code> can read only the following types of graphics files:</p>
+<p> While <code>pdflatex</code> has a number of nice features, its primary shortcoming relative to standard <code>latex</code>+<code>dvips</code> is that it is unable to read ordinary Encapsulated PostScript (EPS) files, the most common graphics format in the LaTeX world. <code>pdflatex</code> can read only the following types of graphics files:</p>
 <dl>
-<dt><font SIZE="-1">PDF</font></dt>
-<dd> Most people who use <code>pdflatex</code> convert their documents to <font SIZE="-1">PDF</font> using a utility such as <code>epstopdf</code>. This works well and preserves the vector nature of the original <font SIZE="-1">EPS</font>. Unfortunately, <code>dvips</code> does not read <font SIZE="-1">PDF</font>, so two versions of the graphic must be maintained if the document is to be processed with both <code>latex</code>+<code>dvips</code> and <code>pdflatex</code>.</dd>
-<dt><font SIZE="-1">PNG</font></dt>
-<dd> <font SIZE="-1">PNG</font> is a bitmap format and therefore scales poorly. Also, <code>dvips</code> does not read <font SIZE="-1">PNG</font>, so two versions of the graphic must be maintained if the document is to be processed with both <code>latex</code>+<code>dvips</code> and <code>pdflatex</code>.</dd>
-<dt><font SIZE="-1">JPEG</font></dt>
-<dd> <font SIZE="-1">JPEG</font> is a bitmap format and therefore scales poorly. Also, <code>dvips</code> does not read <font SIZE="-1">JPEG</font>, so two versions of the graphic must be maintained if the document is to be processed with both <code>latex</code>+<code>dvips</code> and <code>pdflatex</code>.</dd>
-<dt><font SIZE="-1">MPS</font></dt>
-<dd> This is probably the least-used <code>pdflatex</code>-compatible graphics format. <font SIZE="-1">MPS</font> is actually a stylized version of <font SIZE="-1">EPS</font> that MetaPost outputs. Like <font SIZE="-1">PDF</font>, <font SIZE="-1">MPS</font> is a vector format and remains as such when imported into a <code>pdflatex</code> document. Also like <font SIZE="-1">PDF</font>, <code>dvips</code> does not read <font SIZE="-1">MPS</font>, so two versions of the graphic must be maintained if the document is to be processed with both <code>latex</code>+<code>dvips</code> and <code>pdflatex</code>.</dd></dl>
-<p> The insight behind <code>purifyeps</code> is that there are only a few, small differences between <font SIZE="-1">MPS</font> and <font SIZE="-1">EPS</font> and that a file can be converted into a format that matches both the <font SIZE="-1">MPS</font> and <font SIZE="-1">EPS</font> specifications simultaneously. <code>purifyeps</code> inputs an <font SIZE="-1">EPS</font> file, uses <code>pstoedit</code>&#8216;s <tt>&quot;mpost&quot;</tt> filter to convert the file to MetaPost (<i>.mp</i>), runs <code>mpost</code> on the file to convert it to <font SIZE="-1">MPS</font>, and finally performs some touchups on the result to convert the file back to <font SIZE="-1">EPS</font>, while preserving its ability to be parsed by <code>pdflatex</code>.</p>
+<dt>PDF</dt>
+<dd> Most people who use <code>pdflatex</code> convert their documents to PDF using a utility such as <code>epstopdf</code>. This works well and preserves the vector nature of the original EPS. Unfortunately, <code>dvips</code> does not read PDF, so two versions of the graphic must be maintained if the document is to be processed with both <code>latex</code>+<code>dvips</code> and <code>pdflatex</code>.</dd>
+<dt>PNG</dt>
+<dd> PNG is a bitmap format and therefore scales poorly. Also, <code>dvips</code> does not read PNG, so two versions of the graphic must be maintained if the document is to be processed with both <code>latex</code>+<code>dvips</code> and <code>pdflatex</code>.</dd>
+<dt>JPEG</dt>
+<dd> JPEG is a bitmap format and therefore scales poorly. Also, <code>dvips</code> does not read JPEG, so two versions of the graphic must be maintained if the document is to be processed with both <code>latex</code>+<code>dvips</code> and <code>pdflatex</code>.</dd>
+<dt>MPS</dt>
+<dd> This is probably the least-used <code>pdflatex</code>-compatible graphics format. MPS is actually a stylized version of EPS that MetaPost outputs. Like PDF, MPS is a vector format and remains as such when imported into a <code>pdflatex</code> document. Also like PDF, <code>dvips</code> does not read MPS, so two versions of the graphic must be maintained if the document is to be processed with both <code>latex</code>+<code>dvips</code> and <code>pdflatex</code>.</dd></dl>
+<p> The insight behind <code>purifyeps</code> is that there are only a few, small differences between MPS and EPS and that a file can be converted into a format that matches both the MPS and EPS specifications simultaneously. <code>purifyeps</code> inputs an EPS file, uses <code>pstoedit</code>&#8216;s <tt>&quot;mpost&quot;</tt> filter to convert the file to MetaPost (<i>.mp</i>), runs <code>mpost</code> on the file to convert it to MPS, and finally performs some touchups on the result to convert the file back to EPS, while preserving its ability to be parsed by <code>pdflatex</code>.</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>&#8211;help</code></dt>
@@ -80,7 +80,7 @@ description: "purifyeps – make an Encapsulated PostScript file work with both 
 <h2>FILES</h2>
 <dl>
 <dt><i>mpost.fmp</i></dt>
-<dd> File containing mappings between TeX and PostScript font names. See &#8220;<font SIZE="-1">NOTES</font>&#8221; for a description of this file&#8217;s contents.</dd></dl>
+<dd> File containing mappings between TeX and PostScript font names. See &#8220;NOTES&#8221; for a description of this file&#8217;s contents.</dd></dl>
 <h2>BUGS</h2>
 <p> Error reporting could definitely stand to be improved. Error messages produced by <code>pstoedit</code> and <code>mpost</code> are sometimes silently ignored. Also, errors sometimes cause <code>purifyeps</code> to leave temporary files (<i>purifyeps-</i><i>#####</i>) lying around. </p>
 <p> <code>purifyeps</code> is subject to all of the limitations that affect <code>pstoedit</code> and especially the <tt>&quot;mpost&quot;</tt> backend to <code>pstoedit</code>. As a result, <code>purifyeps</code> ignores certain PostScript constructs, such as nonuniformly scaled text.</p>
@@ -99,7 +99,7 @@ description: "purifyeps – make an Encapsulated PostScript file work with both 
     Courier-Oblique                      pcrro
 </pre>
 <p> Note that this is exactly the same format that <code>pstoedit</code> uses. By default, <code>purifyeps</code> looks in the current directory for a font map called <i>mpost.fmp</i>. The <tt>&quot;--fontmap&quot;</tt> command-line option tells <code>purifyeps</code> to use a different font map, which will typically be the <i>mpost.fmp</i> file that comes with <code>pstoedit</code>. </p>
-<p> Once you create purified <font SIZE="-1">EPS</font> files with <code>purifyeps</code>, you need to instruct <code>pdflatex</code> to use them. The pdfLaTeX configuration of the <tt>&quot;graphics&quot;</tt> and <tt>&quot;graphicx&quot;</tt> packages (<i>pdftex.def</i>) normally ignores <i>.eps</i> files. Putting the following LaTeX code in your document&#8217;s preamble tells <code>pdflatex</code> that all <i>.eps</i> files are in <font SIZE="-1">MPS</font> format: </p>
+<p> Once you create purified EPS files with <code>purifyeps</code>, you need to instruct <code>pdflatex</code> to use them. The pdfLaTeX configuration of the <tt>&quot;graphics&quot;</tt> and <tt>&quot;graphicx&quot;</tt> packages (<i>pdftex.def</i>) normally ignores <i>.eps</i> files. Putting the following LaTeX code in your document&#8217;s preamble tells <code>pdflatex</code> that all <i>.eps</i> files are in MPS format: </p>
 <pre><code>
 % Tell pdfLaTeX that all.eps files were produced by MetaPost.
 </code></pre>

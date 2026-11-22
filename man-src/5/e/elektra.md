@@ -70,7 +70,7 @@ Stay away from here
 <h2>See Also</h2>
 <p><code>kdb</code>(1), <code><a href="/docs/linux/man/7-elektra/">elektra</a></code>(7)</p>
 <h2>Author</h2>
-<p><code>Avi Alkalay</code> &lt;avi at unix.sh&gt;<br />
+<p><code>Avi Alkalay</code> &lt;avi at unix.sh&gt;<br/>
  Linux Market Developer, Senior IT and Software Architect, IBM Linux Impact Team :: <i>ibm.com/linux</i> </p>
 <dl>
 <dd>Author.</dd></dl>

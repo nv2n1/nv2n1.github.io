@@ -75,7 +75,7 @@ $ <code>bogoupgrade -d ~/.bogofilter.safe</code>
 </dt><dd> 5. Done. Restart any stopped daemons, cron tasks, etc.</dd></dl>
 <h2>AUTHOR</h2>
 <p> <code>bogoupgrade</code> was written by Gyepi Sam gyepi [at] praxis-sw.com and David Relson relson [at] osagesoftware.com. </p>
-<p> For updates, see m[blue]<code>the bogofilter project page</code>m[]<font SIZE="-2">[1]</font>.</p>
+<p> For updates, see m[blue]<code>the bogofilter project page</code>m[][1].</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-bogofilter/">bogofilter</a>(1), <a href="/docs/linux/man/1-bogolexer/">bogolexer</a>(1), <a href="/docs/linux/man/1-bogotune/">bogotune</a>(1), <a href="/docs/linux/man/1-bogoutil/">bogoutil</a>(1)</p>
 <h2>NOTES</h2>

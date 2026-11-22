@@ -10,7 +10,7 @@ description: "globus_ftp_client_throughput_plugin.h –"
 <p>globus_ftp_client_throughput_plugin.h &#8211; </p>
 <p> GridFTP Throughput Performance Plugin Implementation.</p>
 <h2>Synopsis</h2>
-<p>#include &#8216;globus_ftp_client.h&#8217;<br />
+<p>#include &#8216;globus_ftp_client.h&#8217;<br/>
  #include &#8216;globus_ftp_client_plugin.h&#8217; </p>
 <h3>Macros</h3>
 <p>#define <code>GLOBUS_FTP_CLIENT_THROUGHPUT_PLUGIN_MODULE</code> (&amp;globus_i_ftp_client_throughput_plugin_module) </p>

@@ -12,10 +12,10 @@ description: "ibis – IB management Inband Services – an extended TCL shell"
 <h2>SYNOPSYS</h2>
 <p> ibis [-port_num &lt;port number to attach to&gt;]</p>
 <h2>DESCRIPTION</h2>
-<p> <code>ibis</code> is a <font SIZE="-1">TCL</font> shell extended with interface for sending and receiving <font SIZE="-1">IB</font> management datagrams (<font SIZE="-1">MADS</font>). To use this shell you will write <font SIZE="-1">TCL</font> code that excersizes the regular <font SIZE="-1">TCL</font> command and the special <font SIZE="-1">API</font> provided by this extension. Interactive use is also possible and is greatly enhanced if tclreadline package is available on the machine. </p>
-<p> The following sub sections provide detailed definition for the <font SIZE="-1">API</font> and global objects defined by the extension. The different MADs APIs are group by the management class.</p>
+<p> <code>ibis</code> is a TCL shell extended with interface for sending and receiving IB management datagrams (MADS). To use this shell you will write TCL code that excersizes the regular TCL command and the special API provided by this extension. Interactive use is also possible and is greatly enhanced if tclreadline package is available on the machine. </p>
+<p> The following sub sections provide detailed definition for the API and global objects defined by the extension. The different MADs APIs are group by the management class.</p>
 <h2>IBIS Constants</h2>
-<p> These constants are provided by <font SIZE="-1">IBIS:</font> </p>
+<p> These constants are provided by IBIS: </p>
 <p> <code>Log Verbosity Flags</code> </p>
 <dl>
 <dt>[ Constant : int ] $IBIS_LOG_NONE = 0x00</dt>
@@ -33,29 +33,29 @@ description: "ibis – IB management Inband Services – an extended TCL shell"
 </dd><dt>[ Constant : int ] $IBIS_LOG_FRAMES = 0x20</dt>
 <dd></dd></dl>
 <h2>IBIS Functions</h2>
-<p> This section provide the details about the functions <font SIZE="-1">IBIS</font> exposes. They all return 0 on succes.</p>
+<p> This section provide the details about the functions IBIS exposes. They all return 0 on succes.</p>
 <dl>
 <dt>[return list] ibis_get_local_ports_info</dt>
-<dd> Return the list of available <font SIZE="-1">IB</font> ports with <font SIZE="-1">GUID</font>, <font SIZE="-1">LID</font>, state and port number.</dd>
+<dd> Return the list of available IB ports with GUID, LID, state and port number.</dd>
 <dt>[ returns int ] ibis_init</dt>
 <dd> Initialize ibis object</dd>
 <dt>[ returns int ] ibis_set_verbosity level</dt>
 <dd> Change the log verbosity</dd>
 <dt>[ returns int ] ibis_set_port guid</dt>
-<dd> Set the port <font SIZE="-1">IBIS</font> is attached to and initialize all sub packages. Must be called once during ibis operation.</dd>
+<dd> Set the port IBIS is attached to and initialize all sub packages. Must be called once during ibis operation.</dd>
 <dt>[ returns new_uint64_t ] ibis_get_port</dt>
-<dd> Provide the <font SIZE="-1">GUID</font> of the port <font SIZE="-1">IBIS</font> is attached to</dd>
+<dd> Provide the GUID of the port IBIS is attached to</dd>
 <dt>[ returns int ] ibis_set_transaction_timeout timeout_ms</dt>
 <dd> Set the transaction time out in [msec]</dd>
 <dt>[ returns int ] ibis_exit</dt>
-<dd> Exit <font SIZE="-1">IBIS</font>.</dd>
+<dd> Exit IBIS.</dd>
 <dt>[ returns int ] ibis_puts verbosity msg</dt>
 <dd> Appends a message to the OpenSM log
 </dd></dl>
-<p> <code><font SIZE="-1">IBIS</font> Options Object</code> </p>
+<p> <code>IBIS Options Object</code> </p>
 <dl>
 <dt>
-</dt><dd> The <font SIZE="-1">IBIS</font> options are available through the predefined object: ibis_opts. It can be manipulated using the standard Tcl methods: cget and configure. Examples: </dd>
+</dt><dd> The IBIS options are available through the predefined object: ibis_opts. It can be manipulated using the standard Tcl methods: cget and configure. Examples: </dd>
 <pre>
    ibis_opts cget -force_log_flush
 </pre>
@@ -67,7 +67,7 @@ description: "ibis – IB management Inband Services – an extended TCL shell"
 <dt>[ Member data: returns boolean_t * ] -single_thread</dt>
 <dd> Run single threaded</dd>
 <dt>[ Member data: returns boolean_t * ] -force_log_flush</dt>
-<dd> If <font SIZE="-1">TRUE</font> &#8211; forces flash after each log message (<font SIZE="-1">TRUE</font>).</dd>
+<dd> If TRUE &#8211; forces flash after each log message (TRUE).</dd>
 <dt>[ Member data: returns uint8_t * ] -log_flags</dt>
 <dd> The log levels to be used</dd>
 <dt>[ Member data: returns char * ] -log_file</dt>
@@ -79,28 +79,28 @@ description: "ibis – IB management Inband Services – an extended TCL shell"
 <dt>[ Member data: returns uint64_t * ] -v_key</dt>
 <dd> The Vendor Key to be used when sending Vendor Specific MADs.</dd></dl>
 <h2>IBPM</h2>
-<p> <font SIZE="-1">IBPM</font> stands for <font SIZE="-1">IB</font> Performance Monitoring MADs. <font SIZE="-1">IB</font> provides standard facilities for tracking statistics on every port. </p>
-<p> This section provide the details about the functions <font SIZE="-1">IBPM</font> exposes. They all return 0 on succes.</p>
+<p> IBPM stands for IB Performance Monitoring MADs. IB provides standard facilities for tracking statistics on every port. </p>
+<p> This section provide the details about the functions IBPM exposes. They all return 0 on succes.</p>
 <dl>
 <dt>[ returns int ] pmMultiMaxGet</dt>
 <dd> Obtain the maximal number of parallel queries that can be sent</dd>
 <dt>[ returns int ] pmGetPortCounters lid port_select</dt>
-<dd> Send a &#8220;PortCounters&#8221; query to teh given <font SIZE="-1">LID</font> and port</dd>
+<dd> Send a &#8220;PortCounters&#8221; query to teh given LID and port</dd>
 <dt>[ returns int ] pmGetPortCountersMulti num lid_list port_select_list</dt>
 <dd> Send a batch of &#8220;PortCounters&#8221; queries to the given list of LIDs and ports. num &#8211; defines the number of elements in each list.</dd>
 <dt>[ returns int ] pmGetExtPortCountersMulti num lid_list port_select_list</dt>
 <dd> Send a batch of &#8220;ExtendedPortCounters&#8221; queries to the given list of LIDs and ports. num &#8211; defines the number of elements in each list.</dd>
 <dt>[ returns int ] pmClrAllCounters lid port_select</dt>
-<dd> Sends a command to &#8220;clear all counters&#8221; on the given <font SIZE="-1">LID</font> and port</dd>
+<dd> Sends a command to &#8220;clear all counters&#8221; on the given LID and port</dd>
 <dt>[ returns int ] pmClrAllCountersMulti num lid_list port_select_list</dt>
 <dd> Send a batch of &#8220;clear all counters&#8221; commands to the given list of LIDs and ports. num &#8211; defines the number of elements in each list.</dd></dl>
 <h2>IBSAC</h2>
-<p> <font SIZE="-1">IBSAC</font> stands for <font SIZE="-1">IB</font> Subnet Administrator (<font SIZE="-1">SA</font>) Client. It provide means to query the <font SIZE="-1">SA</font> for information about the various objects it manages </p>
-<p> The following sections describe the concepts behind the <font SIZE="-1">SAC</font> interface and then provides detailed description of each attribute that can be queried. </p>
-<p> <code><font SIZE="-1">IBSAC</font> Objects</code> </p>
+<p> IBSAC stands for IB Subnet Administrator (SA) Client. It provide means to query the SA for information about the various objects it manages </p>
+<p> The following sections describe the concepts behind the SAC interface and then provides detailed description of each attribute that can be queried. </p>
+<p> <code>IBSAC Objects</code> </p>
 <dl>
 <dt>
-</dt><dd> <font SIZE="-1">IBSAC</font> uses predefined global objects to facilitate <font SIZE="-1">SA</font> Queries. Such objects are named sac&lt;Attribute&gt;Query. Each such object exposes a standard set of methods:</dd></dl>
+</dt><dd> IBSAC uses predefined global objects to facilitate SA Queries. Such objects are named sac&lt;Attribute&gt;Query. Each such object exposes a standard set of methods:</dd></dl>
 <dl>
 <dt>dump</dt>
 <dd> dump out all fields and values for the obejct</dd>
@@ -109,14 +109,14 @@ description: "ibis – IB management Inband Services – an extended TCL shell"
 <dt>configure -&lt;field&gt; &lt;value&gt;:</dt>
 <dd> set the field value</dd>
 <dt>get &lt;comp mask&gt;:</dt>
-<dd> query the <font SIZE="-1">SA</font> for one record using the component mask and field values as set on the query object</dd>
+<dd> query the SA for one record using the component mask and field values as set on the query object</dd>
 <dt>getTable &lt;comp mask&gt;:</dt>
-<dd> query the <font SIZE="-1">SA</font> for all records matching component mask and field values as set on the query object </dd>
-<p> Some <font SIZE="-1">SA</font> maintained objects support the &#8220;set&#8221; and &#8220;delete&#8221; methods. In that case the following methods are made available on the corresponding query object:</p>
+<dd> query the SA for all records matching component mask and field values as set on the query object </dd>
+<p> Some SA maintained objects support the &#8220;set&#8221; and &#8220;delete&#8221; methods. In that case the following methods are made available on the corresponding query object:</p>
 <dt>set &lt;comp mask&gt;:</dt>
-<dd> send a <code>set</code> method to the <font SIZE="-1">SA</font> with the component mask and field values as set on the query object</dd>
+<dd> send a <code>set</code> method to the SA with the component mask and field values as set on the query object</dd>
 <dt>delete &lt;comp mask&gt;:</dt>
-<dd> send a <code>delete</code> method to the <font SIZE="-1">SA</font> with the component mask and field values as set on the query object
+<dd> send a <code>delete</code> method to the SA with the component mask and field values as set on the query object
 </dd></dl>
 <p> <code>Returned Objects</code> </p>
 <p> This section describes the values returned from the get/getTable/set/delete methods of the query objects: </p>
@@ -125,27 +125,27 @@ description: "ibis – IB management Inband Services – an extended TCL shell"
 <dl>
 <dt>ni:&lt;idx&gt; = node info</dt>
 <dd>
-</dd><dt>nr:&lt;idx&gt; = node info record (<font SIZE="-1">SA</font> <font SIZE="-1">RID</font> + node info)</dt>
+</dd><dt>nr:&lt;idx&gt; = node info record (SA RID + node info)</dt>
 <dd>
 </dd><dt>pi:&lt;idx&gt; = port info</dt>
 <dd>
-</dd><dt>pir:&lt;idx&gt; = port info record (<font SIZE="-1">SA</font> <font SIZE="-1">RID</font> + port info)</dt>
+</dd><dt>pir:&lt;idx&gt; = port info record (SA RID + port info)</dt>
 <dd>
-</dd><dt>smi:&lt;idx&gt; = <font SIZE="-1">SM</font> info</dt>
+</dd><dt>smi:&lt;idx&gt; = SM info</dt>
 <dd>
-</dd><dt>smir:&lt;idx&gt; = <font SIZE="-1">SM</font> info record (<font SIZE="-1">SA</font> <font SIZE="-1">RID</font> + <font SIZE="-1">SM</font> info)</dt>
+</dd><dt>smir:&lt;idx&gt; = SM info record (SA RID + SM info)</dt>
 <dd>
 </dd><dt>swi:&lt;idx&gt; = switch info</dt>
 <dd>
-</dd><dt>swir:&lt;idx&gt; = switch info record (<font SIZE="-1">SA</font> <font SIZE="-1">RID</font> + switch info)</dt>
+</dd><dt>swir:&lt;idx&gt; = switch info record (SA RID + switch info)</dt>
 <dd>
-</dd><dt>slvt:&lt;idx&gt; = <font SIZE="-1">SL</font> to <font SIZE="-1">VL</font> table</dt>
+</dd><dt>slvt:&lt;idx&gt; = SL to VL table</dt>
 <dd>
-</dd><dt>slvr:&lt;idx&gt; = <font SIZE="-1">SL</font> to <font SIZE="-1">VL</font> table Record (<font SIZE="-1">SA</font> <font SIZE="-1">RID</font> + <font SIZE="-1">SL</font> to <font SIZE="-1">VL</font> table)</dt>
+</dd><dt>slvr:&lt;idx&gt; = SL to VL table Record (SA RID + SL to VL table)</dt>
 <dd>
 </dd><dt>pkt:&lt;idx&gt; = PKey table</dt>
 <dd>
-</dd><dt>pkr:&lt;idx&gt; = PKey table record (<font SIZE="-1">SA</font> <font SIZE="-1">RID</font> + PKey table)</dt>
+</dd><dt>pkr:&lt;idx&gt; = PKey table record (SA RID + PKey table)</dt>
 <dd> Queries of non embedded attributes:</dd>
 <dt>link:&lt;idx&gt; = link record</dt>
 <dd>
@@ -155,16 +155,16 @@ description: "ibis – IB management Inband Services – an extended TCL shell"
 <dd>
 </dd><dt>mcm:&lt;idx&gt; = Multicast Member Record</dt>
 <dd>
-</dd><dt>cpi:&lt;idx&gt; = <font SIZE="-1">SA</font> Class Port Info</dt>
+</dd><dt>cpi:&lt;idx&gt; = SA Class Port Info</dt>
 <dd>
 </dd><dt>info:&lt;idx&gt; = Inform info (registration of event forwarding)</dt>
 <dd>
 </dd><dt>svc:&lt;idx&gt; = Service Record</dt>
 <dd>
-</dd><dt>vlarb:&lt;idx&gt;= <font SIZE="-1">VL</font> Arbitration table record</dt>
+</dd><dt>vlarb:&lt;idx&gt;= VL Arbitration table record</dt>
 <dd>
 </dd></dl>
-<p> <code><font SIZE="-1">NODE</font> <font SIZE="-1">INFO</font> <font SIZE="-1">RECORD</font></code> </p>
+<p> <code>NODE INFO RECORD</code> </p>
 <dl>
 <dt>
 </dt><dd> Component mask bits:</dd></dl>
@@ -226,7 +226,7 @@ description: "ibis – IB management Inband Services – an extended TCL shell"
 </dd><dt>[ Member : returns void ] delete</dt>
 <dd> &#8212;- </dd>
 <p> <i>class sacNodeRec</i> </p>
-<p> <font SIZE="-1">RID</font> Fields:</p>
+<p> RID Fields:</p>
 <dt>[ Member data: returns ib_net16_t * ] -lid</dt>
 <dd>
 </dd><dt>[ Member data: returns sacNodeInfo * ] -node_info</dt>
@@ -240,7 +240,7 @@ description: "ibis – IB management Inband Services – an extended TCL shell"
 </dd><dt>[ Member : returns void ] delete</dt>
 <dd>
 </dd></dl>
-<p> <code><font SIZE="-1">PORT</font> <font SIZE="-1">INFO</font> <font SIZE="-1">RECORD</font></code> </p>
+<p> <code>PORT INFO RECORD</code> </p>
 <dl>
 <dt>
 </dt><dd> Component mask bits:</dd></dl>
@@ -406,7 +406,7 @@ description: "ibis – IB management Inband Services – an extended TCL shell"
 </dd><dt>[ Member : returns void ] delete</dt>
 <dd> &#8212;- </dd>
 <p> <i>class sacPortRec</i> </p>
-<p> <font SIZE="-1">RID</font> Fields:</p>
+<p> RID Fields:</p>
 <dt>[ Member data: returns ib_net16_t * ] -lid</dt>
 <dd>
 </dd><dt>[ Member data: returns uint8_t * ] -port_num</dt>
@@ -420,7 +420,7 @@ description: "ibis – IB management Inband Services – an extended TCL shell"
 </dd><dt>[ Member : returns void ] delete</dt>
 <dd>
 </dd></dl>
-<p> <code><font SIZE="-1">SM</font> <font SIZE="-1">INFO</font> <font SIZE="-1">RECORD</font></code> </p>
+<p> <code>SM INFO RECORD</code> </p>
 <dl>
 <dt>
 </dt><dd> Component mask bits:</dd></dl>
@@ -450,7 +450,7 @@ description: "ibis – IB management Inband Services – an extended TCL shell"
 </dd><dt>[ Member : returns void ] delete</dt>
 <dd> &#8212;- </dd>
 <p> <i>class sacSmRec</i> </p>
-<p> <font SIZE="-1">RID</font> Fields:</p>
+<p> RID Fields:</p>
 <dt>[ Member data: returns ib_net16_t * ] -lid</dt>
 <dd>
 </dd><dt>[ Member data: returns sacSmInfo * ] -sm_info</dt>
@@ -462,7 +462,7 @@ description: "ibis – IB management Inband Services – an extended TCL shell"
 </dd><dt>[ Member : returns void ] delete</dt>
 <dd>
 </dd></dl>
-<p> <code><font SIZE="-1">SWITCH</font> <font SIZE="-1">INFO</font> <font SIZE="-1">RECORD</font></code> </p>
+<p> <code>SWITCH INFO RECORD</code> </p>
 <dl>
 <dt>
 </dt><dd> Component mask bits:</dd></dl>
@@ -520,7 +520,7 @@ description: "ibis – IB management Inband Services – an extended TCL shell"
 </dd><dt>[ Member : returns void ] delete</dt>
 <dd> &#8212;- </dd>
 <p> <i>class sacSwRec</i> </p>
-<p> <font SIZE="-1">RID</font> Fields:</p>
+<p> RID Fields:</p>
 <dt>[ Member data: returns ib_net16_t * ] -lid</dt>
 <dd>
 </dd><dt>[ Member data: returns sacSwInfo * ] -switch_info</dt>
@@ -532,7 +532,7 @@ description: "ibis – IB management Inband Services – an extended TCL shell"
 </dd><dt>[ Member : returns void ] delete</dt>
 <dd>
 </dd></dl>
-<p> <code><font SIZE="-1">LINK</font> <font SIZE="-1">RECORD</font></code> </p>
+<p> <code>LINK RECORD</code> </p>
 <dl>
 <dt>
 </dt><dd> Component mask bits:</dd></dl>
@@ -562,7 +562,7 @@ description: "ibis – IB management Inband Services – an extended TCL shell"
 </dd><dt>[ Member : returns void ] delete</dt>
 <dd>
 </dd></dl>
-<p> <code><font SIZE="-1">PATH</font> <font SIZE="-1">RECORD</font></code> </p>
+<p> <code>PATH RECORD</code> </p>
 <dl>
 <dt>
 </dt><dd> Component mask bits:</dd></dl>
@@ -642,7 +642,7 @@ description: "ibis – IB management Inband Services – an extended TCL shell"
 </dd><dt>[ Member : returns void ] delete</dt>
 <dd>
 </dd></dl>
-<p> <code><font SIZE="-1">LINEAR</font> <font SIZE="-1">FORWARDING</font> <font SIZE="-1">TABLE</font></code> </p>
+<p> <code>LINEAR FORWARDING TABLE</code> </p>
 <dl>
 <dt>
 </dt><dd> Component mask bits:</dd></dl>
@@ -666,7 +666,7 @@ description: "ibis – IB management Inband Services – an extended TCL shell"
 </dd><dt>[ Member : returns void ] delete</dt>
 <dd>
 </dd></dl>
-<p> <code><font SIZE="-1">MULTICAST</font> <font SIZE="-1">MEMBER</font> <font SIZE="-1">RECORD</font></code> </p>
+<p> <code>MULTICAST MEMBER RECORD</code> </p>
 <dl>
 <dt>
 </dt><dd> Component mask bits:</dd></dl>
@@ -748,7 +748,7 @@ description: "ibis – IB management Inband Services – an extended TCL shell"
 <dt>[ Member : returns void ] obj_delete</dt>
 <dd> Delete the object
 </dd></dl>
-<p> <code><font SIZE="-1">SA</font> <font SIZE="-1">CLASS</font> <font SIZE="-1">PORT</font> <font SIZE="-1">INFO</font></code> </p>
+<p> <code>SA CLASS PORT INFO</code> </p>
 <dl>
 <dt>
 </dt><dd> &#8212;- </dd>
@@ -792,7 +792,7 @@ description: "ibis – IB management Inband Services – an extended TCL shell"
 </dd><dt>[ Member : returns void ] delete</dt>
 <dd>
 </dd></dl>
-<p> <code><font SIZE="-1">INFORM</font> <font SIZE="-1">INFO</font> <font SIZE="-1">RECORD</font></code> </p>
+<p> <code>INFORM INFO RECORD</code> </p>
 <dl>
 <dt>
 </dt><dd> The inform Info is built with heirarchy of objects. So several classes are defined. </dd>
@@ -851,7 +851,7 @@ description: "ibis – IB management Inband Services – an extended TCL shell"
 </dd><dt>[ Member data: returns ib_net16_t * ] -vendor_id_lsb</dt>
 <dd>
 </dd></dl>
-<p> <code><font SIZE="-1">SERVICE</font> <font SIZE="-1">RECORD</font></code> </p>
+<p> <code>SERVICE RECORD</code> </p>
 <dl>
 <dt>
 </dt><dd> Component mask bits:</dd></dl>
@@ -965,7 +965,7 @@ description: "ibis – IB management Inband Services – an extended TCL shell"
 </dd><dt>[ Member : returns void ] obj_delete</dt>
 <dd>
 </dd></dl>
-<p> <code><font SIZE="-1">SL</font> to <font SIZE="-1">VL</font> <font SIZE="-1">TABLE</font> <font SIZE="-1">RECORD</font></code> </p>
+<p> <code>SL to VL TABLE RECORD</code> </p>
 <dl>
 <dt>
 </dt><dd> Component mask bits:</dd></dl>
@@ -980,13 +980,13 @@ description: "ibis – IB management Inband Services – an extended TCL shell"
 <dt>[ Member data: returns uint8_array_t * ] -raw_vl_by_sl</dt>
 <dd> &#8212;- </dd>
 <p> <i>class sacSlVlRec</i> </p>
-<p> <font SIZE="-1">RID</font> Fields:</p>
+<p> RID Fields:</p>
 <dt>[ Member data: returns ib_net16_t * ] -lid</dt>
-<dd> for <font SIZE="-1">CA:</font> lid of port, for switch lid of port 0</dd>
+<dd> for CA: lid of port, for switch lid of port 0</dd>
 <dt>[ Member data: returns uint8_t * ] -in_port_num</dt>
-<dd> reserved for <font SIZE="-1">CA</font>&#8216;s</dd>
+<dd> reserved for CA&#8216;s</dd>
 <dt>[ Member data: returns uint8_t * ] -out_port_num</dt>
-<dd> reserved for <font SIZE="-1">CA</font>&#8216;s</dd>
+<dd> reserved for CA&#8216;s</dd>
 <dt>[ Member data: returns uint32_t * ] -resv</dt>
 <dd>
 </dd><dt>[ Member data: returns sacSlVlTbl * ] -slvl_tbl</dt>
@@ -998,7 +998,7 @@ description: "ibis – IB management Inband Services – an extended TCL shell"
 </dd><dt>[ Member : returns void ] delete</dt>
 <dd>
 </dd></dl>
-<p> <code><font SIZE="-1">VL</font> <font SIZE="-1">ARBITRATION</font> <font SIZE="-1">TABLE</font> <font SIZE="-1">RECORD</font></code> </p>
+<p> <code>VL ARBITRATION TABLE RECORD</code> </p>
 <dl>
 <dt>
 </dt><dd> Component mask bits:</dd></dl>
@@ -1012,7 +1012,7 @@ description: "ibis – IB management Inband Services – an extended TCL shell"
 <p> <i>class sacVlArbRec</i> </p>
 <p> Fields:</p>
 <dt>[ Member data: returns ib_net16_t * ] -lid</dt>
-<dd> for <font SIZE="-1">CA:</font> lid of port, for switch lid of port 0</dd>
+<dd> for CA: lid of port, for switch lid of port 0</dd>
 <dt>[ Member data: returns uint8_t * ] -port_num</dt>
 <dd>
 </dd><dt>[ Member data: returns uint8_t * ] -block_num</dt>
@@ -1028,7 +1028,7 @@ description: "ibis – IB management Inband Services – an extended TCL shell"
 </dd><dt>[ Member : returns void ] delete</dt>
 <dd>
 </dd></dl>
-<p> <code><font SIZE="-1">PKEY</font> <font SIZE="-1">TABLE</font> <font SIZE="-1">RECORD</font></code> </p>
+<p> <code>PKEY TABLE RECORD</code> </p>
 <dl>
 <dt>
 </dt><dd> Component mask bits:</dd></dl>
@@ -1044,13 +1044,13 @@ description: "ibis – IB management Inband Services – an extended TCL shell"
 <dt>[ Member data: returns ib_net16_array_t * ] -pkey_entry</dt>
 <dd> &#8212;- </dd>
 <p> <i>class sacPKeyRec</i> </p>
-<p> <font SIZE="-1">RID</font> Fields:</p>
+<p> RID Fields:</p>
 <dt>[ Member data: returns ib_net16_t * ] -lid</dt>
-<dd> for <font SIZE="-1">CA:</font> lid of port, for switch lid of port 0</dd>
+<dd> for CA: lid of port, for switch lid of port 0</dd>
 <dt>[ Member data: returns uint16_t * ] -block_num</dt>
 <dd>
 </dd><dt>[ Member data: returns uint8_t * ] -port_num</dt>
-<dd> for switch: port number, for <font SIZE="-1">CA:</font> reserved</dd>
+<dd> for switch: port number, for CA: reserved</dd>
 <dt>[ Member data: returns uint8_t * ] -reserved1</dt>
 <dd>
 </dd><dt>[ Member data: returns uint16_t * ] -reserved2</dt>
@@ -1064,16 +1064,16 @@ description: "ibis – IB management Inband Services – an extended TCL shell"
 </dd><dt>[ Member : returns void ] delete</dt>
 <dd></dd></dl>
 <h2>Subnet Management MADs (SMPs)</h2>
-<p> The <font SIZE="-1">SM</font> interface supports sending Subnet Management Packets to the fabric devices. The specific attributes that can be access is provided in detail in each sub section below. </p>
+<p> The SM interface supports sending Subnet Management Packets to the fabric devices. The specific attributes that can be access is provided in detail in each sub section below. </p>
 <p> A set of object types is defined. The user can allocate a new attribute object. Then the object can be set using configure or the direct manipulation methods. Extra methods are provided for each object: =item setByDr &lt;dr&gt; &lt;attrMod&gt; </p>
 <p> Set the attribute on the object accessible by the given directed route. A directed route is a list of port numbers to go out from.</p>
 <dl>
 <dt>getByDr &lt;dr&gt; &lt;attrMod&gt;</dt>
 <dd> Get the attribute value by traversing a directed route. </dd>
 <p> setByLid &lt;lid&gt; &lt;attrMod&gt; </p>
-<p> Set the attribute on the object accessible by the given <font SIZE="-1">LID</font> </p>
+<p> Set the attribute on the object accessible by the given LID </p>
 <p> getByLid &lt;lid&gt; &lt;attrMod&gt; </p>
-<p> get the attribute on the object accessible by the given <font SIZE="-1">LID</font>
+<p> get the attribute on the object accessible by the given LID
 </dl>
 <p> <code>class smNodeInfo</code> </p>
 <dl>
@@ -1328,7 +1328,7 @@ description: "ibis – IB management Inband Services – an extended TCL shell"
 <p> <code>class smNotice</code> </p>
 <dl>
 <dt>
-</dt><dd> The <font SIZE="-1">NOTICE</font> attribute is built out of several sub objects</dd></dl>
+</dt><dd> The NOTICE attribute is built out of several sub objects</dd></dl>
 <dl>
 <dt>[ Member data: returns uint8_t * ] -generic_type</dt>
 <dd>
@@ -1493,7 +1493,7 @@ description: "ibis – IB management Inband Services – an extended TCL shell"
 <dd></dd></dl>
 <h2>IBCR Functions</h2>
 <p> Provides vendor specific access to the device internal coniguration space </p>
-<p> This section provide the details about the functions <font SIZE="-1">IBCR</font> exposes. They all return 0 on succes.</p>
+<p> This section provide the details about the functions IBCR exposes. They all return 0 on succes.</p>
 <dl>
 <dt>[ returns int ] crMultiMaxGet</dt>
 <dd>
@@ -1506,8 +1506,8 @@ description: "ibis – IB management Inband Services – an extended TCL shell"
 </dd><dt>[ returns int ] crWriteMulti num lid_list data address</dt>
 <dd></dd></dl>
 <h2>IB Vendor Specific Functions</h2>
-<p> <font SIZE="-1">IBVS</font> stands for Vendor Specific MADs. </p>
-<p> This section provide the details about the functions <font SIZE="-1">IBVS</font> exposes. They all return 0 on succes.</p>
+<p> IBVS stands for Vendor Specific MADs. </p>
+<p> This section provide the details about the functions IBVS exposes. They all return 0 on succes.</p>
 <dl>
 <dt>[ returns int ] vsMultiMaxGet</dt>
 <dd>
@@ -1546,7 +1546,7 @@ description: "ibis – IB management Inband Services – an extended TCL shell"
 </dd><dt>[ returns int ] vsMirrorWrite lid rx_mirror tx_mirror</dt>
 <dd></dd></dl>
 <h2>IBBBM Functions</h2>
-<p> This section provide the details about the functions <font SIZE="-1">IBBBM</font> exposes. They all return 0 on succes.</p>
+<p> This section provide the details about the functions IBBBM exposes. They all return 0 on succes.</p>
 <dl>
 <dt>[ returns int ] bbmVpdRead lid vpd_device_selector bytes_num offset</dt>
 <dd>
@@ -1563,4 +1563,4 @@ description: "ibis – IB management Inband Services – an extended TCL shell"
 </dd><dt>[ returns int ] bbmFWVerRead lid</dt>
 <dd></dd></dl>
 <h2>AUTHOR</h2>
-<p> Eitan Zahavi, Mellanox Technologies <font SIZE="-1">LTD</font>, eitan [at] mellanox.co.il </p>
+<p> Eitan Zahavi, Mellanox Technologies LTD, eitan [at] mellanox.co.il </p>

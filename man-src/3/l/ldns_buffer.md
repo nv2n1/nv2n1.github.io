@@ -10,7 +10,7 @@ description: "ldns_buffer"
 
 <p> ldns_buffer </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;stdint.h&gt;<br />
+<p> #include &lt;stdint.h&gt;<br/>
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <h2>DESCRIPTION</h2>
@@ -18,13 +18,13 @@ description: "ldns_buffer"
 <dt> <i>ldns_buffer</i></dt>
 <dd>
 </dd><dd>implementation of buffers to ease operations </dd>
-<p> ldns_buffers can contain arbitrary information, per octet. You can write<br />
- to the current end of a buffer, read from the current position, and<br />
+<p> ldns_buffers can contain arbitrary information, per octet. You can write<br/>
+ to the current end of a buffer, read from the current position, and<br/>
  access any data within it. </p>
 <p> Example use of buffers is in the source code of 
-ef host2str.c<br />
- struct ldns_struct_buffer<br />
- {<br />
+ef host2str.c<br/>
+ struct ldns_struct_buffer<br/>
+ {<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><code>The current position used for reading/writing:</code> </p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>size_t _position;</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><code>The read/write limit:</code></p>
@@ -39,7 +39,7 @@ ef host2str.c<br />
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> * for any reason, this value is changed. This way, you can perform</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> * multiple writes in sequence and check for success afterwards. */</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>ldns_status _status;</p>
-<p> };<br />
+<p> };<br/>
  typedef struct ldns_struct_buffer ldns_buffer;</dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>

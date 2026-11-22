@@ -11,8 +11,8 @@ description: "ccos, ccosf, ccosl – complex cosine function"
 <p> ccos, ccosf, ccosl &#8211; complex cosine function </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>
-<p> <code>double complex ccos(double complex </code><i>z</i><code>);</code><br />
- <code>float complex ccosf(float complex </code><i>z</i><code>);</code><br />
+<p> <code>double complex ccos(double complex </code><i>z</i><code>);</code><br/>
+ <code>float complex ccosf(float complex </code><i>z</i><code>);</code><br/>
  <code>long double complex ccosl(long double complex </code><i>z</i><code>);</code> </p>
 <p> Link with <i>-lm</i>.</p>
 <h2>DESCRIPTION</h2>

@@ -10,9 +10,9 @@ description: "reseq – manual page for reseq 1.0.0"
 
 <p> reseq &#8211; manual page for reseq 1.0.0</p>
 <h2>SYNOPSIS</h2>
-<p> <code>reseq</code> [<i>-t FILE</i>] <i>INPUT OUTPUT</i><br />
- <code>reseq</code> <i>&#8211;replay INPUT </i>[<i>OUTPUT</i>]<br />
- <code>reseq</code> <i>-h | &#8211;help</i><br />
+<p> <code>reseq</code> [<i>-t FILE</i>] <i>INPUT OUTPUT</i><br/>
+ <code>reseq</code> <i>&#8211;replay INPUT </i>[<i>OUTPUT</i>]<br/>
+ <code>reseq</code> <i>-h | &#8211;help</i><br/>
  <code>reseq</code> <i>-V | &#8211;version</i></p>
 <h2>DESCRIPTION</h2>
 <p> Reverse the translations made by teseq.</p>

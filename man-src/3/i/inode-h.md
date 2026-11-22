@@ -10,9 +10,9 @@ description: "inode.h –"
 <p>inode.h &#8211; </p>
 <p> C wrapper for DMLite INode API.</p>
 <h2>Synopsis</h2>
-<p>#include &#8216;dmlite.h&#8217;<br />
- #include &#8216;any.h&#8217;<br />
- #include &#8216;utils.h&#8217;<br />
+<p>#include &#8216;dmlite.h&#8217;<br/>
+ #include &#8216;any.h&#8217;<br/>
+ #include &#8216;utils.h&#8217;<br/>
  #include &lt;stdint.h&gt; </p>
 <h3>Data Structures</h3>
 <p>struct <code>dmlite_replica</code> </p>
@@ -26,63 +26,63 @@ description: "inode.h –"
 <p> enum <code>dmlite_replica_type</code> { <code>kVolatile</code> = &#8216;V&#8217;, <code>kPermanent</code> = &#8216;P&#8217; } </p>
 <p> enum <code>dmlite_file_status</code> { <code>kOnline</code> = &#8216;-&#8216;, <code>kMigrated</code> = &#8216;m&#8217; } </p>
 <h3>Functions</h3>
-<p>int <code>dmlite_ibegin</code> (<code>dmlite_context</code> *context)<br />
- <i>Starts a transaction. </i><br />
- int <code>dmlite_icommit</code> (<code>dmlite_context</code> *context)<br />
- <i>Commits the changes. </i><br />
- int <code>dmlite_irollback</code> (<code>dmlite_context</code> *context)<br />
- <i>Undo the changes. </i><br />
- int <code>dmlite_icreate</code> (<code>dmlite_context</code> *context, const <code>dmlite_xstat</code> *f)<br />
- <i>Creates a new file. </i><br />
- int <code>dmlite_isymlink</code> (<code>dmlite_context</code> *context, ino_t inode, const char *link)<br />
- <i>Associates a symlink with an existing file. </i><br />
- int <code>dmlite_iunlink</code> (<code>dmlite_context</code> *context, ino_t inode)<br />
- <i>Removes a file or directory from the database. </i><br />
- int <code>dmlite_imove</code> (<code>dmlite_context</code> *context, ino_t inode, ino_t dest)<br />
- <i>Moves a file to a different parent directory. </i><br />
- int <code>dmlite_irename</code> (<code>dmlite_context</code> *context, ino_t inode, const char *name)<br />
- <i>Changes the name of an entry. </i><br />
- int <code>dmlite_istat</code> (<code>dmlite_context</code> *context, ino_t inode, struct stat *buf)<br />
- <i>Does a stat of an entry using the inode instead of the path. </i><br />
- int <code>dmlite_istatx</code> (<code>dmlite_context</code> *context, ino_t inode, <code>dmlite_xstat</code> *buf)<br />
- <i>Does an extended stat of an entry using the inode instead of the path. </i><br />
- int <code>dmlite_istatx_by_name</code> (<code>dmlite_context</code> *context, ino_t parent, const char *name, <code>dmlite_xstat</code> *buf)<br />
- <i>Does an extended stat using the parent inode and the entry name. </i><br />
- int <code>dmlite_ireadlink</code> (<code>dmlite_context</code> *context, ino_t inode, char *path, size_t bufsize)<br />
- <i>Reads a symbolic link. </i><br />
- int <code>dmlite_iaddreplica</code> (<code>dmlite_context</code> *context, const <code>dmlite_replica</code> *replica)<br />
- <i>Adds a new replica. </i><br />
- int <code>dmlite_ideletereplica</code> (<code>dmlite_context</code> *context, const <code>dmlite_replica</code> *replica)<br />
- <i>Deletes a replica. </i><br />
- int <code>dmlite_igetreplica</code> (<code>dmlite_context</code> *context, int64_t rid, <code>dmlite_replica</code> *buf)<br />
- <i>Gets a specific replica using its replica id. </i><br />
- int <code>dmlite_igetreplicas</code> (<code>dmlite_context</code> *context, ino_t inode, unsigned *nreplicas, <code>dmlite_replica</code> **replicas)<br />
- <i>Gets all the replicas associated to a file. </i><br />
- int <code>dmlite_iutime</code> (<code>dmlite_context</code> *context, ino_t inode, const struct utimbuf *buf)<br />
- <i>Sets the access and modification time. </i><br />
- int <code>dmlite_isetmode</code> (<code>dmlite_context</code> *context, ino_t inode, uid_t uid, gid_t gid, mode_t mode, unsigned nentries, <code>dmlite_aclentry</code> *acl)<br />
- <i>Sets the mode and ACL of a file. </i><br />
- int <code>dmlite_isetsize</code> (<code>dmlite_context</code> *context, ino_t inode, size_t size)<br />
- <i>Sets the size of a file. </i><br />
- int <code>dmlite_isetchecksum</code> (<code>dmlite_context</code> *context, ino_t inode, const char *csumtype, const char *csumvalue)<br />
- <i>Sets the checksum of a file. </i><br />
- int <code>dmlite_igetcomment</code> (<code>dmlite_context</code> *context, ino_t inode, char *comment, size_t bufsize)<br />
- <i>Gets the comment associated with an entry. </i><br />
- int <code>dmlite_isetcomment</code> (<code>dmlite_context</code> *context, ino_t inode, const char *comment)<br />
- <i>Sets the comment associated with an entry. </i><br />
- int <code>dmlite_ideletecomment</code> (<code>dmlite_context</code> *context, ino_t inode)<br />
- <i>Deletes the comment associated with an entry. </i><br />
- int <code>dmlite_isetguid</code> (<code>dmlite_context</code> *context, ino_t inode, const char *guid)<br />
- <i>Sets the file Grid Unique Identifier. </i><br />
- int <code>dmlite_iupdate_xattr</code> (<code>dmlite_context</code> *context, ino_t inode, const <code>dmlite_any_dict</code> *xattr)<br />
- <i>Updates the file extended attributes. </i><br />
- <code>dmlite_idir</code> * <code>dmlite_iopendir</code> (<code>dmlite_context</code> *context, ino_t inode)<br />
- <i>Opens a directory. </i><br />
- int <code>dmlite_iclosedir</code> (<code>dmlite_context</code> *context, <code>dmlite_idir</code> *dir)<br />
- <i>Closes a directory, freeing any internally allocated memory. </i><br />
- <code>dmlite_xstat</code> * <code>dmlite_ireaddirx</code> (<code>dmlite_context</code> *context, <code>dmlite_idir</code> *dir)<br />
- <i>Reads a directory. Extended data. </i><br />
- struct dirent * <code>dmlite_ireaddir</code> (<code>dmlite_context</code> *context, <code>dmlite_idir</code> *dir)<br />
+<p>int <code>dmlite_ibegin</code> (<code>dmlite_context</code> *context)<br/>
+ <i>Starts a transaction. </i><br/>
+ int <code>dmlite_icommit</code> (<code>dmlite_context</code> *context)<br/>
+ <i>Commits the changes. </i><br/>
+ int <code>dmlite_irollback</code> (<code>dmlite_context</code> *context)<br/>
+ <i>Undo the changes. </i><br/>
+ int <code>dmlite_icreate</code> (<code>dmlite_context</code> *context, const <code>dmlite_xstat</code> *f)<br/>
+ <i>Creates a new file. </i><br/>
+ int <code>dmlite_isymlink</code> (<code>dmlite_context</code> *context, ino_t inode, const char *link)<br/>
+ <i>Associates a symlink with an existing file. </i><br/>
+ int <code>dmlite_iunlink</code> (<code>dmlite_context</code> *context, ino_t inode)<br/>
+ <i>Removes a file or directory from the database. </i><br/>
+ int <code>dmlite_imove</code> (<code>dmlite_context</code> *context, ino_t inode, ino_t dest)<br/>
+ <i>Moves a file to a different parent directory. </i><br/>
+ int <code>dmlite_irename</code> (<code>dmlite_context</code> *context, ino_t inode, const char *name)<br/>
+ <i>Changes the name of an entry. </i><br/>
+ int <code>dmlite_istat</code> (<code>dmlite_context</code> *context, ino_t inode, struct stat *buf)<br/>
+ <i>Does a stat of an entry using the inode instead of the path. </i><br/>
+ int <code>dmlite_istatx</code> (<code>dmlite_context</code> *context, ino_t inode, <code>dmlite_xstat</code> *buf)<br/>
+ <i>Does an extended stat of an entry using the inode instead of the path. </i><br/>
+ int <code>dmlite_istatx_by_name</code> (<code>dmlite_context</code> *context, ino_t parent, const char *name, <code>dmlite_xstat</code> *buf)<br/>
+ <i>Does an extended stat using the parent inode and the entry name. </i><br/>
+ int <code>dmlite_ireadlink</code> (<code>dmlite_context</code> *context, ino_t inode, char *path, size_t bufsize)<br/>
+ <i>Reads a symbolic link. </i><br/>
+ int <code>dmlite_iaddreplica</code> (<code>dmlite_context</code> *context, const <code>dmlite_replica</code> *replica)<br/>
+ <i>Adds a new replica. </i><br/>
+ int <code>dmlite_ideletereplica</code> (<code>dmlite_context</code> *context, const <code>dmlite_replica</code> *replica)<br/>
+ <i>Deletes a replica. </i><br/>
+ int <code>dmlite_igetreplica</code> (<code>dmlite_context</code> *context, int64_t rid, <code>dmlite_replica</code> *buf)<br/>
+ <i>Gets a specific replica using its replica id. </i><br/>
+ int <code>dmlite_igetreplicas</code> (<code>dmlite_context</code> *context, ino_t inode, unsigned *nreplicas, <code>dmlite_replica</code> **replicas)<br/>
+ <i>Gets all the replicas associated to a file. </i><br/>
+ int <code>dmlite_iutime</code> (<code>dmlite_context</code> *context, ino_t inode, const struct utimbuf *buf)<br/>
+ <i>Sets the access and modification time. </i><br/>
+ int <code>dmlite_isetmode</code> (<code>dmlite_context</code> *context, ino_t inode, uid_t uid, gid_t gid, mode_t mode, unsigned nentries, <code>dmlite_aclentry</code> *acl)<br/>
+ <i>Sets the mode and ACL of a file. </i><br/>
+ int <code>dmlite_isetsize</code> (<code>dmlite_context</code> *context, ino_t inode, size_t size)<br/>
+ <i>Sets the size of a file. </i><br/>
+ int <code>dmlite_isetchecksum</code> (<code>dmlite_context</code> *context, ino_t inode, const char *csumtype, const char *csumvalue)<br/>
+ <i>Sets the checksum of a file. </i><br/>
+ int <code>dmlite_igetcomment</code> (<code>dmlite_context</code> *context, ino_t inode, char *comment, size_t bufsize)<br/>
+ <i>Gets the comment associated with an entry. </i><br/>
+ int <code>dmlite_isetcomment</code> (<code>dmlite_context</code> *context, ino_t inode, const char *comment)<br/>
+ <i>Sets the comment associated with an entry. </i><br/>
+ int <code>dmlite_ideletecomment</code> (<code>dmlite_context</code> *context, ino_t inode)<br/>
+ <i>Deletes the comment associated with an entry. </i><br/>
+ int <code>dmlite_isetguid</code> (<code>dmlite_context</code> *context, ino_t inode, const char *guid)<br/>
+ <i>Sets the file Grid Unique Identifier. </i><br/>
+ int <code>dmlite_iupdate_xattr</code> (<code>dmlite_context</code> *context, ino_t inode, const <code>dmlite_any_dict</code> *xattr)<br/>
+ <i>Updates the file extended attributes. </i><br/>
+ <code>dmlite_idir</code> * <code>dmlite_iopendir</code> (<code>dmlite_context</code> *context, ino_t inode)<br/>
+ <i>Opens a directory. </i><br/>
+ int <code>dmlite_iclosedir</code> (<code>dmlite_context</code> *context, <code>dmlite_idir</code> *dir)<br/>
+ <i>Closes a directory, freeing any internally allocated memory. </i><br/>
+ <code>dmlite_xstat</code> * <code>dmlite_ireaddirx</code> (<code>dmlite_context</code> *context, <code>dmlite_idir</code> *dir)<br/>
+ <i>Reads a directory. Extended data. </i><br/>
+ struct dirent * <code>dmlite_ireaddir</code> (<code>dmlite_context</code> *context, <code>dmlite_idir</code> *dir)<br/>
  <i>Reads a directory. </i></p>
 <h2>Detailed Description</h2>
 <p>C wrapper for DMLite INode API. </p>
@@ -131,7 +131,7 @@ description: "inode.h –"
 <p>Adds a new replica. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> The DM context.<br />
+<dd><i>context</i> The DM context.<br/>
  <i>replica</i> The replica to add. replica-&gt;fileid must point to a valid file.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -148,7 +148,7 @@ description: "inode.h –"
 <p>Closes a directory, freeing any internally allocated memory. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> The DM context.<br />
+<dd><i>context</i> The DM context.<br/>
  <i>dir</i> The directory to close, as returned by dmlite_opendir.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -165,7 +165,7 @@ description: "inode.h –"
 <p>Creates a new file. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> The DM context.<br />
+<dd><i>context</i> The DM context.<br/>
  <i>f</i> Only some fields from this struct will be used. That would depend on the plugin, but usually it will be: parent, name, mode, uid, gid, size, status, checksum and ACL.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -177,7 +177,7 @@ description: "inode.h –"
 <p>Deletes the comment associated with an entry. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> The DM context.<br />
+<dd><i>context</i> The DM context.<br/>
  <i>inode</i> The file id.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -186,7 +186,7 @@ description: "inode.h –"
 <p>Deletes a replica. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> The DM context.<br />
+<dd><i>context</i> The DM context.<br/>
  <i>replica</i> The replica to remove.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -195,9 +195,9 @@ description: "inode.h –"
 <p>Gets the comment associated with an entry. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> The DM context.<br />
- <i>inode</i> The file id.<br />
- <i>comment</i> Where to put the comment.<br />
+<dd><i>context</i> The DM context.<br/>
+ <i>inode</i> The file id.<br/>
+ <i>comment</i> Where to put the comment.<br/>
  <i>bufsize</i> The size of the memory pointed by comment.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -206,8 +206,8 @@ description: "inode.h –"
 <p>Gets a specific replica using its replica id. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> The DM context.<br />
- <i>rid</i> The replica id.<br />
+<dd><i>context</i> The DM context.<br/>
+ <i>rid</i> The replica id.<br/>
  <i>buf</i> Where to put the retrieved data.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -216,9 +216,9 @@ description: "inode.h –"
 <p>Gets all the replicas associated to a file. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> The DM context.<br />
- <i>inode</i> The file id.<br />
- <i>nreplicas</i> The number of replicas will be put here.<br />
+<dd><i>context</i> The DM context.<br/>
+ <i>inode</i> The file id.<br/>
+ <i>nreplicas</i> The number of replicas will be put here.<br/>
  <i>replicas</i> It will be initialized to an array of nreplicas replicas. Free it with <code>dmlite_replicas_free</code>.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -227,8 +227,8 @@ description: "inode.h –"
 <p>Moves a file to a different parent directory. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> The DM context.<br />
- <i>inode</i> The file id.<br />
+<dd><i>context</i> The DM context.<br/>
+ <i>inode</i> The file id.<br/>
  <i>dest</i> The destination id.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -237,7 +237,7 @@ description: "inode.h –"
 <p>Opens a directory. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> The DM context.<br />
+<dd><i>context</i> The DM context.<br/>
  <i>inode</i> The directory ID.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -246,7 +246,7 @@ description: "inode.h –"
 <p>Reads a directory. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> The DM context.<br />
+<dd><i>context</i> The DM context.<br/>
  <i>dir</i> The directory to read, as returned by dmlite_opendir.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -258,7 +258,7 @@ description: "inode.h –"
 <p>Reads a directory. Extended data. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> The DM context.<br />
+<dd><i>context</i> The DM context.<br/>
  <i>dir</i> The directory to read, as returned by dmlite_opendir.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -270,9 +270,9 @@ description: "inode.h –"
 <p>Reads a symbolic link. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> The DM context.<br />
- <i>inode</i> The file id.<br />
- <i>path</i> The link will be put here.<br />
+<dd><i>context</i> The DM context.<br/>
+ <i>inode</i> The file id.<br/>
+ <i>path</i> The link will be put here.<br/>
  <i>bufsize</i> The size of the memory area pointed by path.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -281,8 +281,8 @@ description: "inode.h –"
 <p>Changes the name of an entry. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> The DM context.<br />
- <i>inode</i> The file id.<br />
+<dd><i>context</i> The DM context.<br/>
+ <i>inode</i> The file id.<br/>
  <i>name</i> The new name.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -299,9 +299,9 @@ description: "inode.h –"
 <p>Sets the checksum of a file. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> The DM context.<br />
- <i>inode</i> The file id.<br />
- <i>csumtype</i> The new checksum type.<br />
+<dd><i>context</i> The DM context.<br/>
+ <i>inode</i> The file id.<br/>
+ <i>csumtype</i> The new checksum type.<br/>
  <i>csumvalue</i> The new checksum value.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -310,8 +310,8 @@ description: "inode.h –"
 <p>Sets the comment associated with an entry. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> The DM context.<br />
- <i>inode</i> The file id.<br />
+<dd><i>context</i> The DM context.<br/>
+ <i>inode</i> The file id.<br/>
  <i>comment</i> The new comment.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -320,8 +320,8 @@ description: "inode.h –"
 <p>Sets the file Grid Unique Identifier. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> The DM context.<br />
- <i>inode</i> The entry id.<br />
+<dd><i>context</i> The DM context.<br/>
+ <i>inode</i> The entry id.<br/>
  <i>guid</i> The new GUID.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -330,12 +330,12 @@ description: "inode.h –"
 <p>Sets the mode and ACL of a file. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> The DM context.<br />
- <i>inode</i> The file id.<br />
- <i>uid</i> The new UID.<br />
- <i>gid</i> The new GID.<br />
- <i>mode</i> The new mode.<br />
- <i>nentries</i> The number of acl entries.<br />
+<dd><i>context</i> The DM context.<br/>
+ <i>inode</i> The file id.<br/>
+ <i>uid</i> The new UID.<br/>
+ <i>gid</i> The new GID.<br/>
+ <i>mode</i> The new mode.<br/>
+ <i>nentries</i> The number of acl entries.<br/>
  <i>acl</i> The new ACL.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -347,8 +347,8 @@ description: "inode.h –"
 <p>Sets the size of a file. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> The DM context.<br />
- <i>inode</i> The file id.<br />
+<dd><i>context</i> The DM context.<br/>
+ <i>inode</i> The file id.<br/>
  <i>size</i> The new size.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -357,8 +357,8 @@ description: "inode.h –"
 <p>Does a stat of an entry using the inode instead of the path. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> The DM context.<br />
- <i>inode</i> The entry inode.<br />
+<dd><i>context</i> The DM context.<br/>
+ <i>inode</i> The entry inode.<br/>
  <i>buf</i> Where to put the retrieved information.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -370,8 +370,8 @@ description: "inode.h –"
 <p>Does an extended stat of an entry using the inode instead of the path. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> The DM context.<br />
- <i>inode</i> The entry inode.<br />
+<dd><i>context</i> The DM context.<br/>
+ <i>inode</i> The entry inode.<br/>
  <i>buf</i> Where to put the retrieved information.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -383,9 +383,9 @@ description: "inode.h –"
 <p>Does an extended stat using the parent inode and the entry name. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> The DM context.<br />
- <i>parent</i> The parent id.<br />
- <i>name</i> The entry name.<br />
+<dd><i>context</i> The DM context.<br/>
+ <i>parent</i> The parent id.<br/>
+ <i>name</i> The entry name.<br/>
  <i>buf</i> Where to put the retrieved information.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -394,8 +394,8 @@ description: "inode.h –"
 <p>Associates a symlink with an existing file. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> The DM context.<br />
- <i>inode</i> The file that will be a symlink.<br />
+<dd><i>context</i> The DM context.<br/>
+ <i>inode</i> The file that will be a symlink.<br/>
  <i>link</i> The destination link.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -404,7 +404,7 @@ description: "inode.h –"
 <p>Removes a file or directory from the database. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> The DM context.<br />
+<dd><i>context</i> The DM context.<br/>
  <i>inode</i> The id of the entry to remove.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -416,8 +416,8 @@ description: "inode.h –"
 <p>Updates the file extended attributes. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> The DM context.<br />
- <i>inode</i> The entry id.<br />
+<dd><i>context</i> The DM context.<br/>
+ <i>inode</i> The entry id.<br/>
  <i>xattr</i> The new set of extended attributes.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -426,8 +426,8 @@ description: "inode.h –"
 <p>Sets the access and modification time. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>context</i> The DM context.<br />
- <i>inode</i> The file id.<br />
+<dd><i>context</i> The DM context.<br/>
+ <i>inode</i> The file id.<br/>
  <i>buf</i> The timestamps.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

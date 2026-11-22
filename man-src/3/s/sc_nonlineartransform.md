@@ -14,13 +14,13 @@ description: "sc::NonlinearTransform –"
 <p> Inherits <code>sc::RefCount</code>. </p>
 <p> Inherited by <code>sc::IdentityTransform</code>.</p>
 <h3>Public Member Functions</h3>
-<p> virtual void <code>transform_coordinates</code> (const <code>RefSCVector</code> &amp;x)=0<br />
- <i></i><code>Transform</code> the coordinates.<br />
- virtual void <code>transform_gradient</code> (const <code>RefSCVector</code> &amp;g)<br />
- <i></i><code>Transform</code> the gradient at a <code>point</code> in the new coordinate system.<br />
- virtual void <code>transform_hessian</code> (const <code>RefSymmSCMatrix</code> &amp;h)<br />
- <i></i><code>Transform</code> the hessian to the new coordinate system.<br />
- virtual void <code>transform_ihessian</code> (const <code>RefSymmSCMatrix</code> &amp;ih)<br />
+<p> virtual void <code>transform_coordinates</code> (const <code>RefSCVector</code> &amp;x)=0<br/>
+ <i></i><code>Transform</code> the coordinates.<br/>
+ virtual void <code>transform_gradient</code> (const <code>RefSCVector</code> &amp;g)<br/>
+ <i></i><code>Transform</code> the gradient at a <code>point</code> in the new coordinate system.<br/>
+ virtual void <code>transform_hessian</code> (const <code>RefSymmSCMatrix</code> &amp;h)<br/>
+ <i></i><code>Transform</code> the hessian to the new coordinate system.<br/>
+ virtual void <code>transform_ihessian</code> (const <code>RefSymmSCMatrix</code> &amp;ih)<br/>
  <i></i><code>Transform</code> the inverse of the hessian.</p>
 <h3>Protected Attributes</h3>
 <p> <code>RefSCMatrix</code> <code>linear_transform_</code> </p>

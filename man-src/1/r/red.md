@@ -38,12 +38,12 @@ description: "ed – line-oriented text editor"
 <p> Start edit by reading in &#8216;file&#8217; if given. If &#8216;file&#8217; begins with a &#8216;!&#8217;, read output of shell command. </p>
 <p> Exit status: 0 for a normal exit, 1 for environmental problems (file not found, invalid flags, I/O errors, etc), 2 to indicate a corrupt or invalid input file, 3 for an internal consistency error (e.g., bug) which caused ed to panic.</p>
 <h2>REPORTING BUGS</h2>
-<p> Report bugs to bug-ed [at] gnu.org<br />
- Ed home page: <a rel="nofollow" href="http://www.gnu.org/software/ed/ed.html">http://www.gnu.org/software/ed/ed.html</a><br />
+<p> Report bugs to bug-ed [at] gnu.org<br/>
+ Ed home page: <a rel="nofollow" href="http://www.gnu.org/software/ed/ed.html">http://www.gnu.org/software/ed/ed.html</a><br/>
  General help using GNU software: <a rel="nofollow" href="http://www.gnu.org/gethelp">http://www.gnu.org/gethelp</a></p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 1994 Andrew L. Moore.<br />
- Copyright &#169; 2022 Antonio Diaz Diaz. License GPLv2+: GNU GPL version 2 or later &lt;<a rel="nofollow" href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt;<br />
+<p> Copyright &#169; 1994 Andrew L. Moore.<br/>
+ Copyright &#169; 2022 Antonio Diaz Diaz. License GPLv2+: GNU GPL version 2 or later &lt;<a rel="nofollow" href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt;<br/>
  This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.</p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>ed</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>ed</code> programs are properly installed at your site, the command</p>

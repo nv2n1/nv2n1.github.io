@@ -15,17 +15,17 @@ description: "QuantLib::CalibrationHelper – liquid market instrument used duri
 <h3>Public Member Functions</h3>
 <p> <code>CalibrationHelper</code> (const <code>Handle</code>&lt; <code>Quote</code> &gt; &amp;volatility, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;termStructure, bool calibrateVolatility=false) </p>
 <p> void <code>update</code> () </p>
-<p> <code>Real</code> <code>marketValue</code> () const<br />
- <i>returns the actual price of the instrument (from volatility) </i><br />
- virtual <code>Real</code> <code>modelValue</code> () const =0<br />
- <i>returns the price of the instrument according to the model </i><br />
- virtual <code>Real</code> <code>calibrationError</code> ()<br />
- <i>returns the error resulting from the model valuation </i><br />
+<p> <code>Real</code> <code>marketValue</code> () const<br/>
+ <i>returns the actual price of the instrument (from volatility) </i><br/>
+ virtual <code>Real</code> <code>modelValue</code> () const =0<br/>
+ <i>returns the price of the instrument according to the model </i><br/>
+ virtual <code>Real</code> <code>calibrationError</code> ()<br/>
+ <i>returns the error resulting from the model valuation </i><br/>
  virtual void <code>addTimesTo</code> (std::list&lt; Time &gt; &amp;times) const =0 </p>
-<p> Volatility <code>impliedVolatility</code> (<code>Real</code> targetValue, <code>Real</code> accuracy, Size maxEvaluations, Volatility minVol, Volatility maxVol) const<br />
- <i>Black volatility implied by the model. </i><br />
- virtual <code>Real</code> <code>blackPrice</code> (Volatility volatility) const =0<br />
- <i>Black price given a volatility. </i><br />
+<p> Volatility <code>impliedVolatility</code> (<code>Real</code> targetValue, <code>Real</code> accuracy, Size maxEvaluations, Volatility minVol, Volatility maxVol) const<br/>
+ <i>Black volatility implied by the model. </i><br/>
+ virtual <code>Real</code> <code>blackPrice</code> (Volatility volatility) const =0<br/>
+ <i>Black price given a volatility. </i><br/>
  void <code>setPricingEngine</code> (const boost::shared_ptr&lt; <code>PricingEngine</code> &gt; &amp;engine) </p>
 <h3>Protected Attributes</h3>
 <p> <code>Real</code> <code>marketValue_</code> </p>

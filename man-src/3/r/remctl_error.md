@@ -17,11 +17,11 @@ const char *remctl_error(struct remctl *r);</code></pre>
 
 <i>remctl_error()</i> returns the error from a previously failed remctl operation. Its only argument is a remctl struct as returned by <i>remctl_new()</i>. If the previous remctl operation was successful, returns the constant string ``No error''. 
 
- The caller may not modify the returned string. The string may even be stored in read-only memory and attempting to modify it may cause a memory fault. The returned pointer will be invalidated by the next call to any remctl <font SIZE="-1">API</font> function with the same client object, other than <i>remctl_error()</i>.
+ The caller may not modify the returned string. The string may even be stored in read-only memory and attempting to modify it may cause a memory fault. The returned pointer will be invalidated by the next call to any remctl API function with the same client object, other than <i>remctl_error()</i>.
 
 <h2>Return Value</h2>
 
-<i>remctl_error()</i> returns either the previous error or the constant string ``No error''. It will never return <font SIZE="-1">NULL.</font>
+<i>remctl_error()</i> returns either the previous error or the constant string ``No error''. It will never return NULL.
 
 <h2>Compatibility</h2>
 

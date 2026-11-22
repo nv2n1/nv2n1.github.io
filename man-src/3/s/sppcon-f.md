@@ -10,7 +10,7 @@ description: "sppcon.f –"
 <p>sppcon.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>sppcon</code> (UPLO, N, AP, ANORM, RCOND, WORK, IWORK, INFO)<br />
+<p>subroutine <code>sppcon</code> (UPLO, N, AP, ANORM, RCOND, WORK, IWORK, INFO)<br/>
  <i></i><code>SPPCON</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sppcon (characterUPLO, integerN, real, dimension( * )AP, realANORM, realRCOND, real, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>

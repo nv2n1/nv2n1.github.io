@@ -12,7 +12,7 @@ description: "std::_Fwd_list_base< _Tp, _Alloc > –"
 <p> Inherited by <code>std::forward_list&lt; _Tp, _Alloc &gt;</code> [private].</p>
 <h3>Public Types</h3>
 <p>typedef <code>_Fwd_list_node</code>&lt; _Tp &gt; <code>_Node</code> </p>
-<p> typedef<br />
+<p> typedef<br/>
  <code>_Fwd_list_const_iterator</code>&lt; _Tp &gt; <code>const_iterator</code>&quot; </p>
 <p> typedef <code>_Fwd_list_iterator</code>&lt; _Tp &gt; <code>iterator</code></p>
 <h3>Public Member Functions</h3>
@@ -22,18 +22,18 @@ description: "std::_Fwd_list_base< _Tp, _Alloc > –"
 <p> _Node_alloc_type &amp; <code>_M_get_Node_allocator</code> () noexcept </p>
 <p> const _Node_alloc_type &amp; <code>_M_get_Node_allocator</code> () const noexcept</p>
 <h3>Protected Types</h3>
-<p>typedef<br />
- <code>__gnu_cxx::__alloc_traits</code><br />
+<p>typedef<br/>
+ <code>__gnu_cxx::__alloc_traits</code><br/>
  &lt; _Alloc &gt; <code>_Alloc_traits</code>&quot; </p>
-<p> typedef<br />
- <code>__gnu_cxx::__alloc_traits</code><br />
+<p> typedef<br/>
+ <code>__gnu_cxx::__alloc_traits</code><br/>
  &lt; _Node_alloc_type &gt; <code>_Node_alloc_traits</code>&quot; </p>
-<p> typedef<br />
- _Alloc_traits::template rebind<br />
+<p> typedef<br/>
+ _Alloc_traits::template rebind<br/>
  &lt; <code>_Fwd_list_node</code>&lt; _Tp &gt; </p>
 <p>&nbsp;<wbr>&gt;::other&nbsp;<wbr><code>_Node_alloc_type</code>&quot; </p>
-<p> typedef<br />
- _Alloc_traits::template rebind<br />
+<p> typedef<br/>
+ _Alloc_traits::template rebind<br/>
  &lt; _Tp &gt;::other <code>_Tp_alloc_type</code>&quot;</p>
 <h3>Protected Member Functions</h3>
 <p>template&lt;typename&#8230; _Args&gt; <code>_Node</code> * <code>_M_create_node</code> (_Args &amp;&amp;&#8230;__args) </p>

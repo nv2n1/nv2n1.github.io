@@ -11,7 +11,7 @@ description: "clasr.f –"
 <p> clasr.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>clasr</code> (SIDE, PIVOT, DIRECT, M, N, C, S, A, LDA)<br />
+<p> subroutine <code>clasr</code> (SIDE, PIVOT, DIRECT, M, N, C, S, A, LDA)<br/>
  <i></i><code>CLASR</code> applies a sequence of plane rotations to a general rectangular matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine clasr (characterSIDE, characterPIVOT, characterDIRECT, integerM, integerN, real, dimension( * )C, real, dimension( * )S, complex, dimension( lda, * )A, integerLDA)</h3>

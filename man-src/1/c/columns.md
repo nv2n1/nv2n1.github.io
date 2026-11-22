@@ -22,8 +22,8 @@ description: "columns – Columnize Input Text"
 <pre>
 in the range  16 through 4095
 </pre>
-<p> The default <i>num</i> for this option is:<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><br />
+<p> The default <i>num</i> for this option is:<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><br/>
 &nbsp;<wbr>79 </p>
 <p> This option specifies the full width of the output line, including any start-of-line indentation. The output will fill each line as completely as possible, unless the column width has been explicitly specified. If the maximum width is less than the length of the widest input, you will get a single column of output.</p>
 <dt><code>-c</code> <i>count</i>, <code>&#8211;columns</code>=<i>count</i></dt>
@@ -31,8 +31,8 @@ in the range  16 through 4095
 <pre>
 in the range  1 through 2048
 </pre>
-<p> The default <i>count</i> for this option is:<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><br />
+<p> The default <i>count</i> for this option is:<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><br/>
 &nbsp;<wbr>0 </p>
 <p> Use this option to specify exactly how many columns to produce. If that many columns will not fit within <code>line_width</code>, then the count will be reduced to the number that fit.</p>
 <dt><code>-w</code> <i>num</i>, <code>&#8211;col-width</code>=<i>num</i></dt>
@@ -40,13 +40,13 @@ in the range  1 through 2048
 <pre>
 in the range  1 through 2048
 </pre>
-<p> The default <i>num</i> for this option is:<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><br />
+<p> The default <i>num</i> for this option is:<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><br/>
 &nbsp;<wbr>0 </p>
 <p> Use this option to specify exactly how many characters are to be allocated for each column. If it is narrower than the widest entry, it will be over-ridden with the required width.</p>
 <dt><code>&#8211;tab-width</code>=<i>num</i></dt>
-<dd> tab width. This option takes an integer number as its argument. The default <i>num</i> for this option is:<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><br />
+<dd> tab width. This option takes an integer number as its argument. The default <i>num</i> for this option is:<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><br/>
 &nbsp;<wbr>8 </dd>
 <p> If an indentation string contains tabs, then this value is used to compute the ending column of the prefix string.</dl>
 <h3>Specify how to lay out the text</h3>
@@ -56,8 +56,8 @@ in the range  1 through 2048
 <pre>
 in the range  1 through 1024
 </pre>
-<p> The default <i>num</i> for this option is:<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><br />
+<p> The default <i>num</i> for this option is:<br/>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><br/>
 &nbsp;<wbr>0 </p>
 <p> Use this option to specify exactly how many characters may be added to each column. It allows you to prevent columns from becoming too far apart. Without this option, <i>columns</i> will attempt to widen columns to fill the full width.</p>
 <dt><code>&#8211;fill</code></dt>

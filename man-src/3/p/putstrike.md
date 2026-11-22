@@ -10,102 +10,102 @@ description: "QuantLib::DigitalCoupon – Digital-payoff coupon."
 
 <p>QuantLib::DigitalCoupon &#8211; Digital-payoff coupon. </p>
 
-<p> <br />
+<p> <br/>
  </p>
 <p>#include &lt;ql/cashflows/digitalcoupon.hpp&gt; </p>
 <p>Inherits <code>QuantLib::FloatingRateCoupon</code>. </p>
 <p>Inherited by <code>DigitalCmsCoupon</code>, and <code>DigitalIborCoupon</code>. </p>
 <h3>Public Member Functions</h3>
-<p> <code>Constructors</code> <br />
+<p> <code>Constructors</code> <br/>
  </p>
-<p> <br />
- <code>DigitalCoupon</code> (const boost::shared_ptr&lt; <code>FloatingRateCoupon</code> &gt; &amp;underlying, <code>Rate</code> callStrike=<code>Null</code>&lt; <code>Rate</code> &gt;(), Position::Type callPosition=Position::Long, bool isCallITMIncluded=false, <code>Rate</code> callDigitalPayoff=<code>Null</code>&lt; <code>Rate</code> &gt;(), <code>Rate</code> putStrike=<code>Null</code>&lt; <code>Rate</code> &gt;(), Position::Type putPosition=Position::Long, bool isPutITMIncluded=false, <code>Rate</code> putDigitalPayoff=<code>Null</code>&lt; <code>Rate</code> &gt;(), const boost::shared_ptr&lt; DigitalReplication &gt; &amp;replication=boost::shared_ptr&lt; DigitalReplication &gt;()) <br />
+<p> <br/>
+ <code>DigitalCoupon</code> (const boost::shared_ptr&lt; <code>FloatingRateCoupon</code> &gt; &amp;underlying, <code>Rate</code> callStrike=<code>Null</code>&lt; <code>Rate</code> &gt;(), Position::Type callPosition=Position::Long, bool isCallITMIncluded=false, <code>Rate</code> callDigitalPayoff=<code>Null</code>&lt; <code>Rate</code> &gt;(), <code>Rate</code> putStrike=<code>Null</code>&lt; <code>Rate</code> &gt;(), Position::Type putPosition=Position::Long, bool isPutITMIncluded=false, <code>Rate</code> putDigitalPayoff=<code>Null</code>&lt; <code>Rate</code> &gt;(), const boost::shared_ptr&lt; DigitalReplication &gt; &amp;replication=boost::shared_ptr&lt; DigitalReplication &gt;()) <br/>
  <i>general constructor </i> </p>
-<p> <code>Coupon interface</code> <br />
+<p> <code>Coupon interface</code> <br/>
  </p>
-<p> <br />
- <code>Rate</code> <code>rate</code> () const <br />
- <i>accrued rate </i> <br />
- <code>Rate</code> <code>convexityAdjustment</code> () const <br />
+<p> <br/>
+ <code>Rate</code> <code>rate</code> () const <br/>
+ <i>accrued rate </i> <br/>
+ <code>Rate</code> <code>convexityAdjustment</code> () const <br/>
  <i>convexity adjustment </i> </p>
-<p> <code>Digital inspectors</code> <br />
+<p> <code>Digital inspectors</code> <br/>
  </p>
-<p> <br />
- <code>Rate</code> <code>callStrike</code> () const <br />
- <br />
- <code>Rate</code> <code>putStrike</code> () const <br />
- <br />
- <code>Rate</code> <code>callDigitalPayoff</code> () const <br />
- <br />
- <code>Rate</code> <code>putDigitalPayoff</code> () const <br />
- <br />
- bool <code>hasPut</code> () const <br />
- <br />
- bool <code>hasCall</code> () const <br />
- <br />
- bool <code>hasCollar</code> () const <br />
- <br />
- bool <code>isLongPut</code> () const <br />
- <br />
- bool <code>isLongCall</code> () const <br />
- <br />
- boost::shared_ptr&lt; <code>FloatingRateCoupon</code> &gt; <code>underlying</code> () const <br />
- <br />
- <code>Rate</code> <code>callOptionRate</code> () const <br />
- <br />
- <code>Rate</code> <code>putOptionRate</code> () const <br />
+<p> <br/>
+ <code>Rate</code> <code>callStrike</code> () const <br/>
+ <br/>
+ <code>Rate</code> <code>putStrike</code> () const <br/>
+ <br/>
+ <code>Rate</code> <code>callDigitalPayoff</code> () const <br/>
+ <br/>
+ <code>Rate</code> <code>putDigitalPayoff</code> () const <br/>
+ <br/>
+ bool <code>hasPut</code> () const <br/>
+ <br/>
+ bool <code>hasCall</code> () const <br/>
+ <br/>
+ bool <code>hasCollar</code> () const <br/>
+ <br/>
+ bool <code>isLongPut</code> () const <br/>
+ <br/>
+ bool <code>isLongCall</code> () const <br/>
+ <br/>
+ boost::shared_ptr&lt; <code>FloatingRateCoupon</code> &gt; <code>underlying</code> () const <br/>
+ <br/>
+ <code>Rate</code> <code>callOptionRate</code> () const <br/>
+ <br/>
+ <code>Rate</code> <code>putOptionRate</code> () const <br/>
  </p>
-<p> <code>Observer interface</code> <br />
+<p> <code>Observer interface</code> <br/>
  </p>
-<p> <br />
- void <code>update</code> () <br />
+<p> <br/>
+ void <code>update</code> () <br/>
  </p>
-<p> <code>Visitability</code> <br />
+<p> <code>Visitability</code> <br/>
  </p>
-<p> <br />
- virtual void <code>accept</code> (<code>AcyclicVisitor</code> &amp;) <br />
- <br />
- void <code>setPricer</code> (const boost::shared_ptr&lt; <code>FloatingRateCouponPricer</code> &gt; &amp;pricer) <br />
+<p> <br/>
+ virtual void <code>accept</code> (<code>AcyclicVisitor</code> &amp;) <br/>
+ <br/>
+ void <code>setPricer</code> (const boost::shared_ptr&lt; <code>FloatingRateCouponPricer</code> &gt; &amp;pricer) <br/>
   </p>
 <h3>Protected Attributes</h3>
-<p> <code>Data members</code> <br />
+<p> <code>Data members</code> <br/>
  </p>
-<p> <br />
- boost::shared_ptr&lt; <code>FloatingRateCoupon</code> &gt; <code>underlying_</code> <br />
- <br />
- <code>Rate</code> <code>callStrike_</code> <br />
- <i>strike rate for the the call option </i> <br />
- <code>Rate</code> <code>putStrike_</code> <br />
- <i>strike rate for the the put option </i> <br />
- <code>Real</code> <code>callCsi_</code> <br />
- <i>multiplicative factor of call payoff </i> <br />
- <code>Real</code> <code>putCsi_</code> <br />
- <i>multiplicative factor of put payoff </i> <br />
- bool <code>isCallATMIncluded_</code> <br />
- <i>inclusion flag og the call payoff if the call option ends at-the-money </i> <br />
- bool <code>isPutATMIncluded_</code> <br />
- <i>inclusion flag og the put payoff if the put option ends at-the-money </i> <br />
- bool <code>isCallCashOrNothing_</code> <br />
- <i>digital call option type: if true, cash-or-nothing, if false asset-or-nothing </i> <br />
- bool <code>isPutCashOrNothing_</code> <br />
- <i>digital put option type: if true, cash-or-nothing, if false asset-or-nothing </i> <br />
- <code>Rate</code> <code>callDigitalPayoff_</code> <br />
- <i>digital call option payoff rate, if any </i> <br />
- <code>Rate</code> <code>putDigitalPayoff_</code> <br />
- <i>digital put option payoff rate, if any </i> <br />
- <code>Real</code> <code>callLeftEps_</code> <br />
- <i>the left and right gaps applied in payoff replication for call </i> <br />
- <code>Real</code> <code>callRightEps_</code> <br />
- <br />
- <code>Real</code> <code>putLeftEps_</code> <br />
- <i>the left and right gaps applied in payoff replication for puf </i> <br />
- <code>Real</code> <code>putRightEps_</code> <br />
- <br />
- bool <code>hasPutStrike_</code> <br />
- <br />
- bool <code>hasCallStrike_</code> <br />
- <br />
- Replication::Type <code>replicationType_</code> <br />
+<p> <br/>
+ boost::shared_ptr&lt; <code>FloatingRateCoupon</code> &gt; <code>underlying_</code> <br/>
+ <br/>
+ <code>Rate</code> <code>callStrike_</code> <br/>
+ <i>strike rate for the the call option </i> <br/>
+ <code>Rate</code> <code>putStrike_</code> <br/>
+ <i>strike rate for the the put option </i> <br/>
+ <code>Real</code> <code>callCsi_</code> <br/>
+ <i>multiplicative factor of call payoff </i> <br/>
+ <code>Real</code> <code>putCsi_</code> <br/>
+ <i>multiplicative factor of put payoff </i> <br/>
+ bool <code>isCallATMIncluded_</code> <br/>
+ <i>inclusion flag og the call payoff if the call option ends at-the-money </i> <br/>
+ bool <code>isPutATMIncluded_</code> <br/>
+ <i>inclusion flag og the put payoff if the put option ends at-the-money </i> <br/>
+ bool <code>isCallCashOrNothing_</code> <br/>
+ <i>digital call option type: if true, cash-or-nothing, if false asset-or-nothing </i> <br/>
+ bool <code>isPutCashOrNothing_</code> <br/>
+ <i>digital put option type: if true, cash-or-nothing, if false asset-or-nothing </i> <br/>
+ <code>Rate</code> <code>callDigitalPayoff_</code> <br/>
+ <i>digital call option payoff rate, if any </i> <br/>
+ <code>Rate</code> <code>putDigitalPayoff_</code> <br/>
+ <i>digital put option payoff rate, if any </i> <br/>
+ <code>Real</code> <code>callLeftEps_</code> <br/>
+ <i>the left and right gaps applied in payoff replication for call </i> <br/>
+ <code>Real</code> <code>callRightEps_</code> <br/>
+ <br/>
+ <code>Real</code> <code>putLeftEps_</code> <br/>
+ <i>the left and right gaps applied in payoff replication for puf </i> <br/>
+ <code>Real</code> <code>putRightEps_</code> <br/>
+ <br/>
+ bool <code>hasPutStrike_</code> <br/>
+ <br/>
+ bool <code>hasCallStrike_</code> <br/>
+ <br/>
+ Replication::Type <code>replicationType_</code> <br/>
  <i>Type of replication. </i>  </p>
 <h2>Detailed Description</h2>
 <p>Digital-payoff coupon. </p>

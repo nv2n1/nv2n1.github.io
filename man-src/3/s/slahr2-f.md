@@ -10,7 +10,7 @@ description: "slahr2.f –"
 <p>slahr2.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>slahr2</code> (N, K, NB, A, LDA, TAU, T, LDT, Y, LDY)<br />
+<p>subroutine <code>slahr2</code> (N, K, NB, A, LDA, TAU, T, LDT, Y, LDY)<br/>
  <i></i><code>SLAHR2</code> reduces the specified number of first columns of a general rectangular matrix A so that elements below the specified subdiagonal are zero, and returns auxiliary matrices which are needed to apply the transformation to the unreduced part of A.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slahr2 (integerN, integerK, integerNB, real, dimension( lda, * )A, integerLDA, real, dimension( nb )TAU, real, dimension( ldt, nb )T, integerLDT, real, dimension( ldy, nb )Y, integerLDY)</h3>
@@ -110,7 +110,7 @@ description: "slahr2.f –"
 <p>&nbsp;<wbr></dd></dl>
 <p> <code>References: </code></p>
 <dl>
-<dd>Gregorio Quintana-Orti and Robert van de Geijn, &#8216;Improving the<br />
+<dd>Gregorio Quintana-Orti and Robert van de Geijn, &#8216;Improving the<br/>
 &nbsp;<wbr>&nbsp;<wbr>performance of reduction to Hessenberg form,&#8217;&nbsp;<wbr>ACM Transactions on Mathematical Software,&nbsp;<wbr>32(2):180-194, June 2006.&nbsp;<wbr></dd></dl>
 <p> Definition at line 182 of file slahr2.f.</p>
 <h2>Author</h2>

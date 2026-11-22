@@ -10,8 +10,8 @@ description: "ql/models/marketmodels/correlations/expcorrelations.hpp – expone
 
 <p> ql/models/marketmodels/correlations/expcorrelations.hpp &#8211; exponential correlation matrix </p>
 <h2>SYNOPSIS</h2>
-<p> #include &lt;ql/math/matrix.hpp&gt;<br />
- #include &lt;ql/utilities/disposable.hpp&gt;<br />
+<p> #include &lt;ql/math/matrix.hpp&gt;<br/>
+ #include &lt;ql/utilities/disposable.hpp&gt;<br/>
  #include &lt;ql/models/marketmodels/piecewiseconstantcorrelation.hpp&gt; </p>
 <h3>Functions</h3>
 <p> Disposable&lt; Matrix &gt; <code>exponentialCorrelations</code> (const std::vector&lt; Time &gt; &amp;rateTimes, Real longTermCorr=0.5, Real beta=0.2, Real gamma=1.0, Time t=0.0) </p>

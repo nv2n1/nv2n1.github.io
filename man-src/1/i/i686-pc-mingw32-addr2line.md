@@ -10,13 +10,13 @@ description: "addr2line – convert addresses into file names and line numbers."
 
 <p> addr2line &#8211; convert addresses into file names and line numbers. </p>
 <h2>SYNOPSIS</h2>
-<p> addr2line [<code>-b</code> <i>bfdname</i>|<code>&#8211;target=</code><i>bfdname</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>-C</code>|<code>&#8211;demangle</code>[=<i>style</i>]]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>-e</code>&nbsp;<wbr><i>filename</i>|<code>&#8211;exe=</code><i>filename</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>-f</code>|<code>&#8211;functions</code>]&nbsp;<wbr>[<code>-s</code>|<code>&#8211;basename</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>-i</code>|<code>&#8211;inlines</code>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>-j</code>|<code>&#8211;section=</code><i>name</i>]<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>-H</code>|<code>&#8211;help</code>]&nbsp;<wbr>[<code>-V</code>|<code>&#8211;version</code>]<br />
+<p> addr2line [<code>-b</code> <i>bfdname</i>|<code>&#8211;target=</code><i>bfdname</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>-C</code>|<code>&#8211;demangle</code>[=<i>style</i>]]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>-e</code>&nbsp;<wbr><i>filename</i>|<code>&#8211;exe=</code><i>filename</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>-f</code>|<code>&#8211;functions</code>]&nbsp;<wbr>[<code>-s</code>|<code>&#8211;basename</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>-i</code>|<code>&#8211;inlines</code>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>-j</code>|<code>&#8211;section=</code><i>name</i>]<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>-H</code>|<code>&#8211;help</code>]&nbsp;<wbr>[<code>-V</code>|<code>&#8211;version</code>]<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[addr addr &#8230;]</p>
 <h2>DESCRIPTION</h2>
 <p> <code>addr2line</code> translates addresses into file names and line numbers. Given an address in an executable or an offset in a section of a relocatable object, it uses the debugging information to figure out which file name and line number are associated with it. </p>
@@ -24,7 +24,7 @@ description: "addr2line – convert addresses into file names and line numbers."
 <p> <code>addr2line</code> has two modes of operation. </p>
 <p> In the first, hexadecimal addresses are specified on the command line, and <code>addr2line</code> displays the file name and line number for each address. </p>
 <p> In the second, <code>addr2line</code> reads hexadecimal addresses from standard input, and prints the file name and line number for each address on standard output. In this mode, <code>addr2line</code> may be used in a pipe to convert dynamically chosen addresses. </p>
-<p> The format of the output is <font SIZE="-1"><code>FILENAME:LINENO</code></font>. The file name and line number for each address is printed on a separate line. If the <code>-f</code> option is used, then each <font SIZE="-1"><code>FILENAME:LINENO</code></font> line is preceded by a <font SIZE="-1"><code>FUNCTIONNAME</code></font> line which is the name of the function containing the address. </p>
+<p> The format of the output is <code>FILENAME:LINENO</code>. The file name and line number for each address is printed on a separate line. If the <code>-f</code> option is used, then each <code>FILENAME:LINENO</code> line is preceded by a <code>FUNCTIONNAME</code> line which is the name of the function containing the address. </p>
 <p> If the file name or function name can not be determined, <code>addr2line</code> will print two question marks in their place. If the line number can not be determined, <code>addr2line</code> will print 0.</p>
 <h2>OPTIONS</h2>
 <p> The long and short forms of options, shown here as alternatives, are equivalent.</p>
@@ -36,7 +36,7 @@ description: "addr2line – convert addresses into file names and line numbers."
 <dt><code>-C</code></dt>
 <dd>
 </dd><dt><code>&#8211;demangle[=</code><i>style</i><code>]</code></dt>
-<dd> Decode (<i>demangle</i>) low-level symbol names into user-level names. Besides removing any initial underscore prepended by the system, this makes C<font SIZE="-2">++</font> function names readable. Different compilers have different mangling styles. The optional demangling style argument can be used to choose an appropriate demangling style for your compiler.</dd>
+<dd> Decode (<i>demangle</i>) low-level symbol names into user-level names. Besides removing any initial underscore prepended by the system, this makes C++ function names readable. Different compilers have different mangling styles. The optional demangling style argument can be used to choose an appropriate demangling style for your compiler.</dd>
 <dt><code>-e</code> <i>filename</i></dt>
 <dd>
 </dd><dt><code>&#8211;exe=</code><i>filename</i></dt>
@@ -64,4 +64,4 @@ description: "addr2line – convert addresses into file names and line numbers."
 <p> Info entries for <i>binutils</i>.</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009 Free Software Foundation, Inc. </p>
-<p> Permission is granted to copy, distribute and/or modify this document under the terms of the <font SIZE="-1">GNU</font> Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts. A copy of the license is included in the section entitled &#8220;<font SIZE="-1">GNU</font> Free Documentation License&#8221;. </p>
+<p> Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts. A copy of the license is included in the section entitled &#8220;GNU Free Documentation License&#8221;. </p>

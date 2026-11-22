@@ -13,7 +13,7 @@ description: "PAPIF_get_event_info –"
 <h2>Detailed Description</h2>
 <p><code>Fortran Interface:</code></p>
 <dl COMPACT>
-<dd>#include &#8216;fpapi.h&#8217;<br />
+<dd>#include &#8216;fpapi.h&#8217;<br/>
  <code>PAPIF_get_event_info</code>(C_INT EventCode, C_STRING symbol, C_STRING long_descr, C_STRING short_descr, C_INT count, C_STRING event_note, C_INT flags, C_INT check )</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>

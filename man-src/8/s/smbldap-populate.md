@@ -14,7 +14,7 @@ smbldap-populate [ldif-file]
 
 <h2>Description</h2>
 
-The smbldap-populate command helps to populate an <font SIZE="-1">LDAP</font> server by adding the necessary entries : base suffix (doesn't abort if already there), organizational units for users, groups and computers, builtin users : Administrator and guest, builtin groups (though posixAccount only, no SambaTNG support). 
+The smbldap-populate command helps to populate an LDAP server by adding the necessary entries : base suffix (doesn't abort if already there), organizational units for users, groups and computers, builtin users : Administrator and guest, builtin groups (though posixAccount only, no SambaTNG support). 
 
  -a name Your local administrator login name (default: root) 
 

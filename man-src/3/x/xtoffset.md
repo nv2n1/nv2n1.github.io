@@ -29,6 +29,6 @@ description: "XtOffset, XtOffsetOf, XtNumber – determine the byte offset or nu
 <p> The <code>XtOffsetOf</code> macro expands to a constant expression that gives the offset in bytes to the specified structure member from the beginning of the structure. It is normally used to statically initialize resource lists and is more portable than <code>XtOffset</code>, which serves the same function. </p>
 <p> The <code>XtNumber</code> macro returns the number of elements in the specified argument lists, resources lists, and other counted arrays.</p>
 <h2>See Also</h2>
-<p><a href="/docs/linux/man/3-xtgetresourcelist/">XtGetResourceList</a>(3), <a href="/docs/linux/man/3-xtsetarg/">XtSetArg</a>(3)<br />
- <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+<p><a href="/docs/linux/man/3-xtgetresourcelist/">XtGetResourceList</a>(3), <a href="/docs/linux/man/3-xtsetarg/">XtSetArg</a>(3)<br/>
+ <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br/>
  <i>Xlib &#8211; C Language X Interface</i></p>

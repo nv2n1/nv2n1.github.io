@@ -51,4 +51,4 @@ description: "gtkpod – GTK2 based software for managing songs and playlists on
 </pre>
 <p> This manpage was written by Frank Lichtenheld.</p>
 <h2>COPYRIGHT AND LICENSE</h2>
-<p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2, or (at your option) any later version. </p>
+<p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2, or (at your option) any later version. </p>

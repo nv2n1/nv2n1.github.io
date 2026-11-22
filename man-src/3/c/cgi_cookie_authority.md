@@ -17,8 +17,8 @@ description: "cgi_cookie_authority – determine the cookie authority for a doma
 char *cgi_cookie_authority(CGI *cgi, const char *host);
 </code></pre>
 <h2>ARGUMENTS</h2>
-<p> cgi &#8211; a CGI struct<br />
- host &#8211; optional host to match against. If NULL, the function<br />
+<p> cgi &#8211; a CGI struct<br/>
+ host &#8211; optional host to match against. If NULL, the function<br/>
  will use the HTTP.Host HDF variable. </p>
 <h2>DESCRIPTION</h2>
 <p> cgi_cookie_authority will walk the CookieAuthority portion of the CGI HDF data set, and return the matching domain if it exists. The purpose of this is so that you set domain specific cookies. For instance, you might have CookieAuthority.0 = neotonic.com In which case, any webserver using a hostname ending in neotonic.com will generate a cookie authority of neotonic.com. </p>

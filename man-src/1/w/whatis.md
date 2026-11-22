@@ -80,5 +80,5 @@ description: "whatis – display one-line manual page descriptions"
 Wilf.(G.Wilford[at] ee.surrey.ac.uk).Fabrizio Polacco(fpolacco[at] debian.org).Colin Watson(cjwatson[at] debian.org).
 </code></pre>
 <h2>BUGS</h2>
-<p> <a rel="nofollow" href="https://gitlab.com/cjwatson/man-db/-/issues">https://gitlab.com/cjwatson/man-db/-/issues</a><br />
+<p> <a rel="nofollow" href="https://gitlab.com/cjwatson/man-db/-/issues">https://gitlab.com/cjwatson/man-db/-/issues</a><br/>
  <a rel="nofollow" href="https://savannah.nongnu.org/bugs/?group=man-db">https://savannah.nongnu.org/bugs/?group=man-db</a> </p>

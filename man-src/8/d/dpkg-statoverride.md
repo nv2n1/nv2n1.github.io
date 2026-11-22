@@ -43,7 +43,7 @@ description: "dpkg-statoverride – override ownership and mode of files"
 <h2>Files</h2>
 <dl>
 <dt><i>/var/lib/dpkg/statoverride</i></dt>
-<dd>File which contains the current list of stat overrides of the system. It is located in the <code>dpkg</code> administration directory, along with other files important to <code>dpkg</code>, such as `status&#8217; or `available&#8217;.<br />
+<dd>File which contains the current list of stat overrides of the system. It is located in the <code>dpkg</code> administration directory, along with other files important to <code>dpkg</code>, such as `status&#8217; or `available&#8217;.<br/>
  Note: <code>dpkg-statoverride</code> preserves the old copy of this file, with extension &quot;-old&quot;, before replacing it with the new one.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-dpkg/">dpkg</a></code>(1). </p>

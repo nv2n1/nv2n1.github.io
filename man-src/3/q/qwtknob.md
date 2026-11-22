@@ -13,40 +13,40 @@ description: "QwtKnob –"
 <p>#include &lt;qwt_knob.h&gt; </p>
 <p> Inherits <code>QwtAbstractSlider</code>.</p>
 <h3>Public Types</h3>
-<p>enum <code>KnobStyle</code> { <code>Flat</code>, <code>Raised</code>, <code>Sunken</code>, <code>Styled</code> }<br />
- <i>Style of the knob surface. </i><br />
- enum <code>MarkerStyle</code> { <code>NoMarker</code> = -1, <code>Tick</code>, <code>Triangle</code>, <code>Dot</code>, <code>Nub</code>, <code>Notch</code> }<br />
+<p>enum <code>KnobStyle</code> { <code>Flat</code>, <code>Raised</code>, <code>Sunken</code>, <code>Styled</code> }<br/>
+ <i>Style of the knob surface. </i><br/>
+ enum <code>MarkerStyle</code> { <code>NoMarker</code> = -1, <code>Tick</code>, <code>Triangle</code>, <code>Dot</code>, <code>Nub</code>, <code>Notch</code> }<br/>
  <i>Marker type. </i></p>
 <h3>Public Member Functions</h3>
-<p><code>QwtKnob</code> (QWidget *parent=NULL)<br />
- <i>Constructor. </i><br />
- virtual <code>~QwtKnob</code> ()<br />
- <i>Destructor. </i><br />
- void <code>setAlignment</code> (Qt::Alignment)<br />
- <i>Set the alignment of the knob. </i><br />
+<p><code>QwtKnob</code> (QWidget *parent=NULL)<br/>
+ <i>Constructor. </i><br/>
+ virtual <code>~QwtKnob</code> ()<br/>
+ <i>Destructor. </i><br/>
+ void <code>setAlignment</code> (Qt::Alignment)<br/>
+ <i>Set the alignment of the knob. </i><br/>
  Qt::Alignment <code>alignment</code> () const </p>
-<p> void <code>setKnobWidth</code> (int)<br />
- <i>Change the knob&#8217;s width. </i><br />
- int <code>knobWidth</code> () const<br />
- <i>Return the width of the knob. </i><br />
- void <code>setNumTurns</code> (int)<br />
- <i>Set the number of turns. </i><br />
+<p> void <code>setKnobWidth</code> (int)<br/>
+ <i>Change the knob&#8217;s width. </i><br/>
+ int <code>knobWidth</code> () const<br/>
+ <i>Return the width of the knob. </i><br/>
+ void <code>setNumTurns</code> (int)<br/>
+ <i>Set the number of turns. </i><br/>
  int <code>numTurns</code> () const </p>
-<p> void <code>setTotalAngle</code> (double angle)<br />
- <i>Set the total angle by which the knob can be turned. </i><br />
+<p> void <code>setTotalAngle</code> (double angle)<br/>
+ <i>Set the total angle by which the knob can be turned. </i><br/>
  double <code>totalAngle</code> () const </p>
-<p> void <code>setKnobStyle</code> (<code>KnobStyle</code>)<br />
- <i>Set the knob type. </i><br />
+<p> void <code>setKnobStyle</code> (<code>KnobStyle</code>)<br/>
+ <i>Set the knob type. </i><br/>
  <code>KnobStyle</code> <code>knobStyle</code> () const </p>
-<p> void <code>setBorderWidth</code> (int bw)<br />
- <i>Set the knob&#8217;s border width. </i><br />
- int <code>borderWidth</code> () const<br />
- <i>Return the border width. </i><br />
- void <code>setMarkerStyle</code> (<code>MarkerStyle</code>)<br />
- <i>Set the marker type of the knob. </i><br />
+<p> void <code>setBorderWidth</code> (int bw)<br/>
+ <i>Set the knob&#8217;s border width. </i><br/>
+ int <code>borderWidth</code> () const<br/>
+ <i>Return the border width. </i><br/>
+ void <code>setMarkerStyle</code> (<code>MarkerStyle</code>)<br/>
+ <i>Set the marker type of the knob. </i><br/>
  <code>MarkerStyle</code> <code>markerStyle</code> () const </p>
-<p> void <code>setMarkerSize</code> (int)<br />
- <i>Set the size of the marker. </i><br />
+<p> void <code>setMarkerSize</code> (int)<br/>
+ <i>Set the size of the marker. </i><br/>
  int <code>markerSize</code> () const </p>
 <p> virtual QSize <code>sizeHint</code> () const </p>
 <p> virtual QSize <code>minimumSizeHint</code> () const </p>
@@ -57,14 +57,14 @@ description: "QwtKnob –"
 <h3>Protected Member Functions</h3>
 <p>virtual void <code>paintEvent</code> (QPaintEvent *) </p>
 <p> virtual void <code>changeEvent</code> (QEvent *) </p>
-<p> virtual void <code>drawKnob</code> (QPainter *, const QRectF &amp;) const<br />
- <i>Draw the knob. </i><br />
+<p> virtual void <code>drawKnob</code> (QPainter *, const QRectF &amp;) const<br/>
+ <i>Draw the knob. </i><br/>
  virtual void <code>drawFocusIndicator</code> (QPainter *) const </p>
-<p> virtual void <code>drawMarker</code> (QPainter *, const QRectF &amp;, double arc) const<br />
- <i>Draw the marker at the knob&#8217;s front. </i><br />
- virtual double <code>scrolledTo</code> (const QPoint &amp;) const<br />
- <i>Determine the value for a new position of the mouse. </i><br />
- virtual bool <code>isScrollPosition</code> (const QPoint &amp;) const<br />
+<p> virtual void <code>drawMarker</code> (QPainter *, const QRectF &amp;, double arc) const<br/>
+ <i>Draw the marker at the knob&#8217;s front. </i><br/>
+ virtual double <code>scrolledTo</code> (const QPoint &amp;) const<br/>
+ <i>Determine the value for a new position of the mouse. </i><br/>
+ virtual bool <code>isScrollPosition</code> (const QPoint &amp;) const<br/>
  <i>Determine what to do when the user presses a mouse button. </i></p>
 <h3>Additional Inherited Members</h3>
 <h2>Detailed Description</h2>
@@ -145,14 +145,14 @@ description: "QwtKnob –"
 <p>Draw the knob. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> painter<br />
+<dd><i>painter</i> painter<br/>
  <i>knobRect</i> Bounding rectangle of the knob (without scale)</dd></dl>
 <h3>void QwtKnob::drawMarker (QPainter *painter, const QRectF &amp;rect, doubleangle) const [protected], [virtual]</h3>
 <p>Draw the marker at the knob&#8217;s front. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>rect</i> Bounding rectangle of the knob without scale<br />
+<dd><i>painter</i> Painter<br/>
+ <i>rect</i> Bounding rectangle of the knob without scale<br/>
  <i>angle</i> Angle of the marker in degrees ( clockwise, 0 at the 12 o&#8217;clock position )</dd></dl>
 <h3>bool QwtKnob::isScrollPosition (const QPoint &amp;pos) const [protected], [virtual]</h3>
 <p>Determine what to do when the user presses a mouse button. </p>

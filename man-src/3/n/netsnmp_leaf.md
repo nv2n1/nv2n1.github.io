@@ -9,13 +9,13 @@ description: "leaf_handlers – Process individual leaf objects A group of handl
 
 <p>leaf_handlers &#8211; Process individual leaf objects A group of handlers to implement individual leaf objects and instances (both scalar objects, and individual objects and instances within a table).</p>
 <h3>Modules</h3>
-<p><code>instance</code><br />
- <i>Process individual MIB instances easily. </i><br />
- <code>scalar</code><br />
- <i>Process scalars easily. </i><br />
- <code>scalar_group</code><br />
- <i>Process groups of scalars. </i><br />
- <code>watcher</code><br />
+<p><code>instance</code><br/>
+ <i>Process individual MIB instances easily. </i><br/>
+ <code>scalar</code><br/>
+ <i>Process scalars easily. </i><br/>
+ <code>scalar_group</code><br/>
+ <i>Process groups of scalars. </i><br/>
+ <code>watcher</code><br/>
  <i>Watch a specified variable and process it as an instance or scalar object. </i> </p>
 <h2>Detailed Description</h2>
 <p>Process individual leaf objects A group of handlers to implement individual leaf objects and instances (both scalar objects, and individual objects and instances within a table). </p>

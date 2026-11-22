@@ -10,7 +10,7 @@ description: "slarrc.f –"
 <p>slarrc.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>slarrc</code> (JOBT, N, VL, VU, D, E, PIVMIN, EIGCNT, LCNT, RCNT, INFO)<br />
+<p>subroutine <code>slarrc</code> (JOBT, N, VL, VU, D, E, PIVMIN, EIGCNT, LCNT, RCNT, INFO)<br/>
  <i></i><code>SLARRC</code> computes the number of eigenvalues of the symmetric tridiagonal matrix.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slarrc (characterJOBT, integerN, realVL, realVU, real, dimension( * )D, real, dimension( * )E, realPIVMIN, integerEIGCNT, integerLCNT, integerRCNT, integerINFO)</h3>

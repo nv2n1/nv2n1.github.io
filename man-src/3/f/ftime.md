@@ -15,10 +15,10 @@ description: "ftime – return date and time"
 <h2>DESCRIPTION</h2>
 <p> <code>NOTE</code>: This function is deprecated, and will be removed in a future version of the GNU C library. Use <code><a href="/docs/linux/man/2-clock_gettime/">clock_gettime</a></code>(2) instead. </p>
 <p> This function returns the current time as seconds and milliseconds since the Epoch, 1970-01-01 00:00:00 +0000 (UTC). The time is returned in <i>tp</i>, which is declared as follows: </p>
-<p> struct timeb {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;time_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;time;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short millitm;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;short&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;timezone;<br />
+<p> struct timeb {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;time_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;time;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short millitm;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;short&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;timezone;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;short&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;dstflag; }; </p>
 <p> Here <i>time</i> is the number of seconds since the Epoch, and <i>millitm</i> is the number of milliseconds since <i>time</i> seconds since the Epoch. The <i>timezone</i> field is the local timezone measured in minutes of time west of Greenwich (with a negative value indicating minutes east of Greenwich). The <i>dstflag</i> field is a flag that, if nonzero, indicates that Daylight Saving time applies locally during the appropriate part of the year. </p>
 <p> POSIX.1-2001 says that the contents of the <i>timezone</i> and <i>dstflag</i> fields are unspecified; avoid relying on them.</p>

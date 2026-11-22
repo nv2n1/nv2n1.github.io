@@ -37,9 +37,9 @@ int error</code></pre>
 <p>Return Unix credentials for the client </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>client</i> The display object<br />
- <i>pid</i> Returns the process ID<br />
- <i>uid</i> Returns the user ID<br />
+<dd><i>client</i> The display object<br/>
+ <i>pid</i> Returns the process ID<br/>
+ <i>uid</i> Returns the user ID<br/>
  <i>gid</i> Returns the group ID</dd></dl>
 <p> This function returns the process ID, the user ID and the group ID for the given client. The credentials come from getsockopt() with SO_PEERCRED, on the client socket fd. All the pointers can be NULL, if the caller is not interested in a particular ID. </p>
 <p> Be aware that for clients that a compositor forks and execs and then connects using socketpair(), this function will return the credentials for the compositor. The credentials for the socketpair are set at creation time in the compositor.</p>
@@ -55,7 +55,7 @@ int error</code></pre>
 <p>Look up an object in the client name space </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>client</i> The client object<br />
+<dd><i>client</i> The client object<br/>
  <i>id</i> The object id</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>

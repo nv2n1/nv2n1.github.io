@@ -19,7 +19,7 @@ podlint - check POD for correctness using Pod::POM
 
  This script uses Pod::POM to parse a Pod document with full warnings enabled, effectively acting as a syntax and structure checker. 
 
- The -f option can be specified to have the parsed Pod Object Model printed to <font SIZE="-1">STDOUT</font> with any markup errors fixed. Note there are some critical parse errors that can't be handled and fixed by the parser and in this case the script will terminate reporting the error.
+ The -f option can be specified to have the parsed Pod Object Model printed to STDOUT with any markup errors fixed. Note there are some critical parse errors that can't be handled and fixed by the parser and in this case the script will terminate reporting the error.
 
 <h2>AUTHOR</h2>
 

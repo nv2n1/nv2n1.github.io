@@ -11,7 +11,7 @@ mrtg-squid - using mrtg to monitor Squid
 
 <h2>DESCRIPTION</h2>
 
- Squid 2.3 knows <font SIZE="-1">SNMP</font> and you can therefore use mrtg to monitor it quite easily. 
+ Squid 2.3 knows SNMP and you can therefore use mrtg to monitor it quite easily. 
 
  I have made some modifications to mrtg which simplify this. My work is based on earlier modification made by: matija.grabnar [at] arnes.si and kostas [at] nlanr.net.
 
@@ -29,9 +29,9 @@ mrtg-squid - using mrtg to monitor Squid
 
  ``kilo'' should contain the value of k (1000 or 1024), where 1000 is the default. 
 
- ``kMG'' is a comma separated list of multiplier prefixes, used instead of &quot;``, ''k``, ''M``, ''G``, ''T&quot; on the <font SIZE="-1">MRTG</font> display. Leave the place free, if you want no prefix. 
+ ``kMG'' is a comma separated list of multiplier prefixes, used instead of &quot;``, ''k``, ''M``, ''G``, ''T&quot; on the MRTG display. Leave the place free, if you want no prefix. 
 
- Also an incomplete list of OIDs for the new <font SIZE="-1">SQUID</font> release is added. 
+ Also an incomplete list of OIDs for the new SQUID release is added. 
 
  You may need to turn on snmp_port in squid.conf to as it is disabled by default. 
 
@@ -45,7 +45,7 @@ mrtg-squid - using mrtg to monitor Squid
  LoadMIBs: /usr/share/squid/mib.txt
 </pre> 
 
- You can measure responsetimes in ms and display it with <font SIZE="-1">MRTG</font> correctly with: 
+ You can measure responsetimes in ms and display it with MRTG correctly with: 
 
  <pre><code>
 kMG[measure - ms] : m, , k, M, G, T short[measure - ms] : s
@@ -57,7 +57,7 @@ kMG[measure - ms] : m, , k, M, G, T short[measure - ms] : s
  kilo[volume]: 1024
 </pre> 
 
- Assuming you're not running squid's <font SIZE="-1">SNMP</font> on the default snmp port, you need to include a port number in your target line: 
+ Assuming you're not running squid's SNMP on the default snmp port, you need to include a port number in your target line: 
 
  
 Target[proxy - hit] : cacheHttpHits &amp;cacheProtoClientHttpRequests : public[at] localhost : 3401

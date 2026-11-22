@@ -106,8 +106,8 @@ sub vcl_recv {
 <dt><code>max_connections</code></dt>
 <dd>Maximum number of open connections towards this backend. If Varnish reaches the maximum Varnish it will start failing connections. Backends can be used with <i>directors</i>. Please see the <a href="/docs/linux/man/3-vmod_directors/">vmod_directors</a>(3) man page for more information.</dd></dl>
 <h3>Probes</h3>
-<p>Probes will query the backend for status on a regular basis and mark the backend as down it they fail. A probe is defined as this:: probe name {<br />
-    .attribute = &quot;value&quot;;<br />
+<p>Probes will query the backend for status on a regular basis and mark the backend as down it they fail. A probe is defined as this:: probe name {<br/>
+    .attribute = &quot;value&quot;;<br/>
 } There are no mandatory options. These are the options you can set:</p>
 <dl>
 <dt><code>url</code></dt>
@@ -133,8 +133,8 @@ sub vcl_recv {
  &quot;192.0.2.0&quot;/24; # and everyone on the local network
  ! &quot;192.0.2.23&quot;; # except for the dial-in router
 }</pre>
-<p>If an ACL entry specifies a host name which Varnish is unable to resolve, it will match any address it is compared to. Consequently, if it is preceded by a negation mark, it will reject any address it is compared to, which may not be what you intended. If the entry is enclosed in parentheses, however, it will simply be ignored. To match an IP address against an ACL, simply use the match operator: if (client.ip ~localnetwork) {<br />
-    return (pipe);<br />
+<p>If an ACL entry specifies a host name which Varnish is unable to resolve, it will match any address it is compared to. Consequently, if it is preceded by a negation mark, it will reject any address it is compared to, which may not be what you intended. If the entry is enclosed in parentheses, however, it will simply be ignored. To match an IP address against an ACL, simply use the match operator: if (client.ip ~localnetwork) {<br/>
+    return (pipe);<br/>
 }</p>
 <p>VCL objects A VCL object can be made with the <i>new</i> keyword. Example: </p>
 <pre>sub vcl_init {

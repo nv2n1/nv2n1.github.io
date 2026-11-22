@@ -13,7 +13,7 @@ description: "QuantLib::PagodaOption – Roofed Asian option on a number of asse
 #include &lt;ql/instruments/pagodaoption.hpp&gt;</code></pre>
 <p> Inherits <code>QuantLib::MultiAssetOption</code>.</p>
 <h3>Classes</h3>
-<p>class <code>engine</code><br />
+<p>class <code>engine</code><br/>
  <i>Pagoda-option engine base class </i></p>
 <h3>Public Member Functions</h3>
 <p><code>PagodaOption</code> (const std::vector&lt; <code>Date</code> &gt; &amp;fixingDates, <code>Real</code> roof, <code>Real</code> fraction) </p>

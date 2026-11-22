@@ -30,9 +30,9 @@ description: "guilt-pop – Pop patches from the tree"
 </dt><dd> Pop all patches up to and including this patch off the tree</dd></dl>
 <p> If no patchname is given, pop the top-most patch.</p>
 <h2>AUTHOR</h2>
-<p> Written by Josef &quot;Jeff&quot; Sipek &lt;m[blue]<code>jeffpc [at] josefsipek.net</code>m[]<font SIZE="-2">[1]</font>&gt;</p>
+<p> Written by Josef &quot;Jeff&quot; Sipek &lt;m[blue]<code>jeffpc [at] josefsipek.net</code>m[][1]&gt;</p>
 <h2>DOCUMENTATION</h2>
-<p> Documentation by Brandon Philips &lt;m[blue]<code>brandon [at] ifup.org</code>m[]<font SIZE="-2">[2]</font>&gt;</p>
+<p> Documentation by Brandon Philips &lt;m[blue]<code>brandon [at] ifup.org</code>m[][2]&gt;</p>
 <h2>GUILT</h2>
 <p> Part of the linkguilt:guilt[7] suite (Generated for Guilt v0.33)</p>
 <h2>NOTES</h2>

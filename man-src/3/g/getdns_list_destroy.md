@@ -13,34 +13,34 @@ description: "getdns_list, getdns_list_create, getdns_list_create_with_extended_
 <p> DNS Resolver library (libgetdns, -lgetdns) </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;getdns.h&gt; </p>
-<p> getdns_list *<br />
+<p> getdns_list *<br/>
  <code>getdns_list_create</code> () </p>
-<p> getdns_list *<br />
+<p> getdns_list *<br/>
  <code>getdns_list_create_with_extended_memory_functions</code></p>
 <dl>
 <dt>
-</dt><dd> (void *userarg,<br />
- void *(*malloc)(void *userarg, size_t sz),<br />
- void *(*realloc)(void *userarg, void *buf, size_t sz),<br />
+</dt><dd> (void *userarg,<br/>
+ void *(*malloc)(void *userarg, size_t sz),<br/>
+ void *(*realloc)(void *userarg, void *buf, size_t sz),<br/>
  void (*free)(void *userarg, void *buf)</dd></dl>
-<p> getdns_list *<br />
+<p> getdns_list *<br/>
  <code>getdns_list_create_with_memory_functions</code></p>
 <dl>
 <dt>
-</dt><dd> (void *userarg,<br />
- void *(*malloc)(size_t sz),<br />
- void *(*realloc)(void *buf, size_t sz),<br />
+</dt><dd> (void *userarg,<br/>
+ void *(*malloc)(size_t sz),<br/>
+ void *(*realloc)(void *buf, size_t sz),<br/>
  void (*free)(void *buf)</dd></dl>
-<p> void<br />
+<p> void<br/>
  <code>getdns_list_destroy</code> (getdns_list *this_dict) </p>
 <h2>DESCRIPTION</h2>
 <p> The getdns_list type is used to manage heterogeneous indexed lists name/value pairs in which the data types of the values include</p>
 <dl>
 <dt>
 </dt><dd>
- getdns_bindata<br />
- getdns_dict<br />
- getdns_list<br />
+ getdns_bindata<br/>
+ getdns_dict<br/>
+ getdns_list<br/>
  uint32_t</dd></dl>
 <p> The destroy function performs a &quot;deep&quot; destroy, freeing storage for all of the members of the list before destroying the list. There are a number of helper functions that provide access to the list object, see their respective man pages. </p>
 <p> <i>userarg</i> pass this argument to the user specified memory management functions for operations on lists created using extended memory functions </p>

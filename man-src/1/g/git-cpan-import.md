@@ -41,10 +41,10 @@ git-cpan-import - Import a module into a git repository
 <dt>--backpan
 </dt><dd> Enables Backpan index fetching (to get the author and release date).
 </dd><dt>--checkversion, --nocheckversion
-</dt><dd> Explicitly enables/disables version checking. If version checking is enabled, which is the default, git-cpan-import will refuse to import a version of the package that has a smaller version number than the <font SIZE="-1">HEAD</font> of the branch <i>cpan/master</i>.
+</dt><dd> Explicitly enables/disables version checking. If version checking is enabled, which is the default, git-cpan-import will refuse to import a version of the package that has a smaller version number than the HEAD of the branch <i>cpan/master</i>.
 </dd><dt>--parent
-</dt><dd> Allows adding extra parents when importing, so that when a patch has been incorporated into an upstream version the generated commit is like a merge commit, incorporating both the <font SIZE="-1">CPAN</font> history and the user's local history. 
- For example, this will set the current <font SIZE="-1">HEAD</font> of the master branch as a parent of the imported <font SIZE="-1">CPAN</font> package: 
+</dt><dd> Allows adding extra parents when importing, so that when a patch has been incorporated into an upstream version the generated commit is like a merge commit, incorporating both the CPAN history and the user's local history. 
+ For example, this will set the current HEAD of the master branch as a parent of the imported CPAN package: 
  <pre>
         $ git checkout master
         $ git cpan-import --parent HEAD My-Module

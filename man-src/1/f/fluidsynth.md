@@ -320,10 +320,10 @@ description: "FluidSynth – a SoundFont synthesizer"
 <dd> Configures the modulation wheel to act as sustain pedal (transforms CC 1 to CC 64 on the lower 8 MIDI channels, routes to ch 15) </dd>
 </dl>
 <h2>AUTHORS</h2>
-<p> Peter Hanappe &lt;hanappe [at] fluid-synth.org&gt;<br />
- Markus Nentwig &lt;nentwig [at] users.sourceforge.net&gt;<br />
- Antoine Schmitt &lt;as [at] gratin.org&gt;<br />
- Josh Green &lt;jgreen [at] users.sourceforge.net&gt;<br />
+<p> Peter Hanappe &lt;hanappe [at] fluid-synth.org&gt;<br/>
+ Markus Nentwig &lt;nentwig [at] users.sourceforge.net&gt;<br/>
+ Antoine Schmitt &lt;as [at] gratin.org&gt;<br/>
+ Josh Green &lt;jgreen [at] users.sourceforge.net&gt;<br/>
  Stephane Letz &lt;letz [at] grame.fr&gt; </p>
 <p> Please check the AUTHORS and THANKS files for all credits</p>
 <h2>DISCLAIMER</h2>

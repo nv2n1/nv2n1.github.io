@@ -24,6 +24,6 @@ description: "munin-cron – A program to batch other Munin master programs"
 <h2>Authors</h2>
 <p>Audun Ytterdal and Jimmy Olsen.</p>
 <h2>Copyright</h2>
-<p>Copyright (C) 2002-2008 Audun Ytterdal and Jimmy Olsen / Linpro <font SIZE="-1">AS.</font> </p>
-<p> This is free software; see the source for copying conditions. There is <font SIZE="-1">NO</font> warranty; not even for <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE.</font> </p>
-<p> This program is released under the <font SIZE="-1">GNU</font> General Public License</p>
+<p>Copyright (C) 2002-2008 Audun Ytterdal and Jimmy Olsen / Linpro AS. </p>
+<p> This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>
+<p> This program is released under the GNU General Public License</p>

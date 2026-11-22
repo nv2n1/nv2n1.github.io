@@ -10,7 +10,7 @@ description: "dsbtrd.f –"
 <p>dsbtrd.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>dsbtrd</code> (VECT, UPLO, N, KD, AB, LDAB, D, E, Q, LDQ, WORK, INFO)<br />
+<p>subroutine <code>dsbtrd</code> (VECT, UPLO, N, KD, AB, LDAB, D, E, Q, LDQ, WORK, INFO)<br/>
  <i></i><code>DSBTRD</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine dsbtrd (characterVECT, characterUPLO, integerN, integerKD, double precision, dimension( ldab, * )AB, integerLDAB, double precision, dimension( * )D, double precision, dimension( * )E, double precision, dimension( ldq, * )Q, integerLDQ, double precision, dimension( * )WORK, integerINFO)</h3>

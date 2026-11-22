@@ -7,7 +7,7 @@ url: "/docs/linux/man/1-schemagen-java-1-6-0-openjdk/"
 description: "schemagen – Java(TM) Architecture for XML Binding Schema Generator Specification Version: 2.0 Reference Implementation (RI) Version: 2.0 ea3"
 ---
 
-<p>schemagen &#8211; Java(TM) Architecture for XML Binding Schema Generator <code>Specification Version:</code> 2.0<br />
+<p>schemagen &#8211; Java(TM) Architecture for XML Binding Schema Generator <code>Specification Version:</code> 2.0<br/>
  <code>Reference Implementation (RI) Version:</code> 2.0 ea3 </p>
 <h3>Launching schemagen</h3>
 <p>The schema generator can be launched using the appropriate <i>schemagen</i> shell script in the <i>bin</i> directory for your platform. </p>

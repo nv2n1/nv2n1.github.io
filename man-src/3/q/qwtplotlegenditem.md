@@ -13,25 +13,25 @@ description: "QwtPlotLegendItem –"
 <p>#include &lt;qwt_plot_legenditem.h&gt; </p>
 <p> Inherits <code>QwtPlotItem</code>.</p>
 <h3>Public Types</h3>
-<p>enum <code>BackgroundMode</code> { <code>LegendBackground</code>, <code>ItemBackground</code> }<br />
+<p>enum <code>BackgroundMode</code> { <code>LegendBackground</code>, <code>ItemBackground</code> }<br/>
  <i>Background mode. </i></p>
 <h3>Public Member Functions</h3>
-<p><code>QwtPlotLegendItem</code> ()<br />
- <i>Constructor. </i><br />
- virtual <code>~QwtPlotLegendItem</code> ()<br />
- <i>Destructor. </i><br />
+<p><code>QwtPlotLegendItem</code> ()<br/>
+ <i>Constructor. </i><br/>
+ virtual <code>~QwtPlotLegendItem</code> ()<br/>
+ <i>Destructor. </i><br/>
  virtual int <code>rtti</code> () const </p>
-<p> void <code>setAlignment</code> (Qt::Alignment)<br />
- <i>Set the alignmnet. </i><br />
+<p> void <code>setAlignment</code> (Qt::Alignment)<br/>
+ <i>Set the alignmnet. </i><br/>
  Qt::Alignment <code>alignment</code> () const </p>
-<p> void <code>setMaxColumns</code> (uint)<br />
- <i>Limit the number of columns. </i><br />
+<p> void <code>setMaxColumns</code> (uint)<br/>
+ <i>Limit the number of columns. </i><br/>
  uint <code>maxColumns</code> () const </p>
-<p> void <code>setMargin</code> (int)<br />
- <i>Set the margin around legend items. </i><br />
+<p> void <code>setMargin</code> (int)<br/>
+ <i>Set the margin around legend items. </i><br/>
  int <code>margin</code> () const </p>
-<p> void <code>setSpacing</code> (int)<br />
- <i>Set the spacing between the legend items. </i><br />
+<p> void <code>setSpacing</code> (int)<br/>
+ <i>Set the spacing between the legend items. </i><br/>
  int <code>spacing</code> () const </p>
 <p> void <code>setItemMargin</code> (int) </p>
 <p> int <code>itemMargin</code> () const </p>
@@ -39,25 +39,25 @@ description: "QwtPlotLegendItem –"
 <p> int <code>itemSpacing</code> () const </p>
 <p> void <code>setFont</code> (const QFont &amp;) </p>
 <p> QFont <code>font</code> () const </p>
-<p> void <code>setBorderDistance</code> (int numPixels)<br />
- <i>Set the margin between the legend and the canvas border. </i><br />
+<p> void <code>setBorderDistance</code> (int numPixels)<br/>
+ <i>Set the margin between the legend and the canvas border. </i><br/>
  int <code>borderDistance</code> () const </p>
 <p> void <code>setBorderRadius</code> (double) </p>
 <p> double <code>borderRadius</code> () const </p>
 <p> void <code>setBorderPen</code> (const QPen &amp;) </p>
 <p> QPen <code>borderPen</code> () const </p>
-<p> void <code>setBackgroundBrush</code> (const QBrush &amp;)<br />
- <i>Set the background brush. </i><br />
+<p> void <code>setBackgroundBrush</code> (const QBrush &amp;)<br/>
+ <i>Set the background brush. </i><br/>
  QBrush <code>backgroundBrush</code> () const </p>
-<p> void <code>setBackgroundMode</code> (<code>BackgroundMode</code>)<br />
- <i>Set the background mode. </i><br />
+<p> void <code>setBackgroundMode</code> (<code>BackgroundMode</code>)<br/>
+ <i>Set the background mode. </i><br/>
  <code>BackgroundMode</code> <code>backgroundMode</code> () const </p>
-<p> void <code>setTextPen</code> (const QPen &amp;)<br />
- <i>Set the pen for drawing text labels. </i><br />
+<p> void <code>setTextPen</code> (const QPen &amp;)<br/>
+ <i>Set the pen for drawing text labels. </i><br/>
  QPen <code>textPen</code> () const </p>
 <p> virtual void <code>draw</code> (QPainter *p, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;rect) const </p>
-<p> void <code>clearLegend</code> ()<br />
- <i>Remove all items from the legend. </i><br />
+<p> void <code>clearLegend</code> ()<br/>
+ <i>Remove all items from the legend. </i><br/>
  virtual void <code>updateLegend</code> (const <code>QwtPlotItem</code> *, const QList&lt; <code>QwtLegendData</code> &gt; &amp;) </p>
 <p> virtual QRect <code>geometry</code> (const QRectF &amp;canvasRect) const </p>
 <p> virtual QSize <code>minimumSize</code> (const <code>QwtLegendData</code> &amp;) const </p>
@@ -135,16 +135,16 @@ description: "QwtPlotLegendItem –"
 <p>Draw the legend </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>xMap</i> x Scale Map<br />
- <i>yMap</i> y Scale Map<br />
+<dd><i>painter</i> Painter<br/>
+ <i>xMap</i> x Scale Map<br/>
+ <i>yMap</i> y Scale Map<br/>
  <i>canvasRect</i> Contents rectangle of the canvas in painter coordinates</dd></dl>
 <p> Implements <code>QwtPlotItem</code>.</p>
 <h3>void QwtPlotLegendItem::drawBackground (QPainter *painter, const QRectF &amp;rect) const [protected], [virtual]</h3>
 <p>Draw a rounded rect </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
+<dd><i>painter</i> Painter<br/>
  <i>rect</i> Bounding rectangle</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
@@ -153,9 +153,9 @@ description: "QwtPlotLegendItem –"
 <p>Draw an entry on the legend </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Qt Painter<br />
- <i>plotItem</i> Plot item, represented by the entry<br />
- <i>data</i> Attributes of the legend entry<br />
+<dd><i>painter</i> Qt Painter<br/>
+ <i>plotItem</i> Plot item, represented by the entry<br/>
+ <i>data</i> Attributes of the legend entry<br/>
  <i>rect</i> Bounding rectangle for the entry</dd></dl>
 <h3>QFont QwtPlotLegendItem::font () const</h3>
 <p><code>Returns:</code></p>
@@ -178,7 +178,7 @@ description: "QwtPlotLegendItem –"
 <dd>The preferred height, for a width.</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>data</i> Attributes of the legend entry<br />
+<dd><i>data</i> Attributes of the legend entry<br/>
  <i>width</i> Width</dd></dl>
 <h3>int QwtPlotLegendItem::itemMargin () const</h3>
 <p><code>Returns:</code></p>
@@ -358,7 +358,7 @@ description: "QwtPlotLegendItem –"
 <p>Update the legend items according to modifications of a plot item </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>plotItem</i> Plot item<br />
+<dd><i>plotItem</i> Plot item<br/>
  <i>data</i> Attributes of the legend entries</dd></dl>
 <p> Reimplemented from <code>QwtPlotItem</code>. </p>
 <h2>Author</h2>

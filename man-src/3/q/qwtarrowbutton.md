@@ -14,23 +14,23 @@ description: "QwtArrowButton –"
 <p> Inherits QPushButton.</p>
 <h3>Public Member Functions</h3>
 <p><code>QwtArrowButton</code> (int <code>num</code>, Qt::ArrowType, QWidget *parent=NULL) </p>
-<p> virtual <code>~QwtArrowButton</code> ()<br />
- <i>Destructor. </i><br />
- Qt::ArrowType <code>arrowType</code> () const<br />
- <i>The direction of the arrows. </i><br />
- int <code>num</code> () const<br />
- <i>The number of arrows. </i><br />
+<p> virtual <code>~QwtArrowButton</code> ()<br/>
+ <i>Destructor. </i><br/>
+ Qt::ArrowType <code>arrowType</code> () const<br/>
+ <i>The direction of the arrows. </i><br/>
+ int <code>num</code> () const<br/>
+ <i>The number of arrows. </i><br/>
  virtual QSize <code>sizeHint</code> () const </p>
-<p> virtual QSize <code>minimumSizeHint</code> () const<br />
+<p> virtual QSize <code>minimumSizeHint</code> () const<br/>
  <i>Return a minimum size hint. </i></p>
 <h3>Protected Member Functions</h3>
 <p>virtual void <code>paintEvent</code> (QPaintEvent *event) </p>
-<p> virtual void <code>drawButtonLabel</code> (QPainter *p)<br />
- <i>Draw the button label. </i><br />
+<p> virtual void <code>drawButtonLabel</code> (QPainter *p)<br/>
+ <i>Draw the button label. </i><br/>
  virtual void <code>drawArrow</code> (QPainter *, const QRect &amp;, Qt::ArrowType) const </p>
 <p> virtual QRect <code>labelRect</code> () const </p>
 <p> virtual QSize <code>arrowSize</code> (Qt::ArrowType, const QSize &amp;boundingSize) const </p>
-<p> virtual void <code>keyPressEvent</code> (QKeyEvent *)<br />
+<p> virtual void <code>keyPressEvent</code> (QKeyEvent *)<br/>
  <i>autoRepeat for the space keys </i></p>
 <h2>Detailed Description</h2>
 <p>Arrow Button. </p>
@@ -39,15 +39,15 @@ description: "QwtArrowButton –"
 <h3>QwtArrowButton::QwtArrowButton (intnum, Qt::ArrowTypearrowType, QWidget *parent = NULL) [explicit]</h3>
 <p><code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>num</i> Number of arrows<br />
- <i>arrowType</i> see Qt::ArrowType in the Qt docs.<br />
+<dd><i>num</i> Number of arrows<br/>
+ <i>arrowType</i> see Qt::ArrowType in the Qt docs.<br/>
  <i>parent</i> Parent widget</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>QSize QwtArrowButton::arrowSize (Qt::ArrowTypearrowType, const QSize &amp;boundingSize) const [protected], [virtual]</h3>
 <p>Calculate the size for a arrow that fits into a rectangle of a given size </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>arrowType</i> Arrow type<br />
+<dd><i>arrowType</i> Arrow type<br/>
  <i>boundingSize</i> Bounding size</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -56,8 +56,8 @@ description: "QwtArrowButton –"
 <p>Draw an arrow int a bounding rectangle </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter<br />
- <i>r</i> Rectangle where to paint the arrow<br />
+<dd><i>painter</i> Painter<br/>
+ <i>r</i> Rectangle where to paint the arrow<br/>
  <i>arrowType</i> Arrow type</dd></dl>
 <h3>void QwtArrowButton::drawButtonLabel (QPainter *painter) [protected], [virtual]</h3>
 <p>Draw the button label. </p>

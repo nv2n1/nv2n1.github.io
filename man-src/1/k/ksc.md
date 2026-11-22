@@ -26,7 +26,7 @@ description: "ksc – Linux kernel module source checker"
 <dt><code>-i</code>, <code>&#8211;internal</code></dt>
 <dd> to create text files to be used internally.</dd>
 <dt><code>-k</code> KO, <code>&#8211;ko</code>=<i>KO</i></dt>
-<dd> path to the ko file. You should either use -d or -k to run the KSC tool, but not both. If both -d and -k option is used at the same time then only -d is used and the -k option is discarded.<br />
+<dd> path to the ko file. You should either use -d or -k to run the KSC tool, but not both. If both -d and -k option is used at the same time then only -d is used and the -k option is discarded.<br/>
  Option -k can be specified multiple times.</dd>
 <dt><code>-n</code> RELEASENAME, <code>&#8211;name</code>=RELEASENAME</dt>
 <dd> Red Hat release against which the bug is to be filed, e.g &#8216;6.5&#8217;. Default value is 6.5.</dd>
@@ -42,10 +42,10 @@ description: "ksc – Linux kernel module source checker"
 </dt><dd> <code>The configuration file looks like below:</code></dd>
 <dt>
 </dt><dd>
- [bugzilla]<br />
- user=user [at] redhat.com<br />
- partner=partner-name<br />
- partnergroup=partner-group<br />
+ [bugzilla]<br/>
+ user=user [at] redhat.com<br/>
+ partner=partner-name<br/>
+ partnergroup=partner-group<br/>
  server=<a rel="nofollow" href="https://bugzilla.redhat.com/xmlrpc.cgi">https://bugzilla.redhat.com/xmlrpc.cgi</a></dd>
 <dt><code>-v</code>, <code>&#8211;version</code></dt>
 <dd> Prints KSC version number </dd>

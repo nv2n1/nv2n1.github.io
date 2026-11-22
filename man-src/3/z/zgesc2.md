@@ -10,7 +10,7 @@ description: "zgesc2.f –"
 <p>zgesc2.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zgesc2</code> (N, A, LDA, RHS, IPIV, JPIV, SCALE)<br />
+<p>subroutine <code>zgesc2</code> (N, A, LDA, RHS, IPIV, JPIV, SCALE)<br/>
  <i></i><code>ZGESC2</code> solves a system of linear equations using the LU factorization with complete pivoting computed by sgetc2.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zgesc2 (integerN, complex*16, dimension( lda, * )A, integerLDA, complex*16, dimension( * )RHS, integer, dimension( * )IPIV, integer, dimension( * )JPIV, double precisionSCALE)</h3>

@@ -14,9 +14,9 @@ description: "opapaquery"
 <p> opapaquery #8217#8217;s operation is dependent on an Intel(R) Omni-Path Fabric Suite Fabric Manager version 6.0 or greater running as master SM/PM in the fabric. </p>
 <p> By default, opapaquery uses the first active port on the local system. However, if the Fabric Management Node is connected to more than one fabric (for example, a subnet), the HFI and port may be specified to select the fabric whose PA is to be queried.</p>
 <h2>Syntax</h2>
-<p>opapaquery [-v] [-h <i>hfi</i>] [-p <i>port</i>] -o <i>type</i>[-g <i>groupName</i>] [-l <i>nodeLid</i>]<br />
- [-P <i>portNumber</i>] [-d <i>delta</i>] [-s <i>select</i>] [-f <i>focus</i>] [-S <i>start</i>]<br />
- [-r <i>range</i>] [-n <i>imgNum</i>] [-O <i>imgOff</i>] [-m <i>moveImgNum</i>] [-M <i>moveImgOff</i>]<br />
+<p>opapaquery [-v] [-h <i>hfi</i>] [-p <i>port</i>] -o <i>type</i>[-g <i>groupName</i>] [-l <i>nodeLid</i>]<br/>
+ [-P <i>portNumber</i>] [-d <i>delta</i>] [-s <i>select</i>] [-f <i>focus</i>] [-S <i>start</i>]<br/>
+ [-r <i>range</i>] [-n <i>imgNum</i>] [-O <i>imgOff</i>] [-m <i>moveImgNum</i>] [-M <i>moveImgOff</i>]<br/>
  [-V vfName]</p>
 <h2>Options</h2>
 <dl>
@@ -265,27 +265,27 @@ description: "opapaquery"
 <dd>Clears VF port counters of fabric port. Requires -l <i>lid</i>, -P <i>port</i>, -s <i>select</i>, and -V <i>vfname</i> options. </dd>
 </dl>
 <h2>Examples</h2>
-<p>opapaquery -o classPortInfo<br />
- opapaquery -o groupList<br />
- opapaquery -o groupInfo -g All<br />
- opapaquery -o groupConfig -g All<br />
- opapaquery -o portCounters -l 1 -P 1 -d 1<br />
- opapaquery -o portCounters -l 1 -P 1 -d 1 -n 0x20000000d02 -O 1<br />
- opapaquery -o clrPortCounters -l 1 -P 1 -s 0xC0000000<br />
- #8217#160; #clears XmitData &amp; RcvData<br />
- opapaquery -o clrAllPortCounters -s 0xC0000000<br />
- #8217#160; #clears XmitData &amp; RcvData on all ports<br />
- opapaquery -o PMConfig<br />
- opapaquery -o freezeImage -n 0x20000000d02<br />
- opapaquery -o releaseImage -n 0xd01<br />
- opapaquery -o renewImage -n 0xd01<br />
- opapaquery -o moveFreeze -n 0xd01 -m 0x20000000d02 -M -2<br />
- opapaquery -o focusPorts -g All -f 0x00030001 -S 0 -r 20<br />
- opapaquery -o imageInfo -n 0x20000000d02<br />
- opapaquery -o vfList<br />
- opapaquery -o vfInfo -V Default<br />
- opapaquery -o vfConfig -V Default<br />
- opapaquery -o vfPortCounters -l 1 -P 1 -d 1 -V Default<br />
- opapaquery -o clrVfPortCounters -l 1 -P 1 -s 0xC0000000<br />
- #8217#160; #clears VLXmitData &amp; VLRcvData<br />
+<p>opapaquery -o classPortInfo<br/>
+ opapaquery -o groupList<br/>
+ opapaquery -o groupInfo -g All<br/>
+ opapaquery -o groupConfig -g All<br/>
+ opapaquery -o portCounters -l 1 -P 1 -d 1<br/>
+ opapaquery -o portCounters -l 1 -P 1 -d 1 -n 0x20000000d02 -O 1<br/>
+ opapaquery -o clrPortCounters -l 1 -P 1 -s 0xC0000000<br/>
+ #8217#160; #clears XmitData &amp; RcvData<br/>
+ opapaquery -o clrAllPortCounters -s 0xC0000000<br/>
+ #8217#160; #clears XmitData &amp; RcvData on all ports<br/>
+ opapaquery -o PMConfig<br/>
+ opapaquery -o freezeImage -n 0x20000000d02<br/>
+ opapaquery -o releaseImage -n 0xd01<br/>
+ opapaquery -o renewImage -n 0xd01<br/>
+ opapaquery -o moveFreeze -n 0xd01 -m 0x20000000d02 -M -2<br/>
+ opapaquery -o focusPorts -g All -f 0x00030001 -S 0 -r 20<br/>
+ opapaquery -o imageInfo -n 0x20000000d02<br/>
+ opapaquery -o vfList<br/>
+ opapaquery -o vfInfo -V Default<br/>
+ opapaquery -o vfConfig -V Default<br/>
+ opapaquery -o vfPortCounters -l 1 -P 1 -d 1 -V Default<br/>
+ opapaquery -o clrVfPortCounters -l 1 -P 1 -s 0xC0000000<br/>
+ #8217#160; #clears VLXmitData &amp; VLRcvData<br/>
  opapaquery -o vfFocusPorts -V Default -f 0x00030001 -S 0 -r 20 </p>

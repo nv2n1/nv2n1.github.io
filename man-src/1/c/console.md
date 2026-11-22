@@ -10,8 +10,8 @@ description: "console – console server client program"
 
 <p> console &#8211; console server client program</p>
 <h2>SYNOPSIS</h2>
-<p> <code>console</code> [<i>generic-args</i>] [<code>-aAfFsS</code>] <code>[</code>-e <i>esc</i>] <i>console</i><br />
- <code>console</code> [<i>generic-args</i>] [<code>-iIuwWx</code>] [<i>console</i>]<br />
+<p> <code>console</code> [<i>generic-args</i>] [<code>-aAfFsS</code>] <code>[</code>-e <i>esc</i>] <i>console</i><br/>
+ <code>console</code> [<i>generic-args</i>] [<code>-iIuwWx</code>] [<i>console</i>]<br/>
  <code>console</code> [<i>generic-args</i>] [<code>-hPqQrRV</code>] [<code>&#8211;</code>[<code>bB</code>] <i>message</i>] [<code>-d</code> [<i>user</i>][<code>@</code><i>console</i>]] [<code>-t</code> [<i>user</i>][<code>@</code><i>console</i>] <i>message</i>] [<code>&#8211;</code>[<code>zZ</code>] <i>cmd</i>] </p>
 <p> <i>generic-args</i>: [<code>-7DEnUv</code>] [<code>-c</code> <i>cred</i>] [<code>-C</code> <i>config</i>] <code>[</code>-M <i>master</i>] <code>[</code>-p <i>port</i>] <code>[</code>-l <i>user</i>]</p>
 <h2>DESCRIPTION</h2>
@@ -175,13 +175,13 @@ description: "console – console server client program"
  Override the replay length for the <code>r</code> escape command to <i>num</i> lines (if the server supports it). Using the special value of &#8220;0&#8221; will cause the client to use the number of lines of the current terminal (if that can be determined). If the null string (&#8220;&quot;&quot;&#8221;) is used, the replay length will not be overridden.</dd>
 <dt><code>sslcacertificatefile</code> <i>filename</i></dt>
 <dd>
- Load the valid CA certificates for the <font SIZE="-1">SSL</font> connection from the PEM encoded file.</dd>
+ Load the valid CA certificates for the SSL connection from the PEM encoded file.</dd>
 <dt><code>sslcacertificatepath</code> <i>directory</i></dt>
 <dd>
- Load the valid CA certificates for the <font SIZE="-1">SSL</font> connection from the PEM encoded files in the directory.</dd>
+ Load the valid CA certificates for the SSL connection from the PEM encoded files in the directory.</dd>
 <dt><code>sslcredentials</code> <i>filename</i></dt>
 <dd>
- Set the <font SIZE="-1">SSL</font> credentials file location (see the <code>-c</code> command-line flag).</dd>
+ Set the SSL credentials file location (see the <code>-c</code> command-line flag).</dd>
 <dt><code>sslenabled</code> <code>yes</code>|<code>true</code>|<code>on</code>|<code>no</code>|<code>false</code>|<code>off</code></dt>
 <dd>
  Set whether or not encryption is attempted when talking to servers (see the <code>-E</code> command-line flag).</dd>
@@ -284,18 +284,18 @@ terminal xterm
 <dl>
 <dt>
 </dt><dd>
-#override options for all hosts<br />
-config *<br />
-{<br />
-    master localhost;<br />
-    escape ^ Ee;<br />
-}<br />
-#set things more specific to host1<br />
-#note : if the entries were reversed, host1<br />
-#would also use localhost.<br />
-config host1<br />
-{<br />
-    master console1;<br />
+#override options for all hosts<br/>
+config *<br/>
+{<br/>
+    master localhost;<br/>
+    escape ^ Ee;<br/>
+}<br/>
+#set things more specific to host1<br/>
+#note : if the entries were reversed, host1<br/>
+#would also use localhost.<br/>
+config host1<br/>
+{<br/>
+    master console1;<br/>
 }
 </dd></dl>
 <h2>ESCAPE SEQUENCES</h2>
@@ -402,15 +402,15 @@ ksb[at] extra attach 2days expert
 <dl>
 <dt><code>/etc/console.cf</code></dt>
 <dd> system-wide configuration file</dd>
-<dt><font SIZE="-1"><code>$HOME</code></font><code>/.consolerc</code></dt>
+<dt><code>$HOME</code><code>/.consolerc</code></dt>
 <dd> per-user configuration file</dd></dl>
 <h2>BUGS</h2>
 <p> It is possible to create a loop of console connections, with ugly results. Never run <code>console</code> from within a console connection (unless you set each escape sequence differently). </p>
 <p> The -i output can produce more than the stated number of fields of information if the user-provided information has embedded colons. </p>
 <p> I&#8217;m sure there are more, I just don&#8217;t know where they are. Please let me know if you find any.</p>
 <h2>AUTHORS</h2>
-<p> Thomas A. Fine, Ohio State Computer Science<br />
- Kevin Braunsdorf, Purdue University Computing Center<br />
+<p> Thomas A. Fine, Ohio State Computer Science<br/>
+ Kevin Braunsdorf, Purdue University Computing Center<br/>
  Bryan Stansell, conserver.com</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-conserver-cf/">conserver.cf</a></code>(5), <code><a href="/docs/linux/man/5-conserver-passwd/">conserver.passwd</a></code>(5), <code><a href="/docs/linux/man/8-conserver/">conserver</a></code>(8) </p>

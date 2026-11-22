@@ -16,9 +16,9 @@ description: "gnome-phone-manager – Manage your mobile phone"
 <p> <code>gnome-phone-manager</code> is a program created to allow you to control aspects of your mobile phone from your GNOME 2 desktop.</p>
 <dl>
 <dt>Current features include:</dt>
-<dd> <code>&#8211;</code> Runs in the background; indicates status on the panel notification area,<br />
- <code>&#8211;</code> Display on-screen alert when text message (SMS) arrives,<br />
- <code>&#8211;</code> Text message (SMS) sending facility,<br />
+<dd> <code>&#8211;</code> Runs in the background; indicates status on the panel notification area,<br/>
+ <code>&#8211;</code> Display on-screen alert when text message (SMS) arrives,<br/>
+ <code>&#8211;</code> Text message (SMS) sending facility,<br/>
  <code>&#8211;</code> Evolution Addressbook integration.</dd></dl>
 <h2>OPTIONS</h2>
 <h3>Help Options:</h3>

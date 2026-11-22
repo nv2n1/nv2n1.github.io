@@ -9,14 +9,14 @@ description: "ab – Apache HTTP server benchmarking tool"
 
 <p>ab &#8211; Apache HTTP server benchmarking tool</p>
 <h2>Synopsis</h2>
-<p> <code>ab</code> [ &#8211;<code>A</code> <i>auth-username</i>:<i>password</i> ] [ &#8211;<code>b</code> <i>windowsize</i> ] [ &#8211;<code>c</code> <i>concurrency</i> ] [ &#8211;<code>C</code> <i>cookie-name</i>=<i>value</i> ] [ &#8211;<code>d</code> ] [ &#8211;<code>e</code> <i>csv-file</i> ] [ &#8211;<code>f</code> <i>protocol</i> ] [ &#8211;<code>g</code> <i>gnuplot-file</i> ] [ &#8211;<code>h</code> ] [ &#8211;<code>H</code> <i>custom-header</i> ] [ &#8211;<code>i</code> ] [ &#8211;<code>k</code> ] [ &#8211;<code>n</code> <i>requests</i> ] [ &#8211;<code>p</code> <i>POST-file</i> ] [ &#8211;<code>P</code> <i>proxy-auth-username</i>:<i>password</i> ] [ &#8211;<code>q</code> ] [ &#8211;<code>r</code> ] [ &#8211;<code>s</code> ] [ &#8211;<code>S</code> ] [ &#8211;<code>t</code> <i>timelimit</i> ] [ &#8211;<code>T</code> <i>content-type</i> ] [ &#8211;<code>u</code> <i>PUT-file</i> ] [ &#8211;<code>v</code> <i>verbosity</i>] [ &#8211;<code>V</code> ] [ &#8211;<code>w</code> ] [ &#8211;<code>x</code> <i>&lt;table&gt;-attributes</i> ] [ &#8211;<code>X</code> <i>proxy</i>[:<i>port</i>] ] [ &#8211;<code>y</code> <i>&lt;tr&gt;-attributes</i> ] [ &#8211;<code>z</code> <i>&lt;td&gt;-attributes</i> ] [ &#8211;<code>Z</code> <i>ciphersuite</i> ] [http[s]://]<i>hostname</i>[:<i>port</i>]/<i>path</i><br />
+<p> <code>ab</code> [ &#8211;<code>A</code> <i>auth-username</i>:<i>password</i> ] [ &#8211;<code>b</code> <i>windowsize</i> ] [ &#8211;<code>c</code> <i>concurrency</i> ] [ &#8211;<code>C</code> <i>cookie-name</i>=<i>value</i> ] [ &#8211;<code>d</code> ] [ &#8211;<code>e</code> <i>csv-file</i> ] [ &#8211;<code>f</code> <i>protocol</i> ] [ &#8211;<code>g</code> <i>gnuplot-file</i> ] [ &#8211;<code>h</code> ] [ &#8211;<code>H</code> <i>custom-header</i> ] [ &#8211;<code>i</code> ] [ &#8211;<code>k</code> ] [ &#8211;<code>n</code> <i>requests</i> ] [ &#8211;<code>p</code> <i>POST-file</i> ] [ &#8211;<code>P</code> <i>proxy-auth-username</i>:<i>password</i> ] [ &#8211;<code>q</code> ] [ &#8211;<code>r</code> ] [ &#8211;<code>s</code> ] [ &#8211;<code>S</code> ] [ &#8211;<code>t</code> <i>timelimit</i> ] [ &#8211;<code>T</code> <i>content-type</i> ] [ &#8211;<code>u</code> <i>PUT-file</i> ] [ &#8211;<code>v</code> <i>verbosity</i>] [ &#8211;<code>V</code> ] [ &#8211;<code>w</code> ] [ &#8211;<code>x</code> <i>&lt;table&gt;-attributes</i> ] [ &#8211;<code>X</code> <i>proxy</i>[:<i>port</i>] ] [ &#8211;<code>y</code> <i>&lt;tr&gt;-attributes</i> ] [ &#8211;<code>z</code> <i>&lt;td&gt;-attributes</i> ] [ &#8211;<code>Z</code> <i>ciphersuite</i> ] [http[s]://]<i>hostname</i>[:<i>port</i>]/<i>path</i><br/>
 &nbsp;<wbr> </p>
 <h2>Summary</h2>
 <p>&nbsp;<wbr> </p>
-<p> ab is a tool for benchmarking your Apache Hypertext Transfer Protocol (HTTP) server. It is designed to give you an impression of how your current Apache installation performs. This especially shows you how many requests per second your Apache installation is capable of serving.<br />
+<p> ab is a tool for benchmarking your Apache Hypertext Transfer Protocol (HTTP) server. It is designed to give you an impression of how your current Apache installation performs. This especially shows you how many requests per second your Apache installation is capable of serving.<br/>
 &nbsp;<wbr></p>
 <h2>Options</h2>
-<p>&nbsp;<wbr><br />
+<p>&nbsp;<wbr><br/>
 &nbsp;<wbr></p>
 <dl>
 <dt>-A <i>auth-username</i>:<i>password</i></dt>
@@ -78,12 +78,12 @@ description: "ab – Apache HTTP server benchmarking tool"
 <dt>-z <i>&lt;td&gt;-attributes</i></dt>
 <dd>String to use as attributes for &lt;td&gt;.</dd>
 <dt>-Z <i>ciphersuite</i></dt>
-<dd>Specify SSL/TLS cipher suite (See openssl ciphers).<br />
+<dd>Specify SSL/TLS cipher suite (See openssl ciphers).<br/>
 &nbsp;<wbr></dd></dl>
 <h2>Description Of Output</h2>
 <p>&nbsp;<wbr> </p>
-<p> The following list describes the values returned by ab:<br />
-&nbsp;<wbr><br />
+<p> The following list describes the values returned by ab:<br/>
+&nbsp;<wbr><br/>
 &nbsp;<wbr></p>
 <dl>
 <dt>Server Software</dt>
@@ -123,9 +123,9 @@ description: "ab – Apache HTTP server benchmarking tool"
 <dt>Time per request</dt>
 <dd>The average time spent per request. The first value is calculated with the formula concurrency * timetaken * 1000 / done while the second value is calculated with the formula timetaken * 1000 / done</dd>
 <dt>Transfer rate</dt>
-<dd>The rate of transfer as calculated by the formula totalread / 1024 / timetaken<br />
+<dd>The rate of transfer as calculated by the formula totalread / 1024 / timetaken<br/>
 &nbsp;<wbr></dd></dl>
 <h2>Bugs</h2>
-<p> There are various statically declared buffers of fixed length. Combined with the lazy parsing of the command line arguments, the response headers from the server and other external inputs, this might bite you.<br />
-&nbsp;<wbr> It does not implement HTTP/1.x fully; only accepts some &#8216;expected&#8217; forms of responses. The rather heavy use of <a href="/docs/linux/man/3-strstr/">strstr</a>(3) shows up top in profile, which might indicate a performance problem; <i>i.e.</i>, you would measure the ab performance rather than the server&#8217;s.<br />
+<p> There are various statically declared buffers of fixed length. Combined with the lazy parsing of the command line arguments, the response headers from the server and other external inputs, this might bite you.<br/>
+&nbsp;<wbr> It does not implement HTTP/1.x fully; only accepts some &#8216;expected&#8217; forms of responses. The rather heavy use of <a href="/docs/linux/man/3-strstr/">strstr</a>(3) shows up top in profile, which might indicate a performance problem; <i>i.e.</i>, you would measure the ab performance rather than the server&#8217;s.<br/>
 &nbsp;<wbr> </p>

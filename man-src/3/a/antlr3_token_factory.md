@@ -9,7 +9,7 @@ description: "ANTLR3_TOKEN_FACTORY – Token Factory Class Definition –"
 
 <p>ANTLR3_TOKEN_FACTORY &#8211; Token Factory Class Definition &#8211; </p>
 <h3>Typedefs</h3>
-<p>typedef struct <code>ANTLR3_TOKEN_FACTORY_struct</code> * <code>pANTLR3_TOKEN_FACTORY</code><br />
+<p>typedef struct <code>ANTLR3_TOKEN_FACTORY_struct</code> * <code>pANTLR3_TOKEN_FACTORY</code><br/>
  <i>Pointer to an instantiation of &#8216;class&#8217; </i><code>ANTLR3_TOKEN_FACTORY</code>.</p>
 <h2>Typedef Documentation</h2>
 <h3>typedef struct <code>ANTLR3_TOKEN_FACTORY_struct</code>* <code>pANTLR3_TOKEN_FACTORY</code></h3>

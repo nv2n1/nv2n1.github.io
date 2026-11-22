@@ -13,12 +13,12 @@ description: "log4cpp::BufferingAppender –"
 <p> Inherits <code>log4cpp::LayoutAppender</code>.</p>
 <h3>Public Member Functions</h3>
 <p><code>BufferingAppender</code> (const std::string name, unsigned long max_size, std::auto_ptr&lt; <code>Appender</code> &gt; sink, std::auto_ptr&lt; <code>TriggeringEventEvaluator</code> &gt; evaluator) </p>
-<p> virtual void <code>close</code> ()<br />
- <i>Release any resources allocated within the appender such as file handles, network connections, etc. </i><br />
+<p> virtual void <code>close</code> ()<br/>
+ <i>Release any resources allocated within the appender such as file handles, network connections, etc. </i><br/>
  bool <code>getLossy</code> () const </p>
 <p> void <code>setLossy</code> (bool lossy) </p>
 <h3>Protected Member Functions</h3>
-<p>virtual void <code>_append</code> (const <code>LoggingEvent</code> &amp;event)<br />
+<p>virtual void <code>_append</code> (const <code>LoggingEvent</code> &amp;event)<br/>
  <i>Log in </i><code>Appender</code> specific way.</p>
 <h3>Additional Inherited Members</h3>
 <h2>Constructor &amp; Destructor Documentation</h2>

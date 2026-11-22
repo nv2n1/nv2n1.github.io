@@ -15,7 +15,7 @@ description: "QuantLib::Error – Base error class."
 <h3>Public Member Functions</h3>
 <p><code>Error</code> (const std::string &amp;file, long line, const std::string &amp;functionName, const std::string &amp;message=&#8221;) </p>
 <p> <code>~Error</code> () throw () </p>
-<p> const char * <code>what</code> () const throw ()<br />
+<p> const char * <code>what</code> () const throw ()<br/>
  <i>returns the error message. </i></p>
 <h2>Detailed Description</h2>
 <p>Base error class.</p>

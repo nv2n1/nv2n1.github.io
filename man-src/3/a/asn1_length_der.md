@@ -24,7 +24,7 @@ description: "asn1_length_der – API function"
 <p> Creates the DER encoding of the provided length value. The <i>der</i> buffer must have enough room for the output. The maximum length this function will encode is <code>ASN1_MAX_LENGTH_SIZE</code>. </p>
 <p> To know the size of the DER encoding use a <code>NULL</code> value for <i>der</i> .</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright &#169; 2006-2015 Free Software Foundation, Inc..<br />
+<p> Copyright &#169; 2006-2015 Free Software Foundation, Inc..<br/>
  Copying and distribution of this file, with or without modification, are permitted in any medium without royalty provided the copyright notice and this notice are preserved.</p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>libtasn1</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>libtasn1</code> programs are properly installed at your site, the command</p>

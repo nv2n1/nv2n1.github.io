@@ -47,9 +47,9 @@ description: "apt-secure – Archive authentication support for APT"
 <p> Whenever the contents of the archive change (new packages are added or removed) the archive maintainer has to follow the first two steps outlined above.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-apt-conf/">apt.conf</a></code>(5), <code><a href="/docs/linux/man/8-apt-get/">apt-get</a></code>(8), <code><a href="/docs/linux/man/5-sources-list/">sources.list</a></code>(5), <code><a href="/docs/linux/man/8-apt-key/">apt-key</a></code>(8), <code><a href="/docs/linux/man/1-apt-ftparchive/">apt-ftparchive</a></code>(1), <code>debsign</code>(1), <code>debsig-verify</code>(1), <code><a href="/docs/linux/man/1-gpg/">gpg</a></code>(1) </p>
-<p> For more background information you might want to review the m[blue]<code>Debian Security Infrastructure</code>m[]<font SIZE="-2">[1]</font> chapter of the Securing Debian Manual (also available in the harden-doc package) and the m[blue]<code>Strong Distribution HOWTO</code>m[]<font SIZE="-2">[2]</font> by V. Alex Brennen.</p>
+<p> For more background information you might want to review the m[blue]<code>Debian Security Infrastructure</code>m[][1] chapter of the Securing Debian Manual (also available in the harden-doc package) and the m[blue]<code>Strong Distribution HOWTO</code>m[][2] by V. Alex Brennen.</p>
 <h2>Bugs</h2>
-<p>m[blue]<code>APT bug page</code>m[]<font SIZE="-2">[3]</font>. If you wish to report a bug in APT, please see /usr/share/doc/debian/bug-reporting.txt or the <code>reportbug</code>(1) command.</p>
+<p>m[blue]<code>APT bug page</code>m[][3]. If you wish to report a bug in APT, please see /usr/share/doc/debian/bug-reporting.txt or the <code>reportbug</code>(1) command.</p>
 <h2>Author</h2>
 <p>APT was written by the APT team &lt;apt [at] packages.debian.org&gt;.</p>
 <h2>Manpage Authors</h2>

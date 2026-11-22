@@ -10,8 +10,8 @@ description: "git-pr – Checks out a pull request locally"
 
 <p> <code>git-pr</code> &#8211; Checks out a pull request locally</p>
 <h2>SYNOPSIS</h2>
-<p> <code>git-pr</code> &lt;number&gt; [&lt;remote&gt;]<br />
- <code>git-pr</code> &lt;url&gt;<br />
+<p> <code>git-pr</code> &lt;number&gt; [&lt;remote&gt;]<br/>
+ <code>git-pr</code> &lt;url&gt;<br/>
  <code>git-pr clean</code></p>
 <h2>DESCRIPTION</h2>
 <p> Creates a local branch based on a GitHub pull request number or URL, and switch to that branch afterwards.</p>

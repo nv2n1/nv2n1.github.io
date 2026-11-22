@@ -10,7 +10,7 @@ description: "clatdf.f –"
 <p>clatdf.f &#8211; </p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>clatdf</code> (IJOB, N, Z, LDZ, RHS, RDSUM, RDSCAL, IPIV, JPIV)<br />
+<p>subroutine <code>clatdf</code> (IJOB, N, Z, LDZ, RHS, RDSUM, RDSCAL, IPIV, JPIV)<br/>
  <i></i><code>CLATDF</code> uses the LU factorization of the n-by-n matrix computed by sgetc2 and computes a contribution to the reciprocal Dif-estimate.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine clatdf (integerIJOB, integerN, complex, dimension( ldz, * )Z, integerLDZ, complex, dimension( * )RHS, realRDSUM, realRDSCAL, integer, dimension( * )IPIV, integer, dimension( * )JPIV)</h3>

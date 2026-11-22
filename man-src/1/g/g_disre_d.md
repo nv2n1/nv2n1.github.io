@@ -19,52 +19,52 @@ description: "g_disre – analyzes distance restraints"
 <p> When the optional<code> -q</code> flag is given a pdb file coloured by the amount of average violations. </p>
 <p> When the <code> -c</code> option is given, an index file will be read containing the frames in your trajectory corresponding to the clusters (defined in another manner) that you want to analyze. For these clusters the program will compute average violations using the third power averaging algorithm and print them in the log file.</p>
 <h2>FILES</h2>
-<p> <code>-s</code><i> topol.tpr</i> <code>Input</code><br />
+<p> <code>-s</code><i> topol.tpr</i> <code>Input</code><br/>
 &nbsp;<wbr>Run input file: tpr tpb tpa&nbsp;<wbr> </p>
-<p> <code>-f</code><i> traj.xtc</i> <code>Input</code><br />
+<p> <code>-f</code><i> traj.xtc</i> <code>Input</code><br/>
 &nbsp;<wbr>Trajectory: xtc trr trj gro g96 pdb cpt&nbsp;<wbr> </p>
-<p> <code>-ds</code><i> drsum.xvg</i> <code>Output</code><br />
+<p> <code>-ds</code><i> drsum.xvg</i> <code>Output</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-da</code><i> draver.xvg</i> <code>Output</code><br />
+<p> <code>-da</code><i> draver.xvg</i> <code>Output</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-dn</code><i> drnum.xvg</i> <code>Output</code><br />
+<p> <code>-dn</code><i> drnum.xvg</i> <code>Output</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-dm</code><i> drmax.xvg</i> <code>Output</code><br />
+<p> <code>-dm</code><i> drmax.xvg</i> <code>Output</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-dr</code><i> restr.xvg</i> <code>Output</code><br />
+<p> <code>-dr</code><i> restr.xvg</i> <code>Output</code><br/>
 &nbsp;<wbr>xvgr/xmgr file&nbsp;<wbr> </p>
-<p> <code>-l</code><i> disres.log</i> <code>Output</code><br />
+<p> <code>-l</code><i> disres.log</i> <code>Output</code><br/>
 &nbsp;<wbr>Log file&nbsp;<wbr> </p>
-<p> <code>-n</code><i> viol.ndx</i> <code>Input, Opt.</code><br />
+<p> <code>-n</code><i> viol.ndx</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Index file&nbsp;<wbr> </p>
-<p> <code>-q</code><i> viol.pdb</i> <code>Output, Opt.</code><br />
+<p> <code>-q</code><i> viol.pdb</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>Protein data bank file&nbsp;<wbr> </p>
-<p> <code>-c</code><i> clust.ndx</i> <code>Input, Opt.</code><br />
+<p> <code>-c</code><i> clust.ndx</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Index file&nbsp;<wbr> </p>
-<p> <code>-x</code><i> matrix.xpm</i> <code>Output, Opt.</code><br />
+<p> <code>-x</code><i> matrix.xpm</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>X PixMap compatible matrix file&nbsp;<wbr> </p>
 <h2>OTHER OPTIONS</h2>
-<p> <code>-[no]h</code><i>no </i><br />
+<p> <code>-[no]h</code><i>no </i><br/>
 &nbsp;<wbr>Print help info and quit </p>
-<p> <code>-nice</code><i> int</i><code> 19</code><br />
+<p> <code>-nice</code><i> int</i><code> 19</code><br/>
 &nbsp;<wbr>Set the nicelevel </p>
-<p> <code>-b</code><i> time</i><code> 0 </code><br />
+<p> <code>-b</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>First frame&nbsp;<wbr>(ps)&nbsp;<wbr>to read from trajectory </p>
-<p> <code>-e</code><i> time</i><code> 0 </code><br />
+<p> <code>-e</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>Last frame&nbsp;<wbr>(ps)&nbsp;<wbr>to read from trajectory </p>
-<p> <code>-dt</code><i> time</i><code> 0 </code><br />
+<p> <code>-dt</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>Only use frame when t MOD dt&nbsp;<wbr>=&nbsp;<wbr>first time&nbsp;<wbr>(ps) </p>
-<p> <code>-[no]w</code><i>no </i><br />
+<p> <code>-[no]w</code><i>no </i><br/>
 &nbsp;<wbr>View output xvg, xpm, eps and pdb files </p>
-<p> <code>-[no]xvgr</code><i>yes </i><br />
+<p> <code>-[no]xvgr</code><i>yes </i><br/>
 &nbsp;<wbr>Add specific codes&nbsp;<wbr>(legends etc.)&nbsp;<wbr>in the output xvg files for the xmgrace program </p>
-<p> <code>-ntop</code><i> int</i><code> 0</code><br />
+<p> <code>-ntop</code><i> int</i><code> 0</code><br/>
 &nbsp;<wbr>Number of large violations that are stored in the log file every step </p>
-<p> <code>-maxdr</code><i> real</i><code> 0 </code><br />
+<p> <code>-maxdr</code><i> real</i><code> 0 </code><br/>
 &nbsp;<wbr>Maximum distance violation in matrix output. If less than or equal to 0 the maximum will be determined by the data. </p>
-<p> <code>-nlevels</code><i> int</i><code> 20</code><br />
+<p> <code>-nlevels</code><i> int</i><code> 20</code><br/>
 &nbsp;<wbr>Number of levels in the matrix output </p>
-<p> <code>-[no]third</code><i>yes </i><br />
+<p> <code>-[no]third</code><i>yes </i><br/>
 &nbsp;<wbr>Use inverse third power averaging or linear for matrix output </p>
 <h2>SEE ALSO</h2>
 <p> <code>gromacs(7)</code> </p>

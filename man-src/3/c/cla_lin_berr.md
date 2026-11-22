@@ -11,7 +11,7 @@ description: "cla_lin_berr.f –"
 <p> cla_lin_berr.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>cla_lin_berr</code> (N, NZ, NRHS, RES, AYB, BERR)<br />
+<p> subroutine <code>cla_lin_berr</code> (N, NZ, NRHS, RES, AYB, BERR)<br/>
  <i></i><code>CLA_LIN_BERR</code> computes a component-wise relative backward error.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine cla_lin_berr (integerN, integerNZ, integerNRHS, complex, dimension( n, nrhs )RES, real, dimension( n, nrhs )AYB, real, dimension( nrhs )BERR)</h3>

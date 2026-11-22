@@ -11,7 +11,7 @@ description: "chprfs.f –"
 <p> chprfs.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>chprfs</code> (UPLO, N, NRHS, AP, AFP, IPIV, B, LDB, X, LDX, FERR, BERR, WORK, RWORK, INFO)<br />
+<p> subroutine <code>chprfs</code> (UPLO, N, NRHS, AP, AFP, IPIV, B, LDB, X, LDX, FERR, BERR, WORK, RWORK, INFO)<br/>
  <i></i><code>CHPRFS</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine chprfs (characterUPLO, integerN, integerNRHS, complex, dimension( * )AP, complex, dimension( * )AFP, integer, dimension( * )IPIV, complex, dimension( ldb, * )B, integerLDB, complex, dimension( ldx, * )X, integerLDX, real, dimension( * )FERR, real, dimension( * )BERR, complex, dimension( * )WORK, real, dimension( * )RWORK, integerINFO)</h3>

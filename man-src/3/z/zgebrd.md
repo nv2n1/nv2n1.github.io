@@ -10,7 +10,7 @@ description: "zgebrd.f –"
 <p>zgebrd.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zgebrd</code> (M, N, A, LDA, D, E, TAUQ, TAUP, WORK, LWORK, INFO)<br />
+<p>subroutine <code>zgebrd</code> (M, N, A, LDA, D, E, TAUQ, TAUP, WORK, LWORK, INFO)<br/>
  <i></i><code>ZGEBRD</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zgebrd (integerM, integerN, complex*16, dimension( lda, * )A, integerLDA, double precision, dimension( * )D, double precision, dimension( * )E, complex*16, dimension( * )TAUQ, complex*16, dimension( * )TAUP, complex*16, dimension( * )WORK, integerLWORK, integerINFO)</h3>

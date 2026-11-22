@@ -13,8 +13,8 @@ description: "QuantLib::LevenbergMarquardt – Levenberg-Marquardt optimization 
 <p> Inherits <code>QuantLib::OptimizationMethod</code>. </p>
 <h3>Public Member Functions</h3>
 <p><code>LevenbergMarquardt</code> (<code>Real</code> epsfcn=1.0e-8, Real xtol=1.0e-8, Real gtol=1.0e-8) </p>
-<p> virtual EndCriteria::Type <code>minimize</code> (<code>Problem</code> &amp;P, const <code>EndCriteria</code> &amp;endCriteria)<br />
- <i>minimize the optimization problem P </i><br />
+<p> virtual EndCriteria::Type <code>minimize</code> (<code>Problem</code> &amp;P, const <code>EndCriteria</code> &amp;endCriteria)<br/>
+ <i>minimize the optimization problem P </i><br/>
  virtual <code>Integer</code> <code>getInfo</code> () const </p>
 <p> void <code>fcn</code> (int m, int n, double *x, double *fvec, int *iflag) </p>
 <h2>Detailed Description</h2>

@@ -35,19 +35,19 @@ int Proutespline(Pedge_t *barriers, int n_barriers, Ppolyline_t input_route, Pve
 int Ppolybarriers(Ppoly_t **polys, int n_polys, Pedge_t **barriers, int *n_barriers);</code></pre>
 <h2>Description</h2>
 <p><code>libpathplan</code> provides functions for creating spline paths in the plane that are constrained by a polygonal boundary or obstacles to avoid. All polygons must be simple, but need not be convex. int Proutespline(Pedge_t *barriers, int n_barriers, Ppolyline_t input_route, Pvector_t endpoint_slopes[2], Ppolyline_t *output_route);</p>
-<p>This function fits a cubic B-spline curve to a polyline path.<br />
-The curve is constructed to avoid a set of n_barriers barrier line segments<br />
-specified in the array barriers. If you start with polygonal obstacles, you<br />
-can supply each polygon&#8217;s edges as part of the barrier list.<br />
-The polyline input_route provides a template for the final path;<br />
-it<br />
-    is usually the output_route of one of the shortest path<br />
-        finders,<br />
-    but it can be any simple path that doesn&#8217;t cross any barrier segment.The input also allows the specification of desired<br />
-        slopes at the endpoints via endpoint_slopes.These are specified as vectors.For example,<br />
-    to have an angle of T at an endpoing, one could use(cos(T), sin(T)).A vector(0, 0) means unconstrained slope.The output is returned in output_route and consists of the control points of the B &#8211; spline.The function return 0 on success;<br />
-a return value of &#8211; 1 indicates<br />
-                        failure.The array of points in output_route is static to the library.It should not be freed,<br />
+<p>This function fits a cubic B-spline curve to a polyline path.<br/>
+The curve is constructed to avoid a set of n_barriers barrier line segments<br/>
+specified in the array barriers. If you start with polygonal obstacles, you<br/>
+can supply each polygon&#8217;s edges as part of the barrier list.<br/>
+The polyline input_route provides a template for the final path;<br/>
+it<br/>
+    is usually the output_route of one of the shortest path<br/>
+        finders,<br/>
+    but it can be any simple path that doesn&#8217;t cross any barrier segment.The input also allows the specification of desired<br/>
+        slopes at the endpoints via endpoint_slopes.These are specified as vectors.For example,<br/>
+    to have an angle of T at an endpoing, one could use(cos(T), sin(T)).A vector(0, 0) means unconstrained slope.The output is returned in output_route and consists of the control points of the B &#8211; spline.The function return 0 on success;<br/>
+a return value of &#8211; 1 indicates<br/>
+                        failure.The array of points in output_route is static to the library.It should not be freed,<br/>
     and should be used before another call to Proutespline.</p>
 <h3> vconfig_t *Pobsopen(Ppoly_t **obstacles, int n_obstacles);</h3>
 <h3> Pobspath(vconfig_t *config, Ppoint_t p0, int poly0, Ppoint_t p1, int poly1, Ppolyline_t *output_route);</h3>

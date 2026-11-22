@@ -13,10 +13,10 @@ description: "FunImageRowPut – put row(s) of an image"
 <pre><code>
 #include &lt;funtools.h&gt;
 </code></pre>
-<p>void *FunImageRowPut(Fun fun, void *buf, int rstart, int rstop,<br />
+<p>void *FunImageRowPut(Fun fun, void *buf, int rstart, int rstop,<br/>
                      int dim1, int dim2, int bitpix, char *plist)</p>
 <h2>DESCRIPTION</h2>
-<p> The FunImageRowPut() routine writes one or more image rows to the specified <font SIZE="-1">FITS</font> image file. The first argument is the Funtools handle returned by <i>FunOpen()</i>. The second <code>buf</code> argument is a pointer to the row data buffer, while the third and fourth arguments specify the starting and ending rows to write. Valid rows values range from 1 to dim2, i.e., row is one-valued. </p>
+<p> The FunImageRowPut() routine writes one or more image rows to the specified FITS image file. The first argument is the Funtools handle returned by <i>FunOpen()</i>. The second <code>buf</code> argument is a pointer to the row data buffer, while the third and fourth arguments specify the starting and ending rows to write. Valid rows values range from 1 to dim2, i.e., row is one-valued. </p>
 <p> The <code>dim1</code>and <code>dim2</code> arguments that follow specify the dimensions, where dim1 corresponds to naxis1 and dim2 corresponds to naxis2. The <code>bitpix</code> argument data type of the image and can have the following FITS-standard values:</p>
 <dl>
 <dt>*</dt>
@@ -49,7 +49,7 @@ for (i = 1; i &lt;= dim2; i++) {
 }
 ...
 </code></pre>
-<p> The data are assumed to be in the native machine format and will automatically be swapped to big-endian <font SIZE="-1">FITS</font> format if necessary. This behavior can be over-ridden with the <code>convert=[true|false]</code> keyword in the <code>plist</code> param list string. </p>
-<p> When you are finished writing the image, you should call <i>FunFlush()</i> to write out the <font SIZE="-1">FITS</font> image padding. However, this is not necessary if you subsequently call <i>FunClose()</i> without doing any other I/O to the <font SIZE="-1">FITS</font> file.</p>
+<p> The data are assumed to be in the native machine format and will automatically be swapped to big-endian FITS format if necessary. This behavior can be over-ridden with the <code>convert=[true|false]</code> keyword in the <code>plist</code> param list string. </p>
+<p> When you are finished writing the image, you should call <i>FunFlush()</i> to write out the FITS image padding. However, this is not necessary if you subsequently call <i>FunClose()</i> without doing any other I/O to the FITS file.</p>
 <h2>SEE ALSO</h2>
 <p> See funtools(n) for a list of Funtools help pages </p>

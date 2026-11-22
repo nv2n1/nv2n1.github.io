@@ -72,7 +72,7 @@ Real priceImpl (Time t) const</code></pre>
 <p>Date underlyingPriceDate (const Date &amp;date, const boost::shared_ptr&lt; ExchangeContracts &gt; &amp;exchangeContracts, Integer nearbyOffset) const</p>
 <p>const boost::shared_ptr&lt; CommodityCurve &gt; &amp; basisOfCurve () const</p>
 <p>Real basisOfPriceImpl (Time t) const</p>
-<p>Real priceImpl (Time t) const<br />
+<p>Real priceImpl (Time t) const<br/>
  class <code>CommodityIndex</code></p>
 <h3>Inspectors</h3>
 <pre><code>std::ostream &amp; operator&lt;&lt; (std::ostream &amp;out, const CommodityCurve &amp;curve)

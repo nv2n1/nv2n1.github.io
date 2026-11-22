@@ -9,7 +9,7 @@ description: "$HOME/.abook/abookrc – configuration file for abook address book
 
 <p><code>$HOME/.abook/abookrc</code> &#8211; configuration file for abook address book program</p>
 <h2>Description</h2>
-<p>This manual page documents briefly the <code>abookrc</code> file.<br />
+<p>This manual page documents briefly the <code>abookrc</code> file.<br/>
  <code>abookrc</code> is the (optional) configuration file for use with the <code><a href="/docs/linux/man/1-abook/">abook</a>(1)</code> address book program. <code>abookrc</code> is stored in a user&#8217;s $HOME/.abook directory. It follows a format of lq<code>set option=value</code>rq. The following information lists each of these options and the values they may take. If a variable is not set in <code>abookrc</code> , a sensible default, as listed with the description below, will be used. Comments in <code>abookrc</code> are on lines beginning with &#8216;#&#8217;. </p>
 <h2>Commands</h2>
 <dl>
@@ -19,7 +19,7 @@ description: "$HOME/.abook/abookrc – configuration file for abook address book
 <dd>Defines a new custom field. <i>type</i> can be one of &#8216;string&#8217; (default) , &#8217;emails&#8217;, &#8216;list&#8217;, or &#8216;date&#8217;. </dd>
 <dt><code>view</code> <i>view name</i> = <i>field1</i> [ , <i>field2</i>, &#8230; ]</dt>
 <dd>Defines a view/tab, with <i>fieldN</i> being the identifier of a field declared with the <code>field</code> command, or the identifier of a standard field.</dd>
-<dd>Standard fields:<br />
+<dd>Standard fields:<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>name, email,</dd>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>address, address2, city, state, zip, country,</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>phone, workphone, fax, mobile,</p>
@@ -38,8 +38,8 @@ description: "$HOME/.abook/abookrc – configuration file for abook address book
 <dt><code>all</code></dt>
 <dd>preserve any completely unknown field.</dd>
 <dt><code>standard</code></dt>
-<dd>only preserve the standard fields (see a list in the<br />
-&nbsp;<wbr>&nbsp;<wbr>description of the&nbsp;<wbr><code>view</code>&nbsp;<wbr>command)&nbsp;<wbr>and the legacy<br />
+<dd>only preserve the standard fields (see a list in the<br/>
+&nbsp;<wbr>&nbsp;<wbr>description of the&nbsp;<wbr><code>view</code>&nbsp;<wbr>command)&nbsp;<wbr>and the legacy<br/>
 &nbsp;<wbr>&nbsp;<wbr>&#8216;custom[1-5]&#8217;&nbsp;<wbr>fields.</dd>
 <dt><code>none</code></dt>
 <dd>discards any unknown field.</dd></dl>

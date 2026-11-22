@@ -38,7 +38,7 @@ module - starter-- module = Foo::Bar, Foo::Bat-- author = "Andy Lester" --email 
 
 <h2>CONFIGURATION</h2>
 
- module-starter will look for a configuration file before reading its command line parameters. The default location is <tt>&quot;$HOME/.module-starter/config&quot;</tt> but if the <font SIZE="-1">MODULE_STARTER_DIR</font> environment variable is set, module-starter will look for <tt>&quot;config&quot;</tt> in that directory. 
+ module-starter will look for a configuration file before reading its command line parameters. The default location is <tt>&quot;$HOME/.module-starter/config&quot;</tt> but if the MODULE_STARTER_DIR environment variable is set, module-starter will look for <tt>&quot;config&quot;</tt> in that directory. 
 
  The configuration file is just a list of names and values, separated by colons. Values that take lists are just space separated. A sample configuration file might read: 
 

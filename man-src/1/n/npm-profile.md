@@ -51,7 +51,7 @@ npm profile get[--json | --parseable][&lt;property&gt;] npm profile set[--json |
 <dl>
 <dl>
 <dt>&bull;</dt>
-<dd> <code>npm profile set &lt;property&gt; &lt;value&gt;</code>: Set the value of a profile property. You can set the following properties this way:<br />
+<dd> <code>npm profile set &lt;property&gt; &lt;value&gt;</code>: Set the value of a profile property. You can set the following properties this way:<br/>
 &nbsp;<wbr>&nbsp;email, fullname, homepage, freenode, twitter, github</dd>
 <dt>&bull;</dt>
 <dd> <code>npm profile set password</code>: Change your password. This is interactive, you&#8217;ll be prompted for your current password and a new password. You&#8217;ll also be prompted for an OTP if you have two-factor authentication enabled.</dd>

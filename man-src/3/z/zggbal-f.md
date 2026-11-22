@@ -10,7 +10,7 @@ description: "zggbal.f –"
 <p>zggbal.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zggbal</code> (JOB, N, A, LDA, B, LDB, ILO, IHI, LSCALE, RSCALE, WORK, INFO)<br />
+<p>subroutine <code>zggbal</code> (JOB, N, A, LDA, B, LDB, ILO, IHI, LSCALE, RSCALE, WORK, INFO)<br/>
  <i></i><code>ZGGBAL</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zggbal (characterJOB, integerN, complex*16, dimension( lda, * )A, integerLDA, complex*16, dimension( ldb, * )B, integerLDB, integerILO, integerIHI, double precision, dimension( * )LSCALE, double precision, dimension( * )RSCALE, double precision, dimension( * )WORK, integerINFO)</h3>

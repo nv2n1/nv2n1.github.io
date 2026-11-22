@@ -18,7 +18,7 @@ description: "shtool echo – GNU shtool"
 <p> The following command line options are available.</p>
 <dl>
 <dt><code>-n</code>, <code>&#8211;newline</code></dt>
-<dd> By default, output is written to <i>stdout</i> followed by a &#8220;newline&#8221; (<font SIZE="-1">ASCII</font> character 0x0a). If option <code>-n</code> is used, this newline character is omitted.</dd>
+<dd> By default, output is written to <i>stdout</i> followed by a &#8220;newline&#8221; (ASCII character 0x0a). If option <code>-n</code> is used, this newline character is omitted.</dd>
 <dt><code>-e</code>, <code>&#8211;expand</code></dt>
 <dd> If option <code>-e</code> is used, <i>string</i> can contain special &quot;<code>%</code><i>x</i>&quot; constructs which are expanded before the output is written. Currently the following constructs are recognized:</dd>
 <dl>
@@ -59,6 +59,6 @@ description: "shtool echo – GNU shtool"
  shtool echo -e &quot;The current date is %D-%m-%Y&quot;
 </pre>
 <h2>HISTORY</h2>
-<p> The <font SIZE="-1"><code>GNU</code></font><code> shtool</code> <code>echo</code> command was originally written by Ralf S. Engelschall &lt;rse [at] engelschall.com&gt; in 1998 for <i>Website </i><font SIZE="-1"><i>META</i></font><i> Language</i> (<font SIZE="-1">WML</font>) under the name <code>buildinfo</code>. It was later taken over into <font SIZE="-1"><code>GNU</code></font><code> shtool</code>.</p>
+<p> The <code>GNU</code><code> shtool</code> <code>echo</code> command was originally written by Ralf S. Engelschall &lt;rse [at] engelschall.com&gt; in 1998 for <i>Website </i><i>META</i><i> Language</i> (WML) under the name <code>buildinfo</code>. It was later taken over into <code>GNU</code><code> shtool</code>.</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-shtool/">shtool</a></i>(1), <i><a href="/docs/linux/man/1-echo/">echo</a></i>(1). </p>

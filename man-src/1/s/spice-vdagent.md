@@ -12,7 +12,7 @@ description: "spice-vdagent – Spice guest agent X11 session agent"
 <h2>SYNOPSIS</h2>
 <p> <code>spice-vdagent</code> [<i>OPTIONS</i>]</p>
 <h2>DESCRIPTION</h2>
-<p> The spice guest agent for Linux consists of 2 parts, a system wide daemon <code>spice-vdagentd</code> and a X11 session agent <code>spice-vdagent</code> of which there is one per X11 session.<br />
+<p> The spice guest agent for Linux consists of 2 parts, a system wide daemon <code>spice-vdagentd</code> and a X11 session agent <code>spice-vdagent</code> of which there is one per X11 session.<br/>
  <code>spice-vdagent</code> gets automatically started in desktop environments which honor /etc/xdg/autostart, and under gdm.</p>
 <h2>FEATURES</h2>
 <p> The spice guest agent adds the following features to spice Linux guests: </p>
@@ -37,5 +37,5 @@ description: "spice-vdagent – Spice guest agent X11 session agent"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-spice-vdagentd/">spice-vdagentd</a></code>(1)</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright 2010-2013 Red Hat, Inc. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt;.<br />
+<p> Copyright 2010-2013 Red Hat, Inc. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt;.<br/>
  This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law. </p>

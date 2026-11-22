@@ -78,7 +78,7 @@ description: "rpc.mountd – NFS mount daemon"
 <dd>table of clients accessing server&#8217;s exports</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-exportfs/">exportfs</a></code>(8), <code><a href="/docs/linux/man/5-exports/">exports</a></code>(5), <code><a href="/docs/linux/man/8-showmount/">showmount</a></code>(8), <code>rpc.nfsd</code>(8), <code><a href="/docs/linux/man/8-rpc-rquotad/">rpc.rquotad</a></code>(8), <code><a href="/docs/linux/man/5-nfs/">nfs</a></code>(5), <code><a href="/docs/linux/man/5-nfs-conf/">nfs.conf</a></code>(5), <code><a href="/docs/linux/man/8-tcpd/">tcpd</a></code>(8), <code><a href="/docs/linux/man/5-hosts_access/">hosts_access</a></code>(5), <code><a href="/docs/linux/man/8-iptables/">iptables</a></code>(8), <code><a href="/docs/linux/man/5-netconfig/">netconfig</a></code>(5) </p>
-<p> RFC 1094 &#8211; &quot;NFS: Network File System Protocol Specification&quot;<br />
+<p> RFC 1094 &#8211; &quot;NFS: Network File System Protocol Specification&quot;<br/>
  RFC 1813 &#8211; &quot;NFS Version 3 Protocol Specification&quot;</p>
 <h2>Author</h2>
 <p>Olaf Kirch, H. J. Lu, G. Allan Morris III, and a host of others.</p>

@@ -58,7 +58,7 @@ sockfd = socket(int socket_family, int socket_type, int protocol);</code></pre>
 </tr>
 <tr VALIGN=top>
 <td>Read/Write</td>
-<td> POLLIN |<br />
+<td> POLLIN |<br/>
  POLLOUT </td>
 <td> An outgoing <code><a href="/docs/linux/man/2-connect/">connect</a></code>(2) finished.
 </td>
@@ -95,8 +95,8 @@ sockfd = socket(int socket_family, int socket_type, int protocol);</code></pre>
 <dt><code>SO_ATTACH_FILTER</code> (since Linux 2.2), <code>SO_ATTACH_BPF</code> (since Linux 3.19)</dt>
 <dd>Attach a classic BPF (<code>SO_ATTACH_FILTER</code>) or an extended BPF (<code>SO_ATTACH_BPF</code>) program to the socket for use as a filter of incoming packets. A packet will be dropped if the filter program returns zero. If the filter program returns a nonzero value which is less than the packet&#8217;s data length, the packet will be truncated to the length returned. If the value returned by the filter is greater than or equal to the packet&#8217;s data length, the packet is allowed to proceed unmodified.</dd>
 <dd>The argument for <code>SO_ATTACH_FILTER</code> is a <i>sock_fprog</i> structure, defined in <i>&lt;linux/filter.h&gt;</i>:</dd>
-<dd>struct sock_fprog {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;len;<br />
+<dd>struct sock_fprog {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;len;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct sock_filter&nbsp;*filter; };</dd>
 <dd>The argument for <code>SO_ATTACH_BPF</code> is a file descriptor returned by the <code><a href="/docs/linux/man/2-bpf/">bpf</a></code>(2) system call and must refer to a program of type <code>BPF_PROG_TYPE_SOCKET_FILTER</code>.</dd>
 <dd>These options may be set multiple times for a given socket, each time replacing the previous filter program. The classic and extended versions may be called on the same socket, but the previous filter will always be replaced such that a socket never has more than one filter defined.</dd>
@@ -127,7 +127,7 @@ sockfd = socket(int socket_family, int socket_type, int protocol);</code></pre>
 <dd>Don&#8217;t send via a gateway, send only to directly connected hosts. The same effect can be achieved by setting the <code>MSG_DONTROUTE</code> flag on a socket <code><a href="/docs/linux/man/2-send/">send</a></code>(2) operation. Expects an integer boolean flag.</dd>
 <dt><code>SO_INCOMING_CPU</code> (gettable since Linux 3.19, settable since Linux 4.4)</dt>
 <dd>Sets or gets the CPU affinity of a socket. Expects an integer flag.</dd>
-<dd>int cpu = 1; setsockopt(fd, SOL_SOCKET, SO_INCOMING_CPU, &amp;cpu,<br />
+<dd>int cpu = 1; setsockopt(fd, SOL_SOCKET, SO_INCOMING_CPU, &amp;cpu,<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sizeof(cpu));</dd>
 <dd>Because all of the packets for a single stream (i.e., all packets for the same 4-tuple) arrive on the single RX queue that is associated with a particular CPU, the typical use case is to employ one listening process per RX queue, with the incoming flow being handled by a listener on the same CPU that is handling the RX queue. This provides optimal NUMA behavior and keeps CPU caches hot.</dd>
 <dt><code>SO_INCOMING_NAPI_ID</code> (gettable since Linux 4.12)</dt>
@@ -137,8 +137,8 @@ sockfd = socket(int socket_family, int socket_type, int protocol);</code></pre>
 <dd>Enable sending of keep-alive messages on connection-oriented sockets. Expects an integer boolean flag.</dd>
 <dt><code>SO_LINGER</code></dt>
 <dd>Sets or gets the <code>SO_LINGER</code> option. The argument is a <i>linger</i> structure.</dd>
-<dd>struct linger {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int l_onoff;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;linger active&nbsp;*/<br />
+<dd>struct linger {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int l_onoff;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;linger active&nbsp;*/<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int l_linger;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;how many seconds to linger for&nbsp;*/ };</dd>
 <dd>When enabled, a <code><a href="/docs/linux/man/2-close/">close</a></code>(2) or <code><a href="/docs/linux/man/2-shutdown/">shutdown</a></code>(2) will not return until all queued messages for the socket have been successfully sent or the linger timeout has been reached. Otherwise, the call returns immediately and the closing is done in the background. When the socket is closed as part of <code><a href="/docs/linux/man/2-exit/">exit</a></code>(2), it always lingers in the background.</dd>
 <dt><code>SO_LOCK_FILTER</code></dt>

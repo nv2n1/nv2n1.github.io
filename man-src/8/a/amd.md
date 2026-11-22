@@ -9,12 +9,12 @@ description: "amd – automatically mount file systems"
 
 <p>amd &#8211; automatically mount file systems</p>
 <h2>Synopsis</h2>
-<p><code>amd</code> <code>-H</code><br />
- <code>amd</code> [ <code>-F</code><i> conf_file</i> ]<br />
+<p><code>amd</code> <code>-H</code><br/>
+ <code>amd</code> [ <code>-F</code><i> conf_file</i> ]<br/>
  <code>amd</code> [ <code>-nprvHS</code> ] [ <code>-a</code><i> mount_point</i> ] [ <code>-c</code><i> duration</i> ] [ <code>-d</code><i> domain</i> ] [ <code>-k</code><i> kernel-arch</i> ] [ <code>-l</code><i> logfile</i> ] [ <code>-o</code><i> op_sys_ver</i> ] [ <code>-t</code><i> interval.interval</i> ] [ <code>-w</code><i> interval</i> ] [ <code>-x</code><i> log-option</i> ] [ <code>-y</code><i> YP-domain</i> ] [ <code>-A</code><i> arch</i> ] [ <code>-C</code><i> cluster-name</i> ] [ <code>-D</code><i> option</i> ] [ <code>-F</code><i> conf_file</i> ] [ <code>-O</code><i> op_sys_name</i> ] [ <code>-T</code><i> tag</i> ] [ <i>directory</i> <i>mapname</i> [<i> -map-options </i>] ] &#8230;</p>
 <h2>Description</h2>
 <p><code>Amd</code> is a daemon that automatically mounts filesystems whenever a file or directory within that filesystem is accessed. Filesystems are automatically unmounted when they appear to have become quiescent. </p>
-<p> <code>Amd</code> operates by attaching itself as an <font SIZE="-1">NFS</font> server to each of the specified <i>directories</i><code>.</code> Lookups within the specified directories are handled by <code>amd</code>, which uses the map defined by <i>mapname</i> to determine how to resolve the lookup. Generally, this will be a host name, some filesystem information and some mount options for the given filesystem. </p>
+<p> <code>Amd</code> operates by attaching itself as an NFS server to each of the specified <i>directories</i><code>.</code> Lookups within the specified directories are handled by <code>amd</code>, which uses the map defined by <i>mapname</i> to determine how to resolve the lookup. Generally, this will be a host name, some filesystem information and some mount options for the given filesystem. </p>
 <p> In the first form depicted above, <code>amd</code> will print a short help string. In the second form, if no options are specified, or the <code>-F</code> is used, <code>amd</code> will read configuration parameters from the file <i>conf_file</i> which defaults to <code>/etc/amd.conf</code>. The last form is described below.</p>
 <h2>Options</h2>
 <dl>

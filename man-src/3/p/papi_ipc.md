@@ -13,18 +13,18 @@ description: "PAPI_ipc –"
 <h2>Detailed Description</h2>
 <p><code>C Interface: </code></p>
 <dl COMPACT>
-<dd>#include &lt;<code>papi.h</code>&gt;<br />
+<dd>#include &lt;<code>papi.h</code>&gt;<br/>
  int <code>PAPI_ipc( float *rtime, float *ptime, long long *ins, float *ipc )</code>;</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>*rtime</i> total realtime since the first call<br />
- <i>*ptime</i> total process time since the first call<br />
- <i>*ins</i> total instructions since the first call<br />
+<dd><i>*rtime</i> total realtime since the first call<br/>
+ <i>*ptime</i> total process time since the first call<br/>
+ <i>*ins</i> total instructions since the first call<br/>
  <i>*ipc</i> incremental instructions per cycle since the last call</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>PAPI_EINVAL</i> The counters were already started by something other than <code>PAPI_ipc()</code>.<br />
- <i>PAPI_ENOEVNT</i> The floating point operations event does not exist.<br />
+<dd><i>PAPI_EINVAL</i> The counters were already started by something other than <code>PAPI_ipc()</code>.<br/>
+ <i>PAPI_ENOEVNT</i> The floating point operations event does not exist.<br/>
  <i>PAPI_ENOMEM</i> Insufficient memory to complete the operation.</dd></dl>
 <p> The first call to <code>PAPI_ipc()</code> will initialize the PAPI High Level interface, set up the counters to monitor PAPI_TOT_INS and PAPI_TOT_CYC events and start the counters. </p>
 <p> Subsequent calls will read the counters and return total real time, total process time, total instructions since the start of the measurement and the IPC rate since the latest call to <code>PAPI_ipc()</code>. </p>

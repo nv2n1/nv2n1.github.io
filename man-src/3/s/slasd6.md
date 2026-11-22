@@ -11,7 +11,7 @@ description: "slasd6.f –"
 <p> slasd6.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
-<p> subroutine <code>slasd6</code> (ICOMPQ, NL, NR, SQRE, D, VF, VL, ALPHA, BETA, IDXQ, PERM, GIVPTR, GIVCOL, LDGCOL, GIVNUM, LDGNUM, POLES, DIFL, DIFR, Z, K, C, S, WORK, IWORK, INFO)<br />
+<p> subroutine <code>slasd6</code> (ICOMPQ, NL, NR, SQRE, D, VF, VL, ALPHA, BETA, IDXQ, PERM, GIVPTR, GIVCOL, LDGCOL, GIVNUM, LDGNUM, POLES, DIFL, DIFR, Z, K, C, S, WORK, IWORK, INFO)<br/>
  <i></i><code>SLASD6</code> computes the SVD of an updated upper bidiagonal matrix obtained by merging two smaller ones by appending a row. Used by sbdsdc.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine slasd6 (integerICOMPQ, integerNL, integerNR, integerSQRE, real, dimension( * )D, real, dimension( * )VF, real, dimension( * )VL, realALPHA, realBETA, integer, dimension( * )IDXQ, integer, dimension( * )PERM, integerGIVPTR, integer, dimension( ldgcol, * )GIVCOL, integerLDGCOL, real, dimension( ldgnum, * )GIVNUM, integerLDGNUM, real, dimension( ldgnum, * )POLES, real, dimension( * )DIFL, real, dimension( * )DIFR, real, dimension( * )Z, integerK, realC, realS, real, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>

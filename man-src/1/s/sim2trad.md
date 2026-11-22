@@ -10,7 +10,7 @@ description: "sim2trad, trad2sim – clipboard data conversion for traditional C
 
 <p> sim2trad, trad2sim &#8211; clipboard data conversion for traditional Chinese and simplified Chinese</p>
 <h2>SYNOPSIS</h2>
-<p> <code>sim2trad</code><br />
+<p> <code>sim2trad</code><br/>
  <code>trad2sim</code></p>
 <h2>DESCRIPTION</h2>
 <p> <code>sim2trad</code> converts clipboard&#8217;s data from simplified Chinese to traditional Chinese. </p>

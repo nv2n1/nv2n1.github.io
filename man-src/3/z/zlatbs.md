@@ -10,7 +10,7 @@ description: "zlatbs.f –"
 <p>zlatbs.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zlatbs</code> (UPLO, TRANS, DIAG, NORMIN, N, KD, AB, LDAB, X, SCALE, CNORM, INFO)<br />
+<p>subroutine <code>zlatbs</code> (UPLO, TRANS, DIAG, NORMIN, N, KD, AB, LDAB, X, SCALE, CNORM, INFO)<br/>
  <i></i><code>ZLATBS</code> solves a triangular banded system of equations.</p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlatbs (characterUPLO, characterTRANS, characterDIAG, characterNORMIN, integerN, integerKD, complex*16, dimension( ldab, * )AB, integerLDAB, complex*16, dimension( * )X, double precisionSCALE, double precision, dimension( * )CNORM, integerINFO)</h3>

@@ -10,7 +10,7 @@ description: "interpformat – tool for transforming mace4(1) models"
 
 <p> interpformat &#8211; tool for transforming <code><a href="/docs/linux/man/1-mace4/">mace4</a></code>(1) models</p>
 <h2>SYNOPSIS</h2>
-<p> <code>interpformat</code> [<i>options</i>] &lt;<i>transformation</i>&gt; -f <i>input-file</i> &gt; <i>output-file</i><br />
+<p> <code>interpformat</code> [<i>options</i>] &lt;<i>transformation</i>&gt; -f <i>input-file</i> &gt; <i>output-file</i><br/>
  <code>interpformat</code> [<i>options</i>] &lt;<i>transformation</i>&gt; &lt; <i>input-file</i> &gt; <i>output-file</i></p>
 <h2>DESCRIPTION</h2>
 <p> The models (structures) in <code><a href="/docs/linux/man/1-mace4/">mace4</a></code>(1) output files can be transformed in various ways with the program <code>interpformat</code>.</p>
@@ -39,7 +39,7 @@ description: "interpformat – tool for transforming mace4(1) models"
 <dt><code>output </code><i>&lt;operations&gt;</i></dt>
 <dd> Output only the listed <i>operations</i>.</dd></dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-mace4/">mace4</a></code>(1).<br />
+<p> <code><a href="/docs/linux/man/1-mace4/">mace4</a></code>(1).<br/>
  Full documentation for <code>interpformat</code> is found in the <code>prover9</code> manual, available on Debian systems in the <i>prover9-doc</i> package at <i>/usr/share/doc/prover9-doc/manual/index.html</i>.</p>
 <h2>AUTHOR</h2>
 <p> <code>interpformat</code> was written by William McCune &lt;mccune [at] cs.unm.edu&gt; </p>

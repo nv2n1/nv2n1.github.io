@@ -9,7 +9,7 @@ description: "hcidump – Parse HCI data"
 
 <p>hcidump &#8211; Parse HCI data</p>
 <h2>Synopsis</h2>
-<p><code>hcidump [-h]</code><br />
+<p><code>hcidump [-h]</code><br/>
  <code>hcidump [option [option&#8230;]] [filter]</code> </p>
 <h2>Description</h2>
 <p><code>hcidump</code> reads raw HCI data coming from and going to a Bluetooth device (which can be specified with the option <code>-i</code>, default is the first available one) and prints to screen commands, events and data in a human-readable form. Optionally, the dump can be written to a file rather than parsed, and the dump file can be parsed in a subsequent moment.</p>

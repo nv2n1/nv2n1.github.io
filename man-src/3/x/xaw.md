@@ -198,7 +198,7 @@ draw-lines -1,+0,+0,+0,+0,-1</pre>
 <p> <i>[type:]name[?arg=val[{&amp;}&#8230;]]</i> </p>
 <p> <code>Type</code> can be one of <i>bitmap</i>, <i>gradient</i> or <i>xpm</i>. </p>
 <p> <code>Name</code> may be a file name, or, in the case of type <i>gradient</i>, may be either <i>vertical</i> or <i>horizontal</i>. </p>
-<p> <code>Arg=val</code> is a list of arguments to the converter. An argument list is preceded by a question mark, and multiple arguments are separated by ampersands. The most common arguments are <i>foreground</i> and <i>background</i>. Gradients also support the arguments <i>start</i> and <i>end</i> (colors with which to start and end the gradient); the steps argument, to allow using less colors; and the <i>dimension</i> argument to specify the size of the gradient.<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>The <i>xpm</i> converter<br />
+<p> <code>Arg=val</code> is a list of arguments to the converter. An argument list is preceded by a question mark, and multiple arguments are separated by ampersands. The most common arguments are <i>foreground</i> and <i>background</i>. Gradients also support the arguments <i>start</i> and <i>end</i> (colors with which to start and end the gradient); the steps argument, to allow using less colors; and the <i>dimension</i> argument to specify the size of the gradient.<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>The <i>xpm</i> converter<br/>
  understands the <i>closeness</i> argument, which aids in using fewer colors (useful if you have a limited colormap).</p>
 <h2>Text Widget</h2>
 <p>Most of the changes to this version of the Xaw library were done in the TextWidget, TextSrcObject, TextSinkObject and related files. </p>

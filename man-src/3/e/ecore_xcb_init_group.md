@@ -9,11 +9,11 @@ description: "X Library Init and Shutdown Functions – Functions that start and
 
 <p>X Library Init and Shutdown Functions &#8211; Functions that start and shut down the Ecore X Library. </p>
 <h3>Functions</h3>
-<p>EAPI int <code>ecore_x_init</code> (const char *name)<br />
- <i>Initialize the X display connection to the given display. </i><br />
- EAPI int <code>ecore_x_shutdown</code> (void)<br />
- <i>Shuts down the Ecore X library. </i><br />
- EAPI int <code>ecore_x_disconnect</code> (void)<br />
+<p>EAPI int <code>ecore_x_init</code> (const char *name)<br/>
+ <i>Initialize the X display connection to the given display. </i><br/>
+ EAPI int <code>ecore_x_shutdown</code> (void)<br/>
+ <i>Shuts down the Ecore X library. </i><br/>
+ EAPI int <code>ecore_x_disconnect</code> (void)<br/>
  <i>Shuts down the Ecore X library. </i></p>
 <h2>Detailed Description</h2>
 <p>Functions that start and shut down the Ecore X Library.</p>

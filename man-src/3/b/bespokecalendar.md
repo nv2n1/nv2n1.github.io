@@ -13,7 +13,7 @@ description: "QuantLib::BespokeCalendar – Bespoke calendar."
 <p> Inherits <code>QuantLib::Calendar</code>. </p>
 <h3>Public Member Functions</h3>
 <p><code>BespokeCalendar</code> (const std::string &amp;name=&#8221;) </p>
-<p> void <code>addWeekend</code> (<code>Weekday</code>)<br />
+<p> void <code>addWeekend</code> (<code>Weekday</code>)<br/>
  <i>marks the passed day as part of the weekend </i></p>
 <h2>Detailed Description</h2>
 <p>Bespoke calendar. </p>

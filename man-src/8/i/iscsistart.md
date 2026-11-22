@@ -50,5 +50,5 @@ description: "iscsistart – iSCSI boot tool"
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-iscsiadm/">iscsiadm</a></code>(8) </p>
 <h2>Authors</h2>
-<p>Open-iSCSI project &lt;<a rel="nofollow" href="http://www.open-iscsi.com/">http://www.open-iscsi.com/</a>&gt;<br />
+<p>Open-iSCSI project &lt;<a rel="nofollow" href="http://www.open-iscsi.com/">http://www.open-iscsi.com/</a>&gt;<br/>
  Mike Christie &lt;mchristi [at] redhat.com&gt;</p>

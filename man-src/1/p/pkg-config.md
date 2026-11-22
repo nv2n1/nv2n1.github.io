@@ -146,8 +146,8 @@ $ pkg - config-- print - errors-- define - variable = prefix = / foo-- variable 
   $ pkg-config --variable pc_path pkg-config
 </pre>
 <dt><i>pcfiledir</i></dt>
-<dd> The installed location of the .pc file. This can be used to query the location of the .pc file for a particular module, but it can also be used to make .pc files relocatable. For instance:<br />
-prefix = ${pcfiledir} /../..exec_prefix = ${prefix} libdir = ${exec_prefix} / lib<br />
+<dd> The installed location of the .pc file. This can be used to query the location of the .pc file for a particular module, but it can also be used to make .pc files relocatable. For instance:<br/>
+prefix = ${pcfiledir} /../..exec_prefix = ${prefix} libdir = ${exec_prefix} / lib<br/>
                                                                                   includedir = ${prefix} / include</dd>
 <dt><i>pc_sysrootdir</i></dt>
 <dd> The sysroot directory set by the user. When the sysroot directory has not been set, this value is <i>/</i>. See the <i>PKG_CONFIG_SYSROOT_DIR</i> environment variable for more details.</dd>
@@ -159,7 +159,7 @@ prefix = ${pcfiledir} /../..exec_prefix = ${prefix} libdir = ${exec_prefix} / li
 <dl>
 <dt><i>PKG_CHECK_MODULES(VARIABLE-PREFIX, MODULES [,ACTION-IF-FOUND [,ACTION-IF-NOT-FOUND]])</i></dt>
 <dd>
-<p> The macro PKG_CHECK_MODULES can be used in <i>configure.ac</i> to check whether modules exist. A typical usage would be:<br />
+<p> The macro PKG_CHECK_MODULES can be used in <i>configure.ac</i> to check whether modules exist. A typical usage would be:<br/>
 PKG_CHECK_MODULES([MYSTUFF], [gtk + -2.0 &gt;= 1.3.5 libxml = 1.8.4])</p>
 <p> This would result in MYSTUFF_LIBS and MYSTUFF_CFLAGS substitution variables, set to the libs and cflags for the given module list. If a module is missing or has the wrong version, by default configure will abort with a message. To replace the default action, specify an ACTION-IF-NOT-FOUND. PKG_CHECK_MODULES will not print any error messages if you specify your own ACTION-IF-NOT-FOUND. However, it will set the variable MYSTUFF_PKG_ERRORS, which you can use to display what went wrong. </p>
 <p> Note that if there is a possibility the first call to PKG_CHECK_MODULES might not happen, you should be sure to include an explicit call to PKG_PROG_PKG_CONFIG in your configure.ac. </p>

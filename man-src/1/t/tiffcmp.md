@@ -8,7 +8,7 @@ url: "/docs/linux/man/1-tiffcmp/"
 description: "tiffcmp – compare two TIFF files"
 ---
 
-<p> tiffcmp &#8211; compare two <font SIZE="-1">TIFF</font> files</p>
+<p> tiffcmp &#8211; compare two TIFF files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tiffcmp</code> [ <i>options</i> ] <i>file1.tif file2.tif</i></p>
 <h2>DESCRIPTION</h2>

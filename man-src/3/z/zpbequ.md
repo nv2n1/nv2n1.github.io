@@ -10,7 +10,7 @@ description: "zpbequ.f –"
 <p>zpbequ.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>zpbequ</code> (UPLO, N, KD, AB, LDAB, S, SCOND, AMAX, INFO)<br />
+<p>subroutine <code>zpbequ</code> (UPLO, N, KD, AB, LDAB, S, SCOND, AMAX, INFO)<br/>
  <i></i><code>ZPBEQU</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zpbequ (characterUPLO, integerN, integerKD, complex*16, dimension( ldab, * )AB, integerLDAB, double precision, dimension( * )S, double precisionSCOND, double precisionAMAX, integerINFO)</h3>

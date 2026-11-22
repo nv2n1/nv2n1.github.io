@@ -24,7 +24,7 @@ description: "xine – a free video player"
 <dt><code>-c, &#8211;config&nbsp;<wbr></code><i>&lt;file&gt;</i></dt>
 <dd> Use <code>config</code> file instead of default one.</dd>
 <dt><code>-a, &#8211;audio-channel&nbsp;<wbr></code><i>&lt;num&gt;</i></dt>
-<dd> Select the given audio channel. <i>&lt;num&gt;</i> is the audio channel number, default is <code>0</code>.<br />
+<dd> Select the given audio channel. <i>&lt;num&gt;</i> is the audio channel number, default is <code>0</code>.<br/>
  xine 0.5 and newer tries its best to collect all valid audio channels (ac3, mpeg audio, avi audio, &#8230;) from the stream and maps them to &quot;virtual channels&quot; with channel numbers starting at <code>0</code>.</dd>
 <dt><code>-V, &#8211;video-driver&nbsp;<wbr></code><i>&lt;drv&gt;</i></dt>
 <dd> Select video driver. Check out <i>xine &#8211;help</i> for a list of available video output plugins on your system. This selection is stored automatically in your <i>~/.xine/config</i> so you&#8217;ll have to specify the video driver only once.</dd>
@@ -33,12 +33,12 @@ description: "xine – a free video player"
 <dt><code>-u, &#8211;spu-channel&nbsp;<wbr></code><i>&lt;num&gt;</i></dt>
 <dd> Select subpicture (subtitle) channel. <i>&lt;num&gt;</i> is the subpicture channel id, default is no subtitle (<code>-1</code>).</dd>
 <dt><code>-p, &#8211;auto-play=</code><i>[f][F][h][w][q][d][v]</i></dt>
-<dd> Start playing immediately after start. Can be followed by:<br />
- `<i>f</i>&#8216; in fullscreen mode,<br />
- `<i>F</i>&#8216; in xinerama fullscreen mode,<br />
- `<i>h</i>&#8216; hide GUI (main panel, etc&#8230;),<br />
- `<i>w</i>&#8216; hide video output window,<br />
- `<i>q</i>&#8216; for quitting after playback,<br />
+<dd> Start playing immediately after start. Can be followed by:<br/>
+ `<i>f</i>&#8216; in fullscreen mode,<br/>
+ `<i>F</i>&#8216; in xinerama fullscreen mode,<br/>
+ `<i>h</i>&#8216; hide GUI (main panel, etc&#8230;),<br/>
+ `<i>w</i>&#8216; hide video output window,<br/>
+ `<i>q</i>&#8216; for quitting after playback,<br/>
  It is also possible to request the playlist from DVD `<i>d</i>&#8216;, or VCD `<i>v</i>&#8216;. There is now a more generic option, <i>&#8211;auto-scan</i>, for that (see below).</dd>
 <dt><code>-s, &#8211;auto-scan&nbsp;<wbr></code><i>&lt;plugin&gt;</i></dt>
 <dd> Auto-scan playlist from named input plugin. Many plugins allow to read a default playlist, in order to play <code>everything</code>. This works fine for DVDs or VCDs, for example. Giving this option has the same effect as pressing the according button on xine&#8217;s main panel. </dd>
@@ -60,11 +60,11 @@ description: "xine – a free video player"
 <dt><code>&#8211;install</code></dt>
 <dd> When using an X11 visual with changeable colors (colormaps), install a private colormap for xine. With a private colormap, xine can allocate more colors so that video output may look better.</dd>
 <dt><code>&#8211;keymap&nbsp;<wbr></code><i>[=option]</i></dt>
-<dd> Display keymap. Option are:<br />
- `<code>default</code>&#8216; display default keymap table,<br />
- `<code>lirc</code>&#8216; display draft of a <i>~/.lircrc</i> config file,<br />
- `<code>remapped</code>&#8216; user remapped keymap table,<br />
- `<code>file:&lt;file&gt;</code>&#8216; use <code>file</code> as keymap table,<br />
+<dd> Display keymap. Option are:<br/>
+ `<code>default</code>&#8216; display default keymap table,<br/>
+ `<code>lirc</code>&#8216; display draft of a <i>~/.lircrc</i> config file,<br/>
+ `<code>remapped</code>&#8216; user remapped keymap table,<br/>
+ `<code>file:&lt;file&gt;</code>&#8216; use <code>file</code> as keymap table,<br/>
  If no option is given, `<code>default</code>&#8216; is selected.</dd>
 <dt><code>-n, &#8211;network</code></dt>
 <dd> Enable network remote control server. To use network remote control server, a password file is required. If xine cannot find it, the server is stopped. The syntax of the password file follows the (familiar) scheme &lt;<i>identification</i>&gt;:&lt;<i>password</i>&gt;. Since cryptography is subject to legal issues in some countries, the password is not encrypted and also transmitted unencrypted, so take care with remote connections. Two (optional) generic rules are available as well (one at a time) </dd>
@@ -88,10 +88,10 @@ foo:*
 xinectl    7890/tcp        # xine control
 </pre>
 <p> This will change the default port from 6789 to 7890, and create a &quot;human&quot; service called <i>xinectl</i>. </p>
-<p> The server itself offers command help/syntax:<br />
- <code>help&nbsp;<wbr></code><i>[command]</i><br />
- Without <i>command</i> specified, all available commands will be displayed. If a command is specified, short text about the command functionality will be given.<br />
- <code>syntax&nbsp;<wbr></code><i>&lt;command&gt;</i><br />
+<p> The server itself offers command help/syntax:<br/>
+ <code>help&nbsp;<wbr></code><i>[command]</i><br/>
+ Without <i>command</i> specified, all available commands will be displayed. If a command is specified, short text about the command functionality will be given.<br/>
+ <code>syntax&nbsp;<wbr></code><i>&lt;command&gt;</i><br/>
  Display the <i>command</i> syntax.</p>
 <dt><code>-R, &#8211;root</code></dt>
 <dd> Use root window as video window.</dd>
@@ -104,49 +104,49 @@ xinectl    7890/tcp        # xine control
 <dt><code>-P, &#8211;playlist&nbsp;<wbr></code><i>&lt;filename&gt;</i></dt>
 <dd> Use file as playlist. Known formats are: asx, toxine, m3u, pls, sfv and raw text file.</dd>
 <dt><code>-l, &#8211;loop&nbsp;<wbr></code><i>[=mode]</i></dt>
-<dd> Set playlist loop mode. If mode isn&#8217;t specified, mode <code>loop</code> is used. Possible modes are:<br />
- <code>loop</code>: loop entire playlist.<br />
- <code>repeat</code>: repeat current playlist entry.<br />
- <code>shuffle</code>: select randomly an entry in playlist from those not yet played.<br />
+<dd> Set playlist loop mode. If mode isn&#8217;t specified, mode <code>loop</code> is used. Possible modes are:<br/>
+ <code>loop</code>: loop entire playlist.<br/>
+ <code>repeat</code>: repeat current playlist entry.<br/>
+ <code>shuffle</code>: select randomly an entry in playlist from those not yet played.<br/>
  <code>shuffle+</code>: same as shuffle, but indefinitely replay the playlist.</dd>
 <dt><code>&#8211;skin-server-url&nbsp;<wbr></code><i>&lt;url&gt;</i></dt>
 <dd> Define the skin server url.</dd>
 <dt><code>&#8211;enqueue&nbsp;<wbr></code><i>&lt;mrl&gt;</i><code>&#8230;</code></dt>
 <dd>
- Enqueue one or more mrl in a running session (session 0).<br />
+ Enqueue one or more mrl in a running session (session 0).<br/>
  If you want to specify another session, use <code>-S session=</code><i>x</i> option.</dd>
 <dt><code>-S, &#8211;session&nbsp;<wbr></code><i>&lt;option1,option2,&#8230;&gt;</i></dt>
 <dd>
- Session managements. All options can be used more than one time, except <code>session</code>.<br />
- Options are:<br />
- <code>session=</code><i>n</i> specify session &lt;<i>n</i>&gt; number,<br />
- <code>mrl=</code><i>m</i> add mrl &lt;<i>m</i>&gt; to the playlist,<br />
- <code>audio=</code><i>c</i> select audio channel (&lt;<i>c</i>&gt;: <code>next</code> or <code>prev</code>),<br />
- <code>spu=</code><i>c</i> select spu channel (&lt;<i>c</i>&gt;: <code>next</code> or <code>prev</code>),<br />
- <code>volume=</code><i>v</i> set audio volume (&lt;<i>v</i>&gt;: 0 to 100),<br />
- <code>amp=</code><i>v</i> set audio amplification of instance (&lt;<i>v</i>&gt;: 0 to 200),<br />
- <code>loop=</code><i>m</i> set loop mode (&lt;<i>m</i>&gt;: <code>none</code> <code>loop</code> <code>repeat</code> <code>shuffle</code> or <code>shuffle+</code>),<br />
- <code>get_speed</code> get current speed status. Return values are:<br />
-&nbsp;<wbr>&#8211; 1: error<br />
-&nbsp;<wbr>&#8211; 2: stop<br />
-&nbsp;<wbr>&#8211; 3: play<br />
-&nbsp;<wbr>&#8211; 4: pause<br />
-&nbsp;<wbr>&#8211; 5: slow4<br />
-&nbsp;<wbr>&#8211; 6: slow2<br />
-&nbsp;<wbr>&#8211; 7: fast2<br />
-&nbsp;<wbr>&#8211; 8: fast4<br />
- <code>get_time[=p|pos]</code> get current position status in seconds, or in position in stream (0..65535).<br />
+ Session managements. All options can be used more than one time, except <code>session</code>.<br/>
+ Options are:<br/>
+ <code>session=</code><i>n</i> specify session &lt;<i>n</i>&gt; number,<br/>
+ <code>mrl=</code><i>m</i> add mrl &lt;<i>m</i>&gt; to the playlist,<br/>
+ <code>audio=</code><i>c</i> select audio channel (&lt;<i>c</i>&gt;: <code>next</code> or <code>prev</code>),<br/>
+ <code>spu=</code><i>c</i> select spu channel (&lt;<i>c</i>&gt;: <code>next</code> or <code>prev</code>),<br/>
+ <code>volume=</code><i>v</i> set audio volume (&lt;<i>v</i>&gt;: 0 to 100),<br/>
+ <code>amp=</code><i>v</i> set audio amplification of instance (&lt;<i>v</i>&gt;: 0 to 200),<br/>
+ <code>loop=</code><i>m</i> set loop mode (&lt;<i>m</i>&gt;: <code>none</code> <code>loop</code> <code>repeat</code> <code>shuffle</code> or <code>shuffle+</code>),<br/>
+ <code>get_speed</code> get current speed status. Return values are:<br/>
+&nbsp;<wbr>&#8211; 1: error<br/>
+&nbsp;<wbr>&#8211; 2: stop<br/>
+&nbsp;<wbr>&#8211; 3: play<br/>
+&nbsp;<wbr>&#8211; 4: pause<br/>
+&nbsp;<wbr>&#8211; 5: slow4<br/>
+&nbsp;<wbr>&#8211; 6: slow2<br/>
+&nbsp;<wbr>&#8211; 7: fast2<br/>
+&nbsp;<wbr>&#8211; 8: fast4<br/>
+ <code>get_time[=p|pos]</code> get current position status in seconds, or in position in stream (0..65535).<br/>
  (<code>playlist</code>|<code>pl</code>)<code>=</code><i>p</i> </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>&lt;<i>p</i>&gt;&nbsp;<wbr>can be: </p>
-<p>&nbsp;<wbr><code>clear</code>:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>clear the playlist,<br />
-&nbsp;<wbr><code>first</code>:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>play first entry in the playlist,<br />
-&nbsp;<wbr><code>prev</code>:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>play previous playlist entry,<br />
-&nbsp;<wbr><code>next</code>:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>play next playlist entry,<br />
-&nbsp;<wbr><code>last</code>:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>play last entry in the playlist,<br />
-&nbsp;<wbr><code>load:</code><i>s</i>:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>load playlist file&nbsp;<wbr>&lt;<i>s</i>&gt;,<br />
-&nbsp;<wbr><code>stop</code>:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>stop playback at the end of the current playback,<br />
-&nbsp;<wbr><code>cont</code>:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>continue playback at the end of current playback.<br />
- There are also some self explanatory options.<br />
+<p>&nbsp;<wbr><code>clear</code>:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>clear the playlist,<br/>
+&nbsp;<wbr><code>first</code>:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>play first entry in the playlist,<br/>
+&nbsp;<wbr><code>prev</code>:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>play previous playlist entry,<br/>
+&nbsp;<wbr><code>next</code>:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>play next playlist entry,<br/>
+&nbsp;<wbr><code>last</code>:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>play last entry in the playlist,<br/>
+&nbsp;<wbr><code>load:</code><i>s</i>:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>load playlist file&nbsp;<wbr>&lt;<i>s</i>&gt;,<br/>
+&nbsp;<wbr><code>stop</code>:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>stop playback at the end of the current playback,<br/>
+&nbsp;<wbr><code>cont</code>:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>continue playback at the end of current playback.<br/>
+ There are also some self explanatory options.<br/>
 &nbsp;<wbr><code>play</code>,&nbsp;<wbr><code>slow2</code>,&nbsp;<wbr><code>slow4</code>,&nbsp;<wbr><code>pause</code>,&nbsp;<wbr><code>fast2</code>,&nbsp;<wbr><code>fast4</code>,&nbsp;<wbr><code>stop</code>,&nbsp;<wbr><code>quit</code>,&nbsp;<wbr><code>fullscreen</code>,&nbsp;<wbr><code>eject</code>.</p>
 <dt><code>-Z</code></dt>
 <dd> Don&#8217;t automatically start playback, affect only auto-start when smart mode is used.</dd>
@@ -201,7 +201,7 @@ xinectl    7890/tcp        # xine control
 <dd> assign a new value to any config entry</dd>
 <dt><code>change configuration option &#8216;on the fly&#8217;:</code></dt>
 <dd>
- You can change a configuration option at anytime, using the special cfg:/ mrl style. The syntax is:<br />
+ You can change a configuration option at anytime, using the special cfg:/ mrl style. The syntax is:<br/>
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>cfg:/&lt;config entry&gt; : &lt;config value&gt;</dd>
 <p> Unlike stream config option, you can change anything <i>before</i> playing the stream.</dl>
 <h2>CONTROL KEYS</h2>
@@ -498,7 +498,7 @@ xinectl    7890/tcp        # xine control
 <dt>~/.xine/passwd</dt>
 <dd> Passwords file xine-ui</dd>
 <dt>~/.xine/xinerc</dt>
-<dd> Additional command line arguments<br />
+<dd> Additional command line arguments<br/>
  Each line specifies an additional command line argument (one argument per line): </dd>
 <pre>
 --geometry 720x576+0+0
@@ -508,7 +508,7 @@ xinectl    7890/tcp        # xine control
 </pre>
 </dl>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-xine-remote/">xine-remote</a></code>(1)<br />
+<p> <code><a href="/docs/linux/man/1-xine-remote/">xine-remote</a></code>(1)<br/>
  <code><a href="/docs/linux/man/5-xine/">xine</a></code>(5) for details of the MRL syntax </p>
 <p> The programs are documented fully on the xine home page: <i><a rel="nofollow" href="http://www.xine-project.org/">http://www.xine-project.org/</a></i></p>
 <h2>AUTHOR</h2>

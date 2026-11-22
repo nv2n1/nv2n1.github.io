@@ -20,7 +20,7 @@ description: "PAPI_strerror –"
 <dd><i>code</i> &#8212; the error code to interpret</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>*error</i> &#8212; a pointer to the error string.<br />
+<dd><i>*error</i> &#8212; a pointer to the error string.<br/>
  <i>NULL</i> &#8212; the input error code to <code>PAPI_strerror()</code> is invalid.</dd></dl>
 <p> <code>PAPI_strerror()</code> returns a pointer to the error message corresponding to the error code code. If the call fails the function returns the NULL pointer. This function is not implemented in Fortran. </p>
 <p> <code>Example:</code></p>

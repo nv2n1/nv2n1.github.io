@@ -10,7 +10,7 @@ description: "ssycon_rook.f –"
 <p>ssycon_rook.f &#8211;</p>
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
-<p>subroutine <code>ssycon_rook</code> (UPLO, N, A, LDA, IPIV, ANORM, RCOND, WORK, IWORK, INFO)<br />
+<p>subroutine <code>ssycon_rook</code> (UPLO, N, A, LDA, IPIV, ANORM, RCOND, WORK, IWORK, INFO)<br/>
  <i></i><code>SSYCON_ROOK</code></p>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine ssycon_rook (characterUPLO, integerN, real, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, realANORM, realRCOND, real, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>

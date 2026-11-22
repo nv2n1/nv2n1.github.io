@@ -15,13 +15,13 @@ description: "pbs_manager – administrator a pbs batch object"
 struct attropl&nbsp;<wbr>*attrib, char&nbsp;<wbr>*extend)
 </code></pre>
 <h2>Description</h2>
-<p>Issue a batch request to perform administration functions at a server. With this request server objects such as queues can be created and deleted, and have their attributes set and unset. A <i>Manage</i> batch request is generated and sent to the server over the connection specified by <i> which is the return value of </i><code>pbs_connect</code>(). This request requires full batch administrator privilege. The parameter, <i> specifies the operation to be performed, see pbs_ifl.h:<br />
+<p>Issue a batch request to perform administration functions at a server. With this request server objects such as queues can be created and deleted, and have their attributes set and unset. A <i>Manage</i> batch request is generated and sent to the server over the connection specified by <i> which is the return value of </i><code>pbs_connect</code>(). This request requires full batch administrator privilege. The parameter, <i> specifies the operation to be performed, see pbs_ifl.h:<br/>
  </i></p>
 <pre> #define MGR_CMD_CREATE 0
  #define MGR_CMD_DELETE 1
  #define MGR_CMD_SET 2
  #define MGR_CMD_UNSET 3</pre>
-<p>The parameter, <i> declares the type of object upon which the command operates, see pbs_ifl.h:<br />
+<p>The parameter, <i> declares the type of object upon which the command operates, see pbs_ifl.h:<br/>
  </i></p>
 <pre> #define MGR_OBJ_SERVER 0
  #define MGR_OBJ_QUEUE 1</pre>
@@ -33,7 +33,7 @@ struct attropl&nbsp;<wbr>*attrib, char&nbsp;<wbr>*extend)
     enum batch_op op;
     struct attropl *next;
 };</code></pre>
-<p> The <i> list is terminated by the first entry where </i><code> is a null pointer. The member points to a string which is the name of the attribute. If the attribute is one which contains a set of resources, the specific resource is specified in the structure member Otherwise, the member resource is pointer to a null string. The member points to a string which is the new value of the attribute. The member defines the manner in which the new value is assigned to the attribute. The operators are:<br />
+<p> The <i> list is terminated by the first entry where </i><code> is a null pointer. The member points to a string which is the name of the attribute. If the attribute is one which contains a set of resources, the specific resource is specified in the structure member Otherwise, the member resource is pointer to a null string. The member points to a string which is the new value of the attribute. The member defines the manner in which the new value is assigned to the attribute. The operators are:<br/>
  The parameter </code><i> is reserved for implementation defined extensions. Functions MGR_CMD_CREATE and MGR_CMD_DELETE require PBS Manager privilege. Functions MGR_CMD_SET and MGR_CMD_UNSET require PBS Manager or Operator privilege. </i></p>
 <h2>See Also</h2>
 <p>qmgr(1B) and pbs_connect(3B)</p>

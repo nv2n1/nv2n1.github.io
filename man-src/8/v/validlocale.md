@@ -13,7 +13,7 @@ description: "validlocale – Test if a given locale is available"
 <h2>Description</h2>
 <p>Test if the locale given as argument is a valid locale. If it isn&#8217;t, print on stdout the string to add to /etc/locale.gen to make locale-gen generate the locale (if it exists at all).</p>
 <h2>Files</h2>
-<p><i>/usr/sbin/validlocale</i><br />
+<p><i>/usr/sbin/validlocale</i><br/>
  <i>/usr/share/i18n/SUPPORTED</i></p>
 <h2>Environment Variables</h2>
 <dl>
@@ -22,12 +22,12 @@ description: "validlocale – Test if a given locale is available"
 <h2>Examples</h2>
 <p>If you give a valid locale as parameter, it outputs a string specifying this on stderr: </p>
 <dl>
-<dd>% validlocale C<br />
+<dd>% validlocale C<br/>
  locale &#8216;C&#8217; valid and available</dd></dl>
 <p> When given a invalid (not generated or just nonexistent), it outputs a string on stderr telling that this is an invalid locale, and a string to stdout with the string to add to /etc/locale.gen to have this locale generated: </p>
 <dl>
-<dd>% validlocale de_AU [at] euro<br />
- locale &#8216;de_AU [at] euro&#8217; not available<br />
+<dd>% validlocale de_AU [at] euro<br/>
+ locale &#8216;de_AU [at] euro&#8217; not available<br/>
  de_AU [at] euro ISO-8859-15</dd></dl>
 <h2>Authors</h2>
 <p>Petter Reinholdtsen &lt;pere [at] hungry.com&gt;</p>

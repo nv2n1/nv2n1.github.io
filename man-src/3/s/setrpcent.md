@@ -47,7 +47,7 @@ void endrpcent(void);</code></pre>
 </td>
 </tr>
 <tr VALIGN=top>
-<td> <code>getrpcent</code>(), <code>getrpcbyname</code>(),<br />
+<td> <code>getrpcent</code>(), <code>getrpcbyname</code>(),<br/>
  <code>getrpcbynumber</code>() </td>
 <td>Thread safety</td>
 <td>MT-Unsafe

@@ -17,9 +17,9 @@ description: "mdadm.conf – configuration for management of Software RAID with 
 <dl>
 <dt><code>DEVICE</code></dt>
 <dd>A <code>device</code> line lists the devices (whole devices or partitions) that might contain a component of an MD array. When looking for the components of an array, <i>mdadm</i> will scan these devices (or any devices listed on the command line). The <code>device</code> line may contain a number of different devices (separated by spaces) and each device name can contain wild cards as defined by <code><a href="/docs/linux/man/7-glob/">glob</a></code>(7). Also, there may be several device lines present in the file. Alternatively, a <code>device</code> line can contain either or both of the words <code>containers</code> and <code>partitions</code>. The word <code>containers</code> will cause <i>mdadm</i> to look for assembled CONTAINER arrays and included them as a source for assembling further arrays. The word <i>partitions</i> will cause <i>mdadm</i> to read <i>/proc/partitions</i> and include all devices and partitions found therein. <i>mdadm</i> does not use the names from <i>/proc/partitions</i> but only the major and minor device numbers. It scans <i>/dev</i> to find the name that matches the numbers. If no DEVICE line is present, then &quot;DEVICE partitions containers&quot; is assumed. For example:</dd>
-<dd>DEVICE /dev/hda* /dev/hdc*<br />
- DEV /dev/sd*<br />
- DEVICE /dev/disk/by-path/pci*<br />
+<dd>DEVICE /dev/hda* /dev/hdc*<br/>
+ DEV /dev/sd*<br/>
+ DEVICE /dev/disk/by-path/pci*<br/>
  DEVICE partitions</dd>
 <dt><code>ARRAY</code></dt>
 <dd>The ARRAY lines identify actual arrays. The second word on the line may be the name of the device where the array is normally assembled, such as <code>/dev/md1</code> or <code>/dev/md/backup</code>. If the name does not start with a slash (&#8216;<code>/</code>&#8216;), it is treated as being in <code>/dev/md/</code>. Alternately the word <code>&lt;ignore&gt;</code> (complete with angle brackets) can be given in which case any array which matches the rest of the line will never be automatically assembled. If no device name is given, <i>mdadm</i> will use various heuristics to determine an appropriate name. Subsequent words identify the array, or identify the array as a member of a group. If multiple identities are given, then a component device must match ALL identities to be considered a match. Each identity word has a tag, and equals sign, and some value. The tags are:</dd>
@@ -117,37 +117,37 @@ description: "mdadm.conf – configuration for management of Software RAID with 
 <dt><code>PART-POLICY</code></dt>
 <dd>This is similar to <code>POLICY</code> and accepts the same keyword assignments. It allows a consistent set of policies to applied to each of the partitions of a device. A <code>PART-POLICY</code> line should set <i>type=disk</i> and identify the path to one or more disk devices. Each partition on these disks will be treated according to the <i>action=</i> setting from this line. If a <i>domain</i> is set in the line, then the domain associated with each patition will be based on the domain, but with &quot;<code>-part</code>N&quot; appended, when N is the partition number for the partition that was found. </dd>
 <h2>Example</h2>
-<p>DEVICE /dev/sd[bcdjkl]1<br />
- DEVICE /dev/hda1 /dev/hdb1 # /dev/md0 is known by its UUID.<br />
- ARRAY /dev/md0 UUID=3aaa0122:29827cfa:5331ad66:ca767371<br />
- # /dev/md1 contains all devices with a minor number of<br />
- # 1 in the superblock.<br />
- ARRAY /dev/md1 superminor=1<br />
- # /dev/md2 is made from precisely these two devices<br />
- ARRAY /dev/md2 devices=/dev/hda1,/dev/hdb1 # /dev/md4 and /dev/md5 are a spare-group and spares<br />
- # can be moved between them<br />
+<p>DEVICE /dev/sd[bcdjkl]1<br/>
+ DEVICE /dev/hda1 /dev/hdb1 # /dev/md0 is known by its UUID.<br/>
+ ARRAY /dev/md0 UUID=3aaa0122:29827cfa:5331ad66:ca767371<br/>
+ # /dev/md1 contains all devices with a minor number of<br/>
+ # 1 in the superblock.<br/>
+ ARRAY /dev/md1 superminor=1<br/>
+ # /dev/md2 is made from precisely these two devices<br/>
+ ARRAY /dev/md2 devices=/dev/hda1,/dev/hdb1 # /dev/md4 and /dev/md5 are a spare-group and spares<br/>
+ # can be moved between them<br/>
  ARRAY /dev/md4 uuid=b23f3c6d:aec43a9f:fd65db85:369432df </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;spare-group=group1<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;spare-group=group1<br/>
  ARRAY /dev/md5 uuid=19464854:03f71b1b:e0df2edd:246cc977 </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;spare-group=group1<br />
- # /dev/md/home is created if need to be a partitionable md array<br />
- # any spare device number is allocated.<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;spare-group=group1<br/>
+ # /dev/md/home is created if need to be a partitionable md array<br/>
+ # any spare device number is allocated.<br/>
  ARRAY /dev/md/home UUID=9187a482:5dde19d9:eea3cc4a:d646ab8b </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;auto=part<br />
- # The name of this array contains a space.<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;auto=part<br/>
+ # The name of this array contains a space.<br/>
  ARRAY /dev/md9 name=&#8217;Data Storage&#8217; POLICY domain=domain1 metadata=imsm path=pci-0000:00:1f.2-scsi-* </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;action=spare<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;action=spare<br/>
  POLICY domain=domain1 metadata=imsm path=pci-0000:04:00.0-scsi-[01]* </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;action=include<br />
- # One domain comprising of devices attached to specified paths is defined.<br />
- # Bare device matching first path will be made an imsm spare on hot plug.<br />
- # If more than one array is created on devices belonging to domain1 and<br />
- # one of them becomes degraded, then any imsm spare matching any path for<br />
- # given domain name can be migrated.<br />
- MAILADDR root [at] mydomain.tld<br />
- PROGRAM /usr/sbin/handle-mdadm-events<br />
- CREATE group=system mode=0640 auto=part-8<br />
- HOMEHOST &lt;system&gt;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;action=include<br/>
+ # One domain comprising of devices attached to specified paths is defined.<br/>
+ # Bare device matching first path will be made an imsm spare on hot plug.<br/>
+ # If more than one array is created on devices belonging to domain1 and<br/>
+ # one of them becomes degraded, then any imsm spare matching any path for<br/>
+ # given domain name can be migrated.<br/>
+ MAILADDR root [at] mydomain.tld<br/>
+ PROGRAM /usr/sbin/handle-mdadm-events<br/>
+ CREATE group=system mode=0640 auto=part-8<br/>
+ HOMEHOST &lt;system&gt;<br/>
  AUTO +1.x homehost -all </p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-mdadm/">mdadm</a></code>(8), <code><a href="/docs/linux/man/4-md/">md</a></code>(4). </p>

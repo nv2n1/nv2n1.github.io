@@ -59,48 +59,48 @@ description: "makecontext, swapcontext – manipulate user context"
 <h3>Program source</h3>
 <p> #include &lt;ucontext.h&gt; #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; </p>
 <p> static ucontext_t uctx_main, uctx_func1, uctx_func2; </p>
-<p> #define handle_error(msg) \<br />
+<p> #define handle_error(msg) \<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;do&nbsp;{&nbsp;perror(msg);&nbsp;exit(EXIT_FAILURE);&nbsp;}&nbsp;while&nbsp;(0) </p>
-<p> static void func1(void) {<br />
+<p> static void func1(void) {<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;func1: started
-&quot;);<br />
+&quot;);<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;func1: swapcontext(&amp;uctx_func1,&nbsp;&amp;uctx_func2)
-&quot;);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(swapcontext(&amp;uctx_func1,&nbsp;&amp;uctx_func2)&nbsp;==&nbsp;-1)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;handle_error(&quot;swapcontext&quot;);<br />
+&quot;);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(swapcontext(&amp;uctx_func1,&nbsp;&amp;uctx_func2)&nbsp;==&nbsp;-1)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;handle_error(&quot;swapcontext&quot;);<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;func1: returning
 &quot;); } </p>
-<p> static void func2(void) {<br />
+<p> static void func2(void) {<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;func2: started
-&quot;);<br />
+&quot;);<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;func2: swapcontext(&amp;uctx_func2,&nbsp;&amp;uctx_func1)
-&quot;);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(swapcontext(&amp;uctx_func2,&nbsp;&amp;uctx_func1)&nbsp;==&nbsp;-1)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;handle_error(&quot;swapcontext&quot;);<br />
+&quot;);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(swapcontext(&amp;uctx_func2,&nbsp;&amp;uctx_func1)&nbsp;==&nbsp;-1)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;handle_error(&quot;swapcontext&quot;);<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;func2: returning
 &quot;); } </p>
-<p> int main(int argc, char *argv[]) {<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char func1_stack[16384];<br />
+<p> int main(int argc, char *argv[]) {<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char func1_stack[16384];<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char func2_stack[16384]; </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(getcontext(&amp;uctx_func1)&nbsp;==&nbsp;-1)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;handle_error(&quot;getcontext&quot;);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uctx_func1.uc_stack.ss_sp&nbsp;=&nbsp;func1_stack;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uctx_func1.uc_stack.ss_size&nbsp;=&nbsp;sizeof(func1_stack);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uctx_func1.uc_link&nbsp;=&nbsp;&amp;uctx_main;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(getcontext(&amp;uctx_func1)&nbsp;==&nbsp;-1)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;handle_error(&quot;getcontext&quot;);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uctx_func1.uc_stack.ss_sp&nbsp;=&nbsp;func1_stack;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uctx_func1.uc_stack.ss_size&nbsp;=&nbsp;sizeof(func1_stack);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uctx_func1.uc_link&nbsp;=&nbsp;&amp;uctx_main;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;makecontext(&amp;uctx_func1, func1, 0); </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(getcontext(&amp;uctx_func2)&nbsp;==&nbsp;-1)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;handle_error(&quot;getcontext&quot;);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uctx_func2.uc_stack.ss_sp&nbsp;=&nbsp;func2_stack;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uctx_func2.uc_stack.ss_size&nbsp;=&nbsp;sizeof(func2_stack);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Successor context is f1(), unless argc&nbsp;&gt;&nbsp;1&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uctx_func2.uc_link&nbsp;=&nbsp;(argc&nbsp;&gt;&nbsp;1)&nbsp;?&nbsp;NULL :&nbsp;&amp;uctx_func1;<br />
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(getcontext(&amp;uctx_func2)&nbsp;==&nbsp;-1)<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;handle_error(&quot;getcontext&quot;);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uctx_func2.uc_stack.ss_sp&nbsp;=&nbsp;func2_stack;<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uctx_func2.uc_stack.ss_size&nbsp;=&nbsp;sizeof(func2_stack);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Successor context is f1(), unless argc&nbsp;&gt;&nbsp;1&nbsp;*/<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uctx_func2.uc_link&nbsp;=&nbsp;(argc&nbsp;&gt;&nbsp;1)&nbsp;?&nbsp;NULL :&nbsp;&amp;uctx_func1;<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;makecontext(&amp;uctx_func2, func2, 0); </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;main: swapcontext(&amp;uctx_main,&nbsp;&amp;uctx_func2)
-&quot;);<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(swapcontext(&amp;uctx_main,&nbsp;&amp;uctx_func2)&nbsp;==&nbsp;-1)<br />
+&quot;);<br/>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(swapcontext(&amp;uctx_main,&nbsp;&amp;uctx_func2)&nbsp;==&nbsp;-1)<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;handle_error(&quot;swapcontext&quot;); </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;main: exiting
-&quot;);<br />
+&quot;);<br/>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_SUCCESS); }</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/2-sigaction/">sigaction</a></code>(2), <code><a href="/docs/linux/man/2-sigaltstack/">sigaltstack</a></code>(2), <code><a href="/docs/linux/man/2-sigprocmask/">sigprocmask</a></code>(2), <code><a href="/docs/linux/man/3-getcontext/">getcontext</a></code>(3), <code><a href="/docs/linux/man/3-sigsetjmp/">sigsetjmp</a></code>(3)</p>

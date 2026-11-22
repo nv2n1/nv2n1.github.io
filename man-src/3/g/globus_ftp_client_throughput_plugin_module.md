@@ -34,9 +34,9 @@ description: "Throughput Performance Plugin –"
 <p> This callback will be called when a transfer begins </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>handle</i> The client handle associated with this transfer<br />
- <i>user_specific</i> User argument passed to globus_ftp_client_throughput_plugin_init<br />
- <i>source_url</i> source of the transfer (GLOBUS_NULL if &#8216;put&#8217;)<br />
+<dd><i>handle</i> The client handle associated with this transfer<br/>
+ <i>user_specific</i> User argument passed to globus_ftp_client_throughput_plugin_init<br/>
+ <i>source_url</i> source of the transfer (GLOBUS_NULL if &#8216;put&#8217;)<br/>
  <i>dest_url</i> dest of the transfer (GLOBUS_NULL if &#8216;get&#8217;)</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -50,8 +50,8 @@ description: "Throughput Performance Plugin –"
 <p> This callback will be called upon transfer completion (successful or otherwise) </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>handle</i> The client handle associated with this transfer<br />
- <i>user_specific</i> User argument passed to globus_ftp_client_throughput_plugin_init<br />
+<dd><i>handle</i> The client handle associated with this transfer<br/>
+ <i>user_specific</i> User argument passed to globus_ftp_client_throughput_plugin_init<br/>
  <i>success</i> indicates whether this transfer completed successfully or was interrupted (by error or abort)</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -65,21 +65,21 @@ description: "Throughput Performance Plugin –"
 <p> This callback will be called with every performance callback that is received by the perf plugin. The first callback for each stripe_ndx will have an instantaneous_throughput based from the time the command was sent. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>handle</i> The client handle associated with this transfer<br />
- <i>user_specific</i> User argument passed to globus_ftp_client_throughput_plugin_init<br />
- <i>bytes</i> The total number of bytes received on this stripe<br />
- <i>instantaneous_throughput</i> Instanteous throughput on this stripe (bytes / sec)<br />
- <i>avg_throughput</i> Average throughput on this stripe (bytes / sec)<br />
+<dd><i>handle</i> The client handle associated with this transfer<br/>
+ <i>user_specific</i> User argument passed to globus_ftp_client_throughput_plugin_init<br/>
+ <i>bytes</i> The total number of bytes received on this stripe<br/>
+ <i>instantaneous_throughput</i> Instanteous throughput on this stripe (bytes / sec)<br/>
+ <i>avg_throughput</i> Average throughput on this stripe (bytes / sec)<br/>
  <i>stripe_ndx</i> This stripe&#8217;s index</dd></dl>
 <h3>typedef void(* globus_ftp_client_throughput_plugin_total_cb_t)(void *user_specific, <code>globus_ftp_client_handle_t</code> *handle, globus_off_t bytes, float instantaneous_throughput, float avg_throughput)</h3>
 <p>Total performace throughput callback </p>
 <p> This callback will be called with every performance callback that is received by the perf plugin. The first callback for will have an instantaneous_throughput based from the time the command was sent. This callback will be called after the per_stripe_cb </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>handle</i> The client handle associated with this transfer<br />
- <i>user_specific</i> User argument passed to globus_ftp_client_throughput_plugin_init<br />
- <i>bytes</i> The total number of bytes received on all stripes<br />
- <i>instantaneous_throughput</i> Total instanteous throughput on all stripes (bytes / sec)<br />
+<dd><i>handle</i> The client handle associated with this transfer<br/>
+ <i>user_specific</i> User argument passed to globus_ftp_client_throughput_plugin_init<br/>
+ <i>bytes</i> The total number of bytes received on all stripes<br/>
+ <i>instantaneous_throughput</i> Total instanteous throughput on all stripes (bytes / sec)<br/>
  <i>avg_throughput</i> Average total throughput on all stripes (bytes / sec)</dd></dl>
 <h3>typedef void*(* globus_ftp_client_throughput_plugin_user_copy_cb_t)(void *user_specific)</h3>
 <p>Copy constructor </p>
@@ -129,7 +129,7 @@ description: "Throughput Performance Plugin –"
 <p>Retrieve user specific pointer </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>plugin</i> plugin previously initialized with init (above)<br />
+<dd><i>plugin</i> plugin previously initialized with init (above)<br/>
  <i>user_specific</i> pointer to storage for user_specific pointer</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -147,11 +147,11 @@ description: "Throughput Performance Plugin –"
 <p> Use this function to initialize a throughput plugin. The throughput plugin sits on top of the perf_plugin. The only required param is &#8216;plugin&#8217;, all others may be GLOBUS_NULL </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>plugin</i> a pointer to a plugin type to be initialized<br />
- <i>begin_cb</i> the callback to be called upon the start of a transfer<br />
- <i>per_stripe_cb</i> the callback to be called every time updated throughput info is available for a given stripe<br />
- <i>total_cb</i> the callback to be called every time updated throughput info is available for any stripe<br />
- <i>complete_cb</i> the callback to be called to indicate transfer completion<br />
+<dd><i>plugin</i> a pointer to a plugin type to be initialized<br/>
+ <i>begin_cb</i> the callback to be called upon the start of a transfer<br/>
+ <i>per_stripe_cb</i> the callback to be called every time updated throughput info is available for a given stripe<br/>
+ <i>total_cb</i> the callback to be called every time updated throughput info is available for any stripe<br/>
+ <i>complete_cb</i> the callback to be called to indicate transfer completion<br/>
  <i>user_specific</i> a pointer to some user specific data that will be provided to all callbacks</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
@@ -169,8 +169,8 @@ description: "Throughput Performance Plugin –"
 <p> Use this to have the plugin make callbacks any time a copy of this plugin is being made. This will allow the user to keep state for different handles. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>plugin</i> plugin previously initialized with init (above)<br />
- <i>copy_cb</i> func to be called when a copy is needed<br />
+<dd><i>plugin</i> plugin previously initialized with init (above)<br/>
+ <i>copy_cb</i> func to be called when a copy is needed<br/>
  <i>destroy_cb</i> func to be called when a copy is to be destroyed</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>

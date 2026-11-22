@@ -12,7 +12,7 @@ download-entities - download and parse XML Entity definitions
  $ perl download-entities.pl &gt; output-file.pm
  $ perl download-entities.pl output-file.pm
  # instead of <a rel="nofollow" HREF="http://www.w3.org/2003/entities/iso9573-2003/">http://www.w3.org/2003/entities/iso9573-2003/</a>
- $ perl download-entities.pl <a rel="nofollow" HREF="http://my.server.com/entities.html">http://my.server.com/entities.html</a></pre><h2>Description</h2>This script downloads the definitions of <font SIZE="-1">XML</font> entities from <a rel="nofollow" HREF="http://www.w3.org/2003/entities/iso9573-2003/">http://www.w3.org/2003/entities/iso9573-2003/</a> or from whatever address you give it as an argument. The argument should be an <font SIZE="-1">URL </font>(that LWP::UserAgent::get can access) pointing to a document with (absolute or relative) references to files ending with the <tt>&quot;.ent&quot;</tt> suffix. These files are expected to be <font SIZE="-1">DTD</font>'s with lines like 
+ $ perl download-entities.pl <a rel="nofollow" HREF="http://my.server.com/entities.html">http://my.server.com/entities.html</a></pre><h2>Description</h2>This script downloads the definitions of XML entities from <a rel="nofollow" HREF="http://www.w3.org/2003/entities/iso9573-2003/">http://www.w3.org/2003/entities/iso9573-2003/</a> or from whatever address you give it as an argument. The argument should be an URL (that LWP::UserAgent::get can access) pointing to a document with (absolute or relative) references to files ending with the <tt>&quot;.ent&quot;</tt> suffix. These files are expected to be DTD's with lines like 
 
  <pre> &lt;!ENTITY amp &quot;&amp;#38;&quot; &gt;</pre>The script parses these files and prints the perl module to the standard output. If you wish, you can give ``file'' as another argument to the script and it will then print it to ``file''. You can also specify the output file in the environment variable <tt>&quot;OUTPUT_FILE&quot;</tt>. 
 
@@ -31,7 +31,7 @@ download-entities - download and parse XML Entity definitions
  # 5 seconds timeout - croak on failure
  DOWNLOAD_TIMEOUT=5 perl download-entities.pl &gt; XML/Entities/Data.pm
  # 1 second timeout - ask on failure
- perl download-entities.pl --interactive --timeout 1 &gt; XML/Entities/Data.pm</pre><h3>Dependencies</h3>This script has dependencies that the <tt>&quot;XML::Entities&quot;</tt> module does not and are therefore not mentioned in the <font SIZE="-1">META</font>.yml file. These are <tt>&quot;LWP::UserAgent&quot;</tt>, <tt>&quot;File::Basename&quot;</tt> and <tt>&quot;Fatal&quot;</tt>.
+ perl download-entities.pl --interactive --timeout 1 &gt; XML/Entities/Data.pm</pre><h3>Dependencies</h3>This script has dependencies that the <tt>&quot;XML::Entities&quot;</tt> module does not and are therefore not mentioned in the META.yml file. These are <tt>&quot;LWP::UserAgent&quot;</tt>, <tt>&quot;File::Basename&quot;</tt> and <tt>&quot;Fatal&quot;</tt>.
 <h2>Copyright</h2>Copyright 2010 Jan Oldrich Kruza &lt;sixtease [at] cpan.org&gt;. All rights reserved. 
 
  This library is free software; you can redistribute it and/or modify it under the same terms as Perl itself.
